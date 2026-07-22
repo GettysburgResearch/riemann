@@ -1,0 +1,12 @@
+test_bound_contracts_with_order (test_transform.TransformBoundTests.test_bound_contracts_with_order) ... ok
+test_calibration_scale (test_transform.TransformBoundTests.test_calibration_scale) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+C++ compilation with -O3 -std=c++17 -Wall -Wextra: PASS
+Scalar/diagonal bridge calibration, 10 cells at 70 dps: PASS
+Maximum bridge discrepancy: 6.1882474779062549826e-53
+Best retained packet replay: 0.242376056908820582045854582764369659731271663
