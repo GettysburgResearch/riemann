@@ -304,6 +304,9 @@ class CertificateSearch:
 
         self.counts.internal_nodes += 1
 
+        # Finite size-aware tail ceiling. Each remaining exponent is bounded
+        # independently by the total size budget after forcing all other tail
+        # primes to appear to exponent one, and also by monotonicity of exponents.
         if prefix:
             cap = prefix[-1]
             n_min = prefix_n * suffix_primorial[depth]
@@ -316,6 +319,8 @@ class CertificateSearch:
                 if individual_cap < 1:
                     raise RuntimeError("reachable node has impossible tail")
                 upper *= prime_power_abundancy(p, individual_cap)
+            # Binary64 is used only as a one-sided discovery filter. A prune is
+            # emitted exclusively after the dyadic verifier proves the strict sign.
             heuristic_rhs = math.exp(0.5772156649015329) * math.log(math.log(n_min))
             if float(upper) < heuristic_rhs * (1.0 - 1e-13):
                 rhs = robin_rhs(n_min, self.params)
