@@ -1,0 +1,48 @@
+{
+  "experiment_id": "X-0701",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "generated_utc": "2026-07-22T22:10:00Z",
+  "verified_height_barrier_used_for_search": "3e12",
+  "complete_prime_power_run": {
+    "c": 10000000,
+    "prime_power_terms": 665134,
+    "coefficient_npz_sha256": "23b7c167b4ee3c908ea37395fcb3de2a7fce93139891d86f03e94dc87bf90fad"
+  },
+  "truncated_screen_refutations": [
+    {
+      "carrier": "3207174657920",
+      "N": 8,
+      "top_subset_screen": -0.0639693,
+      "complete_prime_power_leading_value": 0.48959298439425636
+    },
+    {
+      "carrier": "3184188297489",
+      "N": 12,
+      "top_subset_screen": -0.10549887029964378,
+      "complete_prime_power_leading_value": 0.4528324147352132
+    }
+  ],
+  "best_complete_prime_power_near_miss": {
+    "c": 10000000,
+    "carrier": "3157430112465.479",
+    "N": 12,
+    "dimension": 25,
+    "leading_normalized_minimum": 0.18535251496676164,
+    "largest_complete_prime_matrix_eigenvalue": 4.102743597670673,
+    "archimedean_leading_scalar": 4.288096112637435,
+    "phase_reduction": "numpy.longdouble product and remainder, double cosine",
+    "classification": "EMPIRICAL_POSITIVE_NEAR_MISS"
+  },
+  "dimension_check_at_best_carrier": {
+    "N": 16,
+    "dimension": 33,
+    "leading_normalized_minimum": 0.18491323202279908
+  },
+  "counterexample_candidate": null,
+  "warnings": [
+    "The leading matrix is not the full exact Weil Gram matrix.",
+    "No directed-rounding interval arithmetic was used.",
+    "A truncated prime subset can reverse the sign and must never be treated as a witness.",
+    "No Z-#### identifier is justified."
+  ]
+}
