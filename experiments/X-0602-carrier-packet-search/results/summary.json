@@ -1,0 +1,70 @@
+{
+  "experiment_id": "X-0602",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "generated_date": "2026-07-23",
+  "research_question": "Can a finite nonnegative packet of nearby translated Fejer carriers produce a negative cutoff-free Weil value above the verified zero height?",
+  "normalization_bridge": {
+    "grid": {
+      "cutoffs": [13, 100],
+      "indices": [1, 2, 3, 8, 50]
+    },
+    "identity_tested": "Q_nn(c)/(2*pi) = W(g_(2*pi*n/log(c), log(c)/(2*pi)))",
+    "maximum_observed_absolute_error": "6.1882474779062549826e-53",
+    "arithmetic": "mpmath, 70 decimal digits",
+    "classification": "HIGH_PRECISION_NONINTERVAL_CALIBRATION"
+  },
+  "direct_packet_ladder": [
+    {
+      "c": 10000000,
+      "dimension": 64,
+      "center": "target-centered near 3,000,000,000,554",
+      "minimum_diagonal": "1.7730035628100398",
+      "minimum_eigenvalue": "1.2004667220833873"
+    },
+    {
+      "c": 100000000,
+      "dimension": 64,
+      "center": "target-centered near 3,000,000,000,554",
+      "minimum_diagonal": "1.6085147969219282",
+      "minimum_eigenvalue": "0.4126502596259596"
+    },
+    {
+      "c": 100000000,
+      "dimension": 96,
+      "center": "target-centered near 3,000,000,000,554",
+      "minimum_diagonal": "1.6085147969219282",
+      "minimum_eigenvalue": "0.40775869736720416"
+    }
+  ],
+  "moment_corrected_wide_scan": {
+    "c": 100000000,
+    "n_center": 8795227188177,
+    "offset_range": [-8192, 8192],
+    "M": 65536,
+    "Taylor_order": 10,
+    "prime_count": 5761455,
+    "prime_power_count": 5762859,
+    "eta": "0.3926990816987241548078304",
+    "analytic_Taylor_bound_PS": "2.541e-8",
+    "analytic_Taylor_bound_PD": "5.511e-9",
+    "floating_FFT_error_bound": null,
+    "best_scalar": {
+      "value": "0.5504453445339111",
+      "offset": -3350,
+      "height": "2999999999411.226275441633"
+    },
+    "best_retained_packet": {
+      "dimension": 128,
+      "center_offset": -7748,
+      "center_height": "2999999997911.0944741132346860160502",
+      "first_index": 8795227180366,
+      "last_index": 8795227180493,
+      "minimum_diagonal": "0.7336206556738909",
+      "minimum_eigenvalue_binary64": "0.24237605690882022",
+      "rayleigh_recomputed_mpmath": "0.242376056908820582045854582764369659731271663",
+      "residual_inf_norm": "2.22561135242578e-15"
+    }
+  },
+  "conclusion": "No negative packet was found. No Z candidate is allocated. The multi-carrier packet materially outperformed the scalar family but remained positive.",
+  "proof_boundary": "Prime enumeration is exact at the integer level. All phases, FFT values, matrix entries, and eigenvalues are ordinary numerical observations without directed rounding."
+}
