@@ -159,7 +159,12 @@ class IndependentVerifier:
         self.tightest_terminal: dict[str, object] | None = None
 
     def replay(self) -> dict[str, object]:
-        """Reconstruct the terminal tree under the header parameters."""
+        """Reconstruct the terminal tree under the header parameters.
+
+        This checks coverage and mathematics but deliberately does not trust or
+        compare stored summaries or the certificate digest. It is used by the
+        parameter-ladder tool and by :meth:`verify`.
+        """
         if self.k_max != self._independent_support_limit():
             raise ValueError("canonical support maximum is not exact")
 
@@ -200,9 +205,15 @@ class IndependentVerifier:
             raise ValueError("count summary mismatch")
         if self.certificate.get("status") != replay["status"]:
             raise ValueError("status inconsistent with terminal classifications")
-        if self.certificate.get("strict_terminal_normalized_ratio_upper") != replay["strict_terminal_normalized_ratio_upper"]:
+        if (
+            self.certificate.get("strict_terminal_normalized_ratio_upper")
+            != replay["strict_terminal_normalized_ratio_upper"]
+        ):
             raise ValueError("tightest terminal summary mismatch")
-        if self.certificate.get("global_canonical_normalized_ratio_upper") != replay["global_canonical_normalized_ratio_upper"]:
+        if (
+            self.certificate.get("global_canonical_normalized_ratio_upper")
+            != replay["global_canonical_normalized_ratio_upper"]
+        ):
             raise ValueError("global canonical ratio summary mismatch")
         if self.certificate.get("all_integer_consequence") != replay["all_integer_consequence"]:
             raise ValueError("all-integer consequence mismatch")
@@ -217,7 +228,9 @@ class IndependentVerifier:
             "status": replay["status"],
             "finite_region": self.certificate["finite_region"],
             "counts": replay["counts"],
-            "global_canonical_normalized_ratio_upper": replay["global_canonical_normalized_ratio_upper"],
+            "global_canonical_normalized_ratio_upper": replay[
+                "global_canonical_normalized_ratio_upper"
+            ],
             "all_integer_consequence": replay["all_integer_consequence"],
             "certificate_sha256": digest,
             "proof_boundary": (
@@ -275,9 +288,14 @@ class IndependentVerifier:
                 "prefix": list(prefix),
                 "reference_n": str(reference_n),
                 "abundancy_ceiling": fraction_json(abundancy_ceiling),
-                "rhs_lower": {"bits": self.params.bits, "lower_numerator": str(rhs_lower_numerator)},
+                "rhs_lower": {
+                    "bits": self.params.bits,
+                    "lower_numerator": str(rhs_lower_numerator),
+                },
                 "normalized_ratio_upper": fraction_json(ratio),
-                "normalized_ratio_upper_decimal_outward": fraction_decimal_outward(ratio, 30, upper=True),
+                "normalized_ratio_upper_decimal_outward": fraction_decimal_outward(
+                    ratio, 30, upper=True
+                ),
             }
 
     def _all_integer_consequence(self) -> dict[str, object]:
@@ -286,8 +304,10 @@ class IndependentVerifier:
         rhs_5041 = robin_rhs(5041, self.params)
         rhs_5583 = robin_rhs(5583, self.params)
         cases = {
-            "finite_window_5041_5582": Fraction(224, 65) / Fraction(rhs_5041.lo, 1 << self.params.bits),
-            "canonical_image_at_most_5040_for_n_at_least_5583": Fraction(403, 105) / Fraction(rhs_5583.lo, 1 << self.params.bits),
+            "finite_window_5041_5582": Fraction(224, 65)
+            / Fraction(rhs_5041.lo, 1 << self.params.bits),
+            "canonical_image_at_most_5040_for_n_at_least_5583": Fraction(403, 105)
+            / Fraction(rhs_5583.lo, 1 << self.params.bits),
             "canonical_image_above_5040": self.tightest_ratio,
         }
         label, global_ratio = max(cases.items(), key=lambda item: item[1])
@@ -309,7 +329,9 @@ class IndependentVerifier:
             },
             "controlling_case": label,
             "normalized_ratio_upper": fraction_json(global_ratio),
-            "normalized_ratio_upper_decimal_outward": fraction_decimal_outward(global_ratio, 30, upper=True),
+            "normalized_ratio_upper_decimal_outward": fraction_decimal_outward(
+                global_ratio, 30, upper=True
+            ),
             "conclusion": (
                 "Assuming the named structural dependencies, every integer in the "
                 "stated range satisfies Robin's strict inequality."
@@ -355,7 +377,11 @@ class IndependentVerifier:
         tail_after = suffix_primorial[depth + 1]
         budget = self.n_max // (prefix_n * tail_after)
         max_by_size = exact_floor_log(budget, p)
-        max_exponent = max_by_size if previous_exponent is None else min(previous_exponent, max_by_size)
+        max_exponent = (
+            max_by_size
+            if previous_exponent is None
+            else min(previous_exponent, max_by_size)
+        )
         if max_exponent < 1:
             raise ValueError("uncovered dead internal node")
         for exponent in range(max_exponent, 0, -1):
@@ -365,7 +391,8 @@ class IndependentVerifier:
                 suffix_primorial=suffix_primorial,
                 prefix=prefix + (exponent,),
                 prefix_n=prefix_n * p**exponent,
-                prefix_abundancy=prefix_abundancy * exact_prime_power_abundancy(p, exponent),
+                prefix_abundancy=prefix_abundancy
+                * exact_prime_power_abundancy(p, exponent),
                 previous_exponent=exponent,
             )
 
