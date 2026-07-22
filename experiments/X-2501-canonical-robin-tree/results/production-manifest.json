@@ -1,0 +1,153 @@
+{
+  "certificate_internal_sha256": "4927ea262cdfe5e455bf06e5af7bad65053e2cbd99561f34b6c7da8f2a7856e6",
+  "certificate_pretty_file_sha256": "da4ac520a3bd688aa1f9755aaf5afee9775bba3ea059e82ecee66c442e0c142f",
+  "certificate_uncompressed_bytes": 556349,
+  "expected_all_integer_consequence": {
+    "case_bounds": {
+      "canonical_image_above_5040": {
+        "decimal_outward": "0.999997639970216146706942918996",
+        "normalized_ratio_upper": {
+          "denominator": "87148540274443996750943008883171592297592420486238879883105599247739856479447671297948965473515924894865028634240888106353100128168854644539754048492731271289755235763856635820705431447022623383",
+          "numerator": "87148334601293329724872560175040774234286741600464588423813882355968028256825369250230949414907401787298611276974412231333548392680948061078606394086092317411200521003547696608510813496619827200"
+        }
+      },
+      "canonical_image_at_most_5040_for_n_at_least_5583": {
+        "decimal_outward": "0.999991801829451542482515901233",
+        "normalized_ratio_upper": {
+          "denominator": "46664594526942933251114847434197383355788727663795879607465744287823014621753005",
+          "numerator": "46664211962638426755699106958501226864867803820253147307901406355188991244894208"
+        }
+      },
+      "finite_window_5041_5582": {
+        "decimal_outward": "0.902862776173950207045935482547",
+        "normalized_ratio_upper": {
+          "denominator": "14363992332851248756249804433746048301135810464562683246365148523229708922658025",
+          "numerator": "12968713994579413887439950320973045679566238282551743172419249408886270519672832"
+        }
+      }
+    },
+    "conclusion": "Assuming the named structural dependencies, every integer in the stated range satisfies Robin's strict inequality.",
+    "controlling_case": "canonical_image_above_5040",
+    "dependencies": [
+      "T-2001: independently reproduced finite Robin barrier",
+      "T-2002: canonical consecutive-prime exponent dominance"
+    ],
+    "integer_range": [
+      5041,
+      "1000000000000000000000000000000000000000000000000000000"
+    ],
+    "normalized_ratio_upper": {
+      "denominator": "87148540274443996750943008883171592297592420486238879883105599247739856479447671297948965473515924894865028634240888106353100128168854644539754048492731271289755235763856635820705431447022623383",
+      "numerator": "87148334601293329724872560175040774234286741600464588423813882355968028256825369250230949414907401787298611276974412231333548392680948061078606394086092317411200521003547696608510813496619827200"
+    },
+    "normalized_ratio_upper_decimal_outward": "0.999997639970216146706942918996",
+    "status": "PROPOSED_LOGICAL_CONSEQUENCE_WITH_VERIFIED_ARITHMETIC"
+  },
+  "expected_closest_checked_leaf_discovery_only": {
+    "abundancy": {
+      "denominator": "9",
+      "numerator": "31"
+    },
+    "exponents": [
+      3,
+      3,
+      2
+    ],
+    "n": "5400",
+    "normalized_ratio_binary64": "0.89904326781453092"
+  },
+  "expected_counts": {
+    "below_domain_leaves": 43,
+    "internal_nodes": 37476,
+    "prunes": 29818,
+    "satisfied_leaves": 173,
+    "unresolved_leaves": 0,
+    "violation_leaves": 0
+  },
+  "expected_finite_region": {
+    "canonical_support_max": 33,
+    "definition": "all vectors (a_1,...,a_K) with 1<=K<=K_max, a_1>=...>=a_K>=1, and product p_i^a_i<=integer_upper",
+    "integer_lower": 5041,
+    "integer_upper": "1000000000000000000000000000000000000000000000000000000"
+  },
+  "expected_global_canonical_normalized_ratio_upper": {
+    "abundancy_ceiling": {
+      "denominator": "179316310914107688926500504131761823919528423256412826431355540929049316809856239066758722273480215253857711424257843",
+      "numerator": "1505255413825077216631309600040123135178512716025316273752035001570880153959007998883129052262490834431583417059630400"
+    },
+    "kind": "PRUNE_SIZE_AWARE",
+    "normalized_ratio_upper": {
+      "denominator": "87148540274443996750943008883171592297592420486238879883105599247739856479447671297948965473515924894865028634240888106353100128168854644539754048492731271289755235763856635820705431447022623383",
+      "numerator": "87148334601293329724872560175040774234286741600464588423813882355968028256825369250230949414907401787298611276974412231333548392680948061078606394086092317411200521003547696608510813496619827200"
+    },
+    "normalized_ratio_upper_decimal_outward": "0.999997639970216146706942918996",
+    "prefix": [
+      20,
+      10
+    ],
+    "reference_n": "2403037304674479534031999475991983647519832801280",
+    "rhs_lower": {
+      "bits": 256,
+      "lower_numerator": "972009069673400201058879428227279877811113652082360141222324072628035388673562"
+    },
+    "support": 26
+  },
+  "expected_parameters": {
+    "bits": 256,
+    "exp_terms": 88,
+    "harmonic_cutoff": 250000,
+    "log_terms": 88
+  },
+  "expected_prime_prefix": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+    101,
+    103,
+    107,
+    109,
+    113,
+    127,
+    131,
+    137
+  ],
+  "expected_status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION",
+  "experiment": "X-2501",
+  "generation_command": "python search.py --n-max 1000000000000000000000000000000000000000000000000000000 --bits 256 --log-terms 88 --exp-terms 88 --harmonic-cutoff 250000 --output results/certificate.regenerated.json",
+  "proof_boundary": "The full terminal stream is deterministically regenerated rather than committed. This manifest binds the exact certificate digests, stream digest, finite region, counts, quantitative bounds, and source snapshots.",
+  "schema": "riemann.robin.canonical-tree.production-manifest.v2",
+  "source_sha256": {
+    "certmath.py": "63f3db64dbe5f416fc21afee7a659b6c888143b9b4b8c854772c42c15f3b9a78",
+    "make_manifest.py": "519c80bff2020b91c214d8bbccc6e975e16aaef4c2294ec1e2e2f3be0e46746e",
+    "parameter_ladder.py": "adf7b61c47d88464204e3724b171f689d1ef20c9b337df1b16ab93a08d41b301",
+    "parameter_probe.py": "737ee1fe6750a019f096d59c6fa7bde42cbd45ae5008102ddb47628bb56fc98f",
+    "search.py": "2d37a0cb83b4a397c101fa0a90ff9dee2c3795465e9f6fb2f005949044a79a0e",
+    "tests/test_engine.py": "68a303ba44b5171f97303b66ac0f73df44850c7574978a7677e2a4f26f1d24da",
+    "verify.py": "b3a4d003cd52d4dea44f7e196368788e2751bd00872ce5b3d8a34260ebe85406"
+  },
+  "terminal_streams_sha256": "40bc1371e84c29202e04661a89a15347d725319c04acfae528f1dc0648ab1cef",
+  "terminal_token_count": 30034,
+  "verification_command": "python verify.py results/certificate.regenerated.json --output results/verification.regenerated.json"
+}
