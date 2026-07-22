@@ -1,0 +1,58 @@
+{
+  "comparison_at_5041": {
+    "certified_strictly_positive": true,
+    "n": 5041,
+    "rational_denominator": 65,
+    "rational_numerator": 224,
+    "rhs": {
+      "lower": "3.81691873568367079580846110342104611585507347583877999942192E+0",
+      "upper": "3.81693782032506077787772575644211800138925559432966874963404E+0",
+      "width": "1.908464138998206926465302107E-5"
+    },
+    "rhs_minus_rational": {
+      "lower": "3.7076488952982464196230725726719996200891962968493384557576E-1",
+      "upper": "3.7078397417121462403157191028827184754310174817582259578789E-1",
+      "width": "1.908464138998206926465302107E-5"
+    }
+  },
+  "comparison_at_5583": {
+    "certified_strictly_positive": true,
+    "n": 5583,
+    "rational_denominator": 105,
+    "rational_numerator": 403,
+    "rhs": {
+      "lower": "3.83812670368567483280437118228254259503981052272233075860800E+0",
+      "upper": "3.83814589436716992493567908431626077827237556069052927725746E+0",
+      "width": "1.919068149509213130790203372E-5"
+    },
+    "rhs_minus_rational": {
+      "lower": "3.146559043673756627594418730449980171528462709266336990E-5",
+      "upper": "5.065627193182969758384622102268303428032259529118201937E-5",
+      "width": "1.919068149509213130790203372E-5"
+    }
+  },
+  "deduction": "Every Robin counterexample n>5040 yields a superabundant Robin counterexample m>5040: n<=5582 is excluded by the finite window; for n>=5583, the record maximizer below n must exceed 5040.",
+  "exact_maximum_1_through_5040": {
+    "denominator_n": 5040,
+    "end": 5040,
+    "maximizers": [5040],
+    "reduced_denominator": 105,
+    "reduced_numerator": 403,
+    "sigma": 19344,
+    "start": 1
+  },
+  "exact_maximum_5041_through_5582": {
+    "denominator_n": 5460,
+    "end": 5582,
+    "maximizers": [5460],
+    "reduced_denominator": 65,
+    "reduced_numerator": 224,
+    "sigma": 18816,
+    "start": 5041
+  },
+  "gamma_terms": 100000,
+  "precision_decimal_digits": 60,
+  "proof_boundary": "The divisor-sum maxima are exact. The two transcendental signs use the X-0201 directed-decimal engine and require independent backend reproduction before promotion beyond PROPOSED.",
+  "schema": "riemann.robin.finite-barrier.v1",
+  "status": "CERTIFIED_COMPUTATION_PENDING_INDEPENDENT_REPRODUCTION"
+}
