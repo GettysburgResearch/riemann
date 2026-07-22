@@ -1,0 +1,26 @@
+{
+  "certification_basis": [
+    "Exact integer prime powers and exact Decimal construction",
+    "Directed ROUND_FLOOR/ROUND_CEILING for basic arithmetic",
+    "Documented correctly-rounded Decimal ln/exp, expanded by one adjacent value",
+    "Elementary gamma enclosure H_m-log(m)-1/(2m) < gamma < H_m-log(m)",
+    "Deterministic Miller-Rabin primality checking for every p < 2**64"
+  ],
+  "criterion": "sigma(n)/n < exp(gamma) * log(log(n)) for every n > 5040",
+  "factorization": [{"a":4,"p":2},{"a":2,"p":3},{"a":1,"p":5},{"a":1,"p":7},{"a":1,"p":11}],
+  "gamma_terms": 100000,
+  "intervals": {
+    "difference_sigma_over_n_minus_rhs": {"lower":"-7.140553675291304961087604505534266912838692673349405611903E-2","upper":"-7.138401376473831359963303629109311996539765035560024446508E-2","width":"2.152298817473601124300876425E-5"},
+    "exp_gamma": {"lower":"1.78107241797535571508679605205732404807238398944213531995978E+0","upper":"1.78108132335970903419578518910334692407655338371500157062815E+0","width":"8.905384353319108989137046023E-6"},
+    "gamma": {"lower":"5.772156648931995272732620900823984627881914986383362170520E-1","upper":"5.772206648931995272732620900823984627881914986383362259364E-1","width":"5.000000000000000000000000000E-6"},
+    "log_log_n": {"lower":"2.39122694407493849114086698678352272306254302720011323728472E+0","upper":"2.39122694407493849114086698678352272306254302720011323728475E+0","width":"3E-59"},
+    "log_n": {"lower":"1.09230565123594166456372649626924669821584694771987903761652E+1","upper":"1.09230565123594166456372649626924669821584694771987903761654E+1","width":"2E-58"},
+    "robin_rhs": {"lower":"4.25956513428345512299364727810927486503418534399277297153570E+0","upper":"4.25958665727162985900489028687352441419717462037066678328064E+0","width":"2.152298817473601124300876425E-5"},
+    "sigma_over_n": {"lower":"4.18818112053054260898209724332818134423178769363667272711557E+0","upper":"4.18818112053054260898209724332818134423178769363667272711567E+0","width":"1.0E-58"}
+  },
+  "n_gt_5040": true,
+  "precision_decimal_digits": 60,
+  "remaining_verification": "Independently reproduce any CERTIFIED_VIOLATION with another interval/ball library before accepting an RH counterexample.",
+  "schema": "riemann.robin.factorization.v1",
+  "verdict": "CERTIFIED_SATISFACTION"
+}
