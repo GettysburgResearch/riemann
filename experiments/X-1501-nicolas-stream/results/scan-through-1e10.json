@@ -1,0 +1,43 @@
+{
+  "checkpoint_log_defects": [
+    {"log_defect_approx": "2.980305e-6", "prime_limit": 1000000000},
+    {"log_defect_approx": "2.047209e-6", "prime_limit": 2000000000},
+    {"log_defect_approx": "1.654093e-6", "prime_limit": 3000000000},
+    {"log_defect_approx": "1.410751e-6", "prime_limit": 4000000000},
+    {"log_defect_approx": "1.244051e-6", "prime_limit": 5000000000},
+    {"log_defect_approx": "1.118968e-6", "prime_limit": 6000000000},
+    {"log_defect_approx": "1.038997e-6", "prime_limit": 7000000000},
+    {"log_defect_approx": "9.545648e-7", "prime_limit": 8000000000},
+    {"log_defect_approx": "8.976011e-7", "prime_limit": 9000000000},
+    {"log_defect_approx": "8.52461732729062e-7", "prime_limit": 10000000000}
+  ],
+  "criterion": "Nicolas primorial Euler-totient inequality",
+  "endpoint": {
+    "floating_violations": 0,
+    "k": 455052511,
+    "last_prime": 9999999967,
+    "log_defect_approx": "8.52461732729062e-7",
+    "log_product_approx": "3.7138337942923136",
+    "normalized_ratio_approx": "1.0000008524620961",
+    "prime_limit": 10000000000,
+    "theta_approx": "9999939830.657757",
+    "upward_steps_after_k2": 0
+  },
+  "environment": {
+    "compiler": "g++ 14.2.0",
+    "long_double": "platform libm; non-directed",
+    "platform": "Linux x86_64",
+    "python": "3.13.5"
+  },
+  "experiment_id": "X-1501",
+  "proof_boundary": "All endpoint signs are ordinary long-double observations. No prime-stream proof certificate or outward-rounded transcendental enclosure is present. A finite positive range has no universal implication.",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "validation": {
+    "control_limit": 1000000,
+    "independent_mpmath_digits": 80,
+    "last_prime": 999983,
+    "one_shot_equals_split_restart": true,
+    "prime_count": 78498,
+    "tests_passed": 2
+  }
+}
