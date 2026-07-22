@@ -1,0 +1,14 @@
+{
+  "schema": "riemann.li-dyadic.v1",
+  "method": "cauchy_dft",
+  "n": 2,
+  "cauchy_dft": {
+    "sample_count": 4,
+    "radius_inner": {"numerator": 1, "scale_bits": 1},
+    "radius_outer": {"numerator": 3, "scale_bits": 2},
+    "dft_real": {"lower_num": -1, "upper_num": -1, "scale_bits": 0},
+    "dft_imag": {"lower_num": -1, "upper_num": 1, "scale_bits": 20},
+    "outer_max_abs_upper": {"numerator": 1, "scale_bits": 7}
+  },
+  "classification": "synthetic checker test; analytic provenance deliberately absent"
+}
