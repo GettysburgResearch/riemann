@@ -76,6 +76,27 @@ progression carrier sets tested at `c=10^7` did not beat the contiguous packet;
 most of their eigenvalue improvement came from sampling a better scalar carrier
 rather than coherent packet interference.
 
+## Separated-cluster follow-up
+
+The strongest scalar and packet basins elsewhere in the offset window were then
+combined into noncontiguous principal matrices. This changes the geometry while
+retaining the exact L-0605 source assembly. Representative results were:
+
+| packet geometry | dimension | minimum observed |
+|---|---:|---:|
+| contiguous center `-7748` | 128 | `0.2423760569088202` |
+| centers `-7748,-6816`, width 64 each | 128 | `0.2434332828327074` |
+| centers `-7748,-3350`, width 64 each | 128 | `0.2434332828327074` |
+| centers `-7748,2047`, width 64 each | 128 | `0.2434332828327071` |
+| centers `-7748,-6816,-3350`, width 64 each | 192 | `0.2434332828327070` |
+| centers `-7748,-6816,2047`, width 64 each | 192 | `0.2434332828327071` |
+
+Thus the separated blocks contributed essentially no useful coherent lowering;
+the minimum remained that of the strongest constituent block. This eliminates
+a tempting but weak continuation and narrows the next search to genuinely
+continuous offsets, windowed/prolate envelopes, or constraints tied to nearby
+spectral data.
+
 ## Classification
 
 - Prime enumeration was exact at the integer level.
@@ -95,10 +116,10 @@ family. The failure to cross zero says only that this finite packet and cutoff
 were unsuccessful. It does not imply positivity of the unrestricted Weil form
 or truth of RH.
 
-The plateau suggests that the next search should change geometry, not merely
-add contiguous carriers. Candidate changes include continuous offsets,
-windowed/prolate envelopes, several separated carrier clusters, and explicit
-constraints that notch nearby known critical-line contributions.
+The contiguous and separated-cluster plateaus show that the next search should
+change geometry, not merely add carriers or concatenate remote blocks.
+Candidate changes include continuous offsets, windowed/prolate envelopes, and
+explicit constraints that notch nearby known critical-line contributions.
 
 ## Main risks
 
