@@ -1,0 +1,87 @@
+{
+  "edge_scan_N12": {
+    "empirical_negative_cells": 0,
+    "parameters": {
+      "N": 12,
+      "cells": 792,
+      "dps": 85,
+      "fractions": [0, 0.02, 0.05, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 0.92, 0.98],
+      "intervals": 72,
+      "q_first": 2,
+      "q_last": 263
+    },
+    "precision_unstable_retained_cells": 0,
+    "raw_output_sha256": {
+      "edge_chunk_0_12_N12.json": "20ff0fe2ed66781db4c598f9ed1169ea63628f2b6b15ed46d7aecdb5c0589c5f",
+      "edge_chunk_12_24_N12.json": "0d9cd012fddfe025df9209e74ca4e3dea4bba5e9c3f21da1ea2b33271b935c43",
+      "edge_chunk_24_36_N12.json": "fc1e0e55615719d6e0e0eaa8e3dd42c781f81da9be7fba86b6b66527328cc445",
+      "edge_chunk_36_48_N12.json": "fa118e92dadab0e51aaa8cf2ee332e8233daeb7e814a872841d3eb0ab391d71a",
+      "edge_chunk_48_60_N12.json": "ba664a5609f3fb9cfe325f7de5b3b6c2444e96a1795dce7aa46fab1958297b16",
+      "edge_chunk_60_72_N12.json": "9d50d260907eddb19dcadfc72b2d38c86a38adc3346ecf2cc9e3136e494e06b6"
+    },
+    "top_relative_reductions": [
+      {"q": 5, "next_prime_power": 7, "best_fraction": 0.98, "threshold_lambda": "4.3433826570619963519757912125474710549e-17", "best_lambda": "2.2810154837131020535928753546140055340e-22", "ratio": "5.25170279437468229114839568528e-6"},
+      {"q": 3, "next_prime_power": 4, "best_fraction": 0.98, "threshold_lambda": "8.4643247584368385604782480427193237545e-8", "best_lambda": "1.7331209901144262296759979286292936872e-12", "ratio": "2.04755965723897037102617380011e-5"},
+      {"q": 4, "next_prime_power": 5, "best_fraction": 0.98, "threshold_lambda": "1.3753553642713573864106719351247872552e-12", "best_lambda": "5.4389358575246285105757426706265876589e-17", "ratio": "3.95456766942999820191491366916e-5"},
+      {"q": 2, "next_prime_power": 3, "best_fraction": 0.98, "threshold_lambda": "0.00136684859091280867726546756438616159", "best_lambda": "1.0525361141689957024325158549883778887e-7", "ratio": "7.70045871332457728059353585515e-5"},
+      {"q": 13, "next_prime_power": 16, "best_fraction": 0.98, "threshold_lambda": "2.1397073612587825103793622893702882922e-29", "best_lambda": "7.0320045223005927774351527236630748118e-32", "ratio": "0.00328643283171381386104092925393"},
+      {"q": 9, "next_prime_power": 11, "best_fraction": 0.98, "threshold_lambda": "1.1023856025749488205981106393280752677e-25", "best_lambda": "9.8393214975893660030978535753277767172e-28", "ratio": "0.00892548077061847480728751236256"},
+      {"q": 7, "next_prime_power": 8, "best_fraction": 0.65, "threshold_lambda": "1.8336920597999361915070306938179649402e-22", "best_lambda": "2.1592029643171619448394741046204405544e-24", "ratio": "0.0117751666795827235334481741802"},
+      {"q": 8, "next_prime_power": 9, "best_fraction": 0.8, "threshold_lambda": "3.2174898050628403259122883416467336018e-24", "best_lambda": "5.1925212163977815519907227818081336284e-26", "ratio": "0.016138423214976955338828545905"}
+    ]
+  },
+  "environment": {
+    "mpmath": "1.3.0",
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, May 5 2026, 21:05:52) [GCC 14.2.0]"
+  },
+  "experiment_id": "X-0601",
+  "generated_utc": "2026-07-22T20:45:00Z",
+  "parity_audit": {
+    "bands": [2, 4, 8, 12, 20],
+    "representative_cutoffs": [2, 3, 5, 7, 13, 29, 97, 100],
+    "result": "all checked odd-sector minima positive; odd minima typically much larger than even minima"
+  },
+  "refined_cells": [
+    {"N": 12, "classification": "EMPIRICAL_NONNEGATIVE", "dps": 220, "interval": "97->101", "log_fraction": "0.0962", "minimum_even_eigenvalue": "5.180806935478157072349894286977764e-44"},
+    {"N": 30, "classification": "EMPIRICAL_NONNEGATIVE", "dps": 260, "interval": "97->101", "log_fraction": "0.0962", "minimum_even_eigenvalue": "4.0854144739495235e-83"}
+  ],
+  "source_sha256": {
+    "lerch_resum.py": "e8775eb802673b34233d19082017e2bd4663b086ce1fe03a4b0a86b35d082adf",
+    "run.py": "844e22e72130f07400f3c4f551208eb84e89f70b32eb49889c52cc2e4d6ecc6b",
+    "test_lerch_resum.py": "28cd365e7a37f55e062ec02649e40c2ae1f0cf612c065d8a256e2dbacd95ec81",
+    "test_run.py": "cd0a11ef3ad6fc3add6decf0062dab513ec965f89b0498f68dfd1ce90ffed62a"
+  },
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "test_result": "9 passed",
+  "threshold_scan_N20": {
+    "empirical_negative_cells": 0,
+    "last_cell": {
+      "M0": "1.6090821053024677155855191293233164526e-30",
+      "cap": "1015.3576538646051953510031096951437406",
+      "lam": "3.9808907459524669965688012080440432789e-62",
+      "q": 97,
+      "res": "3.8291128302466787937e-172"
+    },
+    "parameters": {"N": 20, "dps": 170, "q_first": 2, "q_last": 97, "thresholds": 35},
+    "raw_output_sha256": {
+      "thresh_0_10_N20.json": "10d9e2145127e88ea7730dd75ccfdb314b37e07f7e8cb69f92f2dc46432443d3",
+      "thresh_10_20_N20.json": "c06f01a6ea135b1496758e8c29fedfb6c2d9a58ffc25bdfc487e3f77812b3d3e",
+      "thresh_20_30_N20.json": "974c9cb837f5633304ff645bfba1b70259d9ce2c3c7d89d207a905a179c5dc9a",
+      "thresh_30_40_N20.json": "d5e98dd57edfad86cf36875ae5954de558a5d5f21a481b0fbd03dda8001d1b2e"
+    }
+  },
+  "tiny_L_lerch_scan": {
+    "empirical_negative_cells": 0,
+    "minimum_by_L_at_N6": {
+      "1e-1": "0.9839166986663244774198390985466715",
+      "1e-2": "3.13481688937903082173003948999179",
+      "1e-3": "5.42219283966979715473623116792827",
+      "1e-6": "12.3282594601803068164464825786153",
+      "1e-9": "19.2360130504596739137211462541458",
+      "1e-12": "26.1437683277531081515284610944676"
+    },
+    "parameters": {"L": ["1e-1", "1e-2", "1e-3", "1e-6", "1e-9", "1e-12"], "bands": "1..6", "dps": "100-110"}
+  },
+  "warning": "All matrix signs are ordinary mpmath observations. No directed-rounding entry enclosure or counterexample certificate is present."
+}
