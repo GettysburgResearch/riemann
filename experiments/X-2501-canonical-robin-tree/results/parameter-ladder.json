@@ -1,0 +1,78 @@
+{
+  "acceptance_rule": "every stored terminal must be reconstructed with the same strict classification; the first unsupported prune or leaf rejects the rung",
+  "certificate_sha256": "4927ea262cdfe5e455bf06e5af7bad65053e2cbd99561f34b6c7da8f2a7856e6",
+  "execution_note": "Each rung was run in a fresh Python process through parameter_probe.py.",
+  "finite_region": {
+    "canonical_support_max": 33,
+    "definition": "all vectors (a_1,...,a_K) with 1<=K<=K_max, a_1>=...>=a_K>=1, and product p_i^a_i<=integer_upper",
+    "integer_lower": 5041,
+    "integer_upper": "1000000000000000000000000000000000000000000000000000000"
+  },
+  "rungs": [
+    {
+      "accepted": false,
+      "elapsed_seconds": 1.083716,
+      "first_failure": "invalid subtree prune",
+      "label": "deliberately_weak_64",
+      "parameters": {
+        "bits": 64,
+        "exp_terms": 8,
+        "harmonic_cutoff": 100,
+        "log_terms": 8
+      }
+    },
+    {
+      "accepted": true,
+      "elapsed_seconds": 4.44651,
+      "label": "first_passing_72",
+      "normalized_ratio_upper_decimal_outward": "0.999999723346049113525195510597",
+      "parameters": {
+        "bits": 72,
+        "exp_terms": 10,
+        "harmonic_cutoff": 200,
+        "log_terms": 10
+      },
+      "status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION"
+    },
+    {
+      "accepted": true,
+      "elapsed_seconds": 5.549341,
+      "label": "control_96",
+      "normalized_ratio_upper_decimal_outward": "0.999997723302014639663473840250",
+      "parameters": {
+        "bits": 96,
+        "exp_terms": 16,
+        "harmonic_cutoff": 1000,
+        "log_terms": 16
+      },
+      "status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION"
+    },
+    {
+      "accepted": true,
+      "elapsed_seconds": 12.688531,
+      "label": "control_160",
+      "normalized_ratio_upper_decimal_outward": "0.999997640061475190585510482156",
+      "parameters": {
+        "bits": 160,
+        "exp_terms": 56,
+        "harmonic_cutoff": 30000,
+        "log_terms": 56
+      },
+      "status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION"
+    },
+    {
+      "accepted": true,
+      "elapsed_seconds": 19.769986,
+      "label": "production_256",
+      "normalized_ratio_upper_decimal_outward": "0.999997639970216146706942918996",
+      "parameters": {
+        "bits": 256,
+        "exp_terms": 88,
+        "harmonic_cutoff": 250000,
+        "log_terms": 88
+      },
+      "status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION"
+    }
+  ],
+  "schema": "riemann.robin.canonical-tree.parameter-ladder.v1"
+}
