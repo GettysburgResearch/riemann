@@ -6,21 +6,17 @@ on:
       - agent/gpt56-03-e/39-arb-xi-passivity
     paths:
       - '.github/workflows/arb-xi-high.yml'
-      - 'experiments/X-3902-arb-xi-passivity/arb_producer.py'
-      - 'experiments/X-3902-arb-xi-passivity/arb_value_producer.py'
+      - 'experiments/X-3902-arb-xi-passivity/rs_scalar.c'
       - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
-      - 'experiments/X-3902-arb-xi-passivity/configs/high-carrier-scalar.json'
   pull_request:
     branches:
       - agent/gpt56-02-e/39-xi-passivity-adversarial-scan
     paths:
       - '.github/workflows/arb-xi-high.yml'
-      - 'experiments/X-3902-arb-xi-passivity/arb_producer.py'
-      - 'experiments/X-3902-arb-xi-passivity/arb_value_producer.py'
+      - 'experiments/X-3902-arb-xi-passivity/rs_scalar.c'
       - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
-      - 'experiments/X-3902-arb-xi-passivity/configs/high-carrier-scalar.json'
   workflow_dispatch:
 
 concurrency:
@@ -33,40 +29,42 @@ permissions:
 jobs:
   high-scalar:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Install rigorous backend
+      - name: Install FLINT development library
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install 'python-flint==0.9.0'
-      - name: Compile high-height producer and checker
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+      - name: Compile direct Riemann-Siegel producer and exact checker
         run: |
+          cc -O3 -std=c11 -Wall -Wextra -Werror \
+            experiments/X-3902-arb-xi-passivity/rs_scalar.c \
+            $(pkg-config --cflags --libs flint) -lm \
+            -o experiments/X-3902-arb-xi-passivity/rs_scalar
           python -m compileall -q \
-            experiments/X-3902-arb-xi-passivity/arb_producer.py \
-            experiments/X-3902-arb-xi-passivity/arb_value_producer.py \
             experiments/X-3902-arb-xi-passivity/verify_certificate.py \
             experiments/X-3902-arb-xi-passivity/verify_value_certificate.py
       - name: Produce rigorous scalar at optimized carrier
         run: |
           mkdir -p experiments/X-3902-arb-xi-passivity/results
-          /usr/bin/time -v python \
-            experiments/X-3902-arb-xi-passivity/arb_value_producer.py \
-            experiments/X-3902-arb-xi-passivity/configs/high-carrier-scalar.json \
-            --output experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar-certificate.json \
-            2> experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar.time.txt
+          /usr/bin/time -v \
+            experiments/X-3902-arb-xi-passivity/rs_scalar 128 \
+            > experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json \
+            2> experiments/X-3902-arb-xi-passivity/results/high-carrier-rs.time.txt
           python experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
-            experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar-certificate.json \
-            --output experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar-verification.json
-          cat experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar-verification.json
+            experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json \
+            --output experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
+          cat experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
       - name: Upload rigorous high-height result
         uses: actions/upload-artifact@v4
         with:
-          name: arb-xi-high-carrier-scalar
+          name: arb-xi-high-carrier-rs
           path: |
-            experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar-certificate.json
-            experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar-verification.json
-            experiments/X-3902-arb-xi-passivity/results/high-carrier-scalar.time.txt
+            experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json
+            experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
+            experiments/X-3902-arb-xi-passivity/results/high-carrier-rs.time.txt
