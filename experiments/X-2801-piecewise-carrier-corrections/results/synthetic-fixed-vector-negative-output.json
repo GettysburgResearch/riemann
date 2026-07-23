@@ -1,0 +1,51 @@
+{
+  "alpha_interval": {
+    "lower": {"denominator": 1, "numerator": 1},
+    "upper": {"denominator": 1, "numerator": 1}
+  },
+  "carrier": {"denominator": 20, "numerator": 94184072727073},
+  "cells": 1,
+  "certified_negative": true,
+  "certified_positive": false,
+  "correction_quadratic_radius": {
+    "denominator": 292731105330133011007855861857,
+    "numerator": 230750978434311250
+  },
+  "correction_radius_per_unit_norm": {
+    "denominator": 292731105330133011007855861857,
+    "numerator": 230750978434311250
+  },
+  "coverage": {
+    "higher_power_streams": 1,
+    "higher_prime_power_count": 1,
+    "prime_count": 2,
+    "shards": 2,
+    "total_segments": 2,
+    "total_terms": 3
+  },
+  "cutoff": "10^11",
+  "full_exact_quadratic_interval": {
+    "lower": {
+      "denominator": 292731105330133011007855861857,
+      "numerator": -292731105330363761986290173107
+    },
+    "upper": {
+      "denominator": 292731105330133011007855861857,
+      "numerator": -292731105329902260029421550607
+    }
+  },
+  "leading_quadratic_interval": {
+    "lower": {"denominator": 1, "numerator": -1},
+    "upper": {"denominator": 1, "numerator": -1}
+  },
+  "parameter_sha256": "3ac8bb6dff0313ea67e8ce455af35256a2f11936b133cae28a3b972a39c9e8c1",
+  "prime_rayleigh_interval": {
+    "lower": {"denominator": 1, "numerator": 2},
+    "upper": {"denominator": 1, "numerator": 2}
+  },
+  "schema": "riemann.piecewise-carrier-fixed-vector.v1",
+  "scope_warning": "Exact composition and declared segment coverage only. The checker does not prove prime enumeration inside a segment, analytic interval provenance, D-0801 admissibility, or the Guinand--Weil normalization.",
+  "vector_norm_squared": {"denominator": 1, "numerator": 1},
+  "vector_sha256": "e93e0e6dc6e62ab46d12f499d26f4b72c63511e67bc916d4f4034298b11e2c72",
+  "verdict": "CERTIFIED_NEGATIVE_FIXED_VECTOR"
+}
