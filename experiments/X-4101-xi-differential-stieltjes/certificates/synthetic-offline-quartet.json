@@ -1,0 +1,69 @@
+{
+  "schema": "riemann.xi-stieltjes-synthetic.v1",
+  "kind": "finite-zero-right-side-differential",
+  "zeros": [
+    {
+      "delta": {
+        "numerator": "1",
+        "denominator": "10"
+      },
+      "gamma": {
+        "numerator": "20",
+        "denominator": "1"
+      }
+    },
+    {
+      "delta": {
+        "numerator": "1",
+        "denominator": "10"
+      },
+      "gamma": {
+        "numerator": "-20",
+        "denominator": "1"
+      }
+    },
+    {
+      "delta": {
+        "numerator": "-1",
+        "denominator": "10"
+      },
+      "gamma": {
+        "numerator": "20",
+        "denominator": "1"
+      }
+    },
+    {
+      "delta": {
+        "numerator": "-1",
+        "denominator": "10"
+      },
+      "gamma": {
+        "numerator": "-20",
+        "denominator": "1"
+      }
+    }
+  ],
+  "x": {
+    "numerator": "11",
+    "denominator": "100"
+  },
+  "height": {
+    "numerator": "20",
+    "denominator": "1"
+  },
+  "claimed": {
+    "re_f": {
+      "numerator": "563216297601940400",
+      "denominator": "5376148512009261"
+    },
+    "differential": {
+      "numerator": "-262158411401971496699725715848000000",
+      "denominator": "28902972823179391166739349766121"
+    },
+    "localizer_b00": {
+      "numerator": "-131079205700985748349862857924000000",
+      "denominator": "28902972823179391166739349766121"
+    },
+    "status": "SYNTHETIC_RIGHT_SIDE_DIFFERENTIAL_NEGATIVE"
+  }
+}
