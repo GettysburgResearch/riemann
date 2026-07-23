@@ -7,7 +7,7 @@ Status: **certified finite positive pilot within the stated producer contracts; 
 
 ## Research question
 
-Can the exact proof architecture of PR #49 be exercised end to end on a real complete-prime carrier vector before launching the 4,118,082,969-term target?
+Can the exact proof architecture of PR #49 be exercised end to end on a real complete-prime, high-dimensional carrier vector before launching the 4,118,082,969-term target?
 
 The pilot answers **yes** at `c=10^8`, `K=1024`. It:
 
@@ -20,6 +20,16 @@ The pilot answers **yes** at `c=10^8`, `K=1024`. It:
 7. obtains a strict positive full interval for this fixed vector.
 
 This is a positive exclusion result, not evidence for RH and not a counterexample.
+
+## Relationship to concurrent X-2804/X-2805
+
+PR #49 advanced while this independent branch was being executed. Its X-2804 and X-2805 now provide the primary general freeze/producer contracts and the sharper knot-hull implementation of L-2806. X-2810 is retained because it adds three nonduplicative pieces:
+
+- L-2810's explicit target bit-depth theorem;
+- T-2810's center-radius moat and shard-error allocation theorem;
+- a complete `K=1024` real discovery-vector pilot at `c=10^8`, rather than a low-dimensional synthetic vector.
+
+Its C producer is an independent implementation and cross-check, not a replacement for the reviewed X-2805 producer.
 
 ## Parameters and coverage
 
@@ -99,7 +109,7 @@ Its lower endpoint is strictly positive. Conditional on review of the producer a
 regenerate_freeze.py       complete-prime discovery and dyadic freezing
 exact_vector.py            integer-only vector/autocorrelation routines
 export_autocorr.py         exact common-scale Gaussian-integer export
-directed_prime_shard.c     shardable directed MPFR scalar producer
+directed_prime_shard.c     independent shardable directed MPFR producer
 mpfr_compat.h              official-header preference plus MPFR-4 fallback ABI
 build_pilot_certificate.py exact-rational schema construction
 verify_vector.py           exact vector and rounding-bound verifier
@@ -136,7 +146,7 @@ The certificate is compatible with `riemann.piecewise-carrier-fixed-vector.v1` f
 Repository promotion still requires:
 
 1. independent review of `directed_prime_shard.c` and its MPFR semantics;
-2. an independent rerun or backend;
+2. comparison against X-2805 or another directed backend;
 3. review of T-2801 and L-2803;
 4. attachment of the T-2801 normalization fingerprint to production artifacts.
 
