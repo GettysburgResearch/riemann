@@ -1,9 +1,9 @@
-# X-2801 — Exact piecewise-carrier correction budget
+# X-2801 — Exact piecewise-carrier correction certificates
 
 Experiment ID: `X-2801`  
 Agent: `gpt56-04-c`  
 Issue: #28  
-Status: `PARTIAL / exact algebraic checker`  
+Status: `PARTIAL / exact algebraic checkers`  
 Date: 2026-07-23
 
 ## Question
@@ -11,13 +11,18 @@ Date: 2026-07-23
 Can the exact D-0801 archimedean and pole terms overturn the very small positive
 complete-leading carrier margin reported in draft PR #44?
 
-## Result
+## Independent source reconstruction
 
-L-2801 independently reduces both terms to compact cellwise Toeplitz formulas.
-L-2802 then avoids an oscillatory quadrature entirely by bounding the complete
-normalized correction for every unit vector.
+L-2801 independently reduces both terms to compact cellwise Toeplitz formulas,
+without importing the X-0701/X-0801 numerical core. The validation module checks
+those formulas at moderate carriers against separately arranged expressions.
 
-For
+## Two exact correction certificates
+
+### Self-contained fallback budget
+
+L-2802 derives a deliberately coarse rational bound directly from Parseval,
+Fourier total variation, digamma estimates, and finite cell transforms. At
 
 ```text
 c = 10^11
@@ -25,7 +30,7 @@ K = 1024
 T = 4709203636353.65
 ```
 
-`verify_correction_budget.py` proves using exact rational arithmetic that
+`verify_correction_budget.py` proves
 
 ```text
 correction radius =
@@ -35,22 +40,41 @@ correction radius =
 correction radius < 1/750000
 ```
 
-The exact radius is approximately `1.2370293741e-6`. PR #44's empirical
-leading margin is approximately `2.6896626427e-4`, but the latter is not a
-rigorous interval.
+This route is independent of the concurrent sharper operator argument.
 
-## Checker
+### Exact specialization of the sharper operator bound
 
-Schema:
+While this branch was in progress, the PR #44 base added L-0901, which obtains
+a much sharper `O(1/T)` uniform operator bound by integrating the oscillatory
+archimedean residual by parts. L-2803 independently checks its target constants
+using exact rational arithmetic.
+
+`verify_variation_budget.py` proves
+
+```text
+variation radius =
+136091541158257193750 /
+292731105330133011007855861857
+
+variation radius < 1/2000000000
+```
+
+The exact value is approximately `4.6490290468e-10`.
+
+PR #44's empirical leading margin is approximately `2.6896626427e-4`, about
+`5.785e5` times the exact variation radius. That leading value is not a directed
+interval and is not promoted by this experiment.
+
+## Checker schemas
 
 ```text
 riemann.piecewise-carrier-correction-budget.v1
+riemann.piecewise-carrier-variation-budget.v1
 ```
 
-The checker takes an exact rational carrier, decimal-power cutoff, and cell
-count. It computes a universal correction radius using only integers and
-`fractions.Fraction`. An optional separately produced leading-margin interval
-is widened by that radius.
+Both checkers take an exact rational carrier, decimal-power cutoff, and cell
+count. An optional separately produced leading-margin interval is widened by
+the relevant radius.
 
 Verdicts:
 
@@ -58,8 +82,9 @@ Verdicts:
 - `CERTIFIED_NEGATIVE` when the widened upper endpoint is negative;
 - `UNRESOLVED` otherwise.
 
-The checker does not establish the analytic provenance of a supplied leading
-interval and does not audit the Guinand--Weil normalization.
+The checkers do not establish the analytic provenance of a supplied prime
+interval and do not audit D-0801 admissibility or the Guinand--Weil
+normalization.
 
 ## Reproduction
 
@@ -67,38 +92,50 @@ interval and does not audit the Guinand--Weil normalization.
 python -m unittest discover -s tests -v
 python verify_correction_budget.py \
   certificates/target-budget-c1e11.json
+python verify_variation_budget.py \
+  certificates/target-variation-budget-c1e11.json
 ```
 
-The optional mpmath validation layer can be exercised through the same test
-suite. It is independent of the X-0701/X-0801 source code and checks:
+The committed test transcripts contain 18 passing tests in total. They cover:
 
+- exact target fractions and strict threshold comparisons;
+- safe synthetic positive and negative intervals;
+- zero-touch rejection;
+- schema and integer-type failures;
+- non-power-of-two cell handling;
 - cellwise autocorrelation endpoints;
 - compact versus finite-transform pole evaluation;
 - the `K=1` compact archimedean formula in two algebraic arrangements.
 
+Synthetic threshold fixtures test checker logic only and are not mathematical
+candidates.
+
 ## Files
 
-- `verify_correction_budget.py` — proof-producing exact rational checker;
+- `verify_correction_budget.py` — self-contained fallback rational checker;
+- `verify_variation_budget.py` — exact specialization of L-0901;
 - `compact_corrections.py` — independent non-rigorous formula validation;
-- `certificates/target-budget-c1e11.json` — actual parameter budget request;
-- `certificates/synthetic-positive-threshold.json` — checker control only;
-- `certificates/synthetic-negative-threshold.json` — checker control only;
-- `results/target-budget-output.json` — exact retained result;
-- `results/tests.txt` — test transcript;
-- `tests/` — ten adversarial and formula tests.
+- `certificates/target-budget-c1e11.json`;
+- `certificates/target-variation-budget-c1e11.json`;
+- synthetic positive and negative controls;
+- exact retained JSON outputs and test transcripts;
+- `tests/` — adversarial arithmetic and formula checks.
 
 ## Classification
 
 - L-2801 formulas: `PROPOSED` pending independent review.
-- L-2802 correction inequality: `PROPOSED` pending independent review.
-- Rational checker arithmetic and target fraction: exact finite computation.
+- L-2802 fallback inequality: `PROPOSED` pending independent review.
+- L-0901 sharper operator inequality: concurrent `PROPOSED` dependency.
+- L-2803 rational specialization: `PROPOSED` pending review of L-0901.
+- Checker arithmetic and retained fractions: exact finite computation.
 - Compact mpmath controls: ordinary high precision, not certified.
-- PR #44 leading margin: empirical and not imported as proof data.
+- PR #44 leading margin: empirical and never used as proof input.
 - Counterexample status: none.
 
 ## Remaining proof bottleneck
 
-The dominant missing item is now the complete prime side, not the omitted
-archimedean/pole correction. A directed producer must freeze a dyadic vector,
-enclose all huge phases and all prime-power accumulation, and emit a leading
-margin interval. At the current target, separation by `1/750000` is enough.
+The dominant missing item is now unambiguously the complete prime side. A
+directed producer must freeze a dyadic vector, enclose every huge phase and all
+prime-power accumulation, and emit a leading-margin interval. Conditional on
+L-0901, separation from zero by `1/2000000000` is sufficient at the current
+target.
