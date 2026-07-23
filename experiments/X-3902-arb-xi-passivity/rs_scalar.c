@@ -123,7 +123,7 @@ main(int argc, char *argv[])
 
     acb_t s, sm1, halfs, zratio, digamma, f_parts, f_product;
     acb_t A, Aprime, B, Bprime, G, Gprime, xi, xiprime;
-    acb_t exponent, term, tmp;
+    acb_t exponent, term;
     arb_t pi, logpi, half_logpi, abs_zeta, abs_xi, half;
     acb_ptr jet;
 
@@ -131,7 +131,7 @@ main(int argc, char *argv[])
     acb_init(digamma); acb_init(f_parts); acb_init(f_product);
     acb_init(A); acb_init(Aprime); acb_init(B); acb_init(Bprime);
     acb_init(G); acb_init(Gprime); acb_init(xi); acb_init(xiprime);
-    acb_init(exponent); acb_init(term); acb_init(tmp);
+    acb_init(exponent); acb_init(term);
     arb_init(pi); arb_init(logpi); arb_init(half_logpi);
     arb_init(abs_zeta); arb_init(abs_xi); arb_init(half);
     jet = _acb_vec_init(2);
@@ -233,7 +233,7 @@ main(int argc, char *argv[])
     acb_clear(digamma); acb_clear(f_parts); acb_clear(f_product);
     acb_clear(A); acb_clear(Aprime); acb_clear(B); acb_clear(Bprime);
     acb_clear(G); acb_clear(Gprime); acb_clear(xi); acb_clear(xiprime);
-    acb_clear(exponent); acb_clear(term); acb_clear(tmp);
+    acb_clear(exponent); acb_clear(term);
     arb_clear(pi); arb_clear(logpi); arb_clear(half_logpi);
     arb_clear(abs_zeta); arb_clear(abs_xi); arb_clear(half);
     flint_cleanup();
