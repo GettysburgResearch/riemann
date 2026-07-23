@@ -37,11 +37,15 @@ class PilotResultTests(unittest.TestCase):
 
     def test_normalization_binding(self):
         data = json.loads(
-            (ROOT / "results/pilot-fixed-vector-certificate-c1e8.json").read_text()
+            (ROOT / "results/pilot-certificate-manifest.json").read_text()
         )
         self.assertEqual(
             data.get("normalization_sha256"),
             "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+        )
+        self.assertEqual(
+            data.get("certificate_sha256"),
+            "647443663adbdc8db114a8ef6d69b860ee66337bdf703ef52bfb4884713eb03e",
         )
 
 
