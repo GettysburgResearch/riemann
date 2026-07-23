@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact rational kernels for L-3903 matched-pole Pick annihilators.
+"""Exact rational kernels for L-3904 matched-pole Pick annihilators.
 
 This module contains finite algebra only. It does not evaluate zeta or xi and
 never treats a modeled zero pair as a Riemann-xi candidate.
@@ -16,7 +16,7 @@ from barycentric import barycentric_weights, linear_coefficients, require_nodes
 def matched_pole_vector(
     nodes: Sequence[Fraction], model_d: Fraction
 ) -> tuple[Fraction, ...]:
-    """Return the canonically scaled L-3903 rational vector.
+    """Return the canonically scaled L-3904 rational vector.
 
     The scaling is chosen so that, at the modeled pair, the alpha overlap is
     zero and the beta overlap is exactly -1.
@@ -94,7 +94,7 @@ def symmetric_pair_quadratic(
 def pair_polynomial_data(
     nodes: Sequence[Fraction], vector: Sequence[Fraction], actual_d: Fraction
 ) -> tuple[Fraction, Fraction, Fraction]:
-    """Return U(d), V(d), D(d) from L-3903 equation (9)."""
+    """Return U(d), V(d), D(d) from L-3904 equation (9)."""
     xs = require_nodes(nodes)
     c = tuple(Fraction(value) for value in vector)
     if len(c) != len(xs):
