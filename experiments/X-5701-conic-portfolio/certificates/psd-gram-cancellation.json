@@ -1,0 +1,15 @@
+{
+  "schema": "riemann.conic-portfolio.v1",
+  "kind": "psd-gram-box",
+  "base_matrix": [["-1/2", "0"], ["0", "-1/2"]],
+  "feature_matrices": {"u": [["1", "0"], ["0", "-1"]]},
+  "features": [{"id": "u", "center": "0", "radius": "1"}],
+  "gram_terms": [
+    {"id": "e1", "weight": "1", "vector": ["1", "0"]},
+    {"id": "e2", "weight": "1", "vector": ["0", "1"]}
+  ],
+  "gate_id": "synthetic",
+  "feature_manifest": ["u"],
+  "logical_gates": [{"id": "synthetic", "state": "SYNTHETIC_CONTROL", "evidence": "D-5701 PSD adversarial control"}],
+  "claimed_robust_upper": "-1"
+}
