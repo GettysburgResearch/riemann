@@ -7,6 +7,10 @@ on:
       - agent/gpt56-01-e/28-target-directed-toeplitz
     paths:
       - .github/workflows/target-directed-toeplitz.yml
+  pull_request:
+    paths:
+      - .github/workflows/target-directed-toeplitz.yml
+      - experiments/X-2813-target-directed-toeplitz/**
 
 permissions:
   contents: read
