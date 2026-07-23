@@ -65,6 +65,40 @@ A straddling pair has `A_pair<0`; a same-side pair has `B_pair<0`. A negative
 same-side channel can therefore estimate the horizontal displacement, after
 which a straddling channel supplies an independent second nomination.
 
+### L-3903 matched-pole Pick annihilator
+
+`matched_pole.py` converts a rational model `d` and exact horizontal nodes into
+one fixed rational Pick vector. With
+
+```text
+alpha_i = x_i/(x_i^2-d)
+beta_i  = 1/(x_i^2-d),
+```
+
+the canonical vector satisfies exactly
+
+```text
+sum c_i alpha_i = 0
+sum c_i beta_i  = -1.
+```
+
+A modeled reflected pair of multiplicity `m` therefore contributes
+
+```text
+-2*m*d.
+```
+
+For `n` nodes, the same vector cancels node moments through degree `n-3`,
+which suppresses distant critical-line Gram contributions. A finite polynomial
+identity reconstructs the isolated-pair score under model mismatch. The final
+certificate remains the complete direct Pick interval; a negative model score
+alone is not evidence.
+
+The exact control and transcript are:
+
+- `results/matched-pole-control.json`;
+- `results/matched-pole-tests.txt`.
+
 ## Numerical layers
 
 - `xi_jets.py` assembles simultaneous Riemann--Siegel zeta derivatives through
@@ -93,6 +127,9 @@ At the optimized PR #44 center:
 At the second carrier, adjacent L-3902 channels on offsets through `1e-2`
 remained approximately `A=+165.30..+165.42` and `B=+39.288..+39.307`.
 
+L-3903 has exact synthetic and critical-line-model controls but has not yet
+been evaluated with directed Riemann-xi balls.
+
 ## Curvature provenance correction
 
 The first draft quoted two negative no-remainder curvature values that were not
@@ -118,19 +155,21 @@ Direct reconstruction at the minimum decimal ordinate gives
 ```bash
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
-python -m compileall -q barycentric.py xi_jets.py nufft_curvature.py tests
+python -m compileall -q \
+  barycentric.py matched_pole.py xi_jets.py nufft_curvature.py tests
 python nufft_curvature.py \
   --center 4709203636353.6309 \
   --spacing 0.01 --points 65536 --order 18 \
   --output /tmp/curvature-nufft.json
 ```
 
-The barycentric tests use exact standard-library arithmetic. The Riemann--Siegel
-and FFT controls require mpmath and NumPy.
+The barycentric and matched-pole tests use exact standard-library arithmetic.
+The Riemann--Siegel and FFT controls require mpmath and NumPy.
 
 ## Proof boundary
 
-- Exact rational barycentric/two-channel identities: algebraic tests.
+- Exact rational barycentric, two-channel, and matched-pole identities:
+  algebraic tests.
 - Riemann-xi point values and FFT grid: ordinary arithmetic, not intervals.
 - Raw NUFFT Taylor bounds do not enclose a final curvature quotient near small
   Hardy values.
@@ -139,8 +178,10 @@ and FFT controls require mpmath and NumPy.
 
 ## Suggested next search
 
-Use a value-only Arb batch that returns both L-3902 channels and their shared
-uncertainty moat. Require a negative same-side `B` plus a compatible negative
-straddling `A` before escalating a high-height basin to multi-point or jet
-certification. Separately, freeze the PR #44 carrier vector and perform the
-directed complete-prime scalar pass against PR #51's exact correction gate.
+Use one value-only Arb batch that returns both L-3902 channels and the complete
+F rectangles needed by L-3903. A negative same-side `B` should nominate a
+rational model `d`; rank exact three-, four-, and five-point matched vectors by
+predicted pair separation divided by coefficient amplification; then require a
+negative complete `real-pick-rayleigh` interval. Separately, freeze the PR #44
+carrier vector and perform the directed complete-prime scalar pass against PR
+#51's exact correction gate.
