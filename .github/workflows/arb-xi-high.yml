@@ -42,16 +42,21 @@ jobs:
           pkg-config --modversion flint
       - name: Compile direct Riemann-Siegel producer and exact checker
         run: |
+          mkdir -p experiments/X-3902-arb-xi-passivity/results
+          set +e
           cc -O3 -std=c11 -Wall -Wextra -Werror \
             experiments/X-3902-arb-xi-passivity/rs_scalar.c \
             $(pkg-config --cflags --libs flint) -lm \
-            -o experiments/X-3902-arb-xi-passivity/rs_scalar
+            -o experiments/X-3902-arb-xi-passivity/rs_scalar \
+            2>&1 | tee experiments/X-3902-arb-xi-passivity/results/compile.log
+          status=${PIPESTATUS[0]}
+          set -e
+          if [ "$status" -ne 0 ]; then exit "$status"; fi
           python -m compileall -q \
             experiments/X-3902-arb-xi-passivity/verify_certificate.py \
             experiments/X-3902-arb-xi-passivity/verify_value_certificate.py
       - name: Produce rigorous scalar at optimized carrier
         run: |
-          mkdir -p experiments/X-3902-arb-xi-passivity/results
           /usr/bin/time -v \
             experiments/X-3902-arb-xi-passivity/rs_scalar 128 \
             > experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json \
@@ -60,11 +65,14 @@ jobs:
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json \
             --output experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
           cat experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
-      - name: Upload rigorous high-height result
+      - name: Upload rigorous high-height result and diagnostics
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: arb-xi-high-carrier-rs
+          if-no-files-found: warn
           path: |
+            experiments/X-3902-arb-xi-passivity/results/compile.log
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs.time.txt
