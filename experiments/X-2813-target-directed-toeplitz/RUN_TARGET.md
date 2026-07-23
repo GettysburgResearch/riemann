@@ -1,7 +1,8 @@
 # Full target run trigger
 
-This child commit launches the two-job directed calculation defined in
-`.github/workflows/target-directed-toeplitz-paired.yml`.
+This child commit launches only the two-job directed calculation defined in
+`.github/workflows/target-directed-toeplitz-paired.yml`. The larger reference
+matrices are now manual-only, leaving both hosted slots to this run.
 
 Each hosted job evaluates four disjoint MPFR subranges internally. Together they
 cover all 200 half-open integer segments for the target.
