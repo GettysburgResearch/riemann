@@ -1,0 +1,59 @@
+{
+  "schema": "riemann.xi-nufft-curvature-scan.v1",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "parameters": {
+    "center": "4709203636353.6309",
+    "spacing": "0.01",
+    "points": 65536,
+    "signed_offset_index_min": -32768,
+    "signed_offset_index_max": 32767,
+    "taylor_order": 18,
+    "riemann_siegel_terms": 865732,
+    "phase_rule": "high-precision center theta reduced modulo 2*pi before binary64 output phases"
+  },
+  "raw_moment_taylor_bounds": {
+    "S0": 3.915183531716942e-10,
+    "S1": 4.57395513861137e-9,
+    "S2": 5.493843836243517e-8,
+    "warning": "Raw moment bounds do not enclose curvature after division by a small Hardy sum."
+  },
+  "summary": {
+    "negative_count": 0,
+    "minimum_curvature": 30.742555369264693,
+    "minimum_t": "4709203636353.6409",
+    "minimum_signed_offset_index": 1,
+    "minimum_hardy_Z": -259.39894596667915
+  },
+  "direct_spot_checks": [
+    {
+      "t": "4709203636352.6309",
+      "nufft_curvature": 83.14077346735661,
+      "direct_curvature": 83.1359381409892,
+      "nufft_hardy_Z": -4.50070467887451,
+      "direct_hardy_Z": -4.500534761460507
+    },
+    {
+      "t": "4709203636353.6309",
+      "nufft_curvature": 30.757852190028355,
+      "direct_curvature": 30.75821602091934,
+      "nufft_hardy_Z": -258.1502441487486,
+      "direct_hardy_Z": -258.1338378975122
+    },
+    {
+      "t": "4709203636353.6409",
+      "nufft_curvature": 30.742555369264693,
+      "direct_curvature": 30.742489343830005,
+      "nufft_hardy_Z": -259.39894596667915,
+      "direct_hardy_Z": -259.39040294489854
+    },
+    {
+      "t": "4709203636453.6309",
+      "nufft_curvature": 78.49019262327104,
+      "direct_curvature": 78.47007791547617,
+      "nufft_hardy_Z": 14.488913870441722,
+      "direct_hardy_Z": 14.49032971584775
+    }
+  ],
+  "counterexample_candidate": null,
+  "interpretation": "The two earlier negative curvature rows are not reproducible on the frozen exact-decimal grid and are withdrawn by R-3901."
+}
