@@ -1,0 +1,13 @@
+test_complete_small_certificate_replays (test_engine.CertificateReplayTests.test_complete_small_certificate_replays) ... ok
+test_deleted_terminal_is_rejected (test_engine.CertificateReplayTests.test_deleted_terminal_is_rejected) ... ok
+test_forged_quantitative_summary_is_rejected (test_engine.CertificateReplayTests.test_forged_quantitative_summary_is_rejected) ... ok
+test_mutated_powered_dual_is_rejected (test_engine.CertificateReplayTests.test_mutated_powered_dual_is_rejected) ... ok
+test_weak_parameter_replay_fails_closed (test_engine.CertificateReplayTests.test_weak_parameter_replay_fails_closed) ... ok
+test_independent_powered_reconstruction_agrees (test_engine.PoweredEnvelopeTests.test_independent_powered_reconstruction_agrees) ... ok
+test_synthetic_shared_budget_strictly_improves (test_engine.PoweredEnvelopeTests.test_synthetic_shared_budget_strictly_improves) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.403s
+
+OK
+COMPILEALL_OK

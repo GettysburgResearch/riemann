@@ -1,0 +1,145 @@
+{
+  "all_integer_consequence": {
+    "case_bounds": {
+      "canonical_image_above_5040": {
+        "decimal_outward": "0.999999970290790912669514849764",
+        "normalized_ratio_upper": {
+          "denominator": "4929266752276124621407307547991464859958724077148435533342333779395640685276364353769677889651517337093813818125771119533879147780231049678088900289467041640649606182731405776396420990459910960086560138122216292161236669",
+          "numerator": "4929266605831508030809438549349233873950244330830527787564344848774543854249724362679511538968443503817166939717995026038403556375186914824968554767253175537283993886369227962637304840931246080000000000000000000000000000"
+        }
+      },
+      "canonical_image_at_most_5040_for_n_at_least_5583": {
+        "decimal_outward": "0.999991801920710053576681871066",
+        "normalized_ratio_upper": {
+          "denominator": "36811874276936251114802149009885708254462237896835",
+          "numerator": "36811572490272117252255311724041378557583800926208"
+        }
+      },
+      "finite_window_5041_5582": {
+        "decimal_outward": "0.902862776256344795206801417073",
+        "normalized_ratio_upper": {
+          "denominator": "362598143783892256476168209838520192883446980495065",
+          "numerator": "327376366762122253677625402528447396402928889626624"
+        }
+      }
+    },
+    "conclusion": "Assuming the named structural dependencies, every integer in the stated finite range satisfies Robin's strict inequality.",
+    "controlling_case": "canonical_image_above_5040",
+    "dependencies": [
+      "T-2001",
+      "T-2002",
+      "L-3502"
+    ],
+    "integer_range": [
+      5041,
+      "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "normalized_ratio_upper": {
+      "denominator": "4929266752276124621407307547991464859958724077148435533342333779395640685276364353769677889651517337093813818125771119533879147780231049678088900289467041640649606182731405776396420990459910960086560138122216292161236669",
+      "numerator": "4929266605831508030809438549349233873950244330830527787564344848774543854249724362679511538968443503817166939717995026038403556375186914824968554767253175537283993886369227962637304840931246080000000000000000000000000000"
+    },
+    "normalized_ratio_upper_decimal_outward": "0.999999970290790912669514849764",
+    "status": "PROPOSED_LOGICAL_CONSEQUENCE_WITH_VERIFIED_ARITHMETIC"
+  },
+  "certificate_gzip": {
+    "bytes": 424611,
+    "committed": false,
+    "compression": "gzip level 9, mtime=0",
+    "filename": "certificate.production.json.gz",
+    "regeneration": "python search.py ... && python verify.py ... && python pack_release.py ...",
+    "sha256": "a7dd7057bd67c232d60216ca8ba0398fab04514f977cfa189728360043451cb3"
+  },
+  "certificate_internal_sha256": "cf2274e2ebce5e6243a4d7e7df5699406c0e4ffcbfbe8b25d99780e64a88e30d",
+  "certificate_schema": "riemann.robin.powered-canonical-tree.v1",
+  "certificate_uncompressed": {
+    "bytes": 3656954,
+    "committed": false,
+    "filename": "certificate.production.json",
+    "sha256": "f18a209916612d5f60c135318d690d7ad2f0af9f6b2cfa352cc8e22538ca94b6"
+  },
+  "counts": {
+    "below_domain_leaves": 43,
+    "internal_nodes": 236209,
+    "powered_candidate_nodes": 56047,
+    "powered_prunes": 444,
+    "satisfied_leaves": 326,
+    "separate_prunes": 180109,
+    "unresolved_leaves": 0,
+    "violation_leaves": 0
+  },
+  "dual_ladder": [
+    {
+      "a": 1,
+      "d": 128
+    },
+    {
+      "a": 1,
+      "d": 96
+    },
+    {
+      "a": 1,
+      "d": 64
+    }
+  ],
+  "finite_region": {
+    "canonical_support_max": 53,
+    "definition": "all consecutive-prime nonincreasing positive exponent vectors under integer_upper",
+    "integer_lower": 5041,
+    "integer_upper": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "global_canonical_normalized_ratio_upper": {
+    "abundancy_ceiling": {
+      "denominator": "356625094950239553698839377683179715068282622403177761995496351027785394992498479390731869288994931906192974487159251457179453062628786764339306144662361532139973942177427",
+      "numerator": "3372741076659812298381482253849657896025550804549994314203771224643989215848150471710015021982035730773034049148948887948094898144343723427758080000000000000000000000000000"
+    },
+    "kind": "PRUNE_SEPARATE",
+    "normalized_ratio_upper": {
+      "denominator": "4929266752276124621407307547991464859958724077148435533342333779395640685276364353769677889651517337093813818125771119533879147780231049678088900289467041640649606182731405776396420990459910960086560138122216292161236669",
+      "numerator": "4929266605831508030809438549349233873950244330830527787564344848774543854249724362679511538968443503817166939717995026038403556375186914824968554767253175537283993886369227962637304840931246080000000000000000000000000000"
+    },
+    "normalized_ratio_upper_decimal_outward": "0.999999970290790912669514849764",
+    "prefix": [
+      8,
+      8,
+      5,
+      4,
+      3
+    ],
+    "reference_n": "7485691255813295429515212933612949968685497740373097625629707458111907250222497823200000",
+    "rhs_lower": {
+      "bits": 160,
+      "lower_numerator": "13821985110060504208914167865308402356645347028847"
+    },
+    "support": 43
+  },
+  "parameters": {
+    "bits": 160,
+    "exp_terms": 56,
+    "harmonic_cutoff": 30000,
+    "log_terms": 56
+  },
+  "powered_dual_use": {
+    "1/128": 437,
+    "1/64": 2,
+    "1/96": 5
+  },
+  "proof_boundary": "The generated compressed file contains the complete terminal stream. The committed manifest binds both byte representations and the reconstructed verification output without committing reproducible bulk output. Structural parent claims retain their repository statuses.",
+  "root_upper_bits": 192,
+  "schema": "riemann.robin.powered-canonical.release-manifest.v1",
+  "source_sha256": {
+    "certmath.py": "000829b6f4228e6c24316bf5467c33d9ccc8b6841c4e6290bee3be3e2b05951e",
+    "pack_release.py": "81d246ceebb1cc34a8907fbee8932789088cb63c3aa3d4b1ac798ec6311196d9",
+    "parameter_ladder.py": "2b87bca362bc8251edcfcc188c795440b528903721cd6b6a157417f0dd1e0ee0",
+    "parameter_probe.py": "c88dfa0f4d54a90a3e2f8ff1119ea32837ccba7fde8541ef160f4686277a5f40",
+    "search.py": "9c01efa93cce22522f40d874dddf96d6c185d97638c030069ceaec34f8a6495b",
+    "tests/test_engine.py": "0e2fd8a1a90d43ff6beae023a19ff7f2518184a9327ed4be32852ea618ffa41a",
+    "verify.py": "5010a23895e421adb25f4fbef026892b8d87658f34d27f1a39f13b0d5db55f7d"
+  },
+  "status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION",
+  "terminal_stream_sha256": "ce467fdb07a51b2989480774edd8dde8609ada03934f58e68ec6c22d0b0ac290",
+  "verification": {
+    "filename": "verification.json",
+    "sha256": "3d12ac9801c2969c81d8dc13930a387682a011c9be0b422536ae95ecd681ca41",
+    "verified": true
+  }
+}

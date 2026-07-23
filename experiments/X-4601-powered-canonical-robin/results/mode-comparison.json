@@ -1,0 +1,75 @@
+{
+  "exact_differences": {
+    "certificate_bytes_removed": 26145,
+    "internal_nodes_removed": 2038,
+    "powered_prunes_added": 444,
+    "separate_prunes_removed": 1967,
+    "total_terminal_prunes_removed": 1523
+  },
+  "integer_upper": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "interpretation": "The exact powered envelope reduces tree and certificate size but costs more author-side rational arithmetic. Verification remains proof-producing and the old ceiling remains a fail-safe.",
+  "parameters": {
+    "bits": 96,
+    "exp_terms": 16,
+    "harmonic_cutoff": 1000,
+    "log_terms": 16,
+    "root_upper_bits": 160
+  },
+  "powered": {
+    "certificate_bytes": 3656314,
+    "counts": {
+      "below_domain_leaves": 43,
+      "internal_nodes": 236212,
+      "powered_candidate_nodes": 56048,
+      "powered_prunes": 444,
+      "satisfied_leaves": 326,
+      "separate_prunes": 180111,
+      "unresolved_leaves": 0,
+      "violation_leaves": 0
+    },
+    "dual_ladder": [
+      {
+        "a": 1,
+        "d": 128
+      },
+      {
+        "a": 1,
+        "d": 96
+      },
+      {
+        "a": 1,
+        "d": 64
+      }
+    ],
+    "maximum_resident_kb": 133544,
+    "powered_dual_use": {
+      "1/128": 437,
+      "1/64": 2,
+      "1/96": 5
+    },
+    "runtime_seconds": 79.11
+  },
+  "proof_boundary": "Both runs are complete rigorous finite certificates under the same 96-bit outward dyadic parameters. Runtime is environment-specific and is not a mathematical claim.",
+  "schema": "riemann.robin.powered-canonical.mode-comparison.v1",
+  "separate_only": {
+    "certificate_bytes": 3682459,
+    "counts": {
+      "below_domain_leaves": 43,
+      "internal_nodes": 238250,
+      "powered_candidate_nodes": 56119,
+      "powered_prunes": 0,
+      "satisfied_leaves": 326,
+      "separate_prunes": 182078,
+      "unresolved_leaves": 0,
+      "violation_leaves": 0
+    },
+    "dual_ladder": [
+      {
+        "a": 0,
+        "d": 1
+      }
+    ],
+    "maximum_resident_kb": 131292,
+    "runtime_seconds": 45.41
+  }
+}

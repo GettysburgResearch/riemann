@@ -1,0 +1,19 @@
+Environment: CPython 3.13.5, Linux x86_64, Python standard library only
+
+Production search:
+130.31 seconds
+133008 KB maximum resident set
+
+Production replay, uncompressed certificate:
+125.28 seconds
+130192 KB maximum resident set
+
+Production replay, deterministic gzip certificate:
+125.45 seconds
+130192 KB maximum resident set
+
+Parameter ladder, five fresh-process rungs:
+262.00 seconds
+126728 KB maximum resident set
+
+Runtime is environment-specific and is not part of the mathematical claim.
