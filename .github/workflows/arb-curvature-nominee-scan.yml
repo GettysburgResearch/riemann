@@ -1,0 +1,74 @@
+name: Arb curvature-nominee matched scan
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  curvature-nominees:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install discovery and rigorous backends
+        run: python -m pip install --upgrade pip python-flint numpy mpmath
+
+      - name: Run exact and manifest tests
+        run: |
+          python -m unittest discover -s experiments/X-3902-arb-xi-passivity/tests -v
+          python -m compileall -q \
+            experiments/X-3902-arb-xi-passivity/wide_curvature_scan.py \
+            experiments/X-3902-arb-xi-passivity/curvature_nominee_matched_scan.py \
+            experiments/X-3902-arb-xi-passivity/matched_pole.py \
+            experiments/X-3902-arb-xi-passivity/matched_pole_scan.py \
+            experiments/X-3902-arb-xi-passivity/produce_certificate.py \
+            experiments/X-3902-arb-xi-passivity/verify_certificate.py \
+            experiments/X-3902-arb-xi-passivity/tests
+
+      - name: Run deterministic wide curvature nomination
+        working-directory: experiments/X-3902-arb-xi-passivity
+        run: |
+          python wide_curvature_scan.py \
+            --window-directory results/curvature-windows \
+            --windows 96 \
+            --spacing 0.01 \
+            --points 65536 \
+            --order 18 \
+            --nominees 12 \
+            --output results/curvature-wide-summary.json
+
+      - name: Arb-escalate eight lowest nominees at 160 bits
+        working-directory: experiments/X-3902-arb-xi-passivity
+        run: |
+          python curvature_nominee_matched_scan.py \
+            --nomination results/curvature-wide-summary.json \
+            --nominees 8 \
+            --precision-bits 160 \
+            --certificate results/curvature-nominee-p160-certificate.json \
+            --verification results/curvature-nominee-p160-verification.json \
+            --summary results/curvature-nominee-p160-summary.json
+
+      - name: Arb-escalate eight lowest nominees at 224 bits
+        working-directory: experiments/X-3902-arb-xi-passivity
+        run: |
+          python curvature_nominee_matched_scan.py \
+            --nomination results/curvature-wide-summary.json \
+            --nominees 8 \
+            --precision-bits 224 \
+            --certificate results/curvature-nominee-p224-certificate.json \
+            --verification results/curvature-nominee-p224-verification.json \
+            --summary results/curvature-nominee-p224-summary.json
+
+      - name: Upload nomination and proof artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-curvature-nominee-results
+          path: |
+            experiments/X-3902-arb-xi-passivity/results/curvature-wide-summary.json
+            experiments/X-3902-arb-xi-passivity/results/curvature-windows/*.json
+            experiments/X-3902-arb-xi-passivity/results/curvature-nominee-*.json
