@@ -24,6 +24,12 @@ minimum_safe_threshold_scale_factor: 1000000
 exact_reconstructed_scale_ratio_against_reported_string: 1512653.5170893420514570903015198
 proof_boundary: nonprime envelope rigorous conditional on L-4202/L-4203; leading margin not directed
 
+test_corner_matrix_matches_fixed_vector_formula (test_prime_entry.PrimeEntryEventTests.test_corner_matrix_matches_fixed_vector_formula) ... ok
+test_derivative_limit (test_prime_entry.PrimeEntryEventTests.test_derivative_limit) ... ok
+test_endpoint_neutral_vector_annihilates_event (test_prime_entry.PrimeEntryEventTests.test_endpoint_neutral_vector_annihilates_event) ... ok
+test_first_cell_hat (test_prime_entry.PrimeEntryEventTests.test_first_cell_hat) ... ok
+test_first_cell_norm_cap_and_boundary_rejection (test_prime_entry.PrimeEntryEventTests.test_first_cell_norm_cap_and_boundary_rejection) ... ok
+test_nonunit_phase_rejected (test_prime_entry.PrimeEntryEventTests.test_nonunit_phase_rejected) ... ok
 test_claimed_scale_factor_cannot_be_inflated (test_verify.PiecewiseCorrectionBoundTests.test_claimed_scale_factor_cannot_be_inflated) ... ok
 test_committed_certificate (test_verify.PiecewiseCorrectionBoundTests.test_committed_certificate) ... ok
 test_empirical_margin_cannot_be_promoted (test_verify.PiecewiseCorrectionBoundTests.test_empirical_margin_cannot_be_promoted) ... ok
@@ -34,6 +40,6 @@ test_parameter_mutation_rejected (test_verify.PiecewiseCorrectionBoundTests.test
 test_small_cell_bound_is_exact (test_verify.PiecewiseCorrectionBoundTests.test_small_cell_bound_is_exact) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.015s
+Ran 14 tests in 0.016s
 
 OK
