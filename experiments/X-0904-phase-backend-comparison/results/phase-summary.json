@@ -1,0 +1,25 @@
+{
+  "complete_c1e8_backend_comparison": {
+    "K": 1024,
+    "binary128_phase_kahan_margin": 0.006641474117036417,
+    "carrier": "4709203636353.65",
+    "coefficient_l1_difference": 0.000177962465138,
+    "cutoff": 100000000,
+    "long_double_kahan_margin": 0.006643092728329414,
+    "margin_shift": -1.618611292997007e-06,
+    "maximum_coefficient_difference": 1.08501790986e-06,
+    "prime_count": 5761455,
+    "prime_power_count": 5762859,
+    "toeplitz_operator_difference": 8.045041107820625e-06
+  },
+  "counterexample_candidate": null,
+  "experiment_id": "X-0904",
+  "frozen_vector_c1e10": {
+    "absolute_phase_weight_sum": 493.7546104558693,
+    "leading_margin": 0.0006076603725748697,
+    "required_uniform_phase_radius": 1.2306921641349523e-06,
+    "uniform_exact_correction_bound": 4.424813255620086e-10
+  },
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "warning": "Binary128 and Kahan arithmetic are independent higher-precision empirical checks, not directed balls."
+}
