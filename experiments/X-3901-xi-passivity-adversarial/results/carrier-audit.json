@@ -1,0 +1,47 @@
+{
+  "schema": "riemann.xi-carrier-cross-audit.v1",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "carrier_center": "4709203636353.6309",
+  "curvature_screen": {
+    "range": "center +/- 100",
+    "step": "0.1",
+    "negative_no_remainder_points": 2,
+    "false_nominations": [
+      {
+        "t": "4709203636354.15",
+        "curvature_no_remainder_approx": "-2232.4158",
+        "hardy_z_no_remainder_approx": "-0.3988",
+        "exact_point_differential_controls": [
+          {"x": "0.0001", "D_midpoint": "+139675.785017574"},
+          {"x": "0.001", "D_midpoint": "+124078.282111191"}
+        ],
+        "four_point_barycentric_midpoint": "+1239.9089324"
+      },
+      {
+        "t": "4709203636352.15",
+        "curvature_no_remainder_approx": "-48.81887",
+        "hardy_z_no_remainder_approx": "+0.09539",
+        "exact_point_differential_controls": [
+          {"x": "0.0001", "D_midpoint": "+6173.484757708"},
+          {"x": "0.001", "D_midpoint": "+6141.748559259"}
+        ],
+        "four_point_barycentric_midpoint": "+0.6017551739"
+      }
+    ]
+  },
+  "center_stieltjes_controls": {
+    "x_0.001": {
+      "D_midpoint": "+61.51687704263",
+      "A1_smallest_eigenvalue": "+8.40624867494",
+      "B1_smallest_eigenvalue": "+8.40624069568"
+    },
+    "x_0.0001_precision_failure": {
+      "24_digits_A1_smallest": "-10163",
+      "24_digits_B1_smallest": "-1491",
+      "36_digits_A1_smallest": "+8.40626818574",
+      "36_digits_B1_smallest": "+8.40626812706"
+    }
+  },
+  "counterexample_candidate": null,
+  "interpretation": "No passivity anomaly survived simultaneous-jet and fixed-vector precision escalation at the optimized carrier basin."
+}
