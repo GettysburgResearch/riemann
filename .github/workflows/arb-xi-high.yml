@@ -1,27 +1,7 @@
 name: arb-xi-high
 
 on:
-  push:
-    branches:
-      - agent/gpt56-03-e/39-arb-xi-passivity
-    paths:
-      - '.github/workflows/arb-xi-high.yml'
-      - 'experiments/X-3902-arb-xi-passivity/rs_scalar.c'
-      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
-      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
-  pull_request:
-    branches:
-      - agent/gpt56-02-e/39-xi-passivity-adversarial-scan
-    paths:
-      - '.github/workflows/arb-xi-high.yml'
-      - 'experiments/X-3902-arb-xi-passivity/rs_scalar.c'
-      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
-      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
   workflow_dispatch:
-
-concurrency:
-  group: arb-xi-high-${{ github.ref }}
-  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -44,15 +24,10 @@ jobs:
       - name: Compile direct Riemann-Siegel producer and exact checker
         run: |
           mkdir -p experiments/X-3902-arb-xi-passivity/results
-          set +e
           cc -O3 -std=c11 -Wall -Wextra -Werror \
             experiments/X-3902-arb-xi-passivity/rs_scalar.c \
             -o experiments/X-3902-arb-xi-passivity/rs_scalar \
-            -lflint -lmpfr -lgmp -lpthread -lm \
-            2>&1 | tee experiments/X-3902-arb-xi-passivity/results/compile.log
-          status=${PIPESTATUS[0]}
-          set -e
-          if [ "$status" -ne 0 ]; then exit "$status"; fi
+            -lflint -lmpfr -lgmp -lpthread -lm
           python -m compileall -q \
             experiments/X-3902-arb-xi-passivity/verify_certificate.py \
             experiments/X-3902-arb-xi-passivity/verify_value_certificate.py
@@ -66,14 +41,11 @@ jobs:
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json \
             --output experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
           cat experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
-      - name: Upload rigorous high-height result and diagnostics
-        if: always()
+      - name: Upload rigorous high-height result
         uses: actions/upload-artifact@v4
         with:
           name: arb-xi-high-carrier-rs
-          if-no-files-found: warn
           path: |
-            experiments/X-3902-arb-xi-passivity/results/compile.log
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-certificate.json
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs-verification.json
             experiments/X-3902-arb-xi-passivity/results/high-carrier-rs.time.txt
