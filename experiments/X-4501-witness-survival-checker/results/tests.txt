@@ -1,0 +1,20 @@
+test_affine_box_survives (test_verify.CommittedCertificateTests.test_affine_box_survives) ... ok
+test_affine_box_zero_touch_does_not_certify (test_verify.CommittedCertificateTests.test_affine_box_zero_touch_does_not_certify) ... ok
+test_correlated_polytope_dual_survives (test_verify.CommittedCertificateTests.test_correlated_polytope_dual_survives) ... ok
+test_pick_compressed_identity_matches_direct_matrix (test_verify.CommittedCertificateTests.test_pick_compressed_identity_matches_direct_matrix) ... ok
+test_pick_disk_compression_survives (test_verify.CommittedCertificateTests.test_pick_disk_compression_survives) ... ok
+test_pick_disk_too_wide_does_not_certify (test_verify.CommittedCertificateTests.test_pick_disk_too_wide_does_not_certify) ... ok
+test_blocking_gate_is_rejected (test_verify.FailClosedMutationTests.test_blocking_gate_is_rejected) ... ok
+test_broken_polytope_dual_equality_is_rejected (test_verify.FailClosedMutationTests.test_broken_polytope_dual_equality_is_rejected) ... ok
+test_claimed_upper_mismatch_is_rejected (test_verify.FailClosedMutationTests.test_claimed_upper_mismatch_is_rejected) ... ok
+test_closed_gate_manifest_changes_status_but_not_arithmetic (test_verify.FailClosedMutationTests.test_closed_gate_manifest_changes_status_but_not_arithmetic) ... ok
+test_declared_but_unused_channel_is_rejected (test_verify.FailClosedMutationTests.test_declared_but_unused_channel_is_rejected) ... ok
+test_infeasible_polytope_anchor_is_rejected (test_verify.FailClosedMutationTests.test_infeasible_polytope_anchor_is_rejected) ... ok
+test_pick_point_on_boundary_is_rejected (test_verify.FailClosedMutationTests.test_pick_point_on_boundary_is_rejected) ... ok
+test_too_small_pick_coefficient_bound_is_rejected (test_verify.FailClosedMutationTests.test_too_small_pick_coefficient_bound_is_rejected) ... ok
+test_undeclared_quantitative_channel_is_rejected (test_verify.FailClosedMutationTests.test_undeclared_quantitative_channel_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.003s
+
+OK
