@@ -10,6 +10,15 @@ on:
       - 'experiments/X-3903-matched-pole-arb/**'
       - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+  pull_request:
+    branches:
+      - agent/gpt56-03-e/39-arb-xi-passivity
+    paths:
+      - '.github/workflows/arb-xi-matched-pole.yml'
+      - 'claims/lemmas/L-3904-matched-pole-pick-annihilator.md'
+      - 'experiments/X-3903-matched-pole-arb/**'
+      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
   workflow_dispatch:
 
 concurrency:
