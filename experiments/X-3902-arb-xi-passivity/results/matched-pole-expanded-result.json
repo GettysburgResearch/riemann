@@ -1,0 +1,82 @@
+{
+  "schema": "riemann.xi-matched-pole-expanded-result.v1",
+  "status": "ALL_MATCHED_POLE_CHANNELS_CERTIFIED_NONNEGATIVE",
+  "experiment_id": "X-3903",
+  "claim": "L-3904",
+  "producer_checker_stack": {
+    "producer": "X-3902 Python-FLINT/Arb completed-xi value rectangles",
+    "contraction": "X-3902/L-3903 exact rational real-pick-rayleigh checker",
+    "vector_generator": "L-3904 exact matched-pole rational construction"
+  },
+  "finite_domain": {
+    "heights": [
+      "4709203636353.6309",
+      "4709203636353.6409",
+      "3157430112465.8695095",
+      "3157430112425.8695095"
+    ],
+    "horizontal_nodes": [
+      "0.00001",
+      "0.00002",
+      "0.00004",
+      "0.00008",
+      "0.00016",
+      "0.00032",
+      "0.00064",
+      "0.00128",
+      "0.00256",
+      "0.00512",
+      "0.01024",
+      "0.02048",
+      "0.04096",
+      "0.08192",
+      "0.16384",
+      "0.32768",
+      "0.45",
+      "0.49",
+      "0.499"
+    ],
+    "adjacent_gaps_per_height": 18,
+    "model_positions_per_gap": [
+      "1/16",
+      "2/16",
+      "3/16",
+      "4/16",
+      "5/16",
+      "6/16",
+      "7/16",
+      "8/16",
+      "9/16",
+      "10/16",
+      "11/16",
+      "12/16",
+      "13/16",
+      "14/16",
+      "15/16"
+    ],
+    "vector_dimensions": [2, 3, 4, 5, 6, 7, 8, 9],
+    "primitive_points": 76,
+    "channels_per_precision": 8640
+  },
+  "precision_ladder": [
+    {
+      "precision_bits": 160,
+      "certified_nonnegative": 8640,
+      "certified_negative": 0,
+      "unresolved_zero_touch": 0
+    },
+    {
+      "precision_bits": 224,
+      "certified_nonnegative": 8640,
+      "certified_negative": 0,
+      "unresolved_zero_touch": 0
+    }
+  ],
+  "total_complete_interval_classifications": 17280,
+  "interval_nesting": {
+    "all_224_bit_intervals_contained_in_corresponding_160_bit_intervals": true,
+    "channels_checked": 8640
+  },
+  "counterexample_candidate": null,
+  "scope_warning": "This is an exact finite exclusion for the declared four ordinates and vector family. It is not a positivity theorem elsewhere and does not prove RH."
+}
