@@ -1,0 +1,141 @@
+name: Directed carrier finalist full pass
+
+on:
+  workflow_dispatch:
+    inputs:
+      precision_bits:
+        description: Arb working precision for every shard
+        required: true
+        default: '160'
+      shard_count:
+        description: Number of coverage shards; must divide 5000 and be at most 250
+        required: true
+        default: '250'
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      segments_per_shard: ${{ steps.matrix.outputs.segments_per_shard }}
+    steps:
+      - id: matrix
+        env:
+          SHARD_COUNT: ${{ inputs.shard_count }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          count = int(os.environ['SHARD_COUNT'])
+          if count < 1 or count > 250 or 5000 % count:
+              raise SystemExit('shard_count must divide 5000 and be between 1 and 250')
+          print('matrix=' + json.dumps({'shard': list(range(count))}, separators=(',', ':')))
+          print('segments_per_shard=' + str(5000 // count))
+          PY
+
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Freeze exact finalist and run tests
+        run: |
+          python -m pip install --upgrade pip python-flint
+          python -m unittest discover -s experiments/X-4202-directed-carrier-finalist/tests -v
+          python experiments/X-4202-directed-carrier-finalist/freeze_finalist.py \
+            --bits 80 \
+            --output experiments/X-4202-directed-carrier-finalist/results/finalist-p80.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carrier-finalist-p80
+          path: experiments/X-4202-directed-carrier-finalist/results/finalist-p80.json
+
+  shard:
+    needs: [plan, freeze]
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 50
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install rigorous backend
+        run: python -m pip install --upgrade pip python-flint
+      - uses: actions/download-artifact@v4
+        with:
+          name: carrier-finalist-p80
+          path: experiments/X-4202-directed-carrier-finalist/results
+      - name: Produce directed shard
+        env:
+          SHARD: ${{ matrix.shard }}
+          SEGMENTS_PER_SHARD: ${{ needs.plan.outputs.segments_per_shard }}
+          PRECISION_BITS: ${{ inputs.precision_bits }}
+        run: |
+          START=$((SHARD * SEGMENTS_PER_SHARD))
+          END=$(((SHARD + 1) * SEGMENTS_PER_SHARD))
+          EXTRA=""
+          if [ "$SHARD" -eq 0 ]; then EXTRA="--include-higher-powers"; fi
+          python experiments/X-4202-directed-carrier-finalist/directed_shard.py \
+            --finalist experiments/X-4202-directed-carrier-finalist/results/finalist-p80.json \
+            --cutoff 100000000000 \
+            --segment-size 20000000 \
+            --start-segment "$START" --end-segment "$END" \
+            $EXTRA \
+            --precision-bits "$PRECISION_BITS" \
+            --output "experiments/X-4202-directed-carrier-finalist/results/shard-${SHARD}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carrier-directed-shard-${{ matrix.shard }}
+          path: experiments/X-4202-directed-carrier-finalist/results/shard-${{ matrix.shard }}.json
+
+  merge:
+    needs: [plan, freeze, shard]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install rigorous backend
+        run: python -m pip install --upgrade pip python-flint
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: carrier-directed-shard-*
+          path: experiments/X-4202-directed-carrier-finalist/results/shards
+          merge-multiple: true
+      - name: Merge complete coverage and classify
+        env:
+          PRECISION_BITS: ${{ inputs.precision_bits }}
+        run: |
+          python experiments/X-4202-directed-carrier-finalist/merge.py \
+            experiments/X-4202-directed-carrier-finalist/results/shards/*.json \
+            --correction-certificate experiments/X-4201-piecewise-correction-bound/certificates/c11-k1024.json \
+            --precision-bits "$PRECISION_BITS" \
+            --output experiments/X-4202-directed-carrier-finalist/results/complete-result.json
+      - name: Preserve sign without automatic promotion
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('experiments/X-4202-directed-carrier-finalist/results/complete-result.json')
+          result = json.loads(path.read_text())
+          assert result['coverage']['prime_count'] == 4118054813
+          assert result['coverage']['higher_prime_power_count'] == 28156
+          assert result['coverage']['total_prime_power_terms'] == 4118082969
+          assert result['counterexample_candidate'] is None
+          print('complete fixed-vector status:', result['status'])
+          print('normalized interval:', result['normalized_full_interval'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: directed-carrier-complete-result
+          path: |
+            experiments/X-4202-directed-carrier-finalist/results/complete-result.json
+            experiments/X-4202-directed-carrier-finalist/results/shards/*.json
