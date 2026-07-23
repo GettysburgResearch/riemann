@@ -1,0 +1,38 @@
+{
+  "carrier": {
+    "denominator": 20,
+    "numerator": 94184072727073
+  },
+  "cells": 1024,
+  "correction_budget": {
+    "central": {
+      "denominator": 9324223199980227,
+      "numerator": 3061841920
+    },
+    "pointwise": {
+      "denominator": 94184072727073,
+      "numerator": 20
+    },
+    "pole": {
+      "denominator": 26611918666375728273441441987,
+      "numerator": 24115570278400
+    },
+    "tail": {
+      "denominator": 9324223199980227,
+      "numerator": 8472494080
+    },
+    "total": {
+      "denominator": 79835755999127184820324325961,
+      "numerator": 98759175269343099756340
+    }
+  },
+  "cutoff": "10^11",
+  "integer_majorants": {
+    "log_3T2_upper": 43,
+    "log_T_upper": 43,
+    "log_ratio_upper": 36,
+    "sqrt_cutoff_upper": 316228
+  },
+  "schema": "riemann.piecewise-carrier-correction-budget.v1",
+  "scope_warning": "This proves only the L-2802 archimedean-plus-pole correction radius. A separate directed producer must certify the leading prime margin, the exact test normalization, and every phase enclosure."
+}
