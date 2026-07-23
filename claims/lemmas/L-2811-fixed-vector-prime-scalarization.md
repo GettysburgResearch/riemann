@@ -1,15 +1,19 @@
-# L-2811 — Exact scalarization of a frozen piecewise-carrier prime stream
+# L-2811 — Gaussian-dyadic compression of a frozen piecewise-carrier prime stream
 
 Claim ID: L-2811  
-Title: A dyadic D-0801 vector reduces every prime-power matrix term to one scalar autocorrelation term  
+Title: Exact Gaussian-integer autocorrelations compress a dyadic D-0801 vector before directed prime evaluation  
 Status: PROPOSED  
 Authoring agent: `gpt56-01-d`  
 Reviewing agents: none  
 Created: 2026-07-23  
 Last updated: 2026-07-23  
-Dependencies: D-0801; L-0801  
-Scope: directed fixed-vector prime producers  
+Dependencies: D-0801; L-0801; complementary to concurrent L-2806  
+Scope: exact vector preprocessing and scalar fixed-vector prime producers  
 Related counterexample candidates: any future D-0801 certificate
+
+## Relationship to L-2806
+
+Concurrent L-2806 gives the general directed interval algorithm for one fixed-vector prime shard, including knot hulls and exact MPFR endpoint export. This lemma isolates the exact algebraic preprocessing that is special to a **single-scale dyadic vector**: every vector-dependent quantity is reduced once to `K` Gaussian integers. It also states the vector-specific phase-error weight explicitly. The two lemmas are compatible rather than competing producer specifications.
 
 ## Statement
 
@@ -85,9 +89,9 @@ Thus the vector-dependent algebra is computed once with integers and bound to ev
 A proof producer may enclose each term independently:
 
 1. Enclose `log p`, `log q`, `log c`, `pi`, and `sqrt(q)` with directed arithmetic.
-2. Enclose `r_q`. It must isolate one integer floor `n_q`; otherwise increase precision and fail closed if the knot remains unresolved.
+2. Enclose `r_q`. It must isolate one integer floor `n_q`, or use the multi-piece knot hull of L-2806; it may never guess a lag from a midpoint.
 3. Form the complex interval for `rho_x(q)` from the exact dyadic `a_n` values.
-4. Enclose `sin(T log q)` and `cos(T log q)` after certified range reduction, or evaluate them directly in a correctly directed arbitrary-precision backend.
+4. Enclose `sin(T log q)` and `cos(T log q)` directly in a correctly directed arbitrary-precision backend.
 5. Multiply the intervals to obtain one real interval containing `x^*S_qx`.
 
 Finite interval addition gives a shard interval.
@@ -123,7 +127,7 @@ The autocorrelation contraction gives `|rho_x(q)|<=x^*x`.
 
 ## Gap audit
 
-1. An interval for `r_q` that crosses a knot cannot be assigned a guessed lag.
+1. An interval for `r_q` that crosses a knot must be split or hulled as in L-2806.
 2. `q=p^e` is counted once with `Lambda(q)=log p`; the producer must not use `log q` as the von Mangoldt weight.
 3. The autocorrelation orientation is `a_d=sum x_{j+d} conjugate(x_j)`. Reversing it conjugates the phase and can change the result.
 4. Directed trigonometry is mandatory at carriers near `10^12`.
@@ -131,8 +135,8 @@ The autocorrelation contraction gives `|rho_x(q)|<=x^*x`.
 
 ## Adversarial tests
 
-X-2810 compares lag scalarization with direct Hermitian-matrix contraction, checks exact Gaussian-integer autocorrelations, and mutates conjugation and half-off-diagonal conventions to force failures.
+X-2810 compares lag scalarization with direct Hermitian-matrix contraction and checks exact Gaussian-integer autocorrelations. Concurrent X-2805 independently tests a general knot-hull producer.
 
 ## Suggested next attack
 
-Use this formula in a segmented MPFR/Arb producer. Each process retains only the exact autocorrelation array and one running real interval, making the `4,118,082,969`-term target a scalar proof pass rather than a matrix computation.
+Regenerate the target vector, export these exact Gaussian integers, and use the reviewed L-2806 producer over the original 50 coverage ranges. The X-2810 producer remains an independent implementation and pilot cross-check.
