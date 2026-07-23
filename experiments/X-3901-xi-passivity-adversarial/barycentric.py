@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact rational kernels for L-3901 barycentric xi-passivity localizers."""
+"""Exact rational kernels for L-3901/L-3902 xi-passivity localizers."""
 from __future__ import annotations
 
 from fractions import Fraction
@@ -74,6 +74,44 @@ def quadratic_from_real_f(
     if len(values) != len(coefficients):
         raise ValueError("F-value length mismatch")
     return sum(coefficients[i] * values[i] for i in range(len(values)))
+
+
+def two_channel_values(
+    x1: Fraction, x2: Fraction, r1: Fraction, r2: Fraction
+) -> tuple[Fraction, Fraction]:
+    """Return the L-3902 channels A and B from two real F values.
+
+    A = (R(x1)/x1 - R(x2)/x2)/(x2^2-x1^2)
+    B = (x2*R(x2) - x1*R(x1))/(x2^2-x1^2)
+    """
+    x1 = Fraction(x1)
+    x2 = Fraction(x2)
+    r1 = Fraction(r1)
+    r2 = Fraction(r2)
+    if not (0 < x1 < x2):
+        raise ValueError("require 0 < x1 < x2")
+    denominator = x2 * x2 - x1 * x1
+    a_value = (r1 / x1 - r2 / x2) / denominator
+    b_value = (x2 * r2 - x1 * r1) / denominator
+    return a_value, b_value
+
+
+def online_two_channel_values(
+    x1: Fraction, x2: Fraction, offsets: Iterable[Fraction]
+) -> tuple[Fraction, Fraction]:
+    xs = (Fraction(x1), Fraction(x2))
+    real_f = online_real_f(xs, offsets)
+    return two_channel_values(xs[0], xs[1], real_f[0], real_f[1])
+
+
+def symmetric_offline_pair_two_channels(
+    x1: Fraction, x2: Fraction, delta: Fraction
+) -> tuple[Fraction, Fraction]:
+    x1 = Fraction(x1)
+    x2 = Fraction(x2)
+    delta = Fraction(delta)
+    real_f = symmetric_offline_pair_real_f((x1, x2), delta)
+    return two_channel_values(x1, x2, real_f[0], real_f[1])
 
 
 def online_real_f(
