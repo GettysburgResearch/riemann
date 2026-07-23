@@ -1,0 +1,17 @@
+COMMAND
+python verify.py --self-test
+
+OUTPUT
+3 exact conic controls passed
+
+ADDITIONAL CONTROLS
+python verify.py certificates/affine-shared-cancellation.json
+  robust_upper = -4/5
+  individual_robust_uppers = {q1: 3/5, q2: 3/5}
+
+python verify.py certificates/psd-gram-cancellation.json
+  robust_upper = -1
+  individual_robust_uppers = {e1: 1/2, e2: 1/2}
+
+CLASSIFICATION
+Exact rational synthetic controls only. No zeta or xi value and no RH candidate.
