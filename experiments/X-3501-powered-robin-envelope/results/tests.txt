@@ -1,0 +1,27 @@
+Command:
+
+python -m unittest discover -s tests -v
+
+Result:
+
+test_exact_envelope_dominates_small_exhaustive_optima ... ok
+test_mutated_powered_bound_is_rejected ... ok
+test_nonconsecutive_prime_support_is_rejected ... ok
+test_regression_true_optimum_is_403_over_105 ... ok
+test_synthetic_regression_certifies_joint_only ... ok
+test_weak_dual_fails_closed_through_target_comparison ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests
+
+OK
+
+Additional syntax check:
+
+python -m compileall -q verify.py tests
+
+Result: success.
+
+Environment note: tests were executed with the standard-library implementation
+only. No floating numerical package or transcendental backend enters these
+checks.
