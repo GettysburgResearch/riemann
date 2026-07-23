@@ -1,0 +1,41 @@
+{
+  "schema": "riemann.xi-curvature-nominee-result.v1",
+  "status": "NO_CURVATURE_NEGATIVE_AND_ALL_ESCALATED_CHANNELS_NONNEGATIVE",
+  "discovery_layer": {
+    "classification": "EMPIRICAL_NOMINATION_ONLY",
+    "height_range": ["3000000000000", "5000000000000"],
+    "deterministic_center_rule": "96 base-2 van-der-Corput centers plus exact decimal shift 0.1234",
+    "windows": 96,
+    "spacing": "0.01",
+    "samples_per_window": 65536,
+    "total_curvature_samples": 6291456,
+    "negative_no_remainder_samples": 0,
+    "all_window_minima_strictly_positive": true,
+    "nominees_selected": 8
+  },
+  "rigorous_escalation": {
+    "horizontal_nodes_per_nominee": 19,
+    "primitive_arb_points": 152,
+    "model_positions_per_gap": ["1/8", "2/8", "3/8", "4/8", "5/8", "6/8", "7/8"],
+    "vector_dimensions": [2, 3, 4, 5, 6, 7],
+    "channels_per_precision": 6048,
+    "precision_ladder": [
+      {
+        "precision_bits": 160,
+        "certified_nonnegative": 6048,
+        "certified_negative": 0,
+        "unresolved_zero_touch": 0
+      },
+      {
+        "precision_bits": 224,
+        "certified_nonnegative": 6048,
+        "certified_negative": 0,
+        "unresolved_zero_touch": 0
+      }
+    ],
+    "total_complete_interval_classifications": 12096,
+    "all_224_bit_intervals_contained_in_corresponding_160_bit_intervals": true
+  },
+  "counterexample_candidate": null,
+  "scope_warning": "The discovery curvature omits a rigorous final quotient remainder and only nominates ordinates. The Arb result is rigorous only for the exact eight nominees and declared L-3904 vector family. It is not a positivity theorem elsewhere."
+}
