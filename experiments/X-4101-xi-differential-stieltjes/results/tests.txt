@@ -1,0 +1,43 @@
+Validation mode: independent exact reconstruction with Python integers and
+fractions.Fraction, followed by inspection of the committed test module.
+
+Checks:
+
+1. Off-line quartet at x=11/100, T=20:
+   - Re(F_Z) > 0: PASS
+   - D_Z = Re(F_Z') + Re(F_Z)/x < 0: PASS
+   - B_00 = D_Z/2 exactly: PASS
+
+2. Finite critical-line model with ordinates {-7,-3,2,5}, x=2/3,
+   T=1/5:
+   - direct Stieltjes moments equal finite-jet moments through n=7: PASS
+
+3. Same critical-line model, matrix order 3:
+   - every tested Hankel quadratic form equals its direct positive resolvent
+     sum: PASS
+   - every tested localizing quadratic form equals its direct positive
+     resolvent sum: PASS
+   - tested vectors: all nonzero vectors in {-1,0,1}^4: PASS
+
+4. Localizer orientation control:
+   - m_0-u*m_1 >= 0 for an on-line model: PASS
+   - reversed sign u*m_1-m_0 < 0: PASS
+
+5. Right-side pole approach at x in {0.11,0.105,0.101}, delta=0.1:
+   - Re(F_Z) positive at all three points: PASS
+   - D_Z negative at all three points: PASS
+   - |D_Z| increases monotonically toward the pole: PASS
+
+6. Exact JSON endpoints:
+   - stored Re(F_Z), D_Z, and B_00 fractions match independent
+     reconstruction: PASS
+
+Overall: PASS.
+
+The committed command for independent rerun is:
+
+python -m unittest discover -s tests -v
+python -m compileall -q synthetic.py tests
+
+No xi evaluation, ball arithmetic, high-height search, or RH claim enters these
+checks.
