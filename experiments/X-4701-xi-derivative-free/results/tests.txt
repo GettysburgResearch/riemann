@@ -1,0 +1,40 @@
+{
+  "cross_loewner_determinant": {
+    "denominator": "163895952553969442277744",
+    "numerator": "-17481975069014214761675"
+  },
+  "cross_loewner_status": "SYNTHETIC_POSITIVE_ENTRIES_NEGATIVE_MINOR",
+  "divided_difference": {
+    "denominator": "10185650056764",
+    "numerator": "23648036546125"
+  },
+  "divided_difference_order": 2,
+  "divided_status": "SYNTHETIC_DIVIDED_DIFFERENCE_SIGN_VIOLATION",
+  "left_re_f": {
+    "denominator": "30985710308604170301",
+    "numerator": "3251554390096064674600"
+  },
+  "right_re_f": {
+    "denominator": "331424333649453",
+    "numerator": "18140976575309525"
+  },
+  "scalar_secant": {
+    "denominator": "338221466643089412116103100731",
+    "numerator": "-731547432466485699533503019750000"
+  },
+  "scalar_status": "SYNTHETIC_POSITIVE_VALUES_NEGATIVE_SECANT",
+  "schema": "riemann.xi-derivative-free-synthetic.v1"
+}
+test_committed_certificate (test_verify.DerivativeFreeWitnessTests.test_committed_certificate) ... ok
+test_mutated_determinant_rejected (test_verify.DerivativeFreeWitnessTests.test_mutated_determinant_rejected) ... ok
+test_mutated_scalar_numerator_rejected (test_verify.DerivativeFreeWitnessTests.test_mutated_scalar_numerator_rejected) ... ok
+test_node_order_is_not_silently_repaired (test_verify.DerivativeFreeWitnessTests.test_node_order_is_not_silently_repaired) ... ok
+test_on_line_cross_loewner_minors_are_positive (test_verify.DerivativeFreeWitnessTests.test_on_line_cross_loewner_minors_are_positive) ... ok
+test_on_line_finite_model_obeys_divided_difference_signs (test_verify.DerivativeFreeWitnessTests.test_on_line_finite_model_obeys_divided_difference_signs) ... ok
+test_positive_entries_do_not_hide_negative_minor (test_verify.DerivativeFreeWitnessTests.test_positive_entries_do_not_hide_negative_minor) ... ok
+test_value_only_nodes_must_be_disjoint (test_verify.DerivativeFreeWitnessTests.test_value_only_nodes_must_be_disjoint) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.007s
+
+OK

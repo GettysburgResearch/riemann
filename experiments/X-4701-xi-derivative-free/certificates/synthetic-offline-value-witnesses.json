@@ -1,0 +1,83 @@
+{
+  "cross_loewner": {
+    "claimed_determinant": {
+      "denominator": "163895952553969442277744",
+      "numerator": "-17481975069014214761675"
+    },
+    "claimed_entries": [
+      [
+        {
+          "denominator": "137643919686",
+          "numerator": "70490142715"
+        },
+        {
+          "denominator": "1083451791864",
+          "numerator": "685314459725"
+        }
+      ],
+      [
+        {
+          "denominator": "16808003394",
+          "numerator": "14851413215"
+        },
+        {
+          "denominator": "148840530813",
+          "numerator": "131435077460"
+        }
+      ]
+    ],
+    "col_x": [
+      {"denominator": "5", "numerator": "3"},
+      {"denominator": "10", "numerator": "7"}
+    ],
+    "row_x": [
+      {"denominator": "10", "numerator": "3"},
+      {"denominator": "2", "numerator": "1"}
+    ],
+    "status": "SYNTHETIC_POSITIVE_ENTRIES_NEGATIVE_MINOR"
+  },
+  "divided_difference": {
+    "claimed": {
+      "status": "SYNTHETIC_DIVIDED_DIFFERENCE_SIGN_VIOLATION",
+      "value": {
+        "denominator": "10185650056764",
+        "numerator": "23648036546125"
+      }
+    },
+    "x_nodes": [
+      {"denominator": "10", "numerator": "3"},
+      {"denominator": "2", "numerator": "1"},
+      {"denominator": "5", "numerator": "3"}
+    ]
+  },
+  "height": {"denominator": "1", "numerator": "1"},
+  "kind": "finite-zero-derivative-free-controls",
+  "negative_secant": {
+    "claimed": {
+      "left_re_f": {
+        "denominator": "30985710308604170301",
+        "numerator": "3251554390096064674600"
+      },
+      "right_re_f": {
+        "denominator": "331424333649453",
+        "numerator": "18140976575309525"
+      },
+      "secant": {
+        "denominator": "338221466643089412116103100731",
+        "numerator": "-731547432466485699533503019750000"
+      },
+      "status": "SYNTHETIC_POSITIVE_VALUES_NEGATIVE_SECANT"
+    },
+    "left_x": {"denominator": "100", "numerator": "11"},
+    "right_x": {"denominator": "25", "numerator": "3"}
+  },
+  "schema": "riemann.xi-derivative-free-synthetic.v1",
+  "zeros": [
+    {"delta": {"denominator": "10", "numerator": "1"}, "gamma": {"denominator": "1", "numerator": "1"}},
+    {"delta": {"denominator": "10", "numerator": "-1"}, "gamma": {"denominator": "1", "numerator": "1"}},
+    {"delta": {"denominator": "10", "numerator": "1"}, "gamma": {"denominator": "1", "numerator": "-1"}},
+    {"delta": {"denominator": "10", "numerator": "-1"}, "gamma": {"denominator": "1", "numerator": "-1"}},
+    {"delta": {"denominator": "1", "numerator": "0"}, "gamma": {"denominator": "1", "numerator": "2"}},
+    {"delta": {"denominator": "1", "numerator": "0"}, "gamma": {"denominator": "1", "numerator": "-2"}}
+  ]
+}
