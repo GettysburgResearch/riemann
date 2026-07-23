@@ -1,0 +1,71 @@
+{
+  "experiment_id": "X-0901",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "carrier": "4709203636353.65",
+  "archimedean_leading_scalar": 4.351719952088318,
+  "cells": [
+    {
+      "cutoff": 100000000,
+      "K": 1024,
+      "prime_count": 5761455,
+      "higher_prime_power_count": 1404,
+      "total_prime_power_terms": 5762859,
+      "largest_prime_toeplitz_eigenvalue": 4.345076860312484,
+      "leading_margin": 0.006643091775833554,
+      "residual_inf_norm": 2.4268204834205827e-15
+    },
+    {
+      "cutoff": 1000000000,
+      "K": 1024,
+      "prime_count": 50847534,
+      "higher_prime_power_count": 3689,
+      "total_prime_power_terms": 50851223,
+      "largest_prime_toeplitz_eigenvalue": 4.349369528690462,
+      "leading_margin": 0.0023504233978552946,
+      "residual_inf_norm": 1.7836948290274973e-15
+    },
+    {
+      "cutoff": 10000000000,
+      "K": 1024,
+      "prime_count": 455052511,
+      "higher_prime_power_count": 10084,
+      "total_prime_power_terms": 455062595,
+      "largest_prime_toeplitz_eigenvalue": 4.351112291715743,
+      "leading_margin": 0.0006076603725748697,
+      "residual_inf_norm": 7.499977442366079e-16
+    },
+    {
+      "cutoff": 10000000000,
+      "K": 2048,
+      "prime_count": 455052511,
+      "higher_prime_power_count": 10084,
+      "total_prime_power_terms": 455062595,
+      "largest_prime_toeplitz_eigenvalue": 4.351117193187791,
+      "leading_margin": 0.0006027589005261902,
+      "residual_inf_norm": 1.1405355025985595e-15
+    },
+    {
+      "cutoff": 100000000000,
+      "K": 1024,
+      "prime_count": 4118054813,
+      "higher_prime_power_count": 28156,
+      "total_prime_power_terms": 4118082969,
+      "largest_prime_toeplitz_eigenvalue": 4.351450985824045,
+      "leading_margin": 0.00026896626427230785,
+      "residual_inf_norm": 1.1763139296975066e-15
+    }
+  ],
+  "local_carrier_audit_c1e10_K1024": {
+    "moment_order": 6,
+    "absolute_weight_sum": 493.7546104558693,
+    "direct_rayleigh_reconstruction_error": 8.881784197001252e-16,
+    "margin_derivative": 5.977048703508379e-06,
+    "margin_second_derivative": 5.829867753321603,
+    "quadratic_stationary_shift": -1.0252460186773394e-06,
+    "quadratic_minimum": 0.000607660369510897,
+    "taylor_remainder_at_abs_delta_0_01": 4.2324364738445655e-06,
+    "fixed_vector_negative_found": false
+  },
+  "counterexample_candidate": null,
+  "warning": "Complete finite prime coverage is exact integer work, but phases, accumulation, eigensolving, and the high-carrier archimedean replacement are not proof-certified."
+}
