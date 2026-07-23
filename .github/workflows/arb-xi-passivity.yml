@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/gpt56-03-e/39-arb-xi-passivity
+  pull_request:
+    branches:
+      - agent/gpt56-02-e/39-xi-passivity-adversarial-scan
   workflow_dispatch:
 
 permissions:
