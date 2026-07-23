@@ -43,8 +43,20 @@ jobs:
           mkdir -p experiments/X-3902-arb-xi-passivity/results
           python experiments/X-3902-arb-xi-passivity/probe_api.py \
             | tee experiments/X-3902-arb-xi-passivity/results/api-probe.json
-      - name: Upload probe
+      - name: Produce and check low-height directed certificate
+        run: |
+          python experiments/X-3902-arb-xi-passivity/arb_producer.py \
+            experiments/X-3902-arb-xi-passivity/configs/low-control.json \
+            --output experiments/X-3902-arb-xi-passivity/results/low-control-certificate.json
+          python experiments/X-3902-arb-xi-passivity/verify_certificate.py \
+            experiments/X-3902-arb-xi-passivity/results/low-control-certificate.json \
+            --output experiments/X-3902-arb-xi-passivity/results/low-control-verification.json
+          cat experiments/X-3902-arb-xi-passivity/results/low-control-verification.json
+      - name: Upload rigorous controls
         uses: actions/upload-artifact@v4
         with:
-          name: arb-xi-passivity-probe
-          path: experiments/X-3902-arb-xi-passivity/results/api-probe.json
+          name: arb-xi-passivity-controls
+          path: |
+            experiments/X-3902-arb-xi-passivity/results/api-probe.json
+            experiments/X-3902-arb-xi-passivity/results/low-control-certificate.json
+            experiments/X-3902-arb-xi-passivity/results/low-control-verification.json
