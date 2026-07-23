@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.d0801-normalization.v1",
+  "fourier": {
+    "forward": "integral g(t)*exp(-2*pi*i*t*xi) dt",
+    "inverse": "integral hat_g(xi)*exp(+2*pi*i*z*xi) dxi"
+  },
+  "zero_coordinate": "(rho-1/2)/i",
+  "prime": {
+    "frequency": "log(q)/(2*pi)",
+    "coefficient": "-Lambda(q)/(pi*sqrt(q))",
+    "support_rule": "q<=c; endpoint q=c has zero autocorrelation"
+  },
+  "pole": "+2*g(i/2)",
+  "archimedean": "+integral (Re(digamma(1/4+i*t/2))-log(pi))*g(t) dt/(2*pi)",
+  "normalized_assembly": "A+R-h*S_K",
+  "rh_coordinate_rule": "RH implies every zero coordinate is real"
+}
