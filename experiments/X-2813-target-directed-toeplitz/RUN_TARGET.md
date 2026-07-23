@@ -1,14 +1,10 @@
 # Full target run trigger
 
-This child commit exists solely to launch the directed target workflows whose
-base already contains their definitions.  The quota-compatible production path
-is:
+This child commit launches the two-job directed calculation defined in
+`.github/workflows/target-directed-toeplitz-paired.yml`.
 
-- `.github/workflows/target-directed-toeplitz-paired.yml`.
-
-It uses exactly two hosted jobs.  Each job runs four disjoint MPFR subshards
-internally, so all 200 half-open coverage segments are evaluated without asking
-GitHub to schedule more than two jobs at once.
+Each hosted job evaluates four disjoint MPFR subranges internally. Together they
+cover all 200 half-open integer segments for the target.
 
 Target:
 
@@ -20,5 +16,5 @@ K = 1024
 200 complete integer segments
 ```
 
-No mathematical claim is made by this marker.  The uploaded final rational
+No mathematical claim is made by this marker. The uploaded final rational
 interval is the only sign decision.
