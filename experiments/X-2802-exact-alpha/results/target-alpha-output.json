@@ -1,0 +1,22 @@
+{
+  "alpha_dyadic_interval": {
+    "lower_num": 27316188863170422972141786876274838781565257086415513364963,
+    "scale_bits": 192,
+    "upper_num": 27316188863170422972141786876274838781565257086415513364964
+  },
+  "carrier": {
+    "denominator": 20,
+    "numerator": 94184072727073
+  },
+  "method": {
+    "atan_1_239_terms": 20,
+    "atan_1_5_terms": 80,
+    "log": "exact power-of-two range reduction and positive atanh series",
+    "log_terms": 90,
+    "pi": "Machin formula with alternating arctangent enclosures"
+  },
+  "schema": "riemann.alpha-rational.v1",
+  "scope": "Exact enclosure of alpha(T) only; no prime sum or explicit-formula gate is checked.",
+  "strictly_positive": true,
+  "width_dyadic_units": 1
+}
