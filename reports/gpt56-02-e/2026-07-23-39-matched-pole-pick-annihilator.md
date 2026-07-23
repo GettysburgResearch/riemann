@@ -93,7 +93,7 @@ Consequently the modeled pair contributes exactly
  c^{\mathsf T}K^{(d)}c=-2md.
 \]
 
-This is `L-3903`.
+This is `L-3904`. The ID was moved from the initially drafted `L-3903` after the stacked Arb branch independently reserved `L-3903` for its exact ball-contraction theorem.
 
 The beta identity is not numerical. It follows from
 
@@ -136,7 +136,7 @@ The moment cancellations imply
  =O(|y|^{-n+1}).
 \]
 
-An explicit bound is included in `L-3903`. The corresponding critical-line Pick contribution decays as `O(|y|^{-2n+2})`.
+An explicit bound is included in `L-3904`. The corresponding critical-line Pick contribution decays as `O(|y|^{-2n+2})`.
 
 Compared with the model-free L-3901 product localizer, one interpolation degree is spent annihilating the target pair's positive rank-one direction. The remaining degrees suppress remote critical-line background.
 
@@ -199,11 +199,11 @@ The wider branch test command should now include this module alongside the exist
 
 Under RH every fixed-vector Pick quadratic form is nonnegative. Therefore a rigorous negative interval for the actual Riemann-xi contraction is a finite unconditional counterexample witness through the parent `L-3202` interface.
 
-`L-3903` improves the nomination and certificate geometry:
+`L-3904` improves the nomination and certificate geometry:
 
 - the vector is exact before special-function evaluation;
 - the target model is converted into a fixed rational witness rather than an interval eigenvector;
-- the exact checker needs only the already-supported `real-pick-rayleigh` channel;
+- PR #56's `L-3903` checker needs only its already-supported `real-pick-rayleigh` channel;
 - every coefficient and its error amplification are reviewable;
 - mismatch cells can be certified algebraically.
 
@@ -215,7 +215,7 @@ No actual Riemann-xi matched-filter interval was evaluated in this continuation.
 
 ## Proof boundary
 
-- `L-3903`: `PROPOSED`.
+- `L-3904`: `PROPOSED`.
 - Vector construction and synthetic controls: exact rational arithmetic.
 - The modeled pair is not asserted to exist for Riemann xi.
 - A negative isolated-pair contribution does not imply a negative complete value.
@@ -224,12 +224,12 @@ No actual Riemann-xi matched-filter interval was evaluated in this continuation.
 
 ## Immediate handoff to PR #56
 
-The current PR #56 checker already supports an arbitrary rational same-height `real-pick-rayleigh` vector. No checker schema extension is required.
+The current PR #56 checker already supports an arbitrary rational same-height `real-pick-rayleigh` vector through its own `L-3903` exact-contraction theorem. No checker schema extension is required.
 
 Add one producer-side mode:
 
 1. accept exact rational nodes and model `d`;
-2. reconstruct the L-3903 vector rather than accepting supplied coefficients;
+2. reconstruct the L-3904 vector rather than accepting supplied coefficients;
 3. verify moments, alpha overlap, and beta overlap exactly;
 4. emit the exact contracted coefficients and their `L1` amplification;
 5. evaluate all F values in one Arb batch;
@@ -242,7 +242,7 @@ Add one producer-side mode:
 Use the two-channel ratio from L-3902 only as a nomination mechanism. For each stable model cell:
 
 - compare the two-point A/B channels;
-- construct three-, four-, and five-point L-3903 vectors;
+- construct three-, four-, and five-point L-3904 vectors;
 - rank by predicted target-pair separation divided by exact pointwise-error amplification;
 - freeze the winning vector before raising precision;
 - require a strict negative complete interval, not merely a negative model score.
