@@ -1,0 +1,34 @@
+{
+  "carrier": {
+    "denominator": 20,
+    "numerator": 94184072727073
+  },
+  "cells": 1024,
+  "correction_budget": {
+    "archimedean": {
+      "denominator": 1036024799997803,
+      "numerator": 481650
+    },
+    "pole": {
+      "denominator": 26611918666375728273441441987,
+      "numerator": 24115570278400
+    },
+    "total": {
+      "denominator": 292731105330133011007855861857,
+      "numerator": 136091541158257193750
+    }
+  },
+  "cutoff": "10^11",
+  "rational_majorants": {
+    "log2_cells_ceiling": 10,
+    "log_cells_upper": {
+      "denominator": 1,
+      "numerator": 7
+    },
+    "log_cutoff_lower": 22,
+    "pi_lower": 3,
+    "sqrt_cutoff_upper": 316228
+  },
+  "schema": "riemann.piecewise-carrier-variation-budget.v1",
+  "scope_warning": "This exact arithmetic specializes the proposed L-0901 operator bound. It does not certify the complete prime margin, D-0801 admissibility, or the Guinand--Weil normalization."
+}

@@ -1,0 +1,36 @@
+{
+  "cutoff": 10000000,
+  "cells": 4,
+  "carrier": "37.5",
+  "complete_prime_power_terms": 665134,
+  "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+  "comparisons": [
+    {
+      "precision_bits": 96,
+      "directed_two-call_interval": {
+        "lower": {"numerator": -27070684167856406762792464011, "denominator": 158456325028528675187087900672},
+        "upper": {"numerator": -54141368335712813525583894517, "denominator": 316912650057057350374175801344}
+      },
+      "nearest-adjacent-sincos_interval": {
+        "lower": {"numerator": -3383835520982050845349055959, "denominator": 19807040628566084398385987584},
+        "upper": {"numerator": -54141368335712813525583926729, "denominator": 316912650057057350374175801344}
+      },
+      "intervals_overlap": true,
+      "fast_interval_is_narrower": true
+    },
+    {
+      "precision_bits": 128,
+      "directed_two-call_interval": {
+        "lower": {"numerator": -232535406362576482940531505619095836623, "denominator": 1361129467683753853853498429727072845824},
+        "upper": {"numerator": -232535406362576482940531505619094803351, "denominator": 1361129467683753853853498429727072845824}
+      },
+      "nearest-adjacent-sincos_interval": {
+        "lower": {"numerator": -232535406362576482940531505619095803839, "denominator": 1361129467683753853853498429727072845824},
+        "upper": {"numerator": -58133851590644120735132876404773709029, "denominator": 340282366920938463463374607431768211456}
+      },
+      "intervals_overlap": true,
+      "fast_interval_is_narrower": true
+    }
+  ],
+  "interpretation": "Both MPFR enclosure architectures include the same complete finite sum at two precisions. This is an implementation cross-check, not an independent library reproduction."
+}

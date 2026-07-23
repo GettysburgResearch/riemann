@@ -1,0 +1,20 @@
+{
+  "cutoff_power10": 11,
+  "cells": 1024,
+  "total_segments": 5000,
+  "shards": [
+    {"segment_start": 0, "segment_end": 1000, "include_higher_powers": true},
+    {"segment_start": 1000, "segment_end": 2000, "include_higher_powers": false},
+    {"segment_start": 2000, "segment_end": 3000, "include_higher_powers": false},
+    {"segment_start": 3000, "segment_end": 4000, "include_higher_powers": false},
+    {"segment_start": 4000, "segment_end": 5000, "include_higher_powers": false}
+  ],
+  "expected_counts": {
+    "prime_count": 4118054813,
+    "higher_prime_power_count": 28156,
+    "total_terms": 4118082969
+  },
+  "precision_bits": [96, 128],
+  "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+  "status": "READY_AFTER_REGENERATED_VECTOR"
+}

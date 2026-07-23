@@ -1,0 +1,17 @@
+test_boolean_count_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_boolean_count_is_rejected) ... ok
+test_duplicate_higher_stream_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_duplicate_higher_stream_is_rejected) ... ok
+test_missing_higher_stream_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_missing_higher_stream_is_rejected) ... ok
+test_parameter_digest_mismatch_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_parameter_digest_mismatch_is_rejected) ... ok
+test_segment_gap_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_segment_gap_is_rejected) ... ok
+test_segment_overlap_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_segment_overlap_is_rejected) ... ok
+test_strict_negative_is_accepted (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_strict_negative_is_accepted) ... ok
+test_strict_positive_is_accepted (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_strict_positive_is_accepted) ... ok
+test_term_count_mismatch_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_term_count_mismatch_is_rejected) ... ok
+test_vector_digest_mismatch_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_vector_digest_mismatch_is_rejected) ... ok
+test_zero_is_unresolved_after_correction (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_zero_is_unresolved_after_correction) ... ok
+test_zero_vector_is_rejected (test_verify_fixed_vector_certificate.FixedVectorCertificateTests.test_zero_vector_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.002s
+
+OK

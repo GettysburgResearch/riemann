@@ -1,0 +1,19 @@
+RIEMANN_D0801_AUTOCORRELATION_V1
+cells 4
+vector_scale_bits 20
+autocorr_scale_bits 40
+vector_sha256 6d1153365852320d63459992e739e5bc99d46c81fb886c4ae5fa7653881c7e9a
+normalization_sha256 65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be
+parameter_sha256 06f467446266a6aab5266bc59e4429f60cfeebccd297a8ed8a1e9c0160789ff3
+cutoff_power10 5
+cutoff 100000
+carrier_num 75
+carrier_den 2
+segment_size 20000
+total_segments 5
+a_count 5
+a 0 387620798464 0
+a 1 100931731456 103079215104
+a 2 -55834574848 17179869184
+a 3 34359738368 -17179869184
+a 4 0 0

@@ -1,0 +1,48 @@
+{
+  "alpha_interval": {
+    "lower": {"denominator": 1, "numerator": 1},
+    "upper": {"denominator": 1, "numerator": 1}
+  },
+  "carrier": {"denominator": 20, "numerator": 94184072727073},
+  "cells": 1,
+  "cutoff_power10": 11,
+  "parameter_sha256": "3ac8bb6dff0313ea67e8ce455af35256a2f11936b133cae28a3b972a39c9e8c1",
+  "schema": "riemann.piecewise-carrier-fixed-vector.v1",
+  "shards": [
+    {
+      "higher_prime_power_count": 1,
+      "include_higher_powers": true,
+      "parameter_sha256": "3ac8bb6dff0313ea67e8ce455af35256a2f11936b133cae28a3b972a39c9e8c1",
+      "prime_count": 1,
+      "prime_rayleigh_interval": {
+        "lower": {"denominator": 2, "numerator": 0},
+        "upper": {"denominator": 2, "numerator": 0}
+      },
+      "segment_end": 1,
+      "segment_start": 0,
+      "total_terms": 2,
+      "vector_sha256": "e93e0e6dc6e62ab46d12f499d26f4b72c63511e67bc916d4f4034298b11e2c72"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "3ac8bb6dff0313ea67e8ce455af35256a2f11936b133cae28a3b972a39c9e8c1",
+      "prime_count": 1,
+      "prime_rayleigh_interval": {
+        "lower": {"denominator": 2, "numerator": 0},
+        "upper": {"denominator": 2, "numerator": 0}
+      },
+      "segment_end": 2,
+      "segment_start": 1,
+      "total_terms": 1,
+      "vector_sha256": "e93e0e6dc6e62ab46d12f499d26f4b72c63511e67bc916d4f4034298b11e2c72"
+    }
+  ],
+  "total_segments": 2,
+  "vector": {
+    "imag_numerators": [0],
+    "real_numerators": [1],
+    "scale_bits": 0
+  },
+  "vector_sha256": "e93e0e6dc6e62ab46d12f499d26f4b72c63511e67bc916d4f4034298b11e2c72"
+}

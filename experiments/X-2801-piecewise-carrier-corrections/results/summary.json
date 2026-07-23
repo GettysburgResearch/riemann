@@ -1,0 +1,23 @@
+{
+  "experiment_id": "X-2801",
+  "status": "PARTIAL_EXACT_CORRECTION_BUDGET",
+  "parameters": {
+    "cutoff": "10^11",
+    "cells": 1024,
+    "carrier": "4709203636353.65",
+    "carrier_exact": {
+      "numerator": 94184072727073,
+      "denominator": 20
+    }
+  },
+  "exact_correction_radius": {
+    "numerator": 98759175269343099756340,
+    "denominator": 79835755999127184820324325961,
+    "decimal_approximation": 1.237029374036651e-06,
+    "strict_upper_landmark": "1/750000"
+  },
+  "pr44_empirical_leading_margin": 0.00026896626427230785,
+  "empirical_margin_to_exact_radius_ratio": 217.4291653193507,
+  "interpretation": "The omitted exact archimedean and pole correction is rigorously small under L-2801/L-2802, but the PR #44 leading prime margin is not directed-rounded and is not promoted to a theorem.",
+  "counterexample_candidate": null
+}
