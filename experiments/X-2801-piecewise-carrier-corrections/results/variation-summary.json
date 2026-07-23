@@ -1,0 +1,24 @@
+{
+  "experiment_id": "X-2801",
+  "status": "PARTIAL_EXACT_L0901_SPECIALIZATION",
+  "dependency": "L-0901 PROPOSED uniform operator inequality",
+  "parameters": {
+    "cutoff": "10^11",
+    "cells": 1024,
+    "carrier": "4709203636353.65",
+    "carrier_exact": {
+      "numerator": 94184072727073,
+      "denominator": 20
+    }
+  },
+  "exact_variation_radius": {
+    "numerator": 136091541158257193750,
+    "denominator": 292731105330133011007855861857,
+    "decimal_approximation": 4.64902904680312e-10,
+    "strict_upper_landmark": "1/2000000000"
+  },
+  "pr44_empirical_leading_margin": 0.00026896626427230785,
+  "empirical_margin_to_exact_radius_ratio": 578542.8775870115,
+  "interpretation": "The proposed L-0901 correction at the optimized target is exact-rationally below 5e-10. The PR #44 prime margin is not directed-rounded, so no complete sign is certified.",
+  "counterexample_candidate": null
+}
