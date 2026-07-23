@@ -1,0 +1,65 @@
+{
+  "schema": "riemann.xi-matched-pole-control.v1",
+  "status": "EXACT_SYNTHETIC_CONTROL_NOT_RIEMANN_XI",
+  "claim": "L-3903",
+  "nodes": [
+    {"numerator": "1", "denominator": "10"},
+    {"numerator": "1", "denominator": "4"},
+    {"numerator": "2", "denominator": "3"},
+    {"numerator": "5", "denominator": "4"}
+  ],
+  "model_d": {"numerator": "7", "denominator": "100"},
+  "canonical_vector": [
+    {"numerator": "432", "denominator": "1955"},
+    {"numerator": "-1347", "denominator": "50000"},
+    {"numerator": "-579303", "denominator": "1487500"},
+    {"numerator": "314619", "denominator": "1610000"}
+  ],
+  "moment_cancellations": [
+    {"power": 0, "value": {"numerator": "0", "denominator": "1"}},
+    {"power": 1, "value": {"numerator": "0", "denominator": "1"}}
+  ],
+  "modeled_overlaps": {
+    "alpha": {"numerator": "0", "denominator": "1"},
+    "beta": {"numerator": "-1", "denominator": "1"}
+  },
+  "contracted_real_f_coefficients": [
+    {"numerator": "462288", "denominator": "1573775"},
+    {"numerator": "-73353579", "denominator": "4812500000"},
+    {"numerator": "-2316036594213", "denominator": "43278812500000"},
+    {"numerator": "1872297669", "denominator": "231437500000"}
+  ],
+  "modeled_pair_contribution": {
+    "multiplicity": 3,
+    "value": {"numerator": "-21", "denominator": "50"}
+  },
+  "mismatch_controls": [
+    {
+      "actual_d": {"numerator": "699", "denominator": "10000"},
+      "pair_value": {"numerator": "-83864739375", "denominator": "655947273826"}
+    },
+    {
+      "actual_d": {"numerator": "7", "denominator": "100"},
+      "pair_value": {"numerator": "-7", "denominator": "50"}
+    },
+    {
+      "actual_d": {"numerator": "701", "denominator": "10000"},
+      "pair_value": {"numerator": "-1743026180625", "denominator": "11483048805592"}
+    }
+  ],
+  "finite_critical_line_control": {
+    "ordinate_offsets": [
+      {"numerator": "0", "denominator": "1"},
+      {"numerator": "1", "denominator": "3"},
+      {"numerator": "-7", "denominator": "5"},
+      {"numerator": "11", "denominator": "2"}
+    ],
+    "quadratic_value": {
+      "numerator": "488350079265455004523402705622467257",
+      "denominator": "164640731310604413489635115625000000"
+    },
+    "sign": "STRICTLY_POSITIVE"
+  },
+  "counterexample_candidate": null,
+  "warning": "The negative values are contributions of an explicit synthetic reflected pair. They are not evaluations of the Riemann xi function."
+}
