@@ -1,0 +1,48 @@
+{
+  "schema": "riemann.xi-carrier-cross-audit.v2",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "carrier_center": "4709203636353.6309",
+  "curvature_screen": {
+    "withdrawn_rows": 2,
+    "withdrawal_claim": "R-3901",
+    "reason": "The scratch negatives were not bound to committed code or exact serialized inputs and do not reproduce at their stored decimal labels.",
+    "replacement_artifact": "curvature-nufft.json",
+    "replacement_range": "center - 327.68 through center + 327.67",
+    "replacement_step": "0.01",
+    "replacement_points": 65536,
+    "replacement_negative_count": 0,
+    "replacement_minimum_curvature": 30.742555369264693,
+    "replacement_minimum_t": "4709203636353.6409",
+    "direct_minimum_control": 30.742489343830005
+  },
+  "center_stieltjes_controls": {
+    "x_0.001": {
+      "D_midpoint": "+61.51687704263",
+      "A1_smallest_eigenvalue": "+8.40624867494",
+      "B1_smallest_eigenvalue": "+8.40624069568"
+    },
+    "x_0.0001_precision_failure": {
+      "24_digits_A1_smallest": "-10163",
+      "24_digits_B1_smallest": "-1491",
+      "36_digits_A1_smallest": "+8.40626818574",
+      "36_digits_B1_smallest": "+8.40626812706"
+    }
+  },
+  "center_two_channel_control": {
+    "x1": "0.0001",
+    "x2": "0.001",
+    "A_midpoint": "+73.1160957148",
+    "B_midpoint": "+30.7585109060"
+  },
+  "second_carrier_control": {
+    "t": "3157430112465.8695095",
+    "offsets": ["0.0001", "0.0003", "0.001", "0.003", "0.01"],
+    "adjacent_A_range": ["+165.304", "+165.415"],
+    "adjacent_B_range": ["+39.288", "+39.307"],
+    "curvature_window": "t +/- 20 at spacing 0.1",
+    "curvature_negative_count": 0,
+    "curvature_minimum": "+39.315"
+  },
+  "counterexample_candidate": null,
+  "interpretation": "No passivity anomaly survived reproducible exact-input scanning or fixed-vector precision escalation at either carrier basin."
+}

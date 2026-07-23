@@ -1,0 +1,42 @@
+{
+  "schema": "riemann.xi-passivity-precision-ladder.v1",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "carrier_t": "4709203636353.6309",
+  "offsets": ["0.00001", "0.00003", "0.0001", "0.0003", "0.001", "0.003", "0.01", "0.03"],
+  "primitive_integer_barycentric_vector": [
+    "-18278001000000000",
+    "26004329000000000",
+    "-8692207821270000",
+    "992352095670000",
+    "-26793506583090",
+    "321933623010",
+    "-702116883",
+    "676963"
+  ],
+  "normalized_linear_amplification_l1": "15721.80934269744006550403771346610303855",
+  "pick_smallest_eigenvalue_ladder": [
+    {"working_digits": 26, "value": "-8.716e-13"},
+    {"working_digits": 34, "value": "-5.2304810276186537058e-18"},
+    {"working_digits": 42, "value": "-3.2930450824291228109e-26"},
+    {"working_digits": 50, "value": "-9.4583793750334644406e-35"},
+    {"working_digits": 60, "value": "+4.7267035655214027988e-42"},
+    {"working_digits": 70, "value": "+4.7267081419912209392e-42"}
+  ],
+  "fixed_barycentric_normalized_rayleigh_ladder": [
+    {"working_digits": 50, "value": "-7.4111863505260442213e-39"},
+    {"working_digits": 60, "value": "+1.3151158235450671365e-38"},
+    {"working_digits": 70, "value": "+1.3151158237642018402e-38"}
+  ],
+  "adjacent_two_point_localizers_at_70_digits": [
+    {"offsets": ["0.00001", "0.00003"], "value": "+2.9246538207272277229e-8"},
+    {"offsets": ["0.00003", "0.0001"], "value": "+3.5827008102916865589e-7"},
+    {"offsets": ["0.0001", "0.0003"], "value": "+2.9246528403261514292e-6"},
+    {"offsets": ["0.0003", "0.001"], "value": "+3.5826877195306510467e-5"},
+    {"offsets": ["0.001", "0.003"], "value": "+2.9245548034825551305e-4"},
+    {"offsets": ["0.003", "0.01"], "value": "+0.0035813791257525595460"},
+    {"offsets": ["0.01", "0.03"], "value": "+0.029147836486638856107"}
+  ],
+  "classification": "REFUTED_FLOATING_ANOMALY",
+  "counterexample_candidate": null,
+  "warning": "All values are ordinary mpmath/NumPy output, not directed balls. The ladder refutes the floating negative nomination only."
+}
