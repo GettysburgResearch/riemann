@@ -11,6 +11,16 @@ on:
       - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/configs/high-carrier-scalar.json'
+  pull_request:
+    branches:
+      - agent/gpt56-02-e/39-xi-passivity-adversarial-scan
+    paths:
+      - '.github/workflows/arb-xi-high.yml'
+      - 'experiments/X-3902-arb-xi-passivity/arb_producer.py'
+      - 'experiments/X-3902-arb-xi-passivity/arb_value_producer.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/configs/high-carrier-scalar.json'
   workflow_dispatch:
 
 concurrency:
