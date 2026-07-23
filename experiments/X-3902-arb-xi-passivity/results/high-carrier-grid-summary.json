@@ -1,0 +1,84 @@
+{
+  "artifact": {
+    "digest": "sha256:9811f269b4b4d0bda8f85d4ff53e3f5ba1a619e37dba5cdfb29fe924aa5216ec",
+    "id": 8564022100,
+    "name": "arb-xi-high-carrier-grid",
+    "workflow_run": 30007757692
+  },
+  "channel_count": 2275,
+  "counts": [
+    {"count": 390, "kind": "bernstein-divided-difference", "status": "CERTIFIED_NONNEGATIVE"},
+    {"count": 455, "kind": "real-pick-rayleigh", "status": "CERTIFIED_NONNEGATIVE"},
+    {"count": 520, "kind": "scalar", "status": "CERTIFIED_NONNEGATIVE"},
+    {"count": 455, "kind": "two-channel-A", "status": "CERTIFIED_NONNEGATIVE"},
+    {"count": 455, "kind": "two-channel-B", "status": "CERTIFIED_NONNEGATIVE"}
+  ],
+  "file_sha256": {
+    "high-carrier-grid-certificate.json": "10025d3c3b50b24f0b39c9981664131644fc58ad0a59fd8606f1d96d9b3e02c2",
+    "high-carrier-grid-verification.json": "84001f8f2d6cd0193d67ea614b3650a3fd07688ca3a844d13f4058fdd4f4f558",
+    "high-carrier-grid.time.txt": "6f1a18d0645fdc07ff33a3d53c974fb9d974ce53801e76a41786e1e712a340f4"
+  },
+  "grid": {
+    "center_t_exact": {"denominator": "4294967296", "numerator": "20225875608343121406355"},
+    "horizontal_offsets": ["2^-17", "2^-15", "2^-13", "2^-11", "2^-10", "2^-9", "2^-7", "2^-5"],
+    "point_count": 520,
+    "precision_bits": 128,
+    "t_offsets": "j/32 for every integer -32 <= j <= 32"
+  },
+  "negative_channels": [],
+  "point_count": 520,
+  "proof_boundary": "The full primitive rectangles and all 2,275 exact contractions remain in the workflow artifact and must be regenerated for independent acceptance. Every conclusion is pointwise or finite-channel only and stops at the exact grid stated here.",
+  "runtime": {
+    "elapsed_seconds": 652.18,
+    "maximum_resident_kbytes": 37292,
+    "system_seconds": 0.08,
+    "user_seconds": 651.97
+  },
+  "schema": "riemann.xi-passivity.value-grid-summary.v1",
+  "status": "CERTIFIED_NONNEGATIVE_CONTROLS_ONLY",
+  "tightest_upper_by_kind": {
+    "bernstein-divided-difference": {
+      "id": "dd2_t_p0_x9_t_p0_x7_t_p0_x5",
+      "interval": {
+        "lower": {"denominator": "5084297083877303213857062005572318003200", "numerator": "370439030375524810293659540522177631209843"},
+        "upper": {"denominator": "564921898208589245984118000619146444800", "numerator": "41159892263947201143739948946908752075621"}
+      },
+      "upper_orientation_decimal": "72.859438436478356"
+    },
+    "real-pick-rayleigh": {
+      "id": "pick_t_p0_x17_t_p0_x15",
+      "interval": {
+        "lower": {"denominator": "27222589353675077077069968594541456916480", "numerator": "1042717266970185639799819106539641"},
+        "upper": {"denominator": "27222589353675077077069968594541456916480", "numerator": "1042717266970185639799822152607623"}
+      },
+      "upper_orientation_decimal": "3.8303383025884634e-08"
+    },
+    "scalar": {
+      "id": "scalar_t_p0_x17",
+      "interval": {
+        "lower": {"denominator": "1427247692705959881058285969449495136382746624", "numerator": "334931328689426767179932327483637286535603"},
+        "upper": {"denominator": "1427247692705959881058285969449495136382746624", "numerator": "334931328689426767179932327483638925524557"}
+      },
+      "upper_orientation_decimal": "0.00023466937827338214"
+    },
+    "two-channel-A": {
+      "id": "A_t_p0_x7_t_p0_x5",
+      "interval": {
+        "lower": {"denominator": "1276058875953519237987654777869130792960", "numerator": "92974133684145062045212289249332763785259"},
+        "upper": {"denominator": "1276058875953519237987654777869130792960", "numerator": "92974133684145062045212289249332987201493"}
+      },
+      "upper_orientation_decimal": "72.860379278872443"
+    },
+    "two-channel-B": {
+      "id": "B_t_p0_x7_t_p0_x5",
+      "interval": {
+        "lower": {"denominator": "41813897247244918390379471761215677823713280", "numerator": "1282974567099528670887814810581536270471495099"},
+        "upper": {"denominator": "41813897247244918390379471761215677823713280", "numerator": "1282974567099528670887814810581536272397009477"}
+      },
+      "upper_orientation_decimal": "30.682970293663853"
+    }
+  },
+  "unresolved_channels": [],
+  "verification_sha256": "c54b6ea9b2eb9d68bddd837be5e038eefd1e8788274aafb38fc50f311280c0ee",
+  "verified": true
+}

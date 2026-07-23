@@ -1,0 +1,71 @@
+name: arb-xi-ambiguous-batch
+
+on:
+  push:
+    branches:
+      - agent/gpt56-03-e/39-arb-xi-passivity
+    paths:
+      - '.github/workflows/arb-xi-ambiguous-batch.yml'
+      - 'experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c'
+      - 'experiments/X-3902-arb-xi-passivity/rs_pick_batch.c'
+      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+  pull_request:
+    branches:
+      - agent/gpt56-02-e/39-xi-passivity-adversarial-scan
+    paths:
+      - '.github/workflows/arb-xi-ambiguous-batch.yml'
+      - 'experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c'
+      - 'experiments/X-3902-arb-xi-passivity/rs_pick_batch.c'
+      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+  workflow_dispatch:
+
+concurrency:
+  group: arb-xi-ambiguous-batch-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  ambiguous-batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install FLINT development library
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+      - name: Compile frozen batch and exact checker
+        run: |
+          mkdir -p experiments/X-3902-arb-xi-passivity/results/ambiguous-batch
+          cc -O3 -std=c11 -Wall -Wextra -Werror \
+            experiments/X-3902-arb-xi-passivity/rs_pick_batch.c \
+            -o experiments/X-3902-arb-xi-passivity/rs_pick_batch \
+            -lflint -lmpfr -lgmp -lpthread -lm
+          python -m compileall -q \
+            experiments/X-3902-arb-xi-passivity/verify_certificate.py \
+            experiments/X-3902-arb-xi-passivity/verify_value_certificate.py
+      - name: Produce and replay all frozen ambiguous directions
+        run: |
+          /usr/bin/time -v \
+            experiments/X-3902-arb-xi-passivity/rs_pick_batch 192 \
+            > experiments/X-3902-arb-xi-passivity/results/ambiguous-batch/frozen-pick-batch-192.certificate.json \
+            2> experiments/X-3902-arb-xi-passivity/results/ambiguous-batch/frozen-pick-batch-192.time.txt
+          python experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
+            experiments/X-3902-arb-xi-passivity/results/ambiguous-batch/frozen-pick-batch-192.certificate.json \
+            --output experiments/X-3902-arb-xi-passivity/results/ambiguous-batch/frozen-pick-batch-192.verification.json
+          cat experiments/X-3902-arb-xi-passivity/results/ambiguous-batch/frozen-pick-batch-192.verification.json
+      - name: Upload exact batch results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-xi-ambiguous-pick-batch
+          if-no-files-found: error
+          path: experiments/X-3902-arb-xi-passivity/results/ambiguous-batch/

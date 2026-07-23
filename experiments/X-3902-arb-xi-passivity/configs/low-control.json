@@ -1,0 +1,38 @@
+{
+  "precision_bits": 160,
+  "series_cap": 3,
+  "points": [
+    {
+      "id": "low-x10",
+      "x": {"mantissa": "1", "exponent": -10},
+      "t": {"mantissa": "4001", "exponent": -2}
+    },
+    {
+      "id": "low-x8",
+      "x": {"mantissa": "1", "exponent": -8},
+      "t": {"mantissa": "4001", "exponent": -2}
+    }
+  ],
+  "channels": [
+    {"id": "scalar-x10", "kind": "scalar", "point": "low-x10"},
+    {"id": "scalar-x8", "kind": "scalar", "point": "low-x8"},
+    {"id": "A-x10-x8", "kind": "two-channel-A", "points": ["low-x10", "low-x8"]},
+    {"id": "B-x10-x8", "kind": "two-channel-B", "points": ["low-x10", "low-x8"]},
+    {
+      "id": "pick-difference",
+      "kind": "real-pick-rayleigh",
+      "points": ["low-x10", "low-x8"],
+      "vector": [
+        {"numerator": "1", "denominator": "1"},
+        {"numerator": "-1", "denominator": "1"}
+      ]
+    }
+  ],
+  "declared_channel_ids": [
+    "scalar-x10",
+    "scalar-x8",
+    "A-x10-x8",
+    "B-x10-x8",
+    "pick-difference"
+  ]
+}

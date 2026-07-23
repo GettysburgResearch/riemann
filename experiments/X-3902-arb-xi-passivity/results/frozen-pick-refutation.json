@@ -1,0 +1,158 @@
+{
+  "artifact": {
+    "artifact_id": 8564247721,
+    "digest": "sha256:b959095a7da656a18b8fd55b399613a220abd224ed7e522fc749119603606710",
+    "name": "arb-xi-frozen-pick-candidate",
+    "workflow_run": 30008955557
+  },
+  "classification": "RIGOROUS_REFUTATION_OF_MIDPOINT_NEGATIVE_SCREEN",
+  "conclusion": "All directed rungs have strictly positive lower endpoints. The apparent negative midpoint eigenvalue is a cancellation/precision artifact for this exact vector and point set.",
+  "directed_rungs": [
+    {
+      "file_sha256": {
+        "frozen-pick-192.certificate.json": "86640417f13968e5d005fcb9cee1a249d5d0dd6b40d5bfb3353701d93e362af1",
+        "frozen-pick-192.time.txt": "2fe61c42125247f2b7fdd3f0353d89ade36421b0484ea4eb745f5ded5f35f1ab",
+        "frozen-pick-192.verification.json": "c0a5534f50028eaa2fc1944a47e710153ab9230d7f354916579c8a41593de2c8"
+      },
+      "normalized_decimal_orientation_only": {
+        "lower": "6.7369660275844884e-37",
+        "upper": "6.7369660275845076e-37",
+        "width": "1.9189631268043719e-51"
+      },
+      "precision_bits": 192,
+      "raw_interval": {
+        "lower": {
+          "denominator": "49140440919787752726823645465346309890410587174701492139870939666581762867200",
+          "numerator": "3833383738924862830958015587899321431749671413272982352651040025713555033807551442180631865728087882514818600642242897"
+        },
+        "upper": {
+          "denominator": "3276029394652516848454909697689753992694039144980099475991395977772117524480",
+          "numerator": "255558915928324916666721648190269102125677704167625697786548374717305926214175975142056917543012762464535223802093409"
+        }
+      },
+      "runtime": {
+        "elapsed_wall": "0:12.87",
+        "maximum_resident_kbytes": 42104
+      },
+      "status": "CERTIFIED_NONNEGATIVE",
+      "verification_sha256": "031db7b1646ede0b4cc1fee792c6f8d51b857f26cd34470bd8e5f205060aec76"
+    },
+    {
+      "file_sha256": {
+        "frozen-pick-256.certificate.json": "39a13863d638bbc49cd92848c2ab03b5f2164ba28eb5154173ee5dc1693fd470",
+        "frozen-pick-256.time.txt": "03f70ef3cd42e2a771f4aa90add56d6ad7fd3e03b3d32473d45950233834f1cd",
+        "frozen-pick-256.verification.json": "9c2d379c8e57e45ccc24fbbd5f8e5661c7161616a5d7edd3a5e79727d53fef99"
+      },
+      "normalized_decimal_orientation_only": {
+        "lower": "6.7369660275844976e-37",
+        "upper": "6.7369660275844976e-37",
+        "width": "1.0402290471563626e-70"
+      },
+      "precision_bits": 256,
+      "raw_interval": {
+        "lower": {
+          "denominator": "302160379105523025099037198809485497683433441561250726902912887114971484537424892381383517798400",
+          "numerator": "23571149589422292785646367753715877568133972268133456604630821677267401128865539121014765646571302706847203594377420142657192533546753173"
+        },
+        "upper": {
+          "denominator": "181296227463313815059422319285691298610060064936750436141747732268982890722454935428830110679040",
+          "numerator": "14142689753653375671387820652229526540880383360880077379149682488875444233002166147787283951722670893091607627546908360933570499673052609"
+        }
+      },
+      "runtime": {
+        "elapsed_wall": "0:15.75",
+        "maximum_resident_kbytes": 42448
+      },
+      "status": "CERTIFIED_NONNEGATIVE",
+      "verification_sha256": "e6140d31fd51b79dc8615f46a5eb5495cfca40ae2cebab177521a43ca66308bf"
+    },
+    {
+      "file_sha256": {
+        "frozen-pick-384.certificate.json": "e0ae7b0a39304a1ac6dd7ef7cfa50d3793fa6ad17c28edb26fb5268ff368cac8",
+        "frozen-pick-384.time.txt": "2b4f4c7dbaeb7e80561bc45c785d1058082493de3926f2afbf31847208ec5a21",
+        "frozen-pick-384.verification.json": "d89eee0d1985aa3a24510c01af5118dd9006cdba0dc928b545be9f862c9b0e14"
+      },
+      "normalized_decimal_orientation_only": {
+        "lower": "6.7369660275844976e-37",
+        "upper": "6.7369660275844976e-37",
+        "width": "3.0569609414580267e-109"
+      },
+      "precision_bits": 384,
+      "raw_interval": {
+        "lower": {
+          "denominator": "1338929498992502484175051411057856798191969094981347815144166245131071354706651798202723816659015723114505279750601678842416716811464834512641846169600",
+          "numerator": "104457368814277811394428845950656829793014914372197130809621160052793483184585442566930257161729311714531056576976045622876973558727684732524157688010997220159402472429275376294867443712266060761"
+        },
+        "upper": {
+          "denominator": "1338929498992502484175051411057856798191969094981347815144166245131071354706651798202723816659015723114505279750601678842416716811464834512641846169600",
+          "numerator": "104457368814277811394428845950656829793014914372197130809621160052793483184585442566930257161729311714531056576976045622876973558727684732524157688011000761616251892659390986108067586854110003921"
+        }
+      },
+      "runtime": {
+        "elapsed_wall": "0:24.38",
+        "maximum_resident_kbytes": 43124
+      },
+      "status": "CERTIFIED_NONNEGATIVE",
+      "verification_sha256": "f2aa9121273ee85d4bab66b31f36685ff7d21dc0573252d93435f87eb18cac78"
+    },
+    {
+      "file_sha256": {
+        "frozen-pick-512.certificate.json": "deae896dd2601fe8f1fe393b63bbf755bc69e7369ef0b9b0a62ef9b5b9f3c22b",
+        "frozen-pick-512.time.txt": "c2bfa21db3050cfddf16f53ab956ac0cdf09ebcb902405c15866423de48091a9",
+        "frozen-pick-512.verification.json": "bfad8d2e209a1a22a92da9db64335d0b3a140d5961da7bbb799ad9e3c7b86fb5"
+      },
+      "normalized_decimal_orientation_only": {
+        "lower": "6.7369660275844976e-37",
+        "upper": "6.7369660275844976e-37",
+        "width": "8.9823123132607418e-148"
+      },
+      "precision_bits": 512,
+      "raw_interval": {
+        "lower": {
+          "denominator": "1329227995784915872903807060280344576",
+          "numerator": "103684518018624038045887301018401316034460160313376950526586012787230084357"
+        },
+        "upper": {
+          "denominator": "1329227995784915872903807060280344576",
+          "numerator": "103684518018624038045887301018401316034460160313376950526599813226988709045"
+        }
+      },
+      "runtime": {
+        "elapsed_wall": "0:34.45",
+        "maximum_resident_kbytes": 44028
+      },
+      "status": "CERTIFIED_NONNEGATIVE",
+      "verification_sha256": "8193560b3cbb62f412600eed7d3c528cbc30dc18d970bb38bdd539bdb6db80c3"
+    }
+  ],
+  "discovery_only_midpoint_eigenvalue": "approximately -1.07152395199794e-33 at 128-bit primitive midpoints",
+  "frozen_integer_vector": [
+    "195636939617757491029673815477592416810",
+    "-266959021123812027267480589292220211689",
+    "78579210599617390707865222434596218607",
+    "-8625978245797521833136016688956110884",
+    "1433229629677485490048250862719075773",
+    "-64409641812112416364060934853368983",
+    "29166190362703029401659745864134",
+    "-1821068355102116775346559903"
+  ],
+  "point_set": {
+    "t": {
+      "denominator": "4294967296",
+      "numerator": "20225875608342450317715"
+    },
+    "x": [
+      "2^-17",
+      "2^-15",
+      "2^-13",
+      "2^-11",
+      "2^-10",
+      "2^-9",
+      "2^-7",
+      "2^-5"
+    ]
+  },
+  "proof_boundary": "This refutes only the frozen exact direction at the exact point set. It does not prove the entire Pick matrix positive semidefinite, and it does not promote the parent Pick criterion.",
+  "schema": "riemann.xi-passivity.frozen-pick-refutation.v1",
+  "vector_squared_norm": "115792089237316195423570985008687907853467723131970227302286034224709796031909"
+}

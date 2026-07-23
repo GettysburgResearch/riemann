@@ -1,0 +1,72 @@
+{
+  "artifact_digest": "sha256:8284376029dc1bf0262ac1fb13814960c078691fd6643f327c74549c960dbbb5",
+  "certificate_sha256": "1cd797bee0b29c0a4ccd51e74b9bbaff45aac35c5f79a9ce86039a6f7ab2ad92",
+  "channel_count": 5,
+  "channels": [
+    {
+      "id": "scalar-x10",
+      "kind": "scalar",
+      "lower": {"denominator": "187072209578355573530071658587684226515959365500928", "numerator": "1273571296249782968194136244247565546715151927827"},
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper": {"denominator": "187072209578355573530071658587684226515959365500928", "numerator": "1273571296249782968194136244247565546715152023021"}
+    },
+    {
+      "id": "scalar-x8",
+      "kind": "scalar",
+      "lower": {"denominator": "46768052394588893382517914646921056628989841375232", "numerator": "1273509475611945330970081538381054794850971111987"},
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper": {"denominator": "46768052394588893382517914646921056628989841375232", "numerator": "1273509475611945330970081538381054794850971135693"}
+    },
+    {
+      "id": "A-x10-x8",
+      "kind": "two-channel-A",
+      "lower": {"denominator": "1306684288976403699699358492537989931991040", "numerator": "30910318918818612027352933255375932090396067"},
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper": {"denominator": "435561429658801233233119497512663310663680", "numerator": "10303439639606204009117644418458644030151839"}
+    },
+    {
+      "id": "B-x10-x8",
+      "kind": "two-channel-B",
+      "lower": {"denominator": "913438523331814323877303020447676887284957839360", "numerator": "6367526771180447442442389456616437056966795256257"},
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper": {"denominator": "2740315569995442971631909061343030661854873518080", "numerator": "19102580313541342327327168369849311170900386243261"}
+    },
+    {
+      "id": "pick-difference",
+      "kind": "real-pick-rayleigh",
+      "lower": {"denominator": "456719261665907161938651510223838443642478919680", "numerator": "92730956756455836082058799766127796271188201"},
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper": {"denominator": "456719261665907161938651510223838443642478919680", "numerator": "92730956756455836082058799766127796271366551"}
+    }
+  ],
+  "generated_file_sha256": {
+    "api-probe.json": "8c1f9aa975c1579a80145e6f3cc4fcf217cfd856db36a3bb59636d9ba6754fdd",
+    "low-control-certificate.json": "eb47eb1c796d819cb7162eb07e8a2feb11cc7ce265dac2bd2b3f0a09d6da01e5",
+    "low-control-verification.json": "88ff1417a5c455e21c09f7f9d68744ad135da574a105001702e0d23238f15864"
+  },
+  "negative_channels": [],
+  "point_count": 2,
+  "point_gates": [
+    {
+      "functional_equation_residual": {
+        "imag": {"lower": {"denominator": "1461501637330902918203684832716283019655932542976", "numerator": "-871"}, "upper": {"denominator": "1461501637330902918203684832716283019655932542976", "numerator": "863"}},
+        "real": {"lower": {"denominator": "187072209578355573530071658587684226515959365500928", "numerator": "-94569"}, "upper": {"denominator": "187072209578355573530071658587684226515959365500928", "numerator": "94569"}}
+      },
+      "id": "low-x10"
+    },
+    {
+      "functional_equation_residual": {
+        "imag": {"lower": {"denominator": "1461501637330902918203684832716283019655932542976", "numerator": "-863"}, "upper": {"denominator": "1461501637330902918203684832716283019655932542976", "numerator": "869"}},
+        "real": {"lower": {"denominator": "46768052394588893382517914646921056628989841375232", "numerator": "-23643"}, "upper": {"denominator": "46768052394588893382517914646921056628989841375232", "numerator": "23643"}}
+      },
+      "id": "low-x8"
+    }
+  ],
+  "proof_boundary": "Generated primitive balls and full verification remain in the workflow artifact; this committed summary binds them but is not a substitute for regeneration and replay.",
+  "schema": "riemann.xi-passivity.low-control-summary.v1",
+  "source_artifact_id": 8563000059,
+  "source_workflow_run": 30006002161,
+  "status": "CERTIFIED_NONNEGATIVE_CONTROLS_ONLY",
+  "unresolved_channels": [],
+  "verification_sha256": "506b6d4d764678774ecbb4c545669c73b8d85321fb0bd087b28c3492168912cb"
+}
