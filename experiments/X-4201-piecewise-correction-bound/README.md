@@ -1,9 +1,9 @@
-# X-4201 — Exact rational gate for the optimized carrier corrections
+# X-4201 — Exact rational gate and prime-entry geometry for optimized carriers
 
-Status: exact rational parameter/correction-bound verification  
+Status: exact rational parameter/correction-bound verification and exact event regression  
 Authoring agent: `gpt56-05-e`  
 Issue: #42  
-Related claims: L-4201, L-4202, L-4203, O-4201
+Related claims: L-4201, L-4202, L-4203, L-4204, O-4201
 
 ## Purpose
 
@@ -20,7 +20,13 @@ but omits the exact D-0801 archimedean and pole matrices. X-4201 checks, using
 only exact rational arithmetic, that the uniform nonprime correction envelope
 from L-4202/L-4203 is below `2.5e-10` at this parameter cell.
 
-The checker intentionally does **not** evaluate:
+The experiment also contains `prime_entry.py`, an exact Gaussian-rational
+regression of L-4204's first deposition cell. It checks the corner matrix,
+fixed-vector formula, derivative limit, endpoint-neutral directions, unit-phase
+requirement, and first-cell norm cap after stripping the common positive factor
+`log(p)/(pi*sqrt(q))`.
+
+The correction checker intentionally does **not** evaluate:
 
 - the prime phases;
 - a Toeplitz eigenvalue;
@@ -104,33 +110,66 @@ The checker derives a deliberately loose pole bound using
 \]
 
 \[
- \pi^2h=\frac{\pi L}{2K}>rac{3\cdot22}{2K},
+ \pi^2h=\frac{\pi L}{2K}>\frac{3\cdot22}{2K},
 \]
 
 and
 
 \[
- \sinh(\pi h)>\pi h=\frac{L}{2K}>rac{22}{2K}.
+ \sinh(\pi h)>\pi h=\frac{L}{2K}>\frac{22}{2K}.
 \]
 
 No floating hyperbolic evaluation is trusted.
 
+## Prime-entry exact regression
+
+For `K=8` and the dimensionless first-cell coordinate
+
+\[
+ \eta=\frac{\varepsilon}{L_0}=\frac1{100},
+\]
+
+`prime_entry.py` reconstructs
+
+\[
+ \tau_{K-1}=\frac{K\eta}{1+\eta}=\frac8{101}.
+\]
+
+With the exact unit phase
+
+\[
+ \frac35-\frac45i,
+\]
+
+the stripped corner coefficient has norm `4/101`. The tests independently
+evaluate the two corner entries and the closed fixed-vector formula, verify
+
+\[
+ \frac{\tau_{K-1}}{2\eta}=\frac{K/2}{1+\eta}\to\frac K2,
+\]
+
+and require exact annihilation when either endpoint coordinate vanishes.
+
+These are algebraic controls only; no actual prime phase is represented.
+
 ## Files
 
-- `verify.py` — exact standard-library checker;
-- `certificates/c11-k1024.json` — compact machine-readable certificate;
+- `verify.py` — exact standard-library correction checker;
+- `prime_entry.py` — exact Gaussian-rational L-4204 event kernel;
+- `certificates/c11-k1024.json` — compact machine-readable correction certificate;
 - `tests/test_verify.py` — threshold and proof-boundary mutation tests;
-- `results/tests.txt` — recorded summary.
+- `tests/test_prime_entry.py` — first-cell event regressions;
+- `results/tests.txt` — recorded executed summary.
 
 ## Reproduction
 
 ```bash
 python verify.py certificates/c11-k1024.json
 python -m unittest discover -s tests -v
-python -m compileall -q verify.py tests
+python -m compileall -q verify.py prime_entry.py tests
 ```
 
-Eight tests pass.
+Fourteen tests pass.
 
 ## Adversarial coverage
 
@@ -142,12 +181,18 @@ The tests require:
 - rejection if the empirical margin is relabeled as certified;
 - rejection of a changed cell count;
 - rejection of an inflated scale factor;
-- exact harmonic helper controls.
+- exact harmonic helper controls;
+- exact first-cell hat geometry;
+- equality of corner-matrix and fixed-vector formulas;
+- the correct one-sided derivative limit;
+- endpoint-neutral event annihilation;
+- first-cell boundary rejection;
+- rejection of a nonunit synthetic phase.
 
 ## Proof boundary
 
 Conditional on the proposed analytic normalization inherited by L-4201 through
-L-4203, the nonprime operator envelope is rigorous.
+L-4204, the correction and event formulas are rigorous.
 
 The following are **not** certified by X-4201:
 
@@ -158,7 +203,7 @@ The following are **not** certified by X-4201:
 - D-0801 admissibility;
 - the Guinand--Weil sign convention.
 
-Accordingly, the checker status is
+Accordingly, the correction checker status is
 
 ```text
 RIGOROUS_CORRECTION_BOUND_EMPIRICAL_MARGIN_ONLY
@@ -178,3 +223,6 @@ unit dyadic vector, emit a rigorous interval for
 If its lower endpoint exceeds `2.5e-10`, the exact full D-0801 value is positive
 on that vector. If its upper endpoint is below `-2.5e-10`, the exact nonprime
 corrections cannot erase the negative sign.
+
+For cutoff exploration, use L-4204's endpoint susceptibility to rank prime-power
+thresholds before performing full continuation.
