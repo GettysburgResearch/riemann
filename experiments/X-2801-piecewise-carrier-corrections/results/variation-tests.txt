@@ -1,0 +1,13 @@
+test_bad_schema_is_rejected (test_verify_variation_budget.VariationBudgetTests.test_bad_schema_is_rejected) ... ok
+test_boolean_integer_is_rejected (test_verify_variation_budget.VariationBudgetTests.test_boolean_integer_is_rejected) ... ok
+test_exact_target_components (test_verify_variation_budget.VariationBudgetTests.test_exact_target_components) ... ok
+test_non_power_two_cells_are_supported (test_verify_variation_budget.VariationBudgetTests.test_non_power_two_cells_are_supported) ... ok
+test_safe_negative_margin_is_certified (test_verify_variation_budget.VariationBudgetTests.test_safe_negative_margin_is_certified) ... ok
+test_safe_positive_margin_is_certified (test_verify_variation_budget.VariationBudgetTests.test_safe_positive_margin_is_certified) ... ok
+test_target_budget_is_below_one_over_two_billion (test_verify_variation_budget.VariationBudgetTests.test_target_budget_is_below_one_over_two_billion) ... ok
+test_zero_touch_is_unresolved (test_verify_variation_budget.VariationBudgetTests.test_zero_touch_is_unresolved) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
