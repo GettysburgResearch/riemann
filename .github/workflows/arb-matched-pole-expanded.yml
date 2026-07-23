@@ -1,0 +1,55 @@
+name: Arb expanded matched-pole scan
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  expanded-matched-pole:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous backend
+        run: python -m pip install --upgrade pip python-flint
+
+      - name: Run exact and checker tests
+        run: |
+          python -m unittest discover -s experiments/X-3902-arb-xi-passivity/tests -v
+          python -m compileall -q \
+            experiments/X-3902-arb-xi-passivity/matched_pole.py \
+            experiments/X-3902-arb-xi-passivity/matched_pole_scan.py \
+            experiments/X-3902-arb-xi-passivity/matched_pole_expanded_scan.py \
+            experiments/X-3902-arb-xi-passivity/produce_certificate.py \
+            experiments/X-3902-arb-xi-passivity/verify_certificate.py \
+            experiments/X-3902-arb-xi-passivity/tests
+
+      - name: Run 160-bit expanded scan
+        working-directory: experiments/X-3902-arb-xi-passivity
+        run: |
+          python matched_pole_expanded_scan.py \
+            --precision-bits 160 \
+            --certificate results/matched-pole-expanded-p160-certificate.json \
+            --verification results/matched-pole-expanded-p160-verification.json \
+            --summary results/matched-pole-expanded-p160-summary.json
+
+      - name: Run 224-bit expanded scan
+        working-directory: experiments/X-3902-arb-xi-passivity
+        run: |
+          python matched_pole_expanded_scan.py \
+            --precision-bits 224 \
+            --certificate results/matched-pole-expanded-p224-certificate.json \
+            --verification results/matched-pole-expanded-p224-verification.json \
+            --summary results/matched-pole-expanded-p224-summary.json
+
+      - name: Upload expanded proof artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-matched-pole-expanded-results
+          path: |
+            experiments/X-3902-arb-xi-passivity/results/matched-pole-expanded-*.json
