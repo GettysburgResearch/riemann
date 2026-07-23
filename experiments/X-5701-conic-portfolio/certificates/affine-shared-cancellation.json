@@ -1,0 +1,13 @@
+{
+  "schema": "riemann.conic-portfolio.v1",
+  "kind": "affine-box-portfolio",
+  "features": [{"id": "u", "center": "0", "radius": "1"}],
+  "rows": [
+    {"id": "q1", "constant": "-2/5", "coefficients": {"u": "1"}, "gate_ids": ["synthetic"]},
+    {"id": "q2", "constant": "-2/5", "coefficients": {"u": "-1"}, "gate_ids": ["synthetic"]}
+  ],
+  "weights": {"q1": "1", "q2": "1"},
+  "feature_manifest": ["u"],
+  "logical_gates": [{"id": "synthetic", "state": "SYNTHETIC_CONTROL", "evidence": "D-5701 adversarial control"}],
+  "claimed_robust_upper": "-4/5"
+}
