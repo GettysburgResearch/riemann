@@ -1,0 +1,97 @@
+{
+  "certificate": "results/certificate.production.json.gz",
+  "proof_boundary": "Each rung is a fresh-process replay of the same exact terminal stream. Rejection is fail-closed; acceptance proves only the stated finite region.",
+  "rungs": [
+    {
+      "accepted": false,
+      "label": "deliberately-weak",
+      "parameters": {
+        "bits": 64,
+        "exp_terms": 8,
+        "harmonic_cutoff": 100,
+        "log_terms": 8
+      },
+      "reason": "ValueError: invalid separate prune",
+      "returncode": 2
+    },
+    {
+      "accepted": false,
+      "label": "control-72",
+      "parameters": {
+        "bits": 72,
+        "exp_terms": 10,
+        "harmonic_cutoff": 200,
+        "log_terms": 10
+      },
+      "reason": "ValueError: invalid separate prune",
+      "returncode": 2
+    },
+    {
+      "accepted": false,
+      "label": "control-96",
+      "parameters": {
+        "bits": 96,
+        "exp_terms": 16,
+        "harmonic_cutoff": 1000,
+        "log_terms": 16
+      },
+      "reason": "ValueError: invalid separate prune",
+      "returncode": 2
+    },
+    {
+      "accepted": true,
+      "all_integer_normalized_ratio_upper": {
+        "denominator": "143460543727991634555711987589671910675527670165226897984943654535888910085565736729211775072257028415652708493785144899938261244540544187182216116049874144920624020764025848302217911202396341385229770874928781",
+        "numerator": "143460539572159411351005504529144203812764152268370607273081109415930225928597046373164966323193031823529365347872809100616826803166969761513422556665410972703364499797148978181570560000000000000000000000000000"
+      },
+      "all_integer_normalized_ratio_upper_decimal_outward": "0.999999971031531630854737219063",
+      "counts": {
+        "below_domain_leaves": 43,
+        "internal_nodes": 236209,
+        "powered_candidate_nodes": 56047,
+        "powered_prunes": 444,
+        "satisfied_leaves": 326,
+        "separate_prunes": 180109,
+        "unresolved_leaves": 0,
+        "violation_leaves": 0
+      },
+      "label": "control-128",
+      "parameters": {
+        "bits": 128,
+        "exp_terms": 32,
+        "harmonic_cutoff": 10000,
+        "log_terms": 32
+      },
+      "returncode": 0,
+      "status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION"
+    },
+    {
+      "accepted": true,
+      "all_integer_normalized_ratio_upper": {
+        "denominator": "4929266752276124621407307547991464859958724077148435533342333779395640685276364353769677889651517337093813818125771119533879147780231049678088900289467041640649606182731405776396420990459910960086560138122216292161236669",
+        "numerator": "4929266605831508030809438549349233873950244330830527787564344848774543854249724362679511538968443503817166939717995026038403556375186914824968554767253175537283993886369227962637304840931246080000000000000000000000000000"
+      },
+      "all_integer_normalized_ratio_upper_decimal_outward": "0.999999970290790912669514849764",
+      "counts": {
+        "below_domain_leaves": 43,
+        "internal_nodes": 236209,
+        "powered_candidate_nodes": 56047,
+        "powered_prunes": 444,
+        "satisfied_leaves": 326,
+        "separate_prunes": 180109,
+        "unresolved_leaves": 0,
+        "violation_leaves": 0
+      },
+      "label": "production-160",
+      "parameters": {
+        "bits": 160,
+        "exp_terms": 56,
+        "harmonic_cutoff": 30000,
+        "log_terms": 56
+      },
+      "returncode": 0,
+      "status": "CERTIFIED_FINITE_REGION_PENDING_INDEPENDENT_VERIFICATION"
+    }
+  ],
+  "schema": "riemann.robin.powered-canonical.parameter-ladder.v1"
+}

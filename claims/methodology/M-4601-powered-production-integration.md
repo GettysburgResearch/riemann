@@ -55,10 +55,11 @@ assumption. A node not certified by any listed pair is traversed normally. The
 separate ceiling remains a fail-safe and the powered theorem is always combined
 with it by an exact minimum in `d`-th powers.
 
-The production artifact is a deterministic gzip file with `mtime=0`, plus a
-JSON manifest containing both compressed and uncompressed hashes. This keeps
-the complete proof stream in the repository without making reviewers trust the
-compression layer.
+The production artifact is deterministically regenerable as a gzip file with
+`mtime=0`. The repository commits a JSON manifest containing the uncompressed
+and compressed hashes, exact source fingerprints, counts, parameters, and
+verification digest rather than committing the reproducible multi-megabyte
+terminal stream. Reviewers regenerate the complete stream before replay.
 
 ## Proof boundary
 

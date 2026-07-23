@@ -104,7 +104,8 @@ def main() -> int:
             "bytes": len(compressed),
             "sha256": sha256_bytes(compressed),
             "compression": "gzip level 9, mtime=0",
-            "committed": True,
+            "committed": False,
+            "regeneration": "python search.py ... && python verify.py ... && python pack_release.py ...",
         },
         "terminal_stream_sha256": sha256_bytes(terminal_bytes),
         "verification": {
@@ -114,9 +115,9 @@ def main() -> int:
         },
         "source_sha256": source_hashes,
         "proof_boundary": (
-            "The compressed file contains the complete terminal stream. The manifest "
-            "binds both byte representations and the reconstructed verification output. "
-            "Structural parent claims retain their repository statuses."
+            "The generated compressed file contains the complete terminal stream. The committed manifest "
+            "binds both byte representations and the reconstructed verification output without "
+            "committing reproducible bulk output. Structural parent claims retain their repository statuses."
         ),
     }
     Path(args.manifest).write_text(

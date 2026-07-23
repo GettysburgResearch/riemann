@@ -47,14 +47,13 @@ The powered dual usage is:
 (1, 64)    2
 ```
 
-The complete certificate has internal digest
+The deterministically regenerated complete certificate has internal digest
 
 ```text
 cf2274e2ebce5e6243a4d7e7df5699406c0e4ffcbfbe8b25d99780e64a88e30d
 ```
 
-and is committed as a deterministic gzip artifact. Its uncompressed and
-compressed hashes are recorded in `results/production-manifest.json`.
+and is bound by `results/production-manifest.json`, which records its uncompressed and deterministic-gzip hashes. The generated 3.66 MB stream is not committed, following the repository policy of preferring scripts and compact proof manifests over reproducible bulk output.
 
 No violation and no unresolved sign was found. No `Z-####` candidate is created.
 
@@ -197,13 +196,7 @@ python pack_release.py \
   --verification-input results/verification.regenerated.json
 ```
 
-The committed compressed certificate can be checked directly:
-
-```bash
-python verify.py \
-  results/certificate.production.json.gz \
-  --output results/verification.from-gzip.json
-```
+The production commands above regenerate and verify the complete stream. Compare the regenerated hashes and summaries with `results/production-manifest.json`; the manifest is the committed release anchor.
 
 Compare hashes and summaries against `results/production-manifest.json` rather
 than trusting filenames.
@@ -282,7 +275,6 @@ parameter_probe.py
 parameter_ladder.py
 CERTIFICATE_FORMAT.md
 tests/test_engine.py
-results/certificate.production.json.gz
 results/production-manifest.json
 results/verification.json
 results/parameter-ladder.json
