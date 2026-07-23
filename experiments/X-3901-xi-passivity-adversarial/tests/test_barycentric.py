@@ -11,10 +11,12 @@ from barycentric import (
     barycentric_weights,
     online_product_value,
     online_real_f,
+    online_two_channel_values,
     primitive_integer_scale,
     quadratic_from_real_f,
     symmetric_offline_pair_product_value,
     symmetric_offline_pair_real_f,
+    symmetric_offline_pair_two_channels,
 )
 
 
@@ -38,6 +40,33 @@ class BarycentricIdentityTests(unittest.TestCase):
         expected = symmetric_offline_pair_product_value(nodes, delta)
         self.assertEqual(direct, expected)
         self.assertLess(direct, 0)
+
+    def test_two_channel_online_positivity(self) -> None:
+        a_value, b_value = online_two_channel_values(
+            Fraction(1, 10),
+            Fraction(1, 2),
+            [Fraction(0), Fraction(2, 5), Fraction(-7, 3)],
+        )
+        self.assertGreaterEqual(a_value, 0)
+        self.assertGreaterEqual(b_value, 0)
+
+    def test_two_channel_bracket_sign_and_ratio(self) -> None:
+        delta = Fraction(1, 4)
+        a_value, b_value = symmetric_offline_pair_two_channels(
+            Fraction(1, 10), Fraction(1, 2), delta
+        )
+        self.assertLess(a_value, 0)
+        self.assertGreater(b_value, 0)
+        self.assertEqual(b_value / a_value, -(delta * delta))
+
+    def test_two_channel_right_side_sign_and_ratio(self) -> None:
+        delta = Fraction(1, 4)
+        a_value, b_value = symmetric_offline_pair_two_channels(
+            Fraction(1, 3), Fraction(1, 2), delta
+        )
+        self.assertGreater(a_value, 0)
+        self.assertLess(b_value, 0)
+        self.assertEqual(b_value / a_value, -(delta * delta))
 
     def test_even_number_below_delta_is_positive(self) -> None:
         nodes = [Fraction(1, 10), Fraction(1, 5), Fraction(1, 2)]
@@ -83,6 +112,10 @@ class BarycentricIdentityTests(unittest.TestCase):
             barycentric_weights([Fraction(1, 2), Fraction(1, 2)])
         with self.assertRaises(ValueError):
             barycentric_weights([Fraction(0), Fraction(1, 2)])
+        with self.assertRaises(ValueError):
+            symmetric_offline_pair_two_channels(
+                Fraction(1, 2), Fraction(1, 3), Fraction(1, 4)
+            )
 
 
 if __name__ == "__main__":
