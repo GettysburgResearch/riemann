@@ -153,15 +153,56 @@ The mean spacing of `W_v`'s zeros coming out within 10% of the mean zeta zero
 spacing is a pleasing independent check that the optimizer is doing the
 intended thing.
 
+### The *optimal* threshold, over all vectors
+
+The figures above fix `v` to be the on-line minimizer and ask which of *its*
+zeros responds most.  That is not the family's true sensitivity: a different
+vector may respond more strongly while keeping its on-line value low.  The
+optimum is computable exactly and cheaply.  Near the carrier
+`g(T+u) = \tfrac12 v^*M(u)v` with `M(u)=\overline{\beta(u)}\beta(u)^{\mathsf T}`
+of rank one, so
+
+\[
+ M''=\overline{\beta''}\beta^{\mathsf T}+2\overline{\beta'}\beta'^{\mathsf T}
+     +\overline{\beta}\beta''^{\mathsf T}=CSC^{*},
+ \quad C=[\overline{\beta},\overline{\beta'},\overline{\beta''}],
+ \quad S=\begin{pmatrix}0&0&1\\0&2&0\\1&0&0\end{pmatrix},
+\]
+
+of rank at most three.  A quadruple at `T+u` displaced by `eta` makes the exact
+form negative for *some* `v` exactly when `v^*Qv < \eta^2v^*M''v` is solvable,
+i.e. when
+
+\[
+ \boxed{\;\eta^2>\frac1{\lambda_{\max}\!\left(SC^{*}Q^{-1}C\right)},\;}
+\]
+
+a `3x3` eigenproblem for each `u`.  Executed at the production parameters
+(`optimal_detection.py`, 401 values of `u` over `|u|\le4`):
+
+```text
+eta_min  optimal over all v      0.03154   attained at u = +0.26
+eta_min  median over u           1.1429
+eta_min  max over u              1.7866
+```
+
+**The optimum is larger than the fixed-vector estimate above (`0.0315` versus
+`0.0153`), so the earlier figure was optimistic by a factor of two.**  The
+discrepancy is expected: the fixed-vector calculation used the global minimum
+`lambda_min` as its numerator while taking `g''` at one particular vector's
+steepest zero, which is an inconsistent pairing.  **`0.0315` is the number to
+quote**; the `0.0153` is retained only to show the size of the error in the
+cruder method.
+
 **The reading is severe.**  A nontrivial zero has `\rho=\beta+i\gamma` with
 `0<\beta<1`, so `|\eta|=|\beta-\tfrac12|<\tfrac12` always.  Therefore:
 
-- at the *median* position in the window, `eta_min = 0.655 > 1/2`: the executed
+- at the *median* position in the window, `eta_min = 1.14 > 1/2`: the executed
   configuration **could not have detected an off-critical zero there at all**,
-  for any admissible displacement;
-- at the single most favourable position, `eta_min = 0.0153`: it could only have
-  seen a zero displaced by more than about `1.5\times10^{-2}` from the critical
-  line.
+  for any admissible displacement and for no choice of vector whatsoever;
+- at the single most favourable position `u = +0.26`, `eta_min = 0.0315`: it
+  could only have seen a zero displaced by more than about `3\times10^{-2}` from
+  the critical line.
 
 For comparison, every off-critical zero anybody has ever seriously entertained
 would sit far closer to the line than that, and the classical zero-free region
@@ -201,9 +242,9 @@ with `(c)`, the detectable displacement therefore improves only like
 \]
 
 Reaching `\eta_{\min}` a thousand times smaller needs a thousand-fold larger
-`K`.  Concretely, from the executed `\eta_{\min}=0.0153`: reaching `10^{-3}`
-needs `lambda_min` smaller by `234x`, i.e. `K \approx 1.6\times10^4`; reaching
-`10^{-6}` needs `lambda_min \sim 10^{-12}`, i.e. `K \approx 1.6\times10^7`.  A dense
+`K`.  Concretely, from the executed optimum `\eta_{\min}=0.0315`: reaching `10^{-3}`
+needs `lambda_min` smaller by `\approx10^3`, i.e. `K \approx 3\times10^4`;
+reaching `10^{-6}` needs `K \approx 3\times10^7`.  A dense
 `10^6 \times 10^6` Hermitian certificate is out of reach, so **any serious
 attempt at small `eta` must exploit the Toeplitz structure rather than dense
 linear algebra** — which is what the symbol route of L-5602 does, and that route
@@ -264,14 +305,12 @@ that gap is the structural problem the D-0801 programme actually faces.
 Parts (a) and (b) are elementary and I am confident in them.  Part (c) is a
 definition plus a substitution and is also safe.
 
-The executed numbers carry one real caveat, and it cuts in the optimistic
-direction: `eta_min` is evaluated at the vector that *minimizes the on-line
-value*, which need not be the vector that *maximizes the response* to a
-displacement.  A dedicated optimization — maximize `g''(\gamma)` subject to the
-on-line value staying below some level — would give a smaller `eta_min`.  How
-much smaller is unknown to me and is the obvious thing to compute next.  The
-qualitative conclusion (many orders of magnitude short, structurally) is robust
-to that caveat; the specific `0.0153` is not.
+The caveat that worried me — that fixing `v` to the on-line minimizer might
+overstate `eta_min` — has been removed by computing the optimum over all `v`
+directly.  It turned out to cut the other way: the optimum is `0.0315`, larger
+than the fixed-vector estimate `0.0153`, so the cruder method was optimistic.
+The pencil reduction is exact given `Q`, so the remaining softness is only in
+`Q` itself, which is assembled by L-5603 in ordinary floating point.
 
 A second caveat: the zeros of `W_v` were located on a grid of `1.2\times10^5`
 points over `|u|\le4` by looking for local minima below `5%` of the median

@@ -1,0 +1,20 @@
+{
+ "schema": "riemann.x5601-optimal-detection.v1",
+ "agent": "opus5-01",
+ "classification": "floating; the blocks are assembled by L-5603 in ordinary arithmetic. Order of magnitude is the claim, not the digits.",
+ "cutoff": 100000000000,
+ "cells": 1024,
+ "carrier": "94184072727073/20",
+ "lambda_min_exact_form": 0.0002671872230143981,
+ "u_points": 401,
+ "eta_min_optimal": {
+  "u": 0.2599999999999998,
+  "eta_min": 0.03154017620795888,
+  "lambda_max_pencil": 1005.2446475909092
+ },
+ "eta_min_median_over_u": 1.1428921017987466,
+ "eta_min_max_over_u": 1.7865832013472025,
+ "admissible_bound": 0.5,
+ "detectable_anywhere": true,
+ "note": "eta_min(u) is the smallest displacement of a quadruple at height T+u that SOME vector in the family could turn into a negative exact form. |eta| < 1/2 always, so eta_min >= 1/2 means undetectable in principle."
+}
