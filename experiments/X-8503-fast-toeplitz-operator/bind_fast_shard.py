@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Bind a raw fast Toeplitz midpoint shard to an exact source plan.
 
-The C++ producer obtains its parameter and normalization fingerprints from the
-committed manifest.  This small exact wrapper adds the redundant human-readable
-common fields required by the hybrid merger and hashes the complete bound shard.
-It refuses to repair a fingerprint, range, lag, or arithmetic-contract mismatch.
+The C++ producer obtains parameter and normalization fingerprints from the
+committed manifest. This exact wrapper adds redundant human-readable common
+fields, binds the precise producer Git blob, and hashes the complete shard. It
+refuses to repair a fingerprint, range, lag, operation-order, or source mismatch.
 """
 from __future__ import annotations
 
@@ -50,6 +50,15 @@ def canonical_sha(data: Any) -> str:
     return hashlib.sha256(encoded).hexdigest()
 
 
+def git_blob_sha1(path: Path) -> str:
+    try:
+        content = path.read_bytes()
+    except OSError as exc:
+        raise CertificateError(f"{path}: {exc}") from exc
+    header = f"blob {len(content)}\0".encode("ascii")
+    return hashlib.sha1(header + content).hexdigest()
+
+
 def load(path: Path) -> dict[str, Any]:
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
@@ -60,11 +69,20 @@ def load(path: Path) -> dict[str, Any]:
     return value
 
 
-def bind(raw: dict[str, Any], plan: dict[str, Any]) -> dict[str, Any]:
+def bind(
+    raw: dict[str, Any],
+    plan: dict[str, Any],
+    producer_git_blob_sha1: str,
+) -> dict[str, Any]:
     if raw.get("schema") != RAW_SCHEMA:
         raise CertificateError("wrong raw fast-shard schema")
     if plan.get("schema") != PLAN_SCHEMA:
         raise CertificateError("wrong source-plan schema")
+    expected_blob = plan.get("fast_producer_git_blob_sha1")
+    if not isinstance(expected_blob, str) or len(expected_blob) != 40:
+        raise CertificateError("source plan lacks a producer Git-blob fingerprint")
+    if producer_git_blob_sha1 != expected_blob:
+        raise CertificateError("producer Git-blob fingerprint mismatch")
     if raw.get("vector_independent") is not True:
         raise CertificateError("fast shard must be vector independent")
     if raw.get("include_higher_powers") is not False:
@@ -122,6 +140,7 @@ def bind(raw: dict[str, Any], plan: dict[str, Any]) -> dict[str, Any]:
                 "plan_schema": PLAN_SCHEMA,
                 "parameter_sha256": plan.get("parameter_sha256"),
                 "normalization_sha256": plan.get("normalization_sha256"),
+                "producer_git_blob_sha1": producer_git_blob_sha1,
                 "status": "BOUND_TO_EXACT_SOURCE_PLAN",
             },
         }
@@ -135,10 +154,15 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("raw_shard", type=Path)
     parser.add_argument("plan", type=Path)
+    parser.add_argument("--producer-source", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     try:
-        result = bind(load(args.raw_shard), load(args.plan))
+        result = bind(
+            load(args.raw_shard),
+            load(args.plan),
+            git_blob_sha1(args.producer_source),
+        )
         code = 0
     except CertificateError as exc:
         result = {
