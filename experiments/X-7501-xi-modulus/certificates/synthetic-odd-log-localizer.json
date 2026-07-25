@@ -1,0 +1,46 @@
+{
+  "schema": "riemann.xi-modulus-witness.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "ordinate": {"numerator": 20, "denominator": 1},
+  "points": [
+    {
+      "id": "q0",
+      "x": {"numerator": 1, "denominator": 4},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 15, "denominator": 16}, "upper": {"numerator": 15, "denominator": 16}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "q1",
+      "x": {"numerator": 1, "denominator": 2},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 3, "denominator": 4}, "upper": {"numerator": 3, "denominator": 4}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "q2",
+      "x": {"numerator": 3, "denominator": 4},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 7, "denominator": 16}, "upper": {"numerator": 7, "denominator": 16}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "q3",
+      "x": {"numerator": 7, "denominator": 8},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 15, "denominator": 64}, "upper": {"numerator": 15, "denominator": 64}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    }
+  ],
+  "rows": [
+    {"id": "dummy-monotonicity", "kind": "monotonicity", "left": "q0", "right": "q1"}
+  ],
+  "log_rows": [
+    {"id": "odd-order-three-offline-control", "points": ["q0", "q1", "q2", "q3"]}
+  ]
+}

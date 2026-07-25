@@ -1,0 +1,55 @@
+{
+  "precision_bits": 192,
+  "series_cap": 2,
+  "ordinate": {"mantissa": 20225875608343121406355, "exponent": -32},
+  "points": [
+    {"id": "x-20", "x": {"mantissa": 1, "exponent": -20}},
+    {"id": "x-18", "x": {"mantissa": 1, "exponent": -18}},
+    {"id": "x-16", "x": {"mantissa": 1, "exponent": -16}},
+    {"id": "x-14", "x": {"mantissa": 1, "exponent": -14}},
+    {"id": "x-12", "x": {"mantissa": 1, "exponent": -12}},
+    {"id": "x-10", "x": {"mantissa": 1, "exponent": -10}},
+    {"id": "x-8", "x": {"mantissa": 1, "exponent": -8}},
+    {"id": "x-6", "x": {"mantissa": 1, "exponent": -6}},
+    {"id": "x-5", "x": {"mantissa": 1, "exponent": -5}}
+  ],
+  "rows": [
+    {"id": "m-20-18", "kind": "monotonicity", "left": "x-20", "right": "x-18"},
+    {"id": "m-18-16", "kind": "monotonicity", "left": "x-18", "right": "x-16"},
+    {"id": "m-16-14", "kind": "monotonicity", "left": "x-16", "right": "x-14"},
+    {"id": "m-14-12", "kind": "monotonicity", "left": "x-14", "right": "x-12"},
+    {"id": "m-12-10", "kind": "monotonicity", "left": "x-12", "right": "x-10"},
+    {"id": "m-10-8", "kind": "monotonicity", "left": "x-10", "right": "x-8"},
+    {"id": "m-8-6", "kind": "monotonicity", "left": "x-8", "right": "x-6"},
+    {"id": "m-6-5", "kind": "monotonicity", "left": "x-6", "right": "x-5"},
+
+    {"id": "d2-20-18-16", "kind": "divided_difference", "points": ["x-20", "x-18", "x-16"]},
+    {"id": "d2-18-16-14", "kind": "divided_difference", "points": ["x-18", "x-16", "x-14"]},
+    {"id": "d2-16-14-12", "kind": "divided_difference", "points": ["x-16", "x-14", "x-12"]},
+    {"id": "d2-14-12-10", "kind": "divided_difference", "points": ["x-14", "x-12", "x-10"]},
+    {"id": "d2-12-10-8", "kind": "divided_difference", "points": ["x-12", "x-10", "x-8"]},
+    {"id": "d2-10-8-6", "kind": "divided_difference", "points": ["x-10", "x-8", "x-6"]},
+    {"id": "d2-8-6-5", "kind": "divided_difference", "points": ["x-8", "x-6", "x-5"]},
+
+    {"id": "lc-20-18-16", "kind": "log_concavity_integer_power", "left": "x-20", "middle": "x-18", "right": "x-16"},
+    {"id": "lc-18-16-14", "kind": "log_concavity_integer_power", "left": "x-18", "middle": "x-16", "right": "x-14"},
+    {"id": "lc-16-14-12", "kind": "log_concavity_integer_power", "left": "x-16", "middle": "x-14", "right": "x-12"},
+    {"id": "lc-14-12-10", "kind": "log_concavity_integer_power", "left": "x-14", "middle": "x-12", "right": "x-10"},
+    {"id": "lc-12-10-8", "kind": "log_concavity_integer_power", "left": "x-12", "middle": "x-10", "right": "x-8"},
+    {"id": "lc-10-8-6", "kind": "log_concavity_integer_power", "left": "x-10", "middle": "x-8", "right": "x-6"},
+    {"id": "lc-8-6-5", "kind": "log_concavity_integer_power", "left": "x-8", "middle": "x-6", "right": "x-5"}
+  ],
+  "log_rows": [
+    {"id": "log3-20-18-16-14", "points": ["x-20", "x-18", "x-16", "x-14"]},
+    {"id": "log3-18-16-14-12", "points": ["x-18", "x-16", "x-14", "x-12"]},
+    {"id": "log3-16-14-12-10", "points": ["x-16", "x-14", "x-12", "x-10"]},
+    {"id": "log3-14-12-10-8", "points": ["x-14", "x-12", "x-10", "x-8"]},
+    {"id": "log3-12-10-8-6", "points": ["x-12", "x-10", "x-8", "x-6"]},
+    {"id": "log3-10-8-6-5", "points": ["x-10", "x-8", "x-6", "x-5"]},
+
+    {"id": "log5-20-18-16-14-12-10", "points": ["x-20", "x-18", "x-16", "x-14", "x-12", "x-10"]},
+    {"id": "log5-18-16-14-12-10-8", "points": ["x-18", "x-16", "x-14", "x-12", "x-10", "x-8"]},
+    {"id": "log5-16-14-12-10-8-6", "points": ["x-16", "x-14", "x-12", "x-10", "x-8", "x-6"]},
+    {"id": "log5-14-12-10-8-6-5", "points": ["x-14", "x-12", "x-10", "x-8", "x-6", "x-5"]}
+  ]
+}

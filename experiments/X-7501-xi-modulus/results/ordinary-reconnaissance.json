@@ -1,0 +1,26 @@
+{
+  "experiment_id": "X-7501",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "backend": "mpmath simultaneous Riemann-Siegel plus loggamma at 50 decimal digits",
+  "ordinate": {"numerator": 20225875608343121406355, "denominator": 4294967296},
+  "normalization": "H(x^2) divided by H(2^-40)",
+  "rows": [
+    {"x_bits": 20, "relative_log_H": "0", "relative_H": "1"},
+    {"x_bits": 18, "relative_log_H": "0.000000000419621547999751338814718896316494", "relative_H": "1.0000000004196215480877924605998873553282772415781"},
+    {"x_bits": 16, "relative_log_H": "0.00000000713356631414507179632917100200986", "relative_H": "1.0000000071335663395889560359837020477948643606441"},
+    {"x_bits": 14, "relative_log_H": "0.00000011455668209869075643838237278618806", "relative_H": "1.0000001145566886603077137276501972281919468168251"},
+    {"x_bits": 12, "relative_log_H": "0.000001833326413363900700326541952885827044", "relative_H": "1.0000018333280939077966642127866925864725176792254"},
+    {"x_bits": 10, "relative_log_H": "0.000029333611064068708146673317008821710814", "relative_H": "1.000029334041298644504794629553591479861947378785"},
+    {"x_bits": 8, "relative_log_H": "0.000469330217067188344802224468695154607412", "relative_H": "1.0004694403697254975184827097806498763142090245209"},
+    {"x_bits": 6, "relative_log_H": "0.007507242241002376234755992664854889159842", "relative_H": "1.007535492232964555690023361638162396120317551118"},
+    {"x_bits": 5, "relative_log_H": "0.030002892457012329673586910561199209410478", "relative_H": "1.0304575145032700303070608687785648198207866513514"}
+  ],
+  "summary": {
+    "adjacent_negative_midpoints": 0,
+    "adjacent_second_divided_difference_negative_midpoints": 0,
+    "smallest_relative_log_H_increment": "4.19621547999751338814718896316494e-10",
+    "smallest_normalized_H_second_divided_difference": "436.4870960634164285976595317914859"
+  },
+  "counterexample_candidate": null,
+  "warning": "Ordinary high precision only. The Arb workflow supplies the proof-grade result."
+}

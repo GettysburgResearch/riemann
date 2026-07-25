@@ -1,0 +1,118 @@
+name: arb-xi-modulus
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-g/75-xi-modulus-witness
+    paths:
+      - .github/workflows/arb-xi-modulus.yml
+  pull_request:
+    paths:
+      - experiments/X-7501-xi-modulus/RUN_MODULUS_SCAN.md
+      - .github/workflows/arb-xi-modulus.yml
+
+concurrency:
+  group: arb-xi-modulus-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  modulus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous FLINT backend
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+
+      - name: Compile rigorous Riemann-Siegel producer and exact checkers
+        run: |
+          cc -O3 -std=c11 -Wall -Wextra \
+            experiments/X-7501-xi-modulus/rs_modulus.c \
+            -o experiments/X-7501-xi-modulus/rs_modulus \
+            -lflint -lmpfr -lgmp -lpthread -lm
+          python -m compileall -q \
+            experiments/X-7501-xi-modulus/assemble_rs_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/verify_log_localizer.py \
+            experiments/X-7501-xi-modulus/compare_precision.py \
+            experiments/X-7501-xi-modulus/tests
+          python -m unittest discover -s experiments/X-7501-xi-modulus/tests -v
+
+      - name: Produce and verify 192-bit direct xi rectangles
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/X-7501-xi-modulus/results
+          /usr/bin/time -v experiments/X-7501-xi-modulus/rs_modulus 192 \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p192-primitives.json \
+            2>experiments/X-7501-xi-modulus/results/high-carrier-p192.time.txt
+          python experiments/X-7501-xi-modulus/assemble_rs_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p192-primitives.json \
+            experiments/X-7501-xi-modulus/configs/high-carrier-horizontal.json \
+            --output experiments/X-7501-xi-modulus/results/high-carrier-p192.json
+          set +e
+          python experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p192-verification.json
+          status_modulus=$?
+          python experiments/X-7501-xi-modulus/verify_log_localizer.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p192-log-verification.json
+          status_log=$?
+          set -e
+          test "$status_modulus" -le 1
+          test "$status_log" -le 1
+
+      - name: Produce and verify 256-bit direct xi rectangles
+        shell: bash
+        run: |
+          set -euo pipefail
+          /usr/bin/time -v experiments/X-7501-xi-modulus/rs_modulus 256 \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p256-primitives.json \
+            2>experiments/X-7501-xi-modulus/results/high-carrier-p256.time.txt
+          python experiments/X-7501-xi-modulus/assemble_rs_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p256-primitives.json \
+            experiments/X-7501-xi-modulus/configs/high-carrier-horizontal.json \
+            --output experiments/X-7501-xi-modulus/results/high-carrier-p256.json
+          set +e
+          python experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p256-verification.json
+          status_modulus=$?
+          python experiments/X-7501-xi-modulus/verify_log_localizer.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p256-log-verification.json
+          status_log=$?
+          set -e
+          test "$status_modulus" -le 1
+          test "$status_log" -le 1
+
+      - name: Require exact precision nesting
+        run: |
+          python experiments/X-7501-xi-modulus/compare_precision.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
+            experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
+            --output experiments/X-7501-xi-modulus/results/high-carrier-comparison.json
+          sha256sum experiments/X-7501-xi-modulus/results/* \
+            >experiments/X-7501-xi-modulus/results/SHA256SUMS
+          cat experiments/X-7501-xi-modulus/results/high-carrier-comparison.json
+
+      - name: Upload direct xi-modulus artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-xi-modulus-high-carrier
+          path: experiments/X-7501-xi-modulus/results/
+          retention-days: 30
+          if-no-files-found: warn
