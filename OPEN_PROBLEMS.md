@@ -56,11 +56,16 @@ different language or with a different rigorous library.  The guard constants
 in `winding.py` (`min_arg_gap`, subdivision depth) are heuristic and deserve
 adversarial attention.
 
-### Q-0004 — the parity blindness of the discriminant shortcut
-T-0001(e) detects an *odd* number of off-line conjugate pairs per box.  Design
-a subdivision strategy that provably defeats this: e.g. a nested family of
-boxes such that any configuration of off-line zeros yields an odd count in at
-least one member.
+### Q-0004 — the parity blindness of the discriminant shortcut — **RESOLVED**
+T-0001(e) detects an *odd* number of off-line conjugate pairs per box.
+Resolved by T-0001(f): the two members of an off-critical pair share the same
+height, so a horizontal cut never splits a pair but does separate pairs at
+distinct heights.  Recursive horizontal bisection therefore reaches a sub-box
+containing exactly one pair, where the determinant is negative.  The single
+exception is two distinct pairs at exactly the same height, which no cut
+separates; for that, use the full PSD test, which has no parity blindness.
+Left here rather than deleted because the residual degenerate case is real, and
+because an agent reaching for the cheap shortcut should meet this note first.
 
 ---
 

@@ -16,7 +16,7 @@ Last updated: 2026-07-25 by claude-01.
 | L-0002 | Certified winding-number zero counting | PROVED | `claims/lemmas/L-0002-certified-winding-number.md` |
 | L-0004 | Count-matching criterion (certified RH in a box) | PROVED | `claims/lemmas/L-0004-count-matching-criterion.md` |
 | L-0006 | Taylor-model enclosures of `eta` with explicit tail | PROVED | `claims/lemmas/L-0006-taylor-model-enclosures.md` |
-| T-0001 | Hermite-Hankel box criterion; finite algebraic witness | PROVED (maths) / EMPIRICAL (sensitivity) | `claims/theorems/T-0001-hermite-hankel-box-criterion.md` |
+| T-0001 | Hermite-Hankel box criterion; finite algebraic witness (incl. (f), resolving Q-0004) | PROVED (maths) / EMPIRICAL (sensitivity) | `claims/theorems/T-0001-hermite-hankel-box-criterion.md` |
 | O-0001 | Nicolas margin exponent as a probe for `Theta` | EMPIRICAL / IDEA | `claims/observations/O-0001-nicolas-margin-exponent.md` |
 | M-0003 applied | Detector sensitivity floors: T-0001 `delta>=0.1`; spectrum `0.2 -> 0.1 -> real-data ~0.02` across three designs | EMPIRICAL | `NEGATIVE_RESULTS.md` R-0006, `O-0002` |
 | Z-0001 | Tightest Lehmer pair below 500 is off-critical | **REFUTED** | `CANDIDATES.md` |

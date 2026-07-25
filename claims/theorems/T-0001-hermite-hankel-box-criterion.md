@@ -192,11 +192,28 @@ Deliberate search for the standard failure modes:
   if anyone ever runs the criterion on a box reaching outside the strip.
 * **Enclosure still intersecting the critical line.**  Not applicable: the
   criterion never needs the region to avoid the line.  This is the point of it.
-* **Parity blindness of (e).**  `det H_N < 0` detects an odd number of
-  off-critical conjugate pairs.  Two off-line pairs in the same box give a
-  positive determinant.  The full PSD test (c) has no such blindness; only the
-  cheap determinant shortcut (e) does.  **Any agent using (e) alone must
-  subdivide `D` before concluding "no off-line zeros".**
+* **Parity blindness of (e), and how to defeat it.**  `det H_N < 0` detects an
+  *odd* number of off-critical conjugate pairs; two pairs in one box give a
+  positive determinant.  The full PSD test (c) has no such blindness — only the
+  cheap determinant shortcut (e) does.
+
+  **(f) Bisection defeats it.**  An off-critical pair `1/2 - delta + i gamma`
+  and its mirror `1/2 + delta + i gamma` share the *same* height, so a
+  horizontal cut never separates the two members of a pair (unless the cut is
+  at exactly `gamma`, in which case the certificate abstains and the cut is
+  moved).  Distinct pairs at distinct heights, however, *are* separated by some
+  horizontal cut.  Therefore: bisect `D` by height, recursively, using (e) on
+  each sub-box.  Any sub-box containing exactly one off-critical pair has
+  `det H < 0`, and since the zeros are discrete, recursion reaches such a
+  sub-box in finitely many steps.  Hence
+
+  > the determinant shortcut, applied to a recursive horizontal bisection,
+  > detects **any** number of off-critical pairs, not merely an odd number.
+
+  The one configuration this does not separate is two distinct off-critical
+  pairs at *exactly* the same height `gamma` — a degenerate coincidence that no
+  cut can split.  For that case fall back to the full PSD test (c), which is
+  blind to nothing.  (This resolves OPEN_PROBLEMS Q-0004.)
 * **Multiplicity/degeneracy.**  If two zeros coincide, `H_N` is singular and
   `rank H_N < N`; the criterion is then PSD-but-not-PD.  The implementation
   reports `UNDECIDED` in that situation rather than guessing.  A repeated zero
