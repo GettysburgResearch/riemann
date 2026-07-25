@@ -544,3 +544,93 @@ bookkeeping rather than mathematics, and it is the last thing standing between
 this pipeline and a certified sign past the barrier.
 
 21 tests pass.  Still no counterexample.
+
+---
+
+## Addendum 4 — the number that reframes the whole avenue (`L-5604`)
+
+Three addenda spent on making the margin smaller and better bounded.  This one
+asks the complementary question the project had never asked: **how small does
+the margin have to be before the test could see a counterexample at all?**
+
+### The response is quadratic
+
+An off-critical zero `rho_0 = 1/2 + eta + i gamma` belongs to a quadruple whose
+Weil coordinates are `gamma -+ i eta` and `-gamma -+ i eta`.  Since `g` is even,
+entire, and real on the real axis, the quadruple contributes exactly
+`4 Re g(gamma + i eta)`, and expanding about `gamma` (where all derivatives are
+real, so the odd terms are purely imaginary and cancel):
+
+```text
+4 Re g(gamma + i eta) - 4 g(gamma) = -2 eta^2 g''(gamma) + O(eta^4).
+```
+
+**Second order in the displacement, with no first-order term.**  So a margin
+`lambda_min` converts into a detection threshold
+`eta_min = sqrt(lambda_min ghat(0) / (2 g''(gamma)))`.
+
+### The optimal threshold, computed
+
+`g''(T+u) = (1/2) v^* M''(u) v` with `M(u) = conj(beta) beta^T` rank one, so
+`M''` has rank at most three, `M'' = C S C^*`.  A quadruple at `T+u` displaced
+by `eta` makes the exact form negative *for some vector in the family* exactly
+when `eta^2 > 1/lambda_max(S C^* Q^{-1} C)` — a `3x3` eigenproblem per `u`.  At
+the production parameters, over 401 values of `u`:
+
+```text
+eta_min  optimal over all v      0.03154   at u = +0.26
+eta_min  median over u           1.1429
+eta_min  max over u              1.7866
+```
+
+I first computed this the lazy way, fixing `v` to the on-line minimizer and
+taking `g''` at its steepest zero, and got `0.0153`.  That pairing is
+inconsistent (global minimum in the numerator, one particular vector's curvature
+in the denominator) and it was optimistic by a factor of two.  The pencil
+computation is the correct one.
+
+### What it means
+
+A nontrivial zero has `0 < beta < 1`, so `|eta| < 1/2` always.  Therefore:
+
+- at a **typical** position in the window, `eta_min = 1.14 > 1/2`: the executed
+  configuration **could not have detected an off-critical zero there at all**,
+  for any admissible displacement, and for no choice of vector whatsoever;
+- at the single most favourable position, it could only have seen a zero
+  displaced by more than `3 x 10^-2` — which the classical zero-free region
+  already forbids at height `4.7e12`.
+
+Combined with the `K^{-2}` law of O-5603, `eta_min` improves only like `K^{-1}`:
+`10^{-3}` needs `K ~ 3e4`, `10^{-6}` needs `K ~ 3e7`.  A dense Hermitian
+certificate at `K = 3e4` is already over 100 GB.
+
+**So the honest assessment of the D-0801 avenue is not "nearly there".**  It is
+many orders of magnitude short, and the reason is structural — the quadratic
+response, not the quality of the arithmetic.  Every improvement in this session
+(the `1000x` faster producer, the all-vector certificate, the `121x` tighter
+archimedean block) sharpened a measurement whose sensitivity floor is set by
+something none of them touch.
+
+I want to be blunt about what this means for the request I was given.  The task
+was to complete the computation and proofs for a full unconditional
+counterexample.  Three sessions of this project's history had reduced that to
+one big prime sum; I ran it, and it is positive.  This addendum explains why
+that was never in doubt: **at these parameters the test cannot resolve any
+displacement a real counterexample could plausibly have.**  A negative value
+would have required an off-critical zero further from the line than the
+zero-free region permits.
+
+### What would actually change the picture
+
+1. A different test family with a *first-order* response to displacement.  The
+   quadratic response is forced here by `g >= 0` on the real axis, which is what
+   makes the Weil criterion work in the first place — so this is a real tension,
+   not an oversight, and worth its own issue.
+2. Exploiting the Toeplitz structure to reach `K ~ 10^4`-`10^5` without dense
+   linear algebra.  The symbol route of L-5602 is the natural vehicle and is
+   currently far too weak (`10.34` against `ell_T = 4.35`); closing that gap is
+   the concrete structural problem.
+3. Accepting the avenue as a *measurement* rather than a search: the certified
+   margins are quantitative statements about the zeros near the carrier, and
+   `L-5604` says exactly what they exclude.  That is a real, if modest, result
+   and it is what the repository actually has.
