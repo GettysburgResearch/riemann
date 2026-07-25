@@ -1,0 +1,57 @@
+{
+  "schema": "riemann.xi-modulus-witness.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "ordinate": {"numerator": 20, "denominator": 1},
+  "point_count": 8,
+  "point_fingerprints": {
+    "offline-0": "39847eb2c43abff1f801d9db1caa72c84c40347cadbcb45b6cf622ab5d97dda0",
+    "offline-1": "4b83097b3dd163cfb46ce8c76e9a6854c33baff2b30b6f7577b8f0ecb9bd7b5e",
+    "online-0": "6845c959e5a8af89147386f70e0bb376445a5acffea94f37ca1b507031790385",
+    "online-1": "8398ff1bc18589fedf6218eb89cddc293f4b7280d1903949ba0745e3e58b4451",
+    "online-2": "718d846926edc45a82e6a81a69dfc7623089184775975fe162e3bfd6215e04f1",
+    "shape-0": "cc750e89bee21d99cad1cae6e646f91b91cad05d2d9b393bcd89fe803b0ddfb7",
+    "shape-1": "32222feb83f6393d4c7ff7f5e39077ad6f780bd0e8b922bfccafa191c998d6d0",
+    "shape-2": "eaf44aa881dec093577c899e90266e4a76e188d6beb21192eb48e74ac36660d5"
+  },
+  "rows": [
+    {
+      "id": "online-monotonicity",
+      "kind": "monotonicity",
+      "left": "online-0",
+      "right": "online-1",
+      "interval": {"lower": {"numerator": 225, "denominator": 256}, "upper": {"numerator": 225, "denominator": 256}},
+      "status": "CERTIFIED_NONNEGATIVE"
+    },
+    {
+      "id": "online-second-divided-difference",
+      "kind": "divided_difference",
+      "points": ["online-0", "online-1", "online-2"],
+      "order": 2,
+      "interval": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}},
+      "status": "CERTIFIED_NONNEGATIVE"
+    },
+    {
+      "id": "offline-monotonicity-control",
+      "kind": "monotonicity",
+      "left": "offline-0",
+      "right": "offline-1",
+      "interval": {"lower": {"numerator": -95, "denominator": 256}, "upper": {"numerator": -95, "denominator": 256}},
+      "status": "CERTIFIED_NEGATIVE"
+    },
+    {
+      "id": "synthetic-log-concavity-control",
+      "kind": "log_concavity_integer_power",
+      "left": "shape-0",
+      "middle": "shape-1",
+      "right": "shape-2",
+      "exponents": {"A": 12, "B": 7, "C": 5},
+      "interval": {"lower": {"numerator": -1023, "denominator": 1}, "upper": {"numerator": -1023, "denominator": 1}},
+      "status": "CERTIFIED_NEGATIVE"
+    }
+  ],
+  "certified_negative_rows": 2,
+  "unresolved_rows": 0,
+  "verdict": "SYNTHETIC_NEGATIVE_CONTROL",
+  "scope_warning": "Synthetic model only. No Riemann-xi value or counterexample is asserted."
+}
