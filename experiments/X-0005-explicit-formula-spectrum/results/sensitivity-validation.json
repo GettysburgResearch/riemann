@@ -1,0 +1,130 @@
+{
+ "experiment": "X-0005b",
+ "agent": "claude-01",
+ "status": "EMPIRICAL -- measures the screen, certifies nothing",
+ "part1_synthetic": [
+  {
+   "delta": 0.2,
+   "growth_ratio": 1.6087427031970525,
+   "predicted_ratio": 2.0912791051825472,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.1,
+   "growth_ratio": 1.2636759850590866,
+   "predicted_ratio": 1.446125549591925,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.05,
+   "growth_ratio": 1.153871653177664,
+   "predicted_ratio": 1.202549603796835,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.02,
+   "growth_ratio": 1.10717012207126,
+   "predicted_ratio": 1.0765673385374213,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.01,
+   "growth_ratio": 1.0948998559309773,
+   "predicted_ratio": 1.0375776301257758,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.005,
+   "growth_ratio": 1.089403190365899,
+   "predicted_ratio": 1.0186155457903516,
+   "detected_at_3x_scatter": false
+  }
+ ],
+ "part2_real_data": {
+  "rows": [
+   {
+    "gamma": 14.134725,
+    "growth_ratio": 1.0105141129812454,
+    "implied_delta": 0.0028353390857152046
+   },
+   {
+    "gamma": 21.02204,
+    "growth_ratio": 1.047909331227409,
+    "implied_delta": 0.012685984113564624
+   },
+   {
+    "gamma": 25.010858,
+    "growth_ratio": 1.119016445470755,
+    "implied_delta": 0.0304835458026049
+   },
+   {
+    "gamma": 30.424876,
+    "growth_ratio": 1.0519234965270314,
+    "implied_delta": 0.013722429905433027
+   },
+   {
+    "gamma": 32.935062,
+    "growth_ratio": 0.9200668024293945,
+    "implied_delta": -0.022583822885814196
+   },
+   {
+    "gamma": 37.586178,
+    "growth_ratio": 1.013529963977823,
+    "implied_delta": 0.003643179857833244
+   },
+   {
+    "gamma": 40.918719,
+    "growth_ratio": 0.9144966280916148,
+    "implied_delta": -0.024229986214093183
+   },
+   {
+    "gamma": 43.327073,
+    "growth_ratio": 0.8460443154205913,
+    "implied_delta": -0.045320954651290504
+   },
+   {
+    "gamma": 48.005151,
+    "growth_ratio": 0.9370844823989493,
+    "implied_delta": -0.01761560359204171
+   },
+   {
+    "gamma": 49.773832,
+    "growth_ratio": 0.958653780444444,
+    "implied_delta": -0.011446644229564077
+   },
+   {
+    "gamma": 52.970321,
+    "growth_ratio": 0.8839682992252011,
+    "implied_delta": -0.03343402220827007
+   },
+   {
+    "gamma": 56.446248,
+    "growth_ratio": 1.0345331389059615,
+    "implied_delta": 0.009203404951169171
+   },
+   {
+    "gamma": 59.347044,
+    "growth_ratio": 0.8745771772346238,
+    "implied_delta": -0.036329388666782404
+   }
+  ],
+  "max_abs_implied_delta": 0.045320954651290504,
+  "interpretation": "Every implied delta is consistent with 0 at the resolution of this screen; the spread is dominated by windowing and leakage, not by any real displacement.  Read as an EMPIRICAL, UNCERTIFIED indication that the first twelve zeros have |Re rho - 1/2| below roughly the value of max_abs_implied_delta -- computed from the PRIMES ALONE, with no evaluation of zeta anywhere in the pipeline.  It is not a bound: there is no error analysis behind it."
+ },
+ "part1_baseline_scatter": 0.14940151816721914,
+ "part1_online_ratios": [
+  1.0144111117515664,
+  1.0585090146625482,
+  1.1176968607164504,
+  1.0843402026068472,
+  0.9308951122153545,
+  1.0045802489557707,
+  0.9227426784442573,
+  0.8505984818327809,
+  0.9966683414564911,
+  0.9234735466456058,
+  0.8699372285342795,
+  1.0383141038747943
+ ],
+ "part1_sensitivity_floor_delta": 0.2
+}

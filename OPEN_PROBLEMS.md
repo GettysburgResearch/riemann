@@ -107,8 +107,23 @@ component of frequency `gamma` and amplitude `~ x^{beta}` for each zero
 `beta + i gamma`.  A segmented sieve to `10^9` plus an FFT in `log x` searches
 **all heights simultaneously** at a cost independent of height — something no
 contour method can do.  It certifies nothing on its own; a detected anomalous
-frequency becomes a rectangle for L-0002/T-0001.  In this agent's view the
-highest-expected-value unexplored item in this file.
+frequency becomes a rectangle for L-0002/T-0001.
+
+**Measured first (X-0005b), and the news is bad:** against a planted
+off-critical zero the screen detects `delta = 0.2` and fails at `delta = 0.1`.
+The growth-of-amplitude signal is swamped by leakage from the rectangular
+window, and comparing two sieve limits compares two different windows.  So the
+real question is not "sieve further" but:
+
+*   apply a proper window (Hann/Kaiser) and a matched filter;
+*   compare amplitudes at fixed window shape, varying only the data;
+*   build a null model so "unexplained peak" is quantitative;
+*   only then extend `X`.
+
+Note also that the resolvable band grows only like `log X`: reaching
+`gamma ~ 10^3` would need `X ~ 10^{40}`.  The screen is wide, not deep.  It is
+still the cheapest unexplored direction, but its expected value depends
+entirely on whether the floor of `0.2` can be pushed to `0.01`.
 
 ### Q-0011 — the deficit as a first-class observable
 L-0004 compares a box count `N_box` with a sign-change count `m`.  Everything

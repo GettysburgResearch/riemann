@@ -1,0 +1,173 @@
+{
+ "experiment": "X-0005",
+ "agent": "claude-01",
+ "git_sha": "d97d70914144d581a1089ce5072f31d6475c061f",
+ "status": "EMPIRICAL -- floating point, finite window, no certification",
+ "X": 1000000,
+ "n_grid": 8000,
+ "u_window": [
+  6.907755278982137,
+  13.815510557964274
+ ],
+ "frequency_resolution_2pi_over_W": 0.9095842358945609,
+ "gamma_max_scanned": 60.0,
+ "sieve_seconds": 0.1,
+ "top_peaks": [
+  {
+   "gamma": 14.120000000000001,
+   "amplitude": 0.1432121736808901
+  },
+  {
+   "gamma": 21.04,
+   "amplitude": 0.09372124110989004
+  },
+  {
+   "gamma": 25.02,
+   "amplitude": 0.07393508191236683
+  },
+  {
+   "gamma": 32.88,
+   "amplitude": 0.07083127278281488
+  },
+  {
+   "gamma": 30.54,
+   "amplitude": 0.06593632285618932
+  },
+  {
+   "gamma": 40.94,
+   "amplitude": 0.05931916438921668
+  },
+  {
+   "gamma": 37.660000000000004,
+   "amplitude": 0.05510335309851103
+  },
+  {
+   "gamma": 43.24,
+   "amplitude": 0.05034637018152735
+  },
+  {
+   "gamma": 47.84,
+   "amplitude": 0.04210355528825906
+  },
+  {
+   "gamma": 49.86,
+   "amplitude": 0.040349742622598266
+  },
+  {
+   "gamma": 52.94,
+   "amplitude": 0.04030128867368073
+  },
+  {
+   "gamma": 59.44,
+   "amplitude": 0.039665605782676756
+  },
+  {
+   "gamma": 56.46,
+   "amplitude": 0.03478694176423314
+  },
+  {
+   "gamma": 12.84,
+   "amplitude": 0.0325567805775422
+  }
+ ],
+ "known_zero_matches": [
+  {
+   "known_gamma": 14.134725,
+   "nearest_peak": 14.120000000000001,
+   "offset": -0.014724999999998545,
+   "amplitude": 0.1432121736808901,
+   "predicted_amplitude_2_over_abs_rho": 0.14140705687979901
+  },
+  {
+   "known_gamma": 21.02204,
+   "nearest_peak": 21.04,
+   "offset": 0.017959999999998644,
+   "amplitude": 0.09372124110989004,
+   "predicted_amplitude_2_over_abs_rho": 0.09511134668877974
+  },
+  {
+   "known_gamma": 25.010858,
+   "nearest_peak": 25.02,
+   "offset": 0.00914200000000065,
+   "amplitude": 0.07393508191236683,
+   "predicted_amplitude_2_over_abs_rho": 0.0799492951014172
+  },
+  {
+   "known_gamma": 30.424876,
+   "nearest_peak": 30.54,
+   "offset": 0.115123999999998,
+   "amplitude": 0.06593632285618932,
+   "predicted_amplitude_2_over_abs_rho": 0.06572680792330723
+  },
+  {
+   "known_gamma": 32.935062,
+   "nearest_peak": 32.88,
+   "offset": -0.0550619999999995,
+   "amplitude": 0.07083127278281488,
+   "predicted_amplitude_2_over_abs_rho": 0.060718560822754244
+  },
+  {
+   "known_gamma": 37.586178,
+   "nearest_peak": 37.660000000000004,
+   "offset": 0.07382200000000694,
+   "amplitude": 0.05510335309851103,
+   "predicted_amplitude_2_over_abs_rho": 0.053206342501568235
+  },
+  {
+   "known_gamma": 40.918719,
+   "nearest_peak": 40.94,
+   "offset": 0.021280999999994776,
+   "amplitude": 0.05931916438921668,
+   "predicted_amplitude_2_over_abs_rho": 0.0488737368413988
+  },
+  {
+   "known_gamma": 43.327073,
+   "nearest_peak": 43.24,
+   "offset": -0.08707299999999663,
+   "amplitude": 0.05034637018152735,
+   "predicted_amplitude_2_over_abs_rho": 0.04615744153151017
+  },
+  {
+   "known_gamma": 48.005151,
+   "nearest_peak": 47.84,
+   "offset": -0.1651509999999945,
+   "amplitude": 0.04210355528825906,
+   "predicted_amplitude_2_over_abs_rho": 0.041659936142391066
+  },
+  {
+   "known_gamma": 49.773832,
+   "nearest_peak": 49.86,
+   "offset": 0.08616800000000069,
+   "amplitude": 0.040349742622598266,
+   "predicted_amplitude_2_over_abs_rho": 0.04017972931618246
+  },
+  {
+   "known_gamma": 52.970321,
+   "nearest_peak": 52.94,
+   "offset": -0.03032100000000071,
+   "amplitude": 0.04030128867368073,
+   "predicted_amplitude_2_over_abs_rho": 0.03775531030951377
+  },
+  {
+   "known_gamma": 56.446248,
+   "nearest_peak": 56.46,
+   "offset": 0.013752000000003761,
+   "amplitude": 0.03478694176423314,
+   "predicted_amplitude_2_over_abs_rho": 0.035430548735932856
+  },
+  {
+   "known_gamma": 59.347044,
+   "nearest_peak": 59.44,
+   "offset": 0.09295600000000093,
+   "amplitude": 0.039665605782676756,
+   "predicted_amplitude_2_over_abs_rho": 0.033698881831852746
+  }
+ ],
+ "unexplained_peaks": [
+  {
+   "gamma": 12.84,
+   "amplitude": 0.0325567805775422
+  }
+ ],
+ "interpretation": "Peaks at the known ordinates confirm that the arithmetic and analytic halves of this repository agree.  An unexplained peak, or an amplitude that grows when X is increased, is the signature of a zero with Re > 1/2 and must be converted into a rectangle for L-0002 / T-0001.  Nothing here is certified."
+}
