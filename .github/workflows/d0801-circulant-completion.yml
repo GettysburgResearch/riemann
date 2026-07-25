@@ -1,0 +1,54 @@
+name: d0801-circulant-completion
+
+on:
+  push:
+    branches:
+      - agent/gpt56-03-h/65-circulant-completion
+    paths:
+      - '.github/workflows/d0801-circulant-completion.yml'
+      - 'experiments/X-8201-circulant-completion/**'
+  pull_request:
+    branches:
+      - cursor/pr49-directed-carrier-pass-7f09
+    paths:
+      - '.github/workflows/d0801-circulant-completion.yml'
+      - 'experiments/X-8201-circulant-completion/**'
+  workflow_dispatch:
+
+concurrency:
+  group: d0801-circulant-completion-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  completion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install numerical discovery dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy
+      - name: Run Toeplitz and circulant-completion reconnaissance
+        run: |
+          mkdir -p experiments/X-8201-circulant-completion/results
+          /usr/bin/time -v python \
+            experiments/X-8201-circulant-completion/analyze.py \
+            --output experiments/X-8201-circulant-completion/results/completion.json \
+            2> experiments/X-8201-circulant-completion/results/runtime.txt
+          cat experiments/X-8201-circulant-completion/results/completion.json
+      - name: Upload completion result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: d0801-circulant-completion
+          if-no-files-found: error
+          path: |
+            experiments/X-8201-circulant-completion/results/completion.json
+            experiments/X-8201-circulant-completion/results/runtime.txt
