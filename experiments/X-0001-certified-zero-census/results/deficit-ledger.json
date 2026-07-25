@@ -1,0 +1,240 @@
+{
+ "experiment": "X-0001b",
+ "agent": "claude-01",
+ "quantity": "deficit = N_box - (certified sign changes) per height band",
+ "semantics": "difference of two CERTIFIED integers; exactly 0 under RH, exactly 2 at an off-critical pair; no noise",
+ "ledgers": [
+  {
+   "source": "census-T100.json",
+   "T": "100.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "bands": [
+    {
+     "band": [
+      0.0,
+      25.0
+     ],
+     "N_box": 2,
+     "sign_changes": 2,
+     "deficit": 0
+    },
+    {
+     "band": [
+      25.0,
+      50.0
+     ],
+     "N_box": 8,
+     "sign_changes": 8,
+     "deficit": 0
+    },
+    {
+     "band": [
+      50.0,
+      75.0
+     ],
+     "N_box": 8,
+     "sign_changes": 8,
+     "deficit": 0
+    },
+    {
+     "band": [
+      75.0,
+      100.0
+     ],
+     "N_box": 11,
+     "sign_changes": 11,
+     "deficit": 0
+    }
+   ],
+   "total_deficit": 0,
+   "max_abs_deficit": 0
+  },
+  {
+   "source": "census-T500.json",
+   "T": "500.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "bands": [
+    {
+     "band": [
+      0.0,
+      25.0
+     ],
+     "N_box": 2,
+     "sign_changes": 2,
+     "deficit": 0
+    },
+    {
+     "band": [
+      25.0,
+      50.0
+     ],
+     "N_box": 8,
+     "sign_changes": 8,
+     "deficit": 0
+    },
+    {
+     "band": [
+      50.0,
+      75.0
+     ],
+     "N_box": 8,
+     "sign_changes": 8,
+     "deficit": 0
+    },
+    {
+     "band": [
+      75.0,
+      100.0
+     ],
+     "N_box": 11,
+     "sign_changes": 11,
+     "deficit": 0
+    },
+    {
+     "band": [
+      100.0,
+      125.0
+     ],
+     "N_box": 12,
+     "sign_changes": 12,
+     "deficit": 0
+    },
+    {
+     "band": [
+      125.0,
+      150.0
+     ],
+     "N_box": 11,
+     "sign_changes": 11,
+     "deficit": 0
+    },
+    {
+     "band": [
+      150.0,
+      175.0
+     ],
+     "N_box": 14,
+     "sign_changes": 14,
+     "deficit": 0
+    },
+    {
+     "band": [
+      175.0,
+      200.0
+     ],
+     "N_box": 13,
+     "sign_changes": 13,
+     "deficit": 0
+    },
+    {
+     "band": [
+      200.0,
+      225.0
+     ],
+     "N_box": 15,
+     "sign_changes": 15,
+     "deficit": 0
+    },
+    {
+     "band": [
+      225.0,
+      250.0
+     ],
+     "N_box": 14,
+     "sign_changes": 14,
+     "deficit": 0
+    },
+    {
+     "band": [
+      250.0,
+      275.0
+     ],
+     "N_box": 14,
+     "sign_changes": 14,
+     "deficit": 0
+    },
+    {
+     "band": [
+      275.0,
+      300.0
+     ],
+     "N_box": 16,
+     "sign_changes": 16,
+     "deficit": 0
+    },
+    {
+     "band": [
+      300.0,
+      325.0
+     ],
+     "N_box": 16,
+     "sign_changes": 16,
+     "deficit": 0
+    },
+    {
+     "band": [
+      325.0,
+      350.0
+     ],
+     "N_box": 15,
+     "sign_changes": 15,
+     "deficit": 0
+    },
+    {
+     "band": [
+      350.0,
+      375.0
+     ],
+     "N_box": 16,
+     "sign_changes": 16,
+     "deficit": 0
+    },
+    {
+     "band": [
+      375.0,
+      400.0
+     ],
+     "N_box": 17,
+     "sign_changes": 17,
+     "deficit": 0
+    },
+    {
+     "band": [
+      400.0,
+      425.0
+     ],
+     "N_box": 16,
+     "sign_changes": 16,
+     "deficit": 0
+    },
+    {
+     "band": [
+      425.0,
+      450.0
+     ],
+     "N_box": 17,
+     "sign_changes": 17,
+     "deficit": 0
+    },
+    {
+     "band": [
+      450.0,
+      475.0
+     ],
+     "N_box": 17,
+     "sign_changes": 17,
+     "deficit": 0
+    },
+    {
+     "band": [
+      475.0,
+      500.0
+     ],
+     "N_box": 17,
+     "sign_changes": 17,
+     "deficit": 0
+    }
+   ],
+   "total_deficit": 0,
+   "max_abs_deficit": 0
+  }
+ ]
+}

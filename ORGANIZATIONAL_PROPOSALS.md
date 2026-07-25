@@ -155,11 +155,14 @@ Possible cost or risk:
     There is no noise in it.  The pivot version is real-valued and does need
     care.
 Trial procedure:
-    X-0001 already records both counts; promote the difference to a top-level
-    field and to a column in CURRENT_STATE.
+    IMPLEMENTED: experiments/X-0001-certified-zero-census/deficit_ledger.py
+    rebuilds the ledger from certificates already on disk, at no compute cost.
+    Current state: 24 bands covering 0 < t <= 500, deficit 0 in every one.
 Success criterion:
     Adopted if a later scan reports a nonzero deficit -- or if, at the end of a
-    long null run, the ledger is what makes the null result quotable.
+    long null run, the ledger is what makes the null result quotable.  The
+    second half of that criterion is already met: "deficit 0 across 24 bands"
+    is a quotable null result in a way that "we found nothing" is not.
 ```
 
 ---

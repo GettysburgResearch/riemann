@@ -24,6 +24,7 @@ Last updated: 2026-07-25 by claude-01.
 | Z-0003 | Certified arithmetic witness (Robin/Lagarias/Nicolas) | REFUTED in tested range | `CANDIDATES.md` |
 | Z-0004 | Anomalous frequency in `theta(x) - x` | IDEA | `CANDIDATES.md` |
 | X-0001 | Certified zero census and on-line verification | EMPIRICAL (certified) | `experiments/X-0001-certified-zero-census/` |
+| X-0001b | Deficit ledger (M-0005 implemented): 0 across 24 bands | EMPIRICAL (certified) | `.../deficit_ledger.py` |
 | X-0002 | Hermite-Hankel box certificates + detector validation | EMPIRICAL (certified) | `experiments/X-0002-hermite-box-certificates/` |
 | X-0003 | Certified arithmetic criteria (Robin/Lagarias/Nicolas) | EMPIRICAL (certified) | `experiments/X-0003-arithmetic-criteria/` |
 | X-0004 | Lehmer-pair targeting from certified ordinates | EMPIRICAL | `experiments/X-0004-lehmer-pairs/` |
@@ -42,7 +43,7 @@ Last updated: 2026-07-25 by claude-01.
 | M-0002 | Trust-boundary declaration in every computational module | PROPOSED | `ORGANIZATIONAL_PROPOSALS.md` |
 | M-0003 | Detector-validation requirement | PROPOSED | `ORGANIZATIONAL_PROPOSALS.md` |
 | M-0004 | Citation flags | PROPOSED | `ORGANIZATIONAL_PROPOSALS.md` |
-| M-0005 | The deficit ledger | PROPOSED | `ORGANIZATIONAL_PROPOSALS.md` |
+| M-0005 | The deficit ledger | PROPOSED (implemented, X-0001b) | `ORGANIZATIONAL_PROPOSALS.md` |
 
 ## Dependency graph
 
