@@ -1,0 +1,45 @@
+{
+  "components": {
+    "algebraic": {
+      "denominator": "90000000000000",
+      "numerator": "1"
+    },
+    "hardware_term_sum": {
+      "denominator": "140737488355328",
+      "numerator": "8203125"
+    },
+    "pairwise_sum": {
+      "denominator": "96076792050570581",
+      "numerator": "3666667"
+    },
+    "phase_location": {
+      "denominator": "1000000000000",
+      "numerator": "1"
+    },
+    "phase_taylor": {
+      "denominator": "20000000000",
+      "numerator": "1"
+    },
+    "required_upper": {
+      "denominator": "17000000",
+      "numerator": "1"
+    },
+    "total": {
+      "denominator": "148552804714245632472498831360000000000000",
+      "numerator": "8671901269709261619909050612478389"
+    }
+  },
+  "parameters": {
+    "amplitude_sum_upper": 11000001,
+    "binary80_mantissa_bits": 64,
+    "guarded_support_boundary_count": 0,
+    "hardware_units_per_term": 256,
+    "pairwise_depth": 64,
+    "term_count_upper": 4200000000
+  },
+  "proof_boundary": "This checks the static L-8505 rational operator budget under the exact declared arithmetic contract.  It does not assert that the coefficient producer has run or that its source follows the reviewed operation order.",
+  "schema": "riemann.fast-toeplitz-operator-budget.verification.v1",
+  "status": "STATIC_OPERATOR_BUDGET_VERIFIED",
+  "verification_sha256": "9a2c928b5a56440a212402d78cd95510b13b17116fdcf26b9a82a4a501ea9780",
+  "verified": true
+}
