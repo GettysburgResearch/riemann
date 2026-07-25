@@ -1,0 +1,121 @@
+name: Target fixed-vector directed certificate single-host
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-f/65-rigorous-phase-grid
+    paths:
+      - .github/workflows/target-fixed-vector-single-host.yml
+  pull_request:
+    paths:
+      - experiments/X-2814-rigorous-phase-grid/RUN_FIXED_VECTOR_TARGET.md
+      - .github/workflows/target-fixed-vector-single-host.yml
+
+permissions:
+  contents: read
+
+env:
+  PRECISION_BITS: '192'
+  WORKERS: '4'
+  MANIFEST: experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt
+  VECTOR: experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/frozen-vector-b96.json
+  ALPHA: experiments/X-2802-exact-alpha/results/target-alpha-output.json
+  PLAN: experiments/X-2805-directed-prime-producer/certificates/target-run-plan-4worker-c1e11.json
+
+jobs:
+  complete-fixed-vector:
+    name: complete 192-bit fixed-vector target
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install proof backend
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libmpfr-dev libgmp-dev
+          g++ --version
+          python --version
+
+      - name: Compile reviewed fast directed producer
+        run: |
+          g++ -O3 -march=x86-64-v3 -std=c++17 \
+            experiments/X-2805-directed-prime-producer/directed_prime_shard_fast.cpp \
+            -lmpfr -lgmp -o directed_prime_shard_fast
+
+      - name: Run four disjoint outward-rounded ranges
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p shards logs results
+          echo "runner CPUs: $(nproc)"
+          free -h
+          starts=(0 1250 2500 3750)
+          ends=(1250 2500 3750 5000)
+          pids=()
+          for worker in 0 1 2 3; do
+            start=${starts[$worker]}
+            end=${ends[$worker]}
+            higher=()
+            if [[ "$worker" == '0' ]]; then higher=(--include-higher-powers); fi
+            (
+              /usr/bin/time -v ./directed_prime_shard_fast \
+                --manifest "$MANIFEST" \
+                --start-segment "$start" \
+                --end-segment "$end" \
+                --precision "$PRECISION_BITS" \
+                "${higher[@]}" \
+                --output "shards/shard-${start}-${end}-p${PRECISION_BITS}.json" \
+                2>"logs/shard-${start}-${end}-p${PRECISION_BITS}.log"
+              test -s "shards/shard-${start}-${end}-p${PRECISION_BITS}.json"
+            ) &
+            pids+=("$!")
+          done
+          status=0
+          for pid in "${pids[@]}"; do
+            wait "$pid" || status=1
+          done
+          if [[ "$status" != '0' ]]; then
+            echo "At least one fixed-vector shard failed" >&2
+            exit "$status"
+          fi
+          test "$(find shards -name 'shard-*.json' -type f | wc -l)" -eq 4
+
+      - name: Assemble exact L-2804 certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find shards -name 'shard-*.json' -type f | sort -V)
+          test "${#files[@]}" -eq 4
+          args=()
+          for file in "${files[@]}"; do args+=(--shard "$file"); done
+          python experiments/X-2805-directed-prime-producer/assemble_directed_certificate.py \
+            --vector "$VECTOR" \
+            --alpha "$ALPHA" \
+            --plan "$PLAN" \
+            "${args[@]}" \
+            --output results/target-fixed-vector-certificate.json
+
+      - name: Exact correction composition and strict sign decision
+        shell: bash
+        run: |
+          set -uo pipefail
+          python experiments/X-2801-piecewise-carrier-corrections/verify_fixed_vector_certificate.py \
+            results/target-fixed-vector-certificate.json \
+            | tee results/target-fixed-vector-verdict.json
+          verdict_status=${PIPESTATUS[0]}
+          sha256sum shards/* logs/* results/* > results/SHA256SUMS
+          exit "$verdict_status"
+
+      - name: Upload proof and diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: target-fixed-vector-p192-single-host
+          path: |
+            shards/
+            logs/
+            results/
+          retention-days: 30
+          if-no-files-found: warn
