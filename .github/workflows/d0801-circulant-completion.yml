@@ -10,6 +10,7 @@ on:
   pull_request:
     branches:
       - cursor/pr49-directed-carrier-pass-7f09
+      - agent/gpt56-03-h/65-circulant-completion
     paths:
       - '.github/workflows/d0801-circulant-completion.yml'
       - 'experiments/X-8201-circulant-completion/**'
