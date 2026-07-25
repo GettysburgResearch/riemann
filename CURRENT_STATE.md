@@ -57,17 +57,37 @@ gate stops being negligible.  The program is therefore: **run above the barrier,
 optimize the carrier there, and get L-4202/L-4203 reviewed first.**
 
 **The sensitivity, finally quantified (`L-5604`).**  An off-critical zero
-displaced by `eta` changes the D-0801 functional by `-2 eta^2 g''(gamma)`, a
-*second-order* response.  Converting the executed `c = 10^11` margin through
-that gives a detection threshold `eta_min = 0.0153` at the most favourable
-position in the window and `0.655` at the median position.  Since `|eta| < 1/2`
-always, the executed configuration could not have detected an off-critical zero
-at a typical position at all, and elsewhere only one displaced by more than
-`1.5e-2` — which the classical zero-free region already forbids at that height.
-`eta_min` improves only like `K^{-1}`, so `1e-3` needs `K ~ 1.6e4` and `1e-6`
-needs `K ~ 1.6e7`.  **The D-0801 avenue is many orders of magnitude away from
-being able to see a counterexample, for structural rather than numerical
-reasons.**  Any future work on it should lead with this number.
+displaced by `eta` changes the D-0801 functional by `-2 eta^2 g''(gamma)` — a
+*second-order* response with no first-order term.  Converting the executed
+`c = 10^11` margin through the exact optimum over all vectors
+(`eta^2 > 1/lambda_max(S C* Q^{-1} C)`, a 3x3 pencil per position) gives
+
+```text
+eta_min  optimal over all v      0.03154   at u = +0.26
+eta_min  median over u           1.1429
+```
+
+Since `|eta| < 1/2` always, **at a typical position in the window the executed
+configuration could not have detected an off-critical zero at all**, for any
+admissible displacement and for no choice of vector; and at the most favourable
+position only one displaced by more than `3e-2`, which the classical zero-free
+region already forbids at that height.  **The D-0801 avenue is many orders of
+magnitude away from being able to see a counterexample, for structural rather
+than numerical reasons.**  Any future work on it should lead with this number.
+
+Two riders, both important:
+
+- `L-5604(d)`: the quadratic response is forced for **every** test that is real
+  on the real axis, hence for `D-0001`, `D-0701`, `D-0801` and any successor
+  built the same way.  It is a feature of the Weil criterion, not of this
+  construction.  It says nothing about the Robin, Li, `xi`-passivity or Pick
+  routes — see `Q-5606`, which asks each of them for the same number and is
+  probably the highest value-per-hour item in the project right now.
+- `eta_min` improves like `K^{-1}` **only above the C-5601 barrier**.  A second
+  complete 4.1-billion-term stream at `c = 10^11`, `K = 4096` gives a certified
+  margin of `2.62514e-4` against `2.67186e-4` at `K = 1024` — quadrupling `K`
+  below the barrier buys `1.8%`, where past it the same quadrupling buys a
+  factor of `16`.  Raising `K` below the barrier is wasted effort.
 
 Structural conclusion worth carrying forward: by the explicit formula, a
 negative D-0801 value is **equivalent** to `lambda_max(S_K) > ell_T`, so this
