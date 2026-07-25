@@ -1,0 +1,111 @@
+name: arb-xi-barycentric-finalists
+
+on:
+  push:
+    branches:
+      - agent/gpt56-06-d/66-arb-xi-dual-portfolio
+    paths:
+      - '.github/workflows/arb-xi-barycentric-finalists.yml'
+      - 'experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c'
+      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/generate_barycentric_producer.py'
+  pull_request:
+    branches:
+      - agent/gpt56-03-e/39-arb-xi-passivity
+    paths:
+      - '.github/workflows/arb-xi-barycentric-finalists.yml'
+      - 'experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c'
+      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/generate_barycentric_producer.py'
+  workflow_dispatch:
+
+concurrency:
+  group: arb-xi-barycentric-finalists-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  finalists:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install FLINT development library
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+      - name: Compile exact checker
+        run: |
+          python -m compileall -q \
+            experiments/X-3902-arb-xi-passivity/verify_certificate.py \
+            experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
+            experiments/X-6601-arb-xi-dual-portfolio/generate_barycentric_producer.py
+          mkdir -p experiments/X-6601-arb-xi-dual-portfolio/results/barycentric-finalists
+      - name: Produce and replay directed finalists
+        shell: bash
+        run: |
+          set -euo pipefail
+          template=experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c
+          out=experiments/X-6601-arb-xi-dual-portfolio/results/barycentric-finalists
+          offsets=(1 -2 2 5 -5 -3 -1 0 3 -6 -4 4)
+          for j in "${offsets[@]}"; do
+            tag=${j/-/m}; tag=${tag/+ /p};
+            if [[ $j -ge 0 ]]; then tag=p${j}; else tag=m$((-j)); fi
+            src="$out/bary-j-${tag}.c"
+            exe="$out/bary-j-${tag}"
+            python experiments/X-6601-arb-xi-dual-portfolio/generate_barycentric_producer.py \
+              "$template" "$j" "$src" > "$out/bary-j-${tag}.generation.txt"
+            cc -O3 -std=c11 -Wall -Wextra -Werror "$src" -o "$exe" \
+              -lflint -lmpfr -lgmp -lpthread -lm
+            for bits in 256 384 512; do
+              cert="$out/bary-j-${tag}-${bits}.certificate.json"
+              verify="$out/bary-j-${tag}-${bits}.verification.json"
+              /usr/bin/time -v "$exe" "$bits" > "$cert" \
+                2> "$out/bary-j-${tag}-${bits}.time.txt"
+              python experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
+                "$cert" --output "$verify"
+              python - "$j" "$bits" "$verify" <<'PY'
+          import json,sys
+          j,bits,path=sys.argv[1:]
+          d=json.load(open(path))
+          channel=d['channels'][0]
+          print(json.dumps({
+              'j':int(j),'bits':int(bits),'verified':d['verified'],
+              'status':channel['status'],'interval':channel['interval'],
+              'verification_sha256':d['verification_sha256']
+          },sort_keys=True))
+          if not d['verified']:
+              raise SystemExit('exact replay rejected')
+          PY
+            done
+          done
+      - name: Summarize finalist ladder
+        run: |
+          python - <<'PY'
+          import glob,json,os
+          rows=[]
+          for path in sorted(glob.glob('experiments/X-6601-arb-xi-dual-portfolio/results/barycentric-finalists/*.verification.json')):
+              d=json.load(open(path)); c=d['channels'][0]
+              rows.append({'file':os.path.basename(path),'status':c['status'],'interval':c['interval'],'verification_sha256':d['verification_sha256']})
+          summary={'schema':'riemann.xi-passivity.barycentric-finalists.v1','records':rows,
+                   'negative_files':[r['file'] for r in rows if r['status']=='CERTIFIED_NEGATIVE'],
+                   'unresolved_files':[r['file'] for r in rows if r['status']=='UNRESOLVED_ZERO_TOUCH'],
+                   'classification':'directed finalist ladder; any negative remains pending independent reproduction and parent-gate audit'}
+          path='experiments/X-6601-arb-xi-dual-portfolio/results/barycentric-finalists/summary.json'
+          json.dump(summary,open(path,'w'),indent=2,sort_keys=True); print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+      - name: Upload directed finalist ladder
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-xi-barycentric-finalists
+          if-no-files-found: error
+          path: experiments/X-6601-arb-xi-dual-portfolio/results/barycentric-finalists/
