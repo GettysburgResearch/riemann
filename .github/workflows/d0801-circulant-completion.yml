@@ -55,9 +55,11 @@ jobs:
             experiments/X-8502-one-direction-schur/verify_target_gate.py \
             experiments/X-8502-one-direction-schur/tests \
             experiments/X-8503-fast-toeplitz-operator/verify_operator_budget.py \
+            experiments/X-8503-fast-toeplitz-operator/bind_fast_shard.py \
             experiments/X-8503-fast-toeplitz-operator/merge_hybrid_source.py \
+            experiments/X-8503-fast-toeplitz-operator/merge_hybrid_source_strict.py \
             experiments/X-8503-fast-toeplitz-operator/tests
-      - name: Run exact checker and merger tests
+      - name: Run exact checker, binding, and merger tests
         run: |
           python -m unittest discover \
             -s experiments/X-8502-one-direction-schur/tests -v
@@ -78,7 +80,7 @@ jobs:
           cmp \
             experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.verification.json \
             experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
-      - name: Exercise one target-sized fast coefficient segment
+      - name: Exercise and canonically bind one target-sized fast coefficient segment
         run: |
           /usr/bin/time -v \
             experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard \
@@ -87,12 +89,17 @@ jobs:
             --end-segment 2001 \
             --phase-grid 32768 \
             --setup-precision 192 \
-            --output experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.json \
+            --output experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json \
             2> experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.time.txt
+          python experiments/X-8503-fast-toeplitz-operator/bind_fast_shard.py \
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json \
+            experiments/X-8503-fast-toeplitz-operator/certificates/target-hybrid-source-plan.json \
+            --output experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json
           python - <<'PY'
+          import hashlib
           import json
           from pathlib import Path
-          path = Path('experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.json')
+          path = Path('experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json')
           data = json.loads(path.read_text())
           assert data['schema'] == 'riemann.piecewise-carrier-fast-toeplitz-midpoint-shard.v1'
           assert data['segment_start'] == 2000 and data['segment_end'] == 2001
@@ -102,7 +109,13 @@ jobs:
           assert data['guarded_support_boundary_count'] == 0
           assert len(data['lags']) == 1024
           assert [row['lag'] for row in data['lags']] == list(range(1024))
+          claimed = data.pop('binding_sha256')
+          actual = hashlib.sha256(json.dumps(
+              data, sort_keys=True, separators=(',', ':'), ensure_ascii=True
+          ).encode('ascii')).hexdigest()
+          assert claimed == actual
           print(json.dumps({
+              'binding_sha256': claimed,
               'prime_count': data['prime_count'],
               'near_phase_boundary_count': data['near_phase_boundary_count'],
               'minimum_support_boundary_distance': data['minimum_support_boundary_distance'],
@@ -128,5 +141,6 @@ jobs:
             experiments/X-8201-circulant-completion/results/runtime.txt
             experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
             experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
-            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.json
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json
             experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.time.txt
