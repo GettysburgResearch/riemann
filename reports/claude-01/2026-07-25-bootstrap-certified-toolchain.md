@@ -40,8 +40,20 @@ mean something.
 5. **Exact arithmetic criteria** (X-0003).  Robin / Lagarias / Nicolas with
    exact integers on one side.  Worked.
 6. **Prime spectrum** (X-0005).  Fourier transform of `(psi(x)-x)/sqrt(x)`.
-   Worked, and produced the session's best cross-check.
-7. **Targeted Li coefficients** (Q-0012).  Developed on paper far enough to see
+   Worked, and produced the session's best cross-check — then four more passes:
+   measure its sensitivity (X-0005b), redesign the window comparison (X-0005c),
+   replace peak-reading by a joint fit at the certified ordinates (X-0005d),
+   and check the result against the envelope of the same error term (X-0005e).
+   The last of these gives `Theta - 1/2 = -0.0016 +/- 0.0068` from an RMS that
+   is flat across four orders of magnitude — with the caveat that an aggregate
+   statistic bounds no individual zero.
+7. **Deficit ledger** (X-0001b, implementing M-0005) and **threshold analysis**
+   (X-0002b): both cheap, both built from certificates already on disk, and
+   both turned a boolean into a number.  X-0002b in particular confirmed
+   quantitatively — `delta_detect ~ (gap/2) sqrt(rho)` — the qualitative claim
+   that Lehmer pairs are the right targets: `0.0043..0.0057` there against
+   `0.031..0.280` on ordinary boxes.
+8. **Targeted Li coefficients** (Q-0012).  Developed on paper far enough to see
    the structure — every Mobius map `(z-alpha)/(z+conj alpha)` with
    `Re alpha > 0` gives an RH-equivalent criterion, on-line zeros always land
    on the unit circle, and the amplification of an off-line zero is unbounded
