@@ -1,0 +1,71 @@
+{
+  "schema": "riemann.toeplitz-box-spectral-closure.v1",
+  "dimension": 2,
+  "alpha_interval": {
+    "lower": {"numerator": "0", "denominator": "1"},
+    "upper": {"numerator": "0", "denominator": "1"}
+  },
+  "correction_operator_radius": {"numerator": "0", "denominator": "1"},
+  "lags": [
+    {
+      "lag": 0,
+      "real_interval": {
+        "lower": {"numerator": "1", "denominator": "10"},
+        "upper": {"numerator": "1", "denominator": "10"}
+      },
+      "imag_interval": {
+        "lower": {"numerator": "0", "denominator": "1"},
+        "upper": {"numerator": "0", "denominator": "1"}
+      }
+    },
+    {
+      "lag": 1,
+      "real_interval": {
+        "lower": {"numerator": "-1", "denominator": "1"},
+        "upper": {"numerator": "1", "denominator": "1"}
+      },
+      "imag_interval": {
+        "lower": {"numerator": "0", "denominator": "1"},
+        "upper": {"numerator": "0", "denominator": "1"}
+      }
+    }
+  ],
+  "checks": [
+    {
+      "id": "plus",
+      "kind": "fixed-vector",
+      "vector": [
+        {"real": {"numerator": "1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}},
+        {"real": {"numerator": "1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}}
+      ]
+    },
+    {
+      "id": "minus",
+      "kind": "fixed-vector",
+      "vector": [
+        {"real": {"numerator": "1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}},
+        {"real": {"numerator": "-1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}}
+      ]
+    },
+    {
+      "id": "gram",
+      "kind": "gram-portfolio",
+      "terms": [
+        {
+          "weight": {"numerator": "1", "denominator": "1"},
+          "vector": [
+            {"real": {"numerator": "1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}},
+            {"real": {"numerator": "1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}}
+          ]
+        },
+        {
+          "weight": {"numerator": "1", "denominator": "1"},
+          "vector": [
+            {"real": {"numerator": "1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}},
+            {"real": {"numerator": "-1", "denominator": "1"}, "imag": {"numerator": "0", "denominator": "1"}}
+          ]
+        }
+      ]
+    }
+  ]
+}

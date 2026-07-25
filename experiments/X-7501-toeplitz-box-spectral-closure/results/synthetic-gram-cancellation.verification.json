@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "full_interval": {
+        "lower": {"denominator": "5", "numerator": "-6"},
+        "upper": {"denominator": "5", "numerator": "4"}
+      },
+      "id": "plus",
+      "kind": "fixed-vector",
+      "prime_interval": {
+        "lower": {"denominator": "5", "numerator": "-4"},
+        "upper": {"denominator": "5", "numerator": "6"}
+      },
+      "status": "UNRESOLVED",
+      "trace_weight": {"denominator": "1", "numerator": "2"}
+    },
+    {
+      "full_interval": {
+        "lower": {"denominator": "5", "numerator": "-6"},
+        "upper": {"denominator": "5", "numerator": "4"}
+      },
+      "id": "minus",
+      "kind": "fixed-vector",
+      "prime_interval": {
+        "lower": {"denominator": "5", "numerator": "-4"},
+        "upper": {"denominator": "5", "numerator": "6"}
+      },
+      "status": "UNRESOLVED",
+      "trace_weight": {"denominator": "1", "numerator": "2"}
+    },
+    {
+      "aggregate_autocorrelation": [
+        {
+          "imag": {"denominator": "1", "numerator": "0"},
+          "real": {"denominator": "1", "numerator": "4"}
+        },
+        {
+          "imag": {"denominator": "1", "numerator": "0"},
+          "real": {"denominator": "1", "numerator": "0"}
+        }
+      ],
+      "full_interval": {
+        "lower": {"denominator": "5", "numerator": "-2"},
+        "upper": {"denominator": "5", "numerator": "-2"}
+      },
+      "id": "gram",
+      "kind": "gram-portfolio",
+      "prime_interval": {
+        "lower": {"denominator": "5", "numerator": "2"},
+        "upper": {"denominator": "5", "numerator": "2"}
+      },
+      "status": "CERTIFIED_NEGATIVE_MATRIX",
+      "trace_weight": {"denominator": "1", "numerator": "4"}
+    }
+  ],
+  "dimension": 2,
+  "negative_matrix_certificates": ["gram"],
+  "proof_boundary": "Exact finite arithmetic over supplied coefficient boxes. A negative D-0801 RH implication retains the parent admissibility and Guinand-Weil normalization dependencies.",
+  "schema": "riemann.toeplitz-box-spectral-closure.verification.v1",
+  "status": "CERTIFIED_NEGATIVE_MATRIX",
+  "unresolved_checks": ["plus", "minus"],
+  "verified": true
+}

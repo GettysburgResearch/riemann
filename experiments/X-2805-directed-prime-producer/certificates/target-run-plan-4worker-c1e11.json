@@ -1,0 +1,26 @@
+{
+  "alpha_artifact": "../X-2802-exact-alpha/results/target-alpha-output.json",
+  "carrier": {"denominator": 20, "numerator": 94184072727073},
+  "cells": 1024,
+  "cutoff": 100000000000,
+  "cutoff_power10": 11,
+  "expected_counts": {
+    "higher_prime_power_count": 28156,
+    "prime_count": 4118054813,
+    "total_terms": 4118082969
+  },
+  "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+  "precisions_bits": [192],
+  "schema": "riemann.piecewise-carrier-directed-run.v1",
+  "segment_size": 20000000,
+  "shards": [
+    {"include_higher_powers": true, "segment_start": 0, "segment_end": 1250},
+    {"include_higher_powers": false, "segment_start": 1250, "segment_end": 2500},
+    {"include_higher_powers": false, "segment_start": 2500, "segment_end": 3750},
+    {"include_higher_powers": false, "segment_start": 3750, "segment_end": 5000}
+  ],
+  "status": "READY_FOR_SINGLE_HOST_192_BIT_FIRST_PASS",
+  "total_segments": 5000,
+  "vector_artifact": "results/target-c1e11/vector/frozen-vector-b96.json",
+  "autocorrelation_artifact": "results/target-c1e11/vector/target-autocorrelation.txt"
+}

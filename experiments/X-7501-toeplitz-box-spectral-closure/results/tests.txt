@@ -1,0 +1,16 @@
+test_duplicate_check_id_is_rejected (test_verify_toeplitz_box.ToeplitzBoxTests.test_duplicate_check_id_is_rejected) ... ok
+test_fixed_vector_matches_direct_dense_form (test_verify_toeplitz_box.ToeplitzBoxTests.test_fixed_vector_matches_direct_dense_form) ... ok
+test_gram_cancels_shared_lag_uncertainty (test_verify_toeplitz_box.ToeplitzBoxTests.test_gram_cancels_shared_lag_uncertainty) ... ok
+test_negative_gram_weight_is_rejected (test_verify_toeplitz_box.ToeplitzBoxTests.test_negative_gram_weight_is_rejected) ... ok
+test_whole_matrix_positive_control (test_verify_toeplitz_box.ToeplitzBoxTests.test_whole_matrix_positive_control) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+OK
+
+Additional command:
+python -m compileall -q verify_toeplitz_box.py from_target_artifacts.py tests
+Result: success
+
+Environment: CPython 3.13.5, Linux x86_64, standard library only.
