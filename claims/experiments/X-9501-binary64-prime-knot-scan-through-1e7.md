@@ -41,7 +41,7 @@ were not directed or independently reproduced.
 ## Exact command
 
 ```bash
-python experiments/screw_prime-knot_scan.py \
+python experiments/screw_prime_knot_scan.py \
   --cutoff 10000000 \
   --top 12 \
   --matrix-size 8 \
