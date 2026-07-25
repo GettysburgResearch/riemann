@@ -138,8 +138,9 @@ An argument-principle or Turing count:
 - remains useful when individual roots are too close to isolate cheaply.
 
 Under RH, the total count is exactly the line count needed by L-9302. Thus the
-new input is logically weaker and computationally cheaper, while the resulting
-deflation is multiplicity-complete.
+new input is logically weaker and multiplicity-complete. Whether repeated total
+counts are faster than one block zero isolator is backend-dependent and is not
+claimed without a benchmark.
 
 This does **not** assert that the counted zeros are actually on the line. It says
 that if RH were true, they would be; a negative residual therefore contradicts
