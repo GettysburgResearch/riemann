@@ -1,0 +1,25 @@
+{
+ "schema": "riemann.x5602-census.v1",
+ "agent": "opus5-01",
+ "classification": "empirical Turing diagnostic; a step is a nomination requiring a rigorous S-integral bound, not a proof",
+ "zeros": 870,
+ "t_range": [
+  4709203636253.411,
+  4709203636452.987
+ ],
+ "S_range": [
+  -1.51171875,
+  1.81640625
+ ],
+ "S_std": 0.40153228547995484,
+ "smoothed_S_step_max": 0.0859375,
+ "smoothed_S_step_at_t": 4709203636310.893,
+ "step_threshold": 1.5,
+ "permanent_step_detected": false,
+ "normalised_gap_mean": 0.9994241761908413,
+ "normalised_gap_max": 4.326221592994032,
+ "normalised_gap_max_at_t": 4709203636353.141,
+ "normalised_gap_min": 0.08499453031422459,
+ "normalised_gap_min_at_t": 4709203636354.135,
+ "note": "S(t) is expected to oscillate with |S| < 2 and return; a permanent step of 2 is the signature of a pair of zeros leaving the critical line"
+}

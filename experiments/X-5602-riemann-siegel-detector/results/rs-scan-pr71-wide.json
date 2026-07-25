@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.x5602-rs-scan.v1",
+  "agent": "opus5-01",
+  "t0": 4709203636253.1621,
+  "span": 199.99755106400036,
+  "main_sum_terms": 865732,
+  "gram_spacing": 0.22979419884795138,
+  "grid_step": 0.0095747582853313081,
+  "evaluations": 25147,
+  "sign_changes": 870,
+  "expected_zeros_smooth": 870.3333333340,
+  "deficit": 0.3333333340,
+  "min_abs_Z_on_grid": 1.01803e-05,
+  "zeros_located": 870,
+  "min_gap": 0.0193464505012,
+  "min_gap_normalised": 0.0841903346482,
+  "min_gap_at_t": 4709203636354.1543,
+  "note": "a positive deficit means sign changes are missing and zeros may have left the critical line; it must be resolved by refinement before any claim"
+}

@@ -1,0 +1,107 @@
+{
+ "schema": "riemann.x5602-tau-localise.v1",
+ "agent": "opus5-01",
+ "classification": "conditional on the external Turing bound on int S and on the Z evaluation; not interval-certified",
+ "t1": 4709203636333.162,
+ "t2": 4709203636373.16,
+ "span": 39.998,
+ "target": 4709203636353.162,
+ "target_offset": 20.000109375,
+ "sign_changes_located": 173,
+ "N_t1_estimate": 19743642385928,
+ "multiplicity": 2,
+ "bounds": {
+  "conservative": 5.918053993033506,
+  "trudgian": 3.7886518558897686
+ },
+ "per_bound": {
+  "conservative": {
+   "candidates": {
+    "-3": {
+     "excluded": true,
+     "reason": "no admissible M (slope quantised)"
+    },
+    "-2": {
+     "excluded": false,
+     "clean_admissible": false,
+     "n_admissible_taus": 161,
+     "admissible_tau_min": 0.0,
+     "admissible_tau_max": 39.998,
+     "admissible_taus_near_target": [],
+     "target_admissible": false
+    },
+    "-1": {
+     "excluded": true,
+     "reason": "no admissible M (slope quantised)"
+    },
+    "0": {
+     "excluded": false,
+     "clean_admissible": true,
+     "n_admissible_taus": 55,
+     "admissible_tau_min": 37.298134999999995,
+     "admissible_tau_max": 39.998,
+     "admissible_taus_near_target": [],
+     "target_admissible": false
+    },
+    "1": {
+     "excluded": true,
+     "reason": "D exceeds +B"
+    },
+    "2": {
+     "excluded": true,
+     "reason": "D exceeds +B"
+    },
+    "3": {
+     "excluded": true,
+     "reason": "D exceeds +B"
+    }
+   },
+   "target_admissible_under_any_c": false,
+   "verdict": "NO admissible configuration places an off-line zero at the target ordinate: it is EXCLUDED"
+  },
+  "trudgian": {
+   "candidates": {
+    "-3": {
+     "excluded": true,
+     "reason": "no admissible M (slope quantised)"
+    },
+    "-2": {
+     "excluded": false,
+     "clean_admissible": false,
+     "n_admissible_taus": 99,
+     "admissible_tau_min": 0.0,
+     "admissible_tau_max": 39.998,
+     "admissible_taus_near_target": [],
+     "target_admissible": false
+    },
+    "-1": {
+     "excluded": true,
+     "reason": "no admissible M (slope quantised)"
+    },
+    "0": {
+     "excluded": false,
+     "clean_admissible": true,
+     "n_admissible_taus": 34,
+     "admissible_tau_min": 38.3480825,
+     "admissible_tau_max": 39.998,
+     "admissible_taus_near_target": [],
+     "target_admissible": false
+    },
+    "1": {
+     "excluded": true,
+     "reason": "D exceeds +B"
+    },
+    "2": {
+     "excluded": true,
+     "reason": "D exceeds +B"
+    },
+    "3": {
+     "excluded": true,
+     "reason": "D exceeds +B"
+    }
+   },
+   "target_admissible_under_any_c": false,
+   "verdict": "NO admissible configuration places an off-line zero at the target ordinate: it is EXCLUDED"
+  }
+ }
+}

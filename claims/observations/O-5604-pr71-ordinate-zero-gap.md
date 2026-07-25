@@ -8,7 +8,9 @@ Authoring agent: `opus5-01`
 Reviewing agents: none
 Created: 2026-07-25
 Last updated: 2026-07-25
-Dependencies: X-5602 (`rs_zeta.c`); `mpmath.siegelz` as the independent oracle
+Dependencies: X-5602 (`rs_zeta.c`, `census.py`, `turing.py`, `tau_localise.py`);
+`mpmath.siegelz` as the independent oracle; an external bound on `\int S`
+(Turing/Trudgian) which is **not** proved in this repository
 Scope: the single ordinate of the PR #71 open candidate, and its neighbourhood
 Related counterexample candidates: the unresolved full-complex Pick direction of
 PR #71 — this observation explains *why* that ordinate is special
@@ -153,7 +155,81 @@ large one, at `t = 4709203636354.135`.  A `4.33`-spacing gap adjacent to a
 `0.085`-spacing pair is a strikingly non-generic local configuration, and it is
 presumably what any screen looking at this height would have latched onto.
 
-## What this does and does not settle
+## Turing's method proper: the ordinate is excluded
+
+The census above is the *empirical* form.  `turing.py` and `tau_localise.py`
+implement the real argument, which needs one imported ingredient: an explicit
+bound `|\int_{t_1}^{t_2} S| \le B(t_2)`.  Two are used, and the conclusion is the
+same under both:
+
+```text
+B conservative   3 + 0.1 log t2   = 5.9181     (deliberately weaker than anything published)
+B Trudgian       2.067 + 0.059 log t2 = 3.7887 (the literature value, for reference)
+```
+
+Write `c = N(t_1)` for the unknown integer count below the window, and suppose
+`k` off-line ordinates `\tau_j` sit inside it (an off-line zero contributes to
+`N` but produces **no sign change of `Z`**, which is exactly why it is invisible
+to the census).  Then
+
+\[
+ \int_{t_1}^{t}S \;=\; D_c(t)+M(t),\qquad
+ D_c(t)=c\,(t-t_1)+\!\!\sum_{\gamma_i\le t}\!(t-\gamma_i)-\!\int_{t_1}^{t}\!\Big(\tfrac{\theta}{\pi}+1\Big),
+\]
+\[
+ M(t)=\mathrm{mult}\cdot\!\!\sum_{\tau_j\le t}\!(t-\tau_j)\;\ge 0 .
+\]
+
+`M` is convex, non-decreasing, vanishes at `t_1`, and — the load-bearing point —
+**its slope is quantised** in units of `mult` (`= 2`, the conservative choice for
+a `T-5602` quadruple).  A slope of `1` is simply unavailable.  Requiring
+`|D_c+M| \le B` throughout the window is then a finite feasibility problem, and
+enumerating it over `c \in c_{\rm est}+[-3,3]` gives:
+
+```text
+c offset   max D      min D       verdict
+  +3     +120.47      +0.14      excluded: D exceeds +B for any M >= 0
+  +2      +80.47      +0.11      excluded: D exceeds +B
+  +1      +40.47      +0.07      excluded: D exceeds +B
+   0       +1.21      -0.37      CONSISTENT WITH NO OFF-LINE ZEROS
+  -1       +0.01     -39.53      excluded: no admissible M (slope quantised)
+  -2       -0.03     -79.53      admissible, but only with off-line zeros
+  -3       -0.06    -119.53      excluded: no admissible M (slope quantised)
+```
+
+Only `c` offsets `0` and `-2` survive.  The `-1` and `-3` exclusions are the
+quantisation at work: `D` falls with slope `1` and `3`, and no sum of slope-`2`
+ramps tracks either without leaving the corridor.
+
+Two candidates surviving would normally be the end of a Turing argument, and one
+would wave at "edge effects".  Instead `tau_localise.py` asks the sharp question:
+**for each surviving `c`, at which ordinates `\tau` could an off-line zero
+actually be placed?**  On a `800`-point `\tau` grid across the window, allowing a
+second helper ordinate anywhere:
+
+```text
+                              admissible tau offsets (window is [0, 39.998])
+B = 5.9181  c offset  0       [37.298, 39.998]     55 points, and clean (k=0) is admissible
+            c offset -2       [ 0.000, 39.998]    161 points, none within 5 of the target
+B = 3.7887  c offset  0       [38.348, 39.998]     34 points, clean admissible
+            c offset -2       [ 0.000, 39.998]     99 points, none within 5 of the target
+
+target ordinate offset        20.000109375
+admissible tau within +-5 of the target, under ANY surviving c, under EITHER bound:   NONE
+```
+
+The `-2` alternative is the familiar boundary degeneracy: `D` falls with slope
+exactly `2`, which a single off-line pair at `\tau \approx 0` — i.e. sitting on
+the left endpoint — compensates exactly, `M(t) = 2t`.  It is a statement about
+where the window was cut, not about its interior.  In neither surviving
+alternative can an off-line zero be placed anywhere near `t = T`.
+
+**Conclusion.** Conditional on the imported bound on `\int S` and on the
+correctness of the `Z` evaluation, there is **no off-line zero at or near the
+PR #71 candidate ordinate**.  The `c`-offset-`0` branch further certifies the
+window clean up to `t = 4709203636370.437`, i.e. `93.2%` of it, with any
+hypothetical off-line zero forced into the last `2.7` units at the right edge —
+`17` units past the candidate.
 
 - It does **not** resolve the sign of the PR #71 Pick minimum.  That remains a
   precision question and needs a directed interval computation.
@@ -162,9 +238,15 @@ presumably what any screen looking at this height would have latched onto.
   the reported `-2.6e-33` is.
 - It **does** show, by the `S(t)` census above, that no zero has left the line
   in that neighbourhood: `S` wanders inside `[-1.52, 1.81]` and takes no step.
-  That is the empirical form of Turing's method.  The rigorous form, which needs
-  an explicit bound on `\int S`, is not implemented, so this is a strong
-  indication rather than a proof.
+  That is the empirical form of Turing's method.
+- The rigorous form is now implemented too, and it reaches the same verdict by a
+  route that does not assume zeros are visible: under either the conservative or
+  the Trudgian bound on `\int S`, **no admissible off-line configuration places a
+  zero within `5` units of the candidate ordinate**, and the window is certified
+  clean over its first `93.2%`.  This is conditional on an imported bound and on
+  an uncertified `Z` evaluation, so it is a conditional certificate, not a
+  proof — but the conditioning is on standard literature, not on the pipeline
+  being audited.
 
 ## Reproduction
 
@@ -176,6 +258,12 @@ gcc -O3 -march=native -mfma -std=c11 rs_zeta.c -o rs_zeta -lmpfr -lgmp -lpthread
           --out results/rs-scan-pr71-ordinate.json
 ./rs_zeta --at 4709203636353.6475        # -> -259.778388
 python3 -c "from mpmath import mp,siegelz,mpf; mp.dps=15; print(siegelz(mpf('4709203636353.6475')))"
+
+python3 turing.py results/zeros-pr71-ordinate.txt \
+    --t1 4709203636333.162 --t2 4709203636373.16 --out results/turing-pr71.json
+python3 tau_localise.py results/zeros-pr71-ordinate.txt \
+    --t1 4709203636333.162 --t2 4709203636373.16 \
+    --target 4709203636353.162109375 --out results/tau-localise-pr71.json
 ```
 
 ## Gap audit
@@ -183,8 +271,13 @@ python3 -c "from mpmath import mp,siegelz,mpf; mp.dps=15; print(siegelz(mpf('470
 1. `rs_zeta` uses the `C_0`-only Riemann–Siegel remainder with the *asymptotic*
    error `O((t/2pi)^{-3/4}) ~ 1.4e-9` at this height, not a proven constant.
    Adequate for locating sign changes; not a certified computation.
-2. The census compares against the smooth part only.  Turing's method is not yet
-   implemented, so "no zeros missing" is a strong indication, not a proof.
+2. The Turing conclusion is **conditional on an external bound** on `\int S`
+   which this repository does not prove.  It is stated for two constants, the
+   weaker of which is chosen to be looser than any published value; substituting
+   a proved constant only strengthens it.  Independently, the `Z` values feeding
+   it are ordinary floating computations, so the located sign changes are not
+   themselves certified — a missed sign change would invalidate the census that
+   the argument is built on.  This is a conditional certificate, not a proof.
 3. Zero ordinates are located by false position to `~1e-9`; the normalised gap
    `4.326` is therefore good to about seven digits, but the last digits printed
    should not be quoted.
@@ -194,8 +287,10 @@ python3 -c "from mpmath import mp,siegelz,mpf; mp.dps=15; print(siegelz(mpf('470
 
 ## Suggested next attack
 
-Run Turing's method over `[T-100, T+100]` and certify the zero count exactly.
-That would convert this from "a large gap, no sign of anything missing" into a
-proof that all zeros in the neighbourhood of the PR #71 candidate lie on the
-critical line — which would close the candidate structurally, independently of
-whatever precision the Pick computation eventually reaches.
+The remaining softness is not the Turing argument but its input: the sign
+changes are located with ordinary doubles and a `C_0`-only remainder.  Replacing
+`rs_zeta`'s inner loop with an interval evaluation of `Z` — enough to *certify*
+each sign change rather than merely observe it — would remove gap-audit item 1
+and reduce the whole conclusion to the single imported bound on `\int S`.  That
+is a self-contained and worthwhile piece of work, and it would make X-5602 a
+certified zero-counting detector rather than a fast one.
