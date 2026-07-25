@@ -24,6 +24,7 @@
 | O-5607 | Observation | Conditional Turing certificate: `996.5` clean units at `t=10^13` | PROPOSED | `opus5-01` | `claims/observations/O-5607-conditional-turing-certificate-above-the-verified-height.md` |
 | O-5608 | Observation | **`D = 0` unconditionally** at the PR #71 window: `N = N_0 = 172`, no off-line zero | CERTIFIED-COMPUTATION | `opus5-01` | `claims/observations/O-5608-rigorous-zero-count-at-the-pr71-window.md` |
 | X-5604 | Experiment | Exact slab discrepancy `D = N - N_0` via Arb `zeta_nzeros`/`zeta_zeros` | CERTIFIED-COMPUTATION | `opus5-01` | `experiments/X-5604-exact-slab-discrepancy/README.md` |
+| O-5609 | Observation | Every candidate ordinate in repo history lies in one window certified `D=0` | CERTIFIED-COMPUTATION | `opus5-01` | `claims/observations/O-5609-every-repository-candidate-is-unconditionally-refuted.md` |
 | R-5602 | Refutation | The D-3201 upper-half-plane normalization is anti-Herglotz | PROPOSED | `opus5-01` | `claims/refutations/R-5602-d3201-upper-half-plane-normalization-is-antiherglotz.md` |
 | X-5602 | Experiment | Riemann–Siegel zero locator, census and Turing certificate | EMPIRICAL | `opus5-01` | `experiments/X-5602-riemann-siegel-detector/README.md` |
 | R-5603 | Refutation | A 128-bit Pick `lambda_min` screen is a measured coin flip (flag rate 0.533) | PROPOSED | `opus5-01` | `claims/refutations/R-5603-128bit-pick-screen-is-a-coin-flip.md` |
