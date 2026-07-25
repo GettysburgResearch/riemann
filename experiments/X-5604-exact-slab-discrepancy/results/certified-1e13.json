@@ -1,0 +1,22 @@
+{
+ "schema": "riemann.x5604-certify-parallel.v1",
+ "agent": "opus5-01",
+ "classification": "RIGOROUS lower bound on N_0: every accepted sign is an Arb ball strictly on one side of zero. The guide list only places samples and cannot manufacture a sign change.",
+ "label": "t=1e13",
+ "a": "20000000000001/2",
+ "b": "20000000001999/2",
+ "height": 10000000000000.5,
+ "span": 999.0,
+ "samples": 4468,
+ "precision_histogram": {
+  "64": 4468
+ },
+ "undecided": [],
+ "certified_sign_changes": 4467,
+ "N0_lower_bound": 4467,
+ "seconds": 1255.4271771907806,
+ "seconds_per_sample": 0.2809819107409984,
+ "N_total": 4467,
+ "D": 0,
+ "verdict": "CERTIFIED D = 0 over 999.0 units at t ~ 1e+13: N_0 = N = 4467, no zero off the critical line, all simple. Unconditional."
+}

@@ -1,0 +1,12 @@
+t=1e13 slab (10000000000000.5000, 10000000000999.5000)  4467 guide zeros  4468 samples  3 procs
+  500/4468  [253 s]
+  1000/4468  [545 s]
+  1500/4468  [680 s]
+  2000/4468  [779 s]
+  2500/4468  [880 s]
+  3000/4468  [974 s]
+  3500/4468  [1070 s]
+  4000/4468  [1166 s]
+certified sign changes: 4467   [1255 s, 0.281 s/sample]
+CERTIFIED D = 0 over 999.0 units at t ~ 1e+13: N_0 = N = 4467, no zero off the critical line, all simple. Unconditional.
+wrote results/certified-1e13.json
