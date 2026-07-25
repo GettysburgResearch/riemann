@@ -93,6 +93,36 @@ Every certified margin in this repository is an upper bound for
 a statement about the smallest off-line displacement the configuration could
 have revealed.
 
+### (d) The obstruction is not specific to D-0801
+
+Let `g` be **any** test function admissible in the Guinand–Weil formula that is
+even and real on the real axis — which every finite Weil-witness family in this
+repository uses, because the explicit-formula value has to be real for a sign
+claim to mean anything, and because Weil positivity needs `g \ge 0` on `\mathbb R`.
+Then the Taylor coefficients of `g` at any real point are real, so in
+
+\[
+ 4\operatorname{Re}g(\gamma+i\eta)
+ =4\sum_{n\ge0}\frac{\eta^n}{n!}\operatorname{Re}\!\left(i^n\right)g^{(n)}(\gamma)
+\]
+
+every odd `n` contributes `\operatorname{Re}(i^n)=0`.
+
+\[
+ \boxed{\;\text{For every real-on-}\mathbb R\text{ test, the explicit-formula
+ response to moving a conjugate pair off the critical line has no first-order
+ term in the displacement.}\;}
+\]
+
+This applies verbatim to `D-0001`, `D-0701` and `D-0801`, and to any future
+finite-witness family built the same way.  It is a structural feature of the
+Weil criterion, not a defect of the present construction: the same reality that
+makes the value a meaningful real number is what kills the linear response.
+Any programme hoping for first-order sensitivity to `eta` must therefore
+abandon either the reality of the functional or the quadruple symmetry — and
+both are load-bearing for the implication "negative value `\Rightarrow` RH is
+false".
+
 ## Proof
 
 *(a)* Evenness gives `g(-\gamma\pm i\eta)=g(\gamma\mp i\eta)`, so the four terms

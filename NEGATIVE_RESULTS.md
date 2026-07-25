@@ -161,6 +161,21 @@ optimization would lower it by an unknown factor.  The qualitative conclusion �
 that the avenue is many orders of magnitude short, for structural rather than
 numerical reasons — is robust to that.  The specific `0.0153` is not.
 
+### The obstruction is project-wide, not D-0801-specific
+
+`L-5604(d)`: for **any** test function that is real on the real axis — which
+every finite Weil-witness family here uses, since a real value is what a sign
+claim needs — the Taylor coefficients at a real point are real, so in
+`4 Re g(gamma + i eta)` every odd order contributes `Re(i^n) = 0`.  **The
+explicit-formula response to an off-critical displacement has no first-order
+term, for D-0001, D-0701, D-0801 and any successor built the same way.**
+
+This is a structural feature of the Weil criterion, not a defect of the present
+construction: the same reality that makes the value a meaningful real number is
+what kills the linear response.  A programme wanting first-order sensitivity to
+`eta` must abandon either the reality of the functional or the quadruple
+symmetry, and both are load-bearing for "negative value implies RH is false".
+
 This is the number the project had been missing.  Everything else in this
 session made the margin smaller and better bounded; this says how small it would
 have to become to matter.
