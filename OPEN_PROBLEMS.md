@@ -1,0 +1,134 @@
+# OPEN_PROBLEMS.md
+
+Open questions (`Q-####`), ranked within each section by this agent's estimate
+of value per unit effort.  Each entry states what would count as an answer.
+
+---
+
+## A. Highest value: extend the reach of the certified tools
+
+### Q-0001 — Riemann-Siegel with a certified remainder
+Euler-Maclaurin costs `O(T)` terms per evaluation, so every experiment here
+scales like `O(T^2)` and dies around `T ~ 10^4`.  A rigorous Riemann-Siegel
+expansion (with a proved remainder bound, not an asymptotic one) reduces the
+cost to `O(sqrt T)` and is the single change that would move this repository
+from toy heights to interesting ones.
+**Answer = ** a lemma in the style of L-0001 plus a drop-in replacement for
+`certzeta.eta_and_deta`, validated against the existing implementation in the
+overlap region and against the integer-count test of R-0002.
+
+### Q-0009 — directional (affine) enclosures instead of discs
+L-0006 returns a *disc* around the centre value.  Near a zero, where `|eta|` is
+small and `|eta'|` large, the disc contains `0` even though `eta` does not
+vanish on the ball, forcing tiny radii and — since the quadrature remainder
+scales like `rho^{-4}` — a factor `~10^4` in cost.  An affine enclosure
+`E_0 + E_1 x + D(0, eps)` evaluated as a *set* keeps the directional
+information.
+**Answer = ** a modified enclosure with a proof that it is valid, plus the
+measured improvement in the largest usable `rad` in `hermite.contour_moments`.
+
+### Q-0002 — a certified bound for `zeta'` in the style of L-0001
+Currently `eta'` comes from the Taylor model (fine) or a central difference
+(crude).  A direct Euler-Maclaurin bound for the derivative would enable
+**interval Newton / Krawczyk** certification, which gives *uniqueness* and a
+tight enclosure of the zero itself — strictly stronger than a winding count and
+the natural acceptance test for a localised candidate.
+
+---
+
+## B. Sharpen T-0001
+
+### Q-0006 — prove the sensitivity law with constants
+T-0001(e) says the Hankel determinant is the discriminant, so a displacement
+`delta` contributes a factor `-4 (delta/r)^2`.  Turn this into a theorem:
+*given* a box with `N` zeros whose on-line ordinates are separated by at least
+`g`, and a certified quadrature error `eps`, the criterion certifies every
+displacement `delta >= f(N, g, r, eps)` — with `f` explicit.
+**Why it matters:** it converts "raise the effort until it works" into a
+computable budget, and it tells us which boxes are worth attacking (the answer
+will favour boxes containing a tight Lehmer pair, since `g` small makes the
+competing factors small).
+
+### Q-0003 — independent reimplementation of L-0002 and T-0001
+Both lemmas are proved, but the claim "the code implements the proof" is
+unverified.  README §6 asks for an independent implementation, ideally in a
+different language or with a different rigorous library.  The guard constants
+in `winding.py` (`min_arg_gap`, subdivision depth) are heuristic and deserve
+adversarial attention.
+
+### Q-0004 — the parity blindness of the discriminant shortcut
+T-0001(e) detects an *odd* number of off-line conjugate pairs per box.  Design
+a subdivision strategy that provably defeats this: e.g. a nested family of
+boxes such that any configuration of off-line zeros yields an odd count in at
+least one member.
+
+---
+
+## C. Citations this agent could not verify
+
+These are flagged rather than used.  Each is a small literature task that would
+unblock real work.
+
+### Q-0005 — the Csordas-Smith-Varga Lehmer-pair constant
+X-0004 computes the discriminator
+`D_n = g_n^2 sum_{j != n,n+1} [(gamma_j-gamma_n)^-2 + (gamma_j-gamma_{n+1})^-2]`.
+CSV theory converts a pair with `D_n` below an explicit threshold into a lower
+bound for the de Bruijn-Newman constant `Lambda`.  **This agent could not
+reproduce the threshold or the resulting bound reliably from memory and
+therefore did not state them.**  Since `Lambda >= 0` is a theorem
+(Rodgers-Tao) and RH `<=>` `Lambda <= 0`, a Lehmer pair certifying
+`Lambda > 0` would *disprove RH* — so this constant is directly on the
+critical path.  Smallest computed `D_n` in `0 < t <= 2000` is `0.0259` at
+`gamma = 1977.17`.
+**Answer = ** the exact statement with its hypotheses, and a note on whether
+`D_n` must be computed with a rigorous tail (it must, for any certified use;
+X-0004's truncated sum is a *lower* bound for `D_n`, which is the wrong
+direction for certifying a pair).
+
+### Q-0007 — Robin's reduction to superabundant numbers
+X-0003 tests colossally abundant numbers because of the recollection that a
+Robin counterexample, if any exists, may be taken superabundant.  Unverified.
+A wrong recollection here causes a *missed* counterexample, never a false one,
+but it silently determines the entire search set.
+
+### Q-0008 — make O-0001's asymptotic rigorous
+The chain `Nicolas margin ~ e^gamma (x - theta(x))/x ~ x^{Theta-1}` was written
+informally.  Make each step an inequality with constants, and check the
+`psi` vs `theta` contamination (`psi - theta = O(sqrt x log^2 x)`) which enters
+at exactly the order of the signal.
+
+---
+
+## D. New directions
+
+### Q-0010 — Fourier analysis of `theta(x) - x` (candidate Z-0004)
+By the explicit formula the oscillation of `theta(x) - x` in `log x` has a
+component of frequency `gamma` and amplitude `~ x^{beta}` for each zero
+`beta + i gamma`.  A segmented sieve to `10^9` plus an FFT in `log x` searches
+**all heights simultaneously** at a cost independent of height — something no
+contour method can do.  It certifies nothing on its own; a detected anomalous
+frequency becomes a rectangle for L-0002/T-0001.  In this agent's view the
+highest-expected-value unexplored item in this file.
+
+### Q-0011 — the deficit as a first-class observable
+L-0004 compares a box count `N_box` with a sign-change count `m`.  Everything
+interesting lives in the **deficit** `N_box - m`, which is `0` throughout the
+certified range and would be `2` at the first off-line pair.  Build a scanner
+that reports the deficit as a time series rather than a boolean, run it as far
+as Q-0001 allows, and treat any nonzero value as a P1 alert.  Cheap, and it is
+the most direct possible detector of the event we are looking for.
+
+### Q-0012 — targeted Li coefficients
+The classical Li criterion uses the Mobius map `w = 1 - 1/s`, which sends
+`Re s > 1/2` to the unit disc.  *Every* map `w = (z - alpha)/(z + conj(alpha))`
+with `z = s - 1/2`, `Re alpha > 0` does the same, and each gives an equivalent
+criterion.  The amplification of an off-line zero at `1/2 - delta + i gamma` is
+`|w| = sqrt((u+delta)^2 + (gamma-v)^2) / sqrt((u-delta)^2 + (gamma-v)^2)` for
+`alpha = u + iv` — which is `1 + O(delta/gamma^2)` for the classical choice
+`alpha = 1/2` but **unbounded** for `alpha` tuned to `u ~ delta`, `v ~ gamma`.
+Crucially, on-line zeros always map to the unit circle, whatever `alpha`.
+The obstruction is that the `v`-grid must be as fine as `delta`, so a naive
+scan gains nothing; the question is whether the moment machinery of T-0001 —
+which computes *all* `alpha` at once from one set of contour integrals — closes
+that gap.  Worked out far enough in this session to be worth stating and not
+far enough to be worth claiming.
