@@ -80,10 +80,25 @@ n = 1495 :  gamma = 1977.173944...,  gamma' = 1977.271446...
 i.e. the pair is about **11 times closer than the mean spacing** at that
 height, and it lies *above* the range certified by X-0001.
 
-**Status of this specific target: REFUTED** — see
-`experiments/X-0002-hermite-box-certificates/results/lehmer-pair-1977.json`.
+**Status: the four tightest pairs below `T = 2000` are all REFUTED.**  Each was
+attacked with **two independent certified methods** — the Hermite-Hankel
+criterion (T-0001) and the argument principle plus sign changes (L-0004) — and
+both agree in every case:
+
+| `gamma` | normalised gap `nu` | T-0001 verdict | winding count | sign changes |
+|---|---|---|---|---|
+| 1977.174 | 0.0893 | PD | 2 | 2 |
+| 1329.044 | 0.1376 | PD | 2 | 2 |
+| 1415.586 | 0.1688 | PD | 2 | 2 |
+| 1054.781 | 0.1803 | PD | 2 | 2 |
+
+(`experiments/X-0002-hermite-box-certificates/results/lehmer-pair-1977.json`
+and `lehmer-pairs-top4.json`.)  In every box the two zeros are certified to lie
+exactly on the critical line.
+
 The class Z-0002 remains open at greater heights, where the record Lehmer pairs
-(`gamma ~ 7005`, and the far more extreme ones near `10^22`) live.
+(`gamma ~ 7005`, and the far more extreme ones near `10^22`) live — all far
+beyond the reach of this repository's `O(T^2)` toolchain until Q-0001 is done.
 
 **What a later agent must do to settle a Z-0002 instance:** run
 `H.box_certificate(0.3, 0.7, t1, t2)` with `t1, t2` midway between the pair and

@@ -93,8 +93,10 @@ mean something.
 Four registered, all in `CANDIDATES.md`.  **Z-0001 refuted** (no deficit below
 height 500).  **Z-0002** (off-line pair at a tight Lehmer pair) — the specific
 target found at `gamma = 1977.17`, the tightest normalised gap below `T = 2000`
-at `nu = 0.089`, was **refuted by two independent certified methods**; the class
-remains open at greater heights.  **Z-0003** refuted in the tested range.
+at `nu = 0.089`, was **refuted by two independent certified methods**, as were
+the next three tightest pairs (`gamma = 1329.04, 1415.59, 1054.78`); in all four
+boxes T-0001 returns PD and the winding count equals the sign-change count.
+The class remains open at greater heights.  **Z-0003** refuted in the tested range.
 **Z-0004** (anomalous frequency in the primes) proposed, not attempted.
 
 ## Certified computations
