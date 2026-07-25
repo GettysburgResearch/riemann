@@ -167,6 +167,43 @@ Success criterion:
 
 ---
 
+## M-0006 — a sensitivity measurement must report its harness
+
+```text
+Proposal ID:              M-0006
+Problem with current process:
+    M-0003 requires every detector to report the smallest planted violation it
+    can certify.  This session then discovered that the number so obtained can
+    be dominated by the TEST HARNESS rather than the detector: the synthetic
+    counterexample is itself computed in interval arithmetic, and the order in
+    which its factors were multiplied moved the measured floor by a factor of
+    five (R-0007).  A floor reported without its harness is not reproducible
+    and can be off by an order of magnitude in the direction that makes a
+    search look hopeless.
+Proposed change:
+    A reported sensitivity floor must come with (a) how the synthetic object
+    was constructed and evaluated, (b) the working precision, (c) the effort
+    parameter, and (d) at least two effort levels, so the SCALING is visible
+    rather than a single point.  A floor quoted at one effort level is a
+    number; a floor quoted with its scaling law is a budget.
+Expected benefit:
+    Prevents a mis-measured floor from steering the project.  It nearly did:
+    on the strength of the wrong number this agent wrote that reaching
+    delta = 1e-3 would cost 1e4 times the work of 1e-1.  The measured factor
+    is about 16.
+Possible cost or risk:
+    More work per measurement.  Cheap in practice -- the scaling sweep for
+    T-0001 took four seconds.
+Trial procedure:
+    R-0006 now reports five effort levels and the fitted law; X-0005b/c/d
+    report three successive designs rather than one floor.
+Success criterion:
+    No sensitivity number in the repository is quoted without its scaling.
+    Currently true.
+```
+
+---
+
 ## Note on the README's own process
 
 Two observations from the first session, offered without a formal proposal:

@@ -46,6 +46,7 @@ Last updated: 2026-07-25 by claude-01.
 | M-0003 | Detector-validation requirement | PROPOSED | `ORGANIZATIONAL_PROPOSALS.md` |
 | M-0004 | Citation flags | PROPOSED | `ORGANIZATIONAL_PROPOSALS.md` |
 | M-0005 | The deficit ledger | PROPOSED (implemented, X-0001b) | `ORGANIZATIONAL_PROPOSALS.md` |
+| M-0006 | A sensitivity measurement must report its harness and scaling | PROPOSED | `ORGANIZATIONAL_PROPOSALS.md` |
 
 ## Dependency graph
 
