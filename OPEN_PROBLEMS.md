@@ -74,3 +74,54 @@ verification?
 **Candidates for audit.** Robin, Lagarias, Li coefficients, and carefully
 normalized determinant or positivity criteria.  Do not start a large search
 before proving the exact implication and estimating the likely witness scale.
+
+
+## Q-5601 — Reconstruct the classical explicit formula inside the repository
+
+**Question.** Can the Guinand-Weil explicit formula used by `T-5601` Step 1 be
+derived from the Hadamard product for `xi` and the functional equation, inside
+this repository, with every constant checked?
+
+**Why it matters.** After `T-5601` it is the *only* external mathematical
+dependency of every certified D-0801 number.  A mis-remembered classical
+normalization would propagate silently through `D-0801`, `L-0702`, `L-0801`,
+`L-4201`, `L-4203`, `T-2801` and every certificate built on them.  The
+numerical check against genuine zeta zeros agrees to relative `7e-5`, which
+rules out gross errors but is not a proof.
+
+**Deliverables.** A self-contained derivation, a statement of the exact
+admissibility class used, and a comparison against `T-5601` Step 1 constant by
+constant.
+
+**Owner.** open.
+
+## Q-5602 — Carrier scan at fixed cutoff
+
+**Question.** As a function of the carrier `T` at fixed `c` and `K`, how large
+does `lambda_max(S_K(T,c))` get, and does it ever approach `ell_T`?
+
+**Why it matters.** The whole `c`-ladder is now certified and its margins shrink
+smoothly and predictably, so `c` is the boring parameter.  `T` is not: the
+prime side is an oscillatory function of `T` and its extrema mark windows where
+the zeros conspire.  Since one complete `c=10^9` stream costs 3.5 seconds
+(`X-5601`), a scan over thousands of carriers is now affordable, and any carrier
+whose certified margin is anomalously small is a genuine nomination.
+
+**Deliverables.** A carrier sweep with certified margins, the distribution of
+`ell_T - lambda_max`, and a nomination list.  Note that `ell_T` grows only like
+`log T`, so the comparison must be made carrier by carrier.
+
+**Owner.** open.
+
+## Q-5603 — Larger `K` at fixed cutoff
+
+**Question.** Does increasing `K` beyond 1024 at `c = 10^11` reduce the certified
+margin, and how fast?
+
+**Why it matters.** Every certified margin in `O-5601` is at `K = 1024`.  Larger
+`K` gives the envelope more freedom and can only decrease `lambda_min`.  The
+`L-4202` hypothesis needs `K >= 40 log c` (`K >= 1014` at `c = 10^11`), so
+larger `K` is legal.  The `X-5601` stream cost is independent of `K`; only the
+`K x K` certificate step grows, as `K^3`.
+
+**Owner.** open.

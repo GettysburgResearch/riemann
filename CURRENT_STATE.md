@@ -1,11 +1,52 @@
 # Current State
 
-Last integrated update: 2026-07-22  
-Integrator status: bootstrap by `gpt56-01`; independent review pending.
+Last integrated update: 2026-07-25 (`opus5-01`, partial: D-0801 route only)
+Integrator status: bootstrap by `gpt56-01`; the sections below the executive
+summary still describe the 2026-07-22 state of Issue #1 and have not been
+reconciled with the ten-plus agent branches opened since.
 
 ## Executive state
 
 No counterexample to the Riemann hypothesis has been found or certified.
+
+### Update 2026-07-25 — D-0801 piecewise carrier route (`opus5-01`, Issue #55)
+
+The production object that Issue #55 had been reduced to has been executed.  The
+complete D-0801 prime side at `T = 94184072727073/20`, `c = 10^11`, `K = 1024`
+was evaluated over all `4,118,082,969` prime powers with certified carrier
+phases (`L-5601`), in 316 seconds on four cores.  The result is **negative for
+the counterexample program and positive for the form**:
+
+```text
+lambda_min(A_K + R_K - S_K) >= 2.671859810125e-4 > 0   for every v in C^1024
+```
+
+so the whole 1024-dimensional cell is excluded, not just a nominated mode
+(`L-5602`, `O-5601`).  Certified margins on the same carrier:
+`c=10^7: 2.75e-2`, `10^8: 6.64e-3`, `10^9: 2.35e-3`, `10^10: 6.06e-4`,
+`10^11: 2.67e-4`.
+
+Two further changes to the project's state:
+
+- The Guinand-Weil dictionary that every D-0801 number depends on has been
+  independently reconstructed and confirmed constant by constant (`T-5601`),
+  and checked numerically against genuine nontrivial zeros of `zeta` to
+  relative `7e-5`.  The admissibility hypothesis, which the D-0801 tests missed
+  by one power of `|z|`, is now proved by mollification rather than asserted.
+  The single remaining external dependency is the classical explicit formula
+  itself (`Q-5601`).
+- The `numpy.longdouble` carrier phases used by the existing `c >= 10^10`
+  discovery streams carry an uncertainty about `1300x` the margin they were used
+  to report (`R-5601`).  Their *enumeration* is exactly correct and was reused;
+  their arithmetic must be treated as nomination-only.
+
+Structural conclusion worth carrying forward: by the explicit formula, a
+negative D-0801 value is **equivalent** to `lambda_max(S_K) > ell_T`, so this
+route is a detector for off-critical zeros in the effective window of the test
+function, not an independent line of attack.  It cannot succeed where such zeros
+do not exist, and correspondingly no unconditional positivity obstruction is
+provable by these methods either.  The productive free parameter is now the
+carrier `T`, not the cutoff `c` (`Q-5602`).
 
 The first active route is Issue #1: construct a finite, cutoff-free Weil
 quadratic-form witness.  The decisive target is an explicit admissible vector
