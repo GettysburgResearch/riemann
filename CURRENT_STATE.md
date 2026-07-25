@@ -66,7 +66,12 @@ it.  M-0005 proposes promoting that deficit to a monitored quantity.
 This is the question README §10 keeps asking and the one most easily dodged.
 Measured, not guessed:
 
-* **T-0001 detector.**  Measured floors on the planted-pair box:
+* **T-0001 detector.**  First, the distinction that matters: T-0001(c) is an
+  *equivalence*, so a `PD` verdict excludes an off-critical zero in that box at
+  **every** displacement, however small — there is no exclusion floor.  The
+  floors below are for the opposite direction: how large a real counterexample
+  must be before the method *announces* it (`NOT_PSD`) instead of abstaining.
+  Measured floors on the planted-pair box:
   `delta = 0.1` at `nsub = 16`, `0.02` at `32`, `0.005` at `64` (the smallest
   displacement tested, not a limit of the method).  Each doubling of effort
   buys a factor of 4-5 in `delta`, confirming the `nsub^{-2}` law; since a
@@ -75,10 +80,15 @@ Measured, not guessed:
   An earlier version of this line said the floor was `0.1` and that `10^-3`
   would cost `10^4` times the work; that was an artefact of the test harness's
   own interval enclosures, not of the method (R-0007).
-* **L-0004 count matching.**  Exact — it has *no* sensitivity floor in
-  displacement; any off-line pair anywhere in the box changes the deficit by 2.
-  Its limit is purely the height it can reach: cost is `O(T^2)`, which dies
-  around `T ~ 10^4`.  This is the strongest tool we have and Q-0001
+  On real `zeta` boxes the announcement threshold is
+  `delta ~ (gap/2) sqrt(rho)` (X-0002b): `0.031 .. 0.280` on ordinary boxes but
+  `0.0043 .. 0.0057` on the four Lehmer-pair boxes — fifty times better where
+  the zeros are closest, which is why Z-0002 aims there.
+* **L-0004 count matching.**  Also exact in displacement — any off-line pair
+  anywhere in the box changes the deficit by 2, and unlike T-0001 it *announces*
+  at any displacement too, since the deficit is an integer.  Its limit is purely
+  the height it can reach: cost is `O(T^2)`, which dies around `T ~ 10^4`.  On
+  present evidence this is the strongest tool in the repository, and Q-0001
   (Riemann-Siegel) is what unlocks it.
 * **X-0003 arithmetic.**  Exact, but the search set is hopeless to exhaust.  Its
   real output is the *rate* in O-0001, not the search.
