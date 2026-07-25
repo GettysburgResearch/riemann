@@ -1,0 +1,66 @@
+{
+  "classification": "SYNTHETIC_MODEL",
+  "log_terms": 192,
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "ordinate": {
+    "denominator": 1,
+    "numerator": 0
+  },
+  "points": [
+    {
+      "id": "u3",
+      "point_sha256": "22552ad59607f818eed08ac19745538b3c07cf1bc5a2719e957352329ac37bcc",
+      "u": {"denominator": 1, "numerator": 3},
+      "xi_rectangle": {
+        "imag": {"lower": {"denominator": 1, "numerator": 0}, "upper": {"denominator": 1, "numerator": 0}},
+        "real": {"lower": {"denominator": 1, "numerator": -2097152}, "upper": {"denominator": 1, "numerator": -2097152}}
+      }
+    },
+    {
+      "id": "u4",
+      "point_sha256": "6133e57b11c4c57dc49765f4836f31fbeee5d2fb82cf04355baacc025af50364",
+      "u": {"denominator": 1, "numerator": 4},
+      "xi_rectangle": {
+        "imag": {"lower": {"denominator": 1, "numerator": 0}, "upper": {"denominator": 1, "numerator": 0}},
+        "real": {"lower": {"denominator": 1, "numerator": -9765625}, "upper": {"denominator": 1, "numerator": -9765625}}
+      }
+    },
+    {
+      "id": "u6",
+      "point_sha256": "572d5c13ed90ca483e407a8515e4d2074c9d2f047e8d97c84eaaaca082cc2784",
+      "u": {"denominator": 1, "numerator": 6},
+      "xi_rectangle": {
+        "imag": {"lower": {"denominator": 1, "numerator": 0}, "upper": {"denominator": 1, "numerator": 0}},
+        "real": {"lower": {"denominator": 1, "numerator": 282475249}, "upper": {"denominator": 1, "numerator": 282475249}}
+      }
+    },
+    {
+      "id": "u7",
+      "point_sha256": "141ad4191ed1e4b716864895a4dd7a53bbf5eb785d042386939b68c4012f2a67",
+      "u": {"denominator": 1, "numerator": 7},
+      "xi_rectangle": {
+        "imag": {"lower": {"denominator": 1, "numerator": 0}, "upper": {"denominator": 1, "numerator": 0}},
+        "real": {"lower": {"denominator": 1, "numerator": 2147483648}, "upper": {"denominator": 1, "numerator": 2147483648}}
+      }
+    }
+  ],
+  "rows": [
+    {"id": "raw-monotonicity-hidden", "kind": "raw-monotonicity", "left": "u3", "right": "u4"},
+    {"id": "deflated-monotonicity-exposes", "kind": "deflated-monotonicity", "left": "u3", "right": "u4"},
+    {"columns": ["u4", "u7"], "id": "raw-loewner-hidden", "kind": "raw-cross-loewner-determinant", "rows": ["u3", "u6"]},
+    {"columns": ["u4", "u7"], "id": "deflated-loewner-exposes", "kind": "deflated-cross-loewner-determinant", "rows": ["u3", "u6"]}
+  ],
+  "schema": "riemann.xi-modulus-zero-deflation.v1",
+  "zero_bins": [
+    {
+      "count_lower": 20,
+      "gate": {
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "status": "SYNTHETIC_CRITICAL_LINE_ZERO_COUNT"
+      },
+      "id": "line-mass-y1",
+      "lower_ordinate": {"denominator": 1, "numerator": 1},
+      "upper_ordinate": {"denominator": 1, "numerator": 1}
+    }
+  ]
+}

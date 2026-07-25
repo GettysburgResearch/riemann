@@ -1,0 +1,27 @@
+{
+  "log_terms": 256,
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "rows": [
+    {"id":"m-x-20-x-18","kind":"deflated-monotonicity","left":"x-20","right":"x-18"},
+    {"id":"m-x-18-x-16","kind":"deflated-monotonicity","left":"x-18","right":"x-16"},
+    {"id":"m-x-16-x-14","kind":"deflated-monotonicity","left":"x-16","right":"x-14"},
+    {"id":"m-x-14-x-12","kind":"deflated-monotonicity","left":"x-14","right":"x-12"},
+    {"id":"m-x-12-x-10","kind":"deflated-monotonicity","left":"x-12","right":"x-10"},
+    {"id":"m-x-10-x-8","kind":"deflated-monotonicity","left":"x-10","right":"x-8"},
+    {"id":"m-x-8-x-6","kind":"deflated-monotonicity","left":"x-8","right":"x-6"},
+    {"id":"m-x-6-x-5","kind":"deflated-monotonicity","left":"x-6","right":"x-5"},
+    {"id":"d2-0","kind":"deflated-cross-loewner-determinant","rows":["x-20","x-16"],"columns":["x-18","x-14"]},
+    {"id":"d2-1","kind":"deflated-cross-loewner-determinant","rows":["x-18","x-14"],"columns":["x-16","x-12"]},
+    {"id":"d2-2","kind":"deflated-cross-loewner-determinant","rows":["x-16","x-12"],"columns":["x-14","x-10"]},
+    {"id":"d2-3","kind":"deflated-cross-loewner-determinant","rows":["x-14","x-10"],"columns":["x-12","x-8"]},
+    {"id":"d2-4","kind":"deflated-cross-loewner-determinant","rows":["x-12","x-8"],"columns":["x-10","x-6"]},
+    {"id":"d2-5","kind":"deflated-cross-loewner-determinant","rows":["x-10","x-6"],"columns":["x-8","x-5"]},
+    {"id":"d3-0","kind":"deflated-cross-loewner-determinant","rows":["x-20","x-16","x-12"],"columns":["x-18","x-14","x-10"]},
+    {"id":"d3-1","kind":"deflated-cross-loewner-determinant","rows":["x-18","x-14","x-10"],"columns":["x-16","x-12","x-8"]},
+    {"id":"d3-2","kind":"deflated-cross-loewner-determinant","rows":["x-16","x-12","x-8"],"columns":["x-14","x-10","x-6"]},
+    {"id":"d3-3","kind":"deflated-cross-loewner-determinant","rows":["x-14","x-10","x-6"],"columns":["x-12","x-8","x-5"]},
+    {"id":"d4-0","kind":"deflated-cross-loewner-determinant","rows":["x-20","x-16","x-12","x-8"],"columns":["x-18","x-14","x-10","x-6"]},
+    {"id":"d4-1","kind":"deflated-cross-loewner-determinant","rows":["x-18","x-14","x-10","x-6"],"columns":["x-16","x-12","x-8","x-5"]}
+  ],
+  "schema": "riemann.xi-modulus-zero-deflation-config.v1"
+}
