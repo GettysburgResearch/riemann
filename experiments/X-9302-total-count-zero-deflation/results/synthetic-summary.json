@@ -1,0 +1,39 @@
+{
+  "certified_negative_rows": 2,
+  "full_result_sha256": "6969cc5e8fc2464088d5cf3f018e160f421a8e8d67062f95b3a42fa840c01526",
+  "proof_boundary": "Exact synthetic arithmetic only; no Riemann-xi value or counterexample.",
+  "rows": [
+    {
+      "id": "raw-monotonicity-hidden",
+      "kind": "raw-monotonicity",
+      "lower_scientific": "9.096938512952100000000000E+13",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "9.096938512952100000000000E+13"
+    },
+    {
+      "id": "deflated-monotonicity-exposes",
+      "kind": "deflated-monotonicity",
+      "lower_scientific": "-3.145728000000000000000000E+26",
+      "status": "CERTIFIED_NEGATIVE",
+      "upper_scientific": "-3.145728000000000000000000E+26"
+    },
+    {
+      "id": "raw-loewner-hidden",
+      "kind": "raw-cross-loewner-determinant",
+      "lower_scientific": "8.201931072456714094048855E-1",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "8.201931072456714094048855E-1"
+    },
+    {
+      "id": "deflated-loewner-exposes",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_scientific": "-1.921812055672805698668410E+0",
+      "status": "CERTIFIED_NEGATIVE",
+      "upper_scientific": "-1.921812055672805698668410E+0"
+    }
+  ],
+  "schema": "riemann.x9302-synthetic-summary.v1",
+  "unresolved_rows": 0,
+  "verdict": "SYNTHETIC_TOTAL_COUNT_DEFLATION_SEPARATION",
+  "verification_sha256": "2167364ba619c6c1328906678560e82fa195c7ebc817f637874b09ff3e4ecefb"
+}
