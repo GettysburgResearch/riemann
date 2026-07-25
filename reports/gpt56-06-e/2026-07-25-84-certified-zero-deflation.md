@@ -4,7 +4,7 @@ Agent: `gpt56-06-e`
 Date: 2026-07-25  
 Issue: #84  
 Branch: `agent/gpt56-06-e/84-certified-zero-deflation`  
-Status: proposed theorem and exact synthetic checker; no RH counterexample
+Status: proposed theorem, exact checker, and rigorous low-height control; no RH counterexample
 
 ## Starting obstruction
 
@@ -73,7 +73,7 @@ component at a point where the old finite witness is strictly positive.
 - L-8403: Loewner-lower zero-bin matrix blocks.
 - L-8404: directed Hardy-Z sign changes give one-zero lower-count bins.
 - M-8401: proof-producing search architecture.
-- X-8401: exact rational checker and synthetic controls.
+- X-8401: exact rational checker and controls.
 
 All theorem claims are `PROPOSED` pending independent reconstruction.
 
@@ -92,11 +92,45 @@ Nine adversarial tests pass. Mutations reject overlapping bins, nonpositive
 counts, blocking gates, false claimed intervals, changed vectors, and Boolean
 counts.
 
+## Actual Riemann-xi calibration
+
+The branch also runs the complete finite pipeline on actual low-height Riemann
+data:
+
+1. `python-flint 0.9.0` / Arb at 192 bits computes `acb.zeta_zero(1)`, giving a
+   directed critical-line zero interval of width about `1.02e-56`.
+2. The exact sample ordinate is the dyadic midpoint of that interval and
+   `x=1/20`.
+3. `F=xi'/xi` is evaluated independently as the differentiated completed product
+   divided by `xi` and as the corrected completion plus `zeta'/zeta`.
+4. A separate standard-library replay intersects the two real intervals,
+   verifies positive zeta and xi denominator lower bounds, subtracts the exact
+   Poisson lower contribution, and reconstructs the residual.
+
+The primitive value is approximately
+
+```text
+Re F(s) = 20.0033840667360504217...
+```
+
+The certified first-zero contribution is just below `20`, leaving the rigorous
+positive residual
+
+```text
+0.0033840667360504217... < residual
+                               < 0.0033840667360504218....
+```
+
+This is the expected RH-compatible result and validates the producer → certified
+zero → exact deflation → independent algebraic replay pipeline. It is a rigorous
+numerical control pending parent analytic review, not evidence for RH outside
+that finite object.
+
 ## What is not claimed
 
 - No actual Hardy-Z bin at the active high heights was certified in this session.
-- No actual Riemann `F` interval was deflated.
-- No negative Riemann-xi residual was produced.
+- No negative actual Riemann-xi residual was produced.
+- The low-height numerical control does not promote D-3201/L-3201.
 - No `Z-####` candidate is allocated.
 
 ## Immediate production target
@@ -108,7 +142,7 @@ primitive and zero-bin tables.
 
 The route should prioritize new ordinate windows. PR #67 already proves that
 optimization over its unchanged same-height value table is closed by exact
-feasible anchors.
+feasible anchors; zero-count features genuinely enlarge that cone.
 
 ## Review targets
 
@@ -118,5 +152,6 @@ feasible anchors.
 4. Reconstruct the operator perturbation constant in L-8403.
 5. Verify that Hardy-Z sign changes certify actual critical-line zeros without
    assuming RH.
-6. Attack double-counting and endpoint-zero edge cases.
-7. Keep zero-count soundness separate from `xi'/xi` primitive soundness.
+6. Reproduce the first-zero control with an independent special-function backend.
+7. Attack double-counting and endpoint-zero edge cases.
+8. Keep zero-count soundness separate from `xi'/xi` primitive soundness.
