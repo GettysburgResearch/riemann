@@ -1,0 +1,83 @@
+{
+  "cases": [
+    {
+      "determinant_ratio": {"denominator": "25", "numerator": "-11"},
+      "green": {
+        "D": {"denominator": "1", "numerator": "100"},
+        "a": {"denominator": "1", "numerator": "10"},
+        "b": {"im": "0", "re": "0"},
+        "d": {"denominator": "1", "numerator": "10"},
+        "r": {"denominator": "1", "numerator": "0"}
+      },
+      "id": "leading-vector-misses-crossing",
+      "lambda_interval": {
+        "lower": {"denominator": "1", "numerator": "10"},
+        "upper": {"denominator": "1", "numerator": "10"}
+      },
+      "leading_susceptibility": {"denominator": "1", "numerator": "0"},
+      "negative_moat": {"denominator": "1000", "numerator": "1"},
+      "positive_moat": {"denominator": "1000", "numerator": "-3"},
+      "status": "ROBUST_CROSSING"
+    },
+    {
+      "determinant_ratio": {"denominator": "25", "numerator": "9"},
+      "green": {
+        "D": {"denominator": "1", "numerator": "100"},
+        "a": {"denominator": "1", "numerator": "10"},
+        "b": {"im": "0", "re": "0"},
+        "d": {"denominator": "1", "numerator": "10"},
+        "r": {"denominator": "1", "numerator": "0"}
+      },
+      "id": "robust-no-crossing",
+      "lambda_interval": {
+        "lower": {"denominator": "1", "numerator": "10"},
+        "upper": {"denominator": "1", "numerator": "10"}
+      },
+      "leading_susceptibility": {"denominator": "1", "numerator": "0"},
+      "negative_moat": {"denominator": "1000", "numerator": "-3"},
+      "positive_moat": {"denominator": "1000", "numerator": "1"},
+      "status": "ROBUST_POSITIVE"
+    },
+    {
+      "determinant_ratio": {"denominator": "16", "numerator": "-7"},
+      "green": {
+        "D": {"denominator": "4", "numerator": "15"},
+        "a": {"denominator": "1", "numerator": "2"},
+        "b": {"im": "2/5", "re": "3/10"},
+        "d": {"denominator": "1", "numerator": "2"},
+        "r": {"denominator": "2", "numerator": "1"}
+      },
+      "id": "complex-phase-crossing",
+      "lambda_interval": {
+        "lower": {"denominator": "2", "numerator": "5"},
+        "upper": {"denominator": "2", "numerator": "5"}
+      },
+      "leading_susceptibility": null,
+      "negative_moat": {"denominator": "20", "numerator": "1"},
+      "positive_moat": {"denominator": "20", "numerator": "-3"},
+      "status": "ROBUST_CROSSING"
+    },
+    {
+      "determinant_ratio": {"denominator": "1", "numerator": "0"},
+      "green": {
+        "D": {"denominator": "1", "numerator": "100"},
+        "a": {"denominator": "1", "numerator": "10"},
+        "b": {"im": "0", "re": "0"},
+        "d": {"denominator": "1", "numerator": "10"},
+        "r": {"denominator": "1", "numerator": "0"}
+      },
+      "id": "exact-boundary-is-unresolved",
+      "lambda_interval": {
+        "lower": {"denominator": "1", "numerator": "10"},
+        "upper": {"denominator": "1", "numerator": "10"}
+      },
+      "leading_susceptibility": null,
+      "negative_moat": {"denominator": "1", "numerator": "0"},
+      "positive_moat": {"denominator": "1", "numerator": "0"},
+      "status": "UNRESOLVED_MOAT"
+    }
+  ],
+  "proof_boundary": "finite synthetic Hermitian matrices only; no D-0801 production sign",
+  "schema": "riemann.endpoint-green-threshold.synthetic.v1",
+  "status": "EXACT_SYNTHETIC_GREEN_CERTIFICATES_RECONSTRUCTED"
+}
