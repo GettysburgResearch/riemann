@@ -1,0 +1,15 @@
+{
+  "precision_bits": 96,
+  "series_cap": 3,
+  "points": [
+    {
+      "id": "carrier44-x10",
+      "x": {"mantissa": "1", "exponent": -10},
+      "t": {"mantissa": "20225875608343121406355", "exponent": -32}
+    }
+  ],
+  "channels": [
+    {"id": "scalar-carrier44-x10", "kind": "scalar", "point": "carrier44-x10"}
+  ],
+  "declared_channel_ids": ["scalar-carrier44-x10"]
+}
