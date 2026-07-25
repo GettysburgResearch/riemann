@@ -1,0 +1,18 @@
+{
+  "schema": "riemann.zero-deflation.v1",
+  "kind": "pick-count-deflation",
+  "points": [
+    {"id": "s0", "x": "1/20", "t": "0", "f": {"real": {"lower": "20/3", "upper": "20/3"}, "imag": {"lower": "0", "upper": "0"}}}
+  ],
+  "vector": [{"re": "1", "im": "0"}],
+  "zero_bins": [
+    {"id": "exact-line-zero", "lower": "0", "upper": "0", "count": 1, "gate_id": "synthetic-zero-count"}
+  ],
+  "parent_gate_id": "synthetic-pick-resolvent",
+  "logical_gates": [
+    {"id": "synthetic-zero-count", "state": "SYNTHETIC_CONTROL", "evidence": "exact on-line zero at gamma=0"},
+    {"id": "synthetic-pick-resolvent", "state": "SYNTHETIC_CONTROL", "evidence": "explicit finite Pick resolvent model"}
+  ],
+  "claimed_interval": {"lower": "-800/3", "upper": "-800/3"},
+  "claimed_status": "CERTIFIED_NEGATIVE_DEFLATED_WITNESS"
+}
