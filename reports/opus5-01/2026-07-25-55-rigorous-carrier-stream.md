@@ -369,3 +369,92 @@ project has not had.
 
 The producer already supports cutoffs up to `2^{61-JBITS}`; the `2^37` guard was
 lifted and re-validated against the oracle during this session.
+
+---
+
+## Addendum 2 — past the barrier, the archimedean gate becomes the whole problem
+
+Continuation after a container restart.  Two results, one of them a near-miss
+with a false positive that is worth reading carefully.
+
+### C. The depth grid (`O-5603`)
+
+Sweeping both the deficit and `K` at a fixed cheap cutoff `c = 10^9` (3.5 s per
+stream, carrier moved down as `T = 2 pi 10^m`) gives a sharper signature of the
+C-5601 barrier than the cutoff ladder did:
+
+- **below** the barrier the leading margin saturates in `K` (ratios `1.5, 1.1`
+  across `K = 1024, 2048, 4096` at deficit `0`);
+- **past** it the margin falls like `K^{-2}` (successive ratios cluster on `4` at
+  deficits `+0.37, +0.73, +1.10, +1.47`).
+
+That is what the counting argument predicts — past the barrier extra cells buy
+genuine new zeros to place — and it means the *character* of the problem changes
+there.  The `L-4202` gate scales like `K/T` while the margin falls like
+`K^{-2}`, so `margin/gate ~ T/K^3`: past the barrier the archimedean bound, not
+the prime side, is what stops the search.  Every deep grid point is unresolvable
+against the gate despite the prime stream being certified to `3e-13`.
+
+Smallest leading margin seen anywhere: `1.195e-7` at deficit `+1.832`,
+`K = 2048`.  At `K = 4096` the same deficit gives `-3.77e-7`, i.e. the leading
+screen has gone negative.
+
+### D. The exact blocks, and a false positive avoided (`O-5603`)
+
+So I assembled `A_K` (L-4201) and `R_K` (L-4203) directly instead of bounding
+them — one-panel-per-oscillation Gauss-Legendre on the `K` compact oscillatory
+integrals, plus the two rank-one pole factors.  At `c = 10^9`, `K = 1024`,
+`T = 6283.185307` (deficit `+2.199`):
+
+```text
+lambda_min(ell_T I - S_K)      =  -0.3373320       <-- leading screen
+lambda_min(A_K + R_K - S_K)    =  +3.34763e-6      <-- exact form
+```
+
+RH is verified far above `T = 6283`, so nonnegative is the only admissible
+answer.  **A pipeline that screened on the leading matrix alone would have
+reported a spectacular false counterexample at these parameters**, and the
+`L-4202` gate (`B_A = 0.129`) is far too coarse to have caught it — what rescues
+the sign is mostly `||R_K|| = 0.574`, the pole block that PR #37 and PR #44
+dropped entirely.  Now locked in as a regression test.
+
+Measured against the uniform bounds:
+
+| `T` | `||A_K - ell_T I||` | `B_A` (L-4202) | ratio |
+|---|---|---|---|
+| `6283.185307` | `1.379e-3` | `1.287e-1` | 93 |
+| `62831.85307` | `1.254e-4` | `1.287e-2` | 103 |
+| `628318.5307` | `1.252e-5` | `1.287e-3` | 103 |
+
+The `1/T` shape of L-4202 is confirmed; its constant is a stable factor `~100`
+too large, which is precisely the carrier-phase cancellation among diagonals its
+proof discards (`Q-5605`).  On top of that sits a second, larger pessimism: at
+`T = 62831.85` a correction of norm `1.25e-4` moves `lambda_min` by only
+`2.4e-8`, because it acts almost orthogonally to the minimizing direction.  An
+operator-norm gate cannot see that; only assembling the matrix can.
+
+Two further checks that had never been run anywhere in the repository, both now
+passing: `L-4203`'s rank-two formula against a direct evaluation of
+`2 g_{T,v}(i/2)/h` for random complex vectors, and `L-4202`'s `Ci`/`q_b`
+decomposition of `alpha_0` against the raw `L-4201` integral.
+
+### Revised roadmap
+
+The bottleneck moved twice in this session.  It was the phase arithmetic (fixed,
+`L-5601`); then it was the cutoff relative to the barrier (`C-5601`); now it is
+the archimedean gate.  The next deliverable is therefore **not** more primes:
+
+1. `Q-5604` — a *rigorous* quadrature for the `K` compact integrals of L-4201:
+   outward-interval Gauss-Legendre with a Bernstein remainder while
+   `T b <~ 10^5`, and the endpoint asymptotic expansion (integration by parts at
+   the three kinks per lag) beyond, where it gets *more* accurate as `T` grows.
+   Without it no sign past the barrier can be certified; with it the resolvable
+   region opens by several orders of magnitude.
+2. `Q-5605` — the cheap version: sharpen L-4202 by bounding through the Toeplitz
+   symbol instead of a row sum, recovering the factor `~100` by proof rather
+   than by computation.
+3. Only then push `c` and `T` together.
+
+18 tests pass.  Still no counterexample, still no `Z-####` — and one that a less
+careful pipeline would have claimed was caught and turned into a regression
+test.
