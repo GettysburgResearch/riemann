@@ -1,0 +1,112 @@
+name: arb-xi-modulus
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-g/75-xi-modulus-witness
+    paths:
+      - .github/workflows/arb-xi-modulus.yml
+  pull_request:
+    paths:
+      - experiments/X-7501-xi-modulus/RUN_MODULUS_SCAN.md
+      - .github/workflows/arb-xi-modulus.yml
+
+concurrency:
+  group: arb-xi-modulus-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  modulus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous backend
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'python-flint==0.9.0'
+
+      - name: Compile and run exact checker tests
+        run: |
+          python -m compileall -q \
+            experiments/X-7501-xi-modulus/arb_modulus_producer.py \
+            experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/compare_precision.py \
+            experiments/X-7501-xi-modulus/tests
+          python -m unittest discover -s experiments/X-7501-xi-modulus/tests -v
+
+      - name: Produce 192-bit direct xi rectangles
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/X-7501-xi-modulus/results
+          cp experiments/X-7501-xi-modulus/configs/high-carrier-horizontal.json /tmp/p192.json
+          python - <<'PY'
+          import json
+          p='/tmp/p192.json'
+          d=json.load(open(p))
+          d['precision_bits']=192
+          json.dump(d,open(p,'w'),indent=2)
+          PY
+          /usr/bin/time -v python experiments/X-7501-xi-modulus/arb_modulus_producer.py \
+            /tmp/p192.json \
+            --output experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
+            2>experiments/X-7501-xi-modulus/results/high-carrier-p192.time.txt
+          set +e
+          python experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p192-verification.json
+          status=$?
+          set -e
+          test "$status" -le 1
+
+      - name: Produce 256-bit direct xi rectangles
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp experiments/X-7501-xi-modulus/configs/high-carrier-horizontal.json /tmp/p256.json
+          python - <<'PY'
+          import json
+          p='/tmp/p256.json'
+          d=json.load(open(p))
+          d['precision_bits']=256
+          json.dump(d,open(p,'w'),indent=2)
+          PY
+          /usr/bin/time -v python experiments/X-7501-xi-modulus/arb_modulus_producer.py \
+            /tmp/p256.json \
+            --output experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
+            2>experiments/X-7501-xi-modulus/results/high-carrier-p256.time.txt
+          set +e
+          python experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p256-verification.json
+          status=$?
+          set -e
+          test "$status" -le 1
+
+      - name: Require exact precision nesting
+        run: |
+          python experiments/X-7501-xi-modulus/compare_precision.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
+            experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
+            --output experiments/X-7501-xi-modulus/results/high-carrier-comparison.json
+          sha256sum experiments/X-7501-xi-modulus/results/* \
+            >experiments/X-7501-xi-modulus/results/SHA256SUMS
+          cat experiments/X-7501-xi-modulus/results/high-carrier-comparison.json
+
+      - name: Upload direct xi-modulus artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-xi-modulus-high-carrier
+          path: experiments/X-7501-xi-modulus/results/
+          retention-days: 30
+          if-no-files-found: warn
