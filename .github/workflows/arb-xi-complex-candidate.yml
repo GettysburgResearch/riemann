@@ -7,6 +7,12 @@ on:
     paths:
       - '.github/workflows/arb-xi-complex-candidate.yml'
       - 'experiments/X-3904-complex-pick-recheck/**'
+  pull_request:
+    branches:
+      - agent/gpt56-03-e/39-arb-xi-passivity
+    paths:
+      - '.github/workflows/arb-xi-complex-candidate.yml'
+      - 'experiments/X-3904-complex-pick-recheck/**'
   workflow_dispatch:
 
 concurrency:
