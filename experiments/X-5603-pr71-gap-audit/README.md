@@ -55,10 +55,14 @@ For a rigorously line-empty interval, the criterion simplifies:
 Z(t) != 0 on (a,b) and N(a,b)>0  =>  RH is false.
 ```
 
-## Rigorous producer
+## Rigorous producers
 
 FLINT already contains the Platt/Turing implementation that X-5602 proposed to
-build. `flint_consecutive_gap.c` calls
+build.
+
+### Consecutive total-zero check
+
+`flint_consecutive_gap.c` calls
 
 ```text
 acb_dirichlet_platt_zeta_zeros
@@ -67,7 +71,26 @@ acb_dirichlet_platt_zeta_zeros
 near the estimated zero index `1.9743642386e13`, using the exact rational target.
 If two consecutive **total zeta-zero balls** strictly bracket the target, the
 open interval between those balls is certified to contain no line or off-line
-zero. The output also encloses the gap in local mean spacings.
+zero.
+
+### Direct counterexample predicate
+
+`flint_line_gap_discrepancy.c` composes two directed computations:
+
+1. `acb_dirichlet_platt_hardy_z_zeros` returns consecutive critical-line zero
+   balls bracketing the target;
+2. exact dyadic endpoints `a<b` are placed strictly between those balls;
+3. `acb_dirichlet_zeta_nzeros` computes the total zero counts `N(a)` and `N(b)`
+   with multiplicity.
+
+The interior is rigorously critical-line-empty, so
+
+```text
+N(b)-N(a) > 0
+```
+
+is precisely the `L-5605` finite RH-disproof predicate. A zero discrepancy
+certifies only that this exact interior slab is empty of all zeta zeros.
 
 Build:
 
@@ -75,12 +98,17 @@ Build:
 cc -O3 -std=c11 -Wall -Wextra -Werror \
   flint_consecutive_gap.c -o flint_consecutive_gap \
   -lflint -lmpfr -lgmp -lpthread -lm
-./flint_consecutive_gap 160 256 4 > results/flint-gap-160.json
-./flint_consecutive_gap 224 256 4 > results/flint-gap-224.json
+cc -O3 -std=c11 -Wall -Wextra -Werror \
+  flint_line_gap_discrepancy.c -o flint_line_gap_discrepancy \
+  -lflint -lmpfr -lgmp -lpthread -lm
+
+./flint_consecutive_gap 128 128 4 > results/flint-total-gap-128.json
+./flint_line_gap_discrepancy 128 128 4 > results/flint-discrepancy-128.json
 ```
 
-The two outputs should be checked for nesting and identical consecutive zero
-indices.
+The workflow runs both producers at 128 and 192 bits and requires stable indices,
+integer counts, classifications, and nested zero balls. Trusted-base trigger PR
+`#92` launches the workflow.
 
 ## Why the original Pick screen became tiny
 
@@ -91,13 +119,25 @@ vectors can nearly annihilate the dominant local direction, while barycentric
 moments suppress the remote tail. The smallest eigenvalue can therefore be
 extremely small and positive. This is a canonical precision-ghost geometry.
 
+## Verification completed locally
+
+```text
+2 standard-library exact tests pass
+exact-ordinate JSON regenerates byte-for-byte
+Python compile checks pass
+```
+
+FLINT could not be installed in the local container because the package gateway
+returned `503`, so no directed zero result is claimed locally.
+
 ## Proof boundary
 
 - Exact rational / IEEE-754 audit: proved with the standard library.
 - Parity identity: accepted after scope narrowing.
 - Large gap and `|Z|` peak: empirical until a directed zero computation runs.
-- `flint_consecutive_gap.c`: proposed producer; the committed branch does not yet
-  contain a completed output.
+- Both FLINT programs are proposed producers; no completed output is committed.
 - A certified local zero gap does not determine the complete PR #71 Pick sign,
   which depends on all zeros and is better checked by direct Arb contraction.
+- A positive line-gap discrepancy would require independent backend reproduction
+  and code/API audit before candidate promotion.
 - No counterexample is claimed.
