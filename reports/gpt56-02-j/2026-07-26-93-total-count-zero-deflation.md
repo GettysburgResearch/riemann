@@ -29,10 +29,13 @@ finite RH-disproof witness.
 - no individual zero identity is needed;
 - no simplicity assumption is needed;
 - even-multiplicity roots are counted correctly;
-- each radius costs two total-count evaluations;
+- each radius uses two total-count evaluations;
 - the count artifact remains unconditional;
 - the same Turing infrastructure first checks the direct gap discrepancy and
   then, when ordinary zeros are found, turns them into removable background.
+
+This is a proof-interface and multiplicity improvement. No runtime advantage is
+claimed until the repeated count calls and block-isolation backend are benchmarked.
 
 ## Proof-producing implementation
 
@@ -68,7 +71,7 @@ a compact digest-bound summary is retained.
 None. No PR #71 FLINT output has been produced in this contribution. The
 ordinary high-precision parent ladder is positive and collapsing toward zero,
 so the first total-count run is more likely to certify another finite positive
-near-null than to produce a negative. The durable contribution is the cheaper,
+near-null than to produce a negative. The durable contribution is the
 multiplicity-complete certificate architecture, which can be moved to new
 ordinate windows without changing the trusted checker.
 
