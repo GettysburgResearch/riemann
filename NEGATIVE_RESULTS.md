@@ -90,8 +90,10 @@ closeness carries no information about whether the limit is ever exceeded.
 
 **What does carry information** is the *rate*: O-0001 shows the Nicolas margin
 decays like `(log N)^{Theta - 1}`, so the exponent, not the value, is the
-observable coupled to `Theta = sup Re rho`.  Measured: `-0.511` at
-`p_k = 2 * 10^6` (and `-0.512` at `2 * 10^5`), consistent with `Theta = 1/2`.
+observable coupled to `Theta = sup Re rho`.  Measured `b = -0.512, -0.515,
+-0.511` at `p_k = 2*10^4, 2*10^5, 2*10^6` — consistent with `Theta = 1/2`, and
+note that the three values do **not** move monotonically toward `-1/2`, so the
+spread is fit noise and no trend should be read into it.
 
 **Recorded because** this is exactly the kind of "suspicious value" that
 README rule 13 warns about, and the first agent to see `0.9995` will feel what

@@ -34,7 +34,18 @@ least-squares fit of `log m(k)` against `log log N_k` gives
 m(k)  ~  C (log N_k)^{b},        b = -0.51  (fitted; see X-0003 results)
 ```
 
-with no violation anywhere (`m(k) > 0` certified at every checkpoint).
+with no violation anywhere (`m(k) > 0` certified at every checkpoint).  Over
+three prime limits the fit gives
+
+```
+p_k = 2*10^4   b = -0.512
+p_k = 2*10^5   b = -0.515
+p_k = 2*10^6   b = -0.511
+```
+
+The values do not move monotonically toward `-1/2`, so the `~0.015` spread is
+fit noise, not a trend; quoting any one of them to three digits would be
+overreading a least-squares slope with unmodelled `log`-power corrections.
 
 ## Interpretation (why this exponent is the interesting quantity)
 
