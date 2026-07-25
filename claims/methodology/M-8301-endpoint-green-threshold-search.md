@@ -1,18 +1,18 @@
 # M-8301 — Endpoint Green threshold search protocol
 
 Claim ID: M-8301  
-Title: Whole-matrix prime-power threshold search using two endpoint solves per baseline  
+Title: Whole-matrix prime-power packet search using two endpoint solves per baseline  
 Status: PROPOSED  
 Authoring agent: `gpt56-05-i`  
 Created: 2026-07-25  
-Dependencies: L-4204; L-8301; L-8302; T-8301; a complete Toeplitz coefficient-box producer  
-Scope: discovery-to-certificate protocol for D-0801 first deposition cells
+Dependencies: L-4204; L-8301; L-8302; L-8303; T-8301; a complete Toeplitz coefficient-box producer  
+Scope: discovery-to-certificate protocol for D-0801 first deposition packets
 
 ## Objective
 
 Replace one-vector endpoint susceptibility by a whole-matrix pressure that is
-exact for the rank-two first-cell event. Reuse one certified positive baseline
-for many nearby prime-power thresholds.
+exact for every coherent rank-two first-cell packet. Reuse one certified
+positive baseline for many nearby prime-power admissions and first knots.
 
 ## Protocol
 
@@ -42,55 +42,82 @@ Export exact rational or dyadic solution approximations and residuals. Use
 L-8302 to enclose `G_00,G_01,G_11`. Bind matrix, lag-box, solution, residual,
 and spectral-floor digests into one capsule.
 
-### Gate 3 — Threshold pressure ledger
+### Gate 3 — Admission/first-knot mesh
 
-For each `q=p^alpha`, evaluate with directed arithmetic
-
-```text
-zeta_q   = exp(-i T log q),
-tau_qmax = log(p)/(2*pi*sqrt(q)),
-r_q      = Re(conj(zeta_q) G_01),
-D        = G_00 G_11 - |G_01|^2,
-lambda_q = r_q + sqrt(r_q^2 + D),
-Pi_q     = tau_qmax lambda_q.
-```
-
-Rank by the lower endpoint of `Pi_q-1` for crossing discovery and by distance
-to the unresolved band for exclusion work. A midpoint score is never a proof.
-
-### Gate 4 — Smooth background moat
-
-Bound every non-event change over the first deposition cell in the same basis:
+For every prime power `q=p^alpha`, insert the two exact mesh events
 
 ```text
-||B_q(epsilon)||_2 <= beta_q(epsilon).
+admission:  L = log(q),
+first knot: L = K*log(q)/(K-1).
 ```
 
-This includes old-prime hat motion, alpha motion, exact archimedean motion, pole
-motion, and any normalization correction not already inside the baseline.
-Fixed-vector motion bounds are insufficient.
+Between consecutive mesh points the active first-cell set is fixed. A term is
+added at its admission with zero amplitude and removed from the corner packet at
+its first knot, where it must be transferred into the next-lag/background
+representation without duplication.
 
-### Gate 5 — Robust trichotomy
+### Gate 4 — Coherent packet ledger
 
-Apply T-8301 using interval endpoints:
+For each mesh cell, accumulate with directed complex arithmetic
 
 ```text
-mu*(1 - tau*lambda_upper) > beta  => CERTIFIED_NO_CROSSING;
-mu*(tau*lambda_lower - 1) > beta  => CERTIFIED_CROSSING;
-otherwise                          => UNRESOLVED.
+A0 = sum_q K*log(p)/(2*pi*sqrt(q)) * exp(-i*T*log(q)),
+A1 = sum_q K*log(p)*log(q)/(2*pi*sqrt(q)) * exp(-i*T*log(q)),
+Z(L) = A0 - A1/L.
 ```
 
-Only unresolved cells receive a denser directed matrix or fixed-vector replay.
+Compute the packet pressure at both endpoints:
 
-### Gate 6 — Negative-vector extraction
+```text
+r(Z)      = Re(conj(Z)*G_01),
+D         = G_00*G_11-|G_01|^2,
+lambda(Z) = r(Z)+sqrt(r(Z)^2+D*|Z|^2).
+```
 
-For a crossing nomination, solve the exact `2 x 2` generalized eigenproblem,
-round the positive eigenvector to Gaussian dyadics, and lift it through the two
-endpoint solves. Freeze the resulting `K`-vector and directly enclose its full
-quadratic value. The final proof does not trust the Green square root or an
-interval eigensolver.
+By L-8303 the maximum pressure in the complete mesh cell occurs at an endpoint.
+Rank cells by the lower endpoint of `max(lambda_left,lambda_right)-1` for
+crossing discovery and by distance to the robust unresolved band for exclusion
+work.
 
-### Gate 7 — RH promotion boundary
+Never sum individual scalar pressures. Coherent phases must be aggregated as
+`Z` before widening: subcritical events can reinforce into a crossing, while
+opposite phases can cancel exactly.
+
+### Gate 5 — Smooth background moat
+
+Bound every non-corner change over the mesh cell in the same basis:
+
+```text
+||B(L)||_2 <= beta.
+```
+
+This includes old-prime higher-lag motion, leading-scalar motion, exact
+archimedean motion, pole motion, the transfer of first-knot terms, and any
+normalization correction not already inside the baseline. Fixed-vector motion
+bounds are insufficient.
+
+### Gate 6 — Robust trichotomy
+
+Apply T-8301/L-8303 using interval endpoints:
+
+```text
+mu*(1-lambda_packet_upper) > beta  => CERTIFIED_PACKET_POSITIVE;
+mu*(lambda_endpoint_lower-1) > beta => CERTIFIED_PACKET_CROSSING;
+otherwise                            => UNRESOLVED.
+```
+
+Only unresolved packet cells receive a denser directed matrix or fixed-vector
+replay.
+
+### Gate 7 — Negative-vector extraction
+
+For a crossing nomination, solve the exact `2 x 2` generalized eigenproblem at
+the supercritical endpoint, round the positive eigenvector to Gaussian dyadics,
+and lift it through the two endpoint solves. Freeze the resulting `K`-vector and
+directly enclose its full quadratic value. The final proof does not trust the
+Green square root or an interval eigensolver.
+
+### Gate 8 — RH promotion boundary
 
 A strict negative D-0801 value remains only a proposed RH witness until:
 
@@ -101,16 +128,19 @@ A strict negative D-0801 value remains only a proposed RH witness until:
 
 ## Search-complexity consequence
 
-For one certified positive baseline, ranking requires two large linear solves
-once, constant-size interval arithmetic per threshold, and no eigenvector
-continuation. The prime manifest is replayed only for unresolved cells. This
-replaces repeated `K x K` eigensolves by a `2 x 2` Green-function scan.
+For one certified positive baseline, the protocol requires two large linear
+solves once, two complex packet moments per mesh cell, and constant-size
+interval arithmetic at endpoints. The prime manifest is replayed only for
+unresolved cells. This replaces repeated `K x K` eigensolves and per-threshold
+continuation by a `2 x 2` Green scan over a finite event mesh.
 
 ## Failure modes
 
 - applying the protocol to an empirically positive but uncertified baseline;
 - reusing a Green capsule after the background leaves its certified box;
-- using top-vector susceptibility as an upper bound on `lambda_plus`;
+- using top-vector susceptibility as an upper bound on whole-matrix pressure;
+- summing individual event pressures instead of complex corner coefficients;
+- failing to transfer a term at its first knot, or double counting it;
 - charging only fixed-vector background motion;
 - resolving an interval pressure by its midpoint;
 - promoting a finite matrix sign before analytic gates are discharged.
@@ -120,5 +150,5 @@ replaces repeated `K x K` eigensolves by a `2 x 2` Green-function scan.
 Once PR #79 receives complete lag boxes, begin at the recovered `c=10^11`
 baseline. Its frozen vector is certified positive and its empirical second
 margin is about `7.37e-3`, so it is a natural whole-matrix positivity test.
-Build one Green capsule, then rank adjacent first cells without replaying the
-`4.1` billion-term manifest.
+Build one Green capsule, generate the adjacent admission/first-knot mesh, and
+scan coherent packets without replaying the `4.1` billion-term manifest.
