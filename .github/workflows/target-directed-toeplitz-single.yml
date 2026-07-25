@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
-      - FULL-TARGET-RUN.md
+      - experiments/X-2813-target-directed-toeplitz/RUN_TARGET.md
       - .github/workflows/target-directed-toeplitz-single.yml
 
 permissions:
