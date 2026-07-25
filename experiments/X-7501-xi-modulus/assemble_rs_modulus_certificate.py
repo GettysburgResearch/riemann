@@ -80,9 +80,13 @@ def assemble(primitives: dict[str, Any], config: dict[str, Any]) -> dict[str, An
         raise AssemblyError("primitive and config point sets differ")
 
     points = []
-    for identifier in sorted(config_points, key=lambda item: int(item.split("-")[-1]), reverse=True):
+    for identifier in sorted(
+        config_points, key=lambda item: int(item.split("-")[-1]), reverse=True
+    ):
         primitive = primitive_points[identifier]
-        expected_x = binary_fraction(config_points[identifier].get("x"), f"config.{identifier}.x")
+        expected_x = binary_fraction(
+            config_points[identifier].get("x"), f"config.{identifier}.x"
+        )
         if primitive.get("x") != expected_x:
             raise AssemblyError(f"horizontal coordinate mismatch for {identifier}")
         if primitive.get("functional_equation_residual_contains_zero") is not True:
@@ -104,8 +108,11 @@ def assemble(primitives: dict[str, Any], config: dict[str, Any]) -> dict[str, An
         )
 
     rows = config.get("rows")
+    log_rows = config.get("log_rows")
     if not isinstance(rows, list) or not rows:
         raise AssemblyError("config rows must be a nonempty list")
+    if not isinstance(log_rows, list) or not log_rows:
+        raise AssemblyError("config log_rows must be a nonempty list")
 
     certificate: dict[str, Any] = {
         "schema": CERTIFICATE_SCHEMA,
@@ -114,6 +121,7 @@ def assemble(primitives: dict[str, Any], config: dict[str, Any]) -> dict[str, An
         "ordinate": expected_ordinate,
         "points": points,
         "rows": rows,
+        "log_rows": log_rows,
         "producer": {
             "backend": primitives.get("backend"),
             "precision_bits": exact_int(
@@ -144,6 +152,7 @@ def main() -> int:
                 "schema": certificate["schema"],
                 "point_count": len(certificate["points"]),
                 "row_count": len(certificate["rows"]),
+                "log_row_count": len(certificate["log_rows"]),
                 "certificate_sha256": certificate["certificate_sha256"],
             },
             indent=2,
