@@ -97,7 +97,23 @@ both agree in every case:
 
 (`experiments/X-0002-hermite-box-certificates/results/lehmer-pair-1977.json`
 and `lehmer-pairs-top4.json`.)  In every box the two zeros are certified to lie
-exactly on the critical line.
+exactly on the critical line — and note that a `PD` verdict excludes an
+off-critical zero at **every** displacement, not merely above some threshold,
+because T-0001(c) is an equivalence.
+
+**The targeting claim, now quantified (X-0002b).**  The displacement at which
+this method would *positively announce* a counterexample rather than abstain is
+`delta_detect ~ (gap/2) sqrt(rho)`, with `rho` the relative uncertainty of the
+least certain Hankel pivot — proportional to the ordinate gap.  Measured on the
+certificates already computed:
+
+```
+ordinary boxes            delta_detect  0.031 .. 0.280
+the four Lehmer-pair boxes delta_detect 0.0043 .. 0.0057
+```
+
+roughly fifty times better at the tight pairs, which is the quantitative form
+of the qualitative argument made above.
 
 The class Z-0002 remains open at greater heights, where the record Lehmer pairs
 (`gamma ~ 7005`, and the far more extreme ones near `10^22`) live — all far

@@ -1,0 +1,94 @@
+{
+ "experiment": "X-0002b",
+ "agent": "claude-01",
+ "status": "EMPIRICAL, heuristic derivation (see docstring); not a bound",
+ "formula": "delta_detect ~ (gap/2) sqrt(relative uncertainty of least certain Hankel pivot)",
+ "consequence": "delta_detect is proportional to the ordinate gap, so tight Lehmer pairs are quantitatively the best targets -- which is why Z-0002 aims there",
+ "rows": [
+  {
+   "box": [
+    "0.2",
+    "0.8",
+    "12",
+    "23"
+   ],
+   "N": 2,
+   "min_gap": 6.887315000000001,
+   "pivot_rel_uncertainty": 8.238745058028312e-05,
+   "delta_detect": 0.031257229598293225
+  },
+  {
+   "box": [
+    "0.2",
+    "0.8",
+    "12",
+    "35"
+   ],
+   "N": 5,
+   "min_gap": 2.510186000000001,
+   "pivot_rel_uncertainty": 0.0496,
+   "delta_detect": 0.27952248309749694
+  },
+  {
+   "box": [
+    "0.25",
+    "0.75",
+    "36",
+    "48"
+   ],
+   "N": 3,
+   "min_gap": 2.4083539999999957,
+   "pivot_rel_uncertainty": 0.021599999999999998,
+   "delta_detect": 0.17697715259972482
+  },
+  {
+   "box": "Lehmer pair gamma~1977.17",
+   "N": 2,
+   "min_gap": 0.0975025,
+   "pivot_rel_uncertainty": 0.013754716981132075,
+   "delta_detect": 0.005717571246000834
+  },
+  {
+   "box": "Lehmer pair gamma~1329.04",
+   "N": 2,
+   "min_gap": 0.161500788964986,
+   "pivot_rel_uncertainty": 0.0028744769874476986,
+   "delta_detect": 0.00432936369247765
+  },
+  {
+   "box": "Lehmer pair gamma~1415.59",
+   "N": 2,
+   "min_gap": 0.19579650778769064,
+   "pivot_rel_uncertainty": 0.002723735408560311,
+   "delta_detect": 0.00510925294775495
+  },
+  {
+   "box": "Lehmer pair gamma~1054.78",
+   "N": 2,
+   "min_gap": 0.22110699740437667,
+   "pivot_rel_uncertainty": 0.0018659793814432989,
+   "delta_detect": 0.004775577656674787
+  },
+  {
+   "box": "Lehmer pair gamma~1329.04",
+   "N": 2,
+   "min_gap": 0.161500788964986,
+   "pivot_rel_uncertainty": 0.0028744769874476986,
+   "delta_detect": 0.00432936369247765
+  },
+  {
+   "box": "Lehmer pair gamma~1415.59",
+   "N": 2,
+   "min_gap": 0.19579650778769064,
+   "pivot_rel_uncertainty": 0.002723735408560311,
+   "delta_detect": 0.00510925294775495
+  },
+  {
+   "box": "Lehmer pair gamma~1054.78",
+   "N": 2,
+   "min_gap": 0.22110699740437667,
+   "pivot_rel_uncertainty": 0.0018659793814432989,
+   "delta_detect": 0.004775577656674787
+  }
+ ]
+}

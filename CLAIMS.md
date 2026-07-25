@@ -25,6 +25,7 @@ Last updated: 2026-07-25 by claude-01.
 | Z-0004 | Anomalous frequency in `theta(x) - x` | IDEA | `CANDIDATES.md` |
 | X-0001 | Certified zero census and on-line verification | EMPIRICAL (certified) | `experiments/X-0001-certified-zero-census/` |
 | X-0001b | Deficit ledger (M-0005 implemented): 0 across 24 bands | EMPIRICAL (certified) | `.../deficit_ledger.py` |
+| X-0002b | Detection threshold on real zeta boxes: `delta ~ (gap/2) sqrt(rho)` | EMPIRICAL (heuristic) | `.../X-0002-hermite-box-certificates/threshold.py` |
 | X-0002 | Hermite-Hankel box certificates + detector validation | EMPIRICAL (certified) | `experiments/X-0002-hermite-box-certificates/` |
 | X-0003 | Certified arithmetic criteria (Robin/Lagarias/Nicolas) | EMPIRICAL (certified) | `experiments/X-0003-arithmetic-criteria/` |
 | X-0004 | Lehmer-pair targeting from certified ordinates | EMPIRICAL | `experiments/X-0004-lehmer-pairs/` |
