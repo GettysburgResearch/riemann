@@ -146,6 +146,9 @@ This is the honest part, and it matters:
 * Compare against a synthetic `theta` built from a deliberately planted
   off-critical zero: does the fit recover `b = Theta - 1`?  This is the
   decisive validation and it is cheap; it is the recommended next step.
+  (The analogous test *was* run for the spectral view of the same error term in
+  X-0005b/c/d, where the planted displacement is recovered to five digits — so
+  the machinery for this exists and only needs pointing at the envelope.)
 
 ## Remaining uncertainty
 
@@ -162,8 +165,13 @@ power, not as evidence about `Theta`.
 2. Push `x` to `10^9` with a segmented sieve; the exponent estimate improves
    like `1/log x` and the computation stays trivial compared with any contour
    method.
-3. Fit the *oscillatory* part of `theta(x) - x` rather than the envelope: its
-   dominant frequency in `log x` is `gamma_1 = 14.13...` if RH holds, and any
-   anomalous frequency with a growing amplitude is a zero with `Re > 1/2`.  This
-   is a Fourier problem on a cheap data series and it is, in this agent's view,
-   the single most promising unexplored direction opened by this session.
+3. Fit the *oscillatory* part rather than the envelope — **done in the same
+   session, see O-0002 / X-0005.**  Working with `psi` rather than `theta` (to
+   avoid the prime-power contamination noted above), the first twelve zero
+   ordinates come out as spectral lines with the predicted `2/|rho|`
+   amplitudes, and the screen's sensitivity to a planted off-critical zero was
+   measured across three designs (floor `0.2 -> 0.1 -> ~0.013`).  What remains
+   from *this* claim's side is the envelope-versus-oscillation comparison: the
+   exponent `b` here and the line amplitudes there are two views of the same
+   error term, and they should agree.  Checking that they do is a free
+   consistency test that has not been run.
