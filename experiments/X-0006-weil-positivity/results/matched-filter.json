@@ -1,0 +1,121 @@
+{
+ "experiment": "X-0006b",
+ "agent": "claude-01",
+ "git_sha": "145fd7a8d2981621c3c0ddda34df526ec5172220",
+ "python": "3.11.15",
+ "flint": "0.9.0",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "prec_bits": 300,
+ "basis": {
+  "a": 1.0,
+  "m": 4,
+  "dim": 6,
+  "spacing": 0.5,
+  "support_of_g": 6.5,
+  "n_prime_powers": 143
+ },
+ "semantics": "certified: arb balls, exact Lambda(n), closed-form pole and Laplace transforms, Watson-accelerated archimedean series with a rigorous tail bound",
+ "rows": [
+  {
+   "gamma0": 0.0,
+   "series_terms": 4000,
+   "verdict": "PD",
+   "min_pivot": 1.7628686074291305e-10,
+   "max_pivot_uncertainty": 1.1503977734380794e-21,
+   "pivots": [
+    "[2.50408478444974e-8 +/- 8.88e-23]",
+    "[1.95581866772645e-8 +/- 8.88e-23]",
+    "[1.5977008157517e-8 +/- 6.15e-22]",
+    "[1.5714080195435e-8 +/- 6.61e-22]",
+    "[1.84722184954e-10 +/- 9.03e-22]",
+    "[1.7628686074e-10 +/- 4.07e-21]"
+   ],
+   "seconds": 5.3
+  },
+  {
+   "gamma0": 14.134725141734693,
+   "series_terms": 4000,
+   "verdict": "PD",
+   "min_pivot": 1.1867359785691872e-07,
+   "max_pivot_uncertainty": 9.77240339507845e-15,
+   "pivots": [
+    "[1.0000001693091990 +/- 3.02e-17]",
+    "[1.950931391e-7 +/- 6.43e-17]",
+    "[1.93344841e-7 +/- 4.56e-16]",
+    "[1.57963584e-7 +/- 7.45e-16]",
+    "[1.5686146e-7 +/- 7.20e-15]",
+    "[1.186736e-7 +/- 1.20e-14]"
+   ],
+   "seconds": 8.0
+  },
+  {
+   "gamma0": 100.0,
+   "series_terms": 8000,
+   "verdict": "PD",
+   "min_pivot": 0.005562109942049657,
+   "max_pivot_uncertainty": 1.4548379712845012e-11,
+   "pivots": [
+    "[1.1925374730066 +/- 5.38e-14]",
+    "[0.4139170472286 +/- 3.92e-14]",
+    "[0.032372551244 +/- 2.78e-13]",
+    "[0.03054895992 +/- 3.81e-12]",
+    "[0.01051529048 +/- 6.65e-12]",
+    "[0.0055621099 +/- 5.66e-11]"
+   ],
+   "seconds": 13.9
+  },
+  {
+   "gamma0": 500.0,
+   "series_terms": 20000,
+   "verdict": "PD",
+   "min_pivot": 0.07243166594976952,
+   "max_pivot_uncertainty": 1.1090401749735967e-08,
+   "pivots": [
+    "[2.06189450959 +/- 1.01e-12]",
+    "[0.66658784036 +/- 2.56e-12]",
+    "[0.2547410640 +/- 1.33e-11]",
+    "[0.1120477460 +/- 9.38e-11]",
+    "[0.09893749 +/- 1.46e-9]",
+    "[0.0724317 +/- 4.52e-8]"
+   ],
+   "seconds": 34.7
+  },
+  {
+   "gamma0": 1977.173944,
+   "series_terms": 60000,
+   "verdict": "PD",
+   "min_pivot": 0.06181829741636336,
+   "max_pivot_uncertainty": 2.4083480959502523e-08,
+   "pivots": [
+    "[2.70814975773 +/- 3.87e-12]",
+    "[0.5995760836 +/- 2.31e-11]",
+    "[0.4164754197 +/- 6.30e-11]",
+    "[0.163446733 +/- 4.24e-10]",
+    "[0.15466397 +/- 7.26e-9]",
+    "[0.0618183 +/- 2.67e-8]"
+   ],
+   "seconds": 116.6
+  },
+  {
+   "gamma0": 7005.062866,
+   "series_terms": 150000,
+   "verdict": "PD",
+   "min_pivot": 0.12107401212520749,
+   "max_pivot_uncertainty": 2.937675094294434e-07,
+   "pivots": [
+    "[3.3617095293 +/- 3.33e-11]",
+    "[0.794393564 +/- 5.56e-10]",
+    "[0.521059795 +/- 9.17e-10]",
+    "[0.27522461 +/- 5.91e-9]",
+    "[0.2024931 +/- 6.54e-8]",
+    "[0.121074 +/- 3.06e-7]"
+   ],
+   "seconds": 300.6
+  }
+ ],
+ "resolution_law": {
+  "filter_half_width_in_gamma": 6.283185307179586,
+  "prime_cost": "prime powers up to e^(m a + |d|) = e^6.5",
+  "statement": "h(r) = a^2 sinc^{2m}(a(r-gamma_0)/2) has main-lobe half width 2 pi / a, while the prime sum runs to e^{m a}.  To resolve the mean zero spacing 2 pi / log(T/2 pi) at height T one needs a ~ log(T/2pi), hence primes up to (T/2pi)^m: POLYNOMIAL in T, not exponential -- but with a brutal constant.  At T = 7005 and m = 2 that is about 1.2e6 primes, which is feasible; at m = 4 it is not.  This is the fundamental cost law of the method and it is the thing to attack next."
+ }
+}

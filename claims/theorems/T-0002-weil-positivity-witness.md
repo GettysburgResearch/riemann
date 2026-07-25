@@ -230,13 +230,31 @@ which is the entire point of (e).
   numerically to 10 digits against independent data (above), which is strong
   evidence that it is stated correctly, but that is not a proof.  A reviewer
   should reconstruct it; see Q-0013.
-* **The cost law.**  `h` has half width `2 pi / a` and the prime sum runs to
-  `e^{m a}`.  Resolving the mean zero spacing `2 pi / log(T/2 pi)` at height `T`
-  needs `a ~ log(T/2 pi)` and hence primes up to `(T/2pi)^m` -- polynomial in
-  `T`, but with a brutal constant.  At `T = 7005`, `m = 2` that is `~1.2e6`
-  primes (feasible); `m = 4` is not.  **The filters used here are much wider
-  than the zero spacing, so they average over many zeros**, which is why the
-  measured sensitivity is `delta ~ 10^{-2}` and not better.
+* **The cost law, measured (X-0006c).**  `h` has half width `2 pi / a` and the
+  prime sum runs to `e^{m a}`.  Sweeping `a` at `gamma_0 = 100`, with a 10-dim
+  basis and `m = 3`:
+
+  ```
+   a     filter width   prime powers   certified verdict   detection floor
+   0.5      12.57              51            PD               delta 0.1
+   1.0       6.28             153            PD               delta 0.1
+   1.5       4.19             499         UNDECIDED           delta 0.05
+   2.0       3.14            1787         UNDECIDED           delta 0.05
+   2.77      2.27 (resolves)  13858        UNDECIDED           delta 0.05
+   3.5       1.80 (resolves) 102347        UNDECIDED           delta 0.01
+  ```
+
+  **A tenfold gain in sensitivity cost two thousand times more primes.**  That
+  is the honest verdict on this method as a search: the trade is brutal, and at
+  `gamma_0 = 100` it never got below `delta = 0.01`, which T-0001 reaches at
+  `nsub = 32` in half a second.
+
+  Note also the second column of bad news: the **certified** verdict degrades to
+  `UNDECIDED` from `a = 1.5` upward, while the float computation stays
+  definite.  The entries grow and cancel as the filter narrows, so the interval
+  arithmetic loses the sign before the mathematics does.  Fixing that (larger
+  `N`, `K = 2`, or a reformulation with less cancellation) is a prerequisite for
+  using this method at the widths where it would be sensitive.
 * **Watson acceleration.**  The tail bound uses `max|g_e^{(M)}| <= sum_j
   C(M,j) gamma_0^j a^{1-(M-j)} 2^{M-j}`, from `|B_n| <= 1` and one factor of 2
   per difference.  This is crude; a sharper bound would allow smaller `N`.

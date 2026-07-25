@@ -33,6 +33,10 @@ ranked list of where to look next.
 | The four tightest Lehmer pairs below `T = 2000` (`gamma = 1977.17, 1329.04, 1415.59, 1054.78`) have both zeros on the line | those boxes | T-0001 **and** L-0004, independently, on each | `X-0002/results/lehmer-pair*.json` |
 | 1517 certified on-line zero ordinates for `0 < t <= 2000` | `t <= 2000` | sign change + bisection (existence only; not a completeness claim without the box count) | `X-0004/results/lehmer-T2000.json` |
 | Deficit `N_box - m` is `0` in all 24 height bands to `T = 500` | `t <= 500` | M-0005 ledger | `X-0001/results/deficit-ledger.json` |
+| **Every zero with `0 < t <= 1000` is simple and has `\|Re rho - 1/2\| <= 2.94e-11`** | `t <= 1000` | L-0007 interval Newton + the certified box count 649 | `X-0007/results/newton-T1000.json` |
+| Same at `t <= 100`, with the sharper bound `2.24e-14` | `t <= 100` | same | `X-0007/results/newton-T100.json` |
+| The classical Lehmer pair (`gamma ~ 7005.06`, normalised gap 0.042) has both zeros on the line | that box | T-0001 **and** L-0004 | `X-0002/results/lehmer-pair-7005.json` |
+| Weil quadratic forms positive definite at `gamma_0 = 0, 14, 100, 500, 1977, 7005` | those filters | T-0002, from 143 prime powers and `Gamma` -- no `zeta` anywhere | `X-0006/results/matched-filter.json` |
 | No Robin / Lagarias violation among colossally abundant `n` up to 11541 digits | that set | exact integers + certified enclosures | `X-0003/results/criteria-2000000.json` |
 | No Nicolas violation among primorials to `p_k = 2*10^6` | that set | exact rationals + certified enclosures | same |
 

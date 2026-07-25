@@ -1,0 +1,90 @@
+{
+ "experiment": "X-0006c",
+ "agent": "claude-01",
+ "git_sha": "826afdb2e6404c1f8c61be5ace83e511756b0f4f",
+ "gamma0": 100.0,
+ "target_zero": 98.8311942181937,
+ "mean_spacing": 2.2705167236263177,
+ "resolving_a": 2.767293119578746,
+ "rows": [
+  {
+   "a": 0.5,
+   "filter_half_width": 12.566370614359172,
+   "resolves_spacing": false,
+   "support_of_g": 5.1,
+   "n_prime_powers": 51,
+   "verdict": "PD",
+   "min_pivot": 0.07827790699199572,
+   "pivot_unc": 5.006316666777977e-09,
+   "certified_seconds": 25.5,
+   "zero_side_baseline_min_pivot": 0.07827790695172147,
+   "detection_floor_delta": 0.1
+  },
+  {
+   "a": 1.0,
+   "filter_half_width": 6.283185307179586,
+   "resolves_spacing": false,
+   "support_of_g": 6.6,
+   "n_prime_powers": 153,
+   "verdict": "PD",
+   "min_pivot": 0.0027213875405312474,
+   "pivot_unc": 0.001925397484228597,
+   "certified_seconds": 25.5,
+   "zero_side_baseline_min_pivot": 0.002781433502779606,
+   "detection_floor_delta": 0.1
+  },
+  {
+   "a": 1.5,
+   "filter_half_width": 4.1887902047863905,
+   "resolves_spacing": false,
+   "support_of_g": 8.1,
+   "n_prime_powers": 499,
+   "verdict": "UNDECIDED",
+   "min_pivot": 0.000309226765508397,
+   "pivot_unc": 0.00043388868880356313,
+   "certified_seconds": 26.3,
+   "zero_side_baseline_min_pivot": 0.0002898448425164321,
+   "detection_floor_delta": 0.05
+  },
+  {
+   "a": 2.0,
+   "filter_half_width": 3.141592653589793,
+   "resolves_spacing": false,
+   "support_of_g": 9.6,
+   "n_prime_powers": 1787,
+   "verdict": "UNDECIDED",
+   "min_pivot": -0.006712346862893971,
+   "pivot_unc": 0.021544089366216213,
+   "certified_seconds": 25.5,
+   "zero_side_baseline_min_pivot": 0.0003909567202818017,
+   "detection_floor_delta": 0.05
+  },
+  {
+   "a": 2.77,
+   "filter_half_width": 2.2682979448301754,
+   "resolves_spacing": true,
+   "support_of_g": 11.91,
+   "n_prime_powers": 13858,
+   "verdict": "UNDECIDED",
+   "min_pivot": 0.0005227922155993349,
+   "pivot_unc": 0.0019544562928786036,
+   "certified_seconds": 26.7,
+   "zero_side_baseline_min_pivot": 4.6160867501885815e-05,
+   "detection_floor_delta": 0.05
+  },
+  {
+   "a": 3.5,
+   "filter_half_width": 1.7951958020513104,
+   "resolves_spacing": true,
+   "support_of_g": 14.1,
+   "n_prime_powers": 102347,
+   "verdict": "UNDECIDED",
+   "min_pivot": 2.2877805661330264e-05,
+   "pivot_unc": 8.052156101712171e-05,
+   "certified_seconds": 33.8,
+   "zero_side_baseline_min_pivot": 5.118946117132498e-07,
+   "detection_floor_delta": 0.01
+  }
+ ],
+ "trade": "detection floor fell from 0.1 at 51 prime powers to 0.01 at 102347 prime powers"
+}
