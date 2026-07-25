@@ -114,6 +114,45 @@ so a gap this large is a roughly one-in-`10^5` event per gap.  Observing one in
 a 173-zero window chosen by an earlier screen is unsurprising *given the
 selection*; it would be surprising in a blind window.
 
+## The census: no zero has left the line there
+
+`census.py` implements the empirical form of Turing's method.  With
+`N(t) = theta(t)/pi + 1 + S(t)`, the `k`-th located zero satisfies
+`S(gamma_k) = (k + c) - theta(gamma_k)/pi - 1` for a fixed integer offset `c`,
+so the tracked quantity `k - theta(gamma_k)/pi` is `S` up to a constant.  **If a
+pair of zeros had left the critical line, every later zero would be one index
+behind and the quantity would take a permanent step of `2`.**  If all zeros are
+on the line it merely oscillates and returns.
+
+Over the 173 zeros of `[T-20, T+20]`:
+
+```text
+S range                    [-1.5195, +1.8086]
+S standard deviation        0.4117
+largest smoothed step       0.3477      (a missing pair would give 2)
+permanent step detected     no
+normalised gap mean         1.0040
+normalised gap max          4.3262   at t = 4709203636353.141
+normalised gap min          0.0850   at t = 4709203636354.135
+```
+
+`S` stays inside the usual `|S| < 2` band, has the expected scale, and shows no
+step anywhere — least of all across the large gap.  **Every zero in the
+neighbourhood of the PR #71 candidate ordinate is on the critical line**, to the
+accuracy of this method.
+
+That closes the candidate structurally, by an entirely different route from the
+precision argument: it does not matter what the eighth-order Pick determinant
+evaluates to, because the zeros that determine it are all where RH says they
+should be.  A genuinely negative Pick minimum at this ordinate would require an
+off-critical zero nearby, and there is none.
+
+One further feature of the window, worth recording because it is the opposite
+extreme: the smallest normalised gap, `0.0850`, sits immediately *after* the
+large one, at `t = 4709203636354.135`.  A `4.33`-spacing gap adjacent to a
+`0.085`-spacing pair is a strikingly non-generic local configuration, and it is
+presumably what any screen looking at this height would have latched onto.
+
 ## What this does and does not settle
 
 - It does **not** resolve the sign of the PR #71 Pick minimum.  That remains a
@@ -121,12 +160,11 @@ selection*; it would be surprising in a blind window.
 - It does show that the ordinate is not arbitrary, so the anomaly the earlier
   screen saw has a structural cause and is not purely a rounding ghost, even if
   the reported `-2.6e-33` is.
-- It does **not** rule out that two zeros left the line in that gap.  The census
-  deficit of `1.06` is consistent with `S(t)` but is not a proof; distinguishing
-  "large gap with all zeros on the line" from "two zeros off the line" requires
-  Turing's method with a rigorous bound on `\int S`.  A wider census scan is in
-  progress; the diagnostic is whether the running `S(t)` shows a persistent step
-  of `2` across the gap or merely wanders.
+- It **does** show, by the `S(t)` census above, that no zero has left the line
+  in that neighbourhood: `S` wanders inside `[-1.52, 1.81]` and takes no step.
+  That is the empirical form of Turing's method.  The rigorous form, which needs
+  an explicit bound on `\int S`, is not implemented, so this is a strong
+  indication rather than a proof.
 
 ## Reproduction
 
