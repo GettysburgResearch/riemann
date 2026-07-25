@@ -8,6 +8,7 @@ on:
       - '.github/workflows/d0801-circulant-completion.yml'
       - 'experiments/X-8201-circulant-completion/**'
       - 'experiments/X-8502-one-direction-schur/**'
+      - 'experiments/X-8503-fast-toeplitz-operator/**'
   pull_request:
     branches:
       - cursor/pr49-directed-carrier-pass-7f09
@@ -16,6 +17,7 @@ on:
       - '.github/workflows/d0801-circulant-completion.yml'
       - 'experiments/X-8201-circulant-completion/**'
       - 'experiments/X-8502-one-direction-schur/**'
+      - 'experiments/X-8503-fast-toeplitz-operator/**'
   workflow_dispatch:
 
 concurrency:
@@ -34,18 +36,35 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Install numerical discovery dependencies
+      - name: Install proof and discovery dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y libmpfr-dev libgmp-dev
           python -m pip install --upgrade pip
           python -m pip install numpy scipy
-      - name: Compile and replay exact one-direction gate
+      - name: Compile exact checkers and fast coefficient producer
         run: |
+          mkdir -p experiments/X-8503-fast-toeplitz-operator/results
+          g++ -O3 -std=c++20 -Wall -Wextra -Werror \
+            -frounding-math -ffp-contract=off -fno-fast-math \
+            experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp \
+            -o experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard \
+            -lmpfr -lgmp -lquadmath
           python -m compileall -q \
             experiments/X-8201-circulant-completion/analyze.py \
             experiments/X-8502-one-direction-schur/verify_target_gate.py \
-            experiments/X-8502-one-direction-schur/tests
+            experiments/X-8502-one-direction-schur/tests \
+            experiments/X-8503-fast-toeplitz-operator/verify_operator_budget.py \
+            experiments/X-8503-fast-toeplitz-operator/merge_hybrid_source.py \
+            experiments/X-8503-fast-toeplitz-operator/tests
+      - name: Run exact checker and merger tests
+        run: |
           python -m unittest discover \
             -s experiments/X-8502-one-direction-schur/tests -v
+          python -m unittest discover \
+            -s experiments/X-8503-fast-toeplitz-operator/tests -v
+      - name: Replay exact one-direction and operator budgets
+        run: |
           python experiments/X-8502-one-direction-schur/verify_target_gate.py \
             experiments/X-2805-directed-prime-producer/results/target-c1e11/final/verdict-p192.json \
             experiments/X-8502-one-direction-schur/certificates/target-c1e11-coarse-gate.json \
@@ -53,6 +72,43 @@ jobs:
           cmp \
             experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.verification.json \
             experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
+          python experiments/X-8503-fast-toeplitz-operator/verify_operator_budget.py \
+            experiments/X-8503-fast-toeplitz-operator/certificates/target-static-budget.json \
+            --output experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
+          cmp \
+            experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.verification.json \
+            experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
+      - name: Exercise one target-sized fast coefficient segment
+        run: |
+          /usr/bin/time -v \
+            experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard \
+            --manifest experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt \
+            --start-segment 2000 \
+            --end-segment 2001 \
+            --phase-grid 32768 \
+            --setup-precision 192 \
+            --output experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.json \
+            2> experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.time.txt
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.json')
+          data = json.loads(path.read_text())
+          assert data['schema'] == 'riemann.piecewise-carrier-fast-toeplitz-midpoint-shard.v1'
+          assert data['segment_start'] == 2000 and data['segment_end'] == 2001
+          assert data['vector_independent'] is True
+          assert data['prime_count'] > 0
+          assert data['total_terms'] == data['prime_count']
+          assert data['guarded_support_boundary_count'] == 0
+          assert len(data['lags']) == 1024
+          assert [row['lag'] for row in data['lags']] == list(range(1024))
+          print(json.dumps({
+              'prime_count': data['prime_count'],
+              'near_phase_boundary_count': data['near_phase_boundary_count'],
+              'minimum_support_boundary_distance': data['minimum_support_boundary_distance'],
+              'minimum_phase_boundary_distance': data['minimum_phase_boundary_distance'],
+          }, indent=2, sort_keys=True))
+          PY
       - name: Run Toeplitz and circulant-completion reconnaissance
         run: |
           mkdir -p experiments/X-8201-circulant-completion/results
@@ -61,7 +117,7 @@ jobs:
             --output experiments/X-8201-circulant-completion/results/completion.json \
             2> experiments/X-8201-circulant-completion/results/runtime.txt
           cat experiments/X-8201-circulant-completion/results/completion.json
-      - name: Upload completion result
+      - name: Upload completion and source controls
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -71,3 +127,6 @@ jobs:
             experiments/X-8201-circulant-completion/results/completion.json
             experiments/X-8201-circulant-completion/results/runtime.txt
             experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
+            experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.json
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.time.txt
