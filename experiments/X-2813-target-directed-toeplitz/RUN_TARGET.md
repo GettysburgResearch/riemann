@@ -3,7 +3,7 @@
 This child commit launches the quota-safe single-host calculation defined in
 `.github/workflows/target-directed-toeplitz-single.yml`.
 
-One hosted runner starts eight disjoint MPFR worker processes internally.  Each
+One hosted runner starts eight disjoint MPFR worker processes internally. Each
 worker covers 50 of the 400 half-open integer segments, so the run evaluates the
 entire cutoff without asking GitHub to schedule a large matrix of hosted jobs.
 
@@ -18,6 +18,7 @@ K = 1024
 96-bit frozen vector after post-selection
 ```
 
-The job uploads partial shard and diagnostic files even if a worker fails.  No
-mathematical claim is made by this marker.  The exact final rational interval is
-the only sign decision.
+This marker was refreshed after the single-host workflow was installed on the
+base branch. The job uploads partial shard and diagnostic files even if a worker
+fails. No mathematical claim is made by this marker. The exact final rational
+interval is the only sign decision.
