@@ -1,0 +1,58 @@
+{
+  "schema": "riemann.fast-midpoint-synthetic-overlap.v1",
+  "status": "SYNTHETIC_CONTROLS_ONLY",
+  "target_sized_control": {
+    "cutoff": "100000000000",
+    "cells": 4,
+    "segment_start": 2800,
+    "segment_end": 2801,
+    "prime_count": 808754,
+    "directed_algebraic_interval": {
+      "lower": {
+        "numerator": "-65907609767319354715519624827",
+        "denominator": "40564819207303340847894502572032"
+      },
+      "upper": {
+        "numerator": "-65907609765831752896490379928",
+        "denominator": "40564819207303340847894502572032"
+      }
+    },
+    "fast_midpoint": {
+      "numerator": "-15345311203639713961",
+      "denominator": "9444732965739290427392"
+    },
+    "fast_midpoint_inside_directed_interval": true,
+    "directed_runtime_seconds": "7.96",
+    "fast_runtime_seconds": "0.79",
+    "observed_runtime_ratio": "10.08",
+    "directed_interval_width_decimal": "3.667221617399481e-14",
+    "phase_boundary_near_count": 0,
+    "support_boundary_near_count": 0,
+    "minimum_phase_boundary_distance": "4.05600626224450650976e-12",
+    "minimum_support_boundary_distance": "0.0915115983935356396093"
+  },
+  "small_direct_control": {
+    "cutoff": "1000000",
+    "cells": 4,
+    "segment_start": 50,
+    "segment_end": 51,
+    "prime_count": 753,
+    "direct_mpfr_interval": {
+      "lower": {
+        "numerator": "-44842516576901107483426232425",
+        "denominator": "1267650600228229401496703205376"
+      },
+      "upper": {
+        "numerator": "-44842516576901107483425336473",
+        "denominator": "1267650600228229401496703205376"
+      }
+    },
+    "fast_midpoint": {
+      "numerator": "-10440711997655050969",
+      "denominator": "295147905179352825856"
+    },
+    "absolute_midpoint_to_direct_distance_decimal": "1.4069241441538848e-14",
+    "fast_midpoint_plus_minus_one_micro_contains_direct_interval": true
+  },
+  "proof_boundary": "The controls use a synthetic K=4 autocorrelation. They validate implementation overlap and runtime only; they are not Riemann-xi values or the production K=1024 vector."
+}
