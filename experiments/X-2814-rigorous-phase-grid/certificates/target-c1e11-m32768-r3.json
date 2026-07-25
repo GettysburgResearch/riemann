@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.phase-grid-remainder.v1",
+  "cutoff": 100000000000,
+  "cells": 1024,
+  "grid_size": 32768,
+  "taylor_order": 3,
+  "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297",
+  "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+  "norm_upper": {"numerator": 2, "denominator": 1},
+  "pi_lower": {"numerator": 3, "denominator": 1},
+  "pi_upper": {"numerator": 22, "denominator": 7},
+  "log_cutoff_upper": {"numerator": 26, "denominator": 1},
+  "sqrt_cutoff_upper": {"numerator": 316228, "denominator": 1},
+  "eta_ceiling": {"numerator": 1, "denominator": 10000},
+  "weight_ceiling": {"numerator": 11000000, "denominator": 1},
+  "target_radius": {"numerator": 1, "denominator": 20000000000}
+}
