@@ -1,0 +1,22 @@
+{
+  "schema": "riemann.one-direction-schur-target.v1",
+  "gate_status": "CONDITIONAL_TARGETS_NOT_YET_PROVED",
+  "claims_whole_matrix_certificate": false,
+  "directional_baseline": {
+    "numerator": "1",
+    "denominator": "4000"
+  },
+  "complement_lower_target": {
+    "numerator": "7",
+    "denominator": "1000"
+  },
+  "residual_upper_target": {
+    "numerator": "1",
+    "denominator": "5000"
+  },
+  "operator_moat_target": {
+    "numerator": "1",
+    "denominator": "1000"
+  },
+  "interpretation": "If the three pending reference-matrix targets are independently proved in the same normalized basis, L-8502 and the completed X-2805 fixed-direction interval imply the full K=1024 matrix is positive definite."
+}

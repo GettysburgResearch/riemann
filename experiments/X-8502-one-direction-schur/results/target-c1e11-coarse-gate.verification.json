@@ -1,0 +1,72 @@
+{
+  "conditional_targets": {
+    "actual_endpoint_schur_margin": {
+      "denominator": "113826901742198572469308924717655129530149579328351977062927829815617998010256007356476286028085824068146492311984557582053487411200000000",
+      "numerator": "18600696833975624234732346842970324429088592358321498860772060975168214009545955088394537357292922903667801111090948126399623143497"
+    },
+    "coarse_schur_margin": {
+      "denominator": "50000000",
+      "numerator": "3"
+    },
+    "complement_lower": {
+      "denominator": "1000",
+      "numerator": "7"
+    },
+    "operator_moat_upper": {
+      "denominator": "1000",
+      "numerator": "1"
+    },
+    "residual_upper": {
+      "denominator": "5000",
+      "numerator": "1"
+    }
+  },
+  "fixed_direction": {
+    "clears_baseline": true,
+    "declared_baseline": {
+      "denominator": "4000",
+      "numerator": "1"
+    },
+    "norm_squared": {
+      "denominator": "356811923176489970264571492362373784095686656",
+      "numerator": "356811923176490715171636690413409180917175621"
+    },
+    "normalized_lower": {
+      "denominator": "72849217115007086380357711819299282899295730770145265320273811081995518726563844708144823057974927403613755079670116852514231943168",
+      "numerator": "19467886436559100649657301166548662501600425236389156888681401163696867322060224606050174852025227686591866670970529178086042135"
+    },
+    "raw_lower": {
+      "denominator": "218547651345020802884768357151272680472658706488396796199334210989057275822976464905732248445704709582932668752246224672638153785344",
+      "numerator": "58403659309677301948971903499645987504801275709167470666044203491090601966180673818150524556075683059775600012911587534258126405"
+    },
+    "raw_upper": {
+      "denominator": "54636912836255200721192089287818170118164676622099199049833552747264318955744116226433062111426177395733167188061556168159538446336",
+      "numerator": "14600965629138286167480470720154380586885742594552177788269211361417893615873214162878452780815846150602781701542871615378617215"
+    }
+  },
+  "proof_boundary": "The X-2805 fixed-direction interval and the displayed rational Schur implication are checked exactly.  This artifact deliberately does not assert that beta, residual, or operator targets have been proved.",
+  "schema": "riemann.one-direction-schur-target.verification.v1",
+  "source": {
+    "canonical_sha256": "4eb6fe634852cb0a9a0eea87b917d9fbaf9ec77877d359c27b97cfa7d0c5529c",
+    "coverage": {
+      "higher_power_streams": 1,
+      "higher_prime_power_count": 28156,
+      "prime_count": 4118054813,
+      "shards": 50,
+      "total_segments": 5000,
+      "total_terms": 4118082969
+    },
+    "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+    "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+    "schema": "riemann.piecewise-carrier-fixed-vector.v1",
+    "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+  },
+  "status": "CONDITIONAL_WHOLE_MATRIX_TARGET_GATE_VERIFIED",
+  "unproved_gates": [
+    "complement lower bound for the chosen reference matrix",
+    "normalized reference residual bound",
+    "complete operator-norm distance from the exact matrix"
+  ],
+  "verification_sha256": "4e217fd02072600f99c1c5d002b95a0e475b18a0d5a684116b2f3d00e9ecd319",
+  "verified": true
+}

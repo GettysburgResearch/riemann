@@ -1,0 +1,167 @@
+name: d0801-circulant-completion
+
+on:
+  push:
+    branches:
+      - agent/gpt56-03-h/65-circulant-completion
+    paths:
+      - '.github/workflows/d0801-circulant-completion.yml'
+      - 'experiments/X-8201-circulant-completion/**'
+      - 'experiments/X-8502-one-direction-schur/**'
+      - 'experiments/X-8503-fast-toeplitz-operator/**'
+      - 'experiments/X-8504-threshold-insusceptibility/**'
+  pull_request:
+    branches:
+      - cursor/pr49-directed-carrier-pass-7f09
+      - agent/gpt56-03-h/65-circulant-completion
+    paths:
+      - '.github/workflows/d0801-circulant-completion.yml'
+      - 'experiments/X-8201-circulant-completion/**'
+      - 'experiments/X-8502-one-direction-schur/**'
+      - 'experiments/X-8503-fast-toeplitz-operator/**'
+      - 'experiments/X-8504-threshold-insusceptibility/**'
+  workflow_dispatch:
+
+concurrency:
+  group: d0801-circulant-completion-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  completion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install proof and discovery dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libmpfr-dev libgmp-dev
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy
+      - name: Compile exact checkers and fast coefficient producer
+        run: |
+          mkdir -p experiments/X-8503-fast-toeplitz-operator/results
+          mkdir -p experiments/X-8504-threshold-insusceptibility/results
+          g++ -O3 -std=c++20 -Wall -Wextra -Werror -Wno-unknown-pragmas \
+            -frounding-math -ffp-contract=off -fno-fast-math \
+            experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp \
+            -o experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard \
+            -lmpfr -lgmp -lquadmath
+          test "$(git hash-object experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp)" = \
+            "ae6451299362bfc44f3aa681f23c762ea2bc11be"
+          python -m compileall -q \
+            experiments/X-8201-circulant-completion/analyze.py \
+            experiments/X-8502-one-direction-schur/verify_target_gate.py \
+            experiments/X-8502-one-direction-schur/tests \
+            experiments/X-8503-fast-toeplitz-operator/verify_operator_budget.py \
+            experiments/X-8503-fast-toeplitz-operator/bind_fast_shard.py \
+            experiments/X-8503-fast-toeplitz-operator/merge_hybrid_source.py \
+            experiments/X-8503-fast-toeplitz-operator/merge_hybrid_source_strict.py \
+            experiments/X-8503-fast-toeplitz-operator/tests \
+            experiments/X-8504-threshold-insusceptibility/verify.py \
+            experiments/X-8504-threshold-insusceptibility/tests
+      - name: Run exact checker, binding, and merger tests
+        run: |
+          python -m unittest discover \
+            -s experiments/X-8502-one-direction-schur/tests -v
+          python -m unittest discover \
+            -s experiments/X-8503-fast-toeplitz-operator/tests -v
+          python -m unittest discover \
+            -s experiments/X-8504-threshold-insusceptibility/tests -v
+      - name: Replay exact one-direction, operator, and threshold results
+        run: |
+          python experiments/X-8502-one-direction-schur/verify_target_gate.py \
+            experiments/X-2805-directed-prime-producer/results/target-c1e11/final/verdict-p192.json \
+            experiments/X-8502-one-direction-schur/certificates/target-c1e11-coarse-gate.json \
+            --output experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
+          cmp \
+            experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.verification.json \
+            experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
+          python experiments/X-8503-fast-toeplitz-operator/verify_operator_budget.py \
+            experiments/X-8503-fast-toeplitz-operator/certificates/target-static-budget.json \
+            --output experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
+          cmp \
+            experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.verification.json \
+            experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
+          python experiments/X-8504-threshold-insusceptibility/verify.py \
+            experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt \
+            experiments/X-2805-directed-prime-producer/results/target-c1e11/final/verdict-p192.json \
+            --output experiments/X-8504-threshold-insusceptibility/results/verification.regenerated.json
+          cmp \
+            experiments/X-8504-threshold-insusceptibility/results/verification.json \
+            experiments/X-8504-threshold-insusceptibility/results/verification.regenerated.json
+      - name: Exercise and canonically bind one target-sized fast coefficient segment
+        run: |
+          /usr/bin/time -v \
+            experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard \
+            --manifest experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt \
+            --start-segment 2000 \
+            --end-segment 2001 \
+            --phase-grid 32768 \
+            --setup-precision 192 \
+            --output experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json \
+            2> experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.time.txt
+          python experiments/X-8503-fast-toeplitz-operator/bind_fast_shard.py \
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json \
+            experiments/X-8503-fast-toeplitz-operator/certificates/target-hybrid-source-plan.json \
+            --producer-source experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp \
+            --output experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          path = Path('experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json')
+          data = json.loads(path.read_text())
+          assert data['schema'] == 'riemann.piecewise-carrier-fast-toeplitz-midpoint-shard.v1'
+          assert data['segment_start'] == 2000 and data['segment_end'] == 2001
+          assert data['vector_independent'] is True
+          assert data['prime_count'] > 0
+          assert data['total_terms'] == data['prime_count']
+          assert data['guarded_support_boundary_count'] == 0
+          assert len(data['lags']) == 1024
+          assert [row['lag'] for row in data['lags']] == list(range(1024))
+          assert data['binding']['producer_git_blob_sha1'] == \
+              'ae6451299362bfc44f3aa681f23c762ea2bc11be'
+          claimed = data.pop('binding_sha256')
+          actual = hashlib.sha256(json.dumps(
+              data, sort_keys=True, separators=(',', ':'), ensure_ascii=True
+          ).encode('ascii')).hexdigest()
+          assert claimed == actual
+          print(json.dumps({
+              'binding_sha256': claimed,
+              'producer_git_blob_sha1': data['binding']['producer_git_blob_sha1'],
+              'prime_count': data['prime_count'],
+              'near_phase_boundary_count': data['near_phase_boundary_count'],
+              'minimum_support_boundary_distance': data['minimum_support_boundary_distance'],
+              'minimum_phase_boundary_distance': data['minimum_phase_boundary_distance'],
+          }, indent=2, sort_keys=True))
+          PY
+      - name: Run Toeplitz and circulant-completion reconnaissance
+        run: |
+          mkdir -p experiments/X-8201-circulant-completion/results
+          /usr/bin/time -v python \
+            experiments/X-8201-circulant-completion/analyze.py \
+            --output experiments/X-8201-circulant-completion/results/completion.json \
+            2> experiments/X-8201-circulant-completion/results/runtime.txt
+          cat experiments/X-8201-circulant-completion/results/completion.json
+      - name: Upload completion and source controls
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: d0801-circulant-completion
+          if-no-files-found: error
+          path: |
+            experiments/X-8201-circulant-completion/results/completion.json
+            experiments/X-8201-circulant-completion/results/runtime.txt
+            experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
+            experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json
+            experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.time.txt
+            experiments/X-8504-threshold-insusceptibility/results/verification.regenerated.json

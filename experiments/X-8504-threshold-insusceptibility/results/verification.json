@@ -1,0 +1,46 @@
+{
+  "directional_moat": {
+    "coarse_lower": {
+      "denominator": "4000",
+      "numerator": "1"
+    },
+    "normalized_lower": {
+      "denominator": "72849217115007086380357711819299282899295730770145265320273811081995518726563844708144823057974927403613755079670116852514231943168",
+      "numerator": "19467886436559100649657301166548662501600425236389156888681401163696867322060224606050174852025227686591866670970529178086042135"
+    }
+  },
+  "endpoint_autocorrelation": {
+    "imaginary_integer": "986181896727424993759419378262515270609839969009664",
+    "norm_integer": "6277101735386693868379466187240526446204586298914778382336",
+    "ratio_square_surplus": "9464812622928299030095640877674068868269003389309278393646745470079579606601740631370339815830351368213268996816896",
+    "ratio_upper": {
+      "denominator": "1000000",
+      "numerator": "1"
+    },
+    "real_integer": "5381880604401536067550582350214924959587686410092544"
+  },
+  "fingerprints": {
+    "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+    "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+    "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+  },
+  "first_cell_event": {
+    "derived_upper": {
+      "denominator": "474000000000",
+      "numerator": "13"
+    },
+    "maximum_fraction_of_coarse_moat": {
+      "denominator": "9000000",
+      "numerator": "1"
+    },
+    "reported_simple_upper": {
+      "denominator": "36000000000",
+      "numerator": "1"
+    }
+  },
+  "proof_boundary": "This excludes only the newly admitted prime-power component for the recovered vector in one first deposition cell.  Smooth background and other simultaneous events are not bounded here.",
+  "schema": "riemann.threshold-entry-insusceptibility.verification.v1",
+  "status": "HISTORICAL_VECTOR_FIRST_CELL_EVENT_EXCLUDED",
+  "verification_sha256": "df56a0ee9dedab633bc6ad9537aa2d1c0c69fe4554980713cbce6b6361955aa5",
+  "verified": true
+}

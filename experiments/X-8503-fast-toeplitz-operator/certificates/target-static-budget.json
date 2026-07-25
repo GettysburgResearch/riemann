@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.fast-toeplitz-operator-budget.v1",
+  "status": "STATIC_CONDITIONAL_BUDGET_NOT_A_PRODUCTION_RUN",
+  "claims_complete_coefficient_run": false,
+  "arithmetic_contract": "x86 binary80 nearest basic arithmetic; binary128 segment-relative phase; MPFR setup; M=32768 R=3; two-hat coefficient deposits; balanced pairwise summation; zero guarded support-boundary events",
+  "term_count_upper": 4200000000,
+  "hardware_units_per_term": 256,
+  "binary80_mantissa_bits": 64,
+  "pairwise_depth": 64,
+  "amplitude_sum_upper": 11000001,
+  "guarded_support_boundary_count": 0,
+  "phase_location_budget": {
+    "numerator": "1",
+    "denominator": "1000000000000"
+  },
+  "phase_taylor_budget": {
+    "numerator": "1",
+    "denominator": "20000000000"
+  },
+  "algebraic_budget": {
+    "numerator": "1",
+    "denominator": "90000000000000"
+  },
+  "required_upper": {
+    "numerator": "1",
+    "denominator": "17000000"
+  },
+  "claimed_total": {
+    "numerator": "8671901269709261619909050612478389",
+    "denominator": "148552804714245632472498831360000000000000"
+  }
+}
