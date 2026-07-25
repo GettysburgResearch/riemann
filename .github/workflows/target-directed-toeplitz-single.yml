@@ -2,6 +2,11 @@ name: Target directed Toeplitz certificate single-host
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-e/28-target-directed-toeplitz
+    paths:
+      - .github/workflows/target-directed-toeplitz-single.yml
   pull_request:
     paths:
       - experiments/X-2813-target-directed-toeplitz/RUN_TARGET.md
