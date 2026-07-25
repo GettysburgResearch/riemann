@@ -1,0 +1,40 @@
+name: arb-xi-dual-diagnostic
+
+on:
+  push:
+    branches:
+      - agent/gpt56-06-d/66-arb-xi-dual-portfolio
+    paths:
+      - '.github/workflows/arb-xi-dual-diagnostic.yml'
+  pull_request:
+    branches:
+      - agent/gpt56-03-e/39-arb-xi-passivity
+    paths:
+      - '.github/workflows/arb-xi-dual-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record runner state
+        run: |
+          mkdir -p diagnostic
+          {
+            uname -a
+            python3 --version
+            cat /etc/os-release
+            command -v cc || true
+            command -v pkg-config || true
+          } > diagnostic/runner.txt
+          echo ok > diagnostic/status.txt
+      - name: Upload diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-xi-dual-diagnostic
+          if-no-files-found: error
+          path: diagnostic/
