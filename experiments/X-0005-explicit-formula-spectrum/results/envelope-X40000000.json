@@ -1,0 +1,74 @@
+{
+ "experiment": "X-0005e",
+ "agent": "claude-01",
+ "status": "EMPIRICAL",
+ "X": 40000000,
+ "n_windows": 12,
+ "windows": [
+  {
+   "u_centre": 7.349079351473888,
+   "x_centre": 1554.764477106307,
+   "rms": 0.22479455539314322
+  },
+  {
+   "u_centre": 8.232169041302303,
+   "x_centre": 3759.9804665437823,
+   "rms": 0.22586672582314174
+  },
+  {
+   "u_centre": 9.11525873113072,
+   "x_centre": 9092.986955235263,
+   "rms": 0.20965218651543113
+  },
+  {
+   "u_centre": 9.998348420959134,
+   "x_centre": 21990.117369966323,
+   "rms": 0.22757290542396014
+  },
+  {
+   "u_centre": 10.88143811078755,
+   "x_centre": 53180.023717782205,
+   "rms": 0.21539199064000839
+  },
+  {
+   "u_centre": 11.764527800615966,
+   "x_centre": 128608.45056181727,
+   "rms": 0.19767486873580392
+  },
+  {
+   "u_centre": 12.647617490444382,
+   "x_centre": 311021.5528238055,
+   "rms": 0.2356198018111367
+  },
+  {
+   "u_centre": 13.530707180272797,
+   "x_centre": 752162.1316356224,
+   "rms": 0.20260531151938774
+  },
+  {
+   "u_centre": 14.413796870101214,
+   "x_centre": 1818998.93152145,
+   "rms": 0.20460142133150455
+  },
+  {
+   "u_centre": 15.296886559929629,
+   "x_centre": 4398994.543478382,
+   "rms": 0.23570768745672424
+  },
+  {
+   "u_centre": 16.179976249758045,
+   "x_centre": 10638353.13930992,
+   "rms": 0.1980414521956795
+  },
+  {
+   "u_centre": 17.063065939586462,
+   "x_centre": 25727369.379088983,
+   "rms": 0.2354975151226695
+  }
+ ],
+ "slope_log_rms_vs_u": -0.0015505425839774725,
+ "slope_stderr": 0.006802450311386035,
+ "Theta_estimate": 0.49844945741602253,
+ "consistency": "O-0001 fits the envelope via the Nicolas margin (b = Theta - 1); O-0002 fits the oscillation via spectral line amplitudes; this fits the RMS. All three are views of the same error term and must agree.",
+ "caveat": "a finite computation cannot bound Theta from below (Omega-results are about limsup); a null result here is consistency, not evidence"
+}

@@ -192,6 +192,36 @@ sieve — but now for a diagnosed reason rather than as a guess.  Window length
 grows like `log X`, so the residual falls slowly; the honest expectation is a
 real-data floor of a few times `10^-3` at `X ~ 10^{12}`, not `10^-5`.
 
+## Consistency with O-0001 (X-0005e)
+
+`f(u)` is the same object whose *envelope* O-0001 fits through the Nicolas
+margin and whose *oscillation* is fitted above.  By Parseval its mean square is
+half the sum of the squared line amplitudes, so the RMS of `f` over successive
+windows must be constant if every zero is on the line, and must grow like
+`e^{delta u}` otherwise.  Measured over twelve windows spanning
+`1.6 * 10^3 <= x <= 2.6 * 10^7`:
+
+```
+RMS f ranges over 0.198 .. 0.236, with no trend
+slope of log(RMS) against u  =  -0.0016 +/- 0.0068
+=> Theta - 1/2 = -0.0016 +/- 0.0068
+```
+
+flat across four orders of magnitude, and consistent with `Theta = 1/2`.  The
+three views — Nicolas margin exponent (`b = -0.511 .. -0.515`), per-line
+amplitude growth (`|delta| <= 0.013`), and RMS growth (`-0.0016 +/- 0.0068`) —
+agree.
+
+**And here is why the tightest-looking number is the weakest.**  The RMS
+aggregates every zero, so a single off-critical zero must come to dominate the
+whole sum before it moves the statistic: at `gamma ~ 100` its amplitude is
+`2/|rho| ~ 0.02` against an RMS of `0.22`, so over the available `~10` units of
+`u` it needs `delta >~ 0.24`.  The `+/- 0.007` is a tight bound on an
+*aggregate exponent* and a *weak* bound on any individual zero — an order of
+magnitude worse than the per-line test.  Tight error bars on an aggregate are
+not tight bounds on a component, and this is exactly the sort of number that
+would be misquoted.
+
 For orientation: L-0004's deficit test has *no* displacement floor at all, so
 this screen will never compete with it on sensitivity.  Its distinct value is
 that its cost does not grow with the height of the target — it is the only tool
