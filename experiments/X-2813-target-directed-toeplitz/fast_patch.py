@@ -9,8 +9,11 @@ sine/cosine twice per direction.  This script replaces those helpers by:
 - one correctly rounded `mpfr_sin_cos` value at the phase midpoint, bracketed by
   immediate neighbors and then widened by the rigorous phase radius.
 
-The resulting intervals are supersets of the reference intervals up to harmless
-one-ulp extra width, while substantially reducing special-function work.
+Each replacement still contains the exact elementary-function value.  Its
+midpoint-Lipschitz sine/cosine enclosure need not contain the reference
+implementation's different over-enclosure, so cross-backend intervals are
+expected to overlap around the exact value but are not asserted to be nested.
+The replacement substantially reduces special-function work.
 """
 from pathlib import Path
 import argparse
