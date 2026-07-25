@@ -1,0 +1,61 @@
+{
+  "schema": "riemann.xi-complex-pick-recheck.summary.v1",
+  "classification": "ENTIRE_FROZEN_POINT_SET_CERTIFIED_POSITIVE_DEFINITE",
+  "source": {
+    "workflow_artifact": "arb-xi-frozen-pick-candidate",
+    "artifact_id": 8564247721,
+    "artifact_digest": "sha256:b959095a7da656a18b8fd55b399613a220abd224ed7e522fc749119603606710",
+    "precision_bits": 512,
+    "audit_input_sha256": "7c79099e07b30d0f6502542ca729db1a17126a6aae6171d607687b016695a1bd",
+    "audit_verification_sha256": "65d94d511c7fe52da62ba2a74268f43aa4ddf4d496a225b1c4837ef311f62613",
+    "internal_verification_sha256": "e1f15d38ca18610fbe79bfbb5d66bf9b47ee5364da3f5c831682a9e4bf1bb809"
+  },
+  "point_set": {
+    "t": {
+      "numerator": "20225875608342450317715",
+      "denominator": "4294967296"
+    },
+    "x": [
+      {"numerator": "1", "denominator": "131072"},
+      {"numerator": "1", "denominator": "32768"},
+      {"numerator": "1", "denominator": "8192"},
+      {"numerator": "1", "denominator": "2048"},
+      {"numerator": "1", "denominator": "1024"},
+      {"numerator": "1", "denominator": "512"},
+      {"numerator": "1", "denominator": "128"},
+      {"numerator": "1", "denominator": "32"}
+    ]
+  },
+  "previous_real_direction": {
+    "status": "CERTIFIED_NONNEGATIVE",
+    "normalized_orientation": "6.7369660275844976e-37",
+    "512_bit_width_orientation": "8.9823123132607418e-148"
+  },
+  "full_complex_midpoint_min_direction": {
+    "status": "CERTIFIED_NONNEGATIVE",
+    "normalized_orientation": "2.124797425926670145326682000728593783076e-41",
+    "512_bit_width_orientation": "8.971959184732542e-148"
+  },
+  "whole_matrix": {
+    "status": "CERTIFIED_POSITIVE_DEFINITE",
+    "delta": {
+      "numerator": "1",
+      "denominator": "87112285931760246646623899502532662132736"
+    },
+    "uncertainty_operator_norm_upper": {
+      "numerator": "372566671360780675349",
+      "denominator": "64711658050292994811796331876954222132553313717887839011037850318328461565627599607925555497928173325146222101897400721930366067548760552299647323168952657776948019200"
+    },
+    "lower_eigenvalue_margin": {
+      "numerator": "742853403031865422661585511064369308513694403897780248344347993730941437336193504022416050126586623102228390426666872555951851",
+      "denominator": "64711658050292994811796331876954222132553313717887839011037850318328461565627599607925555497928173325146222101897400721930366067548760552299647323168952657776948019200"
+    },
+    "orientation": {
+      "delta": "1.1479437019748901445e-41",
+      "uncertainty_operator_norm_upper": "5.7573346532278167483e-147",
+      "certified_lower_eigenvalue_margin": "1.1479437019748901445e-41"
+    }
+  },
+  "conclusion": "The earlier one-vector refutation was not premature. The exact midpoint-plus-radius audit proves every complex direction on this exact eight-point set strictly positive for all matrices admitted by the 512-bit primitive rectangles.",
+  "proof_boundary": "This certifies only the exact eight-point set and depends on the supplied FLINT primitive rectangles. It does not prove RH, independently reproduce the special-function balls, or promote the parent Pick theorem."
+}
