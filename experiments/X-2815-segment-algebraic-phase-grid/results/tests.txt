@@ -1,0 +1,28 @@
+Local validation recorded 2026-07-25
+
+Commands:
+
+python verify_target_bounds.py
+python prototype.py
+python -m unittest discover -s tests -v
+python -m compileall -q verify_target_bounds.py prototype.py tests
+
+Exact checker status:
+EXACT_TARGET_BOUNDS_VERIFIED
+
+Empirical 100-decimal regression:
+samples                           215
+max log error                     1.6538231159580141656987447343495897954605059747648e-36
+max carrier phase error           7.7881898315552051234312415644335869112660053172354e-24
+max reciprocal-sqrt error         2.7499021732151453434795246353313440303409019037859e-28
+
+Unit tests executed locally before commit:
+test_gate_separation              ok
+test_phase_claim_needs_four_terms ok
+test_segment_geometry             ok
+test_sqrt_order                   ok
+test_target                       ok
+
+The committed suite additionally includes invalid-domain rejection.
+
+Proof boundary: the exact tests verify analytic truncation inequalities only. They do not validate a production C++ interval implementation or a complete prime sum.
