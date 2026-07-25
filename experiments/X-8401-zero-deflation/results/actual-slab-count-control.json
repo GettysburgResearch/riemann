@@ -1,0 +1,145 @@
+{
+  "classification": "RIGOROUS_NUMERICAL_CONTROL_PENDING_PARENT_ANALYTIC_REVIEW",
+  "f_real_intersection": {
+    "lower": {
+      "denominator": "196159429230833773869868419475239575503198607639501078528",
+      "numerator": "3923733874355581187035040570892178438733302957240685134005"
+    },
+    "upper": {
+      "denominator": "196159429230833773869868419475239575503198607639501078528",
+      "numerator": "3923733874355581187035040570892178438733302957240685146261"
+    }
+  },
+  "f_via_parts": {
+    "imag": {
+      "lower": {
+        "denominator": "1569275433846670190958947355801916604025588861116008628224",
+        "numerator": "737085848609070863020223161848616032470639605146546406675"
+      },
+      "upper": {
+        "denominator": "1569275433846670190958947355801916604025588861116008628224",
+        "numerator": "737085848609070863020223161848616032470639605146546510945"
+      }
+    },
+    "real": {
+      "lower": {
+        "denominator": "98079714615416886934934209737619787751599303819750539264",
+        "numerator": "1961866937177790593517520285446089219366651478620342566899"
+      },
+      "upper": {
+        "denominator": "98079714615416886934934209737619787751599303819750539264",
+        "numerator": "1961866937177790593517520285446089219366651478620342573235"
+      }
+    }
+  },
+  "f_via_xi": {
+    "imag": {
+      "lower": {
+        "denominator": "12554203470773361527671578846415332832204710888928069025792",
+        "numerator": "5896686788872566904161785294788928259765116841172371261541"
+      },
+      "upper": {
+        "denominator": "12554203470773361527671578846415332832204710888928069025792",
+        "numerator": "5896686788872566904161785294788928259765116841172372079415"
+      }
+    },
+    "real": {
+      "lower": {
+        "denominator": "196159429230833773869868419475239575503198607639501078528",
+        "numerator": "3923733874355581187035040570892178438733302957240685134005"
+      },
+      "upper": {
+        "denominator": "196159429230833773869868419475239575503198607639501078528",
+        "numerator": "3923733874355581187035040570892178438733302957240685146261"
+      }
+    }
+  },
+  "producer": {
+    "count_primitive": "arb.zeta_nzeros at exact rational endpoints",
+    "f_assemblies": [
+      "completed xi derivative divided by xi",
+      "corrected completion plus zeta prime over zeta"
+    ],
+    "precision_bits": 192,
+    "python_flint_version": "0.9.0",
+    "python_version": "3.13.5"
+  },
+  "proof_boundary": "The total nontrivial-zero count difference and special-function balls are directed python-flint/Arb outputs. L-8405 converts the count to line mass only under the RH assumption. Project-level use still needs parent analytic review and independent numerical reproduction.",
+  "residual_interval": {
+    "lower": {
+      "denominator": "19812102352314211160856710366999197125823059371589608931328",
+      "numerator": "3978262848246152150802258709630871305666383402307041478505"
+    },
+    "upper": {
+      "denominator": "19812102352314211160856710366999197125823059371589608931328",
+      "numerator": "3978262848246152150802258709630871305666383402307042716361"
+    }
+  },
+  "sample": {
+    "t": {
+      "denominator": "200",
+      "numerator": "2827"
+    },
+    "x": {
+      "denominator": "20",
+      "numerator": "1"
+    }
+  },
+  "schema": "riemann.zero-deflation.actual-slab-control.v1",
+  "slab": {
+    "N_lower": 0,
+    "N_lower_ball": {
+      "lower": {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      "upper": {
+        "denominator": "1",
+        "numerator": "0"
+      }
+    },
+    "N_upper": 1,
+    "N_upper_ball": {
+      "lower": {
+        "denominator": "1",
+        "numerator": "1"
+      },
+      "upper": {
+        "denominator": "1",
+        "numerator": "1"
+      }
+    },
+    "count_difference": 1,
+    "endpoint_zeta_abs_lower": [
+      {
+        "denominator": "803469022129495137770981046170581301261101496891396417650688",
+        "numerator": "3010066815225539662287668270122234861970994596952098541345"
+      },
+      {
+        "denominator": "200867255532373784442745261542645325315275374222849104412672",
+        "numerator": "840753795924554280717193792967154470458840053595102147029"
+      }
+    ],
+    "lower": {
+      "denominator": "100",
+      "numerator": "1413"
+    },
+    "upper": {
+      "denominator": "50",
+      "numerator": "707"
+    }
+  },
+  "status": "CERTIFIED_POSITIVE_SLAB_COUNT_CONTROL",
+  "subtracted_poisson_lower": {
+    "denominator": "101",
+    "numerator": "2000"
+  },
+  "xi_abs_lower": {
+    "denominator": "51422017416287688817342786954917203280710495801049370729644032",
+    "numerator": "3554898361639301494711384733442611458025962345882445606711"
+  },
+  "zeta_abs_lower": {
+    "denominator": "25108406941546723055343157692830665664409421777856138051584",
+    "numerator": "975883397053872651561356749074495050907927088277991218225"
+  }
+}
