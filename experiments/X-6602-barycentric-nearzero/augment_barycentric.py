@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Append exact eight-node barycentric Pick channels to an Arb feature table.
 
-The primitive special-function rectangles are left unchanged.  This producer
+The primitive special-function rectangles are left unchanged. This producer
 only reconstructs the exact rational vector
 
     c_i = 1 / product_{j != i} (x_i-x_j)
 
 up to one primitive integer scale and appends one ``real-pick-rayleigh``
-channel at each exact ordinate in the X-3902 grid.  The independent
-``verify_value_certificate.py`` checker remains responsible for the final
-outward interval and sign.
+channel at each *complete* exact ordinate found in the supplied X-3902 table.
+It therefore supports both the full 65-height grid and a focused one-height
+precision ladder. The independent ``verify_value_certificate.py`` checker
+remains responsible for the final outward interval and sign.
 """
 from __future__ import annotations
 
@@ -111,6 +112,23 @@ def verify_vector(vector: Sequence[int]) -> None:
         raise ValueError("leading barycentric moment unexpectedly vanished")
 
 
+def complete_t_indices(point_map: dict[str, dict[str, Any]]) -> tuple[int, ...]:
+    indices = tuple(
+        t_index
+        for t_index in range(T_MIN, T_MAX + 1)
+        if all(point_id(t_index, bits) in point_map for bits in X_BITS)
+    )
+    if not indices:
+        raise ValueError("the feature table contains no complete eight-node ordinate")
+    # Reject partially present rows: they are more likely a truncated artifact than
+    # an intentional focused producer.
+    for t_index in range(T_MIN, T_MAX + 1):
+        present = sum(point_id(t_index, bits) in point_map for bits in X_BITS)
+        if present not in (0, len(X_BITS)):
+            raise ValueError(f"ordinate {t_index} is incomplete ({present}/{len(X_BITS)} points)")
+    return indices
+
+
 def augment(data: dict[str, Any]) -> dict[str, Any]:
     if data.get("schema") != SCHEMA:
         raise ValueError(f"schema must be {SCHEMA!r}")
@@ -139,15 +157,14 @@ def augment(data: dict[str, Any]) -> dict[str, Any]:
     vector = exact_vector()
     verify_vector(vector)
     vector_json = [fraction_json(value) for value in vector]
+    t_indices = complete_t_indices(point_map)
 
     appended: list[str] = []
-    for t_index in range(T_MIN, T_MAX + 1):
+    for t_index in t_indices:
         identifiers = [point_id(t_index, bits) for bits in X_BITS]
         selected = []
         for identifier, bits in zip(identifiers, X_BITS):
-            raw = point_map.get(identifier)
-            if raw is None:
-                raise ValueError(f"missing required point {identifier}")
+            raw = point_map[identifier]
             x = parse_fraction(raw.get("x"), f"point {identifier}.x")
             if x != Fraction(1, 1 << bits):
                 raise ValueError(f"point {identifier} has unexpected x={x}")
@@ -184,6 +201,7 @@ def augment(data: dict[str, Any]) -> dict[str, Any]:
         "schema": "riemann.xi-barycentric-grid-extension.v1",
         "vector": [str(value) for value in vector],
         "x_bits": list(X_BITS),
+        "t_indices": list(t_indices),
         "channel_ids": appended,
         "exact_moment_cancellations": list(range(len(X_BITS) - 1)),
         "proof_boundary": (
@@ -209,7 +227,18 @@ def self_test() -> None:
     if vector != expected:
         raise AssertionError((vector, expected))
     verify_vector(vector)
-    print("exact eight-node barycentric vector and seven moments verified")
+    # Focused-grid detection.
+    dummy = {
+        point_id(1, bits): {
+            "id": point_id(1, bits),
+            "x": fraction_json(Fraction(1, 1 << bits)),
+            "t": fraction_json(Fraction(123)),
+        }
+        for bits in X_BITS
+    }
+    if complete_t_indices(dummy) != (1,):
+        raise AssertionError("focused ordinate detection failed")
+    print("exact eight-node barycentric vector, seven moments, and focused row verified")
 
 
 def main() -> int:
