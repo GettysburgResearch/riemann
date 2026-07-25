@@ -1,0 +1,41 @@
+BUILD_UTC=2026-07-25T18:02:11Z
+COMMAND=g++ -O3 -march=native -std=c++17 directed_prime_shard_fast.cpp -lmpfr -lgmp
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+libmpfr-dev=4.2.1-1build1.1
+libgmp-dev=2:6.3.0+dfsg-2ubuntu6.1
+d8eb99717e3bcc7b9a6420e52eccc4c1ee9242d7c1d210d4c44842fa784fa2d9  experiments/X-2805-directed-prime-producer/directed_prime_shard_fast.cpp
+e1bcc62d1b505ab3bdd03965f23dabcefab3b3cdab131a07531d1761d2b45739  experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt
+/tmp/carrier-build/directed_prime_shard_fast_pr49: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=bf7ad681c8f832d2e9727c11f510cbf8792ab8f8, for GNU/Linux 3.2.0, not stripped
+	linux-vdso.so.1 (0x00007eff44373000)
+	libmpfr.so.6 => /lib/x86_64-linux-gnu/libmpfr.so.6 (0x00007eff4429b000)
+	libgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00007eff44217000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007eff43f99000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007eff43eb0000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007eff43e82000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007eff43c6e000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007eff44375000)
+31798e7eeb121f20dc5c84689b0d8dc75f705a681d5e3fdb5101421f827f865a  /tmp/carrier-build/directed_prime_shard_fast_pr49
+
+REQUIRED_BACKEND_REBUILD_UTC=2026-07-25T18:05:30Z
+MPFR_SOURCE_URL=https://www.mpfr.org/mpfr-4.2.2/mpfr-4.2.2.tar.xz
+MPFR_SOURCE_SHA256=b67ba0383ef7e8a8563734e2e889ef5ec3c3b898a01d00fa0a6869ad81c6ce01
+MPFR_SIGNING_FINGERPRINT=A534 BE3F 83E2 41D9 1828 0AEB 5831 D11A 0D4D B02A
+MPFR_SIGNATURE_STATUS=Good signature from Vincent Lefevre
+MPFR_TESTS=TOTAL 198; PASS 198; FAIL 0
+COMMAND=g++ -O3 -march=native -std=c++17 -I/tmp/mpfr-4.2.2-install/include directed_prime_shard_fast.cpp -L/tmp/mpfr-4.2.2-install/lib -Wl,-rpath,/tmp/mpfr-4.2.2-install/lib -lmpfr -lgmp
+	linux-vdso.so.1 (0x00007fc56d1bb000)
+	libmpfr.so.6 => /tmp/mpfr-4.2.2-install/lib/libmpfr.so.6 (0x00007fc56d0e8000)
+	libgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00007fc56d05b000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007fc56cddd000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fc56ccf4000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fc56ccc6000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fc56cab2000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fc56d1bd000)
+d8eb99717e3bcc7b9a6420e52eccc4c1ee9242d7c1d210d4c44842fa784fa2d9  experiments/X-2805-directed-prime-producer/directed_prime_shard_fast.cpp
+e1bcc62d1b505ab3bdd03965f23dabcefab3b3cdab131a07531d1761d2b45739  experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt
+fabbdc63700468fb868bbc814c514dc8eacb5fa112d51e5cc77337c1cedd9ec1  /tmp/carrier-build/directed_prime_shard_fast_pr49_mpfr422
+a184d8bd99f01c668230966fff368789c01c634748623c947d67874c6458fa15  experiments/X-2805-directed-prime-producer/results/target-c1e11/build/mpfr-4.2.2-build.log.gz
