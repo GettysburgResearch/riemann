@@ -15,6 +15,7 @@
   "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
   "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
   "fast_budget_verification_sha256": "9a2c928b5a56440a212402d78cd95510b13b17116fdcf26b9a82a4a501ea9780",
+  "fast_producer_git_blob_sha1": "ae6451299362bfc44f3aa681f23c762ea2bc11be",
   "operator_gate": {
     "numerator": "999",
     "denominator": "1000000"
@@ -24,5 +25,5 @@
     "fast_ordinary_segments": "[2000,5000)",
     "higher_prime_powers": "exactly one fully directed stream"
   },
-  "proof_boundary": "The plan fixes the complete source partition, target fingerprints, and exact static-budget verification hash. It is not a completed coefficient artifact."
+  "proof_boundary": "The plan fixes the complete source partition, target fingerprints, exact static-budget verification hash, and exact reviewed fast-producer Git blob. It is not a completed coefficient artifact."
 }
