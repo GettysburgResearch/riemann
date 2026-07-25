@@ -149,6 +149,12 @@ Combined with the `K^{-2}` law of `O-5603`, `eta_min` improves only like
 `K^{-1}`: reaching `eta_min = 1e-3` needs `K ~ 1.6e4`, and `1e-6` needs
 `K ~ 1.6e7`.  A dense Hermitian certificate at `K = 1.6e4` is already 32 GB.
 
+**Raising `K` does not help below the barrier.**  A production check at
+`c = 10^11`, `K = 4096` (a second complete 4,118,082,969-term stream) gives a
+certified margin of `2.62514e-4` against `2.67186e-4` at `K = 1024`: quadrupling
+the cell count buys `1.8%`.  Past the barrier the same quadrupling buys a factor
+of `16`.  Sensitivity can only be bought by first getting `c` above `T/2 pi`.
+
 **Scope and caveat.**  `eta_min` here is evaluated at the vector that minimizes
 the on-line value, which need not maximize the response; a dedicated
 optimization would lower it by an unknown factor.  The qualitative conclusion —

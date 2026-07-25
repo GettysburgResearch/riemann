@@ -1,0 +1,65 @@
+{
+ "schema": "riemann.x5601-certificate.v1",
+ "agent": "opus5-01",
+ "cutoff": 100000000000,
+ "cells": 4096,
+ "carrier": "94184072727073/20",
+ "prime_count": 4118054813,
+ "higher_prime_power_count": 28156,
+ "total_terms": 4118082969,
+ "amplitude_total": 201316.05318381023,
+ "stream_error_model": {
+  "eps_trig": "1/100000000000000000",
+  "eps_amp": "1/10000000000000000000000000",
+  "eps_tau": "1/10000000000000000000000000",
+  "eps_acc": "1/10000000000000000",
+  "sum_lag_error_bound": 2.8429982344998063e-12
+ },
+ "ell_T": "4.35171995208831780660455253793",
+ "correction_gate": {
+  "b_small_cell_hypothesis": 0.012367400401823488,
+  "b_le_1_over_20": true,
+  "B_arch_upper": "6.7815767759237585783e-10",
+  "R_norm_upper": "4.7480870373205929202e-16",
+  "B_total_float": 6.781581524010796e-10
+ },
+ "symbol_bound": {
+  "grid_log2": 18,
+  "grid_max": 10.64365447425938,
+  "grid_min": -14.868362107462765,
+  "closure": 0.018337730459753156,
+  "sup_upper": 10.661992204719134,
+  "inf_lower": -14.886699837922519
+ },
+ "gram_factor_bound": {
+  "t": 4.351457436197154,
+  "gamma_n": 4.547473508866709e-13,
+  "residual_inf_norm": 2.509654124041149e-14,
+  "abs_product_rowsum": 2205.884449238567,
+  "rounding_slack": 1.0031201096533414e-09,
+  "form_slack": 4.831088236342433e-16,
+  "total_slack": 1.0031456903065507e-09,
+  "lambda_max_upper": 4.3514574372003
+ },
+ "matrix_rounding_bound": 3.317334499659768e-14,
+ "sum_abs_z": 298.7989283306204,
+ "lambda_max_floating": 4.351457435197154,
+ "lambda_max_upper_certified": 4.351457437203176,
+ "universal_margin_lower": 0.0002625142069836112,
+ "universal_positivity_certified": true,
+ "frozen_vectors": {
+  "64": {
+   "vector_sha256": "96175151015a93e864d026780243792870e223ceed77709e6447a482fb6da05c",
+   "norm_squared": 0.9999999999999994,
+   "prime_rayleigh": 4.351457435197151,
+   "prime_rayleigh_radius": 1.185679777775623e-14,
+   "leading_margin_lower": 0.00026251689115254864,
+   "leading_margin_upper": 0.00026251689117626225,
+   "exact_form_lower": 0.00026251621299439623,
+   "exact_form_upper": 0.00026251756933441466,
+   "exact_form_lower_str": "0.00026251621299439623",
+   "sign_certified_positive": true
+  }
+ }
+}
+K4096_CERT_DONE

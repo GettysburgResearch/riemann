@@ -232,6 +232,19 @@ At the production parameters that gives `\eta_{\min} \sim 6\times10^{-4}`, i.e.
 it is optimistic by a factor of about `25` against the computed `0.0153`.  The
 crude bound should not be used now that the exact figure exists.
 
+## The `K^{-1}` improvement is only available above the barrier
+
+A production check at `c = 10^{11}`, `K = 4096` (a complete second
+`4,118,082,969`-term stream) gives a certified margin of `2.62514e-4` against
+`2.67186e-4` at `K = 1024` — a ratio of `1.0178`.  The production cell sits
+*below* the C-5601 barrier (`deficit = -0.319`), where the margin saturates in
+`K`, so **quadrupling `K` there improves `eta_min` by 0.9%, not by a factor of
+two.**
+
+The `eta_min \propto K^{-1}` scaling below therefore applies only past the
+barrier.  Any attempt to buy sensitivity by raising `K` must first move the
+cutoff above `T/2 pi`; otherwise it buys essentially nothing.
+
 ## Interaction with the `K^{-2}` law
 
 `O-5603` measures `lambda_min \propto K^{-2}` past the C-5601 barrier.  Combined

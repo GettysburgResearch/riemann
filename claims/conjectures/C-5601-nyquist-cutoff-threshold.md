@@ -118,6 +118,30 @@ past it they can.  It also means the binding constraint changes character past
 the barrier, because the `L-4202` gate grows like `K` while the margin falls
 like `K^{-2}` — see `O-5603` and `Q-5605`.
 
+### Confirmed at production scale
+
+The `K`-saturation half of the signature was then checked at the *production*
+parameters (`c = 10^{11}`, `T = 94184072727073/20`), where the deficit is
+`Delta - ell_T = -0.319`, i.e. **below** the barrier.  Quadrupling the cell
+count from `1024` to `4096` — a complete second `4,118,082,969`-term stream —
+gives
+
+```text
+K = 1024   lambda_max <= 4.351452765941646   certified margin >= 2.67186e-4
+K = 4096   lambda_max <= 4.351457437203176   certified margin >= 2.62514e-4
+ratio                                                            1.0178
+```
+
+Below the barrier, quadrupling `K` buys **1.8%**.  Past the barrier the same
+quadrupling buys a factor of **16** (the `K^{-2}` law of O-5603).  That is a
+factor-`900` difference in the response to the same parameter, on the same side
+of nothing but the barrier, and it is the sharpest confirmation of this claim so
+far.
+
+The practical corollary matters more than the confirmation: **increasing `K`
+below the barrier is wasted effort.**  Sensitivity can only be bought by first
+getting `c` above `T/2 pi`, and only then by raising `K`.
+
 ## Supporting certified data (O-5601)
 
 Same carrier, `K = 1024`, certified universal margins:
