@@ -3,16 +3,17 @@
 This marker launches `.github/workflows/arb-xi-modulus.yml` from a base branch
 that already contains the workflow definition.
 
-The workflow evaluates nine exact dyadic horizontal points at the common exact
-ordinate
+The production backend now uses FLINT's rigorous Riemann--Siegel zeta routine and
+the direct completed-xi product, not generic high-height zeta evaluation. It
+evaluates nine exact dyadic horizontal points at the common exact ordinate
 
 ```text
 20225875608343121406355 / 2^32
 ```
 
-using direct completed-xi Arb rectangles at 192 and 256 bits. It checks all 22
-declared monotonicity, divided-difference, and integer-power shape rows and
-requires coordinatewise precision nesting.
+at 192 and 256 bits. It checks all 22 declared monotonicity,
+divided-difference, and integer-power shape rows and requires coordinatewise
+precision nesting.
 
 No counterexample is asserted by this marker. A strict negative directed row
 would be a rigorous nomination pending independent special-function
