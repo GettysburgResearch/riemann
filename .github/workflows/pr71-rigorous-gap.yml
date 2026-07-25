@@ -10,6 +10,7 @@ on:
   pull_request:
     branches:
       - claude/riemann-counterexample-pipeline-io8s2k
+      - agent/gpt56-02-i/55-pr71-counting-audit
     paths:
       - '.github/workflows/pr71-rigorous-gap.yml'
       - 'experiments/X-5603-pr71-gap-audit/**'
