@@ -16,6 +16,7 @@ Last updated: 2026-07-25 by claude-01.
 | L-0002 | Certified winding-number zero counting | PROVED | `claims/lemmas/L-0002-certified-winding-number.md` |
 | L-0004 | Count-matching criterion (certified RH in a box) | PROVED | `claims/lemmas/L-0004-count-matching-criterion.md` |
 | L-0007 | Interval-Newton isolation: uniqueness, simplicity, `\|Re rho-1/2\|` bound | PROVED | `claims/lemmas/L-0007-interval-newton-isolation.md` |
+| X-0008 | Speiser: `zeta'` zero-free in the left half-strip | EMPIRICAL (certified) | `experiments/X-0008-speiser/` |
 | X-0007 | Newton sweep: every zero to `t=1000` simple, `\|Re rho-1/2\| <= 2.9e-11` | EMPIRICAL (certified) | `experiments/X-0007-newton-isolation/` |
 | X-0006c | Measured cost law of the Weil filter | EMPIRICAL | `.../sensitivity.py` |
 | L-0006 | Taylor-model enclosures of `eta` with explicit tail | PROVED | `claims/lemmas/L-0006-taylor-model-enclosures.md` |

@@ -385,9 +385,16 @@ def eta_deriv_ball(c: acb, r, p: int = 20, tol_bits: int = 40) -> acb:
     lam = _log(params.N)
     x = r * lam
     tail = mag * arb(p) * (x ** (p - 1)) * x.exp() / arb(factorial(p)) * lam
-    emerr = _em_error_radius(ball, params.N, params.M) * arb((ball - 1).abs_upper())
-    # Cauchy: |E'| <= sup|E| / r  on the concentric ball
-    pad = arb(0, (spread + tail + emerr / r).upper())
+    # Cauchy estimate for the derivative of the Euler-Maclaurin remainder.
+    # It must use a FIXED outer radius: taking the ball's own radius makes the
+    # bound sup|E|/r blow up for a tiny ball (and arb('0.02') is not dyadic, so
+    # "point" inputs carry a radius of ~1e-93).  For |z-c| <= r < R,
+    #     |E'(z)| <= sup_{B(c,R)} |E| / (R - r).
+    R = arb(max(2.0 * float(r), 0.05))
+    ballR = acb(arb(c.real.mid(), R.upper()), arb(c.imag.mid(), R.upper()))
+    paramsR = _auto_params(ballR, tol_bits)
+    emerr = _em_error_radius(ballR, paramsR.N, paramsR.M) * arb((ballR - 1).abs_upper())
+    pad = arb(0, (spread + tail + emerr / (R - r)).upper())
     return E[1] + acb(pad, pad)
 
 

@@ -77,18 +77,26 @@ def certify_zero(c: acb, r_start="0.05", shrink=8, tol_bits: int = 40):
     return {"certified": False, "radius": str(r), "diag": diag}
 
 
-def refine(c: acb, r, iters: int = 3):
-    """Iterate the Newton step to tighten a certified enclosure."""
-    cur = c
-    out = None
+def refine(c: acb, r="0.05", iters: int = 3, tol_bits: int = 120):
+    """Certify, then iterate.  Each Newton step squares the error, so two or
+    three steps take a bisection-quality centre down to the floor set by
+    `tol_bits`.  Returns the tightest certified enclosure found.
+
+    The radius for the next step is taken generously (8x the current enclosure)
+    so that the inclusion test still has room to succeed."""
+    cur, rr, best = c, arb(r), None
     for _ in range(iters):
-        Nw, ok, _ = newton_step(cur, r)
+        Nw, ok, _ = newton_step(cur, rr, tol_bits)
         if not ok:
             break
-        out = Nw
+        if best is None or float(Nw.rad()) < float(best.rad()):
+            best = Nw
         cur = acb(arb(Nw.real.mid()), arb(Nw.imag.mid()))
-        r = arb(max(float(Nw.real.rad()), float(Nw.imag.rad())) * 4 + 1e-40)
-    return out
+        nxt = float(Nw.rad()) * 8
+        if nxt <= 0 or nxt >= float(rr):
+            break
+        rr = arb(nxt)
+    return best
 
 
 if __name__ == "__main__":

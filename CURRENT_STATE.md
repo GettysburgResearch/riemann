@@ -14,7 +14,10 @@ argument principle (L-0002), certified zero isolation, and a certified contour
 quadrature.  On top of it sit two independent certified tests for "RH holds in
 this box" — count-matching (L-0004) and the Hermite-Hankel criterion (T-0001) —
 and a third, entirely disjoint, arithmetic line of attack through the Robin /
-Lagarias / Nicolas criteria (X-0003) and the prime spectrum (X-0005).
+Lagarias / Nicolas criteria (X-0003), the prime spectrum (X-0005), and
+certified Weil positivity (T-0002), which asks the primes about the zeros with
+no evaluation of `zeta` anywhere.  A fourth route, Speiser's criterion
+(X-0008), certifies that `zeta'` has no zeros in the left half-strip.
 **No counterexample was found, and none of these results is evidence against
 RH.**  The value delivered is the machinery, the two witness formats, the
 sensitivity measurements that say how strong each search actually is, and a
@@ -26,15 +29,17 @@ ranked list of where to look next.
 
 | Statement | Range | Method | Artifact |
 |---|---|---|---|
+| **Every zero with `0 < t <= 2000` is on the critical line and simple** | `t <= 2000` | L-0004 (box count 1517 = 1517 sign changes, deficit 0) | `X-0001/results/census-T2000.json` |
 | Every zero with `0 < t <= 1000` is on the critical line and simple | `t <= 1000` | L-0004 (box count 649 = 649 sign changes) | `X-0001/results/census-T1000.json` |
 | Every zero with `0 < t <= 500` is on the critical line and simple | `t <= 500` | L-0004 (box count 269 = 269 sign changes) | `X-0001/results/census-T500.json` |
 | No zero with `\|Re s - 1/2\| >= 0.01`, `0 <= t <= 500` | `t <= 500` | L-0002, independent of the above | same |
 | Every zero in four boxes spanning `12 <= t <= 48` is on the line | those boxes | T-0001 (Hankel positive definite) | `X-0002/results/certificates-nsub32.json` |
 | The four tightest Lehmer pairs below `T = 2000` (`gamma = 1977.17, 1329.04, 1415.59, 1054.78`) have both zeros on the line | those boxes | T-0001 **and** L-0004, independently, on each | `X-0002/results/lehmer-pair*.json` |
-| 1517 certified on-line zero ordinates for `0 < t <= 2000` | `t <= 2000` | sign change + bisection (existence only; not a completeness claim without the box count) | `X-0004/results/lehmer-T2000.json` |
+| 1517 certified on-line zero ordinates for `0 < t <= 2000` | `t <= 2000` | sign change + bisection; now also COMPLETE, since the box count matches | `X-0004/results/lehmer-T2000.json` |
 | Deficit `N_box - m` is `0` in all 24 height bands to `T = 500` | `t <= 500` | M-0005 ledger | `X-0001/results/deficit-ledger.json` |
-| **Every zero with `0 < t <= 1000` is simple and has `\|Re rho - 1/2\| <= 2.94e-11`** | `t <= 1000` | L-0007 interval Newton + the certified box count 649 | `X-0007/results/newton-T1000.json` |
-| Same at `t <= 100`, with the sharper bound `2.24e-14` | `t <= 100` | same | `X-0007/results/newton-T100.json` |
+| **Every zero with `0 < t <= 1000` is simple and has `\|Re rho - 1/2\| <= 9.49e-77`** | `t <= 1000` | L-0007 interval Newton (iterated) + the certified box count 649 | `X-0007/results/newton-T1000.json` |
+| Same at `t <= 100` | `t <= 100` | same | `X-0007/results/newton-T100.json` |
+| `zeta'` has **no zeros** in `[0.02, 0.48] x [1, 30]` (Speiser's criterion) | that box | L-0002 applied to `zeta'` | `X-0008/results/` |
 | The classical Lehmer pair (`gamma ~ 7005.06`, normalised gap 0.042) has both zeros on the line | that box | T-0001 **and** L-0004 | `X-0002/results/lehmer-pair-7005.json` |
 | Weil quadratic forms positive definite at `gamma_0 = 0, 14, 100, 500, 1977, 7005` | those filters | T-0002, from 143 prime powers and `Gamma` -- no `zeta` anywhere | `X-0006/results/matched-filter.json` |
 | No Robin / Lagarias violation among colossally abundant `n` up to 11541 digits | that set | exact integers + certified enclosures | `X-0003/results/criteria-2000000.json` |
