@@ -1,0 +1,52 @@
+{
+  "schema": "riemann.endpoint-green-threshold.synthetic.v1",
+  "cases": [
+    {
+      "id": "leading-vector-misses-crossing",
+      "H": [["1/10", 0, 0], [0, "1/100", 0], [0, 0, "1/10"]],
+      "endpoints": [0, 2],
+      "phase": {"re": 1, "im": 0},
+      "tau": "3/25",
+      "mu": "1/100",
+      "beta": "1/1000",
+      "leading_vector": [0, 1, 0],
+      "claimed_leading_susceptibility": 0,
+      "expected_status": "ROBUST_CROSSING"
+    },
+    {
+      "id": "robust-no-crossing",
+      "H": [["1/10", 0, 0], [0, "1/100", 0], [0, 0, "1/10"]],
+      "endpoints": [0, 2],
+      "phase": {"re": 1, "im": 0},
+      "tau": "2/25",
+      "mu": "1/100",
+      "beta": "1/1000",
+      "leading_vector": [0, 1, 0],
+      "claimed_leading_susceptibility": 0,
+      "expected_status": "ROBUST_POSITIVE"
+    },
+    {
+      "id": "complex-phase-crossing",
+      "H": [
+        ["8/15", {"re": "-2/25", "im": "-8/75"}],
+        [{"re": "-2/25", "im": "8/75"}, "8/15"]
+      ],
+      "endpoints": [0, 1],
+      "phase": {"re": "3/5", "im": "4/5"},
+      "tau": "1/2",
+      "mu": "2/5",
+      "beta": "1/20",
+      "expected_status": "ROBUST_CROSSING"
+    },
+    {
+      "id": "exact-boundary-is-unresolved",
+      "H": [["1/10", 0], [0, "1/10"]],
+      "endpoints": [0, 1],
+      "phase": {"re": 1, "im": 0},
+      "tau": "1/10",
+      "mu": "1/10",
+      "beta": 0,
+      "expected_status": "UNRESOLVED_MOAT"
+    }
+  ]
+}
