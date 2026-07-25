@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from fractions import Fraction
 from pathlib import Path
 import sys
 import unittest
@@ -20,6 +19,7 @@ def fraction(numerator: int, denominator: int = 1) -> dict[str, str]:
 
 PARAMETER_SHA = "33" * 32
 NORMALIZATION_SHA = "44" * 32
+PRODUCER_BLOB = "aa" * 20
 
 
 def budget_certificate() -> dict[str, object]:
@@ -65,6 +65,7 @@ def plan(budget_sha: str | None = None) -> dict[str, object]:
         "parameter_sha256": PARAMETER_SHA,
         "normalization_sha256": NORMALIZATION_SHA,
         "fast_budget_verification_sha256": budget_sha,
+        "fast_producer_git_blob_sha1": PRODUCER_BLOB,
         "operator_gate": fraction(1, 2),
     }
 
@@ -135,38 +136,41 @@ def directed() -> dict[str, object]:
     }
 
 
+def bound_fast(source_plan: dict[str, object]) -> dict[str, object]:
+    return bind_fast_shard.bind(raw_fast(), source_plan, PRODUCER_BLOB)
+
+
 class StrictBindingTests(unittest.TestCase):
-    def test_bound_shard_and_budget_are_replayed(self) -> None:
+    def test_bound_shard_budget_and_source_are_replayed(self) -> None:
         budget = verified_budget()
         source_plan = plan(budget["verification_sha256"])
-        bound = bind_fast_shard.bind(raw_fast(), source_plan)
         result = merge_hybrid_source_strict.merge(
             source_plan,
             budget,
-            [("direct.json", directed()), ("fast.json", bound)],
+            [("direct.json", directed()), ("fast.json", bound_fast(source_plan))],
         )
         self.assertEqual(result["strict_binding"]["bound_fast_shards"], 1)
         self.assertEqual(
-            result["strict_binding"]["status"],
-            "CANONICAL_HASHES_REPLAYED",
+            result["strict_binding"]["fast_producer_git_blob_sha1"],
+            PRODUCER_BLOB,
         )
+        self.assertEqual(result["strict_binding"]["status"], "CANONICAL_HASHES_REPLAYED")
         self.assertEqual(result["lags"][0]["imag"], fraction(0))
 
     def test_budget_hash_mutation_is_rejected(self) -> None:
         budget = verified_budget()
         source_plan = plan("00" * 32)
-        bound = bind_fast_shard.bind(raw_fast(), source_plan)
         with self.assertRaises(merge_hybrid_source_strict.CertificateError):
             merge_hybrid_source_strict.merge(
                 source_plan,
                 budget,
-                [("direct.json", directed()), ("fast.json", bound)],
+                [("direct.json", directed()), ("fast.json", bound_fast(source_plan))],
             )
 
     def test_fast_binding_hash_mutation_is_rejected(self) -> None:
         budget = verified_budget()
         source_plan = plan(budget["verification_sha256"])
-        bound = bind_fast_shard.bind(raw_fast(), source_plan)
+        bound = bound_fast(source_plan)
         bound["lags"][1]["real"] = fraction(2, 7)
         with self.assertRaises(merge_hybrid_source_strict.CertificateError):
             merge_hybrid_source_strict.merge(
@@ -186,18 +190,21 @@ class StrictBindingTests(unittest.TestCase):
             )
 
     def test_binder_rejects_operation_order_drift(self) -> None:
-        budget = verified_budget()
-        source_plan = plan(budget["verification_sha256"])
+        source_plan = plan()
         raw = raw_fast()
         raw["phase_taylor_R"] = 4
         with self.assertRaises(bind_fast_shard.CertificateError):
-            bind_fast_shard.bind(raw, source_plan)
+            bind_fast_shard.bind(raw, source_plan, PRODUCER_BLOB)
 
     def test_binder_rejects_early_range(self) -> None:
-        budget = verified_budget()
-        source_plan = plan(budget["verification_sha256"])
+        source_plan = plan()
         with self.assertRaises(bind_fast_shard.CertificateError):
-            bind_fast_shard.bind(raw_fast(1, 4, 3), source_plan)
+            bind_fast_shard.bind(raw_fast(1, 4, 3), source_plan, PRODUCER_BLOB)
+
+    def test_binder_rejects_source_blob_drift(self) -> None:
+        source_plan = plan()
+        with self.assertRaises(bind_fast_shard.CertificateError):
+            bind_fast_shard.bind(raw_fast(), source_plan, "bb" * 20)
 
 
 if __name__ == "__main__":
