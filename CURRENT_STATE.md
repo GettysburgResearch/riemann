@@ -83,28 +83,34 @@ Measured, not guessed:
   windows (`X-0005c`) the estimator became unbiased — measured growth ratios
   match `e^{delta D}` to three digits — and the floor is now `delta ~ 0.1`
   overall, and **`delta ~ 0.02` for spectrally isolated ordinates**.  The
-  residual is not leakage but *line blending*: the two closest ordinates in
-  range (48.005, 49.774, separation 1.77 against resolution 2.37) contribute
-  all of the scatter.  Fix named, not built: fit neighbouring lines jointly
-  using the certified ordinates from X-0001/X-0004 as known positions.
-  Its cost does not grow with the height of the target, but its resolvable
-  band grows only like `log X` (`gamma <~ 60` at `X = 4*10^7`).
+  residual was not leakage but *line blending*.  Replacing peak-reading with a
+  **joint least-squares fit at the certified ordinates** (`X-0005d`) removed
+  blending entirely: baseline scatter `0.168 -> 5e-15`, and the estimator
+  tracks `e^{delta D}` to five digits down to a planted `delta = 0.0005`.
+  The screen's real-data floor is now `~ 0.02`, set by *model mismatch* — the
+  unmodelled band above `gamma = 78`, and the non-zero terms of the explicit
+  formula — every piece of which is a writable term.  Its cost does not grow
+  with the height of the target, but its resolvable band grows only like
+  `log X`.
 
 The honest ranking of "chance of finding a counterexample per unit of compute"
 is therefore **L-0004 deficit scan -> T-0001 on Lehmer pairs -> X-0005 ->
 X-0003**.
 
-That ranking moved twice in one session, which is worth recording.  I first
+That ranking moved three times in one session, which is worth recording.  I first
 put X-0005 top, on the strength of its cost not growing with height.  The
 planted-zero test (M-0003) immediately refuted that — floor `0.2`, useless —
-and I dropped it last.  Redesigning the window comparison then bought a factor
-of ten on isolated lines and moved it back up.  None of that would have
-happened without a mandatory measurement of the detector's own sensitivity,
-which is the whole argument for M-0003.
+and I dropped it last.  Redesigning the window comparison bought a factor of
+ten on isolated lines; replacing peak-reading with a joint fit then removed the
+estimator as a limitation altogether.  Each step was driven by a measurement
+that contradicted the previous judgement, which is the whole argument for
+M-0003.
 
-Note the awkward part, stated plainly: the screen is weakest exactly where
-lines blend, i.e. at close pairs, i.e. at the Lehmer pairs that T-0001 most
-wants to examine.
+The awkward part of the middle stage — that the screen was weakest exactly at
+close pairs, i.e. at the Lehmer pairs T-0001 most wants to examine — was
+dissolved by the joint fit, since fitting neighbouring lines together does not
+care how close they are.  That is now an argument for the screen rather than
+against it.
 
 Nothing in this repository is close to the frontier of what is known
 computationally; the contribution is that every step is reproducible from

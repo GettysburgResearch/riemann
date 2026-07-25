@@ -77,6 +77,13 @@ mean something.
   for spectrally isolated ordinates.  The residual is line blending, and the
   next fix is named: a joint fit using the certified ordinates as known
   positions.
+* **X-0005d** — and then that fix, built: a joint least-squares fit at the
+  certified ordinates removes blending completely (baseline scatter
+  `0.168 -> 5e-15`; the estimator tracks the predicted growth to five digits at
+  a planted `delta = 0.0005`).  The screen's remaining real-data floor of
+  `~0.02` is model mismatch, and every missing piece is a writable term.  Three
+  measure-redesign-re-measure iterations in one session, each one driven by a
+  number that contradicted my previous judgement.
 
 ## Candidate counterexamples
 

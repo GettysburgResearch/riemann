@@ -1,0 +1,130 @@
+{
+ "experiment": "X-0005d",
+ "agent": "claude-01",
+ "status": "EMPIRICAL",
+ "X": 40000000,
+ "W": 5.298317366548037,
+ "D": 5.298317366548037,
+ "n_modelled_lines": 20,
+ "design": "joint least-squares fit at known certified ordinates",
+ "synthetic": [
+  {
+   "delta": 0.1,
+   "ratio": 1.6983177094976052,
+   "predicted": 1.6986464646342474,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.05,
+   "ratio": 1.3031275766496246,
+   "predicted": 1.3033213205630634,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.02,
+   "ratio": 1.1117044618360983,
+   "predicted": 1.1117844613624535,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.01,
+   "ratio": 1.05437177144724,
+   "predicted": 1.0544119030826868,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.005,
+   "ratio": 1.0268255324542612,
+   "predicted": 1.0268456082014894,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.002,
+   "ratio": 1.0106449480010213,
+   "predicted": 1.0106529779070752,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.001,
+   "ratio": 1.005308363608901,
+   "predicted": 1.0053123782720848,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.0005,
+   "ratio": 1.0026506635664223,
+   "predicted": 1.0026526708048429,
+   "detected_at_3x_scatter": true
+  }
+ ],
+ "baseline_scatter": 4.884981308350689e-15,
+ "baseline_scatter_prior_designs": [
+  0.1494,
+  0.1682
+ ],
+ "sensitivity_floor_delta": 0.0005,
+ "real_data": [
+  {
+   "gamma": 14.134725141734693,
+   "ratio": 0.993618293386356,
+   "implied_delta": -0.0012083377252325872
+  },
+  {
+   "gamma": 21.022039638771552,
+   "ratio": 0.9882684561806805,
+   "implied_delta": -0.0022272922786827575
+  },
+  {
+   "gamma": 25.01085758014569,
+   "ratio": 1.0040932415069284,
+   "implied_delta": 0.0007709781618585735
+  },
+  {
+   "gamma": 30.424876125859512,
+   "ratio": 1.0339013519482663,
+   "implied_delta": 0.006292444359807514
+  },
+  {
+   "gamma": 32.93506158773919,
+   "ratio": 1.0108294929275856,
+   "implied_delta": 0.002032961253229534
+  },
+  {
+   "gamma": 37.58617815882567,
+   "ratio": 0.9742018674264408,
+   "implied_delta": -0.004933026642487506
+  },
+  {
+   "gamma": 40.9187190121475,
+   "ratio": 0.9956562062552389,
+   "implied_delta": -0.0008216297977854791
+  },
+  {
+   "gamma": 43.327073280915,
+   "ratio": 1.0762991576810108,
+   "implied_delta": 0.013877698445530058
+  },
+  {
+   "gamma": 48.00515088116716,
+   "ratio": 1.0072015966425651,
+   "implied_delta": 0.0013543524253504659
+  },
+  {
+   "gamma": 49.7738324776723,
+   "ratio": 1.005442418527103,
+   "implied_delta": 0.0010244124140130384
+  },
+  {
+   "gamma": 52.97032147771446,
+   "ratio": 1.0174720615298816,
+   "implied_delta": 0.0032691850645087317
+  },
+  {
+   "gamma": 56.44624769706339,
+   "ratio": 0.9063137379015247,
+   "implied_delta": -0.018566223388188682
+  }
+ ],
+ "max_abs_implied_delta": 0.018566223388188682,
+ "interpretation": "The implied displacements are now dominated by the finite-X error of the explicit formula (the neglected non-zero terms and the zeros above the modelled band), not by blending.  They are NOT bounds -- there is no error analysis behind them -- but the sensitivity floor from the planted-zero test IS a measurement of what this screen can see."
+}
