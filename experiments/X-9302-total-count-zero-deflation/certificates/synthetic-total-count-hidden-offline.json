@@ -1,0 +1,30 @@
+{
+  "schema": "riemann.xi-modulus-total-count-deflation.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "ordinate": {"numerator": 0, "denominator": 1},
+  "log_terms": 192,
+  "count_windows": [
+    {
+      "id": "all-line-mass-within-one",
+      "radius": {"numerator": 1, "denominator": 1},
+      "count_lower": 20,
+      "gate": {
+        "status": "SYNTHETIC_TOTAL_ZERO_COUNT",
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      }
+    }
+  ],
+  "points": [
+    {"id":"u3","u":{"numerator":3,"denominator":1},"xi_rectangle":{"real":{"lower":{"numerator":-2097152,"denominator":1},"upper":{"numerator":-2097152,"denominator":1}},"imag":{"lower":{"numerator":0,"denominator":1},"upper":{"numerator":0,"denominator":1}}}},
+    {"id":"u4","u":{"numerator":4,"denominator":1},"xi_rectangle":{"real":{"lower":{"numerator":-9765625,"denominator":1},"upper":{"numerator":-9765625,"denominator":1}},"imag":{"lower":{"numerator":0,"denominator":1},"upper":{"numerator":0,"denominator":1}}}},
+    {"id":"u6","u":{"numerator":6,"denominator":1},"xi_rectangle":{"real":{"lower":{"numerator":282475249,"denominator":1},"upper":{"numerator":282475249,"denominator":1}},"imag":{"lower":{"numerator":0,"denominator":1},"upper":{"numerator":0,"denominator":1}}}},
+    {"id":"u7","u":{"numerator":7,"denominator":1},"xi_rectangle":{"real":{"lower":{"numerator":2147483648,"denominator":1},"upper":{"numerator":2147483648,"denominator":1}},"imag":{"lower":{"numerator":0,"denominator":1},"upper":{"numerator":0,"denominator":1}}}}
+  ],
+  "rows": [
+    {"id":"raw-monotonicity-hidden","kind":"raw-monotonicity","left":"u3","right":"u4"},
+    {"id":"deflated-monotonicity-exposes","kind":"deflated-monotonicity","left":"u3","right":"u4"},
+    {"columns":["u4","u7"],"id":"raw-loewner-hidden","kind":"raw-cross-loewner-determinant","rows":["u3","u6"]},
+    {"columns":["u4","u7"],"id":"deflated-loewner-exposes","kind":"deflated-cross-loewner-determinant","rows":["u3","u6"]}
+  ]
+}
