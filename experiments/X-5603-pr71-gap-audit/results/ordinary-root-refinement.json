@@ -1,0 +1,36 @@
+{
+  "algorithm": "5 false-position steps followed by 24 bisections per root",
+  "backend": "mpmath.siegelz ordinary arbitrary precision",
+  "classification": "EMPIRICAL_HIGH_PRECISION_NOT_DIRECTED",
+  "counterexample_candidate": null,
+  "exact_target": {
+    "decimal": "4709203636353.16214999998919665813446044921875",
+    "denominator": "4294967296",
+    "numerator": "20225875608341108140435"
+  },
+  "geometry_from_bracket_midpoints": {
+    "gap": "0.9938733747709420640603639185428619384765625",
+    "gap_in_local_mean_spacings": "4.32505859484004233986568733482692173609378098742",
+    "target_minus_lower": "0.0214756311228256890899501740932464599609375",
+    "upper_minus_target": "0.972397743648116374970413744449615478515625"
+  },
+  "lower_line_zero": {
+    "Z_lower": "3.3043870543873774353e-9",
+    "Z_upper": "-4.0955829137607551419e-9",
+    "lower": "4709203636353.1406743685881792771397158503532409668",
+    "midpoint": "4709203636353.14067436886637096904451027512550354",
+    "upper": "4709203636353.1406743691445626609493046998977661133",
+    "width": "5.5638338380958884954e-10"
+  },
+  "proof_boundary": "The sign brackets use ordinary mpmath arithmetic and are not interval certificates. They correct the binary64 provenance and nominate the exact slab for the independent FLINT Platt/Turing producer.",
+  "schema": "riemann.x5603-pr71-ordinary-root-refinement.v1",
+  "upper_line_zero": {
+    "Z_lower": "-8.4255988713973873794e-9",
+    "Z_upper": "3.0283615085045647407e-9",
+    "lower": "4709203636354.1345477431466406414983794093132019043",
+    "midpoint": "4709203636354.1345477436373130331048741936683654785",
+    "upper": "4709203636354.1345477441278717378736473619937896729",
+    "width": "9.8123109637526795268e-10"
+  },
+  "working_decimal_digits": 25
+}
