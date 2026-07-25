@@ -127,15 +127,24 @@ like `nsub^{-2}`.  Measured, on the planted-pair validation box at 250 bits
 ```
 nsub =  16    floor delta = 0.1
 nsub =  32    floor delta = 0.02
-nsub =  64    floor delta = 0.005    <- smallest displacement tested
-nsub = 128    floor delta = 0.005    <- grid limit, not saturation
+nsub =  64    floor delta = 0.005
+nsub = 128    floor delta = 0.002
+nsub = 256    floor delta = 0.0005      (3.9 s for the whole sweep)
 ```
 
-Each doubling of the effort buys a factor of 4-5 in `delta`, confirming the
+Each doubling of the effort buys a factor of about 4 in `delta`, confirming the
 `nsub^{-2}` law.  Cost per doubling is a factor of 2, so **`delta` improves
-like (work)^{-2}** — much better than the earlier pessimistic reading of this
-same law.  The `0.005` at `nsub = 64` is where the test grid stopped, not where
-the method stopped.
+like (work)^{-2}**, and the absolute cost is trivial on this box: `5 * 10^-4` in
+under four seconds.  The first version of this entry claimed `delta = 10^-3`
+would cost `10^4` times the work of `10^-1`; the truth is a factor of about 16,
+and the wrong figure came from a single mis-measured data point (R-0007) plus a
+pessimistic reading of the exponent.
+
+**What this does not say.**  The measurements are on the small synthetic box at
+height `~2`, where each node evaluation is a four-factor polynomial.  On `zeta`
+at height `t` each node costs `O(t)` Euler-Maclaurin terms and the enclosures
+are wider, so the *constant* is far worse — the `nsub^{-2}` law is what
+transfers, not the four seconds.
 
 Working precision (250, 300, 400 bits) made **no** difference to any floor:
 this is quadrature-limited, not precision-limited.

@@ -227,8 +227,9 @@ smallest displacement certified as `NOT_PSD` is:
 ```
 nsub =  16    delta = 0.1
 nsub =  32    delta = 0.02
-nsub =  64    delta = 0.005    <- smallest tested; not a limit of the method
-nsub = 128    delta = 0.005    <- ditto
+nsub =  64    delta = 0.005
+nsub = 128    delta = 0.002
+nsub = 256    delta = 0.0005     (whole sweep: 3.9 seconds)
 ```
 
 with `PD` on the all-on-line control (no false positive) and `UNDECIDED` —
@@ -273,9 +274,11 @@ also cross-checked against a winding count and a sign-change count.
 
 1. **Push the sensitivity.**  The `nsub^{-2}` law is now measured, not
    conjectured, and the cost of a doubling is only a factor of 2 in work — so
-   `delta` improves like (work)^{-2}.  Extending the test grid below `0.005`
-   costs almost nothing and should be done; `delta ~ 10^{-4}` looks reachable
-   at these heights on present evidence.
+   `delta` improves like (work)^{-2}.  The grid has now been extended to
+   `delta = 5 * 10^-4` at `nsub = 256`, still following the law, and the sweep
+   costs four seconds on the synthetic box.  The open question is the
+   *constant* on real `zeta` boxes at useful heights, where each node costs
+   `O(t)` terms — measure that next, not the exponent.
 2. **Use (e), not (c), for a first sweep**: one determinant per box, with
    subdivision to defeat the parity blindness.
 3. **Combine with X-0004**: run the criterion on the boxes around the tightest
