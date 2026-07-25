@@ -1,0 +1,17 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: certified zeta stack (L-0001, L-0006)
+        run: python3 tests/test_certzeta.py
+      - name: zero counting and box criteria (L-0002, L-0004, T-0001)
+        run: python3 tests/test_winding.py

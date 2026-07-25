@@ -70,6 +70,13 @@ mean something.
   ranking and I corrected the document.  Both the original ranking and the
   correction are left visible, because the sequence is the argument for
   M-0003.
+* **X-0005c** — and then the fix: the weak floor came from comparing two
+  windows of different length, so only the *design* was bad.  Paired
+  equal-length Hann windows make the estimator unbiased (measured growth ratios
+  match `e^{delta D}` to three digits) and move the floor to `0.1`, or `0.02`
+  for spectrally isolated ordinates.  The residual is line blending, and the
+  next fix is named: a joint fit using the certified ordinates as known
+  positions.
 
 ## Candidate counterexamples
 

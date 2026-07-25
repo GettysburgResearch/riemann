@@ -18,6 +18,7 @@ Last updated: 2026-07-25 by claude-01.
 | L-0006 | Taylor-model enclosures of `eta` with explicit tail | PROVED | `claims/lemmas/L-0006-taylor-model-enclosures.md` |
 | T-0001 | Hermite-Hankel box criterion; finite algebraic witness | PROVED (maths) / EMPIRICAL (sensitivity) | `claims/theorems/T-0001-hermite-hankel-box-criterion.md` |
 | O-0001 | Nicolas margin exponent as a probe for `Theta` | EMPIRICAL / IDEA | `claims/observations/O-0001-nicolas-margin-exponent.md` |
+| M-0003 applied | Detector sensitivity floors: T-0001 `delta>=0.1`; spectrum `delta>=0.1` (0.02 isolated) | EMPIRICAL | `NEGATIVE_RESULTS.md` R-0006, `O-0002` |
 | Z-0001 | Tightest Lehmer pair below 500 is off-critical | **REFUTED** | `CANDIDATES.md` |
 | Z-0002 | Off-critical pair at a tight Lehmer pair above the certified range | IDEA (instance at `gamma~1977` REFUTED) | `CANDIDATES.md` |
 | Z-0003 | Certified arithmetic witness (Robin/Lagarias/Nicolas) | REFUTED in tested range | `CANDIDATES.md` |
@@ -26,6 +27,10 @@ Last updated: 2026-07-25 by claude-01.
 | X-0002 | Hermite-Hankel box certificates + detector validation | EMPIRICAL (certified) | `experiments/X-0002-hermite-box-certificates/` |
 | X-0003 | Certified arithmetic criteria (Robin/Lagarias/Nicolas) | EMPIRICAL (certified) | `experiments/X-0003-arithmetic-criteria/` |
 | X-0004 | Lehmer-pair targeting from certified ordinates | EMPIRICAL | `experiments/X-0004-lehmer-pairs/` |
+| X-0005 | Spectrum of `(psi(x)-x)/sqrt(x)` from a prime sieve | EMPIRICAL | `experiments/X-0005-explicit-formula-spectrum/run.py` |
+| X-0005b | Sensitivity validation of the spectral screen (M-0003) | EMPIRICAL | `.../validate.py` |
+| X-0005c | Paired-window redesign; floor 0.2 -> 0.1 (0.02 isolated) | EMPIRICAL | `.../paired_window.py` |
+| O-0002 | Zeta zeros appear as spectral lines in the primes | EMPIRICAL | `claims/observations/O-0002-prime-spectrum-cross-validation.md` |
 | R-0001 | Euler-Maclaurin exponent off-by-one | REFUTED (fixed) | `NEGATIVE_RESULTS.md` |
 | R-0002 | Taylor-model sign error invisible in values | REFUTED (fixed) | `NEGATIVE_RESULTS.md` |
 | R-0003 | Naive interval evaluation of `zeta` over balls | REFUTED (dead end) | `NEGATIVE_RESULTS.md` |
@@ -50,6 +55,8 @@ L-0001 (Euler-Maclaurin bound)
 
 (independent of the above)
 X-0003 (exact arithmetic criteria) -------------> O-0001 --> Z-0004
+X-0005 (prime spectrum) -----------------------> O-0002 --> Z-0004
+  `-- X-0005b sensitivity -> X-0005c redesign (M-0003 loop)
 ```
 
 Note that the two branches of this graph share **no** analytic machinery:

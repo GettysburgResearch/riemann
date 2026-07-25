@@ -1,0 +1,121 @@
+{
+ "experiment": "X-0005c",
+ "agent": "claude-01",
+ "status": "EMPIRICAL",
+ "X": 40000000,
+ "W": 5.298317366548037,
+ "D": 5.298317366548037,
+ "design": "paired equal-length Hann-windowed sub-windows of one sieve",
+ "synthetic": [
+  {
+   "delta": 0.2,
+   "ratio": 2.885959385444207,
+   "predicted": 2.8853998118144277,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.1,
+   "ratio": 1.6972280341048727,
+   "predicted": 1.6986464646342474,
+   "detected_at_3x_scatter": true
+  },
+  {
+   "delta": 0.05,
+   "ratio": 1.2994340541694913,
+   "predicted": 1.3033213205630634,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.02,
+   "ratio": 1.1055578964970623,
+   "predicted": 1.1117844613624535,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.01,
+   "ratio": 1.0472127343401447,
+   "predicted": 1.0544119030826868,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.005,
+   "ratio": 1.019118111500686,
+   "predicted": 1.0268456082014894,
+   "detected_at_3x_scatter": false
+  },
+  {
+   "delta": 0.002,
+   "ratio": 1.0025941913721124,
+   "predicted": 1.0106529779070752,
+   "detected_at_3x_scatter": false
+  }
+ ],
+ "baseline_scatter": 0.16822821141408562,
+ "baseline_scatter_previous_design": 0.1494,
+ "sensitivity_floor_delta": 0.1,
+ "sensitivity_floor_previous_design": 0.2,
+ "real_data": [
+  {
+   "gamma": 14.134725141734693,
+   "ratio": 1.0017683603891077,
+   "implied_delta": 0.00033346410916559904
+  },
+  {
+   "gamma": 21.022039638771552,
+   "ratio": 0.989284033281812,
+   "implied_delta": -0.002033437306171565
+  },
+  {
+   "gamma": 25.01085758014569,
+   "ratio": 0.9742318607033537,
+   "implied_delta": -0.004927215917715707
+  },
+  {
+   "gamma": 30.424876125859512,
+   "ratio": 0.9959477515553286,
+   "implied_delta": -0.0007663718064421003
+  },
+  {
+   "gamma": 32.93506158773919,
+   "ratio": 0.9748479370879817,
+   "implied_delta": -0.004807900385412803
+  },
+  {
+   "gamma": 37.58617815882567,
+   "ratio": 0.9878085218267215,
+   "implied_delta": -0.0023151508275457925
+  },
+  {
+   "gamma": 40.9187190121475,
+   "ratio": 1.016611025395956,
+   "implied_delta": 0.003109396850932574
+  },
+  {
+   "gamma": 43.327073280915,
+   "ratio": 0.9964731812290332,
+   "implied_delta": -0.0006668254114228214
+  },
+  {
+   "gamma": 48.00515088116716,
+   "ratio": 1.124654686668215,
+   "implied_delta": 0.022172330426442125
+  },
+  {
+   "gamma": 49.7738324776723,
+   "ratio": 1.1770269230490453,
+   "implied_delta": 0.030762917930107624
+  },
+  {
+   "gamma": 52.97032147771446,
+   "ratio": 1.0189499456026794,
+   "implied_delta": 0.0035431308921101082
+  },
+  {
+   "gamma": 56.44624769706339,
+   "ratio": 0.9685603268976927,
+   "implied_delta": -0.006029179995034313
+  }
+ ],
+ "max_abs_implied_delta": 0.030762917930107624,
+ "interpretation": "All implied displacements are within the screen's own noise floor, so this is a statement about the screen, not a bound on the zeros.  The point of this file is the FLOOR: compare sensitivity_floor_delta with sensitivity_floor_previous_design to see what the paired-window design bought."
+}

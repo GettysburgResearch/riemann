@@ -78,23 +78,33 @@ Measured, not guessed:
   (Riemann-Siegel) is what unlocks it.
 * **X-0003 arithmetic.**  Exact, but the search set is hopeless to exhaust.  Its
   real output is the *rate* in O-0001, not the search.
-* **X-0005 prime spectrum.**  Not certified at all.  Measured against a planted
-  off-critical zero (`X-0005b`): it detects `delta = 0.2` and **fails at
-  `delta = 0.1` and below**, because the amplitude-growth signal is swamped by
-  window leakage.  Its cost does not grow with the height of the target, but
-  its resolvable band grows only like `log X`, so "all heights at once" is true
-  only within `gamma <~ 60` at `X = 4*10^7`.
+* **X-0005 prime spectrum.**  Not certified at all.  First design (`X-0005b`)
+  detected only `delta = 0.2`.  Redesigned with paired equal-length Hann
+  windows (`X-0005c`) the estimator became unbiased — measured growth ratios
+  match `e^{delta D}` to three digits — and the floor is now `delta ~ 0.1`
+  overall, and **`delta ~ 0.02` for spectrally isolated ordinates**.  The
+  residual is not leakage but *line blending*: the two closest ordinates in
+  range (48.005, 49.774, separation 1.77 against resolution 2.37) contribute
+  all of the scatter.  Fix named, not built: fit neighbouring lines jointly
+  using the certified ordinates from X-0001/X-0004 as known positions.
+  Its cost does not grow with the height of the target, but its resolvable
+  band grows only like `log X` (`gamma <~ 60` at `X = 4*10^7`).
 
 The honest ranking of "chance of finding a counterexample per unit of compute"
-is therefore **L-0004 deficit scan -> T-0001 on Lehmer pairs -> X-0003 ->
-X-0005**, with the caveat that X-0005 is the only one whose ranking could
-change by an order of magnitude with modest work (windowing + a longer
-baseline).  As it stands, the prime spectrum earns its place as a
-*cross-validation*, not as a detector.
+is therefore **L-0004 deficit scan -> T-0001 on Lehmer pairs -> X-0005 ->
+X-0003**.
 
-I initially ranked X-0005 first, on the strength of it costing nothing per unit
-height.  The planted-zero test (M-0003) refuted that ranking within minutes of
-being run, which is the entire argument for making such tests mandatory.
+That ranking moved twice in one session, which is worth recording.  I first
+put X-0005 top, on the strength of its cost not growing with height.  The
+planted-zero test (M-0003) immediately refuted that — floor `0.2`, useless —
+and I dropped it last.  Redesigning the window comparison then bought a factor
+of ten on isolated lines and moved it back up.  None of that would have
+happened without a mandatory measurement of the detector's own sensitivity,
+which is the whole argument for M-0003.
+
+Note the awkward part, stated plainly: the screen is weakest exactly where
+lines blend, i.e. at close pairs, i.e. at the Lehmer pairs that T-0001 most
+wants to examine.
 
 Nothing in this repository is close to the frontier of what is known
 computationally; the contribution is that every step is reproducible from

@@ -87,12 +87,64 @@ for the first thirteen zeros between `-0.045` and `+0.031`, all consistent with
 zero — but given a floor of `0.2` this is a statement about the screen's
 resolution, not a bound on the zeros.  It should not be quoted as one.
 
-**Conclusion, revised.**  This experiment's demonstrated value is (i) the
-cross-validation of two disjoint code paths, which is real and useful, and
-(ii) a *potential* all-heights screen whose sensitivity is currently too poor
-to be useful for detection.  Fixing that — windowing, a matched filter, and a
-much longer baseline in `X` — is a prerequisite before any lead from it means
-anything, and it is the substance of Q-0010.
+## Fixing it: paired equal-length windows (X-0005c)
+
+The diagnosis above says the comparison was badly designed, not that the idea
+is bad: transforming over `[u0, log X1]` and `[u0, log X2]` compares two
+windows of *different length*, so resolution and leakage change along with the
+data.  Replacing that with **two equal-length sub-windows of a single sieve**,
+one early and one late, plus a Hann taper:
+
+```
+                                   old design      paired windows
+sensitivity floor (planted zero)   delta >= 0.2    delta >= 0.1
+ratio at planted delta = 0.2       1.61            2.886  (predicted 2.885)
+ratio at planted delta = 0.1       1.26            1.697  (predicted 1.699)
+ratio at planted delta = 0.05      1.15            1.299  (predicted 1.303)
+ratio at planted delta = 0.01      1.09            1.047  (predicted 1.054)
+```
+
+The estimator is now essentially **unbiased** — measured ratios agree with
+`e^{delta D}` to three digits at every planted displacement, including ones far
+below the detection floor.  So the floor is set entirely by the *scatter* among
+on-line lines, not by any systematic error in the estimator.
+
+## Where the residual scatter actually comes from
+
+Not leakage.  **Line blending.**  Splitting the twelve on-line lines by their
+nearest-neighbour distance against the Hann resolution (`2.372` at
+`X = 4 * 10^7`):
+
+```
+well-separated lines (10 of 12):   scatter 0.0389   ->  delta floor 0.022
+blended (gamma = 48.005, 49.774,
+ separation 1.769 < resolution):   scatter 0.1682   ->  sets the global floor
+```
+
+The two lines that ruin the average are exactly the closest pair in the range,
+and they are also exactly the two whose implied displacements looked largest in
+the real data (`+0.022`, `+0.031`, against `<= 0.006` for the well-separated
+lines).  So:
+
+* for a **well-separated** ordinate the screen already resolves
+  `delta ~ 0.02` — an order of magnitude better than the first measurement;
+* the global floor of `0.1` is a statement about *close pairs*, and close pairs
+  are precisely the Lehmer-pair configurations this project most wants to
+  examine.  That is an unfortunate coincidence and it is the crux of Q-0010.
+
+**The fix is named and not implemented:** fit the neighbouring lines *jointly*
+(a matched filter / Prony-type estimator over the known ordinates) instead of
+reading each peak independently.  Blending is not a resolution limit when the
+line positions are known in advance — and they are: X-0001/X-0004 supply them,
+certified.
+
+**Conclusion, revised twice.**  The screen's demonstrated value is (i) the
+cross-validation of two disjoint code paths, which is real, and (ii) an
+all-heights probe with a *measured* floor of `delta ~ 0.02` on isolated
+ordinates and `~0.1` where lines blend.  That is no longer negligible, but it
+is still far behind L-0004's exact deficit test, and it certifies nothing.
+The arc — measure, find the floor unusable, redesign, re-measure, diagnose the
+residual, name the next fix — is the intended use of M-0003.
 
 ## Gap audit
 

@@ -120,10 +120,22 @@ real question is not "sieve further" but:
 *   build a null model so "unexplained peak" is quantitative;
 *   only then extend `X`.
 
-Note also that the resolvable band grows only like `log X`: reaching
-`gamma ~ 10^3` would need `X ~ 10^{40}`.  The screen is wide, not deep.  It is
-still the cheapest unexplored direction, but its expected value depends
-entirely on whether the floor of `0.2` can be pushed to `0.01`.
+**Then partly fixed (X-0005c).**  Paired equal-length Hann windows from a
+single sieve — same window shape, same resolution, only the data differ — make
+the estimator unbiased (ratios match `e^{delta D}` to three digits) and move
+the floor to `delta ~ 0.1`, or `delta ~ 0.02` for spectrally isolated
+ordinates.  The residual scatter is entirely **line blending**: the closest
+pair in range (48.005, 49.774) accounts for all of it.
+
+**So the remaining task is specific, not vague:** replace peak-reading with a
+*joint* fit of neighbouring lines (matched filter / Prony), using the certified
+ordinates from X-0001/X-0004 as known positions.  Blending is not a resolution
+limit when the positions are known in advance.  Then extend `X`.
+
+Note the resolvable band grows only like `log X`: reaching `gamma ~ 10^3` would
+need `X ~ 10^{40}`.  The screen is wide, not deep.  And note the awkward
+coincidence: it is weakest at close pairs, which is where the rest of this
+repository most wants to look.
 
 ### Q-0011 — the deficit as a first-class observable
 L-0004 compares a box count `N_box` with a sign-change count `m`.  Everything
