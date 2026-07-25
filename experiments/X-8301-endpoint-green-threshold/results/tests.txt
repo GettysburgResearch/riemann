@@ -1,3 +1,9 @@
+test_altered_endpoint_claim_rejected (test_packet.CornerPacketTests.test_altered_endpoint_claim_rejected) ... ok
+test_committed_packet_certificate (test_packet.CornerPacketTests.test_committed_packet_certificate) ... ok
+test_component_sum_mutation_rejected (test_packet.CornerPacketTests.test_component_sum_mutation_rejected) ... ok
+test_individual_events_subcritical_but_packet_crosses (test_packet.CornerPacketTests.test_individual_events_subcritical_but_packet_crosses) ... ok
+test_opposite_phase_cancellation_is_exact (test_packet.CornerPacketTests.test_opposite_phase_cancellation_is_exact) ... ok
+test_reversed_mesh_rejected (test_packet.CornerPacketTests.test_reversed_mesh_rejected) ... ok
 test_claimed_floor_rejected_when_too_large (test_verify.EndpointGreenTests.test_claimed_floor_rejected_when_too_large) ... ok
 test_committed_certificate (test_verify.EndpointGreenTests.test_committed_certificate) ... ok
 test_complex_phase_orientation (test_verify.EndpointGreenTests.test_complex_phase_orientation) ... ok
@@ -9,6 +15,6 @@ test_nonunit_phase_rejected (test_verify.EndpointGreenTests.test_nonunit_phase_r
 test_residual_green_enclosure_contains_exact_entries (test_verify.EndpointGreenTests.test_residual_green_enclosure_contains_exact_entries) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.010s
+Ran 15 tests in 0.014s
 
 OK
