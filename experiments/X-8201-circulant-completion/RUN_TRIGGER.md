@@ -2,8 +2,16 @@
 
 This child branch exists only to trigger the `d0801-circulant-completion` workflow defined on its base branch.
 
-The workflow validates the complete 50-shard discovery coefficient manifest, reconstructs the `K=1024` Toeplitz midpoint matrix, solves optimized Hermitian circulant-completion linear programs at sizes 2048, 2560, 3072, and 4096, and byte-replays the exact L-8502 coarse Schur target gate against the completed X-2805 verdict.
+The workflow now:
 
-No numerical sign from this trigger is a proof. A positive completion gap is only a nomination for dyadic freezing, directed finite-DFT replay, and a rigorous coefficient-source operator moat.
+1. byte-replays the completed X-2805 one-direction Schur target gate;
+2. replays the exact L-8505 static operator budget;
+3. runs all adversarial exact checker and hybrid-merger tests;
+4. compiles the vector-independent binary80/binary128 coefficient producer under the audited floating contract;
+5. evaluates target segment 2000 as a real coefficient-shard control;
+6. reconstructs the complete discovery Toeplitz matrix;
+7. solves optimized Hermitian circulant-completion LPs at sizes 2048, 2560, 3072, and 4096.
 
-Retriggered after adding the exact one-direction repair theorem, checker, and adversarial tests.
+No numerical sign from this trigger is a proof. A successful completion or fast shard must still be frozen, replayed, and independently audited under its declared proof contract.
+
+Retriggered after adding L-8503--L-8505 and the hybrid coefficient-source implementation.
