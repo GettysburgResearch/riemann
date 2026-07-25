@@ -1,0 +1,3589 @@
+{
+  "alpha_interval": {
+    "lower": {
+      "denominator": 6277101735386680763835789423207666416102355444464034512896,
+      "numerator": 27316188863170422972141786876274838781565257086415513364963
+    },
+    "upper": {
+      "denominator": 1569275433846670190958947355801916604025588861116008628224,
+      "numerator": 6829047215792605743035446719068709695391314271603878341241
+    }
+  },
+  "carrier": {
+    "denominator": 20,
+    "numerator": 94184072727073
+  },
+  "cells": 1024,
+  "cutoff_power10": 11,
+  "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+  "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+  "producer_evidence": {
+    "global_counts": {
+      "higher_prime_power_count": 28156,
+      "prime_count": 4118054813,
+      "total_terms": 4118082969
+    },
+    "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+    "precision_pair_required": true
+  },
+  "schema": "riemann.piecewise-carrier-fixed-vector.v1",
+  "shards": [
+    {
+      "higher_prime_power_count": 28156,
+      "include_higher_powers": true,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 98222287,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 7237005577332262213973186563042994240829374041602535252466099000494570602496,
+          "numerator": 31498798018994281879373955070742531283578886876022929979186942083872417379089
+        },
+        "upper": {
+          "denominator": 14474011154664524427946373126085988481658748083205070504932198000989141204992,
+          "numerator": 62997596037988563758747910141485062567157773752045859958373933983042586618297
+        }
+      },
+      "segment_end": 100,
+      "segment_start": 0,
+      "total_terms": 98250443,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 91739525,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": -68413097354179905624261911970540880618264753490121378957643158595622865459407
+        },
+        "upper": {
+          "denominator": 474284397516047136454946754595585670566993857190463750305618264096412179005177856,
+          "numerator": -34206548677089952812130955985270440309132376745060689478713168691910038841277
+        }
+      },
+      "segment_end": 200,
+      "segment_start": 100,
+      "total_terms": 91739525,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 89583557,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": 86576767281855446849811920389268417630392877812635520337648167099059307807623
+        },
+        "upper": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": 86576767281855446849811920389268417630392877812635520337752036894106036215625
+        }
+      },
+      "segment_end": 300,
+      "segment_start": 200,
+      "total_terms": 89583557,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 88238285,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 118571099379011784113736688648896417641748464297615937576404566024103044751294464,
+          "numerator": -64448516140931181047281681597526984897242250943262565454652959505865120351947
+        },
+        "upper": {
+          "denominator": 7410693711188236507108543040556026102609279018600996098525285376506440296955904,
+          "numerator": -4028032258808198815455105099845436556077640683953910340915319475841323338383
+        }
+      },
+      "segment_end": 400,
+      "segment_start": 300,
+      "total_terms": 88238285,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 87268857,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": 61765039958483033288940964258794378722843599180572371626406731328083574953431
+        },
+        "upper": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": 61765039958483033288940964258794378722843599180572371627084044740265678491289
+        }
+      },
+      "segment_end": 500,
+      "segment_start": 400,
+      "total_terms": 87268857,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 86503340,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 237142198758023568227473377297792835283496928595231875152809132048206089502588928,
+          "numerator": -43266815595074417197181855787871197584813495152862789738437022694317217893023
+        },
+        "upper": {
+          "denominator": 237142198758023568227473377297792835283496928595231875152809132048206089502588928,
+          "numerator": -43266815595074417197181855787871197584813495152862789738429388246863389794105
+        }
+      },
+      "segment_end": 600,
+      "segment_start": 500,
+      "total_terms": 86503340,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 85884485,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 118571099379011784113736688648896417641748464297615937576404566024103044751294464,
+          "numerator": 42802425738809453763723957108604377108680668244847289372537051547190457399301
+        },
+        "upper": {
+          "denominator": 14821387422376473014217086081112052205218558037201992197050570753012880593911808,
+          "numerator": 5350303217351181720465494638575547138585083530605911171567491561553700782535
+        }
+      },
+      "segment_end": 700,
+      "segment_start": 600,
+      "total_terms": 85884485,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 85359485,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 29642774844752946028434172162224104410437116074403984394101141506025761187823616,
+          "numerator": -3094684601208643992830351294100545247119560914969265536575378944851025687631
+        },
+        "upper": {
+          "denominator": 474284397516047136454946754595585670566993857190463750305618264096412179005177856,
+          "numerator": -49514953619338303885285620705608723953912974639508248585197096562937460985393
+        }
+      },
+      "segment_end": 800,
+      "segment_start": 700,
+      "total_terms": 85359485,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 84903578,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 474284397516047136454946754595585670566993857190463750305618264096412179005177856,
+          "numerator": -70248532592461077115668174542101119268602216752818009471979202434013867848245
+        },
+        "upper": {
+          "denominator": 118571099379011784113736688648896417641748464297615937576404566024103044751294464,
+          "numerator": -17562133148115269278917043635525279817150554188204502367993018514615816521417
+        }
+      },
+      "segment_end": 900,
+      "segment_start": 800,
+      "total_terms": 84903578,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 84503317,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 118571099379011784113736688648896417641748464297615937576404566024103044751294464,
+          "numerator": -23562441277443761427830605538017272450459791698756459673515558994945166729485
+        },
+        "upper": {
+          "denominator": 237142198758023568227473377297792835283496928595231875152809132048206089502588928,
+          "numerator": -47124882554887522855661211076034544900919583397512919347028236270637602371949
+        }
+      },
+      "segment_end": 1000,
+      "segment_start": 900,
+      "total_terms": 84503317,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 84151635,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -59813588045205162737203471158174486654939946562307038950758922743584050493659
+        },
+        "upper": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -59813588045205162737203471158174486654939946562307038950720902980294130240117
+        }
+      },
+      "segment_end": 1100,
+      "segment_start": 1000,
+      "total_terms": 84151635,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 83828016,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 474284397516047136454946754595585670566993857190463750305618264096412179005177856,
+          "numerator": -42657801211576699029405377292172245944953885518654514284301646427626044533585
+        },
+        "upper": {
+          "denominator": 237142198758023568227473377297792835283496928595231875152809132048206089502588928,
+          "numerator": -21328900605788349514702688646086122972476942759327257142148836073087526865607
+        }
+      },
+      "segment_end": 1200,
+      "segment_start": 1100,
+      "total_terms": 83828016,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 83531453,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 93006123672967064123115869125887591258761275186264253505728003077802710295533
+        },
+        "upper": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": 46503061836483532061557934562943795629380637593132126752890844133998649103297
+        }
+      },
+      "segment_end": 1300,
+      "segment_start": 1200,
+      "total_terms": 83531453,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 83270117,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 474284397516047136454946754595585670566993857190463750305618264096412179005177856,
+          "numerator": 8210286578488961318964713940564515901102892163370671933132387729072214840191
+        },
+        "upper": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": 32841146313955845275858855762258063604411568653482687732540957446921814900029
+        }
+      },
+      "segment_end": 1400,
+      "segment_start": 1300,
+      "total_terms": 83270117,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 83017990,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -100129823032741963977599196388514568275226984906708439479353431819987256145467
+        },
+        "upper": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -50064911516370981988799598194257284137613492453354219739666988685858419903421
+        }
+      },
+      "segment_end": 1500,
+      "segment_start": 1400,
+      "total_terms": 83017990,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 82793488,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -97744947349781550743520869195771625158481909774199090575969954390010356513281
+        },
+        "upper": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": -48872473674890775371760434597885812579240954887099545287980811547174864720237
+        }
+      },
+      "segment_end": 1600,
+      "segment_start": 1500,
+      "total_terms": 82793488,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 82575244,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": 60140384368723754824484690170920026938228115615203521873518861501826350815655
+        },
+        "upper": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": 60140384368723754824484690170920026938228115615203521873533201522717945280425
+        }
+      },
+      "segment_end": 1700,
+      "segment_start": 1600,
+      "total_terms": 82575244,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 82382153,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 474284397516047136454946754595585670566993857190463750305618264096412179005177856,
+          "numerator": -16070954199083501213026940979403451395676728833629490006663601094880634796423
+        },
+        "upper": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -64283816796334004852107763917613805582706915334517960026648200777490349403199
+        }
+      },
+      "segment_end": 1800,
+      "segment_start": 1700,
+      "total_terms": 82382153,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 82189175,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": 53695372344961900571274878761810707044837030637686106173095801280133168723997
+        },
+        "upper": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": 53695372344961900571274878761810707044837030637686106173101201656134962502711
+        }
+      },
+      "segment_end": 1900,
+      "segment_start": 1800,
+      "total_terms": 82189175,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 82009446,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -71338732412078185858216533036154127597895160380112174924066379248175022148375
+        },
+        "upper": {
+          "denominator": 237142198758023568227473377297792835283496928595231875152809132048206089502588928,
+          "numerator": -8917341551509773232277066629519265949736895047514021865507707093454673034489
+        }
+      },
+      "segment_end": 2000,
+      "segment_start": 1900,
+      "total_terms": 82009446,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 81843270,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": -32114395891397685110886259116054407174018015218814660114614740409230265201153
+        },
+        "upper": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -64228791782795370221772518232108814348036030437629320229225316873213377106493
+        }
+      },
+      "segment_end": 2100,
+      "segment_start": 2000,
+      "total_terms": 81843270,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 81684144,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -76005756154044121853405141640400710306665633852148293633931811722210303883399
+        },
+        "upper": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -76005756154044121853405141640400710306665633852148293633924403477564516769607
+        }
+      },
+      "segment_end": 2200,
+      "segment_start": 2100,
+      "total_terms": 81684144,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 81535491,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 118571099379011784113736688648896417641748464297615937576404566024103044751294464,
+          "numerator": -1995172244569490297091463117677161901246814751983636879835633506208687155877
+        },
+        "upper": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": -15961377956555922376731704941417295209974518015869095038683412606064897014495
+        }
+      },
+      "segment_end": 2300,
+      "segment_start": 2200,
+      "total_terms": 81535491,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 81386138,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 30354201441027016733116592294117482916287606860189680019559568902170379456331382784,
+          "numerator": -88878168107633930181932275461710282394001115809991407601086667122460970052735
+        },
+        "upper": {
+          "denominator": 30354201441027016733116592294117482916287606860189680019559568902170379456331382784,
+          "numerator": -88878168107633930181932275461710282394001115809991407601039164327862221148059
+        }
+      },
+      "segment_end": 2400,
+      "segment_start": 2300,
+      "total_terms": 81386138,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 81250102,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 11416908963926067518992262950483683389333922474196920940545849295084436836375
+        },
+        "upper": {
+          "denominator": 60708402882054033466233184588234965832575213720379360039119137804340758912662765568,
+          "numerator": 91335271711408540151938103603869467114671379793575367524452386731390714754419
+        }
+      },
+      "segment_end": 2500,
+      "segment_start": 2400,
+      "total_terms": 81250102,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 81122858,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 90342518934935137148346639240099014158928428288132826176736667868116561073085
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 90342518934935137148346639240099014158928428288132826176746343038700601443093
+        }
+      },
+      "segment_end": 2600,
+      "segment_start": 2500,
+      "total_terms": 81122858,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80992841,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": 80133827105178191216255452721097228560431640417186064784327968947414803113643
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 40066913552589095608127726360548614280215820208593032392172743365431553782919
+        }
+      },
+      "segment_end": 2700,
+      "segment_start": 2600,
+      "total_terms": 80992841,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80872488,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -67641305335041192007457180971549311498053327441851797576970618245294483450703
+        },
+        "upper": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -67641305335041192007457180971549311498053327441851797576966651948377261403331
+        }
+      },
+      "segment_end": 2800,
+      "segment_start": 2700,
+      "total_terms": 80872488,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80753631,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": 15431344358888346692785964872482676983995432571660200960969925062746016147365
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 61725377435553386771143859489930707935981730286640803843886898012439457953043
+        }
+      },
+      "segment_end": 2900,
+      "segment_start": 2800,
+      "total_terms": 80753631,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80641759,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 103508039281729457822060062896773739124430439059423353874508764823799335483575
+        },
+        "upper": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": 12938504910216182227757507862096717390553804882427919234314409856348837784739
+        }
+      },
+      "segment_end": 3000,
+      "segment_start": 2900,
+      "total_terms": 80641759,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80533316,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": 71596104129479183808536187389097417496966939023333197956410027573596886506287
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 35798052064739591904268093694548708748483469511666598978210876472973846275171
+        }
+      },
+      "segment_end": 3100,
+      "segment_start": 3000,
+      "total_terms": 80533316,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80429130,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": 24285667357853356480856309783916736953577427560043705139310355979042058757517
+        },
+        "upper": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": 48571334715706712961712619567833473907154855120087410278623336777818045833727
+        }
+      },
+      "segment_end": 3200,
+      "segment_start": 3100,
+      "total_terms": 80429130,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80327155,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": 98351837422930496713847960307063620121505076918111480794412531260285981584349
+        },
+        "upper": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": 98351837422930496713847960307063620121505076918111480794421859339207374066889
+        }
+      },
+      "segment_end": 3300,
+      "segment_start": 3200,
+      "total_terms": 80327155,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80230457,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 39590125792745908747388333257192811258858651190268570053781898781010513811937
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 39590125792745908747388333257192811258858651190268570053786016649276079769301
+        }
+      },
+      "segment_end": 3400,
+      "segment_start": 3300,
+      "total_terms": 80230457,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80141326,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": 7496076771204318792463207057857232172798892047937466221064716029013317670303
+        },
+        "upper": {
+          "denominator": 3705346855594118253554271520278013051304639509300498049262642688253220148477952,
+          "numerator": 29281549887516870283059402569754813174995672062255727426035812633340599743
+        }
+      },
+      "segment_end": 3500,
+      "segment_start": 3400,
+      "total_terms": 80141326,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 80041307,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -26301108332379897786692749228561178489400714717782531723084632048748672173305
+        },
+        "upper": {
+          "denominator": 948568795032094272909893509191171341133987714380927500611236528192824358010355712,
+          "numerator": -13150554166189948893346374614280589244700357358891265861541920776812430832059
+        }
+      },
+      "segment_end": 3600,
+      "segment_start": 3500,
+      "total_terms": 80041307,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79954120,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 121416805764108066932466369176469931665150427440758720078238275608681517825325531136,
+          "numerator": 41924134700755080914124871811798989928090002422462069468041165740148621510253
+        },
+        "upper": {
+          "denominator": 60708402882054033466233184588234965832575213720379360039119137804340758912662765568,
+          "numerator": 20962067350377540457062435905899494964045001211231034734042691657182051813443
+        }
+      },
+      "segment_end": 3700,
+      "segment_start": 3600,
+      "total_terms": 79954120,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79873105,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": 16587784039445805749325386527264474375834883138229103934781416623855869316571
+        },
+        "upper": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": 66351136157783222997301546109057897503339532552916415739130472202534240270809
+        }
+      },
+      "segment_end": 3800,
+      "segment_start": 3700,
+      "total_terms": 79873105,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79785447,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": -64642245328125335444778356128578598242139574015851481352215380105569307261555
+        },
+        "upper": {
+          "denominator": 3794275180128377091639574036764685364535950857523710002444946112771297432041422848,
+          "numerator": -16160561332031333861194589032144649560534893503962870338052811831450749944469
+        }
+      },
+      "segment_end": 3900,
+      "segment_start": 3800,
+      "total_terms": 79785447,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79705728,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": -48974967451794223952877995130442723906967430366104159769221294960918891059783
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": -24487483725897111976438997565221361953483715183052079884608895653059825131681
+        }
+      },
+      "segment_end": 4000,
+      "segment_start": 3900,
+      "total_terms": 79705728,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79624204,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 30354201441027016733116592294117482916287606860189680019559568902170379456331382784,
+          "numerator": -67103906036670377146983529035150101615675633398446118821144921534676489044847
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": -16775976509167594286745882258787525403918908349611529705284774581928537861681
+        }
+      },
+      "segment_end": 4100,
+      "segment_start": 4000,
+      "total_terms": 79624204,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79549417,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 60708402882054033466233184588234965832575213720379360039119137804340758912662765568,
+          "numerator": -94598558923804971660829432227360071080821231174050800804959184095945774224655
+        },
+        "upper": {
+          "denominator": 60708402882054033466233184588234965832575213720379360039119137804340758912662765568,
+          "numerator": -94598558923804971660829432227360071080821231174050800804949705830689658355999
+        }
+      },
+      "segment_end": 4200,
+      "segment_start": 4100,
+      "total_terms": 79549417,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79473336,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -3789606953404650158771893860385736294863575868729183263189329973237581822315
+        },
+        "upper": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": -3789606953404650158771893860385736294863575868729183263189078576760091471921
+        }
+      },
+      "segment_end": 4300,
+      "segment_start": 4200,
+      "total_terms": 79473336,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79395468,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 60708402882054033466233184588234965832575213720379360039119137804340758912662765568,
+          "numerator": -64066929138449825059447843115200836004412584216908852801331184583368256808819
+        },
+        "upper": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": -16016732284612456264861960778800209001103146054227213200331089685010883516317
+        }
+      },
+      "segment_end": 4400,
+      "segment_start": 4300,
+      "total_terms": 79395468,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79327320,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 242833611528216133864932738352939863330300854881517440156476551217363035650651062272,
+          "numerator": 50332374280951592286399416735260958675068856489252785280198152344270299633705
+        },
+        "upper": {
+          "denominator": 242833611528216133864932738352939863330300854881517440156476551217363035650651062272,
+          "numerator": 50332374280951592286399416735260958675068856489252785280220641065615083873841
+        }
+      },
+      "segment_end": 4500,
+      "segment_start": 4400,
+      "total_terms": 79327320,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79259669,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 1897137590064188545819787018382342682267975428761855001222473056385648716020711424,
+          "numerator": 1553800638081461692075011252947162562334814736238401021393170178876574905483
+        },
+        "upper": {
+          "denominator": 7588550360256754183279148073529370729071901715047420004889892225542594864082845696,
+          "numerator": 6215202552325846768300045011788650249339258944953604085573234104053071199661
+        }
+      },
+      "segment_end": 4600,
+      "segment_start": 4500,
+      "total_terms": 79259669,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79192613,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 60708402882054033466233184588234965832575213720379360039119137804340758912662765568,
+          "numerator": 35294700880299968683123546810376099122532188439219304549724482336135970570679
+        },
+        "upper": {
+          "denominator": 121416805764108066932466369176469931665150427440758720078238275608681517825325531136,
+          "numerator": 70589401760599937366247093620752198245064376878438609099455490132037382703543
+        }
+      },
+      "segment_end": 4700,
+      "segment_start": 4600,
+      "total_terms": 79192613,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79122286,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 60708402882054033466233184588234965832575213720379360039119137804340758912662765568,
+          "numerator": -15740788921249575870620210589448974409315646373498872008646333527902601779041
+        },
+        "upper": {
+          "denominator": 15177100720513508366558296147058741458143803430094840009779784451085189728165691392,
+          "numerator": -3935197230312393967655052647362243602328911593374718002161051468259284023483
+        }
+      },
+      "segment_end": 4800,
+      "segment_start": 4700,
+      "total_terms": 79122286,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 79057994,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 121416805764108066932466369176469931665150427440758720078238275608681517825325531136,
+          "numerator": 34116172084876754740958829672429402518094569341058087783014324274880184425639
+        },
+        "upper": {
+          "denominator": 121416805764108066932466369176469931665150427440758720078238275608681517825325531136,
+          "numerator": 34116172084876754740958829672429402518094569341058087783016548590324751417585
+        }
+      },
+      "segment_end": 4900,
+      "segment_start": 4800,
+      "total_terms": 79057994,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    },
+    {
+      "higher_prime_power_count": 0,
+      "include_higher_powers": false,
+      "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+      "precision_evidence": [
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 192
+        },
+        {
+          "mpfr_version": "4.2.2",
+          "precision_bits": 256
+        }
+      ],
+      "prime_count": 78993260,
+      "prime_rayleigh_interval": {
+        "lower": {
+          "denominator": 3885337784451458141838923813647037813284813678104279042503624819477808570410416996352,
+          "numerator": -98442656517247398037744048296090992371217863584467381500130210143797255784383
+        },
+        "upper": {
+          "denominator": 3885337784451458141838923813647037813284813678104279042503624819477808570410416996352,
+          "numerator": -98442656517247398037744048296090992371217863584467381500108682394044387232803
+        }
+      },
+      "segment_end": 5000,
+      "segment_start": 4900,
+      "total_terms": 78993260,
+      "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+    }
+  ],
+  "total_segments": 5000,
+  "vector": {
+    "imag_numerators": [
+      -6743320362665402538393600,
+      -9057106730757356680904704,
+      -8449998724210157852557312,
+      -3857486059549734704513024,
+      1425935564898662914981888,
+      10439070004525401624281088,
+      15447683093875223666098176,
+      20106938823113327798910976,
+      21397062099551406321041408,
+      19578591345255017581903872,
+      18164403125394475971510272,
+      20375558330934314498260992,
+      20647844262234467713679360,
+      21043210043069850810580992,
+      23930780466892450478161920,
+      26669484107609548299173888,
+      28501090624227879017250816,
+      28647070321983325705601024,
+      28384843026602306912124928,
+      28268227096449417264234496,
+      30181536919781403749515264,
+      30438942470843728169795584,
+      24981690612411830301097984,
+      23441703661710778017251328,
+      23945917739747407963357184,
+      21648006816661180703047680,
+      21471909236723594305732608,
+      18818946578386030503657472,
+      17421722351116428739870720,
+      19814236174146174332174336,
+      21698919453124413651681280,
+      22354554938185277692182528,
+      20559818127347053500563456,
+      17475428481180063416451072,
+      17939133714501895677018112,
+      20469550670989030850560000,
+      22097975652860701244915712,
+      25454377658897731627778048,
+      25678023558521514132242432,
+      27116273451510973755031552,
+      25592480691640323079667712,
+      22843851583031767182868480,
+      25087900172917561473630208,
+      28196490235651564958121984,
+      29257058883406518638608384,
+      29877396973494337376616448,
+      30631504637513578613571584,
+      33353019703279715564388352,
+      33453020592110720750977024,
+      32687960005763123376029696,
+      33559374341541488389783552,
+      35588451858052271883419648,
+      36862973902264140266733568,
+      33620619930585583283339264,
+      33433775187263043487662080,
+      35797414724528715570610176,
+      38320454439186918692356096,
+      39590644638837362493751296,
+      38624834169833096302559232,
+      41913054046642910762369024,
+      44423149429029020754771968,
+      43075687726800256490274816,
+      40449889302316817003315200,
+      38319589992049366595010560,
+      37698246259717900223905792,
+      40680218201133090634465280,
+      43517431270827179582160896,
+      44900145836889804508233728,
+      43956350757400052544569344,
+      44493426552300530697240576,
+      44695029522376973516537856,
+      45344827774991474339348480,
+      44363900200612988209594368,
+      44507958100894949438390272,
+      43279165128943359735365632,
+      40681113665945711895642112,
+      36539992285435142676152320,
+      34588431849187844670095360,
+      34222243698729665117028352,
+      34072716958290052940562432,
+      31982240145426504296169472,
+      30447008919214171378155520,
+      32110787324184224361086976,
+      35848958391097686742794240,
+      35532899434607025642799104,
+      31326110832018530890678272,
+      28044286453717437973004288,
+      27559217420793498096893952,
+      26307295499471847673561088,
+      23576496839785855680774144,
+      22336751043512008357969920,
+      24791516494569386683662336,
+      29133759691585245339975680,
+      32134722004084965947473920,
+      33847214050524821637300224,
+      34993387761788166044909568,
+      38601300007192362085253120,
+      40441568522701655716659200,
+      40454977670200390089441280,
+      36844422094165351757512704,
+      35766577897248649453240320,
+      32974525342961245658021888,
+      30128529188755553107574784,
+      27632129926363620699013120,
+      25515418971107834229424128,
+      24619094148531308420136960,
+      24586342448453738913857536,
+      24843331438531873536475136,
+      26245743656881359618572288,
+      29089163126600241795563520,
+      30744279107854611855179776,
+      30212437664632243427999744,
+      28196787650490085717049344,
+      27027929605839200893009920,
+      28656561086721179722448896,
+      30021335360145397995536384,
+      27641966971816344268308480,
+      26700251992690954076160000,
+      25351852251746170610647040,
+      25088304054380028225388544,
+      25502582538397000516239360,
+      25704612685230420646690816,
+      24006410073737096339652608,
+      22016688963321768422932480,
+      21842820159647015568932864,
+      22736971606058326323888128,
+      22490643540210728424177664,
+      24798400427958106505347072,
+      23789936928657684327038976,
+      23272519596928352972177408,
+      23775115779114722748530688,
+      25944043234471770444529664,
+      25230678551553369108905984,
+      25258989104044604506767360,
+      26954639570489558914039808,
+      27979208252162386044125184,
+      23433896742811746789490688,
+      24250933056769672716746752,
+      27640917459005984699580416,
+      31921135308534251230593024,
+      33795169072403065690128384,
+      35730899889287939426877440,
+      35401812331036250707329024,
+      32998254218311177192079360,
+      32337415719569086031593472,
+      32451783317865893986304000,
+      31785159126000046297841664,
+      32083914927117675196841984,
+      31217590594238820286201856,
+      30227327523675268848812032,
+      29235862039180576148160512,
+      31667299782994193090084864,
+      33483151217450790353371136,
+      33652601088227850724573184,
+      34096355051662654109122560,
+      33908895875880756971569152,
+      36666665870525280446054400,
+      38315905217621811378782208,
+      42026781104831773517283328,
+      44299848693684165851217920,
+      45768065311771630157955072,
+      48843316127807150405713920,
+      51707513630551367118487552,
+      51896529369676514613788672,
+      49702749738618930295996416,
+      45893858231095990012608512,
+      38853715579362427017363456,
+      32392373826031303564197888,
+      31156489471713170465751040,
+      34454771475997394213011456,
+      41007848810856495018147840,
+      46210292719510674751881216,
+      51782897351598011628650496,
+      55595637821104161659289600,
+      57908007715249381863063552,
+      62077271394387892446953472,
+      65886969371518120092499968,
+      64141770380940958890983424,
+      61136446224982553495863296,
+      56377562973018898634375168,
+      50518802397866347099848704,
+      47944388832153610752098304,
+      46528714286529650892996608,
+      43010017177073122755477504,
+      40005856930789531748139008,
+      39909449953289167221817344,
+      36582835975086293158723584,
+      32337757884843595317379072,
+      29270141852464463661236224,
+      32616595936119046491078656,
+      33564560026368992981549056,
+      35420195243917451536105472,
+      35313552457224909005783040,
+      33828487658122441935290368,
+      35186720697252156775858176,
+      40560572683530704294772736,
+      41877641563975640659525632,
+      44075152178308405054668800,
+      44272529776436683999281152,
+      42509660669102330973519872,
+      39219939618103063161602048,
+      37496729701906545285005312,
+      36454593053842443616649216,
+      36280867841759769601769472,
+      37513114344729975445258240,
+      38198689332369151175426048,
+      39362239351837701028446208,
+      41544149627061410040119296,
+      41841751957870859698307072,
+      40509207796233631202017280,
+      34939292429933171745751040,
+      35163552481266694728187904,
+      35466210233915938099429376,
+      35282562262406487047405568,
+      32098545948124176560685056,
+      26874965485651136096501760,
+      26203763291862613721350144,
+      27157404573690766079033344,
+      29539832985931930650279936,
+      32528432647375933312860160,
+      33849423716260088136073216,
+      35319569139356778882924544,
+      35277924219891970069233664,
+      35206030336198491745812480,
+      35127981953926216986656768,
+      34117820816603840086278144,
+      32173076125113744814505984,
+      28105103857917710471004160,
+      25161013506629178683817984,
+      26800660364501424982196224,
+      27442773438079672854249472,
+      25546002028221157013979136,
+      21532951767712533519007744,
+      19886862158203075617095680,
+      21075260112779568671096832,
+      24942451719758963814694912,
+      29186003000331266743599104,
+      31811541116438519715201024,
+      32957192439344862393794560,
+      33243082355711692452659200,
+      36317289408702906221199360,
+      38951117156359163082702848,
+      38251225899036258368225280,
+      37823565864341606548635648,
+      35891161288614461659152384,
+      33295416904958279499644928,
+      30299840364321175821615104,
+      28372365103853233607016448,
+      26572480165729694157635584,
+      26104407829268051026509824,
+      21369054241033257951952896,
+      15289975425071503336538112,
+      13044919380845320713797632,
+      15271842949579949482180608,
+      19234889175690272661569536,
+      19585837325026580871774208,
+      20668407174049784636899328,
+      23358042877428540073050112,
+      21966228356741919129206784,
+      21242802776820164652433408,
+      19281305929723389746872320,
+      20902906585587491710959616,
+      21742853900918536691253248,
+      22316477198446689578385408,
+      22010084403749661416882176,
+      18761715899457485873872896,
+      16390522445005450469441536,
+      17462334296063944014430208,
+      17718681057133098637983744,
+      19453076715579761324195840,
+      20498219869458607219146752,
+      19994323148142975935053824,
+      21015081091831472221847552,
+      23670572808068327767277568,
+      26763756329227715017179136,
+      25874632480705182185816064,
+      24490750309858858154065920,
+      23580682026033953762181120,
+      26369349972227078886522880,
+      30518259030925896178466816,
+      33018268582090700042010624,
+      32865186702762890049355776,
+      32326149746419149224017920,
+      34607514868424007640678400,
+      38403189874293773642498048,
+      43133217386502107258945536,
+      47101558808551051508056064,
+      49125133808541296630956032,
+      48676672641736741341888512,
+      46660708371973125257035776,
+      47070327198424842310254592,
+      47445917460188105726230528,
+      46312214907331640297521152,
+      43821614938149309248438272,
+      40528988827561272144822272,
+      36170299036922708628602880,
+      31762046484944902426722304,
+      30889016652544365236846592,
+      32325074970782523778400256,
+      34482007236721704729313280,
+      37245997568369312074301440,
+      40481558573432872055603200,
+      43027646652127807124013056,
+      41574455014085583777562624,
+      40388516488227847705460736,
+      41921906875728485224022016,
+      44132326081683785592602624,
+      42403368747836851580043264,
+      39028702641130199891050496,
+      32229233645360417427423232,
+      29106271464668699465613312,
+      27604584037314142878564352,
+      25748561316301474833104896,
+      22202797270050412515295232,
+      20579296533786014636834816,
+      19211966319265427241304064,
+      17205480530025426381176832,
+      12827208019516991809257472,
+      10564578861336131088154624,
+      10584353395413576524496896,
+      14929200625912909267992576,
+      18136209567039244403212288,
+      22230127958209802656546816,
+      21562053499193347501195264,
+      21480266649095097922093056,
+      21433103097475287354441728,
+      18567943635136615525908480,
+      16502672152856732794617856,
+      17221123868057941269544960,
+      16271766590760113210916864,
+      13580012570334920305541120,
+      14564540162567718926548992,
+      15786315282596962051817472,
+      17391360106475316142145536,
+      18024359533704348874833920,
+      16530500650000694600794112,
+      15564369077039581372612608,
+      14437725901762608723132416,
+      14223234313778193523277824,
+      13599374067865387567939584,
+      14892046973651203513122816,
+      16123577984936504025153536,
+      15030810002953416407515136,
+      13595527523231982671626240,
+      13979314579278902148988928,
+      13100675330546064691298304,
+      9653441912013359939584000,
+      6984188013126958016626688,
+      2301088493334506804084736,
+      451317582748654642397184,
+      -2753517712096254853382144,
+      -5265577035401841835245568,
+      -6007877452600933630345216,
+      -4121018314161546636296192,
+      -3256997261448293489049600,
+      -5525090250070731834523648,
+      -6501851271852120090869760,
+      -8532249189085136396746752,
+      -11302093023997114626080768,
+      -12460296503655245023281152,
+      -14653074629095090932416512,
+      -16671476891072742482247680,
+      -17431743927628327972503552,
+      -15856148643218085648531456,
+      -12703921411021119850283008,
+      -11350342138326206048632832,
+      -8512841090410237604659200,
+      -7727863932269015072768000,
+      -8711649481457866937204736,
+      -8929718955607028840529920,
+      -9971830641444660696842240,
+      -7126808526609882718142464,
+      -5675836303270632090501120,
+      -7017377315991062862364672,
+      -11299429028624486228819968,
+      -11998622535237608889384960,
+      -8389871687349482444292096,
+      -6945653379845126107430912,
+      -4836180750850037540454400,
+      -4411013055561427562004480,
+      -3122479392265977672499200,
+      -3749246958957273752272896,
+      -3050701458739383347707904,
+      -3197182398818374312263680,
+      -3395389538726129585618944,
+      -4223599372701859718365184,
+      -3973760525750679130603520,
+      -4719147920245567185223680,
+      -4369154831978146134228992,
+      -1588750365871036036022272,
+      -1590459094086443079827456,
+      -8400244075374092935495680,
+      -15521487992337956161454080,
+      -16573649287624711798259712,
+      -17180790927546322207637504,
+      -16405192062407986624069632,
+      -14270477065322322959794176,
+      -11064035906803295850594304,
+      -7601142693160581521735680,
+      -6263187740575496354660352,
+      -5653927063902573635305472,
+      -5806517983036104234762240,
+      -4565527486593363106332672,
+      -2050780422010459836645376,
+      -2048818993942611581992960,
+      -2406793310167701815033856,
+      -2631573524000009403498496,
+      -1714433816624887607853056,
+      -2985994978833828033855488,
+      -2563554657703483502755840,
+      -1376486815866068481867776,
+      -2851996154049323130159104,
+      -5867657818134458400768000,
+      -9804785742023105976467456,
+      -11116582634094824616099840,
+      -12349747613530537777430528,
+      -11894980363723292658368512,
+      -8478241616312595076087808,
+      -7758844307377060338204672,
+      -6944119694506733300875264,
+      -2945067959863882182295552,
+      -251645949266936249450496,
+      251346827099191342268416,
+      2013926073760059551121408,
+      2393537580232005944082432,
+      1288059233295460972101632,
+      350705449393279731761152,
+      2195353932607063135879168,
+      3832504064750926017069056,
+      3124414012618889662300160,
+      2861327846863257374556160,
+      5553082812870531615817728,
+      7223871979558362983432192,
+      10242176213581186734227456,
+      10735548926118958523744256,
+      7987641526955160274731008,
+      8185855931708552725397504,
+      8843549957328370309005312,
+      8937514170331721224945664,
+      7170812032628459894210560,
+      6578285076252475617443840,
+      5273296511913435366162432,
+      70680731946118151143424,
+      -2668531582972494492991488,
+      -4158299105688280287412224,
+      -2404577350874549725429760,
+      241662667419207021363200,
+      -2148579345965109263466496,
+      -3807861619816324222943232,
+      -4405708647303121723195392,
+      -4405056956031906065940480,
+      -3889666755166116782276608,
+      -7302450262464985361809408,
+      -13638191175628448086360064,
+      -17947148279256477914365952,
+      -19762510294134027399987200,
+      -23929962856592669665132544,
+      -24862308850580219108524032,
+      -28112078124826034641567744,
+      -29159991590660672271155200,
+      -27272205476550649415991296,
+      -24593539559086612216283136,
+      -22377810329370234416267264,
+      -19783867791373782826876928,
+      -17915898062443421085204480,
+      -14460286358482308640538624,
+      -11813884400947910412337152,
+      -9528412290557848055709696,
+      -7009278595769179341586432,
+      -5871429743967792126754816,
+      -6809376403405338394492928,
+      -7541431770211342228652032,
+      -5700386694190467951624192,
+      -4493989679729466541080576,
+      -5932535937085180743778304,
+      -5921433730712336150298624,
+      -6428913196953467218821120,
+      -4025713438128167683358720,
+      -4200401020382832914071552,
+      -7027723508590515671007232,
+      -10090323745224065103691776,
+      -11922134242031685697798144,
+      -11041361176222123241242624,
+      -9985857711693140080984064,
+      -12460858475987340688883712,
+      -15690315908073085808410624,
+      -15117382460378118015156224,
+      -14307703875873393847828480,
+      -17261376110508752527949824,
+      -16969471359727918456504320,
+      -15803930889977536477921280,
+      -16913800959114227260325888,
+      -15570872853211905813118976,
+      -13374373396139252729774080,
+      -10676670865117845263482880,
+      -10177549814116756014235648,
+      -8588968134487310990311424,
+      -8281235121231888769875968,
+      -6947128766576818204442624,
+      -5155687654708816298115072,
+      -4870154895479956758855680,
+      -5204020025484925569335296,
+      -5103345071116571851620352,
+      -6183349496248518110609408,
+      -7095225852858761398452224,
+      -7564137326482338638462976,
+      -6809442715030667028070400,
+      -7581781592122122576068608,
+      -6930102622568374171860992,
+      -5346489558154553593954304,
+      -4566795887166935294541824,
+      -2316136484927938624487424,
+      -3029576244310012193669120,
+      -777718165512898652143616,
+      0,
+      1585925131748648727609344,
+      2240284909897162569023488,
+      1470911600625223072743424,
+      2228096984794155139989504,
+      1761266133791510603235328,
+      847017444389730545303552,
+      -237760801541474545041408,
+      -138288085994038427123712,
+      -469634409374198523756544,
+      -180404589911011468771328,
+      1612605607120722647318528,
+      2948559078229122507341824,
+      3258331358634522963869696,
+      4846019192743334384762880,
+      5341408930571677048242176,
+      8036808878142889083797504,
+      10233405098502140484124672,
+      11577871439467443717668864,
+      10469278741371437927366656,
+      11639634241395434268393472,
+      11937682303296010320871424,
+      8991154983572320536231936,
+      9805197550445319245791232,
+      10381378528071025317380096,
+      7154937048443547086225408,
+      4685139407416285124886528,
+      5741483894091586805432320,
+      6622758365940808293548032,
+      4790926513134447185887232,
+      1729876211468718095466496,
+      -1095338954620473186451456,
+      -1269079573244058710048768,
+      1136607337812354184249344,
+      630774425096225862713344,
+      636324524434144045826048,
+      -808393629400459710038016,
+      395883695904169440313344,
+      2235983355849311543885824,
+      1503313453848453980356608,
+      568109800687501708361728,
+      1712348030441145063440384,
+      4240302364362379339235328,
+      6535957967840815261679616,
+      9195915641516678721830912,
+      12665318560396572683665408,
+      14548161500396120705073152,
+      17150897020508728010473472,
+      19366186581638696786722816,
+      22040272674541753017040896,
+      23928534247567323822030848,
+      22885423549099396665704448,
+      19641215412209619535134720,
+      18716281724549808567353344,
+      14557367442969545259614208,
+      12748413368361988682416128,
+      8445352378432473230475264,
+      2113863629171427236642816,
+      -1291967696501175585079296,
+      -771191856129735540080640,
+      -765369757458223043969024,
+      -1360289543435898731888640,
+      -3015646528383475918045184,
+      -5398888254464735299239936,
+      -2744194039976968845262848,
+      -987456826106574287142912,
+      -2473684754482367651905536,
+      -5208067418990610009292800,
+      -10406273861494118589399040,
+      -11707209535157207574773760,
+      -12292648061706539519442944,
+      -14057252275441564928442368,
+      -13967506372962990061256704,
+      -13310645811630378749788160,
+      -13108729081766860386467840,
+      -15852011553546315585552384,
+      -15354243064191401496412160,
+      -12330888502876696133763072,
+      -10656359451779818774855680,
+      -7960448104124820899233792,
+      -8219498479236770091237376,
+      -8921772481082529538899968,
+      -7276862849334093618872320,
+      -5425363968144740834082816,
+      -6358263683355051271651328,
+      -7459425160687832822448128,
+      -7074533615343676348694528,
+      -5301639246801536183959552,
+      -4787405201937087860834304,
+      -2085638218004472782651392,
+      1920404624070683658289152,
+      2742485967989307330265088,
+      3471111161451773373186048,
+      6894716054962546625478656,
+      7358093996631551882821632,
+      6136006603060480271450112,
+      4829337693485626715799552,
+      894050892959198671273984,
+      -2118841134607857742774272,
+      -3588319142488161315192832,
+      -2396136917517520043245568,
+      -1965759041912310119530496,
+      -3231242263471116408324096,
+      -2302938636345296507895808,
+      -2513951459139072030670848,
+      -2859042397675607967137792,
+      -2844189543727515662548992,
+      -316473269859064496521216,
+      937178393384204959219712,
+      794937936149927124008960,
+      1414778843556442418446336,
+      2764587132042799615049728,
+      6236802642485343609159680,
+      9448884731955922128076800,
+      11589241412378247473135616,
+      12373600255744228187963392,
+      11775281834361651600556032,
+      10730939423464842732765184,
+      3613889066533378607546368,
+      -3181854116140217333186560,
+      -3166594606156843839389696,
+      -373842623466538857922560,
+      -18149716956540498345984,
+      -754872601755421163651072,
+      -490329165795358054285312,
+      -1302506325639167412797440,
+      -1484458916147409608245248,
+      -1618734749123109453824000,
+      -905377007663849081405440,
+      -1519678486571482794164224,
+      -223391000198661848170496,
+      211119367413028014260224,
+      2327699176924006800424960,
+      3779184376959335047102464,
+      7395869208339549383557120,
+      6706457123526595334635520,
+      2435955998975676517449728,
+      1106554555029916863168512,
+      2571878273856581809471488,
+      5430498779405533524787200,
+      4406320075242603494244352,
+      4204548894162981480300544,
+      3234695099066155205132288,
+      4035525696316236971900928,
+      6888867496019754009755648,
+      8254078341156917039071232,
+      11417637851022244418945024,
+      13010215882322093956661248,
+      12268330447307549303635968,
+      10265066469360054539649024,
+      8089140261697113076793344,
+      6944701623255669472755712,
+      4191326564908136273018880,
+      2179334655760424627077120,
+      1219431801698078108418048,
+      -1034599996540644954734592,
+      -156687466541811798900736,
+      1746228855868711774453760,
+      1019582384188741029724160,
+      -1476832851194880259522560,
+      -4665769219277606371721216,
+      -6504093980096217330221056,
+      -11173705412166313901555712,
+      -13829598592550676417478656,
+      -17264065405728428795101184,
+      -18131926545056236084133888,
+      -17733905090884637376380928,
+      -19152908170202242418212864,
+      -20228645658292697195085824,
+      -18980639666935774362730496,
+      -17669681398796562104057856,
+      -18277993098431141366464512,
+      -18475398339707828508295168,
+      -19584884704964379219591168,
+      -20538630737309668219027456,
+      -22018836769938080582860800,
+      -21369429043011268760305664,
+      -19750043825272359760166912,
+      -18514976639932466257199104,
+      -17515691631862485182578688,
+      -20191099921475580802891776,
+      -21121134652146266343997440,
+      -20388018143788531057688576,
+      -22439960485907056333684736,
+      -25289236586513018640138240,
+      -25316508441760769522008064,
+      -25375924097117675904303104,
+      -26025462205610151089537024,
+      -21913311237715399484112896,
+      -18685657194297488859725824,
+      -14321080085020742648856576,
+      -14283674964487963689353216,
+      -16527389247339140518772736,
+      -20886123072674310559629312,
+      -22875364869396279001612288,
+      -24225301502368625492754432,
+      -25833652957756999052820480,
+      -29364901146260924016885760,
+      -31208277692966518355132416,
+      -32696563559764524288442368,
+      -35806394108201592571297792,
+      -42594803745352511360335872,
+      -45956774167663373799391232,
+      -47665839755053053939548160,
+      -45435718921133277675782144,
+      -43885434965327630542307328,
+      -45055457393644524676317184,
+      -46493486656675466610475008,
+      -43927560342977588305592320,
+      -40672384906683124069433344,
+      -37893471882554005583298560,
+      -35725959962958156743573504,
+      -34278040311951178615226368,
+      -35133449442739414032711680,
+      -39527208884862361500909568,
+      -43870630359966876038070272,
+      -47145974816754162991104000,
+      -49619490901862294377988096,
+      -50734669804828328726626304,
+      -50345145665597059259957248,
+      -49919501654724537172885504,
+      -51921708527591558096093184,
+      -52352180523853783062544384,
+      -50311324790033615677292544,
+      -46327219594534161534156800,
+      -41582249799059292014247936,
+      -37775465751564428859408384,
+      -35478409453069858922037248,
+      -35998579352322916866850816,
+      -36136552581664681368748032,
+      -33621397059128250492518400,
+      -29459365991266339849764864,
+      -26659876847439880235515904,
+      -27554644937145384855142400,
+      -28923712256378392599855104,
+      -29794742338108854013788160,
+      -26684602367610095688220672,
+      -24011368133164497721360384,
+      -22977564723734870589702144,
+      -23461613342314154027909120,
+      -22396038482230535388135424,
+      -20640378307617281697382400,
+      -20366672331430320022749184,
+      -19279301282752345552191488,
+      -21636608337874254529822720,
+      -24867053747277216402636800,
+      -25157585656131451747303424,
+      -24567033227082644360003584,
+      -23708270170192963740631040,
+      -22066129659831910475497472,
+      -24007816467772358277464064,
+      -24711352770704425422422016,
+      -26085453058121995089084416,
+      -23379973135267266526445568,
+      -22279957605556105380888576,
+      -21912774369847109662801920,
+      -17934983150111760517693440,
+      -15696148289948966650380288,
+      -17927681036903103657410560,
+      -23990510055897337759268864,
+      -28711763406559191249190912,
+      -29161449681899700453638144,
+      -30943420505350015792709632,
+      -32855813607170914136358912,
+      -35838541201266546191630336,
+      -38419096938895462920880128,
+      -40337206145240658836717568,
+      -40752678582361691877539840,
+      -41439986092509926504005632,
+      -38795553039823792139927552,
+      -35712380975127529516957696,
+      -35411952208615181939376128,
+      -34246674879788535416619008,
+      -31607695859167011096494080,
+      -27352889878173767899807744,
+      -23474854389683821263978496,
+      -22274929314736197481791488,
+      -23904141217559696610689024,
+      -27900344117106623056445440,
+      -29781526126200426992762880,
+      -29122268728322654478532608,
+      -27462416733174338919858176,
+      -30389906300612523948244992,
+      -34442511162801002131750912,
+      -36366113968364170839588864,
+      -37354415841017721950044160,
+      -37415329614609359256420352,
+      -37474531798795057226579968,
+      -37502680694838402740125696,
+      -36018300739912134595444736,
+      -34679438161611878719029248,
+      -31678690443611146301734912,
+      -29288498916812337635655680,
+      -28321656700472647164624896,
+      -28979589984561766858752000,
+      -34191342422825992101822464,
+      -37363457149377112440832000,
+      -37540200733310653088923648,
+      -37230412510352462445543424,
+      -36999051287874749650173952,
+      -42558682467520222792253440,
+      -43879242653285778580307968,
+      -43568978279107910812303360,
+      -41373469312517343235014656,
+      -40197759883004273034788864,
+      -39495888551003975923531776,
+      -38246395860681290699243520,
+      -38403344272984112883564544,
+      -39435221099824315709259776,
+      -41145642900916670772019200,
+      -44424157053442191941173248,
+      -46175759380486164569915392,
+      -45963934945557724178415616,
+      -43753319134404879233056768,
+      -42423567550593620225556480,
+      -37034625266264090163019776,
+      -35661691392481255497924608,
+      -37131749986126553006735360,
+      -37223842073572296911486976,
+      -35353084435718681579749376,
+      -34391351625965095473905664,
+      -31031002119875497484615680,
+      -34084790734977549887078400,
+      -38316799593282381946028032,
+      -41629779390601234556649472,
+      -41716067778869030748684288,
+      -44709145773784413094543360,
+      -48217721477460114005819392,
+      -49620606974493199039463424,
+      -52179143869129196029607936,
+      -58028165948403211965562880,
+      -62781046465253873157144576,
+      -65781177617768180978024448,
+      -67516792376193961823305728,
+      -63698027474168588768641024,
+      -59521166190653431949033472,
+      -57205143189694872985534464,
+      -53387229632826457347588096,
+      -47805377810591320452890624,
+      -42587573455975977991536640,
+      -36017216408023771480326144,
+      -32706985611733282269954048,
+      -33930444040393760140427264,
+      -40378477751903961097437184,
+      -47407446766448763255914496,
+      -51203172942408986558201856,
+      -53382117519565079873323008,
+      -53180453370138984196341760,
+      -50301834057897801842425856,
+      -47215632162236394800939008,
+      -45733145276018325773615104,
+      -43446405890632242522226688,
+      -39725197449802472457502720,
+      -38068395749689228827557888,
+      -35299911128171398857490432,
+      -35471809035211715622469632,
+      -35019211102075638008250368,
+      -34839642815370667000594432,
+      -33012617332896972480184320,
+      -30572699945447666147655680,
+      -31554711460511374901248000,
+      -32535699361835711341789184,
+      -33393536981185918754881536,
+      -33082327051546733423099904,
+      -33733349210288499139280896,
+      -33607533663527087519039488,
+      -34259584709628075284889600,
+      -36657161903543302714556416,
+      -36975622762008226151006208,
+      -35025538227227578962280448,
+      -33137938450136975668150272,
+      -28845562678572874257661952,
+      -25446260448559436927074304,
+      -24618766280378332452225024,
+      -29149507917651166195875840,
+      -28112803792051347025559552,
+      -26406274549931625878126592,
+      -26367846727322996077232128,
+      -27069024836448326843891712,
+      -24886002773261140724023296,
+      -24371349165181771049861120,
+      -24879227622637900230819840,
+      -25875775735171285518385152,
+      -23553120480064721773395968,
+      -23787315469229069051101184,
+      -22882007316586238037721088,
+      -23042389369435901157965824,
+      -25020791981140416437157888,
+      -26709025512291190983098368,
+      -26497857045418274461843456,
+      -26075461034427504329228288,
+      -26330781662474133894594560,
+      -27665813185450495015124992,
+      -28598057165955664063758336,
+      -30966275858656202292461568,
+      -29586827307065424409001984,
+      -27946932931611894122283008,
+      -29107977518449221229871104,
+      -31113705609622414946205696,
+      -31635065382437450632134656,
+      -29966526362825586181668864,
+      -27112543932381791172689920,
+      -25701366378952825824608256,
+      -25434025497385248325894144,
+      -25456525759830895403991040,
+      -26344256496129144740904960,
+      -28450469661628224598179840,
+      -30933724701762688120782848,
+      -33767927264244801019576320,
+      -36550200411618375423229952,
+      -37618885412120810728980480,
+      -41217371962578827265179648,
+      -41195311536355336754561024,
+      -39341617546810482046795776,
+      -35722266258403388156805120,
+      -34570055209070688471089152,
+      -32851187689719600594812928,
+      -29840019924011399331708928,
+      -25483663463579067759984640,
+      -23019153658231805595090944,
+      -24250187491978437321555968,
+      -26969045152483809677017088,
+      -28214271454498503421591552,
+      -28693259119763098825654272,
+      -31966906350557468534243328,
+      -36162722471701141491023872,
+      -36466845865962479974088704,
+      -32717813928271263452626944,
+      -31048886270170869461417984,
+      -32576383125274620552282112,
+      -34660231438824658192826368,
+      -34796740187499707272003584,
+      -35151044572617623744806912,
+      -37093498562189852562948096,
+      -41227379414589525148565504,
+      -43817276504771065173508096,
+      -45039101725704091571585024,
+      -44890980225123260167094272,
+      -45869565039997525279375360,
+      -45215361818863946300391424,
+      -45008993069407871730450432,
+      -44465266379586198940155904,
+      -45401462345436466729975808,
+      -44009186667347001422643200,
+      -41153928344490772829044736,
+      -38151167850043905241251840,
+      -38760789285354716362964992,
+      -40882728360848033126023168,
+      -43498547860902538727391232,
+      -44836156148515757084377088,
+      -42319497778168983076208640,
+      -39024747398416732029714432,
+      -39981454027847595179638784,
+      -38706852863411868351332352,
+      -36180200225178431109726208,
+      -33812676443370260338311168,
+      -33994907166142360679612416,
+      -37231865061163088438362112,
+      -35952926856277204278444032,
+      -33921137214190687939985408,
+      -33046189813348301967196160,
+      -33801978322263079340998656,
+      -33692084282270114906112000,
+      -30967303467254143921422336,
+      -30212207188798388951842816,
+      -29585185938095396874092544,
+      -28514196709773828090232832,
+      -25398321828655739833417728,
+      -23146702513547094473572352,
+      -25883203775949753968230400,
+      -27401477290274885392662528,
+      -25958538561383348599521280,
+      -25724910438417186169028608,
+      -22355898073202886885507072,
+      -20717965930310596210720768,
+      -18179813484229945641140224,
+      -17706691670056984675090432,
+      -20783205521516577687601152,
+      -22566666348217164221120512,
+      -21902579864641353208037376,
+      -20015844241982990843904000,
+      -17619497536334655419056128,
+      -19012876222286817633763328,
+      -21659900089711641462046720,
+      -21831826012689090184478720,
+      -24124447130308190178115584,
+      -23607621990592488161673216,
+      -25139403360357466580713472,
+      -30593931754975650677522432,
+      -30337657555644375006969856,
+      -28426006400276666949566464,
+      -28548168313307672216600576,
+      -28813742392074951039385600,
+      -28665909181434771888144384,
+      -26834998242448768470351872,
+      -24097490467107849075949568,
+      -21201430574762152152793088,
+      -20798676021044839138197504,
+      -20524929029122697017163776,
+      -18315420779475333543886848,
+      -19725187071554246617858048,
+      -21541095392036532535689216,
+      -20250360208352229158027264,
+      -15589520850905992156676096,
+      -10576453282057290961125376,
+      -1556842257662466783707136,
+      3731749647309118877204480,
+      8325848395899520189202432,
+      8938699649444099492151296,
+      6643875743396335005466624
+    ],
+    "real_numerators": [
+      73661501379664821130100736,
+      87706850801037877192949760,
+      91961712358402382914125824,
+      93139742926530692337631232,
+      96973321805557673339387904,
+      101777095207060526503821312,
+      105080241354409563608055808,
+      106256497833515991246569472,
+      106710653998819168615399424,
+      108607612596856405429846016,
+      111882310077878518027386880,
+      110663779358316661340897280,
+      111746279817526018188509184,
+      117219962315290082931638272,
+      123510694409449859572563968,
+      122626676197947074949414912,
+      122112646198924156839395328,
+      123485780080725863920828416,
+      121006390788041280975798272,
+      116897988549586592032882688,
+      115670580792372197597380608,
+      114832677869726724652007424,
+      116846467347702680855248896,
+      122923914245508181706932224,
+      132266209357274724232593408,
+      136183212120351072636108800,
+      139273350986984740121214976,
+      143670866076979103277252608,
+      146518602505828649674997760,
+      149359519649274302409211904,
+      150881115917216587020500992,
+      157141843907911076972331008,
+      165493595711031885034422272,
+      171325702902958586171752448,
+      178301580266330819169091584,
+      184033542798696680418967552,
+      191077305807924401767710720,
+      200421005655623634587222016,
+      207815734595938193319657472,
+      211290076150069629435248640,
+      215377564817240656841801728,
+      224359710594341309671014400,
+      229969426577859274235445248,
+      235367933556099660942147584,
+      243087951310459162735935488,
+      248039085981418652419751936,
+      248771935503299137691975680,
+      251192956684498520363761664,
+      258521619757269168496312320,
+      265389623260183435233198080,
+      268007416476481276755312640,
+      270017859916619970586345472,
+      273290100048653165027917824,
+      277285188364547345182883840,
+      280703011711027855983902720,
+      283581956985700456194899968,
+      286260022156853784669585408,
+      289528410381145087273861120,
+      296271652062831080229568512,
+      301111502529663080394129408,
+      305974891862616721816813568,
+      313273142111739848698101760,
+      320663504017224818747244544,
+      326855116109311670472409088,
+      335538277183502307358146560,
+      350939922995906354054430720,
+      364309304088501694893129728,
+      371392866788661507989176320,
+      377021460495196680517320704,
+      381948637352318930945835008,
+      385479141980521732623040512,
+      388742669591949058414477312,
+      390477464342266963950567424,
+      393487773660692280342740992,
+      398648477573562943366234112,
+      404687276628865387824414720,
+      410048081174301843631636480,
+      416792588774598782717263872,
+      425595533700219718567198720,
+      435238831047159797851881472,
+      440147644289769844273840128,
+      445876034099242869184266240,
+      449691593267933296854040576,
+      457739574149616975095005184,
+      466580922745554695691960320,
+      474706219388317286436700160,
+      480761427832039443326304256,
+      485266023420383086539440128,
+      490225123446940136875491328,
+      499068869726939608000757760,
+      505521633922980854468968448,
+      512741661440651349784002560,
+      523199340069323717260345344,
+      530761306637897166271545344,
+      535485251220151436423725056,
+      539958331837133301808627712,
+      548434520129551623681736704,
+      558381013070569882827882496,
+      564789670077980397176619008,
+      573727661239232032925548544,
+      580511834235523020793839616,
+      587754286417151349156216832,
+      596488759230069026418851840,
+      606223980863117534743756800,
+      613999048671189753560825856,
+      620364724923368285023502336,
+      627958707925467322101268480,
+      635627300169572907615256576,
+      642121384768484208621387776,
+      649948077511101164417974272,
+      659892641187099773585326080,
+      667656837921265196831080448,
+      675005386422273697325776896,
+      680792608951283536260759552,
+      689136974992823731951239168,
+      700008229422851797028962304,
+      708266035284298821189763072,
+      715281275333897909365112832,
+      725183202187376928288145408,
+      731277799077342963356925952,
+      737291336906079682739306496,
+      744060909084977382006194176,
+      751444604830030775185309696,
+      759827718732732424398045184,
+      769818244482479662932426752,
+      778083453152681922666692608,
+      787071162504219442672566272,
+      798109053001865264302653440,
+      806934988766244511655395328,
+      814000795769794759105708032,
+      822932970442796311831904256,
+      833375362555783625723346944,
+      842402385981883151386935296,
+      849897022312630650648133632,
+      857956888052326205153607680,
+      866947208822234547048415232,
+      877737132755819991991844864,
+      885484597524460123637940224,
+      892389296254564696701534208,
+      901398465694194349409042432,
+      911449089294543906817441792,
+      922083266187200887116529664,
+      929955033866881066449502208,
+      934383924570612099306225664,
+      940893000661087393111080960,
+      949373427863308924631384064,
+      960930568510673493107408896,
+      970156472844597603589947392,
+      976442630332405634666856448,
+      983312772178789930828300288,
+      990315363854798358891724800,
+      996598510033226812314615808,
+      1004877187176531357706747904,
+      1012372767560629938905153536,
+      1018924455635220095622447104,
+      1030451722489266065421369344,
+      1038390707866285990490406912,
+      1043993820451435836308717568,
+      1051650418951970694084165632,
+      1061779673472908456152268800,
+      1072351717331368433885904896,
+      1080466075195864319138988032,
+      1091151319314931977226813440,
+      1100521068584758378565206016,
+      1111509019689051538503761920,
+      1121258992666926640567156736,
+      1129531387948341844867284992,
+      1139385286752625690123698176,
+      1148589263287718621506174976,
+      1157442851732418571972640768,
+      1170247648260038127815491584,
+      1181629788710132869201133568,
+      1188483634075669632651362304,
+      1192318299533751646022533120,
+      1195025989236667408441147392,
+      1200656916077702348829360128,
+      1207376035614082393968738304,
+      1214474613861736948938309632,
+      1218319430664006017379991552,
+      1222762892559231257210257408,
+      1229972968934115082258874368,
+      1241732266721972431943106560,
+      1251205114163390255793700864,
+      1258700419963792787765198848,
+      1266907843122184835263627264,
+      1274403372434785518284177408,
+      1284500982641237421444825088,
+      1294179473042392844414746624,
+      1304420402674956746845323264,
+      1314716038095230583774904320,
+      1324916196295468695657906176,
+      1336119754378749055080595456,
+      1346898471526464273212506112,
+      1358013685730664443776335872,
+      1368904608116307456501481472,
+      1380086745543687322260733952,
+      1389482659650699950876000256,
+      1399192140473808691667140608,
+      1409894124156779467557044224,
+      1418239079490447154729713664,
+      1426538645315494530361851904,
+      1436010593676554705074913280,
+      1443610105734353788982001664,
+      1456037816437870874635272192,
+      1468814186547323587943989248,
+      1480886568069195880219017216,
+      1489894736130081407614582784,
+      1499969774670814442862673920,
+      1509349696265187749420597248,
+      1518226222351341199514664960,
+      1525840727589394569859432448,
+      1531101246514250291890618368,
+      1536383522438278935327277056,
+      1541497993762315688227110912,
+      1550312239118218230058975232,
+      1559070613837115470628519936,
+      1568899432723975899227095040,
+      1578678994038151275501060096,
+      1584431320568496958505746432,
+      1593432310111775376147480576,
+      1606671962859112491783290880,
+      1617217535476589764076896256,
+      1627215019374866662764314624,
+      1636616660089812627478282240,
+      1649309491140276166640795648,
+      1665501598413302942700404736,
+      1681161658875481926920044544,
+      1692542697167259202626781184,
+      1704838149828253593005719552,
+      1719806710012858370766143488,
+      1732507224221324511056756736,
+      1744054176827335663912222720,
+      1756531566052986164466417664,
+      1769033032237336438950068224,
+      1777572832917579871075434496,
+      1785608315669024069403017216,
+      1793948376686608251384496128,
+      1803906830170751838600560640,
+      1818446051089508159748833280,
+      1829216255667780523705499648,
+      1835859384061842864126033920,
+      1843717302929220512119783424,
+      1853038551413705463323164672,
+      1862066526064615247415607296,
+      1872654868980107638797762560,
+      1883904480856871731472629760,
+      1893420632792519949672251392,
+      1904591812577964328740716544,
+      1917860919721973881795248128,
+      1931480531762989244746825728,
+      1941922434083998104410914816,
+      1953955768529040237769261056,
+      1963971968976824040566030336,
+      1972797054805941303296131072,
+      1983722447216831177953378304,
+      1995749224497527411749945344,
+      2008673273180127309410074624,
+      2020412084714776911601991680,
+      2033533400204798842734903296,
+      2048266384089118593958019072,
+      2062939834939403400059551744,
+      2078156332978409554734743552,
+      2092095124265313451288559616,
+      2104636182895776446862589952,
+      2116385318227478078768021504,
+      2129660100001431257979289600,
+      2139945192105162065624170496,
+      2151471774700582848427982848,
+      2164331214211949859765747712,
+      2180084599365747214074773504,
+      2195220594794726587231109120,
+      2209923226013969030248923136,
+      2219587665300267117181927424,
+      2232732665369825915258798080,
+      2245295660980046030153187328,
+      2258698464590771624278491136,
+      2269671997010592998172393472,
+      2281005378662194131899514880,
+      2289023329800032536034803712,
+      2298746581920510392311742464,
+      2309968020976561729199669248,
+      2321160022542809596707209216,
+      2335135896300923336968372224,
+      2346761061903802238442143744,
+      2354992920283183949878919168,
+      2366064977553792054591488000,
+      2377745059806261532812115968,
+      2390547555192042059531812864,
+      2403873173984682230117564416,
+      2414062944128088803872079872,
+      2425934270967772684849512448,
+      2436256387664669189945163776,
+      2449977472686870529776287744,
+      2462631099834810509104775168,
+      2475430688443215811436347392,
+      2486738127537379550852808704,
+      2497471280465865434378272768,
+      2510523660242853763525640192,
+      2519311204157926952243560448,
+      2527149799244608857509462016,
+      2538206017135741284225384448,
+      2552738074449456477105029120,
+      2567435454554795298527379456,
+      2578666376720875959529504768,
+      2590455817814055135809110016,
+      2602971179933857110565060608,
+      2617567138436489300737523712,
+      2632301272940254343983005696,
+      2641703636287355525022089216,
+      2649891539352348576050053120,
+      2659617011714805922334244864,
+      2669543534430854721268875264,
+      2678910247004266628762304512,
+      2689660833147198503190003712,
+      2700881940562444333432700928,
+      2713765741920553891147022336,
+      2726538300110593559233560576,
+      2741009107558784622743519232,
+      2755019240486587324304457728,
+      2768079545330323650361950208,
+      2782697871992419378758942720,
+      2797993405021150186733305856,
+      2811502398910027739586101248,
+      2825233206521243355748237312,
+      2841805165242394898935578624,
+      2856540397797492240471293952,
+      2868304455613292233264988160,
+      2878176950739848522830446592,
+      2889040742670905159570161664,
+      2903353754572962485499854848,
+      2915460440732376294332825600,
+      2926393024793607011789963264,
+      2936240274474478195508772864,
+      2946864358059233293268680704,
+      2959019637764831425253605376,
+      2969132315416948527452913664,
+      2978306557806160610389393408,
+      2991015127275011960842747904,
+      3003672114984384065026654208,
+      3015189662810330400093634560,
+      3028735868202344284225011712,
+      3040940947019228836844797952,
+      3053555967561773476036476928,
+      3065614365901982962775228416,
+      3076159106215965476511547392,
+      3084142663378003612707848192,
+      3093597514208698643670630400,
+      3103492994105405050275758080,
+      3113481466604486303913345024,
+      3121959235642083800499879936,
+      3133734594362116620937068544,
+      3145321642535651326635802624,
+      3156917187503145838580858880,
+      3168813215892164153201131520,
+      3179104253288713280097878016,
+      3189518895758264324516216832,
+      3202006339741372920908218368,
+      3215639673464569524104724480,
+      3227837456078175965972267008,
+      3238033319742167592751595520,
+      3250515313159042173115564032,
+      3261728007827430781646536704,
+      3275344119096739565787938816,
+      3287925570940715114795368448,
+      3296322362609581454469890048,
+      3304939650223574881209942016,
+      3316675992793006354366201856,
+      3328420348416160728195530752,
+      3338739974633518611946274816,
+      3350813189768805333203943424,
+      3364096784577271660344770560,
+      3374172047986720644486135808,
+      3384804251378977208899993600,
+      3393796030670255894290235392,
+      3402349523240232136581578752,
+      3409594880606497713864835072,
+      3415474610244435308546359296,
+      3420858714811995591169540096,
+      3426124957790068832406077440,
+      3433046059578189074560712704,
+      3438790764871374455154147328,
+      3448024903626868615425294336,
+      3458997907925963102532665344,
+      3468039042982020841358753792,
+      3480079867319496895396577280,
+      3491955906842720762643611648,
+      3502848862228866027483037696,
+      3509266808240242390959390720,
+      3513489325344730498685992960,
+      3522637929290366665369845760,
+      3535207568830292990525177856,
+      3545604780870260336325820416,
+      3548706457210063031638163456,
+      3554497778375493026085601280,
+      3561033385183470948483858432,
+      3567523078480020933326143488,
+      3571703735343327003602321408,
+      3575884558238736620646825984,
+      3582792616730983478193029120,
+      3591574170547214001874403328,
+      3599412148487404117970386944,
+      3607079405273702602102538240,
+      3616459314289496310891413504,
+      3626068273117751720798060544,
+      3635617915919112925668704256,
+      3645161353876748269072154624,
+      3655359736415987914575446016,
+      3663630304190239789654474752,
+      3668131830275847124462600192,
+      3674012054538009712502243328,
+      3677801461143207801094406144,
+      3682268321813878643466698752,
+      3684317962857308729993330688,
+      3685679162930605682633736192,
+      3689476956939782188840255488,
+      3697682119369975389340303360,
+      3704061008562116571938422784,
+      3709149581718016573292150784,
+      3715985850203186180724359168,
+      3721436079978125093209374720,
+      3726617614374783491936092160,
+      3732801177054310362312081408,
+      3741128763278533864911273984,
+      3748771133752875964520464384,
+      3752682708922473498103775232,
+      3755879790323709595581677568,
+      3759178618811890355536920576,
+      3764254465047938667722571776,
+      3770003610664461421942669312,
+      3774311515329446709018230784,
+      3777300949147583250515886080,
+      3780381708166912923729395712,
+      3783153247463296134889340928,
+      3786896439157072458980261888,
+      3790153052195776542449598464,
+      3793577226401349356518113280,
+      3796319948774671433112485888,
+      3795702983488820218341359616,
+      3792578229415635366063374336,
+      3794131125835833115523678208,
+      3799381655009793325037256704,
+      3802383052846426388453916672,
+      3805645866656378513805803520,
+      3809221700356389413769445376,
+      3811842736565884742210158592,
+      3814077695899233334002188288,
+      3820342136249437790178115584,
+      3825526158273853216641777664,
+      3828432792811588560839770112,
+      3830600815587927170838691840,
+      3834430922748372959979634688,
+      3838420815827878212613963776,
+      3843568512201580559355346944,
+      3846714131001843544508858368,
+      3851078914150781688626544640,
+      3855824528540353575348338688,
+      3862146657659991456426754048,
+      3867636876960991489927675904,
+      3871754233034154668506218496,
+      3875311294030856008398536704,
+      3875664776135255628974129152,
+      3872273966216630113788755968,
+      3871949766424051094875275264,
+      3878465135494164112790781952,
+      3889484094022799493812977664,
+      3899702608843686087791476736,
+      3909746125951118450962202624,
+      3917291342099556559759605760,
+      3923827148292080809371762688,
+      3928561005508653606185730048,
+      3930592321933576831961661440,
+      3930136595713355834395197440,
+      3929437498099168472886935552,
+      3927868100389837049092374528,
+      3923295144965950050962243584,
+      3919182292323400613992857600,
+      3920401674908168971832262656,
+      3922245716316706203456503808,
+      3922947085066313566246666240,
+      3924506227516594202651656192,
+      3925652312887266591268405248,
+      3925635256483721567618990080,
+      3926007279858224386881355776,
+      3926631000166325894953041920,
+      3930483671423805449629073408,
+      3932715632764309020142993408,
+      3935121707323893262328004608,
+      3938354981338519886538735616,
+      3943645759533822541889011712,
+      3948196765695987524999053312,
+      3951764404751456822374694912,
+      3952709899711038450818875392,
+      3953850291688537788484943872,
+      3953923454046667295330140160,
+      3952219579463581596603383808,
+      3949455854153961196004311040,
+      3948794788296099706901102592,
+      3950305633418176152228331520,
+      3951674830940675745737867264,
+      3952838378621691493779243008,
+      3955577259846890123453005824,
+      3957442902588414454822600704,
+      3956552382491054160394321920,
+      3953015328092158205995515904,
+      3951257348613621136410804224,
+      3952798304603950706897977344,
+      3954643915282129881237815296,
+      3956840211435926736271835136,
+      3958826526341076162887811072,
+      3960540316105900601922027520,
+      3959077438006230618019463168,
+      3959966906343824599015227392,
+      3959966424793821453041532928,
+      3959079995517805414129336320,
+      3960543924822819570228133888,
+      3958832274399325220419665920,
+      3956846841030373791548571648,
+      3954649504268004775428096000,
+      3952804914062565783933812736,
+      3951263326474781736556298240,
+      3953020073374770723643457536,
+      3956555666611572045204422656,
+      3957446321802485122830696448,
+      3955580230063574436202676224,
+      3952841736785541757245849600,
+      3951680608499512269802045440,
+      3950313213185710874108624896,
+      3948802784860829355863965696,
+      3949465994603446521988907008,
+      3952230391177432520206581760,
+      3953937905939718874224132096,
+      3953867708786782144097681408,
+      3952729130718342731760926720,
+      3951782138364255291213611008,
+      3948216075967103744010616832,
+      3943665468005028650396155904,
+      3938370707355502304248725504,
+      3935138529302981404170125312,
+      3932733230360480059649687552,
+      3930496911485682144809844736,
+      3926640902640532114762629120,
+      3926018607765212647982628864,
+      3925647773718896558567587840,
+      3925662357275930089823928320,
+      3924512138628480308225245184,
+      3922949180888197722644938752,
+      3922247576960211549021011968,
+      3920406781403067673881870336,
+      3919186714863434282307682304,
+      3923299578745780916635828224,
+      3927870588054382086627262464,
+      3929441612895136173151748096,
+      3930143195169398073715589120,
+      3930597932744868038424133632,
+      3928565352000783020443303936,
+      3923833035123181158907510784,
+      3917300635560688354546679808,
+      3909758511533321998989000704,
+      3899718576056326459723087872,
+      3889504735408480360677244928,
+      3878488308563665139911360512,
+      3871976447092271258324172800,
+      3872303637686988758663036928,
+      3875698060549475403011457024,
+      3875347127161743929384108032,
+      3871788654787693719037411328,
+      3867666915478427318706241536,
+      3862175442570463135282495488,
+      3855847693407903029294792704,
+      3851099632715837941808627712,
+      3846729036718115528539897856,
+      3843574867925314553360941056,
+      3838422569195165994945871872,
+      3834433375496027950662287360,
+      3830603272705192003396173824,
+      3828434444847741241068093440,
+      3825525573029902963380846592,
+      3820338329049984896050659328,
+      3814077466668234963599491072,
+      3811844876787308468528742400,
+      3809221831871922452975058944,
+      3805642303662731950425112576,
+      3802372469615928468354105344,
+      3799369312860145154185494528,
+      3794117988595501524129415168,
+      3792562708651532526542651392,
+      3795687586723425430840279040,
+      3796305439293413570113437696,
+      3793562986996347046381748224,
+      3790135106405595265525350400,
+      3786879162356888940073451520,
+      3783140048597984880894148608,
+      3780370767289069322652090368,
+      3777293644779693531224604672,
+      3774303858535366518057730048,
+      3769995001917781273823150080,
+      3764248071591191569735090176,
+      3759174720141554961677811712,
+      3755874629289476685970800640,
+      3752676058473858779148451840,
+      3748764999320434385595924480,
+      3741125015182629232487432192,
+      3732798115555393906633867264,
+      3726618194463396401439047680,
+      3721442063260692756406730752,
+      3715992938279691116211077120,
+      3709157647165414123316969472,
+      3704073691032223340994494464,
+      3697695421560000153829507072,
+      3689488601909567998811701248,
+      3685689040516074831326740480,
+      3684322526803664776323923968,
+      3682268816670903233773830144,
+      3677799968223850653481435136,
+      3674012167539661948250488832,
+      3668132518903691002070958080,
+      3663629280390717720007540736,
+      3655359958234252613349539840,
+      3645161281548044350548606976,
+      3635617369042859517674520576,
+      3626067737590627098137985024,
+      3616462182270872030040555520,
+      3607083957062224767218614272,
+      3599416501273771958071197696,
+      3591579352939551540499185664,
+      3582799613281285635663986688,
+      3575896235775295983296970752,
+      3571719745186742930816106496,
+      3567541973866040224957595648,
+      3561053333493221003188240384,
+      3554516913036576345888391168,
+      3548724176795264115764363264,
+      3545612890042369445944360960,
+      3535206494687079076666015744,
+      3522636864293507297374633984,
+      3513492022057994708934721536,
+      3509269981269958094026178560,
+      3502851034879463274554851328,
+      3491958426685611581577887744,
+      3480081279951355547794538496,
+      3468040199017694771544064000,
+      3458998874459406108198961152,
+      3448026823151816475836153856,
+      3438791846712690937782337536,
+      3433048886094711918277165056,
+      3426128364562985661977591808,
+      3420864974041032223088443392,
+      3415482823984765997254967296,
+      3409607971294876426955653120,
+      3402361676662298205636001792,
+      3393802411380761615168176128,
+      3384808829285025901323485184,
+      3374178594303321932927336448,
+      3364107180678170949212700672,
+      3350822191186897754338099200,
+      3338748692672008603744337920,
+      3328427747807854689039417344,
+      3316684462556424419053404160,
+      3304951961131831601829773312,
+      3296336508618010002917949440,
+      3287943979912001436986114048,
+      3275364666488094975500222464,
+      3261747541311812129370669056,
+      3250532132141734080116948992,
+      3238047189983073789410279424,
+      3227849772106088679005487104,
+      3215648261488678706983469056,
+      3202012199275997599276990464,
+      3189523448104004139182194688,
+      3179105753338543521570750464,
+      3168815891693860695243227136,
+      3156922421287351201048821760,
+      3145325884825642657782956032,
+      3133735456084991391100305408,
+      3121955781764672666027950080,
+      3113475523375317994212163584,
+      3103480738082445520164356096,
+      3093581663874357609583607808,
+      3084122168106519168263651328,
+      3076137432110138830830436352,
+      3065593219492979140175331328,
+      3053532894597307500270190592,
+      3040916410379900429214416896,
+      3028713005174635089776082944,
+      3015168557154025771615911936,
+      3003650177649706791283458048,
+      2990992911922574927647997952,
+      2978282833134688706418966528,
+      2969107294886817191453261824,
+      2958992609831871418543898624,
+      2946838195711876441122537472,
+      2936216288518768970791124992,
+      2926370697131298023450607616,
+      2915439452082878074463453184,
+      2903329143253085782649339904,
+      2889014862818898746691026944,
+      2878152050651992756401995776,
+      2868276776532048079807840256,
+      2856508861647045087048237056,
+      2841773578850312570590461952,
+      2825201524821777343884296192,
+      2811469827862388590210187264,
+      2797966372819307148125143040,
+      2782675182991258872788811776,
+      2768062734924167136908673024,
+      2755002468674954156149047296,
+      2740989294103179689405186048,
+      2726512589442987231421661184,
+      2713737334259051701794242560,
+      2700851698828939582303633408,
+      2689628410012317655496654848,
+      2678873047102614593578467328,
+      2669503837547853511613480960,
+      2659575296691284023573479424,
+      2649845617384395289850281984,
+      2641648542916968294169706496,
+      2632241632546274300051587072,
+      2617505177482204852818804736,
+      2602912216208257652375945216,
+      2590398935474313462005366784,
+      2578607904179567766771073024,
+      2567375030527825298002542592,
+      2552681100875828186646052864,
+      2538153424610666913558691840,
+      2527100948009738670507556864,
+      2519265271790600276003520512,
+      2510479674472435292273901568,
+      2497426128052022947983917056,
+      2486687034034703927909285888,
+      2475373721281625423597273088,
+      2462569699493989785683361792,
+      2449912721719556810211328000,
+      2436190118771170129414717440,
+      2425868518503089629963485184,
+      2413997755440270804344897536,
+      2403805273154255877220335616,
+      2390479061108623470170734592,
+      2377679309089254684177203200,
+      2366004594494994740907343872,
+      2354938932557728778301734912,
+      2346712205605658465543389184,
+      2335090130297191693276938240,
+      2321113541606855992319934464,
+      2309921343587303447278387200,
+      2298703289614270734348058624,
+      2288985647124153345842872320,
+      2280971467821414764507037696,
+      2269636867960480371111362560,
+      2258661477383955933833461760,
+      2245257485723178598150438912,
+      2232698677166552997500551168,
+      2219557273824009346692939776,
+      2209894221303778771053051904,
+      2195190923251647067929444352,
+      2180056352492764699364950016,
+      2164305323019894703452585984,
+      2151446241277912841583591424,
+      2139921116064900022416703488,
+      2129632832367972364329156608,
+      2116353677592822479977447424,
+      2104604139355200906288168960,
+      2092063866507748638388649984,
+      2078126221798380561670078464,
+      2062911926684824488640512000,
+      2048235841304969219766484992,
+      2033501894265029603585163264,
+      2020378711867120039785136128,
+      2008643541870473950768660480,
+      1995720966366248691421937664,
+      1983694673802274435919511552,
+      1972774641213760928512737280,
+      1963952569634977566519459840,
+      1953933347626691384775278592,
+      1941891817765279898066223104,
+      1931443532523873389531627520,
+      1917823301023865135534440448,
+      1904551776236776998632947712,
+      1893378004657647175398850560,
+      1883857817549584158158749696,
+      1872604711828582924063604736,
+      1862013769934077909301985280,
+      1852985226194534908274147328,
+      1843663041393320909636370432,
+      1835808685190517814579953664,
+      1829169712839013920772456448,
+      1818399904007910614940778496,
+      1803862242895323845495881728,
+      1793907342799209567409405952,
+      1785573017912817881932890112,
+      1777542762952743420560408576,
+      1769004574317482374764429312,
+      1756500897404803963198373888,
+      1744018102178273891220193280,
+      1732468599569268791255760896,
+      1719768963746070253608632320,
+      1704802630622257915409465344,
+      1692503214824418171624095744,
+      1681116695391472033328005120,
+      1665454023913078363244199936,
+      1649260567738649403648376832,
+      1636567642892988285315973120,
+      1627165913692205797177556992,
+      1617168382685231435514642432,
+      1606624804282017824571916288,
+      1593386946854527066508886016,
+      1584389999937531498798776320,
+      1578640894779658672137043968,
+      1568862629733096457116844032,
+      1559032913720440067903717376,
+      1550267495471032685465436160,
+      1541448959921115660873105408,
+      1536334245343811661083967488,
+      1531052382802088892659924992,
+      1525792171407650285506527232,
+      1518170154066129262651375616,
+      1509291837215689802860462080,
+      1499912325912747301322883072,
+      1489840241996107195548172288,
+      1480833652863791785903652864,
+      1468762207825760289711718400,
+      1455987512814341990645760000,
+      1443559578916239104446300160,
+      1435958666962793000182218752,
+      1426484401005355803076460544,
+      1418180401822469849633259520,
+      1409833074328089687358439424,
+      1399131366843975001910018048,
+      1389424861371349584350019584,
+      1380030733787184568396152832,
+      1368855860916698899449643008,
+      1357966781985182921976184832,
+      1346849573163093594185138176,
+      1336070721875427354700939264,
+      1324869678993333204201504768,
+      1314670809780085302067462144,
+      1304379701247075870476075008,
+      1294134639853635654324846592,
+      1284450427678111336511832064,
+      1274348335948963584126484480,
+      1266852683322564556405866496,
+      1258641212211811903319572480,
+      1251141163217213637544378368,
+      1241666413333982928904912896,
+      1229903650961573731320725504,
+      1222685672191542920126398464,
+      1218235790146736552956395520,
+      1214386919845842299081719808,
+      1207285992155384960757268480,
+      1200572021598095443830505472,
+      1194946728136109757300736000,
+      1192242162456836008772108288,
+      1188412647456791017065283584,
+      1181566331008144892747579392,
+      1170191223906879210373775360,
+      1157395285296026151959920640,
+      1148546157395309543865450496,
+      1139340520879063965884219392,
+      1129477908641238889757933568,
+      1121196017139815433751232512,
+      1111440911277625530552156160,
+      1100450008718254328617369600,
+      1091080523145412673296924672,
+      1080399155252034128878501888,
+      1072288956179637721236504576,
+      1061718903955773271079649280,
+      1051592727165059685584732160,
+      1043941145094107491930734592,
+      1038340263985542027255218176,
+      1030405008661348426390175744,
+      1018877499252270310755401728,
+      1012326416187793382142115840,
+      1004831071380274804477132800,
+      996554853067444632019795968,
+      990274994904714808379047936,
+      983271071192099252869267456,
+      976399598811602288367370240,
+      970112277567204678766166016,
+      960886784941496839440433152,
+      949328754923166532286545920,
+      940848489837229831870218240,
+      934338527586482599260848128,
+      929906396263289045496365056,
+      922034191508244270749319168,
+      911402637422080940113395712,
+      901354552809303133873242112,
+      892351169608129286806437888,
+      885451053438813826036269056,
+      877704698677929409773568000,
+      866908648686108398489436160,
+      857919719212298492717301760,
+      849862149839842273092698112,
+      842367558555458617552666624,
+      833339580356246414865465344,
+      822900125676061394535972864,
+      813968637615569411887857664,
+      806902138568726308462788608,
+      798074849482840513949204480,
+      787040084371742666610704384,
+      778052050681865901778665472,
+      769788056591835023622012928,
+      759797305232978435674996736,
+      751411512968140782309474304,
+      744025531482297121143521280,
+      737256238199833761226424320,
+      731243265100770423970201600,
+      725148317990206342443302912,
+      715244579902700573488578560,
+      708228074988130163891372032,
+      699967064650622620967895040,
+      689097662487050276923506688,
+      680755502600486672790454272,
+      674966707458485425692213248,
+      667615444650278447044624384,
+      659850537037509921809104896,
+      649908216726975012071800832,
+      642085369556365438040932352,
+      635593184044482498008186880,
+      627924945706998905507414016,
+      620330925411510545895391232,
+      613964044976401863690682368,
+      606186126823724135854637056,
+      596447544076338481325932544,
+      587709237303044011693441024,
+      580463022622091452130263040,
+      573677400784254995324207104,
+      564734543740086176947634176,
+      558325910673552690309496832,
+      548381911044238327884546048,
+      539910600933627141703073792,
+      535439071656052064050479104,
+      530717443136544524348686336,
+      523159534571860067709091840,
+      512707727231865183044370432,
+      505491020074518517257338880,
+      499036588177816007137558528,
+      490189163546508685018660864,
+      485228378021285714219499520,
+      480723131724153406443487232,
+      474663498537624235122098176,
+      466532530393704661455470592,
+      457690763193654464617644032,
+      449647835944957985500954624,
+      445834526250919402248601600,
+      440104069193674389312241664,
+      435192438409307772235546624,
+      425548947997167208319942656,
+      416745516761137508893327360,
+      409998380820234142809587712,
+      404631990901426863583789056,
+      398589690139537394236391424,
+      393427332134341888733872128,
+      390417220028070571542577152,
+      388681102666835067909701632,
+      385418455216507226301661184,
+      381888225956736834721546240,
+      376961778608230969450168320,
+      371331915965254152163950592,
+      364250226298626507255316480,
+      350884687450098806917431296,
+      335487081149007155154649088,
+      326803089210992735746523136,
+      320608606988080864959660032,
+      313214707150825880197005312,
+      305914644561594243776249856,
+      301054648133656483284910080,
+      296219240970391972124557312,
+      289474701648461505367113728,
+      286208031080495727220097024,
+      283533374297221013841117184,
+      280657622413055177548365824,
+      277239549951923666485772288,
+      273240088298724205566885888,
+      269969571674244787243843584,
+      267961869195230767061401600,
+      265345254719655766120202240,
+      258476224690149117875191808,
+      251147703290040084840054784,
+      248730358191931622124683264,
+      247998527336605117570875392,
+      243048234595019681490272256,
+      235329655577042466172305408,
+      229935349922241575710097408,
+      224328668377081967064121344,
+      215342820304731924825374720,
+      211253278335865959401652224,
+      207780881495942130445582336,
+      200386461201575614668079104,
+      191047300802846214364069888,
+      184005742484771583287099392,
+      178277201081707654289555456,
+      171301956047936446097522688,
+      165465690434596800038961152,
+      157111523457546172133015552,
+      150851686238808866318974976,
+      149332635563268796198158336,
+      146494950754181548662063104,
+      143645330753759026838765568,
+      139244238334985784292016128,
+      136153864563141145918439424,
+      132233763331338196070957056,
+      122892157389792110190788608,
+      116812637142344602381975552,
+      114791482546499637101985792,
+      115629732187261252910710784,
+      116859721676129568364167168,
+      120967962746845083828486144,
+      123446995789751947184046080,
+      122074060222666685429055488,
+      122590562308951569212637184,
+      123478276795673467145945088,
+      117191448475041436339798016,
+      111718304684082522480443392,
+      110636172780394317600522240,
+      111857687312583814436356096,
+      108581083748659660159188992,
+      106681672055914868051542016,
+      106229257891122443722948608,
+      105059292191105788432875520,
+      101762910371627550583554048,
+      96971308521690911974883328,
+      93144865428419632066199552,
+      91973035541976806638747648,
+      87718997419800776434253824,
+      73670537327482478740373504
+    ],
+    "scale_bits": 96
+  },
+  "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
+}
