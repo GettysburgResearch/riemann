@@ -10,6 +10,15 @@ on:
       - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
       - 'experiments/X-6601-arb-xi-dual-portfolio/**'
+  pull_request:
+    branches:
+      - agent/gpt56-03-e/39-arb-xi-passivity
+    paths:
+      - '.github/workflows/arb-xi-dual-grid.yml'
+      - 'experiments/X-3902-arb-xi-passivity/rs_grid.c'
+      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
+      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/**'
   workflow_dispatch:
 
 concurrency:
