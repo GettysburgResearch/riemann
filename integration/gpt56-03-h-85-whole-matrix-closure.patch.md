@@ -21,7 +21,7 @@ registries directly.
 |---|---|---|
 | `X-8201` | `experiments/X-8201-circulant-completion/` | empirical completion reconnaissance; no retained result yet |
 | `X-8502` | `experiments/X-8502-one-direction-schur/` | exact conditional target-gate checker |
-| `X-8503` | `experiments/X-8503-fast-toeplitz-operator/` | static exact budget, prototype producer, binder, and hybrid source merger |
+| `X-8503` | `experiments/X-8503-fast-toeplitz-operator/` | static exact budget, source-bound prototype producer, binder, and strict hybrid merger |
 | `X-8504` | `experiments/X-8504-threshold-insusceptibility/` | exact replay of endpoint susceptibility and fixed-vector moat |
 
 ## Dependency edges
@@ -69,14 +69,13 @@ The exact coarse Schur surplus is
 3 / 50,000,000.
 ```
 
-The source plan reserves:
+The source plan reserves
 
 ```text
 prime coefficient operator radius < 999/1,000,000
 ```
 
 so alpha and nonprime radii may still fit under the `1/1000` total gate.
-
 L-8505 supplies the late-source static component
 
 ```text
@@ -101,9 +100,16 @@ X-8502 Schur target verification SHA-256
 X-8503 static operator-budget verification SHA-256
 9a2c928b5a56440a212402d78cd95510b13b17116fdcf26b9a82a4a501ea9780
 
+X-8503 reviewed fast-producer Git-blob SHA-1
+ae6451299362bfc44f3aa681f23c762ea2bc11be
+
 X-8504 threshold-insusceptibility verification SHA-256
 df56a0ee9dedab633bc6ad9537aa2d1c0c69fe4554980713cbce6b6361955aa5
 ```
+
+The target plan binds the budget verification hash and producer Git blob. Every
+fast shard carries a canonical binding hash, and the strict merger recomputes
+all three before accepting source data.
 
 ## Review order
 
@@ -121,13 +127,31 @@ df56a0ee9dedab633bc6ad9537aa2d1c0c69fe4554980713cbce6b6361955aa5
 12. `claims/lemmas/L-8501-circulant-completion-toeplitz-bound.md`
 13. append-only session report.
 
+## Validation inventory
+
+Mutation suites committed:
+
+```text
+one-direction target gate       6
+static operator budget          7
+base hybrid merger              6
+strict hash/source binding      7
+threshold insusceptibility      5
+```
+
+The workflow also verifies the exact producer Git blob, compiles under the
+declared floating contract, and exercises one real target segment before any
+full source launch. No workflow run or complete hybrid source is claimed in this
+patch.
+
 ## Promotion boundary
 
 - No counterexample or `Z-####` identifier is created.
 - O-8501 excludes one vector only.
 - The whole-matrix theorem remains conditional until all three new gates are
   supplied from one exact reference matrix.
-- The static fast budget is not a completed source run.
+- The static fast budget and source-bound prototype are not a completed source
+  run.
 - D-0801 admissibility and Guinand--Weil normalization retain their existing
   statuses.
 - A future strict negative matrix or portfolio still requires independent
