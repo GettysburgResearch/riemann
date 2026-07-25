@@ -105,9 +105,21 @@ The class remains open at greater heights.  **Z-0003** refuted in the tested ran
 |---|---|
 | zeros in `[0,1] x [0,500]` | exactly 269, and exactly 269 certified on-line sign changes => all on the critical line and simple |
 | off-critical boxes `[1/2+d, 1] x [0,500]` | empty for `d` down to 0.01 |
-| Hermite certificates | `PD` on four boxes in `12 <= t <= 48`, and on the Lehmer-pair box at `t ~ 1977` |
+| deficit ledger | 0 in all 24 height bands to `T = 500` (M-0005) |
+| certified on-line ordinates | 1517 zeros to `T = 2000` (sign change + bisection) |
+| Hermite certificates | `PD` on four boxes in `12 <= t <= 48`, and on the boxes around the four tightest Lehmer pairs below `T = 2000` (`gamma = 1977.17, 1329.04, 1415.59, 1054.78`), each cross-checked against a winding count and a sign-change count |
 | Robin / Lagarias | no violation up to `n` with 11541 digits; ratio `0.999493717` |
 | Nicolas | no violation up to `p_k = 2*10^6` |
+
+Sensitivity, measured rather than assumed (M-0003):
+
+| detector | floor |
+|---|---|
+| T-0001, announcement, synthetic box | `0.1 / 0.02 / 0.005 / 0.002 / 0.0005` at `nsub = 16/32/64/128/256` |
+| T-0001, exclusion | none — `PD` rules out every displacement (T-0001(c) is an equivalence) |
+| T-0001, announcement, real `zeta` boxes | `0.031..0.280` ordinary; `0.0043..0.0057` at Lehmer pairs (X-0002b) |
+| L-0004 deficit | none in displacement; limited only by height |
+| X-0005 prime spectrum | `0.2 -> 0.1 -> ~0.013` across three designs |
 
 A box count for `T = 2000` was running at the end of the session; whatever it
 returns, it must be compared against the 1517 certified sign changes already
