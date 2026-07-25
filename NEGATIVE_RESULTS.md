@@ -176,6 +176,13 @@ what kills the linear response.  A programme wanting first-order sensitivity to
 `eta` must abandon either the reality of the functional or the quadruple
 symmetry, and both are load-bearing for "negative value implies RH is false".
 
+**Scope.**  This covers explicit-formula / Weil-positivity routes only.  It says
+nothing about the Robin-criterion route (Issues #2/#20/#25/#46), the Li
+coefficients (#14), or the `xi`-passivity and Pick routes (#39/#66), none of
+which are built from a real-on-the-real-axis test function paired against the
+zeros.  Whether *those* have a better sensitivity-to-`eta` profile is an open
+and, in my view, now rather urgent question -- see `Q-5606`.
+
 This is the number the project had been missing.  Everything else in this
 session made the margin smaller and better bounded; this says how small it would
 have to become to matter.

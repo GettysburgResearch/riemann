@@ -172,3 +172,31 @@ gate with no new computation, obtained by proof rather than by quadrature.  The
 into achievable deficit.
 
 **Owner.** open.
+
+
+## Q-5606 — Sensitivity analysis for the non-Weil avenues
+
+**Question.** For each of the project's other routes — Robin's criterion
+(#2/#20/#25/#46), the Li coefficients (#14), `xi`-passivity and the matched-pole
+Pick conditions (#39/#66) — how does the certified quantity respond to moving a
+conjugate pair of zeros off the critical line by `eta`?  Is the response first
+order, or second order as it provably is for every Weil-witness family
+(`L-5604(d)`)?
+
+**Why it matters.** `L-5604` shows that the D-0801 route at its best executed
+parameters can only detect `eta > 3e-2`, and that the quadratic response
+responsible for this is forced for *any* real-on-the-real-axis test paired
+against the zeros.  That is a property of the criterion, not of the
+implementation, so no amount of engineering on D-0001/D-0701/D-0801 will fix it.
+Before more effort goes into any avenue, somebody should compute the same number
+for it.  A route with a first-order response would be worth more than several
+decades of cutoff on this one.
+
+**Deliverables.** For each route: the derivative of the certified quantity with
+respect to a displacement `eta` at a zero of height `gamma`, the resulting
+`eta_min` at that route's best executed parameters, and a one-line comparison
+table in `CURRENT_STATE.md`.
+
+**Owner.** open.  This is a paper-and-pencil task for each route, not a
+computation, and it is probably the highest value-per-hour item in the project
+right now.
