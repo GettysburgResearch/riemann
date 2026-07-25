@@ -56,6 +56,19 @@ factor-`10^2`-to-`10^3` effect of carrier tuning (`O-5602`), margins of
 gate stops being negligible.  The program is therefore: **run above the barrier,
 optimize the carrier there, and get L-4202/L-4203 reviewed first.**
 
+**The sensitivity, finally quantified (`L-5604`).**  An off-critical zero
+displaced by `eta` changes the D-0801 functional by `-2 eta^2 g''(gamma)`, a
+*second-order* response.  Converting the executed `c = 10^11` margin through
+that gives a detection threshold `eta_min = 0.0153` at the most favourable
+position in the window and `0.655` at the median position.  Since `|eta| < 1/2`
+always, the executed configuration could not have detected an off-critical zero
+at a typical position at all, and elsewhere only one displaced by more than
+`1.5e-2` — which the classical zero-free region already forbids at that height.
+`eta_min` improves only like `K^{-1}`, so `1e-3` needs `K ~ 1.6e4` and `1e-6`
+needs `K ~ 1.6e7`.  **The D-0801 avenue is many orders of magnitude away from
+being able to see a counterexample, for structural rather than numerical
+reasons.**  Any future work on it should lead with this number.
+
 Structural conclusion worth carrying forward: by the explicit formula, a
 negative D-0801 value is **equivalent** to `lambda_max(S_K) > ell_T`, so this
 route is a detector for off-critical zeros in the effective window of the test

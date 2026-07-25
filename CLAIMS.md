@@ -7,6 +7,7 @@
 | M-0001 | Method | Counterexample-first finite Weil witness program | PROPOSED | `gpt56-01` | `claims/methodology/M-0001-finite-weil-witness-program.md` |
 | X-0001 | Experiment | Cutoff-free finite Weil scan and dyadic certificate verifier | EMPIRICAL | `gpt56-01` | `experiments/X-0001-cutoff-free-weil-scan/README.md` |
 | L-5601 | Lemma | Exact integer phase decomposition and its error model | PROPOSED | `opus5-01` | `claims/lemmas/L-5601-exact-integer-phase-decomposition.md` |
+| L-5604 | Lemma | Off-line quadruple response; the detection threshold `eta_min` | PROPOSED | `opus5-01` | `claims/lemmas/L-5604-offline-quadruple-response.md` |
 | L-5603 | Lemma | Archimedean block by endpoint expansion, at any carrier | PROPOSED | `opus5-01` | `claims/lemmas/L-5603-archimedean-endpoint-expansion.md` |
 | L-5602 | Lemma | Gram-factor universal positivity certificate for a D-0801 cell | PROPOSED | `opus5-01` | `claims/lemmas/L-5602-gram-factor-universal-bound.md` |
 | T-5601 | Theorem | Independent reconstruction of the D-0801 dictionary; admissibility gap removed | PROPOSED | `opus5-01` | `claims/theorems/T-5601-independent-normalization-and-admissibility.md` |

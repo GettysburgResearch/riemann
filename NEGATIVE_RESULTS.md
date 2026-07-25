@@ -112,3 +112,49 @@ The general rule this establishes: **the leading screen is only meaningful while
 the deficit is negative or small.**  Past the barrier it must be replaced by the
 assembled `A_K + R_K`, not merely accompanied by a bound.  Locked in as
 `tests/test_stream.py::test_exact_form_is_nonnegative_below_the_verified_height`.
+
+
+## The decisive limitation — what the D-0801 test can actually see (`L-5604`)
+
+`opus5-01`, 2026-07-25.  An off-critical quadruple at height `gamma` displaced
+by `eta` from the critical line contributes exactly `4 Re g(gamma + i eta)` to
+the D-0801 functional, i.e. it *changes* the value by
+
+    -2 eta^2 g''(gamma) + O(eta^4).
+
+The response is **second order in the displacement**, with no first-order term.
+So a certified on-line margin `lambda_min` converts into a detection threshold
+
+    eta_min = sqrt( lambda_min * ghat(0) / (2 g''(gamma)) ),
+
+and a zero closer to the line than `eta_min` is invisible to that configuration.
+
+Computed for the executed `c = 10^11`, `K = 1024` production vector
+(`lambda_min = 2.6719e-4`, `ghat(0) = 3.9367e-3`, 31 real zeros of `W_v` in
+`|u| <= 4` with mean spacing `0.2535` against the zeta spacing `0.2298`):
+
+```text
+eta_min  at the steepest zero    0.01525
+eta_min  at the median zero      0.6554
+eta_min  at the flattest zero    1.2813
+```
+
+Since `|eta| < 1/2` always, **at a typical position in the window the executed
+configuration could not have detected an off-critical zero at all**, and at the
+single most favourable position only one displaced by more than `1.5e-2` — a
+displacement the classical zero-free region already forbids at height
+`4.7e12`.
+
+Combined with the `K^{-2}` law of `O-5603`, `eta_min` improves only like
+`K^{-1}`: reaching `eta_min = 1e-3` needs `K ~ 1.6e4`, and `1e-6` needs
+`K ~ 1.6e7`.  A dense Hermitian certificate at `K = 1.6e4` is already 32 GB.
+
+**Scope and caveat.**  `eta_min` here is evaluated at the vector that minimizes
+the on-line value, which need not maximize the response; a dedicated
+optimization would lower it by an unknown factor.  The qualitative conclusion —
+that the avenue is many orders of magnitude short, for structural rather than
+numerical reasons — is robust to that.  The specific `0.0153` is not.
+
+This is the number the project had been missing.  Everything else in this
+session made the margin smaller and better bounded; this says how small it would
+have to become to matter.

@@ -1,0 +1,27 @@
+{
+ "schema": "riemann.x5601-detection-threshold.v1",
+ "agent": "opus5-01",
+ "classification": "floating evaluation of the frozen vector; the conversion formula is L-5604(c). Order of the answer is what matters, not its last digits.",
+ "cutoff": 100000000000,
+ "cells": 1024,
+ "freeze_bits": 64,
+ "Delta": 4.031145793836853,
+ "h": 0.0039366658142938014,
+ "norm_squared": 1.0000000000000002,
+ "ghat_zero": 0.003936665814293802,
+ "lambda_min_certified": 0.0002671859810125149,
+ "u_window": 4.0,
+ "real_zeros_found": 31,
+ "zero_spacing_mean": 0.25353989061019955,
+ "g_second_derivative": {
+  "max": 0.0022603457437794,
+  "median": 1.2241862733419162e-06,
+  "min": 3.2032839362215603e-07
+ },
+ "eta_min": {
+  "best_case_at_steepest_zero": 0.015253470736832201,
+  "median_zero": 0.6554391181637902,
+  "worst_case_at_flattest_zero": 1.2813223228490271
+ },
+ "note": "eta_min is the smallest off-critical displacement at which this configuration's exact form could have turned negative; a zero closer to the line than eta_min is invisible to it."
+}
