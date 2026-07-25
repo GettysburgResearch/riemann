@@ -8,6 +8,13 @@ on:
     paths:
       - .github/workflows/c1e11-directed-fixed-vector.yml
       - experiments/X-2805-directed-prime-producer/**
+  pull_request:
+    branches:
+      - agent/gpt56-05-g/28-c1e11-directed-fixed-vector
+    paths:
+      - .github/C1E11_DIRECTED_TRIGGER.md
+      - .github/workflows/c1e11-directed-fixed-vector.yml
+      - experiments/X-2805-directed-prime-producer/**
 
 permissions:
   contents: read
