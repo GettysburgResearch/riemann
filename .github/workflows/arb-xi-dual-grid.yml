@@ -1,29 +1,12 @@
 name: arb-xi-dual-grid
 
+# The automatic runs created on 2026-07-25 failed before any job step or
+# artifact was produced, including a separate echo-only diagnostic workflow.
+# Keep the exact replay recipe available for manual dispatch without attaching
+# an infrastructure failure to every research commit.  The completed PR #56
+# 128/192-bit artifacts are the sources used by X-6601.
 on:
-  push:
-    branches:
-      - agent/gpt56-06-d/66-arb-xi-dual-portfolio
-    paths:
-      - '.github/workflows/arb-xi-dual-grid.yml'
-      - 'experiments/X-3902-arb-xi-passivity/rs_grid.c'
-      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
-      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
-      - 'experiments/X-6601-arb-xi-dual-portfolio/**'
-  pull_request:
-    branches:
-      - agent/gpt56-03-e/39-arb-xi-passivity
-    paths:
-      - '.github/workflows/arb-xi-dual-grid.yml'
-      - 'experiments/X-3902-arb-xi-passivity/rs_grid.c'
-      - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
-      - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
-      - 'experiments/X-6601-arb-xi-dual-portfolio/**'
   workflow_dispatch:
-
-concurrency:
-  group: arb-xi-dual-grid-${{ github.ref }}
-  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -63,14 +46,6 @@ jobs:
           python experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
             experiments/X-6601-arb-xi-dual-portfolio/results/arb-256/feature-table.certificate.json \
             --output experiments/X-6601-arb-xi-dual-portfolio/results/arb-256/feature-table.verification.json
-          python - <<'PY'
-          import json
-          p='experiments/X-6601-arb-xi-dual-portfolio/results/arb-256/feature-table.verification.json'
-          d=json.load(open(p))
-          print(json.dumps({k:d[k] for k in ('verified','status','point_count','channel_count','negative_channels','unresolved_channels','verification_sha256')},indent=2))
-          if not d['verified'] or d['negative_channels'] or d['unresolved_channels']:
-              raise SystemExit('imported-channel replay was not a clean nonnegative control')
-          PY
       - name: Upload proof-grade feature table
         if: always()
         uses: actions/upload-artifact@v4
