@@ -21,6 +21,9 @@ Last updated: 2026-07-25 by claude-01.
 | X-0006c | Measured cost law of the Weil filter | EMPIRICAL | `.../sensitivity.py` |
 | L-0006 | Taylor-model enclosures of `eta` with explicit tail | PROVED | `claims/lemmas/L-0006-taylor-model-enclosures.md` |
 | T-0001 | Hermite-Hankel box criterion; finite algebraic witness (incl. (f), resolving Q-0004) | PROVED (maths) / EMPIRICAL (sensitivity) | `claims/theorems/T-0001-hermite-hankel-box-criterion.md` |
+| T-0003 | Certified Li coefficients; `lambda_1..lambda_600 > 0` | PROVED (computation) / EMPIRICAL | `claims/theorems/T-0003-certified-li-coefficients.md` |
+| X-0009 | Li coefficients to n=600, validated against the zeros | EMPIRICAL (certified) | `experiments/X-0009-li-coefficients/` |
+| R-0008 | Enclosures 100 orders too tight (remainder not propagated) | REFUTED (fixed) | `NEGATIVE_RESULTS.md` |
 | T-0002 | Weil positivity: a counterexample witness made of finitely many primes | PROVED (criterion) / EMPIRICAL (numerics) | `claims/theorems/T-0002-weil-positivity-witness.md` |
 | X-0006 | Certified Weil quadratic forms + detector validation | EMPIRICAL (certified) | `experiments/X-0006-weil-positivity/` |
 | X-0006b | Matched filter: any height from the same 143 prime powers | EMPIRICAL (certified) | `.../matched.py` |

@@ -151,6 +151,37 @@ transfers, not the four seconds.
 Working precision (250, 300, 400 bits) made **no** difference to any floor:
 this is quadrature-limited, not precision-limited.
 
+## R-0008 — "certified" enclosures a hundred orders of magnitude too tight
+
+**What happened.**  The first Li-coefficient implementation took the Taylor
+coefficients straight from `eta_taylor_coeffs`, which returns the coefficients
+of the **truncated** Euler-Maclaurin expression.  The omitted remainder was
+never propagated.  The resulting `lambda_n` came with enclosures of `1e-239`
+when the truncation error alone is about `1e-61`.
+
+**Why it is nasty.**  The *values* were correct to every digit shown -- they
+still match the literature and the zero sum.  Only the error bars were fiction.
+A single run looks perfect; nothing about it invites suspicion.
+
+**How it was caught.**  Computing the same coefficients at two truncation
+orders and asking whether the enclosures *overlap*.  They did not: the
+midpoints differed by far more than the claimed radii.  Two runs that agree to
+30 digits but whose intervals are disjoint is a contradiction, and it can only
+mean the intervals are wrong.
+
+**Defence adopted, and it generalises.**  *An enclosure that is much tighter
+than the error term you know is present is a bug, not a triumph.*  Every
+certified quantity in this repository should be sanity-checked against the
+order of magnitude of its own truncation parameter, and recomputed at a second
+truncation order with an overlap assertion.  This is now a test
+(`test_li_enclosures_overlap_across_truncations`).
+
+**Fix.**  Cauchy on the circle `|s-1| = R` bounds the remainder's Taylor
+coefficients by `sup|E|/R^k`; `eta` carries it as `(s-1)E`, so coefficient `k`
+gains a disc of radius `em(R)/R^{k-1}`.  Take `R > 1` so the bound decays.
+
+---
+
 ## R-0007 — a sensitivity floor can be an artefact of the test harness
 
 **What happened.**  X-0002 first reported the T-0001 floor as `delta = 0.1` at
