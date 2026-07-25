@@ -1,0 +1,24 @@
+{
+  "carrier": "4709203636353.65",
+  "comparisons": {
+    "legendre_c1e8_dimension17_margin": 0.006950748711433982,
+    "pr44_c1e8_k1024_margin": 0.006643091775833554,
+    "x0602_c1e8_lattice_packet_dimension": 128,
+    "x0602_margin": 0.24237605690882058
+  },
+  "counterexample_candidate": null,
+  "results": [
+    {"cutoff": 10000000, "dimension": 5, "leading_margin": 0.03762842178460375, "minimum_diagonal": 0.5953499349668765, "order": 4, "prime_power_terms": 665134, "residual_inf_norm": 2.0990154059319366e-16},
+    {"cutoff": 10000000, "dimension": 9, "leading_margin": 0.030781170088095673, "minimum_diagonal": 0.5953499349668765, "order": 8, "prime_power_terms": 665134, "residual_inf_norm": 6.918294062630004e-16},
+    {"cutoff": 10000000, "dimension": 13, "leading_margin": 0.028945691083673817, "minimum_diagonal": 0.5953499349668765, "order": 12, "prime_power_terms": 665134, "residual_inf_norm": 5.915407053080912e-16},
+    {"cutoff": 10000000, "dimension": 17, "leading_margin": 0.028610941335281075, "minimum_diagonal": 0.5953499349668765, "order": 16, "prime_power_terms": 665134, "residual_inf_norm": 1.235990476633475e-15},
+    {"cutoff": 10000000, "dimension": 21, "leading_margin": 0.028434960911662723, "minimum_diagonal": 0.5953499349668765, "order": 20, "prime_power_terms": 665134, "residual_inf_norm": 4.111294638065033e-16},
+    {"cutoff": 100000000, "dimension": 5, "leading_margin": 0.010550496940921977, "minimum_diagonal": 0.7922979034484051, "order": 4, "prime_power_terms": 5762859, "residual_inf_norm": 1.0699991240259443e-15},
+    {"cutoff": 100000000, "dimension": 9, "leading_margin": 0.0073495557421052, "minimum_diagonal": 0.7922979034484051, "order": 8, "prime_power_terms": 5762859, "residual_inf_norm": 2.4692704478357363e-16},
+    {"cutoff": 100000000, "dimension": 13, "leading_margin": 0.007003606837397395, "minimum_diagonal": 0.7922979034484051, "order": 12, "prime_power_terms": 5762859, "residual_inf_norm": 1.04040040471709e-15},
+    {"cutoff": 100000000, "dimension": 17, "leading_margin": 0.006950748711433982, "minimum_diagonal": 0.7922979034484051, "order": 16, "prime_power_terms": 5762859, "residual_inf_norm": 9.732882902402373e-16}
+  ],
+  "schema": "riemann.x3601-legendre-carrier-summary.v1",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "warning": "Prime enumeration is exact integer work. Overlap recurrence, huge phases, accumulation, alpha, and eigensolving are ordinary numerical discovery arithmetic; exact archimedean and pole blocks are omitted from the displayed high-carrier leading matrix."
+}
