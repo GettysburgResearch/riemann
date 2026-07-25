@@ -7,8 +7,13 @@ test_overlap_against_direct_quadrature (test_packet_blocks.PacketBlockTests.test
 test_overlap_endpoints_and_parity (test_packet_blocks.PacketBlockTests.test_overlap_endpoints_and_parity) ... ok
 test_scalar_arch_and_pole_forms_are_finite (test_packet_blocks.PacketBlockTests.test_scalar_arch_and_pole_forms_are_finite) ... ok
 test_scalar_kernel_recovery (test_packet_blocks.PacketBlockTests.test_scalar_kernel_recovery) ... ok
+test_bad_degree_rejected (test_project_piecewise.PiecewiseProjectionTests.test_bad_degree_rejected) ... ok
+test_complex_energy_is_rational_and_monotone (test_project_piecewise.PiecewiseProjectionTests.test_complex_energy_is_rational_and_monotone) ... ok
+test_constant_vector_is_exact_degree_zero (test_project_piecewise.PiecewiseProjectionTests.test_constant_vector_is_exact_degree_zero) ... ok
+test_scale_invariance (test_project_piecewise.PiecewiseProjectionTests.test_scale_invariance) ... ok
+test_zero_vector_rejected (test_project_piecewise.PiecewiseProjectionTests.test_zero_vector_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.270s
+Ran 14 tests in 0.278s
 
 OK
