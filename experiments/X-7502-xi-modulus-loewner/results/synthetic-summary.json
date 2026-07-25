@@ -1,0 +1,28 @@
+{
+  "schema": "riemann.xi-modulus-log-loewner-summary.v1",
+  "checker_output_sha256": "63d1992dc876765be411f0f35e7ccd9971ff7620c1687b43c2057a22da0dc694",
+  "log_series_terms": 96,
+  "positive_control": {
+    "model": "H(u)=u+1",
+    "row_nodes": ["1", "3"],
+    "column_nodes": ["7", "15"],
+    "exact_formula": "log(2)^2 / 504",
+    "lower_decimal": "0.0009532797895202409",
+    "upper_decimal": "0.0009532797895202409",
+    "interval_width_upper": "5e-95",
+    "status": "CERTIFIED_NONNEGATIVE"
+  },
+  "negative_control": {
+    "model": "H(u)=(u-5)^2",
+    "row_nodes": ["9/2", "21/4"],
+    "column_nodes": ["19/4", "11/2"],
+    "exact_formula": "-64 * log(2)^2",
+    "lower_decimal": "-30.748992890764892",
+    "upper_decimal": "-30.748992890764892",
+    "interval_width_upper": "3e-92",
+    "status": "CERTIFIED_NEGATIVE"
+  },
+  "test_count": 9,
+  "counterexample_candidate": null,
+  "scope": "Synthetic exact controls only; no Riemann-xi sign is claimed."
+}
