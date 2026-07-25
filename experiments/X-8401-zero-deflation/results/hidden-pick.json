@@ -1,0 +1,45 @@
+{
+  "base_rayleigh_interval": {
+    "lower": "400/3",
+    "upper": "400/3"
+  },
+  "contracted_coefficients": [
+    {
+      "im": "0",
+      "re": "20"
+    }
+  ],
+  "interpretation": "Exact fixed-vector contraction and zero-bin lower bounds only; primitive F rectangles and zero counts require independent proof.",
+  "kind": "pick-count-deflation",
+  "manifest": {
+    "logical_gate_count": 2,
+    "logical_manifest_closed": false,
+    "synthetic_gate_count": 2
+  },
+  "residual_interval": {
+    "lower": "-800/3",
+    "upper": "-800/3"
+  },
+  "schema": "riemann.zero-deflation.v1",
+  "status": "CERTIFIED_NEGATIVE_DEFLATED_WITNESS",
+  "strict_moat": "800/3",
+  "subtracted_lower": "400",
+  "zero_bins": [
+    {
+      "count": 1,
+      "id": "exact-line-zero",
+      "per_zero_modulus2_lower": "400",
+      "phi_rectangle": {
+        "imag": {
+          "lower": "0",
+          "upper": "0"
+        },
+        "real": {
+          "lower": "20",
+          "upper": "20"
+        }
+      },
+      "subtracted_lower": "400"
+    }
+  ]
+}
