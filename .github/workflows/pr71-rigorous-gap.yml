@@ -7,6 +7,12 @@ on:
     paths:
       - '.github/workflows/pr71-rigorous-gap.yml'
       - 'experiments/X-5603-pr71-gap-audit/**'
+  pull_request:
+    branches:
+      - claude/riemann-counterexample-pipeline-io8s2k
+    paths:
+      - '.github/workflows/pr71-rigorous-gap.yml'
+      - 'experiments/X-5603-pr71-gap-audit/**'
   workflow_dispatch:
 
 permissions:
