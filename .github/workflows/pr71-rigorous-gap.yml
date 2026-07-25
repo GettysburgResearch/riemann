@@ -32,11 +32,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Run exact provenance audit
+      - name: Run exact provenance and checker tests
         run: |
           cd experiments/X-5603-pr71-gap-audit
           python -m compileall -q \
-            audit_exact_ordinate.py compare_gap.py compare_discrepancy.py tests
+            audit_exact_ordinate.py compare_gap.py compare_discrepancy.py \
+            verify_line_gap_certificate.py tests
           python -m unittest discover -s tests -v
           python audit_exact_ordinate.py \
             --output results/exact-ordinate-audit.regenerated.json
@@ -67,7 +68,7 @@ jobs:
           python compare_gap.py \
             results/flint-total-gap-128.json results/flint-total-gap-192.json \
             > results/flint-total-gap-nesting.json
-      - name: Compute total-minus-line zero discrepancy at 128 and 192 bits
+      - name: Compute and replay total-minus-line discrepancy
         run: |
           cd experiments/X-5603-pr71-gap-audit
           /usr/bin/time -v ./flint_line_gap_discrepancy 128 128 4 \
@@ -76,11 +77,17 @@ jobs:
           /usr/bin/time -v ./flint_line_gap_discrepancy 192 128 4 \
             > results/flint-discrepancy-192.json \
             2> results/flint-discrepancy-192.time.txt
+          python verify_line_gap_certificate.py \
+            results/flint-discrepancy-128.json \
+            --output results/flint-discrepancy-128.verification.json
+          python verify_line_gap_certificate.py \
+            results/flint-discrepancy-192.json \
+            --output results/flint-discrepancy-192.verification.json
           python compare_discrepancy.py \
             results/flint-discrepancy-128.json \
             results/flint-discrepancy-192.json \
             > results/flint-discrepancy-comparison.json
-          cat results/flint-discrepancy-192.json
+          cat results/flint-discrepancy-192.verification.json
           cat results/flint-discrepancy-comparison.json
       - name: Upload exact gap artifacts
         if: always()
