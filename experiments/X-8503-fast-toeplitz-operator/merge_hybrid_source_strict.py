@@ -2,8 +2,8 @@
 """Strict binding layer for merge_hybrid_source.py.
 
 This wrapper recomputes the self-hash of the L-8505 budget verification and the
-binding hash of every fast shard before delegating to the exact coefficient and
-radius merger.
+binding hash of every fast shard, including the exact producer Git blob, before
+delegating to the exact coefficient and radius merger.
 """
 from __future__ import annotations
 
@@ -51,6 +51,9 @@ def merge(
     expected_budget_sha = plan.get("fast_budget_verification_sha256")
     if not isinstance(expected_budget_sha, str) or len(expected_budget_sha) != 64:
         raise CertificateError("plan lacks fast-budget verification fingerprint")
+    expected_producer_blob = plan.get("fast_producer_git_blob_sha1")
+    if not isinstance(expected_producer_blob, str) or len(expected_producer_blob) != 40:
+        raise CertificateError("plan lacks fast-producer Git-blob fingerprint")
     budget_sha = verify_self_hash(
         budget,
         "verification_sha256",
@@ -64,9 +67,12 @@ def merge(
             continue
         if shard.get("arithmetic_contract") != ARITHMETIC_CONTRACT:
             raise CertificateError(f"{path}: arithmetic contract mismatch")
-        if shard.get("binding", {}).get("status") != "BOUND_TO_EXACT_SOURCE_PLAN":
+        binding = shard.get("binding")
+        if not isinstance(binding, dict) or binding.get("status") != "BOUND_TO_EXACT_SOURCE_PLAN":
             raise CertificateError(f"{path}: fast shard is not bound to the source plan")
         verify_self_hash(shard, "binding_sha256", path)
+        if binding.get("producer_git_blob_sha1") != expected_producer_blob:
+            raise CertificateError(f"{path}: producer Git-blob fingerprint mismatch")
         if shard.get("parameter_sha256") != plan.get("parameter_sha256"):
             raise CertificateError(f"{path}: parameter fingerprint mismatch")
         if shard.get("normalization_sha256") != plan.get("normalization_sha256"):
@@ -88,13 +94,12 @@ def merge(
     result = base.merge(plan, budget, shards)
     result["strict_binding"] = {
         "fast_budget_verification_sha256": budget_sha,
+        "fast_producer_git_blob_sha1": expected_producer_blob,
         "bound_fast_shards": sum(
             shard.get("schema") == FAST_SCHEMA for _, shard in shards
         ),
         "status": "CANONICAL_HASHES_REPLAYED",
     }
-    # Replace the base hash because the strict-binding object is part of the
-    # accepted proof object.
     result.pop("reference_sha256", None)
     result["reference_sha256"] = canonical_sha(result)
     return result
