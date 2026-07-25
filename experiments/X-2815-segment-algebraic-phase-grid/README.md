@@ -18,14 +18,14 @@ vector SHA-256     = 3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021
 normalization SHA  = 65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be
 ```
 
-PR #65 has already committed direct 192-bit MPFR shards for segment ranges
+At the current PR #65 head, direct 192-bit MPFR shards cover
 
 ```text
-0:2000
+0:2800
 4900:5000
 ```
 
-out of 5,000 total segments. The unfinished `2000:4900` range lies entirely above `4*10^10` and contains ordinary primes only. X-2815 proves that those high segments admit a much cheaper directed evaluator.
+out of 5,000 total segments. Thus 2,900 segments, or 58 percent of the integer cover, are already preserved as directed intervals. The remaining production range is `2800:4900`, comprising 2,100 ordinary-prime segments. X-2815's proof was deliberately established from the earlier segment-2000 floor onward, so it remains conservative for this reduced unfinished range.
 
 ## Algebraic substitutions
 
@@ -37,7 +37,7 @@ For a segment midpoint `m` and prime `q`, use
  y=\frac{q-m}{m}.
 \]
 
-The unfinished ranges satisfy
+Throughout the proved high-segment domain,
 
 \[
  |z|<1/8000,
@@ -45,11 +45,11 @@ The unfinished ranges satisfy
  |y|<1/4000.
 \]
 
-The producer may replace per-prime transcendental calls by:
+The producer may replace per-prime transcendental calls by
 
 \[
  \log q
- =\log m+2\left(z+\frac{z^3}{3}+\frac{z^5}{5}+\frac{z^7}{7}\right)+R_{\log},
+ =\log m+2\left(z+\frac{z^3}{3}+\frac{z^5}{5}+\frac{z^7}{7}\right)+R_{\log}
 \]
 
 and
@@ -65,7 +65,7 @@ Only `log(m)` and `m^-1/2` require transcendental setup, once per integer segmen
 
 ## Exact target bounds
 
-`verify_target_bounds.py` uses only Python integers and `fractions.Fraction`. It proves:
+`verify_target_bounds.py` uses only Python integers and `fractions.Fraction`. It proves, conservatively from segment 2000:
 
 ```text
 phase error from log truncation       < 7.789e-24 per term
@@ -80,7 +80,7 @@ combined acceleration moat            < 5.000229e-11
 In exact compact form,
 
 \[
- B_{\rm algebraic}<\frac1{90{,}000{,}000{,}000{,}000},
+ B_{\rm algebraic}<\frac1{90{,}000{,}000{,}000{,}000}
 \]
 
 and
@@ -132,12 +132,13 @@ A conforming C++/MPFR backend should:
 4. compute amplitude, support coordinate, and phase from those intervals;
 5. use the `M=32768,R=3` phase grid;
 6. prove a unique bin and support cell, or invoke the direct evaluator;
-7. include its phase-Taylor remainder in each shard interval or in a single hash-bound final ledger;
+7. include its phase-Taylor remainder in each shard interval or a single hash-bound final ledger;
 8. emit direct-compatible rational interval endpoints and complete fallback counters;
-9. overlap one full accelerated range with the direct MPFR backend before production use.
+9. overlap one accelerated range with the direct MPFR backend before production use;
+10. process only `2800:4900`, preserving all current direct outputs unchanged.
 
 ## Proof boundary
 
-X-2815 proves the target analytic truncation budget. It does not yet certify a production implementation or complete the missing prime ranges. Hosted PR #74 runs currently fail or queue before steps begin, which is an infrastructure state rather than a numerical result.
+X-2815 proves the target analytic truncation budget. It does not yet certify a production implementation or complete the remaining prime ranges. The retried PR #74 workflow is queued, while earlier attempts failed before step execution; that is an infrastructure state rather than a numerical result.
 
 No counterexample, strict production sign, or `Z-####` candidate is claimed.
