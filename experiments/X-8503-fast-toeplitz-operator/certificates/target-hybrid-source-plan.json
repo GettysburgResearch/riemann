@@ -1,0 +1,27 @@
+{
+  "schema": "riemann.hybrid-toeplitz-source-plan.v1",
+  "status": "PROOF_PRODUCING_HYBRID_SOURCE_PLAN",
+  "cutoff": 100000000000,
+  "carrier": "4709203636353.65",
+  "cells": 1024,
+  "segment_size": 20000000,
+  "total_segments": 5000,
+  "fast_start_segment": 2000,
+  "expected_counts": {
+    "prime_count": 4118054813,
+    "higher_prime_power_count": 28156,
+    "total_terms": 4118082969
+  },
+  "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+  "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+  "operator_gate": {
+    "numerator": "999",
+    "denominator": "1000000"
+  },
+  "source_partition": {
+    "directed_ordinary_segments": "[0,2000)",
+    "fast_ordinary_segments": "[2000,5000)",
+    "higher_prime_powers": "exactly one fully directed stream"
+  },
+  "proof_boundary": "The plan fixes the complete source partition and target fingerprints. It is not a completed coefficient artifact."
+}
