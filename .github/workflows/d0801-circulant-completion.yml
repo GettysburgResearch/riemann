@@ -53,6 +53,8 @@ jobs:
             experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp \
             -o experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard \
             -lmpfr -lgmp -lquadmath
+          test "$(git hash-object experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp)" = \
+            "ae6451299362bfc44f3aa681f23c762ea2bc11be"
           python -m compileall -q \
             experiments/X-8201-circulant-completion/analyze.py \
             experiments/X-8502-one-direction-schur/verify_target_gate.py \
@@ -108,6 +110,7 @@ jobs:
           python experiments/X-8503-fast-toeplitz-operator/bind_fast_shard.py \
             experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json \
             experiments/X-8503-fast-toeplitz-operator/certificates/target-hybrid-source-plan.json \
+            --producer-source experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp \
             --output experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json
           python - <<'PY'
           import hashlib
@@ -123,6 +126,8 @@ jobs:
           assert data['guarded_support_boundary_count'] == 0
           assert len(data['lags']) == 1024
           assert [row['lag'] for row in data['lags']] == list(range(1024))
+          assert data['binding']['producer_git_blob_sha1'] == \
+              'ae6451299362bfc44f3aa681f23c762ea2bc11be'
           claimed = data.pop('binding_sha256')
           actual = hashlib.sha256(json.dumps(
               data, sort_keys=True, separators=(',', ':'), ensure_ascii=True
@@ -130,6 +135,7 @@ jobs:
           assert claimed == actual
           print(json.dumps({
               'binding_sha256': claimed,
+              'producer_git_blob_sha1': data['binding']['producer_git_blob_sha1'],
               'prime_count': data['prime_count'],
               'near_phase_boundary_count': data['near_phase_boundary_count'],
               'minimum_support_boundary_distance': data['minimum_support_boundary_distance'],
