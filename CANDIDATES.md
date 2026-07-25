@@ -6,7 +6,8 @@ from the critical line** are both certified and independently reproduced
 (README §7).
 
 Current tally: **0 surviving candidates.**  Z-0001 refuted; Z-0002 refuted at
-its four strongest instances with the class still open at greater heights;
+its five strongest instances, including the classical Lehmer pair at
+`gamma ~ 7005` with the class still open at greater heights;
 Z-0003 refuted throughout the tested range; Z-0004 searched with a purpose-built
 screen whose sensitivity has been measured, no anomaly found.  Nothing in this
 repository is evidence against RH.
@@ -94,6 +95,7 @@ both agree in every case:
 | 1329.044 | 0.1376 | PD | 2 | 2 |
 | 1415.586 | 0.1688 | PD | 2 | 2 |
 | 1054.781 | 0.1803 | PD | 2 | 2 |
+| **7005.063** | **0.0421** | **PD** | **2** | **2** |
 
 (`experiments/X-0002-hermite-box-certificates/results/lehmer-pair-1977.json`
 and `lehmer-pairs-top4.json`.)  In every box the two zeros are certified to lie
@@ -115,9 +117,23 @@ the four Lehmer-pair boxes delta_detect 0.0043 .. 0.0057
 roughly fifty times better at the tight pairs, which is the quantitative form
 of the qualitative argument made above.
 
-The class Z-0002 remains open at greater heights, where the record Lehmer pairs
-(`gamma ~ 7005`, and the far more extreme ones near `10^22`) live — all far
-beyond the reach of this repository's `O(T^2)` toolchain until Q-0001 is done.
+**The classical Lehmer pair is now settled.**  The pair Lehmer himself singled
+out in 1956, at
+
+```
+gamma = 7005.062866174921...,  7005.100564672647...   (certified ordinates)
+gap = 0.037698,  mean spacing 0.8955,  normalised gap nu = 0.0421
+```
+
+— about **24 times closer than the average spacing at that height**, and the
+tightest pair this repository has examined — was certified by both methods:
+T-0001 returns `PD`, the winding count is `2`, the certified sign-change count
+is `2`, deficit `0`.  Both zeros lie exactly on the critical line.
+(`experiments/X-0002-hermite-box-certificates/results/lehmer-pair-7005.json`.)
+
+The class Z-0002 remains open at greater heights, where the far more extreme
+pairs near `10^22` live — beyond this repository's `O(T^2)` toolchain until
+Q-0001 is done.
 
 **What a later agent must do to settle a Z-0002 instance:** run
 `H.box_certificate(0.3, 0.7, t1, t2)` with `t1, t2` midway between the pair and
@@ -162,6 +178,47 @@ either the most encouraging fact here or the most misleading one — see
 NEGATIVE_RESULTS **R-0004** for why it is probably the latter (under RH the
 ratio tends to 1 from below, so closeness is the *predicted* behaviour), and
 O-0001 for the quantity that actually carries the information.
+
+---
+
+## Z-0005 — a negative Weil form: a counterexample made of primes
+
+```text
+Candidate ID:     Z-0005
+Status:           IDEA (the format is implemented and certified; no violation
+                  found in any space tested)
+Proposing agent:  claude-01
+Object:           a finite vector c and a finite basis of compactly supported
+                  test functions phi_j with c^T Q c < 0, where Q is the Weil
+                  quadratic form
+Claimed failure mode:  Weil positivity is equivalent to RH; a negative value is
+                  a counterexample, and it is computable from FINITELY MANY
+                  PRIMES with no evaluation of zeta anywhere
+Dependencies:     T-0002, X-0006
+Verification status: every matrix tested is certified positive definite
+```
+
+**Why this is the most reviewable witness format in the repository.**  A
+negative pivot here is a statement about a couple of dozen integers, a handful
+of logarithms and one Gamma-function series.  An independent verifier needs a
+prime table and a digamma routine — not a certified `zeta`, not a contour, not
+an argument principle.  Compare Z-0002, whose verification needs the whole
+`certzeta` stack.
+
+**And height is free.**  With the matched filter of T-0002(e) the prime sum
+does not depend on the height being probed: the same 143 prime powers certify
+at `gamma_0 = 0` and at `gamma_0 = 7005`.  No other tool here has that
+property.
+
+**What is not true.**  A `PD` verdict does *not* prove RH on any region — the
+Weil criterion is an equivalence only over all test functions, and any finite
+basis sees only a projection.  This candidate can be refuted-by-search but its
+negative result is much weaker than T-0001's.
+
+**Next step:** the cost law in T-0002 says a filter narrow enough to resolve
+individual zeros at height `T` costs `(T/2pi)^m` primes.  At `T ~ 100` with
+`m = 2` that is a few hundred primes.  That computation is cheap and has not
+been run; it is the honest test of the method's reach.
 
 ---
 
