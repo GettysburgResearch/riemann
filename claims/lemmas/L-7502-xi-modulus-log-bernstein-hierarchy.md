@@ -108,6 +108,9 @@ divided differences constrain the entire shape, not only endpoint order.
 The integer-power form retains direct completed-xi primitive data and avoids
 `xi'/xi` division.
 
+This is a detection heuristic, not a claim that every off-line local factor
+violates ordinary concavity on every nearby triple.
+
 ## Directed certificate
 
 For three exact dyadic positive offsets `x_j`, set `u_j=x_j^2` exactly. A proof
@@ -141,9 +144,11 @@ The two-point witness of L-7501 is already existentially complete. Therefore the
 three-point hierarchy is not needed for completeness. Its purpose is detection:
 it may expose a forbidden deformation before a sampled endpoint pair reverses.
 
-Near an off-line positive zero `u=d`, `log H_T(u)` tends to negative infinity,
-so concavity and higher divided-difference constraints necessarily fail on
-suitable nearby rational node sets.
+Near an off-line positive zero `u=d`, the first-order condition fails immediately
+to the left because `G_T'(u)<0`. Some higher odd-order alternating conditions
+also fail for the pure local factor. Ordinary concavity, however, can remain
+valid there, so this lemma does **not** assert that every hierarchy level or
+every nearby node triple must fail.
 
 ## Analytic domain audit
 
@@ -162,12 +167,18 @@ suitable nearby rational node sets.
 3. The scale-cancellation rule requires the same positive factor at all three
    horizontal points.
 4. A negative synthetic or modeled-zero inequality is not a Riemann-xi result.
+5. Three-point log concavity is an additional search row, not an existentially
+   complete replacement for the two-point monotonicity witness.
 
 ## Adversarial tests
 
 - Products `prod(u+a_j)` with positive rational `a_j` must satisfy the exact
   multiplicative inequality.
-- The off-line dip model `(u-d)^2(u+a)` must violate a suitable node triple.
+- The off-line dip model `(u-d)^2` must violate the first-order hierarchy to the
+  left of `d`; the test suite must not incorrectly require every concavity triple
+  to fail.
+- A separate positive synthetic table with a forbidden shape must exercise the
+  integer-power negative-row orientation.
 - Mutating `A=B+C` must make common-scale cancellation unavailable.
 - An interval whose lower endpoint is zero must never be passed to a logarithm.
 
