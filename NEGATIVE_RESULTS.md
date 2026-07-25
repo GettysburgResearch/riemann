@@ -94,3 +94,21 @@ above the Platt-Trudgian verified range.  The corollary is worth stating
 positively: **the D-0801 search is a detector for off-critical zeros in the
 effective window of `g`, not an independent route to RH.**  It can only succeed
 where such zeros exist.
+
+## Trap — past the Nyquist barrier the leading screen goes negative and means nothing
+
+`opus5-01`, 2026-07-25, recorded as `O-5603`.  At `c = 10^9`, `K = 1024`,
+`T = 6283.185307` (deficit `Delta - ell_T = +2.199`), the leading screen
+`ell_T I - S_K` has `lambda_min = -0.3373`, while the exact form
+`A_K + R_K - S_K` has `lambda_min = +3.35e-6`.  RH is verified far above that
+height, so nonnegative is the only admissible answer.
+
+A pipeline that screens on `ell_T I - S_K` alone and treats `L-4202` as a
+formality would have reported a spectacular false counterexample here.  The
+protective factor is entirely the exact archimedean and pole blocks: at these
+parameters `||R_K||_2 = 0.574` is not remotely negligible.
+
+The general rule this establishes: **the leading screen is only meaningful while
+the deficit is negative or small.**  Past the barrier it must be replaced by the
+assembled `A_K + R_K`, not merely accompanied by a bound.  Locked in as
+`tests/test_stream.py::test_exact_form_is_nonnegative_below_the_verified_height`.

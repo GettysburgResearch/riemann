@@ -1,0 +1,28 @@
+{
+ "schema": "riemann.x5601-exact-form.v1",
+ "agent": "opus5-01",
+ "classification": "floating quadrature; NOT interval-certified. Sign claims require a rigorous quadrature bound.",
+ "cutoff": 1000000000,
+ "cells": 1024,
+ "carrier": "6283185307/100000",
+ "carrier_float": 62831.85307,
+ "Delta": 3.298210194957425,
+ "ell_T": 1.4658711977543064,
+ "deficit": 1.8323389972031185,
+ "alpha_0": 1.4658711263077182,
+ "alpha_0_minus_ell_T": -7.14465882012405e-08,
+ "arch_offdiag_abs_sum": 0.0001275590338442749,
+ "arch_correction_norm_measured": 0.0001253565269872326,
+ "arch_correction_norm_including_diagonal": 0.00012528508039903158,
+ "L4202_uniform_bound_B_A": 0.012871526295992133,
+ "pole_norm_measured": 0.010652445573923513,
+ "L4203_uniform_bound": 0.024902193536041416,
+ "lambda_min_leading_screen": 8.217927314526692e-07,
+ "lambda_min_exact_form": 8.462118378885915e-07,
+ "leading_screen_is_negative": false,
+ "exact_form_is_negative": false,
+ "quadrature": {
+  "per_osc": 1,
+  "order": 10
+ }
+}

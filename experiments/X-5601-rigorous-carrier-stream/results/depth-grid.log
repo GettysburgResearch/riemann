@@ -1,0 +1,44 @@
+  T=6283.19 K=1024 deficit=+2.1988 margin=-0.337332 gate=2.62 (6.4s)
+  T=6283.19 K=2048 deficit=+2.1988 margin=-0.508077 gate=10.2 (7.9s)
+  T=6283.19 K=4096 deficit=+2.1988 margin=-0.562135 gate=40.4 (19.4s)
+  T=62831.85 K=1024 deficit=+1.8323 margin=8.21793e-07 gate=0.0378 (5.4s)
+  T=62831.85 K=2048 deficit=+1.8323 margin=1.19513e-07 gate=0.126 (7.3s)
+  T=62831.85 K=4096 deficit=+1.8323 margin=-3.77467e-07 gate=0.451 (20.6s)
+  T=628318.53 K=1024 deficit=+1.4659 margin=3.0921e-06 gate=0.00154 (5.3s)
+  T=628318.53 K=2048 deficit=+1.4659 margin=7.19587e-07 gate=0.00361 (7.6s)
+  T=628318.53 K=4096 deficit=+1.4659 margin=1.67534e-07 gate=0.00927 (20.8s)
+  T=6283185.31 K=1024 deficit=+1.0994 margin=2.79628e-06 gate=0.000131 (5.4s)
+  T=6283185.31 K=2048 deficit=+1.0994 margin=7.27512e-07 gate=0.000271 (7.2s)
+  T=6283185.31 K=4096 deficit=+1.0994 margin=1.63056e-07 gate=0.000569 (19.6s)
+  T=62831853.07 K=1024 deficit=+0.7329 margin=3.98518e-05 gate=1.29e-05 (5.4s)
+  T=62831853.07 K=2048 deficit=+0.7329 margin=9.27264e-06 gate=2.62e-05 (7.9s)
+  T=62831853.07 K=4096 deficit=+0.7329 margin=1.97684e-06 gate=5.33e-05 (19.2s)
+  T=628318530.70 K=1024 deficit=+0.3665 margin=6.24495e-05 gate=1.29e-06 (5.3s)
+  T=628318530.70 K=2048 deficit=+0.3665 margin=1.35735e-05 gate=2.61e-06 (6.5s)
+  T=628318530.70 K=4096 deficit=+0.3665 margin=3.61385e-06 gate=5.29e-06 (19.7s)
+  T=6283185307.00 K=1024 deficit=+0.0000 margin=0.0103774 gate=1.29e-07 (5.2s)
+  T=6283185307.00 K=2048 deficit=+0.0000 margin=0.00691262 gate=2.61e-07 (6.4s)
+  T=6283185307.00 K=4096 deficit=+0.0000 margin=0.00609098 gate=5.29e-07 (19.3s)
+{
+ "schema": "riemann.x5601-depth-grid.v1",
+ "agent": "opus5-01",
+ "classification": "grid margins are EMPIRICAL nominations; RH is verified far above these carriers, so a negative leading margin here would indicate a bug, not a counterexample",
+ "cutoff": 1000000000,
+ "Delta": 3.298210194957425,
+ "smallest_margin": {
+  "carrier": 62831.85307,
+  "carrier_den": 100000,
+  "cells": 2048,
+  "Delta": 3.298210194957425,
+  "ell_T": 1.4658711977543064,
+  "deficit": 1.8323389972031185,
+  "lambda_max_floating": 1.4658710782412903,
+  "leading_margin_floating": 1.1951301615020782e-07,
+  "stream_error_sum": 2.840955240639788e-13,
+  "gate_B_total": 0.1257074523588215,
+  "b_le_1_over_20": true,
+  "resolvable_against_gate": false,
+  "seconds": 7.3
+ }
+}
+GRID_DONE

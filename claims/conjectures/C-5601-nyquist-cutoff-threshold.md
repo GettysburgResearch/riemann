@@ -103,6 +103,21 @@ That is the predicted qualitative change, at the predicted place, and it is the
 main evidence for this claim.  It is one carrier and five points; it is not a
 proof, and the collapse is not to zero.
 
+## A sharper signature: the `K^{-2}` law
+
+`O-5603` sweeps `K` as well as the deficit, at `c = 10^9`.  The leading margin
+
+- **saturates in `K` below the barrier** — at deficit `0` the ratios
+  `K = 1024 : 2048 : 4096` are `1.5, 1.1`;
+- **falls like `K^{-2}` past it** — at deficits `+0.37, +0.73, +1.10, +1.47` the
+  successive ratios cluster tightly on `4`.
+
+This is a cleaner diagnostic than the cutoff ladder, and it is what the counting
+argument predicts: below the barrier extra cells cannot buy new zeros to place,
+past it they can.  It also means the binding constraint changes character past
+the barrier, because the `L-4202` gate grows like `K` while the margin falls
+like `K^{-2}` — see `O-5603` and `Q-5605`.
+
 ## Supporting certified data (O-5601)
 
 Same carrier, `K = 1024`, certified universal margins:

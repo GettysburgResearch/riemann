@@ -31,11 +31,14 @@ PI_10K = {3: 168, 4: 1229, 5: 9592, 6: 78498, 7: 664579, 8: 5761455,
           9: 50847534, 10: 455052511, 11: 4118054813}
 
 
-def run_producer(binary, power10, cells, threads, tmp_path):
+def run_producer(binary, power10, cells, threads, tmp_path,
+                 carrier_num=94184072727073, carrier_den=20):
     os.makedirs(str(tmp_path), exist_ok=True)
-    out = os.path.join(str(tmp_path), f"s{power10}-{cells}.json")
+    out = os.path.join(str(tmp_path), f"s{power10}-{cells}-{carrier_den}.json")
     subprocess.run([binary, "--cutoff-power10", str(power10),
                     "--cells", str(cells), "--threads", str(threads),
+                    "--carrier-num", str(carrier_num),
+                    "--carrier-den", str(carrier_den),
                     "--out", out], check=True,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     return A.load_stream(out)
@@ -246,3 +249,76 @@ def test_explicit_formula_dictionary_small():
     lhs = zsum + ztail
     rel = abs(rhs - lhs) / abs(rhs)
     assert float(rel) < 2e-3, f"dictionary mismatch, relative {float(rel)}"
+
+
+def test_pole_block_matches_direct_evaluation():
+    """L-4203: v* R_K v must equal 2 g_{T,v}(i/2) / h for random vectors."""
+    import archimedean_block as AB
+    import verify_dictionary as V
+    from mpmath import mp, mpf, mpc, log, pi
+
+    mp.dps = 30
+    cutoff, k, T = 1000, 6, 11.0
+    L = log(mpf(cutoff))
+    delta = L / (2 * pi)
+    h = delta / k
+    rk = AB.pole_matrix(cutoff, k, T)
+    rng = np.random.default_rng(3)
+    for _ in range(3):
+        v = rng.normal(size=k) + 1j * rng.normal(size=k)
+        quad = complex(v.conj() @ rk @ v).real
+        vm = [mpc(float(x.real), float(x.imag)) for x in v]
+        direct = float(2 * mp.re(V.g_test(mpc(0, mpf(1) / 2), vm, delta, mpf(T))) / h)
+        assert abs(quad - direct) < 1e-9 * max(1.0, abs(direct)), (quad, direct)
+
+
+def test_archimedean_alpha0_matches_raw_L4201_integral():
+    """The L-4202 Ci/q_b decomposition must reproduce the raw L-4201 diagonal."""
+    import archimedean_block as AB
+    from mpmath import mp, mpf, log, pi, e1, quad as mquad, cos as mcos, exp as mexp
+
+    mp.dps = 30
+    cutoff, k, T = 10 ** 6, 512, 40.0
+    L = log(mpf(cutoff))
+    b = 2 * L / k
+    omega = mpf(T) / 2
+
+    def raw(t):
+        kt = mexp(-t / 4) / (1 - mexp(-t))
+        return mexp(-t) / t - kt * (1 - t / b) * mcos(omega * t)
+
+    eps = mpf(10) ** -18
+    val = mquad(raw, [eps, b / 4, b / 2, b])
+    a0_raw = float((val + e1(b) - log(pi)) / (2 * pi))
+    a0, _z, _b, _ell = AB.archimedean_lags(cutoff, k, T, per_osc=4, order=16)
+    assert abs(a0 - a0_raw) < 1e-10, (a0, a0_raw)
+
+
+def test_exact_form_is_nonnegative_below_the_verified_height(tmp_path):
+    """RH is verified far above T = 6283, so lambda_min(A+R-S) must be >= 0.
+
+    The leading screen ell_T I - S_K is strongly negative at these parameters,
+    so this is a real test of the archimedean and pole blocks, not a tautology.
+    """
+    import archimedean_block as AB
+    num, den = 6283185307, 1000000
+    T = num / den
+    # c = 10^9, K = 1024 puts the deficit at +2.199, deep past the C-5601
+    # barrier, where the leading screen is strongly negative.
+    st = run_producer(BIN, 9, 1024, 4, tmp_path,
+                      carrier_num=num, carrier_den=den)
+    a0, z, _b, ell = AB.archimedean_lags(st["cutoff"], st["cells"], T,
+                                         per_osc=1, order=10)
+    ak = AB.archimedean_matrix(a0, z)
+    rk = AB.pole_matrix(st["cutoff"], st["cells"], T)
+    sk = A.toeplitz_matrix(st)
+    exact = ak + rk - sk
+    exact = 0.5 * (exact + exact.conj().T)
+    lead = ell * np.eye(st["cells"]) - sk
+    lead = 0.5 * (lead + lead.conj().T)
+    lo_exact = float(np.linalg.eigvalsh(exact)[0])
+    lo_lead = float(np.linalg.eigvalsh(lead)[0])
+    assert lo_lead < -0.1, ("expected a strongly negative leading screen here; "
+                            f"got {lo_lead}")
+    assert lo_exact > -1e-9, f"exact form negative below a verified height: {lo_exact}"
+    assert lo_exact < 1e-3, f"exact form implausibly large: {lo_exact}"

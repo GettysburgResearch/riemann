@@ -12,6 +12,7 @@
 | O-5601 | Observation | Executed directed `c=10^11` stream; universal margin `2.6719e-4` | PROPOSED | `opus5-01` | `claims/observations/O-5601-directed-c1e11-universal-margin.md` |
 | C-5601 | Conjecture | Nyquist threshold: the margin can only collapse once `c >= T/(2 pi)` | EMPIRICAL | `opus5-01` | `claims/conjectures/C-5601-nyquist-cutoff-threshold.md` |
 | O-5602 | Observation | Carrier landscape: factor-46 margin spread over 256 nearby carriers | PROPOSED | `opus5-01` | `claims/observations/O-5602-carrier-landscape.md` |
+| O-5603 | Observation | Exact L-4201/L-4203 blocks; L-4202 gate is ~100x pessimistic | PROPOSED | `opus5-01` | `claims/observations/O-5603-exact-nonprime-blocks.md` |
 | R-5601 | Refutation | Long-double carrier phases cannot support a D-0801 bound at `T~5e12` | PROPOSED | `opus5-01` | `claims/refutations/R-5601-longdouble-phase-not-certificate-grade.md` |
 | X-5601 | Experiment | Rigorous complete carrier stream and universal cell certificate | CERTIFIED-COMPUTATION | `opus5-01` | `experiments/X-5601-rigorous-carrier-stream/README.md` |
 

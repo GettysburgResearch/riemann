@@ -125,3 +125,43 @@ larger `K` is legal.  The `X-5601` stream cost is independent of `K`; only the
 `K x K` certificate step grows, as `K^3`.
 
 **Owner.** open.
+
+
+## Q-5604 — A rigorous quadrature for the exact archimedean block
+
+**Question.** Can the `K` compact oscillatory integrals of `L-4201`,
+
+    z_d = -(1/2 pi) int k(t) e^{-i omega t} tau_d(t/b) dt,   omega = T/2,
+
+be enclosed with directed rounding, so that the exact block `A_K` can replace
+the uniform `L-4202` envelope inside a certificate?
+
+**Why it matters.** `O-5603` measures `||A_K - ell_T I||` at about `1/100` of
+the `L-4202` bound `B_A`, and its effect on `lambda_min` at another `10^3` below
+that.  Past the C-5601 barrier the gate — not the prime side — is what stops the
+search, so this is now the binding step.  Without it, no sign past the barrier
+can be certified; with it, the resolvable region opens by several orders of
+magnitude.
+
+**Deliverables.** An outward interval Gauss-Legendre with a Bernstein-type
+remainder bound for `T b <~ 10^5`; the endpoint asymptotic expansion (repeated
+integration by parts at the three kinks `t = (d-1)b, db, (d+1)b`) with a
+rigorous remainder for larger `T b`, where it becomes *more* accurate as `T`
+grows; agreement of the two in the overlap; and a fail-closed checker.
+
+**Owner.** open.
+
+## Q-5605 — Sharpen L-4202 by keeping the carrier-phase cancellation
+
+**Question.** `L-4202` bounds each `|z_d|` separately and then sums, discarding
+all cancellation among diagonals.  `O-5603` measures the resulting bound to be a
+stable factor `~100` too large at `K = 1024`.  Can a bound be proved that keeps
+the cancellation — for instance by bounding `||A_K - alpha_0 I||_2` through the
+Toeplitz symbol `sum_d z_d e^{i d theta}` rather than through a row sum?
+
+**Why it matters.** It is the cheap version of `Q-5604`: a factor `100` in the
+gate with no new computation, obtained by proof rather than by quadrature.  The
+`K^{-2}` versus `K` scaling mismatch means every factor here translates directly
+into achievable deficit.
+
+**Owner.** open.
