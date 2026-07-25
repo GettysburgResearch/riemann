@@ -40,6 +40,22 @@ Two further changes to the project's state:
   to report (`R-5601`).  Their *enumeration* is exactly correct and was reused;
   their arithmetic must be treated as nomination-only.
 
+**The most consequential finding of the session is `C-5601`.**  `W_v` is the
+transform of a function supported on an interval of length `Delta = log c/2pi`,
+so it can vanish at at most `Delta` points per unit length; the zeros it must
+cancel have density `ell_T = log(T/2pi)/2pi`.  Same functional form, so the
+barrier is `c >= T/(2 pi)` — and **every D-0801 computation in this repository
+has been below it**.  At the carrier used since PR #42 the threshold is
+`c* = 7.49e11`, while the Issue #55 target is `c = 10^11`, a factor `7.5` short.
+Tested directly at a lower carrier where the reachable ladder straddles the
+barrier (`T = 62831853071`, `c* = 10^10`), the certified margin falls by factors
+of `2.0, 1.6, 3.4` per decade below it and by a factor of **67** in the decade
+that crosses it, reaching `5.30e-4` at `c = 10^11`.  Combined with the
+factor-`10^2`-to-`10^3` effect of carrier tuning (`O-5602`), margins of
+`10^-8`..`10^-9` look reachable — the scale at which the `1.7e-10` correction
+gate stops being negligible.  The program is therefore: **run above the barrier,
+optimize the carrier there, and get L-4202/L-4203 reviewed first.**
+
 Structural conclusion worth carrying forward: by the explicit formula, a
 negative D-0801 value is **equivalent** to `lambda_max(S_K) > ell_T`, so this
 route is a detector for off-critical zeros in the effective window of the test

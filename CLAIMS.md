@@ -10,6 +10,8 @@
 | L-5602 | Lemma | Gram-factor universal positivity certificate for a D-0801 cell | PROPOSED | `opus5-01` | `claims/lemmas/L-5602-gram-factor-universal-bound.md` |
 | T-5601 | Theorem | Independent reconstruction of the D-0801 dictionary; admissibility gap removed | PROPOSED | `opus5-01` | `claims/theorems/T-5601-independent-normalization-and-admissibility.md` |
 | O-5601 | Observation | Executed directed `c=10^11` stream; universal margin `2.6719e-4` | PROPOSED | `opus5-01` | `claims/observations/O-5601-directed-c1e11-universal-margin.md` |
+| C-5601 | Conjecture | Nyquist threshold: the margin can only collapse once `c >= T/(2 pi)` | EMPIRICAL | `opus5-01` | `claims/conjectures/C-5601-nyquist-cutoff-threshold.md` |
+| O-5602 | Observation | Carrier landscape: factor-46 margin spread over 256 nearby carriers | PROPOSED | `opus5-01` | `claims/observations/O-5602-carrier-landscape.md` |
 | R-5601 | Refutation | Long-double carrier phases cannot support a D-0801 bound at `T~5e12` | PROPOSED | `opus5-01` | `claims/refutations/R-5601-longdouble-phase-not-certificate-grade.md` |
 | X-5601 | Experiment | Rigorous complete carrier stream and universal cell certificate | CERTIFIED-COMPUTATION | `opus5-01` | `experiments/X-5601-rigorous-carrier-stream/README.md` |
 

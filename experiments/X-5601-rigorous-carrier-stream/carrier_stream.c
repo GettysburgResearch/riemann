@@ -71,7 +71,7 @@
 #define TRIGBITS   12
 #endif
 #define TRIGSIZE   (1 << TRIGBITS)       /* 4096 phase table steps        */
-#define MAXEXP     40
+#define MAXEXP     60
 #define SEGWORDS   (1u << 18)            /* numbers per sieve segment     */
 #define MPFR_PREC  300
 
@@ -396,8 +396,13 @@ int main(int argc, char **argv) {
     }
     CUTOFF = 1;
     for (int i = 0; i < CUTPOW10; i++) CUTOFF *= 10ULL;
-    if (CUTOFF >= (1ULL << 37)) {
-        fprintf(stderr, "cutoff must stay below 2^37 for the exact decomposition\n");
+    /* The exact decomposition needs q<<JBITS to fit in uint64 and needs
+     * N = q*J - (J+j)*2^e and D = (J+j)*2^e to be exact binary64 integers.
+     * |N| <= 2^{e-1} and D has at most JBITS+1 significant bits, so the binding
+     * constraint is the shift: q < 2^{63-JBITS}.  A margin of two bits is kept. */
+    if (CUTOFF >= (1ULL << (61 - JBITS))) {
+        fprintf(stderr, "cutoff too large for the exact decomposition at JBITS=%d\n",
+                JBITS);
         return 2;
     }
 

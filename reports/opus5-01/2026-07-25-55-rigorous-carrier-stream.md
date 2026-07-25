@@ -283,3 +283,89 @@ CLAIMS.md, CURRENT_STATE.md, NEGATIVE_RESULTS.md, OPEN_PROBLEMS.md (updated)
    pass as the lag coefficients, but answers a question about one direction out
    of 2048.  The lag-coefficient form answers the question you actually want and
    is reusable for every future vector at zero marginal cost.
+
+---
+
+## Addendum — two follow-up experiments run in the same session
+
+After the main result was pushed I used the remaining budget on the direction I
+had just recommended (`Q-5602`), and it produced the most consequential finding
+of the session.
+
+### A. Carrier landscape (`O-5602`)
+
+256 complete directed streams at `c = 10^8`, `K = 1024`, stepping the carrier by
+`0.2` (about one mean zero spacing) over 51 units:
+
+```text
+margin_min  0.0066414741   at the Issue #42/#44 carrier
+margin_max  0.3082187205
+margin_mean 0.1091097185      margin_std 0.0908192719
+```
+
+A factor-46 spread. `ell_T` is constant to `3e-14` across the window, so it is
+all `lambda_max(S_K)`. The carrier that Issues #42/#44/#55 have been using sits
+`16x` below the scan mean — the "optimized carrier continuation" of PR #42 found
+something real, and every number in `O-5601` should be read as *the best carrier
+known nearby*, not a typical one.
+
+### B. The Nyquist threshold (`C-5601`) — and why the whole program has been
+looking in the wrong place
+
+While writing up A, the reason for the ladder's shape became clear.
+`W_v` is the transform of a function supported on an interval of length
+`Delta = log(c)/2pi`, hence of exponential type `pi Delta`, hence it can vanish
+at at most `Delta` points per unit length. The zeros it must cancel have density
+`ell_T = log(T/2pi)/2pi`. Same functional form, so the barrier is exactly
+
+```text
+Delta >= ell_T   <==>   c >= T/(2 pi).
+```
+
+**Every D-0801 computation in this repository has been below that barrier.**
+At `T = 4709203636353.65` the threshold is `c* = 7.49e11 = 10^11.87`, and the
+target of Issue #55 is `c = 10^11` — a factor `7.5` short. The positive margin
+found there is exactly what the counting argument predicts; it is not evidence
+that the family fails, it is evidence that the family was never given enough
+support.
+
+I tested this directly with a carrier low enough that the reachable ladder
+straddles the barrier. At `T = 62831853071` (`T/2pi = 10^10`), certified
+universal margins, `K = 1024`, `b <= 1/20` verified at every point:
+
+| `c` | `Delta - ell_T` | certified margin | factor vs previous |
+|---|---|---|---|
+| `10^7`  | `-1.099403` | `3.87378e-1` | — |
+| `10^8`  | `-0.732936` | `1.93912e-1` | 2.0 |
+| `10^9`  | `-0.366468` | `1.21071e-1` | 1.6 |
+| `10^10` | `+0.000000` | `3.55470e-2` | 3.4 |
+| `10^11` | `+0.366468` | `5.29784e-4` | **67** |
+
+Factors of 2.0, 1.6, 3.4 per decade below the barrier; **67 in the decade that
+crosses it**. One carrier, five points, still a heuristic — but the qualitative
+change happens at the predicted place.
+
+### What follows
+
+The two effects are independent and both large. Carrier tuning is worth `10^2`
+to `10^3` (`O-5602`, and the `450x` gap between the tuned and untuned carriers
+at comparable deficit); crossing the barrier is worth `~67x` per decade.
+Together they put margins of `10^{-8}` to `10^{-9}` within reach — which is the
+scale at which `B_A ~ 1.7e-10` stops being negligible.
+
+So the concrete program is no longer "replay one more vector":
+
+1. run above the barrier — either `c >= 10^12` at the current carrier (`3.8e10`
+   terms, `K = 2048`, about an hour with this producer) or a lower carrier where
+   the barrier is cheap to clear;
+2. optimize the carrier *there*, not below it;
+3. get `L-4202` and `L-4203` independently reviewed, and implement the exact
+   archimedean block of `L-4201`, before any margin below `1e-8` is quoted.
+
+None of that produces a counterexample by itself — under RH the margin stays
+nonnegative however far one pushes. What it produces is the first D-0801
+computation whose sign is genuinely in doubt in advance, which is the thing this
+project has not had.
+
+The producer already supports cutoffs up to `2^{61-JBITS}`; the `2^37` guard was
+lifted and re-validated against the oracle during this session.

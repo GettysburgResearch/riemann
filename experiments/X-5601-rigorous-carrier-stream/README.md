@@ -123,6 +123,46 @@ while the shard *enumeration* is confirmed exactly correct (contiguous coverage
 The margin shrinks with `c` but stays positive and stays far above the
 `1.66e-10` correction gate.  **This is a finite ladder, not a limit theorem.**
 
+## Two further experiments run in this session
+
+### Carrier landscape (`O-5602`)
+
+256 complete directed streams at `c = 10^8`, `K = 1024`, carriers
+`T_m = (94184072727073 + 4m)/20` (step `0.2`, about one per mean zero spacing):
+
+```text
+margin_min   0.0066414741   at m = 0, the Issue #42/#44 carrier
+margin_max   0.3082187205
+margin_mean  0.1091097185
+margin_std   0.0908192719
+```
+
+A factor-46 spread, with the tuned carrier `16x` below the mean.  `ell_T` is
+constant to `3e-14` over the window, so all of it is `lambda_max(S_K)`.
+Per-carrier values are nominations; the extremum was re-certified.
+
+### The Nyquist threshold, tested directly (`C-5601`)
+
+`Delta = log(c)/2pi` is the density of zeros the family can place; `ell_T` is the
+density of zeta zeros to be cancelled.  The barrier is at `Delta = ell_T`, i.e.
+`c = T/(2 pi)`.  Choosing `T = 62831853071` puts that threshold at `c = 10^10`,
+so the reachable ladder straddles it:
+
+| `c` | `Delta - ell_T` | certified margin | factor |
+|---|---|---|---|
+| `10^7`  | `-1.099403` | `3.87378e-1` | — |
+| `10^8`  | `-0.732936` | `1.93912e-1` | 2.0 |
+| `10^9`  | `-0.366468` | `1.21071e-1` | 1.6 |
+| `10^10` | `+0.000000` | `3.55470e-2` | 3.4 |
+| `10^11` | `+0.366468` | `5.29784e-4` | **67** |
+
+The margin collapses by a factor of 67 in the decade that crosses the barrier,
+after falling by factors of 2.0, 1.6, 3.4 below it.  Every point is certified
+positive with `b <= 1/20` verified.  Note the target of Issue #55 sits at
+`c = 10^11` with `T/(2 pi) = 7.49e11`, i.e. **a factor 7.5 below its own
+threshold** — the positive margin found there is what the counting argument
+predicts.
+
 ## Build and run
 
 ```bash

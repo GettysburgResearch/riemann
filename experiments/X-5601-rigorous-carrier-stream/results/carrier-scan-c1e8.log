@@ -1,0 +1,63 @@
+  m=   0 T=4709203636353.65 margin=0.00664147412
+  m=  16 T=4709203636356.85 margin=0.00787258621
+  m=  32 T=4709203636360.05 margin=0.0115921902
+  m=  48 T=4709203636363.25 margin=0.0177868027
+  m=  64 T=4709203636366.45 margin=0.0264391002
+  m=  80 T=4709203636369.65 margin=0.0375279239
+  m=  96 T=4709203636372.85 margin=0.0510282908
+  m= 112 T=4709203636376.05 margin=0.0669114109
+  m= 128 T=4709203636379.25 margin=0.0851447114
+  m= 144 T=4709203636382.45 margin=0.105691866
+  m= 160 T=4709203636385.65 margin=0.128512827
+  m= 176 T=4709203636388.85 margin=0.153563872
+  m= 192 T=4709203636392.05 margin=0.18079764
+  m= 208 T=4709203636395.25 margin=0.210163191
+  m= 224 T=4709203636398.45 margin=0.241606059
+  m= 240 T=4709203636401.65 margin=0.275068318
+{
+ "schema": "riemann.x5601-carrier-scan.v1",
+ "agent": "opus5-01",
+ "classification": "per-carrier margins are EMPIRICAL nominations; only 'certified_minimum' carries a sign claim",
+ "cutoff": 100000000,
+ "cells": 1024,
+ "carrier_denominator": 20,
+ "carrier_step": 0.2,
+ "carriers_scanned": 256,
+ "carrier_range": [
+  4709203636353.65,
+  4709203636404.65
+ ],
+ "margin_min": 0.0066414741170204294,
+ "margin_max": 0.3082187205143594,
+ "margin_mean": 0.10910971851677806,
+ "margin_std": 0.09081927185943253,
+ "min_at": {
+  "m": 0,
+  "num": 94184072727073,
+  "carrier": 4709203636353.65,
+  "ell_T": 4.351719952088318,
+  "lambda_max": 4.345078477971297,
+  "margin_floating": 0.0066414741170204294
+ },
+ "max_at": {
+  "m": 255,
+  "num": 94184072728093,
+  "carrier": 4709203636404.65,
+  "ell_T": 4.351719952090042,
+  "lambda_max": 4.043501231575682,
+  "margin_floating": 0.3082187205143594
+ },
+ "certified_minimum": {
+  "carrier": "94184072727073/20",
+  "lambda_max_upper_certified": 4.345078479009455,
+  "universal_margin_lower": 0.006641472902948355,
+  "universal_positivity_certified": true,
+  "correction_gate": {
+   "b_small_cell_hypothesis": 0.03597789207803197,
+   "b_le_1_over_20": true,
+   "B_arch_upper": "1.7591443130063265443e-10",
+   "R_norm_upper": "1.7742166995531577675e-18",
+   "B_total_float": 1.7591443307484936e-10
+  }
+ }
+}

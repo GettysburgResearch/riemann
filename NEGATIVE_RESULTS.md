@@ -47,6 +47,16 @@ Certified margins on the same carrier and cell count:
 `10^10: 6.05896e-4`, `10^11: 2.67186e-4`.  The margin shrinks with `c`.  This
 is a finite ladder, not a limit theorem.
 
+## Scoping correction — the whole D-0801 ladder has been below its own threshold
+
+`opus5-01`, 2026-07-25, recorded as `C-5601`.  A positive margin at `c < T/2pi`
+is what a zero-counting argument predicts and is **not** evidence that the
+D-0801 family fails.  `W_v` has exponential type `pi Delta` with
+`Delta = log c/2pi`, so it can vanish at at most `Delta` points per unit length,
+against a zero density of `ell_T = log(T/2pi)/2pi`.  Every computation in this
+repository — PR #37, PR #44, the Issue #55 target, and the `O-5601` ladder — has
+`c <= 10^11` while the relevant threshold is `c* = T/2pi = 7.49e11`.
+
 ## Trap — a phase reduction can be empirically accurate and carry no bound
 
 `opus5-01`, 2026-07-25, recorded as `R-5601`.  The `numpy.longdouble` carrier
