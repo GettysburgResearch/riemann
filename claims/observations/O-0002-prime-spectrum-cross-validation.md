@@ -272,12 +272,18 @@ residual, name the next fix — is the intended use of M-0003.
   (true `30.4249`).  A screen whose peaks *drifted* would be broken.
 * **Amplitude law.**  Peaks should scale like `2/|rho|`, i.e. decay like
   `1/gamma`.  They do.
-* NOT YET DONE, and both are cheap and important: (i) a planted-zero synthetic
-  test — build a synthetic `psi` from a zero set containing an off-line zero
-  and confirm the growing-amplitude signature is visible; (ii) a null model for
-  the spurious-peak distribution.  Until (i) is done, the *sensitivity* of this
-  screen to a real counterexample is unknown, exactly the gap M-0003 exists to
-  prevent.
+* **Planted-zero test — DONE** (X-0005b/c/d, below).  A synthetic `f` is built
+  from a zero set containing one off-line zero and the growing-amplitude
+  signature is recovered; across three designs the detectable displacement went
+  `0.2 -> 0.1 -> ~0.013`.  This was written as "not yet done" when the section
+  was first drafted and is left visible in the record because everything after
+  it in this file is the consequence of running it.
+* **Envelope/oscillation consistency — DONE** (X-0005e): the RMS of `f` is flat
+  across four orders of magnitude, `slope = -0.0016 +/- 0.0068`.
+* **A null model for the spurious-peak distribution — STILL NOT DONE.**  Until
+  it exists, "unexplained peak" has no threshold attached and the single
+  sidelobe seen in the top 14 could not have been distinguished from a
+  discovery by any rule stated in advance.  This is now the main gap.
 
 ## Suggested next attack
 
