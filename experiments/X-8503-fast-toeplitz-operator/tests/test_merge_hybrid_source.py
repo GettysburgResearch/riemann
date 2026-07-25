@@ -3,12 +3,14 @@ from __future__ import annotations
 from fractions import Fraction
 import importlib.util
 from pathlib import Path
+import sys
 import unittest
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "merge_hybrid_source.py"
 SPEC = importlib.util.spec_from_file_location("merge_hybrid_source", MODULE_PATH)
 assert SPEC is not None and SPEC.loader is not None
 merge_hybrid_source = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = merge_hybrid_source
 SPEC.loader.exec_module(merge_hybrid_source)
 
 
