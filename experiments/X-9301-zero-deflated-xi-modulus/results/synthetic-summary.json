@@ -1,0 +1,50 @@
+{
+  "certified_negative_rows": 2,
+  "deflated_loewner_exact_formula": "-4*(log 2)^2",
+  "deflated_monotonicity_exact": -314572800000000000000000000,
+  "digests": {
+    "certificate_sha256": "be27338a0ea0c4470f50306439632336d967b21d60ff6e58fcb889b2cb44b3a1",
+    "checker_sha256": "cbb02bd29dc01f5237871bdf26bba5f86dbc4ff45bd6317ad34c7c4003453c43",
+    "full_verification_sha256": "a79e7c39969774ac2a8355f0e8d090a47c48f6c0e6b5e33c37ad3f95754cdf76",
+    "tests_sha256": "2c8807074eee5ec806e1e9e45a2e49a802f3c6266b42084bf6287bf3e782146b"
+  },
+  "model": "H(u)=(u-5)^2 (u+1)^20",
+  "ordinary_monotonicity_exact": 90969385129521,
+  "raw_loewner_expected": "positive",
+  "rows": [
+    {
+      "id": "raw-monotonicity-hidden",
+      "kind": "raw-monotonicity",
+      "lower_decimal": "90969385129521",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "90969385129521",
+      "width_decimal": "0"
+    },
+    {
+      "id": "deflated-monotonicity-exposes",
+      "kind": "deflated-monotonicity",
+      "lower_decimal": "-3.145728e+26",
+      "status": "CERTIFIED_NEGATIVE",
+      "upper_decimal": "-3.145728e+26",
+      "width_decimal": "0"
+    },
+    {
+      "id": "raw-loewner-hidden",
+      "kind": "raw-cross-loewner-determinant",
+      "lower_decimal": "0.8201931072456714",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "0.8201931072456714",
+      "width_decimal": "1.1699238884595652e-183"
+    },
+    {
+      "id": "deflated-loewner-exposes",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "-1.9218120556728058",
+      "status": "CERTIFIED_NEGATIVE",
+      "upper_decimal": "-1.9218120556728058",
+      "width_decimal": "6.360356854994513e-184"
+    }
+  ],
+  "schema": "riemann.xi-modulus-zero-deflation.synthetic-summary.v1",
+  "verdict": "SYNTHETIC_ZERO_DEFLATION_SEPARATION"
+}
