@@ -1,0 +1,18 @@
+name: Target directed Toeplitz certificate reference
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Reference fifty-job workflow retained for manual comparison only. The active
+# production run uses target-directed-toeplitz-paired.yml because this repository
+# currently permits two concurrent hosted jobs.
+
+jobs:
+  reference-disabled:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'manual reference workflow intentionally disabled'

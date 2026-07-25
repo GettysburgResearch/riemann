@@ -1,0 +1,100 @@
+name: Target directed Toeplitz certificate single-host
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-e/28-target-directed-toeplitz
+    paths:
+      - .github/workflows/target-directed-toeplitz-single.yml
+  pull_request:
+    paths:
+      - experiments/X-2813-target-directed-toeplitz/RUN_TARGET.md
+      - .github/workflows/target-directed-toeplitz-single.yml
+
+permissions:
+  contents: read
+
+env:
+  CUTOFF: '100000000000'
+  CARRIER: '4709203636353.65'
+  CELLS: '1024'
+  SEGMENT_SIZE: '250000000'
+  PRECISION_BITS: '80'
+  WORKERS: '8'
+  SEGMENTS_PER_WORKER: '50'
+
+jobs:
+  complete-target:
+    name: complete directed target on one hosted runner
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install MPFR and exact-merge dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libmpfr-dev libgmp-dev
+          python -m pip install --upgrade numpy scipy
+
+      - name: Compile directed producer
+        run: |
+          gcc -O3 -march=x86-64-v3 -std=c11 \
+            experiments/X-2813-target-directed-toeplitz/directed_toeplitz_shard.c \
+            -lmpfr -lgmp -lm -o directed_toeplitz_shard
+
+      - name: Evaluate eight disjoint directed super-shards
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p shards logs results
+          echo "runner CPUs: $(nproc)"
+          free -h
+          pids=()
+          for worker in $(seq 0 $((WORKERS - 1))); do
+            start=$((worker * SEGMENTS_PER_WORKER))
+            end=$((start + SEGMENTS_PER_WORKER))
+            higher=0
+            if [[ "$worker" == '0' ]]; then higher=1; fi
+            (
+              /usr/bin/time -v ./directed_toeplitz_shard \
+                "$CUTOFF" "$CARRIER" "$CELLS" "$SEGMENT_SIZE" \
+                "$start" "$end" "$higher" \
+                "shards/shard-${start}-${end}.json" "$PRECISION_BITS" \
+                2>"logs/shard-${start}-${end}.log"
+              test -s "shards/shard-${start}-${end}.json"
+            ) &
+            pids+=("$!")
+          done
+          status=0
+          for pid in "${pids[@]}"; do
+            wait "$pid" || status=1
+          done
+          if [[ "$status" != '0' ]]; then
+            echo "At least one directed super-shard failed" >&2
+            exit "$status"
+          fi
+          test "$(find shards -name 'shard-*.json' -type f | wc -l)" -eq 8
+
+      - name: Exact post-selection, dyadic freeze, and final rational interval
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find shards -name 'shard-*.json' -type f | sort -V)
+          test "${#files[@]}" -eq 8
+          python experiments/X-2813-target-directed-toeplitz/postselect_and_finalize.py \
+            "${files[@]}" --bits 96 --outdir results | tee results/finalize.log
+          sha256sum "${files[@]}" logs/* results/* > results/SHA256SUMS
+
+      - name: Upload all proof and diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: target-directed-certificate-single-host
+          path: |
+            shards/
+            logs/
+            results/
+          retention-days: 30
+          if-no-files-found: warn

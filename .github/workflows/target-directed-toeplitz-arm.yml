@@ -1,0 +1,18 @@
+name: Target directed Toeplitz certificate ARM64 reference
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# ARM64 reference retained for a later independent reproduction. It is not
+# triggered automatically while the quota-compatible paired x86 workflow is
+# producing the first complete target interval.
+
+jobs:
+  reference-disabled:
+    if: ${{ false }}
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - run: echo 'manual ARM64 reference workflow intentionally disabled'
