@@ -185,3 +185,26 @@ Measure the window once, directly, **above** the barrier, which removes
 limitation 2 and settles the cost model.  The `c = 10^12`, `K = 2048`,
 `T = 3.1e12` stream (`Delta/ell_T = 1.03`) is the smallest configuration that
 crosses it.
+
+**Status: that run was launched in this session and did not finish.**  It was
+still going at `~211` minutes of CPU when the session ended, sharing cores with
+the other jobs recorded here; the `c = 10^11` pass needed `~21` CPU-minutes for
+one ninth of the primes, so it is close but was not observed to complete.  No
+result from it is claimed anywhere in this repository.  To resume:
+
+```bash
+cd experiments/X-5601-rigorous-carrier-stream
+./carrier_stream --cutoff-power10 12 --cells 2048 \
+    --carrier-num 3100000000000 --carrier-den 1 --threads 4 \
+    --out results/stream-c1e12-k2048-T31e11.json
+python3 detection_coverage.py results/stream-c1e12-k2048-T31e11.json \
+    --carrier-num 3100000000000 --carrier-den 1 \
+    --u-range 6.0 --u-points 3001 \
+    --out results/detection-coverage-c1e12.json
+```
+
+The prediction this would test is sharp: **the main window should come out near
+`1.1`, not near `300`.**  A window near `1.1` confirms the cost model above; a
+window that has widened by two or more orders of magnitude on crossing the
+barrier would overturn it, and that outcome should be reported loudly if it
+happens.
