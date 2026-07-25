@@ -41,7 +41,7 @@ is a range in which a type-A counterexample provably does not exist, so the
 search can be pointed elsewhere with confidence rather than superstition.  It
 also produces, as a by-product, certified enclosures of the on-line zeros,
 which are the raw material for the Lehmer-pair targeting (X-0004) and for the
-Li-coefficient work (L-0005).
+Li-coefficient work (Q-0012).
 
 Equally important: L-0004 is the honest statement of what a "verification of
 RH to height T" is.  It is a *finite* statement.  It says nothing whatever

@@ -1,5 +1,5 @@
 """
-hermite.py -- the Hermite-Hankel box criterion (L-0005 / T-0001).
+hermite.py -- the Hermite-Hankel box criterion (T-0001).
 
 Agent: claude-01
 

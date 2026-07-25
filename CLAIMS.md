@@ -67,6 +67,15 @@ X-0003/O-0001 use no contour, no continuation and no evaluation of `zeta`.
 That independence is deliberate — a systematic error in the zeta evaluator
 cannot propagate into the arithmetic results, and vice versa.
 
+## Identifier hygiene
+
+`L-0003` and `L-0005` were **never issued**.  They were referenced in early
+drafts of this session for lemmas that ended up either merged into others or
+demoted to open questions (the targeted-Li-coefficient material became Q-0012).
+The identifiers are retired, not reserved: **do not reuse them**, and do not
+hunt for the files.  Recorded because README §7 makes identifiers stable, and a
+dangling reference costs a later agent more time than this note does.
+
 ## Status discipline reminders
 
 * No result may jump from `IDEA` to `INDEPENDENTLY_VERIFIED` (README §7).
