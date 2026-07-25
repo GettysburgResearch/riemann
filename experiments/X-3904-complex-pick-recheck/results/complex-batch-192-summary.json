@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.xi-complex-pick.ambiguous-192-replay-summary.v1",
+  "source": {
+    "workflow_run": 30009653881,
+    "artifact_id": 8564591455,
+    "artifact_name": "arb-xi-ambiguous-pick-batch",
+    "artifact_digest": "sha256:646ff50e6191d68700bc3bb9a2ad21010241f51ad384d9ee36078a55d6f857a3",
+    "precision_bits": 192
+  },
+  "count": 14,
+  "certified_nonnegative": 14,
+  "certified_negative": 0,
+  "unresolved": 0,
+  "rows": [
+    {"j":-29,"t_numerator":"20225875608339229092243","midpoint_lambda_min_128":"-7.1273532503705493e-34","lower_orientation":"1.4116521491260173e-37","upper_orientation":"1.4116521491263830e-37","verification_sha256":"a52ca21dd045a37ce33abe145e2fb98869765275899458ffba80a8b187b251bd"},
+    {"j":-28,"t_numerator":"20225875608339363309971","midpoint_lambda_min_128":"-1.4435742587461312e-33","lower_orientation":"5.0822384747224590e-37","upper_orientation":"5.0822384747229020e-37","verification_sha256":"3860f22e65962f5fe4cd8bfd09256d12d85f9fe57e092c8f39d3a3fddd81c622"},
+    {"j":-9,"t_numerator":"20225875608341913446803","midpoint_lambda_min_128":"-2.9151650954718663e-35","lower_orientation":"8.6240902359687640e-38","upper_orientation":"8.6240902359691230e-38","verification_sha256":"0d108b50fb0eb1c9b2a5443e67c9aab5ea84bd272cf05b1cf519ac09a5fb4804"},
+    {"j":-5,"t_numerator":"20225875608342450317715","midpoint_lambda_min_128":"-1.0990578990212198e-33","lower_orientation":"2.8109062093525360e-35","upper_orientation":"2.8109062093525363e-35","verification_sha256":"a550e4a7d78d7a1cb1be3bde9ee2c22cec91f5cfde062d993dbfc5b48219cf3d"},
+    {"j":-4,"t_numerator":"20225875608342584535443","midpoint_lambda_min_128":"-5.2634668956661499e-34","lower_orientation":"1.4421276308486826e-35","upper_orientation":"1.4421276308486829e-35","verification_sha256":"726e7ebf1bcb29c32d7d964d091d847773e67f1997e723aab9c0229217ffcbd0"},
+    {"j":-3,"t_numerator":"20225875608342718753171","midpoint_lambda_min_128":"-5.3715992641672287e-35","lower_orientation":"3.1176364244779116e-36","upper_orientation":"3.1176364244779136e-36","verification_sha256":"2ce53568259609cab9b5094fecd53b77a6e4b759fb2be87d074a8e5486f96298"},
+    {"j":-2,"t_numerator":"20225875608342852970899","midpoint_lambda_min_128":"-1.1340660868034442e-33","lower_orientation":"1.0208919846803320e-34","upper_orientation":"1.0208919846803320e-34","verification_sha256":"ae1bb9cae6f713d450c31757777259fb79e13050d5ac4bd9b2e1fe9970f557ce"},
+    {"j":1,"t_numerator":"20225875608343255624083","midpoint_lambda_min_128":"-9.4433345996987876e-34","lower_orientation":"9.7228587564959950e-35","upper_orientation":"9.7228587564959950e-35","verification_sha256":"8d1ad97d66fc98f009bc545f0980714e9070d8896c40f0d1c75a211d3aa5fbdd"},
+    {"j":3,"t_numerator":"20225875608343524059539","midpoint_lambda_min_128":"-1.1598411717254049e-34","lower_orientation":"3.3518229372345535e-36","upper_orientation":"3.3518229372345550e-36","verification_sha256":"e9ae9464a73a96737e59d1e0e5115ff76c2a4c1ae6657ff83c6fc264a97f7bbe"},
+    {"j":5,"t_numerator":"20225875608343792494995","midpoint_lambda_min_128":"-3.1333868536375935e-34","lower_orientation":"3.7125500715649744e-36","upper_orientation":"3.7125500715649764e-36","verification_sha256":"5e77b9a72dda837854e301368b3854e8fadf371f7cc60a06d6dd1893775beb9f"},
+    {"j":6,"t_numerator":"20225875608343926712723","midpoint_lambda_min_128":"-7.0527927010845893e-34","lower_orientation":"9.7149952084504660e-36","upper_orientation":"9.7149952084504670e-36","verification_sha256":"9cffbf96683537b8915cfe1c21f1688f94be8f59babb8f706b18055b1a5d1cb0"},
+    {"j":9,"t_numerator":"20225875608344329365907","midpoint_lambda_min_128":"-3.3974445242627646e-34","lower_orientation":"6.6544765209544020e-37","upper_orientation":"6.6544765209544260e-37","verification_sha256":"523feb641870d2c59468878b2261523cd7f7e516aea3e9c1a1a78c77c8ad9ee0"},
+    {"j":10,"t_numerator":"20225875608344463583635","midpoint_lambda_min_128":"-5.7198804409307534e-34","lower_orientation":"8.3404067980102980e-37","upper_orientation":"8.3404067980103320e-37","verification_sha256":"f9acb8b54b094eea2f25723a60ffd7c66e4f870618df69ab5c560ea23b4c44be"},
+    {"j":12,"t_numerator":"20225875608344732019091","midpoint_lambda_min_128":"-1.9684157199233616e-34","lower_orientation":"1.3053617559846451e-38","upper_orientation":"1.3053617559853277e-38","verification_sha256":"e85749baefd23e8017f04954b814e26dc2e878b6e8b1ebc47fc29e488bd81847"}
+  ],
+  "conclusion": "Every full-complex Gaussian-rational direction frozen from the 128-bit midpoint matrices on the fourteen previously escalated ordinates has a strictly positive 192-bit directed interval.",
+  "proof_boundary": "This certifies only the listed frozen directions from one FLINT/Arb backend. It is not a whole-matrix certificate at all fourteen heights and does not promote the parent Pick theorem. Exact rational endpoints remain in the retained workflow artifact."
+}
