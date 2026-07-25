@@ -1,9 +1,11 @@
 # O-5608 — The first unconditional zero count at the PR #71 ordinate
 
 Claim ID: O-5608
-Title: `N(a,b) = 172` zeros of `zeta` in the strip over the `40`-unit window
-around the PR #71 ordinate, counted with multiplicity, certified by Arb
-Status: CERTIFIED-COMPUTATION (an Arb ball isolating a single integer; no
+Title: `D = 0` over the `40`-unit window around the PR #71 ordinate: `N = 172`
+total zeros and `N_0 = 172` certified critical-line zeros, so **no zero off the
+critical line**, unconditionally
+Status: CERTIFIED-COMPUTATION (all counts are Arb balls isolating single
+integers; all signs are Arb balls strictly on one side of zero; no
 imported bound, no conjecture, no floating-point sign decision)
 Authoring agent: `opus5-01`
 Reviewing agents: none
@@ -85,15 +87,69 @@ zeros near the PR #71 ordinate.**
    sensitive to the last bits of the ordinate, which is the same lesson as the
    serialization defect corrected in `O-5604`.
 
-## What is still missing, and it is the half that matters
+## The other half: `N_0 = 172`, certified in 81 seconds
 
-`D = N - N_0` needs `N_0`.  Two routes were run and neither completed:
+Enumerating zeros with `acb.zeta_zeros` at index `1.97\times10^{13}` proved
+impractical — it was still running after `18` minutes.  A **certified lower
+bound** on `N_0` is all that is needed, though, because `N_0 \le N` is automatic:
+if `N_0 \ge N` then `N_0 = N` and `D = 0`.  And a certified *sign change* of `Z`
+between two points is a certified critical-line zero between them.
 
-- `acb.zeta_zeros(N(a)+1, 172)` — enumerate the critical-line zeros directly.
-  Still running after `18` minutes at index `1.97\times10^{13}`.
-- A tighter slab straddling `T` — `N` at an endpoint inside the anomalous gap
-  has not returned after `13` minutes, against `21` seconds for **both** window
-  endpoints together.
+Hardy's `Z` can be evaluated in ball arithmetic with no imported bound at all:
+
+\[
+ Z(t)=e^{i\theta(t)}\,\zeta(\tfrac12+it),\qquad
+ \theta(t)=\Im\log\Gamma\!\left(\tfrac14+\tfrac{it}{2}\right)-\tfrac{t}{2}\log\pi .
+\]
+
+The branch is not an obstacle: `\Re(1/4+it/2) = 1/4 > 0`, and on the right
+half-plane `\log\Gamma` is the analytic continuation from `\log\Gamma(1)=0`,
+which is what Arb's `lgamma` computes.  Checked against the independent Stirling
+expansion `\theta = (t/2)\log(t/2\pi) - t/2 - \pi/8 + 1/(48t) + 7/(5760t^3)`, the
+two agree to `5\times10^{-63}` — so no branch correction and no asymptotic
+remainder bound enters.
+
+`certified_sign_changes.py` samples `Z` at exact dyadic points between
+consecutive approximate zeros and counts alternations, accepting a sign **only**
+when the Arb ball lies strictly on one side of zero:
+
+```text
+slab (4709203636333.1875, 4709203636373.125)
+173 sample points, 0 undecided
+certified sign changes                     172        81 s at 192 bits
+```
+
+The approximate zero list from `rs_zeta` is used *only* to place the sample
+points.  It cannot manufacture a sign change: a wrong guide zero costs one, it
+never creates one.  So `N_0 \ge 172`.
+
+## `D = 0`
+
+\[
+ 172 \;=\; N_0 \;\le\; N \;=\; 172
+ \qquad\Longrightarrow\qquad
+ D \;=\; N-N_0 \;=\; 0 .
+\]
+
+**There is no zero off the critical line in the `40`-unit window containing the
+PR #71 ordinate.  This is unconditional**: no bound on `\int S`, no conjecture,
+no floating-point sign decision, no Riemann–Siegel remainder estimate.  Total
+cost `102` seconds.
+
+It also settles multiplicity: `N` counts with multiplicity and `172` simple
+sign changes account for all of it, so every zero in the window is **simple**
+and on the line.
+
+This retires the conditional Turing argument of `O-5604` for this window.  That
+argument is still worth keeping as an independent route — it reaches the same
+verdict from entirely different ingredients — but it is no longer what the
+conclusion rests on.
+
+## A cost anomaly worth knowing about
+
+The tighter slab straddling `T` itself was not needed in the end, and is just
+as well: `N` at an endpoint inside the anomalous gap had not returned after
+`13` minutes, against `21` seconds for **both** window endpoints together.
 
 That cost asymmetry looks structural rather than incidental, and is worth
 stating as an observation in its own right: **Turing's method is dramatically
@@ -106,15 +162,14 @@ plausible mechanism, not a measurement.
 
 ## What may and may not be concluded
 
-- **May:** the window contains exactly `172` zeros of `zeta` in the strip.  Any
-  claim that zeros are "missing" there is now settled against the true count,
-  unconditionally.
-- **May not:** that `D = 0`.  `N_0 \le N` is automatic, so `D \ge 0`; but until
-  `N_0` is computed, `D \in \{0, 2, \ldots, 172\}` as far as *this* claim is
-  concerned.  The conditional arguments of `O-5604` say `D = 0`, and the 173
-  sign changes `rs_zeta` located in a slightly wider window say so too, but
-  neither is unconditional and neither is imported here.
-- **May not:** anything about RH.  `D > 0` would refute RH; `D` is not yet known.
+- **May:** the window contains exactly `172` zeros of `zeta` in the strip, all
+  on the critical line, all simple.  The PR #71 candidate ordinate is closed
+  unconditionally: whatever its eighth-order Pick determinant evaluates to, the
+  zeros that determine it are all where RH says they should be.
+- **May not:** anything about RH itself.  `D > 0` would refute RH; `D = 0` on
+  one `40`-unit window at height `4.7\times10^{12}` is one local ledger entry
+  and no more.  RH is a statement about infinitely many such windows.
+- **May not:** that the method scales.  See the cost anomaly above.
 
 ## Limitations
 

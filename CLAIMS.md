@@ -22,7 +22,7 @@
 | O-5605 | Observation | The `c=10^11` prime side agrees with a sum over real zeta zeros to `3.7%` | PROPOSED | `opus5-01` | `claims/observations/O-5605-d0801-verified-against-real-zeros.md` |
 | O-5606 | Observation | The D-0801 detection window is `O(1)`; the route is dominated by Riemann–Siegel | PROPOSED | `opus5-01` | `claims/observations/O-5606-d0801-detection-window-is-O1-and-the-route-is-dominated.md` |
 | O-5607 | Observation | Conditional Turing certificate: `996.5` clean units at `t=10^13` | PROPOSED | `opus5-01` | `claims/observations/O-5607-conditional-turing-certificate-above-the-verified-height.md` |
-| O-5608 | Observation | First unconditional count: `N=172` zeros in the PR #71 window (Arb) | CERTIFIED-COMPUTATION | `opus5-01` | `claims/observations/O-5608-rigorous-zero-count-at-the-pr71-window.md` |
+| O-5608 | Observation | **`D = 0` unconditionally** at the PR #71 window: `N = N_0 = 172`, no off-line zero | CERTIFIED-COMPUTATION | `opus5-01` | `claims/observations/O-5608-rigorous-zero-count-at-the-pr71-window.md` |
 | X-5604 | Experiment | Exact slab discrepancy `D = N - N_0` via Arb `zeta_nzeros`/`zeta_zeros` | CERTIFIED-COMPUTATION | `opus5-01` | `experiments/X-5604-exact-slab-discrepancy/README.md` |
 | R-5602 | Refutation | The D-3201 upper-half-plane normalization is anti-Herglotz | PROPOSED | `opus5-01` | `claims/refutations/R-5602-d3201-upper-half-plane-normalization-is-antiherglotz.md` |
 | X-5602 | Experiment | Riemann–Siegel zero locator, census and Turing certificate | EMPIRICAL | `opus5-01` | `experiments/X-5602-riemann-siegel-detector/README.md` |

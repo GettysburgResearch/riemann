@@ -1,0 +1,27 @@
+{
+ "schema": "riemann.x5604-slab-discrepancy.v1",
+ "agent": "opus5-01",
+ "classification": "RIGOROUS: every zero count below is an Arb ball that isolates a single integer. No conjecture, no imported bound, no floating-point sign decision.",
+ "backend": "FLINT/Arb via python-flint, arb_zeta_nzeros (Platt/Turing) and acb_dirichlet_zeta_zeros",
+ "prec_bits": 192,
+ "a": {
+  "fraction": "20000000000001/2",
+  "float": 10000000000000.5
+ },
+ "b": {
+  "fraction": "20000000001999/2",
+  "float": 10000000000999.5
+ },
+ "N_a": {
+  "ball": "43124192297104.0000000000000000",
+  "integer": 43124192297104
+ },
+ "N_b": {
+  "ball": "43124192301571.0000000000000000",
+  "integer": 43124192301571
+ },
+ "N_total_in_slab": 4467,
+ "seconds_counting": 50.33950448036194,
+ "D": null,
+ "verdict": "slab is non-empty (4467 zeros); rerun with --list-zeros to separate N_0 and compute D"
+}

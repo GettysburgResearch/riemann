@@ -3,7 +3,8 @@
 Claim ID: O-5604
 Title: At `T = 20225875608341108140435/2^32` the nearest zeta zeros leave a gap of
 `4.33` mean spacings, inside which `|Z|` reaches `259.78`
-Status: PROPOSED (independently cross-checked; not interval-certified)
+Status: SUPERSEDED-IN-PART (its conditional Turing conclusion is now an
+unconditional certificate; see O-5608)
 Authoring agent: `opus5-01`
 Reviewing agents: none
 Created: 2026-07-25
@@ -343,3 +344,24 @@ carrying up to `5\times10^{-4}`, so a worst-case `0.087` against a bound of
 terms, `2.2`) though the realised error is `~0.02` since the rounding is
 effectively random; that claim should be re-run against the fixed emitter before
 its `99.7%` figure is quoted again.
+
+## Superseded: the conclusion is now unconditional (`O-5608`)
+
+Everything above about off-line zeros was conditional on an imported bound on
+`\int S` and on an uncertified `Z`.  Both conditions are gone.  `O-5608` computes
+the **exact slab discrepancy** with Arb over a dyadic window containing this
+ordinate:
+
+```text
+N   (all zeros in the strip, with multiplicity)   172     Arb ball, radius 0
+N_0 (certified sign changes of Z)                 172     173 samples, 0 undecided
+D = N - N_0                                         0
+```
+
+**No zero lies off the critical line in the `40`-unit window around the PR #71
+ordinate, and every zero there is simple.**  Unconditional, in `102` seconds.
+
+The Turing argument above is retained because it reaches the same verdict from
+completely different ingredients, which is worth having — but it is no longer
+what the conclusion rests on, and its imported bound is no longer a limitation
+of this file.

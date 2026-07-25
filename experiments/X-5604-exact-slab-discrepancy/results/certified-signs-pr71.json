@@ -1,0 +1,17 @@
+{
+ "schema": "riemann.x5604-certified-sign-changes.v1",
+ "agent": "opus5-01",
+ "classification": "RIGOROUS lower bound on N_0. Every sign is an Arb ball certified strictly on one side of zero. The guide zero list only chooses sample points and cannot manufacture a sign change.",
+ "a": "75347258181331/16",
+ "b": "37673629090985/8",
+ "prec_bits": 192,
+ "sample_points": 173,
+ "undecided_samples": [],
+ "certified_sign_changes": 172,
+ "seconds": 80.67008590698242,
+ "N0_lower_bound": 172,
+ "N_total": 172,
+ "D_upper_bound": 0,
+ "D": 0,
+ "verdict": "CERTIFIED D = 0: N_0 >= 172 certified sign changes, and N_0 <= N = 172, so N_0 = N and the slab contains NO zero off the critical line. Unconditional."
+}
