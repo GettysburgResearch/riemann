@@ -26,9 +26,11 @@ def parse_int(value: Any, name: str) -> int:
 def parse_fraction(value: Any, name: str) -> Fraction:
     if not isinstance(value, dict):
         raise ValueError(f"{name} must be an object")
+    denominator = parse_int(value.get("denominator"), f"{name}.denominator")
+    if denominator <= 0:
+        raise ValueError(f"{name}.denominator must be positive")
     return Fraction(
-        parse_int(value.get("numerator"), f"{name}.numerator"),
-        parse_int(value.get("denominator"), f"{name}.denominator"),
+        parse_int(value.get("numerator"), f"{name}.numerator"), denominator
     )
 
 
@@ -69,9 +71,11 @@ def load_rows(path: Path) -> tuple[dict[str, Any], dict[str, tuple[Fraction, Fra
             "UNRESOLVED_ZERO_TOUCH",
         }:
             raise ValueError(f"{path}: {identifier} has unsupported status {status!r}")
+        if identifier in rows:
+            raise ValueError(f"{path}: duplicate row {identifier}")
         rows[identifier] = (lower, upper, status)
-    if len(rows) != 65:
-        raise ValueError(f"{path}: expected 65 barycentric rows, found {len(rows)}")
+    if not rows:
+        raise ValueError(f"{path}: no barycentric rows found")
     return data, rows
 
 
@@ -87,7 +91,7 @@ def summarize(path: Path) -> dict[str, object]:
         )
     }
     tightest_id, (tightest_lower, tightest_upper, tightest_status) = ordered[0]
-    result: dict[str, object] = {
+    return {
         "schema": SCHEMA,
         "source": str(path),
         "source_verification_sha256": source.get("verification_sha256"),
@@ -102,7 +106,7 @@ def summarize(path: Path) -> dict[str, object]:
             "upper_scientific": scientific(tightest_upper),
             "width_scientific": scientific(tightest_upper - tightest_lower),
         },
-        "top_ten_by_upper_endpoint": [
+        "rows_by_upper_endpoint": [
             {
                 "id": identifier,
                 "status": status,
@@ -110,14 +114,13 @@ def summarize(path: Path) -> dict[str, object]:
                 "upper_scientific": scientific(upper),
                 "width_scientific": scientific(upper - lower),
             }
-            for identifier, (lower, upper, status) in ordered[:10]
+            for identifier, (lower, upper, status) in ordered
         ],
         "proof_boundary": (
             "Rows are exact contractions of the supplied outward primitive rectangles. "
             "A negative requires independent directed special-function reproduction."
         ),
     }
-    return result
 
 
 def compare(low_path: Path, high_path: Path) -> dict[str, object]:
