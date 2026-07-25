@@ -3,7 +3,7 @@
 Status: exact finite synthetic regression; production Toeplitz adapter pending  
 Agent: `gpt56-05-i`  
 Issue: #83  
-Claims: L-8301, L-8302, T-8301
+Claims: L-8301, L-8302, L-8303, T-8301
 
 ## Purpose
 
@@ -83,23 +83,52 @@ lambda_plus = 5/2
 determinant ratio at tau=1/2 = -7/16.
 ```
 
+## Coherent corner-packet breakthrough
+
+L-8303 observes that every prime power still in its first deposition cell acts
+in the **same** endpoint corner channel.  Their exact aggregate is therefore
+
+```text
+S_packet(L) = Z(L)e_0e_{K-1}^* + conj(Z(L))e_{K-1}e_0^*,
+Z(L)        = A0 - A1/L.
+```
+
+No matter how many thresholds are active, the packet remains rank at most two.
+Its generalized pressure is convex in `x=1/L`, while the secular determinant is
+a concave quadratic in `x`.  Hence a complete admission/first-knot mesh cell is
+decided from its two endpoints.
+
+The exact regression has two individually subcritical same-phase events:
+
+```text
+individual secular ratios = 16/25, 16/25;
+coherent packet ratio     = -11/25.
+```
+
+Thus even exact one-threshold ranking can miss a coherent multi-threshold
+crossing.  A second control uses opposite phases and cancels to the identity
+exactly.
+
 ## Files
 
-- `verify.py` — integer/Fraction Gaussian-rational checker;
+- `verify.py` — integer/Fraction Gaussian-rational Green checker;
+- `verify_packet.py` — coherent corner-packet and endpoint-mesh checker;
 - `certificates/synthetic-green-cases.json` — crossing, exclusion, complex, and equality controls;
-- `tests/test_verify.py` — adversarial tests;
-- `results/synthetic-verification.json` — exact replay output;
+- `certificates/synthetic-corner-packets.json` — coherent crossing, cancellation, and affine-mesh controls;
+- `tests/test_verify.py` and `tests/test_packet.py` — adversarial tests;
+- `results/synthetic-verification.json` and `results/packet-verification.json` — exact replay outputs;
 - `results/tests.txt` — executed test log.
 
 ## Reproduction
 
 ```bash
 python verify.py certificates/synthetic-green-cases.json
+python verify_packet.py certificates/synthetic-corner-packets.json
 python -m unittest discover -s tests -v
-python -m compileall -q verify.py tests
+python -m compileall -q verify.py verify_packet.py tests
 ```
 
-Nine tests pass.
+Fifteen tests pass.
 
 ## Exact checker responsibilities
 
@@ -112,7 +141,8 @@ The checker:
 5. checks the determinant ratio independently;
 6. encloses irrational square roots by dyadic rationals;
 7. applies the robust positive/crossing moat;
-8. rejects nonunit phases, duplicate IDs, invalid floors, altered verdicts, and zero-touching boundaries.
+8. rejects nonunit phases, duplicate IDs, invalid floors, altered verdicts, and zero-touching boundaries;
+9. checks coherent complex aggregation before pressure, exact phase cancellation, and the endpoint-only mesh principle.
 
 The production path will not invert a `1024 x 1024` interval matrix.  L-8302
 uses two approximate endpoint solves plus residual norms and a positive floor.
@@ -126,10 +156,10 @@ Given PR #79-style complete lag boxes:
 3. certify `H_0 >= m I` with `m>delta`, hence `mu=m-delta`;
 4. solve `H_0 y_0=e_0` and `H_0 y_1=e_{K-1}` at high precision;
 5. use exact residuals plus `delta ||y_j||` to enclose `G`;
-6. rank each threshold by an interval for
-   `tau_max*(r+sqrt(r^2+D))`;
-7. combine it with the first-cell smooth-background radius;
-8. run a full directed cell calculation only if the robust pressure interval meets zero.
+6. build the admission/first-knot mesh and coherently aggregate all active corner events as `Z=A0-A1/L`;
+7. rank each packet mesh cell by the maximum of its two endpoint pressure intervals;
+8. combine it with the smooth-background operator radius;
+9. run a full directed cell calculation only if the robust packet pressure interval meets zero.
 
 ## Proof boundary
 
