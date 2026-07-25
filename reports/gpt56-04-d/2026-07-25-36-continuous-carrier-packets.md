@@ -64,6 +64,17 @@ and the corresponding nonnegative test decomposes additively. Therefore a
 negative complex-envelope witness implies a negative real-on-the-line packet;
 restricting to the real Legendre--Bessel hierarchy loses no negative witness.
 
+### L-3604 — exact piecewise-to-smooth compression ledger
+
+For a Gaussian-rational or dyadic D-0801 cell vector, L-3604 gives exact rational
+captured energy and exact rational omitted `L^2` tail at every Legendre degree.
+It uses only Legendre values at rational cell endpoints; all square-root factors
+cancel in the squared-energy ledger.
+
+This provides an immediate handoff from the cloud-directed PR #64 finalist to a
+small smooth packet. It does not transfer the Weil sign by itself; the compressed
+packet must be evaluated directly.
+
 ### M-3601 — block-confluent search
 
 A stable continuous search should use a few separated carrier centers, each with
@@ -108,7 +119,7 @@ problem.
 
 ## Verification performed
 
-The retained nine-test suite checks:
+The retained 14-test suite checks:
 
 1. shifted-overlap endpoint identities;
 2. transpose parity;
@@ -118,9 +129,14 @@ The retained nine-test suite checks:
 6. reality and support orthogonality of the Legendre--Bessel basis;
 7. the off-lattice frequency formula against direct support integration;
 8. integer-lattice sign congruence;
-9. strict rejection of the fractional-index interpolation ghost.
+9. strict rejection of the fractional-index interpolation ghost;
+10. exact degree-zero capture of constant cell vectors;
+11. projection scale invariance;
+12. rational monotone energy ledgers for complex dyadic vectors;
+13. zero-vector rejection;
+14. invalid-degree rejection.
 
-The test transcript records all nine tests passing.
+The test transcript records all 14 tests passing.
 
 ## Candidate counterexamples
 
@@ -129,9 +145,10 @@ allocated.
 
 ## Classification
 
-- L-3601, L-3602, L-3603, M-3601: `PROPOSED` pending independent review.
+- L-3601, L-3602, L-3603, L-3604, M-3601: `PROPOSED` pending independent review.
 - O-3601: `EMPIRICAL`.
-- X-3601 formulas and tests: high-precision noninterval controls.
+- X-3601 formulas and tests: high-precision noninterval controls plus exact
+  standard-library projection arithmetic.
 - Prime enumeration: exact finite integer work.
 - Matrix entries and signs: ordinary numerical discovery.
 - Counterexample status: none.
@@ -149,6 +166,8 @@ allocated.
    centers.
 5. A small block-confluent finalist is far cheaper to evaluate with balls than
    either a 1,024-cell matrix or a dense 128-carrier raw packet.
+6. Once PR #64 returns, its exact dyadic finalist can be compression-audited
+   immediately without repeating the complete prime stream.
 
 ## Remaining uncertainty
 
@@ -157,19 +176,19 @@ allocated.
 - The empirical matrix replaces exact archimedean and pole blocks by the leading
   scalar.
 - Huge phases and accumulation are not enclosed.
+- Small projection tail does not alone imply sign survival.
 - The RH implication remains tied to the T-2801 normalization review.
 
 ## Recommended next actions
 
-1. Implement a two-center block-confluent search with degrees approximately
+1. Apply L-3604 to the PR #64 finalist at degrees `8,12,16,24,32`.
+2. Implement a two-center block-confluent search with degrees approximately
    `8--16` at each center.
-2. Optimize center separation against the exact sinc Gram matrix.
-3. Recompute every retained finite prime entry directly, not through a wide FFT.
-4. Add Arb enclosures for the compact archimedean and pole blocks.
-5. Freeze a finalist to exact dyadics and pass its fixed-vector form to the
+3. Optimize center separation against the exact sinc Gram matrix.
+4. Recompute every retained finite prime entry directly, not through a wide FFT.
+5. Add Arb enclosures for the compact archimedean and pole blocks.
+6. Freeze a finalist to exact dyadics and pass its fixed-vector form to the
    existing exact witness checker.
-6. Compare its envelope with the cloud-directed piecewise result once PR #64
-   completes.
 
 ## Process improvement
 
