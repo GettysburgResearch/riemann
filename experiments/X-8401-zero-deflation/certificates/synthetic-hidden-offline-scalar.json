@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.zero-deflation.v1",
+  "kind": "scalar-count-deflation",
+  "x": "1/20",
+  "t": "0",
+  "f_real": {"lower": "20/3", "upper": "20/3"},
+  "zero_bins": [
+    {"id": "known-line-zero", "lower": "-1/20", "upper": "1/20", "count": 1, "gate_id": "synthetic-zero-count"}
+  ],
+  "parent_gate_id": "synthetic-resolvent",
+  "logical_gates": [
+    {"id": "synthetic-zero-count", "state": "SYNTHETIC_CONTROL", "evidence": "explicit finite zero model"},
+    {"id": "synthetic-resolvent", "state": "SYNTHETIC_CONTROL", "evidence": "explicit finite resolvent sum"}
+  ],
+  "claimed_interval": {"lower": "-10/3", "upper": "-10/3"},
+  "claimed_status": "CERTIFIED_NEGATIVE_DEFLATED_WITNESS"
+}
