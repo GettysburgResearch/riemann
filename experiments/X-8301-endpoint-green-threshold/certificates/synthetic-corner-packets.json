@@ -1,0 +1,44 @@
+{
+  "schema": "riemann.endpoint-green-packet.synthetic.v1",
+  "cases": [
+    {
+      "id": "coherent-subcritical-events-cross",
+      "H": [["1/10", 0], [0, "1/10"]],
+      "endpoints": [0, 1],
+      "A0": {"re": "3/25", "im": 0},
+      "A1": {"re": 0, "im": 0},
+      "x_interval": [1, 2],
+      "components": [
+        {"re": "3/50", "im": 0},
+        {"re": "3/50", "im": 0}
+      ],
+      "claimed": {"f_left": "-11/25", "f_right": "-11/25"},
+      "expected_status": "PACKET_CROSSING_AT_ENDPOINT"
+    },
+    {
+      "id": "opposite-phase-events-cancel",
+      "H": [["1/10", 0], [0, "1/10"]],
+      "endpoints": [0, 1],
+      "A0": {"re": 0, "im": 0},
+      "A1": {"re": 0, "im": 0},
+      "x_interval": [1, 2],
+      "components": [
+        {"re": "3/50", "im": 0},
+        {"re": "-3/50", "im": 0}
+      ],
+      "claimed": {"f_left": 1, "f_right": 1},
+      "expected_status": "PACKET_POSITIVE_ON_MESH_CELL"
+    },
+    {
+      "id": "affine-packet-endpoints-control-cell",
+      "H": [["1/10", 0], [0, "1/10"]],
+      "endpoints": [0, 1],
+      "A0": {"re": "1/20", "im": "1/100"},
+      "A1": {"re": "1/100", "im": "-1/200"},
+      "x_interval": [1, 2],
+      "components": [],
+      "claimed": {"f_left": "327/400", "f_right": "87/100"},
+      "expected_status": "PACKET_POSITIVE_ON_MESH_CELL"
+    }
+  ]
+}
