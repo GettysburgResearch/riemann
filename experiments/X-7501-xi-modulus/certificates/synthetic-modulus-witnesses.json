@@ -1,0 +1,78 @@
+{
+  "schema": "riemann.xi-modulus-witness.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "ordinate": {"numerator": 20, "denominator": 1},
+  "points": [
+    {
+      "id": "online-0",
+      "x": {"numerator": 1, "denominator": 2},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 5, "denominator": 4}, "upper": {"numerator": 5, "denominator": 4}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "online-1",
+      "x": {"numerator": 3, "denominator": 4},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 25, "denominator": 16}, "upper": {"numerator": 25, "denominator": 16}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "online-2",
+      "x": {"numerator": 1, "denominator": 1},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 2, "denominator": 1}, "upper": {"numerator": 2, "denominator": 1}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "offline-0",
+      "x": {"numerator": 1, "denominator": 2},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": -3, "denominator": 4}, "upper": {"numerator": -3, "denominator": 4}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "offline-1",
+      "x": {"numerator": 3, "denominator": 4},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": -7, "denominator": 16}, "upper": {"numerator": -7, "denominator": 16}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "shape-0",
+      "x": {"numerator": 1, "denominator": 2},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "shape-1",
+      "x": {"numerator": 3, "denominator": 4},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    },
+    {
+      "id": "shape-2",
+      "x": {"numerator": 1, "denominator": 1},
+      "xi_rectangle": {
+        "real": {"lower": {"numerator": 2, "denominator": 1}, "upper": {"numerator": 2, "denominator": 1}},
+        "imag": {"lower": {"numerator": 0, "denominator": 1}, "upper": {"numerator": 0, "denominator": 1}}
+      }
+    }
+  ],
+  "rows": [
+    {"id": "online-monotonicity", "kind": "monotonicity", "left": "online-0", "right": "online-1"},
+    {"id": "online-second-divided-difference", "kind": "divided_difference", "points": ["online-0", "online-1", "online-2"]},
+    {"id": "offline-monotonicity-control", "kind": "monotonicity", "left": "offline-0", "right": "offline-1"},
+    {"id": "synthetic-log-concavity-control", "kind": "log_concavity_integer_power", "left": "shape-0", "middle": "shape-1", "right": "shape-2"}
+  ]
+}
