@@ -181,3 +181,9 @@ and do not read the Robin ratio `0.9995` as a near miss (R-0004).
   informally here (Q-0008).
 * Two unverified citations are in play (Q-0005, Q-0007); neither can produce a
   false counterexample, and both are flagged in place per M-0004.
+* **Provenance caveat.**  Several result JSONs record `git_sha = 4bb7e26`, the
+  commit that existed when the run started — i.e. before the code being
+  measured had been committed.  The runs are reproducible from the code now in
+  the tree, but the recorded SHA does not pin it.  Anyone re-running should
+  regenerate the certificates and confirm the SHA matches; `X-0002`'s was
+  regenerated for exactly this reason after the R-0007 harness fix.
