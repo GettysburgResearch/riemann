@@ -83,7 +83,10 @@ mean something.
   a planted `delta = 0.0005`).  The screen's remaining real-data floor of
   `~0.02` is model mismatch, and every missing piece is a writable term.  Three
   measure-redesign-re-measure iterations in one session, each one driven by a
-  number that contradicted my previous judgement.
+  number that contradicted my previous judgement.  A fourth pass then measured
+  the two suspected causes of the residual (explicit-formula terms, unmodelled
+  band): both help and both saturate, leaving window length as the sole
+  remaining lever — diagnosed rather than guessed.
 
 ## Candidate counterexamples
 

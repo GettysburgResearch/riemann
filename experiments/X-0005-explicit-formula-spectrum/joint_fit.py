@@ -50,16 +50,42 @@ from run import psi_samples  # noqa: E402
 from validate import ORDINATES  # noqa: E402
 
 
-def design_solve(us, f, gammas):
-    """Least-squares fit of  c + sum_j (a_j cos + b_j sin)  to f on the grid us.
+def load_ordinates(n):
+    """The certified ordinates produced by X-0004, falling back to the short
+    hard-coded list.  Widening the modelled band is the main lever on model
+    mismatch (O-0002)."""
+    path = os.path.join(HERE, "..", "X-0004-lehmer-pairs", "results",
+                        "lehmer-T2000.json")
+    try:
+        with open(path) as fh:
+            zs = json.load(fh)["zeros"]
+        vals = [float(z.split(" ")[0].lstrip("[")) for z in zs]
+        return vals[:n]
+    except Exception:
+        return ORDINATES[:n]
+
+
+def design_solve(us, f, gammas, extra_terms=True):
+    """Least-squares fit of
+
+        c + d e^{-u/2} + sum_j (a_j cos(g_j u) + b_j sin(g_j u))
+
+    to f on the grid us.  The e^{-u/2} column absorbs the NON-ZERO terms of the
+    explicit formula: psi(x) = x - sum_rho x^rho/rho - log(2 pi)
+    - (1/2) log(1 - x^-2), whose contribution to f(u) = (psi(e^u)-e^u)e^{-u/2}
+    is -(log 2 pi) e^{-u/2} plus a term smaller still.  Leaving it out is one of
+    the two sources of model mismatch identified in O-0002.
+
     Returns the list of amplitudes sqrt(a_j^2+b_j^2)."""
     m = len(gammas)
-    k = 2 * m + 1
+    k = 2 * m + 1 + (1 if extra_terms else 0)
     # normal equations  (A^T A) x = A^T f, built streaming to avoid a big matrix
     ATA = [[0.0] * k for _ in range(k)]
     ATf = [0.0] * k
     for u, fv in zip(us, f):
         row = [1.0]
+        if extra_terms:
+            row.append(math.exp(-u / 2))
         for g in gammas:
             row.append(math.cos(g * u))
             row.append(math.sin(g * u))
@@ -93,7 +119,8 @@ def design_solve(us, f, gammas):
     for r in range(k - 1, -1, -1):
         s = M[r][k] - sum(M[r][c] * x[c] for c in range(r + 1, k))
         x[r] = s / M[r][r]
-    return [math.hypot(x[1 + 2 * j], x[2 + 2 * j]) for j in range(m)]
+    off = 2 if extra_terms else 1
+    return [math.hypot(x[off + 2 * j], x[off + 1 + 2 * j]) for j in range(m)]
 
 
 def grid(a, b, n):
@@ -118,8 +145,9 @@ def main():
     u1, u2 = ulo, ulo + W
     D = W
     n = 3000
-    G = ORDINATES[:]           # model frequencies: all 20 known ordinates
-    report = ORDINATES[:12]
+    nlines = int(sys.argv[2]) if len(sys.argv) > 2 else 20
+    G = load_ordinates(nlines)
+    report = G[:12]
 
     print(f"X = {X:.3g}   window W = {W:.3f}   separation D = {D:.3f}   "
           f"{len(G)} modelled lines")

@@ -170,11 +170,32 @@ that the tail of the zero sum matters.  So the honest current statement is:
 * estimator floor: `<= 0.0005` (measured, synthetic);
 * **real-data floor: `~ 0.02`, set entirely by what is left out of the model.**
 
-Each of those omissions is a known, writable term.  The next agent's task is
-therefore concrete: extend the modelled band, put the non-zero terms of the
-explicit formula into the design matrix, and lengthen the window — and
-re-measure the real-data spread each time.  That is a very different task from
-"sieve further", which is what this screen looked like it needed one hour ago.
+Two of those omissions were then tested directly:
+
+```
+adding the e^{-u/2} column (the -log(2 pi) term of the explicit formula):
+    max |implied delta|  0.01857 -> 0.01754
+widening the modelled band (X = 4*10^7, window fixed):
+    20 lines  (to gamma = 77)   0.01872
+    60 lines  (to gamma = 163)  0.01421
+   120 lines  (to gamma = 270)  0.01307
+```
+
+Both help, and both saturate.  So the remaining `~0.013` is **not** the
+unmodelled band and **not** the non-zero terms: it is the window length itself
+— the estimator has genuine variance over a window of only `5.3` in `u`, and
+the tail of the zero sum does not average out over so short a stretch.
+
+**That is the finding.**  Three plausible culprits were each measured and two
+were eliminated, which leaves a single lever — a longer window, i.e. a larger
+sieve — but now for a diagnosed reason rather than as a guess.  Window length
+grows like `log X`, so the residual falls slowly; the honest expectation is a
+real-data floor of a few times `10^-3` at `X ~ 10^{12}`, not `10^-5`.
+
+For orientation: L-0004's deficit test has *no* displacement floor at all, so
+this screen will never compete with it on sensitivity.  Its distinct value is
+that its cost does not grow with the height of the target — it is the only tool
+here that can look at `gamma ~ 200` for the same price as `gamma ~ 20`.
 
 **Conclusion, revised twice.**  The screen's demonstrated value is (i) the
 cross-validation of two disjoint code paths, which is real, and (ii) an

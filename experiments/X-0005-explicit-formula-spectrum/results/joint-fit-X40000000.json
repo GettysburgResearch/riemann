@@ -10,54 +10,54 @@
  "synthetic": [
   {
    "delta": 0.1,
-   "ratio": 1.6983177094976052,
+   "ratio": 1.6982583619930738,
    "predicted": 1.6986464646342474,
    "detected_at_3x_scatter": true
   },
   {
    "delta": 0.05,
-   "ratio": 1.3031275766496246,
+   "ratio": 1.3031062805008962,
    "predicted": 1.3033213205630634,
    "detected_at_3x_scatter": true
   },
   {
    "delta": 0.02,
-   "ratio": 1.1117044618360983,
+   "ratio": 1.111697500068031,
    "predicted": 1.1117844613624535,
    "detected_at_3x_scatter": true
   },
   {
    "delta": 0.01,
-   "ratio": 1.05437177144724,
+   "ratio": 1.0543685185818588,
    "predicted": 1.0544119030826868,
    "detected_at_3x_scatter": true
   },
   {
    "delta": 0.005,
-   "ratio": 1.0268255324542612,
+   "ratio": 1.0268239603401481,
    "predicted": 1.0268456082014894,
    "detected_at_3x_scatter": true
   },
   {
    "delta": 0.002,
-   "ratio": 1.0106449480010213,
+   "ratio": 1.0106443318604457,
    "predicted": 1.0106529779070752,
    "detected_at_3x_scatter": true
   },
   {
    "delta": 0.001,
-   "ratio": 1.005308363608901,
+   "ratio": 1.0053080576290032,
    "predicted": 1.0053123782720848,
    "detected_at_3x_scatter": true
   },
   {
    "delta": 0.0005,
-   "ratio": 1.0026506635664223,
+   "ratio": 1.0026505110965551,
    "predicted": 1.0026526708048429,
    "detected_at_3x_scatter": true
   }
  ],
- "baseline_scatter": 4.884981308350689e-15,
+ "baseline_scatter": 6.106226635438361e-15,
  "baseline_scatter_prior_designs": [
   0.1494,
   0.1682
@@ -65,66 +65,66 @@
  "sensitivity_floor_delta": 0.0005,
  "real_data": [
   {
-   "gamma": 14.134725141734693,
-   "ratio": 0.993618293386356,
-   "implied_delta": -0.0012083377252325872
+   "gamma": 14.1347251417347,
+   "ratio": 0.9840577171613406,
+   "implied_delta": -0.0030331757964813283
   },
   {
-   "gamma": 21.022039638771552,
-   "ratio": 0.9882684561806805,
-   "implied_delta": -0.0022272922786827575
+   "gamma": 21.0220396387715,
+   "ratio": 0.9951050733059157,
+   "implied_delta": -0.0009261329110772515
   },
   {
-   "gamma": 25.01085758014569,
-   "ratio": 1.0040932415069284,
-   "implied_delta": 0.0007709781618585735
+   "gamma": 25.0108575801457,
+   "ratio": 0.9948256684002952,
+   "implied_delta": -0.0009791344030925342
   },
   {
-   "gamma": 30.424876125859512,
-   "ratio": 1.0339013519482663,
-   "implied_delta": 0.006292444359807514
+   "gamma": 30.4248761258595,
+   "ratio": 1.0284883185691236,
+   "implied_delta": 0.005301696815730667
   },
   {
-   "gamma": 32.93506158773919,
-   "ratio": 1.0108294929275856,
-   "implied_delta": 0.002032961253229534
+   "gamma": 32.9350615877392,
+   "ratio": 1.0152699882716796,
+   "implied_delta": 0.002860261923035897
   },
   {
-   "gamma": 37.58617815882567,
-   "ratio": 0.9742018674264408,
-   "implied_delta": -0.004933026642487506
+   "gamma": 37.5861781588257,
+   "ratio": 0.9730583302994759,
+   "implied_delta": -0.005154702480660557
   },
   {
    "gamma": 40.9187190121475,
-   "ratio": 0.9956562062552389,
-   "implied_delta": -0.0008216297977854791
+   "ratio": 1.0008876473543857,
+   "implied_delta": 0.00016745950970220734
   },
   {
    "gamma": 43.327073280915,
-   "ratio": 1.0762991576810108,
-   "implied_delta": 0.013877698445530058
+   "ratio": 1.0716823855388138,
+   "implied_delta": 0.013066362735998063
   },
   {
-   "gamma": 48.00515088116716,
-   "ratio": 1.0072015966425651,
-   "implied_delta": 0.0013543524253504659
+   "gamma": 48.0051508811672,
+   "ratio": 1.0108986863389284,
+   "implied_delta": 0.002045880405147142
   },
   {
    "gamma": 49.7738324776723,
-   "ratio": 1.005442418527103,
-   "implied_delta": 0.0010244124140130384
+   "ratio": 1.0021925071055515,
+   "implied_delta": 0.000413358981305921
   },
   {
-   "gamma": 52.97032147771446,
-   "ratio": 1.0174720615298816,
-   "implied_delta": 0.0032691850645087317
+   "gamma": 52.9703214777145,
+   "ratio": 1.0215058376061554,
+   "implied_delta": 0.004015963659106911
   },
   {
-   "gamma": 56.44624769706339,
-   "ratio": 0.9063137379015247,
-   "implied_delta": -0.018566223388188682
+   "gamma": 56.4462476970634,
+   "ratio": 0.9112595899255181,
+   "implied_delta": -0.01753905350736631
   }
  ],
- "max_abs_implied_delta": 0.018566223388188682,
+ "max_abs_implied_delta": 0.01753905350736631,
  "interpretation": "The implied displacements are now dominated by the finite-X error of the explicit formula (the neglected non-zero terms and the zeros above the modelled band), not by blending.  They are NOT bounds -- there is no error analysis behind them -- but the sensitivity floor from the planted-zero test IS a measurement of what this screen can see."
 }
