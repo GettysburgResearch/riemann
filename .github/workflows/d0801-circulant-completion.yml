@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/d0801-circulant-completion.yml'
       - 'experiments/X-8201-circulant-completion/**'
+      - 'experiments/X-8502-one-direction-schur/**'
   pull_request:
     branches:
       - cursor/pr49-directed-carrier-pass-7f09
@@ -14,6 +15,7 @@ on:
     paths:
       - '.github/workflows/d0801-circulant-completion.yml'
       - 'experiments/X-8201-circulant-completion/**'
+      - 'experiments/X-8502-one-direction-schur/**'
   workflow_dispatch:
 
 concurrency:
@@ -36,6 +38,21 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install numpy scipy
+      - name: Compile and replay exact one-direction gate
+        run: |
+          python -m compileall -q \
+            experiments/X-8201-circulant-completion/analyze.py \
+            experiments/X-8502-one-direction-schur/verify_target_gate.py \
+            experiments/X-8502-one-direction-schur/tests
+          python -m unittest discover \
+            -s experiments/X-8502-one-direction-schur/tests -v
+          python experiments/X-8502-one-direction-schur/verify_target_gate.py \
+            experiments/X-2805-directed-prime-producer/results/target-c1e11/final/verdict-p192.json \
+            experiments/X-8502-one-direction-schur/certificates/target-c1e11-coarse-gate.json \
+            --output experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
+          cmp \
+            experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.verification.json \
+            experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
       - name: Run Toeplitz and circulant-completion reconnaissance
         run: |
           mkdir -p experiments/X-8201-circulant-completion/results
@@ -53,3 +70,4 @@ jobs:
           path: |
             experiments/X-8201-circulant-completion/results/completion.json
             experiments/X-8201-circulant-completion/results/runtime.txt
+            experiments/X-8502-one-direction-schur/results/target-c1e11-coarse-gate.regenerated.json
