@@ -1,0 +1,32 @@
+START_UTC=2026-07-25T17:59:19Z
+WORKER=2 SHARD=46 RANGE=4600:4700
+COMMAND=stream.py cutoff=100000000000 carrier=4709203636353.65 cells=1024 segment_size=20000000 start=4600 end=4700 higher=false
+Python 3.12.3
+numpy=2.3.5
+platform=Linux-6.12.94+-x86_64-with-glibc2.39
+	Command being timed: "/workspace/.venv/bin/python experiments/X-0801-piecewise-carrier-tail/stream.py --cutoff 100000000000 --carrier 4709203636353.65 --cells 1024 --segment-size 20000000 --start-segment 4600 --end-segment 4700 --output experiments/X-2805-directed-prime-producer/results/target-c1e11/discovery/shards/shard-4600-4700.json"
+	User time (seconds): 23.68
+	System time (seconds): 1.46
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:25.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 141888
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 502276
+	Voluntary context switches: 4
+	Involuntary context switches: 1004
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+EXIT_STATUS=0
+END_UTC=2026-07-25T17:59:44Z
+65c0a1162be139341ff109c6a4eb86027b048edaf991d5d3234350b8e97dbd18  experiments/X-2805-directed-prime-producer/results/target-c1e11/discovery/shards/shard-4600-4700.json

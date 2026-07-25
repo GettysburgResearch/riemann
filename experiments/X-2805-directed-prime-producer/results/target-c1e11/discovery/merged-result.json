@@ -1,0 +1,35 @@
+{
+  "archimedean_leading_scalar": 4.351719952088318,
+  "certified_negative": false,
+  "counterexample_candidate": null,
+  "experiment_id": "X-0801",
+  "generated_utc": "2026-07-25T18:01:32.600775+00:00",
+  "higher_prime_power_count": 28156,
+  "largest_prime_toeplitz_eigenvalue": 4.351450833636325,
+  "leading_margin": 0.0002691184519925116,
+  "parameters": {
+    "carrier": "4709203636353.65",
+    "cells": 1024,
+    "cutoff": 100000000000,
+    "phase_reduction": "numpy.longdouble product and remainder; float64 sin/cos",
+    "segment_size": 20000000,
+    "total_segments": 5000
+  },
+  "prime_count": 4118054813,
+  "schema": "riemann.carrier-piecewise-result.v1",
+  "status": "EMPIRICAL_NOT_CERTIFIED",
+  "top_ten_leading_margins": [
+    0.0002691184519925116,
+    0.007368894868665876,
+    0.13357557290506517,
+    0.15330225793380237,
+    0.17930725906791167,
+    0.18124612848029997,
+    0.21659666646262377,
+    0.22418882049497668,
+    0.2950563128356132,
+    0.3425552225087136
+  ],
+  "total_prime_power_terms": 4118082969,
+  "warning": "A negative leading margin would still require exact archimedean and pole blocks, directed phase balls, an explicit-formula normalization audit, and an exact frozen-vector checker. This ordinary-floating result is not a proof."
+}

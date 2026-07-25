@@ -1,0 +1,29 @@
+START_UTC=2026-07-25T19:54:27Z
+WORKER=1 SHARD=33 RANGE=3300:3400 PRECISION=192
+BINARY_SHA256=fabbdc63700468fb868bbc814c514dc8eacb5fa112d51e5cc77337c1cedd9ec1
+	Command being timed: "/tmp/carrier-build/directed_prime_shard_fast_pr49_mpfr422 --manifest experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt --start-segment 3300 --end-segment 3400 --precision 192 --output experiments/X-2805-directed-prime-producer/results/target-c1e11/directed-192/shards/shard-3300-3400-p192.json"
+	User time (seconds): 640.99
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:43.78
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 79960
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 27488
+	Voluntary context switches: 1
+	Involuntary context switches: 6472
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+EXIT_STATUS=0
+END_UTC=2026-07-25T20:05:11Z
+712477eae9ed7d41c2b4b9bf3b3d08568d6784dcd3ee41e12e56d9f183660fd2  experiments/X-2805-directed-prime-producer/results/target-c1e11/directed-192/shards/shard-3300-3400-p192.json
