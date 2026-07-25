@@ -48,7 +48,7 @@ jobs:
         run: |
           mkdir -p experiments/X-8503-fast-toeplitz-operator/results
           mkdir -p experiments/X-8504-threshold-insusceptibility/results
-          g++ -O3 -std=c++20 -Wall -Wextra -Werror \
+          g++ -O3 -std=c++20 -Wall -Wextra -Werror -Wno-unknown-pragmas \
             -frounding-math -ffp-contract=off -fno-fast-math \
             experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp \
             -o experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard \
