@@ -9,6 +9,7 @@ on:
       - 'experiments/X-8201-circulant-completion/**'
       - 'experiments/X-8502-one-direction-schur/**'
       - 'experiments/X-8503-fast-toeplitz-operator/**'
+      - 'experiments/X-8504-threshold-insusceptibility/**'
   pull_request:
     branches:
       - cursor/pr49-directed-carrier-pass-7f09
@@ -18,6 +19,7 @@ on:
       - 'experiments/X-8201-circulant-completion/**'
       - 'experiments/X-8502-one-direction-schur/**'
       - 'experiments/X-8503-fast-toeplitz-operator/**'
+      - 'experiments/X-8504-threshold-insusceptibility/**'
   workflow_dispatch:
 
 concurrency:
@@ -45,6 +47,7 @@ jobs:
       - name: Compile exact checkers and fast coefficient producer
         run: |
           mkdir -p experiments/X-8503-fast-toeplitz-operator/results
+          mkdir -p experiments/X-8504-threshold-insusceptibility/results
           g++ -O3 -std=c++20 -Wall -Wextra -Werror \
             -frounding-math -ffp-contract=off -fno-fast-math \
             experiments/X-8503-fast-toeplitz-operator/fast_toeplitz_shard.cpp \
@@ -58,14 +61,18 @@ jobs:
             experiments/X-8503-fast-toeplitz-operator/bind_fast_shard.py \
             experiments/X-8503-fast-toeplitz-operator/merge_hybrid_source.py \
             experiments/X-8503-fast-toeplitz-operator/merge_hybrid_source_strict.py \
-            experiments/X-8503-fast-toeplitz-operator/tests
+            experiments/X-8503-fast-toeplitz-operator/tests \
+            experiments/X-8504-threshold-insusceptibility/verify.py \
+            experiments/X-8504-threshold-insusceptibility/tests
       - name: Run exact checker, binding, and merger tests
         run: |
           python -m unittest discover \
             -s experiments/X-8502-one-direction-schur/tests -v
           python -m unittest discover \
             -s experiments/X-8503-fast-toeplitz-operator/tests -v
-      - name: Replay exact one-direction and operator budgets
+          python -m unittest discover \
+            -s experiments/X-8504-threshold-insusceptibility/tests -v
+      - name: Replay exact one-direction, operator, and threshold results
         run: |
           python experiments/X-8502-one-direction-schur/verify_target_gate.py \
             experiments/X-2805-directed-prime-producer/results/target-c1e11/final/verdict-p192.json \
@@ -80,6 +87,13 @@ jobs:
           cmp \
             experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.verification.json \
             experiments/X-8503-fast-toeplitz-operator/results/target-static-budget.regenerated.json
+          python experiments/X-8504-threshold-insusceptibility/verify.py \
+            experiments/X-2805-directed-prime-producer/results/target-c1e11/vector/target-autocorrelation.txt \
+            experiments/X-2805-directed-prime-producer/results/target-c1e11/final/verdict-p192.json \
+            --output experiments/X-8504-threshold-insusceptibility/results/verification.regenerated.json
+          cmp \
+            experiments/X-8504-threshold-insusceptibility/results/verification.json \
+            experiments/X-8504-threshold-insusceptibility/results/verification.regenerated.json
       - name: Exercise and canonically bind one target-sized fast coefficient segment
         run: |
           /usr/bin/time -v \
@@ -144,3 +158,4 @@ jobs:
             experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.raw.json
             experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.bound.json
             experiments/X-8503-fast-toeplitz-operator/results/segment-2000-2001.time.txt
+            experiments/X-8504-threshold-insusceptibility/results/verification.regenerated.json
