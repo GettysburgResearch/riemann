@@ -458,3 +458,89 @@ the archimedean gate.  The next deliverable is therefore **not** more primes:
 18 tests pass.  Still no counterexample, still no `Z-####` — and one that a less
 careful pipeline would have claimed was caught and turned into a regression
 test.
+
+---
+
+## Addendum 3 — the archimedean bottleneck is gone (`L-5603`)
+
+Addendum 2 ended with the archimedean gate as the binding constraint and
+`Q-5604` — a rigorous evaluation of the L-4201 block — as the next deliverable.
+The mathematics of that is now done.
+
+### The observation
+
+`varphi_d = k \cdot \tau_d(\cdot/b)` is supported on `[(d-1)b, (d+1)b]`,
+vanishes at both outer endpoints, and is smooth except for the hat's kink at
+`t = db`.  The hat is *affine*, so `u'' = 0` and
+`varphi^{(m)} = k^{(m)}u + m k^{(m-1)}u'`.  Integrate by parts on each half:
+every `m = 0` boundary term vanishes (continuity plus vanishing outer values),
+the two `k^{(m)}` terms at the kink cancel in the difference, and what is left
+is
+
+```
+int varphi_d e^{-i omega t} dt
+  = sum_{m>=1} (i omega)^{-(m+1)} (m/b) D_d^{(m-1)},
+  D_d^{(j)} = k^{(j)}((d-1)b) e^{-i omega (d-1)b}
+            - 2 k^{(j)}(db)   e^{-i omega db}
+            +   k^{(j)}((d+1)b) e^{-i omega (d+1)b}.
+```
+
+The series starts at `omega^{-2}`, not `omega^{-1}`.  **The archimedean
+off-diagonals are `O(1/T^2)`**, smaller than L-4202's total-variation bound by a
+factor of order `omega b = T log(c)/K`.  Lag `d = 1` is the exception: its
+support reaches `t = 0` where the hat cancels `k`'s pole, leaving
+`varphi_1(0) = 1/b` and a genuine `O(1/T)` term — the *only* one in the whole
+block.
+
+### What it buys
+
+At the production carrier, where direct quadrature would need `10^{11}` panels
+per lag, the whole block takes 1.5 seconds:
+
+```text
+alpha_0 - ell_T                 2.1924e-24
+|z_1|                           1.3664e-12
+sum_{d>=2} |z_d|                1.2006e-22
+assembled row sum               1.3664e-12
+expansion remainder bound       2.1924e-36
+L-4202 uniform bound B_A        1.6566e-10      -> 121x larger
+```
+
+To ten significant figures the entire archimedean block is the single number
+`z_1 = 1/(2 pi omega b) = K/(2 pi T log c)`.
+
+Reassembling the production certificate with the computed blocks instead of the
+L-4202/L-4203 envelopes:
+
+```text
+lambda_min(A_K + R_K - S_K)  floating   2.671872230e-4
+                             lower      2.671861467e-4
+total enclosure half-width              7.633e-11
+  Gram residual + rounding              7.348e-11   <-- now dominant
+  L-5601 stream enclosure               2.830e-12
+  archimedean expansion remainder       2.192e-36
+  pole block (assembled)                5.962e-18
+```
+
+### Where the bottleneck is now
+
+It has moved four times in this session:
+
+1. carrier phase arithmetic → fixed by `L-5601`;
+2. cutoff relative to the Nyquist barrier → identified as `C-5601`;
+3. the archimedean gate → removed by `L-5603`;
+4. **the binary64 Gram factorization residual**, `7.35e-11`.
+
+Number 4 is an artifact of the linear algebra, not of the mathematics, and is
+removable by factoring in higher precision or by a sharper residual bound.  It
+sits `3.5e6` below the current margin, so it does not matter yet; it will matter
+the moment a cell with a margin near `10^{-10}` is found, which is precisely
+what the C-5601 programme aims at.
+
+The one genuinely analytic gap left in the chain is that `L-5603`'s
+implementation is ordinary floating point.  Making it directed — interval
+`k^{(j)}` at the knots, interval knot phases from L-5601, outward remainder — is
+bookkeeping rather than mathematics, and it is the last thing standing between
+this pipeline and a certified sign past the barrier.
+
+21 tests pass.  Still no counterexample.

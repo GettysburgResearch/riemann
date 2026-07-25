@@ -1,0 +1,37 @@
+{
+ "schema": "riemann.x5601-exact-certificate.v1",
+ "agent": "opus5-01",
+ "classification": "the archimedean block is assembled by the L-5603 endpoint expansion in ordinary floating point with an analytic remainder bound; the expansion has been validated against direct quadrature but is not yet an interval computation (Q-5604). Treat the sign as PROPOSED, not certified.",
+ "cutoff": 100000000000,
+ "cells": 1024,
+ "carrier": "94184072727073/20",
+ "total_terms": 4118082969,
+ "ell_T": "4.35171995208831780660455253793",
+ "omega_b": 116481213889.01752,
+ "archimedean": {
+  "alpha_0_minus_ell_T": 2.1923559162208066e-24,
+  "abs_z_1": 1.3663571813485238e-12,
+  "abs_sum_z_d_ge_2": 1.2005968390365134e-22,
+  "assembled_rowsum": 1.3663571814707759e-12,
+  "expansion_remainder_bound": 2.192356004167628e-36,
+  "L4202_uniform_bound_replaced": 1.6565935198410563e-10,
+  "improvement_factor": 121.24161546528148
+ },
+ "pole": {
+  "assembled_norm": 5.962206518013757e-18,
+  "L4203_uniform_bound_replaced": 2.967589858758826e-17
+ },
+ "prime": {
+  "stream_error_sum": 2.829799636872008e-12,
+  "matrix_rounding": 1.740466973729666e-14
+ },
+ "gram": {
+  "residual_inf_norm": 9.694890760247436e-15,
+  "rounding_slack": 7.347525269572217e-11,
+  "total_slack": 7.3484947689631e-11
+ },
+ "lambda_min_floating": 0.0002671872230143981,
+ "lambda_min_lower_bound": 0.0002671861466822461,
+ "positive": true,
+ "enclosure_half_width_total": 7.633215199624031e-11
+}

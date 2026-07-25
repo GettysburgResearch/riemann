@@ -322,3 +322,46 @@ def test_exact_form_is_nonnegative_below_the_verified_height(tmp_path):
                             f"got {lo_lead}")
     assert lo_exact > -1e-9, f"exact form negative below a verified height: {lo_exact}"
     assert lo_exact < 1e-3, f"exact form implausibly large: {lo_exact}"
+
+
+def test_asymptotic_matches_quadrature():
+    """L-5603: the endpoint expansion must reproduce the direct quadrature,
+    and the difference must sit inside its own remainder bound."""
+    import archimedean_asymptotic as AA
+    import archimedean_block as AB
+
+    cutoff, cells, num, den = 10 ** 9, 512, 6283185307, 1000000
+    T = num / den
+    z, rem, _b, _om, psi = AA.asymptotic_lags(cutoff, cells, num, den, nterms=3)
+    _a0, zq, _bb, _ell = AB.archimedean_lags(cutoff, cells, T,
+                                             per_osc=1, order=10)
+    diff = np.abs(z[2:] - zq[2:])
+    assert psi > 10.0, "expansion is only meaningful for omega*b >> 1"
+    assert diff.max() < rem[2:].max(), (diff.max(), rem[2:].max())
+    assert diff.sum() < 1e-3 * np.abs(zq[2:]).sum()
+
+
+def test_asymptotic_respects_the_L4202_envelope():
+    """The assembled block must satisfy the uniform bound it replaces."""
+    import archimedean_asymptotic as AA
+
+    cutoff, cells, num, den = 10 ** 11, 1024, 94184072727073, 20
+    z, _rem, _b, _om, _psi = AA.asymptotic_lags(cutoff, cells, num, den, 3)
+    z1, shift, _bb, _oo = AA.lag_one_and_diagonal(cutoff, cells, num, den, 3)
+    total = abs(z1) + float(np.abs(z[2:]).sum()) + abs(shift)
+    gate = A.correction_gate(cutoff, cells, num, den)
+    assert total <= gate["B_arch_float"], (total, gate["B_arch_float"])
+    # and it should be substantially smaller, else the expansion is wrong
+    assert total < gate["B_arch_float"] / 10.0
+
+
+def test_lag_one_dominates_at_a_large_carrier():
+    """At omega*b >> 1 the whole archimedean block collapses onto z_1."""
+    import archimedean_asymptotic as AA
+
+    cutoff, cells, num, den = 10 ** 11, 1024, 94184072727073, 20
+    z, _rem, b, omega, _psi = AA.asymptotic_lags(cutoff, cells, num, den, 3)
+    z1, _shift, _bb, _oo = AA.lag_one_and_diagonal(cutoff, cells, num, den, 3)
+    assert float(np.abs(z[2:]).sum()) < 1e-6 * abs(z1)
+    # z_1 ~ 1/(2 pi omega b)
+    assert abs(abs(z1) - 1.0 / (2 * np.pi * omega * b)) < 1e-3 * abs(z1)

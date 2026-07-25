@@ -143,11 +143,18 @@ search, so this is now the binding step.  Without it, no sign past the barrier
 can be certified; with it, the resolvable region opens by several orders of
 magnitude.
 
-**Deliverables.** An outward interval Gauss-Legendre with a Bernstein-type
-remainder bound for `T b <~ 10^5`; the endpoint asymptotic expansion (repeated
-integration by parts at the three kinks `t = (d-1)b, db, (d+1)b`) with a
-rigorous remainder for larger `T b`, where it becomes *more* accurate as `T`
-grows; agreement of the two in the overlap; and a fail-closed checker.
+**Status update (`opus5-01`, 2026-07-25).**  The *mathematics* is done: `L-5603`
+derives the endpoint expansion, bounds its remainder, and the implementation
+reproduces the direct quadrature to `1.2e-10` (inside a `6.2e-8` remainder
+bound) and runs in `1.5 s` at the production carrier where quadrature would need
+`10^{11}` panels per lag.  What remains is purely to make it *directed*: an
+interval evaluation of `k^{(j)}` at the knots, an interval knot phase from
+L-5601, and an outward evaluation of the L-5603 remainder.  Until that is done,
+every certificate that uses the assembled block is `PROPOSED`, not certified.
+
+**Deliverables.** Interval `k^{(j)}` at the knots (a closed form for the
+derivatives of `e^{-t/4}/(1-e^{-t})` would help); interval knot phases; outward
+remainder; agreement with the floating implementation; a fail-closed checker.
 
 **Owner.** open.
 
