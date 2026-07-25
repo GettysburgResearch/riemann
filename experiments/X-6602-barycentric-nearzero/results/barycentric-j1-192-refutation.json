@@ -1,0 +1,71 @@
+{
+  "classification": "STRICTLY_POSITIVE",
+  "coefficient_l1_normalized_interval": {
+    "lower": {
+      "denominator": "882988877791883689795161674290145650379589770211938911148914802332916016502104389585532354560",
+      "numerator": "1024679801381490639010117164056631580632291008772279"
+    },
+    "lower_scientific": "1.16046739336506430e-42",
+    "upper": {
+      "denominator": "80271716162898517254105606753649604579962706382903537377174072939356001500191308144139304960",
+      "numerator": "93152709216503294927789979387035778416688774137467"
+    },
+    "upper_scientific": "1.16046739336511607e-42"
+  },
+  "counterexample_candidate": null,
+  "exact_moment_cancellations": [0, 1, 2, 3, 4, 5, 6],
+  "exact_ordinate": {
+    "denominator": "4294967296",
+    "numerator": "20225875608343255624083",
+    "offset_index": 1
+  },
+  "primitive_integer_barycentric_vector": [
+    "-4260607557632",
+    "5816828559360",
+    "-1715672285184",
+    "189885604480",
+    "-31899582000",
+    "1466028564",
+    "-767715",
+    "127"
+  ],
+  "proof_boundary": "Exact rational contraction of retained outward FLINT/Arb rectangles. This certifies positivity only for the supplied finite row; it is not evidence for RH elsewhere.",
+  "raw_contracted_interval": {
+    "lower": {
+      "denominator": "7636432155367172140920535425850242407212212459161071039606983631170437120",
+      "numerator": "13401707874557357024508791985245333467259919582978309601714419"
+    },
+    "lower_scientific": "1.75496980813718514e-12",
+    "upper": {
+      "denominator": "7636432155367172140920535425850242407212212459161071039606983631170437120",
+      "numerator": "13401707874557953491334625920592076451469860595159106629836557"
+    },
+    "upper_scientific": "1.75496980813726329e-12",
+    "width_scientific": "7.81080501598794351e-26"
+  },
+  "schema": "riemann.xi-barycentric-nearzero-refutation.v1",
+  "source": {
+    "artifact_id": "8564591455",
+    "artifact_name": "arb-xi-ambiguous-pick-batch",
+    "artifact_zip_sha256": "646ff50e6191d68700bc3bb9a2ad21010241f51ad384d9ee36078a55d6f857a3",
+    "backend": "FLINT C acb_dirichlet_zeta_jet_rs",
+    "certificate_filename": "frozen-pick-batch-192.certificate.json",
+    "certificate_sha256": "bc9bf349864fa65257a195538404e20a9e49891d18e2e55faeb44505b85d618f",
+    "precision_bits": 192,
+    "workflow_run_id": "30009653881"
+  },
+  "status": "CERTIFIED_NONNEGATIVE_FINITE_ROW",
+  "vector_norm_normalized_interval": {
+    "lower": {
+      "denominator": "139922038162763404822092244244720580964327264106197868168370169163452949804586967626542228910899200",
+      "numerator": "4467235958185785674836263995081777822419973194326103200571473"
+    },
+    "lower_scientific": "3.19266072510271935e-38",
+    "upper": {
+      "denominator": "139922038162763404822092244244720580964327264106197868168370169163452949804586967626542228910899200",
+      "numerator": "4467235958185984497111541973530692150489953531719702209945519"
+    },
+    "upper_scientific": "3.19266072510286134e-38"
+  },
+  "x_bits": [17, 15, 13, 11, 10, 9, 7, 5]
+}
