@@ -62,12 +62,24 @@ The exact shift is
 
 The binary64 ulp at this height is `1/1024`. The committed absolute zero ordinates are produced by binary64 addition and lie on that grid. They therefore cannot encode the stated `~1e-9` absolute refinement. This does not refute the large gap; it narrows the claim to the precision actually retained.
 
+The commit's two purportedly independent table builds give
+
+```text
+-259.778388
+-259.768708,
+```
+
+a difference of about `9.68e-3`. Only the first agrees with the displayed
+`mpmath` value. This is consistent with evaluating nearby binary64 ordinates in
+a region where `Z` changes rapidly; it is not a same-point nine-digit phase
+validation. The order-`10^2` magnitude of `|Z|` remains robust.
+
 ## New proof units
 
 - `R-5602`: scope correction for parity, counting exclusivity, sign changes, local closure, and exact input.
 - `L-5605`: exact total-minus-line zero-slab discrepancy criterion.
 - `L-5606`: dominant-rank Gram conditioning lemma.
-- `X-5603`: standard-library exact provenance audit, retained output, tests, a FLINT Platt/Turing consecutive-zero producer, and precision nesting checker.
+- `X-5603`: standard-library exact provenance audit, retained output, tests, two FLINT Platt/Turing producers, and precision-nesting checkers.
 
 ## Verification performed
 
@@ -77,13 +89,31 @@ retained JSON regenerates byte-for-byte
 compile checks pass
 ```
 
-FLINT was not available locally. The package gateway failed, and the new GitHub workflow had not exposed an execution when this report was written. No FLINT output is claimed.
+FLINT was not available locally. The package gateway returned `503`, and the new GitHub workflow had not exposed an execution when this report was written. No FLINT output is claimed.
 
 ## Correct offensive target
 
-A large line-zero gap becomes a counterexample only if an independent total-zero count proves that the corresponding full critical-strip slab contains a zero while the critical line is empty there. The branch therefore calls FLINT's `acb_dirichlet_platt_zeta_zeros` at the exact dyadic target and asks for consecutive total-zero balls.
+A large line-zero gap becomes a counterexample only if an independent total-zero count proves that the corresponding full critical-strip slab contains a zero while the critical line is empty there.
 
-If the returned total zeros bracket the target consecutively, the local gap is certified empty of all zeros. If a total zero is found inside a rigorously line-empty interval, `L-5605` gives an unconditional RH counterexample.
+The strongest producer on this branch now performs the decisive composition directly:
+
+```text
+acb_dirichlet_platt_hardy_z_zeros
+    -> consecutive critical-line zero balls
+    -> exact dyadic interior endpoints a,b
+acb_dirichlet_zeta_nzeros
+    -> N(a), N(b), counted with multiplicity
+```
+
+Since the interior slab is critical-line-empty,
+
+```text
+D = N(b)-N(a) > 0
+```
+
+is exactly the `L-5605` finite RH-disproof predicate. `D=0` certifies only that this exact interior slab is empty of all zeros.
+
+Trusted-base child PR #92 launches the 128/192-bit precision ladder. It requires stable Hardy-zero indices, integer counts, discrepancy, classification, and nested zero balls. No run result is yet claimed.
 
 ## Candidate status
 
