@@ -1,0 +1,31 @@
+{
+  "schema": "riemann.xi-modulus-log-loewner.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "log_series_terms": 96,
+  "points": [
+    {"id": "on-u1", "u": {"numerator": 1, "denominator": 1}, "h_interval": {"lower": {"numerator": 2, "denominator": 1}, "upper": {"numerator": 2, "denominator": 1}}},
+    {"id": "on-u2", "u": {"numerator": 3, "denominator": 1}, "h_interval": {"lower": {"numerator": 4, "denominator": 1}, "upper": {"numerator": 4, "denominator": 1}}},
+    {"id": "on-v1", "u": {"numerator": 7, "denominator": 1}, "h_interval": {"lower": {"numerator": 8, "denominator": 1}, "upper": {"numerator": 8, "denominator": 1}}},
+    {"id": "on-v2", "u": {"numerator": 15, "denominator": 1}, "h_interval": {"lower": {"numerator": 16, "denominator": 1}, "upper": {"numerator": 16, "denominator": 1}}},
+
+    {"id": "off-u1", "u": {"numerator": 9, "denominator": 2}, "h_interval": {"lower": {"numerator": 1, "denominator": 4}, "upper": {"numerator": 1, "denominator": 4}}},
+    {"id": "off-u2", "u": {"numerator": 21, "denominator": 4}, "h_interval": {"lower": {"numerator": 1, "denominator": 16}, "upper": {"numerator": 1, "denominator": 16}}},
+    {"id": "off-v1", "u": {"numerator": 19, "denominator": 4}, "h_interval": {"lower": {"numerator": 1, "denominator": 16}, "upper": {"numerator": 1, "denominator": 16}}},
+    {"id": "off-v2", "u": {"numerator": 11, "denominator": 2}, "h_interval": {"lower": {"numerator": 1, "denominator": 4}, "upper": {"numerator": 1, "denominator": 4}}}
+  ],
+  "rows": [
+    {
+      "id": "online-positive-control",
+      "kind": "cross-log-loewner-minor",
+      "row_points": ["on-u1", "on-u2"],
+      "column_points": ["on-v1", "on-v2"]
+    },
+    {
+      "id": "offline-negative-control",
+      "kind": "cross-log-loewner-minor",
+      "row_points": ["off-u1", "off-u2"],
+      "column_points": ["off-v1", "off-v2"]
+    }
+  ]
+}
