@@ -1,0 +1,167 @@
+name: PR71 zero-deflated direct-xi modulus
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - experiments/X-9301-zero-deflated-xi-modulus/RUN_PR71.md
+      - .github/workflows/pr71-zero-deflated-modulus.yml
+      - experiments/X-9301-zero-deflated-xi-modulus/**
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr71-zero-deflated-modulus-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous FLINT backend
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+
+      - name: Run exact checker and bridge tests
+        run: |
+          python -m compileall -q \
+            experiments/X-9301-zero-deflated-xi-modulus
+          python -m unittest discover \
+            -s experiments/X-9301-zero-deflated-xi-modulus/tests -v
+
+      - name: Generate exact PR71 direct-xi source
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p experiments/X-9301-zero-deflated-xi-modulus/results/pr71
+          python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_rs_source.py \
+            --output /tmp/pr71_rs_modulus.c \
+            --manifest experiments/X-9301-zero-deflated-xi-modulus/results/pr71/source-patch.json
+
+      - name: Import exact reviewed X-5603 gap source
+        shell: bash
+        run: |
+          set -euo pipefail
+          audit_commit=ccb9480b861af1d87c36871e334dc346e9267827
+          git fetch --no-tags --depth=50 origin \
+            agent/gpt56-02-i/55-pr71-counting-audit
+          git cat-file -e "${audit_commit}^{commit}"
+          git show "${audit_commit}:experiments/X-5603-pr71-gap-audit/flint_line_gap_discrepancy.c" \
+            >/tmp/pr71_gap_discrepancy.c
+          printf '%s\n' "$audit_commit" \
+            >experiments/X-9301-zero-deflated-xi-modulus/results/pr71/gap-source-commit.txt
+          sha256sum /tmp/pr71_gap_discrepancy.c /tmp/pr71_rs_modulus.c \
+            >experiments/X-9301-zero-deflated-xi-modulus/results/pr71/generated-sources.sha256
+
+      - name: Compile rigorous producers
+        run: |
+          cc -O3 -std=c11 -Wall -Wextra -Werror \
+            /tmp/pr71_gap_discrepancy.c -o /tmp/pr71_gap_discrepancy \
+            -lflint -lmpfr -lgmp -lpthread -lm
+          cc -O3 -std=c11 -Wall -Wextra \
+            /tmp/pr71_rs_modulus.c -o /tmp/pr71_rs_modulus \
+            -lflint -lmpfr -lgmp -lpthread -lm
+
+      - name: Produce nested Hardy-zero and Turing certificates
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
+          /usr/bin/time -v /tmp/pr71_gap_discrepancy 192 128 4 \
+            >"$out/gap-p192.json" 2>"$out/gap-p192.time.txt"
+          /usr/bin/time -v /tmp/pr71_gap_discrepancy 256 128 4 \
+            >"$out/gap-p256.json" 2>"$out/gap-p256.time.txt"
+          python experiments/X-9301-zero-deflated-xi-modulus/compare_pr71_gap.py \
+            "$out/gap-p192.json" "$out/gap-p256.json" \
+            --output "$out/gap-comparison.json"
+
+      - name: Produce direct completed-xi rectangles at the exact PR71 ordinate
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
+          /usr/bin/time -v /tmp/pr71_rs_modulus 192 \
+            >"$out/xi-primitives-p192.json" 2>"$out/xi-p192.time.txt"
+          /usr/bin/time -v /tmp/pr71_rs_modulus 256 \
+            >"$out/xi-primitives-p256.json" 2>"$out/xi-p256.time.txt"
+
+      - name: Assemble and verify zero-deflated certificates
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
+          config=experiments/X-9301-zero-deflated-xi-modulus/configs/pr71-deflated-rows.json
+          for precision in 192 256; do
+            python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_certificate.py \
+              "$out/xi-primitives-p${precision}.json" \
+              "$out/gap-p256.json" "$config" \
+              --output "$out/certificate-p${precision}.json"
+            set +e
+            python experiments/X-9301-zero-deflated-xi-modulus/verify_zero_deflated_modulus.py \
+              "$out/certificate-p${precision}.json" \
+              --output "$out/verification-p${precision}.json"
+            status=$?
+            set -e
+            test "$status" -le 1
+          done
+          python experiments/X-9301-zero-deflated-xi-modulus/compare_x9301_precision.py \
+            "$out/certificate-p192.json" "$out/certificate-p256.json" \
+            --output "$out/precision-comparison.json"
+
+      - name: Summarize and hash proof artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('experiments/X-9301-zero-deflated-xi-modulus/results/pr71')
+          gap=json.loads((root/'gap-p256.json').read_text())
+          low=json.loads((root/'verification-p192.json').read_text())
+          high=json.loads((root/'verification-p256.json').read_text())
+          comparison=json.loads((root/'precision-comparison.json').read_text())
+          summary={
+            'schema':'riemann.x9301-pr71-production-summary.v1',
+            'target':gap['target'],
+            'gap_classification':gap['classification'],
+            'total_zero_discrepancy_in_line_empty_slab':gap['total_zero_discrepancy_in_line_empty_slab'],
+            'low_verdict':low['verdict'],
+            'high_verdict':high['verdict'],
+            'low_negative_rows':low['certified_negative_rows'],
+            'high_negative_rows':high['certified_negative_rows'],
+            'low_unresolved_rows':low['unresolved_rows'],
+            'high_unresolved_rows':high['unresolved_rows'],
+            'precision_nesting':comparison['all_high_intervals_nested'],
+            'counterexample_nomination':(
+              'PENDING_INDEPENDENT_REPRODUCTION_AND_REVIEW'
+              if gap['classification']=='CERTIFIED_OFF_CRITICAL_ZERO_IN_LINE_EMPTY_SLAB'
+              or high['certified_negative_rows']>0 else None
+            ),
+          }
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+          find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | \
+            xargs -0 sha256sum >"$out/SHA256SUMS"
+
+      - name: Upload every proof and diagnostic artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr71-zero-deflated-xi-modulus
+          path: experiments/X-9301-zero-deflated-xi-modulus/results/pr71/
+          retention-days: 30
+          if-no-files-found: warn
