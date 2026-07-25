@@ -94,6 +94,27 @@ r=1/2, D=15/4, lambda_plus=5/2,
 determinant ratio=-7/16.
 ```
 
+## Second eureka: coherent threshold packets
+
+Every prime power that has entered but has not yet reached its first deposition
+knot acts in the same endpoint corner channel.  Across an admission/first-knot
+mesh cell, the complete packet is
+
+```text
+S_packet(L)=Z(L)e_0e_{K-1}^*+conj(Z(L))e_{K-1}e_0^*,
+Z(L)=A0-A1/L.
+```
+
+Thus an arbitrarily large set of simultaneous new thresholds remains rank two.
+The generalized pressure is convex in `1/L`, and the exact determinant ratio is
+a concave quadratic in `1/L`; its worst point is always a mesh endpoint.
+
+This exposes a second failure mode of scalar ranking.  In the exact control, two
+individually subcritical same-phase events each have secular ratio `16/25`, but
+their coherent sum has ratio `-11/25` and crosses.  Opposite phases cancel
+exactly.  Thresholds must therefore be aggregated coherently before interval
+widening.
+
 ## Production compression
 
 A full inverse is unnecessary.  L-8302 proves that two approximate solves
@@ -117,11 +138,12 @@ This changes threshold ranking from repeated `1024 x 1024` eigensolves to:
 
 - `L-8301`: exact rank-two Green/secular theorem;
 - `L-8302`: residual endpoint-solve enclosures;
+- `L-8303`: coherent corner-packet aggregation and endpoint-only mesh theorem;
 - `T-8301`: smooth-background robust trichotomy;
 - `M-8301`: production search protocol;
 - `X-8301`: exact Gaussian-rational checker and certificate.
 
-Nine adversarial tests pass.
+Fifteen adversarial tests pass across the Green and packet checkers.
 
 ## Proof boundary
 
@@ -133,6 +155,7 @@ and Guinand--Weil normalization remain independent gates.
 ## Immediate next work
 
 Complete one directed lag-box pass, use PR #79 to certify the recovered baseline
-matrix positive, solve its two endpoint systems, and scan adjacent thresholds by
-T-8301.  This is the first test that can discover a whole-matrix corner crossing
-missed by the already excluded recovered vector.
+matrix positive, solve its two endpoint systems, build the admission/first-knot
+packet mesh, and scan it by L-8303/T-8301.  This is the first test that can
+discover a whole-matrix corner crossing missed by the already excluded
+recovered vector.
