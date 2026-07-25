@@ -1,0 +1,54 @@
+{
+  "schema": "riemann.xi-complex-pick.independent-jm15-ladder.v1",
+  "point_set": {
+    "j": -15,
+    "t": {
+      "numerator": "20225875608341108140435",
+      "denominator": "4294967296"
+    },
+    "x": ["2^-17", "2^-15", "2^-13", "2^-11", "2^-10", "2^-9", "2^-7", "2^-5"]
+  },
+  "frozen_vector": {
+    "rounding_scale": "2^256",
+    "canonical_sha256": "591247a0837bd25c2448d59ede22925874f2e03ce7fc12275092c616a14d0d7a"
+  },
+  "discovery": {
+    "backend": "FLINT/Arb 128-bit primitive midpoint matrix",
+    "midpoint_lambda_min": "-2.626429492911995e-33",
+    "exact_128_bit_contraction_status": "UNRESOLVED_ZERO_TOUCH",
+    "normalized_interval_orientation": {
+      "lower": "approximately -5.726e-30",
+      "upper": "approximately +5.721e-30"
+    }
+  },
+  "independent_replay": {
+    "backend": "mpmath Riemann-Siegel simultaneous zeta assembly; ordinary high precision, not directed intervals",
+    "rungs": [
+      {
+        "decimal_digits": 50,
+        "normalized_fixed_vector": "+1.1392326587787596e-33",
+        "midpoint_lambda_min": "+1.1052300660571861e-33"
+      },
+      {
+        "decimal_digits": 60,
+        "normalized_fixed_vector": "+1.2260274370297923e-35",
+        "midpoint_lambda_min": "+1.2259907090239005e-35"
+      },
+      {
+        "decimal_digits": 70,
+        "normalized_fixed_vector": "+1.2260274655534928654e-35",
+        "midpoint_lambda_min": "+1.2259907375435524065e-35",
+        "second_eigenvalue": "approximately +4.16e-26"
+      }
+    ],
+    "classification": "INDEPENDENT_HIGH_PRECISION_POSITIVE_NOT_DIRECTED"
+  },
+  "conclusion": "The strongest new full-complex midpoint negative is not supported by the independent 60/70-digit Riemann-Siegel replay. It is retained as a refuted numerical nomination, not a rigorous directed exclusion, because the corresponding higher-precision FLINT workflow was unavailable.",
+  "infrastructure_audit": {
+    "new_workflow_runs": [30169238947, 30169312085],
+    "result": "failed before exposing a first job step or artifact",
+    "control": "an unchanged previously successful FLINT workflow was rerun and failed in the same pre-step manner",
+    "inference": "no mathematical or code conclusion is drawn from the workflow failures"
+  },
+  "proof_boundary": "The independent replay is ordinary arbitrary precision and does not replace a directed second-backend certificate. No RH implication or candidate status follows."
+}
