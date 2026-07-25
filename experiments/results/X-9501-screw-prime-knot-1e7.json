@@ -1,0 +1,171 @@
+{
+  "arithmetic": "binary64; not directed",
+  "classification": "EMPIRICAL_RECONNAISSANCE_ONLY",
+  "environment": {
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "implementation": {
+    "script": "screw_prime_knot_scan.py",
+    "sha256": "caf74725919345a97935cbc06e665ce0928ad49bc6522de69eb27b71a3677cbf"
+  },
+  "matrix_reconnaissance": {
+    "anchored_screw_max_eigenvalue": 0.21495835298772498,
+    "anchored_screw_min_eigenvalue": 0.020778862409304082,
+    "best_pair_determinant": {
+      "determinant": 0.0025940706852797877,
+      "i": 3,
+      "j": 6,
+      "normalized": 0.7437563674368014
+    },
+    "gaussian": [
+      {
+        "lambda": 0.1,
+        "max_eigenvalue": 7.975570833573562,
+        "min_eigenvalue": 0.0020767354468397073
+      },
+      {
+        "lambda": 1.0,
+        "max_eigenvalue": 7.759545718814829,
+        "min_eigenvalue": 0.020657755611436276
+      },
+      {
+        "lambda": 10.0,
+        "max_eigenvalue": 5.937722676879707,
+        "min_eigenvalue": 0.19466916333174655
+      }
+    ],
+    "numpy_version": "2.3.5",
+    "psi": [
+      0.029786899636864206,
+      0.028022623682616654,
+      0.0275205733535131,
+      0.029652288966417473,
+      0.028060310839464364,
+      0.02929905368728214,
+      0.029405792884062976,
+      0.02782548131654039
+    ],
+    "status": "heuristic_binary64",
+    "times": [
+      3.5406559747444586,
+      5.338091751139441,
+      8.039063759496273,
+      9.307105126253667,
+      12.013229731486899,
+      13.771020895930949,
+      14.657756528958537,
+      15.5390590670951
+    ]
+  },
+  "smallest_candidates": [
+    {
+      "derivative": 7.105427357601002e-14,
+      "kind": "stationary",
+      "left_q": 3089,
+      "right_q": 3109,
+      "t": 8.039063759496273,
+      "value": 0.0275205733535131
+    },
+    {
+      "derivative": 0.16674064914104747,
+      "kind": "knot",
+      "left_q": 3109,
+      "right_q": null,
+      "t": 8.042056410058754,
+      "value": 0.027770009380446936
+    },
+    {
+      "derivative": 3.637978807091713e-12,
+      "kind": "stationary",
+      "left_q": 5604367,
+      "right_q": 5604451,
+      "t": 15.5390590670951,
+      "value": 0.02782548131654039
+    },
+    {
+      "derivative": -4.547473508864641e-12,
+      "kind": "stationary",
+      "left_q": 5604329,
+      "right_q": 5604359,
+      "t": 15.539053521753598,
+      "value": 0.027825485696666874
+    },
+    {
+      "derivative": 2.7284841053187847e-12,
+      "kind": "stationary",
+      "left_q": 5604359,
+      "right_q": 5604367,
+      "t": 15.539056294427134,
+      "value": 0.02782548793038586
+    },
+    {
+      "derivative": 0.0008967634048531181,
+      "kind": "knot",
+      "left_q": 5604367,
+      "right_q": null,
+      "t": 15.539056673231201,
+      "value": 0.027825488097732887
+    },
+    {
+      "derivative": 0.004081357731593016,
+      "kind": "knot",
+      "left_q": 5604359,
+      "right_q": null,
+      "t": 15.539055245771918,
+      "value": 0.02782548921823036
+    },
+    {
+      "derivative": -0.0020271314760975656,
+      "kind": "knot",
+      "left_q": 5604329,
+      "right_q": null,
+      "t": 15.53904989278145,
+      "value": 0.02782550129632
+    },
+    {
+      "derivative": -0.004756324426125502,
+      "kind": "knot",
+      "left_q": 5604307,
+      "right_q": null,
+      "t": 15.539045967236898,
+      "value": 0.027825527497043367
+    },
+    {
+      "derivative": -0.0007268886383826612,
+      "kind": "knot",
+      "left_q": 5604301,
+      "right_q": null,
+      "t": 15.539044896631163,
+      "value": 0.027825533943541814
+    },
+    {
+      "derivative": -1.8189894035458565e-12,
+      "kind": "stationary",
+      "left_q": 5604251,
+      "right_q": 5604281,
+      "t": 15.539039658266201,
+      "value": 0.027825538942124695
+    },
+    {
+      "derivative": -2.7284841053187847e-12,
+      "kind": "stationary",
+      "left_q": 5604281,
+      "right_q": 5604289,
+      "t": 15.539042430975766,
+      "value": 0.027825540804769844
+    }
+  ],
+  "stats": {
+    "cutoff": 10000000,
+    "knot_count": 665134,
+    "post_log2_convexity_floor": 1.178511301977579,
+    "prime_power_count": 665134,
+    "stationary_cell_count": 10341
+  },
+  "timing_seconds": {
+    "manifest": 0.9676302479999777,
+    "scalar_scan": 1.6951810880000266,
+    "total": 2.7550946730000305
+  }
+}
