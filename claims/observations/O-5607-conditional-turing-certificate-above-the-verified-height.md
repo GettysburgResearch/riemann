@@ -131,3 +131,47 @@ python3 turing.py results/zeros-1e13.txt \
 Interval-certify `Z`.  Everything else in this claim is already conditional on
 one imported bound; item 2 is the only part that depends on code written here,
 and it is the only part that can be removed by work rather than by citation.
+
+## Update: the total count is now unconditional (`N = 4467`)
+
+The certificate above is conditional on an imported bound on `\int S` and on an
+uncertified `Z`.  Arb removes the first condition outright, by computing `N(t)`
+rigorously (`X-5604`):
+
+```text
+a = 20000000000001/2 = 10000000000000.5      (exact dyadic)
+b = 20000000001999/2 = 10000000000999.5
+
+N(a) = 43124192297104        Arb ball, radius 0
+N(b) = 43124192301571        Arb ball, radius 0
+N(a,b) = 4467                                          50.3 s at 192 bits
+```
+
+Two independent confirmations, both exact:
+
+- `N(a) = 43124192297104` is precisely the `N_t1_estimate` that `turing.py`
+  derived from `rs_zeta`'s sign changes and the smooth `theta` — a 14-digit
+  integer reproduced by a method sharing no code with Arb.
+- `N(a,b) = 4467` is precisely the number of sign changes `turing.py` counted in
+  the same window.  Since `V \le N_0 \le N`, that equality already forces
+  `N_0 = N` and `D = 0` **provided** the 4467 sign changes are real — which is
+  exactly what the second condition was about.
+
+**Status of the second condition.**  A certified sign pass over this window
+(`certified_sign_changes.py`, the same machinery that closed the PR #71 window
+in 81 s) was launched and is **incomplete**: `175` of `4468` sample points at
+the time of writing, `~0.61 s` each, so roughly `45` minutes in total.  No
+result from it is claimed here.  When it finishes, `4467` certified sign changes
+would give `D = 0` unconditionally over `999` units of height at
+`t = 10^{13}` — `3.33` times the Platt–Trudgian verified height.  To resume:
+
+```bash
+cd experiments/X-5604-exact-slab-discrepancy && ./run_1e13.sh
+```
+
+Until then the `99.7%` figure above stands as stated: conditional, and computed
+from zero ordinates that were serialized at binary64 granularity (see the
+correction in `O-5604`), which for a `4467`-term sum is a worst case of `2.2`
+against a bound of `5.99` — realised error `~0.02`, since the rounding is
+effectively random, but worst case is what a certificate is entitled to assume.
+The unconditional route above makes that whole question moot once it lands.
