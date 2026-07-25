@@ -4,11 +4,14 @@ on:
   push:
     branches:
       - agent/gpt56-03-e/39-arb-xi-passivity
+      - agent/gpt56-06-d/66-arb-xi-dual-portfolio
     paths:
       - '.github/workflows/arb-xi-candidate.yml'
       - 'experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c'
       - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/rs_cross_pick_candidate.c'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/verify_cross_pick_certificate.py'
   pull_request:
     branches:
       - agent/gpt56-02-e/39-xi-passivity-adversarial-scan
@@ -17,6 +20,8 @@ on:
       - 'experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c'
       - 'experiments/X-3902-arb-xi-passivity/verify_certificate.py'
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/rs_cross_pick_candidate.c'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/verify_cross_pick_certificate.py'
   workflow_dispatch:
 
 concurrency:
@@ -29,7 +34,7 @@ permissions:
 jobs:
   candidate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -40,17 +45,23 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libflint-dev pkg-config
           pkg-config --modversion flint
-      - name: Compile frozen producer and exact checker
+      - name: Compile frozen producers and exact checkers
         run: |
           mkdir -p experiments/X-3902-arb-xi-passivity/results/candidate
+          mkdir -p experiments/X-6601-arb-xi-dual-portfolio/results/cross-candidate
           cc -O3 -std=c11 -Wall -Wextra -Werror \
             experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c \
             -o experiments/X-3902-arb-xi-passivity/rs_candidate_pick \
             -lflint -lmpfr -lgmp -lpthread -lm
+          cc -O3 -std=c11 -Wall -Wextra -Werror \
+            experiments/X-6601-arb-xi-dual-portfolio/rs_cross_pick_candidate.c \
+            -o experiments/X-6601-arb-xi-dual-portfolio/rs_cross_pick_candidate \
+            -lflint -lmpfr -lgmp -lpthread -lm
           python -m compileall -q \
             experiments/X-3902-arb-xi-passivity/verify_certificate.py \
-            experiments/X-3902-arb-xi-passivity/verify_value_certificate.py
-      - name: Produce and replay directed precision ladder
+            experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
+            experiments/X-6601-arb-xi-dual-portfolio/verify_cross_pick_certificate.py
+      - name: Preserve original same-height control
         run: |
           for bits in 192 256 384 512; do
             /usr/bin/time -v \
@@ -60,12 +71,39 @@ jobs:
             python experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
               "experiments/X-3902-arb-xi-passivity/results/candidate/frozen-pick-${bits}.certificate.json" \
               --output "experiments/X-3902-arb-xi-passivity/results/candidate/frozen-pick-${bits}.verification.json"
-            cat "experiments/X-3902-arb-xi-passivity/results/candidate/frozen-pick-${bits}.verification.json"
           done
-      - name: Upload frozen precision ladder
+      - name: Produce and replay arbitrary-height complex finalist
+        run: |
+          for bits in 192 256 384 512; do
+            cert="experiments/X-6601-arb-xi-dual-portfolio/results/cross-candidate/cross-pick-${bits}.certificate.json"
+            verify="experiments/X-6601-arb-xi-dual-portfolio/results/cross-candidate/cross-pick-${bits}.verification.json"
+            /usr/bin/time -v \
+              experiments/X-6601-arb-xi-dual-portfolio/rs_cross_pick_candidate "$bits" \
+              > "$cert" \
+              2> "experiments/X-6601-arb-xi-dual-portfolio/results/cross-candidate/cross-pick-${bits}.time.txt"
+            python experiments/X-6601-arb-xi-dual-portfolio/verify_cross_pick_certificate.py \
+              "$cert" --output "$verify"
+            python - "$bits" "$verify" <<'PY'
+          import json,sys
+          bits,path=sys.argv[1:]
+          d=json.load(open(path))
+          print(json.dumps({
+              'bits':int(bits),
+              'verified':d['verified'],
+              'status':d['status'],
+              'normalized_interval':d['normalized_interval'],
+              'verification_sha256':d['verification_sha256']
+          },indent=2,sort_keys=True))
+          if not d['verified']:
+              raise SystemExit('cross-height exact replay rejected')
+          PY
+          done
+      - name: Upload directed candidate ladders
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: arb-xi-frozen-pick-candidate
           if-no-files-found: error
-          path: experiments/X-3902-arb-xi-passivity/results/candidate/
+          path: |
+            experiments/X-3902-arb-xi-passivity/results/candidate/
+            experiments/X-6601-arb-xi-dual-portfolio/results/cross-candidate/
