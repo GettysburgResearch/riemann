@@ -29,7 +29,9 @@ ranked list of where to look next.
 | Every zero with `0 < t <= 500` is on the critical line and simple | `t <= 500` | L-0004 (box count 269 = 269 sign changes) | `X-0001/results/census-T500.json` |
 | No zero with `\|Re s - 1/2\| >= 0.01`, `0 <= t <= 500` | `t <= 500` | L-0002, independent of the above | same |
 | Every zero in four boxes spanning `12 <= t <= 48` is on the line | those boxes | T-0001 (Hankel positive definite) | `X-0002/results/certificates-nsub32.json` |
-| Both zeros of the tightest Lehmer pair below `T = 2000` (`gamma ~ 1977.17`) are on the line | that box | T-0001 **and** L-0004, independently | `X-0002/results/lehmer-pair-1977.json` |
+| The four tightest Lehmer pairs below `T = 2000` (`gamma = 1977.17, 1329.04, 1415.59, 1054.78`) have both zeros on the line | those boxes | T-0001 **and** L-0004, independently, on each | `X-0002/results/lehmer-pair*.json` |
+| 1517 certified on-line zero ordinates for `0 < t <= 2000` | `t <= 2000` | sign change + bisection (existence only; not a completeness claim without the box count) | `X-0004/results/lehmer-T2000.json` |
+| Deficit `N_box - m` is `0` in all 24 height bands to `T = 500` | `t <= 500` | M-0005 ledger | `X-0001/results/deficit-ledger.json` |
 | No Robin / Lagarias violation among colossally abundant `n` up to 11541 digits | that set | exact integers + certified enclosures | `X-0003/results/criteria-2000000.json` |
 | No Nicolas violation among primorials to `p_k = 2*10^6` | that set | exact rationals + certified enclosures | same |
 
