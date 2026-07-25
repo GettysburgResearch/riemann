@@ -13,6 +13,8 @@ Date: 2026-07-25
    singular generalized Gram matrix?
 3. How efficiently can a smooth hierarchy reproduce the low piecewise-carrier
    basin from PR #44?
+4. Can a future exact piecewise finalist be compressed with a rigorous
+   representation-energy ledger?
 
 ## Mathematical result
 
@@ -35,16 +37,25 @@ L-3603 proves that the carrier is a unitary gauge in the full envelope space.
 Carrier scans remain useful finite-dimensional preconditioners, but they do not
 enlarge the continuum witness class.
 
+L-3604 gives an exact rational projection ledger from any Gaussian-dyadic
+D-0801 cell vector into the Legendre hierarchy. It computes the exact captured
+energy and exact omitted `L^2` tail at every requested degree. This is designed
+to consume the finalist emitted by the cloud-directed PR #64 run.
+
 ## Files
 
-- `packet_blocks.py` — independent mpmath implementation of the exact Gram,
-  frequency, compact archimedean, pole, overlap, lattice, and fractional-adversary
-  formulas;
+- `packet_blocks.py` — public validation interface;
+- `legendre_kernel.py` — independent shifted-Legendre recurrence and carrier
+  kernel;
+- `off_lattice.py` — independent sinc Gram, frequency, compact archimedean,
+  pole, lattice, and fractional-adversary formulas;
 - `legendre_prime_matrix.cpp` — complete finite prime-power discovery producer;
 - `analyze.py` — symmetric eigensolve, residual, and compact result exporter;
-- `tests/test_packet_blocks.py` — nine independent algebraic/numerical controls;
+- `project_piecewise.py` — standard-library exact rational compression ledger;
+- `tests/test_packet_blocks.py` — nine algebraic/numerical formula controls;
+- `tests/test_project_piecewise.py` — five exact projection controls;
 - `results/summary.json` — retained degree ladders;
-- `results/tests.txt` — test transcript.
+- `results/tests.txt` — 14-test transcript.
 
 ## Build and reproduce
 
@@ -68,6 +79,18 @@ cutoff carrier maximum_legendre_degree output
 
 Dimension equals `degree+1`.
 
+When a dyadic piecewise finalist is available:
+
+```bash
+python project_piecewise.py finalist.json \
+  --max-degree 32 \
+  --output finalist-legendre-energy.json
+```
+
+The resulting energy ledger uses only integers and `fractions.Fraction`. It does
+not transfer the Weil sign; a compressed packet must still be evaluated
+directly.
+
 ## Retained complete-prime result
 
 At `T=4709203636353.65`:
@@ -90,9 +113,9 @@ The final row is within approximately `3.07657e-4` of PR #44's 1,024-cell value
 at the same cutoff and carrier. It uses 17 coordinates and an exact identity
 Gram matrix.
 
-## Formula controls
+## Formula and exact-arithmetic controls
 
-The tests check:
+The 14 tests check:
 
 1. overlap identity at support shift zero;
 2. vanishing at full support shift;
@@ -102,17 +125,23 @@ The tests check:
 6. scalar Fejer recovery;
 7. real-axis Legendre--Bessel basis and support orthogonality;
 8. continuous frequency kernel against direct compact-support integration;
-9. integer-lattice sign congruence and a strict fractional-index adversary.
+9. integer-lattice sign congruence and a strict fractional-index adversary;
+10. exact degree-zero capture of constant piecewise vectors;
+11. exact projection scale invariance;
+12. rational, monotone captured-energy ledgers for complex dyadic vectors;
+13. zero-vector rejection;
+14. invalid-degree rejection.
 
 ## Numerical classification
 
 ### Exact or algebraic
 
 - prime and prime-power enumeration as integers;
-- formulas L-3601--L-3603;
+- formulas L-3601--L-3604;
 - compact-support overlap recurrence as an algebraic identity;
 - identity Gram theorem;
-- lattice and fractional endpoint-phase identities.
+- lattice and fractional endpoint-phase identities;
+- piecewise-to-Legendre captured energies and tails.
 
 ### Empirical
 
@@ -137,7 +166,8 @@ degree.
 
 ## Suggested continuation
 
-Implement the M-3601 block-confluent hierarchy with two separated centers. Use
-small identity-Gram Legendre blocks locally and the exact L-3601 cross-cluster
-Gram. Optimize the center separation and local degrees, then directly reevaluate
-only the strongest finite packet with Arb.
+First apply L-3604 to the cloud PR #64 finalist. Then implement the M-3601
+block-confluent hierarchy with two separated centers. Use small identity-Gram
+Legendre blocks locally and the exact L-3601 cross-cluster Gram. Optimize the
+center separation and local degrees, then directly reevaluate only the strongest
+finite packet with Arb.
