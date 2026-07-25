@@ -1,0 +1,106 @@
+{
+ "schema": "riemann.x5603-pick-noise-floor.v1",
+ "agent": "opus5-01",
+ "classification": "the true lambda_min is an ordinary high-precision computation (not a directed interval); the noise model is a simulation of p-bit rounding, not a bound on any real implementation's error",
+ "ordinate": "20225875608341108140435/4294967296",
+ "nodes": [
+  "2^-17",
+  "2^-15",
+  "2^-13",
+  "2^-11",
+  "2^-10",
+  "2^-9",
+  "2^-7",
+  "2^-5"
+ ],
+ "working_dps": 60,
+ "trials_per_precision": 300,
+ "true_lambda_min": "1.2259907375435524056e-35",
+ "true_spectrum": [
+  "1.2259907375436e-35",
+  "4.1619295628207e-26",
+  "1.4370244594221e-18",
+  "5.676968635931e-12",
+  "6.2276450882135e-6",
+  "0.17274983428183",
+  "76.83977631169",
+  "17490.281437779"
+ ],
+ "condition_number": "1.4266243e+39",
+ "reported_128bit_midpoint_lambda_min": -2.626429492911995e-33,
+ "ladder": [
+  {
+   "bits": 128,
+   "flag_rate_lambda_min_negative": 0.5333333333333333,
+   "median_lambda_min": "-3.855567249e-34",
+   "one_sigma_spread": "2.991161395e-33",
+   "min_seen": "-5.420745271e-33",
+   "max_seen": "5.051004679e-33",
+   "spread_over_true": 243.9791185256933
+  },
+  {
+   "bits": 136,
+   "flag_rate_lambda_min_negative": 0.17333333333333334,
+   "median_lambda_min": "1.088397276e-35",
+   "one_sigma_spread": "1.178265062e-35",
+   "min_seen": "-8.468671099e-36",
+   "max_seen": "3.225949573e-35",
+   "spread_over_true": 0.9610717482829826
+  },
+  {
+   "bits": 144,
+   "flag_rate_lambda_min_negative": 0.0,
+   "median_lambda_min": "1.226886524e-35",
+   "one_sigma_spread": "4.45082698e-38",
+   "min_seen": "1.217647062e-35",
+   "max_seen": "1.234205067e-35",
+   "spread_over_true": 0.0036303920118736983
+  },
+  {
+   "bits": 148,
+   "flag_rate_lambda_min_negative": 0.0,
+   "median_lambda_min": "1.225987068e-35",
+   "one_sigma_spread": "2.690744883e-39",
+   "min_seen": "1.225509252e-35",
+   "max_seen": "1.226493789e-35",
+   "spread_over_true": 0.00021947513959703048
+  },
+  {
+   "bits": 152,
+   "flag_rate_lambda_min_negative": 0.0,
+   "median_lambda_min": "1.225987892e-35",
+   "one_sigma_spread": "1.797064033e-40",
+   "min_seen": "1.225958434e-35",
+   "max_seen": "1.226022754e-35",
+   "spread_over_true": 1.4658055549205167e-05
+  },
+  {
+   "bits": 160,
+   "flag_rate_lambda_min_negative": 0.0,
+   "median_lambda_min": "1.22599074e-35",
+   "one_sigma_spread": "7.029973071e-43",
+   "min_seen": "1.225990616e-35",
+   "max_seen": "1.225990867e-35",
+   "spread_over_true": 5.734115973311145e-08
+  },
+  {
+   "bits": 176,
+   "flag_rate_lambda_min_negative": 0.0,
+   "median_lambda_min": "1.225990738e-35",
+   "one_sigma_spread": "9.532328244e-48",
+   "min_seen": "1.225990738e-35",
+   "max_seen": "1.225990738e-35",
+   "spread_over_true": 7.775204128087933e-13
+  },
+  {
+   "bits": 192,
+   "flag_rate_lambda_min_negative": 0.0,
+   "median_lambda_min": "1.225990738e-35",
+   "one_sigma_spread": "1.580895465e-52",
+   "min_seen": "1.225990738e-35",
+   "max_seen": "1.225990738e-35",
+   "spread_over_true": 1.2894840198672637e-17
+  }
+ ],
+ "note": "flag rate is the fraction of simulated p-bit evaluations that report lambda_min < 0 at an ordinate whose true lambda_min is positive. 0.5 means the screen carries no information."
+}
