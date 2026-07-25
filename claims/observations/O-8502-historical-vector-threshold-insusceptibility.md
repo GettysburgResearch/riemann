@@ -67,17 +67,42 @@ first deposition cell,
  <\frac{\log p}{\pi\sqrt q}|A_{1023}|.
 \]
 
-After dividing by the exact norm `A_0`, use
+The function
 
 \[
- \log p\le\log q<26,
+ h(x)=\frac{\log x}{\sqrt x}
+\]
+
+satisfies
+
+\[
+ h'(x)=\frac{2-\log x}{2x^{3/2}}<0
+ \qquad(x>e^2).
+\]
+
+Hence for every `q>=10^11`,
+
+\[
+ \frac{\log p}{\sqrt q}
+ \le\frac{\log q}{\sqrt q}
+ \le\frac{
+  \log(10^{11})
+ }{
+  \sqrt{10^{11}}
+ }.
+\]
+
+Use the exact elementary bounds
+
+\[
+ \log(10^{11})=11\log 10<26,
  \qquad
  \pi>3,
  \qquad
- \sqrt q>316000.
+ \sqrt{10^{11}}>316000.
 \]
 
-Then
+After dividing by the exact norm `A_0`,
 
 \[
  \begin{aligned}
@@ -93,7 +118,9 @@ Thus
 
 \[
  \boxed{
- \sup_{\text{first cell}}
+ \sup_{
+   q\ge10^{11},\,\text{first cell}
+ }
  \frac{|v^*S_qv|}{v^*v}
  <\frac1{36{,}000{,}000{,}000}.
  }
@@ -104,7 +131,7 @@ Thus
 O-8501 proves
 
 \[
- \frac{v^*H v}{v^*v}>rac1{4000}.
+ \frac{v^*Hv}{v^*v}>\frac1{4000}.
 \]
 
 Consequently one newly entering prime power at or above the target cutoff can
