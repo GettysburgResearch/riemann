@@ -280,16 +280,30 @@ residual, name the next fix — is the intended use of M-0003.
   it in this file is the consequence of running it.
 * **Envelope/oscillation consistency — DONE** (X-0005e): the RMS of `f` is flat
   across four orders of magnitude, `slope = -0.0016 +/- 0.0068`.
-* **A null model for the spurious-peak distribution — STILL NOT DONE.**  Until
-  it exists, "unexplained peak" has no threshold attached and the single
-  sidelobe seen in the top 14 could not have been distinguished from a
-  discovery by any rule stated in advance.  This is now the main gap.
+* **Null model — DONE** (X-0005f).  Running the same Hann-windowed periodogram
+  on a synthetic `f` whose zeros are *all* on the critical line makes every peak
+  away from a known ordinate spurious by construction:
+
+  ```
+  weakest TRUE line     gamma = 59.34   amplitude 0.03315
+  largest SPURIOUS peak gamma = 15.54   amplitude 0.00380     ratio 0.114
+  ```
+
+  So a peak is "unexplained" only above amplitude `0.0038` at this `X` and
+  window — the threshold this claim previously lacked, and the true lines clear
+  it by a factor of nine.  The largest spurious peaks sit at `15.54` and
+  `12.74`, symmetrically around the dominant `14.13` line: they are its
+  sidelobes, and they are exactly what the first rectangular-window run
+  reported as an "unexplained peak at 12.84".  The null model uses only twenty
+  ordinates, so it understates the sidelobe forest of the real (infinite) zero
+  set; treat `0.0038` as a lower bound on the noise floor.
 
 ## Suggested next attack
 
-1. Windowing (Hann) + a null model, so that "unexplained peak" is a
-   quantitative statement.  Without this the screen cannot produce a usable
-   lead.
+1. ~~Windowing (Hann) + a null model~~ — done (X-0005c, X-0005f); "unexplained
+   peak" now has a threshold.  What remains is to build the null model from a
+   realistically large zero set rather than twenty ordinates, since the current
+   figure is a lower bound on the noise floor.
 2. Segmented sieve to `10^9`-`10^{11}`, tracking each known peak's amplitude as
    a function of `X`.  A zero at `1/2 + delta` shows up as a *trend*, and a
    trend is far easier to see than an absolute anomaly.

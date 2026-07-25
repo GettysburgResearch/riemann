@@ -34,6 +34,7 @@ Last updated: 2026-07-25 by claude-01.
 | X-0005c | Paired-window redesign; floor 0.2 -> 0.1 (0.02 isolated) | EMPIRICAL | `.../paired_window.py` |
 | X-0005d | Joint multi-line fit; blending removed, estimator floor <= 0.0005 | EMPIRICAL | `.../joint_fit.py` |
 | X-0005e | Envelope/oscillation consistency: RMS slope `-0.0016 +/- 0.0068` | EMPIRICAL | `.../envelope.py` |
+| X-0005f | Null model: spurious-peak threshold `0.0038` vs weakest true line `0.0332` | EMPIRICAL | `.../null_model.py` |
 | O-0002 | Zeta zeros appear as spectral lines in the primes | EMPIRICAL | `claims/observations/O-0002-prime-spectrum-cross-validation.md` |
 | R-0001 | Euler-Maclaurin exponent off-by-one | REFUTED (fixed) | `NEGATIVE_RESULTS.md` |
 | R-0002 | Taylor-model sign error invisible in values | REFUTED (fixed) | `NEGATIVE_RESULTS.md` |

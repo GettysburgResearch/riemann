@@ -1,0 +1,44 @@
+{
+ "experiment": "X-0005f",
+ "agent": "claude-01",
+ "status": "EMPIRICAL",
+ "design": "null model: synthetic f from an all-on-line zero set; any peak not at a known ordinate is spurious by construction",
+ "X": 40000000.0,
+ "window": "Hann",
+ "largest_spurious_peak": {
+  "gamma": 15.539999999999758,
+  "amplitude": 0.0037953569009636467
+ },
+ "weakest_true_line": {
+  "gamma": 59.34000000000368,
+  "amplitude": 0.03315242610306489
+ },
+ "spurious_over_weakest_true": 0.11448202581508121,
+ "top_spurious": [
+  {
+   "gamma": 15.539999999999758,
+   "amplitude": 0.0037953569009636467
+  },
+  {
+   "gamma": 12.739999999999817,
+   "amplitude": 0.0037777178210661897
+  },
+  {
+   "gamma": 19.61999999999967,
+   "amplitude": 0.002571115623342325
+  },
+  {
+   "gamma": 22.41999999999961,
+   "amplitude": 0.002555099417348528
+  },
+  {
+   "gamma": 23.619999999999585,
+   "amplitude": 0.0021751008422283458
+  },
+  {
+   "gamma": 26.399999999999526,
+   "amplitude": 0.0020916945722239404
+  }
+ ],
+ "interpretation": "a peak in real data must exceed the largest spurious peak of the null model before it can be called unexplained; this is the threshold O-0002 previously lacked"
+}
