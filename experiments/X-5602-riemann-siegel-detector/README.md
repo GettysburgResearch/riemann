@@ -105,10 +105,12 @@ neighbour gap (a Lehmer-pair statistic) are the two numbers to read.
   binary64 summation error bounded before any sign claim.  At `t = 10^{13}` the
   observed accuracy is `~10^{-9}` against `|Z'| = O(log t)`, so the *counting*
   is robust, but "robust" is not "proved".
-- The census compares against the smooth part `(theta(t2)-theta(t1))/pi` only.
-  A rigorous statement needs Turing's method: bound `\int S(t) dt` over the
-  window and conclude that the count is exact.  Not yet implemented — a deficit
-  here is a *flag for investigation*, not a disproof.
+- The census compares against the smooth part `(theta(t2)-theta(t1))/pi` only,
+  so on its own a deficit is a *flag for investigation*, not a disproof.
+  Turing's method proper is now implemented in `turing.py` and `tau_localise.py`
+  — but it is **conditional on an imported bound** on `\int S(t) dt`, which this
+  repository does not prove.  Two are offered: a deliberately conservative
+  `3 + 0.1 log t` and Trudgian's `2.067 + 0.059 log t`.
 - A deficit can also come from a grid too coarse to separate a close pair.  Any
   nonzero deficit must be re-run at higher `--per-gram` before it means
   anything.  The convergence table above is the protocol.
@@ -118,10 +120,22 @@ neighbour gap (a Lehmer-pair statistic) are the two numbers to read.
 ## Files
 
 ```text
-rs_zeta.c                 evaluator, sign-change counter, census
-tests/test_rs.py          validation against mpmath.zetazero and known ordinates
-results/                  scans
+rs_zeta.c                        evaluator, sign-change counter, census
+census.py                        empirical Turing: tracks k - theta(gamma_k)/pi
+turing.py                        Turing's method proper: which N(t1) survive |D_c + M| <= B
+tau_localise.py                  and WHERE inside the window an off-line zero could then sit
+verify_d0801_against_zeros.py    the explicit formula's LHS, summed over located zeros
+tests/test_rs.py                 validation against mpmath.zetazero and known ordinates
+results/                         scans and certificates
 ```
+
+The load-bearing idea in `turing.py` is that the off-line correction
+`M(t) = mult * sum_j (t - tau_j)_+` has a **quantised slope** — `0`, `mult`,
+`2*mult`, ... — so an integer count `N(t1)` that is off by an amount not
+divisible by `mult` cannot be repaired by any off-line configuration at all.
+That is what reduces the surviving alternatives to two at the PR #71 window;
+`tau_localise.py` then shows neither can place a zero near the ordinate of
+interest.  See `O-5604`.
 
 ## Build
 

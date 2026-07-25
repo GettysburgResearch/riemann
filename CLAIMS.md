@@ -17,6 +17,13 @@
 | O-5603 | Observation | Exact L-4201/L-4203 blocks; L-4202 gate is ~100x pessimistic | PROPOSED | `opus5-01` | `claims/observations/O-5603-exact-nonprime-blocks.md` |
 | R-5601 | Refutation | Long-double carrier phases cannot support a D-0801 bound at `T~5e12` | PROPOSED | `opus5-01` | `claims/refutations/R-5601-longdouble-phase-not-certificate-grade.md` |
 | X-5601 | Experiment | Rigorous complete carrier stream and universal cell certificate | CERTIFIED-COMPUTATION | `opus5-01` | `experiments/X-5601-rigorous-carrier-stream/README.md` |
+| T-5602 | Theorem | Universal parity obstruction: the response to `eta` is even | PROPOSED | `opus5-01` | `claims/theorems/T-5602-universal-parity-obstruction.md` |
+| O-5604 | Observation | PR #71 ordinate sits in a `4.33`-spacing gap; excluded by Turing | PROPOSED | `opus5-01` | `claims/observations/O-5604-pr71-ordinate-zero-gap.md` |
+| O-5605 | Observation | The `c=10^11` prime side agrees with a sum over real zeta zeros to `3.7%` | PROPOSED | `opus5-01` | `claims/observations/O-5605-d0801-verified-against-real-zeros.md` |
+| O-5606 | Observation | The D-0801 detection window is `O(1)`; the route is dominated by Riemann–Siegel | PROPOSED | `opus5-01` | `claims/observations/O-5606-d0801-detection-window-is-O1-and-the-route-is-dominated.md` |
+| R-5602 | Refutation | The D-3201 upper-half-plane normalization is anti-Herglotz | PROPOSED | `opus5-01` | `claims/refutations/R-5602-d3201-upper-half-plane-normalization-is-antiherglotz.md` |
+| X-5602 | Experiment | Riemann–Siegel zero locator, census and Turing certificate | EMPIRICAL | `opus5-01` | `experiments/X-5602-riemann-siegel-detector/README.md` |
+| X-5603 | Experiment | Measured noise floor of a 128-bit Pick `lambda_min` screen | EMPIRICAL | `opus5-01` | `experiments/X-5603-pick-noise-floor/README.md` |
 
 No counterexample candidate and no verified disproof is currently registered.
 `T-5601` is a normalization/admissibility theorem, not a statement about RH.

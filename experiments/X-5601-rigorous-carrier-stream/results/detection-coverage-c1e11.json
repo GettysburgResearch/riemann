@@ -1,0 +1,141 @@
+{
+ "schema": "riemann.x5601-detection-coverage.v1",
+ "agent": "opus5-01",
+ "classification": "floating throughout; the blocks are assembled by L-5603 in ordinary arithmetic and the response is the leading term of an eta-expansion. The claim is the order of magnitude of the coverage, not digits.",
+ "cutoff": 100000000000,
+ "cells": 1024,
+ "carrier": "94184072727073/20",
+ "T": 4709203636353.65,
+ "ell_T": 4.351719952088318,
+ "mean_spacing": 0.22979419884777208,
+ "Delta": 4.031145793836853,
+ "h": 0.0039366658142938014,
+ "nyquist_ratio_Delta_over_ellT": 0.9263339181333057,
+ "lambda_min_exact_form": 0.0002671872230143981,
+ "u_range_scanned": 6.0,
+ "eta_min_global": 0.03152741369026713,
+ "eta_min_argmin_u": 0.26400000000000023,
+ "eta_min_median_over_u": 1.1759665109291408,
+ "pass_seconds": 316.0,
+ "coverage_by_threshold": {
+  "0.5": {
+   "coverage_in_t": 1.4239999999998432,
+   "coverage_in_mean_spacings": 6.196849211773081,
+   "fraction_of_scanned_range": 0.1186666666666536,
+   "n_windows": 6,
+   "windows": [
+    [
+     -1.9319999999999995,
+     -1.912
+    ],
+    [
+     -1.2160000000000002,
+     -1.1399999999999997
+    ],
+    [
+     -0.8919999999999995,
+     -0.8040000000000003
+    ],
+    [
+     -0.5359999999999996,
+     0.5360000000000005
+    ],
+    [
+     0.7359999999999998,
+     0.8600000000000003
+    ],
+    [
+     1.1320000000000006,
+     1.1520000000000001
+    ]
+   ],
+   "seconds_per_unit_height": 221.910112359575
+  },
+  "0.4": {
+   "coverage_in_t": 1.0559999999998837,
+   "coverage_in_mean_spacings": 4.595416269404757,
+   "fraction_of_scanned_range": 0.08799999999999031,
+   "n_windows": 1,
+   "windows": [
+    [
+     -0.5279999999999996,
+     0.524
+    ]
+   ],
+   "seconds_per_unit_height": 299.2424242424572
+  },
+  "0.3": {
+   "coverage_in_t": 1.0399999999998855,
+   "coverage_in_mean_spacings": 4.525788750171352,
+   "fraction_of_scanned_range": 0.08666666666665712,
+   "n_windows": 1,
+   "windows": [
+    [
+     -0.5199999999999996,
+     0.516
+    ]
+   ],
+   "seconds_per_unit_height": 303.8461538461873
+  },
+  "0.2": {
+   "coverage_in_t": 1.0039999999998894,
+   "coverage_in_mean_spacings": 4.36912683189619,
+   "fraction_of_scanned_range": 0.08366666666665745,
+   "n_windows": 1,
+   "windows": [
+    [
+     -0.5,
+     0.5
+    ]
+   ],
+   "seconds_per_unit_height": 314.7410358566084
+  },
+  "0.1": {
+   "coverage_in_t": 0.9239999999998982,
+   "coverage_in_mean_spacings": 4.020989235729163,
+   "fraction_of_scanned_range": 0.07699999999999152,
+   "n_windows": 1,
+   "windows": [
+    [
+     -0.45999999999999996,
+     0.45999999999999996
+    ]
+   ],
+   "seconds_per_unit_height": 341.99134199137967
+  },
+  "0.05": {
+   "coverage_in_t": 0.4959999999999454,
+   "coverage_in_mean_spacings": 2.1584530962355677,
+   "fraction_of_scanned_range": 0.04133333333332878,
+   "n_windows": 2,
+   "windows": [
+    [
+     -0.38399999999999945,
+     -0.13999999999999968
+    ],
+    [
+     0.1479999999999997,
+     0.39200000000000035
+    ]
+   ],
+   "seconds_per_unit_height": 637.0967741936186
+  },
+  "0.02": {
+   "coverage_in_t": 0.0,
+   "coverage_in_mean_spacings": 0.0,
+   "fraction_of_scanned_range": 0.0,
+   "n_windows": 0,
+   "windows": [],
+   "seconds_per_unit_height": null
+  },
+  "0.01": {
+   "coverage_in_t": 0.0,
+   "coverage_in_mean_spacings": 0.0,
+   "fraction_of_scanned_range": 0.0,
+   "n_windows": 0,
+   "windows": [],
+   "seconds_per_unit_height": null
+  }
+ },
+ "note": "coverage at threshold 0.5 is the ONLY physically meaningful one, since |Re rho - 1/2| < 1/2 for every nontrivial zero: outside that set the pass cannot fire for any admissible displacement whatsoever."
+}

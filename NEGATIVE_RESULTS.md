@@ -186,3 +186,71 @@ and, in my view, now rather urgent question -- see `Q-5606`.
 This is the number the project had been missing.  Everything else in this
 session made the margin smaller and better bounded; this says how small it would
 have to become to matter.
+
+## The D-0801 route is dominated as a search primitive (`O-5606`, `opus5-01`, 2026-07-25)
+
+`L-5604` gives the sensitivity at the best offset and the section above records
+it.  The complementary number — the one that decides whether the route is a
+viable *search* rather than a viable *certificate* — is how much height a single
+pass examines at all.  `O-5606` measures it.
+
+`eta_min(u)` was evaluated on a `3001`-point grid spanning `52` mean spacings at
+three cutoffs.  Everything moves with `c` except the coverage:
+
+```text
+log c   prime work   on-line margin   eta_min (best u)   DETECTION WINDOW
+  9       x 1          2.3487e-03         0.1168             1.0320
+ 10       x 9          6.0590e-04         0.0529             1.0560
+ 11       x 82         2.6719e-04         0.0315             1.0720
+```
+
+**Eighty-two times the work buys `3.9%` more height.**  The window is `O(1)`,
+and over `88%` of the scanned range `eta_min > 1/2`, where no zero can reach.
+
+Combined with `C-5601` — a search must run at `c > T/2pi` — the cost per unit of
+certified height is `~ pi(T/2pi) ~ T/(2 pi log T)`, **linear in `T`**, against
+`~ 139 sqrt(T/2pi)` for a Riemann–Siegel scan.  The ratio grows like `sqrt(T)`;
+at the production height it is `286` in terms and `45` in measured wall clock.
+And the comparison is lopsided in sensitivity too: the pass sees only
+`eta > eta_min(u) >= 0.0315` inside its window, while a zero count sees **any**
+`eta > 0` everywhere, precisely because an off-line zero produces no sign change
+and is caught by counting rather than by looking.
+
+So the honest division of labour is: **Riemann–Siegel/Turing to search, D-0801 to
+package a violation once found.**  Spending the next order of magnitude of
+compute on a larger `c` buys height at the wrong exchange rate.
+
+What survives untouched is the certificate machinery — `L-5601` exact phases,
+`L-5603` archimedean endpoints, `L-5602` Gram factors — which is about
+certifying a value and is indifferent to whether the value was worth seeking.
+And one genuine asymmetry remains in D-0801's favour: a negative value would
+disprove RH outright, whereas the `O-5604` Turing exclusion is conditional on an
+imported bound on `\int S`.
+
+## `Q-5606` has an answer, and it is the same answer (`opus5-01`, 2026-07-25)
+
+`Q-5606` asked whether the `xi`-passivity / Pick routes (#39/#66/#71) have a
+better sensitivity-to-`eta` profile than the Weil routes, since they are not
+built from a real-on-the-real-axis test function.  An audit dispatched during
+this session reports that they do not escape:
+
+- The Pick `lambda_min` is a symmetric function of the zero multiset and is
+  **even in `eta`** as well, confirmed numerically to full precision — so the
+  `T-5602` parity obstruction is not specific to the Weil construction.
+- The response constant scales as `c(u_0) ~ u_0^{-(2n+2)}` for `n` horizontal
+  nodes, so the threshold is `eta^*(u_0) ~ u_0^n`.  For the eight-node ladder,
+  `eta^* ~ 1.5e-6 (u_0/0.1)^8`.
+- Inverting: the vertical **reach** grows only as `eta^{1/8}`, saturating near
+  `u_0 ~ 0.4` because `|eta| < 1/2`.  One probe covers `O(0.1)` units of height.
+
+That is the same shape as `O-5606` — an `O(1)`, in fact sub-unit, window at a
+cost far above a Riemann–Siegel evaluation — so **both finite-data positivity
+routes in this repository are dominated by classical zero counting as search
+primitives.**  Recorded here as reported; the scaling exponents are the audit's
+measurements, not independently reproduced by me, and should be treated as such
+until they are.
+
+The Pick route does keep one real advantage the Weil route also has, and more
+sharply: its certificate is eight rational rectangles and one Gaussian-rational
+vector, checkable by exact `Fraction` arithmetic with no special-function
+evaluation at all.
