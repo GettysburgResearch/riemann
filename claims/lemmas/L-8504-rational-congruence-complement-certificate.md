@@ -76,13 +76,7 @@ norm:
  =\max_i\sum_j|E_{ij}|<1.
 \]
 
-Therefore every eigenvalue of `C` lies in
-
-\[
- (0,2),
-\]
-
-so `C\succ0`.
+Therefore every eigenvalue of `C` lies in `(0,2)`, so `C\succ0`.
 
 Because `R` is invertible,
 
@@ -109,38 +103,47 @@ This proves the result. ∎
 
 ## Triangular proof object
 
-For certificate simplicity, take `R` lower triangular with nonzero rational
-real diagonal. Its invertibility is then exact and immediate; no determinant or
+For certificate simplicity, take `R` triangular—either upper or lower—with
+nonzero positive rational real diagonal. The certificate declares the chosen
+orientation. Its invertibility is then exact and immediate; no determinant or
 numerical rank decision is needed.
 
 A producer may obtain `R` from an ordinary Cholesky or inverse-Cholesky
 calculation for `B`, then:
 
-1. round every real and imaginary entry to dyadics;
-2. force the upper triangle to zero;
-3. force every diagonal entry to a nonzero positive dyadic;
-4. freeze the resulting matrix before exact replay.
+1. choose the triangular orientation dictated by that factorization;
+2. round every retained real and imaginary entry to dyadics;
+3. force the opposite triangle to zero;
+4. force every diagonal entry to a nonzero positive dyadic;
+5. freeze the resulting matrix before exact replay.
 
-The verifier does not trust the floating factorization. It recomputes or
-encloses `R^*BR` and checks only the strict row-sum inequality.
+The verifier does not trust the floating factorization. It checks the declared
+triangular orientation, reconstructs or encloses `R^*BR`, and verifies only the
+strict row-sum inequality.
 
 ## Why a near-inverse-Cholesky factor is effective
 
-If `B=L L^*` exactly, then the ideal choice
+If the standard Cholesky factorization is
 
 \[
- R=L^{-*}
+ B=LL^*,
 \]
 
-gives
+with `L` lower triangular, then the ideal choice
+
+\[
+ R=L^{-*}=(L^*)^{-1}
+\]
+
+is upper triangular and gives
 
 \[
  R^*BR=I.
 \]
 
-A sufficiently accurate rational approximation therefore makes the row-sum
-error small. The proof criterion is deliberately insensitive to the condition
-number of the original basis once `R` has preconditioned it.
+Equivalently, if one works with an upper factorization `B=U^*U`, the ideal
+choice `R=U^{-1}` is again upper triangular. A sufficiently accurate rational
+approximation therefore makes the row-sum error small.
 
 Unlike an approximate inverse residual of the form `I-XB`, the congruence
 `R^*BR` is Hermitian by construction. A norm bound below one proves the sign of
@@ -160,7 +163,8 @@ rectangles. Let
 Set
 
 \[
- \widehat B=\widehat H_0-\beta I+	au\frac{ww^*}{N}.
+ \widehat B=\widehat H_0-\beta I+
+ \tau\frac{ww^*}{N}.
 \]
 
 For a fixed rational `R`,
@@ -184,8 +188,8 @@ Thus one sufficient certificate is
  +\eta\|R\|_2^2<1.
 \]
 
-For the L-8502 architecture, however, it is usually cleaner to define `H_0`
-as the exact rational midpoint matrix and reserve the complete source distance
+For the L-8502 architecture, however, it is usually cleaner to define `H_0` as
+the exact rational midpoint matrix and reserve the complete source distance
 `eta` for the separate `delta` gate. Then L-8504 certifies only the reference
 complement, with no double counting.
 
@@ -206,13 +210,7 @@ Then
  }
 \]
 
-Every quantity is rational. To prove
-
-\[
- r<r_0,
-\]
-
-it is enough to prove
+Every quantity is rational. To prove `r<r_0`, it is enough to prove
 
 \[
  N y^*y-|w^*y|^2<r_0^2N^2
@@ -253,13 +251,16 @@ A producer should:
 1. assemble exact Gaussian-rational `H_0` from the frozen midpoint coefficient
    source;
 2. compute the exact residual numerator above;
-3. obtain an ordinary inverse-Cholesky factor of
+3. obtain an ordinary Cholesky factor of
    \[
-   H_0-\frac7{1000}I+rac1{100}\frac{ww^*}{N};
+   H_0-\frac7{1000}I+
+   \frac1{100}\frac{ww^*}{N};
    \]
-4. round it to a lower-triangular dyadic `R`;
-5. export `R` and the exact row-sum bound for `R^*BR-I`;
-6. let an independent checker recompute all products and strict inequalities.
+4. form the corresponding inverse-Cholesky factor in its natural triangular
+   orientation—normally upper triangular for `R=L^{-*}`;
+5. round it to a dyadic triangular `R` with positive diagonal;
+6. export `R` and the exact row-sum bound for `R^*BR-I`;
+7. let an independent checker recompute all products and strict inequalities.
 
 If the congruence row sum is below one and the residual is below `1/5000`, only
 the L-8503 operator moat below `1/1000` remains. Together with the completed
@@ -285,7 +286,8 @@ For exact dyadic `H_0,w,R`, an independent checker should:
 
 1. validate dimensions and Hermitian symmetry of `H_0`;
 2. verify `N=w^*w>0`;
-3. verify `R` is lower triangular with positive diagonal;
+3. verify the declared upper- or lower-triangular orientation and positive
+   diagonal of `R`;
 4. form the rank-one matrix `ww^*/N` exactly;
 5. form `B` exactly;
 6. compute `C=R^*BR` exactly or in outward rational blocks;
@@ -322,7 +324,8 @@ reconstruction.
 
 ## Adversarial tests
 
-1. Verify exact small positive examples with random rational triangular `R`.
+1. Verify exact small positive examples with random rational triangular `R` in
+   both orientations.
 2. Use an indefinite `B` and require every claimed subunit row-sum certificate
    to fail.
 3. Mutate one diagonal entry of `R` to zero and require rejection.
@@ -336,7 +339,7 @@ reconstruction.
 ## Suggested next attack
 
 Implement the target reference matrix and residual first; the residual check is
-only one Toeplitz matrix-vector product. Then produce a dyadic inverse-Cholesky
-factor for the rank-one-repaired matrix. If its exact congruence row sum is below
-one, the complement and residual gates close together, leaving only the
-coefficient-source operator moat from L-8503.
+only one Toeplitz matrix-vector product. Then produce an upper-triangular dyadic
+approximation to `L^{-*}` for the rank-one-repaired matrix. If its exact
+congruence row sum is below one, the complement and residual gates close
+together, leaving only the coefficient-source operator moat from L-8503.
