@@ -125,6 +125,14 @@ rather than return `N_box`. ∎
 * Compare the certified ordinates against the classical list of low zeros
   (14.134725, 21.022040, 25.010858, 30.424876, 32.935062, ...): agreement to
   all certified digits.
+* **Riemann-von Mangoldt consistency.**  The main term
+  `N(T) ~ (T/2pi) log(T/2 pi e) + 7/8` predicts `269.59` at `T = 500` and
+  `1516.99` at `T = 2000`; the certified sign-change counts are `269` and
+  `1517`, i.e. `S(T) = -0.59` and `+0.01`.  Both are unremarkable values of
+  `S(T)`, and a scan that had *missed* zeros would show a systematic deficit
+  growing with `T` instead.  This is a cheap, independent check that the scan
+  step is fine enough, and it is the check that matters most as `T` grows,
+  because the box count becomes the expensive half.
 
 ## Remaining uncertainty
 
