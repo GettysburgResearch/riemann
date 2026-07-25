@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.xi-modulus-log-localizer-control.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "order": 3,
+  "nodes_u": [
+    {"numerator": 1, "denominator": 16},
+    {"numerator": 1, "denominator": 4},
+    {"numerator": 9, "denominator": 16},
+    {"numerator": 49, "denominator": 64}
+  ],
+  "primitive_integer_coefficients": [-143, 312, -297, 128],
+  "coefficient_sum": 0,
+  "annihilated_monomial_degrees": [0, 1, 2],
+  "common_positive_scale_invariant": true,
+  "odd_order_product_difference_sign": "STRICTLY_NEGATIVE",
+  "even_order_prefix_orientation_sign": "NONNEGATIVE",
+  "independent_exact_checks": 7,
+  "counterexample_candidate": null,
+  "warning": "Synthetic local factor only; no Riemann-xi value is represented."
+}
