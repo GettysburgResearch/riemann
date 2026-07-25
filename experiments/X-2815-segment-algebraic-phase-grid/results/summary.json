@@ -9,8 +9,13 @@
     "vector_bits": 96,
     "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297",
     "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
-    "accelerated_segment_start": 2000,
-    "accelerated_segment_end": 4900,
+    "proof_specialization_floor_segment": 2000,
+    "current_direct_segment_ranges": [[0, 2800], [4900, 5000]],
+    "current_direct_coverage_segments": 2900,
+    "current_direct_coverage_fraction": "29/50",
+    "current_accelerated_segment_start": 2800,
+    "current_accelerated_segment_end": 4900,
+    "current_accelerated_segments": 2100,
     "segment_size": 20000000
   },
   "orders": {
@@ -42,5 +47,5 @@
     "max_phase_error": "7.7881898315552051234312415644335869112660053172354e-24",
     "max_reciprocal_sqrt_error": "2.7499021732151453434795246353313440303409019037859e-28"
   },
-  "proof_boundary": "The analytic truncation moat is exact. Production bin assignment, outward interval implementation, complete coverage, and final sign remain pending."
+  "proof_boundary": "The analytic truncation moat is exact and conservative for the current later segment range. Production bin assignment, outward interval implementation, complete coverage, and final sign remain pending."
 }
