@@ -8,7 +8,8 @@ from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
-from verify_modulus_certificate import verify
+from verify_log_localizer import verify as verify_log_localizer
+from verify_modulus_certificate import verify as verify_modulus
 
 
 class ComparisonError(ValueError):
@@ -63,7 +64,14 @@ def point_map(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
 
 
 def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
-    for field in ("schema", "classification", "normalization_id", "ordinate", "rows"):
+    for field in (
+        "schema",
+        "classification",
+        "normalization_id",
+        "ordinate",
+        "rows",
+        "log_rows",
+    ):
         if low.get(field) != high.get(field):
             raise ComparisonError(f"precision files differ in {field}")
 
@@ -85,23 +93,35 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
                 high_point["xi_rectangle"][coordinate],
                 f"high.{identifier}.{coordinate}",
             )
-            if not (low_interval[0] <= high_interval[0] <= high_interval[1] <= low_interval[1]):
+            if not (
+                low_interval[0]
+                <= high_interval[0]
+                <= high_interval[1]
+                <= low_interval[1]
+            ):
                 raise ComparisonError(
                     f"high-precision rectangle is not nested for {identifier}.{coordinate}"
                 )
             nested_coordinates += 1
 
-    low_result, high_result = verify(low), verify(high)
+    low_modulus, high_modulus = verify_modulus(low), verify_modulus(high)
+    low_log, high_log = verify_log_localizer(low), verify_log_localizer(high)
     return {
         "schema": "riemann.xi-modulus-precision-comparison.v1",
         "point_count": len(low_points),
         "nested_coordinate_intervals": nested_coordinates,
-        "low_verdict": low_result["verdict"],
-        "high_verdict": high_result["verdict"],
-        "low_negative_rows": low_result["certified_negative_rows"],
-        "high_negative_rows": high_result["certified_negative_rows"],
-        "low_unresolved_rows": low_result["unresolved_rows"],
-        "high_unresolved_rows": high_result["unresolved_rows"],
+        "low_modulus_verdict": low_modulus["verdict"],
+        "high_modulus_verdict": high_modulus["verdict"],
+        "low_modulus_negative_rows": low_modulus["certified_negative_rows"],
+        "high_modulus_negative_rows": high_modulus["certified_negative_rows"],
+        "low_modulus_unresolved_rows": low_modulus["unresolved_rows"],
+        "high_modulus_unresolved_rows": high_modulus["unresolved_rows"],
+        "low_log_localizer_verdict": low_log["verdict"],
+        "high_log_localizer_verdict": high_log["verdict"],
+        "low_log_localizer_negative_rows": low_log["certified_negative_rows"],
+        "high_log_localizer_negative_rows": high_log["certified_negative_rows"],
+        "low_log_localizer_unresolved_rows": low_log["unresolved_rows"],
+        "high_log_localizer_unresolved_rows": high_log["unresolved_rows"],
         "all_high_rectangles_nested": True,
     }
 
