@@ -1,0 +1,127 @@
+name: Arb cross-height Pick packet scan
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  cross-height-packets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous backend
+        run: python -m pip install --upgrade pip python-flint
+
+      - name: Run exact tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}/experiments/X-3902-arb-xi-passivity:${{ github.workspace }}/experiments/X-3904-cross-height-pick
+        run: |
+          python -m unittest discover \
+            -s experiments/X-3904-cross-height-pick/tests -v
+          python -m compileall -q \
+            experiments/X-3904-cross-height-pick \
+            experiments/X-3902-arb-xi-passivity/arb_value_producer.py \
+            experiments/X-3902-arb-xi-passivity/arb_producer.py \
+            experiments/X-3902-arb-xi-passivity/verify_certificate.py \
+            experiments/X-3902-arb-xi-passivity/verify_value_certificate.py
+
+      - name: Replay frozen 16-point nominee at 160 bits
+        env:
+          PYTHONPATH: ${{ github.workspace }}/experiments/X-3902-arb-xi-passivity:${{ github.workspace }}/experiments/X-3904-cross-height-pick
+        run: |
+          /usr/bin/time -v python experiments/X-3904-cross-height-pick/grid_nominee_scan.py \
+            --nominee experiments/X-3904-cross-height-pick/certificates/grid-nominee-128.json \
+            --precision-bits 160 \
+            --certificate experiments/X-3904-cross-height-pick/results/nominee-p160-certificate.json \
+            --verification experiments/X-3904-cross-height-pick/results/nominee-p160-verification.json \
+            --summary experiments/X-3904-cross-height-pick/results/nominee-p160-summary.json \
+            2> experiments/X-3904-cross-height-pick/results/nominee-p160-time.txt
+
+      - name: Replay frozen 16-point nominee at 224 bits
+        env:
+          PYTHONPATH: ${{ github.workspace }}/experiments/X-3902-arb-xi-passivity:${{ github.workspace }}/experiments/X-3904-cross-height-pick
+        run: |
+          /usr/bin/time -v python experiments/X-3904-cross-height-pick/grid_nominee_scan.py \
+            --nominee experiments/X-3904-cross-height-pick/certificates/grid-nominee-128.json \
+            --precision-bits 224 \
+            --certificate experiments/X-3904-cross-height-pick/results/nominee-p224-certificate.json \
+            --verification experiments/X-3904-cross-height-pick/results/nominee-p224-verification.json \
+            --summary experiments/X-3904-cross-height-pick/results/nominee-p224-summary.json \
+            2> experiments/X-3904-cross-height-pick/results/nominee-p224-time.txt
+
+      - name: Replay frozen 16-point nominee at 320 bits
+        env:
+          PYTHONPATH: ${{ github.workspace }}/experiments/X-3902-arb-xi-passivity:${{ github.workspace }}/experiments/X-3904-cross-height-pick
+        run: |
+          /usr/bin/time -v python experiments/X-3904-cross-height-pick/grid_nominee_scan.py \
+            --nominee experiments/X-3904-cross-height-pick/certificates/grid-nominee-128.json \
+            --precision-bits 320 \
+            --certificate experiments/X-3904-cross-height-pick/results/nominee-p320-certificate.json \
+            --verification experiments/X-3904-cross-height-pick/results/nominee-p320-verification.json \
+            --summary experiments/X-3904-cross-height-pick/results/nominee-p320-summary.json \
+            2> experiments/X-3904-cross-height-pick/results/nominee-p320-time.txt
+
+      - name: Require frozen-candidate precision nesting
+        run: |
+          python experiments/X-3904-cross-height-pick/compare_candidate_ladder.py \
+            experiments/X-3904-cross-height-pick/results/nominee-p160-verification.json \
+            experiments/X-3904-cross-height-pick/results/nominee-p224-verification.json \
+            experiments/X-3904-cross-height-pick/results/nominee-p320-verification.json \
+            --output experiments/X-3904-cross-height-pick/results/nominee-precision-ladder.json
+
+      - name: Run 160-bit fixed packet scan
+        env:
+          PYTHONPATH: ${{ github.workspace }}/experiments/X-3902-arb-xi-passivity:${{ github.workspace }}/experiments/X-3904-cross-height-pick
+        run: |
+          /usr/bin/time -v python experiments/X-3904-cross-height-pick/cross_height_scan.py \
+            --precision-bits 160 \
+            --certificate experiments/X-3904-cross-height-pick/results/p160-certificate.json \
+            --verification experiments/X-3904-cross-height-pick/results/p160-verification.json \
+            --summary experiments/X-3904-cross-height-pick/results/p160-summary.json \
+            2> experiments/X-3904-cross-height-pick/results/p160-time.txt
+
+      - name: Run 224-bit fixed packet scan
+        env:
+          PYTHONPATH: ${{ github.workspace }}/experiments/X-3902-arb-xi-passivity:${{ github.workspace }}/experiments/X-3904-cross-height-pick
+        run: |
+          /usr/bin/time -v python experiments/X-3904-cross-height-pick/cross_height_scan.py \
+            --precision-bits 224 \
+            --certificate experiments/X-3904-cross-height-pick/results/p224-certificate.json \
+            --verification experiments/X-3904-cross-height-pick/results/p224-verification.json \
+            --summary experiments/X-3904-cross-height-pick/results/p224-summary.json \
+            2> experiments/X-3904-cross-height-pick/results/p224-time.txt
+
+      - name: Require exact fixed-packet precision nesting
+        run: |
+          python experiments/X-3904-cross-height-pick/compare_cross_height.py \
+            experiments/X-3904-cross-height-pick/results/p160-verification.json \
+            experiments/X-3904-cross-height-pick/results/p224-verification.json \
+            --output experiments/X-3904-cross-height-pick/results/precision-ladder.json
+
+      - name: Hash retained artifacts
+        run: |
+          cd experiments/X-3904-cross-height-pick
+          sha256sum \
+            cross_height.py \
+            verify_cross_height_certificate.py \
+            verify_complex_pick_candidate.py \
+            cross_height_scan.py \
+            grid_nominee_scan.py \
+            compare_cross_height.py \
+            compare_candidate_ladder.py \
+            certificates/*.json \
+            results/*.json \
+            results/*-time.txt \
+            > results/SHA256SUMS
+
+      - name: Upload proof artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-cross-height-pick-results
+          path: experiments/X-3904-cross-height-pick/results/
