@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from fractions import Fraction
 import importlib.util
 from pathlib import Path
+import tempfile
 import unittest
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "verify.py"
@@ -38,6 +38,30 @@ def manifest() -> dict[str, object]:
         },
         "autocorrelations": rows,
     }
+
+
+def manifest_text(value: dict[str, object]) -> str:
+    metadata = value["metadata"]
+    rows = value["autocorrelations"]
+    lines = [threshold_verify.MANIFEST_MAGIC]
+    order = [
+        "cells",
+        "vector_scale_bits",
+        "autocorr_scale_bits",
+        "vector_sha256",
+        "normalization_sha256",
+        "parameter_sha256",
+        "cutoff_power10",
+        "cutoff",
+        "carrier_num",
+        "carrier_den",
+        "segment_size",
+        "total_segments",
+        "a_count",
+    ]
+    lines.extend(f"{key} {metadata[key]}" for key in order)
+    lines.extend(f"a {lag} {real} {imag}" for lag, (real, imag) in enumerate(rows))
+    return "\n".join(lines) + "\n"
 
 
 def verdict() -> dict[str, object]:
@@ -85,12 +109,14 @@ class ThresholdInsusceptibilityTests(unittest.TestCase):
         with self.assertRaises(threshold_verify.CertificateError):
             threshold_verify.verify(mutated, verdict())
 
-    def test_nonzero_terminal_row_is_rejected_by_parser_contract(self) -> None:
-        # The direct verify() entry point assumes parse_manifest() already
-        # enforced this.  Exercise the same semantic gate explicitly.
+    def test_nonzero_terminal_row_is_rejected_by_parser(self) -> None:
         mutated = manifest()
         mutated["autocorrelations"][-1] = (1, 0)
-        self.assertNotEqual(mutated["autocorrelations"][-1], (0, 0))
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "manifest.txt"
+            path.write_text(manifest_text(mutated), encoding="utf-8")
+            with self.assertRaises(threshold_verify.CertificateError):
+                threshold_verify.parse_manifest(path)
 
 
 if __name__ == "__main__":
