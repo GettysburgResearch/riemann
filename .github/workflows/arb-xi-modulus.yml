@@ -44,6 +44,7 @@ jobs:
           python -m compileall -q \
             experiments/X-7501-xi-modulus/assemble_rs_modulus_certificate.py \
             experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
+            experiments/X-7501-xi-modulus/verify_log_localizer.py \
             experiments/X-7501-xi-modulus/compare_precision.py \
             experiments/X-7501-xi-modulus/tests
           python -m unittest discover -s experiments/X-7501-xi-modulus/tests -v
@@ -64,9 +65,14 @@ jobs:
           python experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
             experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
             >experiments/X-7501-xi-modulus/results/high-carrier-p192-verification.json
-          status=$?
+          status_modulus=$?
+          python experiments/X-7501-xi-modulus/verify_log_localizer.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p192.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p192-log-verification.json
+          status_log=$?
           set -e
-          test "$status" -le 1
+          test "$status_modulus" -le 1
+          test "$status_log" -le 1
 
       - name: Produce and verify 256-bit direct xi rectangles
         shell: bash
@@ -83,9 +89,14 @@ jobs:
           python experiments/X-7501-xi-modulus/verify_modulus_certificate.py \
             experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
             >experiments/X-7501-xi-modulus/results/high-carrier-p256-verification.json
-          status=$?
+          status_modulus=$?
+          python experiments/X-7501-xi-modulus/verify_log_localizer.py \
+            experiments/X-7501-xi-modulus/results/high-carrier-p256.json \
+            >experiments/X-7501-xi-modulus/results/high-carrier-p256-log-verification.json
+          status_log=$?
           set -e
-          test "$status" -le 1
+          test "$status_modulus" -le 1
+          test "$status_log" -le 1
 
       - name: Require exact precision nesting
         run: |
