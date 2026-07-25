@@ -38,5 +38,18 @@
     {"id": "lc-12-10-8", "kind": "log_concavity_integer_power", "left": "x-12", "middle": "x-10", "right": "x-8"},
     {"id": "lc-10-8-6", "kind": "log_concavity_integer_power", "left": "x-10", "middle": "x-8", "right": "x-6"},
     {"id": "lc-8-6-5", "kind": "log_concavity_integer_power", "left": "x-8", "middle": "x-6", "right": "x-5"}
+  ],
+  "log_rows": [
+    {"id": "log3-20-18-16-14", "points": ["x-20", "x-18", "x-16", "x-14"]},
+    {"id": "log3-18-16-14-12", "points": ["x-18", "x-16", "x-14", "x-12"]},
+    {"id": "log3-16-14-12-10", "points": ["x-16", "x-14", "x-12", "x-10"]},
+    {"id": "log3-14-12-10-8", "points": ["x-14", "x-12", "x-10", "x-8"]},
+    {"id": "log3-12-10-8-6", "points": ["x-12", "x-10", "x-8", "x-6"]},
+    {"id": "log3-10-8-6-5", "points": ["x-10", "x-8", "x-6", "x-5"]},
+
+    {"id": "log5-20-18-16-14-12-10", "points": ["x-20", "x-18", "x-16", "x-14", "x-12", "x-10"]},
+    {"id": "log5-18-16-14-12-10-8", "points": ["x-18", "x-16", "x-14", "x-12", "x-10", "x-8"]},
+    {"id": "log5-16-14-12-10-8-6", "points": ["x-16", "x-14", "x-12", "x-10", "x-8", "x-6"]},
+    {"id": "log5-14-12-10-8-6-5", "points": ["x-14", "x-12", "x-10", "x-8", "x-6", "x-5"]}
   ]
 }
