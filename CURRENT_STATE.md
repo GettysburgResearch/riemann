@@ -141,6 +141,70 @@ The exact-rational verifier for dyadic interval certificates passes its test
 suite.  No actual Weil-matrix negative certificate exists yet; the committed
 negative example is explicitly synthetic and tests only the verifier.
 
+
+### Update 2026-07-25 (later, same session) — the two positivity routes, costed (`opus5-01`)
+
+Three results settle questions the session had left open, and together they
+change what the project should spend compute on.
+
+**1. The D-0801 pass covers `O(1)` height, so the route is dominated
+(`O-5606`).**  `L-5604` said how *small* a displacement one carrier could see.
+The complementary number — how *much height* it examines at all — had not been
+measured.  `eta_min(u)` on a 3001-point grid over 52 mean spacings, at three
+cutoffs:
+
+```text
+log c   prime work   margin       eta_min(best u)   DETECTION WINDOW
+  9       x 1        2.3487e-03      0.1168            1.0320
+ 10       x 9        6.0590e-04      0.0529            1.0560
+ 11       x 82       2.6719e-04      0.0315            1.0720
+```
+
+Eighty-two times the work buys `3.9%` more height, and over `88%` of the range
+`eta_min > 1/2`, where no zero can reach.  With `C-5601` forcing `c > T/2pi`,
+the cost per unit of certified height is `~ T/(2 pi log T)` — linear in `T` —
+against `~139 sqrt(T/2pi)` for a Riemann–Siegel scan.  Measured at the
+production height: `286` in terms, `45` in wall clock.  And the scan is the more
+sensitive method too, seeing any `eta > 0` rather than only `eta > 0.0315`,
+because an off-line zero produces no sign change and is caught by *counting*.
+
+**So: Riemann–Siegel to search, D-0801 to package a violation once found.**  The
+certificate machinery (`L-5601`, `L-5602`, `L-5603`) is untouched by this — it
+certifies values and is indifferent to whether they were worth seeking.  And one
+asymmetry stays in D-0801's favour: a negative value disproves RH outright,
+whereas a Turing exclusion is conditional on an imported bound on `\int S`.
+
+**2. The 128-bit Pick screen is a measured coin flip (`R-5603`).**  At the PR #71
+ordinate the true `lambda_min` is `+1.2259907375435524056e-35` (three
+independent routes agree to 20 digits), the 128-bit noise spread is `2.99e-33`
+— `244x` the signal — and a simulated 128-bit screen reports a negative in
+`53.3%` of trials.  The nominated `-2.626e-33` is `0.88` spreads from the median
+of pure noise.  All fifteen reported negatives fall under the observed ceiling
+and none above it.  **Screen at `>= 160` bits**, and higher if nodes are added.
+This refutes a procedure, not the criterion: `K >= 0` under RH is correct, the
+Gram identity genuinely requires `Re rho = 1/2`, and the fourteen 192-bit
+directed blocks have `10^13` of headroom and stand.
+
+**3. The PR #71 ordinate is closed structurally (`O-5604`).**  Turing's method
+proper — with the off-line correction's *quantised slope* doing the work —
+leaves only two admissible values of `N(t1)`, and neither can place an off-line
+zero within 5 units of the candidate ordinate, under either the conservative or
+the Trudgian bound.  The ordinate sits inside a `4.33`-mean-spacing gap with
+`|Z| = 259.78`, which explains why a screen nominated it: a large gap is what a
+departing pair would leave behind.  Conditional on an imported bound on
+`\int S` and on an uncertified `Z` evaluation.
+
+Also: the explicit formula was checked end to end at the production parameters
+for the first time (`O-5605`) — `4.12e9` prime powers against 173 real zeta
+zeros, sharing no code, bracketing correctly — and `R-5602` corrects an
+anti-Herglotz normalization on `D-3201`'s literature-import path.
+
+**Revised strongest next step.**  Not a larger `c`.  Give `rs_zeta` an interval
+evaluation of `Z`, enough to *certify* each sign change; that reduces the
+`O-5604` conclusion to a single imported bound and turns X-5602 into a certified
+zero-counting detector — which, by `O-5606`, is the cheaper search primitive by
+a factor that grows like `sqrt(T)`.
+
 ## Strongest next steps
 
 1. Independently reconstruct every cutoff-free entry with Arb balls, rather

@@ -21,6 +21,7 @@
 | O-5604 | Observation | PR #71 ordinate sits in a `4.33`-spacing gap; excluded by Turing | PROPOSED | `opus5-01` | `claims/observations/O-5604-pr71-ordinate-zero-gap.md` |
 | O-5605 | Observation | The `c=10^11` prime side agrees with a sum over real zeta zeros to `3.7%` | PROPOSED | `opus5-01` | `claims/observations/O-5605-d0801-verified-against-real-zeros.md` |
 | O-5606 | Observation | The D-0801 detection window is `O(1)`; the route is dominated by Riemann–Siegel | PROPOSED | `opus5-01` | `claims/observations/O-5606-d0801-detection-window-is-O1-and-the-route-is-dominated.md` |
+| O-5607 | Observation | Conditional Turing certificate: `996.5` clean units at `t=10^13` | PROPOSED | `opus5-01` | `claims/observations/O-5607-conditional-turing-certificate-above-the-verified-height.md` |
 | R-5602 | Refutation | The D-3201 upper-half-plane normalization is anti-Herglotz | PROPOSED | `opus5-01` | `claims/refutations/R-5602-d3201-upper-half-plane-normalization-is-antiherglotz.md` |
 | X-5602 | Experiment | Riemann–Siegel zero locator, census and Turing certificate | EMPIRICAL | `opus5-01` | `experiments/X-5602-riemann-siegel-detector/README.md` |
 | R-5603 | Refutation | A 128-bit Pick `lambda_min` screen is a measured coin flip (flag rate 0.533) | PROPOSED | `opus5-01` | `claims/refutations/R-5603-128bit-pick-screen-is-a-coin-flip.md` |

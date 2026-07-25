@@ -1,0 +1,89 @@
+{
+ "schema": "riemann.x5602-turing.v1",
+ "agent": "opus5-01",
+ "classification": "conditional on the cited Turing bound on int S, which is an EXTERNAL dependency, and on the correctness of the Z evaluation, which is not yet interval-certified",
+ "t1": 10000000000000.5,
+ "t2": 10000000000999.5,
+ "sign_changes_located": 4467,
+ "smooth_census": 4.3081068107037384e+16,
+ "turing_bound_used": 5.993360620902254,
+ "turing_bound_trudgian_for_reference": 3.83308276633233,
+ "N_t1_estimate": 43124192297104,
+ "candidates": [
+  {
+   "c_offset": -3,
+   "max_D": -1.8209107193172402,
+   "min_D": -2996.9835825605337,
+   "verdict": "excluded: no admissible off-line correction exists (slope of M is quantised in units of 2)",
+   "admissible": false,
+   "witness_offsets": null
+  },
+  {
+   "c_offset": -2,
+   "max_D": -1.3214107193172402,
+   "min_D": -1997.9835825605335,
+   "verdict": "requires off-line zeros at ['0.000'] and that is admissible",
+   "admissible": true,
+   "witness_offsets": [
+    0.0
+   ]
+  },
+  {
+   "c_offset": -1,
+   "max_D": -0.8219107193172401,
+   "min_D": -998.9835825605335,
+   "verdict": "excluded: no admissible off-line correction exists (slope of M is quantised in units of 2)",
+   "admissible": false,
+   "witness_offsets": null
+  },
+  {
+   "c_offset": 0,
+   "max_D": 0.8251465722100293,
+   "min_D": -0.5893871923870406,
+   "verdict": "consistent with NO off-line zeros",
+   "admissible": true,
+   "witness_offsets": []
+  },
+  {
+   "c_offset": 1,
+   "max_D": 999.0164174394665,
+   "min_D": 0.17708928068275984,
+   "verdict": "excluded: D exceeds +B, impossible for any off-line set",
+   "admissible": false,
+   "witness_offsets": null
+  },
+  {
+   "c_offset": 2,
+   "max_D": 1998.0164174394665,
+   "min_D": 0.6765892806827598,
+   "verdict": "excluded: D exceeds +B, impossible for any off-line set",
+   "admissible": false,
+   "witness_offsets": null
+  },
+  {
+   "c_offset": 3,
+   "max_D": 2997.0164174394663,
+   "min_D": 1.1760892806827599,
+   "verdict": "excluded: D exceeds +B, impossible for any off-line set",
+   "admissible": false,
+   "witness_offsets": null
+  }
+ ],
+ "unique_clean_c": true,
+ "admissible_candidates": 2,
+ "all_admissible_are_clean": false,
+ "certified_free_of_offline_zeros_up_to": 10000000000996.512,
+ "admissible_tau_offsets_per_alternative": {
+  "-2": {
+   "count": 2,
+   "min_offset": 0.0,
+   "max_offset": 999.0
+  }
+ },
+ "certified_window": [
+  10000000000000.5,
+  10000000000996.512
+ ],
+ "certified_fraction": 0.9970087274774775,
+ "note": "any off-line zero in the window must lie to the right of 'certified_free_of_offline_zeros_up_to'; everything to the left is excluded by the integrated-S bound"
+}

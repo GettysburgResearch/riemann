@@ -634,3 +634,158 @@ zero-free region permits.
    margins are quantitative statements about the zeros near the carrier, and
    `L-5604` says exactly what they exclude.  That is a real, if modest, result
    and it is what the repository actually has.
+
+## Addendum 5 — the two positivity routes, costed; and the PR #71 candidate closed
+
+The session's later half turned from *running* the D-0801 pipeline to asking
+what it is worth running.  Three results, and they point the same way.
+
+### The detection window is `O(1)` (`O-5606`)
+
+`L-5604` answered "how small a displacement could this carrier see, at the best
+offset?" — `eta_min = 0.0315`, comfortably under the ceiling `|eta| < 1/2` that
+every nontrivial zero obeys.  Read alone that number is encouraging, and I read
+it that way at the time.  The complementary number decides the question:
+
+> For how many units of height does `eta_min(u)` stay below `1/2` at all?
+
+Outside that set the pass cannot fire for *any* admissible displacement, so
+those ordinates are simply not examined.  Measured on a 3001-point grid over 52
+mean spacings, at three cutoffs:
+
+```text
+log c   prime work   margin       eta_min(best u)   DETECTION WINDOW
+  9       x 1        2.3487e-03      0.1168            1.0320
+ 10       x 9        6.0590e-04      0.0529            1.0560
+ 11       x 82       2.6719e-04      0.0315            1.0720
+```
+
+Every column moves except the one that matters.  **Eighty-two times the work
+buys `3.9%` more height.**  And over `88%` of the scanned range `eta_min > 1/2`,
+where no zero can reach.
+
+Combined with `C-5601`, which forces a search to `c > T/2pi`, this gives a cost
+per unit of certified height of `~ pi(T/2pi) ~ T/(2 pi log T)` — **linear in
+`T`** — against `~139 sqrt(T/2pi)` for a Riemann–Siegel scan.  The ratio grows
+like `sqrt(T)`; at the production height it is `286` in terms and `45` in
+measured wall clock.  The sensitivity comparison runs the same way: a scan sees
+any `eta > 0`, everywhere, because an off-line zero produces no sign change of
+`Z` and is caught by *counting* rather than by looking.
+
+I want to be careful about what this does and does not say.  It does not retire
+the route.  A negative D-0801 value would disprove RH outright, with no appeal
+to an external bound; a Turing exclusion is conditional on precisely such a
+bound, so the two failure modes are disjoint and that is worth something.  The
+certificate machinery — `L-5601` exact phases, `L-5602` Gram factors, `L-5603`
+archimedean endpoints — certifies *values*, and is indifferent to whether the
+values were worth seeking.  What the observation says is narrower and, I think,
+unavoidable: **compute spent enlarging `c` in the hope of a negative is spent at
+the wrong exchange rate.**  Search with a scan; certify with D-0801.
+
+The honest caveat is that all three rows sit *below* the Nyquist barrier, so the
+extrapolation across it rests on a conjecture.  The window would have to widen
+by a factor of `~300` on crossing to reach parity, against a measured `3.9%` per
+two decades — but that is an argument, not a measurement, and `O-5606` says so.
+The `c = 10^12`, `K = 2048`, `T = 3.1e12` stream (`Delta/ell_T = 1.03`) is the
+smallest configuration that would settle it, and it was still running when this
+addendum was written.
+
+### The PR #71 candidate, closed twice over
+
+Asked to look at the open full-complex Pick direction at
+`T = 20225875608341108140435/2^32`, I attacked it from a direction that does not
+require resolving its `-2.6e-33` vs `+1.2e-35` disagreement at all.
+
+**Structurally (`O-5604`).**  A Riemann–Siegel scan shows the ordinate sits
+inside a gap of `4.326` mean spacings — against a window mean of `1.004` — with
+`|Z|` reaching `259.78` where the typical scale is `sqrt(log t) ~ 5`.  That
+explains the nomination: since `xi'/xi(s) = sum_rho 1/(s-rho)`, the screen was
+in effect finding a large zero gap, which is a sound instinct, because a pair
+leaving the critical line would leave exactly such a gap behind.
+
+Then Turing's method proper.  The empirical census is blind to the case that
+matters, since an off-line zero contributes to `N` but produces no sign change.
+The real argument turns on the **quantisation of the off-line correction's
+slope**: `M(t) = mult * sum (t - tau_j)_+` has slope `0, mult, 2*mult, ...`, so
+an `N(t_1)` off by an amount not divisible by `mult` cannot be repaired at all.
+That leaves two surviving alternatives out of seven, and `tau_localise.py` then
+shows neither can place an off-line zero within 5 units of the candidate
+ordinate — under the conservative bound `3 + 0.1 log t` *or* Trudgian's sharper
+one.  The surviving `-2` branch is the boundary degeneracy, compensated exactly
+by a pair sitting on the left endpoint.
+
+**Numerically (`R-5603`).**  Rather than propagate errors, I measured the
+screen's false-positive rate.  Perturbing the eight kernel values by independent
+`2^-p` relative errors and recomputing `lambda_min`, 300 times per precision:
+
+```text
+true lambda_min   +1.2259907375435524056e-35      cond = 1.4266243e+39
+
+ p     flag rate    1-sigma spread    most negative in 300 trials
+128      0.533        2.99e-33            -5.42e-33
+136      0.173        1.18e-35            -8.47e-36
+144      0.000        4.45e-38            +1.218e-35
+160      0.000        7.03e-43            +1.226e-35
+```
+
+At 128 bits the signal is `244` times below the noise and **the screen is a coin
+flip**; the nominated `-2.626e-33` is `0.88` spreads from the median of pure
+noise.  Three independent routes agree on the true value to 20 digits, and the
+branch's own 70-digit replay agrees too once its frozen-vector Rayleigh quotient
+is distinguished from `lambda_min` — they differ by `2.996e-5` relative, exactly
+the measured tilt `sin(theta) = 9.39e-8` of the frozen direction, whose square
+times the spectral gap reproduces the difference to six digits.
+
+The prescription is to screen at `>= 160` bits.  This refutes a procedure, not
+the criterion: `K >= 0` under RH is correct, the Gram identity genuinely
+requires `Re rho = 1/2`, and the fourteen 192-bit directed blocks have `10^13`
+of headroom and stand.
+
+### One real error on the import path (`R-5602`)
+
+`D-3201` states that `g(tau) = i F(1/2 + i tau)` is Herglotz.  It is
+anti-Herglotz: with `Xi(z) = xi(1/2+iz)` we have `Xi'/Xi(z) = i F(1/2+iz)`, a
+sum of `1/(z-gamma)` over real poles, so `Im g < 0` on the upper half-plane.
+Unconditionally, for `tau = iy`, `s = 1/2 - y` and `F(1/2-y) = -F(1/2+y) < 0`
+since `xi` increases on `(1/2, inf)`.  Confirmed at 30 digits from actual `zeta`
+values at four points.  The correct sign is `g = -i F(1/2 + i tau)`.
+
+No number in the repository changes — every code path works directly in
+`H_{1/2}` and the upper-half-plane form is never evaluated.  But `D-3201` is the
+declared interface to the cited literature, and a reversed `Im` is silent: `g`
+and `-g` have the same poles, the same zero set, and the same residue sign
+pattern.  It surfaces only as an unexplained sign in some later positivity test.
+
+### And the explicit formula, checked end to end (`O-5605`)
+
+For the first time both sides of `sum_rho g(z_rho) = h v*(A_K + R_K - S_K) v`
+were evaluated at the production parameters.  The right side is `4.12e9` prime
+powers, `L-5601` phases, `L-5603` endpoints, a `1024 x 1024` eigensolve and a
+dyadic freeze; the left is 173 sign changes of `Z` and one envelope evaluation.
+They share no code, no data and no method, and they bracket correctly:
+
+```text
+1.02875e-6  <  1.05183e-6  <  1.09111e-6
+located zeros    prime side    plus full Parseval tail
+```
+
+the lower bound because `g >= 0`, the upper because the tail is added at the
+smooth density and therefore overshoots.  The residual `3.7%` lies entirely
+inside the `5.7%` tail.  Both sides are ordinary floating computations; the
+content is the agreement, which would not survive an error in the normalization,
+the enumeration, the huge-phase arithmetic, or the block assembly.
+
+### What I would do next
+
+Not a larger `c`.  Give `rs_zeta` an interval evaluation of `Z`, enough to
+*certify* each sign change rather than merely observe it.  That removes the
+weaker of the two conditions under `O-5604`, reduces the whole Turing conclusion
+to a single imported bound on `\int S`, and turns X-5602 into a certified
+zero-counting detector — which, by `O-5606`, is the cheaper search primitive by
+a factor growing like `sqrt(T)`.
+
+A first step in that direction ran while this was written: a 1000-unit scan at
+`t = 10^13`, well above the Platt–Trudgian verified height of `3.0000175e12`,
+locating 4471 sign changes against a smooth count of `4471.5625` — a deficit of
+`0.5625`, an ordinary `S(t)` fluctuation.  Uncertified, like everything else in
+X-5602 today, which is exactly the gap worth closing.
