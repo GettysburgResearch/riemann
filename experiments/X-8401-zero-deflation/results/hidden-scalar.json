@@ -1,0 +1,26 @@
+{
+  "interpretation": "Exact finite deflation algebra only; zero-count and xi-log-derivative soundness are external logical gates.",
+  "kind": "scalar-count-deflation",
+  "manifest": {
+    "logical_gate_count": 2,
+    "logical_manifest_closed": false,
+    "synthetic_gate_count": 2
+  },
+  "residual_interval": {
+    "lower": "-10/3",
+    "upper": "-10/3"
+  },
+  "schema": "riemann.zero-deflation.v1",
+  "status": "CERTIFIED_NEGATIVE_DEFLATED_WITNESS",
+  "strict_moat": "10/3",
+  "subtracted_lower": "10",
+  "zero_bins": [
+    {
+      "count": 1,
+      "distance_upper": "1/20",
+      "id": "known-line-zero",
+      "per_zero_lower": "10",
+      "subtracted_lower": "10"
+    }
+  ]
+}
