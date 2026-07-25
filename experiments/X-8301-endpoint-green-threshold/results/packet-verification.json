@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "Z_left": {"im": "0", "re": "3/25"},
+      "Z_right": {"im": "0", "re": "3/25"},
+      "component_secular_values": [
+        {"denominator": "25", "numerator": "16"},
+        {"denominator": "25", "numerator": "16"}
+      ],
+      "id": "coherent-subcritical-events-cross",
+      "pressure_endpoint_hull": {
+        "lower_of_max": {
+          "denominator": "1461501637330902918203684832716283019655932542976",
+          "numerator": "1753801964797083501844421799259539623587119051571"
+        },
+        "upper_of_max": {
+          "denominator": "365375409332725729550921208179070754913983135744",
+          "numerator": "438450491199270875461105449814884905896779762893"
+        }
+      },
+      "secular_left": {"denominator": "25", "numerator": "-11"},
+      "secular_midpoint": {"denominator": "25", "numerator": "-11"},
+      "secular_right": {"denominator": "25", "numerator": "-11"},
+      "status": "PACKET_CROSSING_AT_ENDPOINT"
+    },
+    {
+      "Z_left": {"im": "0", "re": "0"},
+      "Z_right": {"im": "0", "re": "0"},
+      "component_secular_values": [
+        {"denominator": "25", "numerator": "16"},
+        {"denominator": "25", "numerator": "16"}
+      ],
+      "id": "opposite-phase-events-cancel",
+      "pressure_endpoint_hull": {
+        "lower_of_max": {"denominator": "1", "numerator": "0"},
+        "upper_of_max": {"denominator": "1", "numerator": "0"}
+      },
+      "secular_left": {"denominator": "1", "numerator": "1"},
+      "secular_midpoint": {"denominator": "1", "numerator": "1"},
+      "secular_right": {"denominator": "1", "numerator": "1"},
+      "status": "PACKET_POSITIVE_ON_MESH_CELL"
+    },
+    {
+      "Z_left": {"im": "3/200", "re": "1/25"},
+      "Z_right": {"im": "1/50", "re": "3/100"},
+      "component_secular_values": [],
+      "id": "affine-packet-endpoints-control-cell",
+      "pressure_endpoint_hull": {
+        "lower_of_max": {
+          "denominator": "45671926166590716193865151022383844364247891968",
+          "numerator": "19511055411160841654862062044194709710018911955"
+        },
+        "upper_of_max": {
+          "denominator": "1461501637330902918203684832716283019655932542976",
+          "numerator": "624353773157146932955585985414230710720605182561"
+        }
+      },
+      "secular_left": {"denominator": "400", "numerator": "327"},
+      "secular_midpoint": {"denominator": "320", "numerator": "271"},
+      "secular_right": {"denominator": "100", "numerator": "87"},
+      "status": "PACKET_POSITIVE_ON_MESH_CELL"
+    }
+  ],
+  "proof_boundary": "finite synthetic corner packets only; no prime-power production sign",
+  "schema": "riemann.endpoint-green-packet.synthetic.v1",
+  "status": "EXACT_COHERENT_PACKET_CERTIFICATES_RECONSTRUCTED"
+}
