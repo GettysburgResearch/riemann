@@ -221,28 +221,36 @@ Deliberate search for the standard failure modes:
 ## Adversarial tests (all in experiments/X-0002, part 2)
 
 The decisive test of a *detector* is that it fires.  On synthetic polynomials
-with deliberately planted off-critical pairs at displacement `delta`, at
-quadrature effort `nsub = 32`:
+with deliberately planted off-critical pairs at displacement `delta`, the
+smallest displacement certified as `NOT_PSD` is:
 
 ```
-planted delta   verdict
---------------  ---------------------------------------------
-none            PD          (correct: no false positive)
-0.1             NOT_PSD     (correct: certified witness produced)
-0.03            UNDECIDED   (honest abstention)
-0.01            UNDECIDED
-0.003           UNDECIDED
+nsub =  16    delta = 0.1
+nsub =  32    delta = 0.02
+nsub =  64    delta = 0.005    <- smallest tested; not a limit of the method
+nsub = 128    delta = 0.005    <- ditto
 ```
 
-The `UNDECIDED` boundary sits where the `(delta/r)^2` signal of (e) drops below
-the certified quadrature error, exactly as the theory predicts.  Raising the
-effort moves the boundary down; it does not change any verdict from `PD` to
-`NOT_PSD` or back.
+with `PD` on the all-on-line control (no false positive) and `UNDECIDED` —
+honest abstention — below each floor.  Each doubling of `nsub` buys a factor of
+4-5 in `delta`, confirming the `nsub^{-2}` law predicted by (e) together with
+the `nsub^{-4}` quadrature error.  Working precision (250/300/400 bits) does
+not affect the floor: this is quadrature-limited.
 
-On `zeta` itself the four boxes tested
+**Two caveats on these numbers, both learned the hard way.**  (i) An earlier
+version of this table read `0.1 / abstains at 0.03` at `nsub = 32`; that was an
+artefact of the *test harness*, not the method — the synthetic polynomial's
+factors were multiplied in an order that widened its own interval enclosures.
+See R-0007.  A sensitivity measurement measures the whole pipeline.  (ii) A
+polynomial is not `zeta`; the synthetic model tests the moment machinery and the
+Hankel logic, not the difficulty of enclosing `zeta` itself.
+
+On `zeta` the four boxes tested
 (`[0.2,0.8]x[12,23]`, `[0.2,0.8]x[23,29]`, `[0.2,0.8]x[12,35]`,
 `[0.25,0.75]x[36,48]`) all return `PD` with `N = 2, 1, 5, 3`, agreeing with the
-independent counts of X-0001.
+independent counts of X-0001; so do the boxes around the four tightest Lehmer
+pairs below `T = 2000` (`gamma = 1977.17, 1329.04, 1415.59, 1054.78`), each
+also cross-checked against a winding count and a sign-change count.
 
 ## Remaining uncertainty
 
@@ -263,11 +271,11 @@ independent counts of X-0001.
 
 ## Suggested next attack
 
-1. **Push the sensitivity.**  Quadrature error falls like `nsub^{-4}`, and the
-   signal falls like `delta^2`, so the smallest certifiable displacement scales
-   like `nsub^{-2}`.  Doubling the effort quarters the detectable `delta`.
-   Measure the constant, then decide whether `delta ~ 10^{-6}` is reachable at
-   heights where the zeros are well separated.
+1. **Push the sensitivity.**  The `nsub^{-2}` law is now measured, not
+   conjectured, and the cost of a doubling is only a factor of 2 in work — so
+   `delta` improves like (work)^{-2}.  Extending the test grid below `0.005`
+   costs almost nothing and should be done; `delta ~ 10^{-4}` looks reachable
+   at these heights on present evidence.
 2. **Use (e), not (c), for a first sweep**: one determinant per box, with
    subdivision to defeat the parity blindness.
 3. **Combine with X-0004**: run the criterion on the boxes around the tightest

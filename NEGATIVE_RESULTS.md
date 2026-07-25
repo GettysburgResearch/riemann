@@ -115,13 +115,56 @@ absurd; quoting it as "the toolchain is sound end to end" is the point.
 
 ---
 
-## R-0006 — the Hermite detector's sensitivity floor is real
+## R-0006 — the Hermite detector's sensitivity floor, and how it scales
 
-The T-0001 detector, at quadrature effort `nsub = 32` on the validation boxes,
-certifies a planted off-line pair at `delta = 0.1` and **abstains** at
-`delta = 0.03` and below.  The signal scales like `(delta/r)^2` and the
-certified quadrature error like `nsub^{-4}`, so the detectable `delta` falls
-only like `nsub^{-2}`: **reaching `delta = 10^-3` costs about `10^4` times the
-work of `delta = 10^-1`.**  Anyone planning a sweep should budget from this
-number rather than from optimism.  Q-0009 (directional enclosures) is the
-cheapest known way to move it.
+*(Superseded in its numbers by the measurement below; the reasoning stands.)*
+
+The signal in T-0001(e) scales like `(delta/r)^2` and the certified quadrature
+error like `nsub^{-4}`, so the smallest certifiable displacement should fall
+like `nsub^{-2}`.  Measured, on the planted-pair validation box at 250 bits
+(`experiments/X-0002-.../results/floor-vs-effort.json`):
+
+```
+nsub =  16    floor delta = 0.1
+nsub =  32    floor delta = 0.02
+nsub =  64    floor delta = 0.005    <- smallest displacement tested
+nsub = 128    floor delta = 0.005    <- grid limit, not saturation
+```
+
+Each doubling of the effort buys a factor of 4-5 in `delta`, confirming the
+`nsub^{-2}` law.  Cost per doubling is a factor of 2, so **`delta` improves
+like (work)^{-2}** — much better than the earlier pessimistic reading of this
+same law.  The `0.005` at `nsub = 64` is where the test grid stopped, not where
+the method stopped.
+
+Working precision (250, 300, 400 bits) made **no** difference to any floor:
+this is quadrature-limited, not precision-limited.
+
+## R-0007 — a sensitivity floor can be an artefact of the test harness
+
+**What happened.**  X-0002 first reported the T-0001 floor as `delta = 0.1` at
+`nsub = 32`, abstaining at `0.03`.  A later measurement of the same method, at
+the same effort and the same precision, gave `delta = 0.02`.
+
+**Cause.**  The synthetic test polynomial is evaluated as a product of linear
+factors, and **interval arithmetic is order-sensitive**.  The first harness
+multiplied the two distant factors (`0.5+i`, `0.5+3i`) before the planted pair;
+the second multiplied in increasing height order.  Same polynomial, same
+method, same precision — enclosures of the *test function* differ enough to
+move the measured floor by a factor of five:
+
+```
+factors multiplied as [1i, 3i, pair]   -> detects only delta = 0.1
+factors multiplied as [1i, pair, 3i]   -> detects delta = 0.1, 0.05, 0.03, 0.02
+```
+
+**Lesson.**  An M-0003 sensitivity measurement measures the **whole pipeline**,
+including the harness that generates the synthetic counterexample.  A sloppy
+harness understates the detector, which is the safe direction for a *claim* but
+the dangerous direction for a *decision*: on the strength of the wrong number,
+this agent came within one edit of writing off small-`delta` searches as
+costing `10^4` times more than they do.
+
+**Defence adopted.**  The ordering in `X-0002/run.py` now carries a comment
+saying not to tidy it, and any future floor measurement must be reported with
+the harness construction, not just the method's parameters.

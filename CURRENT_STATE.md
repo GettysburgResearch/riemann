@@ -66,11 +66,15 @@ it.  M-0005 proposes promoting that deficit to a monitored quantity.
 This is the question README §10 keeps asking and the one most easily dodged.
 Measured, not guessed:
 
-* **T-0001 detector.**  At quadrature effort `nsub = 32` it certifies a planted
-  off-line pair at displacement `delta = 0.1` and abstains at `delta = 0.03`.
-  Signal scales as `delta^2`, certified error as `nsub^{-4}`, so detectable
-  `delta` improves only as `nsub^{-2}`: **`delta = 10^-3` costs ~`10^4` times
-  the work of `delta = 10^-1`.**  (R-0006.)
+* **T-0001 detector.**  Measured floors on the planted-pair box:
+  `delta = 0.1` at `nsub = 16`, `0.02` at `32`, `0.005` at `64` (the smallest
+  displacement tested, not a limit of the method).  Each doubling of effort
+  buys a factor of 4-5 in `delta`, confirming the `nsub^{-2}` law; since a
+  doubling costs only a factor of 2 in work, **`delta` improves like
+  (work)^{-2}**, and `10^-4` looks reachable at these heights.  (R-0006.)
+  An earlier version of this line said the floor was `0.1` and that `10^-3`
+  would cost `10^4` times the work; that was an artefact of the test harness's
+  own interval enclosures, not of the method (R-0007).
 * **L-0004 count matching.**  Exact — it has *no* sensitivity floor in
   displacement; any off-line pair anywhere in the box changes the deficit by 2.
   Its limit is purely the height it can reach: cost is `O(T^2)`, which dies

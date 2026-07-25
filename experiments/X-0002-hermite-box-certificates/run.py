@@ -115,11 +115,17 @@ def main():
         ("delta=0.01", ["0.01"]),
         ("delta=0.003", ["0.003"]),
     ]:
-        roots = [acb("0.5", t) for t in base]
+        roots = [acb("0.5", base[0])]
         for d in extra:
             roots += [acb(arb("0.5") - arb(d), "2"), acb(arb("0.5") + arb(d), "2")]
         if not extra:
             roots += [acb("0.5", "2")]
+        roots += [acb("0.5", base[1])]
+        # NOTE (R-0007): the factors are multiplied in increasing height order.
+        # Interval arithmetic is order-sensitive, and multiplying the far
+        # factors first widens every enclosure of this TEST polynomial, which
+        # understates the sensitivity of the method under test by a factor of
+        # about 5.  Do not "tidy" this ordering.
         f, fp = synth(roots)
         t = time.time()
         rec = {"planted": label}
