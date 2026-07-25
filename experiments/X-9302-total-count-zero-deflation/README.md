@@ -13,8 +13,8 @@ an individual zero as a line zero.
 ## Why this changes the production problem
 
 The parent PR #96 requests up to 128 individually isolated Hardy-`Z` zero balls.
-That path is proof-grade but expensive and must handle multiplicity one root at a
-time. X-9302 instead needs only two total-count evaluations per radius:
+X-9302 changes the proof interface: it needs two total-count evaluations per
+radius and handles multiplicity without identifying individual roots:
 
 ```text
 M(R) = N(T+R) - N(T-R).
@@ -33,7 +33,8 @@ and the checker subtracts
 sum_k d_k log(u + R_k^2)
 ```
 
-from the direct completed-xi logarithmic modulus.
+from the direct completed-xi logarithmic modulus. No wall-clock speedup is
+claimed before the FLINT implementations are benchmarked.
 
 ## Files
 
