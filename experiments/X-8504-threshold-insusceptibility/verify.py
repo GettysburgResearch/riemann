@@ -13,9 +13,6 @@ MANIFEST_MAGIC = "RIEMANN_D0801_AUTOCORRELATION_V1"
 VERDICT_SCHEMA = "riemann.piecewise-carrier-fixed-vector.v1"
 VERIFY_SCHEMA = "riemann.threshold-entry-insusceptibility.verification.v1"
 EXPECTED_VECTOR = "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297"
-EXPECTED_NORMALIZATION = "65bacffb2e03518fa6ff39d78d276b0018f7a22a1b17f3a7566d119024c8be"
-# Correct canonical normalization fingerprint; kept separately so a typo in a
-# displayed constant cannot silently enter the verifier.
 EXPECTED_NORMALIZATION = "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be"
 EXPECTED_PARAMETER = "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34"
 
@@ -111,10 +108,7 @@ def parse_manifest(path: Path) -> dict[str, Any]:
         raise CertificateError("autocorrelation count mismatch")
     if autocorrelations[-1] != (0, 0):
         raise CertificateError("terminal autocorrelation row is not zero")
-    return {
-        "metadata": metadata,
-        "autocorrelations": autocorrelations,
-    }
+    return {"metadata": metadata, "autocorrelations": autocorrelations}
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -177,10 +171,10 @@ def verify(manifest: dict[str, Any], verdict: dict[str, Any]) -> dict[str, Any]:
     if not normalized_lower > Fraction(1, 4000):
         raise CertificateError("directional lower endpoint does not clear 1/4000")
 
-    # The L-4204 first-cell source term is bounded by
-    #   log(p)/(pi sqrt(q)) * |A_1023|/A_0.
-    # For q>=1e11, use log(p)<26, pi>3, sqrt(q)>316000, and
-    # |A_1023|/A_0<1e-6.
+    # L-4204 gives log(p)/(pi*sqrt(q)) times the endpoint ratio.  Since
+    # h(x)=log(x)/sqrt(x) decreases for x>e^2, every q>=1e11 is bounded by
+    # h(1e11).  Then 11 log(10)<26, pi>3, sqrt(1e11)>316000, and the exact
+    # endpoint ratio is below 1e-6.
     event_upper = Fraction(13, 474_000_000_000)
     required_event_upper = Fraction(1, 36_000_000_000)
     if not event_upper < required_event_upper:
