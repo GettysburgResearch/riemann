@@ -1,0 +1,51 @@
+{
+  "schema": "riemann.segment-algebraic-phase-grid-summary.v1",
+  "status": "EXACT_ANALYTIC_BUDGET_VERIFIED_PRODUCTION_BACKEND_PENDING",
+  "target": {
+    "cutoff": "100000000000",
+    "carrier_num": "94184072727073",
+    "carrier_den": "20",
+    "cells": 1024,
+    "vector_bits": 96,
+    "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297",
+    "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+    "proof_specialization_floor_segment": 2000,
+    "current_direct_segment_ranges": [[0, 2800], [4900, 5000]],
+    "current_direct_coverage_segments": 2900,
+    "current_direct_coverage_fraction": "29/50",
+    "current_accelerated_segment_start": 2800,
+    "current_accelerated_segment_end": 4900,
+    "current_accelerated_segments": 2100,
+    "segment_size": 20000000
+  },
+  "orders": {
+    "atanh_log_J": 3,
+    "reciprocal_sqrt_J": 5,
+    "phase_grid_M": 32768,
+    "phase_taylor_R": 3
+  },
+  "exact_compact_bounds": {
+    "log_phase_tail_per_term_lt": "1/100000000000000000000000",
+    "algebraic_total_lt": "1/90000000000000",
+    "phase_grid_remainder_lt": "1/20000000000",
+    "combined_acceleration_moat_lt": "1/19995000000",
+    "nonprime_gate": "1/4000000000",
+    "combined_lt_quarter_nonprime_gate": true
+  },
+  "decimal_sizes": {
+    "log_phase_tail_per_term": "7.788189853675213376e-24",
+    "reciprocal_sqrt_relative_tail": "2.438356778940027749e-22",
+    "pessimistic_sqrt_rayleigh_tail": "2.194521101046025034e-15",
+    "phase_rayleigh_tail": "8.567008839042735445e-17",
+    "algebraic_total": "2.280191189436453018e-15",
+    "combined_acceleration_moat": "5.000228019118943412e-11"
+  },
+  "prototype": {
+    "classification": "EMPIRICAL_HIGH_PRECISION_REGRESSION",
+    "samples": 215,
+    "max_log_error": "1.6538231159580141656987447343495897954605059747648e-36",
+    "max_phase_error": "7.7881898315552051234312415644335869112660053172354e-24",
+    "max_reciprocal_sqrt_error": "2.7499021732151453434795246353313440303409019037859e-28"
+  },
+  "proof_boundary": "The analytic truncation moat is exact and conservative for the current later segment range. Production bin assignment, outward interval implementation, complete coverage, and final sign remain pending."
+}
