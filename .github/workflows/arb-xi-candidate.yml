@@ -13,9 +13,11 @@ on:
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
       - 'experiments/X-6601-arb-xi-dual-portfolio/rs_cross_pick_candidate.c'
       - 'experiments/X-6601-arb-xi-dual-portfolio/verify_cross_pick_certificate.py'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/RUN_CROSS_PICK'
   pull_request:
     branches:
       - agent/gpt56-02-e/39-xi-passivity-adversarial-scan
+      - agent/gpt56-06-d/66-arb-xi-dual-portfolio
     paths:
       - '.github/workflows/arb-xi-candidate.yml'
       - 'experiments/X-3902-arb-xi-passivity/rs_candidate_pick.c'
@@ -23,6 +25,7 @@ on:
       - 'experiments/X-3902-arb-xi-passivity/verify_value_certificate.py'
       - 'experiments/X-6601-arb-xi-dual-portfolio/rs_cross_pick_candidate.c'
       - 'experiments/X-6601-arb-xi-dual-portfolio/verify_cross_pick_certificate.py'
+      - 'experiments/X-6601-arb-xi-dual-portfolio/RUN_CROSS_PICK'
   workflow_dispatch:
 
 concurrency:
