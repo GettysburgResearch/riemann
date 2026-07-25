@@ -1,0 +1,16 @@
+{
+  "schema": "riemann.piecewise-carrier-directed-shard.v1",
+  "segment_start": 1800, "segment_end": 1900,
+  "include_higher_powers": false,
+  "prime_count": 82189175, "higher_prime_power_count": 0, "total_terms": 82189175,
+  "vector_sha256": "3ee8d915d69cd6bfe7bd68a3bff840a693f1966aef5c3a8f61d43e33021d4297",
+  "parameter_sha256": "ac28f01b3804426fb19275c7cf0588226292d848b7b4d62bb983fd9ac7ad3e34",
+  "normalization_sha256": "65bacffb2e03518fa6ffb771f79d276b0018f7a22a1b17f3a7566d119024c8be",
+  "precision_bits": 192, "mpfr_version": "4.2.2",
+  "phase_method": "MPFR nearest unary enclosure, directed interval algebra, combined sin/cos, and Lipschitz phase widening",
+  "knot_hulls": 0, "maximum_phase_interval_width_upper": 1.3452465257518244e-43,
+  "prime_rayleigh_interval": {
+    "lower": {"numerator": 5821663934882576721578442556873730206848385030079803279127, "denominator": 205688069665150755269371147819668813122841983204197482918576128},
+    "upper": {"numerator": 5821663934882576721578442556873730206859186015826757638764, "denominator": 205688069665150755269371147819668813122841983204197482918576128}
+  }
+}
