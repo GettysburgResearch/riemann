@@ -1,0 +1,45 @@
+Local validation recorded 2026-07-25
+
+Compiler command:
+
+g++ -O3 -march=native -frounding-math -ffp-contract=off -fno-fast-math \
+  -std=gnu++17 fast_prime_shard.cpp -lmpfr -lgmp -lquadmath -o fast_prime_shard
+
+Runtime platform contract observed:
+
+FLT_RADIX            2
+LDBL_MANT_DIG        64
+sizeof(long double)  16
+rounding mode        FE_TONEAREST
+MPFR                  4.2.2
+
+Target-sized synthetic control:
+
+segment               2800:2801
+cutoff                100000000000
+carrier               94184072727073 / 20
+cells                 4
+prime count           808754
+fully directed time   7.96 seconds
+fast midpoint time    0.79 seconds
+observed ratio        10.08
+fast midpoint inside directed interval  yes
+phase near boundaries 0
+support near knots    0
+
+Commands:
+
+python verify_fast_budget.py
+python -m unittest discover -s tests -v
+
+Tests:
+
+test_deliberately_inflated_term_contract_fails_one_micro  ok
+test_pairwise_bound                                      ok
+test_term_bound                                          ok
+test_total                                               ok
+test_target_sized_midpoint_inside_directed_interval      ok
+test_small_direct_interval_inside_fast_global_moat       ok
+test_control_is_visibly_synthetic                        ok
+
+Proof boundary: the controls use synthetic K=4 autocorrelation data. The global moat arithmetic is exact, but the production K=1024 midpoint pass and final correction-composed sign remain pending.
