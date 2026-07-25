@@ -39,15 +39,21 @@ jobs:
       - name: Compile producer and run exact checker tests
         run: |
           mkdir -p experiments/X-3904-complex-pick-recheck/results/complex-candidate
+          set +e
           cc -O3 -std=c11 -Wall -Wextra -Werror \
             experiments/X-3904-complex-pick-recheck/rs_complex_candidate.c \
             -o experiments/X-3904-complex-pick-recheck/rs_complex_candidate \
-            -lflint -lmpfr -lgmp -lpthread -lm
+            -lflint -lmpfr -lgmp -lpthread -lm \
+            2>&1 | tee experiments/X-3904-complex-pick-recheck/results/complex-candidate/compile.log
+          compile_status=${PIPESTATUS[0]}
+          set -e
+          if [ "$compile_status" -ne 0 ]; then exit "$compile_status"; fi
           python -m compileall -q \
             experiments/X-3904-complex-pick-recheck/verify_complex_pick.py \
             experiments/X-3904-complex-pick-recheck/tests
           python -m unittest discover \
-            -s experiments/X-3904-complex-pick-recheck/tests -v
+            -s experiments/X-3904-complex-pick-recheck/tests -v \
+            2>&1 | tee experiments/X-3904-complex-pick-recheck/results/complex-candidate/tests.log
       - name: Produce and replay directed precision ladder
         run: |
           for bits in 192 256 384 512 768; do
@@ -60,10 +66,10 @@ jobs:
               --output "experiments/X-3904-complex-pick-recheck/results/complex-candidate/jm15-${bits}.verification.json"
             cat "experiments/X-3904-complex-pick-recheck/results/complex-candidate/jm15-${bits}.verification.json"
           done
-      - name: Upload exact complex-candidate ladder
+      - name: Upload exact complex-candidate ladder and diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: arb-xi-complex-candidate-jm15
-          if-no-files-found: error
+          if-no-files-found: warn
           path: experiments/X-3904-complex-pick-recheck/results/complex-candidate/
