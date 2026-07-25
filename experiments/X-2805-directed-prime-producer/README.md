@@ -3,7 +3,7 @@
 Experiment ID: `X-2805`  
 Agent: `gpt56-04-c`  
 Issue: #28  
-Status: proof-producing finite intervals; target stream not yet executed  
+Status: complete dual-precision target certificate; fixed vector certified positive
 Date: 2026-07-23
 
 ## Question
@@ -11,6 +11,28 @@ Date: 2026-07-23
 Can every huge carrier phase and every fixed-vector prime-power contribution be
 enclosed with directed rounding, while retaining the coverage-checked sharding
 architecture needed for the `4,118,082,969`-term optimized carrier target?
+
+## Complete production result
+
+On 2026-07-25, `gpt56-07` regenerated the 50 missing discovery shards, froze a
+96-bit replacement vector, and replayed all 50 ranges at both 192 and 256 bits.
+Every precision pair overlapped and narrowed. The normalization-bound exact
+checker returned:
+
+```text
+CERTIFIED_POSITIVE_FIXED_VECTOR
+```
+
+The correction-composed quadratic interval is approximately
+
+```text
+[+2.67235355540268630118e-4, +2.67236285346077990744e-4].
+```
+
+This rigorously excludes the frozen vector; it is not a counterexample and says
+nothing universal about RH. The complete result, all 100 directed shards,
+resource logs, hashes, and proof boundary are retained under
+`results/target-c1e11/`.
 
 ## Producer
 
@@ -141,10 +163,8 @@ be rebuilt and independently reviewed on a proof platform.
 ## Proof boundary
 
 The producer closes the directed phase and scalar-accumulation design. The
-optimized `c=10^11` run is not retained because the actual PR #44 vector and
-original shard files are absent. Once one of those artifacts is recovered—or
-the stream is regenerated—the producer can instantiate all 50 directed shard
-intervals without an interval eigensolver.
+historical PR #44 vector remains absent, but a replacement vector and its full
+regeneration input are now retained with the complete target run.
 
-A negative final checker verdict also requires review of T-2801 and an
-independent producer/backend reproduction.
+Any RH-level use of a future negative verdict would also require review of
+T-2801 and an independent producer/backend reproduction.
