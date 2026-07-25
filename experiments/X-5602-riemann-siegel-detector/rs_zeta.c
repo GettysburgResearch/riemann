@@ -355,7 +355,25 @@ int main(int argc, char **argv)
     if (zfile && emit_zeros) {
         FILE *zf = fopen(zfile, "w");
         if (zf) {
-            for (long i = 0; i < nz; i++) fprintf(zf, "%.17g\n", t0 + zeros[i]);
+            /* The ordinate is t0 + s with t0 ~ 5e12 and s = O(span).  Forming
+             * that sum in binary64 quantises the result to one ulp at t0,
+             * which near 5e12 is 2^-10 ~ 9.8e-4 -- three orders coarser than
+             * the ~1e-9 to which the root was actually located.  All the
+             * precision is in `s`, and rounding the sum throws it away.
+             *
+             * Both t0 and s are exact binary64 values, so their exact sum fits
+             * in 120 bits.  Form it in MPFR and print 30 digits: the emitted
+             * ordinate then carries the accuracy the refinement really
+             * achieved, and downstream consumers that read it at working
+             * precision (turing.py, tau_localise.py) get it intact. */
+            mpfr_t tt;
+            mpfr_init2(tt, 160);
+            for (long i = 0; i < nz; i++) {
+                mpfr_set_d(tt, t0, MPFR_RNDN);
+                mpfr_add_d(tt, tt, zeros[i], MPFR_RNDN);   /* exact at 160 bits */
+                mpfr_fprintf(zf, "%.30Rg\n", tt);
+            }
+            mpfr_clear(tt);
             fclose(zf);
         }
     }

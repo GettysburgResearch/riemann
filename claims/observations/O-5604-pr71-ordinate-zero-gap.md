@@ -21,7 +21,7 @@ PR #71 (`agent/gpt56-03-f/39-complex-pick-recheck`) leaves one unresolved
 full-complex `xi'/xi` Pick candidate at the exact ordinate
 
 \[
- T=\frac{20225875608341108140435}{2^{32}}=4709203636353.162109375 .
+ T=\frac{20225875608341108140435}{2^{32}}=4709203636353.16214999998919665813446044921875 .
 \]
 
 Its `128`-bit midpoint matrix gave `lambda_min ~= -2.626429492911995e-33`; a
@@ -48,8 +48,8 @@ mean normalised gap       1.0040     (must be 1; a check on the whole pipeline)
 The two zeros bracketing the candidate ordinate are
 
 ```text
-gamma_lo = 4709203636353.140625      (T - 0.021484)
-gamma_hi = 4709203636354.134766      (T + 0.972656)
+gamma_lo = 4709203636353.1406744        (T - 0.0214756)
+gamma_hi = 4709203636354.1345482        (T + 0.9723982)
 ```
 
 so **`T` lies inside their gap**, `0.0215` past its left endpoint.  That gap is
@@ -263,7 +263,7 @@ python3 turing.py results/zeros-pr71-ordinate.txt \
     --t1 4709203636333.162 --t2 4709203636373.16 --out results/turing-pr71.json
 python3 tau_localise.py results/zeros-pr71-ordinate.txt \
     --t1 4709203636333.162 --t2 4709203636373.16 \
-    --target 4709203636353.162109375 --out results/tau-localise-pr71.json
+    --target 4709203636353.16214999998919665813446044921875 --out results/tau-localise-pr71.json
 ```
 
 ## Gap audit
@@ -294,3 +294,52 @@ each sign change rather than merely observe it — would remove gap-audit item 1
 and reduce the whole conclusion to the single imported bound on `\int S`.  That
 is a self-contained and worthwhile piece of work, and it would make X-5602 a
 certified zero-counting detector rather than a fast one.
+
+## Correction (2026-07-25, later): two provenance defects, both confirmed
+
+An external adversarial review found two real defects in the numbers above.  I
+verified both and they are correct.
+
+**1. The decimal expansion of the ordinate was wrong.**  The fraction quoted was
+always right, but its decimal expansion above was `float(T)`, not `T`:
+
+```text
+exact   20225875608341108140435/2^32 = 4709203636353.16214999998919665813446044921875
+what was printed here                = 4709203636353.162109375   (= the nearest binary64)
+difference                           = 174483/2^32 = 4.0625e-5
+```
+
+`T` is dyadic with denominator `2^{32}`, and binary64 near `4.7\times10^{12}`
+has `ulp = 2^{-10}`, so `T` needs 22 more bits than binary64 carries.  Fixed
+above.  Nothing downstream changes: `4\times10^{-5}` is three orders below the
+`0.0215` distance to the lower zero.
+
+**2. The emitted zero ordinates carried `~10^{-3}`, not `~10^{-9}`.**
+`rs_zeta.c` wrote each root as `fprintf(zf, "%.17g", t0 + zeros[i])`.  Both
+`t0` and the offset are exact binary64, but their *sum* is rounded to one ulp at
+`t0`, which is `2^{-10} = 9.77\times10^{-4}`.  All the accuracy of the
+false-position refinement lived in the offset and was discarded at
+serialization.  Gap-audit item 3 below, which claimed `~10^{-9}` and "seven
+digits", was wrong for that reason.
+
+The fix forms `t0 + s` in MPFR at 160 bits — exact, since both summands are
+binary64 — and prints 30 digits.  Re-running the bracketing pair gives
+
+```text
+gamma_hi = 4709203636354.13454818841463145
+```
+
+against an independent `mpmath` reconstruction of `4709203636354.1345477436`:
+agreement to nine significant figures, where before there were three.
+
+**What this does and does not change.**  The gap is real and its size stands:
+`0.9939 \pm 0.002` even at the old granularity, or `4.325` mean spacings, so
+"`4.326`" was right to three digits rather than seven.  No conclusion in this
+file depended on the discarded digits.  The one place it could have mattered is
+`turing.py`, which reads the emitted ordinates: `D(c,t)` sums `173` terms each
+carrying up to `5\times10^{-4}`, so a worst-case `0.087` against a bound of
+`5.92` and a clean branch spanning `[-0.37, +1.21]` — no verdict moves.  For the
+`1000`-unit `t = 10^{13}` window of `O-5607` the worst case is larger (`4467`
+terms, `2.2`) though the realised error is `~0.02` since the rounding is
+effectively random; that claim should be re-run against the fixed emitter before
+its `99.7%` figure is quoted again.
