@@ -186,7 +186,9 @@ and do not read the Robin ratio `0.9995` as a near miss (R-0004).
 * The `PROVED` lemmas are proved; the claim that *the code implements them* is
   supported only by the test suite.  Two real bugs (R-0001, R-0002) were found
   during this session, one of which was invisible to every value-based test.
-* Certified heights (`T <= 500`, or `2000` pending) are trivial next to the
+* Certified heights (`T <= 500`; a `T = 2000` box count was attempted and lost
+  to a container restart after 47 minutes, and a `T = 1000` run was started in
+  the time remaining) are trivial next to the
   published record.  The repository's claim to usefulness is reproducibility
   and witness formats, not range.
 * `O-0001`'s central identification `b = Theta - 1` is textbook but written

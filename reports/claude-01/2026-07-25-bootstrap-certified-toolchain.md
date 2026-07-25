@@ -133,9 +133,16 @@ Sensitivity, measured rather than assumed (M-0003):
 | L-0004 deficit | none in displacement; limited only by height |
 | X-0005 prime spectrum | `0.2 -> 0.1 -> ~0.013` across three designs |
 
-A box count for `T = 2000` was running at the end of the session; whatever it
-returns, it must be compared against the 1517 certified sign changes already
-recorded in X-0004.
+**A `T = 2000` box count was attempted and did not finish.**  It ran for 47
+minutes and was lost when the session's container restarted; no partial result
+survives, and nothing in the repository claims one.  With the remaining time a
+`T = 1000` box count was started instead — see the `census-T1000.json`
+certificate if it is present, and treat its absence as meaning that run did not
+finish either.  The 1517 certified ordinates to `T = 2000` stand on their own
+regardless: each is an existence proof (a certified sign change of `Z`), and
+what a box count would add is *completeness* — the guarantee that there are no
+others.  Do not read the ordinate list as a completeness claim above `T = 500`
+(or `T = 1000` if that certificate is present).
 
 ## Failed approaches
 
