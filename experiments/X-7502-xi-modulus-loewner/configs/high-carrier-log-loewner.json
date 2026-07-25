@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.xi-modulus-log-loewner-manifest.v1",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "log_series_terms": 128,
+  "rows": [
+    {"id": "tp2-20-18-16-14", "kind": "cross-log-loewner-minor", "row_points": ["x-20", "x-16"], "column_points": ["x-18", "x-14"]},
+    {"id": "tp2-18-16-14-12", "kind": "cross-log-loewner-minor", "row_points": ["x-18", "x-14"], "column_points": ["x-16", "x-12"]},
+    {"id": "tp2-16-14-12-10", "kind": "cross-log-loewner-minor", "row_points": ["x-16", "x-12"], "column_points": ["x-14", "x-10"]},
+    {"id": "tp2-14-12-10-8", "kind": "cross-log-loewner-minor", "row_points": ["x-14", "x-10"], "column_points": ["x-12", "x-8"]},
+    {"id": "tp2-12-10-8-6", "kind": "cross-log-loewner-minor", "row_points": ["x-12", "x-8"], "column_points": ["x-10", "x-6"]},
+    {"id": "tp2-10-8-6-5", "kind": "cross-log-loewner-minor", "row_points": ["x-10", "x-6"], "column_points": ["x-8", "x-5"]},
+
+    {"id": "tp3-20-through-10", "kind": "cross-log-loewner-minor", "row_points": ["x-20", "x-16", "x-12"], "column_points": ["x-18", "x-14", "x-10"]},
+    {"id": "tp3-18-through-8", "kind": "cross-log-loewner-minor", "row_points": ["x-18", "x-14", "x-10"], "column_points": ["x-16", "x-12", "x-8"]},
+    {"id": "tp3-16-through-6", "kind": "cross-log-loewner-minor", "row_points": ["x-16", "x-12", "x-8"], "column_points": ["x-14", "x-10", "x-6"]},
+    {"id": "tp3-14-through-5", "kind": "cross-log-loewner-minor", "row_points": ["x-14", "x-10", "x-6"], "column_points": ["x-12", "x-8", "x-5"]},
+
+    {"id": "tp4-20-through-6", "kind": "cross-log-loewner-minor", "row_points": ["x-20", "x-16", "x-12", "x-8"], "column_points": ["x-18", "x-14", "x-10", "x-6"]},
+    {"id": "tp4-18-through-5", "kind": "cross-log-loewner-minor", "row_points": ["x-18", "x-14", "x-10", "x-6"], "column_points": ["x-16", "x-12", "x-8", "x-5"]}
+  ]
+}
