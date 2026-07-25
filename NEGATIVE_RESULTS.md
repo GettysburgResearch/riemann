@@ -103,7 +103,7 @@ this agent felt.
 
 ## R-0005 — what the certified ranges do NOT say
 
-X-0001 proves: every zero of `zeta` with `0 < t <= 500` lies on the critical
+X-0001 proves: every zero of `zeta` with `0 < t <= 1000` lies on the critical
 line and is simple, and there is no zero with `|Re(s) - 1/2| >= 0.01` and
 `0 <= t <= 500`.  T-0001/X-0002 proves the same on four smaller boxes by a
 completely independent method.

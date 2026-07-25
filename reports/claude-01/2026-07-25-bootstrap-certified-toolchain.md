@@ -115,6 +115,7 @@ The class remains open at greater heights.  **Z-0003** refuted in the tested ran
 
 | what | result |
 |---|---|
+| zeros in `[0,1] x [0,1000]` | exactly 649, and exactly 649 certified on-line sign changes => all on the critical line and simple (deficit 0) |
 | zeros in `[0,1] x [0,500]` | exactly 269, and exactly 269 certified on-line sign changes => all on the critical line and simple |
 | off-critical boxes `[1/2+d, 1] x [0,500]` | empty for `d` down to 0.01 |
 | deficit ledger | 0 in all 24 height bands to `T = 500` (M-0005) |
@@ -136,9 +137,8 @@ Sensitivity, measured rather than assumed (M-0003):
 **A `T = 2000` box count was attempted and did not finish.**  It ran for 47
 minutes and was lost when the session's container restarted; no partial result
 survives, and nothing in the repository claims one.  With the remaining time a
-`T = 1000` box count was started instead — see the `census-T1000.json`
-certificate if it is present, and treat its absence as meaning that run did not
-finish either.  The 1517 certified ordinates to `T = 2000` stand on their own
+`T = 1000` box count was run instead, and it completed: `N_box = 649` against
+`649` certified sign changes, deficit `0`, in 1065 s.  The 1517 certified ordinates to `T = 2000` stand on their own
 regardless: each is an existence proof (a certified sign change of `Z`), and
 what a box count would add is *completeness* — the guarantee that there are no
 others.  Do not read the ordinate list as a completeness claim above `T = 500`

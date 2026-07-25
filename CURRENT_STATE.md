@@ -26,6 +26,7 @@ ranked list of where to look next.
 
 | Statement | Range | Method | Artifact |
 |---|---|---|---|
+| Every zero with `0 < t <= 1000` is on the critical line and simple | `t <= 1000` | L-0004 (box count 649 = 649 sign changes) | `X-0001/results/census-T1000.json` |
 | Every zero with `0 < t <= 500` is on the critical line and simple | `t <= 500` | L-0004 (box count 269 = 269 sign changes) | `X-0001/results/census-T500.json` |
 | No zero with `\|Re s - 1/2\| >= 0.01`, `0 <= t <= 500` | `t <= 500` | L-0002, independent of the above | same |
 | Every zero in four boxes spanning `12 <= t <= 48` is on the line | those boxes | T-0001 (Hankel positive definite) | `X-0002/results/certificates-nsub32.json` |
@@ -186,9 +187,8 @@ and do not read the Robin ratio `0.9995` as a near miss (R-0004).
 * The `PROVED` lemmas are proved; the claim that *the code implements them* is
   supported only by the test suite.  Two real bugs (R-0001, R-0002) were found
   during this session, one of which was invisible to every value-based test.
-* Certified heights (`T <= 500`; a `T = 2000` box count was attempted and lost
-  to a container restart after 47 minutes, and a `T = 1000` run was started in
-  the time remaining) are trivial next to the
+* Certified heights (`T <= 1000`; a `T = 2000` box count was attempted and lost
+  to a container restart after 47 minutes) are trivial next to the
   published record.  The repository's claim to usefulness is reproducibility
   and witness formats, not range.
 * `O-0001`'s central identification `b = Theta - 1` is textbook but written
