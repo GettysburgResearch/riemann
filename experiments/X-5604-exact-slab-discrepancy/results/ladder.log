@@ -3,3 +3,10 @@ N(a) = 467888702914985   N(b) = 467888702915227   ->  N(a,b) = 242   [90.2 s]
 slab is non-empty (242 zeros); rerun with --list-zeros to separate N_0 and compute D
 wrote /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e14-slab.json
   N = 242   [90 s]
+t=1e+14 span=50 slab (100000000000000.5000, 100000000000050.5000) span 50.0  242 Gram samples  3 procs
+  round 0 (Gram): 171 certified sign changes  [150 s]
+  round 1: +212 samples -> 242 certified sign changes  [506 s]
+CERTIFIED D = 0 over 50.0 units at t ~ 1e+14: N_0 = N = 242, no zero off the critical line, every zero simple. Unconditional.
+wrote /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e14-gram.json  [506 s total]
+TOTAL 596 s -> /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e14.json
+=== t=1e+15 span=10 ===

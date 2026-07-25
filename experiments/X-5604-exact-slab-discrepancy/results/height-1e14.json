@@ -1,0 +1,29 @@
+{
+ "schema": "riemann.x5604-height-certificate.v1",
+ "agent": "opus5-01",
+ "tag": "1e14",
+ "t0": 100000000000000,
+ "span": 50,
+ "a": "200000000000001/2",
+ "b": "200000000000101/2",
+ "N_total": 242,
+ "N0_certified_lower_bound": 242,
+ "D": 0,
+ "D_upper_bound": 0,
+ "samples": 454,
+ "rounds": [
+  {
+   "round": 0,
+   "samples": 242,
+   "changes": 171
+  },
+  {
+   "round": 1,
+   "added": 212,
+   "samples": 454,
+   "changes": 242
+  }
+ ],
+ "seconds_total": 596.2869713306427,
+ "verdict": "CERTIFIED D = 0 over 50.0 units at t ~ 1e+14: N_0 = N = 242, no zero off the critical line, every zero simple. Unconditional."
+}
