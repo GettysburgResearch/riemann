@@ -1,0 +1,157 @@
+name: PR71 total-count zero-deflated direct-xi modulus
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-02-j/93-total-count-zero-deflation
+    paths:
+      - '.github/workflows/pr71-total-count-zero-deflation.yml'
+      - 'experiments/X-9302-total-count-zero-deflation/**'
+      - 'claims/lemmas/L-9303-total-zero-count-deflation.md'
+  pull_request:
+    branches:
+      - agent/gpt56-01-i/93-zero-deflated-xi-modulus
+    paths:
+      - '.github/workflows/pr71-total-count-zero-deflation.yml'
+      - 'experiments/X-9302-total-count-zero-deflation/**'
+      - 'claims/lemmas/L-9303-total-zero-count-deflation.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr71-total-count-zero-deflation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous FLINT backend
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+
+      - name: Run exact checker and adapter tests
+        run: |
+          python -m compileall -q \
+            experiments/X-9302-total-count-zero-deflation
+          python -m unittest discover \
+            -s experiments/X-9302-total-count-zero-deflation/tests -v
+
+      - name: Compile unconditional total-count producer
+        run: |
+          cc -O3 -std=c11 -Wall -Wextra -Werror \
+            experiments/X-9302-total-count-zero-deflation/flint_pr71_nested_total_counts.c \
+            -o /tmp/pr71_nested_total_counts \
+            -lflint -lmpfr -lgmp -lpthread -lm
+
+      - name: Generate and compile exact PR71 completed-xi producer
+        run: |
+          mkdir -p experiments/X-9302-total-count-zero-deflation/results/pr71
+          python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_rs_source.py \
+            --output /tmp/pr71_rs_modulus.c \
+            --manifest experiments/X-9302-total-count-zero-deflation/results/pr71/source-patch.json
+          cc -O3 -std=c11 -Wall -Wextra \
+            /tmp/pr71_rs_modulus.c -o /tmp/pr71_rs_modulus \
+            -lflint -lmpfr -lgmp -lpthread -lm
+
+      - name: Produce nested total-zero counts at 192 and 256 bits
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9302-total-count-zero-deflation/results/pr71
+          /usr/bin/time -v /tmp/pr71_nested_total_counts 192 4 \
+            >"$out/total-counts-p192.json" 2>"$out/total-counts-p192.time.txt"
+          /usr/bin/time -v /tmp/pr71_nested_total_counts 256 4 \
+            >"$out/total-counts-p256.json" 2>"$out/total-counts-p256.time.txt"
+          python experiments/X-9302-total-count-zero-deflation/compare_total_count_precision.py \
+            "$out/total-counts-p192.json" "$out/total-counts-p256.json" \
+            --output "$out/total-counts-comparison.json"
+
+      - name: Produce direct completed-xi rectangles at both precisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9302-total-count-zero-deflation/results/pr71
+          /usr/bin/time -v /tmp/pr71_rs_modulus 192 \
+            >"$out/xi-primitives-p192.json" 2>"$out/xi-p192.time.txt"
+          /usr/bin/time -v /tmp/pr71_rs_modulus 256 \
+            >"$out/xi-primitives-p256.json" 2>"$out/xi-p256.time.txt"
+
+      - name: Assemble and verify total-count-deflated certificates
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9302-total-count-zero-deflation/results/pr71
+          config=experiments/X-9301-zero-deflated-xi-modulus/configs/pr71-deflated-rows.json
+          for precision in 192 256; do
+            python experiments/X-9302-total-count-zero-deflation/build_pr71_total_count_certificate.py \
+              "$out/xi-primitives-p${precision}.json" \
+              "$out/total-counts-p${precision}.json" "$config" \
+              --output "$out/certificate-p${precision}.json"
+            set +e
+            python experiments/X-9302-total-count-zero-deflation/verify_total_count_deflation.py \
+              "$out/certificate-p${precision}.json" \
+              --output "$out/verification-p${precision}.json"
+            status=$?
+            set -e
+            test "$status" -le 1
+          done
+          python experiments/X-9302-total-count-zero-deflation/compare_total_deflation_precision.py \
+            "$out/certificate-p192.json" "$out/certificate-p256.json" \
+            --output "$out/certificate-comparison.json"
+
+      - name: Summarize and hash proof artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9302-total-count-zero-deflation/results/pr71
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('experiments/X-9302-total-count-zero-deflation/results/pr71')
+          counts=json.loads((root/'total-counts-p256.json').read_text())
+          result=json.loads((root/'verification-p256.json').read_text())
+          summary={
+            'schema':'riemann.x9302-pr71-production-summary.v1',
+            'target':counts['target'],
+            'count_windows':[
+              {'id':w['id'],'radius':w['radius'],'count_lower':w['count_lower']}
+              for w in counts['windows']
+            ],
+            'verdict':result['verdict'],
+            'certified_negative_rows':result['certified_negative_rows'],
+            'unresolved_rows':result['unresolved_rows'],
+            'negative_row_ids':[r['id'] for r in result['rows'] if r['status']=='CERTIFIED_NEGATIVE'],
+            'counterexample_nomination':(
+              'PENDING_INDEPENDENT_REPRODUCTION_AND_REVIEW'
+              if result['certified_negative_rows'] else None
+            ),
+            'proof_boundary':'Total counts are unconditional. Their conversion into removable line mass is made only under the RH hypothesis in L-9303. A negative requires independent special-function/count reproduction and normalization review.'
+          }
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+          find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | \
+            xargs -0 sha256sum >"$out/SHA256SUMS"
+
+      - name: Upload proof artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr71-total-count-zero-deflated-xi
+          path: experiments/X-9302-total-count-zero-deflation/results/pr71/
+          retention-days: 30
+          if-no-files-found: warn
