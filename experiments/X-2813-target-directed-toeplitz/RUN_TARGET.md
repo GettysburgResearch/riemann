@@ -1,11 +1,11 @@
 # Full target run trigger
 
-This child commit launches only the two-job directed calculation defined in
-`.github/workflows/target-directed-toeplitz-paired.yml`. The larger reference
-matrices are now manual-only, leaving both hosted slots to this run.
+This child commit launches the quota-safe single-host calculation defined in
+`.github/workflows/target-directed-toeplitz-single.yml`.
 
-Each hosted job evaluates four disjoint MPFR subranges internally. Together they
-cover all 200 half-open integer segments for the target.
+One hosted runner starts eight disjoint MPFR worker processes internally.  Each
+worker covers 50 of the 400 half-open integer segments, so the run evaluates the
+entire cutoff without asking GitHub to schedule a large matrix of hosted jobs.
 
 Target:
 
@@ -14,8 +14,10 @@ c = 10^11
 T = 4709203636353.65
 K = 1024
 8 directed super-shards
-200 complete integer segments
+400 complete integer segments
+96-bit frozen vector after post-selection
 ```
 
-No mathematical claim is made by this marker. The uploaded final rational
-interval is the only sign decision.
+The job uploads partial shard and diagnostic files even if a worker fails.  No
+mathematical claim is made by this marker.  The exact final rational interval is
+the only sign decision.
