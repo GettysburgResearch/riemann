@@ -1,0 +1,122 @@
+name: arb-xi-barycentric-nearzero
+
+on:
+  push:
+    branches:
+      - agent/gpt56-02-h/66-barycentric-nearzero-replay
+    paths:
+      - '.github/workflows/arb-xi-barycentric-nearzero.yml'
+      - 'experiments/X-6602-barycentric-nearzero/**'
+  pull_request:
+    branches:
+      - agent/gpt56-06-d/66-arb-xi-dual-portfolio
+    paths:
+      - '.github/workflows/arb-xi-barycentric-nearzero.yml'
+      - 'experiments/X-6602-barycentric-nearzero/**'
+  workflow_dispatch:
+
+concurrency:
+  group: arb-xi-barycentric-nearzero-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  resolve-row:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install FLINT development library
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+      - name: Build focused exact-ordinate producer
+        run: |
+          mkdir -p results
+          python - <<'PY'
+          from pathlib import Path
+          source = Path('experiments/X-3902-arb-xi-passivity/rs_grid.c').read_text(encoding='utf-8')
+          source = source.replace('#define T_MIN (-32)', '#define T_MIN 1')
+          source = source.replace('#define T_MAX 32', '#define T_MAX 1')
+          if '#define T_MIN 1' not in source or '#define T_MAX 1' not in source:
+              raise SystemExit('failed to focus rs_grid.c on exact offset j=+1')
+          Path('/tmp/rs_grid_j1.c').write_text(source, encoding='utf-8')
+          PY
+          cc -O3 -std=c11 -Wall -Wextra -Werror \
+            /tmp/rs_grid_j1.c -o rs_grid_j1 \
+            -lflint -lmpfr -lgmp -lpthread -lm
+          python -m compileall -q \
+            experiments/X-3902-arb-xi-passivity/verify_certificate.py \
+            experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
+            experiments/X-6602-barycentric-nearzero
+          python experiments/X-6602-barycentric-nearzero/augment_barycentric.py --self-test
+      - name: Produce, contract, and classify precision ladder
+        shell: bash
+        run: |
+          set -euo pipefail
+          for precision in 128 256 384 512; do
+            directory="results/arb-${precision}"
+            mkdir -p "$directory"
+            /usr/bin/time -v ./rs_grid_j1 "$precision" \
+              > "$directory/primitive.certificate.json" \
+              2> "$directory/primitive.time.txt"
+            python experiments/X-6602-barycentric-nearzero/augment_barycentric.py \
+              "$directory/primitive.certificate.json" \
+              --output "$directory/barycentric.certificate.json"
+            python experiments/X-3902-arb-xi-passivity/verify_value_certificate.py \
+              "$directory/barycentric.certificate.json" \
+              --output "$directory/barycentric.verification.json"
+            python experiments/X-6602-barycentric-nearzero/summarize.py summarize \
+              "$directory/barycentric.verification.json" \
+              --output "$directory/barycentric.summary.json"
+            cat "$directory/barycentric.summary.json"
+          done
+      - name: Require outward-interval nesting
+        run: |
+          python experiments/X-6602-barycentric-nearzero/summarize.py compare \
+            results/arb-128/barycentric.verification.json \
+            results/arb-256/barycentric.verification.json \
+            --output results/nesting-128-256.json
+          python experiments/X-6602-barycentric-nearzero/summarize.py compare \
+            results/arb-256/barycentric.verification.json \
+            results/arb-384/barycentric.verification.json \
+            --output results/nesting-256-384.json
+          python experiments/X-6602-barycentric-nearzero/summarize.py compare \
+            results/arb-384/barycentric.verification.json \
+            results/arb-512/barycentric.verification.json \
+            --output results/nesting-384-512.json
+          cat results/nesting-*.json
+      - name: Emit compact final status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[]
+          for precision in (128,256,384,512):
+              path=Path(f'results/arb-{precision}/barycentric.summary.json')
+              data=json.loads(path.read_text())
+              rows.append({'precision_bits':precision, **data['tightest']})
+          output={
+              'schema':'riemann.xi-barycentric-nearzero-ladder.v1',
+              'rows':rows,
+              'candidate_policy':'No Z identifier without a strict negative upper endpoint and independent directed reproduction.'
+          }
+          Path('results/precision-ladder.json').write_text(json.dumps(output,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(output,indent=2,sort_keys=True))
+          PY
+          sha256sum results/arb-*/* results/nesting-*.json results/precision-ladder.json \
+            > results/SHA256SUMS
+      - name: Upload exact near-zero replay
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arb-xi-barycentric-nearzero
+          if-no-files-found: error
+          retention-days: 30
+          path: results/
