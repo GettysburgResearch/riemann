@@ -2,6 +2,12 @@ name: PR71 zero-deflated direct-xi modulus
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-i/93-zero-deflated-xi-modulus
+    paths:
+      - .github/workflows/pr71-zero-deflated-modulus.yml
+      - experiments/X-9301-zero-deflated-xi-modulus/**
   pull_request:
     paths:
       - experiments/X-9301-zero-deflated-xi-modulus/RUN_PR71.md
@@ -175,6 +181,7 @@ jobs:
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
           python - <<'PY'
           import json
+          from fractions import Fraction
           from pathlib import Path
           root=Path('experiments/X-9301-zero-deflated-xi-modulus/results/pr71')
           gap=json.loads((root/'gap-p256.json').read_text())
@@ -184,12 +191,12 @@ jobs:
           for count in (2,4,8,16,32,64):
             result=json.loads((root/f'nearest-{count}-verification-p256.json').read_text())
             rows=result['rows']
-            tight=min(
-              rows,
-              key=lambda row: abs(
-                row['interval']['upper']['numerator']/row['interval']['upper']['denominator']
-              ),
-            )
+            def midpoint(row):
+              lo=row['interval']['lower']; hi=row['interval']['upper']
+              a=Fraction(lo['numerator'],lo['denominator'])
+              b=Fraction(hi['numerator'],hi['denominator'])
+              return (a+b)/2
+            tight=min(rows,key=lambda row:abs(midpoint(row)))
             ladder.append({
               'nearest_count':count,
               'verdict':result['verdict'],
