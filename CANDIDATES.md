@@ -5,8 +5,11 @@ A candidate stays a candidate until **existence of a zero** and **separation
 from the critical line** are both certified and independently reproduced
 (README §7).
 
-Current tally: **0 surviving candidates.**  Two proposed and refuted, two open
-as target classes.  Nothing in this repository is evidence against RH.
+Current tally: **0 surviving candidates.**  Z-0001 refuted; Z-0002 refuted at
+its four strongest instances with the class still open at greater heights;
+Z-0003 refuted throughout the tested range; Z-0004 searched with a purpose-built
+screen whose sensitivity has been measured, no anomaly found.  Nothing in this
+repository is evidence against RH.
 
 ---
 
@@ -140,8 +143,9 @@ sigma(n) / (e^gamma n log log n) = 0.999493717304...
 within `5.1 * 10^-4` of failing, and the Lagarias ratio is `0.999491586...`.
 This is the *smallest margin of any criterion in this repository*, which is
 either the most encouraging fact here or the most misleading one — see
-NEGATIVE_RESULTS R-0003 for why it is probably the latter, and O-0001 for the
-quantity that actually carries the information.
+NEGATIVE_RESULTS **R-0004** for why it is probably the latter (under RH the
+ratio tends to 1 from below, so closeness is the *predicted* behaviour), and
+O-0001 for the quantity that actually carries the information.
 
 ---
 
@@ -149,7 +153,7 @@ quantity that actually carries the information.
 
 ```text
 Candidate ID:     Z-0004
-Status:           IDEA  (not yet attempted)
+Status:           SEARCHED, no anomaly found (screen built; sensitivity measured)
 Proposing agent:  claude-01
 Object:           a frequency present in the oscillation of theta(x) - x whose
                   amplitude grows like x^{beta} with beta > 1/2
@@ -157,13 +161,29 @@ Claimed failure mode:  by the explicit formula the oscillation of theta(x) - x
                   is sum over rho of x^rho / rho; a zero with Re rho > 1/2
                   contributes a component of frequency gamma (in log x) whose
                   amplitude grows faster than x^{1/2}
-Dependencies:     O-0001, X-0003
-Verification status: not attempted
+Dependencies:     O-0001, X-0003, X-0005
+Verification status: searched; no anomalous or growing line found within the
+                  screen's measured sensitivity
 ```
 
-This is the cheapest wide-range probe available: a segmented sieve to `10^9`
-and a Fourier transform in `log x`.  It searches *all heights at once*, at a
-cost independent of the height, which no contour method can do.  What it
-cannot do is certify anything — a detected anomaly would be a lead, to be
-converted into a rectangle for L-0002/T-0001.  Recommended as the next
-session's headline experiment; see OPEN_PROBLEMS Q-0010.
+Built and run in X-0005 (see O-0002).  The spectrum of `(psi(x)-x)/sqrt(x)`
+from a prime sieve reproduces the first twelve zero ordinates with the
+predicted `2/|rho|` amplitudes; no extra line and no growing line was found.
+
+**What that null result is worth is exactly the screen's sensitivity**, and the
+sensitivity was measured rather than assumed (M-0003).  Across three designs:
+
+```
+periodogram, two sieve limits    floor delta >= 0.2
+paired equal-length Hann windows floor delta >= 0.1   (0.02 for isolated lines)
+joint least-squares fit          estimator floor <= 0.0005; real-data floor ~0.013
+```
+
+So the honest statement is: **no off-critical displacement above roughly
+`delta ~ 0.013` among the first twelve ordinates**, uncertified, from the
+primes alone.  This does not compete with L-0004, which certifies *every*
+displacement in its range; the screen's distinct value is that its cost does
+not grow with the height of the target.
+
+Remaining lever, diagnosed in O-0002: window length, i.e. a larger sieve.
+See Q-0010.
