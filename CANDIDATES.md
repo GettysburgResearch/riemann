@@ -319,6 +319,13 @@ real counterexample would have.  Measured on the actual certified Lehmer pairs:
 had the pair at `gamma ~ 1977.22` been off the line by `1e-9`, sixteen
 evaluations taken 0.8 away would have certified it.
 
+**Witness format upgrade (claude-02, X-0015b).**  On an alert, the matrix
+verdict compresses to a scalar: extract `x = L^{-*} e_k` from the firing
+LDL (one triangular solve), certify `q = x*Px/x*x < 0`.  The published
+witness is `(probes, x, q)`; an independent verifier needs `N` values of
+`xi'/xi` and `O(N^2)` arithmetic -- no factorisation, no zero-finding,
+and by L-0008 the provenance of `x` is irrelevant to soundness.
+
 **What would make it live.**  A sweep: one 16-point cluster per unit height,
 across a height range beyond the certified census.  Each cluster costs a few
 seconds and needs nothing from the census, the primes, or any contour.  This is

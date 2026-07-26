@@ -175,7 +175,11 @@ turn the whole T-0005 cost law into a theorem.
 
 * T-0005's cost law is **better** than claimed: signal `~ delta^2`, not
   `delta^3`, so `N >~ 0.74 log10(1/delta) + const`.
-* The LDL pivot can be replaced by the **scalar statistic** `v* P v` with `v`
-  pre-tuned to the target ordinate: `O(N^2)` per verdict, an explicit floor,
-  and the certificate is a single ball-arithmetic real number.  A NOT-PSD
-  witness in this form is: "here is `v`; `v* P v < 0`; done."
+* The LDL pivot can be replaced by the **scalar statistic** `v* P v`,
+  and the certificate is a single ball-arithmetic real number: "here is
+  `v`; `v* P v < 0`; done."  BUT the design half of this idea failed when
+  built: three explicit constructions of `v` (hard nulls, MVDR, MVDR +
+  tail model) lose the response/floor race to the LDL implicit optimum by
+  ~`10^12` (X-0015, R-0011).  What works is extraction: when the LDL
+  fires, `x = L^{-*} e_k` gives `x*Px = d_k` exactly, and the certified
+  scalar follows.  Demonstrated end to end in X-0015b.
