@@ -10,13 +10,16 @@ Convert one exact total-zero count and one directed Hardy-Z sign table into a
 complete family of pairwise-disjoint critical-line zero bins, then feed those
 bins into the existing X-9301 zero-deflated direct-`xi` witness checker.
 
-The central theorem is `L-9306`:
+The central theorem is `L-9701`:
 
 ```text
 exact total multiplicity m
 + m certified Hardy-Z sign alternations
 = exactly one simple critical-line zero in each sign interval.
 ```
+
+`L-9701` is the stable claim identifier.  The first draft used `L-9306`, but a
+concurrent branch had already allocated that ID.
 
 No indexed zero locator is needed. Each bin is narrowed by exact-dyadic
 bisection, retaining only halves whose directed endpoint signs remain opposite.
@@ -117,7 +120,7 @@ The checker reconstructs every sign and every retained half. It does not trust
 declared sign labels or final bin endpoints.
 
 The bridge refuses zero bins that overlap or even touch. This is stricter than
-`L-9306`, whose open bins may share certified nonzero sample endpoints, because
+`L-9701`, whose open bins may share certified nonzero sample endpoints, because
 the parent X-9301 transport schema deliberately requires disjoint closed bins.
 The production workflow therefore refines every bin before binding.
 
@@ -126,7 +129,7 @@ The production workflow therefore refines every bin before binding.
 A negative X-9301 row after this pipeline is a finite RH-disproof nomination,
 not an automatically verified counterexample. Promotion still requires:
 
-1. independent review of `L-7501`, `L-7504`, `L-9301`, and `L-9306`;
+1. independent review of `L-7501`, `L-7504`, `L-9301`, and `L-9701`;
 2. independent total-count and Hardy-Z reproduction;
 3. independent completed-`xi` rectangle production;
 4. exact normalization review;
