@@ -3,7 +3,7 @@
 Experiment ID: X-9301  
 Agent: `gpt56-01-i`  
 Issue: #93  
-Status: exhaustive disjoint PR #71 grid certified positive through 256 nearest zeros
+Status: fixed PR71 grid and retained neighborhood screens positive; no candidate
 
 ## Purpose
 
@@ -126,7 +126,7 @@ python verify_zero_deflated_modulus.py \
 python -m unittest discover -s tests -v
 ```
 
-Forty-two exact tests pass. They cover:
+Sixty-two exact tests pass. They cover:
 
 - the strict hidden-offline separation;
 - the exact algebraic negative integer;
@@ -142,7 +142,12 @@ Forty-two exact tests pass. They cover:
 - production source reconstruction and adversarial re-signing;
 - fixed-point logarithm enclosure against the exact positive series;
 - nearest-zero selection and precision nesting;
-- complete-ladder summary binding and input-digest drift.
+- complete-ladder summary binding and input-digest drift;
+- arbitrary nearby dyadic ordinates and dense-node source generation;
+- exact zero-block target rebinding without changing any indexed zero ball;
+- complete dense order-two and sparse high-order pattern coverage;
+- Decimal midpoint ranking with secant-input uncertainty propagation;
+- compact ordinate-screen replay and artifact-digest auditing.
 
 ## Globally-nearest guard
 
@@ -278,6 +283,46 @@ The retained verdicts are `CERTIFIED_POSITIVE_FIXED_PR71_TABLE` and
 nominated. This closes only the exact ordinate, nine-point value-only grid, and
 twelve cumulative zero subsets. See `results/pr71/summary.json` and
 `results/pr71/exhaustive-grid-summary.json`.
+
+## Retained PR71-neighborhood candidate search
+
+The direct-xi producer can also bind an exact nearby numerator and a declared
+set of dyadic offsets while preserving the reviewed X-7501 source hash,
+positive-height functional-equation reflection, and common exact xi scale.
+`rebind_pr71_zero_block.py` reuses the absolute indexed Hardy-zero balls only
+after exact rational comparison reconstructs the new target bracket; no zero
+ball or zero index changes.
+
+The retained search covers:
+
+- seven evidence-ranked nearby ordinates, each with all 5,460 disjoint
+  order-two minors on `x=2^-20,...,2^-5`: 38,220 directed intervals;
+- PR71, its upper-gap mirror, a distinct-gap target, and a high line-zero-mass
+  target, each with all 14,535 order-two minors on the 20-node grid through
+  `x=1/2`: 58,140 directed intervals;
+- all 17,160 order-three and 45,045 order-four midpoint patterns on a 13-node
+  logarithmically broad grid at each of those four targets.
+
+Every order-two interval is strictly positive and nested from 192 to 256 bits.
+The p256 high-order screen produced cancellation-driven negative midpoints, but
+none exceeded the propagated xi/zero-input uncertainty. Fresh p512 primitives
+made all 248,820 retained high-order midpoints positive at 200 decimal digits.
+Those high-order tables are discovery screens, not directed proofs.
+
+The two strongest precision candidates were frozen before replay:
+
+```text
+dense order three:
+  2.28071767764810697e-85 < det < 2.28071767764810698e-85
+
+broad order four (p256 midpoint was -5.6700005e-103):
+  3.03913195075177329e-103 < det < 3.03913195075177330e-103
+```
+
+Both are source-bound, strictly positive at 512 bits, and nested in their
+384-bit intervals (the order-four low interval is unresolved). The aggregate
+verdict is `NO_NEGATIVE_IN_RETAINED_PR71_NEIGHBORHOOD_SCREENS`; see
+`results/pr71-ordinate-screen-summary.json`.
 
 ## Proof boundary
 

@@ -1,0 +1,2948 @@
+{
+  "classification": "EXPLORATORY_DECIMAL_200_MIDPOINT_ONLY",
+  "counterexample_nomination": null,
+  "midpoint_decimal_digits": 200,
+  "nearest_count": 256,
+  "orders": [
+    {
+      "coverage_formula": "binomial(13, 6) * binomial(5, 2)",
+      "midpoint_decimal_digits": 200,
+      "most_negative": [],
+      "negative_beyond_input_uncertainty_count": 0,
+      "negative_beyond_roundoff_bound_count": 0,
+      "negative_midpoint_count": 0,
+      "order": 3,
+      "pattern_count": 17160,
+      "permutation_term_count": 6,
+      "top_geometry_adjusted": [
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10"
+          ],
+          "determinant_midpoint": "1.72786295236435245e-73",
+          "geometry_adjusted_midpoint": "1.86290907272676281e-72",
+          "input_uncertainty_eta_bound": "3.58709190959297403e-132",
+          "permanent_normalized_midpoint": "1.11166804683428030e-72",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-10"
+          ],
+          "determinant_midpoint": "5.03030851471729782e-71",
+          "geometry_adjusted_midpoint": "4.22654772863449652e-70",
+          "input_uncertainty_eta_bound": "3.76591152304956744e-131",
+          "permanent_normalized_midpoint": "3.23638702587937799e-70",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-8"
+          ],
+          "determinant_midpoint": "4.71706577285633173e-71",
+          "geometry_adjusted_midpoint": "4.48961079474221491e-70",
+          "input_uncertainty_eta_bound": "3.57476295171779008e-132",
+          "permanent_normalized_midpoint": "3.03485372018172463e-70",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-12",
+            "x-10"
+          ],
+          "determinant_midpoint": "8.07993305176465962e-70",
+          "geometry_adjusted_midpoint": "6.73626601389880833e-69",
+          "input_uncertainty_eta_bound": "3.18792080670616765e-130",
+          "permanent_normalized_midpoint": "5.19844666031875089e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-10"
+          ],
+          "determinant_midpoint": "8.07993305176465962e-70",
+          "geometry_adjusted_midpoint": "6.73626601389880833e-69",
+          "input_uncertainty_eta_bound": "3.86180299794448961e-131",
+          "permanent_normalized_midpoint": "5.19844666031875089e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ],
+          "determinant_midpoint": "7.57863006324529419e-70",
+          "geometry_adjusted_midpoint": "7.15379597464390070e-69",
+          "input_uncertainty_eta_bound": "3.17687370813116076e-130",
+          "permanent_normalized_midpoint": "4.87591962577764737e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-12",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "7.57863006324529419e-70",
+          "geometry_adjusted_midpoint": "7.15379597464390070e-69",
+          "input_uncertainty_eta_bound": "3.86130459154490107e-131",
+          "permanent_normalized_midpoint": "4.87591962577764737e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "7.54730522786029576e-70",
+          "geometry_adjusted_midpoint": "7.18337726453461553e-69",
+          "input_uncertainty_eta_bound": "3.38091384806174409e-132",
+          "permanent_normalized_midpoint": "4.85576594752317337e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "7.07732651352702694e-70",
+          "geometry_adjusted_midpoint": "7.63047543405815238e-69",
+          "input_uncertainty_eta_bound": "2.21101856002026409e-133",
+          "permanent_normalized_midpoint": "4.55339224355183519e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-10"
+          ],
+          "determinant_midpoint": "1.45442487758979799e-68",
+          "geometry_adjusted_midpoint": "9.65506947310891369e-68",
+          "input_uncertainty_eta_bound": "3.19888872826373567e-130",
+          "permanent_normalized_midpoint": "9.35744157674663344e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-12"
+          ],
+          "determinant_midpoint": "1.37360826844262775e-68",
+          "geometry_adjusted_midpoint": "1.01835035331993898e-67",
+          "input_uncertainty_eta_bound": "3.18792383841313013e-130",
+          "permanent_normalized_midpoint": "8.83748574391007493e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "1.37360826844262775e-68",
+          "geometry_adjusted_midpoint": "1.01835035331993898e-67",
+          "input_uncertainty_eta_bound": "3.19884441079104722e-130",
+          "permanent_normalized_midpoint": "8.83748574391007493e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-8"
+          ],
+          "determinant_midpoint": "1.36855713338811846e-68",
+          "geometry_adjusted_midpoint": "1.02209335832531734e-67",
+          "input_uncertainty_eta_bound": "3.76467642539746317e-131",
+          "permanent_normalized_midpoint": "8.80498790465067319e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-10"
+          ],
+          "determinant_midpoint": "1.29783924643969845e-68",
+          "geometry_adjusted_midpoint": "1.07362515990487890e-67",
+          "input_uncertainty_eta_bound": "3.18787995362396065e-130",
+          "permanent_normalized_midpoint": "8.35000494813699362e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.21228554547575188e-68",
+          "geometry_adjusted_midpoint": "1.14488540349648045e-67",
+          "input_uncertainty_eta_bound": "3.57395373057244528e-132",
+          "permanent_normalized_midpoint": "7.79957210043610505e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-12",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.19777318892737965e-67",
+          "geometry_adjusted_midpoint": "1.62936053971555636e-66",
+          "input_uncertainty_eta_bound": "3.18779727212896592e-130",
+          "permanent_normalized_midpoint": "1.41399769681249621e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.07654275596115440e-67",
+          "geometry_adjusted_midpoint": "1.71780022886212199e-66",
+          "input_uncertainty_eta_bound": "3.86053789621582459e-131",
+          "permanent_normalized_midpoint": "1.33600077071409144e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.06846282067150864e-67",
+          "geometry_adjusted_midpoint": "1.72448407077424350e-66",
+          "input_uncertainty_eta_bound": "3.74485050372256893e-131",
+          "permanent_normalized_midpoint": "1.33080232282880221e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ],
+          "determinant_midpoint": "2.06138918216585344e-67",
+          "geometry_adjusted_midpoint": "1.73037542854862660e-66",
+          "input_uncertainty_eta_bound": "3.17675016922737699e-130",
+          "permanent_normalized_midpoint": "1.32625130313800765e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-12",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-6"
+          ],
+          "determinant_midpoint": "2.05333639406989852e-67",
+          "geometry_adjusted_midpoint": "1.73713416568895399e-66",
+          "input_uncertainty_eta_bound": "3.38010462691639928e-132",
+          "permanent_normalized_midpoint": "1.32107037937751895e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "1.94015874919962819e-67",
+          "geometry_adjusted_midpoint": "1.83134390580691163e-66",
+          "input_uncertainty_eta_bound": "3.86003674844600370e-131",
+          "permanent_normalized_midpoint": "1.24825437703960288e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-5"
+          ],
+          "determinant_midpoint": "1.94003248921387265e-67",
+          "geometry_adjusted_midpoint": "1.83145887941177169e-66",
+          "input_uncertainty_eta_bound": "3.57391091613361365e-132",
+          "permanent_normalized_midpoint": "1.24817337530080334e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.93210956738527570e-67",
+          "geometry_adjusted_midpoint": "1.83894411738741152e-66",
+          "input_uncertainty_eta_bound": "2.20292634856681604e-133",
+          "permanent_normalized_midpoint": "1.24307577004120474e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "1.93211013818416852e-67",
+          "geometry_adjusted_midpoint": "1.83894457960096179e-66",
+          "input_uncertainty_eta_bound": "2.25557381597114712e-133",
+          "permanent_normalized_midpoint": "1.24307608248488342e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.73706978162095395e-66",
+          "geometry_adjusted_midpoint": "2.46264611073687106e-65",
+          "input_uncertainty_eta_bound": "3.19876219327887787e-130",
+          "permanent_normalized_midpoint": "2.40434640419767699e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-12"
+          ],
+          "determinant_midpoint": "3.52936833536710995e-66",
+          "geometry_adjusted_midpoint": "2.59746465481208431e-65",
+          "input_uncertainty_eta_bound": "3.18779729910169028e-130",
+          "permanent_normalized_midpoint": "2.27071597858906603e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "3.51724529207048743e-66",
+          "geometry_adjusted_midpoint": "2.60637798925136881e-65",
+          "input_uncertainty_eta_bound": "3.19871765129314878e-130",
+          "permanent_normalized_midpoint": "2.26291628597922555e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-6"
+          ],
+          "determinant_midpoint": "3.51643606341496001e-66",
+          "geometry_adjusted_midpoint": "2.60697620827858588e-65",
+          "input_uncertainty_eta_bound": "3.76459545992096993e-131",
+          "permanent_normalized_midpoint": "2.26239574624436341e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.32327658780825317e-66",
+          "geometry_adjusted_midpoint": "2.74781213476256604e-65",
+          "input_uncertainty_eta_bound": "3.18775319845264426e-130",
+          "permanent_normalized_midpoint": "2.13812119681246708e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.31034554668136015e-66",
+          "geometry_adjusted_midpoint": "2.75850368177972286e-65",
+          "input_uncertainty_eta_bound": "3.18581191837784130e-130",
+          "permanent_normalized_midpoint": "2.12980165699055446e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.29503558381077363e-66",
+          "geometry_adjusted_midpoint": "2.77126958924614800e-65",
+          "input_uncertainty_eta_bound": "3.38006181247756765e-132",
+          "permanent_normalized_midpoint": "2.11995196469935757e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ],
+          "determinant_midpoint": "3.10425399513699531e-66",
+          "geometry_adjusted_midpoint": "2.93015024641411941e-65",
+          "input_uncertainty_eta_bound": "3.17476459913449287e-130",
+          "permanent_normalized_midpoint": "1.99720700130242656e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-10",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-4"
+          ],
+          "determinant_midpoint": "3.10419122624123018e-66",
+          "geometry_adjusted_midpoint": "2.93018226459982898e-65",
+          "input_uncertainty_eta_bound": "3.57390148797646865e-132",
+          "permanent_normalized_midpoint": "1.99716811350341699e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "3.10345093553271395e-66",
+          "geometry_adjusted_midpoint": "2.93090658403039996e-65",
+          "input_uncertainty_eta_bound": "3.36777566904121533e-132",
+          "permanent_normalized_midpoint": "1.99669042438431880e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.10103250767568160e-66",
+          "geometry_adjusted_midpoint": "2.93318466928645321e-65",
+          "input_uncertainty_eta_bound": "2.20249820417849978e-133",
+          "permanent_normalized_midpoint": "1.99513473833608192e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "3.09137525073568499e-66",
+          "geometry_adjusted_midpoint": "2.94231054159780043e-65",
+          "input_uncertainty_eta_bound": "2.07963676981497655e-133",
+          "permanent_normalized_midpoint": "1.98892120082108452e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.09137622109379865e-66",
+          "geometry_adjusted_midpoint": "2.94231132736083358e-65",
+          "input_uncertainty_eta_bound": "2.25838810383859814e-133",
+          "permanent_normalized_midpoint": "1.98892173197533671e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "2.89887202664851013e-66",
+          "geometry_adjusted_midpoint": "3.12544190003935263e-65",
+          "input_uncertainty_eta_bound": "1.41145733254516599e-134",
+          "permanent_normalized_midpoint": "1.86506896304131922e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.89887293992673450e-66",
+          "geometry_adjusted_midpoint": "3.12544273777743615e-65",
+          "input_uncertainty_eta_bound": "2.25861384651920437e-133",
+          "permanent_normalized_midpoint": "1.86506946295120356e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-12",
+            "x-6"
+          ],
+          "determinant_midpoint": "5.64698766828473523e-65",
+          "geometry_adjusted_midpoint": "4.15594240309869347e-64",
+          "input_uncertainty_eta_bound": "3.18778917461632622e-130",
+          "permanent_normalized_midpoint": "3.63314465254764722e-64",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        }
+      ],
+      "top_permanent_normalized": [
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10"
+          ],
+          "determinant_midpoint": "1.72786295236435245e-73",
+          "geometry_adjusted_midpoint": "1.86290907272676281e-72",
+          "input_uncertainty_eta_bound": "3.58709190959297403e-132",
+          "permanent_normalized_midpoint": "1.11166804683428030e-72",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-8"
+          ],
+          "determinant_midpoint": "4.71706577285633173e-71",
+          "geometry_adjusted_midpoint": "4.48961079474221491e-70",
+          "input_uncertainty_eta_bound": "3.57476295171779008e-132",
+          "permanent_normalized_midpoint": "3.03485372018172463e-70",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-10"
+          ],
+          "determinant_midpoint": "5.03030851471729782e-71",
+          "geometry_adjusted_midpoint": "4.22654772863449652e-70",
+          "input_uncertainty_eta_bound": "3.76591152304956744e-131",
+          "permanent_normalized_midpoint": "3.23638702587937799e-70",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "7.07732651352702694e-70",
+          "geometry_adjusted_midpoint": "7.63047543405815238e-69",
+          "input_uncertainty_eta_bound": "2.21101856002026409e-133",
+          "permanent_normalized_midpoint": "4.55339224355183519e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "7.54730522786029576e-70",
+          "geometry_adjusted_midpoint": "7.18337726453461553e-69",
+          "input_uncertainty_eta_bound": "3.38091384806174409e-132",
+          "permanent_normalized_midpoint": "4.85576594752317337e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ],
+          "determinant_midpoint": "7.57863006324529419e-70",
+          "geometry_adjusted_midpoint": "7.15379597464390070e-69",
+          "input_uncertainty_eta_bound": "3.17687370813116076e-130",
+          "permanent_normalized_midpoint": "4.87591962577764737e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-12",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "7.57863006324529419e-70",
+          "geometry_adjusted_midpoint": "7.15379597464390070e-69",
+          "input_uncertainty_eta_bound": "3.86130459154490107e-131",
+          "permanent_normalized_midpoint": "4.87591962577764737e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-12",
+            "x-10"
+          ],
+          "determinant_midpoint": "8.07993305176465962e-70",
+          "geometry_adjusted_midpoint": "6.73626601389880833e-69",
+          "input_uncertainty_eta_bound": "3.18792080670616765e-130",
+          "permanent_normalized_midpoint": "5.19844666031875089e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-10"
+          ],
+          "determinant_midpoint": "8.07993305176465962e-70",
+          "geometry_adjusted_midpoint": "6.73626601389880833e-69",
+          "input_uncertainty_eta_bound": "3.86180299794448961e-131",
+          "permanent_normalized_midpoint": "5.19844666031875089e-69",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.21228554547575188e-68",
+          "geometry_adjusted_midpoint": "1.14488540349648045e-67",
+          "input_uncertainty_eta_bound": "3.57395373057244528e-132",
+          "permanent_normalized_midpoint": "7.79957210043610505e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-10"
+          ],
+          "determinant_midpoint": "1.29783924643969845e-68",
+          "geometry_adjusted_midpoint": "1.07362515990487890e-67",
+          "input_uncertainty_eta_bound": "3.18787995362396065e-130",
+          "permanent_normalized_midpoint": "8.35000494813699362e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-8"
+          ],
+          "determinant_midpoint": "1.36855713338811846e-68",
+          "geometry_adjusted_midpoint": "1.02209335832531734e-67",
+          "input_uncertainty_eta_bound": "3.76467642539746317e-131",
+          "permanent_normalized_midpoint": "8.80498790465067319e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "1.37360826844262775e-68",
+          "geometry_adjusted_midpoint": "1.01835035331993898e-67",
+          "input_uncertainty_eta_bound": "3.19884441079104722e-130",
+          "permanent_normalized_midpoint": "8.83748574391007493e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-12"
+          ],
+          "determinant_midpoint": "1.37360826844262775e-68",
+          "geometry_adjusted_midpoint": "1.01835035331993898e-67",
+          "input_uncertainty_eta_bound": "3.18792383841313013e-130",
+          "permanent_normalized_midpoint": "8.83748574391007493e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-10"
+          ],
+          "determinant_midpoint": "1.45442487758979799e-68",
+          "geometry_adjusted_midpoint": "9.65506947310891369e-68",
+          "input_uncertainty_eta_bound": "3.19888872826373567e-130",
+          "permanent_normalized_midpoint": "9.35744157674663344e-68",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.93210956738527570e-67",
+          "geometry_adjusted_midpoint": "1.83894411738741152e-66",
+          "input_uncertainty_eta_bound": "2.20292634856681604e-133",
+          "permanent_normalized_midpoint": "1.24307577004120474e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "1.93211013818416852e-67",
+          "geometry_adjusted_midpoint": "1.83894457960096179e-66",
+          "input_uncertainty_eta_bound": "2.25557381597114712e-133",
+          "permanent_normalized_midpoint": "1.24307608248488342e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-5"
+          ],
+          "determinant_midpoint": "1.94003248921387265e-67",
+          "geometry_adjusted_midpoint": "1.83145887941177169e-66",
+          "input_uncertainty_eta_bound": "3.57391091613361365e-132",
+          "permanent_normalized_midpoint": "1.24817337530080334e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "1.94015874919962819e-67",
+          "geometry_adjusted_midpoint": "1.83134390580691163e-66",
+          "input_uncertainty_eta_bound": "3.86003674844600370e-131",
+          "permanent_normalized_midpoint": "1.24825437703960288e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-6"
+          ],
+          "determinant_midpoint": "2.05333639406989852e-67",
+          "geometry_adjusted_midpoint": "1.73713416568895399e-66",
+          "input_uncertainty_eta_bound": "3.38010462691639928e-132",
+          "permanent_normalized_midpoint": "1.32107037937751895e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ],
+          "determinant_midpoint": "2.06138918216585344e-67",
+          "geometry_adjusted_midpoint": "1.73037542854862660e-66",
+          "input_uncertainty_eta_bound": "3.17675016922737699e-130",
+          "permanent_normalized_midpoint": "1.32625130313800765e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-12",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.06846282067150864e-67",
+          "geometry_adjusted_midpoint": "1.72448407077424350e-66",
+          "input_uncertainty_eta_bound": "3.74485050372256893e-131",
+          "permanent_normalized_midpoint": "1.33080232282880221e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-14",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.07654275596115440e-67",
+          "geometry_adjusted_midpoint": "1.71780022886212199e-66",
+          "input_uncertainty_eta_bound": "3.86053789621582459e-131",
+          "permanent_normalized_midpoint": "1.33600077071409144e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-12",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.19777318892737965e-67",
+          "geometry_adjusted_midpoint": "1.62936053971555636e-66",
+          "input_uncertainty_eta_bound": "3.18779727212896592e-130",
+          "permanent_normalized_midpoint": "1.41399769681249621e-66",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "2.89887202664851013e-66",
+          "geometry_adjusted_midpoint": "3.12544190003935263e-65",
+          "input_uncertainty_eta_bound": "1.41145733254516599e-134",
+          "permanent_normalized_midpoint": "1.86506896304131922e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "2.89887293992673450e-66",
+          "geometry_adjusted_midpoint": "3.12544273777743615e-65",
+          "input_uncertainty_eta_bound": "2.25861384651920437e-133",
+          "permanent_normalized_midpoint": "1.86506946295120356e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "3.09137525073568499e-66",
+          "geometry_adjusted_midpoint": "2.94231054159780043e-65",
+          "input_uncertainty_eta_bound": "2.07963676981497655e-133",
+          "permanent_normalized_midpoint": "1.98892120082108452e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.09137622109379865e-66",
+          "geometry_adjusted_midpoint": "2.94231132736083358e-65",
+          "input_uncertainty_eta_bound": "2.25838810383859814e-133",
+          "permanent_normalized_midpoint": "1.98892173197533671e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.10103250767568160e-66",
+          "geometry_adjusted_midpoint": "2.93318466928645321e-65",
+          "input_uncertainty_eta_bound": "2.20249820417849978e-133",
+          "permanent_normalized_midpoint": "1.99513473833608192e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "3.10345093553271395e-66",
+          "geometry_adjusted_midpoint": "2.93090658403039996e-65",
+          "input_uncertainty_eta_bound": "3.36777566904121533e-132",
+          "permanent_normalized_midpoint": "1.99669042438431880e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-4"
+          ],
+          "determinant_midpoint": "3.10419122624123018e-66",
+          "geometry_adjusted_midpoint": "2.93018226459982898e-65",
+          "input_uncertainty_eta_bound": "3.57390148797646865e-132",
+          "permanent_normalized_midpoint": "1.99716811350341699e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14"
+          ],
+          "determinant_midpoint": "3.10425399513699531e-66",
+          "geometry_adjusted_midpoint": "2.93015024641411941e-65",
+          "input_uncertainty_eta_bound": "3.17476459913449287e-130",
+          "permanent_normalized_midpoint": "1.99720700130242656e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-10",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.29503558381077363e-66",
+          "geometry_adjusted_midpoint": "2.77126958924614800e-65",
+          "input_uncertainty_eta_bound": "3.38006181247756765e-132",
+          "permanent_normalized_midpoint": "2.11995196469935757e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.31034554668136015e-66",
+          "geometry_adjusted_midpoint": "2.75850368177972286e-65",
+          "input_uncertainty_eta_bound": "3.18581191837784130e-130",
+          "permanent_normalized_midpoint": "2.12980165699055446e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.32327658780825317e-66",
+          "geometry_adjusted_midpoint": "2.74781213476256604e-65",
+          "input_uncertainty_eta_bound": "3.18775319845264426e-130",
+          "permanent_normalized_midpoint": "2.13812119681246708e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-6"
+          ],
+          "determinant_midpoint": "3.51643606341496001e-66",
+          "geometry_adjusted_midpoint": "2.60697620827858588e-65",
+          "input_uncertainty_eta_bound": "3.76459545992096993e-131",
+          "permanent_normalized_midpoint": "2.26239574624436341e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "3.51724529207048743e-66",
+          "geometry_adjusted_midpoint": "2.60637798925136881e-65",
+          "input_uncertainty_eta_bound": "3.19871765129314878e-130",
+          "permanent_normalized_midpoint": "2.26291628597922555e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-12"
+          ],
+          "determinant_midpoint": "3.52936833536710995e-66",
+          "geometry_adjusted_midpoint": "2.59746465481208431e-65",
+          "input_uncertainty_eta_bound": "3.18779729910169028e-130",
+          "permanent_normalized_midpoint": "2.27071597858906603e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-14",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-14",
+            "x-8"
+          ],
+          "determinant_midpoint": "3.73706978162095395e-66",
+          "geometry_adjusted_midpoint": "2.46264611073687106e-65",
+          "input_uncertainty_eta_bound": "3.19876219327887787e-130",
+          "permanent_normalized_midpoint": "2.40434640419767699e-65",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "4.88442422536551158e-65",
+          "geometry_adjusted_midpoint": "4.76613410629285795e-64",
+          "input_uncertainty_eta_bound": "1.40717588866200344e-134",
+          "permanent_normalized_midpoint": "3.14252896517610398e-64",
+          "roundoff_eta_bound": "3.84000000000000000e-190",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16"
+          ]
+        }
+      ]
+    },
+    {
+      "coverage_formula": "binomial(13, 8) * binomial(7, 3)",
+      "midpoint_decimal_digits": 200,
+      "most_negative": [],
+      "negative_beyond_input_uncertainty_count": 0,
+      "negative_beyond_roundoff_bound_count": 0,
+      "negative_midpoint_count": 0,
+      "order": 4,
+      "pattern_count": 45045,
+      "permutation_term_count": 24,
+      "top_geometry_adjusted": [
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "4.26598923402333163e-128",
+          "geometry_adjusted_midpoint": "5.07504428857536468e-127",
+          "input_uncertainty_eta_bound": "2.24645604606848240e-133",
+          "permanent_normalized_midpoint": "2.31898519146669855e-127",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "2.87552212002998415e-126",
+          "geometry_adjusted_midpoint": "3.09491157855200696e-125",
+          "input_uncertainty_eta_bound": "2.24602773581836523e-133",
+          "permanent_normalized_midpoint": "1.56312962572198526e-125",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.98803440730722734e-124",
+          "geometry_adjusted_midpoint": "1.84142977252368875e-123",
+          "input_uncertainty_eta_bound": "2.59473361381420199e-132",
+          "permanent_normalized_midpoint": "1.08069244851885176e-123",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-4"
+          ],
+          "determinant_midpoint": "1.86360927432979233e-124",
+          "geometry_adjusted_midpoint": "1.95627922162026301e-123",
+          "input_uncertainty_eta_bound": "2.24593341315931650e-133",
+          "permanent_normalized_midpoint": "1.01305585196047078e-123",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "5.98096846604062723e-124",
+          "geometry_adjusted_midpoint": "9.17980387674690819e-123",
+          "input_uncertainty_eta_bound": "2.23793173126662278e-133",
+          "permanent_normalized_midpoint": "3.25124586827945222e-123",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "1.33981948837783453e-122",
+          "geometry_adjusted_midpoint": "1.12315089962016149e-121",
+          "input_uncertainty_eta_bound": "2.59469072568593063e-132",
+          "permanent_normalized_midpoint": "7.28323917529533068e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-3"
+          ],
+          "determinant_midpoint": "1.19640764044846815e-122",
+          "geometry_adjusted_midpoint": "1.24808005296918876e-121",
+          "input_uncertainty_eta_bound": "2.24590676319464546e-133",
+          "permanent_normalized_midpoint": "6.50367281200769581e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "9.42922198791488344e-123",
+          "geometry_adjusted_midpoint": "1.49026096881382964e-121",
+          "input_uncertainty_eta_bound": "2.11446352502968117e-133",
+          "permanent_normalized_midpoint": "5.12571154451416607e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "8.83395800353851047e-123",
+          "geometry_adjusted_midpoint": "1.58446488533093690e-121",
+          "input_uncertainty_eta_bound": "1.41461763015025235e-134",
+          "permanent_normalized_midpoint": "4.80212689746002817e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "5.12810578656028352e-122",
+          "geometry_adjusted_midpoint": "4.67859271281601442e-121",
+          "input_uncertainty_eta_bound": "2.68822558170563539e-132",
+          "permanent_normalized_midpoint": "2.78763042448947348e-121",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "5.12810578656028352e-122",
+          "geometry_adjusted_midpoint": "4.67859271281601443e-121",
+          "input_uncertainty_eta_bound": "2.81421025816684038e-131",
+          "permanent_normalized_midpoint": "2.78763042448947349e-121",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6",
+            "x-4"
+          ],
+          "determinant_midpoint": "4.78834724842867529e-122",
+          "geometry_adjusted_midpoint": "4.98977256542658687e-121",
+          "input_uncertainty_eta_bound": "2.23783740860757406e-133",
+          "permanent_normalized_midpoint": "2.60294015590577646e-121",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-4"
+          ],
+          "determinant_midpoint": "8.68292005027162798e-121",
+          "geometry_adjusted_midpoint": "7.09968929178980119e-120",
+          "input_uncertainty_eta_bound": "2.59468127972712526e-132",
+          "permanent_normalized_midpoint": "4.72002532408300822e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-6"
+          ],
+          "determinant_midpoint": "8.17691025476504548e-121",
+          "geometry_adjusted_midpoint": "7.51132190752917032e-120",
+          "input_uncertainty_eta_bound": "2.69104863491064477e-132",
+          "permanent_normalized_midpoint": "4.44495584787699931e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "8.17691025476504548e-121",
+          "geometry_adjusted_midpoint": "7.51132190752917068e-120",
+          "input_uncertainty_eta_bound": "2.38991408630040968e-130",
+          "permanent_normalized_midpoint": "4.44495584787699952e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "7.66608728391740096e-121",
+          "geometry_adjusted_midpoint": "7.98053600799124740e-120",
+          "input_uncertainty_eta_bound": "2.69102588343654699e-132",
+          "permanent_normalized_midpoint": "4.16727326597805167e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-6"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "7.66608728391740096e-121",
+          "geometry_adjusted_midpoint": "7.98053600799124781e-120",
+          "input_uncertainty_eta_bound": "2.38162843119127362e-130",
+          "permanent_normalized_midpoint": "4.16727326597805188e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-10",
+            "x-8",
+            "x-6"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-2"
+          ],
+          "determinant_midpoint": "7.66229787093179761e-121",
+          "geometry_adjusted_midpoint": "7.98082515737955406e-120",
+          "input_uncertainty_eta_bound": "2.24590076119528759e-133",
+          "permanent_normalized_midpoint": "4.16526328734678909e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6",
+            "x-4"
+          ],
+          "determinant_midpoint": "7.63328880113305949e-121",
+          "geometry_adjusted_midpoint": "8.01286255620970112e-120",
+          "input_uncertainty_eta_bound": "2.11436920237063244e-133",
+          "permanent_normalized_midpoint": "4.14944718208476325e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-4"
+          ],
+          "determinant_midpoint": "7.15631725896559835e-121",
+          "geometry_adjusted_midpoint": "8.51353633653200016e-120",
+          "input_uncertainty_eta_bound": "1.41367440355976511e-134",
+          "permanent_normalized_midpoint": "3.89016599044762693e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-5",
+            "x-4"
+          ],
+          "determinant_midpoint": "6.14818740641874856e-121",
+          "geometry_adjusted_midpoint": "9.36331435319698305e-120",
+          "input_uncertainty_eta_bound": "2.23740909835745688e-133",
+          "permanent_normalized_midpoint": "3.34214820132046167e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.45600776862329840e-120",
+          "geometry_adjusted_midpoint": "2.85366407669398033e-119",
+          "input_uncertainty_eta_bound": "2.81420596795608454e-131",
+          "permanent_normalized_midpoint": "1.87868077669459180e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.44654093827304146e-120",
+          "geometry_adjusted_midpoint": "2.86146164131030830e-119",
+          "input_uncertainty_eta_bound": "2.68818244582834474e-132",
+          "permanent_normalized_midpoint": "1.87353462153929207e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6",
+            "x-3"
+          ],
+          "determinant_midpoint": "3.21829456821557572e-120",
+          "geometry_adjusted_midpoint": "3.05188417221153279e-119",
+          "input_uncertainty_eta_bound": "2.23781075864290301e-133",
+          "permanent_normalized_midpoint": "1.74946524072197970e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "2.77719747949402818e-120",
+          "geometry_adjusted_midpoint": "3.34280481534121415e-119",
+          "input_uncertainty_eta_bound": "2.59387924590930117e-132",
+          "permanent_normalized_midpoint": "1.50968056124503461e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.48238306887798367e-119",
+          "geometry_adjusted_midpoint": "1.06900082935092076e-118",
+          "input_uncertainty_eta_bound": "2.82422097191991820e-131",
+          "permanent_normalized_midpoint": "8.05821158054568596e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-5",
+            "x-4"
+          ],
+          "determinant_midpoint": "1.02609383421119836e-119",
+          "geometry_adjusted_midpoint": "1.44148566345588400e-118",
+          "input_uncertainty_eta_bound": "2.11394089212051527e-133",
+          "permanent_normalized_midpoint": "5.57783529542844157e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-5",
+            "x-4"
+          ],
+          "determinant_midpoint": "9.64630308687542173e-120",
+          "geometry_adjusted_midpoint": "1.52736520869451022e-118",
+          "input_uncertainty_eta_bound": "1.40939130105859335e-134",
+          "permanent_normalized_midpoint": "5.24372021775196573e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-3"
+          ],
+          "determinant_midpoint": "5.57423735630281854e-119",
+          "geometry_adjusted_midpoint": "4.52955567742392968e-118",
+          "input_uncertainty_eta_bound": "2.59467861133902008e-132",
+          "permanent_normalized_midpoint": "3.03015583620604527e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "5.51069880196541670e-119",
+          "geometry_adjusted_midpoint": "4.58146395398481917e-118",
+          "input_uncertainty_eta_bound": "2.38991365724457045e-130",
+          "permanent_normalized_midpoint": "2.99560782223889608e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-5"
+          ],
+          "determinant_midpoint": "5.24930563668638360e-119",
+          "geometry_adjusted_midpoint": "4.79198411605223291e-118",
+          "input_uncertainty_eta_bound": "2.69100413892639597e-132",
+          "permanent_normalized_midpoint": "2.85351487926941508e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "5.16643755703925269e-119",
+          "geometry_adjusted_midpoint": "4.86765712301034857e-118",
+          "input_uncertainty_eta_bound": "2.38162800212675489e-130",
+          "permanent_normalized_midpoint": "2.80846791217400386e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-10",
+            "x-8",
+            "x-5"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6",
+            "x-3"
+          ],
+          "determinant_midpoint": "5.14455603340509856e-119",
+          "geometry_adjusted_midpoint": "4.88748429475989540e-118",
+          "input_uncertainty_eta_bound": "2.11434255240596140e-133",
+          "permanent_normalized_midpoint": "2.79658116850855850e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-5",
+            "x-3"
+          ],
+          "determinant_midpoint": "4.91937680687638648e-119",
+          "geometry_adjusted_midpoint": "5.09252893951564407e-118",
+          "input_uncertainty_eta_bound": "2.23738244839278584e-133",
+          "permanent_normalized_midpoint": "2.67417408855037790e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-1"
+          ],
+          "determinant_midpoint": "4.90311571006549739e-119",
+          "geometry_adjusted_midpoint": "5.10513209649437802e-118",
+          "input_uncertainty_eta_bound": "2.24589907961581197e-133",
+          "permanent_normalized_midpoint": "2.66545436202381560e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "4.90599107479524528e-119",
+          "geometry_adjusted_midpoint": "5.10721868573088785e-118",
+          "input_uncertainty_eta_bound": "2.69098097573821934e-132",
+          "permanent_normalized_midpoint": "2.66688958472005284e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-5"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-3"
+          ],
+          "determinant_midpoint": "4.82392297995800022e-119",
+          "geometry_adjusted_midpoint": "5.19198158892451254e-118",
+          "input_uncertainty_eta_bound": "1.41340790391305468e-134",
+          "permanent_normalized_midpoint": "2.62228500939857611e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "4.13595604203259035e-119",
+          "geometry_adjusted_midpoint": "5.72253664058667396e-118",
+          "input_uncertainty_eta_bound": "2.58130739471140133e-132",
+          "permanent_normalized_midpoint": "2.24829977058770391e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.85955623322749229e-119",
+          "geometry_adjusted_midpoint": "6.10829851134192581e-118",
+          "input_uncertainty_eta_bound": "1.43752096759581661e-134",
+          "permanent_normalized_midpoint": "2.09804923145624479e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-10",
+            "x-6"
+          ],
+          "determinant_midpoint": "2.38002411600330890e-118",
+          "geometry_adjusted_midpoint": "1.70452616088490945e-117",
+          "input_uncertainty_eta_bound": "2.82450658003729797e-131",
+          "permanent_normalized_midpoint": "1.29377745174007325e-117",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14",
+            "x-8"
+          ]
+        }
+      ],
+      "top_permanent_normalized": [
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "4.26598923402333163e-128",
+          "geometry_adjusted_midpoint": "5.07504428857536468e-127",
+          "input_uncertainty_eta_bound": "2.24645604606848240e-133",
+          "permanent_normalized_midpoint": "2.31898519146669855e-127",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "2.87552212002998415e-126",
+          "geometry_adjusted_midpoint": "3.09491157855200696e-125",
+          "input_uncertainty_eta_bound": "2.24602773581836523e-133",
+          "permanent_normalized_midpoint": "1.56312962572198526e-125",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-4"
+          ],
+          "determinant_midpoint": "1.86360927432979233e-124",
+          "geometry_adjusted_midpoint": "1.95627922162026301e-123",
+          "input_uncertainty_eta_bound": "2.24593341315931650e-133",
+          "permanent_normalized_midpoint": "1.01305585196047078e-123",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.98803440730722734e-124",
+          "geometry_adjusted_midpoint": "1.84142977252368875e-123",
+          "input_uncertainty_eta_bound": "2.59473361381420199e-132",
+          "permanent_normalized_midpoint": "1.08069244851885176e-123",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "5.98096846604062723e-124",
+          "geometry_adjusted_midpoint": "9.17980387674690819e-123",
+          "input_uncertainty_eta_bound": "2.23793173126662278e-133",
+          "permanent_normalized_midpoint": "3.25124586827945222e-123",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "8.83395800353851047e-123",
+          "geometry_adjusted_midpoint": "1.58446488533093690e-121",
+          "input_uncertainty_eta_bound": "1.41461763015025235e-134",
+          "permanent_normalized_midpoint": "4.80212689746002817e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "9.42922198791488344e-123",
+          "geometry_adjusted_midpoint": "1.49026096881382964e-121",
+          "input_uncertainty_eta_bound": "2.11446352502968117e-133",
+          "permanent_normalized_midpoint": "5.12571154451416607e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-3"
+          ],
+          "determinant_midpoint": "1.19640764044846815e-122",
+          "geometry_adjusted_midpoint": "1.24808005296918876e-121",
+          "input_uncertainty_eta_bound": "2.24590676319464546e-133",
+          "permanent_normalized_midpoint": "6.50367281200769581e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "1.33981948837783453e-122",
+          "geometry_adjusted_midpoint": "1.12315089962016149e-121",
+          "input_uncertainty_eta_bound": "2.59469072568593063e-132",
+          "permanent_normalized_midpoint": "7.28323917529533068e-122",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6",
+            "x-4"
+          ],
+          "determinant_midpoint": "4.78834724842867529e-122",
+          "geometry_adjusted_midpoint": "4.98977256542658687e-121",
+          "input_uncertainty_eta_bound": "2.23783740860757406e-133",
+          "permanent_normalized_midpoint": "2.60294015590577646e-121",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "5.12810578656028352e-122",
+          "geometry_adjusted_midpoint": "4.67859271281601442e-121",
+          "input_uncertainty_eta_bound": "2.68822558170563539e-132",
+          "permanent_normalized_midpoint": "2.78763042448947348e-121",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "5.12810578656028352e-122",
+          "geometry_adjusted_midpoint": "4.67859271281601443e-121",
+          "input_uncertainty_eta_bound": "2.81421025816684038e-131",
+          "permanent_normalized_midpoint": "2.78763042448947349e-121",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-5",
+            "x-4"
+          ],
+          "determinant_midpoint": "6.14818740641874856e-121",
+          "geometry_adjusted_midpoint": "9.36331435319698305e-120",
+          "input_uncertainty_eta_bound": "2.23740909835745688e-133",
+          "permanent_normalized_midpoint": "3.34214820132046167e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-4"
+          ],
+          "determinant_midpoint": "7.15631725896559835e-121",
+          "geometry_adjusted_midpoint": "8.51353633653200016e-120",
+          "input_uncertainty_eta_bound": "1.41367440355976511e-134",
+          "permanent_normalized_midpoint": "3.89016599044762693e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6",
+            "x-4"
+          ],
+          "determinant_midpoint": "7.63328880113305949e-121",
+          "geometry_adjusted_midpoint": "8.01286255620970112e-120",
+          "input_uncertainty_eta_bound": "2.11436920237063244e-133",
+          "permanent_normalized_midpoint": "4.14944718208476325e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-2"
+          ],
+          "determinant_midpoint": "7.66229787093179761e-121",
+          "geometry_adjusted_midpoint": "7.98082515737955406e-120",
+          "input_uncertainty_eta_bound": "2.24590076119528759e-133",
+          "permanent_normalized_midpoint": "4.16526328734678909e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "7.66608728391740096e-121",
+          "geometry_adjusted_midpoint": "7.98053600799124740e-120",
+          "input_uncertainty_eta_bound": "2.69102588343654699e-132",
+          "permanent_normalized_midpoint": "4.16727326597805167e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-6"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "7.66608728391740096e-121",
+          "geometry_adjusted_midpoint": "7.98053600799124781e-120",
+          "input_uncertainty_eta_bound": "2.38162843119127362e-130",
+          "permanent_normalized_midpoint": "4.16727326597805188e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-10",
+            "x-8",
+            "x-6"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-6"
+          ],
+          "determinant_midpoint": "8.17691025476504548e-121",
+          "geometry_adjusted_midpoint": "7.51132190752917032e-120",
+          "input_uncertainty_eta_bound": "2.69104863491064477e-132",
+          "permanent_normalized_midpoint": "4.44495584787699931e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-10",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "8.17691025476504548e-121",
+          "geometry_adjusted_midpoint": "7.51132190752917068e-120",
+          "input_uncertainty_eta_bound": "2.38991408630040968e-130",
+          "permanent_normalized_midpoint": "4.44495584787699952e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-4"
+          ],
+          "determinant_midpoint": "8.68292005027162798e-121",
+          "geometry_adjusted_midpoint": "7.09968929178980119e-120",
+          "input_uncertainty_eta_bound": "2.59468127972712526e-132",
+          "permanent_normalized_midpoint": "4.72002532408300822e-120",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "2.77719747949402818e-120",
+          "geometry_adjusted_midpoint": "3.34280481534121415e-119",
+          "input_uncertainty_eta_bound": "2.59387924590930117e-132",
+          "permanent_normalized_midpoint": "1.50968056124503461e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-6",
+            "x-3"
+          ],
+          "determinant_midpoint": "3.21829456821557572e-120",
+          "geometry_adjusted_midpoint": "3.05188417221153279e-119",
+          "input_uncertainty_eta_bound": "2.23781075864290301e-133",
+          "permanent_normalized_midpoint": "1.74946524072197970e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.44654093827304146e-120",
+          "geometry_adjusted_midpoint": "2.86146164131030830e-119",
+          "input_uncertainty_eta_bound": "2.68818244582834474e-132",
+          "permanent_normalized_midpoint": "1.87353462153929207e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.45600776862329840e-120",
+          "geometry_adjusted_midpoint": "2.85366407669398033e-119",
+          "input_uncertainty_eta_bound": "2.81420596795608454e-131",
+          "permanent_normalized_midpoint": "1.87868077669459180e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-5",
+            "x-4"
+          ],
+          "determinant_midpoint": "9.64630308687542173e-120",
+          "geometry_adjusted_midpoint": "1.52736520869451022e-118",
+          "input_uncertainty_eta_bound": "1.40939130105859335e-134",
+          "permanent_normalized_midpoint": "5.24372021775196573e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-5",
+            "x-4"
+          ],
+          "determinant_midpoint": "1.02609383421119836e-119",
+          "geometry_adjusted_midpoint": "1.44148566345588400e-118",
+          "input_uncertainty_eta_bound": "2.11394089212051527e-133",
+          "permanent_normalized_midpoint": "5.57783529542844157e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-16",
+            "x-12",
+            "x-8",
+            "x-6"
+          ],
+          "determinant_midpoint": "1.48238306887798367e-119",
+          "geometry_adjusted_midpoint": "1.06900082935092076e-118",
+          "input_uncertainty_eta_bound": "2.82422097191991820e-131",
+          "permanent_normalized_midpoint": "8.05821158054568596e-119",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-14",
+            "x-10"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "3.85955623322749229e-119",
+          "geometry_adjusted_midpoint": "6.10829851134192581e-118",
+          "input_uncertainty_eta_bound": "1.43752096759581661e-134",
+          "permanent_normalized_midpoint": "2.09804923145624479e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-8",
+            "x-6",
+            "x-5"
+          ],
+          "determinant_midpoint": "4.13595604203259035e-119",
+          "geometry_adjusted_midpoint": "5.72253664058667396e-118",
+          "input_uncertainty_eta_bound": "2.58130739471140133e-132",
+          "permanent_normalized_midpoint": "2.24829977058770391e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-10",
+            "x-8",
+            "x-6",
+            "x-3"
+          ],
+          "determinant_midpoint": "4.82392297995800022e-119",
+          "geometry_adjusted_midpoint": "5.19198158892451254e-118",
+          "input_uncertainty_eta_bound": "1.41340790391305468e-134",
+          "permanent_normalized_midpoint": "2.62228500939857611e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-8",
+            "x-1"
+          ],
+          "determinant_midpoint": "4.90311571006549739e-119",
+          "geometry_adjusted_midpoint": "5.10513209649437802e-118",
+          "input_uncertainty_eta_bound": "2.24589907961581197e-133",
+          "permanent_normalized_midpoint": "2.66545436202381560e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-8"
+          ],
+          "determinant_midpoint": "4.90599107479524528e-119",
+          "geometry_adjusted_midpoint": "5.10721868573088785e-118",
+          "input_uncertainty_eta_bound": "2.69098097573821934e-132",
+          "permanent_normalized_midpoint": "2.66688958472005284e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-5"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-10",
+            "x-5",
+            "x-3"
+          ],
+          "determinant_midpoint": "4.91937680687638648e-119",
+          "geometry_adjusted_midpoint": "5.09252893951564407e-118",
+          "input_uncertainty_eta_bound": "2.23738244839278584e-133",
+          "permanent_normalized_midpoint": "2.67417408855037790e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-12",
+            "x-8",
+            "x-6",
+            "x-3"
+          ],
+          "determinant_midpoint": "5.14455603340509856e-119",
+          "geometry_adjusted_midpoint": "4.88748429475989540e-118",
+          "input_uncertainty_eta_bound": "2.11434255240596140e-133",
+          "permanent_normalized_midpoint": "2.79658116850855850e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-16",
+            "x-14",
+            "x-12"
+          ],
+          "determinant_midpoint": "5.16643755703925269e-119",
+          "geometry_adjusted_midpoint": "4.86765712301034857e-118",
+          "input_uncertainty_eta_bound": "2.38162800212675489e-130",
+          "permanent_normalized_midpoint": "2.80846791217400386e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-10",
+            "x-8",
+            "x-5"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-12",
+            "x-10",
+            "x-5"
+          ],
+          "determinant_midpoint": "5.24930563668638360e-119",
+          "geometry_adjusted_midpoint": "4.79198411605223291e-118",
+          "input_uncertainty_eta_bound": "2.69100413892639597e-132",
+          "permanent_normalized_midpoint": "2.85351487926941508e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-8"
+          ]
+        },
+        {
+          "columns": [
+            "x-18",
+            "x-10",
+            "x-8",
+            "x-5"
+          ],
+          "determinant_midpoint": "5.51069880196541670e-119",
+          "geometry_adjusted_midpoint": "4.58146395398481917e-118",
+          "input_uncertainty_eta_bound": "2.38991365724457045e-130",
+          "permanent_normalized_midpoint": "2.99560782223889608e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-16",
+            "x-14",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-14",
+            "x-10",
+            "x-8",
+            "x-3"
+          ],
+          "determinant_midpoint": "5.57423735630281854e-119",
+          "geometry_adjusted_midpoint": "4.52955567742392968e-118",
+          "input_uncertainty_eta_bound": "2.59467861133902008e-132",
+          "permanent_normalized_midpoint": "3.03015583620604527e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-12"
+          ]
+        },
+        {
+          "columns": [
+            "x-8",
+            "x-6",
+            "x-5",
+            "x-4"
+          ],
+          "determinant_midpoint": "1.08653233986720401e-118",
+          "geometry_adjusted_midpoint": "3.24168484348695518e-117",
+          "input_uncertainty_eta_bound": "9.37491931717527334e-136",
+          "permanent_normalized_midpoint": "5.90637865443325262e-118",
+          "roundoff_eta_bound": "1.53600000000000000e-189",
+          "rows": [
+            "x-20",
+            "x-18",
+            "x-16",
+            "x-14"
+          ]
+        }
+      ]
+    }
+  ],
+  "point_count": 13,
+  "point_ids_in_increasing_u_order": [
+    "x-20",
+    "x-18",
+    "x-16",
+    "x-14",
+    "x-12",
+    "x-10",
+    "x-8",
+    "x-6",
+    "x-5",
+    "x-4",
+    "x-3",
+    "x-2",
+    "x-1"
+  ],
+  "precision_bits": 512,
+  "primitive_artifact_sha256": "431e5373f7ad00ed1e49adc68fbeba7bf8156e138c55c18be1a7abf4c5408cc2",
+  "proof_boundary": "The primitive and zero source binding is exact, but every ranked determinant uses 200-digit Decimal midpoints. No midpoint sign is a proof. The input bound treats every secant interval independently and bounds every Leibniz product perturbation; it is conservative but is still a nomination threshold, not the exact rational verifier.",
+  "robust_negative_midpoint_count": 0,
+  "schema": "riemann.x9301-dense-high-order-midpoint-ranking.v3",
+  "selection_scope": "CERTIFIED_GLOBAL_NEAREST_CRITICAL_LINE_ZEROS",
+  "source_binding_certificate_sha256": "fcdb944fbe814d281eb74c873b9893409a903caa087b2b99184be2a3534963e0",
+  "summary_sha256": "8342059fd4531ed4eb0615389980bd4c9530f4f2f964addab891482652172633",
+  "target": {
+    "denominator": 4294967296,
+    "numerator": 20225875608341108140435
+  },
+  "total_pattern_count": 62205,
+  "zero_block_artifact_sha256": "930df1205f71860424d25e6e12ab2dbe0f2956d1481f24c5e011926b0db95101"
+}

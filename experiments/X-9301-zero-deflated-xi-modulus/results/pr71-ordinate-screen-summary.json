@@ -1,0 +1,458 @@
+{
+  "broad_20_node_order2": {
+    "directed_row_count": 58140,
+    "negative_rows": 0,
+    "target_count": 4,
+    "targets": [
+      {
+        "label": "PR71 baseline",
+        "point_count": 20,
+        "row_count": 14535,
+        "slug": "pr71-baseline",
+        "summary_artifact_sha256": "39b38381c5a7215ca884467af78f25c897564723afc38a2e8a2a6bee5a481c14",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608341108140435
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.58571146441520906e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "4010ab843d4336c13e0c39e7ea521920b8930ccb093840209211c58cd500fa01",
+          "lower_scientific": "5.41207823066602740e-31",
+          "midpoint_scientific": "5.41207823066602740e-31",
+          "permanent_normalized_midpoint": "3.09085612718947526e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41207823066602740e-31"
+        }
+      },
+      {
+        "label": "upper PR71-gap mirror",
+        "point_count": 20,
+        "row_count": 14535,
+        "slug": "upper-mirror-jp15",
+        "summary_artifact_sha256": "cad3e102289a3dd6c1a32d9c1d8266f12f3448846d040d0cea528b110bb3bc86",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608345134672275
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.58633977212863019e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "5ceb0f6b472c41ac09f485a30657ac854c4073bcea17889e840ae4638d50e7a5",
+          "lower_scientific": "5.41264882458949304e-31",
+          "midpoint_scientific": "5.41264882458949304e-31",
+          "permanent_normalized_midpoint": "3.09108231796630687e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41264882458949304e-31"
+        }
+      },
+      {
+        "label": "distinct-gap edge",
+        "point_count": 20,
+        "row_count": 14535,
+        "slug": "distinct-gap-jm26",
+        "summary_artifact_sha256": "f560e2a48a0ff2de4982057f75e9e5ceb46c11b6d4c5db7fd7b651fc60c27ae1",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608339631745427
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.59371838433503295e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "0c08e615c855d254d1a90eff95900aab2b403ed42b9c0c8c04c3e2467685b00b",
+          "lower_scientific": "5.41762752524439253e-31",
+          "midpoint_scientific": "5.41762752524439253e-31",
+          "permanent_normalized_midpoint": "3.09373861836061186e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41762752524439253e-31"
+        }
+      },
+      {
+        "label": "maximum local line-zero mass",
+        "point_count": 20,
+        "row_count": 14535,
+        "slug": "max-mass-jm25",
+        "summary_artifact_sha256": "154287afac2958d684a42a57b1eb418c7b7c3e5c34b12981601c54474c3732a8",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608339765963155
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.59237355532545021e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "b26aa894394a1dfd6a43bf448a4ba61f59c3ebc870473f95b7e7d41b8d091d15",
+          "lower_scientific": "5.41668802143849624e-31",
+          "midpoint_scientific": "5.41668802143849624e-31",
+          "permanent_normalized_midpoint": "3.09325447991716208e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41668802143849624e-31"
+        }
+      }
+    ],
+    "unresolved_rows": 0
+  },
+  "classification": "RIEMANN_XI_DIRECTED_AND_EXPLORATORY_MIDPOINT",
+  "counterexample_nomination": null,
+  "dense_16_node_order2": {
+    "directed_row_count": 38220,
+    "negative_rows": 0,
+    "target_count": 7,
+    "targets": [
+      {
+        "label": "upper PR71-gap mirror",
+        "point_count": 16,
+        "row_count": 5460,
+        "slug": "upper-mirror-jp15",
+        "summary_artifact_sha256": "3dde83c52f18594a977e87e6b7a793f050771e7eaa632eaf1099d76a339f5540",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608345134672275
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.58633977212863019e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "5ceb0f6b472c41ac09f485a30657ac854c4073bcea17889e840ae4638d50e7a5",
+          "lower_scientific": "5.41264882458949304e-31",
+          "midpoint_scientific": "5.41264882458949304e-31",
+          "permanent_normalized_midpoint": "3.09108231796630687e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41264882458949304e-31"
+        }
+      },
+      {
+        "label": "validated positive near-null control",
+        "point_count": 16,
+        "row_count": 5460,
+        "slug": "positive-control-jm5",
+        "summary_artifact_sha256": "02b221c9d06c5bbb99ae3bc0673aed5ed336c6ce440bf305831f2ea2eec41d20",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608342450317715
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.58289131656223617e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "aead988f3825014808fa2a1e63018d455632c0a8257ad693cbc7185a377c71a3",
+          "lower_scientific": "5.41017252951912366e-31",
+          "midpoint_scientific": "5.41017252951912366e-31",
+          "permanent_normalized_midpoint": "3.08984087396240502e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41017252951912366e-31"
+        }
+      },
+      {
+        "label": "directed main-gap near-null",
+        "point_count": 16,
+        "row_count": 5460,
+        "slug": "directed-jp12",
+        "summary_artifact_sha256": "bcc62a1f7b105b45768c0d443a8d7b6893da049b42b9d0bca8cf94eb64e38816",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608344732019091
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.58394803398799746e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "46f2bb0b3c3a22ac63b429b5461783ad5a02425aeebf4f27acc41a148abd4dfc",
+          "lower_scientific": "5.41096542951562822e-31",
+          "midpoint_scientific": "5.41096542951562822e-31",
+          "permanent_normalized_midpoint": "3.09022129223567909e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41096542951562822e-31"
+        }
+      },
+      {
+        "label": "distinct-gap edge",
+        "point_count": 16,
+        "row_count": 5460,
+        "slug": "distinct-gap-jm26",
+        "summary_artifact_sha256": "17f8c2d973acd8e4c30471c73c6d8153098518dd671285512f67b9c66ff2928e",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608339631745427
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.59371838433503295e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "0c08e615c855d254d1a90eff95900aab2b403ed42b9c0c8c04c3e2467685b00b",
+          "lower_scientific": "5.41762752524439253e-31",
+          "midpoint_scientific": "5.41762752524439253e-31",
+          "permanent_normalized_midpoint": "3.09373861836061186e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41762752524439253e-31"
+        }
+      },
+      {
+        "label": "maximum local line-zero mass",
+        "point_count": 16,
+        "row_count": 5460,
+        "slug": "max-mass-jm25",
+        "summary_artifact_sha256": "1f4edf5323db1bb71bc6c7c841fe182610a858c36206b4e1af8ccd4ba0c0dc7b",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608339765963155
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.59237355532545021e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "b26aa894394a1dfd6a43bf448a4ba61f59c3ebc870473f95b7e7d41b8d091d15",
+          "lower_scientific": "5.41668802143849624e-31",
+          "midpoint_scientific": "5.41668802143849624e-31",
+          "permanent_normalized_midpoint": "3.09325447991716208e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41668802143849624e-31"
+        }
+      },
+      {
+        "label": "near-zero deflation stress target",
+        "point_count": 16,
+        "row_count": 5460,
+        "slug": "near-zero-jm16",
+        "summary_artifact_sha256": "86f1463c6aa404c58146bc648cad4e7eb3d8763c2de7f3516c8990f501aed5c8",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608340973922707
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.58661182650225460e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "a2805e5dfca6c9549c03cceab0f1e878e3301cb8486362b7660d0bd89f033e16",
+          "lower_scientific": "5.41270412644854470e-31",
+          "midpoint_scientific": "5.41270412644854470e-31",
+          "permanent_normalized_midpoint": "3.09118025754081166e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41270412644854470e-31"
+        }
+      },
+      {
+        "label": "directed second-gap alternative",
+        "point_count": 16,
+        "row_count": 5460,
+        "slug": "directed-jm29",
+        "summary_artifact_sha256": "858e2a1b1df64648b6076d5bc695c9e528c5be3c7829a2fca12c662105903c48",
+        "target": {
+          "denominator": 4294967296,
+          "numerator": 20225875608339229092243
+        },
+        "tightest_geometry_row": {
+          "columns": [
+            "x-18",
+            "x-17"
+          ],
+          "geometry_adjusted_midpoint": "8.59383489455684379e-30",
+          "id": "d2-rx-20_x-19-cx-18_x-17",
+          "interval_sha256": "4240ac890a91af81066b5f6addbdcbcab5c6e25a1175c3a43ef60a4c7d36eb10",
+          "lower_scientific": "5.41767990572101210e-31",
+          "midpoint_scientific": "5.41767990572101210e-31",
+          "permanent_normalized_midpoint": "3.09378056204046377e-30",
+          "rows": [
+            "x-20",
+            "x-19"
+          ],
+          "status": "CERTIFIED_NONNEGATIVE",
+          "upper_scientific": "5.41767990572101210e-31"
+        }
+      }
+    ],
+    "unresolved_rows": 0
+  },
+  "directed_candidate_replays": {
+    "broad_order4": {
+      "all_high_intervals_nested": true,
+      "comparison_sha256": "9813ae2f0f167782cc050b5e452c75f5a5febcbca18c2d78c70f1546d46a0aba",
+      "high_lower_scientific": "3.03913195075177329e-103",
+      "high_status": "CERTIFIED_NONNEGATIVE",
+      "high_upper_scientific": "3.03913195075177330e-103",
+      "high_verification_sha256": "aae644f745e991ec34aea7deea9b0ea11d90317d28661513f36d83c079995e4a",
+      "low_status": "UNRESOLVED",
+      "low_verification_sha256": "f9b333acce75a6f98db4887f5acdb752387336ce1674fce0ed07e6336f99085d",
+      "row_id": "broad-order4-strongest-midpoint-negative"
+    },
+    "dense_order3": {
+      "all_high_intervals_nested": true,
+      "comparison_sha256": "7ee206c025fe9a01bc3af3b25340a6165e6beb5000ca7088d66131a4e62d9ad3",
+      "high_lower_scientific": "2.28071767764810697e-85",
+      "high_status": "CERTIFIED_NONNEGATIVE",
+      "high_upper_scientific": "2.28071767764810698e-85",
+      "high_verification_sha256": "4c1a2aae958f103f90e3200e152bb994bfd27ef31c672ab22b9c7757cb985a1b",
+      "low_status": "CERTIFIED_NONNEGATIVE",
+      "low_verification_sha256": "9cc390ef9fef6f9793d56b2cd3b9a984257ee325e32f63bc311c87f404e7c8b1",
+      "row_id": "dense-order3-x20-through-x15"
+    }
+  },
+  "nearest_count": 256,
+  "proof_boundary": "The order-two signs and two sparse candidate replays are exact source-bound interval results. High-order table rankings are midpoint screens with conservative input-uncertainty bounds, not proofs of all high-order signs.",
+  "schema": "riemann.x9301-pr71-ordinate-screen-summary.v1",
+  "selection_scope": "CERTIFIED_GLOBAL_NEAREST_CRITICAL_LINE_ZEROS",
+  "sparse_broad_high_order": {
+    "p256_rankings": [
+      {
+        "label": "PR71 baseline",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 700,
+        "pattern_count": 62205,
+        "precision_bits": 256,
+        "ranking_artifact_sha256": "5e2c1944b3d1fa7d7e0e1aefdabbe08d1795d00f33dcf80b5af33ddc804e26ec",
+        "slug": "pr71-baseline"
+      },
+      {
+        "label": "upper PR71-gap mirror",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 1190,
+        "pattern_count": 62205,
+        "precision_bits": 256,
+        "ranking_artifact_sha256": "272da6b93fef55cb1059eca16e30d5d52f05264011561937f693cfd8b1b0c70f",
+        "slug": "upper-mirror-jp15"
+      },
+      {
+        "label": "distinct-gap edge",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 1190,
+        "pattern_count": 62205,
+        "precision_bits": 256,
+        "ranking_artifact_sha256": "4c056d4833e00aac45cd0e314798a7c416697f7686da91dd133876cabcde3368",
+        "slug": "distinct-gap-jm26"
+      },
+      {
+        "label": "maximum local line-zero mass",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 805,
+        "pattern_count": 62205,
+        "precision_bits": 256,
+        "ranking_artifact_sha256": "2d5c49ffe780157762c7fdfe10dc15dd2f7f5888c3ca292e2d38efc7a641157e",
+        "slug": "max-mass-jm25"
+      }
+    ],
+    "p512_negative_midpoints": 0,
+    "p512_pattern_count": 248820,
+    "p512_rankings": [
+      {
+        "label": "PR71 baseline",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 0,
+        "pattern_count": 62205,
+        "precision_bits": 512,
+        "ranking_artifact_sha256": "0dbb244700c1d53f527c7a43b19e75b2cdd77f506bc76edc3004d449212b9cc5",
+        "slug": "pr71-baseline"
+      },
+      {
+        "label": "upper PR71-gap mirror",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 0,
+        "pattern_count": 62205,
+        "precision_bits": 512,
+        "ranking_artifact_sha256": "f43f1ff179420b6c1db220f0b92af846ea81d6397c4e0e5c99e146b37545e439",
+        "slug": "upper-mirror-jp15"
+      },
+      {
+        "label": "distinct-gap edge",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 0,
+        "pattern_count": 62205,
+        "precision_bits": 512,
+        "ranking_artifact_sha256": "80ea9f9ec5affbe253fbf182c25fe4966c95610d96d4c9baeac7cbf9ad4293c8",
+        "slug": "distinct-gap-jm26"
+      },
+      {
+        "label": "maximum local line-zero mass",
+        "negative_beyond_input_uncertainty_count": 0,
+        "order3_negative_midpoint_count": 0,
+        "order4_negative_midpoint_count": 0,
+        "pattern_count": 62205,
+        "precision_bits": 512,
+        "ranking_artifact_sha256": "0a8025c7f3531632519ecb305d36c7716c3943e4e1dd8483b8d5f6477a36f2b4",
+        "slug": "max-mass-jm25"
+      }
+    ],
+    "p512_robust_negatives": 0
+  },
+  "summary_sha256": "5c37130bb31f0dedee63c68ffb02f047173284997bece213b40ad922b7d55811",
+  "verdict": "NO_NEGATIVE_IN_RETAINED_PR71_NEIGHBORHOOD_SCREENS"
+}
