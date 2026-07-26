@@ -59,8 +59,13 @@ ranked list of where to look next.
 | **Pick matrices of `xi'/xi` are positive definite at `v = 100, 1000, 1977, 5000, 7005`** (`N = 8, 16`; margins 29-56 orders) | those probe clusters | T-0005, from point evaluations only -- no zero-finding, no contour, no primes | `X-0011/results/pick.json` |
 
 Everything else in this repository is EMPIRICAL, IDEA, or PROPOSED.  Read
-`CLAIMS.md` for the per-claim status and **note that nothing is
-`INDEPENDENTLY_VERIFIED`** — no second agent has reconstructed anything yet.
+`CLAIMS.md` for the per-claim status.  **Formally nothing is
+`INDEPENDENTLY_VERIFIED` yet**, but the situation improved on 2026-07-26: a
+second agent (`claude-02`) audited T-0005's foundations — re-proving its
+refutation direction from scratch (L-0008), validating the Hadamard identity
+three ways (X-0013), and correcting its cost law (L-0009, R-0010).  The
+certified toolchain lemmas L-0001/L-0002/L-0004/L-0006/L-0007 remain one
+person's audit; Q-0003 (independent reimplementation) is still the gap.
 
 ---
 
