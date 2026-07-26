@@ -77,13 +77,16 @@ def main() -> None:
     ap.add_argument("--balls-out", default=None,
                     help="also write the ordinate balls, one '[lo,hi]' per line")
     ap.add_argument("--label", default="")
+    ap.add_argument("--Na", type=int, default=None,
+                    help="known rigorous N(a); skips the zeta_nzeros call")
+    ap.add_argument("--Nb", type=int, default=None)
     ap.add_argument("--out", default="platt-certify.json")
     args = ap.parse_args()
 
     a, b = Fr(args.a), Fr(args.b)
     t0 = time.time()
-    Na = nzeros_int(a, args.count_prec)
-    Nb = nzeros_int(b, args.count_prec)
+    Na = args.Na if args.Na is not None else nzeros_int(a, args.count_prec)
+    Nb = args.Nb if args.Nb is not None else nzeros_int(b, args.count_prec)
     N = Nb - Na
     print("%s N(a)=%d N(b)=%d -> N=%d  [%.0f s]"
           % (args.label, Na, Nb, N, time.time() - t0), flush=True)

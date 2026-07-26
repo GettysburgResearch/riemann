@@ -1,0 +1,127 @@
+{
+ "schema": "riemann.x5604-platt-certify.v1",
+ "agent": "fable5-01",
+ "classification": "RIGOROUS: N from zeta_nzeros balls isolating unique integers; N_0 from pairwise-disjoint Platt-isolated zero balls strictly inside the slab (semantic trust: an isolated ball contains a zero of Z, same class as zeta_nzeros). Gap intervals derived exactly from the ball endpoints.",
+ "label": "t=1e16 platt",
+ "a": "20000000000000001/2",
+ "b": "20000000000000009/2",
+ "span": 4.0,
+ "prec_zeros": 128,
+ "prec_counts": 192,
+ "N": 23,
+ "N0_disjoint_balls_inside": 23,
+ "D": 0,
+ "problems": [],
+ "seconds_counts": 6.67572021484375e-05,
+ "seconds_zeros": 283.08486247062683,
+ "seconds_per_zero": 12.308037498722905,
+ "ell": 5.570977571121143,
+ "smallest_gaps_by_upper_bound": [
+  {
+   "delta_interval": [
+    0.20205375017401475,
+    0.20205375023997513
+   ],
+   "gamma_approx": 1e+16
+  },
+  {
+   "delta_interval": [
+    0.41797374020560785,
+    0.4179737416217503
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    0.5254322323981448,
+    0.5254322338688829
+   ],
+   "gamma_approx": 1.0000000000000004e+16
+  },
+  {
+   "delta_interval": [
+    0.7104497388712713,
+    0.7104497393505982
+   ],
+   "gamma_approx": 1.0000000000000004e+16
+  },
+  {
+   "delta_interval": [
+    0.7401779105984926,
+    0.7401779106528653
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    0.7611536367413828,
+    0.7611536376906775
+   ],
+   "gamma_approx": 1.0000000000000004e+16
+  },
+  {
+   "delta_interval": [
+    0.7764917233817715,
+    0.7764917240078381
+   ],
+   "gamma_approx": 1.0000000000000004e+16
+  },
+  {
+   "delta_interval": [
+    0.7987594644748255,
+    0.7987594645160506
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    0.8313698352626613,
+    0.8313698358846052
+   ],
+   "gamma_approx": 1.0000000000000004e+16
+  },
+  {
+   "delta_interval": [
+    0.8475424705743029,
+    0.8475424716138473
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    0.8930219333279814,
+    0.8930219334650275
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    0.9192656039337226,
+    0.9192656040865902
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    1.0050525116474325,
+    1.0050525117529467
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    1.0347466132222727,
+    1.0347466136895664
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  },
+  {
+   "delta_interval": [
+    1.085552578023931,
+    1.0855525780838746
+   ],
+   "gamma_approx": 1.0000000000000002e+16
+  }
+ ],
+ "verdict": "CERTIFIED D = 0 over 4.0 units at t ~ 1e+16: N_0 = N = 23, all zeros on the critical line, all simple, all rigorously located."
+}

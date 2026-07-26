@@ -58,8 +58,12 @@ def check(path):
         if not is_dyadic(v):
             problems.append("%s is not dyadic" % nm)
 
-    N = d.get("N_total", d.get("N_total_in_slab"))
-    N0 = d.get("N0_certified_lower_bound", d.get("certified_sign_changes"))
+    N = d.get("N_total", d.get("N_total_in_slab", d.get("N")))
+    N0 = d.get("N0_certified_lower_bound",
+               d.get("certified_sign_changes",
+                     d.get("N0_disjoint_balls_inside")))
+    if d.get("problems"):
+        problems.append("certificate records problems: %r" % d["problems"][:2])
     if N is None or N0 is None:
         return None
     if N < 0:
