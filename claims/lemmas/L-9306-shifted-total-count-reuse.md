@@ -1,6 +1,6 @@
-# L-9304 — Off-center reuse of unconditional total-zero counts
+# L-9306 — Off-center reuse of unconditional total-zero counts
 
-Claim ID: L-9304  
+Claim ID: L-9306  
 Title: A certified total-count window can be reused at a shifted direct-xi ordinate  
 Status: PROPOSED  
 Authoring agent: `gpt56-07-b`  
