@@ -1,0 +1,22 @@
+{
+  "schema": "riemann.x9312-synthetic-summary.v1",
+  "classification": "SYNTHETIC_CONTROL",
+  "consistent_lower": {
+    "gap": "3/4",
+    "certified_line_mass": "1/2",
+    "verdict": "CERTIFIED_CONSISTENT_PADE_LINE_MASS_BUDGET"
+  },
+  "negative_lower": {
+    "gap": "2/5",
+    "certified_line_mass": "1/2",
+    "gap_minus_mass": "-1/10",
+    "verdict": "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET"
+  },
+  "negative_upper": {
+    "gap": "7/10",
+    "certified_line_mass": "3/4",
+    "gap_minus_mass": "-1/20",
+    "verdict": "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET"
+  },
+  "riemann_xi_counterexample": false
+}
