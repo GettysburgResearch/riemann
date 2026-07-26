@@ -98,13 +98,35 @@ cheaper than a tight one hugging the feature of interest.
 
 ```text
 slab_discrepancy.py        N(a,b) from Arb, with fail-closed gates
-certify_gram.py            N_0 with no scanner: Gram points + adaptive bisection
-certify_parallel.py        N_0 from an existing scan; cheaper when one exists
+platt_ctypes.py            ctypes binding for Arb's Platt FFT block isolator
+platt_certify.py           THE PRODUCTION ENGINE: slab certificates + rigorous
+                           ordinate balls from Platt blocks (7-430x cheaper
+                           than sign-sampling, height-dependent)
+gap_census.py              rigorous close-pair census from a ball file
+certify_gram.py            N_0 by certified signs, no scanner (fallback where
+                           Platt fails; prec 64 Platt fails cleanly, 128 works)
+certify_parallel.py        N_0 by certified signs from an existing scan
 certified_sign_changes.py  the original serial version, kept for reference
-certify_height.py          drives both halves for a given height and span
+certify_height.py          drives count + sign halves for a height and span
 argument_principle.py      independent audit of N by contour integration
+lehmer_hunt.py             census + Arb-certified pair refinement (superseded
+                           by platt_certify + gap_census where Platt works)
 ledger.py                  re-verifies every certificate in results/
-results/                   certificates and logs
+results/                   certificates, ball files, logs
+```
+
+The current ledger (re-derived, containment-deduplicated):
+
+```text
+slab (height)              span        N      N_0     D
+4709203636333.1875         39.9       172      172     0
+10000000000000.5        11200.0     50082    50082     0
+100000000000000.5        1250.0      6047     6047     0
+1000000000000000.5        375.0      1951     1951     0
+1e16 + 0.5                  4.0        23       23     0
+
+5 slabs, 12,868.9 units, 58,275 zeros -- all on the critical line, all
+simple; everything from 1e13 upward rigorously LOCATED, not merely counted.
 ```
 
 ## Run
@@ -112,7 +134,12 @@ results/                   certificates and logs
 ```bash
 pip install python-flint       # 0.9.0 exposes arb_zeta_nzeros and acb_zeta
 
-# a complete certificate at a given height, both halves
+# a complete certificate at a given height -- the Platt engine
+python3 platt_certify.py --a 20000000000001/2 --b 20000000001999/2 \
+    --prec 128 --block 2000 --balls-out results/balls.txt --out results/cert.json
+python3 gap_census.py results/balls.txt --out results/census.json
+
+# the sign-sampling driver (fallback; slower)
 python3 certify_height.py --t0 10000000000000 --span 999 --tag 1e13
 
 # re-verify everything certified so far
