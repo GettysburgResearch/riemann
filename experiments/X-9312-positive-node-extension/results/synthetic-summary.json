@@ -1,0 +1,12 @@
+{
+  "case_count": 3,
+  "negative_case_count": 2,
+  "proof_boundary": "Exact synthetic finite moment arithmetic; no Riemann-xi value.",
+  "proof_object_sha256": "911ec17af03c51d79141eabefa0b2f4e2819b9027eb59be232a7d0aad8270b92",
+  "schema": "riemann.x9312-positive-node-synthetic-summary.v1",
+  "statuses": {
+    "inside-positive-measure": "CERTIFIED_INSIDE_ONE_SCALAR_INTERVAL",
+    "lower-square-separation": "CERTIFIED_NEGATIVE_LOWER_SQUARE_WITNESS",
+    "upper-y-square-separation": "CERTIFIED_NEGATIVE_UPPER_Y_SQUARE_WITNESS"
+  }
+}
