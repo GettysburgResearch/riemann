@@ -21,6 +21,7 @@ test_positive_height_reflection_patch (test_pr71_source_patch.PatcherTests.test_
 test_reflection_source_drift_rejected (test_pr71_source_patch.PatcherTests.test_reflection_source_drift_rejected) ... ok
 test_source_drift_rejected (test_pr71_source_patch.PatcherTests.test_source_drift_rejected) ... ok
 test_comparison_digest_drift_is_rejected (test_summary.LadderSummaryTests.test_comparison_digest_drift_is_rejected) ... ok
+test_custom_increasing_rungs_are_supported (test_summary.LadderSummaryTests.test_custom_increasing_rungs_are_supported) ... ok
 test_summarizes_strict_complete_ladder (test_summary.LadderSummaryTests.test_summarizes_strict_complete_ladder) ... ok
 test_boolean_count_rejected (test_verify.ZeroDeflatedModulusTests.test_boolean_count_rejected) ... ok
 test_exact_algebraic_monotonicity_value (test_verify.ZeroDeflatedModulusTests.test_exact_algebraic_monotonicity_value) ... ok
@@ -34,6 +35,6 @@ test_widened_bin_remains_valid_but_weaker (test_verify.ZeroDeflatedModulusTests.
 test_zero_count_rejected (test_verify.ZeroDeflatedModulusTests.test_zero_count_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 34 tests
+Ran 35 tests
 
 OK

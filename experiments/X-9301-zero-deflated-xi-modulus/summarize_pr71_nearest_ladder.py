@@ -109,7 +109,13 @@ def summarize(
     zero_block: dict[str, Any],
     low_precision: int,
     high_precision: int,
+    counts: tuple[int, ...] = COUNTS,
 ) -> dict[str, Any]:
+    if not counts or any(
+        count <= 0 or (index and count <= counts[index - 1])
+        for index, count in enumerate(counts)
+    ):
+        raise SummaryError("nearest-zero counts must be positive and increasing")
     if (
         zero_block.get("schema") != BLOCK_SCHEMA
         or zero_block.get("classification")
@@ -135,7 +141,7 @@ def summarize(
     all_strictly_positive = True
     all_determinants_descend = True
 
-    for count in COUNTS:
+    for count in counts:
         low_certificate = load(
             root / f"nearest-{count}-certificate-p{low_precision}.json"
         )
@@ -292,6 +298,7 @@ def main() -> int:
     parser.add_argument("--zero-block", type=Path, required=True)
     parser.add_argument("--low-precision", type=int, default=384)
     parser.add_argument("--high-precision", type=int, default=512)
+    parser.add_argument("--counts", type=int, nargs="+", default=list(COUNTS))
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     try:
@@ -300,6 +307,7 @@ def main() -> int:
             load(args.zero_block),
             args.low_precision,
             args.high_precision,
+            tuple(args.counts),
         )
         code = 0
     except (OSError, json.JSONDecodeError, SummaryError, KeyError) as exc:

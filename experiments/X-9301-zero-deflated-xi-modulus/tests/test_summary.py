@@ -104,6 +104,16 @@ class LadderSummaryTests(unittest.TestCase):
         with self.assertRaisesRegex(MODULE.SummaryError, "precision nesting"):
             MODULE.summarize(self.root, self.block, 384, 512)
 
+    def test_custom_increasing_rungs_are_supported(self) -> None:
+        result = MODULE.summarize(
+            self.root, self.block, 384, 512, counts=(64, 128)
+        )
+        self.assertEqual(result["closed_cell_count"], 2)
+        self.assertEqual(
+            [rung["nearest_count"] for rung in result["ladder_rungs"]],
+            [64, 128],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
