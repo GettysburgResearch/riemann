@@ -1,0 +1,66 @@
+{
+  "anchors": [
+    {
+      "denominator": "1",
+      "numerator": "2"
+    }
+  ],
+  "channel": "square",
+  "claimed_leverage_sum": {
+    "denominator": "6",
+    "numerator": "1"
+  },
+  "declared_bin_ids": [
+    "bin-one"
+  ],
+  "old_nodes": [
+    {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  ],
+  "ordinate": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "polynomial": [
+    {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  ],
+  "schema": "riemann.anchor-line-mass-budget.v1",
+  "source_measure": "RAW_UNREMOVED_RESPONSE",
+  "total_interval": {
+    "lower": {
+      "denominator": "1",
+      "numerator": "0"
+    },
+    "upper": {
+      "denominator": "4",
+      "numerator": "1"
+    }
+  },
+  "zero_bins": [
+    {
+      "claimed_leverage_lower": {
+        "denominator": "6",
+        "numerator": "1"
+      },
+      "gamma_interval": {
+        "lower": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "upper": {
+          "denominator": "1",
+          "numerator": "1"
+        }
+      },
+      "gate": "CERTIFIED_DISJOINT_CRITICAL_LINE_ZERO_BIN",
+      "id": "bin-one",
+      "multiplicity_lower": 1,
+      "survives_source_measure": true
+    }
+  ]
+}
