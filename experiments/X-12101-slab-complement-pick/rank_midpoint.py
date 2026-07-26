@@ -56,8 +56,10 @@ def build_matrix(payload):
         gamma = (float(q(row["lower"])) + float(q(row["upper"]))) / 2.0
         count = int(q(row["count"]))
         weight = (gamma - a) * (gamma - b)
-        h = 1.0 / (np.conj(zs) + 1j * gamma)
-        matrix -= count * weight * np.outer(h, np.conj(h))
+        # Phi_v(gamma)=sum_i conj(v_i)/(z_i-i gamma), so the Hermitian
+        # rank-one matrix is r r* with r_i=(z_i-i gamma)^-1.
+        resolvent = 1.0 / (zs - 1j * gamma)
+        matrix -= count * weight * np.outer(resolvent, np.conj(resolvent))
     return (matrix + matrix.conj().T) / 2.0
 
 
