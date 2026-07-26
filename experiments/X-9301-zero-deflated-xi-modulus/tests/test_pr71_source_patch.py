@@ -63,6 +63,17 @@ class PatcherTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             MODULE.patch_common_xi_scale("missing scale targets")
 
+    def test_dense_x_grid_patch(self):
+        bits = tuple(range(20, 4, -1))
+        output, manifest = MODULE.patch_x_grid(MODULE.X_GRID_NEEDLE, bits)
+        self.assertIn("#define X_COUNT 16", output)
+        self.assertIn(", ".join(map(str, bits)), output)
+        self.assertEqual(manifest["x_bits"], list(bits))
+
+    def test_unsorted_x_grid_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "strictly decreasing"):
+            MODULE.patch_x_grid(MODULE.X_GRID_NEEDLE, (20, 18, 19))
+
 
 if __name__ == "__main__":
     unittest.main()

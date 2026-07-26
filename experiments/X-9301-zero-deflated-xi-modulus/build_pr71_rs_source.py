@@ -11,6 +11,7 @@ OLD = "20225875608343121406355"
 NEW = "20225875608341108140435"
 EXPECTED_OCCURRENCES = 3
 XI_COMMON_SCALE_POWER = 5_335_951_715_288
+DEFAULT_X_BITS = (20, 18, 16, 14, 12, 10, 8, 6, 5)
 
 OLD_REFLECTION = """    acb_one(reflected_s);
     acb_sub(reflected_s, reflected_s, s, prec);
@@ -54,6 +55,10 @@ SCALE_METADATA_REPLACEMENT = (
     SCALE_METADATA_NEEDLE
     + '    flint_printf("\\"common_xi_scale_power_of_two\\":%wd,\\n", '
     + "XI_COMMON_SCALE_POWER);\n"
+)
+X_GRID_NEEDLE = (
+    "#define X_COUNT 9\n"
+    "static const int X_BITS[X_COUNT] = {20, 18, 16, 14, 12, 10, 8, 6, 5};\n"
 )
 
 
@@ -115,6 +120,35 @@ def patch_common_xi_scale(source: str) -> tuple[str, dict[str, object]]:
     }
 
 
+def patch_x_grid(
+    source: str, x_bits: tuple[int, ...]
+) -> tuple[str, dict[str, object]]:
+    if (
+        len(x_bits) < 2
+        or len(set(x_bits)) != len(x_bits)
+        or any(
+            isinstance(value, bool) or not isinstance(value, int)
+            for value in x_bits
+        )
+        or any(value < 1 or value > 62 for value in x_bits)
+        or any(x_bits[index] <= x_bits[index + 1] for index in range(len(x_bits) - 1))
+    ):
+        raise ValueError("x bits must be distinct, strictly decreasing integers in [1,62]")
+    count = source.count(X_GRID_NEEDLE)
+    if count != 1:
+        raise ValueError(f"expected one exact x-grid block, found {count}")
+    replacement = (
+        f"#define X_COUNT {len(x_bits)}\n"
+        "static const int X_BITS[X_COUNT] = {"
+        + ", ".join(map(str, x_bits))
+        + "};\n"
+    )
+    return source.replace(X_GRID_NEEDLE, replacement), {
+        "x_bits": list(x_bits),
+        "x_count": len(x_bits),
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -124,6 +158,11 @@ def main() -> int:
         / "X-7501-xi-modulus"
         / "rs_modulus.c",
     )
+    parser.add_argument(
+        "--x-bits",
+        default=",".join(map(str, DEFAULT_X_BITS)),
+        help="comma-separated, strictly decreasing dyadic offset exponents",
+    )
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--manifest", type=Path)
     args = parser.parse_args()
@@ -131,8 +170,14 @@ def main() -> int:
     output, manifest = patch_source(source)
     output, reflection_manifest = patch_positive_reflection(output)
     output, scale_manifest = patch_common_xi_scale(output)
+    try:
+        x_bits = tuple(int(item) for item in args.x_bits.split(","))
+    except ValueError as exc:
+        raise ValueError("--x-bits must contain comma-separated integers") from exc
+    output, grid_manifest = patch_x_grid(output, x_bits)
     manifest.update(reflection_manifest)
     manifest.update(scale_manifest)
+    manifest.update(grid_manifest)
     manifest["patched_sha256"] = hashlib.sha256(output.encode("utf-8")).hexdigest()
     args.output.write_text(output, encoding="utf-8")
     if args.manifest:
