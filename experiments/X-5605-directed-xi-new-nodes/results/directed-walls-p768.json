@@ -1,0 +1,149 @@
+{
+ "schema": "riemann.x5605-directed-walls.v1",
+ "agent": "fable5-01",
+ "classification": "DIRECTED: residuals from exact rational rectangles through Arb ball logs; basis coefficients exact rationals with self-checked identities; walls via ball linear algebra. The 2^P scale cancels exactly in every contraction (basis vectors sum to zero). Conventions pinned by the committed X-9306/basis_check.py; their 70-digit scan rows used as a validation oracle.",
+ "ordinate": {
+  "numerator": 20225875608343133989267,
+  "denominator": 4294967296
+ },
+ "prec_bits": 1100,
+ "old_moment_mids": [
+  "[116588377.81417847025 +/- 1.72e-12]",
+  "[30193794.005581051951 +/- 2.07e-13]",
+  "[7849368.5765219917845 +/- 1.92e-14]",
+  "[2049435.7067532320487 +/- 2.21e-14]",
+  "[537770.90351380713979 +/- 2.50e-15]",
+  "[141932.32633592893965 +/- 4.05e-15]",
+  "[37719.493714664532541 +/- 2.74e-16]",
+  "[10109.886746921842830 +/- 2.05e-16]",
+  "[2739.9649249395897034 +/- 3.07e-17]",
+  "[754.42666425915269877 +/- 1.16e-18]",
+  "[213.12154783652365566 +/- 1.95e-18]",
+  "[63.184223182770705075 +/- 1.34e-19]",
+  "[20.796316387731880675 +/- 4.16e-20]",
+  "[8.8147612017834021872 +/- 1.48e-20]",
+  "[8.6490712535083787307 +/- 1.68e-20]"
+ ],
+ "cases": [
+  {
+   "x": "1/20",
+   "w": "1/400",
+   "b0": "[447362844.1916884919643725 +/- 4.74e-17]",
+   "lower_wall": "[447362832.6245724647763070 +/- 1.35e-17]",
+   "upper_wall": "[447369003.4963479987723024 +/- 2.24e-17]",
+   "lower_gap": "[11.567116027188065466 +/- 5.67e-20]",
+   "upper_gap": "[6159.3046595068079299 +/- 2.51e-17]",
+   "verdict": "CERTIFIED_INSIDE",
+   "oracle": {
+    "their_lower_gap": 11.567116027176754,
+    "my_lower_gap_mid": 11.567116027188066,
+    "their_upper_gap": 6159.304659506819,
+    "my_upper_gap_mid": 6159.304659506808,
+    "rel_diff_lower": 9.779309143880587e-13,
+    "rel_diff_upper": 1.7719429423627548e-15,
+    "oracle_agrees": true
+   },
+   "seconds": 0.0
+  },
+  {
+   "x": "1",
+   "w": "1",
+   "b0": "[92620115.46829862150800784 +/- 4.34e-18]",
+   "lower_wall": "[92620115.46829457117433061 +/- 1.56e-18]",
+   "upper_wall": "[92620115.46831320746079963 +/- 4.30e-18]",
+   "lower_gap": "[4.0503336772327831823e-6 +/- 2.33e-26]",
+   "upper_gap": "[1.4585952791781370184e-5 +/- 3.71e-26]",
+   "verdict": "CERTIFIED_INSIDE",
+   "oracle": {
+    "their_lower_gap": 4.050333677232783e-06,
+    "my_lower_gap_mid": 4.050333677232783e-06,
+    "their_upper_gap": 1.458595279178137e-05,
+    "my_upper_gap_mid": 1.458595279178137e-05,
+    "rel_diff_lower": 0.0,
+    "rel_diff_upper": 0.0,
+    "oracle_agrees": true
+   },
+   "seconds": 0.0
+  },
+  {
+   "x": "2",
+   "w": "4",
+   "b0": "[27375115.77715610683624021 +/- 1.63e-18]",
+   "lower_wall": "[27375115.77715610683338271 +/- 5.73e-19]",
+   "upper_wall": "[27375115.77715610684289268 +/- 3.98e-18]",
+   "lower_gap": "[2.8574989484231446502e-12 +/- 1.30e-33]",
+   "upper_gap": "[6.6524756023507722671e-12 +/- 2.60e-32]",
+   "verdict": "CERTIFIED_INSIDE",
+   "oracle": {
+    "their_lower_gap": 2.8574989484231446e-12,
+    "my_lower_gap_mid": 2.8574989484231446e-12,
+    "their_upper_gap": 6.6524756023507724e-12,
+    "my_upper_gap_mid": 6.6524756023507724e-12,
+    "rel_diff_lower": 0.0,
+    "rel_diff_upper": 0.0,
+    "oracle_agrees": true
+   },
+   "seconds": 0.0
+  },
+  {
+   "x": "3",
+   "w": "9",
+   "b0": "[12591965.10347251809737052 +/- 1.87e-18]",
+   "lower_wall": "[12591965.10347251809737039 +/- 2.64e-19]",
+   "upper_wall": "[12591965.10347251809737079 +/- 1.19e-19]",
+   "lower_gap": "[1.3159692723701756141e-16 +/- 2.45e-36]",
+   "upper_gap": "[2.6825891460042240611e-16 +/- 3.25e-37]",
+   "verdict": "CERTIFIED_INSIDE",
+   "oracle": {
+    "their_lower_gap": 1.3159692723701756e-16,
+    "my_lower_gap_mid": 1.3159692723701756e-16,
+    "their_upper_gap": 2.682589146004224e-16,
+    "my_upper_gap_mid": 2.682589146004224e-16,
+    "rel_diff_lower": 0.0,
+    "rel_diff_upper": 0.0,
+    "oracle_agrees": true
+   },
+   "seconds": 0.0
+  },
+  {
+   "x": "4",
+   "w": "16",
+   "b0": "[7170714.687931508610909000 +/- 2.12e-19]",
+   "lower_wall": "[7170714.687931508610909000 +/- 2.79e-19]",
+   "upper_wall": "[7170714.687931508610909000 +/- 8.57e-20]",
+   "lower_gap": "[6.6412878739457478542e-20 +/- 2.97e-40]",
+   "upper_gap": "[1.2622162769398978515e-19 +/- 4.81e-40]",
+   "verdict": "CERTIFIED_INSIDE",
+   "oracle": {
+    "their_lower_gap": 6.641287873945748e-20,
+    "my_lower_gap_mid": 6.641287873945748e-20,
+    "their_upper_gap": 1.2622162769398978e-19,
+    "my_upper_gap_mid": 1.2622162769398978e-19,
+    "rel_diff_lower": 0.0,
+    "rel_diff_upper": 0.0,
+    "oracle_agrees": true
+   },
+   "seconds": 0.0
+  },
+  {
+   "x": "5",
+   "w": "25",
+   "b0": "[4615722.209684197373291588 +/- 2.15e-19]",
+   "lower_wall": "[4615722.209684197373291588 +/- 2.14e-19]",
+   "upper_wall": "[4615722.209684197373291588 +/- 2.15e-19]",
+   "lower_gap": "[1.4929314767402219674e-22 +/- 4.00e-42]",
+   "upper_gap": "[2.6758873981830944063e-22 +/- 5.37e-43]",
+   "verdict": "CERTIFIED_INSIDE",
+   "oracle": {
+    "their_lower_gap": 1.492931476740222e-22,
+    "my_lower_gap_mid": 1.492931476740222e-22,
+    "their_upper_gap": 2.6758873981830942e-22,
+    "my_upper_gap_mid": 2.6758873981830942e-22,
+    "rel_diff_lower": 0.0,
+    "rel_diff_upper": 0.0,
+    "oracle_agrees": true
+   },
+   "seconds": 0.0
+  }
+ ]
+}

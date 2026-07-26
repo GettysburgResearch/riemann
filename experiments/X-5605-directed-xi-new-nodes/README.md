@@ -64,3 +64,41 @@ artifact, the complete directed pipeline for the candidates is not
 reconstructible from any committed data.  The precise requests, in order of
 value: (1) the directed basis table behind `source_directed_basis_sha256`,
 (2) the `L-9308` residual-functional definition, (3) the `L-9309` file.
+
+## The directed verdict (directed_walls.py)
+
+The missing basis turned out to be reconstructible after all:
+`X-9306/basis_check.py`, committed on the PR #134 stack, pins every
+convention of the moment pipeline in executable code.  `directed_walls.py`
+re-implements it with Arb ball logs in place of the exact-atanh layer (the
+`2^P` scale cancels identically because every basis vector sums to zero),
+regenerates the sixteen old primitives at 768 bits with the audited X-5605
+assembly, computes the old moments and the full seventeen-node `b0`
+contraction as balls, and evaluates both Schur walls in ball linear algebra.
+
+Validation oracle: their 70-digit scan rows, reproduced at every node to
+10-11 digits by the ball midpoints before any verdict was read.
+
+```text
+x       lower_gap  b0 - ell(w)                upper_gap  u(w) - b0            verdict
+1/20    [11.5671160272    +/- 1.2e-11]        [6159.30465951  +/- 3.2e-9]     CERTIFIED_INSIDE
+1       [4.05033367723e-6 +/- 2.8e-18]        [1.4586e-5      +/- 1.9e-17]    CERTIFIED_INSIDE
+2       [2.85749894842e-12 +/- 3.2e-24]       [6.6525e-12     +/- 7.7e-25]    CERTIFIED_INSIDE
+3       [1.31596927237e-16 +/- 1.8e-29]       [2.6826e-16     +/- 4.2e-28]    CERTIFIED_INSIDE
+4       [6.64128787395e-20 +/- 4.3e-32]       [1.2622e-19     +/- 1.0e-32]    CERTIFIED_INSIDE
+5       [1.49293147674e-22 +/- 2.2e-35]       [2.67588739818e-22 +/- 3.1e-34] CERTIFIED_INSIDE
+```
+
+**Candidate A (`x = 1/20`) and Candidate B (`x = 5`) are both closed**: the
+new scalar sits strictly inside its admissible interval at every tested node,
+rigorously.  PR #124's `t = 4` directed control (`x = 2` here) is likewise
+produced and inside.  No RH-disproof nomination; the degree-15 positive-node
+extension cone at this ordinate is certified positive at all six nodes.
+
+At the first pass, using their p512 table, `x = 5` was UNDECIDED: the old
+rectangles' widths propagate through the ill-conditioned basis to moment
+radii `~1e-21`, larger than the `1.5e-22` gap.  Regenerating the table at
+768 bits (40 s for all sixteen points) shrank the radii below `1e-34` and
+decided it.  The conditioning of the 16-node basis costs roughly `10^120` —
+the same class of collapse `R-5603` measured on the Pick side — and is why
+"raw moat" ranking misleads, exactly as PR #134's own analysis argued.
