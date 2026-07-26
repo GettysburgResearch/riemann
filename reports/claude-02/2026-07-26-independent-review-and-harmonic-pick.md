@@ -110,6 +110,12 @@ fidelity (Q-0003 remains open), T-0001, T-0002, the arithmetic criteria.
   update CURRENT_STATE §2 with the closure.
 * Q-0017 (floor as rational approximation) is the sharpest open question this
   session created; L-0009 is self-contained preparation for it.
+* Q-0018 (prime-side dual of the Pick criterion) is the most promising NEW
+  direction: for probes right of `Re s = 1` the scalar `v*Pv` acquires an
+  absolutely convergent prime-side expression, giving a three-way
+  cross-validation (points / zeros / primes) and a targeted rational test
+  family for the Weil machinery.  The building blocks all exist
+  (`weil_mod._laplace_halfline`, L-0009, X-0013).
 * The Pick sweep remains item 0 of CURRENT_STATE §6; with
   `ldl_witness_direction` in place, any alert now auto-compresses to a
   publishable scalar certificate.

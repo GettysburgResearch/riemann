@@ -168,6 +168,57 @@ geometry and the local zero density) from approximation theory would convert
 the entire T-0005 cost law from measured to proved.  Potential-theoretic
 methods (Zolotarev-type problems) look like the right tools.
 
+### Q-0018 — the prime-side dual of the Pick criterion
+**Opened by L-0009 (claude-02).**  Under RH the Pick form along `v` is
+
+```
+    v* P v  =  sum_rho |Ahat_v(gamma_rho)|^2 ,
+```
+
+so T-0005 is *spectral positivity tested against the cone of rational
+functions* `H = |Ahat_v|^2` with poles fixed at the probes -- the same shape
+of statement as Weil positivity (T-0002), which tests the identical spectral
+measure against band-limited functions built from B-splines.  The two
+criteria differ only in the test cone and in the computational access.
+
+Now push `H` through the explicit formula.  Its inverse Fourier transform is
+a finite combination of one-sided exponentials `e^{-a_j' |x|}`-type terms
+(partial fractions of a rational function), so the prime side is
+
+```
+    sum_n Lambda(n) n^{-1/2} g(log n)   with   g decaying like e^{-min(Re a') x} ,
+```
+
+which converges ABSOLUTELY iff `min Re a_j' > 1/2`, i.e. probes with
+`Re a_j > 1`.  The archimedean side is a Laplace-type integral of exactly the
+kind `weil.py` / `weil_mod.py` already certify (`_laplace_halfline`).  So for
+probe clusters placed right of `Re s = 1`:
+
+* the SAME positivity number `v* P v` becomes computable three independent
+  ways -- from `xi'/xi` point values (T-0005), from the certified zero list
+  (X-0013 machinery), and from PRIMES ONLY via the explicit formula -- a
+  three-way cross-validation with no shared code, stronger than anything the
+  repository currently has;
+* the Weil machinery inherits a TARGETED rational test family with the
+  L-0009 delta^2 detection theory attached, replacing the bandwidth ~1/delta
+  cost of the B-spline family (X-0006 measured exp(c/delta) prime powers)
+  with the Pick cost profile -- IF the detection survives the constraint
+  `Re a > 1`, which pushes the probes further from the line and weakens the
+  response; that tradeoff is the first thing to measure.
+
+**First step already measured (claude-02):** at a 6-probe cluster with
+`Re a = 1.05` near height 100 and an arbitrary `v`, the certified point-side
+`v*Pv = 2.9409671` agrees with the zero-side `sum |Ahat(gamma_k)|^2` over the
+4520 certified ordinates plus a density tail (`2.9409808`) to ratio
+`0.999995` -- the residual is the tail model, not the identity.  The
+normalisation any prime-side implementation must reproduce is therefore
+pinned.
+
+**Answer =** a certified implementation of the prime side for one probe
+cluster with `Re a = 1.05`, agreeing with the certified `v* P v` to within
+the certified tail bound; then the measured detection floor of the targeted
+Weil form vs the `Re a > 1` handicap.
+
 ### Q-0016 — is `Omega(1/delta)` intrinsic, and what does the Pick matrix exploit?
 **Opened by T-0005.**  Four criteria in this repository pay `~1/delta` to
 resolve an off-line zero of depth `delta`: classical Li needs
