@@ -1,0 +1,45 @@
+{
+  "classification": "SYNTHETIC_MODEL",
+  "difference_interval": {"lower": {"denominator": 1, "numerator": -7}, "upper": {"denominator": 1, "numerator": -7}},
+  "height_count": 3,
+  "height_exponent_sums": {"center": 0, "minus": 0, "plus": 0},
+  "left_product_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}},
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "polynomial": {
+    "coefficients_ascending": [
+      {"denominator": 1496577676626844588240573268701473812127674924007424, "numerator": 20050395731295351349125969224310783},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 1461501637330902918203684832716283019655932542976, "numerator": 237088585869824495717692555878891519},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 174224571863520493293247799005065324265472, "numerator": -32070856678741896262215747889665},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 332306998946228968225951765070086144, "numerator": 21761924534452679031799853049},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 158456325028528675187087900672, "numerator": -307200693529154009038599},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 604462909807314587353088, "numerator": 9392602442947297245},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 144115188075855872, "numerator": 10665298918905},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 274877906944, "numerator": -426610695},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 131072, "numerator": 735}
+    ],
+    "degree": 16,
+    "distinct_real_roots": 0,
+    "proof_object_sha256": "30ac202cd82a0ec214f7c822cc14a4462f4eef62242685efece307dbbc658a1f",
+    "strictly_positive_on_real_line": true,
+    "value_at_origin": {"denominator": 1496577676626844588240573268701473812127674924007424, "numerator": 20050395731295351349125969224310783}
+  },
+  "right_product_interval": {"lower": {"denominator": 1, "numerator": 8}, "upper": {"denominator": 1, "numerator": 8}},
+  "schema": "riemann.cross-height-direct-xi-algebraic.v1",
+  "scope_warning": "The checker proves exact polynomial positivity and exact interval contraction only. A production negative additionally requires review of L-9801, independent completed-xi reproduction, and normalization audit.",
+  "source_fingerprints": {
+    "center": {"common_xi_scale_power_of_two": 0, "source_sha256": null},
+    "minus": {"common_xi_scale_power_of_two": 0, "source_sha256": null},
+    "plus": {"common_xi_scale_power_of_two": 0, "source_sha256": null}
+  },
+  "status": "CERTIFIED_NEGATIVE",
+  "term_count": 7,
+  "verdict": "SYNTHETIC_STRICT_SEPARATION"
+}
