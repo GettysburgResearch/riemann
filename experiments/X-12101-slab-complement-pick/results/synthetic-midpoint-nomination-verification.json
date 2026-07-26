@@ -1,0 +1,15 @@
+{
+  "schema": "riemann.slab-complement-pick.nomination-verification.v1",
+  "source_nomination": "synthetic-midpoint-nomination.json",
+  "status": "CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS",
+  "ordinary_pick_interval": {
+    "lower": "24431141191240839387202667122175/183748400890420087711957453312",
+    "upper": "24431141191240839387202667122175/183748400890420087711957453312"
+  },
+  "slab_complement_residual_interval": {
+    "lower": "-621696847181947699436326215125/65490685078800950795417157632",
+    "upper": "-621696847181947699436326215125/65490685078800950795417157632"
+  },
+  "classification": "exact synthetic replay; not Riemann-xi data",
+  "verification_file_sha256": "d519be654753f5db84d695e8043d8aac98275e4571e63b85dffd6a5d9f3cd4b1"
+}
