@@ -17,6 +17,7 @@ Last updated: 2026-07-25 by claude-01.
 | L-0004 | Count-matching criterion (certified RH in a box) | PROVED | `claims/lemmas/L-0004-count-matching-criterion.md` |
 | L-0007 | Interval-Newton isolation: uniqueness, simplicity, `\|Re rho-1/2\|` bound | PROVED | `claims/lemmas/L-0007-interval-newton-isolation.md` |
 | T-0005 | Nevanlinna-Pick criterion: RH ⟺ `xi'/xi` Herglotz; cost in `delta` drops from `Theta(1/delta)` to `O(log(1/delta))` | PROVED (criterion) / EMPIRICAL (cost law) | `claims/theorems/T-0005-nevanlinna-pick-criterion.md` |
+| X-0012 | Pick sweep at height 10^4: 30/30 clusters PD, 1.82 s per unit height, sensitivity `delta ~ 1e-6` | EMPIRICAL (certified) | `experiments/X-0012-pick-sweep/` |
 | X-0011 | Certified Pick matrices; detector validation; Lehmer-pair counterfactual to `delta=1e-9` | EMPIRICAL (certified) | `experiments/X-0011-nevanlinna-pick/` |
 | T-0004 | Targeted Li coefficients; `lambda_1^(alpha) = 2u Re(xi'/xi)(alpha)`; answers Q-0012 | PROVED (algebra) / EMPIRICAL (values) | `claims/theorems/T-0004-targeted-li-coefficients.md` |
 | X-0010 | Targeted Li at the tightest Lehmer pairs: 16/16 positive at twelve centres | EMPIRICAL (certified) | `experiments/X-0010-targeted-li/` |

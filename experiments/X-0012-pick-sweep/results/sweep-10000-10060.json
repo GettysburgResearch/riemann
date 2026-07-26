@@ -1,0 +1,369 @@
+{
+ "experiment": "X-0012",
+ "agent": "claude-01",
+ "git_sha": "2ed8dfc0e9629a80df4f3748746f96bd3f907ada",
+ "python": "3.11.15",
+ "flint": "0.9.0",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "prec_bits": 2000,
+ "tol_bits": 300,
+ "criterion": "T-0005: RH <=> every Pick matrix of xi'/xi is PSD",
+ "semantics": "arb/acb ball arithmetic; NOT_PSD is a proof, UNDECIDED is an abstention",
+ "note": "this band lies ABOVE the certified census (T = 5000), so no other result in this repository covers it",
+ "sweep": {
+  "t0": 10000.0,
+  "t1": 10060.0,
+  "step": 2.0,
+  "N": 16,
+  "cluster_width": 0.8,
+  "n_clusters": 30,
+  "n_pd": 30,
+  "alerts": [],
+  "seconds": 109.3,
+  "clusters": [
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.1812926453224065e-27,
+    "min_pivot_rad": 2.204810332722627e-84,
+    "refutes_rh": false,
+    "cluster_lo": 10000.0,
+    "cluster_hi": 10000.8,
+    "seconds": 4.29
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 9.085791980921959e-29,
+    "min_pivot_rad": 2.420558456250594e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10002.0,
+    "cluster_hi": 10002.8,
+    "seconds": 3.62
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 2.469431301186189e-28,
+    "min_pivot_rad": 3.157292599639968e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10004.0,
+    "cluster_hi": 10004.8,
+    "seconds": 3.6
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 6.874263091713981e-31,
+    "min_pivot_rad": 3.4414277448227838e-87,
+    "refutes_rh": false,
+    "cluster_lo": 10006.0,
+    "cluster_hi": 10006.8,
+    "seconds": 3.58
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 2.5236786405861745e-30,
+    "min_pivot_rad": 7.735036189897439e-87,
+    "refutes_rh": false,
+    "cluster_lo": 10008.0,
+    "cluster_hi": 10008.8,
+    "seconds": 4.04
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.3843870417496299e-27,
+    "min_pivot_rad": 5.647009080786678e-84,
+    "refutes_rh": false,
+    "cluster_lo": 10010.0,
+    "cluster_hi": 10010.8,
+    "seconds": 3.66
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 4.645440214220538e-29,
+    "min_pivot_rad": 2.9881362782935596e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10012.0,
+    "cluster_hi": 10012.8,
+    "seconds": 3.88
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 6.502497394295928e-30,
+    "min_pivot_rad": 2.9109897636243097e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10014.0,
+    "cluster_hi": 10014.8,
+    "seconds": 3.77
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 5.772838307489812e-30,
+    "min_pivot_rad": 9.312437272272152e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10016.0,
+    "cluster_hi": 10016.8,
+    "seconds": 3.87
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.8864351138251258e-29,
+    "min_pivot_rad": 3.965710660948809e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10018.0,
+    "cluster_hi": 10018.8,
+    "seconds": 3.74
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.345557089036897e-27,
+    "min_pivot_rad": 4.174900921633774e-84,
+    "refutes_rh": false,
+    "cluster_lo": 10020.0,
+    "cluster_hi": 10020.8,
+    "seconds": 3.88
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 5.990343750045044e-29,
+    "min_pivot_rad": 1.2124854377701829e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10022.0,
+    "cluster_hi": 10022.8,
+    "seconds": 3.7
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 2.8245658473737576e-30,
+    "min_pivot_rad": 6.249852411788842e-87,
+    "refutes_rh": false,
+    "cluster_lo": 10024.0,
+    "cluster_hi": 10024.8,
+    "seconds": 3.7
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 6.753228341744443e-30,
+    "min_pivot_rad": 2.3016057954117816e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10026.0,
+    "cluster_hi": 10026.8,
+    "seconds": 3.65
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 5.508319606040964e-29,
+    "min_pivot_rad": 1.21115454969259e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10028.0,
+    "cluster_hi": 10028.8,
+    "seconds": 3.48
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.2533845098322127e-27,
+    "min_pivot_rad": 2.4149021978010706e-84,
+    "refutes_rh": false,
+    "cluster_lo": 10030.0,
+    "cluster_hi": 10030.8,
+    "seconds": 3.48
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 7.200109323602884e-30,
+    "min_pivot_rad": 1.7311622313315002e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10032.0,
+    "cluster_hi": 10032.8,
+    "seconds": 3.56
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 2.6229065519662727e-30,
+    "min_pivot_rad": 8.910726651388135e-87,
+    "refutes_rh": false,
+    "cluster_lo": 10034.0,
+    "cluster_hi": 10034.8,
+    "seconds": 3.48
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 5.4907969709415726e-30,
+    "min_pivot_rad": 4.610991850778575e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10036.0,
+    "cluster_hi": 10036.8,
+    "seconds": 3.74
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 5.824840813524585e-29,
+    "min_pivot_rad": 7.760422387420226e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10038.0,
+    "cluster_hi": 10038.8,
+    "seconds": 3.63
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.9435704886910294e-28,
+    "min_pivot_rad": 2.921003788747256e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10040.0,
+    "cluster_hi": 10040.8,
+    "seconds": 3.4
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 3.9072573489168983e-29,
+    "min_pivot_rad": 3.24936043753076e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10042.0,
+    "cluster_hi": 10042.8,
+    "seconds": 3.4
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 5.822360791933403e-30,
+    "min_pivot_rad": 3.641467866047481e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10044.0,
+    "cluster_hi": 10044.8,
+    "seconds": 3.42
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 4.595898210434565e-28,
+    "min_pivot_rad": 7.134482602770004e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10046.0,
+    "cluster_hi": 10046.8,
+    "seconds": 3.46
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 4.006705089359062e-30,
+    "min_pivot_rad": 9.677252831774852e-87,
+    "refutes_rh": false,
+    "cluster_lo": 10048.0,
+    "cluster_hi": 10048.8,
+    "seconds": 3.47
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 2.5208100502552035e-29,
+    "min_pivot_rad": 3.492646222725592e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10050.0,
+    "cluster_hi": 10050.8,
+    "seconds": 3.45
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 5.943376723348475e-31,
+    "min_pivot_rad": 6.542520712432567e-87,
+    "refutes_rh": false,
+    "cluster_lo": 10052.0,
+    "cluster_hi": 10052.8,
+    "seconds": 3.52
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 4.5396219594344546e-30,
+    "min_pivot_rad": 4.909919615630254e-86,
+    "refutes_rh": false,
+    "cluster_lo": 10054.0,
+    "cluster_hi": 10054.8,
+    "seconds": 3.49
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.579653802266426e-28,
+    "min_pivot_rad": 1.323140629222736e-85,
+    "refutes_rh": false,
+    "cluster_lo": 10056.0,
+    "cluster_hi": 10056.8,
+    "seconds": 3.56
+   },
+   {
+    "N": 16,
+    "verdict": "PD",
+    "min_pivot": 1.2228652626893088e-27,
+    "min_pivot_rad": 2.5014853826584003e-84,
+    "refutes_rh": false,
+    "cluster_lo": 10058.0,
+    "cluster_hi": 10058.8,
+    "seconds": 3.76
+   }
+  ]
+ },
+ "sensitivity": {
+  "height": 10000.0,
+  "rows": [
+   {
+    "delta": "0.01",
+    "off": "NOT_PSD",
+    "double": "PD",
+    "off_min_pivot": -6.550541027318615e-16,
+    "double_min_pivot": 1.6684367261754658e-28
+   },
+   {
+    "delta": "0.0001",
+    "off": "NOT_PSD",
+    "double": "PD",
+    "off_min_pivot": -2.6760386180241137e-22,
+    "double_min_pivot": 1.6684367261754658e-28
+   },
+   {
+    "delta": "0.000001",
+    "off": "NOT_PSD",
+    "double": "PD",
+    "off_min_pivot": -1.0385128054383816e-27,
+    "double_min_pivot": 1.6684367261754658e-28
+   },
+   {
+    "delta": "0.00000001",
+    "off": "PD",
+    "double": "PD",
+    "off_min_pivot": 1.6674544742191292e-28,
+    "double_min_pivot": 1.6684367261754658e-28
+   },
+   {
+    "delta": "0.000000001",
+    "off": "PD",
+    "double": "PD",
+    "off_min_pivot": 1.6684269038359083e-28,
+    "double_min_pivot": 1.6684367261754658e-28
+   }
+  ],
+  "smallest_delta_detected": "0.000001",
+  "control_firings": 0
+ },
+ "conclusion": "no certified NOT-PSD Pick matrix in [10000.0, 10060.0]; consistent with RH"
+}

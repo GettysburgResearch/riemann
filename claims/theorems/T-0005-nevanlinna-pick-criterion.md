@@ -203,6 +203,49 @@ there (`|Re rho - 1/2| <= 9.5e-77` for every zero to height 1000, and every
 individual disc to height 2000).  Its value is the *cost*: L-0007 must first
 locate every zero, and this locates none.
 
+## Coverage: how much height one cluster buys
+
+The quantity that turns the criterion into a search.  One cluster of `N = 16`
+probes spanning `[c, c + 0.8]` at `Re s = 0.55`, with the off-line pair planted
+at varying offsets (synthetic, height 100, matched `DOUBLE` control PD in every
+cell):
+
+| depth | pair detected for ordinates in | width |
+|---|---|---|
+| `delta >= 1e-3` | `[c - 1.8, c + 2.2]` | 4.0 |
+| `delta >= 1e-6` | `[c - 0.8, c + 2.2]` | 3.0 |
+| `delta >= 1e-9` | `[c - 0.3, c + 1.7]` | 2.0 |
+
+The profile is centred on the cluster, not on its left edge, and it does not
+collapse as `delta` shrinks -- it narrows by a factor 2 while `delta` falls by
+`10^6`.  So **a step of 2.0 tiles the critical line at the `1e-9` level**, which
+is what X-0012 uses.  Sweeping `[0, T]` costs `~T/2` clusters of 16 evaluations,
+independent of `delta`.
+
+## Sensitivity falls with height, and the remedy is N
+
+The coverage table above was measured at height 100.  Re-measured at height
+`10^4` against the **real certified `zeta` background** (X-0012 part 2: an
+off-line quadruple of depth `delta` added to the certified `F`, against the
+matched on-line double), `N = 16`:
+
+```
+    delta = 1e-2, 1e-4, 1e-6   OFF = NOT_PSD      DOUBLE = PD
+    delta = 1e-8, 1e-9         OFF = PD           DOUBLE = PD
+```
+
+So the sensitivity at height `10^4` is `delta ~ 1e-6`, three orders worse than
+at height 100, with 0 control firings.  The cause is visible in the numbers: the
+floor for this geometry is `1.67e-28`, and the `delta = 1e-8` signal
+(`-1.0e-27` at `delta = 1e-6`, falling as `delta^3`) drops below it.  Zeros are
+denser at greater height, so more of them are "seen" by the cluster and the
+effective rank rises.
+
+**This is a statement about `N = 16`, not about the method**: the floor falls
+geometrically in `N` (`~10^{-2.7N}`), so `N = 20` or `24` should recover the
+`1e-9` level at a cost of 4-8 more evaluations per cluster.  That is the first
+thing to measure before running a long sweep, and it has not been done.
+
 ## What it does not do
 
 - Positivity of finitely many Pick matrices proves nothing.  Like every other
