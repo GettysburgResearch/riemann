@@ -1,0 +1,152 @@
+name: X9311 distinct-gap degree18 cone
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-q/93-distinct-gap-degree18-cone
+    paths:
+      - .github/workflows/x9311-distinct-gap-degree18.yml
+      - experiments/X-9311-distinct-gap-degree18/RUN.md
+      - experiments/X-9311-distinct-gap-degree18/config.json
+      - experiments/X-9311-distinct-gap-degree18/*.py
+      - experiments/X-9311-distinct-gap-degree18/tests/**
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x9311-distinct-gap-degree18-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous and discovery backends
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          python -m pip install --upgrade pip
+          python -m pip install numpy
+          pkg-config --modversion flint
+
+      - name: Run exact kernel tests
+        run: |
+          python -m compileall -q experiments/X-9311-distinct-gap-degree18
+          python -m unittest discover \
+            -s experiments/X-9311-distinct-gap-degree18/tests -v
+
+      - name: Generate the exact twenty-node distinct-gap producer
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9311-distinct-gap-degree18/results
+          mkdir -p "$out"
+          python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_rs_source.py \
+            --x-bits 20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1 \
+            --ordinate-numerator 20225875608339631745427 \
+            --output /tmp/distinct-gap-20.c \
+            --manifest "$out/source-patch.json"
+          cc -O3 -std=c11 -Wall -Wextra \
+            /tmp/distinct-gap-20.c -o /tmp/distinct-gap-20 \
+            -lflint -lmpfr -lgmp -lpthread -lm
+          sha256sum /tmp/distinct-gap-20.c > "$out/generated-source.sha256"
+
+      - name: Produce the directed 512-bit primitive table
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9311-distinct-gap-degree18/results
+          /usr/bin/time -v /tmp/distinct-gap-20 512 \
+            > "$out/xi-primitives-p512.json" \
+            2> "$out/xi-p512.time.txt"
+
+      - name: Bind the globally nearest 256 proof-grade zero balls
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9311-distinct-gap-degree18/results
+          python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_nearest_certificate.py \
+            "$out/xi-primitives-p512.json" \
+            experiments/X-9301-zero-deflated-xi-modulus/results/pr71-ordinate-screen-broad/distinct-gap-jm26/zero-block-p256.json \
+            experiments/X-9311-distinct-gap-degree18/config.json \
+            --nearest-count 256 \
+            --output "$out/certificate-p512.json"
+
+      - name: Build all nineteen directed response moments
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9311-distinct-gap-degree18/results
+          /usr/bin/time -v python \
+            experiments/X-9311-distinct-gap-degree18/build_moments.py \
+            "$out/certificate-p512.json" \
+            --log-terms 260 \
+            --decimal-precision 260 \
+            --output "$out/moments.json" \
+            > "$out/moments.stdout" 2> "$out/moments.time.txt"
+          cat "$out/moments.stdout"
+
+      - name: Decide the complete degree-18 half-line cone
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9311-distinct-gap-degree18/results
+          set +e
+          /usr/bin/time -v python \
+            experiments/X-9311-distinct-gap-degree18/verify_full_cone.py \
+            "$out/moments.json" \
+            --output "$out/verdict.json" \
+            > "$out/verdict.stdout" 2> "$out/verdict.time.txt"
+          status=$?
+          set -e
+          test "$status" -le 1
+          cat "$out/verdict.stdout"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('experiments/X-9311-distinct-gap-degree18/results')
+          result=json.loads((root/'verdict.json').read_text())
+          print(json.dumps({
+              'verdict': result['verdict'],
+              'degree_bound': result['degree_bound'],
+              'h0_dimension': result['h0_dimension'],
+              'h1_dimension': result['h1_dimension'],
+              'h0_discovery_minimum_eigenvalue': result['h0_discovery_minimum_eigenvalue'],
+              'h1_discovery_minimum_eigenvalue': result['h1_discovery_minimum_eigenvalue'],
+              'exact_proof_object_sha256': result['exact_proof_object_sha256'],
+          }, indent=2, sort_keys=True))
+          PY
+          find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | \
+            xargs -0 sha256sum > "$out/SHA256SUMS"
+
+      - name: Commit immutable degree-18 verdict
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/X-9311-distinct-gap-degree18/results
+          if git diff --cached --quiet; then
+            echo 'No result change to commit'
+          else
+            git commit -m 'result: retain distinct-gap degree18 cone verdict'
+            git push
+          fi
+
+      - name: Upload all proof artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x9311-distinct-gap-degree18
+          path: experiments/X-9311-distinct-gap-degree18/results/
+          retention-days: 30
+          if-no-files-found: error
