@@ -1,0 +1,48 @@
+{
+  "classification": "SYNTHETIC_MODEL",
+  "heights": [
+    {
+      "common_xi_scale_power_of_two": 0,
+      "id": "minus",
+      "ordinate": {"denominator": 16, "numerator": -5},
+      "points": [
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 2}, "upper": {"denominator": 1, "numerator": 2}}, "id": "x-10", "u": {"denominator": 1048576, "numerator": 1}},
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-6", "u": {"denominator": 4096, "numerator": 1}},
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-5", "u": {"denominator": 1024, "numerator": 1}}
+      ]
+    },
+    {
+      "common_xi_scale_power_of_two": 0,
+      "id": "center",
+      "ordinate": {"denominator": 1, "numerator": 0},
+      "points": [
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-10", "u": {"denominator": 1048576, "numerator": 1}},
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-6", "u": {"denominator": 4096, "numerator": 1}},
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-5", "u": {"denominator": 1024, "numerator": 1}}
+      ]
+    },
+    {
+      "common_xi_scale_power_of_two": 0,
+      "id": "plus",
+      "ordinate": {"denominator": 16, "numerator": 5},
+      "points": [
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-10", "u": {"denominator": 1048576, "numerator": 1}},
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-6", "u": {"denominator": 4096, "numerator": 1}},
+        {"h_interval": {"lower": {"denominator": 1, "numerator": 1}, "upper": {"denominator": 1, "numerator": 1}}, "id": "x-5", "u": {"denominator": 1024, "numerator": 1}}
+      ]
+    }
+  ],
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "origin": {"denominator": 1, "numerator": 0},
+  "polynomial_gate": {"status": "STRICT_POSITIVE_NO_REAL_ROOT_STURM"},
+  "schema": "riemann.cross-height-direct-xi-algebraic.v1",
+  "terms": [
+    {"exponent": -3, "height": "minus", "point": "x-10"},
+    {"exponent": 3, "height": "minus", "point": "x-5"},
+    {"exponent": -2, "height": "center", "point": "x-10"},
+    {"exponent": 3, "height": "center", "point": "x-6"},
+    {"exponent": -1, "height": "center", "point": "x-5"},
+    {"exponent": -3, "height": "plus", "point": "x-10"},
+    {"exponent": 3, "height": "plus", "point": "x-5"}
+  ]
+}
