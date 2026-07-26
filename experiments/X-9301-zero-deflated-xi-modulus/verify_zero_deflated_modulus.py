@@ -26,6 +26,9 @@ SCHEMA = "riemann.xi-modulus-zero-deflation.v1"
 NORMALIZATION = "riemann-xi-standard-half-s-sminus1-v1"
 PRODUCTION_GATE = "CERTIFIED_CRITICAL_LINE_ZERO_LOWER_BOUND"
 SYNTHETIC_GATE = "SYNTHETIC_CRITICAL_LINE_ZERO_COUNT"
+PRIMITIVE_SCHEMA = "riemann.xi-modulus-primitives.v1"
+GAP_SCHEMA = "riemann.x5603-line-gap-discrepancy.v1"
+BLOCK_SCHEMA = "riemann.x9301-pr71-hardy-zero-block.v1"
 
 
 class CertificateError(ValueError):
@@ -208,7 +211,9 @@ def row_status(value: Interval) -> str:
     return "UNRESOLVED"
 
 
-def parse_points(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
+def parse_points(
+    data: dict[str, Any], *, require_digests: bool
+) -> dict[str, dict[str, Any]]:
     raw_points = data.get("points")
     if not isinstance(raw_points, list) or not raw_points:
         raise CertificateError("points must be a nonempty list")
@@ -235,6 +240,10 @@ def parse_points(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
         }
         digest = canonical_sha(canonical)
         declared = raw.get("point_sha256")
+        if require_digests and declared is None:
+            raise CertificateError(
+                f"production point {identifier} must carry point_sha256"
+            )
         if declared is not None and validate_sha256(declared, "point_sha256") != digest:
             raise CertificateError(f"point digest mismatch for {identifier}")
         points[identifier] = {
@@ -245,6 +254,62 @@ def parse_points(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
             "sha256": digest,
         }
     return points
+
+
+def validate_production_source(data: dict[str, Any]) -> dict[str, str]:
+    source = data.get("source")
+    if not isinstance(source, dict):
+        raise CertificateError("production certificate must bind source artifacts")
+    primitive_sha = validate_sha256(
+        source.get("primitive_sha256"), "source.primitive_sha256"
+    )
+    gap_sha = source.get("gap_sha256")
+    block_sha = source.get("zero_block_sha256")
+    if (gap_sha is None) == (block_sha is None):
+        raise CertificateError(
+            "production source must bind exactly one gap or zero-block artifact"
+        )
+    if gap_sha is not None:
+        return {
+            "kind": "gap",
+            "primitive_sha256": primitive_sha,
+            "zero_sha256": validate_sha256(gap_sha, "source.gap_sha256"),
+        }
+    return {
+        "kind": "zero-block",
+        "primitive_sha256": primitive_sha,
+        "zero_sha256": validate_sha256(
+            block_sha, "source.zero_block_sha256"
+        ),
+    }
+
+
+def verify_source_artifacts(
+    data: dict[str, Any],
+    primitive_artifact: dict[str, Any],
+    zero_artifact: dict[str, Any],
+) -> dict[str, str]:
+    """Bind a production arithmetic replay to its primitive producer outputs."""
+    source = validate_production_source(data)
+    if primitive_artifact.get("schema") != PRIMITIVE_SCHEMA:
+        raise CertificateError("primitive artifact schema mismatch")
+    if primitive_artifact.get("normalization_id") != NORMALIZATION:
+        raise CertificateError("primitive artifact normalization mismatch")
+    expected_zero_schema = GAP_SCHEMA if source["kind"] == "gap" else BLOCK_SCHEMA
+    if zero_artifact.get("schema") != expected_zero_schema:
+        raise CertificateError(f"{source['kind']} artifact schema mismatch")
+    primitive_sha = canonical_sha(primitive_artifact)
+    zero_sha = canonical_sha(zero_artifact)
+    if primitive_sha != source["primitive_sha256"]:
+        raise CertificateError("primitive artifact digest does not match certificate")
+    if zero_sha != source["zero_sha256"]:
+        raise CertificateError(
+            f"{source['kind']} artifact digest does not match certificate"
+        )
+    return {
+        "primitive_sha256": primitive_sha,
+        f"{source['kind']}_sha256": zero_sha,
+    }
 
 
 def parse_zero_bins(
@@ -409,7 +474,23 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     if terms < 32 or terms > 4096:
         raise CertificateError("log_terms must be between 32 and 4096")
 
-    points = parse_points(data)
+    claimed_certificate_sha = data.get("certificate_sha256")
+    if classification == "RIEMANN_XI_DIRECTED" and claimed_certificate_sha is None:
+        raise CertificateError("production certificate must carry certificate_sha256")
+    if claimed_certificate_sha is not None:
+        claimed_certificate_sha = validate_sha256(
+            claimed_certificate_sha, "certificate_sha256"
+        )
+        certificate_body = dict(data)
+        certificate_body.pop("certificate_sha256", None)
+        if canonical_sha(certificate_body) != claimed_certificate_sha:
+            raise CertificateError("certificate_sha256 mismatch")
+    if classification == "RIEMANN_XI_DIRECTED":
+        validate_production_source(data)
+
+    points = parse_points(
+        data, require_digests=classification == "RIEMANN_XI_DIRECTED"
+    )
     bins = parse_zero_bins(data, ordinate, classification)
     raw_rows = data.get("rows")
     if not isinstance(raw_rows, list) or not raw_rows:
@@ -475,7 +556,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     negative = [row for row in outputs if row["status"] == "CERTIFIED_NEGATIVE"]
     unresolved = [row for row in outputs if row["status"] == "UNRESOLVED"]
     if classification == "RIEMANN_XI_DIRECTED" and negative:
-        verdict = "NEGATIVE_ZERO_DEFLATED_XI_MODULUS_WITNESS_PENDING_REVIEW"
+        verdict = "NEGATIVE_ZERO_DEFLATED_XI_ARITHMETIC_REPLAY"
     elif classification == "SYNTHETIC_MODEL" and negative:
         verdict = "SYNTHETIC_ZERO_DEFLATION_SEPARATION"
     elif unresolved:
@@ -483,8 +564,10 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     else:
         verdict = "NO_NEGATIVE_IN_DECLARED_ROWS"
 
-    return {
+    result = {
         "schema": SCHEMA,
+        "verified": True,
+        "source_artifacts_verified": False,
         "classification": classification,
         "normalization_id": NORMALIZATION,
         "ordinate": fj(ordinate),
@@ -509,23 +592,56 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "verdict": verdict,
         "scope_warning": (
             "The checker proves exact rectangle contraction and zero-bin algebra only. "
-            "A Riemann-xi negative also requires proof-grade completed-xi rectangles, "
-            "independent validation of every critical-line zero-count gate, and "
-            "independent review of L-9301 and the completed-xi normalization."
+            "A production CLI replay additionally requires the primitive and zero "
+            "artifacts whose digests are bound by the certificate. A negative still "
+            "requires independent backend reproduction and review of L-9301 and the "
+            "completed-xi normalization."
         ),
     }
+    if claimed_certificate_sha is not None:
+        result["certificate_sha256"] = claimed_certificate_sha
+    result["verification_sha256"] = canonical_sha(result)
+    return result
 
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("certificate", type=Path)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--primitive-artifact", type=Path)
+    parser.add_argument("--zero-artifact", type=Path)
     args = parser.parse_args(argv)
     try:
         data = json.loads(args.certificate.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
             raise CertificateError("top-level JSON must be an object")
         result = verify(data)
+        if data.get("classification") == "RIEMANN_XI_DIRECTED":
+            if args.primitive_artifact is None or args.zero_artifact is None:
+                raise CertificateError(
+                    "production replay requires --primitive-artifact and "
+                    "--zero-artifact"
+                )
+            primitive_artifact = json.loads(
+                args.primitive_artifact.read_text(encoding="utf-8")
+            )
+            zero_artifact = json.loads(
+                args.zero_artifact.read_text(encoding="utf-8")
+            )
+            if not isinstance(primitive_artifact, dict) or not isinstance(
+                zero_artifact, dict
+            ):
+                raise CertificateError("source artifacts must contain JSON objects")
+            result["source_artifacts"] = verify_source_artifacts(
+                data, primitive_artifact, zero_artifact
+            )
+            result["source_artifacts_verified"] = True
+            if result["certified_negative_rows"]:
+                result["verdict"] = (
+                    "NEGATIVE_ZERO_DEFLATED_XI_MODULUS_WITNESS_PENDING_REVIEW"
+                )
+            result.pop("verification_sha256", None)
+            result["verification_sha256"] = canonical_sha(result)
     except (OSError, json.JSONDecodeError, CertificateError, ZeroDivisionError) as exc:
         print(json.dumps({"verified": False, "error": str(exc)}, indent=2), file=sys.stderr)
         return 2
@@ -533,7 +649,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.output:
         args.output.write_text(text, encoding="utf-8")
     print(text, end="")
-    return 0 if result["verdict"] != "UNRESOLVED" else 1
+    return 1 if result["unresolved_rows"] else 0
 
 
 if __name__ == "__main__":

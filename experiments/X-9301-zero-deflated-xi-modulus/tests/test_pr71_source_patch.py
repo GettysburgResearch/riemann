@@ -13,23 +13,24 @@ MODULE = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
 sys.modules[SPEC.name] = MODULE
 SPEC.loader.exec_module(MODULE)
+REVIEWED_SOURCE = ROOT.parent / "X-7501-xi-modulus" / "rs_modulus.c"
 
 
 class PatcherTests(unittest.TestCase):
     def test_exact_three_occurrence_patch(self):
-        source = (
-            f"comment {MODULE.OLD}\n"
-            f"const {MODULE.OLD}\n"
-            f"json {MODULE.OLD}\n"
-        )
+        source = REVIEWED_SOURCE.read_text(encoding="utf-8")
         output, manifest = MODULE.patch_source(source)
         self.assertEqual(output.count(MODULE.NEW), 3)
         self.assertNotIn(MODULE.OLD, output)
         self.assertEqual(manifest["occurrences_replaced"], 3)
+        self.assertEqual(
+            manifest["source_sha256"], MODULE.REVIEWED_SOURCE_SHA256
+        )
 
     def test_source_drift_rejected(self):
-        with self.assertRaises(ValueError):
-            MODULE.patch_source(f"only {MODULE.OLD}\n")
+        source = REVIEWED_SOURCE.read_text(encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "digest mismatch"):
+            MODULE.patch_source(source + "\n")
 
     def test_positive_height_reflection_patch(self):
         source = f"prefix\n{MODULE.OLD_REFLECTION}suffix\n"

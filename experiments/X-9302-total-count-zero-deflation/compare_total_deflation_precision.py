@@ -84,6 +84,34 @@ def row_map(result: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return rows
 
 
+def compare_count_windows(low: dict[str, Any], high: dict[str, Any]) -> int:
+    low_windows, high_windows = low.get("count_windows"), high.get("count_windows")
+    if (
+        not isinstance(low_windows, list)
+        or not isinstance(high_windows, list)
+        or len(low_windows) != len(high_windows)
+    ):
+        raise ComparisonError("count-window lists differ")
+    for index, (left, right) in enumerate(zip(low_windows, high_windows)):
+        if not isinstance(left, dict) or not isinstance(right, dict):
+            raise ComparisonError(f"malformed count window at index {index}")
+        for field in ("id", "radius", "count_lower"):
+            if left.get(field) != right.get(field):
+                raise ComparisonError(
+                    f"count-window semantic field differs at {index}.{field}"
+                )
+        left_gate, right_gate = left.get("gate"), right.get("gate")
+        if not isinstance(left_gate, dict) or not isinstance(right_gate, dict):
+            raise ComparisonError(f"missing count-window gate at index {index}")
+        if left_gate.get("status") != right_gate.get("status"):
+            raise ComparisonError(f"count-window gate status differs at index {index}")
+        # The gate digests intentionally differ: each binds the independently
+        # generated precision-specific total-count artifact.
+        VERIFY.validate_sha256(left_gate.get("sha256"), f"low.gate[{index}]")
+        VERIFY.validate_sha256(right_gate.get("sha256"), f"high.gate[{index}]")
+    return len(low_windows)
+
+
 def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
     for field in (
         "schema",
@@ -91,11 +119,11 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
         "normalization_id",
         "ordinate",
         "log_terms",
-        "count_windows",
         "rows",
     ):
         if low.get(field) != high.get(field):
             raise ComparisonError(f"certificates differ in {field}")
+    stable_count_windows = compare_count_windows(low, high)
 
     low_points, high_points = point_map(low), point_map(high)
     if set(low_points) != set(high_points):
@@ -133,6 +161,7 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "schema": "riemann.x9302-total-deflation-precision-comparison.v1",
+        "stable_count_windows": stable_count_windows,
         "point_count": len(low_points),
         "nested_primitive_coordinates": nested_coordinates,
         "row_count": len(low_rows),

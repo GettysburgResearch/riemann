@@ -27,6 +27,9 @@ SCHEMA = "riemann.xi-modulus-total-count-deflation.v1"
 NORMALIZATION = "riemann-xi-standard-half-s-sminus1-v1"
 PRODUCTION_GATE = "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
 SYNTHETIC_GATE = "SYNTHETIC_TOTAL_ZERO_COUNT"
+PRIMITIVE_SCHEMA = "riemann.xi-modulus-primitives.v1"
+COUNT_SCHEMA = "riemann.x9302-pr71-total-count-windows.v1"
+COUNT_CLASSIFICATION = "CERTIFIED_NESTED_TOTAL_ZETA_ZERO_COUNTS"
 
 
 class CertificateError(ValueError):
@@ -196,7 +199,9 @@ def row_status(value: Interval) -> str:
     return "UNRESOLVED"
 
 
-def parse_points(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
+def parse_points(
+    data: dict[str, Any], *, require_digests: bool
+) -> dict[str, dict[str, Any]]:
     raw_points = data.get("points")
     if not isinstance(raw_points, list) or not raw_points:
         raise CertificateError("points must be a nonempty list")
@@ -222,6 +227,10 @@ def parse_points(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
         }
         digest = canonical_sha(canonical)
         declared = raw.get("point_sha256")
+        if require_digests and declared is None:
+            raise CertificateError(
+                f"production point {identifier} must carry point_sha256"
+            )
         if declared is not None and validate_sha256(declared, "point_sha256") != digest:
             raise CertificateError(f"point digest mismatch for {identifier}")
         points[identifier] = {
@@ -230,6 +239,53 @@ def parse_points(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
             "sha256": digest,
         }
     return points
+
+
+def validate_production_source(data: dict[str, Any]) -> dict[str, str]:
+    source = data.get("source")
+    if not isinstance(source, dict):
+        raise CertificateError("production certificate must bind source artifacts")
+    if source.get("primitive_schema") != PRIMITIVE_SCHEMA:
+        raise CertificateError("production primitive source schema mismatch")
+    if source.get("total_count_schema") != COUNT_SCHEMA:
+        raise CertificateError("production total-count source schema mismatch")
+    if source.get("total_count_classification") != COUNT_CLASSIFICATION:
+        raise CertificateError("production total-count source classification mismatch")
+    return {
+        "primitive_sha256": validate_sha256(
+            source.get("primitive_sha256"), "source.primitive_sha256"
+        ),
+        "total_count_sha256": validate_sha256(
+            source.get("total_count_sha256"), "source.total_count_sha256"
+        ),
+    }
+
+
+def verify_source_artifacts(
+    data: dict[str, Any],
+    primitive_artifact: dict[str, Any],
+    count_artifact: dict[str, Any],
+) -> dict[str, str]:
+    """Bind a production arithmetic replay to the two producer artifacts."""
+    source = validate_production_source(data)
+    if primitive_artifact.get("schema") != PRIMITIVE_SCHEMA:
+        raise CertificateError("primitive artifact schema mismatch")
+    if primitive_artifact.get("normalization_id") != NORMALIZATION:
+        raise CertificateError("primitive artifact normalization mismatch")
+    if count_artifact.get("schema") != COUNT_SCHEMA:
+        raise CertificateError("total-count artifact schema mismatch")
+    if count_artifact.get("classification") != COUNT_CLASSIFICATION:
+        raise CertificateError("total-count artifact classification mismatch")
+    primitive_sha = canonical_sha(primitive_artifact)
+    count_sha = canonical_sha(count_artifact)
+    if primitive_sha != source["primitive_sha256"]:
+        raise CertificateError("primitive artifact digest does not match certificate")
+    if count_sha != source["total_count_sha256"]:
+        raise CertificateError("total-count artifact digest does not match certificate")
+    return {
+        "primitive_sha256": primitive_sha,
+        "total_count_sha256": count_sha,
+    }
 
 
 def parse_count_windows(
@@ -373,6 +429,8 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         raise CertificateError("log_terms must be between 32 and 4096")
 
     claimed_certificate_sha = data.get("certificate_sha256")
+    if classification == "RIEMANN_XI_DIRECTED" and claimed_certificate_sha is None:
+        raise CertificateError("production certificate must carry certificate_sha256")
     if claimed_certificate_sha is not None:
         claimed_certificate_sha = validate_sha256(
             claimed_certificate_sha, "certificate_sha256"
@@ -382,7 +440,11 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         if canonical_sha(body) != claimed_certificate_sha:
             raise CertificateError("certificate_sha256 mismatch")
 
-    points = parse_points(data)
+    if classification == "RIEMANN_XI_DIRECTED":
+        validate_production_source(data)
+    points = parse_points(
+        data, require_digests=classification == "RIEMANN_XI_DIRECTED"
+    )
     windows, shells = parse_count_windows(data, classification)
     raw_rows = data.get("rows")
     if not isinstance(raw_rows, list) or not raw_rows:
@@ -436,7 +498,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     negative = [row for row in outputs if row["status"] == "CERTIFIED_NEGATIVE"]
     unresolved = [row for row in outputs if row["status"] == "UNRESOLVED"]
     if classification == "RIEMANN_XI_DIRECTED" and negative:
-        verdict = "NEGATIVE_TOTAL_COUNT_DEFLATED_XI_MODULUS_WITNESS_PENDING_REVIEW"
+        verdict = "NEGATIVE_TOTAL_COUNT_DEFLATED_XI_ARITHMETIC_REPLAY"
     elif classification == "SYNTHETIC_MODEL" and negative:
         verdict = "SYNTHETIC_TOTAL_COUNT_DEFLATION_SEPARATION"
     elif unresolved:
@@ -447,6 +509,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     result = {
         "schema": SCHEMA,
         "verified": True,
+        "source_artifacts_verified": False,
         "classification": classification,
         "normalization_id": NORMALIZATION,
         "ordinate": fj(ordinate),
@@ -477,10 +540,11 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "verdict": verdict,
         "scope_warning": (
             "The checker proves exact rectangle contraction and nested total-count "
-            "deflation algebra only. Under RH, unconditional total-zero lower counts "
-            "become critical-line lower counts. A Riemann-xi negative also requires "
-            "proof-grade completed-xi rectangles, independently certified total-count "
-            "gates, and review of L-9303 and the completed-xi normalization."
+            "deflation algebra only. A production CLI replay additionally requires "
+            "the primitive and total-count artifacts whose digests are bound by the "
+            "certificate. Under RH, unconditional total-zero lower counts become "
+            "critical-line lower counts. A negative still requires independent "
+            "backend reproduction and analytic review."
         ),
     }
     if claimed_certificate_sha is not None:
@@ -494,13 +558,41 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("certificate", type=Path)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--primitive-artifact", type=Path)
+    parser.add_argument("--count-artifact", type=Path)
     args = parser.parse_args(argv)
     try:
         data = json.loads(args.certificate.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
             raise CertificateError("certificate root must be an object")
         result = verify(data)
-        code = 1 if result["certified_negative_rows"] else 0
+        if data.get("classification") == "RIEMANN_XI_DIRECTED":
+            if args.primitive_artifact is None or args.count_artifact is None:
+                raise CertificateError(
+                    "production replay requires --primitive-artifact and "
+                    "--count-artifact"
+                )
+            primitive_artifact = json.loads(
+                args.primitive_artifact.read_text(encoding="utf-8")
+            )
+            count_artifact = json.loads(
+                args.count_artifact.read_text(encoding="utf-8")
+            )
+            if not isinstance(primitive_artifact, dict) or not isinstance(
+                count_artifact, dict
+            ):
+                raise CertificateError("source artifacts must contain JSON objects")
+            result["source_artifacts"] = verify_source_artifacts(
+                data, primitive_artifact, count_artifact
+            )
+            result["source_artifacts_verified"] = True
+            if result["certified_negative_rows"]:
+                result["verdict"] = (
+                    "NEGATIVE_TOTAL_COUNT_DEFLATED_XI_WITNESS_PENDING_REVIEW"
+                )
+            result.pop("verification_sha256", None)
+            result["verification_sha256"] = canonical_sha(result)
+        code = 1 if result["unresolved_rows"] else 0
     except (OSError, json.JSONDecodeError, CertificateError) as exc:
         result = {"schema": SCHEMA, "verified": False, "error": str(exc)}
         code = 2

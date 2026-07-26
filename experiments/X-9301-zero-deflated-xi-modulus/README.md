@@ -137,6 +137,12 @@ Twelve tests pass. They cover:
 - missing source points;
 - Boolean logarithm-term rejection.
 
+The CLI returns `0` for every resolved arithmetic replay, including a strict
+negative, `1` for unresolved intervals, and `2` for rejection. Production
+certificates additionally require `--primitive-artifact` and
+`--zero-artifact`; their canonical digests must match the certificate before a
+negative can be labeled source-bound.
+
 ## Production adapter
 
 `adapt_x7501_zero_deflation.py` consumes:

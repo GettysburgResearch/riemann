@@ -100,8 +100,29 @@ class AdapterTests(unittest.TestCase):
         )
         result = checker.verify(certificate)
         self.assertTrue(result["verified"])
+        self.assertFalse(result["source_artifacts_verified"])
         self.assertEqual(result["certified_negative_rows"], 2)
         self.assertEqual(result["count_windows"][0]["count_lower"], 20)
+        bindings = checker.verify_source_artifacts(
+            certificate, self.primitives, self.counts
+        )
+        self.assertEqual(
+            bindings["primitive_sha256"],
+            certificate["source"]["primitive_sha256"],
+        )
+
+    def test_source_artifact_mutation_is_rejected(self) -> None:
+        certificate = adapter.build(
+            copy.deepcopy(self.primitives),
+            copy.deepcopy(self.counts),
+            copy.deepcopy(self.config),
+        )
+        mutated = copy.deepcopy(self.counts)
+        mutated["precision_bits"] = 999
+        with self.assertRaisesRegex(
+            checker.CertificateError, "total-count artifact digest"
+        ):
+            checker.verify_source_artifacts(certificate, self.primitives, mutated)
 
     def assert_bridge_rejected(self, counts: dict, message: str) -> None:
         with self.assertRaisesRegex(adapter.BridgeError, message):

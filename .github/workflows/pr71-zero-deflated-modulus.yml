@@ -8,11 +8,13 @@ on:
     paths:
       - .github/workflows/pr71-zero-deflated-modulus.yml
       - experiments/X-9301-zero-deflated-xi-modulus/**
+      - experiments/X-7501-xi-modulus/rs_modulus.c
   pull_request:
     paths:
       - experiments/X-9301-zero-deflated-xi-modulus/RUN_PR71.md
       - .github/workflows/pr71-zero-deflated-modulus.yml
       - experiments/X-9301-zero-deflated-xi-modulus/**
+      - experiments/X-7501-xi-modulus/rs_modulus.c
 
 permissions:
   contents: read
@@ -137,6 +139,8 @@ jobs:
             set +e
             python experiments/X-9301-zero-deflated-xi-modulus/verify_zero_deflated_modulus.py \
               "$out/bracketing-certificate-p${precision}.json" \
+              --primitive-artifact "$out/xi-primitives-p${precision}.json" \
+              --zero-artifact "$out/gap-p256.json" \
               --output "$out/bracketing-verification-p${precision}.json"
             status=$?
             set -e
@@ -163,6 +167,8 @@ jobs:
               set +e
               python experiments/X-9301-zero-deflated-xi-modulus/verify_zero_deflated_modulus.py \
                 "$out/nearest-${count}-certificate-p${precision}.json" \
+                --primitive-artifact "$out/xi-primitives-p${precision}.json" \
+                --zero-artifact "$out/zero-block-p256.json" \
                 --output "$out/nearest-${count}-verification-p${precision}.json"
               status=$?
               set -e

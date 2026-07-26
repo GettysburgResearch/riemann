@@ -102,6 +102,13 @@ class TotalCountDeflationTests(unittest.TestCase):
         data["points"][0]["point_sha256"] = "0" * 64
         self.assert_rejected(data, "point digest mismatch")
 
+    def test_production_relabel_without_binding_is_rejected(self) -> None:
+        data = copy.deepcopy(self.data)
+        data["classification"] = "RIEMANN_XI_DIRECTED"
+        for window in data["count_windows"]:
+            window["gate"]["status"] = module.PRODUCTION_GATE
+        self.assert_rejected(data, "certificate_sha256")
+
 
 if __name__ == "__main__":
     unittest.main()

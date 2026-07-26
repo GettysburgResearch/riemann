@@ -8,6 +8,9 @@ on:
     paths:
       - '.github/workflows/pr71-total-count-zero-deflation.yml'
       - 'experiments/X-9302-total-count-zero-deflation/**'
+      - 'experiments/X-9301-zero-deflated-xi-modulus/build_pr71_rs_source.py'
+      - 'experiments/X-9301-zero-deflated-xi-modulus/configs/pr71-deflated-rows.json'
+      - 'experiments/X-7501-xi-modulus/rs_modulus.c'
       - 'claims/lemmas/L-9303-total-zero-count-deflation.md'
   pull_request:
     branches:
@@ -15,6 +18,9 @@ on:
     paths:
       - '.github/workflows/pr71-total-count-zero-deflation.yml'
       - 'experiments/X-9302-total-count-zero-deflation/**'
+      - 'experiments/X-9301-zero-deflated-xi-modulus/build_pr71_rs_source.py'
+      - 'experiments/X-9301-zero-deflated-xi-modulus/configs/pr71-deflated-rows.json'
+      - 'experiments/X-7501-xi-modulus/rs_modulus.c'
       - 'claims/lemmas/L-9303-total-zero-count-deflation.md'
 
 permissions:
@@ -104,6 +110,8 @@ jobs:
             set +e
             python experiments/X-9302-total-count-zero-deflation/verify_total_count_deflation.py \
               "$out/certificate-p${precision}.json" \
+              --primitive-artifact "$out/xi-primitives-p${precision}.json" \
+              --count-artifact "$out/total-counts-p${precision}.json" \
               --output "$out/verification-p${precision}.json"
             status=$?
             set -e

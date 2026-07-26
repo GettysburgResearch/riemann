@@ -100,5 +100,11 @@ python verify_total_count_deflation.py \
   --output /tmp/synthetic-result.json
 ```
 
-The last command intentionally returns status `1` because the synthetic
-certificate contains strict negative rows.
+The last command returns status `0`: a strict negative is a resolved arithmetic
+result. Status `1` is reserved for unresolved intervals and status `2` for a
+rejected certificate.
+
+For `RIEMANN_XI_DIRECTED` certificates, the CLI additionally requires
+`--primitive-artifact` and `--count-artifact`. It recomputes both canonical
+digests before promoting an arithmetic replay to a source-bound production
+result.

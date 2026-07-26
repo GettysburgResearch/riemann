@@ -10,6 +10,9 @@ from pathlib import Path
 OLD = "20225875608343121406355"
 NEW = "20225875608341108140435"
 EXPECTED_OCCURRENCES = 3
+REVIEWED_SOURCE_SHA256 = (
+    "1ff4f391dc78aecd2fc2e73a4da507551a77618c7850d005733ea06c3f90ec5c"
+)
 
 OLD_REFLECTION = """    acb_one(reflected_s);
     acb_sub(reflected_s, reflected_s, s, prec);
@@ -36,6 +39,11 @@ NEW_REFLECTION = """    /*
 
 
 def patch_source(source: str) -> tuple[str, dict[str, object]]:
+    source_sha256 = hashlib.sha256(source.encode("utf-8")).hexdigest()
+    if source_sha256 != REVIEWED_SOURCE_SHA256:
+        raise ValueError(
+            "X-7501 source digest mismatch: review source drift before regenerating"
+        )
     count = source.count(OLD)
     if count != EXPECTED_OCCURRENCES:
         raise ValueError(
@@ -51,7 +59,7 @@ def patch_source(source: str) -> tuple[str, dict[str, object]]:
         "new_ordinate_numerator": NEW,
         "denominator": 1 << 32,
         "occurrences_replaced": count,
-        "source_sha256": hashlib.sha256(source.encode("utf-8")).hexdigest(),
+        "source_sha256": source_sha256,
         "patched_sha256": hashlib.sha256(output.encode("utf-8")).hexdigest(),
     }
 

@@ -69,7 +69,7 @@ class ZeroDeflatedModulusTests(unittest.TestCase):
     def test_production_gate_required(self):
         data = self.load()
         data["classification"] = "RIEMANN_XI_DIRECTED"
-        with self.assertRaises(MODULE.CertificateError):
+        with self.assertRaisesRegex(MODULE.CertificateError, "certificate_sha256"):
             MODULE.verify(data)
 
     def test_point_digest_mutation_rejected(self):
