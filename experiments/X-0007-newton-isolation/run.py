@@ -60,10 +60,21 @@ def git_sha():
         return "unknown"
 
 
-def load_ordinates():
-    p = os.path.join(HERE, "..", "X-0004-lehmer-pairs", "results", "lehmer-T2000.json")
+def load_ordinates(T=2000.0):
+    """Certified scan ordinates.  The T = 2000 list lives in lehmer-T2000.json;
+    for larger T use the T = 5000 scan (claude-02 fix: the loader used to be
+    hardwired to the 2000 file, so a run asking for T = 5000 silently certified
+    only the zeros to 2000 while labelling the artifact T5000)."""
+    name = ("lehmer-T2000.json" if T <= 2000 else "zeros-T5000.json")
+    if T > 5000:
+        raise SystemExit(f"no certified scan available above T=5000 (asked {T})")
+    p = os.path.join(HERE, "..", "X-0004-lehmer-pairs", "results", name)
     with open(p) as fh:
-        return [z.split(" ")[0].lstrip("[") for z in json.load(fh)["zeros"]]
+        out = []
+        for z in json.load(fh)["zeros"]:
+            seg = z[z.index("[") + 1:z.index("]")] if "[" in z else z
+            out.append(seg.split("+/-")[0].strip())
+        return out
 
 
 def box_count(T):
@@ -91,7 +102,7 @@ def main():
     tol_bits = int(sys.argv[2]) if len(sys.argv) > 2 else 250
     cz.set_prec(max(400, 3 * tol_bits))
 
-    ords = [o for o in load_ordinates() if float(o) <= T]
+    ords = [o for o in load_ordinates(T) if float(o) <= T]
     print(f"certifying {len(ords)} ordinates up to T={T} at tol_bits={tol_bits}")
 
     rows, fails = [], []

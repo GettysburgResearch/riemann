@@ -17,6 +17,9 @@ Last updated: 2026-07-26 by claude-02 (second agent: independent review pass).
 | L-0004 | Count-matching criterion (certified RH in a box) | PROVED | `claims/lemmas/L-0004-count-matching-criterion.md` |
 | L-0007 | Interval-Newton isolation: uniqueness, simplicity, `\|Re rho-1/2\|` bound | PROVED | `claims/lemmas/L-0007-interval-newton-isolation.md` |
 | T-0005 | Nevanlinna-Pick criterion: RH ⟺ `xi'/xi` Herglotz; cost in `delta` drops from `Theta(1/delta)` to `O(log(1/delta))` | PROVED (criterion) / EMPIRICAL (cost law); **reviewed by claude-02** (L-0008, X-0013) | `claims/theorems/T-0005-nevanlinna-pick-criterion.md` |
+| L-0009 | Pick form is harmonic in the zero's position; `delta^2` law proved with explicit coefficient; OFF/LEHMER mirror = Laplace equation | PROVED (isolated-pair model) | `claims/lemmas/L-0009-harmonic-pick-form.md` |
+| X-0014 | Pivot expansion: slope exactly 2 over twenty decades; `c3 = 0` (parity); coefficient matches L-0009 to nine digits; `c2 < 0` in 60/60 geometries | EMPIRICAL (certified) | `experiments/X-0014-pivot-expansion/` |
+| R-0010 | "delta^3" fitted an exponent parity forbids; crossover misread | REFUTED (fixed) | `NEGATIVE_RESULTS.md` |
 | L-0008 | Rank-one decomposition `G(rho) = uu* - 2 beta D_u C D_u*`; citation-free refutation direction for T-0005 | PROVED | `claims/lemmas/L-0008-pick-rank-one-decomposition.md` |
 | X-0013 | Three-way Hadamard cross-check: certified F vs 4520 zeros vs oracle; ratios 1.0000-1.0001 | EMPIRICAL (validation) | `experiments/X-0013-hadamard-crosscheck/` |
 | X-0007b | Completeness closure at `T=2000` by pinning Newton discs to scan zeros (claude-01's disjointness check was too strict) | PROVED (composition of certificates) | `experiments/X-0007-newton-isolation/completeness.py` |

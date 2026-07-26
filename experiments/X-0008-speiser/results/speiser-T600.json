@@ -1,0 +1,45 @@
+{
+ "experiment": "X-0008",
+ "agent": "claude-01",
+ "git_sha": "09b65920fa43f0cdadf3890485eb3d8757a7fd2b",
+ "python": "3.11.15",
+ "flint": "0.9.0",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "prec_bits": 300,
+ "criterion": "Speiser: RH <=> zeta' has no zeros in 0 < Re s < 1/2",
+ "citation_flag": "the equivalence is unverified by this agent; the refutation direction could give a FALSE POSITIVE, so no counterexample claim may rest on it until Q-0014 is resolved.  Null results are safe either way.",
+ "semantics": "certified winding number (L-0002) applied to zeta' = eta'/(s-1) - eta/(s-1)^2, enclosed by L-0006",
+ "boxes": [
+  {
+   "x0": "0.02",
+   "x1": "0.48",
+   "y0": "1",
+   "y1": "600.0",
+   "count": 0,
+   "total_arg": "(sum of sub-boxes)",
+   "segments": 5538,
+   "max_depth": 6,
+   "min_modulus_lower": "[0.0010866293207584074994194470625046074104746278711786806008863742905563549843144658083521794 +/- 1.44e-92]",
+   "prec": 300,
+   "ok": true,
+   "reason": "",
+   "seconds": 430.6
+  },
+  {
+   "x0": "0.001",
+   "x1": "0.499",
+   "y0": "1",
+   "y1": "600.0",
+   "count": 0,
+   "total_arg": "(sum of sub-boxes)",
+   "segments": 5545,
+   "max_depth": 6,
+   "min_modulus_lower": "[0.0038098643420187789592561562134842474372317868805299354997010923983650868274122901958869563 +/- 8.31e-93]",
+   "prec": 300,
+   "ok": true,
+   "reason": "",
+   "seconds": 382.7
+  }
+ ],
+ "conclusion": "zeta' has no zeros in the tested sub-strips up to height 600.0; consistent with RH, and (subject to Q-0014) a zero here would refute it"
+}

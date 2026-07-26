@@ -102,15 +102,21 @@ The probe grid never needs to shrink.  The cost migrates into precision, and
 there it is only logarithmic.  Two measured laws:
 
 ```
-    |min pivot|  ~  delta^3           (measured slope 3.0-3.7 over ten decades)
+    |min pivot|  ~  delta^2           (PROVED for the isolated-pair model,
+                                       L-0009; the original "delta^3" was a
+                                       crossover misread, see R-0010 -- odd
+                                       exponents are forbidden by the
+                                       delta -> -delta symmetry)
     baseline floor  ~  10^{-2.7 N}    (measured: -1.95, -2.48, -2.80, -3.04,
-                                       -3.22 decades per point at N = 8..24)
+                                       -3.22 decades per point at N = 8..24;
+                                       now an explicit rational-approximation
+                                       quantity, Q-0017)
 ```
 
-Detection requires the signal `delta^3` to clear the floor `10^{-2.7N}`, i.e.
+Detection requires the signal `delta^2` to clear the floor `10^{-2.7N}`, i.e.
 
 ```
-    N  >~  (10/9) log10(1/delta) + const ,   at  ~9N bits of precision.
+    N  >~  0.74 log10(1/delta) + const ,   at  ~9N bits of precision.
 ```
 
 So a depth of `delta = 1e-12` costs about 24 evaluations at ~200 bits, against

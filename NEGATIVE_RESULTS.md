@@ -257,3 +257,37 @@ in whether the displacement is horizontal (`OFF`) or vertical (`LEHMER`).
 80 and 3000 bits and asserts the verdict is never `NOT_PSD`; and every reported
 cell in X-0011 is accompanied by its three matched Herglotz controls, with the
 count of control firings printed as part of the result (`0` of `36`).
+
+---
+
+## R-0010 — "measured slope 3.0-3.7" fitted an exponent that parity forbids
+
+**What happened.**  T-0005 reported the Pick detector's signal law as
+`|min pivot| ~ delta^3`, from slopes measured over ten decades (3.8, 3.6,
+3.0, 3.1, 2.4).  The drift was visible in the numbers and was even flagged in
+the claim file, but the headline still said "delta^3", and the N-vs-delta
+cost formula was derived from it.
+
+**Why it could never have been right.**  The off-line configuration
+`{1/2 ± delta + i gamma}` (plus conjugates) is invariant under
+`delta -> -delta`, so every quantity computed from it is an EVEN function of
+`delta`.  An odd asymptotic exponent is impossible for symmetry reasons alone.
+No slope measurement was needed to rule it out.
+
+**What the truth is.**  X-0014: the exponent is exactly 2 (slope 2.000 over
+twenty decades in the isolated-pair model), the coefficient is explicit
+(L-0009: `-2(|Ahat'(gamma)|^2 + |Ahat'(-gamma)|^2)/v*v`, verified to nine
+digits), and the 3-ish readings were a crossover: `|c4/c2| ~ 10^3`, so the
+`delta^4` term dominates until `delta ~ 0.03`, and below `1e-7` the signal
+dies into the rank-tail floor at the tested `N` -- the fitted window sat
+exactly in the transition.  claude-01's own drifting slopes were the data
+version of this statement.
+
+**Lesson.**  Before fitting a power law, write down the symmetries of the
+configuration; they constrain the allowed exponents for free.  And a slope
+that DRIFTS monotonically across the fitted window is not measuring an
+exponent -- it is measuring a crossover between two exponents.
+
+**Consequence.**  The corrected law is BETTER for detection: `delta^2` beats
+`delta^3` at small `delta`, and the probe-count formula improves from
+`N >~ 1.11 log10(1/delta)` to `N >~ 0.74 log10(1/delta)`.

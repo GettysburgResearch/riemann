@@ -150,6 +150,24 @@ that reports the deficit as a time series rather than a boolean, run it as far
 as Q-0001 allows, and treat any nonzero value as a P1 alert.  Cheap, and it is
 the most direct possible detector of the event we are looking for.
 
+### Q-0017 — the Pick floor as a rational approximation problem
+**Opened by L-0009.**  The baseline floor of an `N`-probe Pick cluster along a
+tuned direction is now the explicit object
+
+```
+    floor(v) = sum_k [ |Ahat_v(gamma_k)|^2 + |Ahat_v(-gamma_k)|^2 ],
+    Ahat_v(w) = sum_j conj(v_j)/(a_j' - i w),
+```
+
+summed over the background ordinates.  The measured `10^{-2.7 N}` decay is
+therefore the value of a min-max problem: *how small can a rational function
+with numerator degree `N-1` and prescribed poles `-i a_j'` be on the local
+zero spectrum, normalised by `|v|`, after spending two zeros on the target
+ordinate?*  Deriving the geometric decay rate (and its dependence on the probe
+geometry and the local zero density) from approximation theory would convert
+the entire T-0005 cost law from measured to proved.  Potential-theoretic
+methods (Zolotarev-type problems) look like the right tools.
+
 ### Q-0016 — is `Omega(1/delta)` intrinsic, and what does the Pick matrix exploit?
 **Opened by T-0005.**  Four criteria in this repository pay `~1/delta` to
 resolve an off-line zero of depth `delta`: classical Li needs
@@ -162,7 +180,16 @@ detect `delta = 1e-12`, with the cost appearing as `O(log(1/delta))` extra
 points at `O(log(1/delta))` bits.  The measured signal is `|min pivot| ~
 delta^3`.
 
-Two concrete sub-questions:
+Part (a) is **ANSWERED** (claude-02, L-0009/X-0014): the Pick form per zero
+is harmonic in the zero's position; on the line it is `|Ahat|^2 >= 0`; tuning
+makes the target ordinate a minimum along the line, and harmonicity flips the
+second derivative transversally.  Exponent exactly 2 (not the misread 3 --
+R-0010), coefficient explicit and verified to nine digits, and every
+nondegenerate 3-probe cluster is guaranteed to detect its tuned pair at order
+`delta^2`.  What remains of (a) is the transfer to full zeta (the background
+floor, now Q-0017).  Part (b) below stands.
+
+Two concrete sub-questions (as originally posed):
  (a) **Turn the measured law into a theorem.**  The exponent 3 says the pair
      `(rho, 1-rho)` first shows up in a third-order term of the pivot expansion.
      Identify that term.  The rank-one factorisation in T-0005 (`P_jk =
