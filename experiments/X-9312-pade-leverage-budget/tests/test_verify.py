@@ -38,6 +38,7 @@ def base_payload() -> dict:
         "zero_bins": [
             {
                 "id": "z1",
+                "kind": "atom",
                 "y": iv(1, 1),
                 "multiplicity": 1,
                 "gate": {"status": checker.ZERO_GATE, "sha256": "synthetic"},
@@ -57,7 +58,7 @@ class LeverageBudgetTests(unittest.TestCase):
     def test_consistent_lower_budget(self) -> None:
         result = verify_payload(base_payload())
         self.assertEqual(result["verdict"], "CERTIFIED_CONSISTENT_PADE_LINE_MASS_BUDGET")
-        contribution = result["certified_line_mass_contribution"]["lower"]
+        contribution = result["certified_residual_mass_contribution"]["lower"]
         self.assertEqual(contribution, rat(1, 2))
 
     def test_negative_lower_budget(self) -> None:
@@ -73,13 +74,35 @@ class LeverageBudgetTests(unittest.TestCase):
         payload["zero_bins"][0]["y"] = iv(3, 1)
         result = verify_payload(payload)
         self.assertEqual(result["verdict"], "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET")
-        self.assertEqual(result["certified_line_mass_contribution"]["lower"], rat(3, 4))
+        self.assertEqual(
+            result["certified_residual_mass_contribution"]["lower"], rat(3, 4)
+        )
 
-    def test_rejects_overlapping_bins(self) -> None:
+    def test_far_endpoint_segment_budget(self) -> None:
+        payload = base_payload()
+        payload["gap"] = iv(2, 5)
+        payload["zero_bins"] = [
+            {
+                "id": "residual-segment",
+                "kind": "segment",
+                "y": iv(1, 1, 3, 1),
+                "multiplicity": 1,
+                "gate": {"status": checker.SEGMENT_GATE, "sha256": "synthetic"},
+            }
+        ]
+        result = verify_payload(payload)
+        # length 2 times inf_{[1,3]} 1/(y+1) = 2*(1/4)=1/2.
+        self.assertEqual(
+            result["certified_residual_mass_contribution"]["lower"], rat(1, 2)
+        )
+        self.assertEqual(result["verdict"], "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET")
+
+    def test_rejects_overlapping_atomic_bins(self) -> None:
         payload = base_payload()
         payload["zero_bins"].append(
             {
                 "id": "z2",
+                "kind": "atom",
                 "y": iv(1, 1, 2, 1),
                 "multiplicity": 1,
                 "gate": {"status": checker.ZERO_GATE},
