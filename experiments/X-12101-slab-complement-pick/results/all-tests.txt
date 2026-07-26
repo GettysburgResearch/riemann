@@ -1,0 +1,23 @@
+test_bin_wrong_slab_rejected (test_multislab.MultiSlabTests.test_bin_wrong_slab_rejected) ... ok
+test_exact_negative (test_multislab.MultiSlabTests.test_exact_negative) ... ok
+test_exact_translation_invariance (test_multislab.MultiSlabTests.test_exact_translation_invariance) ... ok
+test_incomplete_slab_rejected (test_multislab.MultiSlabTests.test_incomplete_slab_rejected) ... ok
+test_moment_mutation_rejected (test_multislab.MultiSlabTests.test_moment_mutation_rejected) ... ok
+test_overlapping_slabs_rejected (test_multislab.MultiSlabTests.test_overlapping_slabs_rejected) ... ok
+test_positive_control (test_multislab.MultiSlabTests.test_positive_control) ... ok
+test_widened_primitive_unresolved (test_multislab.MultiSlabTests.test_widened_primitive_unresolved) ... ok
+test_blocking_gate_rejected (test_verify.SlabComplementTests.test_blocking_gate_rejected) ... ok
+test_boolean_count_rejected (test_verify.SlabComplementTests.test_boolean_count_rejected) ... ok
+test_endpoint_touch_rejected (test_verify.SlabComplementTests.test_endpoint_touch_rejected) ... ok
+test_false_claim_rejected (test_verify.SlabComplementTests.test_false_claim_rejected) ... ok
+test_hidden_offline_exact_negative (test_verify.SlabComplementTests.test_hidden_offline_exact_negative) ... ok
+test_incomplete_zero_count_rejected (test_verify.SlabComplementTests.test_incomplete_zero_count_rejected) ... ok
+test_line_zero_control_positive (test_verify.SlabComplementTests.test_line_zero_control_positive) ... ok
+test_nonzero_vector_sum_rejected (test_verify.SlabComplementTests.test_nonzero_vector_sum_rejected) ... ok
+test_overlapping_bins_rejected (test_verify.SlabComplementTests.test_overlapping_bins_rejected) ... ok
+test_widened_primitive_fails_closed (test_verify.SlabComplementTests.test_widened_primitive_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.013s
+
+OK

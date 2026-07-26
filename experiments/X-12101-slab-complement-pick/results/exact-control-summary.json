@@ -1,0 +1,37 @@
+{
+  "schema": "riemann.slab-complement-pick.control-summary.v1",
+  "checker_local_sha256": "beddc6c229b92efb21b66b982bced7ce0959594d9d361db2a6334fa7bb322e3c",
+  "checker_git_blob_sha": "152c54649a105ecae2591c43e457b35807881900",
+  "strict_separation": {
+    "ordinary_pick": "7450901935000/47129216977",
+    "weighted_full": "-8286764476250/47129216977",
+    "inside_contribution": "-123210000/1413721",
+    "slab_complement_residual": "-2956250/33337",
+    "status": "CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS",
+    "verification_sha256": "82e0f35b0ce3155b4426afdc51be617584e4a6a98e5128414723bf80c68a371f"
+  },
+  "critical_line_control": {
+    "ordinary_pick": "2760646923024820000/31457550981729841",
+    "weighted_full": "-2684536651743180000/31457550981729841",
+    "inside_contribution": "-123210000/1413721",
+    "slab_complement_residual": "40377630000/22251597721",
+    "status": "CERTIFIED_NONNEGATIVE_CONTROL",
+    "verification_sha256": "5cd4757c231e27df1b17577a9ea4cb674080c8791c504c75629346349ccf29e1"
+  },
+  "dyadic_nomination": {
+    "dyadic_bits": 40,
+    "midpoint_minimum_eigenvalue": "-9.748735152294984",
+    "exact_replay_residual": "-2553805375103012404546942922875/261962740315203803181668630528",
+    "exact_replay_status": "CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS",
+    "nomination_file_sha256": "61cd01a3b72bdf6c861ddc664aa2a0cee1ade0d6d98fa0301d31d751774282b4",
+    "verification_internal_sha256": "3fa6cddb67ec2ba6b19c2d4460733b4d3302cb8b005b127cb6145a85d4ae1153",
+    "verification_file_sha256": "16dcd1fdad12fe0022bd5a5b141834b63c4ffcbfd002bd18127810e9edad6c6e"
+  },
+  "tests": {
+    "passed": 10,
+    "failed": 0,
+    "tests_file_sha256": "e5927eda5119f7d79a5da3ad31580ce3e648eed4a3af5458fe4244ee0e812a5f"
+  },
+  "audit_note": "The first discovery-only ranker draft used the conjugate rank-one orientation. The exact checker was unaffected. The ranker, theorem matrix notation, frozen vector, and all derived digests were corrected before any Riemann-data nomination.",
+  "classification": "EXACT_SYNTHETIC_CONTROLS_ONLY; no Riemann-xi candidate"
+}

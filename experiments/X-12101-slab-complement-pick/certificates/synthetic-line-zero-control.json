@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.slab-complement-pick.v1",
+  "slab": {"lower": "-1", "upper": "1", "exact_zero_count": 1, "complete_gate_id": "synthetic", "endpoint_gate_id": "synthetic"},
+  "parent_gate_id": "synthetic",
+  "points": [
+    {"id":"p0","x":"1/5","t":"-1/2","f":{"real":{"lower":"13160/18241","upper":"13160/18241"},"imag":{"lower":"38700/18241","upper":"38700/18241"}},"gate_id":"synthetic"},
+    {"id":"p1","x":"1/5","t":"1/2","f":{"real":{"lower":"5160/6641","upper":"5160/6641"},"imag":{"lower":"-7100/6641","upper":"-7100/6641"}},"gate_id":"synthetic"},
+    {"id":"p2","x":"2/5","t":"-1/2","f":{"real":{"lower":"27280/26281","upper":"27280/26281"},"imag":{"lower":"42300/26281","upper":"42300/26281"}},"gate_id":"synthetic"},
+    {"id":"p3","x":"2/5","t":"1/2","f":{"real":{"lower":"11280/9881","upper":"11280/9881"},"imag":{"lower":"-5900/9881","upper":"-5900/9881"}},"gate_id":"synthetic"}
+  ],
+  "vector": [{"re":"-2","im":"0"},{"re":"2","im":"0"},{"re":"-1","im":"0"},{"re":"1","im":"0"}],
+  "zero_bins": [{"id":"line-zero","lower":"0","upper":"0","count":1,"gate_id":"synthetic"}],
+  "logical_gates": [{"id":"synthetic","state":"SYNTHETIC_CONTROL","evidence":"exact critical-line spectral model"}],
+  "claimed_ordinary_pick": {"lower":"2760646923024820000/31457550981729841","upper":"2760646923024820000/31457550981729841"},
+  "claimed_weighted_full": {"lower":"-2684536651743180000/31457550981729841","upper":"-2684536651743180000/31457550981729841"},
+  "claimed_inside_contribution": {"lower":"-123210000/1413721","upper":"-123210000/1413721"},
+  "claimed_residual": {"lower":"40377630000/22251597721","upper":"40377630000/22251597721"},
+  "claimed_status": "CERTIFIED_NONNEGATIVE_CONTROL"
+}
