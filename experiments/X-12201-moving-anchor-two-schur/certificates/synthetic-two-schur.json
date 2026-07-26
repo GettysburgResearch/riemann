@@ -1,0 +1,44 @@
+{
+  "schema": "riemann.moving-anchor-two-schur.synthetic.v1",
+  "old_moments": [
+    {"numerator": "3", "denominator": "1"},
+    {"numerator": "7", "denominator": "1"},
+    {"numerator": "21", "denominator": "1"},
+    {"numerator": "73", "denominator": "1"},
+    {"numerator": "273", "denominator": "1"}
+  ],
+  "t": {"numerator": "2", "denominator": "1"},
+  "claimed": {
+    "theta0": {"numerator": "101", "denominator": "135"},
+    "theta1": {"numerator": "539", "denominator": "360"},
+    "upper": {"numerator": "541", "denominator": "720"},
+    "width_value": {"numerator": "7", "denominator": "1080"}
+  },
+  "cases": [
+    {
+      "id": "interior",
+      "c0": {"numerator": "3", "denominator": "4"},
+      "expected_status": "INTERIOR_ADMISSIBLE"
+    },
+    {
+      "id": "lower-witness",
+      "c0": {"numerator": "7", "denominator": "10"},
+      "expected_status": "LOWER_SQUARE_VIOLATION"
+    },
+    {
+      "id": "upper-witness",
+      "c0": {"numerator": "4", "denominator": "5"},
+      "expected_status": "UPPER_SHIFTED_SQUARE_VIOLATION"
+    },
+    {
+      "id": "lower-boundary",
+      "c0": {"numerator": "101", "denominator": "135"},
+      "expected_status": "LOWER_BOUNDARY"
+    },
+    {
+      "id": "upper-boundary",
+      "c0": {"numerator": "541", "denominator": "720"},
+      "expected_status": "UPPER_BOUNDARY"
+    }
+  ]
+}
