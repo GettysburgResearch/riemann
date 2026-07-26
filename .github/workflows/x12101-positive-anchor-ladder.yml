@@ -9,6 +9,7 @@ on:
       - 'claims/lemmas/L-12101-positive-anchor-one-moment-transform.md'
       - 'claims/lemmas/L-12102-multi-anchor-christoffel-ladder.md'
       - 'experiments/X-12101-positive-anchor-ladder/**'
+      - 'experiments/X-12102-directed-positive-anchor/**'
   workflow_dispatch:
 
 permissions:
@@ -23,16 +24,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Compile exact checker and discovery script
+      - name: Compile exact checkers and discovery script
         run: |
           python -m compileall -q \
             experiments/X-12101-positive-anchor-ladder/verify.py \
             experiments/X-12101-positive-anchor-ladder/reconnaissance.py \
-            experiments/X-12101-positive-anchor-ladder/tests
-      - name: Run exact mutation suite
+            experiments/X-12101-positive-anchor-ladder/tests \
+            experiments/X-12102-directed-positive-anchor/build_positive_anchor_source.py \
+            experiments/X-12102-directed-positive-anchor/verify_pa1.py \
+            experiments/X-12102-directed-positive-anchor/tests
+      - name: Run exact ladder mutation suite
         run: |
           python -m unittest discover \
             -s experiments/X-12101-positive-anchor-ladder/tests -v
+      - name: Run directed PA1 helper suite
+        run: |
+          python -m unittest discover \
+            -s experiments/X-12102-directed-positive-anchor/tests -v
       - name: Replay retained positive control
         run: |
           python experiments/X-12101-positive-anchor-ladder/verify.py \
