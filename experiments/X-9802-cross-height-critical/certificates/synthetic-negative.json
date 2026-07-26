@@ -1,0 +1,47 @@
+{
+  "schema": "riemann.cross-height-log-critical.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "origin": {"numerator": 0, "denominator": 1},
+  "heights": [
+    {
+      "id": "center",
+      "ordinate": {"numerator": 0, "denominator": 1},
+      "common_xi_scale_power_of_two": 0,
+      "points": [
+        {"id": "x-10", "u": {"numerator": 1, "denominator": 1048576}, "h_interval": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}}},
+        {"id": "x-6", "u": {"numerator": 1, "denominator": 4096}, "h_interval": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}}},
+        {"id": "x-5", "u": {"numerator": 1, "denominator": 1024}, "h_interval": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}}}
+      ]
+    },
+    {
+      "id": "plus",
+      "ordinate": {"numerator": 5, "denominator": 16},
+      "common_xi_scale_power_of_two": 0,
+      "points": [
+        {"id": "x-10", "u": {"numerator": 1, "denominator": 1048576}, "h_interval": {"lower": {"numerator": 2, "denominator": 1}, "upper": {"numerator": 2, "denominator": 1}}},
+        {"id": "x-6", "u": {"numerator": 1, "denominator": 4096}, "h_interval": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}}},
+        {"id": "x-5", "u": {"numerator": 1, "denominator": 1024}, "h_interval": {"lower": {"numerator": 1, "denominator": 1}, "upper": {"numerator": 1, "denominator": 1}}}
+      ]
+    }
+  ],
+  "terms": [
+    {"height": "center", "point": "x-10", "beta": {"numerator": -23, "denominator": 1}},
+    {"height": "center", "point": "x-6", "beta": {"numerator": 46, "denominator": 1}},
+    {"height": "center", "point": "x-5", "beta": {"numerator": -23, "denominator": 1}},
+    {"height": "plus", "point": "x-10", "beta": {"numerator": -750746, "denominator": 1}},
+    {"height": "plus", "point": "x-6", "beta": {"numerator": 1000000, "denominator": 1}},
+    {"height": "plus", "point": "x-5", "beta": {"numerator": -249254, "denominator": 1}}
+  ],
+  "critical_certificate": {
+    "status": "EXHAUSTIVE_STURM_CRITICAL_VALUES",
+    "log_terms": 64,
+    "root_intervals": [
+      {"lower": {"numerator": -89055191599829001690000, "denominator": 1208925819614629174706176}, "upper": {"numerator": -89055191599829001689997, "denominator": 1208925819614629174706176}},
+      {"lower": {"numerator": -29700943224204692415777, "denominator": 1208925819614629174706176}, "upper": {"numerator": -29700943224204692415774, "denominator": 1208925819614629174706176}},
+      {"lower": {"numerator": 2999835520190986646, "denominator": 1208925819614629174706176}, "upper": {"numerator": 2999835520190986649, "denominator": 1208925819614629174706176}},
+      {"lower": {"numerator": 23223462215151233987696, "denominator": 1208925819614629174706176}, "upper": {"numerator": 23223462215151233987699, "denominator": 1208925819614629174706176}},
+      {"lower": {"numerator": 377789318630130805609619, "denominator": 1208925819614629174706176}, "upper": {"numerator": 377789318630130805609622, "denominator": 1208925819614629174706176}}
+    ]
+  }
+}
