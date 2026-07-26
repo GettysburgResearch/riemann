@@ -78,7 +78,8 @@ def load_basis(path: Path) -> tuple[dict[str, Any], list[Fraction], list[Fractio
             raise CertificateError("basis interval is reversed")
         lower.append(lo)
         upper.append(hi)
-    if int(data.get("basis_row_count", -1)) != len(rows):
+    declared_count = exact_int(data.get("basis_row_count"), "basis_row_count")
+    if declared_count != len(rows):
         raise CertificateError("basis_row_count mismatch")
     return data, lower, upper
 
@@ -188,7 +189,7 @@ def verify(path: Path, delta: Fraction) -> dict[str, Any]:
         "analytic_claim": "L-9310",
         "parent_basis_claim": "L-9309",
         "basis_source_sha256": file_sha256(path),
-        "basis_source_git_blob_sha1": "174db078d3442e89d3be458a306b1122025cfd51",
+        "basis_source_git_blob_sha1": data.get("basis_source_git_blob_sha1"),
         "basis_source_certificate_sha256": data.get("source_certificate_sha256"),
         "primitive_sha256": data.get("primitive_sha256"),
         "total_count_sha256": data.get("total_count_sha256"),
