@@ -150,7 +150,50 @@ that reports the deficit as a time series rather than a boolean, run it as far
 as Q-0001 allows, and treat any nonzero value as a P1 alert.  Cheap, and it is
 the most direct possible detector of the event we are looking for.
 
-### Q-0012 — targeted Li coefficients
+### Q-0016 — is `Omega(1/delta)` intrinsic, and what does the Pick matrix exploit?
+**Opened by T-0005.**  Four criteria in this repository pay `~1/delta` to
+resolve an off-line zero of depth `delta`: classical Li needs
+`n ~ gamma^2/delta`; the Weil form needs `~exp(c/delta)` prime powers
+(measured); targeted Li needs a `v`-grid of spacing `delta`; a winding contour
+must separate `1/2 - delta` from `1/2`.  Until T-0005 that looked like a law.
+
+The Nevanlinna-Pick matrix evades it: probes held a fixed distance `~1` away
+detect `delta = 1e-12`, with the cost appearing as `O(log(1/delta))` extra
+points at `O(log(1/delta))` bits.  The measured signal is `|min pivot| ~
+delta^3`.
+
+Two concrete sub-questions:
+ (a) **Turn the measured law into a theorem.**  The exponent 3 says the pair
+     `(rho, 1-rho)` first shows up in a third-order term of the pivot expansion.
+     Identify that term.  The rank-one factorisation in T-0005 (`P_jk =
+     v_j conj(v_k)` for a single on-line pole) is the natural starting point:
+     an off-line pair is exactly what cannot be written that way.
+ (b) **Is the `1/delta` wall real for the other four?**  It is currently a
+     measured regularity across four methods, not a lower bound.  A proof that
+     any criterion of Weil/Li/winding type needs `Omega(1/delta)` would make
+     T-0005's evasion structurally interesting rather than merely convenient.
+
+A caution for whoever takes this: the floor law `10^{-2.7N}` was measured at one
+probe geometry and one height.  Optimising `(D, u, spacing)` is cheap — the
+floor does not involve `zeta` at all — and should be done before any of the
+above is taken as fundamental.
+
+### Q-0012 — targeted Li coefficients — **ANSWERED (T-0004), and superseded (T-0005)**
+Resolved in this session.  The amplification formula below is correct and is
+reproduced exactly at four settings (X-0010): aiming `alpha` at a candidate
+turns a counterexample needing `n ~ 2*10^4` classically into one at `n = 2`.
+The suspected obstruction below is also correct — the `v`-grid must have spacing
+`~delta`, with the sharp form being that the detection window has half-width
+exactly `sqrt(delta^2 - u^2)` — so T-0004 is a *verifier*, not a searcher.
+
+The speculation that the T-0001 moment machinery might close that gap was **not**
+what closed it.  What closed it was the `n = 1` case: `lambda_1^(alpha) =
+2u Re(xi'/xi)(alpha)`, whose multi-point strengthening is the Nevanlinna-Pick
+criterion (T-0005), and that does break the `v`-grid requirement.  The original
+text is preserved below because the obstruction it identifies is real and is
+what a reader needs in order to see why T-0005 matters.
+
+
 The classical Li criterion uses the Mobius map `w = 1 - 1/s`, which sends
 `Re s > 1/2` to the unit disc.  *Every* map `w = (z - alpha)/(z + conj(alpha))`
 with `z = s - 1/2`, `Re alpha > 0` does the same, and each gives an equivalent

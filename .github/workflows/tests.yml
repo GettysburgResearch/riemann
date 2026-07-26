@@ -15,3 +15,9 @@ jobs:
         run: python3 tests/test_certzeta.py
       - name: zero counting and box criteria (L-0002, L-0004, T-0001)
         run: python3 tests/test_winding.py
+      - name: explicit formula, Weil positivity, Newton isolation (T-0002, L-0007)
+        run: python3 tests/test_weil.py
+      - name: Li and targeted Li coefficients (T-0003, T-0004)
+        run: python3 tests/test_li.py
+      - name: Nevanlinna-Pick criterion and its Herglotz controls (T-0005)
+        run: python3 tests/test_pick.py

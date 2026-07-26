@@ -44,6 +44,10 @@ ranked list of where to look next.
 | Weil quadratic forms positive definite at `gamma_0 = 0, 14, 100, 500, 1977, 7005` | those filters | T-0002, from 143 prime powers and `Gamma` -- no `zeta` anywhere | `X-0006/results/matched-filter.json` |
 | No Robin / Lagarias violation among colossally abundant `n` up to 11541 digits | that set | exact integers + certified enclosures | `X-0003/results/criteria-2000000.json` |
 | No Nicolas violation among primorials to `p_k = 2*10^6` | that set | exact rationals + certified enclosures | same |
+| `zeta'` has **no zeros** in `[0.001, 0.499] x [1, 300]` (Speiser) | that box | L-0002 applied to `zeta'` | `X-0008/results/speiser-T300.json` |
+| Every individual zero disc to `t <= 2000` is simple with `\|Re rho-1/2\| <= 9.49e-77` (completeness pending the box count) | `t <= 2000` | L-0007 | `X-0007/results/newton-T2000.json` |
+| Targeted Li coefficients `lambda_1..lambda_16^(alpha) > 0` at 12 centres aimed at the four tightest zero pairs | those centres | T-0004 | `X-0010/results/targeted-li.json` |
+| **Pick matrices of `xi'/xi` are positive definite at `v = 100, 1000, 1977, 5000, 7005`** (`N = 8, 16`; margins 29-56 orders) | those probe clusters | T-0005, from point evaluations only -- no zero-finding, no contour, no primes | `X-0011/results/pick.json` |
 
 Everything else in this repository is EMPIRICAL, IDEA, or PROPOSED.  Read
 `CLAIMS.md` for the per-claim status and **note that nothing is
@@ -51,10 +55,10 @@ Everything else in this repository is EMPIRICAL, IDEA, or PROPOSED.  Read
 
 ---
 
-## 3. The two witness formats we can now accept
+## 3. The witness formats we can now accept
 
-A counterexample reaching this repository will arrive in one of two shapes, and
-both now have an implemented acceptance test:
+A counterexample reaching this repository will arrive in one of these shapes,
+and each now has an implemented acceptance test:
 
 1. **A certified negative Hankel minor** (T-0001).  Box straddling the critical
    line, contour moments, one negative number.  This is the format to aim for:
@@ -67,9 +71,44 @@ both now have an implemented acceptance test:
    truncated infinite object — and the hardest to reach, because the search set
    grows superexponentially.
 
-A third, weaker format also works: a **deficit** between the box count and the
+3. **A certified negative real number** (T-0003, T-0004).  One Li coefficient,
+   classical or targeted.  The most compact format here, and computed from a
+   power series with no zeros involved at all.
+
+4. **A certified NOT-PSD Pick matrix** (T-0005).  `N` point evaluations of
+   `xi'/xi`, a Hermitian LDL, a sign.  **This is now the format to aim for**,
+   for one measured reason: it is the only one whose cost in the displacement
+   `delta` is logarithmic rather than `1/delta` (see §4).  It also needs no
+   zero-finding, no contour, no primes, and no prior localisation.
+
+A fifth, weaker format also works: a **deficit** between the box count and the
 sign-change count (L-0004).  It announces a counterexample without describing
 it.  M-0005 proposes promoting that deficit to a monitored quantity.
+
+### The `1/delta` wall, and the one thing that gets past it
+
+The single most useful structural fact this session found.  Four of the
+criteria here pay `~1/delta` to resolve an off-line zero at depth `delta`:
+
+```
+classical Li (T-0003)      n ~ gamma^2/delta coefficients
+Weil positivity (T-0002)   bandwidth ~1/delta, i.e. ~exp(c/delta) prime powers
+                           (measured: 10x sensitivity = 2000x primes)
+targeted Li (T-0004)       centre within delta of the ordinate, so a scan needs
+                           a v-grid of spacing delta
+winding number (L-0002)    a contour separating 1/2 - delta from 1/2
+```
+
+Four unrelated methods, one exponent — which is why it looked like a law.  The
+Nevanlinna-Pick criterion (T-0005) evades it: probe points held a fixed distance
+`~1` away detect `delta = 1e-12`, because the cost moves into precision, where
+it is only `O(log(1/delta))` points at `O(log(1/delta))` bits.  Measured on the
+repository's own certified Lehmer pairs: **had the pair at `gamma ~ 1977.22`
+been off the critical line by one part in `10^9`, sixteen evaluations of
+`xi'/xi` taken 0.8 away would have certified it.**  They do not; it is on the
+line.
+
+Whether `Omega(1/delta)` is intrinsic to the other four is open (Q-0016).
 
 ---
 
@@ -171,8 +210,16 @@ headroom, not capability.
 In descending order of expected value (details and acceptance criteria in
 `OPEN_PROBLEMS.md`):
 
+0. **Z-0007 — run the Pick sweep.**  New, and now the cheapest search this
+   repository can mount: one 16-point cluster per unit height, a few seconds
+   each, needing no census, no primes, no contour and no zero-finding, with a
+   `delta`-sensitivity of about `1e-9` at the heights tested.  Everything for it
+   is implemented (`scripts/pick.py`, `experiments/X-0011`).  It is item 0
+   because it is the only search here whose cost does not blow up on the
+   shallow displacements a real counterexample would have.
 1. **Q-0001** — rigorous Riemann-Siegel.  Everything is `O(T^2)` without it.
-   This is the bottleneck, not a nicety.
+   This is the bottleneck, not a nicety — including for item 0, whose per-probe
+   cost is one `zeta` evaluation.
 2. **Q-0010 / Z-0004** — the prime spectrum needs windowing and a longer
    baseline in `X` *before* it can produce a usable lead: its measured
    sensitivity floor is `delta ~ 0.2` (X-0005b).  Fixing the floor is the task;
@@ -196,10 +243,21 @@ and do not read the Robin ratio `0.9995` as a near miss (R-0004).
 * The `PROVED` lemmas are proved; the claim that *the code implements them* is
   supported only by the test suite.  Two real bugs (R-0001, R-0002) were found
   during this session, one of which was invisible to every value-based test.
-* Certified heights (`T <= 1000`; a `T = 2000` box count was attempted and lost
-  to a container restart after 47 minutes) are trivial next to the
+* Certified heights (`T <= 2000` complete; 4520 certified on-line ordinates to
+  `T = 5000` with the matching box count still running) are trivial next to the
   published record.  The repository's claim to usefulness is reproducibility
   and witness formats, not range.
+* The T-0005 cost law is *measured*, not derived, and measured at one probe
+  geometry and one height.  The `delta^3` signal law and the `10^{-2.7N}` floor
+  law are the two numbers that a future agent is most likely to find are
+  geometry-dependent.  See Q-0016.
+* R-0009 is the third bug this session where a *value* looked right and only a
+  control or a cross-check exposed it — after R-0002 (invisible in values,
+  fatal in derivatives) and R-0008 (enclosures 100 orders too tight).  The
+  pattern is now established well enough to state as a rule: **in this
+  repository, a result that looks unusually good is more likely to be a bug than
+  a discovery, and the way to find out is to run the configuration whose answer
+  is known a priori.**
 * `O-0001`'s central identification `b = Theta - 1` is textbook but written
   informally here (Q-0008).
 * Two unverified citations are in play (Q-0005, Q-0007); neither can produce a

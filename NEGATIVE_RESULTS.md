@@ -210,3 +210,50 @@ costing `10^4` times more than they do.
 **Defence adopted.**  The ordering in `X-0002/run.py` now carries a comment
 saying not to tidy it, and any future floor measurement must be reported with
 the harness construction, not just the method's parameters.
+
+---
+
+## R-0009 — 53-bit LDL manufactured a NOT-PSD verdict, and a whole table with it
+
+**What happened.**  The first exploration of the Nevanlinna-Pick criterion
+(T-0005) was written in ordinary floating point.  Its detection table reported
+that `N = 8` probe points at distance `D = 1.0` certify an off-line zero for
+*every* `delta` tested, down to `1e-6` — an implausibly good result, and one
+that would have been the headline of this session.
+
+**Cause.**  The Pick matrix of a configuration with `k` nearby zeros has rank
+`~k` (see T-0005), so at `N = 8` it is nearly singular and its trailing pivots
+are a numerical rank tail.  Re-running the identical cells in ball arithmetic:
+
+```
+delta = 0    N = 8, D = 1.0   pivot = 3.0665e-04  +/- 7.4e-06   UNDECIDED
+delta = 1e-3 N = 8, D = 1.0   pivot = 2.8224e-04  +/- 1.1e-05   UNDECIDED
+```
+
+The pivot is *positive*; 53-bit elimination had driven it slightly negative.
+Every "detection" in that row was noise, including the ones for `delta` where a
+real signal also existed — so the table was not even wrong in a consistent
+direction.
+
+**What caught it.**  Not inspection — the control.  The `delta = 0`
+configuration has every zero on the line, so its Pick matrix is PSD *by
+construction*; a NOT_PSD verdict there is impossible for mathematical reasons,
+not merely surprising.  Running the control was what forced the rewrite in
+`arb`.
+
+**Lesson.**  A PSD verdict is a statement about the *smallest* pivot, which is
+exactly the quantity floating point gets wrong on a rank-deficient matrix.  Any
+positivity criterion — T-0001's Hankel minors, T-0002's Weil form, T-0005's Pick
+matrix — must be decided in interval arithmetic with a three-way verdict, and
+`UNDECIDED` must be a first-class outcome rather than a rounding decision.
+
+The deeper point is about *which* control to run.  A control with all zeros on
+the line, but with a different number of them, would have passed and taught
+nothing: it does not isolate off-line-ness from zero count.  The controls that
+made T-0005 trustworthy carry the same zeros at the same height and differ only
+in whether the displacement is horizontal (`OFF`) or vertical (`LEHMER`).
+
+**Defence adopted.**  `tests/test_pick.py` runs the `delta = 0` control at 53,
+80 and 3000 bits and asserts the verdict is never `NOT_PSD`; and every reported
+cell in X-0011 is accompanied by its three matched Herglotz controls, with the
+count of control firings printed as part of the result (`0` of `36`).

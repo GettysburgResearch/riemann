@@ -260,3 +260,68 @@ not grow with the height of the target.
 
 Remaining lever, diagnosed in O-0002: window length, i.e. a larger sieve.
 See Q-0010.
+
+---
+
+## Z-0006 — a certified negative Li coefficient
+
+**Status: IDEA.  Not observed.**
+
+By T-0003 a single certified `lambda_n < 0` refutes RH, and by T-0004 the same
+holds for `lambda_n^(alpha) < 0` at any centre with `Re alpha > 1/2`.  This is
+the most compact witness format in the repository: one real number with a
+rigorous enclosure.
+
+Searched so far, all positive:
+
+```
+classical  lambda_1 .. lambda_600                       (X-0009)
+targeted   16 coefficients at each of 12 centres,
+           alpha = 1/2 + u + iv, u in {0.1, 0.01, 0.001},
+           v at the midpoints of the four tightest zero pairs
+           known here (14.13, 1329.12, 1977.22, 7005.08)  (X-0010)
+```
+
+**Why the targeted version is the one to push.**  The classical coefficients
+need `n ~ gamma^2/delta` to see a zero at depth `delta` and height `gamma` —
+about `2*10^4` for `delta = 0.01` at `gamma = 14`, and hopeless higher up.  The
+targeted ones need `n = 2`, *if* the centre is aimed within `delta` of the
+ordinate.  So this candidate is only reachable through a pipeline: a screen
+supplies `(gamma, delta)`, and T-0004 converts it into a two-number witness.
+
+**What would make it live.**  Any candidate `(gamma, delta)` from Z-0002,
+Z-0004, or the deficit ledger, fed to `li.li_general`.  It costs under a second
+per centre.
+
+---
+
+## Z-0007 — a certified NOT-PSD Pick matrix
+
+**Status: IDEA.  Not observed.**
+
+By T-0005 a certified not-positive-semidefinite Pick matrix of `xi'/xi` refutes
+RH.  Unlike every other candidate here, producing it requires **no zero-finding
+at all**: `N` point evaluations of `xi'/xi`, a Hermitian LDL, and a sign.
+
+Searched so far, all PD:
+
+```
+real zeta, N = 8 and 16, probes spanning [v+0.8, v+1.6] at Re s = 0.55,
+v = 100, 1000, 1977, 5000, 7005        min pivots 1.3e-42 .. 3.4e-09,
+                                        each 29-56 orders above its own
+                                        enclosure radius            (X-0011)
+```
+
+**Why this is the most promising open candidate in the repository.**  Its cost
+in `delta` is logarithmic rather than `1/delta` (T-0005), so it is the only
+witness format here that stays cheap for the shallow off-line zeros that any
+real counterexample would have.  Measured on the actual certified Lehmer pairs:
+had the pair at `gamma ~ 1977.22` been off the line by `1e-9`, sixteen
+evaluations taken 0.8 away would have certified it.
+
+**What would make it live.**  A sweep: one 16-point cluster per unit height,
+across a height range beyond the certified census.  Each cluster costs a few
+seconds and needs nothing from the census, the primes, or any contour.  This is
+the natural successor to Q-0011's deficit ledger and is the cheapest search this
+repository can currently mount.  Note the honest scaling: `~T` clusters for
+height `T`, since only the `1/delta` factor is removed, not the `T`.

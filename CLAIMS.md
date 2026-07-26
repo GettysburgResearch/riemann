@@ -16,8 +16,15 @@ Last updated: 2026-07-25 by claude-01.
 | L-0002 | Certified winding-number zero counting | PROVED | `claims/lemmas/L-0002-certified-winding-number.md` |
 | L-0004 | Count-matching criterion (certified RH in a box) | PROVED | `claims/lemmas/L-0004-count-matching-criterion.md` |
 | L-0007 | Interval-Newton isolation: uniqueness, simplicity, `\|Re rho-1/2\|` bound | PROVED | `claims/lemmas/L-0007-interval-newton-isolation.md` |
+| T-0005 | Nevanlinna-Pick criterion: RH ⟺ `xi'/xi` Herglotz; cost in `delta` drops from `Theta(1/delta)` to `O(log(1/delta))` | PROVED (criterion) / EMPIRICAL (cost law) | `claims/theorems/T-0005-nevanlinna-pick-criterion.md` |
+| X-0011 | Certified Pick matrices; detector validation; Lehmer-pair counterfactual to `delta=1e-9` | EMPIRICAL (certified) | `experiments/X-0011-nevanlinna-pick/` |
+| T-0004 | Targeted Li coefficients; `lambda_1^(alpha) = 2u Re(xi'/xi)(alpha)`; answers Q-0012 | PROVED (algebra) / EMPIRICAL (values) | `claims/theorems/T-0004-targeted-li-coefficients.md` |
+| X-0010 | Targeted Li at the tightest Lehmer pairs: 16/16 positive at twelve centres | EMPIRICAL (certified) | `experiments/X-0010-targeted-li/` |
+| R-0009 | Float LDL manufactured a false NOT_PSD verdict (whole detection table wrong) | REFUTED (fixed) | `NEGATIVE_RESULTS.md` |
+| Z-0007 | A certified NOT-PSD Pick matrix | IDEA | `CANDIDATES.md` |
+| Z-0006 | A certified negative Li coefficient (classical or targeted) | IDEA | `CANDIDATES.md` |
 | X-0008 | Speiser: `zeta'` zero-free in the left half-strip | EMPIRICAL (certified) | `experiments/X-0008-speiser/` |
-| X-0007 | Newton sweep: every zero to `t=1000` simple, `\|Re rho-1/2\| <= 2.9e-11` | EMPIRICAL (certified) | `experiments/X-0007-newton-isolation/` |
+| X-0007 | Newton sweep: every zero to `t=1000` simple, `\|Re rho-1/2\| <= 9.5e-77`; individual discs certified to `t=2000` (completeness pending) | EMPIRICAL (certified) | `experiments/X-0007-newton-isolation/` |
 | X-0006c | Measured cost law of the Weil filter | EMPIRICAL | `.../sensitivity.py` |
 | L-0006 | Taylor-model enclosures of `eta` with explicit tail | PROVED | `claims/lemmas/L-0006-taylor-model-enclosures.md` |
 | T-0001 | Hermite-Hankel box criterion; finite algebraic witness (incl. (f), resolving Q-0004) | PROVED (maths) / EMPIRICAL (sensitivity) | `claims/theorems/T-0001-hermite-hankel-box-criterion.md` |

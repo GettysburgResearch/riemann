@@ -1,0 +1,300 @@
+{
+ "experiment": "X-0011",
+ "agent": "claude-01",
+ "git_sha": "110849babfb68d3eb789519f843639b20d252303",
+ "python": "3.11.15",
+ "flint": "0.9.0",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "prec_bits": 2500,
+ "criterion": "RH <=> xi'/xi is Herglotz on Re s > 1/2 <=> every Pick matrix is PSD",
+ "semantics": "arb/acb ball arithmetic throughout; verdicts come from an interval Hermitian LDL, so NOT_PSD is a proof and UNDECIDED is an abstention",
+ "validation": {
+  "rows": [
+   {
+    "delta": "0.1",
+    "D": 0.05,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.1",
+    "D": 0.2,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.1",
+    "D": 0.8,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.01",
+    "D": 0.05,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.01",
+    "D": 0.2,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.01",
+    "D": 0.8,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.001",
+    "D": 0.05,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.001",
+    "D": 0.2,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.001",
+    "D": 0.8,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.0001",
+    "D": 0.05,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.0001",
+    "D": 0.2,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   },
+   {
+    "delta": "0.0001",
+    "D": 0.8,
+    "OFF": "NOT_PSD",
+    "LEHMER": "PD",
+    "DOUBLE": "PD",
+    "SINGLE": "PD"
+   }
+  ],
+  "control_firings": 0
+ },
+ "cost_law": {
+  "floor_vs_N": [
+   {
+    "N": 4,
+    "min_pivot": 0.35823587673846546
+   },
+   {
+    "N": 8,
+    "min_pivot": 5.9001614063682915e-09
+   },
+   {
+    "N": 12,
+    "min_pivot": 7.414776155514117e-19
+   },
+   {
+    "N": 16,
+    "min_pivot": 4.6076353979070525e-30
+   },
+   {
+    "N": 20,
+    "min_pivot": 3.2535043729486536e-42
+   },
+   {
+    "N": 24,
+    "min_pivot": 4.154521402354985e-55
+   }
+  ],
+  "floor_decades_per_point": -2.6967824038480375,
+  "pivot_vs_delta": [
+   {
+    "delta": "0.01",
+    "N": 16,
+    "min_pivot": -8.784163680044802e-13,
+    "verdict": "NOT_PSD",
+    "control_lehmer": "PD"
+   },
+   {
+    "delta": "0.0001",
+    "N": 16,
+    "min_pivot": -3.282648269953202e-20,
+    "verdict": "NOT_PSD",
+    "control_lehmer": "PD"
+   },
+   {
+    "delta": "0.000001",
+    "N": 16,
+    "min_pivot": -2.83649245282801e-26,
+    "verdict": "NOT_PSD",
+    "control_lehmer": "PD"
+   },
+   {
+    "delta": "0.000000001",
+    "N": 20,
+    "min_pivot": -1.6494061228082696e-36,
+    "verdict": "NOT_PSD",
+    "control_lehmer": "PD"
+   },
+   {
+    "delta": "0.000000000001",
+    "N": 24,
+    "min_pivot": -9.43187436868969e-47,
+    "verdict": "NOT_PSD",
+    "control_lehmer": "PD"
+   }
+  ],
+  "probe_distance": 0.8
+ },
+ "real_zeta": [
+  {
+   "N": 8,
+   "verdict": "PD",
+   "min_pivot": 4.3071719508115026e-15,
+   "min_pivot_rad": 6.842398917042554e-101,
+   "refutes_rh": false,
+   "v0": 100.0,
+   "seconds": 0.54
+  },
+  {
+   "N": 16,
+   "verdict": "PD",
+   "min_pivot": 1.2844860040767533e-42,
+   "min_pivot_rad": 2.3708596844177584e-81,
+   "refutes_rh": false,
+   "v0": 100.0,
+   "seconds": 0.46
+  },
+  {
+   "N": 8,
+   "verdict": "PD",
+   "min_pivot": 1.2523912230363502e-10,
+   "min_pivot_rad": 7.478065521165195e-83,
+   "refutes_rh": false,
+   "v0": 1000.0,
+   "seconds": 0.6
+  },
+  {
+   "N": 16,
+   "verdict": "PD",
+   "min_pivot": 3.177201449290347e-34,
+   "min_pivot_rad": 3.355080890797721e-63,
+   "refutes_rh": false,
+   "v0": 1000.0,
+   "seconds": 1.05
+  },
+  {
+   "N": 8,
+   "verdict": "PD",
+   "min_pivot": 8.293902669389982e-11,
+   "min_pivot_rad": 1.2632384430352846e-106,
+   "refutes_rh": false,
+   "v0": 1977.0,
+   "seconds": 0.85
+  },
+  {
+   "N": 16,
+   "verdict": "PD",
+   "min_pivot": 8.831999880777922e-33,
+   "min_pivot_rad": 3.2334730482211293e-87,
+   "refutes_rh": false,
+   "v0": 1977.0,
+   "seconds": 1.59
+  },
+  {
+   "N": 8,
+   "verdict": "PD",
+   "min_pivot": 3.423022907955581e-09,
+   "min_pivot_rad": 1.771703841983252e-106,
+   "refutes_rh": false,
+   "v0": 5000.0,
+   "seconds": 1.6
+  },
+  {
+   "N": 16,
+   "verdict": "PD",
+   "min_pivot": 3.7520735370979547e-31,
+   "min_pivot_rad": 5.899351722688348e-87,
+   "refutes_rh": false,
+   "v0": 5000.0,
+   "seconds": 2.9
+  },
+  {
+   "N": 8,
+   "verdict": "PD",
+   "min_pivot": 7.460626783322897e-10,
+   "min_pivot_rad": 1.6823186853380485e-105,
+   "refutes_rh": false,
+   "v0": 7005.0,
+   "seconds": 2.02
+  },
+  {
+   "N": 16,
+   "verdict": "PD",
+   "min_pivot": 6.539969227006082e-31,
+   "min_pivot_rad": 3.432434369639812e-86,
+   "refutes_rh": false,
+   "v0": 7005.0,
+   "seconds": 3.71
+  }
+ ],
+ "real_zeta_conclusion": "all Pick matrices certified PD; consistent with RH",
+ "counterfactual": [
+  {
+   "pair": "1977",
+   "control_delta0": "PD",
+   "control_min_pivot": 2.4297497355823907e-33,
+   "smallest_delta_detected": "0.000000001",
+   "newton_radius": 2.221258114672741e-125,
+   "N": 16
+  },
+  {
+   "pair": "1329",
+   "control_delta0": "PD",
+   "control_min_pivot": 1.0870083205276644e-35,
+   "smallest_delta_detected": "0.000000001",
+   "newton_radius": 7.793284736568674e-126,
+   "N": 16
+  },
+  {
+   "pair": "7005",
+   "control_delta0": "PD",
+   "control_min_pivot": 1.0846689397489984e-31,
+   "smallest_delta_detected": "0.00000001",
+   "newton_radius": 6.424818572463373e-124,
+   "N": 16
+  }
+ ],
+ "seconds": 117.5,
+ "conclusion": "detector validated (no control firing); all certified Pick matrices for real zeta are PD; consistent with RH"
+}
