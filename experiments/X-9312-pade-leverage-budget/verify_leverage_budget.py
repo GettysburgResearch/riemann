@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact checker for the L-9314 Padé certified-residual-mass budgets."""
+"""Exact X-9314 checker for the L-9316 Padé residual-mass budgets."""
 from __future__ import annotations
 
 import argparse
@@ -10,8 +10,8 @@ from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
-SCHEMA = "riemann.x9312-pade-leverage-budget.v1"
-OUTPUT_SCHEMA = "riemann.x9312-pade-leverage-budget-verification.v1"
+SCHEMA = "riemann.x9314-pade-residual-mass-budget.v1"
+OUTPUT_SCHEMA = "riemann.x9314-pade-residual-mass-budget-verification.v1"
 ZERO_GATE = "CERTIFIED_CRITICAL_LINE_ZERO_LOWER_BOUND"
 SEGMENT_GATE = "CERTIFIED_FAR_ENDPOINT_RESIDUAL_SEGMENT"
 
@@ -246,16 +246,17 @@ def verify(path: Path) -> dict[str, Any]:
     )
 
     verdict = (
-        "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET"
+        "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
         if gap.upper < total_lower
-        else "CERTIFIED_CONSISTENT_PADE_LINE_MASS_BUDGET"
+        else "CERTIFIED_CONSISTENT_PADE_RESIDUAL_MASS_BUDGET"
         if gap.lower >= total_upper
-        else "UNRESOLVED_PADE_LINE_MASS_BUDGET"
+        else "UNRESOLVED_PADE_RESIDUAL_MASS_BUDGET"
     )
     return {
         "schema": OUTPUT_SCHEMA,
         "classification": data.get("classification"),
-        "analytic_claim": "L-9314",
+        "analytic_claim": "L-9316",
+        "experiment_id": "X-9314",
         "certificate_sha256": file_sha256(path),
         "side": side,
         "w": fraction_json(w),
@@ -274,7 +275,7 @@ def verify(path: Path) -> dict[str, Any]:
         "verdict": verdict,
         "counterexample_nomination": (
             "PENDING_INDEPENDENT_REPRODUCTION"
-            if verdict == "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET"
+            if verdict == "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
             else None
         ),
         "proof_boundary": (
@@ -301,7 +302,7 @@ def main() -> int:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(text, encoding="utf-8")
     print(text, end="")
-    return 1 if result["verdict"] == "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET" else 0
+    return 1 if result["verdict"] == "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET" else 0
 
 
 if __name__ == "__main__":
