@@ -11,7 +11,8 @@ Last updated:   2026-07-25
 Dependencies:   L-0006 (certified Taylor model of eta), L-0001, T-0004 (the
                 N = 1 case), Hadamard factorisation of xi
 Scope:          Pick matrices with N <= 24 points; certified verdicts for real
-                zeta at heights 100, 1000, 1977, 5000, 7005
+                zeta at heights 100, 1000, 1977, 5000, 7005, and a swept band
+                [10000, 10060]
 Opens:          Q-0016
 Related counterexample candidates: Z-0007
 ```
@@ -241,10 +242,27 @@ floor for this geometry is `1.67e-28`, and the `delta = 1e-8` signal
 denser at greater height, so more of them are "seen" by the cluster and the
 effective rank rises.
 
-**This is a statement about `N = 16`, not about the method**: the floor falls
-geometrically in `N` (`~10^{-2.7N}`), so `N = 20` or `24` should recover the
-`1e-9` level at a cost of 4-8 more evaluations per cluster.  That is the first
-thing to measure before running a long sweep, and it has not been done.
+**This is a statement about `N = 16`, not about the method.**  The floor falls
+geometrically in `N`, so more probe points should recover the lost decades at
+almost no cost.  That was a falsifiable prediction, and X-0012b tested it at the
+same height, against the same real background (`tol_bits = 400`, controls PD
+throughout, 0 control firings):
+
+| N | baseline floor | smallest `delta` detected | seconds per certificate |
+|---|---|---|---|
+| 16 | 1.67e-28 | 1e-6 | 15.0 |
+| 20 | 2.94e-40 | 1e-10 | 17.5 |
+| 24 | 6.70e-53 | <= 1e-12 (still firing) | 20.9 |
+
+The floor falls 3.0 and 3.2 decades per probe point -- the `10^{-2.7N}` law,
+slightly better than measured synthetically -- and since the signal falls as
+`delta^3`, that is **one decade of `delta`-sensitivity per extra probe point**,
+exactly as predicted.  Six orders of magnitude in sensitivity cost a factor 1.4
+in time.
+
+This is the logarithmic cost law confirmed on real `zeta` at height `10^4`,
+rather than on a synthetic model at height 100, and it is the strongest single
+piece of evidence for T-0005's central claim.
 
 ## What it does not do
 

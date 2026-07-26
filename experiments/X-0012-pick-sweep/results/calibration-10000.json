@@ -1,0 +1,149 @@
+{
+ "experiment": "X-0012b",
+ "agent": "claude-01",
+ "git_sha": "5b9bf1124e7b5e905e1b6e3bd59c11ba8862253c",
+ "python": "3.11.15",
+ "flint": "0.9.0",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "height": 10000.0,
+ "tol_bits": 400,
+ "prediction": "T-0005: floor ~ 10^{-2.7N}, signal ~ delta^3, so the detectable delta should improve ~3 decades per 4 extra probe points",
+ "rows": [
+  {
+   "N": 16,
+   "delta": "0.0001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -2.6760386180241137e-22,
+   "floor": 1.6684367261754658e-28
+  },
+  {
+   "N": 16,
+   "delta": "0.000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -1.0385128054383816e-27,
+   "floor": 1.6684367261754658e-28
+  },
+  {
+   "N": 16,
+   "delta": "0.00000001",
+   "off": "PD",
+   "double": "PD",
+   "off_min_pivot": 1.6674544742191292e-28,
+   "floor": 1.6684367261754658e-28
+  },
+  {
+   "N": 16,
+   "delta": "0.0000000001",
+   "off": "PD",
+   "double": "PD",
+   "off_min_pivot": 1.6684366279520882e-28,
+   "floor": 1.6684367261754658e-28
+  },
+  {
+   "N": 16,
+   "delta": "0.000000000001",
+   "off": "PD",
+   "double": "PD",
+   "off_min_pivot": 1.6684367261656434e-28,
+   "floor": 1.6684367261754658e-28
+  },
+  {
+   "N": 16,
+   "summary_floor": 1.6684367261754658e-28,
+   "smallest_delta_detected": "0.000001"
+  },
+  {
+   "N": 20,
+   "delta": "0.0001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -2.400313506764763e-23,
+   "floor": 2.935692654781081e-40
+  },
+  {
+   "N": 20,
+   "delta": "0.000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -2.3147342104921654e-29,
+   "floor": 2.935692654781081e-40
+  },
+  {
+   "N": 20,
+   "delta": "0.00000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -1.3440222922726001e-34,
+   "floor": 2.935692654781081e-40
+  },
+  {
+   "N": 20,
+   "delta": "0.0000000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -7.972781067898224e-40,
+   "floor": 2.935692654781081e-40
+  },
+  {
+   "N": 20,
+   "delta": "0.000000000001",
+   "off": "PD",
+   "double": "PD",
+   "off_min_pivot": 2.9346706745768295e-40,
+   "floor": 2.935692654781081e-40
+  },
+  {
+   "N": 20,
+   "summary_floor": 2.935692654781081e-40,
+   "smallest_delta_detected": "0.0000000001"
+  },
+  {
+   "N": 24,
+   "delta": "0.0001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -1.8824176659214705e-24,
+   "floor": 6.697954481015288e-53
+  },
+  {
+   "N": 24,
+   "delta": "0.000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -1.9130959817620812e-30,
+   "floor": 6.697954481015288e-53
+  },
+  {
+   "N": 24,
+   "delta": "0.00000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -4.3356181218636494e-36,
+   "floor": 6.697954481015288e-53
+  },
+  {
+   "N": 24,
+   "delta": "0.0000000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -3.1932757244141974e-41,
+   "floor": 6.697954481015288e-53
+  },
+  {
+   "N": 24,
+   "delta": "0.000000000001",
+   "off": "NOT_PSD",
+   "double": "PD",
+   "off_min_pivot": -1.0720025030729634e-46,
+   "floor": 6.697954481015288e-53
+  },
+  {
+   "N": 24,
+   "summary_floor": 6.697954481015288e-53,
+   "smallest_delta_detected": "0.000000000001"
+  }
+ ],
+ "control_firings": 0
+}

@@ -47,7 +47,7 @@ ranked list of where to look next.
 | `zeta'` has **no zeros** in `[0.001, 0.499] x [1, 300]` (Speiser) | that box | L-0002 applied to `zeta'` | `X-0008/results/speiser-T300.json` |
 | Every individual zero disc to `t <= 2000` is simple with `\|Re rho-1/2\| <= 9.49e-77` (completeness pending the box count) | `t <= 2000` | L-0007 | `X-0007/results/newton-T2000.json` |
 | Targeted Li coefficients `lambda_1..lambda_16^(alpha) > 0` at 12 centres aimed at the four tightest zero pairs | those centres | T-0004 | `X-0010/results/targeted-li.json` |
-| **No off-line zero pair of depth `delta >= 1e-6` with ordinate in `[10000, 10060]`** | that band, above everything else here | T-0005 Pick sweep, 30/30 clusters PD; sensitivity measured at that height against the real background, 0 control firings | `X-0012/results/sweep-10000-10060.json` |
+| **No off-line zero pair of depth `delta >= 1e-6` with ordinate in `[10000, 10060]`** | that band, above everything else here | T-0005 Pick sweep, 30/30 clusters PD at `N=16`; sensitivity measured at that height against the real background, 0 control firings (`N=24` reaches `delta <= 1e-12` for 1.4x the time) | `X-0012/results/sweep-10000-10060.json`, `calibration-10000.json` |
 | **Pick matrices of `xi'/xi` are positive definite at `v = 100, 1000, 1977, 5000, 7005`** (`N = 8, 16`; margins 29-56 orders) | those probe clusters | T-0005, from point evaluations only -- no zero-finding, no contour, no primes | `X-0011/results/pick.json` |
 
 Everything else in this repository is EMPIRICAL, IDEA, or PROPOSED.  Read
@@ -217,9 +217,11 @@ In descending order of expected value (details and acceptance criteria in
    `delta`-sensitivity of about `1e-9` at the heights tested.  Everything for it
    is implemented (`scripts/pick.py`, `experiments/X-0011`, `X-0012`), and a
    first 60-unit band at height `10^4` is done: 30/30 clusters PD at 1.82 s per
-   unit height.  **Do the `N` calibration first** — sensitivity at height `10^4`
-   is `delta ~ 1e-6` at `N = 16` against `1e-9` at height 100, and the fix is
-   more probe points, not more precision (T-0005).  It is item 0
+   unit height, and the `N` calibration is done: at height `10^4` against the
+   real background, `N = 16/20/24` detect `delta = 1e-6 / 1e-10 / <=1e-12` for
+   `15 / 17.5 / 21` seconds per certificate — **one decade of sensitivity per
+   extra probe point**, which is the logarithmic cost law confirmed on real
+   `zeta`.  Use `N = 24`.  It is item 0
    because it is the only search here whose cost does not blow up on the
    shallow displacements a real counterexample would have.
 1. **Q-0001** — rigorous Riemann-Siegel.  Everything is `O(T^2)` without it.
