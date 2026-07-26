@@ -208,3 +208,44 @@ The prediction this would test is sharp: **the main window should come out near
 window that has widened by two or more orders of magnitude on crossing the
 barrier would overturn it, and that outcome should be reported loudly if it
 happens.
+
+## The above-barrier measurement (2026-07-26): prediction confirmed in substance
+
+The `c = 10^{12}`, `K = 2048`, `T = 3.1\times10^{12}` stream
+(`\Delta/\ell_T = 1.026`, the first configuration past the barrier) completed
+on the third attempt, after two machine restarts killed it.  The sharp
+prediction above was: main window near `1.1`, not near `300`.  Measured:
+
+```text
+                      below barrier          above barrier
+                      (c=1e11, ratio 0.93)   (c=1e12, ratio 1.03)
+lambda_min exact       2.67e-4  > 0           9.77e-4  > 0
+coverage @ |eta|<1/2   1.42 units, 6 windows  5.05 units, 40 windows
+eta_min (best u)       0.0315 at u = 0.26     0.0420 at u = 3.61
+eta_min median over u  1.18                   0.64
+```
+
+**Crossing the barrier changes the physics but not the verdict.**  Coverage
+tripled and the response fragmented from one main window into forty slivers
+spread across the full scanned range — the carrier really does begin to
+resolve the zero density once `\Delta > \ell_T`, exactly the qualitative
+change `C-5601` predicted, and the exact form nevertheless remains positive.
+But the crossing bought a factor `3.5` in coverage against the factor `~300`
+needed for parity:
+
+```text
+cost per unit height, above the barrier:
+  D-0801:            pi(1e12)/5.05  ~  7.2e9 prime powers per unit
+  Riemann-Siegel:                      1.2e8 terms per unit          (60x less)
+  Platt engine (X-5604), RIGOROUS:     ~0.17 core-s per unit         (~18,000x less)
+```
+
+The last line is the one that retires the question: since this claim was
+written, `X-5604` certifies zeros — unconditionally, with locations — at
+`0.039` s each, so the D-0801 pass is now competing not with an uncertified
+scan but with a *cheaper rigorous certificate*.  Limitation 2 of this claim is
+resolved; the conclusion stands with the measurement in hand, and the honest
+counterweight is recorded: above the barrier the form's sensitivity landscape
+genuinely opens up, so if anyone ever wants a Weil-positivity *certificate*
+(rather than a search), above-barrier carriers are where its detection
+capability lives.
