@@ -102,15 +102,15 @@ jobs:
             "$out/gap-p192.json" "$out/gap-p256.json" \
             --output "$out/gap-comparison.json"
 
-      - name: Produce and compare complete indexed Hardy-zero blocks
+      - name: Produce and compare guarded indexed Hardy-zero blocks
         shell: bash
         run: |
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
-          start=19743642385889
-          /usr/bin/time -v /tmp/pr71_hardy_zero_block 192 256 4 "$start" \
+          start=19743642385857
+          /usr/bin/time -v /tmp/pr71_hardy_zero_block 192 320 4 "$start" \
             >"$out/zero-block-p192.json" 2>"$out/zero-block-p192.time.txt"
-          /usr/bin/time -v /tmp/pr71_hardy_zero_block 256 256 4 "$start" \
+          /usr/bin/time -v /tmp/pr71_hardy_zero_block 256 320 4 "$start" \
             >"$out/zero-block-p256.json" 2>"$out/zero-block-p256.time.txt"
           python experiments/X-9301-zero-deflated-xi-modulus/compare_pr71_zero_block.py \
             "$out/zero-block-p192.json" "$out/zero-block-p256.json" \
@@ -189,6 +189,19 @@ jobs:
                 "$out/nearest-${count}-precision-comparison-p${1}-p${2}.json"
             done
           done
+
+      - name: Exhaust every disjoint minor on the fixed grid
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
+          python \
+            experiments/X-9301-zero-deflated-xi-modulus/summarize_pr71_exhaustive_grid.py \
+            "$out/xi-primitives-p384.json" \
+            "$out/xi-primitives-p512.json" \
+            "$out/zero-block-p256.json" \
+            --counts 2 4 8 16 32 64 96 128 160 192 224 256 \
+            --output "$out/exhaustive-grid-summary.json"
 
       - name: Summarize and hash proof artifacts
         shell: bash

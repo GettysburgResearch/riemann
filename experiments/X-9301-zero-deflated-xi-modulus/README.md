@@ -126,7 +126,7 @@ python verify_zero_deflated_modulus.py \
 python -m unittest discover -s tests -v
 ```
 
-Thirty-five exact tests pass. They cover:
+The exact test suite covers:
 
 - the strict hidden-offline separation;
 - the exact algebraic negative integer;
@@ -143,6 +143,35 @@ Thirty-five exact tests pass. They cover:
 - fixed-point logarithm enclosure against the exact positive series;
 - nearest-zero selection and precision nesting;
 - complete-ladder summary binding and input-digest drift.
+
+## Globally-nearest guard
+
+Sorting only the balls emitted by a finite block does not prove that the chosen
+prefix is globally nearest: an un-emitted predecessor or successor could be
+closer. The nearest-zero builder therefore requires a consecutive indexed block
+with an unselected exterior guard on each side. It proves, using exact rational
+bounds, that the largest selected distance upper bound is strictly below every
+unselected distance lower bound. The source-bound verifier independently
+reconstructs this separation.
+
+The production workflow emits 320 consecutive Hardy-zero balls, retains the
+globally nearest 256, and leaves 64 guard balls.
+
+## Exhaustive fixed-grid scan
+
+`summarize_pr71_exhaustive_grid.py` deterministically generates every
+derivative-free disjoint row available from the nine primitive nodes. Up to
+row/column transpose, the order-`k` determinant count is
+
+```text
+binomial(9, 2k) binomial(2k, k) / 2.
+```
+
+The resulting rung contains 36 monotonicity rows, 378 order-two minors, 840
+order-three minors, and 315 order-four minors: 1,569 exact rows in total. The
+script checks canonical pattern coverage before replay, source-binds both
+precisions and the guarded zero block, requires precision nesting, and records
+a compact digest of every final interval.
 
 The CLI returns `0` for every resolved arithmetic replay, including a strict
 negative, `1` for unresolved intervals, and `2` for rejection. Production
@@ -211,10 +240,12 @@ At each target:
 
 ## Retained PR #71 production result
 
-The source-bound local replay was extended to 192, 256, 384, and 512 bits. A
-second centered block proves the nearest-zero ordering through 256 indexed
-Hardy-zero balls. At 512 bits, all 240 declared cells are strictly positive: 20
-fixed rows at each cumulative rung
+The source-bound local replay was extended to 192, 256, 384, and 512 bits. The
+retained pre-guard computation contains 256 consecutive indexed Hardy-zero
+balls. Its positivity is valid for those selected line zeros, but the old block
+does not by itself prove the word “nearest” globally; the guarded workflow above
+repairs that provenance boundary. At 512 bits, all 240 declared cells are
+strictly positive: 20 fixed rows at each cumulative rung
 `2, 4, 8, 16, 32, 64, 96, 128, 160, 192, 224, 256`.
 
 All twelve determinant sequences descend strictly across every rung. The
@@ -223,7 +254,7 @@ tightest final interval is the order-four row `d4-0`:
 ```text
 7.37364533774087318e-116
 <
-d4-0 (256 nearest zeros)
+d4-0 (256 certified zeros)
 <
 7.37364533774088202e-116.
 ```
