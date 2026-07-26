@@ -3,7 +3,7 @@
 Experiment ID: X-9301  
 Agent: `gpt56-01-i`  
 Issue: #93  
-Status: exact checker complete; fixed PR #71 table certified positive through 256 zeros
+Status: exhaustive disjoint PR #71 grid certified positive through 256 nearest zeros
 
 ## Purpose
 
@@ -126,7 +126,7 @@ python verify_zero_deflated_modulus.py \
 python -m unittest discover -s tests -v
 ```
 
-The exact test suite covers:
+Forty-two exact tests pass. They cover:
 
 - the strict hidden-offline separation;
 - the exact algebraic negative integer;
@@ -240,30 +240,44 @@ At each target:
 
 ## Retained PR #71 production result
 
-The source-bound local replay was extended to 192, 256, 384, and 512 bits. The
-retained pre-guard computation contains 256 consecutive indexed Hardy-zero
-balls. Its positivity is valid for those selected line zeros, but the old block
-does not by itself prove the word “nearest” globally; the guarded workflow above
-repairs that provenance boundary. At 512 bits, all 240 declared cells are
-strictly positive: 20 fixed rows at each cumulative rung
+The source-bound local replay was extended to 192, 256, 384, and 512 bits. A
+block of 320 consecutive indexed Hardy-zero balls certifies the globally nearest
+256 and leaves 64 exterior guards. At 512 bits, all 240 originally declared
+cells are strictly positive: 20 fixed rows at each cumulative rung
 `2, 4, 8, 16, 32, 64, 96, 128, 160, 192, 224, 256`.
 
 All twelve determinant sequences descend strictly across every rung. The
 tightest final interval is the order-four row `d4-0`:
 
 ```text
-7.37364533774087318e-116
+6.85769045758189919e-116
 <
-d4-0 (256 certified zeros)
+d4-0 (256 globally-nearest zeros)
 <
-7.37364533774088202e-116.
+6.85769045758190802e-116.
 ```
 
-The retained verdict is `CERTIFIED_POSITIVE_FIXED_PR71_TABLE`; no
-counterexample is nominated. This closes only the exact ordinate, nine-point
-grid, 20 declared rows, and twelve cumulative zero subsets. See the baseline
-`results/pr71/summary.json` and centered extension
-`results/pr71-256/summary.json`.
+The exhaustive scan closes every derivative-free disjoint row on the same
+nine-point grid. All 18,828 cells (1,569 rows at twelve rungs) are strictly
+positive at 512 bits, and all 1,533 determinant sequences descend strictly. The
+tightest final row separates the four smallest nodes from the next four:
+
+```text
+rows    = (x-20, x-18, x-16, x-14)
+columns = (x-12, x-10, x-8, x-6)
+
+4.26598510145821543e-128
+<
+det
+<
+4.26599336658844784e-128.
+```
+
+The retained verdicts are `CERTIFIED_POSITIVE_FIXED_PR71_TABLE` and
+`CERTIFIED_POSITIVE_EXHAUSTIVE_DISJOINT_PR71_GRID`; no counterexample is
+nominated. This closes only the exact ordinate, nine-point value-only grid, and
+twelve cumulative zero subsets. See `results/pr71/summary.json` and
+`results/pr71/exhaustive-grid-summary.json`.
 
 ## Proof boundary
 
