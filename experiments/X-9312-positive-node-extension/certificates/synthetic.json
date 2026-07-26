@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "expected_status": "CERTIFIED_INSIDE_ONE_SCALAR_INTERVAL",
+      "id": "inside-positive-measure",
+      "new_b0": {"denominator": 1, "numerator": 7},
+      "old_moments": [
+        {"denominator": 1, "numerator": 40},
+        {"denominator": 1, "numerator": 210},
+        {"denominator": 1, "numerator": 1374},
+        {"denominator": 1, "numerator": 9402},
+        {"denominator": 1, "numerator": 65238}
+      ],
+      "w": {"denominator": 1, "numerator": 2}
+    },
+    {
+      "expected_status": "CERTIFIED_NEGATIVE_LOWER_SQUARE_WITNESS",
+      "id": "lower-square-separation",
+      "new_b0": {"denominator": 29659, "numerator": 198938},
+      "old_moments": [
+        {"denominator": 1, "numerator": 40},
+        {"denominator": 1, "numerator": 210},
+        {"denominator": 1, "numerator": 1374},
+        {"denominator": 1, "numerator": 9402},
+        {"denominator": 1, "numerator": 65238}
+      ],
+      "w": {"denominator": 1, "numerator": 2}
+    },
+    {
+      "expected_status": "CERTIFIED_NEGATIVE_UPPER_Y_SQUARE_WITNESS",
+      "id": "upper-y-square-separation",
+      "new_b0": {"denominator": 80179, "numerator": 572238},
+      "old_moments": [
+        {"denominator": 1, "numerator": 40},
+        {"denominator": 1, "numerator": 210},
+        {"denominator": 1, "numerator": 1374},
+        {"denominator": 1, "numerator": 9402},
+        {"denominator": 1, "numerator": 65238}
+      ],
+      "w": {"denominator": 1, "numerator": 2}
+    }
+  ],
+  "schema": "riemann.positive-node-one-scalar.v1"
+}
