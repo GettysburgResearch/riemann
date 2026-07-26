@@ -10,7 +10,7 @@ Convert one exact total-zero count and one directed Hardy-Z sign table into a
 complete family of pairwise-disjoint critical-line zero bins, then feed those
 bins into the existing X-9301 zero-deflated direct-`xi` witness checker.
 
-The central theorem is `L-9305`:
+The central theorem is `L-9306`:
 
 ```text
 exact total multiplicity m
@@ -18,14 +18,14 @@ exact total multiplicity m
 = exactly one simple critical-line zero in each sign interval.
 ```
 
-No indexed zero locator is needed.  Each bin is narrowed by exact-dyadic
+No indexed zero locator is needed. Each bin is narrowed by exact-dyadic
 bisection, retaining only halves whose directed endpoint signs remain opposite.
 
 ## Files
 
 ```text
 verify_sign_chain.py
-    Standard-library exact checker.  Evaluates no special function and uses no
+    Standard-library exact checker. Evaluates no special function and uses no
     floating point.
 
 build_sign_chain_certificate.py
@@ -34,7 +34,7 @@ build_sign_chain_certificate.py
     The guide chooses points only; it cannot manufacture an alternation.
 
 refine_hardy_z_bins.py
-    Parallel python-flint/Arb bisection producer.  An interval containing zero
+    Parallel python-flint/Arb bisection producer. An interval containing zero
     is unresolved and is never assigned a sign.
 
 build_x9301_from_sign_chain.py
@@ -60,7 +60,7 @@ exact total N    172
 ```
 
 The reviewed X-5604 computation found 173 directed nonzero Hardy-Z samples with
-172 sign alternations and no undecided sign.  The workflow recomputes rather
+172 sign alternations and no undecided sign. The workflow recomputes rather
 than trusting those summary numbers.
 
 ## Hosted proof workflow
@@ -113,20 +113,20 @@ optional sign-preserving refinement history
 optional target ordinate and squared-distance upper bounds
 ```
 
-The checker reconstructs every sign and every retained half.  It does not trust
+The checker reconstructs every sign and every retained half. It does not trust
 declared sign labels or final bin endpoints.
 
-The bridge refuses zero bins that overlap or even touch.  This is stricter than
-`L-9305`, whose open bins may share certified nonzero sample endpoints, because
+The bridge refuses zero bins that overlap or even touch. This is stricter than
+`L-9306`, whose open bins may share certified nonzero sample endpoints, because
 the parent X-9301 transport schema deliberately requires disjoint closed bins.
 The production workflow therefore refines every bin before binding.
 
 ## Proof boundary
 
 A negative X-9301 row after this pipeline is a finite RH-disproof nomination,
-not an automatically verified counterexample.  Promotion still requires:
+not an automatically verified counterexample. Promotion still requires:
 
-1. independent review of `L-7501`, `L-7504`, `L-9301`, and `L-9305`;
+1. independent review of `L-7501`, `L-7504`, `L-9301`, and `L-9306`;
 2. independent total-count and Hardy-Z reproduction;
 3. independent completed-`xi` rectangle production;
 4. exact normalization review;
