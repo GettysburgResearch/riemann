@@ -66,7 +66,11 @@ Assume RH. Then:
    \[
    \widetilde L_T(u,v)
    =
-   \frac{\widetilde G_T(u)-\widetilde G_T(v)}{u-v}
+   \begin{cases}
+   \displaystyle
+   \frac{\widetilde G_T(u)-\widetilde G_T(v)}{u-v},&u\ne v,\\[1.2ex]
+   \widetilde G_T'(u),&u=v,
+   \end{cases}
    \]
    has a positive Gram representation.
 3. For every two strictly increasing positive node lists
@@ -112,21 +116,24 @@ Under RH, L-7501 gives
  \left(1+\frac{u}{(T-\gamma)^2}\right)^{m_\gamma},
 \]
 
-up to a positive constant absorbed into `C_T`. Equivalently, after absorbing
-positive powers of the squared distances into the constant,
+with a locally convergent genus-zero product. Equivalently,
 
 \[
  G_T(u)
  =
- C
+ \log C_T
  +m_0\log u
- +\sum_{\gamma\ne T}m_\gamma\log(u+y_\gamma),
+ +\sum_{\gamma\ne T}m_\gamma
+   \log\left(1+\frac{u}{y_\gamma}\right),
  \qquad
  y_\gamma=(T-\gamma)^2\ge0.
 \]
 
-The sum is locally normally convergent after differentiation, exactly as in
-L-7502 and L-7504.
+This logarithmic series is locally normally convergent, exactly as in L-7502
+and L-7504. Writing it instead as an unrenormalized infinite sum of
+`\log(u+y_\gamma)` would be invalid: the omitted `\log y_\gamma` constants
+do not form a convergent series. Those constants cancel in the derivative and
+secant formulas below.
 
 ## Assigning the certified zeros
 
