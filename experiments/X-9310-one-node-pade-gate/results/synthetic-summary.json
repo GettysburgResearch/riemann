@@ -1,0 +1,29 @@
+{
+  "schema": "riemann.x9310-synthetic-summary.v1",
+  "classification": "SYNTHETIC_CONTROL",
+  "positive": {
+    "w": "1",
+    "old_measure": "delta_1 + delta_3",
+    "old_moments": ["2", "4", "10"],
+    "new_b0": "3/4",
+    "H0_minus_deltaI_LDL_pivots": ["37/50", "4651/7400"],
+    "HA_minus_deltaI_LDL_pivots": ["31/25", "14151/12400"],
+    "delta": "1/100",
+    "verdict": "CERTIFIED_POSITIVE_ONE_NODE_PADE_INTERVAL"
+  },
+  "lower_negative": {
+    "fake_new_b0": "0",
+    "witness_coefficients": ["1", "-1"],
+    "response_polynomial": "(1-y)^2",
+    "directed_value": "-2",
+    "verdict": "CERTIFIED_NEGATIVE_LOWER_SQUARE_WITNESS"
+  },
+  "upper_negative": {
+    "fake_new_b0": "2",
+    "witness_coefficients": ["1", "-1"],
+    "response_polynomial": "y(1-y)^2",
+    "directed_value": "-2",
+    "verdict": "CERTIFIED_NEGATIVE_SUPPORT_LOCALIZER_WITNESS"
+  },
+  "riemann_xi_counterexample": false
+}

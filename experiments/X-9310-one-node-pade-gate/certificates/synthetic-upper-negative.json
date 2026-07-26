@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.x9310-one-node-pade.v1",
+  "classification": "SYNTHETIC",
+  "w": {"numerator": 1, "denominator": 1},
+  "support_lower": {"numerator": 0, "denominator": 1},
+  "old_moments": [
+    {"lower": {"numerator": 2, "denominator": 1}, "upper": {"numerator": 2, "denominator": 1}},
+    {"lower": {"numerator": 4, "denominator": 1}, "upper": {"numerator": 4, "denominator": 1}},
+    {"lower": {"numerator": 10, "denominator": 1}, "upper": {"numerator": 10, "denominator": 1}}
+  ],
+  "new_b0": {
+    "lower": {"numerator": 2, "denominator": 1},
+    "upper": {"numerator": 2, "denominator": 1}
+  },
+  "lower_witness": null,
+  "upper_witness": [
+    {"numerator": 1, "denominator": 1},
+    {"numerator": -1, "denominator": 1}
+  ],
+  "closure_delta": {"numerator": 1, "denominator": 100}
+}
