@@ -102,6 +102,17 @@ class TotalCountDeflationTests(unittest.TestCase):
         data["points"][0]["point_sha256"] = "0" * 64
         self.assert_rejected(data, "point digest mismatch")
 
+    def test_common_scale_is_recorded(self) -> None:
+        data = copy.deepcopy(self.data)
+        data["common_xi_scale_power_of_two"] = 123
+        result = module.verify(data)
+        self.assertEqual(result["common_xi_scale_power_of_two"], 123)
+
+    def test_boolean_common_scale_is_rejected(self) -> None:
+        data = copy.deepcopy(self.data)
+        data["common_xi_scale_power_of_two"] = True
+        self.assert_rejected(data, "must be an integer")
+
 
 if __name__ == "__main__":
     unittest.main()

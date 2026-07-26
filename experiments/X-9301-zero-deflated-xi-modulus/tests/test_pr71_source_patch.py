@@ -43,6 +43,26 @@ class PatcherTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             MODULE.patch_positive_reflection("no reflection block")
 
+    def test_common_scale_patch(self):
+        source = (
+            MODULE.SCALE_DECLARATION_NEEDLE
+            + MODULE.SCALE_VALUE_NEEDLE
+            + MODULE.SCALE_METADATA_NEEDLE
+        )
+        output, manifest = MODULE.patch_common_xi_scale(source)
+        self.assertIn(MODULE.SCALE_DECLARATION_REPLACEMENT, output)
+        self.assertIn(MODULE.SCALE_VALUE_REPLACEMENT, output)
+        self.assertIn(MODULE.SCALE_METADATA_REPLACEMENT, output)
+        self.assertEqual(
+            manifest["common_xi_scale_power_of_two"],
+            MODULE.XI_COMMON_SCALE_POWER,
+        )
+        self.assertTrue(manifest["common_scale_is_exact"])
+
+    def test_common_scale_source_drift_rejected(self):
+        with self.assertRaises(ValueError):
+            MODULE.patch_common_xi_scale("missing scale targets")
+
 
 if __name__ == "__main__":
     unittest.main()

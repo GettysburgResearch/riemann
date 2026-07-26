@@ -367,6 +367,10 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     classification = data.get("classification")
     if classification not in ("SYNTHETIC_MODEL", "RIEMANN_XI_DIRECTED"):
         raise CertificateError("unsupported classification")
+    common_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
     ordinate = rational(data.get("ordinate"), "ordinate")
     terms = exact_int(data.get("log_terms", 256), "log_terms")
     if terms < 32 or terms > 4096:
@@ -449,6 +453,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "verified": True,
         "classification": classification,
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fj(ordinate),
         "point_count": len(points),
         "count_windows": [
@@ -480,7 +485,9 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             "deflation algebra only. Under RH, unconditional total-zero lower counts "
             "become critical-line lower counts. A Riemann-xi negative also requires "
             "proof-grade completed-xi rectangles, independently certified total-count "
-            "gates, and review of L-9303 and the completed-xi normalization."
+            "gates, and review of L-9303 and the completed-xi normalization. One exact "
+            "common power-of-two scaling may be applied to every xi rectangle because "
+            "all declared rows are invariant under a common positive scaling."
         ),
     }
     if claimed_certificate_sha is not None:

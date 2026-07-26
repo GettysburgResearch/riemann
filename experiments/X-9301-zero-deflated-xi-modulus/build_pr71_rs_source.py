@@ -10,6 +10,7 @@ from pathlib import Path
 OLD = "20225875608343121406355"
 NEW = "20225875608341108140435"
 EXPECTED_OCCURRENCES = 3
+XI_COMMON_SCALE_POWER = 5_335_951_715_288
 
 OLD_REFLECTION = """    acb_one(reflected_s);
     acb_sub(reflected_s, reflected_s, s, prec);
@@ -33,6 +34,27 @@ NEW_REFLECTION = """    /*
     evaluate_xi(reflected_xi, reflected_s, prec);
     acb_conj(reflected_xi, reflected_xi);
 """
+
+SCALE_DECLARATION_NEEDLE = (
+    f'static const char *T_MANTISSA = "{NEW}";\n'
+)
+SCALE_DECLARATION_REPLACEMENT = (
+    SCALE_DECLARATION_NEEDLE
+    + f"static const slong XI_COMMON_SCALE_POWER = {XI_COMMON_SCALE_POWER}L;\n"
+)
+SCALE_VALUE_NEEDLE = "    mul4(xi, A, B, G, jet + 0, prec);\n"
+SCALE_VALUE_REPLACEMENT = (
+    SCALE_VALUE_NEEDLE
+    + "    acb_mul_2exp_si(xi, xi, XI_COMMON_SCALE_POWER);\n"
+)
+SCALE_METADATA_NEEDLE = (
+    '    flint_printf("\\"precision_bits\\":%wd,\\n", prec);\n'
+)
+SCALE_METADATA_REPLACEMENT = (
+    SCALE_METADATA_NEEDLE
+    + '    flint_printf("\\"common_xi_scale_power_of_two\\":%wd,\\n", '
+    + "XI_COMMON_SCALE_POWER);\n"
+)
 
 
 def patch_source(source: str) -> tuple[str, dict[str, object]]:
@@ -72,6 +94,27 @@ def patch_positive_reflection(source: str) -> tuple[str, dict[str, object]]:
     }
 
 
+def patch_common_xi_scale(source: str) -> tuple[str, dict[str, object]]:
+    replacements = (
+        (SCALE_DECLARATION_NEEDLE, SCALE_DECLARATION_REPLACEMENT),
+        (SCALE_VALUE_NEEDLE, SCALE_VALUE_REPLACEMENT),
+        (SCALE_METADATA_NEEDLE, SCALE_METADATA_REPLACEMENT),
+    )
+    output = source
+    for needle, replacement in replacements:
+        count = output.count(needle)
+        if count != 1:
+            raise ValueError(
+                f"expected one common-scale patch target, found {count}"
+            )
+        output = output.replace(needle, replacement)
+    return output, {
+        "common_xi_scale_power_of_two": XI_COMMON_SCALE_POWER,
+        "common_scale_is_exact": True,
+        "common_scale_scope": "all emitted xi rectangles",
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -87,7 +130,9 @@ def main() -> int:
     source = args.source.read_text(encoding="utf-8")
     output, manifest = patch_source(source)
     output, reflection_manifest = patch_positive_reflection(output)
+    output, scale_manifest = patch_common_xi_scale(output)
     manifest.update(reflection_manifest)
+    manifest.update(scale_manifest)
     manifest["patched_sha256"] = hashlib.sha256(output.encode("utf-8")).hexdigest()
     args.output.write_text(output, encoding="utf-8")
     if args.manifest:
