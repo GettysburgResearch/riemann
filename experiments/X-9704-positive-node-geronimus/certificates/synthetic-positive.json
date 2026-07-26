@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.x9704-positive-node-geronimus.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "w": {"numerator": 3, "denominator": 1},
+  "old_moments": [
+    {"lower":{"numerator":16,"denominator":1},"upper":{"numerator":16,"denominator":1}},
+    {"lower":{"numerator":42,"denominator":1},"upper":{"numerator":42,"denominator":1}},
+    {"lower":{"numerator":136,"denominator":1},"upper":{"numerator":136,"denominator":1}},
+    {"lower":{"numerator":492,"denominator":1},"upper":{"numerator":492,"denominator":1}},
+    {"lower":{"numerator":1876,"denominator":1},"upper":{"numerator":1876,"denominator":1}}
+  ],
+  "b0_interval": {
+    "lower": {"numerator": 3, "denominator": 1},
+    "upper": {"numerator": 3, "denominator": 1}
+  },
+  "delta0": {"numerator": 1, "denominator": 1000},
+  "delta1": {"numerator": 1, "denominator": 1000}
+}
