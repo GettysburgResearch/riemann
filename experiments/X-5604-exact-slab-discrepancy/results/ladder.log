@@ -10,3 +10,7 @@ CERTIFIED D = 0 over 50.0 units at t ~ 1e+14: N_0 = N = 242, no zero off the cri
 wrote /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e14-gram.json  [506 s total]
 TOTAL 596 s -> /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e14.json
 === t=1e+15 span=10 ===
+N(a) = 5045354828589537   N(b) = 5045354828589589   ->  N(a,b) = 52   [442.4 s]
+slab is non-empty (52 zeros); rerun with --list-zeros to separate N_0 and compute D
+wrote /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e15-slab.json
+  N = 52   [443 s]

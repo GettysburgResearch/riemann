@@ -1,0 +1,8 @@
+rectangle [-1, 2] x [0.5, 100.0]  prec=128
+   side 0  -1.00000 + 0.500000j -> 2.00000 + 0.500000j   [4 s]
+   side 1  2.00000 + 0.500000j -> 2.00000 + 100.000j   [21 s]
+   side 2  2.00000 + 100.000j -> -1.00000 + 100.000j   [2 s]
+   side 3  -1.00000 + 100.000j -> -1.00000 + 0.500000j   [86 s]
+contour value = [29.0000 +/- 4.31e-5] + [+/- 4.29e-5]j   [113 s]
+zeta_nzeros   = 29   [0 s]
+AUDIT PASSED: two independent Arb code paths -- contour integration of xi'/xi, and Platt/Turing counting on the real line -- return the same integer.
