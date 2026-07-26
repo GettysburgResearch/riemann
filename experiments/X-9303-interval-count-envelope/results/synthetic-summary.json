@@ -1,12 +1,14 @@
 {
+  "certificate_sha256": "5abd5db4c4cea8f2e39219a9cbaebb178866b27eaf596e287a67e77bf39fc27c",
+  "certified_negative_rows": 1,
   "certified_negative_optimal_rows": 1,
-  "full_result_sha256": "53313769851f0b1972cfe4eae4ffa417d7fb7afe060755635c03129c0988b9f3",
+  "full_result_sha256": "d62b635c24199ceecfb0bc2e3b1e97f1999017bae1af697b3d60bc72b8ad714a",
   "profile": [
     {
       "dual_sha256": "f2b5797776dd1f517ae621d1b813dd0dc59bd1278a0f03cf40bb42181888ee70",
-      "forced_count": 20,
-      "increment": 20,
-      "primal_sha256": "172ec2303138376adcb892a99313243fcc4b95ff2756846de99ef2215d1ceace",
+      "forced_count": 22,
+      "increment": 22,
+      "primal_sha256": "3ba9d8eb937798b54aeb098c27ca4517c70bb52710b52e42f239e67e2e40a558",
       "radius": {
         "denominator": 10,
         "numerator": 11
@@ -14,9 +16,9 @@
     },
     {
       "dual_sha256": "0a6dee90b4fc3748eec504e691d6bb442551f03a97a3cea8997ba0eaade39cab",
-      "forced_count": 22,
+      "forced_count": 24,
       "increment": 2,
-      "primal_sha256": "172ec2303138376adcb892a99313243fcc4b95ff2756846de99ef2215d1ceace",
+      "primal_sha256": "3ba9d8eb937798b54aeb098c27ca4517c70bb52710b52e42f239e67e2e40a558",
       "radius": {
         "denominator": 10,
         "numerator": 31
@@ -35,16 +37,16 @@
     {
       "id": "outer-only-hidden",
       "kind": "outer-only-cross-loewner-determinant",
-      "lower_scientific": "2.049935136512567095607559370060E-1",
+      "lower_scientific": "1.438052723804491154394435323930E-1",
       "status": "CERTIFIED_NONNEGATIVE",
-      "upper_scientific": "2.049935136512567095607559370060E-1"
+      "upper_scientific": "1.438052723804491154394435323930E-1"
     },
     {
       "id": "optimal-profile-exposes",
       "kind": "optimal-profile-cross-loewner-determinant",
-      "lower_scientific": "-1.741330934997396143714036589382E+0",
+      "lower_scientific": "-1.973392601411243740077137242258E+0",
       "status": "CERTIFIED_NEGATIVE",
-      "upper_scientific": "-1.741330934997396143714036589382E+0"
+      "upper_scientific": "-1.973392601411243740077137242258E+0"
     }
   ],
   "schema": "riemann.x9303-synthetic-summary.v1",

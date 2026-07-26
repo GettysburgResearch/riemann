@@ -21,6 +21,12 @@ CERT = json.loads(
 )
 
 
+def resign(data: dict) -> dict:
+    data.pop("certificate_sha256", None)
+    data["certificate_sha256"] = VERIFY.canonical_sha(data)
+    return data
+
+
 class IntervalCountProfileTests(unittest.TestCase):
     def test_overlap_profile_exposes_hidden_row(self) -> None:
         result = VERIFY.verify(copy.deepcopy(CERT))
@@ -34,26 +40,26 @@ class IntervalCountProfileTests(unittest.TestCase):
         result = VERIFY.verify(copy.deepcopy(CERT))
         self.assertEqual(
             [(row["forced_count"], row["increment"]) for row in result["profile"]],
-            [(20, 20), (22, 2)],
+            [(22, 22), (24, 2)],
         )
 
     def test_bad_dual_is_rejected(self) -> None:
         bad = copy.deepcopy(CERT)
         bad["profiles"][0]["dual_multipliers"][0]["numerator"] = 2
         with self.assertRaises(VERIFY.CertificateError):
-            VERIFY.verify(bad)
+            VERIFY.verify(resign(bad))
 
     def test_bad_primal_is_rejected(self) -> None:
         bad = copy.deepcopy(CERT)
         bad["profiles"][0]["primal_cell_counts"][1] = 19
         with self.assertRaises(VERIFY.CertificateError):
-            VERIFY.verify(bad)
+            VERIFY.verify(resign(bad))
 
     def test_false_count_is_rejected(self) -> None:
         bad = copy.deepcopy(CERT)
-        bad["count_constraints"][2]["exact_count"] = 23
+        bad["count_constraints"][2]["exact_count"] = 25
         with self.assertRaises(VERIFY.CertificateError):
-            VERIFY.verify(bad)
+            VERIFY.verify(resign(bad))
 
     def test_wrong_gate_is_rejected(self) -> None:
         bad = copy.deepcopy(CERT)
@@ -61,25 +67,45 @@ class IntervalCountProfileTests(unittest.TestCase):
             "CERTIFIED_EXACT_TOTAL_ZERO_COUNT_ZERO_FREE_ENDPOINTS"
         )
         with self.assertRaises(VERIFY.CertificateError):
-            VERIFY.verify(bad)
+            VERIFY.verify(resign(bad))
 
     def test_nonmonotone_profile_is_rejected(self) -> None:
         bad = copy.deepcopy(CERT)
         bad["profiles"][1]["forced_count"] = 19
         with self.assertRaises(VERIFY.CertificateError):
-            VERIFY.verify(bad)
+            VERIFY.verify(resign(bad))
 
     def test_missing_boundary_is_rejected(self) -> None:
         bad = copy.deepcopy(CERT)
         bad["profiles"][0]["radius"] = {"numerator": 6, "denominator": 5}
         with self.assertRaises(VERIFY.CertificateError):
-            VERIFY.verify(bad)
+            VERIFY.verify(resign(bad))
 
     def test_boolean_count_is_rejected(self) -> None:
         bad = copy.deepcopy(CERT)
         bad["count_constraints"][0]["exact_count"] = True
         with self.assertRaises(VERIFY.CertificateError):
+            VERIFY.verify(resign(bad))
+
+    def test_missing_point_digest_is_rejected(self) -> None:
+        bad = copy.deepcopy(CERT)
+        bad["points"][0].pop("point_sha256")
+        with self.assertRaisesRegex(VERIFY.CertificateError, "point_sha256"):
+            VERIFY.verify(resign(bad))
+
+    def test_false_certificate_digest_is_rejected(self) -> None:
+        bad = copy.deepcopy(CERT)
+        bad["certificate_sha256"] = "0" * 64
+        with self.assertRaisesRegex(VERIFY.CertificateError, "certificate_sha256 mismatch"):
             VERIFY.verify(bad)
+
+    def test_production_relabel_is_rejected_without_source_adapter(self) -> None:
+        bad = copy.deepcopy(CERT)
+        bad["classification"] = "RIEMANN_XI_DIRECTED"
+        for constraint in bad["count_constraints"]:
+            constraint["gate"]["status"] = VERIFY.PRODUCTION_COUNT_GATE
+        with self.assertRaisesRegex(VERIFY.CertificateError, "provenance binding"):
+            VERIFY.verify(resign(bad))
 
 
 if __name__ == "__main__":
