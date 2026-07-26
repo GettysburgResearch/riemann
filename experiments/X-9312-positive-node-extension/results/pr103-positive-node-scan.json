@@ -1,0 +1,113 @@
+{
+  "schema": "riemann.x9312-pr103-positive-node-scan.v1",
+  "classification": "EMPIRICAL_ORDINARY_HIGH_PRECISION_NOT_DIRECTED",
+  "counterexample_candidate": null,
+  "exact_ordinate": {
+    "numerator": "20225875608343133989267",
+    "denominator": "4294967296"
+  },
+  "old_x_nodes": [
+    "2^-20", "2^-19", "2^-18", "2^-17", "2^-16", "2^-15",
+    "2^-14", "2^-13", "2^-12", "2^-11", "2^-10", "2^-9",
+    "2^-8", "2^-7", "2^-6", "2^-5"
+  ],
+  "source_directed_basis_sha256": "44a0101cfc8e9c28479ffcfc0d20c6dece6735062fc180ad5f8622986f858a2f",
+  "source_primitive_sha256": "dbb500b7f8a6991777b28bd72ea281216f309c061c810a35884621c41527303f",
+  "source_total_count_sha256": "f713651c7381ce0aae258d66bba242025f855e3e6929d30c1bef902733c9e6cb",
+  "method": "ordinary mpmath Riemann-Siegel completed-xi evaluation at the new node; L-9314 reduced contraction against committed directed old-moment lower endpoints",
+  "rows": [
+    {
+      "x": "1/20", "w": "1/400", "working_decimal_digits": 70,
+      "lower_gap": "11.567116027176753808", "upper_gap": "6159.3046595068192416",
+      "admissible_interval_width": "6170.8717755339959954",
+      "relative_position_from_lower": "0.0018744703257386666668",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "1/10", "w": "1/100", "working_decimal_digits": 60,
+      "lower_gap": "9.1730945325366042807", "upper_gap": "1240.7367828994451076",
+      "admissible_interval_width": "1249.9098774319817119",
+      "relative_position_from_lower": "0.0073390047539933860713",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "1/2", "w": "1/4", "working_decimal_digits": 50,
+      "lower_gap": "0.0348887240573166348411758942979009865",
+      "upper_gap": "0.2751272997766089928014145882152584773",
+      "admissible_interval_width": "0.3100160238339256276425904825131594638",
+      "relative_position_from_lower": "0.11253845406393054046108378327663621",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "1", "w": "1", "working_decimal_digits": 45,
+      "lower_gap": "0.00000405033367723278318232299955307782088",
+      "upper_gap": "0.00001458595279178137018396323091949540187",
+      "admissible_interval_width": "0.00001863628646901415336628623047257322275",
+      "relative_position_from_lower": "0.21733587772258810023331007888684981",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "3/2", "w": "9/4", "working_decimal_digits": 45,
+      "lower_gap": "1.72497601849000259776837378481469759e-9",
+      "upper_gap": "4.63464334312009366717844059207675228e-9",
+      "admissible_interval_width": "6.35961936161009626494681437689144988e-9",
+      "relative_position_from_lower": "0.27123887773894724004559436357666498",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "2", "w": "4", "working_decimal_digits": 40,
+      "lower_gap": "2.85749894842314465019165921759125840e-12",
+      "upper_gap": "6.65247560235077226708107950315341217e-12",
+      "admissible_interval_width": "9.50997455077391691727273872074467058e-12",
+      "relative_position_from_lower": "0.30047387962679698565017805671471314",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "3", "w": "9", "working_decimal_digits": 40,
+      "lower_gap": "1.31596927237017561407547397739414081e-16",
+      "upper_gap": "2.68258914600422406109678267353869365e-16",
+      "admissible_interval_width": "3.99855841837439967517225665093283446e-16",
+      "relative_position_from_lower": "0.32911092815924856383504046647142822",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "4", "w": "16", "working_decimal_digits": 40,
+      "lower_gap": "6.64128787394574785417056647704443438e-20",
+      "upper_gap": "1.26221627693989785149518282465877437e-19",
+      "admissible_interval_width": "1.92634506433447263691223947236321781e-19",
+      "relative_position_from_lower": "0.34476107094759926195264746567485745",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    },
+    {
+      "x": "5", "w": "25", "working_decimal_digits": 40,
+      "lower_gap": "1.49293147674022196744000706379122527e-22",
+      "upper_gap": "2.67588739818309440629462420590811103e-22",
+      "admissible_interval_width": "4.16881887492331637373463126969933631e-22",
+      "relative_position_from_lower": "0.35811857543647390975638486752591312",
+      "classification": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+    }
+  ],
+  "candidate_handoff": [
+    {
+      "x": "1/20",
+      "reason": "smallest scale-invariant lower-boundary position in this scan; raw gap remains strongly positive"
+    },
+    {
+      "x": "1",
+      "reason": "simple exact directed control with lower gap about 4.05e-6"
+    },
+    {
+      "x": "3",
+      "reason": "small raw lower gap about 1.32e-16"
+    },
+    {
+      "x": "4",
+      "reason": "small raw lower gap about 6.64e-20"
+    },
+    {
+      "x": "5",
+      "reason": "smallest raw lower gap, about 1.49e-22; normalized position about 0.358, so this is a precision target rather than evidence of negativity"
+    }
+  ],
+  "proof_boundary": "Every displayed sign is ordinary high-precision reconnaissance. The old moments are directed artifacts, but the new completed-xi value and final contraction are not interval-certified. Raw gaps shrink rapidly with x and must be interpreted together with the full scalar interval width."
+}
