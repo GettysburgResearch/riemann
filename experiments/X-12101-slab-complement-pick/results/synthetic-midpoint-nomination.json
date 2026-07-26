@@ -1,0 +1,14 @@
+{
+  "classification": "DISCOVERY_ONLY_EXACT_VECTOR; exact checker must decide sign",
+  "dyadic_bits": 40,
+  "midpoint_minimum_eigenvalue": "-10.128617782919815",
+  "point_ids": ["p0", "p1", "p2", "p3"],
+  "schema": "riemann.slab-complement-pick.nomination.v1",
+  "vector": [
+    {"im": "-3072849060/1099511627776", "re": "565266141750/1099511627776"},
+    {"im": "209703062077/1099511627776", "re": "-524937976495/1099511627776"},
+    {"im": "-203557363957/1099511627776", "re": "493449142239/1099511627776"},
+    {"im": "-3072849060/1099511627776", "re": "-533777307494/1099511627776"}
+  ],
+  "zero_sum_repair_pivot": 1
+}
