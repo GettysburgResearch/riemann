@@ -37,9 +37,11 @@ class RationalInterval:
         return RationalInterval(self.lower - other.upper, self.upper - other.lower)
 
     def scale(self, scalar: Fraction) -> "RationalInterval":
-        if scalar >= 0:
-            return RationalInterval(self.lower * scalar, self.upper * scalar)
-        return RationalInterval(self.upper * scalar, self.lower * scalar)
+        return (
+            RationalInterval(self.lower * scalar, self.upper * scalar)
+            if scalar >= 0
+            else RationalInterval(self.upper * scalar, self.lower * scalar)
+        )
 
 
 @dataclass(frozen=True)
@@ -61,17 +63,16 @@ def exact_int(value: Any, name: str) -> int:
 def fraction(raw: Any, name: str) -> Fraction:
     if not isinstance(raw, dict):
         raise CertificateError(f"{name} must be an object")
-    numerator = raw.get("numerator")
-    denominator = raw.get("denominator")
+    num, den = raw.get("numerator"), raw.get("denominator")
     if (
-        isinstance(numerator, bool)
-        or not isinstance(numerator, int)
-        or isinstance(denominator, bool)
-        or not isinstance(denominator, int)
-        or denominator <= 0
+        isinstance(num, bool)
+        or not isinstance(num, int)
+        or isinstance(den, bool)
+        or not isinstance(den, int)
+        or den <= 0
     ):
         raise CertificateError(f"bad rational at {name}")
-    return Fraction(numerator, denominator)
+    return Fraction(num, den)
 
 
 def parse_interval(raw: Any, name: str) -> RationalInterval:
@@ -83,14 +84,10 @@ def parse_interval(raw: Any, name: str) -> RationalInterval:
     )
 
 
-def interval_subset(inner: RationalInterval, outer: RationalInterval) -> bool:
-    return outer.lower <= inner.lower <= inner.upper <= outer.upper
-
-
 def square_interval(value: RationalInterval) -> RationalInterval:
-    candidates = (value.lower * value.lower, value.upper * value.upper)
-    lower = Fraction(0) if value.lower <= 0 <= value.upper else min(candidates)
-    return RationalInterval(lower, max(candidates))
+    endpoint_squares = (value.lower * value.lower, value.upper * value.upper)
+    low = Fraction(0) if value.lower <= 0 <= value.upper else min(endpoint_squares)
+    return RationalInterval(low, max(endpoint_squares))
 
 
 def modulus_square(point: dict[str, Any]) -> RationalInterval:
@@ -110,27 +107,26 @@ class ExactLogEncloser:
         self.log2 = self._unit(Fraction(2))
 
     def _unit(self, value: Fraction) -> RationalInterval:
-        if not (Fraction(1) <= value <= Fraction(2)):
+        if not (1 <= value <= 2):
             raise CertificateError("internal logarithm reduction failed")
         z = (value - 1) / (value + 1)
         z2 = z * z
         accumulator = Fraction(1, 2 * self.terms - 1)
         for j in range(self.terms - 2, -1, -1):
             accumulator = Fraction(1, 2 * j + 1) + z2 * accumulator
-        lower = 2 * z * accumulator
+        low = 2 * z * accumulator
         tail = (
             Fraction(0)
             if z == 0
             else 2 * z ** (2 * self.terms + 1)
             / ((2 * self.terms + 1) * (1 - z2))
         )
-        return RationalInterval(lower, lower + tail)
+        return RationalInterval(low, low + tail)
 
     def __call__(self, value: Fraction) -> RationalInterval:
         if value <= 0:
             raise CertificateError("logarithm argument must be positive")
-        reduced = value
-        exponent = 0
+        reduced, exponent = value, 0
         while reduced >= 2:
             reduced /= 2
             exponent += 1
@@ -141,68 +137,58 @@ class ExactLogEncloser:
 
 
 def rational_to_decimal_interval(value: Fraction, precision: int) -> DecimalInterval:
-    with localcontext() as context:
-        context.prec = precision
-        context.rounding = ROUND_FLOOR
-        lower = Decimal(value.numerator) / Decimal(value.denominator)
-    with localcontext() as context:
-        context.prec = precision
-        context.rounding = ROUND_CEILING
-        upper = Decimal(value.numerator) / Decimal(value.denominator)
-    return DecimalInterval(lower, upper)
+    with localcontext() as ctx:
+        ctx.prec, ctx.rounding = precision, ROUND_FLOOR
+        low = Decimal(value.numerator) / Decimal(value.denominator)
+    with localcontext() as ctx:
+        ctx.prec, ctx.rounding = precision, ROUND_CEILING
+        high = Decimal(value.numerator) / Decimal(value.denominator)
+    return DecimalInterval(low, high)
 
 
 def decimal_add(left: DecimalInterval, right: DecimalInterval, precision: int) -> DecimalInterval:
-    with localcontext() as context:
-        context.prec = precision
-        context.rounding = ROUND_FLOOR
-        lower = left.lower + right.lower
-    with localcontext() as context:
-        context.prec = precision
-        context.rounding = ROUND_CEILING
-        upper = left.upper + right.upper
-    return DecimalInterval(lower, upper)
+    with localcontext() as ctx:
+        ctx.prec, ctx.rounding = precision, ROUND_FLOOR
+        low = left.lower + right.lower
+    with localcontext() as ctx:
+        ctx.prec, ctx.rounding = precision, ROUND_CEILING
+        high = left.upper + right.upper
+    return DecimalInterval(low, high)
 
 
 def decimal_multiply(left: DecimalInterval, right: DecimalInterval, precision: int) -> DecimalInterval:
-    lowers: list[Decimal] = []
-    uppers: list[Decimal] = []
+    lows: list[Decimal] = []
+    highs: list[Decimal] = []
     for x in (left.lower, left.upper):
         for y in (right.lower, right.upper):
-            with localcontext() as context:
-                context.prec = precision
-                context.rounding = ROUND_FLOOR
-                lowers.append(x * y)
-            with localcontext() as context:
-                context.prec = precision
-                context.rounding = ROUND_CEILING
-                uppers.append(x * y)
-    return DecimalInterval(min(lowers), max(uppers))
-
-
-def decimal_to_fraction(value: Decimal) -> Fraction:
-    return Fraction(str(value))
+            with localcontext() as ctx:
+                ctx.prec, ctx.rounding = precision, ROUND_FLOOR
+                lows.append(x * y)
+            with localcontext() as ctx:
+                ctx.prec, ctx.rounding = precision, ROUND_CEILING
+                highs.append(x * y)
+    return DecimalInterval(min(lows), max(highs))
 
 
 def basis_vector(nodes: list[Fraction], degree: int) -> list[Fraction]:
-    output: list[Fraction] = []
+    result: list[Fraction] = []
     for i, node in enumerate(nodes):
         denominator = Fraction(1)
         for j, other in enumerate(nodes):
             if i != j:
                 denominator *= other - node
-        output.append(-((-node) ** degree) / denominator)
-    return output
+        result.append(-((-node) ** degree) / denominator)
+    return result
 
 
 def load_json(path: Path) -> dict[str, Any]:
     try:
-        value = json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise CertificateError(f"cannot load {path}: {exc}") from exc
-    if not isinstance(value, dict):
+    if not isinstance(data, dict):
         raise CertificateError(f"{path} must contain an object")
-    return value
+    return data
 
 
 def file_sha256(path: Path) -> str:
@@ -216,19 +202,22 @@ def load_basis(path: Path) -> tuple[dict[str, Any], list[RationalInterval]]:
     rows = data.get("basis_rows")
     if not isinstance(rows, list) or len(rows) != 15:
         raise CertificateError("expected exactly fifteen old basis rows")
-    output: list[RationalInterval] = []
+    moments: list[RationalInterval] = []
     for index, row in enumerate(rows):
         if not isinstance(row, dict) or exact_int(row.get("degree"), "degree") != index:
             raise CertificateError("old basis degrees must be consecutive")
         try:
-            lo = Fraction(row["lower_exact_decimal"])
-            hi = Fraction(row["upper_exact_decimal"])
+            moments.append(
+                RationalInterval(
+                    Fraction(row["lower_exact_decimal"]),
+                    Fraction(row["upper_exact_decimal"]),
+                )
+            )
         except (KeyError, ValueError, ZeroDivisionError) as exc:
             raise CertificateError("invalid old basis decimal endpoint") from exc
-        output.append(RationalInterval(lo, hi))
     if data.get("verdict") != "CERTIFIED_NONNEGATIVE_ENTIRE_MONOMIAL_POSITIVE_PORTFOLIO_CONE":
         raise CertificateError("old basis table lacks its exact nonnegative verdict")
-    return data, output
+    return data, moments
 
 
 def zero_point(primitive: dict[str, Any], name: str) -> dict[str, Any]:
@@ -238,8 +227,7 @@ def zero_point(primitive: dict[str, Any], name: str) -> dict[str, Any]:
     if not isinstance(points, list) or len(points) != 1 or not isinstance(points[0], dict):
         raise CertificateError(f"{name} must contain exactly one point")
     point = points[0]
-    x = fraction(point.get("x"), f"{name}.x")
-    if x != 0:
+    if fraction(point.get("x"), f"{name}.x") != 0:
         raise CertificateError(f"{name} point is not x=0")
     if point.get("functional_equation_residual_contains_zero") is not True:
         raise CertificateError(f"{name} functional-equation gate failed")
@@ -259,20 +247,20 @@ def compare_zero_primitives(low: dict[str, Any], high: dict[str, Any]) -> None:
     low_point = zero_point(low, "low zero primitive")
     high_point = zero_point(high, "high zero primitive")
     for component in ("real", "imag"):
-        low_interval = parse_interval(low_point["xi_rectangle"][component], f"low.{component}")
-        high_interval = parse_interval(high_point["xi_rectangle"][component], f"high.{component}")
-        if not interval_subset(high_interval, low_interval):
+        outer = parse_interval(low_point["xi_rectangle"][component], f"low.{component}")
+        inner = parse_interval(high_point["xi_rectangle"][component], f"high.{component}")
+        if not (outer.lower <= inner.lower <= inner.upper <= outer.upper):
             raise CertificateError(f"high-precision {component} interval is not nested")
 
 
 def deflation_shells(certificate: dict[str, Any]) -> list[tuple[int, Fraction]]:
-    windows = certificate.get("count_windows")
-    if not isinstance(windows, list) or not windows:
+    raw = certificate.get("count_windows")
+    if not isinstance(raw, list) or not raw:
         raise CertificateError("count windows missing")
-    ordered = sorted(windows, key=lambda item: fraction(item.get("radius"), "radius"))
-    output: list[tuple[int, Fraction]] = []
+    windows = sorted(raw, key=lambda item: fraction(item.get("radius"), "radius"))
+    shells: list[tuple[int, Fraction]] = []
     previous = 0
-    for index, window in enumerate(ordered):
+    for index, window in enumerate(windows):
         gate = window.get("gate")
         if not isinstance(gate, dict) or gate.get("status") != "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND":
             raise CertificateError("total-zero-count semantic gate mismatch")
@@ -280,21 +268,24 @@ def deflation_shells(certificate: dict[str, Any]) -> list[tuple[int, Fraction]]:
         if count < previous:
             raise CertificateError("count windows are not nested")
         radius = fraction(window.get("radius"), f"count_windows[{index}].radius")
-        output.append((count - previous, radius * radius))
+        shells.append((count - previous, radius * radius))
         previous = count
-    return output
+    return shells
 
 
 def residual_interval(
-    point: dict[str, Any], node: Fraction, shells: list[tuple[int, Fraction]], log: ExactLogEncloser
+    point: dict[str, Any],
+    node: Fraction,
+    shells: list[tuple[int, Fraction]],
+    log: ExactLogEncloser,
 ) -> RationalInterval:
     h = modulus_square(point)
     if h.lower <= 0:
         raise CertificateError("direct-xi modulus interval touches zero")
-    residual = RationalInterval(log(h.lower).lower, log(h.upper).upper)
+    result = RationalInterval(log(h.lower).lower, log(h.upper).upper)
     for count, bound in shells:
-        residual = residual.sub(log(node + bound).scale(Fraction(count)))
-    return residual
+        result = result.sub(log(node + bound).scale(Fraction(count)))
+    return result
 
 
 def hankel(values: list[Fraction], size: int, offset: int) -> list[list[Fraction]]:
@@ -317,7 +308,7 @@ def exact_ldl_positive_pivots(matrix: list[list[Fraction]]) -> list[Fraction]:
     for i in range(n):
         lower[i][i] = Fraction(1)
         pivots[i] = matrix[i][i] - sum(
-            lower[i][k] * lower[i][k] * pivots[k] for k in range(i)
+            lower[i][k] ** 2 * pivots[k] for k in range(i)
         )
         if pivots[i] <= 0:
             raise CertificateError(f"nonpositive exact LDL pivot at index {i}")
@@ -336,26 +327,26 @@ def maximum_row_sum(matrix: list[list[Fraction]]) -> Fraction:
 def solve_linear(matrix: list[list[Fraction]], rhs: list[Fraction]) -> list[Fraction]:
     n = len(matrix)
     augmented = [list(row) + [rhs[i]] for i, row in enumerate(matrix)]
-    for column in range(n):
-        pivot = next((row for row in range(column, n) if augmented[row][column] != 0), None)
+    for col in range(n):
+        pivot = next((r for r in range(col, n) if augmented[r][col]), None)
         if pivot is None:
             raise CertificateError("singular Schur block")
-        augmented[column], augmented[pivot] = augmented[pivot], augmented[column]
-        scale = augmented[column][column]
-        augmented[column] = [value / scale for value in augmented[column]]
+        augmented[col], augmented[pivot] = augmented[pivot], augmented[col]
+        scale = augmented[col][col]
+        augmented[col] = [value / scale for value in augmented[col]]
         for row in range(n):
-            if row == column:
-                continue
-            factor = augmented[row][column]
-            if factor:
+            if row != col and augmented[row][col]:
+                factor = augmented[row][col]
                 augmented[row] = [
-                    x - factor * y for x, y in zip(augmented[row], augmented[column])
+                    x - factor * y for x, y in zip(augmented[row], augmented[col])
                 ]
     return [augmented[i][-1] for i in range(n)]
 
 
 def interval_quadratic(
-    lower: list[list[Fraction]], upper: list[list[Fraction]], vector: list[Fraction]
+    lower: list[list[Fraction]],
+    upper: list[list[Fraction]],
+    vector: list[Fraction],
 ) -> RationalInterval:
     result = RationalInterval(Fraction(0), Fraction(0))
     for i, x in enumerate(vector):
@@ -364,14 +355,14 @@ def interval_quadratic(
     return result
 
 
-def decimal_string(value: Fraction, digits: int = 90) -> str:
-    with localcontext() as context:
-        context.prec = digits
-        return str(Decimal(value.numerator) / Decimal(value.denominator))
-
-
 def fraction_json(value: Fraction) -> dict[str, str]:
     return {"numerator": str(value.numerator), "denominator": str(value.denominator)}
+
+
+def decimal_string(value: Fraction, digits: int = 90) -> str:
+    with localcontext() as ctx:
+        ctx.prec = digits
+        return str(Decimal(value.numerator) / Decimal(value.denominator))
 
 
 def verify(
@@ -384,9 +375,8 @@ def verify(
     delta: Fraction,
 ) -> dict[str, Any]:
     old_certificate = load_json(old_certificate_path)
-    old_basis_data, old_moments = load_basis(old_basis_path)
-    zero_low = load_json(zero_low_path)
-    zero_high = load_json(zero_high_path)
+    old_basis, old_moments = load_basis(old_basis_path)
+    zero_low, zero_high = load_json(zero_low_path), load_json(zero_high_path)
     compare_zero_primitives(zero_low, zero_high)
 
     if old_certificate.get("classification") != "RIEMANN_XI_DIRECTED":
@@ -396,15 +386,18 @@ def verify(
     for field in ("ordinate", "common_xi_scale_power_of_two"):
         if old_certificate.get(field) != zero_high.get(field):
             raise CertificateError(f"zero anchor and old certificate {field} mismatch")
-    declared_certificate = old_basis_data.get("source_certificate_sha256")
-    actual_certificate = old_certificate.get("certificate_sha256")
-    if declared_certificate and declared_certificate != actual_certificate:
-        raise CertificateError("old basis certificate digest mismatch")
-    declared_primitive = old_basis_data.get("primitive_sha256")
+
+    old_file_digest = file_sha256(old_certificate_path)
+    old_internal_digest = old_certificate.get("certificate_sha256")
+    declared_digest = old_basis.get("source_certificate_sha256")
+    if declared_digest not in {old_file_digest, old_internal_digest}:
+        raise CertificateError("old basis certificate digest matches neither preserved convention")
     source = old_certificate.get("source")
-    if declared_primitive and isinstance(source, dict) and declared_primitive != source.get("primitive_sha256"):
+    declared_primitive = old_basis.get("primitive_sha256")
+    if not isinstance(source, dict) or declared_primitive != source.get("primitive_sha256"):
         raise CertificateError("old basis primitive digest mismatch")
-    actual_source_file = file_sha256(old_certificate_path)
+    if old_basis.get("ordinate") != old_certificate.get("ordinate"):
+        raise CertificateError("old basis ordinate mismatch")
 
     raw_points = old_certificate.get("points")
     if not isinstance(raw_points, list) or len(raw_points) != 16:
@@ -414,11 +407,12 @@ def verify(
     if old_nodes[0] <= 0 or any(old_nodes[i] >= old_nodes[i + 1] for i in range(15)):
         raise CertificateError("old nodes must be strictly increasing and positive")
 
-    high_zero_point = zero_point(zero_high, "high zero primitive")
     shells = deflation_shells(old_certificate)
     log = ExactLogEncloser(log_terms)
     nodes = [Fraction(0)] + old_nodes
-    residuals = [residual_interval(high_zero_point, Fraction(0), shells, log)] + [
+    residuals = [
+        residual_interval(zero_point(zero_high, "high zero primitive"), Fraction(0), shells, log)
+    ] + [
         residual_interval(point, node, shells, log)
         for point, node in zip(old_points, old_nodes)
     ]
@@ -428,75 +422,64 @@ def verify(
         raise CertificateError("zero-anchor basis vector is not zero sum")
     b0_decimal = DecimalInterval(Decimal(0), Decimal(0))
     for coefficient, residual in zip(beta0, residuals):
-        coefficient_decimal = rational_to_decimal_interval(coefficient, decimal_precision)
-        residual_decimal = DecimalInterval(
-            rational_to_decimal_interval(residual.lower, decimal_precision).lower,
-            rational_to_decimal_interval(residual.upper, decimal_precision).upper,
-        )
-        b0_decimal = decimal_add(
-            b0_decimal,
-            decimal_multiply(coefficient_decimal, residual_decimal, decimal_precision),
+        term = decimal_multiply(
+            rational_to_decimal_interval(coefficient, decimal_precision),
+            DecimalInterval(
+                rational_to_decimal_interval(residual.lower, decimal_precision).lower,
+                rational_to_decimal_interval(residual.upper, decimal_precision).upper,
+            ),
             decimal_precision,
         )
-    b0 = RationalInterval(
-        decimal_to_fraction(b0_decimal.lower), decimal_to_fraction(b0_decimal.upper)
-    )
+        b0_decimal = decimal_add(b0_decimal, term, decimal_precision)
+    b0 = RationalInterval(Fraction(str(b0_decimal.lower)), Fraction(str(b0_decimal.upper)))
 
-    new_moments = [b0] + old_moments
-    lower_values = [value.lower for value in new_moments]
-    upper_values = [value.upper for value in new_moments]
-    midpoints = [(lo + hi) / 2 for lo, hi in zip(lower_values, upper_values)]
-    radii = [(hi - lo) / 2 for lo, hi in zip(lower_values, upper_values)]
+    moments = [b0] + old_moments
+    lows = [item.lower for item in moments]
+    highs = [item.upper for item in moments]
+    mids = [(lo + hi) / 2 for lo, hi in zip(lows, highs)]
+    radii = [(hi - lo) / 2 for lo, hi in zip(lows, highs)]
 
-    midpoint_h0 = hankel(midpoints, 8, 0)
-    midpoint_h1 = hankel(midpoints, 8, 1)
-    radius_h0 = hankel(radii, 8, 0)
-    radius_h1 = hankel(radii, 8, 1)
-    lower_h0 = hankel(lower_values, 8, 0)
-    upper_h0 = hankel(upper_values, 8, 0)
+    midpoint_h0, midpoint_h1 = hankel(mids, 8, 0), hankel(mids, 8, 1)
+    radius_h0, radius_h1 = hankel(radii, 8, 0), hankel(radii, 8, 1)
+    lower_h0, upper_h0 = hankel(lows, 8, 0), hankel(highs, 8, 0)
 
-    schur_a = [[midpoints[i + j + 2] for j in range(7)] for i in range(7)]
-    schur_v = [midpoints[i + 1] for i in range(7)]
-    schur_c = solve_linear(schur_a, schur_v)
-    schur_theta = sum(x * y for x, y in zip(schur_v, schur_c))
-    schur_vector = [Fraction(1)] + [-value for value in schur_c]
-    schur_quadratic = interval_quadratic(lower_h0, upper_h0, schur_vector)
+    block = [[mids[i + j + 2] for j in range(7)] for i in range(7)]
+    edge = [mids[i + 1] for i in range(7)]
+    schur_coefficients = solve_linear(block, edge)
+    theta = sum(x * y for x, y in zip(edge, schur_coefficients))
+    witness = [Fraction(1)] + [-value for value in schur_coefficients]
+    witness_interval = interval_quadratic(lower_h0, upper_h0, witness)
 
-    if schur_quadratic.upper < 0:
+    positive_proof: dict[str, Any] | None = None
+    if witness_interval.upper < 0:
         verdict = "CERTIFIED_NEGATIVE_ZERO_ANCHOR_WITNESS"
-        positive_proof = None
     else:
         try:
-            pivots_h0 = exact_ldl_positive_pivots(subtract_diagonal(midpoint_h0, delta))
-            pivots_h1 = exact_ldl_positive_pivots(subtract_diagonal(midpoint_h1, delta))
-            epsilon_h0 = maximum_row_sum(radius_h0)
-            epsilon_h1 = maximum_row_sum(radius_h1)
-            if epsilon_h0 >= delta or epsilon_h1 >= delta:
+            h0_pivots = exact_ldl_positive_pivots(subtract_diagonal(midpoint_h0, delta))
+            h1_pivots = exact_ldl_positive_pivots(subtract_diagonal(midpoint_h1, delta))
+            h0_radius, h1_radius = maximum_row_sum(radius_h0), maximum_row_sum(radius_h1)
+            if h0_radius >= delta or h1_radius >= delta:
                 raise CertificateError("moment interval radius is not below delta")
             positive_proof = {
                 "delta": fraction_json(delta),
-                "H0_pivots": [fraction_json(value) for value in pivots_h0],
-                "H1_pivots": [fraction_json(value) for value in pivots_h1],
-                "H0_radius": fraction_json(epsilon_h0),
-                "H1_radius": fraction_json(epsilon_h1),
-                "H0_margin": fraction_json(delta - epsilon_h0),
-                "H1_margin": fraction_json(delta - epsilon_h1),
+                "H0_pivots": [fraction_json(value) for value in h0_pivots],
+                "H1_pivots": [fraction_json(value) for value in h1_pivots],
+                "H0_radius": fraction_json(h0_radius),
+                "H1_radius": fraction_json(h1_radius),
+                "H0_margin": fraction_json(delta - h0_radius),
+                "H1_margin": fraction_json(delta - h1_radius),
             }
             verdict = "CERTIFIED_POSITIVE_FULL_DEGREE15_ZERO_ANCHORED_CONE"
         except CertificateError:
-            positive_proof = None
             verdict = "UNRESOLVED_ZERO_ANCHOR_CONE"
 
     proof_object = {
-        "b0": {
-            "lower": str(b0_decimal.lower),
-            "upper": str(b0_decimal.upper),
-        },
-        "schur_theta_midpoint": fraction_json(schur_theta),
-        "schur_vector": [fraction_json(value) for value in schur_vector],
-        "schur_quadratic": {
-            "lower": fraction_json(schur_quadratic.lower),
-            "upper": fraction_json(schur_quadratic.upper),
+        "b0": {"lower": str(b0_decimal.lower), "upper": str(b0_decimal.upper)},
+        "theta": fraction_json(theta),
+        "witness": [fraction_json(value) for value in witness],
+        "witness_interval": {
+            "lower": fraction_json(witness_interval.lower),
+            "upper": fraction_json(witness_interval.upper),
         },
         "positive_proof": positive_proof,
     }
@@ -511,30 +494,36 @@ def verify(
         "parent_halfline_claim": "L-9310",
         "ordinate": old_certificate.get("ordinate"),
         "old_node_count": 16,
-        "new_node": {"x": {"numerator": 0, "denominator": 1}, "u": {"numerator": 0, "denominator": 1}},
+        "new_node": {
+            "x": {"numerator": 0, "denominator": 1},
+            "u": {"numerator": 0, "denominator": 1},
+        },
         "degree_bound": 15,
         "old_basis_sha256": file_sha256(old_basis_path),
-        "old_certificate_file_sha256": actual_source_file,
-        "old_certificate_sha256": actual_certificate,
+        "old_certificate_file_sha256": old_file_digest,
+        "old_certificate_internal_sha256": old_internal_digest,
+        "accepted_basis_source_digest_convention": (
+            "file_sha256" if declared_digest == old_file_digest else "internal_certificate_sha256"
+        ),
         "zero_low_sha256": file_sha256(zero_low_path),
         "zero_high_sha256": file_sha256(zero_high_path),
         "zero_precision_bits": [zero_low.get("precision_bits"), zero_high.get("precision_bits")],
         "b0_interval": {"lower": str(b0_decimal.lower), "upper": str(b0_decimal.upper)},
         "b0_width": str(b0_decimal.upper - b0_decimal.lower),
-        "schur_theta_midpoint_decimal": decimal_string(schur_theta),
-        "schur_midpoint_gap_decimal": decimal_string((b0.lower + b0.upper) / 2 - schur_theta),
-        "schur_witness_polynomial_coefficients": [fraction_json(value) for value in schur_vector],
+        "schur_theta_midpoint_decimal": decimal_string(theta),
+        "schur_midpoint_gap_decimal": decimal_string((b0.lower + b0.upper) / 2 - theta),
+        "schur_witness_polynomial_coefficients": [fraction_json(value) for value in witness],
         "schur_witness_quadratic_interval": {
-            "lower_decimal": decimal_string(schur_quadratic.lower),
-            "upper_decimal": decimal_string(schur_quadratic.upper),
+            "lower_decimal": decimal_string(witness_interval.lower),
+            "upper_decimal": decimal_string(witness_interval.upper),
         },
         "positive_proof": positive_proof,
         "exact_proof_object_sha256": proof_digest,
         "verdict": verdict,
         "proof_boundary": (
-            "Directed completed-xi rectangles, exact rational logarithm tails, directed Decimal final contraction, "
-            "and exact rational moment-matrix verification. The RH implication inherits the parent canonical-product "
-            "and total-count-deflation claims."
+            "Directed completed-xi rectangles, exact rational logarithm tails, directed Decimal final "
+            "contraction, and exact rational moment-matrix verification. The RH implication inherits "
+            "the parent canonical-product and total-count-deflation claims."
         ),
     }
 
