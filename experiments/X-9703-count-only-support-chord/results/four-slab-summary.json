@@ -1,0 +1,64 @@
+{
+  "schema": "riemann.x9703-four-slab-summary.v1",
+  "classification": "EMPIRICAL_HIGH_PRECISION_NOT_CERTIFIED",
+  "alpha_grid": [
+    "1/8", "3/16", "1/4", "3/8", "1/2", "3/4", "1",
+    "3/2", "2", "3", "4", "6", "8", "12", "16"
+  ],
+  "row_count_per_slab": 455,
+  "slabs": [
+    {
+      "id": "pr71",
+      "total_count": 172,
+      "support_gap": "7351311226564792773225/18446744073709551616",
+      "raw_negative_rows": 131,
+      "adjusted_negative_rows": 0,
+      "minimum_row_alphas": ["1/8", "3/16", "1/4"],
+      "minimum_raw_chord": "-0.24753826441105625314230454314700194030504423919533637",
+      "phi0": "-0.0052434708873301341161390070616973854034085685479481731",
+      "minimum_adjusted_chord": "0.65433872820972681483360467146494834908122955105174941",
+      "minimum_geometry_normalized_adjusted": "2239.391858033850182269461801038233025457880226216428"
+    },
+    {
+      "id": "height-1e13",
+      "total_count": 4467,
+      "support_gap": "998001/4",
+      "raw_negative_rows": 131,
+      "adjusted_negative_rows": 0,
+      "minimum_row_alphas": ["1/8", "3/16", "1/4"],
+      "minimum_raw_chord": "-6.3701287160240132871391350368160635974564435596492154",
+      "phi0": "-0.0052434708873301341161390070616973854034085685479472597",
+      "minimum_adjusted_chord": "17.052455737679695809653809507786156999569632144031181",
+      "minimum_geometry_normalized_adjusted": "58359.881346046342092935764099799407594066508551333738"
+    },
+    {
+      "id": "height-1e14",
+      "total_count": 242,
+      "support_gap": "625",
+      "raw_negative_rows": 131,
+      "adjusted_negative_rows": 0,
+      "minimum_row_alphas": ["1/8", "3/16", "1/4"],
+      "minimum_raw_chord": "-0.34502719468375016674651126294093929780608785120596734",
+      "phi0": "-0.0052434708873301341161390070616973854034085685479481731",
+      "minimum_adjusted_chord": "0.92389276005014228935912844598982796981878573739749056",
+      "minimum_geometry_normalized_adjusted": "3161.9065712545959206418472281051533458364760706730559"
+    },
+    {
+      "id": "height-1e15",
+      "total_count": 52,
+      "support_gap": "25",
+      "raw_negative_rows": 132,
+      "adjusted_negative_rows": 0,
+      "minimum_row_alphas": ["1/8", "3/16", "1/4"],
+      "minimum_raw_chord": "-0.075685348218373712081474692372877187011646883329323766",
+      "phi0": "-0.0052434708873301341161390070616973854034085685479481731",
+      "minimum_adjusted_chord": "0.19697513792279326195775367483538685396559868116398124",
+      "minimum_geometry_normalized_adjusted": "674.12259290575923781970921168022047224105593742538707"
+    }
+  ],
+  "total_raw_negative_rows": 525,
+  "total_adjusted_negative_rows": 0,
+  "counterexample_candidate": null,
+  "interpretation": "Raw support chords frequently look negative. The exact total-count correction is load-bearing and restores positivity in every tested row.",
+  "warning": "Ordinary high-precision arithmetic. Counts are imported from the X-5604 ledger and are not recomputed in this artifact."
+}
