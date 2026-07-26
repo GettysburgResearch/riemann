@@ -31,7 +31,7 @@ logical gates.
 
 ```bash
 python verify_slab_complement.py \
-  certificates/synthetic-hidden-offline.json
+  certificates/synthetic-strict-separation.json
 
 python verify_slab_complement.py \
   certificates/synthetic-line-zero-control.json
@@ -40,13 +40,13 @@ python -m unittest discover -s tests -v
 python -m compileall -q verify_slab_complement.py tests
 
 # Discovery only: floating eigensolve -> exact zero-sum dyadic vector
-python rank_midpoint.py certificates/synthetic-hidden-offline.json \
+python rank_midpoint.py certificates/synthetic-strict-separation.json \
   --bits 40 --output results/synthetic-midpoint-nomination.json
 ```
 
 ## Exact strict separation
 
-The hidden-offline synthetic packet has
+The strict-separation synthetic packet has
 
 ```text
 ordinary Pick:
