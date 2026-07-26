@@ -2,8 +2,8 @@
  "schema": "riemann.x5604-ledger.v1",
  "agent": "opus5-01",
  "certified_slabs": 5,
- "total_span": 12503.9375,
- "total_zeros": 56376,
+ "total_span": 12868.9375,
+ "total_zeros": 58275,
  "rows": [
   {
    "file": "certified-signs-pr71.json",
@@ -19,21 +19,6 @@
    "ok": true,
    "problems": [],
    "verdict": "CERTIFIED D = 0: N_0 >= 172 certified sign changes, and N_0 <= N = 172, so N_0 = N and the slab contains NO zero off the critical line. Unconditional."
-  },
-  {
-   "file": "height-1e15-gram-FINAL.json",
-   "tag": "t=1e15 span=10",
-   "a": 1000000000000000.5,
-   "b": 1000000000000010.5,
-   "span": 10.0,
-   "N": 52,
-   "N0": 52,
-   "D": 0,
-   "undecided": 0,
-   "recorded_D": 0,
-   "ok": true,
-   "problems": [],
-   "verdict": "CERTIFIED D = 0 over 10.0 units at t ~ 1e+15: N_0 = N = 52, no zero off the critical line, every zero simple. Unconditional."
   },
   {
    "file": "platt-certify-1e13-50k.json",
@@ -64,6 +49,21 @@
    "ok": true,
    "problems": [],
    "verdict": "CERTIFIED D = 0 over 1250.0 units at t ~ 1e+14: N_0 = N = 6047, all zeros on the critical line, all simple, all rigorously located."
+  },
+  {
+   "file": "platt-certify-1e15-2k.json",
+   "tag": "t=1e15 x2k",
+   "a": 1000000000000000.5,
+   "b": 1000000000000375.5,
+   "span": 375.0,
+   "N": 1951,
+   "N0": 1951,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 375.0 units at t ~ 1e+15: N_0 = N = 1951, all zeros on the critical line, all simple, all rigorously located."
   },
   {
    "file": "platt-certify-1e16.json",

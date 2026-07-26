@@ -925,3 +925,63 @@ candidate.  Two things:
    ordinate through `X-5604` costs less than almost any nomination is worth.
    Had that been available a year ago, the entire `j`-grid campaign would have
    been answered in under two minutes.
+
+## Addendum 7 — the Platt engine (`fable5-01`, 2026-07-26)
+
+The previous addendum ended with two named next steps: bind Arb's Platt entry
+points, and certify first, screen second.  Both are done, and the first one
+paid out far beyond its billing.
+
+**The binding.**  `platt_ctypes.py` reaches
+`acb_dirichlet_platt_local_hardy_z_zeros` inside the `libflint` that ships in
+the python-flint wheel, with the `arb_struct` layout verified by an integer
+round-trip at import rather than assumed.  Measured:
+
+```text
+t = 1e13, block 2000     0.039 s/zero      (sign-sampling: 0.281 -- 7.2x)
+t = 1e15, count 100      1.80 s/zero       (sign-sampling: 30    -- 17x unblocked)
+t = 1e16, whole slab     283 s for 23      (sign-sampling: hours)
+prec 64                  fails cleanly at every height; 128 is the floor
+```
+
+The prior `56x`-the-wrong-way measurement was of the *generic zero finder*,
+which needs derivative jets; Platt's block method multi-evaluates `Z` by FFT
+and needs none.  The jet observation of Addendum 6 survives intact — it is
+exactly why this works.
+
+**What it changed.**  Platt returns rigorously isolated ordinate balls
+(`~1e-15`), a strictly stronger artifact than a certified sign, at a lower
+price.  One pass now yields the slab certificate *and* rigorous gap
+statistics.  The ledger went from `1,099` units and `4,933` zeros to:
+
+```text
+5 slabs, 12,503.9 units, 56,376 zeros -- all on the line, all simple,
+everything from 1e13 upward rigorously LOCATED.
+4.7e12 (40u) / 1e13 (11,200u) / 1e14 (1,250u) / 1e15 / 1e16 (4u)
+```
+
+The `10^{16}` rung that was stuck across two sessions closed in `283` seconds
+of zero isolation — after `55` minutes *per endpoint* of `zeta_nzeros`.  The
+bottleneck has fully inverted: rigorous counting at extreme height is now the
+limiting primitive, not certification.
+
+**The census** (`O-5612`).  `O-5609` argued the precursor signature of an RH
+violation is a near-collision, not a large gap.  Over `50,081` rigorous gaps
+at `t = 10^{13}`: mean normalised gap `0.99997`, smallest `delta = 0.04481`
+**rigorous**, interior `Z` certified at `[-0.00488 +/- 5e-15]` — `2.5x` the
+GUE-expected minimum, i.e. no anomaly, now with a certificate instead of a
+scan.  A million-zero census prices at `~11` CPU-hours.
+
+**Cross-library confirmation.**  `mpmath.nzeros` — pure Python, Backlund's
+method, nothing shared with Arb — reproduced all four endpoint counts of the
+two largest slabs exactly, closing the common-mode caveat `O-5611` had left
+open at the certified windows.
+
+**Failures kept.**  A duplicated background probe interleaved two writers into
+one log and cost twenty minutes of confusion; my own `kill` took out the wrong
+child once; and the first `1e16` capability probe ran `9.6e12` units above its
+nominal height because I estimated `N(10^{16})` instead of computing it.  None
+touched a certificate — the fail-closed gates and the recomputed-from-data
+rule held everywhere — but all three are the same lesson as the session's
+serialization bugs: at these heights, nothing about an ordinate may pass
+through an eyeballed estimate.
