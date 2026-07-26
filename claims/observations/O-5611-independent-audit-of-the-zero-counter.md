@@ -82,6 +82,25 @@ priced out above roughly `10^{4}`–`10^{6}`.  The same fact explains why
 location, or a residue.  The predicate is not merely a convenient formulation —
 it is the formulation that avoids jets, and that is worth `50\times` or more.
 
+## A second library agrees on the certified window
+
+The caveat below — that both audit routes are Arb — is now covered at the
+`O-5608` window by a genuinely different implementation.  `mpmath.nzeros`
+(pure Python, Backlund's method, no code, no algorithm and no arithmetic shared
+with Arb) at the exact window endpoints:
+
+```text
+endpoint                       mpmath.nzeros        Arb zeta_nzeros
+a = 4709203636333.1875         19743642385928       19743642385928     85 s
+b = 4709203636373.125          19743642386100       19743642386100     78 s
+                        N = 172, agreeing exactly
+```
+
+`mpmath` is floating rather than certified, so this is a confirmation and not a
+certificate — but a silent common-mode defect would now have to live in two
+unrelated libraries, two counting algorithms, and the `turing.py` derivation
+from Riemann–Siegel sign changes, all landing on the same 14-digit integers.
+
 ## What this establishes and what it does not
 
 - **Establishes:** `zeta_nzeros` is not silently wrong in a way that a genuinely
