@@ -276,6 +276,57 @@ against a mean spacing of `0.188`.  It stalled and reported `D <= 9` rather than
 concluding, which is the fail-closed design working.  Large ordinates in a
 `double` have now caused trouble twice in one session.
 
+
+### Update 2026-07-26 (later) — the Platt engine and the certified census (`fable5-01`)
+
+Arb ships a second, unexposed zero-isolation backend: Platt's FFT block
+method.  `platt_ctypes.py` reaches it through the wheel's own `libflint`
+(memory layout verified by round-trip at import, never assumed), and it
+inverts the cost model again:
+
+```text
+t = 1e13, blocks of 2000:   0.039 s/zero     (sign-sampling: 0.281)
+t = 1e16, all 23 of a slab: 283 s            (sign-sampling: hours)
+prec 64 fails cleanly (0 isolated) at every height; 128 is the floor
+```
+
+And it returns **rigorously isolated ordinate balls** (`~1e-15`), not just
+signs — so slab certificates and close-pair statistics come out of one pass.
+
+**The ledger now** (`ledger.py`, containment-deduplicated):
+
+```text
+slab (height)              span        N      N_0     D
+4709203636333.1875         39.9       172      172     0
+10000000000000.5        11200.0     50082    50082     0
+100000000000000.5        1250.0      6047     6047     0
+1000000000000000.5         10.0        52       52     0
+1e16 + 0.5                  4.0        23       23     0
+
+5 slabs, 12,503.9 units, 56,376 zeros -- all on the critical line, all
+simple; everything from 1e13 up rigorously LOCATED.  Top rung 3,333x the
+exhaustively-verified frontier.  Every endpoint count of the two largest
+slabs is confirmed exactly by mpmath.nzeros, a second library sharing
+nothing with Arb.
+```
+
+**The close-pair census** (`O-5612`) — the precursor signature of an RH
+violation is a near-collision, visible while both zeros are still on the
+line: over `50,081` rigorous gaps at `t = 1e13`, mean normalised gap
+`0.99997`, smallest `delta = 0.04481` rigorous with interior `Z` certified at
+`[-0.00488 +/- 5e-15]` — `2.5x` the GUE-expected minimum, nothing anomalous.
+At `1e14`: smallest `delta = 0.0707` in `6,046` gaps, ratio `1.9`.  A
+million-zero census prices at `~11` CPU-hours.
+
+**The bottleneck inverted.**  Endpoint *counts* now limit height —
+`zeta_nzeros` took `55` minutes per endpoint at `1e16` while isolating all
+`23` zeros took `283` s.  The next capability jump is a cheaper rigorous
+`N(t)` at extreme height, not faster zero isolation.
+
+The stacked PR family #92-#101 proposes workflows whose decisive quantity is
+exactly the `D` predicate; a comment on PR #94 records that the PR #71 case
+is already answered (`D = 0`, `O-5608`) and warns about the near-zero
+endpoint cost anomaly in their exact-radii design.
 ## Strongest next steps
 
 1. Independently reconstruct every cutoff-free entry with Arb balls, rather
