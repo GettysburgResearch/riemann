@@ -4,22 +4,34 @@ Status: `MIDPOINT_SEARCH_NOT_YET_RUN`
 Owner: `gpt56-06-f`  
 Issue: #121
 
-This ledger deliberately publishes candidate **domains** before numerical
-selection so another agent can run them immediately. None is a counterexample.
+This ledger publishes candidate domains before numerical selection so another
+agent can run them immediately. None is a counterexample.
 
 ## Shared objective
 
-For every packet, search the exact zero-sum subspace for a Gaussian-dyadic
-vector minimizing
+For every packet, search the exact moment-constrained subspace for a
+Gaussian-dyadic vector minimizing
 
 \[
- \frac{v^*M_{\rm mid}^{\rm out}v}
- {\mathcal R(v)},
+ \frac{v^*M_{m mid}^{\rm out}v}{\mathcal R(v)},
 \]
 
 where \(\mathcal R(v)\) is the complete directed radius from primitive
-\(F\)-rectangles and zero bins. Freeze the vector before any higher-precision
+\(F\)-rectangles and zero bins. Freeze the vector before higher-precision
 replay.
+
+For one slab require
+
+```text
+sum_i v_i = 0.
+```
+
+For `m` slabs require the exact moments
+
+```text
+sum_i conj(v_i) w_i^k = 0,
+k=0,...,m-1.
+```
 
 ## Packet P-12101-A — existing PR71 center cloud
 
@@ -47,51 +59,33 @@ or PR #105 retained 320 indexed zero balls
 
 ### A16
 
-Heights relative to `T_base`:
-
 ```text
-j = -18,-16,-14,-12
-```
-
-Horizontal nodes:
-
-```text
+heights j = -18,-16,-14,-12
 x = 2^-17,2^-13,2^-9,2^-5
+point count = 16
 ```
-
-Point count: 16.
 
 ### A32
 
-Same four heights, all nodes:
-
 ```text
-x = 2^-17,2^-15,2^-13,2^-11,2^-10,2^-9,2^-7,2^-5
+same four heights
+all eight X-3902 horizontal nodes
+point count = 32
 ```
-
-Point count: 32.
 
 ### A24 coherent center-edge packet
 
-Heights:
-
 ```text
-j = -21,-18,-16,-14,-12,-9
-```
-
-Horizontal nodes:
-
-```text
+heights j = -21,-18,-16,-14,-12,-9
 x = 2^-17,2^-11,2^-7,2^-5
+point count = 24
 ```
-
-Point count: 24.
 
 Search constraints:
 
 ```text
 sum_i v_i = 0 exactly
-optional sum_i conj(v_i) w_i = 0 for a second decay moment
+optional first moment = 0 when comparing against two-slab filters
 Gaussian-dyadic denominator <= 2^192
 ```
 
@@ -107,21 +101,15 @@ or unresolved radius / |midpoint| < 4 for targeted refinement
 Reuse the PR71 complete slab but evaluate new `F` points within one unit of
 each slab endpoint.
 
-For each edge use vertical offsets
+For each edge use
 
 ```text
-0, +/-2^-5, +/-2^-4
+vertical offsets 0, +/-2^-5, +/-2^-4
+horizontal scales 2^-12,2^-10,2^-8,2^-6
 ```
 
-and horizontal scales
-
-```text
-2^-12,2^-10,2^-8,2^-6
-```
-
-Search two-edge coherent packets and one-edge packets separately. This packet
-is higher cost than A16/A32 but directly probes the sign change of the
-quadratic support weight.
+Search two-edge coherent packets and one-edge packets separately. This directly
+probes the sign transition of the support polynomial.
 
 ## Packet P-12101-C — PR103 atomized minimum
 
@@ -147,16 +135,12 @@ x = 2^-17,...,2^-5
 256-bit discovery; 512-bit replay
 ```
 
-Use a count-dual to enclose the complete negative in-slab energy shell by
-shell. Do not pretend shell upper radii are isolated zero locations.
-
-Motivation: the entire degree-at-most-14 horizontal response cone is already
-certified positive, so only a genuinely cross-height localizer can enlarge
-the finite information without moving the center.
+Use a count dual to enclose the complete negative in-slab energy shell by
+shell. Do not treat shell radii as isolated zero locations. The degree-at-most
+14 horizontal response cone is already positive, so this packet must remain
+genuinely cross-height.
 
 ## Packet P-12101-D — height 10^14 support edge
-
-Slab:
 
 ```text
 a = 200000000000001/2
@@ -166,34 +150,80 @@ half-width = 25
 exact count = 242
 ```
 
-Horizontal scales:
+Initial cloud:
 
 ```text
-2^-12,2^-10,2^-8,2^-6
+center offsets = -25+1/8, -25+1/4, -1/4, +1/4, +25-1/4, +25-1/8
+x = 2^-12,2^-10,2^-8,2^-6
+point count = 24
 ```
 
-Initial vertical packet:
+This combines PR #110's certified support geometry with a complex matrix
+witness rather than another value-only support chord.
+
+## Packet P-12101-E — proved polynomial multi-slab hierarchy
+
+L-12103 proves the exact filter
 
 ```text
-center offsets = -25+1/8, -25+1/4, -1/4, 1/4, 25-1/4, 25-1/8
+P(gamma)=prod_r (gamma-a_r)(gamma-b_r)
 ```
 
-Point count: 24.
+for pairwise disjoint complete slabs. With `m` slabs, moments through degree
+`m-1` cancel the entire polynomial quotient and make the weighted zero sum
+absolutely convergent. X-12102 checks the result using direct `F` values only.
 
-This packet combines PR #110's large certified support gap with a complex
-matrix witness rather than another value-only support chord.
+### E2-symmetric
 
-## Packet P-12101-E — polynomial hierarchy (`UNVERIFIED`)
+Use the retained PR71 320-zero table to select two disjoint zero-rich side
+slabs, one below and one above the center, leaving a narrow central complement.
+Search A16/A24/A32 with exact moments `k=0,1`.
 
-For two disjoint complete slabs, use
+Suggested zero-count splits:
 
 ```text
-g(gamma)=prod_r (gamma-a_r)(gamma-b_r).
+(32,32), (64,64), (86,86), (112,112)
 ```
 
-Require enough exact vector moments to cancel the polynomial quotient and make
-the weighted zero sum convergent.
+provided exact endpoint counts and disjoint complete bins are constructed for
+each pair.
 
-This is a plausible higher-order support-localizing hierarchy, but no theorem,
-checker, or candidate status is claimed. A contributor must first derive the
-exact cancellation count and finite `F`/jet contraction.
+### E2-asymmetric
+
+Let one slab absorb the denser side of the target and the second absorb the
+opposite shoulder. Rank exact splits by the midpoint gain divided by the
+complete interval-radius penalty.
+
+### E3-three-band
+
+Use three disjoint complete slabs and exact moments `k=0,1,2`. Minimum packet
+dimension is four, but 16–32 point clouds are preferred for numerical
+conditioning. This is theorem-supported; it is not `UNVERIFIED`.
+
+### Higher degree
+
+L-12103 supports every finite `m`. Practical promotion still requires:
+
+- exact moment reconstruction after dyadic freezing;
+- complete slab counts and bins for every negative band;
+- explicit conditioning and pointwise radius ledgers;
+- rejection of filters whose degree amplifies uncertainty more than it removes
+  positive critical-line mass.
+
+## Candidate publication rule
+
+A midpoint-negative packet may be posted immediately as
+`MIDPOINT_NOMINATION` when it contains:
+
+```text
+exact slab endpoints and counts
+complete bin/table digests
+exact point IDs
+Gaussian-dyadic vector
+exact moment residuals (all zero)
+midpoint score
+pointwise directed-radius ledger
+```
+
+It becomes a proof candidate only after the exact checker gives a strict
+negative upper endpoint and independent primitive reproduction begins.
