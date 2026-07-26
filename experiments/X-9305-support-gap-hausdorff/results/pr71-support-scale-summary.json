@@ -1,0 +1,104 @@
+{
+  "all_chords_positive": true,
+  "all_first_localizers_positive": true,
+  "alpha_grid": [
+    "1/8",
+    "3/16",
+    "1/4",
+    "3/8",
+    "1/2",
+    "3/4",
+    "1",
+    "3/2",
+    "2",
+    "3",
+    "4",
+    "6",
+    "8",
+    "12",
+    "16"
+  ],
+  "chord_row_count": 455,
+  "classification": "EMPIRICAL_HIGH_PRECISION_NOT_CERTIFIED",
+  "counterexample_candidate": null,
+  "elapsed_seconds": 2.696946620941162,
+  "environment": {
+    "decimal_digits": 80,
+    "mpmath": "1.3.0",
+    "python": "3.13.5"
+  },
+  "implementation": {
+    "euler_factor_tolerance": "1.00000000000e-90",
+    "prime_count": 1229,
+    "prime_cutoff": 10000,
+    "script": "support_scale_recon.py",
+    "sha256": "ae75a9efc902dcf242534ad93adeb720c28bdca5f8c2d953bb0a80979e8e6b43"
+  },
+  "inputs": {
+    "empirical_zero_count": 172,
+    "guide_sha256": "d08e049218912fbcf82eba5672c7214d034442971344cc1f79a2a6746379f130",
+    "offsets_json_sha256": "3eec18cc76241f6dc066d1517e3db99b364fc9f3176bf475bee0166fd98e99ef",
+    "refined_replacements": 16,
+    "slab_lower": {
+      "denominator": "16",
+      "numerator": "75347258181331"
+    },
+    "slab_upper": {
+      "denominator": "8",
+      "numerator": "37673629090985"
+    },
+    "support_gap_A": {
+      "denominator": "18446744073709551616",
+      "numerator": "7351311226564792773225"
+    },
+    "support_gap_decimal": "398.515380122931330986321089154822416844581312034279108047485",
+    "target": {
+      "denominator": "4294967296",
+      "numerator": "20225875608341108140435"
+    }
+  },
+  "linearized_zero_ordinate_diagnostic": {
+    "absolute_budget_on_minimum_raw_chord": "0.00004489472194821615509101512449315093973273",
+    "assumed_half_width_per_zero": "1/1024",
+    "classification": "FIRST_ORDER_EMPIRICAL_ONLY",
+    "margin_to_linearized_budget_ratio": "417.438015286500791322554515222",
+    "warning": "This is a first-order sensitivity sum at the empirical ordinates, not an interval enclosure or a proof of the zero locations."
+  },
+  "localizers": [
+    {"alpha": "1/8", "value": "0.27717999306043501833702365764920236265369077076748"},
+    {"alpha": "3/16", "value": "0.27119192044344540536955849422511236679830547935791"},
+    {"alpha": "1/4", "value": "0.26557209682771306504880125871352021555710336314099"},
+    {"alpha": "3/8", "value": "0.25534485715196160764359973677714945541275608831237"},
+    {"alpha": "1/2", "value": "0.24626565342277849154752983252293069870347514426378"},
+    {"alpha": "3/4", "value": "0.23078856833425341809909084167228741569465533798918"},
+    {"alpha": "1", "value": "0.21800423768957297456030448644752101028431984371858"},
+    {"alpha": "3/2", "value": "0.19790519943753687328096153983200469082664975901044"},
+    {"alpha": "2", "value": "0.18262752197597685417597901530015931066280302057237"},
+    {"alpha": "3", "value": "0.16053051169349710379764938920207726387928917756527"},
+    {"alpha": "4", "value": "0.14500447794593450201999068966746095378140081996916"},
+    {"alpha": "6", "value": "0.12408074583552760434133732383365505836012815801442"},
+    {"alpha": "8", "value": "0.11026192724159895358827672585342137474246737535355"},
+    {"alpha": "12", "value": "0.092565260890650796092512282989248496537385915677591"},
+    {"alpha": "16", "value": "0.081362655016913158524572921137615691657381843963496"}
+  ],
+  "maximum_omitted_prime_logzeta_bound": "9.1518913692362218660e-28",
+  "minimum_geometry_normalized_chord": {
+    "alpha_indices": [0, 1, 2],
+    "alphas": ["1/8", "3/16", "1/4"],
+    "geometry_normalized_value": "64.137902389251981166519245036128095050189943566742",
+    "value": "0.018740763626902657936495482649993034463897057091108"
+  },
+  "minimum_localizer": {
+    "alpha": "16",
+    "value": "0.081362655016913158524572921137615691657381843963496"
+  },
+  "minimum_raw_chord": {
+    "alpha_indices": [0, 1, 2],
+    "alphas": ["1/8", "3/16", "1/4"],
+    "geometry_normalized_value": "64.137902389251981166519245036128095050189943566742",
+    "value": "0.018740763626902657936495482649993034463897057091108"
+  },
+  "node_count": 15,
+  "schema": "riemann.x9305-support-scale-reconnaissance.v1",
+  "warning": "Ordinary mpmath arithmetic and empirical zero ordinates. The Euler tail field bounds omitted primes only; it is not a complete rounding or zero-location error enclosure. No row is a proof certificate."
+}
