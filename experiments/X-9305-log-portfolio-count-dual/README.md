@@ -1,6 +1,6 @@
 # X-9305 — Exact logarithmic-portfolio and count-dual checker
 
-X-9305 verifies L-9306 using only Python integers and `fractions.Fraction`.
+X-9305 verifies L-9308 using only Python integers and `fractions.Fraction`.
 
 It recomputes
 
