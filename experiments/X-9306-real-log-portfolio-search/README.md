@@ -1,7 +1,7 @@
-# X-9306 — Real-data L-9308 portfolio search
+# X-9306/X-9307 — Real-data exact portfolio-cone decision
 
-This experiment applies the exact resolvent-polynomial portfolio cone of L-9308
-to the smallest retained atomized shifted basin from PR #103.
+This experiment applies L-9308 and the simplicial reduction L-9309 to the
+smallest retained atomized shifted basin from PR #103.
 
 Inputs are already committed directed artifacts:
 
@@ -20,59 +20,72 @@ previous best exact order-two determinant:
  8.15927411303488367082665424432172959892044923176279e-104]
 ```
 
-## Search domain
+## Exact breakthrough
 
-The discovery LP enforces exactly:
-
-```text
-sum beta_i = 0
-P_beta coefficientwise >= 0
-P_beta(1) = 1
-```
-
-where
+For fixed nodes, L-9309 proves that
 
 ```text
-P_beta(y) = -sum_i beta_i product_{j != i}(y+u_j).
+beta -> P_beta(y)
 ```
 
-It solves:
+is an isomorphism from zero-sum portfolios to polynomials of degree at most
+`n-2`. The monomial-positive L-9308 cone is therefore simplicial. Its complete
+set of extreme rays is obtained from
 
-- the full primitive point set;
-- every three-point subset;
-- every four-point subset;
-- every contiguous subset of sizes five through ten.
+```text
+P(y) = 1, y, ..., y^(n-2).
+```
 
-HiGHS is used only for discovery. Every retained direction is converted to exact
-rational coefficients, repaired into the response cone with an exact safe
-endpoint row if needed, renormalized exactly, and replayed using Fraction-only
-logarithm enclosures.
+Thus `n-1` exact directed basis rows decide:
 
-## Sign calculation
+- the full monomial-positive portfolio cone;
+- every such portfolio on every subset of the same nodes;
+- every rational or real convex combination after `P(1)=1` normalization.
 
-The exact residual is
+No optimizer, subset enumeration, or rational postselection is needed in the
+proof path.
+
+## Exact basis calculation
+
+For each degree `k`, the checker constructs
+
+```text
+beta_i^(k) = -(-u_i)^k / product_{j != i}(u_j-u_i)
+```
+
+and verifies exactly:
+
+```text
+sum_i beta_i^(k) = 0
+P_beta(y) = y^k.
+```
+
+It then contracts the exact residual
 
 ```text
 sum_i beta_i log H_T(u_i)
 -
-sum_shell count_increment * sum_i beta_i log(u_i+B_shell).
+sum_shell count_increment * sum_i beta_i log(u_i+B_shell)
 ```
 
-The common power-of-two xi scaling cancels because `sum beta_i=0`.
+using Fraction-only logarithm enclosures. The common power-of-two xi scaling
+cancels because every basis vector sums to zero.
 
-A strict upper endpoint below zero is a finite RH-disproof nomination through
-L-9308 and the reviewed atomized count interface, pending independent theorem,
-count, and special-function reproduction.
+A negative upper endpoint is a finite RH-disproof nomination through the parent
+analytic/count gates. Nonnegative lower endpoints for all basis rows rigorously
+close the entire monomial-positive L-9308 cone at this exact table.
 
-A wholly nonnegative output is only a finite search result; it does not prove
-positivity of the full response cone outside the enumerated subset families or
-at another ordinate.
+## Exploratory regression
+
+`search.py` retains the earlier numerical LP/subset search as a discovery
+regression. It is no longer needed for completeness and does not enter the
+L-9309 proof boundary.
 
 ## Reproduction
 
 ```bash
-python search.py \
+python basis_check.py \
   --xi ../X-9302-total-count-zero-deflation/results/pr71-shift-fine/p3/xi-primitives-p512.json \
   --complete-result ../X-9302-total-count-zero-deflation/results/complete-result.json \
-  --output results/search.json
+  --output results/basis.json
 ```
