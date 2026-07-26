@@ -40,11 +40,18 @@ def _sign_at(args):
     """(index, numerator, denominator) -> (index, sign, prec_used, Zstr)."""
     i, num, den = args
     from flint import acb, arb, ctx
+    # The sample is an exact dyadic num/den.  Representing it in arb without
+    # rounding needs at least bit_length(num) bits, which at t = 1e15 with 24
+    # fractional bits is 74 -- above the first ladder rung.  Derive the floor
+    # from the sample itself rather than assuming 64 is enough: an inexact
+    # sample point is not wrong, but it wastes the evaluation.
+    need = max(64, int(num).bit_length() + 16)
     for p in LADDER:
+        p = max(p, need)
         ctx.prec = p
         t = arb(num) / arb(den)
         if not t.is_exact():
-            return (i, None, p, "endpoint not exact")
+            continue
         th = acb(arb(1) / 4, t / 2).lgamma().imag - (t / 2) * arb.pi().log()
         Z = (acb(0, th).exp() * acb(arb(1) / 2, t).zeta()).real
         if Z > 0:

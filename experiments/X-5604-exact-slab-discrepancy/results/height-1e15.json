@@ -1,0 +1,29 @@
+{
+ "schema": "riemann.x5604-height-certificate.v1",
+ "agent": "opus5-01",
+ "tag": "1e15",
+ "t0": 1000000000000000,
+ "span": 10,
+ "a": "2000000000000001/2",
+ "b": "2000000000000021/2",
+ "N_total": 52,
+ "N0_certified_lower_bound": 43,
+ "D": null,
+ "D_upper_bound": 9,
+ "samples": 64,
+ "rounds": [
+  {
+   "round": 0,
+   "samples": 51,
+   "changes": 30
+  },
+  {
+   "round": 1,
+   "added": 25,
+   "samples": 64,
+   "changes": 43
+  }
+ ],
+ "seconds_total": 808.9000222682953,
+ "verdict": "INCOMPLETE after 1 rounds: N = 52, certified N_0 >= 43, so D <= 9."
+}

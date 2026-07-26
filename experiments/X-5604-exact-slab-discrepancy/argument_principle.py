@@ -41,7 +41,10 @@ from flint import acb, acb_series, arb, ctx
 
 def xi_log_deriv(s, _analytic=False):
     """xi'/xi(s), assembled from a zeta jet."""
-    jet = acb_series([s, 1]).zeta()
+    # Truncate to two terms: we need zeta and zeta' only.  The default
+    # truncation computes ten, which costs 4x more at moderate height and
+    # is the difference between this audit running and not.
+    jet = acb_series([s, 1], 2).zeta()
     z, zp = jet[0], jet[1]
     return (1 / s + 1 / (s - 1) - acb(arb.pi().log()) / 2
             + (s / 2).digamma() / 2 + zp / z)

@@ -14,3 +14,9 @@ N(a) = 5045354828589537   N(b) = 5045354828589589   ->  N(a,b) = 52   [442.4 s]
 slab is non-empty (52 zeros); rerun with --list-zeros to separate N_0 and compute D
 wrote /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e15-slab.json
   N = 52   [443 s]
+t=1e+15 span=10 slab (1000000000000000.5000, 1000000000000010.5000) span 10.0  51 Gram samples  3 procs
+  round 0 (Gram): 30 certified sign changes  [165 s]
+  round 1: +25 samples -> 43 certified sign changes  [366 s]
+INCOMPLETE after 1 rounds: N = 52, certified N_0 >= 43, so D <= 9.
+wrote /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e15-gram.json  [366 s total]
+TOTAL 809 s -> /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/height-1e15.json

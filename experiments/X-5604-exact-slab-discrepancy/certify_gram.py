@@ -43,12 +43,19 @@ LADDER = (64, 96, 160, 256, 448)
 def _sign_at(args):
     i, num, den = args
     from flint import acb, arb, ctx
+    # The sample is an exact dyadic num/den.  Representing it in arb without
+    # rounding needs at least bit_length(num) bits, which at t = 1e15 with 24
+    # fractional bits is 74 -- above the first ladder rung.  Derive the floor
+    # from the sample itself rather than assuming 64 is enough: an inexact
+    # sample point is not wrong, but it wastes the evaluation.
+    need = max(64, int(num).bit_length() + 16)
     Z = None
     for p in LADDER:
+        p = max(p, need)
         ctx.prec = p
         t = arb(num) / arb(den)
         if not t.is_exact():
-            return (i, None, p, "sample not exact in arb")
+            continue
         th = acb(arb(1) / 4, t / 2).lgamma().imag - (t / 2) * arb.pi().log()
         Z = (acb(0, th).exp() * acb(arb(1) / 2, t).zeta()).real
         if Z > 0:
@@ -58,7 +65,7 @@ def _sign_at(args):
     return (i, None, LADDER[-1], Z.str(12, radius=True) if Z is not None else "?")
 
 
-def gram_points(a: float, b: float):
+def gram_points(a: Fr, b: Fr):
     """Approximate Gram points in (a,b).  Heuristic only -- not certified.
 
     theta is monotone increasing with theta'(t) = (1/2) log(t/2pi), which is
@@ -69,7 +76,8 @@ def gram_points(a: float, b: float):
     """
     from mpmath import mp, mpf, log, pi
     mp.dps = 30
-    A, B = mpf(a), mpf(b)
+    A = mpf(a.numerator) / mpf(a.denominator)
+    B = mpf(b.numerator) / mpf(b.denominator)
 
     def theta(t):
         return (t / 2) * log(t / (2 * pi)) - t / 2 - pi / 8 + 1 / (48 * t) \
@@ -87,14 +95,21 @@ def gram_points(a: float, b: float):
         t = A + (target - ta) / dtheta(A)          # linear in theta
         for _ in range(3):                          # Newton
             t = t - (theta(t) - target) / dtheta(t)
-        tf = float(t)
-        if a < tf < b:
-            out.append(tf)
+        # NEVER route a large ordinate through binary64: at t = 1e15 a float
+        # has ulp 0.125, comparable to the mean zero spacing 0.188, so sample
+        # positions collapse onto each other and refinement stalls.
+        fr = Fr(mp.nstr(t, 40, strip_zeros=False))
+        if a < fr < b:
+            out.append(fr)
     return sorted(out)
 
 
-def dyadic(x: float, bits: int) -> Fr:
-    return Fr(round(x * (1 << bits)), 1 << bits)
+def dyadic(x, bits: int) -> Fr:
+    """Nearest dyadic with `bits` fractional bits, in exact rational arithmetic."""
+    if not isinstance(x, Fr):
+        x = Fr(x)
+    scale = 1 << bits
+    return Fr(round(x * scale), scale)
 
 
 def run(points, procs, bits):
@@ -134,7 +149,7 @@ def main() -> None:
     af, bf = float(a), float(b)
 
     t0 = time.time()
-    g = gram_points(af, bf)
+    g = gram_points(a, b)
     pts = sorted({dyadic(x, args.bits) for x in g})
     pts = [p for p in pts if a < p < b]
     print("%s slab (%.4f, %.4f) span %.1f  %d Gram samples  %d procs"
@@ -160,14 +175,13 @@ def main() -> None:
                 continue                       # already yields a sign change
             lo, hi = pts[i], pts[i + 1]
             for k in (1, 2, 3):                # three interior points
-                m = lo + (hi - lo) * Fr(k, 4)
-                m = dyadic(float(m), args.bits + 2 * r)
+                m = dyadic(lo + (hi - lo) * Fr(k, 4), args.bits + 2 * r)
                 if lo < m < hi:
                     new.append(m)
         # also probe outside the extreme Gram points
         if pts:
-            new.append(dyadic((af + float(pts[0])) / 2, args.bits + 2 * r))
-            new.append(dyadic((float(pts[-1]) + bf) / 2, args.bits + 2 * r))
+            new.append(dyadic((a + pts[0]) / 2, args.bits + 2 * r))
+            new.append(dyadic((pts[-1] + b) / 2, args.bits + 2 * r))
         new = [p for p in new if a < p < b]
         if not new:
             break
@@ -182,8 +196,14 @@ def main() -> None:
                        "changes": changes})
 
     dt = time.time() - t0
-    undecided = [{"t": str(pts[i]), "Z": s[2]} for i, s in enumerate(signs)
-                 if s[0] is None]
+    # Cap the undecided list.  A stalled refinement can leave millions of
+    # samples undecided, and serialising them all produced a 303 MB artifact
+    # that git refused.  The count is what matters; a sample of the offenders
+    # is enough to diagnose.
+    _und = [{"t": str(pts[i]), "Z": s[2]} for i, s in enumerate(signs)
+            if s[0] is None]
+    n_undecided = len(_und)
+    undecided = _und[:200]
 
     res = {
         "schema": "riemann.x5604-certify-gram.v1",
@@ -197,7 +217,8 @@ def main() -> None:
         "a": str(a), "b": str(b), "height": af, "span": bf - af,
         "total_samples": len(pts),
         "rounds": rounds,
-        "undecided": undecided,
+        "undecided_count": n_undecided,
+        "undecided_sample": undecided,
         "certified_sign_changes": changes,
         "N0_lower_bound": changes,
         "seconds": dt,
