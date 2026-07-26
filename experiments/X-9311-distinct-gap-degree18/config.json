@@ -1,0 +1,13 @@
+{
+  "schema": "riemann.xi-modulus-zero-deflation-config.v1",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "log_terms": 256,
+  "rows": [
+    {
+      "id": "source-binding-row",
+      "kind": "deflated-monotonicity",
+      "left": "x-20",
+      "right": "x-19"
+    }
+  ]
+}
