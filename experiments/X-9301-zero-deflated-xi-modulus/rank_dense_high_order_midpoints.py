@@ -19,7 +19,7 @@ if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
 ROOT = Path(__file__).resolve().parent
-SCHEMA = "riemann.x9301-dense-high-order-midpoint-ranking.v2"
+SCHEMA = "riemann.x9301-dense-high-order-midpoint-ranking.v3"
 ROUNDING_SAFETY_FACTOR = 64.0
 
 
@@ -120,6 +120,43 @@ def decimal_determinant_and_permanent_scale(
     )
     scale = sum((abs(term) for term in terms), start=Decimal(0))
     return determinant, scale
+
+
+def determinant_input_uncertainty(
+    matrix: list[list[Any]],
+    radii: list[list[Any]],
+    permutations: tuple[tuple[tuple[int, ...], int], ...],
+    zero: Any,
+    one: Any,
+) -> Any:
+    order = len(matrix)
+    if (
+        order < 1
+        or len(radii) != order
+        or any(len(row) != order for row in matrix)
+        or any(len(row) != order for row in radii)
+        or any(radius < zero for row in radii for radius in row)
+    ):
+        raise RankingError("midpoint/radius matrices must be square and valid")
+    bound = zero
+    for permutation, _ in permutations:
+        midpoint_product = math.prod(
+            (
+                abs(matrix[row][permutation[row]])
+                for row in range(order)
+            ),
+            start=one,
+        )
+        outer_product = math.prod(
+            (
+                abs(matrix[row][permutation[row]])
+                + radii[row][permutation[row]]
+                for row in range(order)
+            ),
+            start=one,
+        )
+        bound += outer_product - midpoint_product
+    return bound
 
 
 def partition_count(node_count: int, order: int) -> int:
@@ -232,6 +269,7 @@ def rank_order(
     point_ids: tuple[str, ...],
     nodes: list[Fraction],
     secants: list[list[Any]],
+    secant_radii: list[list[Any]],
     top_k: int,
     decimal_digits: int,
 ) -> dict[str, Any]:
@@ -241,6 +279,7 @@ def rank_order(
     top_eta: list[tuple[Any, int, dict[str, Any]]] = []
     negative_count = 0
     robust_negative_count = 0
+    arithmetic_negative_count = 0
     most_negative: list[tuple[Any, int, dict[str, Any]]] = []
     observed = 0
     geometry_cache: dict[tuple[int, ...], Any] = {}
@@ -250,6 +289,7 @@ def rank_order(
             * Decimal(10) ** (8 - decimal_digits)
         )
         zero: Any = Decimal(0)
+        one: Any = Decimal(1)
     else:
         epsilon_bound = (
             ROUNDING_SAFETY_FACTOR
@@ -257,11 +297,16 @@ def rank_order(
             * sys.float_info.epsilon
         )
         zero = 0.0
+        one = 1.0
 
     for serial, (rows, columns) in enumerate(
         disjoint_partitions(len(point_ids), order)
     ):
         matrix = [[secants[row][column] for column in columns] for row in rows]
+        radius_matrix = [
+            [secant_radii[row][column] for column in columns]
+            for row in rows
+        ]
         if decimal_digits:
             determinant, scale = decimal_determinant_and_permanent_scale(
                 matrix, permutations
@@ -284,6 +329,10 @@ def rank_order(
             )
         geometry = geometry_cache[rows] * geometry_cache[columns]
         eta = determinant / scale if scale else zero
+        input_bound = determinant_input_uncertainty(
+            matrix, radius_matrix, permutations, zero, one
+        )
+        input_eta_bound = input_bound / scale if scale else zero
         adjusted = eta / geometry
         entry = {
             "rows": [point_ids[index] for index in rows],
@@ -291,6 +340,7 @@ def rank_order(
             "determinant_midpoint": f"{determinant:.17e}",
             "permanent_normalized_midpoint": f"{eta:.17e}",
             "geometry_adjusted_midpoint": f"{adjusted:.17e}",
+            "input_uncertainty_eta_bound": f"{input_eta_bound:.17e}",
             "roundoff_eta_bound": f"{epsilon_bound:.17e}",
         }
         push_smallest(top_adjusted, adjusted, serial, entry, top_k)
@@ -299,6 +349,8 @@ def rank_order(
             negative_count += 1
             push_smallest(most_negative, eta, serial, entry, top_k)
             if eta < -epsilon_bound:
+                arithmetic_negative_count += 1
+            if determinant + input_bound + epsilon_bound * scale < zero:
                 robust_negative_count += 1
         observed += 1
 
@@ -326,7 +378,8 @@ def rank_order(
         "permutation_term_count": len(permutations),
         "midpoint_decimal_digits": decimal_digits or None,
         "negative_midpoint_count": negative_count,
-        "negative_beyond_roundoff_bound_count": robust_negative_count,
+        "negative_beyond_roundoff_bound_count": arithmetic_negative_count,
+        "negative_beyond_input_uncertainty_count": robust_negative_count,
         "top_geometry_adjusted": sorted_entries(
             top_adjusted, "geometry_adjusted_midpoint"
         ),
@@ -377,6 +430,9 @@ def summarize(
     fraction_secants: list[list[Fraction | None]] = [
         [None] * len(point_ids) for _ in point_ids
     ]
+    fraction_radii: list[list[Fraction | None]] = [
+        [None] * len(point_ids) for _ in point_ids
+    ]
     for left, right in itertools.combinations(range(len(point_ids)), 2):
         value = VERIFY.secant(
             points[point_ids[left]],
@@ -385,8 +441,11 @@ def summarize(
             values[point_ids[right]],
         )
         entry = (value.lower + value.upper) / 2
+        radius = (value.upper - value.lower) / 2
         fraction_secants[left][right] = entry
         fraction_secants[right][left] = entry
+        fraction_radii[left][right] = radius
+        fraction_radii[right][left] = radius
 
     if decimal_digits:
         with localcontext() as context:
@@ -398,12 +457,20 @@ def summarize(
                 ]
                 for row in fraction_secants
             ]
+            secant_radii: list[list[Any]] = [
+                [
+                    decimal_value(value) if value is not None else Decimal("NaN")
+                    for value in row
+                ]
+                for row in fraction_radii
+            ]
             ranked_orders = [
                 rank_order(
                     order,
                     point_ids,
                     nodes,
                     secants,
+                    secant_radii,
                     top_k,
                     decimal_digits,
                 )
@@ -417,12 +484,27 @@ def summarize(
             ]
             for row in fraction_secants
         ]
+        secant_radii = [
+            [
+                float(value) if value is not None else math.nan
+                for value in row
+            ]
+            for row in fraction_radii
+        ]
         ranked_orders = [
-            rank_order(order, point_ids, nodes, secants, top_k, 0)
+            rank_order(
+                order,
+                point_ids,
+                nodes,
+                secants,
+                secant_radii,
+                top_k,
+                0,
+            )
             for order in orders
         ]
     robust_count = sum(
-        item["negative_beyond_roundoff_bound_count"]
+        item["negative_beyond_input_uncertainty_count"]
         for item in ranked_orders
     )
     result = {
@@ -456,8 +538,9 @@ def summarize(
                 else "determinant uses binary64 midpoints. "
             )
             + "No midpoint sign is a proof. "
-            "The stated roundoff bound covers straightforward product/sum "
-            "roundoff only and is a nomination threshold, not interval arithmetic."
+            "The input bound treats every secant interval independently and "
+            "bounds every Leibniz product perturbation; it is conservative but "
+            "is still a nomination threshold, not the exact rational verifier."
         ),
     }
     result["summary_sha256"] = canonical_sha(result)

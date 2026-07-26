@@ -87,6 +87,31 @@ class HighOrderMidpointRankingTests(unittest.TestCase):
         with self.assertRaisesRegex(MODULE.RankingError, "unique primitive subset"):
             MODULE.select_point_ids(primitive, ("small", "missing"))
 
+    def test_determinant_input_uncertainty_bound(self) -> None:
+        matrix = [[Decimal(1), Decimal(0)], [Decimal(0), Decimal(1)]]
+        radii = [
+            [Decimal("0.1"), Decimal("0.1")],
+            [Decimal("0.1"), Decimal("0.1")],
+        ]
+        bound = MODULE.determinant_input_uncertainty(
+            matrix,
+            radii,
+            MODULE.signed_permutations(2),
+            Decimal(0),
+            Decimal(1),
+        )
+        self.assertEqual(bound, Decimal("0.22"))
+
+    def test_negative_radius_is_rejected(self) -> None:
+        with self.assertRaisesRegex(MODULE.RankingError, "must be square"):
+            MODULE.determinant_input_uncertainty(
+                [[1.0]],
+                [[-0.1]],
+                MODULE.signed_permutations(1),
+                0.0,
+                1.0,
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
