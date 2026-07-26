@@ -17,6 +17,7 @@ import string
 import sys
 from dataclasses import dataclass
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -122,6 +123,7 @@ def modulus_squared(real: Interval, imag: Interval) -> Interval:
     return square_interval(real).add(square_interval(imag))
 
 
+@lru_cache(maxsize=None)
 def _atanh_log_interval(y: Fraction, terms: int) -> Interval:
     if not (Fraction(1) <= y <= Fraction(2)):
         raise CertificateError("internal logarithm range-reduction failure")
