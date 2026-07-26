@@ -84,6 +84,31 @@ def row_map(result: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return rows
 
 
+def count_window_semantics(data: dict[str, Any]) -> list[tuple[str, Fraction, int, str]]:
+    raw = data.get("count_windows")
+    if not isinstance(raw, list) or not raw:
+        raise ComparisonError("count_windows must be a nonempty list")
+    result: list[tuple[str, Fraction, int, str]] = []
+    for index, window in enumerate(raw):
+        if not isinstance(window, dict) or not isinstance(window.get("id"), str):
+            raise ComparisonError(f"malformed count window {index}")
+        count = window.get("count_lower")
+        gate = window.get("gate")
+        if isinstance(count, bool) or not isinstance(count, int):
+            raise ComparisonError(f"bad count in window {index}")
+        if not isinstance(gate, dict) or not isinstance(gate.get("status"), str):
+            raise ComparisonError(f"bad gate in window {index}")
+        result.append(
+            (
+                window["id"],
+                rational(window.get("radius"), f"count_windows[{index}].radius"),
+                count,
+                gate["status"],
+            )
+        )
+    return result
+
+
 def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
     for field in (
         "schema",
@@ -92,11 +117,14 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
         "common_xi_scale_power_of_two",
         "ordinate",
         "log_terms",
-        "count_windows",
         "rows",
     ):
         if low.get(field) != high.get(field):
             raise ComparisonError(f"certificates differ in {field}")
+    low_windows = count_window_semantics(low)
+    high_windows = count_window_semantics(high)
+    if low_windows != high_windows:
+        raise ComparisonError("certificates differ in count-window semantics")
 
     low_points, high_points = point_map(low), point_map(high)
     if set(low_points) != set(high_points):
@@ -135,6 +163,7 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
     return {
         "schema": "riemann.x9302-total-deflation-precision-comparison.v1",
         "point_count": len(low_points),
+        "count_window_count": len(low_windows),
         "nested_primitive_coordinates": nested_coordinates,
         "row_count": len(low_rows),
         "nested_row_intervals": nested_rows,
