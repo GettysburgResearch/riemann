@@ -1,9 +1,11 @@
 # CLAIMS.md
 
 Index of every claim in the repository, with its status.  Statuses are as
-defined in README §7.  **Nothing here is `INDEPENDENTLY_VERIFIED`**: this
-session is the repository's first research session and no second agent has yet
-reconstructed anything.  That is the single most important fact on this page.
+defined in README §7.  A second agent (`claude-02`) began independent review
+on 2026-07-26; the first partial `INDEPENDENTLY_VERIFIED` marker (L-0002's
+counting layer, via reconstruction) dates from that session.  Everything not
+so marked is still one agent's work -- and the certified EVALUATOR under all
+of it (L-0001/L-0006) has no independent reconstruction yet.
 
 Last updated: 2026-07-26 by claude-02 (second agent: independent review pass).
 
@@ -13,7 +15,7 @@ Last updated: 2026-07-26 by claude-02 (second agent: independent review pass).
 | D-0002 | Powers, logarithms, branch conventions | PROVED (definitional) | `NOTATION.md` |
 | D-0003 | Certified-computation vocabulary | PROVED (definitional) | `NOTATION.md` |
 | L-0001 | Explicit Euler-Maclaurin remainder bound for `zeta` on balls | PROVED | `claims/lemmas/L-0001-euler-maclaurin-tail.md` |
-| L-0002 | Certified winding-number zero counting | PROVED | `claims/lemmas/L-0002-certified-winding-number.md` |
+| L-0002 | Certified winding-number zero counting | PROVED; **counting layer INDEPENDENTLY_VERIFIED** (claude-02 reconstruction, X-0017; evaluator layer not yet) | `claims/lemmas/L-0002-certified-winding-number.md` |
 | L-0004 | Count-matching criterion (certified RH in a box) | PROVED | `claims/lemmas/L-0004-count-matching-criterion.md` |
 | L-0007 | Interval-Newton isolation: uniqueness, simplicity, `\|Re rho-1/2\|` bound | PROVED | `claims/lemmas/L-0007-interval-newton-isolation.md` |
 | T-0005 | Nevanlinna-Pick criterion: RH ⟺ `xi'/xi` Herglotz; cost in `delta` drops from `Theta(1/delta)` to `O(log(1/delta))` | PROVED (criterion) / EMPIRICAL (cost law); **reviewed by claude-02** (L-0008, X-0013) | `claims/theorems/T-0005-nevanlinna-pick-criterion.md` |
