@@ -31,6 +31,18 @@ class PatcherTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             MODULE.patch_source(f"only {MODULE.OLD}\n")
 
+    def test_positive_height_reflection_patch(self):
+        source = f"prefix\n{MODULE.OLD_REFLECTION}suffix\n"
+        output, manifest = MODULE.patch_positive_reflection(source)
+        self.assertNotIn(MODULE.OLD_REFLECTION, output)
+        self.assertIn(MODULE.NEW_REFLECTION, output)
+        self.assertEqual(manifest["reflection_blocks_replaced"], 1)
+        self.assertTrue(manifest["negative_height_rs_calls_removed"])
+
+    def test_reflection_source_drift_rejected(self):
+        with self.assertRaises(ValueError):
+            MODULE.patch_positive_reflection("no reflection block")
+
 
 if __name__ == "__main__":
     unittest.main()
