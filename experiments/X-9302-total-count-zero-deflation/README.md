@@ -68,9 +68,11 @@ raw Loewner           CERTIFIED_NONNEGATIVE
 deflated Loewner      CERTIFIED_NEGATIVE
 ```
 
-Thirteen exact tests pass. They reject decreasing counts, nonincreasing radii,
+Seventeen exact tests pass. They reject decreasing counts, nonincreasing radii,
 wrong semantic gates, Boolean counts, false point digests, ambiguous count
-balls, endpoint drift, false count differences, and nonnested totals.
+balls, endpoint drift, false count differences, nonnested totals, source
+artifact mutation, semantic precision drift, and production relabeling without
+bindings.
 
 ## PR #71 production
 

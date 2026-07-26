@@ -2,10 +2,17 @@ test_adapter_squares_horizontal_offsets (test_adapter.AdapterTests.test_adapter_
 test_boolean_log_terms_rejected (test_adapter.AdapterTests.test_boolean_log_terms_rejected) ... ok
 test_missing_source_point_rejected (test_adapter.AdapterTests.test_missing_source_point_rejected) ... ok
 test_builds_two_certified_bins (test_pr71_bridge.PR71BridgeTests.test_builds_two_certified_bins) ... ok
+test_mutated_gap_artifact_is_rejected (test_pr71_bridge.PR71BridgeTests.test_mutated_gap_artifact_is_rejected) ... ok
 test_nonbracketing_balls_rejected (test_pr71_bridge.PR71BridgeTests.test_nonbracketing_balls_rejected) ... ok
 test_ordinate_mismatch_rejected (test_pr71_bridge.PR71BridgeTests.test_ordinate_mismatch_rejected) ... ok
 test_unclassified_gap_rejected (test_pr71_bridge.PR71BridgeTests.test_unclassified_gap_rejected) ... ok
+test_excess_nearest_count_rejected (test_pr71_nearest.NearestZeroTests.test_excess_nearest_count_rejected) ... ok
+test_precision_block_nesting (test_pr71_nearest.NearestZeroTests.test_precision_block_nesting) ... ok
+test_selects_nearest_by_certified_upper_distance (test_pr71_nearest.NearestZeroTests.test_selects_nearest_by_certified_upper_distance) ... ok
+test_zero_index_drift_rejected (test_pr71_nearest.NearestZeroTests.test_zero_index_drift_rejected) ... ok
 test_exact_three_occurrence_patch (test_pr71_source_patch.PatcherTests.test_exact_three_occurrence_patch) ... ok
+test_positive_height_reflection_patch (test_pr71_source_patch.PatcherTests.test_positive_height_reflection_patch) ... ok
+test_reflection_source_drift_rejected (test_pr71_source_patch.PatcherTests.test_reflection_source_drift_rejected) ... ok
 test_source_drift_rejected (test_pr71_source_patch.PatcherTests.test_source_drift_rejected) ... ok
 test_boolean_count_rejected (test_verify.ZeroDeflatedModulusTests.test_boolean_count_rejected) ... ok
 test_exact_algebraic_monotonicity_value (test_verify.ZeroDeflatedModulusTests.test_exact_algebraic_monotonicity_value) ... ok
@@ -18,6 +25,6 @@ test_widened_bin_remains_valid_but_weaker (test_verify.ZeroDeflatedModulusTests.
 test_zero_count_rejected (test_verify.ZeroDeflatedModulusTests.test_zero_count_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 18 tests
+Ran 25 tests
 
 OK

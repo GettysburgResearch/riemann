@@ -1,13 +1,16 @@
 test_bad_dual_is_rejected ... ok
 test_bad_primal_is_rejected ... ok
 test_boolean_count_is_rejected ... ok
+test_false_certificate_digest_is_rejected ... ok
 test_false_count_is_rejected ... ok
 test_missing_boundary_is_rejected ... ok
+test_missing_point_digest_is_rejected ... ok
 test_nonmonotone_profile_is_rejected ... ok
 test_overlap_profile_exposes_hidden_row ... ok
+test_production_relabel_is_rejected_without_source_adapter ... ok
 test_profile_counts_are_exact ... ok
 test_wrong_gate_is_rejected ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests
+Ran 12 tests
 OK

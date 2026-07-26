@@ -123,7 +123,7 @@ python verify_zero_deflated_modulus.py \
 python -m unittest discover -s tests -v
 ```
 
-Twelve tests pass. They cover:
+Twenty-five tests pass. They cover:
 
 - the strict hidden-offline separation;
 - the exact algebraic negative integer;
