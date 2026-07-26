@@ -20,16 +20,18 @@
   },
   "dyadic_nomination": {
     "dyadic_bits": 40,
-    "midpoint_minimum_eigenvalue": "-10.128617782919815",
-    "exact_replay_residual": "-621696847181947699436326215125/65490685078800950795417157632",
+    "midpoint_minimum_eigenvalue": "-9.748735152294984",
+    "exact_replay_residual": "-2553805375103012404546942922875/261962740315203803181668630528",
     "exact_replay_status": "CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS",
-    "nomination_sha256": "72e01e326905ed64da6e4503f5994647dbf5f0d7c74bd02f9032b554634a5331",
-    "verification_file_sha256": "d519be654753f5db84d695e8043d8aac98275e4571e63b85dffd6a5d9f3cd4b1"
+    "nomination_file_sha256": "61cd01a3b72bdf6c861ddc664aa2a0cee1ade0d6d98fa0301d31d751774282b4",
+    "verification_internal_sha256": "3fa6cddb67ec2ba6b19c2d4460733b4d3302cb8b005b127cb6145a85d4ae1153",
+    "verification_file_sha256": "16dcd1fdad12fe0022bd5a5b141834b63c4ffcbfd002bd18127810e9edad6c6e"
   },
   "tests": {
     "passed": 10,
     "failed": 0,
     "tests_file_sha256": "e5927eda5119f7d79a5da3ad31580ce3e648eed4a3af5458fe4244ee0e812a5f"
   },
+  "audit_note": "The first discovery-only ranker draft used the conjugate rank-one orientation. The exact checker was unaffected. The ranker, theorem matrix notation, frozen vector, and all derived digests were corrected before any Riemann-data nomination.",
   "classification": "EXACT_SYNTHETIC_CONTROLS_ONLY; no Riemann-xi candidate"
 }
