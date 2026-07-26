@@ -105,9 +105,10 @@ fidelity (Q-0003 remains open), T-0001, T-0002, the arithmetic criteria.
 
 ## Handoff
 
-* newton-T5000 may still be running; when `newton-T5000.json` exists, run
-  `python3 experiments/X-0007-newton-isolation/completeness.py 5000` and
-  update CURRENT_STATE §2 with the closure.
+* ~~newton-T5000~~ — landed before session end: all 4520 discs certified in
+  3100 s, 0 failures, and the T=5000 completeness closure PASSED all seven
+  checks.  Every zero to `t = 5000` is simple with
+  `|Re rho - 1/2| <= 9.489e-77`.
 * Q-0017 (floor as rational approximation) is the sharpest open question this
   session created; L-0009 is self-contained preparation for it.
 * Q-0018 (prime-side dual of the Pick criterion) is the most promising NEW

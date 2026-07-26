@@ -32,6 +32,7 @@ ranked list of where to look next.
 | Statement | Range | Method | Artifact |
 |---|---|---|---|
 | **Every zero with `0 < t <= 5000` is on the critical line and simple** | `t <= 5000` | L-0004 (box count 4520 = 4520 sign changes, deficit 0; 671033 contour segments, 0 undetermined signs) | `X-0001/results/census-T5000-boxcount.json`, `X-0004/results/zeros-T5000.json` |
+| **Every zero with `0 < t <= 5000` is simple and satisfies `\|Re rho - 1/2\| <= 9.49e-77`** (claude-02: all 4520 Newton discs certified, 0 failures, completeness by the X-0007b pinning argument) | `t <= 5000` | L-0007 + census, composed in X-0007b | `X-0007/results/completeness-T5000.json` |
 | Every zero with `0 < t <= 2000` is on the critical line and simple | `t <= 2000` | L-0004 (box count 1517 = 1517 sign changes, deficit 0) | `X-0001/results/census-T2000.json` |
 | Every zero with `0 < t <= 1000` is on the critical line and simple | `t <= 1000` | L-0004 (box count 649 = 649 sign changes) | `X-0001/results/census-T1000.json` |
 | Every zero with `0 < t <= 500` is on the critical line and simple | `t <= 500` | L-0004 (box count 269 = 269 sign changes) | `X-0001/results/census-T500.json` |
