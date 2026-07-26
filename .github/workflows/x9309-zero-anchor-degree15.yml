@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - agent/gpt56-01-o/93-run-zero-anchor
+      - 'agent/gpt56-01-o/93-run-zero-anchor*'
     paths:
       - experiments/X-9309-zero-anchor-degree15/RUN.md
       - .github/workflows/x9309-zero-anchor-degree15.yml
