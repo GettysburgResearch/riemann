@@ -1,4 +1,4 @@
-# L-9314 — Christoffel–Padé gap identities and certified line-mass budgets
+# L-9314 — Christoffel–Padé gap identities and certified residual-mass budgets
 
 Claim ID: **L-9314**  
 Status: **PROPOSED**  
@@ -10,81 +10,76 @@ Parent: L-9312
 
 L-9312 reduces one added horizontal node to a scalar Padé interval
 
-\[
-	heta_-(w)\le s(w)\le	heta_+^{(A)}(w).
-\]
+```text
+theta_-(w) ≤ s(w) ≤ theta_+^(A)(w).
+```
 
 This lemma identifies the two distances to that interval boundary as exact
-Christoffel-type positive integrals.  It has three consequences useful for the
+Christoffel-type positive integrals. It has four consequences useful for the
 counterexample search:
 
-1. every certified critical-line zero receives an exact positive **leverage
-   score** against each Padé boundary;
+1. every certified positive piece of the residual RH measure receives an exact
+   leverage score against each Padé boundary;
 2. exact factor removal can only drive both Padé gaps downward;
-3. a finite lower bound from already-certified line-zero bins that exceeds the
-   directed total gap is itself an RH contradiction—without first rebuilding a
-   deflated moment table.
+3. a finite lower bound from already-certified residual mass that exceeds the
+   directed total gap is itself an RH contradiction;
+4. leverage uncertainty gives a witness-specific priority for zero-bin
+   refinement.
 
-The finite identities are exact algebra.  Their RH interpretation imports the
-direct-ξ positive residual measure and the declared zero/count gates.
+The finite identities are exact algebra. Their RH interpretation imports the
+direct-ξ positive residual measure and the declared zero/count/factor gates.
 
 ---
 
 ## 1. Setup
 
-Use the notation of L-9312.  Thus
+Use the notation of L-9312. Thus
 
-\[
-D_U(y)=\prod_{j=1}^{N}(y+u_j),
-\qquad
-u\ge0,
-\qquad
-\operatorname{supp}
-u\subseteq[A,\infty),
-\]
+```text
+D_U(y) = product_j (y+u_j),
+ν is a positive measure supported on [A,infinity),
+```
 
 and
 
-\[
-s(w)=\int_A^\inftyrac{d
-u(y)}{(y+w)D_U(y)}.
-\]
+```text
+s(w) = integral from A to infinity of
+       1 / ((y+w)D_U(y)) dν(y).
+```
 
-Let
+The two true moment matrices are
 
-\[
-H_0(s)=\left[\int_A^\infty
-rac{y^{i+j}}{(y+w)D_U(y)}\,d
-u(y)ight]_{0\le i,j\le n},
-\]
+```text
+H0(s)[i,j]
+=
+integral y^(i+j) / ((y+w)D_U(y)) dν(y),
+```
 
-\[
-H_A(s)=\left[\int_A^\infty
-rac{(y-A)y^{i+j}}{(y+w)D_U(y)}\,d
-u(y)ight]_{0\le i,j\le n}.
-\]
+```text
+HA(s)[i,j]
+=
+integral (y-A)y^(i+j) / ((y+w)D_U(y)) dν(y),
+```
+
+for `0≤i,j≤n`.
 
 Write
 
-\[
-z=(1,-w,\ldots,(-w)^n)^{\mathsf T}.
-\]
+```text
+z = (1,-w,w^2,...,(-w)^n)^T.
+```
 
-For a coefficient vector \(q=(q_0,\ldots,q_n)^{\mathsf T}\), write
+For a coefficient vector q, write
 
-\[
-q(y)=\sum_{k=0}^{n}q_k y^k.
-\]
+```text
+q(y) = q_0 + q_1 y + ... + q_n y^n.
+```
 
-Then
+Then `q^T z = q(-w)`.
 
-\[
-q^{\mathsf T}z=q(-w).
-\]
-
-Assume both Padé endpoints are finite.  The statements below remain valid with
-infima and limiting vectors in singular boundary cases; the finite-certificate
-form uses rational vectors checked directly.
+Assume both Padé endpoints are finite. The identities remain valid with infima
+and limiting vectors in singular boundary cases; finite certificates use
+rational vectors checked directly.
 
 ---
 
@@ -92,84 +87,59 @@ form uses rational vectors checked directly.
 
 Define
 
-\[
-g_-(w)=s(w)-	heta_-(w).
-\]
+```text
+g_-(w) = s(w)-theta_-(w).
+```
 
 ### Theorem 2.1
 
-One has the variational identity
+```text
+g_-(w)
+=
+minimum over deg(q)≤n and q(-w)=1 of
+integral q(y)^2 / ((y+w)D_U(y)) dν(y).
+```
 
-\[
-oxed{
- g_-(w)=\min_{\deg q\le n,\ q(-w)=1}
- \int_A^\infty
- rac{q(y)^2}{(y+w)D_U(y)}\,d
-u(y).
-}
-	ag{1}
-\]
+If q_- is any minimizing polynomial, then
 
-If \(q_-\) is any minimizing polynomial, then
+```text
+g_-(w) = integral K_-(y) dν(y),
+K_-(y) = q_-(y)^2 / ((y+w)D_U(y)).
+```
 
-\[
-oxed{
- g_-(w)=\int_A^\infty K_-(y)\,d
-u(y),
- \qquad
- K_-(y)=rac{q_-(y)^2}{(y+w)D_U(y)}.
-}
-	ag{2}
-\]
+Equivalently, if q_- spans the lower boundary kernel and is normalized by
+`q_-(-w)=1`, then
 
-Equivalently, if \(q_-\) spans the boundary kernel and is normalized by
-\(q_-(-w)=1\),
-
-\[
-H_0(	heta_-)q_-=0
-\]
-
-and
-
-\[
-q_-^{\mathsf T}H_0(s)q_-=s-	heta_-.
-\]
+```text
+H0(theta_-) q_- = 0,
+q_-^T H0(s) q_- = s-theta_-.
+```
 
 #### Proof
 
 L-9312 gives
 
-\[
-H_0(t)=C_0+tzz^{\mathsf T}.
-\]
+```text
+H0(t)=C0+t z z^T.
+```
 
-For \(q(-w)=q^{\mathsf T}z=1\),
+For `q(-w)=q^T z=1`,
 
-\[
-q^{\mathsf T}H_0(s)q=s+q^{\mathsf T}C_0q.
-\]
+```text
+q^T H0(s) q = s + q^T C0 q.
+```
 
 The lower endpoint is
 
-\[
-	heta_-=\sup_{q(-w)=1}(-q^{\mathsf T}C_0q).
-\]
+```text
+theta_- = supremum over q(-w)=1 of -q^T C0 q.
+```
 
-Therefore
+Taking the minimum proves the scalar identity, and the integral representation
+of the quadratic form gives the kernel identity. ∎
 
-\[
-\min_{q(-w)=1}q^{\mathsf T}H_0(s)q=s-	heta_-.
-\]
-
-The integral representation of the quadratic form gives (1)–(2).  ∎
-
-The kernel \(K_-\) is a finite Christoffel-function extremizer for the weighted
-measure
-
-\[
-rac{d
-u(y)}{(y+w)D_U(y)}.
-\]
+The kernel K_- is the finite Christoffel-function extremizer for the weighted
+measure `dν/((y+w)D_U(y))`.
 
 ---
 
@@ -177,287 +147,304 @@ u(y)}{(y+w)D_U(y)}.
 
 Define
 
-\[
-g_+^{(A)}(w)=	heta_+^{(A)}(w)-s(w).
-\]
+```text
+g_+^(A)(w) = theta_+^(A)(w)-s(w).
+```
 
 ### Theorem 3.1
 
-One has
+```text
+g_+^(A)(w)
+=
+1/(w+A) times the minimum over deg(q)≤n and q(-w)=1 of
+integral (y-A)q(y)^2 / ((y+w)D_U(y)) dν(y).
+```
 
-\[
-oxed{
- g_+^{(A)}(w)=rac1{w+A}
- \min_{\deg q\le n,\ q(-w)=1}
- \int_A^\infty
- rac{(y-A)q(y)^2}{(y+w)D_U(y)}\,d
-u(y).
-}
-	ag{3}
-\]
+For a minimizing polynomial q_+,
 
-For a minimizing polynomial \(q_+\),
-
-\[
-oxed{
- g_+^{(A)}(w)=\int_A^\infty K_+^{(A)}(y)\,d
-u(y),
-}
-	ag{4}
-\]
+```text
+g_+^(A)(w) = integral K_+^(A)(y) dν(y),
+```
 
 where
 
-\[
-oxed{
- K_+^{(A)}(y)=
- rac{(y-A)q_+(y)^2}
- {(w+A)(y+w)D_U(y)}.
-}
-	ag{5}
-\]
+```text
+K_+^(A)(y)
+=
+(y-A)q_+(y)^2 / ((w+A)(y+w)D_U(y)).
+```
 
 #### Proof
 
 L-9312 gives
 
-\[
-H_A(t)=C_A-(w+A)tzz^{\mathsf T}.
-\]
+```text
+HA(t)=CA-(w+A)t z z^T.
+```
 
-For \(q(-w)=1\),
+For `q(-w)=1`,
 
-\[
-q^{\mathsf T}H_A(s)q
-=q^{\mathsf T}C_Aq-(w+A)s.
-\]
+```text
+q^T HA(s) q = q^T CA q-(w+A)s.
+```
 
-The upper endpoint is
+The upper endpoint is the infimum of `q^T CA q/(w+A)` over the same normalized
+affine set. Taking the minimum proves the claim. ∎
 
-\[
-	heta_+^{(A)}
-=\inf_{q(-w)=1}rac{q^{\mathsf T}C_Aq}{w+A}.
-\]
-
-Taking the minimum proves (3), and the integral form proves (4)–(5).  ∎
-
-For \(A=0\), this is the ordinary half-line \(yq(y)^2\) boundary gap.
+For A=0 this is the ordinary half-line `y q(y)^2` boundary gap.
 
 ---
 
 ## 4. Monotonicity under certified factor removal
 
-Let \(
-u_1,
-u_2\) be finite positive measures on \([A,\infty)\) with
-
-\[
-
-u_1\ge
-u_2.
-\]
-
-Let \(g_\pm(
-u)\) denote the two Padé gaps computed from the moments of \(
-u\).
+Let ν_1 and ν_2 be finite positive measures on `[A,infinity)` with
+`ν_1≥ν_2`. Let g_-(ν) and g_+^(A)(ν) denote the two Padé gaps computed from ν.
 
 ### Corollary 4.1
 
-\[
-oxed{
- g_-(
-u_1)\ge g_-(
-u_2),
- \qquad
- g_+^{(A)}(
-u_1)\ge g_+^{(A)}(
-u_2).
-}
-	ag{6}
-\]
+```text
+g_-(ν_1) ≥ g_-(ν_2),
+g_+^(A)(ν_1) ≥ g_+^(A)(ν_2).
+```
 
-Thus exact removal of any collection of certified critical-line factors can
-only move the scalar toward the Padé boundary, never away from both boundaries.
+Thus exact removal of any certified positive residual measure can only move the
+scalar toward the Padé boundary.
 
 #### Proof
 
-Both quantities are minima, over the same affine set \(q(-w)=1\), of integrals
-of nonnegative kernels.  Increasing the measure increases every feasible
-objective.  ∎
+Both gaps are minima, over the same affine set `q(-w)=1`, of integrals of
+nonnegative kernels. Increasing the measure increases every feasible objective.
+∎
 
 This is a global monotonicity theorem; it does not depend on infinitesimal
-perturbation theory or a fixed endpoint vector.
+perturbation theory or a frozen endpoint vector.
 
 ---
 
-## 5. Finite line-mass budget contradiction
+## 5. Generic certified-submeasure budget
 
-Suppose proof-grade disjoint bins
+The most general finite form does not require atomic zeros.
 
-\[
-Y_r=[L_r,U_r]\subseteq[A,\infty)
-\]
+Suppose a proof artifact certifies a positive measure μ_cert satisfying
 
-are each certified to contain at least \(m_r\) actual critical-line zeros,
-counted with multiplicity.  For a frozen rational polynomial \(q_-\), define a
-rigorous lower bound
+```text
+0 ≤ μ_cert ≤ ν.
+```
 
-\[
-\kappa_r^-\le\inf_{y\in Y_r}K_-(y).
-\]
+Then the two exact gap identities imply
 
-Likewise, for \(q_+\), define
+```text
+g_-(w) ≥ integral K_-(y) dμ_cert(y),
+```
 
-\[
-\kappa_r^+\le\inf_{y\in Y_r}K_+^{(A)}(y).
-\]
+```text
+g_+^(A)(w) ≥ integral K_+^(A)(y) dμ_cert(y).
+```
 
-Under RH, the certified atoms are part of the positive residual measure, so
+### Corollary 5.1 — generic finite contradiction
 
-\[
-oxed{
- g_-(w)\ge\sum_r m_r\kappa_r^- ,
-}
-	ag{7}
-\]
-
-\[
-oxed{
- g_+^{(A)}(w)\ge\sum_r m_r\kappa_r^+ .
-}
-	ag{8}
-\]
-
-### Corollary 5.1 — finite counterexample predicates
-
-Let \(G_-\) and \(G_+\) be directed intervals containing the two total gaps.
+Let G_- and G_+ be directed intervals containing the total gaps, and let B_-
+and B_+ be rigorous lower bounds for the two certified-submeasure integrals.
 If
 
-\[
-oxed{
- \sup G_-<\sum_r m_r\kappa_r^- ,
-}
-	ag{9}
-\]
+```text
+upper(G_-) < B_-
+```
 
 or
 
-\[
-oxed{
- \sup G_+<\sum_r m_r\kappa_r^+ ,
-}
-	ag{10}
-\]
+```text
+upper(G_+) < B_+,
+```
 
-then RH is false, subject to the direct-ξ normalization, endpoint-vector, and
-zero-bin gates.
+then the positive-measure representation is impossible.
 
-The certificate is finite and value-only after the endpoint polynomial has
-been frozen.  It does not need a new deflated completed-ξ evaluation.
-
-#### Proof
-
-The right sides are lower bounds for the contribution of a subset of atoms to
-the nonnegative integrals (2) and (4).  They cannot exceed the corresponding
-total integral.  ∎
-
-### Important anti-double-counting gate
-
-The bins must be pairwise disjoint or must carry an independently verified
-integer allocation proving that no zero multiplicity is counted twice.  Merely
-summing overlapping lower-count windows is invalid.
+This formulation is the correct anti-double-counting abstraction: every budget
+item must be part of one globally certified submeasure of the residual table
+being tested.
 
 ---
 
-## 6. Exact interval evaluation over a zero bin
+## 6. Atomic line-zero bins
 
-For a rational interval \(Y=[L,U]\), the leverage kernels are rational functions
-with positive denominator on the declared support.
-
-A fail-closed checker may obtain \(\kappa_Y\) by:
-
-1. interval Horner evaluation of \(q(Y)\);
-2. exact squaring, with lower endpoint zero if the interval crosses zero;
-3. exact interval products for \(Y+w\) and \(D_U(Y)\);
-4. for the upper kernel, multiplication by \(Y-A\);
-5. division by a strictly positive denominator interval.
-
-This elementary interval bound can be sharpened by isolating the real roots of
-\(q\) and evaluating the rational kernel at endpoints and stationary points.
-The elementary hull is already sufficient for a proof; sharpening affects only
-power.
-
----
-
-## 7. Refinement and scheduling scores
-
-For an exact atom at \(y\), define the lower and upper leverage scores
-
-\[
-\lambda_-(y)=K_-(y),
-\qquad
-\lambda_+(y)=K_+^{(A)}(y).
-\]
-
-For a certified bin, preserve both
-
-\[
-\underline\lambda_r=\inf_{Y_r}\lambda,
-\qquad
-\overline\lambda_r=\sup_{Y_r}\lambda.
-\]
-
-The width
-
-\[
-\overline\lambda_r-ambda_r-\underline\lambda_r
-\]
-
-is the exact value of refining that zero bin for the active Padé witness.  This
-provides a witness-specific scheduling rule for the saturated sign-chain bins
-of PR #108:
+Suppose pairwise-disjoint squared-distance bins
 
 ```text
-refine the bins with the largest multiplicity-weighted leverage uncertainty,
+Y_r=[L_r,U_r] subset [A,infinity)
+```
+
+are each certified to contain at least m_r actual critical-line zeros that have
+**not already been removed from the residual table**.
+
+For a frozen rational endpoint polynomial, define
+
+```text
+kappa_r^- ≤ inf_{y in Y_r} K_-(y),
+kappa_r^+ ≤ inf_{y in Y_r} K_+^(A)(y).
+```
+
+The atomic submeasure is
+
+```text
+μ_cert = sum_r m_r delta_{y_r},
+```
+
+with unknown `y_r in Y_r`, so
+
+```text
+g_-(w) ≥ sum_r m_r kappa_r^-,
+g_+^(A)(w) ≥ sum_r m_r kappa_r^+.
+```
+
+A strict directed reversal is a finite RH counterexample predicate, subject to
+the direct-ξ, endpoint-vector, and zero-bin gates.
+
+### Anti-double-counting gate
+
+The bins must be pairwise disjoint or carry an independently verified integer
+allocation proving that no zero multiplicity is counted twice. Merely summing
+overlapping lower-count windows is invalid.
+
+A zero factor already subtracted from the table cannot be counted again as an
+atom of the residual measure.
+
+---
+
+## 7. Far-endpoint deflation leaves a certified segment measure
+
+This section makes the theorem directly compatible with PR #103/PR #105-style
+safe far-endpoint factor subtraction.
+
+Suppose an actual critical-line zero has squared distance y and a proof gives
+
+```text
+L ≤ y ≤ U ≤ B.
+```
+
+Subtracting the safe factor `log(u+B)` from the actual factor `log(u+y)` leaves
+
+```text
+log(u+y)-log(u+B)
+=
+- integral from y to B of 1/(u+s) ds.
+```
+
+With the sign convention used in the positive residual response, the remaining
+positive measure is Lebesgue measure on `[y,B]`. Since `y≤U`, every admissible
+zero leaves the common certified submeasure
+
+```text
+Lebesgue measure restricted to [U,B].
+```
+
+Therefore, for multiplicity m,
+
+```text
+g_- ≥ m times integral from U to B of K_-(s) ds,
+```
+
+```text
+g_+^(A) ≥ m times integral from U to B of K_+^(A)(s) ds.
+```
+
+A simple rational lower bound is
+
+```text
+m (B-U) inf_{s in [U,B]} K(s).
+```
+
+This is generally weaker than exact integration but is elementary and
+proof-grade. It does not double count the removed endpoint factor: it accounts
+only for the positive segment measure that remains after subtraction.
+
+For multiple factors, segment contributions may be summed when their
+multiplicity allocation is certified; overlapping segments are allowed because
+positive measures add by multiplicity. The zero identities themselves must
+still be nonduplicated.
+
+---
+
+## 8. Exact interval evaluation
+
+For a rational interval Y, both leverage kernels are rational functions with a
+strictly positive denominator on the declared support.
+
+A fail-closed checker may obtain a leverage interval by:
+
+1. interval Horner evaluation of q(Y);
+2. exact squaring, using lower endpoint zero if q(Y) crosses zero;
+3. exact interval products for `Y+w` and every `Y+u_j`;
+4. for the upper kernel, multiplication by `Y-A` and division by `w+A`;
+5. division by the strictly positive denominator interval.
+
+For an atomic bin, multiply the leverage lower bound by the certified
+multiplicity. For a certified segment, also multiply by its exact length.
+
+This elementary hull can be sharpened by isolating roots of q and stationary
+points of the rational kernel. Sharpening affects power, not validity.
+
+---
+
+## 9. Refinement and scheduling scores
+
+For an exact atom y, define
+
+```text
+lambda_-(y)=K_-(y),
+lambda_+(y)=K_+^(A)(y).
+```
+
+For a certified bin, preserve both the infimum and supremum leverage bounds.
+The multiplicity-weighted leverage width is the exact first target for refining
+that bin for the active Padé witness.
+
+For a certified segment, preserve
+
+```text
+length times leverage interval.
+```
+
+This gives a witness-specific scheduling rule for the saturated sign-chain bins
+of PR #108 and the selected-factor data of PR #107:
+
+```text
+refine the bins or segment endpoints with the largest contribution uncertainty,
 not necessarily the nearest bins or the widest ordinate bins.
 ```
 
-The same score chooses which selected factors in PR #107 deserve exact
-interval-valued removal first.
-
 ---
 
-## 8. Relationship to the normalized Padé coordinate
+## 10. Relationship to the normalized Padé coordinate
 
 With finite endpoints,
 
-\[
-\eta_A(w)=rac{g_-(w)}{g_-(w)+g_+^{(A)}(w)}.
-\]
+```text
+eta_A(w) = g_-(w) / (g_-(w)+g_+^(A)(w)).
+```
 
-By (2) and (4), this is a ratio of two positive Christoffel-type residual
-energies.  A small absolute gap caused only by collapse of both integrals is not
-an invariant near-counterexample; a small normalized gap means the lower
-Christoffel energy is small relative to the total finite moment uncertainty.
+The numerator and denominator are positive Christoffel-type residual energies.
+A small absolute gap caused only by collapse of both energies is not an
+invariant near-counterexample. A small normalized gap means one residual energy
+is small relative to the full finite moment uncertainty.
 
-The leverage decomposition therefore supplies the spectral explanation for the
-candidate correction in O-9312.
+The leverage decomposition supplies the spectral explanation for the candidate
+correction in O-9312.
 
 ---
 
-## 9. Proof boundary
+## 11. Proof boundary
 
-The gap identities, variational formulas, measure monotonicity, and finite mass
-budget inequalities are exact.
+The gap identities, variational formulas, measure monotonicity, atomic budgets,
+and safe segment budgets are exact.
 
 A Riemann-ξ contradiction requires:
 
-1. directed old moments and the new scalar value;
-2. a rational endpoint polynomial normalized by \(q(-w)=1\);
+1. directed old moments and new scalar value;
+2. a rational endpoint polynomial normalized by `q(-w)=1`;
 3. exact contraction of the total gap interval;
-4. proof-grade, non-overlapping critical-line zero bins and multiplicities;
+4. a globally compatible certified residual submeasure;
 5. exact interval lower bounds for every leverage contribution;
-6. a strict inequality (9) or (10);
+6. a strict negative budget;
 7. independent normalization, zero-isolation, and special-function review.
 
 No Riemann-ξ negative is asserted by this lemma.
