@@ -205,6 +205,77 @@ evaluation of `Z`, enough to *certify* each sign change; that reduces the
 zero-counting detector — which, by `O-5606`, is the cheaper search primitive by
 a factor that grows like `sqrt(T)`.
 
+
+### Update 2026-07-26 — the predicate that works (`opus5-01`)
+
+An external adversarial review supplied the object this project had been
+circling without naming, and reported it could not evaluate it for want of a
+FLINT install.  `pip install python-flint` works here.  The **exact slab
+discrepancy**
+
+```text
+D(a,b) = N(a,b) - N_0(a,b) >= 0,        D(a,b) > 0  ==>  RH IS FALSE
+```
+
+counts all zeros in the strip (`N`, with multiplicity) against those on the
+critical line (`N_0`).  No conditions at all: no bound on `\int S`, no
+conjecture, no floating-point sign decision.
+
+**Certified so far** (`X-5604`, ledger re-verified):
+
+```text
+slab (height)              span        N      N_0      D
+4709203636333.1875         39.9       172      172      0     102 s
+10000000000000.5          999.0      4467     4467      0      21 min
+100000000000000.5          50.0       242      242      0      10 min
+1000000000000000.5         10.0        52       52      0      26 min
+
+4 slabs, 1098.9 units of height, 4933 zeros -- all on the critical line, all
+simple.  The last is 333x the Platt-Trudgian exhaustively-verified frontier.
+```
+
+`N` is an Arb ball that must isolate a single integer; `N_0` is a count of
+certified sign changes of `Z`, each an Arb ball strictly on one side of zero.
+Since `N_0 <= N` is automatic, reaching `N_0 = N` forces `D = 0`.
+
+**These are spot certificates at great height, not an extension of the verified
+frontier.**  Below `10^{15}` there are of order `10^{16}` zeros and nothing here
+touches all of them.  The distinction matters and `O-5610` states it plainly.
+
+**Three consequences that change what this project should do.**
+
+1. **The counterexample backlog is empty** (`O-5609`).  Every ordinate ever
+   nominated on any branch — the Pick screens (#39/#66/#71), the `X-3902`
+   `j`-grid, the D-0801 carrier — lies inside the first slab above, in a
+   `2`-unit stretch with `19` units of clearance either side.  One `102`-second
+   certificate refutes all of them.  They coincide because every route was a
+   screen for local anomaly, and `O-5604` showed the Pick screens were in effect
+   finding a large zero gap.
+2. **Certify first, screen second.**  At `~0.3` s per zero, running a nominated
+   ordinate through `X-5604` costs less than almost any nomination is worth.
+3. **Counting beats locating, by one to two orders of magnitude.**  A `zeta`
+   *jet* at large height is enormously more expensive than `zeta`: a single
+   `acb_series([s,1]).zeta()` at `Im s = 4.7e12` did not return in `100` s
+   against `~0.3` s for `acb.zeta`.  Locating a zero needs derivatives, so
+   `acb.zeta_zeros` costs `15.7` s per zero; the argument principle needs
+   `xi'/xi`, so it is priced out above `~10^6`.  The `D` predicate is cheap for
+   exactly the complementary reason: **a sign of `Z` needs `zeta` alone.**
+
+**Audited** (`O-5611`).  Contour integration of `xi'/xi` reproduces
+`zeta_nzeros` at three heights spanning four orders of magnitude (`29`, `16`,
+`20` zeros; all PASSED).  It cannot follow higher, for the jet reason above.
+The certificates were already a cross-check besides: `N` and `N_0` come from
+different Arb code paths and agreed exactly on `4467` zeros at `t = 10^{13}`.
+
+**Two corrections to earlier work in this session**, both from the same review
+and both verified: `O-5604` printed `float(T)` rather than `T` for the PR #71
+ordinate, and `rs_zeta.c` collapsed emitted zero ordinates to binary64 at
+serialization.  Both fixed.  I then reproduced the *same* defect in new code —
+sample positions through `float`, where at `t = 10^{15}` an ulp is `0.125`
+against a mean spacing of `0.188`.  It stalled and reported `D <= 9` rather than
+concluding, which is the fail-closed design working.  Large ordinates in a
+`double` have now caused trouble twice in one session.
+
 ## Strongest next steps
 
 1. Independently reconstruct every cutoff-free entry with Arb balls, rather

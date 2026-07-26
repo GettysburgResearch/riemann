@@ -36,23 +36,48 @@ binary64 `Z`.  This experiment pays neither price.  Arb's `zeta_nzeros` returns
 a **ball**, and a count is used only when that ball isolates a single integer;
 `unique_fmpz` returns `None` otherwise and the program refuses.
 
-## Result so far
+## The ledger
 
 ```text
-a = 75347258181331 / 2^4  = 4709203636333.1875
-b = 37673629090985 / 2^3  = 4709203636373.125
-PR #71 ordinate T = 20225875608341108140435/2^32 strictly inside
+slab (height)              span        N      N_0      D   und
+4709203636333.1875         39.9       172      172      0    0   CERTIFIED
+10000000000000.5          999.0      4467     4467      0    0   CERTIFIED
+100000000000000.5          50.0       242      242      0    0   CERTIFIED
+1000000000000000.5         10.0        52       52      0    0   CERTIFIED
 
-N(a) = 19743642385928        (ball radius 0)
-N(b) = 19743642386100        (ball radius 0)
-N(a,b) = 172                 21.0 s at 192 bits
+4 certified slabs   1098.9 units of height   4933 zeros,
+all on the critical line and simple
 ```
 
-Unconditional.  `N_0` — and therefore `D` — is **not** yet computed; see
-`O-5608` for what may and may not be concluded, and for two independent
-confirmations this produced along the way (`N(a)` matches `turing.py`'s
-independently derived `c_est` exactly, and `|Z| = |zeta(1/2+it)|` certifies the
-`259.778` anomaly to `1e-15`).
+`python3 ledger.py` re-derives all of that from the certificate objects rather
+than trusting them — endpoints dyadic, `N_0 <= N`, `D >= 0`, `D` even if
+positive, no undecided sample counted as a sign.  It caught a stale `D = 9`
+summary on its first run.
+
+The last rung is `333` times the Platt–Trudgian exhaustively-verified frontier.
+**These are spot certificates at great height, not an extension of that
+frontier** — see `O-5610`.
+
+## How `N_0` is obtained, and why it is cheap
+
+`N_0 <= N` is automatic, so a certified *lower* bound on `N_0` that reaches `N`
+forces `D = 0`.  A certified **sign change** of `Z` between two points is a
+certified critical-line zero between them, and
+
+```text
+Z(t) = e^{i theta(t)} zeta(1/2 + it),
+theta(t) = Im log Gamma(1/4 + it/2) - (t/2) log pi
+```
+
+is directly evaluable in ball arithmetic.  The branch is unambiguous because
+`Re(1/4 + it/2) = 1/4 > 0`, where `log Gamma` is the analytic continuation from
+`log Gamma(1) = 0` — checked against the Stirling expansion, agreement to
+`5e-63`.
+
+This never locates a zero, and that is the whole economy of the method: a
+`zeta` **jet** at large height is enormously more expensive than `zeta` itself
+(`acb_series([s,1]).zeta()` at `Im s = 4.7e12` did not return in `100` s,
+against `~0.3` s for `acb.zeta`).  Locating needs derivatives; a sign does not.
 
 ## A cost anomaly worth knowing about
 
@@ -72,23 +97,34 @@ cheaper than a tight one hugging the feature of interest.
 ## Files
 
 ```text
-slab_discrepancy.py   the predicate, with fail-closed gates
-run_window.sh         the 40-unit window around the PR #71 ordinate
-run_gap.sh            a tight slab inside the large gap (slow; see above)
-results/              certificates and logs
+slab_discrepancy.py        N(a,b) from Arb, with fail-closed gates
+certify_gram.py            N_0 with no scanner: Gram points + adaptive bisection
+certify_parallel.py        N_0 from an existing scan; cheaper when one exists
+certified_sign_changes.py  the original serial version, kept for reference
+certify_height.py          drives both halves for a given height and span
+argument_principle.py      independent audit of N by contour integration
+ledger.py                  re-verifies every certificate in results/
+results/                   certificates and logs
 ```
 
 ## Run
 
 ```bash
-pip install python-flint          # 0.9.0 exposes arb_zeta_nzeros, acb_dirichlet_zeta_zeros
-python3 slab_discrepancy.py --a 75347258181331/16 --b 37673629090985/8 \
-    --target 20225875608341108140435/4294967296 --prec 192 \
-    --out results/window-pr71.json
+pip install python-flint       # 0.9.0 exposes arb_zeta_nzeros and acb_zeta
+
+# a complete certificate at a given height, both halves
+python3 certify_height.py --t0 10000000000000 --span 999 --tag 1e13
+
+# re-verify everything certified so far
+python3 ledger.py
+
+# audit the counter against contour integration (affordable below ~1e6)
+python3 argument_principle.py --y1 100 --prec 128 --rel-tol 1e-6
 ```
 
-`--list-zeros` additionally enumerates the critical-line zeros and computes `D`.
-Expect it to be slow at index `~2e13`.
+`slab_discrepancy.py --list-zeros` will instead enumerate critical-line zeros
+with `acb.zeta_zeros`.  Do not: it costs `15.7` s per zero at index `4.3e13`,
+`56` times the sampling route, because it locates rather than counts.
 
 ## Fail-closed gates
 
