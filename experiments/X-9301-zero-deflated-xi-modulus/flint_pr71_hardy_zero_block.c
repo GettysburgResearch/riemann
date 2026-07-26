@@ -83,13 +83,16 @@ int main(int argc, char **argv)
     slong precision = DEFAULT_PREC;
     slong length = DEFAULT_LEN;
     int threads = 4;
+    const char *start_index = START_INDEX;
     if (argc >= 2) precision = atol(argv[1]);
     if (argc >= 3) length = atol(argv[2]);
     if (argc >= 4) threads = atoi(argv[3]);
+    if (argc >= 5) start_index = argv[4];
     if (precision < 80 || length < 8 || threads < 1)
     {
         flint_fprintf(stderr,
-            "usage: %s [precision>=80] [length>=8] [threads>=1]\n", argv[0]);
+            "usage: %s [precision>=80] [length>=8] [threads>=1] "
+            "[start_zero_index]\n", argv[0]);
         return 2;
     }
 
@@ -98,7 +101,7 @@ int main(int argc, char **argv)
     fmpz_t start, index;
     fmpz_init(start);
     fmpz_init(index);
-    if (fmpz_set_str(start, START_INDEX, 10) != 0)
+    if (fmpz_set_str(start, start_index, 10) != 0)
     {
         flint_fprintf(stderr, "invalid start index\n");
         return 2;
