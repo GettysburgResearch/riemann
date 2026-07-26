@@ -1,0 +1,51 @@
+name: x12101-positive-anchor-ladder
+
+on:
+  push:
+    branches:
+      - agent/gpt56-03-i/93-positive-anchor-ladder
+    paths:
+      - '.github/workflows/x12101-positive-anchor-ladder.yml'
+      - 'claims/lemmas/L-12101-positive-anchor-one-moment-transform.md'
+      - 'claims/lemmas/L-12102-multi-anchor-christoffel-ladder.md'
+      - 'experiments/X-12101-positive-anchor-ladder/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Compile exact checker and discovery script
+        run: |
+          python -m compileall -q \
+            experiments/X-12101-positive-anchor-ladder/verify.py \
+            experiments/X-12101-positive-anchor-ladder/reconnaissance.py \
+            experiments/X-12101-positive-anchor-ladder/tests
+      - name: Run exact mutation suite
+        run: |
+          python -m unittest discover \
+            -s experiments/X-12101-positive-anchor-ladder/tests -v
+      - name: Replay retained positive control
+        run: |
+          python experiments/X-12101-positive-anchor-ladder/verify.py \
+            experiments/X-12101-positive-anchor-ladder/certificates/synthetic-positive.json \
+            --output /tmp/positive.json
+          cmp \
+            experiments/X-12101-positive-anchor-ladder/results/synthetic-positive.verification.json \
+            /tmp/positive.json
+      - name: Replay retained negative control
+        run: |
+          python experiments/X-12101-positive-anchor-ladder/verify.py \
+            experiments/X-12101-positive-anchor-ladder/certificates/synthetic-negative.json \
+            --output /tmp/negative.json
+          cmp \
+            experiments/X-12101-positive-anchor-ladder/results/synthetic-negative.verification.json \
+            /tmp/negative.json
