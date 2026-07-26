@@ -1,0 +1,22 @@
+{
+  "schema":"riemann.xi-log-portfolio-count-dual.v1",
+  "classification":"SYNTHETIC_MODEL",
+  "normalization_id":"riemann-xi-standard-half-s-sminus1-v1",
+  "log_terms":160,
+  "points":[
+    {"id":"u1","u":{"numerator":1,"denominator":1},"h_interval":{"lower":{"numerator":16,"denominator":9},"upper":{"numerator":16,"denominator":9}}},
+    {"id":"u2","u":{"numerator":2,"denominator":1},"h_interval":{"lower":{"numerator":36,"denominator":1},"upper":{"numerator":36,"denominator":1}}},
+    {"id":"u3","u":{"numerator":3,"denominator":1},"h_interval":{"lower":{"numerator":6400,"denominator":9},"upper":{"numerator":6400,"denominator":9}}}
+  ],
+  "beta":[{"numerator":-1,"denominator":1},{"numerator":2,"denominator":1},{"numerator":-1,"denominator":1}],
+  "response_certificate":{"type":"MONOMIAL_NONNEGATIVE","negative_derivative_numerator_coefficients":[{"numerator":2,"denominator":1}]},
+  "atoms":[{"id":"line-y1","lower_offset":{"numerator":1,"denominator":1},"upper_offset":{"numerator":1,"denominator":1}}],
+  "cell_cost_lower_bounds":[{"numerator":1,"denominator":10}],
+  "count_windows":[{"id":"line-count","atoms":["line-y1"],"count":4,"gate":"UNCONDITIONAL_TOTAL_ZERO_COUNT_EXACT"}],
+  "primal":{"atom_counts":[4]},
+  "dual":{"lambdas":[{"numerator":1,"denominator":10}]},
+  "two_point_controls":[
+    {"id":"adjacent-u1-u2","left":"u1","right":"u2","cell_cost_lower_bound":{"numerator":2,"denominator":5}},
+    {"id":"adjacent-u2-u3","left":"u2","right":"u3","cell_cost_lower_bound":{"numerator":1,"denominator":4}}
+  ]
+}
