@@ -12,8 +12,8 @@ Created: 2026-07-26
 Last updated: 2026-07-26
 Dependencies: X-5604 (`platt_ctypes.py`, `platt_certify.py`, `gap_census.py`);
 FLINT/Arb as an external implementation
-Scope: the `t = 10^{13}` slabs below; capability probes at `10^{14}`,
-`10^{15}`, `~10^{16}`
+Scope: the `t = 10^{13}` slabs below; the `t = 10^{16}` slab; capability
+probes at `10^{14}`, `10^{15}`, `~10^{16}`
 Related counterexample candidates: none — capability plus census
 
 ## The binding
@@ -82,16 +82,49 @@ verified frontier is exactly the dataset a Lehmer-style search needs.
 Slab `(10000000000000.5,\;10000000011200.5)` — `11{,}200` units at
 `t = 10^{13}`, `3.3x` the exhaustively-verified frontier:
 
-<!-- CENSUS_RESULTS -->
+```text
+N(a) = 43124192297104,  N(b) = 43124192347186  ->  N = 50082   (73 s)
+N_0 = 50082 disjoint Platt balls inside          (2042 s, 0.0408 s/zero)
+D   = 0
+
+CERTIFIED: all 50,082 zeros on the critical line, all simple, all located.
+
+census over the 50,081 rigorous gap intervals:
+  mean normalised gap        0.99997        (must be ~1; whole-pipeline check)
+  GUE-expected minimum       0.0182         (heuristic reference)
+  observed minimum           delta = 0.04481, RIGOROUS
+  ratio                      2.5            -- nothing anomalous
+
+tightest certified pairs (delta, interior Z ball at the dyadic midpoint):
+  #1  0.04481   at 10000000003362.1855   Z = [-0.00488438159542 +/- 4.6e-15]
+  #2  0.04531   at 10000000008072.0234   Z = [+0.00235249885497 +/- 1.0e-15]
+  #3  0.04633   at 10000000010680.2930   Z = [-0.00201150829469 +/- 4.0e-15]
+  #4  0.04695   at 10000000009985.2539   Z = [-0.00396205504453 +/- 2.4e-15]
+  #5  0.04737   at 10000000002376.1582   Z = [+0.00161359242726 +/- 4.6e-15]
+```
+
+Every number in the pair table is rigorous: the `delta` from ball endpoints,
+the interior `Z` an Arb ball.  A search for RH-violation precursors now has a
+certified baseline at `3.3x` the verified frontier: in `50,082` zeros the
+closest approach is `delta = 0.0448` with interior `|Z| = 0.0049` — a close
+pair, not an extreme one.  The same engine at `0.04` s/zero prices a
+million-zero census at `~11` CPU-hours, entirely parallelisable by block.
+
+And the same run **extends the height ladder**: the `11,200`-unit certificate
+subsumes the earlier `999`-unit one, and `t = 10^{16}` closed the same hour
+(`N = N_0 = 23`, `283` s of isolation against `55` minutes per endpoint
+*count* — the bottleneck has fully inverted; endpoint counting now limits
+height, not zero certification).
 
 ## Limitations
 
 1. The census's GUE comparison is a heuristic reference, labelled as such.
 2. `prec = 64` fails at every probed height; `128` is the working floor, and
    the failure mode is a clean `0 isolated`, never a wrong ball.
-3. The `~10^{16}` probe ran at `t = 1.0010\times10^{16}` — the index used was
-   a rough estimate of `N(10^{16})`, which is irrelevant for a capability
-   probe but means no `10^{16}` *slab certificate* is claimed here.
+3. The `~10^{16}` capability probe ran at `t = 1.0010\times10^{16}` (the index
+   used was a rough estimate).  The actual `10^{16}` slab certificate that
+   followed used the rigorous `N(a) = 54118226280292480` from `zeta_nzeros`
+   and is anchored correctly.
 4. Platt's index bookkeeping ("consecutive zeros starting at index `n`") is
    documented but not separately re-derived; the slab certificates do not rely
    on it (they compare disjoint-ball counts against an independent `N`), the

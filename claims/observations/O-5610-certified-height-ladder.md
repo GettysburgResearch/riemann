@@ -170,3 +170,25 @@ Before spending on it, note that the sign pass would then cost roughly `25` s
 per sample at that height — so a `4`-unit slab holding `~23` zeros needs perhaps
 `120` samples and `20` minutes on top of the count.  The rung is affordable;
 it just was not affordable in the time left.
+
+## Superseded in part: the ladder as of the Platt engine (`O-5612`)
+
+The Platt-block engine (`O-5612`) re-ran and extended this ladder.  Current
+state, ledger-verified:
+
+```text
+t          slab                                          span     N      N_0    D
+4.7e12     (4709203636333.1875, 4709203636373.125)        39.9    172    172    0
+1e13       (10000000000000.5,   10000000011200.5)      11200.0  50082  50082    0
+1e14       (100000000000000.5,  100000000000050.5)        50.0    242    242    0
+1e15       (1000000000000000.5, 1000000000000010.5)       10.0     52     52    0
+1e16       (1e16 + 0.5,         1e16 + 4.5)                4.0     23     23    0
+
+5 slabs, 11,303.9 units, 50,571 zeros -- all on the critical line, all simple;
+everything from 1e13 up rigorously LOCATED, not merely counted.
+```
+
+The `10^{16}` rung recorded as unfinished above is closed.  The bottleneck
+inverted exactly as the cost data hinted: the endpoint *counts* took `55`
+minutes each at `10^{16}` while isolating all `23` zeros took `283` s.
+Counting now limits height; certification does not.

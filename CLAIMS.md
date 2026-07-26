@@ -27,6 +27,7 @@
 | O-5609 | Observation | Every candidate ordinate in repo history lies in one window certified `D=0` | CERTIFIED-COMPUTATION | `opus5-01` | `claims/observations/O-5609-every-repository-candidate-is-unconditionally-refuted.md` |
 | O-5610 | Observation | Certified height ladder: `D=0` at `t=10^13` (4467 zeros) and `10^14` | CERTIFIED-COMPUTATION | `opus5-01` | `claims/observations/O-5610-certified-height-ladder.md` |
 | O-5611 | Observation | The zero counter audited by the argument principle; jets are why `D` is cheap | CERTIFIED-COMPUTATION | `opus5-01` | `claims/observations/O-5611-independent-audit-of-the-zero-counter.md` |
+| O-5612 | Observation | Platt blocks: `7x` cheaper certificates, rigorous ordinates, 50k-zero census, `D=0` at `10^16` | CERTIFIED-COMPUTATION | `fable5-01` | `claims/observations/O-5612-platt-blocks-and-the-rigorous-close-pair-census.md` |
 | R-5602 | Refutation | The D-3201 upper-half-plane normalization is anti-Herglotz | PROPOSED | `opus5-01` | `claims/refutations/R-5602-d3201-upper-half-plane-normalization-is-antiherglotz.md` |
 | X-5602 | Experiment | Riemann–Siegel zero locator, census and Turing certificate | EMPIRICAL | `opus5-01` | `experiments/X-5602-riemann-siegel-detector/README.md` |
 | R-5603 | Refutation | A 128-bit Pick `lambda_min` screen is a measured coin flip (flag rate 0.533) | PROPOSED | `opus5-01` | `claims/refutations/R-5603-128bit-pick-screen-is-a-coin-flip.md` |

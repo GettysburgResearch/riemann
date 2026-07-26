@@ -122,6 +122,17 @@ def main() -> None:
             continue
         seen.add(key); dedup.append(r)
     rows = dedup
+    # Drop certified slabs fully contained in a larger certified slab, so the
+    # height total counts every unit once (the 999-unit 1e13 certificate is a
+    # sub-slab of the 11,200-unit one).
+    certified = [r for r in rows if r.get("ok") and r.get("D") == 0]
+    contained = set()
+    for r in certified:
+        for q in certified:
+            if q is not r and q["a"] <= r["a"] and r["b"] <= q["b"]                     and (q["a"], q["b"]) != (r["a"], r["b"]):
+                contained.add((r["a"], r["b"]))
+    rows = [r for r in rows
+            if not (r.get("ok") and (r.get("a"), r.get("b")) in contained)]
     good = [r for r in rows if r.get("ok") and r.get("D") == 0]
     bad = [r for r in rows if not r.get("ok")]
     good.sort(key=lambda r: r["a"])

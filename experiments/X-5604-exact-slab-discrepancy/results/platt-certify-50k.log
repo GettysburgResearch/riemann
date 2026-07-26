@@ -21,3 +21,10 @@ t=1e13 x50k N(a)=43124192297104 N(b)=43124192347186 -> N=50082  [73 s]
   ...40000 balls inside, index at 43124192337105  [1653 s]
   ...42000 balls inside, index at 43124192339105  [1720 s]
   ...44000 balls inside, index at 43124192341105  [1787 s]
+  ...46000 balls inside, index at 43124192343105  [1854 s]
+  ...48000 balls inside, index at 43124192345105  [1923 s]
+  ...50000 balls inside, index at 43124192347105  [1990 s]
+  ...50082 balls inside, index at 43124192347195  [2042 s]
+CERTIFIED D = 0 over 11200.0 units at t ~ 1e+13: N_0 = N = 50082, all zeros on the critical line, all simple, all rigorously located.
+smallest gap upper bounds (normalised): ['0.0448', '0.0453', '0.0463', '0.0469', '0.0474']
+wrote /home/user/riemann/experiments/X-5604-exact-slab-discrepancy/results/platt-certify-1e13-50k.json
