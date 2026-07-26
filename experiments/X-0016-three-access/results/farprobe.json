@@ -1,0 +1,115 @@
+{
+ "experiment": "X-0016c",
+ "agent": "claude-02",
+ "git_sha": "8562178fabc77254b26d24148165604994efdd27",
+ "python": "3.11.15",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "prec_bits": 4000,
+ "probe_re": 2.05,
+ "detection": [
+  {
+   "N": 8,
+   "floor_double": 2.056249522652015e-13,
+   "smallest_delta": null,
+   "control_firings": 0
+  },
+  {
+   "N": 12,
+   "floor_double": 2.6089128412644968e-23,
+   "smallest_delta": null,
+   "control_firings": 0
+  },
+  {
+   "N": 16,
+   "floor_double": 1.627421218904214e-34,
+   "smallest_delta": "0.0001",
+   "control_firings": 0
+  },
+  {
+   "N": 20,
+   "floor_double": 1.1499867118562241e-46,
+   "smallest_delta": "0.000001",
+   "control_firings": 0
+  },
+  {
+   "N": 24,
+   "floor_double": 1.4684268726637397e-59,
+   "smallest_delta": "0.00000001",
+   "control_firings": 0
+  }
+ ],
+ "witness_budgets": [
+  {
+   "N": 16,
+   "delta": "0.01",
+   "detected": true,
+   "q": -4.849983653214052e-32,
+   "prime_budget_X": 2.223856541053749e+32
+  },
+  {
+   "N": 16,
+   "delta": "0.001",
+   "detected": true,
+   "q": -1.7264430362629454e-37,
+   "prime_budget_X": 3.966995228392816e+37
+  },
+  {
+   "N": 16,
+   "delta": "0.0001",
+   "detected": true,
+   "q": -2.204136993875977e-42,
+   "prime_budget_X": 2.033036079798831e+42
+  },
+  {
+   "N": 16,
+   "delta": "0.000001",
+   "detected": false
+  },
+  {
+   "N": 16,
+   "delta": "0.00000001",
+   "detected": false
+  },
+  {
+   "N": 24,
+   "delta": "0.01",
+   "detected": true,
+   "q": -1.3756034360874372e-35,
+   "prime_budget_X": 5.8479813052040194e+35
+  },
+  {
+   "N": 24,
+   "delta": "0.001",
+   "detected": true,
+   "q": -1.4829907057977114e-41,
+   "prime_budget_X": 3.2494487518880617e+41
+  },
+  {
+   "N": 24,
+   "delta": "0.0001",
+   "detected": true,
+   "q": -4.875034316397553e-47,
+   "prime_budget_X": 6.071758974574185e+46
+  },
+  {
+   "N": 24,
+   "delta": "0.000001",
+   "detected": true,
+   "q": -2.4344021821553186e-56,
+   "prime_budget_X": 5.178801603574282e+55
+  },
+  {
+   "N": 24,
+   "delta": "0.00000001",
+   "detected": true,
+   "q": -4.975913244059813e-65,
+   "prime_budget_X": 1.1158769211973578e+64
+  }
+ ],
+ "comparison": {
+  "bspline_family_measured_cost": "delta^-3.3 (X-0006: 10x sensitivity = 2000x prime powers)",
+  "rational_family_cost": "X ~ delta^-1.9 with a constant worse by several orders (witness magnitudes above)",
+  "crossover": "delta ~ 7e-6 at ~1e18 primes -- infeasible"
+ },
+ "conclusion": "the primes-only Pick detector at Re a ~ 2 retains strong POINT-side detection (~1.3 probes/decade) but its certified prime tail cannot reach the witness magnitudes at any feasible sieve; as a prime-side detector the rational family loses to the B-spline family at every feasible budget.  The prime-side dual's value is cross-validation (X-0016b), not search."
+}

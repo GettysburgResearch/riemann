@@ -1,7 +1,7 @@
 {
  "experiment": "X-0008",
  "agent": "claude-01",
- "git_sha": "6ff67b2b4eb39f0dcae2e3ed38e400b1877079e3",
+ "git_sha": "8966b76c7ecaa7f1b38eddc0a46f2e461d9ae1a8",
  "python": "3.11.15",
  "flint": "0.9.0",
  "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
@@ -23,7 +23,7 @@
    "prec": 300,
    "ok": true,
    "reason": "",
-   "seconds": 1286.4
+   "seconds": 1276.4
   },
   {
    "x0": "0.001",
@@ -38,7 +38,7 @@
    "prec": 300,
    "ok": true,
    "reason": "",
-   "seconds": 1228.1
+   "seconds": 1222.0
   }
  ],
  "conclusion": "zeta' has no zeros in the tested sub-strips up to height 1200.0; consistent with RH, and (subject to Q-0014) a zero here would refute it"

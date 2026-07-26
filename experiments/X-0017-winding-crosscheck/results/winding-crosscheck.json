@@ -1,0 +1,132 @@
+{
+ "experiment": "X-0017",
+ "agent": "claude-02",
+ "git_sha": "8562178fabc77254b26d24148165604994efdd27",
+ "python": "3.11.15",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "prec_bits": 300,
+ "rows": [
+  {
+   "box": "first three zeros",
+   "rect": [
+    "0.02",
+    "0.98",
+    "10",
+    "26"
+   ],
+   "expected": 3,
+   "winding1": "3",
+   "winding2": "3",
+   "hermite": "3",
+   "consistent": true,
+   "seconds": 6.8
+  },
+  {
+   "box": "empty gap",
+   "rect": [
+    "0.02",
+    "0.98",
+    "26",
+    "30"
+   ],
+   "expected": 0,
+   "winding1": "0",
+   "winding2": "0",
+   "hermite": "0",
+   "consistent": true,
+   "seconds": 1.4
+  },
+  {
+   "box": "first 29 zeros",
+   "rect": [
+    "0.02",
+    "0.98",
+    "0.5",
+    "100.4"
+   ],
+   "expected": 29,
+   "winding1": "29",
+   "winding2": "29",
+   "hermite": "29",
+   "consistent": true,
+   "seconds": 60.9
+  },
+  {
+   "box": "mid-height band",
+   "rect": [
+    "0.02",
+    "0.98",
+    "500.1",
+    "520.3"
+   ],
+   "expected": null,
+   "winding1": "15",
+   "winding2": "15",
+   "hermite": "15",
+   "consistent": true,
+   "seconds": 44.6
+  },
+  {
+   "box": "Lehmer pair 1977",
+   "rect": [
+    "0.05",
+    "0.95",
+    "1977.0",
+    "1977.4"
+   ],
+   "expected": 2,
+   "winding1": "2",
+   "winding2": "2",
+   "hermite": "2",
+   "consistent": true,
+   "seconds": 10.5
+  },
+  {
+   "box": "Lehmer pair 1329",
+   "rect": [
+    "0.05",
+    "0.95",
+    "1329.0",
+    "1329.3"
+   ],
+   "expected": 2,
+   "winding1": "2",
+   "winding2": "2",
+   "hermite": "abstain",
+   "consistent": true,
+   "seconds": 6.8
+  },
+  {
+   "box": "edge NEAR zero (1e-4)",
+   "rect": [
+    "0.02",
+    "0.98",
+    "10",
+    "14.1348"
+   ],
+   "expected": null,
+   "winding1": "1",
+   "winding2": "1",
+   "hermite": "abstain",
+   "consistent": true,
+   "seconds": 0.7
+  },
+  {
+   "box": "edge NEARER zero (1e-5)",
+   "rect": [
+    "0.02",
+    "0.98",
+    "10",
+    "14.13473"
+   ],
+   "expected": null,
+   "winding1": "1",
+   "winding2": "1",
+   "hermite": "abstain",
+   "consistent": true,
+   "seconds": 0.8
+  }
+ ],
+ "disagreements": 0,
+ "conclusion": "two independently written counting layers (plus the moment count where applicable) agree on every box where both certify; the counting half of Q-0003 is closed, the evaluator half remains open"
+}

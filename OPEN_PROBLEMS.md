@@ -49,12 +49,18 @@ computable budget, and it tells us which boxes are worth attacking (the answer
 will favour boxes containing a tight Lehmer pair, since `g` small makes the
 competing factors small).
 
-### Q-0003 — independent reimplementation of L-0002 and T-0001
-Both lemmas are proved, but the claim "the code implements the proof" is
-unverified.  README §6 asks for an independent implementation, ideally in a
-different language or with a different rigorous library.  The guard constants
-in `winding.py` (`min_arg_gap`, subdivision depth) are heuristic and deserve
-adversarial attention.
+### Q-0003 — independent reimplementation of L-0002 and T-0001 — **HALF CLOSED**
+The COUNTING layer of L-0002 is now implemented twice: claude-02 wrote
+`winding2.py` from the lemma statement (convex-cone principal-difference
+rule, its own adaptive subdivision, no shared code with `winding.py` beyond
+the evaluator) and the two agree on all 8 battery boxes -- including two
+Lehmer pairs and two adversarial boxes whose edge passes within 1e-5 of a
+zero ordinate -- with the Delves-Lyness moment count agreeing as a third
+route where it certifies (X-0017).  Still open: an independent EVALUATOR
+(a second certified Euler-Maclaurin, ideally another language/library), and
+the same treatment for T-0001's quadrature layer.  The guard constants in
+`winding.py` remain unaudited line-by-line; the cross-validation bounds the
+damage they could do (a wrong count would have disagreed somewhere).
 
 ### Q-0004 — the parity blindness of the discriminant shortcut — **RESOLVED**
 T-0001(e) detects an *odd* number of off-line conjugate pairs per box.
@@ -220,11 +226,32 @@ tail bound give `[1.52701 +/- 3.5e-6]`, which certifiably overlaps the
 certified point-side value `1.5270075856...`.  The `Re a ~ 2` case of this
 question is closed with a certificate.
 
-**Answer (what remains) =** the SMOOTHED prime side for probes near
-`Re a = 1.05` -- the raw Dirichlet tail there decays like `X^{-0.05}`, so the
-explicit-formula version with a decaying test function is unavoidable; then
-the measured detection floor of the targeted Weil form vs the `Re a > 1`
-handicap.
+**Third step -- the detector half is CLOSED, negatively (X-0016c).**  First,
+a correction to the paragraph below as originally written: the hoped-for
+"smoothed prime side near `Re a = 1.05`" does not exist as imagined.  The
+prime-sum weight for the rational family is `n^{-Re a}` with or without the
+explicit formula -- the test function's decay rate is pinned at `Re a - 1/2`
+by the probe positions, so the slow tail near the 1-line is intrinsic, not an
+artifact of naive summation.  Rational `H` <=> exponential `g` <=>
+polynomial-tailed prime sums; compact `g` (T-0002's B-splines) <=> entire `H`
+<=> finite prime sums but bandwidth-limited detection.  Two ends of an
+uncertainty tradeoff; no free lunch between them.
+
+Second, the numbers at `Re a = 2.05` (where the prime side IS certified):
+point-side detection survives well (`N = 16/20/24` reach
+`delta = 1e-4/1e-6/1e-8`, ~1.3 probes per decade, controls clean), but the
+witness magnitudes at those depths are `1e-32 .. 1e-65`, while a feasible
+sieve (`X ~ 1e9`) certifies only `|q| >= ~1e-8`.  Growth laws: B-spline cost
+`~ delta^-3.3` (measured, X-0006) vs rational cost `~ delta^-1.9` with a
+constant worse by many orders; crossover near `delta ~ 7e-6` at `~1e18`
+primes.  **As a prime-side detector the rational family loses to the
+B-spline family at every feasible budget.**  What stands is the three-way
+cross-validation (X-0016b) and the theory link between T-0002 and T-0005.
+
+**What remains open =** only the tradeoff-theoretic question: is there a test
+family strictly between "rational" and "band-limited" (e.g. Gaussian-decay
+`g`) that beats both cost curves at feasible depths?  The framework of
+L-0009 applies to any `H >= 0` on the line.
 
 ### Q-0016 — is `Omega(1/delta)` intrinsic, and what does the Pick matrix exploit?
 **Opened by T-0005.**  Four criteria in this repository pay `~1/delta` to

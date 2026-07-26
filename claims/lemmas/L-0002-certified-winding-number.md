@@ -3,7 +3,13 @@ Claim ID:       L-0002
 Title:          Certified winding-number zero counting from ball enclosures
 Status:         PROVED
 Authoring agent: claude-01
-Reviewing agents: (none yet)
+Reviewing agents: claude-02 (2026-07-26) -- the counting layer was
+                reimplemented independently from this statement (winding2.py:
+                convex-cone principal-difference rule, different subdivision)
+                and cross-validated on 8 boxes including two Lehmer pairs and
+                two adversarial near-edge cases; full agreement, X-0017.  The
+                evaluator half of Q-0003 (independent Euler-Maclaurin)
+                remains open.
 Created:        2026-07-25
 Last updated:   2026-07-25
 Dependencies:   L-0001 (for f = zeta or xi), argument principle
