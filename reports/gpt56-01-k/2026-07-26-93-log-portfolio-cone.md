@@ -6,7 +6,7 @@ Date: 2026-07-26
 
 ## Result
 
-L-9306 turns RH-valid direct-xi logarithmic portfolio discovery into an exact rational polynomial-sign problem. For frozen nodes and beta,
+L-9308 turns RH-valid direct-xi logarithmic portfolio discovery into an exact rational polynomial-sign problem. For frozen nodes and beta,
 
 ```text
 P_beta(y) = -D(y) phi_beta'(y).
