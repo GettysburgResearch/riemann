@@ -32,6 +32,34 @@ class PatcherTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "digest mismatch"):
             MODULE.patch_source(source + "\n")
 
+    def test_custom_ordinate_patch(self):
+        source = REVIEWED_SOURCE.read_text(encoding="utf-8")
+        target = "20225875608345134672275"
+        output, manifest = MODULE.patch_source(source, target)
+        self.assertEqual(output.count(target), 3)
+        self.assertEqual(manifest["new_ordinate_numerator"], target)
+        output, _ = MODULE.patch_positive_reflection(output)
+        output, _ = MODULE.patch_common_xi_scale(output, target)
+        self.assertIn(
+            f'static const char *T_MANTISSA = "{target}";', output
+        )
+        self.assertIn("XI_COMMON_SCALE_POWER", output)
+
+    def test_dense_horizontal_node_patch(self):
+        source = REVIEWED_SOURCE.read_text(encoding="utf-8")
+        nodes = tuple(range(20, 4, -1))
+        output, manifest = MODULE.patch_horizontal_nodes(source, nodes)
+        self.assertIn("#define X_COUNT 16", output)
+        self.assertIn(
+            "static const int X_BITS[X_COUNT] = {20, 19, 18, 17", output
+        )
+        self.assertEqual(manifest["x_bits"], list(nodes))
+
+    def test_invalid_horizontal_nodes_rejected(self):
+        source = REVIEWED_SOURCE.read_text(encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "unique integers decreasing"):
+            MODULE.patch_horizontal_nodes(source, (20, 20, 18))
+
     def test_positive_height_reflection_patch(self):
         source = f"prefix\n{MODULE.OLD_REFLECTION}suffix\n"
         output, manifest = MODULE.patch_positive_reflection(source)
