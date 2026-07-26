@@ -113,11 +113,50 @@ L-9507 evidence (n = 53, h = log2/3, 649 zeros < 1000)
   any rho > 1 observed                             NO
 ```
 
+### X-9504 (EMPIRICAL) — the deficit law, and the bound on the route
+
+Having built the right statistic, I measured what it would take to close it.
+
+```text
+deficit vs T   (n=53, h=log2/3)      1 - rho ~ K * S_T,  K = 3.434
+                                     flat over T in [600,1000], spread 0.438
+deficit vs n   (h=log2/3, T=1000)    1 - rho ~ 0.0651 * n^(-0.582)
+deficit vs h   (n=40, T=1000)        minimum at h = pi/gamma_1 = 0.222261,
+                                     deficit 4.62e-03 vs 7.47e-03 at log(2)/3
+```
+
+The deficit is the unaccounted zero tail and nothing else: the constant `K` is
+flat, so no choice of direction `b` recovers the tail.  Inverting the two laws:
+
+```text
+deficit 1e-12  needs  T ~ 3.3e13   (~1.5e14 certified zero bins)
+deficit 1e-12  needs  n ~ 3.8e18   (prime cutoff e^(8.8e17))
+```
+
+with `n` additionally capped near `90` by any `10^9`-entry prime table.
+
+**Both knobs of the arithmetic-progression route are out of reach.**  I do not
+expect a finite RH witness from arithmetic-progression screw filters at any
+step `h`.  This bounds the *route*, not `L-9504`, `L-9505` or `L-9507`, which
+remain correct.
+
+One genuine structural finding on the way: `h = log(2)/3` is a poor spectral
+choice.  It was picked in `X-9502` because it makes the prime-power threshold
+the exact integer predicate `q^3 <= 2^k` — a real advantage for exact replay,
+but an arithmetic convenience, not a spectral one.  The lowest-zero resonance
+`h = pi/gamma_1` improves the deficit by a factor `1.6-1.8`, because `gamma_1`
+carries by far the largest `gamma^{-2}` weight and `sin^2(gamma_1 h/2)` is the
+weight with which it enters `Z_Gamma`.  The analogous resonances for
+`gamma_2, gamma_3, gamma_4` do not help, so the effect is specific to the
+lowest zero.  My first guess at the mechanism — "maximize the total mass
+`2 Psi(h)`" — is wrong: `Psi` is slightly smaller at `pi/gamma_1` than at
+`pi/gamma_2`.
+
 ## Candidate counterexamples
 
-**None.**  No `Z-####` is assigned.  `rho_Gamma <= 1` held at every `T` tested;
-the results are consistent with RH.  Nothing here is a counterexample, and
-nothing here proves anything infinite about RH.
+**None.**  No `Z-####` is assigned.  `rho_Gamma <= 1` held at every `T`, `n`
+and `h` tested; the results are consistent with RH.  Nothing here is a
+counterexample, and nothing here proves anything infinite about RH.
 
 ## Certified computations
 
@@ -179,6 +218,9 @@ added   experiments/screw_zeta_zeros.py
 added   experiments/screw_audit_and_ratio.py
 added   experiments/results/X-9503-screw-audit-ratio/audit.json
 added   experiments/results/X-9503-screw-audit-ratio/zeros1000.json
+added   claims/experiments/X-9504-zero-accounting-deficit-law.md
+added   experiments/screw_deficit_law.py
+added   experiments/results/X-9504-screw-deficit-law/deficit.json
 added   reports/claude-09/2026-07-26-95-vanishing-minimum-and-zero-accounting.md
 ```
 
@@ -200,18 +242,26 @@ X-9502   independently reproduced in binary64.  Its directed MPFR endpoints
 L-9506   NEW, PROPOSED.
 L-9507   NEW, PROPOSED.
 X-9503   NEW, EMPIRICAL.
+X-9504   NEW, EMPIRICAL.  Bounds the arithmetic-progression route.
 ```
 
 ## Recommended next actions
 
-1. **Optimize over `h`, not `n`.**  `L-9506` makes larger `n` actively
-   counterproductive, but `h` is free and enters `Z_Gamma` through
-   `sin^2(gamma h/2)`, which controls how visible each zero is.  Maximize
-   `rho_Gamma(n,h)` over exact rational `h` at modest `n` with a fixed
-   `Gamma`.  Cheapest high-information experiment available.
-2. **If `sup_h rho_Gamma` stays well below `1`, record it as a negative result
-   bounding the whole arithmetic-progression route.**  That is worth more than
-   another record-small eigenvalue.
+Items 1 and 2 of my original list were carried out within this session and
+became `X-9504`; `sup_h rho_Gamma` does stay well below `1`, and the resulting
+bound on the route is recorded there.  What remains:
+
+1. **Leave the arithmetic-progression cone.**  `L-9504`'s cone is the
+   equally-spaced one, whose Gram vectors are geometric progressions in
+   `e^{i gamma h}`; the `X-9504` deficit law is a statement about that
+   structure.  General nodes `t_1,...,t_m` give Gram vectors
+   `(e^{i gamma t_j})_j` — arbitrary frequency sampling — and the law does not
+   apply.  `L-9501`'s three-value determinant and `L-9502`'s Gaussian kernel
+   already live outside the cone and were never pushed.
+2. **Test multi-step combinations.**  Several steps `h_1,...,h_r` at once:
+   tail contributions decorrelate across steps while low-zero contributions can
+   be made to add.  Whether that beats `K S_T` is open and is cheap to test
+   with the code now in the repository.
 3. **Certify bins for the zeros the *optimal* `b` loads**, not the ones the
    frozen `lambda_min` eigenvector loads.  The Arb request posted to Issue #84
    for indices `121, 60, 207, 105, 244` is aimed at the wrong direction and
