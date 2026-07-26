@@ -6,6 +6,7 @@ is a directed python-flint/Arb interval at an exact dyadic ordinate. A wrong
 guide can lose alternations but cannot manufacture one.
 """
 from __future__ import annotations
+
 import argparse
 import hashlib
 import importlib.util
@@ -20,10 +21,13 @@ from pathlib import Path
 from typing import Any
 
 HERE = Path(__file__).resolve().parent
+COUNT_SCHEMA = "riemann.x5604-slab-discrepancy.v1"
 
 
 def load_module(name: str, filename: str) -> Any:
     spec = importlib.util.spec_from_file_location(name, HERE / filename)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load {filename}")
     module = importlib.util.module_from_spec(spec)
     sys.modules[name] = module
     spec.loader.exec_module(module)
@@ -51,6 +55,64 @@ def sha256_file(path: Path) -> str:
                 break
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def exact_integer(value: Any, name: str) -> int:
+    if isinstance(value, bool) or not isinstance(value, int):
+        raise ValueError(f"{name} must be an integer")
+    return value
+
+
+def count_endpoint(data: dict[str, Any], name: str) -> Fraction:
+    raw = data.get(name)
+    if not isinstance(raw, dict) or not isinstance(raw.get("fraction"), str):
+        raise ValueError(f"count source {name}.fraction is missing")
+    return Fraction(raw["fraction"])
+
+
+def verify_total_count_source(
+    path: Path,
+    lower: Fraction,
+    upper: Fraction,
+    total_count: int,
+    target: Fraction | None,
+) -> dict[str, Any]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError("total-count source must contain an object")
+    if data.get("schema") != COUNT_SCHEMA:
+        raise ValueError("total-count source schema mismatch")
+    classification = data.get("classification")
+    if not isinstance(classification, str) or not classification.startswith("RIGOROUS"):
+        raise ValueError("total-count source is not rigorously classified")
+    if count_endpoint(data, "a") != lower or count_endpoint(data, "b") != upper:
+        raise ValueError("total-count source slab does not match requested slab")
+    source_total = exact_integer(
+        data.get("N_total_in_slab"), "count_source.N_total_in_slab"
+    )
+    if source_total != total_count:
+        raise ValueError(
+            f"total-count source proves {source_total}, not requested {total_count}"
+        )
+    n_a = data.get("N_a")
+    n_b = data.get("N_b")
+    if not isinstance(n_a, dict) or not isinstance(n_b, dict):
+        raise ValueError("count source endpoint records are missing")
+    n_a_integer = exact_integer(n_a.get("integer"), "count_source.N_a.integer")
+    n_b_integer = exact_integer(n_b.get("integer"), "count_source.N_b.integer")
+    if n_b_integer - n_a_integer != total_count:
+        raise ValueError("count source endpoint integers do not reproduce total count")
+    if not isinstance(n_a.get("ball"), str) or not isinstance(n_b.get("ball"), str):
+        raise ValueError("count source endpoint balls are missing")
+    if target is not None:
+        target_record = data.get("target")
+        if (
+            not isinstance(target_record, dict)
+            or target_record.get("strictly_inside") is not True
+            or Fraction(target_record.get("fraction")) != target
+        ):
+            raise ValueError("count source target gate does not match requested target")
+    return data
 
 
 def nearest_dyadic(value: Fraction, bits: int) -> Fraction:
@@ -102,10 +164,24 @@ def main() -> int:
     upper = parse_fraction(args.slab_upper)
     if not lower < upper:
         raise SystemExit("slab endpoints are reversed")
+    target = parse_fraction(args.target) if args.target else None
+    if target is not None and not lower < target < upper:
+        raise SystemExit("target is not strictly inside the slab")
+
+    try:
+        count_source = verify_total_count_source(
+            args.total_count_source,
+            lower,
+            upper,
+            args.total_count,
+            target,
+        )
+    except (OSError, json.JSONDecodeError, ValueError) as error:
+        raise SystemExit(f"invalid total-count source: {error}") from error
 
     guide = [
         decimal_fraction(line)
-        for line in args.guide.read_text().splitlines()
+        for line in args.guide.read_text(encoding="utf-8").splitlines()
         if line.strip()
     ]
     points = sample_points(guide, lower, upper, args.bits)
@@ -124,6 +200,8 @@ def main() -> int:
             }
         )
     )
+    if not ladder or ladder[0] < 64:
+        raise SystemExit("precision ladder must begin at 64 bits or more")
     tasks = [
         (index, point.numerator, point.denominator, ladder)
         for index, point in enumerate(points)
@@ -157,7 +235,8 @@ def main() -> int:
                 },
                 indent=2,
             )
-            + "\n"
+            + "\n",
+            encoding="utf-8",
         )
         return 1
 
@@ -173,6 +252,7 @@ def main() -> int:
         {"t": row["t"], "z_interval": row["z_interval"]} for row in rows
     ]
     sign_digest = CHECKER.canonical_sha(semantic_samples)
+    count_digest = sha256_file(args.total_count_source)
     data: dict[str, Any] = {
         "schema": CHECKER.SCHEMA,
         "classification": CHECKER.PRODUCTION,
@@ -184,9 +264,12 @@ def main() -> int:
         "gates": {
             "total_count_status": "CERTIFIED_TOTAL_ZETA_ZERO_COUNT",
             "sign_status": "CERTIFIED_HARDY_Z_INTERVALS",
-            "total_count_sha256": sha256_file(args.total_count_source),
+            "total_count_sha256": count_digest,
             "sign_table_sha256": sign_digest,
             "total_count_source": str(args.total_count_source),
+            "total_count_schema": count_source["schema"],
+            "total_count_N_a": count_source["N_a"]["integer"],
+            "total_count_N_b": count_source["N_b"]["integer"],
             "guide_sha256": sha256_file(args.guide),
         },
         "samples": samples,
@@ -201,14 +284,17 @@ def main() -> int:
             "elapsed_seconds": time.time() - started,
         },
     }
-    if args.target:
-        data["target_ordinate"] = CHECKER.fj(parse_fraction(args.target))
+    if target is not None:
+        data["target_ordinate"] = CHECKER.fj(target)
     verification = CHECKER.verify(data)
     data["initial_verification"] = {
         "verdict": verification["verdict"],
         "certificate_sha256": verification["certificate_sha256"],
     }
-    args.output.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+    args.output.write_text(
+        json.dumps(data, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
     print(
         json.dumps(
             {
