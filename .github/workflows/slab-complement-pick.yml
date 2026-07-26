@@ -29,10 +29,13 @@ jobs:
       - name: Compile and run exact tests
         run: |
           cd experiments/X-12101-slab-complement-pick
-          python -m compileall -q verify_slab_complement.py rank_midpoint.py tests
+          python -m compileall -q \
+            verify_slab_complement.py verify_multislab.py rank_midpoint.py tests
           python -m unittest discover -s tests -v
           python verify_slab_complement.py certificates/synthetic-strict-separation.json
           python verify_slab_complement.py certificates/synthetic-line-zero-control.json
+          python verify_multislab.py certificates/synthetic-multislab-separation.json
+          python verify_multislab.py certificates/synthetic-multislab-control.json
       - name: Freeze and exactly replay the midpoint nomination
         run: |
           cd experiments/X-12101-slab-complement-pick
