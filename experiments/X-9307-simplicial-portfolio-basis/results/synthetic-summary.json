@@ -1,0 +1,18 @@
+{
+  "negative_control": {
+    "basis_rows": [
+      {"degree": 0, "exact_value": "-1", "status": "CERTIFIED_NEGATIVE"},
+      {"degree": 1, "exact_value": "2", "status": "CERTIFIED_NONNEGATIVE"}
+    ],
+    "verdict": "SYNTHETIC_NEGATIVE_BASIS_WITNESS"
+  },
+  "positive_control": {
+    "basis_rows": [
+      {"degree": 0, "exact_value": "1/2", "status": "CERTIFIED_NONNEGATIVE"},
+      {"degree": 1, "exact_value": "1/2", "status": "CERTIFIED_NONNEGATIVE"}
+    ],
+    "scope": "Every normalized monomial-positive portfolio on nodes 1,2,3 is nonnegative.",
+    "verdict": "CERTIFIED_NONNEGATIVE_ENTIRE_CONE"
+  },
+  "schema": "riemann.x9307.synthetic-summary.v1"
+}
