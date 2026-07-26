@@ -1,0 +1,19 @@
+{
+ "schema": "riemann.x5604-argument-principle.v1",
+ "agent": "opus5-01",
+ "classification": "RIGOROUS on both sides: the contour value is an Arb ball from the adaptive integrator, the reference is an Arb ball from zeta_nzeros. The audit passes only when both isolate the same integer.",
+ "rectangle": {
+  "x0": -1,
+  "x1": 2,
+  "y0": "2000001/2",
+  "y1": "2000021/2"
+ },
+ "prec_bits": 128,
+ "contour_value": "[20.00 +/- 1.28e-3] + [+/- 1.28e-3]j",
+ "contour_imag_contains_zero": true,
+ "contour_integer": 20,
+ "zeta_nzeros_integer": 20,
+ "agree": true,
+ "seconds_contour": 559.0746321678162,
+ "verdict": "AUDIT PASSED: two independent Arb code paths -- contour integration of xi'/xi, and Platt/Turing counting on the real line -- return the same integer."
+}

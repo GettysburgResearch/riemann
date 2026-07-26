@@ -1,0 +1,38 @@
+{
+ "schema": "riemann.x5604-certify-gram.v1",
+ "agent": "opus5-01",
+ "classification": "RIGOROUS lower bound on N_0. Sample POSITIONS come from Gram points and adaptive bisection, which are heuristics; every accepted SIGN is an Arb ball strictly on one side of zero. No scanner, no uncertified guide list, no assumption of Gram's law.",
+ "label": "t=1e15 span=10",
+ "a": "2000000000000001/2",
+ "b": "2000000000000021/2",
+ "height": 1000000000000000.5,
+ "span": 10.0,
+ "total_samples": 278,
+ "rounds": [
+  {
+   "round": 0,
+   "samples": 52,
+   "changes": 33
+  },
+  {
+   "round": 1,
+   "added": 56,
+   "samples": 108,
+   "changes": 51
+  },
+  {
+   "round": 2,
+   "added": 170,
+   "samples": 278,
+   "changes": 52
+  }
+ ],
+ "undecided": [],
+ "certified_sign_changes": 52,
+ "N0_lower_bound": 52,
+ "seconds": 1581.8561987876892,
+ "seconds_per_zero": 30.42031151514787,
+ "N_total": 52,
+ "D": 0,
+ "verdict": "CERTIFIED D = 0 over 10.0 units at t ~ 1e+15: N_0 = N = 52, no zero off the critical line, every zero simple. Unconditional."
+}

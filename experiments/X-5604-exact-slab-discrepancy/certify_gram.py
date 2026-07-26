@@ -112,13 +112,21 @@ def dyadic(x, bits: int) -> Fr:
     return Fr(round(x * scale), scale)
 
 
-def run(points, procs, bits):
-    work = [(i, p.numerator, p.denominator) for i, p in enumerate(points)]
-    res = [None] * len(points)
-    with Pool(procs) as pool:
-        for i, s, p, msg in pool.imap_unordered(_sign_at, work, chunksize=8):
-            res[i] = (s, p, msg)
-    return res
+def run(points, procs, bits, cache=None):
+    """Certify signs at `points`, reusing anything already in `cache`.
+
+    Refinement rounds add a handful of points to a list of hundreds.  Without a
+    cache each round re-evaluates everything, which at t = 1e15 costs 6.6 s per
+    sample and dominates the run; with it, a round costs only its new points.
+    """
+    cache = {} if cache is None else cache
+    todo = [(i, p.numerator, p.denominator)
+            for i, p in enumerate(points) if p not in cache]
+    if todo:
+        with Pool(procs) as pool:
+            for i, sg, pr, msg in pool.imap_unordered(_sign_at, todo, chunksize=8):
+                cache[points[i]] = (sg, pr, msg)
+    return [cache[p] for p in points], cache
 
 
 def count_changes(signs):
@@ -155,7 +163,7 @@ def main() -> None:
     print("%s slab (%.4f, %.4f) span %.1f  %d Gram samples  %d procs"
           % (args.label, af, bf, bf - af, len(pts), args.procs), flush=True)
 
-    signs = run(pts, args.procs, args.bits)
+    signs, cache = run(pts, args.procs, args.bits)
     changes = count_changes([s[0] for s in signs])
     total_evals = len(pts)
     print("  round 0 (Gram): %d certified sign changes  [%.0f s]"
@@ -186,7 +194,7 @@ def main() -> None:
         if not new:
             break
         merged = sorted(set(pts) | set(new))
-        signs = run(merged, args.procs, args.bits)
+        signs, cache = run(merged, args.procs, args.bits, cache)
         pts = merged
         total_evals += len(new)
         changes = count_changes([s[0] for s in signs])

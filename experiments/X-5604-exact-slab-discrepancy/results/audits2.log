@@ -9,3 +9,8 @@ AUDIT PASSED: two independent Arb code paths -- contour integration of xi'/xi, a
 rectangle [-1, 2] x [1000000.5, 1000010.5]  prec=128
    side 0  -1.00000 + 1.00000e+6j -> 2.00000 + 1.00000e+6j   [103 s]
    side 1  2.00000 + 1.00000e+6j -> 2.00000 + 1.00001e+6j   [39 s]
+   side 2  2.00000 + 1.00001e+6j -> -1.00000 + 1.00001e+6j   [101 s]
+   side 3  -1.00000 + 1.00001e+6j -> -1.00000 + 1.00000e+6j   [316 s]
+contour value = [20.00 +/- 1.28e-3] + [+/- 1.28e-3]j   [559 s]
+zeta_nzeros   = 20   [0 s]
+AUDIT PASSED: two independent Arb code paths -- contour integration of xi'/xi, and Platt/Turing counting on the real line -- return the same integer.

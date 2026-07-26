@@ -789,3 +789,139 @@ A first step in that direction ran while this was written: a 1000-unit scan at
 locating 4471 sign changes against a smooth count of `4471.5625` — a deficit of
 `0.5625`, an ordinary `S(t)` fluctuation.  Uncertified, like everything else in
 X-5602 today, which is exactly the gap worth closing.
+
+## Addendum 6 — the predicate that works, and what it cost to find
+
+An external adversarial review supplied the object this whole session had been
+circling without naming: the **exact slab discrepancy**
+
+\[
+ D(a,b) \;=\; N(a,b) - N_0(a,b),
+ \qquad D(a,b) > 0 \;\Longrightarrow\; \text{RH is false},
+\]
+
+where `N` counts all zeros of `zeta` in the strip with `a < \Im\rho < b`, with
+multiplicity, and `N_0` counts those on the critical line.  `D \ge 0` always, and
+`D` is even at positive ordinates by the functional equation.  No conditions —
+no bound on `\int S`, no conjecture, no floating-point sign decision.  The review
+reported that it could not evaluate `D`, having no FLINT available.
+
+`pip install python-flint` works here.  So the rest of the session was spent
+computing it.
+
+### What was certified
+
+```text
+window                                        span   N     N_0   D   cost
+(4709203636333.1875, 4709203636373.125)        39.9   172   172   0   102 s
+(10000000000000.5,   10000000000999.5)        999     4467  4467  0   21 min
+(100000000000000.5,  100000000000050.5)        50     242   242   0   10 min
+```
+
+Every zero in those slabs is on the critical line **and simple** — `N` counts
+with multiplicity and simple sign changes exhaust it.  The first window is the
+one the whole repository has been arguing about; the other two are `3.3` and
+`33` times the Platt–Trudgian exhaustively-verified frontier.
+
+### The two halves
+
+`N` comes from Arb's `zeta_nzeros`, as a ball that must isolate a single
+integer.  `N_0` comes from certified sign changes of Hardy's `Z`, evaluated as
+
+\[
+ Z(t)=e^{i\theta(t)}\zeta(\tfrac12+it),\qquad
+ \theta(t)=\Im\log\Gamma\!\left(\tfrac14+\tfrac{it}{2}\right)-\tfrac{t}{2}\log\pi,
+\]
+
+in ball arithmetic, accepting a sign only when the ball lies strictly on one
+side of zero.  The branch of `\log\Gamma` is unambiguous because
+`\Re(1/4+it/2) = 1/4 > 0`; checked against the Stirling expansion, the two agree
+to `5\times10^{-63}`.
+
+Since `N_0 \le N` is automatic, a certified **lower** bound on `N_0` reaching `N`
+forces `D = 0`.  That is the whole trick, and it is why this is cheap: it never
+needs to *locate* a zero, only to see `Z` change sign.
+
+### The single most useful thing learned
+
+> A `\zeta` **jet** at large height is enormously more expensive than `\zeta`
+> itself.  `acb_series([s,1]).zeta()` at `\Im s = 4.7\times10^{12}` did not
+> return in `100` seconds; `acb.zeta` at the same point costs `~0.3` s.
+
+Everything follows from this.  Locating a zero needs derivatives — hence
+`acb.zeta_zeros` costs `15.7` s per zero at index `4.3\times10^{13}`, `56` times
+more than sampling.  The argument principle needs `\xi'/\xi`, hence jets, hence
+it is priced out above about `10^{6}` and cannot audit the production heights.
+And the `D` predicate is cheap for exactly the complementary reason: **a sign of
+`Z` needs `\zeta` alone.**
+
+That is not a coincidence of implementation.  It says the right question to ask
+about a stretch of critical line is a *counting* question, not a *locating*
+question, and the two differ by one to two orders of magnitude in cost.
+
+### The audit
+
+Every certificate reduces to one external call.  Contour integration of
+`\xi'/\xi` around `[-1,2]\times[y_0,y_1]` counts the same zeros by a genuinely
+different route, and agrees at three heights spanning four orders of magnitude:
+
+```text
+[0.5, 100]              [29.0000 +/- 4.31e-5]   vs  29    PASSED
+[1000.5, 1020.5]        [16.00 +/- 1.23e-3]     vs  16    PASSED
+[1000000.5, 1000010.5]  [20.00 +/- 1.28e-3]     vs  20    PASSED
+```
+
+It cannot follow higher, for the jet reason above.  Worth noting separately:
+the `D = 0` certificates were *already* a cross-check — `N` from
+`arb_zeta_nzeros`, `N_0` from `acb_zeta` and `acb_lgamma`, different code —
+and at `t = 10^{13}` the two agreed exactly on `4467` zeros.
+
+### The result I did not expect
+
+Checking where the repository's candidate ordinates actually sit: **every one of
+them, from every route, lies inside the first window above.**  The PR #71
+full-complex direction, the `j = -5` finalist, the whole `X-3902` `j`-grid from
+`-29` to `+29`, and the D-0801 production carrier all fall in a `2`-unit stretch
+with `19` units of clearance on either side.  An exhaustive search of every
+remote branch for ordinate-shaped constants finds nothing outside it.
+
+So the entire counterexample backlog of this repository is refuted by one
+`102`-second certificate.  And the reason they coincide is the lesson: every
+route that nominated an ordinate was a screen for *local anomaly*, and `O-5604`
+showed the Pick screens were in effect finding a large zero gap.  Four
+independent methods spent themselves on one `2`-unit stretch of the critical
+line, none of them able to count.
+
+### Two failures worth recording
+
+**A precision trap, twice.**  The review caught `rs_zeta.c` collapsing zero
+ordinates to binary64 at serialization (`ulp = 9.8\times10^{-4}` at
+`4.7\times10^{12}`).  I fixed it — and then reproduced the identical defect in
+new code, routing *sample positions* through `float`, where at `t = 10^{15}` an
+ulp is `0.125` against a mean spacing of `0.188`.  The run stalled at
+`N_0 \ge 43` of `52` and reported `D \le 9` rather than concluding.  Correctness
+was never at risk, because a coarse sample position is not a wrong answer — the
+sign certified *at* it is still certified.  That is the fail-closed design
+earning its keep, and it is the second time in one session that a large ordinate
+in a `double` has caused trouble.
+
+**A 303 MB artifact.**  A stalled refinement left `3.4` million undecided
+samples, all serialised into the result JSON, which git refused.  The undecided
+list is now capped at `200` with a count.
+
+### What I would do next
+
+Not a higher `c` in the D-0801 programme, and not more precision on any Pick
+candidate.  Two things:
+
+1. **Bind Arb's Platt entry points.**  They are all exported from the bundled
+   `libflint` and reachable by `ctypes`.  They evaluate `Z` on a whole block by
+   FFT instead of one point at a time, which is the only known way to beat the
+   `\sqrt{t}` per-zero cost that currently sets the ceiling.  The one
+   measurement made here went the wrong way — but it measured the *zero finder*
+   built on Platt, which needs derivatives, not the sign evaluation, which does
+   not.
+2. **Certify first, screen second.**  At `~0.3` s per zero, running a nominated
+   ordinate through `X-5604` costs less than almost any nomination is worth.
+   Had that been available a year ago, the entire `j`-grid campaign would have
+   been answered in under two minutes.

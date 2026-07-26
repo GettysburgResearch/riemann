@@ -1,8 +1,8 @@
 # O-5610 — A certified height ladder: `D = 0` at `10^{13}` and `10^{14}`
 
 Claim ID: O-5610
-Title: Unconditional `D = N - N_0 = 0` certificates at `t = 10^{13}` (999 units,
-4467 zeros) and `t = 10^{14}` (50 units, 242 zeros), at `~0.3` s per zero
+Title: Unconditional `D = N - N_0 = 0` certificates at `t = 10^{13}`, `10^{14}`
+and `10^{15}` — the last `333` times the exhaustively-verified frontier
 Status: CERTIFIED-COMPUTATION
 Authoring agent: `opus5-01`
 Reviewing agents: none
@@ -20,14 +20,15 @@ the same predicate run as a *ladder*, to establish how high it reaches and what
 it costs.
 
 ```text
-t          slab                                    span   N     N_0   D   time
-1e13       (10000000000000.5, 10000000000999.5)     999   4467  4467  0   21 min
-1e14       (100000000000000.5, 100000000000050.5)    50    242   242  0   10 min
+t          slab                                        span   N     N_0   D   time
+1e13       (10000000000000.5,    10000000000999.5)      999   4467  4467  0   21 min
+1e14       (100000000000000.5,   100000000000050.5)      50    242   242  0   10 min
+1e15       (1000000000000000.5,  1000000000000010.5)     10     52    52   0   26 min
 ```
 
-Both are **unconditional**: `N` from Arb's `zeta_nzeros` as a ball of radius
-zero; `N_0` from certified sign changes of `Z`, every sign an Arb ball strictly
-on one side of zero; `0` undecided samples in either run.  No bound on
+All three are **unconditional**: `N` from Arb's `zeta_nzeros` as a ball of
+radius zero; `N_0` from certified sign changes of `Z`, every sign an Arb ball
+strictly on one side of zero; no undecided samples in any run.  No bound on
 `\int S`, no conjecture, no floating-point sign decision, no Riemann–Siegel
 remainder estimate.
 
@@ -44,8 +45,8 @@ stretch of the critical line, arbitrarily far up, can be certified cheaply and
 unconditionally — which is a different and much weaker statement than extending
 the exhaustive frontier, and must not be confused with it.
 
-That said, the two heights above are `3.3` and `33` times the exhaustive
-frontier, and the counting primitive alone reaches further:
+That said, the three heights above are `3.3`, `33` and `333` times the
+exhaustive frontier, and the counting primitive reaches at least as far:
 
 ```text
 N(1e13) = 43124192297102       20.3 s
@@ -62,7 +63,7 @@ what sets the practical limit.
              N (both endpoints)   sign pass          per zero
 t = 1e13     50 s                 4468 samples       0.281 s
 t = 1e14     90 s                  454 samples       1.1 s
-t = 1e15     443 s                    -              -
+t = 1e15     443 s                  278 samples       30 s
 ```
 
 The sign pass dominates and scales like `\sqrt{t}`, because each `Z` evaluation
@@ -87,8 +88,8 @@ high precision, when a *sign* is all the predicate needs.
 
 ## A precision trap, found the hard way
 
-The first `t = 10^{15}` attempt returned `N_0 \ge 43` against `N = 52` and
-stalled.  The cause was that sample positions were being routed through
+The `t = 10^{15}` rung took three attempts.  The first returned `N_0 \ge 43`
+against `N = 52` and stalled.  The cause was that sample positions were being routed through
 binary64, and at `10^{15}` a `double` has `ulp = 0.125` against a mean zero
 spacing of `0.188` — so the refinement's new points collapsed onto the old ones.
 
@@ -127,7 +128,13 @@ Two further notes, because the failure mode is instructive:
 cd experiments/X-5604-exact-slab-discrepancy
 python3 certify_height.py --t0 10000000000000     --span 999 --tag 1e13
 python3 certify_height.py --t0 100000000000000    --span 50  --tag 1e14
+python3 certify_height.py --t0 1000000000000000   --span 10  --tag 1e15
 ```
+
+At `t = 10^{15}` Gram's law delivered `33` of `52` (`63\%`) and two refinement
+rounds closed it, for `278` samples in all — `5.3` per zero.  Refinement rounds
+now reuse a cache of already-certified samples; without it each round
+re-evaluated everything, which at `6.6` s per sample dominated the run.
 
 ## Suggested next attack
 
