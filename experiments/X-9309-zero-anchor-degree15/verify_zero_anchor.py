@@ -396,10 +396,15 @@ def verify(
     for field in ("ordinate", "common_xi_scale_power_of_two"):
         if old_certificate.get(field) != zero_high.get(field):
             raise CertificateError(f"zero anchor and old certificate {field} mismatch")
-    declared_source = old_basis_data.get("source_certificate_sha256")
-    actual_source = file_sha256(old_certificate_path)
-    if declared_source and declared_source != actual_source:
-        raise CertificateError("old basis is not bound to the supplied old certificate")
+    declared_certificate = old_basis_data.get("source_certificate_sha256")
+    actual_certificate = old_certificate.get("certificate_sha256")
+    if declared_certificate and declared_certificate != actual_certificate:
+        raise CertificateError("old basis certificate digest mismatch")
+    declared_primitive = old_basis_data.get("primitive_sha256")
+    source = old_certificate.get("source")
+    if declared_primitive and isinstance(source, dict) and declared_primitive != source.get("primitive_sha256"):
+        raise CertificateError("old basis primitive digest mismatch")
+    actual_source_file = file_sha256(old_certificate_path)
 
     raw_points = old_certificate.get("points")
     if not isinstance(raw_points, list) or len(raw_points) != 16:
@@ -509,7 +514,8 @@ def verify(
         "new_node": {"x": {"numerator": 0, "denominator": 1}, "u": {"numerator": 0, "denominator": 1}},
         "degree_bound": 15,
         "old_basis_sha256": file_sha256(old_basis_path),
-        "old_certificate_sha256": actual_source,
+        "old_certificate_file_sha256": actual_source_file,
+        "old_certificate_sha256": actual_certificate,
         "zero_low_sha256": file_sha256(zero_low_path),
         "zero_high_sha256": file_sha256(zero_high_path),
         "zero_precision_bits": [zero_low.get("precision_bits"), zero_high.get("precision_bits")],
