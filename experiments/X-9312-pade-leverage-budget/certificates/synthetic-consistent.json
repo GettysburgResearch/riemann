@@ -1,5 +1,5 @@
 {
-  "schema": "riemann.x9312-pade-leverage-budget.v1",
+  "schema": "riemann.x9314-pade-residual-mass-budget.v1",
   "classification": "SYNTHETIC",
   "side": "lower",
   "w": {"numerator": 1, "denominator": 1},
@@ -13,6 +13,7 @@
   "zero_bins": [
     {
       "id": "z1",
+      "kind": "atom",
       "y": {
         "lower": {"numerator": 1, "denominator": 1},
         "upper": {"numerator": 1, "denominator": 1}
