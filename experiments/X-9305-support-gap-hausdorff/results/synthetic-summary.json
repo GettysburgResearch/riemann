@@ -1,0 +1,35 @@
+{
+  "schema": "riemann.x9305-synthetic-summary.v1",
+  "classification": "EXACT_SYNTHETIC_CONTROL",
+  "model": {
+    "support_gap": "1",
+    "factor_squared_distance": "1/2",
+    "nodes": ["0", "1", "2"]
+  },
+  "rows": [
+    {
+      "id": "chord-inside-gap",
+      "status": "CERTIFIED_NEGATIVE",
+      "exact_expression": "log(2)*log(5)-log(3)^2",
+      "decimal_approximation": "-0.091371609522601157486582695212017001381241866159814"
+    },
+    {
+      "id": "first-difference",
+      "status": "CERTIFIED_NEGATIVE",
+      "exact_value": "-2"
+    },
+    {
+      "id": "ordinary-hankel-control",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "exact_value": "0"
+    },
+    {
+      "id": "support-localizer",
+      "status": "CERTIFIED_NEGATIVE",
+      "exact_value": "-2"
+    }
+  ],
+  "verdict": "STRICT_SUPPORT_GAP_SEPARATION_FROM_ORDINARY_STIELTJES_CONE",
+  "counterexample_candidate": null,
+  "warning": "Synthetic control only. No Riemann-xi evaluation is represented by this file."
+}
