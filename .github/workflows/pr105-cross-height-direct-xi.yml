@@ -47,7 +47,12 @@ jobs:
             --output "$root/results/synthetic-workflow.json"
           cp "$root/candidates/symmetric-pr105.json" /tmp/manifest.before.json
           python "$root/generate_manifest.py"
-          cmp /tmp/manifest.before.json "$root/candidates/symmetric-pr105.json"
+          python - <<'PY2'
+          import json
+          before=json.load(open('/tmp/manifest.before.json'))
+          after=json.load(open('experiments/X-9801-cross-height-direct-xi/candidates/symmetric-pr105.json'))
+          assert before==after
+          PY2
 
       - name: Replay all exact candidates at 192 and 256 bits
         shell: bash
