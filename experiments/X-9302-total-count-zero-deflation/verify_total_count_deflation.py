@@ -290,9 +290,12 @@ def raw_log_value(point: dict[str, Any], terms: int) -> Interval:
 
 
 def deflated_log_value(
-    point: dict[str, Any], shells: list[dict[str, Any]], terms: int
+    point: dict[str, Any],
+    shells: list[dict[str, Any]],
+    terms: int,
+    raw_value: Interval | None = None,
 ) -> Interval:
-    result = raw_log_value(point, terms)
+    result = raw_log_value(point, terms) if raw_value is None else raw_value
     u = point["u"]
     for shell in shells:
         result = result.sub(
@@ -325,9 +328,7 @@ def loewner_determinant(
     row_ids: list[str],
     column_ids: list[str],
     points: dict[str, dict[str, Any]],
-    shells: list[dict[str, Any]],
-    terms: int,
-    deflated: bool,
+    values: dict[str, Interval],
 ) -> Interval:
     size = len(row_ids)
     if size < 1 or size != len(column_ids) or size > 4:
@@ -344,14 +345,6 @@ def loewner_determinant(
         raise CertificateError("Loewner row nodes must be strictly increasing")
     if any(column_nodes[i] >= column_nodes[i + 1] for i in range(size - 1)):
         raise CertificateError("Loewner column nodes must be strictly increasing")
-    values = {
-        identifier: (
-            deflated_log_value(points[identifier], shells, terms)
-            if deflated
-            else raw_log_value(points[identifier], terms)
-        )
-        for identifier in row_ids + column_ids
-    }
     matrix = [
         [secant(points[r], points[c], values[r], values[c]) for c in column_ids]
         for r in row_ids
@@ -388,6 +381,16 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
 
     points = parse_points(data)
     windows, shells = parse_count_windows(data, classification)
+    raw_log_values = {
+        identifier: raw_log_value(point, terms)
+        for identifier, point in points.items()
+    }
+    deflated_log_values = {
+        identifier: deflated_log_value(
+            point, shells, terms, raw_log_values[identifier]
+        )
+        for identifier, point in points.items()
+    }
     raw_rows = data.get("rows")
     if not isinstance(raw_rows, list) or not raw_rows:
         raise CertificateError("rows must be a nonempty list")
@@ -420,9 +423,11 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
                 row_ids,
                 column_ids,
                 points,
-                shells,
-                terms,
-                deflated=kind.startswith("deflated"),
+                (
+                    deflated_log_values
+                    if kind.startswith("deflated")
+                    else raw_log_values
+                ),
             )
             detail = {"rows": row_ids, "columns": column_ids, "order": len(row_ids)}
         else:
