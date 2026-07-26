@@ -107,9 +107,10 @@ jobs:
         run: |
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
-          /usr/bin/time -v /tmp/pr71_hardy_zero_block 192 128 4 \
+          start=19743642385889
+          /usr/bin/time -v /tmp/pr71_hardy_zero_block 192 256 4 "$start" \
             >"$out/zero-block-p192.json" 2>"$out/zero-block-p192.time.txt"
-          /usr/bin/time -v /tmp/pr71_hardy_zero_block 256 128 4 \
+          /usr/bin/time -v /tmp/pr71_hardy_zero_block 256 256 4 "$start" \
             >"$out/zero-block-p256.json" 2>"$out/zero-block-p256.time.txt"
           python experiments/X-9301-zero-deflated-xi-modulus/compare_pr71_zero_block.py \
             "$out/zero-block-p192.json" "$out/zero-block-p256.json" \
@@ -162,7 +163,7 @@ jobs:
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
           config=experiments/X-9301-zero-deflated-xi-modulus/configs/pr71-deflated-rows.json
-          for count in 2 4 8 16 32 64 96 128; do
+          for count in 2 4 8 16 32 64 96 128 160 192 224 256; do
             for precision in 192 256 384 512; do
               python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_nearest_certificate.py \
                 "$out/xi-primitives-p${precision}.json" \
@@ -198,6 +199,7 @@ jobs:
             experiments/X-9301-zero-deflated-xi-modulus/summarize_pr71_nearest_ladder.py \
             "$out" --zero-block "$out/zero-block-p256.json" \
             --low-precision 384 --high-precision 512 \
+            --counts 2 4 8 16 32 64 96 128 160 192 224 256 \
             --output "$out/summary.json"
           find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | \
             xargs -0 sha256sum >"$out/SHA256SUMS"
