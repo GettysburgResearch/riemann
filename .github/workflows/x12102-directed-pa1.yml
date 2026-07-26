@@ -126,7 +126,7 @@ jobs:
         if: github.event_name == 'push'
         run: |
           git config user.name 'github-actions[bot]'
-          git config user.email '4189826+github-actions[bot]@users.noreply.github.com'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add experiments/X-12102-directed-positive-anchor/results
           if git diff --cached --quiet; then
             echo 'No result change to commit'
