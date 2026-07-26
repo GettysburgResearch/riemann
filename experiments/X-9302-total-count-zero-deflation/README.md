@@ -68,13 +68,13 @@ raw Loewner           CERTIFIED_NONNEGATIVE
 deflated Loewner      CERTIFIED_NEGATIVE
 ```
 
-Twenty-one exact tests pass. They reject decreasing counts, nonincreasing radii,
+Twenty-two exact tests pass. They reject decreasing counts, nonincreasing radii,
 wrong semantic gates, Boolean counts, false point digests, ambiguous count
 balls, endpoint drift, false count differences, nonnested totals, source
 artifact mutation, semantic precision drift, missing half-open count
-conventions, re-signed certificate drift, and production relabeling without
-bindings. The fixed-point logarithm implementation is checked against the exact
-positive atanh-series enclosure.
+conventions, re-signed certificate drift, reversed monotonicity nodes, and
+production relabeling without bindings. The fixed-point logarithm
+implementation is checked against the exact positive atanh-series enclosure.
 
 ## PR #71 production
 

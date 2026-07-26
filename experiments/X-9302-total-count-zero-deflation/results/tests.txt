@@ -15,12 +15,13 @@ test_false_point_digest_is_rejected (test_verify.TotalCountDeflationTests.test_f
 test_fixed_point_log_contains_exact_series_enclosure (test_verify.TotalCountDeflationTests.test_fixed_point_log_contains_exact_series_enclosure) ... ok
 test_nonincreasing_radius_is_rejected (test_verify.TotalCountDeflationTests.test_nonincreasing_radius_is_rejected) ... ok
 test_production_relabel_without_binding_is_rejected (test_verify.TotalCountDeflationTests.test_production_relabel_without_binding_is_rejected) ... ok
+test_reversed_raw_monotonicity_row_is_rejected (test_verify.TotalCountDeflationTests.test_reversed_raw_monotonicity_row_is_rejected) ... ok
 test_shell_increments_are_exact (test_verify.TotalCountDeflationTests.test_shell_increments_are_exact) ... ok
 test_synthetic_hidden_offline_zero_is_exposed (test_verify.TotalCountDeflationTests.test_synthetic_hidden_offline_zero_is_exposed) ... ok
 test_wrong_gate_is_rejected (test_verify.TotalCountDeflationTests.test_wrong_gate_is_rejected) ... ok
 test_zero_final_count_is_rejected (test_verify.TotalCountDeflationTests.test_zero_final_count_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 21 tests
+Ran 22 tests
 
 OK

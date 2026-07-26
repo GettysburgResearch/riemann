@@ -776,6 +776,8 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             if left_id not in points or right_id not in points:
                 raise CertificateError(f"unknown monotonicity point in {row_id}")
             left, right = points[left_id], points[right_id]
+            if not left["u"] < right["u"]:
+                raise CertificateError("monotonicity nodes must be increasing")
             if kind == "raw-monotonicity":
                 value = right["h"].sub(left["h"])
             else:

@@ -106,6 +106,14 @@ class TotalCountDeflationTests(unittest.TestCase):
         data["count_windows"][0]["gate"]["status"] = module.PRODUCTION_GATE
         self.assert_rejected(data, "gate status")
 
+    def test_reversed_raw_monotonicity_row_is_rejected(self) -> None:
+        data = copy.deepcopy(self.data)
+        row = next(
+            item for item in data["rows"] if item["kind"] == "raw-monotonicity"
+        )
+        row["left"], row["right"] = row["right"], row["left"]
+        self.assert_rejected(data, "monotonicity nodes must be increasing")
+
     def test_boolean_count_is_rejected(self) -> None:
         data = copy.deepcopy(self.data)
         data["count_windows"][0]["count_lower"] = True
