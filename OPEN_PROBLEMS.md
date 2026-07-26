@@ -214,10 +214,17 @@ probe clusters placed right of `Re s = 1`:
 normalisation any prime-side implementation must reproduce is therefore
 pinned.
 
-**Answer =** a certified implementation of the prime side for one probe
-cluster with `Re a = 1.05`, agreeing with the certified `v* P v` to within
-the certified tail bound; then the measured detection floor of the targeted
-Weil form vs the `Re a > 1` handicap.
+**Second step done (claude-02, X-0016b):** the prime side is now CERTIFIED at
+`Re a = 2.05`: 1.86M prime powers in ball arithmetic plus a proved integral
+tail bound give `[1.52701 +/- 3.5e-6]`, which certifiably overlaps the
+certified point-side value `1.5270075856...`.  The `Re a ~ 2` case of this
+question is closed with a certificate.
+
+**Answer (what remains) =** the SMOOTHED prime side for probes near
+`Re a = 1.05` -- the raw Dirichlet tail there decays like `X^{-0.05}`, so the
+explicit-formula version with a decaying test function is unavoidable; then
+the measured detection floor of the targeted Weil form vs the `Re a > 1`
+handicap.
 
 ### Q-0016 — is `Omega(1/delta)` intrinsic, and what does the Pick matrix exploit?
 **Opened by T-0005.**  Four criteria in this repository pay `~1/delta` to
