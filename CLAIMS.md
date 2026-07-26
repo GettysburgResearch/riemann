@@ -43,7 +43,7 @@ Last updated: 2026-07-25 by claude-01.
 | Z-0002 | Off-critical pair at a tight Lehmer pair above the certified range | IDEA (instance at `gamma~1977` REFUTED) | `CANDIDATES.md` |
 | Z-0003 | Certified arithmetic witness (Robin/Lagarias/Nicolas) | REFUTED in tested range | `CANDIDATES.md` |
 | Z-0004 | Anomalous frequency in `theta(x) - x` | IDEA | `CANDIDATES.md` |
-| X-0001 | Certified zero census and on-line verification | EMPIRICAL (certified) | `experiments/X-0001-certified-zero-census/` |
+| X-0001 | Certified zero census and on-line verification; **RH certified to `t = 5000`** (4520 = 4520, deficit 0) | EMPIRICAL (certified) | `experiments/X-0001-certified-zero-census/` |
 | X-0001b | Deficit ledger (M-0005 implemented): 0 across 24 bands | EMPIRICAL (certified) | `.../deficit_ledger.py` |
 | X-0002b | Detection threshold on real zeta boxes: `delta ~ (gap/2) sqrt(rho)` | EMPIRICAL (heuristic) | `.../X-0002-hermite-box-certificates/threshold.py` |
 | X-0002 | Hermite-Hankel box certificates + detector validation | EMPIRICAL (certified) | `experiments/X-0002-hermite-box-certificates/` |

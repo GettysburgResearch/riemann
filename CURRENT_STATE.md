@@ -29,7 +29,8 @@ ranked list of where to look next.
 
 | Statement | Range | Method | Artifact |
 |---|---|---|---|
-| **Every zero with `0 < t <= 2000` is on the critical line and simple** | `t <= 2000` | L-0004 (box count 1517 = 1517 sign changes, deficit 0) | `X-0001/results/census-T2000.json` |
+| **Every zero with `0 < t <= 5000` is on the critical line and simple** | `t <= 5000` | L-0004 (box count 4520 = 4520 sign changes, deficit 0; 671033 contour segments, 0 undetermined signs) | `X-0001/results/census-T5000-boxcount.json`, `X-0004/results/zeros-T5000.json` |
+| Every zero with `0 < t <= 2000` is on the critical line and simple | `t <= 2000` | L-0004 (box count 1517 = 1517 sign changes, deficit 0) | `X-0001/results/census-T2000.json` |
 | Every zero with `0 < t <= 1000` is on the critical line and simple | `t <= 1000` | L-0004 (box count 649 = 649 sign changes) | `X-0001/results/census-T1000.json` |
 | Every zero with `0 < t <= 500` is on the critical line and simple | `t <= 500` | L-0004 (box count 269 = 269 sign changes) | `X-0001/results/census-T500.json` |
 | No zero with `\|Re s - 1/2\| >= 0.01`, `0 <= t <= 500` | `t <= 500` | L-0002, independent of the above | same |
@@ -250,9 +251,8 @@ and do not read the Robin ratio `0.9995` as a near miss (R-0004).
 * The `PROVED` lemmas are proved; the claim that *the code implements them* is
   supported only by the test suite.  Two real bugs (R-0001, R-0002) were found
   during this session, one of which was invisible to every value-based test.
-* Certified heights (`T <= 2000` complete; 4520 certified on-line ordinates to
-  `T = 5000` with the matching box count still running) are trivial next to the
-  published record.  The repository's claim to usefulness is reproducibility
+* Certified heights (`T <= 5000` complete) are trivial next to the published
+  record (Platt's `3*10^12`).  The repository's claim to usefulness is reproducibility
   and witness formats, not range.
 * The T-0005 cost law is *measured*, not derived, and measured at one probe
   geometry and one height.  The `delta^3` signal law and the `10^{-2.7N}` floor
