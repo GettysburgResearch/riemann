@@ -1,0 +1,58 @@
+name: slab-complement-pick
+
+on:
+  push:
+    branches:
+      - agent/gpt56-06-f/121-slab-complement-pick
+    paths:
+      - '.github/workflows/slab-complement-pick.yml'
+      - 'experiments/X-12101-slab-complement-pick/**'
+  pull_request:
+    paths:
+      - '.github/workflows/slab-complement-pick.yml'
+      - 'experiments/X-12101-slab-complement-pick/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-controls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install discovery-only dependency
+        run: pip install -r experiments/X-12101-slab-complement-pick/requirements-discovery.txt
+      - name: Compile and run exact tests
+        run: |
+          cd experiments/X-12101-slab-complement-pick
+          python -m compileall -q verify_slab_complement.py rank_midpoint.py tests
+          python -m unittest discover -s tests -v
+          python verify_slab_complement.py certificates/synthetic-strict-separation.json
+          python verify_slab_complement.py certificates/synthetic-line-zero-control.json
+      - name: Freeze and exactly replay the midpoint nomination
+        run: |
+          cd experiments/X-12101-slab-complement-pick
+          python rank_midpoint.py certificates/synthetic-strict-separation.json \
+            --bits 40 --output /tmp/nomination.json
+          python - <<'PY'
+          import json
+          packet=json.load(open('certificates/synthetic-strict-separation.json'))
+          nomination=json.load(open('/tmp/nomination.json'))
+          packet['vector']=nomination['vector']
+          for key in ('claimed_ordinary_pick','claimed_weighted_full',
+                      'claimed_inside_contribution','claimed_residual','claimed_status'):
+              packet.pop(key,None)
+          json.dump(packet,open('/tmp/replay.json','w'),indent=2)
+          PY
+          python verify_slab_complement.py /tmp/replay.json --output /tmp/replay-output.json
+          python - <<'PY'
+          import json
+          result=json.load(open('/tmp/replay-output.json'))
+          print(json.dumps(result,indent=2,sort_keys=True))
+          if result['status'] != 'CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS':
+              raise SystemExit('frozen synthetic nomination did not replay negative')
+          PY
