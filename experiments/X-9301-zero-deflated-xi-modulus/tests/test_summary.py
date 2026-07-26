@@ -32,7 +32,7 @@ class LadderSummaryTests(unittest.TestCase):
             "precision_bits": 256,
             "target": fj(Fraction(10)),
             "zeros": [
-                {"zero_index": str(index), "ball": {}} for index in range(130)
+                {"zero_index": str(index), "ball": {}} for index in range(258)
             ],
         }
         block_sha = MODULE.canonical_sha(self.block)
@@ -94,7 +94,7 @@ class LadderSummaryTests(unittest.TestCase):
     def test_summarizes_strict_complete_ladder(self) -> None:
         result = MODULE.summarize(self.root, self.block, 384, 512)
         self.assertEqual(result["finite_table_status"], "CERTIFIED_POSITIVE_FIXED_PR71_TABLE")
-        self.assertEqual(result["closed_cell_count"], 8)
+        self.assertEqual(result["closed_cell_count"], 12)
         self.assertTrue(result["final_rung_uses_requested_nearest_prefix"])
         self.assertEqual(result["guard_zero_ball_count"], 2)
 

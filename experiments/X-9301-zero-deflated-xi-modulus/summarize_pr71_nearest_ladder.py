@@ -14,7 +14,7 @@ from typing import Any
 if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
-COUNTS = (2, 4, 8, 16, 32, 64, 96, 128)
+COUNTS = (2, 4, 8, 16, 32, 64, 96, 128, 160, 192, 224, 256)
 SUMMARY_SCHEMA = "riemann.x9301-pr71-production-summary.v4"
 BLOCK_SCHEMA = "riemann.x9301-pr71-hardy-zero-block.v1"
 GLOBAL_NEAREST_SCOPE = "CERTIFIED_GLOBAL_NEAREST_CRITICAL_LINE_ZEROS"
