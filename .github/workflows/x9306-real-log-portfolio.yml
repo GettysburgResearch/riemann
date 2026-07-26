@@ -7,18 +7,16 @@ on:
       - agent/gpt56-01-l/93-run-real-log-portfolio
     paths:
       - experiments/X-9306-real-log-portfolio-search/RUN.md
-      - experiments/X-9306-real-log-portfolio-search/**
       - .github/workflows/x9306-real-log-portfolio.yml
   pull_request:
     branches:
       - agent/gpt56-01-l/93-real-log-portfolio-search
     paths:
       - experiments/X-9306-real-log-portfolio-search/RUN.md
-      - experiments/X-9306-real-log-portfolio-search/**
       - .github/workflows/x9306-real-log-portfolio.yml
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: x9306-real-log-portfolio-${{ github.ref }}
@@ -58,6 +56,18 @@ jobs:
             experiments/X-9302-total-count-zero-deflation/results/pr71-shift-fine/p3/xi-primitives-p512.json \
             experiments/X-9302-total-count-zero-deflation/results/complete-result.json \
             > experiments/X-9306-real-log-portfolio-search/results/SHA256SUMS
+      - name: Commit immutable result on branch pushes
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/X-9306-real-log-portfolio-search/results
+          if git diff --cached --quiet; then
+            echo 'No result change to commit'
+          else
+            git commit -m 'result: retain exact L9308 portfolio replay'
+            git push
+          fi
       - name: Upload exact search result
         if: always()
         uses: actions/upload-artifact@v4
