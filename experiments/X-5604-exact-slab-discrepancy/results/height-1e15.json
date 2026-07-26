@@ -7,23 +7,30 @@
  "a": "2000000000000001/2",
  "b": "2000000000000021/2",
  "N_total": 52,
- "N0_certified_lower_bound": 43,
- "D": null,
- "D_upper_bound": 9,
- "samples": 64,
+ "N0_certified_lower_bound": 52,
+ "D": 0,
+ "D_upper_bound": 0,
+ "samples": 278,
  "rounds": [
   {
    "round": 0,
-   "samples": 51,
-   "changes": 30
+   "samples": 52,
+   "changes": 33
   },
   {
    "round": 1,
-   "added": 25,
-   "samples": 64,
-   "changes": 43
+   "added": 56,
+   "samples": 108,
+   "changes": 51
+  },
+  {
+   "round": 2,
+   "added": 170,
+   "samples": 278,
+   "changes": 52
   }
  ],
- "seconds_total": 808.9000222682953,
- "verdict": "INCOMPLETE after 1 rounds: N = 52, certified N_0 >= 43, so D <= 9."
+ "seconds_total": 2024.2913465499878,
+ "verdict": "CERTIFIED D = 0 over 10.0 units at t ~ 1e+15: N_0 = N = 52, no zero off the critical line, every zero simple. Unconditional.",
+ "note": "driver summary regenerated after the successful gram rerun; the earlier summary recorded the stalled attempt (D <= 9) and the ledger flagged it as positive-and-odd, hence inconsistent."
 }

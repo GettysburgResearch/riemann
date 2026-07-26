@@ -1,0 +1,69 @@
+{
+ "schema": "riemann.x5604-ledger.v1",
+ "agent": "opus5-01",
+ "certified_slabs": 4,
+ "total_span": 1098.9375,
+ "total_zeros": 4933,
+ "rows": [
+  {
+   "file": "certified-1e13.json",
+   "tag": "t=1e13",
+   "a": 10000000000000.5,
+   "b": 10000000000999.5,
+   "span": 999.0,
+   "N": 4467,
+   "N0": 4467,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 999.0 units at t ~ 1e+13: N_0 = N = 4467, no zero off the critical line, all simple. Unconditional."
+  },
+  {
+   "file": "certified-signs-pr71.json",
+   "tag": "certified-signs-pr71.json",
+   "a": 4709203636333.1875,
+   "b": 4709203636373.125,
+   "span": 39.9375,
+   "N": 172,
+   "N0": 172,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0: N_0 >= 172 certified sign changes, and N_0 <= N = 172, so N_0 = N and the slab contains NO zero off the critical line. Unconditional."
+  },
+  {
+   "file": "height-1e14-gram.json",
+   "tag": "t=1e+14 span=50",
+   "a": 100000000000000.5,
+   "b": 100000000000050.5,
+   "span": 50.0,
+   "N": 242,
+   "N0": 242,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 50.0 units at t ~ 1e+14: N_0 = N = 242, no zero off the critical line, every zero simple. Unconditional."
+  },
+  {
+   "file": "height-1e15-gram-FINAL.json",
+   "tag": "t=1e15 span=10",
+   "a": 1000000000000000.5,
+   "b": 1000000000000010.5,
+   "span": 10.0,
+   "N": 52,
+   "N0": 52,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 10.0 units at t ~ 1e+15: N_0 = N = 52, no zero off the critical line, every zero simple. Unconditional."
+  }
+ ]
+}
