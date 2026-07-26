@@ -81,9 +81,22 @@ def sweep(t0, t1, step, N, tol_bits, out):
                   "seconds": round(time.time() - s0, 2)})
         recs.append(r)
         if r["verdict"] == "NOT_PSD":
+            # compress the alert to the compact scalar witness (X-0015b):
+            # x = L^{-*} e_k, then certify q = x*Px/x*x < 0 in balls.
+            try:
+                P = PK.pick_matrix(al, tol_bits=tol_bits)
+                x = PK.ldl_witness_direction(P)
+                q = PK.tuned_form(al, x, tol_bits=tol_bits)
+                r["witness_v"] = [[str(t.real), str(t.imag)] for t in x]
+                r["witness_q"] = float(q.mid())
+                r["witness_q_rad"] = float(q.rad())
+                r["witness_q_negative"] = bool(q < 0)
+            except Exception as e:
+                r["witness_error"] = f"{type(e).__name__}: {e}"
             alerts.append(r)
             print(f"  *** [{c:.1f},{c+WIDTH:.1f}] NOT_PSD  min_pivot="
-                  f"{r['min_pivot']:.4e} -- P1 ALERT ***", flush=True)
+                  f"{r['min_pivot']:.4e}  scalar witness q="
+                  f"{r.get('witness_q')} -- P1 ALERT ***", flush=True)
         elif r["verdict"] != "PD":
             print(f"  [{c:.1f},{c+WIDTH:.1f}] {r['verdict']}  "
                   f"({r.get('error','')})", flush=True)
