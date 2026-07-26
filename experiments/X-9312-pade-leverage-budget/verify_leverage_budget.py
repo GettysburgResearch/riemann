@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact finite checker for the L-9314 Padé line-mass budget inequalities."""
+"""Exact checker for the L-9314 Padé certified-residual-mass budgets."""
 from __future__ import annotations
 
 import argparse
@@ -13,6 +13,7 @@ from typing import Any
 SCHEMA = "riemann.x9312-pade-leverage-budget.v1"
 OUTPUT_SCHEMA = "riemann.x9312-pade-leverage-budget-verification.v1"
 ZERO_GATE = "CERTIFIED_CRITICAL_LINE_ZERO_LOWER_BOUND"
+SEGMENT_GATE = "CERTIFIED_FAR_ENDPOINT_RESIDUAL_SEGMENT"
 
 
 class CertificateError(ValueError):
@@ -60,6 +61,9 @@ class Interval:
 
     def div(self, other: "Interval") -> "Interval":
         return self.mul(other.reciprocal())
+
+    def width(self) -> Fraction:
+        return self.upper - self.lower
 
 
 def integer(value: Any, name: str) -> int:
@@ -124,7 +128,7 @@ def leverage_interval(
     q: list[Fraction],
 ) -> Interval:
     if y.lower < support:
-        raise CertificateError("zero bin lies below the declared support")
+        raise CertificateError("residual-mass interval lies below the declared support")
     q_squared = evaluate_polynomial(q, y).square()
     denominator = y.add(Interval(w, w))
     for node in nodes:
@@ -172,54 +176,71 @@ def verify(path: Path) -> dict[str, Any]:
         raise CertificateError("q(-w) must equal one exactly")
     gap = interval(data.get("gap"), "gap")
 
-    raw_bins = data.get("zero_bins")
-    if not isinstance(raw_bins, list) or not raw_bins:
+    raw_items = data.get("zero_bins")
+    if not isinstance(raw_items, list) or not raw_items:
         raise CertificateError("zero_bins must be nonempty")
-    parsed: list[tuple[str, Interval, int]] = []
+    parsed: list[tuple[str, str, Interval, int, Fraction]] = []
     seen: set[str] = set()
-    for index, item in enumerate(raw_bins):
+    atom_intervals: list[Interval] = []
+    for index, item in enumerate(raw_items):
         if not isinstance(item, dict) or not isinstance(item.get("id"), str):
-            raise CertificateError("bad zero-bin record")
+            raise CertificateError("bad residual-mass record")
         identifier = item["id"]
         if not identifier or identifier in seen:
-            raise CertificateError("zero-bin IDs must be nonempty and unique")
+            raise CertificateError("residual-mass IDs must be nonempty and unique")
         seen.add(identifier)
+        kind = item.get("kind", "atom")
+        if kind not in ("atom", "segment"):
+            raise CertificateError("kind must be atom or segment")
         gate = item.get("gate")
-        if not isinstance(gate, dict) or gate.get("status") != ZERO_GATE:
-            raise CertificateError("zero-bin semantic gate mismatch")
+        expected_gate = ZERO_GATE if kind == "atom" else SEGMENT_GATE
+        if not isinstance(gate, dict) or gate.get("status") != expected_gate:
+            raise CertificateError("residual-mass semantic gate mismatch")
         multiplicity = integer(item.get("multiplicity"), f"zero_bins[{index}].multiplicity")
         if multiplicity <= 0:
-            raise CertificateError("zero-bin multiplicity must be positive")
+            raise CertificateError("residual-mass multiplicity must be positive")
         y = interval(item.get("y"), f"zero_bins[{index}].y")
-        parsed.append((identifier, y, multiplicity))
-    parsed.sort(key=lambda item: (item[1].lower, item[1].upper))
-    for left, right in zip(parsed, parsed[1:]):
-        if left[1].upper >= right[1].lower:
-            raise CertificateError("zero bins overlap or touch")
+        if kind == "atom":
+            measure_weight = Fraction(multiplicity)
+            atom_intervals.append(y)
+        else:
+            if y.width() <= 0:
+                raise CertificateError("certified segment must have positive length")
+            measure_weight = multiplicity * y.width()
+        parsed.append((identifier, kind, y, multiplicity, measure_weight))
+
+    atom_intervals.sort(key=lambda value: (value.lower, value.upper))
+    for left, right in zip(atom_intervals, atom_intervals[1:]):
+        if left.upper >= right.lower:
+            raise CertificateError("atomic zero bins overlap or touch")
 
     rows: list[dict[str, Any]] = []
     total_lower = Fraction(0)
     total_upper = Fraction(0)
-    for identifier, y, multiplicity in parsed:
+    atom_count = segment_count = 0
+    for identifier, kind, y, multiplicity, measure_weight in parsed:
         value = leverage_interval(side, y, nodes, w, support, q)
-        total_lower += multiplicity * value.lower
-        total_upper += multiplicity * value.upper
+        contribution = value.scale(measure_weight)
+        total_lower += contribution.lower
+        total_upper += contribution.upper
+        atom_count += kind == "atom"
+        segment_count += kind == "segment"
         rows.append(
             {
                 "id": identifier,
+                "kind": kind,
                 "multiplicity": multiplicity,
+                "measure_weight": fraction_json(measure_weight),
                 "y": interval_json(y),
                 "leverage": interval_json(value),
-                "multiplicity_weighted_lower": fraction_json(multiplicity * value.lower),
-                "multiplicity_weighted_width": fraction_json(
-                    multiplicity * (value.upper - value.lower)
-                ),
+                "contribution": interval_json(contribution),
+                "contribution_width": fraction_json(contribution.width()),
             }
         )
     rows.sort(
         key=lambda row: Fraction(
-            int(row["multiplicity_weighted_width"]["numerator"]),
-            int(row["multiplicity_weighted_width"]["denominator"]),
+            row["contribution_width"]["numerator"],
+            row["contribution_width"]["denominator"],
         ),
         reverse=True,
     )
@@ -241,13 +262,15 @@ def verify(path: Path) -> dict[str, Any]:
         "support_lower": fraction_json(support),
         "q": [fraction_json(value) for value in q],
         "gap": interval_json(gap),
-        "certified_line_mass_contribution": {
+        "certified_residual_mass_contribution": {
             "lower": fraction_json(total_lower),
             "upper": fraction_json(total_upper),
         },
-        "gap_minus_line_mass_upper": fraction_json(gap.upper - total_lower),
-        "zero_bin_count": len(rows),
-        "ranked_bins": rows,
+        "gap_minus_certified_mass_upper": fraction_json(gap.upper - total_lower),
+        "residual_item_count": len(rows),
+        "atomic_bin_count": atom_count,
+        "segment_count": segment_count,
+        "ranked_items": rows,
         "verdict": verdict,
         "counterexample_nomination": (
             "PENDING_INDEPENDENT_REPRODUCTION"
@@ -255,9 +278,10 @@ def verify(path: Path) -> dict[str, Any]:
             else None
         ),
         "proof_boundary": (
-            "Exact rational interval Horner evaluation and exact summation over "
-            "pairwise-disjoint proof-gated zero bins. The RH implication inherits the "
-            "direct-xi residual-measure and endpoint-polynomial gates."
+            "Exact rational interval Horner evaluation and exact summation over a "
+            "proof-gated residual submeasure. Atomic bins are required to be pairwise "
+            "disjoint; segment records represent common far-endpoint residual Lebesgue "
+            "measure and may overlap by certified multiplicity."
         ),
     }
 
