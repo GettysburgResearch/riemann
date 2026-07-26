@@ -22,6 +22,7 @@ if hasattr(sys, "set_int_max_str_digits"):
 PRIMITIVE_SCHEMA = "riemann.xi-modulus-primitives.v1"
 COUNT_SCHEMA = "riemann.x9302-pr71-total-count-windows.v1"
 COUNT_CLASSIFICATION = "CERTIFIED_NESTED_TOTAL_ZETA_ZERO_COUNTS"
+COUNT_INTERVAL_CONVENTION = "(T-R,T+R]"
 CONFIG_SCHEMA = "riemann.xi-modulus-zero-deflation-config.v1"
 OUTPUT_SCHEMA = "riemann.xi-modulus-total-count-deflation.v1"
 NORMALIZATION = "riemann-xi-standard-half-s-sminus1-v1"
@@ -148,6 +149,8 @@ def parse_count_windows(counts: dict[str, Any], target: Fraction) -> list[dict[s
         raise BridgeError("total-count schema mismatch")
     if counts.get("classification") != COUNT_CLASSIFICATION:
         raise BridgeError("total-count artifact is not proof-classified")
+    if counts.get("count_interval_convention") != COUNT_INTERVAL_CONVENTION:
+        raise BridgeError("total-count artifact interval convention mismatch")
     if rational(counts.get("target"), "counts.target") != target:
         raise BridgeError("primitive and total-count ordinates differ")
     raw_windows = counts.get("windows")
@@ -257,6 +260,7 @@ def build(
         "classification": "RIEMANN_XI_DIRECTED",
         "normalization_id": NORMALIZATION,
         "common_xi_scale_power_of_two": common_scale,
+        "count_interval_convention": COUNT_INTERVAL_CONVENTION,
         "ordinate": fj(target),
         "log_terms": log_terms,
         "points": sorted(points, key=lambda point: rational(point["u"], "point.u")),
@@ -269,6 +273,7 @@ def build(
             "total_count_schema": COUNT_SCHEMA,
             "total_count_sha256": canonical_sha(counts),
             "total_count_classification": COUNT_CLASSIFICATION,
+            "total_count_interval_convention": COUNT_INTERVAL_CONVENTION,
         },
     }
     output["certificate_sha256"] = canonical_sha(output)

@@ -68,11 +68,13 @@ raw Loewner           CERTIFIED_NONNEGATIVE
 deflated Loewner      CERTIFIED_NEGATIVE
 ```
 
-Seventeen exact tests pass. They reject decreasing counts, nonincreasing radii,
+Twenty-one exact tests pass. They reject decreasing counts, nonincreasing radii,
 wrong semantic gates, Boolean counts, false point digests, ambiguous count
 balls, endpoint drift, false count differences, nonnested totals, source
-artifact mutation, semantic precision drift, and production relabeling without
-bindings.
+artifact mutation, semantic precision drift, missing half-open count
+conventions, re-signed certificate drift, and production relabeling without
+bindings. The fixed-point logarithm implementation is checked against the exact
+positive atanh-series enclosure.
 
 ## PR #71 production
 
@@ -107,9 +109,14 @@ result. Status `1` is reserved for unresolved intervals and status `2` for a
 rejected certificate.
 
 For `RIEMANN_XI_DIRECTED` certificates, the CLI additionally requires
-`--primitive-artifact` and `--count-artifact`. It recomputes both canonical
-digests before promoting an arithmetic replay to a source-bound production
-result.
+`--primitive-artifact` and `--count-artifact`. Before running determinant
+arithmetic, it checks both canonical digests and reconstructs every primitive
+rectangle, squared node, count window, exact endpoint, isolated integer count,
+shell increment, and gate digest. Re-signed certificate data that does not
+match the producer artifacts is rejected.
+
+Every production artifact and certificate records the half-open convention
+`(T-R,T+R]` for `N(T+R)-N(T-R)`.
 
 The shared PR #71 producer applies the exact common scale
 `2^5335951715288` to all completed-xi rectangles before rational

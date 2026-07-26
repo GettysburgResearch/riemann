@@ -13,8 +13,6 @@ on:
       - 'experiments/X-7501-xi-modulus/rs_modulus.c'
       - 'claims/lemmas/L-9303-total-zero-count-deflation.md'
   pull_request:
-    branches:
-      - agent/gpt56-01-i/93-zero-deflated-xi-modulus
     paths:
       - '.github/workflows/pr71-total-count-zero-deflation.yml'
       - 'experiments/X-9302-total-count-zero-deflation/**'

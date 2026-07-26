@@ -112,6 +112,11 @@ def adapt(source: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
     classification = source.get("classification")
     if classification not in ("SYNTHETIC_MODEL", "RIEMANN_XI_DIRECTED"):
         raise AdapterError("source classification cannot be promoted")
+    if classification == "RIEMANN_XI_DIRECTED":
+        raise AdapterError(
+            "production X-7501 adaptation is disabled until a reviewed zero-artifact "
+            "source binding is implemented"
+        )
     common_scale = exact_int(
         source.get("common_xi_scale_power_of_two", 0),
         "source.common_xi_scale_power_of_two",

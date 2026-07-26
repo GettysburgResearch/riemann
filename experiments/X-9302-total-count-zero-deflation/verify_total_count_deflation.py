@@ -17,6 +17,7 @@ import string
 import sys
 from dataclasses import dataclass
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -30,6 +31,7 @@ SYNTHETIC_GATE = "SYNTHETIC_TOTAL_ZERO_COUNT"
 PRIMITIVE_SCHEMA = "riemann.xi-modulus-primitives.v1"
 COUNT_SCHEMA = "riemann.x9302-pr71-total-count-windows.v1"
 COUNT_CLASSIFICATION = "CERTIFIED_NESTED_TOTAL_ZETA_ZERO_COUNTS"
+COUNT_INTERVAL_CONVENTION = "(T-R,T+R]"
 
 
 class CertificateError(ValueError):
@@ -71,11 +73,35 @@ def exact_int(value: Any, name: str) -> int:
     return value
 
 
+def artifact_int(value: Any, name: str) -> int:
+    """Parse producer integers, which are serialized as numbers or strings."""
+    if isinstance(value, bool):
+        raise CertificateError(f"{name} must not be Boolean")
+    if isinstance(value, int):
+        return value
+    if isinstance(value, str):
+        try:
+            return int(value, 10)
+        except ValueError as exc:
+            raise CertificateError(f"{name} must be integer text") from exc
+    raise CertificateError(f"{name} must be an integer")
+
+
 def rational(raw: Any, name: str) -> Fraction:
     if not isinstance(raw, dict):
         raise CertificateError(f"{name} must be an object")
     numerator = exact_int(raw.get("numerator"), f"{name}.numerator")
     denominator = exact_int(raw.get("denominator"), f"{name}.denominator")
+    if denominator <= 0:
+        raise CertificateError(f"{name}.denominator must be positive")
+    return Fraction(numerator, denominator)
+
+
+def artifact_rational(raw: Any, name: str) -> Fraction:
+    if not isinstance(raw, dict):
+        raise CertificateError(f"{name} must be an object")
+    numerator = artifact_int(raw.get("numerator"), f"{name}.numerator")
+    denominator = artifact_int(raw.get("denominator"), f"{name}.denominator")
     if denominator <= 0:
         raise CertificateError(f"{name}.denominator must be positive")
     return Fraction(numerator, denominator)
@@ -87,6 +113,36 @@ def interval(raw: Any, name: str) -> Interval:
     return Interval(
         rational(raw.get("lower"), f"{name}.lower"),
         rational(raw.get("upper"), f"{name}.upper"),
+    )
+
+
+def artifact_interval(raw: Any, name: str) -> Interval:
+    if not isinstance(raw, dict):
+        raise CertificateError(f"{name} must be an object")
+    return Interval(
+        artifact_rational(raw.get("lower"), f"{name}.lower"),
+        artifact_rational(raw.get("upper"), f"{name}.upper"),
+    )
+
+
+def binary_value(raw: Any, name: str) -> Fraction:
+    if not isinstance(raw, dict):
+        raise CertificateError(f"{name} must be an object")
+    mantissa = artifact_int(raw.get("mantissa"), f"{name}.mantissa")
+    exponent = artifact_int(raw.get("exponent"), f"{name}.exponent")
+    return (
+        Fraction(mantissa << exponent)
+        if exponent >= 0
+        else Fraction(mantissa, 1 << (-exponent))
+    )
+
+
+def binary_interval(raw: Any, name: str) -> Interval:
+    if not isinstance(raw, dict):
+        raise CertificateError(f"{name} must be an object")
+    return Interval(
+        binary_value(raw.get("lower"), f"{name}.lower"),
+        binary_value(raw.get("upper"), f"{name}.upper"),
     )
 
 
@@ -125,21 +181,43 @@ def modulus_squared(real: Interval, imag: Interval) -> Interval:
     return square_interval(real).add(square_interval(imag))
 
 
+def _ceil_div(numerator: int, denominator: int) -> int:
+    if denominator <= 0:
+        raise CertificateError("internal nonpositive fixed-point denominator")
+    return -((-numerator) // denominator)
+
+
+@lru_cache(maxsize=None)
 def _atanh_log_interval(y: Fraction, terms: int) -> Interval:
+    """Enclose log(y), 1 <= y <= 2, with outward dyadic arithmetic."""
     if not (Fraction(1) <= y <= Fraction(2)):
         raise CertificateError("internal logarithm range-reduction failure")
     if terms < 8:
         raise CertificateError("logarithm term count must be at least 8")
     z = (y - 1) / (y + 1)
+    scale = 1 << (4 * terms + 32)
+    z_lower = (z.numerator * scale) // z.denominator
+    z_upper = _ceil_div(z.numerator * scale, z.denominator)
     z2 = z * z
-    power = z
-    partial = Fraction(0)
+    z2_lower = (z2.numerator * scale) // z2.denominator
+    z2_upper = _ceil_div(z2.numerator * scale, z2.denominator)
+    power_lower, power_upper = z_lower, z_upper
+    partial_lower = 0
+    partial_upper = 0
     for j in range(terms):
-        partial += power / (2 * j + 1)
-        power *= z2
-    lower = 2 * partial
-    tail = 2 * power / ((2 * terms + 1) * (1 - z2))
-    return Interval(lower, lower + tail)
+        odd = 2 * j + 1
+        partial_lower += (2 * power_lower) // odd
+        partial_upper += _ceil_div(2 * power_upper, odd)
+        power_lower = (power_lower * z2_lower) // scale
+        power_upper = _ceil_div(power_upper * z2_upper, scale)
+    tail_upper = _ceil_div(
+        2 * power_upper * scale,
+        (2 * terms + 1) * (scale - z2_upper),
+    )
+    return Interval(
+        Fraction(partial_lower, scale),
+        Fraction(partial_upper + tail_upper, scale),
+    )
 
 
 def log_positive_fraction(value: Fraction, terms: int) -> Interval:
@@ -251,6 +329,10 @@ def validate_production_source(data: dict[str, Any]) -> dict[str, str]:
         raise CertificateError("production total-count source schema mismatch")
     if source.get("total_count_classification") != COUNT_CLASSIFICATION:
         raise CertificateError("production total-count source classification mismatch")
+    if data.get("count_interval_convention") != COUNT_INTERVAL_CONVENTION:
+        raise CertificateError("production count interval convention mismatch")
+    if source.get("total_count_interval_convention") != COUNT_INTERVAL_CONVENTION:
+        raise CertificateError("production total-count source convention mismatch")
     common_scale = exact_int(
         data.get("common_xi_scale_power_of_two", 0),
         "common_xi_scale_power_of_two",
@@ -271,12 +353,194 @@ def validate_production_source(data: dict[str, Any]) -> dict[str, str]:
     }
 
 
+def _primitive_projection(
+    primitive_artifact: dict[str, Any],
+) -> tuple[Fraction, dict[str, str]]:
+    artifact_ordinate = artifact_rational(
+        primitive_artifact.get("ordinate"), "primitive_artifact.ordinate"
+    )
+    raw_points = primitive_artifact.get("points")
+    if not isinstance(raw_points, list) or not raw_points:
+        raise CertificateError("primitive artifact points must be nonempty")
+    projected: dict[str, str] = {}
+    for index, raw in enumerate(raw_points):
+        if not isinstance(raw, dict):
+            raise CertificateError(f"primitive artifact point {index} must be an object")
+        identifier = raw.get("id")
+        if (
+            not isinstance(identifier, str)
+            or not identifier
+            or identifier in projected
+        ):
+            raise CertificateError("primitive artifact point IDs must be unique")
+        if raw.get("functional_equation_residual_contains_zero") is not True:
+            raise CertificateError(
+                f"primitive artifact point {identifier} failed functional-equation gate"
+            )
+        x = artifact_rational(raw.get("x"), f"primitive point {identifier}.x")
+        if x <= 0:
+            raise CertificateError("primitive horizontal offsets must be positive")
+        rectangle = raw.get("xi_rectangle")
+        if not isinstance(rectangle, dict):
+            raise CertificateError(f"primitive point {identifier} lacks xi_rectangle")
+        real = artifact_interval(
+            rectangle.get("real"), f"primitive point {identifier}.real"
+        )
+        imag = artifact_interval(
+            rectangle.get("imag"), f"primitive point {identifier}.imag"
+        )
+        canonical = {
+            "id": identifier,
+            "u": fj(x * x),
+            "xi_rectangle": {"real": ij(real), "imag": ij(imag)},
+        }
+        projected[identifier] = canonical_sha(canonical)
+    return artifact_ordinate, projected
+
+
+def _compare_primitive_projection(
+    data: dict[str, Any], primitive_artifact: dict[str, Any]
+) -> None:
+    artifact_ordinate, expected_points = _primitive_projection(primitive_artifact)
+    if rational(data.get("ordinate"), "ordinate") != artifact_ordinate:
+        raise CertificateError("certificate ordinate differs from primitive artifact")
+    certificate_points = parse_points(data, require_digests=True)
+    if set(certificate_points) != set(expected_points):
+        raise CertificateError("certificate point set differs from primitive artifact")
+    for identifier, expected_sha in expected_points.items():
+        if certificate_points[identifier]["sha256"] != expected_sha:
+            raise CertificateError(
+                f"certificate point {identifier} differs from primitive artifact"
+            )
+
+
+def _unique_integer(value: Interval, name: str) -> int:
+    ceil_lower = -((-value.lower.numerator) // value.lower.denominator)
+    floor_upper = value.upper.numerator // value.upper.denominator
+    if ceil_lower != floor_upper:
+        raise CertificateError(f"{name} does not isolate one integer")
+    return ceil_lower
+
+
+def _expected_count_windows(
+    data: dict[str, Any], count_artifact: dict[str, Any], count_sha: str
+) -> list[dict[str, Any]]:
+    if count_artifact.get("count_interval_convention") != COUNT_INTERVAL_CONVENTION:
+        raise CertificateError("total-count artifact interval convention mismatch")
+    target = rational(data.get("ordinate"), "ordinate")
+    if artifact_rational(count_artifact.get("target"), "counts.target") != target:
+        raise CertificateError("total-count artifact ordinate mismatch")
+    raw_windows = count_artifact.get("windows")
+    if not isinstance(raw_windows, list) or not raw_windows:
+        raise CertificateError("total-count artifact windows must be nonempty")
+    expected: list[dict[str, Any]] = []
+    previous_radius = Fraction(0)
+    previous_count = 0
+    seen: set[str] = set()
+    for index, raw in enumerate(raw_windows):
+        if not isinstance(raw, dict):
+            raise CertificateError(f"total-count window {index} must be an object")
+        identifier = raw.get("id")
+        if not isinstance(identifier, str) or not identifier or identifier in seen:
+            raise CertificateError("total-count window IDs must be nonempty and unique")
+        seen.add(identifier)
+        radius = artifact_rational(
+            raw.get("radius"), f"count_artifact.windows[{index}].radius"
+        )
+        if radius <= previous_radius:
+            raise CertificateError(
+                "total-count artifact radii must be strictly increasing"
+            )
+        lower_endpoint = binary_interval(
+            raw.get("lower_endpoint"),
+            f"count_artifact.windows[{index}].lower_endpoint",
+        )
+        upper_endpoint = binary_interval(
+            raw.get("upper_endpoint"),
+            f"count_artifact.windows[{index}].upper_endpoint",
+        )
+        if (
+            lower_endpoint.lower != lower_endpoint.upper
+            or lower_endpoint.lower != target - radius
+            or upper_endpoint.lower != upper_endpoint.upper
+            or upper_endpoint.lower != target + radius
+        ):
+            raise CertificateError(
+                "total-count endpoints do not equal exact target plus/minus radius"
+            )
+        n_lower = _unique_integer(
+            binary_interval(
+                raw.get("N_lower_ball"),
+                f"count_artifact.windows[{index}].N_lower_ball",
+            ),
+            f"count_artifact.windows[{index}].N_lower_ball",
+        )
+        n_upper = _unique_integer(
+            binary_interval(
+                raw.get("N_upper_ball"),
+                f"count_artifact.windows[{index}].N_upper_ball",
+            ),
+            f"count_artifact.windows[{index}].N_upper_ball",
+        )
+        if artifact_int(
+            raw.get("N_lower"), f"count_artifact.windows[{index}].N_lower"
+        ) != n_lower or artifact_int(
+            raw.get("N_upper"), f"count_artifact.windows[{index}].N_upper"
+        ) != n_upper:
+            raise CertificateError("declared total counts differ from count balls")
+        count = n_upper - n_lower
+        if count < previous_count:
+            raise CertificateError(
+                "total-count artifact nested counts must be nondecreasing"
+            )
+        if artifact_int(
+            raw.get("count_lower"),
+            f"count_artifact.windows[{index}].count_lower",
+        ) != count:
+            raise CertificateError("count_lower does not equal N_upper-N_lower")
+        expected.append(
+            {
+                "id": identifier,
+                "radius": radius,
+                "count": count,
+                "gate_sha256": hashlib.sha256(
+                    (count_sha + ":" + identifier).encode("ascii")
+                ).hexdigest(),
+            }
+        )
+        previous_radius = radius
+        previous_count = count
+    if previous_count <= 0:
+        raise CertificateError("final total-count artifact count must be positive")
+    return expected
+
+
+def _compare_count_projection(
+    data: dict[str, Any], count_artifact: dict[str, Any], count_sha: str
+) -> None:
+    actual, _ = parse_count_windows(data, "RIEMANN_XI_DIRECTED")
+    expected = _expected_count_windows(data, count_artifact, count_sha)
+    if len(actual) != len(expected):
+        raise CertificateError(
+            "certificate count windows differ from total-count artifact"
+        )
+    fields = ("id", "radius", "count", "gate_sha256")
+    for actual_window, expected_window in zip(actual, expected):
+        if any(
+            actual_window[field] != expected_window[field] for field in fields
+        ):
+            raise CertificateError(
+                f"certificate count window {actual_window['id']} differs from "
+                "total-count artifact"
+            )
+
+
 def verify_source_artifacts(
     data: dict[str, Any],
     primitive_artifact: dict[str, Any],
     count_artifact: dict[str, Any],
 ) -> dict[str, str]:
-    """Bind a production arithmetic replay to the two producer artifacts."""
+    """Reconstruct every proof-relevant certificate field from producer outputs."""
     source = validate_production_source(data)
     if primitive_artifact.get("schema") != PRIMITIVE_SCHEMA:
         raise CertificateError("primitive artifact schema mismatch")
@@ -302,6 +566,8 @@ def verify_source_artifacts(
         raise CertificateError("primitive artifact digest does not match certificate")
     if count_sha != source["total_count_sha256"]:
         raise CertificateError("total-count artifact digest does not match certificate")
+    _compare_primitive_projection(data, primitive_artifact)
+    _compare_count_projection(data, count_artifact, count_sha)
     return {
         "primitive_sha256": primitive_sha,
         "total_count_sha256": count_sha,
@@ -385,15 +651,27 @@ def secant(left: dict[str, Any], right: dict[str, Any], lv: Interval, rv: Interv
 
 
 def monotonicity_product(
-    left: dict[str, Any], right: dict[str, Any], shells: list[dict[str, Any]]
+    left: dict[str, Any],
+    right: dict[str, Any],
+    shells: list[dict[str, Any]],
+    factor_cache: dict[Fraction, Fraction] | None = None,
 ) -> Interval:
     if not left["u"] < right["u"]:
         raise CertificateError("monotonicity nodes must be increasing")
-    left_factor = Fraction(1)
-    right_factor = Fraction(1)
-    for shell in shells:
-        left_factor *= (left["u"] + shell["B"]) ** shell["count"]
-        right_factor *= (right["u"] + shell["B"]) ** shell["count"]
+
+    def factor(point: dict[str, Any]) -> Fraction:
+        u = point["u"]
+        if factor_cache is not None and u in factor_cache:
+            return factor_cache[u]
+        result = Fraction(1)
+        for shell in shells:
+            result *= (u + shell["B"]) ** shell["count"]
+        if factor_cache is not None:
+            factor_cache[u] = result
+        return result
+
+    left_factor = factor(left)
+    right_factor = factor(right)
     return right["h"].scale(left_factor).sub(left["h"].scale(right_factor))
 
 
@@ -404,6 +682,7 @@ def loewner_determinant(
     shells: list[dict[str, Any]],
     terms: int,
     deflated: bool,
+    value_cache: dict[tuple[bool, str], Interval] | None = None,
 ) -> Interval:
     size = len(row_ids)
     if size < 1 or size != len(column_ids) or size > 4:
@@ -420,14 +699,20 @@ def loewner_determinant(
         raise CertificateError("Loewner row nodes must be strictly increasing")
     if any(column_nodes[i] >= column_nodes[i + 1] for i in range(size - 1)):
         raise CertificateError("Loewner column nodes must be strictly increasing")
-    values = {
-        identifier: (
+    values: dict[str, Interval] = {}
+    for identifier in row_ids + column_ids:
+        key = (deflated, identifier)
+        if value_cache is not None and key in value_cache:
+            values[identifier] = value_cache[key]
+            continue
+        value = (
             deflated_log_value(points[identifier], shells, terms)
             if deflated
             else raw_log_value(points[identifier], terms)
         )
-        for identifier in row_ids + column_ids
-    }
+        values[identifier] = value
+        if value_cache is not None:
+            value_cache[key] = value
     matrix = [
         [secant(points[r], points[c], values[r], values[c]) for c in column_ids]
         for r in row_ids
@@ -476,6 +761,8 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
 
     outputs: list[dict[str, Any]] = []
     seen: set[str] = set()
+    factor_cache: dict[Fraction, Fraction] = {}
+    log_value_cache: dict[tuple[bool, str], Interval] = {}
     for index, raw in enumerate(raw_rows):
         if not isinstance(raw, dict):
             raise CertificateError(f"rows[{index}] must be an object")
@@ -492,7 +779,9 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             if kind == "raw-monotonicity":
                 value = right["h"].sub(left["h"])
             else:
-                value = monotonicity_product(left, right, shells)
+                value = monotonicity_product(
+                    left, right, shells, factor_cache=factor_cache
+                )
             detail = {"left": left_id, "right": right_id}
         elif kind in ("raw-cross-loewner-determinant", "deflated-cross-loewner-determinant"):
             row_ids, column_ids = raw.get("rows"), raw.get("columns")
@@ -505,6 +794,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
                 shells,
                 terms,
                 deflated=kind.startswith("deflated"),
+                value_cache=log_value_cache,
             )
             detail = {"rows": row_ids, "columns": column_ids, "order": len(row_ids)}
         else:
@@ -537,6 +827,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "classification": classification,
         "normalization_id": NORMALIZATION,
         "common_xi_scale_power_of_two": common_scale,
+        "count_interval_convention": data.get("count_interval_convention"),
         "ordinate": fj(ordinate),
         "point_count": len(points),
         "count_windows": [
@@ -593,7 +884,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         data = json.loads(args.certificate.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
             raise CertificateError("certificate root must be an object")
-        result = verify(data)
+        source_artifacts: dict[str, str] | None = None
         if data.get("classification") == "RIEMANN_XI_DIRECTED":
             if args.primitive_artifact is None or args.count_artifact is None:
                 raise CertificateError(
@@ -610,9 +901,13 @@ def main(argv: Sequence[str] | None = None) -> int:
                 count_artifact, dict
             ):
                 raise CertificateError("source artifacts must contain JSON objects")
-            result["source_artifacts"] = verify_source_artifacts(
+            # Reject a source/certificate mismatch before exact logarithm replay.
+            source_artifacts = verify_source_artifacts(
                 data, primitive_artifact, count_artifact
             )
+        result = verify(data)
+        if source_artifacts is not None:
+            result["source_artifacts"] = source_artifacts
             result["source_artifacts_verified"] = True
             if result["certified_negative_rows"]:
                 result["verdict"] = (

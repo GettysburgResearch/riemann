@@ -132,6 +132,7 @@ int main(int argc, char **argv)
     flint_printf("  \"precision_bits\":%wd,\n", precision);
     flint_printf("  \"threads\":%d,\n", threads);
     flint_printf("  \"target\":{\"numerator\":\"%s\",\"denominator\":\"4294967296\"},\n", T_NUM);
+    flint_printf("  \"count_interval_convention\":\"(T-R,T+R]\",\n");
     flint_printf("  \"windows\":[\n");
 
     for (slong i = 0; i < RADIUS_COUNT; i++)
@@ -195,7 +196,7 @@ int main(int argc, char **argv)
 
     flint_printf("  ],\n");
     flint_printf("  \"classification\":\"CERTIFIED_NESTED_TOTAL_ZETA_ZERO_COUNTS\",\n");
-    flint_printf("  \"proof_boundary\":\"Every count is an unconditional FLINT Turing total-zero count with multiplicity. Under RH only, the same counts become critical-line order-statistic bounds for L-9303. A negative downstream row requires independent primitive reproduction and analytic review.\"\n");
+    flint_printf("  \"proof_boundary\":\"Every count is the unconditional FLINT Turing difference N(T+R)-N(T-R), hence uses the half-open interval (T-R,T+R], with multiplicity. Under RH only, the same counts become critical-line order-statistic bounds for L-9303. A negative downstream row requires independent primitive reproduction and analytic review.\"\n");
     flint_printf("}\n");
 
     arb_clear(target);

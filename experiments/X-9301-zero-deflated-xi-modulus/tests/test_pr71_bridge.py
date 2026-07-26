@@ -33,6 +33,12 @@ def binval(m, e):
 
 
 class PR71BridgeTests(unittest.TestCase):
+    @staticmethod
+    def resign(certificate):
+        body = copy.deepcopy(certificate)
+        body.pop("certificate_sha256", None)
+        certificate["certificate_sha256"] = MODULE.canonical_sha(body)
+
     def primitives(self):
         return {
             "schema": MODULE.PRIMITIVE_SCHEMA,
@@ -111,6 +117,35 @@ class PR71BridgeTests(unittest.TestCase):
         mutated["precision_bits"] = 999
         with self.assertRaisesRegex(VERIFY.CertificateError, "gap artifact digest"):
             VERIFY.verify_source_artifacts(output, primitives, mutated)
+
+    def test_rehashed_certificate_point_drift_is_rejected(self):
+        primitives, gap = self.primitives(), self.gap()
+        output = MODULE.build(
+            copy.deepcopy(primitives), copy.deepcopy(gap), self.config()
+        )
+        point = output["points"][0]
+        point["xi_rectangle"]["real"]["lower"]["numerator"] += 1
+        canonical = {
+            "id": point["id"],
+            "u": point["u"],
+            "xi_rectangle": point["xi_rectangle"],
+        }
+        point["point_sha256"] = MODULE.canonical_sha(canonical)
+        self.resign(output)
+        with self.assertRaisesRegex(
+            VERIFY.CertificateError, "differs from primitive artifact"
+        ):
+            VERIFY.verify_source_artifacts(output, primitives, gap)
+
+    def test_rehashed_certificate_zero_drift_is_rejected(self):
+        primitives, gap = self.primitives(), self.gap()
+        output = MODULE.build(primitives, gap, self.config())
+        output["zero_bins"][0]["count_lower"] = 2
+        self.resign(output)
+        with self.assertRaisesRegex(
+            VERIFY.CertificateError, "differs from gap artifact"
+        ):
+            VERIFY.verify_source_artifacts(output, primitives, gap)
 
     def test_ordinate_mismatch_rejected(self):
         primitives = self.primitives()

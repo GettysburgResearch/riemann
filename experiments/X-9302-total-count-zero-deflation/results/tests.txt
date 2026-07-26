@@ -2,13 +2,17 @@ test_decreasing_nested_count_is_rejected (test_adapter.AdapterTests.test_decreas
 test_end_to_end_total_count_bridge (test_adapter.AdapterTests.test_end_to_end_total_count_bridge) ... ok
 test_endpoint_drift_is_rejected (test_adapter.AdapterTests.test_endpoint_drift_is_rejected) ... ok
 test_false_claimed_count_is_rejected (test_adapter.AdapterTests.test_false_claimed_count_is_rejected) ... ok
+test_missing_count_convention_is_rejected (test_adapter.AdapterTests.test_missing_count_convention_is_rejected) ... ok
 test_nonunique_count_ball_is_rejected (test_adapter.AdapterTests.test_nonunique_count_ball_is_rejected) ... ok
+test_rehashed_certificate_count_drift_is_rejected (test_adapter.AdapterTests.test_rehashed_certificate_count_drift_is_rejected) ... ok
+test_rehashed_certificate_point_drift_is_rejected (test_adapter.AdapterTests.test_rehashed_certificate_point_drift_is_rejected) ... ok
 test_source_artifact_mutation_is_rejected (test_adapter.AdapterTests.test_source_artifact_mutation_is_rejected) ... ok
 test_precision_specific_gate_digests_are_allowed (test_precision_compare.PrecisionComparisonTests.test_precision_specific_gate_digests_are_allowed) ... ok
 test_semantic_count_change_is_rejected (test_precision_compare.PrecisionComparisonTests.test_semantic_count_change_is_rejected) ... ok
 test_boolean_count_is_rejected (test_verify.TotalCountDeflationTests.test_boolean_count_is_rejected) ... ok
 test_decreasing_count_is_rejected (test_verify.TotalCountDeflationTests.test_decreasing_count_is_rejected) ... ok
 test_false_point_digest_is_rejected (test_verify.TotalCountDeflationTests.test_false_point_digest_is_rejected) ... ok
+test_fixed_point_log_contains_exact_series_enclosure (test_verify.TotalCountDeflationTests.test_fixed_point_log_contains_exact_series_enclosure) ... ok
 test_nonincreasing_radius_is_rejected (test_verify.TotalCountDeflationTests.test_nonincreasing_radius_is_rejected) ... ok
 test_production_relabel_without_binding_is_rejected (test_verify.TotalCountDeflationTests.test_production_relabel_without_binding_is_rejected) ... ok
 test_shell_increments_are_exact (test_verify.TotalCountDeflationTests.test_shell_increments_are_exact) ... ok
@@ -17,6 +21,6 @@ test_wrong_gate_is_rejected (test_verify.TotalCountDeflationTests.test_wrong_gat
 test_zero_final_count_is_rejected (test_verify.TotalCountDeflationTests.test_zero_final_count_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests
+Ran 21 tests
 
 OK

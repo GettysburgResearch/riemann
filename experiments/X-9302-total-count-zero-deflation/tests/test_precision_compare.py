@@ -65,6 +65,7 @@ def fixtures() -> tuple[dict, dict, dict]:
     counts = {
         "schema": adapter.COUNT_SCHEMA,
         "classification": adapter.COUNT_CLASSIFICATION,
+        "count_interval_convention": adapter.COUNT_INTERVAL_CONVENTION,
         "target": {"numerator": "10", "denominator": "1"},
         "windows": [
             {

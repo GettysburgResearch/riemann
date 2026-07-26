@@ -35,7 +35,7 @@ class AdapterTests(unittest.TestCase):
     def source(self):
         return {
             "schema": MODULE.SOURCE_SCHEMA,
-            "classification": "RIEMANN_XI_DIRECTED",
+            "classification": "SYNTHETIC_MODEL",
             "normalization_id": MODULE.NORMALIZATION,
             "ordinate": rat(10),
             "points": [point("p1", 1), point("p2", 2), point("p3", 3), point("p4", 4)],
@@ -87,6 +87,12 @@ class AdapterTests(unittest.TestCase):
         config["log_terms"] = True
         with self.assertRaises(MODULE.AdapterError):
             MODULE.adapt(self.source(), config)
+
+    def test_production_source_is_not_promoted_without_artifact_binding(self):
+        source = self.source()
+        source["classification"] = "RIEMANN_XI_DIRECTED"
+        with self.assertRaisesRegex(MODULE.AdapterError, "production.*disabled"):
+            MODULE.adapt(source, self.config())
 
 
 if __name__ == "__main__":

@@ -118,6 +118,7 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
         "classification",
         "normalization_id",
         "common_xi_scale_power_of_two",
+        "count_interval_convention",
         "ordinate",
         "log_terms",
         "rows",
@@ -162,6 +163,8 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "schema": "riemann.x9302-total-deflation-precision-comparison.v1",
+        "low_artifact_sha256": VERIFY.canonical_sha(low),
+        "high_artifact_sha256": VERIFY.canonical_sha(high),
         "stable_count_windows": stable_count_windows,
         "point_count": len(low_points),
         "nested_primitive_coordinates": nested_coordinates,

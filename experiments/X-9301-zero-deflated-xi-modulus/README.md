@@ -70,7 +70,10 @@ or
 G_def(u)=G(u)-sum_r m_r log(u+B_r)
 ```
 
-using exact rational power-of-two reduction and a positive atanh series. It then
+using exact rational power-of-two reduction and an outward-rounded dyadic
+evaluation of the positive atanh series. The fixed-point enclosure keeps
+intermediate denominator sizes bounded without changing the rigorous positive
+tail estimate. It then
 forms exact interval secants and determinants through order four.
 
 ## Synthetic hidden-offline-zero control
@@ -123,7 +126,7 @@ python verify_zero_deflated_modulus.py \
 python -m unittest discover -s tests -v
 ```
 
-Twenty-five tests pass. They cover:
+Thirty-two exact tests pass. They cover:
 
 - the strict hidden-offline separation;
 - the exact algebraic negative integer;
@@ -135,13 +138,18 @@ Twenty-five tests pass. They cover:
 - wider-bin validity;
 - X-7501 adapter coordinate squaring;
 - missing source points;
-- Boolean logarithm-term rejection.
+- Boolean logarithm-term rejection;
+- production source reconstruction and adversarial re-signing;
+- fixed-point logarithm enclosure against the exact positive series;
+- nearest-zero selection and precision nesting.
 
 The CLI returns `0` for every resolved arithmetic replay, including a strict
 negative, `1` for unresolved intervals, and `2` for rejection. Production
 certificates additionally require `--primitive-artifact` and
-`--zero-artifact`; their canonical digests must match the certificate before a
-negative can be labeled source-bound.
+`--zero-artifact`. Before any expensive determinant replay, the verifier checks
+their canonical digests and reconstructs the ordinate, squared nodes, completed-
+xi rectangles, selected zero indices, zero-bin bounds, counts, and gate digests.
+A re-signed certificate that drifts from either producer artifact is rejected.
 
 At the PR #71 height, the unscaled completed-xi ball has a binary exponent so
 large that expanding its rational denominator during JSON serialization can
@@ -155,13 +163,17 @@ production certificate.
 
 `adapt_x7501_zero_deflation.py` consumes:
 
-1. an X-7501 `riemann.xi-modulus-witness.v1` directed certificate;
+1. an X-7501 `riemann.xi-modulus-witness.v1` synthetic certificate;
 2. a `riemann.xi-modulus-zero-deflation-config.v1` file containing zero bins and
    requested rows.
 
 It squares every exact horizontal offset, copies the primitive rectangles,
 preserves source fingerprints, and emits the X-9301 schema. It performs no
 special-function evaluation.
+
+The generic X-7501 adapter is synthetic-only until it accepts a reviewed
+zero-source artifact and can reconstruct all production zero bins. PR #71
+production uses the dedicated gap and indexed-Hardy-block builders.
 
 ## Zero-count gates
 

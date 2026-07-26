@@ -143,6 +143,8 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "schema": "riemann.x9301-precision-comparison.v1",
+        "low_artifact_sha256": VERIFY.canonical_sha(low),
+        "high_artifact_sha256": VERIFY.canonical_sha(high),
         "point_count": len(low_points),
         "nested_primitive_coordinates": nested_coordinates,
         "row_count": len(low_rows),

@@ -4,6 +4,7 @@ import importlib.util
 import json
 import sys
 import unittest
+from fractions import Fraction
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,6 +33,24 @@ class ZeroDeflatedModulusTests(unittest.TestCase):
         self.assertEqual(statuses["raw-loewner-hidden"], "CERTIFIED_NONNEGATIVE")
         self.assertEqual(statuses["deflated-monotonicity-exposes"], "CERTIFIED_NEGATIVE")
         self.assertEqual(statuses["deflated-loewner-exposes"], "CERTIFIED_NEGATIVE")
+
+    def test_fixed_point_log_contains_exact_series_enclosure(self):
+        for y in (Fraction(1), Fraction(4, 3), Fraction(2)):
+            terms = 8
+            z = (y - 1) / (y + 1)
+            z2 = z * z
+            power = z
+            partial = Fraction(0)
+            for j in range(terms):
+                partial += power / (2 * j + 1)
+                power *= z2
+            reference_lower = 2 * partial
+            reference_upper = reference_lower + (
+                2 * power / ((2 * terms + 1) * (1 - z2))
+            )
+            actual = MODULE._atanh_log_interval(y, terms)
+            self.assertLessEqual(actual.lower, reference_lower)
+            self.assertGreaterEqual(actual.upper, reference_upper)
 
     def test_exact_algebraic_monotonicity_value(self):
         result = MODULE.verify(self.load())

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from fractions import Fraction
@@ -13,6 +14,7 @@ if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
 SCHEMA = "riemann.x9302-pr71-total-count-windows.v1"
+COUNT_INTERVAL_CONVENTION = "(T-R,T+R]"
 
 
 class CompareError(ValueError):
@@ -54,6 +56,11 @@ def load(path: Path) -> dict[str, Any]:
     return value
 
 
+def canonical_sha(value: Any) -> str:
+    raw = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+    return hashlib.sha256(raw.encode("ascii")).hexdigest()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("low", type=Path)
@@ -62,8 +69,11 @@ def main() -> int:
     args = parser.parse_args()
     try:
         low, high = load(args.low), load(args.high)
-        if low.get("target") != high.get("target"):
-            raise CompareError("target mismatch")
+        for field in ("classification", "target", "count_interval_convention"):
+            if low.get(field) != high.get(field):
+                raise CompareError(f"{field} mismatch")
+        if low.get("count_interval_convention") != COUNT_INTERVAL_CONVENTION:
+            raise CompareError("count interval convention mismatch")
         lw, hw = low.get("windows"), high.get("windows")
         if not isinstance(lw, list) or not isinstance(hw, list) or len(lw) != len(hw):
             raise CompareError("window-list mismatch")
@@ -90,8 +100,21 @@ def main() -> int:
                             "reason": "higher precision not nested",
                         }
                     )
+            for key in ("lower_endpoint", "upper_endpoint"):
+                alo, ahi = bounds(a.get(key), f"low[{index}].{key}")
+                blo, bhi = bounds(b.get(key), f"high[{index}].{key}")
+                if alo != ahi or blo != bhi or alo != blo:
+                    failures.append(
+                        {
+                            "index": index,
+                            "field": key,
+                            "reason": "exact endpoint mismatch",
+                        }
+                    )
         result = {
             "schema": "riemann.x9302-total-count-precision-comparison.v1",
+            "low_artifact_sha256": canonical_sha(low),
+            "high_artifact_sha256": canonical_sha(high),
             "window_count": len(lw),
             "all_stable_and_nested": not failures,
             "failures": failures,
