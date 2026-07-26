@@ -1,11 +1,16 @@
-# X-9312 — Exact Padé residual-mass leverage budget
+# X-9314 — Exact Christoffel–Padé residual-mass budget
 
-L-9314 identifies each distance from a one-node Padé boundary as an exact
+> Historical working-directory note: this implementation was first published
+> under `experiments/X-9312-pade-leverage-budget` before concurrent PR #134
+> registered X-9312. The registered experiment ID is now **X-9314**. The path is
+> retained temporarily to avoid breaking stacked references.
+
+L-9316 identifies each distance from a one-node Padé boundary as an exact
 positive Christoffel-type integral. Therefore every proof-grade positive piece
 of the residual RH measure consumes a rigorously lower-bounded portion of the
 total Padé gap.
 
-X-9312 verifies the finite contradiction
+X-9314 verifies the finite contradiction
 
 ```text
 upper(total directed Padé gap)
@@ -15,6 +20,12 @@ lower(certified residual-submeasure contribution).
 
 Such an inequality is impossible under RH.
 
+## Relationship to L-12103
+
+L-12103 proves the generic fixed-response line-mass inequality. X-9314 is its
+endpoint-optimized specialization and additionally supports the positive
+residual segments left by safe far-endpoint deflation.
+
 ## Inputs
 
 A certificate contains:
@@ -23,11 +34,9 @@ A certificate contains:
 - exact old nodes `u_j`;
 - the exact added node `w`;
 - an optional certified support edge `A`;
-- a rational endpoint polynomial `q` with `q(-w)=1`;
+- a rational Padé endpoint polynomial `q` with `q(-w)=1`;
 - a directed interval for the corresponding total Padé gap;
 - proof-gated residual-mass records.
-
-Two residual record kinds are supported.
 
 ### Atomic zero bin
 
@@ -87,7 +96,7 @@ The checker uses only Python integers and `fractions.Fraction`:
 
 1. exact verification of `q(-w)=1`;
 2. proof-gate and anti-double-counting checks;
-3. interval Horner evaluation of `q`;
+3. interval Horner evaluation of q;
 4. exact interval squaring and rational-function division;
 5. exact atomic or length-weighted segment summation;
 6. strict final comparison.
@@ -98,13 +107,10 @@ enters the checker.
 ## Verdicts
 
 ```text
-CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET
-CERTIFIED_CONSISTENT_PADE_LINE_MASS_BUDGET
-UNRESOLVED_PADE_LINE_MASS_BUDGET
+CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET
+CERTIFIED_CONSISTENT_PADE_RESIDUAL_MASS_BUDGET
+UNRESOLVED_PADE_RESIDUAL_MASS_BUDGET
 ```
-
-The historical verdict names are retained for schema compatibility, but the
-proof object now covers generic certified residual mass, not only atoms.
 
 The output ranks items by contribution uncertainty. That ranking tells the
 saturated sign-chain or factor-removal route which records are most valuable to
@@ -114,18 +120,13 @@ refine for the active witness.
 
 The controls use no old nodes, `w=1`, and `q(y)=1`.
 
-For a unit atom at `y=1`, the lower leverage is exactly `1/2`.
+- A unit atom at `y=1` contributes exactly `1/2` to the lower gap.
+- A unit atom at `y=3` contributes exactly `3/4` to the ordinary upper gap.
+- A residual segment `[1,3]` has length 2 and leverage at least `1/4`, hence
+  certified contribution at least `1/2`.
 
-- total gap `3/4`: consistent;
-- fake total gap `2/5`: strict contradiction.
-
-For the upper kernel with `A=0`, a unit atom at `y=3` contributes `3/4`; a fake
-total upper gap `7/10` gives a strict contradiction.
-
-A segment `[1,3]` has length 2 and leverage at least `1/4`, so its certified
-contribution is at least `1/2`; the same fake gap `2/5` is contradictory.
-
-These are algebraic controls only, not Riemann-ξ candidates.
+The retained fake total gaps give exact contradictions of `-1/10`, `-1/20`,
+and `-1/10`. These are algebraic controls only.
 
 ## Reproduction
 
@@ -135,6 +136,7 @@ python -m unittest discover -s tests -v
 python verify_leverage_budget.py certificates/synthetic-consistent.json
 python verify_leverage_budget.py certificates/synthetic-lower-negative.json
 python verify_leverage_budget.py certificates/synthetic-upper-negative.json
+python verify_leverage_budget.py certificates/synthetic-segment-negative.json
 ```
 
 A Riemann-ξ nomination requires a source-bound directed Padé gap and endpoint
