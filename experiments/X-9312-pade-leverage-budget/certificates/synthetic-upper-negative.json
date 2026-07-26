@@ -1,0 +1,28 @@
+{
+  "schema": "riemann.x9314-pade-residual-mass-budget.v1",
+  "classification": "SYNTHETIC",
+  "side": "upper",
+  "w": {"numerator": 1, "denominator": 1},
+  "support_lower": {"numerator": 0, "denominator": 1},
+  "nodes": [],
+  "q": [{"numerator": 1, "denominator": 1}],
+  "gap": {
+    "lower": {"numerator": 7, "denominator": 10},
+    "upper": {"numerator": 7, "denominator": 10}
+  },
+  "zero_bins": [
+    {
+      "id": "z3",
+      "kind": "atom",
+      "y": {
+        "lower": {"numerator": 3, "denominator": 1},
+        "upper": {"numerator": 3, "denominator": 1}
+      },
+      "multiplicity": 1,
+      "gate": {
+        "status": "CERTIFIED_CRITICAL_LINE_ZERO_LOWER_BOUND",
+        "sha256": "synthetic"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "riemann.x9314-synthetic-summary.v1",
+  "classification": "SYNTHETIC_CONTROL",
+  "analytic_claim": "L-9316",
+  "experiment_id": "X-9314",
+  "consistent_lower": {
+    "gap": "3/4",
+    "certified_residual_mass": "1/2",
+    "verdict": "CERTIFIED_CONSISTENT_PADE_RESIDUAL_MASS_BUDGET"
+  },
+  "negative_lower": {
+    "gap": "2/5",
+    "certified_residual_mass": "1/2",
+    "gap_minus_mass": "-1/10",
+    "verdict": "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
+  },
+  "negative_upper": {
+    "gap": "7/10",
+    "certified_residual_mass": "3/4",
+    "gap_minus_mass": "-1/20",
+    "verdict": "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
+  },
+  "negative_far_endpoint_segment": {
+    "gap": "2/5",
+    "segment": "[1,3]",
+    "segment_length": "2",
+    "leverage_lower": "1/4",
+    "certified_residual_mass": "1/2",
+    "gap_minus_mass": "-1/10",
+    "verdict": "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
+  },
+  "riemann_xi_counterexample": false
+}
