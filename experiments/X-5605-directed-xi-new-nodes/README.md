@@ -52,3 +52,15 @@ python3 directed_xi.py --certificate atomized-min-certificate-p512.json \
 ```
 
 20 seconds total.
+
+## Dependency-hygiene finding
+
+The moment chain runs `L-9314 -> L-9310 -> L-9309 (basis portfolios) -> L-9308
+(frozen residual functional)`.  On the PR #134 stack, **`L-9308` and `L-9309`
+have no claim files** — they are cited (L-9310 quotes L-9309's inverse formula
+inline) but never committed, the same pattern `opus5-01` recorded for
+`L-4701`/`L-4702` on the Pick branch.  Combined with the uncommitted basis
+artifact, the complete directed pipeline for the candidates is not
+reconstructible from any committed data.  The precise requests, in order of
+value: (1) the directed basis table behind `source_directed_basis_sha256`,
+(2) the `L-9308` residual-functional definition, (3) the `L-9309` file.
