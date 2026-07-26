@@ -1,0 +1,37 @@
+{
+  "schema": "riemann.x9312-positive-anchor-nominations.v1",
+  "status": "EMPIRICAL_NOMINATIONS_NO_COUNTEREXAMPLE",
+  "ordinate": {
+    "numerator": 20225875608343133989267,
+    "denominator": 4294967296,
+    "decimal": "4709203636353.63382968748919665813446044921875"
+  },
+  "cross_route_carrier": {
+    "decimal": "4709203636353.65",
+    "difference": "0.01617031251080334186553955078125"
+  },
+  "method": "Exact rational Schur gates on PR103 old-moment midpoints; ordinary mpmath direct-xi residual reconnaissance using the PR103 atomized shells",
+  "anchors": [
+    {"w":"1/2","x":"sqrt(1/2)","lower_gap":"7.5571937194968259896240e-4","upper_gap":"3.84636771743066180280966e-3","beta_abs":"6.57070229290357332197e4","lower_gap_primitive_units":"1.1501348535694082e-8"},
+    {"w":"3/4","x":"sqrt(3/4)","lower_gap":"4.195664285409246958676e-5","upper_gap":"1.7248877530549102819813e-4","beta_abs":"9.99480124506028267358e1","lower_gap_primitive_units":"4.1978466430063975e-7"},
+    {"w":"1","x":"1","lower_gap":"4.050333677232783182323e-6","upper_gap":"1.4585952791781370183963e-5","beta_abs":"1.00130344101672803581","lower_gap_primitive_units":"4.0450611785774511e-6"},
+    {"w":"3/2","x":"sqrt(3/2)","lower_gap":"1.02527425035356851724e-7","upper_gap":"3.14391579307877914503e-7","beta_abs":"1.52376132019890623350e-3","lower_gap_primitive_units":"6.7285751171301091e-5"},
+    {"w":"2","x":"sqrt(2)","lower_gap":"5.877755385212945527e-9","upper_gap":"1.6364227764178062603e-8","beta_abs":"1.52687283465422880925e-5","lower_gap_primitive_units":"3.8495382534878911e-4"},
+    {"w":"3","x":"sqrt(3)","lower_gap":"7.6188893184218651e-11","upper_gap":"1.89395435162940129e-10","beta_abs":"2.32406593415470248042e-8","lower_gap_primitive_units":"3.2782586786604955e-3"},
+    {
+      "w":"4",
+      "x":"2",
+      "gate_lower":"27375115.77715610683338270942781224884018061645431803605379046514229193",
+      "gate_upper":"27375115.77715610684289268397858616575745335517506270982011990857512056",
+      "b0_midpoint":"27375115.7771561068362402083762353934903793236139845753700031",
+      "lower_gap":"2.8574989484231446501987071596665393e-12",
+      "upper_gap":"6.6524756023507722670740315610781345e-12",
+      "beta_anchor":"-2.3290645462119429955497085867313473e-10",
+      "old_moment_width_bound":"7.0701796730637635588662819511e-33",
+      "lower_gap_primitive_units":"0.01226886971883481047",
+      "classification":"PRIMARY_EXACT_RUN_NOMINATION"
+    }
+  ],
+  "counterexample_candidate": null,
+  "warning": "Every b0 value is an ordinary high-precision midpoint. Only a directed completed-xi rectangle and exact Schur-witness contraction can create a candidate."
+}
