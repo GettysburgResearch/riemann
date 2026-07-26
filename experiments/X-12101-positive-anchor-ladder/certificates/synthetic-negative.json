@@ -1,0 +1,77 @@
+{
+  "anchor_scalars": [
+    {
+      "denominator": "1035",
+      "numerator": "5728"
+    },
+    {
+      "denominator": "130900",
+      "numerator": "560221"
+    }
+  ],
+  "anchors": [
+    {
+      "denominator": "2",
+      "numerator": "1"
+    },
+    {
+      "denominator": "2",
+      "numerator": "3"
+    }
+  ],
+  "checks": [
+    {
+      "claimed_value": {
+        "denominator": "1734163200",
+        "numerator": "-987306740595163"
+      },
+      "id": "negative-h0-square",
+      "kind": "h0-vector",
+      "vector": [
+        {
+          "denominator": "1",
+          "numerator": "7064"
+        },
+        {
+          "denominator": "1",
+          "numerator": "-6917"
+        },
+        {
+          "denominator": "1",
+          "numerator": "1497"
+        },
+        {
+          "denominator": "1",
+          "numerator": "-85"
+        }
+      ]
+    }
+  ],
+  "declared_check_ids": [
+    "negative-h0-square"
+  ],
+  "old_degree": 4,
+  "old_moments": [
+    {
+      "denominator": "1",
+      "numerator": "28"
+    },
+    {
+      "denominator": "1",
+      "numerator": "198"
+    },
+    {
+      "denominator": "1",
+      "numerator": "1768"
+    },
+    {
+      "denominator": "1",
+      "numerator": "17388"
+    },
+    {
+      "denominator": "1",
+      "numerator": "179188"
+    }
+  ],
+  "schema": "riemann.positive-anchor-moment-ladder.v1"
+}
