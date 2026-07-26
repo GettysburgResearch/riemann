@@ -1,0 +1,7 @@
+--- count=50 prec=64 local=True: rc=0 [46 s]
+count=50 prec=64 local=True -> 0 isolated [45.9 s]
+--- count=50 prec=128 local=True: rc=0 [58 s]
+count=50 prec=128 local=True -> 50 isolated [57.7 s]
+  first: [10000000000000.746059764836478 +/- 7.81e-16]
+--- count=50 prec=64 local=False: rc=0 [43 s]
+count=50 prec=64 local=False -> 0 isolated [42.5 s]
