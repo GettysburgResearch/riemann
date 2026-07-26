@@ -1,10 +1,11 @@
 # L-9304 — Optimal zero-distance envelopes from overlapping exact interval counts
 
 Claim ID: L-9304  
-Title: Arbitrary overlapping exact zero counts admit an exact interval-matrix dual whose breakpoint profile is the maximal universal Stieltjes subtraction forced by those counts  
+Title: Arbitrary overlapping exact zero counts admit an exact interval-matrix dual and an optimal deflation profile relative to the declared count constraints  
 Status: PROPOSED  
 Authoring agent: `gpt56-02-k`  
 Created: 2026-07-26  
+Corrected: 2026-07-26 by `gpt56-sol-7b85`  
 Dependencies: L-7501; L-7504; L-9302; L-9303; unconditional exact total-zero counts with zero-free endpoints  
 Scope: direct completed-xi modulus witnesses from overlapping and asymmetric count windows  
 Related counterexample candidates: none
@@ -21,8 +22,10 @@ the same zero may satisfy several windows. The correct operation is an exact
 interval-count linear program.
 
 This lemma identifies that program, proves its integrality, extracts the maximal
-pointwise common Stieltjes submeasure, and gives a small primal-dual certificate
-that a standard-library checker can replay.
+pointwise common Stieltjes submeasure justified by the declared interval
+equations alone, and gives a small primal-dual certificate that a
+standard-library checker can replay. Other rigorously known structure of the
+zeta-zero set, if omitted from those equations, can force a stronger profile.
 
 ## Atomic count model
 
@@ -65,6 +68,8 @@ count vectors under RH lie in
 \]
 
 The actual zero configuration is one feasible integer point whenever RH holds.
+The converse is neither asserted nor needed: an arbitrary integer point of
+`\mathcal X` need not be realizable by zeta zeros.
 
 ## Forced count inside a target window
 
@@ -95,7 +100,8 @@ The dual program is
 The dual multipliers are unrestricted because the count constraints are
 equalities.
 
-Therefore an exact certificate for `M(R)=M` consists of:
+Therefore an exact certificate for the optimum of this declared-constraint
+relaxation, `M(R)=M`, consists of:
 
 1. one nonnegative integer vector `x` with `Ax=m` and `q_R^T x=M`;
 2. one rational vector `lambda` with `A^T lambda<=q_R` and
@@ -134,9 +140,12 @@ zero-count problem, not a fractional relaxation.
 
 ## Complete breakpoint profile
 
-Refine the atom partition so that it is symmetric about `T`: whenever `e` is an
-endpoint, include `2T-e` as an endpoint as well. This refinement changes no
-count.
+Require the atom partition to be symmetric about `T`: whenever `e` is an
+endpoint, `2T-e` must also be an endpoint. Every added mirror endpoint must
+itself have a proof-grade zero-free certificate before it is used to refine an
+open-cell count. Alternatively, a separately reviewed half-open or boundary-atom
+convention must account for a zero at that endpoint. Mirroring a rational
+coordinate alone does not prove that the mirror is zero-free.
 
 Let
 
@@ -152,40 +161,51 @@ be all distinct positive endpoint distances `|e_j-T|`. Put
 
 The windows are nested, so `M_k` is nondecreasing and `d_k>=0`.
 
-For any RH-compatible zero configuration, let
+For any RH-compatible zero configuration `z` whose cell-count vector satisfies
+the declared equations, let
 
 \[
- N_x(s)=\#\{j:(T-\gamma_j)^2\le s\}.
+ N_z(s)=\#\{j:(T-\gamma_j)^2\le s\}.
 \]
 
 Then, at every breakpoint,
 
 \[
- N_x(R_k^2)\ge M_k.
+ N_z(R_k^2)\ge M_k.
 \]
 
-Between breakpoints the selected cell set does not change. Hence the step
-function
+Between consecutive endpoint radii, no additional whole atom cell enters the
+symmetric window. In the abstract model, zeros in a partially intersected
+boundary cell may be placed outside the smaller window. Hence the pointwise
+lower envelope implied solely by `Ax=m`, including unconstrained positions
+inside each open cell, is the step function
 
 \[
  \boxed{
- N_*(s)=M_k\quad
- \text{for }R_k^2\le s<R_{k+1}^2
+ N_*(s)=
+ \begin{cases}
+ 0,&0\le s<R_1^2,\\
+ M_k,&R_k^2\le s<R_{k+1}^2,\\
+ M_K,&s\ge R_K^2.
+ \end{cases}
  }
 \]
 
-is the pointwise minimum of `N_x(s)` over every zero configuration satisfying
-the exact interval counts.
+Here the middle line applies for `1\le k<K`.
 
+Every actual RH-compatible zeta configuration satisfies `N_z(s)\ge N_*(s)`.
 It follows that
 
 \[
  N_*(s)\,ds
 \]
 
-is the **maximal pointwise common Stieltjes submeasure** forced by the complete
-count table. No larger density at any `s` is valid for all compatible
-configurations.
+is a safe common Stieltjes submeasure. It is the **maximal pointwise common
+submeasure forced by the declared interval equations in the abstract
+cell-count/location model**. It is not necessarily maximal after adding other
+facts about zeta zeros. For example, conjugation makes the count in `(a,b)`
+equal to the count in `(-b,-a)`; omitting the reflected equation can make this
+LP profile strictly weaker than the true zeta-compatible envelope.
 
 The corresponding finite logarithmic subtraction is
 
@@ -254,30 +274,30 @@ Take `T=0` and atom endpoints
  \frac{31}{10}.
 \]
 
-Suppose exact counts give
+Suppose exact total-zero counts, including the modeled off-line pair, give
 
 \[
  \begin{aligned}
- N\!\left(-\frac{31}{10},\frac{11}{10}\right)&=21,\\
- N\!\left(-\frac{11}{10},\frac{31}{10}\right)&=21,\\
- N\!\left(-\frac{31}{10},\frac{31}{10}\right)&=22.
+ N\!\left(-\frac{31}{10},\frac{11}{10}\right)&=23,\\
+ N\!\left(-\frac{11}{10},\frac{31}{10}\right)&=23,\\
+ N\!\left(-\frac{31}{10},\frac{31}{10}\right)&=24.
  \end{aligned}
 \]
 
 Writing the three cell counts as `(x_1,x_2,x_3)`, these equations force
 
 \[
- (x_1,x_2,x_3)=(1,20,1).
+ (x_1,x_2,x_3)=(1,22,1).
 \]
 
-The inner-window optimum `M(11/10)=20` has exact dual
+The inner-window optimum `M(11/10)=22` has exact dual
 
 \[
  \lambda=(1,1,-1),
 \]
 
 since the two overlapping count rows minus the full row equal the inner-cell
-indicator. The outer optimum `M(31/10)=22` has dual `(0,0,1)`.
+indicator. The outer optimum `M(31/10)=24` has dual `(0,0,1)`.
 
 Now use the exact synthetic modulus
 
@@ -298,25 +318,29 @@ raw determinant
 +8.869072961098987757793450120372e-1
 
 outer-only deflation
-+2.049935136512567095607559370060e-1
++1.438052723804491154394435323930e-1
 
 optimal overlapping-count profile
--1.741330934997396143714036589382
+-1.973392601411243740077137242258
 ```
 
 Thus:
 
 - the undecomposed direct-xi row is positive;
-- putting all twenty-two guaranteed zeros at the outer radius is still positive;
-- the exact overlapping-count envelope forces twenty zeros into the inner radius
+- putting all twenty-four guaranteed zeros at the outer radius is still positive;
+- the exact overlapping-count envelope forces twenty-two zeros into the inner radius
   and makes the same row strictly negative.
 
-This is an exact synthetic separation. It is not a Riemann-xi evaluation.
+The two additional inner counts are the modeled off-line pair. Under the RH
+assumption used by the criterion they too would have to be line-zero mass, so
+the total-count deflation is logically consistent. This is an exact synthetic
+separation, not a Riemann-xi evaluation.
 
 ## Solver-untrusted production protocol
 
 1. Obtain exact total-zero counts at arbitrary rational endpoints.
-2. Form the atom partition and mirror it around `T`.
+2. Form the atom partition and certify every original and mirrored endpoint
+   zero-free (or use a reviewed boundary-atom convention).
 3. Let any LP, network-flow, or combinatorial solver nominate `M(R_k)`.
 4. Freeze one integer primal and one rational dual for every breakpoint.
 5. Replay every equality and inequality with integer/Fraction arithmetic.
@@ -335,7 +359,12 @@ The proof checker never trusts the optimizer.
 - Total counts become line counts only under the RH assumption inside the
   contradiction proof.
 - Exact equalities, not smooth Riemann--von Mangoldt estimates, enter `A x=m`.
-- Mirroring count endpoints only refines cells; it does not invent a count.
+- Mirroring count endpoints only refines cells after the new endpoints are
+  independently certified zero-free; reflection of a coordinate is not such a
+  certificate.
+- The LP envelope is optimal relative to the declared interval equations, not
+  relative to every known structural property of zeta zeros. Add symmetry or
+  other valid linear constraints explicitly when they strengthen the model.
 - If only selected radii are certified, the resulting subtraction is valid but
   not claimed to be the complete maximal envelope.
 - A production negative still requires independent review of the completed-xi

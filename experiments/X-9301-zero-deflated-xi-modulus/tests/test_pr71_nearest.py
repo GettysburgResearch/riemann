@@ -19,6 +19,7 @@ def import_module(name: str):
 
 BUILD = import_module("build_pr71_nearest_certificate")
 COMPARE = import_module("compare_pr71_zero_block")
+VERIFY = import_module("verify_zero_deflated_modulus")
 
 
 def rational(numerator, denominator=1):
@@ -79,6 +80,7 @@ class NearestZeroTests(unittest.TestCase):
             "target_above_zero_index": "102",
             "zeros": [
                 {
+                    "local_index": index,
                     "zero_index": str(100 + index),
                     "ball": ball(lower - widen, upper + widen),
                 }
@@ -103,10 +105,53 @@ class NearestZeroTests(unittest.TestCase):
         output = BUILD.build(self.primitives(), self.block(), self.config(), 2)
         self.assertEqual(len(output["zero_bins"]), 2)
         self.assertEqual(set(output["source"]["selected_zero_indices"]), {101, 102})
+        bindings = VERIFY.verify_source_artifacts(
+            output, self.primitives(), self.block()
+        )
+        self.assertEqual(
+            bindings["zero-block_sha256"],
+            output["source"]["zero_block_sha256"],
+        )
+
+    def test_rehashed_selected_index_drift_is_rejected(self):
+        primitives, block = self.primitives(), self.block()
+        output = BUILD.build(primitives, block, self.config(), 2)
+        output["source"]["selected_zero_indices"].reverse()
+        body = dict(output)
+        body.pop("certificate_sha256")
+        output["certificate_sha256"] = BUILD.canonical_sha(body)
+        with self.assertRaisesRegex(
+            VERIFY.CertificateError, "selected zero indices"
+        ):
+            VERIFY.verify_source_artifacts(output, primitives, block)
 
     def test_excess_nearest_count_rejected(self):
         with self.assertRaises(BUILD.BuildError):
             BUILD.build(self.primitives(), self.block(), self.config(), 5)
+
+    def test_global_nearest_requires_exterior_guards(self):
+        with self.assertRaisesRegex(BUILD.BuildError, "guard on each side"):
+            BUILD.build(self.primitives(), self.block(), self.config(), 3)
+
+    def test_rehashed_guard_drift_is_rejected(self):
+        primitives, block = self.primitives(), self.block()
+        output = BUILD.build(primitives, block, self.config(), 2)
+        output["source"]["selection_guard"][
+            "lower_exterior_zero_index"
+        ] += 1
+        body = dict(output)
+        body.pop("certificate_sha256")
+        output["certificate_sha256"] = BUILD.canonical_sha(body)
+        with self.assertRaisesRegex(
+            VERIFY.CertificateError, "guard metadata"
+        ):
+            VERIFY.verify_source_artifacts(output, primitives, block)
+
+    def test_nonconsecutive_block_indices_are_rejected(self):
+        block = self.block()
+        block["zeros"][1]["zero_index"] = "999"
+        with self.assertRaisesRegex(BUILD.BuildError, "not consecutive"):
+            BUILD.build(self.primitives(), block, self.config(), 2)
 
     def test_precision_block_nesting(self):
         result = COMPARE.compare(self.block(192, 1), self.block(256, 0))

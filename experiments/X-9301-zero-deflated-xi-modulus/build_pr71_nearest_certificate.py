@@ -19,6 +19,7 @@ CONFIG_SCHEMA = "riemann.xi-modulus-zero-deflation-config.v1"
 OUTPUT_SCHEMA = "riemann.xi-modulus-zero-deflation.v1"
 NORMALIZATION = "riemann-xi-standard-half-s-sminus1-v1"
 GATE = "CERTIFIED_CRITICAL_LINE_ZERO_LOWER_BOUND"
+GLOBAL_NEAREST_SCOPE = "CERTIFIED_GLOBAL_NEAREST_CRITICAL_LINE_ZEROS"
 
 
 class BuildError(ValueError):
@@ -119,6 +120,44 @@ def validate_rows(config: dict[str, Any], point_ids: set[str]) -> list[dict[str,
     return raw_rows
 
 
+def certify_global_nearest(
+    ordered: list[dict[str, Any]],
+    selected: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Prove that the selected prefix beats every emitted and exterior zero."""
+    selected_indices = {item["index"] for item in selected}
+    unselected = [item for item in ordered if item["index"] not in selected_indices]
+    if (
+        len(unselected) < 2
+        or ordered[0]["index"] in selected_indices
+        or ordered[-1]["index"] in selected_indices
+    ):
+        raise BuildError(
+            "global nearest selection requires an unselected guard on each side"
+        )
+    selected_upper = max(item["B"] for item in selected)
+    unselected_lower = min(item["distance_square_lower"] for item in unselected)
+    if not selected_upper < unselected_lower:
+        raise BuildError(
+            "selected zero distance bounds do not separate from every guard"
+        )
+    lower_guard, upper_guard = ordered[0], ordered[-1]
+    return {
+        "lower_exterior_zero_index": lower_guard["index"],
+        "lower_exterior_distance_square_lower": fraction_json(
+            lower_guard["distance_square_lower"]
+        ),
+        "upper_exterior_zero_index": upper_guard["index"],
+        "upper_exterior_distance_square_lower": fraction_json(
+            upper_guard["distance_square_lower"]
+        ),
+        "selected_distance_square_upper": fraction_json(selected_upper),
+        "nearest_unselected_distance_square_lower": fraction_json(
+            unselected_lower
+        ),
+    }
+
+
 def build(
     primitives: dict[str, Any],
     block: dict[str, Any],
@@ -137,6 +176,10 @@ def build(
         raise BuildError("zero block is not proof classified")
     if nearest_count <= 0:
         raise BuildError("nearest_count must be positive")
+    common_scale = integer(
+        primitives.get("common_xi_scale_power_of_two", 0),
+        "primitives.common_xi_scale_power_of_two",
+    )
 
     ordinate = rational(primitives.get("ordinate"), "primitives.ordinate")
     if ordinate != rational(block.get("target"), "block.target"):
@@ -176,13 +219,28 @@ def build(
     raw_zeros = block.get("zeros")
     if not isinstance(raw_zeros, list) or len(raw_zeros) < nearest_count:
         raise BuildError("insufficient zero balls")
+    if integer(block.get("returned_count"), "block.returned_count") != len(raw_zeros):
+        raise BuildError("zero-block returned_count mismatch")
+    if integer(block.get("requested_length"), "block.requested_length") != len(
+        raw_zeros
+    ):
+        raise BuildError("zero-block requested_length mismatch")
+    requested_start = integer(
+        block.get("requested_start_index"), "block.requested_start_index"
+    )
     parsed: list[dict[str, Any]] = []
     previous_upper: Fraction | None = None
     seen_indices: set[int] = set()
     for index, zero in enumerate(raw_zeros):
         if not isinstance(zero, dict):
             raise BuildError("bad zero record")
+        if "local_index" in zero and integer(
+            zero.get("local_index"), f"zero {index}.local_index"
+        ) != index:
+            raise BuildError("zero-block local indices are not consecutive")
         zero_index = integer(zero.get("zero_index"), f"zero {index}.index")
+        if zero_index != requested_start + index:
+            raise BuildError("zero-block zero indices are not consecutive")
         if zero_index in seen_indices:
             raise BuildError("duplicate zero index")
         seen_indices.add(zero_index)
@@ -190,6 +248,13 @@ def build(
         if previous_upper is not None and previous_upper >= lower:
             raise BuildError("zero balls overlap or touch")
         previous_upper = upper
+        if lower <= ordinate <= upper:
+            raise BuildError("zero ball overlaps target ordinate")
+        distance_square_lower = (
+            (ordinate - upper) ** 2
+            if upper < ordinate
+            else (lower - ordinate) ** 2
+        )
         distance_square_upper = max(
             (ordinate - lower) ** 2,
             (ordinate - upper) ** 2,
@@ -200,11 +265,24 @@ def build(
                 "lower": lower,
                 "upper": upper,
                 "B": distance_square_upper,
+                "distance_square_lower": distance_square_lower,
             }
         )
 
-    parsed.sort(key=lambda item: (item["B"], item["index"]))
-    selected = parsed[:nearest_count]
+    below = [item for item in parsed if item["upper"] < ordinate]
+    above = [item for item in parsed if item["lower"] > ordinate]
+    if not below or not above:
+        raise BuildError("zero block does not bracket target")
+    if integer(
+        block.get("target_below_zero_index"), "block.target_below_zero_index"
+    ) != below[-1]["index"] or integer(
+        block.get("target_above_zero_index"), "block.target_above_zero_index"
+    ) != above[0]["index"]:
+        raise BuildError("zero-block target bracket metadata mismatch")
+
+    ranked = sorted(parsed, key=lambda item: (item["B"], item["index"]))
+    selected = ranked[:nearest_count]
+    selection_guard = certify_global_nearest(parsed, selected)
     rank_by_index = {item["index"]: rank + 1 for rank, item in enumerate(selected)}
     block_digest = canonical_sha(block)
 
@@ -229,6 +307,7 @@ def build(
         "schema": OUTPUT_SCHEMA,
         "classification": "RIEMANN_XI_DIRECTED",
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fraction_json(ordinate),
         "log_terms": log_terms,
         "points": sorted(points, key=lambda point: rational(point["u"], "point.u")),
@@ -236,12 +315,15 @@ def build(
         "rows": requested_rows,
         "source": {
             "primitive_sha256": canonical_sha(primitives),
+            "primitive_common_xi_scale_power_of_two": common_scale,
             "zero_block_sha256": block_digest,
             "zero_block_precision_bits": integer(
                 block.get("precision_bits"), "block.precision_bits"
             ),
             "nearest_count": nearest_count,
             "selected_zero_indices": [item["index"] for item in selected],
+            "selection_scope": GLOBAL_NEAREST_SCOPE,
+            "selection_guard": selection_guard,
         },
     }
     output["certificate_sha256"] = canonical_sha(output)

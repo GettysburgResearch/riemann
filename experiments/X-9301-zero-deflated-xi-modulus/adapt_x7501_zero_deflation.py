@@ -112,6 +112,15 @@ def adapt(source: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
     classification = source.get("classification")
     if classification not in ("SYNTHETIC_MODEL", "RIEMANN_XI_DIRECTED"):
         raise AdapterError("source classification cannot be promoted")
+    if classification == "RIEMANN_XI_DIRECTED":
+        raise AdapterError(
+            "production X-7501 adaptation is disabled until a reviewed zero-artifact "
+            "source binding is implemented"
+        )
+    common_scale = exact_int(
+        source.get("common_xi_scale_power_of_two", 0),
+        "source.common_xi_scale_power_of_two",
+    )
     ordinate = rational(source.get("ordinate"), "source.ordinate")
     rows = config.get("rows")
     needed = referenced_ids(rows)
@@ -154,6 +163,7 @@ def adapt(source: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
         "schema": OUTPUT_SCHEMA,
         "classification": classification,
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fj(ordinate),
         "log_terms": log_terms,
         "points": points,
@@ -163,6 +173,7 @@ def adapt(source: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
             "schema": SOURCE_SCHEMA,
             "canonical_sha256": canonical_sha(source),
             "declared_certificate_sha256": source.get("certificate_sha256"),
+            "common_xi_scale_power_of_two": common_scale,
         },
     }
     output["certificate_sha256"] = canonical_sha(output)

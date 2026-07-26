@@ -1,0 +1,29 @@
+{
+  "schema": "riemann.x9301-pr71-centered-256-run-manifest.v1",
+  "code_commit": "b7c6444ef4054bab70bfb3b2ee261a2aa4c06412",
+  "platform": "Linux x86_64 6.12.94+",
+  "compiler": "Ubuntu clang 18.1.3 (1ubuntu1)",
+  "flint_version": "3.0.1",
+  "compile_flags": "-O3 -std=c11 -Wall -Wextra -Werror -lflint -lmpfr -lgmp -lpthread -lm",
+  "hardy_zero_source_sha256": "60a4804724317c044974fe6667e130e38ebb9e763aa36ca44c2d7cde567cb11e",
+  "local_hardy_zero_executable_sha256": "f69ffdacf181d13edfbe78b8e63e04bfdf7e5a22a7bac4a154d1265a4ea9fb0a",
+  "requested_start_zero_index": "19743642385889",
+  "requested_zero_count": 256,
+  "hardy_zero_precision_bits": [
+    192,
+    256
+  ],
+  "xi_artifact_directory": "../pr71",
+  "xi_precision_bits": [
+    384,
+    512
+  ],
+  "nearest_zero_rungs": [
+    128,
+    160,
+    192,
+    224,
+    256
+  ],
+  "proof_boundary": "The centered block certifies the nearest-distance prefix through all 256 emitted Hardy-zero balls. This manifest is audit metadata; source-bound replay, independent backend reproduction, and analytic review remain separate gates."
+}

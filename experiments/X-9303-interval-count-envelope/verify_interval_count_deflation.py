@@ -225,6 +225,11 @@ def verify_count_geometry(data: dict[str, Any]) -> tuple[
     classification = data.get("classification")
     if classification not in ("SYNTHETIC_MODEL", "RIEMANN_XI_DIRECTED"):
         raise CertificateError("unsupported classification")
+    if classification == "RIEMANN_XI_DIRECTED":
+        raise CertificateError(
+            "production interval-count provenance binding is not implemented; "
+            "use SYNTHETIC_MODEL only until a source-artifact adapter is reviewed"
+        )
     target = rational(data.get("ordinate"), "ordinate")
 
     raw_endpoints = data.get("atom_endpoints")
@@ -397,8 +402,8 @@ def parse_points(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
             "xi_rectangle": {"real": ij(real), "imag": ij(imag)},
         }
         digest = canonical_sha(canonical)
-        declared = raw.get("point_sha256")
-        if declared is not None and validate_sha256(declared, "point_sha256") != digest:
+        declared = validate_sha256(raw.get("point_sha256"), "point_sha256")
+        if declared != digest:
             raise CertificateError(f"point digest mismatch for {identifier}")
         points[identifier] = {
             "u": u,
@@ -507,6 +512,13 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         raise CertificateError(f"schema must equal {SCHEMA!r}")
     if data.get("normalization_id") != NORMALIZATION:
         raise CertificateError("completed-xi normalization mismatch")
+    claimed_certificate_sha = validate_sha256(
+        data.get("certificate_sha256"), "certificate_sha256"
+    )
+    certificate_body = dict(data)
+    certificate_body.pop("certificate_sha256", None)
+    if canonical_sha(certificate_body) != claimed_certificate_sha:
+        raise CertificateError("certificate_sha256 mismatch")
     target, endpoints, constraints, profiles = verify_count_geometry(data)
     terms = exact_int(data.get("log_terms", 256), "log_terms")
     if not 32 <= terms <= 4096:
@@ -534,18 +546,18 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             }
         )
 
-    negative = [
+    negative = [row for row in outputs if row["status"] == "CERTIFIED_NEGATIVE"]
+    negative_optimal = [
         row
-        for row in outputs
+        for row in negative
         if row["kind"] == "optimal-profile-cross-loewner-determinant"
-        and row["status"] == "CERTIFIED_NEGATIVE"
     ]
     unresolved = [row for row in outputs if row["status"] == "UNRESOLVED"]
     classification = data.get("classification")
-    if classification == "RIEMANN_XI_DIRECTED" and negative:
-        verdict = "NEGATIVE_INTERVAL_COUNT_DEFLATED_XI_WITNESS_PENDING_REVIEW"
-    elif classification == "SYNTHETIC_MODEL" and negative:
+    if classification == "SYNTHETIC_MODEL" and negative_optimal:
         verdict = "SYNTHETIC_OVERLAP_COUNT_SEPARATION"
+    elif classification == "SYNTHETIC_MODEL" and negative:
+        verdict = "SYNTHETIC_NEGATIVE_DECLARED_ROW"
     elif unresolved:
         verdict = "UNRESOLVED"
     else:
@@ -555,6 +567,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "schema": VERIFY_SCHEMA,
         "verified": True,
         "classification": classification,
+        "certificate_sha256": claimed_certificate_sha,
         "normalization_id": NORMALIZATION,
         "ordinate": fj(target),
         "atom_endpoint_count": len(endpoints),
@@ -574,14 +587,14 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             identifier: point["sha256"] for identifier, point in sorted(points.items())
         },
         "rows": outputs,
-        "certified_negative_optimal_rows": len(negative),
+        "certified_negative_rows": len(negative),
+        "certified_negative_optimal_rows": len(negative_optimal),
         "unresolved_rows": len(unresolved),
         "verdict": verdict,
         "proof_boundary": (
-            "The checker verifies exact interval-count primal/dual optimality and "
-            "rational direct-xi row contraction. A production negative additionally "
-            "requires proof-grade exact total-count constraints, directed completed-xi "
-            "rectangles, independent primitive reproduction, and analytic review."
+            "The checker verifies synthetic exact interval-count primal/dual "
+            "optimality and rational row contraction. Production classification is "
+            "rejected until a source-artifact provenance adapter is implemented."
         ),
     }
 
@@ -596,7 +609,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         if not isinstance(data, dict):
             raise CertificateError("certificate root must be an object")
         result = verify(data)
-        code = 1 if result["certified_negative_optimal_rows"] else 0
+        code = 1 if result["unresolved_rows"] else 0
     except (OSError, json.JSONDecodeError, CertificateError) as exc:
         result = {
             "schema": VERIFY_SCHEMA,

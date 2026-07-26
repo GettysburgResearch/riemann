@@ -103,9 +103,9 @@ Indeed,
 \[
  \int_0^R
  \frac{dt}{(u+a+t)(v+a+t)}
- =\frac{1}{u-v}
+ =\frac{1}{v-u}
  \log\frac{u+a+R}{v+a+R}
- -\frac{1}{u-v}\log\frac{u+a}{v+a},
+ -\frac{1}{v-u}\log\frac{u+a}{v+a},
 \]
 
 and the first logarithm tends to zero as `R` tends to infinity.

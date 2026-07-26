@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from fractions import Fraction
@@ -14,6 +15,11 @@ SCHEMA = "riemann.x9301-pr71-hardy-zero-block.v1"
 
 class ComparisonError(ValueError):
     pass
+
+
+def canonical_sha(value: Any) -> str:
+    raw = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+    return hashlib.sha256(raw.encode("ascii")).hexdigest()
 
 
 def load(path: Path) -> dict[str, Any]:
@@ -126,6 +132,8 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "schema": "riemann.x9301-pr71-zero-block-comparison.v1",
+        "low_artifact_sha256": canonical_sha(low),
+        "high_artifact_sha256": canonical_sha(high),
         "zero_count": len(low_zeros),
         "low_precision_bits": integer(low.get("precision_bits"), "low.precision_bits"),
         "high_precision_bits": integer(

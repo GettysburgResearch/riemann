@@ -8,11 +8,13 @@ on:
     paths:
       - .github/workflows/pr71-zero-deflated-modulus.yml
       - experiments/X-9301-zero-deflated-xi-modulus/**
+      - experiments/X-7501-xi-modulus/rs_modulus.c
   pull_request:
     paths:
       - experiments/X-9301-zero-deflated-xi-modulus/RUN_PR71.md
       - .github/workflows/pr71-zero-deflated-modulus.yml
       - experiments/X-9301-zero-deflated-xi-modulus/**
+      - experiments/X-7501-xi-modulus/rs_modulus.c
 
 permissions:
   contents: read
@@ -100,14 +102,15 @@ jobs:
             "$out/gap-p192.json" "$out/gap-p256.json" \
             --output "$out/gap-comparison.json"
 
-      - name: Produce and compare complete indexed Hardy-zero blocks
+      - name: Produce and compare guarded indexed Hardy-zero blocks
         shell: bash
         run: |
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
-          /usr/bin/time -v /tmp/pr71_hardy_zero_block 192 128 4 \
+          start=19743642385857
+          /usr/bin/time -v /tmp/pr71_hardy_zero_block 192 320 4 "$start" \
             >"$out/zero-block-p192.json" 2>"$out/zero-block-p192.time.txt"
-          /usr/bin/time -v /tmp/pr71_hardy_zero_block 256 128 4 \
+          /usr/bin/time -v /tmp/pr71_hardy_zero_block 256 320 4 "$start" \
             >"$out/zero-block-p256.json" 2>"$out/zero-block-p256.time.txt"
           python experiments/X-9301-zero-deflated-xi-modulus/compare_pr71_zero_block.py \
             "$out/zero-block-p192.json" "$out/zero-block-p256.json" \
@@ -118,10 +121,11 @@ jobs:
         run: |
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
-          /usr/bin/time -v /tmp/pr71_rs_modulus 192 \
-            >"$out/xi-primitives-p192.json" 2>"$out/xi-p192.time.txt"
-          /usr/bin/time -v /tmp/pr71_rs_modulus 256 \
-            >"$out/xi-primitives-p256.json" 2>"$out/xi-p256.time.txt"
+          for precision in 192 256 384 512; do
+            /usr/bin/time -v /tmp/pr71_rs_modulus "$precision" \
+              >"$out/xi-primitives-p${precision}.json" \
+              2>"$out/xi-p${precision}.time.txt"
+          done
 
       - name: Assemble and verify bracketing-zero certificates
         shell: bash
@@ -129,7 +133,7 @@ jobs:
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
           config=experiments/X-9301-zero-deflated-xi-modulus/configs/pr71-deflated-rows.json
-          for precision in 192 256; do
+          for precision in 192 256 384 512; do
             python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_certificate.py \
               "$out/xi-primitives-p${precision}.json" \
               "$out/gap-p256.json" "$config" \
@@ -137,15 +141,21 @@ jobs:
             set +e
             python experiments/X-9301-zero-deflated-xi-modulus/verify_zero_deflated_modulus.py \
               "$out/bracketing-certificate-p${precision}.json" \
+              --primitive-artifact "$out/xi-primitives-p${precision}.json" \
+              --zero-artifact "$out/gap-p256.json" \
               --output "$out/bracketing-verification-p${precision}.json"
             status=$?
             set -e
             test "$status" -le 1
           done
-          python experiments/X-9301-zero-deflated-xi-modulus/compare_x9301_precision.py \
-            "$out/bracketing-certificate-p192.json" \
-            "$out/bracketing-certificate-p256.json" \
-            --output "$out/bracketing-precision-comparison.json"
+          for pair in "192 256" "256 384" "384 512"; do
+            set -- $pair
+            python experiments/X-9301-zero-deflated-xi-modulus/compare_x9301_precision.py \
+              "$out/bracketing-certificate-p${1}.json" \
+              "$out/bracketing-certificate-p${2}.json" \
+              --output \
+              "$out/bracketing-precision-comparison-p${1}-p${2}.json"
+          done
 
       - name: Assemble nearest-zero ladders
         shell: bash
@@ -153,8 +163,8 @@ jobs:
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
           config=experiments/X-9301-zero-deflated-xi-modulus/configs/pr71-deflated-rows.json
-          for count in 2 4 8 16 32 64; do
-            for precision in 192 256; do
+          for count in 2 4 8 16 32 64 96 128 160 192 224 256; do
+            for precision in 192 256 384 512; do
               python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_nearest_certificate.py \
                 "$out/xi-primitives-p${precision}.json" \
                 "$out/zero-block-p256.json" "$config" \
@@ -163,67 +173,47 @@ jobs:
               set +e
               python experiments/X-9301-zero-deflated-xi-modulus/verify_zero_deflated_modulus.py \
                 "$out/nearest-${count}-certificate-p${precision}.json" \
+                --primitive-artifact "$out/xi-primitives-p${precision}.json" \
+                --zero-artifact "$out/zero-block-p256.json" \
                 --output "$out/nearest-${count}-verification-p${precision}.json"
               status=$?
               set -e
               test "$status" -le 1
             done
-            python experiments/X-9301-zero-deflated-xi-modulus/compare_x9301_precision.py \
-              "$out/nearest-${count}-certificate-p192.json" \
-              "$out/nearest-${count}-certificate-p256.json" \
-              --output "$out/nearest-${count}-precision-comparison.json"
+            for pair in "192 256" "256 384" "384 512"; do
+              set -- $pair
+              python experiments/X-9301-zero-deflated-xi-modulus/compare_x9301_precision.py \
+                "$out/nearest-${count}-certificate-p${1}.json" \
+                "$out/nearest-${count}-certificate-p${2}.json" \
+                --output \
+                "$out/nearest-${count}-precision-comparison-p${1}-p${2}.json"
+            done
           done
+
+      - name: Exhaust every disjoint minor on the fixed grid
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
+          python \
+            experiments/X-9301-zero-deflated-xi-modulus/summarize_pr71_exhaustive_grid.py \
+            "$out/xi-primitives-p384.json" \
+            "$out/xi-primitives-p512.json" \
+            "$out/zero-block-p256.json" \
+            --counts 2 4 8 16 32 64 96 128 160 192 224 256 \
+            --output "$out/exhaustive-grid-summary.json"
 
       - name: Summarize and hash proof artifacts
         shell: bash
         run: |
           set -euo pipefail
           out=experiments/X-9301-zero-deflated-xi-modulus/results/pr71
-          python - <<'PY'
-          import json
-          from fractions import Fraction
-          from pathlib import Path
-          root=Path('experiments/X-9301-zero-deflated-xi-modulus/results/pr71')
-          gap=json.loads((root/'gap-p256.json').read_text())
-          bracketing=json.loads((root/'bracketing-verification-p256.json').read_text())
-          ladder=[]
-          any_negative=bracketing['certified_negative_rows']>0
-          for count in (2,4,8,16,32,64):
-            result=json.loads((root/f'nearest-{count}-verification-p256.json').read_text())
-            rows=result['rows']
-            def midpoint(row):
-              lo=row['interval']['lower']; hi=row['interval']['upper']
-              a=Fraction(lo['numerator'],lo['denominator'])
-              b=Fraction(hi['numerator'],hi['denominator'])
-              return (a+b)/2
-            tight=min(rows,key=lambda row:abs(midpoint(row)))
-            ladder.append({
-              'nearest_count':count,
-              'verdict':result['verdict'],
-              'negative_rows':result['certified_negative_rows'],
-              'unresolved_rows':result['unresolved_rows'],
-              'tightest_row_id':tight['id'],
-              'tightest_row_status':tight['status'],
-              'tightest_row_interval':tight['interval'],
-            })
-            any_negative |= result['certified_negative_rows']>0
-          summary={
-            'schema':'riemann.x9301-pr71-production-summary.v2',
-            'target':gap['target'],
-            'gap_classification':gap['classification'],
-            'total_zero_discrepancy_in_line_empty_slab':gap['total_zero_discrepancy_in_line_empty_slab'],
-            'bracketing_verdict':bracketing['verdict'],
-            'bracketing_negative_rows':bracketing['certified_negative_rows'],
-            'nearest_zero_ladder':ladder,
-            'counterexample_nomination':(
-              'PENDING_INDEPENDENT_REPRODUCTION_AND_REVIEW'
-              if gap['classification']=='CERTIFIED_OFF_CRITICAL_ZERO_IN_LINE_EMPTY_SLAB'
-              or any_negative else None
-            ),
-          }
-          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
-          print(json.dumps(summary,indent=2,sort_keys=True))
-          PY
+          python \
+            experiments/X-9301-zero-deflated-xi-modulus/summarize_pr71_nearest_ladder.py \
+            "$out" --zero-block "$out/zero-block-p256.json" \
+            --low-precision 384 --high-precision 512 \
+            --counts 2 4 8 16 32 64 96 128 160 192 224 256 \
+            --output "$out/summary.json"
           find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | \
             xargs -0 sha256sum >"$out/SHA256SUMS"
 

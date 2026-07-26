@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import importlib.util
 import sys
 import unittest
@@ -14,6 +15,14 @@ assert SPEC.loader is not None
 sys.modules[SPEC.name] = MODULE
 SPEC.loader.exec_module(MODULE)
 
+VERIFY_SPEC = importlib.util.spec_from_file_location(
+    "verify_zero_deflated_modulus_bridge", ROOT / "verify_zero_deflated_modulus.py"
+)
+VERIFY = importlib.util.module_from_spec(VERIFY_SPEC)
+assert VERIFY_SPEC.loader is not None
+sys.modules[VERIFY_SPEC.name] = VERIFY
+VERIFY_SPEC.loader.exec_module(VERIFY)
+
 
 def rat(n, d=1):
     return {"numerator": n, "denominator": d}
@@ -24,11 +33,18 @@ def binval(m, e):
 
 
 class PR71BridgeTests(unittest.TestCase):
+    @staticmethod
+    def resign(certificate):
+        body = copy.deepcopy(certificate)
+        body.pop("certificate_sha256", None)
+        certificate["certificate_sha256"] = MODULE.canonical_sha(body)
+
     def primitives(self):
         return {
             "schema": MODULE.PRIMITIVE_SCHEMA,
             "normalization_id": MODULE.NORMALIZATION,
             "precision_bits": 192,
+            "common_xi_scale_power_of_two": 123,
             "ordinate": rat(10),
             "points": [
                 {
@@ -82,11 +98,54 @@ class PR71BridgeTests(unittest.TestCase):
         }
 
     def test_builds_two_certified_bins(self):
-        output = MODULE.build(self.primitives(), self.gap(), self.config())
+        primitives, gap = self.primitives(), self.gap()
+        output = MODULE.build(primitives, gap, self.config())
         self.assertEqual(output["classification"], "RIEMANN_XI_DIRECTED")
         self.assertEqual(len(output["zero_bins"]), 2)
         self.assertEqual(output["zero_bins"][0]["count_lower"], 1)
         self.assertEqual(output["points"][0]["u"], rat(1, 16))
+        self.assertEqual(output["common_xi_scale_power_of_two"], 123)
+        arithmetic = VERIFY.verify(output)
+        self.assertFalse(arithmetic["source_artifacts_verified"])
+        bindings = VERIFY.verify_source_artifacts(output, primitives, gap)
+        self.assertEqual(bindings["gap_sha256"], output["source"]["gap_sha256"])
+
+    def test_mutated_gap_artifact_is_rejected(self):
+        primitives, gap = self.primitives(), self.gap()
+        output = MODULE.build(primitives, gap, self.config())
+        mutated = copy.deepcopy(gap)
+        mutated["precision_bits"] = 999
+        with self.assertRaisesRegex(VERIFY.CertificateError, "gap artifact digest"):
+            VERIFY.verify_source_artifacts(output, primitives, mutated)
+
+    def test_rehashed_certificate_point_drift_is_rejected(self):
+        primitives, gap = self.primitives(), self.gap()
+        output = MODULE.build(
+            copy.deepcopy(primitives), copy.deepcopy(gap), self.config()
+        )
+        point = output["points"][0]
+        point["xi_rectangle"]["real"]["lower"]["numerator"] += 1
+        canonical = {
+            "id": point["id"],
+            "u": point["u"],
+            "xi_rectangle": point["xi_rectangle"],
+        }
+        point["point_sha256"] = MODULE.canonical_sha(canonical)
+        self.resign(output)
+        with self.assertRaisesRegex(
+            VERIFY.CertificateError, "differs from primitive artifact"
+        ):
+            VERIFY.verify_source_artifacts(output, primitives, gap)
+
+    def test_rehashed_certificate_zero_drift_is_rejected(self):
+        primitives, gap = self.primitives(), self.gap()
+        output = MODULE.build(primitives, gap, self.config())
+        output["zero_bins"][0]["count_lower"] = 2
+        self.resign(output)
+        with self.assertRaisesRegex(
+            VERIFY.CertificateError, "differs from gap artifact"
+        ):
+            VERIFY.verify_source_artifacts(output, primitives, gap)
 
     def test_ordinate_mismatch_rejected(self):
         primitives = self.primitives()

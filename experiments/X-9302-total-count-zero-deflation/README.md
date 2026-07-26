@@ -68,9 +68,13 @@ raw Loewner           CERTIFIED_NONNEGATIVE
 deflated Loewner      CERTIFIED_NEGATIVE
 ```
 
-Thirteen exact tests pass. They reject decreasing counts, nonincreasing radii,
+Twenty-two exact tests pass. They reject decreasing counts, nonincreasing radii,
 wrong semantic gates, Boolean counts, false point digests, ambiguous count
-balls, endpoint drift, false count differences, and nonnested totals.
+balls, endpoint drift, false count differences, nonnested totals, source
+artifact mutation, semantic precision drift, missing half-open count
+conventions, re-signed certificate drift, reversed monotonicity nodes, and
+production relabeling without bindings. The fixed-point logarithm
+implementation is checked against the exact positive atanh-series enclosure.
 
 ## PR #71 production
 
@@ -100,5 +104,22 @@ python verify_total_count_deflation.py \
   --output /tmp/synthetic-result.json
 ```
 
-The last command intentionally returns status `1` because the synthetic
-certificate contains strict negative rows.
+The last command returns status `0`: a strict negative is a resolved arithmetic
+result. Status `1` is reserved for unresolved intervals and status `2` for a
+rejected certificate.
+
+For `RIEMANN_XI_DIRECTED` certificates, the CLI additionally requires
+`--primitive-artifact` and `--count-artifact`. Before running determinant
+arithmetic, it checks both canonical digests and reconstructs every primitive
+rectangle, squared node, count window, exact endpoint, isolated integer count,
+shell increment, and gate digest. Re-signed certificate data that does not
+match the producer artifacts is rejected.
+
+Every production artifact and certificate records the half-open convention
+`(T-R,T+R]` for `N(T+R)-N(T-R)`.
+
+The shared PR #71 producer applies the exact common scale
+`2^5335951715288` to all completed-xi rectangles before rational
+serialization. This avoids expanding an enormous binary denominator. The
+certificate binds the scale explicitly; it cancels from every logarithmic
+secant and preserves algebraic-row signs.

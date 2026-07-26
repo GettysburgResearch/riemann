@@ -52,12 +52,14 @@ def fixtures() -> tuple[dict, dict, dict]:
     primitives = {
         "schema": adapter.PRIMITIVE_SCHEMA,
         "normalization_id": adapter.NORMALIZATION,
+        "common_xi_scale_power_of_two": 123,
         "ordinate": {"numerator": 10, "denominator": 1},
         "points": points,
     }
     counts = {
         "schema": adapter.COUNT_SCHEMA,
         "classification": adapter.COUNT_CLASSIFICATION,
+        "count_interval_convention": adapter.COUNT_INTERVAL_CONVENTION,
         "target": {"numerator": "10", "denominator": "1"},
         "windows": [
             {
@@ -94,14 +96,85 @@ class AdapterTests(unittest.TestCase):
     def setUp(self) -> None:
         self.primitives, self.counts, self.config = fixtures()
 
+    @staticmethod
+    def resign(certificate: dict) -> None:
+        body = copy.deepcopy(certificate)
+        body.pop("certificate_sha256", None)
+        certificate["certificate_sha256"] = adapter.canonical_sha(body)
+
     def test_end_to_end_total_count_bridge(self) -> None:
         certificate = adapter.build(
             copy.deepcopy(self.primitives), copy.deepcopy(self.counts), copy.deepcopy(self.config)
         )
         result = checker.verify(certificate)
         self.assertTrue(result["verified"])
+        self.assertFalse(result["source_artifacts_verified"])
+        self.assertEqual(result["common_xi_scale_power_of_two"], 123)
         self.assertEqual(result["certified_negative_rows"], 2)
         self.assertEqual(result["count_windows"][0]["count_lower"], 20)
+        bindings = checker.verify_source_artifacts(
+            certificate, self.primitives, self.counts
+        )
+        self.assertEqual(
+            bindings["primitive_sha256"],
+            certificate["source"]["primitive_sha256"],
+        )
+
+    def test_source_artifact_mutation_is_rejected(self) -> None:
+        certificate = adapter.build(
+            copy.deepcopy(self.primitives),
+            copy.deepcopy(self.counts),
+            copy.deepcopy(self.config),
+        )
+        mutated = copy.deepcopy(self.counts)
+        mutated["precision_bits"] = 999
+        with self.assertRaisesRegex(
+            checker.CertificateError, "total-count artifact digest"
+        ):
+            checker.verify_source_artifacts(certificate, self.primitives, mutated)
+
+    def test_rehashed_certificate_point_drift_is_rejected(self) -> None:
+        certificate = adapter.build(
+            copy.deepcopy(self.primitives),
+            copy.deepcopy(self.counts),
+            copy.deepcopy(self.config),
+        )
+        point = certificate["points"][0]
+        point["xi_rectangle"]["real"]["lower"]["numerator"] += 1
+        point["xi_rectangle"]["real"]["upper"]["numerator"] += 1
+        canonical = {
+            "id": point["id"],
+            "u": point["u"],
+            "xi_rectangle": point["xi_rectangle"],
+        }
+        point["point_sha256"] = adapter.canonical_sha(canonical)
+        self.resign(certificate)
+        with self.assertRaisesRegex(
+            checker.CertificateError, "differs from primitive artifact"
+        ):
+            checker.verify_source_artifacts(
+                certificate, self.primitives, self.counts
+            )
+
+    def test_rehashed_certificate_count_drift_is_rejected(self) -> None:
+        certificate = adapter.build(
+            copy.deepcopy(self.primitives),
+            copy.deepcopy(self.counts),
+            copy.deepcopy(self.config),
+        )
+        certificate["count_windows"][0]["count_lower"] = 19
+        self.resign(certificate)
+        with self.assertRaisesRegex(
+            checker.CertificateError, "differs from total-count artifact"
+        ):
+            checker.verify_source_artifacts(
+                certificate, self.primitives, self.counts
+            )
+
+    def test_missing_count_convention_is_rejected(self) -> None:
+        counts = copy.deepcopy(self.counts)
+        counts.pop("count_interval_convention")
+        self.assert_bridge_rejected(counts, "interval convention")
 
     def assert_bridge_rejected(self, counts: dict, message: str) -> None:
         with self.assertRaisesRegex(adapter.BridgeError, message):

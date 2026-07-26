@@ -136,6 +136,10 @@ def build(
         raise BridgeError("config schema mismatch")
     if config.get("normalization_id") not in (None, NORMALIZATION):
         raise BridgeError("config normalization mismatch")
+    common_scale = parse_integer(
+        primitives.get("common_xi_scale_power_of_two", 0),
+        "primitives.common_xi_scale_power_of_two",
+    )
 
     t_primitive = rational(primitives.get("ordinate"), "primitives.ordinate")
     t_gap = rational(gap.get("target"), "gap.target")
@@ -218,6 +222,7 @@ def build(
         "schema": OUTPUT_SCHEMA,
         "classification": "RIEMANN_XI_DIRECTED",
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fj(t_gap),
         "log_terms": log_terms,
         "points": sorted(points, key=lambda point: rational(point["u"], "point.u")),
@@ -226,6 +231,7 @@ def build(
         "source": {
             "primitive_schema": PRIMITIVE_SCHEMA,
             "primitive_sha256": canonical_sha(primitives),
+            "primitive_common_xi_scale_power_of_two": common_scale,
             "gap_schema": GAP_SCHEMA,
             "gap_sha256": gap_digest,
             "gap_classification": classification,

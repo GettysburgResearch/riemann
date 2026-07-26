@@ -28,7 +28,7 @@ be exact rational radii. Suppose an **unconditional** proof-grade computation
 certifies that the full critical-strip slab
 
 \[
- T-R_k<\operatorname{Im}\rho<T+R_k
+ T-R_k<\operatorname{Im}\rho\le T+R_k
 \]
 
 contains at least `M_k` nontrivial zeros of `zeta`, counted with multiplicity,
@@ -58,7 +58,12 @@ Then, **under RH**:
 2. The secant kernel
    \[
    L_{T,\mathrm{tot}}(u,v)
-   =\frac{G_{T,\mathrm{tot}}(u)-G_{T,\mathrm{tot}}(v)}{u-v}
+   =
+   \begin{cases}
+   \displaystyle
+   \frac{G_{T,\mathrm{tot}}(u)-G_{T,\mathrm{tot}}(v)}{u-v},&u\ne v,\\[1.2ex]
+   G_{T,\mathrm{tot}}'(u),&u=v,
+   \end{cases}
    \]
    is a positive Gram kernel.
 3. Every increasing cross-Loewner minor of `G_{T,tot}` is nonnegative.
@@ -227,7 +232,8 @@ RH failure, just as the undeflated and line-zero-deflated families are.
 A proof object must bind:
 
 1. the exact rational ordinate `T`;
-2. exact rational radii `R_k` and endpoint conventions;
+2. exact rational radii `R_k` and the half-open convention
+   `(T-R_k,T+R_k]` used by `N(T+R_k)-N(T-R_k)`;
 3. unconditional outward count balls for `N(T-R_k)` and `N(T+R_k)`;
 4. a unique integer lower count `M_k` obtained from each pair;
 5. nondecreasing counts and strictly increasing radii;

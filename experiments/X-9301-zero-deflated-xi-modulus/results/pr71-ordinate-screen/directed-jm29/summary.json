@@ -1,0 +1,776 @@
+{
+  "all_high_intervals_nested": true,
+  "classification": "RIEMANN_XI_DIRECTED",
+  "counterexample_nomination": null,
+  "coverage_formula": "3 * binomial(16, 4)",
+  "high_certificate_sha256": "2b39b9bc83a03adf2dd137e4705de2c5718e742995a02bb927c85fee0b602eb0",
+  "high_precision_bits": 256,
+  "high_row_interval_stream_sha256": "70d97de5f5ba0af21fdaae9379e7499e896bbb059c7d52de6b4699a71ebde7ce",
+  "high_verification_sha256": "27df7b795af949b9d9c2796941cfd63e0f717c3cece5f7f53436ff8481a0616b",
+  "low_certificate_sha256": "4dbe1309e4aa3874a7cfd133fab41b3e90362f97949eff38ae8a659a15f9511c",
+  "low_precision_bits": 192,
+  "low_verification_sha256": "c7ed1ee5c7a420e5c8ea177558b96d7a0fc9833b717a78f4405e3ef70f00e732",
+  "nearest_count": 256,
+  "nonpositive_or_unresolved_rows": [],
+  "order2_row_count": 5460,
+  "point_count": 16,
+  "point_ids_in_increasing_u_order": [
+    "x-20",
+    "x-19",
+    "x-18",
+    "x-17",
+    "x-16",
+    "x-15",
+    "x-14",
+    "x-13",
+    "x-12",
+    "x-11",
+    "x-10",
+    "x-9",
+    "x-8",
+    "x-7",
+    "x-6",
+    "x-5"
+  ],
+  "proof_boundary": "All row signs and precision nesting are exact. Ranking metrics use interval midpoints and are heuristic only. A negative requires 384/512-bit replay, independent xi reproduction, and analytic review.",
+  "row_specification_sha256": "3270b85f4ef7fa217ae8c3de080af4ad68854a24578289cb5be3c04ba3d35ce4",
+  "schema": "riemann.x9301-dense-order2-screen.v1",
+  "selection_guard_sha256": "c43247ca128a39aa567c7559fb2507d2e92d60a90f4ea645916fe53c434fd66f",
+  "selection_scope": "CERTIFIED_GLOBAL_NEAREST_CRITICAL_LINE_ZEROS",
+  "status_counts": {
+    "CERTIFIED_NEGATIVE": 0,
+    "CERTIFIED_NONNEGATIVE": 5460,
+    "UNRESOLVED": 0
+  },
+  "summary_sha256": "32edfd04c65a20a71280e5dbaa800cf27d8a14adf20c823a1db673372dd16f54",
+  "target": {
+    "denominator": 4294967296,
+    "numerator": 20225875608339229092243
+  },
+  "top_geometry_adjusted_rows": [
+    {
+      "columns": [
+        "x-18",
+        "x-17"
+      ],
+      "geometry_adjusted_midpoint": "8.59383489455684379e-30",
+      "id": "d2-rx-20_x-19-cx-18_x-17",
+      "interval_sha256": "4240ac890a91af81066b5f6addbdcbcab5c6e25a1175c3a43ef60a4c7d36eb10",
+      "lower_scientific": "5.41767990572101210e-31",
+      "midpoint_scientific": "5.41767990572101210e-31",
+      "permanent_normalized_midpoint": "3.09378056204046377e-30",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.41767990572101210e-31"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-17"
+      ],
+      "geometry_adjusted_midpoint": "2.48361828452692786e-29",
+      "id": "d2-rx-20_x-18-cx-19_x-17",
+      "interval_sha256": "04f19e6c43398beb6dcd34f449996f8cf00903af407445fb03db2083ff96dcd3",
+      "lower_scientific": "3.38604994107563256e-30",
+      "midpoint_scientific": "3.38604994107563256e-30",
+      "permanent_normalized_midpoint": "1.93361285127528985e-29",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "3.38604994107563256e-30"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-18"
+      ],
+      "geometry_adjusted_midpoint": "2.79299634073097423e-29",
+      "id": "d2-rx-20_x-17-cx-19_x-18",
+      "interval_sha256": "b78db68437af9a9cde395567abae722007c006b8a6e48f0a897dc59de58dfb84",
+      "lower_scientific": "2.84428195050353135e-30",
+      "midpoint_scientific": "2.84428195050353135e-30",
+      "permanent_normalized_midpoint": "1.62423479507124348e-29",
+      "rows": [
+        "x-20",
+        "x-17"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "2.84428195050353135e-30"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "2.92190386414905218e-29",
+      "id": "d2-rx-20_x-19-cx-18_x-16",
+      "interval_sha256": "66c57b5d30a15fc46d3a971831570c2b150542abe906abfc77adbffa6728540c",
+      "lower_scientific": "2.70883995286016025e-30",
+      "midpoint_scientific": "2.70883995286016025e-30",
+      "permanent_normalized_midpoint": "1.54689028102008645e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "2.70883995286016025e-30"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "3.43753395782233354e-29",
+      "id": "d2-rx-20_x-19-cx-17_x-16",
+      "interval_sha256": "439f30e70f4419dd2197f596f0a6813f1c7cde11357f22b0a75259bd7a022c70",
+      "lower_scientific": "2.16707196228805904e-30",
+      "midpoint_scientific": "2.16707196228805904e-30",
+      "permanent_normalized_midpoint": "1.23751222481604007e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "2.16707196228805904e-30"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "9.49618755848441960e-29",
+      "id": "d2-rx-20_x-18-cx-19_x-16",
+      "interval_sha256": "b1abf2aaeeee6885b133a55f61fe2bfa9240646cd3b2f7372d22836ba09ecb84",
+      "lower_scientific": "1.42214097525158413e-29",
+      "midpoint_scientific": "1.42214097525158413e-29",
+      "permanent_normalized_midpoint": "8.12117397535545387e-29",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.42214097525158413e-29"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-18"
+      ],
+      "geometry_adjusted_midpoint": "1.10430778395045061e-28",
+      "id": "d2-rx-20_x-16-cx-19_x-18",
+      "interval_sha256": "b845f008830c726a25e2b0778864bc088c329f3d830bcdca52a02ef31953a43e",
+      "lower_scientific": "1.15125697996556811e-29",
+      "midpoint_scientific": "1.15125697996556811e-29",
+      "permanent_normalized_midpoint": "6.57428369433536742e-29",
+      "rows": [
+        "x-20",
+        "x-16"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.15125697996556811e-29"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "1.11719853629186452e-28",
+      "id": "d2-rx-20_x-19-cx-18_x-15",
+      "interval_sha256": "87aff33836c203be66df1934eaa77f3df2077749923cf431ea2514ed37d1164f",
+      "lower_scientific": "1.13771278020068636e-29",
+      "midpoint_scientific": "1.13771278020068636e-29",
+      "permanent_normalized_midpoint": "6.49693918028191983e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.13771278020068636e-29"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "1.16876154565915387e-28",
+      "id": "d2-rx-20_x-19-cx-17_x-15",
+      "interval_sha256": "1746018cdb49e47bcd96221f00e71f618132cb09750410a8ba7c9a86a640ee02",
+      "lower_scientific": "1.08353598114347624e-29",
+      "midpoint_scientific": "1.08353598114347624e-29",
+      "permanent_normalized_midpoint": "6.18756112407787345e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.08353598114347624e-29"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "1.16876154565958654e-28",
+      "id": "d2-rx-20_x-18-cx-17_x-16",
+      "interval_sha256": "ad9cf534d85f749891b41ad9b71ade12e342956bc1eaec5f5be1879f1ce1c485",
+      "lower_scientific": "1.08353598114402088e-29",
+      "midpoint_scientific": "1.08353598114402088e-29",
+      "permanent_normalized_midpoint": "6.18756112408016401e-29",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.08353598114402088e-29"
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "1.37501358312828705e-28",
+      "id": "d2-rx-20_x-19-cx-16_x-15",
+      "interval_sha256": "cfd7c7d7291f5247af34bf1ddc66215290e54fb29bbe2fc1fd1919004e222954",
+      "lower_scientific": "8.66828784914670339e-30",
+      "midpoint_scientific": "8.66828784914670339e-30",
+      "permanent_normalized_midpoint": "4.95004889926183338e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "8.66828784914670339e-30"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "1.37501358312892332e-28",
+      "id": "d2-rx-19_x-18-cx-17_x-16",
+      "interval_sha256": "27f0acb1ef532134a97dcd378a463f13799d0ddf44c5ba656218d3bade650e34",
+      "lower_scientific": "8.66828784915214972e-30",
+      "midpoint_scientific": "8.66828784915214972e-30",
+      "permanent_normalized_midpoint": "4.95004889926412394e-29",
+      "rows": [
+        "x-19",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "8.66828784915214972e-30"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "3.63089524294983980e-28",
+      "id": "d2-rx-20_x-17-cx-19_x-16",
+      "interval_sha256": "5182813f7fb7d69ccc233ba41195fdd2c737775c4ece3148548466eed604dede",
+      "lower_scientific": "5.97299209605646273e-29",
+      "midpoint_scientific": "5.97299209605646273e-29",
+      "permanent_normalized_midpoint": "3.41089306964921045e-28",
+      "rows": [
+        "x-20",
+        "x-17"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.97299209605646273e-29"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "3.75464646543012007e-28",
+      "id": "d2-rx-20_x-18-cx-19_x-15",
+      "interval_sha256": "4bad8582e99e45eb4c718c15f8887f4559782b3ae4f1f20bb11ec9fd69f15484",
+      "lower_scientific": "5.75628489982490125e-29",
+      "midpoint_scientific": "5.75628489982490125e-29",
+      "permanent_normalized_midpoint": "3.28714184716644753e-28",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.75628489982490125e-29"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-17"
+      ],
+      "geometry_adjusted_midpoint": "3.75464646543144381e-28",
+      "id": "d2-rx-20_x-16-cx-19_x-17",
+      "interval_sha256": "44e8439496bb167bda5a7df33ac465428c669f2d32436b85a4ad99d7f311efb1",
+      "lower_scientific": "5.75628489982765683e-29",
+      "midpoint_scientific": "5.75628489982765683e-29",
+      "permanent_normalized_midpoint": "3.28714184716760645e-28",
+      "rows": [
+        "x-20",
+        "x-16"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.75628489982765683e-29"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "3.79847502339365624e-28",
+      "id": "d2-rx-20_x-17-cx-18_x-16",
+      "interval_sha256": "5eb2b1ef9d55ba4e5f73bbd2a12c1442dcd71903ea7c9eac87f8ef4adb134715",
+      "lower_scientific": "5.68856390100610960e-29",
+      "midpoint_scientific": "5.68856390100610960e-29",
+      "permanent_normalized_midpoint": "3.24846959014208611e-28",
+      "rows": [
+        "x-20",
+        "x-17"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.68856390100610960e-29"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "3.97378925524109982e-28",
+      "id": "d2-rx-20_x-18-cx-17_x-15",
+      "interval_sha256": "a3d54fbba5f4e599e85c3c5720339298269193eedc48889e2b842d81d511dc89",
+      "lower_scientific": "5.41767990571733799e-29",
+      "midpoint_scientific": "5.41767990571733799e-29",
+      "permanent_normalized_midpoint": "3.09378056203891855e-28",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.41767990571733799e-29"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "3.97378925524258838e-28",
+      "id": "d2-rx-19_x-17-cx-18_x-16",
+      "interval_sha256": "4793fe9cdf61b992633fe91aadf557699c7581b624bbfb2c985459f3542d23fe",
+      "lower_scientific": "5.41767990572009357e-29",
+      "midpoint_scientific": "5.41767990572009357e-29",
+      "permanent_normalized_midpoint": "3.09378056204007746e-28",
+      "rows": [
+        "x-19",
+        "x-17"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.41767990572009357e-29"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-18"
+      ],
+      "geometry_adjusted_midpoint": "4.40434038345831205e-28",
+      "id": "d2-rx-20_x-15-cx-19_x-18",
+      "interval_sha256": "76a3268757194ff7104fca84c2ff56f9000837751e6c99528a1bf79486871783",
+      "lower_scientific": "4.61857211962421488e-29",
+      "midpoint_scientific": "4.61857211962421488e-29",
+      "permanent_normalized_midpoint": "2.63744792913825555e-28",
+      "rows": [
+        "x-20",
+        "x-15"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.61857211962421488e-29"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-14"
+      ],
+      "geometry_adjusted_midpoint": "4.41723113579349662e-28",
+      "id": "d2-rx-20_x-19-cx-18_x-14",
+      "interval_sha256": "dd95b5d1cdd772aa278ed83a0786a65ec513ab2d6b52076ccb4a69caaf4d6316",
+      "lower_scientific": "4.60502791985051527e-29",
+      "midpoint_scientific": "4.60502791985051527e-29",
+      "permanent_normalized_midpoint": "2.62971347772920227e-28",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.60502791985051527e-29"
+    }
+  ],
+  "top_raw_rows": [
+    {
+      "columns": [
+        "x-18",
+        "x-17"
+      ],
+      "geometry_adjusted_midpoint": "8.59383489455684379e-30",
+      "id": "d2-rx-20_x-19-cx-18_x-17",
+      "interval_sha256": "4240ac890a91af81066b5f6addbdcbcab5c6e25a1175c3a43ef60a4c7d36eb10",
+      "lower_scientific": "5.41767990572101210e-31",
+      "midpoint_scientific": "5.41767990572101210e-31",
+      "permanent_normalized_midpoint": "3.09378056204046377e-30",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "5.41767990572101210e-31"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "3.43753395782233354e-29",
+      "id": "d2-rx-20_x-19-cx-17_x-16",
+      "interval_sha256": "439f30e70f4419dd2197f596f0a6813f1c7cde11357f22b0a75259bd7a022c70",
+      "lower_scientific": "2.16707196228805904e-30",
+      "midpoint_scientific": "2.16707196228805904e-30",
+      "permanent_normalized_midpoint": "1.23751222481604007e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "2.16707196228805904e-30"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "2.92190386414905218e-29",
+      "id": "d2-rx-20_x-19-cx-18_x-16",
+      "interval_sha256": "66c57b5d30a15fc46d3a971831570c2b150542abe906abfc77adbffa6728540c",
+      "lower_scientific": "2.70883995286016025e-30",
+      "midpoint_scientific": "2.70883995286016025e-30",
+      "permanent_normalized_midpoint": "1.54689028102008645e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "2.70883995286016025e-30"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-18"
+      ],
+      "geometry_adjusted_midpoint": "2.79299634073097423e-29",
+      "id": "d2-rx-20_x-17-cx-19_x-18",
+      "interval_sha256": "b78db68437af9a9cde395567abae722007c006b8a6e48f0a897dc59de58dfb84",
+      "lower_scientific": "2.84428195050353135e-30",
+      "midpoint_scientific": "2.84428195050353135e-30",
+      "permanent_normalized_midpoint": "1.62423479507124348e-29",
+      "rows": [
+        "x-20",
+        "x-17"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "2.84428195050353135e-30"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-17"
+      ],
+      "geometry_adjusted_midpoint": "2.48361828452692786e-29",
+      "id": "d2-rx-20_x-18-cx-19_x-17",
+      "interval_sha256": "04f19e6c43398beb6dcd34f449996f8cf00903af407445fb03db2083ff96dcd3",
+      "lower_scientific": "3.38604994107563256e-30",
+      "midpoint_scientific": "3.38604994107563256e-30",
+      "permanent_normalized_midpoint": "1.93361285127528985e-29",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "3.38604994107563256e-30"
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "1.37501358312828705e-28",
+      "id": "d2-rx-20_x-19-cx-16_x-15",
+      "interval_sha256": "cfd7c7d7291f5247af34bf1ddc66215290e54fb29bbe2fc1fd1919004e222954",
+      "lower_scientific": "8.66828784914670339e-30",
+      "midpoint_scientific": "8.66828784914670339e-30",
+      "permanent_normalized_midpoint": "4.95004889926183338e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "8.66828784914670339e-30"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "1.37501358312892332e-28",
+      "id": "d2-rx-19_x-18-cx-17_x-16",
+      "interval_sha256": "27f0acb1ef532134a97dcd378a463f13799d0ddf44c5ba656218d3bade650e34",
+      "lower_scientific": "8.66828784915214972e-30",
+      "midpoint_scientific": "8.66828784915214972e-30",
+      "permanent_normalized_midpoint": "4.95004889926412394e-29",
+      "rows": [
+        "x-19",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "8.66828784915214972e-30"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "1.16876154565915387e-28",
+      "id": "d2-rx-20_x-19-cx-17_x-15",
+      "interval_sha256": "1746018cdb49e47bcd96221f00e71f618132cb09750410a8ba7c9a86a640ee02",
+      "lower_scientific": "1.08353598114347624e-29",
+      "midpoint_scientific": "1.08353598114347624e-29",
+      "permanent_normalized_midpoint": "6.18756112407787345e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.08353598114347624e-29"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "1.16876154565958654e-28",
+      "id": "d2-rx-20_x-18-cx-17_x-16",
+      "interval_sha256": "ad9cf534d85f749891b41ad9b71ade12e342956bc1eaec5f5be1879f1ce1c485",
+      "lower_scientific": "1.08353598114402088e-29",
+      "midpoint_scientific": "1.08353598114402088e-29",
+      "permanent_normalized_midpoint": "6.18756112408016401e-29",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.08353598114402088e-29"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "1.11719853629186452e-28",
+      "id": "d2-rx-20_x-19-cx-18_x-15",
+      "interval_sha256": "87aff33836c203be66df1934eaa77f3df2077749923cf431ea2514ed37d1164f",
+      "lower_scientific": "1.13771278020068636e-29",
+      "midpoint_scientific": "1.13771278020068636e-29",
+      "permanent_normalized_midpoint": "6.49693918028191983e-29",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.13771278020068636e-29"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-18"
+      ],
+      "geometry_adjusted_midpoint": "1.10430778395045061e-28",
+      "id": "d2-rx-20_x-16-cx-19_x-18",
+      "interval_sha256": "b845f008830c726a25e2b0778864bc088c329f3d830bcdca52a02ef31953a43e",
+      "lower_scientific": "1.15125697996556811e-29",
+      "midpoint_scientific": "1.15125697996556811e-29",
+      "permanent_normalized_midpoint": "6.57428369433536742e-29",
+      "rows": [
+        "x-20",
+        "x-16"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.15125697996556811e-29"
+    },
+    {
+      "columns": [
+        "x-19",
+        "x-16"
+      ],
+      "geometry_adjusted_midpoint": "9.49618755848441960e-29",
+      "id": "d2-rx-20_x-18-cx-19_x-16",
+      "interval_sha256": "b1abf2aaeeee6885b133a55f61fe2bfa9240646cd3b2f7372d22836ba09ecb84",
+      "lower_scientific": "1.42214097525158413e-29",
+      "midpoint_scientific": "1.42214097525158413e-29",
+      "permanent_normalized_midpoint": "8.12117397535545387e-29",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "1.42214097525158413e-29"
+    },
+    {
+      "columns": [
+        "x-15",
+        "x-14"
+      ],
+      "geometry_adjusted_midpoint": "5.50005433250280634e-28",
+      "id": "d2-rx-20_x-19-cx-15_x-14",
+      "interval_sha256": "81a00f5b4defc1a146b6ccb9112a79adc47f2685cd118ac2c49e78ea24b2b573",
+      "lower_scientific": "3.46731513964982890e-29",
+      "midpoint_scientific": "3.46731513964982890e-29",
+      "permanent_normalized_midpoint": "1.98001955970101028e-28",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "3.46731513964982890e-29"
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "5.50005433251310780e-28",
+      "id": "d2-rx-19_x-18-cx-16_x-15",
+      "interval_sha256": "3cbec8b17e4d68a854b29091e0e2b91e8b072fd539f0b8a90fbdddc6696e6c66",
+      "lower_scientific": "3.46731513965864677e-29",
+      "midpoint_scientific": "3.46731513965864677e-29",
+      "permanent_normalized_midpoint": "1.98001955970471881e-28",
+      "rows": [
+        "x-19",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "3.46731513965864677e-29"
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-14"
+      ],
+      "geometry_adjusted_midpoint": "4.67504618262914351e-28",
+      "id": "d2-rx-20_x-19-cx-16_x-14",
+      "interval_sha256": "6accbf7f292cef9024d700691075528c04ca69b5632db49a34c1a3eb99c25c77",
+      "lower_scientific": "4.33414392456449924e-29",
+      "midpoint_scientific": "4.33414392456449924e-29",
+      "permanent_normalized_midpoint": "2.47502444962719362e-28",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.33414392456449924e-29"
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "4.67504618263614850e-28",
+      "id": "d2-rx-20_x-18-cx-16_x-15",
+      "interval_sha256": "24aeddc40e1353b5aeb03966e14ab7d67e33cd3630787aa6ee04add9ea276676",
+      "lower_scientific": "4.33414392457331711e-29",
+      "midpoint_scientific": "4.33414392457331711e-29",
+      "permanent_normalized_midpoint": "2.47502444963090215e-28",
+      "rows": [
+        "x-20",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.33414392457331711e-29"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-15"
+      ],
+      "geometry_adjusted_midpoint": "4.67504618263658116e-28",
+      "id": "d2-rx-19_x-18-cx-17_x-15",
+      "interval_sha256": "ba0fd7977a3905b75e5b202a72adb66297e527b046e84dc6d8bf959089d80b29",
+      "lower_scientific": "4.33414392457386175e-29",
+      "midpoint_scientific": "4.33414392457386175e-29",
+      "permanent_normalized_midpoint": "2.47502444963113120e-28",
+      "rows": [
+        "x-19",
+        "x-18"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.33414392457386175e-29"
+    },
+    {
+      "columns": [
+        "x-17",
+        "x-14"
+      ],
+      "geometry_adjusted_midpoint": "4.46879414516063084e-28",
+      "id": "d2-rx-20_x-19-cx-17_x-14",
+      "interval_sha256": "9675d6d5ada9dbd7e5d3a6533756bc10ed64125017c40bb1cea2793cc7af60fb",
+      "lower_scientific": "4.55085112079330514e-29",
+      "midpoint_scientific": "4.55085112079330514e-29",
+      "permanent_normalized_midpoint": "2.59877567210879763e-28",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.55085112079330514e-29"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-17"
+      ],
+      "geometry_adjusted_midpoint": "4.46879414516900078e-28",
+      "id": "d2-rx-19_x-16-cx-18_x-17",
+      "interval_sha256": "d8d1af31cbc66134569b7fd3f2c012c7563b9d5a70f5016f55be6a07db5f829d",
+      "lower_scientific": "4.55085112080487860e-29",
+      "midpoint_scientific": "4.55085112080487860e-29",
+      "permanent_normalized_midpoint": "2.59877567211366507e-28",
+      "rows": [
+        "x-19",
+        "x-16"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.55085112080487860e-29"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-14"
+      ],
+      "geometry_adjusted_midpoint": "4.41723113579349662e-28",
+      "id": "d2-rx-20_x-19-cx-18_x-14",
+      "interval_sha256": "dd95b5d1cdd772aa278ed83a0786a65ec513ab2d6b52076ccb4a69caaf4d6316",
+      "lower_scientific": "4.60502791985051527e-29",
+      "midpoint_scientific": "4.60502791985051527e-29",
+      "permanent_normalized_midpoint": "2.62971347772920227e-28",
+      "rows": [
+        "x-20",
+        "x-19"
+      ],
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_scientific": "4.60502791985051527e-29"
+    }
+  ],
+  "verdict": "NO_NEGATIVE_IN_DENSE_ORDER2_SCREEN",
+  "zero_block_artifact_sha256": "53b3f631c7c55c7ba794a75a98f684d01c8510533df86a04086af6aef16eeeb8"
+}
