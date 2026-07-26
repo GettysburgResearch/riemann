@@ -69,7 +69,6 @@ def patch_source(
         not new_ordinate_numerator
         or not new_ordinate_numerator.isdigit()
         or int(new_ordinate_numerator) <= 0
-        or new_ordinate_numerator == OLD
     ):
         raise ValueError("new ordinate numerator must be positive decimal text")
     count = source.count(OLD)
@@ -77,16 +76,21 @@ def patch_source(
         raise ValueError(
             f"expected {EXPECTED_OCCURRENCES} exact ordinate occurrences, found {count}"
         )
-    if new_ordinate_numerator in source:
+    if new_ordinate_numerator == OLD:
+        output = source
+        replaced = 0
+    elif new_ordinate_numerator in source:
         raise ValueError("PR #71 ordinate already present in source")
-    output = source.replace(OLD, new_ordinate_numerator)
-    if output.replace(new_ordinate_numerator, OLD) != source:
-        raise ValueError("source patch changed more than the exact ordinate")
+    else:
+        output = source.replace(OLD, new_ordinate_numerator)
+        replaced = count
+        if output.replace(new_ordinate_numerator, OLD) != source:
+            raise ValueError("source patch changed more than the exact ordinate")
     return output, {
         "old_ordinate_numerator": OLD,
         "new_ordinate_numerator": new_ordinate_numerator,
         "denominator": 1 << 32,
-        "occurrences_replaced": count,
+        "occurrences_replaced": replaced,
         "source_sha256": hashlib.sha256(source.encode("utf-8")).hexdigest(),
         "patched_sha256": hashlib.sha256(output.encode("utf-8")).hexdigest(),
     }
