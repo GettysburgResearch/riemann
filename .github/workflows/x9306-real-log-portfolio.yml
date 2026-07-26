@@ -2,6 +2,13 @@ name: X9306 real L9308 portfolio search
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-01-l/93-run-real-log-portfolio
+    paths:
+      - experiments/X-9306-real-log-portfolio-search/RUN.md
+      - experiments/X-9306-real-log-portfolio-search/**
+      - .github/workflows/x9306-real-log-portfolio.yml
   pull_request:
     branches:
       - agent/gpt56-01-l/93-real-log-portfolio-search
