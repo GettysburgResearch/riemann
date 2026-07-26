@@ -2,10 +2,23 @@ test_adapter_squares_horizontal_offsets (test_adapter.AdapterTests.test_adapter_
 test_boolean_log_terms_rejected (test_adapter.AdapterTests.test_boolean_log_terms_rejected) ... ok
 test_missing_source_point_rejected (test_adapter.AdapterTests.test_missing_source_point_rejected) ... ok
 test_production_source_is_not_promoted_without_artifact_binding (test_adapter.AdapterTests.test_production_source_is_not_promoted_without_artifact_binding) ... ok
+test_each_partition_occurs_once_up_to_transpose (test_dense_order2_screen.DenseOrder2ScreenTests.test_each_partition_occurs_once_up_to_transpose) ... ok
+test_sixteen_node_coverage (test_dense_order2_screen.DenseOrder2ScreenTests.test_sixteen_node_coverage) ... ok
 test_five_nodes_stop_at_order_two (test_exhaustive_grid.ExhaustiveGridTests.test_five_nodes_stop_at_order_two) ... ok
 test_missing_pattern_is_rejected (test_exhaustive_grid.ExhaustiveGridTests.test_missing_pattern_is_rejected) ... ok
 test_nine_node_counts_match_closed_formula (test_exhaustive_grid.ExhaustiveGridTests.test_nine_node_counts_match_closed_formula) ... ok
 test_transpose_duplicate_is_rejected (test_exhaustive_grid.ExhaustiveGridTests.test_transpose_duplicate_is_rejected) ... ok
+test_broad_grid_pattern_counts (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_broad_grid_pattern_counts) ... ok
+test_decimal_determinant_sign (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_decimal_determinant_sign) ... ok
+test_determinant_input_uncertainty_bound (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_determinant_input_uncertainty_bound) ... ok
+test_determinant_sign (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_determinant_sign) ... ok
+test_negative_radius_is_rejected (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_negative_radius_is_rejected) ... ok
+test_partitions_are_disjoint_and_transpose_unique (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_partitions_are_disjoint_and_transpose_unique) ... ok
+test_point_subset_preserves_node_order (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_point_subset_preserves_node_order) ... ok
+test_relative_vandermonde_uses_selected_nodes (test_high_order_midpoint_ranking.HighOrderMidpointRankingTests.test_relative_vandermonde_uses_selected_nodes) ... ok
+test_parse_directed_summary (test_ordinate_screen_summary.OrdinateScreenSummaryTests.test_parse_directed_summary) ... ok
+test_parse_ranking_requires_input_robustness (test_ordinate_screen_summary.OrdinateScreenSummaryTests.test_parse_ranking_requires_input_robustness) ... ok
+test_parse_replay_requires_positive_nested_high_interval (test_ordinate_screen_summary.OrdinateScreenSummaryTests.test_parse_replay_requires_positive_nested_high_interval) ... ok
 test_builds_two_certified_bins (test_pr71_bridge.PR71BridgeTests.test_builds_two_certified_bins) ... ok
 test_mutated_gap_artifact_is_rejected (test_pr71_bridge.PR71BridgeTests.test_mutated_gap_artifact_is_rejected) ... ok
 test_nonbracketing_balls_rejected (test_pr71_bridge.PR71BridgeTests.test_nonbracketing_balls_rejected) ... ok
@@ -22,8 +35,11 @@ test_rehashed_selected_index_drift_is_rejected (test_pr71_nearest.NearestZeroTes
 test_selects_nearest_by_certified_upper_distance (test_pr71_nearest.NearestZeroTests.test_selects_nearest_by_certified_upper_distance) ... ok
 test_zero_index_drift_rejected (test_pr71_nearest.NearestZeroTests.test_zero_index_drift_rejected) ... ok
 test_common_scale_source_drift_rejected (test_pr71_source_patch.PatcherTests.test_common_scale_source_drift_rejected) ... ok
+test_custom_ordinate_patch (test_pr71_source_patch.PatcherTests.test_custom_ordinate_patch) ... ok
+test_dense_horizontal_node_patch (test_pr71_source_patch.PatcherTests.test_dense_horizontal_node_patch) ... ok
 test_exact_common_scale_patch (test_pr71_source_patch.PatcherTests.test_exact_common_scale_patch) ... ok
 test_exact_three_occurrence_patch (test_pr71_source_patch.PatcherTests.test_exact_three_occurrence_patch) ... ok
+test_invalid_horizontal_nodes_rejected (test_pr71_source_patch.PatcherTests.test_invalid_horizontal_nodes_rejected) ... ok
 test_positive_height_reflection_patch (test_pr71_source_patch.PatcherTests.test_positive_height_reflection_patch) ... ok
 test_reflection_source_drift_rejected (test_pr71_source_patch.PatcherTests.test_reflection_source_drift_rejected) ... ok
 test_source_drift_rejected (test_pr71_source_patch.PatcherTests.test_source_drift_rejected) ... ok
@@ -40,8 +56,12 @@ test_point_digest_mutation_rejected (test_verify.ZeroDeflatedModulusTests.test_p
 test_production_gate_required (test_verify.ZeroDeflatedModulusTests.test_production_gate_required) ... ok
 test_widened_bin_remains_valid_but_weaker (test_verify.ZeroDeflatedModulusTests.test_widened_bin_remains_valid_but_weaker) ... ok
 test_zero_count_rejected (test_verify.ZeroDeflatedModulusTests.test_zero_count_rejected) ... ok
+test_nonconsecutive_index_is_rejected (test_zero_block_rebind.ZeroBlockRebindTests.test_nonconsecutive_index_is_rejected) ... ok
+test_rebinds_only_target_metadata (test_zero_block_rebind.ZeroBlockRebindTests.test_rebinds_only_target_metadata) ... ok
+test_target_outside_block_is_rejected (test_zero_block_rebind.ZeroBlockRebindTests.test_target_outside_block_is_rejected) ... ok
+test_target_overlapping_zero_is_rejected (test_zero_block_rebind.ZeroBlockRebindTests.test_target_overlapping_zero_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 42 tests in 0.071s
+Ran 62 tests in 0.083s
 
 OK
