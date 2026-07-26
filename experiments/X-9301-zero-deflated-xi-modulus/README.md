@@ -126,7 +126,7 @@ python verify_zero_deflated_modulus.py \
 python -m unittest discover -s tests -v
 ```
 
-Thirty-two exact tests pass. They cover:
+Thirty-four exact tests pass. They cover:
 
 - the strict hidden-offline separation;
 - the exact algebraic negative integer;
@@ -141,7 +141,8 @@ Thirty-two exact tests pass. They cover:
 - Boolean logarithm-term rejection;
 - production source reconstruction and adversarial re-signing;
 - fixed-point logarithm enclosure against the exact positive series;
-- nearest-zero selection and precision nesting.
+- nearest-zero selection and precision nesting;
+- complete-ladder summary binding and input-digest drift.
 
 The CLI returns `0` for every resolved arithmetic replay, including a strict
 negative, `1` for unresolved intervals, and `2` for rejection. Production
