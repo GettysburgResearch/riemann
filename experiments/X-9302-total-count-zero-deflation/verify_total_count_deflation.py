@@ -251,6 +251,16 @@ def validate_production_source(data: dict[str, Any]) -> dict[str, str]:
         raise CertificateError("production total-count source schema mismatch")
     if source.get("total_count_classification") != COUNT_CLASSIFICATION:
         raise CertificateError("production total-count source classification mismatch")
+    common_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
+    source_scale = exact_int(
+        source.get("primitive_common_xi_scale_power_of_two", 0),
+        "source.primitive_common_xi_scale_power_of_two",
+    )
+    if source_scale != common_scale:
+        raise CertificateError("primitive common xi scale metadata mismatch")
     return {
         "primitive_sha256": validate_sha256(
             source.get("primitive_sha256"), "source.primitive_sha256"
@@ -272,6 +282,16 @@ def verify_source_artifacts(
         raise CertificateError("primitive artifact schema mismatch")
     if primitive_artifact.get("normalization_id") != NORMALIZATION:
         raise CertificateError("primitive artifact normalization mismatch")
+    artifact_scale = exact_int(
+        primitive_artifact.get("common_xi_scale_power_of_two", 0),
+        "primitive_artifact.common_xi_scale_power_of_two",
+    )
+    certificate_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
+    if artifact_scale != certificate_scale:
+        raise CertificateError("primitive artifact common xi scale mismatch")
     if count_artifact.get("schema") != COUNT_SCHEMA:
         raise CertificateError("total-count artifact schema mismatch")
     if count_artifact.get("classification") != COUNT_CLASSIFICATION:
@@ -423,6 +443,10 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     classification = data.get("classification")
     if classification not in ("SYNTHETIC_MODEL", "RIEMANN_XI_DIRECTED"):
         raise CertificateError("unsupported classification")
+    common_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
     ordinate = rational(data.get("ordinate"), "ordinate")
     terms = exact_int(data.get("log_terms", 256), "log_terms")
     if terms < 32 or terms > 4096:
@@ -512,6 +536,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "source_artifacts_verified": False,
         "classification": classification,
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fj(ordinate),
         "point_count": len(points),
         "count_windows": [
@@ -545,6 +570,9 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             "certificate. Under RH, unconditional total-zero lower counts become "
             "critical-line lower counts. A negative still requires independent "
             "backend reproduction and analytic review."
+            " One exact common power-of-two scale may be applied to every xi "
+            "rectangle because it cancels from logarithmic secants and multiplies "
+            "both sides of every algebraic row by the same positive factor."
         ),
     }
     if claimed_certificate_sha is not None:

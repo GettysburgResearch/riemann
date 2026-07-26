@@ -137,6 +137,10 @@ def build(
         raise BuildError("zero block is not proof classified")
     if nearest_count <= 0:
         raise BuildError("nearest_count must be positive")
+    common_scale = integer(
+        primitives.get("common_xi_scale_power_of_two", 0),
+        "primitives.common_xi_scale_power_of_two",
+    )
 
     ordinate = rational(primitives.get("ordinate"), "primitives.ordinate")
     if ordinate != rational(block.get("target"), "block.target"):
@@ -229,6 +233,7 @@ def build(
         "schema": OUTPUT_SCHEMA,
         "classification": "RIEMANN_XI_DIRECTED",
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fraction_json(ordinate),
         "log_terms": log_terms,
         "points": sorted(points, key=lambda point: rational(point["u"], "point.u")),
@@ -236,6 +241,7 @@ def build(
         "rows": requested_rows,
         "source": {
             "primitive_sha256": canonical_sha(primitives),
+            "primitive_common_xi_scale_power_of_two": common_scale,
             "zero_block_sha256": block_digest,
             "zero_block_precision_bits": integer(
                 block.get("precision_bits"), "block.precision_bits"

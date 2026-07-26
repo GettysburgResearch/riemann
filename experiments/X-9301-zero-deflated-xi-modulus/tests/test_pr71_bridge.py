@@ -38,6 +38,7 @@ class PR71BridgeTests(unittest.TestCase):
             "schema": MODULE.PRIMITIVE_SCHEMA,
             "normalization_id": MODULE.NORMALIZATION,
             "precision_bits": 192,
+            "common_xi_scale_power_of_two": 123,
             "ordinate": rat(10),
             "points": [
                 {
@@ -97,6 +98,7 @@ class PR71BridgeTests(unittest.TestCase):
         self.assertEqual(len(output["zero_bins"]), 2)
         self.assertEqual(output["zero_bins"][0]["count_lower"], 1)
         self.assertEqual(output["points"][0]["u"], rat(1, 16))
+        self.assertEqual(output["common_xi_scale_power_of_two"], 123)
         arithmetic = VERIFY.verify(output)
         self.assertFalse(arithmetic["source_artifacts_verified"])
         bindings = VERIFY.verify_source_artifacts(output, primitives, gap)

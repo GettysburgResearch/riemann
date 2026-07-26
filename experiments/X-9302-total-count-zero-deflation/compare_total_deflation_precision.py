@@ -117,6 +117,7 @@ def compare(low: dict[str, Any], high: dict[str, Any]) -> dict[str, Any]:
         "schema",
         "classification",
         "normalization_id",
+        "common_xi_scale_power_of_two",
         "ordinate",
         "log_terms",
         "rows",

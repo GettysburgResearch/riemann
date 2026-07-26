@@ -110,3 +110,9 @@ For `RIEMANN_XI_DIRECTED` certificates, the CLI additionally requires
 `--primitive-artifact` and `--count-artifact`. It recomputes both canonical
 digests before promoting an arithmetic replay to a source-bound production
 result.
+
+The shared PR #71 producer applies the exact common scale
+`2^5335951715288` to all completed-xi rectangles before rational
+serialization. This avoids expanding an enormous binary denominator. The
+certificate binds the scale explicitly; it cancels from every logarithmic
+secant and preserves algebraic-row signs.

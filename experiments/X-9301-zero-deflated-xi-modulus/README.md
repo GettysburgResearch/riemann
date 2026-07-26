@@ -143,6 +143,14 @@ certificates additionally require `--primitive-artifact` and
 `--zero-artifact`; their canonical digests must match the certificate before a
 negative can be labeled source-bound.
 
+At the PR #71 height, the unscaled completed-xi ball has a binary exponent so
+large that expanding its rational denominator during JSON serialization can
+request tens of gigabytes. The generated producer therefore multiplies every xi
+rectangle by the same exact factor `2^5335951715288`. Logarithmic secants cancel
+the resulting common additive constant, while algebraic rows acquire the same
+positive factor on both sides. The scale is recorded and source-bound in every
+production certificate.
+
 ## Production adapter
 
 `adapt_x7501_zero_deflation.py` consumes:

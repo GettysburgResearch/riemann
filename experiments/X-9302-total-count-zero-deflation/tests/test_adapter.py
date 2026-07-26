@@ -52,6 +52,7 @@ def fixtures() -> tuple[dict, dict, dict]:
     primitives = {
         "schema": adapter.PRIMITIVE_SCHEMA,
         "normalization_id": adapter.NORMALIZATION,
+        "common_xi_scale_power_of_two": 123,
         "ordinate": {"numerator": 10, "denominator": 1},
         "points": points,
     }
@@ -101,6 +102,7 @@ class AdapterTests(unittest.TestCase):
         result = checker.verify(certificate)
         self.assertTrue(result["verified"])
         self.assertFalse(result["source_artifacts_verified"])
+        self.assertEqual(result["common_xi_scale_power_of_two"], 123)
         self.assertEqual(result["certified_negative_rows"], 2)
         self.assertEqual(result["count_windows"][0]["count_lower"], 20)
         bindings = checker.verify_source_artifacts(

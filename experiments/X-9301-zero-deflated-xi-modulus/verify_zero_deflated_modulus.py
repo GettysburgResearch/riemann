@@ -263,6 +263,16 @@ def validate_production_source(data: dict[str, Any]) -> dict[str, str]:
     primitive_sha = validate_sha256(
         source.get("primitive_sha256"), "source.primitive_sha256"
     )
+    common_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
+    source_scale = exact_int(
+        source.get("primitive_common_xi_scale_power_of_two", 0),
+        "source.primitive_common_xi_scale_power_of_two",
+    )
+    if source_scale != common_scale:
+        raise CertificateError("primitive common xi scale metadata mismatch")
     gap_sha = source.get("gap_sha256")
     block_sha = source.get("zero_block_sha256")
     if (gap_sha is None) == (block_sha is None):
@@ -295,6 +305,16 @@ def verify_source_artifacts(
         raise CertificateError("primitive artifact schema mismatch")
     if primitive_artifact.get("normalization_id") != NORMALIZATION:
         raise CertificateError("primitive artifact normalization mismatch")
+    artifact_scale = exact_int(
+        primitive_artifact.get("common_xi_scale_power_of_two", 0),
+        "primitive_artifact.common_xi_scale_power_of_two",
+    )
+    certificate_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
+    if artifact_scale != certificate_scale:
+        raise CertificateError("primitive artifact common xi scale mismatch")
     expected_zero_schema = GAP_SCHEMA if source["kind"] == "gap" else BLOCK_SCHEMA
     if zero_artifact.get("schema") != expected_zero_schema:
         raise CertificateError(f"{source['kind']} artifact schema mismatch")
@@ -469,6 +489,10 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     classification = data.get("classification")
     if classification not in ("SYNTHETIC_MODEL", "RIEMANN_XI_DIRECTED"):
         raise CertificateError("unsupported classification")
+    common_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
     ordinate = rational(data.get("ordinate"), "ordinate")
     terms = exact_int(data.get("log_terms", 256), "log_terms")
     if terms < 32 or terms > 4096:
@@ -570,6 +594,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "source_artifacts_verified": False,
         "classification": classification,
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fj(ordinate),
         "point_count": len(points),
         "zero_bins": [
@@ -595,7 +620,10 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             "A production CLI replay additionally requires the primitive and zero "
             "artifacts whose digests are bound by the certificate. A negative still "
             "requires independent backend reproduction and review of L-9301 and the "
-            "completed-xi normalization."
+            "completed-xi normalization. One exact common power-of-two scale may be "
+            "applied to every xi rectangle because it cancels from logarithmic "
+            "secants and multiplies both sides of every algebraic row by the same "
+            "positive factor."
         ),
     }
     if claimed_certificate_sha is not None:
