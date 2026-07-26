@@ -171,6 +171,17 @@ def log_positive_interval(value: Interval, terms: int) -> Interval:
     )
 
 
+def outward_dyadic_hull(value: Interval, bits: int) -> Interval:
+    if bits < 1:
+        raise CertificateError("dyadic hull precision must be positive")
+    scale = 1 << bits
+    lower_scaled = value.lower * scale
+    upper_scaled = value.upper * scale
+    lower = lower_scaled.numerator // lower_scaled.denominator
+    upper = -((-upper_scaled.numerator) // upper_scaled.denominator)
+    return Interval(Fraction(lower, scale), Fraction(upper, scale))
+
+
 def determinant_interval(matrix: list[list[Interval]]) -> Interval:
     size = len(matrix)
     if size < 1 or any(len(row) != size for row in matrix):
@@ -331,6 +342,7 @@ def loewner_determinant(
     column_ids: list[str],
     points: dict[str, dict[str, Any]],
     values: dict[str, Interval],
+    determinant_entry_bits: int,
 ) -> Interval:
     size = len(row_ids)
     if size < 1 or size != len(column_ids) or size > 4:
@@ -348,7 +360,13 @@ def loewner_determinant(
     if any(column_nodes[i] >= column_nodes[i + 1] for i in range(size - 1)):
         raise CertificateError("Loewner column nodes must be strictly increasing")
     matrix = [
-        [secant(points[r], points[c], values[r], values[c]) for c in column_ids]
+        [
+            outward_dyadic_hull(
+                secant(points[r], points[c], values[r], values[c]),
+                determinant_entry_bits,
+            )
+            for c in column_ids
+        ]
         for r in row_ids
     ]
     return determinant_interval(matrix)
@@ -370,6 +388,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     terms = exact_int(data.get("log_terms", 256), "log_terms")
     if terms < 32 or terms > 4096:
         raise CertificateError("log_terms must be between 32 and 4096")
+    determinant_entry_bits = 4 * terms
 
     claimed_certificate_sha = data.get("certificate_sha256")
     if claimed_certificate_sha is not None:
@@ -430,8 +449,14 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
                     if kind.startswith("deflated")
                     else raw_log_values
                 ),
+                determinant_entry_bits,
             )
-            detail = {"rows": row_ids, "columns": column_ids, "order": len(row_ids)}
+            detail = {
+                "rows": row_ids,
+                "columns": column_ids,
+                "order": len(row_ids),
+                "determinant_entry_dyadic_bits": determinant_entry_bits,
+            }
         else:
             raise CertificateError(f"unsupported row kind {kind!r}")
         outputs.append(
