@@ -125,6 +125,28 @@ class AdapterTests(unittest.TestCase):
             {"numerator": 1, "denominator": 2},
         )
 
+    def test_atomized_profile_is_derived_from_endpoint_counts(self) -> None:
+        primitives = copy.deepcopy(self.primitives)
+        primitives["ordinate"] = {"numerator": 21, "denominator": 2}
+        certificate = adapter.build(
+            primitives,
+            copy.deepcopy(self.counts),
+            copy.deepcopy(self.config),
+            count_profile="atomized",
+        )
+        self.assertEqual(certificate["source"]["count_profile"], "atomized")
+        self.assertEqual(
+            certificate["count_windows"],
+            [
+                {
+                    "id": "atom_r_0",
+                    "radius": {"numerator": 3, "denominator": 2},
+                    "count_lower": 20,
+                    "gate": certificate["count_windows"][0]["gate"],
+                }
+            ],
+        )
+
     def assert_bridge_rejected(self, counts: dict, message: str) -> None:
         with self.assertRaisesRegex(adapter.BridgeError, message):
             adapter.build(copy.deepcopy(self.primitives), counts, copy.deepcopy(self.config))

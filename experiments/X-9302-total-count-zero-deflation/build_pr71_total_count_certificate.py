@@ -216,8 +216,86 @@ def parse_count_windows(
     return output, count_target, ordinate_shift
 
 
+def parse_count_atoms(
+    counts: dict[str, Any], target: Fraction
+) -> tuple[list[dict[str, Any]], Fraction, Fraction]:
+    # First run every schema, endpoint, ball, claimed-difference, and nesting
+    # gate from the concentric adapter.
+    _, count_target, ordinate_shift = parse_count_windows(counts, target)
+    artifact_sha = canonical_sha(counts)
+    endpoints: dict[Fraction, int] = {}
+    for index, raw in enumerate(counts["windows"]):
+        lower = exact_binary(
+            raw["lower_endpoint"], f"windows[{index}].lower_endpoint"
+        )
+        upper = exact_binary(
+            raw["upper_endpoint"], f"windows[{index}].upper_endpoint"
+        )
+        n_lower = unique_integer(
+            binary_interval(
+                raw["N_lower_ball"], f"windows[{index}].N_lower_ball"
+            ),
+            f"windows[{index}].N_lower_ball",
+        )
+        n_upper = unique_integer(
+            binary_interval(
+                raw["N_upper_ball"], f"windows[{index}].N_upper_ball"
+            ),
+            f"windows[{index}].N_upper_ball",
+        )
+        for endpoint, count in ((lower, n_lower), (upper, n_upper)):
+            previous = endpoints.setdefault(endpoint, count)
+            if previous != count:
+                raise BridgeError("the same count endpoint has inconsistent N values")
+
+    ordered = sorted(endpoints.items())
+    if len(ordered) < 2:
+        raise BridgeError("atomized profile requires at least two count endpoints")
+    masses: dict[Fraction, int] = {}
+    for (left, n_left), (right, n_right) in zip(ordered, ordered[1:]):
+        count = n_right - n_left
+        if count < 0:
+            raise BridgeError("endpoint N values decrease")
+        if count:
+            radius = max(abs(target - left), abs(target - right))
+            masses[radius] = masses.get(radius, 0) + count
+    if not masses:
+        raise BridgeError("atomized endpoint profile contains no zeros")
+
+    output: list[dict[str, Any]] = []
+    cumulative = 0
+    for index, (radius, increment) in enumerate(sorted(masses.items())):
+        cumulative += increment
+        output.append(
+            {
+                "id": f"atom_r_{index}",
+                "radius": fj(radius),
+                "count_lower": cumulative,
+                "gate": {
+                    "status": GATE,
+                    "sha256": hashlib.sha256(
+                        (
+                            artifact_sha
+                            + ":atom:"
+                            + str(radius.numerator)
+                            + "/"
+                            + str(radius.denominator)
+                            + ":"
+                            + str(cumulative)
+                        ).encode("ascii")
+                    ).hexdigest(),
+                },
+            }
+        )
+    return output, count_target, ordinate_shift
+
+
 def build(
-    primitives: dict[str, Any], counts: dict[str, Any], config: dict[str, Any]
+    primitives: dict[str, Any],
+    counts: dict[str, Any],
+    config: dict[str, Any],
+    *,
+    count_profile: str = "nested",
 ) -> dict[str, Any]:
     if primitives.get("schema") != PRIMITIVE_SCHEMA:
         raise BridgeError("primitive schema mismatch")
@@ -233,7 +311,16 @@ def build(
     )
 
     target = rational(primitives.get("ordinate"), "primitives.ordinate")
-    windows, count_target, ordinate_shift = parse_count_windows(counts, target)
+    if count_profile == "nested":
+        windows, count_target, ordinate_shift = parse_count_windows(
+            counts, target
+        )
+    elif count_profile == "atomized":
+        windows, count_target, ordinate_shift = parse_count_atoms(
+            counts, target
+        )
+    else:
+        raise BridgeError("count_profile must be 'nested' or 'atomized'")
 
     raw_points = primitives.get("points")
     if not isinstance(raw_points, list) or not raw_points:
@@ -279,7 +366,12 @@ def build(
             "total_count_classification": COUNT_CLASSIFICATION,
             "total_count_center": fj(count_target),
             "primitive_ordinate_shift_from_count_center": fj(ordinate_shift),
-            "shifted_radius_rule": "source_radius + absolute_ordinate_shift",
+            "shifted_radius_rule": (
+                "source_radius + absolute_ordinate_shift"
+                if count_profile == "nested"
+                else "exact endpoint atoms grouped by farthest distance from primitive ordinate"
+            ),
+            "count_profile": count_profile,
         },
     }
     output["certificate_sha256"] = canonical_sha(output)
@@ -291,10 +383,20 @@ def main() -> int:
     parser.add_argument("primitives", type=Path)
     parser.add_argument("counts", type=Path)
     parser.add_argument("config", type=Path)
+    parser.add_argument(
+        "--count-profile",
+        choices=("nested", "atomized"),
+        default="nested",
+    )
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     try:
-        result = build(load(args.primitives), load(args.counts), load(args.config))
+        result = build(
+            load(args.primitives),
+            load(args.counts),
+            load(args.config),
+            count_profile=args.count_profile,
+        )
     except (OSError, json.JSONDecodeError, BridgeError) as exc:
         print(json.dumps({"built": False, "error": str(exc)}, indent=2), file=sys.stderr)
         return 2
