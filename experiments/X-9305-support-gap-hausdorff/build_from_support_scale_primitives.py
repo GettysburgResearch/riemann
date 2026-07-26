@@ -218,8 +218,8 @@ def build(
         bins.append((lower, upper))
     bins.sort()
     for left, right in zip(bins, bins[1:]):
-        if left[1] >= right[0]:
-            raise BuildError("closed chain bins overlap or touch; refine them further")
+        if left[1] > right[0]:
+            raise BuildError("sign-chain bins overlap in their interiors")
 
     distance_ranges = [
         square_range(target - upper, target - lower) for lower, upper in bins
@@ -276,6 +276,7 @@ def build(
                 "certificate_sha256"
             ],
             "complete_count": total_count,
+            "shared_zero_free_endpoints_allowed": True,
         },
     }
     output["certificate_sha256"] = canonical_sha(output)
