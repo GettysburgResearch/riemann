@@ -1,0 +1,35 @@
+{
+  "schema": "riemann.slab-complement-pick.control-summary.v1",
+  "checker_local_sha256": "beddc6c229b92efb21b66b982bced7ce0959594d9d361db2a6334fa7bb322e3c",
+  "checker_git_blob_sha": "152c54649a105ecae2591c43e457b35807881900",
+  "strict_separation": {
+    "ordinary_pick": "7450901935000/47129216977",
+    "weighted_full": "-8286764476250/47129216977",
+    "inside_contribution": "-123210000/1413721",
+    "slab_complement_residual": "-2956250/33337",
+    "status": "CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS",
+    "verification_sha256": "82e0f35b0ce3155b4426afdc51be617584e4a6a98e5128414723bf80c68a371f"
+  },
+  "critical_line_control": {
+    "ordinary_pick": "2760646923024820000/31457550981729841",
+    "weighted_full": "-2684536651743180000/31457550981729841",
+    "inside_contribution": "-123210000/1413721",
+    "slab_complement_residual": "40377630000/22251597721",
+    "status": "CERTIFIED_NONNEGATIVE_CONTROL",
+    "verification_sha256": "5cd4757c231e27df1b17577a9ea4cb674080c8791c504c75629346349ccf29e1"
+  },
+  "dyadic_nomination": {
+    "dyadic_bits": 40,
+    "midpoint_minimum_eigenvalue": "-10.128617782919815",
+    "exact_replay_residual": "-621696847181947699436326215125/65490685078800950795417157632",
+    "exact_replay_status": "CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS",
+    "nomination_sha256": "72e01e326905ed64da6e4503f5994647dbf5f0d7c74bd02f9032b554634a5331",
+    "verification_file_sha256": "d519be654753f5db84d695e8043d8aac98275e4571e63b85dffd6a5d9f3cd4b1"
+  },
+  "tests": {
+    "passed": 10,
+    "failed": 0,
+    "tests_file_sha256": "e5927eda5119f7d79a5da3ad31580ce3e648eed4a3af5458fe4244ee0e812a5f"
+  },
+  "classification": "EXACT_SYNTHETIC_CONTROLS_ONLY; no Riemann-xi candidate"
+}
