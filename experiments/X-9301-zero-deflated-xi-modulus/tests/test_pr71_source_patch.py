@@ -31,6 +31,13 @@ class PatcherTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             MODULE.patch_source(f"only {MODULE.OLD}\n")
 
+    def test_custom_ordinate_patch(self):
+        custom = str(int(MODULE.NEW) + 1)
+        source = (MODULE.OLD + "\n") * MODULE.EXPECTED_OCCURRENCES
+        output, manifest = MODULE.patch_source(source, custom)
+        self.assertEqual(output.count(custom), MODULE.EXPECTED_OCCURRENCES)
+        self.assertEqual(manifest["new_ordinate_numerator"], custom)
+
     def test_positive_height_reflection_patch(self):
         source = f"prefix\n{MODULE.OLD_REFLECTION}suffix\n"
         output, manifest = MODULE.patch_positive_reflection(source)

@@ -111,6 +111,20 @@ class AdapterTests(unittest.TestCase):
         with self.assertRaisesRegex(adapter.BridgeError, "must not be Boolean"):
             adapter.build(primitives, copy.deepcopy(self.counts), copy.deepcopy(self.config))
 
+    def test_off_center_count_window_is_widened_exactly(self) -> None:
+        primitives = copy.deepcopy(self.primitives)
+        primitives["ordinate"] = {"numerator": 21, "denominator": 2}
+        certificate = adapter.build(
+            primitives, copy.deepcopy(self.counts), copy.deepcopy(self.config)
+        )
+        window = certificate["count_windows"][0]
+        self.assertEqual(window["source_radius"], {"numerator": 1, "denominator": 1})
+        self.assertEqual(window["radius"], {"numerator": 3, "denominator": 2})
+        self.assertEqual(
+            certificate["source"]["primitive_ordinate_shift_from_count_center"],
+            {"numerator": 1, "denominator": 2},
+        )
+
     def assert_bridge_rejected(self, counts: dict, message: str) -> None:
         with self.assertRaisesRegex(adapter.BridgeError, message):
             adapter.build(copy.deepcopy(self.primitives), counts, copy.deepcopy(self.config))

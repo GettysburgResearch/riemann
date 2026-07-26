@@ -62,20 +62,29 @@ X_GRID_NEEDLE = (
 )
 
 
-def patch_source(source: str) -> tuple[str, dict[str, object]]:
+def patch_source(
+    source: str, new_ordinate_numerator: str = NEW
+) -> tuple[str, dict[str, object]]:
+    if (
+        not new_ordinate_numerator
+        or not new_ordinate_numerator.isdigit()
+        or int(new_ordinate_numerator) <= 0
+        or new_ordinate_numerator == OLD
+    ):
+        raise ValueError("new ordinate numerator must be positive decimal text")
     count = source.count(OLD)
     if count != EXPECTED_OCCURRENCES:
         raise ValueError(
             f"expected {EXPECTED_OCCURRENCES} exact ordinate occurrences, found {count}"
         )
-    if NEW in source:
+    if new_ordinate_numerator in source:
         raise ValueError("PR #71 ordinate already present in source")
-    output = source.replace(OLD, NEW)
-    if output.replace(NEW, OLD) != source:
+    output = source.replace(OLD, new_ordinate_numerator)
+    if output.replace(new_ordinate_numerator, OLD) != source:
         raise ValueError("source patch changed more than the exact ordinate")
     return output, {
         "old_ordinate_numerator": OLD,
-        "new_ordinate_numerator": NEW,
+        "new_ordinate_numerator": new_ordinate_numerator,
         "denominator": 1 << 32,
         "occurrences_replaced": count,
         "source_sha256": hashlib.sha256(source.encode("utf-8")).hexdigest(),
@@ -99,9 +108,18 @@ def patch_positive_reflection(source: str) -> tuple[str, dict[str, object]]:
     }
 
 
-def patch_common_xi_scale(source: str) -> tuple[str, dict[str, object]]:
+def patch_common_xi_scale(
+    source: str, ordinate_numerator: str = NEW
+) -> tuple[str, dict[str, object]]:
+    declaration_needle = (
+        f'static const char *T_MANTISSA = "{ordinate_numerator}";\n'
+    )
+    declaration_replacement = (
+        declaration_needle
+        + f"static const slong XI_COMMON_SCALE_POWER = {XI_COMMON_SCALE_POWER}L;\n"
+    )
     replacements = (
-        (SCALE_DECLARATION_NEEDLE, SCALE_DECLARATION_REPLACEMENT),
+        (declaration_needle, declaration_replacement),
         (SCALE_VALUE_NEEDLE, SCALE_VALUE_REPLACEMENT),
         (SCALE_METADATA_NEEDLE, SCALE_METADATA_REPLACEMENT),
     )
@@ -163,13 +181,20 @@ def main() -> int:
         default=",".join(map(str, DEFAULT_X_BITS)),
         help="comma-separated, strictly decreasing dyadic offset exponents",
     )
+    parser.add_argument(
+        "--ordinate-numerator",
+        default=NEW,
+        help="positive numerator over the fixed denominator 2^32",
+    )
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--manifest", type=Path)
     args = parser.parse_args()
     source = args.source.read_text(encoding="utf-8")
-    output, manifest = patch_source(source)
+    output, manifest = patch_source(source, args.ordinate_numerator)
     output, reflection_manifest = patch_positive_reflection(output)
-    output, scale_manifest = patch_common_xi_scale(output)
+    output, scale_manifest = patch_common_xi_scale(
+        output, args.ordinate_numerator
+    )
     try:
         x_bits = tuple(int(item) for item in args.x_bits.split(","))
     except ValueError as exc:

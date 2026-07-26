@@ -143,13 +143,15 @@ def validate_rows(rows: Any, point_ids: set[str]) -> list[dict[str, Any]]:
     return output
 
 
-def parse_count_windows(counts: dict[str, Any], target: Fraction) -> list[dict[str, Any]]:
+def parse_count_windows(
+    counts: dict[str, Any], target: Fraction
+) -> tuple[list[dict[str, Any]], Fraction, Fraction]:
     if counts.get("schema") != COUNT_SCHEMA:
         raise BridgeError("total-count schema mismatch")
     if counts.get("classification") != COUNT_CLASSIFICATION:
         raise BridgeError("total-count artifact is not proof-classified")
-    if rational(counts.get("target"), "counts.target") != target:
-        raise BridgeError("primitive and total-count ordinates differ")
+    count_target = rational(counts.get("target"), "counts.target")
+    ordinate_shift = abs(target - count_target)
     raw_windows = counts.get("windows")
     if not isinstance(raw_windows, list) or not raw_windows:
         raise BridgeError("total-count windows must be nonempty")
@@ -171,8 +173,13 @@ def parse_count_windows(counts: dict[str, Any], target: Fraction) -> list[dict[s
             raise BridgeError("count-window radii must be strictly increasing")
         lower_endpoint = exact_binary(raw.get("lower_endpoint"), f"windows[{index}].lower_endpoint")
         upper_endpoint = exact_binary(raw.get("upper_endpoint"), f"windows[{index}].upper_endpoint")
-        if lower_endpoint != target - radius or upper_endpoint != target + radius:
-            raise BridgeError("count-window endpoints do not equal target plus/minus radius")
+        if (
+            lower_endpoint != count_target - radius
+            or upper_endpoint != count_target + radius
+        ):
+            raise BridgeError(
+                "count-window endpoints do not equal count target plus/minus radius"
+            )
         n_lower_bounds = binary_interval(raw.get("N_lower_ball"), f"windows[{index}].N_lower_ball")
         n_upper_bounds = binary_interval(raw.get("N_upper_ball"), f"windows[{index}].N_upper_ball")
         n_lower = unique_integer(n_lower_bounds, f"windows[{index}].N_lower_ball")
@@ -191,7 +198,8 @@ def parse_count_windows(counts: dict[str, Any], target: Fraction) -> list[dict[s
         output.append(
             {
                 "id": identifier,
-                "radius": fj(radius),
+                "radius": fj(radius + ordinate_shift),
+                "source_radius": fj(radius),
                 "count_lower": count,
                 "gate": {
                     "status": GATE,
@@ -205,7 +213,7 @@ def parse_count_windows(counts: dict[str, Any], target: Fraction) -> list[dict[s
         previous_count = count
     if previous_count <= 0:
         raise BridgeError("final nested total-zero count is zero")
-    return output
+    return output, count_target, ordinate_shift
 
 
 def build(
@@ -225,7 +233,7 @@ def build(
     )
 
     target = rational(primitives.get("ordinate"), "primitives.ordinate")
-    windows = parse_count_windows(counts, target)
+    windows, count_target, ordinate_shift = parse_count_windows(counts, target)
 
     raw_points = primitives.get("points")
     if not isinstance(raw_points, list) or not raw_points:
@@ -269,6 +277,9 @@ def build(
             "total_count_schema": COUNT_SCHEMA,
             "total_count_sha256": canonical_sha(counts),
             "total_count_classification": COUNT_CLASSIFICATION,
+            "total_count_center": fj(count_target),
+            "primitive_ordinate_shift_from_count_center": fj(ordinate_shift),
+            "shifted_radius_rule": "source_radius + absolute_ordinate_shift",
         },
     }
     output["certificate_sha256"] = canonical_sha(output)
