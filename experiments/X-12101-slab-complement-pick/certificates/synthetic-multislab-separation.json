@@ -1,0 +1,26 @@
+{
+  "schema":"riemann.multislab-pick.v1",
+  "origin":"0",
+  "parent_gate_id":"synthetic",
+  "slabs":[
+    {"id":"left","lower":"-2","upper":"-1","exact_zero_count":1,"complete_gate_id":"synthetic","endpoint_gate_id":"synthetic"},
+    {"id":"right","lower":"1","upper":"2","exact_zero_count":1,"complete_gate_id":"synthetic","endpoint_gate_id":"synthetic"}
+  ],
+  "points":[
+    {"id":"p0","x":"1/5","t":"-1","f":{"real":{"lower":"271373120/296252081","upper":"271373120/296252081"},"imag":{"lower":"77585600/296252081","upper":"77585600/296252081"}},"gate_id":"synthetic"},
+    {"id":"p1","x":"1/5","t":"1","f":{"real":{"lower":"271373120/296252081","upper":"271373120/296252081"},"imag":{"lower":"-77585600/296252081","upper":"-77585600/296252081"}},"gate_id":"synthetic"},
+    {"id":"p2","x":"2/5","t":"-1","f":{"real":{"lower":"690031360/480442961","upper":"690031360/480442961"},"imag":{"lower":"342598400/480442961","upper":"342598400/480442961"}},"gate_id":"synthetic"},
+    {"id":"p3","x":"2/5","t":"1","f":{"real":{"lower":"690031360/480442961","upper":"690031360/480442961"},"imag":{"lower":"-342598400/480442961","upper":"-342598400/480442961"}},"gate_id":"synthetic"}
+  ],
+  "vector":[{"re":"1","im":"0"},{"re":"-1","im":"0"},{"re":"-1","im":"0"},{"re":"1","im":"0"}],
+  "zero_bins":[
+    {"id":"left-zero","slab_id":"left","lower":"-3/2","upper":"-3/2","count":1,"gate_id":"synthetic"},
+    {"id":"right-zero","slab_id":"right","lower":"3/2","upper":"3/2","count":1,"gate_id":"synthetic"}
+  ],
+  "logical_gates":[{"id":"synthetic","state":"SYNTHETIC_CONTROL","evidence":"exact two-slab finite spectral model"}],
+  "claimed_ordinary_pick":{"lower":"79110061027840000/142332226998051841","upper":"79110061027840000/142332226998051841"},
+  "claimed_weighted_full":{"lower":"-246687826844000000/142332226998051841","upper":"-246687826844000000/142332226998051841"},
+  "claimed_inside_contribution":{"lower":"-655200000/479391721","upper":"-655200000/479391721"},
+  "claimed_residual":{"lower":"-108800000/296901721","upper":"-108800000/296901721"},
+  "claimed_status":"CERTIFIED_NEGATIVE_SLAB_COMPLEMENT_WITNESS"
+}
