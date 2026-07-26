@@ -3,7 +3,7 @@
 Experiment ID: `X-9302`  
 Agent: `gpt56-01-j`  
 Issue: #93  
-Status: exact checker and synthetic controls; Riemann-xi production pending  
+Status: exact checker, production adapter, and synthetic controls; Riemann-xi production pending  
 Date: 2026-07-26
 
 ## Objective
@@ -23,8 +23,9 @@ The checker also reports every Loewner determinant after exact division by its p
 ## Files
 
 - `verify_selected_factor.py` — standard-library exact checker;
+- `adapt_x9301_selected_factor.py` — converts an X-9301 directed certificate without another special-function pass;
 - `certificates/synthetic-selected-factor.json` — hidden-offline-zero regression;
-- `tests/test_verify_selected_factor.py` — fail-closed tests;
+- `tests/` — fail-closed checker and adapter tests;
 - `results/synthetic-summary.json` — compact retained result;
 - `results/tests.txt` — retained test transcript.
 
@@ -83,6 +84,24 @@ vandermonde_normalized_interval
 
 The raw and normalized intervals have the same sign because the normalization divisor is an exact positive rational.
 
+## X-9301 adapter
+
+`adapt_x9301_selected_factor.py` consumes an existing
+
+```text
+riemann.xi-modulus-zero-deflation.v1
+```
+
+certificate and produces the X-9302 schema by:
+
+1. converting each directed complex completed-xi rectangle into an exact rational modulus-square interval;
+2. preserving the exact common ordinate and horizontal nodes;
+3. preserving every zero-ball endpoint, lower count, and gate digest;
+4. translating endpoint-deflated row identities to selected-factor row identities;
+5. binding the output to the canonical SHA-256 of the complete X-9301 source certificate.
+
+Thus one successful directed PR #71 artifact can be replayed under both the conservative and selected-factor theorems without rerunning FLINT.
+
 ## Exact synthetic separation
 
 The model
@@ -122,31 +141,42 @@ python -m unittest discover -s tests -v
 Expected result:
 
 ```text
-7 tests pass
+10 tests pass
 2 certified negative synthetic rows
 verdict SYNTHETIC_SELECTED_FACTOR_SEPARATION
 ```
 
+For production conversion:
+
+```bash
+python adapt_x9301_selected_factor.py \
+  ../X-9301-zero-deflated-xi-modulus/results/pr71/nearest-16-certificate-p256.json \
+  --output selected-nearest-16-p256.json
+python verify_selected_factor.py selected-nearest-16-p256.json
+```
+
 ## Production bridge
 
-The intended production adapter consumes:
+The adapter consumes:
 
-1. direct completed-xi rectangles from X-7501;
-2. isolated Hardy-zero balls from X-5603/X-9301;
-3. an unchanged row manifest.
+1. direct completed-xi rectangles already embedded in X-9301;
+2. isolated Hardy-zero balls and proof gates already embedded in X-9301;
+3. the unchanged row manifest.
 
-It should emit both the conservative L-9301 endpoint-deflated result and the stronger L-9304 selected-factor result from the same primitive artifacts. Any strict Riemann-xi negative must be reproduced by an independent completed-xi backend and an independent zero-isolation backend before candidate promotion.
+It emits the stronger L-9304 selected-factor object from the exact same primitive artifacts. Any strict Riemann-xi negative must be reproduced by an independent completed-xi backend and an independent zero-isolation backend before candidate promotion.
 
 ## Proof boundary
 
 Exact within X-9302:
 
 - rational parsing and interval arithmetic;
+- complex-rectangle to modulus-square conversion;
 - zero-ball squared-distance images;
 - selected-factor products;
 - rational logarithm enclosures;
 - determinants through order four;
 - Vandermonde normalization;
+- source-certificate digest binding;
 - sign and mutation tests.
 
 External:
