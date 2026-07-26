@@ -30,6 +30,7 @@ SYNTHETIC_GATE = "SYNTHETIC_CRITICAL_LINE_ZERO_COUNT"
 PRIMITIVE_SCHEMA = "riemann.xi-modulus-primitives.v1"
 GAP_SCHEMA = "riemann.x5603-line-gap-discrepancy.v1"
 BLOCK_SCHEMA = "riemann.x9301-pr71-hardy-zero-block.v1"
+GLOBAL_NEAREST_SCOPE = "CERTIFIED_GLOBAL_NEAREST_CRITICAL_LINE_ZEROS"
 
 
 class CertificateError(ValueError):
@@ -523,6 +524,14 @@ def _expected_block_bins(
     )
     if returned_count != len(raw_zeros):
         raise CertificateError("zero-block returned_count mismatch")
+    requested_length = artifact_int(
+        block.get("requested_length"), "zero_block.requested_length"
+    )
+    if requested_length != len(raw_zeros):
+        raise CertificateError("zero-block requested_length mismatch")
+    requested_start = artifact_int(
+        block.get("requested_start_index"), "zero_block.requested_start_index"
+    )
     parsed: list[dict[str, Any]] = []
     previous_upper: Fraction | None = None
     seen_indices: set[int] = set()
@@ -536,6 +545,8 @@ def _expected_block_bins(
         zero_index = artifact_int(
             raw.get("zero_index"), f"zero_block.zeros[{position}].zero_index"
         )
+        if zero_index != requested_start + position:
+            raise CertificateError("zero-block zero indices are not consecutive")
         if zero_index in seen_indices:
             raise CertificateError("duplicate zero index in zero-block artifact")
         seen_indices.add(zero_index)
@@ -545,11 +556,19 @@ def _expected_block_bins(
         if previous_upper is not None and previous_upper >= ball.lower:
             raise CertificateError("zero-block balls overlap, touch, or are unordered")
         previous_upper = ball.upper
+        if ball.lower <= ordinate <= ball.upper:
+            raise CertificateError("zero-block ball overlaps target ordinate")
+        distance_square_lower = (
+            (ordinate - ball.upper) ** 2
+            if ball.upper < ordinate
+            else (ball.lower - ordinate) ** 2
+        )
         parsed.append(
             {
                 "index": zero_index,
                 "lower": ball.lower,
                 "upper": ball.upper,
+                "distance_square_lower": distance_square_lower,
                 "B": max(
                     (ordinate - ball.lower) ** 2,
                     (ordinate - ball.upper) ** 2,
@@ -557,9 +576,20 @@ def _expected_block_bins(
             }
         )
 
-    selected = sorted(parsed, key=lambda item: (item["B"], item["index"]))[
-        :nearest_count
-    ]
+    below = [item for item in parsed if item["upper"] < ordinate]
+    above = [item for item in parsed if item["lower"] > ordinate]
+    if not below or not above:
+        raise CertificateError("zero-block artifact does not bracket target")
+    if artifact_int(
+        block.get("target_below_zero_index"),
+        "zero_block.target_below_zero_index",
+    ) != below[-1]["index"] or artifact_int(
+        block.get("target_above_zero_index"),
+        "zero_block.target_above_zero_index",
+    ) != above[0]["index"]:
+        raise CertificateError("zero-block target bracket metadata mismatch")
+
+    selected = sorted(parsed, key=lambda item: (item["B"], item["index"]))[:nearest_count]
     declared_indices = source.get("selected_zero_indices")
     if (
         not isinstance(declared_indices, list)
@@ -567,6 +597,40 @@ def _expected_block_bins(
         or declared_indices != [item["index"] for item in selected]
     ):
         raise CertificateError("selected zero indices differ from zero-block artifact")
+    selected_index_set = {item["index"] for item in selected}
+    unselected = [
+        item for item in parsed if item["index"] not in selected_index_set
+    ]
+    if (
+        len(unselected) < 2
+        or parsed[0]["index"] in selected_index_set
+        or parsed[-1]["index"] in selected_index_set
+    ):
+        raise CertificateError(
+            "global nearest selection lacks an exterior guard on each side"
+        )
+    selected_upper = max(item["B"] for item in selected)
+    unselected_lower = min(item["distance_square_lower"] for item in unselected)
+    if not selected_upper < unselected_lower:
+        raise CertificateError(
+            "selected zero distance bounds do not separate from every guard"
+        )
+    expected_guard = {
+        "lower_exterior_zero_index": parsed[0]["index"],
+        "lower_exterior_distance_square_lower": fj(
+            parsed[0]["distance_square_lower"]
+        ),
+        "upper_exterior_zero_index": parsed[-1]["index"],
+        "upper_exterior_distance_square_lower": fj(
+            parsed[-1]["distance_square_lower"]
+        ),
+        "selected_distance_square_upper": fj(selected_upper),
+        "nearest_unselected_distance_square_lower": fj(unselected_lower),
+    }
+    if source.get("selection_scope") != GLOBAL_NEAREST_SCOPE:
+        raise CertificateError("zero-block selection is not certified globally nearest")
+    if source.get("selection_guard") != expected_guard:
+        raise CertificateError("zero-block nearest-selection guard metadata mismatch")
     expected = [
         {
             "id": f"pr71-zero-{item['index']}",

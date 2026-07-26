@@ -80,6 +80,7 @@ class NearestZeroTests(unittest.TestCase):
             "target_above_zero_index": "102",
             "zeros": [
                 {
+                    "local_index": index,
                     "zero_index": str(100 + index),
                     "ball": ball(lower - widen, upper + widen),
                 }
@@ -127,6 +128,30 @@ class NearestZeroTests(unittest.TestCase):
     def test_excess_nearest_count_rejected(self):
         with self.assertRaises(BUILD.BuildError):
             BUILD.build(self.primitives(), self.block(), self.config(), 5)
+
+    def test_global_nearest_requires_exterior_guards(self):
+        with self.assertRaisesRegex(BUILD.BuildError, "guard on each side"):
+            BUILD.build(self.primitives(), self.block(), self.config(), 3)
+
+    def test_rehashed_guard_drift_is_rejected(self):
+        primitives, block = self.primitives(), self.block()
+        output = BUILD.build(primitives, block, self.config(), 2)
+        output["source"]["selection_guard"][
+            "lower_exterior_zero_index"
+        ] += 1
+        body = dict(output)
+        body.pop("certificate_sha256")
+        output["certificate_sha256"] = BUILD.canonical_sha(body)
+        with self.assertRaisesRegex(
+            VERIFY.CertificateError, "guard metadata"
+        ):
+            VERIFY.verify_source_artifacts(output, primitives, block)
+
+    def test_nonconsecutive_block_indices_are_rejected(self):
+        block = self.block()
+        block["zeros"][1]["zero_index"] = "999"
+        with self.assertRaisesRegex(BUILD.BuildError, "not consecutive"):
+            BUILD.build(self.primitives(), block, self.config(), 2)
 
     def test_precision_block_nesting(self):
         result = COMPARE.compare(self.block(192, 1), self.block(256, 0))

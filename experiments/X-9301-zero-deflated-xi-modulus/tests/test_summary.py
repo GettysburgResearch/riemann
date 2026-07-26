@@ -32,12 +32,12 @@ class LadderSummaryTests(unittest.TestCase):
             "precision_bits": 256,
             "target": fj(Fraction(10)),
             "zeros": [
-                {"zero_index": str(index), "ball": {}} for index in range(128)
+                {"zero_index": str(index), "ball": {}} for index in range(130)
             ],
         }
         block_sha = MODULE.canonical_sha(self.block)
         for count in MODULE.COUNTS:
-            selected = list(range(count))
+            selected = list(range(1, count + 1))
             interval = {
                 "lower": fj(Fraction(1, count + 1)),
                 "upper": fj(Fraction(1, count + 1)),
@@ -56,6 +56,7 @@ class LadderSummaryTests(unittest.TestCase):
                         "zero_block_sha256": block_sha,
                         "nearest_count": count,
                         "selected_zero_indices": selected,
+                        "selection_scope": MODULE.GLOBAL_NEAREST_SCOPE,
                     },
                 }
                 certificate["certificate_sha256"] = MODULE.canonical_sha(certificate)
@@ -94,7 +95,8 @@ class LadderSummaryTests(unittest.TestCase):
         result = MODULE.summarize(self.root, self.block, 384, 512)
         self.assertEqual(result["finite_table_status"], "CERTIFIED_POSITIVE_FIXED_PR71_TABLE")
         self.assertEqual(result["closed_cell_count"], 8)
-        self.assertTrue(result["final_rung_uses_every_certified_zero_ball"])
+        self.assertTrue(result["final_rung_uses_requested_nearest_prefix"])
+        self.assertEqual(result["guard_zero_ball_count"], 2)
 
     def test_comparison_digest_drift_is_rejected(self) -> None:
         path = self.root / "nearest-64-precision-comparison-p384-p512.json"

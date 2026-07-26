@@ -15,8 +15,9 @@ if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
 COUNTS = (2, 4, 8, 16, 32, 64, 96, 128)
-SUMMARY_SCHEMA = "riemann.x9301-pr71-production-summary.v3"
+SUMMARY_SCHEMA = "riemann.x9301-pr71-production-summary.v4"
 BLOCK_SCHEMA = "riemann.x9301-pr71-hardy-zero-block.v1"
+GLOBAL_NEAREST_SCOPE = "CERTIFIED_GLOBAL_NEAREST_CRITICAL_LINE_ZEROS"
 
 
 class SummaryError(ValueError):
@@ -170,6 +171,7 @@ def summarize(
                 not isinstance(source, dict)
                 or source.get("zero_block_sha256") != zero_block_sha
                 or source.get("nearest_count") != count
+                or source.get("selection_scope") != GLOBAL_NEAREST_SCOPE
             ):
                 raise SummaryError(f"rung {count} has inconsistent source metadata")
 
@@ -201,7 +203,11 @@ def summarize(
         ):
             raise SummaryError(f"rung {count} has malformed selected-zero indices")
         selected = set(selected_raw)
-        if len(selected) != count or not previous_selected < selected:
+        if (
+            len(selected) != count
+            or not selected <= all_zero_indices
+            or not previous_selected < selected
+        ):
             raise SummaryError("nearest-zero selected sets are not strictly cumulative")
         previous_selected = selected
 
@@ -257,8 +263,8 @@ def summarize(
             }
         )
 
-    if previous_selected != all_zero_indices:
-        raise SummaryError("final rung does not use every certified zero ball")
+    if len(previous_selected) != counts[-1]:
+        raise SummaryError("final rung does not use the requested nearest prefix")
     if not all_strictly_positive:
         raise SummaryError("at least one high-precision row is not strictly positive")
     if not all_determinants_descend:
@@ -277,14 +283,18 @@ def summarize(
         "declared_row_count": len(row_ids),
         "ladder_rungs": rungs,
         "closed_cell_count": len(row_ids) * len(rungs),
+        "selection_scope": GLOBAL_NEAREST_SCOPE,
+        "final_selected_zero_count": len(previous_selected),
+        "guard_zero_ball_count": len(all_zero_indices) - len(previous_selected),
         "all_high_precision_rows_strictly_positive": True,
         "all_determinant_intervals_strictly_descending": True,
-        "final_rung_uses_every_certified_zero_ball": True,
+        "final_rung_uses_requested_nearest_prefix": True,
         "finite_table_status": "CERTIFIED_POSITIVE_FIXED_PR71_TABLE",
         "counterexample_nomination": None,
         "scope_warning": (
-            "This closes only the declared ordinate, nine-point grid, 20 rows, "
-            "and eight cumulative nearest-zero rungs. It is not a proof of RH. "
+            f"This closes only the declared ordinate, nine-point grid, "
+            f"{len(row_ids)} rows, and {len(rungs)} cumulative globally-nearest "
+            "zero rungs. It is not a proof of RH. "
             "Independent backend reproduction and review of L-9301 remain external."
         ),
     }
