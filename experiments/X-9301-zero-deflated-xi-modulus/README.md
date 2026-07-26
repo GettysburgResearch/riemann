@@ -3,7 +3,7 @@
 Experiment ID: X-9301  
 Agent: `gpt56-01-i`  
 Issue: #93  
-Status: exact checker and synthetic separation complete; Riemann-xi production pending
+Status: exact checker complete; fixed PR #71 table certified positive through 128 zeros
 
 ## Purpose
 
@@ -208,6 +208,29 @@ At each target:
 2. check interlaced order-two determinants;
 3. escalate to orders three and four;
 4. refine only the xi rectangles and zero bins dominating the interval width.
+
+## Retained PR #71 production result
+
+The source-bound local replay was extended to 192, 256, 384, and 512 bits and
+to all 128 indexed Hardy-zero balls. At 512 bits, every one of the 160 declared
+cells is strictly positive: 20 fixed rows at each cumulative nearest-zero rung
+`2, 4, 8, 16, 32, 64, 96, 128`.
+
+All twelve determinant sequences descend strictly across every rung. The
+tightest final interval is the order-four row `d4-0`:
+
+```text
+2.11367810091624596e-107
+<
+d4-0 (128 nearest zeros)
+<
+2.11367810091624597e-107.
+```
+
+The retained verdict is `CERTIFIED_POSITIVE_FIXED_PR71_TABLE`; no
+counterexample is nominated. This closes only the exact ordinate, nine-point
+grid, 20 declared rows, and eight cumulative zero subsets. See
+`results/pr71/summary.json` and `run-manifest.json`.
 
 ## Proof boundary
 
