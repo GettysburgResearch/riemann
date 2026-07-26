@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.x9703-count-only-support-chord.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "slab": {
+    "lower": {"numerator": -1, "denominator": 1},
+    "upper": {"numerator": 1, "denominator": 1}
+  },
+  "target": {"numerator": 0, "denominator": 1},
+  "total_count_interval": {
+    "lower": {"numerator": 0, "denominator": 1},
+    "upper": {"numerator": 0, "denominator": 1}
+  },
+  "log_terms": 256,
+  "synthetic_factors": [
+    {
+      "y": {"numerator": 1, "denominator": 2},
+      "multiplicity": 1
+    }
+  ],
+  "points": [
+    {"id": "u1", "u": {"numerator": 1, "denominator": 1}},
+    {"id": "u2", "u": {"numerator": 2, "denominator": 1}},
+    {"id": "u3", "u": {"numerator": 3, "denominator": 1}}
+  ],
+  "rows": [
+    {
+      "id": "empty-slab-hidden-factor",
+      "points": ["u1", "u2", "u3"]
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+name: PR71 natural support-scale Hausdorff certificate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/pr71-support-scale-hausdorff.yml
+      - claims/lemmas/L-9306-total-count-saturated-sign-chain.md
+      - claims/lemmas/L-9307-support-gap-hausdorff-residual.md
+      - experiments/X-9304-sign-chain-zero-bins/**
+      - experiments/X-9305-support-gap-hausdorff/**
+  push:
+    branches:
+      - agent/gpt56-08/93-support-gap-hausdorff
+    paths:
+      - .github/workflows/pr71-support-scale-hausdorff.yml
+      - claims/lemmas/L-9307-support-gap-hausdorff-residual.md
+      - experiments/X-9305-support-gap-hausdorff/**
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr71-support-scale-hausdorff-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous FLINT backends
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev libmpfr-dev libgmp-dev pkg-config
+          python -m pip install --upgrade pip
+          python -m pip install python-flint==0.9.0
+          pkg-config --modversion flint
+          python - <<'PY'
+          import flint
+          print('python-flint', flint.__version__)
+          PY
+
+      - name: Compile and test exact checkers
+        run: |
+          set -euo pipefail
+          python -m compileall -q \
+            experiments/X-9301-zero-deflated-xi-modulus \
+            experiments/X-9304-sign-chain-zero-bins \
+            experiments/X-9305-support-gap-hausdorff
+          python -m unittest discover \
+            -s experiments/X-9304-sign-chain-zero-bins/tests -v
+          python -m unittest discover \
+            -s experiments/X-9305-support-gap-hausdorff/tests -v
+          python experiments/X-9305-support-gap-hausdorff/verify_support_gap.py \
+            experiments/X-9305-support-gap-hausdorff/certificates/synthetic-inside-gap-factor.json \
+            --output /tmp/support-gap-synthetic-verification.json
+
+      - name: Import reviewed total-count code and PR71 guide
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_branch=claude/riemann-counterexample-pipeline-io8s2k
+          git fetch --no-tags --depth=1 origin "$source_branch"
+          source_commit=$(git rev-parse FETCH_HEAD)
+          git show "$source_commit:experiments/X-5604-exact-slab-discrepancy/slab_discrepancy.py" \
+            >/tmp/slab_discrepancy.py
+          git show "$source_commit:experiments/X-5602-riemann-siegel-detector/results/zeros-pr71-ordinate.txt" \
+            >/tmp/zeros-pr71-ordinate.txt
+          out=experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale
+          mkdir -p "$out"
+          printf '%s\n' "$source_commit" >"$out/imported-source-commit.txt"
+          sha256sum /tmp/slab_discrepancy.py /tmp/zeros-pr71-ordinate.txt \
+            >"$out/imported-sources.sha256"
+
+      - name: Recompute exact total count at two precisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale
+          a=75347258181331/16
+          b=37673629090985/8
+          target=20225875608341108140435/4294967296
+          for precision in 192 256; do
+            /usr/bin/time -v python /tmp/slab_discrepancy.py \
+              --a "$a" --b "$b" --target "$target" \
+              --prec "$precision" --out "$out/count-p${precision}.json" \
+              2>"$out/count-p${precision}.time.txt"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale')
+          rows=[json.loads((root/f'count-p{p}.json').read_text()) for p in (192,256)]
+          for row in rows:
+              assert row['schema']=='riemann.x5604-slab-discrepancy.v1'
+              assert row['N_total_in_slab']==172
+              assert row['N_b']['integer']-row['N_a']['integer']==172
+              assert row['target']['strictly_inside'] is True
+          assert rows[0]['N_a']['integer']==rows[1]['N_a']['integer']
+          assert rows[0]['N_b']['integer']==rows[1]['N_b']['integer']
+          (root/'count-comparison.json').write_text(json.dumps({
+              'schema':'riemann.x9305-count-comparison.v1',
+              'N_a':rows[0]['N_a']['integer'],
+              'N_b':rows[0]['N_b']['integer'],
+              'N_total':172,
+              'precisions':[192,256],
+              'verdict':'EXACT_COUNT_172_REPRODUCED'
+          },indent=2,sort_keys=True)+'\n')
+          PY
+
+      - name: Rebuild and refine the complete saturated sign chain
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale
+          python experiments/X-9304-sign-chain-zero-bins/build_sign_chain_certificate.py \
+            --guide /tmp/zeros-pr71-ordinate.txt \
+            --total-count-source "$out/count-p256.json" \
+            --slab-lower 75347258181331/16 \
+            --slab-upper 37673629090985/8 \
+            --total-count 172 \
+            --target 20225875608341108140435/4294967296 \
+            --bits 32 --workers 4 \
+            --precision-ladder 128,192,256,384,512 \
+            --output "$out/chain-initial.json"
+          python experiments/X-9304-sign-chain-zero-bins/verify_sign_chain.py \
+            "$out/chain-initial.json" \
+            --output "$out/chain-initial-verification.json"
+          /usr/bin/time -v python \
+            experiments/X-9304-sign-chain-zero-bins/refine_hardy_z_bins.py \
+            "$out/chain-initial.json" \
+            --output "$out/chain-refined.json" \
+            --bins all --rounds 28 --workers 4 \
+            --precision-ladder 128,192,256,384,512 \
+            2>"$out/chain-refinement.time.txt"
+          python experiments/X-9304-sign-chain-zero-bins/verify_sign_chain.py \
+            "$out/chain-refined.json" \
+            --output "$out/chain-refined-verification.json"
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from pathlib import Path
+          root=Path('experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale')
+          data=json.loads((root/'chain-refined-verification.json').read_text())
+          bins=data['bins']
+          def f(raw): return Fraction(raw['numerator'],raw['denominator'])
+          assert len(bins)==172
+          assert all(row['exact_zero_count']==1 and row['simple'] is True for row in bins)
+          assert all(f(left['upper']) < f(right['lower']) for left,right in zip(bins,bins[1:]))
+          (root/'chain-summary.json').write_text(json.dumps({
+              'schema':'riemann.x9305-chain-summary.v1',
+              'bin_count':172,
+              'pairwise_strictly_separated':True,
+              'maximum_width':str(max(f(row['width']) for row in bins)),
+              'verdict':'COMPLETE_172_BIN_SIMPLE_LINE_ZERO_TABLE'
+          },indent=2,sort_keys=True)+'\n')
+          PY
+
+      - name: Produce far-right direct-xi rectangles at two precisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale
+          for precision in 192 256; do
+            /usr/bin/time -v python \
+              experiments/X-9305-support-gap-hausdorff/produce_support_scale_primitives.py \
+              --precision "$precision" --series-cap 2 \
+              --output "$out/primitives-p${precision}.json" \
+              2>"$out/primitives-p${precision}.time.txt"
+          done
+
+      - name: Build and verify every support-scale chord row
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale
+          for precision in 192 256; do
+            set +e
+            python experiments/X-9305-support-gap-hausdorff/build_from_support_scale_primitives.py \
+              "$out/primitives-p${precision}.json" \
+              "$out/chain-refined.json" \
+              --log-terms 768 \
+              --output "$out/certificate-p${precision}.json"
+            status=$?
+            set -e
+            test "$status" -le 1
+            set +e
+            python experiments/X-9305-support-gap-hausdorff/verify_support_gap.py \
+              "$out/certificate-p${precision}.json" \
+              --output "$out/verification-p${precision}.json"
+            status=$?
+            set -e
+            test "$status" -le 1
+          done
+
+      - name: Require primitive and final-row precision nesting
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from pathlib import Path
+          root=Path('experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale')
+          p192=json.loads((root/'primitives-p192.json').read_text())
+          p256=json.loads((root/'primitives-p256.json').read_text())
+          v192=json.loads((root/'verification-p192.json').read_text())
+          v256=json.loads((root/'verification-p256.json').read_text())
+          def f(raw): return Fraction(raw['numerator'],raw['denominator'])
+          def nested_interval(low,high):
+              return f(low['lower']) <= f(high['lower']) <= f(high['upper']) <= f(low['upper'])
+          assert [p['id'] for p in p192['points']]==[p['id'] for p in p256['points']]
+          primitive_failures=[]
+          for low,high in zip(p192['points'],p256['points']):
+              if low['u']!=high['u']:
+                  primitive_failures.append(low['id']+':u')
+              for axis in ('real','imag'):
+                  if not nested_interval(low['xi_rectangle'][axis],high['xi_rectangle'][axis]):
+                      primitive_failures.append(low['id']+':'+axis)
+          assert [r['id'] for r in v192['rows']]==[r['id'] for r in v256['rows']]
+          row_failures=[]
+          for low,high in zip(v192['rows'],v256['rows']):
+              if not nested_interval(low['interval'],high['interval']):
+                  row_failures.append(low['id'])
+          summary={
+              'schema':'riemann.x9305-support-scale-precision-comparison.v1',
+              'primitive_failures':primitive_failures,
+              'row_failures':row_failures,
+              'all_primitives_nested':not primitive_failures,
+              'all_rows_nested':not row_failures,
+          }
+          assert not primitive_failures and not row_failures, summary
+          (root/'precision-comparison.json').write_text(
+              json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Summarize and nominate only a strict directed negative
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from pathlib import Path
+          root=Path('experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale')
+          result=json.loads((root/'verification-p256.json').read_text())
+          def f(raw): return Fraction(raw['numerator'],raw['denominator'])
+          def midpoint(row): return (f(row['interval']['lower'])+f(row['interval']['upper']))/2
+          tight=min(result['rows'],key=lambda row:abs(midpoint(row)))
+          summary={
+              'schema':'riemann.x9305-pr71-support-scale-summary.v1',
+              'target':{'numerator':'20225875608341108140435','denominator':'4294967296'},
+              'exact_total_count':172,
+              'certified_simple_line_zero_bins':172,
+              'support_gap':result['support_gap'],
+              'point_count':15,
+              'row_count':len(result['rows']),
+              'verdict':result['verdict'],
+              'certified_negative_rows':result['certified_negative_rows'],
+              'unresolved_rows':result['unresolved_rows'],
+              'tightest_row_id':tight['id'],
+              'tightest_row_status':tight['status'],
+              'tightest_row_interval':tight['interval'],
+              'counterexample_nomination':(
+                  'PENDING_INDEPENDENT_REPRODUCTION_AND_ANALYTIC_REVIEW'
+                  if result['certified_negative_rows'] else None
+              )
+          }
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+          find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | \
+            xargs -0 sha256sum >"$out/SHA256SUMS"
+
+      - name: Upload proof and diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr71-natural-support-scale-hausdorff
+          path: experiments/X-9305-support-gap-hausdorff/results/pr71-support-scale/
+          retention-days: 30
+          if-no-files-found: warn

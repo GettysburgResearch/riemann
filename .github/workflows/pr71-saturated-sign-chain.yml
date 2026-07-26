@@ -1,4 +1,4 @@
-name: PR71 saturated Hardy-Z sign-chain deflation
+name: PR71 saturated Hardy-Z sign-chain and support-gap deflation
 
 on:
   workflow_dispatch:
@@ -6,14 +6,19 @@ on:
     paths:
       - .github/workflows/pr71-saturated-sign-chain.yml
       - claims/lemmas/L-9306-total-count-saturated-sign-chain.md
+      - claims/lemmas/L-9307-support-gap-hausdorff-residual.md
       - experiments/X-9304-sign-chain-zero-bins/**
+      - experiments/X-9305-support-gap-hausdorff/**
   push:
     branches:
       - agent/gpt56-08/93-sign-chain-zero-bins
+      - agent/gpt56-08/93-support-gap-hausdorff
     paths:
       - .github/workflows/pr71-saturated-sign-chain.yml
       - claims/lemmas/L-9306-total-count-saturated-sign-chain.md
+      - claims/lemmas/L-9307-support-gap-hausdorff-residual.md
       - experiments/X-9304-sign-chain-zero-bins/**
+      - experiments/X-9305-support-gap-hausdorff/**
 
 permissions:
   contents: read
@@ -48,17 +53,23 @@ jobs:
           print('python-flint', flint.__version__)
           PY
 
-      - name: Compile and test the exact sign-chain layer
+      - name: Compile and test the exact finite layers
         run: |
           set -euo pipefail
           python -m compileall -q \
+            experiments/X-9301-zero-deflated-xi-modulus \
             experiments/X-9304-sign-chain-zero-bins \
-            experiments/X-9301-zero-deflated-xi-modulus
+            experiments/X-9305-support-gap-hausdorff
           python -m unittest discover \
             -s experiments/X-9304-sign-chain-zero-bins/tests -v
+          python -m unittest discover \
+            -s experiments/X-9305-support-gap-hausdorff/tests -v
           python experiments/X-9304-sign-chain-zero-bins/verify_sign_chain.py \
             experiments/X-9304-sign-chain-zero-bins/certificates/synthetic-saturated-chain.json \
             --output /tmp/synthetic-sign-chain-verification.json
+          python experiments/X-9305-support-gap-hausdorff/verify_support_gap.py \
+            experiments/X-9305-support-gap-hausdorff/certificates/synthetic-inside-gap-factor.json \
+            --output /tmp/synthetic-support-gap-verification.json
 
       - name: Import the reviewed exact-count source and PR71 guide
         shell: bash
@@ -225,6 +236,61 @@ jobs:
               --output "$out/chain-${count}-precision-comparison.json"
           done
 
+      - name: Build and verify the complete support-gap cone
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-9304-sign-chain-zero-bins/results/pr71
+          for precision in 192 256; do
+            set +e
+            python experiments/X-9305-support-gap-hausdorff/build_from_x9301.py \
+              "$out/chain-172-certificate-p${precision}.json" \
+              "$out/chain-refined.json" \
+              --log-terms 768 \
+              --output "$out/support-gap-certificate-p${precision}.json"
+            status=$?
+            set -e
+            test "$status" -le 1
+            set +e
+            python experiments/X-9305-support-gap-hausdorff/verify_support_gap.py \
+              "$out/support-gap-certificate-p${precision}.json" \
+              --output "$out/support-gap-verification-p${precision}.json"
+            status=$?
+            set -e
+            test "$status" -le 1
+          done
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from pathlib import Path
+          root=Path('experiments/X-9304-sign-chain-zero-bins/results/pr71')
+          low=json.loads((root/'support-gap-verification-p192.json').read_text())
+          high=json.loads((root/'support-gap-verification-p256.json').read_text())
+          assert low['support_gap']==high['support_gap']
+          assert [row['id'] for row in low['rows']]==[row['id'] for row in high['rows']]
+          def f(raw): return Fraction(raw['numerator'],raw['denominator'])
+          nested=True
+          failures=[]
+          for left,right in zip(low['rows'],high['rows']):
+              lo1=f(left['interval']['lower']); hi1=f(left['interval']['upper'])
+              lo2=f(right['interval']['lower']); hi2=f(right['interval']['upper'])
+              if not (lo1 <= lo2 <= hi2 <= hi1):
+                  nested=False
+                  failures.append(left['id'])
+          summary={
+              'schema':'riemann.x9305-support-gap-precision-comparison.v1',
+              'lower_precision':192,
+              'higher_precision':256,
+              'row_count':len(low['rows']),
+              'all_rows_nested':nested,
+              'failures':failures,
+          }
+          assert nested, summary
+          (root/'support-gap-precision-comparison.json').write_text(
+              json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
       - name: Summarize every directed row and nominate only strict negatives
         shell: bash
         run: |
@@ -256,25 +322,39 @@ jobs:
                   'tightest_row_interval':tight['interval'],
               }
               ladder.append(item)
-              negative.extend((count,row) for row in result['rows'] if row['status']=='CERTIFIED_NEGATIVE')
-              unresolved.extend((count,row) for row in result['rows'] if row['status']=='UNRESOLVED')
+              negative.extend((f'x9301-{count}',row) for row in result['rows'] if row['status']=='CERTIFIED_NEGATIVE')
+              unresolved.extend((f'x9301-{count}',row) for row in result['rows'] if row['status']=='UNRESOLVED')
+
+          support=json.loads((root/'support-gap-verification-p256.json').read_text())
+          support_tight=min(support['rows'],key=lambda row:abs(midpoint(row)))
+          negative.extend(('x9305-support-gap',row) for row in support['rows'] if row['status']=='CERTIFIED_NEGATIVE')
+          unresolved.extend(('x9305-support-gap',row) for row in support['rows'] if row['status']=='UNRESOLVED')
+
           summary={
-              'schema':'riemann.x9304-pr71-saturated-chain-summary.v1',
+              'schema':'riemann.x9304-x9305-pr71-summary.v1',
               'target':{'numerator':'20225875608341108140435','denominator':'4294967296'},
               'exact_total_count':172,
               'certified_simple_line_zero_bins':172,
-              'ladder':ladder,
-              'certified_negative_rows':len(negative),
-              'unresolved_rows':len(unresolved),
+              'x9301_ladder':ladder,
+              'support_gap':support['support_gap'],
+              'support_gap_row_count':len(support['rows']),
+              'support_gap_verdict':support['verdict'],
+              'support_gap_negative_rows':support['certified_negative_rows'],
+              'support_gap_unresolved_rows':support['unresolved_rows'],
+              'support_gap_tightest_row_id':support_tight['id'],
+              'support_gap_tightest_row_status':support_tight['status'],
+              'support_gap_tightest_row_interval':support_tight['interval'],
+              'certified_negative_rows_total':len(negative),
+              'unresolved_rows_total':len(unresolved),
               'counterexample_nomination':(
                   'PENDING_INDEPENDENT_REPRODUCTION_AND_ANALYTIC_REVIEW'
                   if negative else None
               ),
               'verdict':(
-                  'STRICT_NEGATIVE_ZERO_DEFLATED_DIRECT_XI_ROW_FOUND'
+                  'STRICT_NEGATIVE_RH_ROW_FOUND'
                   if negative else
                   ('NO_NEGATIVE_BUT_SOME_ROWS_UNRESOLVED' if unresolved else
-                   'NO_NEGATIVE_IN_COMPLETE_DECLARED_LADDER')
+                   'NO_NEGATIVE_IN_COMPLETE_DECLARED_X9301_X9305_FAMILY')
               )
           }
           (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
@@ -287,7 +367,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pr71-saturated-sign-chain-deflation
+          name: pr71-saturated-sign-chain-support-gap
           path: experiments/X-9304-sign-chain-zero-bins/results/pr71/
           retention-days: 30
           if-no-files-found: warn
