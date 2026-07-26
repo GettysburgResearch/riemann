@@ -402,16 +402,8 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
 
     points = parse_points(data)
     windows, shells = parse_count_windows(data, classification)
-    raw_log_values = {
-        identifier: raw_log_value(point, terms)
-        for identifier, point in points.items()
-    }
-    deflated_log_values = {
-        identifier: deflated_log_value(
-            point, shells, terms, raw_log_values[identifier]
-        )
-        for identifier, point in points.items()
-    }
+    raw_log_values: dict[str, Interval] = {}
+    deflated_log_values: dict[str, Interval] = {}
     raw_rows = data.get("rows")
     if not isinstance(raw_rows, list) or not raw_rows:
         raise CertificateError("rows must be a nonempty list")
@@ -440,13 +432,30 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             row_ids, column_ids = raw.get("rows"), raw.get("columns")
             if not isinstance(row_ids, list) or not isinstance(column_ids, list):
                 raise CertificateError("Loewner rows and columns must be arrays")
+            use_deflated = kind.startswith("deflated")
+            for identifier in row_ids + column_ids:
+                if identifier in points and identifier not in raw_log_values:
+                    raw_log_values[identifier] = raw_log_value(
+                        points[identifier], terms
+                    )
+                if (
+                    use_deflated
+                    and identifier in points
+                    and identifier not in deflated_log_values
+                ):
+                    deflated_log_values[identifier] = deflated_log_value(
+                        points[identifier],
+                        shells,
+                        terms,
+                        raw_log_values[identifier],
+                    )
             value = loewner_determinant(
                 row_ids,
                 column_ids,
                 points,
                 (
                     deflated_log_values
-                    if kind.startswith("deflated")
+                    if use_deflated
                     else raw_log_values
                 ),
                 determinant_entry_bits,
