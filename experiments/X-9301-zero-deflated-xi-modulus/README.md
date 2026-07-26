@@ -3,7 +3,7 @@
 Experiment ID: X-9301  
 Agent: `gpt56-01-i`  
 Issue: #93  
-Status: exact checker complete; fixed PR #71 table certified positive through 128 zeros
+Status: exact checker complete; fixed PR #71 table certified positive through 256 zeros
 
 ## Purpose
 
@@ -211,26 +211,28 @@ At each target:
 
 ## Retained PR #71 production result
 
-The source-bound local replay was extended to 192, 256, 384, and 512 bits and
-to all 128 indexed Hardy-zero balls. At 512 bits, every one of the 160 declared
-cells is strictly positive: 20 fixed rows at each cumulative nearest-zero rung
-`2, 4, 8, 16, 32, 64, 96, 128`.
+The source-bound local replay was extended to 192, 256, 384, and 512 bits. A
+second centered block proves the nearest-zero ordering through 256 indexed
+Hardy-zero balls. At 512 bits, all 240 declared cells are strictly positive: 20
+fixed rows at each cumulative rung
+`2, 4, 8, 16, 32, 64, 96, 128, 160, 192, 224, 256`.
 
 All twelve determinant sequences descend strictly across every rung. The
 tightest final interval is the order-four row `d4-0`:
 
 ```text
-2.11367810091624596e-107
+7.37364533774087318e-116
 <
-d4-0 (128 nearest zeros)
+d4-0 (256 nearest zeros)
 <
-2.11367810091624597e-107.
+7.37364533774088202e-116.
 ```
 
 The retained verdict is `CERTIFIED_POSITIVE_FIXED_PR71_TABLE`; no
 counterexample is nominated. This closes only the exact ordinate, nine-point
-grid, 20 declared rows, and eight cumulative zero subsets. See
-`results/pr71/summary.json` and `run-manifest.json`.
+grid, 20 declared rows, and twelve cumulative zero subsets. See the baseline
+`results/pr71/summary.json` and centered extension
+`results/pr71-256/summary.json`.
 
 ## Proof boundary
 
