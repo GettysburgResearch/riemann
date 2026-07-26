@@ -1,0 +1,67 @@
+{
+  "classification": "SYNTHETIC_MODEL",
+  "log_terms": 64,
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "ordinate": {"denominator": 1, "numerator": 0},
+  "points": [
+    {
+      "id": "u3",
+      "modulus_square_interval": {
+        "lower": {"denominator": 1, "numerator": 5070602400912917605986812821504},
+        "upper": {"denominator": 1, "numerator": 5070602400912917605986812821504}
+      },
+      "u": {"denominator": 1, "numerator": 3}
+    },
+    {
+      "id": "u4",
+      "modulus_square_interval": {
+        "lower": {"denominator": 1, "numerator": 88817841970012523233890533447265625},
+        "upper": {"denominator": 1, "numerator": 88817841970012523233890533447265625}
+      },
+      "u": {"denominator": 1, "numerator": 4}
+    },
+    {
+      "id": "u6",
+      "modulus_square_interval": {
+        "lower": {"denominator": 1, "numerator": 1798465042647412146620280340569649349251249},
+        "upper": {"denominator": 1, "numerator": 1798465042647412146620280340569649349251249}
+      },
+      "u": {"denominator": 1, "numerator": 6}
+    },
+    {
+      "id": "u7",
+      "modulus_square_interval": {
+        "lower": {"denominator": 1, "numerator": 5708990770823839524233143877797980545530986496},
+        "upper": {"denominator": 1, "numerator": 5708990770823839524233143877797980545530986496}
+      },
+      "u": {"denominator": 1, "numerator": 7}
+    }
+  ],
+  "rows": [
+    {
+      "id": "selected-monotonicity",
+      "kind": "selected-factor-monotonicity",
+      "left": "u3",
+      "right": "u4"
+    },
+    {
+      "columns": ["u4", "u7"],
+      "id": "selected-loewner",
+      "kind": "selected-factor-cross-loewner-determinant",
+      "rows": ["u3", "u6"]
+    }
+  ],
+  "schema": "riemann.xi-modulus-selected-factor-deflation.v1",
+  "selected_zero_bins": [
+    {
+      "count_lower": 50,
+      "gate": {
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "status": "SYNTHETIC_CRITICAL_LINE_ZERO_COUNT"
+      },
+      "id": "line-mass",
+      "lower_ordinate": {"denominator": 1, "numerator": 1},
+      "upper_ordinate": {"denominator": 1, "numerator": 1}
+    }
+  ]
+}
