@@ -64,3 +64,30 @@ the same basis file) plus `primitive_sha256`, and records every digest.
 ## Verdict
 
 See `results/w4-run.json` — filled by the run, not by hand.
+
+## Verdict (filled after the directed run)
+
+```text
+b0 (reduced replay, directed)  [27375115.77715610683624020837623539349037578852...,
+                                27375115.77715610683624020837623539349038285870...]
+width                          7.07e-33   (the old moment boxes, as predicted)
+direct 17-node contraction     overlaps (uninformatively wide, as the handoff
+                               predicted for the naive route)
+b0.lower - theta0 = +2.8574989484231446502e-12   (above the lower gate)
+theta1 - b0.upper = +6.6524756023507722671e-12   (below the upper gate)
+L(q0^2)      = [+2.857e-12 ...]  > 0
+L(y q1^2)    = [+2.661e-11 ...]  > 0
+checker:  NO_CERTIFIED_NEGATIVE_FROM_MIDPOINT_SCHUR_DIRECTIONS  (exit 1)
+```
+
+Both reconnaissance gap predictions are reproduced to all twenty published
+digits by the directed 512/640-bit run.  **No counterexample: the w = 4
+positive-anchor degree-15 cone is decided in the null direction**, with the
+b0 enclosure sitting ~10^20 interval-widths inside the two-sided gate.  Per
+the handoff's promotion boundary, no `Z-####` object is allocated.
+
+Runtime note: the whole directed decision costs ~6 s once two harness choices
+are made — 64 exact-log terms (tail ~1e-62, ample against a 1e-12 gate;
+240 was 14x costlier) and outward dyadic rounding of rectangle endpoints
+before the exact logs (sound widening).  A first attempt at 240 terms without
+rounding ran 50+ minutes.

@@ -1,0 +1,45 @@
+12 deflation shells; log terms 64
+  residual 1/16 done [0s]
+  residual 2/16 done [1s]
+  residual 3/16 done [1s]
+  residual 4/16 done [2s]
+  residual 5/16 done [2s]
+  residual 6/16 done [2s]
+  residual 7/16 done [3s]
+  residual 8/16 done [3s]
+  residual 9/16 done [4s]
+  residual 10/16 done [4s]
+  residual 11/16 done [4s]
+  residual 12/16 done [5s]
+  residual 13/16 done [5s]
+  residual 14/16 done [5s]
+  residual 15/16 done [6s]
+  residual 16/16 done [6s]
+  anchor residual done [6s]
+full    b0 in [-252008293070572568328516689203204985434411266162.9298941445421270969406, 252008293070572568328516689203204985434466016394.4842063582146075136931]
+reduced b0 in [27375115.77715610683624020837623539349037578852414804348822375936674079, 27375115.77715610683624020837623539349038285870382110725178262564869183]
+intersection  [27375115.77715610683624020837623539349037578852414804348822375936674079, 27375115.77715610683624020837623539349038285870382110725178262564869183]
+width: 7.0701797E-33
+Traceback (most recent call last):
+  File "/home/user/riemann/experiments/X-0018-w4-anchor-run/run_w4.py", line 270, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/user/riemann/experiments/X-0018-w4-anchor-run/run_w4.py", line 225, in main
+    candidate_path.write_text(json.dumps({
+                              ^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.11/json/encoder.py", line 395, in _iterencode_dict
+    yield _intstr(value)
+          ^^^^^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

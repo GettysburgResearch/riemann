@@ -44,6 +44,8 @@ import json
 import subprocess
 import sys
 import time
+
+sys.set_int_max_str_digits(4_000_000)
 from fractions import Fraction
 from pathlib import Path
 
@@ -60,7 +62,7 @@ def main() -> int:
     ap.add_argument("--w4-tree", type=Path, required=True)
     ap.add_argument("--anchor-low", type=Path, required=True)
     ap.add_argument("--anchor-high", type=Path, required=True)
-    ap.add_argument("--log-terms", type=int, default=240)
+    ap.add_argument("--log-terms", type=int, default=64)
     ap.add_argument("--output", type=Path, default=HERE / "results" / "w4-run.json")
     args = ap.parse_args()
 
@@ -152,10 +154,30 @@ def main() -> int:
     if W in set(old_nodes):
         raise SystemExit("anchor duplicates an old node")
     shells = parent.deflation_shells(old_certificate)
+    print(f"{len(shells)} deflation shells; log terms {args.log_terms}", flush=True)
+
+    def widen_point(point, bits=512):
+        """Outward-round the xi rectangle to dyadic endpoints: pure interval
+        widening (sound by inclusion), which caps the exact-log input size."""
+        out = dict(point)
+        rect = {}
+        for comp in ("real", "imag"):
+            iv = parent.parse_interval(point["xi_rectangle"][comp], comp)
+            scale = 1 << bits
+            lo = Fraction((iv.lower * scale).__floor__(), scale)
+            hi = Fraction(-((-iv.upper * scale).__floor__()), scale)
+            rect[comp] = {"lower": {"numerator": lo.numerator, "denominator": lo.denominator},
+                          "upper": {"numerator": hi.numerator, "denominator": hi.denominator}}
+        out["xi_rectangle"] = rect
+        return out
+
     log = parent.ExactLogEncloser(args.log_terms)
-    old_residuals = [parent.residual_interval(p, u, shells, log)
-                     for p, u in zip(old_points, old_nodes)]
-    anchor_residual = parent.residual_interval(ph, W, shells, log)
+    old_residuals = []
+    for i, (p, u) in enumerate(zip(old_points, old_nodes)):
+        old_residuals.append(parent.residual_interval(widen_point(p), u, shells, log))
+        print(f"  residual {i+1}/16 done [{round(time.time()-t0)}s]", flush=True)
+    anchor_residual = parent.residual_interval(widen_point(ph), W, shells, log)
+    print(f"  anchor residual done [{round(time.time()-t0)}s]", flush=True)
 
     # ---- direct seventeen-node response-1 contraction ---------------------
     full_nodes = old_nodes + [W]
@@ -192,6 +214,12 @@ def main() -> int:
     hi = min(full_b0.upper, reduced_b0.upper)
     if lo > hi:
         raise SystemExit("direct and reduced b0 enclosures do not overlap")
+    # outward-round the intersection to 400-bit dyadics: sound widening
+    # (2^-400 ~ 1e-120, negligible vs the 1e-12 gate margins) that keeps the
+    # candidate JSON and the checker's exact arithmetic at human scale
+    scale = 1 << 400
+    lo = Fraction((lo * scale).__floor__(), scale)
+    hi = Fraction(-((-hi * scale).__floor__()), scale)
     b0 = parent.RationalInterval(lo, hi)
 
     dec = pa.decimal_string
@@ -214,10 +242,12 @@ def main() -> int:
     }, indent=1) + "\n")
 
     verdict_path = HERE / "results" / "w4-verdict.json"
+    import os
+    env = dict(os.environ, PYTHONINTMAXSTRDIGITS="4000000")
     proc = subprocess.run(
         [sys.executable, str(x9312 / "verify_b0_interval.py"),
          str(x9306), str(candidate_path), "--output", str(verdict_path)],
-        capture_output=True, text=True, cwd=x9312)
+        capture_output=True, text=True, cwd=x9312, env=env)
     print("checker stdout:", proc.stdout.strip()[:2000])
     if proc.stderr.strip():
         print("checker stderr:", proc.stderr.strip()[:800])
