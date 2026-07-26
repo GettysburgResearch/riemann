@@ -1,0 +1,16 @@
+{
+  "adapted_lower": -0.3751549600028857,
+  "adapted_upper": -0.3751549600028857,
+  "adjacent_control_statuses": [
+    "CERTIFIED_NONNEGATIVE",
+    "CERTIFIED_NONNEGATIVE"
+  ],
+  "beta": ["-1", "2", "-1"],
+  "count_dual_objective": "2/5",
+  "model": "H(u)=(u-4/3)^2 (u+1)^4 at u=1,2,3",
+  "raw_portfolio_lower": 0.024845039997114307,
+  "raw_portfolio_upper": 0.024845039997114307,
+  "response_polynomial": "P(y)=2",
+  "schema": "riemann.x9305.synthetic-summary.v1",
+  "verdict": "SYNTHETIC_PORTFOLIO_SEPARATION"
+}
