@@ -1,9 +1,9 @@
 {
  "schema": "riemann.x5604-ledger.v1",
  "agent": "opus5-01",
- "certified_slabs": 5,
- "total_span": 12904.9375,
- "total_zeros": 58474,
+ "certified_slabs": 9,
+ "total_span": 35705.9375,
+ "total_zeros": 156061,
  "rows": [
   {
    "file": "certified-signs-pr71.json",
@@ -79,6 +79,66 @@
    "ok": true,
    "problems": [],
    "verdict": "CERTIFIED D = 0 over 40.0 units at t ~ 1e+16: N_0 = N = 222, all zeros on the critical line, all simple, all rigorously located."
+  },
+  {
+   "file": "platt-certify-frontier-0.json",
+   "tag": "frontier+0",
+   "a": 3000017500000.5,
+   "b": 3000017507600.5,
+   "span": 7600.0,
+   "N": 32528,
+   "N0": 32528,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 7600.0 units at t ~ 3.00002e+12: N_0 = N = 32528, all zeros on the critical line, all simple, all rigorously located."
+  },
+  {
+   "file": "platt-certify-frontier-1.json",
+   "tag": "frontier+7600",
+   "a": 3000017507600.5,
+   "b": 3000017515200.5,
+   "span": 7600.0,
+   "N": 32527,
+   "N0": 32527,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 7600.0 units at t ~ 3.00002e+12: N_0 = N = 32527, all zeros on the critical line, all simple, all rigorously located."
+  },
+  {
+   "file": "platt-certify-frontier-2.json",
+   "tag": "frontier+15200",
+   "a": 3000017515200.5,
+   "b": 3000017522800.5,
+   "span": 7600.0,
+   "N": 32527,
+   "N0": 32527,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 7600.0 units at t ~ 3.00002e+12: N_0 = N = 32527, all zeros on the critical line, all simple, all rigorously located."
+  },
+  {
+   "file": "platt-certify-frontier-stitch.json",
+   "tag": "frontier stitch",
+   "a": 3000017499999.5,
+   "b": 3000017500000.5,
+   "span": 1.0,
+   "N": 5,
+   "N0": 5,
+   "D": 0,
+   "undecided": 0,
+   "recorded_D": 0,
+   "ok": true,
+   "problems": [],
+   "verdict": "CERTIFIED D = 0 over 1.0 units at t ~ 3.00002e+12: N_0 = N = 5, all zeros on the critical line, all simple, all rigorously located."
   }
  ]
 }

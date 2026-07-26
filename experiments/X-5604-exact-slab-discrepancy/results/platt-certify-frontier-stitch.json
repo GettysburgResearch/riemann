@@ -1,0 +1,50 @@
+{
+ "schema": "riemann.x5604-platt-certify.v1",
+ "agent": "fable5-01",
+ "classification": "RIGOROUS: N from zeta_nzeros balls isolating unique integers; N_0 from pairwise-disjoint Platt-isolated zero balls strictly inside the slab (semantic trust: an isolated ball contains a zero of Z, same class as zeta_nzeros). Gap intervals derived exactly from the ball endpoints.",
+ "label": "frontier stitch",
+ "a": "6000034999999/2",
+ "b": "6000035000001/2",
+ "span": 1.0,
+ "prec_zeros": 128,
+ "prec_counts": 192,
+ "N": 5,
+ "N0_disjoint_balls_inside": 5,
+ "D": 0,
+ "problems": [],
+ "seconds_counts": 5.587211608886719,
+ "seconds_zeros": 31.728610277175903,
+ "seconds_per_zero": 6.34572205543518,
+ "ell": 4.279956878046445,
+ "smallest_gaps_by_upper_bound": [
+  {
+   "delta_interval": [
+    0.560319862341494,
+    0.5603198623415145
+   ],
+   "gamma_approx": 3000017499999.844
+  },
+  {
+   "delta_interval": [
+    0.7586669079163586,
+    0.7586669079163709
+   ],
+   "gamma_approx": 3000017500000.2485
+  },
+  {
+   "delta_interval": [
+    1.16925870933541,
+    1.1692587093354228
+   ],
+   "gamma_approx": 3000017499999.975
+  },
+  {
+   "delta_interval": [
+    1.4419116875549902,
+    1.441911687555008
+   ],
+   "gamma_approx": 3000017499999.5073
+  }
+ ],
+ "verdict": "CERTIFIED D = 0 over 1.0 units at t ~ 3.00002e+12: N_0 = N = 5, all zeros on the critical line, all simple, all rigorously located."
+}
