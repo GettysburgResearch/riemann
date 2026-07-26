@@ -1,0 +1,64 @@
+{
+  "schema": "riemann.x9802-critical-candidate.v1",
+  "id": "pr105-jensen-repair-d1e6",
+  "classification": "EXACT_RESPONSE_CERTIFICATE_EMPIRICAL_DIRECT_XI_SIGN",
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "origin": {"numerator": 20225875608341108140435, "denominator": 4294967296},
+  "heights": [
+    {
+      "id": "center",
+      "ordinate": {"numerator": 20225875608341108140435, "denominator": 4294967296},
+      "source_role": "pr71"
+    },
+    {
+      "id": "plus",
+      "ordinate": {"numerator": 20225875608342450317715, "denominator": 4294967296},
+      "source_role": "positive-control-jm5"
+    }
+  ],
+  "point_ids": ["x-10", "x-6", "x-5"],
+  "terms": [
+    {"height": "center", "point": "x-10", "beta": {"numerator": -23, "denominator": 1}},
+    {"height": "center", "point": "x-6", "beta": {"numerator": 46, "denominator": 1}},
+    {"height": "center", "point": "x-5", "beta": {"numerator": -23, "denominator": 1}},
+    {"height": "plus", "point": "x-10", "beta": {"numerator": -750746, "denominator": 1}},
+    {"height": "plus", "point": "x-6", "beta": {"numerator": 1000000, "denominator": 1}},
+    {"height": "plus", "point": "x-5", "beta": {"numerator": -249254, "denominator": 1}}
+  ],
+  "critical_certificate": {
+    "status": "EXHAUSTIVE_STURM_CRITICAL_VALUES",
+    "log_terms": 64,
+    "expected_derivative_degree": 9,
+    "expected_distinct_real_roots": 5,
+    "root_intervals": [
+      {
+        "lower": {"numerator": -89055191599829001690000, "denominator": 1208925819614629174706176},
+        "upper": {"numerator": -89055191599829001689997, "denominator": 1208925819614629174706176}
+      },
+      {
+        "lower": {"numerator": -29700943224204692415777, "denominator": 1208925819614629174706176},
+        "upper": {"numerator": -29700943224204692415774, "denominator": 1208925819614629174706176}
+      },
+      {
+        "lower": {"numerator": 2999835520190986646, "denominator": 1208925819614629174706176},
+        "upper": {"numerator": 2999835520190986649, "denominator": 1208925819614629174706176}
+      },
+      {
+        "lower": {"numerator": 23223462215151233987696, "denominator": 1208925819614629174706176},
+        "upper": {"numerator": 23223462215151233987699, "denominator": 1208925819614629174706176}
+      },
+      {
+        "lower": {"numerator": 377789318630130805609619, "denominator": 1208925819614629174706176},
+        "upper": {"numerator": 377789318630130805609622, "denominator": 1208925819614629174706176}
+      }
+    ]
+  },
+  "integer_normalization": 1000000,
+  "empirical_direct_xi": {
+    "source_precision_bits": 256,
+    "integer_portfolio_midpoint": "+5.8235859060121850288",
+    "normalized_portfolio_midpoint": "+5.8235859060121850288e-6",
+    "status": "EMPIRICAL_POSITIVE_NOT_DIRECTED"
+  },
+  "proof_boundary": "The derivative polynomial, all five root isolators and every critical response lower bound are exact checker inputs. The quoted direct-xi margin is ordinary midpoint reconnaissance until the p192/p256 adapter is run."
+}
