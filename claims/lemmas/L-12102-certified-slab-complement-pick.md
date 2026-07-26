@@ -36,7 +36,13 @@ the following unconditional data have been certified:
 Then every zero in the slab is one of the certified critical-line zeros in the
 bins. No RH assumption is used in this completeness statement.
 
-For an exact zero-sum vector \(v\), define
+For an exact nonzero Gaussian-rational vector \(v\) satisfying
+
+\[
+ \sum_i v_i=0,
+\]
+
+define
 
 \[
  Q_{[a,b]}(v)
@@ -69,14 +75,20 @@ for \(Q_{[a,b]}(v)\) has upper endpoint strictly below zero.
 
 ## Matrix form
 
-Let
+For one ordinate define the column resolvent
 
 \[
- h(\gamma)_i=\frac1{\overline{z_i}+i\gamma}.
+ r(\gamma)_i=\frac1{z_i-i\gamma}. \tag{4}
 \]
 
-The full weighted matrix \(M^{[a,b]}\) is defined in L-12101. Define the exact
-slab-complement matrix
+Then
+
+\[
+ |\Phi_v(\gamma)|^2
+ =v^*r(\gamma)r(\gamma)^*v. \tag{5}
+\]
+
+Let \(M^{[a,b]}\) be the full weighted Hermitian matrix from L-12101 and put
 
 \[
  M^{\rm out}_{[a,b]}
@@ -84,7 +96,7 @@ slab-complement matrix
  M^{[a,b]}
  -
  \sum_{\substack{\gamma:\\a<\gamma<b}}
- g_{a,b}(\gamma)\,h(\gamma)h(\gamma)^*. \tag{4}
+ g_{a,b}(\gamma)\,r(\gamma)r(\gamma)^*. \tag{6}
 \]
 
 Under RH,
@@ -92,8 +104,12 @@ Under RH,
 \[
  v^*M^{\rm out}_{[a,b]}v\ge0
  \qquad
- \text{for every }v\in{\bf 1}^{\perp}. \tag{5}
+ \text{for every }v\in{\bf 1}^{\perp}. \tag{7}
 \]
+
+The orientation \(r r^*\), not \(\overline r r^{\mathsf T}\), is forced by
+(5). X-12101's exact scalar contraction is the authoritative proof path; its
+floating discovery ranker is tested against this matrix identity.
 
 Thus the certificate family includes:
 
@@ -102,8 +118,8 @@ Thus the certificate family includes:
 - a whole-matrix positive closure;
 - a negative eigenvector nomination followed by exact Gaussian-rational replay.
 
-The interval checker need not serialize an interval eigensystem. It may
-contract one frozen vector against primitive \(F\) rectangles and zero bins.
+The interval checker need not serialize an interval eigensystem. It contracts
+one frozen vector against primitive \(F\) rectangles and zero bins.
 
 ## Proof
 
@@ -124,8 +140,8 @@ Subtract the complete in-slab terms. What remains is the sum over
  g_{a,b}(\gamma)=(\gamma-a)(\gamma-b)\ge0.
 \]
 
-Every modulus square is nonnegative, proving (3). The matrix statement is the
-same decomposition before contraction. ∎
+Every modulus square is nonnegative, proving (3). Equation (5) gives the
+matrix statement (6)–(7). ∎
 
 ## Proof-grade interval semantics
 
@@ -136,10 +152,10 @@ For a bin \(I=[A,B]\), exact rectangular arithmetic encloses
  =
  \sum_i
  \frac{\overline{v_i}}
- {z_i-iI}. \tag{6}
+ {z_i-iI}. \tag{8}
 \]
 
-It also encloses the quadratic weight
+It also encloses
 
 \[
  g_{a,b}(I).
@@ -156,9 +172,9 @@ certified lower count \(m_r\) encloses their total because every one of those
 zeros lies in the same bin. Summing over bins and subtracting from the finite
 \(F\)-contraction gives a rigorous enclosure of (2).
 
-The proof object must retain the **joint bin interval**. Replacing one
-\(\gamma\) by independent copies inside the reciprocal factors and the
-quadratic weight is allowed only as an outward overapproximation.
+The proof object must retain the joint bin interval. Replacing one \(\gamma\)
+by independent copies in the reciprocal factors and the quadratic weight is
+allowed only as an outward overapproximation.
 
 ## Strict separation from ordinary Pick passivity
 
@@ -191,7 +207,7 @@ The ordinary Pick form is strictly positive:
 \[
  v^*Kv
  =
- \frac{7450901935000}{47129216977}>0. \tag{7}
+ \frac{7450901935000}{47129216977}>0. \tag{9}
 \]
 
 The weighted full-zero contraction is
@@ -213,13 +229,12 @@ The slab-complement residual is
  Q_{[-1,1]}(v)
  =
  -\frac{2956250}{33337}<0.
- } \tag{8}
+ } \tag{10}
 \]
 
 Thus the new finite witness can be negative on data for which ordinary Pick
-passivity is strictly positive.
-
-This is an exact synthetic zero model, not a Riemann-\(\xi\) evaluation.
+passivity is strictly positive. This is an exact synthetic zero model, not a
+Riemann-\(\xi\) evaluation.
 
 ## Relationship to current repository closures
 
@@ -239,7 +254,7 @@ The theorem is not blocked by the finite closures already obtained:
 - Every \(F\)-sample lies in \(\operatorname{Re}s>1/2\).
 - Slab endpoints are certified zero-free.
 - Every bin lies strictly inside the slab and bins are pairwise disjoint.
-- The exact slab count and the bin multiplicities use compatible endpoint
+- The exact slab count and bin multiplicities use compatible endpoint
   conventions.
 - The vector sum vanishes exactly.
 - Completeness is unconditional. RH is used only after completeness, to identify
@@ -272,12 +287,13 @@ The theorem is not blocked by the finite closures already obtained:
 4. Change one vector coordinate so that \(\sum v_i\ne0\); require rejection.
 5. Widen one primitive rectangle until zero is touched; require `UNRESOLVED`.
 6. Mutate one \(\alpha_{ij}\) sign in an independent implementation.
-7. Compare the synthetic residual with direct finite-zero summation.
+7. Replace \(r r^*\) by its conjugate orientation in the discovery ranker and
+   require disagreement with exact finite-zero contraction.
+8. Compare the synthetic residual with direct finite-zero summation.
 
 ## Suggested next attack
 
 Use the 172-bin saturated PR #71 slab from PR #108 and the 520-point complex
-\(F\) table from PR #56. Build the residual matrix on 16--32 point
-cross-height clouds, project to the exact zero-sum subspace, and optimize the
-ratio of negative midpoint to complete directed radius before freezing any
-Gaussian-dyadic finalist.
+\(F\) table from PR #56. Build the residual matrix on 16–32 point cross-height
+clouds, project to the exact zero-sum subspace, and optimize negative midpoint
+over complete directed radius before freezing any Gaussian-dyadic finalist.
