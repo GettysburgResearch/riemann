@@ -57,7 +57,9 @@ def verify_payload(payload: dict) -> dict:
 class LeverageBudgetTests(unittest.TestCase):
     def test_consistent_lower_budget(self) -> None:
         result = verify_payload(base_payload())
-        self.assertEqual(result["verdict"], "CERTIFIED_CONSISTENT_PADE_LINE_MASS_BUDGET")
+        self.assertEqual(
+            result["verdict"], "CERTIFIED_CONSISTENT_PADE_RESIDUAL_MASS_BUDGET"
+        )
         contribution = result["certified_residual_mass_contribution"]["lower"]
         self.assertEqual(contribution, rat(1, 2))
 
@@ -65,7 +67,9 @@ class LeverageBudgetTests(unittest.TestCase):
         payload = base_payload()
         payload["gap"] = iv(2, 5)
         result = verify_payload(payload)
-        self.assertEqual(result["verdict"], "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET")
+        self.assertEqual(
+            result["verdict"], "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
+        )
 
     def test_negative_upper_budget(self) -> None:
         payload = base_payload()
@@ -73,7 +77,9 @@ class LeverageBudgetTests(unittest.TestCase):
         payload["gap"] = iv(7, 10)
         payload["zero_bins"][0]["y"] = iv(3, 1)
         result = verify_payload(payload)
-        self.assertEqual(result["verdict"], "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET")
+        self.assertEqual(
+            result["verdict"], "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
+        )
         self.assertEqual(
             result["certified_residual_mass_contribution"]["lower"], rat(3, 4)
         )
@@ -95,7 +101,9 @@ class LeverageBudgetTests(unittest.TestCase):
         self.assertEqual(
             result["certified_residual_mass_contribution"]["lower"], rat(1, 2)
         )
-        self.assertEqual(result["verdict"], "CERTIFIED_NEGATIVE_PADE_LINE_MASS_BUDGET")
+        self.assertEqual(
+            result["verdict"], "CERTIFIED_NEGATIVE_PADE_RESIDUAL_MASS_BUDGET"
+        )
 
     def test_rejects_overlapping_atomic_bins(self) -> None:
         payload = base_payload()
