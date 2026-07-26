@@ -1,0 +1,80 @@
+{
+  "schema": "riemann.x9304-sign-chain-zero-bins.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "slab": {
+    "lower": {"numerator": 0, "denominator": 1},
+    "upper": {"numerator": 8, "denominator": 1}
+  },
+  "total_count_interval": {
+    "lower": {"numerator": 299, "denominator": 100},
+    "upper": {"numerator": 301, "denominator": 100}
+  },
+  "gates": {
+    "total_count_status": "SYNTHETIC",
+    "sign_status": "SYNTHETIC"
+  },
+  "target_ordinate": {"numerator": 4, "denominator": 1},
+  "samples": [
+    {
+      "t": {"numerator": 1, "denominator": 1},
+      "z_interval": {
+        "lower": {"numerator": 2, "denominator": 1},
+        "upper": {"numerator": 3, "denominator": 1}
+      }
+    },
+    {
+      "t": {"numerator": 3, "denominator": 1},
+      "z_interval": {
+        "lower": {"numerator": -3, "denominator": 1},
+        "upper": {"numerator": -2, "denominator": 1}
+      }
+    },
+    {
+      "t": {"numerator": 5, "denominator": 1},
+      "z_interval": {
+        "lower": {"numerator": 2, "denominator": 1},
+        "upper": {"numerator": 3, "denominator": 1}
+      }
+    },
+    {
+      "t": {"numerator": 7, "denominator": 1},
+      "z_interval": {
+        "lower": {"numerator": -3, "denominator": 1},
+        "upper": {"numerator": -2, "denominator": 1}
+      }
+    }
+  ],
+  "refinements": [
+    {
+      "bin_index": 0,
+      "steps": [
+        {
+          "t": {"numerator": 2, "denominator": 1},
+          "z_interval": {
+            "lower": {"numerator": 1, "denominator": 1},
+            "upper": {"numerator": 2, "denominator": 1}
+          }
+        },
+        {
+          "t": {"numerator": 5, "denominator": 2},
+          "z_interval": {
+            "lower": {"numerator": -2, "denominator": 1},
+            "upper": {"numerator": -1, "denominator": 1}
+          }
+        }
+      ]
+    },
+    {
+      "bin_index": 2,
+      "steps": [
+        {
+          "t": {"numerator": 6, "denominator": 1},
+          "z_interval": {
+            "lower": {"numerator": 1, "denominator": 1},
+            "upper": {"numerator": 2, "denominator": 1}
+          }
+        }
+      ]
+    }
+  ]
+}
