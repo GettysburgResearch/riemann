@@ -10,6 +10,7 @@ import itertools
 import json
 import math
 import sys
+from decimal import Decimal, localcontext
 from fractions import Fraction
 from pathlib import Path
 from typing import Any, Iterable
@@ -18,7 +19,7 @@ if hasattr(sys, "set_int_max_str_digits"):
     sys.set_int_max_str_digits(0)
 
 ROOT = Path(__file__).resolve().parent
-SCHEMA = "riemann.x9301-dense-high-order-midpoint-ranking.v1"
+SCHEMA = "riemann.x9301-dense-high-order-midpoint-ranking.v2"
 ROUNDING_SAFETY_FACTOR = 64.0
 
 
@@ -92,6 +93,35 @@ def determinant_and_permanent_scale(
     return determinant, scale
 
 
+def decimal_value(value: Fraction) -> Decimal:
+    return Decimal(value.numerator) / Decimal(value.denominator)
+
+
+def decimal_determinant_and_permanent_scale(
+    matrix: list[list[Decimal]],
+    permutations: tuple[tuple[tuple[int, ...], int], ...],
+) -> tuple[Decimal, Decimal]:
+    order = len(matrix)
+    if order < 1 or any(len(row) != order for row in matrix):
+        raise RankingError("matrix must be square and nonempty")
+    terms = [
+        math.prod(
+            (matrix[row][permutation[row]] for row in range(order)),
+            start=Decimal(1),
+        )
+        for permutation, _ in permutations
+    ]
+    determinant = sum(
+        (
+            Decimal(sign) * term
+            for term, (_, sign) in zip(terms, permutations)
+        ),
+        start=Decimal(0),
+    )
+    scale = sum((abs(term) for term in terms), start=Decimal(0))
+    return determinant, scale
+
+
 def partition_count(node_count: int, order: int) -> int:
     if 2 * order > node_count:
         return 0
@@ -124,6 +154,22 @@ def relative_vandermonde(indices: tuple[int, ...], nodes: list[Fraction]) -> flo
     return math.prod(factors)
 
 
+def decimal_relative_vandermonde(
+    indices: tuple[int, ...], nodes: list[Fraction]
+) -> Decimal:
+    return math.prod(
+        (
+            decimal_value(
+                (nodes[indices[right]] - nodes[indices[left]])
+                / (nodes[indices[right]] + nodes[indices[left]])
+            )
+            for left in range(len(indices))
+            for right in range(left + 1, len(indices))
+        ),
+        start=Decimal(1),
+    )
+
+
 def sparse_source_certificate(
     primitive: dict[str, Any],
     zero_block: dict[str, Any],
@@ -151,8 +197,8 @@ def sparse_source_certificate(
 
 
 def push_smallest(
-    heap: list[tuple[float, int, dict[str, Any]]],
-    score: float,
+    heap: list[tuple[Any, int, dict[str, Any]]],
+    score: Any,
     serial: int,
     entry: dict[str, Any],
     limit: int,
@@ -168,31 +214,60 @@ def rank_order(
     order: int,
     point_ids: tuple[str, ...],
     nodes: list[Fraction],
-    secants: list[list[float]],
+    secants: list[list[Any]],
     top_k: int,
+    decimal_digits: int,
 ) -> dict[str, Any]:
     permutations = signed_permutations(order)
     expected = partition_count(len(point_ids), order)
-    top_adjusted: list[tuple[float, int, dict[str, Any]]] = []
-    top_eta: list[tuple[float, int, dict[str, Any]]] = []
+    top_adjusted: list[tuple[Any, int, dict[str, Any]]] = []
+    top_eta: list[tuple[Any, int, dict[str, Any]]] = []
     negative_count = 0
     robust_negative_count = 0
-    most_negative: list[tuple[float, int, dict[str, Any]]] = []
+    most_negative: list[tuple[Any, int, dict[str, Any]]] = []
     observed = 0
-    epsilon_bound = ROUNDING_SAFETY_FACTOR * len(permutations) * sys.float_info.epsilon
+    geometry_cache: dict[tuple[int, ...], Any] = {}
+    if decimal_digits:
+        epsilon_bound: Any = (
+            Decimal(ROUNDING_SAFETY_FACTOR * len(permutations))
+            * Decimal(10) ** (8 - decimal_digits)
+        )
+        zero: Any = Decimal(0)
+    else:
+        epsilon_bound = (
+            ROUNDING_SAFETY_FACTOR
+            * len(permutations)
+            * sys.float_info.epsilon
+        )
+        zero = 0.0
 
     for serial, (rows, columns) in enumerate(
         disjoint_partitions(len(point_ids), order)
     ):
         matrix = [[secants[row][column] for column in columns] for row in rows]
-        determinant, scale = determinant_and_permanent_scale(
-            matrix, permutations
-        )
-        eta = determinant / scale if scale else 0.0
-        geometry = relative_vandermonde(rows, nodes) * relative_vandermonde(
-            columns, nodes
-        )
-        adjusted = eta / geometry if geometry else math.copysign(math.inf, eta)
+        if decimal_digits:
+            determinant, scale = decimal_determinant_and_permanent_scale(
+                matrix, permutations
+            )
+        else:
+            determinant, scale = determinant_and_permanent_scale(
+                matrix, permutations
+            )
+        if rows not in geometry_cache:
+            geometry_cache[rows] = (
+                decimal_relative_vandermonde(rows, nodes)
+                if decimal_digits
+                else relative_vandermonde(rows, nodes)
+            )
+        if columns not in geometry_cache:
+            geometry_cache[columns] = (
+                decimal_relative_vandermonde(columns, nodes)
+                if decimal_digits
+                else relative_vandermonde(columns, nodes)
+            )
+        geometry = geometry_cache[rows] * geometry_cache[columns]
+        eta = determinant / scale if scale else zero
+        adjusted = eta / geometry
         entry = {
             "rows": [point_ids[index] for index in rows],
             "columns": [point_ids[index] for index in columns],
@@ -203,7 +278,7 @@ def rank_order(
         }
         push_smallest(top_adjusted, adjusted, serial, entry, top_k)
         push_smallest(top_eta, eta, serial, entry, top_k)
-        if eta < 0:
+        if eta < zero:
             negative_count += 1
             push_smallest(most_negative, eta, serial, entry, top_k)
             if eta < -epsilon_bound:
@@ -216,10 +291,13 @@ def rank_order(
         )
 
     def sorted_entries(
-        heap: list[tuple[float, int, dict[str, Any]]],
+        heap: list[tuple[Any, int, dict[str, Any]]],
         key: str,
     ) -> list[dict[str, Any]]:
-        return sorted((item[2] for item in heap), key=lambda entry: float(entry[key]))
+        return sorted(
+            (item[2] for item in heap),
+            key=lambda entry: Decimal(entry[key]),
+        )
 
     return {
         "order": order,
@@ -229,6 +307,7 @@ def rank_order(
             f"binomial({2 * order - 1}, {order - 1})"
         ),
         "permutation_term_count": len(permutations),
+        "midpoint_decimal_digits": decimal_digits or None,
         "negative_midpoint_count": negative_count,
         "negative_beyond_roundoff_bound_count": robust_negative_count,
         "top_geometry_adjusted": sorted_entries(
@@ -249,6 +328,7 @@ def summarize(
     nearest_count: int,
     orders: tuple[int, ...],
     top_k: int,
+    decimal_digits: int = 0,
 ) -> dict[str, Any]:
     if (
         nearest_count <= 0
@@ -256,6 +336,7 @@ def summarize(
         or not orders
         or any(order < 2 or order > 4 for order in orders)
         or len(set(orders)) != len(orders)
+        or (decimal_digits != 0 and decimal_digits < 32)
     ):
         raise RankingError("invalid nearest count, top-k, or orders")
     certificate = sparse_source_certificate(
@@ -273,7 +354,9 @@ def summarize(
         for identifier in point_ids
     }
     nodes = [points[identifier]["u"] for identifier in point_ids]
-    secants = [[math.nan] * len(point_ids) for _ in point_ids]
+    fraction_secants: list[list[Fraction | None]] = [
+        [None] * len(point_ids) for _ in point_ids
+    ]
     for left, right in itertools.combinations(range(len(point_ids)), 2):
         value = VERIFY.secant(
             points[point_ids[left]],
@@ -281,24 +364,58 @@ def summarize(
             values[point_ids[left]],
             values[point_ids[right]],
         )
-        entry = float((value.lower + value.upper) / 2)
-        secants[left][right] = entry
-        secants[right][left] = entry
+        entry = (value.lower + value.upper) / 2
+        fraction_secants[left][right] = entry
+        fraction_secants[right][left] = entry
 
-    ranked_orders = [
-        rank_order(order, point_ids, nodes, secants, top_k)
-        for order in orders
-    ]
+    if decimal_digits:
+        with localcontext() as context:
+            context.prec = decimal_digits
+            secants: list[list[Any]] = [
+                [
+                    decimal_value(value) if value is not None else Decimal("NaN")
+                    for value in row
+                ]
+                for row in fraction_secants
+            ]
+            ranked_orders = [
+                rank_order(
+                    order,
+                    point_ids,
+                    nodes,
+                    secants,
+                    top_k,
+                    decimal_digits,
+                )
+                for order in orders
+            ]
+    else:
+        secants = [
+            [
+                float(value) if value is not None else math.nan
+                for value in row
+            ]
+            for row in fraction_secants
+        ]
+        ranked_orders = [
+            rank_order(order, point_ids, nodes, secants, top_k, 0)
+            for order in orders
+        ]
     robust_count = sum(
         item["negative_beyond_roundoff_bound_count"]
         for item in ranked_orders
     )
     result = {
         "schema": SCHEMA,
-        "classification": "EXPLORATORY_MIDPOINT_ONLY",
+        "classification": (
+            f"EXPLORATORY_DECIMAL_{decimal_digits}_MIDPOINT_ONLY"
+            if decimal_digits
+            else "EXPLORATORY_BINARY64_MIDPOINT_ONLY"
+        ),
         "target": certificate["ordinate"],
         "precision_bits": primitive["precision_bits"],
         "nearest_count": nearest_count,
+        "midpoint_decimal_digits": decimal_digits or None,
         "selection_scope": certificate["source"]["selection_scope"],
         "point_ids_in_increasing_u_order": list(point_ids),
         "point_count": len(point_ids),
@@ -313,7 +430,12 @@ def summarize(
         "source_binding_certificate_sha256": certificate["certificate_sha256"],
         "proof_boundary": (
             "The primitive and zero source binding is exact, but every ranked "
-            "determinant uses binary64 midpoints. No midpoint sign is a proof. "
+            + (
+                f"determinant uses {decimal_digits}-digit Decimal midpoints. "
+                if decimal_digits
+                else "determinant uses binary64 midpoints. "
+            )
+            + "No midpoint sign is a proof. "
             "The stated roundoff bound covers straightforward product/sum "
             "roundoff only and is a nomination threshold, not interval arithmetic."
         ),
@@ -329,6 +451,7 @@ def main() -> int:
     parser.add_argument("--nearest-count", type=int, default=256)
     parser.add_argument("--orders", type=int, nargs="+", default=[3])
     parser.add_argument("--top-k", type=int, default=20)
+    parser.add_argument("--decimal-digits", type=int, default=0)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     try:
@@ -338,6 +461,7 @@ def main() -> int:
             args.nearest_count,
             tuple(args.orders),
             args.top_k,
+            args.decimal_digits,
         )
         code = 1 if result["counterexample_nomination"] else 0
     except (

@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import sys
 import unittest
+from decimal import Decimal, localcontext
 from fractions import Fraction
 from pathlib import Path
 
@@ -51,6 +52,24 @@ class HighOrderMidpointRankingTests(unittest.TestCase):
         self.assertAlmostEqual(
             MODULE.relative_vandermonde((0, 2), nodes), 9 / 11
         )
+        with localcontext() as context:
+            context.prec = 50
+            self.assertEqual(
+                MODULE.decimal_relative_vandermonde((0, 2), nodes),
+                Decimal(9) / Decimal(11),
+            )
+
+    def test_decimal_determinant_sign(self) -> None:
+        matrix = [
+            [Decimal(0), Decimal(1), Decimal(0)],
+            [Decimal(1), Decimal(0), Decimal(0)],
+            [Decimal(0), Decimal(0), Decimal(1)],
+        ]
+        determinant, scale = MODULE.decimal_determinant_and_permanent_scale(
+            matrix, MODULE.signed_permutations(3)
+        )
+        self.assertEqual(determinant, Decimal(-1))
+        self.assertEqual(scale, Decimal(1))
 
 
 if __name__ == "__main__":
