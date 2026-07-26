@@ -1,0 +1,74 @@
+{
+  "schema": "riemann.moving-anchor-two-schur.synthetic.v1",
+  "status": "EXACT_SYNTHETIC_TWO_SCHUR_REPLAY",
+  "m": 2,
+  "t": {"numerator": "2", "denominator": "1"},
+  "theta0": {"numerator": "101", "denominator": "135"},
+  "theta1": {"numerator": "539", "denominator": "360"},
+  "upper": {"numerator": "541", "denominator": "720"},
+  "admissible_width": {"numerator": "7", "denominator": "2160"},
+  "old_width_value": {"numerator": "7", "denominator": "1080"},
+  "q0": [
+    {"numerator": "1", "denominator": "1"},
+    {"numerator": "-64", "denominator": "135"},
+    {"numerator": "7", "denominator": "135"}
+  ],
+  "q1": [
+    {"numerator": "1", "denominator": "1"},
+    {"numerator": "-329", "denominator": "720"},
+    {"numerator": "7", "denominator": "144"}
+  ],
+  "old_width_polynomial": [
+    {"numerator": "49", "denominator": "729"},
+    {"numerator": "-309151", "denominator": "2332800"},
+    {"numerator": "84553", "denominator": "933120"},
+    {"numerator": "-1813", "denominator": "72900"},
+    {"numerator": "49", "denominator": "20736"}
+  ],
+  "b0_ldl_pivots": [
+    {"numerator": "13", "denominator": "1"},
+    {"numerator": "270", "denominator": "13"}
+  ],
+  "b1_ldl_pivots": [
+    {"numerator": "35", "denominator": "1"},
+    {"numerator": "288", "denominator": "7"}
+  ],
+  "cases": [
+    {
+      "id": "interior",
+      "status": "INTERIOR_ADMISSIBLE",
+      "c0": {"numerator": "3", "denominator": "4"},
+      "lower_square_value": {"numerator": "1", "denominator": "540"},
+      "upper_shifted_square_value": {"numerator": "1", "denominator": "360"}
+    },
+    {
+      "id": "lower-witness",
+      "status": "LOWER_SQUARE_VIOLATION",
+      "c0": {"numerator": "7", "denominator": "10"},
+      "lower_square_value": {"numerator": "-13", "denominator": "270"},
+      "upper_shifted_square_value": {"numerator": "37", "denominator": "360"}
+    },
+    {
+      "id": "upper-witness",
+      "status": "UPPER_SHIFTED_SQUARE_VIOLATION",
+      "c0": {"numerator": "4", "denominator": "5"},
+      "lower_square_value": {"numerator": "7", "denominator": "135"},
+      "upper_shifted_square_value": {"numerator": "-7", "denominator": "72"}
+    },
+    {
+      "id": "lower-boundary",
+      "status": "LOWER_BOUNDARY",
+      "c0": {"numerator": "101", "denominator": "135"},
+      "lower_square_value": {"numerator": "0", "denominator": "1"},
+      "upper_shifted_square_value": {"numerator": "7", "denominator": "1080"}
+    },
+    {
+      "id": "upper-boundary",
+      "status": "UPPER_BOUNDARY",
+      "c0": {"numerator": "541", "denominator": "720"},
+      "lower_square_value": {"numerator": "7", "denominator": "2160"},
+      "upper_shifted_square_value": {"numerator": "0", "denominator": "1"}
+    }
+  ],
+  "proof_boundary": "finite rational moment regression only; no Riemann-xi evaluation"
+}
