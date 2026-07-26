@@ -106,3 +106,25 @@ Nothing clever — just more of this, sharded.  The frontier now advances at
 research question is orthogonal: whether the close-pair census (`O-5612`),
 run *during* frontier advancement at zero marginal cost, ever shows a pair
 tight enough to warrant the full Lehmer-quality workup.
+
+## Addendum: the census by-product
+
+Running `gap_census.py` over the chain's `97,582` rigorous ordinate balls
+(zero marginal cost — the balls already existed) produced the tightest
+certified pair in this project's `156,061` certified zeros:
+
+```text
+mean normalised gap over 97,581 gaps    1.00000
+GUE-expected minimum (heuristic)        0.0146
+observed minimum                        delta = 0.02198  RIGOROUS
+  at t = 3000017500950.7515             (950 units past the frontier)
+  interior Z at the dyadic midpoint     [-0.000508884472776 +/- 4.6e-16]
+```
+
+The interior `|Z| ~ 5.1e-4` is an order of magnitude smaller than the
+tightest pair at `t = 10^{13}` (`4.9e-3`), and the `delta` sits at `1.5x` the
+GUE-expected minimum for a sample this size — consistent with expectation,
+recorded because it is the sharpest certified close-pair object on file.  The
+`Z` ball is evaluated at the census midpoint, not at the true interior
+extremum, so the true `max |Z|` between the two zeros may be slightly larger;
+a Lehmer-quality workup would refine that.
