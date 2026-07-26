@@ -1,0 +1,612 @@
+{
+  "certificate_sha256": "0db47d033cc5708c241b024b462a04063d01f84e549e2113b91d9d429900e9c0",
+  "classification": "RIEMANN_XI_DIRECTED",
+  "common_xi_scale_power_of_two": 5335951715288,
+  "count_windows": [
+    {
+      "count_lower": 1,
+      "gate": {
+        "sha256": "8324f23a9b242e64eda45037f755fb1fc93d046267d781bbc7d94d03997079f2",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_m5",
+      "radius": {
+        "denominator": 32,
+        "numerator": 1
+      }
+    },
+    {
+      "count_lower": 1,
+      "gate": {
+        "sha256": "22ff4f5c46521e879b2c26a816b4d449df8f494cbdcf5ffb9b00157375b344d8",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_m4",
+      "radius": {
+        "denominator": 16,
+        "numerator": 1
+      }
+    },
+    {
+      "count_lower": 2,
+      "gate": {
+        "sha256": "4f666c36c84c9f78b266c6078cfee8c0728d5a08e1adbfda0643fa78556123d0",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_m3",
+      "radius": {
+        "denominator": 8,
+        "numerator": 1
+      }
+    },
+    {
+      "count_lower": 3,
+      "gate": {
+        "sha256": "1803e57e181fe6b1fcedf75a1e463ae003e6f322072fd368b4a2ee50f2eff5e9",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_m2",
+      "radius": {
+        "denominator": 4,
+        "numerator": 1
+      }
+    },
+    {
+      "count_lower": 4,
+      "gate": {
+        "sha256": "56a5447e9ce3a7bf1b571b711645564debfa075e9da55943425bbe7499c73cad",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_m1",
+      "radius": {
+        "denominator": 2,
+        "numerator": 1
+      }
+    },
+    {
+      "count_lower": 8,
+      "gate": {
+        "sha256": "59e6252fd31d540b2eeea94a8ad983318cd48591d646e5cdd0d2be0c1c20743e",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_p0",
+      "radius": {
+        "denominator": 1,
+        "numerator": 1
+      }
+    },
+    {
+      "count_lower": 17,
+      "gate": {
+        "sha256": "9e6299d5fe90694eaa205ce02115d6ce4e887fdbf45b5fb82e3c7e607ce9f921",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_p1",
+      "radius": {
+        "denominator": 1,
+        "numerator": 2
+      }
+    },
+    {
+      "count_lower": 35,
+      "gate": {
+        "sha256": "6e52013abc8387560ccbaf28eadf5271c2d554cfb74cf9120cc64eb5da84e9f7",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_p2",
+      "radius": {
+        "denominator": 1,
+        "numerator": 4
+      }
+    },
+    {
+      "count_lower": 70,
+      "gate": {
+        "sha256": "4d46de41cce9315963a4cae5406325721620263a62b04ca57c84ddc1a347d383",
+        "status": "CERTIFIED_TOTAL_ZETA_ZERO_LOWER_BOUND"
+      },
+      "id": "r_p3",
+      "radius": {
+        "denominator": 1,
+        "numerator": 8
+      }
+    }
+  ],
+  "log_terms": 256,
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "ordinate": {
+    "denominator": 4294967296,
+    "numerator": 20225875608341108140435
+  },
+  "points": [
+    {
+      "id": "x-20",
+      "point_sha256": "5211448cc1709d925bb4fae32b9c83d16ecb20c6af577540b59ba67bd9869918",
+      "u": {
+        "denominator": 1099511627776,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 5444517870735015415413993718908291383296,
+            "numerator": -1914929122421717764918063133097543162279008786524384104041
+          },
+          "upper": {
+            "denominator": 5444517870735015415413993718908291383296,
+            "numerator": -1914929122421717764918063133097543162278890356929063128681
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 166153499473114484112975882535043072,
+            "numerator": 883547222365307584590660985600344331617887765402281660425
+          },
+          "upper": {
+            "denominator": 166153499473114484112975882535043072,
+            "numerator": 883547222365307584590660985600344331617887769032407105545
+          }
+        }
+      }
+    },
+    {
+      "id": "x-18",
+      "point_sha256": "31d946fff118b00402ed5e887710f941b9443a14934b10879d2f0023c3f2d3c4",
+      "u": {
+        "denominator": 68719476736,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 680564733841876926926749214863536422912,
+            "numerator": -957464560012046123157684870249243860444202309202779226943
+          },
+          "upper": {
+            "denominator": 680564733841876926926749214863536422912,
+            "numerator": -957464560012046123157684870249243860444187505837549470527
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 664613997892457936451903530140172288,
+            "numerator": 3534188831823099890368990773947621203850198482802137462085
+          },
+          "upper": {
+            "denominator": 664613997892457936451903530140172288,
+            "numerator": 3534188831823099890368990773947621203850198497322453546309
+          }
+        }
+      }
+    },
+    {
+      "id": "x-16",
+      "point_sha256": "7c002bb085c14a30b64d7b788565c30fe2aad0074a1bc1f04a72cb7d80ed0c2a",
+      "u": {
+        "denominator": 4294967296,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 680564733841876926926749214863536422912,
+            "numerator": -3829858163324167779649512120945869816340657609606464181607
+          },
+          "upper": {
+            "denominator": 680564733841876926926749214863536422912,
+            "numerator": -3829858163324167779649512120945869816340642807581046117735
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1767093954806506757656319395711130276157784017115497370535
+          },
+          "upper": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1767093954806506757656319395711130276157784024375282381735
+          }
+        }
+      }
+    },
+    {
+      "id": "x-14",
+      "point_sha256": "ec492cd713181b4039f410f0c396e618c66ef2d19b79698fe892701799fff02e",
+      "u": {
+        "denominator": 268435456,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 170141183460469231731687303715884105728,
+            "numerator": -3829856935739870242019598785023844217648468708478120706767
+          },
+          "upper": {
+            "denominator": 170141183460469231731687303715884105728,
+            "numerator": -3829856935739870242019598785023844217648465009323309351631
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 664613997892457936451903530140172288,
+            "numerator": 3534173154251834481998150351300141938596214232448052770225
+          },
+          "upper": {
+            "denominator": 664613997892457936451903530140172288,
+            "numerator": 3534173154251834481998150351300141938596214246964589573553
+          }
+        }
+      }
+    },
+    {
+      "id": "x-12",
+      "point_sha256": "a77a70048e9c3b0d30819cde913547174ea83242addf84194236c62059e6d48b",
+      "u": {
+        "denominator": 16777216,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 10633823966279326983230456482242756608,
+            "numerator": -957459323595849094095790258051223431272820287653408431989
+          },
+          "upper": {
+            "denominator": 10633823966279326983230456482242756608,
+            "numerator": -957459323595849094095790258051223431272820056805857320821
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1766968534262464845857047513938551759603445856641446032291
+          },
+          "upper": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1766968534262464845857047513938551759603445863893255500707
+          }
+        }
+      }
+    },
+    {
+      "id": "x-10",
+      "point_sha256": "28a9732ee0eca68d32f4d42dc88c3d26c65b13d470d3e6b0d9b4a9184aa5a3e1",
+      "u": {
+        "denominator": 1048576,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 166153499473114484112975882535043072,
+            "numerator": -59836297354768957674675282245738517445799229999553332667
+          },
+          "upper": {
+            "denominator": 166153499473114484112975882535043072,
+            "numerator": -59836297354768957674675282245738517445799226417165399483
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1765079855098156414810967578238125446598262545146123472037
+          },
+          "upper": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1765079855098156414810967578238125446598262552365461400741
+          }
+        }
+      }
+    },
+    {
+      "id": "x-8",
+      "point_sha256": "6c4d0f57f1c02624018cd9324db80123aa0391a88c97d97d77472364130845fc",
+      "u": {
+        "denominator": 65536,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 1329227995784915872903807060280344576,
+            "numerator": -1912247153166378412850230173112065665674707489352799007333
+          },
+          "upper": {
+            "denominator": 1329227995784915872903807060280344576,
+            "numerator": -1912247153166378412850230173112065665674707461859412161125
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 83076749736557242056487941267521536,
+            "numerator": 433715672861630143652832131149962255893469361460524240167
+          },
+          "upper": {
+            "denominator": 83076749736557242056487941267521536,
+            "numerator": 433715672861630143652832131149962255893469363208063802663
+          }
+        }
+      }
+    },
+    {
+      "id": "x-6",
+      "point_sha256": "d3d3c6057ed5dd096d2b663fdcd9d3cfb85397fc290de8500cc62222f6750ffb",
+      "u": {
+        "denominator": 4096,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 83076749736557242056487941267521536,
+            "numerator": -467988150763275550993962977087155442736249393989266541663
+          },
+          "upper": {
+            "denominator": 83076749736557242056487941267521536,
+            "numerator": -467988150763275550993962977087155442736249391959789624415
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1251825425956028043277364675752899794784038853145221194761
+          },
+          "upper": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": 1251825425956028043277364675752899794784038861395138642953
+          }
+        }
+      }
+    },
+    {
+      "id": "x-5",
+      "point_sha256": "5672d42d316879d15e2977ab7fcea9cb22c0eb40e6b2f63786ef5a47d9df7762",
+      "u": {
+        "denominator": 1024,
+        "numerator": 1
+      },
+      "xi_rectangle": {
+        "imag": {
+          "lower": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": -3484376955330032591884872831671347602512319973966264071297
+          },
+          "upper": {
+            "denominator": 332306998946228968225951765070086144,
+            "numerator": -3484376955330032591884872831671347602512319959828079637633
+          }
+        },
+        "real": {
+          "lower": {
+            "denominator": 664613997892457936451903530140172288,
+            "numerator": -576582015555563481197640919345353370917270877705142121541
+          },
+          "upper": {
+            "denominator": 664613997892457936451903530140172288,
+            "numerator": -576582015555563481197640919345353370917270849492790916165
+          }
+        }
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "m-x-20-x-18",
+      "kind": "deflated-monotonicity",
+      "left": "x-20",
+      "right": "x-18"
+    },
+    {
+      "id": "m-x-18-x-16",
+      "kind": "deflated-monotonicity",
+      "left": "x-18",
+      "right": "x-16"
+    },
+    {
+      "id": "m-x-16-x-14",
+      "kind": "deflated-monotonicity",
+      "left": "x-16",
+      "right": "x-14"
+    },
+    {
+      "id": "m-x-14-x-12",
+      "kind": "deflated-monotonicity",
+      "left": "x-14",
+      "right": "x-12"
+    },
+    {
+      "id": "m-x-12-x-10",
+      "kind": "deflated-monotonicity",
+      "left": "x-12",
+      "right": "x-10"
+    },
+    {
+      "id": "m-x-10-x-8",
+      "kind": "deflated-monotonicity",
+      "left": "x-10",
+      "right": "x-8"
+    },
+    {
+      "id": "m-x-8-x-6",
+      "kind": "deflated-monotonicity",
+      "left": "x-8",
+      "right": "x-6"
+    },
+    {
+      "id": "m-x-6-x-5",
+      "kind": "deflated-monotonicity",
+      "left": "x-6",
+      "right": "x-5"
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-14"
+      ],
+      "id": "d2-0",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-20",
+        "x-16"
+      ]
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-12"
+      ],
+      "id": "d2-1",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-18",
+        "x-14"
+      ]
+    },
+    {
+      "columns": [
+        "x-14",
+        "x-10"
+      ],
+      "id": "d2-2",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-16",
+        "x-12"
+      ]
+    },
+    {
+      "columns": [
+        "x-12",
+        "x-8"
+      ],
+      "id": "d2-3",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-14",
+        "x-10"
+      ]
+    },
+    {
+      "columns": [
+        "x-10",
+        "x-6"
+      ],
+      "id": "d2-4",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-12",
+        "x-8"
+      ]
+    },
+    {
+      "columns": [
+        "x-8",
+        "x-5"
+      ],
+      "id": "d2-5",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-10",
+        "x-6"
+      ]
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-14",
+        "x-10"
+      ],
+      "id": "d3-0",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-20",
+        "x-16",
+        "x-12"
+      ]
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-12",
+        "x-8"
+      ],
+      "id": "d3-1",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-18",
+        "x-14",
+        "x-10"
+      ]
+    },
+    {
+      "columns": [
+        "x-14",
+        "x-10",
+        "x-6"
+      ],
+      "id": "d3-2",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-16",
+        "x-12",
+        "x-8"
+      ]
+    },
+    {
+      "columns": [
+        "x-12",
+        "x-8",
+        "x-5"
+      ],
+      "id": "d3-3",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-14",
+        "x-10",
+        "x-6"
+      ]
+    },
+    {
+      "columns": [
+        "x-18",
+        "x-14",
+        "x-10",
+        "x-6"
+      ],
+      "id": "d4-0",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-20",
+        "x-16",
+        "x-12",
+        "x-8"
+      ]
+    },
+    {
+      "columns": [
+        "x-16",
+        "x-12",
+        "x-8",
+        "x-5"
+      ],
+      "id": "d4-1",
+      "kind": "deflated-cross-loewner-determinant",
+      "rows": [
+        "x-18",
+        "x-14",
+        "x-10",
+        "x-6"
+      ]
+    }
+  ],
+  "schema": "riemann.xi-modulus-total-count-deflation.v1",
+  "source": {
+    "primitive_common_xi_scale_power_of_two": 5335951715288,
+    "primitive_schema": "riemann.xi-modulus-primitives.v1",
+    "primitive_sha256": "6abb451ae5416402bc7654c3bd20a70a2e60e6fdbf3992ef91b54b13aa69b568",
+    "total_count_classification": "CERTIFIED_NESTED_TOTAL_ZETA_ZERO_COUNTS",
+    "total_count_schema": "riemann.x9302-pr71-total-count-windows.v1",
+    "total_count_sha256": "4d41d032356d975710a91e41bfcf2ec2a4c301a3916fbec713b9f16c50a38a96"
+  }
+}

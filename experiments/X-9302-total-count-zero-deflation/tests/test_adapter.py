@@ -52,6 +52,7 @@ def fixtures() -> tuple[dict, dict, dict]:
     primitives = {
         "schema": adapter.PRIMITIVE_SCHEMA,
         "normalization_id": adapter.NORMALIZATION,
+        "common_xi_scale_power_of_two": 123,
         "ordinate": {"numerator": 10, "denominator": 1},
         "points": points,
     }
@@ -102,6 +103,49 @@ class AdapterTests(unittest.TestCase):
         self.assertTrue(result["verified"])
         self.assertEqual(result["certified_negative_rows"], 2)
         self.assertEqual(result["count_windows"][0]["count_lower"], 20)
+        self.assertEqual(result["common_xi_scale_power_of_two"], 123)
+
+    def test_boolean_common_scale_is_rejected(self) -> None:
+        primitives = copy.deepcopy(self.primitives)
+        primitives["common_xi_scale_power_of_two"] = True
+        with self.assertRaisesRegex(adapter.BridgeError, "must not be Boolean"):
+            adapter.build(primitives, copy.deepcopy(self.counts), copy.deepcopy(self.config))
+
+    def test_off_center_count_window_is_widened_exactly(self) -> None:
+        primitives = copy.deepcopy(self.primitives)
+        primitives["ordinate"] = {"numerator": 21, "denominator": 2}
+        certificate = adapter.build(
+            primitives, copy.deepcopy(self.counts), copy.deepcopy(self.config)
+        )
+        window = certificate["count_windows"][0]
+        self.assertEqual(window["source_radius"], {"numerator": 1, "denominator": 1})
+        self.assertEqual(window["radius"], {"numerator": 3, "denominator": 2})
+        self.assertEqual(
+            certificate["source"]["primitive_ordinate_shift_from_count_center"],
+            {"numerator": 1, "denominator": 2},
+        )
+
+    def test_atomized_profile_is_derived_from_endpoint_counts(self) -> None:
+        primitives = copy.deepcopy(self.primitives)
+        primitives["ordinate"] = {"numerator": 21, "denominator": 2}
+        certificate = adapter.build(
+            primitives,
+            copy.deepcopy(self.counts),
+            copy.deepcopy(self.config),
+            count_profile="atomized",
+        )
+        self.assertEqual(certificate["source"]["count_profile"], "atomized")
+        self.assertEqual(
+            certificate["count_windows"],
+            [
+                {
+                    "id": "atom_r_0",
+                    "radius": {"numerator": 3, "denominator": 2},
+                    "count_lower": 20,
+                    "gate": certificate["count_windows"][0]["gate"],
+                }
+            ],
+        )
 
     def assert_bridge_rejected(self, counts: dict, message: str) -> None:
         with self.assertRaisesRegex(adapter.BridgeError, message):

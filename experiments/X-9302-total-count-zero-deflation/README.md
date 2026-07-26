@@ -85,10 +85,63 @@ dyadic windows, reuses the inherited nine-point direct completed-xi primitive
 table, checks the division-free two-point rows and cross-Loewner determinants
 through order four, and requires precision nesting.
 
-No production output is committed yet. A negative row is only a nomination
-pending independent total-count and completed-xi reproduction plus review of
-the analytic normalization. A wholly nonnegative run excludes only the declared
-finite table.
+## Completed production and refinement
+
+The 192/256-bit PR #71 production stack is now retained in `results/pr71/`.
+The unconditional cumulative counts at radii
+
+```text
+1/32, 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8
+```
+
+are respectively
+
+```text
+1, 1, 2, 3, 4, 8, 17, 35, 70.
+```
+
+All count balls isolate unique integers and nest across precision. At 256 bits,
+all twenty declared direct-xi rows are nonnegative. The tightest row is the
+order-four determinant `d4-0`:
+
+```text
+[1.279845348201527229468981e-25,
+ 1.279845348201527236031816e-25].
+```
+
+The production work also:
+
+- replaced infeasible expansion of the approximately `-5.3e12` binary exponent
+  by one exact common power-of-two xi scaling, under which every row is
+  invariant;
+- evaluated every interlaced minor available on the original nine-point table;
+- added L-9306, permitting exact reuse of the count table at shifted ordinates
+  with radii `R+|T-C|`;
+- added L-9307, deriving asymmetric consecutive atom counts from the retained
+  endpoint values and using each atom's own farthest shifted endpoint;
+- scanned a dense sixteen-point horizontal grid on nearby ordinates;
+- exactly certified the resulting fine-mesh minimum as positive:
+
+```text
+[9.45211209497258074553587459016779716487302124040763e-103,
+ 9.45211209497258074553672968742522001567519792257337e-103].
+```
+
+The stronger L-9307 atomized profile moves the local minimum to shift
+`483/1024` and proves
+
+```text
+[8.15927411303488367082543395993660298195214288308488e-104,
+ 8.15927411303488367082665424432172959892044923176279e-104].
+```
+
+A wider `T+-8` scan produced one negative 256-bit midpoint at shift `1/2`, but
+the existing 512-bit primitive at that exact ordinate recomputed it as positive
+(`~2.13e-103`). It is a precision ghost, not a candidate.
+
+No Riemann-xi negative was found and no candidate is allocated. The production
+table and the shifted refinement are rigorous positive exclusions for their
+declared rows; they do not establish RH.
 
 ## Local verification
 

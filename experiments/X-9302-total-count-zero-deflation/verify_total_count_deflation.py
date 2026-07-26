@@ -17,6 +17,7 @@ import string
 import sys
 from dataclasses import dataclass
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -122,6 +123,7 @@ def modulus_squared(real: Interval, imag: Interval) -> Interval:
     return square_interval(real).add(square_interval(imag))
 
 
+@lru_cache(maxsize=None)
 def _atanh_log_interval(y: Fraction, terms: int) -> Interval:
     if not (Fraction(1) <= y <= Fraction(2)):
         raise CertificateError("internal logarithm range-reduction failure")
@@ -167,6 +169,17 @@ def log_positive_interval(value: Interval, terms: int) -> Interval:
         log_positive_fraction(value.lower, terms).lower,
         log_positive_fraction(value.upper, terms).upper,
     )
+
+
+def outward_dyadic_hull(value: Interval, bits: int) -> Interval:
+    if bits < 1:
+        raise CertificateError("dyadic hull precision must be positive")
+    scale = 1 << bits
+    lower_scaled = value.lower * scale
+    upper_scaled = value.upper * scale
+    lower = lower_scaled.numerator // lower_scaled.denominator
+    upper = -((-upper_scaled.numerator) // upper_scaled.denominator)
+    return Interval(Fraction(lower, scale), Fraction(upper, scale))
 
 
 def determinant_interval(matrix: list[list[Interval]]) -> Interval:
@@ -290,9 +303,12 @@ def raw_log_value(point: dict[str, Any], terms: int) -> Interval:
 
 
 def deflated_log_value(
-    point: dict[str, Any], shells: list[dict[str, Any]], terms: int
+    point: dict[str, Any],
+    shells: list[dict[str, Any]],
+    terms: int,
+    raw_value: Interval | None = None,
 ) -> Interval:
-    result = raw_log_value(point, terms)
+    result = raw_log_value(point, terms) if raw_value is None else raw_value
     u = point["u"]
     for shell in shells:
         result = result.sub(
@@ -325,9 +341,8 @@ def loewner_determinant(
     row_ids: list[str],
     column_ids: list[str],
     points: dict[str, dict[str, Any]],
-    shells: list[dict[str, Any]],
-    terms: int,
-    deflated: bool,
+    values: dict[str, Interval],
+    determinant_entry_bits: int,
 ) -> Interval:
     size = len(row_ids)
     if size < 1 or size != len(column_ids) or size > 4:
@@ -344,16 +359,14 @@ def loewner_determinant(
         raise CertificateError("Loewner row nodes must be strictly increasing")
     if any(column_nodes[i] >= column_nodes[i + 1] for i in range(size - 1)):
         raise CertificateError("Loewner column nodes must be strictly increasing")
-    values = {
-        identifier: (
-            deflated_log_value(points[identifier], shells, terms)
-            if deflated
-            else raw_log_value(points[identifier], terms)
-        )
-        for identifier in row_ids + column_ids
-    }
     matrix = [
-        [secant(points[r], points[c], values[r], values[c]) for c in column_ids]
+        [
+            outward_dyadic_hull(
+                secant(points[r], points[c], values[r], values[c]),
+                determinant_entry_bits,
+            )
+            for c in column_ids
+        ]
         for r in row_ids
     ]
     return determinant_interval(matrix)
@@ -367,10 +380,15 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     classification = data.get("classification")
     if classification not in ("SYNTHETIC_MODEL", "RIEMANN_XI_DIRECTED"):
         raise CertificateError("unsupported classification")
+    common_scale = exact_int(
+        data.get("common_xi_scale_power_of_two", 0),
+        "common_xi_scale_power_of_two",
+    )
     ordinate = rational(data.get("ordinate"), "ordinate")
     terms = exact_int(data.get("log_terms", 256), "log_terms")
     if terms < 32 or terms > 4096:
         raise CertificateError("log_terms must be between 32 and 4096")
+    determinant_entry_bits = 4 * terms
 
     claimed_certificate_sha = data.get("certificate_sha256")
     if claimed_certificate_sha is not None:
@@ -384,6 +402,8 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
 
     points = parse_points(data)
     windows, shells = parse_count_windows(data, classification)
+    raw_log_values: dict[str, Interval] = {}
+    deflated_log_values: dict[str, Interval] = {}
     raw_rows = data.get("rows")
     if not isinstance(raw_rows, list) or not raw_rows:
         raise CertificateError("rows must be a nonempty list")
@@ -412,15 +432,40 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             row_ids, column_ids = raw.get("rows"), raw.get("columns")
             if not isinstance(row_ids, list) or not isinstance(column_ids, list):
                 raise CertificateError("Loewner rows and columns must be arrays")
+            use_deflated = kind.startswith("deflated")
+            for identifier in row_ids + column_ids:
+                if identifier in points and identifier not in raw_log_values:
+                    raw_log_values[identifier] = raw_log_value(
+                        points[identifier], terms
+                    )
+                if (
+                    use_deflated
+                    and identifier in points
+                    and identifier not in deflated_log_values
+                ):
+                    deflated_log_values[identifier] = deflated_log_value(
+                        points[identifier],
+                        shells,
+                        terms,
+                        raw_log_values[identifier],
+                    )
             value = loewner_determinant(
                 row_ids,
                 column_ids,
                 points,
-                shells,
-                terms,
-                deflated=kind.startswith("deflated"),
+                (
+                    deflated_log_values
+                    if use_deflated
+                    else raw_log_values
+                ),
+                determinant_entry_bits,
             )
-            detail = {"rows": row_ids, "columns": column_ids, "order": len(row_ids)}
+            detail = {
+                "rows": row_ids,
+                "columns": column_ids,
+                "order": len(row_ids),
+                "determinant_entry_dyadic_bits": determinant_entry_bits,
+            }
         else:
             raise CertificateError(f"unsupported row kind {kind!r}")
         outputs.append(
@@ -449,6 +494,7 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "verified": True,
         "classification": classification,
         "normalization_id": NORMALIZATION,
+        "common_xi_scale_power_of_two": common_scale,
         "ordinate": fj(ordinate),
         "point_count": len(points),
         "count_windows": [
@@ -480,7 +526,9 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
             "deflation algebra only. Under RH, unconditional total-zero lower counts "
             "become critical-line lower counts. A Riemann-xi negative also requires "
             "proof-grade completed-xi rectangles, independently certified total-count "
-            "gates, and review of L-9303 and the completed-xi normalization."
+            "gates, and review of L-9303 and the completed-xi normalization. One exact "
+            "common power-of-two scaling may be applied to every xi rectangle because "
+            "all declared rows are invariant under a common positive scaling."
         ),
     }
     if claimed_certificate_sha is not None:

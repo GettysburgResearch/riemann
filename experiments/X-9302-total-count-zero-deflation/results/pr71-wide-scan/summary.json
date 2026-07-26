@@ -1,0 +1,19 @@
+{
+  "classification": "EMPIRICAL_DISCOVERY_WITH_512_BIT_REFUTATION",
+  "counterexample_nomination": null,
+  "escalation": {
+    "primitive_precision_bits": 512,
+    "recomputed_midpoint": "2.1333719384762484260182470709578675602189459330665140438826836343503e-103",
+    "shift": "1/2",
+    "status": "REFUTED_PRECISION_GHOST"
+  },
+  "negative_256_midpoints": 1,
+  "negative_nominee": {
+    "determinant": "-1.170419088673049581788962353464669142478755834698545829084288863465096e-97",
+    "normalized": "-25716000020.22844382260015806634904768648297003397865845014816137222038",
+    "q": 2,
+    "shift": "1/2"
+  },
+  "sample_count": 65,
+  "schema": "riemann.x9302-wide-scan-summary.v1"
+}

@@ -1,0 +1,80 @@
+{
+  "high_negative_rows": 0,
+  "high_unresolved_rows": 0,
+  "high_verdict": "NO_NEGATIVE_IN_DECLARED_ROWS",
+  "low_verdict": "UNRESOLVED",
+  "row_count": 255,
+  "schema": "riemann.x9302-pr71-exhaustive-summary.v1",
+  "tightest_rows": [
+    {
+      "id": "all-d4-0-1-2-3-4-5-6-7",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "1.2798453482015272294689805643646057841186E-25",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "1.2798453482015272360318157438405003556872E-25"
+    },
+    {
+      "id": "all-d4-0-1-2-3-4-5-6-8",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "1.3645025716106107028606419796708493588813E-24",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "1.3645025716106107032609329990584220979084E-24"
+    },
+    {
+      "id": "all-d4-0-1-2-3-4-5-7-8",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "2.3345812591726730070754219590803653386751E-21",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "2.3345812591726730070757340043503786636801E-21"
+    },
+    {
+      "id": "all-d3-0-1-2-3-4-5",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "2.9264985514824564386298196850413693293615E-19",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "2.9264985514824564386298196873189123354739E-19"
+    },
+    {
+      "id": "all-d4-0-1-2-3-4-6-7-8",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "5.5412612379896613859602117368331979297984E-19",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "5.5412612379896613859602147965302647230197E-19"
+    },
+    {
+      "id": "all-d3-0-1-2-3-4-6",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "7.1638270715491166253269483500693273501475E-17",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "7.1638270715491166253269483500916521613465E-17"
+    },
+    {
+      "id": "all-d4-0-1-2-3-5-6-7-8",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "1.4128052158284410863029618034538736035982E-16",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "1.4128052158284410863029618065086176927023E-16"
+    },
+    {
+      "id": "all-d4-0-1-2-4-5-6-7-8",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "2.2597820550549869588479810165021177999568E-15",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "2.2597820550549869588479810168055357041557E-15"
+    },
+    {
+      "id": "all-d3-0-1-2-3-4-7",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "9.5821429372770558091144307382788331918424E-15",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "9.5821429372770558091144307382790048326028E-15"
+    },
+    {
+      "id": "all-d3-0-1-2-3-5-6",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "1.8350730189522256651283564403100689173528E-14",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "1.8350730189522256651283564403100912046859E-14"
+    }
+  ]
+}
