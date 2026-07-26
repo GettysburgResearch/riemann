@@ -1,0 +1,175 @@
+name: PR105 cross-height algebraic direct-xi portfolios
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/pr105-cross-height-direct-xi.yml
+      - claims/lemmas/L-9801-cross-height-algebraic-direct-xi-portfolios.md
+      - experiments/X-9801-cross-height-direct-xi/**
+  push:
+    branches:
+      - agent/gpt56-08/98-cross-height-direct-xi
+    paths:
+      - .github/workflows/pr105-cross-height-direct-xi.yml
+      - claims/lemmas/L-9801-cross-height-algebraic-direct-xi-portfolios.md
+      - experiments/X-9801-cross-height-direct-xi/**
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr105-cross-height-direct-xi-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run exact checker controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=experiments/X-9801-cross-height-direct-xi
+          python -m compileall -q "$root"
+          python -m unittest discover -s "$root/tests" -v
+          python "$root/verify.py" \
+            "$root/certificates/synthetic-negative.json" \
+            --output "$root/results/synthetic-workflow.json"
+          cp "$root/candidates/symmetric-pr105.json" /tmp/manifest.before.json
+          python "$root/generate_manifest.py"
+          python - <<'PY2'
+          import json
+          before=json.load(open('/tmp/manifest.before.json'))
+          after=json.load(open('experiments/X-9801-cross-height-direct-xi/candidates/symmetric-pr105.json'))
+          assert before==after
+          PY2
+
+      - name: Replay all exact candidates at 192 and 256 bits
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=experiments/X-9801-cross-height-direct-xi
+          out="$root/results/pr105"
+          mkdir -p "$out"
+          mapfile -t ids < <(python - <<'PY'
+          import json
+          data=json.load(open('experiments/X-9801-cross-height-direct-xi/candidates/symmetric-pr105.json'))
+          for row in data['candidates']:
+              print(row['id'])
+          PY
+          )
+          for precision in 192 256; do
+            minus=experiments/X-9301-zero-deflated-xi-modulus/results/pr71-ordinate-screen/max-mass-jm25/xi-primitives-p${precision}.json
+            center=experiments/X-9301-zero-deflated-xi-modulus/results/pr71/xi-primitives-p${precision}.json
+            plus=experiments/X-9301-zero-deflated-xi-modulus/results/pr71-ordinate-screen/positive-control-jm5/xi-primitives-p${precision}.json
+            for id in "${ids[@]}"; do
+              python "$root/build_from_pr105.py" \
+                --minus "$minus" --center "$center" --plus "$plus" \
+                --manifest "$root/candidates/symmetric-pr105.json" \
+                --candidate-id "$id" \
+                --output "$out/${id}-certificate-p${precision}.json"
+              set +e
+              python "$root/verify.py" \
+                "$out/${id}-certificate-p${precision}.json" \
+                --output "$out/${id}-verification-p${precision}.json"
+              status=$?
+              set -e
+              test "$status" -le 1
+            done
+          done
+
+      - name: Require primitive and final interval nesting
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from pathlib import Path
+
+          root=Path('experiments/X-9801-cross-height-direct-xi/results/pr105')
+          manifest=json.loads(Path('experiments/X-9801-cross-height-direct-xi/candidates/symmetric-pr105.json').read_text())
+
+          def f(raw):
+              return Fraction(int(raw['numerator']),int(raw['denominator']))
+
+          def nested(low,high):
+              return f(low['lower']) <= f(high['lower']) <= f(high['upper']) <= f(low['upper'])
+
+          rows=[]
+          negatives=[]
+          unresolved=[]
+          for candidate in manifest['candidates']:
+              cid=candidate['id']
+              c192=json.loads((root/f'{cid}-certificate-p192.json').read_text())
+              c256=json.loads((root/f'{cid}-certificate-p256.json').read_text())
+              v192=json.loads((root/f'{cid}-verification-p192.json').read_text())
+              v256=json.loads((root/f'{cid}-verification-p256.json').read_text())
+              assert v192['polynomial']['proof_object_sha256']==v256['polynomial']['proof_object_sha256']
+              assert nested(v192['difference_interval'],v256['difference_interval'])
+              p192={(h['id'],p['id']):p['h_interval'] for h in c192['heights'] for p in h['points']}
+              p256={(h['id'],p['id']):p['h_interval'] for h in c256['heights'] for p in h['points']}
+              assert p192.keys()==p256.keys()
+              for key in p192:
+                  assert nested(p192[key],p256[key]), f'primitive nesting failed for {cid}:{key}'
+              row={
+                  'candidate_id':cid,
+                  'status_p192':v192['status'],
+                  'status_p256':v256['status'],
+                  'difference_interval_p256':v256['difference_interval'],
+                  'polynomial_proof_object_sha256':v256['polynomial']['proof_object_sha256'],
+                  'all_intervals_nested':True,
+              }
+              rows.append(row)
+              if v256['status']=='CERTIFIED_NEGATIVE':
+                  negatives.append(row)
+              elif v256['status']=='UNRESOLVED':
+                  unresolved.append(row)
+
+          summary={
+              'schema':'riemann.x9801-pr105-directed-summary.v1',
+              'candidate_count':len(rows),
+              'rows':rows,
+              'certified_negative_candidates':len(negatives),
+              'unresolved_candidates':len(unresolved),
+              'counterexample_nomination':(
+                  'PENDING_INDEPENDENT_REPRODUCTION_AND_L9801_REVIEW'
+                  if negatives else None
+              ),
+              'verdict':(
+                  'STRICT_NEGATIVE_CROSS_HEIGHT_DIRECT_XI_PORTFOLIO_FOUND'
+                  if negatives else
+                  ('NO_NEGATIVE_BUT_SOME_CANDIDATES_UNRESOLVED' if unresolved else
+                   'NO_NEGATIVE_IN_DECLARED_SYMMETRIC_CANDIDATE_FAMILY')
+              ),
+          }
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Hash and upload proof artifacts
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=experiments/X-9801-cross-height-direct-xi
+          find "$root/results" -type f ! -name SHA256SUMS -print0 | sort -z | \
+            xargs -0 sha256sum > "$root/results/SHA256SUMS"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pr105-cross-height-direct-xi
+          path: experiments/X-9801-cross-height-direct-xi/results/
+          retention-days: 30
+          if-no-files-found: error

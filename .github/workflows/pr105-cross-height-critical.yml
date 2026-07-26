@@ -1,0 +1,144 @@
+name: PR105 rational cross-height critical-point portfolio
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/pr105-cross-height-critical.yml
+      - claims/lemmas/L-9802-critical-point-certificates-for-rational-cross-height-portfolios.md
+      - experiments/X-9802-cross-height-critical/**
+  push:
+    branches:
+      - agent/gpt56-08/98-cross-height-direct-xi
+    paths:
+      - .github/workflows/pr105-cross-height-critical.yml
+      - claims/lemmas/L-9802-critical-point-certificates-for-rational-cross-height-portfolios.md
+      - experiments/X-9802-cross-height-critical/**
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr105-cross-height-critical-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run exact response and synthetic controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=experiments/X-9802-cross-height-critical
+          python -m compileall -q "$root"
+          python -m unittest discover -s "$root/tests" -v
+          python "$root/verify.py" \
+            "$root/certificates/synthetic-negative.json" \
+            --output "$root/results/synthetic-workflow.json"
+
+      - name: Replay the sharp candidate at 192 and 256 bits
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=experiments/X-9802-cross-height-critical
+          out="$root/results/pr105"
+          mkdir -p "$out"
+          candidate="$root/candidates/sharp-pr105-critical.json"
+          for precision in 192 256; do
+            center=experiments/X-9301-zero-deflated-xi-modulus/results/pr71/xi-primitives-p${precision}.json
+            plus=experiments/X-9301-zero-deflated-xi-modulus/results/pr71-ordinate-screen/positive-control-jm5/xi-primitives-p${precision}.json
+            python "$root/build_from_pr105.py" \
+              --center "$center" --plus "$plus" --candidate "$candidate" \
+              --output "$out/certificate-p${precision}.json"
+            set +e
+            python "$root/verify.py" \
+              "$out/certificate-p${precision}.json" \
+              --output "$out/verification-p${precision}.json"
+            status=$?
+            set -e
+            test "$status" -le 1
+          done
+
+      - name: Require primitive, response and final-row nesting
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from pathlib import Path
+
+          root=Path('experiments/X-9802-cross-height-critical/results/pr105')
+          c192=json.loads((root/'certificate-p192.json').read_text())
+          c256=json.loads((root/'certificate-p256.json').read_text())
+          v192=json.loads((root/'verification-p192.json').read_text())
+          v256=json.loads((root/'verification-p256.json').read_text())
+
+          def f(raw):
+              return Fraction(int(raw['numerator']),int(raw['denominator']))
+
+          def nested(low,high):
+              return f(low['lower']) <= f(high['lower']) <= f(high['upper']) <= f(low['upper'])
+
+          assert v192['response_certificate']['proof_object_sha256']==v256['response_certificate']['proof_object_sha256']
+          assert v192['response_certificate']['distinct_real_derivative_roots']==5
+          assert v256['response_certificate']['distinct_real_derivative_roots']==5
+          assert nested(v192['portfolio_interval'],v256['portfolio_interval'])
+
+          p192={(h['id'],p['id']):p['h_interval'] for h in c192['heights'] for p in h['points']}
+          p256={(h['id'],p['id']):p['h_interval'] for h in c256['heights'] for p in h['points']}
+          assert p192.keys()==p256.keys()
+          for key in p192:
+              assert nested(p192[key],p256[key]), f'primitive nesting failed at {key}'
+
+          summary={
+              'schema':'riemann.x9802-pr105-directed-summary.v1',
+              'candidate_id':'pr105-jensen-repair-d1e6',
+              'response_proof_object_sha256':v256['response_certificate']['proof_object_sha256'],
+              'derivative_degree':v256['response_certificate']['derivative_degree'],
+              'distinct_real_derivative_roots':v256['response_certificate']['distinct_real_derivative_roots'],
+              'finite_status_p192':v192['finite_status'],
+              'finite_status_p256':v256['finite_status'],
+              'portfolio_interval_p256':v256['portfolio_interval'],
+              'all_intervals_nested':True,
+              'counterexample_nomination':(
+                  'PENDING_INDEPENDENT_REPRODUCTION_AND_L9802_REVIEW'
+                  if v256['finite_status']=='CERTIFIED_NEGATIVE' else None
+              ),
+              'verdict':(
+                  'STRICT_NEGATIVE_RATIONAL_CROSS_HEIGHT_PORTFOLIO_FOUND'
+                  if v256['finite_status']=='CERTIFIED_NEGATIVE' else
+                  ('PORTFOLIO_UNRESOLVED' if v256['finite_status']=='UNRESOLVED' else
+                   'SHARP_RATIONAL_PORTFOLIO_CERTIFIED_NONNEGATIVE')
+              ),
+          }
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Hash and upload proof artifacts
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          root=experiments/X-9802-cross-height-critical
+          find "$root/results" -type f ! -name SHA256SUMS -print0 | sort -z | \
+            xargs -0 sha256sum > "$root/results/SHA256SUMS"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pr105-cross-height-critical
+          path: experiments/X-9802-cross-height-critical/results/
+          retention-days: 30
+          if-no-files-found: error
