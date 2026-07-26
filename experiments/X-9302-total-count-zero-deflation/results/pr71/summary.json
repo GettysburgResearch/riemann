@@ -1,0 +1,149 @@
+{
+  "certified_negative_rows": 0,
+  "common_xi_scale_power_of_two": 5335951715288,
+  "count_windows": [
+    {
+      "count_lower": "1",
+      "id": "r_m5",
+      "radius": {
+        "denominator": "32",
+        "numerator": "1"
+      }
+    },
+    {
+      "count_lower": "1",
+      "id": "r_m4",
+      "radius": {
+        "denominator": "16",
+        "numerator": "1"
+      }
+    },
+    {
+      "count_lower": "2",
+      "id": "r_m3",
+      "radius": {
+        "denominator": "8",
+        "numerator": "1"
+      }
+    },
+    {
+      "count_lower": "3",
+      "id": "r_m2",
+      "radius": {
+        "denominator": "4",
+        "numerator": "1"
+      }
+    },
+    {
+      "count_lower": "4",
+      "id": "r_m1",
+      "radius": {
+        "denominator": "2",
+        "numerator": "1"
+      }
+    },
+    {
+      "count_lower": "8",
+      "id": "r_p0",
+      "radius": {
+        "denominator": "1",
+        "numerator": "1"
+      }
+    },
+    {
+      "count_lower": "17",
+      "id": "r_p1",
+      "radius": {
+        "denominator": "1",
+        "numerator": "2"
+      }
+    },
+    {
+      "count_lower": "35",
+      "id": "r_p2",
+      "radius": {
+        "denominator": "1",
+        "numerator": "4"
+      }
+    },
+    {
+      "count_lower": "70",
+      "id": "r_p3",
+      "radius": {
+        "denominator": "1",
+        "numerator": "8"
+      }
+    }
+  ],
+  "counterexample_nomination": null,
+  "interpretation": "All declared PR71 total-count-deflated rows are nonnegative at 256 bits. The order-four d4-0 row is a certified positive near-null and is the refinement target.",
+  "low_precision_verdict": "UNRESOLVED",
+  "negative_row_ids": [],
+  "precision_comparison": {
+    "all_high_intervals_nested": true,
+    "count_window_count": 9,
+    "high_negative_rows": 0,
+    "high_unresolved_rows": 0,
+    "high_verdict": "NO_NEGATIVE_IN_DECLARED_ROWS",
+    "low_negative_rows": 0,
+    "low_unresolved_rows": 1,
+    "low_verdict": "UNRESOLVED",
+    "nested_primitive_coordinates": 18,
+    "nested_row_intervals": 20,
+    "point_count": 9,
+    "row_count": 20,
+    "schema": "riemann.x9302-total-deflation-precision-comparison.v1"
+  },
+  "proof_boundary": "Total counts are unconditional. Their conversion into removable line mass is made only under the RH hypothesis in L-9303. Independent count/xi reproduction and normalization review remain required for any future negative.",
+  "schema": "riemann.x9302-pr71-production-summary.v1",
+  "target": {
+    "denominator": "4294967296",
+    "numerator": "20225875608341108140435"
+  },
+  "tightest_rows": [
+    {
+      "id": "d4-0",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "1.279845348201527229468981E-25",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "1.279845348201527236031816E-25"
+    },
+    {
+      "id": "d3-0",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "2.926498551482456438629820E-19",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "2.926498551482456438629820E-19"
+    },
+    {
+      "id": "d4-1",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "3.588995413008098137709636E-14",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "3.588995413008098137709636E-14"
+    },
+    {
+      "id": "d3-1",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "4.662346614992333718334162E-12",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "4.662346614992333718334162E-12"
+    },
+    {
+      "id": "d2-0",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "4.841612802601195961181356E-7",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "4.841612802601195961181356E-7"
+    },
+    {
+      "id": "d3-2",
+      "kind": "deflated-cross-loewner-determinant",
+      "lower_decimal": "3.881527059929773723942369E-5",
+      "status": "CERTIFIED_NONNEGATIVE",
+      "upper_decimal": "3.881527059929773723942369E-5"
+    }
+  ],
+  "unresolved_rows": 0,
+  "verdict": "NO_NEGATIVE_IN_DECLARED_ROWS"
+}
