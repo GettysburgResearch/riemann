@@ -145,3 +145,28 @@ evaluate `Z` on a whole block by FFT rather than one point at a time, which is
 the only known way to beat the per-point cost.  Whether that beats `0.28` s per
 zero in practice is untested — the one measurement made here, of the *zero
 finder* built on it, went the wrong way by `56\times`.
+
+## Attempted and not completed: `t = 10^{16}`
+
+A `span = 4` slab at `t = 10^{16}` was launched and did **not** finish.  The
+counting half alone had run `13` minutes on the first endpoint when the session
+ended, against `173` s per endpoint at `10^{15}`.  Nothing is claimed from it.
+
+That ratio is itself informative: `N(t)` is not scaling like `\sqrt{t}` at the
+top of this range.  Between `10^{13}` and `10^{15}` the cost went
+`20.3 \to 39.9 \to 173.3` s, which is roughly `t^{0.46}`; the `10^{16}` point is
+already well above the extrapolation.  Platt's algorithm has setup terms that
+grow faster than the main sum, so the practical counting ceiling is probably
+nearer `10^{16}` than the naive extrapolation suggests.
+
+To resume:
+
+```bash
+cd experiments/X-5604-exact-slab-discrepancy
+python3 certify_height.py --t0 10000000000000000 --span 4 --procs 3 --tag 1e16
+```
+
+Before spending on it, note that the sign pass would then cost roughly `25` s
+per sample at that height — so a `4`-unit slab holding `~23` zeros needs perhaps
+`120` samples and `20` minutes on top of the count.  The rung is affordable;
+it just was not affordable in the time left.
