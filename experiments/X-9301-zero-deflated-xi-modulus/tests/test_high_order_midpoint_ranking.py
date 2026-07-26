@@ -71,6 +71,22 @@ class HighOrderMidpointRankingTests(unittest.TestCase):
         self.assertEqual(determinant, Decimal(-1))
         self.assertEqual(scale, Decimal(1))
 
+    def test_point_subset_preserves_node_order(self) -> None:
+        primitive = {
+            "points": [
+                {"id": "wide", "x": {"numerator": 1, "denominator": 2}},
+                {"id": "small", "x": {"numerator": 1, "denominator": 8}},
+                {"id": "middle", "x": {"numerator": 1, "denominator": 4}},
+                {"id": "extra", "x": {"numerator": 3, "denominator": 8}},
+            ]
+        }
+        selected = MODULE.select_point_ids(
+            primitive, ("wide", "small", "middle")
+        )
+        self.assertEqual(selected, ("small", "middle", "wide"))
+        with self.assertRaisesRegex(MODULE.RankingError, "unique primitive subset"):
+            MODULE.select_point_ids(primitive, ("small", "missing"))
+
 
 if __name__ == "__main__":
     unittest.main()

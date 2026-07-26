@@ -174,8 +174,8 @@ def sparse_source_certificate(
     primitive: dict[str, Any],
     zero_block: dict[str, Any],
     nearest_count: int,
+    point_ids: tuple[str, ...],
 ) -> dict[str, Any]:
-    point_ids = SCREEN.ordered_point_ids(primitive)
     if len(point_ids) < 4:
         raise RankingError("at least four nodes are required")
     config = {
@@ -194,6 +194,23 @@ def sparse_source_certificate(
     certificate = BUILD.build(primitive, zero_block, config, nearest_count)
     VERIFY.verify_source_artifacts(certificate, primitive, zero_block)
     return certificate
+
+
+def select_point_ids(
+    primitive: dict[str, Any], requested: tuple[str, ...] | None
+) -> tuple[str, ...]:
+    available = SCREEN.ordered_point_ids(primitive)
+    if requested is None:
+        return available
+    if (
+        len(requested) != len(set(requested))
+        or any(identifier not in available for identifier in requested)
+    ):
+        raise RankingError("requested point IDs must be a unique primitive subset")
+    requested_set = set(requested)
+    return tuple(
+        identifier for identifier in available if identifier in requested_set
+    )
 
 
 def push_smallest(
@@ -329,6 +346,7 @@ def summarize(
     orders: tuple[int, ...],
     top_k: int,
     decimal_digits: int = 0,
+    requested_point_ids: tuple[str, ...] | None = None,
 ) -> dict[str, Any]:
     if (
         nearest_count <= 0
@@ -339,10 +357,12 @@ def summarize(
         or (decimal_digits != 0 and decimal_digits < 32)
     ):
         raise RankingError("invalid nearest count, top-k, or orders")
+    point_ids = select_point_ids(primitive, requested_point_ids)
+    if any(2 * order > len(point_ids) for order in orders):
+        raise RankingError("selected grid has too few points for requested order")
     certificate = sparse_source_certificate(
-        primitive, zero_block, nearest_count
+        primitive, zero_block, nearest_count, point_ids
     )
-    point_ids = SCREEN.ordered_point_ids(primitive)
     points = VERIFY.parse_points(certificate, require_digests=True)
     target = SCREEN.rational(certificate["ordinate"], "certificate.ordinate")
     bins = VERIFY.parse_zero_bins(
@@ -452,6 +472,7 @@ def main() -> int:
     parser.add_argument("--orders", type=int, nargs="+", default=[3])
     parser.add_argument("--top-k", type=int, default=20)
     parser.add_argument("--decimal-digits", type=int, default=0)
+    parser.add_argument("--point-ids", nargs="+")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     try:
@@ -462,6 +483,7 @@ def main() -> int:
             tuple(args.orders),
             args.top_k,
             args.decimal_digits,
+            tuple(args.point_ids) if args.point_ids else None,
         )
         code = 1 if result["counterexample_nomination"] else 0
     except (
