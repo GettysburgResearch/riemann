@@ -1,0 +1,79 @@
+{
+  "atoms": [
+    {
+      "id": "m2",
+      "lower_offset": {"denominator": 1, "numerator": -2},
+      "upper_offset": {"denominator": 1, "numerator": -2}
+    },
+    {
+      "id": "m1",
+      "lower_offset": {"denominator": 1, "numerator": -1},
+      "upper_offset": {"denominator": 1, "numerator": -1}
+    },
+    {
+      "id": "p1",
+      "lower_offset": {"denominator": 1, "numerator": 1},
+      "upper_offset": {"denominator": 1, "numerator": 1}
+    },
+    {
+      "id": "p2",
+      "lower_offset": {"denominator": 1, "numerator": 2},
+      "upper_offset": {"denominator": 1, "numerator": 2}
+    }
+  ],
+  "cell_cost_lower_bounds": [
+    {"denominator": 3, "numerator": 1},
+    {"denominator": 2, "numerator": 1},
+    {"denominator": 2, "numerator": 1},
+    {"denominator": 3, "numerator": 1}
+  ],
+  "classification": "SYNTHETIC_MODEL",
+  "coarse_dual": {
+    "lambdas": [
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 3, "numerator": 1}
+    ]
+  },
+  "count_table_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "count_windows": [
+    {
+      "atoms": ["m1", "p1", "p2"],
+      "count": 5,
+      "gate": "UNCONDITIONAL_TOTAL_ZERO_COUNT_EXACT",
+      "id": "right-overlap",
+      "proof_gate_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+    },
+    {
+      "atoms": ["m2", "m1", "p1"],
+      "count": 6,
+      "gate": "UNCONDITIONAL_TOTAL_ZERO_COUNT_EXACT",
+      "id": "left-overlap",
+      "proof_gate_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+    }
+  ],
+  "dual": {
+    "lambdas": [
+      {"denominator": 6, "numerator": 1},
+      {"denominator": 3, "numerator": 1}
+    ]
+  },
+  "h_intervals": {
+    "u": {
+      "lower": {"denominator": 1, "numerator": 2560},
+      "upper": {"denominator": 1, "numerator": 2560}
+    },
+    "v": {
+      "lower": {"denominator": 1, "numerator": 28672},
+      "upper": {"denominator": 1, "numerator": 28672}
+    }
+  },
+  "log_terms": 160,
+  "nodes": {
+    "u": {"denominator": 1, "numerator": 1},
+    "v": {"denominator": 1, "numerator": 3}
+  },
+  "normalization_id": "riemann-xi-standard-half-s-sminus1-v1",
+  "primal": {"atom_counts": [1, 0, 5, 0]},
+  "primitive_table_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "schema": "riemann.xi-witness-adapted-count-dual.v1"
+}
