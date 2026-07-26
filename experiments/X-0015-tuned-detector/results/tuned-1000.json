@@ -1,0 +1,258 @@
+{
+ "experiment": "X-0015",
+ "agent": "claude-02",
+ "git_sha": "e13bfa908c4720484349c6ef816baa1c9a152d4e",
+ "python": "3.11.15",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "prec_bits": 4000,
+ "tol_bits": 400,
+ "target": 1000.5705270975,
+ "rows": [
+  {
+   "N": 9,
+   "design": "nulls",
+   "nulls": [
+    1000.5705270975,
+    -1000.5705270975,
+    999.791571557,
+    -999.791571557,
+    1001.349482638,
+    -1001.349482638
+   ],
+   "floor": 0.002478137548312211,
+   "floor_rad": 5.409751103532068e-123,
+   "seconds_floor": 1.6,
+   "floor_negative": false,
+   "response_coefficient": 5.941605721061357e-09,
+   "predicted_delta_star": 645.8189579055108,
+   "sensitivity": [
+    {
+     "delta": "0.01",
+     "q": 0.0024781375477229096,
+     "negative": false
+    },
+    {
+     "delta": "0.0001",
+     "q": 0.0024781375483121514,
+     "negative": false
+    },
+    {
+     "delta": "0.000001",
+     "q": 0.002478137548312211,
+     "negative": false
+    },
+    {
+     "delta": "0.00000001",
+     "q": 0.002478137548312211,
+     "negative": false
+    },
+    {
+     "delta": "0.0000000001",
+     "q": 0.002478137548312211,
+     "negative": false
+    },
+    {
+     "delta": "0.000000000001",
+     "q": 0.002478137548312211,
+     "negative": false
+    }
+   ],
+   "double_q": 0.002478137548312211,
+   "double_negative": false,
+   "smallest_delta_detected": null
+  },
+  {
+   "N": 9,
+   "design": "mvdr",
+   "nulls": [
+    "mvdr window +-40 (65 ordinates)"
+   ],
+   "floor": 0.0005342431598690215,
+   "floor_rad": 5.0212027931132875e-123,
+   "seconds_floor": 1.4,
+   "floor_negative": false,
+   "response_coefficient": 1.9347625795848722e-11,
+   "predicted_delta_star": 5254.793398903401,
+   "sensitivity": [
+    {
+     "delta": "0.01",
+     "q": 0.0005342431598671057,
+     "negative": false
+    },
+    {
+     "delta": "0.0001",
+     "q": 0.0005342431598690213,
+     "negative": false
+    },
+    {
+     "delta": "0.000001",
+     "q": 0.0005342431598690215,
+     "negative": false
+    },
+    {
+     "delta": "0.00000001",
+     "q": 0.0005342431598690215,
+     "negative": false
+    },
+    {
+     "delta": "0.0000000001",
+     "q": 0.0005342431598690215,
+     "negative": false
+    },
+    {
+     "delta": "0.000000000001",
+     "q": 0.0005342431598690215,
+     "negative": false
+    }
+   ],
+   "double_q": 0.0005342431598690215,
+   "double_negative": false,
+   "smallest_delta_detected": null
+  },
+  {
+   "N": 12,
+   "design": "mvdr",
+   "nulls": [
+    "mvdr window +-40 (65 ordinates)"
+   ],
+   "floor": 4.456028655975439e-06,
+   "floor_rad": 6.525302685120937e-123,
+   "seconds_floor": 1.5,
+   "floor_negative": false,
+   "response_coefficient": 8.198077778719435e-17,
+   "predicted_delta_star": 233140.63249854607,
+   "sensitivity": [
+    {
+     "delta": "0.01",
+     "q": 4.456028655975431e-06,
+     "negative": false
+    },
+    {
+     "delta": "0.0001",
+     "q": 4.456028655975439e-06,
+     "negative": false
+    },
+    {
+     "delta": "0.000001",
+     "q": 4.456028655975439e-06,
+     "negative": false
+    },
+    {
+     "delta": "0.00000001",
+     "q": 4.456028655975439e-06,
+     "negative": false
+    },
+    {
+     "delta": "0.0000000001",
+     "q": 4.456028655975439e-06,
+     "negative": false
+    },
+    {
+     "delta": "0.000000000001",
+     "q": 4.456028655975439e-06,
+     "negative": false
+    }
+   ],
+   "double_q": 4.456028655975439e-06,
+   "double_negative": false,
+   "smallest_delta_detected": null
+  },
+  {
+   "N": 16,
+   "design": "mvdr",
+   "nulls": [
+    "mvdr window +-40 (65 ordinates)"
+   ],
+   "floor": 6.098359109796634e-09,
+   "floor_rad": 6.678579011508151e-123,
+   "seconds_floor": 2.0,
+   "floor_negative": false,
+   "response_coefficient": 4.903781129850931e-24,
+   "predicted_delta_star": 35264762.09547025,
+   "sensitivity": [
+    {
+     "delta": "0.01",
+     "q": 6.098359109796634e-09,
+     "negative": false
+    },
+    {
+     "delta": "0.0001",
+     "q": 6.098359109796634e-09,
+     "negative": false
+    },
+    {
+     "delta": "0.000001",
+     "q": 6.098359109796634e-09,
+     "negative": false
+    },
+    {
+     "delta": "0.00000001",
+     "q": 6.098359109796634e-09,
+     "negative": false
+    },
+    {
+     "delta": "0.0000000001",
+     "q": 6.098359109796634e-09,
+     "negative": false
+    },
+    {
+     "delta": "0.000000000001",
+     "q": 6.098359109796634e-09,
+     "negative": false
+    }
+   ],
+   "double_q": 6.098359109796634e-09,
+   "double_negative": false,
+   "smallest_delta_detected": null
+  },
+  {
+   "N": 16,
+   "design": "ldl-extracted",
+   "nulls": [
+    "bottom eigenvector of the real Pick matrix (inverse iteration, midpoints)"
+   ],
+   "floor": 1.2875988171687165e-42,
+   "floor_rad": 6.054130261384309e-123,
+   "seconds_floor": 2.3,
+   "floor_negative": false,
+   "response_coefficient": 1.1426874117077889e-21,
+   "predicted_delta_star": 3.3568084751325674e-11,
+   "sensitivity": [
+    {
+     "delta": "0.01",
+     "q": 5.941744492376928e-24,
+     "negative": false
+    },
+    {
+     "delta": "0.0001",
+     "q": 6.1732495394247995e-24,
+     "negative": false
+    },
+    {
+     "delta": "0.000001",
+     "q": 6.173272850190822e-24,
+     "negative": false
+    },
+    {
+     "delta": "0.00000001",
+     "q": 6.1732728525219004e-24,
+     "negative": false
+    },
+    {
+     "delta": "0.0000000001",
+     "q": 6.173272852522133e-24,
+     "negative": false
+    },
+    {
+     "delta": "0.000000000001",
+     "q": 6.173272852522133e-24,
+     "negative": false
+    }
+   ],
+   "double_q": 6.173272852522133e-24,
+   "double_negative": false,
+   "smallest_delta_detected": null
+  }
+ ],
+ "conclusion": "controls clean; smallest detected delta by N: [None, None, None, None, None]  -- NO detection at any tested delta: the design does not work as built"
+}

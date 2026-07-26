@@ -291,3 +291,51 @@ exponent -- it is measuring a crossover between two exponents.
 **Consequence.**  The corrected law is BETTER for detection: `delta^2` beats
 `delta^3` at small `delta`, and the probe-count formula improves from
 `N >~ 1.11 log10(1/delta)` to `N >~ 0.74 log10(1/delta)`.
+
+---
+
+## R-0011 — three explicit filter designs for the tuned scalar detector; all three lost to the implicit optimum by ~10^12
+
+**Goal.**  L-0009 suggests replacing the LDL search with a scalar statistic
+`q = v*Pv` whose direction `v` is designed from the certified census
+ordinates.  Three designs were built and measured at a real zero-free target
+ordinate near 1000.57 (X-0015):
+
+| design | floor | response coeff | usable? |
+|---|---|---|---|
+| hard nulls, `v_N = 1` pinned | 7e-6 .. 7e-1 | 1e-14-scale | no: pinning in an ill-conditioned Cauchy solve nulled the SENSITIVITY along with the neighbours |
+| unconstrained MVDR | 1e-3 | (flat response) | no: without a hard null at the target, the planted pair's own on-line part `2\|Ahat(g0)\|^2` swamps the `delta^2` term — the response was delta-INDEPENDENT, a giveaway |
+| constrained MVDR + density tail model | 6e-9 at N=16 | 5e-24 | no: floor improves with N but response collapses faster; `delta*` WORSENS with N |
+
+Benchmark: the LDL bottom direction at the same `N = 16` achieves floor
+`1.3e-42` with response `1.1e-21` — a response/floor ratio ~`10^12` better
+than the best explicit design.  The diagnosis: at distance `D` from the
+cluster the filter's far field obeys a multipole expansion, and the implicit
+optimum spends its freedom killing its own MOMENTS (far field `~ (0.8/D)^N`)
+jointly with shaping the near field.  A window-plus-ridge interference model
+cannot express that tradeoff, and hard nulls actively destroy it.
+
+**What worked instead (X-0015b).**  Division of labour: let the LDL search
+keep its implicit optimisation; when a pivot `d_k < 0` fires, the direction
+`x = L^{-*} e_k` satisfies `x*Px = d_k` EXACTLY (one triangular solve), and
+certifying `q = x*Px/x*x` in ball arithmetic gives the compact witness
+`(probes, x, q < 0)` — verification cost is `N` evaluations of `xi'/xi` plus
+`O(N^2)` arithmetic, no factorisation, and by L-0008 the soundness of
+`q < 0 => RH false` is independent of how `x` was found.  Demonstrated end to
+end on a planted `delta = 1e-6` quadruple: LDL fires at `-1.5e-26`, certified
+`q = -1.609e-33`, re-verified at a second tolerance.
+
+Two tempting extraction shortcuts FAIL and are recorded in `extract.py`:
+unshifted inverse iteration converges to the eigenvalue of smallest magnitude
+(a tiny POSITIVE one), and pivot-shifted inverse iteration stalls because the
+shift sits below the whole near-zero cluster (convergence ratio ~1.01/step).
+
+**Lessons.**
+1. A detector statistic has TWO requirements — small floor AND live response —
+   and optimising either alone silently kills the other.  The figure of merit
+   is the ratio.
+2. A response that does not change when `delta` changes is not a response;
+   plot `q - floor` against `delta` before believing any design.
+3. When an implicit optimiser (here: the bottom pivot of an LDL) beats your
+   explicit design by twelve orders, the right move may be to EXTRACT its
+   answer rather than replicate it.

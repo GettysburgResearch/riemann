@@ -194,6 +194,45 @@ def test_gram_matrix_C_is_PD():
     assert verdict == "PD", verdict
 
 
+def test_witness_extraction_from_a_firing_ldl():
+    """X-0015b: when the LDL fires, x = L^{-*} e_k converts the matrix
+    verdict into a certified scalar q = x*Px/x*x < 0.  Soundness of the
+    scalar does not depend on the extraction (L-0008), but the extraction
+    must actually produce a negative q -- two plausible alternatives
+    (unshifted and pivot-shifted inverse iteration) do not, and are recorded
+    in experiments/X-0015-tuned-detector/extract.py."""
+    ctx.prec = 3000
+    Fm = model("0.0001", "OFF")
+    al = probes(0.8, 16)
+    cert = PK.pick_certificate(al, F=Fm)
+    assert cert["verdict"] == "NOT_PSD", cert
+    P = PK.pick_matrix(al, F=Fm)
+    x = PK.ldl_witness_direction(P)
+    assert x is not None
+    q = PK.tuned_form(al, x, F=Fm)
+    assert q < 0, str(q)
+
+
+def test_witness_extraction_returns_none_when_psd():
+    ctx.prec = 3000
+    P = PK.pick_matrix(probes(0.8, 8), F=model("0.0001", "DOUBLE"))
+    assert PK.ldl_witness_direction(P) is None
+
+
+def test_tuned_form_nonnegative_on_herglotz_configurations():
+    """L-0008: with every zero on the line the Pick matrix is a sum of PSD
+    matrices, so the scalar form is >= 0 along EVERY direction -- including
+    arbitrary untuned ones."""
+    ctx.prec = 2000
+    al = probes(0.8, 5)
+    v = [acb(arb("0.3"), arb("-1.1")), acb(arb("0.7"), arb("0.2")),
+         acb(arb("-0.4"), arb("0.55")), acb(arb("0.9"), arb("0.05")),
+         acb(arb("0.1"), arb("0.8"))]
+    for mode in ("LEHMER", "DOUBLE", "SINGLE"):
+        q = PK.tuned_form(al, v, F=model("0.001", mode))
+        assert not (q < 0), (mode, str(q))
+
+
 def test_ldl_hermitian_detects_a_known_indefinite_matrix():
     """Unit test of the verdict function itself, independent of zeta."""
     ctx.prec = 300

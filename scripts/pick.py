@@ -140,6 +140,260 @@ def probe_cluster(v0, v1, N, u="0.05"):
             for j in range(N)]
 
 
+def tuned_vector(alphas, null_ordinates, opt_ordinate=None):
+    """Direction v with Ahat_v(omega) = sum_j conj(v_j)/(a_j' - i omega) = 0
+    at each null ordinate, chosen within that nullspace to MAXIMISE the
+    delta^2 response coefficient |Ahat'(g0)|^2 + |Ahat'(-g0)|^2 over v*v
+    (L-0009(iv)) when opt_ordinate = g0 is given.
+
+    L-0009: a nulled on-line zero contributes 0 to v*Pv; every other on-line
+    zero contributes |Ahat(gamma_k)|^2 >= 0; an off-line pair at a nulled
+    ordinate contributes -2 delta^2 (|Ahat'|^2 sum)/... .  Certified census
+    ordinates are therefore DESIGN INPUTS.
+
+    The v produced here is a DESIGN, not a certificate: it may be computed
+    non-rigorously, because tuned_form certifies q for whatever v it is
+    handed.  (A first version pinned v_N = 1 in the ill-conditioned Cauchy
+    solve and produced |Ahat'| ~ 1e-5 relative to |v| -- a detector that
+    nulled everything, including its own sensitivity.  See X-0015.)"""
+    N = len(alphas)
+    k = len(null_ordinates)
+    if k >= N:
+        raise ValueError("need len(null_ordinates) < N")
+    ap = [acb(a) - acb(1) / 2 for a in alphas]
+
+    # -- nullspace basis of the k x N constraint matrix, by elimination ------
+    M = [[1 / (ap[j] - acb(0, 1) * acb(arb(repr(w)))) for j in range(N)]
+         for w in null_ordinates]
+    piv_cols, r = [], 0
+    for c in range(N):
+        if r >= k:
+            break
+        best, mag = None, None
+        for rr in range(r, k):
+            m = float(abs(M[rr][c]).mid())
+            if best is None or m > mag:
+                best, mag = rr, m
+        if mag is None or mag == 0.0:
+            continue
+        M[r], M[best] = M[best], M[r]
+        for rr in range(k):
+            if rr != r:
+                f = M[rr][c] / M[r][c]
+                for cc in range(N):
+                    M[rr][cc] = M[rr][cc] - f * M[r][cc]
+        piv_cols.append(c)
+        r += 1
+    free = [c for c in range(N) if c not in piv_cols]
+    basis = []
+    for fc in free:
+        x = [acb(0)] * N
+        x[fc] = acb(1)
+        for i, pc in enumerate(piv_cols):
+            x[pc] = -M[i][fc] / M[i][pc]
+        basis.append(x)                       # x = conj(v) coordinates
+
+    if opt_ordinate is None or len(basis) == 1:
+        x = basis[0]
+    else:
+        # -- maximise x*(dd* + ee*)x / x*x over the nullspace ---------------
+        g0 = acb(arb(repr(opt_ordinate)))
+        d = [acb(0, 1) / (ap[j] - acb(0, 1) * g0) ** 2 for j in range(N)]
+        e = [acb(0, 1) / (ap[j] + acb(0, 1) * g0) ** 2 for j in range(N)]
+        # project into basis coordinates: R_{ab} = (Ba.d)(conj Bb.d) + (e term)
+        m = len(basis)
+        Bd = [sum(basis[a][j] * d[j] for j in range(N)) for a in range(m)]
+        Be = [sum(basis[a][j] * e[j] for j in range(N)) for a in range(m)]
+        Gram = [[sum(basis[a][j] * basis[b][j].conjugate() for j in range(N))
+                 for b in range(m)] for a in range(m)]
+        # power iteration on Gram^{-1} R (generalised eigenproblem), at mids
+        y = [acb(1)] * m
+        for _ in range(60):
+            # z = R y  with R = Bd Bd* + Be Be*
+            s1 = sum(Bd[b].conjugate() * y[b] for b in range(m))
+            s2 = sum(Be[b].conjugate() * y[b] for b in range(m))
+            z = [Bd[a] * s1 + Be[a] * s2 for a in range(m)]
+            # solve Gram w = z  (small m: Gaussian elimination each time)
+            A = [row[:] + [z[i]] for i, row in enumerate(Gram)]
+            for cc in range(m):
+                p = max(range(cc, m), key=lambda rr: float(abs(A[rr][cc]).mid()))
+                A[cc], A[p] = A[p], A[cc]
+                for rr in range(m):
+                    if rr != cc:
+                        f = A[rr][cc] / A[cc][cc]
+                        for c2 in range(cc, m + 1):
+                            A[rr][c2] = A[rr][c2] - f * A[cc][c2]
+            w = [A[i][m] / A[i][i] for i in range(m)]
+            nrm = sum((t * t.conjugate()).real for t in w).sqrt()
+            y = [acb(arb((t / nrm).real.mid()), arb((t / nrm).imag.mid()))
+                 for t in w]              # strip radii: design phase only
+        x = [sum(y[a] * basis[a][j] for a in range(m)) for j in range(N)]
+
+    # freeze the design: exact point values, then hand back v = conj(x)
+    x = [acb(arb(t.real.mid()), arb(t.imag.mid())) for t in x]
+    nrm = sum((t * t.conjugate()).real for t in x).sqrt()
+    x = [t / nrm for t in x]
+    x = [acb(arb(t.real.mid()), arb(t.imag.mid())) for t in x]
+    return [t.conjugate() for t in x]
+
+
+def _nullspace(ap, ordinates):
+    """Basis of {x : sum_j x_j/(ap_j - i w) = 0 for each w in ordinates}."""
+    N, k = len(ap), len(ordinates)
+    M = [[1 / (ap[j] - acb(0, 1) * acb(arb(repr(w)))) for j in range(N)]
+         for w in ordinates]
+    piv_cols, r = [], 0
+    for c in range(N):
+        if r >= k:
+            break
+        best, mag = None, None
+        for rr in range(r, k):
+            m = float(abs(M[rr][c]).mid())
+            if best is None or m > mag:
+                best, mag = rr, m
+        if not mag:
+            continue
+        M[r], M[best] = M[best], M[r]
+        for rr in range(k):
+            if rr != r:
+                f = M[rr][c] / M[r][c]
+                for cc in range(N):
+                    M[rr][cc] = M[rr][cc] - f * M[r][cc]
+        piv_cols.append(c)
+        r += 1
+    basis = []
+    for fc in (c for c in range(N) if c not in piv_cols):
+        x = [acb(0)] * N
+        x[fc] = acb(1)
+        for i, pc in enumerate(piv_cols):
+            x[pc] = -M[i][fc] / M[i][pc]
+        basis.append(x)
+    return basis
+
+
+def mvdr_vector(alphas, gamma0, window_ordinates, tail_to=4000.0,
+                ridge="1e-40"):
+    """Maximise the L-0009 delta^2 response at gamma0 against a modelled
+    floor, SUBJECT to hard nulls Ahat(+-gamma0) = 0:
+
+        maximise   x* R x / x* W x    over    x in null(C),
+
+    R = response form (|Ahat'(+-gamma0)|^2), W = sum over the interference
+    model of |Ahat|^2: the census window (both signs) plus a density-weighted
+    pseudo-tail out to +-tail_to, which is what drives the optimiser to kill
+    its own far-field moments (an explicit window alone rewards designs whose
+    Ahat blows up just outside it -- measured in X-0015, design 2).
+
+    This is an MVDR beamformer with the certified zeros as interference.  The
+    output is a DESIGN, possibly non-rigorous; tuned_form certifies q for
+    whatever v it is handed."""
+    import math
+    N = len(alphas)
+    ap = [acb(a) - acb(1) / 2 for a in alphas]
+    B = _nullspace(ap, [gamma0, -gamma0])
+    m = len(B)
+    g0 = acb(arb(repr(gamma0)))
+    d = [acb(0, 1) / (ap[j] - acb(0, 1) * g0) ** 2 for j in range(N)]
+    e = [acb(0, 1) / (ap[j] + acb(0, 1) * g0) ** 2 for j in range(N)]
+
+    # interference rows: census window, then pseudo-tail at average density
+    pts = [(g, 1.0) for g in window_ordinates for _ in (0,)]
+    gmax = max((abs(g) for g in window_ordinates), default=abs(gamma0) + 5)
+    g = gmax + 0.5
+    while g < tail_to:
+        step = max(0.9, g * 0.02)
+        w = math.sqrt(max(math.log(g / (2 * math.pi)), 0.1) / (2 * math.pi) * step)
+        pts.append((g, w))
+        g += step
+    rows = []
+    for gg, wt in pts:
+        for sgn in (1, -1):
+            z = acb(arb(repr(sgn * gg)))
+            rows.append([acb(arb(repr(wt))) / (ap[j] - acb(0, 1) * z)
+                         for j in range(N)])
+
+    # project everything into the nullspace basis
+    def proj(vec):
+        return [sum(vec[j].conjugate() * B[a][j] for j in range(N)).conjugate()
+                for a in range(m)]
+    dR, eR = proj(d), proj(e)
+    rowsR = [proj(r) for r in rows]
+    Gram = [[sum(B[a][j] * B[b][j].conjugate() for j in range(N))
+             for b in range(m)] for a in range(m)]
+    W = [[sum(r[i] * r[j].conjugate() for r in rowsR)
+          + acb(arb(ridge)) * Gram[i][j] for j in range(m)] for i in range(m)]
+
+    y = [acb(1)] * m
+    for _ in range(80):
+        s1 = sum(dR[b].conjugate() * y[b] for b in range(m))
+        s2 = sum(eR[b].conjugate() * y[b] for b in range(m))
+        z = [dR[a] * s1 + eR[a] * s2 for a in range(m)]
+        A = [row[:] + [z[i]] for i, row in enumerate(W)]
+        for c in range(m):
+            p = max(range(c, m), key=lambda rr: float(abs(A[rr][c]).mid()))
+            A[c], A[p] = A[p], A[c]
+            for rr in range(m):
+                if rr != c:
+                    f = A[rr][c] / A[c][c]
+                    for cc in range(c, m + 1):
+                        A[rr][cc] = A[rr][cc] - f * A[c][cc]
+        w = [A[i][m] / A[i][i] for i in range(m)]
+        nrm = sum((t * t.conjugate()).real for t in w).sqrt()
+        y = [acb(arb((t / nrm).real.mid()), arb((t / nrm).imag.mid()))
+             for t in w]
+    x = [sum(y[a] * B[a][j] for a in range(m)) for j in range(N)]
+    x = [acb(arb(t.real.mid()), arb(t.imag.mid())) for t in x]
+    nrm = sum((t * t.conjugate()).real for t in x).sqrt()
+    x = [acb(arb((t / nrm).real.mid()), arb((t / nrm).imag.mid())) for t in x]
+    return [t.conjugate() for t in x]
+
+
+def tuned_form(alphas, v, tol_bits: int = 200, F=None):
+    """The scalar statistic q = v* P v.  Certified q < 0 refutes RH (T-0005 +
+    L-0008: P is a sum of PSD matrices under RH, so every quadratic form is
+    >= 0).  The witness is one real ball plus the pair (alphas, v)."""
+    P = pick_matrix(alphas, tol_bits, F=F)
+    n = len(v)
+    q = sum(v[j].conjugate() * P[j][k] * v[k]
+            for j in range(n) for k in range(n)).real
+    vv = sum((z * z.conjugate()).real for z in v)
+    return q / vv
+
+
+def ldl_witness_direction(P):
+    """Given a Pick matrix whose LDL has a negative pivot, return the witness
+    direction x with x* P x = d_k, by the exact identity x = L^{-*} e_k.
+
+    The point (X-0015): when the LDL search fires NOT_PSD, this converts the
+    matrix verdict into the COMPACT witness (probes, x, q): a verifier needs
+    only the N values of xi'/xi and O(N^2) arithmetic to certify q < 0 --
+    no factorisation, and by L-0008 the soundness of "q < 0 refutes RH" does
+    not depend on where x came from.  Runs on midpoints (the design may be
+    non-rigorous; the certification of q is not its job).  Returns None if no
+    pivot midpoint is negative."""
+    N = len(P)
+    A = [[acb(arb(P[i][j].real.mid()), arb(P[i][j].imag.mid()))
+          for j in range(N)] for i in range(N)]
+    L = [[acb(1) if i == j else acb(0) for j in range(N)] for i in range(N)]
+    kneg = None
+    for k in range(N):
+        if float(A[k][k].real.mid()) < 0:
+            kneg = k
+            break
+        for i in range(k + 1, N):
+            f = A[i][k] / A[k][k]
+            L[i][k] = f
+            for j in range(k, N):
+                A[i][j] = A[i][j] - f * A[k][j]
+    if kneg is None:
+        return None
+    x = [acb(0)] * N
+    x[kneg] = acb(1)
+    for i in range(kneg - 1, -1, -1):
+        x[i] = -sum(L[j][i].conjugate() * x[j] for j in range(i + 1, kneg + 1))
+    return [acb(arb(t.real.mid()), arb(t.imag.mid())) for t in x]
+
+
 def pick_certificate(alphas, tol_bits: int = 200, F=None):
     """Full pipeline: evaluate F, build the Pick matrix, take the LDL verdict."""
     P = pick_matrix(alphas, tol_bits, F=F)
