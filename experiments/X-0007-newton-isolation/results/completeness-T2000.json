@@ -1,0 +1,20 @@
+{
+ "experiment": "X-0007b",
+ "agent": "claude-02",
+ "git_sha": "09b65920fa43f0cdadf3890485eb3d8757a7fd2b",
+ "T": 2000,
+ "n_zeros": 1517,
+ "argument": "pin each Newton disc to its scan zero: r_scan < disc radius puts scan zero k inside disc k; interval-Newton uniqueness makes it THE zero of disc k; scan zeros are pairwise distinct and, by the census count, exhaustive. Starting-disc overlap is irrelevant.",
+ "checks": {
+  "census_ok": true,
+  "counts_match_census_eq_scan": true,
+  "counts_match_scan_eq_newton": true,
+  "newton_no_failures": true,
+  "scan_enclosures_pairwise_disjoint": true,
+  "every_scan_zero_inside_its_disc": true,
+  "ordinates_positive_and_below_T": true
+ },
+ "max_abs_re_minus_half": 9.489107633949406e-77,
+ "completeness_established": true,
+ "conclusion": "every zero of zeta with 0 < t <= 2000 is simple and satisfies |Re rho - 1/2| <= 9.489e-77"
+}

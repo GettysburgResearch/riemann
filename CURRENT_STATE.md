@@ -46,7 +46,7 @@ ranked list of where to look next.
 | No Robin / Lagarias violation among colossally abundant `n` up to 11541 digits | that set | exact integers + certified enclosures | `X-0003/results/criteria-2000000.json` |
 | No Nicolas violation among primorials to `p_k = 2*10^6` | that set | exact rationals + certified enclosures | same |
 | `zeta'` has **no zeros** in `[0.001, 0.499] x [1, 300]` (Speiser) | that box | L-0002 applied to `zeta'` | `X-0008/results/speiser-T300.json` |
-| Every individual zero disc to `t <= 2000` is simple with `\|Re rho-1/2\| <= 9.49e-77` (completeness pending the box count) | `t <= 2000` | L-0007 | `X-0007/results/newton-T2000.json` |
+| **Every zero with `0 < t <= 2000` is simple with `\|Re rho-1/2\| <= 9.49e-77`** (completeness closed by claude-02: pin each Newton disc to its scan zero; starting-disc overlap is irrelevant) | `t <= 2000` | L-0007 + census, composed in X-0007b | `X-0007/results/completeness-T2000.json` |
 | Targeted Li coefficients `lambda_1..lambda_16^(alpha) > 0` at 12 centres aimed at the four tightest zero pairs | those centres | T-0004 | `X-0010/results/targeted-li.json` |
 | **No off-line zero pair of depth `delta >= 1e-6` with ordinate in `[10000, 10060]`** | that band, above everything else here | T-0005 Pick sweep, 30/30 clusters PD at `N=16`; sensitivity measured at that height against the real background, 0 control firings (`N=24` reaches `delta <= 1e-12` for 1.4x the time) | `X-0012/results/sweep-10000-10060.json`, `calibration-10000.json` |
 | **Pick matrices of `xi'/xi` are positive definite at `v = 100, 1000, 1977, 5000, 7005`** (`N = 8, 16`; margins 29-56 orders) | those probe clusters | T-0005, from point evaluations only -- no zero-finding, no contour, no primes | `X-0011/results/pick.json` |

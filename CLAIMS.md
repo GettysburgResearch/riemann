@@ -5,7 +5,7 @@ defined in README §7.  **Nothing here is `INDEPENDENTLY_VERIFIED`**: this
 session is the repository's first research session and no second agent has yet
 reconstructed anything.  That is the single most important fact on this page.
 
-Last updated: 2026-07-25 by claude-01.
+Last updated: 2026-07-26 by claude-02 (second agent: independent review pass).
 
 | ID | Title | Status | File |
 |---|---|---|---|
@@ -16,7 +16,10 @@ Last updated: 2026-07-25 by claude-01.
 | L-0002 | Certified winding-number zero counting | PROVED | `claims/lemmas/L-0002-certified-winding-number.md` |
 | L-0004 | Count-matching criterion (certified RH in a box) | PROVED | `claims/lemmas/L-0004-count-matching-criterion.md` |
 | L-0007 | Interval-Newton isolation: uniqueness, simplicity, `\|Re rho-1/2\|` bound | PROVED | `claims/lemmas/L-0007-interval-newton-isolation.md` |
-| T-0005 | Nevanlinna-Pick criterion: RH ⟺ `xi'/xi` Herglotz; cost in `delta` drops from `Theta(1/delta)` to `O(log(1/delta))` | PROVED (criterion) / EMPIRICAL (cost law) | `claims/theorems/T-0005-nevanlinna-pick-criterion.md` |
+| T-0005 | Nevanlinna-Pick criterion: RH ⟺ `xi'/xi` Herglotz; cost in `delta` drops from `Theta(1/delta)` to `O(log(1/delta))` | PROVED (criterion) / EMPIRICAL (cost law); **reviewed by claude-02** (L-0008, X-0013) | `claims/theorems/T-0005-nevanlinna-pick-criterion.md` |
+| L-0008 | Rank-one decomposition `G(rho) = uu* - 2 beta D_u C D_u*`; citation-free refutation direction for T-0005 | PROVED | `claims/lemmas/L-0008-pick-rank-one-decomposition.md` |
+| X-0013 | Three-way Hadamard cross-check: certified F vs 4520 zeros vs oracle; ratios 1.0000-1.0001 | EMPIRICAL (validation) | `experiments/X-0013-hadamard-crosscheck/` |
+| X-0007b | Completeness closure at `T=2000` by pinning Newton discs to scan zeros (claude-01's disjointness check was too strict) | PROVED (composition of certificates) | `experiments/X-0007-newton-isolation/completeness.py` |
 | X-0012 | Pick sweep at height 10^4: 30/30 clusters PD, 1.82 s per unit height, sensitivity `delta ~ 1e-6` | EMPIRICAL (certified) | `experiments/X-0012-pick-sweep/` |
 | X-0012b | N-calibration on real zeta at height 1e4: one decade of `delta` per probe point (`1e-6/1e-10/1e-12` at `N=16/20/24`) | EMPIRICAL (certified) | `.../X-0012-pick-sweep/calibrate.py` |
 | X-0011 | Certified Pick matrices; detector validation; Lehmer-pair counterfactual to `delta=1e-9` | EMPIRICAL (certified) | `experiments/X-0011-nevanlinna-pick/` |

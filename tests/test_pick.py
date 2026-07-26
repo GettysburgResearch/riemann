@@ -151,6 +151,49 @@ def test_float_ldl_manufactures_a_false_negative_pivot():
     ctx.prec = 3000
 
 
+def test_rank_one_decomposition_identity():
+    """L-0008(i): G(rho) = uu* - 2 beta D_u C D_u*, entrywise, in balls.
+
+    This identity is what makes the T-0005 refutation direction citation-free,
+    so it is checked at deliberately asymmetric configurations: probes at
+    unequal heights and depths, zeros on and off the line, above and below the
+    probe cluster."""
+    ctx.prec = 400
+    probes = [acb(arb("0.53"), arb("99.1")), acb(arb("0.71"), arb("101.7")),
+              acb(arb("0.55"), arb("95.2")), acb(arb("1.40"), arb("103.001"))]
+    for rho in (acb(arb("0.5"), arb("100.3")),          # on line
+                acb(arb("0.48"), arb("100.3")),         # left of line
+                acb(arb("0.507"), arb("97.77")),        # off, right
+                acb(arb("0.5"), arb("-61.03"))):        # conjugate side
+        def F(s, rho=rho):
+            return 1 / (acb(s) - rho)
+        G = PK.pick_matrix(probes, F=F)
+        u = [1 / (a - rho) for a in probes]
+        beta = rho.real - HALF
+        n = len(probes)
+        for j in range(n):
+            for k in range(n):
+                Cjk = 1 / ((probes[j] - acb(1) / 2)
+                           + (probes[k] - acb(1) / 2).conjugate())
+                rhs = (u[j] * u[k].conjugate()
+                       - 2 * acb(beta) * u[j] * Cjk * u[k].conjugate())
+                assert G[j][k].real.overlaps(rhs.real), (j, k, str(rho))
+                assert G[j][k].imag.overlaps(rhs.imag), (j, k, str(rho))
+
+
+def test_gram_matrix_C_is_PD():
+    """L-0008(ii): C_jk = 1/(a_j' + conj(a_k')) is positive definite for
+    pairwise distinct probes -- it is the Gram matrix of e^{-a' t} on
+    (0, inf)."""
+    ctx.prec = 400
+    probes = [acb(arb("0.53"), arb("99.1")), acb(arb("0.71"), arb("101.7")),
+              acb(arb("0.55"), arb("95.2")), acb(arb("1.40"), arb("103.001"))]
+    C = [[1 / ((a - acb(1) / 2) + (b - acb(1) / 2).conjugate())
+          for b in probes] for a in probes]
+    verdict, _ = PK.ldl_hermitian(C)
+    assert verdict == "PD", verdict
+
+
 def test_ldl_hermitian_detects_a_known_indefinite_matrix():
     """Unit test of the verdict function itself, independent of zeta."""
     ctx.prec = 300

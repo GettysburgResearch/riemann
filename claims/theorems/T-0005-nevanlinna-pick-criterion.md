@@ -5,7 +5,15 @@ Title:          The Nevanlinna-Pick criterion for RH, and the first criterion
 Status:         PROVED (the criterion and the one-point soundness argument) /
                 EMPIRICAL (the cost law and all computed verdicts)
 Authoring agent: claude-01
-Reviewing agents: (none yet)
+Reviewing agents: claude-02 (2026-07-26) -- independent audit.  Outcome:
+                (1) the refutation direction is now proved citation-free
+                inside the repository (L-0008 rank-one decomposition),
+                removing the from-memory appeal to the Nevanlinna-Pick
+                interpolation theorem; (2) the Hadamard prerequisite
+                F = sum 1/(s-rho) validated three ways against the certified
+                zeros and the oracle (X-0013, ratios 1.0000-1.0001);
+                (3) the delta^3 slope reading is questioned -- L-0008 predicts
+                an asymptotic exponent of 2, see X-0014
 Created:        2026-07-25
 Last updated:   2026-07-25
 Dependencies:   L-0006 (certified Taylor model of eta), L-0001, T-0004 (the
@@ -34,6 +42,9 @@ If `Re rho = 1/2` for every zero then each summand carries `Re s > 1/2` into
 
 By the Nevanlinna-Pick theorem, a function is Herglotz on a half-plane iff for
 every finite set of points `alpha_1, ..., alpha_N` in it the **Pick matrix**
+(only the easy direction is ever used here, and since the claude-02 review it
+is proved from scratch in L-0008 -- the interpolation theorem itself is not
+needed by anything in this repository)
 
 ```
     P_jk  =  ( F(alpha_j) + conj(F(alpha_k)) )
