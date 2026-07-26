@@ -28,7 +28,7 @@ support a denser node and nearby-ordinate attack.
 7. Evaluated the declared twenty rows at both precisions.
 8. Exhausted every monotonicity row and every interlaced order-2/3/4 minor on
    the nine-point table.
-9. Added L-9304 and exact adapter support for reusing a count table at a shifted
+9. Added L-9306 and exact adapter support for reusing a count table at a shifted
    ordinate with radii `R+|T-C|`.
 10. Evaluated a sixteen-point horizontal grid over a coarse nearby-ordinate
     mesh, escalated apparent midpoint negatives to 512 bits, and refined the
@@ -95,7 +95,7 @@ None. No `Z-####` identifier is justified.
 - Primitive and final-row nesting across precision.
 - All twenty declared rows at 256 bits.
 - All 255 finite interlaced rows on the original point table.
-- Exact shifted-radius transfer from L-9304.
+- Exact shifted-radius transfer from L-9306.
 - One 512-bit exact certificate at the fine shifted minimum.
 
 ## Failed approaches
@@ -112,7 +112,7 @@ None. No `Z-####` identifier is justified.
 ## Potential errors and proof boundary
 
 - Independent FLINT or alternate-backend reproduction is still required.
-- L-9303 and L-9304 require independent analytic review.
+- L-9303 and L-9306 require independent analytic review.
 - The common xi scale must be identical at every point; point-dependent scaling
   would be unsound.
 - Shifted reuse must widen every radius by the exact absolute ordinate shift.
@@ -136,12 +136,12 @@ Review first:
 2. `results/pr71/total-counts-p256.json`
 3. `results/pr71/verification-p256.json`
 4. `results/pr71-shift-fine/fine-min-verification-p512.json`
-5. `claims/lemmas/L-9304-shifted-total-count-reuse.md`
+5. `claims/lemmas/L-9306-shifted-total-count-reuse.md`
 
 ## Claims affected
 
 - `L-9303`: instantiated by a complete production table.
-- `L-9304`: new shifted-count reuse lemma, status `PROPOSED`.
+- `L-9306`: new shifted-count reuse lemma, status `PROPOSED`.
 - `X-9302`: complete positive production and shifted refinement.
 
 ## Recommended next actions

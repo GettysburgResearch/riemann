@@ -115,8 +115,10 @@ The production work also:
   by one exact common power-of-two xi scaling, under which every row is
   invariant;
 - evaluated every interlaced minor available on the original nine-point table;
-- added L-9304, permitting exact reuse of the count table at shifted ordinates
+- added L-9306, permitting exact reuse of the count table at shifted ordinates
   with radii `R+|T-C|`;
+- added L-9307, deriving asymmetric consecutive atom counts from the retained
+  endpoint values and using each atom's own farthest shifted endpoint;
 - scanned a dense sixteen-point horizontal grid on nearby ordinates;
 - exactly certified the resulting fine-mesh minimum as positive:
 
@@ -124,6 +126,18 @@ The production work also:
 [9.45211209497258074553587459016779716487302124040763e-103,
  9.45211209497258074553672968742522001567519792257337e-103].
 ```
+
+The stronger L-9307 atomized profile moves the local minimum to shift
+`483/1024` and proves
+
+```text
+[8.15927411303488367082543395993660298195214288308488e-104,
+ 8.15927411303488367082665424432172959892044923176279e-104].
+```
+
+A wider `T+-8` scan produced one negative 256-bit midpoint at shift `1/2`, but
+the existing 512-bit primitive at that exact ordinate recomputed it as positive
+(`~2.13e-103`). It is a precision ghost, not a candidate.
 
 No Riemann-xi negative was found and no candidate is allocated. The production
 table and the shifted refinement are rigorous positive exclusions for their
