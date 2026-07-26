@@ -1,0 +1,18 @@
+{
+ "experiment": "X-0016",
+ "agent": "claude-02",
+ "git_sha": "e4ab636920561078c644287d7577563731cb13cb",
+ "python": "3.11.15",
+ "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+ "probes_re": 2.05,
+ "N": 6,
+ "X": 10000000,
+ "q_points": 1.5270075856597272,
+ "q_primes": 1.527007585648538,
+ "q_zeros_plus_tail": 1.5270213160905628,
+ "prime_tail_bound": 3.070411821638368e-06,
+ "ratio_primes_points": 0.9999999999926724,
+ "ratio_zeros_points": 1.000008991724052,
+ "semantics": "access 1 fully certified; access 2 float prime sum with a rigorous-form tail bound (certified implementation is the Q-0018 handoff); access 3 float with a density-model tail",
+ "conclusion": "one scalar, three disjoint computations, agreement within stated bounds"
+}

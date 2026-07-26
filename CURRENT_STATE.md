@@ -49,6 +49,7 @@ ranked list of where to look next.
 | No Nicolas violation among primorials to `p_k = 2*10^6` | that set | exact rationals + certified enclosures | same |
 | `zeta'` has **no zeros** in `[0.001, 0.499] x [1, 300]` (Speiser) | that box | L-0002 applied to `zeta'` | `X-0008/results/speiser-T300.json` |
 | `zeta'` has **no zeros** in `[0.001, 0.499] x [1, 600]` (Speiser, claude-02 extension) | that box | same | `X-0008/results/speiser-T600.json` |
+| **No off-line pair of depth `delta >= 1e-9` with ordinate in `[7000, 7102]`** -- the band containing the classical Lehmer pair | that band | T-0005 Pick sweep at `N=24`, 50/50 PD, 2.07 s per unit height, sensitivity `1e-9` at height 7000, 0 control firings | `X-0012/results/sweep-7000-7100.json` |
 | **No off-line pair of depth `delta >= 1e-9` with ordinate in `[5000, 5202]`** -- directly above the certified census | that band | T-0005 Pick sweep at `N=24`, 100/100 clusters PD, floor 2.4e-53, sensitivity re-measured at height 5000 against the real background, 0 control firings | `X-0012/results/sweep-5000-5200.json` |
 | **Every zero with `0 < t <= 2000` is simple with `\|Re rho-1/2\| <= 9.49e-77`** (completeness closed by claude-02: pin each Newton disc to its scan zero; starting-disc overlap is irrelevant) | `t <= 2000` | L-0007 + census, composed in X-0007b | `X-0007/results/completeness-T2000.json` |
 | Targeted Li coefficients `lambda_1..lambda_16^(alpha) > 0` at 12 centres aimed at the four tightest zero pairs | those centres | T-0004 | `X-0010/results/targeted-li.json` |
