@@ -86,17 +86,37 @@ A deliberately widened primitive rectangle returns
 the zero-sum subspace, freezes its minimum direction to Gaussian dyadics, and
 repairs the vector sum exactly. It never classifies a proof sign.
 
-On the synthetic packet it nominates a 40-bit vector with midpoint eigenvalue
-about `-10.1286`. Independent X-12101 replay of that frozen vector gives the
-exact strict interval
+For an in-slab zero it subtracts
 
 ```text
--621696847181947699436326215125
---------------------------------
- 65490685078800950795417157632
+g(gamma) r(gamma) r(gamma)*,
+r_i(gamma) = 1/(z_i-i gamma),
 ```
 
-which is approximately `-9.49290`.
+which is the matrix whose quadratic form is
+`g(gamma)|Phi_v(gamma)|^2`.
+
+On the synthetic packet the corrected ranker nominates a 40-bit vector with
+midpoint eigenvalue
+
+```text
+-9.748735152294984.
+```
+
+Independent X-12101 replay of that frozen vector gives the exact strict
+residual
+
+```text
+-2553805375103012404546942922875
+--------------------------------
+ 261962740315203803181668630528
+```
+
+which is approximately `-9.748735152297513`.
+
+The first discovery-only draft used the conjugate rank-one orientation. The
+exact checker was unaffected. The ranker, theorem matrix notation, frozen
+vector, and derived digests were corrected before any Riemann-data nomination.
 
 Production use requires NumPy only in this untrusted discovery layer. The
 exact checker remains standard-library-only.
