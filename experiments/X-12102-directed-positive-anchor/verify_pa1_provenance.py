@@ -95,6 +95,7 @@ def prepare_basis(
         "certificate_file_sha256": file_sha256,
         "certificate_internal_sha256": internal_sha256,
         "certificate_git_blob_sha1": actual_blob_sha1,
+        "basis_file_sha256": legacy.parent.file_sha256(basis_path),
         "basis_declared_sha256": declared_sha256,
         "basis_declared_git_blob_sha1": declared_blob_sha1 or "",
     }
@@ -116,6 +117,7 @@ def verify(
             json.dumps(patched_basis, indent=2, sort_keys=True) + "\n",
             encoding="utf-8",
         )
+        compatibility_basis_sha256 = legacy.parent.file_sha256(path)
         result = legacy.verify(
             old_certificate,
             path,
@@ -124,13 +126,20 @@ def verify(
             log_terms,
             delta,
         )
+    source = result.get("source")
+    if not isinstance(source, dict):
+        raise legacy.CertificateError("legacy PA1 result lacks source manifest")
+    source["compatibility_basis_sha256"] = compatibility_basis_sha256
+    source["old_basis_sha256"] = provenance["basis_file_sha256"]
     result["legacy_schema"] = result.get("schema")
     result["schema"] = SCHEMA
     result["provenance_binding"] = provenance
     result["proof_boundary"] = (
         result.get("proof_boundary", "")
         + " Source identity was checked through an explicitly typed digest "
-        "binding; a Git blob binding is not treated as a SHA-256 value."
+        "binding; a Git blob binding is not treated as a SHA-256 value. The "
+        "reported old-basis hash is the immutable input, not the temporary "
+        "compatibility copy."
     ).strip()
     return result
 
