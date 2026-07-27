@@ -152,6 +152,70 @@ lowest zero.  My first guess at the mechanism — "maximize the total mass
 `2 Psi(h)`" — is wrong: `Psi` is slightly smaller at `pi/gamma_1` than at
 `pi/gamma_2`.
 
+
+### L-9508 / X-9505 / X-9506 (second pass) — the obstruction is the weight, not the route
+
+Surveying the repository turned up a large **zero-deflation cluster** sharing
+one shape — issues #84, #93, #121, #137 and PRs #90, #96, #97, #99, #100, #101,
+plus `L-9505` here.  All certify critical-line zeros, subtract them from an
+RH-nonnegative quantity, and hunt for a negative residual.  Several are
+separately commissioning certified bins at real cost.
+
+`L-9508` isolates what such a route can detect.  If RH gives
+`Q = sum_gamma w(gamma)` with `w >= 0`, and `Gamma` is certified, then the test
+fires exactly when the relative discrepancy `delta` exceeds the uncertified
+tail fraction `F_Gamma`.  Precision cannot push the threshold below `F_Gamma`
+and zero certification cannot push it below the enclosure width: the two costs
+bound different terms and do not trade.  `F(T)` is then fixed by the decay of
+`w`, and in the heavy band each decimal digit of sensitivity costs a factor
+`10` in certified zeros.
+
+`X-9506` measures the bands (target deficit `1e-12`):
+
+```text
+1/gamma^2  (screw; xi'/xi Pick at a point)   F(1000)=4.2e-02   T ~ 2.2e14   1.1e15 zeros
+Weil, C^0  test function (sinc^2)            F(1000)=3.6e-02   T ~ 1.9e14   9.2e14 zeros
+Weil, C^2  test function (sinc^4)            F(1000)=1.0e-05   T ~ 2.8e05   4.3e05 zeros
+Weil, C^6  test function (sinc^8)            F(1000)=3.4e-12   T ~ 1.2e03   8.1e02 zeros
+Weil, C^10 test function (sinc^12)           F(1000)=6.8e-20   T ~ 2.2e02   8.8e01 zeros
+```
+
+Eighteen orders of magnitude, driven purely by smoothness.  The screw route is
+pinned to `gamma^{-2}` by Krein's normalization — the slowest decay for which
+the expansion converges — so its deflation is structurally blocked.  This
+reproduces the `X-9504` order of magnitude by an independent method
+(`2.2e14` vs `3.3e13`).  A `C^0` test function puts a Weil route in the *same*
+band; `C^6` needs `812` zeros.  **Smoothness, not search, is the decisive
+design variable**, and in the light band the binding constraint moves off zero
+certification entirely and onto arithmetic-side precision.
+
+`X-9505` closes the last geometric knob on the screw route.  `X-9504`'s
+recorded next attack was to leave the equally-spaced cone; `L-9501` supplies
+the general-node form.  Optimizing node positions freely (warm-started from the
+best arithmetic set, with a conditioning guard) buys a factor `1.03-1.28` over
+equal spacing, with no trend in `m`:
+
+```text
+   m      rho arith       rho free    gain
+   6    0.982147760    0.982704834   1.032
+  14    0.988714440    0.990374136   1.172
+  24    0.993475814    0.994913993   1.283
+```
+
+The mechanism is that `P(gamma) = sum_j c_j e^{i gamma t_j}` is an exponential
+polynomial — almost periodic, bounded, non-decaying — so `|P|^2/gamma^2` keeps
+an irreducible `gamma^{-2}` envelope for *every* finite node set.  Nodes
+reshape the almost-periodic factor; they cannot change the decay class.
+
+Two methodology errors from my first version of `X-9505` are recorded in the
+claim file: warm-starting the free search from a fixed rather than the best
+arithmetic spacing (which produced a spurious gain of `0.945`, i.e. optimizer
+failure read as geometry), and the absence of a conditioning guard, which let
+the optimizer run to nearly-coincident nodes where the ratio is noise.
+
+Net: every geometric knob on the screw route — `n`, `h`, full node freedom —
+is a bounded factor.  Only `T` moves the deficit, and only as `log(T)/T`.
+
 ## Candidate counterexamples
 
 **None.**  No `Z-####` is assigned.  `rho_Gamma <= 1` held at every `T`, `n`
@@ -218,7 +282,14 @@ added   experiments/screw_zeta_zeros.py
 added   experiments/screw_audit_and_ratio.py
 added   experiments/results/X-9503-screw-audit-ratio/audit.json
 added   experiments/results/X-9503-screw-audit-ratio/zeros1000.json
+added   claims/lemmas/L-9508-deflation-sensitivity-equals-tail-fraction.md
 added   claims/experiments/X-9504-zero-accounting-deficit-law.md
+added   claims/experiments/X-9505-free-node-screw-witnesses.md
+added   claims/experiments/X-9506-deflation-tail-budget.md
+added   experiments/screw_free_nodes.py
+added   experiments/deflation_tail_budget.py
+added   experiments/results/X-9505-screw-free-nodes/free_nodes.json
+added   experiments/results/X-9506-deflation-tail-budget/budget.json
 added   experiments/screw_deficit_law.py
 added   experiments/results/X-9504-screw-deficit-law/deficit.json
 added   reports/claude-09/2026-07-26-95-vanishing-minimum-and-zero-accounting.md
@@ -243,6 +314,11 @@ L-9506   NEW, PROPOSED.
 L-9507   NEW, PROPOSED.
 X-9503   NEW, EMPIRICAL.
 X-9504   NEW, EMPIRICAL.  Bounds the arithmetic-progression route.
+L-9508   NEW, PROPOSED.  Deflation sensitivity = tail fraction; ranks the
+         repository's whole deflation cluster by weight decay.
+X-9505   NEW, EMPIRICAL.  Free nodes buy only 1.03-1.28x; closes the last
+         geometric knob on the screw route.
+X-9506   NEW, EMPIRICAL.  Tail-fraction budget by weight class.
 ```
 
 ## Recommended next actions

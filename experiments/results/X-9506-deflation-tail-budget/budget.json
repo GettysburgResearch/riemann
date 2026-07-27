@@ -1,0 +1,71 @@
+{
+ "agent": "claude-09",
+ "environment": {
+  "arithmetic": "IEEE binary64",
+  "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+  "python": "3.11.15",
+  "third_party_libraries": "none (standard library only)"
+ },
+ "experiment": "X-9506",
+ "rows": [
+  {
+   "F_at_1000": 0.04181035869611986,
+   "band": "heavy",
+   "certified_zeros": 1065396143417432.0,
+   "required_T": 221698960729556.78,
+   "weight": "1/gamma^2   (screw Psi; xi'/xi Pick at a fixed point)"
+  },
+  {
+   "F_at_1000": 7.71130569947447e-06,
+   "band": "moderate",
+   "certified_zeros": 381315.22376748093,
+   "required_T": 249814.88273025615,
+   "weight": "1/gamma^4   (a hypothetical second-order kernel)"
+  },
+  {
+   "F_at_1000": 1.163493576161899e-09,
+   "band": "moderate",
+   "certified_zeros": 3793.1512841930794,
+   "required_T": 4309.273428108124,
+   "weight": "1/gamma^6"
+  },
+  {
+   "F_at_1000": 0.03627100113297584,
+   "band": "heavy",
+   "certified_zeros": 915399080284588.2,
+   "required_T": 191417029608432.47,
+   "weight": "Weil, C^0 test fn  (sinc^2,  support ~2)"
+  },
+  {
+   "F_at_1000": 1.0207261862682695e-05,
+   "band": "moderate",
+   "certified_zeros": 425267.6321127802,
+   "required_T": 275767.8465133166,
+   "weight": "Weil, C^2 test fn  (sinc^4,  support ~2)"
+  },
+  {
+   "F_at_1000": 3.3910575182536624e-12,
+   "band": "light",
+   "certified_zeros": 811.9656832834683,
+   "required_T": 1199.826951636024,
+   "weight": "Weil, C^6 test fn  (sinc^8,  support ~2)"
+  },
+  {
+   "F_at_1000": 6.792000819662257e-20,
+   "band": "light",
+   "certified_zeros": 87.66244377591586,
+   "required_T": 216.76873456533454,
+   "weight": "Weil, C^10 test fn (sinc^12, support ~2)"
+  },
+  {
+   "F_at_1000": 0.0,
+   "band": "light",
+   "certified_zeros": 17.387431007418673,
+   "required_T": 74.30407785056816,
+   "weight": "Gaussian test fn   exp(-gamma^2/200)"
+  }
+ ],
+ "script_sha256": "66c8a4662d090f84a3c287aae3acbe951188b90dea396a7587172ac9bcf6f133",
+ "status": "EMPIRICAL - heuristic scaling calculator, not a certificate",
+ "target_deficit": 1e-12
+}
