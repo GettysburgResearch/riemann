@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/user/riemann/experiments/X-0019-anchor-ladder/run_anchor.py", line 287, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/user/riemann/experiments/X-0019-anchor-ladder/run_anchor.py", line 95, in main
+    "anchor_low_sha256": parent.file_sha256(args.anchor_low),
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/w4/experiments/X-9309-zero-anchor-degree15/verify_zero_anchor.py", line 195, in file_sha256
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+                          ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1050, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results/w1-p512.json'

@@ -1,0 +1,45 @@
+{
+ "schema": "riemann.x0018-w4-anchor-run.v1",
+ "agent": "claude-02",
+ "anchor": {
+  "numerator": 1,
+  "denominator": 4
+ },
+ "point": {
+  "re": "5/2",
+  "ordinate": {
+   "denominator": 4294967296,
+   "numerator": 20225875608343133989267
+  }
+ },
+ "provenance": {
+  "w4_branch_head": "418a99c56e22002c2e8bb407fab77091fc787a4e",
+  "verify_zero_anchor_sha256": "99038785d0b14ab7f51457edbcffe8b1f277c0daf4e33f918c77d18af44dcb6b",
+  "positive_anchor_sha256": "54b36f134c1c4b68ddf973b453c3b1da3204221c1a03ea1f3fc15b80d6f89e7a",
+  "verify_b0_interval_sha256": "a490d9af874730d89925271e9f1a8daa8f519b721d2d6bf7e3352c6a7fed56aa",
+  "old_certificate_sha256": "21b07a2020d482ae27454630c0437d3178d087453fdc129b40529a19a981d204",
+  "old_certificate_git_blob_sha1": "a02e20c083db8da00a9bd3629179b25c6469ea00",
+  "old_basis_sha256": "4e2b90f53a32f9d50ffd3a0fe13445b141bfc6564d3044a64cf5b676954e462c",
+  "anchor_low_sha256": "5ccbb943bcd813928c1f92472e1c26e0ef71908a96c3425b5df85619c8129e69",
+  "anchor_high_sha256": "1eefb28bacd5bc2ed81752feb48263dabe3f2437249f178017c3def34143a88f",
+  "binding_note": "bound via source_certificate_git_blob_sha1 (byte-exact) and primitive_sha256; the declared source_certificate_sha256 '44a0101cfc8e9c28479ffcfc0d20c6dece6735062fc180ad5f8622986f858a2f' matches no file or internal digest on any branch carrying these files (defect reported on PR #135)"
+ },
+ "log_terms": 64,
+ "full_b0": [
+  "-4032132689197921155209713495389248501216795786933.929315071048001010070",
+  "4032132689197921155209713495389248501217254337517.314690516868054885916"
+ ],
+ "reduced_b0": [
+  "229275291.6926877229100269379232368047322370273399593071419263063255637",
+  "229275291.6926877229100269379232368047323501502147302564444674972504166"
+ ],
+ "b0_intersection": [
+  "229275291.6926877229100269379232368047322370273399593071419263063255637",
+  "229275291.6926877229100269379232368047323501502147302564444674972504166"
+ ],
+ "b0_width": "1.1312287E-31",
+ "full_reduced_overlap": true,
+ "checker_exit_code": 1,
+ "checker_verdict": "NO_CERTIFIED_NEGATIVE_FROM_MIDPOINT_SCHUR_DIRECTIONS",
+ "seconds": 137.4
+}

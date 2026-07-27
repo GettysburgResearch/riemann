@@ -1,0 +1,27 @@
+12 deflation shells; log terms 64
+  residual 1/16 done [0s]
+  residual 2/16 done [1s]
+  residual 3/16 done [1s]
+  residual 4/16 done [2s]
+  residual 5/16 done [2s]
+  residual 6/16 done [2s]
+  residual 7/16 done [3s]
+  residual 8/16 done [3s]
+  residual 9/16 done [4s]
+  residual 10/16 done [4s]
+  residual 11/16 done [4s]
+  residual 12/16 done [5s]
+  residual 13/16 done [5s]
+  residual 14/16 done [5s]
+  residual 15/16 done [6s]
+  residual 16/16 done [6s]
+  anchor residual done [7s]
+full    b0 in [-161285307565100434070779291593814372827075685275.0358147623762266314215, 161285307565100434070779291593814372827111509357.6847307947511468892695]
+reduced b0 in [17912041.32445801618746012892403292807114269550468558921673523220830074, 17912041.32445801618746012892403292807114722041967634817349073319643676]
+intersection  [17912041.32445801618746012892403292807114269550468558921673523220830074, 17912041.32445801618746012892403292807114722041967634817349073319643676]
+width: 4.5249150E-33
+checker stdout: 
+
+checker exit code: 1
+checker verdict:   NO_CERTIFIED_NEGATIVE_FROM_MIDPOINT_SCHUR_DIRECTIONS
+wrote /home/user/riemann/experiments/X-0019-anchor-ladder/results/w25-4-run.json
