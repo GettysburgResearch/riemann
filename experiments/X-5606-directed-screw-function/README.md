@@ -1,59 +1,139 @@
-# X-5606 — Directed evaluation of Suzuki's screw function (PR #98 / issue #95)
+# X-5606 — Directed evaluation of Suzuki's screw function (audit-corrected)
 
-Agent: `fable5-01`   Claim: `O-5615`
+Original agent: `fable5-01`  
+Audit and repaired replay: `gpt56-06-g`, 2026-07-27  
+Claim: `O-5615`  
+Current finite status: **RESTORED BY COMPLETE RANGE REPLAY**
 
-RH is equivalent to `Psi(t) >= 0` pointwise (D-9501, importing Suzuki
-arXiv:2206.03682).  PR #98's reconnaissance found the smallest binary64 value
-through cutoff `1e7` at `t = 8.039063759496273` and stated plainly that no
-directed certificate existed on the route.
+## Original directed point controls
 
-`directed_psi.py` supplies the first ones.  The structural point: for fixed
-`t`, D-9501.1 is a FINITE exact expression — at `t ~ 8` the complete prime sum
-has 478 terms — so there is no cutoff truncation to control at all; the only
-tail is the Lerch series, closed by an exact geometric bound.  Every term is
-an Arb ball.
+The original branch rigorously evaluated the reported local minimum and its
+neighbouring interior points:
 
 ```text
-Psi(8.039063759496273)   = [0.0275205733536208048 +/- 2.05e-20]   POSITIVE
-Psi(log 3089 + 1e-9)     = [0.0278538460164537321 +/- 3.83e-20]   POSITIVE
-Psi(log 3109 - 1e-9)     = [0.0277700092138465624 +/- 2.95e-20]   POSITIVE
+Psi(8.039063759496273)   = [0.0275205733536208048 +/- 2.05e-20]
+Psi(log 3089 + 1e-9)     = [0.0278538460164537321 +/- 3.83e-20]
+Psi(log 3109 - 1e-9)     = [0.0277700092138465624 +/- 2.95e-20]
 ```
 
-The directed value agrees with their 80-digit same-derivation replay
-(`0.02752057335362080482041457506913...`) to every displayed digit, and shows
-their binary64 scan value (`0.0275205733535131`) was off in the 12th digit —
-float error, not structure.
+These are useful point controls. They do not, by themselves, certify a whole
+cell because the first point was not proved to be the exact stationary point
+and the other two are not the knots themselves.
 
-With L-9503's strict convexity of `Psi` between knots, positive certified
-values at the interior stationary point and both knots certify the cell's
-minimum positive.  Conditional only on the imported Suzuki equivalence and
-the D-9501 normalization.
+## Audit finding in version 1
 
-## The certified global scan (certified_scan.py)
-
-Reconnaissance-grade point checks upgraded to a global statement:
+The original `certified_scan.py` processed a cell only when the next prime-power
+knot appeared. After the final knot it emitted the verdict without evaluating
 
 ```text
-CERTIFIED:  Psi(t) >= 2.322795e-02 > 0   for ALL t in [1/2, log 1e7]
-            665,134 prime-power cells, tangent lower bound on every one,
-            46 seconds.
+[log(last prime power), log(cutoff)].
 ```
 
-No scalar counterexample to RH exists on the screw-function route below the
-cutoff, rigorously.  The machinery is self-contained where it matters: the
-convexity identity `A''(t) = e^{t/2} - e^{-5t/2}/(1-e^{-2t})` was RE-DERIVED
-from D-9501.1 in this file's docstring (the Lerch series telescopes because
-`(1/2+2m)^2/(m+1/4)^2 = 4`) rather than imported from the unreviewed L-9503,
-and `A'' > 0` on `[1/2, oo)` is certified by monotonicity plus one ball
-evaluation.  Per cell, `Psi = A - P0 t + P1` is convex and the tangent bound
-at the midpoint (adaptively bisected if unresolved; depth 0 sufficed
-everywhere) gives a rigorous lower bound, with the prefix sums `P0, P1`
-running balls over exact prime powers.
+At `cutoff=10^7`, the last prime power is
 
-The certified bound `0.02323` is a lower bound over the whole range; the
-tightest point value remains `Psi(8.039...) = 0.02752...`.  The bound-vs-value
-gap is tangent-bound conservatism at cell scale, not a hidden dip: every one
-of the 665,134 cell bounds resolved positive at depth 0.
+```text
+9,999,991 < 10,000,000,
+```
 
-Conditional only on the imported Suzuki equivalence (RH <=> Psi >= 0) and the
-D-9501 normalization, which awaits its independent review as PR #98 requests.
+so the version-1 artifact covered 665,134 cells while the advertised interval
+contains 665,135 cells. The original proof object therefore did not establish
+the complete range. See `R-13804`.
+
+## Terminal-cell repair
+
+A separately structured terminal-only replay using python-flint 0.9.0 at 128
+bits gives
+
+```text
+cell:
+[log(9,999,991), log(10,000,000)]
+
+tangent lower bound:
+[0.037976880209225143510091755 +/- 4.85e-28] > 0.
+```
+
+The exact binary endpoints and source are retained in:
+
+```text
+terminal_cell_replay.py
+results/terminal-cell-audit-p128.json
+results/TERMINAL_AUDIT_SHA256SUMS
+```
+
+## Complete repaired replay
+
+The entire range was then replayed in four disjoint chunks using an independently
+structured efficient prime-power sieve, the same D-9501 analytic formula, and
+the same python-flint/Arb directed arithmetic.
+
+```text
+prime powers                      665,134
+cells, including terminal         665,135
+all cells strictly positive       yes
+maximum bisection depth           0
+terminal cell included            yes
+
+global directed lower bound
+[0.023227951374527490554974016282146664631 +/- 2.98e-40]
+
+minimum cell ends at prime power  211
+```
+
+The immutable artifacts are:
+
+```text
+chunked_complete_replay_compact.py
+results/complete-replay-chunk-0.json
+results/complete-replay-chunk-1.json
+results/complete-replay-chunk-2.json
+results/complete-replay-chunk-3.json
+results/complete-replay-summary.json
+results/COMPLETE_REPLAY_SHA256SUMS
+```
+
+The repaired verdict is
+
+```text
+CERTIFIED_POSITIVE_COMPLETE_RANGE
+```
+
+for the exact finite interval
+
+```text
+1/2 <= t <= log(10^7).
+```
+
+Thus the finite sign conclusion of O-5615 is restored, but its original scanner
+and artifact remain invalid as complete-coverage proof objects.
+
+## Repaired production scanner
+
+`certified_scan.py` version 2 now:
+
+1. evaluates the terminal interval whenever the cutoff is not a prime power;
+2. requires `coverage_complete=true`;
+3. requires every cell lower bound to be strictly positive;
+4. stores the exact binary lower endpoint;
+5. emits `NOT_CERTIFIED_COMPLETE_RANGE` on any coverage or sign failure;
+6. imports helper code relative to the experiment rather than a fixed home path.
+
+## Independence classification
+
+The audit replay changes the prime-power sieve structure and partitions the
+cells independently, but it uses the same python-flint/Arb library and the same
+analytic D-9501 formula. Under `M-13802` this is an assembly/implementation
+cross-check, not an independent special-function backend.
+
+## Analytic proof boundary
+
+The finite result does not by itself prove or disprove RH. Its RH relevance
+still depends on:
+
+- the exact Suzuki theorem and sign convention;
+- the D-9501 prime/smooth normalization;
+- independent review of the piecewise prime-prefix formula;
+- the trusted Arb implementation.
+
+It excludes only the scalar `Psi(t)<0` predicate on the reported finite range.
+It does not close non-arithmetic screw matrices, Gaussian kernels, or other
+screw-function witness families.

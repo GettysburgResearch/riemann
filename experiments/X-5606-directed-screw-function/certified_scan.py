@@ -1,39 +1,26 @@
 #!/usr/bin/env python3
-"""Certified global lower bound for Suzuki's Psi over [1/2, log(cutoff)].
+"""Certified lower bound for Suzuki's Psi over [t_start, log(cutoff)].
 
-Agent: fable5-01   Issue: #95, PR #98
+Audit repair, 2026-07-27:
 
-PR #98's X-9501 scan is binary64 reconnaissance.  This module certifies the
-same range: a rigorous positive lower bound for `Psi` on every knot cell,
-hence `min Psi >= bound > 0` over `[1/2, log cutoff]` — the first certified
-global statement on the route.
+* the original scanner stopped at the last prime-power knot and omitted the
+  terminal interval to ``log(cutoff)`` whenever the cutoff was not itself a
+  prime power;
+* the repaired scanner evaluates that terminal cell with the final prefix sums;
+* the verdict requires explicit complete coverage and positivity of every cell;
+* the exact binary lower endpoint is retained instead of relying only on a
+  binary64 copy;
+* imports are relative to this experiment directory instead of a fixed home
+  path.
 
-Structure.  Between consecutive prime-power knots, `Psi(t) = A(t) - P0*t + P1`
-with the smooth part
+The analytic structure remains the one used by the original producer. Between
+consecutive prime-power knots,
 
-    A(t)  = 4(e^{t/2} + e^{-t/2} - 2) + (t/2)(psi(1/4) - log pi)
-            + (1/4)(C - e^{-t/2} Phi(e^{-2t}, 2, 1/4)),
-    A'(t) = 2(e^{t/2} - e^{-t/2}) + (psi(1/4) - log pi)/2
-            + sum_m 2/(4m+1) e^{-(4m+1)t/2},
-    A''(t)= e^{t/2} - e^{-5t/2}/(1 - e^{-2t}).
+    Psi(t) = A(t) - P0*t + P1,
 
-The `A'` series and the `A''` closed form were RE-DERIVED here from D-9501.1
-(the Lerch series telescopes because `(1/2+2m)^2/(m+1/4)^2 = 4`), so nothing
-is imported from the unreviewed L-9503 beyond what this file proves in
-passing: `A'' > 0` on `[1/2, oo)` since `e^{3t} - e^t - 1` is increasing and
-positive at `t = 1/2` (certified by one ball evaluation).
-
-`Psi` is therefore convex on every cell intersected with `[1/2, oo)`, and the
-tangent bound at any interior point `s` gives
-
-    min_{[a,b]} Psi  >=  Psi(s) + min( Psi'(s)(a-s), Psi'(s)(b-s) ),
-
-entirely in ball arithmetic.  If the bound at the cell midpoint is not
-positive, the cell is bisected adaptively; every reported cell bound is
-rigorous regardless of where the probe points land.
-
-The prefix sums `P0, P1` are running balls over exact prime powers, so the
-whole scan is one streaming pass.
+and A is strictly convex for t >= 1/2. A tangent at any interior point supplies
+a rigorous lower bound on the whole cell. All special-function and accumulated
+quantities are Arb balls.
 """
 from __future__ import annotations
 
@@ -42,10 +29,13 @@ import json
 import sys
 import time
 from fractions import Fraction as Fr
+from pathlib import Path
 
 from flint import arb, ctx
 
-sys.path.insert(0, "/home/user/riemann/experiments/X-5606-directed-screw-function")
+HERE = Path(__file__).resolve().parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
 from directed_psi import sieve_lambda
 
 if hasattr(sys, "set_int_max_str_digits"):
@@ -56,11 +46,11 @@ class Smooth:
     def __init__(self, prec):
         ctx.prec = prec
         self.prec = prec
-        self.k1 = (arb(1) / 4).digamma() - arb.pi().log()      # psi(1/4)-log pi
+        self.k1 = (arb(1) / 4).digamma() - arb.pi().log()
         self.C = arb.pi() ** 2 + 8 * arb.const_catalan()
 
     def phi_series(self, t, terms=30):
-        """sum z^m/(m+1/4)^2 with z = e^{-2t}, plus exact tail."""
+        """Enclose sum z^m/(m+1/4)^2, z=exp(-2t), with a positive tail."""
         z = (-2 * t).exp()
         acc, zp = arb(0), arb(1)
         for m in range(terms):
@@ -70,56 +60,99 @@ class Smooth:
         return acc + tail.union(arb(0))
 
     def A(self, t):
-        return (4 * ((t / 2).exp() + (-t / 2).exp() - 2)
-                + (t / 2) * self.k1
-                + (self.C - (-t / 2).exp() * self.phi_series(t)) / 4)
+        return (
+            4 * ((t / 2).exp() + (-t / 2).exp() - 2)
+            + (t / 2) * self.k1
+            + (self.C - (-t / 2).exp() * self.phi_series(t)) / 4
+        )
 
     def dA(self, t, terms=30):
         acc = arb(0)
         for m in range(terms):
             k = 4 * m + 1
             acc = acc + 2 * (-(arb(k) * t) / 2).exp() / k
-        # tail: sum_{m>=M} 2/(4m+1) e^{-(4m+1)t/2} <= e^{-(4M+1)t/2}/(2(1-e^{-2t}))
+        # For m>=M, 2/(4m+1) <= 1/2 and successive exponentials differ by
+        # exp(-2t), giving this positive geometric tail enclosure.
         k = 4 * terms + 1
         tail = (-(arb(k) * t) / 2).exp() / (2 * (1 - (-2 * t).exp()))
         acc = acc + tail.union(arb(0))
         return 2 * ((t / 2).exp() - (-t / 2).exp()) + self.k1 / 2 + acc
 
 
+def exact_binary_point(value):
+    """Serialize an exact Arb endpoint as one rational binary number."""
+    mantissa, exponent = value.man_exp()
+    mantissa = int(mantissa)
+    exponent = int(exponent)
+    if exponent >= 0:
+        numerator = mantissa << exponent
+        denominator = 1
+    else:
+        numerator = mantissa
+        denominator = 1 << (-exponent)
+        while numerator and numerator % 2 == 0:
+            numerator //= 2
+            denominator //= 2
+    return {
+        "numerator": str(numerator),
+        "denominator": str(denominator),
+        "mantissa": str(mantissa),
+        "exponent": exponent,
+    }
+
+
+def terminal_cell_needed(last_prime_power: int | None, cutoff: int) -> bool:
+    """Whether [last knot, log(cutoff)] is a nonempty terminal cell."""
+    return last_prime_power is None or last_prime_power < cutoff
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--cutoff", type=int, default=10 ** 7)
+    ap.add_argument("--cutoff", type=int, default=10**7)
     ap.add_argument("--t-start", type=str, default="1/2")
     ap.add_argument("--prec", type=int, default=128)
     ap.add_argument("--max-depth", type=int, default=14)
     ap.add_argument("--out", default="results/certified-scan.json")
     args = ap.parse_args()
+    if args.cutoff < 2:
+        raise SystemExit("cutoff must be at least 2")
 
     ctx.prec = args.prec
     sm = Smooth(args.prec)
 
-    # convexity preamble: e^{3t}-e^t-1 increasing (3e^{3t} > e^t trivially),
-    # positive at t_start -- one ball check makes A'' > 0 on [t_start, oo)
     t0f = Fr(args.t_start)
     t0 = arb(t0f.numerator) / arb(t0f.denominator)
-    conv = (3 * t0).exp() - t0.exp() - 1
-    assert conv > 0, "convexity anchor failed"
+    t_end = arb(args.cutoff).log()
+    if not (t0 < t_end):
+        raise SystemExit("t_start must be strictly below log(cutoff)")
 
-    print("sieving to %d ..." % args.cutoff, flush=True)
-    ts = time.time()
+    # A''>0 iff exp(3t)-exp(t)-1>0. This function is increasing for t>=1/2.
+    conv = (3 * t0).exp() - t0.exp() - 1
+    if not (conv > 0):
+        raise SystemExit("convexity anchor failed")
+
+    print(f"sieving to {args.cutoff} ...", flush=True)
+    sieve_started = time.time()
     pp = sieve_lambda(args.cutoff)
-    print("%d prime powers  [%.0f s]" % (len(pp), time.time() - ts), flush=True)
+    print(
+        f"{len(pp)} prime powers  [{time.time() - sieve_started:.0f} s]",
+        flush=True,
+    )
 
     P0, P1 = arb(0), arb(0)
-    global_min = None
+    global_lower = None
+    global_bound = None
     global_cell = None
+    all_cells_positive = True
     worst_depth = 0
     t_prev = t0
     n_cells = 0
-    ts = time.time()
+    scan_started = time.time()
 
     def cell_bound(a, b, P0v, P1v, depth=0):
         nonlocal worst_depth
+        if not (a < b):
+            raise RuntimeError("attempted to bound a nonpositive-width cell")
         s = (a + b) / 2
         val = sm.A(s) - P0v * s + P1v
         der = sm.dA(s) - P0v
@@ -131,50 +164,110 @@ def main() -> None:
         right = cell_bound(s, b, P0v, P1v, depth + 1)
         return left.min(right)
 
+    def record_cell(bound, start_label, end_label):
+        nonlocal global_lower, global_bound, global_cell
+        nonlocal all_cells_positive, n_cells
+        n_cells += 1
+        if not (bound > 0):
+            all_cells_positive = False
+        lower = bound.lower()
+        if global_lower is None or lower < global_lower:
+            global_lower = lower
+            global_bound = bound
+            global_cell = {
+                "start": start_label,
+                "end": end_label,
+            }
+
+    last_n = None
     for idx, (n, p) in enumerate(pp):
+        if n > args.cutoff:
+            raise RuntimeError("sieve emitted a prime power above the cutoff")
         tau = arb(n).log()
         if tau > t_prev:
-            b = cell_bound(t_prev, tau, P0, P1)
-            n_cells += 1
-            if global_min is None or float(b.lower().mid()) < global_min:
-                global_min = float(b.lower().mid())
-                global_cell = (str(n), float(t_prev.mid()))
+            bound = cell_bound(t_prev, tau, P0, P1)
+            record_cell(bound, str(t_prev), f"log({n})")
             t_prev = tau
         w = arb(p).log() / arb(n).sqrt()
         P0 = P0 + w
         P1 = P1 + w * tau
+        last_n = n
         if (idx + 1) % 50000 == 0:
-            print("  %d/%d knots, %d cells, running min %.6e  [%.0f s]"
-                  % (idx + 1, len(pp), n_cells, global_min or -1,
-                     time.time() - ts), flush=True)
+            running = float(global_lower.mid()) if global_lower is not None else -1.0
+            print(
+                f"  {idx + 1}/{len(pp)} knots, {n_cells} cells, "
+                f"running min {running:.6e}  "
+                f"[{time.time() - scan_started:.0f} s]",
+                flush=True,
+            )
 
-    verdict_positive = global_min is not None and global_min > 0
-    res = {
-        "schema": "riemann.x5606-certified-scan.v1",
-        "agent": "fable5-01",
-        "classification": "DIRECTED: convexity modulus re-derived and "
-                          "certified in-file; tangent lower bounds in ball "
-                          "arithmetic on every knot cell; prefix sums as "
-                          "running balls over exact prime powers. Conditional "
-                          "only on the imported Suzuki equivalence and the "
-                          "D-9501 normalization.",
+    final_cell_added = terminal_cell_needed(last_n, args.cutoff)
+    if final_cell_added:
+        # This interval was absent from the original implementation whenever
+        # cutoff was not itself a prime power (including cutoff=10^7).
+        bound = cell_bound(t_prev, t_end, P0, P1)
+        record_cell(bound, str(t_prev), f"log({args.cutoff})")
+        t_prev = t_end
+
+    coverage_complete = (
+        n_cells > 0
+        and (
+            (last_n == args.cutoff and not final_cell_added)
+            or (last_n is None and final_cell_added)
+            or (last_n is not None and last_n < args.cutoff and final_cell_added)
+        )
+    )
+    verdict_positive = (
+        coverage_complete
+        and all_cells_positive
+        and global_lower is not None
+        and global_lower > 0
+    )
+
+    result = {
+        "schema": "riemann.x5606-certified-scan.v2",
+        "agent": "fable5-01; terminal-cell audit repair by gpt56-06-g",
+        "classification": (
+            "Directed convex-cell lower bounds over exact prime-power prefix "
+            "balls. Conditional on the imported Suzuki equivalence and the "
+            "D-9501 normalization."
+        ),
         "cutoff": args.cutoff,
-        "range": [str(t0f), "log(%d)" % args.cutoff],
+        "range": [str(t0f), f"log({args.cutoff})"],
         "prime_powers": len(pp),
+        "last_prime_power": last_n,
+        "terminal_cell_added": final_cell_added,
+        "coverage_complete": coverage_complete,
         "cells": n_cells,
+        "all_cells_strictly_positive": all_cells_positive,
         "max_bisection_depth_used": worst_depth,
-        "certified_global_lower_bound": global_min,
-        "attained_near_cell_ending_at": global_cell,
-        "verdict": ("CERTIFIED: Psi(t) >= %.6e > 0 for all t in the range -- "
-                    "no scalar counterexample exists below the cutoff"
-                    % global_min if verdict_positive else
-                    "NOT CERTIFIED: a cell bound failed to resolve positive"),
-        "seconds": round(time.time() - ts, 1),
+        "certified_global_lower_bound_binary": (
+            exact_binary_point(global_lower) if global_lower is not None else None
+        ),
+        "certified_global_lower_bound_ball": (
+            str(global_bound) if global_bound is not None else None
+        ),
+        "certified_global_lower_bound_float_diagnostic": (
+            float(global_lower.mid()) if global_lower is not None else None
+        ),
+        "attained_near_cell": global_cell,
+        "verdict": (
+            "CERTIFIED_POSITIVE_COMPLETE_RANGE"
+            if verdict_positive
+            else "NOT_CERTIFIED_COMPLETE_RANGE"
+        ),
+        "seconds": round(time.time() - scan_started, 1),
+        "audit_note": (
+            "Version 1 omitted the terminal interval after the last prime-power "
+            "knot whenever cutoff was not itself a prime power. No v1 global "
+            "range verdict is retained without this repaired replay."
+        ),
     }
-    print(res["verdict"], flush=True)
-    with open(args.out, "w") as fh:
-        json.dump(res, fh, indent=1)
-    print("wrote", args.out, flush=True)
+    print(result["verdict"], flush=True)
+    output = Path(args.out)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    print(f"wrote {output}", flush=True)
 
 
 if __name__ == "__main__":
