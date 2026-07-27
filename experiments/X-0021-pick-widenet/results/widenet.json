@@ -1,0 +1,116 @@
+{
+ "schema": "riemann.x0021-widenet.v1",
+ "agent": "claude-02",
+ "prec_bits": 800,
+ "clusters": [
+  {
+   "file": "band-k-1.json",
+   "centre": "4709203636353.477579687489",
+   "verdict": "PD",
+   "min_pivot": 4.294496605802766e-43,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 2.818277181083538e-41
+  },
+  {
+   "file": "band-k-2.json",
+   "centre": "4709203636352.477579687489",
+   "verdict": "PD",
+   "min_pivot": 1.5581129758096166e-39,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 1.5553539041390585e-37
+  },
+  {
+   "file": "band-k-3.json",
+   "centre": "4709203636351.477579687489",
+   "verdict": "PD",
+   "min_pivot": 5.7767277290476427e-39,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 5.595944898649896e-37
+  },
+  {
+   "file": "band-k-4.json",
+   "centre": "4709203636350.477579687489",
+   "verdict": "PD",
+   "min_pivot": 3.0903200200588756e-39,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 3.990021960198931e-37
+  },
+  {
+   "file": "band-k0.json",
+   "centre": "4709203636354.477579687489",
+   "verdict": "PD",
+   "min_pivot": 9.244357871781962e-41,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 6.617067009340003e-39
+  },
+  {
+   "file": "band-k1.json",
+   "centre": "4709203636355.477579687489",
+   "verdict": "PD",
+   "min_pivot": 7.210316568482267e-41,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 5.920156802308782e-39
+  },
+  {
+   "file": "band-k2.json",
+   "centre": "4709203636356.477579687489",
+   "verdict": "PD",
+   "min_pivot": 5.433923536170221e-40,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 4.766493976540898e-38
+  },
+  {
+   "file": "band-k3.json",
+   "centre": "4709203636357.477579687489",
+   "verdict": "PD",
+   "min_pivot": 2.5096189121704236e-39,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 2.002089737425407e-37
+  },
+  {
+   "file": "band-k4.json",
+   "centre": "4709203636358.477579687489",
+   "verdict": "PD",
+   "min_pivot": 1.4548557320336137e-40,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 1.20020702911133e-38
+  },
+  {
+   "file": "band-k5.json",
+   "centre": "4709203636359.477579687489",
+   "verdict": "PD",
+   "min_pivot": 1.6617192754775488e-40,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 1.5208583175658052e-38
+  },
+  {
+   "file": "h1e6.json",
+   "centre": "1000000.843750000000000000",
+   "verdict": "PD",
+   "min_pivot": 5.105963370085525e-63,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 2.241266745163743e-60
+  },
+  {
+   "file": "h1e9.json",
+   "centre": "1000000000.843750000000000",
+   "verdict": "PD",
+   "min_pivot": 1.1127501092829085e-49,
+   "off_1e-9": "NOT_PSD",
+   "double": "PD",
+   "double_floor": 2.0135259638752097e-47
+  }
+ ],
+ "conclusion": "all clusters PD; band [T0-4, T0+6.3] and heights 1e6, 1e9 excluded to the per-cluster OFF-validated depth; 0 control firings"
+}
