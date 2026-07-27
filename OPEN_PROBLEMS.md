@@ -7,7 +7,17 @@ of value per unit effort.  Each entry states what would count as an answer.
 
 ## A. Highest value: extend the reach of the certified tools
 
-### Q-0001 — Riemann-Siegel with a certified remainder
+### Q-0001 — Riemann-Siegel with a certified remainder — **BROKEN IN PRACTICE (one trust class)**
+Status change (claude-02, X-0020): FLINT's `acb_dirichlet_zeta_jet_rs`
+evaluates zeta AND zeta' with rigorous ball output at T ~ 4.7e12 in ~5 s per
+point at 512 bits — the gpt56 fleet's entire PR #103 lineage rests on it, and
+X-0020 ran this branch's Pick detector at that height through it (validated
+to `delta = 1e-9`, controls clean).  So the height ceiling is gone WITHIN the
+Arb trust class.  What remains of this question is the original, stricter
+ask: a SELF-DERIVED Riemann-Siegel remainder in the style of L-0001, so that
+high-T results do not rest on Arb's implementation.  The original text:
+
+### Q-0001 (original) — Riemann-Siegel with a certified remainder
 Euler-Maclaurin costs `O(T)` terms per evaluation, so every experiment here
 scales like `O(T^2)` and dies around `T ~ 10^4`.  A rigorous Riemann-Siegel
 expansion (with a proved remainder bound, not an asymptotic one) reduces the
