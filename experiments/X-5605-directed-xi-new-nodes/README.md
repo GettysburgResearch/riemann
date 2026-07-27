@@ -123,3 +123,30 @@ pivot a strictly positive ball — so the **entire** degree-15/17/21 response
 cone is positive at this ordinate, and no polynomial witness exists in any of
 these families.  Anchor primitives at irrational `x = sqrt(w)` enter as
 768-bit balls; each packet cost 3-6 s.
+
+## The first directed line-mass budget run (budget_test.py, issue #137)
+
+L-13203's predicate — a positive response smaller than certified surviving
+line mass is an RH-disproof nomination — run directed for the first time.
+Bins are 172 Platt-certified zero balls in the O-5608 window (each one simple
+zero, located, disjoint); only the 99 beyond the largest deflation shell
+(8675/1024) are used, per the SELECTED_FACTOR_RESIDUAL discipline.  The bin
+side is exact rational arithmetic (interval Horner, `W` at the upper
+endpoint); the response side is the twice-oracle-validated ball pipeline.
+
+```text
+case                         certified line mass   total response              saturation
+A: x=1/20, q=1               3.02e-31              [4.4736e8   +/- 8e-3]       6.8e-40
+B: PA-7 near-null direction  2.68e-11              [2.7615e-8  +/- 5e-19]      9.7e-4
+```
+
+No reversal — but the PA-7 case turns the issue's hypothesis into a
+measurement: certified line mass from a mere ±20-unit window already reaches
+`0.1%` of the near-null response.  The reversal hunt has a quantified target:
+packets whose response falls another `~10^3` while the certified-mass floor
+stands.  Case A is budget-vacuous, as the `y^16` denominator makes flat-`q`
+leverage collapse at surviving distances — the issue's intuition that only
+near-null directions can be caught is confirmed in numbers.
+
+Conditional on the inherited L-9308 representation, exactly as issue #137
+itself states.

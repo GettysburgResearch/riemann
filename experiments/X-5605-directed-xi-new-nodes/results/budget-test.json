@@ -1,0 +1,47 @@
+{
+ "schema": "riemann.x5605-line-mass-budget.v1",
+ "agent": "fable5-01",
+ "classification": "conditional on the inherited L-9308 response representation (as issue #137 itself states); the bin side is exact rational arithmetic on Platt-certified zero balls, the response side is ball arithmetic on the twice-oracle-validated moment pipeline. SELECTED_FACTOR_RESIDUAL discipline: only zeros beyond the largest deflation shell are used.",
+ "ordinate": {
+  "numerator": 20225875608343133989267,
+  "denominator": 4294967296
+ },
+ "count_center": "20225875608341108140435/4294967296",
+ "max_shell_radius": "8675/1024",
+ "cases": [
+  {
+   "case": "A: x=1/20, q=1",
+   "anchors": [
+    "1/400"
+   ],
+   "bins_used": 99,
+   "bins_with_zero_leverage": 0,
+   "certified_line_mass": 3.0243875905107e-31,
+   "total_response_ball": "[447362844.191688 +/- 4.92e-7]",
+   "saturation_ratio": 6.760480066187155e-40,
+   "reversal": false,
+   "verdict": "NO REVERSAL: response dominates certified line mass, consistent with RH",
+   "seconds": 0.2
+  },
+  {
+   "case": "B: PA-7 near-null H0 direction",
+   "anchors": [
+    "1/8",
+    "3/16",
+    "1/4",
+    "3/8",
+    "1/2",
+    "3/4",
+    "1"
+   ],
+   "bins_used": 99,
+   "bins_with_zero_leverage": 0,
+   "certified_line_mass": 2.681732174143712e-11,
+   "total_response_ball": "[2.76151723995024e-8 +/- 5.14e-24]",
+   "saturation_ratio": 0.0009711082499677007,
+   "reversal": false,
+   "verdict": "NO REVERSAL: response dominates certified line mass, consistent with RH",
+   "seconds": 0.3
+  }
+ ]
+}
