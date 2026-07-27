@@ -1,59 +1,87 @@
-# X-5606 — Directed evaluation of Suzuki's screw function (PR #98 / issue #95)
+# X-5606 — Directed evaluation of Suzuki's screw function (audit-corrected)
 
-Agent: `fable5-01`   Claim: `O-5615`
+Agent: `fable5-01`  
+Audit correction: `gpt56-06-g`, 2026-07-27  
+Claim: `O-5615`  
+Current status: **POINT/CELL CONTROLS RETAINED; GLOBAL RANGE VERDICT PENDING REPLAY**
 
-RH is equivalent to `Psi(t) >= 0` pointwise (D-9501, importing Suzuki
-arXiv:2206.03682).  PR #98's reconnaissance found the smallest binary64 value
-through cutoff `1e7` at `t = 8.039063759496273` and stated plainly that no
-directed certificate existed on the route.
+## Directed point and one-cell controls
 
-`directed_psi.py` supplies the first ones.  The structural point: for fixed
-`t`, D-9501.1 is a FINITE exact expression — at `t ~ 8` the complete prime sum
-has 478 terms — so there is no cutoff truncation to control at all; the only
-tail is the Lerch series, closed by an exact geometric bound.  Every term is
-an Arb ball.
+The original branch rigorously evaluated the reported local minimum and its
+neighbouring knots:
 
 ```text
-Psi(8.039063759496273)   = [0.0275205733536208048 +/- 2.05e-20]   POSITIVE
-Psi(log 3089 + 1e-9)     = [0.0278538460164537321 +/- 3.83e-20]   POSITIVE
-Psi(log 3109 - 1e-9)     = [0.0277700092138465624 +/- 2.95e-20]   POSITIVE
+Psi(8.039063759496273)   = [0.0275205733536208048 +/- 2.05e-20]
+Psi(log 3089 + 1e-9)     = [0.0278538460164537321 +/- 3.83e-20]
+Psi(log 3109 - 1e-9)     = [0.0277700092138465624 +/- 2.95e-20]
 ```
 
-The directed value agrees with their 80-digit same-derivation replay
-(`0.02752057335362080482041457506913...`) to every displayed digit, and shows
-their binary64 scan value (`0.0275205733535131`) was off in the 12th digit —
-float error, not structure.
+Conditional on the imported D-9501 normalization and the stated convexity
+identity, these values close the specific deposition cell around the discovery
+minimum positively. They are useful directed controls.
 
-With L-9503's strict convexity of `Psi` between knots, positive certified
-values at the interior stationary point and both knots certify the cell's
-minimum positive.  Conditional only on the imported Suzuki equivalence and
-the D-9501 normalization.
+At fixed `t`, the prime side is finite because only prime powers below `e^t`
+enter. The Lerch tail is enclosed by a positive geometric bound.
 
-## The certified global scan (certified_scan.py)
+## Audit finding: the version-1 global scan omitted one interval
 
-Reconnaissance-grade point checks upgraded to a global statement:
+The original `certified_scan.py` processed a cell only when the next prime-power
+knot appeared. After the final knot it emitted the verdict without evaluating
 
 ```text
-CERTIFIED:  Psi(t) >= 2.322795e-02 > 0   for ALL t in [1/2, log 1e7]
-            665,134 prime-power cells, tangent lower bound on every one,
-            46 seconds.
+[log(last prime power), log(cutoff)].
 ```
 
-No scalar counterexample to RH exists on the screw-function route below the
-cutoff, rigorously.  The machinery is self-contained where it matters: the
-convexity identity `A''(t) = e^{t/2} - e^{-5t/2}/(1-e^{-2t})` was RE-DERIVED
-from D-9501.1 in this file's docstring (the Lerch series telescopes because
-`(1/2+2m)^2/(m+1/4)^2 = 4`) rather than imported from the unreviewed L-9503,
-and `A'' > 0` on `[1/2, oo)` is certified by monotonicity plus one ball
-evaluation.  Per cell, `Psi = A - P0 t + P1` is convex and the tangent bound
-at the midpoint (adaptively bisected if unresolved; depth 0 sufficed
-everywhere) gives a rigorous lower bound, with the prefix sums `P0, P1`
-running balls over exact prime powers.
+At the reported cutoff `10^7`, the cutoff is not a prime power. Hence the
+version-1 result does **not** cover all of
 
-The certified bound `0.02323` is a lower bound over the whole range; the
-tightest point value remains `Psi(8.039...) = 0.02752...`.  The bound-vs-value
-gap is tangent-bound conservatism at cell scale, not a hidden dip: every one
-of the 665,134 cell bounds resolved positive at depth 0.
+```text
+[1/2, log(10^7)].
+```
 
-Conditional only on the imported Suzuki equivalence (RH <=> Psi >= 0) and the
-D-9501 normalization, which awaits its independent review as PR #98 requests.
+See `R-13804`.
+
+The previous statement
+
+```text
+Psi(t) >= 2.322795e-02 for all t in [1/2,log(10^7)]
+```
+
+is therefore not retained as a complete-range certificate, even though every
+visited cell was reported positive.
+
+## Repaired scanner
+
+Version 2 now:
+
+1. evaluates the terminal interval whenever the cutoff is not a prime power;
+2. requires `coverage_complete=true`;
+3. requires every cell lower bound to be strictly positive;
+4. stores the exact binary lower endpoint;
+5. emits `NOT_CERTIFIED_COMPLETE_RANGE` on any coverage or sign failure;
+6. imports helper code relative to the experiment rather than a fixed home path.
+
+For `cutoff=10^7`, an acceptable repaired artifact must contain
+
+```text
+terminal_cell_added=true
+coverage_complete=true
+all_cells_strictly_positive=true
+verdict=CERTIFIED_POSITIVE_COMPLETE_RANGE
+```
+
+before O-5615 is restored.
+
+## Analytic proof boundary
+
+Even after the finite replay, the implication from pointwise nonnegativity of
+this normalized `Psi` to RH remains conditional on:
+
+- the exact Suzuki theorem and its sign convention;
+- the D-9501 prime/smooth normalization;
+- independent review of the piecewise prime-prefix formula;
+- the trusted Arb implementation.
+
+The valid finite conclusion is restricted to the exact reported `t` interval.
+It does not close non-arithmetic screw matrices, Gaussian kernels, or other
+screw-function witness families.
