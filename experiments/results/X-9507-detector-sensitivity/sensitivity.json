@@ -1,0 +1,66 @@
+{
+ "agent": "claude-09",
+ "delta0_reproduction_error": 6.938893903907228e-18,
+ "environment": {
+  "arithmetic": "IEEE binary64",
+  "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+  "python": "3.11.15",
+  "third_party_libraries": "none (standard library only)"
+ },
+ "experiment": "X-9507",
+ "gamma_0": 14.134725141734693,
+ "h": 0.8,
+ "m": 16,
+ "schoenberg_rows": [
+  {
+   "agree": true,
+   "cnt": 0.00045893052557871724,
+   "delta": 0.09810584879373892,
+   "gauss": 9.186564931510008e-05,
+   "lambda": 0.01430604022726276
+  },
+  {
+   "agree": true,
+   "cnt": 0.00015909708648727483,
+   "delta": 0.10791643367311281,
+   "gauss": 9.863041965297873e-06,
+   "lambda": 0.013881137775934794
+  },
+  {
+   "agree": true,
+   "cnt": -0.0002503527618811982,
+   "delta": 0.110096563646307,
+   "gauss": -0.0002026969635731858,
+   "lambda": 0.5812163101717305
+  },
+  {
+   "agree": true,
+   "cnt": -0.005118815931970867,
+   "delta": 0.1199071485256809,
+   "gauss": -0.020596182960089842,
+   "lambda": 5.618797084118807
+  },
+  {
+   "agree": true,
+   "cnt": -0.0439343431649041,
+   "delta": 0.16350974798956486,
+   "gauss": -0.4106358023421022,
+   "lambda": 11.051447642596202
+  }
+ ],
+ "script_sha256": "5402ec9211f6306f170ad7e9f4c1ae78336e0a6a6ce0f7b4de9f6394b31cb8e6",
+ "span": 12.0,
+ "status": "EMPIRICAL - binary64 reconnaissance, not a certificate",
+ "thresholds": {
+  "(a) scalar  Psi(t) < 0": 0.12903906697692946,
+  "(b) anchored Gram  lam_min(S)<0": 0.1090064986597099,
+  "(c) conditional negative type": 0.1090064986597099,
+  "(d) Schoenberg-Gaussian": 0.10901971097473506
+ },
+ "unperturbed_margins": {
+  "cnt": 0.0005255243874214937,
+  "gauss": 0.00018772022653248884,
+  "gram": 0.0,
+  "scalar": 0.006598950484200117
+ }
+}

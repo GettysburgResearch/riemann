@@ -216,6 +216,70 @@ the optimizer run to nearly-coincident nodes where the ratio is noise.
 Net: every geometric knob on the screw route — `n`, `h`, full node freedom —
 is a bounded factor.  Only `T` moves the deficit, and only as `log(T)/T`.
 
+
+### X-9507 (EMPIRICAL) — the four interfaces collapse to one, and the route closes
+
+`X-9505` left one gap: `L-9502`'s Schoenberg-Gaussian kernel
+`exp(-lambda Psi(t_i-t_j))` is nonlinear in the screw distances, so it has no
+`sum_gamma w(gamma)` expansion and `L-9508` did not bound it.  I built a
+controlled counterfactual — an on-line double zero at `gamma_1` splitting into
+an off-line quadruple, giving a one-parameter family `Psi_delta` that equals
+the true screw function at `delta = 0` — and measured what each of Issue #95's
+four interfaces can detect.
+
+```text
+interface                                delta*    Re(rho)
+(a) scalar  Psi(t) < 0                 0.129039   0.629039
+(b) anchored Gram  lam_min(S) < 0      0.109006   0.609006
+(c) conditional negative type          0.109006   0.609006
+(d) Schoenberg-Gaussian                0.109020   0.609020
+```
+
+**(b), (c) and (d) are the same predicate**, by two classical theorems rather
+than coincidence.  Anchoring at `t_0 = 0` makes `S` twice the
+Young-Householder Gram matrix, which is PSD iff `D` is conditionally negative
+definite — that is (b) `<=>` (c).  Schoenberg's exponential theorem gives
+`D` conditionally negative definite iff `exp(-lambda D)` is PSD for all
+`lambda > 0` — that is (c) `<=>` (d).  The `1.4e-05` gap in (d) is the
+resolution of the finite `lambda` grid, and (c)/(d) fire together at every
+`delta` tested.
+
+So `L-9502`'s Gaussian interface **adds no detection power**.  Its transfer
+moat is one-way and Schoenberg supplies the converse; the "amplification" is a
+reparameterization that normalizes the diagonal to `1` — a conditioning
+benefit, not a sensitivity one.  `L-9502` is correct as stated; it does not buy
+what its title suggests.  The whole matrix apparatus improves on the scalar
+test by `1.18x`.
+
+The sensitivity law, from a span scan at `m = 16`:
+
+```text
+    span       delta*   delta* x span
+     4.0     0.238066          0.9523
+     8.0     0.151428          1.2114
+    12.0     0.109006          1.3081
+    14.0     0.102468          1.4346
+```
+
+`delta* ~ 1.2/span`, and evaluating `Psi` at argument `span` needs prime powers
+to `e^{span}`.  **Detecting an off-critical zero of size `delta` therefore costs
+`e^{Theta(1/delta)}`.**  At the reachable span of `12`, the best interface sees
+only `Re(rho) >= 0.609`.  The mechanism is explicit: `Delta_delta` grows through
+`cosh(delta t) - 1`, so small `delta` is visible only at large `t`, and large
+`t` is exponentially expensive.
+
+Every knob on the screw route is now accounted for:
+
+```text
+n      matrix dimension   L-9506  lambda_min forced to 0; deficit ~ n^-0.58
+h      step               X-9504  factor 1.6-1.8 at h = pi/gamma_1
+nodes  full freedom       X-9505  factor 1.03-1.28
+T      certified height   X-9506  log(T)/T; needs T ~ 10^14
+weight class              L-9508  pinned at gamma^-2 by Krein normalization
+interfaces (b),(c),(d)    X-9507  the same predicate
+span   node extent        X-9507  delta* ~ 1.2/span at cost e^span
+```
+
 ## Candidate counterexamples
 
 **None.**  No `Z-####` is assigned.  `rho_Gamma <= 1` held at every `T`, `n`
@@ -286,6 +350,9 @@ added   claims/lemmas/L-9508-deflation-sensitivity-equals-tail-fraction.md
 added   claims/experiments/X-9504-zero-accounting-deficit-law.md
 added   claims/experiments/X-9505-free-node-screw-witnesses.md
 added   claims/experiments/X-9506-deflation-tail-budget.md
+added   claims/experiments/X-9507-screw-detector-sensitivity.md
+added   experiments/screw_detector_sensitivity.py
+added   experiments/results/X-9507-detector-sensitivity/sensitivity.json
 added   experiments/screw_free_nodes.py
 added   experiments/deflation_tail_budget.py
 added   experiments/results/X-9505-screw-free-nodes/free_nodes.json
@@ -319,6 +386,10 @@ L-9508   NEW, PROPOSED.  Deflation sensitivity = tail fraction; ranks the
 X-9505   NEW, EMPIRICAL.  Free nodes buy only 1.03-1.28x; closes the last
          geometric knob on the screw route.
 X-9506   NEW, EMPIRICAL.  Tail-fraction budget by weight class.
+X-9507   NEW, EMPIRICAL.  Interfaces (b),(c),(d) of Issue #95 are one
+         predicate; L-9502 does not amplify; sensitivity costs e^(1/delta).
+L-9502   correct as stated, but shown NOT to add detection power over the
+         conditional-negative-type interface (Schoenberg equivalence).
 ```
 
 ## Recommended next actions
