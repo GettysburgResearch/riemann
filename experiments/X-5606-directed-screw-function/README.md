@@ -28,3 +28,32 @@ With L-9503's strict convexity of `Psi` between knots, positive certified
 values at the interior stationary point and both knots certify the cell's
 minimum positive.  Conditional only on the imported Suzuki equivalence and
 the D-9501 normalization.
+
+## The certified global scan (certified_scan.py)
+
+Reconnaissance-grade point checks upgraded to a global statement:
+
+```text
+CERTIFIED:  Psi(t) >= 2.322795e-02 > 0   for ALL t in [1/2, log 1e7]
+            665,134 prime-power cells, tangent lower bound on every one,
+            46 seconds.
+```
+
+No scalar counterexample to RH exists on the screw-function route below the
+cutoff, rigorously.  The machinery is self-contained where it matters: the
+convexity identity `A''(t) = e^{t/2} - e^{-5t/2}/(1-e^{-2t})` was RE-DERIVED
+from D-9501.1 in this file's docstring (the Lerch series telescopes because
+`(1/2+2m)^2/(m+1/4)^2 = 4`) rather than imported from the unreviewed L-9503,
+and `A'' > 0` on `[1/2, oo)` is certified by monotonicity plus one ball
+evaluation.  Per cell, `Psi = A - P0 t + P1` is convex and the tangent bound
+at the midpoint (adaptively bisected if unresolved; depth 0 sufficed
+everywhere) gives a rigorous lower bound, with the prefix sums `P0, P1`
+running balls over exact prime powers.
+
+The certified bound `0.02323` is a lower bound over the whole range; the
+tightest point value remains `Psi(8.039...) = 0.02752...`.  The bound-vs-value
+gap is tangent-bound conservatism at cell scale, not a hidden dip: every one
+of the 665,134 cell bounds resolved positive at depth 0.
+
+Conditional only on the imported Suzuki equivalence (RH <=> Psi >= 0) and the
+D-9501 normalization, which awaits its independent review as PR #98 requests.

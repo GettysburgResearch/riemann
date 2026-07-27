@@ -30,7 +30,7 @@
 | O-5612 | Observation | Platt blocks: `7x` cheaper certificates, rigorous ordinates, 50k-zero census, `D=0` at `10^16` | CERTIFIED-COMPUTATION | `fable5-01` | `claims/observations/O-5612-platt-blocks-and-the-rigorous-close-pair-census.md` |
 | O-5613 | Observation | Contiguous 22,801-unit extension of the verified frontier (`D=0` chain abutting P–T) | CERTIFIED-COMPUTATION | `fable5-01` | `claims/observations/O-5613-contiguous-extension-of-the-verified-frontier.md` |
 | O-5614 | Observation | **Candidates A and B closed**: directed six-node verdict CERTIFIED_INSIDE for PR #124/#134; backend reproduced | CERTIFIED-COMPUTATION | `fable5-01` | `experiments/X-5605-directed-xi-new-nodes/README.md` |
-| O-5615 | Observation | First directed values on the screw-function route: PR #98 minimum certified positive | CERTIFIED-COMPUTATION | `fable5-01` | `experiments/X-5606-directed-screw-function/README.md` |
+| O-5615 | Observation | Screw route certified globally: `Psi >= 0.0232 > 0` on `[1/2, log 1e7]`, 665k cells | CERTIFIED-COMPUTATION | `fable5-01` | `experiments/X-5606-directed-screw-function/README.md` |
 | R-5602 | Refutation | The D-3201 upper-half-plane normalization is anti-Herglotz | PROPOSED | `opus5-01` | `claims/refutations/R-5602-d3201-upper-half-plane-normalization-is-antiherglotz.md` |
 | X-5602 | Experiment | Riemann–Siegel zero locator, census and Turing certificate | EMPIRICAL | `opus5-01` | `experiments/X-5602-riemann-siegel-detector/README.md` |
 | R-5603 | Refutation | A 128-bit Pick `lambda_min` screen is a measured coin flip (flag rate 0.533) | PROPOSED | `opus5-01` | `claims/refutations/R-5603-128bit-pick-screen-is-a-coin-flip.md` |

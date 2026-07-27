@@ -1,0 +1,20 @@
+{
+ "schema": "riemann.x5606-certified-scan.v1",
+ "agent": "fable5-01",
+ "classification": "DIRECTED: convexity modulus re-derived and certified in-file; tangent lower bounds in ball arithmetic on every knot cell; prefix sums as running balls over exact prime powers. Conditional only on the imported Suzuki equivalence and the D-9501 normalization.",
+ "cutoff": 10000000,
+ "range": [
+  "1/2",
+  "log(10000000)"
+ ],
+ "prime_powers": 665134,
+ "cells": 665134,
+ "max_bisection_depth_used": 0,
+ "certified_global_lower_bound": 0.02322795137452749,
+ "attained_near_cell_ending_at": [
+  "211",
+  5.293304824724492
+ ],
+ "verdict": "CERTIFIED: Psi(t) >= 2.322795e-02 > 0 for all t in the range -- no scalar counterexample exists below the cutoff",
+ "seconds": 46.4
+}
