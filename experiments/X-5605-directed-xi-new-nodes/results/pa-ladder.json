@@ -1,0 +1,68 @@
+{
+ "schema": "riemann.x5605-pa-ladder.v1",
+ "agent": "fable5-01",
+ "classification": "DIRECTED: 768-bit primitives, exact rational basis vectors with self-checked identities, ball LDL. A ball-positive pivot set certifies PSD rigorously. Moment pipeline validated against two oracles (70-digit scan; the issue #131 directed basis blob, all 15 moments agreeing).",
+ "ordinate": {
+  "numerator": 20225875608343133989267,
+  "denominator": 4294967296
+ },
+ "prec_bits": {
+  "xi": 768,
+  "ladder": 1500
+ },
+ "packets": [
+  {
+   "packet": "PA-1",
+   "anchors": [
+    "1"
+   ],
+   "nodes": 17,
+   "degree": 15,
+   "hankel_size": 8,
+   "H0_status": "PSD",
+   "H0_worst_pivot": "[0.00262865341732 +/- 4.49e-15]",
+   "H1_status": "PSD",
+   "H1_worst_pivot": "[0.00439742875375 +/- 3.49e-15]",
+   "verdict": "CERTIFIED_PSD: the entire degree-15 response cone is positive; no witness exists in this packet",
+   "seconds": 2.6
+  },
+  {
+   "packet": "PA-3",
+   "anchors": [
+    "1/8",
+    "3/16",
+    "1/4"
+   ],
+   "nodes": 19,
+   "degree": 17,
+   "hankel_size": 9,
+   "H0_status": "PSD",
+   "H0_worst_pivot": "[0.00115487487873 +/- 1.34e-15]",
+   "H1_status": "PSD",
+   "H1_worst_pivot": "[0.00148262519054 +/- 2.49e-15]",
+   "verdict": "CERTIFIED_PSD: the entire degree-17 response cone is positive; no witness exists in this packet",
+   "seconds": 5.8
+  },
+  {
+   "packet": "PA-7",
+   "anchors": [
+    "1/8",
+    "3/16",
+    "1/4",
+    "3/8",
+    "1/2",
+    "3/4",
+    "1"
+   ],
+   "nodes": 23,
+   "degree": 21,
+   "hankel_size": 11,
+   "H0_status": "PSD",
+   "H0_worst_pivot": "[2.86284544879e-5 +/- 5.99e-18]",
+   "H1_status": "PSD",
+   "H1_worst_pivot": "[4.30894022880e-5 +/- 1.12e-17]",
+   "verdict": "CERTIFIED_PSD: the entire degree-21 response cone is positive; no witness exists in this packet",
+   "seconds": 5.6
+  }
+ ]
+}

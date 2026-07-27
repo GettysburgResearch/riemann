@@ -102,3 +102,24 @@ radii `~1e-21`, larger than the `1.5e-22` gap.  Regenerating the table at
 decided it.  The conditioning of the 16-node basis costs roughly `10^120` —
 the same class of collapse `R-5603` measured on the Pick side — and is why
 "raw moat" ranking misleads, exactly as PR #134's own analysis argued.
+
+## The directed positive-anchor ladder (pa_ladder.py, issue #131)
+
+Issue #131's packets, run directed at the current center with 768-bit
+primitives, exact rational basis vectors, and ball LDL.  The moment pipeline
+gained a second oracle first: the issue's `old moment basis` blob
+(`174db078...`) is present in the object store, and **all 15 of my ball
+moments agree with their directed decimal intervals**.
+
+```text
+packet  anchors                       degree   H0 worst pivot            H1 worst pivot            verdict
+PA-1    {1}                             15     [2.62865e-3 +/- 4e-15]    [4.39743e-3 +/- 3e-15]    CERTIFIED_PSD
+PA-3    {1/8, 3/16, 1/4}                17     [1.15487e-3 +/- 1e-15]    [1.48263e-3 +/- 2e-15]    CERTIFIED_PSD
+PA-7    {1/8,3/16,1/4,3/8,1/2,3/4,1}    21     [2.86285e-5 +/- 6e-18]    [4.30894e-5 +/- 1e-17]    CERTIFIED_PSD
+```
+
+Both Hankel matrices of every packet are positive definite with every LDL
+pivot a strictly positive ball — so the **entire** degree-15/17/21 response
+cone is positive at this ordinate, and no polynomial witness exists in any of
+these families.  Anchor primitives at irrational `x = sqrt(w)` enter as
+768-bit balls; each packet cost 3-6 s.
