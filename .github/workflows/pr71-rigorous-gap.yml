@@ -1,0 +1,99 @@
+name: PR71 rigorous zero-gap discrepancy audit
+
+on:
+  push:
+    branches:
+      - agent/gpt56-02-i/55-pr71-counting-audit
+    paths:
+      - '.github/workflows/pr71-rigorous-gap.yml'
+      - 'experiments/X-5603-pr71-gap-audit/**'
+  pull_request:
+    branches:
+      - claude/riemann-counterexample-pipeline-io8s2k
+      - agent/gpt56-02-i/55-pr71-counting-audit
+    paths:
+      - '.github/workflows/pr71-rigorous-gap.yml'
+      - 'experiments/X-5603-pr71-gap-audit/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr71-rigorous-gap-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  exact-and-platt-gap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Run exact provenance and checker tests
+        run: |
+          cd experiments/X-5603-pr71-gap-audit
+          python -m compileall -q \
+            audit_exact_ordinate.py compare_gap.py compare_discrepancy.py \
+            verify_line_gap_certificate.py tests
+          python -m unittest discover -s tests -v
+          python audit_exact_ordinate.py \
+            --output results/exact-ordinate-audit.regenerated.json
+          cmp results/exact-ordinate-audit.json \
+            results/exact-ordinate-audit.regenerated.json
+      - name: Install FLINT
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev libmpfr-dev libgmp-dev pkg-config
+          pkg-config --modversion flint
+      - name: Compile rigorous Platt/Turing producers
+        run: |
+          cd experiments/X-5603-pr71-gap-audit
+          cc -O3 -std=c11 -Wall -Wextra -Werror flint_consecutive_gap.c \
+            -o flint_consecutive_gap -lflint -lmpfr -lgmp -lpthread -lm
+          cc -O3 -std=c11 -Wall -Wextra -Werror \
+            flint_line_gap_discrepancy.c -o flint_line_gap_discrepancy \
+            -lflint -lmpfr -lgmp -lpthread -lm
+      - name: Certify consecutive total-zero gap at 128 and 192 bits
+        run: |
+          cd experiments/X-5603-pr71-gap-audit
+          /usr/bin/time -v ./flint_consecutive_gap 128 128 4 \
+            > results/flint-total-gap-128.json \
+            2> results/flint-total-gap-128.time.txt
+          /usr/bin/time -v ./flint_consecutive_gap 192 128 4 \
+            > results/flint-total-gap-192.json \
+            2> results/flint-total-gap-192.time.txt
+          python compare_gap.py \
+            results/flint-total-gap-128.json results/flint-total-gap-192.json \
+            > results/flint-total-gap-nesting.json
+      - name: Compute and replay total-minus-line discrepancy
+        run: |
+          cd experiments/X-5603-pr71-gap-audit
+          /usr/bin/time -v ./flint_line_gap_discrepancy 128 128 4 \
+            > results/flint-discrepancy-128.json \
+            2> results/flint-discrepancy-128.time.txt
+          /usr/bin/time -v ./flint_line_gap_discrepancy 192 128 4 \
+            > results/flint-discrepancy-192.json \
+            2> results/flint-discrepancy-192.time.txt
+          python verify_line_gap_certificate.py \
+            results/flint-discrepancy-128.json \
+            --output results/flint-discrepancy-128.verification.json
+          python verify_line_gap_certificate.py \
+            results/flint-discrepancy-192.json \
+            --output results/flint-discrepancy-192.verification.json
+          python compare_discrepancy.py \
+            results/flint-discrepancy-128.json \
+            results/flint-discrepancy-192.json \
+            > results/flint-discrepancy-comparison.json
+          cat results/flint-discrepancy-192.verification.json
+          cat results/flint-discrepancy-comparison.json
+      - name: Upload exact gap artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr71-rigorous-zero-gap-discrepancy
+          if-no-files-found: error
+          path: |
+            experiments/X-5603-pr71-gap-audit/results/

@@ -1,0 +1,78 @@
+{
+  "binary64_ordinate_used_by_strtod": {
+    "decimal": "4709203636353.162109375",
+    "fraction": {
+      "denominator": "512",
+      "numerator": "2411112261812819"
+    },
+    "hex": "0x1.121c9a3c204a6p+42",
+    "packed_hex": "429121c9a3c204a6"
+  },
+  "binary64_ulp_at_height": {
+    "decimal": "0.0009765625",
+    "fraction": {
+      "denominator": "1024",
+      "numerator": "1"
+    }
+  },
+  "classification": "EXACT_PROVENANCE_MISMATCH_AND_BINARY64_OUTPUT_QUANTIZATION",
+  "counterexample_candidate": null,
+  "exact_minus_binary64": {
+    "decimal": "0.00004062498919665813446044921875",
+    "fraction": {
+      "denominator": "4294967296",
+      "numerator": "174483"
+    }
+  },
+  "exact_ordinate": {
+    "decimal": "4709203636353.16214999998919665813446044921875",
+    "fraction": {
+      "denominator": "4294967296",
+      "numerator": "20225875608341108140435"
+    }
+  },
+  "input": {
+    "t_denominator": "4294967296",
+    "t_numerator": "20225875608341108140435"
+  },
+  "proof_boundary": "This file proves only rational/IEEE-754 facts. It neither confirms nor refutes the existence of the observed large zero gap.",
+  "reported_gap_from_serialized_endpoints": {
+    "candidate_offset_for_exact_rational_using_same_serialized_lo": {
+      "denominator": "4294967296",
+      "numerator": "92449171"
+    },
+    "candidate_offset_if_binary64": {
+      "denominator": "512",
+      "numerator": "11"
+    },
+    "candidate_offset_shift": {
+      "denominator": "4294967296",
+      "numerator": "174483"
+    },
+    "gamma_hi": {
+      "denominator": "512",
+      "numerator": "2411112261813317"
+    },
+    "gamma_lo": {
+      "denominator": "64",
+      "numerator": "301389032726601"
+    },
+    "gap": {
+      "denominator": "512",
+      "numerator": "509"
+    },
+    "gap_decimal": "0.994140625"
+  },
+  "schema": "riemann.x5603-pr71-exact-ordinate-audit.v1",
+  "serialization_resolution": {
+    "endpoint_rounding_radius_at_least": {
+      "denominator": "2048",
+      "numerator": "1"
+    },
+    "gap_rounding_radius_at_least": {
+      "denominator": "1024",
+      "numerator": "1"
+    },
+    "note": "These are lower-level serialization limits only. They do not include Riemann-Siegel truncation, summation, grid, or root-refinement error."
+  }
+}
