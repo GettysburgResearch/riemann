@@ -1,0 +1,69 @@
+{
+  "candidate_packets": {
+    "PA-1": {
+      "anchors": [
+        "1"
+      ],
+      "empirical_lower_schur_distance": "0.00000405033367723278318232323143091117689928886691",
+      "empirical_upper_schur_distance": "0.0000145859527917813701839629990416620558022071334",
+      "final_degree": 15,
+      "new_points": 1,
+      "purpose": "cheapest two-sided directed control"
+    },
+    "PA-3": {
+      "anchors": [
+        "1/8",
+        "3/16",
+        "1/4"
+      ],
+      "final_degree": 17,
+      "h0_correlation_min": "0.0000000000370353901705057841439554323382348995088015341",
+      "h1_correlation_min": "0.000000000177562863452578570933675682464633717271077355",
+      "new_points": 3,
+      "purpose": "first multi-anchor directed packet"
+    },
+    "PA-7": {
+      "anchors": [
+        "1/8",
+        "3/16",
+        "1/4",
+        "3/8",
+        "1/2",
+        "3/4",
+        "1"
+      ],
+      "final_degree": 21,
+      "h0_correlation_min": "0.000000000000380372052020252791352581413939177448786663192",
+      "h0_min_eigenvalue": "0.0000000102554234302374420878852214458034338829379249",
+      "h1_correlation_min": "0.00000000000266920273287939621881575357430239903565670659",
+      "h1_min_eigenvalue": "0.0000000319275947052076307199666097861933990243795872",
+      "new_points": 7,
+      "purpose": "scale-balanced degree-21 offense"
+    }
+  },
+  "classification": "EMPIRICAL_ORDINARY_HIGH_PRECISION",
+  "counterexample_nomination": null,
+  "interpretation": "All tested packets are positive. The moderate multi-anchor ladder is a genuinely larger finite response family, but small normalized eigenvalues are ranking data only, not evidence of RH failure.",
+  "method": {
+    "correlation_scaling": "H_ij/sqrt(H_ii H_jj)",
+    "multi_anchor": "signed divided differences plus the exact L-12102 recurrence evaluated at ordinary high precision",
+    "new_scalar": "L-12101 reduced one-point contraction using u_ref=2^-40",
+    "working_decimal_digits": "50-60",
+    "xi": "mpmath standard completed-xi formula with Riemann-Siegel zeta"
+  },
+  "negative_matrices": 0,
+  "old_degree": 14,
+  "old_node_count": 16,
+  "ordinate": {
+    "denominator": "4294967296",
+    "numerator": "20225875608343133989267"
+  },
+  "proof_boundary": "No directed new-anchor primitive or interval matrix is present. Values are ordinary high-precision reconnaissance built from directed old moments at their midpoints. A strict candidate requires frozen rational vectors and outward primitive contraction.",
+  "schema": "riemann.positive-anchor-ladder.reconnaissance.v1",
+  "source": {
+    "atomized_primitive_git_blob_sha1": "a02e20c083db8da00a9bd3629179b25c6469ea00",
+    "atomized_primitive_path": "experiments/X-9302-total-count-zero-deflation/results/pr71-shift-fine/atomized-min-certificate-p512.json",
+    "old_moment_basis_git_blob_sha1": "174db078d3442e89d3be458a306b1122025cfd51",
+    "old_moment_basis_path": "experiments/X-9306-real-log-portfolio-search/results/basis.json"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "bins": [
+    {
+      "denominator_upper": {
+        "denominator": "1",
+        "numerator": "6"
+      },
+      "gamma_interval": {
+        "lower": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "upper": {
+          "denominator": "1",
+          "numerator": "1"
+        }
+      },
+      "id": "bin-one",
+      "leverage_lower": {
+        "denominator": "6",
+        "numerator": "1"
+      },
+      "multiplicity_lower": 1,
+      "polynomial_interval": {
+        "lower": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "upper": {
+          "denominator": "1",
+          "numerator": "1"
+        }
+      },
+      "q_squared_lower": {
+        "denominator": "1",
+        "numerator": "1"
+      },
+      "weighted_leverage_lower": {
+        "denominator": "6",
+        "numerator": "1"
+      },
+      "y_interval": {
+        "lower": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "upper": {
+          "denominator": "1",
+          "numerator": "1"
+        }
+      }
+    }
+  ],
+  "channel": "square",
+  "line_mass_leverage_lower": {
+    "denominator": "6",
+    "numerator": "1"
+  },
+  "ordinate": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "proof_boundary": "This verifies exact finite response leverage and the strict budget comparison. It does not establish the direct-xi response theorem, the zero-bin proofs, or independent primitive reproduction.",
+  "schema": "riemann.anchor-line-mass-budget.verification.v1",
+  "source_measure": "RAW_UNREMOVED_RESPONSE",
+  "status": "NO_STRICT_LINE_MASS_CONTRADICTION",
+  "strict_reversal": false,
+  "total_interval": {
+    "lower": {
+      "denominator": "1",
+      "numerator": "0"
+    },
+    "upper": {
+      "denominator": "4",
+      "numerator": "1"
+    }
+  },
+  "verification_sha256": "366218ce7d65eb825d7d69e3a3f52ca17ab987f853ddd040d5239b8dbdc531d0",
+  "verified": true
+}

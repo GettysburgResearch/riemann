@@ -1,0 +1,146 @@
+name: X12102 directed positive-anchor PA1 decision
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'agent/gpt56-03-i/131-run-pa1*'
+    paths:
+      - experiments/X-12102-directed-positive-anchor/RUN.md
+      - .github/workflows/x12102-directed-pa1.yml
+  pull_request:
+    branches:
+      - agent/gpt56-03-i/93-positive-anchor-ladder
+    paths:
+      - experiments/X-12102-directed-positive-anchor/RUN.md
+      - experiments/X-12102-directed-positive-anchor/**
+      - .github/workflows/x12102-directed-pa1.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x12102-directed-pa1-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous FLINT backend
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev pkg-config
+          pkg-config --modversion flint
+
+      - name: Run exact helper tests
+        run: |
+          python -m compileall -q \
+            experiments/X-12102-directed-positive-anchor \
+            experiments/X-9309-zero-anchor-degree15/verify_zero_anchor.py
+          python -m unittest discover \
+            -s experiments/X-12102-directed-positive-anchor/tests -v
+
+      - name: Generate exact x=1 producer
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-12102-directed-positive-anchor/results
+          mkdir -p "$out"
+          python experiments/X-9301-zero-deflated-xi-modulus/build_pr71_rs_source.py \
+            --x-bits 20,19 \
+            --ordinate-numerator 20225875608343133989267 \
+            --output /tmp/pr103-base.c \
+            --manifest "$out/base-source-patch.json"
+          python experiments/X-12102-directed-positive-anchor/build_positive_anchor_source.py \
+            --source /tmp/pr103-base.c \
+            --output /tmp/positive-anchor.c \
+            --manifest "$out/positive-source-patch.json"
+          cc -O3 -std=c11 -Wall -Wextra \
+            /tmp/positive-anchor.c -o /tmp/positive-anchor \
+            -lflint -lmpfr -lgmp -lpthread -lm
+          sha256sum /tmp/pr103-base.c /tmp/positive-anchor.c \
+            > "$out/generated-sources.sha256"
+
+      - name: Produce nested 512 and 640 bit x=1 rectangles
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-12102-directed-positive-anchor/results
+          /usr/bin/time -v /tmp/positive-anchor 512 \
+            > "$out/anchor-p512.json" 2> "$out/anchor-p512.time.txt"
+          /usr/bin/time -v /tmp/positive-anchor 640 \
+            > "$out/anchor-p640.json" 2> "$out/anchor-p640.time.txt"
+
+      - name: Decide the complete PA1 degree-15 cone
+        shell: bash
+        run: |
+          set -euo pipefail
+          out=experiments/X-12102-directed-positive-anchor/results
+          certificate=experiments/X-9302-total-count-zero-deflation/results/pr71-shift-fine/atomized-min-certificate-p512.json
+          basis=experiments/X-9306-real-log-portfolio-search/results/basis.json
+          set +e
+          /usr/bin/time -v python \
+            experiments/X-12102-directed-positive-anchor/verify_pa1_provenance.py \
+            --old-certificate "$certificate" \
+            --old-basis "$basis" \
+            --anchor-low "$out/anchor-p512.json" \
+            --anchor-high "$out/anchor-p640.json" \
+            --log-terms 240 \
+            --delta 1/1000000 \
+            --output "$out/verdict.json" \
+            > "$out/verdict.stdout" 2> "$out/verdict.time.txt"
+          status=$?
+          set -e
+          test "$status" -le 1
+          cat "$out/verdict.stdout"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('experiments/X-12102-directed-positive-anchor/results')
+          result=json.loads((root/'verdict.json').read_text())
+          print(json.dumps({
+              'verdict': result['verdict'],
+              'intersection_b0_interval': result['intersection_b0_interval'],
+              'full_reduced_overlap': result['full_reduced_overlap'],
+              'lower_schur_threshold': result['lower_schur_threshold'],
+              'upper_schur_threshold': result['upper_schur_threshold'],
+              'lower_witness_interval': result['lower_witness_interval'],
+              'upper_witness_interval': result['upper_witness_interval'],
+              'provenance_binding': result['provenance_binding'],
+              'exact_proof_object_sha256': result['exact_proof_object_sha256'],
+          }, indent=2, sort_keys=True))
+          PY
+          find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | \
+            xargs -0 sha256sum > "$out/SHA256SUMS"
+
+      - name: Commit immutable PA1 verdict on branch pushes
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/X-12102-directed-positive-anchor/results
+          if git diff --cached --quiet; then
+            echo 'No result change to commit'
+          else
+            git commit -m 'result: retain exact positive-anchor PA1 verdict'
+            git push
+          fi
+
+      - name: Upload all PA1 proof artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x12102-directed-positive-anchor-pa1
+          path: experiments/X-12102-directed-positive-anchor/results/
+          retention-days: 30
+          if-no-files-found: error

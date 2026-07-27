@@ -1,0 +1,19 @@
+test_anchor_order_is_canonical (test_verify.PositiveAnchorLadderTests.test_anchor_order_is_canonical) ... ok
+test_boolean_degree_is_rejected (test_verify.PositiveAnchorLadderTests.test_boolean_degree_is_rejected) ... ok
+test_claimed_quadratic_mutation_is_rejected (test_verify.PositiveAnchorLadderTests.test_claimed_quadratic_mutation_is_rejected) ... ok
+test_declared_check_manifest_is_closed (test_verify.PositiveAnchorLadderTests.test_declared_check_manifest_is_closed) ... ok
+test_duplicate_anchor_is_rejected (test_verify.PositiveAnchorLadderTests.test_duplicate_anchor_is_rejected) ... ok
+test_negative_control (test_verify.PositiveAnchorLadderTests.test_negative_control) ... ok
+test_positive_control (test_verify.PositiveAnchorLadderTests.test_positive_control) ... ok
+test_zero_vector_is_rejected (test_verify.PositiveAnchorLadderTests.test_zero_vector_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK
+
+Additional validation:
+python -m compileall -q verify.py reconnaissance.py tests
+Result: success
+
+Environment: CPython 3.13.5, standard-library exact checker; mpmath/sympy used only by the separate empirical reconnaissance script.

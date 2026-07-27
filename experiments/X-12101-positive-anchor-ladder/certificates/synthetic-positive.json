@@ -1,0 +1,55 @@
+{
+  "anchor_scalars": [
+    {
+      "denominator": "1035",
+      "numerator": "5728"
+    },
+    {
+      "denominator": "32725",
+      "numerator": "139728"
+    }
+  ],
+  "anchors": [
+    {
+      "denominator": "2",
+      "numerator": "1"
+    },
+    {
+      "denominator": "2",
+      "numerator": "3"
+    }
+  ],
+  "checks": [
+    {
+      "id": "positive-full-cone",
+      "kind": "full-cone-positive"
+    }
+  ],
+  "declared_check_ids": [
+    "positive-full-cone"
+  ],
+  "old_degree": 4,
+  "old_moments": [
+    {
+      "denominator": "1",
+      "numerator": "28"
+    },
+    {
+      "denominator": "1",
+      "numerator": "198"
+    },
+    {
+      "denominator": "1",
+      "numerator": "1768"
+    },
+    {
+      "denominator": "1",
+      "numerator": "17388"
+    },
+    {
+      "denominator": "1",
+      "numerator": "179188"
+    }
+  ],
+  "schema": "riemann.positive-anchor-moment-ladder.v1"
+}

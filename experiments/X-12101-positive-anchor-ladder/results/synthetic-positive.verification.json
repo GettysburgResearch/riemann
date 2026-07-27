@@ -1,0 +1,90 @@
+{
+  "anchor_count": 2,
+  "anchors": [
+    {
+      "denominator": "2",
+      "numerator": "1"
+    },
+    {
+      "denominator": "2",
+      "numerator": "3"
+    }
+  ],
+  "checks": [
+    {
+      "h0_pivots": [
+        {
+          "denominator": "6774075",
+          "numerator": "8566064"
+        },
+        {
+          "denominator": "2676895",
+          "numerator": "24930436"
+        },
+        {
+          "denominator": "6232609",
+          "numerator": "521424240"
+        },
+        {
+          "denominator": "2172601",
+          "numerator": "1016578080"
+        }
+      ],
+      "h1_pivots": [
+        {
+          "denominator": "6774075",
+          "numerator": "24640664"
+        },
+        {
+          "denominator": "15400415",
+          "numerator": "742233904"
+        },
+        {
+          "denominator": "46389619",
+          "numerator": "17318300640"
+        }
+      ],
+      "id": "positive-full-cone",
+      "kind": "full-cone-positive",
+      "status": "CERTIFIED_POSITIVE_FULL_HALF_LINE_CONE"
+    }
+  ],
+  "final_degree": 6,
+  "negative_checks": [],
+  "old_degree": 4,
+  "proof_boundary": "This verifies finite rational Christoffel recurrences and Hankel quadratic forms. It does not establish any Riemann-xi primitive, count-deflation gate, or analytic RH implication.",
+  "schema": "riemann.positive-anchor-moment-ladder.verification.v1",
+  "status": "CERTIFIED_POSITIVE_FULL_HALF_LINE_CONE",
+  "transformed_moments": [
+    {
+      "denominator": "6774075",
+      "numerator": "8566064"
+    },
+    {
+      "denominator": "6774075",
+      "numerator": "24640664"
+    },
+    {
+      "denominator": "6774075",
+      "numerator": "133968224"
+    },
+    {
+      "denominator": "6774075",
+      "numerator": "1054849904"
+    },
+    {
+      "denominator": "6774075",
+      "numerator": "9766388624"
+    },
+    {
+      "denominator": "6774075",
+      "numerator": "97463701424"
+    },
+    {
+      "denominator": "6774075",
+      "numerator": "1011580756784"
+    }
+  ],
+  "verification_sha256": "0423469c646627ca5d9c5c2d21bf67638c3e7f36cf8f350b5b92d0aedd2cb196",
+  "verified": true
+}
