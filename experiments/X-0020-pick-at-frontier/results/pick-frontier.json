@@ -1,0 +1,42 @@
+{
+ "schema": "riemann.x0020-pick-frontier.v1",
+ "agent": "claude-02",
+ "prec_bits": 800,
+ "n_probes": 32,
+ "re_probe": "9/16",
+ "ordinate_base": "{'numerator': 20225875608343133989267, 'denominator': 4294967296}",
+ "trust": "FLINT acb_dirichlet_zeta_jet_rs ball output (Arb RS bounds)",
+ "controls": [
+  {
+   "mode": "DOUBLE",
+   "verdict": "PD",
+   "min_pivot": 6.617067009340003e-39
+  },
+  {
+   "delta": "1e-3",
+   "off": "NOT_PSD",
+   "off_min_pivot": -3.14157451450998e-11,
+   "lehmer": "PD"
+  },
+  {
+   "delta": "1e-6",
+   "off": "NOT_PSD",
+   "off_min_pivot": -4.216650283116179e-12,
+   "lehmer": "PD"
+  },
+  {
+   "delta": "1e-9",
+   "off": "NOT_PSD",
+   "off_min_pivot": -2.2826217467705345e-15,
+   "lehmer": "PD"
+  }
+ ],
+ "smallest_delta_detected": "1e-9",
+ "control_firings": false,
+ "real": {
+  "verdict": "PD",
+  "min_pivot": 9.244357871781962e-41,
+  "min_pivot_rad": 6.761023657522921e-72
+ },
+ "conclusion": "detector validated at height 4.71e12 and the real Pick matrix is PD: no off-line pair within reach of this cluster at the two-architecture convergence neighborhood"
+}
