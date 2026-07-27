@@ -1,0 +1,39 @@
+{
+  "certified_positive": true,
+  "classification": "DIRECTED_TERMINAL_CELL_CONTROL; same Arb library and analytic formula as X-5606, independently structured prime manifest and terminal-only accumulation",
+  "cutoff": 10000000,
+  "derivative_mid_ball": "[0.4559562333906498638770862952 +/- 4.88e-29]",
+  "elapsed_seconds": 1.3920068740844727,
+  "environment": {
+    "precision_bits": 128,
+    "python": "3.13.5",
+    "python_flint": "0.9.0"
+  },
+  "last_prime_power": 9999991,
+  "prime_power_count": 665134,
+  "proof_boundary": "This closes only the terminal cell omitted by X-5606 v1. It does not independently reproduce the preceding cells, Suzuki's RH equivalence, D-9501 normalization, or the Arb library.",
+  "psi_mid_ball": "[0.037977085389622500495190826 +/- 4.47e-28]",
+  "schema": "riemann.x5606-terminal-cell-replay.v1",
+  "tangent_lower_ball": "[0.037976880209225143510091755 +/- 4.85e-28]",
+  "tangent_lower_exact_binary": {
+    "lower": {
+      "denominator": "5444517870735015415413993718908291383296",
+      "exponent": -132,
+      "mantissa": "206765802973889225077120178357825631561",
+      "numerator": "206765802973889225077120178357825631561"
+    },
+    "upper": {
+      "denominator": "5444517870735015415413993718908291383296",
+      "exponent": -132,
+      "mantissa": "206765802973889225077120182221171844425",
+      "numerator": "206765802973889225077120182221171844425"
+    }
+  },
+  "terminal_cell": {
+    "left": "log(9999991)",
+    "left_ball": "[16.118094750957914787882940018765431355 +/- 1.91e-37]",
+    "right": "log(10000000)",
+    "right_ball": "[16.118095650958319788125940182790549453 +/- 2.29e-37]",
+    "width_ball": "[9.00000405000243000164025118098e-7 +/- 2.27e-37]"
+  }
+}
