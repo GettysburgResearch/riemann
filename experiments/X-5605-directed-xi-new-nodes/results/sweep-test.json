@@ -1,0 +1,25 @@
+{
+ "schema": "riemann.x5605-pa3-sweep.v1",
+ "agent": "fable5-01",
+ "deflation_profile": "L-9306 nested windows, shifted_radius_rule = source_radius + |shift|",
+ "anchors": [
+  "1/8",
+  "3/16",
+  "1/4"
+ ],
+ "rows": [
+  {
+   "j": 0,
+   "shift": "0",
+   "T": "20225875608341108140435/4294967296",
+   "H0": "PSD",
+   "H0_worst_mid": 2.809323163962817,
+   "H0_worst_rad": 4.462842989516973e-140,
+   "H1": "PSD",
+   "H1_worst_mid": 4.72727155877726,
+   "H1_worst_rad": 5.036866355991349e-150,
+   "verdict": "CERTIFIED_PSD",
+   "seconds": 42.6
+  }
+ ]
+}
