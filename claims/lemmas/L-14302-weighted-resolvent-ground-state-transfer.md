@@ -1,366 +1,521 @@
-# L-14302 — Weighted resolvent transfer from a finite ground-state candidate
+# L-14302 — Audited weighted Schur–Ritz ground-state transfer
 
 Claim ID: L-14302  
-Title: Dual-weighted coercivity removes the worst-case complement factor from prolate ground-state transfer  
+Title: Parity-adapted weighted coercivity certifies a simple-even ground state and its prolate distance  
 Status: PROPOSED  
 Authoring agent: `gpt56-09`  
-Reviewing agents: none  
+Auditing and repairing agent: `gpt56-pro-09-a`  
+Reviewing agents: none independent yet  
 Created: 2026-07-29  
 Last updated: 2026-07-29  
-Dependencies: finite-dimensional spectral theorem, Schur complement  
-Scope: exact finite-dimensional improvement of the T-14301 target-distance gate  
+Dependencies: finite-dimensional spectral theorem, Cauchy interlacing, Schur complement  
+Scope: exact finite-dimensional improvement of the T-14301 target-distance and simple-even gates  
 Related counterexample candidates: none
+
+## Audit disposition
+
+The first committed version contained a sound resolvent inequality but was not
+proof-grade as written:
+
+1. it defined `M` only on the finite complement and then applied `||.||_M` to
+   ambient target tails, so two displayed projective distances were ill-typed;
+2. if that notation were interpreted as a seminorm ignoring the target
+   direction, the displayed infimum over nonzero scalars would be vacuous;
+3. it assumed a simple ground eigenpair even though the proposed coercivity gate
+   itself can certify globality, simplicity, and parity;
+4. it said every finite predicate was rational-LDL checkable without introducing
+   rational Loewner enclosures for the generally transcendental Hardy Gram;
+5. it described the new bound as stronger without qualification. It can be
+   arbitrarily sharper on residual-orthogonal high-weight modes, but its scalar
+   coercivity constant can also absorb worst-case geometry.
+
+The theorem below repairs all five points and strengthens the useful kernel. Git
+history preserves the initial formulation.
 
 ## Statement
 
-Let
+Let `K` be a real Hilbert space with ordinary inner product `⟨.,.⟩`. Let `H` be
+a finite-dimensional subspace and `P:K -> H` its ordinary orthogonal
+projection. Let
 
 \[
- H=\operatorname{span}\{v\}\oplus W,
- \qquad \|v\|=1,
+ A:H\to H
 \]
 
-and let `A` be self-adjoint with block decomposition
+be self-adjoint. Suppose `Gamma` is a self-adjoint involution on `H`,
+`A Gamma=Gamma A`, and
 
 \[
- A=\begin{pmatrix}\mu&b^*\\ b&C\end{pmatrix}
+ H=H_+\oplus H_-,
+ \qquad H_\pm=\ker(\Gamma\mp I).
+\]
+
+Let `p in H_+` be nonzero and put
+
+\[
+ q=\|p\|,
+ \qquad v=p/q,
+ \qquad W_+=H_+\cap v^\perp.
  \tag{L-14302.1}
 \]
 
-relative to this orthogonal splitting.  Let `M` be positive definite on `W`, and
+Relative to
+
+\[
+ H=\operatorname{span}\{v\}\oplus W_+\oplus H_-,
+\]
+
 write
 
 \[
- \|w\|_M^2=\langle Mw,w\rangle,
- \qquad
- \|y\|_{M^{-1}}^2=\langle M^{-1}y,y\rangle.
-\]
-
-Suppose `lambda_0` is a simple eigenvalue of `A`, with normalized eigenvector
-
-\[
- \xi_0=\alpha v+w,
- \qquad \alpha>0,\quad w\in W.
+ \mu=\langle Av,v\rangle,
+ \qquad b=P_{W_+}Av,
+ \qquad C_+=P_{W_+}A|_{W_+},
+ \qquad C_-=P_{H_-}A|_{H_-}.
  \tag{L-14302.2}
 \]
 
-Assume that a certified upper endpoint `U>=lambda_0` and a number `h>0` satisfy
+Let `||.||_mathfrakM` be a second Hilbert norm on a linear space containing `H`
+and the target vectors used below. Assume it is invariant under `Gamma` on
+`H`. On the finite space `W_+`, let `M_+` be the unique positive-definite
+operator satisfying
 
 \[
- C-UI\succeq hM.
+ \langle M_+w,w\rangle=\|w\|_{\mathfrak M}^2
+ \qquad(w\in W_+).
  \tag{L-14302.3}
 \]
 
-Then
+An assertion on a zero-dimensional subspace is interpreted vacuously.
+
+Suppose there are real numbers
 
 \[
- \boxed{
- \left\|\frac{w}{\alpha}\right\|_M
- \leq \frac{\|b\|_{M^{-1}}}{h}.}
+ U\geq\mu,
+ \qquad h>0,
+ \qquad g_->0
  \tag{L-14302.4}
 \]
 
-Equivalently, choosing the scalar projectively,
+such that
 
 \[
- \boxed{
- \inf_{c\ne0}\|c\xi_0-v\|_M
- \leq \frac{\|b\|_{M^{-1}}}{h}.}
+ C_+-UI\succeq hM_+,
+ \qquad
+ C_--UI\succeq g_-I.
  \tag{L-14302.5}
 \]
 
-Here the displayed weighted distance measures the `W` component; the scalar
-`c=1/alpha` matches the `v` component exactly.
+Then the following conclusions hold.
 
-More generally, suppose an ambient target `k` has finite projection
+### A. The gate itself certifies the global simple-even ground state
 
-\[
- Pk=qv,
- \qquad q>0,
-\]
-
-and weighted projection tail
+The lowest eigenvalue `lambda_0` of `A` is simple, satisfies
 
 \[
- t=\|(I-P)k\|_M.
-\]
-
-Then
-
-\[
- \boxed{
- \inf_{c\ne0}\|c\xi_0-k\|_M
- \leq t+q\frac{\|b\|_{M^{-1}}}{h}.}
+ \lambda_0\leq\mu\leq U,
  \tag{L-14302.6}
 \]
 
-### Interval-robust specialization
-
-Let `A=A_0+E`, with `||E||_op<=delta`, and let
+and has a normalized eigenvector
 
 \[
- A_0=\begin{pmatrix}\mu_0&b_0^*\\b_0&C_0\end{pmatrix}.
+ \xi_0=\alpha v+w,
+ \qquad \alpha>0,
+ \qquad w\in W_+.
+ \tag{L-14302.7}
 \]
 
-Suppose a certified upper eigenvalue endpoint `U>=lambda_0(A)` is available and
-there are rational numbers `h_0>0`, `B_0>=0`, and `m>0` such that
+In particular, `xi_0` is even. If additionally
 
 \[
- C_0-UI\succeq h_0M,
- \qquad M\succeq mI,
- \qquad \|b_0\|_{M^{-1}}\leq B_0.
- \tag{L-14302.7}
+ M_+\succeq m_+I
+ \qquad(m_+>0),
+\]
+
+then, whenever a next eigenvalue exists and with terms belonging to absent
+subspaces omitted,
+
+\[
+ \lambda_1-\lambda_0
+ \geq \min\{hm_+,g_-\}.
+ \tag{L-14302.8}
+\]
+
+### B. Dual-weighted correction bound
+
+The normalized ground line obeys
+
+\[
+ \boxed{
+ \left\|\frac{w}{\alpha}\right\|_{\mathfrak M}
+ \leq
+ \frac{\|b\|_{M_+^{-1}}}{h}.}
+ \tag{L-14302.9}
+\]
+
+Equivalently, with the normalization along `v` fixed rather than minimized away,
+
+\[
+ \boxed{
+ \left\|\frac{\xi_0}{\langle\xi_0,v\rangle}-v\right\|_{\mathfrak M}
+ \leq
+ \frac{\|b\|_{M_+^{-1}}}{h}.}
+ \tag{L-14302.10}
+\]
+
+This is the nonvacuous projective distance intended by the first formulation.
+
+### C. Unnormalized target form
+
+Let `k` belong to the domain of `||.||_mathfrakM` and assume
+
+\[
+ Pk=p.
+ \tag{L-14302.11}
 \]
 
 Put
 
 \[
- h=h_0-\delta/m,
+ t=\|k-p\|_{\mathfrak M},
  \qquad
- B=B_0+\delta/\sqrt m.
- \tag{L-14302.8}
+ r=P_{W_+}Ap=P_{W_+}(A-\mu I)p.
+ \tag{L-14302.12}
 \]
 
-If `h>0`, then
+Then the explicit scalar `c=q/alpha` satisfies
 
 \[
  \boxed{
- \inf_{c\ne0}\|c\xi_0-k\|_M
- \leq t+q\frac{B}{h}.}
- \tag{L-14302.9}
+ \|c\xi_0-k\|_{\mathfrak M}
+ \leq
+ t+\frac{\|r\|_{M_+^{-1}}}{h}.}
+ \tag{L-14302.13}
 \]
 
-The dual-residual bound in (L-14302.7) is equivalent to the Schur-complement
-certificate
+Hence
 
 \[
- \begin{pmatrix}
- B_0^2&b_0^*\\ b_0&M
- \end{pmatrix}\succeq0.
- \tag{L-14302.10}
+ \inf_{c\ne0}\|c\xi_0-k\|_{\mathfrak M}
+ \leq
+ t+\frac{\|r\|_{M_+^{-1}}}{h}.
+ \tag{L-14302.14}
 \]
 
-Thus every finite predicate can be checked by rational LDL after clearing
-denominators.
+The projection norm `q` has disappeared because `r=qb`. This unnormalized form
+is the natural exact certificate: a rational frozen projection vector need not
+be divided by an irrational square root.
 
 ## Proof
 
-The `W` component of
+### 1. Globality, simplicity, and parity
+
+The compression of `A` to `v^perp` is block diagonal on `W_+ \oplus H_-`.
+By (L-14302.5), every eigenvalue of that compression is strictly larger than
+`U`. On the other hand, the Rayleigh principle gives
 
 \[
- A\xi_0=\lambda_0\xi_0
+ \lambda_0(A)\leq\langle Av,v\rangle=\mu\leq U.
 \]
 
-is
+Cauchy interlacing for the codimension-one compression therefore gives
 
 \[
- (C-\lambda_0I)w=-\alpha b.
- \tag{L-14302.11}
+ \lambda_1(A)\geq
+ \lambda_{\min}(A|_{v^\perp})>U\geq\lambda_0(A).
 \]
 
-Because `U>=lambda_0`,
+Thus the global ground eigenvalue is simple. Its eigenvector cannot be
+orthogonal to `v`, because an eigenvector in `v^perp` with eigenvalue at most
+`U` would contradict the compression bound. Since the simple ground line is
+invariant under `Gamma`, its eigenvector has definite parity. An odd vector is
+orthogonal to the even vector `v`, so the nonzero overlap forces even parity.
+This proves (L-14302.6)--(L-14302.7).
+
+If `M_+>=m_+I`, the even complement lies above `U+hm_+` and the odd sector lies
+above `U+g_-`. Interlacing and `lambda_0<=U` give (L-14302.8).
+
+### 2. Weighted resolvent estimate
+
+The `W_+` component of `A xi_0=lambda_0 xi_0` is
 
 \[
- C-\lambda_0I\succeq C-UI\succeq hM.
+ (C_+-\lambda_0I)w=-\alpha b.
+ \tag{L-14302.15}
+\]
+
+Because `lambda_0<=U`,
+
+\[
+ C_+-\lambda_0I\succeq C_+-UI\succeq hM_+.
 \]
 
 Set
 
 \[
- T=M^{-1/2}(C-\lambda_0I)M^{-1/2}.
+ T=M_+^{-1/2}(C_+-\lambda_0I)M_+^{-1/2}.
 \]
 
-Then `T>=hI`; hence `T` is invertible and
+Then `T>=hI`, so `||T^{-1}||<=1/h`, and (L-14302.15) yields
 
 \[
- \|T^{-1}\|_{\mathrm{op}}\leq h^{-1}.
+ M_+^{1/2}\frac{w}{\alpha}
+ =-T^{-1}M_+^{-1/2}b.
 \]
 
-Equation (L-14302.11) becomes
+Taking ordinary norms proves (L-14302.9), and (L-14302.10) is the same identity
+with the `v` component normalized to one.
+
+### 3. Ambient target
+
+Choose `c=q/alpha`. Since `Pk=qv`,
 
 \[
- M^{1/2}\frac{w}{\alpha}
- =-T^{-1}M^{-1/2}b.
+ c\xi_0-k=q\frac{w}{\alpha}-(k-p).
 \]
 
-Therefore
+The triangle inequality and `qb=P_{W_+}Ap=r` prove (L-14302.13), hence
+(L-14302.14). QED.
+
+## Rational Loewner certificate
+
+The exact Hardy Gram generally contains transcendental quantities. Rational LDL
+therefore applies only after directed rational Loewner enclosures are supplied.
+The following interface is sufficient.
+
+Let `A=A_0+E`, where `A_0` is rational symmetric,
 
 \[
- \left\|\frac{w}{\alpha}\right\|_M
- \leq \frac1h\|b\|_{M^{-1}},
+ \|E\|_{op}\leq\delta,
+ \tag{L-14302.16}
 \]
 
-proving (L-14302.4).  Taking `c=1/alpha` proves (L-14302.5).
-
-For the ambient target, choose `c=q/alpha`.  The finite-space component along
-`v` then cancels exactly, leaving `q w/alpha`; hence
+and the exact `A` is known independently to commute with `Gamma`. Let `B_+` and
+`B_-` be rational full-column-rank bases of `W_+` and `H_-`, with ordinary Gram
+matrices
 
 \[
- \|c\xi_0-k\|_M
- \leq \|(I-P)k\|_M+q\|w/\alpha\|_M,
+ S_+=B_+^TB_+,
+ \qquad S_-=B_-^TB_-.
 \]
 
-which proves (L-14302.6).
-
-For the interval version, let `E_W=P_WEP_W`.  Then
-`||E_W||_op<=delta`.  Since `M>=mI`, one has `I<=M/m`, and therefore
+Let `G_+` be the exact Hardy Gram on `B_+`, with entries
 
 \[
- E_W\succeq-\delta I\succeq-(\delta/m)M.
+ (G_+)_{ij}=\langle (B_+)_i,(B_+)_j\rangle_{\mathfrak M},
 \]
 
-Consequently
+and suppose rational matrices satisfy
 
 \[
- C-UI
- =C_0-UI+E_W
- \succeq(h_0-\delta/m)M=hM.
-\]
-
-The off-diagonal perturbation `e=P_WE v` satisfies `||e||<=delta`.  Again using
-`M>=mI`,
-
-\[
- \|e\|_{M^{-1}}\leq\delta/\sqrt m.
-\]
-
-Thus
-
-\[
- \|b\|_{M^{-1}}
- \leq\|b_0\|_{M^{-1}}+\|e\|_{M^{-1}}
- \leq B_0+\delta/\sqrt m=B.
-\]
-
-Applying (L-14302.6) yields (L-14302.9).  Finally, because `M>0`, the Schur
-complement of the lower-right block in (L-14302.10) is
-
-\[
- B_0^2-b_0^*M^{-1}b_0,
-\]
-
-which proves the claimed equivalence.  QED.
-
-## Why this is stronger than L-14301
-
-L-14301 first obtains an ordinary-angle estimate and then pays the worst-case
-weighted complement factor
-
-\[
- \kappa
- =\sup_{w\perp v}\frac{\|w\|_M}{\|w\|},
-\]
-
-producing the term `kappa R/g`.  L-14302 instead measures the actual coupling
-vector in the dual weighted norm and proves coercivity in the target norm itself:
-
-\[
- \frac{\|b\|_{M^{-1}}}{h}.
-\]
-
-The improvement can be arbitrarily large.  A high-weight direction may dominate
-`kappa` while being orthogonal, or nearly orthogonal, to the actual residual
-coupling `b`.  Such a direction should not degrade the approximation of the
-ground-state line to the prolate target, and L-14302 correctly ignores it.
-
-## Adapter to T-14301
-
-At level `j`, put
-
-\[
- v_j=\frac{P_jk_{\lambda_j}}{q_j},
- \qquad q_j=\|P_jk_{\lambda_j}\|_2,
-\]
-
-and let `M_j` be the Hardy-strip weighted Gram operator on the exact even
-complement.  If one certifies
-
-\[
- C_j-U_jI\succeq h_jM_j,
+ 0\prec\underline G_+\preceq G_+\preceq\overline G_+,
  \qquad
- \|b_j\|_{M_j^{-1}}\leq B_j,
+ \underline G_+\succeq mS_+
+ \quad(m>0).
+ \tag{L-14302.17}
 \]
 
-then T-14301's per-level source-distance budget improves to
+Put
+
+\[
+ s=p^Tp,
+ \qquad
+ \mu_0=\frac{p^TA_0p}{s},
+ \qquad
+ U=\mu_0+\delta.
+ \tag{L-14302.18}
+\]
+
+It is sufficient to certify by exact rational LDL
+
+\[
+ B_+^T(A_0-UI)B_+-\delta S_+-h\overline G_+\succeq0,
+ \tag{L-14302.19}
+\]
+
+and
+
+\[
+ B_-^T(A_0-UI)B_--\delta S_--g_-S_-\succeq0.
+ \tag{L-14302.20}
+\]
+
+Indeed, the exact compression errors are bounded below by `-delta S_+` and
+`-delta S_-`, while `lambda_0<=mu(A)<=U`.
+
+For the dual residual put
+
+\[
+ d_0=B_+^TA_0p.
+ \tag{L-14302.21}
+\]
+
+The coordinate identity behind the certificate is worth making explicit. If
+`r in W_+`, `d=B_+^Tr`, and `G_+` is the weighted Gram above, then
+
+\[
+ \|r\|_{M_+^{-1}}^2=d^TG_+^{-1}d.
+ \tag{L-14302.21a}
+\]
+
+Indeed, writing `r=B_+y` and `S_+=B_+^TB_+`, one has `d=S_+y`; the operator
+representing the weighted form in these coordinates is `S_+^{-1}G_+`, and a
+direct substitution gives (L-14302.21a).
+
+A rational number `B_0>=0` satisfying
+
+\[
+ \begin{pmatrix}
+ B_0^2&d_0^T\\
+ d_0&\underline G_+
+ \end{pmatrix}\succeq0
+ \tag{L-14302.22}
+\]
+
+certifies `d_0^T \underline G_+^{-1}d_0\leq B_0^2`. If a rational `epsilon>=0`
+satisfies
+
+\[
+ \epsilon^2m\geq\delta^2s,
+ \tag{L-14302.23}
+\]
+
+then
+
+\[
+ \|B_+^TEp\|_{\underline G_+^{-1}}\leq\epsilon.
+\]
+
+To see this, `\underline G_+\succeq mS_+` implies
+
+\[
+ \|\underline G_+^{-1/2}B_+^T\|_{op}^2\leq m^{-1};
+\]
+
+combine this with `\|Ep\|\leq\delta\sqrt{s}`. Since
+`G_+\succeq\underline G_+`, inversion reverses Loewner order, and the triangle
+inequality in the `\underline G_+^{-1}` norm gives the exact unnormalized
+residual bound below.
+
+Since `G_+>=underline G_+`, the exact unnormalized residual in
+(L-14302.12) obeys
+
+\[
+ \|r\|_{M_+^{-1}}\leq B_0+\epsilon.
+ \tag{L-14302.24}
+\]
+
+Consequently the fully rational finite output is
 
 \[
  \boxed{
- d_j^+=t_j+q_jB_j/h_j.}
- \tag{L-14302.12}
+ \inf_{c\ne0}\|c\xi_0-k\|_{\mathfrak M}
+ \leq t+\frac{B_0+\epsilon}{h}.}
+ \tag{L-14302.25}
 \]
 
-This replaces
+Every algebraic matrix decision in (L-14302.17), (L-14302.19),
+(L-14302.20), and (L-14302.22) is now genuinely rational. Producing the directed
+Loewner enclosures and the target-tail bound remains an analytic/provenance gate.
+
+## Comparison with L-14301
+
+The earlier gate uses an ordinary residual/gap estimate followed by the global
+embedding factor
 
 \[
- t_j+q_j\kappa_jR_j/g_j.
+ \kappa=\sup_{w\in W_+}\frac{\|w\|_{\mathfrak M}}{\|w\|}.
 \]
 
-Accordingly the asymptotic closure reduces to
+L-14302 instead asks for weighted coercivity and the dual norm of the actual
+unnormalized residual. Neither finite bound dominates the other without
+additional structure. L-14302 can, however, be arbitrarily sharper when the
+modes responsible for a large `kappa` are weakly coupled to `p`. Both bounds
+should therefore be computed and the smaller certified endpoint retained.
+
+## Adapter to T-14301
+
+At level `j`, take
 
 \[
- t_j\longrightarrow0,
+ p_j=P_jk_{\lambda_j},
  \qquad
- q_jB_j/h_j\longrightarrow0,
+ t_j=\|(I-P_j)k_{\lambda_j}\|_{\lambda_j,\tau_j}.
 \]
 
-without requiring a bound on the largest Hardy weight of every complement
-direction.
+A passing L-14302 certificate gives
 
-## Analytic and dependency audit
+\[
+ \boxed{
+ d_j^+
+ =t_j+\frac{B_j}{h_j},}
+ \tag{L-14302.26}
+\]
 
-- The result is purely finite-dimensional and uses no zeta-function identity.
-- `M` must be strictly positive definite on the declared complement.
-- `U` must be a certified **upper** endpoint for `lambda_0`; a lower endpoint is
-  insufficient because `C-lambda I` decreases with `lambda`.
-- The block decomposition must be formed from the exact ordinary orthogonal
-  complement of `v`.
-- A production interval adapter must derive `b`, `C`, and their uncertainty from
-  one common matrix enclosure rather than unrelated entry boxes.
+where `B_j` bounds the dual Hardy norm of the **unnormalized** projected-prolate
+residual. It simultaneously proves that the corresponding finite Weil matrix
+has a global simple even ground state. Gate 9 is therefore reduced to
+
+\[
+ t_j\to0,
+ \qquad
+ B_j/h_j\to0.
+ \tag{L-14302.27}
+\]
+
+This is a cleaner target than the first formulation's `q_jB_j/h_j`, but it is
+still a genuine asymptotic theorem, not a finite-prefix inference.
 
 ## Gap audit
 
-An initial scratch derivation tried to use a lower eigenvalue endpoint.  That is
-incorrect.  The valid and committed theorem uses the upper endpoint
-`U>=lambda_0` throughout.
-
-Remaining production questions are:
-
-1. certify that `M_j` is exactly the restriction of T-14301's Hardy-strip norm;
-2. obtain a useful lower bound `M_j>=m_jI` without destroying the asymptotic
-   gain in the interval budget;
-3. exploit structured matrix uncertainty if a full entrywise operator radius is
-   too expensive;
-4. verify the projective rescaling against the precise normalization in the
-   imported finite CCM real-zero theorem.
+- The ordinary projection `P` and the Hardy norm need not be mutually
+  orthogonal. Only the triangle inequality is used.
+- `B_+` must span the entire even complement and `B_-` the entire odd sector.
+- Exact parity commutation is an analytic/formula-level fact; an unstructured
+  operator ball around a parity-commuting midpoint does not prove it.
+- `underline G_+` and `overline G_+` must be Loewner bounds, not merely
+  entrywise interval endpoints.
+- The scalar coercivity `h` may be small. The new route is not automatically
+  stronger than L-14301.
+- The CCM normalization import still requires independent review; projective
+  rescaling is used only because nonzero scalar multiplication preserves zeros.
 
 ## Adversarial tests
 
-1. If `b=0`, the finite-space projective error is exactly zero.
-2. In a one-dimensional complement, equality is approached when
-   `C-lambda_0I=hM`.
-3. Increasing an eigenvalue of `M` in a direction orthogonal to `b` worsens the
-   old `kappa` estimate but leaves L-14302 unchanged.
-4. A certificate using only `C-LI>=hM` with `L<lambda_0` must be rejected.
-5. Perturbing only the off-diagonal block realizes the additive
-   `delta/sqrt(m)` dual-norm budget.
+1. **Vacuous-infimum trap.** Interpreting `M` as a seminorm that ignores the
+   `v` component makes `inf_{c!=0}||c xi-v||_M=0`; the repaired statement fixes
+   the `v` normalization explicitly.
+2. **Lower-endpoint trap.** Replacing the upper Rayleigh endpoint `U` by a
+   lower eigenvalue endpoint reverses the needed monotonicity.
+3. **High-weight uncoupled mode.** Let `M=diag(1,K^2)`,
+   `C-U I=hM`, and `b=(epsilon,0)`. The old `kappa` penalty grows like `K`,
+   while the dual residual bound is independent of `K`.
+4. **No-universal-dominance case.** If only an ordinary complement gap is
+   available, converting it to weighted coercivity can force `h` down by
+   `kappa^{-2}`; L-14302 may then be worse.
+5. **Parity omission.** Weighted coercivity only on the even complement does
+   not exclude a lower odd state; the odd gate in (L-14302.5) is indispensable.
+6. **Gram enclosure direction.** Coercivity uses `overline G`, while the dual
+   residual uses `underline G`. Reversing either direction is unsafe.
 
 ## Remaining uncertainty
 
-L-14302 is a complete finite theorem, pending independent review.  It does not
-prove the large-parameter estimates for the CCM prolate sequence.  Its value is
-that it removes the least natural factor from Gate 9 and exposes a cleaner
-analytic target: weighted coercivity of the Weil complement against the actual
-prolate residual coupling.
+The finite theorem and rational adapter are complete-looking but remain
+`PROPOSED` pending an independent reconstruction. No production CCM matrix,
+Hardy Gram enclosure, or prolate tail has yet passed this certificate. The
+large-parameter estimates in (L-14302.27) remain the central analytic blocker.
 
 ## Suggested next attack
 
-Expand the coupling vector directly from
+Construct the production `G_+` Loewner enclosure analytically in the CCM Fourier
+basis. Then expand the unnormalized residual covector
 
 \[
- (QW_{\lambda_j}-\mu_j)P_jk_{\lambda_j}
+ d_j=B_{+,j}^TQW_{\lambda_j}p_j
 \]
 
-before taking norms.  Use the prolate differential equation and the
-prime/pole/archimedean decomposition to search for an exact cancellation identity
-forcing `||b_j||_{M_j^{-1}}` to decay.  Pair it with a weighted form inequality
-`C_j-U_jI>=h_jM_j` whose coercivity loss is slower than that decay.
+before norms are taken, keeping prime, pole, and archimedean contributions in one
+shared interval expression. Search for cancellation in the lower-Gram dual norm
+and compare the resulting `B_j/h_j` endpoint against the older
+`kappa_jR_j/g_j` endpoint at the same finite levels.
