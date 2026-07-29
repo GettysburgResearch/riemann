@@ -1,0 +1,26 @@
+{
+  "certificate_gates": {
+    "complete_parity_bases": "PASS",
+    "directed_gram_loewner_bounds": "PASS",
+    "dual_residual_schur": "PASS",
+    "midpoint_parity": "PASS",
+    "odd_globality_gap": "PASS",
+    "operator_radius_dual_budget": "PASS",
+    "rayleigh_upper": "PASS",
+    "weighted_even_coercivity": "PASS"
+  },
+  "dimension": 5,
+  "display_truncated_toward_zero": {
+    "dual_residual_total_upper": "0.2100000000000000",
+    "global_spectral_gap_lower": "1.9600000000000000",
+    "weighted_target_line_distance_upper": "0.5285714285714285"
+  },
+  "dual_residual_total_upper": "21/100",
+  "global_spectral_gap_lower": "49/25",
+  "input_sha256": "3aa1d5f1d066862818acd5e8a907ce8b88b52dcc3484205f17473610ad11ed07",
+  "midpoint_rayleigh": "0",
+  "rayleigh_upper": "1/100",
+  "schema": "riemann.prolate-weighted-schur-ritz.verification.v1",
+  "simple_even_ground_certified": true,
+  "weighted_target_line_distance_upper": "37/70"
+}
