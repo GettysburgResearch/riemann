@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "coefficients": [
+        {"denominator": "1", "numerator": "1"},
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "1", "numerator": "-1"}
+      ],
+      "form": {"denominator": "128", "numerator": "-25"},
+      "h": {"denominator": "16", "numerator": "1"},
+      "id": "coarse-negative",
+      "increment_vector": [
+        {"denominator": "1", "numerator": "1"},
+        {"denominator": "1", "numerator": "1"},
+        {"denominator": "1", "numerator": "1"},
+        {"denominator": "1", "numerator": "1"},
+        {"denominator": "1", "numerator": "1"}
+      ],
+      "refinement": {
+        "coefficients": [
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "0"},
+          {"denominator": "1", "numerator": "-1"}
+        ],
+        "factor": 2,
+        "form": {"denominator": "128", "numerator": "-25"},
+        "h": {"denominator": "32", "numerator": "1"},
+        "increment_vector": [
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"},
+          {"denominator": "1", "numerator": "1"}
+        ]
+      },
+      "status": "NEGATIVE"
+    }
+  ],
+  "proof_boundary": "finite rational screw/Toeplitz algebra only; no Riemann-zeta or prime-power evaluation",
+  "psi_quadratic_sign": -1,
+  "schema": "riemann.dyadic-fir-density.synthetic.v1",
+  "status": "EXACT_SYNTHETIC_DYADIC_FIR_REPLAY"
+}
