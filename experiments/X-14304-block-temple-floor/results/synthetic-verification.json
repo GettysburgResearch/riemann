@@ -1,0 +1,74 @@
+{
+  "M_pivots": [
+    {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  ],
+  "analytic_claim": "L-14308",
+  "certified_ambient_floor": {
+    "denominator": "1000000",
+    "numerator": "-1001"
+  },
+  "claimed_midpoint_floor": {
+    "denominator": "1000000",
+    "numerator": "-1001"
+  },
+  "classification": "SYNTHETIC_MODEL",
+  "complement_dimension": 1,
+  "complement_slack_pivots": [
+    {
+      "denominator": "1000",
+      "numerator": "1"
+    }
+  ],
+  "corrected_floor_pivots": [
+    {
+      "denominator": "1000000",
+      "numerator": "1"
+    }
+  ],
+  "corrected_low_block": [
+    [
+      {
+        "denominator": "1000",
+        "numerator": "-1"
+      }
+    ]
+  ],
+  "exact_proof_object_sha256": "bdc5d3a7d70ae9fe048411d2195f6c18de2323015a86c9e85ac8e9fd6de09463",
+  "gamma": {
+    "denominator": "1",
+    "numerator": "1"
+  },
+  "h": {
+    "denominator": "1000",
+    "numerator": "1"
+  },
+  "low_dimension": 1,
+  "operator_radius": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "proof_boundary": "Exact rational block algebra. Any RIEMANN_WEIL_DIRECTED interpretation also requires the separately bound ambient operator/form radius and the analytic/domain gates of L-14308.",
+  "scalar_diagnostics": {
+    "corrected_low_scalar": {
+      "denominator": "1000",
+      "numerator": "-1"
+    },
+    "distance_ratio_squared": {
+      "denominator": "1",
+      "numerator": "1"
+    },
+    "dual_residual_squared": {
+      "denominator": "1000000",
+      "numerator": "1"
+    },
+    "energy_penalty": {
+      "denominator": "1000",
+      "numerator": "1"
+    }
+  },
+  "schema": "riemann.x14304-block-temple-floor-verification.v1",
+  "verdict": "CERTIFIED_AMBIENT_LOWER_FLOOR"
+}
