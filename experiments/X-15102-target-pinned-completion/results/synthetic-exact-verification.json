@@ -1,0 +1,42 @@
+{
+  "c": "2",
+  "classification": "EXACT_TARGET_PINNED_GRAPH_SOS",
+  "completed_matrix": [
+    [
+      "3",
+      "-1",
+      "-1"
+    ],
+    [
+      "-1",
+      "1",
+      "-1"
+    ],
+    [
+      "-1",
+      "-1",
+      "3"
+    ]
+  ],
+  "diagonal_completion": [
+    "5",
+    "3",
+    "5"
+  ],
+  "dimension": 3,
+  "exact_proof_object_sha256": "b73fcb397283d6375da101fce86c5330b9fba582a96f2d58bd7e5e4c2a8d73ca",
+  "graph_connected": true,
+  "kernel_vector": [
+    "1/4",
+    "1/2",
+    "1/4"
+  ],
+  "positive_edge_count": 3,
+  "proof_boundary": "The checker proves the finite diagonal completion, graph-SOS PSD, one-dimensional kernel, parity, and special commutator algebra. The CCM theorem converting these gates into a real-zero transform remains an imported analytic dependency.",
+  "schema": "riemann.x15102-target-pinned-completion.v1",
+  "updated_beta": [
+    "1",
+    "0",
+    "-1"
+  ]
+}
