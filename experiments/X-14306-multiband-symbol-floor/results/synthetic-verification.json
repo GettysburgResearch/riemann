@@ -1,0 +1,42 @@
+{
+  "analytic_claim": "L-14311",
+  "bad_measure_upper": {
+    "denominator": "1",
+    "numerator": "10"
+  },
+  "certified_formula_floor": {
+    "denominator": "6",
+    "numerator": "5"
+  },
+  "claimed_complement_floor": {
+    "denominator": "6",
+    "numerator": "5"
+  },
+  "classification": "SYNTHETIC_MODEL",
+  "declared_rank_cap": 7,
+  "eta": {
+    "denominator": "2",
+    "numerator": "1"
+  },
+  "exact_proof_object_sha256": "4fcd9ceb05a3002675ce704bef43f3a4ad398ba29974ee11b8b8a7898d97ae66",
+  "floor_moat": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "global_symbol_lower": {
+    "denominator": "1",
+    "numerator": "-1"
+  },
+  "good_symbol_lower": {
+    "denominator": "1",
+    "numerator": "4"
+  },
+  "pi_lower": {
+    "denominator": "1",
+    "numerator": "3"
+  },
+  "proof_boundary": "Exact rational trace and floor arithmetic. Production use inherits the complete directed symbol-sublevel cover, infinite-frequency tail, normalization, and packet-containment gates.",
+  "required_rank_cap": 7,
+  "schema": "riemann.x14306-multiband-symbol-floor-verification.v1",
+  "verdict": "CERTIFIED_MULTIBAND_GENERALIZED_PROLATE_COMPLEMENT_FLOOR"
+}
