@@ -1,0 +1,49 @@
+{
+  "gaussian_moments": {
+    "normalized_fourth_moment": "3/4",
+    "normalized_second_moment": "1/2"
+  },
+  "prolate_repair": {
+    "initial_integral": 0,
+    "initial_value": "1/7",
+    "mode0_value": 2,
+    "mode2_value": 3,
+    "theta0": "4/5",
+    "theta2": "-3/4"
+  },
+  "radical_decomposition": {
+    "local": [
+      1,
+      0,
+      0
+    ],
+    "matrix": [
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "radical": [
+      1,
+      1,
+      0
+    ],
+    "tail": [
+      0,
+      1,
+      0
+    ]
+  },
+  "schema": "riemann.x15101-radical-hermite-bridge.v1"
+}
