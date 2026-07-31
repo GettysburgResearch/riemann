@@ -35,6 +35,8 @@ cautious.
 | C29 | `comp29_odd_rayleigh/` | odd-antisym subspace vs Schur-antisym |
 | C30 | `comp30_kernel_and_alpha_def/` | structural kernel + α_def bisect |
 | C31 | `comp31_schur_second/` | non-kernel Schur eig reinterpretation of C26 |
+| C32 | `comp32_even_kernel/` | even kernel template on `{0,±1}` |
+| C33 | `comp33_even_odd_blocks/` | even/odd block-diagonal leakage test |
 
 ## How to run
 

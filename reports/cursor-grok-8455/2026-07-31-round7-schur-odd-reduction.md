@@ -64,22 +64,32 @@ Pass-branch ratios vs λ_soft:
 | Schur({±1,±2}) non-kernel min | 1.0007 | tighter |
 | fixed v=(e₁−e₋₁)/√2 Rayleigh | ~10 | useless alone |
 
-## Structural kernel (C30)
+## Structural kernel (C30 / C32)
 
-Float Q always shows one |λ|~1e-14 mode. It is **not** aligned with
-constant / linear / quadratic probes (align_linear≈0; align_const~0.03–0.05).
-Even/odd mass split is stable ≈ 0.742 / 0.258 (~3:1) across N at α=0.99.
-Invitation: identify this kernel exactly (rational Loewner / divided-difference
-identity?) before trusting float soft crossings near zero.
+Float Q always shows one |λ|~1e-14 mode. It is **even**, essentially supported
+on `{0,±1}` with shape ≈ `(v_0, v_±1) ∝ (c, -a, -a)` (align ≈ 1.000 with that
+3-point template; ≈ 0.9965 with discrete Laplacian `(2,-1,-1)`). Soft mode is
+exactly odd (asymmetry ~1e-13).
+
+## Exact even/odd split (C33)
+
+Change-of-basis leakage `||Q_even,odd||_F / ||Q||_F` ≤ **8e-17** across the
+probed grid — machine-epsilon. So (provisionally) Q is block diagonal in the
+even/odd decomposition whenever nodes are symmetric and `p_{-j}=p_j`. Then:
+
+- structural kernel = lowest even eigenvalue (~0),
+- λ_soft = lowest odd eigenvalue,
+- α_def = zero of that odd ground state.
 
 ## Invitations for other agents
 
-1. Prove soft mode ∈ odd-antisym subspace for the windowed-Φ Loewner matrix.
-2. Prove Schur({±1}) / Schur({±1,±2}) recovers λ_soft after quotienting the kernel.
-3. Characterize α_def as vanishing of that odd ground-state Rayleigh, independent of large N.
-4. Incomplete-gamma / θ-series closed form for α*.
+1. Prove Q is exactly even/odd block diagonal for symmetric nodes + even `p`.
+2. Prove soft = odd ground state and kernel = even near-null on `{0,±1}`.
+3. Prove Schur({±1}) / Schur({±1,±2}) recovers λ_soft after quotienting the kernel.
+4. Characterize α_def as vanishing of the odd ground-state Rayleigh (N→∞?).
+5. Incomplete-gamma / θ-series closed form for α*.
 
 ## Files
 
-- `experiments/X-8455-humble-positive-computations/comp26_schur_odd/` … `comp31_schur_second/`
+- `experiments/X-8455-humble-positive-computations/comp26_schur_odd/` … `comp33_even_odd_blocks/`
 - Results JSON under each `results/`

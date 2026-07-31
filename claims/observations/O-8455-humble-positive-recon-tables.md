@@ -54,3 +54,4 @@ screens in C1 are known to be too weak and should not be cited.
 11. **Round 7:** soft mode = odd-antisym Loewner ground state (ratio 1±1e-12);
     Schur({±1}) works once a structural ~0 even kernel is quotiented (C26/C29/C31).
     α* fixed by Φ n=1+2 (Δ~1e-10); α_def(N) bisect≈0.9734…0.9756 for N=4…10 (C27–C30).
+    Even/odd Loewner leakage ≤8e-17; kernel ≈ even 3-point mode on `{0,±1}` (C32–C33).
