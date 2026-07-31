@@ -1,0 +1,73 @@
+{
+  "classification": "SYNTHETIC_ZERO_CONFIGURATION",
+  "expected": {
+    "inertia": {
+      "negative": 1,
+      "positive": 3,
+      "zero": 2
+    },
+    "off_line_negative_pair": [
+      "rho",
+      "rhobar"
+    ],
+    "off_line_negative_quadratic": {
+      "denominator": 1,
+      "numerator": -2
+    },
+    "residual_inertia": {
+      "negative": 1,
+      "positive": 1,
+      "zero": 4
+    }
+  },
+  "radical_dimension": 2,
+  "schema": "riemann.x15604-weil-cardinal-defect.v1",
+  "schur_control": {
+    "block_error": {
+      "denominator": 100,
+      "numerator": 1
+    },
+    "claimed_floor": {
+      "denominator": 200,
+      "numerator": -203
+    },
+    "complement_floor": {
+      "denominator": 2,
+      "numerator": 1
+    },
+    "cross_squared": {
+      "denominator": 400,
+      "numerator": 1
+    },
+    "ideal_min": {
+      "denominator": 1,
+      "numerator": -1
+    }
+  },
+  "zeros": [
+    {
+      "conjugate": "g1",
+      "deflated": true,
+      "id": "g1",
+      "multiplicity": 1
+    },
+    {
+      "conjugate": "g2",
+      "deflated": true,
+      "id": "g2",
+      "multiplicity": 2
+    },
+    {
+      "conjugate": "rhobar",
+      "deflated": false,
+      "id": "rho",
+      "multiplicity": 1
+    },
+    {
+      "conjugate": "rho",
+      "deflated": false,
+      "id": "rhobar",
+      "multiplicity": 1
+    }
+  ]
+}
