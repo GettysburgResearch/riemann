@@ -1,28 +1,34 @@
-# L-15303 — Growing Hermite radical packets
+# L-15303 — Growing exact Hermite radical packets
 
 Claim ID: `L-15303`  
-Title: The self-dual Hermite sector supplies arbitrarily large independent blocks of exact compact near-radicals  
+Title: One self-dual Hermite sector supplies arbitrarily large independent blocks of exact Gaussian-tailed Weil radicals  
 Status: `PROPOSED`  
 Authoring agent: `gpt56-03-j`  
 Created: 2026-07-31  
-Dependencies: `L-15301`; elementary Hermite/Fourier algebra; injectivity of the Mellin transform  
-Scope: low-block construction for `L-14308` and `T-14302`
+Dependencies: the Connes--Consani `E`-range radical theorem; the Gaussian tail contraction method of the base `L-14312`; elementary Hermite/Fourier algebra  
+Scope: candidate radical-like block for the corrected low-packet split of `L-15304`
 
-## Fixed-rank source packet
+## Exact source packet
 
-Let `H_j`, `j>=0`, be real even Hermite functions in one common self-dual
-Fourier sector:
+Let
 
 \[
- \widehat H_j=H_j.
+ H_0,H_4,H_8,\ldots
 \]
 
-For example, take indices `0,4,8,...` in the standard convention. Assume
-`H_0(0) != 0` and put
+be real even Hermite functions in one self-dual Fourier sector, normalized so
+that
 
 \[
- \phi_j=H_0(0)H_j-H_j(0)H_0,
- \qquad 1\le j\le M.                         \tag{1}
+ \widehat H_{4j}=H_{4j}.                     \tag{1}
+\]
+
+Assume `H_0(0) != 0` and define
+
+\[
+ \boxed{
+ \phi_j=H_0(0)H_{4j}-H_{4j}(0)H_0,
+ \qquad j\ge1.}                              \tag{2}
 \]
 
 Then
@@ -32,117 +38,138 @@ Then
  \qquad
  \phi_j(0)=0,
  \qquad
- \int\phi_j=\widehat\phi_j(0)=0.            \tag{2}
+ \int_{\mathbb R}\phi_j
+ =\widehat\phi_j(0)=0.                       \tag{3}
 \]
 
-The `M` functions are linearly independent: comparison of the independent
-Hermite coefficients `H_1,...,H_M` in a vanishing linear combination forces all
-coefficients to be zero.
+Thus every `phi_j` lies in the exact codimension-two even Schwartz source
+space. The family is linearly independent: in a finite relation, comparison of
+the independent coefficients of `H_4,H_8,...` forces every scalar to vanish.
 
-Thus the two codimension-two source conditions collapse to one condition inside
-a self-dual Fourier sector.
-
-## Compact exact packet
-
-Apply `L-15301` to each `phi_j`, using one common cutoff scale `R` and one fixed
-correction bump. This gives compact even sources
+For
 
 \[
- f_{j,R}\in\mathcal S_0^{\rm ev},
- \qquad 1\le j\le M,                         \tag{3}
+ r_j=\mathcal E(\phi_j),                     \tag{4}
 \]
 
-with `f_{j,R}->phi_j` in Schwartz topology. Their arithmetic images
+the imported global theorem gives
 
 \[
- r_{j,R}=E(f_{j,R})
+ Q_W(r_j,g)=0                                \tag{5}
 \]
 
-belong to the exact global Weil radical.
+for every admissible test vector. No finite prolate approximation and no source
+Schwartzification are required.
 
-Using the smooth multiplicative support cutoff from `L-15301`, write
+## Gaussian-polynomial tails
+
+Each source `phi_j` is a polynomial times `exp(-pi x^2)`. Its logarithmic
+arithmetic representative
 
 \[
- r_{j,R}=k_{j,R}+t_{j,R}.
+ R_j(t)=r_j(e^t)
 \]
 
-For every fixed `M` and every fixed multiplicative Schwartz seminorm `q`,
+therefore has double-Gaussian decay at both ends, with constants depending on
+`j` only through a finite polynomial degree and coefficient bound.
+
+For support half-width `a`, write
 
 \[
- \max_{1\le j\le M}q(t_{j,R})\longrightarrow0. \tag{4}
+ k_{j,a}=1_{[-a,a]}R_j,
+ \qquad
+ t_{j,a}=R_j-k_{j,a}.                        \tag{6}
 \]
 
-Since every `r_{j,R}` is radical, polarization of `L-14309` gives
-
-\[
- Q_W(k_{i,R},k_{j,R})=Q_W(t_{i,R},t_{j,R})\to0 \tag{5}
-\]
-
-and
-
-\[
- Q_W(k_{j,R},\cdot)=-Q_W(t_{j,R},\cdot)\to0.   \tag{6}
-\]
-
-The identities are exact; only the limits use continuity.
-
-## Growing diagonal packet
-
-There is an increasing sequence `R_M -> infinity` such that the first `M`
-targets obey
+The term-by-term archimedean, boundary, and prime-translation argument of the
+base Gaussian-tail theorem applies to every fixed finite collection. Therefore,
+for each fixed `M`, there are constants `C_M,D_M` such that
 
 \[
  \max_{1\le i,j\le M}
- |Q_W(k_{i,R_M},k_{j,R_M})|<\frac1M          \tag{7}
+ |Q_W(t_{i,a},t_{j,a})|
+ \le C_M e^{-\pi e^{2a}/2},                 \tag{7}
 \]
 
-and every selected continuous residual seminorm is below `1/M`.
+and the complete cross map from the first `M` localized vectors into any
+Hardy-normalized localized complement obeys
 
-For each finite `M`, choose `R_M` using (4)--(6), then enlarge it to make the
-sequence increasing. Therefore the positive program has exact localized
-near-radical blocks of arbitrarily growing finite rank; it is not restricted to
-one guessed prolate ground direction.
+\[
+ \sup_{\|g\|_{a,\tau_a}=1}
+ \left(\sum_{j=1}^M|Q_W(k_{j,a},g)|^2\right)^{1/2}
+ \le D_M e^{-\pi e^{2a}/2}.                 \tag{8}
+\]
+
+The exponent `1/2` is a deliberately weakened display; any fixed polynomial
+loss is absorbed by increasing the support threshold. A production theorem may
+retain the sharper polynomial-times-`exp(-pi e^(2a))` form.
+
+By radicality and polarization,
+
+\[
+ Q_W(k_{i,a},k_{j,a})=Q_W(t_{i,a},t_{j,a}),  \tag{9}
+\]
+
+so (7) controls the complete finite low block, not merely its diagonal.
+
+## Growing diagonal sequence
+
+There exists an increasing sequence `a_M -> infinity` such that
+
+\[
+ \max_{1\le i,j\le M}
+ |Q_W(k_{i,a_M},k_{j,a_M})|<M^{-1}          \tag{10}
+\]
+
+and the first-`M` cross-map norm in (8) is below `M^{-1}`.
+
+For each fixed `M`, choose `a_M` large enough using (7)--(8), then enlarge it to
+make the sequence increasing. Thus exact localized near-radical blocks of
+arbitrarily large finite rank exist unconditionally.
 
 ## Transform limits
 
-For each fixed `j`,
+For every fixed `j`, the Mellin transform has the form
 
 \[
- \widehat{k_{j,R}}(z)\longrightarrow
- \zeta\!\left(\frac12-iz\right)\mathcal M\phi_j(z) \tag{8}
+ \widehat r_j(z)
+ =\zeta\!\left(\frac12-iz\right)\Phi_j(z),  \tag{11}
 \]
 
-locally uniformly on closed critical substrips. The auxiliary factor is not
-identically zero because `phi_j` is nonzero and the Mellin transform is
-injective.
+where `Phi_j` is the nonzero Hermite Mellin factor. The localized transforms
+converge locally uniformly to (11) as `a->infinity`, because the double-Gaussian
+tails vanish in every fixed Hardy substrip.
 
-Each individual limit is sufficient for `T-15301` if finite real-rooted
-spectral transforms approach it.
+## Interaction with certified zero evaluations
 
-## Relation to the block lower-floor route
+Every transform in (11) vanishes at every zeta zero. `L-15304` therefore
+implies that these packets can approximate only the certified-zero near-kernel
+of a complete low-symbol packet when their tails are small. They are **not** a
+candidate approximation to the entire low packet.
 
-`L-14308` asks for a finite block containing every near-radical mode. L-15303
-supplies an exact source-domain family whose low block and cross residuals can be
-made small simultaneously. It removes dependence on:
+The corrected use is:
 
-1. one simple ground state;
-2. one `h_0/h_4` coefficient ratio;
-3. an interval-truncated source outside the exact radical domain.
+```text
+complete low packet
+  -> certified-zero near-kernel R_a
+     + evaluation-visible block V_a
+  -> fit a finite subset of {k_(j,a)} only to R_a
+  -> certify V_a directly.
+```
 
-## Remaining decisive gap
+## What remains
 
-L-15303 does not prove that its span contains every dangerous low direction of
-the localized Weil operator. The missing theorem is a quantitative principal-
-angle estimate between:
+The theorem supplies growing exact radical blocks and explicit tail decay. It
+does not prove:
 
-- the low spectral/prolate packet selected by `L-14310/L-14311`; and
-- the repaired Hermite-radical packet above.
-
-A vanishing subspace-angle bound, together with complement coercivity, would
-feed directly into the exact block Schur floor of `T-14302`.
+1. that their span captures the zero-evaluation near-kernel of the arithmetic
+   low packet;
+2. a uniform Gram condition as both rank and support grow;
+3. a positive lower floor for the evaluation-visible block;
+4. the cofinal Schur envelope required by `T-14302`.
 
 ## Status boundary
 
-The finite Hermite algebra and diagonal argument are elementary. The imported
-`E` interfaces, form continuity, and any production subspace-angle estimate
-remain to be independently audited. No RH proof is claimed.
+The Hermite algebra and diagonal existence argument are elementary. The exact
+Gaussian cross-form bounds import the normalization and termwise estimates of
+the base radical-tail theorem. No RH proof is claimed.
