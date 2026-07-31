@@ -1,0 +1,61 @@
+{
+  "analytic_claim": "L-14319",
+  "classification": "SYNTHETIC_MODEL",
+  "dimension": 2,
+  "exact_proof_object_sha256": "746e5bb47be8bdd6b2ac16905f5027302638126a00e30dab2598c6ca6a862a18",
+  "floor_lmi_pivots": [
+    {
+      "denominator": "1",
+      "numerator": "0"
+    },
+    {
+      "denominator": "1",
+      "numerator": "0"
+    }
+  ],
+  "form_radius": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "metric_pivots": [
+    {
+      "denominator": "1",
+      "numerator": "1"
+    },
+    {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  ],
+  "midpoint_global_diagnostic_rayleigh": {
+    "denominator": "1",
+    "numerator": "-1"
+  },
+  "multiplier": {
+    "denominator": "1",
+    "numerator": "3"
+  },
+  "proof_boundary": "Exact rational verification of the robust S-lemma implication. A Riemann-Weil interpretation additionally requires the typed relative-Loewner and certified-zero-frame provenance gate.",
+  "robust_loss": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "robust_slater_margin": {
+    "denominator": "4",
+    "numerator": "1"
+  },
+  "schema": "riemann.x14312-certified-zero-slemma-verification.v1",
+  "verdict": "CERTIFIED_VISIBLE_CONE_LOWER_FLOOR",
+  "visibility_radius": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "visibility_threshold_squared": {
+    "denominator": "4",
+    "numerator": "3"
+  },
+  "visible_floor_certified": {
+    "denominator": "4",
+    "numerator": "5"
+  }
+}
