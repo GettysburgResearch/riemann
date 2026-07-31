@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.x15304-triangular-three-block-schur.v1",
+  "status": "DECLARED_THREE_BLOCK_PACKET",
+  "G_R": [[1]],
+  "G_V": [[1]],
+  "M": [[1]],
+  "B_R": [[0]],
+  "B_V": [[{"numerator": 3, "denominator": 2}]],
+  "C": [[{"numerator": 3, "denominator": 2}]],
+  "X": [[{"numerator": 1, "denominator": 20}]],
+  "Y": [[{"numerator": 1, "denominator": 10}]],
+  "Z": [[{"numerator": 1, "denominator": 2}]],
+  "radical_lower_loss": {"numerator": 1, "denominator": 1000},
+  "complement_floor": 1,
+  "visible_schur_floor": 1,
+  "radical_correction_bound": {"numerator": 1, "denominator": 80},
+  "assembly_radius": {"numerator": 1, "denominator": 10000},
+  "note": "X equals h^-1 Z^T M^-1 Y, so the corrected X channel cancels exactly."
+}

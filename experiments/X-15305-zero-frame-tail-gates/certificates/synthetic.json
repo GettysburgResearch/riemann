@@ -1,0 +1,12 @@
+{
+  "schema": "riemann.x15305-zero-frame-tail-gates.v1",
+  "sigma2": {"numerator": 5, "denominator": 2},
+  "visible_residual_lower_loss": {"numerator": 1, "denominator": 5},
+  "visible_ambient_cross_squared": {"numerator": 1, "denominator": 4},
+  "ambient_coercivity": 2,
+  "radical_lower_loss": {"numerator": 1, "denominator": 100},
+  "radical_row_dual_squared": {"numerator": 1, "denominator": 200},
+  "assembly_radius": {"numerator": 1, "denominator": 1000},
+  "claimed_beta": {"numerator": 87, "denominator": 40},
+  "claimed_epsilon": {"numerator": 2, "denominator": 125}
+}
