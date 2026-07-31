@@ -1,0 +1,44 @@
+name: x18901-deficit-complement
+
+on:
+  push:
+    branches:
+      - agent/gpt56-03-n/189-deficit-complement
+  pull_request:
+    paths:
+      - 'claims/lemmas/L-18901-canonical-deficit-complement-augmentation.md'
+      - 'claims/theorems/T-18901-augmented-packet-complement-floor.md'
+      - 'claims/refutations/R-18901-unaugmented-capture-scope.md'
+      - 'claims/experiments/X-18901-deficit-complement-verifier.md'
+      - 'experiments/X-18901-deficit-complement/**'
+      - '.github/workflows/x18901-deficit-complement.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Compile
+        run: |
+          python -m py_compile \
+            experiments/X-18901-deficit-complement/verify.py \
+            experiments/X-18901-deficit-complement/tests/test_verify.py
+      - name: Exact synthetic replay
+        run: |
+          python experiments/X-18901-deficit-complement/verify.py \
+            experiments/X-18901-deficit-complement/certificates/synthetic.json
+      - name: Adversarial tests
+        run: |
+          python -m unittest discover -s \
+            experiments/X-18901-deficit-complement/tests -v
+      - name: SHA ledger
+        run: |
+          cd experiments/X-18901-deficit-complement
+          sha256sum -c SHA256SUMS
