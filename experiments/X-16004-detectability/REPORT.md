@@ -9,10 +9,13 @@ shoot at. Several of my own going-in predictions were wrong; they are recorded a
 §11.
 
 Working directory: `/tmp/claude-0/-home-user-riemann/8aa2c694-669d-5c54-ab29-9ac46b683161/scratchpad/det/`
-(code: `loewner.py`, `run.py`, `extra.py`, `mechanism.py`, `crit.py`, `bigN.py`, `analyze.py`;
-raw output: `out_all.txt`, `out_p4.txt` … `out_p10.txt`, `out_mech.txt`).
-Nothing was written to or committed in `/home/user/riemann` — but see the incident note at
-the very end, which the caller needs to act on.
+(code: `loewner.py`, `run.py`, `extra.py`, `mechanism.py`, `crit.py`, `bigN.py`, `bigN2.py`,
+`check24.py`, `validate.py`, `validate2.py`, `analyze.py`; raw output: `out_all.txt`,
+`out_p4.txt` … `out_p10.txt`, `out_p9b_*.txt`, `out_check24.txt`, `out_mech.txt`).
+
+I made no intentional change in `/home/user/riemann`, and `git status` there is clean as I
+leave it — **but one stray scratch file of mine was accidentally swept into another session's
+commit, and the repository owner needs to remove it. See the incident note in §16.**
 
 ---
 
@@ -84,7 +87,11 @@ Precision: dps = 40 + 6N (64 … 124 for N = 4 … 14).
 | `lambda_min` bisection vs `eigsy` on a **well-conditioned** case | agree to 10 digits (both signs) |
 | **dps doubling**, N=8: dps 88 -> 176 | every printed digit identical |
 | **dps doubling**, N=14: dps 124 -> 248 | every printed digit identical |
+| **dps doubling**, N=22, M=60: dps 172 -> 344 | lambda_max, lambda_min and delta_c identical to all 9 printed digits |
+| **dps doubling**, N=24, M=60: dps 184 -> 368 | identical to all 9 printed digits (lambda_min = 4.68195434e−104) |
+| peak-signal scan at dps 60 vs dps 150 (3 cells) | identical to all 9 printed digits |
 | scale-invariance null test (all weights x0.01, so Q -> 0.01 Q) | delta_c identical to 7 digits |
+| unperturbed inertia = (dim, 0, 0) asserted on every reported row | passes except the rows explicitly discarded in §8/§12 |
 
 ---
 
@@ -157,9 +164,16 @@ with N: the sensitivity of the criterion improves far faster than the ability of
 fixed-precision computation to read it.
 
 So: **raising N makes the finite Weil/Loewner criterion enormously more sensitive in exact
-arithmetic and simultaneously more useless in fixed precision.** The two effects do not
-cancel — they diverge. The criterion is only usable if working precision is scaled as
-~4.5N digits, which is the same budget O-16004 §5 derived for merely certifying positivity.
+arithmetic, while the gap between that sensitivity and what fixed precision can read grows
+without bound.** The exact threshold is only readable if working precision is scaled as
+~4.0–4.5 N digits, which is the same budget O-16004 §5 derived for merely certifying positivity.
+
+> **Read §8 before quoting this section.** The table above stops at N = 14, where the perturbed
+> pole still lies well outside the node band (mu_1/N = 1.51). Extending to N = 24 at a
+> rank-safe pole count changes one of the two conclusions: the *blind band* keeps widening
+> exactly as above, but the *absolute* float64-detectable displacement improves by a further
+> 5.5 orders of magnitude once the pole enters the band. My first reading of this section
+> over-claimed; §8 corrects it.
 
 ## 5. Signal strength lambda_min(Q(d)) vs d
 
@@ -289,9 +303,80 @@ Note the important structural fact: with Delta = 1.5 the nodes are the integers 
 mu_1 = 21.2, so **for every N ≤ 21 the perturbed pole lies outside the sampled node interval
 altogether.** All of §3–§7 is therefore extrapolation from outside the band. §8 crosses that line.
 
-## 8. Crossing into the band (N up to 24)
+## 8. Crossing into the band: the definitive sweep, N = 8 … 24 at M = 60
 
-PLACEHOLDER_P9
+**First attempt discarded.** I first ran N = 16…24 at M = 20 and got apparently spectacular
+numbers (delta_c below 1e-56). They are worthless: 2M = 40 rank-one terms cannot span
+dimension 2N+1 > 40, and the measured inertia was **(40,0,1)** at N=20, **(40,0,5)** at N=22,
+**(40,0,9)** at N=24 — Q is exactly singular by construction, so delta_c = 0 mathematically and
+the reported values were precision floors. Recorded here because it is the same trap as the
+N=12/M=10 row in §12, and it is easy to fall into: **a necessary sanity check on every row is
+that the unperturbed inertia is exactly (dim, 0, 0).**
+
+Rerun at **M = 60** (120 rank-one terms, comfortably spanning dim ≤ 49), all nine rows verified
+full rank (dim, 0, 0). This is the cleanest series in the report — one fixed M, one fixed
+perturbed pole (gamma_1), N doubled from 8 to 24, crossing mu_1/N = 1 between N = 20 and N = 22.
+
+| N | dim | dps | mu_1/N | lambda_max | lambda_min(0) | log10 cond | delta_c | delta_det(16) | blind ratio |
+|---|---|---|---|---|---|---|---|---|---|
+| 8 | 17 | 88 | 2.650 | 3.0008e−01 | 2.777477e−42 | 41.03 | 1.476018e−06 | 1.3058e−01 | 8.85e+04 |
+| 10 | 21 | 100 | 2.120 | 3.8122e−01 | 1.391112e−50 | 49.44 | 2.182385e−09 | 3.9866e−02 | 1.83e+07 |
+| 12 | 25 | 112 | 1.767 | 4.7183e−01 | 8.594257e−59 | 57.74 | 1.202314e−12 | 1.3895e−02 | 1.16e+10 |
+| 14 | 29 | 124 | 1.514 | 5.7860e−01 | 1.416779e−66 | 65.61 | 3.948495e−16 | 4.3710e−03 | 1.11e+13 |
+| 16 | 33 | 136 | 1.325 | 7.1741e−01 | 2.119599e−74 | 73.53 | 4.164553e−20 | 1.0025e−03 | 2.41e+16 |
+| 18 | 37 | 148 | 1.178 | 9.4394e−01 | 7.200548e−82 | 81.12 | 1.872521e−24 | 1.1282e−04 | 6.03e+19 |
+| 20 | 41 | 160 | 1.060 | 1.8346e+00 | 2.494864e−89 | 88.87 | 1.178458e−29 | 4.4766e−06 | 3.80e+23 |
+| 22 | 45 | 172 | **0.964** | 2.7743e+01 | 7.571377e−97 | 97.56 | 3.085434e−36 | 4.0312e−08 | 1.31e+28 |
+| 24 | 49 | 184 | **0.883** | 2.8120e+01 | 4.681954e−104 | 104.78 | 2.761934e−41 | 1.0124e−08 | 3.67e+32 |
+
+Fits over 8 ≤ N ≤ 24:
+
+- **log10 cond(Q) = 9.68 + 3.976 N**, rms 0.31. So the working precision needed merely to
+  *resolve* the transition is ~**4.0 N + 10 significant digits**.
+- **log10 lambda_min = −7.34 − 4.432 N + 0.0181 N²**, rms 0.086 (linear: rms 0.43).
+- **log10 delta_c = −0.373 − 0.203 N − 0.0618 N²**, rms 0.31 (linear: rms 1.48). The
+  super-geometric decay of delta_c is confirmed over a doubled range of N, and the M=20
+  quadratic of §3 predicted the M=60 N=16 value to 0.09 decades.
+
+**In |Re rho − 1/2| units (= delta/1.5):**
+
+| N | mu_1/N | exact threshold | float64-detectable | blind band |
+|---|---|---|---|---|
+| 8 | 2.650 | 9.84e−07 | 8.71e−02 | 8.9e+04 |
+| 12 | 1.767 | 8.02e−13 | 9.26e−03 | 1.2e+10 |
+| 16 | 1.325 | 2.78e−20 | 6.68e−04 | 2.4e+16 |
+| 20 | 1.060 | 7.86e−30 | 2.98e−06 | 3.8e+23 |
+| 22 | 0.964 | 2.06e−36 | 2.69e−08 | 1.3e+28 |
+| 24 | 0.883 | 1.84e−41 | 6.75e−09 | 3.7e+32 |
+
+**This forces a correction to the tone of §4, and I want to flag it clearly.** Judging only
+from N ≤ 14 (where the pole is far outside the node band) I concluded the float64 channel was
+hopeless: it needed |Re rho − 1/2| ≳ 3e−3. That conclusion does **not** survive the extension.
+Once the pole approaches and enters the band, the float64-detectable displacement improves
+steeply — by 5.5 orders of magnitude between N = 14 and N = 24, reaching **6.7e−9**. The
+per-step improvement in delta_det(16) accelerates from ~0.5 decades per ΔN=2 at small N to
+~2.0 decades across the band crossing (N = 20 -> 22).
+
+So the honest statement is a **split verdict**:
+
+- the *blind band* (ratio between the exact and the float64-visible thresholds) widens
+  monotonically and without any sign of turning over, from 8.9e+04 at N=8 to 3.7e+32 at N=24;
+- but the *absolute* float64 sensitivity improves substantially with N, and at N = 24 is
+  |Re rho − 1/2| ≈ 7e−9, which is not a ridiculous figure.
+
+Both are true simultaneously; they answer different questions. If the question is "can a
+fixed-precision computation locate the exact positivity threshold", the answer is firmly no and
+gets worse. If it is "can a fixed-precision computation detect a sufficiently off-line zero at
+all", the answer improves with N and is not hopeless — though 7e−9 at gamma_1 is still far
+weaker than what direct zero-finding already certifies.
+
+**Two caveats on the last two rows.** (i) lambda_max jumps from 1.83 (N=20) to 27.7 (N=22)
+because node 21 sits only 0.2021 away from the pole mu_1 = 21.2021, so one entry of
+ell(mu_1) blows up. That near-collision inflates lambda_max and hence the 1e−16*lambda_max
+detection threshold, making delta_det(16) jumpy exactly across the band crossing; the N=22->24
+step in delta_det(16) is only 0.6 decades against 2.0 for N=20->22. Reading a smooth law
+through the crossing would be over-interpretation. (ii) The whole crossing region deserves a
+finer scan in N and in the offset of the node lattice relative to the pole, which I did not do.
 
 ## 9. Weight dependence
 
@@ -358,6 +443,20 @@ perturbation is far less efficient at breaking positivity than a norm comparison
    phrasing and it is correct *in L-16004's own setting* (2N poles in dimension 2N+1, so the
    PSD part is rank-deficient and cannot cover the negative direction). It is **not** true for
    an over-determined form: see §13.
+4. **REFUTED, my own §4 conclusion — "float64 could never detect this at any N".** On the
+   N ≤ 14 data (pole outside the band) the float64-detectable displacement was ~3e−3 and
+   falling only like 10^(−0.21N), which I read as hopeless. Extending to N = 24 with a
+   rank-safe pole count, delta_det(16) falls to 1.0e−08 (|Re rho − 1/2| ≈ 6.7e−09), improving
+   ~2 decades per ΔN=2 across the band crossing rather than ~0.5. The pessimistic reading was
+   an artifact of only sampling N where the pole sat outside the node interval. See §8.
+5. **A trap I fell into twice, worth recording as a methodological warning.** Both my N=12/M=10
+   row (§12) and my entire first N ≥ 20 sweep (§8) were rank-deficient: with M poles the form
+   has only 2M rank-one terms, so Q is exactly singular once 2M < 2N+1, and then delta_c = 0
+   mathematically while the computation reports an impressive-looking precision floor
+   (1e−56, 1e−62, 1e−68). Both times the numbers looked like a dramatic result. **The check
+   that catches it is free: assert that the unperturbed inertia is exactly (dim, 0, 0).**
+   This is the same species of error as the leading-principal-minor mistake recorded in
+   L-16004's adversarial-tests section.
 
 ## 12. Convergence in the number of poles — this check FAILED
 
@@ -410,19 +509,29 @@ Ladder, M = 20, a = 1, delta scanned over [1e−90, 1e3] for delta_c and over [1
 | 6 | 7.854 | 1.31 | +3.798906e−08 | −1.001426e−03 | 3.16e+00 | loses PD | 5.616e−01 | 5.616e−01 |
 | 6 | 12.566 | 2.09 | +3.798906e−08 | +2.441840e−08 | 5.62e+00 | **NEVER** | never | never |
 | 6 | 31.416 | 5.24 | +3.798906e−08 | +3.610868e−08 | 5.62e+01 | **NEVER** | never | never |
-| 8 | 1.571 | 0.20 | +1.574355e−10 | −1.649617e+00 | 5.62e−01 | loses PD | — | — |
-| 8 | 7.854 | 0.98 | +1.574355e−10 | −4.814851e+00 | 3.16e−01 | loses PD | — | — |
-| 8 | 12.566 | 1.57 | +1.574355e−10 | −6.164319e−10 | 1.00e+01 | loses PD | — | — |
+| 8 | 1.571 | 0.20 | +1.574355e−10 | −1.649617e+00 | 5.62e−01 | loses PD | 6.027e−06 | 6.027e−06 |
+| 8 | 7.854 | 0.98 | +1.574355e−10 | −4.814851e+00 | 3.16e−01 | loses PD | 2.272e−03 | 2.272e−03 |
+| 8 | 12.566 | 1.57 | +1.574355e−10 | −6.164319e−10 | 1.00e+01 | loses PD | 5.235e+00 | 5.235e+00 |
 | 8 | 31.416 | 3.93 | +1.574355e−10 | +1.396879e−10 | 5.62e+01 | **NEVER** | never | never |
+| 10 | 1.571 | 0.16 | +5.658630e−13 | −1.727276e+00 | 5.62e−01 | loses PD | 3.529e−07 | 3.547e−07 |
+| 10 | 7.854 | 0.79 | +5.658630e−13 | −6.014295e+00 | 1.78e−01 | loses PD | 3.096e−05 | 3.112e−05 |
+| 10 | 12.566 | 1.26 | +5.658630e−13 | −1.697183e−04 | 5.62e+00 | loses PD | 5.041e−01 | 5.061e−01 |
+| 10 | 31.416 | 3.14 | +5.658630e−13 | +3.470408e−13 | 1.00e+02 | **NEVER** | never | never |
+| 12 | 1.571 | 0.13 | +1.593040e−15 | −1.768928e+00 | 5.62e−01 | loses PD | 1.843e−08 | 8.175e−07 |
+| 12 | 7.854 | 0.65 | +1.593040e−15 | −6.172045e+00 | 1.78e−01 | loses PD | 7.932e−07 | 5.981e−06 |
+| 12 | 12.566 | 1.05 | +1.593040e−15 | −2.932757e−01 | 1.00e+00 | loses PD | 7.716e−03 | 2.330e−02 |
+| 12 | 31.416 | 2.62 | +1.593040e−15 | −7.317804e−15 | 1.00e+02 | loses PD | 7.619e+00 | never |
 
 Two things follow.
 
 **(a) An off-line pole does not always break positivity.** In the rows marked NEVER, Q(d) is
 positive definite for *every* displacement tested — over 94 decades of d in the delta_c scan
 and across the full grid spanning the peak. The perturbation barely moves lambda_min at all
-(N=4, mu_*=31.4: from 8.816e−06 down to 8.621e−06, a 2% dip). The threshold sits at roughly
-mu_*/N between 0.4 and 2 at N=4, between 1.3 and 2.1 at N=6, and between 1.6 and 3.9 at N=8 —
-it rises with N because lambda_min(0) is collapsing and so less signal is needed to overcome it.
+(N=4, mu_*=31.4: from 8.816e−06 down to 8.621e−06, a 2% dip). The NEVER/loses boundary in
+mu_*/N sits between 0.39 and 1.96 at N=4, between 1.31 and 2.09 at N=6, between 1.57 and 3.93
+at N=8, between 1.26 and 3.14 at N=10, and is above 2.62 at N=12 (where all four rows lose PD).
+It **rises with N**, because lambda_min(0) is collapsing (8.8e−06 -> 1.6e−15 from N=4 to N=12)
+and so ever less signal is needed to overcome it.
 
 **This is a caution about how L-16004(ii) is quoted.** Its sentence "each nonreal pair forces a
 negative eigenvalue and Q ⊁ 0" is correct *in its own setting* — there Q is built from exactly
@@ -457,18 +566,26 @@ So across the two profiles the pattern is consistent and, I think, the main qual
 4 ≤ N ≤ 24, and only for a perturbation of the form ±mu_* ± i d:
 
 - the unperturbed finite Loewner form is positive definite with lambda_min decaying like
-  10^(−4.46N), matching O-16004's independently measured 10^(−4.5N) for the arithmetic form;
+  10^(−4.4N), matching O-16004's independently measured 10^(−4.5N) for the arithmetic form;
 - an off-line zero is detected in exact arithmetic at a threshold delta_c that falls
-  super-geometrically in N (log10 delta_c ≈ −0.53N − 0.056N² over the measured range);
-- delta_c ∝ a_*^(−1/2) exactly, and is exactly the O(d²) generalized-eigenvalue threshold;
-- the signal at delta_c sits *at* the conditioning floor, so reading it requires
-  ≳ 4.5N + 5.5 significant digits — float64 cannot see the transition for any N ≥ 3;
-- the float64-detectable displacement falls only like 10^(−0.21N), so the blind band between
-  "mathematically broken" and "numerically visible" **widens** with N, reaching 14 orders of
-  magnitude at N = 14;
+  **super-geometrically** in N: log10 delta_c ≈ −0.20N − 0.062N² over 8 ≤ N ≤ 24 at M = 60
+  (a quadratic fits with rms 0.31 against 1.48 for a straight line);
+- delta_c ∝ a_*^(−1/2) exactly, to 7 digits over four decades of a_*, and delta_c is exactly
+  the O(d²) generalized-eigenvalue threshold (the quadratic model reproduces it to full
+  printed precision for N ≥ 8);
+- the signal at delta_c sits *at* the conditioning floor, so reading the transition requires
+  ≳ 4.0N + 10 significant digits — **float64 cannot locate the exact threshold for any N ≥ 3**;
+- the blind band between "mathematically broken" and "float64-visible" **widens monotonically
+  and without turning over**, from 8.9e+04 at N = 8 to 3.7e+32 at N = 24;
+- but the *absolute* float64-detectable displacement **improves** with N, from
+  |Re rho − 1/2| ≈ 8.7e−02 at N = 8 to ≈ 6.7e−09 at N = 24, improving fastest as the pole
+  enters the node band;
 - the signal is bounded and non-monotone in d, so for high zeros there is a hard ceiling: at
   N = 10, detecting a displaced gamma_4 needs ≥ 12 digits *at the optimal displacement*, and
-  no displacement whatsoever makes it float64-visible.
+  no displacement whatsoever makes it float64-visible — though this ceiling improves with N
+  (gamma_4 needs 14.4 digits at N = 6 and 11.2 at N = 14);
+- an off-line pole does **not** always break positivity at all: in an over-determined form
+  with a well-conditioned Q, Q(d) stayed positive definite for every d tested (§13).
 
 **They do not show:**
 
@@ -476,8 +593,8 @@ So across the two profiles the pattern is consistent and, I think, the main qual
   no prime sum, no pole/kappa/J terms, unit residues, and a truncated pole set. The agreement
   of the lambda_min exponent with O-16004 is suggestive, not evidential.
 - anything certified. No interval or ball arithmetic; the LDL^T congruence is exact only up to
-  the working precision. The dps-doubling checks (N = 8 and N = 14, dps doubled, all digits
-  identical) are strong self-consistency evidence, not proof.
+  the working precision. The dps-doubling checks (N = 8, 14, 22 and 24, precision doubled, all
+  printed digits identical) are strong self-consistency evidence, not proof.
 - converged constants — see §12. Only slopes and ratios should be quoted.
 - anything about N > 24, M > 100, Delta ≠ 1.5, non-unit residues, or perturbations other than
   a single symmetric quadruple. In particular I did not test several simultaneous off-line
@@ -496,3 +613,50 @@ So across the two profiles the pattern is consistent and, I think, the main qual
    that scans small displacements is looking in the worst place. If the goal is to *falsify*
    positivity numerically, large displacements are far more efficient — though they correspond
    to zeros nowhere near the critical strip.
+4. §8 shows the interesting action is at the band crossing mu_1/N ≈ 1, which I sampled at only
+   two points (N = 22, 24) and where lambda_max is contaminated by a node–pole near-collision.
+   A finer sweep, with the node lattice deliberately offset relative to mu_1, would separate
+   the genuine band-crossing effect from that artifact.
+5. Everything here is uncertified. The natural next step for anything load-bearing is to
+   redo the inertia in ball arithmetic (Arb) on a rationalised matrix with an explicit moat,
+   the way O-16004's erratum does, rather than in mpmath floats.
+
+---
+
+## 16. Incident note — action needed by the repository owner
+
+I need to report a mistake of mine that touched the repository, contrary to my instructions.
+
+While launching background jobs I wrote `cd <scratchpad> && nohup … &` followed by further
+`nohup … &` commands in the same shell line. Because `&` backgrounded the whole `cd && …`
+group, the *subsequent* commands ran in the original working directory, `/home/user/riemann`,
+and one of them created a stray 92-byte scratch file there: `out_p7.txt`, whose contents are a
+Python "can't open file" error message.
+
+Within the same minute, a **concurrent session** committed
+`fd37649 "observation: O-16006 — two measured laws, and a control that deflates half of one"`
+(timestamp 2026-07-31 16:52:12) using `add -A`-style staging, and that commit **swept my stray
+file into the repository**. `git show --stat fd37649` lists `out_p7.txt | 1 +` alongside its
+five intended files.
+
+What I did: I deleted the stray file, saw that `git status` then reported it as a deletion of a
+*tracked* file, investigated, and confirmed it had been committed by the other session rather
+than by me. I then ran `git checkout -- out_p7.txt` to restore the working tree so the repo is
+**clean and exactly matches HEAD**. I did not commit, and I did not rewrite history — another
+session is actively working in this repository and rewriting a shared commit would have been
+far more damaging than the junk file.
+
+**Action needed:** `out_p7.txt` is junk and should be removed from the repository by whoever
+owns the branch, e.g. `git rm out_p7.txt && git commit -m "docs: remove stray scratch file
+accidentally committed in fd37649"`. Nothing else in `/home/user/riemann` was created,
+modified, or deleted by me, and `git status` is clean as I leave it.
+
+Two process suggestions, offered in the spirit of README §15:
+
+- Agents launching background jobs should use **absolute paths only** and never rely on `cd`
+  in a line containing `&`. I have adopted this for the rest of the session.
+- More importantly, this is a coordination hazard rather than a personal slip: any agent that
+  stages with `git add -A` / `git commit -a` in a shared working directory will silently
+  capture whatever another concurrent session happens to have left lying around. Staging
+  explicit paths would have prevented it, and may be worth a line in the README's commit
+  conventions.
