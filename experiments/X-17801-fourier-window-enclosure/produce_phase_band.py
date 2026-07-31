@@ -39,9 +39,6 @@ def arf_fraction(v: Any) -> Fraction:
 def arb_bounds(v: Any) -> tuple[Fraction,Fraction]:
     return arf_fraction(v.lower()), arf_fraction(v.upper())
 
-def abs_upper(v: Any) -> Fraction:
-    lo,hi=arb_bounds(v); return max(abs(lo),abs(hi))
-
 
 def transform(z: Any, arb: Any, acb: Any, dyadic: int=160) -> Any:
     """Laplace transform of the exact five-notch pole-free window."""
@@ -107,9 +104,9 @@ def main() -> int:
     A=arb(3)*(arb(2)**64)/(prod_r**2)
     T=exact_arb(rat(bins[-1]["upper"]),arb)
     N=arb(100); a0=arb("0.10076"); b0=arb("0.24460"); c0=arb("8.08292")
-    logT=T.log()
+    logT=T.log(); econst=arb(1).exp()
     Z= -N*T**(-p)
-    Z += arb(p)/(2*pi)*T**(1-p)*( (T/(2*pi*arb.e())).log()/(p-1)+arb(1)/(p-1)**2 )
+    Z += arb(p)/(2*pi)*T**(1-p)*( (T/(2*pi*econst)).log()/(p-1)+arb(1)/(p-1)**2 )
     Z += a0*T**(-p)*(logT+arb(1)/p)
     Z += b0*T**(-p)*(logT.log()+arb(1)/(p*logT))
     Z += c0*T**(-p)
