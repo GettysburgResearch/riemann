@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.x15604-terminal-visible.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "metric": [[{"numerator":1,"denominator":1},{"numerator":0,"denominator":1}],[{"numerator":0,"denominator":1},{"numerator":1,"denominator":1}]],
+  "centered_terminal": [[{"numerator":1,"denominator":1},{"numerator":2,"denominator":1}],[{"numerator":2,"denominator":1},{"numerator":-1,"denominator":1}]],
+  "v_minus": [{"numerator":1,"denominator":1},{"numerator":2,"denominator":1}],
+  "v_plus": [{"numerator":3,"denominator":1},{"numerator":-1,"denominator":1}],
+  "pole_scale": {"numerator":4,"denominator":1},
+  "raw_terminal": [[{"numerator":33,"denominator":1},{"numerator":66,"denominator":1}],[{"numerator":66,"denominator":1},{"numerator":127,"denominator":1}]],
+  "theta": {"numerator":9,"denominator":4},
+  "sigma_squared": {"numerator":3,"denominator":1},
+  "omega": {"numerator":1,"denominator":4},
+  "h": {"numerator":1,"denominator":1},
+  "radical_loss": {"numerator":1,"denominator":100},
+  "radical_cross_loss": {"numerator":1,"denominator":200},
+  "assembly_radius": {"numerator":1,"denominator":500}
+}
