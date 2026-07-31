@@ -1,0 +1,48 @@
+{
+  "dimension": 2,
+  "distance_lower": {
+    "denominator": "5",
+    "numerator": "2"
+  },
+  "evaluation_operator_upper_squared": {
+    "denominator": "1",
+    "numerator": "2"
+  },
+  "metric_ldl_pivots": [
+    {
+      "denominator": "1",
+      "numerator": "1"
+    },
+    {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  ],
+  "proof_boundary": "The finite rational singular-value and distance implication is exact. The zero identities, evaluation intervals, and Hardy operator bound are external gates.",
+  "quotient_lower": {
+    "denominator": "2",
+    "numerator": "1"
+  },
+  "schema": "riemann.x15302-zero-evaluation-obstruction.verification.v1",
+  "sigma_lower_squared": {
+    "denominator": "2",
+    "numerator": "1"
+  },
+  "singular_floor_ldl_pivots": [
+    {
+      "denominator": "2",
+      "numerator": "7"
+    },
+    {
+      "denominator": "2",
+      "numerator": "1"
+    }
+  ],
+  "status": "CERTIFIED_POSITIVE_RADICAL_APPROXIMATION_OBSTRUCTION",
+  "tail_upper": {
+    "denominator": "10",
+    "numerator": "1"
+  },
+  "verification_sha256": "475f0f5955170c08c6cf2477d0d60f90dde71ea3539e21593ea8704bcf87d054",
+  "verified": true
+}
