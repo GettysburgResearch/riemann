@@ -1,0 +1,58 @@
+{
+  "content_sha256": "d160f199ac8dadcdc60b72ff15d4e4da1182b4065752dd5aaee4a54a3bec2bf8",
+  "disclaimer": "mpmath findroot / quad; not Arb directed balls.",
+  "reference_from_review": {
+    "alpha_infinity": "0.975779528461603429256854269624",
+    "r_infinity": "2.17949022036079620434634307458"
+  },
+  "residuals_at_reference": {
+    "G_at_ref": "1.766154890337262921e-18",
+    "G_r_at_ref": "-3.7276762163557853254e-17"
+  },
+  "schema": "riemann.x8455.d2.v1",
+  "solutions": [
+    {
+      "G": "3.265194788e-43",
+      "G_r": "-8.278802661e-43",
+      "abs_diff_alpha_vs_ref": "3.84235670726e-17",
+      "abs_diff_r_vs_ref": "2.21215973243e-16",
+      "alpha": "0.97577952846160346768042134217814446",
+      "dps": 40,
+      "r": "2.1794902203607964255623163172348114",
+      "seed": [
+        0.97578,
+        2.1795
+      ]
+    },
+    {
+      "G": "1.782821518e-63",
+      "G_r": "-1.529110222e-62",
+      "abs_diff_alpha_vs_ref": "3.84235670726e-17",
+      "abs_diff_r_vs_ref": "2.21215973243e-16",
+      "alpha": "0.9757795284616034676804213421781444559306311590110261654",
+      "dps": 60,
+      "r": "2.179490220360796425562316317234811430130885615045294463",
+      "seed": [
+        0.97578,
+        2.1795
+      ]
+    },
+    {
+      "G": "2.92779483e-83",
+      "G_r": "2.134972036e-82",
+      "abs_diff_alpha_vs_ref": "3.84235670726e-17",
+      "abs_diff_r_vs_ref": "2.21215973243e-16",
+      "alpha": "0.975779528461603467680421342178144455930631159011026165431382897800396066335",
+      "dps": 80,
+      "r": "2.17949022036079642556231631723481143013088561504529446332582878216889218645",
+      "seed": [
+        0.97578,
+        2.1795
+      ]
+    }
+  ],
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_next": [
+    "Certify with interval Newton / Arb that the Jacobian is nonsingular and the root is unique in a box."
+  ]
+}
