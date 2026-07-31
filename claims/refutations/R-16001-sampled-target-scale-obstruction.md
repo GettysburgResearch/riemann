@@ -89,6 +89,35 @@ Representative results (full data in `experiments/X-16002-cvs-sampled-target-cen
 
 Bisection on $\alpha$ returned $\alpha_c\in(1.064404,1.064417)$ for **every** one of $N=6,8,10,14,20,26,30$.
 
+## Sharpened form (independent derivation)
+
+An independent analysis this session proved several of the ingredients and replaced the heuristics with better ones. Recorded here with its own status labels.
+
+**Proved.**
+
+1. *Secular reduction.* The roots of $P$ are the zeros of $R(s)=\sum_j\xi_j/(j-s)$; no node is a root; $\deg P=2N$ with leading coefficient $\eta^{\mathsf T}\xi$.
+2. *Gap parity* — the content of `L-16003`(i), independently rederived.
+3. *Outer-ray parity.* The root parity on $(N,\infty)$ and $(-\infty,-N)$ is governed by $\xi_N\cdot\eta^{\mathsf T}\xi$, closing the bookkeeping gap left open in `L-16003`(iv).
+4. *Node-sign identity* — the exact form of the "matching law":
+   $$\operatorname{sgn}P(j)=(-1)^{N}\operatorname{sgn}\Xi(2\pi\alpha j).$$
+5. *Lower bound.* $\#\text{real}\ \ge\ V(a)+(\text{rays})$, where $V(a)$ is the number of sign changes of the sampled $\Xi$ sequence; equivalently $\#\text{nonreal}\le 2N-V(a)$.
+6. *Resolution condition.* $V(a)=2\cdot\#\{\text{sample intervals containing an odd number of }\Xi\text{-zeros}\}\le 2Z(2\pi\alpha N)$, with the explicit condition $\gamma_{k+1}-\gamma_k>2\pi\alpha$; **an unresolved close pair costs exactly 2 from the guaranteed count.** (Given real simple zeros in the window, certified to height $\approx3\times10^{12}$.)
+7. *The CvS normalization hypothesis holds for this family:*
+   $$\eta^{\mathsf T}\xi=\sum_{j\in\mathbb Z}(-1)^{j}\Xi(2\pi\alpha j)=\alpha^{-1}\sum_{m\in\mathbb Z}\Phi\!\left(\frac{m-\tfrac12}{\alpha}\right)>0,$$
+   by Poisson summation and $\Phi>0$. So $\eta^{\mathsf T}\xi\neq0$ is not merely assumed but proved here.
+
+**Empirical, with a quantitative derivation.**
+
+8. *Saturation law.* $\#\text{nonreal}$ is nondecreasing in $N$ and saturates at
+   $$D_{\mathrm{sat}}(\alpha)\;\approx\;1.848\,e^{1/\alpha}\;>\;0 ,$$
+   agreeing with the exact counts to within one unit at $\alpha=1.0,0.8,0.6,0.5,0.4$. **So the finite criterion never passes at any fixed $\alpha\le1$, and the deficit diverges as $\alpha\to0$.** This is the sharp quantitative form of the incompatibility (f): convergence needs $\alpha\to0$, and the deficit then grows like $e^{1/\alpha}$.
+9. *The passing levels carry no zero.* Levels with $\alpha\ge1.1$ pass at every tested $N\le20$, but their signal region satisfies $W_{\mathrm{sig}}\le12.83<\gamma_1=14.1347$ — it contains **no** Riemann zero.
+10. *The corrected trade-off constant.* $N_0/N_{\mathrm{sig}}=\pi e/2=4.2699\ldots$ for **every** $\alpha$ — an $\alpha$-independent constant-factor obstruction.
+
+**Refuted.** The coordinating agent's earlier matching law $\#\text{real}=2Z(2\pi\alpha N)$ and threshold $N_0(\alpha)=\alpha^{-1}e^{1+1/\alpha}$ are **false**: they fail at $\alpha=0.6$ for $N=16,18,20,22,24$, checked by two independent methods at 150–300 digits. The agreement at $\alpha=0.6$, $N\le14$ was a coincidence. Both are recorded as failed approaches in the session report; neither is used anywhere in this claim.
+
+**Still open.** The converse half — that the roots not forced real by gap parity are nonreal — remains unproved, and the suggested route via the lower bound (5) cannot work, since a lower bound cannot establish it.
+
 ## Analytic domain audit
 
 All statements are about a polynomial of degree $2N$ with rational coefficients and about an entire function $F$ of exponential type $\tfrac12$ obtained by Fourier transforming a compactly supported bounded function. No contour, branch cut, or analytic continuation is involved. $\Xi$ is entire. The nonreal roots reported in (c) are roots of $P$, transported to the $w$ variable by the linear map $w=2\pi\alpha s$; they are **not** claimed to be zeros of $\Xi$ or of anything else, and they lie far outside the strip where such a claim would even be meaningful.
