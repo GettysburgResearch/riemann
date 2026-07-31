@@ -35,6 +35,10 @@
     "denominator": "1961",
     "numerator": "1616"
   },
+  "edge_signs": [
+    1,
+    -1
+  ],
   "full_shifted_ldl_pivots": [
     {
       "denominator": "2",
@@ -46,12 +50,12 @@
     },
     {
       "denominator": "666",
-      "numerator": "5885"
+      "numerator": "125"
     }
   ],
   "identity_value": {
     "denominator": "3",
-    "numerator": "518"
+    "numerator": "398"
   },
   "odd_resolvent": {
     "denominator": "1961",
@@ -85,7 +89,7 @@
       "numerator": "0"
     }
   ],
-  "proof_boundary": "finite rational graph regression only; no Riemann-zeta value",
+  "proof_boundary": "finite rational signed graph regression only; no Riemann-zeta value",
   "schema": "riemann.x15401-nonlocal-barta.synthetic.v1",
   "status": "EXACT_SYNTHETIC_NONLOCAL_BARTA_POLAR_FLOOR",
   "target_floor": {
