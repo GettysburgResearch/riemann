@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.x15302-zero-evaluation-obstruction.v1",
+  "status": "DECLARED_CERTIFIED_ZERO_EVALUATION_PACKET",
+  "certified_zero_gate": true,
+  "common_hardy_metric": true,
+  "metric_gram": [
+    [
+      {"numerator": "1", "denominator": "1"},
+      {"numerator": "0", "denominator": "1"}
+    ],
+    [
+      {"numerator": "0", "denominator": "1"},
+      {"numerator": "1", "denominator": "1"}
+    ]
+  ],
+  "evaluation_gram": [
+    [
+      {"numerator": "4", "denominator": "1"},
+      {"numerator": "0", "denominator": "1"}
+    ],
+    [
+      {"numerator": "0", "denominator": "1"},
+      {"numerator": "1", "denominator": "1"}
+    ]
+  ],
+  "sigma_lower_squared": {"numerator": "1", "denominator": "2"},
+  "evaluation_operator_upper_squared": {"numerator": "2", "denominator": "1"},
+  "quotient_lower": {"numerator": "1", "denominator": "2"},
+  "tail_upper": {"numerator": "1", "denominator": "10"},
+  "distance_lower": {"numerator": "2", "denominator": "5"},
+  "proof_boundary": "Synthetic exact linear-algebra control. No Riemann zero or transform data are asserted."
+}
