@@ -60,8 +60,8 @@ The following are equivalent.
     \boxed{\sup_{a\ge2}|D_*(a)|<\infty.}
     \tag{T-15403.5}
    \]
-3. The same boundedness holds only along all real `x=2a>=4` translations of the
-   one fixed window `F_*`.
+3. The same boundedness holds along all real `x=2a>=4` translations of the one
+   fixed window `F_*`.
 
 ### Proof
 
@@ -111,17 +111,32 @@ The criterion can be made fail-closed rather than merely qualitative. Under RH,
 where `rho=1/2+i gamma` and the trivial-zero term decays exponentially for
 `a>=2`.
 
-Let `N_0(T)` be any proved upper bound for the number of nontrivial zeros with
-`|gamma|<=T`, counted with multiplicity. Define
+For every integer `k>=0`, let `M_k` be any proved upper bound for the number of
+nontrivial zeros, counted with multiplicity, whose ordinates satisfy
+
+\[
+ k\le|\gamma|<k+1.
+ \tag{T-15403.9}
+\]
+
+One may take the crude but valid choice
+
+\[
+ M_k=N_0(k+1),
+ \tag{T-15403.10}
+\]
+
+where `N_0(T)` is any nondecreasing proved upper bound for the cumulative count
+`#\{|gamma|<T\}`.  Define
 
 \[
 \boxed{
  B_*=B_{triv}+
  \sum_{k=0}^\infty
- \bigl(N_0(k+1)-N_0(k)\bigr)
+ M_k
  \sup_{k\le|t|\le k+1}
  |\widehat F_{*,L}(it)|.}
- \tag{T-15403.9}
+ \tag{T-15403.11}
 \]
 
 The series converges effectively because `L-15405` gives
@@ -129,7 +144,7 @@ The series converges effectively because `L-15405` gives
 \[
  |\widehat F_{*,L}(it)|
  \le\exp[-c(\log(2+|t|))^2]
- \tag{T-15403.10}
+ \tag{T-15403.12}
 \]
 
 for one explicit `c>0`, while every standard zero-count majorant is
@@ -139,7 +154,7 @@ Thus RH implies the uniform computable inequality
 
 \[
 \boxed{|D_*(a)|\le B_*\qquad(a\ge2).}
- \tag{T-15403.11}
+ \tag{T-15403.13}
 \]
 
 A directed finite value whose interval lies outside `[-B_*,B_*]` is an
@@ -205,8 +220,10 @@ It is still equivalent to RH, not a proof of that bound.
 
 - The bounded-convolution Laplace theorem requires a precise distributional
   statement and is a priority for independent review.
-- `B_*` depends on a rigorously cited zero-count majorant and outward evaluation
-  of the infinite product.
+- `B_*` depends on a rigorously cited shell-count or cumulative zero-count
+  majorant and outward evaluation of the infinite product.
+- Differences of cumulative upper bounds are not automatically shell-count
+  upper bounds; this is why (T-15403.9)--(T-15403.11) use explicit `M_k`.
 - A large midpoint outside a heuristic bound is not a certificate.
 - Boundedness on an integer subsequence of `a` is not the same as boundedness for
   all real translations unless a separate interpolation theorem is proved.
