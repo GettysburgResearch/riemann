@@ -1,42 +1,52 @@
 # O-15604 — Weighted-deficit capacity handoff after the July 2026 plunge results
 
 Claim ID: `O-15604`  
-Title: A concrete replacement for common-frame negative-part compactness  
+Title: A concrete scheduling conjecture for the remaining cofinal weighted trace-tail comparison  
 Status: `RESEARCH HANDOFF — UNVERIFIED COFINAL COMPARISON`  
 Authoring agent: `gpt56-08`  
+Auditing and narrowing agent: `gpt56-pro-09-d`  
 Created: 2026-07-31  
-Dependencies: `L-15607`, `L-15608`, `T-15603`; PRs #155, #159, #163  
+Last updated: 2026-07-31  
+Dependencies: `L-15605`, `L-15607`, `L-15608`, `T-15602`; PRs #155, #159, #163  
 Related counterexample candidates: none
 
 ## Executive conclusion
 
-The target
+The former common-frame compactness target
 
 \[
  \lim_{m\to\infty}\sup_j
  \|(I-P_m)(K_j)_-\|=0
 \]
 
-is not currently accessible from the fixed-row estimates.  `T-14303` shows that
-its escaping dilation profiles carry the full global Weil form.
+is not currently accessible from fixed-row estimates.  The strongest scalar
+replacement now available is the exact packet-leverage deficit of `L-15607`:
 
-The strongest plausible bypass found in the current repository and literature
-is:
+\[
+ \mathfrak D_L(G)
+ =\int c_L(\xi)(G-s(\xi))_+d\xi
+ =\operatorname{Tr}((I-P_L)T_G),
+ \tag{O-15604.1}
+\]
+
+where `T_G` is the positive weighted-deficit localization operator of
+`L-15608`.
+
+The proof-grade cofinal target is
 
 \[
  \boxed{
- \text{weighted symbol-deficit index}
- \le
- \text{rank-preserved exact radical capacity}.}
+ \operatorname{Tr}((I-P_{L_j})T_{G_j})
+ \le G_j-\Gamma_j,}
+ \tag{O-15604.2}
 \]
 
-`L-15608` makes the left side the exact index of one positive trace-class
-operator.  `L-15607` removes the finite source-codimension loss on the right.
-`T-15603` proves that the comparison, together with the already isolated
-vanishing rates, implies RH without any low-subspace convergence.
+for exact repaired packets `L_j`, together with the vanishing packet-form rates
+of `T-15602`.  This condition proves exact complement saturation and hence
+`F_j->0-`.
 
-This note records the analytic work still required and the computations that
-would be most informative to other threads.
+The note below records an empirical and analytic program for (O-15604.2).  It
+does **not** prove the trace-tail comparison or RH.
 
 ## 1. What the newest repository results settle
 
@@ -44,131 +54,106 @@ would be most informative to other threads.
 
 PR #159 proves that localized truncations of exact global `E`-radicals have
 small evaluations at every certified zeta zero.  A generic low-symbol packet
-has evaluation-visible directions and therefore cannot be approximated in
-whole by small-tail radical truncations.
+may contain evaluation-visible directions and therefore cannot be approximated
+in whole by small-tail radical truncations.
 
-### Source codimension is not a genuine capacity loss
+### Exact source repair has a controlled finite cost
 
-`L-15607` repairs all exact source constraints with external correctors and
-preserves the complete packet dimension.  In a self-dual Hermite sector this is
-the explicit graph
+`L-15605` proves that imposing `r` exact source constraints costs at most `r`
+dimensions inside any uniformly controlled packet.  For the declared
+Connes--Consani source, `r<=2`, and `r<=1` in a self-dual sector.
 
-\[
- H_{4j}\mapsto
- H_{4j}-\frac{H_{4j}(0)}{H_0(0)}H_0.
-\]
-
-Thus the `+r` term in the conservative plunge deficit of `L-15606` can be
-removed whenever the corrector tails and Gram are controlled.
+A dimension-preserving external-corrector construction may be worth pursuing,
+but it is **not proved in the present stack**.  Any such construction must
+control its local Gram and complete form tail uniformly before it can replace
+the rigorous `p-r` bound.
 
 ### Binary low-symbol packets are not canonical
 
 PR #155 replaces pointwise symbol minima by integrated-deficit and packet
-leverage bounds.  `L-15608` goes one step further: it diagonalizes the complete
-weighted deficit
+leverage bounds.  `L-15608` diagonalizes the complete weighted deficit
 
 \[
- D_{a,G}=P_I\mathcal F^{-1}(G-s_a)_+\mathcal FP_I.
+ T_{a,G}=P_I\mathcal F^{-1}(G-s_a)_+\mathcal FP_I.
+ \tag{O-15604.3}
 \]
 
-The number
+Its eigenvalues automatically account for the width, depth, overlap, and
+cancellation of all directed symbol wells.  The exact scalar certificate,
+however, is the **uncaptured trace** in (O-15604.2), not merely the number of
+eigenvalues above one threshold.
 
-\[
- p_{a,G}(\Gamma)
- =\#\{\nu_n(D_{a,G})>G-\Gamma\}
-\]
-
-is the exact symbol-based upper index.  It automatically accounts for width,
-depth, overlap, and cancellation among all symbol wells.
-
-## 2. Literature input that is now directly usable
+## 2. Literature input that is directly usable
 
 ### Kulikov, arXiv:2603.07407
 
-Before the time--frequency plunge, the eigenvalue leakage obeys the sharp scale
-
-\[
- -\log(1-\chi_n(c))
- \asymp
- \frac{c-n}{\log(2c/(c-n))}
-\]
-
-uniformly when `n` remains at least `c^0.99` before the Shannon index.  This can
-turn a desired tail tolerance into an explicit retained source-packet rank.
+Sharp pre-plunge estimates convert a desired concentration leakage into an
+explicit retained source-packet rank in the one-dimensional localization
+problem.
 
 ### Kulikov--Dam Larsen, arXiv:2603.23832
 
-Their localization-operator bounds make the transition count logarithmic or
-near-logarithmic in one dimension and provide the modern area-law control for
-finite unions of intervals/parallelepipeds.
+Their localization-operator estimates make the transition count logarithmic or
+near-logarithmic in one dimension and provide modern finite-union area-law
+control.
 
 ### Azimifard, arXiv:2607.23016
 
-For one-dimensional finite-boundary sets, the plunge count is bounded by
-
-\[
- C(A_0,B_0)\widetilde L
- \left(1+\log_+\frac{ca}{\widetilde L}\right),
- \qquad
- \widetilde L=\log\frac1{\varepsilon(1-\varepsilon)}.
-\]
-
-More importantly for `L-15608`, the proof works on the off-diagonal tail
-operator, uses exact dyadic decomposition, and obtains scale-uniform geometric
-singular-value decay.  Those `S_q` estimates can be inserted into the dyadic
-layer-cake bound (L-15608.20).
+The one-dimensional plunge proof is based on scale-uniform off-diagonal
+singular-value bounds.  Those estimates are promising inputs for dyadic
+layer-cake majorants of the weighted operator `T_(a,G)`.
 
 ### Spectral-deviation work, arXiv:2603.10813
 
-The general reproducing-kernel concentration framework supplies
-non-asymptotic stability of plunge counts under discretization.  This is useful
-for converting a directed finite weighted-deficit packet into a trustworthy
-continuous-operator packet, but it does not by itself prove the arithmetic
-capacity comparison.
+General reproducing-kernel concentration estimates may help transfer a directed
+finite weighted-deficit discretization to the continuous operator.  They do not
+supply the arithmetic cofinal trace-tail bound by themselves.
 
-## 3. The proposed cofinal comparison
+## 3. The unverified weighted-index scheduler
 
-At support `a`, choose `G>Gamma>t>0` and define
+At support `a`, choose `G>Gamma>t>0` and put
 
 \[
  d_{a,G}=(G-s_a)_+,
  \qquad
- D_{a,G}=P_I\mathcal F^{-1}d_{a,G}\mathcal FP_I.
+ T_{a,G}=P_I\mathcal F^{-1}d_{a,G}\mathcal FP_I.
 \]
 
-The left side is
+For reconnaissance, define the threshold index
 
 \[
  p_{a,G}(\Gamma)
- =n(G-\Gamma;D_{a,G}).
+ =\#\{\theta_n(T_{a,G})>G-\Gamma\}.
+ \tag{O-15604.4}
 \]
 
-Choose a source packet of exactly this dimension and repair it by
-`L-15607`.  Let its normalized whole-packet tail bound be `epsilon_a`.
-The desired rates are
+This index is a useful **lower bound on the unconstrained packet rank needed to
+make the complement operator norm at most `G-Gamma`**.  It is not, by itself, a
+proof of the trace inequality (O-15604.2), and the comparison
 
 \[
- C_{tt,a}\epsilon_a^2=o(t),
+ p_{a,G}(\Gamma)
+ \le C_{\rm source}(a,\varepsilon_a)
+ \tag{O-15604.5}
+\]
+
+is only a candidate scheduler until one of the following is also certified:
+
+1. the exact leverage trace-tail (O-15604.2);
+2. an operator-norm complement theorem on the source-constrained packet;
+3. the finite visible Schur saturation condition of `L-15604`.
+
+With that additional saturation gate and the rates
+
+\[
+ \alpha_a=o(t),
  \qquad
- C_{te,a}^2\epsilon_a^2=o(t).
+ \beta_a^2=o(t),
 \]
 
-The decisive conjectural inequality is
+`T-15602` gives the cofinal lower floor and hence RH.
 
-\[
- \boxed{
- p_{a,G}(\Gamma)
- \le
- C_{\rm source}(a,\epsilon_a),}
- \tag{O-15604.1}
-\]
-
-along a cofinal sequence, with the rates above.  `T-15603` then proves RH.
-
-Unlike the former compactness target, (O-15604.1) is invariant under rotation,
-dilation, or asymptotic orthogonality of the two packets.
-
-## 4. Proof program for the weighted index
+## 4. Proof program for the weighted deficit
 
 ### Step A — directed level-set majorant
 
@@ -178,99 +163,106 @@ Partition the range of `d_(a,G)` dyadically and certify
  d_{a,G}\le\sum_rw_r1_{B_{a,r}}.
 \]
 
-Every set `B_(a,r)` must be a directed finite union with a proved analytic tail;
-a sampled symbol plot is not admissible.
+Every `B_(a,r)` must be a directed finite union with a proved analytic tail; a
+sampled symbol plot is not admissible.
 
-### Step B — Schatten bound
+### Step B — Schatten and trace-tail bounds
 
-For a self-tuned `0<q<=1`, use
+For a self-tuned `0<q<=1`, seek
 
 \[
- \|D_{a,G}\|_{S_q}^q
+ \|T_{a,G}\|_{S_q}^q
  \le
  \sum_rw_r^q\|K_{B_{a,r}}\|_{S_q}^q.
 \]
 
-Insert the scale-uniform off-diagonal estimates from the modern plunge proofs.
-Then
+Insert scale-uniform off-diagonal estimates from the modern plunge proofs.  The
+result may bound both the threshold index and, after retaining the first `N`
+modes, the eigenvalue tail
 
 \[
- p_{a,G}(\Gamma)
- \le
- (G-\Gamma)^{-q}\|D_{a,G}\|_{S_q}^q.
+ \sum_{n>N}\theta_n(T_{a,G}).
 \]
 
-The self-tuned value of `q` should be optimized jointly with the deficit-level
-partition rather than inherited from a binary packet.
+The latter is the quantity entering the exact `L-15608` scalar certificate.
 
-### Step C — source capacity
+### Step C — exact source-constrained packet
 
 Use either:
 
-1. a pre-plunge prolate source packet with a directed leakage bound; or
-2. the first `N` repaired self-dual Hermite sources of `L-15303` with a uniform
-   forbidden-region tail estimate.
+1. a pre-plunge prolate source packet with a directed uniform leakage bound; or
+2. repaired self-dual Hermite sources with a uniform forbidden-region tail.
 
-Apply the external corrector before localization and certify the complete local
-Gram.  The packet rank is not reduced by the exact source conditions.
+Apply the exact source nullspace before localization and certify the complete
+local Gram.  Use the actual constraint-aware trace
 
-### Step D — exact index saturation
+\[
+ \operatorname{Tr}T_{a,G}
+ -\operatorname{Tr}(M^{-1}J^*T_{a,G}J)
+\]
 
-Freeze the integer `p`, build both finite packets, and verify the hypotheses of
-`T-15603`.  No subspace overlap calculation is part of the certificate.
+rather than assuming the source constraints preserve the unconstrained optimum.
+
+### Step D — exact saturation
+
+If the trace-tail bound passes, `L-15607` proves
+
+\[
+ A_a|_{L_a^\perp}\succeq\Gamma I.
+\]
+
+Otherwise form the plunge/evaluation-visible mismatch packet and run the finite
+Schur complement of `L-15604`.  Only after one of these gates passes may the
+count be declared saturated.
 
 ## 5. High-value numerical scouts
 
-The following are empirical scheduling tasks, not proof claims.
+These are empirical scheduling tasks, not proof claims.
 
-1. At the smallest Suzuki supports already implemented, form a high-precision
-   discretization of `D_(a,G)` for several `G` and record its eigenvalue count
-   above `G-Gamma`.
-2. Compare that count with the number of repaired Hermite modes whose complete
-   tail/form radius fits the same `t` budget.
-3. Optimize `G,Gamma,t,q` for the signed lower floor, not for the raw packet
-   dimension.
-4. Preserve the dyadic level sets of the actual deficit.  They are the inputs
-   needed by an eventual directed `S_q` proof.
-5. Check whether the weighted index is materially smaller than the binary
-   sublevel-set rank and the plunge-sized visible block of PR #163.
+1. At the smallest Suzuki supports already implemented, form high-precision
+   discretizations of `T_(a,G)` for several `G`.
+2. Record both the threshold index and the complete tail sums after candidate
+   packet ranks.
+3. Compare the unconstrained tail with the exact source-constrained trace loss.
+4. Optimize `G,Gamma,t,q` for the signed lower floor, not raw packet dimension.
+5. Preserve the dyadic level sets of the actual deficit; they are inputs to an
+   eventual directed `S_q` proof.
+6. Check whether the weighted trace tail is materially smaller than the binary
+   sublevel-set and plunge-visible bounds of PR #163.
 
 A repeated inequality
 
 ```text
-weighted deficit index < repaired Hermite/prolate capacity
+source-constrained weighted trace tail < G-Gamma
 ```
 
-with a growing moat would be the first empirical evidence targeted at the new
-cofinal theorem rather than another fixed-row spectrum.
+with a growing moat would be the first empirical evidence aimed directly at the
+new cofinal theorem.
 
 ## 6. What would refute this route
 
 The route fails if, on every admissible cofinal schedule, one of the following
 occurs:
 
-1. the weighted deficit index grows faster than every packet with controlled
-   radical tail;
-2. external repair destroys the local Gram uniformly;
-3. the form-continuity constants grow faster than the available pre-plunge or
-   Gaussian leakage decays;
+1. the source-constrained weighted trace tail stays above `G-Gamma`;
+2. exact source repair destroys the local Gram or uniform tail rate;
+3. form-continuity constants grow faster than concentration leakage decays;
 4. the complete symbol deficit lacks a proof-grade `S_q` envelope;
-5. an assembly term not represented in `D_(a,G)` has a nonvanishing negative
-   radius.
+5. an assembly term omitted from `s_a` has a nonvanishing negative radius;
+6. the finite evaluation-visible Schur block retains an additional low mode.
 
 These failures are measurable and route-specific; none can be hidden by
 matching a few finite eigenvalues.
 
-## 7. Current verdict
+## Current verdict
 
-The latest localization theorems do **not** prove the common-frame compactness
-limit or the whole-packet radical synthesis estimate for the zeta operator.
-They do prove precisely the estimates needed to attack the weighted-index side
-of (O-15604.1).
+The latest localization theorems provide relevant pre-plunge, plunge-count, and
+singular-value estimates, but they do not prove the zeta-specific cofinal
+weighted trace-tail condition.
 
-The source-codimension loss is now removed exactly.  The principal remaining
-analytic question is whether the complete arithmetic weighted deficit has no
-more significant singular directions than the uniformly controllable repaired
-source packet can supply.
+The principal remaining analytic question is whether the exact arithmetic
+weighted deficit can be captured, after the exact source constraints, with
+uncaptured trace at most `G-Gamma` while the packet form and residual scales
+vanish as required by `T-15602`.
 
-No proof of (O-15604.1), and therefore no proof of RH, is claimed in this note.
+No proof of that comparison, and therefore no proof of RH, is claimed here.
