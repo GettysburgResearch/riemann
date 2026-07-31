@@ -64,6 +64,41 @@ The gate does pass at `alpha >= 1.1`, and at `(alpha, N) = (1.1, 6)` the complet
 arithmetic to satisfy every CvS hypothesis (inertia `(12,0,1)`, source odd, diagonal even, `Q gamma = gamma Q`).
 That is the project's first production-level pass of the finite gate. It is also, per §1, uninformative.
 
+**Later the same day, a third statement, which I think subsumes much of the above** (`L-16006`, exploratory, short
+exact proofs not yet reviewed). In the CvS coordinates, `P_x(s) = Omega(s) <x, ell(s)>` and the coefficient of
+`s^{2N}` is `eta^T x`, so the CvS normalisation `eta^T x = 1` says exactly **"`P_x` is monic of degree `2N`"**. Hence
+for `Q > 0`
+
+```
+    t* = 1/(eta^T Q^{-1} eta) = min { <P,P>_Q : P monic, deg P = 2N }
+```
+
+and the CvS kernel vector's polynomial is the **monic degree-`2N` orthogonal polynomial** of the inner product `Q`
+induces on polynomials. Four things follow, and each replaces something that had been treated as an observation:
+
+- **Real-rootedness was never going to be informative.** In these coordinates CvS Theorem 5.6's conclusion is the
+  classical fact that orthogonal polynomials of a positive inner product on `R` have real simple roots. Given
+  `Q > 0` the rest of the CvS conclusion is automatic, so the entire arithmetic content of Reading B sits in
+  `Q_W >= 0`, i.e. in finite Weil positivity.
+- **The apparatus is a pole detector.** If the source is a pole sum `sum_mu a_mu/(mu - x)` with `a_mu > 0`, the
+  inner product is `L^2(nu)` with `nu = sum_mu a_mu Omega(mu)^{-2} delta_mu` supported on the **poles**, so the
+  roots are Gauss nodes for `nu`, and when `#poles = 2N` they are the poles exactly. Verified on pole sets with
+  nothing to do with zeta, recovered to `1e-48`. This explains `O-16004`'s zeta-zero table: it is the explicit
+  formula, and it should be read as a strong regression test rather than as independent evidence.
+- **The `1/N` decay of `t*` is not a loss of freedom.** `t* = min{ x^T Q_W x : sum_j x_j = 1 }` is the minimum of
+  the truncated Weil functional over normalised test vectors, so its decay measures the **sharpness of Weil
+  positivity**. Measured law: `t* * N * log c` sits in a narrow band near `0.088` across cutoffs `50..20000` and
+  `N = 4..16` (`O-16006`).
+- **Feasibility, exactly.** Since `Loewner(lambda) = eta eta^T`, the pencil acts trivially on `eta^perp`:
+  `Q - c eta eta^T >= 0` for some `c` implies `Q|_{eta^perp} >= 0`, and `Q|_{eta^perp} > 0` implies such a `c`
+  exists uniquely. **`eta` is even, so the whole odd sector lies in `eta^perp`: Reading B requires
+  `Q_W|_odd >= 0` outright**, and no scalar can repair a negative direction there.
+
+Two practical corollaries for anyone computing. First, resolution is set by `N` and **not** by the prime cutoff —
+raising `c` from 50 to 20000 changes the number of zeros recovered by nothing (`O-16006`), because the Gauss weight
+`Omega(mu)^{-2}` depends only on the nodes. Spend on `N`. Second, `t* < 0` implies `Q` indefinite at the cost of one
+linear solve, but the converse is **false** (`O-16005` §3 has explicit indefinite matrices with `t* > 0`).
+
 ## 3. Corrections to the existing stack
 
 1. `L-15101.7` asserts `hat k = Xi`. The correct identity is **`hat k = Xi/4`** (`L-16001`), verified to 32–40
