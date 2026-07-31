@@ -1,0 +1,76 @@
+{
+  "schema": "riemann.x15408-hardy-pole-gram.synthetic.v1",
+  "unstable_packet": {
+    "sigma": {"numerator": "13", "denominator": "50"},
+    "poles": [
+      {
+        "real": {"numerator": "1", "denominator": "4"},
+        "imag": {"numerator": "3", "denominator": "2"}
+      },
+      {
+        "real": {"numerator": "1", "denominator": "4"},
+        "imag": {"numerator": "5", "denominator": "2"}
+      }
+    ],
+    "residues": [
+      {
+        "real": {"numerator": "2", "denominator": "1"},
+        "imag": {"numerator": "-1", "denominator": "1"}
+      },
+      {
+        "real": {"numerator": "-1", "denominator": "1"},
+        "imag": {"numerator": "1", "denominator": "2"}
+      }
+    ],
+    "claimed": {
+      "energy": {"numerator": "1562625", "denominator": "5002"},
+      "sigma_times_energy": {"numerator": "812565", "denominator": "10004"}
+    }
+  },
+  "boundary_packet": {
+    "sigma": {"numerator": "1", "denominator": "10"},
+    "poles": [
+      {
+        "real": {"numerator": "0", "denominator": "1"},
+        "imag": {"numerator": "1", "denominator": "1"}
+      },
+      {
+        "real": {"numerator": "0", "denominator": "1"},
+        "imag": {"numerator": "2", "denominator": "1"}
+      }
+    ],
+    "residues": [
+      {
+        "real": {"numerator": "1", "denominator": "1"},
+        "imag": {"numerator": "0", "denominator": "1"}
+      },
+      {
+        "real": {"numerator": "0", "denominator": "1"},
+        "imag": {"numerator": "1", "denominator": "1"}
+      }
+    ],
+    "claimed": {
+      "energy": {"numerator": "105", "denominator": "13"},
+      "sigma_times_energy": {"numerator": "21", "denominator": "26"}
+    }
+  },
+  "stable_packet": {
+    "sigma": {"numerator": "1", "denominator": "10"},
+    "poles": [
+      {
+        "real": {"numerator": "-1", "denominator": "4"},
+        "imag": {"numerator": "1", "denominator": "1"}
+      }
+    ],
+    "residues": [
+      {
+        "real": {"numerator": "3", "denominator": "2"},
+        "imag": {"numerator": "0", "denominator": "1"}
+      }
+    ],
+    "claimed": {
+      "energy": {"numerator": "45", "denominator": "14"},
+      "sigma_times_energy": {"numerator": "9", "denominator": "28"}
+    }
+  }
+}
