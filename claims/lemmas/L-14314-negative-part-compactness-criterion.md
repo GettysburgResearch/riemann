@@ -124,7 +124,7 @@ then
 
 \[
  \boxed{
- -\lambda_{\min}(K_j)=\|N_j\|
+ \max\{0,-\lambda_{\min}(K_j)\}=\|N_j\|
  \le\rho_{j,m}+2\delta_{j,m}.}
  \tag{L-14314.8}
 \]
