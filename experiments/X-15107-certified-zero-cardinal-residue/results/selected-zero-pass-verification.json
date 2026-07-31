@@ -1,0 +1,50 @@
+{
+  "arithmetic_complement_ldl_pivots": [
+    {"denominator": 405, "numerator": 11803},
+    {"denominator": 48285, "numerator": 1654576}
+  ],
+  "beta_complete": [
+    {"denominator": 15, "numerator": 59},
+    0,
+    {"denominator": 15, "numerator": -139}
+  ],
+  "beta_residual": [
+    {"denominator": 15, "numerator": -1},
+    0,
+    {"denominator": 15, "numerator": 1}
+  ],
+  "beta_selected": [
+    4,
+    0,
+    {"denominator": 3, "numerator": -28}
+  ],
+  "capture_lower_bounds": [
+    {"denominator": 40, "numerator": 79},
+    {"denominator": 40, "numerator": 119}
+  ],
+  "cardinal_rows": [
+    [
+      1,
+      0,
+      {"denominator": 32, "numerator": -5},
+      {"denominator": 32, "numerator": -3}
+    ],
+    [
+      0,
+      1,
+      {"denominator": 32, "numerator": -3},
+      {"denominator": 32, "numerator": -5}
+    ]
+  ],
+  "certificate_sha256": "77befc9465424c51e03bbf44fc2c01248c5f22ff2f6d3eef615b50ba20dc2cc3",
+  "complete_residue_weights": [
+    {"denominator": 40, "numerator": 79},
+    {"denominator": 40, "numerator": 119}
+  ],
+  "residual_residue_weights": [
+    {"denominator": 40, "numerator": -1},
+    {"denominator": 40, "numerator": -1}
+  ],
+  "selected_residue_sums": [2, 3],
+  "status": "CERTIFIED_SELECTED_ZERO_CARDINAL_RESIDUE_FLOOR"
+}
