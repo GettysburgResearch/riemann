@@ -8,8 +8,9 @@ Agent: `gpt56-03-q`
 
 ```text
 L-20501  conditional simple-line Schur matrix
-L-20502  one-sided selected-line kernel floor
+L-20502  separated one-sided kernel-floor adapter
 L-20503  RKHS lower bound for exact radical tails
+L-20504  joint corrected-residual moat
 T-20501  cofinal conditional-frame criterion
 R-20501  absolute Möbius-tail smallness is overstrong
 M-20501  production protocol
@@ -32,12 +33,13 @@ this branch:
     first frame -> graph kernel
     second frame -> conditional Schur matrix
     selected positive line mass
-    + one-sided residual lower LMI
-    - complement Schur cross
+    + joint [signed residual - full positive-sector Schur correction]
     -> exact final kernel floor
+    + triangular metric adapter
+    -> production lower envelope
 ```
 
-## Replace this target
+## Replace these targets
 
 Do not require
 
@@ -47,34 +49,52 @@ Do not require
 
 for the complete Möbius tail.
 
-Use instead
+Do not begin by charging residual and Schur cross separately when they are
+available in one basis.
+
+Use the joint corrected residual
 
 ```text
-Q_rem,Y(Tc,Tc) >= -omega ||Jc||_G^2
+R_corr,Y
+ = Q_rem,Y|K-L_K* C_+^-1 L_K
 ```
 
-and retain the selected positive \(Y\)-zero frame explicitly.
+and certify
+
+```text
+R_corr,Y >= -nu G_K.
+```
+
+Retain the selected positive \(Y\)-zero frame explicitly.
+
+The modular fallback
+
+```text
+Q_rem,Y|K >= -omega G_K,
+L_K* C_+^-1 L_K <= chi G_K
+```
+
+gives `nu<=omega+chi` but may lose strict positivity.
 
 ## Exact final scalar
 
 ```text
 margin_j
- = sigma_(Y|Z,j)^2
-   -omega_(Y|Z,j)
-   -chi_j.
+ = sigma_(Y|Z,j)^2-nu_(Y|Z,j).
 ```
 
-A cofinal proof of
+Let `Lambda_j` be the inflation of the exact triangular square-completion metric
+relative to the production metric, and `delta_j` the assembly radius. A cofinal
+proof of
 
 ```text
-margin_j >= -epsilon_j,
-epsilon_j -> 0
+Lambda_j * (-margin_j)_+ + delta_j -> 0
 ```
 
-composes with the existing ambient and visible floors to imply RH.
+composes with the canonical complement and `T-14302` to imply RH.
 
 ## Nonclaim
 
-No cofinal residual LMI has been proved. Under false RH the off-line-cardinal
+No cofinal joint residual LMI has been proved. Under false RH the off-line-cardinal
 signature forces the margin to remain negative on any complete capturing
 hierarchy.
