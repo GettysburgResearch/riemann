@@ -61,6 +61,23 @@ def pd_pivots(a,name):
             l[j][i]=(a[j][i]-sum(l[j][k]*l[i][k]*d[k] for k in range(i)))/v
     return d
 
+def require_psd(a,name):
+    """Exact congruence elimination; a zero diagonal in a PSD matrix has zero row."""
+    if not symmetric(a): raise Reject(f"{name} not symmetric")
+    m=[r[:] for r in a]
+    while m:
+        if any(m[i][i]<0 for i in range(len(m))): raise Reject(f"{name} negative diagonal")
+        p=next((i for i in range(len(m)) if m[i][i]>0),None)
+        if p is None:
+            if any(z for row in m for z in row): raise Reject(f"{name} zero diagonal with nonzero row")
+            return
+        if p:
+            m[0],m[p]=m[p],m[0]
+            for row in m: row[0],row[p]=row[p],row[0]
+        v=m[0][0]
+        b=[m[i][0] for i in range(1,len(m))]
+        m=[[m[i+1][j+1]-b[i]*b[j]/v for j in range(len(b))] for i in range(len(b))]
+
 def outq(x): return {"numerator":x.numerator,"denominator":x.denominator}
 def digest(x): return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(",",":")).encode()).hexdigest()
 
@@ -68,7 +85,7 @@ def verify(d):
     if d.get("schema")!=SCHEMA: raise Reject("schema mismatch")
     G=matrix(d.get("metric"),"metric"); K=matrix(d.get("evaluation_gram"),"evaluation_gram")
     if shape(G)!=shape(K) or shape(G)[0]!=shape(G)[1]: raise Reject("matrix shape mismatch")
-    n=len(G); gp=pd_pivots(G,"metric"); pd_pivots(K,"evaluation_gram")
+    n=len(G); gp=pd_pivots(G,"metric"); require_psd(K,"evaluation_gram")
     W=matrix(d.get("witness_basis"),"witness_basis")
     wr=rank(W)
     if len(W)!=n or wr!=len(W[0]): raise Reject("witness basis not full column rank")
