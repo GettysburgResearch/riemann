@@ -1,0 +1,64 @@
+{
+  "external_corrector": {
+    "classification": "EXACT_RANK_PRESERVING_SOURCE_REPAIR",
+    "constraints_after_repair": [
+      "0",
+      "0"
+    ],
+    "packet_dimension": 2,
+    "positive_ldl_pivots": [
+      {"denominator": "1", "numerator": "2"},
+      {"denominator": "1", "numerator": "3"}
+    ],
+    "repaired_dimension": 2,
+    "repaired_gram": [
+      [
+        {"denominator": "1", "numerator": "2"},
+        {"denominator": "1", "numerator": "2"}
+      ],
+      [
+        {"denominator": "1", "numerator": "2"},
+        {"denominator": "1", "numerator": "5"}
+      ]
+    ]
+  },
+  "proof_object_sha256": "9d32649d92d953d736cd8afe7bc326cd12db3fc59e8dc54ba73d8a53491a2e5c",
+  "schema": "riemann.x15603-weighted-deficit-capacity.v1",
+  "verdict": "PASS_EXACT_L15607_L15608_T15603_REGRESSION",
+  "weighted_deficit_saturation": {
+    "G": {"denominator": "1", "numerator": "2"},
+    "Gamma": {"denominator": "1", "numerator": "1"},
+    "classification": "EXACT_INDEX_SATURATION_WITHOUT_SUBSPACE_ALIGNMENT",
+    "deficit_eigenvalues": [
+      {"denominator": "2", "numerator": "3"},
+      {"denominator": "5", "numerator": "6"},
+      {"denominator": "2", "numerator": "1"},
+      {"denominator": "10", "numerator": "1"}
+    ],
+    "exact_count_below_Gamma": 2,
+    "exact_count_below_t": 2,
+    "kappa": {"denominator": "1", "numerator": "1"},
+    "low_packet_equals_deficit_packet": false,
+    "low_packet_gram": [
+      [
+        {"denominator": "100", "numerator": "101"},
+        {"denominator": "1", "numerator": "0"}
+      ],
+      [
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "100", "numerator": "101"}
+      ]
+    ],
+    "operator_eigenvalues": [
+      {"denominator": "2", "numerator": "1"},
+      {"denominator": "5", "numerator": "4"},
+      {"denominator": "2", "numerator": "3"},
+      {"denominator": "10", "numerator": "19"}
+    ],
+    "t_gram_minus_low_form_ldl_pivots": [
+      {"denominator": "2000", "numerator": "889"},
+      {"denominator": "2000", "numerator": "281"}
+    ],
+    "weighted_deficit_index": 2
+  }
+}
