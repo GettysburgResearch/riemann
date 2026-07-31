@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.x15403-endpoint-pole-cancellation.v1",
+  "profile": [
+    {"numerator": 1, "denominator": 1},
+    {"numerator": -2, "denominator": 1},
+    {"numerator": 3, "denominator": 1}
+  ],
+  "laplace_ratio": {"numerator": 1, "denominator": 2},
+  "pole_scale": {"numerator": 7, "denominator": 3},
+  "discrepancy_weights": [
+    {"numerator": 0, "denominator": 1},
+    {"numerator": 1, "denominator": 10},
+    {"numerator": -1, "denominator": 5},
+    {"numerator": 1, "denominator": 7},
+    {"numerator": 0, "denominator": 1}
+  ],
+  "claimed": {
+    "pole_hankel": {"numerator": 9, "denominator": 16},
+    "discrepancy_value": {"numerator": -288, "denominator": 35}
+  }
+}
