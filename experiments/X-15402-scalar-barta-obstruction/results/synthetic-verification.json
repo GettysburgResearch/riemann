@@ -1,0 +1,41 @@
+{
+  "barta_floor": {
+    "denominator": "1",
+    "numerator": "1"
+  },
+  "barta_mean": {
+    "denominator": "1",
+    "numerator": "1"
+  },
+  "barta_values": [
+    {
+      "denominator": "1",
+      "numerator": "1"
+    },
+    {
+      "denominator": "1",
+      "numerator": "1"
+    },
+    {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  ],
+  "edge_defect_sum": {
+    "denominator": "3",
+    "numerator": "-20"
+  },
+  "edge_signs": [
+    1,
+    -1
+  ],
+  "identity": "sum(barta)=sum(potential)+edge_defect_sum",
+  "ordering": "barta_floor <= barta_mean <= potential_mean",
+  "potential_mean": {
+    "denominator": "9",
+    "numerator": "29"
+  },
+  "proof_boundary": "finite rational signed graph regression only",
+  "schema": "riemann.x15402-scalar-barta-obstruction.synthetic.v1",
+  "status": "EXACT_SCALAR_BARTA_MEAN_OBSTRUCTION"
+}
