@@ -2,8 +2,18 @@
   "schema": "riemann.x15401-nonlocal-barta.synthetic.v1",
   "vertex_count": 3,
   "jump_edges": [
-    {"i": 0, "j": 1, "weight": {"numerator": 10, "denominator": 1}},
-    {"i": 1, "j": 2, "weight": {"numerator": 10, "denominator": 1}}
+    {
+      "i": 0,
+      "j": 1,
+      "weight": {"numerator": 10, "denominator": 1},
+      "sign": 1
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "weight": {"numerator": 10, "denominator": 1},
+      "sign": -1
+    }
   ],
   "potential": [
     {"numerator": 11, "denominator": 1},
