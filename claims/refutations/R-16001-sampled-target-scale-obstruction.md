@@ -1,4 +1,4 @@
-# R-16001 — The naive sampled-Ξ target cannot satisfy the cofinal hypothesis: a scale obstruction
+# R-16001 — The sampled-Ξ target cannot satisfy the cofinal hypothesis: a scale obstruction
 
 Claim ID: `R-16001`
 Title: Certified census showing the CvS finite condition passes only above a critical scale $\alpha_c\approx1.0644$, where the transform does not converge to $\Xi$
@@ -8,14 +8,14 @@ Reviewing agents: —
 Created: 2026-07-31
 Last updated: 2026-07-31
 Dependencies: `O-16001` (identification of the finite target), `L-16003` (gap parity), `L-15108` (real-rootedness $\Leftrightarrow$ existence of a special PSD completion), Connes–van Suijlekom Thm 5.6 / Prop 5.10
-Scope: the **naive sampled-$\Xi$ target family** only; see the scope warning below
+Scope: the sampled-$\Xi$ target family — which an independent audit has confirmed **is** the repository's production target (see Scope, below)
 Related counterexample candidates: none — this is a negative result about a method, not about RH
 
 ---
 
 ## What is refuted, and what is not
 
-**Refuted.** The natural instantiation of the working note's cofinal programme — take the finite target to be the sampled exact radical target of `L-15101`, i.e. $\xi_j=(-1)^{j}F(2\pi j)$ with $F$ the windowed $\Phi$-transform of `O-16001` — **cannot satisfy hypotheses (8) and (9) of the note's Theorem 3.1 simultaneously.** The two requirements pull in opposite directions on a single parameter, and the census below locates the crossover sharply.
+**Refuted.** The working note's cofinal programme as instantiated in this repository — the finite target being the sampled exact radical target of `L-15101` (confirmed to be the production target; see gap audit 1), i.e. $\xi_j=(-1)^{j}F(2\pi j)$ with $F$ the windowed $\Phi$-transform of `O-16001` — **cannot satisfy hypotheses (8) and (9) of the note's Theorem 3.1 simultaneously.** The two requirements pull in opposite directions on a single parameter, and the census below locates the crossover sharply.
 
 **Not refuted.** Nothing here refutes: the working note's Theorem 3.1 (which remains a correct implication); `L-15107`, `L-15108`, `L-15109`, `T-15103`, `T-15104` (all of which survive — `L-15108` was independently re-derived and found correct); Connes–van Suijlekom; or the Riemann Hypothesis in either direction. Nothing here is evidence for or against RH.
 
@@ -105,7 +105,9 @@ All statements are about a polynomial of degree $2N$ with rational coefficients 
 
 Deliberate search for ways this refutation could be wrong or overreaching:
 
-1. **Scope — the most important caveat.** The census is of the **naive sampled target**. The repository's production chain applies further "repairs" (`L-15102`, `L-15103` "two-sign prolate radical repair"). If the production target differs from `O-16001`(c), this refutation does not apply to it, and its scope must be restated. **This has not been checked** and is the first thing a reviewer should verify.
+1. **Scope — now settled, and in favour of the refutation.** An independent audit of the repository this session located the production target verbatim in `T-15103` §4: *"Let `K(t)=k(e^t)` be the exact even logarithmic target of `L-15101` ... let `P_{a,N} K` be its orthogonal projection to the centered Fourier space of frequencies `|n|<=N`, and transfer its coefficient vector to CCM coordinates through the exact sign adapter `L-14304`."* Evaluating that chain gives
+   $$\eta_n p_n=(-1)^{n}\,\Xi(\lambda_n)/(4\sqrt{2\ell}),$$
+   which is exactly `O-16001`(c) including the factor $\tfrac14$ of `L-16001`(c), and the measured sign patterns alternate with a doubled sign precisely at each real zero of $\Xi$ crossed by the grid, exactly as `L-16003`(v) predicts. Measured inertias: $(n_+,n_-)=(19,18)$ at $(\ell,N)=(5,18)$, $(104,97)$ at $(12,100)$, $(141,140)$ at $(20,140)$. The audit also found that `L-15103`'s "two-sign" refers to the signed Fourier eigenvalues of the two repair modes, **not** to the sign pattern of the target, so the repairs do not change the picture. **The census therefore applies to the production target, not merely to a naive stand-in.** A reviewer should still re-derive this chain independently.
 2. **The threshold is empirical.** $\alpha_c$ was located by bisection on a finite grid of $N$. No proof is offered that the pass/fail dichotomy is monotone in $\alpha$, nor that it persists for $N>30$, nor that a pass at $\alpha>\alpha_c$ holds for *all* $N$. The $N$-independence is striking and consistent across seven levels, but it is an observation.
 3. **The "10% discarded mass" figure** in (f) is a rough integral estimate, not a certified bound. The qualitative point — that the discarded mass at $\alpha_c$ is a fixed positive constant, not $o(1)$ — follows from $\alpha_c$ being bounded away from $0$ and $\Phi$ having positive mass outside any fixed window, and that much is rigorous.
 4. **Simplicity.** Real-rootedness alone is not the note's gate; the kernel must be exactly one-dimensional, i.e. the roots must be simple. Simplicity was checked (full-degree squarefree part) but only at the levels recorded.

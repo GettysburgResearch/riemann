@@ -44,15 +44,21 @@ Claim `L-15101` equation (L-15101.7) asserts $\widehat k=\Xi$ **without** the fa
 
 **(d) Inversion symmetry and evenness.** $k(1/u)=k(u)$ for all $u>0$; equivalently $K(-t)=K(t)$.
 
-**(e) Identification with Pólya's function.**
+**(e) Identification with Pólya's function — with the scaling stated exactly.** Define
 
-$$K(t)=\sum_{n\ge 1}\Bigl(\pi^{2}n^{4}e^{9t/2}-\tfrac{3\pi}{2}n^{2}e^{5t/2}\Bigr)e^{-\pi n^{2}e^{2t}}=\frac{\Phi(t)}{4},$$
+$$\Phi(t):=4K(t)=\sum_{n\ge1}\bigl(4\pi^{2}n^{4}e^{9t/2}-6\pi n^{2}e^{5t/2}\bigr)e^{-\pi n^{2}e^{2t}},$$
 
-where
+so that, by (c) and (d), $\Xi(z)=\int_{\mathbb R}\Phi(t)e^{izt}\,dt$. This $\Phi$ is the Riemann–Pólya kernel **in the normalization of this note**.
 
-$$\Phi(t)=\sum_{n\ge1}\bigl(4\pi^{2}n^{4}e^{9t/2}-6\pi n^{2}e^{5t/2}\bigr)e^{-\pi n^{2}e^{2t}}$$
+The classical literature (Titchmarsh §2.16, and the de Bruijn–Newman literature) overwhelmingly uses a variable scaled by $2$:
 
-is the classical Riemann–Pólya function, i.e. the function appearing in the Fourier representation $\Xi(z)=\int_{\mathbb R}\Phi(t)e^{izt}\,dt$ and in the de Bruijn–Newman flow $H_{\tau}(z)=\int_{\mathbb R}e^{\tau t^{2}}\Phi(t)e^{izt}\,dt$.
+$$\Phi_{\mathrm{cl}}(u)=\sum_{n\ge1}\bigl(2\pi^{2}n^{4}e^{9u}-3\pi n^{2}e^{5u}\bigr)e^{-\pi n^{2}e^{4u}},\qquad \Xi\!\left(\tfrac{z}{2}\right)=2\int_{0}^{\infty}\Phi_{\mathrm{cl}}(u)\cos(zu)\,du .$$
+
+**The exact dictionary is**
+
+$$\boxed{\ \Phi_{\mathrm{cl}}(u)=2\,K(2u)=\tfrac12\,\Phi(2u),\qquad\text{equivalently}\qquad K(t)=\tfrac12\,\Phi_{\mathrm{cl}}(t/2).\ }$$
+
+So it is **wrong** to say "$K=\Phi_{\mathrm{cl}}/4$": that is off by a factor $2$ *and* misses the argument rescaling $t\mapsto t/2$. Any import from the classical literature — in particular the de Bruijn–Newman flow $H_{\tau}(z)=\int e^{\tau u^{2}}\Phi_{\mathrm{cl}}(u)e^{izu}du$, whose $\tau$ is calibrated to $\Phi_{\mathrm{cl}}$, not to $\Phi$ — must be transported through this dictionary. This is exactly the kind of interface slip §8 of the working note warns about, and it was made and caught during this session.
 
 **(f) Positivity.** $K(t)>0$ for every real $t$. (Classical for $\Phi$; see the dependency audit.)
 
@@ -143,7 +149,7 @@ which is $\Phi(t)/4$ for the $\Phi$ displayed above. That this $\Phi$ is the cla
 - The identity (c) is a statement about $\widehat k$, **not** about any localized or sampled version. Nothing here says a truncation of $k$ has a transform close to $\Xi$ in any norm — that is `L-15101` §4 and is separate.
 - Nothing here says anything about zeros. $\widehat k=\tfrac14\Xi$ is an identity, not a zero-localization statement, and it is of course consistent with RH being false.
 - (f) is imported. If Pólya's positivity were false the collapse argument of `R-16001` would still apply to any strictly positive target, but would no longer be known to apply to *this* target. The imported status is flagged deliberately.
-- The claim that $\Phi$ in (e) is "the classical one" depends on the reader's convention for $\Phi$; several sources use $e^{4u}$ where this note uses $e^{2t}$, i.e. $t=2u$. The dictionary is: a source writing $\Xi(z/2)=2\int_0^\infty\Phi_{\text{src}}(u)\cos(zu)\,du$ with $\Phi_{\text{src}}(u)=\sum_n(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}$ has $\Phi_{\text{src}}(u)=\tfrac12\Phi(2u)$. **Any use of the classical literature must re-check this scaling**; it is exactly the kind of interface slip §8 of the working note warns about.
+- The scaling dictionary in (e) is now stated explicitly, but it remains the most likely site of a downstream error, because $\Phi$ and $\Phi_{\mathrm{cl}}$ differ by *both* a factor and a change of variable. Every import from the classical literature must be transported through it; in particular the de Bruijn–Newman parameter $\tau$ is calibrated to $\Phi_{\mathrm{cl}}$ and does **not** transfer verbatim.
 - The factor $\tfrac14$ in (c) has not been traced back through `L-15101`'s derivation to determine whether the error is in the imported Connes–Consani normalization or in `L-15101`'s transcription of it. That trace is left open.
 
 ## Adversarial tests
