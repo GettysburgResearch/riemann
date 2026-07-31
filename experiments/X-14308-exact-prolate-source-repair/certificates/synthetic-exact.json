@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.exact-prolate-source-repair.v1",
+  "three_mode": {
+    "modes": [
+      {"value_at_zero": "1", "concentration_eigenvalue": "9/10"},
+      {"value_at_zero": "2", "concentration_eigenvalue": "4/5"},
+      {"value_at_zero": "3", "concentration_eigenvalue": "7/10"}
+    ],
+    "expected": {
+      "coefficients": ["-3/5", "3/5", "-1/5"],
+      "normalized_leakage_squared": "6/19",
+      "leakage_bound_squared": "3/5"
+    }
+  },
+  "radical_tail": {
+    "form_matrix": [["5", "-2", "-1"], ["-2", "1", "0"], ["-1", "0", "1"]],
+    "radical_vector": ["1", "2", "1"],
+    "localized_weight": [["2", "0"], ["0", "3"]],
+    "expected": {"projective_residual_squared": "4/11"}
+  }
+}
