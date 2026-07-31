@@ -27,9 +27,9 @@ q_s(w)/||w||^2
 Every breakpoint level is checked exactly with `fractions.Fraction`; no
 optimizer, eigensolver, or floating-point arithmetic enters the replay.
 
-## Strict radical control
+## Strict constant-packet control
 
-On `[-1,1]`, remove the constant radical. Its complement density cap is
+On `[-1,1]`, use the synthetic packet `K=span{1}`. Its complement density cap is
 
 ```text
 c_0(xi)=(1/pi)(1-(sin xi/xi)^2).
@@ -49,20 +49,22 @@ The uniform-density theorem `L-14316` gives only the negative floor
 1-11*(53/1998)=1415/1998>0.
 ```
 
-Thus exact radical removal can certify a complement positive even when a deep
-central symbol well defeats the ambient bathtub relaxation.
+This is an abstract `L2` packet separation. It does not assert that the
+constant function is a Suzuki/CCM radical or belongs to the localized form
+domain.
 
 ## Production contract
 
 A production certificate must bind:
 
-1. an exact packet/radical subspace and digest;
-2. the complete Suzuki symbol normalization;
-3. disjoint rational frequency cells;
-4. directed symbol lower bounds;
-5. directed leverage-deficit upper bounds;
-6. an analytic symbol tail floor;
-7. complete breakpoint levels and the claimed optimum.
+1. an exact packet subspace and digest;
+2. membership of its vectors in the relevant Hilbert/form domain;
+3. the complete Suzuki symbol normalization;
+4. disjoint rational frequency cells;
+5. directed symbol lower bounds;
+6. directed leverage-deficit upper bounds;
+7. an analytic symbol tail floor;
+8. complete breakpoint levels and the claimed optimum.
 
 For a nonorthonormal exact packet basis `k`, use
 
@@ -77,7 +79,7 @@ Approximate prolate vectors require an explicit subspace-error moat before use.
 
 ```text
 8 exact adversarial tests pass
-strict radical-complement floor = 1415/1998
+strict synthetic packet-complement floor = 1415/1998
 floating-point operations in checker = 0
 ```
 
