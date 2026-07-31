@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact checker for finite nonlocal Barta and rank-one polar certificates."""
+"""Exact checker for finite signed-jump Barta and rank-one polar certificates."""
 from __future__ import annotations
 
 import argparse
@@ -68,7 +68,9 @@ def quadratic(A: Sequence[Sequence[Fraction]], x: Sequence[Fraction]) -> Fractio
     return dot(x, mat_vec(A, x))
 
 
-def exact_ldl_positive(A: Sequence[Sequence[Fraction]], *, semidefinite: bool = False) -> list[Fraction]:
+def exact_ldl_positive(
+    A: Sequence[Sequence[Fraction]], *, semidefinite: bool = False
+) -> list[Fraction]:
     n = len(A)
     if n == 0 or any(len(row) != n for row in A):
         raise CertificateError("matrix must be nonempty and square")
@@ -81,14 +83,17 @@ def exact_ldl_positive(A: Sequence[Sequence[Fraction]], *, semidefinite: bool = 
             raise CertificateError("matrix does not have the required positive pivots")
         if p == 0:
             for row in range(i + 1, n):
-                residual = A[row][i] - sum(L[row][k] * L[i][k] * pivots[k] for k in range(i))
+                residual = A[row][i] - sum(
+                    L[row][k] * L[i][k] * pivots[k] for k in range(i)
+                )
                 if residual != 0:
                     raise CertificateError("singular LDL pivot has nonzero residual")
                 L[row][i] = Fraction(0)
         else:
             for row in range(i + 1, n):
                 L[row][i] = (
-                    A[row][i] - sum(L[row][k] * L[i][k] * pivots[k] for k in range(i))
+                    A[row][i]
+                    - sum(L[row][k] * L[i][k] * pivots[k] for k in range(i))
                 ) / p
         pivots.append(p)
     return pivots
@@ -97,7 +102,8 @@ def exact_ldl_positive(A: Sequence[Sequence[Fraction]], *, semidefinite: bool = 
 def invert(A: Sequence[Sequence[Fraction]]) -> list[list[Fraction]]:
     n = len(A)
     aug = [
-        [Fraction(A[i][j]) for j in range(n)] + [Fraction(int(i == j)) for j in range(n)]
+        [Fraction(A[i][j]) for j in range(n)]
+        + [Fraction(int(i == j)) for j in range(n)]
         for i in range(n)
     ]
     for col in range(n):
@@ -129,19 +135,24 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     if n < 2:
         raise CertificateError("vertex_count must be at least two")
 
-    V = parse_vector(data.get("potential"), n, "potential")
+    potential = parse_vector(data.get("potential"), n, "potential")
     psi = parse_vector(data.get("psi"), n, "psi")
     if any(x <= 0 for x in psi):
         raise CertificateError("psi must be strictly positive")
 
+    # The dense matrix uses the declared edge sign. The local signed-edge
+    # ground-state residual is sign-independent; the sign remains only in the
+    # nonnegative transformed edge square.
     H = zero_matrix(n)
     for i in range(n):
-        H[i][i] += V[i]
+        H[i][i] += potential[i]
+    barta_values = list(potential)
+
     raw_edges = data.get("jump_edges")
     if not isinstance(raw_edges, list):
         raise CertificateError("jump_edges must be an array")
     seen: set[tuple[int, int]] = set()
-    edges: list[tuple[int, int, Fraction]] = []
+    edges: list[tuple[int, int, Fraction, int]] = []
     for k, raw in enumerate(raw_edges):
         if not isinstance(raw, dict):
             raise CertificateError(f"jump_edges[{k}] must be an object")
@@ -150,17 +161,22 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         if not (0 <= i < j < n) or (i, j) in seen:
             raise CertificateError("jump edges must be unique with 0 <= i < j < n")
         seen.add((i, j))
-        w = frac(raw.get("weight"), f"jump_edges[{k}].weight")
-        if w <= 0:
+        weight = frac(raw.get("weight"), f"jump_edges[{k}].weight")
+        if weight <= 0:
             raise CertificateError("jump weights must be positive")
-        edges.append((i, j, w))
-        H[i][i] += w
-        H[j][j] += w
-        H[i][j] -= w
-        H[j][i] -= w
+        sign = integer(raw.get("sign"), f"jump_edges[{k}].sign")
+        if sign not in (-1, 1):
+            raise CertificateError("jump edge sign must be +1 or -1")
+        edges.append((i, j, weight, sign))
 
-    Hpsi = mat_vec(H, psi)
-    barta_values = [Hpsi[i] / psi[i] for i in range(n)]
+        H[i][i] += weight
+        H[j][j] += weight
+        H[i][j] -= sign * weight
+        H[j][i] -= sign * weight
+
+        barta_values[i] += weight * (psi[i] - psi[j]) / psi[i]
+        barta_values[j] += weight * (psi[j] - psi[i]) / psi[j]
+
     barta_floor = min(barta_values)
     claimed = data.get("claimed")
     if not isinstance(claimed, dict):
@@ -168,14 +184,19 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     if frac(claimed.get("barta_floor"), "claimed.barta_floor") != barta_floor:
         raise CertificateError("claimed Barta floor mismatch")
 
-    f = parse_vector(data.get("identity_vector"), n, "identity_vector")
-    g = [f[i] / psi[i] for i in range(n)]
-    rhs = sum(barta_values[i] * f[i] * f[i] for i in range(n))
-    rhs += sum(w * psi[i] * psi[j] * (g[i] - g[j]) ** 2 for i, j, w in edges)
-    lhs = quadratic(H, f)
+    # Exact signed-edge ground-state identity on a nontrivial control vector.
+    test_vector = parse_vector(data.get("identity_vector"), n, "identity_vector")
+    ratio = [test_vector[i] / psi[i] for i in range(n)]
+    rhs = sum(barta_values[i] * test_vector[i] * test_vector[i] for i in range(n))
+    rhs += sum(
+        weight * psi[i] * psi[j] * (ratio[i] - sign * ratio[j]) ** 2
+        for i, j, weight, sign in edges
+    )
+    lhs = quadratic(H, test_vector)
     if lhs != rhs:
-        raise CertificateError("ground-state representation identity failed")
+        raise CertificateError("signed-edge ground-state identity failed")
 
+    # Polar channel: a(u+u-* + u-u+*) = 2a(cc* - ss*).
     u_plus = parse_vector(data.get("u_plus"), n, "u_plus")
     u_minus = parse_vector(data.get("u_minus"), n, "u_minus")
     a = frac(data.get("polar_a"), "polar_a")
@@ -198,9 +219,12 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     target = frac(claimed.get("target_floor"), "claimed.target_floor")
     if not target < barta_floor:
         raise CertificateError("target_floor must be below the Barta floor")
-    M = [[H[i][j] - (target if i == j else 0) for j in range(n)] for i in range(n)]
-    M_pivots = exact_ldl_positive(M)
-    x = mat_vec(invert(M), s)
+    shifted_base = [
+        [H[i][j] - (target if i == j else 0) for j in range(n)]
+        for i in range(n)
+    ]
+    base_pivots = exact_ldl_positive(shifted_base)
+    x = mat_vec(invert(shifted_base), s)
     resolvent = dot(s, x)
     if frac(claimed.get("odd_resolvent"), "claimed.odd_resolvent") != resolvent:
         raise CertificateError("claimed odd resolvent mismatch")
@@ -208,13 +232,18 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     if not tau * resolvent < 1:
         raise CertificateError("rank-one Birman-Schwinger gate does not pass strictly")
 
-    A = [[H[i][j] + polar_signature[i][j] for j in range(n)] for i in range(n)]
-    A_floor = [[A[i][j] - (target if i == j else 0) for j in range(n)] for i in range(n)]
-    A_pivots = exact_ldl_positive(A_floor)
+    # Direct dense regression: the positive polar channel may only help.
+    full = [[H[i][j] + polar_signature[i][j] for j in range(n)] for i in range(n)]
+    shifted_full = [
+        [full[i][j] - (target if i == j else 0) for j in range(n)]
+        for i in range(n)
+    ]
+    full_pivots = exact_ldl_positive(shifted_full)
 
     return {
         "schema": SCHEMA,
         "status": "EXACT_SYNTHETIC_NONLOCAL_BARTA_POLAR_FLOOR",
+        "edge_signs": [sign for _, _, _, sign in edges],
         "barta_values": vj(barta_values),
         "barta_floor": fj(barta_floor),
         "identity_value": fj(lhs),
@@ -223,9 +252,9 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
         "target_floor": fj(target),
         "odd_resolvent": fj(resolvent),
         "birman_schwinger_product": fj(tau * resolvent),
-        "base_shifted_ldl_pivots": vj(M_pivots),
-        "full_shifted_ldl_pivots": vj(A_pivots),
-        "proof_boundary": "finite rational graph regression only; no Riemann-zeta value",
+        "base_shifted_ldl_pivots": vj(base_pivots),
+        "full_shifted_ldl_pivots": vj(full_pivots),
+        "proof_boundary": "finite rational signed graph regression only; no Riemann-zeta value",
     }
 
 
