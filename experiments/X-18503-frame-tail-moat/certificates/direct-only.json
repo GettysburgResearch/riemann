@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.x18503-frame-tail-moat.v1",
+  "frame_floor": {
+    "numerator": 1,
+    "denominator": 4
+  },
+  "omitted_zero_budget": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "radical_endpoint": {
+    "numerator": 1,
+    "denominator": 2
+  },
+  "expected": {
+    "status": "CERTIFIED_DIRECT_VISIBLE_FLOOR_ONLY",
+    "requested_interval_feasible": false,
+    "positive_counted_interval_feasible": false,
+    "gaussian_interval_feasible": false
+  }
+}
