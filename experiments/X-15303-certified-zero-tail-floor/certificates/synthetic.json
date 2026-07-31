@@ -1,0 +1,46 @@
+{
+  "schema": "riemann.x15303-certified-zero-tail-floor.v1",
+  "status": "DECLARED_CERTIFIED_ZERO_GRAM_TAIL_PACKET",
+  "complete_zero_block_gate": true,
+  "critical_line_gate": true,
+  "autocorrelation_nonnegative_gate": true,
+  "tail_coverage_gate": true,
+  "common_metric_gate": true,
+  "metric_gram": [
+    [
+      {"numerator": "1", "denominator": "1"},
+      {"numerator": "0", "denominator": "1"}
+    ],
+    [
+      {"numerator": "0", "denominator": "1"},
+      {"numerator": "1", "denominator": "1"}
+    ]
+  ],
+  "known_zero_gram_lower": [
+    [
+      {"numerator": "3", "denominator": "1"},
+      {"numerator": "0", "denominator": "1"}
+    ],
+    [
+      {"numerator": "0", "denominator": "1"},
+      {"numerator": "2", "denominator": "1"}
+    ]
+  ],
+  "conjugate_factor": 2,
+  "tail_cells": [
+    {
+      "id": "tail-0",
+      "count_upper": 2,
+      "envelope_upper": {"numerator": "1", "denominator": "20"}
+    },
+    {
+      "id": "tail-1",
+      "count_upper": 3,
+      "envelope_upper": {"numerator": "1", "denominator": "50"}
+    }
+  ],
+  "analytic_remainder": {"numerator": "0", "denominator": "1"},
+  "tail_budget_upper": {"numerator": "1", "denominator": "3"},
+  "requested_floor": {"numerator": "3", "denominator": "2"},
+  "proof_boundary": "Synthetic rational control only; no zeta-zero or analytic tail data are asserted."
+}
