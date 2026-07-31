@@ -42,6 +42,19 @@ The arithmetic form determines the target, rather than a target being chosen and
 
 $Q_W$ itself came out **positive definite** — inertia $(\dim,0,0)$ — at every cutoff and $N$ tested. The nominated $\xi$ is even to working precision, as CvS parity requires.
 
+> **Erratum, same day.** The first version of this claim supported "positive definite" with *numerical eigenvalues*. That evidence was weak and I have replaced it. At dps 80 `mpmath.eigsy` returns $\lambda_{\min}\approx-3\times10^{-18}$ — **negative** — while every exact $LDL^{\mathsf T}$ pivot of the rationalised matrix is positive. The eigenvalue routine is achieving roughly $10^{-17}$ relative accuracy here, not $10^{-80}$, so its $\lambda_{\min}$ is noise and its sign is meaningless. The conclusion survives on the **exact congruence**, which is the right tool:
+>
+> | cutoff | $N$ | exact inertia (30 sig. digits) | exact inertia (50 sig.) | min $LDL$ pivot | moat / rationalisation radius |
+> |---|---|---|---|---|---|
+> | 100 | 4 | $(9,0,0)$ | $(9,0,0)$ | $8.18\times10^{-15}$ | $2.7\times10^{17}$ |
+> | 200 | 6 | $(13,0,0)$ | $(13,0,0)$ | $1.91\times10^{-20}$ | $1.1\times10^{12}$ |
+> | 500 | 6 | $(13,0,0)$ | $(13,0,0)$ | $1.86\times10^{-22}$ | $1.5\times10^{10}$ |
+> | 1000 | 6 | $(13,0,0)$ | $(13,0,0)$ | $1.70\times10^{-23}$ | $8.4\times10^{8}$ |
+>
+> The inertia is stable between 30 and 50 significant digits, and the moat exceeds the rationalisation radius by the ratio shown, so the inertia transfers to anything within that radius of the computed matrix. It is still **not** a certificate for $Q_W$ itself: the truncation error inside X-0001's own archimedean series and the dps-60 evaluation error are not bounded here.
+>
+> **Lesson worth generalising:** on these matrices the exact-congruence route is both cheaper and far more trustworthy than numerical eigenvalues. Anyone reading a $\lambda_{\min}$ off `eigsy` for a Weil matrix should check it against an exact $LDL^{\mathsf T}$ first.
+
 ## 2. The part that is not automatic
 
 Converting the positive roots $r_i$ of $P$ to the CvS frequency coordinate $w_i=2\pi r_i/L$:
@@ -92,11 +105,30 @@ $$\operatorname{Loewner}(\psi-t\lambda)=\operatorname{Loewner}(\psi)-tJ,$$
 
 a **rank-one** shift. By Cauchy interlacing for symmetric rank-one updates, the number of negative eigenvalues can therefore change by **at most one** across the entire family. Checked on 200 random symmetric matrices at six values of $t$: the maximum observed change was exactly 1. So the one-scalar family can only ever repair a single negative direction — if a form has two or more, no scalar rescues it.
 
+## 5. The positivity margin collapses with $N$, and that is conditioning, not a signal
+
+Tracking the smallest exact $LDL^{\mathsf T}$ pivot (dps 80, 60 significant digits):
+
+| vs cutoff, $N=6$ | 50 | 100 | 200 | 500 | 1000 | 2000 | 5000 |
+|---|---|---|---|---|---|---|---|
+| min pivot | $9.0\times10^{-17}$ | $1.0\times10^{-18}$ | $1.9\times10^{-20}$ | $1.9\times10^{-22}$ | $1.7\times10^{-23}$ | $1.2\times10^{-24}$ | $5.5\times10^{-26}$ |
+
+| vs $N$, cutoff 500 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|
+| min pivot | $1.6\times10^{-14}$ | $2.9\times10^{-17}$ | $8.1\times10^{-20}$ | $1.9\times10^{-22}$ | $5.8\times10^{-25}$ | $6.5\times10^{-27}$ |
+
+The matrix stays positive definite throughout — the exact inertia is $(\dim,0,0)$ in every cell. **The margin's collapse is ill-conditioning, not an approach to a positivity violation, and it should not be read as a counterexample signal.** I record it because it sets a hard practical requirement:
+
+- the moat falls by roughly a factor $10^{2.5}$ per unit increase in $N$, and only about $10^{-4.5}$ per hundredfold increase in cutoff, so **$N$ dominates**;
+- fitting, one needs roughly $2.5N+15$ significant digits to resolve the positivity at level $N$; at 60 digits the computation becomes unresolvable somewhere around $N\approx20$.
+
+Anyone planning a larger run should budget precision against $N$ on that basis rather than against the cutoff.
+
 ## Gap audit
 
 1. Everything is HIGH-PRECISION FLOAT (mpmath, dps 60). Nothing is certified. Root-finding used `polyroots` with extra precision, not exact isolation.
 2. Six cutoffs and three $N$ values is a small grid. The apparent stability of $w_1$ across cutoffs is reassuring but is not a proof of anything.
-3. "$Q_W$ is positive definite" was read off numerical eigenvalues, not an exact congruence. It should be redone exactly. It is also the load-bearing input for everything in §0, so it deserves the most scrutiny.
+3. "$Q_W$ is positive definite" is now supported by an **exact congruence** on a rationalised matrix with a moat (see the erratum in §1), not by numerical eigenvalues. It remains uncertified for $Q_W$ itself, because X-0001's internal series truncation and its dps-60 evaluation error are unbounded here. It is still the load-bearing input for everything in §0.
 4. §4's reduction of Reading B to Weil positivity is an inference from this grid, and it assumes the production setup matches X-0001's coordinates and normalization. That has not been checked.
 5. The higher roots ($w_4$ onward at small $N$) are resolution-limited artefacts and should not be read as predictions of anything.
 6. `O-16003` gap audit item 2 applies: I did not independently re-derive the closed-form sources of the three blocks.
