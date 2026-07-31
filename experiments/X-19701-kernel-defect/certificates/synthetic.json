@@ -1,0 +1,128 @@
+{
+  "complement_block": [
+    [
+      {
+        "denominator": 1,
+        "numerator": 2
+      }
+    ]
+  ],
+  "expected_corrected_offline_quadratic": {
+    "denominator": 8,
+    "numerator": -17
+  },
+  "expected_line_floor": {
+    "denominator": 16,
+    "numerator": 31
+  },
+  "expected_raw_offline_quadratic": {
+    "denominator": 1,
+    "numerator": -2
+  },
+  "kernel_complement_cross": [
+    [
+      {
+        "denominator": 4,
+        "numerator": 1
+      },
+      {
+        "denominator": 4,
+        "numerator": -1
+      }
+    ]
+  ],
+  "kernel_metric": [
+    [
+      {
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ],
+    [
+      {
+        "denominator": 1,
+        "numerator": 0
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      }
+    ]
+  ],
+  "line_only_kernel_block": [
+    [
+      {
+        "denominator": 1,
+        "numerator": 2
+      },
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ],
+    [
+      {
+        "denominator": 1,
+        "numerator": 0
+      },
+      {
+        "denominator": 1,
+        "numerator": 2
+      }
+    ]
+  ],
+  "offline_kernel_block": [
+    [
+      {
+        "denominator": 1,
+        "numerator": 0
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      }
+    ],
+    [
+      {
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ]
+  ],
+  "offline_multiplicity": {
+    "denominator": 1,
+    "numerator": 1
+  },
+  "offline_witness": [
+    {
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "denominator": 1,
+      "numerator": -1
+    }
+  ],
+  "proof_object_sha256": "1af83681c99e1204845996f055a1bc54d98dcda85fdb73e7d97ddcfee17ca049",
+  "schema": "riemann.x19701-kernel-defect.v1",
+  "selected_real_evaluation": [
+    [
+      {
+        "denominator": 1,
+        "numerator": 0
+      },
+      {
+        "denominator": 1,
+        "numerator": 0
+      }
+    ]
+  ]
+}
