@@ -1,0 +1,27 @@
+{
+  "schema": "riemann.x15605-phase-aware-prime-bound.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "prime_interval": {
+    "lower": {"numerator": 101, "denominator": 10},
+    "upper": {"numerator": 51, "denominator": 5}
+  },
+  "phase_interval": {
+    "lower": {"numerator": 1, "denominator": 10},
+    "upper": {"numerator": 1, "denominator": 10}
+  },
+  "shells": [
+    {
+      "left": {"numerator": 0, "denominator": 1},
+      "right": {"numerator": 10, "denominator": 1},
+      "count_upper": {"numerator": 3, "denominator": 1},
+      "selected_multiplicity": 1,
+      "transform_envelope_upper": {"numerator": 1, "denominator": 10}
+    }
+  ],
+  "high_zero_tail": {
+    "transform_constant_upper": {"numerator": 1, "denominator": 20},
+    "zero_moment_upper": {"numerator": 1, "denominator": 10}
+  },
+  "trivial_tail_upper": {"numerator": 1, "denominator": 100},
+  "additional_radius": {"numerator": 1, "denominator": 100}
+}

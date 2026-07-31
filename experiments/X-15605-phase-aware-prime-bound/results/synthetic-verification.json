@@ -1,0 +1,82 @@
+{
+  "additional_radius": {
+    "denominator": "100",
+    "numerator": "1"
+  },
+  "classification": "SYNTHETIC_MODEL",
+  "exact_proof_object_sha256": "8ecafb5da1d9f31c2cfe638a7067ce25ab00b9d65dc5df90bfc62e60114ed774",
+  "high_zero_budget": {
+    "denominator": "100",
+    "numerator": "1"
+  },
+  "phase_interval": {
+    "lower": {
+      "denominator": "10",
+      "numerator": "1"
+    },
+    "upper": {
+      "denominator": "10",
+      "numerator": "1"
+    }
+  },
+  "prime_interval": {
+    "lower": {
+      "denominator": "10",
+      "numerator": "101"
+    },
+    "upper": {
+      "denominator": "5",
+      "numerator": "51"
+    }
+  },
+  "proof_boundary": "Exact rational contraction only. RIEMANN_DIRECTED use additionally requires the explicit-formula normalization, complete prime-power manifest, actual selected zero certificates, transform envelopes, and zero-count majorants.",
+  "residual_interval": {
+    "lower": {
+      "denominator": "1",
+      "numerator": "10"
+    },
+    "upper": {
+      "denominator": "10",
+      "numerator": "101"
+    }
+  },
+  "schema": "riemann.x15605-phase-aware-prime-bound.v1",
+  "shell_budget": {
+    "denominator": "5",
+    "numerator": "2"
+  },
+  "shells": [
+    {
+      "count_upper": {
+        "denominator": "1",
+        "numerator": "3"
+      },
+      "left": {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      "residual_contribution": {
+        "denominator": "5",
+        "numerator": "2"
+      },
+      "right": {
+        "denominator": "1",
+        "numerator": "10"
+      },
+      "selected_multiplicity": 1,
+      "transform_envelope_upper": {
+        "denominator": "10",
+        "numerator": "1"
+      }
+    }
+  ],
+  "total_budget": {
+    "denominator": "100",
+    "numerator": "43"
+  },
+  "trivial_tail_upper": {
+    "denominator": "100",
+    "numerator": "1"
+  },
+  "verdict": "CERTIFIED_OFFLINE_ZERO_BOUND_VIOLATION_POSITIVE"
+}
