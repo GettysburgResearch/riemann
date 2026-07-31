@@ -104,6 +104,23 @@ So the sampled target **does** satisfy hypothesis (8) of the working note's Theo
 
 A direct refutation of the trap (e), in exact rational arithmetic: CvS Appendix B.1 decides $p=(1,x,1)$ at nodes $(-1,0,1)$, giving real-rootedness iff $x(x+2)\ge0$. The two regimes with an *empty* isotropic cone ($x>0$ and $x<-2$) are exactly the real-rooted ones, and the *nonempty*-cone regime $-2<x<0$ is exactly the failing one. So `L-16002` is correct and consistent with CvS — it simply does not apply to a mixed-sign target.
 
+## Adjudication: `T-15104` is **not** refuted by the three-node example
+
+Two independent audits this session reached opposite conclusions about whether the instance $\lambda=(-1,0,1)$, $p=(1/10,8/10,1/10)$ refutes the programme. The disagreement is resolved by reading the exact wording, and the resolution is worth recording because the same confusion will recur.
+
+The instance satisfies every hypothesis of Connes–van Suijlekom Theorem 5.6: with $b=(1,0,-1)$ (odd) and diagonal $a=(9,\tfrac14,9)$ (even),
+
+$$Q=\begin{pmatrix}9&-1&-1\\-1&\tfrac14&-1\\-1&-1&9\end{pmatrix}$$
+
+is of form (11), $Qp=0$ exactly, $Q\succeq0$ of rank 2 (principal minors $9,\tfrac14,9$; $\tfrac54,80,\tfrac54$; $\det=0$), and $\ker Q=\mathbb Rp$ is one-dimensional and $\gamma$-even. Verified in exact rational arithmetic.
+
+- The **exponential sum** $\sum_jp_je^{ij z}=\tfrac8{10}+\tfrac2{10}\cos z$ has **only nonreal** zeros ($\cos z=-4$).
+- The **CvS transform** $\widehat p(z)=2e^{-iz/2}\sin(z/2)\bigl[\tfrac{0.1}{z+2\pi}+\tfrac{0.8}{z}+\tfrac{0.1}{z-2\pi}\bigr]$ has **only real** zeros: $2\pi\mathbb Z\setminus\{0,\pm2\pi\}$, together with the roots of $P(z/2\pi)$, i.e. $z=\pm2\pi\sqrt{4/5}$. And $P(s)=s^{2}-\tfrac45$ is real-rooted, as Theorem 5.6(i) asserts.
+
+So the example refutes only the **unwindowed** reading. `T-15104` says verbatim *"the Fourier transform of the corresponding **compactly supported** finite Fourier sum"*, and the working note's Theorem 3.1 says *"the Fourier transform of its compactly supported finite Fourier sum"*. Both use the correct object. **`T-15104` and the note's Theorem 3.1 stand; Connes–van Suijlekom stands; the three-node example refutes neither.** Any audit reporting otherwise has substituted $\sum_jp_je^{i\lambda_jz}$ for the windowed transform.
+
+The residual criticism that *is* fair: neither the note nor `T-15104` writes the transform down explicitly, so a reader must go to the primary source to learn which object is meant. Displaying (O-16001.1) once in the claim file would remove the ambiguity permanently.
+
 ## Remaining uncertainty
 
 The identification (a),(b) is quoted from the primary source and is certain. The identification (c),(d) of the *program's* target is a reconstruction: it is the natural one, it satisfies the convergence hypothesis, and it is what a reader of `L-15101` would build — but it has not been checked against the production "repaired" vectors. That check is the single most important follow-up.

@@ -111,7 +111,7 @@ Deliberate search for ways this refutation could be wrong or overreaching:
 2. **The threshold is empirical.** $\alpha_c$ was located by bisection on a finite grid of $N$. No proof is offered that the pass/fail dichotomy is monotone in $\alpha$, nor that it persists for $N>30$, nor that a pass at $\alpha>\alpha_c$ holds for *all* $N$. The $N$-independence is striking and consistent across seven levels, but it is an observation.
 3. **The "10% discarded mass" figure** in (f) is a rough integral estimate, not a certified bound. The qualitative point — that the discarded mass at $\alpha_c$ is a fixed positive constant, not $o(1)$ — follows from $\alpha_c$ being bounded away from $0$ and $\Phi$ having positive mass outside any fixed window, and that much is rigorous.
 4. **Simplicity.** Real-rootedness alone is not the note's gate; the kernel must be exactly one-dimensional, i.e. the roots must be simple. Simplicity was checked (full-degree squarefree part) but only at the levels recorded.
-5. **Parity.** Even at a passing level, CvS Theorem 5.6 additionally demands a matrix of form (11) with **odd** source and **even** diagonal. Whether the completion produced at a passing $(\alpha,N)$ lands in that sector has **not** been verified here. If it does not, a "PASS" in the table above does not by itself establish the note's gate. This is a genuine open item.
+5. **Parity — resolved, in the positive direction.** An independent agent constructed the `L-15108` §4 completion in closed rational form at $(\alpha,N)=(1.1,10)$ and verified over $\mathbb Q$: $Q$ symmetric, of divided-difference form (11), source $b$ **odd**, diagonal $a$ **even**, $\Gamma Q=Q\Gamma$, $Q\xi=0$ exactly, and $Q\succeq0$ with $\ker Q=\mathbb R\xi$ exactly one-dimensional, certified by 20 exact positive $LDL^{\mathsf T}$ pivots. **The parity constraint is automatic, not an obstruction.** So the passes in the table are genuine CvS-admissible completions — the project's first production-level passes of the finite gate. That makes the negative conclusion below *stronger*, not weaker: the gate is genuinely satisfiable, and genuinely satisfiable only where it is uninformative.
 6. **The interpolation-polynomial route only.** Everything is phrased via $P$; the transform statement is invoked only through CvS Theorem 5.6(ii), which is stated for the integer node set. No non-integer node set is used.
 7. **Not a statement about RH.** The nonreal roots in (c) sit at $|{\rm Im}\,w|\ge1.56$, nowhere near the strip $|{\rm Im}\,w|<\tfrac12$. By Hurwitz they could only bear on RH if they converged into that strip, which they demonstrably do not — they move *away* from the real axis as $\alpha$ decreases.
 
@@ -135,9 +135,19 @@ Deliberate search for ways this refutation could be wrong or overreaching:
 - **Precision.** Counts identical at 20/30/40/50/60/100 rationalization digits.
 - **Independent method, and a caution.** An early `float64` eigenvalue computation of $D'=D-|D\xi\rangle\langle\eta|$ reported nonreal roots at $|{\rm Im}\,w|\approx0.43$, **inside** the RH strip. At 150 digits these vanish entirely: the sampled coefficients span a dynamic range of $10^{-21}$ or worse, far beyond double precision. Recorded as a live instance of README §8's warning about "confusing a discrepancy between implementations with a mathematical contradiction", and as an argument for the exact-arithmetic discipline used throughout.
 
+### The passing regime carries no arithmetic information
+
+Three independent findings show that a "PASS" says nothing about $\zeta$:
+
+1. **The truncation error dominates $\Xi$ before its first zero.** At every $\alpha>\alpha_c$ the model's error already exceeds $|\Xi(w)|$ for all $w\gtrsim12$, i.e. **below** the first zeta zero at $14.1347$. The passing model resolves no zeta zero at all.
+2. **The real roots are lattice points, not $\Xi$-zeros.** At a passing level the real roots sit on the sinc lattice $w=2\pi\alpha k$, $k=3,4,\dots,N$, agreeing to six or more digits — these are the zeros of the Fourier transform of the *indicator* of the window, not of anything arithmetic.
+3. **A Gaussian control reproduces the entire phenomenon.** Replacing $\Phi$ by $e^{-t^{2}}$, whose full transform $\sqrt\pi e^{-z^{2}/4}$ has **no zeros whatsoever**, exhibits the same sharp threshold behaviour, with $\alpha_c^{\mathrm{gauss}}=0.34152$. Since the Gaussian model contains no zeta information of any kind, and behaves identically, the passing regime is a property of the windowing, not of $\zeta$.
+
+Together with (f), this is the sharp statement: the gate is satisfiable exactly where the model has been truncated so hard that it has become a window indicator, and it fails as soon as the model carries any arithmetic content.
+
 ## Remaining uncertainty
 
-The census itself is exact and the author is confident in it. The two places where this could fail to mean what it says are gap-audit items 1 (is this the production target?) and 5 (does a passing level meet the CvS parity constraints?). Item 2 — the $N$-independence of $\alpha_c$ — is the most interesting empirical claim and deserves either a proof or a counterexample.
+The census itself is exact and the author is confident in it. Gap-audit items 1 (the production target) and 5 (parity at a passing level) have both since been settled, item 1 in favour of the refutation's scope and item 5 in favour of the passes being genuine. What remains is item 2: the $N$-independence of the deficit is now supported far beyond the original grid — an independent run found deficit exactly $4$ at $\alpha=0.7$ for $N=14,16,\dots,24,40$ and $60$ (degree $120$), exactly $8$ at $\alpha=0.6$ for $N=20,\dots,30$ and $50$, and exactly $12$ at $\alpha=0.5$ for $N=34,38,40,44$ — but it is still an observation, not a theorem. A proof that the deficit depends on $\alpha$ alone would be the natural next result.
 
 ## Suggested next attack
 
