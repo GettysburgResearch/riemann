@@ -1,0 +1,29 @@
+{
+  "ambient_floor": {
+    "denominator": 1000,
+    "numerator": -17
+  },
+  "analytic_claims": [
+    "L-15610",
+    "T-15603"
+  ],
+  "classification": "SYNTHETIC_MODEL",
+  "exact_proof_object_sha256": "efe937d456d9ea26977f7349468b9a70d293dbfd53b663e77f10c3d1a4100903",
+  "norm_moat_pivots": [
+    {
+      "denominator": 16,
+      "numerator": 1
+    },
+    {
+      "denominator": 16,
+      "numerator": 1
+    }
+  ],
+  "pole_cancellation_verified": true,
+  "schema": "riemann.x15604-terminal-visible-verification.v1",
+  "verdict": "CERTIFIED_TERMINAL_VISIBLE_MARGIN",
+  "visible_margin": {
+    "denominator": 16,
+    "numerator": 7
+  }
+}
