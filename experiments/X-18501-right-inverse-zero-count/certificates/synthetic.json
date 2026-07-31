@@ -1,0 +1,30 @@
+{
+  "schema": "riemann.x18501-right-inverse-zero-count.v1",
+  "metric_gram": [
+    [2, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1]
+  ],
+  "selected_evaluation": [
+    [1, 0, 0]
+  ],
+  "right_inverse": [
+    [1],
+    [3],
+    [0]
+  ],
+  "kernel_basis": [
+    [0, 0],
+    [1, 0],
+    [0, 1]
+  ],
+  "full_certified_zero_gram": [
+    [1, 0, 0],
+    [0, {"numerator": 1, "denominator": 20}, 0],
+    [0, 0, 0]
+  ],
+  "right_inverse_gram_upper": 2,
+  "omitted_zero_tail_budget": {"numerator": 1, "denominator": 8},
+  "beta": {"numerator": 1, "denominator": 8},
+  "note": "The supplied right inverse contains a large kernel component. Orthogonalization removes it, leaving metric Gram 2 and generalized selected-zero gap 1/2. The threshold is 1/4, so at most the two kernel directions lie below it."
+}

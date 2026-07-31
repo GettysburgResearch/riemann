@@ -1,0 +1,84 @@
+{
+  "ambient_dimension": 3,
+  "count_upper_bound": 2,
+  "full_complement_floor_ldl_pivots": [
+    {
+      "denominator": 2,
+      "numerator": 1
+    }
+  ],
+  "kernel_metric_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "denominator": 1,
+      "numerator": 1
+    }
+  ],
+  "metric_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 2
+    },
+    {
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "denominator": 1,
+      "numerator": 1
+    }
+  ],
+  "orthogonal_right_inverse_metric_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 2
+    }
+  ],
+  "proof_boundary": "Exact finite metric/right-inverse/count arithmetic only. The selected zero provenance, full-zero Gram enclosure, omitted-zero tail budget, and complete-low-packet capture remain external analytic gates.",
+  "proof_object_sha256": "a5c1c569f6a95e8ef2f5915a9d8a42aab181e1500ef860190cde8964f751eed3",
+  "right_inverse_bound_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 0
+    }
+  ],
+  "right_inverse_gram_upper": {
+    "denominator": 1,
+    "numerator": 2
+  },
+  "schema": "riemann.x18501-right-inverse-zero-count.v1",
+  "selected_complement_floor_ldl_pivots": [
+    {
+      "denominator": 2,
+      "numerator": 1
+    }
+  ],
+  "selected_zero_coordinates": 1,
+  "spectral_gap_lower": {
+    "denominator": 2,
+    "numerator": 1
+  },
+  "threshold": {
+    "denominator": 4,
+    "numerator": 1
+  },
+  "verdict": "CERTIFIED_SELECTED_ZERO_COUNT_AT_MOST_KERNEL_DIMENSION",
+  "verified": true,
+  "zero_gram_domination_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 0
+    },
+    {
+      "denominator": 20,
+      "numerator": 1
+    },
+    {
+      "denominator": 1,
+      "numerator": 0
+    }
+  ]
+}
