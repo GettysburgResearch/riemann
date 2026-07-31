@@ -1,7 +1,7 @@
 # T-18501 — Sacrificial count closes the harmonic visible floor
 
 Claim ID: `T-18501`  
-Title: A one-end or source-corrector frame replaces the cofinal integer count in the harmonic three-block theorem  
+Title: A one-end or finite-quotient frame replaces the cofinal integer count in the harmonic three-block theorem  
 Status: `PROPOSED CONDITIONAL CLOSURE`  
 Authoring agent: `gpt56-02-p`  
 Created: 2026-07-31  
@@ -135,7 +135,7 @@ If
 
 then the visible Schur moat is at least `beta_lambda/2`.
 
-## 4. Cofinal Gaussian schedule
+## 4. Cofinal Gaussian scale separation
 
 Suppose the uniform radical-tail theorem gives
 
@@ -148,8 +148,7 @@ Suppose the uniform radical-tail theorem gives
 and the sacrificial frame has only sub-Gaussian loss,
 
 \[
- \boxed{
- -\log\sigma_\lambda^2=o(\lambda^2).}
+ \boxed{-\log\sigma_\lambda^2=o(\lambda^2).}
  \tag{T-18501.12}
 \]
 
@@ -161,11 +160,10 @@ Choose
  \tag{T-18501.13}
 \]
 
-For each fixed support and finite packet, increase the proof-grade zero cutoff
-until
+The count follows once one separately proves
 
 \[
- B_{T,\lambda}\le\frac12\beta_\lambda.
+ \boxed{B_{T,\lambda}\le\frac12\beta_\lambda.}
  \tag{T-18501.14}
 \]
 
@@ -185,9 +183,21 @@ and
  \tag{T-18501.16}
 \]
 
-Thus the sharp count and the positive visible Schur floor hold cofinally.
+There are two valid ways to discharge (T-18501.14):
 
-## 5. Two concrete sacrificial packets
+1. **cardinal quotient:** choose the sacrificial directions from exact
+   critical-line cardinal functions. Their global transforms vanish at every
+   omitted zeta zero, so the finite-section omitted-zero budget tends to zero
+   with the localization tail at a fixed selected-zero set;
+2. **growing certified block:** supply genuinely proof-grade complete
+   critical-line zero blocks together with an analytic tail envelope.
+
+Merely asserting that a numerical zero-verification height can be increased
+cofinally is not a proof. The raw Gaussian corrector of `L-18502` supplies the
+frame-scale separation but needs the second route, or a separate complete
+residual theorem. The cardinal route avoids this issue.
+
+## 5. Concrete sacrificial packets
 
 ### A. One-end packet
 
@@ -200,7 +210,28 @@ to every cross term outside that restriction.
 This is a strictly weaker target than bounding the complete terminal-prime
 matrix in operator norm.
 
-### B. External source corrector
+### B. Finite cardinal quotient
+
+Suppose
+
+\[
+ U_\lambda=R_\lambda\dotplus C_\lambda^{sel}
+\]
+
+where `C_lambda^sel` is the localized/harmonic image of a fixed-dimensional
+packet of exact critical-line cardinal functions and
+
+\[
+ \dim C_\lambda^{sel}
+ =\operatorname{codim}_{U_\lambda}R_\lambda.
+\]
+
+Use `W_lambda=C_lambda^sel`. The exact right-inverse identity at the selected
+zeros gives its positive frame floor, while cardinal vanishing controls every
+omitted-zero residual through the exterior localization tail. This is the
+cleanest selected-zero implementation of `L-18501`.
+
+### C. External source corrector
 
 If the packet is the localized/harmonic image of
 
@@ -222,10 +253,10 @@ then
 
 Use the fixed-dimensional harmonic image of `Ran Q` as `W_lambda`. In the
 self-dual Hermite sector the quotient is one-dimensional. `L-18502` shows that
-the unlifted corrector frame is at scale `e^(-2 tau log lambda)`, while the
-radical evaluations are at scale `e^(-2c lambda^2)`. The production obligation
-is reduced to one harmonic-lift survival inequality and one metric-inflation
-bound.
+the unlifted corrector frame is at ordinary exponential scale in `log lambda`,
+while the radical evaluations are Gaussian in `lambda`. This option still needs
+a complete omitted-zero residual certificate; it must not silently import the
+cardinal vanishing property.
 
 ## 6. Completion of the three rates
 
@@ -258,15 +289,16 @@ The theorem replaces the large generalized-eigenvalue count by one of two
 smaller proof objects:
 
 1. a one-end selected-zero frame plus the exact codimension inequality; or
-2. a fixed-dimensional external-corrector frame plus packet-containment.
+2. a fixed-dimensional cardinal/corrector frame plus packet-containment.
 
-Neither packet-containment nor harmonic-lift survival may be inferred from
-source dimension alone. A complete proof must bind them to the exact harmonic
-packet and metric.
+Neither packet-containment, harmonic-lift survival, nor omitted-zero control may
+be inferred from source dimension alone. A complete proof must bind them to the
+exact harmonic packet and metric.
 
 ## 8. Nonclaim
 
 The min--max replacement and the Gaussian scale composition are exact. No current
-production artifact has yet supplied the required one-end/corrector frame in the
-exact harmonic metric for a complete cofinal Suzuki packet. Consequently this
-theorem is a conditional closure and does not by itself prove RH.
+production artifact has yet proved that a cardinal/corrector quotient or a
+one-end frame has the required codimension **inside the complete cofinal low
+packet**. Consequently this theorem is a conditional closure and does not by
+itself prove RH.
