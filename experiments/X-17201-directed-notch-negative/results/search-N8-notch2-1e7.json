@@ -1,0 +1,210 @@
+{
+  "classification": "EMPIRICAL_NON_DIRECTED",
+  "environment": {
+    "numpy": "2.3.5"
+  },
+  "ladders": [
+    {
+      "classification": "EMPIRICAL_NON_DIRECTED",
+      "fft": {
+        "density_integral": 0.9999999999999999,
+        "density_maximum": 1.212275630774073,
+        "density_minimum": -4.379323179940504e-16,
+        "density_support": 3.47900118188,
+        "fft_size": 262144,
+        "period": 8.0,
+        "step": 3.0517578125e-05
+      },
+      "filter": {
+        "base_shift": "2/1",
+        "convolution_square_support_cost": "86975029547/25000000000",
+        "dyadic_box_count": 8,
+        "highpass_delta": "1/64",
+        "highpass_order": 0,
+        "profile_support_cost": "86975029547/50000000000",
+        "support_max": 6.865295542999891,
+        "total_box_count_before_square": 10,
+        "widths": [
+          "1/2",
+          "1/4",
+          "1/8",
+          "1/16",
+          "1/32",
+          "1/64",
+          "1/128",
+          "1/256",
+          "444521223029/1000000000000",
+          "298885617911/1000000000000"
+        ]
+      },
+      "proof_boundary": "Exact rational filter definition and complete deterministic integer manifest, but FFT/interpolation/prime accumulation and mpmath zero midpoints are ordinary floating reconnaissance. Every interval here is a sampled grid interval.",
+      "scan": {
+        "cutoff": 10000000,
+        "empirical_mean_square": 1.3579943233246576e-14,
+        "empirical_rms": 1.1653301349079828e-07,
+        "grid_points": 1600,
+        "maximum": {
+          "value": 2.2231787443587107e-07,
+          "x": 15.442234874632057
+        },
+        "minimum": {
+          "value": -2.2264958354636137e-07,
+          "x": 18.01507887419889
+        },
+        "prime_terms_max": 657459,
+        "prime_terms_min": 14810,
+        "strongest_sign_separated_grid_interval": {
+          "sampled_inf_abs_Q": 2.1480993960564898e-07,
+          "sign": -1,
+          "threshold_definition": "0.95 * largest sampled |Q|",
+          "x_grid_interval": [
+            18.009928035360915,
+            18.025380551874832
+          ]
+        },
+        "x_max": 18.11809565095832,
+        "x_min": 14.0
+      },
+      "spectral": {
+        "classification": "EMPIRICAL_MPMATH_MIDPOINT_ZEROS",
+        "listed_absolute_sum": 2.224251461153733e-07,
+        "listed_rms": 1.1726132715931729e-07,
+        "listed_variance": 1.3750218847164444e-14,
+        "max_direct_minus_listed_prediction_abs": 4.974113307969177e-09,
+        "truncated_moat_exceedance_intervals": [
+          {
+            "listed_zero_moat": 2.224251461153733e-07,
+            "sample_count": 1,
+            "sampled_inf_abs_Q": 2.2264958354636137e-07,
+            "sign": -1,
+            "x_grid_interval": [
+              18.01507887419889,
+              18.01507887419889
+            ]
+          }
+        ],
+        "warning": "The listed-zero moat omits every higher zero and is not RH-valid.",
+        "zero_count": 50
+      }
+    }
+  ],
+  "manifest": {
+    "cutoff": 10000000,
+    "duplicate_n_count": 0,
+    "exponent_histogram": {
+      "1": 664579,
+      "10": 3,
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "14": 2,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "2": 446,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "3": 47,
+      "4": 16,
+      "5": 9,
+      "6": 6,
+      "7": 4,
+      "8": 4,
+      "9": 3
+    },
+    "first_records": [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        3,
+        3,
+        1
+      ],
+      [
+        4,
+        2,
+        2
+      ],
+      [
+        5,
+        5,
+        1
+      ],
+      [
+        7,
+        7,
+        1
+      ],
+      [
+        8,
+        2,
+        3
+      ],
+      [
+        9,
+        3,
+        2
+      ],
+      [
+        11,
+        11,
+        1
+      ]
+    ],
+    "format": "sorted ASCII records n,p,k with newline",
+    "last_records": [
+      [
+        9999907,
+        9999907,
+        1
+      ],
+      [
+        9999929,
+        9999929,
+        1
+      ],
+      [
+        9999931,
+        9999931,
+        1
+      ],
+      [
+        9999937,
+        9999937,
+        1
+      ],
+      [
+        9999943,
+        9999943,
+        1
+      ],
+      [
+        9999971,
+        9999971,
+        1
+      ],
+      [
+        9999973,
+        9999973,
+        1
+      ],
+      [
+        9999991,
+        9999991,
+        1
+      ]
+    ],
+    "ordinary_prime_count": 664579,
+    "prime_power_count": 665134,
+    "regeneration": "prime_power_arrays in search.py; no bulk manifest committed",
+    "sha256": "ad1fe1520966ca5c41885166f4a28a0d543922f087881175c0c15e89425fc56a"
+  },
+  "runtime_seconds": 34.823527097702026
+}

@@ -1,0 +1,58 @@
+{
+  "classification": "NON_DIRECTED_FLOATING_RECONNAISSANCE",
+  "declared_rh_tail_moat": 6e-18,
+  "filter": "L-17202 q=8 two-trivial-annihilator applied to L-17201 G_0",
+  "manifest": {
+    "cutoff": 10000000,
+    "ordinary_prime_count": 664579,
+    "prime_power_count": 665134,
+    "duplicate_n_count": 0,
+    "sha256": "ad1fe1520966ca5c41885166f4a28a0d543922f087881175c0c15e89425fc56a"
+  },
+  "resolutions": [
+    {
+      "fft_size": 262144,
+      "fft_step": 3.0517578125e-05,
+      "density_integral": 1.0,
+      "density_minimum": -5.551115123125783e-16,
+      "density_maximum": 1.036188348095227,
+      "minimum": {
+        "x": 18.001845244546224,
+        "value": -1.7417128931507972e-09
+      },
+      "maximum": {
+        "x": 18.0,
+        "value": 1.7296986042337415e-09
+      },
+      "prime_terms_min": 595633,
+      "prime_terms_max": 664865
+    },
+    {
+      "fft_size": 1048576,
+      "fft_step": 7.62939453125e-06,
+      "density_integral": 1.0,
+      "density_minimum": -5.551115123125783e-16,
+      "density_maximum": 1.0361883480952272,
+      "minimum": {
+        "x": 18.033214401832026,
+        "value": -1.2528000489851544e-10
+      },
+      "maximum": {
+        "x": 18.09226222731119,
+        "value": 1.0714695517639382e-10
+      },
+      "prime_terms_min": 595633,
+      "prime_terms_max": 664865
+    }
+  ],
+  "scan": {
+    "requested_x_interval": [18.0, 18.12],
+    "complete_manifest_x_interval": [18.0, 18.11809565095832],
+    "grid_points": 65,
+    "maximum_cross_resolution_discrepancy": 1.7772632029006386e-09,
+    "median_cross_resolution_discrepancy": 9.495879008979455e-10,
+    "stable_sampled_exceedance_runs": []
+  },
+  "runtime_seconds": 30.14320397377014,
+  "precision_warning": "The manifest is complete, but complex128 FFT inversion and linear interpolation dominate the 6e-18 target by more than eight orders of magnitude. The apparent excursions shrink with resolution. Cross-resolution agreement is only an error heuristic, no support was nominated, and this file is not an RH certificate."
+}

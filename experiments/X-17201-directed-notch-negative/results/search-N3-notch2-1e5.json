@@ -1,0 +1,248 @@
+{
+  "classification": "EMPIRICAL_NON_DIRECTED",
+  "environment": {
+    "numpy": "2.3.5"
+  },
+  "ladders": [
+    {
+      "classification": "EMPIRICAL_NON_DIRECTED",
+      "fft": {
+        "density_integral": 0.9999999999999999,
+        "density_maximum": 1.2169348979919503,
+        "density_minimum": -4.3021142204224816e-16,
+        "density_support": 3.23681368188,
+        "fft_size": 131072,
+        "period": 8.0,
+        "step": 6.103515625e-05
+      },
+      "filter": {
+        "base_shift": "2/1",
+        "convolution_square_support_cost": "80920342047/25000000000",
+        "dyadic_box_count": 3,
+        "highpass_delta": "1/64",
+        "highpass_order": 0,
+        "profile_support_cost": "80920342047/50000000000",
+        "support_max": 6.623108042999891,
+        "total_box_count_before_square": 5,
+        "widths": [
+          "1/2",
+          "1/4",
+          "1/8",
+          "444521223029/1000000000000",
+          "298885617911/1000000000000"
+        ]
+      },
+      "proof_boundary": "Exact rational filter definition and complete deterministic integer manifest, but FFT/interpolation/prime accumulation and mpmath zero midpoints are ordinary floating reconnaissance. Every interval here is a sampled grid interval.",
+      "scan": {
+        "cutoff": 100000,
+        "empirical_mean_square": 8.475652059259775e-08,
+        "empirical_rms": 0.00029112973155038244,
+        "grid_points": 1000,
+        "maximum": {
+          "value": 0.0015206538923897561,
+          "x": 8.0
+        },
+        "minimum": {
+          "value": -3.456195689029754e-07,
+          "x": 12.933488854537924
+        },
+        "prime_terms_max": 9510,
+        "prime_terms_min": 95,
+        "strongest_sign_separated_grid_interval": {
+          "sampled_inf_abs_Q": 0.0014589022142653674,
+          "sign": 1,
+          "threshold_definition": "0.95 * largest sampled |Q|",
+          "x_grid_interval": [
+            8.0,
+            8.016555331726638
+          ]
+        },
+        "x_max": 13.512925464970229,
+        "x_min": 8.0
+      },
+      "spectral": {
+        "classification": "EMPIRICAL_MPMATH_MIDPOINT_ZEROS",
+        "listed_absolute_sum": 3.5274870716991645e-07,
+        "listed_rms": 1.8778206426390444e-07,
+        "listed_variance": 3.526210365921314e-14,
+        "max_direct_minus_listed_prediction_abs": 0.0015209194635310182,
+        "truncated_moat_exceedance_intervals": [
+          {
+            "listed_zero_moat": 3.5274870716991645e-07,
+            "sample_count": 582,
+            "sampled_inf_abs_Q": 3.6948040857466685e-07,
+            "sign": 1,
+            "x_grid_interval": [
+              8.0,
+              11.206215911058761
+            ]
+          },
+          {
+            "listed_zero_moat": 3.5274870716991645e-07,
+            "sample_count": 18,
+            "sampled_inf_abs_Q": 3.786128811057565e-07,
+            "sign": 1,
+            "x_grid_interval": [
+              11.272437237965311,
+              11.366250784416255
+            ]
+          },
+          {
+            "listed_zero_moat": 3.5274870716991645e-07,
+            "sample_count": 1,
+            "sampled_inf_abs_Q": 3.5762488786269823e-07,
+            "sign": 1,
+            "x_grid_interval": [
+              11.487656550411597,
+              11.487656550411597
+            ]
+          },
+          {
+            "listed_zero_moat": 3.5274870716991645e-07,
+            "sample_count": 4,
+            "sampled_inf_abs_Q": 3.658036870844085e-07,
+            "sign": 1,
+            "x_grid_interval": [
+              11.498693438229354,
+              11.515248769955992
+            ]
+          },
+          {
+            "listed_zero_moat": 3.5274870716991645e-07,
+            "sample_count": 1,
+            "sampled_inf_abs_Q": 3.577804534309209e-07,
+            "sign": 1,
+            "x_grid_interval": [
+              12.64101132736733,
+              12.64101132736733
+            ]
+          },
+          {
+            "listed_zero_moat": 3.5274870716991645e-07,
+            "sample_count": 2,
+            "sampled_inf_abs_Q": 3.5537579191765244e-07,
+            "sign": 1,
+            "x_grid_interval": [
+              12.839675308086978,
+              12.845193751995858
+            ]
+          }
+        ],
+        "warning": "The listed-zero moat omits every higher zero and is not RH-valid.",
+        "zero_count": 50
+      }
+    }
+  ],
+  "manifest": {
+    "cutoff": 100000,
+    "duplicate_n_count": 0,
+    "exponent_histogram": {
+      "1": 9592,
+      "10": 2,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "2": 65,
+      "3": 14,
+      "4": 7,
+      "5": 4,
+      "6": 3,
+      "7": 3,
+      "8": 2,
+      "9": 2
+    },
+    "first_records": [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        3,
+        3,
+        1
+      ],
+      [
+        4,
+        2,
+        2
+      ],
+      [
+        5,
+        5,
+        1
+      ],
+      [
+        7,
+        7,
+        1
+      ],
+      [
+        8,
+        2,
+        3
+      ],
+      [
+        9,
+        3,
+        2
+      ],
+      [
+        11,
+        11,
+        1
+      ]
+    ],
+    "format": "sorted ASCII records n,p,k with newline",
+    "last_records": [
+      [
+        99901,
+        99901,
+        1
+      ],
+      [
+        99907,
+        99907,
+        1
+      ],
+      [
+        99923,
+        99923,
+        1
+      ],
+      [
+        99929,
+        99929,
+        1
+      ],
+      [
+        99961,
+        99961,
+        1
+      ],
+      [
+        99971,
+        99971,
+        1
+      ],
+      [
+        99989,
+        99989,
+        1
+      ],
+      [
+        99991,
+        99991,
+        1
+      ]
+    ],
+    "ordinary_prime_count": 9592,
+    "prime_power_count": 9700,
+    "regeneration": "prime_power_arrays in search.py; no bulk manifest committed",
+    "sha256": "76f66b293c7ead8564e2c3a4fe354629734caf08b465effcf77e0df91d30dd54"
+  },
+  "runtime_seconds": 6.47126579284668
+}

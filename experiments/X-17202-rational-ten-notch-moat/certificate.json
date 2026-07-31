@@ -1,0 +1,114 @@
+{
+  "classification": "DIRECTED_SINGLE_BACKEND_PROPOSED",
+  "experiment_id": "X-17202",
+  "claim_id": "L-17201",
+  "issue": 172,
+  "agent": "gpt56-172n-01",
+  "created_utc": "2026-07-31T14:19:55Z",
+  "filter": {
+    "profile_shift": "1",
+    "dyadic_widths": ["1/2", "1/4", "1/8", "1/16"],
+    "pole_shift": "log(4)",
+    "pole_coefficient": "2",
+    "notches": [
+      {
+        "index": 1,
+        "gamma_lo": "14.1347251417346937904572519835624702707743",
+        "gamma_hi": "14.1347251417346937904572519835624702707943",
+        "count_lo": 0,
+        "count_hi": 1,
+        "width": "0.4445212230287824522642818539016640957874"
+      },
+      {
+        "index": 2,
+        "gamma_lo": "21.0220396387715549926284795938969027773243",
+        "gamma_hi": "21.0220396387715549926284795938969027773443",
+        "count_lo": 1,
+        "count_hi": 2,
+        "width": "0.2988856179108009246443872674551755562233"
+      },
+      {
+        "index": 3,
+        "gamma_lo": "25.0108575801456887632137909925628218186495",
+        "gamma_hi": "25.0108575801456887632137909925628218186695",
+        "count_lo": 2,
+        "count_hi": 3,
+        "width": "0.2512183073709296933443157060307773726631"
+      },
+      {
+        "index": 4,
+        "gamma_lo": "30.4248761258595132103118975305840913201716",
+        "gamma_hi": "30.4248761258595132103118975305840913201916",
+        "count_lo": 3,
+        "count_hi": 4,
+        "width": "0.2065147375189874937215910506264752197112"
+      },
+      {
+        "index": 5,
+        "gamma_lo": "32.9350615877391896906623689640749034888027",
+        "gamma_hi": "32.9350615877391896906623689640749034888227",
+        "count_lo": 4,
+        "count_hi": 5,
+        "width": "0.1907749675961936614805739580076741906231"
+      },
+      {
+        "index": 6,
+        "gamma_lo": "37.5861781588256712572177634807053328213956",
+        "gamma_hi": "37.5861781588256712572177634807053328214156",
+        "count_lo": 5,
+        "count_hi": 6,
+        "width": "0.1671674433252858292331254796084574555799"
+      },
+      {
+        "index": 7,
+        "gamma_lo": "40.9187190121474951873981269146332543957162",
+        "gamma_hi": "40.9187190121474951873981269146332543957362",
+        "count_lo": 6,
+        "count_hi": 7,
+        "width": "0.1535528349583549805959793310713541462038"
+      },
+      {
+        "index": 8,
+        "gamma_lo": "43.3270732809149995194961221654068057826357",
+        "gamma_hi": "43.3270732809149995194961221654068057826557",
+        "count_lo": 7,
+        "count_hi": 8,
+        "width": "0.1450175336432716348784309229539965737092"
+      },
+      {
+        "index": 9,
+        "gamma_lo": "48.0051508811671597279424727494275160416768",
+        "gamma_hi": "48.0051508811671597279424727494275160416968",
+        "count_lo": 8,
+        "count_hi": 9,
+        "width": "0.1308856485574454259264147668972141265687"
+      },
+      {
+        "index": 10,
+        "gamma_lo": "49.7738324776723021819167846785637240577132",
+        "gamma_hi": "49.7738324776723021819167846785637240577332",
+        "count_lo": 9,
+        "count_hi": 10,
+        "width": "0.1262347099753292442451123897097777797493"
+      }
+    ]
+  },
+  "directed_constants": {
+    "pi_lo": "3.14159265358979323846264338327950288419716939937510582097494459230781640628620899",
+    "pi_hi": "3.14159265358979323846264338327950288419716939937510582097494459230781640628620900",
+    "zero_count_at_14": 0,
+    "tail_start": "52.9",
+    "zero_count_at_tail_start": 10,
+    "xi_reciprocal_sum_upper": "47/1000",
+    "nontrivial_zero_moat": "4/1000000000000000000",
+    "tail_domain_start": "28",
+    "tail_domain_raw_moat": "1/100000000000000000",
+    "all_real_raw_moat": "18000"
+  },
+  "backend": {
+    "producer": "python-flint 0.9.0 / Arb via FLINT",
+    "precision_bits": 320,
+    "independent_backend": null
+  },
+  "proof_boundary": "Exact rational arithmetic verifies the attenuation and Hadamard tail inequalities. Arb certifies the pi enclosure and zero-count census, but no independent backend has yet reproduced those certificates; the smoothed explicit-formula normalization remains a source-level dependency."
+}
