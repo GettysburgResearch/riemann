@@ -92,7 +92,56 @@ Residuals at the level of the working precision, i.e. consistent with the identi
 
 and for the **arithmetic** $\Omega$ at cutoff 2000: at $N=6$ the fractions are $1,\;2.3\times10^{-5},\;2.3\times10^{-7},\;1.3\times10^{-9},\dots$; at $N=10$ they are $1,\;1.0\times10^{-8},\;4.7\times10^{-12},\;9.3\times10^{-16},\dots$. This is the quantitative form of "only the lowest zeros are resolved", and it says the situation gets *worse* with $N$, not better, in the sense that the higher poles are weighted ever more faintly.
 
-## 4. The part that failed, and it matters
+## 4. The part that failed — but read §4a first, because I got part of it wrong
+
+> **ERRATUM, same day, and it is substantial.** The orthogonality residuals in the table below are computed as $\max_k$ over $k=0,\dots,2N-1$. **The odd $k$ are vacuous**: the source is odd, so the atoms come in $\pm\mu$ pairs and $P_\xi$ is even, and every term of $\sum_\mu w_\mu P_\xi(\mu)\mu^{k}$ cancels identically against its partner for odd $k$. My normalisation divides by $\sum_\mu|w_\mu P_\xi(\mu)\mu^k|$, so on the odd $k$ I computed $0/0$ and reported floating-point noise as a defect. The maxima quoted below (0.83, 0.47, 0.35, 0.36) are those noise values.
+>
+> Redone over **even $k$ only**: 0.62 (cutoff 2000, $N=4$), 0.36 ($N=6$), 0.44 ($N=8$), 0.83 (cutoff 500, $N=6$). **So the conclusion of §4 survives** — the residual against the *unit-residue* $\nu_\zeta$ really is order one — but it survives for a weaker reason than I claimed, and the specific numbers below should not be quoted. §4a replaces this section's diagnosis with a sharper one.
+
+## 4a. Redone: the form **does** have a representing measure; it is the *residues* that are wrong
+
+Applying the same even/odd discipline to a stronger test changes the picture, and in the programme's favour.
+
+$\Phi$ inverts in closed form: from $P_x(s)=\Omega(s)\langle x,\ell(s)\rangle$ and $\Omega(\lambda_j)=0$ one gets $x_j=P(\lambda_j)\,w_j$ with $w_j=1/\prod_{k\ne j}(\lambda_k-\lambda_j)$. Hence with $\tilde Q_{ij}=w_iQ_{ij}w_j$,
+
+$$\langle P,R\rangle_Q=\sum_{i,j}P(\lambda_i)\,\tilde Q_{ij}\,R(\lambda_j),\qquad M_{ab}:=\langle s^a,s^b\rangle_Q .$$
+
+The form is a **moment functional** — equivalently it has a representing measure on $\mathbb R$ — exactly when $M_{ab}$ depends only on $a+b$, i.e. when $M$ is Hankel. This is *not* automatic for a positive definite form. Measured, on the even antidiagonals (the odd ones vanish identically, as above):
+
+| cutoff | $N$ | dps | worst **even**-antidiagonal relative Hankel defect | odd-antidiagonal scale vs even |
+|---|---|---|---|---|
+| 2000 | 4 | 120 | $6.6\times10^{-105}$ | $1.5\times10^{-123}$ vs $8.6\times10^{-6}$ |
+| 2000 | 6 | 160 | $1.1\times10^{-141}$ | $5.6\times10^{-163}$ vs $1.1\times10^{-5}$ |
+| 2000 | 8 | 220 | $9.8\times10^{-198}$ | $1.1\times10^{-219}$ vs $1.8\times10^{-5}$ |
+| 500 | 6 | 160 | $1.9\times10^{-142}$ | — |
+
+**The defect tracks the working precision across three settings of dps**, which is the signature of an exact identity. So the arithmetic Weil form's induced inner product **is** a moment functional, and since $Q_W\succ0$ the functional is positive definite and Hamburger gives a representing positive measure on $\mathbb R$, symmetric about $0$. That is the object §5(1)'s "suggested next attack" asked for, and it exists.
+
+This also looks like a **general** property of Loewner matrices rather than an arithmetic accident: the same test on synthetic pole-sum sources returns even-antidiagonal defects of $10^{-150}$, and for $\psi(x)=x^3$ one can check by hand that the three surviving contributions all land on the antidiagonal $a+b=4N-2$ with equal values. I state that as a conjecture, not a result: **for any source $\psi$, $\langle P,R\rangle_{\operatorname{Loewner}(\psi)}$ depends only on the product $PR$.** If true it explains *why* orthogonal polynomials appear at all in (b) — the CvS gate is a moment problem — and it would make CvS Theorem 5.6 read "a positive-definite moment functional has a representing measure on $\mathbb R$, so its orthogonal polynomials are real-rooted".
+
+**Where the measure puts its mass.** Extracting the form's own $2N$-point Gauss rule (nodes = roots of $P_\xi$, weights = Christoffel numbers from $\sum_iW_ir_i^k=\mu_k$), cutoff 2000, $N=8$, dps 220:
+
+| $w=2\pi r/L$ | rel. err vs nearest $\gamma$ | Christoffel $W_i$ | implied residue $a_i=W_i\Omega(r_i)^2$ |
+|---|---|---|---|
+| 14.1347251417 | $2.9\times10^{-15}$ | $3.93\times10^{-43}$ | **0.072233228** |
+| 21.0220398103 | $8.2\times10^{-9}$ | $2.33\times10^{-48}$ | 0.73431165 |
+| 25.0111337074 | $1.1\times10^{-5}$ | $2.84\times10^{-51}$ | 0.40011649 |
+| 30.6381529707 | $7.0\times10^{-3}$ | $1.96\times10^{-54}$ | 0.31958202 |
+| 36.8182225511 | $2.0\times10^{-2}$ | $1.01\times10^{-56}$ | 0.93212564 |
+| 43.4765270376 | $3.4\times10^{-3}$ | $6.51\times10^{-59}$ | 1.8245615 |
+| 67.7720189732 | 0.56 | $4.38\times10^{-65}$ | 4.81 |
+| 132.000887936 | 2.05 | $3.76\times10^{-74}$ | 30.2 |
+
+**Every Christoffel weight is positive**, at every $(c,N)$ tried — consistent with a genuine positive measure. The nodes are the zeta zeros, sharply for the low ones and degrading exactly where §1's resolution law says they should.
+
+**And here is the sharp form of §4's failure.** If the pure pole model $\psi_W\approx\sum_\rho(s-\rho)^{-1}$ held, the implied residue would be $a_i=1$ at every recovered zero. It is not. Moreover $a_1$ is remarkably **stable in $N$** and **not stable in $c$**:
+
+| cutoff | $a_1$ at $N=4$ | $N=6$ | $N=8$ |
+|---|---|---|---|
+| 2000 | 0.072265122 | 0.07223323 | 0.072233228 |
+| 500 | — | 0.0023715094 | — |
+
+Six significant figures of agreement across $N$ at fixed cutoff, and a factor of 30 change between cutoffs. So the finite Weil form assigns each zero a well-defined effective residue, that residue is a **function of the cutoff alone**, and at $c=2000$ it is about $1/14$ rather than $1$. That is a much more informative statement than "the pole model fails", and it is what a corrected §4 should say.
 
 I expected the arithmetic Weil form to be well modelled by the pure pole sum $\sum_\rho 1/(s-\rho)$, i.e. that its induced inner product would be close to $L^2(\nu_\zeta)$ with $\nu_\zeta$ the zeta-zero measure of (c). **It is not.** Using X-0001's $Q_W$ and the exact kernel vector, dps 60:
 
