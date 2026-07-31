@@ -98,10 +98,12 @@ Matches C30 full-matrix bisect. Continues rising slowly. Tentative C37 fits:
 `a + b/N^2 + c/N^4` → `a_inf ≈ 0.97584` (r²≈0.99995); pure `a+b/N^3` → `≈0.97576`.
 Tiny-N only — not a limit theorem.
 
-## Even-kernel ratio (C35)
+## Even-kernel ratio (C35 / C38 / C39)
 
 `|v_0/v_1|` ≈ 2.35–2.42 on the pass branch, **almost independent of N** at fixed α
-(mass on `{0,±1}` ≈ 0.9999). Nearest naive constant among toys was `√6≈2.449` (Δ~0.066) — not convincing. Ratio drifts gently with α.
+(mass on `{0,±1}` ≈ 0.9999). Raw even 2×2 is only ~0.05 accurate (C38).
+**Even Schur of the rest onto `{0,±1}` recovers the full ratio to ~1e-13** (C39).
+So the kernel is exactly the nullvector of that 2×2 even Schur block.
 
 ## Gaussian control (C36)
 
