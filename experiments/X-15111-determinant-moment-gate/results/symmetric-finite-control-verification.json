@@ -1,0 +1,30 @@
+{
+  "certificate_sha256": "0763354384cd9346dc6b3ef4d02f0edc75b08f6b37123db6f32a075fa857db03",
+  "dimension": 6,
+  "hankel_leading_minors": [
+    {"denominator": 18, "numerator": 49},
+    {"denominator": 5832, "numerator": 5341},
+    {"denominator": 13122, "numerator": 25}
+  ],
+  "max_order": 12,
+  "scope": "finite formal determinant control only; no xi moment identity",
+  "shifted_hankel_leading_minors": [
+    {"denominator": 648, "numerator": 1393},
+    {"denominator": 209952, "numerator": 37729},
+    {"denominator": 472392, "numerator": 25}
+  ],
+  "status": "CERTIFIED_FINITE_DET2_MOMENT_GATE",
+  "trace_moments": {
+    "2": {"denominator": 18, "numerator": 49},
+    "3": 0,
+    "4": {"denominator": 648, "numerator": 1393},
+    "5": 0,
+    "6": {"denominator": 23328, "numerator": 47449},
+    "7": 0,
+    "8": {"denominator": 839808, "numerator": 1686433},
+    "9": 0,
+    "10": {"denominator": 30233088, "numerator": 60526249},
+    "11": 0,
+    "12": {"denominator": 1088391168, "numerator": 2177317873}
+  }
+}
