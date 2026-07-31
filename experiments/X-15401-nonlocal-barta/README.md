@@ -1,53 +1,64 @@
-# X-15401 — Exact nonlocal Barta and polar-rank regression
+# X-15401 — Exact signed-edge Barta and polar-rank regression
 
 Status: exact finite synthetic regression; continuum Suzuki producer pending  
 Agent: `gpt56-05-l`  
 Issue: #154  
-Claims: L-15401, T-15401
+Claims: L-15401, L-15402, T-15401
 
 ## Purpose
 
 The positive RH route needs lower bounds for the **complete** localized Weil
-operator, not only positive finite Ritz matrices.  L-15401 rewrites Suzuki's
+operator, not only positive finite Ritz matrices. L-15401 rewrites Suzuki's
 scaled form as
 
 ```text
-positive Markov jump form
+positive continuous and prime jump form
 + explicit local potential
 + positive cosh rank one
 - negative sinh rank one.
 ```
 
-T-15401 then gives two exact lower-floor gates:
+L-15402 shows that odd parity strengthens this to an exact positive
+**signed-edge** representation: ordinary edges use `|f_i-f_j|^2`, while
+cross-origin edges use `|f_i+f_j|^2`. The same positive supersolution controls
+both signs because the sign remains in the nonnegative transformed edge square.
 
-1. a positive supersolution supplies an ambient Barta floor for the entire
-   Markov base;
-2. one Birman--Schwinger scalar controls the only dangerous polar channel.
+T-15401 supplies an alternative full-space route: a Barta floor for the Markov
+base plus one Birman--Schwinger scalar for the negative polar channel.
 
-X-15401 verifies the finite graph analogue using Python integers and
+X-15401 verifies both finite algebraic mechanisms using Python integers and
 `fractions.Fraction` only.
 
 ## Synthetic model
 
-The graph has three vertices, path jump weights `10,10`, potential
+The graph has three vertices, two edge weights `10,10`, and signs
+
+```text
+(+1,-1),
+```
+
+so the second edge contributes `10|f_1+f_2|^2`. The potential is
 
 ```text
 (11, 1, -7/3),
 ```
 
-and positive supersolution
+and the positive supersolution is
 
 ```text
 psi=(1,2,3).
 ```
 
-Although the third local potential is negative, the exact Barta ratios are
+Although the third local potential is negative, the exact signed-edge Barta
+values are
 
 ```text
-(H psi)_i / psi_i = 1, 1, 1.
+1, 1, 1.
 ```
 
-Thus the complete graph base satisfies `H>=I`.
+The local values are sign-independent; the negative edge sign appears only in
+the nonnegative transformed remainder. Thus the complete signed graph base is
+bounded below by `1`.
 
 The polar source vectors are
 
@@ -83,6 +94,11 @@ Hence
 ```
 
 and T-15401 certifies the complete polar-corrected matrix above `1/2`.
+The final exact shifted LDL pivots are
+
+```text
+41/2, 1665/82, 125/666.
+```
 
 The crude norm estimate would give
 
@@ -96,10 +112,11 @@ so the exact scalar gate is materially stronger.
 
 The checker reconstructs:
 
-- every positive jump edge and graph Laplacian entry;
-- every pointwise Barta ratio;
-- the exact ground-state representation on a nontrivial test vector;
-- the signature identity
+- every positive edge weight and its sign;
+- the signed dense matrix;
+- every sign-independent local Barta value;
+- the exact signed-edge ground-state identity on a nontrivial vector;
+- the polar signature identity
   `a(u+u-*+u-u+*)=2a(cc*-ss*)`;
 - exact positive LDL pivots for `H-lambda I`;
 - the exact odd resolvent solve;
@@ -114,9 +131,10 @@ No supplied matrix, inverse, pivot, or verdict is trusted.
 python verify.py certificates/synthetic.json \
   --output results/synthetic-verification.json
 python -m unittest discover -s tests -v
+python -m compileall -q verify.py tests
 ```
 
-Nine adversarial tests pass.
+Ten adversarial tests pass.
 
 ## Mutation coverage
 
@@ -124,6 +142,7 @@ The tests reject:
 
 - Boolean dimensions;
 - duplicate edges;
+- an invalid edge sign;
 - nonpositive supersolutions;
 - a false Barta floor;
 - a false resolvent value;
@@ -131,9 +150,9 @@ The tests reject:
 - exact equality at the Birman--Schwinger boundary;
 - malformed certificate data.
 
-## Continuum production adapter
+## Continuum production adapters
 
-A future Suzuki certificate must replace the finite graph data with:
+A future full-space Suzuki certificate must replace the graph data with:
 
 1. the cancellation-safe continuous kernel `K_a`;
 2. a complete prime-shift manifest;
@@ -142,11 +161,14 @@ A future Suzuki certificate must replace the finite graph data with:
 5. a partition proving the pointwise Barta residual on every cell;
 6. one ambient upper enclosure of the odd `sinh` resolvent scalar.
 
+The stronger odd-only adapter instead uses the exact signed-edge channels of
+L-15402 and requires no polar resolvent.
+
 The standard-library checker should consume only rational interval summaries;
 special functions and quadrature remain producer responsibilities.
 
 ## Proof boundary
 
-The retained result concerns a finite synthetic rational matrix.  It does not
+The retained result concerns a finite synthetic rational matrix. It does not
 evaluate the Riemann zeta function, Suzuki's kernel, or a localized Weil form.
 No RH conclusion is drawn from X-15401 itself.
