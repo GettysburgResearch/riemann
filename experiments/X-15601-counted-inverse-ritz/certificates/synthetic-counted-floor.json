@@ -1,0 +1,27 @@
+{
+  "schema": "riemann.x15601-counted-inverse-ritz.v1",
+  "classification": "SYNTHETIC_MODEL",
+  "dimension": 1,
+  "gamma": {"numerator": 1, "denominator": 2},
+  "t": {"numerator": 1, "denominator": 4},
+  "q_upper": {"numerator": -1249, "denominator": 313},
+  "claimed_floor": {"numerator": -3, "denominator": 4996},
+  "full_operator": [
+    [
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 1, "denominator": 100}
+    ],
+    [
+      {"numerator": 1, "denominator": 100},
+      {"numerator": 1, "denominator": 1}
+    ]
+  ],
+  "trial_basis": [
+    [{"numerator": 1, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}]
+  ],
+  "count_subspace": [
+    [{"numerator": 1, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}]
+  ]
+}
