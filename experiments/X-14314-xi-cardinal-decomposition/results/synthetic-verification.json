@@ -1,0 +1,28 @@
+{
+  "analytic_claim": "L-14321",
+  "cardinal_root_values": [
+    [
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "1"}},
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "0"}},
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "0"}},
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "0"}}
+    ],
+    [
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "0"}},
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "1"}},
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "0"}},
+      {"imag": {"denominator": "1", "numerator": "0"}, "real": {"denominator": "1", "numerator": "0"}}
+    ]
+  ],
+  "classification": "SYNTHETIC_MODEL",
+  "decomposition_check": {"denominator": "1", "numerator": "8"},
+  "degree": 4,
+  "exact_proof_object_sha256": "cd9872f6200fad83bad0a58df661558e471cf2dc2eb920d13c8d9e697f5e89c9",
+  "global_form": {"denominator": "1", "numerator": "8"},
+  "proof_boundary": "Exact synthetic polynomial/zero-sum algebra. A Riemann-Xi use also requires the Fourier-kernel, simple-zero, spectral-form, and localization gates.",
+  "residual_form": {"denominator": "1", "numerator": "-2"},
+  "schema": "riemann.x14314-xi-cardinal-decomposition-verification.v1",
+  "selected_count": 2,
+  "selected_positive_form": {"denominator": "1", "numerator": "10"},
+  "verdict": "CERTIFIED_XI_CARDINAL_SPECTRAL_DECOMPOSITION"
+}
