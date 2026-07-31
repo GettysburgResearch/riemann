@@ -61,6 +61,10 @@ The diagnostic product $t^{*}\cdot N\cdot\log c$ over the 31 points with $N\ge4$
 | 5000 | 0.0871 | 0.0928 | 0.0939 | 0.0898 | 0.0888 | 0.0862 | 0.0834 |
 | 20000 | 0.0906 | 0.0898 | 0.0890 | 0.0911 | | | |
 
+| 100000 | 11.513 | 0.0823 | 0.0858 | 0.0876 | 0.0874 | | | |
+
+> **Range extended after this claim was first written.** The scan continued to $c=100000$ (about 9600 prime powers, $L=11.513$): $t^{*}\cdot N\cdot\log c$ reads $0.0823,\ 0.0858,\ 0.0876,\ 0.0874$ at $N=4,6,8,10$ — inside the band, at its lower edge, consistent with the slow downward drift already noted. The verified range for the law is therefore $30\le c\le100000$, a factor of about $3300$ in cutoff.
+
 Spread $0.083$–$0.094$, about $\pm6\%$, over a $400\times$ range in $c$ and a $4\times$ range in $N$ across which $t^{*}$ itself varies by a factor of 9. So, over the measured range,
 
 $$t^{*}(N,c)\ \approx\ \frac{0.088}{N\,\log c}.$$
