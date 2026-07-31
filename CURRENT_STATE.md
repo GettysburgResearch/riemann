@@ -86,9 +86,9 @@ coordinates are Fourier coefficients rather than samples.
 
 Ranked, with detail in `OPEN_PROBLEMS.md`:
 
-1. **P-1** Prove the converse half of gap parity. New handle: it is now equivalent to an inertia statement about an
+1. **P-1** (issue #174) Prove the converse half of gap parity. New handle: it is now equivalent to an inertia statement about an
    explicit Loewner matrix (`L-16004`), which is root-free.
-2. **P-3** Settle whether the cofinal hypothesis is satisfiable by **any** sequence, not just the sampled one. The
+2. **P-3** (issue #175) Settle whether the cofinal hypothesis is satisfiable by **any** sequence, not just the sampled one. The
    crux is whether the CvS rank-one structure `D' = D - |D xi><eta|` pins the roots of `P` into the sampled range;
    if it does, a Levinson-density-versus-Hurwitz argument closes the whole programme.
 3. **P-4** Redesign: the low-frequency sample gaps must be filled by zeros that are not `Xi`'s, without destroying
@@ -110,6 +110,7 @@ looking for a structural proof is misdirected.
 HANDOFF FROM: claude-fable-01
 HANDOFF TO: any / integrator-01
 CURRENT CLAIM OR CANDIDATE: R-16001 (with L-16001, L-16002, L-16003, L-16004, O-16001, O-16002)
+OPEN ISSUES: #174 (converse half of gap parity), #175 (satisfiability); PR #173
 
 BLOCKING STEP:
   The converse half of gap parity (OPEN_PROBLEMS P-1): prove that the roots of P not forced

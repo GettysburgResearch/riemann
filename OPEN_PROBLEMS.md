@@ -7,7 +7,7 @@ Each entry: the problem, why it matters, what would settle it, and the current b
 
 ---
 
-## P-1. Prove the converse half of gap parity *(highest value, most tractable)*
+## P-1. Prove the converse half of gap parity *(highest value, most tractable)* — issue #174
 
 `L-16003`(ii) proves `#real roots >= #same-sign adjacent pairs`. In every controlled case with an exactly
 band-limited target the bound is **attained** (9/9), which is what makes the census of `R-16001` a clean statement
@@ -37,7 +37,7 @@ boundary term near the origin.
 
 **What would settle the saturation law.** Probably P-1 plus a count of the sample gaps in which `F` has no zero.
 
-## P-3. Is the cofinal hypothesis satisfiable by **any** target sequence?
+## P-3. Is the cofinal hypothesis satisfiable by **any** target sequence? — issue #175
 
 `R-16001` closes the sampled-`Xi` family. It does **not** close the programme. The sharp question:
 
