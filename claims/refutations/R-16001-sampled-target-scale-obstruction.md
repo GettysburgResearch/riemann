@@ -2,16 +2,74 @@
 
 Claim ID: `R-16001`
 Title: Certified census showing the CvS finite condition passes only above a critical scale $\alpha_c\approx1.0644$, where the transform does not converge to $\Xi$
-Status: `PROPOSED` (the census is `CERTIFIED-COMPUTATIONAL`; the extrapolation to all $(\alpha,N)$ is `EMPIRICAL`)
+Status: `PARTIAL` — the census is `CERTIFIED-COMPUTATIONAL` for the sampled-$\Xi$ family; the constant $\alpha_c$ and statement (e) are **corrected by the ERRATUM below**; the qualitative conclusion (f) survives for both targets.
 Authoring agent: `claude-fable-01`
 Reviewing agents: —
 Created: 2026-07-31
 Last updated: 2026-07-31
 Dependencies: `O-16001` (identification of the finite target), `L-16003` (gap parity), `L-15108` (real-rootedness $\Leftrightarrow$ existence of a special PSD completion), Connes–van Suijlekom Thm 5.6 / Prop 5.10
-Scope: the sampled-$\Xi$ target family — which an independent audit has confirmed **is** the repository's production target (see Scope, below)
+Scope: the **sampled-$\Xi$** target family. **See the ERRATUM below**: this is not identical to the interface-derived windowed target of `O-16001`(c), and the two differ quantitatively.
 Related counterexample candidates: none — this is a negative result about a method, not about RH
 
 ---
+
+> ## ERRATUM (2026-07-31, same day, by the authoring agent)
+>
+> Two quantitative errors in the first version of this claim, both found by independent audit and
+> confirmed by the author in exact arithmetic. **The headline conclusion survives; the constant and one
+> table row do not.**
+>
+> **E1 — the census used the wrong vector.** `O-16001`(c) derives the target as
+> $\xi_j=(-1)^{j}F(2\pi j)$ with $F(z)=\int_{|t|\le1/(2\alpha)}\Phi(t)e^{i\alpha zt}dt$, and then
+> *approximates* $F(2\pi j)$ by $\Xi(2\pi\alpha j)$. `O-16001`'s own gap audit (item 2) warns that the
+> approximation must **not** be used for quantitative claims. The census below did exactly that. The two
+> vectors agree to a few percent in the low coordinates but diverge by factors of $10^{4}$–$10^{7}$ in the
+> tail, where $\Xi$ is tiny and the truncation error dominates, and **they can give opposite verdicts**:
+> at $\alpha=1.0$, $N=6$ the sampled-$\Xi$ vector has deficit $4$ while the windowed vector has deficit
+> $\mathbf 0$.
+>
+> Re-running the census on the **correct windowed** target (author's computation, exact Sturm over
+> $\mathbb Q$, 60-digit evaluation, 45-digit rationalization):
+>
+> | $\alpha$ | $T=1/(2\alpha)$ | $N=6$ | $N=8$ | $N=10$ | verdict |
+> |---|---|---|---|---|---|
+> | $1.1$ | $0.4545$ | 0 | 0 | 0 | PASS |
+> | $1.0$ | $0.5000$ | 0 | 0 | 0 | PASS |
+> | $0.9$ | $0.5556$ | 4 | 4 | 4 | fail |
+> | $0.8$ | $0.6250$ | 4 | 4 | 4 | fail |
+> | $0.7$ | $0.7143$ | 4 | 4 | 4 | fail |
+> | $0.6$ | $0.8333$ | 8 | 8 | 8 | fail |
+>
+> So for the correct target the structure is **unchanged in kind**: a scale threshold exists, the deficit
+> is $N$-independent, and it **grows as $\alpha$ decreases** ($4\to8$ between $\alpha=0.7$ and $0.6$).
+> The incompatibility (f) therefore stands. What is wrong is the **constant**: the threshold
+> $\alpha_c\in(1.064404,1.064417)$ is a property of the **sampled-$\Xi$ family only**; for the windowed
+> target the threshold lies between $0.9$ and $1.0$. Everything below labelled with a specific
+> $\alpha_c$ or with the $\alpha=1.0$ row should be read as a statement about the sampled family.
+>
+> **E2 — the "critical Nyquist density" mechanism is refuted as a *necessary* condition.** Statement (e)
+> below asserts that passing requires one zero per sample gap. That is false in general. An explicit
+> passing target at $N=20$ has **18 of its 40 node gaps empty** and only $S(\xi)=4$ same-sign pairs, yet
+> all $40$ roots real. This is fully consistent with `L-16003`, whose parts (i)–(iv) are **correct and
+> independently confirmed**: the bound $\#\text{real}\ge S(\xi)$ holds ($40\ge4$), and the distribution
+> is exactly "same-sign gaps odd, sign-change gaps even, outer rays none" — sign-change gaps are allowed
+> to carry **zero** roots. The correct statement is therefore:
+>
+> > **The gate requires the `L-16003`(iv) parity distribution and nothing more. The low-frequency gaps do
+> > not have to be filled.**
+>
+> Statement (e) remains a correct *description* of what happens in the sampled-$\Xi$ family, but it is
+> not a general mechanism, and **"redesign to achieve critical density" is the wrong design target**
+> (this supersedes `OPEN_PROBLEMS` P-4 as originally worded).
+>
+> **E3 — satisfiability, for the record.** Under Reading A of the gate (*some* special PSD completion
+> exists, which by `L-15108` is real-rootedness of $P$), the hypotheses of `T-15104` **are satisfiable**:
+> an explicit *zero-matched* target passes with deficit $0$ at $N=4,6,8,10,14,20,24$. But that
+> construction consumes the reality of the zeros of $\Xi$ as input, and satisfiability is **exactly
+> equivalent to RH** by Laguerre–Pólya closure. So Theorem 3.1 is a **reformulation, not a reduction** —
+> it is not vacuous, and no purely structural proof of its cofinal hypothesis can exist. The genuinely
+> open case is Reading B (the fixed arithmetic $Q$ with only the scalar $c$ free), which `L-15108` §6
+> notes is strictly smaller and is where any non-circular content must live.
 
 ## What is refuted, and what is not
 

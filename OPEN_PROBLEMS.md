@@ -37,7 +37,29 @@ boundary term near the origin.
 
 **What would settle the saturation law.** Probably P-1 plus a count of the sample gaps in which `F` has no zero.
 
-## P-3. Is the cofinal hypothesis satisfiable by **any** target sequence? — issue #175
+## P-3. Is the cofinal hypothesis satisfiable by **any** target sequence? — issue #175 — **ANSWERED (Reading A)**
+
+**Answer: YES, and satisfiability is exactly equivalent to RH.** An explicit *zero-matched* target passes with
+deficit 0 at `N = 4, 6, 8, 10, 14, 20, 24`, verified by exact Sturm counting. So `T-15104` and the working note's
+Theorem 3.1 are **not vacuous** — but they are a **reformulation, not a reduction**: the construction consumes the
+reality of the zeros of `Xi` as input, and by Laguerre–Pólya closure any such cofinal hypothesis is equivalent to
+RH. No purely structural proof of it can exist.
+
+The density argument sketched below **fails**, at exactly the step the sketch itself flagged as the crux: the CvS
+rank-one structure does **not** localize the roots of `P` enough to force a conflict between Levinson density and
+Hurwitz.
+
+**What remains open is Reading B.** The gate has two inequivalent readings, and only one is now settled:
+
+- **Reading A** — *some* special PSD completion with `ker = R p` exists. By `L-15108` this is real-rootedness of
+  `P`. **Settled: satisfiable, equivalent to RH.**
+- **Reading B** — the **given arithmetic** `Q` is fixed and only the scalar `c` may be chosen (`T-15104.4`).
+  `L-15108` §6 states this subfamily is *strictly smaller* and is "a noncircular sufficient test that can, in
+  principle, be proved from arithmetic structure". **This is where any non-circular content must live, and it is
+  untested.** The cheapest decisive experiment: take the zero-matched `xi` at `N = 6`, build the arithmetic `Q_6`,
+  and test whether a scalar `c` exists with `T(c) >= 0`, `ker = R xi`. An 11×11 problem.
+
+### Original framing (retained for the record)
 
 `R-16001` closes the sampled-`Xi` family. It does **not** close the programme. The sharp question:
 
@@ -63,7 +85,15 @@ uniformly to `Xi`" is **equivalent** to RH, not merely sufficient. No purely str
 hypothesis of this shape can exist; genuine arithmetic input is required, and the only visible place for it to
 enter is the Weil explicit formula.
 
-## P-4. Redesign the finite construction
+## P-4. Redesign the finite construction — **premise corrected**
+
+**The original design target was wrong.** This section first said the target transform must carry "essentially one
+zero per sample gap" (critical Nyquist density). That is **refuted as a necessary condition**: a passing target at
+`N = 20` has 18 of its 40 node gaps **empty** and only `S(xi) = 4` same-sign pairs, yet all 40 roots real. The
+correct requirement is the `L-16003`(iv) parity distribution and nothing more — sign-change gaps may carry **zero**
+roots, and the low-frequency gaps do **not** have to be filled. Retire "achieve critical density" as a design goal.
+
+### Original framing (retained for the record)
 
 `L-16003`(iv) states the requirement exactly: the target transform must carry essentially one zero per sample gap
 while approximating `Xi`. Since `Xi` has no zeros below `w = 14.1347`, **the low-frequency gaps must be filled by

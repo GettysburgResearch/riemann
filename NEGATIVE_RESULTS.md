@@ -62,6 +62,26 @@ minors or an exact congruence. **Audit every certificate in the repository that 
 
 ---
 
+### R-4. "Sampled `Xi` and the windowed transform are interchangeable as the finite target"
+
+`O-16001`(c) derives the target as `xi_j = (-1)^j F(2 pi j)` and then approximates `F(2 pi j)` by
+`Xi(2 pi alpha j)`. Its own gap audit (item 2) warns the approximation must not be used quantitatively. `R-16001`'s
+census used it anyway. The two vectors agree to a few percent in the low coordinates but diverge by factors of
+`1e4`–`1e7` in the tail, where `Xi` is tiny and the truncation error dominates, and **they give opposite verdicts**
+at `alpha = 1.0, N = 6` (deficit 4 versus deficit 0). The threshold `alpha_c ~ 1.0644` is a property of the
+**sampled** family only; for the windowed target the threshold lies between 0.9 and 1.0.
+
+`R-16001`'s qualitative conclusion survives — deficit `N`-independent and growing as `alpha` decreases, for both
+targets — but its constant does not. **Lesson: when a claim's own gap audit says "do not substitute here", the
+census must honour it.** See `R-16001`'s ERRATUM.
+
+### R-5. "Passing the gate requires critical (Nyquist) zero density"
+
+Asserted in `R-16001`(e). **Refuted as a necessary condition**: a passing target at `N = 20` leaves 18 of 40 node
+gaps empty with `S(xi) = 4`, yet is fully real-rooted. Consistent with `L-16003`, whose parts (i)–(iv) are correct
+and independently confirmed — sign-change gaps are permitted to carry zero roots. Remains a correct *description*
+of the sampled-`Xi` family; it is not a general mechanism and is the wrong design target.
+
 ## 3. Attractive traps
 
 ### T-1. "`Phi > 0`, so the finite target is positive, so the Finsler condition is vacuous" — `O-16001`(e)
