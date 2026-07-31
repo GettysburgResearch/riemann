@@ -135,10 +135,17 @@ boxed:
 J subset (2,4/sqrt(3))                                   (L-16212.14)
 ```
 
-is a **single-alias window**: no `k>=2` term has a stationary point there.
-Repeated integration by parts makes all higher-alias contributions
-`O_J(gamma^-M)` for any fixed `M`, provided the radial amplitudes have the
-standard finite symbol bounds.
+is a **single-stationary-alias window**: no `k>=2` term has a stationary point
+there.
+
+Because every higher-alias integral starts at the finite endpoint `t=0`, one
+must retain its nonstationary boundary contribution. One integration by parts
+gives `O_J(gamma^-1)` under the standard symbol bounds; after subtracting the
+finite endpoint asymptotic, repeated integration by parts controls the remainder
+to arbitrary order. The first-alias stationary contribution is
+`Theta(gamma^-1/2)` away from the fold, so every un-subtracted higher-alias
+boundary term is smaller by `O(gamma^-1/2)`. No false `O(gamma^-M)` claim is
+made for the complete half-line integral.
 
 ## 5. Fixed-mode phase separation
 
@@ -182,8 +189,9 @@ The common amplitude may be replaced by uniformly comparable mode-dependent
 amplitudes without changing the conclusion.
 
 Stationary phase on the two nondegenerate branches gives normalized spectral
-profiles `Phi_4,Phi_8`. After discarding oscillatory cross-branch terms, their
-limiting Gram on `J` is a finite positive weighted sum of matrices of the form
+profiles `Phi_4,Phi_8`. After discarding oscillatory cross-branch terms and the
+lower-order nonstationary alias boundary terms, their limiting Gram on `J` is a
+finite positive weighted sum of matrices of the form
 
 ```text
 [ 1                 exp(-4i theta(z)) ]
@@ -261,12 +269,13 @@ R_lambda=2pi lambda^2.                                   (L-16212.25)
 
 ## 10. What remains
 
-The phase geometry, single-alias window, and conditional Gram argument are
-complete. The remaining source-level proof obligations are:
+The phase geometry, single-stationary-alias window, and conditional Gram
+argument are complete. The remaining source-level proof obligations are:
 
 1. identify the CCM normalized Fourier leakage with Dunster's radial solution;
 2. prove the amplitude normalization (L-16212.17) relative to `sqrt(d_n)`;
-3. propagate Dunster's explicit error through the arithmetic Poisson sum;
+3. propagate Dunster's explicit error and every endpoint term through the
+   arithmetic Poisson sum;
 4. prove the fold variation and horizontal-strip budgets globally.
 
 These are scalar fixed-mode asymptotic estimates. No matrix-level
