@@ -98,7 +98,21 @@ and for the **arithmetic** $\Omega$ at cutoff 2000: at $N=6$ the fractions are $
 >
 > Redone over **even $k$ only**: 0.62 (cutoff 2000, $N=4$), 0.36 ($N=6$), 0.44 ($N=8$), 0.83 (cutoff 500, $N=6$). **So the conclusion of §4 survives** — the residual against the *unit-residue* $\nu_\zeta$ really is order one — but it survives for a weaker reason than I claimed, and the specific numbers below should not be quoted. §4a replaces this section's diagnosis with a sharper one.
 
-## 4a. Redone: the form **does** have a representing measure; it is the *residues* that are wrong
+## 4a. Redone twice — and the second redo removes the arithmetic content entirely
+
+> **ERRATUM 2 (from the PR #173 second-pass review, verified here).** §4a below reported the Hankel property of the transported Gram matrix as *evidence* that the arithmetic form has a representing measure. **It is not evidence of anything arithmetic: the identity is universal for Loewner matrices.**
+>
+> The reviewer's proof: with barycentric weights $w_i=1/\prod_{k\ne i}(\lambda_i-\lambda_k)$ one has $\sum_i w_i\lambda_i^{r}=0$ for $r<n$, and the divided-difference identity then gives $H_{a+1,b}-H_{a,b+1}=0$ identically. Equivalently, via $\psi[x,y]=\frac1{2\pi i}\oint\frac{\psi(t)\,dt}{(t-x)(t-y)}$ and $\sum_i w_i\lambda_i^{a}/(t-\lambda_i)=t^{a}/\tilde\Omega(t)$ for $a\le n$, $M_{ab}=\frac1{2\pi i}\oint\psi(t)t^{a+b}\tilde\Omega(t)^{-2}dt$ — manifestly a function of $a+b$ alone.
+>
+> Verified across ten sources at dps 80 — $x$, $x^2$, $x^3$, $x^5-2x$, $\sin x$, $\arctan(x/20)$, $x/(1+x^2)$, $1/(x-30.5)$, $\log(x+40)$, $e^{x/9}$ — odd, even and neither, polynomial, oscillatory, Pick, rational and transcendental. **Every one has Hankel defect $\sim10^{-81}$.** So the $10^{-105}$–$10^{-198}$ figures below are roundoff around a universal identity, exactly as the reviewer says.
+>
+> **And I initially disputed this, wrongly, by the same $0/0$ mistake for the fourth time.** My first re-test normalised each comparison by $\max(|H_{a+1,b}|,|H_{a,b+1}|)$; for a symmetric source both are *structurally* zero on half the entries, so it returned $O(1)$ noise and appeared to give counterexamples ($x^3$, $\sin$, $\arctan$ all "failing"). Normalising by the global matrix scale, they all pass. The recurring failure mode — reading a structurally-zero quantity as a measurement — is now four for four in this session and is recorded as such in `O-16008`§5.
+>
+> **A second correction, where I could not confirm the reviewer either.** The review states that the extracted Gauss rule represents the *critical pencil*, $Q-t^{*}\eta\eta^{\mathsf T}=\sum_kA_k\ell(r_k)\ell(r_k)^{\mathsf T}$. Checked entrywise at $(c,N)=(2000,4),(2000,6),(20000,6)$: relative error **0.74, 0.84, 0.86** — it does not hold as written. Nor does it reconstruct $Q$ (relative error 1.0). The closest true statement I could find is $R\approx Q-\kappa\eta\eta^{\mathsf T}$ — $Q-R$ is constant to within 3–7% of its scale — with $\kappa/t^{*}=3.80,\,6.15,\,6.98$, growing roughly like $N$. **So the precise relation between the extracted rule and $Q$ is unresolved** and I adopt neither story. What the review is unambiguously right about is the negative part: the extracted rule is **one** representing object, not "the measure $Q$ carries", and §4a's framing overstated it.
+>
+> **What survives.** The residue match $A_k\approx a_c(\gamma_k)$ is the one substantive observation, and it is now *explained* rather than measured — see `T-16002`§1.
+
+## 4a. [superseded framing retained below] Redone: the form has a representing measure; it is the *residues* that are wrong
 
 Applying the same even/odd discipline to a stronger test changes the picture, and in the programme's favour.
 
@@ -163,9 +177,11 @@ So $\psi_W$ is *not* a pole sum over the zeta zeros in any quantitative sense �
 1. **`O-16004`§2 is explained, and downgraded accordingly.** The gate is a pole/spectral detector for whatever source it is fed. Feeding it the Weil source returns the zeta zeros because the Weil source imitates $\sum_\rho(s-\rho)^{-1}$; that is the explicit formula, and the ten-digit agreement is a very good regression test and nothing more. It is not independent evidence about zeta.
 2. **Real-rootedness was never going to be informative.** By (b) it is the orthogonal-polynomial fact, conditional only on $Q\succ0$. This sharpens `O-16004`§4 and the e2 finding into something provable: given positivity, the rest of the CvS conclusion is automatic. The entire arithmetic content of Reading B sits in $Q_W\succeq0$, i.e. in finite Weil positivity.
 3. **The $1/N$ decay of $t^{*}$ is not a defect.** By (b), $t^{*}(N)=\min\{x^{\mathsf T}Q_Wx:\sum_jx_j=1\}$ is the minimum of the truncated Weil functional over normalised test vectors. Its decay to $0$ is the statement that **Weil positivity is sharp** — exactly what one expects — rather than a sign that the pencil parameter is being squeezed out. (The e2 report reads the decay as a loss of freedom; on this reading it is instead a measurement of how close to degenerate the Weil functional is at level $N$, which is a quantity worth tabulating in its own right.)
-4. **A cheap one-sided diagnostic.** $t^{*}<0$ implies $\eta^{\mathsf T}Q^{-1}\eta<0$, which is impossible for $Q\succeq0$ invertible. So **$t^{*}<0\Rightarrow Q$ is indefinite**, detected by one linear solve rather than a congruence — much cheaper on these ill-conditioned matrices, though it inherits the same precision requirement.
+4. **A cheap one-sided diagnostic.** $t^{*}<0$ implies $\eta^{\mathsf T}Q^{-1}\eta<0$, which is impossible for $Q\succeq0$ invertible. So **$t^{*}<0\Rightarrow Q\not\succeq0$**, detected by one linear solve rather than a congruence — much cheaper on these ill-conditioned matrices, though it inherits the same precision requirement.
 
-> **Correction, same day.** I first wrote that $t^{*}<0$ is *equivalent* to a positivity violation. **That is false**, and I have a counterexample from my own run. The implication holds in one direction only: $t^{*}>0$ does **not** imply $Q\succeq0$, because when $Q$ is indefinite the quantity $1/(\eta^{\mathsf T}Q^{-1}\eta)$ is a *saddle* value of $x^{\mathsf T}Qx$ on $\{\eta^{\mathsf T}x=1\}$, not a minimum — the constrained infimum is then $-\infty$. Measured instances (from the sign scan of `O-16005`, cutoff 200, $N=6$): the pattern $(-1,-1,-1)$ has inertia $(12,1,0)$ with $t^{*}=+3.4387\times10^{-3}$, and $(1,1,-1)$ has inertia $(11,2,0)$ with $t^{*}=+6.5800\times10^{-3}$. Both are indefinite with a **positive** $t^{*}$. The variational statement in (b) is fine as written — it assumes $Q\succ0$ — but the screen derived from it is one-sided and must be used as such.
+> **Correction 2 (PR #173 review, verified).** I then wrote "$t^{*}<0\Rightarrow Q$ is **indefinite**". Also wrong, and weaker than stated: $t^{*}<0$ gives only "**not PSD**". Elementary counterexample $Q=-I_n$, for which $\eta^{\mathsf T}Q^{-1}\eta=-n$ and $t^{*}=-1/n<0$ while $Q$ is **negative definite**, not indefinite. Verified at $n=3,5,9$. Corrected above.
+>
+> **Correction 1, earlier the same day.** I first wrote that $t^{*}<0$ is *equivalent* to a positivity violation. **That is false**, and I have a counterexample from my own run. The implication holds in one direction only: $t^{*}>0$ does **not** imply $Q\succeq0$, because when $Q$ is indefinite the quantity $1/(\eta^{\mathsf T}Q^{-1}\eta)$ is a *saddle* value of $x^{\mathsf T}Qx$ on $\{\eta^{\mathsf T}x=1\}$, not a minimum — the constrained infimum is then $-\infty$. Measured instances (from the sign scan of `O-16005`, cutoff 200, $N=6$): the pattern $(-1,-1,-1)$ has inertia $(12,1,0)$ with $t^{*}=+3.4387\times10^{-3}$, and $(1,1,-1)$ has inertia $(11,2,0)$ with $t^{*}=+6.5800\times10^{-3}$. Both are indefinite with a **positive** $t^{*}$. The variational statement in (b) is fine as written — it assumes $Q\succ0$ — but the screen derived from it is one-sided and must be used as such.
 
 ## 6. Feasibility of the one-scalar gate, exactly
 
@@ -198,6 +214,10 @@ No choice of the scalar can repair a single negative direction in the odd sector
 | $(+,+,-)$ | $(11,2,0)$ | $+6.5800\times10^{-3}$ | $(10,2,1)$ | no |
 
 The two indefinite rows have **positive** $t^{*}$ and are nevertheless correctly rejected by the actual gate test, which is the behaviour the correction in §5(4) predicts.
+
+## 7. Two pencils, which must not be conflated
+
+Flagged in review and I agree. The **self-nominated** pencil studied throughout this claim is $Q-t\,\eta\eta^{\mathsf T}$, where the target $\xi=Q^{-1}\eta/(\eta^{\mathsf T}Q^{-1}\eta)$ is produced *by* the form. The **Reading-B** pencil of the working note is $T_p(c)=A_p+cB_p$ with a *prescribed* target $p$ — a different object with a different question attached. Results about one do not transfer to the other, and `O-16004`§4's discussion of "Reading B" should be read with that distinction in mind.
 
 ## Gap audit
 
