@@ -118,6 +118,38 @@ So $\psi_W$ is *not* a pole sum over the zeta zeros in any quantitative sense �
 
 > **Correction, same day.** I first wrote that $t^{*}<0$ is *equivalent* to a positivity violation. **That is false**, and I have a counterexample from my own run. The implication holds in one direction only: $t^{*}>0$ does **not** imply $Q\succeq0$, because when $Q$ is indefinite the quantity $1/(\eta^{\mathsf T}Q^{-1}\eta)$ is a *saddle* value of $x^{\mathsf T}Qx$ on $\{\eta^{\mathsf T}x=1\}$, not a minimum — the constrained infimum is then $-\infty$. Measured instances (from the sign scan of `O-16005`, cutoff 200, $N=6$): the pattern $(-1,-1,-1)$ has inertia $(12,1,0)$ with $t^{*}=+3.4387\times10^{-3}$, and $(1,1,-1)$ has inertia $(11,2,0)$ with $t^{*}=+6.5800\times10^{-3}$. Both are indefinite with a **positive** $t^{*}$. The variational statement in (b) is fine as written — it assumes $Q\succ0$ — but the screen derived from it is one-sided and must be used as such.
 
+## 6. Feasibility of the one-scalar gate, exactly
+
+Everything above assumed $Q\succ0$. The prior question — *for which $Q$ does a usable scalar exist at all?* — has a clean answer, and it is sharper than the "$n_-$ changes by at most one" bound recorded in `O-16004`§4.
+
+Since $\operatorname{Loewner}(\lambda)=J=\eta\eta^{\mathsf T}$ (off-diagonal $(i-j)/(i-j)=1$, diagonal $\lambda'\equiv1$), the one-scalar family is $Q-cJ$, and $J$ acts trivially on $\eta^{\perp}$.
+
+**(e) [EXACT]**
+- *Necessary.* If $Q-c\eta\eta^{\mathsf T}\succeq0$ for some real $c$, then $Q|_{\eta^{\perp}}\succeq0$. (For $x\perp\eta$, $x^{\mathsf T}(Q-c\eta\eta^{\mathsf T})x=x^{\mathsf T}Qx$.)
+- *Sufficient.* If $Q|_{\eta^{\perp}}\succ0$ strictly, such a $c$ exists; the extremal one is unique and the kernel there is one-dimensional.
+
+So **the one scalar buys exactly one direction, and only a direction that $\eta$ can see.** $Q$ itself may have a negative eigenvalue and the gate still passes — but only that one, and only if its eigenvector is not $\eta$-orthogonal.
+
+**Corollary (parity).** $\eta$ is even and the parity involution is $e_j\mapsto e_{-j}$, so **the entire odd sector lies inside $\eta^{\perp}$.** Hence:
+
+$$\text{Reading B feasible}\ \Longrightarrow\ Q_W|_{\text{odd}}\succeq0\ \text{ outright.}$$
+
+No choice of the scalar can repair a single negative direction in the odd sector. That is a genuine necessary condition on the arithmetic form which the CvS apparatus cannot supply, and it is the sharp form of the observation (made independently in a parallel report) that the pencil "cannot touch the odd sector".
+
+**Evidence.** EXACT rational congruence throughout (`experiments/X-16003-source-atlas/feas.py`).
+
+- *Necessity*, 300 random rational symmetric matrices, $n=5,6,7$, minimising $n_-(Q-cJ)$ over a 13-point grid in $c$ spanning $\pm10^{6}$: **0 violations**.
+- *Sufficiency*: the random test was **vacuous** — not one of the 300 had $Q|_{\eta^{\perp}}$ strictly positive definite, so it tested nothing, and I record that rather than quoting "0 violations" as if it were evidence. Redone on 30 designed instances $Q=M-s\eta\eta^{\mathsf T}$ with $M=G^{\mathsf T}G+I\succ0$ and $s\in\{0,1,10,100,10^{4}\}$, which satisfy the hypothesis by construction: in every case $\min_c n_-(Q-cJ)=0$, **including the 22 instances where $Q$ itself had inertia $(n-1,1,0)$.** So the pencil does repair the single negative eigenvalue exactly when the theory says it should.
+- *The gate is strictly stronger than "$t^{*}>0$"*, confirmed on X-0001 at cutoff 200, $N=6$ (dps 60):
+
+| block signs | inertia $Q$ | $t^{*}$ | inertia $Q-t^{*}J$ | PSD with 1-dim kernel? |
+|---|---|---|---|---|
+| $(+,-,-)$ | $(13,0,0)$ | $+2.8510\times10^{-3}$ | $(12,0,1)$ | **yes** |
+| $(-,-,-)$ | $(12,1,0)$ | $+3.4387\times10^{-3}$ | $(11,1,1)$ | no |
+| $(+,+,-)$ | $(11,2,0)$ | $+6.5800\times10^{-3}$ | $(10,2,1)$ | no |
+
+The two indefinite rows have **positive** $t^{*}$ and are nevertheless correctly rejected by the actual gate test, which is the behaviour the correction in §5(4) predicts.
+
 ## Gap audit
 
 1. (a)–(c) are short arguments I wrote and checked numerically; they have not been reviewed. The one place I would look hardest is the claim in (c) that $\{\ell(\mu)\}_{\mu\in M}$ is linearly independent when $\#M\le 2N+1$ — I used it implicitly in (c2) and verified it only through the numerical rank, not by the Cauchy-matrix argument.
@@ -125,6 +157,8 @@ So $\psi_W$ is *not* a pole sum over the zeta zeros in any quantitative sense �
 3. All numbers are HIGH-PRECISION FLOAT. Nothing here is certified. The X-0001 rows inherit that experiment's own uncertified archimedean truncation.
 4. §4's failure is measured against **one** candidate measure, $\nu_\zeta$ with unit weights at $\mu=\gamma\Delta$. A different normalisation of the source, or a smoothing kernel applied to the atoms, might do much better. I did not search for one; "the pole model is quantitatively wrong" should be read as "this pole model is", not as "no pole model is".
 5. The claim in §5(1) that the ten-digit agreement is "nothing more" than a regression test is a judgement, not a theorem. Someone who believes the finite gate extracts more than the explicit formula already gives should say what more, concretely.
+6. §6's sufficiency direction needs $Q|_{\eta^{\perp}}$ **strictly** positive definite; the PSD-but-singular boundary case is not settled here, and I expect it to fail in general (a kernel vector of $Q|_{\eta^{\perp}}$ that is not $Q$-orthogonal to $\eta$ should break it). I did not construct that counterexample.
+7. §6's evidence uses a finite grid in $c$ (13 points, $\pm10^{8}$). A feasible $c$ outside the grid or between grid points would be missed, so "min over the grid" is an upper bound on feasibility, not a decision procedure. The designed-instance rows are unaffected, since there feasibility was confirmed positively.
 
 ## Suggested next attack
 
