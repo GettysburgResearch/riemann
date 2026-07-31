@@ -1,0 +1,40 @@
+{
+  "schema": "riemann.x15407-eta-reflection.synthetic.v1",
+  "claimed": {
+    "h_times_window_energy": {
+      "rational": {"numerator": 2, "denominator": 1},
+      "sqrt2": {"numerator": -1, "denominator": 3}
+    }
+  },
+  "reflection_control": {
+    "F": {"numerator": 2, "denominator": 1},
+    "X": {"numerator": 3, "denominator": 1},
+    "Fprime": {"numerator": 7, "denominator": 1},
+    "zeta_second_ratio": {"numerator": -3, "denominator": 1},
+    "Fref": {"numerator": -5, "denominator": 1}
+  },
+  "selberg_control": {
+    "lambda": [
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 1, "denominator": 1},
+      {"numerator": 2, "denominator": 1},
+      {"numerator": 1, "denominator": 1},
+      {"numerator": 3, "denominator": 1},
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 0, "denominator": 1}
+    ],
+    "log_weight": [
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 1, "denominator": 1},
+      {"numerator": 2, "denominator": 1},
+      {"numerator": 2, "denominator": 1},
+      {"numerator": 3, "denominator": 1},
+      {"numerator": 3, "denominator": 1},
+      {"numerator": 4, "denominator": 1},
+      {"numerator": 4, "denominator": 1}
+    ]
+  }
+}
