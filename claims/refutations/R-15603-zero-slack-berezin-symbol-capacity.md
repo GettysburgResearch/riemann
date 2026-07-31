@@ -107,12 +107,12 @@ symbol inequality.
 
 ## 3. Every nonzero deficit localization is strictly positive
 
-Factor
+With the Fourier normalization (R-15603.1), factor
 
 \[
  D_\Gamma=K^*K,
  \qquad
- K=M_{\sqrt w}\mathcal FP_I.
+ K=(2\pi)^{-1/2}M_{\sqrt w}\mathcal FP_I.
  \tag{R-15603.9}
 \]
 
@@ -297,10 +297,10 @@ vanishing positive slack is sufficient.
 
 ## 7. Consequences for the current stack
 
-1. `L-15620.3`--`L-15620.11`, the convex trace and Berezin clipping
+1. `L-15620.4`--`L-15620.7`, the convex trace and Berezin clipping
    inequalities, remain correct.
-2. `L-15620.14`--`L-15620.19` are logically valid implications from an
-   impossible premise and must not be presented as a production target.
+2. The former zero-slack production corollary is a logically valid implication
+   from an impossible premise and must not be used as a target.
 3. The finite matrix control in `L-15618/X-15605` does not contradict this
    theorem: its positive deficit matrix is finite rank and is not a genuine
    nonzero time-frequency localization operator on `L2(I)`.
