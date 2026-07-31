@@ -1,10 +1,7 @@
 {
   "external_corrector": {
     "classification": "EXACT_RANK_PRESERVING_SOURCE_REPAIR",
-    "constraints_after_repair": [
-      "0",
-      "0"
-    ],
+    "constraints_after_repair": ["0", "0"],
     "packet_dimension": 2,
     "positive_ldl_pivots": [
       {"denominator": "1", "numerator": "2"},
@@ -22,13 +19,18 @@
       ]
     ]
   },
-  "proof_object_sha256": "9d32649d92d953d736cd8afe7bc326cd12db3fc59e8dc54ba73d8a53491a2e5c",
-  "schema": "riemann.x15603-weighted-deficit-capacity.v1",
-  "verdict": "PASS_EXACT_L15607_L15608_T15603_REGRESSION",
+  "proof_object_sha256": "54957a3ec9eae3ebf59d06576b996f4baf7126e214281d5add7d5dc9f3cbf726",
+  "schema": "riemann.x15603-weighted-deficit-capacity.v2",
+  "verdict": "PASS_EXACT_L15610_L15611_L15612_REGRESSION",
   "weighted_deficit_saturation": {
     "G": {"denominator": "1", "numerator": "2"},
     "Gamma": {"denominator": "1", "numerator": "1"},
-    "classification": "EXACT_INDEX_SATURATION_WITHOUT_SUBSPACE_ALIGNMENT",
+    "alpha": {"denominator": "20", "numerator": "17"},
+    "alpha_gram_minus_low_form_ldl_pivots": [
+      {"denominator": "2000", "numerator": "687"},
+      {"denominator": "2000", "numerator": "79"}
+    ],
+    "classification": "EXACT_INDEX_AND_TRACE_SATURATION_WITHOUT_SUBSPACE_ALIGNMENT",
     "deficit_eigenvalues": [
       {"denominator": "2", "numerator": "3"},
       {"denominator": "5", "numerator": "6"},
@@ -59,6 +61,14 @@
       {"denominator": "2000", "numerator": "889"},
       {"denominator": "2000", "numerator": "281"}
     ],
+    "trace_capture": {
+      "certified_complement_floor": {"denominator": "1", "numerator": "1"},
+      "classification": "EXACT_L15612_TRACE_CAPTURE_COMPLEMENT_FLOOR",
+      "guaranteed_packet_capture": {"denominator": "10", "numerator": "23"},
+      "required_upper": {"denominator": "1", "numerator": "1"},
+      "trace_deficit": {"denominator": "10", "numerator": "33"},
+      "uncaptured_trace_upper": {"denominator": "1", "numerator": "1"}
+    },
     "weighted_deficit_index": 2
   }
 }
