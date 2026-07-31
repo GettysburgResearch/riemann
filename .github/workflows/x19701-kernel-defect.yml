@@ -1,0 +1,34 @@
+name: x19701-kernel-defect
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-19701-kernel-defect/**'
+      - 'claims/lemmas/L-19701-*'
+      - 'claims/theorems/T-19701-*'
+      - 'claims/refutations/R-19701-*'
+      - 'claims/experiments/X-19701-*'
+      - '.github/workflows/x19701-kernel-defect.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/X-19701-kernel-defect
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Compile
+        run: python3 -m py_compile verify.py tests/test_verify.py
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests
+      - name: Exact replay
+        run: |
+          python3 verify.py certificates/synthetic.json > /tmp/x19701.json
+          cmp /tmp/x19701.json results/synthetic-verification.json
+      - name: SHA ledger
+        run: sha256sum -c SHA256SUMS

@@ -1,0 +1,55 @@
+{
+  "complement_dimension": 1,
+  "complement_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 2
+    }
+  ],
+  "corrected_offline_quadratic": {
+    "denominator": 8,
+    "numerator": -17
+  },
+  "corrected_offline_rayleigh": {
+    "denominator": 16,
+    "numerator": -17
+  },
+  "kernel_dimension": 2,
+  "line_only_schur_floor": {
+    "denominator": 16,
+    "numerator": 31
+  },
+  "line_only_schur_ldl_pivots": [
+    {
+      "denominator": 32,
+      "numerator": 63
+    },
+    {
+      "denominator": 63,
+      "numerator": 124
+    }
+  ],
+  "metric_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "denominator": 1,
+      "numerator": 1
+    }
+  ],
+  "offline_metric_norm_squared": {
+    "denominator": 1,
+    "numerator": 2
+  },
+  "proof_boundary": "Exact finite Schur and cardinal-signature arithmetic only. The zeta application additionally requires the Xi-cardinal domain, finite-support repair, form/metric capture, and normalization gates.",
+  "proof_object_sha256": "1af83681c99e1204845996f055a1bc54d98dcda85fdb73e7d97ddcfee17ca049",
+  "raw_offline_quadratic": {
+    "denominator": 1,
+    "numerator": -2
+  },
+  "schema": "riemann.x19701-kernel-defect.result.v1",
+  "verdict": "CERTIFIED_OFFLINE_CARDINAL_NEGATIVE_GAP_SURVIVES_SCHUR",
+  "verified": true
+}
