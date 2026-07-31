@@ -1,0 +1,19 @@
+{
+  "components": {
+    "assembly_radius": {"denominator": "1000", "numerator": "1"},
+    "radical_lower_loss": {"denominator": "100", "numerator": "1"},
+    "radical_row_dual_squared": {"denominator": "200", "numerator": "1"},
+    "sigma2": {"denominator": "2", "numerator": "5"},
+    "visible_ambient_schur_loss": {"denominator": "8", "numerator": "1"},
+    "visible_residual_lower_loss": {"denominator": "5", "numerator": "1"}
+  },
+  "global_floor": {"denominator": "125", "numerator": "-2"},
+  "global_negative_floor_loss": {"denominator": "125", "numerator": "2"},
+  "proof_boundary": "Exact scalar/Loewner consequence only. Production must source-bind the certified-zero frame, residual lower/cross bounds, ambient metric, radical-tail dual estimate, and assembly enclosure.",
+  "proof_object_sha256": "759fc3158c1e83a59721344c4f323f1fe0c30191d913df3c4d1d0aeb631abfb6",
+  "schema": "riemann.x15305-zero-frame-tail-gates.verification.v1",
+  "status": "CERTIFIED_POSITIVE_VISIBLE_SCHUR_AND_GLOBAL_LOWER_FLOOR",
+  "verification_sha256": "c1a2b2abb027828d9ad5c3429a1f795b52fd0ea71170dfab43dcd2b339cab1c5",
+  "verified": true,
+  "visible_schur_floor": {"denominator": "40", "numerator": "87"}
+}
