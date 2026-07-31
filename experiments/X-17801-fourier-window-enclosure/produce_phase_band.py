@@ -51,11 +51,13 @@ def transform(z: Any, arb: Any, acb: Any, dyadic: int=160) -> Any:
         r=arb(1)/(arb(2)**j)
         rz=r*z
         product *= (one-(-rz).exp())/rz
-    # The omitted random tail is supported in [0,2^-dyadic].
+    # The omitted random variable lies in [0,2^-dyadic].  Hence its transform
+    # differs from one by at most |z| eps exp(|z| eps), relative to the finite
+    # product.  Use an absolute Acb error after multiplying by |product|.
     eps=arb(1)/(arb(2)**dyadic)
     zabs=z.abs().upper()
-    delta=zabs*eps*(zabs*eps).exp()
-    product.add_error(delta)
+    relative=zabs*eps*(zabs*eps).exp()
+    product.add_error(product.abs().upper()*relative)
     h=arb(4).log()
     return (-arb(2)*z).exp() * product**2 * (one-arb(2)*(-h*z).exp())
 
