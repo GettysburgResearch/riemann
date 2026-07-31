@@ -8,7 +8,8 @@ Created: 2026-08-01
 ## Objective
 
 Certify the final selected-real-zero kernel without demanding absolute smallness
-of its exact Möbius tail.
+of its exact Möbius tail and without separating positive residual mass from the
+Schur correction prematurely.
 
 ## Required objects
 
@@ -20,7 +21,10 @@ At each finite support retain one common metric and basis for:
 4. the graph kernel \(K_Z\);
 5. the second simple-line frame \(Y\);
 6. the complete signed residual after subtracting \(Y\);
-7. the positive ambient complement and kernel cross.
+7. the **entire** already-positive sector \(P\), including visible and ambient
+   coordinates;
+8. the complete kernel-to-\(P\) cross;
+9. the triangular metric adapter to the production norm.
 
 ## Construction order
 
@@ -60,35 +64,91 @@ Require an exact or directed positive LMI
 S* M_Y S >= sigma^2 G_K.
 ```
 
-### 3. One-sided residual
+### 3. Assemble the whole positive sector
 
-Subtract the selected positive \(Y\)-zero form exactly once. Produce one complete
-signed residual matrix and certify only
-
-```text
-R_Y|K >= -omega G_K.
-```
-
-No upper bound is required.
-
-### 4. Schur cross
-
-With the same graph basis and complement metric, certify
+After the first-frame graph is formed, collect every remaining positive
+coordinate into
 
 ```text
-J* Z_K* C^-1 Z_K J <= chi G_K.
+H = [[B_K,L*],
+     [L,C_+]],
+C_+>0.
 ```
 
-### 5. Verdict
+This must include the visible quotient and the ambient complement. Do not charge
+only the old ambient cross while leaving a finite kernel-visible coupling
+outside the Schur block.
+
+### 4. Joint corrected residual — preferred
+
+Subtract the selected positive \(Y\)-zero form exactly once. Let `R_Y` be the
+complete signed residual on the graph kernel and form
+
+```text
+R_corr = R_Y-J*L* C_+^-1 L J.
+```
+
+Certify the single lower LMI
+
+```text
+R_corr >= -nu G_K.
+```
 
 The exact kernel margin is
 
 ```text
-margin = sigma^2-omega-chi.
+margin = sigma^2-nu.
 ```
 
-Accept strict positivity if `margin>0`; accept a cofinal lower-envelope level if
-`margin>=-epsilon`.
+This is the preferred proof object because positive residual mass may pay the
+Schur correction.
+
+### 5. Separated fallback
+
+If independent producers naturally emit
+
+```text
+R_Y >= -omega G_K
+J*L* C_+^-1 L J <= chi G_K,
+```
+
+then use
+
+```text
+nu <= omega+chi.
+```
+
+Retain the joint matrix anyway and attempt a direct lower LMI before accepting
+the weaker sum.
+
+### 6. Triangular metric
+
+Form the exact square-completion map
+
+```text
+L_triangle(k,p)=(k,p+C_+^-1 L k)
+```
+
+and metric
+
+```text
+G_triangle
+ =L_triangle* diag(G_K,G_+) L_triangle.
+```
+
+Certify
+
+```text
+G_triangle <= Lambda G_full.
+```
+
+A negative kernel endpoint `-epsilon` then gives the production floor
+
+```text
+-Lambda epsilon-delta,
+```
+
+where `delta` is the assembly radius.
 
 ## Frame selection
 
@@ -100,7 +160,7 @@ algorithmic row search at each fixed level:
 3. pivot the first block until `B` has a certified inverse;
 4. condition the remaining rows through `S=C-D B^-1 A`;
 5. pivot until `S` has a certified inverse;
-6. optimize the lower frame endpoint against the one-sided residual cost.
+6. optimize the selected frame jointly against the corrected residual.
 
 Greedy max-volume or QR may nominate rows, but the proof object stores only
 directed matrices and exact inequalities.
@@ -114,7 +174,8 @@ Use PR #204 as an independent residual producer:
 - optional free Dirichlet coefficients.
 
 The selected residual Weil matrix is invariant under these choices. Optimization
-may be used only for analytic norm and Schur-cross reduction.
+may be used only for analytic realization and reduction of the complete Schur
+cross. It cannot change the exact residual zero signature.
 
 ## Prohibited inferences
 
@@ -126,7 +187,10 @@ Do not infer a proof from:
 - a floating singular value;
 - positive selected mass without the complete residual;
 - optimizing Möbius coefficients and observing a better Hardy norm;
-- subtracting the same selected zero from both frame and residual.
+- subtracting the same selected zero from both frame and residual;
+- taking a minimum of separately positive kernel and visible restrictions;
+- using a bare kernel `-epsilon` floor without controlling triangular metric
+  inflation.
 
 ## Independent reproduction
 
@@ -135,6 +199,7 @@ A promoted production result should have:
 - two directed special-function backends for evaluation rows;
 - an exact rational matrix consumer;
 - independent residual assembly;
+- an independently assembled full positive-sector Schur block;
 - immutable zero-census and source provenance;
 - mutation tests for row deletion, row duplication, frame singularity,
-  residual sign, and Schur-cross inflation.
+  residual sign, cross inflation, and metric-adapter inflation.
