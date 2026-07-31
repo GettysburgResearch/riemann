@@ -49,3 +49,5 @@ screens in C1 are known to be too weak and should not be cited.
 9. **Round 5:** α* is fixed by the first two Φ terms; after α*, Loewner
    min_pos falls nearly linearly (r²≈0.99996) and hits 0 at the deficit jump
    ≈0.97505 (C20–C21). Reading-B cones stayed one-sided in coarse probes (C22).
+10. **Round 6:** soft Loewner eigenvector mass is on `j=±1` (~99%), not on
+    `j=±2`; α_def≈0.975 for N≥5 on a coarse grid (C23–C24).
