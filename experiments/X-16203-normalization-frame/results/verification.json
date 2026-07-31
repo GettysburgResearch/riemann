@@ -1,0 +1,35 @@
+{
+  "classification": "EXACT_SYNTHETIC_NORMALIZATION_AND_FRAME_AUDIT",
+  "endpoint_ledger": {
+    "l2_alias_bound_squared": "1/7776",
+    "point_alias_bound": "1/72"
+  },
+  "frame": {
+    "A": [
+      "15/16",
+      "3/4",
+      "7/16"
+    ],
+    "B": [
+      "1/16",
+      "1/4",
+      "9/16"
+    ],
+    "ambient_dimension": 5,
+    "coefficient_frame_lower_squared": "1/121",
+    "coefficient_frame_upper_squared": "1",
+    "radical_dimension": 3,
+    "x_frame_lower_squared": "1",
+    "x_frame_upper_squared": "4"
+  },
+  "leakage": {
+    "chi": "3/5",
+    "d": "2/5",
+    "positive_ray_norm_squared": "8/25",
+    "sqrt_d_ratio_squared": "4/5",
+    "total_leakage_norm_squared": "16/25"
+  },
+  "proof_boundary": "Finite exact arithmetic only. The certificate validates the algebraic normalization, radical-frame bounds, and endpoint-ledger formulas; it does not evaluate a production PSWF, zeta zero, or Weil form.",
+  "proof_object_sha256": "256920244b63d93d0b618b6803c1babeb34aa8b534ca75fb632d38ea5fcc6d63",
+  "schema": "riemann.x16203-normalization-frame.v1"
+}
