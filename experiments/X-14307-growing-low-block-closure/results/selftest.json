@@ -1,0 +1,81 @@
+{
+  "analytic_claims": [
+    "R-14301",
+    "L-14312",
+    "L-14313"
+  ],
+  "escaping_mode": {
+    "all_late_fixed_entries_zero": true,
+    "all_minimum_eigenvalues_minus_one": true,
+    "all_operator_norms_one": true,
+    "classification": "EXACT_ESCAPING_MODE_REFUTATION",
+    "fixed_prefix": 5,
+    "max_level": 12,
+    "rows": [
+      {"fixed_prefix_zero": true, "level": 1, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 2, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 3, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 4, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 5, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 6, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 7, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 8, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 9, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 10, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 11, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"},
+      {"fixed_prefix_zero": true, "level": 12, "minimum_eigenvalue_exact": "-1", "operator_norm_exact": "1"}
+    ]
+  },
+  "proof_boundary": "Exact Fraction arithmetic only.  This verifies the finite linear-algebra statements and the escaping-mode counterexample; it does not prove collective compactness or an exact radical frame for the zeta Weil low packets.",
+  "proof_object_sha256": "a97c525a0efc578ece75038764be27dc59cd040763aabfbfae233e716b03965d",
+  "radical_schur_bound": {
+    "B_lower_LDL_pivots": [
+      {"denominator": "2000", "numerator": "13"},
+      {"denominator": "3250", "numerator": "19"},
+      {"denominator": "304000", "numerator": "823"}
+    ],
+    "B_upper_LDL_pivots": [
+      {"denominator": "2000", "numerator": "3"},
+      {"denominator": "750", "numerator": "1"},
+      {"denominator": "16000", "numerator": "81"}
+    ],
+    "alpha": {"denominator": "250", "numerator": "1"},
+    "beta_squared": {"denominator": "5000", "numerator": "1"},
+    "classification": "EXACT_L14313_DIMENSION_FREE_SCHUR_CONTROL",
+    "corrected_floor_LDL_pivots": [
+      {"denominator": "94000", "numerator": "681"},
+      {"denominator": "2128125", "numerator": "14224"},
+      {"denominator": "13004800", "numerator": "45157"}
+    ],
+    "cross_LDL_pivots": [
+      {"denominator": "47000", "numerator": "7"},
+      {"denominator": "1093750", "numerator": "183"},
+      {"denominator": "915000", "numerator": "139"}
+    ],
+    "dimension": 3,
+    "h": {"denominator": "5", "numerator": "1"},
+    "lower_floor_loss": {"denominator": "200", "numerator": "1"}
+  },
+  "schema": "riemann.x14307-growing-low-block-closure.v1",
+  "tightness_bound": {
+    "L14312_total_norm_upper": {"denominator": "125", "numerator": "3"},
+    "classification": "EXACT_L14312_QUANTITATIVE_CONTROL",
+    "compressed_frobenius_squared": {"denominator": "160000", "numerator": "49"},
+    "compressed_operator_upper": {"denominator": "50", "numerator": "1"},
+    "minus_LDL_pivots": [
+      {"denominator": "500", "numerator": "7"},
+      {"denominator": "1750", "numerator": "17"},
+      {"denominator": "272000", "numerator": "6369"},
+      {"denominator": "15922500", "numerator": "386869"}
+    ],
+    "plus_LDL_pivots": [
+      {"denominator": "500", "numerator": "17"},
+      {"denominator": "2125", "numerator": "76"},
+      {"denominator": "2432000", "numerator": "59511"},
+      {"denominator": "148777500", "numerator": "3506989"}
+    ],
+    "tail_frobenius_squared": {"denominator": "100000000", "numerator": "241"},
+    "tail_operator_upper": {"denominator": "500", "numerator": "1"}
+  },
+  "verdict": "PASS_EXACT_FINITE_REGRESSIONS"
+}

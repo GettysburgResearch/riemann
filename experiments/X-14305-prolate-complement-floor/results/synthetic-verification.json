@@ -1,0 +1,46 @@
+{
+  "C0_lower": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "analytic_claim": "L-14310",
+  "certified_formula_floor": {
+    "denominator": "3",
+    "numerator": "1"
+  },
+  "claimed_complement_floor": {
+    "denominator": "3",
+    "numerator": "1"
+  },
+  "classification": "SYNTHETIC_MODEL",
+  "declared_rank_cap": 134,
+  "eta": {
+    "denominator": "2",
+    "numerator": "1"
+  },
+  "exact_proof_object_sha256": "ee5a5195f7fc51828bbc5126481c274f8be87f7141951bb2e542a876c3cf4097",
+  "floor_moat": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "kappa_upper": {
+    "denominator": "1",
+    "numerator": "1"
+  },
+  "log_omega_lower": {
+    "denominator": "1",
+    "numerator": "4"
+  },
+  "omega_upper": {
+    "denominator": "1",
+    "numerator": "100"
+  },
+  "pi_lower": {
+    "denominator": "1",
+    "numerator": "3"
+  },
+  "proof_boundary": "Exact rational evaluation of the L-14310 scalar and trace inequalities. Production use inherits the external normalization, perturbation-majorant, and prolate-packet containment gates.",
+  "required_rank_cap": 134,
+  "schema": "riemann.x14305-prolate-complement-floor-verification.v1",
+  "verdict": "CERTIFIED_COMPLETE_PROLATE_COMPLEMENT_FLOOR"
+}
