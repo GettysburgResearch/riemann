@@ -1,0 +1,67 @@
+{
+  "classification": "SYNTHETIC_ZERO_CONFIGURATION",
+  "deflated_critical_line_ids": [
+    "g1",
+    "g2"
+  ],
+  "dimension": 6,
+  "inertia": {
+    "negative": 1,
+    "positive": 3,
+    "zero": 2
+  },
+  "negative_witness": {
+    "coordinate_norm_squared": {
+      "denominator": 1,
+      "numerator": 2
+    },
+    "pair": [
+      "rho",
+      "rhobar"
+    ],
+    "quadratic": {
+      "denominator": 1,
+      "numerator": -2
+    },
+    "rayleigh": {
+      "denominator": 1,
+      "numerator": -1
+    }
+  },
+  "proof_object_sha256": "965202da2f7471353f6d9667b71551730912c3fad383967fc9a2acc604bcf48a",
+  "radical_dimension": 2,
+  "residual_inertia": {
+    "negative": 1,
+    "positive": 1,
+    "zero": 4
+  },
+  "schema": "riemann.x15604-weil-cardinal-defect.v1",
+  "schur_control": {
+    "block_error": {
+      "denominator": 100,
+      "numerator": 1
+    },
+    "complement_floor": {
+      "denominator": 2,
+      "numerator": 1
+    },
+    "cross_squared": {
+      "denominator": 400,
+      "numerator": 1
+    },
+    "floor": {
+      "denominator": 200,
+      "numerator": -203
+    },
+    "ideal_min": {
+      "denominator": 1,
+      "numerator": -1
+    }
+  },
+  "zero_ids": [
+    "g1",
+    "g2",
+    "rho",
+    "rhobar"
+  ]
+}
