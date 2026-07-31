@@ -27,6 +27,9 @@ Statuses per README §7: `IDEA`, `EMPIRICAL`, `PARTIAL`, `PROPOSED`, `PROVED`, `
 | `R-16001` | Sampled-`Xi` scale obstruction | `PARTIAL` — see ERRATUM and ERRATUM 2; conclusion **downgraded to OPEN** | census `CERTIFIED-COMPUTATIONAL` for the sampled family; constant `alpha_c` and mechanism (e) **corrected**; conclusion (f) survives for both targets | `O-16001`, `L-16003`, `L-15108` |
 | `X-16001` | Exact rational verifier for the cone-collapse propositions | `PROPOSED` | all propositions pass; certificate sha256 `2eacce19f8a8…` | — |
 | `X-16002` | Certified real-root census of the sampled target, with controls | `PROPOSED` | 150-digit eval, 100-digit rationalization, exact Sturm, stable at 20/30/40/50/60 | — |
+| `O-16003` | Source atlas: the repo's Weil matrices are Loewner forms of explicit sources; (L0)/(L1)/(L2) screen | `PROPOSED` — exploratory | high-precision float; precision-tracking defects | CvS Prop 4.1, `L-16004` |
+| `O-16004` | The arithmetic Weil form nominates its own target `xi = Q_W^{-1} eta / (eta^T Q_W^{-1} eta)` | `PROPOSED` — **headline downgraded, see its §6** | exact congruence for the inertia; high-precision float elsewhere | `O-16003`, CvS Thm 5.6 |
+| `L-16006` | CvS gate = orthogonal-polynomial extremal problem: `t* = min{ &#124;&#124;P&#124;&#124;^2 : P monic, deg 2N }`, `P_xi` = the monic OP; for a pole-sum source it is a **pole detector**; contains an explicit failed prediction | `PROPOSED` | (a)–(c) short exact proofs, checked to working precision; (d) measurement | `T-16001`, `L-16004`, CvS Thm 5.6 |
 | `M-16001`–`M-16005` | Organizational proposals | `PROPOSED` | see `ORGANIZATIONAL_PROPOSALS.md` | — |
 
 ### Errata raised against existing claims

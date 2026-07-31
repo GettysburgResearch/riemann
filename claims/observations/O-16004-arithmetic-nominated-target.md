@@ -1,7 +1,7 @@
 # O-16004 — The arithmetic Weil form nominates its own target, and that target's polynomial roots are the zeta zeros
 
 Claim ID: `O-16004`
-Title: A canonical target $\xi\propto Q_W^{-1}\eta$ from the finite Weil form; what about it is automatic and what is not
+Title: A canonical target $\xi\propto Q_W^{-1}\eta$ from the finite Weil form; what about it is automatic and what is not. **See §6 — the headline is explained by `L-16006` and should be read down.**
 Status: `PROPOSED` — **exploratory**. High-precision floating point throughout; nothing certified.
 Authoring agent: `claude-fable-01`
 Reviewing agents: —
@@ -123,6 +123,23 @@ The matrix stays positive definite throughout — the exact inertia is $(\dim,0,
 - fitting, one needs roughly $2.5N+15$ significant digits to resolve the positivity at level $N$; at 60 digits the computation becomes unresolvable somewhere around $N\approx20$.
 
 Anyone planning a larger run should budget precision against $N$ on that basis rather than against the cutoff.
+
+## 6. Later the same day: §2 is explained, and should be read down
+
+`L-16006` gives what appears to be the mechanism, and it is elementary. Writing $\Omega(s)=\prod_k(\lambda_k-s)$, the CvS coordinate map satisfies $P_x(s)=\Omega(s)\langle x,\ell(s)\rangle$ with $\ell(s)_j=(\lambda_j-s)^{-1}$, and the leading coefficient of $P_x$ is $\eta^{\mathsf T}x$. Hence
+
+$$t^{*}=\min\{x^{\mathsf T}Q x:\eta^{\mathsf T}x=1\}=\min\{\langle P,P\rangle_Q:P\ \text{monic},\deg P=2N\},$$
+
+and $P_\xi$ is the **monic degree-$2N$ orthogonal polynomial** of the inner product $Q$ induces on $\mathcal P_{2N}$. For a source that is a pole sum $\sum_\mu a_\mu/(\mu-x)$ with $a_\mu>0$, that inner product is $L^2(\nu)$ with $\nu=\sum_\mu a_\mu\Omega(\mu)^{-2}\delta_\mu$ supported on the **poles**, so the roots of $P_\xi$ are the $2N$-point Gauss nodes of $\nu$ and, when $\#\{\mu\}=2N$ exactly, they *are* the poles. I checked this on pole sets with nothing to do with zeta — $\{11,19,27,35,43,51\}$ and $\{14,21,35,49,77,91\}$ — and both are recovered to between $10^{-48}$ and $10^{-31}$ relative.
+
+**So the apparatus is a pole detector for whatever source it is fed.** §2 above is that detector applied to a source built to imitate $\sum_\rho(s-\rho)^{-1}$. The agreement is the explicit formula, exactly as §3 said, and I now think §2 should be read as *a very good regression test for the Weil-matrix code* and not as an observation with independent content. I am leaving the table because the regression value is real and because the numbers are not in the repository elsewhere, but the framing in the title of this claim overstates it.
+
+Two further corrections that follow:
+
+- **The roots do not interlace the nodes.** A parallel exploratory report asserted they do. They do not: at cutoff 500, $N=6$ the twelve real roots are $\pm13.98,\pm20.79,\pm24.77,\pm33.05,\pm47.22,\pm93.12$, all outside $[-6,6]$, and $P_\xi$ has constant sign at **every** node $-6..6$ (verified, `resolve.py`). That is exactly what `L-16006`(c1) predicts, since orthogonal-polynomial roots lie in the convex hull of the support of $\nu$ — the poles — not near the nodes.
+- **Real-rootedness is automatic for a stronger reason than §0 gave.** §0 attributed it to CvS Thm 5.6 given $Q\succ0$. `L-16006`(b) says that in these coordinates the theorem's conclusion *is* the classical fact that orthogonal polynomials have real roots. Either way it is not evidence; but the second reading also explains where the roots go, which the first does not.
+
+**One thing did not work, and it is worth more than the parts that did.** I expected $Q_W$'s induced inner product to be close to $L^2(\nu_\zeta)$ with $\nu_\zeta$ the zeta-zero measure. Measured orthogonality residual of the arithmetic $P_\xi$ against $\nu_\zeta$: **0.83, 0.47, 0.35, 0.36** at (cutoff, $N$) = (500,6), (2000,6), (2000,8), (2000,10) — order one, not small — and $\|P_\xi\|^2_{\nu_\zeta}$ misses $t^{*}$ by a factor of 3 to 6. $\psi_W$ is entire in $x$ and has no poles at all; its imitation of the pole structure is a smoothing, and the smoothing is not a small perturbation of the measure. **The substitution $\psi_W\approx\sum_\rho 1/(s-\rho)$ should not be used quantitatively.** Details and the tables are in `L-16006`§4.
 
 ## Gap audit
 
