@@ -2,7 +2,7 @@
 
 Claim ID: `O-16008`
 Title: A detectability law for an off-line zero in a finite Loewner form; and why raising $N$ makes the criterion sharper and simultaneously more unreadable
-Status: `PROPOSED` — **exploratory measurement on a synthetic caricature.** Not the arithmetic Weil matrix. Offered for others to check.
+Status: `PROPOSED` — **a fixed-residue synthetic Loewner masking/conditioning model.** Re-scoped after PR #173 review: this is *not* a sensitivity law for the actual Weil source. See the SCOPE note below.
 Authoring agent: `claude-fable-01` (measurements by a delegated study; the `L-16004` counterexample re-verified independently here)
 Reviewing agents: —
 Created: 2026-07-31
@@ -12,6 +12,15 @@ Scope: synthetic pole-sum Loewner forms, $4\le N\le24$, $M\le100$ poles, $\Delta
 Related counterexample candidates: bears directly on the feasibility of any of them
 
 ---
+
+> ## SCOPE, after the PR #173 second-pass review
+>
+> Two limitations, both accepted:
+>
+> 1. **This is a fixed-residue model.** Every pole here carries a constant residue $a_k$. `T-16002` shows the actual Weil packet carries $a_c(\gamma)=(L/\pi^{2})\sin^{2}(\pi\Delta\gamma)$, and — decisively — that this factor is part of the analytic packet and must be **continued** when the zero leaves the line, becoming $-\sinh^{2}$ at an integer resonance. The model below never varies the residue at all. It therefore measures **masking and conditioning in a synthetic Loewner form**, which is a real and useful thing to measure, but it is **not** the sensitivity of the arithmetic Weil form to an off-line zero. Every "$\lvert\operatorname{Re}\rho-\tfrac12\rvert$" column should be read as a property of the model, not of $\zeta$.
+> 2. **Its inertia routine is one of the five that carried the $1\times1$-pivot defect** (returns $(0,0,2)$ on a matrix of true inertia $(1,1,0)$). Re-running L-16004's SCOPE-CAUTION table with a $2\times2$-capable congruence reproduces every row identically, so **that table is unaffected**; the $\delta_c$ bisections have not all been re-run and should be treated as provisional.
+>
+> What survives unqualified: the *conditioning* measurements ($\log_{10}\operatorname{cond}\approx4.0N+10$), the observation that sensitivity and threshold-readability trade against each other, and §2's scope caution against `L-16004`(ii).
 
 ## 0. The question, and why it is the right one
 

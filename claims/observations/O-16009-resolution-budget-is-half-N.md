@@ -17,6 +17,8 @@ Related counterexample candidates: none
 
 `L-16006` says the CvS gate is a pole detector: the kernel polynomial's roots are Gauss nodes for a measure supported on the source's poles, and when the source has exactly $N$ positive poles the recovery is **exact** (verified to $5\times10^{-88}$ even for a pathologically dense pole set). Every resolution question is therefore a question about **truncation** — what happens when the source has more poles than the model can carry. That is the regime the arithmetic computation is in, since $\psi_W$ imitates a source with infinitely many poles.
 
+> **SCOPE, after the PR #173 second-pass review.** $\lfloor N/2\rfloor$ is an **empirical six-digit frontier for the over-determined families tested**, not an algebraic capacity of the detector. The algebraic fact runs the other way: a degree-$2N$ even kernel polynomial has $N$ positive roots and, in the *determined* case ($\#$poles $=N$), recovers all $N$ positive pole pairs exactly — which §0 already records. The $\lfloor N/2\rfloor$ is what truncation costs at a $10^{-6}$ tolerance, and it will move with the tolerance and with the family. Read "budget" as a calibration constant, not a theorem.
+
 ## 1. Law A — the budget is $\lfloor N/2\rfloor$, and the variable is the margin
 
 Uniform comb $\mu_k=S/2+Sk$, unit weights, $K=30\gg N$, $S=3.7$. Relative error of the recovered pole by index:

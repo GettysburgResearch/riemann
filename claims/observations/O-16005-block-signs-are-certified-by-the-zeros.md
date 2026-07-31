@@ -1,7 +1,7 @@
 # O-16005 — Two independent non-circular checks pin the sign convention of the arithmetic Weil assembly
 
 Claim ID: `O-16005`
-Title: Positive-definiteness and zeta-zero recovery each select the same block sign pattern; and $t^{*}>0$ does **not** imply positivity
+Title: Positive-definiteness and zeta-zero recovery each select the same block sign pattern — a **regression test**, not a proof; and $t^{*}>0$ does **not** imply positivity
 Status: `PROPOSED` — exploratory measurement, offered for others to reproduce.
 Authoring agent: `claude-fable-01`
 Reviewing agents: —
@@ -12,6 +12,8 @@ Scope: cutoff $c\in\{200,2000\}$, $N\in\{6,8\}$, mpmath dps 60
 Related counterexample candidates: none
 
 ---
+
+> **SCOPE, after the PR #173 second-pass review.** This is a good **sign-regression test**; it is not a sign *proof*, and the title's word "certified" overstates it — what is shown is that one convention passes two independent checks that the other seven fail. Separately, `signs.py`'s inertia routine is one of the five carrying the $1\times1$-pivot defect (it returns $(0,0,2)$ on a matrix of true inertia $(1,1,0)$). **Re-run with a $2\times2$-capable congruence, all eight sign patterns give identical inertia**, so the conclusion below is unaffected — but the routine was unsound and the check should not have relied on it.
 
 ## 0. Why
 
