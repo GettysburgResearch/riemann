@@ -20,13 +20,17 @@ eigenvalue here as a discovery hint, not a directed certificate.
 from __future__ import annotations
 
 import hashlib
-import json
+import sys
 from pathlib import Path
 
 import numpy as np
-from mpmath import mp, mpf, zetazero, log, sqrt, exp, nstr
+from mpmath import mp, zetazero
 
 mp.dps = 40
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "shared"))
+from jsonutil import dumps as json_dumps  # noqa: E402
+
 OUT = Path(__file__).resolve().parent / "results"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -40,13 +44,19 @@ def primes_upto(n: int) -> list[int]:
     return list(np.nonzero(sieve)[0])
 
 
-def prime_powers_in_window(a: float, R: float) -> list[tuple[int, int, float]]:
-    """Return (n, k, Lambda(n)/sqrt(n)) for 0 <= 2a-log n <= 2R, n=p^k."""
-    # n in [exp(2a-2R), exp(2a)]
+def prime_powers_in_window(
+    a: float, R: float, n_cap: float = 1.0e5
+) -> tuple[list[tuple[int, int, float]], bool]:
+    """Return ((n, k, Lambda(n)/sqrt(n))..., truncated?) for the terminal window.
+
+    `n_cap` is a reconnaissance ceiling. Complete L-15610 windows are larger;
+    do not treat a truncated sum as the production object.
+    """
     lo = np.exp(2 * a - 2 * R)
-    hi = np.exp(2 * a)
+    hi = min(np.exp(2 * a), n_cap)
+    truncated = hi + 1e-12 < np.exp(2 * a)
     if hi < 2:
-        return []
+        return [], True
     primes = primes_upto(int(hi) + 10)
     out = []
     for p in primes:
@@ -62,7 +72,7 @@ def prime_powers_in_window(a: float, R: float) -> list[tuple[int, int, float]]:
             pk *= p
             k += 1
     out.sort(key=lambda t: t[0])
-    return out
+    return out, truncated
 
 
 def bspline_profiles(R: float, m: int = 4, grid: int = 400):
@@ -149,7 +159,7 @@ def phase_rayleigh_scan(E, G, n_phases=24):
     }
 
 
-def build_Ea(a, R, m=4):
+def build_Ea(a, R, m=4, n_cap: float = 1.0e5):
     x, dx, phis = bspline_profiles(R, m=m)
     vminus = laplace_v(x, dx, phis, sign=-1)
     vplus = laplace_v(x, dx, phis, sign=+1)
@@ -168,7 +178,9 @@ def build_Ea(a, R, m=4):
     vv = np.outer(vminus, vminus)
     pole_identity_relerr = float(np.linalg.norm(integ - vv) / max(np.linalg.norm(vv), 1e-15))
 
-    pps = prime_powers_in_window(a, R)
+    lo = np.exp(2 * a - 2 * R)
+    window_above_cap = lo > n_cap
+    pps, truncated = prime_powers_in_window(a, R, n_cap=n_cap)
     Pterm = np.zeros((m, m))
     for n, k, c in pps:
         u = 2 * a - np.log(n)
@@ -184,6 +196,9 @@ def build_Ea(a, R, m=4):
         "R": R,
         "m": m,
         "n_prime_powers": len(pps),
+        "truncated_at_n_cap": bool(truncated),
+        "window_above_cap": bool(window_above_cap),
+        "n_cap": n_cap,
         "prime_power_n_min": pps[0][0] if pps else None,
         "prime_power_n_max": pps[-1][0] if pps else None,
         "pole_identity_relerr": pole_identity_relerr,
@@ -243,13 +258,19 @@ def main():
     for R in (2.0, 3.0, 4.0, 5.0):
         for da in (0.75, 1.25, 2.0, 3.0, 4.5):
             a = 2 * R + da
-            row = build_Ea(a, R, m=6)
+            # Skip supports whose whole terminal window lies above n_cap; those
+            # rows would be pure -2 e^a v v^* artifacts, not prime data.
+            if np.exp(2 * a - 2 * R) > 1.0e5:
+                print(f"R={R} a={a:.2f}: SKIP window above n_cap", flush=True)
+                continue
+            row = build_Ea(a, R, m=6, n_cap=1.0e5)
             ladder.append(row)
             print(
-                f"R={R} a={a:.2f}: pps={row['n_prime_powers']} "
+                f"R={R} a={a:.2f}: pps={row['n_prime_powers']} trunc={row['truncated_at_n_cap']} "
                 f"pole_err={row['pole_identity_relerr']:.2e} "
                 f"Ea_eigs[0]={row['Ea_eigs'][0]:.3e} "
-                f"phase_min={row['phase_scan_Ea']['phase_rayleigh_min']:.3e}"
+                f"phase_min={row['phase_scan_Ea']['phase_rayleigh_min']:.3e}",
+                flush=True,
             )
 
     proxy = five_notch_scalar_proxy()
@@ -287,10 +308,10 @@ def main():
             "Can the five-notch envelope proxy be replaced by a directed product of certified sinc factors?",
         ],
     }
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json_dumps(payload, indent=2, sort_keys=True) + "\n"
     digest = hashlib.sha256(text.encode()).hexdigest()
     payload["content_sha256"] = digest
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json_dumps(payload, indent=2, sort_keys=True) + "\n"
     (OUT / "comp2.json").write_text(text)
     lines = ["C2 provisional summary"]
     for row in ladder:

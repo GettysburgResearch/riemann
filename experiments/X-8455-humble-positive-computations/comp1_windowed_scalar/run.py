@@ -24,12 +24,14 @@ import sys
 from fractions import Fraction as F
 from pathlib import Path
 
+import numpy as np
 import sympy as sp
 from mpmath import mp, mpf, pi, zeta, gamma, exp, cos, quad, zetazero, nstr
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "shared"))
 from linalg_q import inertia_ldl, mat_add, quadratic  # noqa: E402
+from jsonutil import dumps as json_dumps  # noqa: E402
 
 mp.dps = 80
 OUT = Path(__file__).resolve().parent / "results"
@@ -87,7 +89,6 @@ def count_real_roots(P):
 
 def loewner_from_poly(P, nodes):
     """Canonical Loewner of g=-P'/P at integer/rational nodes (exact Fraction)."""
-    s = P.gen
     co = [F(int(c.p), int(c.q)) for c in P.all_coeffs()]  # descending
 
     def ev(cs, x):
@@ -109,6 +110,36 @@ def loewner_from_poly(P, nodes):
         a[lam] = (Pdi * Pdi - Pi * Pddi) / (Pi * Pi)
     Q = [[(a[i] if i == j else (b[i] - b[j]) / F(i - j)) for j in nodes] for i in nodes]
     return Q, b, a
+
+
+def loewner_inertia_float(P, nodes):
+    """Discovery-only Loewner inertia via float64 eigh. Not a certificate."""
+    xs = sp.symbols("x")
+    Pd = sp.diff(P.as_expr(), P.gen)
+    Pdd = sp.diff(Pd, P.gen)
+    bvals = []
+    avals = []
+    for lam in nodes:
+        Pi = complex(P.as_expr().subs(P.gen, lam))
+        if abs(Pi) < 1e-30:
+            return {"error": f"near-zero P at node {lam}"}
+        Pdi = complex(Pd.subs(P.gen, lam))
+        Pddi = complex(Pdd.subs(P.gen, lam))
+        bvals.append(-Pdi / Pi)
+        avals.append((Pdi * Pdi - Pi * Pddi) / (Pi * Pi))
+    n = len(nodes)
+    Q = np.zeros((n, n), dtype=float)
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                Q[i, j] = float(np.real(avals[i]))
+            else:
+                Q[i, j] = float(np.real((bvals[i] - bvals[j]) / (nodes[i] - nodes[j])))
+    ew = np.linalg.eigvalsh(0.5 * (Q + Q.T))
+    pos = int(np.sum(ew > 1e-10))
+    neg = int(np.sum(ew < -1e-10))
+    zero = n - pos - neg
+    return {"inertia_float": [pos, neg, zero], "eigs_head": [float(v) for v in ew[:3]], "eigs_tail": [float(v) for v in ew[-3:]]}
 
 
 def Bp_matrix(p):
@@ -207,22 +238,23 @@ def target_table():
                 ratios.append(float(a / b))
             else:
                 ratios.append(None)
-        # deficits via rationalized polys
+        # deficits via rationalized polys; Loewner inertia is float discovery only
+        # (exact LDL on 45-digit Fractions was too slow in the smoke→scale step).
         def deficit(vals):
-            pfrac = [to_frac(v, 45) for v in vals]
-            # do not normalize; Sturm cares about roots of interpolant
+            digits = 35 if N <= 6 else 28
+            pfrac = [to_frac(v, digits) for v in vals]
             P = interpolation_poly(nodes, pfrac, s)
             deg, nre, mult = count_real_roots(P)
             try:
-                Q, _, _ = loewner_from_poly(P, nodes)
-                ine = list(inertia_ldl(Q))
+                ine = loewner_inertia_float(P, nodes)
             except Exception as exc:  # noqa: BLE001
-                ine = f"loewner-failed:{exc}"
+                ine = {"error": str(exc)}
             return {
                 "deg": deg,
                 "n_real": nre,
                 "deficit": deg - nre,
-                "loewner_inertia": ine,
+                "gcd_deg": mult,
+                "loewner": ine,
             }
 
         row = {
@@ -241,7 +273,8 @@ def target_table():
         print(
             f"alpha={alpha} N={N}: sampled deficit={row['sampled']['deficit']} "
             f"windowed deficit={row['windowed']['deficit']} "
-            f"tail|samp|/|win|~{ratios[0]}"
+            f"tail|samp|/|win|~{ratios[0]}",
+            flush=True,
         )
     return rows
 
@@ -276,45 +309,46 @@ def reading_b_tiny_models():
         }
     )
 
-    # Zero-matched tiny N=3: prescribe roots at +-gamma_k/(2pi)
-    N = 3
+    # Zero-matched tiny N=2 only (N=3 with 40-digit Fractions made exact LDL too slow
+    # in the hour-budget run). This remains a toy Reading-B screen.
+    N = 2
     nodes_z = [F(j) for j in range(-N, N + 1)]
     gam = [mp.im(zetazero(k)) for k in range(1, N + 1)]
     roots = []
     for g in gam:
-        r = to_frac(g / (2 * pi), 40)
+        r = to_frac(g / (2 * pi), 20)
         roots.extend([r, -r])
     Pt = sp.Poly(sp.expand(sp.prod([(s - sp.Rational(r)) for r in roots])), s)
-    # invert Lagrange
     xis = []
-    for i, lam in enumerate(nodes_z):
+    for lam in nodes_z:
         num = F(Pt.eval(lam))
         den = F(1)
         for mu in nodes_z:
             if mu != lam:
                 den *= mu - lam
         xis.append(num / den)
-    # normalize sum to 1 for B_p form
     ssum = sum(xis)
     p_z = [v / ssum for v in xis]
     Pz = interpolation_poly(nodes_z, p_z, s)
     degz, nrez, _ = count_real_roots(Pz)
     Qz0 = [[F(0) for _ in nodes_z] for _ in nodes_z]
-    Qzcan, _, _ = loewner_from_poly(Pz, nodes_z)
+    # Skip exact canonical Loewner LDL here; report float inertia instead.
+    loew_f = loewner_inertia_float(Pz, [int(x) for x in nodes_z])
     models.append(
         {
-            "name": "zero-matched-N3-normalized",
+            "name": "zero-matched-N2-normalized",
             "nodes": [str(x) for x in nodes_z],
             "p": [str(x) for x in p_z],
             "deg": degz,
             "n_real": nrez,
             "with_Q_zero": scalar_gate_probe(Qz0, p_z),
-            "with_canonical_Loewner_as_Q": scalar_gate_probe(Qzcan, p_z),
+            "canonical_loewner_float": loew_f,
             "commentary": (
                 "Zero-matched targets force Reading A. Putting Q=0 asks whether the "
                 "arithmetic-null source still admits a scalar completion. A negative "
                 "screen here would only suggest that Weil arithmetic must enter through "
-                "a nontrivial beta, not that RH fails."
+                "a nontrivial beta, not that RH fails. Kept at N=2 after N=3 exact LDL "
+                "proved too slow for this session."
             ),
         }
     )
@@ -368,10 +402,10 @@ def main():
             "Can one prove that mixed-sign B_p isotropic cones are nonempty whenever #negative p-entries >= 2?",
         ],
     }
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json_dumps(payload, indent=2, sort_keys=True) + "\n"
     digest = hashlib.sha256(text.encode()).hexdigest()
     payload["content_sha256"] = digest
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json_dumps(payload, indent=2, sort_keys=True) + "\n"
     (OUT / "comp1.json").write_text(text)
     (OUT / "comp1.txt").write_text(
         "C1 provisional summary\n"

@@ -16,10 +16,14 @@ toy scale — fuel for someone else's lemma about translation-boundedness.
 from __future__ import annotations
 
 import hashlib
-import json
+import sys
 from pathlib import Path
 
 import numpy as np
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "shared"))
+from jsonutil import dumps as json_dumps  # noqa: E402
 
 OUT = Path(__file__).resolve().parent / "results"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -34,10 +38,18 @@ def primes_upto(n: int):
     return list(np.nonzero(sieve)[0])
 
 
-def prime_powers_window(a, R):
+def prime_powers_window(a, R, n_cap: float | None = None):
+    """Enumerate terminal-window prime powers, optionally truncating n<=n_cap.
+
+    Truncation is a reconnaissance convenience only; it is not the complete
+    terminal sum required by L-15610.
+    """
     lo, hi = np.exp(2 * a - 2 * R), np.exp(2 * a)
+    if n_cap is not None:
+        hi = min(hi, n_cap)
     if hi < 2:
-        return []
+        return [], True
+    truncated = hi + 1e-12 < np.exp(2 * a)
     primes = primes_upto(int(hi) + 5)
     out = []
     for p in primes:
@@ -49,7 +61,7 @@ def prime_powers_window(a, R):
                 break
             pk *= p
             k += 1
-    return out
+    return out, truncated
 
 
 def make_polefree_basis(R, m=6, grid=500):
@@ -114,15 +126,14 @@ def rayleigh_stats(H, G):
 def main():
     print("=== C3 pole-free terminal Hankel ladder (provisional) ===")
     rows = []
-    # Smoke: cells cheap until exp(2a) grows; a=6.5/R=2 had 36k pps ~1.7s.
-    # Cap da so hi=exp(2a) stays under ~2e5 for this reconnaissance hour.
-    for R in (2.0, 3.0, 4.0, 5.0, 6.0):
-        x, dx, phis, vminus, G = make_polefree_basis(R, m=6, grid=600)
-        for da in (0.5, 1.0, 1.5, 2.0, 2.5, 3.0):
+    # Smoke taught: complete windows explode as exp(2a). For larger R we keep
+    # a>2R but truncate the prime sum at n_cap so the hour-budget stays honest.
+    n_cap = 8e4
+    for R in (2.0, 2.5, 3.0, 3.5, 4.0, 5.0):
+        x, dx, phis, vminus, G = make_polefree_basis(R, m=6, grid=500)
+        for da in (0.5, 1.0, 1.5, 2.0, 2.5):
             a = 2 * R + da
-            if np.exp(2 * a) > 2.5e5:
-                continue
-            pps = prime_powers_window(a, R)
+            pps, truncated = prime_powers_window(a, R, n_cap=n_cap)
             H = np.zeros((len(phis), len(phis)))
             for n, c in pps:
                 u = 2 * a - np.log(n)
@@ -136,13 +147,15 @@ def main():
                 "a": a,
                 "da": da,
                 "n_pps": len(pps),
+                "truncated_at_n_cap": bool(truncated),
+                "n_cap": n_cap,
                 "vminus_norm": float(np.linalg.norm(vminus)),
                 "rayleigh": stats,
                 "frobenius": float(np.linalg.norm(H_centered)),
             }
             rows.append(row)
             print(
-                f"R={R} a={a:.2f}: pps={len(pps)} |v-|={row['vminus_norm']:.2e} "
+                f"R={R} a={a:.2f}: pps={len(pps)} trunc={truncated} |v-|={row['vminus_norm']:.2e} "
                 f"min={stats['min']:.3e} max={stats['max']:.3e} absmax={stats['absmax']:.3e}"
             )
 
@@ -183,10 +196,10 @@ def main():
             "Can one prove a uniform bound for pole-free packets from a single zero-sum majorant?",
         ],
     }
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json_dumps(payload, indent=2, sort_keys=True) + "\n"
     digest = hashlib.sha256(text.encode()).hexdigest()
     payload["content_sha256"] = digest
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json_dumps(payload, indent=2, sort_keys=True) + "\n"
     (OUT / "comp3.json").write_text(text)
     (OUT / "comp3.txt").write_text(
         "C3 provisional summary\n"
