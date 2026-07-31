@@ -66,7 +66,22 @@ and **no further integration by parts improves the order**, because the boundary
 
 **So no hard-window root count at $\alpha\ge0.5$ is certifiable**, and in particular the threshold $\alpha_c\approx1.0644$ of `R-16001` lies deep inside the uncertifiable region. Certification becomes feasible only at $\alpha\lesssim0.4$, i.e. $T\gtrsim1.25$ — exactly the regime not yet computed.
 
-**(vi) Consequence for the production target.** `L-15101` specifies a **smooth** cutoff $\chi_L$, not a hard indicator. For a smooth cutoff the boundary terms in (iii) all vanish and $E_j$ decays **faster than any power** of $j$, so the crossover in (iv) moves out dramatically. **The hard window is therefore not a harmless stand-in for the production target: it differs qualitatively in precisely the tail region that decides the root count.** Any transfer of a hard-window computation to the production target requires an explicit perturbation argument, not an appeal to proximity.
+**(vi) Consequence for the production target — with a caveat established by direct test.** `L-15101` specifies a **smooth** cutoff $\chi_L$, not a hard indicator. Asymptotically in $j$ this matters: for a $C^\infty$ cutoff every boundary term in (iii) vanishes and $E_j$ decays faster than any power of $j$. **The hard window is therefore not a harmless stand-in for the production target**, and any transfer of a hard-window computation to it requires an explicit perturbation argument rather than an appeal to proximity.
+
+**But smoothness alone does not rescue certification, and it is not the binding constraint.** Direct comparison at $\alpha=1$, both cutoffs supported in $|t|\le T=0.5$, the smooth one flat on $|t|\le0.25$ and rolling off to $0$ at $T$:
+
+| $j$ | $\lvert E_j\rvert$ hard | $\lvert E_j\rvert$ smooth | $\lvert\Xi(2\pi\alpha j)\rvert$ |
+|---|---|---|---|
+| 2 | $5.22\times10^{-3}$ | $1.75\times10^{-2}$ | $4.98\times10^{-3}$ |
+| 4 | $2.10\times10^{-3}$ | $7.16\times10^{-3}$ | $1.43\times10^{-7}$ |
+| 6 | $9.95\times10^{-4}$ | $1.92\times10^{-3}$ | $1.92\times10^{-11}$ |
+| 10 | $3.67\times10^{-4}$ | $7.34\times10^{-4}$ | $2.38\times10^{-18}$ |
+
+with $j|E_j|$ approximately constant for **both** ($0.0084,0.0060,0.0046,0.0037$ hard; $0.029,0.012,0.0068,0.0073$ smooth over $j=4,6,8,10$). The smooth error is **larger**, and the crossover of (iv) does **not** move out.
+
+The reason is that the constant in front of the decay is set by the **discarded mass**, not by the smoothness: rolling off from $0.25$ attenuates $\Phi$ where it is still substantial, so more mass is lost than the hard cut at $0.5$ loses. **The design lever is therefore $T$ (equivalently $\alpha$), not the smoothness of the cutoff.** Since $\Phi$ decays doubly exponentially, the roll-off must begin far enough out — which forces $T$ large and $\alpha$ small, converging with the certification boundary $\alpha\lesssim0.4$ of (v) from an independent direction.
+
+*(An earlier version of this item asserted that smoothness "moves the crossover out dramatically". That inference is unsupported at fixed support and is corrected here. The asymptotic-in-$j$ statement stands; the practical inference does not.)*
 
 ---
 
@@ -99,7 +114,7 @@ All integrals are over real $t$ with $\Phi$ real-analytic, positive, and doubly-
 
 ## Gap audit
 
-1. The values of $E_j$ in the table (iv) were computed by ordinary `mpmath` adaptive quadrature at 40 digits, **not** by certified integration. They are `EMPIRICAL`. The *bounds* (ii) and (iii) are `PROVED` and are what the conclusions rest on; the table is illustrative of sharpness, not load-bearing.
+1. The values of $E_j$ in the tables (iv) and (vi) were computed by ordinary `mpmath` adaptive quadrature at 40 digits, **not** by certified integration. They are `EMPIRICAL`. The smooth-cutoff integrand in (vi) is oscillatory with a $C^\infty$ bump factor and is the least reliable of these; its fine structure (the non-monotone $j|E_j|$ at $j=10$) should not be over-read, though the order of magnitude and the qualitative conclusion are robust. The *bounds* (ii) and (iii) are `PROVED` and are what the conclusions rest on; the table is illustrative of sharpness, not load-bearing.
 2. $C_4$ and $C_2$ were evaluated by summing to $n=30$ without a certified tail; the omitted tail is $O(e^{-\pi\cdot 899})$ and cannot affect any digit shown, but a formal certificate should bound it.
 3. (v) uses the crude uniform bound $\varepsilon(T)$. The sharper $j$-dependent bound of (iii) improves matters somewhat but, being $O(1/j)$, does **not** change the verdict for any $\alpha\ge0.5$ — at $\alpha=1$, $j=10$ it gives $3.8\times10^{-3}$ against a coefficient of $2.4\times10^{-18}$.
 4. "Certifiable" in (v) means only that the uniform box is narrower than the smallest coefficient. That is necessary, not sufficient: an actual certificate must exhibit invariance of the Sturm count over the box, which has not been done even at $\alpha=0.4$.
