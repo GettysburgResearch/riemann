@@ -1,0 +1,29 @@
+{
+  "schema": "riemann.x15409-blaschke-pair.synthetic.v1",
+  "cases": [
+    {
+      "name": "interior_pair",
+      "delta": {"numerator": "3", "denominator": "10"},
+      "omega": {"numerator": "1", "denominator": "10"},
+      "claimed": {
+        "y_minus": {"numerator": "1", "denominator": "5"},
+        "y_plus": {"numerator": "2", "denominator": "5"},
+        "hankel_norm": {"numerator": "1", "denominator": "3"},
+        "hankel_norm_squared": {"numerator": "1", "denominator": "9"},
+        "toeplitz_floor": {"numerator": "8", "denominator": "9"}
+      }
+    },
+    {
+      "name": "near_crossing_pair",
+      "delta": {"numerator": "3", "denominator": "10"},
+      "omega": {"numerator": "29", "denominator": "100"},
+      "claimed": {
+        "y_minus": {"numerator": "1", "denominator": "100"},
+        "y_plus": {"numerator": "59", "denominator": "100"},
+        "hankel_norm": {"numerator": "29", "denominator": "30"},
+        "hankel_norm_squared": {"numerator": "841", "denominator": "900"},
+        "toeplitz_floor": {"numerator": "59", "denominator": "900"}
+      }
+    }
+  ]
+}
