@@ -1,0 +1,57 @@
+{
+  "ambient_dimension": 4,
+  "augmentation_gram_ldl_pivots": [
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1}
+  ],
+  "augmentation_high_deficit_ldl_pivots": [
+    {"denominator": 2, "numerator": 3},
+    {"denominator": 2, "numerator": 1}
+  ],
+  "augmentation_rank": 2,
+  "complement_dimension": 1,
+  "complement_gram_ldl_pivots": [
+    {"denominator": 1, "numerator": 1}
+  ],
+  "complement_safe_deficit_ldl_pivots": [
+    {"denominator": 4, "numerator": 3}
+  ],
+  "complete_basis_gram_ldl_pivots": [
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1}
+  ],
+  "danger_threshold": {"denominator": 1, "numerator": 1},
+  "deficit_ldl_pivots": [
+    {"denominator": 1, "numerator": 0},
+    {"denominator": 2, "numerator": 5},
+    {"denominator": 2, "numerator": 3},
+    {"denominator": 4, "numerator": 1}
+  ],
+  "final_complement_floor_ldl_pivots": [
+    {"denominator": 4, "numerator": 3}
+  ],
+  "initial_packet_dimension": 1,
+  "initial_packet_gram_ldl_pivots": [
+    {"denominator": 1, "numerator": 1}
+  ],
+  "lower_model_slack_ldl_pivots": [
+    {"denominator": 1, "numerator": 0},
+    {"denominator": 1, "numerator": 0},
+    {"denominator": 1, "numerator": 0},
+    {"denominator": 1, "numerator": 0}
+  ],
+  "metric_ldl_pivots": [
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1}
+  ],
+  "proof_boundary": "Exact finite metric, lower-model, spectral-augmentation, and complement-floor arithmetic only. The complete lower symbol/deficit model and any assertion that the unaugmented cardinal-radical packet already contains the augmentation remain external analytic gates.",
+  "proof_object_sha256": "20a367a919d3e8e7fcaca91a46ab8b61cb836082c6abf83eabd535a0340d44b8",
+  "schema": "riemann.x18901-deficit-complement.v1",
+  "target_floor": {"denominator": 1, "numerator": 1},
+  "verdict": "CERTIFIED_CANONICAL_AUGMENTED_COMPLEMENT_FLOOR",
+  "verified": true
+}
