@@ -1,0 +1,100 @@
+{
+  "corrected_radical_visible_cross": [
+    [
+      {
+        "denominator": "1",
+        "numerator": "0"
+      }
+    ]
+  ],
+  "dimensions": {
+    "complement": 1,
+    "radical": 1,
+    "visible": 1
+  },
+  "floors_and_losses": {
+    "assembly_radius": {
+      "denominator": "10000",
+      "numerator": "1"
+    },
+    "complement_floor": {
+      "denominator": "1",
+      "numerator": "1"
+    },
+    "final_negative_floor": {
+      "denominator": "1250",
+      "numerator": "17"
+    },
+    "radical_correction_bound": {
+      "denominator": "80",
+      "numerator": "1"
+    },
+    "radical_lower_loss": {
+      "denominator": "1000",
+      "numerator": "1"
+    },
+    "visible_schur_floor": {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  },
+  "ldl_pivots": {
+    "G_R": [
+      {
+        "denominator": "1",
+        "numerator": "1"
+      }
+    ],
+    "G_V": [
+      {
+        "denominator": "1",
+        "numerator": "1"
+      }
+    ],
+    "M": [
+      {
+        "denominator": "1",
+        "numerator": "1"
+      }
+    ],
+    "complement_slack": [
+      {
+        "denominator": "2",
+        "numerator": "1"
+      }
+    ],
+    "radical_correction_slack": [
+      {
+        "denominator": "400",
+        "numerator": "1"
+      }
+    ],
+    "radical_diagonal_slack": [
+      {
+        "denominator": "1000",
+        "numerator": "1"
+      }
+    ],
+    "visible_schur_slack": [
+      {
+        "denominator": "4",
+        "numerator": "1"
+      }
+    ]
+  },
+  "proof_boundary": "Exact finite rational algebra only. Source radicality, zero-Gram and symbol floors, metric provenance, cofinal rates, and the RH implication are external gates.",
+  "proof_object_sha256": "83553370cdf517e38ac7d186286cebd7ef61f011d26dcfb4f072f20e2d3554b8",
+  "radical_correction_matrix": [
+    [
+      {
+        "denominator": "100",
+        "numerator": "1"
+      }
+    ]
+  ],
+  "schema": "riemann.x15304-triangular-three-block-schur.verification.v1",
+  "status": "CERTIFIED_THREE_BLOCK_LOWER_FLOOR",
+  "theorem_identity": "epsilon = e + kappa + delta, with kappa bounding h^-1 Y^T M^-1 Y + beta^-1 X_tilde^T G_V^-1 X_tilde and X_tilde = X - h^-1 Z^T M^-1 Y",
+  "verification_sha256": "ef8e96b8a88eda00549c5514fa89bee4cf432f8f2e8deb94f5c8747d27db858d",
+  "verified": true
+}
