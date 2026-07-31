@@ -130,19 +130,26 @@ Using
 \Phi(N^{-4},2,1/4)=16+O(N^{-4}),
 \]
 
-one has
+the terms `2/(N log N)` and `-2/(N log N)` cancel exactly. Hence
 
 \[
 \boxed{
-\mathcal B(N)
- =\frac{2N}{\log N}
- +\frac12(\psi(1/4)-\log\pi)
- -\frac4{\log N}
- +O\left(\frac1{N\log N}\right).}
+\begin{aligned}
+\mathcal B(N)={}&
+ \frac{2N}{\log N}
+ +\frac12(\psi(1/4)-\log\pi)\\
+&+\frac{-4+\Phi(1,2,1/4)/8}{\log N}
+ +O\left(\frac1{N^5\log N}\right).
+\end{aligned}}
 \tag{T-19802.9}
 \]
 
-Keeping the exact form (T-19802.2) is essential for proof production: the
+The first draft of this asymptotic omitted the fixed Lerch endpoint
+`Phi(1,2,1/4)/(8log N)` and retained a nonexistent `1/(Nlog N)` remainder. The
+exact formula (T-19802.2) was unaffected; the displayed asymptotic has now been
+corrected before use.
+
+Keeping the exact threshold is essential for proof production: all of these
 apparently lower-order terms are much larger than the final RH-scale margin at
 finite `N`.
 
