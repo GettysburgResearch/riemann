@@ -1,7 +1,7 @@
-# O-15301 — July 2026 positive-path literature audit
+# O-15301 — July 2026 positive-path convergence audit
 
 Claim ID: `O-15301`  
-Title: The exact source domain and low-subspace comparison are the remaining positive-path bottlenecks  
+Title: The radical-tail ratio is closed; the low packet must be split by certified zero evaluations  
 Status: `LITERATURE_AND_REPOSITORY_AUDIT`  
 Authoring agent: `gpt56-03-j`  
 Created: 2026-07-31
@@ -17,115 +17,124 @@ Created: 2026-07-31
 4. Aleksei Kulikov, *Sharp estimates for eigenvalues of localization operators
    before the plunge region*, arXiv:2603.07407 (March 2026).
 5. Aleksei Kulikov and Martin Dam Larsen, *Sharp estimates for eigenvalues of
-   localization operators with applications to area laws*, arXiv:2603.23832
-   (March 2026).
+   localization operators with applications to area laws*,
+   arXiv:2603.23832 (March 2026).
 6. Ahmadreza Azimifard, *An independent proof of the plunge-region conjecture
    for time-frequency localization operators in dimension one*,
    arXiv:2607.23016 (July 2026).
 
-Every reference above was located directly. No unlocated citation is used in the
-claims on this branch.
+Every reference above was located directly. No unlocated citation is used in
+this audit.
 
-## Source-domain correction
+## Independent mathematical convergence inside the repository
 
-The Connes--Consani arithmetic map uses the codimension-two even Schwartz source
-space
+During this pass, three conclusions were derived independently on separate
+branches and then found to agree:
+
+1. the finite prolate source needs both `f(0)=0` and `integral f=0`, so two
+   distinct finite modes cannot in general supply an exact radical source;
+2. three modes give the exact cross-product repair;
+3. locally uniform real-zero convergence to
+
+   ```text
+   zeta(1/2-iz) * Phi(z)
+   ```
+
+   is sufficient for RH whenever the product is not identically zero; `Phi`
+   need not be zero-free.
+
+The base PR now contains the stronger detailed versions of these results. This
+branch withdraws its duplicate claim cards and retains only the genuinely
+additional low-block analysis.
+
+## Newly closed component
+
+The current PR #152 stack now contains an explicit self-Fourier Gaussian/Hermite
+source satisfying both source constraints, a term-by-term Gaussian bound on the
+localized radical-tail cross form, and a complete finite multiband packet whose
+Hardy complement floor loses only a polynomial support factor.
+
+Consequently the ratios
 
 \[
- f(0)=0,\qquad\widehat f(0)=0.
+ \mathfrak T_\lambda/h_\lambda\to0,
+ \qquad
+ \mathfrak T_\lambda^2/(h_\lambda\|k_\lambda\|^2)\to0
 \]
 
-The second condition is the integral condition in the standard Fourier
-normalization. A finite source chosen only to have zero integral does not
-automatically satisfy the value-at-zero condition. Therefore a localized target
-cannot be declared a truncation of a global Weil-radical vector until both gates
-are checked in the exact source domain.
+are no longer the missing positive-path theorem. The exterior radical tail is
+not the current blocker.
 
-`L-15301` repairs this with a smooth compact cutoff of the self-dual CCM Hermite
-source and one exact integral correction. `L-15302` gives a finite three-mode
-linear-algebra repair when concrete source modes are preferred.
+## Claim-registry defect found
 
-## What the latest localization results add
-
-The 2026 localization papers rigorously sharpen two relevant facts:
-
-- modes lying a fixed fraction before the time-frequency plunge have
-  concentration eigenvalues exponentially close to one;
-- the number of intermediate plunge eigenvalues has an explicit logarithmic
-  upper bound in one dimension and sharp bounds for interval/parallelepiped
-  geometries.
-
-These results support a proof architecture with:
+The active base branch presently assigns the same IDs to distinct files:
 
 ```text
-near-one concentration block
-+ explicitly bounded plunge block
-+ coercive far complement.
+L-14312  two claims
+L-14313  two claims
+T-14303  two claims
+X-14307  two experiments.
 ```
 
-They do **not** by themselves prove a lower bound for the arithmetic Weil form.
-In particular, concentration close to one controls Fourier leakage, not the
-prime-translation operator or the full Schur-corrected low spectral floor.
+This is a process blocker, not a mathematical refutation. The claims should be
+renumbered and every dependency, schema, report, and integration patch updated
+before merge.
 
-## Relation to the current repository
+## Correction to the remaining low-block program
 
-The newest positive repository stack has already made three important advances:
+The newest base audit correctly isolates the growing finite low-symbol packet.
+However, asking the **entire** packet to approach small-tail radical
+truncations is too strong.
 
-1. `T-14302` reduces RH to a cofinal localized lower floor whose negative part
-   vanishes;
-2. `L-14308` charges low/complement coupling quadratically through a block Schur
-   correction;
-3. `L-14310/L-14311` reduce the infinite complement to a finite prolate or
-   multiband packet plus an explicit coercive tail.
+Exact global radical transforms vanish at every actual zeta zero. If
+`r=k+t`, then at each certified centered zero
 
-The present branch adds:
+\[
+ \widehat k(z_\rho)=-\widehat t(z_\rho).
+\]
 
-4. `L-15301`: an exact source-domain target with form-topology tail control;
-5. `T-15301`: no special `Xi` coefficient ratio is required--zeta times any
-   nonzero auxiliary factor suffices;
-6. `L-15303`: arbitrarily large exact Hermite-radical blocks are available.
+Thus small radical tails force small certified-zero evaluations. `L-15304`
+proves a finite singular-value obstruction: any packet subspace with a positive
+zero-evaluation singular floor stays a positive distance from all such radical
+truncations.
 
-## Rejected inference
-
-It is unsafe to argue
+The correct finite decomposition is therefore
 
 ```text
-small L2 prolate leakage
-=> small Weil-form residual.
+complete low packet
+    = radical-like zero-evaluation near-kernel
+      + evaluation-visible residual block.
 ```
 
-The Weil form is distributional/logarithmic, and the missing continuity norm has
-to be proved. `L-15301` avoids that inference by making the Fourier defect tend
-to zero in Schwartz topology before applying the arithmetic map.
+Only the near-kernel should be fitted by exact radical sources. The visible
+block needs its own finite lower certificate.
 
-It is also unsafe to read a shrinking positive prolate eigenvalue or a growing
-near-one concentration count as progress toward RH without proving that the
-associated packet captures every dangerous arithmetic direction.
+## Role of the latest localization literature
+
+The 2026 pre-plunge and plunge-count estimates improve packet scheduling:
+
+- pre-plunge modes can have exponentially small Fourier leakage;
+- the transition packet has explicit logarithmic-size estimates in standard
+  one-dimensional localization models.
+
+They do not identify the arithmetic zero-evaluation near-kernel, certify the
+visible low block, or prove the complete Weil lower floor.
 
 ## Revised critical path
 
-The remaining positive proof can now be stated in one line:
-
-\[
- \boxed{
- \text{principal angle between the dangerous low packet and an exact repaired
- radical packet tends to zero, with a certified complement floor.}}
-\]
-
-More explicitly:
-
-1. choose the low packet from the multiband/prolate symbol bound;
-2. choose a same-rank repaired Hermite packet from `L-15303`;
-3. certify a directed principal-angle or graph-distance bound;
-4. transfer the vanishing radical block and residual estimates through
-   `L-14308`;
-5. prove the resulting cofinal floor is at least `-epsilon(lambda)` with
-   `epsilon(lambda)->0`;
-6. invoke `T-14302`.
+1. repair the duplicate base IDs;
+2. construct the complete first low-symbol packet;
+3. evaluate it at proof-grade critical-line zeros;
+4. certify a rational near-kernel/visible-block split;
+5. approximate only the near-kernel by exact Gaussian/Hermite radical targets;
+6. directly lower-bound the visible block and all cross maps;
+7. compose the finite matrix with the ambient complement through `L-14308`;
+8. prove a symbolic cofinal floor `>=-epsilon(lambda)`, `epsilon(lambda)->0`;
+9. invoke `T-14302`.
 
 ## Honest conclusion
 
-The source normalization and target-tail problem have a clean repair. The
-latest prolate literature makes the finite packet smaller and better organized.
-The decisive low-subspace comparison and arithmetic complement coercivity are
-not yet proved. Accordingly this audit does not claim RH.
+The source normalization, external-tail numerator, complement denominator, and
+their cofinal ratio now have coherent proposed solutions. The growing low block
+remains open, and its first proposed full-packet approximation must be refined
+by the zero-evaluation obstruction. No proof of RH is claimed.
