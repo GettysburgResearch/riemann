@@ -1,0 +1,37 @@
+{
+  "cancelled_main": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "convolution": [
+    {"denominator": "1", "numerator": "1"},
+    {"denominator": "1", "numerator": "-4"},
+    {"denominator": "1", "numerator": "10"},
+    {"denominator": "1", "numerator": "-12"},
+    {"denominator": "1", "numerator": "9"}
+  ],
+  "discrepancy_value": {
+    "denominator": "35",
+    "numerator": "-288"
+  },
+  "laplace_profile": {
+    "denominator": "4",
+    "numerator": "3"
+  },
+  "polar_main": {
+    "denominator": "8",
+    "numerator": "-21"
+  },
+  "pole_hankel": {
+    "denominator": "16",
+    "numerator": "9"
+  },
+  "prime_main": {
+    "denominator": "8",
+    "numerator": "21"
+  },
+  "profile_length": 3,
+  "proof_boundary": "finite rational convolution regression; not a prime or zeta computation",
+  "schema": "riemann.x15403-endpoint-pole-cancellation.v1",
+  "status": "EXACT_ENDPOINT_POLE_CANCELLATION"
+}
