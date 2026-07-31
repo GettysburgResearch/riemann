@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.x17802-independent-mpfr-replay.v1",
+  "classification": "DIRECTED_ENGINEERING_PROTOTYPE_INDEPENDENT_BACKEND",
+  "precision_bits": 256,
+  "translation": {"numerator": "8578244975439", "denominator": "549755813888"},
+  "coefficient_cutoff": 4096,
+  "explicit_dyadic_factors": 64,
+  "prime_power_terms": 64542,
+  "runs": [
+    {"grid_power": 16, "prime_center": "6.2710009372441618845518212585669221428601234866516e-11", "prime_radius": "2.9126983617063487810238082440256485936479579152383e-12", "prime_lower": "5.9797311010735270064494404341643572834953276951277e-11", "prime_upper": "6.5622707734147967626542020829694870022249192781754e-11"},
+    {"grid_power": 18, "prime_center": "6.2707807899130758905832446464158184216801099825538e-11", "prime_radius": "1.1377727975461011963660738989957675737872832463734e-14", "prime_lower": "6.2696430171155297893868785725168226541063226993075e-11", "prime_upper": "6.2719185627106219917796107203148141892538972658002e-11"},
+    {"grid_power": 20, "prime_center": "6.2707798597244353205797559591783374921627131504541e-11", "prime_radius": "4.4444249949731615785285573771946274375570383367733e-17", "prime_lower": "6.2707754152994403474181774306209602975352755934158e-11", "prime_upper": "6.2707843041494302937413344877357146867901507074925e-11"}
+  ],
+  "binary128_grid20_lower": "6.27077541529682575249213500067695282659709771e-11",
+  "binary128_grid20_upper": "6.27078430415204488884929593708773536949609587e-11",
+  "old_linear_midpoint": "4.183986431348427e-9",
+  "ordinary_zero_plus_trivial_model": "6.2707798614762569352228674106992127104860e-11",
+  "proof_boundary": "Independent all-MPFR interval FFT and prime sum. The MPFR center arithmetic uses 2^-220 guard balls at 256 bits; the guard proof and implementation still require independent source review. The zero-side model is ordinary high precision."
+}
