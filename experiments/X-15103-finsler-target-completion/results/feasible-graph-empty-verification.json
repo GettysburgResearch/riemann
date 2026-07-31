@@ -1,0 +1,55 @@
+{
+  "c": {
+    "denominator": 1,
+    "numerator": 0
+  },
+  "complement_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 26
+    },
+    {
+      "denominator": 104,
+      "numerator": 6075
+    },
+    {
+      "denominator": 1,
+      "numerator": 48
+    }
+  ],
+  "dimension": 4,
+  "graph_separator": {
+    "all_weights_nonnegative_at_c": false,
+    "interval_nonempty": false,
+    "lower": {
+      "denominator": 1,
+      "numerator": 66
+    },
+    "positive_weight_graph_connected_at_c": true,
+    "upper": {
+      "denominator": 1,
+      "numerator": 15
+    },
+    "weights": [
+      {"i": 0, "j": 1, "value": {"denominator": 1, "numerator": -39}},
+      {"i": 0, "j": 2, "value": {"denominator": 2, "numerator": 15}},
+      {"i": 0, "j": 3, "value": {"denominator": 2, "numerator": 163}},
+      {"i": 1, "j": 2, "value": {"denominator": 2, "numerator": 45}},
+      {"i": 1, "j": 3, "value": {"denominator": 2, "numerator": 141}},
+      {"i": 2, "j": 3, "value": {"denominator": 2, "numerator": -33}}
+    ]
+  },
+  "mode": "feasible",
+  "proof_object_sha256": "2b8e93b3bf172767734c7dc7cdc5fd1c253a2b519b1981321be73d90f19e9543",
+  "schema": "riemann.target-pinned-finsler-completion.v1",
+  "scope_warning": "Exact finite linear algebra only. The imported special-matrix real-zero theorem, parity/normalization adapter, target transform, and any cofinal RH implication remain separate gates.",
+  "slope_inertia": {
+    "negative_on_complement": 2,
+    "negative_on_full_space": 2,
+    "positive_on_complement": 1,
+    "positive_on_full_space": 1,
+    "zero_on_full_space": 1
+  },
+  "target_normalization": {"denominator": 1, "numerator": 1},
+  "verdict": "CERTIFIED_STRICT_TARGET_PINNED_COMPLETION"
+}
