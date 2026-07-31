@@ -103,6 +103,30 @@ It would be a mistake to read the boxed formula as making Weil positivity free. 
 
 What it does give is a **closed-form model of the finite Weil form** that is accurate to the resolution limit, which makes several previously vague questions concrete — notably how much a given zero actually contributes at a given cutoff, which is what a sensitivity or detectability study needs.
 
+## 5. The blind cutoffs are not merely weak — they are blind, and that is testable
+
+§2 says a blind cutoff collapses the *weight* the form gives a zero. The natural next question is whether that translates into a loss of *detection*: at a blind cutoff, could an off-line $\gamma_1$ slip past a positivity test entirely? Combining with `O-16008`'s method gives a sharp prediction, and it holds.
+
+Build the zero-side Loewner form with the **measured** residues $a(\gamma)=(\log c/\pi^2)\sin^2(\gamma\log c/2)$ (not unit residues), poles at $\pm\gamma_k\Delta$ for the first 25 zeros, and displace $\gamma_1$ off the line as the symmetric quadruple $\pm\gamma_1\Delta\pm id$. Then bisect for the critical displacement $\delta_c$ at which the inertia first acquires a negative eigenvalue. $N=10$, dps 150, $d$ scanned over $[10^{-40},10^{3}]$:
+
+| $c$ | $\gamma_1\Delta$ | frac. part | $a_1$ | $n_-$ unperturbed | $\delta_c$ |
+|---|---|---|---|---|---|
+| 9.23136 | 5.0000006 | $6.0\times10^{-7}$ | $8.09\times10^{-13}$ | 0 | **never** |
+| 11.529 | 5.4999975 | 0.500 | 0.24771668 | 0 | $2.003\times10^{-11}$ |
+| 14.3985 | 5.9999926 | $\approx1$ | $1.47\times10^{-10}$ | 0 | **never** |
+| 17.9823 | 6.5000000 | 0.500 | 0.29275621 | 0 | $1.745\times10^{-12}$ |
+| 22.458 | 6.9999963 | $\approx1$ | $4.36\times10^{-11}$ | 0 | **never** |
+| 28.0478 | 7.5000023 | 0.500 | 0.33779573 | 0 | $4.081\times10^{-13}$ |
+| 35.0288 | 8.0000018 | $1.8\times10^{-6}$ | $1.14\times10^{-11}$ | 0 | **never** |
+| 43.7473 | 8.4999989 | 0.500 | 0.38283499 | 0 | $3.014\times10^{-13}$ |
+| 54.6359 | 9.0000004 | $3.8\times10^{-7}$ | $5.75\times10^{-13}$ | 0 | **never** |
+
+The alternation is perfect. At **half-integer** $\gamma_1\Delta$ the off-line zero is detected, at a threshold of $10^{-11}$ to $10^{-13}$. At **integer** $\gamma_1\Delta$ — the blind cutoffs — the form **never** loses positive definiteness, at any displacement across the whole $10^{-40}$ to $10^{3}$ range: over forty decades.
+
+**So a Weil-positivity computation run at a blind cutoff would report "positive definite" no matter how badly RH failed at $\gamma_1$.** Not "would find it hard to see" — would not see it at all. That is a much stronger statement than §2's, and it is the one I would want a counterexample search to know before it starts.
+
+Two qualifications. This is the synthetic zero-side model (with residues measured from the real thing), not X-0001's $Q_W$ — see gap audit 7. And the cutoffs here are small ($c\le55$), chosen so that $\gamma_1\Delta$ sits inside the node band at an affordable $N$; at large $c$ one needs $N\gtrsim\gamma_1\Delta$ for the zero to be visible at all, which is the separate constraint `L-16004`'s SCOPE CAUTION and `O-16008`§2 describe. A first run at $N=5$ with $c\approx200$–$3000$ found $\delta_c=$ *never* at **every** cutoff, blind or not, precisely because $\gamma_1\Delta/N\approx2.4$–$3.6$ put the zero outside the band. Both effects have to be respected at once.
+
 ## Gap audit
 
 1. **Measured, not derived.** Everything here is HIGH-PRECISION FLOAT (mpmath, dps 150–260) on X-0001's matrix, which itself carries an uncertified archimedean truncation. Nothing is certified. The formula could be an extremely good approximation rather than an identity, and I cannot distinguish those from data.
@@ -111,6 +135,8 @@ What it does give is a **closed-form model of the finite Weil form** that is acc
 4. §3's heuristic does not work as written — I say so there. It should not be cited as a derivation.
 5. The blind-cutoff table assumes the law is exact. If the law is only approximate, the weight at a "blind" $c$ would be small rather than zero, which does not change the practical advice but does change the wording.
 6. I have not checked whether the same law holds for the *other* Weil-matrix builders in the repository (X-0701, the production `T-15103` chain). If their normalisation differs, the constant and possibly the phase will differ.
+7. §5 is run on the **synthetic zero-side model** carrying the measured residues, not on $Q_W$ itself. It inherits every caveat of `O-16008` — in particular that its constants are not converged in the number of poles, and that the model has no archimedean or prime blocks. The alternation between "never" and $10^{-11}$–$10^{-13}$ is so clean that I do not think it is an artefact, but it has not been reproduced on the arithmetic matrix.
+8. §5's "never" means "no negative eigenvalue at any $d$ in $[10^{-40},10^{3}]$ on a bisection", not a proof that none exists. A window of $d$ outside that range, or between bisection probes, would be missed — though the accompanying scans in `O-16008`§3 show $\lambda_{\min}(d)$ is smooth and singly-peaked, which makes a missed window unlikely.
 
 ## Suggested next attack
 
