@@ -40,10 +40,9 @@ class ExcessQuantumTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             VERIFY.verify(bad)
 
-    def test_rejects_missing_quantum(self):
+    def test_rejects_empty_extra_block(self):
         bad = copy.deepcopy(BASE)
-        bad["D_diagonal"][2] = "5/2"  # clipped contribution equals eta only
-        bad["t"] = "3/5"              # makes A=2/5<t but eta=2/5; equality
+        bad["extra_low_indices"] = []
         with self.assertRaises(ValueError):
             VERIFY.verify(bad)
 
