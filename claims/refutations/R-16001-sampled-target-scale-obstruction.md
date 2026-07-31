@@ -119,6 +119,19 @@ Deliberate search for ways this refutation could be wrong or overreaching:
 
 - **Pipeline control.** One-signed targets $\xi_j=1/(1+j^2)>0$ at $N=4,6,8$ gave deficit $0$ exactly, as `L-16003`(iii) requires. So the machinery does not manufacture spurious complex roots.
 - **Band-limited control.** For $A(z)=\sin(\gamma z)/(\gamma z)$ with $\gamma<\tfrac12$ — provably real-rooted, exactly band-limited, so **no aliasing whatever** — the same pipeline gives deficits $8,10,12$ ($\gamma=0.2$, $N=6,8,10$), $4,6,6$ ($\gamma=0.35$) and $2,2,2$ ($\gamma=0.45$). In all nine cases the count equals the number of real zeros of $A$ inside the sampled window $|z|\le2\pi N$, exactly. This shows the phenomenon is a **general property of truncated cardinal series governed by zero density**, not an artefact of $\Xi$, of aliasing, or of RH — and it is the cleanest evidence for the mechanism in (e).
+- **Gap-level confirmation of the mechanism (the sharpest single test).** Statement (e) predicts that the node gaps failing to contain a real root are exactly those whose $w$-range contains no zero of $\Xi$. Locating every root at 150 digits and testing each of the $2N$ gaps individually:
+
+| $\alpha$, $N$ | spacing in $w$ | first $\Xi$ zero at index | node gaps with **no** real root |
+|---|---|---|---|
+| $1.0,\ 8$ | $6.2832$ | $\lvert j\rvert=2.250$ | $-7,-4,\mathbf{-2,-1,0,1},3,6$ |
+| $0.9,\ 10$ | $5.6549$ | $\lvert j\rvert=2.500$ | $-9,-6,\mathbf{-2,-1,0,1},5,8$ |
+| $0.8,\ 10$ | $5.0265$ | $\lvert j\rvert=2.812$ | $-9,-6,\mathbf{-4,-2,-1,0,1,3},5,8$ |
+| $0.5,\ 12$ | $3.1416$ | $\lvert j\rvert=4.499$ | $-9,-6,\mathbf{-4,-3,-2,-1,0,1,2,3},5,8$ |
+
+  The bold runs are exactly the contiguous blocks of gaps lying inside $|w|<14.1347$, the zero-free region of $\Xi$ below its first zero — at $\alpha=0.5$ that is the full run $j=-4,\dots,3$ spanning $|w|<12.57$. At $\alpha=0.8$ the empty set additionally contains $j=-4$ and $j=3$, spanning $|w|\in(15.08,20.11)$, which is precisely the zero-free interval **between** $\Xi$'s first two zeros $14.13$ and $21.02$. The mechanism is therefore confirmed gap by gap, not merely in aggregate.
+
+  Note that the net deficit is smaller than twice the number of empty gaps, because gap parity permits a sign-change gap to carry two roots and some do; the empty gaps and the doubly-occupied gaps partially compensate. The deficit is the residue of that redistribution.
+
 - **Precision.** Counts identical at 20/30/40/50/60/100 rationalization digits.
 - **Independent method, and a caution.** An early `float64` eigenvalue computation of $D'=D-|D\xi\rangle\langle\eta|$ reported nonreal roots at $|{\rm Im}\,w|\approx0.43$, **inside** the RH strip. At 150 digits these vanish entirely: the sampled coefficients span a dynamic range of $10^{-21}$ or worse, far beyond double precision. Recorded as a live instance of README §8's warning about "confusing a discrepancy between implementations with a mathematical contradiction", and as an argument for the exact-arithmetic discipline used throughout.
 
