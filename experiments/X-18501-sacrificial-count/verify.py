@@ -30,6 +30,7 @@ def shape(a): return len(a),len(a[0])
 def transpose(a): return [list(x) for x in zip(*a)]
 def add(a,b,s=Q(1)):
     return [[a[i][j]+s*b[i][j] for j in range(len(a[0]))] for i in range(len(a))]
+def scale(a,s): return [[s*z for z in row] for row in a]
 def mul(a,b):
     return [[sum(a[i][k]*b[k][j] for k in range(len(b))) for j in range(len(b[0]))] for i in range(len(a))]
 def contract(b,a): return mul(transpose(b),mul(a,b))
@@ -69,25 +70,23 @@ def verify(d):
     if shape(G)!=shape(K) or shape(G)[0]!=shape(G)[1]: raise Reject("matrix shape mismatch")
     n=len(G); gp=pd_pivots(G,"metric"); pd_pivots(K,"evaluation_gram")
     W=matrix(d.get("witness_basis"),"witness_basis")
-    if len(W)!=n or rank(W)!=len(W[0]): raise Reject("witness basis not full column rank")
+    wr=rank(W)
+    if len(W)!=n or wr!=len(W[0]): raise Reject("witness basis not full column rank")
     r=integer(d.get("radical_rank"),"radical_rank")
-    if r<0 or n-rank(W)>r: raise Reject("codimension exceeds radical rank")
+    if r<0 or n-wr>r: raise Reject("codimension exceeds radical rank")
     tau=rat(d.get("threshold"),"threshold")
-    HW=contract(W,add(K,G,-tau)); wp=pd_pivots(HW,"strict witness floor")
+    wp=pd_pivots(contract(W,add(K,G,-tau)),"strict witness floor")
     R=matrix(d.get("radical_basis"),"radical_basis")
     if len(R)!=n or rank(R)!=r: raise Reject("radical basis rank mismatch")
     eps=rat(d.get("radical_evaluation_upper"),"radical_evaluation_upper")
     if eps>=tau: raise Reject("radical endpoint must be below threshold")
-    HR=contract(R,add(G,K,-Q(1,eps) if False else Q(0)))
-    # Build eps*G-K explicitly; the branch above is intentionally not used.
-    HR=contract(R,add([[eps*z for z in row] for row in G],K,-1))
-    rp=pd_pivots(HR,"strict radical upper moat")
+    rp=pd_pivots(contract(R,add(scale(G,eps),K,-1)),"strict radical upper moat")
     result={
       "schema":SCHEMA,
       "status":"CERTIFIED_SHARP_COUNT_AND_ANGLE",
       "ambient_dimension":n,
-      "witness_rank":rank(W),
-      "witness_codimension":n-rank(W),
+      "witness_rank":wr,
+      "witness_codimension":n-wr,
       "radical_rank":r,
       "threshold":outq(tau),
       "radical_evaluation_upper":outq(eps),
