@@ -176,6 +176,49 @@ An independent analysis this session proved several of the ingredients and repla
 
 **Still open.** The converse half — that the roots not forced real by gap parity are nonreal — remains unproved, and the suggested route via the lower bound (5) cannot work, since a lower bound cannot establish it.
 
+## Measured data, sharpened (sampled-$\Xi$ family — see ERRATUM E1 for scope)
+
+An independent reimplementation, validated against this claim's own census (it reproduces
+$(\alpha,N,\#\text{real})=(0.6,6,4),(0.6,8,8),(0.6,10,12),(0.5,10,8),(0.3,14,6)$ exactly) and with every verdict
+invariant under rationalization at 40, 60, 100, 150 and 250 significant digits:
+
+**The threshold, to 12 digits.** $\alpha_c\in(1.064414596999,\ 1.064414597000)$, **identical at $N=6,8,10,14,20,26,30$**. Equivalently, in the retained half-width $T=1/(2\alpha)$: $T_c=0.469741772998$.
+
+**The deficit is a function of $\alpha$ alone, and $N$ never helps.**
+
+| $\alpha$ | deficit | verified up to |
+|---|---|---|
+| $0.50$ | $12$ | $N=44$ (degree 88) |
+| $0.55$–$0.65$ | $8$ | $N=50$ (degree 100) |
+| $0.70$–$1.064$ | $4$ | $N=60$ (**degree 120**) |
+| $\ge1.065$ | $0$ | $N=50$ (degree 100) |
+
+At $\alpha=0.7$ the deficit is still exactly $4$ at $N=60$ — 3.7 times the level at which the refuted $N_0$ law predicted a pass.
+
+**The pass is an open region, not an isolated point.** All of $(1.089,10)$, $(1.111,10)$ ($\alpha\pm1\%$), $(1.1,9)$, $(1.1,11)$ ($N\pm1$), $(1.1,N)$ for $N=2,\dots,50$, $(1.07,7)$, $(1.07,50)$, $(1.065,4)$, $(1.0655,15)$ and $\alpha=1.2$–$4.0$ pass; $(1.0633,15)$ and $(1.0644,10)$ fail with deficit 4.
+
+**Mechanism of the pass.** A single conjugate pair collides on the real axis near $w\approx12.53$ and splits. Its imaginary part at $N=10$: $2.654$ ($\alpha=0.9$), $1.564$ ($1.0$), $0.734$ ($1.05$), $0.406$ ($1.06$), $0.023$ ($1.0644$), $0$ ($1.07$). Neither resulting real root is near $\gamma_1=14.134725$.
+
+**The sharpest statement of why the pass is empty.** In the pass region every real root except the innermost pair sits on the **sinc lattice** $w=2\pi\alpha k$, $k=3,\dots,N$, to 5–6 digits — the zeros of the transform of the window *indicator*. At $\alpha=1.1$ the ratios $w/(2\pi\alpha)$ are $1.6543,\ 1.9867,\ 2.99987,\ 4.00001,\ 5,6,7,8,9,10$. By contrast **at $\alpha=0.5$, where the criterion FAILS, the real roots genuinely are the zeros of $\Xi$**: $14.13473$, $21.02159$, $25.00980$ against the true $14.134725$, $21.022040$, $25.010858$.
+
+> **The gate passes exactly where the model has stopped being about $\zeta$, and fails exactly where it starts being about $\zeta$.**
+
+**The error budget makes this quantitative.** Fraction of $\Phi$-mass discarded, and $|{\rm truncated}-\Xi|$ at $w=0$:
+
+| $\alpha$ | mass discarded | error at $w=0$ |
+|---|---|---|
+| $0.5$ | $2.5\times10^{-6}\%$ | $1.26\times10^{-8}$ |
+| $0.7$ | $0.030\%$ | $1.49\times10^{-4}$ |
+| $1.0$ | $1.67\%$ | $8.32\times10^{-3}$ |
+| $\alpha_c$ | $2.56\%$ | $1.27\times10^{-2}$ |
+| $1.1$ | $3.13\%$ | $1.55\times10^{-2}$ |
+
+Throughout the pass region the truncation error exceeds $|\Xi(w)|$ for all $w\gtrsim12$ — **below** $\gamma_1$.
+
+**The Gaussian control, to 9 digits.** Replacing $\Phi$ by $e^{-t^{2}}$, whose full transform $\sqrt\pi e^{-w^{2}/4}$ has **no zeros at all**, reproduces the identical threshold phenomenon at $\alpha_c^{\mathrm{gauss}}\in(0.341524804,\ 0.341524816)$, also $N$-independent. So "the finite CvS criterion passes" is a generic property of hard-truncated positive even bumps — **a statement about window truncation, not about $\zeta$.**
+
+**The completion at a passing level, exactly.** At $(\alpha,N)=(1.1,10)$: $Q$ symmetric; $(i-j)Q_{ij}=b_i-b_j$ for all $i\ne j$ (CvS form (11)); $b$ odd; diagonal even; $\Gamma Q=Q\Gamma$; $Q\xi=0$ exactly; and the $20\times20$ compression has all 20 exact $LDL^{\mathsf T}$ pivots positive, smallest $\approx2.6756$ (no near-degeneracy), so $Q\succeq0$ with $\ker Q=\mathbb R\xi$ exactly one-dimensional. The closed form of `L-16004` was cross-checked against $\sum_k\ell\ell^{\mathsf T}$ at 80 digits to relative $7.5\times10^{-60}$, and $QD'=D'^{\mathsf T}Q$ holds exactly over $\mathbb Q$. Useful identity: $P(i)=\xi_i(-1)^{N+i}(N+i)!\,(N-i)!$.
+
 ## Analytic domain audit
 
 All statements are about a polynomial of degree $2N$ with rational coefficients and about an entire function $F$ of exponential type $\tfrac12$ obtained by Fourier transforming a compactly supported bounded function. No contour, branch cut, or analytic continuation is involved. $\Xi$ is entire. The nonreal roots reported in (c) are roots of $P$, transported to the $w$ variable by the linear map $w=2\pi\alpha s$; they are **not** claimed to be zeros of $\Xi$ or of anything else, and they lie far outside the strip where such a claim would even be meaningful.
