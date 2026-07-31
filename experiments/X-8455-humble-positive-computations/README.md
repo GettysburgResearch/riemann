@@ -22,6 +22,11 @@ cautious.
 | C3 | `comp3_terminal_hankel/` | How does a pole-free terminal Hankel Rayleigh quotient behave on a short support ladder? |
 | C4 | `comp4_packet_floor/` | On tiny synthetic three-block packets, which margins actually move together? |
 | C5 | `comp5_notch_moat/` | How quickly do midpoint notches shrink an explicit-formula zero-sum envelope? |
+| C6 | `comp6_gap_roots/` | Gap parity / root geometry near the windowed transition |
+| C7 | `comp7_phase_rayleigh/` | Pole-free Rayleigh vs low zeta-zero phases |
+| C8 | `comp8_readingb_gaussian/` | Opposite-sign Reading-B + Gaussian/Hermite controls |
+| C9 | `comp9_loewner_moat/` | Loewner moat / energy separators |
+| C10 | `comp10_unexpected/` | D′ spectrum, prime-truncated Φ, odd probes |
 
 ## How to run
 

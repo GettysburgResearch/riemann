@@ -1,0 +1,413 @@
+{
+  "content_sha256": "4f5a7127baef612668d9811259d458e7c8299890436476456d490764da8b8e66",
+  "cv_and_phase_rows": [
+    {
+      "N": 4,
+      "alpha": 1.05,
+      "phase_l1": 6.283185307179586,
+      "sampled_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "sampled_deficit": 4,
+      "windowed_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "windowed_adj_phase": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -3.141592653589793,
+        3.141592653589793,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "windowed_deficit": 0
+    },
+    {
+      "N": 4,
+      "alpha": 1.0,
+      "phase_l1": 6.283185307179586,
+      "sampled_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "sampled_deficit": 4,
+      "windowed_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "windowed_adj_phase": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -3.141592653589793,
+        3.141592653589793,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "windowed_deficit": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.98,
+      "phase_l1": 18.84955592153876,
+      "sampled_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "sampled_deficit": 4,
+      "windowed_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "windowed_adj_phase": [
+        -0.0,
+        -3.141592653589793,
+        3.141592653589793,
+        -3.141592653589793,
+        3.141592653589793,
+        -3.141592653589793,
+        3.141592653589793,
+        -0.0
+      ],
+      "windowed_deficit": 0
+    },
+    {
+      "N": 4,
+      "alpha": 0.96,
+      "phase_l1": 18.84955592153876,
+      "sampled_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "sampled_deficit": 4,
+      "windowed_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 9
+      },
+      "windowed_adj_phase": [
+        -0.0,
+        -3.141592653589793,
+        3.141592653589793,
+        -3.141592653589793,
+        3.141592653589793,
+        -3.141592653589793,
+        3.141592653589793,
+        -0.0
+      ],
+      "windowed_deficit": 4
+    },
+    {
+      "N": 6,
+      "alpha": 1.0,
+      "phase_l1": 6.283185307179586,
+      "sampled_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 13
+      },
+      "sampled_deficit": 4,
+      "windowed_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 13
+      },
+      "windowed_adj_phase": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -3.141592653589793,
+        3.141592653589793,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "windowed_deficit": 0
+    },
+    {
+      "N": 6,
+      "alpha": 0.96,
+      "phase_l1": 18.84955592153876,
+      "sampled_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 13
+      },
+      "sampled_deficit": 4,
+      "windowed_Dp": {
+        "complex_pairs": [],
+        "max_abs_imag": 0.0,
+        "n_complex_pairs": 0,
+        "n_realish": 13
+      },
+      "windowed_adj_phase": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -3.141592653589793,
+        3.141592653589793,
+        -3.141592653589793,
+        3.141592653589793,
+        -3.141592653589793,
+        3.141592653589793,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "windowed_deficit": 4
+    }
+  ],
+  "disclaimer": "mpmath eig on non-symmetric D' at 60 dps; still not interval arithmetic. Prime truncation of Phi is a blunt probe of arithmetic depth.",
+  "prime_truncated_transition": [
+    {
+      "K": 1,
+      "N": 4,
+      "alpha": 1.05,
+      "deficit": 0
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 0
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 0
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 4
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "alpha": 0.94,
+      "deficit": 4
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "alpha": 0.9,
+      "deficit": 4
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "alpha": 1.05,
+      "deficit": 0
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 0
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 0
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 4
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "alpha": 0.94,
+      "deficit": 4
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "alpha": 0.9,
+      "deficit": 4
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "alpha": 1.05,
+      "deficit": 0
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 0
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 0
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 4
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "alpha": 0.94,
+      "deficit": 4
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "alpha": 0.9,
+      "deficit": 4
+    },
+    {
+      "K": 5,
+      "N": 4,
+      "alpha": 1.05,
+      "deficit": 0
+    },
+    {
+      "K": 5,
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 0
+    },
+    {
+      "K": 5,
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 0
+    },
+    {
+      "K": 5,
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 4
+    },
+    {
+      "K": 5,
+      "N": 4,
+      "alpha": 0.94,
+      "deficit": 4
+    },
+    {
+      "K": 5,
+      "N": 4,
+      "alpha": 0.9,
+      "deficit": 4
+    },
+    {
+      "K": 10,
+      "N": 4,
+      "alpha": 1.05,
+      "deficit": 0
+    },
+    {
+      "K": 10,
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 0
+    },
+    {
+      "K": 10,
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 0
+    },
+    {
+      "K": 10,
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 4
+    },
+    {
+      "K": 10,
+      "N": 4,
+      "alpha": 0.94,
+      "deficit": 4
+    },
+    {
+      "K": 10,
+      "N": 4,
+      "alpha": 0.9,
+      "deficit": 4
+    },
+    {
+      "K": 20,
+      "N": 4,
+      "alpha": 1.05,
+      "deficit": 0
+    },
+    {
+      "K": 20,
+      "N": 4,
+      "alpha": 1.0,
+      "deficit": 0
+    },
+    {
+      "K": 20,
+      "N": 4,
+      "alpha": 0.98,
+      "deficit": 0
+    },
+    {
+      "K": 20,
+      "N": 4,
+      "alpha": 0.96,
+      "deficit": 4
+    },
+    {
+      "K": 20,
+      "N": 4,
+      "alpha": 0.94,
+      "deficit": 4
+    },
+    {
+      "K": 20,
+      "N": 4,
+      "alpha": 0.9,
+      "deficit": 4
+    }
+  ],
+  "schema": "riemann.x8455.comp10.v1",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "Does max_abs_imag of D' jump in lockstep with the Sturm deficit?",
+    "Is adjacent-phase L1 a cheaper predictor than building P?",
+    "Why would K=1 already freeze the transition alpha, if it does?"
+  ]
+}
