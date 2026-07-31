@@ -1,0 +1,35 @@
+name: x15305-zero-frame-tail-gates
+
+on:
+  pull_request:
+    paths:
+      - 'claims/lemmas/L-15307-certified-frame-residual-schur-floor.md'
+      - 'claims/lemmas/L-15308-cofinal-diagonal-radical-row-and-exact-assembly.md'
+      - 'claims/theorems/T-15303-one-residual-cofinal-three-block-criterion.md'
+      - 'experiments/X-15305-zero-frame-tail-gates/**'
+      - '.github/workflows/x15305-zero-frame-tail-gates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile checker
+        run: python3 -m py_compile experiments/X-15305-zero-frame-tail-gates/verify.py experiments/X-15305-zero-frame-tail-gates/tests/test_verify.py
+      - name: Run tests
+        run: python3 -m unittest discover -v -s experiments/X-15305-zero-frame-tail-gates/tests
+      - name: Replay certificate
+        run: |
+          python3 experiments/X-15305-zero-frame-tail-gates/verify.py \
+            experiments/X-15305-zero-frame-tail-gates/certificates/synthetic.json \
+            > /tmp/x15305.json
+          diff -u \
+            experiments/X-15305-zero-frame-tail-gates/results/synthetic-verification.json \
+            /tmp/x15305.json
