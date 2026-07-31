@@ -1,68 +1,86 @@
-# T-14303 — The exact Riemann radical satisfies the cofinal tail/coercivity limits
+# T-14303 — Cofinal radical-tail residual ratios vanish
 
 Claim ID: `T-14303`  
-Title: Gaussian radical-tail decay beats a complete polynomial Hardy moat  
+Title: An exact fixed `E`-radical satisfies both requested tail/coercivity limits on a cofinal packet sequence  
 Status: `PROPOSED`  
 Authoring agent: `gpt56-08`  
 Created: 2026-07-31  
-Dependencies: `L-14312`, `L-14313`, `L-14308`, `T-14302`  
-Scope: the numerator/denominator blocker in the positive localized-Weil program  
+Dependencies: `L-14309`, `L-14311`, `L-14312`, `L-14313`  
+Scope: the residual/coercivity blocker isolated in `T-14302`  
 Related counterexample candidates: none
 
-## Statement
+## Cofinal construction
 
-For integers `j>=4`, put
+Fix the exact nonzero source `f in S_0^ev` and global radical vector `R` from
+`L-14312`. For integers `j>=4`, put
 
 \[
- \lambda_j=e^j,
- \qquad
  a_j=j,
+ \qquad
+ \lambda_j=e^j,
  \qquad
  \tau_j=\frac12-\frac1j.
  \tag{T-14303.1}
 \]
 
-Let `r=E(h_R)` be the exact global Riemann-radical vector of `L-14312`, write
-`R(x)=r(e^x)`, and set
+Let
 
 \[
- k_j=1_{[-a_j,a_j]}R.
+ k_j=1_{[-j,j]}R,
+ \qquad
+ t_j=R-k_j.
  \tag{T-14303.2}
 \]
 
-For each `j`, let `P_j` be the finite complete multiband packet supplied by
-`L-14313` at support `a_j`, transported back to `[-a_j,a_j]`, and put
-
-\[
- S_j=P_j+\operatorname{span}\{k_j\}.
- \tag{T-14303.3}
-\]
-
-Define
+For each `j`, let `S_j` be the finite generalized-prolate packet from
+`L-14313`, enlarged to contain `k_j`. Define the complement moat
 
 \[
  h_j=
- \inf_{\substack{g\in \mathfrak D(Q_W^{a_j})\cap S_j^\perp\\g\ne0}}
- \frac{Q_W^{a_j}(g,g)}{\|g\|_{a_j,\tau_j}^2}
+ \inf_{\substack{0\ne g\in S_j^\perp}}
+ \frac{QW_{\lambda_j}(g,g)}{\|g\|_{j,\tau_j}^2}
+ \tag{T-14303.3}
+\]
+
+and the cross residual
+
+\[
+ \mathfrak T_j
+ =\sup_{\substack{g\in S_j^\perp\\
+                   \|g\|_{j,\tau_j}=1}}
+ |QW_{\lambda_j}(k_j,g)|.
  \tag{T-14303.4}
 \]
 
-and
+## Main conclusion
+
+The moat satisfies
 
 \[
- \mathfrak T_j=
- \sup_{\substack{g\in \mathfrak D(Q_W^{a_j})\cap S_j^\perp\\
-                  \|g\|_{a_j,\tau_j}=1}}
- |Q_W^{a_j}(k_j,g)|.
+ \boxed{h_j\ge e^{-j}=\lambda_j^{-1}.}
  \tag{T-14303.5}
 \]
 
-Then
+For every `N`,
+
+\[
+ \boxed{\mathfrak T_j=O(\lambda_j^{-N}).}
+ \tag{T-14303.6}
+\]
+
+Moreover
+
+\[
+ \|k_j\|_2^2\longrightarrow\|R\|_2^2>0.
+ \tag{T-14303.7}
+\]
+
+Therefore both displayed limits in the project critical path hold:
 
 \[
  \boxed{
  \frac{\mathfrak T_j}{h_j}\longrightarrow0,}
- \tag{T-14303.6}
+ \tag{T-14303.8}
 \]
 
 and
@@ -71,124 +89,99 @@ and
  \boxed{
  \frac{\mathfrak T_j^2}
  {h_j\|k_j\|_2^2}\longrightarrow0.}
- \tag{T-14303.7}
-\]
-
-Thus the requested squared-residual Schur penalty vanishes along an explicit
-cofinal support sequence.
-
-## Proof
-
-By `L-14313`,
-
-\[
- h_j\ge\lambda_j^{-1}.
- \tag{T-14303.8}
-\]
-
-By `L-14312`, the cross bound holds for every finite packet containing `k_j`.
-Therefore fixed constants `C,M` satisfy
-
-\[
- \mathfrak T_j
- \le C\lambda_j^M(1+\log\lambda_j)^{3/2}
- e^{-\pi\lambda_j^2}.
  \tag{T-14303.9}
 \]
 
-It follows that
+The second is the squared-residual term entering the block Temple--Schur lower
+floor of `L-14308` and `T-14302`.
+
+## Proof
+
+`L-14313` gives the Hardy coercivity bound
+
+\[
+ h_j\ge\frac{3e^2}{4e^j}>e^{-j},
+\]
+
+which proves (T-14303.5).
+
+The supremum in (T-14303.4) is taken over a subset of the unit vectors used in
+the complete residual of `L-14312`. Hence, for every `N`,
+
+\[
+ \mathfrak T_j\le C_Ne^{-Nj}=C_N\lambda_j^{-N}.
+\]
+
+This proves (T-14303.6). Equation (T-14303.7) is `L-14312.12`.
+Choosing `N=2`, for example,
 
 \[
  \frac{\mathfrak T_j}{h_j}
- \le C\lambda_j^{M+1}(1+\log\lambda_j)^{3/2}
- e^{-\pi\lambda_j^2}\longrightarrow0,
+ \le C_2\lambda_j^{-1}\to0.
 \]
 
-proving (T-14303.6).
-
-Also `L-14312` gives
+Choosing `N=2` again and using the eventual positive lower bound for
+`||k_j||^2` gives
 
 \[
- \|k_j\|_2\to\|R\|_2>0.
+ \frac{\mathfrak T_j^2}{h_j\|k_j\|^2}
+ \le C\lambda_j^{-3}\to0.
 \]
 
-Hence `||k_j||_2^2>=c_R>0` eventually, and
+QED.
+
+## Rayleigh value
+
+`L-14312` also gives, for every `N`,
 
 \[
- \frac{\mathfrak T_j^2}{h_j\|k_j\|_2^2}
- \le\frac{C^2}{c_R}
- \lambda_j^{2M+1}(1+\log\lambda_j)^3
- e^{-2\pi\lambda_j^2}
- \longrightarrow0.
-\]
-
-This proves (T-14303.7).  QED.
-
-## One-dimensional diagonal
-
-The exact radical identity also gives
-
-\[
- Q_W^{a_j}(k_j,k_j)=Q_W(t_j,t_j),
- \qquad t_j=R-k_j.
+ \rho_j:=\frac{QW_{\lambda_j}(k_j,k_j)}{\|k_j\|_2^2}
+ =O(\lambda_j^{-N}).
  \tag{T-14303.10}
 \]
 
-The two-tail version of `L-14312` yields
+Thus the scalar row of the Schur-corrected low block satisfies
 
 \[
- |Q_W^{a_j}(k_j,k_j)|
- \le C\lambda_j^M e^{-2\pi\lambda_j^2}.
+ \rho_j-
+ \frac{\mathfrak T_j^2}{h_j\|k_j\|_2^2}
+ \longrightarrow0.
  \tag{T-14303.11}
 \]
 
-Thus the explicit radical row and column of the block Temple--Schur matrix have
-a vanishing diagonal and a vanishing squared cross correction.
+## What this closes
 
-## What has and has not been closed
+The theorem closes the analytic tail/coercivity ratio for one exact global
+radical truncation, and for every fixed finite packet of such truncations. It
+also proves that the loss caused by moving the Hardy strip to `tau_j->1/2` is
+far weaker than the exact tail decay.
 
-The theorem closes the exact asymptotic comparison
+## What remains before RH
 
-```text
-external global-radical tail / complete finite-packet coercivity.
-```
-
-The numerator is Gaussian-small while the complete Hardy moat is only
-polynomially small.  No extrapolated numerical decay law is used.
-
-The first limit is proved on the complement of the enlarged finite packet
-`S_j`.  It is not a proof that the complement of `span{k_j}` alone has a
-positive ground-state gap.  The theorem therefore applies directly to the
-block/squared-residual route of `L-14308` and `T-14302`.
-
-## Remaining low-block theorem
-
-This result does not prove RH.  `T-14302` still requires the entire corrected
-finite low block
+The low space `S_j` is larger than `span{k_j}`. The block theorem requires a
+lower bound for the **entire** corrected finite matrix
 
 \[
- B_j-h_j^{-1}R_j^*M_j^{-1}R_j
+ B_j-h_j^{-1}R_j^*M_j^{-1}R_j.
  \tag{T-14303.12}
 \]
 
-outside its explicit radical row to have lower eigenvalue
-`>=-epsilon_j`, with `epsilon_j->0`.  The generally growing multiband packet
-contains the unresolved directions.
+T-14303 proves that the row and column belonging to every fixed exact radical
+truncation vanish. It does not prove nonnegativity of the remaining growing
+multiband packet. That finite but support-dependent low block is now the sole
+unclosed part of this particular lower-floor construction.
 
-The remaining positive-path problem is therefore finite-dimensional at every
-support but not yet uniformly controlled:
+## Ground-vector interpretation warning
 
-> approximate the complete low-symbol packet, in the Weil graph/form norm,
-> by truncations of global `E`-radical sources with a cofinal uniform error.
+Although (T-14303.8) is numerically the stronger ratio, the `h_j` used here is
+the complement moat after a finite generalized-prolate enlargement. It is not
+a spectral gap on `k_j^perp` alone. Therefore (T-14303.8) must not be advertised
+as convergence of `k_j` to a unique ground eigenvector. The directly valid
+application is the block/squared-residual route (T-14303.9).
 
-## Proof boundary and gap audit
+## Proof boundary
 
-- No form of RH is used.
-- The global radical and localized-symbol normalizations remain independent
-  source gates.
-- The packets are finite existence objects; no practical rank estimate is
-  claimed.
-- A finite Ritz calculation gives upper spectral values and cannot replace the
-  missing low-block lower bound.
-- The theorem proves the exact ratio requested in the block setting, not the
-  final cofinal lower envelope required for RH.
+- The theorem inherits the source normalization and global radical theorem.
+- The symbol packet inherits the sign and Fourier normalization of `L-14311`.
+- No numerical extrapolation or finite-prefix inference is used.
+- This theorem proves the requested ratio, not the full Riemann hypothesis.
