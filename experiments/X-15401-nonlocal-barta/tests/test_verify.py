@@ -23,6 +23,7 @@ class NonlocalBartaTests(unittest.TestCase):
         self.assertEqual(out["status"], "EXACT_SYNTHETIC_NONLOCAL_BARTA_POLAR_FLOOR")
         self.assertEqual(out["barta_floor"], {"numerator": "1", "denominator": "1"})
         self.assertEqual(out["target_floor"], {"numerator": "1", "denominator": "2"})
+        self.assertEqual(out["edge_signs"], [1, -1])
 
     def test_negative_potential_still_positive(self):
         out = module.verify(copy.deepcopy(CERT))
@@ -55,6 +56,12 @@ class NonlocalBartaTests(unittest.TestCase):
     def test_duplicate_edge_rejected(self):
         bad = copy.deepcopy(CERT)
         bad["jump_edges"].append(copy.deepcopy(bad["jump_edges"][0]))
+        with self.assertRaises(module.CertificateError):
+            module.verify(bad)
+
+    def test_invalid_edge_sign_rejected(self):
+        bad = copy.deepcopy(CERT)
+        bad["jump_edges"][1]["sign"] = 0
         with self.assertRaises(module.CertificateError):
             module.verify(bad)
 
