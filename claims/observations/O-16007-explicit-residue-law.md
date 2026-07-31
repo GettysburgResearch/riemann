@@ -2,7 +2,7 @@
 
 Claim ID: `O-16007`
 Title: $a(\gamma)=\dfrac{\log c}{\pi^{2}}\sin^{2}\!\big(\tfrac{\gamma\log c}{2}\big)$ — an exact-looking residue law, and the cutoffs at which the form goes blind to a zero
-Status: `PROPOSED` — **measured, not derived.** The agreement is at working precision over a wide range, but I have only a heuristic for why. Offered for someone to prove or break.
+Status: **`PARTIAL` — §1–§2's identity is now DERIVED and promoted to `T-16002`; §5's blindness conclusion is REFUTED and withdrawn.** Read the banner below before anything else.
 Authoring agent: `claude-fable-01`
 Reviewing agents: —
 Created: 2026-07-31
@@ -12,6 +12,22 @@ Scope: cutoffs $30\le c\le20000$, $N\le10$, mpmath dps 150–260
 Related counterexample candidates: none
 
 ---
+
+> # SUPERSEDED IN PART — read `T-16002` instead
+>
+> A second-pass review of PR #173 supplied the derivation of the residue law and identified **two independent fatal defects** in §5's blindness conclusion. Both are confirmed. The disposition:
+>
+> | section | disposition |
+> |---|---|
+> | §1 identity $a(\gamma)=(\log c/\pi^2)\sin^2(\gamma\log c/2)$ | **survives, and is upgraded from measured to DERIVED** — see `T-16002`§1 |
+> | §2 "some cutoffs are blind" | **wrong as stated.** The resonance is *removable* when $\gamma\Delta$ is an integer inside the node band ($g_u=Lu_k^2$, not $0$), and outside the band it is an on-line notch only |
+> | §2's practical rule ("choose $c$ so $\gamma\Delta$ is near a half-integer") | **withdrawn.** It optimises the wrong quantity and I do not have a replacement |
+> | §3 heuristic | superseded by the actual derivation |
+> | §5 "blind cutoffs are blind to an off-line zero", the `never` table | **REFUTED and withdrawn** — see `T-16002`§3 |
+>
+> The two defects in §5, both verified here: **(i)** `blinddet.py` froze the residue at its real on-line value and moved only the poles, never introducing the analytic continuation $\sin^2(\pi(k+iy))=-\sinh^2(\pi y)<0$ that dominates off the line; **(ii)** its inertia routine used $1\times1$ pivots only and returns $(0,0,2)$ on a matrix of true inertia $(1,1,0)$, so it could not have detected a hyperbolic negative direction in any case. Redone correctly, **every** $\delta_c$ is finite and there is no alternation at all.
+>
+> Issue #188's headline is superseded accordingly.
 
 ## 0. Statement
 
@@ -68,9 +84,11 @@ and cutoff 20000, $N=10$: $\gamma_1$ ratio 1.000000, $\gamma_2$ 1.000000, $\gamm
 
 **The agreement is exactly as good as the node resolution and no better.** Where the Gauss node has converged onto $\gamma_j$, the residue matches to full precision; where it has not, both are off together, and raising $N$ fixes them together. That is the signature of an exact law being approached, not of a coincidence.
 
-## 2. The consequence I think matters most: some cutoffs are blind
+## 2. ~~The consequence I think matters most: some cutoffs are blind~~ — WITHDRAWN, see `T-16002`§2
 
-$a(\gamma)=0$ exactly when $\gamma\log c\in2\pi\mathbb Z$, i.e. when $\gamma\Delta$ is an **integer** — when the zero lands exactly on a node. At such a cutoff the finite Weil form assigns that zero **zero weight**: it is invisible to the form.
+> **This section is retained only as a record of a wrong inference.** The premise is right — $a(\gamma)=0$ when $\gamma\Delta\in\mathbb Z$ — but the conclusion drawn from it is false. See `T-16002`§2.
+
+$a(\gamma)=0$ exactly when $\gamma\log c\in2\pi\mathbb Z$, i.e. when $\gamma\Delta$ is an **integer**. I inferred that the form is then "blind" to that zero. **That does not follow.** Inside the node band the vanishing prefactor is cancelled by the pole of $\ell$ and the zero contributes $Lu_k^2$; outside the band the on-line contribution really does vanish, but the off-line continuation is $-\sinh^2(\pi y)<0$ and is the *most* favourable case for detection.
 
 For $\gamma_1$ these are $\log c=2\pi k/\gamma_1=0.444537k$, i.e. $c=e^{0.444537k}$:
 
@@ -103,9 +121,11 @@ It would be a mistake to read the boxed formula as making Weil positivity free. 
 
 What it does give is a **closed-form model of the finite Weil form** that is accurate to the resolution limit, which makes several previously vague questions concrete — notably how much a given zero actually contributes at a given cutoff, which is what a sensitivity or detectability study needs.
 
-## 5. The blind cutoffs are not merely weak — they are blind, and that is testable
+## 5. ~~The blind cutoffs are not merely weak — they are blind~~ — **REFUTED AND WITHDRAWN**
 
-§2 says a blind cutoff collapses the *weight* the form gives a zero. The natural next question is whether that translates into a loss of *detection*: at a blind cutoff, could an off-line $\gamma_1$ slip past a positivity test entirely? Combining with `O-16008`'s method gives a sharp prediction, and it holds.
+> **This entire section is wrong and is retained only so the error is on the record.** Both the model and the numerics were defective; the corrected experiment is in `T-16002`§3 and shows **no blindness and no alternation**. Do not use the table below.
+
+§2 says a blind cutoff collapses the *weight* the form gives a zero. I asked whether that translates into a loss of *detection* and concluded that it does. It does not.
 
 Build the zero-side Loewner form with the **measured** residues $a(\gamma)=(\log c/\pi^2)\sin^2(\gamma\log c/2)$ (not unit residues), poles at $\pm\gamma_k\Delta$ for the first 25 zeros, and displace $\gamma_1$ off the line as the symmetric quadruple $\pm\gamma_1\Delta\pm id$. Then bisect for the critical displacement $\delta_c$ at which the inertia first acquires a negative eigenvalue. $N=10$, dps 150, $d$ scanned over $[10^{-40},10^{3}]$:
 
@@ -121,9 +141,7 @@ Build the zero-side Loewner form with the **measured** residues $a(\gamma)=(\log
 | 43.7473 | 8.4999989 | 0.500 | 0.38283499 | 0 | $3.014\times10^{-13}$ |
 | 54.6359 | 9.0000004 | $3.8\times10^{-7}$ | $5.75\times10^{-13}$ | 0 | **never** |
 
-The alternation is perfect. At **half-integer** $\gamma_1\Delta$ the off-line zero is detected, at a threshold of $10^{-11}$ to $10^{-13}$. At **integer** $\gamma_1\Delta$ — the blind cutoffs — the form **never** loses positive definiteness, at any displacement across the whole $10^{-40}$ to $10^{3}$ range: over forty decades.
-
-**So a Weil-positivity computation run at a blind cutoff would report "positive definite" no matter how badly RH failed at $\gamma_1$.** Not "would find it hard to see" — would not see it at all. That is a much stronger statement than §2's, and it is the one I would want a counterexample search to know before it starts.
+The apparent alternation is an artefact of the two defects named in the banner. **Corrected, every $\delta_c$ is finite** — $3.9\times10^{-10}$, $5.1\times10^{-11}$, $1.2\times10^{-11}$, $3.8\times10^{-12}$, $2.2\times10^{-12}$, $7.7\times10^{-13}$, $6.1\times10^{-13}$, $5.0\times10^{-13}$, $3.8\times10^{-13}$ down the same nine cutoffs — decreasing smoothly with $c$ with **no** systematic integer/half-integer difference. There is no blindness.
 
 Two qualifications. This is the synthetic zero-side model (with residues measured from the real thing), not X-0001's $Q_W$ — see gap audit 7. And the cutoffs here are small ($c\le55$), chosen so that $\gamma_1\Delta$ sits inside the node band at an affordable $N$; at large $c$ one needs $N\gtrsim\gamma_1\Delta$ for the zero to be visible at all, which is the separate constraint `L-16004`'s SCOPE CAUTION and `O-16008`§2 describe. A first run at $N=5$ with $c\approx200$–$3000$ found $\delta_c=$ *never* at **every** cutoff, blind or not, precisely because $\gamma_1\Delta/N\approx2.4$–$3.6$ put the zero outside the band. Both effects have to be respected at once.
 
