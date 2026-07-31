@@ -42,6 +42,42 @@ class CertificateTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             VERIFY.verify_rational(mutated)
 
+    def test_rejects_filter_definition_mutations(self) -> None:
+        mutations = (
+            (("filter", "profile_shift"), "2"),
+            (("filter", "dyadic_widths"), ["1/3", "1/4", "1/8", "1/16"]),
+            (("filter", "pole_shift"), "log(9)"),
+            (("filter", "pole_coefficient"), "100"),
+            (("directed_constants", "tail_domain_start"), "27"),
+        )
+        for path, replacement in mutations:
+            with self.subTest(path=path):
+                mutated = copy.deepcopy(self.certificate)
+                mutated[path[0]][path[1]] = replacement
+                with self.assertRaises(AssertionError):
+                    VERIFY.verify_rational(mutated)
+
+    def test_rejects_understated_xi_upper(self) -> None:
+        mutated = copy.deepcopy(self.certificate)
+        mutated["directed_constants"]["xi_reciprocal_sum_upper"] = "0.04"
+        with self.assertRaises(AssertionError):
+            VERIFY.verify_rational(mutated)
+
+    def test_rejects_identity_mutations(self) -> None:
+        mutations = (
+            ("classification", "NON_DIRECTED"),
+            ("experiment_id", "X-17299"),
+            ("claim_id", "L-17299"),
+            ("issue", 171),
+            ("agent", "unknown"),
+        )
+        for key, replacement in mutations:
+            with self.subTest(key=key):
+                mutated = copy.deepcopy(self.certificate)
+                mutated[key] = replacement
+                with self.assertRaises(AssertionError):
+                    VERIFY.verify_rational(mutated)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -62,7 +62,8 @@ python -m unittest -v tests.test_verify
   enclosure, count partition, and declared rational moats;
 - `verify.py`: recomputes every attenuation and Hadamard-tail inequality using
   `fractions.Fraction`; `--arb` recomputes analytic enclosures and counts;
-- `tests/test_verify.py`: rejects count and pi-ledger mutations;
+- `tests/test_verify.py`: rejects count, pi-ledger, filter-definition,
+  identity, and Hadamard-upper-bound mutations;
 - `results/verification.json`: retained checker output.
 
 For the tail, the positive Hadamard mass of the ten listed pairs is subtracted

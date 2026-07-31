@@ -63,13 +63,18 @@ not a claim for or against RH.
 ## Certified computations
 
 - `X-17202`: exact `Fraction` replay plus python-flint/Arb 0.9.0 at 320 bits;
-  four fail-closed mutation tests.
+  seven fail-closed mutation tests, including filter-definition and Hadamard-
+  upper-bound bindings.
 - `X-17203`: exact inherited rational replay; six fail-closed mutation tests.
 - `X-17204`: exact dependency/hash precheck, 320-bit hundred-zero Arb replay,
   explicit outward ball endpoints, and eight fail-closed mutation tests.
 - `X-17201`: seven exact-core tests and a duplicate-free 665,134-record
   prime-power manifest with SHA-256
   `ad1fe1520966ca5c41885166f4a28a0d543922f087881175c0c15e89425fc56a`.
+- A final adversarial audit confirmed the all-real proof and exposed a
+  fail-closed verifier gap.  The checker now binds every filter-defining field
+  and its rational Hadamard upper bound to the Arb enclosure; the downstream
+  immutable verifier hash was refreshed and replayed.
 
 The Arb census presently has one numerical backend.  All claims depending on
 it remain `PROPOSED`.

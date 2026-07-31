@@ -29,12 +29,33 @@ def decimal_string(value: Fraction, digits: int = 24) -> str:
 
 
 def verify_rational(cert: dict[str, Any]) -> dict[str, Any]:
+    assert cert["classification"] == "DIRECTED_SINGLE_BACKEND_PROPOSED"
+    assert cert["experiment_id"] == "X-17202"
+    assert cert["claim_id"] == "L-17201"
+    assert cert["issue"] == 172
+    assert cert["agent"] == "gpt56-172n-01"
+    assert int(cert["backend"]["precision_bits"]) == 320
+    assert cert["backend"]["independent_backend"] is None
+
     constants = cert["directed_constants"]
-    notches = cert["filter"]["notches"]
+    filter_spec = cert["filter"]
+    assert q(filter_spec["profile_shift"]) == 1
+    dyadic_widths = [q(value) for value in filter_spec["dyadic_widths"]]
+    assert dyadic_widths == [
+        Fraction(1, 2),
+        Fraction(1, 4),
+        Fraction(1, 8),
+        Fraction(1, 16),
+    ]
+    assert filter_spec["pole_shift"] == "log(4)"
+    assert q(filter_spec["pole_coefficient"]) == 2
+    notches = filter_spec["notches"]
     pi_lo = q(constants["pi_lo"])
     pi_hi = q(constants["pi_hi"])
     assert pi_lo < pi_hi
     assert len(notches) == 10
+    assert constants["zero_count_at_14"] == 0
+    assert constants["zero_count_at_tail_start"] == 10
 
     product_notches = Fraction(1)
     notch_sum = Fraction(0)
@@ -74,7 +95,6 @@ def verify_rational(cert: dict[str, Any]) -> dict[str, Any]:
     assert notch_sum < Fraction(17, 8)
     tail_start = q(constants["tail_start"])
     assert tail_start == Fraction(529, 10)
-    dyadic_widths = [Fraction(1, 2), Fraction(1, 4), Fraction(1, 8), Fraction(1, 16)]
     all_widths = dyadic_widths + [q(row["width"]) for row in notches]
     assert len(all_widths) == 14
     for width in all_widths:
@@ -86,6 +106,7 @@ def verify_rational(cert: dict[str, Any]) -> dict[str, Any]:
     assert product_all == Fraction(1, 2**10) * product_notches
 
     xi_upper = q(constants["xi_reciprocal_sum_upper"])
+    assert xi_upper == Fraction(47, 1000)
     listed_mass_lower = sum(
         Fraction(2) / (q(row["gamma_hi"]) ** 2 + Fraction(1, 4))
         for row in notches
@@ -111,6 +132,9 @@ def verify_rational(cert: dict[str, Any]) -> dict[str, Any]:
     support_rational_part = Fraction(31, 8) + 2 * notch_sum
     support_upper = support_rational_part + Fraction(3, 2)
     assert support_upper < Fraction(77, 8)
+
+    tail_domain_start = q(constants["tail_domain_start"])
+    assert tail_domain_start == 28
 
     # For x >= 28, d=x-b > 147/8.  The elementary bounds e>27/10
     # and e>2 give a rational upper bound for the trivial-zero geometric tail.
@@ -194,7 +218,9 @@ def verify_arb(cert: dict[str, Any]) -> dict[str, Any]:
     assert count_tail == constants["zero_count_at_tail_start"]
 
     c_xi = arb(2) + arb.const_euler() - (arb(4) * arb.pi()).log()
-    assert c_xi < arb(47) / 1000
+    xi_upper = q(constants["xi_reciprocal_sum_upper"])
+    xi_upper_ball = arb(xi_upper.numerator) / xi_upper.denominator
+    assert c_xi < xi_upper_ball
     d = arb(147) / 8
     trivial = 3 * (-(arb(5) / 2) * d).exp() / (1 - (-2 * d).exp())
     assert trivial < arb(4) / (10**20)
