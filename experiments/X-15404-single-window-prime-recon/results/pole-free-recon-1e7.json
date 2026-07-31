@@ -1,0 +1,85 @@
+{
+  "classification": "EMPIRICAL_NON_DIRECTED",
+  "comparisons": [
+    {
+      "difference": 1.3885893863788482e-09,
+      "first_n_zero_prediction": 0.008272145258698415,
+      "prime_power_terms": 89,
+      "raw_prime_statistic": 0.008551244023624298,
+      "trivial_zero_prediction": 0.00027909737633649687,
+      "x": 8.0
+    },
+    {
+      "difference": -3.398981893884722e-09,
+      "first_n_zero_prediction": 0.010125664976208858,
+      "prime_power_terms": 348,
+      "raw_prime_statistic": 0.010129157141622989,
+      "trivial_zero_prediction": 3.4955643960249668e-06,
+      "x": 9.75161073491476
+    },
+    {
+      "difference": 3.031614183377683e-09,
+      "first_n_zero_prediction": -0.006010844402439948,
+      "prime_power_terms": 430,
+      "raw_prime_statistic": -0.0060089628041663,
+      "trivial_zero_prediction": 1.8785666594647108e-06,
+      "x": 10.0
+    },
+    {
+      "difference": 2.772089664411984e-10,
+      "first_n_zero_prediction": 0.005078035202055883,
+      "prime_power_terms": 2377,
+      "raw_prime_statistic": 0.0050780481367038045,
+      "trivial_zero_prediction": 1.2657438954871793e-08,
+      "x": 12.0
+    },
+    {
+      "difference": -1.13182149941232e-09,
+      "first_n_zero_prediction": -0.006731364797984563,
+      "prime_power_terms": 14269,
+      "raw_prime_statistic": -0.00673136584452094,
+      "trivial_zero_prediction": 8.52851227563491e-11,
+      "x": 14.0
+    },
+    {
+      "difference": 6.706697863334378e-09,
+      "first_n_zero_prediction": 0.00877485769232027,
+      "prime_power_terms": 89029,
+      "raw_prime_statistic": 0.00877486439959278,
+      "trivial_zero_prediction": 5.74646633232373e-13,
+      "x": 16.0
+    },
+    {
+      "difference": 6.434606222488465e-09,
+      "first_n_zero_prediction": -0.010083579986793847,
+      "prime_power_terms": 242632,
+      "raw_prime_statistic": -0.01008357355214936,
+      "trivial_zero_prediction": 3.826489127274267e-14,
+      "x": 17.083689000818875
+    }
+  ],
+  "cutoff": 10000000,
+  "fft_size": 131072,
+  "grid_points": 8000,
+  "ordinary_primes": 664579,
+  "prime_power_terms": 665134,
+  "proof_boundary": "ordinary FFT/binary64/mpmath reconnaissance; no interval arithmetic, independent backend, or certified zero/prime manifest",
+  "scan": {
+    "empirical_mean_square": 2.9090629348284595e-05,
+    "empirical_rms": 0.005393572966808236,
+    "first_n_zero_mean_square": 2.9040286276413633e-05,
+    "first_n_zero_rms": 0.005388903995843091,
+    "maximum": {
+      "value": 0.010129157141623324,
+      "x": 9.75161073491476
+    },
+    "minimum": {
+      "value": -0.010083573552037706,
+      "x": 17.083689000818875
+    },
+    "x_max": 18.11809565095832,
+    "x_min": 7.386294361119891
+  },
+  "shift_h": 1.3862943611198906,
+  "zero_count": 50
+}
