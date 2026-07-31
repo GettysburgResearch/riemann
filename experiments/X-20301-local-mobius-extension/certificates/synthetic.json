@@ -1,0 +1,66 @@
+{
+  "N": 3,
+  "a": "2",
+  "b": "5",
+  "formal_zero_control": {
+    "expected_tail_evaluation": "-7/5",
+    "target_evaluation": "7/5"
+  },
+  "g_intervals": [
+    {
+      "left": "2",
+      "right": "3",
+      "value": "1"
+    },
+    {
+      "left": "3",
+      "right": "4",
+      "value": "-1/2"
+    },
+    {
+      "left": "4",
+      "right": "5",
+      "value": "2"
+    }
+  ],
+  "graph_control": {
+    "evaluation_R": "1/3",
+    "evaluation_W": "2",
+    "expected_kernel_vector": [
+      "1",
+      "-1/6"
+    ],
+    "metric": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  },
+  "psi_intervals": [
+    {
+      "left": "1/2",
+      "right": "1",
+      "value": "2"
+    }
+  ],
+  "schema": "riemann.x20301-local-mobius-extension.v1",
+  "tail_samples": [
+    {
+      "expected_tail": "-10/3",
+      "u": "3/4"
+    },
+    {
+      "expected_tail": "1/6",
+      "u": "1/2"
+    },
+    {
+      "expected_tail": "4/3",
+      "u": "1/4"
+    }
+  ]
+}

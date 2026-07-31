@@ -1,0 +1,51 @@
+name: x20301-local-mobius-extension
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-20301-local-mobius-extension/**'
+      - 'claims/lemmas/L-2030*-*'
+      - 'claims/theorems/T-20301-*'
+      - 'claims/observations/O-20301-*'
+      - 'claims/methodology/M-20301-*'
+      - 'claims/experiments/X-20301-*'
+      - '.github/workflows/x20301-local-mobius-extension.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/X-20301-local-mobius-extension
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Bind verifier source blobs
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          manifest = json.loads(Path('SOURCE_BLOBS.json').read_text())
+          assert manifest['hash_type'] == 'git-blob-sha1'
+          for path, expected in manifest['files'].items():
+              actual = subprocess.check_output(
+                  ['git', 'hash-object', path], text=True
+              ).strip()
+              if actual != expected:
+                  raise SystemExit(f'{path}: expected {expected}, got {actual}')
+          PY
+      - name: Compile
+        run: python3 -m py_compile verify.py tests/test_verify.py
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Exact replay
+        run: |
+          python3 verify.py certificates/synthetic.json > /tmp/x20301.json
+          cmp /tmp/x20301.json results/synthetic-verification.json
+      - name: SHA ledger
+        run: sha256sum -c SHA256SUMS
