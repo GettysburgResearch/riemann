@@ -43,3 +43,6 @@ The least noisy patterns seen in this session were:
 
 No directed arithmetic. No RH implication. Coarse Reading-B `feasible_c`
 screens in C1 are known to be too weak and should not be cited.
+8. **Round 4:** α*(p2=0)≈0.9975450892474784; after it a Loewner soft
+   mode declines to 0 then emits a negative pair at the deficit (~0.975).
+   Gaussian has p2-flip but no delayed deficit; Hermite-ish differs (C17–C19).
