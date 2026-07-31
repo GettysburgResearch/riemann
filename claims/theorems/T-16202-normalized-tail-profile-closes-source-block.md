@@ -1,189 +1,209 @@
-# T-16202 — One normalized tail-profile theorem closes the complete repaired source block
+# T-16202 — One repaired two-profile theorem closes the complete source block
 
 Claim ID: `T-16202`  
-Status: **PROVED CONDITIONAL TRANSFER THEOREM; PROLATE PROFILE HYPOTHESIS OPEN**  
+Status: **PROVED CONDITIONAL TRANSFER THEOREM; RADIAL PROFILE HYPOTHESIS OPEN**  
 Authoring agent: `gpt56-pro-12`  
 Created: 2026-07-31  
-Depends on: `T-16201`, `L-16206`, `L-16208`, `L-16209`
+Corrected: 2026-07-31 after `R-16202`  
+Depends on: `T-16201`, `L-16206`, `L-16208`, `L-16210`
 
-## 1. Why this replaces alias suppression
+## 1. Scope correction
 
-`L-16207` decomposes the arithmetic omitted-tail Gram into the first prolate
-leakage sample plus aliases. Requiring the aliases to vanish relative to the
-first sample is sufficient, but it is not necessary and is not the natural
-fixed-mode theorem suggested by uniform radial PSWF asymptotics. Sharp support
-produces oscillatory algebraic exterior tails, and the alias terms may survive
-at leading normalized order.
-
-The positive route needs only the **full arithmetic tail packet** to have a
-nondegenerate normalized profile. This theorem proves that one such profile
-statement simultaneously supplies:
-
-1. the `d_4/d_8` source hierarchy;
-2. the relative tail-Weil scalarization;
-3. the source Hardy convergence.
-
-## 2. Exact repaired packet
-
-Fix a finite positive-prolate packet containing the modes
+The first formulation attached an ordinary `L2` omitted-tail profile to each raw
+positive prolate mode `n=0,4,8,12`. That is not well-defined. Exact Poisson
+summation contains the correction
 
 ```text
-I={0,4,8,12}                                               (T-16202.1)
+(1/2)[u^(-1/2) integral f-u^(1/2)f(0)],
 ```
 
-or any fixed larger packet. Let `f_(n,lambda)` be the compact prolate sources,
-let
+and neither source functional vanishes on an individual positive mode. The raw
+tail therefore contains a non-`L2(d*u)` power term.
+
+By `R-16202`, the tail theorem must be stated on the two-dimensional exact
+radical coefficient space
 
 ```text
-J_(n,lambda)=E(f_(n,lambda)),                             (T-16202.2)
+C_lambda=ker[q_lambda^T; ell_lambda^T]
+          subset span{e_0,e_4,e_8,e_12}.                 (T-16202.1)
 ```
 
-and let `T_(n,lambda)` be their omitted multiplicative tails outside
-`[lambda^-1,lambda]`.
+Here
 
-Use the exact two-constraint repaired source space and target from `T-16201`.
+```text
+q_n=e_n(0),
+ell_n=integral e_n=chi_n q_n.                           (T-16202.2)
+```
+
+The repaired target from `T-16201` belongs to `C_lambda`, and an independent
+repaired complement vector supplies a basis.
+
+## 2. Adapted exact-radical basis
+
+Choose a `4 x 2` coefficient matrix `U_lambda` whose columns span
+`C_lambda`. Its first column is the repaired target and its second column is
+chosen so that the ordinary coefficient Gram is uniformly nonsingular. Put
+
+```text
+f_(j,lambda)=sum_(n in {0,4,8,12})
+ U_(n,j)(lambda)e_(n,lambda),
+
+J_(j,lambda)=E(f_(j,lambda)),
+j=1,2.                                                     (T-16202.3)
+```
+
+Let `T_(j,lambda)` be the omitted multiplicative tail of `J_(j,lambda)` outside
+`[lambda^-1,lambda]`. Both source cancellations hold exactly, so the Poisson
+correction terms vanish and `T_(j,lambda)` belongs to the declared ordinary and
+Hardy tail spaces.
+
 Let
 
 ```text
-d_n(lambda)=1-chi_n(lambda).                              (T-16202.3)
+delta_1(lambda)=d_4(lambda),
+delta_2(lambda)=d_8(lambda).                              (T-16202.4)
 ```
 
-## 3. Normalized profile hypothesis
+Replacing these by any uniformly comparable positive scales leaves the theorem
+unchanged.
 
-Assume there are:
+## 3. Corrected normalized profile hypothesis
+
+Assume there exist
 
 ```text
 R_lambda->infinity,
 x_lambda in R,
 ```
 
-and functions `Phi_(n,lambda)` such that
+and a two-component repaired profile row
 
 ```text
-widehat(T_(n,lambda))(s)
- =sqrt(d_n(lambda)/R_lambda)
-  exp(-is x_lambda)
-  Phi_(n,lambda)(s/R_lambda).                             (T-16202.4)
+Phi_lambda=(Phi_(1,lambda),Phi_(2,lambda))
 ```
 
-Assume the fixed packet satisfies the uniform profile hypotheses of
-`L-16209`:
-
-```text
-uniform holomorphic C1-decay envelope,
-uniform logarithmic moments,                              (T-16202.5)
-```
-
-and its profile Gram
-
-```text
-H_lambda,(mn)
- =(1/(2pi)) integral_R
-   conjugate(Phi_(m,lambda)(x))Phi_(n,lambda)(x)dx        (T-16202.6)
-```
-
-satisfies
+such that
 
 ```text
 boxed:
-0<cI<=H_lambda<=CI                                        (T-16202.7)
+widehat(T_(j,lambda))(s)
+ =sqrt(delta_j(lambda)/R_lambda)
+  exp(-is x_lambda)
+  Phi_(j,lambda)(s/R_lambda),
+ j=1,2.                                                   (T-16202.5)
 ```
 
-with constants independent of `lambda`.
+Define the profile density and Gram
 
-No convergence of `H_lambda` is needed; uniform positive definiteness and
-boundedness suffice.
+```text
+H_lambda(x)=Phi_lambda(x)^*Phi_lambda(x),
+
+D_lambda^prof=(1/(2pi)) integral_R H_lambda(x)dx.         (T-16202.6)
+```
+
+Require the uniform nondegeneracy gate
+
+```text
+boxed:
+0<cI<=D_lambda^prof<=CI.                                 (T-16202.7)
+```
+
+Instead of a uniform pointwise `C1` envelope, it is enough that the repaired
+packet satisfies the fold-admissible budgets of `L-16210`:
+
+```text
+uniform logarithmic L1 moment,
+V_lambda+U_lambda=o(R_lambda),                            (T-16202.8)
+```
+
+where `V_lambda` is the weighted matrix variation of `H_lambda` and
+`U_lambda` controls the horizontal-zero displacement in the strip
+`|Im z|<=1/(2R_lambda)`.
+
+This permits Airy folds and other integrable caustics.
 
 ## 4. Exact tail-Gram hierarchy
 
-Mellin Plancherel gives
+Mellin Plancherel applied to (T-16202.5) gives
 
 ```text
 D_tail,lambda
- =S_lambda H_lambda S_lambda,                             (T-16202.8)
+ =S_lambda D_lambda^prof S_lambda,
 
-S_lambda=diag(sqrt(d_n(lambda))).                         (T-16202.9)
+S_lambda=diag(sqrt(delta_1),sqrt(delta_2)).               (T-16202.9)
 ```
 
-Consequently
+Hence
 
 ```text
-c diag(d_n)
+c diag(d_4,d_8)
  <=D_tail,lambda
- <=C diag(d_n).                                           (T-16202.10)
+ <=C diag(d_4,d_8).                                      (T-16202.10)
 ```
 
-Let
+Equivalently, in any exact-radical coefficient basis with uniformly controlled
+condition number, the first repaired tail scale is `Theta(d_4)` and the second
+is `Theta(d_8)`.
 
-```text
-nu_1^tail<=nu_2^tail<=...
-```
+The conclusion is basis invariant: replacing `U_lambda` by
+`U_lambda S_lambda^0`, with a uniformly conditioned invertible `2 x 2` matrix,
+changes every source Gram and Weil matrix by simultaneous congruence.
 
-be the eigenvalues of the tail Gram on the exact two-constraint source space,
-measured against any fixed coefficient Gram uniformly equivalent to the source
-Hardy Gram.
-
-Then `T-16201` and the min--max principle give
-
-```text
-boxed:
-nu_1^tail=Theta(d_4),
-nu_2^tail=Theta(d_8).                                     (T-16202.11)
-```
-
-The constants are finite and strictly positive, although they need not equal
-`8/11` and `176/211` when aliases survive at leading order.
-
-## 5. Exact zero-side Weil factorization
+## 5. Exact zero-side factorization
 
 By `L-16205`--`L-16206`, the repaired packet is an exact weak Weil-radical
-packet and its localized source Weil matrix equals the omitted-tail zero-side
-matrix term by term:
+packet and
 
 ```text
-A_tail,lambda,(mn)
+A_tail,lambda,(jk)
  =sum_rho
-  conjugate(widehat(T_m)(conjugate(s_rho)))
-  widehat(T_n)(s_rho).                                   (T-16202.12)
+  conjugate(widehat(T_j)(conjugate(s_rho)))
+  widehat(T_k)(s_rho).                                   (T-16202.11)
 ```
 
-No RH hypothesis occurs.
+The sum is absolutely convergent under the profile budgets. No RH hypothesis
+is used.
 
-## 6. Universal scalarization
+## 6. Fold-admissible scalarization
 
-Apply `L-16209` to (T-16202.4). There are matrices `C_lambda,E_lambda` with
+Apply `L-16210` with `R=R_lambda`. There are Hermitian matrices
+`C_lambda,E_lambda` such that
 
 ```text
 A_tail,lambda
- =a_lambda D_tail,lambda+C_lambda'+E_lambda',             (T-16202.13)
+ =a_lambda D_tail,lambda+C_lambda+E_lambda,               (T-16202.12)
 
- a_lambda=log R_lambda+O(1),                              (T-16202.14)
+a_lambda=log R_lambda+O(1),                              (T-16202.13)
 ```
 
-and, in the tail-Gram metric,
+and, after whitening by `D_tail,lambda`,
 
 ```text
 boxed:
-inf_a ||A_tail,lambda-aD_tail,lambda||_(D_tail)
- /a
- =O(1/log R_lambda)->0.                                   (T-16202.15)
+inf_a ||A_tail,lambda-aD_tail,lambda||_(D_tail)/a
+ ->0.                                                     (T-16202.14)
 ```
 
-Equivalently, if `m_lambda,M_lambda` are the extreme generalized eigenvalues of
+Equivalently, for the extreme generalized eigenvalues `m_lambda,M_lambda` of
 `(A_tail,D_tail)`,
 
 ```text
 boxed:
-(M_lambda-m_lambda)/(M_lambda+m_lambda)
- =O(1/log R_lambda)->0.                                   (T-16202.16)
+(M_lambda-m_lambda)/(M_lambda+m_lambda)->0.               (T-16202.15)
 ```
 
-## 7. Source target and gap
+A quantitative sufficient bound is
 
-Let `mu_source` be the Rayleigh value of the exact repaired target in the
-localized source Weil matrix, and let `g_source` be the first shifted
-complement gap inside the repaired source sector. Equations
-(T-16202.11)--(T-16202.16) imply
+```text
+O(1/log R_lambda)
+ +O((V_lambda+U_lambda)/R_lambda).                        (T-16202.16)
+```
+
+## 7. Source target and complement gap
+
+Let `mu_source` be the repaired target Rayleigh value in the localized source
+Weil matrix and let `g_source` be its shifted one-dimensional complement gap in
+the repaired two-packet. Equations (T-16202.10)--(T-16202.15) imply
 
 ```text
 boxed:
@@ -191,85 +211,102 @@ mu_source=Theta(a_lambda d_4),
 
 g_source=Theta(a_lambda d_8),                            (T-16202.17)
 
-mu_source/g_source=O(d_4/d_8)=O(lambda^-8).              (T-16202.18)
+mu_source/g_source=O(d_4/d_8)=O(lambda^-8).               (T-16202.18)
 ```
 
-Thus the full arithmetic aliases may alter finite constants, but cannot alter
-the target and next-mode scales.
+The constants need not equal `8/11` and `176/211`, because the full arithmetic
+tail Gram may have a nontrivial limiting `2 x 2` metric. Uniform positive
+definiteness is sufficient.
 
 ## 8. Source Hardy geometry
 
-Choose the schedule of `L-16208`:
+Choose
 
 ```text
 tau_lambda->1/2,
 (1/2-tau_lambda)log lambda->infinity.                     (T-16202.19)
 ```
 
-The fixed source-packet Hardy Gram converges to a finite positive limit. Hence
-no ambient `lambda^(2tau)` factor enters the comparison, and the source ground
-line approaches the repaired target at rate
+By `L-16208`, the repaired source Hardy Gram is uniformly equivalent to a fixed
+positive coefficient Gram. Thus no ambient `lambda^(2tau)` penalty appears.
+The source ground line approaches the repaired target at rate
 
 ```text
 O(sqrt(d_4/d_8))=O(lambda^-4)                             (T-16202.20)
 ```
 
-through the Rayleigh-floor identity, provided an actual source-sector floor is
-chosen from the scalarized matrix.
+through `L-15107`, once an actual source-sector floor is supplied by the
+scalarized matrix.
 
 ## 9. Proof
 
-Equation (T-16202.8) is Plancherel after the substitution `s=R_lambda x`.
-The Loewner inequalities (T-16202.10) follow from (T-16202.7). The two-constraint
-diagonal prolate compression has first two scales `d_4,d_8` by `T-16201`.
-Applying the min--max principle to the uniformly equivalent forms in
-(T-16202.10) proves (T-16202.11).
+Equation (T-16202.9) is Plancherel after `s=R_lambda x`. The Gram gate proves
+(T-16202.10). The exact radical basis has first two prolate scales `d_4,d_8` by
+`T-16201`, and uniform congruence preserves those orders.
 
-The exact zero-side identity is `L-16206`. The profile assumptions and uniform
-Gram floor allow direct application of `L-16209`, proving
-(T-16202.13)--(T-16202.16). Since the scalarized Weil form is a positive scalar
-times the tail Gram up to a vanishing relative error, min--max transfers
-(T-16202.11) to (T-16202.17). Fuchs gives
-`d_4/d_8=Theta(lambda^-8)`, proving (T-16202.18). Finally apply the bounded
-source Hardy Gram of `L-16208` and `L-15107`. QED.
+The zero-side identity is `L-16206`. The fold-admissible hypotheses permit
+application of `L-16210`, proving (T-16202.12)--(T-16202.16). A positive scalar
+multiple of the tail Gram plus a vanishing relative perturbation has the same
+two generalized scales by min--max, proving (T-16202.17). Fuchs gives
+`d_4/d_8=Theta(lambda^-8)`, proving (T-16202.18). The Hardy conclusion follows
+from `L-16208` and `L-15107`. QED.
 
-## 10. Relation to radial PSWF asymptotics
+## 10. Radial prolate translation
 
-Dunster's uniform high-frequency radial PSWF theorem gives a Bessel-function
-approximation throughout `1<x<infinity`, with explicit `O(gamma^-1)` errors for
-fixed mode, and the exact far-field behavior is oscillatory of order `1/x`.
-This is the correct primary tool for proving (T-16202.4)--(T-16202.7) after:
+Dunster's fixed-mode radial PSWF asymptotics provide a Bessel approximation
+uniformly on `1<x<infinity`, with explicit high-frequency errors. In the CCM
+normalization
 
-1. translating `gamma=2pi lambda^2` and the CCM normalization;
-2. inserting the arithmetic Poisson sum defining `E`;
-3. centering the logarithmic tail and using `R_lambda` of order `lambda^2`;
-4. proving the resulting finite profile Gram is nondegenerate.
+```text
+gamma=2pi lambda^2,                                      (T-16202.21)
+```
 
-The theorem does not assume that individual aliases vanish.
+so the natural Mellin-frequency scale is
 
-## 11. Correct source-level remaining theorem
+```text
+R_lambda=gamma asymptotic to lambda^2.                   (T-16202.22)
+```
 
-The source block is now reduced to the single statement:
+The remaining source-specific proof must:
+
+1. apply the radial approximation to the two repaired combinations, not to four
+   inadmissible raw tails;
+2. insert the complete arithmetic Poisson sum;
+3. treat the stationary fold in logarithmic coordinates with an Airy or
+   equivalent uniform estimate;
+4. prove `V_lambda+U_lambda=o(R_lambda)`;
+5. prove a uniform positive lower bound for the repaired `2 x 2` profile Gram.
+
+The fold theorem `L-16210` shows that pointwise derivative blow-up is harmless:
+variation of order `R_lambda^(1/3) polylog R_lambda` already suffices.
+
+## 11. Exact remaining source theorem
+
+The source block is now reduced to
 
 ```text
 boxed:
-The normalized full arithmetic omitted tails of modes 0,4,8,12 satisfy
-(T-16202.4)--(T-16202.7) for some R_lambda->infinity.     (T-16202.21)
+The two exact-radical omitted tails satisfy
+(T-16202.5)--(T-16202.8) with R_lambda~2pi lambda^2.
+                                                               (T-16202.23)
 ```
 
-Once this is proved, the source part of the requested trace-form bridge is
-complete.
+This is strictly smaller and correctly typed compared with the original
+four-raw-mode profile gate.
 
 ## 12. Remaining global gates
 
-The complete RH route still requires the non-source statements from
-`L-16201`:
+After (T-16202.23), the complete RH route still needs:
 
 ```text
-an independent global ground floor with target excess O(a_lambda d_4),
-a background complement gap >=c a_lambda d_8,
-cross coupling squared=o(g_source g_background).         (T-16202.22)
+an independent global floor with target excess O(a_lambda d_4),
+a complete complementary gap >=c a_lambda d_8,
+source/complement coupling controlled in the relative-energy metric.          (T-16202.24)
 ```
 
-No proof of (T-16202.21), no proof of (T-16202.22), and no proof of RH is claimed
-here.
+The last three requirements are reorganized by `T-16203`: a single strict
+energy-angle estimate implies the floor and coupling bounds once the source and
+background diagonal gaps are known.
+
+No proof of (T-16202.23), no proof of the background diagonal gap, and no proof
+of RH is claimed here.
