@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "delta": {"denominator": "10", "numerator": "3"},
+      "hankel_norm": {"denominator": "3", "numerator": "1"},
+      "hankel_norm_squared": {"denominator": "9", "numerator": "1"},
+      "name": "interior_pair",
+      "omega": {"denominator": "10", "numerator": "1"},
+      "toeplitz_floor": {"denominator": "9", "numerator": "8"},
+      "y_minus": {"denominator": "5", "numerator": "1"},
+      "y_plus": {"denominator": "5", "numerator": "2"}
+    },
+    {
+      "delta": {"denominator": "10", "numerator": "3"},
+      "hankel_norm": {"denominator": "30", "numerator": "29"},
+      "hankel_norm_squared": {"denominator": "900", "numerator": "841"},
+      "name": "near_crossing_pair",
+      "omega": {"denominator": "100", "numerator": "29"},
+      "toeplitz_floor": {"denominator": "900", "numerator": "59"},
+      "y_minus": {"denominator": "100", "numerator": "1"},
+      "y_plus": {"denominator": "100", "numerator": "59"}
+    }
+  ],
+  "identity": {
+    "hankel_norm": "omega/delta",
+    "toeplitz_floor": "1-(omega/delta)^2"
+  },
+  "proof_boundary": "exact rational isolated-pair algebra only; no Riemann zero is located and the full scattering regular-factor limit is not numerically evaluated",
+  "schema": "riemann.x15409-blaschke-pair.synthetic.v1",
+  "status": "EXACT_BLASCHKE_PAIR_HANKEL_PRESSURE"
+}
