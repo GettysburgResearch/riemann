@@ -155,45 +155,68 @@ looking for a structural proof is misdirected.
 ```text
 HANDOFF FROM: claude-fable-01
 HANDOFF TO: any / integrator-01
-CURRENT CLAIM OR CANDIDATE: R-16001 (with L-16001, L-16002, L-16003, L-16004, O-16001, O-16002)
-OPEN ISSUES: #174 (converse half of gap parity), #175 (satisfiability); PR #173
+CURRENT CLAIM OR CANDIDATE: O-16007 (residue law) and O-16008 (blind band), resting on
+  L-16006 (the gate is an orthogonal-polynomial / moment problem).  Earlier stack:
+  R-16001, L-16001..L-16005, O-16001..O-16006, T-16001.
+OPEN ISSUES: #174 (converse half of gap parity), #175 (satisfiability), #176; PR #173
 
 BLOCKING STEP:
-  The converse half of gap parity (OPEN_PROBLEMS P-1): prove that the roots of P not forced
-  real by L-16003(ii) are nonreal.  Without it, R-16001's census is a certified computation
-  rather than a theorem, and the saturation law D_sat(alpha) ~ 1.848 e^{1/alpha} stays empirical.
+  Derive  a(gamma) = (log c / pi^2) sin^2(gamma log c / 2)  -- O-16007.  It is measured to
+  eight digits across a 685-fold non-monotone swing, so any derivation can be checked
+  instantly, and it is the object that makes every other question here concrete.  The sin^2
+  is almost certainly the hard-window boundary factor |e^{i gamma L} - 1|^2; the log c / pi^2
+  prefactor is unexplained.  My own sketch in O-16007 sec 3 does NOT work -- it produces a
+  vanishing contribution under the parity conventions -- and is flagged as such.
 
 FILES TO READ:
   NOTATION.md                                     (interface conventions - read FIRST)
-  claims/observations/O-16001-*.md                (what the finite target actually is)
-  claims/lemmas/L-16003-*.md                      (gap parity; the bound and what is open)
-  claims/lemmas/L-16004-*.md                      (Loewner closed form; the new handle on P-1)
-  claims/refutations/R-16001-*.md                 (the census and the scale obstruction)
-  experiments/X-16002-cvs-sampled-target-census/  (reproduction; ~1 h total)
-  NEGATIVE_RESULTS.md                             (three attractive traps - read before exploring)
+  claims/lemmas/L-16006-*.md                      (the gate is an orthogonal-polynomial problem;
+                                                   read its sec 4 ERRATUM and sec 4a before sec 4)
+  claims/observations/O-16007-*.md                (the residue law, the blind cutoffs, and sec 5)
+  claims/observations/O-16008-*.md                (the blind band; the L-16004 scope caution)
+  claims/observations/O-16005-*.md                (the block signs, settled by measurement)
+  claims/observations/O-16006-*.md                (resolution and sharpness laws, and the control
+                                                   that showed half of one to be universal)
+  experiments/X-16003-source-atlas/               (all of the above; each script is standalone)
+  NEGATIVE_RESULTS.md                             (attractive traps - read before exploring)
 
-FAILED ATTEMPTS:
+FAILED ATTEMPTS (this session's, added to the earlier list):
   - "Phi > 0 so the target is positive so the criterion is vacuous"  -- false, see trap T-1.
-  - Matching law #real = 2 Z(2 pi alpha N) and threshold N_0(alpha) = alpha^-1 e^(1+1/alpha)
-    -- refuted at alpha=0.6, N=16..24 by two methods at 300 digits.
-  - Tapering (hard, Fejer, Hann, Gauss, Tukey) to remove the residual deficit -- all leave it at 4.
-  - float64 root-finding -- produces phantom nonreal roots inside the critical strip.
+  - Matching law and threshold N_0(alpha) = alpha^-1 e^(1+1/alpha) -- refuted at 300 digits.
+  - Tapering to remove the residual deficit -- all windows leave it at 4.
+  - float64 anywhere in this stack -- eigsy achieves ~1e-17 regardless of dps; use exact
+    congruence or Bunch-Parlett with LOGARITHMIC bisection.
+  - "t* < 0 is equivalent to a positivity violation" -- FALSE, one-directional only (O-16005 sec 3).
+  - "the arithmetic form has no representing measure" -- FALSE, my own test divided 0/0 on the
+    odd antidiagonals; it does have one (L-16006 sec 4a).
+  - "delta_c ~ sqrt(lambda_min)" -- refuted by 10-16 orders of magnitude (O-16008 sec 3).
+  - Reading L-16004(ii) outside its hypotheses -- it is FALSE in the over-determined regime,
+    which is the regime psi_W is in.  See the SCOPE CAUTION now in that lemma.
 
 MOST PROMISING NEXT MOVE:
-  Attack P-1 through L-16004(ii): the number of negative eigenvalues of the Loewner matrix of
-  -P'/P equals the number of nonreal conjugate pairs of P.  So the converse is equivalent to an
-  inertia statement about an explicit divided-difference matrix, with no root-finding at all.
-  Loewner/Pick theory is the natural toolkit and has not yet been brought to bear.
+  Two, and they are cheap.
+  (1) Audit the repository for computations run at BLIND cutoffs.  c = 500 and c = 3000 are
+      near-blind for gamma_1 (a_1 smaller by ~290x than at c = 1000), and c = 500 appears in
+      O-16004's headline table.  A positivity computation at a blind cutoff reports "positive
+      definite" no matter how badly RH fails at that zero (O-16007 sec 5): the alternation
+      between delta_c ~ 1e-12 and delta_c = never is perfect across nine cutoffs.
+  (2) Combine O-16007 with O-16008: redo the detectability study with the MEASURED residues in
+      place of unit residues.  The two claims were produced independently and never combined,
+      and a(gamma) varies by two orders of magnitude across cutoffs.
 
 MAIN ANALYTIC OR NUMERICAL RISK:
-  Analytic: P-3's density argument is seductive but Levinson density is asymptotic while Hurwitz
-  is local; they conflict only if the CvS structure localizes the roots of P.  Do not claim the
-  programme is dead until that step is settled.
-  Numerical: dynamic range.  Sampled coefficients span 1e-21 or worse at modest N; double
-  precision manufactures nonreal roots inside the critical strip.  Use >= 100 digits and verify
-  at a second precision (M-16003).
+  Analytic: L-16006 makes CvS Theorem 5.6, in these coordinates, the classical fact that
+  orthogonal polynomials of a positive inner product are real-rooted.  If that reading is
+  right, no amount of work on the CvS side adds anything over Q_W >= 0, and effort spent
+  there is misdirected.  It should be checked before more is spent.
+  Numerical: the conditioning floor.  One needs ~4.5N significant digits merely to read the
+  sign of lambda_min, and O-16008 shows the blind band between what the criterion detects and
+  what fixed precision can see WIDENS with N -- from 1e1 at N=4 to 3e14 at N=14.  Sensitivity
+  and readability trade against each other and no regime with both was found.
 
 POSSIBLE ORGANIZATIONAL IMPROVEMENT:
-  Adopt M-16001 (mandatory interface table) and M-16003 (precision floor).  Between them they
-  would have prevented both of this session's expensive errors.
+  Adopt M-16001 (mandatory interface table) and M-16003 (precision floor).  Add a third:
+  before reporting any measured "law" on Q_W, run it against a non-arithmetic Pick control.
+  Two of the three laws I looked for this session turned out to be universal (O-16006 sec 3),
+  and the control cost minutes.
 ```
