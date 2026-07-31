@@ -1,0 +1,57 @@
+name: x20501-conditional-line-frame
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-20501-conditional-line-frame/**'
+      - 'claims/lemmas/L-20501-*'
+      - 'claims/lemmas/L-20502-*'
+      - 'claims/lemmas/L-20503-*'
+      - 'claims/lemmas/L-20504-*'
+      - 'claims/lemmas/L-20505-*'
+      - 'claims/theorems/T-20501-*'
+      - 'claims/refutations/R-20501-*'
+      - 'claims/methodology/M-20501-*'
+      - 'claims/experiments/X-20501-*'
+      - '.github/workflows/x20501-conditional-line-frame.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/X-20501-conditional-line-frame
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Bind verifier sources
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          manifest = json.loads(Path('SOURCE_BLOBS.json').read_text())
+          assert manifest['hash_type'] == 'git-blob-sha1'
+          for path, expected in manifest['files'].items():
+              actual = subprocess.check_output(
+                  ['git', 'hash-object', path], text=True
+              ).strip()
+              if actual != expected:
+                  raise SystemExit(f'{path}: expected {expected}, got {actual}')
+          PY
+      - name: Compile
+        run: python3 -m py_compile verify.py tests/test_verify.py
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Exact replays
+        run: |
+          python3 verify.py certificates/synthetic.json > /tmp/main.json
+          cmp /tmp/main.json results/synthetic-verification.json
+          python3 verify.py certificates/positive-residual.json > /tmp/positive.json
+          cmp /tmp/positive.json results/positive-residual-verification.json
+      - name: SHA ledger
+        run: sha256sum -c SHA256SUMS

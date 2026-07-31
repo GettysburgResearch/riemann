@@ -1,0 +1,108 @@
+{
+  "conditional_evaluation": [
+    [
+      {
+        "denominator": 4,
+        "numerator": 3
+      }
+    ]
+  ],
+  "corrected_floor": {
+    "denominator": 3400,
+    "numerator": 3551
+  },
+  "corrected_kernel_matrix": [
+    [
+      {
+        "denominator": 3200,
+        "numerator": 323551
+      }
+    ]
+  ],
+  "dimensions": {
+    "R": 1,
+    "W": 1,
+    "kernel": 1,
+    "selected_Y": 1,
+    "selected_Z": 1
+  },
+  "frame_lower": {
+    "denominator": 17,
+    "numerator": 18
+  },
+  "full_evaluation_determinant": {
+    "denominator": 2,
+    "numerator": -3
+  },
+  "graph_map": [
+    [
+      {
+        "denominator": 1,
+        "numerator": 1
+      }
+    ],
+    [
+      {
+        "denominator": 4,
+        "numerator": -1
+      }
+    ]
+  ],
+  "graph_metric": [
+    [
+      {
+        "denominator": 16,
+        "numerator": 17
+      }
+    ]
+  ],
+  "hardy_interpolation_matrix": [
+    [
+      {
+        "denominator": 8,
+        "numerator": 3
+      }
+    ]
+  ],
+  "hardy_tail_floor": {
+    "denominator": 17,
+    "numerator": 6
+  },
+  "proof_boundary": "Exact finite graph, conditional evaluation Schur complement, one-sided residual, positive-complement correction, and RKHS interpolation arithmetic only. The Riemann application still requires directed evaluation matrices, a complete one-sided omitted-zero residual LMI, and a cofinal positive moat.",
+  "proof_object_sha256": "f6aa781bb5c0940c65078c26106533c998bc08e9aa045d629a8e1dd37e1a9dfc",
+  "residual_negative_bound": {
+    "denominator": 1,
+    "numerator": 0
+  },
+  "residual_restriction": [
+    [
+      {
+        "denominator": 1,
+        "numerator": 100
+      }
+    ]
+  ],
+  "schema": "riemann.x20501-conditional-line-frame.result.v1",
+  "schur_cross_bound": {
+    "denominator": 3400,
+    "numerator": 49
+  },
+  "schur_cross_restriction": [
+    [
+      {
+        "denominator": 3200,
+        "numerator": 49
+      }
+    ]
+  ],
+  "selected_frame_matrix": [
+    [
+      {
+        "denominator": 8,
+        "numerator": 9
+      }
+    ]
+  ],
+  "verdict": "CERTIFIED_CONDITIONAL_LINE_FRAME_KERNEL_FLOOR",
+  "verified": true
+}
