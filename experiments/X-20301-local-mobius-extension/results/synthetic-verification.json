@@ -1,0 +1,54 @@
+{
+  "divisor_coefficients": [
+    {"k": 1, "value": 1},
+    {"k": 2, "value": 0},
+    {"k": 3, "value": 0},
+    {"k": 4, "value": 0},
+    {"k": 5, "value": 1},
+    {"k": 6, "value": -1},
+    {"k": 7, "value": 1},
+    {"k": 8, "value": 0},
+    {"k": 9, "value": 0},
+    {"k": 10, "value": 0},
+    {"k": 11, "value": 1},
+    {"k": 12, "value": -1}
+  ],
+  "formal_zero_tail_evaluation": {"denominator": 5, "numerator": -7},
+  "formal_zero_target_evaluation": {"denominator": 5, "numerator": 7},
+  "graph_kernel_metric_norm": {"denominator": 36, "numerator": 37},
+  "graph_kernel_vector": [
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 6, "numerator": -1}
+  ],
+  "graph_metric_ldl_pivots": [
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1}
+  ],
+  "minimum_source_support": {"denominator": 2, "numerator": 1},
+  "mobius_values": [1, -1, -1],
+  "p_N_at_one": {"denominator": 6, "numerator": 1},
+  "proof_boundary": "Exact finite Möbius/divisor convolution, source cancellation, local reconstruction, graph-kernel algebra, and formal zero-multiplier identity only. The Riemann application still requires the E-map/Weil normalization and a cofinal form-metric bound for the explicit lower-tail operator.",
+  "proof_object_sha256": "5a682844bcf83a618b76f796a988764902d7ade58b9db43a695c399a103c0bd4",
+  "reconstruction_cells": 4,
+  "safe_cutoff_slack": {"denominator": 1, "numerator": 1},
+  "schema": "riemann.x20301-local-mobius-extension.result.v1",
+  "source_correction": {"denominator": 12, "numerator": 5},
+  "source_integral": {"denominator": 1, "numerator": 0},
+  "tail_samples": [
+    {
+      "tail": {"denominator": 3, "numerator": -10},
+      "u": {"denominator": 4, "numerator": 3}
+    },
+    {
+      "tail": {"denominator": 6, "numerator": 1},
+      "u": {"denominator": 2, "numerator": 1}
+    },
+    {
+      "tail": {"denominator": 3, "numerator": 4},
+      "u": {"denominator": 4, "numerator": 1}
+    }
+  ],
+  "target_g_integral": {"denominator": 2, "numerator": 5},
+  "verdict": "CERTIFIED_EXACT_LOCAL_MOBIUS_RADICAL_EXTENSION",
+  "verified": true
+}
