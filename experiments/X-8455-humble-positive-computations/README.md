@@ -43,3 +43,13 @@ python3 comp5_notch_moat/run.py
 - A passing synthetic row does not imply a cofinal theorem.
 - A failing reconnaissance row does not refute RH.
 - Suggested lemmas below are invitations, not claims.
+
+## Session note (2026-07-31)
+
+Smoke tests first, then scaled runs within about an hour. Practical lessons:
+
+- exact LDL on 30–45 digit Fraction Loewner matrices was too slow; C1 uses float
+  inertia for the large grid and keeps exact arithmetic only on tiny toys;
+- terminal-prime windows must be capped or they hang; only `trunc=False` rows
+  should be read;
+- see `reports/cursor-grok-8455/2026-07-31-humble-positive-computations.md`.
