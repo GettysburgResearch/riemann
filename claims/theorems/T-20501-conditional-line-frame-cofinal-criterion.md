@@ -1,12 +1,12 @@
 # T-20501 — Conditional line-frame criterion for the final kernel and RH
 
 Claim ID: `T-20501`  
-Title: A conditional simple-line frame plus one joint corrected-residual LMI gives the complete cofinal lower envelope  
-Status: `PROPOSED CONDITIONAL COFINAL THEOREM — ARITHMETIC MOAT OPEN`  
+Title: An explicit conditional simple-line frame plus one joint corrected-residual LMI gives the complete cofinal lower envelope  
+Status: `PROPOSED CONDITIONAL COFINAL THEOREM — ARITHMETIC CERTIFICATE OPEN`  
 Authoring agent: `gpt56-03-q`  
 Created: 2026-08-01  
-Dependencies: `L-20501`--`L-20504`; `T-18901`; `T-14302`; exact directed assembly  
-Scope: shortest complete composition after the infinite complement has been augmented away  
+Dependencies: `L-20501`--`L-20505`; `T-18901`; `T-14302`; exact directed assembly  
+Scope: proof-producing sufficient theorem after the infinite complement has been augmented away  
 Related counterexample candidates: none
 
 ## 1. Cofinal finite packets
@@ -62,7 +62,7 @@ C_{+,j}\succ0.
 All staged visible/ambient eliminations must be assembled into this one positive
 block before the kernel theorem is applied.
 
-## 2. Second conditional line frame
+## 2. One explicit second frame
 
 Choose a second finite simple-line block \(Y_j\). Define
 
@@ -82,21 +82,23 @@ G_{K,j}=J_j^*G_jJ_j,
 \]
 
 and let \(M_{Y,j}\succ0\) be the selected positive zero weights. Suppose the
-directed finite frame certificate proves
+proof object certifies a rational or directed endpoint
 
 \[
 \boxed{
 P_{Y,j}:=S_j^*M_{Y,j}S_j
 \succeq
-\sigma_j^2G_{K,j}.
+\underline\sigma_j^2G_{K,j},
+\qquad
+\underline\sigma_j^2\ge0.
 }
 \tag{T-20501.5}
 \]
 
-The finite simple-line uniqueness theorem guarantees that some
-\(\sigma_j^2>0\) exists at every fixed level. No rate is inherited.
+Finite simple-line uniqueness guarantees the existence of some injective frame
+at every fixed level. It does not supply the endpoint used below.
 
-## 3. Joint corrected residual
+## 3. One explicit joint corrected-residual certificate
 
 Subtract only the finite positive \(Y_j\)-zero form from the complete Weil form.
 Let
@@ -106,12 +108,11 @@ R_{Y,j}=J_j^*Q_{\mathrm{rem},Y_j}J_j
 \tag{T-20501.6}
 \]
 
-be the remaining exact signed kernel form. Define the fully Schur-corrected
-residual
+be the remaining exact signed kernel form. Define
 
 \[
 \boxed{
-\mathcal R_{j}^{\rm corr}
+\mathcal R_j^{\rm corr}
 =
 R_{Y,j}
 -
@@ -120,59 +121,70 @@ J_j^*L_j^*C_{+,j}^{-1}L_jJ_j.
 \tag{T-20501.7}
 \]
 
-Assume the single directed lower LMI
+Suppose the proof object certifies
 
 \[
 \boxed{
 \mathcal R_j^{\rm corr}
 \succeq
--\nu_jG_{K,j},
+-\overline\nu_jG_{K,j},
 \qquad
-\nu_j\ge0.
+\overline\nu_j\ge0.
 }
 \tag{T-20501.8}
 \]
 
-Then `L-20504` gives the **fully** corrected kernel
+Put
+
+\[
+\boxed{
+\underline m_j
+=
+\underline\sigma_j^2-\overline\nu_j.
+}
+\tag{T-20501.9}
+\]
+
+Then `L-20504` gives
 
 \[
 \boxed{
 S_{{\rm ker},j}
 =P_{Y,j}+\mathcal R_j^{\rm corr}
 \succeq
-m_jG_{K,j},
-\qquad
-m_j=\sigma_j^2-\nu_j.
+\underline m_jG_{K,j}.
 }
-\tag{T-20501.9}
+\tag{T-20501.10}
 \]
 
-This is the sharp finite interface in the branch.
+This is a finite, independently checkable lower bound. It does not require
+computing the exact smallest eigenvalue of the whole corrected kernel.
 
 ### Modular separated adapter
 
 If production instead supplies
 
 \[
-R_{Y,j}\succeq-\omega_jG_{K,j}
+R_{Y,j}\succeq-\overline\omega_jG_{K,j}
 \]
 
 and
 
 \[
 J_j^*L_j^*C_{+,j}^{-1}L_jJ_j
-\preceq\chi_jG_{K,j},
+\preceq\overline\chi_jG_{K,j},
 \]
 
-then
+then one may take
 
 \[
-\nu_j\le\omega_j+\chi_j.
-\tag{T-20501.10}
+\overline\nu_j
+=
+\overline\omega_j+\overline\chi_j.
+\tag{T-20501.11}
 \]
 
-This is valid but may be strict: positive omitted-zero mass can pay the complete
-Schur correction.
+This is valid but can lose strict positivity.
 
 ## 4. Exact triangular composition
 
@@ -182,16 +194,16 @@ Let \(G_{+,j}\succ0\) be a metric on \(P_j\) and suppose
 C_{+,j}\succeq c_jG_{+,j},
 \qquad
 c_j>0.
-\tag{T-20501.11}
+\tag{T-20501.12}
 \]
 
-Define the triangular coordinate map
+Define
 
 \[
 \mathcal L_j(k,p)
 =
 \left(k,p+C_{+,j}^{-1}L_jk\right).
-\tag{T-20501.12}
+\tag{T-20501.13}
 \]
 
 Completing the square gives
@@ -208,7 +220,7 @@ C_{+,j}
 \left(p+C_{+,j}^{-1}L_jk\right)
 \right\rangle.
 }
-\tag{T-20501.13}
+\tag{T-20501.14}
 \]
 
 Put
@@ -221,10 +233,10 @@ G_{\triangle,j}
 \operatorname{diag}(G_{K,j},G_{+,j})
 \mathcal L_j.
 }
-\tag{T-20501.14}
+\tag{T-20501.15}
 \]
 
-If \(m_j\ge-\varepsilon_j\), then
+If \(\underline m_j\ge-\varepsilon_j\), then
 
 \[
 \boxed{
@@ -232,11 +244,8 @@ If \(m_j\ge-\varepsilon_j\), then
 \succeq
 -\varepsilon_jG_{\triangle,j}.
 }
-\tag{T-20501.15}
+\tag{T-20501.16}
 \]
-
-This is the exact full-block conclusion. It does not use a minimum of separate
-kernel and visible restrictions.
 
 ## 5. Adapter to the production metric
 
@@ -251,76 +260,90 @@ G_{\triangle,j}
 \qquad
 1\le\Lambda_j<\infty.
 }
-\tag{T-20501.16}
+\tag{T-20501.17}
 \]
 
-Let \(\delta_j\ge0\) be the complete relative assembly radius. Equations
-(T-20501.15)--(T-20501.16) give
+Let \(\delta_j\ge0\) be the complete relative assembly radius. Then
 
 \[
 \boxed{
 \lambda_{\min}(A_j,G_j^{\rm full})
 \ge
--\Lambda_j\varepsilon_j-\delta_j.
-}
-\tag{T-20501.17}
-\]
-
-Therefore the valid cofinal schedule is
-
-\[
-\boxed{
-\Lambda_j\varepsilon_j\longrightarrow0,
-\qquad
-\delta_j\longrightarrow0.
+-\Lambda_j(-\underline m_j)_+
+-\delta_j.
 }
 \tag{T-20501.18}
 \]
 
-The existing monotone cofinal lower-envelope theorem `T-14302` then implies RH.
-If \(m_j>0\), the exact block is positive and no metric-inflation loss is paid.
-
-## 6. Exact optimized scalar
-
-For a fixed first frame \(Z_j\), define
+Therefore the finite certificates imply RH whenever
 
 \[
-\mathfrak J_j(Z_j)
-=
-\sup_{Y_j}
-\left[
-\sigma_{Y_j\mid Z_j}^2-
-u_{Y_j\mid Z_j}
-\right],
+\boxed{
+\Lambda_j(-\underline m_j)_+
++
+\delta_j
+\longrightarrow0
+}
 \tag{T-20501.19}
 \]
 
-where \(\nu_{Y_j\mid Z_j}\) is a directed negative endpoint for the joint
-corrected residual in the same graph metric. Define
+on an unbounded support sequence. This follows from `T-14302`.
+
+If \(\underline m_j>0\), the exact level is positive and no metric-inflation
+loss is paid.
+
+## 6. Exact optimized scalar is not a reduction
+
+For comparison only, let \(S_{{\rm ker},j}\) denote the exact fully corrected
+kernel and define the exact split value for a finite selected positive form
+\(P\) by
 
 \[
-\boxed{
-\mathfrak J_j
+b_j(P)
 =
-\sup_{Z_j}\mathfrak J_j(Z_j).
-}
+\lambda_{\min}(P,G_{K,j})
+-
+\left(
+-\lambda_{\min}(S_{{\rm ker},j}-P,G_{K,j})
+\right)_+.
 \tag{T-20501.20}
 \]
 
-A sufficient exact scalar schedule is
+Allow the empty selected block \(P=0\), and put
 
 \[
-\boxed{
-\Lambda_j(-\mathfrak J_j)_+\longrightarrow0.
-}
+\mathfrak J_j^{\rm exact}
+=
+\sup_Pb_j(P).
 \tag{T-20501.21}
 \]
 
-A strictly positive cofinal moat is stronger than necessary. Approaching zero
-from below at the metric-adjusted rate is enough.
+`L-20505` proves
 
-The separated scalar of `L-20502` is a computable lower bound for
-\(\mathfrak J_j\), not the sharp object.
+\[
+\boxed{
+\left(-\mathfrak J_j^{\rm exact}\right)_+
+=
+\left(
+-\lambda_{\min}(S_{{\rm ker},j},G_{K,j})
+\right)_+.
+}
+\tag{T-20501.22}
+\]
+
+Thus optimizing the **exact** split is sign-equivalent to the final kernel. It
+is not a hidden weakening of RH.
+
+The genuine content of this theorem is the construction of explicit finite
+proof objects with
+
+\[
+\underline m_j
+\le
+b_j(P_{Y,j})
+\]
+
+that satisfy (T-20501.19) without diagonalizing the complete exact operator.
 
 ## 7. Möbius producer and invariance
 
@@ -339,7 +362,7 @@ For every finite \(Y_j\),
 Q_{\mathrm{rem},Y_j}(T_jc,T_jd)
 =
 Q_{\mathrm{rem},Y_j}(J_jc,J_jd).
-\tag{T-20501.22}
+\tag{T-20501.23}
 \]
 
 Therefore the Möbius producer gives:
@@ -357,15 +380,11 @@ full positive-sector cross, but the Weil component itself is invariant.
 Under the complete form/metric capture hypotheses, false RH supplies a
 supported off-line Xi-cardinal difference whose fully corrected Rayleigh
 quotient is bounded above by a fixed negative constant. Consequently no
-certificate sequence satisfying (T-20501.18) can coexist with false RH.
+certificate sequence satisfying (T-20501.19) can coexist with false RH.
 
-This proves that a cofinal joint conditional-frame moat is RH-resolving. It does
-**not** prove the converse statement that RH automatically supplies this
-particular separately certified decomposition; conservative finite endpoints
-may lose positive exact cancellation.
-
-Thus `T-20501` is a noncircular sufficient theorem, not an asserted new
-iff-formulation.
+This proves that the explicit finite-certificate schedule is RH-resolving. It
+does **not** manufacture the schedule from finite-dimensionality, line-zero
+density, or exact local Möbius inversion.
 
 ## 9. Production certificate
 
@@ -375,11 +394,11 @@ A proof-facing level must bind:
 - first-frame matrices \(A_j,B_j\);
 - second-frame matrices \(C_j,D_j\);
 - the exact conditional matrix \(S_j=C_j-D_jB_j^{-1}A_j\);
-- selected positive weights;
-- the complete joint corrected residual matrix;
+- selected positive weights and \(\underline\sigma_j^2\);
+- the complete joint corrected residual and \(\overline\nu_j\);
 - the full positive-sector block \(C_{+,j}\) and cross \(L_j\);
 - the triangular metric inflation \(\Lambda_j\);
-- the assembly radius;
+- the assembly radius \(\delta_j\);
 - immutable zero, source, and matrix provenance.
 
 A separated residual/cross certificate may be retained as an independent lower
@@ -388,9 +407,12 @@ bound, but the joint LMI should be attempted first.
 ## 10. Proof boundary
 
 - Every finite algebraic implication is exact.
-- The theorem is strictly weaker than both absolute Möbius-tail smallness and
-  the separated \(\omega+\chi\) adapter.
-- It uses the entire positive sector and a declared triangular metric adapter.
-- No current result proves the cofinal joint moat (T-20501.21).
-- Under false RH that moat must fail on a complete capturing hierarchy.
+- The theorem is strictly weaker as a **certificate requirement** than absolute
+  Möbius-tail smallness and the separated \(\omega+\chi\) adapter.
+- The exact optimized split itself has the same negative part as the final
+  corrected kernel.
+- No current result constructs a cofinal finite certificate sequence satisfying
+  (T-20501.19).
+- Under false RH such a sequence cannot exist on a complete capturing
+  hierarchy.
 - Consequently this PR advances the proof interface but does not claim RH.
