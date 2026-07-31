@@ -1,0 +1,47 @@
+{
+  "content_sha256": "f95834d527edef14094e96a283b8f45cec5cb9218582814ec97b17555b9a32b4",
+  "disclaimer": "Binary search on mpmath.quad of the j=2 hard-window cosine moment.",
+  "rows": [
+    {
+      "K": 1,
+      "alpha_star": "0.9961872290180905764600538532",
+      "diff_from_full": 0.0013578602293877395
+    },
+    {
+      "K": 2,
+      "alpha_star": "0.997545088688992152015089232",
+      "diff_from_full": 5.584861639817973e-10
+    },
+    {
+      "K": 3,
+      "alpha_star": "0.997545089247478315996886522",
+      "diff_from_full": 0.0
+    },
+    {
+      "K": 5,
+      "alpha_star": "0.997545089247478315996886522",
+      "diff_from_full": 0.0
+    },
+    {
+      "K": 10,
+      "alpha_star": "0.997545089247478315996886522",
+      "diff_from_full": 0.0
+    },
+    {
+      "K": 20,
+      "alpha_star": "0.997545089247478315996886522",
+      "diff_from_full": 0.0
+    },
+    {
+      "K": "full",
+      "alpha_star": "0.997545089247478315996886522",
+      "diff_from_full": 0.0
+    }
+  ],
+  "schema": "riemann.x8455.comp20.v1",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "If K=1 already matches \u03b1* to many digits, the precursor is an archimedean/\u03b8_1 event.",
+    "Can \u03b1* be solved from an incomplete-gamma / boundary-term equation for n=1?"
+  ]
+}

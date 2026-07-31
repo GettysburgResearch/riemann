@@ -46,3 +46,6 @@ screens in C1 are known to be too weak and should not be cited.
 8. **Round 4:** α*(p2=0)≈0.9975450892474784; after it a Loewner soft
    mode declines to 0 then emits a negative pair at the deficit (~0.975).
    Gaussian has p2-flip but no delayed deficit; Hermite-ish differs (C17–C19).
+9. **Round 5:** α* is fixed by the first two Φ terms; after α*, Loewner
+   min_pos falls nearly linearly (r²≈0.99996) and hits 0 at the deficit jump
+   ≈0.97505 (C20–C21). Reading-B cones stayed one-sided in coarse probes (C22).
