@@ -24,11 +24,16 @@ statements; `L-15108`'s converse was independently re-derived this session again
 Connes–van Suijlekom arXiv:2511.23257 was retrieved and read; its Theorem 5.6 and Proposition 5.10 are as the
 repository states them, with two scope points worth knowing (§3 below).
 
-**The hypotheses are the problem.** `R-16001` shows the finite gate is satisfiable **only** above a critical scale
-`alpha_c in (1.064404, 1.064417)`, a threshold that does not move with the level `N` over
-`N = 6,8,10,14,20,26,30`. Below it the deficit saturates at roughly `1.848 e^{1/alpha} > 0` and therefore diverges
-as `alpha -> 0`. But convergence to `Xi` requires `alpha -> 0`. For the target sequence the repository actually
-builds, the two hypotheses of `T-15104` are **incompatible**.
+**The hypotheses are the problem.** `R-16001` shows the finite gate is satisfiable only above a critical scale, that the threshold does **not** move
+with the level `N`, and that the deficit **grows as `alpha` decreases**. But convergence to `Xi` requires
+`alpha -> 0`. The two hypotheses of `T-15104` are therefore **incompatible for this construction**.
+
+**Read `R-16001`'s ERRATUM before quoting any constant.** The original census used the sampled vector
+`xi_j = (-1)^j Xi(2 pi alpha j)` rather than the interface-derived windowed vector `xi_j = (-1)^j F(2 pi j)`;
+the two diverge by `1e4`-`1e7` in the tail coordinates and give opposite verdicts at `alpha = 1.0, N = 6`.
+For the **correct windowed** target: `alpha >= 1.0` passes; `alpha = 0.9, 0.8, 0.7` give deficit 4; `alpha = 0.6`
+gives deficit 8 -- `N`-independent at `N = 6, 8, 10` throughout. So the structure is unchanged in kind and the
+incompatibility stands, but `alpha_c ~ 1.0644` is a property of the **sampled** family only.
 
 Worse, the passing regime is empty of arithmetic content: at `alpha > alpha_c` the truncation error already
 exceeds `|Xi(w)|` below the first zeta zero; the "real roots" sit on the sinc lattice `w = 2 pi alpha k` rather
@@ -88,12 +93,18 @@ Ranked, with detail in `OPEN_PROBLEMS.md`:
 
 1. **P-1** (issue #174) Prove the converse half of gap parity. New handle: it is now equivalent to an inertia statement about an
    explicit Loewner matrix (`L-16004`), which is root-free.
-2. **P-3** (issue #175) Settle whether the cofinal hypothesis is satisfiable by **any** sequence, not just the sampled one. The
-   crux is whether the CvS rank-one structure `D' = D - |D xi><eta|` pins the roots of `P` into the sampled range;
-   if it does, a Levinson-density-versus-Hurwitz argument closes the whole programme.
-3. **P-4** Redesign: the low-frequency sample gaps must be filled by zeros that are not `Xi`'s, without destroying
-   convergence. Note the working note's own Remark 3.2 permits an unbounded **subsequence**, which is a cheaper
-   relaxation than "all large `j`".
+2. **P-3** (issue #175) is **ANSWERED for Reading A**: the hypotheses **are** satisfiable, and satisfiability is
+   **exactly equivalent to RH**. Theorem 3.1 is a reformulation, not a reduction; it is not vacuous. The
+   density-versus-Hurwitz argument fails at exactly the step flagged as its crux. **What is now the live question
+   is Reading B** -- the given arithmetic `Q` fixed, only the scalar `c` free (`T-15104.4`), which `L-15108` §6
+   notes is a strictly smaller family and is where any non-circular content must live. Cheapest decisive
+   experiment: take the zero-matched `xi` at `N = 6`, build the arithmetic `Q_6`, and test whether a scalar `c`
+   exists with `T(c) >= 0`, `ker = R xi`. An 11x11 problem.
+3. **P-4** Redesign -- **with a corrected premise**. "Fill the low-frequency gaps / achieve critical Nyquist
+   density" is the **wrong** design target: a passing target at `N = 20` leaves 18 of 40 gaps empty with
+   `S(xi) = 4` and is still fully real-rooted. The gate requires the `L-16003`(iv) parity distribution and nothing
+   more. Note also that the working note's Remark 3.2 permits an unbounded **subsequence**, a cheaper relaxation
+   than "all large `j`".
 4. **P-2** Prove the `alpha_c` extremal characterisation and the saturation law.
 5. **P-5** Find where arithmetic enters. Nothing in the gate as currently posed mentions a prime.
 
