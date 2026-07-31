@@ -1,0 +1,39 @@
+name: x18501-right-inverse-zero-count
+
+on:
+  push:
+    branches:
+      - agent/gpt56-03-m/168-right-inverse-count
+  pull_request:
+    paths:
+      - 'claims/lemmas/L-18501-right-inverse-zero-count.md'
+      - 'claims/theorems/T-18501-cardinal-radical-count-diagonal.md'
+      - 'claims/experiments/X-18501-right-inverse-zero-count-verifier.md'
+      - 'experiments/X-18501-right-inverse-zero-count/**'
+      - '.github/workflows/x18501-right-inverse-zero-count.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Compile
+        run: |
+          python -m py_compile \
+            experiments/X-18501-right-inverse-zero-count/verify.py \
+            experiments/X-18501-right-inverse-zero-count/tests/test_verify.py
+      - name: Exact synthetic replay
+        run: |
+          python experiments/X-18501-right-inverse-zero-count/verify.py \
+            experiments/X-18501-right-inverse-zero-count/certificates/synthetic.json
+      - name: Adversarial tests
+        run: |
+          python -m unittest discover \
+            -s experiments/X-18501-right-inverse-zero-count/tests -v
