@@ -11,7 +11,7 @@ from pathlib import Path
 import mpmath as mp
 import numpy as np
 
-from recon import build_window, interpolate, prime_power_events
+from recon import build_window, dyadic_M, interpolate, prime_power_events
 
 
 def main() -> int:
@@ -71,6 +71,19 @@ def main() -> int:
             )
         )
 
+    def F_laplace(z: mp.mpf | mp.mpc) -> mp.mpc:
+        return mp.e ** (-2 * z) * dyadic_M(z) ** 2
+
+    def F_trivial_prediction(x: float, count: int = 20) -> float:
+        total = mp.mpf(0)
+        for m in range(1, count + 1):
+            lam = mp.mpf(2 * m) + mp.mpf("0.5")
+            total -= mp.e ** (-mp.mpf(x) * lam) * F_laplace(-lam)
+        return float(mp.re(total))
+
+    def pole_free_trivial_prediction(x: float) -> float:
+        return F_trivial_prediction(x) - 2.0 * F_trivial_prediction(x - h)
+
     x_min = 6.0 + h
     x_max = math.log(args.cutoff) + 2.0
     grid = np.linspace(x_min, x_max, args.grid_points)
@@ -105,13 +118,15 @@ def main() -> int:
             continue
         value, count = statistic(x)
         prediction = zero_prediction(x)
+        trivial = pole_free_trivial_prediction(x)
         comparisons.append(
             {
                 "x": x,
                 "prime_power_terms": count,
                 "raw_prime_statistic": value,
                 "first_n_zero_prediction": prediction,
-                "difference": value - prediction,
+                "trivial_zero_prediction": trivial,
+                "difference": value - prediction - trivial,
             }
         )
 
