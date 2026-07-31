@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.x14307-radical-tail-ratio.v1",
+  "classification": "EXACT_SYNTHETIC_CONTROL",
+  "source": {
+    "description": "(z^2-3z/2) exp(-pi x^2), z=pi x^2",
+    "polynomial_in_z": [
+      {"numerator": 0, "denominator": 1},
+      {"numerator": -3, "denominator": 2},
+      {"numerator": 1, "denominator": 1}
+    ]
+  },
+  "tail_residual_upper": {"numerator": 1, "denominator": 1048576},
+  "coercivity_lower": {"numerator": 3, "denominator": 512},
+  "trial_norm_squared_lower": {"numerator": 1, "denominator": 2},
+  "declared_linear_ratio_upper": {"numerator": 1, "denominator": 6144},
+  "declared_squared_ratio_upper": {"numerator": 1, "denominator": 3221225472},
+  "linear_target": {"numerator": 1, "denominator": 1000},
+  "squared_target": {"numerator": 1, "denominator": 1000000}
+}
