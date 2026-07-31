@@ -53,7 +53,16 @@ Observed with residual 0.0 on every probed row:
 phaseL1 = π · #{adjacent sign changes}
 ```
 
-More interesting: at `(α,N)=(0.98,4)`, windowed Φ already has 6 sign changes while Sturm deficit is still 0. The sign pattern flips **before** the real-root gate fails. Possible cheap precursor for Issue #176 scans.
+More interesting: at `(α,N)=(0.98,4)`, windowed Φ already has 6 sign changes while Sturm deficit is still 0. The sign pattern flips **before** the real-root gate fails.
+
+C12 fine scan (`α=1.08→0.90`, `N=4,6,8`) saw the same two thresholds, **independent of N** in this grid:
+
+```text
+sign_changes jump at α ≈ 0.99
+Sturm deficit jump at α ≈ 0.97
+```
+
+So there is a reproducible two-step cascade: sign pattern first, real-rootedness second. Still provisional, but a cheap precursor for Issue #176 scans.
 
 ### 4. Reading-B isotropic cones on windowed targets look one-sided
 

@@ -29,6 +29,9 @@ The least noisy patterns seen in this session were:
    (~0.45 / ~0.40 vs ~0.97), unlike the sampled-`Ξ` Gaussian control narrative.
 6. **Round 2:** `phaseL1 = π · (#sign changes)` exactly in probes; sign-pattern
    jumps can precede Sturm deficit failure (C11/C12).
+7. **Round 3:** Loewner `n_neg` jumps with the deficit, not the sign precursor;
+   precursor localized to `p_{±2}` zero at α≈0.99755 (C13/C16). Naive γ₁
+   cos/sin tuning destroyed the terminal Rayleigh lock (C15).
 
 ## Evidence
 
