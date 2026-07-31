@@ -73,6 +73,24 @@ Finite-dimensional and rational throughout. $g$ is a real rational function with
 - CvS form (11) — used only to observe that $(b,a)$ is exactly the required shape.
 - `L-15108` — **not used**; this lemma reproves its existence direction constructively and removes its §5 parity caveat.
 
+## SCOPE CAUTION (added 2026-07-31) — (ii) is true here and false if lifted
+
+(ii)'s sentence *"each nonreal pair forces a negative eigenvalue and $Q\not\succeq0$"* is correct **in this lemma's setting**, where there are exactly $2N$ poles in dimension $2N+1$: the PSD part contributed by the real poles then has rank at most $2N-2k$ for $k$ nonreal pairs, its kernel has dimension at least $2k+1$, and the rank count leaves a negative direction that nothing can cover. The proof above uses that.
+
+**Lifted out of that setting to an over-determined form — many more poles than nodes — the sentence is false.** Verified independently (`experiments/X-16003-source-atlas/overdet.py`, mpmath dps 120): with a uniform real ladder $\mu_k=k\pi/2$, $k=1..20$, plus **one** nonreal quadruple at $\pm\mu_*\pm id$, the inertia stays $(\dim,0,0)$ — positive definite — over wide ranges of $d$:
+
+| $N$ | dim | $\mu_*$ | $\mu_*/N$ | $d=0.1$ | $d=1$ | $d=10$ |
+|---|---|---|---|---|---|---|
+| 4 | 9 | 7.854 | 1.96 | $(9,0,0)$ | $(9,0,0)$ | $(9,0,0)$ |
+| 4 | 9 | 31.416 | 7.85 | $(9,0,0)$ | $(9,0,0)$ | $(9,0,0)$ |
+| 6 | 13 | 12.566 | 2.09 | $(13,0,0)$ | $(13,0,0)$ | $(13,0,0)$ |
+| 8 | 17 | 31.416 | 3.93 | $(17,0,0)$ | $(17,0,0)$ | $(17,0,0)$ |
+| 8 | 17 | 1.571 | 0.20 | $(15,2,0)$ | $(15,2,0)$ | $(15,2,0)$ |
+
+The pattern is that the nonreal quadruple is only *seen* when it sits near or inside the node band — roughly $\mu_*/N\lesssim1.5$ here — and is essentially invisible outside it, moving $\lambda_{\min}$ by under $1\%$.
+
+**Why this matters for the programme.** The arithmetic source $\psi_W$ has poles at all the zeta zeros sampled at finitely many nodes, i.e. it is squarely in the **over-determined** regime, not this lemma's. So **"a single off-line zero must break positivity of a finite Weil matrix" does not follow from (ii)** and needs its own argument. Anyone building a counterexample search on that implication should stop and re-derive it. The credit for spotting this is to a parallel detectability study run this session; I have re-verified it independently rather than taking it on report.
+
 ## Gap audit
 
 1. **Squarefreeness and $P(\lambda_i)\neq0$ are hypotheses.** A repeated root of $P$ breaks the rank count in (ii) and the kernel is then larger than one-dimensional, so the CvS one-dimensional-kernel hypothesis genuinely fails. This is the same repeated-root caveat as working-note Remark 5.5.
