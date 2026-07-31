@@ -1,0 +1,33 @@
+{
+  "analytic_claim": "L-14320",
+  "claimed_frame_floor": {
+    "denominator": "100",
+    "numerator": "147"
+  },
+  "classification": "SYNTHETIC_MODEL",
+  "diagonal_lower": {
+    "denominator": "1",
+    "numerator": "2"
+  },
+  "entry_tail_upper": {
+    "denominator": "100",
+    "numerator": "1"
+  },
+  "exact_proof_object_sha256": "389a7322bf34aec23e1035d199b3d421511b31ad0f06296a7cc50f77272ad4e4",
+  "floor_moat": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "formula_frame_floor": {
+    "denominator": "100",
+    "numerator": "147"
+  },
+  "proof_boundary": "Exact rational scalar composition. Production use inherits the certified-zero separation, reciprocal-Hardy normalization, and directed analytic-bound gate.",
+  "relative_row_sum_upper": {
+    "denominator": "4",
+    "numerator": "1"
+  },
+  "schema": "riemann.x14313-separated-zero-frame-verification.v1",
+  "verdict": "CERTIFIED_SEPARATED_ZERO_FRAME_FLOOR",
+  "zero_count": 3
+}
