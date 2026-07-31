@@ -1,0 +1,20 @@
+{
+  "absolute_residual_radius_lower_witness": 100,
+  "certificate_sha256": "69d4a6d5941973cb9fffacc52d3a16fa76a8760e3a05cb9ddad451692ff730d4",
+  "full_ldl_pivots": [
+    206,
+    3
+  ],
+  "residual_lower_ldl_pivots": [
+    203,
+    {"numerator": 3, "denominator": 4}
+  ],
+  "residual_negative_radius": {"numerator": 3, "denominator": 2},
+  "selected_floor": {"numerator": 5, "denominator": 2},
+  "selected_ldl_pivots": [
+    1,
+    {"numerator": 3, "denominator": 4}
+  ],
+  "status": "CERTIFIED_ONE_SIDED_RESIDUAL_COMPLETION",
+  "strict_margin": 1
+}
