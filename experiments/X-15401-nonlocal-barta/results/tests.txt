@@ -4,11 +4,12 @@ test_committed_certificate (test_verify.NonlocalBartaTests.test_committed_certif
 test_duplicate_edge_rejected (test_verify.NonlocalBartaTests.test_duplicate_edge_rejected) ... ok
 test_false_barta_rejected (test_verify.NonlocalBartaTests.test_false_barta_rejected) ... ok
 test_false_resolvent_rejected (test_verify.NonlocalBartaTests.test_false_resolvent_rejected) ... ok
+test_invalid_edge_sign_rejected (test_verify.NonlocalBartaTests.test_invalid_edge_sign_rejected) ... ok
 test_negative_potential_still_positive (test_verify.NonlocalBartaTests.test_negative_potential_still_positive) ... ok
 test_nonpositive_psi_rejected (test_verify.NonlocalBartaTests.test_nonpositive_psi_rejected) ... ok
 test_rank_one_gate_fail_closed (test_verify.NonlocalBartaTests.test_rank_one_gate_fail_closed) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.003s
+Ran 10 tests in 0.004s
 
 OK
