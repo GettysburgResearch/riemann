@@ -1,0 +1,38 @@
+name: x15304-three-block-schur
+
+on:
+  pull_request:
+    paths:
+      - 'claims/lemmas/L-15306-triangular-three-block-schur-floor.md'
+      - 'claims/theorems/T-15302-cofinal-three-block-floor-implies-rh.md'
+      - 'experiments/X-15304-triangular-three-block-schur/**'
+      - '.github/workflows/x15304-three-block-schur.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-three-block:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile exact checker
+        run: |
+          python -m py_compile \
+            experiments/X-15304-triangular-three-block-schur/verify.py \
+            experiments/X-15304-triangular-three-block-schur/tests/test_verify.py
+      - name: Run adversarial tests
+        run: |
+          python -m unittest discover \
+            experiments/X-15304-triangular-three-block-schur/tests
+      - name: Replay retained proof object
+        run: |
+          python experiments/X-15304-triangular-three-block-schur/verify.py \
+            experiments/X-15304-triangular-three-block-schur/certificates/synthetic.json \
+            --output /tmp/replayed.json
+          cmp /tmp/replayed.json \
+            experiments/X-15304-triangular-three-block-schur/results/synthetic-verification.json
