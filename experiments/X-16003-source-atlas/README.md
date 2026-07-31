@@ -40,3 +40,34 @@ operations, so full-scale runs can be planned rather than guessed. Summary on on
 A separate thread reports N=60 (degree 120) in 0.4 s using VCA real-root isolation rather than Sturm. I cannot
 reproduce that with Sturm and have not implemented VCA; if their figure is right the method matters far more
 than anything measured here.
+
+## The nominated-target experiment (supports `O-16004`)
+
+`pencil_lens.py` — in Prop 4.1 source terms the one-scalar family is `Q -> Q - t*J` with `J = eta eta^T`
+(because `Loewner(lambda) = J`), a rank-one shift. Cauchy interlacing then bounds the change in the
+negative-eigenvalue count by 1; checked on 200 random symmetric matrices at 6 values of `t` (max change: 1).
+Also finds the X-0001 Weil matrix positive definite at every cutoff tested.
+
+`nominate.py` — since `Q_W > 0`, Sherman-Morrison gives a unique singular scalar `t* = 1/(eta^T Q^-1 eta)`
+with one-dimensional kernel spanned by `xi ∝ Q^-1 eta`. So the arithmetic form nominates its own target.
+The resulting `P` is real-rooted — but that is guaranteed by CvS Thm 5.6, not discovered.
+
+`converge.py`, `scaling.py` — the part that is not automatic. In the CvS frequency coordinate
+`w = 2 pi s / L`, `L = log c`, the roots are the zeta zeros:
+
+```
+cutoff 2000:   w_1          w_2          w_3          w_4
+   N=6    14.1347251   21.0224296   25.0775916   33.018
+   N=8    14.1347251   21.0220398   25.0111337   30.638
+   N=10   14.1347251   21.0220396   25.0108579   30.431
+   zeta   14.1347251   21.0220396   25.0108576   30.4248761
+```
+
+`w_1` agrees with `gamma_1` to 9-12 digits at every cutoff from 50 to 5000. The X-0001 builder contains no
+zeta zeros (checked); the input is prime powers, an archimedean block and functions of `L`. This is the
+explicit formula doing its work and is presumably not news, but the table is not in the repository and it
+makes a good regression test for the Weil-matrix code.
+
+HIGH-PRECISION FLOAT throughout (mpmath dps 60). Nothing certified. See `O-16004` gap audit — in particular
+"`Q_W` positive definite" was read from numerical eigenvalues and should be redone as an exact congruence,
+since everything else rests on it.
