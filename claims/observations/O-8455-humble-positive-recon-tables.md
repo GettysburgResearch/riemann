@@ -51,3 +51,6 @@ screens in C1 are known to be too weak and should not be cited.
    ≈0.97505 (C20–C21). Reading-B cones stayed one-sided in coarse probes (C22).
 10. **Round 6:** soft Loewner eigenvector mass is on `j=±1` (~99%), not on
     `j=±2`; α_def≈0.975 for N≥5 on a coarse grid (C23–C24).
+11. **Round 7:** soft mode = odd-antisym Loewner ground state (ratio 1±1e-12);
+    Schur({±1}) works once a structural ~0 even kernel is quotiented (C26/C29/C31).
+    α* fixed by Φ n=1+2 (Δ~1e-10); α_def(N) bisect≈0.9734…0.9756 for N=4…10 (C27–C30).

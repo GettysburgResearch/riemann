@@ -27,6 +27,14 @@ cautious.
 | C8 | `comp8_readingb_gaussian/` | Opposite-sign Reading-B + Gaussian/Hermite controls |
 | C9 | `comp9_loewner_moat/` | Loewner moat / energy separators |
 | C10 | `comp10_unexpected/` | D′ spectrum, prime-truncated Φ, odd probes |
+| C13–C16 | `comp13_*` … | precursor localization / shadows / tuned Rayleigh |
+| C17–C25 | `comp17_*` … | α*, soft slope, soft evec on ±1, deficit vs N |
+| C26 | `comp26_schur_odd/` | Schur of ±1 / odd blocks vs λ_soft |
+| C27 | `comp27_alpha_star_analytic/` | n=1,2 / special-fn fishing for α* |
+| C28 | `comp28_soft_law_stress/` | linear soft law vs N, digits |
+| C29 | `comp29_odd_rayleigh/` | odd-antisym subspace vs Schur-antisym |
+| C30 | `comp30_kernel_and_alpha_def/` | structural kernel + α_def bisect |
+| C31 | `comp31_schur_second/` | non-kernel Schur eig reinterpretation of C26 |
 
 ## How to run
 
