@@ -1,92 +1,104 @@
-# L-15620 — Berezin-clipped symbol capacity
+# L-15620 — Berezin clipping, strict reverse capacity, and the correct positive-slack gate
 
 Claim ID: `L-15620`  
-Title: The dangerous clipped operator trace is bounded by the symbol deficit at the desired floor, independently of the auxiliary level `G`  
-Status: `PROPOSED — COMPLETE ABSTRACT PROOF`  
+Title: The convex symbol bound is valid, but exact zero-slack symbol saturation is impossible  
+Status: `PARTIAL — CORE BEREZIN THEOREM PROVED; FORMER ZERO-SLACK COROLLARY REFUTED BY R-15603`  
 Authoring agent: `gpt56-pro-09-f`  
 Created: 2026-07-31  
-Dependencies: `L-15618`; Plancherel; scalar Jensen inequality; the diagonal of the time-limiting reproducing kernel  
-Scope: proof-facing arithmetic form of the exact clipped saturation gate  
+Corrected: 2026-07-31  
+Dependencies: `L-15618`; `R-15603`; Plancherel; scalar Jensen inequality  
+Scope: symbol interfaces for Issue #156  
 Related counterexample candidates: none
+
+## 0. Correction
+
+The convex trace theorem and the operator-clipping inequality in this file are
+correct. The former proposed production condition
+
+\[
+ { |I|\over2\pi}\int(\Gamma-s)_+
+ \le d(\Gamma-\alpha)
+ \tag{L-15620.0}
+\]
+
+is not merely unproved: `R-15603` shows that it has the strict reverse direction
+whenever the same lower symbol and a nonzero finite low packet are used.
+
+The error was to treat an upper bound for a spectrally clipped localization
+operator as though it could itself saturate. Spectral clipping does not commute
+with time-frequency compression.
 
 ## 1. Localization operator
 
-Let `I` be a bounded interval of length `|I|`. Extend vectors in `L^2(I)` by
+Let `I` be a bounded interval of positive length. Extend vectors in `L2(I)` by
 zero and use
 
 \[
- \|f\|_2^2
- =\frac1{2\pi}\int_\mathbb R|\widehat f(\xi)|^2d\xi.
+ \|f\|_2^2={1\over2\pi}\int_{\mathbb R}|\widehat f(\xi)|^2d\xi.
  \tag{L-15620.1}
 \]
 
-For a measurable nonnegative symbol `w`, define
+For a measurable nonnegative integrable symbol `w`, define
 
 \[
  D_w=P_I\mathcal F^{-1}M_w\mathcal FP_I.
  \tag{L-15620.2}
 \]
 
-Assume the right side below is finite.
+Then `D_w` is positive trace class and
 
-## 2. Convex trace inequality
+\[
+ \operatorname{Tr}D_w
+ ={ |I|\over2\pi}\int_{\mathbb R}w(\xi)d\xi.
+ \tag{L-15620.3}
+\]
+
+## 2. Valid convex trace inequality
 
 Let `Phi:[0,infinity)->[0,infinity)` be convex with `Phi(0)=0`. Then
 
 \[
  \boxed{
  \operatorname{Tr}\Phi(D_w)
- \le
- \frac{|I|}{2\pi}
- \int_\mathbb R\Phi(w(\xi))d\xi.}
- \tag{L-15620.3}
+ \le { |I|\over2\pi}
+ \int_{\mathbb R}\Phi(w(\xi))d\xi.}
+ \tag{L-15620.4}
 \]
 
 ### Proof
 
-Let `lambda_n` be the positive eigenvalues of `D_w` and choose orthonormal
+Let `lambda_n` be the positive eigenvalues of `D_w`, with orthonormal
 eigenfunctions `u_n`. Plancherel gives
 
 \[
- \lambda_n
- =\frac1{2\pi}
- \int_\mathbb Rw(\xi)|\widehat u_n(\xi)|^2d\xi,
- \tag{L-15620.4}
+ \lambda_n={1\over2\pi}
+ \int w(\xi)|\widehat u_n(\xi)|^2d\xi,
+ \qquad
+ {1\over2\pi}\int|\widehat u_n|^2=1.
 \]
 
-while
-
-\[
- \frac1{2\pi}\int|\widehat u_n|^2=1.
-\]
-
-Scalar Jensen therefore gives
+Scalar Jensen gives
 
 \[
  \Phi(\lambda_n)
- \le\frac1{2\pi}
+ \le {1\over2\pi}
  \int\Phi(w(\xi))|\widehat u_n(\xi)|^2d\xi.
- \tag{L-15620.5}
 \]
 
-Sum over the complete orthonormal eigenbasis, adding a basis of the kernel when
-necessary. For each fixed `xi`, Parseval applied to the time-limited plane wave
-gives
+Summing and using completeness of an orthonormal basis of `L2(I)` gives
 
 \[
  \sum_n|\widehat u_n(\xi)|^2=|I|.
- \tag{L-15620.6}
 \]
 
-Tonelli's theorem then proves (L-15620.3). QED.
+Tonelli proves (L-15620.4). QED.
 
-## 3. Exact clipping identity
+## 3. Valid operator-clipping bound
 
-Take
+For `theta>=0`, take
 
 \[
  \Phi_\theta(x)=(x-\theta)_+.
- \tag{L-15620.7}
 \]
 
 Then
@@ -94,184 +106,218 @@ Then
 \[
  \boxed{
  \operatorname{Tr}(D_w-\theta I)_+
- \le\frac{|I|}{2\pi}
- \int_\mathbb R(w(\xi)-\theta)_+d\xi.}
- \tag{L-15620.8}
+ \le { |I|\over2\pi}
+ \int_{\mathbb R}(w(\xi)-\theta)_+d\xi.}
+ \tag{L-15620.5}
 \]
 
-Now let a real lower symbol `s` and an auxiliary level `G` define
+Let a real lower symbol `s` and an auxiliary level `G` define
 
 \[
- w_G(\xi)=(G-s(\xi))_+,
+ w_G=(G-s)_+,
  \qquad
  D_G=D_{w_G}.
- \tag{L-15620.9}
 \]
 
-For any `Gamma<=G`, put
+For `Gamma<=G`, set `theta=G-Gamma`. The scalar identity
 
 \[
- \theta=G-\Gamma.
-\]
-
-The scalar identity
-
-\[
- \boxed{
  \bigl((G-s)_+-(G-\Gamma)\bigr)_+
- =(\Gamma-s)_+}
- \tag{L-15620.10}
+ =(\Gamma-s)_+
+ \tag{L-15620.6}
 \]
 
-holds pointwise. Hence
+gives
 
 \[
  \boxed{
  \operatorname{Tr}
  \bigl(D_G-(G-\Gamma)I\bigr)_+
- \le
- \frac{|I|}{2\pi}
- \int_\mathbb R(\Gamma-s(\xi))_+d\xi.}
- \tag{L-15620.11}
+ \le { |I|\over2\pi}
+ \int(\Gamma-s)_+.}
+ \tag{L-15620.7}
 \]
 
-The auxiliary level `G` has disappeared from the arithmetic quantity.
+Equation (L-15620.7) is useful as an upper estimate. It cannot be promoted to
+an exact zero-slack saturation condition.
 
-## 4. Exact scalar saturation theorem
+## 4. Why the old scalar gate is impossible
 
-Suppose the same localized operator satisfies
+Assume the same localized operator satisfies
 
 \[
  A\succeq GI-D_G,
- \tag{L-15620.12}
+ \qquad
+ G\ge\Gamma.
+ \tag{L-15620.8}
 \]
 
-and a `d`-dimensional packet `L` satisfies
+Pointwise,
+
+\[
+ \min(G,s)\ge\min(\Gamma,s)
+ =\Gamma-(\Gamma-s)_+.
+\]
+
+Hence, with
+
+\[
+ D_\Gamma
+ =P_I\mathcal F^{-1}(\Gamma-s)_+\mathcal FP_I,
+\]
+
+we have
+
+\[
+ \boxed{A\succeq\Gamma I-D_\Gamma.}
+ \tag{L-15620.9}
+\]
+
+Let `L` be a nonzero `d`-dimensional packet satisfying
 
 \[
  A|_L\preceq\alpha I_L,
  \qquad
- \alpha<\Gamma\le G.
+ \alpha<\Gamma.
+ \tag{L-15620.10}
+\]
+
+`R-15603` proves
+
+\[
+ \boxed{
+ { |I|\over2\pi}\int(\Gamma-s)_+
+ =\operatorname{Tr}D_\Gamma
+ >d(\Gamma-\alpha).}
+ \tag{L-15620.11}
+\]
+
+The strictness comes from Paley–Wiener uniqueness: every nonzero positive
+symbol localization is strictly positive on every nonzero time-limited vector,
+so it has positive trace outside every finite packet.
+
+On the scaled Suzuki interval `I=[-1,1]`, the exact statement is
+
+\[
+ \boxed{
+ {1\over\pi}\int(\Gamma-s_a)_+
+ >d_a(\Gamma-\alpha_a).}
+ \tag{L-15620.12}
+\]
+
+Thus the inequality requested with `<=` is impossible at every nontrivial
+finite level.
+
+## 5. Correct nonvacuous scalar quantities
+
+### 5.1 Spectrally clipped operator trace
+
+The sharp condition from `L-15618` remains
+
+\[
+ \boxed{
+ \operatorname{Tr}
+ \bigl(D_G-(G-\Gamma)I\bigr)_+
+ \le d(\Gamma-\alpha).}
  \tag{L-15620.13}
 \]
 
-If
+Unlike `D_Gamma`, the spectrally clipped operator in (L-15620.13) may have
+finite rank. This is the closest scalar threshold condition.
+
+### 5.2 Exact leverage tail
+
+Let `P` project onto the packet and `Q=I-P`. Then
 
 \[
  \boxed{
- \frac{|I|}{2\pi}
- \int_\mathbb R(\Gamma-s(\xi))_+d\xi
- \le d(\Gamma-\alpha),}
+ \operatorname{Tr}(QD_\Gamma Q)
+ ={1\over2\pi}\int
+ (\Gamma-s(\xi))_+\|Qe_\xi\|_2^2d\xi.}
  \tag{L-15620.14}
 \]
 
-then
+This is the packet-leverage deficit of `L-15607/L-15608`. It removes the part
+of the symbol deficit already captured by the finite packet.
+
+### 5.3 Unweighted excess with positive slack
+
+Define
 
 \[
- \boxed{A|_{L^\perp}\succeq\Gamma I.}
+ \Delta
+ ={ |I|\over2\pi}\int(\Gamma-s)_+
+  -d(\Gamma-\alpha).
  \tag{L-15620.15}
 \]
 
-### Proof
-
-Equation (L-15620.11) and (L-15620.14) give
+Equation (L-15620.11) says `Delta>0`. Compression of (L-15620.9) to the packet
+gives
 
 \[
- \operatorname{Tr}
- \bigl(D_G-(G-\Gamma)I\bigr)_+
- \le d(\Gamma-\alpha).
+ PD_\Gamma P\succeq(\Gamma-\alpha)P.
 \]
 
-This is exactly the danger-threshold condition (L-15618.17). Apply
-`L-15618`. QED.
-
-On the scaled Suzuki interval `I=[-1,1]`, the proof-facing condition is
+Therefore
 
 \[
- \boxed{
- \frac1\pi
- \int_\mathbb R(\Gamma-s_a(\xi))_+d\xi
- \le d_a(\Gamma-\alpha_a).}
+ \operatorname{Tr}(QD_\Gamma Q)\le\Delta.
  \tag{L-15620.16}
 \]
 
-## 5. Layer-cake sublevel-set form
-
-The phase-space deficit is
+Since a positive operator norm is at most its trace,
 
 \[
  \boxed{
- \int_\mathbb R(\Gamma-s(\xi))_+d\xi
- =\int_{-\infty}^{\Gamma}
- |\{\xi:s(\xi)<u\}|du.}
+ A|_{L^\perp}\succeq(\Gamma-\Delta)I.}
  \tag{L-15620.17}
 \]
 
-Therefore the complete scalar gate can be certified from directed sublevel-set
-measure bounds at levels below `Gamma`. It is not necessary to integrate the
-full depth `G-s`, nor to charge symbol cells whose deficit is too shallow to
-cross the target floor.
-
-## 6. Relation to the requested full-trace inequality
-
-The originally requested condition
+Thus the correct unweighted symbol target is not `Delta<=0`, but
 
 \[
- \operatorname{Tr}D_G-d(G-\alpha)\le G-\Gamma
+ \boxed{0<\Delta_j\longrightarrow0.}
  \tag{L-15620.18}
 \]
 
-also proves the floor, by `L-15612`, but is not sharp. It charges all shallow
-eigenvalues of `D_G` and retains a spurious dependence on `G`.
-
-Equations (L-15620.14)--(L-15620.16) are a strict structural improvement:
-
-- the operator is clipped at the exact crossing threshold;
-- the symbol is evaluated directly at `Gamma`;
-- the auxiliary construction level cancels;
-- modern bad-set/plunge estimates enter through the layer-cake measure;
-- the finite example of `L-15618` passes (L-15620.14) while failing the full
-  trace condition by an arbitrarily large amount.
-
-## 7. Exact finite and directed interface
-
-A production certificate needs only:
-
-1. a directed complete lower symbol `s_lower` for the same operator;
-2. a rational target floor `Gamma`;
-3. a directed finite-cell enclosure of
-   \[
-   \int(\Gamma-s_lower)_+;
-   \]
-4. exact packet rank `d`;
-5. a directed packet compression endpoint `alpha<Gamma`;
-6. a rational verification of (L-15620.14).
-
-Every symbol or assembly radius is inserted into `s_lower` before taking the
-positive part. No packet Fourier leverage or principal angle is required.
-
-## 8. Cofinal consequence
-
-If an unbounded support sequence satisfies
+A threshold schedule with
 
 \[
- \frac{|I_j|}{2\pi}
- \int(\Gamma_j-s_j)_+
- \le d_j(\Gamma_j-\alpha_j)
+ t_j<\Gamma_j-\Delta_j
+\]
+
+then supplies the complement moat needed by the inverse-Ritz layer.
+
+## 6. Layer-cake form
+
+The total symbol trace still has the exact layer-cake formula
+
+\[
+ \int(\Gamma-s)_+
+ =\int_{-\infty}^{\Gamma}
+ |\{\xi:s(\xi)<u\}|du.
  \tag{L-15620.19}
 \]
 
-and the near-radical residual rates of `L-15617` or `L-15619`, then exact
-low-index saturation holds at every retained level. The inverse-Ritz lower
-floor of `T-15602` tends to zero, and the existing cofinal lower-envelope theorem
-implies RH.
+It may be used to estimate the positive excess `Delta`, but it can never make
+that excess nonpositive at a finite nontrivial level.
 
-## 9. Proof boundary
+## 7. Correct production interfaces
 
-- The convex trace theorem and clipping identity are exact.
-- The remaining zeta-specific statement is the cofinal directed phase-space
-  inequality (L-15620.19).
-- A midpoint symbol scan or a finite support ladder does not prove it.
-- The theorem removes the unnecessary full-trace burden but does not establish
-  the arithmetic sublevel integral.
-- No proof of RH is claimed.
+A proof-producing continuation should certify one of:
+
+1. the operator-clipped trace (L-15620.13);
+2. the exact leverage trace tail (L-15620.14);
+3. a positive excess `Delta_j` satisfying (L-15620.18);
+4. the finite visible Schur margin of `L-15604/L-15307`.
+
+A cellwise enclosure of the unweighted integral with a claimed nonpositive
+excess must be rejected, because it contradicts (L-15620.11).
+
+## 8. Proof boundary
+
+- The convex Berezin trace inequality remains exact.
+- The old zero-slack symbol-capacity corollary is vacuous and has been retired.
+- No current artifact proves the operator-clipped, leverage-tail, or
+  vanishing-positive-slack condition cofinally for the complete Suzuki symbol.
+- This correction neither proves nor disproves RH.
