@@ -58,7 +58,7 @@ uses it as an educated approximation to the ground eigenfunction. The latter
 is sufficient for its Xi-convergence lemma but not, without another argument,
 for exact global radical membership.
 
-## L-14312
+## L-14314
 
 For three orthonormal supported modes with
 
@@ -85,7 +85,7 @@ away from zero repairs the integral, and Fourier unitarity gives only a
 `2 epsilon` additional leakage charge. This produces a legitimate exact
 `S_0^ev` source.
 
-## L-14313
+## L-14315
 
 For a radical split `r=k+t`, the weighted projective numerator is exactly
 
@@ -105,7 +105,7 @@ This removes any ambiguity about what the numerator measures. It also shows
 precisely why ordinary `L2` leakage is not the final theorem: a named
 source-to-Weil graph/form continuity estimate is still required.
 
-## T-14303
+## T-14304
 
 The Xi-specific target is stronger than necessary. If entire finite functions
 with only real zeros converge on the centered critical strip to
@@ -122,7 +122,7 @@ completion is unnecessary.
 
 ## Exact regression
 
-`X-14307` is a standard-library-only checker. The retained object proves
+`X-14308` is a standard-library-only checker. The retained object proves
 exactly
 
 ```text
