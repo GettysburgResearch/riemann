@@ -38,17 +38,26 @@ the positive rapidly convergent Lerch series
 \tag{T-19801.2}
 \]
 
-Substituting `t=2log N` into Nakamura--Suzuki's formula gives the exact identity
+Substitution of `t=2log N` in Nakamura--Suzuki's explicit screw formula gives
 
 \[
 \boxed{\mathscr S(N)=\Psi(2\log N)=-g_\zeta(2\log N).}
 \tag{T-19801.3}
 \]
 
-No zero ordinate, unverified spectral datum, or infinite prime tail enters one
-finite level.
+Thus one level uses no zero ordinate, no spectral approximation, and no infinite
+prime tail.
 
 ## 2. Exact equivalence
+
+Interpret
+
+\[
+a_N=N^{o(1)}
+\]
+
+to mean that, for every `epsilon>0`, there is a constant `C_epsilon` such that
+`a_N<=C_epsilon N^epsilon` for all sufficiently large `N`.
 
 The following statements are equivalent:
 
@@ -68,40 +77,44 @@ The following statements are equivalent:
 
 ### Proof
 
-Under RH, the exact zero expansion is
+Under RH, the exact zero expansion pairs `gamma` with `-gamma` and gives
 
 \[
 \Psi(t)
  =\sum_{\gamma>0}
  \frac{2m_\gamma(1-\cos\gamma t)}{\gamma^2}
- \ge0,
+ \ge0.
 \tag{T-19801.6}
 \]
 
-and is bounded on the whole real line. Therefore RH implies statements 2--5.
+The series is uniformly bounded because
+`sum_gamma m_gamma/|gamma|^2<infinity`. Hence RH implies 2--5.
 
-Statement 2 implies 3, and statement 3 implies 4. Statement 5 also implies 4.
-By `L-19801`, statement 4 gives, for every `epsilon>0`, a lower envelope
+Clearly 2 implies 3, while 3 and 5 each imply 4. Assume 4. Given any
+`delta>0`, apply (T-19801.4) with exponent `2delta`. Since
+`N=exp(t/2)` at the square samples, `L-19801` extends the sample lower bound to
 
 \[
-\Psi(t)\ge-C_\varepsilon(1+t)^{B_\varepsilon}
- e^{\varepsilon t}
+\Psi(t)\ge-C_\delta(1+t)^{B_\delta}e^{\delta t}
 \tag{T-19801.7}
 \]
 
-on the complete half-line after interpolation between the square samples.
-The one-sign Landau transfer then excludes zeros in
+on the complete half-line. Add a positive polynomial multiple of
+`e^(delta t)` and one compactly supported correction to obtain a nonnegative
+function. Landau's one-sign Laplace theorem, together with
 
 \[
-\Re s>\frac12+\varepsilon.
+\int_0^\infty\Psi(t)e^{izt}dt
+ =-z^{-2}\frac{\xi'}{\xi}(1/2-iz),
 \]
 
-Letting `epsilon` tend to zero and using functional-equation symmetry proves
-RH. Thus 4 implies 1, closing the cycle. QED.
+then excludes zeros in `Re s>1/2+delta`. Since `delta>0` is arbitrary and the
+functional equation reflects zeros about `Re s=1/2`, RH follows. Thus 4 implies
+1. QED.
 
 ## 3. Quantitative zero-free-region version
 
-More generally, if for some `theta>=0`
+More generally, suppose that for some `theta>=0` and every `epsilon>0`,
 
 \[
 (-\mathscr S(N))_+
@@ -109,7 +122,8 @@ More generally, if for some `theta>=0`
 \tag{T-19801.8}
 \]
 
-for every `epsilon>0`, then
+for all sufficiently large `N`. Applying the preceding argument with an
+arbitrarily small additional exponential loss gives
 
 \[
 \boxed{
@@ -119,38 +133,35 @@ for every `epsilon>0`, then
 \tag{T-19801.9}
 \]
 
-Thus the growth exponent of the negative square-cutoff excursions directly
-controls the excluded horizontal displacement of zeta zeros. The RH endpoint is
-`theta=0`.
+Thus the smallest admissible power exponent for the negative square-cutoff
+excursions controls a zero-free half-plane. The RH endpoint is `theta=0`.
 
-## 4. Relationship to the clipped-excess obstruction
+## 4. Exact false-RH contrapositive
 
-`L-15622` shows that one hypothetical off-line zero contributes one complete
+`L-15622` shows that a hypothetical off-line zero contributes one complete
 clipped-excess quantum to every sufficiently large localized low-index model.
-The present theorem gives a scalar manifestation of the same obstruction:
-under false RH, (T-19801.4) must fail. Hence there is some `theta>0` and an
-unbounded sequence of square cutoffs on which
+The square-screw criterion gives a scalar version of the same obstruction.
+
+If RH is false, (T-19801.4) fails. Equivalently, there exists
+`epsilon_0>0` such that
 
 \[
 \boxed{
-\mathscr S(N)<-N^{2\theta-o(1)}.}
+\sup_{N\ge N_0}
+ \frac{(-\mathscr S(N))_+}{N^{\epsilon_0}}
+ =\infty
+\quad\text{for every }N_0.}
 \tag{T-19801.10}
 \]
 
-The exact exponent lower bound in (T-19801.10) is asserted only in the
-contrapositive sense supplied by (T-19801.9): if every exponent `theta>0` were
-excluded, RH would follow. No rightmost-zero asymptotic or phase noncancellation
-is assumed.
+This is the precise unconditional contrapositive. It does **not** assert a
+pointwise asymptotic or a fixed-sign leading term: obtaining either would require
+additional phase/noncancellation information about the rightmost off-line zeros.
 
-This scalar route bypasses:
-
-- complete low-packet construction;
-- packet/eigenspace alignment;
-- selected-zero conditioning;
-- Schur correction and clipped traces;
-- unbounded critical-line zero certification.
-
-The cost is concentrated into one explicit cofinal arithmetic statement:
+The scalar route bypasses complete low-packet construction, packet/eigenspace
+alignment, selected-zero conditioning, Schur correction, clipped traces, and an
+unbounded critical-line zero census. Its entire RH content is concentrated into
+one explicit cofinal arithmetic assertion:
 
 \[
 \boxed{
@@ -167,16 +178,16 @@ At a fixed `N`, a directed certificate consists of:
 
 1. the complete duplicate-free prime-power manifest through `N^2`;
 2. outward intervals for `log N`, `log m`, and `sqrt(m)`;
-3. a directed upper endpoint for the finite prime sum;
+3. a directed interval for the complete finite prime sum;
 4. directed intervals for `psi(1/4)`, `log pi`, and `Phi(1,2,1/4)`;
 5. a positive-term tail enclosure for (T-19801.2);
-6. one rational lower endpoint for `mathscr S(N)`.
+6. one rational interval enclosing `mathscr S(N)`.
 
-A strict nonnegative lower endpoint certifies that level. A strict negative upper
+A nonnegative lower endpoint certifies that level. A strictly negative upper
 endpoint would refute RH immediately by (T-19801.6). A finite collection of
-nonnegative levels does not prove the eventual statement.
+nonnegative levels, however long, does not prove the eventual assertion.
 
-The constants can be simplified by
+The constants may be simplified by
 
 \[
 \psi(1/4)=-\gamma-\frac\pi2-3\log2,
@@ -185,41 +196,43 @@ The constants can be simplified by
 \tag{T-19801.12}
 \]
 
-where `G` is Catalan's constant, but a production certificate may evaluate the
-primary special functions directly.
+where `G` is Catalan's constant.
 
 ## 6. Why the square scale is critical
 
-The unconditional derivative size is
+The unconditional explicit-formula derivative bound is
 
 \[
 |\Psi'(t)|\ll(1+t)e^{t/2}.
 \]
 
-At `t=2log N`, adjacent square-support samples are separated by
+At `t=2log N`, adjacent samples are separated by
 
 \[
 2\log(1+1/N)\asymp N^{-1}=e^{-t/2}.
 \]
 
-The two exponents cancel exactly, leaving only polynomial interpolation loss.
-Sampling at `t=Alog N` with `A>2` leaves an exponential gap and yields only the
-zero-free half-plane
+The exponents cancel, leaving only a polynomial interpolation loss. More
+generally, sampling at `t=Alog N` has residual interpolation exponent
 
 \[
-\Re s>1-1/A.
+\sigma_A=\max(0,1/2-1/A).
 \]
 
-Thus the square cutoff is the sparsest elementary polynomial schedule at which
-the Landau transfer reaches the critical line using only the unconditional
-prime-formula derivative bound.
+For `A>2`, eventual sample nonnegativity yields only the zero-free half-plane
+
+\[
+\Re s>\frac12+\sigma_A=1-\frac1A.
+\]
+
+Thus `A=2` is the sparsest elementary polynomial cutoff schedule for which the
+unconditional derivative budget reaches the critical line.
 
 ## 7. Honest frontier
 
-The transfer theorem is complete, but (T-19801.11) and (T-19801.4) are not
-proved. Existing PNT/zero-free-region estimates give only a much larger lower
-envelope of roughly square-root exponential scale and do not establish the
-subpolynomial bound.
+The transfer theorem is complete from the imported screw/Laplace identity and
+Landau's theorem. The arithmetic estimates (T-19801.11) and (T-19801.4) are not
+proved. Standard phase-blind prime-number-theorem bounds remain far too coarse
+to establish them.
 
-Accordingly, this theorem is a new scalar proposal for RH, not a completed proof
-of RH.
+Accordingly, this is a new scalar proposal for RH, not a completed proof of RH.
