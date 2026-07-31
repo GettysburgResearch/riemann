@@ -1,3 +1,10 @@
+"""
+[!] WARNING (added after PR #173 review): the inertia routine in this file uses 1x1
+    diagonal pivots only and returns (0,0,2) on [[0,1],[1,0]], whose true inertia is
+    (1,1,0) -- it cannot see a hyperbolic negative direction.  Use inertia_correct.py
+    instead.  Re-running this file's published tables with the correct routine
+    reproduced them identically, but do not reuse the routine below.
+"""
 """Is the CvS finite gate a POLE DETECTOR for the source?
 
 Two exact structural identities, then a synthetic control.

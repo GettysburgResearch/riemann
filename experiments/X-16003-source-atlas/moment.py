@@ -1,3 +1,10 @@
+"""
+[!] WARNING (added after PR #173 review): the inertia routine in this file uses 1x1
+    diagonal pivots only and returns (0,0,2) on [[0,1],[1,0]], whose true inertia is
+    (1,1,0) -- it cannot see a hyperbolic negative direction.  Use inertia_correct.py
+    instead.  Re-running this file's published tables with the correct routine
+    reproduced them identically, but do not reuse the routine below.
+"""
 """What does the finite Weil form think the zeros are?  The moment test.
 
 L-16006(b): Q induces an inner product on P_{2N} through Phi: x -> P_x.  L-16006(c): if the

@@ -1,3 +1,10 @@
+"""
+[!] WARNING (added after PR #173 review): the inertia routine in this file uses 1x1
+    diagonal pivots only and returns (0,0,2) on [[0,1],[1,0]], whose true inertia is
+    (1,1,0) -- it cannot see a hyperbolic negative direction.  Use inertia_correct.py
+    instead.  Re-running this file's published tables with the correct routine
+    reproduced them identically, but do not reuse the routine below.
+"""
 """Combining O-16007 (residue law) with O-16008 (detectability).
 
 O-16007: the finite Weil form weights the zero gamma by a(gamma) = (log c/pi^2) sin^2(gamma log c/2),

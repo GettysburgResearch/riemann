@@ -1,3 +1,10 @@
+"""
+[!] WARNING (added after PR #173 review): the inertia routine in this file uses 1x1
+    diagonal pivots only and returns (0,0,2) on [[0,1],[1,0]], whose true inertia is
+    (1,1,0) -- it cannot see a hyperbolic negative direction.  Use inertia_correct.py
+    instead.  Re-running this file's published tables with the correct routine
+    reproduced them identically, but do not reuse the routine below.
+"""
 """Independent check of the caution raised against L-16004(ii).
 
 L-16004(ii) is stated for EXACTLY 2N poles in dimension 2N+1, where a rank count forces a
