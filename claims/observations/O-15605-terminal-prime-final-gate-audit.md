@@ -32,8 +32,9 @@ packet-dimension-uniform local-Weyl floor
 
 under one graph bound. Sharp pre-plunge and plunge-region estimates are useful
 for certifying that graph condition and packet rank. Recent one-dimensional
-localization results give logarithmic/near-logarithmic plunge counts rather than
-bulk-size remainders. citeturn453794academia0turn453794academia2
+localization results give logarithmic or near-logarithmic plunge counts rather
+than bulk-size remainders; see Kulikov, arXiv:2603.07407, and Azimifard,
+arXiv:2607.23016.
 
 The opposite-boundary coupling is qualitatively different. `L-15610` shows that
 it is exactly the centered terminal-prime Hankel matrix `E_a` after the zeta-pole
@@ -116,11 +117,11 @@ The following are worth parallel execution and are **not** theorem claims.
 
 ## Literature boundary
 
-Suzuki's current theorem provides unconditional finite-interval operators and a
+Suzuki's arXiv:2606.09096 provides unconditional finite-interval operators and a
 conjectural limiting spectral realization, not the missing cofinal lower floor.
-citeturn453794academia1 The newest localization results sharply control
-pre-plunge eigenvalues and plunge counts, but they do not bound the centered
-terminal-prime arithmetic matrix. citeturn453794academia0turn453794academia2
+The newest localization results, including arXiv:2603.07407 and
+arXiv:2607.23016, sharply control pre-plunge eigenvalues and plunge counts, but
+they do not bound the centered terminal-prime arithmetic matrix.
 
 ## Status
 
