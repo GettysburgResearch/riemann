@@ -1,0 +1,25 @@
+{
+  "classification": "CERTIFIED_EXACT_FINITE_PROLATE_ALGEBRA",
+  "proof_boundary": "Exact rational finite algebra only. The checker does not evaluate prolate eigenfunctions, Fuchs asymptotics, the localized Weil form, the Hardy metric, or the Riemann zeta function.",
+  "proof_object": {
+    "A2": "25",
+    "centered_ldl_pivots": [
+      "169/1000",
+      "3/2"
+    ],
+    "centered_mode_next_floor": "6197/12500",
+    "final_rational_coefficient_times_sqrt3_over_pi4": "105/15488",
+    "fuchs_4_to_8_rational_coefficient": "105/4096",
+    "fuchs_lambda_power": -8,
+    "fuchs_pi_power": -4,
+    "raw_ldl_pivots": [
+      "169/1000",
+      "3/2"
+    ],
+    "raw_mode_next_floor": "1/2",
+    "residual_squared": "729/78125000",
+    "target_rayleigh": "53/12500"
+  },
+  "proof_object_sha256": "c340fccc1c9c746369695831e4cd62574ff7cdb3c985c0695130773400b93d9b",
+  "schema": "riemann.x15104-constrained-prolate-mode8.v1"
+}
