@@ -1,0 +1,28 @@
+{
+  "ambient_dimension": 4,
+  "angle_squared_upper": {"denominator": 50, "numerator": 3},
+  "count_lower": 2,
+  "count_upper": 2,
+  "metric_ldl_pivots": [
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1}
+  ],
+  "proof_object_sha256": "997492a615abfd5bd5a4ada88a9513b649d3126cfe2b38833f12b488de10b8e2",
+  "radical_evaluation_upper": {"denominator": 100, "numerator": 3},
+  "radical_moat_ldl_pivots": [
+    {"denominator": 50, "numerator": 1},
+    {"denominator": 100, "numerator": 1}
+  ],
+  "radical_rank": 2,
+  "schema": "riemann.x18501-sacrificial-count.v1",
+  "status": "CERTIFIED_SHARP_COUNT_AND_ANGLE",
+  "threshold": {"denominator": 2, "numerator": 1},
+  "witness_codimension": 2,
+  "witness_floor_ldl_pivots": [
+    {"denominator": 2, "numerator": 3},
+    {"denominator": 75, "numerator": 187}
+  ],
+  "witness_rank": 2
+}
