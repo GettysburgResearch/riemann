@@ -1,0 +1,38 @@
+{
+  "schema": "riemann.one-sided-selected-residual.v1",
+  "p": [
+    {"numerator": 1, "denominator": 3},
+    {"numerator": 1, "denominator": 3},
+    {"numerator": 1, "denominator": 3}
+  ],
+  "metric": [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1]
+  ],
+  "selected_pinned": [
+    [2, -1, -1],
+    [-1, 2, -1],
+    [-1, -1, 2]
+  ],
+  "residual_pinned": [
+    [
+      {"numerator": 299, "denominator": 6},
+      {"numerator": -301, "denominator": 6},
+      {"numerator": 1, "denominator": 3}
+    ],
+    [
+      {"numerator": -301, "denominator": 6},
+      {"numerator": 299, "denominator": 6},
+      {"numerator": 1, "denominator": 3}
+    ],
+    [
+      {"numerator": 1, "denominator": 3},
+      {"numerator": 1, "denominator": 3},
+      {"numerator": -2, "denominator": 3}
+    ]
+  ],
+  "selected_floor": {"numerator": 5, "denominator": 2},
+  "residual_negative_radius": {"numerator": 3, "denominator": 2},
+  "absolute_witness": [1, -1, 0]
+}
