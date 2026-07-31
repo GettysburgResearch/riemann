@@ -35,6 +35,8 @@ It deliberately does **not** re-dump the C1–C41 JSON archive.
 | D3 | `comp3_finite_RR/` | Solve `R_N=∂_rR_N=0` for N=4…20 |
 | D4 | `comp4_N3_law/` | Check `N³(α_∞-α_N)` vs predicted constant |
 | D5 | `comp5_root_margin_recon/` | Float L-15124-style root displacement / soft-mode localization |
+| D6 | `comp6_largeN_N3/` | Push α_N to N=24,30,40 for the N⁻³ constant |
+| D7 | `comp7_arb_continuum_box/` | Arb `acb.integral` residuals + Jacobian excludes 0 |
 
 ## Proof boundary
 

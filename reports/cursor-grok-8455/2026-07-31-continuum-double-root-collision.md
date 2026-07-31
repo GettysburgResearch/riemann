@@ -71,6 +71,29 @@ Float root–gamma pairing only. Not a directed ledger. Soft eigenvalue approach
 0 as α↓α_N while a real root sits near `r≈2.18`. Full `δ_k`, `B_kl`, `E_k`
 margins remain open (need certified Xi zeros + transform enclosures).
 
+### Larger N (D6)
+
+| N | N³(α_∞−α_N) | ratio / C_pred |
+|---|---|---|
+| 24 | 0.175911 | 0.9426 |
+| 30 | 0.177902 | 0.9533 |
+| 40 | 0.179968 | 0.9643 |
+
+Monotone approach toward `C≈0.18662` continues.
+
+### Arb Jacobian (D7)
+
+Using `python-flint` `acb.integral` on truncated Φ (`nmax≤20`) at the discovery
+root:
+
+- point residuals `|G|,|G_r| ≲ 10^{-32}` (rad `≲ 10^{-56}`);
+- Jacobian determinant
+  `det ≈ -0.005055263264366649…` with Arb radius `≲ 10^{-45}`,
+  **excludes 0**.
+
+Caveat: Φ-tail bound for `n>nmax` is not yet written into the enclosure; this is
+a directed probe, not a finished uniqueness certificate.
+
 ## Corrections absorbed from the review
 
 - Parity split and `Qp=0` are exact, not discoveries.
