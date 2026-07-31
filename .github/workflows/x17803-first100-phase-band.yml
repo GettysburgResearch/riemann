@@ -1,0 +1,213 @@
+name: X17803 first-100-zero phase-band closure
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/gpt56-pro-09-g/178-fourier-window-enclosure
+    paths:
+      - '.github/workflows/x17803-first100-phase-band.yml'
+      - 'experiments/X-17801-fourier-window-enclosure/**'
+      - 'experiments/X-15605-phase-aware-prime-bound/**'
+  pull_request:
+    paths:
+      - '.github/workflows/x17803-first100-phase-band.yml'
+      - 'experiments/X-17801-fourier-window-enclosure/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: x17803-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install rigorous arithmetic backends
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y libflint-dev libmpfr-dev libgmp-dev pkg-config time
+          python -m pip install --upgrade pip
+          python -m pip install python-flint==0.9.0 mpmath
+          pkg-config --modversion flint
+          python - <<'PY'
+          import flint
+          from flint import arb, acb
+          print('python-flint', flint.__version__)
+          z=acb(1)
+          z.add_error(arb('1e-30'))
+          print('acb.add_error smoke', z)
+          print('arb midpoint-radius smoke', arb(arb(1), arb('0.1')))
+          PY
+
+      - name: Import reviewed count and sign-chain producers
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/signchain experiments/X-17801-fourier-window-enclosure/results/phase-band
+          git fetch --no-tags --depth=1 origin agent/gpt56-08/93-sign-chain-zero-bins
+          sign_sha=$(git rev-parse FETCH_HEAD)
+          for file in verify_sign_chain.py refine_hardy_z_bins.py build_sign_chain_certificate.py; do
+            git show "$sign_sha:experiments/X-9304-sign-chain-zero-bins/$file" >"/tmp/signchain/$file"
+          done
+          git fetch --no-tags --depth=1 origin claude/riemann-counterexample-pipeline-io8s2k
+          count_sha=$(git rev-parse FETCH_HEAD)
+          git show "$count_sha:experiments/X-5604-exact-slab-discrepancy/slab_discrepancy.py" >/tmp/slab_discrepancy.py
+          out=experiments/X-17801-fourier-window-enclosure/results/phase-band
+          printf '%s\n' "$sign_sha" >"$out/sign-chain-source-commit.txt"
+          printf '%s\n' "$count_sha" >"$out/count-source-commit.txt"
+          sha256sum /tmp/signchain/*.py /tmp/slab_discrepancy.py >"$out/imported-sources.sha256"
+
+      - name: Build a guide for the first 100 zeros
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import mpmath as mp
+          mp.mp.dps=80
+          path=Path('experiments/X-17801-fourier-window-enclosure/results/phase-band/guide-first100.txt')
+          path.write_text('\n'.join(mp.nstr(mp.im(mp.zetazero(j)),75) for j in range(1,101))+'\n')
+          print(path.read_text().splitlines()[0])
+          print(path.read_text().splitlines()[-1])
+          PY
+
+      - name: Prove the exact total count 100 in the slab
+        run: |
+          set -euo pipefail
+          out=experiments/X-17801-fourier-window-enclosure/results/phase-band
+          for precision in 192 256; do
+            /usr/bin/time -v python /tmp/slab_discrepancy.py \
+              --a 10 --b 237 --target 20 --prec "$precision" \
+              --out "$out/count-p${precision}.json" \
+              2>"$out/count-p${precision}.time.txt"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('experiments/X-17801-fourier-window-enclosure/results/phase-band')
+          rows=[json.loads((root/f'count-p{p}.json').read_text()) for p in (192,256)]
+          for row in rows:
+              assert row['schema']=='riemann.x5604-slab-discrepancy.v1'
+              assert str(row['classification']).startswith('RIGOROUS')
+              assert row['N_total_in_slab']==100
+              assert row['N_a']['integer']==0
+              assert row['N_b']['integer']==100
+              assert row['target']['strictly_inside'] is True
+          assert rows[0]['N_a']['integer']==rows[1]['N_a']['integer']
+          assert rows[0]['N_b']['integer']==rows[1]['N_b']['integer']
+          (root/'count-comparison.json').write_text(json.dumps({
+              'schema':'riemann.x17803-count-comparison.v1',
+              'precisions':[192,256], 'N_10':0, 'N_237':100,
+              'verdict':'EXACT_COUNT_100_NESTED_AND_REPRODUCED'
+          },indent=2,sort_keys=True)+'\n')
+          PY
+
+      - name: Build and refine the saturated 100-zero Hardy-Z chain
+        run: |
+          set -euo pipefail
+          out=experiments/X-17801-fourier-window-enclosure/results/phase-band
+          python /tmp/signchain/build_sign_chain_certificate.py \
+            --guide "$out/guide-first100.txt" \
+            --total-count-source "$out/count-p256.json" \
+            --slab-lower 10 --slab-upper 237 --total-count 100 --target 20 \
+            --bits 48 --workers 4 --precision-ladder 128,192,256,384,512 \
+            --output "$out/chain-initial.json"
+          python /tmp/signchain/verify_sign_chain.py "$out/chain-initial.json" \
+            --output "$out/chain-initial-verification.json"
+          /usr/bin/time -v python /tmp/signchain/refine_hardy_z_bins.py \
+            "$out/chain-initial.json" --output "$out/chain-refined.json" \
+            --bins all --rounds 60 --workers 4 \
+            --precision-ladder 128,192,256,384,512 \
+            2>"$out/chain-refinement.time.txt"
+          python /tmp/signchain/verify_sign_chain.py "$out/chain-refined.json" \
+            --output "$out/chain-refined-verification.json"
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          from pathlib import Path
+          root=Path('experiments/X-17801-fourier-window-enclosure/results/phase-band')
+          data=json.loads((root/'chain-refined-verification.json').read_text())
+          bins=data['bins']
+          def f(x): return Fraction(x['numerator'],x['denominator'])
+          assert len(bins)==100
+          assert all(r['exact_zero_count']==1 and r['simple'] is True for r in bins)
+          assert all(f(a['upper'])<f(b['lower']) for a,b in zip(bins,bins[1:]))
+          widths=[f(r['width']) for r in bins]
+          summary={'schema':'riemann.x17803-zero-chain-summary.v1','zero_count':100,
+                   'maximum_width':str(max(widths)),'minimum_width':str(min(widths)),
+                   'verdict':'100_SIMPLE_ZEROS_IN_PAIRWISE_DISJOINT_DIRECTED_BINS'}
+          (root/'zero-chain-summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Independently reproduce the directed prime interval
+        run: |
+          set -euo pipefail
+          root=experiments/X-17801-fourier-window-enclosure
+          out="$root/results/phase-band"
+          gzip -dc "$root/replay_mpfr.c.gz" >/tmp/replay_mpfr.c
+          cc -O3 -std=gnu11 /tmp/replay_mpfr.c -I"$root" -lmpfr -lgmp -lm -o /tmp/replay_mpfr
+          /usr/bin/time -v /tmp/replay_mpfr 20 4096 \
+            >"$out/prime-mpfr-grid20.txt" \
+            2>"$out/prime-mpfr-grid20.time.txt"
+          grep '^pow=20 K=4096 terms=64542 ' "$out/prime-mpfr-grid20.txt"
+
+      - name: Produce the directed zero phase and closed tails
+        run: |
+          set -euo pipefail
+          root=experiments/X-17801-fourier-window-enclosure
+          out="$root/results/phase-band"
+          python "$root/produce_phase_band.py" \
+            --chain-verification "$out/chain-refined-verification.json" \
+            --prime-output "$out/prime-mpfr-grid20.txt" \
+            --precision 512 --trivial-count 100 \
+            --output "$out/x15605-certificate.json" \
+            >"$out/phase-band-producer.json"
+          python experiments/X-15605-phase-aware-prime-bound/verify.py \
+            "$out/x15605-certificate.json" \
+            --output "$out/final-verdict.json"
+          cat "$out/final-verdict.json"
+
+      - name: Summarize and hash the complete proof artifact
+        if: always()
+        run: |
+          set -euo pipefail
+          out=experiments/X-17801-fourier-window-enclosure/results/phase-band
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('experiments/X-17801-fourier-window-enclosure/results/phase-band')
+          final=root/'final-verdict.json'
+          summary={'schema':'riemann.x17803-first100-phase-band-summary.v1'}
+          if final.exists():
+              data=json.loads(final.read_text())
+              summary.update({'verdict':data['verdict'],
+                              'residual_interval':data['residual_interval'],
+                              'total_budget':data['total_budget'],
+                              'proof_object_sha256':data['exact_proof_object_sha256']})
+          else:
+              summary['verdict']='INCOMPLETE_WORKFLOW'
+          (root/'summary.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+          find "$out" -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 sha256sum >"$out/SHA256SUMS"
+
+      - name: Upload proof and diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x17803-first100-phase-band
+          path: experiments/X-17801-fourier-window-enclosure/results/phase-band/
+          retention-days: 30
+          if-no-files-found: warn

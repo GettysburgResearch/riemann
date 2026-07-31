@@ -1,0 +1,37 @@
+{
+  "schema": "riemann.x17801-five-notch-fourier-enclosure.v1",
+  "classification": "DIRECTED_ENGINEERING_PROTOTYPE",
+  "translation": {"numerator": "8578244975439", "denominator": "549755813888"},
+  "period": 8,
+  "coefficient_cutoff": 4096,
+  "explicit_dyadic_factors": 64,
+  "fourier_tail_J": 10,
+  "value_tail_upper": "1.4e-29",
+  "fourth_derivative_tail_upper": "1.5e-15",
+  "design_zero_ordinates": [
+    "14.13472514173469379045725198356247",
+    "21.02203963877155499262847959389690",
+    "25.01085758014568876321379099256282",
+    "30.42487612585951321031189753058409",
+    "32.93506158773918969066236896407490"
+  ],
+  "old_linear_midpoint": "4.183986431348427e-9",
+  "runs": [
+    {
+      "grid_power": 18,
+      "prime_power_terms": 64542,
+      "prime_lower": "6.26964301711486859115304809186607728148054619e-11",
+      "prime_center": "6.27078078991307589052724096303821426816293149e-11",
+      "prime_upper": "6.27191856271128318990143383421035125484531678e-11"
+    },
+    {
+      "grid_power": 20,
+      "prime_power_terms": 64542,
+      "prime_lower": "6.27077541529682575249213500067695282659709771e-11",
+      "prime_center": "6.27077985972443532067071546888234409804659679e-11",
+      "prime_upper": "6.27078430415204488884929593708773536949609587e-11"
+    }
+  ],
+  "ordinary_zero_plus_trivial_model": "6.2707798614762569352228674106992127104860e-11",
+  "proof_boundary": "The analytic Fourier/tail/interpolation theorem is exact. The retained prime interval uses a custom binary128 complex-disc FFT and is pending independent directed-backend audit. The zero-side model is ordinary high precision."
+}
