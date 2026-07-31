@@ -1,0 +1,719 @@
+{
+  "capacity_toy": [
+    {
+      "D_le_C": true,
+      "count_D": 2,
+      "gap_C_minus_D": 0,
+      "n": 8,
+      "packet_cap_C": 2,
+      "t": -0.2
+    },
+    {
+      "D_le_C": true,
+      "count_D": 2,
+      "gap_C_minus_D": 0,
+      "n": 8,
+      "packet_cap_C": 2,
+      "t": 0.0
+    },
+    {
+      "D_le_C": true,
+      "count_D": 2,
+      "gap_C_minus_D": 0,
+      "n": 8,
+      "packet_cap_C": 2,
+      "t": 0.2
+    },
+    {
+      "D_le_C": true,
+      "count_D": 2,
+      "gap_C_minus_D": 0,
+      "n": 8,
+      "packet_cap_C": 2,
+      "t": 0.5
+    },
+    {
+      "D_le_C": true,
+      "count_D": 2,
+      "gap_C_minus_D": 0,
+      "n": 16,
+      "packet_cap_C": 2,
+      "t": -0.2
+    },
+    {
+      "D_le_C": false,
+      "count_D": 4,
+      "gap_C_minus_D": -2,
+      "n": 16,
+      "packet_cap_C": 2,
+      "t": 0.0
+    },
+    {
+      "D_le_C": false,
+      "count_D": 4,
+      "gap_C_minus_D": -2,
+      "n": 16,
+      "packet_cap_C": 2,
+      "t": 0.2
+    },
+    {
+      "D_le_C": false,
+      "count_D": 4,
+      "gap_C_minus_D": -2,
+      "n": 16,
+      "packet_cap_C": 2,
+      "t": 0.5
+    },
+    {
+      "D_le_C": true,
+      "count_D": 6,
+      "gap_C_minus_D": 0,
+      "n": 32,
+      "packet_cap_C": 6,
+      "t": -0.2
+    },
+    {
+      "D_le_C": false,
+      "count_D": 8,
+      "gap_C_minus_D": -2,
+      "n": 32,
+      "packet_cap_C": 6,
+      "t": 0.0
+    },
+    {
+      "D_le_C": false,
+      "count_D": 8,
+      "gap_C_minus_D": -2,
+      "n": 32,
+      "packet_cap_C": 6,
+      "t": 0.2
+    },
+    {
+      "D_le_C": false,
+      "count_D": 10,
+      "gap_C_minus_D": -4,
+      "n": 32,
+      "packet_cap_C": 6,
+      "t": 0.5
+    }
+  ],
+  "content_sha256": "4b3e8d6d45b135cee1d942d4c687dc76da626331b2ac2f798eee1c46966a13b1",
+  "disclaimer": "Synthetic blocks only. Random cross-terms are not Weil data. Capacity toy uses a fake bathtub spectrum. Useful as a margin map, not a theorem.",
+  "exact_inertia_examples": [
+    {
+      "inertia": [
+        2,
+        0,
+        1
+      ],
+      "q": "1"
+    },
+    {
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "q": "2"
+    },
+    {
+      "inertia": [
+        3,
+        0,
+        0
+      ],
+      "q": "1/2"
+    },
+    {
+      "inertia": [
+        3,
+        0,
+        0
+      ],
+      "q": "-1/3"
+    }
+  ],
+  "pass_counts": {
+    "both": 5,
+    "residual_nonneg": 13,
+    "total": 27,
+    "visible_nonneg": 15
+  },
+  "residual_visible_corr": -0.4119948365493799,
+  "schema": "riemann.x8455.comp4.v1",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "In production packets, does increasing h (complement floor) ever hurt residual_min more than it helps visible_min?",
+    "Is there an exact identity linking residual_min + visible_min to a single Schur complement of H?",
+    "Can the fake D<=C bathtub be replaced by Suzuki-symbol counts on one CCM matrix?"
+  ],
+  "three_block_family": [
+    {
+      "KR_eigs": [
+        0.049090676100132506,
+        0.22854783840935122
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.0,
+      "h": 0.2,
+      "residual_eigs": [
+        -0.07091617507204988,
+        0.19327766056256612
+      ],
+      "residual_min": -0.07091617507204988,
+      "visible_eigs": [
+        0.2216121114503249,
+        0.6229075294497353
+      ],
+      "visible_min": 0.2216121114503249
+    },
+    {
+      "KR_eigs": [
+        0.07462065028837778,
+        0.1069127558157017
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.0,
+      "h": 1.0,
+      "residual_eigs": [
+        0.013152758968224269,
+        0.20531383492769628
+      ],
+      "residual_min": 0.013152758968224269,
+      "visible_eigs": [
+        0.6231827560104649,
+        0.8937667343195832
+      ],
+      "visible_min": 0.6231827560104649
+    },
+    {
+      "KR_eigs": [
+        0.11568934458199179,
+        0.7384391958305687
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.0,
+      "h": 5.0,
+      "residual_eigs": [
+        -0.46898262901248977,
+        0.014854088599929233
+      ],
+      "residual_min": -0.46898262901248977,
+      "visible_eigs": [
+        0.6424510343832485,
+        0.9394883136546514
+      ],
+      "visible_min": 0.6424510343832485
+    },
+    {
+      "KR_eigs": [
+        0.025163070927542858,
+        0.8430728066089905
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.2,
+      "e": 0.0,
+      "h": 0.2,
+      "residual_eigs": [
+        -0.5436981432284704,
+        0.0754622656919371
+      ],
+      "residual_min": -0.5436981432284704,
+      "visible_eigs": [
+        0.11285125061040746,
+        0.4589279776300107
+      ],
+      "visible_min": 0.11285125061040746
+    },
+    {
+      "KR_eigs": [
+        0.016778632222791526,
+        0.34809377124370966
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": false,
+      "beta": 0.2,
+      "e": 0.0,
+      "h": 1.0,
+      "residual_eigs": [
+        -0.24663685464751717,
+        0.281764451181016
+      ],
+      "residual_min": -0.24663685464751717,
+      "visible_eigs": [
+        -0.0006836318968076599,
+        0.7119107866497287
+      ],
+      "visible_min": -0.0006836318968076599
+    },
+    {
+      "KR_eigs": [
+        0.03807779732924944,
+        0.4945577787713886
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.2,
+      "e": 0.0,
+      "h": 5.0,
+      "residual_eigs": [
+        -0.3927426648747677,
+        0.2601070887741296
+      ],
+      "residual_min": -0.3927426648747677,
+      "visible_eigs": [
+        0.4447955059842063,
+        0.7889980741838004
+      ],
+      "visible_min": 0.4447955059842063
+    },
+    {
+      "KR_eigs": [
+        0.03437157160104133,
+        0.19001224840847253
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.0,
+      "h": 0.2,
+      "residual_eigs": [
+        -0.02725019612221988,
+        0.20286637611270605
+      ],
+      "residual_min": -0.02725019612221988,
+      "visible_eigs": [
+        -1.2703204522988838,
+        -0.347925086346455
+      ],
+      "visible_min": -1.2703204522988838
+    },
+    {
+      "KR_eigs": [
+        0.002865901103800547,
+        0.03597552884496223
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.0,
+      "h": 1.0,
+      "residual_eigs": [
+        0.06906563495487318,
+        0.292092935096364
+      ],
+      "residual_min": 0.06906563495487318,
+      "visible_eigs": [
+        -0.4927882963204119,
+        -0.11446581484305277
+      ],
+      "visible_min": -0.4927882963204119
+    },
+    {
+      "KR_eigs": [
+        0.0008278582890773479,
+        0.009405170514582057
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.0,
+      "h": 5.0,
+      "residual_eigs": [
+        0.09081541891235104,
+        0.29895155228398956
+      ],
+      "residual_min": 0.09081541891235104,
+      "visible_eigs": [
+        -0.32913260640287645,
+        -0.01661058173785234
+      ],
+      "visible_min": -0.32913260640287645
+    },
+    {
+      "KR_eigs": [
+        0.027383912977599956,
+        0.40026016792512376
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.05,
+      "h": 0.2,
+      "residual_eigs": [
+        -0.13175394128726758,
+        0.20410986038454393
+      ],
+      "residual_min": -0.13175394128726758,
+      "visible_eigs": [
+        0.08597631141927976,
+        0.5615282142828435
+      ],
+      "visible_min": 0.08597631141927976
+    },
+    {
+      "KR_eigs": [
+        0.010010033717796928,
+        0.3105060743234239
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.05,
+      "h": 1.0,
+      "residual_eigs": [
+        -0.018039016907047963,
+        0.19752290886582713
+      ],
+      "residual_min": -0.018039016907047963,
+      "visible_eigs": [
+        0.4936189561325479,
+        0.8059869750875372
+      ],
+      "visible_min": 0.4936189561325479
+    },
+    {
+      "KR_eigs": [
+        0.026215284033927075,
+        0.8894635432251214
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.05,
+      "h": 5.0,
+      "residual_eigs": [
+        -0.7323845044184536,
+        0.31670567715940506
+      ],
+      "residual_min": -0.7323845044184536,
+      "visible_eigs": [
+        0.6342737318277775,
+        0.9459541396289527
+      ],
+      "visible_min": 0.6342737318277775
+    },
+    {
+      "KR_eigs": [
+        0.0933106741553205,
+        0.463159034426432
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": false,
+      "beta": 0.2,
+      "e": 0.05,
+      "h": 0.2,
+      "residual_eigs": [
+        -0.1131837538305017,
+        0.05671404524874919
+      ],
+      "residual_min": -0.1131837538305017,
+      "visible_eigs": [
+        -0.5233000632070883,
+        0.14029238884238404
+      ],
+      "visible_min": -0.5233000632070883
+    },
+    {
+      "KR_eigs": [
+        0.011302382085620741,
+        0.2897897562563738
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.2,
+      "e": 0.05,
+      "h": 1.0,
+      "residual_eigs": [
+        -0.13978491995635192,
+        0.3386927816143574
+      ],
+      "residual_min": -0.13978491995635192,
+      "visible_eigs": [
+        0.23696222029216713,
+        0.709657376418561
+      ],
+      "visible_min": 0.23696222029216713
+    },
+    {
+      "KR_eigs": [
+        0.01984066007548167,
+        0.07672841141123157
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": true,
+      "beta": 0.2,
+      "e": 0.05,
+      "h": 5.0,
+      "residual_eigs": [
+        0.13012970794138878,
+        0.273301220571898
+      ],
+      "residual_min": 0.13012970794138878,
+      "visible_eigs": [
+        0.48254592374061134,
+        0.7451232870634662
+      ],
+      "visible_min": 0.48254592374061134
+    },
+    {
+      "KR_eigs": [
+        0.0142430459242705,
+        0.14634888507638055
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.05,
+      "h": 0.2,
+      "residual_eigs": [
+        0.020517742732690095,
+        0.3188903262666588
+      ],
+      "residual_min": 0.020517742732690095,
+      "visible_eigs": [
+        -0.7307869200533936,
+        -0.05176878139275105
+      ],
+      "visible_min": -0.7307869200533936
+    },
+    {
+      "KR_eigs": [
+        0.014162643293351705,
+        0.05161617351871998
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.05,
+      "h": 1.0,
+      "residual_eigs": [
+        0.13272271737335403,
+        0.3014984658145743
+      ],
+      "residual_min": 0.13272271737335403,
+      "visible_eigs": [
+        -0.4142451568271945,
+        -0.07008462025593358
+      ],
+      "visible_min": -0.4142451568271945
+    },
+    {
+      "KR_eigs": [
+        0.0015642827676257453,
+        0.02732493237016803
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.05,
+      "h": 5.0,
+      "residual_eigs": [
+        0.12820495747657135,
+        0.3429058273856349
+      ],
+      "residual_min": 0.12820495747657135,
+      "visible_eigs": [
+        -0.3187374268057449,
+        -0.01026387007207777
+      ],
+      "visible_min": -0.3187374268057449
+    },
+    {
+      "KR_eigs": [
+        0.0288596852686279,
+        0.2292864823455072
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.2,
+      "h": 0.2,
+      "residual_eigs": [
+        0.13974524239280925,
+        0.40210858999305576
+      ],
+      "residual_min": 0.13974524239280925,
+      "visible_eigs": [
+        0.5136379502461857,
+        0.5653146358203504
+      ],
+      "visible_min": 0.5136379502461857
+    },
+    {
+      "KR_eigs": [
+        0.00705837753826249,
+        0.5606251524567019
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.2,
+      "h": 1.0,
+      "residual_eigs": [
+        -0.25995688250964044,
+        0.4922733525146762
+      ],
+      "residual_min": -0.25995688250964044,
+      "visible_eigs": [
+        0.48874220176058875,
+        0.9112468559484939
+      ],
+      "visible_min": 0.48874220176058875
+    },
+    {
+      "KR_eigs": [
+        0.08008934360613956,
+        1.1587179224282282
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": true,
+      "beta": 0.05,
+      "e": 0.2,
+      "h": 5.0,
+      "residual_eigs": [
+        -0.8205758219881147,
+        0.3817685559537469
+      ],
+      "residual_min": -0.8205758219881147,
+      "visible_eigs": [
+        0.6142317886208751,
+        0.9079461108902749
+      ],
+      "visible_min": 0.6142317886208751
+    },
+    {
+      "KR_eigs": [
+        0.060581924820605496,
+        0.6148386022012953
+      ],
+      "all_nonneg_residual": false,
+      "all_nonneg_visible": false,
+      "beta": 0.2,
+      "e": 0.2,
+      "h": 0.2,
+      "residual_eigs": [
+        -0.22063441433390174,
+        0.345213887312001
+      ],
+      "residual_min": -0.22063441433390174,
+      "visible_eigs": [
+        -0.8656854584467306,
+        0.3554101780246662
+      ],
+      "visible_min": -0.8656854584467306
+    },
+    {
+      "KR_eigs": [
+        0.01410339623478507,
+        0.07157115052385307
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": true,
+      "beta": 0.2,
+      "e": 0.2,
+      "h": 1.0,
+      "residual_eigs": [
+        0.2287160782592789,
+        0.485609374982083
+      ],
+      "residual_min": 0.2287160782592789,
+      "visible_eigs": [
+        0.30477213224409944,
+        0.7164420319239689
+      ],
+      "visible_min": 0.30477213224409944
+    },
+    {
+      "KR_eigs": [
+        0.00023620915461983888,
+        0.21275717105029568
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": true,
+      "beta": 0.2,
+      "e": 0.2,
+      "h": 5.0,
+      "residual_eigs": [
+        0.16476301927155823,
+        0.4222436005235263
+      ],
+      "residual_min": 0.16476301927155823,
+      "visible_eigs": [
+        0.47202520695822364,
+        0.7500168033038292
+      ],
+      "visible_min": 0.47202520695822364
+    },
+    {
+      "KR_eigs": [
+        0.04952481388538669,
+        0.11700780883409992
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.2,
+      "h": 0.2,
+      "residual_eigs": [
+        0.21824446518878002,
+        0.4152229120917334
+      ],
+      "residual_min": 0.21824446518878002,
+      "visible_eigs": [
+        -0.8458295496906976,
+        -0.10135818606614487
+      ],
+      "visible_min": -0.8458295496906976
+    },
+    {
+      "KR_eigs": [
+        0.0010570194721834947,
+        0.10246044222072206
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.2,
+      "h": 1.0,
+      "residual_eigs": [
+        0.2913138940679151,
+        0.4051686442391794
+      ],
+      "residual_min": 0.2913138940679151,
+      "visible_eigs": [
+        -0.5942461980864744,
+        -0.01511531712348967
+      ],
+      "visible_min": -0.5942461980864744
+    },
+    {
+      "KR_eigs": [
+        0.005888538763911988,
+        0.02911837863708946
+      ],
+      "all_nonneg_residual": true,
+      "all_nonneg_visible": false,
+      "beta": 1.0,
+      "e": 0.2,
+      "h": 5.0,
+      "residual_eigs": [
+        0.2739897846892328,
+        0.4910032979097657
+      ],
+      "residual_min": 0.2739897846892328,
+      "visible_eigs": [
+        -0.3405630572038202,
+        -0.020316011915657333
+      ],
+      "visible_min": -0.3405630572038202
+    }
+  ]
+}
