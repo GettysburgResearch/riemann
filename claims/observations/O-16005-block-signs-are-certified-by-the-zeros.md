@@ -69,9 +69,9 @@ Neither test uses zeta zeros as an input to the matrix (`O-16004`§3), so agreem
 
 The reason is that $1/(\eta^{\mathsf T}Q^{-1}\eta)$ is the *stationary* value of $x^{\mathsf T}Qx$ on $\{\eta^{\mathsf T}x=1\}$, and it is a minimum only when $Q\succ0$; for indefinite $Q$ the constrained infimum is $-\infty$ and the stationary point is a saddle. The surviving implication is one-directional and still useful:
 
-$$t^{*}<0\ \Longrightarrow\ Q\ \text{is indefinite},$$
+$$t^{*}<0\ \Longrightarrow\ Q\not\succeq0,$$
 
-at the cost of a single linear solve. `L-16006` has been corrected in place.
+at the cost of a single linear solve. **Note the weaker conclusion**: review pointed out that "indefinite" is still too strong — $Q=-I_n$ has $t^{*}=-1/n<0$ and is *negative definite*. Corrected here and in `L-16006`§5(4).
 
 ## 4. Cost
 
