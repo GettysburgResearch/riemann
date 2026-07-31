@@ -94,6 +94,27 @@ induces on polynomials. Four things follow, and each replaces something that had
   exists uniquely. **`eta` is even, so the whole odd sector lies in `eta^perp`: Reading B requires
   `Q_W|_odd >= 0` outright**, and no scalar can repair a negative direction there.
 
+**And the thing I would most want the next reader to know** (`O-16007`, issue #188, measured not derived). That
+inner product turns out to be a **moment functional** — it has a representing positive measure on the line — and
+extracting its own Gauss rule gives nodes at the zeta zeros with implied residues
+
+```
+    a(gamma) = (log c / pi^2) * sin^2( gamma * log c / 2 ),
+```
+
+`N`-independent to nine or ten significant figures, ratio measured/formula `1.000000` at 14 cutoffs while `a_1`
+itself swings by a factor of 685. This **vanishes** when `gamma * Delta` is an integer — when the zero lands on a
+node — and at those "blind" cutoffs the form is not merely weak but genuinely blind: displacing `gamma_1` off the
+line never costs positive definiteness, over forty decades of displacement, whereas at half-integer cutoffs the
+threshold is `1e-11` to `1e-13`. **`c = 500` and `c = 3000` are near-blind for `gamma_1`, and `c = 500` appears in
+`O-16004`'s headline table.** The zero's *location* is still recovered to eight digits there, so nothing looks
+wrong. Choose `c` so that `gamma * Delta` is near a half-integer.
+
+Set against that, `O-16008` measures what a positivity computation could detect even at a good cutoff: at `N = 14`
+the criterion breaks at `|Re rho - 1/2| ~ 1e-17` but float64 sees nothing below `3e-3`, and that blind band
+**widens** with `N` (ratio `1e1, 8e2, 2e5, 6e7, 8e10, 3e14` for `N = 4..14`). Sensitivity and readability trade
+against each other; no regime with both was found.
+
 Two practical corollaries for anyone computing. First, resolution is set by `N` and **not** by the prime cutoff —
 raising `c` from 50 to 20000 changes the number of zeros recovered by nothing (`O-16006`), because the Gauss weight
 `Omega(mu)^{-2}` depends only on the nodes. Spend on `N`. Second, `t* < 0` implies `Q` indefinite at the cost of one
