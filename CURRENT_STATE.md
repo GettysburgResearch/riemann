@@ -94,24 +94,43 @@ induces on polynomials. Four things follow, and each replaces something that had
   exists uniquely. **`eta` is even, so the whole odd sector lies in `eta^perp`: Reading B requires
   `Q_W|_odd >= 0` outright**, and no scalar can repair a negative direction there.
 
-**And the thing I would most want the next reader to know** (`O-16007`, issue #188, measured not derived). That
-inner product turns out to be a **moment functional** — it has a representing positive measure on the line — and
-extracting its own Gauss rule gives nodes at the zeta zeros with implied residues
+**And the thing I would most want the next reader to know** (`T-16002`, issue #188, **derived** — the earlier
+measured version in `O-16007` is now `PARTIAL` and half of it is withdrawn). Fourier-transforming `D-0001`'s
+compact autocorrelation gives the packet
 
 ```
-    a(gamma) = (log c / pi^2) * sin^2( gamma * log c / 2 ),
+    g_u(z) = (L/pi^2) sin^2(pi mu) <u, ell(mu)>^2,    mu = Delta z,  Delta = log c / 2 pi
 ```
 
-`N`-independent to nine or ten significant figures, ratio measured/formula `1.000000` at 14 cutoffs while `a_1`
-itself swings by a factor of 685. This **vanishes** when `gamma * Delta` is an integer — when the zero lands on a
-node — and at those "blind" cutoffs the form is not merely weak but genuinely blind: displacing `gamma_1` off the
-line never costs positive definiteness, over forty decades of displacement, whereas at half-integer cutoffs the
-threshold is `1e-11` to `1e-13`. **`c = 500` and `c = 3000` are near-blind for `gamma_1`, and `c = 500` appears in
-`O-16004`'s headline table.** The zero's *location* is still recovered to eight digits there, so nothing looks
-wrong. Choose `c` so that `gamma * Delta` is near a half-integer.
+so a critical-line zero contributes exactly `a_c(gamma) = (log c/pi^2) sin^2(gamma log c/2)`. That matches the
+independent eight-digit measurement across 14 cutoffs while `a_1` itself swings by a factor of 685. **The whole
+thing is conditional on `D-0001`, which is still `PROPOSED` and self-declared as transcribed rather than derived
+in-repo** — that is now the load-bearing gap in this line of work.
 
-Set against that, `O-16008` measures what a positivity computation could detect even at a good cutoff, and its
-verdict is a **split** — read its ERRATUM, because I first stated only half of it. Locating the exact threshold in
+**I drew a wrong conclusion from it and it is withdrawn.** I read `a(gamma) = 0` at integer `gamma*Delta` as the
+form being *blind* to that zero, and reported that a positivity computation at such a cutoff would report
+"positive definite" however badly RH failed. That is false, for two independent reasons, both confirmed:
+
+- **Inside the node band the resonance is removable.** The vanishing prefactor is cancelled by the pole of `ell`,
+  and the packet tends to `L e_k e_k^T` — the zero contributes `L u_k^2`, not nothing.
+- **Outside the band it is an on-line notch only.** The `sin^2` is part of the analytic packet and must be
+  continued: at `mu = k + i y`, `sin^2(pi(k+iy)) = -sinh^2(pi y) < 0`. Off the line the signal is negative and
+  quadratic — the *most* favourable case for detection.
+
+Redone correctly, every `delta_c` is finite and there is no integer/half-integer alternation at all. **The rule
+"choose `c` so `gamma*Delta` is near a half-integer" is withdrawn without replacement** — it optimises the on-line
+weight, and I do not know what the right rule is. `c = 500` is fine; the earlier audit request is retracted.
+
+Two process facts worth carrying forward. The published experiment had a **numerical** defect as well as a
+conceptual one: its inertia routine used 1x1 diagonal pivots only and returns `(0,0,2)` on a matrix of true
+inertia `(1,1,0)`. Five scripts shipped that routine; a correct one is now
+`experiments/X-16003-source-atlas/inertia_correct.py`, and re-running the affected published tables
+(`O-16005`'s eight sign patterns, `L-16004`'s SCOPE CAUTION) reproduces them identically. And the Loewner–Hankel
+property reported in `L-16006` §4a as arithmetic evidence is a **universal identity** for Loewner matrices —
+verified across ten sources — so it was roundoff around an identity, not evidence.
+
+Set against that, `O-16008` — now re-scoped as a **fixed-residue synthetic model**, not a sensitivity law for the
+Weil source — measures what a positivity computation could detect, and its verdict is a **split** — read its ERRATUM, because I first stated only half of it. Locating the exact threshold in
 fixed precision is hopeless and getting worse: the blind band widens monotonically with no sign of turning over,
 `8.9e4` at `N = 8` to `3.7e32` at `N = 24`, and one needs about `4.0N + 10` significant digits to read the sign of
 `lambda_min` at all. **But absolute float64 sensitivity improves** once the perturbed pole enters the node band
