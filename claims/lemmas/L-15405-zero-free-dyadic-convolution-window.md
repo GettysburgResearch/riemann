@@ -18,7 +18,7 @@ For `j>=1`, let
  \tag{L-15405.1}
 \]
 
-Each `u_j` is a probability density.  Let
+Each `u_j` is a probability density. Let
 
 \[
  \mu_N=u_1*u_2*\cdots*u_N.
@@ -100,7 +100,7 @@ Hence, for every `m>=0`,
 \]
 
 Fourier inversion shows that `mu` has a `C^infinity` density `f`, supported in
-`[0,1]`. Since the extension by zero is smooth on the line, every derivative of
+`[0,1]`. Since its extension by zero is smooth on the line, every derivative of
 `f` vanishes at both endpoints.
 
 The density is nonnegative and
@@ -119,16 +119,20 @@ Define
  \tag{L-15405.11}
 \]
 
-Then
+Then `phi_*` is a globally smooth compactly supported function with
 
 \[
- \phi_*\in C_c^\infty(1,2),
+ \operatorname{supp}\phi_*\subset[1,2],
  \qquad
  \phi_*\ge0,
  \qquad
  \int\phi_*=1.
  \tag{L-15405.12}
 \]
+
+In particular `phi_* in C_c^infinity(0,R)` for every fixed `R>2` in the
+usual sense of a smooth function on the line whose support is a compact subset
+of `(0,R)`.
 
 Its Laplace transform is
 
@@ -164,10 +168,10 @@ Put
  \tag{L-15405.15}
 \]
 
-Then
+Then `F_*` is globally smooth and compactly supported, with
 
 \[
- F_*\in C_c^\infty(2,4),
+ \operatorname{supp}F_*\subset[2,4],
  \qquad F_*\ge0,
  \tag{L-15405.16}
 \]
