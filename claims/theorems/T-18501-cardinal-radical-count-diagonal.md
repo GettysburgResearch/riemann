@@ -5,7 +5,8 @@ Title: Exact finite-section cardinal repair turns the final count into a right-i
 Status: `PROPOSED — CONSTRUCTED-PACKET COUNT CLOSED; COMPLETE-LOW CAPTURE SEPARATE`  
 Authoring agent: `gpt56-03-m`  
 Created: 2026-07-31  
-Dependencies: `L-18501`; `T-14306`; `L-14321`; `L-15305`; absolute convergence of the fixed-packet zero tail  
+Last updated: 2026-07-31  
+Dependencies: `L-18501`; `T-14306`; `L-14321`; the exact cardinal–radical quadratic-tail identities  
 Scope: the boxed count in Issue #185
 
 ## 1. Packet from exact cardinal and radical coordinates
@@ -49,63 +50,85 @@ U_{m,Z,L}\cap\ker V_Z
 \tag{T-18501.4}
 \]
 
-Let `G_(C,L)>0` be any declared metric on this finite packet.  The evaluation
-map and the right inverse must live on the same represented space.  In
-particular, if the packet is first harmonically lifted by a map `J_C`, replace
-`V_Z` by the lifted map `V_Z^C=V_ZJ_C` and repeat the same finite right-inverse
-repair there; an unlifted right inverse may not be paired with a lifted Gram.
-For fixed cardinal data the lifted evaluation matrix tends to the exact global
-cardinal identity whenever the harmonic cross tail tends to zero, so the same
-Neumann inversion used in `T-14306` applies.  Define
+Let `G_(C,L)>0` be the declared metric on this finite packet. The evaluation
+map and the right inverse must live on the same represented space. If the
+packet is first harmonically lifted by `J_C`, replace `V_Z` by
+
+\[
+V_Z^C=V_ZJ_C
+\]
+
+and construct an exact right inverse for that lifted map. An unlifted cardinal
+inverse may not be paired with a lifted Gram.
+
+Let `C_(Z,L)^C` denote the exact right inverse on the represented packet and put
 
 \[
 \boxed{
 \Lambda_{m,Z,L}
 =\lambda_{\max}
  \left(
-  \widetilde C_{Z,L}^*G_{C,L}\widetilde C_{Z,L}
+  (C_{Z,L}^C)^*G_{C,L}C_{Z,L}^C
  \right).
 }
 \tag{T-18501.5}
 \]
 
-This number is finite and positive.
+This number is finite and positive. For the unlifted packet one may take
+`C_(Z,L)^C=widetilde C_(Z,L)`. For a lifted packet, surjectivity and the right
+inverse are finite exact gates; for example they are automatic when the
+ambient harmonic correction lies in the selected-evaluation kernel.
 
-## 2. Full certified-zero Gram
+## 2. Selected and enlarged certified-zero Grams
 
-Let `T` exceed every selected ordinate in `Z`. Let
+The selected positive Gram is
 
 \[
-K_{T,L}^C
+K_{Z,L}^C=(V_Z^C)^*V_Z^C.
 \tag{T-18501.6}
 \]
 
-be the complete positive Gram of all independently certified critical-line
-zeros through height `T`, restricted to `U_(m,Z,L)`, with multiplicities and the
-same normalization as `G_(C,L)`. Since this block contains the selected set,
+Let `K_(T,L)^C` be any larger positive Gram assembled from a finite proof-grade
+set of actual critical-line zeros containing `Z`, in the same packet and
+normalization. Then
 
 \[
 \boxed{
-K_{T,L}^C\succeq V_Z^*V_Z.
+K_{T,L}^C\succeq K_{Z,L}^C.
 }
 \tag{T-18501.7}
 \]
 
-Let `B_(T,L)` be a complete absolute omitted-zero budget such that the exact
-finite Schur or Weil form obeys
+No completeness of all zeros below a growing height is required for this
+Loewner inequality.
+
+Let `S_(U,L)` be the exact finite Schur or Weil form on the represented packet.
+Assume a source-bound residual estimate
 
 \[
-S_{U,L}\succeq K_{T,L}^C-B_{T,L}G_{C,L}.
+\boxed{
+S_{U,L}\succeq K_{T,L}^C-B_{T,m,Z}(L)G_{C,L},
+\qquad B_{T,m,Z}(L)\ge0.
+}
 \tag{T-18501.8}
 \]
 
-For each fixed finite packet, absolute convergence of the zero dictionary gives
+For the exact packet of `T-14306`, this budget is supplied by the quadratic
+cardinal/radical localization identities. At fixed finite `m`, `Z`, and finite
+certified block `T`,
 
 \[
-B_{T,L}\longrightarrow0
-\qquad(T\to\infty).
+\boxed{
+B_{T,m,Z}(L)\longrightarrow0
+\qquad(L\to\infty).
+}
 \tag{T-18501.9}
 \]
+
+Indeed the exact global cardinal block is positive identity, the exact global
+radical block and its cross terms vanish, and every finite-section error is
+quadratic or bilinear in the discarded cardinal and radical tails. This route
+does not require certifying every zeta zero to an unbounded height.
 
 ## 3. Exact count theorem
 
@@ -113,41 +136,50 @@ Choose `beta_(m,Z,L)>0` satisfying
 
 \[
 \boxed{
-B_{T,L}+\beta_{m,Z,L}
+B_{T,m,Z}(L)+\beta_{m,Z,L}
 <\Lambda_{m,Z,L}^{-1}.
 }
 \tag{T-18501.10}
 \]
 
-Then `L-18501` gives
+Apply `L-18501` to the represented evaluation map `V_Z^C`, its exact right
+inverse, and the metric `G_(C,L)`. Together with (T-18501.7), it gives
 
 \[
 \boxed{
 N_{
 G_{C,L}^{-1/2}K_{T,L}^CG_{C,L}^{-1/2}
 }
-\left(B_{T,L}+\beta_{m,Z,L}\right)
+\left(B_{T,m,Z}(L)+\beta_{m,Z,L}\right)
 \le
-\dim\operatorname{Ran}K_{m,Z,L}.
+\dim\ker V_Z^C.
 }
 \tag{T-18501.11}
 \]
 
-Since `K_(m,Z,L)` is injective for sufficiently large support,
+On the exact packet construction,
 
 \[
-\dim\operatorname{Ran}K_{m,Z,L}=m.
+\ker V_Z^C=R_L,
+\]
+
+where `R_L` is the represented repaired-radical block. Hence
+
+\[
+\boxed{
+N_{
+G_{C,L}^{-1/2}K_{T,L}^CG_{C,L}^{-1/2}
+}
+\left(B_{T,m,Z}(L)+\beta_{m,Z,L}\right)
+\le\dim R_L.
+}
 \tag{T-18501.12}
 \]
 
-Thus the requested inequality holds with
+This is the requested inequality.
 
-\[
-R_L=\operatorname{Ran}K_{m,Z,L}.
-\]
-
-In fact the stronger direct visible floor holds on the metric orthogonal
-complement of `R_L`:
+The stronger direct visible floor also holds on the metric orthogonal
+complement:
 
 \[
 \boxed{
@@ -159,47 +191,72 @@ S_{U,L}|_{R_L^{\perp_{G_C}}}
 
 No principal-angle theorem and no numerical singular-value count are needed.
 
-## 4. Existence of the threshold at every fixed finite stage
+## 4. Existence of the moat at every fixed finite stage
 
-At a fixed finite packet, choose any rational
+For fixed finite `m`, `Z`, and `T`, the exact supported cardinal synthesis
+converges to its global counterpart and the packet metric Gram converges to a
+finite positive Gram. Therefore
 
 \[
-0<\beta<\frac1{2\Lambda_{m,Z,L}}.
+\Lambda_{m,Z,L}=O_{m,Z,T}(1)
 \tag{T-18501.14}
 \]
 
-By (T-18501.9), extend the independently certified zero block until
+along a sufficiently large support tail. Equation (T-18501.9) gives
+`B_(T,m,Z)(L)->0`. Consequently there exists `L_0` such that, for every
+`L>=L_0`,
 
 \[
-B_{T,L}<\frac1{2\Lambda_{m,Z,L}}-\beta.
+B_{T,m,Z}(L)<\frac1{2\Lambda_{m,Z,L}}.
 \tag{T-18501.15}
 \]
 
-Then (T-18501.10) holds. Extending the certified block does not alter the packet
-or its selected right inverse; it only adds positive rank-one terms to
-`K_(T,L)^C` and shrinks the omitted-zero budget.
+At such a support choose, for example,
 
-This ordering avoids a circular dependence between the selected cardinal set
-and the height used only for tail control.
+\[
+\boxed{
+\beta_{m,Z,L}
+=\frac12\left(
+ \Lambda_{m,Z,L}^{-1}-B_{T,m,Z}(L)
+ \right)>0.
+}
+\tag{T-18501.16}
+\]
+
+Then (T-18501.10) holds strictly. The finite zero block may be enlarged if
+useful, but unbounded zero-height certification is neither assumed nor needed.
 
 ## 5. Cofinal growing diagonal
 
-Let `Z_j` be any growing sequence of finite certified-zero subsets and let
-`m_j->infinity` be any growing radical ranks. For each `j`:
+Let `Z_j` be any sequence of finite proof-grade critical-line zero sets and let
+`m_j->infinity` be any growing radical ranks. The zero sets may be fixed, grow
+inside any available certified pool, or be produced one finite set at a time;
+no claim that all zeros below an unbounded height are on the line is used.
 
-1. choose `L_j` large enough for the exact finite-section repair and all tail,
-   metric, and Schur estimates required by `T-14306`;
-2. compute or outward-enclose the finite number `Lambda_j` in (T-18501.5);
-3. choose, for example,
+At stage `j`, freeze the finite data `(m_j,Z_j,T_j)`. Choose `L_j>L_(j-1)` so
+large that:
+
+1. the exact finite-section cardinal and radical repairs are valid;
+2. the represented evaluation map has its exact right inverse;
+3. the metric Gram is positive and its right-inverse bound `Lambda_j` is finite;
+4. the source-bound residual satisfies
    \[
-   \beta_j=\min\left\{2^{-j},\frac1{4\Lambda_j}\right\};
-   \tag{T-18501.16}
-   \]
-4. extend the certified zero block to a height `T_j` for which
-   \[
-   B_{T_j,L_j}<\frac1{2\Lambda_j}-\beta_j.
+   B_j<\frac1{2\Lambda_j};
    \tag{T-18501.17}
    \]
+5. all cardinal-tail, radical-tail, and Schur losses required by `T-14306` are
+   below `2^-j`.
+
+Put
+
+\[
+\beta_j
+=\min\left\{
+ 2^{-j},
+ \frac12(\Lambda_j^{-1}-B_j)
+\right\}>0.
+\tag{T-18501.18}
+\]
 
 Then
 
@@ -208,39 +265,34 @@ Then
 N_{
 G_{C,j}^{-1/2}K_{T_j,j}^CG_{C,j}^{-1/2}
 }
-\left(B_{T_j,j}+\beta_j\right)
+\left(B_j+\beta_j\right)
 \le\dim R_j
 }
-\tag{T-18501.18}
+\tag{T-18501.19}
 \]
 
 at every stage. No uniform lower bound for `|Xi'(gamma)|`, no uniform cardinal
-condition number, and no complexity bound are required: all constants are
-finite before the support and tail height are selected.
-
-The cardinal and radical localization errors may be made smaller than any
-prescribed function of the already chosen positive `beta_j`; their
-superexponential fixed-packet decay dominates the finite right-inverse constant.
+condition number, and no complexity bound are required: support is chosen after
+each finite packet.
 
 ## 6. Composition with the three-block route
 
-Apply (T-18501.13) to the exact lifted evaluation map and its exact lifted
-right inverse. It supplies exactly
+Equation (T-18501.13) supplies exactly
 
 \[
 B_{V,j}-h_j^{-1}Z_j^*M_j^{-1}Z_j
 \succeq\beta_jG_{V,j}>0
-\tag{T-18501.19}
+\tag{T-18501.20}
 \]
 
-for the constructed visible complement, with the ambient energy metric choice
-`M_j=C_j`, `h_j=1` when desired. The radical-tail and assembly rates of
-`T-14306`, `L-15308`, and `L-15306` then produce a cofinal lower floor for this
-constructed packet.
+on the constructed visible complement. With the exact ambient energy metric one
+may take `M_j=C_j`, `h_j=1`. The radical-tail and assembly rates of `T-14306`,
+`L-15308`, and `L-15306` then produce a cofinal lower floor for this constructed
+packet.
 
 ## 7. Exact scope and the remaining global theorem
 
-Equation (T-18501.18) closes the boxed count **for the exact packet constructed
+Equation (T-18501.19) closes the boxed count **for the exact packet constructed
 from selected Xi-cardinal coordinates and repaired global radicals**.
 
 It does not prove that this packet captures a prescribed complete dangerous
@@ -253,15 +305,15 @@ carries the global RH content.
 Accordingly:
 
 - the right-inverse count is no longer an independent analytic blocker;
-- the remaining problem is packet capture, not selected-zero conditioning or
-  zero-tail truncation;
+- the remaining problem is packet capture, not selected-zero conditioning;
 - no unconditional RH claim is made without that capture theorem.
 
 ## 8. Proof boundary
 
 - The finite count and direct visible floor are exact.
-- The cofinal choice uses only fixed-packet absolute zero-tail convergence.
-- Source normalization, certified-zero provenance, harmonic-lift domain, and
-  the full omitted-zero envelope remain external gates.
+- The cofinal choice uses fixed-packet cardinal/radical tail convergence, not an
+  unbounded verification of all zeros.
+- Source normalization, selected-zero provenance, harmonic-lift domain, and the
+  source-bound residual estimate remain external gates.
 - Complete-low-packet capture remains open and cannot be replaced by a bare
   dimension comparison.
