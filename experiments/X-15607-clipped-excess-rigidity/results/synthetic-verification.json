@@ -1,0 +1,37 @@
+{
+  "A": [
+    "1",
+    "1",
+    "9/5",
+    "5/2"
+  ],
+  "D": [
+    "2",
+    "2",
+    "6/5",
+    "1/2"
+  ],
+  "G": "3",
+  "actual_complement_floor": "9/5",
+  "alpha": "1",
+  "certified_complement_floor": "9/5",
+  "count_above_theta_plus_eta": 2,
+  "decomposition": {
+    "below_clip_packet_leakage": "0",
+    "compression_slack": "0",
+    "lower_symbol_slack": "0",
+    "uncaptured_clipped_trace": "1/5"
+  },
+  "eta": "1/4",
+  "excess": "1/5",
+  "flat_band": false,
+  "packet_indices": [
+    0,
+    1
+  ],
+  "proof_object_sha256": "b6303817138999a1caba82b5f428ab2cf20e90c1ad0d70591bbf2feaa36c149e",
+  "schema": "riemann.clipped-excess-rigidity.v1",
+  "theta": "1",
+  "verdict": "PASS",
+  "zero_excess": false
+}
