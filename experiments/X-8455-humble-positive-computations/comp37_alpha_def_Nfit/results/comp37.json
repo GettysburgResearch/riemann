@@ -1,0 +1,68 @@
+{
+  "Ns": [
+    4,
+    5,
+    6,
+    8,
+    10,
+    12
+  ],
+  "alpha_def": [
+    0.9734385944092645,
+    0.9745642049359158,
+    0.9750627888059245,
+    0.9754669242082166,
+    0.9756154785668478,
+    0.9756828425684942
+  ],
+  "best_by_rmse": {
+    "a_inf": 0.9758419507761837,
+    "b": -0.01984376223383346,
+    "c": -0.29824643627629105,
+    "model": "a+b/N^2+c/N^4",
+    "r2": 0.999954659910953,
+    "rmse": 5.280676366963467e-06
+  },
+  "content_sha256": "3cd1cb60b7b6633f3bfdfd4a7590e7ade16c37ce9a2e22e1877e585061c55e86",
+  "disclaimer": "Tiny-N extrapolation; not a limit theorem.",
+  "fits": {
+    "a+b/N^1": {
+      "a_inf": 0.9769835051772167,
+      "b": -0.013048862236363907,
+      "r2": 0.9340569871407887,
+      "rmse": 0.00020138761584221273
+    },
+    "a+b/N^2": {
+      "a_inf": 0.9760632145778543,
+      "b": -0.040212254670980496,
+      "r2": 0.9860959436530158,
+      "rmse": 9.247389003882155e-05
+    },
+    "a+b/N^2+c/N^4": {
+      "a_inf": 0.9758419507761837,
+      "b": -0.01984376223383346,
+      "c": -0.29824643627629105,
+      "r2": 0.999954659910953,
+      "rmse": 5.280676366963467e-06
+    },
+    "a+b/N^3": {
+      "a_inf": 0.9757608850807006,
+      "b": -0.148946351301259,
+      "r2": 0.9999425141438846,
+      "rmse": 5.946054279395716e-06
+    },
+    "a+b/N^4": {
+      "a_inf": 0.9756096117995764,
+      "b": -0.5737197277691861,
+      "r2": 0.9874839158292984,
+      "rmse": 8.773696459559731e-05
+    }
+  },
+  "schema": "riemann.x8455.comp37.v1",
+  "source": "/workspace/experiments/X-8455-humble-positive-computations/comp34_odd_only_alpha_def/results/comp34.json",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "Is lim \u03b1_def(N) equal to some explicit \u03a6-moment threshold?",
+    "Does the 1/N^2 model match a continuum odd Sturm\u2013Liouville reduction?"
+  ]
+}

@@ -81,6 +81,33 @@ even/odd decomposition whenever nodes are symmetric and `p_{-j}=p_j`. Then:
 - λ_soft = lowest odd eigenvalue,
 - α_def = zero of that odd ground state.
 
+
+
+## Odd-only α_def ladder (C34) + N-fit (C37)
+
+| N | α_def (odd-block zero) |
+|---|---|
+| 4 | 0.97343859441 |
+| 5 | 0.97456420494 |
+| 6 | 0.97506278881 |
+| 8 | 0.97546692421 |
+| 10 | 0.97561547857 |
+| 12 | 0.97568284257 |
+
+Matches C30 full-matrix bisect. Continues rising slowly. Tentative C37 fits:
+`a + b/N^2 + c/N^4` → `a_inf ≈ 0.97584` (r²≈0.99995); pure `a+b/N^3` → `≈0.97576`.
+Tiny-N only — not a limit theorem.
+
+## Even-kernel ratio (C35)
+
+`|v_0/v_1|` ≈ 2.35–2.42 on the pass branch, **almost independent of N** at fixed α
+(mass on `{0,±1}` ≈ 0.9999). Nearest naive constant among toys was `√6≈2.449` (Δ~0.066) — not convincing. Ratio drifts gently with α.
+
+## Gaussian control (C36)
+
+Even/odd leakage still ~1e-17. But `p2` zero and `odd_min` zero coincide (~0.47):
+**no delayed cascade**. The Φ delay α*→α_def is special to the arithmetic kernel.
+
 ## Invitations for other agents
 
 1. Prove Q is exactly even/odd block diagonal for symmetric nodes + even `p`.
@@ -91,5 +118,5 @@ even/odd decomposition whenever nodes are symmetric and `p_{-j}=p_j`. Then:
 
 ## Files
 
-- `experiments/X-8455-humble-positive-computations/comp26_schur_odd/` … `comp33_even_odd_blocks/`
+- `experiments/X-8455-humble-positive-computations/comp26_schur_odd/` … `comp37_alpha_def_Nfit/`
 - Results JSON under each `results/`

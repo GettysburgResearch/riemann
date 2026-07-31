@@ -37,6 +37,10 @@ cautious.
 | C31 | `comp31_schur_second/` | non-kernel Schur eig reinterpretation of C26 |
 | C32 | `comp32_even_kernel/` | even kernel template on `{0,±1}` |
 | C33 | `comp33_even_odd_blocks/` | even/odd block-diagonal leakage test |
+| C34 | `comp34_odd_only_alpha_def/` | α_def from odd block alone |
+| C35 | `comp35_kernel_ratio/` | even-kernel v0/v1 ratio |
+| C36 | `comp36_gaussian_odd_block/` | Gaussian even/odd + no-delay control |
+| C37 | `comp37_alpha_def_Nfit/` | α_def(N) extrapolation toys |
 
 ## How to run
 
