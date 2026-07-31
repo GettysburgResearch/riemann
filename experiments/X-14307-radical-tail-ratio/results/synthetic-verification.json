@@ -1,0 +1,76 @@
+{
+  "analytic_claim": "T-14303",
+  "certificate_sha256": "454373c123ce19246191675a95445a9c43ab7efc4a67ad74ccda07f0f4b72f87",
+  "classification": "EXACT_SYNTHETIC_CONTROL",
+  "coercivity_lower": {
+    "denominator": 512,
+    "numerator": 3
+  },
+  "exact_proof_object_sha256": "881f0b38a06d129ea3b80e5cc82f30cd317a6df44f9cbfb91955bce60338d22b",
+  "linear_ratio_upper": {
+    "denominator": 6144,
+    "numerator": 1
+  },
+  "linear_target": {
+    "denominator": 1000,
+    "numerator": 1
+  },
+  "proof_boundary": "Exact Fraction-only source-polynomial and ratio contraction. Analytic production must separately prove the radical, tail, symbol, form-domain, and coercivity input bounds.",
+  "schema": "riemann.x14307-radical-tail-ratio-verification.v1",
+  "source": {
+    "f_at_zero": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "fourier_image": [
+      {
+        "denominator": 1,
+        "numerator": 0
+      },
+      {
+        "denominator": 2,
+        "numerator": -3
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      }
+    ],
+    "integral": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "polynomial_in_z": [
+      {
+        "denominator": 1,
+        "numerator": 0
+      },
+      {
+        "denominator": 2,
+        "numerator": -3
+      },
+      {
+        "denominator": 1,
+        "numerator": 1
+      }
+    ],
+    "verified": true
+  },
+  "squared_ratio_upper": {
+    "denominator": 3221225472,
+    "numerator": 1
+  },
+  "squared_target": {
+    "denominator": 1000000,
+    "numerator": 1
+  },
+  "tail_residual_upper": {
+    "denominator": 1048576,
+    "numerator": 1
+  },
+  "trial_norm_squared_lower": {
+    "denominator": 2,
+    "numerator": 1
+  },
+  "verdict": "CERTIFIED_BOTH_RATIO_TARGETS"
+}
