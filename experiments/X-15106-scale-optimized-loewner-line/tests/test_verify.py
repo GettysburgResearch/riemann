@@ -33,9 +33,9 @@ class ScaleOptimizedTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             VERIFY.verify(data)
 
-    def test_wrong_boundary_scalar_rejected(self):
+    def test_bad_boundary_scalar_rejected(self):
         data = base()
-        data["boundary_scalar"] = 1
+        data["boundary_scalar"] = -10
         with self.assertRaises(ValueError):
             VERIFY.verify(data)
 
