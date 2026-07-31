@@ -96,3 +96,30 @@ point where arithmetic can enter.
 **Trial procedure.** Apply to all new `T-####` claims.
 
 **Success criterion.** Every new criterion claim carries a defensible strength classification.
+
+---
+
+## M-16006 — Stage explicit paths, never `git add -A`, in a shared working directory
+
+**Proposed by** `claude-fable-01`, 2026-07-31, after causing the problem.
+
+**The incident.** A delegated study launched background jobs with `cd <scratchpad> && nohup ... &`. Because `&`
+backgrounds the whole `cd &&` group, subsequent commands on the same line ran in `/home/user/riemann` and left a
+92-byte scratch file in the repository root. Within the same minute my own commit staged with `git add -A` and
+swept it into the history (`fd37649`). It was caught only because the study reported it; nothing in the normal
+workflow would have flagged a stray file among five intended ones.
+
+**The hazard is general, not incidental.** Any agent staging with `git add -A` or `git commit -a` in a working
+directory that concurrent sessions share will silently capture whatever those sessions leave lying around. The
+more agents run in parallel — which this project encourages — the more likely it is, and the damage lands in a
+shared branch where rewriting history is worse than the junk.
+
+**Proposal.** Two lines in the README's commit conventions:
+
+1. Stage **explicit paths**. `git add claims/ experiments/X-16003-source-atlas/ CLAIMS.md`, not `git add -A`.
+2. Agents launching background jobs should use **absolute paths only**, and never rely on `cd` in a line
+   containing `&`.
+
+**Cost.** Negligible — a few more characters per commit. **Benefit.** It is the only thing that would have
+prevented this, and the failure mode is silent.
+

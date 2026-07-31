@@ -110,10 +110,15 @@ threshold is `1e-11` to `1e-13`. **`c = 500` and `c = 3000` are near-blind for `
 `O-16004`'s headline table.** The zero's *location* is still recovered to eight digits there, so nothing looks
 wrong. Choose `c` so that `gamma * Delta` is near a half-integer.
 
-Set against that, `O-16008` measures what a positivity computation could detect even at a good cutoff: at `N = 14`
-the criterion breaks at `|Re rho - 1/2| ~ 1e-17` but float64 sees nothing below `3e-3`, and that blind band
-**widens** with `N` (ratio `1e1, 8e2, 2e5, 6e7, 8e10, 3e14` for `N = 4..14`). Sensitivity and readability trade
-against each other; no regime with both was found.
+Set against that, `O-16008` measures what a positivity computation could detect even at a good cutoff, and its
+verdict is a **split** — read its ERRATUM, because I first stated only half of it. Locating the exact threshold in
+fixed precision is hopeless and getting worse: the blind band widens monotonically with no sign of turning over,
+`8.9e4` at `N = 8` to `3.7e32` at `N = 24`, and one needs about `4.0N + 10` significant digits to read the sign of
+`lambda_min` at all. **But absolute float64 sensitivity improves** once the perturbed pole enters the node band
+(near `N ~ 21` at `Delta = 1.5`): `|Re rho - 1/2|` detectable in float64 runs `8.7e-2` at `N = 8` down to `6.8e-9`
+at `N = 24`. My original `N <= 14` range sat entirely outside the band and hid that. The practical conclusion for a
+counterexample search is unchanged — `7e-9` at `gamma_1` is still far weaker than direct zero-finding already
+certifies — but the reason is different from the one I first gave.
 
 Two practical corollaries for anyone computing. First, resolution is set by `N` and **not** by the prime cutoff —
 raising `c` from 50 to 20000 changes the number of zeros recovered by nothing (`O-16006`), because the Gauss weight
@@ -230,10 +235,12 @@ MAIN ANALYTIC OR NUMERICAL RISK:
   orthogonal polynomials of a positive inner product are real-rooted.  If that reading is
   right, no amount of work on the CvS side adds anything over Q_W >= 0, and effort spent
   there is misdirected.  It should be checked before more is spent.
-  Numerical: the conditioning floor.  One needs ~4.5N significant digits merely to read the
-  sign of lambda_min, and O-16008 shows the blind band between what the criterion detects and
-  what fixed precision can see WIDENS with N -- from 1e1 at N=4 to 3e14 at N=14.  Sensitivity
-  and readability trade against each other and no regime with both was found.
+  Numerical: the conditioning floor.  One needs ~4.0N + 10 significant digits merely to read
+  the sign of lambda_min, and O-16008's blind band between what the criterion detects and what
+  fixed precision can see WIDENS monotonically, 8.9e4 at N=8 to 3.7e32 at N=24.  Read that
+  claim's ERRATUM: absolute float64 sensitivity does IMPROVE with N once the pole enters the
+  node band (to |Re rho - 1/2| ~ 7e-9 at N=24), which my first N<=14 range hid.  Locating the
+  threshold is hopeless; detecting a grossly off-line zero is not.
 
 POSSIBLE ORGANIZATIONAL IMPROVEMENT:
   Adopt M-16001 (mandatory interface table) and M-16003 (precision floor).  Add a third:
