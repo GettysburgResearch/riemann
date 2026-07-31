@@ -1,4 +1,4 @@
-# L-20502 — One-sided line-zero deflation closes the Schur-corrected kernel
+# L-20502 — One-sided line-zero deflation closes the fully Schur-corrected kernel
 
 Claim ID: `L-20502`  
 Title: The complete kernel needs only a lower residual LMI after a conditional simple-line frame; positive omitted mass is free  
@@ -6,7 +6,7 @@ Status: `PROPOSED — COMPLETE FINITE SCHUR PROOF; COFINAL RESIDUAL MOAT OPEN`
 Authoring agent: `gpt56-03-q`  
 Created: 2026-08-01  
 Dependencies: `L-20501`; `L-19701`; the centered polarized Weil zero-sum formula  
-Scope: final selected-real-zero kernel after the positive ambient complement has been isolated  
+Scope: final selected-real-zero kernel after the entire remaining positive sector has been isolated  
 Related counterexample candidates: none
 
 ## 1. Kernel and selected positive line mass
@@ -83,32 +83,56 @@ J_Z^*Q_WJ_Z
 \tag{L-20502.5}
 \]
 
-## 3. Positive-complement Schur correction
+## 3. The entire positive sector must be eliminated
 
-Let \(C\succ0\) be the already-isolated ambient complement, and let
-\(Z_K:K_Z\to E\) be the kernel-to-complement cross map. In graph coordinates,
-assume the exact upper LMI
+Let \(P\) denote the **entire already-positive sector complementary to**
+\(K_Z\). It includes every finite visible coordinate and the ambient infinite
+complement that remain after the first-frame graph is formed.
+
+In coordinates \(K_Z\oplus P\), write the exact block as
+
+\[
+\mathcal H=
+\begin{pmatrix}
+B_K&L_K^*\\
+L_K&C_+
+\end{pmatrix},
+\qquad
+C_+\succ0.
+\tag{L-20502.6}
+\]
+
+The cross map in the theorem is therefore
+
+\[
+L_K:K_Z\to P,
+\]
+
+not merely the cross to the old ambient block before the visible quotient was
+included.
+
+Assume the exact upper LMI
 
 \[
 \boxed{
-J_Z^*Z_K^*C^{-1}Z_KJ_Z
+J_Z^*L_K^*C_+^{-1}L_KJ_Z
 \preceq
 \chi G_K,
 \qquad
 \chi\ge0.
 }
-\tag{L-20502.6}
+\tag{L-20502.7}
 \]
 
-The Schur-corrected kernel is
+The **fully** Schur-corrected kernel is
 
 \[
 S_K
 =
 J_Z^*Q_WJ_Z
 -
-J_Z^*Z_K^*C^{-1}Z_KJ_Z.
-\tag{L-20502.7}
+J_Z^*L_K^*C_+^{-1}L_KJ_Z.
+\tag{L-20502.8}
 \]
 
 Therefore
@@ -119,7 +143,7 @@ S_K
 \succeq
 (\sigma^2-\omega-\chi)G_K.
 }
-\tag{L-20502.8}
+\tag{L-20502.9}
 \]
 
 This is the final finite-kernel floor.
@@ -132,7 +156,7 @@ In particular,
 \Longrightarrow
 S_K\succ0.
 }
-\tag{L-20502.9}
+\tag{L-20502.10}
 \]
 
 More generally, if
@@ -145,8 +169,16 @@ then
 
 \[
 S_K\succeq-\varepsilon G_K.
-\tag{L-20502.10}
+\tag{L-20502.11}
 \]
+
+### Staged elimination
+
+If the visible and ambient sectors are eliminated in stages, their complete
+triangular block and every induced cross term must first be assembled into
+\(C_+\) and \(L_K\). Subtracting only the old ambient correction and then taking
+a minimum of the separate kernel and visible restrictions is not valid in
+general.
 
 ## 4. Exact proof
 
@@ -160,11 +192,11 @@ For every graph coordinate \(r\),
 &+
 Q_{\mathrm{rem},Y}(J_Zr,J_Zr)\\
 &-
-\|C^{-1/2}Z_KJ_Zr\|^2.
+\|C_+^{-1/2}L_KJ_Zr\|^2.
 \end{aligned}
 \]
 
-Apply (L-20502.2), (L-20502.4), and (L-20502.6) term by term. QED.
+Apply (L-20502.2), (L-20502.4), and (L-20502.7) term by term. QED.
 
 No absolute value, triangle inequality, or dimension estimate is used.
 
@@ -185,7 +217,7 @@ At every zeta zero,
 \widehat{T_Nr}(\rho)
 =
 -\widehat{J_Zr}(\rho).
-\tag{L-20502.11}
+\tag{L-20502.12}
 \]
 
 Hence, by the zero-side formula,
@@ -196,7 +228,7 @@ Q_W(T_Nr,T_Ns)
 =
 Q_W(J_Zr,J_Zs).
 }
-\tag{L-20502.12}
+\tag{L-20502.13}
 \]
 
 The selected positive part is separately invariant:
@@ -207,7 +239,7 @@ Q_Y(T_Nr,T_Ns)
 =
 Q_Y(J_Zr,J_Zs).
 }
-\tag{L-20502.13}
+\tag{L-20502.14}
 \]
 
 Subtracting gives the stronger residual identity
@@ -218,12 +250,12 @@ Q_{\mathrm{rem},Y}(T_Nr,T_Ns)
 =
 Q_{\mathrm{rem},Y}(J_Zr,J_Zs).
 }
-\tag{L-20502.14}
+\tag{L-20502.15}
 \]
 
 Thus the free Dirichlet-polynomial coefficients of `L-20303` cannot change
-\(\omega\). They may improve the Hardy realization and the Schur cross
-\(\chi\), but the one-sided Weil residual is immutable.
+\(\omega\). They may improve the Hardy realization and the full positive-sector
+cross \(\chi\), but the one-sided Weil residual is immutable.
 
 ## 6. The corrected Möbius target
 
@@ -232,10 +264,10 @@ The sufficient condition in `T-20301` used
 \[
 |Q_W(T_Nr,T_Nr)|
 +
-\|C^{-1/2}Z_KJ_Zr\|^2
+\|C_+^{-1/2}L_KJ_Zr\|^2
 \le
 \eta\|J_Zr\|_{G_K}^2.
-\tag{L-20502.15}
+\tag{L-20502.16}
 \]
 
 That condition is valid but unnecessarily strong.
@@ -248,18 +280,18 @@ Q_{\mathrm{rem},Y}(T_Nr,T_Nr)
 \ge
 -\omega\|J_Zr\|_{G_K}^2,
 }
-\tag{L-20502.16}
+\tag{L-20502.17}
 \]
 
 together with
 
 \[
 \boxed{
-\|C^{-1/2}Z_KJ_Zr\|^2
+\|C_+^{-1/2}L_KJ_Zr\|^2
 \le
 \chi\|J_Zr\|_{G_K}^2
 }
-\tag{L-20502.17}
+\tag{L-20502.18}
 \]
 
 and the conditional selected-line frame (L-20502.2).
@@ -279,7 +311,7 @@ For fixed first frame \(Z\), define
 \sigma_{Y\mid Z}^2-\omega_{Y\mid Z}
 \right],
 }
-\tag{L-20502.18}
+\tag{L-20502.19}
 \]
 
 where \(Y\) runs over finite proof-grade simple-line blocks and
@@ -296,7 +328,7 @@ The exact positive gate is
 \boxed{
 \mathfrak K_Z>\chi.
 }
-\tag{L-20502.19}
+\tag{L-20502.20}
 \]
 
 Optimizing over admissible first frames gives
@@ -305,17 +337,17 @@ Optimizing over admissible first frames gives
 \mathfrak K
 =
 \sup_Z(\mathfrak K_Z-\chi_Z).
-\tag{L-20502.20}
+\tag{L-20502.21}
 \]
 
-A cofinal lower bound \(\mathfrak K_\lambda\ge-o(1)\) is sufficient for the
-positive program.
+A cofinal lower bound \(\mathfrak K_\lambda\ge-o(1)\), after the triangular
+metric adapter of `T-20501`, is sufficient for the positive program.
 
 ## 8. False-RH alternative
 
 Suppose RH is false and the finite kernel hierarchy captures a supported
 off-line Xi-cardinal difference. Its complete Weil value stays below a fixed
-negative constant after Schur elimination by `L-19701`.
+negative constant after full positive-sector Schur elimination by `L-19701`.
 
 Every finite simple-line form \(Q_Y\) vanishes on the limiting global cardinal
 difference. Consequently the residual in (L-20502.3) retains the fixed negative
@@ -323,18 +355,20 @@ signature. On a capturing hierarchy, either
 
 - the conditional frame \(\sigma_{Y\mid Z}^2\) collapses;
 - the one-sided residual endpoint \(\omega\) dominates it;
-- the Schur cross retains a negative moat;
+- the full positive-sector Schur cross retains a negative moat;
 - or the finite capture/normalization hypotheses fail.
 
-Thus the cofinal positivity of (L-20502.8) is RH-bearing, but the finite theorem
+Thus the cofinal positivity of (L-20502.9) is RH-bearing, but the finite theorem
 does not hide where the sign lives.
 
 ## 9. Proof boundary
 
-- The finite selected-line, residual, and Schur composition is exact.
+- The finite selected-line, residual, and full Schur composition is exact.
 - The theorem removes the absolute-tail overestimate.
 - It does not prove a cofinal lower LMI for the unselected-zero residual.
 - Production must retain one complete residual object; selected positive masses
   may not be subtracted twice.
+- The block \(C_+\) must contain the entire already-positive sector.
 - No RH proof is claimed until the directed moat
-  \(\sigma^2-\omega-\chi\ge-o(1)\) is established cofinally.
+  \(\sigma^2-\omega-\chi\ge-o(1)\), with metric control, is established
+  cofinally.
