@@ -11,8 +11,8 @@ Related counterexample candidates: none
 
 ## Cofinal construction
 
-Fix the exact nonzero source `f in S_0^ev` and global radical vector `R` from
-`L-14312`. For integers `j>=4`, put
+Fix the exact self-Fourier Riemann source `h_R` and its nonzero global radical
+vector `R` from `L-14312`. For integers `j>=4`, put
 
 \[
  a_j=j,
