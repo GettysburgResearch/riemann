@@ -1,7 +1,7 @@
 # L-16005 — Hard-window artifact dominance: the truncated coefficients stop being about ζ at j ≈ 2
 
 Claim ID: `L-16005`
-Title: Exact error relation for the hard-window target, a rigorous uniform bound, the $O(1/j)$ decay law, and the consequent certification boundary
+Title: Exact error relation for the hard-window target, a rigorous uniform bound, the decay law (**$O(j^{-2})$ on the lattice — see the ERRATUM; (iii)'s sharpness claim was wrong**), and the consequent certification boundary
 Status: `PROPOSED`
 Authoring agent: `claude-fable-01`
 Reviewing agents: — (prompted by audit `O-15104`, points 1 and 3, on PR #173)
@@ -31,7 +31,27 @@ $$|E_j|\ \le\ \varepsilon(T):=2\!\int_T^\infty\!\Phi\ \le\ 4\left[\frac{\pi^{2}C
 
 The bound uses $\int_U^\infty u^{a}e^{-\pi u}du\le U^{a}e^{-\pi U}/(\pi-a)$ for $0\le a<\pi$, $U\ge1$. It is tight to within a factor $\approx2$ (measured: $T=0.5$, actual $8.32\times10^{-3}$ vs bound $1.59\times10^{-2}$; $T=1.0$, actual $1.255\times10^{-8}$ vs bound $2.200\times10^{-8}$).
 
-**(iii) The decay law is only $O(1/j)$, and this is sharp.** A hard cutoff leaves $\Phi$ discontinuous at $t=T$ (it jumps from $\Phi(T)>0$ to $0$). One integration by parts, using that $\Phi$ is monotone decreasing on $(T,\infty)$ so that $\int_T^\infty|\Phi'|=\Phi(T)$, gives
+> ## ERRATUM to (iii) — the sharpness claim is FALSE on this lemma's own lattice
+>
+> Raised in the PR #173 second-pass review, adjudicated by independent computation. **The reviewer is right, and the error is worse than "underdetermined": (iii) is contradicted by its own measured table.**
+>
+> On the hard-window lattice the cutoff and the sampling frequency are locked by the same $\alpha$:
+> $$\omega_jT=2\pi\alpha j\cdot\tfrac{1}{2\alpha}=\pi j\ \Longrightarrow\ \sin(\omega_jT)=0,\quad\cos(\omega_jT)=(-1)^{j}\quad\textbf{for every }\alpha .$$
+> So the first boundary term — the one (iii) calls "genuinely present" — is **identically zero at every lattice point**. Two integrations by parts give the sharp law
+> $$E_j=(-1)^{j}\,\frac{\Phi'(T)}{\pi^{2}\alpha^{2}j^{2}}+O(j^{-4}),\qquad C:=\frac{|\Phi'(T)|}{\pi^{2}\alpha^{2}},$$
+> with an alternating sign that (iii) does not mention. **The sharp lattice decay is $O(j^{-2})$, not $O(j^{-1})$.**
+>
+> **My own table already showed this.** Over $j=4\to40$ at $\alpha=1$, $j|E_j|$ falls by a factor **9.1** while $j^{2}|E_j|$ varies by 10% and converges monotonically from below to $C=0.0371740$ — ratio $0.99925$ at $j=40$, against the two-term prediction $1-1.2033/j^{2}$. Reading only $j=4..12$, as (iii) did, is what hid it. Local slope reaches $1.998$ by $j=40$.
+>
+> **What survives.** The uniform bound $|E_j|\le2\Phi(T)/(\pi\alpha j)$ **is valid** (never violated in 160 evaluations) — merely wasteful by a factor $j$. And $O(1/j)$ **is** the sharp law for a *general* cutoff: moving $T$ off the lattice ($T=0.7112944\ldots$, irrational multiple) restores it, with $\max_j j|E_j|=5.955\times10^{-4}$ against the predicted $2\Phi(T)/2\pi=5.98\times10^{-4}$.
+>
+> **So (iii) is a correct theorem about a general cutoff $T$ and a false theorem about the cutoff $T=1/(2\alpha)$ this lemma actually uses.** Not a miscalculation — a failure to substitute the lemma's own hypothesis into its own conclusion. That is the *same* failure mode as `L-16003`(iv), where the statement dropped a hypothesis the proof had carried.
+>
+> **None of the three downstream conclusions moves**, because every $|E_j|$ in the tables was reproduced to within **0.11%** — the values were right, only their verbal classification was wrong. (iv)'s crossover at $j\approx2$ is set by polynomial-versus-*exponential* decay, so one power of $j$ is irrelevant; (v) uses the $j$-independent $\varepsilon(T)$, which the exponent cannot enter; (vi)'s hard-versus-smooth contrast stands (super-polynomial still beats $j^{-2}$). Three text corrections follow, in the gap audit.
+>
+> **Two things neither side had noticed.** The crossover index **moves out sharply as $\alpha$ falls** — $j=2,5,10,>12$ at $\alpha=1.0,0.7,0.5,0.4$ — which independently supports (v). And at $\alpha\lesssim0.4$ with small $j$ **neither** power law describes $|E_j|$: it is essentially flat there, because the asymptotic regime needs $j\gtrsim3e^{2}/\alpha$.
+
+**(iii) [SUPERSEDED — see the ERRATUM above] The decay law is only $O(1/j)$, and this is sharp.** A hard cutoff leaves $\Phi$ discontinuous at $t=T$ (it jumps from $\Phi(T)>0$ to $0$). One integration by parts, using that $\Phi$ is monotone decreasing on $(T,\infty)$ so that $\int_T^\infty|\Phi'|=\Phi(T)$, gives
 
 $$|E_j|\ \le\ \frac{2\,\Phi(T)}{\pi\alpha j},$$
 
@@ -87,7 +107,7 @@ The reason is that the constant in front of the decay is set by the **discarded 
 
 ## Motivation
 
-Audit `O-15104` raised two objections to the `R-16001` census (points 1 and 3): that "exact Sturm then certifies the rational surrogate, not the exact coefficient vector", and that "the production claim uses a smooth cutoff/form-core target; the hard indicator is a nearby model unless a directed perturbation transfer is supplied." Both are correct. This lemma converts them from methodological cautions into quantitative statements, and in doing so shows they are **more serious than the audit's phrasing suggests**: the gap is not a matter of a few digits, it is 19 orders of magnitude at $\alpha=1.1$, and the hard-vs-smooth distinction is a difference between $O(1/j)$ and super-polynomial decay.
+Audit `O-15104` raised two objections to the `R-16001` census (points 1 and 3): that "exact Sturm then certifies the rational surrogate, not the exact coefficient vector", and that "the production claim uses a smooth cutoff/form-core target; the hard indicator is a nearby model unless a directed perturbation transfer is supplied." Both are correct. This lemma converts them from methodological cautions into quantitative statements, and in doing so shows they are **more serious than the audit's phrasing suggests**: the gap is not a matter of a few digits, it is 19 orders of magnitude at $\alpha=1.1$, and the hard-vs-smooth distinction is a difference between $O(j^{-2})$ (per the ERRATUM to (iii); $O(1/j)$ as originally written) and super-polynomial decay.
 
 It also explains, in one mechanism, three separate observations previously recorded as unrelated: why the pass-region roots sit on the sinc lattice (the coefficients there *are* the window indicator's), why a Gaussian control reproduces the identical threshold (any positive bump, hard-truncated, gives the same artifact), and why the sampled and hard-window targets give opposite verdicts at $\alpha=1.0$ (the ratio $|E_j|/|\Xi_j|$ crosses 1 at $j\approx2$).
 
@@ -116,14 +136,16 @@ All integrals are over real $t$ with $\Phi$ real-analytic, positive, and doubly-
 
 1. The values of $E_j$ in the tables (iv) and (vi) were computed by ordinary `mpmath` adaptive quadrature at 40 digits, **not** by certified integration. They are `EMPIRICAL`. The smooth-cutoff integrand in (vi) is oscillatory with a $C^\infty$ bump factor and is the least reliable of these; its fine structure (the non-monotone $j|E_j|$ at $j=10$) should not be over-read, though the order of magnitude and the qualitative conclusion are robust. The *bounds* (ii) and (iii) are `PROVED` and are what the conclusions rest on; the table is illustrative of sharpness, not load-bearing.
 2. $C_4$ and $C_2$ were evaluated by summing to $n=30$ without a certified tail; the omitted tail is $O(e^{-\pi\cdot 899})$ and cannot affect any digit shown, but a formal certificate should bound it.
-3. (v) uses the crude uniform bound $\varepsilon(T)$. The sharper $j$-dependent bound of (iii) improves matters somewhat but, being $O(1/j)$, does **not** change the verdict for any $\alpha\ge0.5$ — at $\alpha=1$, $j=10$ it gives $3.8\times10^{-3}$ against a coefficient of $2.4\times10^{-18}$.
+3. (v) uses the crude uniform bound $\varepsilon(T)$. The sharper $j$-dependent bound improves matters but does **not** change the verdict for any $\alpha\ge0.5$ — at $\alpha=1$, $j=10$ the **corrected** rigorous bound $B_2=|\Phi'(T)|/(\pi^{2}\alpha^{2}j^{2})$ gives $7.4\times10^{-4}$ (actual $|E_{10}|=3.67\times10^{-4}$) against a coefficient of $2.4\times10^{-18}$. The figure $3.8\times10^{-3}$ previously quoted here came from the superseded $O(1/j)$ bound.
+4. **$\alpha=0.5$ is marginal, not comfortable** — established by the erratum's adjudication and not visible in (v) as written. There $|E_{10}|=8.53\times10^{-9}$ against $|\Xi_{10}|=7.86\times10^{-9}$, a factor of **1.08**, i.e. essentially on the line. The best available rigorous bound $\min(\varepsilon,B_1/2,B_2)=1.75\times10^{-8}$ still exceeds the coefficient, so the "no" verdict survives — **but by a factor of two, not by orders of magnitude.** A sharper bound or a slightly larger $T$ could flip that row, and anyone pushing the certification boundary should start there rather than at $\alpha=0.4$.
+5. The erratum's numbers are HIGH-PRECISION FLOAT, cross-validated by two independent routes (tail quadrature versus $\Xi(2\pi\alpha j)-2\int_0^T$) agreeing to 38–50 digits, and reproduce this lemma's own tables to 0.11%. Still not certified.
 4. "Certifiable" in (v) means only that the uniform box is narrower than the smallest coefficient. That is necessary, not sufficient: an actual certificate must exhibit invariance of the Sturm count over the box, which has not been done even at $\alpha=0.4$.
 5. This lemma says nothing about whether the *production* smooth-cutoff target passes or fails. It says the hard-window computations cannot be transferred to it without an explicit argument.
 
 ## Adversarial tests
 
 - Bound (ii) against direct quadrature at $T=0.5,0.7,1.0$: ratios $1.91$, $1.83$, $1.75$ — the bound is tight to within a factor $\approx2$ and never violated.
-- The $O(1/j)$ law: $j|E_j|$ measured constant to within $\pm35\%$ over $j=4..12$, consistent with $1/j$ times a slowly varying factor and inconsistent with any faster decay.
+- ~~The $O(1/j)$ law: $j|E_j|$ measured constant to within $\pm35\%$ over $j=4..12$~~ — **withdrawn.** That $\pm35\%$ drift over so short a range was the $j^{-2}$ law being misread; extended to $j=40$, $j|E_j|$ falls by a factor 9.1 while $j^{2}|E_j|$ is flat to 10%. See the ERRATUM to (iii).
 - The crossover prediction of (iv) is corroborated independently by `R-16001`'s erratum, which found the sampled and hard-window targets giving **opposite verdicts** at $\alpha=1.0$, $N=6$ — a level at which, by the table, coefficients $j\ge3$ are already $22\times$ to $10^{7}\times$ artifact.
 - It is corroborated a second time by the observation that pass-region real roots sit on the sinc lattice $w=2\pi\alpha k$ to 5–6 digits: those are the zeros of the transform of the window indicator, exactly what (iv) predicts the coefficients to encode.
 
