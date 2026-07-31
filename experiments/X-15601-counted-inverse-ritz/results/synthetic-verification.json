@@ -1,0 +1,47 @@
+{
+  "H_negative_pivots": [
+    {
+      "denominator": 4,
+      "numerator": 1
+    }
+  ],
+  "K_positive_pivots": [
+    {
+      "denominator": 5000,
+      "numerator": 313
+    }
+  ],
+  "analytic_claim": "L-15601",
+  "certified_floor": {
+    "denominator": 4996,
+    "numerator": -3
+  },
+  "claimed_floor": {
+    "denominator": 4996,
+    "numerator": -3
+  },
+  "classification": "SYNTHETIC_MODEL",
+  "dimension": 1,
+  "exact_proof_object_sha256": "5b08520088725ed983b6bb035ee5cfd818a5352c59656c7cbc269fdee1f4007a",
+  "gamma": {
+    "denominator": 2,
+    "numerator": 1
+  },
+  "inverse_ritz_moat_pivots": [
+    {
+      "denominator": 5000,
+      "numerator": 1
+    }
+  ],
+  "proof_boundary": "Exact rational finite algebra. Production use inherits the complete ambient low-eigenvalue count, common localized-Weil normalization, and directed A/A^2 form enclosures.",
+  "q_upper": {
+    "denominator": 313,
+    "numerator": -1249
+  },
+  "schema": "riemann.x15601-counted-inverse-ritz-verification.v1",
+  "t": {
+    "denominator": 4,
+    "numerator": 1
+  },
+  "verdict": "CERTIFIED_COUNTED_INVERSE_RITZ_AMBIENT_FLOOR"
+}
