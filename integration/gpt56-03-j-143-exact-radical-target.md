@@ -1,4 +1,4 @@
-# Integration patch — exact radical-target positive program
+# Integration patch — zero-evaluation split of the positive low block
 
 This append-only handoff does not edit concurrent global registries.
 
@@ -6,54 +6,82 @@ This append-only handoff does not edit concurrent global registries.
 
 | ID | Kind | Title | Status | Primary dependency |
 |---|---|---|---|---|
-| `T-15301` | theorem | Auxiliary-factor Hurwitz limit implies RH | `PROPOSED` | Hurwitz theorem |
-| `L-15301` | lemma | Exact compact radical target and vanishing exterior tail | `PROPOSED` | Connes--Consani `E` interfaces |
-| `L-15302` | lemma | Three-mode codimension-two source repair | `PROPOSED` | finite linear algebra |
-| `L-15303` | lemma | Growing Hermite radical packets | `PROPOSED` | L-15301 |
-| `M-15301` | methodology | Exact radical-block lower-floor pipeline | `PROPOSED` | T-14302, L-14308 |
-| `O-15301` | observation | July 2026 positive-path literature audit | `LITERATURE_AND_REPOSITORY_AUDIT` | located primary sources |
+| `L-15303` | lemma | Growing exact Hermite radical packets | `PROPOSED` | base Gaussian radical-tail theorem |
+| `L-15304` | lemma | Zero-evaluation obstruction to full-packet radical repair | `PROPOSED` | global zeta-factor radical identity; Hardy evaluation bound |
+| `M-15301` | methodology | Zero-evaluation-split lower-floor pipeline | `PROPOSED` | T-14302, L-14308, L-15304 |
+| `O-15301` | observation | July 2026 positive-path convergence audit | `LITERATURE_AND_REPOSITORY_AUDIT` | located primary sources and current PR stack |
 
 ## Proposed experiment registration
 
 | ID | Path | Classification |
 |---|---|---|
-| `X-15301` | `experiments/X-15301-codimension-two-source-repair/` | exact rational source-repair checker and synthetic control |
+| `X-15302` | `experiments/X-15302-zero-evaluation-obstruction/` | exact rational singular-floor and radical-distance checker |
 
-## Exact control fingerprint
+## Withdrawn duplicate claims
+
+The first version of this branch independently derived a three-mode source
+repair and auxiliary-factor Hurwitz criterion. The active base branch landed
+the same results in more developed form. The duplicate `L-15302`, `T-15301`,
+and `X-15301` files were therefore removed rather than competing for registry
+space.
+
+## Base registry defect requiring repair
+
+PR #152 currently has distinct files sharing:
 
 ```text
-X-15301 verification SHA-256
-365a4d600bd0e7a0029f53c595c7ec521cf8202ca95aff60cbd8fdb9e2b50b49
+L-14312
+L-14313
+T-14303
+X-14307.
+```
+
+Review `4827072827` requests append-only ID reallocation and dependency updates
+before integration.
+
+## Exact finite fingerprint
+
+```text
+X-15302 synthetic obstruction verification
+475f0f5955170c08c6cf2477d0d60f90dde71ea3539e21593ea8704bcf87d054
 ```
 
 ## Dependency graph
 
 ```text
-CCM Hermite source h
-        -> smooth compact cutoff + exact integral repair
-        -> f_R in exact codimension-two source domain
-        -> global radical E(f_R)
-        -> smooth localized target k_R + vanishing form tail
-        -> Xi target convergence
+complete finite low-symbol packet U
+        + proof-grade certified zeta zeros Z
+        -> exact evaluation map V_Z|U
+        -> rational near-kernel R plus visible block V
 
-three or more concrete source modes
-        -> L-15302 exact two-functional repair
-        -> optional finite prolate packet
+R
+        -> growing exact Hermite/Gaussian radical packets (L-15303)
+        -> small localized form block and cross residual
 
-self-dual Hermite sector
-        -> L-15303 growing exact radical block
-        -> principal-angle comparison with dangerous low packet
+V
+        -> direct finite lower certificate
+
+R + V + ambient complement
         -> L-14308 block Schur floor
-        -> T-14302 cofinal lower envelope
-        -> RH
-
-finite real-rooted transforms
-        -> zeta(1/2-iz) times any nonzero auxiliary factor
-        -> T-15301
+        -> symbolic cofinal envelope
+        -> T-14302
         -> RH
 ```
 
-## Literature ledger additions
+## Exact obstruction
+
+If a normalized low-packet vector `u` is approximated by a localized radical
+truncation `k` with tail norm at most `epsilon`, then for a certified zero set
+`Z`
+
+```text
+||u-k||_tau >= sigma_Z(U)/C_Z - epsilon.
+```
+
+Thus only the small-singular evaluation near-kernel can have a vanishing
+radical-repair angle.
+
+## Located literature
 
 ```text
 arXiv:2106.01715  Connes--Consani
@@ -66,20 +94,18 @@ arXiv:2607.23016  Azimifard
 
 ## Review order
 
-1. `L-15301`
-2. `T-15301`
+1. `L-15304`
+2. `X-15302/verify.py`
 3. `L-15303`
-4. `L-15302`
-5. `X-15301/verify.py`
-6. `M-15301`
-7. `O-15301`
-8. session report
+4. `M-15301`
+5. `O-15301`
+6. report
+7. corrected Issue #156
 
 ## Promotion boundary
 
-- The finite rational source-repair control is exact.
-- The compact-source construction imports the `E` radical/continuity and
-  Poisson normalization from the source literature.
-- No principal-angle or complement-coercivity production packet exists.
-- No cofinal lower floor is proved.
-- No proof of RH is claimed.
+- The finite rational obstruction checker is exact.
+- No Riemann-data low packet or evaluation matrix exists yet.
+- The growing Hermite block is not proved to span the certified near-kernel.
+- The evaluation-visible block has no direct positive floor yet.
+- No cofinal lower envelope and no proof of RH are claimed.
