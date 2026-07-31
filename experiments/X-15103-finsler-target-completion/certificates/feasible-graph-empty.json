@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.target-pinned-finsler-completion.v1",
+  "mode": "feasible",
+  "Q": [
+    [50, 39, 15, 163],
+    [39, 54, 45, 141],
+    [15, 45, 54, 66],
+    [163, 141, 66, 542]
+  ],
+  "p": [
+    1,
+    1,
+    {"numerator": -1, "denominator": 2},
+    {"numerator": -1, "denominator": 2}
+  ],
+  "eta": [1, 1, 1, 1],
+  "c": 0,
+  "note": "PSD rank-three Gram matrix with empty sufficient graph interval"
+}
