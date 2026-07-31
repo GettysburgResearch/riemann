@@ -1,0 +1,24 @@
+{
+  "schema": "riemann.rouche-cardinal-finite-gate.v1",
+  "physical_node_spacing": 1,
+  "xi_boundary_lower": [1, 1],
+  "transform_boundary_error_upper": [
+    {"numerator": 1, "denominator": 10},
+    {"numerator": 1, "denominator": 10}
+  ],
+  "xi_derivative_lower": [1, 1],
+  "transform_real_error_upper": [
+    {"numerator": 1, "denominator": 100},
+    {"numerator": 1, "denominator": 100}
+  ],
+  "phase_mass_lower": [2, 3],
+  "phase_mass_upper": [2, 3],
+  "cardinal_derivative_upper": [
+    [1, {"numerator": 1, "denominator": 10}],
+    [{"numerator": 1, "denominator": 10}, 1]
+  ],
+  "residual_residue_upper": [
+    {"numerator": 1, "denominator": 40},
+    {"numerator": 1, "denominator": 40}
+  ]
+}
