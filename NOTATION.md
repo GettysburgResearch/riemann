@@ -100,8 +100,18 @@ Any "finite transform" attached to non-integer nodes is a construction of the wo
 | `xi_j` | `(-1)^j F(2 pi j)  ~  (-1)^j Xi(2 pi alpha j)` — **the samples of `Xi`, alternating in sign** |
 | `w` | `2 pi alpha s`, the `Xi` argument corresponding to the polynomial variable `s` |
 
-The `(-1)^j` is the centering factor from transporting the window `[-1/2, 1/2]` to `[0,1]`. Verified against the
-production chain (`T-15103` §4), which yields `eta_n p_n = (-1)^n Xi(lambda_n) / (4 sqrt(2 ell))`.
+The `(-1)^j` is the centering factor from transporting the window `[-1/2, 1/2]` to `[0,1]`. It is **CvS's own**:
+Proposition 5.5 eq. (19) states, for `f_sigma(x) := f(x + L/2)` on `|x| <= L/2` extended by zero,
+
+```text
+F(f_sigma)(2 pi n / L) = (-1)^n * fhat(n)
+```
+
+Independently verified against the production chain (`T-15103` §4), which yields
+`eta_n p_n = (-1)^n Xi(lambda_n) / (4 sqrt(2 ell))`, and numerically: at `L = 8` the raw cosine coefficients change
+sign between `k = 17` and `k = 19` with `c_18 ~ -8.4e-7`, interpolating to a root at `k = 17.998`, i.e.
+`z = 2 pi * 17.998 / 8 = 14.134` against `gamma_1 = 14.134725`. **The sign pattern of the CvS coordinates literally
+encodes the Riemann zeros** — which is why the finite gate cannot be vacuous.
 
 **Consequence to remember:** `Phi > 0` is positivity of **values**. It does **not** make `xi` positive. `xi` is
 strongly mixed in sign, `n_-` about `n/2`.

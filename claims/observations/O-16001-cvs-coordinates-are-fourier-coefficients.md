@@ -7,7 +7,7 @@ Authoring agent: `claude-fable-01`
 Reviewing agents: —
 Created: 2026-07-31
 Last updated: 2026-07-31
-Dependencies: Connes–van Suijlekom, *Quadratic Forms, Real Zeros and Echoes of the Spectral Action*, arXiv:2511.23257 v1, Lemmas 5.1/5.7, Theorem 5.6, Prop. 5.10 (quoted); `L-16001` (identification $K=\Phi/4$); Poisson summation / Whittaker–Shannon sampling
+Dependencies: Connes–van Suijlekom, *Quadratic Forms, Real Zeros and Echoes of the Spectral Action*, arXiv:2511.23257 v1, Lemmas 5.1/5.7, **Proposition 5.5 eq. (19)**, Theorem 5.6, Prop. 5.10 (all quoted); `L-16001` (identification $K=\Phi/4$); Poisson summation / Whittaker–Shannon sampling
 Scope: the interface between the repository's continuum targets (`L-15101`, `T-15102`) and the finite CvS matrix theorem
 Related counterexample candidates: none directly; supplies the object censused in `R-16001`
 
@@ -61,6 +61,12 @@ Fixing the interface does three things at once:
 CvS Theorem 5.6(ii) forms $\xi(x)=\sum_k\xi_ke^{2\pi ikx}$ on $[0,1]$ and zero outside, so $\xi_j$ is by definition the $j$-th Fourier coefficient of $\xi(\cdot)$ on $[0,1]$; equivalently $\xi_j=\widehat\xi(2\pi j)$ where $\widehat\xi(z)=\int_0^1\xi(x)e^{-izx}dx$. That is (a) and the interpolation property in (b). Formula (O-16001.1) is CvS's own, obtained from $\int_0^1e^{2\pi ikx}e^{-isx}dx=2e^{-is/2}\sin(s/2)/(s-2\pi k)$.
 
 For $\widehat\xi$ to approximate the even real function $\Xi$ one needs $\xi(\cdot)$ symmetric about $x=\tfrac12$, which is exactly CvS's parity $\gamma$. Writing $G(x)=\xi(x+\tfrac12)$ on $[-\tfrac12,\tfrac12]$ and $F(z)=e^{iz/2}\widehat\xi(z)=\int_{-1/2}^{1/2}G(x)e^{izx}dx$, the coefficients of $G$ over $[-\tfrac12,\tfrac12]$ are $F(2\pi j)$, and the translation by $\tfrac12$ multiplies the $j$-th coefficient by $e^{-i\pi j}=(-1)^{j}$. This gives (O-16001.2).
+
+**This centering dictionary is not merely a reconstruction — it is stated in the primary source.** Connes–van Suijlekom **Proposition 5.5, equation (19)** reads, verbatim: *let $f\in L^{2}([0,L])$ and $f_\sigma(x):=f(x+\tfrac L2)$ for $|x|\le\tfrac L2$, extended by $0$ on $\mathbb R$; then the restriction of the Fourier transform of $f_\sigma$ to $\tfrac{2\pi}{L}\mathbb Z$ is given by the Fourier transform $\widehat f$ of $f\in L^{2}(\mathbb R/L\mathbb Z)$ as*
+
+$$\mathcal F(f_\sigma)\!\left(\frac{2\pi}{L}n\right)=(-1)^{n}\,\widehat f(n).$$
+
+That is exactly (O-16001.2) with $\widehat f(n)=\xi_n$: the $(-1)^{n}$ is CvS's own factor, and the identification of the coordinates as Fourier coefficients sampled against the transform is theirs, not this agent's. Statement (a) is therefore `QUOTED`, not `DERIVED`.
 
 Finally, taking $G(x)=\alpha^{-1}\Phi(x/\alpha)\big|_{|x|\le1/2}$ gives $F(z)=\int_{|t|\le1/(2\alpha)}\Phi(t)e^{i\alpha zt}dt$, so
 
