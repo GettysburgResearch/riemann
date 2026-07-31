@@ -1,0 +1,82 @@
+{
+  "alpha_def": {
+    "10": {
+      "alpha_def_mid": 0.9756154785668478,
+      "source": "C34"
+    },
+    "12": {
+      "alpha_def_mid": 0.9756828425684942,
+      "source": "C34"
+    },
+    "14": {
+      "alpha_def_hi": 0.9757177902460097,
+      "alpha_def_lo": 0.9757177896499633,
+      "alpha_def_mid": 0.9757177899479865,
+      "source": "C41"
+    },
+    "16": {
+      "alpha_def_hi": 0.9757377166748045,
+      "alpha_def_lo": 0.975737716078758,
+      "alpha_def_mid": 0.9757377163767813,
+      "source": "C41"
+    },
+    "18": {
+      "alpha_def_hi": 0.9757499058246613,
+      "alpha_def_lo": 0.9757499052286148,
+      "alpha_def_mid": 0.9757499055266381,
+      "source": "C41"
+    },
+    "20": {
+      "alpha_def_hi": 0.9757577795982362,
+      "alpha_def_lo": 0.9757577790021897,
+      "alpha_def_mid": 0.975757779300213,
+      "source": "C41"
+    },
+    "4": {
+      "alpha_def_mid": 0.9734385944092645,
+      "source": "C34"
+    },
+    "5": {
+      "alpha_def_mid": 0.9745642049359158,
+      "source": "C34"
+    },
+    "6": {
+      "alpha_def_mid": 0.9750627888059245,
+      "source": "C34"
+    },
+    "8": {
+      "alpha_def_mid": 0.9754669242082166,
+      "source": "C34"
+    }
+  },
+  "content_sha256": "e627424c913b26d38456c30189056c960e602c9abe0c3a932f65d723ddcbcf34",
+  "disclaimer": "Larger N still tiny; float Loewner. Extrapolation provisional.",
+  "fits": {
+    "a+b/N^2": {
+      "a_inf": 0.9759433511401291,
+      "b": -0.0374178000124195,
+      "rmse": 9.989574737603768e-05
+    },
+    "a+b/N^2+c/N^4": {
+      "a_inf": 0.9758170295969908,
+      "b": -0.01821172323201629,
+      "c": -0.3188132338294796,
+      "rmse": 9.024807272836732e-06
+    },
+    "a+b/N^3": {
+      "a_inf": 0.9757687137025985,
+      "b": -0.14967537885178786,
+      "rmse": 7.390897335410485e-06
+    },
+    "a+b/N^4": {
+      "a_inf": 0.9756830634229959,
+      "b": -0.6000353341075289,
+      "rmse": 9.143365346189061e-05
+    }
+  },
+  "schema": "riemann.x8455.comp41.v1",
+  "status": "EMPIRICAL_PROVISIONAL",
+  "suggested_questions_for_other_agents": [
+    "With N\u226420, does a_inf stabilize near 0.9758\u20130.9760?"
+  ]
+}

@@ -41,6 +41,10 @@ cautious.
 | C35 | `comp35_kernel_ratio/` | even-kernel v0/v1 ratio |
 | C36 | `comp36_gaussian_odd_block/` | Gaussian even/odd + no-delay control |
 | C37 | `comp37_alpha_def_Nfit/` | α_def(N) extrapolation toys |
+| C38 | `comp38_even3_exact_ratio/` | raw even-2/3 predicted kernel ratio |
+| C39 | `comp39_even_schur_ratio/` | even Schur({0,±1}) = full kernel ratio |
+| C40 | `comp40_odd_schur_soft/` | odd Schur({±1}) vs λ_soft (approx) |
+| C41 | `comp41_alpha_def_largeN/` | α_def to N=20 + refit |
 
 ## How to run
 

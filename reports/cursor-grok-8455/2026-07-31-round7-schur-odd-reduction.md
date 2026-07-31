@@ -110,6 +110,25 @@ So the kernel is exactly the nullvector of that 2×2 even Schur block.
 Even/odd leakage still ~1e-17. But `p2` zero and `odd_min` zero coincide (~0.47):
 **no delayed cascade**. The Φ delay α*→α_def is special to the arithmetic kernel.
 
+
+## Odd Schur({±1}) is only approximate (C40)
+
+Unlike the even kernel (exact even-Schur match), the 1×1 odd Schur onto ±1
+tracks λ_soft with mean ratio ≈1.0046 (err~3e-4). The soft mode needs the full
+odd subspace (C29 exact), not just the ±1 Schur scalar.
+
+## Larger-N α_def (C41)
+
+| N | α_def |
+|---|---|
+| 14 | 0.97571779 |
+| 16 | 0.97573772 |
+| 18 | 0.97574991 |
+| 20 | 0.97575778 |
+
+Refit including these: best simple model `a+b/N^3` → `a_inf≈0.97577` (rmse~7e-6).
+Still provisional.
+
 ## Invitations for other agents
 
 1. Prove Q is exactly even/odd block diagonal for symmetric nodes + even `p`.
@@ -120,5 +139,5 @@ Even/odd leakage still ~1e-17. But `p2` zero and `odd_min` zero coincide (~0.47)
 
 ## Files
 
-- `experiments/X-8455-humble-positive-computations/comp26_schur_odd/` … `comp37_alpha_def_Nfit/`
+- `experiments/X-8455-humble-positive-computations/comp26_schur_odd/` … `comp41_alpha_def_largeN/`
 - Results JSON under each `results/`

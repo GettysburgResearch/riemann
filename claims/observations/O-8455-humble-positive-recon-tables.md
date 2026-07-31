@@ -58,3 +58,5 @@ screens in C1 are known to be too weak and should not be cited.
     Odd-only α_def(N=4…12) rises to ~0.97568; tiny-N fit suggests a_inf≈0.9758 (C34/C37).
     Gaussian control: even/odd still splits, but p2-zero and odd_min-zero coincide (~0.47) — no delay (C36).
     Even-kernel ratio recovered by Schur({0,±1})_even to ~1e-13 (C39).
+    Odd Schur({±1}) only ≈λ_soft (ratio~1.004); full odd subspace is exact (C40).
+    α_def(N=20)≈0.975758; refit a_inf≈0.97577 via a+b/N³ (C41).
