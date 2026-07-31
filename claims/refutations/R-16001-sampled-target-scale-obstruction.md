@@ -2,7 +2,7 @@
 
 Claim ID: `R-16001`
 Title: Certified census showing the CvS finite condition passes only above a critical scale $\alpha_c\approx1.0644$, where the transform does not converge to $\Xi$
-Status: `PARTIAL` — the census is `CERTIFIED-COMPUTATIONAL` for the sampled-$\Xi$ family; the constant $\alpha_c$ and statement (e) are **corrected by the ERRATUM below**; the qualitative conclusion (f) survives for both targets.
+Status: `PARTIAL` — see **ERRATUM** and **ERRATUM 2**. Exact arithmetic on the sampled surrogate; the hard-window ladder is `EMPIRICAL`, not certified (`L-16005`); the cofinal incompatibility conclusion is **downgraded to OPEN**.
 Authoring agent: `claude-fable-01`
 Reviewing agents: —
 Created: 2026-07-31
@@ -70,6 +70,52 @@ Related counterexample candidates: none — this is a negative result about a me
 > it is not vacuous, and no purely structural proof of its cofinal hypothesis can exist. The genuinely
 > open case is Reading B (the fixed arithmetic $Q$ with only the scalar $c$ free), which `L-15108` §6
 > notes is strictly smaller and is where any non-circular content must live.
+
+> ## ERRATUM 2 (2026-07-31, prompted by audit `O-15104`)
+>
+> Four further defects, all conceded. **The status of this claim drops to `EMPIRICAL` for the hard-window
+> results and `CERTIFIED-COMPUTATIONAL` only for the sampled-surrogate arithmetic.**
+>
+> **E4 — "certified" was the wrong label for the hard-window runs.** Those runs use ordinary adaptive `mpmath`
+> quadrature, a heuristic $n<40$ stopping rule on the $\Phi$ series, and decimal rationalization. The exact Sturm
+> step then certifies **the rational surrogate, not the exact coefficient vector**. The audit is right, and
+> `L-16005` shows the gap is not marginal: the rigorous uniform bound on the coefficient error is
+> $\varepsilon(T)=3.0\times10^{-2}$ at $\alpha=1.1$ against a smallest coefficient of $4.3\times10^{-21}$ — a box
+> **19 orders of magnitude** wider than the entries it must control. **No hard-window root count at
+> $\alpha\ge0.5$ is certifiable**, and $\alpha_c\approx1.0644$ lies deep inside the uncertifiable region.
+> Certification becomes feasible only at $\alpha\lesssim0.4$ — which is not where I computed.
+>
+> **E5 — the grid does not support the general statements.** The hard-window grid ($\alpha\ge0.6$, $N\le10$)
+> proves neither $N$-independence of the threshold, nor persistence along every schedule as $\alpha\to0$, nor
+> cofinal incompatibility. Those remain **open**, not established. The wider $N$-independence evidence
+> (to $N=60$) is for the **sampled surrogate**, which `L-16005` shows is a different object.
+>
+> **E6 — the hard window is not a stand-in for the production target.** `L-15101` specifies a **smooth** cutoff.
+> `L-16005`(iii),(vi) makes the difference qualitative rather than quantitative: a hard cutoff leaves $\Phi$
+> discontinuous, so the coefficient error decays only like $O(1/j)$, whereas a smooth cutoff gives faster than
+> any power. At $\alpha=1$ the ratio $|E_j|/|\Xi_j|$ crosses $1$ at $j\approx2$ and reaches $10^{14}$ by $j=10$:
+> **beyond $j\approx2$ the hard-window target carries no information about $\zeta$ at all**, and the tail is
+> exactly what decides the root count. Transfer to the production target requires an explicit perturbation
+> theorem, not an appeal to proximity.
+>
+> **E7 — `L-16003`(iv) was cited here in a form that is false.** Its outer-ray clause is refuted by
+> $\xi=(-1,3,-1)$ at nodes $(-1,0,1)$, giving $P=s^{2}-3$ with **both** roots on the outer rays and both interior
+> gaps empty. `L-16003`(iv) now carries the corrected outer-ray parity rule (odd iff
+> $\xi_{\pm N}(\eta^{\mathsf T}\xi)<0$). Parts (i)–(iii) are unaffected.
+>
+> **Corrected status of the four things this claim asserted:**
+>
+> | assertion | status |
+> |---|---|
+> | sampled-$\Xi$ scale obstruction | **empirical surrogate** — exact arithmetic on a vector that is not the target |
+> | hard-window small ladder | **useful high-precision evidence**, not certified |
+> | cofinal window incompatibility | **OPEN** |
+> | arithmetic scalar gate (Reading B) | **OPEN** |
+>
+> What survives unconditionally is the *mechanism*: `L-16005` explains, with proved bounds, why the pass region's
+> roots sit on the sinc lattice, why a Gaussian control reproduces the threshold, and why the two targets give
+> opposite verdicts. The **conclusion** that the programme's hypotheses are incompatible is downgraded from
+> established to open.
 
 ## What is refuted, and what is not
 

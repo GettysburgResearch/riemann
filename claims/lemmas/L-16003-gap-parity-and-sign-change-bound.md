@@ -34,9 +34,23 @@ Then $P$ has at least $S(\xi)$ real roots, one in each same-sign gap.
 
 **(iii) Exact characterization of the criterion in the one-signed case.** If all $\xi_j$ have the same sign then $S(\xi)=2N=\deg P$, so $P$ has exactly one simple root in each of the $2N$ gaps and **no others**: $P$ is real-rooted with roots strictly interlacing the nodes. Combining with `L-15108`, a PSD special completion with $\ker=\mathbb R\xi$ therefore **always** exists for a one-signed target. (This is the polynomial-side counterpart of `L-16002`.)
 
-**(iv) The criterion as a sign condition.** In general $P$ is real-rooted if and only if every same-sign gap carries exactly one root, every sign-change gap carries exactly two, and the two outer rays carry none. In particular
+**(iv) The criterion as a sign condition — CORRECTED.**
 
-$$P\ \text{real-rooted}\quad\Longrightarrow\quad \#\{\text{real roots}\}=2N,\qquad\text{and always}\qquad \#\{\text{real roots}\}\ \ge\ S(\xi).$$
+> **Erratum (2026-07-31, prompted by audit `O-15104` point 4).** The first version of (iv) asserted that a real-rooted $P$ has every same-sign gap carrying exactly one root, every sign-change gap exactly two, **and the two outer rays none**. The outer-ray clause is **false**. Exact counterexample: nodes $(-1,0,1)$, $\xi=(-1,3,-1)$ (so $\eta^{\mathsf T}\xi=1$), giving $P(s)=s^{2}-3$ with roots $\pm\sqrt3\approx\pm1.732$ — **both roots lie on the outer rays and both interior gaps are empty**. The statement of (iv) was stronger than its own proof, which had correctly hedged "when no roots lie on the outer rays".
+
+The correct bookkeeping adds an outer-ray parity rule. As $s\to\lambda_N^{+}$, $R(s)\to-\infty\cdot\operatorname{sign}(\xi_N)$; as $s\to+\infty$, $R(s)\sim-(\eta^{\mathsf T}\xi)/s\to0$ with sign $-\operatorname{sign}(\eta^{\mathsf T}\xi)$. Hence
+
+$$\#\{\text{roots in }(\lambda_N,\infty)\}\ \text{is odd}\iff \xi_N\,(\eta^{\mathsf T}\xi)<0,$$
+
+and symmetrically on $(-\infty,\lambda_{-N})$ with $\xi_{-N}$. The complete statement is therefore:
+
+$$P\ \text{real-rooted}\iff\ \text{the }2N+2\ \text{region counts sum to }2N\ \text{subject to: interior gap }(j,j{+}1)\ \text{odd}\iff\xi_j\xi_{j+1}>0,\ \text{each outer ray odd}\iff\xi_{\pm N}(\eta^{\mathsf T}\xi)<0 .$$
+
+Correspondingly the lower bound (ii) improves to
+
+$$\#\{\text{real roots}\}\ \ge\ S(\xi)+\#\{\text{outer rays with odd parity}\},$$
+
+which for an even target is $S(\xi)+2\cdot\mathbf 1[\xi_N(\eta^{\mathsf T}\xi)<0]$. On the counterexample this reads $2\ge0+2$ — sharp. Parts (i)–(iii) are unaffected; only (iv)'s outer-ray clause was wrong.
 
 **(v) Transport to the sampled-$\Xi$ target.** With the CvS coordinates of `O-16001`, $\xi_j=(-1)^{j}a_j$ where $a_j=F(2\pi j)\approx\Xi(2\pi\alpha j)$. Then
 
@@ -82,7 +96,7 @@ $R$ is continuous on the open interval $I_j$ (no other node lies in it), so the 
 
 *Remark.* (iii) is the classical Nevanlinna/Cauchy-transform argument in disguise: for one-signed $\xi$, $\pm R$ is a Herglotz function of $s$, strictly increasing between consecutive poles, hence with exactly one zero per gap.
 
-**(iv).** The gaps and the two outer rays $(-\infty,\lambda_{-N})$, $(\lambda_N,+\infty)$ partition $\mathbb R\setminus\{\text{nodes}\}$, and $P(\lambda_j)=\xi_j\prod_{k\ne j}(\lambda_k-\lambda_j)\ne0$, so no root is a node. $P$ is real-rooted iff the $2N$ roots are distributed over these $2N+2$ regions; by (i) the same-sign gaps carry an odd number and the sign-change gaps an even number, and the total is $2N$. The stated characterization is the only distribution compatible with those parities and that total when no roots lie on the outer rays; the general statement is that the counts sum to $2N$ subject to the parity constraints.
+**(iv).** The gaps and the two outer rays $(-\infty,\lambda_{-N})$, $(\lambda_N,+\infty)$ partition $\mathbb R\setminus\{\text{nodes}\}$, and $P(\lambda_j)=\xi_j\prod_{k\ne j}(\lambda_k-\lambda_j)\ne0$, so no root is a node. The interior parities are (i). For the outer ray $(\lambda_N,\infty)$: the only singular term as $s\to\lambda_N^{+}$ is $k=N$ with $\lambda_N-s\to0^{-}$, giving $R\to-\infty\cdot\operatorname{sign}(\xi_N)$; and as $s\to+\infty$, $R(s)=\sum_k\xi_k/(\lambda_k-s)=-(\eta^{\mathsf T}\xi)/s+O(s^{-2})$, so $R\to0$ from the side $-\operatorname{sign}(\eta^{\mathsf T}\xi)$. The count is odd iff those two signs differ, i.e. iff $\xi_N(\eta^{\mathsf T}\xi)<0$. The lower ray is symmetric. $P$ is real-rooted iff the $2N+2$ region counts sum to $2N$ subject to all these parities.
 
 **(v).** $\xi_j\xi_{j+1}=(-1)^{j}a_j\cdot(-1)^{j+1}a_{j+1}=-a_ja_{j+1}$, giving the displayed equivalence. If $\Xi$ has an odd number of zeros in the sample gap $(2\pi\alpha j,2\pi\alpha(j+1))$ then $a_j,a_{j+1}$ have opposite signs and the gap contributes; if it has an even number (in particular two, or none) it does not. ∎
 
