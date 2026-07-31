@@ -39,7 +39,7 @@ boundary term near the origin.
 
 ## P-3. Is the cofinal hypothesis satisfiable by **any** target sequence? — issue #175 — **ANSWERED (Reading A)**
 
-**Answer: YES, and satisfiability is exactly equivalent to RH.** An explicit *zero-matched* target passes with
+**Answer: YES, and satisfiability is exactly equivalent to RH.** Now recorded as **`T-16001`**, with the free-zero bijection that makes it obvious. An explicit *zero-matched* target passes with
 deficit 0 at `N = 4, 6, 8, 10, 14, 20, 24`, verified by exact Sturm counting. So `T-15104` and the working note's
 Theorem 3.1 are **not vacuous** — but they are a **reformulation, not a reduction**: the construction consumes the
 reality of the zeros of `Xi` as input, and by Laguerre–Pólya closure any such cofinal hypothesis is equivalent to

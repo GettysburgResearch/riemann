@@ -22,6 +22,7 @@ Statuses per README §7: `IDEA`, `EMPIRICAL`, `PARTIAL`, `PROPOSED`, `PROVED`, `
 | `L-16004` | Special completion in closed form = Loewner matrix of `-P'/P`; positivity ⇔ real-rootedness; **parity automatic** | `PROPOSED` | elementary proof + exact verification | `O-16001` |
 | `O-16001` | CvS coordinates are Fourier **coefficients**; target is `xi_j = (-1)^j Xi(2 pi alpha j)`; documents the positivity trap | `PROPOSED` | quoted from arXiv:2511.23257 + derivation | `L-16001` |
 | `O-16002` | Jensen-polynomial counterexample window is **empty**, not merely finite | `PROPOSED` | literature (GORZ 2019; GORTTW 2022) | — |
+| `T-16001` | Gate is satisfiable via freely prescribable real zeros; satisfiability **equivalent to RH**; explicit zero-matched sequence | `PROPOSED` | elementary proof + classical LP import; exact Sturm verification | `L-15108`, `O-16001`, Laguerre–Pólya |
 | `R-16001` | Sampled-`Xi` target cannot satisfy `T-15104`'s hypotheses: scale obstruction | `PARTIAL` — see its ERRATUM | census `CERTIFIED-COMPUTATIONAL` for the sampled family; constant `alpha_c` and mechanism (e) **corrected**; conclusion (f) survives for both targets | `O-16001`, `L-16003`, `L-15108` |
 | `X-16001` | Exact rational verifier for the cone-collapse propositions | `PROPOSED` | all propositions pass; certificate sha256 `2eacce19f8a8…` | — |
 | `X-16002` | Certified real-root census of the sampled target, with controls | `PROPOSED` | 150-digit eval, 100-digit rationalization, exact Sturm, stable at 20/30/40/50/60 | — |

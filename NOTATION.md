@@ -25,8 +25,18 @@ Every row below is of the form: symbol — exact definition — where verified.
 | `Xi(0)` | `0.497120778188314...` | reference value |
 | `gamma_1` | `14.134725141734693790...` | first positive zero of `Xi`; **`Xi` has NO zero in `|w| < 14.1347`** |
 
-`Xi` is **not** of exponential type. Any sequence of exponential-type functions converging to it locally
-uniformly must have type tending to infinity. (`L-16001` analytic domain audit.)
+`Xi` is **not** of exponential type: `log|Xi(iy)| = (|y|/2) log|y| (1+o(1))` by Stirling, so order 1 and
+**maximal** type, genus 1.
+
+**CORRECTED (`T-16001`).** An earlier version of this file said "any sequence of exponential-type functions
+converging to `Xi` locally uniformly must have type tending to infinity". **That is false.** Type is *not* lower
+semicontinuous under locally uniform convergence: real polynomials have type 0 and are dense (Taylor sections of
+`e^{z^2}`), and even real-rooted ones are, since `(sin(eps z)/eps)^n -> z^n`. Independently, hypothesis (8) only
+demands convergence on `S_{1/2}`, where `Xi` is bounded and type is invisible.
+
+The correct statement is a **conditioning** one: if `|F_nu| <= C_nu e^{tau|z|}` with `tau` **fixed** and
+`F_nu -> f` of maximal type, then `C_nu -> infinity`. Observed: `sum_j xi_j` runs `0.0136 -> 6182.8` and the
+coordinate dynamic range `2.4e4 -> 3.05e16` over `N = 4..24`. A numerical-conditioning warning, not an obstruction.
 
 ## 2. The Pólya kernel — two conventions, do not mix
 
