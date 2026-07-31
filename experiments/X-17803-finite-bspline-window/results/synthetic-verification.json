@@ -1,0 +1,22 @@
+{
+  "J": 12,
+  "classification": "SYNTHETIC_MODEL",
+  "degree": 23,
+  "high_zero_tail_upper": {
+    "denominator": "46179143290185541507430615452334590673011802461225",
+    "numerator": "96782371944013896780334759936"
+  },
+  "pole_factor_at_half": {"denominator": "1", "numerator": "0"},
+  "proof_boundary": "Finite rational window/tail algebra; no prime statistic or zeta phase is evaluated.",
+  "proof_object_sha256": "f17fa1c6c1f8f5ee393e691380542847d8c931a6742f389a3ad110875a613712",
+  "schema": "riemann.x17803-finite-bspline-window.v1",
+  "spline_integral": {"denominator": "1", "numerator": "1"},
+  "symmetry_values": [
+    {"denominator": "2154334728240414720000", "numerator": "1"},
+    {"denominator": "5385836820601036800", "numerator": "170279057849"},
+    {"denominator": "4787410507200921600", "numerator": "1721983270692236317"},
+    {"denominator": "22440986752504320000", "numerator": "75489558096433522049"}
+  ],
+  "tail_below_1e_minus_20": true,
+  "verdict": "EXACT_FINITE_BSPLINE_WINDOW_GATES_VERIFIED"
+}

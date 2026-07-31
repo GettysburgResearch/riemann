@@ -1,0 +1,39 @@
+{
+  "all_five_gain_floor": {
+    "denominator": "2377830169",
+    "numerator": "107679714895168032911145355294286192750832216753335566725252974321323602823209385873131865232918890911105024000000000000000000"
+  },
+  "box_square_support_cost": {
+    "denominator": "15015",
+    "numerator": "64712"
+  },
+  "classification": "SYNTHETIC_MODEL",
+  "difference_support_cost": {
+    "denominator": "15015",
+    "numerator": "32356"
+  },
+  "gain_exceeds_10_pow_115": true,
+  "line_attenuation_upper": {
+    "denominator": "2000",
+    "numerator": "1"
+  },
+  "off_line_displacement_lower": {
+    "denominator": "8",
+    "numerator": "1"
+  },
+  "proof_boundary": "Finite rational algebra only; no Riemann prime or zero interval is evaluated.",
+  "proof_object_sha256": "2a35943388ffe9ea96b602a39fa6cb1812b42dce94bd45cdc650847aba2d4de5",
+  "schema": "riemann.x17802-first-difference-notches.v1",
+  "single_replacement_gain_floors": [
+    {"denominator": "1", "numerator": "360042081101663630233600"},
+    {"denominator": "121", "numerator": "20252367061968579200640000"},
+    {"denominator": "169", "numerator": "20252367061968579200640000"},
+    {"denominator": "961", "numerator": "81009468247874316802560000"},
+    {"denominator": "121", "numerator": "9001052027541590755840000"}
+  ],
+  "subset_coefficient_absolute_sum": {"denominator": "1", "numerator": "1"},
+  "subset_coefficient_count": 32,
+  "synthetic_recursive_value": {"denominator": "614083470", "numerator": "14298143731"},
+  "synthetic_subset_value": {"denominator": "614083470", "numerator": "14298143731"},
+  "verdict": "EXACT_FIRST_DIFFERENCE_NOTCH_IDENTITIES_VERIFIED"
+}
