@@ -1,0 +1,56 @@
+{
+  "constant_moment": {
+    "rational": {"denominator": "1", "numerator": "0"},
+    "sqrt2": {"denominator": "1", "numerator": "0"}
+  },
+  "eta_hinge_coefficients": [
+    {
+      "rational": {"denominator": "1", "numerator": "1"},
+      "sqrt2": {"denominator": "1", "numerator": "0"}
+    },
+    {
+      "rational": {"denominator": "1", "numerator": "-2"},
+      "sqrt2": {"denominator": "1", "numerator": "-1"}
+    },
+    {
+      "rational": {"denominator": "1", "numerator": "1"},
+      "sqrt2": {"denominator": "1", "numerator": "2"}
+    },
+    {
+      "rational": {"denominator": "1", "numerator": "0"},
+      "sqrt2": {"denominator": "1", "numerator": "-1"}
+    }
+  ],
+  "h_times_window_energy": {
+    "rational": {"denominator": "1", "numerator": "2"},
+    "sqrt2": {"denominator": "3", "numerator": "-1"}
+  },
+  "linear_moment": {
+    "rational": {"denominator": "1", "numerator": "0"},
+    "sqrt2": {"denominator": "1", "numerator": "0"}
+  },
+  "linearized_product": {"denominator": "1", "numerator": "-10"},
+  "pole_polynomial_value": {
+    "rational": {"denominator": "1", "numerator": "0"},
+    "sqrt2": {"denominator": "1", "numerator": "0"}
+  },
+  "pole_ratio": {
+    "rational": {"denominator": "1", "numerator": "0"},
+    "sqrt2": {"denominator": "2", "numerator": "1"}
+  },
+  "proof_boundary": "exact quadratic-field and rational algebra only; no zeta value, critical Hardy estimate, or RH conclusion",
+  "quadratic_field_relation": "sqrt2^2=2",
+  "reflected_product": {"denominator": "1", "numerator": "-10"},
+  "schema": "riemann.x15407-eta-reflection.synthetic.v1",
+  "selberg_coefficients": [
+    {"denominator": "1", "numerator": "0"},
+    {"denominator": "1", "numerator": "1"},
+    {"denominator": "1", "numerator": "4"},
+    {"denominator": "1", "numerator": "3"},
+    {"denominator": "1", "numerator": "9"},
+    {"denominator": "1", "numerator": "4"},
+    {"denominator": "1", "numerator": "0"},
+    {"denominator": "1", "numerator": "2"}
+  ],
+  "status": "EXACT_ETA_REFLECTION_ALGEBRA"
+}
