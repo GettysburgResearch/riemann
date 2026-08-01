@@ -13,13 +13,15 @@ complete profile-Gram lower        2265729/2896000
 good-support measure lower         29/32
 relative epsilon upper             51/100
 complete target/gap ratio          151/125439898
-proof-object SHA-256               8a32bf65f752ee645c4b081f81fa639871c514035188a79366d0400c6d791be8
+proof-object SHA-256               57492237050a855b7c99566cb1b654cac440d3be66d3f3eac5868990df28f95c
 ```
 
-The source-tail contribution uses only the exact unit-energy ceilings already
-present in the bound `DIRECTED_INTERVAL_ODE` primitive. It is intentionally
-conservative; decay of the full wrapper ratio does not require those ceilings
-to shrink because the scalarization denominator grows like `log gamma`.
+The complete 48KB source primitive is committed beside the certificate. The
+consumer checks its file SHA-256, internal primitive SHA-256, source-definition
+SHA-256, producer SHA-256, modes, separation scope, and unit-energy ledger. It
+is intentionally conservative; decay of the full wrapper ratio does not require
+those ceilings to shrink because the scalarization denominator grows like
+`log gamma`.
 
 ## Cofinal rule
 
