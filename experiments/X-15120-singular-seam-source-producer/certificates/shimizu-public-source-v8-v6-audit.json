@@ -1,0 +1,56 @@
+{
+  "schema": "riemann.singular-seam-source-row.v1",
+  "bindings": {
+    "manuscript_version": "Shimizu v8 (latest abstract) / v6 detailed indexed definitions",
+    "normalization_sha256": null,
+    "source_map_sha256": null
+  },
+  "window": {
+    "identifier": null,
+    "cutoff_definition": null,
+    "known": "finite centered window M; exact first M and cutoff formula not emitted"
+  },
+  "parameters": {
+    "alpha": null,
+    "s_R": null,
+    "a_tr": null,
+    "known_constraints": [
+      "alpha>1/2",
+      "s_R>r_R+1",
+      "a_tr>1/2"
+    ]
+  },
+  "readout": {
+    "gram": null,
+    "quartic_jet_coordinate": null,
+    "known": "finite-dimensional probe space S_M^cfw is named but no coordinate basis/dimension is emitted"
+  },
+  "chain": {
+    "raw_coordinate_matrix": null,
+    "jet_coordinate_matrix": null,
+    "seam_transpose_matrix": null,
+    "comparison_trace_matrix": null,
+    "lci_matrix": null,
+    "projection_matrix": null,
+    "seam_involution": null,
+    "known": [
+      "kappa(u)=(1/2+atan(u)/pi,0)",
+      "Pi_R exists abstractly as an orthogonal projection",
+      "rho_Gamma and chi_int are chosen once and for all but no formulas are fixed"
+    ]
+  },
+  "classical": {
+    "a4_linear_interval": null,
+    "known": "scalar probe eta_M^fp and finite-part rule are described but not coordinatized"
+  },
+  "target": {
+    "tau4_interval": [
+      "0.00007434028042155903583783846060250156947306763135396599249702198862838833",
+      "0.00007435011671954168375079742480823382176135706727491864190486602389042017"
+    ]
+  },
+  "audit_notes": [
+    "No surrogate matrices are permitted.",
+    "The public text names the finite probe space, scalar probe, FP rule, LCI, and projection but does not emit their finite numerical realization."
+  ]
+}
