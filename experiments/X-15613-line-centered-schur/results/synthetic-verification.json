@@ -1,0 +1,50 @@
+{
+  "actual_residual": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "actual_schur": {
+    "denominator": "1000",
+    "numerator": "-1"
+  },
+  "certificate_sha256": "58c9aca093b9fe93599249d97a7cddc05c2cf960d6788160dc44ecece72fb81c",
+  "classification": "EXACT_LINE_CENTERED_SCHUR_PERTURBATION_PASSES",
+  "direct_lower": {
+    "denominator": "1000",
+    "numerator": "-1"
+  },
+  "eta": {
+    "denominator": "45",
+    "numerator": "11"
+  },
+  "line_centered_schur": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "line_centered_trial_solve": {
+    "denominator": "10",
+    "numerator": "1"
+  },
+  "normalized_bound": {
+    "denominator": "4500",
+    "numerator": "11"
+  },
+  "normalized_negative_part": {
+    "denominator": "1000",
+    "numerator": "1"
+  },
+  "schema": "riemann.x15613-line-centered-schur.result.v1",
+  "strict_bound_slack": {
+    "denominator": "9000",
+    "numerator": "13"
+  },
+  "theorem_lower": {
+    "denominator": "4500",
+    "numerator": "-11"
+  },
+  "trial_energy": {
+    "denominator": "1000",
+    "numerator": "-1"
+  },
+  "verdict": "PASS_EXACT_L15632_SOFT_SCHUR_BOUND"
+}
