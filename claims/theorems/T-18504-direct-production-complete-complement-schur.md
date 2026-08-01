@@ -97,23 +97,35 @@ Return to the radical/complete-complement/ambient decomposition. Suppose
 B_{R,\lambda}
 \succeq-e_\lambda G_{R,\lambda}
 \tag{T-18504.7}
+\].
+
+Write the raw radical/complement cross in the low block as
+
+\[
+X_{RW,\lambda}=Q_{W,\lambda}^*B_\lambda Q_{R,\lambda},
 \]
 
-and let
+put
+
+\[
+Z_{R,\lambda}=L_\lambda Q_{R,\lambda},
+\qquad
+Z_{W,\lambda}=L_\lambda Q_{W,\lambda},
+\]
+
+and define the exact cross after ambient elimination by
 
 \[
 \widetilde X_\lambda
-=X_\lambda^{R,W}
--(L_\lambda Q_W)^*C_\lambda^{-1}
- (L_\lambda Q_R)
+=X_{RW,\lambda}-Z_{W,\lambda}^*C_\lambda^{-1}Z_{R,\lambda}.
 \tag{T-18504.8}
 \]
 
-be the exact radical/complement cross after ambient elimination. Assume
+Assume
 
 \[
 \begin{aligned}
-&(L_\lambda Q_R)^*C_\lambda^{-1}(L_\lambda Q_R)\\
+&Z_{R,\lambda}^*C_\lambda^{-1}Z_{R,\lambda}\\
 &\qquad
 +m_\lambda^{-1}
  \widetilde X_\lambda^*
