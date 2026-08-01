@@ -1,0 +1,11 @@
+{
+  "schema": "riemann.x18507.unbounded-profile-soft-sequence-template.v1",
+  "support_formula": "c_j = ceil(exp(j)), j >= 2",
+  "packet_formula": "N_j = j in the source-canonical even basis",
+  "zero_profile_formula": "K_j = ceil(4 j^2) certified critical-line rows; add a directed unseen-zero ledger",
+  "prime_manifest": "all prime powers q <= c_j",
+  "soft_threshold": "choose a directed empty generalized-eigenvalue interval inside [tau_j,2 tau_j]",
+  "tau_formula": "tau_j = c_j^(-1/4) unless an adaptive larger certified gap is available",
+  "final_gate": "PR #191 shifted LDL positivity on the exported soft packet",
+  "classification": "PARAMETERIZED_UNBOUNDED_PRODUCTION_SCHEDULE; PASSING COFINAL SEQUENCE NOT CLAIMED"
+}
