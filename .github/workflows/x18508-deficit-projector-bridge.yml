@@ -1,0 +1,36 @@
+name: x18508-deficit-projector-bridge
+
+on:
+  pull_request:
+    paths:
+      - 'claims/lemmas/L-18516-source-deficit-projector-bridge.md'
+      - 'claims/refutations/R-18503-source-valid-is-not-radical-or-deficit-canonical.md'
+      - 'experiments/X-18508-deficit-projector-bridge/**'
+      - '.github/workflows/x18508-deficit-projector-bridge.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/X-18508-deficit-projector-bridge
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Compile
+        run: python -m py_compile verify.py tests/test_verify.py
+      - name: Replay aligned and misaligned controls
+        run: |
+          mkdir -p artifacts
+          python verify.py certificates/aligned.json --output artifacts/aligned.json
+          python verify.py certificates/misaligned.json --output artifacts/misaligned.json
+      - name: Adversarial tests
+        run: PYTHONPATH=. python -m unittest -v tests/test_verify.py 2>&1 | tee artifacts/tests.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x18508-deficit-projector-bridge
+          path: experiments/X-18508-deficit-projector-bridge/artifacts
+          if-no-files-found: error
