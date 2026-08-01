@@ -38,6 +38,9 @@ def iv(x):
     return I(q(x['lower']),q(x['upper']))
 def canonical(x): return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def git_blob_sha(path):
+    data=path.read_bytes()
+    return hashlib.sha1(f'blob {len(data)}\0'.encode()+data).hexdigest()
 def psd2(a,b,d,strict=False):
     det=a*d-b.square()
     if strict:return a.lo>0 and d.lo>0 and det.lo>0
@@ -92,11 +95,12 @@ def verify(doc:dict[str,Any],repo_root:Path|None,skip_bindings:bool=False)->dict
     if not skip_bindings:
         if repo_root is None: raise V('repo root required for bindings')
         bindings=doc['bindings']
-        for key,sha_key in [('arithmetic_certificate_path','arithmetic_certificate_sha256')]:
-            path=repo_root/bindings[key]
-            if not path.is_file() or sha(path)!=bindings[sha_key]: raise V(f'binding failed: {key}')
+        path=repo_root/bindings['arithmetic_certificate_path']
+        if not path.is_file() or sha(path)!=bindings['arithmetic_certificate_sha256']:
+            raise V('arithmetic certificate binding failed')
         zpath=repo_root/bindings['zero_config_path']
-        if not zpath.is_file(): raise V('zero config missing')
+        if not zpath.is_file() or git_blob_sha(zpath)!=bindings['zero_config_blob_sha']:
+            raise V('zero config binding failed')
         binding_status='PASSED'
 
     result={'schema':'riemann.x18507.real-profile-soft-common-ledger.verification.v1','input_proof_object_sha256':doc['proof_object_sha256'],'binding_status':binding_status,'soft_profile_upper':str(Ds.hi),'hard_profile_lower':str(Dh.lo),'projector_angle_upper':str(angle),'graph_M_squared':str(M2),'normalized_direct_floor_lower':str((direct/I.p(G)).lo),'normalized_shifted_ldl_lower':str((pivot/I.p(G)).lo),'normalized_exact_schur_lower':str((exact/I.p(G)).lo),'negative_part_upper':'0','verdict':'CERTIFIED_FIRST_REAL_COMMON_PROFILE_SOFT_LEDGER'}
