@@ -35,14 +35,14 @@ jobs:
       SNAPSHOT_OUTPUT: snapshot-output
     steps:
       - uses: actions/checkout@v4
-      - name: Capture metadata and review evidence
+      - name: Capture supporting metadata
         run: python scripts/integration/capture_snapshot.py
         env:
           GITHUB_TOKEN: ${{ github.token }}
-      - name: Upload immutable snapshot payload
+      - name: Upload temporary supporting snapshot payload
         uses: actions/upload-artifact@v4
         with:
-          name: integration-snapshot-20260801T213552Z
+          name: integration-supporting-snapshot-20260801T213552Z
           path: snapshot-output/
           if-no-files-found: error
           retention-days: 90
