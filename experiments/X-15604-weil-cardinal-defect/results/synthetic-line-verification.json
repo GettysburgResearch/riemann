@@ -1,0 +1,48 @@
+{
+  "classification": "SYNTHETIC_ZERO_CONFIGURATION",
+  "deflated_critical_line_ids": [
+    "g1",
+    "g2"
+  ],
+  "dimension": 4,
+  "inertia": {
+    "negative": 0,
+    "positive": 2,
+    "zero": 2
+  },
+  "negative_witness": null,
+  "proof_object_sha256": "dd98782fc79a3049846529fa4a0c539505528516d2e1c2791836c6bf6dda43a3",
+  "radical_dimension": 2,
+  "residual_inertia": {
+    "negative": 0,
+    "positive": 0,
+    "zero": 4
+  },
+  "schema": "riemann.x15604-weil-cardinal-defect.v1",
+  "schur_control": {
+    "block_error": {
+      "denominator": 100,
+      "numerator": 1
+    },
+    "complement_floor": {
+      "denominator": 2,
+      "numerator": 1
+    },
+    "cross_squared": {
+      "denominator": 400,
+      "numerator": 1
+    },
+    "floor": {
+      "denominator": 200,
+      "numerator": -3
+    },
+    "ideal_min": {
+      "denominator": 1,
+      "numerator": 0
+    }
+  },
+  "zero_ids": [
+    "g1",
+    "g2"
+  ]
+}
