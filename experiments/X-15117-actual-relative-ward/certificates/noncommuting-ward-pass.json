@@ -1,0 +1,26 @@
+{
+  "schema": "riemann.actual-relative-ward.v1",
+  "raw_operator": [[1, 2], [2, -1]],
+  "jet_operator": [[0, 1], [1, 1]],
+  "max_order": 8,
+  "raw_diagonal_defects": {
+    "2": {"numerator": 1, "denominator": 7},
+    "3": {"numerator": -2, "denominator": 9},
+    "4": {"numerator": 5, "denominator": 11},
+    "5": {"numerator": 1, "denominator": 13},
+    "6": {"numerator": -3, "denominator": 17},
+    "7": {"numerator": 2, "denominator": 19},
+    "8": {"numerator": -1, "denominator": 23}
+  },
+  "nonlinear_counterterms": {
+    "2": {"numerator": 22, "denominator": 7},
+    "3": {"numerator": 88, "denominator": 9},
+    "4": {"numerator": 214, "denominator": 11},
+    "5": {"numerator": 794, "denominator": 13},
+    "6": {"numerator": 1629, "denominator": 17},
+    "7": {"numerator": 6405, "denominator": 19},
+    "8": {"numerator": 10372, "denominator": 23}
+  },
+  "hilbert_schmidt_upper": 4,
+  "series_radius": {"numerator": 1, "denominator": 8}
+}
