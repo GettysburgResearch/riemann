@@ -1,0 +1,66 @@
+name: x20701-directed-d0001-frame
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-20701-directed-d0001-frame/**'
+      - 'claims/experiments/X-20701-*'
+      - 'claims/observations/O-20701-*'
+      - 'claims/methodology/M-20701-*'
+      - '.github/workflows/x20701-directed-d0001-frame.yml'
+  workflow_dispatch:
+
+jobs:
+  directed-ladder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: experiments/X-20701-directed-d0001-frame
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install directed backend
+        run: python -m pip install --disable-pip-version-check python-flint==0.9.0
+      - name: Compile exact producer and consumer
+        run: python -m py_compile arb_producer.py verify.py
+      - name: Produce 256-bit ladder
+        run: |
+          mkdir -p artifacts
+          python arb_producer.py configs/support-ladder.json \
+            --precision-bits 256 \
+            --output artifacts/certificate-p256.json
+          python verify.py artifacts/certificate-p256.json \
+            --output artifacts/verification-p256.json
+      - name: Produce 384-bit ladder
+        run: |
+          python arb_producer.py configs/support-ladder.json \
+            --precision-bits 384 \
+            --output artifacts/certificate-p384.json
+          python verify.py artifacts/certificate-p384.json \
+            --output artifacts/verification-p384.json
+      - name: Compare precision ladders
+        run: |
+          python verify.py --compare \
+            artifacts/certificate-p256.json \
+            artifacts/certificate-p384.json \
+            --output artifacts/precision-comparison.json
+      - name: Record hashes and environment
+        run: |
+          sha256sum arb_producer.py verify.py configs/support-ladder.json artifacts/*.json \
+            > artifacts/SHA256SUMS
+          python - <<'PY' > artifacts/environment.json
+          import importlib.metadata, json, platform, sys
+          print(json.dumps({
+            'python': sys.version,
+            'python_flint': importlib.metadata.version('python-flint'),
+            'platform': platform.platform(),
+          }, indent=2, sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x20701-directed-d0001-frame
+          path: experiments/X-20701-directed-d0001-frame/artifacts
+          if-no-files-found: error
