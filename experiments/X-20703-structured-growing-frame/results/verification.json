@@ -1,0 +1,62 @@
+{
+  "base_schur": [
+    [
+      {
+        "denominator": 2400000,
+        "numerator": 23347
+      }
+    ]
+  ],
+  "cauchy_determinant": {
+    "denominator": 16614935900640000,
+    "numerator": 24137569
+  },
+  "dimension": 4,
+  "graph_schur": [
+    [
+      {
+        "denominator": 2400000,
+        "numerator": 23347
+      }
+    ]
+  ],
+  "newton_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 1
+    },
+    {
+      "denominator": 41,
+      "numerator": 17
+    },
+    {
+      "denominator": 1595,
+      "numerator": 289
+    },
+    {
+      "denominator": 60300,
+      "numerator": 4913
+    }
+  ],
+  "proof_object_sha256": "d3ae709be011153dd9ad22949751a8383309f3dbc93f90b2a2a1f78ce327704b",
+  "schema": "riemann.x20703.structured-frame.result.v1",
+  "structured_coefficients": [
+    {
+      "denominator": 54043,
+      "numerator": -300160
+    },
+    {
+      "denominator": 54043,
+      "numerator": 1489757550
+    },
+    {
+      "denominator": 4913,
+      "numerator": -172760616
+    },
+    {
+      "denominator": 4913,
+      "numerator": 41814700
+    }
+  ],
+  "verdict": "CERTIFIED_STRUCTURED_CAUCHY_FRAME_AND_SCHUR_INVARIANCE"
+}
