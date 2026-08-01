@@ -1,0 +1,63 @@
+{
+  "schema": "riemann.x15412-jordan-arch-boundary.synthetic.v1",
+  "jordan": {
+    "omega": {"numerator": "1", "denominator": "2"},
+    "parents": [
+      {"n": "1", "amplitude": {"numerator": "1", "denominator": "1"}},
+      {"n": "2", "amplitude": {"numerator": "-1", "denominator": "2"}},
+      {"n": "3", "amplitude": {"numerator": "2", "denominator": "3"}},
+      {"n": "4", "amplitude": {"numerator": "3", "denominator": "5"}},
+      {"n": "6", "amplitude": {"numerator": "-2", "denominator": "7"}},
+      {"n": "12", "amplitude": {"numerator": "5", "denominator": "11"}}
+    ],
+    "claimed_norm_squared": {"numerator": "12500821", "denominator": "5336100"},
+    "conditional": {
+      "n": "12",
+      "values": {
+        "1": {"numerator": "2", "denominator": "1"},
+        "2": {"numerator": "-1", "denominator": "1"},
+        "3": {"numerator": "3", "denominator": "2"},
+        "4": {"numerator": "0", "denominator": "1"},
+        "6": {"numerator": "-2", "denominator": "1"},
+        "12": {"numerator": "1", "denominator": "3"}
+      },
+      "claimed_mean": {"numerator": "1", "denominator": "9"},
+      "claimed_second_moment": {"numerator": "323", "denominator": "216"},
+      "claimed_variance": {"numerator": "961", "denominator": "648"}
+    }
+  },
+  "archimedean": {
+    "omega": {"numerator": "1", "denominator": "2"},
+    "u": {"numerator": "5", "denominator": "2"},
+    "beta_channel_moment": {"numerator": "7", "denominator": "5"},
+    "claimed_volterra_channel_moment": {"numerator": "7", "denominator": "10"},
+    "claimed_signed_moment": {"numerator": "7", "denominator": "10"},
+    "claimed_positive_majorant_moment": {"numerator": "21", "denominator": "10"},
+    "claimed_score": {"numerator": "1", "denominator": "3"}
+  },
+  "boundary_archimedean": {
+    "omega": {"numerator": "1", "denominator": "2"},
+    "B0": {"numerator": "5", "denominator": "4"},
+    "claimed_b0": {"numerator": "5", "denominator": "4"},
+    "claimed_v0": {"numerator": "5", "denominator": "4"},
+    "claimed_g0": {"numerator": "0", "denominator": "1"},
+    "claimed_ell0": {"numerator": "5", "denominator": "2"},
+    "claimed_signed_zero_slope": {"numerator": "5", "denominator": "4"}
+  },
+  "cauchy_boundary": {
+    "z": {"numerator": "2", "denominator": "3"},
+    "w": {"numerator": "3", "denominator": "5"},
+    "claimed_cauchy_gram": {"numerator": "15", "denominator": "19"},
+    "claimed_left_derivative": {"numerator": "9", "denominator": "19"},
+    "claimed_right_derivative": {"numerator": "10", "denominator": "19"},
+    "claimed_endpoint_trace": {"numerator": "1", "denominator": "1"}
+  },
+  "pole_zero": {
+    "arithmetic_residue": {"numerator": "3", "denominator": "7"},
+    "omega": {"numerator": "1", "denominator": "2"},
+    "B0": {"numerator": "5", "denominator": "4"},
+    "claimed_signed_limit": {"numerator": "15", "denominator": "28"},
+    "claimed_positive_majorant_pole_coefficient": {"numerator": "15", "denominator": "14"},
+    "claimed_polarized_boundary_coefficient": {"numerator": "15", "denominator": "28"}
+  }
+}
