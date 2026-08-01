@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {"inside": true, "midpoint": "1.14028402300600955379369306403560872098", "object": "P_even[0,0]"},
+    {"inside": true, "midpoint": "0.4081868157732204325993259721592455021327", "object": "P_even[0,1]"},
+    {"inside": true, "midpoint": "0.4081868157732204325993259721592455021327", "object": "P_even[1,0]"},
+    {"inside": true, "midpoint": "-0.2295221335638101635787443151952332293507", "object": "P_even[1,1]"},
+    {"inside": true, "midpoint": "-1.056822325783766308843610031042796681563", "object": "E_even[0,0]"},
+    {"inside": true, "midpoint": "-0.2865772790389178562816092323459682591783", "object": "E_even[0,1]"},
+    {"inside": true, "midpoint": "-0.2865772790389178562816092323459682591783", "object": "E_even[1,0]"},
+    {"inside": true, "midpoint": "0.4068942389851994316505566897327602792304", "object": "E_even[1,1]"}
+  ],
+  "precision_digits": 100,
+  "schema": "riemann.x18505.independent-mpmath-replay.v1",
+  "verdict": "INDEPENDENT_MPMATH_MIDPOINTS_INSIDE_ALL_DIRECTED_PRIMITIVES"
+}
