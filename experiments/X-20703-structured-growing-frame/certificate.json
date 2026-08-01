@@ -1,0 +1,106 @@
+{
+  "graph_coefficients": [
+    [
+      {
+        "denominator": 7,
+        "numerator": 2
+      }
+    ],
+    [
+      {
+        "denominator": 5,
+        "numerator": -1
+      }
+    ],
+    [
+      {
+        "denominator": 11,
+        "numerator": 3
+      }
+    ]
+  ],
+  "interpolation_data": [
+    {
+      "denominator": 2,
+      "numerator": 1
+    },
+    {
+      "denominator": 3,
+      "numerator": -2
+    },
+    {
+      "denominator": 5,
+      "numerator": 3
+    },
+    {
+      "denominator": 11,
+      "numerator": 7
+    }
+  ],
+  "nodes": [
+    25,
+    42,
+    59,
+    76
+  ],
+  "poles": [
+    1,
+    4,
+    9
+  ],
+  "radical_dimension": 1,
+  "row_scalars": [
+    2,
+    -3,
+    5,
+    7
+  ],
+  "schema": "riemann.x20703.structured-frame.certificate.v1",
+  "schur_model": [
+    [
+      {
+        "denominator": 100,
+        "numerator": 1
+      },
+      {
+        "denominator": 50,
+        "numerator": 1
+      },
+      {
+        "denominator": 80,
+        "numerator": -1
+      },
+      {
+        "denominator": 100,
+        "numerator": 1
+      }
+    ],
+    [
+      {
+        "denominator": 50,
+        "numerator": 1
+      },
+      2,
+      0,
+      0
+    ],
+    [
+      {
+        "denominator": 80,
+        "numerator": -1
+      },
+      0,
+      3,
+      0
+    ],
+    [
+      {
+        "denominator": 100,
+        "numerator": 1
+      },
+      0,
+      0,
+      5
+    ]
+  ]
+}
