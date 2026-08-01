@@ -1,0 +1,42 @@
+{
+  "ambient_dimension": 4,
+  "angle_squared_upper": {
+    "denominator": 100,
+    "numerator": 1
+  },
+  "complement_frame_ldl_pivots": [
+    {
+      "denominator": 1,
+      "numerator": 4
+    },
+    {
+      "denominator": 4,
+      "numerator": 23
+    }
+  ],
+  "complement_rank": 2,
+  "count_lower": 2,
+  "count_upper": 2,
+  "metric_ldl_pivots": [
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1},
+    {"denominator": 1, "numerator": 1}
+  ],
+  "proof_object_sha256": "a89de5b1155948aaa524dcb3eabeff62b9e7d5d074fdbd9b2ff2336361c25f68",
+  "radical_evaluation_upper": {
+    "denominator": 100,
+    "numerator": 1
+  },
+  "radical_moat_ldl_pivots": [
+    {"denominator": 100, "numerator": 1},
+    {"denominator": 100, "numerator": 1}
+  ],
+  "radical_rank": 2,
+  "schema": "riemann.x18502-full-complement-frame.v1",
+  "status": "CERTIFIED_FULL_COMPLEMENT_AND_SHARP_COUNT",
+  "threshold": {
+    "denominator": 1,
+    "numerator": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Q_C": [["0"],["0"],["0"],["1"]],
+  "Q_D": [["0","0"],["1","0"],["0","1"],["0","0"]],
+  "ambient_deficit_pivots": ["1","4","3","1"],
+  "ambient_metric_pivots": ["1","1","1","1"],
+  "complement_metric_pivots": ["1","1","1"],
+  "deficit_cross": [["0","0"]],
+  "high_gap_pivots": ["2","1"],
+  "low_gap_pivots": ["1"],
+  "metric_cross": [["0","0"]],
+  "proof_boundary": "Exact finite spectral bridge. Mathematical application still requires a production complete positive deficit D_lambda in the declared metric.",
+  "schema": "riemann.x18508.deficit-projector-verification.v1",
+  "source_equals_deficit": true,
+  "theta": "2",
+  "verdict": "CERTIFIED_SOURCE_EQUALS_DEFICIT_CANONICAL",
+  "verification_sha256": "01028984231587ea44ce9502d323333ebe060cfe1490a81ec5c5c291c1a57708"
+}

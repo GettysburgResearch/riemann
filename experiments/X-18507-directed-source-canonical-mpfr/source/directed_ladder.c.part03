@@ -1,0 +1,53 @@
+    for(int p=2;p<=c;p++)if(s[p]){
+        long long q=p; while(q<=c){if(n==cap){cap*=2;out=realloc(out,(size_t)cap*sizeof(pp_t));if(!out)die("realloc pp");}out[n++]=(pp_t){(int)q,p};if(q>c/p)break;q*=p;}
+    }
+    free(s);
+    for(int i=0;i<n;i++)for(int j=i+1;j<n;j++)if(out[j].q<out[i].q){pp_t t=out[i];out[i]=out[j];out[j]=t;}
+    *count=n;return out;
+}
+
+static void compute_full_parts(iv *P,iv *E,int n,int m,const iv *L,const iv *pi,const iv *euler,const iv *S,const iv *CC,const iv *XC,const pp_t *pps,int np){
+    iv one,two,four,L2,pi2,sixteen_pi2,pref,tmp,sinhq,eL,kappa,U,J,log2,halfpi;
+    iv_init(&one);iv_init(&two);iv_init(&four);iv_init(&L2);iv_init(&pi2);iv_init(&sixteen_pi2);iv_init(&pref);iv_init(&tmp);iv_init(&sinhq);iv_init(&eL);iv_init(&kappa);iv_init(&U);iv_init(&J);iv_init(&log2);iv_init(&halfpi);
+    iv_set_si(&one,1);iv_set_si(&two,2);iv_set_si(&four,4);iv_mul(&L2,L,L);iv_mul(&pi2,pi,pi);iv_scale_si(&sixteen_pi2,&pi2,16);
+    iv_div(&tmp,L,&four);iv_sinh(&sinhq,&tmp);iv_mul(&pref,&sinhq,&sinhq);iv_mul(&pref,&pref,L);iv_scale_si(&pref,&pref,32);iv_exp(&eL,L);
+    iv num,den;iv_init(&num);iv_init(&den);iv_sub(&num,&eL,&one);iv_add(&den,&eL,&one);iv_div(&num,&num,&den);iv_mul(&num,&num,pi);iv_scale_si(&num,&num,4);iv_log(&kappa,&num);iv_add(&kappa,&kappa,euler);
+    iv_div(&tmp,L,&two);iv_exp(&U,&tmp);iv_add(&num,&U,&one);iv_log(&num,&num);iv_scale_si(&num,&num,-2);iv_mul(&den,&U,&U);iv_add(&den,&den,&one);iv_log(&den,&den);iv_add(&J,&num,&den);iv_atan(&tmp,&U);iv_scale_si(&tmp,&tmp,2);iv_add(&J,&J,&tmp);iv_log(&log2,&two);iv_add(&J,&J,&log2);iv_div(&halfpi,pi,&two);iv_sub(&J,&J,&halfpi);
+    iv mn,numer,dm,dn,mm,nn,M02,MR,MP;iv_init(&mn);iv_init(&numer);iv_init(&dm);iv_init(&dn);iv_init(&mm);iv_init(&nn);iv_init(&M02);iv_init(&MR);iv_init(&MP);
+    iv_set_si(&mn,m*n);iv_mul(&numer,&sixteen_pi2,&mn);iv_sub(&numer,&L2,&numer);iv_set_si(&mm,m*m);iv_set_si(&nn,n*n);iv_mul(&dm,&sixteen_pi2,&mm);iv_add(&dm,&dm,&L2);iv_mul(&dn,&sixteen_pi2,&nn);iv_add(&dn,&dn,&L2);iv_mul(&den,&dm,&dn);iv_mul(&num,&pref,&numer);iv_div(&M02,&num,&den);
+    if(n==m){iv_set(&MR,&kappa);iv scalecc;iv_init(&scalecc);iv_scale_si(&scalecc,&CC[abs(n)],2);iv_add(&MR,&MR,&scalecc);iv_add(&MR,&MR,&J);iv_mul(&tmp,&two,&XC[abs(n)]);iv_div(&tmp,&tmp,L);iv_sub(&MR,&MR,&tmp);iv_clear(&scalecc);}else{
+        iv sm,sn;iv_init(&sm);iv_init(&sn);iv_set(&sm,&S[abs(m)]);if(m<0)iv_neg(&sm,&sm);iv_set(&sn,&S[abs(n)]);if(n<0)iv_neg(&sn,&sn);iv_sub(&num,&sm,&sn);iv_set_si(&den,n-m);iv_mul(&den,&den,pi);iv_div(&MR,&num,&den);iv_clear(&sm);iv_clear(&sn);
+    }
+    iv_set_si(&MP,0);
+    for(int qi=0;qi<np;qi++){
+        iv iq,ip,y,lp,sq,weight,kern,argm,argn;iv_init(&iq);iv_init(&ip);iv_init(&y);iv_init(&lp);iv_init(&sq);iv_init(&weight);iv_init(&kern);iv_init(&argm);iv_init(&argn);
+        iv_set_si(&iq,pps[qi].q);iv_set_si(&ip,pps[qi].p);iv_log(&y,&iq);iv_log(&lp,&ip);iv_sqrt(&sq,&iq);iv_div(&weight,&lp,&sq);
+        if(n==m){iv_div(&tmp,&y,L);iv_sub(&tmp,&one,&tmp);iv_scale_si(&tmp,&tmp,2);iv_mul(&argn,pi,&y);iv_scale_si(&argn,&argn,2*n);iv_div(&argn,&argn,L);iv_cos(&kern,&argn);iv_mul(&kern,&kern,&tmp);}else{iv_mul(&argm,pi,&y);iv_scale_si(&argm,&argm,2*m);iv_div(&argm,&argm,L);iv_sin(&argm,&argm);iv_mul(&argn,pi,&y);iv_scale_si(&argn,&argn,2*n);iv_div(&argn,&argn,L);iv_sin(&argn,&argn);iv_sub(&kern,&argm,&argn);iv_set_si(&den,n-m);iv_mul(&den,&den,pi);iv_div(&kern,&kern,&den);}
+        iv_mul(&kern,&kern,&weight);iv_add(&MP,&MP,&kern);
+        iv_clear(&iq);iv_clear(&ip);iv_clear(&y);iv_clear(&lp);iv_clear(&sq);iv_clear(&weight);iv_clear(&kern);iv_clear(&argm);iv_clear(&argn);
+    }
+    iv_sub(P,&M02,&MR);iv_neg(E,&MP);
+    iv_clear(&one);iv_clear(&two);iv_clear(&four);iv_clear(&L2);iv_clear(&pi2);iv_clear(&sixteen_pi2);iv_clear(&pref);iv_clear(&tmp);iv_clear(&sinhq);iv_clear(&eL);iv_clear(&kappa);iv_clear(&U);iv_clear(&J);iv_clear(&log2);iv_clear(&halfpi);iv_clear(&num);iv_clear(&den);iv_clear(&mn);iv_clear(&numer);iv_clear(&dm);iv_clear(&dn);iv_clear(&mm);iv_clear(&nn);iv_clear(&M02);iv_clear(&MR);iv_clear(&MP);
+}
+
+static void compute_even_entry(iv *Pout,iv *Eout,int i,int j,const iv *L,const iv *pi,const iv *euler,const iv *S,const iv *CC,const iv *XC,const pp_t *pps,int np){
+    iv_zero(Pout);iv_zero(Eout);
+    int si[2],sj[2],ni=1,nj=1;si[0]=i;sj[0]=j;if(i>0){si[0]=i;si[1]=-i;ni=2;}if(j>0){sj[0]=j;sj[1]=-j;nj=2;}
+    for(int a=0;a<ni;a++)for(int b=0;b<nj;b++){iv p,e;iv_init(&p);iv_init(&e);compute_full_parts(&p,&e,si[a],sj[b],L,pi,euler,S,CC,XC,pps,np);iv_addto(Pout,&p);iv_addto(Eout,&e);iv_clear(&p);iv_clear(&e);}
+}
+
+int main(int argc,char**argv){
+    if(argc!=3){fprintf(stderr,"usage: %s c N\n",argv[0]);return 2;}int c_int=atoi(argv[1]),N=atoi(argv[2]);if(c_int<2||N<1||N>32)die("bad c,N");int d=N+1;
+    iv one,two,c,L,pi,euler;iv_init(&one);iv_init(&two);iv_init(&c);iv_init(&L);iv_init(&pi);iv_init(&euler);iv_set_si(&one,1);iv_set_si(&two,2);iv_set_si(&c,c_int);iv_log(&L,&c);iv_const_pi(&pi);iv_const_euler(&euler);
+    iv psiq,halfpi,log2,three_log2,tmp;iv_init(&psiq);iv_init(&halfpi);iv_init(&log2);iv_init(&three_log2);iv_init(&tmp);iv_div(&halfpi,&pi,&two);iv_log(&log2,&two);iv_scale_si(&three_log2,&log2,3);iv_add(&tmp,&euler,&halfpi);iv_add(&tmp,&tmp,&three_log2);iv_neg(&psiq,&tmp);
+    iv *S=malloc((size_t)d*sizeof(iv)),*CC=malloc((size_t)d*sizeof(iv)),*XC=malloc((size_t)d*sizeof(iv));if(!S||!CC||!XC)die("malloc sequences");for(int i=0;i<d;i++){iv_init(&S[i]);iv_init(&CC[i]);iv_init(&XC[i]);}
+    for(int n=0;n<=N;n++){
+        iv gs,gcc,gx1,gx2,zr,zi;iv_init(&gs);iv_init(&gcc);iv_init(&gx1);iv_init(&gx2);iv_init(&zr);iv_init(&zi);geometric_sums(n,&L,&gs,&gcc,&gx1,&gx2);iv_set_frac(&zr,1,4);iv_scale_si(&zi,&pi,n);iv_div(&zi,&zi,&L);civ psi,psi1;civ_init(&psi);civ_init(&psi1);digamma_and_trigamma(&psi,&psi1,&zr,&zi);
+        if(n==0){iv_set_si(&S[n],0);iv_set_si(&CC[n],0);}else{iv_div(&S[n],&psi.im,&two);iv w;iv_init(&w);iv_scale_si(&w,&pi,2*n);iv_div(&w,&w,&L);iv_mul(&tmp,&w,&gs);iv_sub(&S[n],&S[n],&tmp);iv_sub(&CC[n],&psi.re,&psiq);iv_scale_si(&CC[n],&CC[n],-1);iv_div(&CC[n],&CC[n],&two);iv_add(&CC[n],&CC[n],&gcc);iv_clear(&w);}iv four;iv_init(&four);iv_set_si(&four,4);iv_div(&XC[n],&psi1.re,&four);iv_mul(&tmp,&L,&gx1);iv_sub(&XC[n],&XC[n],&tmp);iv_sub(&XC[n],&XC[n],&gx2);iv_clear(&four);civ_clear(&psi);civ_clear(&psi1);iv_clear(&zr);iv_clear(&zi);iv_clear(&gs);iv_clear(&gcc);iv_clear(&gx1);iv_clear(&gx2);
+    }
+    int np=0;pp_t*pps=prime_powers(c_int,&np);
+    iv **P=malloc((size_t)d*sizeof(iv*)),**E=malloc((size_t)d*sizeof(iv*));if(!P||!E)die("malloc matrices");for(int i=0;i<d;i++){P[i]=malloc((size_t)d*sizeof(iv));E[i]=malloc((size_t)d*sizeof(iv));for(int j=0;j<d;j++){iv_init(&P[i][j]);iv_init(&E[i][j]);}}
+    for(int i=0;i<d;i++)for(int j=i;j<d;j++){compute_even_entry(&P[i][j],&E[i][j],i,j,&L,&pi,&euler,S,CC,XC,pps,np);if(i!=j){iv_set(&P[j][i],&P[i][j]);iv_set(&E[j][i],&E[i][j]);}}
+    printf("{\n\"schema\":\"riemann.x18506.local-directed-source-canonical.v1\",\n\"support\":{\"c\":%d,\"N\":%d,\"L\":",c_int,N);print_iv(&L);printf(",\"prime_power_count\":%d},\n\"precision_bits\":%d,\n\"metric_diagonal\":[",np,PREC);for(int i=0;i<d;i++){if(i)printf(",");printf("%d",i?2:1);}printf("],\n\"Q_W\":[");for(int i=0;i<d;i++){if(i)printf(",");printf("1");}printf("],\n\"Q_E\":[");for(int i=1;i<d;i++){if(i>1)printf(",");printf("[");for(int k=0;k<d;k++){if(k)printf(",");printf("%d",k==0?-2:(k==i?1:0));}printf("]");}printf("],\n\"P_even\":[");for(int i=0;i<d;i++){if(i)printf(",");printf("[");for(int j=0;j<d;j++){if(j)printf(",");print_iv(&P[i][j]);}printf("]");}printf("],\n\"E_even\":[");for(int i=0;i<d;i++){if(i)printf(",");printf("[");for(int j=0;j<d;j++){if(j)printf(",");print_iv(&E[i][j]);}printf("]");}printf("],\n\"scope\":\"Actual cutoff-free D-0001 source-canonical quotient; directed primitive matrix emitter.\"\n}\n");
+    return 0;
+}

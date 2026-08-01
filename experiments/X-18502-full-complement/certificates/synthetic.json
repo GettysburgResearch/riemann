@@ -1,0 +1,36 @@
+{
+  "schema": "riemann.x18502-full-complement-frame.v1",
+  "metric": [
+    [{"numerator": 1, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 1, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 1, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 1, "denominator": 1}]
+  ],
+  "evaluation_gram": [
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 5, "denominator": 1}, {"numerator": 3, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}, {"numerator": 3, "denominator": 1}, {"numerator": 9, "denominator": 1}]
+  ],
+  "radical_basis": [
+    [{"numerator": 1, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 1, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}]
+  ],
+  "complement_basis": [
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 1, "denominator": 1}, {"numerator": 0, "denominator": 1}],
+    [{"numerator": 0, "denominator": 1}, {"numerator": 1, "denominator": 1}]
+  ],
+  "threshold": {"numerator": 1, "denominator": 1},
+  "radical_evaluation_upper": {"numerator": 1, "denominator": 100},
+  "expected": {
+    "status": "CERTIFIED_FULL_COMPLEMENT_AND_SHARP_COUNT",
+    "count_lower": 2,
+    "count_upper": 2,
+    "radical_rank": 2,
+    "complement_rank": 2
+  }
+}

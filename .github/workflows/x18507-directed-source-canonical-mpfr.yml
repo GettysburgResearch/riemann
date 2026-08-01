@@ -1,0 +1,52 @@
+name: x18507-directed-source-canonical-mpfr
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-18507-directed-source-canonical-mpfr/**'
+      - 'claims/experiments/X-18507-directed-source-canonical-growing-ladder.md'
+      - '.github/workflows/x18507-directed-source-canonical-mpfr.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: experiments/X-18507-directed-source-canonical-mpfr
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Reconstruct immutable MPFR producer source
+        run: bash reconstruct_source.sh
+      - name: Compile exact consumers
+        run: python -m py_compile common.py prepare.py verify.py compare_precisions.py tests/test_verify.py
+      - name: Replay retained directed fixture
+        run: |
+          mkdir -p artifacts
+          python verify.py primitives/c10-N2-p384.json trials/c10-N2.json --output artifacts/c10-N2-replay.json
+      - name: Run adversarial tests
+        run: PYTHONPATH=. python -m unittest -v tests/test_verify.py 2>&1 | tee artifacts/tests.txt
+      - name: Check retained summary semantics
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('results/summary.json'))
+          assert d['level_count']==9
+          assert d['all_directed_positive'] is True
+          assert d['all_delta_zero'] is True
+          assert d['unbounded_sequence_proved'] is False
+          assert all(x['delta_operator_norm_upper']=='0' for x in d['levels'])
+          assert all(x['verdict']=='CERTIFIED_DELTA_ZERO_SOURCE_CANONICAL_DIRECT_BLOCK' for x in d['levels'])
+          print(d['summary_sha256'])
+          PY
+      - name: Record hashes
+        run: sha256sum directed_ladder.c common.py prepare.py verify.py compare_precisions.py results/summary.json artifacts/* > artifacts/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x18507-exact-replay
+          path: experiments/X-18507-directed-source-canonical-mpfr/artifacts
+          if-no-files-found: error

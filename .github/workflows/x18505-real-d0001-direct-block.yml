@@ -1,0 +1,62 @@
+name: x18505-real-d0001-direct-block
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-18505-real-d0001-direct-block/**'
+      - 'claims/experiments/X-18505-real-d0001-direct-block-verifier.md'
+      - '.github/workflows/x18505-real-d0001-direct-block.yml'
+  workflow_dispatch:
+
+jobs:
+  directed-real-block:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: experiments/X-18505-real-d0001-direct-block
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Materialize and hash immutable directed source
+        run: |
+          gzip -dc directed_producer.c.gz > directed_producer.c
+          test "$(sha256sum directed_producer.c | cut -d' ' -f1)" = "be431ad0011bcafa482836cc9116bb82ea5dc926914b2ab642a0eb98678e4afb"
+      - name: Install native and independent backends
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libmpfr-dev libgmp-dev gcc
+          python -m pip install --disable-pip-version-check mpmath==1.3.0
+      - name: Compile producer and consumers
+        run: |
+          gcc -O2 -std=c11 directed_producer.c -lmpfr -lgmp -o directed_producer_p256
+          gcc -O2 -std=c11 -DPREC=384 directed_producer.c -lmpfr -lgmp -o directed_producer_p384
+          python -m py_compile verify.py independent_mpmath_replay.py compare_precisions.py tests/test_verify.py
+      - name: Recheck committed certificate
+        run: |
+          mkdir -p artifacts
+          python verify.py certificates/c5-N1-p384.json --output artifacts/committed-verification.json
+      - name: Produce and verify precision ladder
+        run: |
+          ./directed_producer_p256 > artifacts/c5-N1-p256.json
+          ./directed_producer_p384 > artifacts/c5-N1-p384.json
+          python verify.py artifacts/c5-N1-p256.json --output artifacts/c5-N1-verification-p256.json
+          python verify.py artifacts/c5-N1-p384.json --output artifacts/c5-N1-verification-p384.json
+          python compare_precisions.py artifacts/c5-N1-p256.json artifacts/c5-N1-p384.json \
+            --output artifacts/precision-comparison.json
+      - name: Independent midpoint replay
+        run: |
+          python independent_mpmath_replay.py artifacts/c5-N1-p384.json \
+            --output artifacts/independent-mpmath-replay.json
+      - name: Adversarial exact tests
+        run: |
+          PYTHONPATH=. python -m unittest -v tests/test_verify.py 2>&1 | tee artifacts/tests.txt
+      - name: Hash generated artifacts
+        run: sha256sum artifacts/*.json artifacts/tests.txt > artifacts/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x18505-real-d0001-direct-block
+          path: experiments/X-18505-real-d0001-direct-block/artifacts
+          if-no-files-found: error

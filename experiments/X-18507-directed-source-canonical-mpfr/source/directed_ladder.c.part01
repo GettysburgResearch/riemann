@@ -1,0 +1,70 @@
+static void iv_sub(iv *z,const iv *a,const iv *b){mpfr_t l,u;mpfr_init2(l,PREC);mpfr_init2(u,PREC);mpfr_sub(l,a->lo,b->hi,MPFR_RNDD);mpfr_sub(u,a->hi,b->lo,MPFR_RNDU);mpfr_set(z->lo,l,MPFR_RNDD);mpfr_set(z->hi,u,MPFR_RNDU);mpfr_clear(l);mpfr_clear(u);}
+static void iv_neg(iv *z,const iv *a){mpfr_t l,u;mpfr_init2(l,PREC);mpfr_init2(u,PREC);mpfr_neg(l,a->hi,MPFR_RNDD);mpfr_neg(u,a->lo,MPFR_RNDU);mpfr_set(z->lo,l,MPFR_RNDD);mpfr_set(z->hi,u,MPFR_RNDU);mpfr_clear(l);mpfr_clear(u);}
+static void iv_mul(iv *z,const iv *a,const iv *b){
+    mpfr_t d[4],u[4]; for(int i=0;i<4;i++){mpfr_init2(d[i],PREC);mpfr_init2(u[i],PREC);} 
+    mpfr_mul(d[0],a->lo,b->lo,MPFR_RNDD); mpfr_mul(u[0],a->lo,b->lo,MPFR_RNDU);
+    mpfr_mul(d[1],a->lo,b->hi,MPFR_RNDD); mpfr_mul(u[1],a->lo,b->hi,MPFR_RNDU);
+    mpfr_mul(d[2],a->hi,b->lo,MPFR_RNDD); mpfr_mul(u[2],a->hi,b->lo,MPFR_RNDU);
+    mpfr_mul(d[3],a->hi,b->hi,MPFR_RNDD); mpfr_mul(u[3],a->hi,b->hi,MPFR_RNDU);
+    mpfr_set(z->lo,d[0],MPFR_RNDD); mpfr_set(z->hi,u[0],MPFR_RNDU);
+    for(int i=1;i<4;i++){ if(mpfr_cmp(d[i],z->lo)<0) mpfr_set(z->lo,d[i],MPFR_RNDD); if(mpfr_cmp(u[i],z->hi)>0) mpfr_set(z->hi,u[i],MPFR_RNDU); }
+    for(int i=0;i<4;i++){mpfr_clear(d[i]);mpfr_clear(u[i]);}
+}
+
+static void iv_square(iv *z,const iv *a){
+    mpfr_t l,u,t1,t2;mpfr_init2(l,PREC);mpfr_init2(u,PREC);mpfr_init2(t1,PREC);mpfr_init2(t2,PREC);
+    if(mpfr_sgn(a->lo)>=0){mpfr_mul(l,a->lo,a->lo,MPFR_RNDD);mpfr_mul(u,a->hi,a->hi,MPFR_RNDU);}
+    else if(mpfr_sgn(a->hi)<=0){mpfr_mul(l,a->hi,a->hi,MPFR_RNDD);mpfr_mul(u,a->lo,a->lo,MPFR_RNDU);}
+    else{mpfr_set_ui(l,0,MPFR_RNDD);mpfr_mul(t1,a->lo,a->lo,MPFR_RNDU);mpfr_mul(t2,a->hi,a->hi,MPFR_RNDU);if(mpfr_cmp(t1,t2)>=0)mpfr_set(u,t1,MPFR_RNDU);else mpfr_set(u,t2,MPFR_RNDU);}
+    mpfr_set(z->lo,l,MPFR_RNDD);mpfr_set(z->hi,u,MPFR_RNDU);mpfr_clear(l);mpfr_clear(u);mpfr_clear(t1);mpfr_clear(t2);
+}
+static void iv_recip(iv *z,const iv *a){
+    if(mpfr_sgn(a->lo)<=0 && mpfr_sgn(a->hi)>=0) die("division interval contains zero");
+    mpfr_t one;mpfr_init2(one,PREC);mpfr_set_ui(one,1,MPFR_RNDN);
+    if(mpfr_sgn(a->lo)>0){ mpfr_div(z->lo,one,a->hi,MPFR_RNDD);mpfr_div(z->hi,one,a->lo,MPFR_RNDU); }
+    else { mpfr_div(z->lo,one,a->hi,MPFR_RNDD);mpfr_div(z->hi,one,a->lo,MPFR_RNDU); }
+    mpfr_clear(one);
+}
+static void iv_div(iv *z,const iv *a,const iv *b){iv r;iv_init(&r);iv_recip(&r,b);iv_mul(z,a,&r);iv_clear(&r);}
+static void iv_scale_si(iv *z,const iv *a,long n){mpfr_t l,u;mpfr_init2(l,PREC);mpfr_init2(u,PREC);if(n>=0){mpfr_mul_si(l,a->lo,n,MPFR_RNDD);mpfr_mul_si(u,a->hi,n,MPFR_RNDU);}else{mpfr_mul_si(l,a->hi,n,MPFR_RNDD);mpfr_mul_si(u,a->lo,n,MPFR_RNDU);}mpfr_set(z->lo,l,MPFR_RNDD);mpfr_set(z->hi,u,MPFR_RNDU);mpfr_clear(l);mpfr_clear(u);}
+static void iv_sqrt(iv *z,const iv *a){if(mpfr_sgn(a->lo)<0)die("sqrt negative");mpfr_sqrt(z->lo,a->lo,MPFR_RNDD);mpfr_sqrt(z->hi,a->hi,MPFR_RNDU);}
+static void iv_log(iv *z,const iv *a){if(mpfr_sgn(a->lo)<=0)die("log nonpositive");mpfr_log(z->lo,a->lo,MPFR_RNDD);mpfr_log(z->hi,a->hi,MPFR_RNDU);}
+static void iv_exp(iv *z,const iv *a){mpfr_exp(z->lo,a->lo,MPFR_RNDD);mpfr_exp(z->hi,a->hi,MPFR_RNDU);}
+static void iv_sinh(iv *z,const iv *a){mpfr_sinh(z->lo,a->lo,MPFR_RNDD);mpfr_sinh(z->hi,a->hi,MPFR_RNDU);}
+static void iv_atan(iv *z,const iv *a){mpfr_atan(z->lo,a->lo,MPFR_RNDD);mpfr_atan(z->hi,a->hi,MPFR_RNDU);}
+static void iv_mid_rad(mpfr_ptr mid,mpfr_ptr rad,const iv *a){
+    mpfr_t t1,t2;mpfr_init2(t1,PREC);mpfr_init2(t2,PREC);
+    mpfr_add(mid,a->lo,a->hi,MPFR_RNDN);mpfr_div_si(mid,mid,2,MPFR_RNDN);
+    mpfr_sub(t1,mid,a->lo,MPFR_RNDU);mpfr_abs(t1,t1,MPFR_RNDU);
+    mpfr_sub(t2,a->hi,mid,MPFR_RNDU);mpfr_abs(t2,t2,MPFR_RNDU);
+    if(mpfr_cmp(t1,t2)>=0)mpfr_set(rad,t1,MPFR_RNDU);else mpfr_set(rad,t2,MPFR_RNDU);
+    mpfr_clear(t1);mpfr_clear(t2);
+}
+static void iv_sin(iv *z,const iv *a){mpfr_t m,r,l,u;mpfr_init2(m,PREC);mpfr_init2(r,PREC);mpfr_init2(l,PREC);mpfr_init2(u,PREC);iv_mid_rad(m,r,a);mpfr_sin(l,m,MPFR_RNDD);mpfr_sin(u,m,MPFR_RNDU);mpfr_sub(z->lo,l,r,MPFR_RNDD);mpfr_add(z->hi,u,r,MPFR_RNDU);mpfr_clear(m);mpfr_clear(r);mpfr_clear(l);mpfr_clear(u);}
+static void iv_cos(iv *z,const iv *a){mpfr_t m,r,l,u;mpfr_init2(m,PREC);mpfr_init2(r,PREC);mpfr_init2(l,PREC);mpfr_init2(u,PREC);iv_mid_rad(m,r,a);mpfr_cos(l,m,MPFR_RNDD);mpfr_cos(u,m,MPFR_RNDU);mpfr_sub(z->lo,l,r,MPFR_RNDD);mpfr_add(z->hi,u,r,MPFR_RNDU);mpfr_clear(m);mpfr_clear(r);mpfr_clear(l);mpfr_clear(u);}
+static void iv_abs_upper(mpfr_ptr u,const iv *a){mpfr_t x,y;mpfr_init2(x,PREC);mpfr_init2(y,PREC);mpfr_abs(x,a->lo,MPFR_RNDU);mpfr_abs(y,a->hi,MPFR_RNDU);if(mpfr_cmp(x,y)>=0)mpfr_set(u,x,MPFR_RNDU);else mpfr_set(u,y,MPFR_RNDU);mpfr_clear(x);mpfr_clear(y);}
+static void iv_add_symmetric_error(iv *z,const mpfr_srcptr e){mpfr_sub(z->lo,z->lo,e,MPFR_RNDD);mpfr_add(z->hi,z->hi,e,MPFR_RNDU);}
+static int iv_lower_positive(const iv *x){return mpfr_sgn(x->lo)>0;}
+
+static void civ_set(civ *z,const civ *a){iv_set(&z->re,&a->re);iv_set(&z->im,&a->im);}
+static void civ_add(civ *z,const civ *a,const civ *b){iv_add(&z->re,&a->re,&b->re);iv_add(&z->im,&a->im,&b->im);}
+static void civ_sub(civ *z,const civ *a,const civ *b){iv_sub(&z->re,&a->re,&b->re);iv_sub(&z->im,&a->im,&b->im);}
+static void civ_mul(civ *z,const civ *a,const civ *b){iv ac,bd,ad,bc;iv_init(&ac);iv_init(&bd);iv_init(&ad);iv_init(&bc);iv_mul(&ac,&a->re,&b->re);iv_mul(&bd,&a->im,&b->im);iv_mul(&ad,&a->re,&b->im);iv_mul(&bc,&a->im,&b->re);iv_sub(&z->re,&ac,&bd);iv_add(&z->im,&ad,&bc);iv_clear(&ac);iv_clear(&bd);iv_clear(&ad);iv_clear(&bc);}
+static void civ_recip(civ *z,const civ *a){iv x2,y2,d,nim;iv_init(&x2);iv_init(&y2);iv_init(&d);iv_init(&nim);iv_mul(&x2,&a->re,&a->re);iv_mul(&y2,&a->im,&a->im);iv_add(&d,&x2,&y2);iv_div(&z->re,&a->re,&d);iv_neg(&nim,&a->im);iv_div(&z->im,&nim,&d);iv_clear(&x2);iv_clear(&y2);iv_clear(&d);iv_clear(&nim);}
+static void civ_add_symmetric_error(civ *z,const mpfr_srcptr e){iv_add_symmetric_error(&z->re,e);iv_add_symmetric_error(&z->im,e);}
+
+static void print_endpoint(mpfr_srcptr x){if(mpfr_sgn(x)==0){printf("{\"mantissa\":\"0\",\"exponent\":0}");return;}mpz_t m;mpz_init(m);mpfr_exp_t e=mpfr_get_z_2exp(m,x);char *s=mpz_get_str(NULL,10,m);printf("{\"mantissa\":\"%s\",\"exponent\":%ld}",s,(long)e);free(s);mpz_clear(m);}
+static void print_iv(const iv *x){printf("{\"lower\":");print_endpoint(x->lo);printf(",\"upper\":");print_endpoint(x->hi);printf("}");}
+
+static void civ_log_right(civ *out,const civ *z){
+    if(mpfr_sgn(z->re.lo)<=0)die("complex log requires positive real part");
+    iv x2,y2,r2,lr,ratio,arg,two;iv_init(&x2);iv_init(&y2);iv_init(&r2);iv_init(&lr);iv_init(&ratio);iv_init(&arg);iv_init(&two);iv_set_si(&two,2);
+    iv_mul(&x2,&z->re,&z->re);iv_mul(&y2,&z->im,&z->im);iv_add(&r2,&x2,&y2);iv_log(&lr,&r2);iv_div(&out->re,&lr,&two);iv_div(&ratio,&z->im,&z->re);iv_atan(&out->im,&ratio);
+    iv_clear(&x2);iv_clear(&y2);iv_clear(&r2);iv_clear(&lr);iv_clear(&ratio);iv_clear(&arg);iv_clear(&two);
+}
+static void civ_scale_frac(civ *out,const civ *z,long n,long d){iv f;iv_init(&f);iv_set_frac(&f,n,d);iv_mul(&out->re,&z->re,&f);iv_mul(&out->im,&z->im,&f);iv_clear(&f);}
+static void civ_pow(civ *out,const civ *z,int n){civ base,tmp;civ_init(&base);civ_init(&tmp);civ_set(&base,z);iv_set_si(&out->re,1);iv_set_si(&out->im,0);for(int k=0;k<n;k++){civ_mul(&tmp,out,&base);civ_set(out,&tmp);}civ_clear(&base);civ_clear(&tmp);}
+
+static void digamma_and_trigamma(civ *psi,civ *psi1,const iv *zr,const iv *zi){
+    const long K=10000; const int P=14;
+    const long bn[13]={1,-1,1,-1,5,-691,7,-3617,43867,-174611,854513,-236364091,8553103};
