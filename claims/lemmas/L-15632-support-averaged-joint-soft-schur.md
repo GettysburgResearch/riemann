@@ -80,7 +80,7 @@ Let `tau_R>0` and define
 \[
  \widehat{\mathcal D}_R
  =
- \mathcal D_R+	au_R
+ \mathcal D_R+\tau_R
  \begin{pmatrix}
  G_R&0\\0&D_{E,R}
  \end{pmatrix}.
@@ -180,8 +180,11 @@ Define the actual profile-soft projection
 This is defined only after support selection, so no moving projection is
 differentiated in the support-average proof.  Its range is an exact spectral
 subspace of the exact finite profile matrix.  The gap in (L-15632.9) gives a
-proof-producing export: interval generalized eigenvalue isolation and a Riesz
-projection enclosure certify a rational basis for the same exact range.
+proof-producing export by interval generalized-eigenvalue isolation and a Riesz
+projector enclosure.  In general the exact spectral range need not possess a
+rational basis.  A production certificate therefore retains either the
+projector enclosure itself or an interval graph over a reference coordinate
+subspace, with its projector-distance error charged in the final compression.
 
 On the exported packet,
 
@@ -191,6 +194,7 @@ On the exported packet,
  \preceq2\tau_R P_R^{\rm soft}G_RP_R^{\rm soft}.
  }
  \tag{L-15632.11}
+\]
 
 Write `G_{S,R}`, `D_{S,R}` and `mathscr S_{S,R}` for the corresponding
 compressions.
@@ -367,7 +371,7 @@ Then
 \]
 
 The support average supplies an unbounded sequence with
-`epsilon_(R_j)->0` and the exported exact packets
+`epsilon_(R_j)->0` and the exported exact projectors
 `P_(R_j)^soft`.  Therefore (L-15632.26) proves
 
 \[
@@ -396,7 +400,7 @@ production extension is to emit, at each level,
 joint profile Gram mathcal D_R;
 regularized Gram widehat mathcal D_R;
 soft threshold vartheta_R and spectral-gap enclosure;
-soft basis Q_soft;
+Riesz-projector or interval graph enclosure;
 compressed P,E,Z,C and main-profile solve X_0;
 relative joint remainder epsilon_R;
 exact direct-short LDL verdict.
