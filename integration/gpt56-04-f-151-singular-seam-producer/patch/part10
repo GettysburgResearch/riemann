@@ -1,0 +1,203 @@
+": [out_frac(x) for x in a4_iv],
++        "tau4_interval": [out_frac(x) for x in tau_iv],
++        "relations": {
++            "a4_linear_vs_tau4": rel_a4,
++            "trace_A4_vs_tau4": rel_A,
++            "trace_K4_vs_tau4": rel_K,
++        },
++        "manifest_sha256": hashlib.sha256(canonical).hexdigest(),
++        "scope": "finite source-bound row only; no infinite-window or RH claim",
++    }
++
++
++def main() -> None:
++    p = argparse.ArgumentParser()
++    p.add_argument("manifest", type=Path)
++    args = p.parse_args()
++    data = json.loads(args.manifest.read_text())
++    if data.get("schema") != SCHEMA:
++        raise SystemExit("wrong schema")
++    result = verify_complete(data)
++    print(json.dumps(result, indent=2, sort_keys=True))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/experiments/X-15120-singular-seam-source-producer/results/shimizu-public-source-v8-v6-audit.json b/experiments/X-15120-singular-seam-source-producer/results/shimizu-public-source-v8-v6-audit.json
+new file mode 100644
+index 0000000..9c0306b
+--- /dev/null
++++ b/experiments/X-15120-singular-seam-source-producer/results/shimizu-public-source-v8-v6-audit.json
+@@ -0,0 +1,34 @@
++{
++  "cannot_emit": [
++    "c4_vector",
++    "raw_operator_A",
++    "renormalized_operator_K",
++    "a4_linear",
++    "trace_A4",
++    "trace_K4",
++    "quartic_target_verdict"
++  ],
++  "manifest_sha256": "40a2cedeac541318f44a8aba9d7b1a00dc431ac8d271a3e0add5ca4f552dcf1a",
++  "missing_count": 17,
++  "missing_fields": [
++    "bindings.normalization_sha256",
++    "bindings.source_map_sha256",
++    "window.identifier",
++    "window.cutoff_definition",
++    "parameters.alpha",
++    "parameters.s_R",
++    "parameters.a_tr",
++    "readout.gram",
++    "readout.quartic_jet_coordinate",
++    "chain.raw_coordinate_matrix",
++    "chain.jet_coordinate_matrix",
++    "chain.seam_transpose_matrix",
++    "chain.comparison_trace_matrix",
++    "chain.lci_matrix",
++    "chain.projection_matrix",
++    "chain.seam_involution",
++    "classical.a4_linear_interval"
++  ],
++  "scope": "source executability audit; no surrogate completion",
++  "status": "SOURCE_SPECIFICATION_INCOMPLETE"
++}
+diff --git a/experiments/X-15120-singular-seam-source-producer/results/synthetic-complete-row-verification.json b/experiments/X-15120-singular-seam-source-producer/results/synthetic-complete-row-verification.json
+new file mode 100644
+index 0000000..bc02649
+--- /dev/null
++++ b/experiments/X-15120-singular-seam-source-producer/results/synthetic-complete-row-verification.json
+@@ -0,0 +1,104 @@
++{
++  "a4_linear_interval": [
++    31,
++    31
++  ],
++  "c4_norm_squared": 1,
++  "c4_normalized_lower_bound_squared": 1,
++  "c4_vector": [
++    0,
++    1
++  ],
++  "dimensions": {
++    "coordinate": 2,
++    "readout": 2,
++    "target": 2
++  },
++  "jet_map": [
++    [
++      0,
++      1
++    ],
++    [
++      1,
++      1
++    ]
++  ],
++  "jet_schatten4_fourth_power": 7,
++  "manifest_sha256": "cafff05f332dd78eeaacac47378a838b95e6485efd57e9a07ef433d2be0cb1b8",
++  "quartic_jet_gram_norm_squared": 1,
++  "quartic_verdict": "QUARTIC_TARGET_CHANGE_CERTIFIED",
++  "raw_form_matrix": [
++    [
++      5,
++      0
++    ],
++    [
++      0,
++      5
++    ]
++  ],
++  "raw_map": [
++    [
++      1,
++      2
++    ],
++    [
++      2,
++      -1
++    ]
++  ],
++  "relations": {
++    "a4_linear_vs_tau4": "OVERLAPS_TARGET_INTERVAL",
++    "trace_A4_vs_tau4": "ABOVE_TARGET_INTERVAL",
++    "trace_K4_vs_tau4": "ABOVE_TARGET_INTERVAL"
++  },
++  "renormalized_form_matrix": [
++    [
++      2,
++      -1
++    ],
++    [
++      -1,
++      5
++    ]
++  ],
++  "renormalized_map": [
++    [
++      1,
++      1
++    ],
++    [
++      1,
++      -2
++    ]
++  ],
++  "represented_A": [
++    [
++      5,
++      0
++    ],
++    [
++      0,
++      5
++    ]
++  ],
++  "represented_K": [
++    [
++      2,
++      -1
++    ],
++    [
++      -1,
++      5
++    ]
++  ],
++  "scope": "finite source-bound row only; no infinite-window or RH claim",
++  "status": "CERTIFIED_SOURCE_BOUND_QUARTIC_ROW",
++  "tau4_interval": [
++    31,
++    31
++  ],
++  "trace_A4": 1250,
++  "trace_K4": 799
++}
+diff --git a/experiments/X-15120-singular-seam-source-producer/results/tests.txt b/experiments/X-15120-singular-seam-source-producer/results/tests.txt
+new file mode 100644
+index 0000000..48224fe
+--- /dev/null
++++ b/experiments/X-15120-singular-seam-source-producer/results/tests.txt
+@@ -0,0 +1,17 @@
++test_basis_change_invariance (test_produce.TestProducer.test_basis_change_invariance) ... ok
++test_boolean_injection_rejected (test_produce.TestProducer.test_boolean_injection_rejected) ... ok
++test_complete_exact_row (test_produce.TestProducer.test_complete_exact_row) ... ok
++test_dimension_drift_rejected (test_produce.TestProducer.test_dimension_drift_rejected) ... ok
++test_incomplete_public_source_fails_closed (test_produce.TestProducer.test_incomplete_public_source_fails_closed) ... ok
++test_nonhermitian_seam_rejected (test_produce.TestProducer.test_nonhermitian_seam_rejected) ... ok
++test_noninvolutive_seam_rejected (test_produce.TestProducer.test_noninvolutive_seam_rejected) ... ok
++test_nonpositive_gram_rejected (test_produce.TestProducer.test_nonpositive_gram_rejected) ... ok
++test_nonprojection_rejected (test_produce.TestProducer.test_nonprojection_rejected) ... ok
++test_reversed_target_rejected (test_produce.TestProducer.test_reversed_target_rejected) ... ok
++test_wrong_schema_rejected (test_produce.TestProducer.test_wrong_schema_rejected) ... ok
++test_zero_jet_pass_manifest (test_produce.TestProducer.test_zero_jet_pass_manifest) ... ok
++
++----------------------------------------------------------------------
++Ran 12 tests in 0.033s
++
++OK
+diff --git a/experiments/X-15120-singular-seam-source-producer/tests/__pycache__/test_produce.cpython-313.pyc b/experiments/X-15120-singular-seam-source-producer/tests/__pycache__/test_produce.cpython-313.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..0227ae11c6ad0f976b204ce4f87ba9f1c96cf868
+GIT binary patch
+lit
