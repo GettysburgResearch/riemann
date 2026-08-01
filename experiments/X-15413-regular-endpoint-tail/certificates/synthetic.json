@@ -1,0 +1,38 @@
+{
+  "schema": "riemann.x15413-regular-endpoint-tail.synthetic.v1",
+  "nodes": {
+    "x": {"numerator": "1", "denominator": "100"},
+    "y": {"numerator": "1", "denominator": "1"}
+  },
+  "claimed": {
+    "midpoint": {"numerator": "101", "denominator": "200"},
+    "raw_entries": [
+      {"numerator": "1", "denominator": "101"},
+      {"numerator": "101", "denominator": "301"},
+      {"numerator": "1", "denominator": "2"}
+    ],
+    "raw_determinant": {"numerator": "-1970001", "denominator": "18301402"},
+    "endpoint_entries": [
+      {"numerator": "100", "denominator": "101"},
+      {"numerator": "200", "denominator": "301"},
+      {"numerator": "1", "denominator": "2"}
+    ],
+    "endpoint_determinant": {"numerator": "490050", "denominator": "9150701"},
+    "one_green_entries": [
+      {"numerator": "100", "denominator": "101"},
+      {"numerator": "200", "denominator": "301"},
+      {"numerator": "1", "denominator": "2"}
+    ],
+    "one_green_determinant": {"numerator": "490050", "denominator": "9150701"},
+    "total_entries": [
+      {"numerator": "1", "denominator": "1"},
+      {"numerator": "1", "denominator": "1"},
+      {"numerator": "1", "denominator": "1"}
+    ],
+    "anchored_cross_entries": [
+      {"numerator": "-1", "denominator": "101"},
+      {"numerator": "-101", "denominator": "301"},
+      {"numerator": "-1", "denominator": "2"}
+    ]
+  }
+}
