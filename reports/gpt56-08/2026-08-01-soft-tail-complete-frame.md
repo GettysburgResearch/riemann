@@ -1,42 +1,150 @@
-# Agent report — complete exact frame by soft-tail absorption
+# Agent report — exact source conditioning by regularized completion and a hard/soft split
 
 Agent: `gpt56-08`  
 Date: 2026-08-01  
 Branch: `agent/gpt56-pro-09-d/156-capacity-saturation`  
-Primary claim: `L-15630`  
-Classification: exact abstract conditioning theorem; production graph LMI not yet emitted
+Primary claims: `L-15630`, `L-15631`, `R-15604`, `X-15612`  
+Classification: exact abstract conditioning theorem; production graph LMI and finite soft Weil-sign block open
 
 ## Executive result
 
-The prior exact completion theorem used a global-anchor/prolate core and repaired
-its missing image with the exact Fourier--Mellin right inverse. It required the
-correction to be \(O(R^{-1/4-\varepsilon})\) in the production/profile metric.
+The earlier exact completion used a global-anchor/prolate core plus an exact
+Fourier--Mellin correction and required a power-saving angle between the actual
+packet and that core.
 
-`L-15630` removes that angle condition.
+The new construction removes the angle from the **conditioning problem**.
 
-Use the exact right inverse on the complete finite packet. Let \(D_R\) be its
-actual profile Gram and \(K_R\) the Gram of every amplitude and logarithmic
-support-derivative channel entering the support large sieve. If
+1. Retain the prolate core exactly on its represented image.
+2. Fill every missing finite Fourier direction with an exact smooth source
+   right inverse.
+3. Let `D_R` be the actual omitted-tail/profile Gram of the resulting complete
+   frame and `K_R` the Gram of all support-amplitude and logarithmic derivative
+   channels.
+4. Use a small regularization `D_R+tau_R G_R` while averaging the support.
+5. At a selected support, split the actual profile Gram into soft and hard
+   generalized spectral sectors.
+
+The complete hard complement is exactly represented and has the required
+sub-square-root actual-profile envelope. The soft sector has vanishing ordinary
+profile trace, but its finite Weil sign remains explicit; it is not silently
+promoted to a radical packet.
+
+## Exact core-preserving source frame
+
+Let `L_R` denote the localized arithmetic source map, `F_R^0` the
+well-conditioned global-anchor/prolate core, `Pi_R^0` a projection onto its
+represented image, and `C_R` an exact right inverse on the full finite Fourier
+space. Define
 
 \[
-K_R\preceq M_R^2G_R
+F_R
+=
+F_R^0({\cal L}_RF_R^0)^{-1}\Pi_R^0
++{\cal C}_R(I-\Pi_R^0).
+\]
+
+Then
+
+\[
+{\cal L}_RF_R=I
+\]
+
+exactly. The prolate columns are preserved rather than replaced, and the exact
+inverse is used only where needed.
+
+## Smooth exact right inverse
+
+`L-15631` replaces the sharp box/guard construction by a smooth differential
+cardinal.
+
+Fix a smooth compact bump `eta` of integral one and put
+
+\[
+\chi_L=(L^{-1}1_{[-L/2,L/2]})*\eta.
+\]
+
+For `omega_k=2 pi k/L`, set
+
+\[
+g_{k,L}=\chi_Le^{i\omega_kt},
+\qquad
+q_{k,L}={ (\partial_t+1/2)g_{k,L}\over i\omega_k+1/2}.
+\]
+
+Then, exactly,
+
+\[
+\widehat q_{k,L}(\omega_j)=\delta_{kj}
 \]
 
 and
 
 \[
-M_R\log R/\sqrt R\to0,
+\widehat q_{k,L}(i/2)=0.
 \]
 
-then the balancing choice
+The corresponding multiplicative source is smooth, compactly supported away
+from zero, satisfies `f(0)=0`, and has ordinary integral zero. Dividing its
+sample by the finite zeta multiplier gives an exact projected arithmetic right
+inverse.
+
+The sinc factor survives smoothing, so the transform has the exact two-end
+phase decomposition
 
 \[
-\ell_R=(\sqrt R/M_R)^{1/2},\qquad
-\tau_R=M_R/\sqrt R,\qquad
-B_R=R^{1/4}M_R^{1/2}
+\widehat q_{k,L}(z)
+=e^{iLz/2}a_{k,+}(z,L)+e^{-iLz/2}a_{k,-}(z,L).
 \]
 
-has two simultaneous properties:
+The amplitudes and support derivatives have polynomial logarithmic graph norm.
+Cofinal zero avoidance plus the local zeta product gives the target inverse
+bound
+
+\[
+M_R
+\le
+R^{1/4}\exp(O((\log\log R)^2))
+=R^{1/4+o(1)}.
+\]
+
+The local zeta-product and exact production metric normalization remain audit
+items.
+
+## Regularized complete-frame conditioning
+
+Let
+
+\[
+D_R=T_R^*T_R
+\]
+
+be the complete actual profile Gram and
+
+\[
+K_R=A_R^*A_R
+\]
+
+the support-amplitude/derivative Gram. Assume the directed unwhitened LMI
+
+\[
+K_R\preceq M_R^2G_R.
+\]
+
+It is enough that
+
+\[
+{M_R\log R\over\sqrt R}\to0.
+\]
+
+Choose
+
+\[
+\tau_R={M_R\over\sqrt R},
+\qquad
+B_R=R^{1/4}M_R^{1/2}.
+\]
+
+Then
 
 \[
 \tau_R\log R\to0
@@ -48,136 +156,143 @@ and
 B_R=o(\sqrt{R/\log R}).
 \]
 
-Regularize the full profile Gram by
+For the regularized metric
 
 \[
-\widehat D_R=D_R+\tau_RG_R.
+\widehat D_R=D_R+\tau_RG_R,
 \]
 
-Then
+one has
 
 \[
 K_R\preceq B_R^2\widehat D_R.
 \]
 
-This lets the support-average theorem operate on the complete exact source
-frame over a whole support block without differentiating a moving spectral
-projection.
+Thus the entire exact completed frame is sub-square-root conditioned in one
+fixed metric over a support block.
 
-At the selected support, absorb into the low packet every generalized
-tail-Gram eigenvector with eigenvalue at most \(\tau_R\). The complete remaining
-complement satisfies
+## Actual-profile hard/soft split
+
+After choosing a good support, split the compressed generalized profile Gram
+`D_R/G_R` at `tau_R`.
+
+On the complete hard sector,
 
 \[
-D_R\succeq\tau_RG_R,
+D_R\succeq\tau_RG_R
 \]
 
-and therefore
+and hence
 
 \[
 K_R\preceq B_R^2D_R.
 \]
 
-Thus its exact source/profile frame has the required envelope
+Therefore the exact restricted source frame spans every remaining hard
+direction and satisfies
 
 \[
 \mathfrak B_R\le B_R=o(\sqrt{R/\log R}).
 \]
 
-The discarded sector is not an uncontrolled remainder: its complete profile
-trace is at most \(m_R\tau_R\). With \(m_R=O(\log^2 R)\) and the current
-right-inverse rate \(M_R=R^{1/4+o(1)}\),
+On the soft sector,
 
 \[
-m_R\tau_R\log R\to0.
+D_R\preceq\tau_RG_R.
 \]
 
-It is quantitatively soft and can be appended to the already existing
-near-radical packet.
-
-## Quantitative join
-
-The completed source synthesis is
+If the finite packet dimension is `m_R=O(log^2 R)`, then
 
 \[
-F_R=
-F_R^0({\cal L}_RF_R^0)^{-1}\Pi_R^0+
-{\cal C}_R(I-\Pi_R^0).
-\]
-
-The first term retains the good global-anchor/prolate columns exactly. The
-second is the exact Fourier--Mellin right inverse on every missing direction.
-The localization identity is
-
-\[
-{\cal L}_RF_R=I.
-\]
-
-No approximate span or prolate angle enters.
-
-The core has \(R^{o(1)}\) graph conditioning. `L-15628` gives the correction
-target
-
-\[
-M_R
-=
-R^{1/4}\exp(O((\log\log R)^2)).
-\]
-
-Hence
-
-\[
-\tau_R
-=
-R^{-1/4}\exp(O((\log\log R)^2))
+\operatorname{Tr}_{G_R}D_R|_{soft}
+\le m_R\tau_R
 \]
 
 and
 
 \[
-B_R
-=
-R^{3/8}\exp(O((\log\log R)^2)),
+m_R\tau_R\log R\to0.
 \]
 
-which is strictly sub-square-root.
+Thus all poor actual-profile denominators are isolated in a finite sector with
+vanishing ordinary profile trace.
+
+## Necessary scope correction
+
+The first version of the argument said that the soft sector could therefore be
+absorbed into the near-radical packet. That inference is not valid from
+ordinary profile mass alone.
+
+`R-15604` gives the exact family
+
+\[
+D_j=\operatorname{diag}(\tau_j^2,1),
+\qquad
+A_j=\operatorname{diag}(-1,1),
+\]
+
+where the first coordinate has vanishing profile mass but fixed negative form.
+An off-line Xi-cardinal direction has the same logical signature.
+
+The correct remaining finite matrix is the soft-sector Weil/Schur block
+
+\[
+\mathscr S_R^{soft}.
+\]
+
+To promote the soft sector into the low near-radical packet one must prove
+
+\[
+\left\|
+\left[G_{S,R}^{-1/2}\mathscr S_R^{soft}G_{S,R}^{-1/2}
+\right]_{-}
+\right\|\to0,
+\]
+
+or a stronger two-sided compression/residual estimate.
+
+This sign obligation is now isolated from conditioning. It can be sent directly
+to the joint arithmetic/harmonic shorted LMI of PR #191.
 
 ## Exact replay
 
-`X-15612` verifies the finite algebra with
+`X-15612` uses
 
 \[
-G=I_4,\quad
-D=\operatorname{diag}(10^{-4},10^{-2},1,4),\quad
+G=I_4,
+\quad
+D=\operatorname{diag}(10^{-4},10^{-2},1,4),
+\quad
 K=9I_4,
 \]
 
 \[
-M=3,\quad
-\ell=4,\quad
-\tau=1/16,\quad
+M=3,
+\quad
+\ell=4,
+\quad
+\tau=1/16,
+\quad
 B=12.
 \]
 
-Coordinate zero is a retained core, coordinate one is absorbed as soft, and
-coordinates two and three are the complete remaining complement.
-
-The checker verifies:
+Coordinate zero is a retained core, coordinate one is soft, and coordinates two
+and three form the complete hard complement. The checker verifies
 
 \[
 {\cal L}F=I,
-\qquad
+\quad
 K\preceq M^2G,
-\qquad
+\quad
 K\preceq B^2(D+\tau G),
 \]
 
 \[
-D_{\rm soft}\preceq\tau G,
-\qquad
-D_{\rm dang}\succeq\tau G,
-\qquad
-K_{\rm dang}\preceq B^2D_{\rm dang}.
+D_{soft}\preceq\tau G,
+\quad
+D_{hard}\succeq\tau G,
+\quad
+K_{hard}\preceq B^2D_{hard}.
 \]
 
 Verdict:
@@ -186,41 +301,28 @@ Verdict:
 PASS_EXACT_L15630_CONDITIONING_SPLIT
 ```
 
-## What is closed
-
-The following former gate is removed:
+Six central/adversarial tests pass. Certificate SHA-256:
 
 ```text
-actual complete packet has a power-saving angle
-to the declared global-anchor/prolate core.
+98305b42792dda68d2b9d9b06373f7cc177fc26ae9434520a6b75200e389835e
 ```
 
-The exact right inverse may now be poorly aligned with the core. Every direction
-responsible for a small whitening denominator is absorbed because that same
-small denominator certifies a soft tail.
+## Exact production boundary
 
-The remaining exact complement is complete and sub-square-root conditioned.
+The remaining conditioning producer must emit, in one declared normalization,
 
-## Production boundary
+\[
+{\cal L}_RF_R=I,
+\qquad
+K_R\preceq M_R^2G_R,
+\qquad
+{M_R\log R\over\sqrt R}\to0,
+\]
 
-One production object remains before this theorem can be consumed without an
-analytic normalization assumption:
+followed by the directed `D_R/G_R` split.
 
-```text
-G_R, D_R, K_R, M_R
-```
+The hard-sector conditioning theorem is complete. The exact mathematical
+obstruction remaining after conditioning is the finite soft-signature matrix,
+not a complete-frame angle or an uncontrolled arbitrary Möbius inverse.
 
-in one declared metric, together with
-
-```text
-L_R F_R = I,
-K_R <= M_R^2 G_R,
-M_R log R / sqrt(R) -> 0.
-```
-
-`L-15628` supplies the asymptotic rate, but its local zeta-product,
-periodized-Mellin, even-extension, and support-derivative normalization has not
-yet been emitted as a directed production matrix.
-
-This is now a finite producer/audit obligation. The complete-packet angle is no
-longer a mathematical hypothesis.
+No RH conclusion is claimed.
