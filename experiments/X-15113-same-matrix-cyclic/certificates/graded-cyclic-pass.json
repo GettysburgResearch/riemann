@@ -1,0 +1,22 @@
+{
+  "basis_change": [[1,1,0,0],[0,1,1,0],[0,0,1,1],[0,0,0,1]],
+  "grading": [[1,0,0,0],[0,-1,0,0],[0,0,1,0],[0,0,0,-1]],
+  "gram": [[1,0,0,0],[0,4,0,0],[0,0,9,0],[0,0,0,16]],
+  "max_order": 8,
+  "mode": "graded-cyclic-pass",
+  "normalized_cl3": 0,
+  "schema": "riemann.same-matrix-cyclic.v1",
+  "seam": [[0,2,0,1],[2,0,3,0],[0,3,0,4],[1,0,4,0]],
+  "trace_moments": {
+    "2": {"denominator":72,"numerator":205},
+    "3": 0,
+    "4": {"denominator":10368,"numerator":40225},
+    "5": 0,
+    "6": {"denominator":1492992,"numerator":8061625},
+    "7": 0,
+    "8": {"denominator":214990848,"numerator":1616430625}
+  },
+  "transformed_grading": [[1,2,2,2],[0,-1,-2,-2],[0,0,1,2],[0,0,0,-1]],
+  "transformed_gram": [[1,1,0,0],[1,5,4,0],[0,4,13,9],[0,0,9,25]],
+  "transformed_seam": [[0,2,2,1],[2,4,5,4],[2,5,6,7],[1,4,7,8]]
+}
