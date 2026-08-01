@@ -1,0 +1,48 @@
+name: x18507-real-profile-soft-common-ledger
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-18507-real-profile-soft-ledger/**'
+      - 'claims/experiments/X-18507-real-profile-soft-common-ledger.md'
+      - '.github/workflows/x18507-real-profile-soft-common-ledger.yml'
+  workflow_dispatch:
+
+jobs:
+  real-common-ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Recheck immutable arithmetic block
+        run: |
+          test "$(sha256sum experiments/X-18505-real-d0001-direct-block/certificates/c5-N1-p384.json | cut -d' ' -f1)" = "1fbbb15004dbfc2af84e6ab71d88ba7e8098535f88182236f9ee1eceb0d6e350"
+          python experiments/X-18505-real-d0001-direct-block/verify.py \
+            experiments/X-18505-real-d0001-direct-block/certificates/c5-N1-p384.json \
+            --output /tmp/x18505-verification.json
+      - name: Build deterministic profile-soft ledger
+        working-directory: experiments/X-18507-real-profile-soft-ledger
+        run: |
+          mkdir -p artifacts
+          python build_ledger.py --certificate artifacts/certificate.json --summary artifacts/summary.json
+          python build_ledger.py --certificate artifacts/certificate-second.json --summary artifacts/summary-second.json
+          cmp artifacts/certificate.json artifacts/certificate-second.json
+          cmp artifacts/summary.json artifacts/summary-second.json
+          test "$(sha256sum artifacts/certificate.json | cut -d' ' -f1)" = "d6b14079e9d23e82982317a7dd95b8e5e0a98be3ba63775e3fc5bb4127cfce23"
+      - name: Exact independent consumer
+        working-directory: experiments/X-18507-real-profile-soft-ledger
+        run: |
+          python verify.py artifacts/certificate.json --repo-root ../.. --output artifacts/verification.json
+      - name: Adversarial mutations
+        working-directory: experiments/X-18507-real-profile-soft-ledger
+        run: PYTHONPATH=. python -m unittest -v tests/test_verify.py 2>&1 | tee artifacts/tests.txt
+      - name: Bind proof object
+        working-directory: experiments/X-18507-real-profile-soft-ledger
+        run: sha256sum build_ledger.py verify.py artifacts/* tests/test_verify.py README.md > artifacts/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x18507-real-profile-soft-common-ledger
+          path: experiments/X-18507-real-profile-soft-ledger/artifacts
+          if-no-files-found: error
