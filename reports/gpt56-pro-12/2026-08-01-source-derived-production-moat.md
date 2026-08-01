@@ -1,4 +1,4 @@
-# Source-derived production-moat continuation
+# Source-derived production-moat continuation — corrected relative normalization
 
 ## Published prefix
 
@@ -9,86 +9,60 @@ PR #164 in commit
 e75294743d155affaf0ae2ea4a586a06524c3e4b
 ```
 
-without duplicating the newer X-16206 production stack.
-
-## Actual gamma=4096 source replay
-
-The directed infinite Legendre--Jacobi calculation resolves the modes
-`0,4,8,12`, their concentration defects, point values and integral values. The
-exact determinant formulas produce the two repaired columns
+and the first X-16207 source-derived stack in
 
 ```text
-target      modes 0,4,8
-complement  modes 4,8,12
+18cb1a1befbfc51aae7706c63a1024573d756f1c.
 ```
 
-with both source constraints identically zero.
+## Valid actual gamma=4096 source data
 
-The resulting outward replacements are
+The directed infinite Legendre--Jacobi calculation resolves the modes
+`0,4,8,12`, their concentration defects, and the exact repaired columns. The
+normalized coefficient-tail synthesis gives
 
 ```text
 radial tail L2 squared              <= 1e-4181
 frequency-derivative tail L2^2      <= 1e-4174
 horizontal-strip tail L2^2          <= 1e-4180
-source packet fourth derivative L1  <= 45000
-endpoint point charge               <= 1e-5
-endpoint L2 squared charge          <= 2e-10
-deterministic error                 <= 1/40000
+first-alias Gram                    [0.9999999,1.0000001]
 ```
 
-The exact full result has proof-object digest
+These quantities were divided by the exact positive-ray leakage norms and
+remain valid.
+
+## Correction to the endpoint claim
+
+The first X-16207 certificate incorrectly inserted an absolute compact-source
+bound `||f^(4)||_1<=45000` into the endpoint remainder for a unit tail profile.
+The correct bound contains
 
 ```text
-185814dceb233ba87f14dcb154c0adb576a99d50c936376421f376414dd04cdb
+||f^(4)||_1/sqrt(first_alias_energy).
 ```
 
-and file digest
+At gamma=4096 the logarithms of the two first-alias energies are approximately
+`-3538.8421` and `-3524.1072`, so the omitted divisor changes the scale by about
+`10^1769` and `10^1762`. The previously reported endpoint charges and
+`1/40000` deterministic error are withdrawn.
+
+`R-16205` records the refutation. `X-16207` v2 now returns
 
 ```text
-5529e40d6e11a3698c853a550b9747842eca4542e8c7d9e15a46d6cf748c32aa
+RADIAL_DERIVATIVE_CLOSED_NORMALIZED_ENDPOINT_OPEN
 ```
 
-## Downstream binding
+and refuses downstream binding.
 
-`verify.py` reconstructs every replacement from the two repaired columns.
-`bind_downstream.py` writes the radial, endpoint, deterministic-error, and Gram
-fields into an X-16204 wrapper only after the complete arithmetic alias ledger
-is present.
+## Correct remaining production moat
 
-The exact first-alias Gram satisfies
+Two fields must be emitted from one normalized radial phase/ODE replay:
 
-```text
-0.9999999 I <= D_first <= 1.0000001 I.
-```
+1. the normalized endpoint channels plus a relative exterior remainder;
+2. the complete Poisson cross-alias operator bound and full Gram upper bound.
 
-But the full arithmetic profile is
-
-```text
-D_full=D_first+P_self+C_cross,
-P_self>=0.
-```
-
-Therefore the production lower floor is
-
-```text
-lambda_min(D_full)
- >=0.9999999-||C_cross||.
-```
-
-The current certificate leaves `||C_cross||` unresolved and is classified
-
-```text
-SOURCE_FIELDS_CLOSED_COMPLETE_ALIAS_GRAM_OPEN.
-```
-
-This prevents the inherited/synthetic profile-Gram ledger from being reused.
-
-## Smallest exact blocker
-
-Produce one outward operator bound for the complete first-versus-higher Poisson
-cross-alias matrix of this same repaired packet. No new support block is useful
-until that number is below the exact first-alias floor. A directed radial phase
-quadrature or an equivalent finite stationary/nonstationary phase ledger is the
-remaining production moat.
+Only after both are present does `bind_downstream.py` populate X-16204.
+No new support block should be generated before this one-block relative profile
+moat closes.
 
 No RH proof is claimed.

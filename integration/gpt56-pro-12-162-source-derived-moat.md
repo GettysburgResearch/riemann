@@ -1,40 +1,47 @@
-# Integration handoff — X-16207 source-derived moat
+# Integration handoff — X-16207 v2 relative-normalization correction
 
-Add:
+Retain:
 
 ```text
-L-16230  adaptive cofinal decay of source-derived radial/endpoint fields
-X-16207  fail-closed source-derived moat emitter and checker
+source-derived normalized radial coefficient tail
+source-derived normalized frequency-derivative tail
+source-derived horizontal-strip coefficient tail
+exact first-alias profile Gram
 ```
 
-Replace in production certificates:
+Withdraw from the first X-16207 packet:
 
 ```text
-tail_l2_sq_upper                 1       -> source-derived
-derivative_tail_l2_sq_upper      4       -> source-derived
-derivative_l1_upper              10^100  -> source-derived
-scalarization.deterministic_error       -> reconstructed, not declared
+absolute source ||f^(4)||_1 as a unit-profile endpoint bound
+endpoint point <=1e-5
+endpoint L2^2 <=2e-10
+deterministic error <=1/40000
 ```
 
-Do not populate `profile_gram.lower` from the first alias alone. Require
+Reason:
 
 ```text
+unit-profile endpoint remainder
+ = absolute source remainder / sqrt(first_alias_energy).
+```
+
+Add `R-16205`. Replace `L-16230` by its corrected radial/derivative-only
+statement. The X-16207 v2 binder requires both:
+
+```text
+endpoint_relative_ledger.normalized_fourth_derivative_l1_upper
 complete_arithmetic_alias.cross_error_upper
 complete_arithmetic_alias.full_upper
 ```
 
-and bind
-
-```text
-profile_gram.lower
- = first_alias.lower-cross_error_upper.
-```
+before it emits any downstream profile-Gram or deterministic-error field.
 
 Current status:
 
 ```text
-source fields and deterministic error  closed
-first-alias Gram                       closed
-complete cross-alias operator          open
-production wrapper promotion           refused
+normalized radial/derivative coefficient tails  closed
+first-alias Gram                               closed
+normalized endpoint remainder                  open
+complete cross-alias operator                  open
+production wrapper promotion                   refused
 ```

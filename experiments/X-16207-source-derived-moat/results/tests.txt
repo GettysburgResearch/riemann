@@ -1,17 +1,16 @@
-test_closed_alias_binds_every_downstream_field (test_bind_downstream.Tests.test_closed_alias_binds_every_downstream_field) ... ok
-test_open_alias_refuses_wrapper (test_bind_downstream.Tests.test_open_alias_refuses_wrapper) ... ok
-test_complete_alias_can_close_only_with_explicit_moat (test_verify.Tests.test_complete_alias_can_close_only_with_explicit_moat) ... ok
+test_both_closed_bind_downstream (test_bind_downstream.Tests.test_both_closed_bind_downstream) ... ok
+test_closed_endpoint_open_alias_refuses_wrapper (test_bind_downstream.Tests.test_closed_endpoint_open_alias_refuses_wrapper) ... ok
+test_open_endpoint_refuses_wrapper (test_bind_downstream.Tests.test_open_endpoint_refuses_wrapper) ... ok
+test_absolute_f4_cannot_close_relative_endpoint (test_verify.Tests.test_absolute_f4_cannot_close_relative_endpoint) ... ok
 test_derivative_understatement_rejected (test_verify.Tests.test_derivative_understatement_rejected) ... ok
-test_deterministic_not_separate_declaration (test_verify.Tests.test_deterministic_not_separate_declaration) ... ok
 test_digest_mutation_rejected (test_verify.Tests.test_digest_mutation_rejected) ... ok
-test_endpoint_understatement_rejected (test_verify.Tests.test_endpoint_understatement_rejected) ... ok
-test_f4_understatement_rejected (test_verify.Tests.test_f4_understatement_rejected) ... ok
-test_first_alias_understatement_rejected (test_verify.Tests.test_first_alias_understatement_rejected) ... ok
-test_nonpositive_complete_gram_rejected (test_verify.Tests.test_nonpositive_complete_gram_rejected) ... ok
+test_endpoint_close_still_leaves_alias_open (test_verify.Tests.test_endpoint_close_still_leaves_alias_open) ... ok
+test_full_close_requires_both_alias_bounds (test_verify.Tests.test_full_close_requires_both_alias_bounds) ... ok
+test_partial_alias_rejected (test_verify.Tests.test_partial_alias_rejected) ... ok
+test_radial_derivative_close_but_endpoint_stays_open (test_verify.Tests.test_radial_derivative_close_but_endpoint_stays_open) ... ok
 test_radial_understatement_rejected (test_verify.Tests.test_radial_understatement_rejected) ... ok
-test_source_fields_close_but_alias_stays_open (test_verify.Tests.test_source_fields_close_but_alias_stays_open) ... ok
 
 ----------------------------------------------------------------------
-Ran 12 tests in 0.008s
+Ran 11 tests in 0.009s
 
 OK
