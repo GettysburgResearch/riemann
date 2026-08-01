@@ -1,0 +1,21 @@
+{
+  "asymptotic_notes": {
+    "compact_radial_error": "O(1/gamma)",
+    "horizontal_log_moment": "O(log(Z_j)^2/Z_j)",
+    "remaining_nonradial_inputs": "growing Gram and support-average ledgers",
+    "tail_energy": "choose Z_j->infinity; O(1/Z_j)"
+  },
+  "base_source_sha256": "7cc78b0d82f40f1c542709fd2d9df3b62e6e6fc1d56beb0d68d3bd11dac1824e",
+  "gamma_schedule": "100000*8^j",
+  "levels": [
+    {"cube_root_q": 46, "gamma": 100000, "level": 0, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/100000", "status": "BASE_PRIMITIVE_EMITTED", "suggested_radial_z_cutoff": 5888},
+    {"cube_root_q": 92, "gamma": 800000, "level": 1, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/800000", "status": "EMITTER_PARAMETER_SET_NOT_YET_RUN", "suggested_radial_z_cutoff": 11904},
+    {"cube_root_q": 185, "gamma": 6400000, "level": 2, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/6400000", "status": "EMITTER_PARAMETER_SET_NOT_YET_RUN", "suggested_radial_z_cutoff": 23808},
+    {"cube_root_q": 371, "gamma": 51200000, "level": 3, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/51200000", "status": "EMITTER_PARAMETER_SET_NOT_YET_RUN", "suggested_radial_z_cutoff": 47488},
+    {"cube_root_q": 742, "gamma": 409600000, "level": 4, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/409600000", "status": "EMITTER_PARAMETER_SET_NOT_YET_RUN", "suggested_radial_z_cutoff": 95104},
+    {"cube_root_q": 1485, "gamma": 3276800000, "level": 5, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/3276800000", "status": "EMITTER_PARAMETER_SET_NOT_YET_RUN", "suggested_radial_z_cutoff": 190080},
+    {"cube_root_q": 2970, "gamma": 26214400000, "level": 6, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/26214400000", "status": "EMITTER_PARAMETER_SET_NOT_YET_RUN", "suggested_radial_z_cutoff": 380288},
+    {"cube_root_q": 5941, "gamma": 209715200000, "level": 7, "mode_window": "0,4,...,4*ceil(log(lambda)^2)", "radial_residual_scale_upper": "181/209715200000", "status": "EMITTER_PARAMETER_SET_NOT_YET_RUN", "suggested_radial_z_cutoff": 760448}
+  ],
+  "schema": "riemann.x16206-cofinal-emitter-schedule.v1"
+}
