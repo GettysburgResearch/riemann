@@ -1,0 +1,15 @@
+{
+  "alias_cutoff": 64,
+  "connection_coefficient_norm_upper": "5/4",
+  "gamma": 4096,
+  "l2_norm_upper": "1/32",
+  "l2_sq_upper": "1/1024",
+  "ledger_sha256": "e57b4c1d0e8a966e3de3e959f1873f1ec46f0e87848b4d8f79d39410a5728023",
+  "method": "RADIAL_OUTGOING_PHASE",
+  "point_upper": "1/32",
+  "post_cutoff_rule": "sum k^-2 <=1/K",
+  "proof_note": "Bounds are for the unit radial leakage profile; no absolute compact-source H4 norm is used.",
+  "retained_outgoing_orders": 4,
+  "schema": "riemann.x16208-normalized-radial-endpoint-ledger.v1",
+  "source_proof_object_sha256": "185814dceb233ba87f14dcb154c0adb576a99d50c936376421f376414dd04cdb"
+}
