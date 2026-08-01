@@ -21,6 +21,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Replay the committed pure-integer 320-bit bundle
+        run: |
+          python -m py_compile verified_height_320.py
+          python verified_height_320.py \
+            configs/verified-height-320.json \
+            --certificate /tmp/certificate-p320.json \
+            --summary /tmp/verification-p320.json
+          cmp /tmp/verification-p320.json artifacts/verification-p320.json
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          manifest = json.loads(Path('artifacts/certificate-p320-manifest.json').read_text())
+          assert hashlib.sha256(Path('/tmp/certificate-p320.json').read_bytes()).hexdigest() == manifest['certificate_file_sha256']
+          assert hashlib.sha256(Path('/tmp/verification-p320.json').read_bytes()).hexdigest() == manifest['summary_file_sha256']
+          assert hashlib.sha256(Path('verified_height_320.py').read_bytes()).hexdigest() == manifest['source_file_sha256']
+          assert hashlib.sha256(Path('configs/verified-height-320.json').read_bytes()).hexdigest() == manifest['config_file_sha256']
+          PY
       - name: Materialize immutable reviewed source blobs
         run: |
           git show 34d8391395d1e08ae986bf5c1c10439f90f9cb57:experiments/X-20701-directed-d0001-frame/arb_producer.py > arb_producer.py
