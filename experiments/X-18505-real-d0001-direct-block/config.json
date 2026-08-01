@@ -1,0 +1,18 @@
+{
+  "schema": "riemann.x18505.real-d0001-direct-block.config.v1",
+  "support": {"c": 5, "N": 1, "sector": "even"},
+  "coordinates": "[e0,(e-1+e1)/sqrt(2)]",
+  "Q_W_integer": [
+    "116689468362578147411353556252846438487",
+    "170141183460469231731687303715884105728"
+  ],
+  "Q_E_integer": [
+    "170141183460469231731687303715884105728",
+    "-116689468362578147411353556252846438487"
+  ],
+  "trial_solve": "X_N=0",
+  "coercivity_h": {"numerator": 1, "denominator": 100000},
+  "target_floor_m": {"numerator": 1, "denominator": 4},
+  "precision_bits": 256,
+  "digamma_trigamma_terms": 300000
+}
