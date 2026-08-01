@@ -1,0 +1,106 @@
+{
+  "schema": "riemann.integration.pr-ledger-manifest.v1",
+  "repository": "gfreund123/riemann",
+  "cutoff_utc": "2026-08-01T21:35:52Z",
+  "cutoff_local": "2026-08-02T00:35:52+03:00",
+  "main_commit": "d7fe83f463a2416faa4279cfb406f7283aa34b2c",
+  "cutoff_open_pr_count": 127,
+  "reviewed_source_pr_count": 126,
+  "review_aggregate": {
+    "VERIFIED": 29,
+    "VERIFIED WITH FIXES": 55,
+    "GAP/BLOCKED": 39,
+    "REJECTED": 3
+  },
+  "format": "UTF-8 tab-separated batches; columns declared in each file",
+  "dependency_codes": {
+    "D0": "D-0001 / finite Guinand–Weil source, admissibility and normalization.",
+    "XI": "Completed-ξ or ξ'/ξ normalization and primitive provenance.",
+    "DX": "Direct-ξ modulus plus zero/count/response-moment provenance.",
+    "RB": "Robin criterion and canonical arithmetic reductions.",
+    "SW": "Suzuki/CCM/localized-Weil form, metric and stacked finite algebra.",
+    "LT": "Named literature/source interface in the frozen claim.",
+    "RV": "Exact review record; source PRs remain separate."
+  },
+  "batches": [
+    {
+      "id": "A",
+      "path": "ledger/batch-A.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-08/2026-08-01-pre-public-review-prs-4-43.md",
+      "review_report_commit": "d1cf0320fb80dbe4d39e0e36d1c8af69bdcf3ff6"
+    },
+    {
+      "id": "B",
+      "path": "ledger/batch-B.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-global-01/2026-08-01-pre-public-review-pr44-pr63.md",
+      "review_report_commit": "88617ac916d3df6e61ec5b4726e866743b8fc4a3"
+    },
+    {
+      "id": "C",
+      "path": "ledger/batch-C.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-pro-09-i/2026-08-01-pre-public-review-pr64-pr79.md",
+      "review_report_commit": "7162c2a221fd87e6e7baf4e7245d6f42b5e04de3"
+    },
+    {
+      "id": "D",
+      "path": "ledger/batch-D.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-03-review/2026-08-01-pre-public-pr80-98-review.md",
+      "review_report_commit": "43b1c54187dd0abdc4cbc34fa1a692b25fbe92cf"
+    },
+    {
+      "id": "E",
+      "path": "ledger/batch-E.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-04-f/2026-08-01-pre-public-review-pr99-pr112.md",
+      "review_report_commit": "0965166d9b12bec576d7728793d9c2542364f2c1"
+    },
+    {
+      "id": "F",
+      "path": "ledger/batch-F.tsv",
+      "row_count": 14,
+      "review_report": "audits/gpt56-pro-16/2026-08-01-pre-public-pr113-pr130-review.md",
+      "review_report_commit": "a46b6bb9269b46caa205aebe50a7f19ccc9d86da"
+    },
+    {
+      "id": "G",
+      "path": "ledger/batch-G.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-pro-09-m/2026-08-01-pre-public-pr-review-132-159.md",
+      "review_report_commit": "d29dd935958d88560d73b1865185972ec06f1011"
+    },
+    {
+      "id": "H",
+      "path": "ledger/batch-H.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-02-p/2026-08-01-pre-public-riemann-review.md",
+      "review_report_commit": "27bb5dcd7a0a1739eeaa26ad97f12eb0a14bc19b"
+    },
+    {
+      "id": "I",
+      "path": "ledger/batch-I.tsv",
+      "row_count": 14,
+      "review_report": "reports/gpt56-05-l/2026-08-01-pre-public-review-pr187-pr211.md",
+      "review_report_commit": "c3c6c98a580277e22a04790222989bf3816f2ef2"
+    },
+    {
+      "id": "J",
+      "path": "ledger/batch-J.tsv",
+      "row_count": 1,
+      "review_report": "reports/gpt56-global-01/2026-08-01-pre-public-review-pr44-pr63.md",
+      "review_report_commit": "88617ac916d3df6e61ec5b4726e866743b8fc4a3"
+    }
+  ],
+  "head_policy": {
+    "reviewed_sha": "Authoritative exact frozen head recorded by review agent.",
+    "present_head_blank": "PR remained open in direct refresh, but present SHA was not individually re-read.",
+    "D_DELTA_NOT_REVIEWED": "Directly refreshed present head differs; old verdict does not extend."
+  },
+  "post_cutoff": {
+    "integration_pr": 213,
+    "included_in_cutoff": false
+  }
+}
