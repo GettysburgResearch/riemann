@@ -1,0 +1,18 @@
+{
+  "basis_invariance": "PASS",
+  "certificate_sha256": "0a36e763a79e317c193b35c3e629048819983f518602ee9d992140c858872941",
+  "dimension": 4,
+  "direct_order_three": 0,
+  "gram_ldl_pivots": [1,4,9,16],
+  "scope": "finite operator-side identity only; no classical xi pullback",
+  "status": "CERTIFIED_GRADED_SAME_MATRIX_ALL_ORDERS",
+  "trace_moments": {
+    "2": {"denominator":72,"numerator":205},
+    "3": 0,
+    "4": {"denominator":10368,"numerator":40225},
+    "5": 0,
+    "6": {"denominator":1492992,"numerator":8061625},
+    "7": 0,
+    "8": {"denominator":214990848,"numerator":1616430625}
+  }
+}
