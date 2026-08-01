@@ -15,7 +15,7 @@ This directory is the authoritative integrated state for the declared cutoff. It
 ## Contents
 
 - [`PR_LEDGER.md`](PR_LEDGER.md) — all 127 cutoff PRs, exact reviewed SHAs, review evidence, current-head confidence, dependencies, conflicts, advisory dispositions, and next actions.
-- [`pr-ledger.json`](pr-ledger.json) — machine-readable version of the same ledger.
+- [`pr-ledger.json`](pr-ledger.json) — machine-readable manifest for the batch ledgers and review evidence.
 - [`SYNTHESIS.md`](SYNTHESIS.md) — established finite results, conditional results, proposals, computations, gaps, refutations, and supersessions.
 - [`REPOSITORY_MODEL.md`](REPOSITORY_MODEL.md) — canonical organization, provenance contract, and continuing integration process.
 - [`STRATEGIC_OUTLOOK.md`](STRATEGIC_OUTLOOK.md) — repository-wide scientific perspective; strategy only.
@@ -74,4 +74,4 @@ The checker validates the 127-row population, exact review aggregate, SHA syntax
 
 ## Updating this state
 
-Do not rewrite the cutoff evidence in place. A later pass should create a new timestamped directory, import this ledger, refresh present heads directly, classify each delta, and append new aliases or provenance records. Historical review verdicts and source SHAs remain immutable facts even when a later repair is accepted.
+Do not rewrite the cutoff evidence in place. A later pass should create a new timestamped directory, import this ledger, refresh present heads directly, classify each delta, and append new aliases or provenance records. Historical review verdicts and source SHAs remain fixed historical facts even when a later repair is accepted.
