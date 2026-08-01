@@ -1,0 +1,14 @@
+{
+  "analytic_claim": "R-15601",
+  "captured_trace": {"denominator": 1, "numerator": 0},
+  "classification": "SYNTHETIC_MODEL",
+  "dimension_comparison_holds": true,
+  "exact_proof_object_sha256": "e9b4cf2fcf4be0d6c0a9d20108bf98a48a222108bece992747c97bf9f436321c",
+  "required_trace_threshold": {"denominator": 2, "numerator": 1},
+  "schema": "riemann.x15603-weighted-index-dimension-gap-verification.v1",
+  "source_dimension": 1,
+  "threshold_index": 1,
+  "trace_saturation_fails": true,
+  "uncaptured_trace": {"denominator": 1, "numerator": 1},
+  "verdict": "REFUTED_DIMENSION_ONLY_WEIGHTED_INDEX_COMPARISON"
+}

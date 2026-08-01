@@ -1,0 +1,10 @@
+X-15613 exact verifier tests
+
+baseline pass                                  PASS
+non-PSD line-centered comparator rejected      PASS
+oversized relative perturbation rejected       PASS
+epsilon touching ambient floor rejected        PASS
+incorrect sqrt(ell/h) declaration rejected     PASS
+destroyed actual coercivity rejected           PASS
+
+6/6 PASS

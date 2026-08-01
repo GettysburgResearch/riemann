@@ -1,0 +1,32 @@
+{
+  "H_negative_pivots": [
+    {"denominator": 4, "numerator": 1},
+    {"denominator": 4, "numerator": 1}
+  ],
+  "K_positive_pivots": [
+    {"denominator": 5000, "numerator": 313},
+    {"denominator": 16, "numerator": 1}
+  ],
+  "analytic_claims": ["L-15603", "L-15604", "L-15601"],
+  "capacity": 2,
+  "certified_floor": {"denominator": 4996, "numerator": -3},
+  "claimed_floor": {"denominator": 4996, "numerator": -3},
+  "classification": "SYNTHETIC_MODEL",
+  "complement_slack_pivots": [
+    {"denominator": 2, "numerator": 1}
+  ],
+  "exact_proof_object_sha256": "8bd79d399355c11a7b4f5e566a2abb9c30a7c34b695616da2c61c6427f07c8e5",
+  "inverse_ritz_moat_pivots": [
+    {"denominator": 5000, "numerator": 1},
+    {"denominator": 5008, "numerator": 3}
+  ],
+  "proof_boundary": "Exact rational finite operator algebra; no Riemann-zeta operator is certified by this synthetic packet.",
+  "saturated_count_below_gamma": 2,
+  "saturated_count_below_t": 2,
+  "schema": "riemann.x15602-capacity-saturation-verification.v1",
+  "trial_slack_pivots": [
+    {"denominator": 4, "numerator": 1},
+    {"denominator": 4, "numerator": 1}
+  ],
+  "verdict": "CERTIFIED_EXACT_CAPACITY_SATURATION_AND_AMBIENT_FLOOR"
+}

@@ -1,0 +1,39 @@
+{
+  "packet_adapted": {
+    "D_sharp": [
+      [
+        {"denominator": "1", "numerator": "3"},
+        {"denominator": "10", "numerator": "-1"}
+      ],
+      [
+        {"denominator": "10", "numerator": "-1"},
+        {"denominator": "300", "numerator": "601"}
+      ]
+    ],
+    "R_sharp": [
+      [
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "1", "numerator": "0"}
+      ],
+      [
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "300", "numerator": "301"}
+      ]
+    ],
+    "classification": "EXACT_PACKET_ADAPTED_COMPLETION_PASSES",
+    "clipping_upper": {"denominator": "200", "numerator": "1"},
+    "cross_beta_squared": {"denominator": "100", "numerator": "1"},
+    "four_defect_upper": {"denominator": "120", "numerator": "121"},
+    "gap": {"denominator": "2", "numerator": "3"},
+    "uncaptured_clipped_trace": {"denominator": "300", "numerator": "301"}
+  },
+  "proof_object_sha256": "2c6a54a08b7f9f04a8c3f8eb588ca1c37484b28c6e72ec70b2026689e13634cb",
+  "schema": "riemann.x15610-deficit-normal-forms.v1",
+  "spectral_normal_form": {
+    "classification": "EXACT_EXTRA_LOW_MODE_IS_ONLY_REMAINING_DEFECT",
+    "extra_low_uncaptured_trace": {"denominator": "2", "numerator": "3"},
+    "gap": {"denominator": "1", "numerator": "1"},
+    "pass_uncaptured_trace": {"denominator": "1", "numerator": "0"}
+  },
+  "verdict": "PASS_EXACT_L15624_L15625_REGRESSION"
+}

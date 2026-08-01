@@ -1,0 +1,98 @@
+{
+  "G": {
+    "denominator": "1",
+    "numerator": "2"
+  },
+  "Gamma": {
+    "denominator": "2",
+    "numerator": "3"
+  },
+  "actual_operator": {
+    "complement_eigenvalue": {
+      "denominator": "100",
+      "numerator": "199"
+    },
+    "count_below_Gamma": 2,
+    "count_below_t": 2,
+    "low_eigenvalue": {
+      "denominator": "10",
+      "numerator": "9"
+    }
+  },
+  "alpha": {
+    "denominator": "10",
+    "numerator": "9"
+  },
+  "deficit_spectrum": [
+    {
+      "multiplicity": 2,
+      "value": {
+        "denominator": "10",
+        "numerator": "11"
+      }
+    },
+    {
+      "multiplicity": 100,
+      "value": {
+        "denominator": "100",
+        "numerator": "1"
+      }
+    }
+  ],
+  "packet_dimension": 2,
+  "proof_object_sha256": "4cd12e82e83604bce7a5c6dfd56b164e2b821e34a1651ce7ed1d0200dd569e9e",
+  "r1": {
+    "classification": "R1_TRACE_CERTIFICATE_FAILS_ON_SHALLOW_MASS",
+    "forced_capture": {
+      "denominator": "5",
+      "numerator": "11"
+    },
+    "passes": false,
+    "required_upper": {
+      "denominator": "2",
+      "numerator": "1"
+    },
+    "trace": {
+      "denominator": "5",
+      "numerator": "16"
+    },
+    "uncaptured_upper": {
+      "denominator": "1",
+      "numerator": "1"
+    }
+  },
+  "r2": {
+    "certified_complement_floor": {
+      "denominator": "10",
+      "numerator": "19"
+    },
+    "classification": "R2_SCHATTEN_CERTIFICATE_PASSES",
+    "forced_capture": {
+      "denominator": "50",
+      "numerator": "121"
+    },
+    "norm_upper": {
+      "denominator": "10",
+      "numerator": "1"
+    },
+    "passes": true,
+    "required_upper": {
+      "denominator": "4",
+      "numerator": "1"
+    },
+    "trace": {
+      "denominator": "100",
+      "numerator": "243"
+    },
+    "uncaptured_moment_upper": {
+      "denominator": "100",
+      "numerator": "1"
+    }
+  },
+  "schema": "riemann.x15604-schatten-deficit-capture.v1",
+  "t": {
+    "denominator": "1",
+    "numerator": "1"
+  },
+  "verdict": "PASS_EXACT_R2_CAPTURE_WHILE_R1_TRACE_FAILS"
+}

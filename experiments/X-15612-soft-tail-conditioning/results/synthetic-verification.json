@@ -1,0 +1,37 @@
+{
+  "B": {
+    "denominator": "1",
+    "numerator": "12"
+  },
+  "certificate_sha256": "98305b42792dda68d2b9d9b06373f7cc177fc26ae9434520a6b75200e389835e",
+  "classification": "EXACT_CORE_PLUS_SOFT_ABSORPTION_FRAME_PASSES",
+  "core_indices": [
+    0
+  ],
+  "dangerous_complement_indices": [
+    2,
+    3
+  ],
+  "dangerous_envelope_squared": {
+    "denominator": "1",
+    "numerator": "9"
+  },
+  "dangerous_profile_floor": {
+    "denominator": "1",
+    "numerator": "1"
+  },
+  "dimension": 4,
+  "schema": "riemann.x15612-soft-tail-conditioning.result.v1",
+  "soft_indices": [
+    1
+  ],
+  "soft_profile_trace": {
+    "denominator": "100",
+    "numerator": "1"
+  },
+  "tau": {
+    "denominator": "16",
+    "numerator": "1"
+  },
+  "verdict": "PASS_EXACT_L15630_CONDITIONING_SPLIT"
+}

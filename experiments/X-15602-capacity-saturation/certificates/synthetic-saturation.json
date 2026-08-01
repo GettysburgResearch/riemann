@@ -1,0 +1,43 @@
+{
+  "classification": "SYNTHETIC_MODEL",
+  "claimed_floor": {
+    "denominator": 4996,
+    "numerator": -3
+  },
+  "expected_capacity": 2,
+  "full_operator": [
+    [
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 100, "numerator": 1}
+    ],
+    [
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 1, "numerator": 0}
+    ],
+    [
+      {"denominator": 100, "numerator": 1},
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 1, "numerator": 1}
+    ]
+  ],
+  "gamma": {"denominator": 2, "numerator": 1},
+  "q_upper": {"denominator": 313, "numerator": -1249},
+  "schema": "riemann.x15602-capacity-saturation.v1",
+  "t": {"denominator": 4, "numerator": 1},
+  "trial_basis": [
+    [
+      {"denominator": 1, "numerator": 1},
+      {"denominator": 1, "numerator": 0}
+    ],
+    [
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 1, "numerator": 1}
+    ],
+    [
+      {"denominator": 1, "numerator": 0},
+      {"denominator": 1, "numerator": 0}
+    ]
+  ]
+}

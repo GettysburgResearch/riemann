@@ -1,0 +1,23 @@
+{
+  "classification": "SYNTHETIC_MODEL",
+  "deficit_eigenvalues": [
+    {"numerator": 1, "denominator": 1},
+    {"numerator": 0, "denominator": 1}
+  ],
+  "kappa": {"numerator": 1, "denominator": 2},
+  "schema": "riemann.x15603-weighted-index-dimension-gap.v1",
+  "source_basis": [
+    [{"numerator": 0, "denominator": 1}],
+    [{"numerator": 1, "denominator": 1}]
+  ],
+  "weighted_deficit": [
+    [
+      {"numerator": 1, "denominator": 1},
+      {"numerator": 0, "denominator": 1}
+    ],
+    [
+      {"numerator": 0, "denominator": 1},
+      {"numerator": 0, "denominator": 1}
+    ]
+  ]
+}

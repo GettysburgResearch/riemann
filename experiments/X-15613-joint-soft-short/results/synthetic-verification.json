@@ -1,0 +1,30 @@
+{
+  "actual_solve_residual": {
+    "denominator": "100",
+    "numerator": "1"
+  },
+  "certificate_sha256": "febcbd51d850165435b53d5fc7819c16b9b94d2126887e94c11f640e377b8c74",
+  "classification": "EXACT_JOINT_PROFILE_SOFT_SHORT_BOUND_PASSES",
+  "exact_shorted_value": {
+    "denominator": "100000",
+    "numerator": "-1201"
+  },
+  "main_profile_schur": {
+    "denominator": "1",
+    "numerator": "0"
+  },
+  "normalized_negative_part": {
+    "denominator": "100000",
+    "numerator": "1201"
+  },
+  "schema": "riemann.x15613-joint-soft-short.result.v1",
+  "theorem_upper_bound": {
+    "denominator": "25",
+    "numerator": "3"
+  },
+  "trial_profile_solve": {
+    "denominator": "10",
+    "numerator": "1"
+  },
+  "verdict": "PASS_EXACT_L15632_DIRECT_SHORT_LMI"
+}
