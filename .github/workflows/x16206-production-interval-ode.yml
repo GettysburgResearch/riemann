@@ -10,6 +10,14 @@ on:
       - 'experiments/X-16206-production-interval-ode/x16206_*.py'
       - 'experiments/X-16206-production-interval-ode/verify_bindings.py'
       - '.github/workflows/x16206-production-interval-ode.yml'
+  pull_request:
+    branches:
+      - 'agent/gpt56-09/143-finite-diagonal-prolate'
+    paths:
+      - 'experiments/X-16206-production-interval-ode/emit_directed_interval_ode.py'
+      - 'experiments/X-16206-production-interval-ode/x16206_*.py'
+      - 'experiments/X-16206-production-interval-ode/verify_bindings.py'
+      - '.github/workflows/x16206-production-interval-ode.yml'
 
 permissions:
   contents: write
