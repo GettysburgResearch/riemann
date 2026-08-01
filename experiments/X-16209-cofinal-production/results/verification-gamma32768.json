@@ -1,0 +1,49 @@
+{
+  "classification": "SOURCE_BOUND_COFINAL_WRAPPER_BLOCK",
+  "cofinal_support": {
+    "bad_measure_upper": "3/32",
+    "good_measure_lower": "29/32"
+  },
+  "complete_alias": {
+    "cross_required": "5019/23168",
+    "cross_upper": "5019/23168",
+    "cuberoot": 32,
+    "profile_gram_lower": "2265729/2896000",
+    "profile_gram_upper": "18",
+    "sqrt_floor": 181
+  },
+  "gamma": 32768,
+  "next_scale": {
+    "alias_upper": "75/1024",
+    "d4_over_d8_upper": "1/838860800000",
+    "gamma": 262144
+  },
+  "positive_route": {
+    "d4_over_d8_upper": "1/204800000",
+    "gap_over_d8_lower": "62719949/2560000000",
+    "ground_ratio": "151/125439898",
+    "target_over_d8_upper": "151/5120000000"
+  },
+  "proof_boundary": "The block binds an actual DIRECTED_INTERVAL_ODE source file. The alias and mode-hierarchy inequalities are imported by exact Git-blob identifiers and instantiated without redoing their proofs. The radial and frequency terms use the source primitive's exact unit-energy ceilings; this is conservative but sufficient for the cofinal scalarization and target/gap ratio.",
+  "proof_object_sha256": "57492237050a855b7c99566cb1b654cac440d3be66d3f3eac5868990df28f95c",
+  "scalarization": {
+    "epsilon_reconstructed": "235752500/469005903",
+    "epsilon_upper": "51/100"
+  },
+  "schedule_index": 1,
+  "schema": "riemann.x16209-cofinal-production-result.v1",
+  "source_bindings": {
+    "source_definition_sha256": "5618a883af37feb70bf2238145ee0a249536d98523af290b8ae244e005c6e759",
+    "source_file_sha256": "8e3dc89a82a7381ebf930336ba635a6d7af168afdd8ba1a4f0dcc77054170281",
+    "source_manifest_sha256": null,
+    "source_primitive_sha256": "1b60db67667172655b908b8dce7b6152bdfecd413375df9a88ba34d4cf50c86b",
+    "source_producer_sha256": "82da41d4feb8e6d6dcac023725b2b3a843b33bd15080ddb580bae858c29284bd"
+  },
+  "source_tail": {
+    "deterministic_error_upper": "385/128",
+    "endpoint_l2_norm_upper": "1/256",
+    "endpoint_point_upper": "1/256",
+    "frequency_derivative_l2_upper": "2",
+    "radial_l2_upper": "1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "classification": "RADIAL_DERIVATIVE_CLOSED_NORMALIZED_ENDPOINT_OPEN",
+  "cofinal_decay": {
+    "complete_alias_gate": "cross_error_upper must tend to zero before promotion",
+    "derivative_gate": "sum eps_drad <= gamma^-1",
+    "endpoint_gate": "requires normalized radial endpoint/ODE asymptotic, not absolute source H4",
+    "radial_gate": "sum eps_rad <= gamma^-2"
+  },
+  "endpoint_relative": null,
+  "gamma": 4096,
+  "profile_gram": {
+    "complete_lower": null,
+    "complete_upper": null,
+    "first_alias_lower": "9999999/10000000",
+    "first_alias_upper": "10000001/10000000"
+  },
+  "proof_boundary": "The coefficient-tail radial and derivative placeholders are source-derived. The earlier absolute H4 endpoint substitution was not relative to the first-alias energy and is rejected. Promotion requires a normalized radial endpoint remainder and the complete Poisson cross-alias Gram.",
+  "proof_object_sha256": "321798b84ec7bf566b402c8338eaaece8089a4aa4d0b7050e0ebd210e05c75f7",
+  "schema": "riemann.x16207-source-derived-moat-result.v2",
+  "source_bindings": {
+    "actual_primitive_sha256": "5fba9d6dd8cdb8866b0dbbe0e659efc3be5a3a5043cf2062e5779f3b4677523d",
+    "base_producer_sha256": "01b411e9b24f15eb6f63efd3d2e188db2f8841a57c2212c80eb0ee4f2f806371",
+    "full_exact_proof_object_sha256": "185814dceb233ba87f14dcb154c0adb576a99d50c936376421f376414dd04cdb",
+    "full_exact_result_sha256": "5529e40d6e11a3698c853a550b9747842eca4542e8c7d9e15a46d6cf748c32aa",
+    "producer_sha256": "14c932852c79e9786e793c91ced6d394f24dfb5daa68ce4496f2b58e0292653a"
+  },
+  "source_derived": {
+    "absolute_source_f4_packet_upper": "not-used-relatively",
+    "derivative_tail_l2_sq_upper": "1e-4174",
+    "frequency_derivative_l2_sum_upper": "1e-2087",
+    "horizontal_l2_sum_upper": "5e-2091",
+    "horizontal_tail_l2_sq_upper": "1e-4180",
+    "radial_l2_sum_upper": "2.4e-2091",
+    "tail_l2_sq_upper": "1e-4181"
+  }
+}

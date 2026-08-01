@@ -1,0 +1,64 @@
+{
+  "classification": "EXACT_SYNTHETIC_REDUCTION_CONTROL",
+  "complete_scalarization": {
+    "complete_gap_lower_bound": "1779/400",
+    "epsilon": "1/10",
+    "target_rayleigh": "21/400",
+    "target_upper_bound": "11/200",
+    "whitened_row_bounds": [
+      "7/100",
+      "7/100",
+      "1/100"
+    ]
+  },
+  "energy_angle": {
+    "background_schur_margin": "2",
+    "complete_gap_lower_bound": "1",
+    "global_floor": "0",
+    "kappa": "1/2",
+    "source_schur_pivots": [
+      "9/40",
+      "8/9"
+    ],
+    "target_background_dual": "1/40",
+    "target_background_dual_bound": "1/4",
+    "target_floor_excess": "1"
+  },
+  "proof_boundary": "The checker validates finite rational algebra only. It does not evaluate prolate functions, the Weil form, zeta zeros, or any production asymptotic gate.",
+  "repaired_packet": {
+    "radical_basis": [
+      [
+        "1",
+        "2"
+      ],
+      [
+        "-2",
+        "-3"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "raw_modes_have_poisson_power_corrections": true,
+    "repaired_ldl_pivots": [
+      "10401/10000",
+      "104100401/1040100"
+    ],
+    "repaired_leakage_gram": [
+      [
+        "10401/10000",
+        "301/5000"
+      ],
+      [
+        "301/5000",
+        "125113/1250"
+      ]
+    ]
+  },
+  "schema": "riemann.x16202-four-gate-reduction.v1"
+}

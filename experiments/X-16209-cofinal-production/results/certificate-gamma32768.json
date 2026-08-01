@@ -1,0 +1,71 @@
+{
+  "alias": {
+    "airy_scale": 32,
+    "alias_cutoff": 181,
+    "cross_error_upper": "5019/23168",
+    "first_alias_cross_upper": "1/1000",
+    "first_alias_lower": "999/1000",
+    "first_alias_upper": "1001/1000",
+    "full_upper": "18",
+    "higher_self_upper": "16"
+  },
+  "claimed_result_sha256": "57492237050a855b7c99566cb1b654cac440d3be66d3f3eac5868990df28f95c",
+  "cofinal_block": {
+    "exceptional_measure_upper": "1/32",
+    "families": [
+      {
+        "mean_square_upper": "1/32768",
+        "name": "line-centered",
+        "threshold": "1/32"
+      },
+      {
+        "mean_square_upper": "1/32768",
+        "name": "horizontal",
+        "threshold": "1/32"
+      }
+    ],
+    "measure_lower": "1"
+  },
+  "emitter_diagnostics": {
+    "deterministic_error": "385/128",
+    "epsilon_reconstructed": "235752500/469005903",
+    "gap_scaled": "62719949/2560000000",
+    "profile_gram_lower": "2265729/2896000",
+    "schedule_index": 1,
+    "target_scaled": "151/5120000000"
+  },
+  "endpoint": {
+    "l2_norm_upper": "1/256",
+    "l2_sq_upper": "1/65536",
+    "method": "RADIAL_OUTGOING_PHASE",
+    "point_upper": "1/256"
+  },
+  "gamma": 32768,
+  "next_gamma": 262144,
+  "scalarization": {
+    "bounded_main_correction_upper": "1",
+    "claimed_epsilon_upper": "51/100",
+    "log_R_lower": "207/20"
+  },
+  "schema": "riemann.x16209-cofinal-production.v1",
+  "source_binding": {
+    "alias_theorem_git_blob_sha1": "c64928b212915d9ae766118b621e6b235de41aa8",
+    "mode8_theorem_git_blob_sha1": "0f02c679b7d2415f29f3b75bbc065d2958e3f0f3",
+    "source_definition_sha256": "5618a883af37feb70bf2238145ee0a249536d98523af290b8ae244e005c6e759",
+    "source_file_sha256": "8e3dc89a82a7381ebf930336ba635a6d7af168afdd8ba1a4f0dcc77054170281",
+    "source_manifest_sha256": null,
+    "source_primitive_sha256": "1b60db67667172655b908b8dce7b6152bdfecd413375df9a88ba34d4cf50c86b",
+    "source_producer_sha256": "82da41d4feb8e6d6dcac023725b2b3a843b33bd15080ddb580bae858c29284bd"
+  },
+  "source_tails": {
+    "derivative_l2_sum_upper": "2",
+    "method": "EXACT_UNIT_ENERGY_CEILING_FROM_BOUND_SOURCE_PRIMITIVE",
+    "radial_l2_sum_upper": "1"
+  },
+  "tail_hierarchy": {
+    "claimed_ground_ratio_upper": "151/125439898",
+    "d4_over_d8_upper": "1/204800000",
+    "gap_constant_lower": "1/20",
+    "target_constant_upper": "4"
+  }
+}

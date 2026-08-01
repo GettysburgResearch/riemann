@@ -1,0 +1,30 @@
+{
+  "classification": "REAL_SOURCE_BOUND_PREFIX; DOWNSTREAM THEOREM LEDGERS NOT PRODUCTION-CLOSED",
+  "emitter_sha256": "9271eaa6021ffbefae19464ed8bbd15f89adf2a1ad62a9a1f8561dd897b06adf",
+  "proof_boundary": "The three real primitives pass X-16204. The coarse radial tail, horizontal and endpoint charges were not tied to the separately declared deterministic scalarization ledger.",
+  "retained_blocks": [
+    {
+      "consumer_proof_object_sha256": "4559405ca5ccf952cc414b74ef0595f6d238f06ad2f1ee178377e27858c18e0a",
+      "gamma": 4096,
+      "primitive_file_sha256": "c9398846ef1b283fb0996a1b09757476b39800f0b75af32156209e035192c4ce",
+      "source_sha256": "37ba535236c8aee0a796725ef3db8d2f76d838f0a7d4e5818dd6ed20072fc1c1",
+      "wrapper_file_sha256": "5f118674a777ddebedf6adf252a253423cb382263413525dfb1b2b1114cb2496"
+    },
+    {
+      "consumer_proof_object_sha256": "3f3e661b509b64a17e2234f28229cd5f75d951ad73aa65732f4b4d6ebd94ac40",
+      "gamma": 32768,
+      "primitive_file_sha256": "8e3dc89a82a7381ebf930336ba635a6d7af168afdd8ba1a4f0dcc77054170281",
+      "source_sha256": "5618a883af37feb70bf2238145ee0a249536d98523af290b8ae244e005c6e759",
+      "wrapper_file_sha256": "6f026c4a0c84ed1ce8c224b040e8ffb1c0e349bbd1147b483b75fdb1a424448c"
+    },
+    {
+      "consumer_proof_object_sha256": "942b4744bf0cd18092824c87e4a33fbdfe1c0bc92a8233080bd42964171b1e96",
+      "gamma": 262144,
+      "primitive_file_sha256": "afb6cfc33feae50d6a201582ed3132d04d0e5e200cab83c40533332013b06e31",
+      "source_sha256": "024b47afa6621f43896adee997588a36427c2e9e86b4c544c4c7ad5a4e49ca42",
+      "wrapper_file_sha256": "ce4400268e2ef5da8e40e51e10610dbc56b83d803ba0fdce5afe02a0ad25e1a2"
+    }
+  ],
+  "schedule": "gamma_j=2^(12+3j)",
+  "schema": "riemann.x16205-directed-interval-ode-cofinal-prefix.v1"
+}

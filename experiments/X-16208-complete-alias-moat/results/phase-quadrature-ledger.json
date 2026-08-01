@@ -1,0 +1,22 @@
+{
+  "airy_constant": 2,
+  "alias_cutoff": 64,
+  "diagnostic_midpoint_matrix": [["-0.00513", "0.01017"], ["0.01017", "0.00858"]],
+  "diagnostic_proof_role": "NONE",
+  "directed_cell_slack_rule": "1/K",
+  "fold_cubic_interval": ["8", "60/7"],
+  "gamma": 4096,
+  "ledger_sha256": "a394c4c846d4de62ece5ad5962e22132b91313fd700990508c29ab2e121541f0",
+  "modes": [0, 4, 8, 12],
+  "nonstationary_constant": 512,
+  "nonstationary_derivative_gap": "1/50",
+  "normalized_outgoing_endpoint_constant": 256,
+  "ode_template_constant": 1024,
+  "post_cutoff_rule": "sum_{k>K} k^-2 <= 1/K",
+  "schema": "riemann.x16208-phase-quadrature-ledger.v1",
+  "sigma_sq_upper": "1/128",
+  "source_proof_object_sha256": "185814dceb233ba87f14dcb154c0adb576a99d50c936376421f376414dd04cdb",
+  "stationary_packet_constant": 24,
+  "stationary_root_box": "1+63/(64k^2) <= z^2 <= 1+65/(64k^2)",
+  "stationary_weight_fourth_power_rule": "k^8 Q^4 <= (6/5)^4"
+}

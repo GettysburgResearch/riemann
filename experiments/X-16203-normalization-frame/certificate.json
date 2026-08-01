@@ -1,0 +1,60 @@
+{
+  "chi": [
+    3,
+    5
+  ],
+  "defects": [
+    1,
+    2,
+    5,
+    10,
+    17
+  ],
+  "endpoint_ledger": {
+    "claimed_l2_sq_bound": [
+      1,
+      7776
+    ],
+    "claimed_point_bound": [
+      1,
+      72
+    ],
+    "derivative_l1_upper": 3,
+    "lambda": 2,
+    "p": 2,
+    "pi_lower": 3,
+    "v": 2,
+    "zeta_tail_upper": [
+      2,
+      3
+    ]
+  },
+  "negative_ray_components": [
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "point_values": [
+    2,
+    3,
+    5,
+    7,
+    11
+  ],
+  "positive_ray_components": [
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "schema": "riemann.x16203-normalization-frame.v1"
+}

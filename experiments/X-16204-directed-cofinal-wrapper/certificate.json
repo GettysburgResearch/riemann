@@ -1,0 +1,83 @@
+{
+  "claimed_result_sha256": "3b9615ecc0bdc14a00f24c45953b8ce4350fe875b6da3fb6edad9c4cdb09657c",
+  "cofinal_block": {
+    "exceptional_measure_upper": "1/100",
+    "mean_square_families": [
+      {
+        "mean_square_upper": "1/10000",
+        "name": "line-centered",
+        "threshold": "1/10"
+      },
+      {
+        "mean_square_upper": "1/10000",
+        "name": "horizontal",
+        "threshold": "1/10"
+      }
+    ],
+    "measure_lower": "1",
+    "support_average_ledger_sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+  },
+  "phase_partition": {
+    "airy_frequency_radius_upper": "9/10000",
+    "airy_t_radius_upper": "1/100",
+    "cube_root_q": 100,
+    "fold_third_lower": "8",
+    "fold_third_upper": "60/7",
+    "higher_alias_gap": "1/50",
+    "interval_phase_ledger_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "omega_left": "17/8",
+    "omega_right": "9/4",
+    "radial_scale_R": 1000000,
+    "sigma_sq_upper": "1/8",
+    "stationary_second_derivative_lower": "11/12"
+  },
+  "poisson_endpoint": {
+    "alias_cutoff_K": 10,
+    "claimed_l2_sq_upper": "1/1000000000000000000000000000000000000",
+    "claimed_point_upper": "1/1000000000000000000",
+    "derivative_l1_upper": "1/1000",
+    "lambda_lower": "1000",
+    "p": 4,
+    "pi_lower": "3",
+    "polylog_channel_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+    "post_cutoff_zeta_tail_upper": "1/3000",
+    "v_lower": "1000",
+    "zeta4_minus_one_upper": "9083/108045"
+  },
+  "profile_gram": {
+    "directed_gram_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+    "lower": "1/2",
+    "upper": "2"
+  },
+  "radial_replay": {
+    "claimed_derivative_l2_sq_upper": "1/10000",
+    "claimed_l2_sq_upper": "1/100000",
+    "classification": "DIRECTED_INTERVAL_ODE",
+    "derivative_initial_error_upper": "1/100000",
+    "derivative_residual_sup_upper": "1/1000000",
+    "derivative_tail_l2_sq_upper": "1/10000000",
+    "derivative_transition_bound": "3",
+    "finite_interval_length": "10",
+    "initial_error_upper": "1/100000",
+    "primitive_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "producer_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "residual_sup_upper": "1/1000000",
+    "tail_l2_sq_upper": "1/100000000",
+    "transition_bound": "2"
+  },
+  "scalarization": {
+    "bounded_main_correction_upper": "1",
+    "claimed_relative_epsilon_upper": "1/20",
+    "deterministic_error_upper": "1/10",
+    "log_R_lower": "100"
+  },
+  "schema": "riemann.x16204-directed-cofinal-wrapper.v1",
+  "tail_hierarchy": {
+    "a_lower": "100",
+    "claimed_ground_correction_ratio_upper": "1/20",
+    "d4_upper": "1/1000",
+    "d8_lower": "1/10",
+    "gap_constant_lower": "1/2",
+    "target_constant_upper": "1"
+  }
+}

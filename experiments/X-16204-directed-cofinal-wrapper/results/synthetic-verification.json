@@ -1,0 +1,56 @@
+{
+  "classification": "EXACT_COFINAL_CCM_WRAPPER_BLOCK",
+  "cofinal_block": {
+    "bad_measure_upper": "3/100",
+    "families": [
+      {
+        "bad_measure_upper": "1/100",
+        "threshold": "1/10"
+      },
+      {
+        "bad_measure_upper": "1/100",
+        "threshold": "1/10"
+      }
+    ],
+    "good_measure_lower": "97/100"
+  },
+  "phase_partition": {
+    "airy_frequency_radius_upper": "9/10000",
+    "airy_phase_second_derivative_squared_enclosure": [
+      "36001228980845878467281963938266267952344954749/1379145317719334592817905876906551195612479488",
+      "92594581191048920380051573293850468610583801025/290733799597167231256043561111431009613643776"
+    ],
+    "airy_t_radius_upper": "1/100",
+    "fold_third_interval": [
+      "8",
+      "60/7"
+    ],
+    "higher_alias_gap": "1/50",
+    "safe_window": [
+      "17/8",
+      "9/4"
+    ],
+    "stationary_second_derivative_lower": "11/12"
+  },
+  "poisson_endpoint": {
+    "l2_sq_upper": "82500889/137251592049196800000000000000000000000000000",
+    "point_upper": "9083/140026320000000000000000",
+    "post_cutoff_tail_upper": "1/3000"
+  },
+  "positive_route": {
+    "complete_gap_lower": "237/50",
+    "ground_correction_ratio_upper": "7/316",
+    "target_rayleigh_upper": "21/200"
+  },
+  "proof_boundary": "The checker composes directed primitive bounds. It does not create the interval-ODE Dunster primitive or identify an explicit good support; the support certificate proves positive good-set measure in a dyadic block.",
+  "proof_object_sha256": "3b9615ecc0bdc14a00f24c45953b8ce4350fe875b6da3fb6edad9c4cdb09657c",
+  "radial_replay": {
+    "derivative_l2_sq_upper": "17/125000000",
+    "l2_sq_upper": "13/500000000"
+  },
+  "scalarization": {
+    "relative_epsilon_upper": "13/500",
+    "total_absolute_error_upper": "13/10"
+  },
+  "schema": "riemann.x16204-directed-cofinal-wrapper.v1"
+}

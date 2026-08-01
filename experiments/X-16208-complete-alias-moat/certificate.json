@@ -1,0 +1,33 @@
+{
+  "schema": "riemann.x16208-complete-alias-production.v1",
+  "source": {
+    "gamma": 4096,
+    "modes": [0, 4, 8, 12],
+    "actual_primitive_sha256": "5fba9d6dd8cdb8866b0dbbe0e659efc3be5a3a5043cf2062e5779f3b4677523d",
+    "full_exact_result_sha256": "5529e40d6e11a3698c853a550b9747842eca4542e8c7d9e15a46d6cf748c32aa",
+    "full_exact_proof_object_sha256": "185814dceb233ba87f14dcb154c0adb576a99d50c936376421f376414dd04cdb",
+    "producer_sha256": "14c932852c79e9786e793c91ced6d394f24dfb5daa68ce4496f2b58e0292653a"
+  },
+  "phase": {"sigma_sq_upper": "1/128", "alias_cutoff": 64},
+  "first_alias": {"lower": "9999999/10000000", "upper": "10000001/10000000"},
+  "alias": {"cross_error_upper": "27/32", "higher_self_upper": "16", "full_upper": "18"},
+  "endpoint": {"method": "RADIAL_OUTGOING_PHASE", "point_upper": "1/32", "l2_norm_upper": "1/32", "l2_sq_upper": "1/1024"},
+  "bindings": {
+    "phase_ledger_sha256": "86b30f2ac0a6f47af64731c81c41814ba31e29faa4edbe858404d4fcd395dc36",
+    "endpoint_ledger_sha256": "8b2d13695b58728d3d4ce02548b4452a87ccfc88107737b088f444165c3f0053",
+    "quadrature_ledger_sha256": "86b30f2ac0a6f47af64731c81c41814ba31e29faa4edbe858404d4fcd395dc36"
+  },
+  "source_tails": {"radial_l2_sum_upper": "3e-2091", "derivative_l2_sum_upper": "1e-2087"},
+  "cofinal_block": {
+    "measure_lower": "1",
+    "exceptional_measure_upper": "1/16",
+    "families": [
+      {"name": "line-centered", "mean_square_upper": "1/4096", "threshold": "1/16"},
+      {"name": "horizontal", "mean_square_upper": "1/4096", "threshold": "1/16"}
+    ]
+  },
+  "scalarization": {"log_R_lower": "8", "bounded_main_correction_upper": "1", "claimed_epsilon_upper": "31/32"},
+  "tail_hierarchy": {"a_lower": "8", "d4_upper": "2e-3535", "d8_lower": "1e-3530", "target_constant_upper": "4", "gap_constant_lower": "1/20", "claimed_ratio_upper": "1/4"},
+  "cofinal_decay": {"next_gamma": 32768, "next_sqrt_floor": 181, "next_cuberoot_floor": 32},
+  "midpoint_diagnostic": {"proof_role": "NONE", "matrix": [["-0.00513", "0.01017"], ["0.01017", "0.00858"]], "spectral_norm": "0.01399"}
+}

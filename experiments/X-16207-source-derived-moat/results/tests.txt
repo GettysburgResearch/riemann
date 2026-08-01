@@ -1,0 +1,16 @@
+test_both_closed_bind_downstream (test_bind_downstream.Tests.test_both_closed_bind_downstream) ... ok
+test_closed_endpoint_open_alias_refuses_wrapper (test_bind_downstream.Tests.test_closed_endpoint_open_alias_refuses_wrapper) ... ok
+test_open_endpoint_refuses_wrapper (test_bind_downstream.Tests.test_open_endpoint_refuses_wrapper) ... ok
+test_absolute_f4_cannot_close_relative_endpoint (test_verify.Tests.test_absolute_f4_cannot_close_relative_endpoint) ... ok
+test_derivative_understatement_rejected (test_verify.Tests.test_derivative_understatement_rejected) ... ok
+test_digest_mutation_rejected (test_verify.Tests.test_digest_mutation_rejected) ... ok
+test_endpoint_close_still_leaves_alias_open (test_verify.Tests.test_endpoint_close_still_leaves_alias_open) ... ok
+test_full_close_requires_both_alias_bounds (test_verify.Tests.test_full_close_requires_both_alias_bounds) ... ok
+test_partial_alias_rejected (test_verify.Tests.test_partial_alias_rejected) ... ok
+test_radial_derivative_close_but_endpoint_stays_open (test_verify.Tests.test_radial_derivative_close_but_endpoint_stays_open) ... ok
+test_radial_understatement_rejected (test_verify.Tests.test_radial_understatement_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.009s
+
+OK

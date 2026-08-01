@@ -1,0 +1,142 @@
+{
+  "schema": "riemann.x16201-affine-sector-audit.v1",
+  "logical_gates": {
+    "synthetic_only": true,
+    "exact_rational_inputs": true,
+    "no_rh_claim": true
+  },
+  "affine_falsifier": {
+    "delta": [
+      "0",
+      "1",
+      "2"
+    ],
+    "alpha": [
+      "0",
+      "1",
+      "5"
+    ],
+    "A_in_D_basis": [
+      [
+        "0",
+        "1/5",
+        "0"
+      ],
+      [
+        "1/5",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "5"
+      ]
+    ]
+  },
+  "sector_gap": {
+    "source_gap": "2",
+    "background_gap": "5",
+    "cross_bound": "1/2",
+    "claimed_full_gap": "19/10"
+  },
+  "radical_tail": {
+    "Q": [
+      [
+        "1",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "-1"
+      ],
+      [
+        "-1",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "1"
+      ]
+    ],
+    "J": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "P": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "tail_scalar": "1"
+  },
+  "tail_scalarization": {
+    "D": [
+      [
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "3"
+      ]
+    ],
+    "A": [
+      [
+        "4",
+        "0"
+      ],
+      [
+        "0",
+        "9"
+      ]
+    ],
+    "claimed_trace": "5",
+    "claimed_determinant": "6",
+    "claimed_discriminant": "1",
+    "claimed_relative_square": "1/25"
+  }
+}

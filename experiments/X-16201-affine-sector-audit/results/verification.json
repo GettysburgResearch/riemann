@@ -1,0 +1,91 @@
+{
+  "affine_falsifiers": {
+    "affine_curvature_residual_lower_bound": "3/4",
+    "combined_residual_lower_bound": "3/4",
+    "offdiagonal_residual_lower_bound": "1/5",
+    "triples": [
+      {
+        "curvature": "-3",
+        "denominator": "4",
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "residual_lower_bound": "3/4"
+      }
+    ]
+  },
+  "classification": "EXACT_SYNTHETIC_OPERATOR_AUDIT",
+  "proof_boundary": "Exact finite rational algebra only. No CCM matrix, prolate asymptotic, Weil primitive, or Riemann-xi value is evaluated.",
+  "proof_object_sha256": "841bb98b828601ebb6257d0709c91e91ce6d8aad8e304721eed7b9369a3735e0",
+  "radical_tail": {
+    "factorization_exact": true,
+    "scalar_residual": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "source_matrix": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "tail_gram": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "tail_q_matrix": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  },
+  "schema": "riemann.x16201-affine-sector-audit.v1",
+  "sector_gap": {
+    "claimed_full_gap": "19/10",
+    "comparison_matrix": [
+      [
+        "1/10",
+        "-1/2"
+      ],
+      [
+        "-1/2",
+        "31/10"
+      ]
+    ],
+    "ldl_pivots": [
+      "1/10",
+      "3/5"
+    ],
+    "theta_ratio": "1/40"
+  },
+  "tail_scalarization": {
+    "best_scalar": "5/2",
+    "generalized_determinant": "6",
+    "generalized_trace": "5",
+    "optimal_relative_remainder_squared": "1/25",
+    "spectral_discriminant": "1"
+  }
+}

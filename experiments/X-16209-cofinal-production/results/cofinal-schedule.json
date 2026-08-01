@@ -1,0 +1,108 @@
+{
+  "alias_rule": "18/floor(sqrt(gamma))+2/cuberoot(gamma)+1792/gamma",
+  "blocks": [
+    {
+      "cross_alias_upper": "5019/23168",
+      "cuberoot": 32,
+      "d4_over_d8_upper": "1/204800000",
+      "epsilon_upper": "5027/10000",
+      "gamma": 32768,
+      "ground_ratio_upper": "15027/12730869946",
+      "j": 1,
+      "lambda_diagnostic": 72.2162666941128,
+      "profile_gram_lower": "2265729/2896000",
+      "sqrt_floor": 181
+    },
+    {
+      "cross_alias_upper": "75/1024",
+      "cuberoot": 64,
+      "d4_over_d8_upper": "1/838860800000",
+      "epsilon_upper": "3507/10000",
+      "gamma": 262144,
+      "ground_ratio_upper": "13507/68084039672986",
+      "j": 2,
+      "lambda_diagnostic": 204.25844756553354,
+      "profile_gram_lower": "118497/128000",
+      "sqrt_floor": 512
+    },
+    {
+      "cross_alias_upper": "42867/1482752",
+      "cuberoot": 128,
+      "d4_over_d8_upper": "1/3435973836800000",
+      "epsilon_upper": "2857/10000",
+      "gamma": 2097152,
+      "ground_ratio_upper": "12857/306789513953274286",
+      "j": 3,
+      "lambda_diagnostic": 577.7301335529024,
+      "profile_gram_lower": "179800281/185344000",
+      "sqrt_floor": 1448
+    },
+    {
+      "cross_alias_upper": "807/65536",
+      "cuberoot": 256,
+      "d4_over_d8_upper": "1/14073748835532800000",
+      "epsilon_upper": "2453/10000",
+      "gamma": 16777216,
+      "ground_ratio_upper": "12453/1327682280772075515094",
+      "j": 4,
+      "lambda_diagnostic": 1634.0675805242684,
+      "profile_gram_lower": "8082933/8192000",
+      "sqrt_floor": 4096
+    },
+    {
+      "cross_alias_upper": "33244359/6073876480",
+      "cuberoot": 512,
+      "d4_over_d8_upper": "1/57646075230342348800000",
+      "epsilon_upper": "541/2500",
+      "gamma": 134217728,
+      "ground_ratio_upper": "3041/1411608267203008266238918",
+      "j": 5,
+      "lambda_diagnostic": 4621.841068423219,
+      "profile_gram_lower": "150863956113/151846912000",
+      "sqrt_floor": 11585
+    },
+    {
+      "cross_alias_upper": "10503/4194304",
+      "cuberoot": 1024,
+      "d4_over_d8_upper": "1/236118324143482260684800000",
+      "epsilon_upper": "1941/10000",
+      "gamma": 1073741824,
+      "ground_ratio_upper": "11941/23785969678404044235735036118",
+      "j": 6,
+      "lambda_diagnostic": 13072.540644194147,
+      "profile_gram_lower": "522450837/524288000",
+      "sqrt_floor": 32768
+    },
+    {
+      "cross_alias_upper": "3641599551/3109858312192",
+      "cuberoot": 2048,
+      "d4_over_d8_upper": "1/967140655691703339764940800000",
+      "epsilon_upper": "1761/10000",
+      "gamma": 8589934592,
+      "ground_ratio_upper": "11761/99603398278049297704041840636478",
+      "j": 7,
+      "lambda_diagnostic": 36974.728547385756,
+      "profile_gram_lower": "387888356791101/388732289024000",
+      "sqrt_floor": 92681
+    },
+    {
+      "cross_alias_upper": "149511/268435456",
+      "cuberoot": 4096,
+      "d4_over_d8_upper": "1/3961408125713216879677197516800000",
+      "epsilon_upper": "807/5000",
+      "gamma": 68719476736,
+      "ground_ratio_upper": "5807/207627303388943979706081114849278386",
+      "j": 8,
+      "lambda_diagnostic": 104580.32515355317,
+      "profile_gram_lower": "33502188693/33554432000",
+      "sqrt_floor": 262144
+    }
+  ],
+  "gamma_rule": "gamma_j=4096*8^j=(16*2^j)^3",
+  "limit_statement": "cross_alias->0, epsilon->0, and complete ground ratio=O(4096^-j)=O(gamma^-4)->0",
+  "log_rule": "log(gamma)>=69*log2_exponent/100",
+  "mode_rule": "d4/d8<=1/(50000*4096^j)",
+  "schema": "riemann.x16209-cofinal-schedule.v1",
+  "source_energy_rule": "radial L2<=1 and frequency-derivative L2<=2 from each bound primitive",
+  "support_rule": "two mean-square families: M<=1/gamma, threshold=1/cuberoot(gamma)"
+}
