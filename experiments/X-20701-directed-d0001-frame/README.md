@@ -20,7 +20,8 @@ source commit    34d8391395d1e08ae986bf5c1c10439f90f9cb57
 They were initially written through the connector's default-branch contents
 endpoint by mistake. The workflow materializes those immutable blobs by commit
 and verifies their Git hashes before execution; the accidental default-branch
-copies are removed separately.
+copies have been removed. The source commit remains immutable repository
+history and is used only after exact blob-hash verification.
 
 The support ladder is
 
