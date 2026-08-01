@@ -1,0 +1,10 @@
+{
+  "airy_rule": "floor(cuberoot(gamma))",
+  "alias_cutoff_rule": "floor(sqrt(gamma))",
+  "bound": "18/sqrt(gamma)+2/cuberoot(gamma)+1792/gamma",
+  "current": {"gamma": 4096, "upper": "27/32"},
+  "ledger_sha256": "61cfb29ab66dc69b4235c100d27c05430c8e62194a1277c1bdd18d5a7ae29d6f",
+  "limit": "0",
+  "next": {"cuberoot_floor": 32, "gamma": 32768, "sqrt_floor": 181, "upper": "5019/23168"},
+  "schema": "riemann.x16208-cofinal-alias-decay.v1"
+}
