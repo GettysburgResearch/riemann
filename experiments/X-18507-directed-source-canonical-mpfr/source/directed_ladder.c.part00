@@ -1,0 +1,70 @@
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <string.h>
+#include <math.h>
+#include <gmp.h>
+
+/* Minimal MPFR declarations: the runtime library is available but headers are not. */
+typedef long mpfr_prec_t;
+typedef long mpfr_exp_t;
+typedef int mpfr_sign_t;
+typedef unsigned long mp_limb_t;
+typedef struct { mpfr_prec_t _mpfr_prec; mpfr_sign_t _mpfr_sign; mpfr_exp_t _mpfr_exp; mp_limb_t *_mpfr_d; } __mpfr_struct;
+typedef __mpfr_struct mpfr_t[1];
+typedef __mpfr_struct *mpfr_ptr;
+typedef const __mpfr_struct *mpfr_srcptr;
+typedef enum {MPFR_RNDN=0, MPFR_RNDZ=1, MPFR_RNDU=2, MPFR_RNDD=3, MPFR_RNDA=4} mpfr_rnd_t;
+extern void mpfr_init2(mpfr_ptr, mpfr_prec_t);
+extern void mpfr_clear(mpfr_ptr);
+extern int mpfr_set(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_set_ui(mpfr_ptr, unsigned long, mpfr_rnd_t);
+extern int mpfr_set_si(mpfr_ptr, long, mpfr_rnd_t);
+extern int mpfr_set_z(mpfr_ptr, mpz_srcptr, mpfr_rnd_t);
+extern int mpfr_set_str(mpfr_ptr, const char*, int, mpfr_rnd_t);
+extern int mpfr_add(mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_sub(mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_mul(mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_div(mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_mul_si(mpfr_ptr, mpfr_srcptr, long, mpfr_rnd_t);
+extern int mpfr_div_si(mpfr_ptr, mpfr_srcptr, long, mpfr_rnd_t);
+extern int mpfr_ui_div(mpfr_ptr, unsigned long, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_neg(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_abs(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_sqrt(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_log(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_exp(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_sin(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_cos(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_sinh(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_atan(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+extern int mpfr_const_pi(mpfr_ptr, mpfr_rnd_t);
+extern int mpfr_const_euler(mpfr_ptr, mpfr_rnd_t);
+extern int mpfr_cmp(mpfr_srcptr, mpfr_srcptr);
+extern int mpfr_sgn(mpfr_srcptr);
+extern mpfr_exp_t mpfr_get_z_2exp(mpz_ptr, mpfr_srcptr);
+extern int mpfr_printf(const char*, ...);
+
+#ifndef PREC
+#define PREC 256
+#endif
+#define PSI_N 300000
+
+typedef struct { mpfr_t lo, hi; } iv;
+typedef struct { iv re, im; } civ;
+
+static void die(const char *msg){ fprintf(stderr,"ERROR: %s\n",msg); exit(2); }
+static void iv_init(iv *x){ mpfr_init2(x->lo,PREC); mpfr_init2(x->hi,PREC); }
+static void iv_clear(iv *x){ mpfr_clear(x->lo); mpfr_clear(x->hi); }
+static void civ_init(civ *z){ iv_init(&z->re); iv_init(&z->im); }
+static void civ_clear(civ *z){ iv_clear(&z->re); iv_clear(&z->im); }
+static void iv_set(iv *z,const iv *a){ mpfr_set(z->lo,a->lo,MPFR_RNDD); mpfr_set(z->hi,a->hi,MPFR_RNDU); }
+static void iv_set_ui(iv *z,unsigned long a){ mpfr_set_ui(z->lo,a,MPFR_RNDD); mpfr_set_ui(z->hi,a,MPFR_RNDU); }
+static void iv_set_si(iv *z,long a){ mpfr_set_si(z->lo,a,MPFR_RNDD); mpfr_set_si(z->hi,a,MPFR_RNDU); }
+static void iv_set_str(iv *z,const char *s){ if(mpfr_set_str(z->lo,s,10,MPFR_RNDD)||mpfr_set_str(z->hi,s,10,MPFR_RNDU)) die("bad decimal integer"); }
+static void iv_set_frac(iv *z,long n,long d){ iv a,b;iv_init(&a);iv_init(&b);iv_set_si(&a,n);iv_set_si(&b,d); /* forward decl */
+    mpfr_div(z->lo,a.lo,b.hi,MPFR_RNDD); mpfr_div(z->hi,a.hi,b.lo,MPFR_RNDU);iv_clear(&a);iv_clear(&b); }
+static void iv_const_pi(iv *z){mpfr_const_pi(z->lo,MPFR_RNDD);mpfr_const_pi(z->hi,MPFR_RNDU);}
+static void iv_const_euler(iv *z){mpfr_const_euler(z->lo,MPFR_RNDD);mpfr_const_euler(z->hi,MPFR_RNDU);}
+static void iv_add(iv *z,const iv *a,const iv *b){mpfr_add(z->lo,a->lo,b->lo,MPFR_RNDD);mpfr_add(z->hi,a->hi,b->hi,MPFR_RNDU);}
