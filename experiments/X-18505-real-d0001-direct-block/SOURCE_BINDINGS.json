@@ -1,0 +1,25 @@
+{
+  "files": {
+    "README.md": "5ebabeaf5bbd044eb846f923881c52c0bfdb54ff274b2c169bc67683e6d024d7",
+    "certificates/c5-N1-p256.json": "c32c9a14d28d8699d756f172dbfa0063a5f1da446808b0c2fd700187adfb33c6",
+    "certificates/c5-N1-p384.json": "1fbbb15004dbfc2af84e6ab71d88ba7e8098535f88182236f9ee1eceb0d6e350",
+    "compare_precisions.py": "7d2ce108246cbf88d131d5197c3d60f561c66f14105a3bba5f9757833d6b97a0",
+    "config.json": "25537e999d30ce8aee7ffc2a63417515de8b519511826f6415235fb008894260",
+    "directed_producer.c": "be431ad0011bcafa482836cc9116bb82ea5dc926914b2ab642a0eb98678e4afb",
+    "independent_mpmath_replay.py": "cab0a9a04b52d3c84847eb6bd1f19623c81b7955838bb3e0f8754993b33665e9",
+    "results/c5-N1-verification-p256.json": "bb4a1e443fc4dcfb2c3f217ad040f7a2d285b85a1eb716281ddaff8d79cca039",
+    "results/c5-N1-verification-p384.json": "b8bcf6045cf858823a529ad70b3b8f1656688007ba18e34421c8b0a522c03455",
+    "results/c5-N1-verification.json": "b8bcf6045cf858823a529ad70b3b8f1656688007ba18e34421c8b0a522c03455",
+    "results/independent-mpmath-replay.json": "5f0662dda70e1411309df32451352e4d14c9f39599634df50e58408f6beb019b",
+    "results/precision-comparison.json": "cf85db163dff12f3c56b2b670b3d2a2d58150a74adc002612ead9730745c834d",
+    "results/summary.json": "508689cafa9cc5aedb61ea5e6ebd657c982897f42213d5e17ccf5e8bec19ef86",
+    "results/tests.txt": "bb0c749bda54c58749d91a1c2e81867213ac893ff374fcb1353357478675aea3",
+    "verify.py": "103c32a6920d4229b594a8ec64cce58f8fc87e97e82aff1e7d12e3086a7ccb9f"
+  },
+  "schema": "riemann.x18505.source-bindings.v1",
+  "upstream_arb": {
+    "commit": "34d8391395d1e08ae986bf5c1c10439f90f9cb57",
+    "consumer_blob_sha1": "a774ce8e7d7adc4be64d2f197fd1e419130e7eb4",
+    "producer_blob_sha1": "85bec1e106ba4a0b2cdabb363e0fcb0dc5bdc7b2"
+  }
+}
