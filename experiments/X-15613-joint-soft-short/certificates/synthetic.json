@@ -1,0 +1,18 @@
+{
+  "schema": "riemann.x15613-joint-soft-short.v1",
+  "log_scale": {"numerator": "10", "denominator": "1"},
+  "tau": {"numerator": "1", "denominator": "20"},
+  "relative_error": {"numerator": "1", "denominator": "20"},
+  "G": {"numerator": "1", "denominator": "1"},
+  "M": {"numerator": "1", "denominator": "1"},
+  "profile": {
+    "ss": {"numerator": "1", "denominator": "100"},
+    "es": {"numerator": "1", "denominator": "10"},
+    "ee": {"numerator": "1", "denominator": "1"}
+  },
+  "remainder": {
+    "ss": {"numerator": "-1", "denominator": "100"},
+    "es": {"numerator": "1", "denominator": "100"},
+    "ee": {"numerator": "0", "denominator": "1"}
+  }
+}
