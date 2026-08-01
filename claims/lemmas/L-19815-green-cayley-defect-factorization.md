@@ -183,7 +183,7 @@ For one branch, set `H=H_(sigma,omega)`. Direct expansion gives
  &=2\langle g,\mathcal K_Hg\rangle,\\
  \mathcal K_H
  &=HXH+\frac14[H,[H,X]]\\
- &=\frac12HXH+rac14(H^2X+XH^2).
+ &=\frac12HXH+\frac14(H^2X+XH^2).
  \end{aligned}
  \tag{L-19815.15}
 \]
