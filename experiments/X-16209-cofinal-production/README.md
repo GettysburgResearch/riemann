@@ -16,12 +16,13 @@ complete target/gap ratio          151/125439898
 proof-object SHA-256               57492237050a855b7c99566cb1b654cac440d3be66d3f3eac5868990df28f95c
 ```
 
-The complete 48KB source primitive is committed beside the certificate. The
-consumer checks its file SHA-256, internal primitive SHA-256, source-definition
-SHA-256, producer SHA-256, modes, separation scope, and unit-energy ledger. It
-is intentionally conservative; decay of the full wrapper ratio does not require
-those ceilings to shrink because the scalarization denominator grows like
-`log gamma`.
+The complete 48KB source primitive is committed as ten deterministic gzip
+chunks. `materialize_source.py` verifies every chunk, the combined gzip digest,
+and the decompressed raw digest before replay. The consumer checks the raw file
+SHA-256, internal primitive SHA-256, source-definition SHA-256, producer SHA-256,
+modes, separation scope, and unit-energy ledger. It is intentionally
+conservative; decay of the full wrapper ratio does not require those ceilings
+to shrink because the scalarization denominator grows like `log gamma`.
 
 ## Cofinal rule
 
@@ -41,13 +42,15 @@ prior source digest.
 ## Replay
 
 ```bash
+python materialize_source.py --output /tmp/source-gamma32768.json
+
 python emit.py \
-  --source source-gamma32768.json \
+  --source /tmp/source-gamma32768.json \
   --output-dir results
 
 python verify.py \
   results/certificate-gamma32768.json \
-  --source source-gamma32768.json \
+  --source /tmp/source-gamma32768.json \
   --output results/verification-gamma32768.json
 
 python -m unittest discover -s tests -v
