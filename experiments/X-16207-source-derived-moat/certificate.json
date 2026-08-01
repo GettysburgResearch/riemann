@@ -1,0 +1,63 @@
+{
+  "classification": "SOURCE_DERIVED_RADIAL_ENDPOINT_MOAT",
+  "cofinal_gates": {
+    "complete_alias_cross_target": "o(1)",
+    "endpoint_l2_norm_target": "o(1)",
+    "endpoint_point_target": "o(1)",
+    "normalized_frequency_error_target": "gamma^-1",
+    "normalized_radial_error_target": "gamma^-2"
+  },
+  "complete_arithmetic_alias": {
+    "classification": "UNRESOLVED",
+    "cross_error_upper": null
+  },
+  "first_alias_profile_gram": {
+    "lower": "9999999/10000000",
+    "normalized_cross_abs_upper": "1/10000000",
+    "upper": "10000001/10000000"
+  },
+  "repaired_columns": [
+    {
+      "frequency_derivative_l2_error_upper": "8e-2088",
+      "horizontal_strip_l2_error_upper": "4e-2091",
+      "name": "target_0_4_8",
+      "radial_l2_error_upper": "2e-2091",
+      "source_fourth_derivative_l1_upper": "12000"
+    },
+    {
+      "frequency_derivative_l2_error_upper": "2e-2088",
+      "horizontal_strip_l2_error_upper": "1e-2091",
+      "name": "complement_4_8_12",
+      "radial_l2_error_upper": "4e-2092",
+      "source_fourth_derivative_l1_upper": "42000"
+    }
+  ],
+  "schema": "riemann.x16207-source-derived-moat.v1",
+  "source": {
+    "actual_primitive_sha256": "5fba9d6dd8cdb8866b0dbbe0e659efc3be5a3a5043cf2062e5779f3b4677523d",
+    "base_producer_sha256": "01b411e9b24f15eb6f63efd3d2e188db2f8841a57c2212c80eb0ee4f2f806371",
+    "full_exact_proof_object_sha256": "185814dceb233ba87f14dcb154c0adb576a99d50c936376421f376414dd04cdb",
+    "full_exact_result_sha256": "5529e40d6e11a3698c853a550b9747842eca4542e8c7d9e15a46d6cf748c32aa",
+    "gamma": 4096,
+    "modes": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "producer_sha256": "14c932852c79e9786e793c91ced6d394f24dfb5daa68ce4496f2b58e0292653a"
+  },
+  "source_derived_replacements": {
+    "derivative_tail_l2_sq_upper": "1e-4174",
+    "deterministic_error_upper": "1/40000",
+    "horizontal_tail_l2_sq_upper": "1e-4180",
+    "lambda_lower": "25",
+    "pi_lower": "3",
+    "poisson_endpoint_l2_norm_upper": "1/70000",
+    "poisson_endpoint_l2_sq_upper": "1/5000000000",
+    "poisson_endpoint_point_upper": "1/100000",
+    "source_fourth_derivative_l1_upper": "45000",
+    "tail_l2_sq_upper": "1e-4181",
+    "zeta4_minus_one_upper": "9083/108045"
+  }
+}
