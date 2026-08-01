@@ -77,24 +77,29 @@ After support selection:
 1. form the directed generalized spectrum of `(D_R,G_R)`;
 2. search `[tau_R,2 tau_R]` for a certified empty interval;
 3. freeze its midpoint `vartheta_R`;
-4. enclose the Riesz projector
+4. enclose the exact Riesz projector
    \[
    P_R^{soft}=1_{[0,vartheta_R]}(G_R^{-1/2}D_RG_R^{-1/2});
    \]
-5. freeze a dyadic/rational basis `Q_soft` and prove that its image equals the
-   exact spectral range;
-6. emit the compressed metric and profile LMIs
+5. emit either a directed projector enclosure, or an interval graph basis over a
+   fixed coordinate subspace together with a directed projector-distance moat;
+6. compress the exact matrices through the projector enclosure.  A dyadic trial
+   basis may be used only after its graph/angle error has been charged; an
+   irrational spectral range must never be declared to have an exact rational
+   basis;
+7. certify the compressed profile LMI
    \[
-   Q_{soft}^*D_RQ_{soft}
-   \preceq2\tau_RQ_{soft}^*G_RQ_{soft}.
+   P_R^{soft}D_RP_R^{soft}
+   \preceq2\tau_RP_R^{soft}G_RP_R^{soft}.
    \]
 
 The spectral gap is at least `tau_R/[2(dim U_R+1)]` after the adaptive threshold
-choice, so arbitrary precision eventually exports the exact range.
+choice, so arbitrary precision eventually isolates the exact range and makes
+the projector/graph error arbitrarily small.
 
 ## Stage D — joint direct short
 
-Compress all exact matrices to `Q_soft`.  Put
+Compress all exact matrices to the certified soft range.  Put
 
 \[
  X_0=D_E^{-1}Y_{E,soft}.
@@ -126,6 +131,9 @@ The level passes only when directed arithmetic proves
  \mathscr S_R^{soft}+\delta_RG_{S,R}\succeq0.
 \]
 
+Any projector or graph-basis enclosure radius is added to `delta_R` through a
+directed compression perturbation bound.
+
 ## Stage E — precision and independence
 
 Every retained level requires:
@@ -138,6 +146,7 @@ mutation of one prime-power row;
 mutation of the polar sign;
 mutation of one archimedean interval;
 mutation of the soft threshold;
+mutation of the projector enclosure;
 mutation of the harmonic residual;
 mutation of the joint LMI endpoint.
 ```
@@ -160,7 +169,7 @@ The minimal extension is to add
 joint profile Gram;
 regularized Gram;
 soft threshold/gap;
-soft basis;
+Riesz-projector or interval graph enclosure;
 relative joint remainder LMI;
 main-profile solve.
 ```
@@ -178,6 +187,7 @@ PROFILE_GRAM_FAIL
 REGULARIZED_ENVELOPE_FAIL
 SUPPORT_MEASURE_EMPTY
 SOFT_GAP_UNRESOLVED
+SOFT_PROJECTOR_UNRESOLVED
 JOINT_REMAINDER_LMI_FAIL
 AMBIENT_BLOCK_FAIL
 DIRECT_SHORT_NEGATIVE_UNRESOLVED
