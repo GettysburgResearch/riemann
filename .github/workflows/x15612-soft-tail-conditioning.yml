@@ -1,0 +1,27 @@
+name: X-15612 soft-tail conditioning replay
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "claims/lemmas/L-15630-soft-tail-absorption-complete-frame.md"
+      - "claims/experiments/X-15612-soft-tail-conditioning-verifier.md"
+      - "experiments/X-15612-soft-tail-conditioning/**"
+      - ".github/workflows/x15612-soft-tail-conditioning.yml"
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify source hashes
+        run: |
+          cd experiments/X-15612-soft-tail-conditioning
+          sha256sum -c SHA256SUMS
+      - name: Replay exact certificate
+        run: python experiments/X-15612-soft-tail-conditioning/verify.py
+      - name: Run adversarial mutations
+        run: python experiments/X-15612-soft-tail-conditioning/tests/test_verify.py
