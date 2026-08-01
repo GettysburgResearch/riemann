@@ -1,0 +1,106 @@
+name: X16206 production radial primitive replay
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'agent/gpt56-pro-12/151-mode8-trace-form'
+    paths:
+      - 'experiments/X-16206-production-interval-ode/emit_directed_interval_ode.py'
+      - 'experiments/X-16206-production-interval-ode/x16206_*.py'
+      - 'experiments/X-16206-production-interval-ode/verify_bindings.py'
+      - '.github/workflows/x16206-production-interval-ode.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: x16206-production-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  produce-and-consume:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install directed numerical kernels
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy python-flint==0.9.0
+          python - <<'PY'
+          import flint, numpy, scipy, sys
+          print(sys.version)
+          print('python-flint', flint.__version__)
+          print('numpy', numpy.__version__)
+          print('scipy', scipy.__version__)
+          PY
+
+      - name: Compile the production emitter
+        run: |
+          python -m compileall -q experiments/X-16206-production-interval-ode
+
+      - name: Emit the real source-bound radial primitive
+        run: |
+          rm -rf experiments/X-16206-production-interval-ode/results
+          mkdir -p experiments/X-16206-production-interval-ode/results
+          /usr/bin/time -v python \
+            experiments/X-16206-production-interval-ode/emit_directed_interval_ode.py \
+            --output-dir experiments/X-16206-production-interval-ode/results \
+            > experiments/X-16206-production-interval-ode/results/emitter.stdout \
+            2> experiments/X-16206-production-interval-ode/results/emitter.time.txt
+          cat experiments/X-16206-production-interval-ode/results/manifest.json
+
+      - name: Verify immutable source bindings
+        run: |
+          python experiments/X-16206-production-interval-ode/verify_bindings.py \
+            --producer experiments/X-16206-production-interval-ode/emit_directed_interval_ode.py \
+            --primitive experiments/X-16206-production-interval-ode/results/primitive.json \
+            --wrapper experiments/X-16206-production-interval-ode/results/wrapper-certificate.json \
+            --output experiments/X-16206-production-interval-ode/results/binding-verification.json
+          cat experiments/X-16206-production-interval-ode/results/binding-verification.json
+
+      - name: Run the existing X-16204 consumer unchanged
+        run: |
+          python experiments/X-16204-directed-cofinal-wrapper/verify.py \
+            experiments/X-16206-production-interval-ode/results/wrapper-certificate.json \
+            --output experiments/X-16206-production-interval-ode/results/wrapper-verification.json
+          cat experiments/X-16206-production-interval-ode/results/wrapper-verification.json
+
+      - name: Build immutable digest ledger
+        run: |
+          root=experiments/X-16206-production-interval-ode
+          find "$root" -maxdepth 1 -type f -print0 | sort -z | xargs -0 sha256sum > "$root/SHA256SUMS"
+          find "$root/results" -type f -print0 | sort -z | xargs -0 sha256sum >> "$root/SHA256SUMS"
+
+      - name: Retain production results
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/X-16206-production-interval-ode/results \
+                  experiments/X-16206-production-interval-ode/SHA256SUMS
+          if git diff --cached --quiet; then
+            echo 'No result change to commit'
+          else
+            git commit -m 'result: retain X16206 production radial replay'
+            git push
+          fi
+
+      - name: Upload complete proof packet
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x16206-production-interval-ode
+          path: |
+            experiments/X-16206-production-interval-ode/results/
+            experiments/X-16206-production-interval-ode/SHA256SUMS
+          retention-days: 30
+          if-no-files-found: error
