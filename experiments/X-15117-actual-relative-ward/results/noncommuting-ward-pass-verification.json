@@ -1,0 +1,52 @@
+{
+  "certificate_sha256": "41de875cdbc6f4d1c61430a66a4d3c870a7f2d4c401625a53f2eafc1cfc4b628",
+  "corrected_scalar_coefficients": {
+    "2": 7,
+    "3": -10,
+    "4": 31,
+    "5": -61,
+    "6": 154,
+    "7": -337,
+    "8": 799
+  },
+  "dimension": 2,
+  "max_order": 8,
+  "order_four_components": {
+    "Tr_A2D2": 15,
+    "Tr_A3D": 15,
+    "Tr_AD3": 6,
+    "Tr_ADAD": -1,
+    "Tr_D4": 7,
+    "ward_order_four": 19
+  },
+  "raw_trace_moments": {
+    "2": 10,
+    "3": 0,
+    "4": 50,
+    "5": 0,
+    "6": 250,
+    "7": 0,
+    "8": 1250
+  },
+  "relative_series_majorant": 8,
+  "relative_ward_coefficients": {
+    "2": 3,
+    "3": 10,
+    "4": 19,
+    "5": 61,
+    "6": 96,
+    "7": 337,
+    "8": 451
+  },
+  "renormalized_trace_moments": {
+    "2": 7,
+    "3": -10,
+    "4": 31,
+    "5": -61,
+    "6": 154,
+    "7": -337,
+    "8": 799
+  },
+  "scope": "finite nonlinear Ward amendment only; no proof that the manuscript's linear counterterm already equals it",
+  "status": "CERTIFIED_ACTUAL_RELATIVE_WARD_PULLBACK"
+}
