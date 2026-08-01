@@ -1,0 +1,49 @@
+{
+  "endpoint_cumulative_energy": {
+    "denominator": "12",
+    "numerator": "7"
+  },
+  "flow": {
+    "derivative_weight": {
+      "denominator": "35",
+      "numerator": "58"
+    },
+    "factor": "4",
+    "weyl_weight": {
+      "denominator": "70",
+      "numerator": "29"
+    }
+  },
+  "green": {
+    "compressed_map": [
+      [
+        {"denominator": "2", "numerator": "1"},
+        {"denominator": "1", "numerator": "0"}
+      ],
+      [
+        {"denominator": "1", "numerator": "0"},
+        {"denominator": "4", "numerator": "3"}
+      ]
+    ],
+    "defect_pivots": [
+      {"denominator": "4", "numerator": "3"},
+      {"denominator": "16", "numerator": "7"}
+    ]
+  },
+  "jordan": {
+    "mean": {"denominator": "144", "numerator": "-161"},
+    "pair_energy": {"denominator": "20736", "numerator": "38735"},
+    "probabilities": [
+      {"denominator": "144", "numerator": "1"},
+      {"denominator": "48", "numerator": "1"},
+      {"denominator": "18", "numerator": "1"},
+      {"denominator": "12", "numerator": "1"},
+      {"denominator": "6", "numerator": "1"},
+      {"denominator": "3", "numerator": "2"}
+    ],
+    "variance": {"denominator": "20736", "numerator": "38735"}
+  },
+  "proof_boundary": "exact finite rational algebra only; no original Riemann Weyl quotient-to-physical isometry or RH conclusion",
+  "schema": "riemann.x15410-cumulative-weyl-green.synthetic.v1",
+  "status": "EXACT_CUMULATIVE_WEYL_GREEN_JORDAN_ALGEBRA"
+}
