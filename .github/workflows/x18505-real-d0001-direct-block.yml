@@ -20,6 +20,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Materialize and hash immutable directed source
+        run: |
+          python materialize_directed_producer.py
+          test "$(sha256sum directed_producer.c | cut -d' ' -f1)" = "be431ad0011bcafa482836cc9116bb82ea5dc926914b2ab642a0eb98678e4afb"
       - name: Install native and independent backends
         run: |
           sudo apt-get update
@@ -29,7 +33,7 @@ jobs:
         run: |
           gcc -O2 -std=c11 directed_producer.c -lmpfr -lgmp -o directed_producer_p256
           gcc -O2 -std=c11 -DPREC=384 directed_producer.c -lmpfr -lgmp -o directed_producer_p384
-          python -m py_compile verify.py independent_mpmath_replay.py compare_precisions.py tests/test_verify.py
+          python -m py_compile verify.py independent_mpmath_replay.py compare_precisions.py tests/test_verify.py materialize_directed_producer.py
       - name: Produce and verify precision ladder
         run: |
           mkdir -p artifacts
