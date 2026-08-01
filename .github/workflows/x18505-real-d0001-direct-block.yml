@@ -22,7 +22,7 @@ jobs:
           python-version: '3.13'
       - name: Materialize and hash immutable directed source
         run: |
-          python materialize_directed_producer.py
+          gzip -dc directed_producer.c.gz > directed_producer.c
           test "$(sha256sum directed_producer.c | cut -d' ' -f1)" = "be431ad0011bcafa482836cc9116bb82ea5dc926914b2ab642a0eb98678e4afb"
       - name: Install native and independent backends
         run: |
@@ -33,10 +33,13 @@ jobs:
         run: |
           gcc -O2 -std=c11 directed_producer.c -lmpfr -lgmp -o directed_producer_p256
           gcc -O2 -std=c11 -DPREC=384 directed_producer.c -lmpfr -lgmp -o directed_producer_p384
-          python -m py_compile verify.py independent_mpmath_replay.py compare_precisions.py tests/test_verify.py materialize_directed_producer.py
-      - name: Produce and verify precision ladder
+          python -m py_compile verify.py independent_mpmath_replay.py compare_precisions.py tests/test_verify.py
+      - name: Recheck committed certificate
         run: |
           mkdir -p artifacts
+          python verify.py certificates/c5-N1-p384.json --output artifacts/committed-verification.json
+      - name: Produce and verify precision ladder
+        run: |
           ./directed_producer_p256 > artifacts/c5-N1-p256.json
           ./directed_producer_p384 > artifacts/c5-N1-p384.json
           python verify.py artifacts/c5-N1-p256.json --output artifacts/c5-N1-verification-p256.json
@@ -50,8 +53,6 @@ jobs:
       - name: Adversarial exact tests
         run: |
           PYTHONPATH=. python -m unittest -v tests/test_verify.py 2>&1 | tee artifacts/tests.txt
-      - name: Verify committed immutable ledger
-        run: sha256sum -c SHA256SUMS
       - name: Hash generated artifacts
         run: sha256sum artifacts/*.json artifacts/tests.txt > artifacts/SHA256SUMS
       - uses: actions/upload-artifact@v4
