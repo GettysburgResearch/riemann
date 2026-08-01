@@ -1,0 +1,70 @@
+    const long bd[13]={6,30,42,30,66,2730,6,510,798,330,138,2730,6};
+    iv euler;iv_init(&euler);iv_const_euler(&euler);iv_neg(&psi->re,&euler);iv_set_si(&psi->im,0);iv_set_si(&psi1->re,0);iv_set_si(&psi1->im,0);
+    civ kz,inv,inv2,term;civ_init(&kz);civ_init(&inv);civ_init(&inv2);civ_init(&term);iv one_over;iv_init(&one_over);
+    for(long k=0;k<K;k++){
+        iv_set_si(&kz.re,k);iv_add(&kz.re,&kz.re,zr);iv_set(&kz.im,zi);civ_recip(&inv,&kz);
+        iv den;iv_init(&den);iv_set_si(&den,k+1);iv_set_si(&one_over,1);iv_div(&one_over,&one_over,&den);
+        iv_sub(&term.re,&one_over,&inv.re);iv_neg(&term.im,&inv.im);civ_add(psi,psi,&term);civ_mul(&inv2,&inv,&inv);civ_add(psi1,psi1,&inv2);iv_clear(&den);
+    }
+    /* Euler--Maclaurin tails at b=K+z, a=K+1. */
+    civ b,binv,blog,powb,t;civ_init(&b);civ_init(&binv);civ_init(&blog);civ_init(&powb);civ_init(&t);iv_set_si(&b.re,K);iv_add(&b.re,&b.re,zr);iv_set(&b.im,zi);civ_recip(&binv,&b);civ_log_right(&blog,&b);
+    iv a,ainv,loga;iv_init(&a);iv_init(&ainv);iv_init(&loga);iv_set_si(&a,K+1);iv_set_si(&ainv,1);iv_div(&ainv,&ainv,&a);iv_log(&loga,&a);
+    /* psi tail: log(b)-log(a)+1/2(1/a-1/b). */
+    iv_sub(&term.re,&blog.re,&loga);iv_set(&term.im,&blog.im);civ_add(psi,psi,&term);
+    iv_sub(&term.re,&ainv,&binv.re);iv_neg(&term.im,&binv.im);civ_scale_frac(&term,&term,1,2);civ_add(psi,psi,&term);
+    /* psi1 tail starts 1/b+1/(2b^2). */
+    civ_add(psi1,psi1,&binv);civ_mul(&powb,&binv,&binv);civ_scale_frac(&term,&powb,1,2);civ_add(psi1,psi1,&term);
+    iv apow;iv_init(&apow);iv_set(&apow,&ainv); /* updated by powers below */
+    for(int r=1;r<=13;r++){
+        int p2=2*r; civ_pow(&powb,&binv,p2); /* b^-2r */
+        iv_set_si(&apow,1);for(int k=0;k<p2;k++)iv_mul(&apow,&apow,&ainv);
+        iv_sub(&term.re,&apow,&powb.re);iv_neg(&term.im,&powb.im);civ_scale_frac(&term,&term,bn[r-1],bd[r-1]*2*r);civ_add(psi,psi,&term);
+        civ_pow(&powb,&binv,p2+1);civ_scale_frac(&term,&powb,bn[r-1],bd[r-1]);civ_add(psi1,psi1,&term);
+    }
+    /* Crude but rigorous periodic-Bernoulli remainder using sup|B_28| <= 28!. */
+    mpz_t fact;mpz_init_set_ui(fact,1);for(unsigned long k=2;k<=28;k++)mpz_mul_ui(fact,fact,k);
+    iv M,kx,invkx,rpsi,rpsi1,pa,pb,sum;iv_init(&M);iv_init(&kx);iv_init(&invkx);iv_init(&rpsi);iv_init(&rpsi1);iv_init(&pa);iv_init(&pb);iv_init(&sum);mpfr_set_z(M.lo,fact,MPFR_RNDD);mpfr_set_z(M.hi,fact,MPFR_RNDU);iv_set_si(&kx,K);iv_add(&kx,&kx,zr);iv_set_si(&invkx,1);iv_div(&invkx,&invkx,&kx);
+    iv_set_si(&pa,1);for(int k=0;k<28;k++)iv_mul(&pa,&pa,&ainv);iv_set_si(&pb,1);for(int k=0;k<28;k++)iv_mul(&pb,&pb,&invkx);iv_add(&sum,&pa,&pb);iv den28;iv_init(&den28);iv_set_si(&den28,28);iv_mul(&rpsi,&M,&sum); /* overwritten incorrectly; recompute */
+    iv_add(&sum,&pa,&pb);iv_mul(&rpsi,&M,&sum);iv_div(&rpsi,&rpsi,&den28);
+    iv_set_si(&pb,1);for(int k=0;k<29;k++)iv_mul(&pb,&pb,&invkx);iv_mul(&rpsi1,&M,&pb);
+    civ_add_symmetric_error(psi,rpsi.hi);civ_add_symmetric_error(psi1,rpsi1.hi);
+    mpz_clear(fact);iv_clear(&den28);iv_clear(&M);iv_clear(&kx);iv_clear(&invkx);iv_clear(&rpsi);iv_clear(&rpsi1);iv_clear(&pa);iv_clear(&pb);iv_clear(&sum);
+    iv_clear(&apow);iv_clear(&a);iv_clear(&ainv);iv_clear(&loga);civ_clear(&b);civ_clear(&binv);civ_clear(&blog);civ_clear(&powb);civ_clear(&t);iv_clear(&one_over);civ_clear(&kz);civ_clear(&inv);civ_clear(&inv2);civ_clear(&term);iv_clear(&euler);
+}
+
+static void geometric_sums(int n,const iv *L,iv *gs,iv *gcc,iv *gx1,iv *gx2){
+    iv_set_si(gs,0);iv_set_si(gcc,0);iv_set_si(gx1,0);iv_set_si(gx2,0);
+    iv pi,w,w2,ratio,omr;iv_init(&pi);iv_init(&w);iv_init(&w2);iv_init(&ratio);iv_init(&omr);iv_const_pi(&pi);iv_scale_si(&w,&pi,2*n);iv_div(&w,&w,L);iv_mul(&w2,&w,&w);
+    iv t;iv_init(&t);iv_scale_si(&t,L,-2);iv_exp(&ratio,&t);iv one;iv_init(&one);iv_set_si(&one,1);iv_sub(&omr,&one,&ratio);
+    mpfr_t target;mpfr_init2(target,PREC);mpfr_set_ui(target,1,MPFR_RNDN);for(int i=0;i<180;i++)mpfr_div_si(target,target,2,MPFR_RNDU);
+    for(long k=0;k<100000;k++){
+        iv ck,neg,ek,ck2,den,a,b,num;iv_init(&ck);iv_init(&neg);iv_init(&ek);iv_init(&ck2);iv_init(&den);iv_init(&a);iv_init(&b);iv_init(&num);
+        iv_set_si(&ck,2*k);iv half;iv_init(&half);iv_set_frac(&half,1,2);iv_add(&ck,&ck,&half);
+        iv_mul(&neg,&ck,L);iv_neg(&neg,&neg);iv_exp(&ek,&neg);iv_mul(&ck2,&ck,&ck);iv_add(&den,&ck2,&w2);
+        iv_div(&a,&ek,&den);iv_add(gs,gs,&a);
+        if(n){iv_mul(&num,&ek,&w2);iv_mul(&b,&ck,&den);iv_div(&a,&num,&b);iv_add(gcc,gcc,&a);}
+        iv_mul(&num,&ek,&ck);iv_div(&a,&num,&den);iv_add(gx1,gx1,&a);
+        iv_sub(&num,&ck2,&w2);iv_mul(&num,&num,&ek);iv_mul(&b,&den,&den);iv_div(&a,&num,&b);iv_add(gx2,gx2,&a);
+        /* tail check at cnext */
+        iv cnext,en,env,bsq,blin;iv_init(&cnext);iv_init(&en);iv_init(&env);iv_init(&bsq);iv_init(&blin);iv_set_si(&cnext,2*k+2);iv_add(&cnext,&cnext,&half);iv_mul(&en,&cnext,L);iv_neg(&en,&en);iv_exp(&en,&en);iv_div(&env,&en,&omr);iv_mul(&bsq,&cnext,&cnext);iv_div(&bsq,&env,&bsq);iv_div(&blin,&env,&cnext);
+        mpfr_t ub;mpfr_init2(ub,PREC);iv_abs_upper(ub,n?&blin:&blin);
+        int stop=mpfr_cmp(ub,target)<0;
+        if(stop){iv_add_symmetric_error(gs,bsq.hi);if(n)iv_add_symmetric_error(gcc,blin.hi);iv_add_symmetric_error(gx1,blin.hi);iv_add_symmetric_error(gx2,bsq.hi);mpfr_clear(ub);iv_clear(&cnext);iv_clear(&en);iv_clear(&env);iv_clear(&bsq);iv_clear(&blin);iv_clear(&half);iv_clear(&ck);iv_clear(&neg);iv_clear(&ek);iv_clear(&ck2);iv_clear(&den);iv_clear(&a);iv_clear(&b);iv_clear(&num);break;}
+        mpfr_clear(ub);iv_clear(&cnext);iv_clear(&en);iv_clear(&env);iv_clear(&bsq);iv_clear(&blin);iv_clear(&half);iv_clear(&ck);iv_clear(&neg);iv_clear(&ek);iv_clear(&ck2);iv_clear(&den);iv_clear(&a);iv_clear(&b);iv_clear(&num);
+        if(k==99999)die("geometric tail loop failed");
+    }
+    mpfr_clear(target);iv_clear(&pi);iv_clear(&w);iv_clear(&w2);iv_clear(&ratio);iv_clear(&omr);iv_clear(&t);iv_clear(&one);
+}
+
+
+static void iv_zero(iv *x){iv_set_si(x,0);} 
+static void iv_addto(iv *x,const iv *a){iv t;iv_init(&t);iv_add(&t,x,a);iv_set(x,&t);iv_clear(&t);} 
+static void iv_subfrom(iv *x,const iv *a){iv t;iv_init(&t);iv_sub(&t,x,a);iv_set(x,&t);iv_clear(&t);} 
+static void iv_mul3(iv *z,const iv *a,const iv *b,const iv *c){iv t;iv_init(&t);iv_mul(&t,a,b);iv_mul(z,&t,c);iv_clear(&t);} 
+
+typedef struct {int q; int p;} pp_t;
+static pp_t *prime_powers(int c,int *count){
+    unsigned char *s=calloc((size_t)c+1,1); if(!s)die("calloc sieve");
+    for(int i=2;i<=c;i++)s[i]=1;
+    for(int p=2;p*p<=c;p++)if(s[p])for(int k=p*p;k<=c;k+=p)s[k]=0;
+    int cap=128,n=0;pp_t*out=malloc((size_t)cap*sizeof(pp_t));if(!out)die("malloc pp");
