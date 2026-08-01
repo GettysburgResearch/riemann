@@ -1,0 +1,141 @@
+y]) -> dict[str, Any]:
++    missing = missing_paths(data)
++    canonical = json.dumps(data, sort_keys=True, separators=(",", ":")).encode()
++    return {
++        "status": "SOURCE_SPECIFICATION_INCOMPLETE" if missing else "SOURCE_SPECIFICATION_COMPLETE",
++        "missing_fields": missing,
++        "missing_count": len(missing),
++        "cannot_emit": [
++            "c4_vector",
++            "raw_operator_A",
++            "renormalized_operator_K",
++            "a4_linear",
++            "trace_A4",
++            "trace_K4",
++            "quartic_target_verdict",
++        ] if missing else [],
++        "manifest_sha256": hashlib.sha256(canonical).hexdigest(),
++        "scope": "source executability audit; no surrogate completion",
++    }
++
++
++def verify_complete(data: dict[str, Any]) -> dict[str, Any]:
++    if data.get("schema") != SCHEMA:
++        raise ValueError("wrong schema")
++    missing = missing_paths(data)
++    if missing:
++        return audit_incomplete(data)
++
++    G = matrix(data["readout"]["gram"], "readout.gram")
++    require_pd_hermitian(G, "readout.gram")
++    n, n2 = shape(G)
++    if n != n2:
++        raise ValueError("Gram is not square")
++    Ginv = invert(G)
++
++    v4 = vector(data["readout"]["quartic_jet_coordinate"],
++                "readout.quartic_jet_coordinate")
++    if len(v4) != n:
++        raise ValueError("quartic jet/readout dimension mismatch")
++    v4_gnorm2 = gram_norm2(v4, G)
++    if v4_gnorm2 <= 0:
++        raise ValueError("quartic jet coordinate has zero Gram norm")
++
++    raw_coord = matrix(data["chain"]["raw_coordinate_matrix"],
++                       "chain.raw_coordinate_matrix")
++    jet_coord = matrix(data["chain"]["jet_coordinate_matrix"],
++                       "chain.jet_coordinate_matrix")
++    if shape(raw_coord) != shape(jet_coord):
++        raise ValueError("raw/jet coordinate shape mismatch")
++    p, ncoord = shape(raw_coord)
++    if ncoord != n:
++        raise ValueError("coordinate/readout dimension mismatch")
++
++    Nseam = matrix(data["chain"]["seam_transpose_matrix"],
++                   "chain.seam_transpose_matrix")
++    Tcmp = matrix(data["chain"]["comparison_trace_matrix"],
++                  "chain.comparison_trace_matrix")
++    LCI = matrix(data["chain"]["lci_matrix"], "chain.lci_matrix")
++    P = matrix(data["chain"]["projection_matrix"],
++               "chain.projection_matrix")
++    S = matrix(data["chain"]["seam_involution"],
++               "chain.seam_involution")
++
++    if shape(Nseam)[1] != p:
++        raise ValueError("seam transpose/source-coordinate mismatch")
++    chain = mm(P, mm(LCI, mm(Tcmp, Nseam)))
++    raw_map = mm(chain, raw_coord)
++    jet_map = mm(chain, jet_coord)
++    target_dim, source_dim = shape(raw_map)
++    if source_dim != n or shape(jet_map) != (target_dim, n):
++        raise ValueError("assembled comparison-map dimension mismatch")
++    if shape(S) != (target_dim, target_dim):
++        raise ValueError("seam involution/target dimension mismatch")
++    if not is_hermitian(S):
++        raise ValueError("seam involution is not Hermitian")
++    if mm(S, S) != eye(target_dim):
++        raise ValueError("seam involution does not square to identity")
++    if shape(P)[0] != shape(P)[1] or not is_hermitian(P) or mm(P, P) != P:
++        raise ValueError("projection matrix is not an orthogonal projection")
++
++    ren_map = sub(raw_map, jet_map)
++    BA = mm(adj(raw_map), mm(S, raw_map))
++    BK = mm(adj(ren_map), mm(S, ren_map))
++    A = mm(Ginv, BA)
++    K = mm(Ginv, BK)
++    trA4 = real_trace(mpow(A, 4), "A^4")
++    trK4 = real_trace(mpow(K, 4), "K^4")
++
++    c4 = mv(jet_map, v4)
++    c4_norm2 = norm2(c4)
++    c4_normalized_lower2 = c4_norm2 / v4_gnorm2
++
++    CstarC = mm(adj(jet_map), jet_map)
++    represented_CstarC = mm(Ginv, CstarC)
++    jet_s4_fourth = real_trace(mpow(represented_CstarC, 2),
++                               "jet Schatten-four fourth power")
++    if jet_s4_fourth < 0:
++        raise ValueError("negative Schatten-four fourth power")
++
++    a4_iv = interval(data["classical"]["a4_linear_interval"],
++                     "classical.a4_linear_interval")
++    tau_iv = interval(data["target"]["tau4_interval"],
++                      "target.tau4_interval")
++
++    rel_a4 = relation_intervals(a4_iv, tau_iv)
++    rel_A = relation_point_interval(trA4, tau_iv)
++    rel_K = relation_point_interval(trK4, tau_iv)
++    relations = [rel_a4, rel_A, rel_K]
++    if all(x in {"OVERLAPS_TARGET_INTERVAL", "INSIDE_TARGET_INTERVAL"}
++           for x in relations):
++        verdict = "QUARTIC_ROW_OVERLAPS_TARGET"
++    elif any(x in {"BELOW_TARGET_INTERVAL", "ABOVE_TARGET_INTERVAL"}
++             for x in relations):
++        verdict = "QUARTIC_TARGET_CHANGE_CERTIFIED"
++    else:
++        verdict = "UNRESOLVED_INTERVAL"
++
++    canonical = json.dumps(data, sort_keys=True, separators=(",", ":")).encode()
++    return {
++        "status": "CERTIFIED_SOURCE_BOUND_QUARTIC_ROW",
++        "quartic_verdict": verdict,
++        "dimensions": {
++            "readout": n,
++            "coordinate": p,
++            "target": target_dim,
++        },
++        "c4_vector": [out_q(z) for z in c4],
++        "c4_norm_squared": out_frac(c4_norm2),
++        "quartic_jet_gram_norm_squared": out_frac(v4_gnorm2),
++        "c4_normalized_lower_bound_squared": out_frac(c4_normalized_lower2),
++        "jet_schatten4_fourth_power": out_frac(jet_s4_fourth),
++        "raw_map": [[out_q(z) for z in row] for row in raw_map],
++        "jet_map": [[out_q(z) for z in row] for row in jet_map],
++        "renormalized_map": [[out_q(z) for z in row] for row in ren_map],
++        "raw_form_matrix": [[out_q(z) for z in row] for row in BA],
++        "renormalized_form_matrix": [[out_q(z) for z in row] for row in BK],
++        "represented_A": [[out_q(z) for z in row] for row in A],
++        "represented_K": [[out_q(z) for z in row] for row in K],
++        "trace_A4": out_frac(trA4),
++        "trace_K4": out_frac(trK4),
++        "a4_linear_interval
