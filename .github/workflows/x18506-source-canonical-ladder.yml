@@ -1,0 +1,60 @@
+name: x18506-source-canonical-ladder
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-18506-source-canonical-ladder.bundle.tar.gz'
+      - 'experiments/X-18506-source-canonical-ladder.SOURCE_SHA256SUMS'
+      - 'experiments/X-18506-source-canonical-ladder.BUNDLE.md'
+      - 'claims/experiments/X-18506-source-canonical-growing-ladder.md'
+      - '.github/workflows/x18506-source-canonical-ladder.yml'
+  workflow_dispatch:
+
+jobs:
+  directed-ladder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify and extract immutable source bundle
+        run: |
+          test "$(sha256sum experiments/X-18506-source-canonical-ladder.bundle.tar.gz | cut -d' ' -f1)" = "31775b4d6fe240fa96ee7260f849d9a1f992d7556f7f52d782f6f31faeade066"
+          tar -xzf experiments/X-18506-source-canonical-ladder.bundle.tar.gz -C experiments
+          cd experiments
+          sha256sum -c X-18506-source-canonical-ladder.SOURCE_SHA256SUMS
+      - name: Install Arb backend
+        run: python -m pip install --disable-pip-version-check python-flint==0.9.0
+      - name: Compile producer and exact consumer
+        working-directory: experiments/X-18506-source-canonical-ladder
+        run: python -m py_compile arb_producer.py verify.py compare_precisions.py scout.py tests/test_verify.py
+      - name: Produce 384-bit ladder
+        working-directory: experiments/X-18506-source-canonical-ladder
+        run: |
+          mkdir -p artifacts
+          python arb_producer.py config.json --precision-bits 384 --output artifacts/certificate-p384.json
+          python verify.py artifacts/certificate-p384.json --output artifacts/verification-p384.json
+      - name: Produce 512-bit ladder
+        working-directory: experiments/X-18506-source-canonical-ladder
+        run: |
+          python arb_producer.py config.json --precision-bits 512 --output artifacts/certificate-p512.json
+          python verify.py artifacts/certificate-p512.json --output artifacts/verification-p512.json
+      - name: Require precision nesting
+        working-directory: experiments/X-18506-source-canonical-ladder
+        run: python compare_precisions.py artifacts/certificate-p384.json artifacts/certificate-p512.json --output artifacts/precision-comparison.json
+      - name: Exact adversarial tests
+        working-directory: experiments/X-18506-source-canonical-ladder
+        run: PYTHONPATH=. python -m unittest -v tests/test_verify.py 2>&1 | tee artifacts/tests.txt
+      - name: Preserve reconnaissance separately
+        working-directory: experiments/X-18506-source-canonical-ladder
+        run: python scout.py > artifacts/scout.json
+      - name: Hash artifact
+        working-directory: experiments/X-18506-source-canonical-ladder
+        run: sha256sum config.json arb_producer.py verify.py artifacts/* > artifacts/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x18506-source-canonical-ladder
+          path: experiments/X-18506-source-canonical-ladder/artifacts
+          if-no-files-found: error
