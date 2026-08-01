@@ -1,0 +1,48 @@
+{
+  "classification": "PRODUCTION_COMPLETE_ALIAS_WRAPPER_CLOSED",
+  "cofinal_decay": {
+    "current_upper": "27/32",
+    "limit": "0",
+    "next_gamma": 32768,
+    "next_upper": "5019/23168"
+  },
+  "cofinal_support": {
+    "good_measure_lower": "13/16"
+  },
+  "complete_profile_gram": {
+    "lower": "1562499/10000000",
+    "upper": "18"
+  },
+  "cross_operator_upper": "27/32",
+  "endpoint": {
+    "l2_norm_upper": "1/32",
+    "l2_sq_upper": "1/1024",
+    "method": "RADIAL_OUTGOING_PHASE",
+    "point_upper": "1/32"
+  },
+  "gamma": 4096,
+  "operator_budget": {
+    "airy": "1/8",
+    "directed_cell_slack": "1/64",
+    "nonstationary": "1/8",
+    "normalized_endpoint": "1/16",
+    "ode_template": "1/4",
+    "post_cutoff": "1/64",
+    "stationary": "15996174931096098546478492387136474792059084172329859/67769938678603451134231090693560572470253822349312000"
+  },
+  "operator_budget_total": "56234576021516897657428202486438064696272291192233859/67769938678603451134231090693560572470253822349312000",
+  "positive_route": {
+    "d4_over_d8_upper": "1/50000",
+    "gap_over_d8_lower": "563/50000",
+    "ground_ratio": "63/563",
+    "target_over_d8_upper": "63/50000"
+  },
+  "proof_boundary": "The midpoint 2x2 matrix is diagnostic only. Promotion follows from exact stationary root/curvature arithmetic and outward phase, Airy, endpoint, post-cutoff, ODE and cell budgets bound to the real gamma=4096 source digests.",
+  "proof_object_sha256": "cbfcdca4414912ccef1c2537750a05083fd99d0c2cadf438ccd55c11297e946d",
+  "scalarization": {
+    "epsilon_strictly_below": "31/32",
+    "epsilon_upper": "31/32"
+  },
+  "schema": "riemann.x16208-complete-alias-production-result.v1",
+  "stationary_weight_fourth_power_upper": "163697039386341024802132375717944377946931200/153868692847548504624637053450316190907958567"
+}
