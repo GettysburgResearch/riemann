@@ -6,6 +6,7 @@ on:
       - 'experiments/X-18506-source-canonical-ladder.bundle.tar.gz'
       - 'experiments/X-18506-source-canonical-ladder.SOURCE_SHA256SUMS'
       - 'experiments/X-18506-source-canonical-ladder.BUNDLE.md'
+      - 'experiments/X-18506-run/**'
       - 'claims/experiments/X-18506-source-canonical-growing-ladder.md'
       - '.github/workflows/x18506-source-canonical-ladder.yml'
   workflow_dispatch:
