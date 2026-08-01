@@ -1,0 +1,54 @@
+{
+  "schema": "riemann.x15410-cumulative-weyl-green.synthetic.v1",
+  "flow_control": {
+    "y": {"numerator": "3", "denominator": "5"},
+    "q": {"numerator": "7", "denominator": "3"},
+    "claimed_derivative_weight": {"numerator": "58", "denominator": "35"},
+    "claimed_weyl_weight": {"numerator": "29", "denominator": "70"}
+  },
+  "endpoint_energy": {
+    "plus_norm_squared": {"numerator": "17", "denominator": "6"},
+    "minus_norm_squared": {"numerator": "5", "denominator": "3"},
+    "claimed_cumulative_energy": {"numerator": "7", "denominator": "12"}
+  },
+  "green_control": {
+    "C": [
+      [{"numerator": "1", "denominator": "1"}, {"numerator": "0", "denominator": "1"}, {"numerator": "0", "denominator": "1"}],
+      [{"numerator": "0", "denominator": "1"}, {"numerator": "1", "denominator": "1"}, {"numerator": "0", "denominator": "1"}]
+    ],
+    "E": [
+      [{"numerator": "1", "denominator": "1"}, {"numerator": "0", "denominator": "1"}],
+      [{"numerator": "0", "denominator": "1"}, {"numerator": "1", "denominator": "1"}],
+      [{"numerator": "0", "denominator": "1"}, {"numerator": "0", "denominator": "1"}]
+    ],
+    "K": [
+      [{"numerator": "1", "denominator": "2"}, {"numerator": "0", "denominator": "1"}, {"numerator": "0", "denominator": "1"}],
+      [{"numerator": "0", "denominator": "1"}, {"numerator": "3", "denominator": "4"}, {"numerator": "0", "denominator": "1"}],
+      [{"numerator": "0", "denominator": "1"}, {"numerator": "0", "denominator": "1"}, {"numerator": "1", "denominator": "3"}]
+    ],
+    "claimed_T": [
+      [{"numerator": "1", "denominator": "2"}, {"numerator": "0", "denominator": "1"}],
+      [{"numerator": "0", "denominator": "1"}, {"numerator": "3", "denominator": "4"}]
+    ],
+    "claimed_defect_pivots": [
+      {"numerator": "3", "denominator": "4"},
+      {"numerator": "7", "denominator": "16"}
+    ]
+  },
+  "jordan_control": {
+    "n": "12",
+    "exponent": "2",
+    "divisors": ["1", "2", "3", "4", "6", "12"],
+    "values": [
+      {"numerator": "0", "denominator": "1"},
+      {"numerator": "1", "denominator": "1"},
+      {"numerator": "-1", "denominator": "1"},
+      {"numerator": "2", "denominator": "1"},
+      {"numerator": "1", "denominator": "2"},
+      {"numerator": "-2", "denominator": "1"}
+    ],
+    "claimed_jordan": ["1", "3", "8", "12", "24", "96"],
+    "claimed_mean": {"numerator": "-161", "denominator": "144"},
+    "claimed_variance": {"numerator": "38735", "denominator": "20736"}
+  }
+}
