@@ -1,0 +1,44 @@
+name: x18509-complete-finite-deficit
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-18509-complete-spectral-deficit-c10N2/**'
+      - 'claims/lemmas/L-18517-complete-finite-suzuki-deficit-projector.md'
+      - 'claims/experiments/X-18509-complete-finite-suzuki-deficit.md'
+      - '.github/workflows/x18509-complete-finite-deficit.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Replay precision nesting, projector, and direct short
+        working-directory: experiments/X-18509-complete-spectral-deficit-c10N2
+        run: |
+          python compare_precisions.py \
+            certificates/c10-N2-p768-primitive.json \
+            certificates/c10-N2-p1024-primitive.json \
+            --output /tmp/precision.json
+          cmp /tmp/precision.json results/precision-comparison.json
+          python verify.py \
+            certificates/c10-N2-p1024-primitive.json \
+            config.json \
+            --output /tmp/verification.json
+          python - <<'PY'
+          import json
+          got=json.load(open('/tmp/verification.json'))
+          expected=json.load(open('results/summary.json'))
+          assert got['classification']==expected['classification']
+          assert got['proof_object_sha256']==expected['proof_object_sha256']
+          assert got['direct_short']['Delta']=='0'
+          assert got['source_flag']['equals_deficit_canonical'] is False
+          PY
+          PYTHONPATH=. python -m unittest -v tests/test_verify.py
+      - name: Verify immutable hashes
+        working-directory: experiments/X-18509-complete-spectral-deficit-c10N2
+        run: sha256sum -c SHA256SUMS
