@@ -10,10 +10,10 @@ matrix-production computation.
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import pathlib
 import re
+import subprocess
 import sys
 from urllib.parse import unquote
 
@@ -111,11 +111,6 @@ def fail(message: str) -> None:
     raise SystemExit(f"FAIL: {message}")
 
 
-def git_blob_sha1(data: bytes) -> str:
-    header = f"blob {len(data)}\0".encode("ascii")
-    return hashlib.sha1(header + data).hexdigest()
-
-
 def parse_external_shas(values: list[str]) -> dict[str, str]:
     result: dict[str, str] = {}
     for value in values:
@@ -128,6 +123,61 @@ def parse_external_shas(values: list[str]) -> dict[str, str]:
             fail(f"bad Git blob SHA for {path}: {sha!r}")
         result[path] = sha
     return result
+
+
+def git_clean_blob_sha(root: pathlib.Path, path: str) -> str:
+    """Hash a working-tree file using Git clean-filter/EOL semantics.
+
+    ``Path.read_bytes()`` observes checkout bytes, so a normal Windows checkout
+    with ``core.autocrlf=true`` can contain CRLF even though the committed blob
+    is LF. ``git hash-object --path`` applies the repository's clean conversion
+    exactly as ``git add`` would, while still detecting substantive working-tree
+    edits. This is the portable identity relevant to the stable machine API.
+    """
+
+    rel = pathlib.PurePosixPath(path).as_posix()
+    try:
+        top = subprocess.run(
+            ["git", "-C", str(root), "rev-parse", "--show-toplevel"],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        ).stdout.strip()
+    except FileNotFoundError:
+        fail(
+            "git is required for no-argument canonical blob validation; "
+            "install Git or provide independently queried --canonical-sha values"
+        )
+    except subprocess.CalledProcessError as exc:
+        detail = exc.stderr.strip() or "not a Git checkout"
+        fail(
+            "cannot determine repository Git-clean semantics: "
+            f"{detail}; provide --canonical-sha values only for an intentional non-Git mirror"
+        )
+
+    if pathlib.Path(top).resolve() != root.resolve():
+        fail(
+            f"--root must be the Git worktree root; Git reports {top!r}, "
+            f"validator received {str(root)!r}"
+        )
+
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(root), "hash-object", f"--path={rel}", rel],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+    except subprocess.CalledProcessError as exc:
+        detail = exc.stderr.strip() or "git hash-object failed"
+        fail(f"{path}: cannot compute Git-clean blob identity: {detail}")
+
+    sha = result.stdout.strip().lower()
+    if not re.fullmatch(r"[0-9a-f]{40}", sha):
+        fail(f"{path}: git hash-object returned invalid SHA {sha!r}")
+    return sha
 
 
 def check_paths(root: pathlib.Path) -> None:
@@ -227,7 +277,7 @@ def check_canonical_contract(
         if path in external_shas:
             actual = external_shas[path]
         else:
-            actual = git_blob_sha1((root / path).read_bytes())
+            actual = git_clean_blob_sha(root, path)
         if actual != expected:
             fail(f"{path}: stable Git blob changed: expected {expected}, got {actual}")
 
@@ -287,8 +337,8 @@ def main() -> int:
         default=[],
         metavar="PATH=GIT_BLOB_SHA",
         help=(
-            "supply an independently queried Git blob SHA for a canonical file; "
-            "useful when validating a staged mirror without copying the full machine files"
+            "override one canonical Git blob identity with an independently queried SHA; "
+            "intended only for a deliberate non-Git mirror"
         ),
     )
     args = parser.parse_args()
@@ -306,7 +356,7 @@ def main() -> int:
     print("PASS: durable front door is internally consistent")
     print(f"  curated Markdown files checked: {len(CURATED_MARKDOWN)}")
     print(f"  reviewed registry families indexed: {len(EXPECTED_REGISTRY_IDS)}")
-    print("  canonical machine blobs: compatibility-stable")
+    print("  canonical machine blobs: compatibility-stable (Git-clean semantics)")
     print("  local/source-pinned residency distinction: present")
     print("  temporary task language: absent")
     print("  retired integration snapshot workflow: absent")
