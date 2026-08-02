@@ -1,6 +1,7 @@
 # Integrated packet: finite complex Pick controls
 
 **Packet status:** integrated, reviewed finite directed computations  
+**Scope:** two exact finite complex matrix boxes only; no statement at other points and no global Pick positivity  
 **Global status:** RH remains unsolved  
 **Source A:** PR [#68](https://github.com/gfreund123/riemann/pull/68) at `7b0942a83eede8b57d4f28b14a78d80edc295f2a`  
 **Source B:** PR [#71](https://github.com/gfreund123/riemann/pull/71) at `82934cf24ed575e9e554ba4e6c912a447aa1dd4e`  

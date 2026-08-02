@@ -1,6 +1,7 @@
 # Integrated packet: derivative-free \(\xi\), Pick, and Loewner criteria
 
 **Packet status:** integrated, reviewed finite conditional mathematics  
+**Scope:** finite RH-necessary theorems and false-RH existential witness geometry; no production violation and no global positivity theorem  
 **Global status:** RH remains unsolved  
 **Primary source A:** PR [#48](https://github.com/gfreund123/riemann/pull/48) at `ac4e8e7b36a95dd0bb325bcaf69ab79a10e68b12`  
 **Primary source B:** PR [#52](https://github.com/gfreund123/riemann/pull/52) at `b19d2982d5cdc3c13eaa72a9064f7c994e0c6313`  
