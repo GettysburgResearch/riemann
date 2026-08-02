@@ -1,96 +1,118 @@
 # Contributing
 
-The repository is designed for both free exploration and auditable mathematical integration.
+This repository supports both free exploration and exact mathematical integration. RH remains unsolved.
 
-## Exploratory work
+## Exploration is lightweight
 
-Open a research PR freely. It may contain speculative reformulations, reconnaissance, synthetic models, unproved connections, or unconventional approaches. State the proof boundary near the top of the PR and label each object as `PROPOSED`, `EMPIRICAL`, `IMPORTED`, `REFUTED`, or another accurate status.
+Open broad or unconventional research PRs freely. They may contain conjectures, reconnaissance, synthetic models, failed attempts, literature connections, or prototype code.
 
-Exploration does **not** require a complete canonical provenance record. It does require honesty:
+Near the top, state:
 
-- do not call ordinary floating-point output directed or certified;
-- do not call a workflow trigger a result;
-- do not infer a global conclusion from a finite ladder;
-- do not use a local zero-count statement to retire an unrelated global functional;
-- do not silently reuse a claim ID already present on another branch.
+```text
+Status:
+Scope:
+Exact dependencies or sources:
+What was actually run:
+Smallest remaining gap:
+```
+
+Use accurate labels such as `PROPOSED`, `EMPIRICAL`, `SYNTHETIC_CONTROL`, `IMPORTED`, `REFUTED`, or `SUPERSEDED`.
+
+Exploratory work does **not** need to satisfy the machine provenance schema.
+
+## Minimum proof discipline
+
+Do not:
+
+- call ordinary floating point directed or certified;
+- call a workflow marker a result;
+- infer a global theorem from a finite ladder;
+- infer a verdict on a global functional from a local zero census without a locality/complement theorem;
+- present self-declared JSON status fields as proof of their external gates;
+- reuse an existing claim ID;
+- silently strengthen a reviewed statement.
+
+Separate native proof, imported theorem, finite computation, and conditional consequence.
 
 ## Requesting exact-SHA review
 
 Before requesting review:
 
-1. Freeze the intended commit and put its full SHA in the request.
-2. Identify the load-bearing claims and exact files.
-3. Separate native proofs, imported theorems, finite computations, and conditional consequences.
-4. List every source normalization, domain, and coverage convention.
-5. State whether the checker authenticates primitive files or only validates a derived JSON object.
-6. State what was actually run and what was not run.
-7. Preserve a compact proof object or an independently regenerable, content-addressed artifact.
-8. Include adversarial tests that mutate logical gates, provenance, coverage, and strictness—not only happy-path arithmetic.
+1. freeze the intended commit and publish its full SHA;
+2. identify the load-bearing files and claims;
+3. state every hypothesis, normalization, analytic domain, endpoint, multiplicity, and coverage convention;
+4. distinguish finite, local, conditional, cofinal, and global conclusions;
+5. say what the checker recomputes and what it assumes;
+6. bind primitive sources and artifacts where applicable;
+7. record what was run and what was not run;
+8. include adversarial tests that target proof gates, coverage, provenance, strictness, and common misreadings.
 
-A review verdict applies only to that SHA and scope.
+A review verdict applies only to that exact source commit and scope.
 
-## Seeking canonical integration
+## What makes a packet integrable
 
-Canonical promotion is stricter. Add or propose one provenance record conforming to [`canonical/provenance.schema.json`](canonical/provenance.schema.json). The record should bind:
+A future packet under [`research/integrated/`](research/integrated/README.md) should contain:
 
-- object identity, kind, statement, and scope;
-- source PR, frozen commit, and source paths;
-- native/imported/conditional/empirical/refuted status;
-- dependencies and normalization fingerprints;
-- primitive artifacts, hashes, authentication method, and completeness;
-- ordinate, support, point, endpoint, shell, and coverage conventions;
-- arithmetic and rounding class;
-- replay level and independent reproduction;
-- review verdict, reviewer, and review location;
-- integration commit and timestamp;
-- aliases, repairs, refutations, and supersessions.
+- a precise statement;
+- a proof or self-contained proof extract;
+- exact source PR, commit, and files;
+- review report and verdict;
+- dependencies and source qualifications;
+- normalization and notation;
+- finite/global and conditional/unconditional boundaries;
+- computation and replay status;
+- refutations, alternatives, and supersessions;
+- the smallest next missing step.
 
-A repair receives a new record and review. It does not rewrite the old record.
+A packet must put readable mathematics on `main`. A machine registry pointer alone is not integration.
 
-## Claim IDs and aliases
+A later repair is a new reviewed object. It does not retroactively verify a flawed frozen result.
 
-Treat old identifiers as permanent historical addresses. Never recycle them.
+## Computational artifacts
 
-When collisions exist, use a context-qualified legacy reference such as:
+Use explicit arithmetic classes:
+
+- `EXACT_RATIONAL`;
+- `CERTIFIED_INTEGER_COVERAGE`;
+- `DIRECTED_INTERVAL`;
+- `NON_DIRECTED_HIGH_PRECISION`;
+- `FLOATING_RECONNAISSANCE`;
+- `SYNTHETIC_CONTROL`;
+- `MIXED`.
+
+A proof-producing consumer should authenticate the primitive source, not merely validate a digest string or semantic flag asserted inside the same derived file. Coverage must establish the actual required stream: cells, zero shells, prime powers, shards, or tree terminals.
+
+GitHub Actions artifacts are temporary transport. Record retention, durable hashes, and a reconstruction path.
+
+## Claim identities and collisions
+
+Treat historical claim IDs as permanent addresses. When an ID collides, refer to the old object by source context, for example:
 
 ```text
 pr:152@bad48a79:claims/lemmas/L-14312-...
 ```
 
-Then allocate a new canonical ID and append a mapping to [`canonical/aliases.yaml`](canonical/aliases.yaml). Do not edit old reports merely to make current naming look clean.
+Then allocate a new ID for a repaired or integrated object. Append-only collision and supersession records are kept in [`internal/registry/aliases.yaml`](internal/registry/aliases.yaml).
 
-## Computational artifacts
+## Machine provenance
 
-Distinguish:
-
-- `EXACT_RATIONAL`;
-- `DIRECTED_INTERVAL`;
-- `CERTIFIED_INTEGER_COVERAGE`;
-- `NON_DIRECTED_HIGH_PRECISION`;
-- `FLOATING_RECONNAISSANCE`;
-- `SYNTHETIC_CONTROL`.
-
-A proof-producing consumer must authenticate the primitive source, not merely accept hashes or semantic flags asserted inside the same JSON. Coverage checks must establish the actual stream—prime powers, zero shells, shards, endpoints, or tree terminals—not just aggregate counts.
-
-GitHub Actions artifacts are convenient transport, not permanent immutable storage. Record retention and availability explicitly, and preserve durable content hashes plus a reconstruction path.
+The historical registry and optional schema are backstage under [`internal/registry/`](internal/registry/README.md). They are useful for canonical or proof-producing work but are not required for ordinary exploration.
 
 ## Pull-request description checklist
 
 Include:
 
-- exact source/base and head SHA;
-- one-paragraph contribution;
+- exact base and head SHA;
+- contribution and scope;
 - claim IDs and statuses;
 - finite versus global boundary;
-- dependencies and imported source qualifications;
-- artifacts and replay commands;
-- numerical/arithmetic class;
+- dependencies and imported sources;
+- arithmetic class and artifacts;
+- tests and replay commands;
 - known gaps and adversarial targets;
 - relationship to RH without overstatement;
 - preferred review order.
 
-## Integration process
+## Integration
 
-A later integrator should create a new timestamped state directory rather than overwrite an earlier snapshot. The integrator may extract claims from a PR instead of merging it whole, but must preserve the source PR, frozen SHA, review, aliases, and disposition.
-
-The current process is documented in [`integration/2026-08-01/REPOSITORY_MODEL.md`](integration/2026-08-01/REPOSITORY_MODEL.md).
+Integrators should extract coherent claim-level packets rather than merge branch histories indiscriminately. Preserve exact provenance, alternate proofs, refutations, and aliases. Keep timestamped ledgers and review-wave inventories backstage; keep the current scientific view in the root and research layer.
