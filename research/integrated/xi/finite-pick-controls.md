@@ -1,32 +1,43 @@
 # Integrated packet: finite complex Pick controls
 
-**Packet status:** integrated, reviewed finite directed computations  
+**Packet status:** integrated reviewed finite directed computations  
 **Scope:** two exact finite complex matrix boxes only; no statement at other points and no global Pick positivity  
 **Global status:** RH remains unsolved  
 **Source A:** PR [#68](https://github.com/gfreund123/riemann/pull/68) at `7b0942a83eede8b57d4f28b14a78d80edc295f2a`  
 **Source B:** PR [#71](https://github.com/gfreund123/riemann/pull/71) at `82934cf24ed575e9e554ba4e6c912a447aa1dd4e`  
-**Review evidence:** `reports/gpt56-pro-09-i/2026-08-01-pre-public-review-pr64-pr79.md` at review-source commit `7162c2a221fd87e6e7baf4e7245d6f42b5e04de3`  
-**Review verdicts:** #68 `VERIFIED`; #71 `VERIFIED`  
-**Replay in this integration pass:** none; the exact-SHA review inspected the proof objects without rerunning the expensive primitive evaluations.
+**Review evidence:** `reports/gpt56-pro-09-i/2026-08-01-pre-public-review-pr64-pr79.md` at `7162c2a221fd87e6e7baf4e7245d6f42b5e04de3`  
+**Review verdict:** #68 `VERIFIED`; #71 `VERIFIED`  
+**Replay in this integration:** none.
 
-## What these results are
+> **Assurance boundary.** These are reviewed finite directed matrix computations, not independently regenerated special-function computations. The exact rational \(LDL^*\) and interval-box deductions are exact **conditional on the supplied directed primitive rectangles containing the intended \(\xi'/\xi\) values in the stated normalization**. This integration did not regenerate those primitive rectangles or replay the production backends.
 
-At two distinct exact point sets, directed \(\xi'/\xi\) rectangles determine a box of complex Hermitian Pick matrices
+## Shared finite setup
+
+At two distinct exact point sets, supplied directed rectangles for
+
+\[
+F(s)=\frac{\xi'(s)}{\xi(s)}
+\]
+
+determine boxes of complex Hermitian Pick matrices
 
 \[
 K_{ij}
 =
 \frac{F(s_i)+\overline{F(s_j)}}
-{s_i+\overline{s_j}-1},
-\qquad
-F=\frac{\xi'}{\xi}.
+{s_i+\overline{s_j}-1}.
 \]
 
-Each source reconstructs an exact rational midpoint matrix, proves a rational lower bound for that midpoint by Hermitian \(LDL^*\), computes a rigorous operator-norm radius for every matrix allowed by the primitive rectangles, and proves the lower bound exceeds the radius.
+Each source:
 
-Therefore every matrix in the finite box is positive definite.
+1. reconstructs an exact rational midpoint Hermitian matrix \(M\);
+2. proves \(M-\delta I\succ0\) by exact rational Hermitian \(LDL^*\);
+3. derives a rigorous operator-norm radius for every matrix admitted by the primitive rectangles;
+4. proves the radius is smaller than the midpoint moat.
 
-These are strong finite exclusions. They do not prove the Pick kernel positive at any other points or establish RH.
+Therefore every matrix in the declared finite box is positive definite.
+
+“Exact box” refers to the exact downstream matrix enclosure and rational proof. It does not mean that this integration independently regenerated the upstream special-function primitives.
 
 ---
 
@@ -42,16 +53,16 @@ T_A
 \frac{20225875608343255624083}{2^{32}}.
 \]
 
-The eight positive horizontal offsets are
+The positive horizontal offsets are
 
 \[
-2^{-17},\ 2^{-15},\ 2^{-13},\ 2^{-11},\
-2^{-10},\ 2^{-9},\ 2^{-7},\ 2^{-5}.
+2^{-17},\ 2^{-15},\ 2^{-13},\ 2^{-11},
+\ 2^{-10},\ 2^{-9},\ 2^{-7},\ 2^{-5}.
 \]
 
 ### Finite theorem
 
-Every Hermitian Pick matrix consistent with the supplied 192-bit directed primitive rectangles has
+Every Hermitian Pick matrix consistent with the supplied 192-bit directed primitive rectangles satisfies
 
 \[
 \lambda_{\min}(K)>2^{-138}.
@@ -63,42 +74,42 @@ The retained classification is
 ENTIRE_EIGHT_BY_EIGHT_BOX_STRICTLY_POSITIVE_DEFINITE
 ```
 
-### Proof structure
+### Exact proof structure
 
 1. Intersect the supplied complex \(F(s_i)\) rectangles.
-2. Construct the exact rational midpoint Hermitian matrix \(M\).
+2. Construct the exact rational midpoint matrix \(M\).
 3. Prove
-
    \[
    M-2^{-137}I\succ0
    \]
-
    by exact Gaussian-rational unpivoted Hermitian \(LDL^*\).
 4. Bound every entry perturbation by exact rectangle arithmetic.
-5. Bound the Hermitian operator norm by the maximum exact row sum.
-6. Prove the perturbation is smaller than the midpoint moat, leaving a final strict lower bound \(>2^{-138}\).
+5. Bound the Hermitian operator norm by a maximum exact row sum.
+6. Prove that perturbation is smaller than the midpoint moat, leaving the strict lower bound \(>2^{-138}\).
 
-### Primitive provenance
+### Primitive provenance and storage boundary
 
 - backend: FLINT C `acb_dirichlet_zeta_jet_rs`;
 - precision: 192 bits;
 - historical workflow run: `30009653881`;
 - historical artifact ID: `8564591455`;
-- artifact zip SHA-256:
+- historical artifact zip SHA-256:
   `646ff50e6191d68700bc3bb9a2ad21010241f51ad384d9ee36078a55d6f857a3`;
 - certificate SHA-256:
   `bc9bf349864fa65257a195538404e20a9e49891d18e2e55faeb44505b85d618f`.
 
-GitHub Actions retention is not permanent storage. The exact retained result and verification files are the durable source paths below.
-
-### Source files
+GitHub Actions artifacts are temporary transport, not permanent immutable storage. The durable source paths retained at the reviewed commit are:
 
 - `experiments/X-6602-barycentric-nearzero/verify_pick_box_pd.py`
 - `experiments/X-6602-barycentric-nearzero/results/pick-j1-192-positive-definite.json`
 - `experiments/X-6602-barycentric-nearzero/results/pick-j1-192-positive-definite.verification.json`
 
-The retained result blob for the principal JSON is
-`97f722bf2cbdca6ca19ac8134cc718dc7937e9e6` at the source commit.
+The principal retained JSON blob is
+`97f722bf2cbdca6ca19ac8134cc718dc7937e9e6`.
+
+### Exact boundary
+
+This excludes every real and complex direction inside this one admitted finite box. It does not independently authenticate the primitive producer, cover another ordinate, or imply global Pick positivity.
 
 ---
 
@@ -114,18 +125,18 @@ T_B
 \frac{20225875608342450317715}{2^{32}}.
 \]
 
-The eight horizontal offsets are the same dyadic ladder:
+The horizontal offsets are the same dyadic ladder:
 
 \[
-2^{-17},\ 2^{-15},\ 2^{-13},\ 2^{-11},\
-2^{-10},\ 2^{-9},\ 2^{-7},\ 2^{-5}.
+2^{-17},\ 2^{-15},\ 2^{-13},\ 2^{-11},
+\ 2^{-10},\ 2^{-9},\ 2^{-7},\ 2^{-5}.
 \]
 
-This is a distinct ordinate and a distinct finite box from Control A.
+This is a distinct ordinate and a distinct finite box.
 
 ### Finite theorem
 
-The complete 512-bit complex matrix box is positive definite. The retained exact lower-eigenvalue margin has outward decimal orientation
+The complete 512-bit complex matrix box is positive definite. The retained exact lower-eigenvalue margin has outward decimal orientation approximately
 
 \[
 1.1479437019748901445\times10^{-41},
@@ -137,32 +148,28 @@ while the operator-radius upper bound is approximately
 5.7573346532278167483\times10^{-147}.
 \]
 
-The classification is
+The retained classification is
 
 ```text
 ENTIRE_FROZEN_POINT_SET_CERTIFIED_POSITIVE_DEFINITE
 ```
 
-### Proof structure
+### Exact proof structure
 
-The source uses the same midpoint-plus-radius principle:
-
-1. reconstruct the exact complex Hermitian midpoint;
-2. certify
-
+1. Reconstruct the exact complex Hermitian midpoint.
+2. Prove
    \[
    M-\delta I\succ0,
    \qquad
    \delta=2^{-136},
    \]
-
-   by exact rational Hermitian \(LDL^*\);
-3. compute a complete interval-box operator radius;
-4. subtract that radius from the exact midpoint moat.
+   by exact rational Hermitian \(LDL^*\).
+3. Compute a complete interval-box operator radius.
+4. Subtract the radius from the exact midpoint moat.
 
 The result strengthens an earlier one-vector positive replay: every complex direction on this point set is excluded.
 
-### Primitive provenance
+### Primitive provenance and storage boundary
 
 - precision: 512 bits;
 - historical artifact name: `arb-xi-frozen-pick-candidate`;
@@ -176,7 +183,7 @@ The result strengthens an earlier one-vector positive replay: every complex dire
 - internal verification SHA-256:
   `e1f15d38ca18610fbe79bfbb5d66bf9b47ee5364da3f5c831682a9e4bf1bb809`.
 
-### Source files
+Again, the historical Actions artifact is not durable storage. The reviewed source commit retains:
 
 - `claims/lemmas/L-7101-rational-midpoint-radius-pick-pd.md`
 - `experiments/X-3904-complex-pick-recheck/verify_complex_pick.py`
@@ -186,25 +193,27 @@ The result strengthens an earlier one-vector positive replay: every complex dire
 The retained summary blob is
 `d761d78ae6b2c1ac8b8a6ba3624f823ec3290363`.
 
+### Exact boundary
+
+This closes every complex direction only on this declared finite box. It does not independently regenerate the primitive values, prove a neighborhood result, or establish RH.
+
 ---
 
-## Shared exact finite lemma
+## Shared finite lemma
 
-The computations instantiate the following elementary finite principle.
-
-Let \(M\) be an exact Hermitian midpoint, let \(\delta>0\), and suppose exact rational \(LDL^*\) proves
+Let \(M\) be an exact Hermitian midpoint, \(\delta>0\), and suppose exact rational \(LDL^*\) proves
 
 \[
 M-\delta I\succ0.
 \]
 
-Let every admitted Hermitian perturbation \(E\) satisfy
+If every admitted Hermitian perturbation \(E\) satisfies
 
 \[
-\|E\|_2<\delta.
+\|E\|_2<\delta,
 \]
 
-Then
+then
 
 \[
 M+E\succ0,
@@ -215,45 +224,46 @@ because for every nonzero \(v\),
 \[
 v^*(M+E)v
 \ge
-\delta\|v\|^2-\|E\|_2\|v\|^2>0.
+\delta\|v\|^2-\|E\|_2\|v\|^2
+>0.
 \]
 
-A maximum row-sum bound supplies a valid operator-norm upper bound for a Hermitian interval box. The checker must construct the exact midpoint and radius from primitive rectangles rather than trust claimed matrix entries.
+A maximum row-sum bound gives a valid operator-norm upper bound for a Hermitian interval box. The checker must construct the exact midpoint and radius from the primitive rectangles rather than trust declared matrix entries.
 
-## Mathematical relationship to RH
+## Relationship to RH
 
-Under the reviewed positive-real/Pick theorem, RH implies positive semidefiniteness of every exact finite Pick matrix in the right half-plane. A strict negative finite matrix would therefore be an RH-disproof witness after all source gates are satisfied.
+Under the source-qualified Lagarias positive-real/Pick theorem, RH implies positive semidefiniteness of every exact finite Pick matrix in the right half-plane. A strict negative finite matrix would therefore contradict RH after all source and primitive gates were satisfied.
 
 The results here are positive. They establish only:
 
 ```text
-no real or complex negative direction exists
-inside either declared finite matrix box.
+no negative real or complex direction exists
+inside either declared finite matrix box
 ```
 
 They do not establish:
 
 - positivity at another ordinate;
 - positivity on a larger or adaptive point set;
-- positivity of the global Pick kernel;
+- global Pick positivity;
 - RH;
-- independent reproduction of the primitive special-function balls.
+- independent reproduction of the special-function primitives.
 
-## Why these controls matter
+## Why the controls matter
 
-They show how deceptive midpoint linear algebra can be. Earlier apparent negative modes disappeared when the primitive rectangles and full complex matrix were handled rigorously. These two boxes are useful regression controls for every future Pick producer and checker.
+Earlier apparent negative modes disappeared when full primitive rectangles and the complete complex matrix were handled rigorously. These boxes are valuable regression controls for future producers and checkers.
 
-They also close optimization over the exact eight-node point sets: no different vector on the same admitted matrix box can become negative.
+They also close vector optimization on the exact admitted boxes: choosing another vector cannot create a negative direction there.
 
-## Known exclusions and common misreadings
+## Common misreadings
 
-- The two controls are complementary, not duplicate evidence for a trend.
-- A positive matrix box is not statistical evidence for RH.
-- Dual precision or a higher precision in one backend is not an independent implementation.
+- The two controls are complementary finite exclusions, not evidence for a trend.
+- A positive finite box is not statistical evidence for RH.
+- Two precisions in one implementation are not an independent backend.
 - A successful historical Actions artifact is not permanent storage.
-- Exact matrix algebra cannot authenticate a wrong completed-\(\xi\) normalization.
-- The finite proof does not cover nearby ordinates or nodes by continuity unless an explicit perturbation theorem and radius are supplied.
+- Exact downstream matrix algebra cannot authenticate a wrong completed-\(\xi\) normalization.
+- No nearby-point theorem follows without an explicit perturbation radius in the point coordinates.
 
 ## Exact next missing step
 
-Use one of these controls as an end-to-end regression for an independently implemented primitive producer. Then evaluate a newly frozen, condition-aware secant or small Loewner packet. Do not expand the grid until the independent normalization and positive control agree.
+Regenerate one control’s primitive \(\xi'/\xi\) values with a separately structured implementation and compare normalization and enclosures. Only after that control passes should a new condition-aware secant or small Loewner packet be evaluated.
