@@ -16,9 +16,20 @@ Limitations:
 
 ## `validate_front_door.py`
 
-A standard-library, offline checker for required front-door files, internal links among the curated pages, explicit RH-unsolved language, packet provenance headings, and absence of the retired integration-snapshot workflow.
+A standard-library, offline checker for:
 
-It performs no zero, prime, interval, spectral, special-function, or other mathematical computation.
+- the final root and research layout;
+- curated relative links;
+- explicit RH-unsolved language;
+- absence of temporary task language;
+- exact packet source/review/scope headings;
+- the results index’s local-versus-source-pinned distinction;
+- stable byte-level Git blob identities for the canonical registry, aliases, and schema;
+- absence of duplicate internal registry copies;
+- syntax and target behavior of the compatibility wrappers;
+- absence of the retired integration snapshot workflow.
+
+It performs no zero, prime, interval, spectral, special-function, Robin, or matrix-production computation.
 
 ## `archive/validate_integration_20260801.py`
 

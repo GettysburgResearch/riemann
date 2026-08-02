@@ -1,53 +1,78 @@
 # Agent entrypoint
 
-RH remains unsolved. This file is the minimum operating guide for a research agent working in this repository.
+RH remains unsolved. This is the minimum operating guide for a research agent.
 
-## Read before acting
+## Reading path
 
-1. [`START_HERE.md`](START_HERE.md)
-2. [`RESEARCH_MAP.md`](RESEARCH_MAP.md)
-3. [`FRONTIERS.md`](FRONTIERS.md)
-4. the relevant packet under [`research/integrated/`](research/integrated/README.md)
-5. current overlapping issues and pull requests
+1. Read [`README.md`](README.md).
+2. Read this file.
+3. Read one of:
+   - [`research/RESULTS_INDEX.md`](research/RESULTS_INDEX.md) for repository-wide orientation;
+   - the relevant packet under [`research/integrated/`](research/integrated/README.md) for proof-bearing mathematics.
+4. Check current overlapping issues and pull requests before starting work.
 
-Do not begin with the archival PR ledger unless the task is integration or provenance reconstruction.
+Do not begin with the complete PR ledger unless the task is historical integration or provenance reconstruction.
 
-## Choose the type of contribution
+## Choose the contribution type
 
 ### Exploration
 
-Broad reformulations, reconnaissance, synthetic countermodels, unconventional connections, and failed attempts are welcome. They may stay on a research branch or PR and need only a short proof boundary:
+Broad reformulations, reconnaissance, synthetic countermodels, unconventional connections, and failed attempts are welcome. A lightweight header is enough:
 
 ```text
 Status:
 Scope:
-Exact source/dependencies:
-What was run:
-What remains:
+Exact sources or dependencies:
+What was actually run:
+Smallest remaining gap:
 ```
 
 Exploration does not need the machine provenance schema.
 
-### Reviewable mathematical object
+### Reviewable mathematics
 
-State the exact theorem, lemma, refutation, algorithm, or finite predicate. Include its hypotheses, normalization, domain, finite/global scope, dependencies, and proof. Separate imported facts from native proof.
+State the exact theorem, lemma, refutation, algorithm, or finite predicate. Include:
+
+- hypotheses and quantifiers;
+- normalization and analytic domain;
+- finite/local/conditional/cofinal/global scope;
+- native proof versus imported theorem;
+- dependencies and known counterexamples;
+- complete proof or an auditable proof extract.
 
 ### Proof-producing computation
 
-Bind the primitive source, normalization, complete coverage convention, arithmetic class, producer, checker, hashes, and strict verdict. A checker that validates only derived JSON is not an authenticated primitive replay.
+Bind:
+
+- the primitive source and normalization;
+- complete coverage semantics;
+- arithmetic class and rounding contract;
+- producer and checker source;
+- artifacts and content hashes;
+- strict acceptance rule;
+- what was independently reproduced.
+
+A checker that accepts internally consistent derived JSON is not an authenticated primitive replay.
 
 ### Integrated packet
 
-Integration requires an exact frozen source commit and exact-SHA review. The packet must contain readable mathematics on `main`, not merely a registry pointer. A repair is a new object; it does not rewrite the reviewed past.
+Integration requires:
+
+- one exact frozen source commit;
+- exact-SHA independent review;
+- readable mathematics physically resident under `research/integrated/`;
+- explicit source, review, scope, computation, and next-step boundaries.
+
+A repair receives a new identity and review. It does not rewrite the reviewed past.
 
 ## Current programs
 
-- **Robin/Nicolas arithmetic:** finite canonical reductions are strong; the unbounded tail is open.
-- **Weil/screw/terminal-prime:** finite witnesses are possible; source normalization, coverage, and global/cofinal sign remain load-bearing.
-- **Completed-\(\xi\)/Pick/Loewner/Stieltjes:** exact finite negative predicates are mathematically sharp; no strict Riemann-data violation is known.
-- **Kernel/operator synthesis:** much finite algebra exists; the complete capturing hierarchy and cofinal corrected-kernel floor remain open.
+- **Robin/Nicolas arithmetic:** finite canonical reductions are strong; the unbounded tail remains open.
+- **Weil/screw/carrier/terminal-prime:** finite criteria and controls exist; source normalization, coverage, and the cofinal sign remain load-bearing.
+- **Completed-\(\xi\)/Pick/Loewner/Stieltjes:** finite negative predicates are sharp; no strict Riemann-data violation is known.
+- **Kernel/operator synthesis:** much finite algebra has survived review; complete capture and the cofinal corrected-kernel floor remain open.
 
-Use [`FRONTIERS.md`](FRONTIERS.md) to select a task that actually removes a load-bearing gap.
+The [results index](research/RESULTS_INDEX.md) states the strongest source-pinned object and exact next burden in each family.
 
 ## Non-negotiable boundaries
 
@@ -55,22 +80,26 @@ Never:
 
 - describe RH as proved or disproved without a complete reviewed argument;
 - turn a finite positive result into global evidence;
-- turn a local zero census into a verdict on a global functional without a locality/complement theorem;
+- use a local zero census to decide a global functional without a locality or complement theorem;
 - call ordinary high precision directed or certified;
-- call a workflow trigger a result;
-- infer an infinite sequence from a finite ladder or fitted trend;
+- call a workflow marker a mathematical result;
+- infer an infinite theorem from a finite ladder or fitted trend;
 - silently strengthen a reviewed statement;
-- recycle an old claim ID;
-- hide missing source, domain, coverage, or artifact gates behind numerical margin.
+- recycle a historical claim ID;
+- conceal a missing source, domain, coverage, or artifact gate behind numerical margin.
 
 ## Before requesting review
 
-Freeze the intended commit. List the exact files and load-bearing claims. Say what the checker authenticates, what it assumes, and what was not replayed. Identify the smallest statement whose failure would invalidate the result.
+Freeze the intended head SHA. Identify the load-bearing files and claims. State what each checker authenticates, what it assumes, and what was not replayed. Name the smallest statement whose failure would invalidate the result.
 
 ## Before extending an integrated packet
 
-Preserve its source PR, exact commit, source files, review report, scope, and known misreadings. Put new mathematics in a separate proposed object and link it explicitly.
+Preserve its source PR, exact commit, source files, review report, scope, and known misreadings. Put new mathematics in a separately labeled proposed object.
 
 ## Backstage material
 
-Machine registries, the full 2026-08-01 ledger, and archival utilities are indexed under [`internal/`](internal/README.md). Use them when reconstructing provenance, collisions, reviews, or post-cutoff history—not as a substitute for reading the mathematics.
+- Stable machine data: [`canonical/`](canonical/README.md)
+- Historical snapshot and complete ledger: [`internal/archive/`](internal/archive/README.md)
+- Offline archival and validation tools: [`internal/tools/`](internal/tools/README.md)
+
+Use backstage material for provenance, collision, or integration work—not as a substitute for reading the mathematics.

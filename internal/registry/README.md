@@ -1,11 +1,11 @@
-# Historical machine registry
+# Machine-registry documentation
 
-This directory contains the machine-oriented registry created by the first major integration pass.
+The authoritative machine files remain at their established stable paths:
 
-- `registry.yaml` indexes reviewed packet candidates.
-- `aliases.yaml` preserves claim-ID collisions, supersessions, and historical identities.
-- `provenance.schema.json` is an optional typed contract for canonical or proof-producing objects.
+- [`canonical/registry.yaml`](../../canonical/registry.yaml)
+- [`canonical/aliases.yaml`](../../canonical/aliases.yaml)
+- [`canonical/provenance.schema.json`](../../canonical/provenance.schema.json)
 
-These files are backstage. The original registry was explicitly metadata-only and did not copy proof bodies. Current proof residency is under [`research/integrated/`](../../research/integrated/README.md).
+They are deliberately de-emphasized by navigation rather than relocated. This preserves existing parsers, the registry and alias schemas, and the JSON Schema `$id`.
 
-The registry is retained for provenance and collision work. Its `promotion: metadata_only` fields describe the first integration snapshot and should not be mistaken for the current human-readable packet layer. Exploration does not need to use the schema.
+There is no second mutable copy in this directory. Human-readable proof residency is under [`research/integrated/`](../../research/integrated/README.md); the registry remains a metadata and provenance contract.

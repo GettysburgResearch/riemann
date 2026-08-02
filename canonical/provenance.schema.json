@@ -1,6 +1,611 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/gfreund123/riemann/canonical/provenance.schema.json",
-  "$ref": "../internal/registry/provenance.schema.json",
-  "description": "Compatibility reference; the maintained historical schema moved backstage."
+  "title": "Riemann canonical/proof-producing provenance record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "object_id",
+    "title",
+    "object_kind",
+    "scope",
+    "status",
+    "source",
+    "review",
+    "dependencies",
+    "integration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "riemann.provenance.v1"
+    },
+    "object_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_kind": {
+      "enum": [
+        "native_theorem",
+        "imported_theorem",
+        "conditional_implication",
+        "finite_algebra",
+        "finite_computation",
+        "empirical_observation",
+        "methodology",
+        "refutation",
+        "review_record",
+        "artifact"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class",
+        "statement",
+        "boundary"
+      ],
+      "properties": {
+        "class": {
+          "enum": [
+            "finite",
+            "local",
+            "conditional",
+            "cofinal",
+            "global",
+            "finite_conditional",
+            "cofinal_conditional"
+          ]
+        },
+        "statement": {
+          "type": "string"
+        },
+        "boundary": {
+          "type": "string"
+        },
+        "finite_parameters": {
+          "type": "object"
+        },
+        "conditional_on": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "review_state",
+        "lifecycle"
+      ],
+      "properties": {
+        "review_state": {
+          "enum": [
+            "unreviewed",
+            "reviewed_verified",
+            "reviewed_verified_with_fixes",
+            "reviewed_blocked",
+            "reviewed_rejected"
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "active",
+            "canonical_candidate",
+            "canonical",
+            "superseded",
+            "refuted",
+            "withdrawn"
+          ]
+        },
+        "native_imported_empirical": {
+          "enum": [
+            "native",
+            "imported",
+            "conditional",
+            "empirical",
+            "synthetic",
+            "mixed"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "pr",
+        "commit",
+        "paths"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string"
+        },
+        "pr": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "paths": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "head_evidence": {
+          "enum": [
+            "review_recorded",
+            "direct_present",
+            "reconstructed_uncertain"
+          ]
+        },
+        "post_review_delta": {
+          "type": "boolean"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verdict",
+        "reviewer",
+        "report_path",
+        "frozen_commit"
+      ],
+      "properties": {
+        "verdict": {
+          "enum": [
+            "VERIFIED",
+            "VERIFIED WITH FIXES",
+            "GAP/BLOCKED",
+            "REJECTED",
+            "NOT REVIEWED"
+          ]
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "report_path": {
+          "type": "string"
+        },
+        "report_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "frozen_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "fixes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review_scope": {
+          "type": "string"
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "claim",
+              "source",
+              "normalization",
+              "artifact",
+              "software",
+              "data",
+              "review"
+            ]
+          },
+          "status": {
+            "enum": [
+              "verified",
+              "source_qualified",
+              "proposed",
+              "blocked",
+              "refuted",
+              "external_unchecked"
+            ]
+          },
+          "exact_ref": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "fingerprints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hash"
+          }
+        },
+        "xi_convention": {
+          "type": "string"
+        },
+        "fourier_mellin_convention": {
+          "type": "string"
+        },
+        "weil_suzuki_convention": {
+          "type": "string"
+        },
+        "metric_basis_convention": {
+          "type": "string"
+        },
+        "sign_convention": {
+          "type": "string"
+        },
+        "domain_form_core": {
+          "type": "string"
+        }
+      }
+    },
+    "domain": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "ordinate": {
+          "type": [
+            "string",
+            "object"
+          ]
+        },
+        "support": {
+          "type": [
+            "string",
+            "object"
+          ]
+        },
+        "points": {
+          "type": [
+            "array",
+            "object",
+            "string"
+          ]
+        },
+        "endpoint_convention": {
+          "type": "string"
+        },
+        "coverage_convention": {
+          "type": "string"
+        },
+        "multiplicity_convention": {
+          "type": "string"
+        }
+      }
+    },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "primitive_type",
+          "authentication",
+          "completeness"
+        ],
+        "properties": {
+          "primitive_type": {
+            "enum": [
+              "completed_xi",
+              "logarithmic_derivative",
+              "zero_ball",
+              "zero_count",
+              "prime_manifest",
+              "prime_power_manifest",
+              "weil_source",
+              "metric_gram",
+              "basis",
+              "schur_map",
+              "interval_object",
+              "other"
+            ]
+          },
+          "producer": {
+            "type": "string"
+          },
+          "producer_source": {
+            "$ref": "#/$defs/sourceBinding"
+          },
+          "normalization_id": {
+            "type": "string"
+          },
+          "point_or_domain": {
+            "type": [
+              "string",
+              "object",
+              "array"
+            ]
+          },
+          "authentication": {
+            "enum": [
+              "content_hash",
+              "git_blob_hash",
+              "independent_recompute",
+              "typed_external_certificate",
+              "self_declared_only",
+              "none"
+            ]
+          },
+          "hashes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/hash"
+            }
+          },
+          "completeness": {
+            "enum": [
+              "complete",
+              "finite_complete",
+              "partial",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "coverage": {
+            "type": "string"
+          },
+          "independent_control": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "arithmetic": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "class": {
+          "enum": [
+            "EXACT_RATIONAL",
+            "CERTIFIED_INTEGER_COVERAGE",
+            "DIRECTED_INTERVAL",
+            "NON_DIRECTED_HIGH_PRECISION",
+            "FLOATING_RECONNAISSANCE",
+            "SYNTHETIC_CONTROL",
+            "MIXED"
+          ]
+        },
+        "directed": {
+          "type": "boolean"
+        },
+        "rounding_contract": {
+          "type": "string"
+        },
+        "serialization_contract": {
+          "type": "string"
+        },
+        "precision": {
+          "type": [
+            "integer",
+            "string",
+            "array"
+          ]
+        },
+        "backend": {
+          "type": "string"
+        },
+        "checker": {
+          "$ref": "#/$defs/sourceBinding"
+        },
+        "strictness": {
+          "type": "string"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "location",
+          "hashes",
+          "availability",
+          "replay_level"
+        ],
+        "properties": {
+          "location": {
+            "type": "string"
+          },
+          "hashes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/$defs/hash"
+            }
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "availability": {
+            "enum": [
+              "checked_in",
+              "durable_external",
+              "actions_temporary",
+              "regenerable",
+              "missing",
+              "unknown"
+            ]
+          },
+          "retention": {
+            "type": "string"
+          },
+          "producer": {
+            "type": "string"
+          },
+          "consumer": {
+            "type": "string"
+          },
+          "replay_command": {
+            "type": "string"
+          },
+          "replay_level": {
+            "enum": [
+              "schema_only",
+              "exact_algebra",
+              "primitive_recompute",
+              "same_backend_replay",
+              "independent_backend_replay",
+              "not_replayed"
+            ]
+          },
+          "missing_segments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "repairs_refutations_supersessions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "integration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "timestamp",
+        "integration_commit"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "metadata_only",
+            "extracted",
+            "merged",
+            "deferred",
+            "rejected"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "integration_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$|^PENDING$"
+        },
+        "canonical_location": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "value",
+        "binds"
+      ],
+      "properties": {
+        "algorithm": {
+          "enum": [
+            "sha256",
+            "sha512",
+            "git_blob_sha1",
+            "git_commit_sha1",
+            "other"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "binds": {
+          "type": "string"
+        }
+      }
+    },
+    "sourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "commit",
+        "hashes"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "hashes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hash"
+          }
+        }
+      }
+    }
+  }
 }

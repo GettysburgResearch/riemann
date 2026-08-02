@@ -1,8 +1,8 @@
 # Contributing
 
-This repository supports both free exploration and exact mathematical integration. RH remains unsolved.
+This repository supports free exploration and exact mathematical integration. RH remains unsolved.
 
-## Exploration is lightweight
+## Exploratory work is lightweight
 
 Open broad or unconventional research PRs freely. They may contain conjectures, reconnaissance, synthetic models, failed attempts, literature connections, or prototype code.
 
@@ -11,14 +11,12 @@ Near the top, state:
 ```text
 Status:
 Scope:
-Exact dependencies or sources:
+Exact sources or dependencies:
 What was actually run:
 Smallest remaining gap:
 ```
 
-Use accurate labels such as `PROPOSED`, `EMPIRICAL`, `SYNTHETIC_CONTROL`, `IMPORTED`, `REFUTED`, or `SUPERSEDED`.
-
-Exploratory work does **not** need to satisfy the machine provenance schema.
+Use accurate labels such as `PROPOSED`, `EMPIRICAL`, `SYNTHETIC_CONTROL`, `IMPORTED`, `REFUTED`, or `SUPERSEDED`. Exploration does not need the machine provenance schema.
 
 ## Minimum proof discipline
 
@@ -27,8 +25,8 @@ Do not:
 - call ordinary floating point directed or certified;
 - call a workflow marker a result;
 - infer a global theorem from a finite ladder;
-- infer a verdict on a global functional from a local zero census without a locality/complement theorem;
-- present self-declared JSON status fields as proof of their external gates;
+- infer a global-functional verdict from a local zero census without a locality or complement theorem;
+- present self-declared JSON states as proof of external gates;
 - reuse an existing claim ID;
 - silently strengthen a reviewed statement.
 
@@ -38,81 +36,81 @@ Separate native proof, imported theorem, finite computation, and conditional con
 
 Before requesting review:
 
-1. freeze the intended commit and publish its full SHA;
+1. freeze and publish the full intended head SHA;
 2. identify the load-bearing files and claims;
-3. state every hypothesis, normalization, analytic domain, endpoint, multiplicity, and coverage convention;
+3. state every hypothesis, normalization, domain, endpoint, multiplicity, and coverage convention;
 4. distinguish finite, local, conditional, cofinal, and global conclusions;
 5. say what the checker recomputes and what it assumes;
 6. bind primitive sources and artifacts where applicable;
 7. record what was run and what was not run;
-8. include adversarial tests that target proof gates, coverage, provenance, strictness, and common misreadings.
+8. include adversarial tests for proof gates, coverage, provenance, strictness, and common misreadings.
 
-A review verdict applies only to that exact source commit and scope.
+A verdict applies only to that exact source commit and scope.
 
 ## What makes a packet integrable
 
-A future packet under [`research/integrated/`](research/integrated/README.md) should contain:
+A packet under [`research/integrated/`](research/integrated/README.md) should contain:
 
-- a precise statement;
-- a proof or self-contained proof extract;
+- a precise statement and proof or self-contained proof extract;
 - exact source PR, commit, and files;
 - review report and verdict;
-- dependencies and source qualifications;
-- normalization and notation;
+- dependencies, imported sources, normalization, and notation;
 - finite/global and conditional/unconditional boundaries;
 - computation and replay status;
 - refutations, alternatives, and supersessions;
 - the smallest next missing step.
 
-A packet must put readable mathematics on `main`. A machine registry pointer alone is not integration.
-
-A later repair is a new reviewed object. It does not retroactively verify a flawed frozen result.
+A machine registry pointer alone is not mathematical integration. A later repair is a new reviewed object.
 
 ## Computational artifacts
 
 Use explicit arithmetic classes:
 
-- `EXACT_RATIONAL`;
-- `CERTIFIED_INTEGER_COVERAGE`;
-- `DIRECTED_INTERVAL`;
-- `NON_DIRECTED_HIGH_PRECISION`;
-- `FLOATING_RECONNAISSANCE`;
-- `SYNTHETIC_CONTROL`;
-- `MIXED`.
+- `EXACT_RATIONAL`
+- `CERTIFIED_INTEGER_COVERAGE`
+- `DIRECTED_INTERVAL`
+- `NON_DIRECTED_HIGH_PRECISION`
+- `FLOATING_RECONNAISSANCE`
+- `SYNTHETIC_CONTROL`
+- `MIXED`
 
-A proof-producing consumer should authenticate the primitive source, not merely validate a digest string or semantic flag asserted inside the same derived file. Coverage must establish the actual required stream: cells, zero shells, prime powers, shards, or tree terminals.
+A proof-producing consumer should authenticate primitive files, not merely accept a digest string or semantic flag inside the same derived object. Coverage must establish the actual stream of cells, zero shells, prime powers, shards, or tree terminals.
 
 GitHub Actions artifacts are temporary transport. Record retention, durable hashes, and a reconstruction path.
 
-## Claim identities and collisions
+## Claim identities
 
-Treat historical claim IDs as permanent addresses. When an ID collides, refer to the old object by source context, for example:
+Historical claim IDs are permanent addresses. When IDs collide, use source context, for example:
 
 ```text
 pr:152@bad48a79:claims/lemmas/L-14312-...
 ```
 
-Then allocate a new ID for a repaired or integrated object. Append-only collision and supersession records are kept in [`internal/registry/aliases.yaml`](internal/registry/aliases.yaml).
+Allocate a new ID for a repaired or integrated object. Append-only collision and supersession records remain at [`canonical/aliases.yaml`](canonical/aliases.yaml).
 
-## Machine provenance
+## Stable machine contract
 
-The historical registry and optional schema are backstage under [`internal/registry/`](internal/registry/README.md). They are useful for canonical or proof-producing work but are not required for ordinary exploration.
+The established machine paths remain authoritative:
 
-## Pull-request description checklist
+- [`canonical/registry.yaml`](canonical/registry.yaml)
+- [`canonical/aliases.yaml`](canonical/aliases.yaml)
+- [`canonical/provenance.schema.json`](canonical/provenance.schema.json)
+
+They are backstage data contracts, not the human front door. Do not relocate or replace them with a different schema under the same filename.
+
+## Pull-request checklist
 
 Include:
 
 - exact base and head SHA;
-- contribution and scope;
-- claim IDs and statuses;
-- finite versus global boundary;
+- contribution, claim IDs, status, and scope;
+- finite-versus-global boundary;
 - dependencies and imported sources;
-- arithmetic class and artifacts;
-- tests and replay commands;
-- known gaps and adversarial targets;
+- arithmetic class, artifacts, and replay commands;
+- tests and known gaps;
 - relationship to RH without overstatement;
 - preferred review order.
 
 ## Integration
 
-Integrators should extract coherent claim-level packets rather than merge branch histories indiscriminately. Preserve exact provenance, alternate proofs, refutations, and aliases. Keep timestamped ledgers and review-wave inventories backstage; keep the current scientific view in the root and research layer.
+Integrators should extract coherent claim-level packets rather than merge branch histories indiscriminately. Preserve exact provenance, alternate proofs, refutations, aliases, and frozen review boundaries. Keep timestamped inventories backstage and the current mathematical view in `README.md` and `research/`.

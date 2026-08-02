@@ -4,86 +4,68 @@ This is an open research repository for rigorous work around the Riemann Hypothe
 
 > **RH remains unsolved. Nothing currently integrated here proves or disproves it.**
 
-The repository contains reviewed finite mathematics, exact and directed finite computations, conditional RH criteria, refutations, exploratory programs, and complete provenance records. Those categories are deliberately kept separate.
+The repository contains proof-bearing finite mathematics, reviewed conditional criteria, finite directed computations, refutations, exploratory programs, and exact provenance. Those categories are kept separate.
 
-## The two-minute map
+## Begin here
 
-Start with:
+A first-time human needs two choices:
 
-1. **[START_HERE.md](START_HERE.md)** — how to read the repository and interpret status.
-2. **[RESEARCH_MAP.md](RESEARCH_MAP.md)** — the four main programs and how they connect.
-3. **[FRONTIERS.md](FRONTIERS.md)** — the smallest load-bearing problems that remain.
-4. **[research/integrated/](research/integrated/README.md)** — readable proof-bearing packets extracted from exact reviewed commits.
+1. Read the **[reviewed results index](research/RESULTS_INDEX.md)** for the four programs, strongest surviving results, blocked interfaces, and exact open burdens.
+2. Open the **[integrated proof packets](research/integrated/README.md)** to read mathematics that physically resides on `main`.
 
-A research agent should also read **[AGENTS.md](AGENTS.md)** before opening or continuing a branch.
+A research agent should then read **[AGENTS.md](AGENTS.md)**. Contribution mechanics are in **[CONTRIBUTING.md](CONTRIBUTING.md)**.
 
-## What physically lives on `main`
+## What is actually integrated
 
-`main` now has three layers.
+The first proof-bearing spine currently contains:
 
-### Front stage
+- an exact finite Robin barrier through \(5582\), the adjacent threshold at \(5583\), a complete reduction to consecutive-prime nonincreasing exponent vectors, and an exact bounded-tail envelope;
+- derivative-free \(\xi'/\xi\) secant, divided-difference, barycentric, two-channel, matched-pole, and cross-Loewner theorems;
+- two reviewed finite complex \(8\times8\) Pick-matrix boxes certified positive under their supplied directed primitive rectangles;
+- proof-boundary corrections for saturated Hardy-\(Z\) chains, local-versus-global inference, Hermite inertia, a targeted complex-center Li claim, and terminal-cell coverage.
 
-The root pages above give a current human-readable view. They are intentionally short and do not require reading a 127-row pull-request ledger.
+These four packets are **not** the whole reviewed intellectual state. Other important reviewed families remain source-pinned at exact commits because their dependencies, source conventions, repairs, or cofinal assumptions are not yet safe to extract. The [results index](research/RESULTS_INDEX.md) records both local packets and source-pinned families.
 
-### Research stage
+## Four programs
 
-- [`research/integrated/`](research/integrated/README.md) contains curated proof-bearing packets. Each packet states the mathematics, proof boundary, exact source commit, review evidence, dependencies, and next missing step.
-- [`research/exploratory/`](research/exploratory/README.md) explains where speculative or unconventional work belongs.
-- Existing `claims/`, `experiments/`, `literature/`, `reports/`, and `audits/` paths remain source and research records where present. An integrated packet does not erase its source.
+| Program | What it tries to do | Current load-bearing gap |
+|---|---|---|
+| **Robin/Nicolas arithmetic** | Convert RH into exact inequalities for divisor sums, primorials, or related arithmetic sequences. | Control the entire infinite canonical tail, or find one exact violation. |
+| **Weil, screw, carrier, and terminal-prime methods** | Use RH-necessary explicit-formula positivity or boundedness; one strict authenticated negative could disprove RH. | Reconcile one source/admissibility/normalization contract, then prove either a strict finite violation or a cofinal sign theorem. |
+| **Completed-\(\xi\), Pick, Loewner, and Stieltjes methods** | Exploit positive-real and resolvent structure of \(\xi'/\xi\) under RH. | Produce one strict directed Riemann-data violation with authenticated primitives, or prove a complete positivity class. |
+| **Kernel/operator synthesis** | Split localized Weil forms into visible, kernel, and positive-complement blocks and control the corrected kernel cofinally. | Prove a complete capturing hierarchy and a uniform corrected-kernel lower bound with error tending to zero. |
 
-### Backstage
+## Scope vocabulary
 
-[`internal/`](internal/README.md) indexes machine registries, archival tools, and the first timestamped integration snapshot. Those records preserve exact provenance and review-wave detail, but they are not the project’s front door.
+A result has both a **review status** and a **mathematical scope**.
 
-## Four principal programs
+- `VERIFIED` means independently reviewed at one exact frozen commit and accepted only in the stated scope.
+- `VERIFIED WITH FIXES` means the core survives, but named repairs remain mandatory.
+- `GAP/BLOCKED`, `REJECTED`, `PROPOSED`, `EMPIRICAL`, `REFUTED`, and `SUPERSEDED` retain their ordinary literal meanings.
+- `finite`, `local`, `conditional`, `cofinal`, and `global` are different quantifier classes.
 
-| Program | Core idea | Strongest narrow reviewed material represented here | Exact unresolved burden |
-|---|---|---|---|
-| **Robin/Nicolas arithmetic** | Replace RH by inequalities for divisor sums, primorials, or related arithmetic sequences. | An independently reviewed finite Robin barrier, a complete reduction to consecutive-prime nonincreasing exponent vectors, and an exact shared-budget tail envelope. | Prove the inequality for the entire infinite canonical class, find one certified violation, or obtain a new asymptotic theorem that closes the unbounded tail. |
-| **Weil, screw, and terminal-prime methods** | Use RH-equivalent positivity or boundedness of explicit-formula test objects; a strict finite negative witness could disprove RH. | Reviewed finite algebra and finite positive controls exist in the source record; correction packets identify coverage and locality requirements. | Close the common source/admissibility/normalization interfaces, then produce either a strict fully authenticated negative object or a cofinal/global sign theorem. |
-| **Completed-\(\xi\), Pick, Loewner, and Stieltjes methods** | Under RH, horizontal \(\xi'/\xi\) responses have positive-real, Stieltjes, divided-difference, and total-positivity structure. | Reviewed derivative-free secant, divided-difference, barycentric, two-channel, matched-pole, and cross-Loewner theorems; two exact finite \(8\times8\) Pick boxes were certified positive. | Produce one strict directed negative finite predicate with all normalizations and primitive values authenticated, or prove a genuinely global positivity theorem. |
-| **Kernel/operator synthesis** | Approximate localized Weil forms by finite packets, split dangerous subspaces, and control Schur complements and cofinal lower floors. | A large reviewed finite algebraic stack is indexed in the archive, but it is not yet imported as a first-class proof packet because source and cofinal dependencies remain entangled. | Establish a complete capturing hierarchy and a cofinal corrected-kernel lower bound; finite packet positivity or finite Schur algebra is not enough. |
+An exact positive finite matrix, finite Robin range, local zero slab, prime sum, or Schur calculation is not evidence that RH is true globally. A conditional implication does not establish its hypothesis. A later repair is a new object and does not retroactively verify a flawed frozen claim.
 
-See [RESEARCH_MAP.md](RESEARCH_MAP.md) for the logical relationships and incompatibilities among these programs.
+## What would be decisive
 
-## Strong narrow results on `main`
+A finite negative can disprove RH only when all of the following are present:
 
-The initial integrated spine includes:
+```text
+reviewed RH-necessity theorem
++ exact witness
++ authenticated and complete primitives
++ correct source/domain/normalization conventions
++ strict exact or outward-directed separation from zero
+```
 
-- the exact finite Robin barrier through \(5582\), including the adjacent threshold at \(5583\);
-- the canonical Hardy–Ramanujan reduction for every hypothetical Robin counterexample;
-- an exact powered dynamic-program envelope for bounded canonical Robin tails;
-- derivative-free \(\xi'/\xi\) secant, divided-difference, barycentric, two-channel, matched-pole, and cross-Loewner mathematics;
-- two distinct exact finite complex Pick-matrix positive-definiteness certificates;
-- reviewed corrections for saturated Hardy-\(Z\) sign chains, Hermite-matrix inertia, local-versus-global inference, targeted complex-center Li coefficients, and terminal-cell coverage.
+A positive proof must cross an unbounded quantifier: every required integer, support, point, zero, scale, or complete form-domain direction.
 
-These are meaningful results. They are also narrow. A finite positive matrix does not support RH globally; a finite Robin range does not settle all integers; and a conditional implication does not prove its hypothesis.
+## Research and provenance layout
 
-## What must never be overclaimed
+- [`research/`](research/README.md) is the readable scientific layer.
+- Existing `claims/`, `experiments/`, `literature/`, `reports/`, and `audits/` paths remain exact source records where present.
+- [`canonical/`](canonical/README.md) retains the stable machine registry, alias ledger, and provenance schema at their established paths.
+- [`internal/`](internal/README.md) indexes archival snapshots and offline tools. It is backstage, not the recommended first reading.
+- The timestamped 2026-08-01 integration ledger remains frozen under `integration/2026-08-01/`.
 
-Do not infer any of the following:
-
-- “one finite object is positive” \(\Rightarrow\) “RH is probably true”;
-- “a large finite search found no witness” \(\Rightarrow\) “the route is closed globally”;
-- “all zeros in one slab are on the line” \(\Rightarrow\) “a nearby global Pick, Weil, screw, or direct-\(\xi\) functional is refuted”;
-- “a checker accepts internally consistent JSON” \(\Rightarrow\) “the primitive data and normalization are authenticated”;
-- “a cofinal theorem is stated conditionally” \(\Rightarrow\) “its cofinal hypothesis has been proved”;
-- “a later repair works” \(\Rightarrow\) “the flawed frozen claim was retrospectively verified.”
-
-A decisive finite negative could disprove RH only if a reviewed theorem makes that predicate RH-necessary and every source, domain, normalization, coverage, and strict interval gate is satisfied.
-
-## Contributing
-
-Exploration is intentionally lightweight. A speculative branch may be free-form, broad, or unconventional. It should still say:
-
-- what is proved, proposed, empirical, imported, refuted, or unknown;
-- whether the conclusion is finite, local, conditional, cofinal, or global;
-- which exact source or artifact it relies on;
-- what was actually run;
-- what the smallest missing step is.
-
-Promotion into [`research/integrated/`](research/integrated/README.md) requires exact-SHA review and a readable proof-residency packet. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Historical and machine records
-
-The first broad integration snapshot, complete PR ledger, registry, aliases, and archival utilities remain available through [`internal/`](internal/README.md). They are evidence and infrastructure, not the recommended first reading.
+Exploration remains free-form. Exact-SHA review and the integrated packet format are required only when work seeks durable reviewed residency.

@@ -1,18 +1,15 @@
 # Internal and archival material
 
-This area preserves integration machinery and provenance that should not dominate the research front door.
+This area preserves provenance and tooling that should not dominate the research front door.
 
-## Contents
+- [`archive/`](archive/README.md) indexes timestamped snapshots, complete PR ledgers, review-wave detail, and historical handoffs.
+- [`registry/`](registry/README.md) documents the stable machine contract retained at `canonical/`.
+- [`tools/`](tools/README.md) contains offline archival and lightweight validation utilities.
 
-- [`archive/`](archive/README.md) — index of timestamped snapshots, complete PR ledgers, review-wave detail, and old handoffs.
-- [`registry/`](registry/README.md) — the first integration’s machine registry, aliases, and optional provenance schema.
-- [`tools/`](tools/README.md) — offline archival and lightweight validation utilities.
-
-The authoritative current scientific view is at:
+The current scientific view is:
 
 - [`README.md`](../README.md)
-- [`RESEARCH_MAP.md`](../RESEARCH_MAP.md)
-- [`FRONTIERS.md`](../FRONTIERS.md)
+- [`research/RESULTS_INDEX.md`](../research/RESULTS_INDEX.md)
 - [`research/integrated/`](../research/integrated/README.md)
 
-Historical records are retained because exact-SHA review, collision resolution, and post-cutoff reconstruction require them. They are not claims that the indexed theorem bodies are integrated or globally proved.
+Historical records remain necessary for exact-SHA review, collision resolution, and later delta integration. They are not theorem promotion.

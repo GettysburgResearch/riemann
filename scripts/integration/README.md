@@ -1,5 +1,8 @@
-# Compatibility entrypoint
+# Compatibility entrypoints
 
-The archival capture utility and current lightweight validator moved to [`internal/tools/`](../../internal/tools/README.md).
+These established script paths remain executable wrappers:
 
-These paths remain as small compatibility wrappers for older documentation. No GitHub workflow invokes them.
+- `capture_snapshot.py` delegates to the manual offline archival utility at `internal/tools/capture_snapshot.py`.
+- `validate_integration.py` delegates to the current front-door validator at `internal/tools/validate_front_door.py`.
+
+No workflow invokes them automatically. The capture utility’s timestamp-reconstructed historical head remains explicitly uncertain.
