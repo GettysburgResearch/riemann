@@ -1,75 +1,71 @@
 # Riemann research repository
 
-This repository is an open, multi-agent research programme around the Riemann Hypothesis (RH). **RH remains unsolved. Nothing in this repository is presently a proof or disproof of RH.**
+This is an open research repository for rigorous work around the Riemann Hypothesis (RH).
 
-The project welcomes ambitious, unconventional, and exploratory work. It also keeps a strict boundary between an idea, a finite computation, a conditional implication, and a global theorem. A persuasive midpoint, a positive finite matrix, a local zero slab, or a checker that accepts self-declared JSON is not enough to establish an RH conclusion.
+> **RH remains unsolved. Nothing currently integrated here proves or disproves it.**
 
-## Current integrated state
+The repository contains proof-bearing finite mathematics, reviewed conditional criteria, finite directed computations, refutations, exploratory programs, and exact provenance. Those categories are kept separate.
 
-The authoritative timestamped integration state is:
+## Begin here
 
-- [First major integration snapshot — cutoff 2026-08-01](integration/2026-08-01/README.md)
-- [Full cutoff PR ledger](integration/2026-08-01/PR_LEDGER.md)
-- [Mathematical and computational synthesis](integration/2026-08-01/SYNTHESIS.md)
-- [Repository model and continuing integration process](integration/2026-08-01/REPOSITORY_MODEL.md)
-- [Strategic outlook](integration/2026-08-01/STRATEGIC_OUTLOOK.md)
-- [Next-integrator handoff](integration/2026-08-01/NEXT_INTEGRATOR.md)
+A first-time human needs two choices:
 
-Volatile PR inventories and priorities belong in timestamped integration directories. This README is intentionally stable.
+1. Read the **[reviewed results index](research/RESULTS_INDEX.md)** for the four programs, strongest surviving results, blocked interfaces, and exact open burdens.
+2. Open the **[integrated proof packets](research/integrated/README.md)** to read mathematics that physically resides on `main`.
 
-## Four different kinds of result
+A research agent should then read **[AGENTS.md](AGENTS.md)**. Contribution mechanics are in **[CONTRIBUTING.md](CONTRIBUTING.md)**.
 
-A **finite positive result** proves only that one declared finite object is positive or that one finite search family contains no witness. It is not evidence that RH is globally true.
+## What is actually integrated
 
-A **decisive finite negative certificate** can disprove RH only when a reviewed theorem makes the finite predicate RH-necessary, every hypothesis and normalization is satisfied, all primitive data are authenticated and complete, and a directed or exact checker proves strict separation from zero.
+The first proof-bearing spine currently contains:
 
-A **conditional RH implication or equivalence** is a theorem of the form “if the stated cofinal/global/source hypothesis holds, then RH follows” or “RH is equivalent to this property.” It does not verify the missing hypothesis.
+- an exact finite Robin barrier through \(5582\), the adjacent threshold at \(5583\), a complete reduction to consecutive-prime nonincreasing exponent vectors, and an exact bounded-tail envelope;
+- derivative-free \(\xi'/\xi\) secant, divided-difference, barycentric, two-channel, matched-pole, and cross-Loewner theorems;
+- two reviewed finite complex \(8\times8\) Pick-matrix boxes certified positive under their supplied directed primitive rectangles;
+- proof-boundary corrections for saturated Hardy-\(Z\) chains, local-versus-global inference, Hermite inertia, a targeted complex-center Li claim, and terminal-cell coverage.
 
-A **cofinal or global theorem** controls every required scale, support, zero, prime-power contribution, or form-domain limit. A finite ladder, fitted trend, or existence claim at each frozen finite level does not automatically provide such a theorem.
+These four packets are **not** the whole reviewed intellectual state. Other important reviewed families remain source-pinned at exact commits because their dependencies, source conventions, repairs, or cofinal assumptions are not yet safe to extract. The [results index](research/RESULTS_INDEX.md) records both local packets and source-pinned families.
 
-## Status vocabulary
+## Four programs
 
-- `VERIFIED`: independently reviewed at one exact frozen commit and accepted within the stated scope.
-- `VERIFIED WITH FIXES`: the scoped result survives, but listed repairs are required before canonical integration.
-- `GAP/BLOCKED`: a load-bearing hypothesis, source interface, artifact, domain, or inference is missing.
-- `REJECTED`: the reviewed object is unsound or unsuitable as an integration unit.
-- `PROPOSED`: new mathematics or methodology awaiting independent exact-SHA review.
-- `EMPIRICAL`: reconnaissance or ordinary numerical evidence.
-- `REFUTED`: a claim or inference has a recorded counterexample or proof of failure.
-- `SUPERSEDED`: preserved historically but replaced by a later, better-scoped object.
+| Program | What it tries to do | Current load-bearing gap |
+|---|---|---|
+| **Robin/Nicolas arithmetic** | Convert RH into exact inequalities for divisor sums, primorials, or related arithmetic sequences. | Control the entire infinite canonical tail, or find one exact violation. |
+| **Weil, screw, carrier, and terminal-prime methods** | Use RH-necessary explicit-formula positivity or boundedness; one strict authenticated negative could disprove RH. | Reconcile one source/admissibility/normalization contract, then prove either a strict finite violation or a cofinal sign theorem. |
+| **Completed-\(\xi\), Pick, Loewner, and Stieltjes methods** | Exploit positive-real and resolvent structure of \(\xi'/\xi\) under RH. | Produce one strict directed Riemann-data violation with authenticated primitives, or prove a complete positivity class. |
+| **Kernel/operator synthesis** | Split localized Weil forms into visible, kernel, and positive-complement blocks and control the corrected kernel cofinally. | Prove a complete capturing hierarchy and a uniform corrected-kernel lower bound with error tending to zero. |
 
-A status always belongs to a specific object, source commit, scope, and review. A later repair is a new object; it does not retroactively change the verdict on the old one.
+## Scope vocabulary
 
-## Main programmes
+A result has both a **review status** and a **mathematical scope**.
 
-The current work clusters into four broad programmes:
+- `VERIFIED` means independently reviewed at one exact frozen commit and accepted only in the stated scope.
+- `VERIFIED WITH FIXES` means the core survives, but named repairs remain mandatory.
+- `GAP/BLOCKED`, `REJECTED`, `PROPOSED`, `EMPIRICAL`, `REFUTED`, and `SUPERSEDED` retain their ordinary literal meanings.
+- `finite`, `local`, `conditional`, `cofinal`, and `global` are different quantifier classes.
 
-1. scalar screw/Weil or terminal-prime criteria and strict finite negative witnesses;
-2. complete-kernel, radical, Schur, and localized-Weil synthesis;
-3. direct completed-ξ, Pick, Loewner, Stieltjes, and zero-deflation certificates;
-4. Robin/Nicolas and related arithmetic reductions.
+An exact positive finite matrix, finite Robin range, local zero slab, prime sum, or Schur calculation is not evidence that RH is true globally. A conditional implication does not establish its hypothesis. A later repair is a new object and does not retroactively verify a flawed frozen claim.
 
-The [strategic outlook](integration/2026-08-01/STRATEGIC_OUTLOOK.md) records connections and exact missing steps. It is strategy, not proof.
+## What would be decisive
 
-## How to contribute
+A finite negative can disprove RH only when all of the following are present:
 
-Exploratory PRs may be broad, speculative, or unconventional. Clearly label conjectures, empirical observations, synthetic controls, imported results, and open gaps. Do not present a workflow trigger as a mathematical result.
+```text
+reviewed RH-necessity theorem
++ exact witness
++ authenticated and complete primitives
++ correct source/domain/normalization conventions
++ strict exact or outward-directed separation from zero
+```
 
-A result seeking exact-SHA verification or canonical integration should follow [CONTRIBUTING.md](CONTRIBUTING.md). In particular, record:
+A positive proof must cross an unbounded quantifier: every required integer, support, point, zero, scale, or complete form-domain direction.
 
-- the exact claim and finite/global/conditional scope;
-- source PR and commit;
-- dependencies and normalization;
-- primitive artifacts, hashes, completeness, and coverage conventions;
-- arithmetic class and rounding contract;
-- replay instructions and independent checks;
-- claim IDs or context-qualified aliases;
-- the proof boundary and the precise remaining gap.
+## Research and provenance layout
 
-Canonical promotion metadata lives under [`canonical/`](canonical/README.md). This layer is intentionally stricter than exploratory research and must not make experimentation bureaucratic.
+- [`research/`](research/README.md) is the readable scientific layer.
+- Existing `claims/`, `experiments/`, `literature/`, `reports/`, and `audits/` paths remain exact source records where present.
+- [`canonical/`](canonical/README.md) retains the stable machine registry, alias ledger, and provenance schema at their established paths.
+- [`internal/`](internal/README.md) indexes archival snapshots and offline tools. It is backstage, not the recommended first reading.
+- The timestamped 2026-08-01 integration ledger remains frozen under `integration/2026-08-01/`.
 
-## Review and integration discipline
-
-Reviews freeze the source head before reading it. Integrators use those reports as evidence, make claim-level decisions, preserve aliases and refutations, and never infer that a verdict applies to later commits. Timestamp reconstruction from commit dates is not an exact historical PR-head record.
-
-The repository may remain one coherent step behind active work. New research after a cutoff is handled as a delta in the next timestamped pass, not silently folded into the previous snapshot.
+Exploration remains free-form. Exact-SHA review and the integrated packet format are required only when work seeks durable reviewed residency.

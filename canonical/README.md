@@ -1,15 +1,13 @@
-# Canonical integration layer
+# Stable canonical machine contract
 
-This directory indexes reviewed objects without copying or rewriting the whole research tree.
+This directory is backstage machine data. It is not the human front door.
 
-The canonical layer is deliberately small. A registry entry binds a source PR, exact commit, source paths, scope, review, dependencies, and provenance. The underlying proof or artifact normally remains in its original location.
+The established paths remain authoritative and compatibility-stable:
 
-Files:
+- `registry.yaml` — the first integration’s 18 reviewed metadata candidates;
+- `aliases.yaml` — append-only claim-ID collision, supersession, and historical identity records;
+- `provenance.schema.json` — the typed canonical/proof-producing provenance contract.
 
-- `registry.yaml` — initial reviewed packet candidates selected by the first integration pass;
-- `aliases.yaml` — append-only collision, rename, repair, and supersession records;
-- `provenance.schema.json` — typed contract for future canonical and proof-producing objects.
+The files retain their original schemas and bytes from the merged first integration. In particular, the JSON Schema keeps the canonical `$id` at this path.
 
-A registry entry does not broaden a review verdict. Entries with `promotion: metadata_only` have been indexed for integration but their source theorem files have not yet been extracted or merged.
-
-Exploratory work does not need to satisfy the full schema. The contract applies when an object seeks canonical or proof-producing status.
+A registry row does not itself place a proof body on `main` or broaden a review. Readable mathematics lives under [`research/integrated/`](../research/integrated/README.md), and the wider reviewed state is in [`research/RESULTS_INDEX.md`](../research/RESULTS_INDEX.md).

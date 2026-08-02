@@ -1,28 +1,16 @@
-# Integration utilities
+# Compatibility entrypoints
 
-## `capture_snapshot.py`
+These established script paths remain executable wrappers:
 
-This optional read-only utility queries the GitHub API and records:
+- `capture_snapshot.py` delegates to the manual offline archival utility at `internal/tools/capture_snapshot.py`.
+- `validate_integration.py` delegates to the current front-door validator at `internal/tools/validate_front_door.py`.
 
-- PRs that appear open at a declared cutoff from PR creation/close timestamps;
-- the present head at capture time;
-- commit metadata;
-- one **heuristic historical head candidate** selected from commit author/committer timestamps;
-- post-cutoff commits visible in the PR commit list.
+Run the validator from a normal Git checkout with no arguments:
 
-The heuristic candidate is not an exact historical PR head. GitHub's PR commit endpoint does not expose the time at which a head became visible, force-push history may be absent, and author/committer timestamps may differ from push time. Exact historical review heads must come from independently recorded review reports or another authoritative capture.
+```bash
+python scripts/integration/validate_integration.py
+```
 
-The workflow artifact is temporary transport with a configured retention period. It is not immutable storage. The checked-in timestamped ledger and exact review reports are the authority.
+The validator obtains canonical file identities through Git clean-filter semantics (`git hash-object --path`), so the same command works in LF and Windows `core.autocrlf=true` checkouts. A manual canonical-SHA override is only for a deliberate non-Git mirror.
 
-## `validate_integration.py`
-
-This standard-library checker validates only integration metadata:
-
-- cutoff population and verdict aggregate;
-- reviewed SHA syntax;
-- known delta markers;
-- canonical/alias ID uniqueness;
-- JSON and schema parseability;
-- stable README and workflow wording.
-
-It performs no mathematical, prime, zero, interval, spectral, or special-function computation.
+No workflow invokes these entrypoints automatically. The capture utility’s timestamp-reconstructed historical head remains explicitly uncertain.
