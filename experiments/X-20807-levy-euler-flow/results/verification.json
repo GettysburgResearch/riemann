@@ -5,7 +5,10 @@
     "geometric_sum": "15/16",
     "local_P": "45/16",
     "local_Q": "117/8",
+    "positive_reconstruction": "117/8",
+    "retained_pair_sum": "99/16",
     "riccati_reconstruction": "117/8",
+    "triangular_retained_power": "99/16",
     "weighted_geometric_sum": "13/8"
   },
   "levy_transport": {
@@ -16,7 +19,7 @@
     "reference_variance": "24",
     "reserve": "3"
   },
-  "proof_boundary": "Fraction-only synthetic verification of the cumulant reserve and finite Euler Riccati identities. No Riemann data or cofinal sign.",
-  "schema": "riemann.x20807.levy-euler-flow.v1",
-  "verdict": "PASS_EXACT_L20810_L20812_IDENTITIES"
+  "proof_boundary": "Fraction-only synthetic verification of the cumulant reserve, finite Euler Riccati identity, and positive triangular retained-power recombination. No Riemann data or cofinal sign.",
+  "schema": "riemann.x20807.levy-euler-flow.v2",
+  "verdict": "PASS_EXACT_L20810_L20812_L20813_IDENTITIES"
 }
