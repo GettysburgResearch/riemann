@@ -5,7 +5,7 @@ Date: 2026-08-07
 Repository: `gfreund123/riemann`  
 Branch: `agent/gpt56-03-r/207-directed-d0001-frame`  
 PR: #208  
-Classification: exact new RH-equivalent tilted-prime criterion and proof-facing Euler decomposition; RH not proved
+Classification: exact RH-equivalent tilted-prime criterion and positive Euler-flow decomposition; RH not proved
 
 ## Executive result
 
@@ -64,10 +64,8 @@ Together with the square-sampling/Landau transfer, it proves
  \text{ for every sufficiently large prime-power prefix}.}
 \]
 
-This is a genuine change of attack surface. The left side now consists of two
-positive finite prime sums and an explicit logarithm. No zero data, derivative
-with respect to the prime exponent, matrix, support mesh, or Schur complement
-remains.
+The left side now consists of two positive finite prime sums and an explicit
+logarithm. No zero data, matrix, support mesh, or Schur complement remains.
 
 ## Exact cumulant identity
 
@@ -78,7 +76,7 @@ For the Gibbs law
  ={\Lambda(q)q^{-1/2-u}\over\mathcal P_j(u)},
 \]
 
-the replacement defect is not estimated heuristically. It is exactly
+the replacement defect is exactly
 
 \[
  M_j-\widetilde M_j
@@ -86,9 +84,9 @@ the replacement defect is not estimated heuristically. It is exactly
  (\omega_j-u)\operatorname{Var}_{j,u}(\log q)du.
 \]
 
-Popoviciu's variance bound gives `eta_j`. Therefore a future proof can replace
-the inexpensive range bound by the exact directed variance integral without
-changing the theorem.
+Popoviciu's variance bound gives `eta_j`. A proof object may replace the cheap
+range bound by the exact directed variance integral without changing the
+logical theorem.
 
 ## Compound-Poisson interpretation
 
@@ -121,20 +119,19 @@ Hence
 \]
 
 An equivalent stop-loss formula expresses the reserve as the integrated
-difference of two positive call transforms. This connects the prime-transport
-criterion to the infinitely-divisible zeta program without importing RH.
+difference of two positive call transforms.
 
 ## Entropy interpretation
 
-`L-20811` uses the probability laws
+`L-20811` uses
 
 \[
  \pi(q)={\Lambda(q)q^{-1/2}\over P_j},
  \qquad
- \rho(q)={\Lambda(q)\over\psi(q_j)}.
+ \rho(q)={\Lambda(q)\over\psi(q_j)}
 \]
 
-It proves
+and proves
 
 \[
  D_{KL}(\pi\|\rho)
@@ -148,57 +145,91 @@ so
 \]
 
 The entropy chain rule separates the base-prime marginal from the explicit
-truncated-geometric power entropy. A Rényi hierarchy approaches the target from
-right-shifted positive prime sums.
+truncated-geometric power entropy. A fixed Rényi order loses `Theta(P_j)`; the
+order must approach one on a shrinking strip.
 
-A fixed Rényi order cannot close the theorem: for `1<alpha<2` its generic loss
-is `c_alpha P_j`. The order must approach one at a shrinking-strip scale. This
-explains rather than merely observes why a fixed vertical line remains too
-coarse.
+## Finite Euler flow and the second breakthrough
 
-## Finite Euler Riccati flow
-
-`L-20812` gives the exact local identity
+`L-20812` gives
 
 \[
  -\partial_uP_{p,K}
  =P_{p,K}^2+(\log p)P_{p,K}-E_{p,K},
+ \qquad E_{p,K}\ge0.
 \]
 
-where
+The first interpretation treated `E_(p,K)` as the remaining local negative
+channel. `L-20813` proves that this is false: the collision square pays it
+exactly.
 
 \[
- E_{p,K}
- =(\log p)^2p^{-(K+1)(1/2+u)}
- \sum_{m=0}^{K-1}(K-m)p^{-m(1/2+u)}\ge0.
+ \boxed{
+ P_{p,K}^2-E_{p,K}
+ =(\log p)^2
+  \sum_{\ell=2}^K(\ell-1)p^{-\ell(1/2+u)}
+ \ge0.}
 \]
 
-The full shifted statistic is therefore
+Equivalently, the right side is the sum over ordered retained power pairs
+`m+n<=K`. Therefore
+
+\[
+ \boxed{
+ -\partial_uP_{p,K}
+ =(\log p)P_{p,K}
+ +(\log p)^2
+  \sum_{\ell=2}^K(\ell-1)p^{-\ell(1/2+u)}.}
+\]
+
+The global shifted statistic is now
 
 \[
  {P_j\over\omega_j}\int_0^{\omega_j}
- {\sum_p[P_{p,K_p}^2+(\log p)P_{p,K_p}-E_{p,K_p}]
-  \over\sum_pP_{p,K_p}}du.
+ {\mathcal B_j(u)+\mathcal C_j(u)
+  \over\mathcal P_j(u)}du,
 \]
 
-The exact remaining arithmetic composition is now visible:
+where both channels are positive and
+
+\[
+ \mathcal C_j(u)
+ =\sum_{\substack{p^\ell\le q_j\\\ell\ge2}}
+ { (\Lambda*\Lambda)(p^\ell)
+  \over p^{\ell(1/2+u)}}.
+\]
+
+Thus the trusted finite Euler flow has **no internal negative arithmetic
+channel**. The cutoff defect is exactly the part of the completed collision
+square lying outside the retained exponent triangle.
+
+## Square-layer centering
+
+At `u=0`, the diagonal Selberg channel satisfies
+
+\[
+ \mathcal C_j(0)
+ ={1\over8}\log^2q_j+C_{\rm diag}+o(1).
+\]
+
+The square layer supplies the only divergent term. Every exponent layer
+`ell>=3` is absolutely summable. Therefore the higher-power channel can be
+centered to `o(1)` unconditionally.
+
+The remaining RH-sensitive object is the correlated comparison
 
 ```text
-positive same-prime collision energy
-+ positive logarithmic drift
-- positive first-omitted-power cutoff defect
-- archimedean entropy barrier
-+ vanishing tilt allowance.
+positive base-prime drift
++ centered diagonal Selberg channel
+versus
+nonlinear archimedean entropy barrier.
 ```
 
-Completing local Euler factors sets `E=0` and manufactures a false reserve.
-Dropping higher prime powers removes the same load-bearing channel in a
-different coordinate system. Both shortcuts are now formally excluded.
+The next proof should not return to bounding `E_(p,K)` separately; that problem
+is closed.
 
 ## Exact regression
 
-`X-20807` is a standard-library Fraction checker. It verifies a synthetic Lévy
-reserve
+`X-20807` is a standard-library Fraction checker. It verifies
 
 ```text
 arithmetic mean       6
@@ -209,24 +240,24 @@ Fenchel barrier       23
 final reserve          3
 ```
 
-and the finite Euler identity
+and
 
 ```text
-P_local             45/16
-Q_local             117/8
-cutoff defect       441/256
-Riccati reconstruction 117/8.
+P_local                    45/16
+Q_local                    117/8
+cutoff defect              441/256
+triangular retained power    99/16
 ```
 
-Verdict:
+with both local reconstructions equal to `117/8`. Verdict:
 
 ```text
-PASS_EXACT_L20810_L20812_IDENTITIES
+PASS_EXACT_L20810_L20812_L20813_IDENTITIES
 ```
 
 ## Indicative Riemann computation
 
-At the global record-low prefix found through `10^7`, ending at `q=3089`, the
+At the global record-low prefix through `10^7`, ending at `q=3089`, the
 80-decimal-place replay gives
 
 ```text
@@ -245,32 +276,32 @@ universal Hoeffding tolerance
 
 The stronger strict shifted test is positive at the hardest known finite prefix.
 At the final prefix through `10^7`, the ordinary extended-precision tilt defect
-has fallen below `3.1e-4`.
-
-These are calibration values only. They are not directed and not cofinal.
+is below `3.1e-4`. These are calibration values only: not directed and not
+cofinal.
 
 ## Exact remaining theorem
 
-The new finish line is
+The finish line is
 
 \[
  \boxed{
  \exists J_0\ \forall j\ge J_0:
  {P_j\over\omega_j}
- \log{P_j\over\mathcal P_j(\omega_j)}
+ \int_0^{\omega_j}
+ {\mathcal B_j(u)+\mathcal C_j(u)
+  \over\mathcal P_j(u)}du
  \ge A_+^*(P_j)-{\log^2(q_j/2)\over8P_j}.}
 \]
 
-A proof may now attack:
+The leading completion routes are:
 
-1. layerwise domination of the first-omitted-power defects;
-2. the exact prime/power entropy chain rule;
-3. a Selberg/reflection identity for the finite Euler flow; or
-4. block transport with the shifted statistic as a stable incoming reserve.
-
-The most attractive route is to center the square layer and archimedean barrier
-jointly, then factor the remaining Euler-flow integrand into a positive
-convolution plus a summable layer defect.
+1. a centered Selberg/reflection square after the square-layer constant and
+   archimedean barrier are assembled jointly;
+2. the exact prime/power entropy chain rule at `o(P^-1)` entropy scale;
+3. an identity between the centered positive Euler flow and the anti-causal
+   Poisson energy of `L-19810/L-19811`;
+4. a cofinal block-transport theorem using the shifted statistic as a stable
+   lower reserve.
 
 ## SERIOUS RESOLUTION PATH
 
@@ -278,15 +309,15 @@ Yes. The route is now:
 
 ```text
 finite positive shifted von Mangoldt sum
--> exact finite Euler Riccati flow
--> layerwise positive domination of the cutoff defect
--> tolerant cofinal shifted inequality
+-> exact cumulant sandwich
+-> wholly positive triangular Euler/Selberg flow
+-> centered arithmetic-versus-archimedean inequality
 -> square-sampling/Landau transfer
 -> RH.
 ```
 
-The missing layerwise domination has not been proved in this pass. RH is not
-claimed solved.
+The centered comparison has not been proved in this pass. RH is not claimed
+solved.
 
 ## Files
 
@@ -295,8 +326,10 @@ claims/theorems/T-20803-shrinking-strip-tilted-prime-criterion.md
 claims/lemmas/L-20810-prime-prefix-levy-cumulant-transport.md
 claims/lemmas/L-20811-gibbs-entropy-prime-power-chain.md
 claims/lemmas/L-20812-finite-euler-riccati-strip-flow.md
+claims/lemmas/L-20813-triangular-retained-power-convolution.md
 claims/methodology/M-20803-shrinking-strip-euler-flow-attack.md
 claims/observations/O-20806-shrinking-strip-tilt-recon.md
 claims/experiments/X-20807-levy-euler-flow-verifier.md
 experiments/X-20807-levy-euler-flow/
+integration/gpt56-03-v-208-shrinking-strip-euler-flow.md
 ```
