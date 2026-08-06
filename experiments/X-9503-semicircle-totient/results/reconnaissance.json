@@ -1,0 +1,23 @@
+{
+  "experiment_id": "X-9503",
+  "proof_boundary": "phi(n) is exact, but square roots, pi, summation, subtraction, and scaling are ordinary binary64. These values are reconnaissance only.",
+  "rows": [
+    {"error_from_3_over_pi": -0.0006556447521258724, "scaled_x_3_over_2_error": -0.6556447521258724, "semicircle_totient_value": 0.9542740137992461, "x": 100},
+    {"error_from_3_over_pi": 0.00010996799804408042, "scaled_x_3_over_2_error": 0.311036468521913, "semicircle_totient_value": 0.9550396265494161, "x": 200},
+    {"error_from_3_over_pi": -9.989609233929109e-06, "scaled_x_3_over_2_error": -0.11168722657862543, "semicircle_totient_value": 0.9549196689421381, "x": 500},
+    {"error_from_3_over_pi": 4.798558213559012e-06, "scaled_x_3_over_2_error": 0.1517437343975515, "semicircle_totient_value": 0.9549344571095856, "x": 1000},
+    {"error_from_3_over_pi": -2.1909341152426265e-06, "scaled_x_3_over_2_error": -0.19596310463623484, "semicircle_totient_value": 0.9549274676172568, "x": 2000},
+    {"error_from_3_over_pi": -1.321453307778775e-06, "scaled_x_3_over_2_error": -0.46720429747588277, "semicircle_totient_value": 0.9549283370980642, "x": 5000},
+    {"error_from_3_over_pi": 1.1439381408795413e-07, "scaled_x_3_over_2_error": 0.11439381408795413, "semicircle_totient_value": 0.9549297729451861, "x": 10000},
+    {"error_from_3_over_pi": -1.8313716743101338e-07, "scaled_x_3_over_2_error": -0.5179901319110628, "semicircle_totient_value": 0.9549294754142046, "x": 20000},
+    {"error_from_3_over_pi": -2.3408786797851633e-08, "scaled_x_3_over_2_error": -0.2617181927539794, "semicircle_totient_value": 0.9549296351425852, "x": 50000},
+    {"error_from_3_over_pi": 2.6562272381625007e-09, "scaled_x_3_over_2_error": 0.08399728055572028, "semicircle_totient_value": 0.9549296612075993, "x": 100000},
+    {"error_from_3_over_pi": -2.0498929220735818e-09, "scaled_x_3_over_2_error": -0.1833479968140883, "semicircle_totient_value": 0.9549296565014791, "x": 200000},
+    {"error_from_3_over_pi": 9.52391498998395e-10, "scaled_x_3_over_2_error": 0.336721243643093, "semicircle_totient_value": 0.9549296595037635, "x": 500000},
+    {"error_from_3_over_pi": -1.1072237571241317e-09, "scaled_x_3_over_2_error": -1.1072237571241317, "semicircle_totient_value": 0.9549296574441483, "x": 1000000},
+    {"error_from_3_over_pi": 8.772182980010257e-11, "scaled_x_3_over_2_error": 0.24811480283897877, "semicircle_totient_value": 0.9549296586390938, "x": 2000000}
+  ],
+  "schema": "riemann.semicircle-totient-reconnaissance.v1",
+  "status": "EMPIRICAL_BINARY64_NOT_CERTIFIED",
+  "theorem_target": "T-9501"
+}
