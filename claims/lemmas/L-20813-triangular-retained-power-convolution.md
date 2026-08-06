@@ -83,7 +83,7 @@ Combining (L-20813.2) with `L-20812.4` gives
  =aP_{p,K}(u)
   +a^2\sum_{\ell=2}^K(\ell-1)
     p^{-\ell(1/2+u)}.}
- \tag{L-20813.7)
+ \tag{L-20813.7}
 \]
 
 Both channels are positive. The first is the base-prime logarithmic drift. The
