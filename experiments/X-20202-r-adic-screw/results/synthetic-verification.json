@@ -1,0 +1,50 @@
+{
+  "cocycle_value": {
+    "denominator": "133",
+    "numerator": "3301"
+  },
+  "lerch_rows": [
+    {
+      "lower_bound": {"denominator": "1", "numerator": "10"},
+      "numerator": {"denominator": "32", "numerator": "369"},
+      "y": {"denominator": "2", "numerator": "1"}
+    },
+    {
+      "lower_bound": {"denominator": "1", "numerator": "5"},
+      "numerator": {"denominator": "1024", "numerator": "5619"},
+      "y": {"denominator": "4", "numerator": "3"}
+    },
+    {
+      "lower_bound": {"denominator": "4", "numerator": "75"},
+      "numerator": {"denominator": "1048576", "numerator": "23527425"},
+      "y": {"denominator": "16", "numerator": "1"}
+    }
+  ],
+  "mixture_max_descendant_multiplicity": 3,
+  "mixture_parent_multiplicity": 3,
+  "mixture_weight": {"denominator": "1", "numerator": "22"},
+  "negative_prefix_exponent": {"denominator": "3", "numerator": "1"},
+  "prime_exponent_rows": [
+    {
+      "sign": "negative",
+      "u": {"denominator": "4", "numerator": "1"},
+      "weight_log_n": {"denominator": "1", "numerator": "-2"}
+    },
+    {
+      "sign": "zero",
+      "u": {"denominator": "3", "numerator": "1"},
+      "weight_log_n": {"denominator": "1", "numerator": "0"}
+    },
+    {
+      "sign": "positive",
+      "u": {"denominator": "2", "numerator": "1"},
+      "weight_log_n": {"denominator": "1", "numerator": "4"}
+    }
+  ],
+  "proof_boundary": "Synthetic exact algebra only; no zeta, xi, prime-stream, Landau, or RH sign is certified.",
+  "proof_object_sha256": "8a2d2a52203a38293cd3e2eeb904045a9b34e6404b9d3735ef3a6851295eee3f",
+  "r": 5,
+  "schema": "riemann.x20202-r-adic-screw.verification.v1",
+  "verdict": "EXACT_R_ADIC_RENORMALIZATION_ALGEBRA_VERIFIED",
+  "verified": true
+}
