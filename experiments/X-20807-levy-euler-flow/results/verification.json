@@ -1,0 +1,22 @@
+{
+  "classification": "EXACT_FINITE_ALGEBRA_REGRESSION",
+  "euler_riccati": {
+    "cutoff_defect": "441/256",
+    "geometric_sum": "15/16",
+    "local_P": "45/16",
+    "local_Q": "117/8",
+    "riccati_reconstruction": "117/8",
+    "weighted_geometric_sum": "13/8"
+  },
+  "levy_transport": {
+    "arithmetic_mean": "6",
+    "arithmetic_variance": "26",
+    "fenchel_barrier": "23",
+    "initial_reserve": "1",
+    "reference_variance": "24",
+    "reserve": "3"
+  },
+  "proof_boundary": "Fraction-only synthetic verification of the cumulant reserve and finite Euler Riccati identities. No Riemann data or cofinal sign.",
+  "schema": "riemann.x20807.levy-euler-flow.v1",
+  "verdict": "PASS_EXACT_L20810_L20812_IDENTITIES"
+}
