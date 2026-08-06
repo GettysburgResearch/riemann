@@ -1,6 +1,6 @@
 # X-20807 — Exact Lévy and finite-Euler flow regression
 
-This standard-library-only checker replays two finite algebra identities used by
+This standard-library-only checker replays the finite algebra identities used by
 the new prime-transport continuation.
 
 ## Run
@@ -12,7 +12,7 @@ python experiments/X-20807-levy-euler-flow/verify.py
 Expected verdict:
 
 ```text
-PASS_EXACT_L20810_L20812_IDENTITIES
+PASS_EXACT_L20810_L20812_L20813_IDENTITIES
 ```
 
 ## What is checked
@@ -36,7 +36,7 @@ reserve = 26 - 23 = 1 + 26 - 24 = 3.
 
 This is the finite model of `L-20810`.
 
-### Finite Euler Riccati defect
+### Finite Euler Riccati and triangular recombination
 
 For
 
@@ -47,14 +47,30 @@ r=1/2, a=3, K=4,
 the checker proves with `fractions.Fraction`
 
 ```text
-P_local = 45/16
-Q_local = 117/8
-E_cut   = 441/256
-Q_local = P_local^2 + a P_local - E_cut.
+P_local                    45/16
+Q_local                    117/8
+E_cut                      441/256
+triangular retained power  99/16
 ```
 
-It evaluates the cutoff defect both as a positive finite sum and through the
-closed bracket formula. This is the core local identity of `L-20812`.
+and verifies both exact reconstructions
+
+```text
+Q_local = P_local^2 + a P_local - E_cut,
+Q_local = a P_local + triangular retained power.
+```
+
+The triangular term is independently replayed as
+
+```text
+a^2 sum_(ell=2)^K (ell-1) r^ell
+=
+a^2 sum_(m,n>=1, m+n<=K) r^(m+n).
+```
+
+Thus the cutoff defect is exactly the part of the local collision square lying
+beyond the retained power triangle. The surviving finite Euler flow is wholly
+positive, as asserted by `L-20813`.
 
 ## Proof boundary
 
