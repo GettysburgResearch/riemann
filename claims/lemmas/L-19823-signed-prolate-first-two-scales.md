@@ -4,7 +4,7 @@ Claim ID: `L-19823`
 Status: **PROPOSED PURE-PROLATE THEOREM — ARITHMETIC-TAIL TRANSFER OPEN**  
 Authoring agent: `gpt56-pro-09-o`  
 Created: 2026-08-07  
-Dependencies: exact prolate Fourier signs and leakage normalization; fixed-mode Fuchs ratios; the uniform point-value window of `L-16219`  
+Dependencies: exact prolate Fourier signs and leakage normalization; fixed-mode Fuchs ratios; uniform point-value window `L-16219`; exact low-kernel lemma `L-19824`  
 Scope: repairs the complete-space hierarchy rejected in `T-19807`; no localized-Weil or RH conclusion
 
 ## 1. Setup
@@ -13,7 +13,7 @@ Let
 
 \[
  \mathcal H_\lambda
- =\operatorname{span}\{e_n: n=0,2,4,\ldots,2M_\lambda\},
+ =\operatorname{span}\{e_n:n=0,2,4,\ldots,2M_\lambda\},
  \qquad
  M_\lambda=O((\log\lambda)^2),
  \tag{L-19823.1}
@@ -48,10 +48,10 @@ The exact positive-ray leakage form is diagonal:
  \tag{L-19823.4}
 \]
 
-Since evaluation of the Fourier transform at zero gives
+Since
 
 \[
- \int e_n=\varepsilon_n\chi_nq_n,
+ \int e_n=\widehat e_n(0)=\varepsilon_n\chi_nq_n,
  \tag{L-19823.5}
 \]
 
@@ -75,12 +75,12 @@ Let
  \tag{L-19823.7}
 \]
 
-be the generalized eigenvalues of the compression of `mathcal D_lambda` to
-`mathcal S_lambda` in the ordinary `L2` metric.
+be the eigenvalues of the compression of `mathcal D_lambda` to
+`mathcal S_lambda` in the ordinary metric.
 
-## 2. Hypotheses used
+## 2. Hypotheses
 
-Assume the standard fixed-mode hierarchy
+Assume the fixed-mode hierarchy
 
 \[
  {d_0\over d_4}\to0,
@@ -93,10 +93,10 @@ Assume the standard fixed-mode hierarchy
  \tag{L-19823.8}
 \]
 
-Because `delta_n=d_n(1+chi_n)/2`, the same ratios hold with `delta` in place of
-`d`.
+The same ratios hold for `delta_n` because
+`delta_n=d_n(1+chi_n)/2`.
 
-Assume also the uniform point-value comparison
+Assume the point-value window
 
 \[
  c(n+1)^{-1/4}
@@ -114,7 +114,7 @@ and monotonicity
  \tag{L-19823.10}
 \]
 
-These imply the tail susceptibility estimate
+Then
 
 \[
  \boxed{
@@ -122,20 +122,19 @@ These imply the tail susceptibility estimate
  :=\delta_6
  \sum_{\substack{8\le n\le2M_\lambda\\n\ {m even}}}
  {|q_n|^2\over\delta_n}
- \longrightarrow0.}
+ \longrightarrow0,}
  \tag{L-19823.11}
 \]
 
-Indeed, (L-19823.9)--(L-19823.10) give
+because
 
 \[
  \kappa_\lambda
- \ll {\delta_6\over\delta_8}\sqrt{M_\lambda}
- \longrightarrow0.
+ \ll {\delta_6\over\delta_8}\sqrt{M_\lambda}\to0.
  \tag{L-19823.12}
 \]
 
-## 3. Main theorem
+## 3. Theorem
 
 Under the preceding hypotheses,
 
@@ -147,17 +146,16 @@ Under the preceding hypotheses,
  \tag{L-19823.13}
 \]
 
-In particular, the full signed constrained packet has:
+Thus the complete signed constrained packet has first scales
 
 ```text
-first exact-radical scale    d_4,
-second complete scale        d_6.
+d_4, d_6,
 ```
 
-The `+1`-sector `d_8` scale remains the next scale only after the `-1` Fourier
-sector has been removed or separately paid.
+not `d_4,d_8`. The `d_8` scale is the next `+1`-sector scale after the lower
+`-1` sector has been treated.
 
-## 4. Two exact low vectors
+## 4. Two-dimensional upper packet
 
 Define
 
@@ -168,7 +166,7 @@ Define
  \tag{L-19823.14}
 \]
 
-and
+with integral residuals
 
 \[
  r_+=d_4-d_0,
@@ -184,24 +182,18 @@ Then
  \tag{L-19823.16}
 \]
 
-belongs to `mathcal S_lambda`. After division by `r_-`, the two Fourier-sign
-sectors are orthogonal and give
+belongs to `mathcal S_lambda`, and orthogonality of the two Fourier-sign sectors
+gives
 
 \[
- {\mathcal D( u_1/r_-,u_1/r_-)
-  \over
-  \|u_1/r_-\|^2}
+ {\mathcal D(u_1/r_-,u_1/r_-)
+  \over\|u_1/r_-\|^2}
  =O(d_4)+O(d_4^2/d_6)
  =O(d_4).
  \tag{L-19823.17}
 \]
 
-Thus
-
-\[
- \theta_1\le C d_4.
- \tag{L-19823.18}
-\]
+Hence `theta_1<=C d_4`.
 
 Next put
 
@@ -209,42 +201,43 @@ Next put
  p_{+,2}={e_4\over q_4}-{e_8\over q_8},
  \qquad
  r_{+,2}=d_8-d_4,
- \tag{L-19823.19}
+ \tag{L-19823.18}
 \]
 
 and
 
 \[
  u_2=r_{+,2}p_- - r_-p_{+,2}.
- \tag{L-19823.20}
+ \tag{L-19823.19}
 \]
 
-Again `u_2` satisfies both source constraints, and
+Again `u_2 in mathcal S_lambda`, and
 
 \[
  {\mathcal D(u_2/r_{+,2},u_2/r_{+,2})
-  \over
-  \|u_2/r_{+,2}\|^2}
+  \over\|u_2/r_{+,2}\|^2}
  =O(d_6)+O(d_6^2/d_8)
  =O(d_6).
- \tag{L-19823.21}
+ \tag{L-19823.20}
 \]
 
-The normalized overlap of the two displayed vectors is
+The normalized overlap of `u_1/r_-` and `u_2/r_(+,2)` is
 
 \[
  O(d_4/d_6+d_6/d_8)=o(1).
- \tag{L-19823.22}
+ \tag{L-19823.21}
 \]
 
-Therefore their span has maximum Rayleigh quotient `O(d_6)`, and min--max gives
+Their metric Gram is therefore uniformly positive, while the defect Gram has
+trace `O(d_6)`. The maximum Rayleigh quotient on their two-dimensional span is
+`O(d_6)`, and min--max gives
 
 \[
  \theta_2\le C d_6.
- \tag{L-19823.23}
+ \tag{L-19823.22}
 \]
 
-## 5. Low four-mode kernel
+## 5. Exact low kernel
 
 Let
 
@@ -252,91 +245,80 @@ Let
  L_0=\operatorname{span}\{e_0,e_2,e_4,e_6\},
  \qquad
  H_0=L_0^\perp\cap\mathcal H_\lambda.
+ \tag{L-19823.23}
+\]
+
+Let `C_L` and `C_H` be the restrictions of the two source constraints. The
+normalized matrix of `C_L` tends to two independent sign rows. Hence `C_L` has
+a uniformly bounded right inverse
+
+\[
+ B_\lambda:\mathbb C^2\to L_0.
  \tag{L-19823.24}
 \]
 
-Let `C_L:L_0->C^2` and `C_H:H_0->C^2` be the two source-constraint maps. The
-normalized matrix of `C_L` tends to two independent sign rows, so its smallest
-singular value is bounded below. Choose a right inverse
-
-\[
- B_\lambda:\mathbb C^2\to L_0,
- \qquad
- C_LB_\lambda=I,
- \qquad
- \|B_\lambda\|\le C.
- \tag{L-19823.25}
-\]
-
-The exact low kernel
+By `L-19824`, the exact two-dimensional low kernel
 
 \[
  K_0=\ker C_L
+ \tag{L-19823.25}
+\]
+
+has generalized defect eigenvalues
+
+\[
+ \lambda_1(\mathcal D|_{K_0})=\Theta(d_4),
+ \qquad
+ \lambda_2(\mathcal D|_{K_0})=\Theta(d_6).
  \tag{L-19823.26}
 \]
 
-is two-dimensional and is spanned by the low vectors `u_1` and the version of
-`u_2` with its `e_8` term omitted and the corresponding low right-inverse
-correction inserted. Equivalently, direct `2x2` generalized eigenvalue
-calculation in any fixed basis of `K_0` gives
+## 6. Graph representation of the full constraints
 
-\[
- \lambda_1(\mathcal D|_{K_0})=O(d_4),
- \qquad
- \lambda_2(\mathcal D|_{K_0})\ge c_0d_6.
- \tag{L-19823.27}
-\]
-
-One may see the second estimate directly from the limit: the first low kernel
-vector tends to the positive-sector difference `p_+`, while the second tends to
-the negative-sector difference `p_-`; their Gram stays nonsingular and their
-defect energies have scales `d_4` and `d_6`.
-
-## 6. Graph representation of the complete constraint space
-
-Every `f in mathcal S_lambda` has the unique representation
+Every `f in mathcal S_lambda` has a unique representation
 
 \[
  f=k+R_\lambda z+z,
  \qquad
  k\in K_0,
  \quad z\in H_0,
- \tag{L-19823.28}
+ \tag{L-19823.27}
 \]
 
 where
 
 \[
  R_\lambda=-B_\lambda C_H.
- \tag{L-19823.29}
+ \tag{L-19823.28}
 \]
 
-Let `D_H` be the tail restriction of `mathcal D`. Since the two rows of `C_H`
-have coefficients `q_n` and `epsilon_n chi_n q_n`, weighted Cauchy--Schwarz
-and (L-19823.25) give
+Let `D_H` be the tail restriction of `mathcal D`. The rows of `C_H` have
+coefficients `q_n` and `epsilon_n chi_nq_n`. Weighted Cauchy--Schwarz yields
 
 \[
  \boxed{
  \|R_\lambda D_H^{-1/2}\|^2
- \le C
- \sum_{n\ge8}{|q_n|^2\over\delta_n}.}
+ \le C\sum_{n\ge8}{|q_n|^2\over\delta_n}.}
+ \tag{L-19823.29}
+\]
+
+Consequently
+
+\[
+ \delta_6\|R_\lambda D_H^{-1/2}\|^2=o(1).
  \tag{L-19823.30}
 \]
 
-After multiplication by `delta_6`, the right side tends to zero by
-(L-19823.11).
-
 ## 7. Lower bound for the second eigenvalue
 
-Fix a sufficiently small constant `c_1>0`. Suppose
+Choose `c_1>0` small. Suppose
 
 \[
- \mathcal D(f,f)<c_1d_6\|f\|^2
+ \mathcal D(f,f)<c_1d_6\|f\|^2.
  \tag{L-19823.31}
 \]
 
-for a nonzero vector represented as in (L-19823.28). Since
-`D_H>=delta_8 I`,
+Since `D_H>=delta_8I`,
 
 \[
  \|z\|^2
@@ -345,61 +327,59 @@ for a nonzero vector represented as in (L-19823.28). Since
  \tag{L-19823.32}
 \]
 
-Furthermore, (L-19823.30) gives
+Equation (L-19823.29) then gives
 
 \[
- \|R_\lambda z\|
- \le \|R_\lambda D_H^{-1/2}\|
-      \mathcal D(z,z)^{1/2}
- =o(\|f\|).
+ \|R_\lambda z\|=o(\|f\|).
  \tag{L-19823.33}
 \]
 
-Thus the low projection `k` has norm `(1+o(1))||f||`. Its defect energy differs
-from the low part of `f` by `o(d_6)||f||^2`. Hence (L-19823.31) maps the complete
-low-energy spectral subspace injectively into the spectral subspace of
-`mathcal D|K_0` below `(c_1+o(1))d_6`.
+Thus `||k||=(1+o(1))||f||`. Moreover,
 
-By (L-19823.27), that latter subspace is one-dimensional when `c_1<c_0/2`.
+\[
+ \mathcal D(k,k)
+ \le2\mathcal D(k+R_\lambda z,k+R_\lambda z)
+    +2\delta_6\|R_\lambda z\|^2
+ \le(2c_1+o(1))d_6\|f\|^2.
+ \tag{L-19823.34}
+\]
+
+For `c_1` smaller than one quarter of the lower constant in
+(L-19823.26), the image of the complete spectral subspace below `c_1d_6` under
+`f mapsto k` lies in the one-dimensional first spectral subspace of
+`mathcal D|K_0`. The map is injective there: if `k=0`, (L-19823.32)--
+(L-19823.33) contradict `||f||>0`.
+
 Therefore the complete constrained space has at most one eigenvalue below
 `c_1d_6`. Min--max gives
 
 \[
  \theta_2\ge c_1d_6.
- \tag{L-19823.34}
+ \tag{L-19823.35}
 \]
 
-Together with (L-19823.23), this proves (L-19823.13).
+Together with (L-19823.22), this proves the theorem.
 
-## 8. Consequences for the positive route
+## 8. Boundary
 
-The pure-prolate signed hierarchy is therefore not an open guess:
+This closes the **diagonal pure-prolate** signed hierarchy:
 
 \[
  \boxed{
  \text{target scale }d_4,
  \qquad
  \text{complete next scale }d_6.}
- \tag{L-19823.35}
-\]
-
-Since
-
-\[
- d_4/d_6\to0,
  \tag{L-19823.36}
 \]
 
-the Rayleigh-floor/Hurwitz route remains viable after replacing every
-complete-space `d_8` claim by `d_6`.
+Since `d_4/d_6->0`, the Rayleigh-floor route survives the reviewer's sector
+correction.
 
-What remains open is transport from this diagonal prolate defect model to the
-complete **arithmetic omitted-tail Gram** and then to the exact localized Weil
-matrix. That transport must include:
+The following transfers remain open:
 
-1. both Fourier-sign sectors in one controlled exact source frame;
-2. a signed arithmetic-tail lower hierarchy at scales `d_4,d_6`;
-3. the complete alias and endpoint ledger;
-4. the corrected local-Weyl/support-average theorem.
+1. a quantitative exact source frame containing both Fourier-sign sectors;
+2. the same `d_4,d_6` hierarchy for the complete arithmetic omitted-tail Gram;
+3. collective alias and endpoint bounds;
+4. the full relative localized-Weil scalarization.
 
-This lemma proves none of those arithmetic interfaces and does not prove RH.
+No RH conclusion is claimed.
