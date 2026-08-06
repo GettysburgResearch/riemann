@@ -1,0 +1,58 @@
+name: x18508-c10-n2-common-profile-soft
+
+on:
+  pull_request:
+    paths:
+      - 'experiments/X-18508-c10-n2-common-profile-soft/**'
+      - 'claims/experiments/X-18508-first-growing-c10-n2-common-profile-soft-ledger.md'
+      - 'claims/lemmas/L-18513-source-canonical-positivity-transfers-to-profile-soft-schur.md'
+      - '.github/workflows/x18508-c10-n2-common-profile-soft.yml'
+  workflow_dispatch:
+
+jobs:
+  replay-first-growing-ledger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Reconstruct immutable bundle
+        working-directory: experiments/X-18508-c10-n2-common-profile-soft
+        run: |
+          cat bundle/bundle.part* | base64 -d > /tmp/x18508.bundle.tar.gz
+          test "$(sha256sum /tmp/x18508.bundle.tar.gz | cut -d' ' -f1)" = "784a9e8e5b286d500f4cb60e6e3292f65195174316f031c866ee8077045b9a00"
+          mkdir -p /tmp/x18508
+          tar -xzf /tmp/x18508.bundle.tar.gz -C /tmp/x18508
+      - name: Replay exact independent consumer
+        working-directory: /tmp/x18508/x18508_growing
+        run: |
+          gzip -dc artifacts/c10-N2-common-ledger.json.gz > artifacts/c10-N2-common-ledger.json
+          python verify.py artifacts/c10-N2-common-ledger.json \
+            --arithmetic artifacts/c10-N2-p384.json \
+            --zeros artifacts/zero-config.json \
+            --output /tmp/x18508-verification.json
+          cmp /tmp/x18508-verification.json artifacts/c10-N2-common-verification.json
+          test "$(sha256sum artifacts/c10-N2-common-ledger.json | cut -d' ' -f1)" = "e24dace59c6bd9cbdd60b3cc39f309f11ef154b9bf8912e0be13b4c69cde5d19"
+          test "$(python - <<'PY'
+import json
+p='artifacts/c10-N2-common-verification.json'
+print(json.load(open(p))['proof_object_sha256'])
+PY
+          )" = "55a98486f0b07f3fd7fa729808863304b10b9cda101e0687eeaf874a4484a3f6"
+      - name: Exact mutation suite
+        working-directory: /tmp/x18508/x18508_growing
+        run: PYTHONPATH=. python -m unittest discover -s tests -v 2>&1 | tee /tmp/x18508-tests.txt
+      - name: Verify bound source and artifact hashes
+        working-directory: /tmp/x18508/x18508_growing
+        run: |
+          awk '{sub("/mnt/data/x18508_growing/","",$2); print $1"  "$2}' SHA256SUMS | sha256sum -c -
+      - uses: actions/upload-artifact@v4
+        with:
+          name: x18508-c10-n2-common-profile-soft
+          path: |
+            /tmp/x18508/x18508_growing/artifacts
+            /tmp/x18508-verification.json
+            /tmp/x18508-tests.txt
+          if-no-files-found: error

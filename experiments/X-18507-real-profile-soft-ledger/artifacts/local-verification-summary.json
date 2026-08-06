@@ -1,0 +1,40 @@
+{
+  "schema": "riemann.x18507.real-profile-soft-common-ledger.local-summary.v1",
+  "classification": "LOCAL_STANDARD_LIBRARY_DIRECTED_REPLAY_PASSED",
+  "support": {
+    "c": 5,
+    "N": 1,
+    "sector": "even",
+    "prime_powers": [2, 3, 4, 5]
+  },
+  "bindings": {
+    "arithmetic_certificate_sha256": "1fbbb15004dbfc2af84e6ab71d88ba7e8098535f88182236f9ee1eceb0d6e350",
+    "zero_config_blob_sha": "29cd860e223f349f70eedc64c87870a77d7f4fa6",
+    "proof_object_sha256": "4c76ad5f4047beb09e944e8fd6579ac74a3e173bff54cc921f7ec9057f6b9d7c"
+  },
+  "profile": {
+    "zero_rows": 20,
+    "source_identity": "EXACT_LF_EQUALS_I",
+    "graph_M_squared_upper_decimal": "23.18253070735453418812231215984387865305",
+    "soft_profile_upper_decimal": "0.00004455631615505131839905829575850292559853",
+    "hard_profile_lower_decimal": "0.1966252348022867009453347957046533922974",
+    "projector_graph_angle_upper_decimal": "0.009133890853532624341825870796223325014794",
+    "soft_threshold": "1/1000",
+    "soft_dimension": 1,
+    "hard_dimension": 1
+  },
+  "direct_short": {
+    "hard_floor": "1/4",
+    "target_soft_floor": "1/100000",
+    "normalized_direct_lower_decimal": "0.0000528425779831317",
+    "normalized_shifted_ldl_lower_decimal": "0.0000428425779831317",
+    "normalized_exact_schur_lower_decimal": "0.0000528425873087804",
+    "negative_part_upper": "0"
+  },
+  "adversarial_tests": {
+    "passed": 7,
+    "total": 7
+  },
+  "verdict": "CERTIFIED_FIRST_REAL_COMMON_PROFILE_SOFT_LEDGER",
+  "proof_boundary": "Real finite D-0001 common ledger. The hosted workflow and complete cofinal Suzuki/CCM sequence remain open; no RH claim."
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "riemann.x18508.published-result.v1",
+  "classification": "EXACT_DIRECTED_FIRST_GROWING_COMMON_PROFILE_SOFT_LEDGER",
+  "support": {
+    "c": 10,
+    "N": 2,
+    "sector": "unnormalized even",
+    "metric_diagonal": [1, 2, 2],
+    "prime_powers": [2, 3, 4, 5, 7, 8, 9],
+    "arithmetic_precision_bits": 384,
+    "profile_fixed_point_bits": 320,
+    "zero_profile_rows": 20
+  },
+  "bindings": {
+    "arithmetic_certificate_sha256": "dd55a74d317f45c93516b3101d8e10ddf1f16e0f462bcff2a1c2ed79da3754a2",
+    "generated_ledger_sha256": "e24dace59c6bd9cbdd60b3cc39f309f11ef154b9bf8912e0be13b4c69cde5d19",
+    "proof_object_sha256": "55a98486f0b07f3fd7fa729808863304b10b9cda101e0687eeaf874a4484a3f6",
+    "bundle_tar_gz_sha256": "784a9e8e5b286d500f4cb60e6e3292f65195174316f031c866ee8077045b9a00"
+  },
+  "profile": {
+    "graph_lmi": "K <= 44 G",
+    "soft_threshold": "1/1000000",
+    "buffer_upper": "1/500000",
+    "inertia_D_minus_tau_G": [-1, 1, 1],
+    "inertia_D_minus_2tau_G": [-1, 1, 1],
+    "soft_profile_upper_decimal": "3.68893058564543e-9",
+    "hard_profile_floor_decimal": "4.0e-5",
+    "projector_sin_squared_upper_decimal": "8.14984488401341e-21"
+  },
+  "arithmetic": {
+    "global_floor": "1/1000000000",
+    "normalized_direct_lower_decimal": "5.33647759369972e-9",
+    "normalized_shifted_ldl_lower_decimal": "4.33647759369972e-9",
+    "normalized_exact_schur_lower_decimal": "5.33647759369972e-9",
+    "negative_part_upper": "0"
+  },
+  "tests": {
+    "passed": 8,
+    "total": 8
+  },
+  "verdict": "CERTIFIED_FIRST_GROWING_C10_N2_COMMON_PROFILE_SOFT_LEDGER",
+  "proof_boundary": "Real finite X-18506 growing level. GitHub Actions did not schedule; the immutable bundle contains the producer, exact consumer, inputs, retained proof object, result, and mutations. This is not an unbounded cofinal theorem or a proof of RH."
+}
