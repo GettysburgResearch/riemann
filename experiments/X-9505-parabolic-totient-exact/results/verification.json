@@ -1,0 +1,23 @@
+{
+  "proof_boundary": "Exact finite algebra only. The Mertens estimate, asymptotic error, and RH are outside this verifier.",
+  "proof_object_sha256": "dd484b080dde97f31881a86af9c1031bb13548309d32b0ce9c042848b3d873b1",
+  "rational_cell_controls": [
+    {"denominator": "10", "numerator": "11"},
+    {"denominator": "1", "numerator": "2"},
+    {"denominator": "10", "numerator": "23"},
+    {"denominator": "10", "numerator": "107"},
+    {"denominator": "5", "numerator": "501"}
+  ],
+  "rows": [
+    {"parabolic_totient_value": {"denominator": "8", "numerator": "3"}, "x": 2},
+    {"parabolic_totient_value": {"denominator": "18", "numerator": "7"}, "x": 3},
+    {"parabolic_totient_value": {"denominator": "375", "numerator": "149"}, "x": 5},
+    {"parabolic_totient_value": {"denominator": "21000", "numerator": "8513"}, "x": 10},
+    {"parabolic_totient_value": {"denominator": "310390080", "numerator": "125872391"}, "x": 20},
+    {"parabolic_totient_value": {"denominator": "591240175565857125000", "numerator": "239669503555548590753"}, "x": 50},
+    {"parabolic_totient_value": {"denominator": "15370453092970122831687347648878373800000", "numerator": "6228750371012863882027427632823917228427"}, "x": 100}
+  ],
+  "schema": "riemann.parabolic-totient-exact-regression.v1",
+  "status": "PASS_EXACT_L9510_PARABOLIC_BERNOULLI_MOBIUS_IDENTITY",
+  "verified_x_range": [2, 100]
+}
