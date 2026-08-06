@@ -1,0 +1,48 @@
+{
+  "classification": "DIRECTED_INHERITED_SINGLE_BACKEND_PROPOSED",
+  "experiment_id": "X-17203",
+  "claim_id": "L-17202",
+  "issue": 172,
+  "agent": "gpt56-172n-01/pointwise_moat",
+  "created_utc": "2026-07-31T00:00:00Z",
+  "base_dependency": {
+    "claim_id": "L-17201",
+    "experiment_id": "X-17202",
+    "certificate": "../X-17202-rational-ten-notch-moat/certificate.json",
+    "verifier": "../X-17202-rational-ten-notch-moat/verify.py",
+    "required_nontrivial_zero_moat": "4/1000000000000000000",
+    "required_base_l1_bound": "3",
+    "required_notch_sum_upper": "17/8"
+  },
+  "annihilators": [
+    {
+      "index": 1,
+      "q": 8,
+      "lambda": "5/2",
+      "shift_log2_coefficient": "6/5",
+      "zero_real_part": "-5/2"
+    },
+    {
+      "index": 2,
+      "q": 8,
+      "lambda": "9/2",
+      "shift_log2_coefficient": "2/3",
+      "zero_real_part": "-9/2"
+    }
+  ],
+  "directed_constants": {
+    "log2_upper": "7/10",
+    "support_endpoint_upper": "6499/600",
+    "tail_domain_start": "18",
+    "distance_lower": "4301/600",
+    "critical_line_factor_upper": "81/64",
+    "l1_upper": "243/64",
+    "first_surviving_trivial": "13/2",
+    "trivial_spacing": "2",
+    "numerator_exponent_floor": 46,
+    "denominator_exponent_floor": 14,
+    "trivial_tail_target": "273/5000000000000000000000",
+    "raw_tail_moat": "3/500000000000000000"
+  },
+  "proof_boundary": "The new support, strip-safety, line-inflation, and trivial-tail inequalities are exact. The nontrivial-zero moat and all zero data are inherited from L-17201/X-17202, whose Arb/FLINT census has no independent backend yet; the raw explicit-formula normalization remains a source-level dependency."
+}

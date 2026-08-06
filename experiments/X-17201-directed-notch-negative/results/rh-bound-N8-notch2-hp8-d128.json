@@ -1,0 +1,168 @@
+{
+  "B_G": {
+    "decimal": 1.0393217045517102e-07,
+    "denominator": "1000000000000000000000000000000000000000000000000000000000000",
+    "fraction": "103932170455171019230055079349619611820046863834964101/1000000000000000000000000000000000000000000000000000000000000",
+    "numerator": "103932170455171019230055079349619611820046863834964101",
+    "rounding": "upward decimal ceiling with denominator at most 10^60"
+  },
+  "classification": "EXACT_RATIONAL_RH_BOUND_CONDITIONAL_ON_T15404_NORMALIZATION",
+  "derived_count_majorant": "N(T) < 4*T*log(T), T>=e; N(2^b) <= 4*b*2^b",
+  "filter": {
+    "base_shift": "2/1",
+    "convolution_square_support_cost": "86975029547/25000000000",
+    "highpass_delta": "1/128",
+    "highpass_order": 8,
+    "profile_support_cost": "86975029547/50000000000",
+    "support_max_decimal": [
+      6.927795542999891,
+      6.927795542999891
+    ],
+    "support_max_formula": "base_shift + 2*sum(widths) + log(4) + order*delta",
+    "support_max_interval": [
+      "289532585601220756389657619249049294894404636181352564638001380207144049760912049480288610103176461462876723715989098869400633865985633169829734751301742823840449012288633345547/41792888344370316493402875852081900977751074339214116654625613918173749006127150870620398477751037585674609417571692118336360664591203268503163835848355319507138200025000000000",
+      "55879789021035605983203920515066513914620094783001044975134266379978801603856025549695701749914605567789991269425554035650451552889983538019857730419855751979351616767743735690571/8066027450463471083226755039451806888705957347468324514342743486207533558182540118029736906205950254035199617591336578838917608266102230821110620318732576664877672604825000000000"
+    ],
+    "widths": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/16",
+      "1/32",
+      "1/64",
+      "1/128",
+      "1/256",
+      "444521223029/1000000000000",
+      "298885617911/1000000000000"
+    ]
+  },
+  "internal_exact_sum_fingerprint": {
+    "decimal": 1.0393217045517102e-07,
+    "denominator_digits": 2270,
+    "numerator_digits": 2263,
+    "sha256": "e8d95f890bc6aed6cddad86e3c910612e8845e4430e306add0db9dca258eddf3"
+  },
+  "nontrivial_zero_bound": {
+    "finite_blocks": [
+      {
+        "contribution": "9/17179869184",
+        "contribution_decimal": 5.238689482212067e-10,
+        "cumulative_count_majorant": 96,
+        "j": 2,
+        "positive_ordinate_block": [
+          4,
+          8
+        ],
+        "transform_envelope": "3/1099511627776"
+      },
+      {
+        "contribution": "349245965480804443359375000000000000000/17652045432490602765263431983198228335748511561",
+        "contribution_decimal": 1.9785013969994516e-08,
+        "cumulative_count_majorant": 256,
+        "j": 3,
+        "positive_ordinate_block": [
+          8,
+          16
+        ],
+        "transform_envelope": "682121026329696178436279296875000000/17652045432490602765263431983198228335748511561"
+      },
+      {
+        "contribution": "873114913702011108398437500000000000000/17652045432490602765263431983198228335748511561",
+        "contribution_decimal": 4.9462534924986284e-08,
+        "cumulative_count_majorant": 640,
+        "j": 4,
+        "positive_ordinate_block": [
+          16,
+          32
+        ],
+        "transform_envelope": "682121026329696178436279296875000000/17652045432490602765263431983198228335748511561"
+      },
+      {
+        "contribution": "523868948221206665039062500000000000000/17652045432490602765263431983198228335748511561",
+        "contribution_decimal": 2.9677520954991772e-08,
+        "cumulative_count_majorant": 1536,
+        "j": 5,
+        "positive_ordinate_block": [
+          32,
+          64
+        ],
+        "transform_envelope": "170530256582424044609069824218750000/17652045432490602765263431983198228335748511561"
+      },
+      {
+        "contribution": "76397554948925971984863281250000000000/17652045432490602765263431983198228335748511561",
+        "contribution_decimal": 4.3279718059363e-09,
+        "cumulative_count_majorant": 3584,
+        "j": 6,
+        "positive_ordinate_block": [
+          64,
+          128
+        ],
+        "transform_envelope": "10658141036401502788066864013671875/17652045432490602765263431983198228335748511561"
+      },
+      {
+        "contribution": "2728484105318784713745117187500000000/17652045432490602765263431983198228335748511561",
+        "contribution_decimal": 1.5457042164058215e-10,
+        "cumulative_count_majorant": 8192,
+        "j": 7,
+        "positive_ordinate_block": [
+          128,
+          256
+        ],
+        "transform_envelope": "10658141036401502788066864013671875/1129730907679398576976859646924686613487904739904"
+      },
+      {
+        "contribution": "95923269327613525092601776123046875/18075694522870377231629754350794985815806475838464",
+        "contribution_decimal": 5.306754283009488e-15,
+        "cumulative_count_majorant": 18432,
+        "j": 8,
+        "positive_ordinate_block": [
+          256,
+          512
+        ],
+        "transform_envelope": "10658141036401502788066864013671875/74038044765677065140755473820856261901543325034348544"
+      }
+    ],
+    "first_block_0_to_4": {
+      "contribution": "3/4398046511104",
+      "contribution_decimal": 6.821210263296962e-13,
+      "positive_count_majorant": 32
+    },
+    "infinite_tail": "55879258553659383323974907398223876953125/1242147530821087428411073573432433714661700145140622362626304",
+    "infinite_tail_decimal": 4.498600783493241e-20,
+    "tail_ratio": "1/524288",
+    "tail_start_dyadic_index": 9,
+    "total": "2217905416426834595238039440366830564764548993104841467931948763/21339932086734890128729208968568629080639191308549705474264913397415936",
+    "total_decimal": 1.0393216845359626e-07
+  },
+  "proof_boundary": "The rational arithmetic is exact. Publication/source review of the HSW zero-count estimate, independent review of T-15404, and the finite-C^18-spline explicit-formula extension remain external analytic dependencies; repository claim status therefore remains PROPOSED.",
+  "trivial_zero_bound": {
+    "finite_last_index": 127,
+    "finite_reduced_sum_fingerprint": {
+      "decimal": 2.5620156894176656e-13,
+      "denominator_digits": 2254,
+      "numerator_digits": 2241,
+      "sha256": "b0131afd49fc8332cbe5eacfe187df278095aec38b06a77b943f5745a58fca48"
+    },
+    "pole_and_highpass_prefactor": "1/128",
+    "tail_reduced_sum_fingerprint": {
+      "decimal": 1.4313321912687804e-24,
+      "denominator_digits": 88,
+      "numerator_digits": 64,
+      "sha256": "fa90d3b3f0fa2dd6eed84b6ee38ab9b8e7e7e106f5682c899f2ef3d91c168dcf"
+    },
+    "total_fingerprint": {
+      "decimal": 2.0015747573687338e-15,
+      "denominator_digits": 2258,
+      "numerator_digits": 2243,
+      "sha256": "79283dd679a3da8a1873280deaf7efd2d1d561f790efdb3d0c7f280a10a9fa9f"
+    }
+  },
+  "validity": "If RH holds, the T-15404 smoothed explicit-formula normalization is valid, and that formula is extended to this compact C^18 finite spline, then |Q_G(x)| <= B_G for every x at or beyond the displayed support threshold. No numerical zero ordinate is used.",
+  "zero_count_source": {
+    "arxiv": "https://arxiv.org/abs/2107.06506",
+    "authors": "E. Hasanalizade, Q. Shen, P.-J. Wong",
+    "doi": "10.1016/j.jnt.2021.06.032",
+    "journal": "Journal of Number Theory 235 (2022), 219-241",
+    "title": "Counting zeros of the Riemann zeta function"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "classification": "DIRECTED_SINGLE_ARB_BACKEND_PROPOSED",
+  "experiment_id": "X-17204",
+  "claim_id": "L-17203",
+  "issue": 172,
+  "agent": "gpt56-172n-01/hundred_zero_refine",
+  "created_utc": "2026-07-31T00:00:00Z",
+  "base_dependencies": {
+    "ten_notch_certificate": "../X-17202-rational-ten-notch-moat/certificate.json",
+    "ten_notch_certificate_sha256": "812DBBE02949EBADBFA20A10F6EA3FC685BD3282D4280A9B26DCEC7386B32B63",
+    "ten_notch_verifier_sha256": "C4701A6337D34F3AD676F4AC6C6D2B8B7A9CC0EE097D9B4D1CE22811DCFEF1B9",
+    "q8_certificate": "../X-17203-q8-two-trivial-annihilator/certificate.json",
+    "q8_certificate_sha256": "C2F6CD7CC3A8B482F47DB2789EC6E7D5D64129EE1C5A164C27BA52EFDA329D36",
+    "q8_verifier_sha256": "22F6A56FC88319FA36B744255742F28951691837B41A2A6C3616787BA317F800"
+  },
+  "zero_census": {
+    "listed_positive_zeros": 100,
+    "count_cutoff": "237",
+    "count_at_cutoff": 100,
+    "bracket_radius": "1e-70"
+  },
+  "directed_constants": {
+    "xi_reciprocal_identity": "2 + EulerGamma - log(4*pi)",
+    "tail_transform_factor": "81/64",
+    "tail_power": 28,
+    "support_endpoint_upper": "6499/600",
+    "l1_upper": "243/64",
+    "tail_domain_start": "18",
+    "direct_trivial_indices": [3, 4, 5],
+    "first_geometric_tail_index": 6,
+    "first_geometric_tail_lambda": "25/2",
+    "trivial_spacing": "2",
+    "nontrivial_line_target": "349/10000000000000000000000000000",
+    "raw_tail_moat": "35/1000000000000000000000000000",
+    "retained_endpoint_brackets": {
+      "unlisted_line_tail": {
+        "lower": "1.8351720559359505398771104076e-35",
+        "upper": "1.8351720559359505398771104079e-35"
+      },
+      "nontrivial_line_total": {
+        "lower": "3.4777908371757601558902839890e-26",
+        "upper": "3.4777908371757601558902839893e-26"
+      },
+      "geometric_trivial_tail": {
+        "lower": "4.6220157243646777004129684283e-39",
+        "upper": "4.6220157243646777004129684287e-39"
+      },
+      "complete_raw_total": {
+        "lower": "3.4781388191451717896573312998e-26",
+        "upper": "3.4781388191451717896573313000e-26"
+      }
+    }
+  },
+  "backend": {
+    "producer": "python-flint 0.9.0 / Arb via FLINT",
+    "precision_bits": 320,
+    "independent_backend": null
+  },
+  "proof_boundary": "Arb directly encloses the first 100 critical-line transform values, their count brackets, N(237), the residual Hadamard mass, and the first three surviving trivial-zero terms. Exact rational checks freeze the inherited filter, support, L1, and tail constants. No independent zero/ball backend is claimed, and the raw explicit-formula normalization is inherited from L-17201/T-15404."
+}

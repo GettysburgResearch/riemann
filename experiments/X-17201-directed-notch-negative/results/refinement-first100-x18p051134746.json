@@ -1,0 +1,63 @@
+{
+  "analytic_dependencies": "Hadamard reciprocal-mass identity and RH; Arb certifies the first 100 zero balls and N(237)=100.  The Q_G interpretation retains T-15404's explicit-formula normalization and finite-C18 extension dependencies.",
+  "backend": {
+    "precision_bits": 320,
+    "python_flint_version": "0.9.0"
+  },
+  "classification": "CERTIFIED_ARB_FIRST100_RH_LINE_REFINEMENT",
+  "filter": {
+    "product_widths_exact": "132861000419576108072419/68719476736000000000000000000000000",
+    "profile_box_count": 10,
+    "transform_tail_constant_exact": "14855280471424563298789490688000000000000000000000000000000000000000000000000/17652045432490602765263431983198228335748511561",
+    "widths": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/16",
+      "1/32",
+      "1/64",
+      "1/128",
+      "1/256",
+      "444521223029/1000000000000",
+      "298885617911/1000000000000"
+    ]
+  },
+  "hadamard_reciprocal_mass": {
+    "complete_mass_ball": "[0.04619141793224206762862049581299058324386425430410151905078414442594271295344915994159713902342 +/- 4.30e-96]",
+    "identity": "2 + EulerGamma - log(4*pi)",
+    "listed_mass_ball": "[0.03996970480784761060060090045205382920871373839739909657800659752604719229242141076345506806017 +/- 7.33e-96]",
+    "unlisted_mass_ball": "[0.0062217131243944570280195953609367540351505159067024224727775468998955206610277491781420709632 +/- 5.24e-95]"
+  },
+  "point_comparison": {
+    "complete_RH_point_lower_ball": "[-1.46753708886094188041126164875548755932481375964659823717883402955075573979834702407395001510e-14 +/- 8.22e-107]",
+    "complete_RH_point_upper_ball": "[-1.2793640050937973757085098268563238940274934887720074995361710852230951181335622578455969625e-14 +/- 4.15e-106]",
+    "fft_abs_below_declared_line_envelope": true,
+    "fft_inside_complete_RH_interval": true,
+    "fft_minus_first100_midpoint_interpretation": "about -6.2461e-16; rigorously covered by the 9.409e-16 all-higher-zero allowance",
+    "fft_value": "-1.4359116748533417e-14",
+    "first100_spectral_value_ball": "[-1.3734505469773698525793601892305962397729207816772905475267468838073872090330473043420603330e-14 +/- 2.20e-106]",
+    "trivial_after32_abs_bound_ball": "[4.1228749868815254113948160986962631822852933089564611589671181161460908874053004238218282608e-337 +/- 1.39e-429]",
+    "trivial_first32_value_ball": "[2.24519474451424690513096767157467987679169244326420461780067092663382286844197202589687709591e-30 +/- 3.40e-123]",
+    "x_exact_decimal": "18.05113474606469"
+  },
+  "rh_line_envelope": {
+    "combined_line_envelope_ball": "[1.49354727203937051364725559101414961855680724017348966309830501532949430528128044497951549503e-14 +/- 8.54e-107]",
+    "declared_decimal_ceiling": "1.494e-14",
+    "declared_rational_ceiling": "747/50000000000000000",
+    "listed_first100_abs_sum_ball": "[1.39946073015579826129587968006456778590814710473619429427697354316566399444888806186533896875e-14 +/- 5.04e-107]",
+    "scope": "nontrivial-zero line, conditional on RH",
+    "unlisted_all_higher_zeros_abs_bound_ball": "[9.4086541883572252351375910949581832648660135437295368821331472163830310832392383114176526283e-16 +/- 5.03e-108]"
+  },
+  "verdict": {
+    "exact_support_attempt_warranted": false,
+    "noise_diagnosis": "The data do not justify calling the full discrepancy FFT noise: unlisted genuine zeros can account for it.  It is conclusively not a certified RH-envelope exceedance.",
+    "reason": "The apparent crossing used a 50-zero truncation.  The certified first-100 plus complete higher-zero RH envelope exceeds the FFT magnitude, and the FFT value is inside the rigorous point interval."
+  },
+  "zero_completeness": {
+    "arb_N_tail_start": 100,
+    "first_gamma_ball": "[14.134725141734693790457251983562470270784257115699243175685567460149963429809256764949010393172 +/- 4.50e-94]",
+    "last_gamma_ball": "[236.52422966581620580247550795566297868952949521218912370091896098781915038429233282626144460407 +/- 5.02e-93]",
+    "listed_positive_zeros": 100,
+    "tail_start": 237
+  }
+}
