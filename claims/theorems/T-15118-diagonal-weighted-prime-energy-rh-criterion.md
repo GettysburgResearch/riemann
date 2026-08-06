@@ -43,20 +43,22 @@ Therefore `L-15143`, applied to the finite window `G_M`, gives
  \tag{T-15118.2}
 \]
 
-Equivalently,
+More precisely,
 
 \[
  \boxed{
  \mathcal W_M(\sigma)<\infty
  \Longleftrightarrow
  \zeta(s)\ne0
- \quad(\Re s>1/2+\sigma).}
+ \quad(\Re s\ge1/2+\sigma).}
  \tag{T-15118.3}
 \]
 
-Thus a single finite notch family already detects every zero strictly to the
-right of its weighted line. Notching critical-line frequencies changes the
-finite size of the energy under RH but never its convergence abscissa.
+A zero on the weighted boundary contributes a nondecaying oscillatory mode
+after multiplication by `e^{-sigma x}`, so its squared integral diverges. Thus
+a single finite notch family detects every zero on or to the right of its
+weighted line. Notching critical-line frequencies changes the finite size of
+the energy under RH but never its convergence abscissa.
 
 ## 3. RH upper bound from the directed notch moat
 
@@ -286,7 +288,7 @@ prime-side numerical threshold.
 ## 10. Proof boundary
 
 - The convergence-abscissa identity is inherited from `L-15143` for every finite
-  zero-free notch product.
+  zero-free notch product; boundary zeros give divergent weighted energy.
 - The upper bound (T-15118.5) is elementary once the RH-valid moat `U_M` is
   certified.
 - The theorem does not prove any prime-side energy finite without using an
