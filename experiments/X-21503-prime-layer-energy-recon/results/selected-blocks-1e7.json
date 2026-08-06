@@ -1,0 +1,46 @@
+{
+  "classification": "LONG_DOUBLE_RECONNAISSANCE",
+  "prime_limit": 10000000,
+  "prime_power_count": 665134,
+  "selected_blocks": [
+    {
+      "j": 5,
+      "prime_prime": 0.3567519093,
+      "twice_prime_high": -0.6920500683,
+      "high_high": 0.3373362925,
+      "total": 0.00203813347400542445,
+      "prime_boundary_difference_energy": 0.1094098229
+    },
+    {
+      "j": 8,
+      "prime_prime": 0.6940647581,
+      "twice_prime_high": -1.3918710569,
+      "high_high": 0.6992964111,
+      "total": 0.00149011231047700048,
+      "prime_boundary_difference_energy": 0.0649961037
+    },
+    {
+      "j": 12,
+      "prime_prime": 0.3581152866,
+      "twice_prime_high": -0.7126062016,
+      "high_high": 0.3557571874,
+      "total": 0.00126627239188336878,
+      "prime_boundary_difference_energy": 0.01046060895
+    },
+    {
+      "j": 16,
+      "prime_prime": 0.2991686594,
+      "square_square": 0.2382357352,
+      "cube_cube": 0.0020212526,
+      "fourth_fourth": 0.00005152,
+      "exponent_at_least_five": 0.00013282,
+      "twice_prime_square": -0.5325869725,
+      "twice_prime_cube": -0.04899095,
+      "twice_prime_high": -0.6016764668,
+      "high_high": 0.3040682872,
+      "total": 0.00156047986663855392,
+      "prime_boundary_difference_energy": 0.00481055687
+    }
+  ],
+  "proof_boundary": "Complete prime-power enumeration through 1e7 and deterministic long-double piecewise-linear event integration. Discovery data only: no outward rounding or independent backend replay."
+}
