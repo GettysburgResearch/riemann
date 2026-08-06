@@ -26,7 +26,10 @@ class VerifyTests(unittest.TestCase):
         self.assertEqual(
             result["verdict"], "EXACT_R_ADIC_RENORMALIZATION_ALGEBRA_VERIFIED"
         )
-        self.assertEqual(result["negative_prefix_exponent"], {"numerator": "1", "denominator": "3"})
+        self.assertEqual(
+            result["negative_prefix_exponent"],
+            {"numerator": "1", "denominator": "3"},
+        )
 
     def test_reject_small_dilation(self) -> None:
         data = copy.deepcopy(self.base)
@@ -61,10 +64,8 @@ class VerifyTests(unittest.TestCase):
     def test_reject_cocycle_mutation(self) -> None:
         data = copy.deepcopy(self.base)
         data["cocycle"]["psi_rst"] = {"numerator": "18", "denominator": "19"}
-        # The cocycle is an algebraic identity for every three supplied values,
-        # so mutating one value changes both sides identically and must still pass.
-        result = MODULE.verify(data)
-        self.assertTrue(result["verified"])
+        with self.assertRaises(MODULE.CertificateError):
+            MODULE.verify(data)
 
     def test_reject_bad_schema(self) -> None:
         data = copy.deepcopy(self.base)
