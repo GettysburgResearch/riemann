@@ -1,0 +1,25 @@
+{
+  "classification": "LONG_DOUBLE_RECONNAISSANCE",
+  "prime_limit": 10000000,
+  "prime_power_count": 665134,
+  "complete_blocks": [
+    {"j": 2, "total": 0.687481338783164198, "diagonal": 0.248956953492251304, "off_diagonal": 0.438524385290912866, "total_over_diagonal": 2.76144662416332887},
+    {"j": 3, "total": 2.33202218678485496, "diagonal": 1.08515870359830524, "off_diagonal": 1.24686348318654949, "total_over_diagonal": 2.14901486672137754},
+    {"j": 4, "total": 0.235627619688478729, "diagonal": 3.76438340354807943, "off_diagonal": -3.52875578385960065, "total_over_diagonal": 0.0625939481792397723},
+    {"j": 5, "total": 0.00203813347400542445, "diagonal": 6.61922704121628325, "off_diagonal": -6.6171889077422783, "total_over_diagonal": 0.000307911099183405155},
+    {"j": 6, "total": 0.00151691717397956622, "diagonal": 9.80080088047315279, "off_diagonal": -9.79928396329917284, "total_over_diagonal": 0.00015477481814795671},
+    {"j": 7, "total": 0.0012651714560983642, "diagonal": 13.2852649527896496, "off_diagonal": -13.2839997813335504, "total_over_diagonal": 0.0000952311798518329676},
+    {"j": 8, "total": 0.00149011231047700048, "diagonal": 16.5797026448619924, "off_diagonal": -16.5782125325515146, "total_over_diagonal": 0.0000898756957464965506},
+    {"j": 9, "total": 0.00128080042141196057, "diagonal": 19.9252017671376613, "off_diagonal": -19.9239209667162491, "total_over_diagonal": 0.000064280424177403598},
+    {"j": 10, "total": 0.00124440368577883177, "diagonal": 23.226112419362984, "off_diagonal": -23.224868015677206, "total_over_diagonal": 0.0000535777862136500228},
+    {"j": 11, "total": 0.00124721834353439193, "diagonal": 26.4662787315457422, "off_diagonal": -26.4650315132022094, "total_over_diagonal": 0.000047124809505153622},
+    {"j": 12, "total": 0.00126627239188336878, "diagonal": 29.7040699293202053, "off_diagonal": -29.7028036569283209, "total_over_diagonal": 0.0000426295923385724461},
+    {"j": 13, "total": 0.00133626235453322933, "diagonal": 32.9122591955309076, "off_diagonal": -32.91092293317638, "total_over_diagonal": 0.0000406007483896662355},
+    {"j": 14, "total": 0.00128905817545725988, "diagonal": 36.112517906888904, "off_diagonal": -36.111228848713445, "total_over_diagonal": 0.0000356956050193153713},
+    {"j": 15, "total": 0.00142584398031984894, "diagonal": 39.305348010964174, "off_diagonal": -39.3039221669838525, "total_over_diagonal": 0.0000362760808000507149},
+    {"j": 16, "total": 0.00156047986663855392, "diagonal": 42.4938696979740556, "off_diagonal": -42.4923092181074153, "total_over_diagonal": 0.0000367224702699399448}
+  ],
+  "source_sha256": "fd904f4adc306c9ee59077d0ce596ebc92dc70fee549921b483208fa83386c54",
+  "result_sha256": "9ee9138eb426f4cdd23425776bc057a0e7d4b2141904416509918854dc3a69db",
+  "proof_boundary": "Complete prime-power enumeration through 1e7 and deterministic long-double piecewise-linear integration. Discovery data only: no outward rounding, independent compiler replay, or global inference. Blocks j=2,...,16 are complete for this prime limit."
+}
