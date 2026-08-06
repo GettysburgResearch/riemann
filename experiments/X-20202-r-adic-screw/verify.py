@@ -146,6 +146,9 @@ def verify(data: dict[str, Any]) -> dict[str, Any]:
     )
     if direct != decomposed:
         raise CertificateError("dilation cocycle failed")
+    expected = fraction(cocycle.get("expected_value"), "cocycle.expected_value")
+    if direct != expected:
+        raise CertificateError("declared cocycle value mismatch")
 
     result: dict[str, Any] = {
         "schema": "riemann.x20202-r-adic-screw.verification.v1",
