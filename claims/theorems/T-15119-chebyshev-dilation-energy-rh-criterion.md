@@ -178,7 +178,8 @@ Therefore, for every fixed `a>1`,
  \tag{T-15119.9}
 \]
 
-A polynomial or polylogarithmic upper bound would be more than sufficient.
+A bound polynomial in `log Y`—or any estimate `O_epsilon(Y^epsilon)` for every
+`epsilon>0`—would be sufficient.
 
 More generally, if for every `epsilon>0`
 
