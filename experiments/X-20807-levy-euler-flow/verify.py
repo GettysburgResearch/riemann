@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact Fraction regression for L-20810 and L-20812.
+"""Exact Fraction regression for L-20810, L-20812, and L-20813.
 
 This is a finite algebra checker. It does not evaluate zeta, prime manifests,
 transcendental Fenchel terms, or the cofinal RH inequality.
@@ -71,14 +71,30 @@ def verify_euler_riccati() -> dict[str, str]:
         / (1 - r) ** 2
     )
 
+    triangular = a * a * sum(
+        ((ell - 1) * r**ell for ell in range(2, kmax + 1)), F()
+    )
+    retained_pairs = a * a * sum(
+        (r ** (m + n)
+         for m in range(1, kmax + 1)
+         for n in range(1, kmax + 1)
+         if m + n <= kmax),
+        F(),
+    )
+
     assert geom == F(15, 16)
     assert weighted_geom == F(13, 8)
     assert p_local == F(45, 16)
     assert q_local == F(117, 8)
     assert defect == F(441, 256)
     assert defect == bracket_form
+    assert triangular == F(99, 16)
+    assert triangular == retained_pairs
+    assert p_local * p_local - defect == triangular
+    assert q_local == a * p_local + triangular
     assert q_local == p_local * p_local + a * p_local - defect
     assert defect > 0
+    assert triangular > 0
 
     return {
         "geometric_sum": s(geom),
@@ -86,20 +102,24 @@ def verify_euler_riccati() -> dict[str, str]:
         "local_P": s(p_local),
         "local_Q": s(q_local),
         "cutoff_defect": s(defect),
+        "triangular_retained_power": s(triangular),
+        "retained_pair_sum": s(retained_pairs),
+        "positive_reconstruction": s(a * p_local + triangular),
         "riccati_reconstruction": s(p_local * p_local + a * p_local - defect),
     }
 
 
 def main() -> int:
     result = {
-        "schema": "riemann.x20807.levy-euler-flow.v1",
+        "schema": "riemann.x20807.levy-euler-flow.v2",
         "classification": "EXACT_FINITE_ALGEBRA_REGRESSION",
         "levy_transport": verify_levy_transport(),
         "euler_riccati": verify_euler_riccati(),
-        "verdict": "PASS_EXACT_L20810_L20812_IDENTITIES",
+        "verdict": "PASS_EXACT_L20810_L20812_L20813_IDENTITIES",
         "proof_boundary": (
-            "Fraction-only synthetic verification of the cumulant reserve and "
-            "finite Euler Riccati identities. No Riemann data or cofinal sign."
+            "Fraction-only synthetic verification of the cumulant reserve, "
+            "finite Euler Riccati identity, and positive triangular "
+            "retained-power recombination. No Riemann data or cofinal sign."
         ),
     }
     print(json.dumps(result, indent=2, sort_keys=True))
