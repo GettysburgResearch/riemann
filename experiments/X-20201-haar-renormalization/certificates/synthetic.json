@@ -1,0 +1,41 @@
+{
+  "classification": "SYNTHETIC_ALGEBRA",
+  "cocycle": {
+    "claimed_d4": {"denominator": 65, "numerator": 371},
+    "psi_2t": {"denominator": 7, "numerator": -1},
+    "psi_4t": {"denominator": 13, "numerator": 9},
+    "psi_t": {"denominator": 5, "numerator": 2}
+  },
+  "cosine_samples": [
+    {"claimed_defect": {"denominator": 1, "numerator": 16}, "cosine": {"denominator": 1, "numerator": -1}},
+    {"claimed_defect": {"denominator": 1, "numerator": 9}, "cosine": {"denominator": 2, "numerator": -1}},
+    {"claimed_defect": {"denominator": 1, "numerator": 4}, "cosine": {"denominator": 1, "numerator": 0}},
+    {"claimed_defect": {"denominator": 1, "numerator": 1}, "cosine": {"denominator": 2, "numerator": 1}},
+    {"claimed_defect": {"denominator": 1, "numerator": 0}, "cosine": {"denominator": 1, "numerator": 1}}
+  ],
+  "finite_node": {
+    "claimed_screw_quadratic": {"denominator": 77, "numerator": 194},
+    "psi_2t": {"denominator": 11, "numerator": 5},
+    "psi_t": {"denominator": 7, "numerator": 3}
+  },
+  "lerch_samples": [
+    {"claimed_value": {"denominator": 4, "numerator": 3}, "y": {"denominator": 1, "numerator": 0}},
+    {"claimed_value": {"denominator": 64, "numerator": 33}, "y": {"denominator": 4, "numerator": 1}},
+    {"claimed_value": {"denominator": 16, "numerator": 5}, "y": {"denominator": 2, "numerator": 1}},
+    {"claimed_value": {"denominator": 64, "numerator": 9}, "y": {"denominator": 4, "numerator": 3}},
+    {"claimed_value": {"denominator": 1, "numerator": 0}, "y": {"denominator": 1, "numerator": 1}}
+  ],
+  "moment_model": {
+    "atoms": [
+      {"t": {"denominator": 1, "numerator": 1}, "weight": {"denominator": 1, "numerator": 1}},
+      {"t": {"denominator": 1, "numerator": 2}, "weight": {"denominator": 1, "numerator": 2}},
+      {"t": {"denominator": 1, "numerator": 4}, "weight": {"denominator": 3, "numerator": 1}}
+    ],
+    "order": 2
+  },
+  "pole_square": {
+    "a": {"denominator": 1, "numerator": 2},
+    "claimed_value": {"denominator": 1, "numerator": -1}
+  },
+  "schema": "riemann.x20201-haar-renormalization.v1"
+}
