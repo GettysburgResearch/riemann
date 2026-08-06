@@ -1,0 +1,112 @@
+{
+  "atom_count": 5,
+  "cell_count": 10,
+  "cells": [
+    {
+      "D": {"denominator": "1", "numerator": "0"},
+      "energy": {"denominator": "1", "numerator": "0"},
+      "lower": {"denominator": "1", "numerator": "1"},
+      "upper": {"denominator": "1", "numerator": "2"}
+    },
+    {
+      "D": {"denominator": "2", "numerator": "3"},
+      "energy": {"denominator": "8", "numerator": "3"},
+      "lower": {"denominator": "1", "numerator": "2"},
+      "upper": {"denominator": "1", "numerator": "3"}
+    },
+    {
+      "D": {"denominator": "6", "numerator": "19"},
+      "energy": {"denominator": "432", "numerator": "361"},
+      "lower": {"denominator": "1", "numerator": "3"},
+      "upper": {"denominator": "1", "numerator": "4"}
+    },
+    {
+      "D": {"denominator": "12", "numerator": "59"},
+      "energy": {"denominator": "2880", "numerator": "3481"},
+      "lower": {"denominator": "1", "numerator": "4"},
+      "upper": {"denominator": "1", "numerator": "5"}
+    },
+    {
+      "D": {"denominator": "60", "numerator": "427"},
+      "energy": {"denominator": "48000", "numerator": "182329"},
+      "lower": {"denominator": "1", "numerator": "5"},
+      "upper": {"denominator": "1", "numerator": "8"}
+    },
+    {
+      "D": {"denominator": "120", "numerator": "329"},
+      "energy": {"denominator": "345600", "numerator": "108241"},
+      "lower": {"denominator": "1", "numerator": "8"},
+      "upper": {"denominator": "1", "numerator": "12"}
+    },
+    {
+      "D": {"denominator": "40", "numerator": "-157"},
+      "energy": {"denominator": "76800", "numerator": "24649"},
+      "lower": {"denominator": "1", "numerator": "12"},
+      "upper": {"denominator": "1", "numerator": "16"}
+    },
+    {
+      "D": {"denominator": "40", "numerator": "-437"},
+      "energy": {"denominator": "128000", "numerator": "190969"},
+      "lower": {"denominator": "1", "numerator": "16"},
+      "upper": {"denominator": "1", "numerator": "20"}
+    },
+    {
+      "D": {"denominator": "40", "numerator": "-789"},
+      "energy": {"denominator": "256000", "numerator": "1867563"},
+      "lower": {"denominator": "1", "numerator": "20"},
+      "upper": {"denominator": "1", "numerator": "32"}
+    },
+    {
+      "D": {"denominator": "40", "numerator": "-1049"},
+      "energy": {"denominator": "256000", "numerator": "1100401"},
+      "lower": {"denominator": "1", "numerator": "32"},
+      "upper": {"denominator": "1", "numerator": "40"}
+    }
+  ],
+  "classification": "EXACT_SYNTHETIC_DYADIC_SQUARE_IDENTITY",
+  "energy": {"denominator": "19200", "numerator": "382801"},
+  "proof_boundary": "Finite rational algebra for a synthetic atom sequence only; no prime manifest, zeta zero, Hardy exponent, or RH conclusion is checked.",
+  "proof_object_sha256": "ad39be6fa29dd5ceea912164303e8e68e9d6787c57966a3dc7e003fc663bc232",
+  "samples": [
+    {
+      "A_Y": {"denominator": "2", "numerator": "3"},
+      "A_Y_over_4": {"denominator": "1", "numerator": "0"},
+      "C_difference_coefficient": {"denominator": "5", "numerator": "3"},
+      "D_Y": {"denominator": "2", "numerator": "3"},
+      "Q_coefficient": {"denominator": "5", "numerator": "3"},
+      "Y": {"denominator": "2", "numerator": "5"}
+    },
+    {
+      "A_Y": {"denominator": "120", "numerator": "1049"},
+      "A_Y_over_4": {"denominator": "2", "numerator": "3"},
+      "C_difference_coefficient": {"denominator": "1080", "numerator": "329"},
+      "D_Y": {"denominator": "120", "numerator": "329"},
+      "Q_coefficient": {"denominator": "1080", "numerator": "329"},
+      "Y": {"denominator": "1", "numerator": "9"}
+    },
+    {
+      "A_Y": {"denominator": "120", "numerator": "1049"},
+      "A_Y_over_4": {"denominator": "60", "numerator": "427"},
+      "C_difference_coefficient": {"denominator": "1000", "numerator": "-789"},
+      "D_Y": {"denominator": "40", "numerator": "-789"},
+      "Q_coefficient": {"denominator": "1000", "numerator": "-789"},
+      "Y": {"denominator": "1", "numerator": "25"}
+    }
+  ],
+  "schema": "riemann.x15414-global-rank-one-attack.verification.v1",
+  "stationary_kernel_ldl_pivots": [
+    {"denominator": "2", "numerator": "3"},
+    {"denominator": "54", "numerator": "29"},
+    {"denominator": "116", "numerator": "35"},
+    {"denominator": "140", "numerator": "27"},
+    {"denominator": "24", "numerator": "5"}
+  ],
+  "stationary_ratio_kernel": [
+    [{"denominator":"2","numerator":"3"},{"denominator":"6","numerator":"5"},{"denominator":"2","numerator":"1"},{"denominator":"10","numerator":"3"},{"denominator":"1","numerator":"0"}],
+    [{"denominator":"6","numerator":"5"},{"denominator":"1","numerator":"1"},{"denominator":"3","numerator":"2"},{"denominator":"15","numerator":"7"},{"denominator":"6","numerator":"1"}],
+    [{"denominator":"2","numerator":"1"},{"denominator":"3","numerator":"2"},{"denominator":"4","numerator":"3"},{"denominator":"20","numerator":"11"},{"denominator":"4","numerator":"1"}],
+    [{"denominator":"10","numerator":"3"},{"denominator":"15","numerator":"7"},{"denominator":"20","numerator":"11"},{"denominator":"5","numerator":"3"},{"denominator":"10","numerator":"3"}],
+    [{"denominator":"1","numerator":"0"},{"denominator":"6","numerator":"1"},{"denominator":"4","numerator":"1"},{"denominator":"10","numerator":"3"},{"denominator":"8","numerator":"3"}]
+  ],
+  "verdict": "EXACT_DYADIC_WEIGHTED_CHEBYSHEV_IDENTITY_VERIFIED"
+}
