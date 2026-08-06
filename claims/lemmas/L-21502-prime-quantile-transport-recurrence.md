@@ -33,19 +33,19 @@ Define the prime quantile step function
 \tag{L-21502.2}
 \]
 
-Let `F` be the strictly convex archimedean function of `L-21501`. Its conjugate is differentiable away from the initial boundary transition. Define the monotone reference quantile
+Let `F` be the strictly convex archimedean function of `L-21501`. Its conjugate is differentiable away from the initial boundary transition. Define the monotone reference quantile by the generalized inverse of `F'` on `[log 2,infinity)`:
 
 \[
 \boxed{
 \tau_F(A)=
 \begin{cases}
-\log2,&0\le A\le F'(\log2),\\
-(F')^{-1}(A),&A>F'(\log2).
+\log2,&A\le F'(\log2),\\
+(F')^{-1}(A),&A>F'(\log2),
 \end{cases}}
 \tag{L-21502.3}
 \]
 
-Then `tau_F` is the right derivative of `F*`, and
+where the first case is empty on `A>=0` if `F'(log 2)<0`. Then `tau_F` is the right derivative of `F*`, and
 
 \[
 F^*(A)-F^*(C)=\int_C^A\tau_F(s)\,ds
@@ -97,11 +97,11 @@ Thus the new prime-power atom transports an archimedean mass interval of exactly
 Put
 
 \[
-M_0=-F^*(0)=F(\log2),
+\boxed{M_0=-F^*(0).}
 \tag{L-21502.7}
 \]
 
-where the last equality uses the positivity of `F'` at the left endpoint, which follows directly from the radial slope formula `L-21501.21`. Summing (L-21502.6) gives
+This is one explicit archimedean constant; no sign or endpoint-location assertion is needed. Summing (L-21502.6) gives
 
 \[
 \boxed{
@@ -159,7 +159,7 @@ with
 \boxed{
 \sum_{j_{r-1}<i\le j_r}a_i\nu_i
 \ge
-\int_{A_{j_{r-1}}}^{A_{j_r}}	au_F(A)dA
+\int_{A_{j_{r-1}}}^{A_{j_r}}\tau_F(A)dA
 }
 \tag{L-21502.11}
 \]
