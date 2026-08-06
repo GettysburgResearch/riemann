@@ -1,0 +1,66 @@
+{
+  "schema": "riemann.x15414-global-rank-one-attack.v1",
+  "weighted_atoms": [
+    {
+      "n": 2,
+      "weight": {
+        "numerator": 3,
+        "denominator": 2
+      }
+    },
+    {
+      "n": 3,
+      "weight": {
+        "numerator": 5,
+        "denominator": 3
+      }
+    },
+    {
+      "n": 4,
+      "weight": {
+        "numerator": 7,
+        "denominator": 4
+      }
+    },
+    {
+      "n": 5,
+      "weight": {
+        "numerator": 11,
+        "denominator": 5
+      }
+    },
+    {
+      "n": 8,
+      "weight": {
+        "numerator": 13,
+        "denominator": 8
+      }
+    }
+  ],
+  "lower_Y": {
+    "numerator": 1,
+    "denominator": 1
+  },
+  "upper_Y": {
+    "numerator": 40,
+    "denominator": 1
+  },
+  "sample_Y": [
+    {
+      "numerator": 5,
+      "denominator": 2
+    },
+    {
+      "numerator": 9,
+      "denominator": 1
+    },
+    {
+      "numerator": 25,
+      "denominator": 1
+    }
+  ],
+  "declared_energy": {
+    "numerator": 382801,
+    "denominator": 19200
+  }
+}
