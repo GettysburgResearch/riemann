@@ -1,12 +1,13 @@
-# T-21701 — Centered infinite-notch annihilator and one-signal RH criterion
+# T-21701 — Centered infinite-notch annihilator and completed prime criterion
 
 Claim ID: `T-21701`  
-Title: Centering the finite critical-line notch cascade produces one smooth subgaussian kernel that annihilates every line zero and no off-line zero  
-Status: **PROPOSED PENDING INDEPENDENT REVIEW — analytic theorem; RH is not claimed proved**  
+Title: Centering the finite critical-line notch cascade produces one smooth subgaussian kernel whose completed Guinand--Weil residual vanishes exactly under RH  
+Status: **CORRECTED PROPOSED THEOREM PENDING INDEPENDENT REVIEW — RH is not claimed proved**  
 Authoring agent: `gpt56-pro-global-01`  
 Created: 2026-08-07  
-Source dependencies: the finite triangular pole-free window on PR #190; the square/prime explicit-formula conventions on PRs #190 and #202; the standard zero-count bound `N(T)=O(T log T)`  
-Scope: one fixed global prime-side residual obtained as the centered limit of finite, compactly supported notch windows
+Corrected: 2026-08-07 after `R-21701`  
+Source dependencies: the finite triangular pole-free window on PR #165; the centered Guinand--Weil explicit formula; the ordinary zero-count bound `N(T)=O(T log T)`  
+Scope: one fixed global **completed two-sided** prime residual obtained as the centered limit of finite compact notch windows
 
 ## 1. A self-contained pole-free base window
 
@@ -33,23 +34,25 @@ Laplace transform is
 \[
  \boxed{
  \widehat G_{h,L}(z)
- =\left(\frac{1-e^{-hz}}{hz}\right)^2(1-2e^{-hz}).}
+ =\left({1-e^{-hz}\over hz}\right)^2(1-2e^{-hz}).}
  \tag{T-21701.2}
 \]
 
-Thus `Ghat_h(1/2)=0`, canceling the shifted zeta pole, while
+Thus
 
 \[
+ \widehat G_{h,L}(1/2)=0,
+ \qquad
  \boxed{
  \widehat G_{h,L}(z)\ne0
- \qquad(0<\Re z<1/2).}
+ \quad(0<\Re z<1/2).}
  \tag{T-21701.3}
 \]
 
-Moreover `Ghat_h(delta+it)=O((1+|t|)^(-2))` uniformly on every fixed vertical
-strip.
+Moreover `Ghat_h(delta+it)=O((1+|t|)^(-2))` uniformly when `delta`
+ranges over a fixed compact interval.
 
-## 2. Why centering changes the infinite-notch question
+## 2. The centered line-zero notch product
 
 Enumerate the distinct positive ordinates at which a critical-line zero occurs:
 
@@ -62,12 +65,13 @@ Enumerate the distinct positive ordinates at which a critical-line zero occurs:
 and put
 
 \[
- r_k=\frac{2\pi}{\gamma_k}.
+ r_k={2\pi\over\gamma_k}.
 \]
 
-One factor per distinct ordinate is enough because even a multiple zero gives a
-simple pole of `xi'/xi`.  The uncentered lengths have divergent sum, but their
-centered variances are summable:
+One factor per distinct ordinate is enough for annihilating the logarithmic
+Derivative: even a multiple zero gives a simple pole of `xi'/xi`, with its
+multiplicity carried only by the residue.  The ordinary zero-count upper bound
+gives
 
 \[
  \boxed{
@@ -76,54 +80,42 @@ centered variances are summable:
  \tag{T-21701.4}
 \]
 
-The convergence follows from the ordinary zero-count upper bound; line zeros
-are a subset of all zeros.
-
-## 3. Limiting probability kernel
-
-Let `V_k` be independent with
+Let `V_k` be independent random variables with
 
 \[
  V_k\sim\operatorname{Unif}[-r_k/2,r_k/2],
  \qquad \mathbb EV_k=0.
 \]
 
-Since
-
-\[
- \sum_k\operatorname{Var}(V_k)
- =\frac1{12}\sum_kr_k^2<\infty,
-\]
-
-the random series
+Then
 
 \[
  Y=\sum_{k\ge1}V_k
  \tag{T-21701.5}
 \]
 
-converges almost surely and in `L^2`.  Let `mu_infty` be its law.  Its bilateral
-Laplace transform is the normally convergent entire product
+converges almost surely and in `L2`.  Let `mu_infinity` be its probability law.
+Its bilateral Laplace transform is the normally convergent entire product
 
 \[
  \boxed{
  P_\infty(z)
- =\int e^{-zy}\,d\mu_\infty(y)
+ =\int_{\mathbb R}e^{-zy}\,d\mu_\infty(y)
  =\prod_{k\ge1}
-   \frac{\sinh(\pi z/\gamma_k)}{\pi z/\gamma_k}.}
+ {\sinh(\pi z/\gamma_k)\over \pi z/\gamma_k}.}
  \tag{T-21701.6}
 \]
 
-Every factor is `1+O_K(r_k^2)` on a compact set `K`.  Therefore the zero set is
+Every factor is `1+O_K(r_k^2)` on a compact set `K`.  Hence its zero set is
 exactly
 
 \[
- z=i n\gamma_k,
+ z=in\gamma_k,
  \qquad n\in\mathbb Z\setminus\{0\},
  \tag{T-21701.7}
 \]
 
-with accumulated multiplicities at coincident harmonics, and
+with accumulated multiplicity at coincident harmonics, and
 
 \[
  \boxed{P_\infty(z)\ne0\quad(\Re z\ne0).}
@@ -134,17 +126,17 @@ Hoeffding's lemma gives
 
 \[
  \mathbb E e^{sY}
- \le\exp\left(\frac{s^2}{8}\sum_kr_k^2\right),
+ \le
+ \exp\left({s^2\over8}\sum_kr_k^2\right),
  \tag{T-21701.9}
 \]
 
-so the law is subgaussian.  Keeping arbitrarily many finite uniform factors
-shows that its characteristic function decays faster than every prescribed
-power; hence it has a smooth density.  Splitting off a finite compactly
-supported convolution and applying (T-21701.9) to the tail gives a pointwise
-Gaussian tail for that density.
+so the law is subgaussian.  Retaining arbitrarily many finite uniform factors
+shows that its characteristic function has arbitrary polynomial decay; hence
+`mu_infinity` has a smooth density.  Only rapid decrease and exponential
+moments, not a sharp pointwise tail constant, are used below.
 
-## 4. Centered limit of finite compact windows
+## 3. Centered limit of finite compact windows
 
 Let
 
@@ -164,7 +156,7 @@ If `mu_M` is the law of `sum_(k<=M)V_k`, then exactly
  \tag{T-21701.10}
 \]
 
-Thus
+Consequently
 
 \[
  \widetilde G_M\longrightarrow
@@ -172,8 +164,8 @@ Thus
  \tag{T-21701.11}
 \]
 
-locally uniformly and in every fixed exponentially weighted `L^1` norm needed
-below.  The limit is smooth with Gaussian tails, and
+locally uniformly and in every fixed exponentially weighted `L1` norm.  Its
+transform is
 
 \[
  \boxed{
@@ -182,7 +174,7 @@ below.  The limit is smooth with Gaussian tails, and
  \tag{T-21701.12}
 \]
 
-Consequently
+Therefore
 
 \[
  \widehat G_{\infty,L}(1/2)=0,
@@ -201,94 +193,186 @@ For `delta` in a fixed real interval,
  \tag{T-21701.14}
 \]
 
-because it is the transform of a symmetric probability law.  Hence the base
-`O(t^-2)` vertical decay is retained.
+because it is the transform of a symmetric probability law.  The base
+`O(t^-2)` vertical envelope is therefore retained.
 
-## 5. One globally defined prime signal
+## 4. The completed translated Guinand--Weil identity
 
-The Gaussian tail makes
+The centered limit is two-sided.  For a real rapidly decreasing `G`, define
 
 \[
- \boxed{
- Q_\infty(x)
- =\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
-  G_\infty(x-\log n)}
+ H_{G,x}(z)=e^{zx}\widehat G_L(z)
  \tag{T-21701.15}
 \]
 
-absolutely convergent for every real `x`, locally uniformly in `x`.  Let
-`E_infty^known(x)` be the explicit trivial-zero, endpoint, and initial-segment
-term in the same convention as the finite pole-free formula, and put
+and the completed prime stream
 
 \[
- \boxed{R_\infty(x)=Q_\infty(x)-E_\infty^{\rm known}(x).}
+ \boxed{
+ \mathcal P_G(x)=
+ \sum_{n\ge2}{\Lambda(n)\over\sqrt n}
+ \bigl[G(x-\log n)+G(x+\log n)\bigr].}
  \tag{T-21701.16}
 \]
 
-The rapidly decreasing explicit formula follows directly or by passing to the
-limit in the finite centered identities:
+Both sums converge absolutely for `G=G_infinity`.
+
+In the standard centered Guinand--Weil convention, put
 
 \[
  \boxed{
- R_\infty(x)
- =-\sum_{\rho}m_\rho
-  \widehat G_{\infty,L}(\rho-1/2)
-  e^{(\rho-1/2)x}.}
+ \begin{aligned}
+ \mathcal A_G(x)={}&H_{G,x}(1/2)+H_{G,x}(-1/2)-G(x)\log\pi\\
+ &+{1\over2\pi}\int_{\mathbb R}
+ H_{G,x}(it)
+ \Re {\Gamma'\over\Gamma}
+ \left({1\over4}+{it\over2}\right)dt.
+ \end{aligned}}
  \tag{T-21701.17}
 \]
 
-The series is absolutely convergent in the standard symmetric convention:
-`Ghat_h=O(t^-2)`, (T-21701.14) is uniform for
-`|Re rho-1/2|<=1/2`, and the unit-interval zero count is `O(log t)`.
-
-The finite centered prime residuals converge locally uniformly to
-`R_infty`.  Thus every computation may remain finite even though the theorem
-has one fixed limiting object.
-
-## 6. Exact one-signal RH equivalence
-
-Assume RH.  Every nontrivial zero has centered coordinate `+-i gamma_k`, and the
-corresponding factor in (T-21701.6) vanishes.  Hence every term in
-(T-21701.17) is zero and
+The integral is absolutely convergent for `G_infinity`.  With multiplicities,
+the completed explicit formula is
 
 \[
- \boxed{\mathrm{RH}\Longrightarrow R_\infty\equiv0.}
+ \boxed{
+ \sum_\rho m_\rho
+ H_{G,x}(\rho-1/2)
+ =\mathcal A_G(x)-\mathcal P_G(x).}
  \tag{T-21701.18}
 \]
 
-Conversely, suppose `R_infty` is identically zero.  The unilateral Laplace
-identity, after the known terms are removed, is
+The exact overall normalization may be checked against the chosen definition of
+`xi`; multiplying `xi` by a nonzero constant changes neither side.  Equation
+(T-21701.18), including both prime streams, is the interface used in the rest
+of the theorem.
+
+For the annihilator kernel define
 
 \[
- \mathcal LR_\infty(z)
- =-\widehat G_{\infty,L}(z)
-   \frac{\zeta'}{\zeta}(z+1/2).
+ \boxed{
+ \mathcal R_\infty(x)
+ :=\mathcal P_{G_\infty}(x)-\mathcal A_{G_\infty}(x).}
  \tag{T-21701.19}
 \]
 
-The left side is holomorphic.  By (T-21701.13), no pole of `zeta'/zeta` in the
-open shifted strip can be canceled.  Thus there is no zero with
-`Re rho>1/2`; the functional equation gives RH.  Therefore
+Then
 
 \[
  \boxed{
- \mathrm{RH}
- \iff R_\infty(x)=0\ \text{for every real }x}
+ \mathcal R_\infty(x)
+ =-\sum_\rho m_\rho
+ \widehat G_{\infty,L}(\rho-1/2)
+ e^{(\rho-1/2)x}.}
  \tag{T-21701.20}
 \]
 
-or, equivalently,
+The zero series is absolutely convergent on every compact real `x` interval:
+`Ghat_h=O(t^-2)`, (T-21701.14) is uniform for
+`|Re rho-1/2|<=1/2`, and the unit-interval zero count is `O(log t)`.
+
+`R-21701` explains why the one-sided terminal stream from the first version of
+this claim had to be replaced by (T-21701.16).
+
+## 5. Exact one-signal RH equivalence
+
+Assume RH.  Every nontrivial zero has centered coordinate `+-i gamma_k`, and
+`P_infinity` vanishes there.  Hence every term in (T-21701.20) is zero and
+
+\[
+ \boxed{\mathrm{RH}\Longrightarrow\mathcal R_\infty\equiv0.}
+ \tag{T-21701.21}
+\]
+
+Conversely, suppose `mathcal R_infinity` vanishes identically on the real line.
+For `Re z>1/2`, termwise integration on `x>=0` gives
+
+\[
+ 0=
+ -\sum_\rho{m_\rho\widehat G_{\infty,L}(\rho-1/2)
+ \over z-(\rho-1/2)}.
+ \tag{T-21701.22}
+\]
+
+The right side extends meromorphically, and the residue at a distinct centered
+zero `w=rho-1/2` is
+
+\[
+ -m_\rho\widehat G_{\infty,L}(w).
+\]
+
+For a critical-line zero this residue is zero.  For every zero with
+`Re rho>1/2`, (T-21701.13) makes it nonzero.  Thus the identically zero
+meromorphic function can have no such pole.  The functional equation excludes
+the reflected half, proving RH.  Therefore
 
 \[
  \boxed{
  \mathrm{RH}
- \iff Q_\infty=E_\infty^{\rm known}.}
- \tag{T-21701.21}
+ \iff
+ \mathcal R_\infty(x)=0
+ \quad\hbox{for every real }x.}
+ \tag{T-21701.23}
 \]
 
-This is one fixed prime identity, not an order-of-limits criterion.
+Equivalently,
 
-## 7. Rightmost-zero exponent of the limiting residual
+\[
+ \boxed{
+ \mathcal P_{G_\infty}=\mathcal A_{G_\infty}.}
+ \tag{T-21701.24}
+\]
+
+This is one fixed completed prime identity, not an order-of-limits assertion.
+
+## 6. A positive completed prime-energy endpoint
+
+For any `sigma>1/2`, define
+
+\[
+ \boxed{
+ \mathscr E_\sigma
+ =\int_0^\infty e^{-2\sigma x}
+ |\mathcal R_\infty(x)|^2dx.}
+ \tag{T-21701.25}
+\]
+
+It is a nonnegative completed prime-pair functional.  Expanding the absolutely
+convergent zero series gives the exact Cauchy Gram
+
+\[
+ \boxed{
+ \mathscr E_\sigma
+ =\sum_{\rho,\rho'}
+ {c_\rho\overline{c_{\rho'}}
+  \over 2\sigma-(\rho-1/2)-\overline{(\rho'-1/2)}},
+ \qquad
+ c_\rho=m_\rho\widehat G_{\infty,L}(\rho-1/2).}
+ \tag{T-21701.26}
+\]
+
+This is the Gram of the functions
+
+\[
+ c_\rho e^{(\rho-1/2)x}
+ \quad\hbox{in }L^2(\mathbb R_+,e^{-2\sigma x}dx).
+\]
+
+All critical-line coefficients vanish.  Distinct exponentials are linearly
+independent, so
+
+\[
+ \boxed{
+ \mathscr E_\sigma=0
+ \iff \mathrm{RH}.}
+ \tag{T-21701.27}
+\]
+
+Thus the corrected prime-annihilator endpoint can be phrased as one positive
+identity: prove the completed finite-prime-pair energy (T-21701.25) is zero.
+The theorem identifies the endpoint; it does not prove that zero value.
+
+## 7. Rightmost-zero exponent
 
 Let
 
@@ -297,64 +381,61 @@ Let
  =\sup_{\zeta(\rho)=0}(\Re\rho-1/2).
 \]
 
-If RH is false, (T-21701.13) leaves every off-line zero visible.  The elementary
-Hardy/Laplace abscissa argument gives
+If RH is false, the nonvanishing property (T-21701.13) leaves every off-line zero
+visible.  The same Hardy/Laplace abscissa argument as for compact pole-free
+windows gives
 
 \[
  \boxed{
  \Theta_\zeta
  =\limsup_{X\to\infty}
- \frac{\log\left(
- 1+\int_X^{X+1}|R_\infty(x)|^2dx
- \right)}{2X}.}
- \tag{T-21701.22}
+ {\log\left(1+\int_X^{X+1}
+ |\mathcal R_\infty(x)|^2dx\right)\over2X}.}
+ \tag{T-21701.28}
 \]
 
-Under RH the same energy is identically zero.  Thus the fixed signal has a sharp
-dichotomy:
+Under RH the energy is identically zero.  Hence the fixed completed signal has
+the sharp dichotomy
 
 ```text
 RH:
-  the all-line-zero annihilator leaves exactly zero nontrivial prime signal.
+  the all-line-zero annihilator leaves zero completed prime residual.
 
 not RH:
-  the same residual has positive exponential energy exponent Theta_zeta.
+  the same residual has positive exponential block-energy exponent Theta_zeta.
 ```
 
-## 8. What centering adds
+## 8. Finite centered approximants
 
-The uncentered compact supports expand because `sum r_k` diverges.  The present
-renormalization separates
+For finite `M`, replace `mu_infinity` by `mu_M` and
+`P_infinity` by its finite product.  The centered compact test
+`G_h*mu_M` must already be consumed through the completed two-sided formula
+(T-21701.18).  Uniform exponential moments and the vertical `O(t^-2)` envelope
+permit passage to the limit in the prime, archimedean, and zero terms on every
+compact `x` interval.
 
-```text
-divergent part:  deterministic translation S_M/2,
-convergent part: centered random spread with sum r_k^2<infinity.
-```
-
-After centering, there is one canonical noncompact subgaussian profile.  It
-annihilates the complete critical-line spectrum and no point in the open
-counterexample strip.
+Thus all proof-producing calculations can remain finite, while their limit is
+the fixed residual in (T-21701.19).
 
 ## 9. Proof boundary and serious path
 
-The probability product, limiting window, explicit-formula passage, and
-analytic equivalence are the new theorem submitted for review.  They do **not**
-prove the arithmetic identity `R_infty=0`; by (T-21701.20), that identity is
-exactly RH.
+Proved within the claim, subject to independent normalization review:
 
-The serious positive target is the fixed convolution identity
+- normal convergence and zero geometry of `P_infinity`;
+- the centered finite-window limit;
+- the completed Guinand--Weil residual formula;
+- the equivalence between residual vanishing and RH;
+- the positive Cauchy-Gram energy formulation.
+
+Not proved:
 
 \[
- \boxed{
- \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
- G_\infty(x-\log n)
- =E_\infty^{\rm known}(x)
- \quad\text{for all }x.}
- \tag{T-21701.23}
+ \mathcal R_\infty\equiv0
+ \qquad\hbox{or}\qquad
+ \mathscr E_\sigma=0.
 \]
 
-Unlike a moving matrix moat, this is one smooth subgaussian prime kernel with an
-explicit entire transform.  Its finite centered approximants use only finitely
-many certified line-zero balls and finite prime-power manifests.
-
-No proof of (T-21701.23), no counterexample, and no resolution of RH is claimed.
+By (T-21701.23) and (T-21701.27), either statement is precisely RH.  A valid
+positive proof must force the **completed two-sided** prime and archimedean
+functional to vanish; a one-sided terminal-prime estimate cannot establish the
+centered endpoint.
