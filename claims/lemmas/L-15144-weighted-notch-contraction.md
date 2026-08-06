@@ -113,40 +113,43 @@ Applied to the raw finite triangular prime signal, this is a completely
 prime-side proof that the notch construction cannot increase weighted energy.
 No explicit zero expansion enters the inequality.
 
-## 4. Critical-line notch product tends to zero
+## 4. Complete multiplicity-weighted notch product tends to zero
 
-For exact critical-line notches,
+For the contraction schedule in this section, enumerate the positive
+critical-line ordinates **with multiplicity**. Thus, if one distinct ordinate
+`gamma` has multiplicity `m`, repeat the length
 
 \[
- r_k={2\pi\over\gamma_k}.
+ r={2\pi\over\gamma}
 \]
+
+exactly `m` times. Repetition is harmless: the first factor already kills the
+frequency, while the additional factors strengthen the weighted contraction.
 
 Under RH, the Riemann--von Mangoldt count and partial summation give
 
 \[
- \sum_{\gamma_k\le T}{1\over\gamma_k}
- ={1\over4\pi}(\log T)^2+O(\log T),
+ \sum_{\substack{0<\gamma_k\le T\\
+                  \text{with multiplicity}}}
+ {1\over\gamma_k}
+ ={1\over4\pi}(\log T)^2+O(\log T).
  \tag{L-15144.8}
 \]
 
-when multiplicities are included. In particular,
+In particular,
 
 \[
- \sum_kr_k=+\infty
- \qquad\text{and}\qquad r_k\to0.
+ \sum_kr_k=+\infty,
+ \qquad r_k\to0,
+ \qquad\text{and}\qquad
+ \sum_kr_k^2<\infty.
 \]
 
 Since
 
 \[
  \log q(a)=-{a\over2}+O(a^2)
- \qquad(a\downarrow0)
-\]
-
-and
-
-\[
- \sum_kr_k^2<\infty,
+ \qquad(a\downarrow0),
 \]
 
 one obtains, for every fixed `sigma>0`,
@@ -161,7 +164,8 @@ one obtains, for every fixed `sigma>0`,
  \tag{L-15144.9}
 \]
 
-More explicitly, if `Gamma_M=gamma_M`, then
+If `Gamma_M` is the largest ordinate represented among the first `M`
+multiplicity-weighted factors, then
 
 \[
  \boxed{
@@ -175,6 +179,11 @@ More explicitly, if `Gamma_M=gamma_M`, then
 
 The factor is stretched-Gaussian in the logarithm of the highest notched
 ordinate.
+
+The minimal notch family of `T-15117` uses only one box per distinct ordinate,
+because one transform zero removes the full multiplicity. The repeated family
+here is an optional contraction-enhanced refinement and leaves the open-strip
+zero-free property unchanged.
 
 ## 5. Consequence under any proved zero-free strip
 
@@ -191,7 +200,8 @@ Then `T-15118` gives
  \|R_0\|_{2,\sigma}<\infty.
 \]
 
-The exact convolution identity and (L-15144.7) imply
+Apply the multiplicity-weighted finite notch schedule above. The exact
+convolution identity and (L-15144.7) imply
 
 \[
  \boxed{
@@ -251,7 +261,9 @@ this gives a direct finite upper interval for every later notched energy.
 
 - The contraction estimate is unconditional functional analysis.
 - The asymptotic notch-product decay in Section 4 uses RH only to identify the
-  complete zero set with the critical-line ordinates; finite products require no
-  RH assumption.
+  complete multiplicity-weighted zero set with critical-line ordinates; finite
+  products require no RH assumption.
+- Repeating a notch according to multiplicity is an optional contraction device,
+  not a new spectral assumption.
 - The theorem does not prove the initial weighted energy finite on a new line.
 - Crossing cofinally to `sigma=0` remains the RH-bearing step.
