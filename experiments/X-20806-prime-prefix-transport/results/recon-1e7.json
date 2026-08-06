@@ -1,0 +1,31 @@
+{
+  "all_binary64_prefix_margins_positive": true,
+  "classification": "ORDINARY_HIGH_PRECISION_RECONNAISSANCE",
+  "final_prefix": {
+    "margin_binary64": "0.03794421051861718",
+    "q": 9999991
+  },
+  "limit": 10000000,
+  "manifest_sha256": "ad1fe1520966ca5c41885166f4a28a0d543922f087881175c0c15e89425fc56a",
+  "maximum_margin_binary64": "0.06890795987965248",
+  "prime_power_count": 665134,
+  "proof_boundary": "Exact integer prime-power enumeration plus ordinary binary64 ranking and one same-formula mpmath replay. This is not directed arithmetic, does not certify all prefixes, and supplies no cofinal theorem.",
+  "record_low": {
+    "binary64_margin": "0.027520573353399413",
+    "exponent": 1,
+    "high_precision_replay": {
+      "P": "108.66398251759350930756836727932323947004248065147912251551037078326627161839366",
+      "Q": "676.17838616926309283865606843285236116086699122485844823655284510936130252214515",
+      "left_tau": "8.0356026929185817060673897978594039385241528965578334720454926103522738028747452",
+      "margin": "0.027520573353620804820414575069133782697494255916352542166303911923765460872273968",
+      "right_tau": "8.0420564100587538114200565372509446014440820143503464087372931916996636935233252",
+      "t_star": "8.0390637594962717224686998307271024503675216208494100160314690543973365889781114"
+    },
+    "next_q": 3109,
+    "p": 3089,
+    "prefix_index_zero_based": 477,
+    "prefix_length": 478,
+    "q": 3089
+  },
+  "schema": "riemann.x20806.prime-prefix-transport-recon.v1"
+}
