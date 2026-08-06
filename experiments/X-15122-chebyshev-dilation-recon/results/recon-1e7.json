@@ -1,0 +1,31 @@
+{
+  "classification": "LONG_DOUBLE_RECONNAISSANCE",
+  "prime_limit": 10000000,
+  "prime_power_count": 665134,
+  "complete_blocks": [2, 15],
+  "scale4_rows": [
+    {"j": 2, "total": 2.57945840745112687, "diagonal": 2.02569162557256854, "off_diagonal": 0.553766781878558434, "total_over_diagonal": 1.27337170914256737},
+    {"j": 3, "total": 1.03536258929315772, "diagonal": 4.3756613472010244, "off_diagonal": -3.34029875790786646, "total_over_diagonal": 0.236618537665271411},
+    {"j": 4, "total": 0.618243991651090785, "diagonal": 7.06984710056512089, "off_diagonal": -6.45160310891403022, "total_over_diagonal": 0.0874480003395932126},
+    {"j": 5, "total": 0.355338163494865189, "diagonal": 10.0377574575911392, "off_diagonal": -9.68241929409627389, "total_over_diagonal": 0.0354001543667642332},
+    {"j": 6, "total": 0.293050460304811522, "diagonal": 13.1824446325966171, "off_diagonal": -12.8893941722918051, "total_over_diagonal": 0.0222303577577847022},
+    {"j": 7, "total": 0.251727122477089615, "diagonal": 16.3168470505889474, "off_diagonal": -16.0651199281118586, "total_over_diagonal": 0.0154274365443661902},
+    {"j": 8, "total": 0.219072055094988866, "diagonal": 19.4352228853277751, "off_diagonal": -19.2161508302327846, "total_over_diagonal": 0.011271908554255524},
+    {"j": 9, "total": 0.262545321474007387, "diagonal": 22.520648004950413, "off_diagonal": -22.2581026834764053, "total_over_diagonal": 0.0116579825507816433},
+    {"j": 10, "total": 0.242902864329956614, "diagonal": 25.5946319180080266, "off_diagonal": -25.3517290536780706, "total_over_diagonal": 0.00949038318300852481},
+    {"j": 11, "total": 0.206813297953165526, "diagonal": 28.6414183970369898, "off_diagonal": -28.4346050990838251, "total_over_diagonal": 0.00722077709582151072},
+    {"j": 12, "total": 0.275882384562522842, "diagonal": 31.6704164942774256, "off_diagonal": -31.394534109714904, "total_over_diagonal": 0.00871104377842244273},
+    {"j": 13, "total": 0.205308593456301369, "diagonal": 34.6893999116543412, "off_diagonal": -34.4840913181980397, "total_over_diagonal": 0.0059184821293874661},
+    {"j": 14, "total": 0.259445420083174061, "diagonal": 37.7032818679483981, "off_diagonal": -37.4438364478652232, "total_over_diagonal": 0.0068812423542293508},
+    {"j": 15, "total": 0.249166414237714545, "diagonal": 40.7125639348243382, "off_diagonal": -40.463397520586625, "total_over_diagonal": 0.00612013565730221316}
+  ],
+  "scale_summary_j5_j15": [
+    {"scale": 2, "mean_total": 0.191226131958743301, "mean_total_over_diagonal": 0.0233708500114306501, "last_total": 0.202106223638360338, "last_diagonal": 14.4967780873758993, "last_ratio": 0.0139414580550390518},
+    {"scale": 3, "mean_total": 0.265853364167335127, "mean_total_over_diagonal": 0.0180942088481080739, "last_total": 0.26812017131652488, "last_diagonal": 27.8928858696764053, "last_ratio": 0.00961249304103058838},
+    {"scale": 4, "mean_total": 0.256477463406236117, "mean_total_over_diagonal": 0.0127572639974658005, "last_total": 0.249166414237714545, "last_diagonal": 40.7125639348243382, "last_ratio": 0.00612013565730221316},
+    {"scale": 5, "mean_total": 0.401435980140884441, "mean_total_over_diagonal": 0.0159374824569892166, "last_total": 0.349971657890479126, "last_diagonal": 53.1477325571819819, "last_ratio": 0.00658488407786620832},
+    {"scale": 8, "mean_total": 0.527538112605606679, "mean_total_over_diagonal": 0.0151224491121830281, "last_total": 0.45884429027123147, "last_diagonal": 88.9687321156791171, "last_ratio": 0.00515736573243093851},
+    {"scale": 16, "mean_total": 1.26138511070926973, "mean_total_over_diagonal": 0.0261243560294412425, "last_total": 0.880198167585477642, "last_diagonal": 178.526770656463043, "last_ratio": 0.00493034273990892134}
+  ],
+  "proof_boundary": "Complete prime-power enumeration through 1e7; integer event sweep and long-double exact-cell antiderivatives. Discovery only: no outward rounding or independent compiler replay. Blocks j=2,...,15 are complete."
+}
