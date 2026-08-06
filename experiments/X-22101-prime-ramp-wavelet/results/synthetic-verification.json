@@ -1,0 +1,26 @@
+{
+  "classification": "EXACT_SYNTHETIC_ALGEBRA",
+  "coefficients": [
+    {"coefficient": "1", "h_shift": 0, "integer_shift": 1},
+    {"coefficient": "-2", "h_shift": 1, "integer_shift": 1},
+    {"coefficient": "-3", "h_shift": 0, "integer_shift": 2},
+    {"coefficient": "6", "h_shift": 1, "integer_shift": 2},
+    {"coefficient": "3", "h_shift": 0, "integer_shift": 3},
+    {"coefficient": "-6", "h_shift": 1, "integer_shift": 3},
+    {"coefficient": "-1", "h_shift": 0, "integer_shift": 4},
+    {"coefficient": "2", "h_shift": 1, "integer_shift": 4}
+  ],
+  "diagonal_hardy_exponent": "1/2",
+  "formal_moments": {
+    "0": {"0": "0"},
+    "1": {"0": "0", "1": "0"},
+    "2": {"0": "0", "1": "0", "2": "0"},
+    "3": {"0": "6", "1": "0", "2": "0", "3": "0"}
+  },
+  "narrow_l2_prefactor": "20/3",
+  "pole_model_factor": "0",
+  "proof_boundary": "Exact finite-difference and scaling algebra only. No prime, zeta, PNT, or semiprime estimate is evaluated by this checker.",
+  "proof_object_sha256": "bc8da6a56ff84ed48d33706d2c4478837b6dc9169f784d7d93afec6ff4705a71",
+  "resolution_exponent": "1",
+  "schema": "riemann.x22101-prime-ramp-wavelet.v1"
+}
