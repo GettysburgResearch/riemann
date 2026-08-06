@@ -1,0 +1,23 @@
+{
+  "proof_boundary": "This is an exact finite algebra regression for L-9508. It does not verify the asymptotic Mertens bound or RH.",
+  "proof_object_sha256": "b39d7cb81881d6fcf6abbb14f4d2fbb202535911e9640fdab487be93acdcf7f1",
+  "rational_cell_controls": [
+    {"denominator": "10", "numerator": "11"},
+    {"denominator": "1", "numerator": "2"},
+    {"denominator": "10", "numerator": "23"},
+    {"denominator": "10", "numerator": "107"},
+    {"denominator": "5", "numerator": "501"}
+  ],
+  "rows": [
+    {"quartic_totient_value": {"denominator": "32", "numerator": "9"}, "x": 2},
+    {"quartic_totient_value": {"denominator": "54", "numerator": "17"}, "x": 3},
+    {"quartic_totient_value": {"denominator": "9375", "numerator": "3023"}, "x": 5},
+    {"quartic_totient_value": {"denominator": "2100000", "numerator": "681263"}, "x": 10},
+    {"quartic_totient_value": {"denominator": "3103900800000", "numerator": "1006030496027"}, "x": 20},
+    {"quartic_totient_value": {"denominator": "1478100438914642812500000", "numerator": "479213903730423523485059"}, "x": 50},
+    {"quartic_totient_value": {"denominator": "768522654648506141584367382443918690000000000", "numerator": "249183202499910851906373602481760649788143931"}, "x": 100}
+  ],
+  "schema": "riemann.quartic-totient-exact-regression.v1",
+  "status": "PASS_EXACT_L9508_BERNOULLI_MOBIUS_IDENTITY",
+  "verified_x_range": [2, 100]
+}
