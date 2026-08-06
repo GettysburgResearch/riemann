@@ -1,0 +1,18 @@
+{
+  "schema": "riemann.x22101-prime-ramp-wavelet.v1",
+  "expected_coefficients": [
+    {"integer_shift": 1, "h_shift": 0, "coefficient": "1"},
+    {"integer_shift": 1, "h_shift": 1, "coefficient": "-2"},
+    {"integer_shift": 2, "h_shift": 0, "coefficient": "-3"},
+    {"integer_shift": 2, "h_shift": 1, "coefficient": "6"},
+    {"integer_shift": 3, "h_shift": 0, "coefficient": "3"},
+    {"integer_shift": 3, "h_shift": 1, "coefficient": "-6"},
+    {"integer_shift": 4, "h_shift": 0, "coefficient": "-1"},
+    {"integer_shift": 4, "h_shift": 1, "coefficient": "2"}
+  ],
+  "pole_shift_eigenvalue": "1/2",
+  "phi_l2_sq": "2/3",
+  "component_coefficients": ["1", "-2", "-1", "2"],
+  "resolution_exponent": "1",
+  "claimed_diagonal_hardy_exponent": "1/2"
+}
