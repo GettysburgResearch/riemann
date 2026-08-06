@@ -94,11 +94,11 @@ Then the Riemann hypothesis is true.
 
 ## 4. Gevrey diagonal approximation
 
-Fix `s>1`.  Let `G_c^s(R)` be the compactly supported Gevrey class on the real
-logarithmic line.  For
+Fix `s>1`.  Let `G_c^s(\mathbb R)` be the compactly supported Gevrey class on the
+real logarithmic line.  For
 
 \[
- f\in G_c^s(R)
+ f\in G_c^s(\mathbb R)
 \]
 
 there are constants `C,c>0` such that
@@ -339,7 +339,7 @@ The source dimension is
 
 \[
  d_R=R^{o(1)}.
- \ tag{T-19807.24}
+ \tag{T-19807.24}
 \]
 
 Assume the line-centered profile family satisfies the natural Bessel upper
