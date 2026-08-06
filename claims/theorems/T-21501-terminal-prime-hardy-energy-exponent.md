@@ -53,11 +53,15 @@ Put
  \tag{T-21501.2}
 \]
 
-The functional equation and the classical zero-free line `Re(s)=1` give
+The functional equation gives
 
 \[
- 0\le\Theta_\zeta<\frac12.
+ 0\le\Theta_\zeta\le\frac12.
 \]
+
+The endpoint value `1/2` is not excluded a priori: the classical zero-free
+line forbids an individual zero on `Re s=1`, but by itself does not forbid a
+sequence of real parts approaching one.
 
 ## 2. Exact Laplace transform
 
@@ -133,30 +137,46 @@ a contradiction. Thus `Theta_zeta<=sigma`, and
 
 ### Upper bound
 
-Fix `sigma>Theta_zeta`. The meromorphic expression (T-21501.3) is analytic on
-`Re z>=sigma`. The line lies a positive horizontal distance from every zeta
-zero. Standard logarithmic-derivative bounds on such a fixed zero-free
-half-plane give, uniformly for `u>=sigma`,
+Fix `sigma>Theta_zeta` and write
 
 \[
- \frac{\zeta'}{\zeta}\!\left(u+\frac12+it\right)
- =O_\sigma((1+\log(2+|t|))^2).
+ F_G(z)=-\widehat G(z)\frac{\zeta'}{\zeta}\!\left(z+\frac12\right).
+\]
+
+The product, not its two factors separately, is analytic on `Re z>=sigma`.
+If this half-plane contains `z=1/2`, the apparent singularity there is
+removable because `widehat G(1/2)=0` with sufficient order.
+
+Choose finite constants `U>1` and `T>1`. On the compact set
+
+\[
+ \{z:\sigma\le\operatorname{Re}z\le U,
+       |\operatorname{Im}z|\le T\},
+\]
+
+the analytically continued product `F_G` is bounded, including at the removed
+pole.
+
+Outside that compact set:
+
+- the line lies a positive horizontal distance from every nontrivial zero;
+- standard logarithmic-derivative estimates give polylogarithmic growth in
+  `|t|` on each fixed vertical strip away from the removed pole;
+- `widehat G` supplies two inverse powers of `|t|`;
+- for `u>=U`, the absolutely convergent Dirichlet series for
+  `-zeta'/zeta(u+1/2+it)` is uniformly bounded, while the positive support of
+  `G` prevents growth of `widehat G(u+it)` as `u` tends to infinity.
+
+It follows that
+
+\[
+ \boxed{
+ \sup_{u>\sigma}
+ \int_{\mathbb R}|F_G(u+it)|^2dt<\infty.}
  \tag{T-21501.6}
 \]
 
-The compact piecewise-linear window gives two powers of vertical decay, so
-
-\[
- \sup_{u>\sigma}
- \int_{\mathbb R}
- \left|
- \widehat G(u+it)
- \frac{\zeta'}{\zeta}\!\left(u+\frac12+it\right)
- \right|^2dt<\infty.
- \tag{T-21501.7}
-\]
-
-Thus (T-21501.3) belongs to Hardy `H^2` of the half-plane `Re z>sigma`.
+Thus `F_G` belongs to Hardy `H^2` of the half-plane `Re z>sigma`.
 The half-plane Paley–Wiener theorem supplies one causal `L^2` inverse. On
 `Re z>1/2` that inverse has the same Laplace transform as
 `e^{-sigma x}Q_G(x)`; uniqueness of the Laplace transform identifies them.
@@ -175,7 +195,7 @@ Let `x_0` be any number below the support of `Q_G`, and put
 \[
  \mathcal E_G(X)
  =\int_{x_0}^{X}|Q_G(x)|^2\,dx.
- \tag{T-21501.8}
+ \tag{T-21501.7}
 \]
 
 For every nonnegative locally integrable function, the abscissa of convergence
@@ -187,7 +207,7 @@ cumulative mass. Hence
  \Theta_\zeta
  =\limsup_{X\to\infty}
   \frac{\log(1+\mathcal E_G(X))}{2X}.}
- \tag{T-21501.9}
+ \tag{T-21501.8}
 \]
 
 For completeness, if the limsup is `alpha`, then:
@@ -201,18 +221,18 @@ For completeness, if the limsup is `alpha`, then:
   \ge e^{-2\sigma X}\mathcal E_G(X).
   \]
 
-This proves (T-21501.9) without a phase or noncancellation hypothesis.
+This proves (T-21501.8) without a phase or noncancellation hypothesis.
 
 ## 5. Full RH criterion
 
-Equations (T-21501.5) and (T-21501.9) give
+Equations (T-21501.5) and (T-21501.8) give
 
 \[
  \boxed{
  \mathrm{RH}
  \iff
  \mathcal E_G(X)=\exp(o(X)).}
- \tag{T-21501.10}
+ \tag{T-21501.9}
 \]
 
 Equivalently,
@@ -223,7 +243,7 @@ Equivalently,
  \iff
  e^{-\sigma x}Q_G(x)\in L^2(\mathbb R)
  \quad\text{for every }\sigma>0.}
- \tag{T-21501.11}
+ \tag{T-21501.10}
 \]
 
 This is a phase-robust global criterion. A hypothetical off-line zero forces an
@@ -235,7 +255,7 @@ More generally, a bound
 \[
  \mathcal E_G(X)\le C_\varepsilon
  \exp\{(2\theta+\varepsilon)X\}
- \tag{T-21501.12}
+ \tag{T-21501.11}
 \]
 
 for every `epsilon>0` excludes zeros in
@@ -263,7 +283,7 @@ coordinates:
 &=\limsup_{X\to\infty}
  \frac{\log(1+\mathcal E_G(X))}{2X}.
 \end{aligned}}
-\tag{T-21501.13}
+\tag{T-21501.12}
 \]
 
 Thus the square-screw scalar, the constant D-0001 matrix coordinate, and the
