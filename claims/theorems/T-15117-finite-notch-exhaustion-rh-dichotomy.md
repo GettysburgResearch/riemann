@@ -14,11 +14,12 @@ Retain the triangular pole-free window `G_h` from `L-15409`. Enumerate the
 distinct positive ordinates at which a critical-line zero occurs as
 
 \[
- 0<\gamma_1<\gamma_2<\cdots,
+ 0<\gamma_1<\gamma_2<\cdots.
 \]
 
-and let `m_k` denote the total multiplicity at the pair of ordinates
-`+-gamma_k` as appropriate in the real zero expansion.
+Let `m_k` denote the multiplicity at the positive ordinate `gamma_k`. The zero
+at `-gamma_k` has the same multiplicity by conjugation; the explicit factor `2`
+in the real bounds below accounts for that conjugate pair.
 
 For each `k`, put
 
