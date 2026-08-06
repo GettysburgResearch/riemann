@@ -280,6 +280,23 @@ and summation of the block upper bounds.
 Equation (L-15143.7) is exactly the abscissa-of-convergence formulation of the
 same proof.
 
+If a zero lies on the weighted boundary
+
+\[
+ \Re\rho-1/2=\sigma,
+\]
+
+then after multiplication by `e^{-sigma x}` its contribution is a nonzero
+oscillatory exponential, because `Ghat_h(rho-1/2)` does not vanish in the open
+strip. Grouping equal ordinates and using the Bohr mean square shows that this
+boundary packet has positive mean square; hence its integral on `[0,infinity)`
+diverges. Therefore the weighted energy is finite precisely when there is no
+zero with
+
+\[
+ \Re\rho-1/2\ge\sigma.
+\]
+
 ## 6. Finite prime-pair Gram form
 
 Expanding the square gives
@@ -332,7 +349,7 @@ nonnegative, phase-complete energy:
 The first observable is one-sided and may have sparse negative excursions; the
 second cannot lose an off-line mode by phase cancellation.
 
-For every `omega>0`, (L-15143.7) also gives
+For every `omega>0`, (L-15143.7) and the boundary argument above give
 
 \[
  \int_0^\infty e^{-2\omega x}|Q_h(x)|^2dx<\infty
@@ -341,7 +358,7 @@ For every `omega>0`, (L-15143.7) also gives
 if and only if no zero lies in
 
 \[
- \Re s>1/2+\omega.
+ \Re s\ge1/2+\omega.
 \]
 
 This is the prime-side Hardy-space counterpart of the Hilbert--Poisson
@@ -375,6 +392,7 @@ both proof and disproof.
 
 - The exponent theorem is an exact consequence of the pole-free transform,
   explicit-formula continuation, and elementary Hardy/Laplace theory.
+- Boundary zeros make the corresponding weighted energy diverge.
 - It does not establish the subexponential prime-pair estimate
   (L-15143.17); doing so would prove RH.
 - Finite positive energy blocks do not prove or disprove RH without a global
