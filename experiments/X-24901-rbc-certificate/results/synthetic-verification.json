@@ -1,0 +1,50 @@
+{
+  "K": 8,
+  "charge_rate": "3/4",
+  "classification": "EXACT_SYNTHETIC_RBC_SCHEMA_REGRESSION",
+  "delta": "1/8",
+  "euler_order": 512,
+  "internal_face_count": 2,
+  "lower_scale": "7/8",
+  "non_top_rows": [
+    {
+      "amplitude_exponent": "-95/2",
+      "ell": 6,
+      "eta": "3/32",
+      "j": 1
+    },
+    {
+      "amplitude_exponent": "-79/2",
+      "ell": 5,
+      "eta": "5/64",
+      "j": 2
+    },
+    {
+      "amplitude_exponent": "-63/2",
+      "ell": 4,
+      "eta": "1/16",
+      "j": 3
+    },
+    {
+      "amplitude_exponent": "-47/2",
+      "ell": 3,
+      "eta": "3/64",
+      "j": 4
+    },
+    {
+      "amplitude_exponent": "-31/2",
+      "ell": 2,
+      "eta": "1/32",
+      "j": 5
+    },
+    {
+      "amplitude_exponent": "-15/2",
+      "ell": 1,
+      "eta": "1/64",
+      "j": 6
+    }
+  ],
+  "physical_face_count": 2,
+  "proof_object_sha256": "5d6cd05fa076f1ff019d8eea9af9333b49f783bcab835d584a53f4dbdfd36dab",
+  "reserve": "1/2"
+}
