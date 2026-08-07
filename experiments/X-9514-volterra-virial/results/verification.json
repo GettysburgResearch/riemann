@@ -1,0 +1,74 @@
+{
+  "formal_symbol": "C=1/zeta(2)=6/pi^2",
+  "proof_boundary": "Exact finite-cell algebra only.  The checker does not prove the critical X^(2+epsilon) joint remainder or RH.",
+  "proof_object_sha256": "8c6a2dfa0425ff479c096519091babe922927bbd0637957d76e69e32422b58f5",
+  "rows": [
+    {
+      "endpoint": 2,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 3, "numerator": 2},
+        {"denominator": 6, "numerator": -17},
+        {"denominator": 10, "numerator": 31}
+      ]
+    },
+    {
+      "endpoint": 3,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 6, "numerator": 43},
+        {"denominator": 4, "numerator": -105},
+        {"denominator": 5, "numerator": 121}
+      ]
+    },
+    {
+      "endpoint": 5,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 27, "numerator": 2884},
+        {"denominator": 6, "numerator": -2191},
+        {"denominator": 5, "numerator": 1562}
+      ]
+    },
+    {
+      "endpoint": 10,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 6615, "numerator": 24026374},
+        {"denominator": 42, "numerator": -506221},
+        {"denominator": 10, "numerator": 99999}
+      ]
+    },
+    {
+      "endpoint": 20,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 2822519582883, "numerator": 332127277930665304},
+        {"denominator": 646646, "numerator": -250959860003},
+        {"denominator": 10, "numerator": 3199999}
+      ]
+    },
+    {
+      "endpoint": 32,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 30168382650889370562675, "numerator": 37334014928421724022148487564},
+        {"denominator": 66853496710, "numerator": -272461557212005321},
+        {"denominator": 10, "numerator": 33554431}
+      ]
+    },
+    {
+      "endpoint": 50,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 872514103227051309124309337639511, "numerator": 10068681219039893002322850155641837019902},
+        {"denominator": 9459842809053714, "numerator": -359284895542735426073353},
+        {"denominator": 10, "numerator": 312499999}
+      ]
+    },
+    {
+      "endpoint": 64,
+      "two_integral_analytic_square_QC": [
+        {"denominator": 3439141100477421155664200890777270937654973225, "numerator": 136416015253678918440234389159351063386901292441647584},
+        {"denominator": 117288381359406970983270, "numerator": -15308850818522217910306426903457},
+        {"denominator": 10, "numerator": 1073741823}
+      ]
+    }
+  ],
+  "schema": "riemann.x9514-volterra-virial.v1",
+  "verdict": "PASS_EXACT_L9514_VOLTERRA_VIRIAL_IDENTITY",
+  "verified_endpoint_range": [2, 64]
+}
