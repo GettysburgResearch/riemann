@@ -1,14 +1,15 @@
 # T-15122 — Vanishing-rate high-order Type-II systems imply RH
 
 Claim ID: `T-15122`  
-Title: A family of high-order safe-window row systems with scale contraction dominating its coefficient-growth rate forces the common rightmost-zero exponent to vanish  
+Title: A family of high-order safe-window packet systems with scale contraction dominating its coefficient-growth rate forces the common rightmost-zero exponent to vanish  
 Status: **PROPOSED EXACT COMPOSITION THEOREM PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-04-f`  
 Created: 2026-08-07  
-Dependencies: `L-15151`, `L-15154`--`L-15156`, `T-15121`  
+Updated: 2026-08-07 with the fixed-reserve partition of `L-15157`  
+Dependencies: `L-15151`, `L-15154`--`L-15157`, `T-15121`  
 Scope: quantitative composition theorem for increasing Heath--Brown order
 
-## 1. Quantitative row recurrence
+## 1. Quantitative packet recurrence
 
 For every integer `K>=2`, let
 
@@ -30,7 +31,7 @@ Suppose there are numbers
  \tag{T-15122.2}
 \]
 
-such that, uniformly over the finite row dictionary,
+such that, uniformly over the finite packet dictionary,
 
 \[
  \boxed{
@@ -53,7 +54,7 @@ Put
 
 \[
  M_K(X)=1+\max_{i,J\le X}E_{K,i}(J).
- \]
+\]
 
 Equation (T-15122.3) gives
 
@@ -89,8 +90,8 @@ rightmost-zero exponent
  \tag{T-15122.6}
 \]
 
-The block energy is one component of `mathbf E_K`, up to the finite row factor
-in `L-15156`. Therefore (T-15122.5) implies
+The block energy is bounded by the finite auxiliary packet vector in `L-15156`.
+Therefore (T-15122.5) implies
 
 \[
  \boxed{
@@ -99,7 +100,7 @@ in `L-15156`. Therefore (T-15122.5) implies
  \tag{T-15122.7}
 \]
 
-for every `K` for which the recurrence is proved.
+for every `K` for which the complete packet recurrence is proved.
 
 Consequently, if
 
@@ -113,7 +114,7 @@ then
 
 \[
  \Theta_\zeta=0
- \]
+\]
 
 and hence
 
@@ -122,14 +123,39 @@ and hence
  \tag{T-15122.9}
 \]
 
-This allows a small exponentially growing coefficient at each fixed identity
-order. The rate need only be negligible relative to the strict scale
-contraction as the order increases.
+## 4. Fixed-reserve corollary
 
-## 4. Tensor-row version
+`L-15157` proves that the first-crossing partition may use any fixed
 
-Suppose a row is bounded by a finite product of lower-scale auxiliary energies.
-If
+\[
+ 0<\delta<{1\over2}
+\]
+
+for every identity order. Type-II packets then have both factor scales at most
+`(1-delta)J+O_K(1)`, and every failure is declared Type I with a small factor
+at scale `delta J+O_K(1)`.
+
+Thus one may take
+
+\[
+ \delta_K=\delta
+ \tag{T-15122.10}
+\]
+
+uniformly. In the linear packet system, the high-order sufficient condition
+simplifies to
+
+\[
+ \boxed{\varepsilon_K\longrightarrow0.}
+ \tag{T-15122.11}
+\]
+
+No artificial `1/K` contraction loss is present.
+
+## 5. Tensor-packet version
+
+Suppose a packet is bounded by a finite product of lower-scale auxiliary
+energies. If
 
 \[
  E_{K,i}(J)
@@ -138,14 +164,14 @@ If
  \prod_s
  \left[1+M_K(\alpha_{K,s}J)
  \right]^{\theta_{K,s}},
- \tag{T-15122.10}
+ \tag{T-15122.12}
 \]
 
 and
 
 \[
  \kappa_K=\sum_s\theta_{K,s}\alpha_{K,s}<1,
- \tag{T-15122.11}
+ \tag{T-15122.13}
 \]
 
 then
@@ -153,20 +179,20 @@ then
 \[
  \limsup_{X\to\infty}{\log M_K(X)\over X}
  \le{\varepsilon_K\over1-\kappa_K}.
- \tag{T-15122.12}
+ \tag{T-15122.14}
 \]
 
 Thus the sufficient high-order condition is
 
 \[
  {\varepsilon_K\over1-\kappa_K}\to0.
- \tag{T-15122.13}
+ \tag{T-15122.15}
 \]
 
 This is the quantitative closure appropriate to genuinely tensorized Type-II
-rows.
+packets.
 
-## 5. Why varying the window is legitimate
+## 6. Why varying the window is legitimate
 
 The window changes with `K`, but the spectral exponent does not. For every
 finite `K`, the transform of `H^[K+1]`:
@@ -178,21 +204,26 @@ finite `K`, the transform of `H^[K+1]`:
 It is enough to derive a sequence of upper bounds on the same invariant and let
 `K` increase. No limiting window or uniform convergence of windows is used.
 
-## 6. Exact review hinge
+## 7. Exact review hinge
 
-A full proof through this route requires a centered packet estimate whose
-coefficient rate satisfies (T-15122.8) or (T-15122.13). The exact packet and its
-rowwise centering are already constructed in `L-15156`.
+A full proof through this route requires the complete `CP(K)` estimate of
+`M-15112`, including:
+
+- signed packet recombination;
+- certified companions and transition residuals;
+- terminal Type-I estimates;
+- a closed auxiliary system;
+- a coefficient rate satisfying (T-15122.11) or (T-15122.15).
 
 The theorem rejects three invalid substitutes:
 
 - a fixed positive exponential rate independent of `K`;
 - a decomposition estimate that loses the signed binomial packet by rowwise
   total variation;
-- a scale factor tending to one faster than the coefficient rate tends to zero.
+- a tensor scale factor tending to one faster than the coefficient rate tends
+  to zero.
 
-## 7. Proof boundary
+## 8. Proof boundary
 
-The quantitative composition is complete. The high-order centered Type-II
-estimate producing `epsilon_K` and `delta_K` remains the arithmetic hinge of
-`M-15112`.
+The quantitative composition is complete. The high-order centered packet
+estimate producing `epsilon_K` remains the arithmetic hinge of `M-15112`.
