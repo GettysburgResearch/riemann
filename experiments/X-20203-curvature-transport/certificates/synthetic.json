@@ -1,0 +1,43 @@
+{
+  "schema": "riemann.x20203-curvature-transport.synthetic.v1",
+  "quadratic_barrier": {
+    "c2": {"numerator": "1", "denominator": "1"},
+    "c1": {"numerator": "0", "denominator": "1"},
+    "c0": {"numerator": "0", "denominator": "1"}
+  },
+  "rows": [
+    {
+      "id": "strict-positive",
+      "A": {"numerator": "3", "denominator": "1"},
+      "tau": {"numerator": "3", "denominator": "1"},
+      "T": {"numerator": "2", "denominator": "1"},
+      "B": {"numerator": "15", "denominator": "4"},
+      "expected_status": "CERTIFIED_POSITIVE"
+    },
+    {
+      "id": "boundary",
+      "A": {"numerator": "3", "denominator": "1"},
+      "tau": {"numerator": "3", "denominator": "1"},
+      "T": {"numerator": "2", "denominator": "1"},
+      "B": {"numerator": "4", "denominator": "1"},
+      "expected_status": "CERTIFIED_ZERO"
+    },
+    {
+      "id": "strict-negative",
+      "A": {"numerator": "1", "denominator": "1"},
+      "tau": {"numerator": "1", "denominator": "1"},
+      "T": {"numerator": "3", "denominator": "1"},
+      "B": {"numerator": "0", "denominator": "1"},
+      "expected_status": "CERTIFIED_NEGATIVE"
+    }
+  ],
+  "transport_blocks": [
+    {
+      "id": "one-atom",
+      "A_left": {"numerator": "2", "denominator": "1"},
+      "A_right": {"numerator": "3", "denominator": "1"},
+      "atom_location": {"numerator": "2", "denominator": "1"},
+      "B_increment": {"numerator": "2", "denominator": "1"}
+    }
+  ]
+}
