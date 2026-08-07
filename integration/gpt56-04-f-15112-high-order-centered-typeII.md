@@ -33,35 +33,44 @@ RH NOT CLAIMED PROVED
 
 ## What is exact
 
-- ordinary-prime/full-von-Mangoldt block equivalence up to `O_K(J^2)`;
+- ordinary-prime/full-von-Mangoldt block equivalence up to a polynomial block error;
 - adjoint/normal operator orientation;
 - arbitrary-order compact safe windows;
-- null-mode quotient for polynomial boundary models;
-- independent centering of every decomposition row;
-- exact truncated Heath--Brown coefficient identity;
-- explicit tuple coefficients and deterministic Type-I/II partition;
-- finite auxiliary self-energy vector;
+- the finite null-mode quotient for global polynomial boundary models;
+- the validation rule for packet companions;
+- the exact truncated Heath--Brown coefficient identity;
+- complete tuple coefficients and deterministic Type-I/II partition;
+- reduced-complexity and terminal Type-I flags;
+- signed destination-packet grouping before Gram Cauchy--Schwarz;
+- a finite auxiliary self-energy schema;
 - scalar, vector, tensor, and increasing-order scale-contraction composition.
 
-## Exact review hinge
+## What remains inside `CP(K)`
 
-The sole analytic proposal is `CP(K)`:
+A finite cutoff packet is not automatically equal to its global Laurent
+principal part. The analytic packet theorem must still provide:
 
-```text
-centered finite Heath-Brown packet
-  -> strict scale-contraction recurrence
-  -> coefficient rate epsilon_K
-  -> epsilon_K / delta_K -> 0
-```
+1. a useful source-bound companion certified in the null space, or use the zero companion;
+2. every shifted-Heaviside and compact transition residual;
+3. direct estimates for terminal Type-I packets;
+4. centered Type-II factor-ratio estimates;
+5. a closed linear/tensor recurrence for all declared auxiliary packets;
+6. a coefficient rate satisfying
+   ```text
+   epsilon_K / delta_K -> 0
+   ```
+   or the tensor analogue.
 
-or its tensor analogue. A reviewer should not accept:
+## Reject during review
 
 - total variation before signed packet recombination;
-- a row companion outside the declared null space;
+- an uncertified row companion;
+- deletion of a cutoff/transition residual;
 - product-dilation/factor-ratio substitution;
-- an undeclared auxiliary row;
+- an undeclared auxiliary or terminal Type-I packet;
 - a scale destination above the declared contraction;
-- a fixed positive exponential loss independent of `K`.
+- a fixed positive exponential loss independent of `K`;
+- inference from finitely many orders to RH.
 
 ## Exact regression
 
