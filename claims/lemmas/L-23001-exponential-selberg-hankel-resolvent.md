@@ -133,7 +133,7 @@ Pair (L-23001.2) with `f_lambda`. Equations (L-23001.5) and (L-23001.7) yield
    \left|\int_0^\infty e^{-sx}\,d\nu(x)\right|^2ds\\
  &=\langle R,f_\lambda\rangle.
  \end{aligned}}
- \tag{L-23001.8)
+ \tag{L-23001.8}
 \]
 
 For real `nu`, the quadratic term is nonnegative. Consequently
