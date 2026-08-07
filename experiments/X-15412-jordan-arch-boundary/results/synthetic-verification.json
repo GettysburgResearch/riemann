@@ -1,0 +1,159 @@
+{
+  "archimedean": {
+    "beta_channel_moment": {
+      "denominator": "5",
+      "numerator": "7"
+    },
+    "boundary_signed_zero_slope": {
+      "denominator": "4",
+      "numerator": "5"
+    },
+    "positive_majorant_moment": {
+      "denominator": "10",
+      "numerator": "21"
+    },
+    "score": {
+      "denominator": "3",
+      "numerator": "1"
+    },
+    "signed_moment": {
+      "denominator": "10",
+      "numerator": "7"
+    },
+    "volterra_channel_moment": {
+      "denominator": "10",
+      "numerator": "7"
+    }
+  },
+  "cauchy_boundary": {
+    "endpoint_trace": {
+      "denominator": "1",
+      "numerator": "1"
+    },
+    "gram": {
+      "denominator": "19",
+      "numerator": "15"
+    },
+    "left_derivative": {
+      "denominator": "19",
+      "numerator": "9"
+    },
+    "right_derivative": {
+      "denominator": "19",
+      "numerator": "10"
+    }
+  },
+  "jordan": {
+    "conditional_mean": {
+      "denominator": "9",
+      "numerator": "1"
+    },
+    "conditional_second_moment": {
+      "denominator": "216",
+      "numerator": "323"
+    },
+    "conditional_variance": {
+      "denominator": "648",
+      "numerator": "961"
+    },
+    "norm_squared": {
+      "denominator": "5336100",
+      "numerator": "12500821"
+    },
+    "pair_carre_du_champ": {
+      "denominator": "648",
+      "numerator": "961"
+    },
+    "rows": [
+      {
+        "amplitude": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "fiber_weight_sum": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "n": 1,
+        "sum_phi_divisors": "1"
+      },
+      {
+        "amplitude": {
+          "denominator": "2",
+          "numerator": "-1"
+        },
+        "fiber_weight_sum": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "n": 2,
+        "sum_phi_divisors": "2"
+      },
+      {
+        "amplitude": {
+          "denominator": "3",
+          "numerator": "2"
+        },
+        "fiber_weight_sum": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "n": 3,
+        "sum_phi_divisors": "3"
+      },
+      {
+        "amplitude": {
+          "denominator": "5",
+          "numerator": "3"
+        },
+        "fiber_weight_sum": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "n": 4,
+        "sum_phi_divisors": "4"
+      },
+      {
+        "amplitude": {
+          "denominator": "7",
+          "numerator": "-2"
+        },
+        "fiber_weight_sum": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "n": 6,
+        "sum_phi_divisors": "6"
+      },
+      {
+        "amplitude": {
+          "denominator": "11",
+          "numerator": "5"
+        },
+        "fiber_weight_sum": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "n": 12,
+        "sum_phi_divisors": "12"
+      }
+    ]
+  },
+  "pole_zero": {
+    "polarized_boundary_coefficient": {
+      "denominator": "28",
+      "numerator": "15"
+    },
+    "positive_majorant_pole_coefficient": {
+      "denominator": "14",
+      "numerator": "15"
+    },
+    "signed_limit": {
+      "denominator": "28",
+      "numerator": "15"
+    }
+  },
+  "proof_boundary": "exact finite rational algebra only; the regularized full-Phi Mellin/Volterra metric identity is not certified",
+  "schema": "riemann.x15412-jordan-arch-boundary.synthetic.v1",
+  "status": "EXACT_JORDAN_ARCHIMEDEAN_BOUNDARY_ALGEBRA"
+}

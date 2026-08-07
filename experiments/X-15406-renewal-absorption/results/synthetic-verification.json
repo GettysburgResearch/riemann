@@ -1,0 +1,30 @@
+{
+  "absorption_probability": {
+    "denominator": "568",
+    "numerator": "209"
+  },
+  "prime_power_count": 6,
+  "primitive": {
+    "denominator": "144",
+    "numerator": "209"
+  },
+  "proof_boundary": "finite rational divisibility model only; logarithmic weights are synthetic",
+  "renewal_atoms": {
+    "1": {"denominator": "1", "numerator": "0"},
+    "2": {"denominator": "2", "numerator": "1"},
+    "3": {"denominator": "3", "numerator": "2"},
+    "4": {"denominator": "2", "numerator": "1"},
+    "6": {"denominator": "2", "numerator": "1"},
+    "8": {"denominator": "8", "numerator": "3"},
+    "9": {"denominator": "9", "numerator": "4"},
+    "12": {"denominator": "3", "numerator": "1"},
+    "16": {"denominator": "4", "numerator": "1"}
+  },
+  "schema": "riemann.x15406-renewal-absorption.synthetic.v1",
+  "starting_mass": {
+    "denominator": "18",
+    "numerator": "71"
+  },
+  "state_count": 9,
+  "status": "EXACT_SYNTHETIC_RENEWAL_ABSORPTION_IDENTITY"
+}

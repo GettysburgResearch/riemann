@@ -1,0 +1,29 @@
+{
+  "schema": "riemann.x15406-renewal-absorption.synthetic.v1",
+  "window_center": 4,
+  "kernel": [
+    {"numerator": 1, "denominator": 1},
+    {"numerator": 2, "denominator": 1},
+    {"numerator": 1, "denominator": 1}
+  ],
+  "prime_generators": [
+    {"prime": 2, "log_weight": 1},
+    {"prime": 3, "log_weight": 2}
+  ],
+  "states": [
+    {"exponents": [0, 0]},
+    {"exponents": [1, 0]},
+    {"exponents": [0, 1]},
+    {"exponents": [2, 0]},
+    {"exponents": [1, 1]},
+    {"exponents": [3, 0]},
+    {"exponents": [0, 2]},
+    {"exponents": [2, 1]},
+    {"exponents": [4, 0]}
+  ],
+  "claimed": {
+    "primitive": {"numerator": 209, "denominator": 144},
+    "starting_mass": {"numerator": 71, "denominator": 18},
+    "absorption_probability": {"numerator": 209, "denominator": 568}
+  }
+}

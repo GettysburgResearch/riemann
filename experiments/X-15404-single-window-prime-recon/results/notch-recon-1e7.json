@@ -1,0 +1,73 @@
+{
+  "classification": "EMPIRICAL_NON_DIRECTED",
+  "cutoff": 10000000,
+  "fft_size": 262144,
+  "grid_points_per_ladder": 3000,
+  "ladders": [
+    {
+      "density_integral": 1.0,
+      "design_zero_ordinates": [],
+      "empirical_mean_square": 2.973266193982446e-05,
+      "empirical_rms": 0.0054527664483108446,
+      "full_window_support_max": 5.386294361119891,
+      "maximum": {"value": 0.009533061646291913, "x": 15.103897946461727},
+      "minimum": {"value": -0.010083196831300354, "x": 17.08223052434259},
+      "notch_count": 0,
+      "notch_support_cost": 0.0,
+      "profile_box_length": 1.0,
+      "scan_x_max": 18.11809565095832,
+      "scan_x_min": 14.000107237772834
+    },
+    {
+      "density_integral": 1.0,
+      "design_zero_ordinates": [14.134725141734695],
+      "empirical_mean_square": 5.448882367903828e-09,
+      "empirical_rms": 7.381654535335441e-05,
+      "full_window_support_max": 6.275336807177456,
+      "maximum": {"value": 0.000107502864160584, "x": 14.97871809817213},
+      "minimum": {"value": -0.00010946761937892909, "x": 17.52181136105805},
+      "notch_count": 1,
+      "notch_support_cost": 0.4445212230287824,
+      "profile_box_length": 1.4445212230287825,
+      "scan_x_max": 18.11809565095832,
+      "scan_x_min": 14.003339160388244
+    },
+    {
+      "density_integral": 1.0,
+      "design_zero_ordinates": [14.134725141734695, 21.022039638771556],
+      "empirical_mean_square": 1.3531967899672564e-14,
+      "empirical_rms": 1.1632698697925844e-07,
+      "full_window_support_max": 6.873108042999057,
+      "maximum": {"value": 2.226872679643412e-07, "x": 15.44464577950952},
+      "minimum": {"value": -2.230552122203971e-07, "x": 18.020606595337465},
+      "notch_count": 2,
+      "notch_support_cost": 0.7434068409395833,
+      "profile_box_length": 1.7434068409395833,
+      "scan_x_max": 18.11809565095832,
+      "scan_x_min": 14.001057840508413
+    },
+    {
+      "density_integral": 1.0,
+      "design_zero_ordinates": [
+        14.134725141734695,
+        21.022039638771556,
+        25.01085758014569,
+        30.424876125859512,
+        32.93506158773919
+      ],
+      "empirical_mean_square": 2.5293788171466795e-18,
+      "empirical_rms": 1.5904020929144553e-09,
+      "full_window_support_max": 8.170124067971278,
+      "maximum": {"value": 4.184029158344889e-09, "x": 15.603736711343721},
+      "minimum": {"value": -3.115848013917418e-09, "x": 15.577199941532488},
+      "notch_count": 5,
+      "notch_support_cost": 1.391914853425694,
+      "profile_box_length": 2.391914853425694,
+      "scan_x_max": 18.11809565095832,
+      "scan_x_min": 14.001579233990357
+    }
+  ],
+  "ordinary_primes": 664579,
+  "prime_power_terms": 665134,
+  "proof_boundary": "notches use mpmath midpoint zeros; FFT/window and prime accumulation are ordinary floating arithmetic"
+}

@@ -1,0 +1,100 @@
+{
+  "classification": "EMPIRICAL_NON_DIRECTED",
+  "comparisons": [
+    {
+      "a": 3.0,
+      "difference": 3.920312262751385e-11,
+      "prime_power_terms": 19,
+      "prime_statistic": -0.0012657686444210725,
+      "trivial_zero_prediction": -0.0006591579803560872,
+      "x": 6.0,
+      "zero_prediction_first_n": -0.000606610703268108
+    },
+    {
+      "a": 4.0,
+      "difference": 1.022992856879751e-09,
+      "prime_power_terms": 74,
+      "prime_statistic": -9.54953744702891e-06,
+      "trivial_zero_prediction": -4.425665511117922e-06,
+      "x": 8.0,
+      "zero_prediction_first_n": -5.1248949287678685e-06
+    },
+    {
+      "a": 5.0,
+      "difference": 1.3963199087827613e-09,
+      "prime_power_terms": 367,
+      "prime_statistic": 0.0007507225101477388,
+      "trivial_zero_prediction": -2.981796976314475e-08,
+      "x": 10.0,
+      "zero_prediction_first_n": 0.0007507509317975932
+    },
+    {
+      "a": 5.166326230231823,
+      "difference": -5.438933528853744e-10,
+      "prime_power_terms": 489,
+      "prime_statistic": 0.006113779573986733,
+      "trivial_zero_prediction": -1.2980905709057109e-08,
+      "x": 10.332652460463645,
+      "zero_prediction_first_n": 0.006113793098785795
+    },
+    {
+      "a": 6.0,
+      "difference": 1.6035230756863893e-09,
+      "prime_power_terms": 2067,
+      "prime_statistic": -0.0006726389832181212,
+      "trivial_zero_prediction": -2.0091166173636428e-10,
+      "x": 12.0,
+      "zero_prediction_first_n": -0.0006726403858295352
+    },
+    {
+      "a": 7.0,
+      "difference": 5.751577783185007e-09,
+      "prime_power_terms": 12508,
+      "prime_statistic": -5.871604179219503e-05,
+      "trivial_zero_prediction": -1.35373209888805e-12,
+      "x": 14.0,
+      "zero_prediction_first_n": -5.8721792016246115e-05
+    },
+    {
+      "a": 8.0,
+      "difference": 1.692508967317657e-08,
+      "prime_power_terms": 78331,
+      "prime_statistic": 0.00046858593702836515,
+      "trivial_zero_prediction": -9.121375129641423e-15,
+      "x": 16.0,
+      "zero_prediction_first_n": 0.00046856901194781335
+    },
+    {
+      "a": 8.832416773701063,
+      "difference": 2.8139323350425357e-08,
+      "prime_power_terms": 367506,
+      "prime_statistic": -0.006020674487444921,
+      "trivial_zero_prediction": -1.420660350328523e-16,
+      "x": 17.664833547402125,
+      "zero_prediction_first_n": -0.00602070262676813
+    }
+  ],
+  "c_star": 0.2246844183699208,
+  "cutoff": 10000000,
+  "fft_size": 131072,
+  "grid_points": 10000,
+  "ordinary_primes": 664579,
+  "prime_power_terms": 665134,
+  "proof_boundary": "IEEE-754/FFT/mpmath reconnaissance; not directed and not an independent explicit-formula or prime-manifest certificate",
+  "scan": {
+    "maximum": {
+      "value": 0.006113779573986733,
+      "x": 10.332652460463645
+    },
+    "minimum": {
+      "value": -0.006020674487444921,
+      "x": 17.664833547402125
+    },
+    "x_max": 18.11809565095832,
+    "x_min": 6.0
+  },
+  "window_integral": 1.0,
+  "window_maximum": 1.6177470719359408,
+  "window_minimum": -3.469446951953614e-16,
+  "zero_count": 50
+}

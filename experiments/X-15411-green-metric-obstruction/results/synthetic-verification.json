@@ -1,0 +1,40 @@
+{
+  "T": [
+    [
+      {"denominator": "1", "numerator": "0"},
+      {"denominator": "1", "numerator": "2"}
+    ],
+    [
+      {"denominator": "2", "numerator": "1"},
+      {"denominator": "1", "numerator": "0"}
+    ]
+  ],
+  "TstarT_physical": [
+    [
+      {"denominator": "4", "numerator": "1"},
+      {"denominator": "1", "numerator": "0"}
+    ],
+    [
+      {"denominator": "1", "numerator": "0"},
+      {"denominator": "1", "numerator": "4"}
+    ]
+  ],
+  "physical_norm_squared": {
+    "denominator": "1",
+    "numerator": "4"
+  },
+  "proof_boundary": "exact rational similarity counterexample only; a source-specific physical Green identity may still hold",
+  "quotient_gram": [
+    [
+      {"denominator": "4", "numerator": "1"},
+      {"denominator": "1", "numerator": "0"}
+    ],
+    [
+      {"denominator": "1", "numerator": "0"},
+      {"denominator": "1", "numerator": "1"}
+    ]
+  ],
+  "quotient_isometry": true,
+  "schema": "riemann.x15411-green-metric-obstruction.synthetic.v1",
+  "status": "EXACT_GREEN_METRIC_SIMILARITY_OBSTRUCTION"
+}

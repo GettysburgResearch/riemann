@@ -1,0 +1,48 @@
+{
+  "anchored_cross": {
+    "entries": [
+      {"denominator": "101", "numerator": "-1"},
+      {"denominator": "301", "numerator": "-101"},
+      {"denominator": "2", "numerator": "-1"}
+    ]
+  },
+  "endpoint": {
+    "determinant": {"denominator": "9150701", "numerator": "490050"},
+    "entries": [
+      {"denominator": "101", "numerator": "100"},
+      {"denominator": "301", "numerator": "200"},
+      {"denominator": "2", "numerator": "1"}
+    ]
+  },
+  "nodes": {
+    "midpoint": {"denominator": "200", "numerator": "101"},
+    "x": {"denominator": "100", "numerator": "1"},
+    "y": {"denominator": "1", "numerator": "1"}
+  },
+  "one_green": {
+    "determinant": {"denominator": "9150701", "numerator": "490050"},
+    "entries": [
+      {"denominator": "101", "numerator": "100"},
+      {"denominator": "301", "numerator": "200"},
+      {"denominator": "2", "numerator": "1"}
+    ]
+  },
+  "proof_boundary": "exact rational model only; the zeta-specific smoothed Jordan derivative inequality remains open",
+  "raw": {
+    "determinant": {"denominator": "18301402", "numerator": "-1970001"},
+    "entries": [
+      {"denominator": "101", "numerator": "1"},
+      {"denominator": "301", "numerator": "101"},
+      {"denominator": "2", "numerator": "1"}
+    ]
+  },
+  "schema": "riemann.x15413-regular-endpoint-tail.synthetic.v1",
+  "status": "EXACT_REGULAR_ENDPOINT_TAIL_CORRECTION",
+  "total": {
+    "entries": [
+      {"denominator": "1", "numerator": "1"},
+      {"denominator": "1", "numerator": "1"},
+      {"denominator": "1", "numerator": "1"}
+    ]
+  }
+}

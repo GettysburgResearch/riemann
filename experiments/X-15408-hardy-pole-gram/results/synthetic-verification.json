@@ -1,0 +1,128 @@
+{
+  "boundary_l1_abel_bound": {
+    "denominator": "1",
+    "numerator": "2"
+  },
+  "boundary_packet": {
+    "cauchy_gram": [
+      [
+        {
+          "imag": {"denominator": "1", "numerator": "0"},
+          "real": {"denominator": "1", "numerator": "5"}
+        },
+        {
+          "imag": {"denominator": "26", "numerator": "25"},
+          "real": {"denominator": "26", "numerator": "5"}
+        }
+      ],
+      [
+        {
+          "imag": {"denominator": "26", "numerator": "-25"},
+          "real": {"denominator": "26", "numerator": "5"}
+        },
+        {
+          "imag": {"denominator": "1", "numerator": "0"},
+          "real": {"denominator": "1", "numerator": "5"}
+        }
+      ]
+    ],
+    "energy": {"denominator": "13", "numerator": "105"},
+    "poles": [
+      {
+        "imag": {"denominator": "1", "numerator": "1"},
+        "real": {"denominator": "1", "numerator": "0"}
+      },
+      {
+        "imag": {"denominator": "1", "numerator": "2"},
+        "real": {"denominator": "1", "numerator": "0"}
+      }
+    ],
+    "residues": [
+      {
+        "imag": {"denominator": "1", "numerator": "0"},
+        "real": {"denominator": "1", "numerator": "1"}
+      },
+      {
+        "imag": {"denominator": "1", "numerator": "1"},
+        "real": {"denominator": "1", "numerator": "0"}
+      }
+    ],
+    "sigma": {"denominator": "10", "numerator": "1"},
+    "sigma_times_energy": {"denominator": "26", "numerator": "21"}
+  },
+  "proof_boundary": "exact finite Gaussian-rational pole algebra only; no assertion that the Riemann xi right-half-plane pole packet is empty",
+  "schema": "riemann.x15408-hardy-pole-gram.synthetic.v1",
+  "stable_packet": {
+    "cauchy_gram": [
+      [
+        {
+          "imag": {"denominator": "1", "numerator": "0"},
+          "real": {"denominator": "7", "numerator": "10"}
+        }
+      ]
+    ],
+    "energy": {"denominator": "14", "numerator": "45"},
+    "poles": [
+      {
+        "imag": {"denominator": "1", "numerator": "1"},
+        "real": {"denominator": "4", "numerator": "-1"}
+      }
+    ],
+    "residues": [
+      {
+        "imag": {"denominator": "1", "numerator": "0"},
+        "real": {"denominator": "2", "numerator": "3"}
+      }
+    ],
+    "sigma": {"denominator": "10", "numerator": "1"},
+    "sigma_times_energy": {"denominator": "28", "numerator": "9"}
+  },
+  "status": "EXACT_FINITE_HARDY_POLE_GRAM",
+  "unstable_packet": {
+    "cauchy_gram": [
+      [
+        {
+          "imag": {"denominator": "1", "numerator": "0"},
+          "real": {"denominator": "1", "numerator": "50"}
+        },
+        {
+          "imag": {"denominator": "2501", "numerator": "2500"},
+          "real": {"denominator": "2501", "numerator": "50"}
+        }
+      ],
+      [
+        {
+          "imag": {"denominator": "2501", "numerator": "-2500"},
+          "real": {"denominator": "2501", "numerator": "50"}
+        },
+        {
+          "imag": {"denominator": "1", "numerator": "0"},
+          "real": {"denominator": "1", "numerator": "50"}
+        }
+      ]
+    ],
+    "energy": {"denominator": "5002", "numerator": "1562625"},
+    "poles": [
+      {
+        "imag": {"denominator": "2", "numerator": "3"},
+        "real": {"denominator": "4", "numerator": "1"}
+      },
+      {
+        "imag": {"denominator": "2", "numerator": "5"},
+        "real": {"denominator": "4", "numerator": "1"}
+      }
+    ],
+    "residues": [
+      {
+        "imag": {"denominator": "1", "numerator": "-1"},
+        "real": {"denominator": "1", "numerator": "2"}
+      },
+      {
+        "imag": {"denominator": "2", "numerator": "1"},
+        "real": {"denominator": "1", "numerator": "-1"}
+      }
+    ],
+    "sigma": {"denominator": "50", "numerator": "13"},
+    "sigma_times_energy": {"denominator": "10004", "numerator": "812565"}
+  }
+}

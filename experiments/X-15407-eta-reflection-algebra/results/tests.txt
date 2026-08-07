@@ -1,0 +1,25 @@
+X-15407 validation record
+
+Independent exact in-session reconstruction:
+- retained Q(sqrt(2)) hinge certificate: PASS
+- constant moment: PASS
+- linear moment: PASS
+- pole-root value: PASS
+- energy identity: PASS
+- functional-equation reflection identity: PASS
+- zeta-second/log-derivative identity: PASS
+- nonnegative synthetic Selberg coefficients: PASS
+
+Rejecting mutations replayed independently:
+- false energy: REJECTED
+- false reflected value: REJECTED
+- false zeta-second ratio: REJECTED
+- negative Selberg input: REJECTED
+- Boolean integer: REJECTED
+- bad schema: REJECTED
+
+Environment note:
+The connector runtime did not expose a repository checkout or gh executable, so
+this record is an independent Fraction/quadratic-field reconstruction rather
+than a direct invocation of the committed unittest module. Reproduction command
+is preserved in README.md.
