@@ -1,0 +1,33 @@
+{
+  "result": {
+    "K": 4,
+    "V_scale_control": 100,
+    "aggregate_schur_reserve": "0",
+    "anchor_shell_count_control": 50000000,
+    "base_pole_order": 2,
+    "color_energy": "11936689/1587600",
+    "depth_parseval_energy": "11936689/1587600",
+    "far_right_physical_exponent": "1/2",
+    "forward_shift_anchor": "e_(K-1)",
+    "killed_residual_order": 1,
+    "matrix_inverse": true,
+    "matrix_log_derivative": true,
+    "meromorphic_quotient_rank": 1,
+    "packet_kernel_control": "98/121",
+    "proof_object_sha256": "f9804f4155ea5f88754f6bafc8b988542f3472b9570188269d283d876092a3be",
+    "tail": "1/45",
+    "truncated_target": "589/630"
+  },
+  "tests": [
+    "first_row_orientation_mutation_rejected",
+    "missing_highest_depth_mutation_rejected",
+    "false_positive_reserve_mutation_rejected",
+    "fourier_color_mutation_rejected",
+    "double_pole_deletion_mutation_rejected",
+    "vertical_line_gain_mutation_rejected",
+    "rank_scale_conflation_mutation_rejected",
+    "digest_mutation_rejected"
+  ],
+  "tests_passed": 8,
+  "verdict": "PASS_EXACT_RBC_DEPTH_RESERVE_CLASSIFICATION"
+}
