@@ -61,7 +61,7 @@ Choose `L_j` in the positive-measure good set where all finite zeta multipliers
 needed by the exterior cardinal construction are nonzero and all support-average
 profile estimates pass.
 
-## 3. Exact target and complete reservoir
+## 3. Exactly normalized target and complete reservoir
 
 Let `J_Xi=E(p_+)` be the exact arithmetic radical with transform a nonzero real
 multiple of `Xi`. Define
@@ -69,9 +69,27 @@ multiple of `Xi`. Define
 \[
  v_j=P_{N_j}\Sigma_{L_j}J_{\Xi},
  \qquad
- p_j={v_j\over\|v_j\|}.
+ \nu_j=\|v_j\|_2,
+ \qquad
+ p_j={v_j\over\nu_j},
  \tag{T-19813.4}
 \]
+
+and scale its global lift simultaneously:
+
+\[
+ \widetilde J_{\Xi,j}={J_{\Xi}\over\nu_j}.
+ \tag{T-19813.5}
+\]
+
+Then
+
+\[
+ P_{N_j}\Sigma_{L_j}\widetilde J_{\Xi,j}=p_j
+ \tag{T-19813.6}
+\]
+
+exactly, and `nu_j` stays bounded above and below away from zero.
 
 For every vector `w` in the ordinary orthogonal complement of `p_j`, use the
 exterior-supported smooth arithmetic cardinals of `L-19862` to construct a
@@ -81,26 +99,26 @@ linear global radical lift `J_w` satisfying
  \Sigma_{L_j}J_w=w,
  \qquad
  J_w|_{I_j}=0.
- \tag{T-19813.5}
+ \tag{T-19813.7}
 \]
 
-Together with `J_Xi`, these lifts form one exact source reservoir mapping
-isomorphically onto the complete finite space `V_j`.
+Together with `widetilde J_(Xi,j)`, these lifts form one exact source reservoir
+mapping isomorphically onto the complete finite space `V_j`.
 
 For a finite vector `ap_j+w`, define its exact global residual by
 
 \[
  W_j(ap_j+w)
- =a[J_{\Xi}-\iota_jv_j]
+ =a[\widetilde J_{\Xi,j}-\iota_jp_j]
   +[J_w-\iota_jw].
- \tag{T-19813.6}
+ \tag{T-19813.8}
 \]
 
 Let
 
 \[
  D_j=W_j^*W_j
- \tag{T-19813.7}
+ \tag{T-19813.9}
 \]
 
 be the complete ordinary residual Gram.
@@ -111,7 +129,7 @@ For every prescribed `B>0`, increasing the fixed constant in (T-19813.2) gives
 
 \[
  \boxed{m_j:=D_j(p_j,p_j)\le C_Be^{-BL_j}.}
- \tag{T-19813.8}
+ \tag{T-19813.10}
 \]
 
 For `w perpendicular p_j`, physical support separation gives
@@ -120,22 +138,22 @@ For `w perpendicular p_j`, physical support separation gives
  D_j(w,w)
  =\|J_w\|^2+\|w\|^2
  \ge\|w\|^2.
- \tag{T-19813.9}
+ \tag{T-19813.11}
 \]
 
 Therefore Cauchy interlacing yields the exact complete gap
 
 \[
  \boxed{\theta_2(D_j)\ge1.}
- \tag{T-19813.10}
+ \tag{T-19813.12}
 \]
 
 No source inverse norm, pure-prolate `d_6` transfer, or common-reservoir
-assumption remains. Equations (T-19813.8)--(T-19813.10) give
+assumption remains. Equations (T-19813.10)--(T-19813.12) give
 
 \[
  {m_j\over\theta_2(D_j)}\le C_Be^{-BL_j}.
- \tag{T-19813.11}
+ \tag{T-19813.13}
 \]
 
 ## 5. Exact finite Weil identity
@@ -148,7 +166,7 @@ Every source lift is a global arithmetic radical. Hence for finite vectors
  A_j(v,z)
  :=Q_W(v,z)
  =Q_W(W_jv,W_jz).}
- \tag{T-19813.12}
+ \tag{T-19813.14}
 \]
 
 This is the exact finite CCM/Weil matrix. It includes the support tail, every
@@ -157,13 +175,13 @@ silently omitted.
 
 ## 6. Affine source-specific profile theorem
 
-Assume the complete residual family (T-19813.6) satisfies the source-specific
+Assume the complete residual family (T-19813.8) satisfies the source-specific
 profile LMIs of `L-19865` on a positive-measure set in every sufficiently large
 support block. Concretely:
 
 \[
  A_j^0=a_jD_j+C_j+E_j^0,
- \tag{T-19813.13}
+ \tag{T-19813.15}
 \]
 
 with
@@ -171,14 +189,14 @@ with
 \[
  -c_0(D_j+\tau_jI)
  \preceq C_j\preceq c_0(D_j+\tau_jI),
- \tag{T-19813.14}
+ \tag{T-19813.16}
 \]
 
 \[
  -\alpha_j(D_j+\tau_jI)
  \preceq E_j^0\preceq
  \alpha_j(D_j+\tau_jI),
- \tag{T-19813.15}
+ \tag{T-19813.17}
 \]
 
 and
@@ -187,7 +205,7 @@ and
  -\delta_j(D_j+\tau_jI)
  \preceq A_j-A_j^0\preceq
  \delta_j(D_j+\tau_jI),
- \tag{T-19813.16}
+ \tag{T-19813.18}
 \]
 
 where
@@ -198,33 +216,33 @@ where
  \alpha_j+\delta_j=o(\log R_j),
  \qquad
  R_j=e^{L_j}.
- \tag{T-19813.17}
+ \tag{T-19813.19}
 \]
 
 Set
 
 \[
  \tau_j=m_j,
- \tag{T-19813.18}
+ \tag{T-19813.20}
 \]
 
 \[
  c_j=a_j-c_0-\alpha_j-\delta_j>0,
- \tag{T-19813.19}
+ \tag{T-19813.21}
 \]
 
 and
 
 \[
  \sigma_j=-(c_0+\alpha_j+\delta_j)m_j.
- \tag{T-19813.20}
+ \tag{T-19813.22}
 \]
 
 Then `L-19865` gives
 
 \[
  \boxed{A_j-\sigma_jI\succeq c_jD_j,}
- \tag{T-19813.21}
+ \tag{T-19813.23}
 \]
 
 while on the target line,
@@ -233,7 +251,7 @@ while on the target line,
  \boxed{
  A_j(p_j,p_j)-\sigma_j
  \le C_j^{\rm tar}c_jm_j,}
- \tag{T-19813.22}
+ \tag{T-19813.24}
 \]
 
 with `C_j^tar=R_j^(o(1))`.
@@ -243,7 +261,7 @@ not assume cofinal Weil positivity.
 
 ## 7. Source-specific analytic ledger
 
-The proof proposed for (T-19813.13)--(T-19813.17) is now fully typed:
+The proof proposed for (T-19813.15)--(T-19813.19) is fully typed:
 
 1. `L-19821` supplies the line-centered positive operator Riemann--von Mangoldt
    decomposition and its regularized lower bound.
@@ -266,7 +284,7 @@ The proof proposed for (T-19813.13)--(T-19813.17) is now fully typed:
 
 The abstract estimates in items 1--9 are proved in the cited files. The final
 production task is to bind their constants to the exact hybrid residual
-(T-19813.6) and verify the LMIs in one normalization.
+(T-19813.8) and verify the LMIs in one normalization.
 
 ## 8. Simple even finite ground state
 
@@ -282,7 +300,8 @@ Apply `L-19861` with
  m=m_j.
 \]
 
-Equations (T-19813.8), (T-19813.10), and (T-19813.21)--(T-19813.22) give
+Equations (T-19813.10), (T-19813.12), and
+(T-19813.23)--(T-19813.24) give
 
 \[
  \boxed{
@@ -291,7 +310,7 @@ Equations (T-19813.8), (T-19813.10), and (T-19813.21)--(T-19813.22) give
  {C_j^{\rm tar}m_j
   \over1-C_j^{\rm tar}m_j}
  =e^{-BL_j+o(L_j)},}
- \tag{T-19813.23}
+ \tag{T-19813.25}
 \]
 
 where `xi_j` is the normalized finite ground state after a phase choice. The
@@ -300,13 +319,13 @@ even. Its lowest eigenvalue is simple and isolated.
 
 ## 9. Moving-Hardy convergence
 
-Choose `B` in (T-19813.8) larger than every support-weight exponent. Then
+Choose `B` in (T-19813.10) larger than every support-weight exponent. Then
 
 \[
  e^{2\tau_j^{\rm H}L_j}
  \|p_j-\alpha_j^{\rm gr}\xi_j\|_2^2
  \longrightarrow0
- \tag{T-19813.24}
+ \tag{T-19813.26}
 \]
 
 for a sequence
@@ -321,17 +340,17 @@ normalizations `b_j` for which
 \[
  \|b_jp_j-k_j^{\Xi}\|_{\tau_j^{\rm H}}
  \longrightarrow0,
- \tag{T-19813.25}
+ \tag{T-19813.27}
 \]
 
 where the transforms of `k_j^Xi` converge locally uniformly to `Xi`.
-Combining (T-19813.24)--(T-19813.25),
+Combining (T-19813.26)--(T-19813.27),
 
 \[
  \boxed{
  \|c_j\xi_j-k_j^{\Xi}\|_{\tau_j^{\rm H}}
  \longrightarrow0}
- \tag{T-19813.26}
+ \tag{T-19813.28}
 \]
 
 for nonzero real `c_j`.
@@ -340,7 +359,7 @@ for nonzero real `c_j`.
 
 The independently reviewed finite CCM theorem applies to every simple even
 finite ground state: `widehat xi_j` is entire and all its zeros are real. The
-Hardy-strip estimate turns (T-19813.26) into local-uniform convergence
+Hardy-strip estimate turns (T-19813.28) into local-uniform convergence
 
 \[
  \widehat{c_j\xi_j}\longrightarrow\Xi
@@ -351,7 +370,7 @@ nonreal zero of `Xi`. Therefore the hypotheses of Section 6 imply
 
 \[
  \boxed{\mathrm{RH}.}
- \tag{T-19813.27}
+ \tag{T-19813.29}
 
 ## 11. Exact status boundary
 
@@ -372,15 +391,15 @@ The remaining review target is singular and concrete:
 
 \[
  \boxed{
- \text{verify (T-19813.13)--(T-19813.17) for the exact hybrid residual
- family (T-19813.6).}}
- \tag{T-19813.28}
+ \text{verify (T-19813.15)--(T-19813.19) for the exact hybrid residual
+ family (T-19813.8).}}
+ \tag{T-19813.30}
 
 This is an operator-valued Riemann--von Mangoldt/support-average theorem with an
 explicit regularization. It is weaker than cofinal positivity and weaker than a
 complete two-sided relative local-Weyl law.
 
-Until (T-19813.28) passes independent reconstruction:
+Until (T-19813.30) passes independent reconstruction:
 
 ```text
 final recovered proposal: PROPOSED
