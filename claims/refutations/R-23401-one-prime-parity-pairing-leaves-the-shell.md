@@ -86,23 +86,30 @@ M(x)-M(2x/3).
 
 ## 3. What an internal sign reversal must do
 
-An internal pairing may still replace one prime factor by another:
+A ratio-preserving replacement
 
 \[
-n=pa
-\quad\longleftrightarrow\quad
-n'=qa.
+pa\longleftrightarrow qa
 \]
 
-But this changes at least two prime-factor incidences and requires
+may stay in the shell when
 
 \[
-c<{q\over p}<c^{-1}.
+c<q/p<c^{-1},
 \]
 
-It is therefore a balanced factor-ratio or Type-II operation, not a terminal one-free-variable operation.
+but it removes one prime incidence and adds one. It changes two incidences and therefore **preserves** Möbius parity. It cannot by itself cancel opposite signs.
 
-More generally, every same-shell opposite-sign pairing must alter an odd number of prime incidences while preserving the total product inside one fixed ratio window. The one-incidence case is excluded, so the first available geometry is genuinely correlated.
+Every same-shell opposite-sign pairing must alter an odd number of prime incidences. The one-incidence case is excluded by Section 1. Hence the first possible local geometry changes at least three incidences, for example
+
+\[
+pa\longleftrightarrow qra,
+\qquad
+c<{qr\over p}<c^{-1},
+\tag{R-23401.4}
+\]
+
+or its inverse. This is a genuinely balanced prime-versus-semiprime correlation, not a terminal one-free-variable pairing.
 
 ## 4. Consequence for the proof architecture
 
@@ -110,11 +117,11 @@ The terminal Euler theorems on PR #165 correctly control rows with one unrestric
 
 Any completion must therefore retain at least one of:
 
-1. a balanced replacement `p<->q` with the complete signed common-cell sum;
+1. a balanced parity-changing `p <-> qr` common-cell sum;
 2. the centered prime-renewal square of `L-23402`;
 3. a higher-order signed shell packet before absolute values;
 4. a direct physical-space bound for the positive shell Gram.
 
 ## 5. Proof boundary
 
-The shell inequalities are exact and elementary. They do not prove that a balanced pairing exists, do not estimate the shell energy, and do not prove RH.
+The shell inequalities and parity count are exact and elementary. They do not construct a balanced pairing, do not estimate the shell energy, and do not prove RH.
