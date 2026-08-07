@@ -1,0 +1,27 @@
+{
+  "K": 8,
+  "affine_bohr_rank": 8,
+  "all_inside_two_thirds_shell": true,
+  "classification": "EXACT_FINITE_REFUTATION_CONTROL",
+  "distinct_products": 256,
+  "maximum_product": "1001000423266415010105705091353987701601767365429",
+  "minimum_product": "1000906342819938500191543876324875885280168218671",
+  "mobius_sign": 1,
+  "pairs": [
+    [1000003, 1000033],
+    [1000037, 1000039],
+    [1000081, 1000099],
+    [1000117, 1000121],
+    [1000133, 1000151],
+    [1000159, 1000171],
+    [1000183, 1000187],
+    [1000193, 1000199]
+  ],
+  "products": 256,
+  "proof_object_sha256": "d786fd9608ecba0f3cd6d816699ef250b45cb20c05169085187f62e06b2e080f",
+  "scaled_common_overlap_energy": "65536",
+  "schema": "riemann.x23702-mobius-hypercube.v1",
+  "shell_ratio_denominator": "1000906342819938500191543876324875885280168218671",
+  "shell_ratio_numerator": "1001000423266415010105705091353987701601767365429",
+  "verdict": "BOUNDED_RANK_CONTAGION_REFUTED_AT_FINITE_K8_SCHEMA"
+}

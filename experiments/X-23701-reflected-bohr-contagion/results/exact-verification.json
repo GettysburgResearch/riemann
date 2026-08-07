@@ -1,0 +1,40 @@
+{
+  "bohr_energy": 6,
+  "classification": "SYNTHETIC_EXACT_BOHR_CONTAGION_ALGEBRA_ONLY",
+  "conditional_theta_upper": {
+    "denominator": 1,
+    "numerator": 1
+  },
+  "epsilon_C0_over_K": {
+    "denominator": 4,
+    "numerator": 1
+  },
+  "face_count": 4,
+  "grouped_monomial_count": 3,
+  "local_gram": {
+    "denominator": 4,
+    "numerator": 41
+  },
+  "mutation_tests": [
+    "omitted_collision_detected",
+    "rowwise_absolute_value_rejected",
+    "omega_K_face_rejected",
+    "negative_rank_rejected",
+    "reflected_mutation_detected",
+    "source_feature_id_uniqueness_required",
+    "zero_scale_reserve_rejected",
+    "finite_order_not_promoted_to_limit"
+  ],
+  "packet_order": 8,
+  "proof_boundary": "Finite synthetic algebra only; no zeta, prime, Mobius, production packet, contagion theorem, BTP, or RH computation.",
+  "proof_object_sha256": "7620cde0a111c05b4b148e1d164214bc7b5506520ceacf67da9d0b10fbce6279",
+  "rank_ceiling": 2,
+  "raw_tuple_count": 6,
+  "reflected_zero_ratio": 6,
+  "rowwise_energy": 64,
+  "scale_reserve": {
+    "denominator": 8,
+    "numerator": 1
+  },
+  "schema": "riemann.x23701-reflected-bohr-contagion.v1"
+}
