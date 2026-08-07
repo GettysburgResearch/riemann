@@ -78,7 +78,7 @@ def main(path: str) -> int:
     cminus = F(cert["c_minus"])
     cupper = F(cert["target_upper_coefficient"])
     gap = F(cert["gap_floor"])
-    P = diag([F(x) for x in cert["extra_psd_diag"])
+    P = diag([F(x) for x in cert["extra_psd_diag"]])
     Q = add(scale(sigma, I), add(scale(cminus, D), P))
 
     complement = [row[1:] for row in D[1:]]
