@@ -1,4 +1,4 @@
-# M-26101 — Adversarial protocol for the annular divisor-frame proposal
+# M-26101 — Adversarial protocol for the annular dual-frame proposal
 
 Claim ID: `M-26101`  
 Status: **PROPOSED REVIEW PROTOCOL**  
@@ -9,14 +9,17 @@ Issue: #261
 ## 1. Review order
 
 1. `L-26101` — exact divisor-gradient and Gram algebra;
-2. `X-26101` — exact finite replay and mutations;
+2. `X-26101/verify.py` — exact finite replay and mutations;
 3. `L-26102` — annular positivity and objective transfer;
 4. `L-26104` — elementary polylog initial-residual budget;
-5. `L-26103` Sections 1--5 — compression, projection, complete-period model, and closed `SAF1`;
-6. `L-26103` Sections 6--8 — open `SAF2/SAF3` theorem and recursive invariant;
-7. `T-26101` — conditional prime-ramp and RH composition;
-8. `O-26101` and `recon.py` only as floating discovery;
-9. inherited square-screw/Landau normalization.
+5. `L-26105` — exact Hilbert–Farkas primal/dual equality;
+6. `X-26101/verify_dual.py` — exact dual/potential replay;
+7. `L-26106` — monotone projected-dual recursion;
+8. `O-26102` — additive-rigidity proof route;
+9. `L-26103` — corrected active-set algebra and withdrawn half-step invariant;
+10. `T-26101` — `ADF` to the prime ramp and RH;
+11. `O-26101/recon.py` only as floating discovery;
+12. inherited square-screw/Landau normalization.
 
 ## 2. Automatic rejection conditions
 
@@ -25,7 +28,7 @@ Reject the proposal if any one of the following occurs.
 ### Algebra/source failures
 
 - the adjacent-flow update does not equal `-A_XF` on every prime-power row;
-- a prime-power multiplicity is omitted from the formal identity for `log(m/(m-1)`;
+- a prime-power multiplicity is omitted from the formal identity for `log(m/(m-1))`;
 - identical annular rows are compressed without retaining the maximum residual;
 - the flow is applied to non-prime-power constraints as though they were part of the dual;
 - the parabolic seed or target normalization differs across files.
@@ -36,7 +39,7 @@ Reject the proposal if any one of the following occurs.
 - the periodic selector primitive is allowed to grow with `q` rather than being bounded by one;
 - the boundary term at `T_q` is omitted;
 - the sum over prime powers is estimated without the `1/q` factor;
-- `SAF1` is still treated as numerical after the proof in `L-26104`.
+- the `q=X` endpoint is not treated separately.
 
 ### Positivity/cost failures
 
@@ -45,15 +48,23 @@ Reject the proposal if any one of the following occurs.
 - objective cost is estimated with a pointwise `j^-2` bound but the number of sites is forgotten;
 - signed objective gain is silently replaced by an absolute loss with the wrong orientation.
 
-### `SAF2/SAF3` failures
+### Hilbert–Farkas / `ADF` failures
 
-- a generated active Gram has a singular or superpolynomially small positive eigenvalue after exact row compression;
-- leakage creates an active residual set for which the stated contraction fails;
-- a frame estimate is proved only for the initial active set, not every generated set;
-- an arbitrary-subset frame theorem is substituted for the source-specific quantifier;
-- the iteration uses floating pseudoinverses without a symbolic or directed proof;
-- prime-power-chain duplicates or the exceptional cluster `{2,3,4,5}` are ignored;
-- negative seed slack is set to zero before leakage is tested.
+- the dual multipliers are not restricted to the nonnegative cone;
+- a positive dual null vector is ignored in the infeasible case;
+- the homogeneous ratio is stated without its positive numerator part;
+- the denominator omits a neighbor channel or a prime-power row;
+- `ADF` is proved only for an arbitrary convenient subclass of dual vectors;
+- the von-Mangoldt near-null vector is bounded by a generic frame estimate rather than by the signed source pairing;
+- the logarithmic mode is removed before the first-cell/prime-ramp mutation is checked.
+
+### Recursive-producer failures
+
+- projected-dual ascent uses a step larger than the inverse Gram spectral bound;
+- monotonicity is asserted for the positive-residual norm instead of the dual energy;
+- the withdrawn uniform half-step leakage contraction is silently reused;
+- floating pseudoinverses are presented as an all-scale proof;
+- the emitted flow norm is not reconstructed from the dual/primal object.
 
 ### Global-transfer failures
 
@@ -64,30 +75,35 @@ Reject the proposal if any one of the following occurs.
 
 ## 3. Minimum production object
 
-A proof-grade `SAF_X` object should contain:
+A proof-grade annular object should contain:
 
 ```text
 X, alpha, beta, annulus endpoints
 complete prime-power manifest
 exact parabolic residual intervals
 L-26104 pointwise residual majorants
-identical-row equivalence classes
-for every iteration:
-  active representatives
-  exact/directed Gram matrix
-  lower frame eigenvalue
-  active residual vector
-  exact/directed minimum-norm increment
-  leakage residual on every inactive row
-  positive-residual contraction ratio
-cumulative flow and L2 norm
+exact A_X and A_X^* formulas
+one of:
+  an ADF proof covering every nonnegative lambda; or
+  a source-bound primal flow with norm X^o(1)
 minimum repaired b coordinate
 maximum final prime-power defect
 exact objective-loss enclosure
+von-Mangoldt near-null mutation
 source and producer digests
 ```
 
-A finite ladder is not an all-scale theorem. Production blocks are useful only after the symbolic mechanism establishing uniform `SAF2/SAF3` is identified.
+For a projected-dual producer, also retain:
+
+```text
+dual iterates
+safe step bound
+monotone dual energy
+primal flow A_X^* lambda
+KKT residual and complementarity
+```
+
+A finite ladder is not an all-scale proof.
 
 ## 4. Mandatory mutations
 
@@ -96,20 +112,20 @@ The consumer should reject at least:
 1. deleting the `-1_(q|j+1)` channel;
 2. replacing the central coefficient `2` by `1`;
 3. omitting a highest prime-power row such as `16`;
-4. using `A_S^*r_S` without the Gram inverse;
+4. using `A_S^*r_S` without the Gram inverse in the active diagnostic;
 5. retaining a weaker duplicate-row residual instead of the class maximum;
-6. dropping the exceptional cluster;
-7. taking the positive part of the seed defect before accounting for negative slack;
-8. reporting a flow norm or objective cost not reconstructed from the emitted flow.
+6. taking the positive part of the seed defect before accounting for negative slack;
+7. dropping the positive part in the homogeneous dual numerator;
+8. reporting a flow norm or objective cost not reconstructed from the emitted object.
 
 ## 5. Status discipline
 
-The exact algebra and conditional transfer may be classified independently. `SAF1` is now proposed complete. Until `SAF2/SAF3` are proved for all sufficiently large `X`, the correct global status is
+The exact algebra, initial source budget, duality, and recursive potential may be classified independently. Until `ADF` is proved for all sufficiently large `X`, the correct global status is
 
 ```text
 FULL ELEMENTARY PROPOSAL
-GENERATED FRAME/LEAKAGE THEOREM OPEN
+ANNULAR DUAL FRAME INEQUALITY OPEN
 RH UNPROVED
 ```
 
-No numerical convergence trend should be described as evidence that RH is true.
+No numerical trend should be described as evidence that RH is true.
