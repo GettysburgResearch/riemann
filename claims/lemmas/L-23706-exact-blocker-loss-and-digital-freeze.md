@@ -130,8 +130,8 @@ Combining `L-23705` and (L-23706.5), DBT is equivalent, up to `O(log^2 X)`, to
  -\min_{\beta_{nq}>0}{\rho^{(n)}(q)\over\beta_{nq}}
  \right]
 =O(\log^A X).}
-\tag{L-23706.11
-}
+\tag{L-23706.11}
+\]
 
 The digit-martingale and reflected-Selberg steps must establish this displayed
 inequality, or a lower-scale recurrence which implies it.
