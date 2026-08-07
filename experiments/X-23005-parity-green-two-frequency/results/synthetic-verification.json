@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "digit": {
+      "bases": [
+        2,
+        3,
+        5
+      ],
+      "rows": 768
+    },
+    "digital_recurrence": {
+      "limit": 192,
+      "rows": 191
+    },
+    "dyadic_green": {
+      "entry_rows": 203,
+      "factor_rows": 49
+    },
+    "formal_kernel": {
+      "rows": 3
+    },
+    "poincare": {
+      "matrix_entries": 263,
+      "orders": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        12
+      ]
+    }
+  },
+  "proof_boundary": "Exact finite coefficient, matrix, and formal-kernel algebra only; no asymptotic coercivity, PGC(R), Mertens estimate, or RH claim is certified.",
+  "proof_object_sha256": "8fa35fbb1fd6643c2aea6b6c1e660c21e47ba1a473204eb549ef2dc3a6ee45ad",
+  "schema": "riemann.x23005.parity-green-two-frequency.verification.v1",
+  "verdict": "EXACT_PARITY_GREEN_DIGITAL_AND_TWO_CHANNEL_ALGEBRA_VERIFIED",
+  "verified": true
+}
