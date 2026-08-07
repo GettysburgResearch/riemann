@@ -170,11 +170,53 @@ Except when `q-1` or `q+1` is itself a prime power, every such child is at most
 \tag{L-25301.13}
 \]
 
-The same-scale exceptions form finite consecutive-prime-power clusters. Their
-exact interaction matrices are finite and can be inverted jointly before the
-remaining defect is routed below half scale. The small cluster
-`{2,3,4,5}` must use its complete divisibility matrix; treating it as an
-ordinary nearest-neighbor path is incorrect.
+The same-scale exceptions form uniformly bounded consecutive-prime-power
+clusters. Indeed, any four consecutive integers beginning above `2` contain
+an even integer congruent to `2 mod 4` and greater than `2`; that integer has
+both an odd factor and a factor `2`, so it is not a prime power. Hence every
+cluster has length at most three, except the single cluster
+
+\[
+\{2,3,4,5\}.
+\]
+
+For a cluster of length at most three above `5`, the same-scale repair matrix is
+the path M-matrix
+
+\[
+A_r=2I-\operatorname{Adj}(P_r),
+\qquad r\le3,
+\]
+
+whose inverse is entrywise nonnegative. The exceptional cluster has the
+complete matrix
+
+\[
+A_{\rm exc}=
+\begin{pmatrix}
+2&-2&2&-2\\
+-1&2&-1&-1\\
+0&-1&2&-1\\
+0&0&-1&2
+\end{pmatrix},
+\]
+
+with
+
+\[
+A_{\rm exc}^{-1}=
+\begin{pmatrix}
+3/2&2&1&3\\
+3/2&3&2&4\\
+1&2&2&3\\
+1/2&1&1&2
+\end{pmatrix}\ge0.
+\]
+
+Thus every nonnegative same-scale defect vector can be removed by a
+nonnegative joint cluster flow. After that solve, every remaining positive
+child is a proper prime-power divisor of `q-1` or `q+1` and is at most
+`(q+1)/2`.
 
 This gives a genuine scale mechanism:
 
@@ -229,7 +271,7 @@ Established:
 - exact signed-defect identity;
 - macroscopic positive and negative dual masses;
 - exact adjacent-flow objective and constraint maps;
-- a factor-two divisor-descent mechanism outside bounded consecutive
+- a factor-two divisor-descent mechanism outside uniformly bounded consecutive
   prime-power clusters.
 
 Open:
