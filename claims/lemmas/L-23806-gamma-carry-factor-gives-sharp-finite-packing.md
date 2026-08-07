@@ -57,6 +57,7 @@ Laplace uniqueness gives the exact convolution identity
  (c*\kappa)(t)=t,
  \qquad t\ge0.}
  \tag{L-23806.5}
+\]
 
 ## 2. Explicit finite coefficients
 
@@ -86,6 +87,7 @@ Then
  \le w_X(q)
  \qquad(2\le q\le X).}
  \tag{L-23806.7}
+\]
 
 ### Proof
 
@@ -101,6 +103,7 @@ Hence the left side of (L-23806.7) is at most
  8\sqrt X\int_q^X
  y^{-2}a(\log(X/y))K(y/q)dy.
  \tag{L-23806.8}
+\]
 
 Put
 
@@ -156,7 +159,7 @@ Using `n>=y-1` on `[n,n+1]`,
  \tag{L-23806.10}
 \]
 
-Markov's inequality with (L-23806.9) bounds both losses by
+Markov's inequality with (L-23806.9) bounds both losses inside the brackets by
 
 \[
  O_\eta(X^{-\eta}).
@@ -169,6 +172,7 @@ Consequently
  {1\over2}\sum_{n=2}^{X-1}n d_X(n)
  \ge4\sqrt X-O_\eta(X^{1/2-\eta}).}
  \tag{L-23806.11}
+\]
 
 The same calculation without the factor `n` gives
 
@@ -176,6 +180,7 @@ The same calculation without the factor `n` gives
  \sum_{n=2}^{X-1}d_X(n)
  =O_\eta(X^{1/2-\eta}).
  \tag{L-23806.12}
+\]
 
 Now use the entropy estimate of `L-23801`,
 
@@ -190,6 +195,7 @@ Equations (L-23806.11)--(L-23806.12) yield, for every `epsilon>0`,
  \sum_{n=2}^{X}d_X(n)G_n
  \ge4\sqrt X-O_\epsilon(X^\epsilon).}
  \tag{L-23806.13}
+\]
 
 Here one first chooses `eta` arbitrarily close to `1/2`, then absorbs the
 logarithmic factor into a slightly larger `epsilon`.
@@ -205,6 +211,7 @@ The packing implication of `L-23801` gives
  \log{X\over q}
  \ge4\sqrt X-O_\epsilon(X^\epsilon).}
  \tag{L-23806.14}
+\]
 
 No prime-number theorem, zero-free region, or asymptotic replacement of the
 finite carry matrix is used. Every prime power is retained with its exact
