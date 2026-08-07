@@ -25,10 +25,16 @@ integer superposes many active divisor gradients, while its two neighbors are
 the discharge channels.
 
 On one fixed interior annulus, the active minimum-norm correction has an exact
-finite formula. If the source-generated active Gram retains a subpower frame
-moat and its leakage contracts the positive residual, the cumulative flow has
-subpower norm. Interior slack then preserves every `b_m>=0`, and the exact
-objective loss is only
+finite formula. The initial positive residual now has the proved bound
+
+```text
+||(r_X)_+||_2 << log^(3/2)(2X).
+```
+
+If the source-generated active Gram retains a subpower frame moat and its
+leakage contracts the positive residual, the cumulative flow has subpower norm.
+Interior slack then preserves every `b_m>=0`, and the exact objective loss is
+only
 
 ```text
 X^(-3/2+o(1)).
@@ -71,6 +77,29 @@ with `||F||_2=X^o(1)` therefore preserves every primal coordinate.
 The exact objective weight has annular `l2` norm `O(X^-3/2)`, so the total loss
 is `X^(-3/2+o(1))`.
 
+### Closed initial source budget
+
+Write the first-unit selector in every `q`-block as
+
+```text
+chi_q=1/q+(chi_q-1/q).
+```
+
+The mean-zero term has a periodic primitive bounded by one. Integrating the
+continuous parabolic derivative by parts gives
+
+```text
+(r_X(q))_+ << [1+log(X/q)]/sqrt(q).
+```
+
+Summing over prime powers and enlarging to all integers yields
+
+```text
+||(r_X)_+||_2^2 << log^3(2X).
+```
+
+This closes the former `SAF1` gate by elementary calculus.
+
 ### Active minimum-norm projection
 
 For active residual rows `S`,
@@ -103,16 +132,16 @@ coupling and leakage across prime bases.
 
 ## Load-bearing theorem
 
-The Slack-Anchored Annular Frame theorem `SAF` asks for three source-specific
+The remaining Slack-Anchored Annular Frame theorem asks for two source-specific
 bounds along the deterministic iteration:
 
 ```text
-||(r0)_+||_2 <= X^o(1),
 A_S A_S^* >= X^-o(1) I for every generated active set,
 ||(r_next)_+||_2 <= rho ||(r)_+||_2, rho<1.
 ```
 
-These imply a convergent flow with `||F||_2=X^o(1)`.
+Together with the closed initial source budget, these imply a convergent flow
+with `||F||_2=X^o(1)`.
 
 The theorem is deliberately not stated for arbitrary row subsets. Full annular
 prime-power matrices contain badly conditioned artificial subsets. The
@@ -140,7 +169,7 @@ frame floors between roughly `0.65` and `1.05` through `X=5000`, while flow
 `l2` norms stayed near `0.06--0.08`. The exact objective costs fell to about
 `3e-10` at `X=5000`.
 
-These values motivate `SAF` but prove nothing asymptotic.
+These values motivate the frame/leakage theorem but prove nothing asymptotic.
 
 ## Exact replay
 
@@ -166,9 +195,10 @@ carry/binomial factorization
 -> divisor-gradient LP
 -> parabolic 4 sqrt(X) seed
 -> exact signed constraint dipole
+-> polylog initial residual budget
 -> annular divisor-gradient frame
 -> active minimum-norm projection
--> SAF frame moat and leakage contraction
+-> generated frame moat and leakage contraction
 -> subpower annular flow
 -> sharp prime-ramp lower bound
 -> square-screw upper envelope
@@ -181,9 +211,11 @@ carry/binomial factorization
 ```text
 exact finite algebra                    retained/proposed complete
 annular slack and objective transfer    proposed complete
+initial residual L2 budget              proposed complete
 active projection recursion             proposed exact
-SAF                                     open / RH-bearing
-SAF -> prime ramp -> RH                 proposed complete composition
+generated frame moat                    open / RH-bearing
+positive leakage contraction            open / RH-bearing
+remaining theorem -> prime ramp -> RH   proposed complete composition
 Riemann Hypothesis                      unproved
 ```
 
