@@ -11,8 +11,13 @@ python3 verify_bottom_charge.py
   sha256_without_digest:
   395a7a89ea2267cfa5a3b805ead2646fa46a1761408f6ff048fed7b2e218757f
 
+python3 verify_digital_lift.py
+  PASS_EXACT_ODD_ROW_EVEN_COLUMN_CARRY_ISOMETRY
+  sha256_without_digest:
+  17e23d1e2ebc01cc7283d125c15c721d4743e69f906b17b715294f60b0e09b23
+
 pytest -q tests/test_verify.py
-  2 passed
+  3 passed
 
 python3 recon.py
   DISCOVERY_ONLY_POSITIVE_CARRY_INVERSE_THROUGH_5000
@@ -23,4 +28,4 @@ Scope
 -----
 The exact tests certify only the finite identities declared in X-26201.
 The reconnaissance is high-precision discovery, not an interval proof.
-No test proves DSS, PBD, Carry Saturation, or RH.
+No test proves Odd-Leakage Descent, DSS, PBD, Carry Saturation, or RH.
