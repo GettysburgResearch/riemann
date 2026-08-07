@@ -94,8 +94,7 @@ At `n=pq`, `p\ne q`, its balanced part is
 2\log p\log q
 \left[(p/q)^{-it}+(q/p)^{-it}\right]
 =4\log p\log q\cos(t\log(p/q)).}
-\tag{R-23006.7
-\]
+\tag{R-23006.7}
 
 Again the factor-reassignment directions have the same sign.  The reflected
 Hermitian square reinforces rather than annihilates this ratio pair.
