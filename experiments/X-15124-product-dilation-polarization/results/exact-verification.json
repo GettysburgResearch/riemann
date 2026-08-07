@@ -1,0 +1,66 @@
+{
+  "channels": [
+    {
+      "d": 1,
+      "e": 2,
+      "kind": "derivative",
+      "polarized_value": "14/1",
+      "weight": "1/1"
+    },
+    {
+      "d": 1,
+      "e": 3,
+      "kind": "derivative",
+      "polarized_value": "56/1",
+      "weight": "4/1"
+    },
+    {
+      "d": 1,
+      "e": 4,
+      "kind": "derivative",
+      "polarized_value": "28/1",
+      "weight": "2/1"
+    },
+    {
+      "d": 2,
+      "e": 2,
+      "kind": "convolution",
+      "polarized_value": "14/1",
+      "weight": "1/1"
+    },
+    {
+      "d": 2,
+      "e": 3,
+      "kind": "convolution",
+      "polarized_value": "42/1",
+      "weight": "2/1"
+    },
+    {
+      "d": 3,
+      "e": 2,
+      "kind": "convolution",
+      "polarized_value": "42/1",
+      "weight": "2/1"
+    }
+  ],
+  "direct_product_form": "196/1",
+  "grouped_lambda2_form": "196/1",
+  "lambda2": {
+    "2": "1/1",
+    "3": "4/1",
+    "4": "3/1",
+    "6": "4/1"
+  },
+  "orientation_distinct": true,
+  "p2_p3_product_value": "21/1",
+  "p2_p3_ratio_value": "14/1",
+  "polarized_channel_form": "196/1",
+  "proof_sha256": "2eb1ec14ec4f351c0546646dbe6fd6ec134b6cf8176b7f735f0be58fa9546b43",
+  "schema": "X-15124-v1",
+  "vector": [
+    "1/1",
+    "2/1",
+    "4/1"
+  ],
+  "verdict": "CERTIFIED_PRODUCT_DILATION_POLARIZATION"
+}

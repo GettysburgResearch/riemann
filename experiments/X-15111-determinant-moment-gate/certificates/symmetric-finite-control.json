@@ -1,0 +1,40 @@
+{
+  "eigenvalues": [
+    1,
+    -1,
+    {"denominator": 2, "numerator": 1},
+    {"denominator": 2, "numerator": -1},
+    {"denominator": 3, "numerator": 1},
+    {"denominator": 3, "numerator": -1}
+  ],
+  "formal_log_coefficients": {
+    "2": {"denominator": 36, "numerator": -49},
+    "3": 0,
+    "4": {"denominator": 2592, "numerator": -1393},
+    "5": 0,
+    "6": {"denominator": 139968, "numerator": -47449},
+    "7": 0,
+    "8": {"denominator": 6718464, "numerator": -1686433},
+    "9": 0,
+    "10": {"denominator": 302330880, "numerator": -60526249},
+    "11": 0,
+    "12": {"denominator": 13060694016, "numerator": -2177317873}
+  },
+  "hankel_size": 3,
+  "max_order": 12,
+  "require_central_even_symmetry": true,
+  "schema": "riemann.det2-moment-gate.v1",
+  "trace_moments": {
+    "2": {"denominator": 18, "numerator": 49},
+    "3": 0,
+    "4": {"denominator": 648, "numerator": 1393},
+    "5": 0,
+    "6": {"denominator": 23328, "numerator": 47449},
+    "7": 0,
+    "8": {"denominator": 839808, "numerator": 1686433},
+    "9": 0,
+    "10": {"denominator": 30233088, "numerator": 60526249},
+    "11": 0,
+    "12": {"denominator": 1088391168, "numerator": 2177317873}
+  }
+}

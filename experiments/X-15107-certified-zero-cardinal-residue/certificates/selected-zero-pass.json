@@ -1,0 +1,36 @@
+{
+  "schema": "riemann.certified-zero-cardinal-residue.v1",
+  "nodes": [-1, 0, 1],
+  "p": [
+    {"numerator": 3, "denominator": 8},
+    {"numerator": 1, "denominator": 4},
+    {"numerator": 3, "denominator": 8}
+  ],
+  "roots": [
+    {"numerator": -1, "denominator": 2},
+    {"numerator": 1, "denominator": 2}
+  ],
+  "selected_atoms": [
+    {
+      "r": {"numerator": -1, "denominator": 2},
+      "weight": 2,
+      "pair_root": 0
+    },
+    {
+      "r": {"numerator": 1, "denominator": 2},
+      "weight": 3,
+      "pair_root": 1
+    }
+  ],
+  "residual_atoms": [
+    {
+      "r": -2,
+      "weight": {"numerator": 1, "denominator": 10}
+    },
+    {
+      "r": 2,
+      "weight": {"numerator": 1, "denominator": 10}
+    }
+  ],
+  "boundary_scalar": 0
+}

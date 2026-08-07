@@ -1,0 +1,34 @@
+{
+  "cannot_emit": [
+    "c4_vector",
+    "raw_operator_A",
+    "renormalized_operator_K",
+    "a4_linear",
+    "trace_A4",
+    "trace_K4",
+    "quartic_target_verdict"
+  ],
+  "manifest_sha256": "40a2cedeac541318f44a8aba9d7b1a00dc431ac8d271a3e0add5ca4f552dcf1a",
+  "missing_count": 17,
+  "missing_fields": [
+    "bindings.normalization_sha256",
+    "bindings.source_map_sha256",
+    "window.identifier",
+    "window.cutoff_definition",
+    "parameters.alpha",
+    "parameters.s_R",
+    "parameters.a_tr",
+    "readout.gram",
+    "readout.quartic_jet_coordinate",
+    "chain.raw_coordinate_matrix",
+    "chain.jet_coordinate_matrix",
+    "chain.seam_transpose_matrix",
+    "chain.comparison_trace_matrix",
+    "chain.lci_matrix",
+    "chain.projection_matrix",
+    "chain.seam_involution",
+    "classical.a4_linear_interval"
+  ],
+  "scope": "source executability audit; no surrogate completion",
+  "status": "SOURCE_SPECIFICATION_INCOMPLETE"
+}

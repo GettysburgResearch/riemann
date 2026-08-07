@@ -1,0 +1,18 @@
+{
+  "base": 4,
+  "model": "A=N; K=N(N-I); S backward shift; d=(I-S)c=e_j",
+  "proof_sha256": "e0fb622c741d330bb4d46d819c383f338b47a82e13ec7f5c6a12e6acd1db5a00",
+  "rows": [
+    {"J": 8, "j": 4, "lhs": "1/1", "normalized_output": "9/16", "required_constant_ratio": "16/9"},
+    {"J": 12, "j": 6, "lhs": "1/1", "normalized_output": "225/1024", "required_constant_ratio": "1024/225"},
+    {"J": 16, "j": 8, "lhs": "1/1", "normalized_output": "49/1024", "required_constant_ratio": "1024/49"},
+    {"J": 20, "j": 10, "lhs": "1/1", "normalized_output": "2025/262144", "required_constant_ratio": "262144/2025"},
+    {"J": 24, "j": 12, "lhs": "1/1", "normalized_output": "1089/1048576", "required_constant_ratio": "1048576/1089"},
+    {"J": 32, "j": 16, "lhs": "1/1", "normalized_output": "225/16777216", "required_constant_ratio": "16777216/225"},
+    {"J": 40, "j": 20, "lhs": "1/1", "normalized_output": "9025/68719476736", "required_constant_ratio": "68719476736/9025"},
+    {"J": 48, "j": 24, "lhs": "1/1", "normalized_output": "4761/4398046511104", "required_constant_ratio": "4398046511104/4761"},
+    {"J": 64, "j": 32, "lhs": "1/1", "normalized_output": "961/18014398509481984", "required_constant_ratio": "18014398509481984/961"}
+  ],
+  "schema": "X-15123-v1",
+  "verdict": "CERTIFIED_UNIVERSAL_SMJ_FALSE"
+}

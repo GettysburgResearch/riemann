@@ -1,0 +1,113 @@
+dev/null
++++ b/experiments/X-15120-singular-seam-source-producer/README.md
+@@ -0,0 +1,42 @@
++# X-15120 — Source-bound singular-seam quartic producer
++
++This experiment assembles one finite singular-seam row from concrete source
++matrices and fails closed when the public source package is incomplete.
++
++## Files
++
++```text
++produce.py
++certificates/
++  shimizu-public-source-v8-v6-audit.json
++  synthetic-complete-row.json
++results/
++  shimizu-public-source-v8-v6-audit.json
++  synthetic-complete-row-verification.json
++  tests.txt
++tests/test_produce.py
++```
++
++## Run
++
++```bash
++python produce.py certificates/shimizu-public-source-v8-v6-audit.json
++python produce.py certificates/synthetic-complete-row.json
++python -m unittest discover -s tests -v
++```
++
++## Retained verdicts
++
++The public-source manifest returns:
++
++```text
++SOURCE_SPECIFICATION_INCOMPLETE
++missing_count = 17
++```
++
++The synthetic control returns a complete exact row and is visibly not Riemann
++data.  It tests only the chain assembly, source-metric formulas, basis
++invariance, target comparison, and validation rules.
++
++The producer never fills missing maps from defaults and never treats a
++synthetic or floating row as an actual source result.
+diff --git a/experiments/X-15120-singular-seam-source-producer/SHA256SUMS b/experiments/X-15120-singular-seam-source-producer/SHA256SUMS
+new file mode 100644
+index 0000000..d361e95
+--- /dev/null
++++ b/experiments/X-15120-singular-seam-source-producer/SHA256SUMS
+@@ -0,0 +1,10 @@
++cf6059fe620224ed5cadad0f12c8a8be3d97383bc8a3c88fa282c10048e288f1  ./README.md
++b470a0d6d0c61ddd56870763f2d34c03696206d79209d3eae747485c529ed605  ./__pycache__/produce.cpython-313.pyc
++cbc6428f3d278edf2fc30c3e5eaf1b94c5eb8df90da94889e68ed89b7aadd29c  ./certificates/shimizu-public-source-v8-v6-audit.json
++1ab16039a44bb71d9cb1d6f61500fef722cb141b23ccf3f66e33459ea9751c50  ./certificates/synthetic-complete-row.json
++31378131b597863865bd168f5f877c6c4baff78d33dfe100f85d814715f7586b  ./produce.py
++fff6c9abf45bb5df61c5a9b87115e3a3955c5f71c83335e7d03932f10588823c  ./results/shimizu-public-source-v8-v6-audit.json
++03d2d6294f060bd9040cf693b0cbd02adcb497cfc0c627f8cf83ef9e4017e359  ./results/synthetic-complete-row-verification.json
++76c6fed93ebc868f49cacc660d57aef1c0f49a50c5b6a56af9d17c19234ed3d6  ./results/tests.txt
++263365d9913f885fc1458ddb14617136408cd268c165100e300ba5c6d7d680f5  ./tests/__pycache__/test_produce.cpython-313.pyc
++ce826a258ca5588de4001207fa74a7863d933376cf94828eec8891ab422e4f0d  ./tests/test_produce.py
+diff --git a/experiments/X-15120-singular-seam-source-producer/__pycache__/produce.cpython-313.pyc b/experiments/X-15120-singular-seam-source-producer/__pycache__/produce.cpython-313.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..a31e9f6a32eed8af33bdd4b4b66bfdc0de0c16ae
+GIT binary patch
+literal 29848
+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

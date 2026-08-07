@@ -1,0 +1,26 @@
+{
+  "dimension": 4,
+  "mode": "pair-obstruction",
+  "negative_direction": {
+    "A": {"denominator": 1, "numerator": 0},
+    "B": {"denominator": 1, "numerator": -108},
+    "strict_upper_c": {"denominator": 1, "numerator": 0}
+  },
+  "positive_direction": {
+    "A": {"denominator": 1, "numerator": 0},
+    "B": {"denominator": 1, "numerator": 2},
+    "strict_lower_c": {"denominator": 1, "numerator": 0}
+  },
+  "proof_object_sha256": "d77fb851f1a277b11933ddbc16195cd77baaa86ab01667b96ec445b1fb26e71e",
+  "schema": "riemann.target-pinned-finsler-completion.v1",
+  "scope_warning": "This rules out only the one-scalar target-pinned completion family for the supplied finite Q and p.",
+  "slope_inertia": {
+    "negative_on_complement": 2,
+    "negative_on_full_space": 2,
+    "positive_on_complement": 1,
+    "positive_on_full_space": 1,
+    "zero_on_full_space": 1
+  },
+  "target_normalization": {"denominator": 1, "numerator": 1},
+  "verdict": "CERTIFIED_NO_STRICT_COMPLETION_THRESHOLD_CONFLICT"
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "riemann.certified-zero-frame-residual.v1",
+  "nodes": [-1, 0, 1],
+  "p": [
+    {"numerator": 3, "denominator": 8},
+    {"numerator": 1, "denominator": 4},
+    {"numerator": 3, "denominator": 8}
+  ],
+  "metric_diagonal": [1, 1, 1],
+  "selected_atoms": [
+    {
+      "r": {"numerator": -1, "denominator": 2},
+      "weight": 2
+    },
+    {
+      "r": {"numerator": 1, "denominator": 2},
+      "weight": 3
+    }
+  ],
+  "residual_atoms": [
+    {
+      "r": -2,
+      "weight": {"numerator": 1, "denominator": 10}
+    },
+    {
+      "r": 2,
+      "weight": {"numerator": 1, "denominator": 10}
+    }
+  ],
+  "frame_floor": 15,
+  "selected_residual_ratio": 0,
+  "complete_residual_radius": {"numerator": 1, "denominator": 4},
+  "boundary_scalar": 0
+}

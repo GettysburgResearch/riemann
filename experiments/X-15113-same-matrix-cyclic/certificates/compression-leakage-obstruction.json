@@ -1,0 +1,12 @@
+{
+  "anticommutator_defect": [[{"denominator":125,"numerator":96},{"denominator":125,"numerator":48}],[{"denominator":125,"numerator":48},{"denominator":125,"numerator":24}]],
+  "compressed_cubic": {"denominator":125,"numerator":64},
+  "compressed_grading": [[{"denominator":25,"numerator":12},{"denominator":25,"numerator":6}],[{"denominator":25,"numerator":6},{"denominator":25,"numerator":3}]],
+  "compressed_operator": [[{"denominator":25,"numerator":16},{"denominator":25,"numerator":8}],[{"denominator":25,"numerator":8},{"denominator":25,"numerator":4}]],
+  "grading": [[1,0],[0,-1]],
+  "grading_square_defect": [[{"denominator":125,"numerator":-64},{"denominator":125,"numerator":-32}],[{"denominator":125,"numerator":-32},{"denominator":125,"numerator":-16}]],
+  "mode": "compression-leakage-obstruction",
+  "operator": [[0,1],[1,0]],
+  "projection": [[{"denominator":5,"numerator":4},{"denominator":5,"numerator":2}],[{"denominator":5,"numerator":2},{"denominator":5,"numerator":1}]],
+  "schema": "riemann.same-matrix-cyclic.v1"
+}

@@ -1,0 +1,74 @@
+{
+  "basis_change": [
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "gram": [
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "hs_bound": 3,
+  "one_contour_order_four_alternative": 0,
+  "one_contour_order_four_compatible": {
+    "denominator": 81,
+    "numerator": 1666
+  },
+  "order_four_direct": {
+    "denominator": 81,
+    "numerator": 1666
+  },
+  "order_four_disconnected": {
+    "denominator": 81,
+    "numerator": 2116
+  },
+  "orders": {
+    "2": {
+      "denominator": 9,
+      "numerator": 46
+    },
+    "3": {
+      "denominator": 27,
+      "numerator": -244
+    },
+    "4": {
+      "denominator": 81,
+      "numerator": 1666
+    },
+    "5": {
+      "denominator": 243,
+      "numerator": -10324
+    },
+    "6": {
+      "denominator": 729,
+      "numerator": 66286
+    }
+  },
+  "schema": "riemann.gw-contour-cyclic-diagonal.v1",
+  "seam": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      -1
+    ]
+  ],
+  "series_majorant": 3,
+  "series_radius": {
+    "denominator": 6,
+    "numerator": 1
+  }
+}

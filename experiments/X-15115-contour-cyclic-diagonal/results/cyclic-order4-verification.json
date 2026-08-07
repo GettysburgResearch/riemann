@@ -1,0 +1,43 @@
+{
+  "alternative_one_contour_order_four": 0,
+  "basis_invariance": "PASS",
+  "certificate_sha256": "de435821c005892e8903edf4c1e964cc9e3d7414d01eae66fbef99fd0ee7af1c",
+  "connected_order_four": {
+    "denominator": 81,
+    "numerator": 1666
+  },
+  "dimension": 2,
+  "disconnected_order_four": {
+    "denominator": 81,
+    "numerator": 2116
+  },
+  "gram_leading_minors": [
+    2,
+    3
+  ],
+  "scope": "constructed product-contour cyclic pullback; one-contour diagonal identity not supplied",
+  "series_majorant": 3,
+  "status": "CERTIFIED_CONTOUR_CYCLIC_OBJECT_AND_DIAGONAL_GAP",
+  "trace_moments": {
+    "2": {
+      "denominator": 9,
+      "numerator": 46
+    },
+    "3": {
+      "denominator": 27,
+      "numerator": -244
+    },
+    "4": {
+      "denominator": 81,
+      "numerator": 1666
+    },
+    "5": {
+      "denominator": 243,
+      "numerator": -10324
+    },
+    "6": {
+      "denominator": 729,
+      "numerator": 66286
+    }
+  }
+}

@@ -1,0 +1,251 @@
+ma": "riemann.singular-seam-source-row.v1",
++  "bindings": {
++    "manuscript_version": "synthetic-control",
++    "normalization_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
++    "source_map_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
++  },
++  "window": {
++    "identifier": "M-control",
++    "cutoff_definition": "synthetic exact"
++  },
++  "parameters": {
++    "alpha": "1",
++    "s_R": 2,
++    "a_tr": "1"
++  },
++  "readout": {
++    "gram": [
++      [
++        1,
++        0
++      ],
++      [
++        0,
++        1
++      ]
++    ],
++    "quartic_jet_coordinate": [
++      1,
++      0
++    ]
++  },
++  "chain": {
++    "raw_coordinate_matrix": [
++      [
++        1,
++        2
++      ],
++      [
++        2,
++        -1
++      ]
++    ],
++    "jet_coordinate_matrix": [
++      [
++        0,
++        1
++      ],
++      [
++        1,
++        1
++      ]
++    ],
++    "seam_transpose_matrix": [
++      [
++        1,
++        0
++      ],
++      [
++        0,
++        1
++      ]
++    ],
++    "comparison_trace_matrix": [
++      [
++        1,
++        0
++      ],
++      [
++        0,
++        1
++      ]
++    ],
++    "lci_matrix": [
++      [
++        1,
++        0
++      ],
++      [
++        0,
++        1
++      ]
++    ],
++    "projection_matrix": [
++      [
++        1,
++        0
++      ],
++      [
++        0,
++        1
++      ]
++    ],
++    "seam_involution": [
++      [
++        1,
++        0
++      ],
++      [
++        0,
++        1
++      ]
++    ]
++  },
++  "classical": {
++    "a4_linear_interval": [
++      31,
++      31
++    ]
++  },
++  "target": {
++    "tau4_interval": [
++      31,
++      31
++    ]
++  }
++}
+\ No newline at end of file
+diff --git a/experiments/X-15120-singular-seam-source-producer/produce.py b/experiments/X-15120-singular-seam-source-producer/produce.py
+new file mode 100644
+index 0000000..c74a4da
+--- /dev/null
++++ b/experiments/X-15120-singular-seam-source-producer/produce.py
+@@ -0,0 +1,493 @@
++#!/usr/bin/env python3
++"""Exact source-bound producer for a finite singular-seam quartic row.
++
++The program has two modes.
++
++1. A complete manifest containing concrete finite matrices for every factor in
++   the manuscript's comparison chain is assembled exactly over Gaussian
++   rationals. The producer emits c4, the raw and renormalized form matrices,
++   represented operators, fourth traces, the jet S4 norm, and target verdicts.
++
++2. An incomplete manuscript-source manifest is audited fail-closed. The program
++   emits SOURCE_SPECIFICATION_INCOMPLETE and the exact missing data paths. It
++   never substitutes a surrogate map or an arbitrary "standard" probe.
++
++This is a finite source-binding tool. It does not evaluate omitted infinite
++operators and does not certify RH.
++"""
++from __future__ import annotations
++
++import argparse
++import hashlib
++import json
++from dataclasses import dataclass
++from fractions import Fraction
++from pathlib import Path
++from typing import Any, Iterable
++
++SCHEMA = "riemann.singular-seam-source-row.v1"
++
++@dataclass(frozen=True)
++class Q:
++    re: Fraction = Fraction(0)
++    im: Fraction = Fraction(0)
++
++    def __add__(self, other: Any) -> "Q":
++        o = q(other)
++        return Q(self.re + o.re, self.im + o.im)
++
++    __radd__ = __add__
++
++    def __neg__(self) -> "Q":
++        return Q(-self.re, -self.im)
++
++    def __sub__(self, other: Any) -> "Q":
++        return self + (-q(other))
++
++    def __rsub__(self, other: Any) -> "Q":
++        return q(other) - self
++
++    def __mul__(self, other: Any) -> "Q":
++        o = q(other)
++        return Q(self.re * o.re - self.im * o.im,
++                 self.re * o.im + self.im * o.re)
++
++    __rmul__ = __mul__
++
++    def __truediv__(self, other: Any) -> "Q":
++        o = q(other)
++        den = o.re * o.re + o.im * o.im
++        if den == 0:
++            raise ZeroDivisionError
++        return Q((self.re * o.re + self.im * o.im) / den,
++                 (self.im * o.re - self.re * o.im) / den)
++
++    def conj(self) -> "Q":
++        return Q(self.re, -self.im)
++
++    def abs2(self) -> Fraction:
++        return self.re * self.re + self.im * self.im
++
++    def is_zero(self) -> bool:
++        return self.re == 0 and self.im == 0
++
++    def is_real(self) -> bool:
++        return self.im == 0
++
++
++def frac(x: Any) -> Fraction:
++    if isinstance(x, bool):
++        raise ValueError("boolean is not a rational")
++    if isinstance(x, Fraction):
++        return x
++    if isinstance(x, int):
++        return Fraction(x)
++    if isinstance(x, str):
++        return Fraction(x)
++    if isinstance(x, dict) and set(x) == {"numerator", "denominator"}:
++        n, d = x["numerator"], x["denominator"]
++        if isinstance(n, bool) or isinstance(d, bool):
++            raise ValueError("boolean numerator/denominator")
++        if not isinstance(n, int) or not isinstance(d, int) or d == 0:
++            raise ValueError("malformed rational")
++        return Fraction(n, d)
++    raise ValueError(f"unsupported rational {x!r}")
++
++
++def q(x: Any) -> Q:
++    if isinstance(x, Q):
++        return x
++    if isinstance(x, dict) and set(x) == {"re", "im"}:
++        return Q(frac(x["re"]), frac(x["im"]))
++    return Q(frac(x), Fraction(0))
++
++
++def out_frac(x: Fraction) -> Any:
++    if x.denominator == 1:
++        return x.numerator
++    return {"numerator": x.numerator, "denominator": x.denominator}
++
++
++def out_q(x: Q) -> Any:
++    if x.im == 0:
++        return out_frac(x.re)
++    return {"re": out_frac(x.re), "im": out_frac(x.im)}
++
++
++def matrix(data: Any, name: str) -> list[list[Q]]:
++    if not isinstance(data, list) or not data:
++        raise ValueError(f"{name} must be a nonempty matrix")
++    rows = [[q(x) for x in row] for row in data]
++    width = len(rows[0])
++    if width == 0 or any(len(row) != width for row in rows):
++        raise ValueError(f"{name} is ragged")
++    return rows
++
++
++def vector(data: Any, name: str) -> list[Q]:
++    if not isinstance(data, list) or not

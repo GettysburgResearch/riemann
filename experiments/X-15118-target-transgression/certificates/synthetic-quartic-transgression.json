@@ -1,0 +1,67 @@
+{
+  "difference_s2_upper": 2,
+  "hilbert_schmidt_radius": 4,
+  "linear_coefficients": {
+    "2": 7,
+    "4": {
+      "denominator": 7,
+      "numerator": 222
+    },
+    "6": {
+      "denominator": 9,
+      "numerator": 1384
+    },
+    "8": 799
+  },
+  "log_ratio_coefficients": {
+    "2": 0,
+    "4": {
+      "denominator": 28,
+      "numerator": -5
+    },
+    "6": {
+      "denominator": 27,
+      "numerator": -1
+    },
+    "8": 0
+  },
+  "orders": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "raw_matrix": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      -1
+    ]
+  ],
+  "renormalized_matrix": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      -2
+    ]
+  ],
+  "schema": "riemann.target-transgression.v1",
+  "target_defects": {
+    "2": 0,
+    "4": {
+      "denominator": 7,
+      "numerator": 5
+    },
+    "6": {
+      "denominator": 9,
+      "numerator": -2
+    },
+    "8": 0
+  }
+}

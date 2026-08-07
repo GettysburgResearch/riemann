@@ -1,0 +1,202 @@
+ data:
++        raise ValueError(f"{name} must be a nonempty vector")
++    return [q(x) for x in data]
++
++
++def shape(A: list[list[Q]]) -> tuple[int, int]:
++    return len(A), len(A[0])
++
++
++def zeros(m: int, n: int) -> list[list[Q]]:
++    return [[Q() for _ in range(n)] for _ in range(m)]
++
++
++def eye(n: int) -> list[list[Q]]:
++    return [[Q(Fraction(int(i == j))) for j in range(n)] for i in range(n)]
++
++
++def adj(A: list[list[Q]]) -> list[list[Q]]:
++    m, n = shape(A)
++    return [[A[i][j].conj() for i in range(m)] for j in range(n)]
++
++
++def add(A: list[list[Q]], B: list[list[Q]]) -> list[list[Q]]:
++    if shape(A) != shape(B):
++        raise ValueError("matrix shape mismatch")
++    return [[A[i][j] + B[i][j] for j in range(len(A[0]))]
++            for i in range(len(A))]
++
++
++def sub(A: list[list[Q]], B: list[list[Q]]) -> list[list[Q]]:
++    if shape(A) != shape(B):
++        raise ValueError("matrix shape mismatch")
++    return [[A[i][j] - B[i][j] for j in range(len(A[0]))]
++            for i in range(len(A))]
++
++
++def mm(A: list[list[Q]], B: list[list[Q]]) -> list[list[Q]]:
++    m, k = shape(A)
++    k2, n = shape(B)
++    if k != k2:
++        raise ValueError(f"matrix multiply mismatch {(m,k)} x {(k2,n)}")
++    return [[sum((A[i][t] * B[t][j] for t in range(k)), Q())
++             for j in range(n)] for i in range(m)]
++
++
++def mv(A: list[list[Q]], v: list[Q]) -> list[Q]:
++    m, n = shape(A)
++    if n != len(v):
++        raise ValueError("matrix-vector shape mismatch")
++    return [sum((A[i][j] * v[j] for j in range(n)), Q())
++            for i in range(m)]
++
++
++def trace(A: list[list[Q]]) -> Q:
++    m, n = shape(A)
++    if m != n:
++        raise ValueError("trace of nonsquare matrix")
++    return sum((A[i][i] for i in range(n)), Q())
++
++
++def mpow(A: list[list[Q]], exponent: int) -> list[list[Q]]:
++    n, n2 = shape(A)
++    if n != n2 or exponent < 0:
++        raise ValueError("invalid matrix power")
++    R = eye(n)
++    X = A
++    e = exponent
++    while e:
++        if e & 1:
++            R = mm(R, X)
++        X = mm(X, X)
++        e //= 2
++    return R
++
++
++def is_hermitian(A: list[list[Q]]) -> bool:
++    return A == adj(A)
++
++
++def invert(A: list[list[Q]]) -> list[list[Q]]:
++    n, n2 = shape(A)
++    if n != n2:
++        raise ValueError("inverse requires square matrix")
++    aug = [A[i][:] + eye(n)[i] for i in range(n)]
++    for col in range(n):
++        pivot = next((r for r in range(col, n)
++                      if not aug[r][col].is_zero()), None)
++        if pivot is None:
++            raise ValueError("singular matrix")
++        if pivot != col:
++            aug[col], aug[pivot] = aug[pivot], aug[col]
++        p = aug[col][col]
++        aug[col] = [x / p for x in aug[col]]
++        for r in range(n):
++            if r == col:
++                continue
++            f = aug[r][col]
++            if f.is_zero():
++                continue
++            aug[r] = [aug[r][j] - f * aug[col][j]
++                      for j in range(2*n)]
++    return [row[n:] for row in aug]
++
++
++def require_pd_hermitian(G: list[list[Q]], name: str) -> None:
++    """Exact Hermitian positive definiteness by Schur-complement LDL pivots."""
++    n, n2 = shape(G)
++    if n != n2 or not is_hermitian(G):
++        raise ValueError(f"{name} must be Hermitian square")
++    A = [row[:] for row in G]
++    for k in range(n):
++        p = A[k][k]
++        if not p.is_real() or p.re <= 0:
++            raise ValueError(f"{name} nonpositive LDL pivot at {k}: {p}")
++        for i in range(k+1, n):
++            for j in range(k+1, n):
++                A[i][j] = A[i][j] - A[i][k] * A[k][j] / p
++
++
++def norm2(v: list[Q]) -> Fraction:
++    return sum((z.abs2() for z in v), Fraction(0))
++
++
++def gram_norm2(v: list[Q], G: list[list[Q]]) -> Fraction:
++    w = mv(G, v)
++    z = sum((v[i].conj() * w[i] for i in range(len(v))), Q())
++    if not z.is_real():
++        raise ValueError("Gram norm is not real")
++    return z.re
++
++
++def real_trace(A: list[list[Q]], name: str) -> Fraction:
++    z = trace(A)
++    if not z.is_real():
++        raise ValueError(f"{name} trace is not real: {z}")
++    return z.re
++
++
++def interval(data: Any, name: str) -> tuple[Fraction, Fraction]:
++    if not isinstance(data, list) or len(data) != 2:
++        raise ValueError(f"{name} must be [lower, upper]")
++    lo, hi = frac(data[0]), frac(data[1])
++    if lo > hi:
++        raise ValueError(f"{name} is reversed")
++    return lo, hi
++
++
++def relation_point_interval(x: Fraction, iv: tuple[Fraction, Fraction]) -> str:
++    lo, hi = iv
++    if x < lo:
++        return "BELOW_TARGET_INTERVAL"
++    if x > hi:
++        return "ABOVE_TARGET_INTERVAL"
++    return "INSIDE_TARGET_INTERVAL"
++
++
++def relation_intervals(a: tuple[Fraction, Fraction],
++                       b: tuple[Fraction, Fraction]) -> str:
++    if a[1] < b[0]:
++        return "BELOW_TARGET_INTERVAL"
++    if a[0] > b[1]:
++        return "ABOVE_TARGET_INTERVAL"
++    return "OVERLAPS_TARGET_INTERVAL"
++
++
++REQUIRED_PATHS = [
++    "bindings.manuscript_version",
++    "bindings.normalization_sha256",
++    "bindings.source_map_sha256",
++    "window.identifier",
++    "window.cutoff_definition",
++    "parameters.alpha",
++    "parameters.s_R",
++    "parameters.a_tr",
++    "readout.gram",
++    "readout.quartic_jet_coordinate",
++    "chain.raw_coordinate_matrix",
++    "chain.jet_coordinate_matrix",
++    "chain.seam_transpose_matrix",
++    "chain.comparison_trace_matrix",
++    "chain.lci_matrix",
++    "chain.projection_matrix",
++    "chain.seam_involution",
++    "classical.a4_linear_interval",
++    "target.tau4_interval",
++]
++
++
++def at_path(data: Any, path: str) -> Any:
++    cur = data
++    for key in path.split("."):
++        if not isinstance(cur, dict) or key not in cur:
++            return None
++        cur = cur[key]
++    return cur
++
++
++def missing_paths(data: dict[str, Any]) -> list[str]:
++    return [p for p in REQUIRED_PATHS if at_path(data, p) is None]
++
++
++def audit_incomplete(data: dict[str, An

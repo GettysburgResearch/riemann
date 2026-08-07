@@ -1,0 +1,16 @@
+test_bad_c (__main__.ExactReplayTests.test_bad_c) ... ok
+test_bad_norm (__main__.ExactReplayTests.test_bad_norm) ... ok
+test_bool (__main__.ExactReplayTests.test_bool) ... ok
+test_exact_scaled_pass (__main__.ExactReplayTests.test_exact_scaled_pass) ... ok
+test_false_moat (__main__.ExactReplayTests.test_false_moat) ... ok
+test_unscaled_fails (__main__.ExactReplayTests.test_unscaled_fails) ... ok
+test_wrong_scale (__main__.ExactReplayTests.test_wrong_scale) ... ok
+test_zero_p (__main__.ExactReplayTests.test_zero_p) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
+
+This retained log is an independent in-session exact-Fraction replay of the
+same formulas and mutations used by tests/test_verify.py.

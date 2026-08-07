@@ -1,0 +1,104 @@
+{
+  "a4_linear_interval": [
+    31,
+    31
+  ],
+  "c4_norm_squared": 1,
+  "c4_normalized_lower_bound_squared": 1,
+  "c4_vector": [
+    0,
+    1
+  ],
+  "dimensions": {
+    "coordinate": 2,
+    "readout": 2,
+    "target": 2
+  },
+  "jet_map": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "jet_schatten4_fourth_power": 7,
+  "manifest_sha256": "cafff05f332dd78eeaacac47378a838b95e6485efd57e9a07ef433d2be0cb1b8",
+  "quartic_jet_gram_norm_squared": 1,
+  "quartic_verdict": "QUARTIC_TARGET_CHANGE_CERTIFIED",
+  "raw_form_matrix": [
+    [
+      5,
+      0
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "raw_map": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      -1
+    ]
+  ],
+  "relations": {
+    "a4_linear_vs_tau4": "OVERLAPS_TARGET_INTERVAL",
+    "trace_A4_vs_tau4": "ABOVE_TARGET_INTERVAL",
+    "trace_K4_vs_tau4": "ABOVE_TARGET_INTERVAL"
+  },
+  "renormalized_form_matrix": [
+    [
+      2,
+      -1
+    ],
+    [
+      -1,
+      5
+    ]
+  ],
+  "renormalized_map": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      -2
+    ]
+  ],
+  "represented_A": [
+    [
+      5,
+      0
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "represented_K": [
+    [
+      2,
+      -1
+    ],
+    [
+      -1,
+      5
+    ]
+  ],
+  "scope": "finite source-bound row only; no infinite-window or RH claim",
+  "status": "CERTIFIED_SOURCE_BOUND_QUARTIC_ROW",
+  "tau4_interval": [
+    31,
+    31
+  ],
+  "trace_A4": 1250,
+  "trace_K4": 799
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "riemann.singular-seam-source-row.v1",
+  "bindings": {
+    "manuscript_version": "synthetic-control",
+    "normalization_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "source_map_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "window": {
+    "identifier": "M-control",
+    "cutoff_definition": "synthetic exact"
+  },
+  "parameters": {
+    "alpha": "1",
+    "s_R": 2,
+    "a_tr": "1"
+  },
+  "readout": {
+    "gram": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "quartic_jet_coordinate": [
+      1,
+      0
+    ]
+  },
+  "chain": {
+    "raw_coordinate_matrix": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        -1
+      ]
+    ],
+    "jet_coordinate_matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "seam_transpose_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "comparison_trace_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "lci_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "projection_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "seam_involution": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "classical": {
+    "a4_linear_interval": [
+      31,
+      31
+    ]
+  },
+  "target": {
+    "tau4_interval": [
+      31,
+      31
+    ]
+  }
+}

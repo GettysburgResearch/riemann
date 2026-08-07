@@ -1,0 +1,47 @@
+{
+  "certificate_sha256": "7d6cd2adb15ab681ae8537a19810af9bffee9a0eb8b9eca1175317d5f25f823e",
+  "dimension": 2,
+  "log_ratio_coefficients": {
+    "2": 0,
+    "4": {
+      "denominator": 28,
+      "numerator": -5
+    },
+    "6": {
+      "denominator": 27,
+      "numerator": -1
+    },
+    "8": 0
+  },
+  "quartic_power_trace_bound": 512,
+  "quartic_ratio_exponent": {
+    "denominator": 28,
+    "numerator": -5
+  },
+  "raw_trace_moments": {
+    "2": 10,
+    "4": 50,
+    "6": 250,
+    "8": 1250
+  },
+  "renormalized_trace_moments": {
+    "2": 7,
+    "4": 31,
+    "6": 154,
+    "8": 799
+  },
+  "scope": "finite exact transgression only; no xi evaluation or Riemann Schatten limit",
+  "status": "CERTIFIED_TARGET_TRANSGRESSION_IDENTITY",
+  "target_defects": {
+    "2": 0,
+    "4": {
+      "denominator": 7,
+      "numerator": 5
+    },
+    "6": {
+      "denominator": 9,
+      "numerator": -2
+    },
+    "8": 0
+  }
+}

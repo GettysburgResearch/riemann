@@ -1,0 +1,149 @@
+{
+  "schema": "riemann.pre-public-pr-review.v1",
+  "reviewer": "gpt56-04-f",
+  "review_date": "2026-08-01",
+  "scope": "independent frozen-commit review; no merges; no RH or counterexample claim",
+  "pull_requests": [
+    {
+      "pr": 99,
+      "head_sha": "73f4af75611ee1586571055fea245fab1a17b781",
+      "classification": "VERIFIED",
+      "scope": "workflow trigger only"
+    },
+    {
+      "pr": 100,
+      "head_sha": "becaa934f59cde17a7e54275a0bab367d901face",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "L-9303 and X-9302 total-count deflation",
+      "required_fixes": [
+        "integrate corrected L-7504 finite-R display",
+        "clarify endpoint count convention"
+      ]
+    },
+    {
+      "pr": 101,
+      "head_sha": "0db1cd04fa6899c848c1c3f4a5c3e2ce2eedd260",
+      "classification": "VERIFIED",
+      "scope": "workflow trigger only"
+    },
+    {
+      "pr": 102,
+      "head_sha": "4e5d08488b287286bb93c4a917c3ab37587331f7",
+      "classification": "VERIFIED",
+      "scope": "workflow trigger only; operationally supersedes PR 99"
+    },
+    {
+      "pr": 103,
+      "head_sha": "272e0afac5190ecf06517438e828e33a68b3b76e",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "L-9306/L-9307 shifted and atomized deflation",
+      "required_fixes": [
+        "reconcile unique work onto PR 105 hardened core"
+      ]
+    },
+    {
+      "pr": 104,
+      "head_sha": "109adb084cbbb6d68b426d65322dbb5b9ac0a3c7",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "L-9304 overlapping interval count envelope",
+      "required_fixes": [
+        "rename colliding claim ID",
+        "integrate corrected analytic parent"
+      ]
+    },
+    {
+      "pr": 105,
+      "head_sha": "a587dff2e06980a5dca7867e56965bd9abf88730",
+      "classification": "VERIFIED",
+      "scope": "hardened direct-xi/count-deflation production stack; finite no-negative result"
+    },
+    {
+      "pr": 106,
+      "head_sha": "7cd5584733ba0a3fca49639b9acd9a8c1faa2b1c",
+      "classification": "VERIFIED",
+      "scope": "empirical high-precision precision-ghost repair"
+    },
+    {
+      "pr": 107,
+      "head_sha": "2345b4e2db852b892256527be8310d378fea48e8",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "selected-factor deflation and Vandermonde-normalized minors",
+      "required_fixes": [
+        "rename L-9304 and L-9305 collisions",
+        "source-bind production artifacts",
+        "cite positive-measure monotonicity explicitly"
+      ]
+    },
+    {
+      "pr": 108,
+      "head_sha": "f087d51cf906e0c36e4a57174bf044948bcd54fe",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "L-9701 total-count saturated sign chain",
+      "required_fixes": [
+        "replace stale L-9306 references with L-9701",
+        "retain source-bound builder as production trust boundary"
+      ]
+    },
+    {
+      "pr": 109,
+      "head_sha": "0553db2ebce80358b90de00bcf1bdf98b62c0546",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "witness-adapted count LP dual",
+      "required_fixes": [
+        "rename colliding L-9305 ID",
+        "source-bind primitive and count artifacts"
+      ]
+    },
+    {
+      "pr": 110,
+      "head_sha": "f7dcf53b077108835adec35dd3518229935e7505",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "L-9702/L-9703 support-gap chord and Hausdorff residual",
+      "required_fixes": [
+        "update stale IDs",
+        "state finite-measure/convergence justification",
+        "source-bind support gate"
+      ]
+    },
+    {
+      "pr": 111,
+      "head_sha": "c992a15b099367f9fa5f149beec2732ef42a55b1",
+      "classification": "VERIFIED WITH FIXES",
+      "scope": "L-9308 log-portfolio theorem and count-dual checker",
+      "required_fixes": [
+        "reject overlapping atom intervals",
+        "load and verify primitive/count sources",
+        "remove hardcoded first-atom two-point control"
+      ]
+    },
+    {
+      "pr": 112,
+      "head_sha": "65220c068f80dcf7d9df111e77c211e2ef22ee8a",
+      "classification": "GAP/BLOCKED",
+      "scope": "15-row directed basis replay",
+      "blockers": [
+        "open PR 114 / L-9309 not in assigned frozen review set",
+        "repaired PR 111 required",
+        "final reconciled PR 103/105 source artifact required"
+      ]
+    }
+  ],
+  "classification_counts": {
+    "VERIFIED": 5,
+    "VERIFIED WITH FIXES": 8,
+    "GAP/BLOCKED": 1,
+    "REJECTED": 0
+  },
+  "serious_resolution_path": {
+    "present": true,
+    "kind": "serious falsification path only",
+    "proof_of_rh_present": false,
+    "missing_steps": [
+      "adaptive source-bound directed completed-xi primitives",
+      "independent total-count or saturated sign-chain artifacts",
+      "one source-bound atom/count polytope with witness-specific duals",
+      "strict negative interval with conditioning moat",
+      "independent backend reproduction and normalization audit"
+    ]
+  }
+}
