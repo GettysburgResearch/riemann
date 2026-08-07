@@ -1,12 +1,13 @@
 # L-15156 — Exact centered Heath--Brown Type-II packet
 
 Claim ID: `L-15156`  
-Title: A finite truncated Heath--Brown identity, high-order safe centering, and a deterministic first-crossing partition give a closed finite row dictionary for the normal prime-energy problem  
+Title: A finite truncated Heath--Brown identity and deterministic first-crossing partition give a source-bound Type-I/Type-II packet dictionary, with exact null-mode centering interfaces  
 Status: **PROPOSED EXACT ALGEBRAIC CONSTRUCTION PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-04-f`  
 Created: 2026-08-07  
+Updated: 2026-08-07 after self-audit of finite-cutoff companions  
 Dependencies: `L-15154`, `L-15155`  
-Scope: exact finite decomposition and row schema; the final centered row estimates remain proposed in `M-15112`
+Scope: exact finite decomposition, partition, and centering schema; the useful packet companions and analytic packet estimates remain proposed in `M-15112`
 
 ## 1. Truncated Möbius polynomial
 
@@ -94,9 +95,9 @@ gives (L-15156.4). QED.
 
 This is an exact finite identity, not an asymptotic Vaughan approximation.
 
-## 3. Explicit row tuples
+## 3. Explicit coefficient tuples
 
-The `j`-th row expands over tuples
+The `j`-th summand expands over tuples
 
 \[
  \mathbf t=(d_1,\ldots,d_j;
@@ -123,15 +124,17 @@ Its coefficient is
  \tag{L-15156.9}
 \]
 
-Fix once and for all the lexicographic ordering
+Fix once and for all the variable ordering
 
 \[
  d_1,\ldots,d_j,q,r_1,\ldots,r_{j-1}.
  \tag{L-15156.10}
 \]
 
-The tuple list, coefficient, endpoint convention, and ordering are all finite
-and source-bindable.
+For fixed `K`, the **combinatorial types** of coefficient word and stopping
+position form a finite dictionary. The actual tuple list at block `J` is finite
+but depends on the endpoint `X` and therefore is not asserted to be independent
+of `J`.
 
 ## 4. Deterministic Type-I/Type-II partition
 
@@ -158,9 +161,14 @@ product `A` satisfying
  \tag{L-15156.13}
 \]
 
-Let `B=n/A`.
+If no partial product crosses before the final variable, stop at the final
+variable. Put
 
-There are exactly two cases.
+\[
+ B=n/A.
+\]
+
+There are exactly two declared cases.
 
 ### Type II
 
@@ -173,45 +181,50 @@ If
  \tag{L-15156.14}
 \]
 
-retain the ordered factor split `(A,B)` as a balanced Type-II row.
-Both factor groups live at a strict fraction of the output logarithmic scale,
-up to the fixed support slack.
+retain the ordered factor split `(A,B)` as a Type-II packet. Both factor groups
+live at a strict fraction of the output logarithmic scale, up to the fixed
+support slack.
 
 ### Type I
 
-Otherwise one group is smaller than
+Otherwise one factor group is smaller than
 
 \[
- e^{\delta_KJ+C_H}
+ e^{\delta_KJ+C_H}.
  \tag{L-15156.15}
 \]
 
-and the complementary group is declared the large Type-I variable.
+It is declared the small Type-I packet and the complementary group the large
+variable.
 
-The dichotomy is exhaustive by construction. There is no informal choice of a
-“balanced” factorization after an estimate has been applied.
+A Type-I packet receives one of two additional flags:
 
-For fixed `K`, the identity row, stopping location, Type-I/II label, coefficient
-word, and factor-group types range over a finite dictionary `mathfrak T_K`.
+1. `reduced-complexity`, when removing the small packet strictly lowers the
+   remaining convolution word;
+2. `terminal`, when the small packet is trivial or the complementary word has
+   not decreased in complexity and must therefore receive an independent
+   direct estimate.
 
-## 5. High-order rowwise centering
+The partition is exhaustive and deterministic. No term is assigned to a
+convenient factorization after an estimate has been applied.
 
-The Dirichlet series of the `j`-th identity row is
+## 5. What high-order centering proves exactly
+
+The unpartitioned `j`-th Heath--Brown summand has Dirichlet series
 
 \[
  M_V(s)^j[-\zeta'(s)]\zeta(s)^{j-1}.
  \tag{L-15156.16}
 \]
 
-Its pole at `s=1` has order at most `j+1<=K+1`. Choose the high-order safe
-window
+Its Laurent principal part at `s=1` has order at most `j+1<=K+1`. Choose
 
 \[
  H_K=H^{[K+1]}
  \tag{L-15156.17}
 \]
 
-from `L-15155`. Its block kernel annihilates every density
+from `L-15155`. Its block kernel annihilates every global pole density
 
 \[
  u^re^{u/2}du,
@@ -219,103 +232,143 @@ from `L-15155`. Its block kernel annihilates every density
  \tag{L-15156.18}
 \]
 
-and also the corresponding polynomial constant-density modes at the second
-boundary.
+and the corresponding polynomial constant-density modes at the second boundary.
 
-For each exact dictionary row `tau in mathfrak T_K`, let `rho_tau` be the
-inverse Laurent polynomial of that row at the pole `s=1`. Then
+Therefore the **global Laurent principal part** of every unpartitioned
+Heath--Brown summand lies in the exact null space of the Gram.
+
+This statement must not be confused with a full estimate for a finite partition
+packet. Truncating Möbius factors and imposing first-crossing cutoffs creates
+shifted Heaviside boundaries and compact transition pieces. Those are not in
+general global polynomial densities. For a partition packet `tau`, a proposed
+companion `rho_tau` is admissible only after a certificate proves
 
 \[
- \rho_\tau\in\mathcal N_{K+1},
+ \rho_\tau\in\mathcal N_{K+1}.
  \tag{L-15156.19}
 \]
 
-and the centered row source is
+Once that membership is proved, `L-15155` gives exact invariance under
+subtraction of `rho_tau`. Any remaining cutoff or transition source must stay in
+the centered packet and be estimated; it may not be discarded as a null mode.
+
+Thus the high-order null quotient closes the **algebraic centering mechanism**.
+Constructing useful packet companions and bounding their transition residuals
+remain part of the analytic packet theorem `CP(K)`.
+
+## 6. Signed packet grouping before Gram bounds
+
+Let `mathfrak T_K` be the finite set of destination types consisting of:
+
+```text
+first-crossing position
+Type-I / Type-II label
+Type-I reduced-complexity / terminal flag
+ordered factor-word types
+factor-scale intervals
+window and cutoff type
+```
+
+For one output block, combine **all** tuple contributions across all
+Heath--Brown indices `j` having the same destination label, with their exact
+signed binomial coefficients, before applying Cauchy--Schwarz. Denote the
+resulting signed source packet by
 
 \[
- d\nu_\tau=d\mu_\tau-d\rho_\tau.
+ d\mu_{K,\tau,J}.
  \tag{L-15156.20}
 \]
 
-By `L-15155`, every row may be centered independently, even though the Laurent
-polynomials cancel only after the signed Heath--Brown rows are recombined.
+If an admissible companion `rho_(K,tau,J) in N_(K+1)` has been supplied, put
 
-This closes the rowwise-centering objection in the latest review.
+\[
+ d\nu_{K,\tau,J}
+ =d\mu_{K,\tau,J}-d\rho_{K,\tau,J}.
+ \tag{L-15156.21}
+\]
 
-## 6. Finite auxiliary row energies
+Otherwise take `rho=0` and retain the whole source.
 
-For each row type `tau`, define
+Define the packet self-energy
 
 \[
  \boxed{
  E_{K,\tau}(J)
  =\iint K_{J,K+1}(u,v)
- d\nu_\tau(u)d\nu_\tau(v)\ge0.}
- \tag{L-15156.21}
+ d\nu_{K,\tau,J}(u)d\nu_{K,\tau,J}(v)\ge0.}
+ \tag{L-15156.22}
 \]
 
-Let `R_K=|mathfrak T_K|`. The exact recombination and Gram Cauchy--Schwarz give
+Exact recombination and Gram Cauchy--Schwarz give
 
 \[
  \boxed{
  \mathcal B_{J,K}^{\Lambda}
- \le R_K\sum_{\tau\in\mathfrak T_K}
- E_{K,\tau}(J).}
- \tag{L-15156.22}
-\]
-
-Here `B_(J,K)^Lambda` is the full-von-Mangoldt block energy for the safe window
-`H_K`.
-
-Thus the Type-II problem is not required to close under the single prime-block
-family. It closes under the finite vector
-
-\[
- \mathbf E_K(J)
- =(E_{K,\tau}(J))_{\tau\in\mathfrak T_K}.
+ \le R_K\sum_{\tau\in\mathfrak T_K}E_{K,\tau}(J),}
  \tag{L-15156.23}
 \]
+
+where `R_K=|mathfrak T_K|` is finite for fixed `K`.
+
+The grouping requirement is load-bearing: separating the `j`-summands by total
+variation before forming the packets may spend the signed binomial cancellation
+and is not licensed by this lemma.
 
 The ordinary-prime energy has the same polynomial and subexponential status by
 `L-15154`.
 
-## 7. Exact destination of every row
+## 7. Exact destination ledger
 
-The finite dictionary records, for every `tau`:
+For every packet type `tau`, the source-bound dictionary records:
 
 ```text
-identity order j
-binomial sign and multiplicity
-ordered coefficient word
-large/small or balanced factor split
-pole Laurent polynomial
-centered source measure
+all contributing identity indices j
+signed binomial coefficient vector
+ordered coefficient words
+first-crossing positions
+Type-I/II label and Type-I terminal flag
+factor support intervals
+admissible null companion, if any
+uncancelled transition residual
 output window H_K
-source and factor support intervals
-auxiliary energy component
+auxiliary self-energy identifier
 ```
 
-Type-I rows are tagged by:
-
-1. their small factor packet, supported below `exp(delta_K J+C_H)`;
-2. the strictly lower convolution complexity of the large factor word.
-
-Type-II rows are tagged by two factor packets whose logarithmic scales are at
-most
+Type-II packets have two factor groups whose logarithmic scales are at most
 
 \[
  (1-\delta_K)J+C_H.
  \tag{L-15156.24}
 \]
 
-Consequently a proposed estimate can be checked against the finite-vector or
-tensor scale-contraction hypotheses of `T-15121`. No row is allowed to disappear
-under the phrase “standard Type II.”
+Reduced-complexity Type-I packets have a small group below
+`delta_K J+O_K(1)` and a strictly simpler large word. Terminal Type-I packets
+are retained as separate auxiliary components requiring a direct bound.
 
-## 8. Exact open centered packet estimate
+Consequently every coefficient tuple has a declared destination. This is a
+proof-producing schema, not an analytic estimate.
 
-The remaining arithmetic assertion is now the following finite-family estimate.
-For every fixed `K`, prove that each row satisfies either
+## 8. The exact open centered packet theorem
+
+For every fixed `K`, `CP(K)` must prove all of the following.
+
+### 8.1 Companion and transition ledger
+
+For every packet, either:
+
+1. construct a source-bound companion in `N_(K+1)` and retain all transition
+   residuals; or
+2. take the zero companion and estimate the complete packet.
+
+### 8.2 Signed-packet preservation
+
+All `j`-summands assigned to the same packet are recombined with their exact
+signed coefficients before any absolute value or Gram Cauchy--Schwarz step.
+
+### 8.3 Closed auxiliary estimates
+
+Each packet must satisfy a linear or tensor recurrence in the finite auxiliary
+system. A linear target is
 
 \[
  \boxed{
@@ -328,34 +381,43 @@ For every fixed `K`, prove that each row satisfies either
  \tag{L-15156.25}
 \]
 
-or the tensor variant of `T-15121`, with
+with the terminal Type-I packets either included in the sum with a genuine
+strict-scale destination or bounded by an explicitly declared source term.
+The tensor alternative is the one in `T-15121/T-15122`.
+
+### 8.4 Coefficient rates
+
+The coefficient rates must satisfy the quantitative condition in `T-15122`,
+for example
 
 \[
- \log(1+a_{K,\tau}(J))=o(J),
- \qquad
- \log(1+b_{K,\tau\upsilon}(J))=o(J).
+ {\varepsilon_K\over\delta_K}\longrightarrow0.
  \tag{L-15156.26}
 \]
 
-Equation (L-15156.25) is source-specific, centered row by centered row, and
-strictly scale-contracting. Its proof is the Type-II analytic hinge of the new
-proposal.
+Equations (L-15156.25)--(L-15156.26), including companion construction and
+signed packet preservation, are the Type-II analytic hinge.
 
 ## 9. Proof boundary
 
 Closed exactly:
 
 - the finite Heath--Brown coefficient identity;
-- the full tuple and multiplicity ledger;
-- a deterministic Type-I/Type-II partition;
-- rowwise high-order centering;
-- a finite positive auxiliary-energy vector;
-- exact row destinations and a proof-producing schema.
+- the complete tuple and multiplicity ledger;
+- a deterministic first-crossing Type-I/Type-II partition;
+- the high-order null-mode space;
+- the rule for admissible packet companions;
+- signed packet grouping before Gram bounds;
+- a finite positive auxiliary-energy schema;
+- an exact destination or terminal flag for every tuple.
 
 Open:
 
-- the centered row estimates (L-15156.25)--(L-15156.26);
-- the resulting RH conclusion.
+- construction of useful companions for the cutoff packets;
+- control of their shifted-boundary transition residuals;
+- direct estimates for terminal Type-I packets;
+- the centered packet recurrences and coefficient-rate limit;
+- RH.
 
-Thus the Type-II bookkeeping and closure language are complete; the analytic
-centered packet estimate remains the sole proposed arithmetic theorem.
+Thus the Type-II bookkeeping and review interface are complete. The analytic
+centered packet theorem remains the sole proposed arithmetic completion.
