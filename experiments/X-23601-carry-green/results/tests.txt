@@ -1,0 +1,21 @@
+test_digit_mutation_rejected (test_verify.CarryGreenTests.test_digit_mutation_rejected) ... ok
+test_main (test_verify.CarryGreenTests.test_main) ... ok
+test_nonmobius_mutation_rejected (test_verify.CarryGreenTests.test_nonmobius_mutation_rejected) ... ok
+test_wrong_beta_rejected (test_verify.CarryGreenTests.test_wrong_beta_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.019s
+
+OK
+{
+  "affine_mobius_checks": 1770,
+  "binary_digit_checks": 80,
+  "carry_checks": 780,
+  "dyadic_inverse_checks": 80,
+  "green_derivative_checks": 65,
+  "inverse_reconstruction_X": 24,
+  "proof_object_sha256": "65dfd3a503e16fee8a5e64b7354d36b43b1ae02e617fc31e666f2fac93c9c0ce",
+  "scope": "Finite exact algebra only. This result does not verify the quotient-layer identity L-23603.15, continuum positivity, the cofinal minorant, or RH.",
+  "valuation_checks": 181,
+  "verdict": "SYNTHETIC_CARRY_GREEN_ALGEBRA_VERIFIED"
+}
