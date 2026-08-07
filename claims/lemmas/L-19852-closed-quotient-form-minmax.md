@@ -1,7 +1,7 @@
 # L-19852 — Closed quotient forms preserve a one-dimensional low index on a dense source range
 
 Claim ID: `L-19852`  
-Status: **PROVED ABSTRACT CLOSED-FORM THEOREM**  
+Status: **PROVED ABSTRACT CLOSED-FORM THEOREM UNDER THE DECLARED MINIMAL-LIFT HYPOTHESIS**  
 Authoring agent: `gpt56-pro-09-q`  
 Created: 2026-08-07  
 Dependencies: closed quadratic forms; Courant--Fischer min--max; quotient Hilbert spaces  
@@ -12,7 +12,7 @@ Scope: functional-analytic engine for the projection-free localized-Weil route
 Let `(U,G)` and `(H,\langle\cdot,\cdot\rangle_H)` be Hilbert spaces. Let `D` be a densely defined, closed, nonnegative quadratic form on `U`. Let
 
 \[
- S:U\to H
+ S:\operatorname{Dom}D\to H
 \]
 
 be linear with dense range and suppose
@@ -24,22 +24,7 @@ be linear with dense range and suppose
 
 on `Dom D`.
 
-Let
-
-\[
- \mathcal N=\{u\in\operatorname{Dom}D:Su=0\}.
-\]
-
-Complete `Dom D/\mathcal N` in the norm
-
-\[
- \|[u]\|_{D+G}^2
- :=\inf_{n\in\mathcal N}
- \bigl(D(u+n)+\|u+n\|_G^2\bigr).
-\tag{L-19852.2}
-\]
-
-Assume the induced map into `H` is closable. Its closed graph defines a lower-semicontinuous quotient form `\overline D` on `H` by
+Define the lower-semicontinuous quotient form
 
 \[
  \boxed{
@@ -48,51 +33,42 @@ Assume the induced map into `H` is closable. Its closed graph defines a lower-se
  \liminf_{j\to\infty}D(u_j):
  Su_j\to v\text{ in }H
  \right\}.}
-\tag{L-19852.3}
+\tag{L-19852.2}
 \]
 
-This definition is independent of a source basis and remains meaningful when the source range is dense but not closed.
+Assume:
 
-## 2. Minimal-lift realization
+1. `overline D` is proper and closed;
+2. after quotienting the zero-energy kernel, every `v in Dom overline D` has a unique `D`-minimal lift `Jv`;
+3. the lift map
+   \[
+   J:\operatorname{Dom}\overline D\to\operatorname{Dom}D
+   \]
+   is linear and satisfies
+   \[
+   SJv=v,\qquad D(Jv)=\overline D(v).
+   \tag{L-19852.3}
+   \]
 
-Let `\mathscr U` be the quotient completion in (L-19852.2). After dividing out the zero-energy kernel, the closed map
+These properties hold, for example, when the completion of `Dom D/ker S` in the `D`-norm is a Hilbert space and the induced map into `H` is closed. They are stated explicitly because minimization in the `D+G` norm would not in general minimize `D` itself.
 
-\[
- \widetilde S:\mathscr U\to H
-\]
-
-has dense range. Every `v` in the form domain of `\overline D` has a unique lift of minimal `D+G` norm in
-
-\[
- (\ker\widetilde S)^{\perp_{D+G}}.
-\]
-
-For that lift `u_v`,
-
-\[
- \overline D(v)=D(u_v).
-\tag{L-19852.4}
-\]
-
-The lift depends linearly on `v`. Thus every finite-dimensional subspace of `Dom \overline D` has a finite-dimensional space of minimal lifts of the same dimension.
-
-## 3. Low-index transfer
+## 2. Low-index transfer
 
 Suppose for some `b>0` and scale `d>0`,
 
 \[
  \dim\mathbf1_{[0,bd)}
  \bigl(G^{-1/2}DG^{-1/2}\bigr)\le1.
-\tag{L-19852.5}
+\tag{L-19852.4}
 \]
 
-Let `W` be any two-dimensional subspace of `Dom \overline D`. Its minimal-lift space `\widetilde W` is two-dimensional. Let `E_<` be the source spectral subspace below `bd`; by (L-19852.5), `dim E_<=1`. Hence there exists nonzero
+Let `W` be any two-dimensional subspace of `Dom overline D`. Since `J` is linear and injective, `JW` is two-dimensional. Let `E_<` be the source spectral subspace below `bd`; by (L-19852.4), `dim E_<=1`. Hence there exists nonzero
 
 \[
- u\in\widetilde W\cap E_<^{\perp_G}.
+ u\in JW\cap E_<^{\perp_G}.
 \]
 
-For `v=Su`,
+Put `v=Su`. Then
 
 \[
  D(u)\ge bd\|u\|_G^2,
@@ -104,68 +80,75 @@ while (L-19852.1) gives
  \|v\|_H^2\le K\|u\|_G^2.
 \]
 
-Therefore
+Using (L-19852.3),
 
 \[
  \frac{\overline D(v)}{\|v\|_H^2}
+ =\frac{D(u)}{\|Su\|_H^2}
  \ge\frac bK d.
 \]
 
-Every two-dimensional subspace contains such a vector, so
+Every two-dimensional subspace contains such a vector. Therefore
 
 \[
  \boxed{
  \theta_2(\overline D,H)
  \ge\frac bK d.}
-\tag{L-19852.6}
+\tag{L-19852.5}
 \]
 
-Here `theta_2` is the second min--max value of the selfadjoint operator associated to the closed form `\overline D`; the statement remains valid if the value lies below the essential spectrum.
+Here `theta_2` is the second min--max value of the selfadjoint operator associated to the closed form `overline D`.
 
-## 4. Target upper bound
+## 3. Target upper bound
 
-Let `u_*\in\operatorname{Dom}D` satisfy
+Let `u_* in Dom D` satisfy
 
 \[
  D(u_*)\le a d_*\|u_*\|_G^2
-\tag{L-19852.7}
+\tag{L-19852.6}
 \]
 
 and
 
 \[
  \|Su_*\|_H^2\ge k\|u_*\|_G^2.
-\tag{L-19852.8}
+\tag{L-19852.7}
 \]
 
-Put `v_*=Su_*`. By the defining infimum,
+Put `v_*=Su_*`. The defining infimum gives
+
+\[
+ \overline D(v_*)\le D(u_*),
+\]
+
+and hence
 
 \[
  \boxed{
  \frac{\overline D(v_*)}{\|v_*\|_H^2}
  \le\frac ak d_*.}
-\tag{L-19852.9}
+\tag{L-19852.8}
 \]
 
-Combining with (L-19852.6),
+Combining with (L-19852.5),
 
 \[
  \boxed{
  \frac{R_{\overline D}(v_*)}{\theta_2(\overline D,H)}
  \le\frac{aK}{bk}\frac{d_*}{d}.}
-\tag{L-19852.10}
+\tag{L-19852.9}
 \]
 
-## 5. Relative form transfer
+## 4. Relative form transfer
 
-Let `Q` be a closed lower-bounded form on `H` with the same domain as `\overline D`. If
+Let `Q` be a closed lower-bounded form on `H` with the same domain as `overline D`. If
 
 \[
  \boxed{
  (1-\eta)c\,\overline D
  \preceq Q-\sigma H
  \preceq(1+\eta)c\,\overline D,}
-\tag{L-19852.11}
+\tag{L-19852.10}
 \]
 
 with `c>0` and `0<=eta<1`, then:
@@ -186,12 +169,12 @@ Thus the target-to-gap ratio is bounded by
  \boxed{
  \frac{1+\eta}{1-\eta}
  \frac{aK}{bk}\frac{d_*}{d}.}
-\tag{L-19852.12}
+\tag{L-19852.11}
 \]
 
 When this tends to zero, the ground line is simple and converges projectively to the target line.
 
-## 6. Application interface
+## 5. Application interface
 
 For the localized Weil programme:
 
@@ -204,12 +187,12 @@ overline D         minimum tail energy among radical extensions;
 Q                 closed localized Weil form.
 ```
 
-At a non-zeta-cycle support the source range is dense. If the signed source-tail hierarchy and the relative local-Weyl inequality are proved on the closed quotient, the complete localized operator—not merely a finite Fourier compression—has a simple even prolate ground state.
+At a non-zeta-cycle support the source range is dense. If the quotient form has the minimal-lift realization above, and if the signed source-tail hierarchy and relative local-Weyl inequality hold, the complete localized operator—not merely a finite Fourier compression—has a simple prolate ground state.
 
-## 7. Proof boundary
+## 6. Proof boundary
 
-- The quotient construction and min--max statements are abstract functional analysis.
-- The theorem does not prove closability for a particular source realization; that must be checked in the declared source graph norm.
-- It does not prove the signed tail hierarchy or the relative localized-Weil comparison.
-- It eliminates finite Fourier projection from the logical composition once those two analytic inputs are supplied.
+- The min--max theorem is exact under the explicitly declared minimal-lift hypothesis.
+- Establishing that hypothesis for the Connes--Consani source relation is a separate closability theorem; it is not silently inferred from dense range.
+- The theorem does not prove the signed tail hierarchy or the relative localized-Weil comparison.
+- It eliminates finite Fourier projection from the composition once those analytic inputs are supplied.
 - No RH conclusion is claimed by this lemma alone.
