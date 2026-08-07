@@ -1,0 +1,62 @@
+{
+  "K": 6,
+  "classification": "EXACT_SYNTHETIC_TERMINAL_EULER_BTP_AUDIT",
+  "complexity_topological_order": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "delta": [
+    1,
+    5
+  ],
+  "exact_proof_object_sha256": "172d510bc2b256e593c586f9fb9aab14d9b69edc024bc73ef845ec3c30c60726",
+  "grid_cases": 715,
+  "grid_classification_counts": {
+    "balanced_b": 481,
+    "balanced_c": 78,
+    "reduce_b_large": 78,
+    "reduce_c_large": 78
+  },
+  "grid_denominator": 60,
+  "old_delta_2_5_counterexample_rejected": true,
+  "proof_boundary": "Exact finite geometry and schema only; no prime packet, BTP estimate, or RH result.",
+  "required_btp_fields": [
+    "tuple_manifest",
+    "signed_recombination",
+    "factor_intervals",
+    "cutoff_ledger",
+    "normal_gram",
+    "strict_scale_destinations",
+    "epsilon_K"
+  ],
+  "rowwise_separate_energy": "31",
+  "schema": "riemann.x23202-terminal-euler-btp.v1",
+  "signed_recombined_energy": "3",
+  "signed_recombined_vector": [
+    "1",
+    "1",
+    "-1"
+  ],
+  "synthetic_epsilon_K": [
+    1,
+    6
+  ],
+  "synthetic_two_theta_upper": [
+    5,
+    6
+  ],
+  "terminal_amplitude_decay_exponent": [
+    3,
+    10
+  ],
+  "terminal_energy_decay_exponent": [
+    3,
+    5
+  ],
+  "truncated_exponent": [
+    1,
+    6
+  ]
+}
