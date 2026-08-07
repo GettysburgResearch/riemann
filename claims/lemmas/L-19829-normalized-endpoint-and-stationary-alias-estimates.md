@@ -4,6 +4,7 @@ Claim ID: `L-19829`
 Status: **PROPOSED SHARP SCALAR ESTIMATE — PRIMARY-SOURCE NORMALIZATION AUDIT REQUIRED**  
 Authoring agent: `gpt56-pro-09-p`  
 Created: 2026-08-07  
+Corrected: 2026-08-07 after an internal adversarial notation audit  
 Dependencies: exact leakage normalization `L-16217`; integrated Bessel normalization `L-16222`; complex radial Volterra bounds of `L-16229`; fixed mode window `L-16219`  
 Scope: closes the two weakest analytic inputs of `L-19827`
 
@@ -15,7 +16,7 @@ scalar assertions about the canonical unit radial leakage profile:
 1. the first endpoint channel and one support derivative are only
    polylogarithmic after exact leakage normalization;
 2. the stationary cross term between the first alias and the `k`-th alias is
-   `O(R^-1/2 k^-2)` for `k<=R` and `O(k^-5/2)` for `k>R`.
+   summable with total `O(R^-1/2 polylog R)` away from the fold.
 
 This lemma proves those estimates from the normalized Bessel template. It never
 uses an absolute compact-source Sobolev norm, which is invalid at the
@@ -52,7 +53,7 @@ The exact transformed norm comparison of `L-16222` gives
 \[
  \|B_{\sigma,R}+E_R\|_2
  =(2R)^{-1/2}
- \left[1+O\left({(\log R)^2\over R}ight)\right]
+ \left[1+O\left({(\log R)^2\over R}\right)\right]
  \tag{L-19829.3}
 \]
 
@@ -69,7 +70,7 @@ The Bessel template is
  \tag{L-19829.4}
 \]
 
-Use the standard global bounds
+Use the standard global bound
 
 \[
  |J_0(y)|\le C\min(1,y^{-1/2}),
@@ -107,14 +108,14 @@ bound gives
 \]
 
 The differentiated Volterra equation of `L-16229`, together with
-`R partial_R sigma_n^2=O((n+1)/R)`, gives the same estimates for the slowly
+`R partial_R sigma_n^2=O((n+1)/R)`, gives the same estimates for each slowly
 varying coefficient after the rapid phases `exp(+-iR xi_sigma)` are extracted:
 
 \[
  \boxed{
- |c_{n,R}^\pm(z)|
- +R|\partial_Rc_{n,R}^\pm(z)|
- +|\partial_zc_{n,R}^\pm(z)|
+ |a_{n,R}^\pm(z)|
+ +R|\partial_Ra_{n,R}^\pm(z)|
+ +|\partial_za_{n,R}^\pm(z)|
  \le C(\log R)^C.}
  \tag{L-19829.9}
 \]
@@ -127,8 +128,8 @@ normalized by (L-19829.3), gives
 \[
  \boxed{
  \rho_{n,R}(z)
- ={c_{n,R}^+(z)e^{iR\xi_n(z)}
-   +c_{n,R}^-(z)e^{-iR\xi_n(z)}\over z}
+ ={a_{n,R}^+(z)e^{iR\xi_n(z)}
+   +a_{n,R}^-(z)e^{-iR\xi_n(z)}\over z}
  +q_{n,R}(z),}
  \tag{L-19829.10}
 \]
@@ -151,7 +152,7 @@ factor `d_n^-1/2` remains after the exact radial normalization.
 The leading outgoing endpoint contribution from every alias `k>=2` has the form
 
 \[
- {c_{n,R}^+(kz)\over kz}
+ {a_{n,R}^+(kz)\over kz}
  e^{iR\xi_n(kz)}.
  \tag{L-19829.12}
 \]
@@ -180,7 +181,7 @@ Partitioning the radial half-line into phase periods and using the external
 \[
  \boxed{
  \left\|
- \sum_{k=2}^\infty {c_{n,R}^+(k\cdot)
+ \sum_{k=2}^\infty {a_{n,R}^+(k\cdot)
  e^{iR\xi_n(k\cdot)}\over k(\cdot)}
  \right\|_{L^2(2,\infty)}
  \le C(\log R)^C.}
@@ -202,20 +203,18 @@ Hence the complete differentiated endpoint ledger is bounded by
  \tag{L-19829.16}
 \]
 
-This supplies both endpoint claims required in `L-19827`.
-
 ## 5. Exact stationary point for alias `k`
 
-Consider the equal-sign phase difference
+For signs `epsilon,epsilon' in {+1,-1}`, write the branch phase
 
 \[
- \phi_{jnk}(z)
- =\xi_{\sigma_j}(z)-\xi_{\sigma_n}(kz),
- \qquad k\ge2.
+ \phi_{jnk}^{\epsilon,\epsilon'}(z)
+ =\epsilon\xi_{\sigma_j}(z)
+  -\epsilon'\xi_{\sigma_n}(kz).
  \tag{L-19829.17}
 \]
 
-Opposite-sign phases have no stationary point. Put
+Opposite signs have no stationary point. For equal signs, put
 
 \[
  a_j=1-\sigma_j^2,
@@ -231,7 +230,7 @@ Since
  \tag{L-19829.18}
 \]
 
-the stationary equation `phi'=0`, after squaring positive quantities, is
+the stationary equation, after squaring positive quantities, is
 
 \[
  {a_j\over u}
@@ -241,7 +240,7 @@ the stationary equation `phi'=0`, after squaring positive quantities, is
 
 The left side is strictly decreasing from infinity to zero. The right side is
 positive and bounded between `k^2-1` and `k^2+1`. Thus the stationary point is
-unique and satisfies the exact bounds
+unique and satisfies
 
 \[
  \boxed{
@@ -276,96 +275,133 @@ Therefore, for all sufficiently large `R` and every `k>=2`,
 
 \[
  \boxed{
- |\phi_{jnk}''(z_{jnk})|
+ |(\phi_{jnk}^{\epsilon,\epsilon})''(z_{jnk})|
  \ge c k^3.}
  \tag{L-19829.22}
 \]
 
-The neighboring derivative ratios needed in the one-dimensional stationary
-phase lemma are bounded by a fixed power of `k`; after the natural rescaling
-`z-z_jnk=k^-2y`, they are uniform.
+After the natural rescaling `z-z_jnk=k^-2y`, the derivative ratios entering the
+stationary-phase lemma are uniformly polynomial in the mode window.
 
-## 7. Stationary amplitude
+## 7. Correct branch amplitude estimate for `k<=R`
 
-At the stationary point, (L-19829.7) and (L-19829.20) give
+When `2<=k<=R`, the stationary point satisfies
 
 \[
- |\rho_{j,R}(z_{jnk})|
- \le C(\log R)^C\min(R^{1/2},k^{1/2}).
+ R\xi_j(z_{jnk})\asymp R/k\gtrsim1,
+\]
+
+so the Bessel function may be resolved into its incoming/outgoing Hankel
+branches. The first branch coefficient, including its endpoint algebraic
+factor, obeys
+
+\[
+ |b_{j,R}^\epsilon(z_{jnk})|
+ \le C(\log R)^C k^{1/2},
  \tag{L-19829.23}
 \]
 
-Since `kz_jnk>=k`, (L-19829.8) gives
+while the dilated far-field branch obeys
 
 \[
- |\rho_{n,R}(kz_{jnk})|
+ |b_{n,R}^{\epsilon}(kz_{jnk})|
  \le {C(\log R)^C\over k}.
  \tag{L-19829.24}
 \]
 
-Thus the product amplitude is bounded by
+Thus the product of the **slow branch amplitudes**, not the already oscillatory
+full profiles, is bounded by
 
 \[
- C(\log R)^C
- \begin{cases}
- k^{-1/2},&2\le k\le R,\\
- R^{1/2}k^{-1},&k>R.
- \end{cases}
+ C(\log R)^C k^{-1/2}.
  \tag{L-19829.25}
 \]
 
-## 8. The `k^-2` stationary cross bound
-
-Apply stationary phase to
+The equal-sign branch integral is therefore
 
 \[
- I_{jnk}(R)
- =\int_1^\infty
- \rho_{j,R}(z)
- \overline{\rho_{n,R}(kz)}
- e^{iR\phi_{jnk}(z)}\,dz,
+ I_{jnk}^{\epsilon}(R)
+ =\int
+ b_{j,R}^{\epsilon}(z)
+ \overline{b_{n,R}^{\epsilon}(kz)}
+ e^{iR\phi_{jnk}^{\epsilon,\epsilon}(z)}\chi_k(z)\,dz,
  \tag{L-19829.26}
 \]
 
-with a fixed partition separating the unique stationary point. Equations
-(L-19829.22)--(L-19829.25) give
+where `chi_k` is a fixed rescaled cutoff around the unique stationary point.
+There is no additional phase inside either `b`.
+
+Equations (L-19829.22)--(L-19829.25) give
 
 \[
  \boxed{
- |I_{jnk}^{\rm stat}(R)|
- \le C(\log R)^C
- \begin{cases}
- R^{-1/2}k^{-2},&2\le k\le R,\\
- k^{-5/2},&k>R.
- \end{cases}}
+ |I_{jnk}^{\epsilon}(R)|
+ \le C R^{-1/2}k^{-2}(\log R)^C,
+ \qquad 2\le k\le R.}
  \tag{L-19829.27}
 \]
 
-The differentiated amplitudes obey the same estimate after increasing the
-polylogarithmic power. On the nonstationary pieces, one integration by parts,
-the exact derivative moat, and (L-19829.7)--(L-19829.11) give
-
-\[
- |I_{jnk}^{\rm nonstat}(R)|
- \le C R^{-1}k^{-2}(\log R)^C.
- \tag{L-19829.28}
-\]
-
-Summing (L-19829.27)--(L-19829.28) over all `k>=2` yields
+On the nonstationary complement, one integration by parts gives
 
 \[
  \boxed{
- \sum_{k=2}^\infty|I_{jnk}(R)|
+ |I_{jnk}^{\rm nonstat}(R)|
+ \le C R^{-1}k^{-2}(\log R)^C.}
+ \tag{L-19829.28}
+\]
+
+## 8. Collective endpoint regime `k>R`
+
+For `k>R`, the formal stationary point lies inside the Bessel endpoint layer
+`R xi_j=O(1)`, where splitting `J_0` into two Hankel branches is not uniform.
+It must not be treated by (L-19829.26).
+
+Split the first profile into the endpoint layer
+
+\[
+ 1<z<1+C R^{-2}
+\]
+
+and its complement. By (L-19829.7), its `L2` mass in the endpoint layer is
+`O(R^-1)`; hence its `L2` norm there is `O(R^-1/2)`. The complete higher-alias
+endpoint aggregate has polylogarithmic `L2` norm by (L-19829.15). Cauchy--Schwarz
+therefore gives the collective bound
+
+\[
+ \boxed{
+ |C_{k>R}^{\rm endpoint}|
  \le C R^{-1/2}(\log R)^C.}
  \tag{L-19829.29}
 \]
 
-Uniformity over `O(log^2 R)` modes and the finite exact-radical frame only
-increases the logarithmic power.
+Outside the endpoint layer, the first profile is oscillatory and every
+`k>R` phase has derivative bounded below by `c k`. Retaining the aliases
+termwise, one integration by parts supplies an additional `k^-1`; the original
+endpoint coefficient already contributes `k^-1`. Thus
+
+\[
+ \sum_{k>R}|C_k^{\rm outside}|
+ \le C R^{-1}\sum_{k>R}k^{-2}(\log R)^C
+ \le C R^{-2}(\log R)^C.
+ \tag{L-19829.30}
+\]
+
+Combining (L-19829.27)--(L-19829.30),
+
+\[
+ \boxed{
+ \sum_{k=2}^\infty|C_{1,k}(R)|
+ \le C R^{-1/2}(\log R)^C.}
+ \tag{L-19829.31}
+\]
+
+This is the corrected first-versus-rest scalar cross estimate.
 
 ## 9. Consequences
 
-The complete first-versus-rest cross operator satisfies
+Uniformity over `O(log^2 R)` modes and the finite exact-radical frame only
+increases the logarithmic power. The complete compact first-versus-rest cross
+operator therefore satisfies
 
 \[
  \left\|
@@ -375,9 +411,9 @@ The complete first-versus-rest cross operator satisfies
 \]
 
 where the weaker `R^-1/3` exponent accommodates the fold. Away from the fold,
-(L-19829.29) gives the stronger `R^-1/2` rate.
+(L-19829.31) gives the stronger `R^-1/2` rate.
 
-The endpoint aggregate and the square-summable compact aliases give
+The endpoint aggregate and square-summable compact aliases give
 
 \[
  H_R^*H_R\preceq(\log R)^C\Delta_R.
@@ -389,8 +425,11 @@ previously audit-sensitive inputs of `L-19827`.
 ## 10. Proof boundary
 
 - The stationary location and curvature bounds are exact algebra.
+- The corrected proof separates slow branch amplitudes from the full
+  oscillatory profile and treats `k>R` collectively in the Bessel endpoint
+  layer.
 - The powers of `R` and `k`, the collective endpoint summation, and the
-  normalized coefficient cancellation are proved from the Bessel template.
+  normalized coefficient cancellation follow from the Bessel template.
 - The transfer from the exact PSWF to the normalized template inherits the
   uniform complex radial error and support-derivative bounds of
   `L-16222/L-16229/L-19827`.
