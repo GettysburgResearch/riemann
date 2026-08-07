@@ -39,6 +39,13 @@ A successful proof must transport defect into slack through the exact signed
 adjacent-flow or primitive-neighbor matrix. It cannot delete positive defect
 with a nonnegative tail cover.
 
+There is also a real scale mechanism. Repairing a prime-power row at `q`
+routes positive children only to prime-power divisors of `q-1` and `q+1`.
+After jointly solving the uniformly bounded consecutive-prime-power cluster,
+every remaining positive child lies below approximately half scale. Path
+clusters of lengths one through three have nonnegative inverse M-matrices; the
+exceptional cluster `{2,3,4,5}` has an explicitly verified nonnegative inverse.
+
 The exact surviving theorem is:
 
 ```text
@@ -60,14 +67,15 @@ No such transport is proved in this continuation.
 ```text
 E(theta)>2/5 on [1/40,1/37]
 formal von-Mangoldt/divisibility dual rows through 128
+path and exceptional prime-power cluster inverses nonnegative
 eventual monotone-cover cost >= sqrt(X)/4000
-5/5 fail-closed tests
+6/6 fail-closed tests
 ```
 
 Proof-object SHA-256:
 
 ```text
-9eb7d95d872332d5830eb027e786319084aab2ea4a7e22909a0791ef35a5c690
+96692edee3a7825c22543c98443d08cf2d1d4901f254c50faad2bffeb484426c
 ```
 
 ## Corrected status
@@ -76,6 +84,7 @@ Proof-object SHA-256:
 parabolic seed                           retained
 reciprocal-cell calculus                 strengthened / exact band certified
 monotone Divisibility Cover              refuted
+uniform same-scale cluster solve         proposed complete exact algebra
 primitive-neighbor and adjacent flow     retained
 signed constraint-dipole transport       open
 RH                                       unproved
