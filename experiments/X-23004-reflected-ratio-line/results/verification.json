@@ -1,0 +1,24 @@
+{
+  "allocation_rows": [
+    {"coefficient": -1, "expected_sum": -2, "prime_count": 1, "sum_at_identity": -2, "terms": 2},
+    {"coefficient": 1, "expected_sum": 4, "prime_count": 2, "sum_at_identity": 4, "terms": 4},
+    {"coefficient": -1, "expected_sum": -8, "prime_count": 3, "sum_at_identity": -8, "terms": 8},
+    {"coefficient": 1, "expected_sum": 16, "prime_count": 4, "sum_at_identity": 16, "terms": 16},
+    {"coefficient": -1, "expected_sum": -32, "prime_count": 5, "sum_at_identity": -32, "terms": 32}
+  ],
+  "division_test": {
+    "candidate_denominator": "1-X^2",
+    "divisible": false,
+    "numerator_after_monomial": "X^2+1",
+    "remainder": "2"
+  },
+  "one_prime_identity_value": -2,
+  "one_prime_laurent_numerator": {"-1": -1, "1": -1},
+  "proof_boundary": "Finite formal Laurent-polynomial and squarefree allocation algebra only; no global packet completeness or RH conclusion.",
+  "proof_object_sha256": "66ed2e6bd1a9fa99bd6566a5baa88850fc569bf83c97c0c3011bcde37a3def1f",
+  "schema": "riemann.x23004-reflected-ratio-line.result.v1",
+  "semiprime_identity_value": 2,
+  "semiprime_ratio_pair_coefficients": {"-1": 1, "1": 1},
+  "verdict": "EXACT_REFLECTED_RATIO_PAIR_IS_SUM_NOT_DIFFERENCE",
+  "verified": true
+}
