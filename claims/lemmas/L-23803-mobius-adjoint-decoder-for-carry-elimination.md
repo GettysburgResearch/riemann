@@ -74,8 +74,7 @@ No asymptotic estimate enters.
 For a finite target vector `w(q)`, define
 
 \[
-\boxed{
-u_m
+\boxed{u_m
 =\sum_{k\le X/m}\mu(k)w(mk).}
 \tag{L-23803.3}
 \]
@@ -96,8 +95,7 @@ w(q)=\sum_{n=q}^{X}c_n\beta_{nq},
 then (L-23803.2) gives
 
 \[
-\boxed{
-u_m
+\boxed{u_m
 =\sum_{n=m}^{X}
  c_n\frac{2m-n-1}{n+1}.}
 \tag{L-23803.5}
