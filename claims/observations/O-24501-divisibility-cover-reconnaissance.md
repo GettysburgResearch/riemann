@@ -1,11 +1,11 @@
-# O-24501 — Divisibility-cover reconnaissance
+# O-24501 — Divisibility-cover reconnaissance, now superseded
 
 Claim ID: `O-24501`  
-Status: `FLOATING_RECONNAISSANCE — not proof`  
-Scope: numerical scheduling for the stronger monotone cover route  
+Status: `SUPERSEDED / ASYMPTOTIC INTERPRETATION REFUTED BY R-24501`  
+Scope: historical floating reconnaissance only  
 Issue: #245
 
-The stronger sufficient theorem in `L-24502` asks for nonnegative atoms `alpha_m` such that
+The first continuation tested the monotone cover from the original `L-24502`: find nonnegative atoms `alpha_m` satisfying
 
 \[
 \sum_{kq\le X}\alpha_{kq}\ge e_X(q),
@@ -13,15 +13,13 @@ The stronger sufficient theorem in `L-24502` asks for nonnegative atoms `alpha_m
 \sum_{t=m}^X\alpha_t\le b_X^{(0)}(m),
 \]
 
-while minimizing the exact objective loss
+while minimizing
 
 \[
 \sum_m\alpha_m\log m.
 \]
 
-I solved this finite LP in ordinary floating point for several small/moderate scales. This is reconnaissance only.
-
-Representative minimum costs were approximately
+Ordinary floating LP runs returned approximate costs
 
 ```text
 X=100      0.2621
@@ -32,32 +30,25 @@ X=1000     4.7683
 X=1500     6.5142
 ```
 
-For comparison, `(log X)^2` over the same range is roughly `21` through `53`, while `sqrt(X)` is roughly `10` through `39`.
+and were feasible with the tested tail-capacity constraints. These values were always labeled reconnaissance.
 
-At every tested scale the LP was feasible with the tail-capacity constraints included. The optimizer was sparse and typically used roughly one atom per initially violated prime-power constraint, often placing atoms on integers with several useful divisors.
+## Exact later disposition
 
-This suggests a possible stronger closure:
+`R-24501` proves that this apparent trend is pre-asymptotic. For all sufficiently large `X`, every nonnegative cover satisfying the prime-power constraints has weighted cost
+
+\[
+\gg\sqrt X,
+\]
+
+because a fixed band of large primes has positive seed excess and pairwise disjoint multiple sets below `X`.
+
+Therefore:
 
 ```text
-explicit divisibility packing
--> cover all low-ratio prime-power excess
--> exact tail capacity
--> O(log^2 X) weighted cost
--> no Jacobi convergence theorem needed.
+polylogarithmic Divisibility Cover    REJECTED
+floating small-X trend                SUPERSEDED
+exact identities L-24502.8/.9         RETAINED
+signed adjacent transport             NOT REFUTED
 ```
 
-The present data do not prove any asymptotic rate. They should be used only to search for a constructive packing lemma, perhaps by assigning each violated prime power to a controlled multiple in a disjoint or bounded-overlap interval family.
-
-## Proposed combinatorial target
-
-A particularly attractive target is a Hall-type packing theorem: construct a map from prime-power deficit masses to multiples in dyadic/rightward bins so that
-
-1. each prime power `q` receives total assigned mass at least `e_X(q)`;
-2. the total mass assigned at an integer `m` is at most a local capacity derived from `b_X^(0)(m)-b_X^(0)(m+1)` or a tail-capacity decomposition;
-3. each unit of assigned mass pays `O(log X)` and the total assigned mass is `O(log X)`.
-
-Together these would imply the `O(log^2 X)` cover cost.
-
-## Status boundary
-
-All numbers in this file are ordinary floating-point LP output. No certificate, asymptotic theorem, or RH claim is made.
+The old numbers are retained only as a warning: a finite LP ladder can strongly suggest the wrong asymptotic regime.
