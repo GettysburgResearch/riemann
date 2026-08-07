@@ -1,350 +1,364 @@
-# M-15110 — Selberg–Mourre full RH proof proposal
+# M-15110 — Selberg–Mourre route after adversarial repair
 
 Methodology ID: `M-15110`  
-Title: A polynomial finite-section coercivity estimate for the scale-subtracted Selberg operator would complete the Chebyshev/prime-energy route  
-Status: **FULL PROOF PROPOSAL — LOAD-BEARING COERCIVITY ESTIMATE PENDING INDEPENDENT REVIEW**  
+Title: Exact global prime-energy front half, refuted universal inverse, and the corrected localized Selberg source theorem  
+Status: **FULL-PROBLEM PROGRAM — ORIGINAL UNIVERSAL `SM(J)` REFUTED; SOURCE-SPECIFIC LOCALIZED COERCIVITY OPEN**  
 Authoring agent: `gpt56-04-f`  
 Created: 2026-08-07  
-Dependencies: `L-15147`, `L-15148`, `T-15119`; PR #216 frozen at `b76eef1b769584aa9d66d082bfc6634126f986a2`  
-Scope: one explicit proposed proof of RH, with its exact review hinge isolated
+Updated: 2026-08-07 after adversarial review  
+Dependencies: `L-15147`, `L-15148`, `L-15149`, `L-15150`, `T-15119`, `R-15112`; PR #216 frozen at `b76eef1b769584aa9d66d082bfc6634126f986a2`  
+Scope: corrected full-problem route and exact independent-review boundary
 
-## 1. Why this is now the full problem
+## 1. Exact front half that survives
 
 For scale four, put
 
 \[
-P(x)={\psi(x)\over x},
-\qquad
-f(x)=P(x)-P(x/4),
+ P(x)={\psi(x)\over x},
+ \qquad
+ f(x)=P(x)-P(x/4),
+ \qquad
+ (Uf)(x)={1\over2}f(x/4),
 \]
 
 and
 
 \[
-(Uf)(x)={1\over2}f(x/4).
+ r=(I-U)f.
 \]
 
-`T-15119` and `L-15148` reduce RH to
+The RH-sensitive positive energy is
 
 \[
-\boxed{
-\mathcal R_4(Y)
-=\int_2^Y|(I-U)f(x)|^2dx
-=Y^{o(1)}.}
-\tag{M-15110.1}
+ \boxed{
+ \mathcal R_4(Y)=\int_2^Y|r(x)|^2dx.}
 \]
 
 At integer endpoints,
 
 \[
-\boxed{
-\mathcal R_4(N)
-=\sum_{m=2}^{N-1}
+ \boxed{
+ \mathcal R_4(N)
+ =\sum_{m=2}^{N-1}
  {\left[
  \psi(m)-6\psi(\lfloor m/4\rfloor)
  +8\psi(\lfloor m/16\rfloor)
  \right]^2\over m(m+1)}.}
-\tag{M-15110.2}
+ \tag{M-15110.1}
 \]
 
-Every level is finite and positive. An off-line zero forces a positive
-polynomial growth exponent; phase cancellation cannot hide it.
-
-## 2. Exact operator equation
-
-Let
+Subject to the explicit Hardy/Mellin interface in `T-15119/L-15149`,
 
 \[
-(\mathcal Lg)(x)
-=(\log x)g(x)
-+\sum_{n\le x}{\Lambda(n)\over n}g(x/n)
--{1\over x}\int_1^xg(t)dt.
-\tag{M-15110.3}
+ \boxed{
+ \Theta_\zeta
+ =\limsup_{Y\to\infty}
+ {\log(1+\mathcal R_4(Y))\over2\log Y},}
+ \tag{M-15110.2}
 \]
 
-`L-15147` proves
+so
 
 \[
-\mathcal Lf=H_4,
-\qquad H_4(x)=O(1).
-\tag{M-15110.4}
+ \mathrm{RH}
+ \iff
+ \mathcal R_4(Y)=Y^{o(1)}.
 \]
 
-`L-15148` proves the exact commutator
+The scale-subtracted Selberg operator is
 
 \[
-\mathcal LU=U\mathcal L+(\log4)U
-\tag{M-15110.5}
+ (\mathcal Lg)(x)
+ = (\log x)g(x)
+ +\sum_{n\le x}{\Lambda(n)\over n}g(x/n)
+ -{1\over x}\int_1^xg(t)dt.
+ \tag{M-15110.3}
 \]
 
-and, with `r=(I-U)f`,
+`L-15147` gives
 
 \[
-\boxed{
-\mathcal L(\mathcal L-\log4)r
-=(I-U)\mathcal LH_4
--(\log4)(I+U)H_4.}
-\tag{M-15110.6}
+ \mathcal Lf=H_4,
+ \qquad
+ H_4(x)=O(1),
+ \tag{M-15110.4}
 \]
 
-The right side is explicit. The elementary Selberg and Chebyshev bounds give
+and `L-15148` gives
 
 \[
-\boxed{
-|[(I-U)\mathcal LH_4
--(\log4)(I+U)H_4](x)|
-\ll1+\log x.}
-\tag{M-15110.7}
+ \mathcal LU=U\mathcal L+(\log4)U
+ \tag{M-15110.5}
 \]
 
-Thus a polynomial inverse estimate for the operator on the left proves RH.
+and
+
+\[
+ \boxed{
+ \mathcal L(\mathcal L-\log4)r
+ =(I-U)\mathcal LH_4
+ -(\log4)(I+U)H_4.}
+ \tag{M-15110.6}
+\]
+
+The right side is explicit and pointwise `O(1+log x)`.
+
+All of this survives the low-reasoning review and the present independent re-derivation.
+
+## 2. Exact Mellin normal form
+
+`L-15149` adds the exact identity
+
+\[
+ \boxed{
+ \mathcal M(\mathcal Lg)(z)
+ =-q(z)^{-1}{d\over dz}
+ \left(q(z)\mathcal Mg(z)\right),
+ \qquad
+ q(z)=(z+1)\zeta(z+1).}
+ \tag{M-15110.7}
+\]
+
+Thus the Selberg operator is a derivative conjugated by the zeta factor. This explains both the exact dilation commutator and the real coercivity obstruction: a half-plane inverse estimate necessarily controls `1/q`, whose poles are the shifted zeta zeros.
+
+The variable relevant to RH is
+
+\[
+ w=z+{1\over2}.
+\]
+
+A zero `rho` produces `w=rho-1/2`, and Mellin Plancherel on `Re z=-1/2+sigma` gives the weight `x^(-2sigma)dx`. This is the explicit shift requested by the review.
 
 ## 3. Annular representation
 
-Decompose the half-line into scale-four annuli
+On the annuli
 
 \[
-I_j=[4^j,4^{j+1}),
+ I_j=[4^j,4^{j+1}),
 \]
 
-and use the isometry
+use
 
 \[
-(\mathscr Ug)_j(u)=2^jg(4^ju),
-\qquad1\le u<4.
-\tag{M-15110.8}
+ (\mathscr Ug)_j(u)=2^jg(4^ju),
+ \qquad1\le u<4.
 \]
 
-In these coordinates:
-
-- `U` is the unilateral backward shift `S`;
-- multiplication by `log x` is `j log4+log u`;
-- the two causal averaging terms commute with `S`;
-- therefore
-  \[
-  [\mathscr U\mathcal L\mathscr U^{-1},S]
-  =(\log4)S.
-  \tag{M-15110.9}
-  \]
-
-Let `P_J` retain annuli `0,...,J-1`, and put
+Then `U` is the unilateral backward shift `S`, multiplication by `log x` is `j log4+log u`, and
 
 \[
-\mathcal A_J=P_J\mathscr U\mathcal L\mathscr U^{-1}P_J.
-\tag{M-15110.10}
+ [\mathscr U\mathcal L\mathscr U^{-1},S]
+ = (\log4)S.
 \]
 
-The target energy is
+If `d=mathscr U r`, then
 
 \[
-\mathcal R_4(4^J)
-=\|P_J(I-S)\mathscr Uf\|^2.
-\tag{M-15110.11}
+ \boxed{
+ \mathcal R_4(4^J)=\sum_{j=0}^{J-1}\|d_j\|_{L^2([1,4])}^2.}
+ \tag{M-15110.8}
 \]
 
-## 4. The proposed Selberg–Mourre estimate
+This is the exact annular square-function target.
 
-The load-bearing finite statement is the following.
+## 4. Withdrawal of the original universal `SM(J)`
 
-> **SM(J).** There are absolute constants `C,A` such that, for every `J>=2`
-> and every source-bound causal vector `c` in the finite arithmetic graph
-> domain,
-> \[
-> \boxed{
-> \|P_J(I-S)c\|^2
-> \le C(1+J)^A
-> \left[
->  1+\max_{0\le j<J}
->  4^{-j}
->  \left\|
->   P_j\mathcal A_J(\mathcal A_J-\log4)
->   (I-S)c
->  \right\|^2
-> \right].}
-> \tag{M-15110.12}
-> \]
-
-Here `P_j` denotes the output block in annulus `j`; the factor `4^{-j}` removes
-its physical interval length. Initial annuli are included in the harmless
-constant.
-
-Applied to `c=mathscr U f`, equations (M-15110.6)--(M-15110.7) give
+The previous version proposed, for every causal vector `c`, an estimate of the form
 
 \[
-4^{-j}\|P_j\mathscr U G_4\|^2\ll(1+j)^2,
+ \|P_J(I-S)c\|^2
+ \le C(1+J)^A
+ \left[
+ 1+\max_j4^{-j}
+ \|P_j\mathcal A_J(\mathcal A_J-\log4)(I-S)c\|^2
+ \right].
+ \tag{M-15110.9-WITHDRAWN}
 \]
 
-where `G_4` is the explicit right side of (M-15110.6). Hence SM(J) yields
+`R-15112` disproves this statement exactly, even for the pure number operator
 
 \[
-\boxed{
-\mathcal R_4(4^J)\ll(1+J)^{A+2}.}
-\tag{M-15110.13}
+ \mathcal A_J=N_J,
+ \qquad
+ [N_J,S]=S.
 \]
 
-Since `J=log_4Y`, this is
+Choose an interior index `j=floor(J/2)` and a step vector `c` for which
 
 \[
-\mathcal R_4(Y)\ll(1+\log Y)^{A+2}=Y^{o(1)}.
+ (I-S)c=t e_j.
 \]
 
-`L-15148/T-15119` then imply RH.
-
-Thus the deduction from SM(J) to RH is complete.
-
-## 5. Proposed proof of SM(J)
-
-The finite-section proof should be performed before any limit.
-
-### 5.1 Number operator plus causal Toeplitz part
-
-Write
+Then
 
 \[
-\mathcal A_J=(\log4)N_J+T_J,
-\tag{M-15110.14}
+ N_J(N_J-I)(I-S)c=j(j-1)t e_j,
 \]
 
-where `N_J` is the annular number operator and `T_J` is lower triangular and
-commutes with the truncated shift away from the two boundary blocks.
-
-The commutator is exact:
+so the required inverse constant is at least
 
 \[
-[\mathcal A_J,S]=(\log4)S+E_J,
-\tag{M-15110.15}
+ {4^j\over j^2(j-1)^2},
 \]
 
-where `E_J` is supported only on the finite-section boundary. The boundary
-rank is independent of `J` after the declared source convention is fixed.
+which grows exponentially. The vector is supported far from both boundaries. Therefore neither a fixed-width boundary correction nor the pure number square rescues the advertised block-normalized universal inverse.
 
-### 5.2 Scale subtraction removes the stationary channel
-
-Vectors in the target range have the form
+Accordingly:
 
 \[
-d=(I-S)c.
+ \boxed{\text{the original universal }SM(J)\text{ is rejected.}}
 \]
 
-The invariant annular channel of `S` is therefore absent. This is the operator
-version of the extra transform zero on the critical boundary. It removes the
-`z=0` prime-layer singularity and the constant scale mode before coercivity is
-estimated.
+The earlier statement that one square identity was the sole missing line is withdrawn.
 
-### 5.3 Selberg completion
+## 5. What the low-reasoning review got right
 
-Expand the Hermitian finite-section form generated by
+The review correctly identified three distinct issues:
+
+1. a Selberg square identity is not yet defined coefficient by coefficient;
+2. the endpoint/continuous-average ledger has not been proved boundary-local;
+3. positivity of the displayed squares does not automatically control the target norm.
+
+It also correctly required the complete `Lambda_2` ledger. `L-15150` gives
 
 \[
-\mathcal A_J(\mathcal A_J-\log4)
+ \Lambda_2(p^a)=(2a-1)(\log p)^2,
 \]
 
-on `d=(I-S)c`. Keep the two von Mangoldt factors together. Selberg's exact
-coefficient identity
-
 \[
-\Lambda(n)\log n+(\Lambda*\Lambda)(n)
-=(\mu*\log^2)(n)=:\Lambda_2(n)
-\tag{M-15110.16}
+ \Lambda_2(p^aq^b)=2\log p\log q,
 \]
 
-combines the derivative/number cross term with the quadratic causal convolution.
-The proposed finite factorization is
+and
 
 \[
-\boxed{
+ \Lambda_2(n)=0
+ \quad\text{for }\omega(n)\ge3.
+\]
+
+Hence PR #216 supplies the delicate squarefree-semiprime sector, not the complete factor map. Prime powers and nonsquarefree two-prime channels must also be present.
+
+The review also correctly warned that “finite boundary rank” must mean a uniformly bounded number of annular blocks unless a genuine finite-dimensional source discretization has been fixed.
+
+## 6. Where the low-reasoning review was still too optimistic
+
+The review suggested that the pure number operator supports the missing Poincare estimate. It does support an ordinary unweighted inequality away from the first two blocks, but it **refutes** the block-normalized output estimate needed in the old `SM(J)`.
+
+Its proposed localized Poincare inequality is therefore necessary but not sufficient. Even if
+
+\[
+ \|d\|^2
+ \le C J^B
+ \left[Q_J(d)+\|P_{\rm bdry}d\|^2\right],
+\]
+
+one still has to evaluate `Q_J(d)` for the actual source without applying Cauchy–Schwarz against an output whose physical annular `L2` norm is of size `4^(j/2) poly(j)`. That step recreates the exponential block-volume loss.
+
+The missing theorem is not a generic coercivity estimate. It is a **source-specific localized signed identity** that converts the exact Selberg forcing into polynomial scale energy before any absolute-value loss.
+
+## 7. Corrected three-gate completion package
+
+A valid completion now requires all three gates below.
+
+### Gate A — exact finite Selberg square
+
+Construct actual source-coordinate maps `D_(J)` and `V_(J,n)` and prove
+
+\[
+ \boxed{
 \begin{aligned}
-&\operatorname{Re}
+ \operatorname{Re}
  \langle d,
-  \mathcal A_J(\mathcal A_J-\log4)d\rangle\\
-&\qquad=
- \|\mathcal D_Jd\|^2
- +{1\over2}
-  \sum_{n}
-  {\Lambda_2(n)\over n}
-  \|\mathcal V_{J,n}d\|^2
- +\langle d,\mathcal B_Jd\rangle.
+  \mathcal A_J(\mathcal A_J-\log4)d\rangle
+ ={}&\|\mathcal D_Jd\|^2\\
+ &+{1\over2}
+  \sum_n{\Lambda_2(n)\over n}
+  \|\mathcal V_{J,n}d\|^2\\
+ &+\langle d,\mathcal B_Jd\rangle.
 \end{aligned}}
-\tag{M-15110.17}
+ \tag{M-15110.10}
 \]
 
-`mathcal D_J` is the annular scale derivative, `mathcal V_(J,n)` is the
-balanced divisor/semiprime difference channel, and `mathcal B_J` consists only
-of the two endpoint traces and the explicit continuous averaging correction.
-The first two terms are nonnegative because `Lambda_2(n)>=0` on the declared
-at-most-two-prime-factor support and because the full divisor version is a
-Selberg square.
+Every prime-power and two-distinct-prime channel from `L-15150` must be included. This identity remains proposed.
 
-The endpoint term is proposed to satisfy
+### Gate B — honest endpoint/bulk ledger
+
+Prove which pieces of `B_J` are truly supported in bounded-width boundary blocks. Any continuous averaging term that remains in the interior must be retained as a bulk operator. A valid lower bound is
 
 \[
-\boxed{
-\mathcal B_J\succeq-C(1+J)^A P_{\rm bdry}.}
-\tag{M-15110.18}
+ \boxed{
+ \langle d,\mathcal B_Jd\rangle
+ \ge -\mathfrak b_J(d),}
+ \tag{M-15110.11}
 \]
 
-Together with the commutator/Mourre identity, (M-15110.17) gives the polynomial
-finite-section inverse (M-15110.12).
+with an explicit form `mathfrak b_J` whose later source pairing can be bounded polynomially. Merely writing `P_bdry` does not prove localization.
 
-### 5.4 Exact review hinge
+### Gate C — localized source identity
 
-The equality (M-15110.17), including the definition of the factor maps and the
-sign of every boundary term, is the sole line not already supplied by the
-existing exact files. It must be derived in source coordinates and checked on
-finite prime manifests before the proposal can be promoted.
+For the **actual arithmetic solution** `d=mathscr U r`, construct scale cutoffs and localized square forms `Q_(J,<=j)` satisfying
 
-It is not permissible to replace (M-15110.17) by:
+\[
+ \boxed{
+ \sum_{k\le j}\|d_k\|^2
+ \le C(1+j)^B
+ \left[
+  Q_{J,\le j}(d)+\mathfrak b_{J,\le j}(d)+1
+ \right],}
+ \tag{M-15110.12}
+\]
 
-- entrywise absolute values;
-- a phase-blind PNT remainder;
-- a diagonal-only estimate;
-- a formal use of `Lambda_2>=0` without the factor-ratio channel;
-- an RH-conditional zero expansion.
+and then prove directly from the signed scale-subtracted Selberg source that
 
-## 6. Connection to PR #216
+\[
+ \boxed{
+ Q_{J,\le j}(d)+\mathfrak b_{J,\le j}(d)
+ \le C(1+j)^A.}
+ \tag{M-15110.13}
+\]
 
-PR #216, frozen at `b76eef1b769584aa9d66d082bfc6634126f986a2`, proves that
-the ordinary-prime off-diagonal form is one balanced squarefree-semiprime sum.
-That is exactly the finite `mathcal V_(J,n)` channel required by
-(M-15110.17).
+The second inequality must be an exact cutoff/commutator or causal-induction calculation. It may not follow from an unweighted global Cauchy–Schwarz estimate and may not take absolute values before the Selberg completion.
 
-Its `10^7` reconnaissance shows that later compact blocks spend more than
-`99.996%` of the diagonal through the signed off-diagonal channel. The causal
-scale-four replay retains approximately `99.39%` cancellation before compact
-smoothing. These data do not prove (M-15110.17), but they strongly constrain its
-correct sign and normalization.
+Together, (M-15110.12)--(M-15110.13) give
 
-## 7. Proposed full theorem
+\[
+ \mathcal R_4(4^J)\ll(1+J)^{A+B+1},
+\]
 
-If the Selberg completion (M-15110.17)--(M-15110.18) is valid on every finite
-source-bound section, then:
+hence RH through (M-15110.2).
 
-1. SM(J) holds with polynomial constants;
-2. the exact arithmetic energy (M-15110.2) is polylogarithmic;
-3. its growth exponent is zero;
-4. `Theta_zeta=0`;
-5. every nontrivial zeta zero lies on `Re s=1/2`.
+## 8. Current independent-review target
 
-This is a full proof proposal of RH with one explicit finite operator identity
-as its independent-review target.
+The durable front half may be reviewed separately:
 
-## 8. Status boundary
+1. `L-15147`: exact scale-subtracted Selberg identity and bounded forcing;
+2. `L-15148`: exact dilation commutator, second-order equation, and finite energy;
+3. `L-15149`: exact Mellin gauge and variable shift;
+4. `T-15119`: Hardy upper-bound details;
+5. PR #216 `T-21502/L-21504`: prime-only and squarefree-semiprime reductions.
 
-What is proved in existing files:
+The completion is now explicitly **GAPS/BLOCKED** at Gates A--C. A future proof may validate the source-specific package, or may show that a growing family of near-null arithmetic modes prevents it.
 
-- the safe transform and rightmost-zero exponent;
-- the exact finite energies;
-- the Selberg scale-subtracted equation and bounded forcing;
-- the dilation commutator;
-- the second-order equation;
-- the deduction `SM(J) => RH`.
+## 9. Status boundary
 
-What remains **proposed, not verified**:
+Survives as exact/proposed durable mathematics:
 
-- the complete positive Selberg factorization (M-15110.17);
-- the boundary estimate (M-15110.18);
-- consequently the coercivity estimate SM(J).
+- global RH-equivalent Chebyshev and prime energies;
+- finite positive arithmetic producers;
+- scale-subtracted Selberg equation with bounded forcing;
+- exact dilation commutator and second-order elimination;
+- Mellin gauge factorization;
+- exact complete `Lambda_2` support.
 
-RH is therefore not claimed proved by the repository at this stage. The proposal
-is intentionally explicit enough for another agent to accept, repair, or reject
-at one load-bearing line.
+Rejected:
+
+- the universal block-normalized `SM(J)` estimate;
+- the claim that the square identity and endpoint bound alone imply the advertised inverse;
+- the claim that PR #216 supplies the complete `Lambda_2` factor map.
+
+Open:
+
+- the exact finite square completion;
+- honest endpoint/bulk separation;
+- localized source-specific Selberg–Poincare control;
+- RH.
