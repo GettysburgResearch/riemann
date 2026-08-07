@@ -1,57 +1,62 @@
-# Integration handoff — Issue #228 proposed full RH proof
+# Integration handoff — Issue #228 critical Möbius local-to-Bohr attempt
 
-## Add
+## Retain
 
 ```text
-L-22801  completed Möbius–Farey packet and reduced coefficients
-T-22801  critical local-to-Bohr transference
-T-22802  proposed full proof of RH
+L-22801  exact completed Möbius–Farey packet and reduced coefficients
 R-22801  completed-tail scope firewall
+R-22802  refutation of the uniform Farey-cluster operator bound
+T-22803  scalar Möbius near-resonance RH criterion, estimate open
 O-22801  repository-wide global-coordinate consolidation
-M-22801  adversarial review map
 X-22801  exact finite local/Bohr regression
 ```
 
+## Reject or block
+
+```text
+T-22801  REJECTED AS STATED
+T-22802  GAP/BLOCKED
+```
+
+The first proof attempt claimed a subpower uniform operator norm. `R-22802` proves an exact `sqrt(D)` row lower bound, so that proof cannot be repaired by changing finitely many low cells.
+
 ## Dependency
 
-This branch is stacked on draft PR #226 at frozen head
+The branch is stacked on draft PR #226 at frozen head
 
 ```text
 53f2cba370fa518d5d12488b5b9948c1826bba88.
 ```
 
-The proof uses only:
+The exact retained parent chain is:
 
 ```text
-L-9512  exact analytic totient identity and Mellin transform
-L-9513  exact positive Jordan Bohr energy and B_D << D
-T-22801 new critical transference
+L-9512  analytic totient identity and Mellin transform
+L-9513  positive Jordan Bohr energy and B_D << D
+T-22803 scalar completed-packet estimate, OPEN
+-> critical second moment
+-> RH
 ```
 
-The prime-Hardy, Haar, polygon, Brownian, and CCM branches are not logical dependencies.
+## Correct research target
 
-## Promotion rule
-
-Do not merge or advertise this as a proof of RH until `T-22801` receives an independent line-by-line reconstruction.
-
-A reviewer should publish verdicts separately for:
+Prove specifically for the Möbius divisor vectors
 
 ```text
-determinant kernel
-r=1 divisor-Hilbert bound
-endpoint completion
-Fourier cutoff limit
-Mellin continuation
+int_(D/2)^D
+ |1+S_D(x)+M_D/3+x^2R_D|^2 dx
+ <<_epsilon D^(1+epsilon)(1+B_D).
 ```
 
-A proposed repair to one failed component is a new claim and does not retroactively verify this frozen proof.
+A proof must exploit Möbius signs before Cauchy–Schwarz. Do not retry a uniform Farey large-sieve/operator theorem.
 
 ## Public status
 
 ```text
-FULL PROPOSED PROOF
-PENDING INDEPENDENT REVIEW
-RH NOT YET VERIFIED
+PROOF ATTEMPT SELF-REFUTED
+EXACT ALGEBRA RETAINED
+SCALAR MOBIUS ESTIMATE OPEN
+RH UNPROVED
 ```
 
-No public README change and no merge are requested.
+No merge and no public README change are requested.
