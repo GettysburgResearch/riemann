@@ -1,6 +1,6 @@
 # X-26201 — Dyadic two-contact carry and bottom-charge replay
 
-This experiment package supports `L-26201`--`L-26204` and the proposal
+This experiment package supports `L-26201`--`L-26205` and the proposal
 `T-26201`.
 
 It uses only the Python standard library. The exact scripts use integers and
@@ -14,6 +14,7 @@ Run:
 ```bash
 python3 verify.py
 python3 verify_bottom_charge.py
+python3 verify_digital_lift.py
 ```
 
 `verify.py` checks:
@@ -67,6 +68,23 @@ Retained proof-object SHA-256:
 395a7a89ea2267cfa5a3b805ead2646fa46a1761408f6ff048fed7b2e218757f
 ```
 
+`verify_digital_lift.py` checks the exact half-scale subsystem
+
+```text
+chi_(2n+1,2q)(2j+epsilon) = chi_(n,q)(j),
+beta_(2n+1,2q) = beta_(n,q),
+```
+
+including 3,780 pointwise cells, 1,830 average cells, 60 exact Hermitian
+isometries, and 72 lifted packing columns. The incorrect even-row mutation is
+explicitly rejected.
+
+Retained proof-object SHA-256:
+
+```text
+17e23d1e2ebc01cc7283d125c15c721d4743e69f906b17b715294f60b0e09b23
+```
+
 ## Finite reconnaissance
 
 Run:
@@ -93,10 +111,19 @@ Retained reconnaissance SHA-256:
 
 This is not an interval certificate and is not promoted to Carry Saturation.
 
+## Tests
+
+```bash
+pytest -q tests/test_verify.py
+```
+
+The retained local replay reports three passing exact groups.
+
 ## Proof boundary
 
 The package verifies exact finite algebra only. It does **not** prove:
 
+- Odd-Leakage Descent;
 - Dyadic Signed Slack (`DSS`);
 - Parity Blocker Descent (`PBD`);
 - positivity of the carry inverse for every endpoint;
