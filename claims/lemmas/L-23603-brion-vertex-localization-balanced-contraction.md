@@ -5,7 +5,8 @@ Title: A line-annihilating reflected Möbius valuation localizes to vertices, wh
 Status: **PROPOSED CLOSING LEMMA / FULL-PROOF HINGE PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro-final-02`  
 Created: 2026-08-07  
-Dependencies: `L-23601`, `L-23602`; Brianchon--Gram/Brion valuation algebra; PR #233 `L-23207`; PR #234 fixed-ratio shell criterion  
+Corrected: 2026-08-07 to separate denominator count from unmatched-edge shortness  
+Dependencies: `L-23601`, `L-23602`, `L-23605`; Brianchon--Gram/Brion valuation algebra; PR #233 `L-23207`; PR #234 fixed-ratio shell criterion  
 Scope: the complete balanced Type-II family, not only terminal rows
 
 ## 1. Statement
@@ -17,8 +18,9 @@ Retain the fixed reserve
 \tag{L-23603.1}
 \]
 
-and let `M_K(X)` be the complete balanced energy maximum of `L-23207`.  The
-proposed theorem is
+and let `M_K(X)` be the complete balanced energy maximum of `L-23207`.  Assume
+the BRANK and BLINE schema properties of `L-23601/L-23602`, and the BSHORT
+short-edge trichotomy of `L-23605`.  Then
 
 \[
  \boxed{
@@ -51,8 +53,9 @@ and the required coefficient tends to zero along every unbounded sequence of
 orders.
 
 The proof does not assume that a balanced face has bounded dimension.  It
-localizes the complete valuation to vertices and counts only **uncancelled cone
-denominators**.
+localizes the complete valuation to vertices and counts only uncancelled cone
+denominators.  `L-23605` separately proves that every unmatched same-scale
+direction has short range; denominator count alone is not enough.
 
 ## 2. Brianchon--Gram localization
 
@@ -78,8 +81,8 @@ therefore vanishes.  Hence
 \tag{L-23603.6}
 \]
 
-Equation (L-23603.6) is the exact replacement for the unsupported assertion
-that every endpoint face has only `O(1)` free coordinates.
+Equation (L-23603.6) replaces the unsupported assertion that every endpoint
+face has only `O(1)` free coordinates.
 
 ## 3. Cone generating expression
 
@@ -148,11 +151,13 @@ at most `g_0` geometric denominators:
 \]
 
 This denominator-divisibility assertion, rather than the dimension of the
-original face, is the main reviewer hinge.
+original face, is the first main reviewer hinge.
 
-## 5. Endpoint exponent
+## 5. Shortness and endpoint exponent
 
-Every uncancelled edge coordinate ranges over at most
+The bound `|U_v|<=g_0` does not by itself imply a vanishing exponent.  Invoke
+the independent BSHORT theorem `L-23605`: every unmatched same-scale edge is a
+short divisor/quotient edge with multiplicative range at most
 
 \[
  V^{1+o(1)}
@@ -162,7 +167,8 @@ Every uncancelled edge coordinate ranges over at most
 \tag{L-23603.11}
 \]
 
-Thus (L-23603.10) costs at most
+Every longer edge is canceled, strict lower-scale, or Euler-small.  Therefore
+(L-23603.10) costs at most
 
 \[
  \exp\left\{
@@ -171,22 +177,17 @@ Thus (L-23603.10) costs at most
 \tag{L-23603.12}
 \]
 
-For fixed `K`:
-
-- the number of destination cells;
-- the number of vertices and simplicial cones;
-- binomial multiplicities;
-- divisor multiplicities of fixed order;
-- determinant denominators from the prefix transform
-
-contribute only `exp(o_K(J))`.
+For fixed `K`, the number of cells, vertices, simplicial cones, binomial
+multiplicities, fixed-order divisor multiplicities, and prefix-transform
+determinants contributes only `exp(o_K(J))`.
 
 No factor `V^(Omega(K))` remains.  The `Omega(K)`-dimensional faces have already
-vanished in (L-23603.6).
+vanished in (L-23603.6), while any unmatched long edge would violate BSHORT and
+reject the theorem.
 
 ## 6. Scale destinations
 
-Each vertex is classified from its active global constraints.
+Each vertex is classified from its active constraints and edge types.
 
 ### Strict vertices
 
@@ -208,8 +209,8 @@ bounded by
 
 ### Euler vertices
 
-If an unrestricted macroscopic lattice coordinate remains, the high-order Euler
-lemma applies and the term is exponentially small.
+If an unrestricted macroscopic complete lattice coordinate remains, the
+high-order Euler lemma applies and the term is exponentially small.
 
 ### Reflected diagonal vertices
 
@@ -218,9 +219,9 @@ is absorbed into the energy.
 
 ### Endpoint vertices
 
-All remaining same-scale vertices satisfy (L-23603.10)--(L-23603.12).  They
-have at most `g_0` uncancelled denominator directions, even if the parent face
-had dimension proportional to `K`.
+All remaining same-scale vertices have at most `g_0` uncancelled denominator
+directions by BLINE, and all those directions are short by BSHORT.  They obey
+(L-23603.12).
 
 Combining the four classes proves (L-23603.2).
 
@@ -235,7 +236,8 @@ reflected Hermitian identity,
 null-moment/Euler line annihilation,
 prefix-polytope normal form,
 Brianchon--Gram,
-and vertex denominator cancellation.
+vertex denominator cancellation,
+and the independent short-edge trichotomy.
 ```
 
 The balanced rows are the object being evaluated by (L-23603.6); they are not
@@ -245,8 +247,11 @@ removed by a prior induction.
 
 The fixed `q_0=2` projection of PR #229 commutes with the valuation and vertex
 localization.  On that projection, (L-23603.2) becomes the high-order
-fixed-ratio Mertens difference estimate recorded in `L-23604`.  Hence the proof
-cannot pass while forgetting coherent Möbius signs.
+fixed-ratio Mertens difference estimate recorded in `L-23604`.
+
+The coherent long Mertens shell direction is not labeled short.  It is consumed
+by the complete signed toggle and reappears in the projected finite-difference
+coordinate, as required by `L-23605`.
 
 The following mutations are mandatory:
 
@@ -254,9 +259,10 @@ The following mutations are mandatory:
 2. omit the noncoprime `q=v=5,r=5` residue chain;
 3. delete the odd--odd cotangent residue;
 4. route the first cell to the terminal-only family;
-5. add one unmatched coordinate edge at a vertex.
+5. add one unmatched coordinate edge at a vertex;
+6. relabel one long shell edge as short.
 
-All five must fail.
+All six must fail.
 
 ## 9. Exact adversarial questions
 
@@ -267,12 +273,13 @@ A reviewer can reject the theorem by exhibiting any one of:
 - global coupling rank growing with `K`;
 - a vertex with more than ten unmatched cone denominators;
 - a denominator cancellation that requires a missing sibling or null companion;
+- one unmatched same-scale edge with range larger than `V^(1+o(1))`;
+- an incomplete-lattice Euler label;
 - a first-cell projection not reproduced with its exact coefficient;
-- a purported strict-scale vertex whose destination exceeds
-  `(1-delta)J+O_K(1)`.
+- a strict-scale destination above `(1-delta)J+O_K(1)`.
 
-Conversely, an emitted `K=6`, `K=8`, and symbolic-`K` manifest satisfying these
-checks verifies the entire new arithmetic hinge.
+Conversely, complete `K=6`, `K=8`, and symbolic-`K` manifests satisfying these
+checks verify the new arithmetic hinge.
 
 ## 10. Proof boundary
 
@@ -281,9 +288,10 @@ algebra.  The source-specific assertions requiring independent verification are:
 
 1. every nonvertex line is matched by an actual source toggle;
 2. every coordinate/prefix cone denominator divides the complete numerator;
-3. the global constraint rank is at most ten after all transition cells are
+3. global constraint rank is at most ten after all transition cells are
    included;
-4. the vertex classification is complete.
+4. every unmatched same-scale edge is short;
+5. the vertex classification is complete.
 
-Subject to those four finite-schema checks, (L-23603.2) proves `BTP` with the
+Subject to those five finite-schema checks, (L-23603.2) proves `BTP` with the
 rate required for RH.
