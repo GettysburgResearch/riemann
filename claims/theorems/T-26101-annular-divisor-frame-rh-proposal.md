@@ -7,7 +7,7 @@ Authoring agent: `gpt56-pro-22`
 Created: 2026-08-08  
 Issue: #261  
 Base: PR #254 at `be8405e543957ae64ddd10965e9d709e38beb5ff`  
-Depends on: PR #248 `L-24501/L-24502/T-24501`; PR #254 `R-25301/L-25301`; `L-26101`--`L-26105`
+Depends on: PR #248 `L-24501/L-24502/T-24501`; PR #254 `R-25301/L-25301`; `L-26101`--`L-26108`
 
 ## 1. Exact finite front door
 
@@ -71,7 +71,7 @@ and
 
 PR #254 proves that the seed is not close to feasible after positive parts are separated: its positive and negative von-Mangoldt weighted constraint masses are both of order at least `sqrt(X)`. The monotone cover therefore loses a fixed square-root amount and is rejected.
 
-`L-26104` proves the pointwise source estimate and its Euclidean consequence
+`L-26104` proves
 
 \[
 \boxed{
@@ -80,24 +80,27 @@ PR #254 proves that the seed is not close to feasible after positive parts are s
 \tag{T-26101.5}
 \]
 
-Thus the initial source budget is closed unconditionally.
+Thus the initial source budget is closed by elementary calculus.
 
-## 3. Exact annular repair radius
+## 3. Canonical annular repair radius
 
-Fix
+Use the enlarged canonical annulus from `L-26108`:
 
 \[
- I_X=[\lceil9X/20\rceil,\lfloor4X/5\rfloor]
+ I_X=
+ \left[\left\lceil\frac X5\right\rceil,
+       \left\lfloor\frac{4X}{5}\right\rfloor\right].
+ \tag{T-26101.6}
 \]
 
-and
+For prime powers `q<=X` and `j in I_X`, put
 
 \[
  A_X(q,j)
  =2\mathbf1_{q\mid j}
  -\mathbf1_{q\mid j-1}
  -\mathbf1_{q\mid j+1}.
- \tag{T-26101.6}
+ \tag{T-26101.7}
 \]
 
 Let
@@ -111,9 +114,10 @@ The minimum annular repair norm is
 \[
  \mathcal R_X
  =\inf\{\|F\|_2:A_XF\ge r_X\}.
- \tag{T-26101.7}
+ \tag{T-26101.8}
+\]
 
-`L-26105` proves the exact dual formula
+`L-26105` proves the exact Hilbert--Farkas formula
 
 \[
 \boxed{
@@ -122,13 +126,14 @@ The minimum annular repair norm is
  \frac{\langle\lambda,r_X\rangle_+}
       {\|A_X^*\lambda\|_2}.
 }
-\tag{T-26101.8}
+\tag{T-26101.9}
+\]
 
-Thus the sole finite arithmetic theorem may be stated without an existence gap.
+Thus the sole finite arithmetic theorem can be stated without an existence gap.
 
 ## 4. Annular Dual Frame theorem (`ADF`)
 
-Prove, for every nonnegative prime-power vector `lambda`,
+For every nonnegative prime-power vector `lambda`, prove
 
 \[
 \boxed{
@@ -146,34 +151,74 @@ Prove, for every nonnegative prime-power vector `lambda`,
  \right]^{1/2}.
 }
 \tag{ADF}
+\]
 
-By (T-26101.8), `ADF` is equivalent to
+By (T-26101.9), `ADF` is exactly equivalent to
 
 \[
 \boxed{
  \mathcal R_X=X^{o(1)}.
 }
-\tag{T-26101.9}
+\tag{T-26101.10}
+\]
 
-The source-specific active projection and `SAF2/SAF3` of `L-26103` are a proposed constructive proof of `ADF`; they are not additional hypotheses once `ADF` is established.
+The projected-dual recursion of `L-26106` is a globally monotone primal producer for this optimum. The older per-half-step positive-residual contraction has been withdrawn and is not part of the theorem.
 
-## 5. Feasible sharp carry vector
+## 5. Additive-rigidity decomposition of the hinge
 
-Assume `ADF`, and choose an annular flow `F_X` with
+For
+
+\[
+ L_\lambda(n)=\sum_{p^a\mid n}\lambda_{p^a},
+\]
+
+one has
+
+\[
+ (A_X^*\lambda)_j
+ =2L_\lambda(j)-L_\lambda(j-1)-L_\lambda(j+1).
+ \tag{T-26101.11}
+\]
+
+Thus the denominator is the second-difference energy of an additive arithmetic function.
+
+`L-26107` proves exact dyadic and triadic gap identities and the quantitative estimate
+
+\[
+ \sum_{m\in I_X}
+ |L_\lambda(m)-L_\lambda(m-1)|^2
+ \ll X^2\|A_X^*\lambda\|_2^2.
+ \tag{T-26101.12}
+\]
+
+The classical Erdős--Kátai--Wirsing logarithm-rigidity theory, and its quantitative modern descendants, suggest the proof decomposition
+
+\[
+ \lambda=c\Lambda+\lambda^\perp.
+ \tag{T-26101.13}
+\]
+
+The transverse component should be controlled by annular curvature, while the scalar logarithmic component is handled by the signed factor-two recurrence inherited from PR #254. Establishing these two estimates would prove `ADF`.
+
+## 6. Feasible sharp carry vector
+
+Assume `ADF`, and choose a flow `F_X` with
 
 \[
  A_XF_X\ge r_X,
  \qquad
  \|F_X\|_2=X^{o(1)}.
- \tag{T-26101.10}
+ \tag{T-26101.14}
+\]
 
 Define
 
 \[
  b_X(m)=b_X^{(0)}(m)+F_X(m-1)-F_X(m).
- \tag{T-26101.11}
+ \tag{T-26101.15}
+\]
 
-By `L-26102`, for all sufficiently large `X`,
+By `L-26102/L-26108`, for all sufficiently large `X`,
 
 \[
  b_X(m)\ge0
@@ -186,13 +231,14 @@ and every prime-power constraint is feasible. Moreover,
  J_X(b_X)
  \ge4\sqrt X-X^{o(1)}.
 }
-\tag{T-26101.12}
+\tag{T-26101.16}
+\]
 
 The objective correction is actually `X^{-3/2+o(1)}`.
 
-## 6. Sharp prime-ramp lower bound
+## 7. Sharp prime-ramp lower bound
 
-Combining (T-26101.2) and (T-26101.12),
+Combining (T-26101.2) and (T-26101.16),
 
 \[
 \boxed{
@@ -200,11 +246,12 @@ Combining (T-26101.2) and (T-26101.12),
  \frac{\Lambda(q)}{\sqrt q}\log\frac Xq
  \ge4\sqrt X-X^{o(1)}.
 }
-\tag{T-26101.13}
+\tag{T-26101.17}
+\]
 
 This is the complete prime-power ramp, with all exponents and no omitted endpoint.
 
-## 7. Square-screw transfer
+## 8. Square-screw transfer
 
 At `X=N^2`, use the exact square-screw identity frozen in the carry/square-screw stack:
 
@@ -215,25 +262,28 @@ At `X=N^2`, use the exact square-screw identity frozen in the carry/square-screw
   \frac{\Lambda(q)}{\sqrt q}
   \log\frac{N^2}{q}
  +O(\log N).
- \tag{T-26101.14}
+ \tag{T-26101.18}
+\]
 
-Equation (T-26101.13) gives
+Equation (T-26101.17) gives
 
 \[
 \boxed{
  \Psi(2\log N)\le N^{o(1)}.
 }
-\tag{T-26101.15}
+\tag{T-26101.19}
+\]
 
 The unconditional derivative budget propagates this estimate between adjacent square samples. The upper-envelope Landau one-sign theorem excludes every pole corresponding to a zeta zero with real part greater than `1/2`. Functional-equation symmetry gives
 
 \[
 \boxed{\mathrm{RH}.}
-\tag{T-26101.16}
+\tag{T-26101.20}
+\]
 
 The square-screw normalization, interpolation, and Landau orientation remain inherited dependencies and must be reviewed at their frozen commits.
 
-## 8. Mandatory near-null firewall
+## 9. Mandatory logarithmic near-null firewall
 
 For
 
@@ -257,9 +307,9 @@ and
   \frac{\Lambda(q)}{\sqrt q}\log\frac Xq.
 \]
 
-Thus the von-Mangoldt vector is an arithmetic near-null direction whose numerator is the sharp prime-ramp deficit itself. `ADF` cannot follow from a generic frame lower bound or entrywise absolute estimate. A proof must use the source sign and show that every other nonnegative near-null vector is controlled by the same negative-slack mechanism.
+Thus the von-Mangoldt vector is an arithmetic near-null direction whose numerator is the sharp prime-ramp deficit itself. `ADF` cannot follow from a generic frame lower bound or entrywise absolute estimate. A proof must preserve this signed scalar mode.
 
-## 9. Full proposed spine
+## 10. Full proposed spine
 
 ```text
 average binomial carries
@@ -268,6 +318,8 @@ average binomial carries
 -> exact positive/negative constraint dipole
 -> polylog initial positive-residual norm
 -> exact annular Hilbert-Farkas duality
+-> dyadic/triadic additive-gap rigidity
+-> transverse additive rigidity + logarithmic scalar recurrence
 -> Annular Dual Frame inequality
 -> subpower-norm feasible flow
 -> sharp prime-ramp lower bound
@@ -276,7 +328,7 @@ average binomial carries
 -> RH.
 ```
 
-## 10. Exact proof boundary
+## 11. Exact proof boundary
 
 ```text
 finite carry/divisor-gradient algebra       inherited / proposed exact
@@ -284,13 +336,16 @@ parabolic seed and sharp objective          inherited / proposed complete
 monotone positive cover                     refuted
 constraint dipole                           inherited / proposed complete
 initial residual L2 budget                  proposed complete
-annular slack/cost transfer                  proposed complete
+annular slack/cost and enlargement          proposed complete
 Hilbert-Farkas primal/dual equivalence       proposed complete
+projected-dual monotone potential            proposed complete
+dyadic/triadic gap rigidity                 proposed complete
+transverse coefficient rigidity             OPEN
+logarithmic factor-two recurrence            OPEN
 Annular Dual Frame inequality               OPEN / RH-BEARING
-SAF2/SAF3 constructive route to ADF          OPEN
 ADF -> sharp prime ramp                      proposed complete
 sharp prime ramp -> RH                       inherited conditional transfer
 Riemann Hypothesis                           UNPROVED
 ```
 
-This is a full elementary proposal with one exact source-specific inequality. It is not a claim that `ADF` or RH has already been proved.
+This is a full elementary proposal with one exact source-specific inequality and a concrete two-part proof plan. It is not a claim that `ADF` or RH has already been proved.
