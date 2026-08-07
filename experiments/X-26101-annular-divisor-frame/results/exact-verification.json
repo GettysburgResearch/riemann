@@ -1,0 +1,47 @@
+{
+  "active_projection": {
+    "active_halving_factor": "1/2",
+    "active_rows": [2, 3, 4, 5, 7],
+    "annulus": [12, 24],
+    "dual_energy": "9384172793/293637960000",
+    "gram_determinant_nonzero": true,
+    "projection_norm_sq": "9384172793/293637960000"
+  },
+  "annular_transfer": {
+    "cost_weight_l2_sq_upper": "100/2556801",
+    "flow_l2_upper": "1",
+    "remaining_slack_lower": "1",
+    "synthetic_seed_slack": "3"
+  },
+  "classification": "EXACT_SYNTHETIC_ANNULAR_FRAME_ALGEBRA",
+  "complete_period_model": {
+    "normalized_chain_floor": "1/3",
+    "normalized_chain_rho": "1/2",
+    "period_checks": [
+      {"inner_product": 0, "period": 15, "q": 3, "r": 5},
+      {"inner_product": 0, "period": 36, "q": 4, "r": 9},
+      {"inner_product": 6, "period": 9, "q": 3, "r": 9},
+      {"inner_product": 6, "period": 25, "q": 5, "r": 25},
+      {"inner_product": 6, "period": 16, "q": 4, "r": 16},
+      {"inner_product": 8, "period": 8, "q": 2, "r": 8}
+    ],
+    "shifted_ldl_pivots": ["2/3", "7/24", "5/21", "13/60"]
+  },
+  "divisor_gradient": {
+    "amplitudes": {
+      "10": "1/23",
+      "2": "1/7",
+      "3": "2/11",
+      "4": "1/13",
+      "5": "3/17",
+      "6": "2/19"
+    },
+    "divisors": [2, 3, 4, 5, 6, 10],
+    "maximum_flow": "371757/572033",
+    "nonzero_gradient_coordinates": 29,
+    "prime_power_rows": 16
+  },
+  "proof_object_sha256": "8f9bae3c146f304704a9350977aecd8300b050766c32d2d6a7808d60a118dd44",
+  "schema": "riemann.x26101-annular-divisor-frame.v1",
+  "verdict": "PASS_EXACT_ANNULAR_DIVISOR_FRAME_ALGEBRA"
+}
