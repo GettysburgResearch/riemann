@@ -1,0 +1,15 @@
+X-23202 corrected proposal tests
+
+1. canonical delta=1/5 exponent grid                    PASS
+2. reviewer delta=2/5 counterexample rejected          PASS
+3. same-scale complexity cycle rejected                PASS
+4. signed recombination differs from rowwise energy    PASS
+5. missing BTP source fields rejected                  PASS
+6. product-dilation orientation rejected               PASS
+7. unsigned packet manifest rejected                   PASS
+8. complete proof object and digest                    PASS
+
+8/8 PASS
+
+Proof boundary: exact synthetic geometry and schema only. No production prime
+packet, balanced Type-II estimate, unbounded rate, or RH conclusion is tested.
