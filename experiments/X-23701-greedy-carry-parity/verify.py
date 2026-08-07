@@ -70,6 +70,37 @@ def digit_convolution(N: int, b2: List[int]) -> int:
     return sum(b2[m] * digit_sum(N // m, 2) for m in range(1, N + 1))
 
 
+def mobius_collapsed_entry(n: int, m: int, mu: List[int]) -> Fraction:
+    return sum(
+        (Fraction(mu[k]) * beta(n, m * k) for k in range(1, n // m + 1)),
+        Fraction(0),
+    )
+
+
+def adjoint_inverse(
+    X: int,
+    target: Dict[int, Fraction],
+) -> Dict[int, Fraction]:
+    mu = mobius_values(X)
+    u = [Fraction(0) for _ in range(X + 3)]
+    for m in range(2, X + 1):
+        u[m] = sum(
+            (Fraction(mu[k]) * target[m * k] for k in range(1, X // m + 1)),
+            Fraction(0),
+        )
+    tail = [Fraction(0) for _ in range(X + 4)]
+    for m in range(X, 1, -1):
+        tail[m] = tail[m + 1] + u[m]
+    coefficients: Dict[int, Fraction] = {}
+    for j in range(2, X + 1):
+        numerator = (
+            (j + 1) * (j * u[j] - (j - 2) * u[j + 1])
+            + 2 * tail[j + 2]
+        )
+        coefficients[j] = numerator / (j * (j - 1))
+    return coefficients
+
+
 def greedy_minorant(
     X: int,
     target: Dict[int, Fraction],
@@ -104,6 +135,10 @@ def synthetic_greedy_result(X: int = 24) -> Dict[str, object]:
     # q^(-1/2) log(X/q), used only to replay the finite greedy algebra exactly.
     target = {q: Fraction(X - q, q * X) for q in range(2, X + 1)}
     coefficients, residual, blockers = greedy_minorant(X, target)
+    adjoint = adjoint_inverse(X, target)
+    adjoint_mismatches = sum(
+        1 for n in range(2, X + 1) if adjoint[n] != coefficients[n]
+    )
 
     reconstructed = {
         q: sum(coefficients[n] * beta(n, q) for n in range(q, X + 1))
@@ -125,6 +160,10 @@ def synthetic_greedy_result(X: int = 24) -> Dict[str, object]:
         "synthetic_coefficient_mass": str(coefficient_mass),
         "synthetic_non_diagonal_blockers": sum(
             1 for n, q in blockers.items() if n != q
+        ),
+        "synthetic_adjoint_inverse_mismatches": adjoint_mismatches,
+        "synthetic_discrete_convexity_failures": sum(
+            1 for value in adjoint.values() if value < 0
         ),
     }
 
@@ -149,6 +188,15 @@ def build_result() -> Dict[str, object]:
                 raise AssertionError(f"binary Kummer mismatch n={n}, j={j}")
             binary_kummer_checks += 1
 
+    mu = mobius_values(24)
+    mobius_collapse_checks = 0
+    for n in range(2, 25):
+        for m in range(2, n + 1):
+            expected = Fraction(2 * m - n - 1, n + 1)
+            if mobius_collapsed_entry(n, m, mu) != expected:
+                raise AssertionError(f"Mobius row collapse mismatch n={n}, m={m}")
+            mobius_collapse_checks += 1
+
     digital_limit = 512
     b2 = b2_values(digital_limit)
     parity_rows: Dict[str, int] = {}
@@ -171,6 +219,7 @@ def build_result() -> Dict[str, object]:
         "schema": "X-23701-v1",
         "carry_count_checks": carry_checks,
         "binary_kummer_checks": binary_kummer_checks,
+        "mobius_row_collapse_checks": mobius_collapse_checks,
         "digital_identity_limit": digital_limit,
         "parity_rows": parity_rows,
         "digit_rows": digit_rows,
