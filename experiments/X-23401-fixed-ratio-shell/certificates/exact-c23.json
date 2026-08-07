@@ -1,0 +1,70 @@
+{
+  "barrier_prime_max": 19,
+  "binomial_sign_base": -1,
+  "c": {
+    "denominator": "3",
+    "numerator": "2"
+  },
+  "divisor_recurrence_sign": -1,
+  "expected_proof_object_sha256": "0772b74939f89a2e9ac45fe38fbc0e3fd4f131c9e3d83ecdbf7ab1debb3aeff1",
+  "gram_blocks": [
+    {
+      "x0": {
+        "denominator": "1",
+        "numerator": "4"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "8"
+      }
+    },
+    {
+      "x0": {
+        "denominator": "1",
+        "numerator": "5"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "10"
+      }
+    },
+    {
+      "x0": {
+        "denominator": "1",
+        "numerator": "7"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "14"
+      }
+    },
+    {
+      "x0": {
+        "denominator": "1",
+        "numerator": "9"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "18"
+      }
+    }
+  ],
+  "kernel_reciprocal_scale": {
+    "denominator": "2",
+    "numerator": "3"
+  },
+  "max_difference_order": 7,
+  "max_n": 192,
+  "mellin_c_term_sign": -1,
+  "mellin_cutoff": 96,
+  "mellin_orders": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "prime_renewal_sign": 1,
+  "schema": "riemann.x23401.fixed-ratio-shell.v1",
+  "x_start": 2,
+  "x_stop": 96
+}
