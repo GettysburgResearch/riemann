@@ -11,11 +11,12 @@ Issue: #261
 1. `L-26101` — exact divisor-gradient and Gram algebra;
 2. `X-26101` — exact finite replay and mutations;
 3. `L-26102` — annular positivity and objective transfer;
-4. `L-26103` Sections 1--4 — compression, projection, and complete-period model;
-5. `L-26103` Section 5 — the open `SAF` theorem;
-6. `T-26101` — conditional prime-ramp and RH composition;
-7. `O-26101` and `recon.py` only as floating discovery;
-8. inherited square-screw/Landau normalization.
+4. `L-26104` — elementary polylog initial-residual budget;
+5. `L-26103` Sections 1--5 — compression, projection, complete-period model, and closed `SAF1`;
+6. `L-26103` Sections 6--8 — open `SAF2/SAF3` theorem and recursive invariant;
+7. `T-26101` — conditional prime-ramp and RH composition;
+8. `O-26101` and `recon.py` only as floating discovery;
+9. inherited square-screw/Landau normalization.
 
 ## 2. Automatic rejection conditions
 
@@ -29,6 +30,14 @@ Reject the proposal if any one of the following occurs.
 - the flow is applied to non-prime-power constraints as though they were part of the dual;
 - the parabolic seed or target normalization differs across files.
 
+### Initial-budget failures
+
+- the final zero term when `q|X` is counted as a nonzero continuous interval;
+- the periodic selector primitive is allowed to grow with `q` rather than being bounded by one;
+- the boundary term at `T_q` is omitted;
+- the sum over prime powers is estimated without the `1/q` factor;
+- `SAF1` is still treated as numerical after the proof in `L-26104`.
+
 ### Positivity/cost failures
 
 - a proposed flow has norm large enough to exhaust the fixed annular seed slack;
@@ -36,7 +45,7 @@ Reject the proposal if any one of the following occurs.
 - objective cost is estimated with a pointwise `j^-2` bound but the number of sites is forgotten;
 - signed objective gain is silently replaced by an absolute loss with the wrong orientation.
 
-### `SAF` failures
+### `SAF2/SAF3` failures
 
 - a generated active Gram has a singular or superpolynomially small positive eigenvalue after exact row compression;
 - leakage creates an active residual set for which the stated contraction fails;
@@ -61,6 +70,7 @@ A proof-grade `SAF_X` object should contain:
 X, alpha, beta, annulus endpoints
 complete prime-power manifest
 exact parabolic residual intervals
+L-26104 pointwise residual majorants
 identical-row equivalence classes
 for every iteration:
   active representatives
@@ -77,7 +87,7 @@ exact objective-loss enclosure
 source and producer digests
 ```
 
-A finite ladder is not an all-scale theorem. Production blocks are useful only after the symbolic mechanism establishing uniform `SAF1`--`SAF3` is identified.
+A finite ladder is not an all-scale theorem. Production blocks are useful only after the symbolic mechanism establishing uniform `SAF2/SAF3` is identified.
 
 ## 4. Mandatory mutations
 
@@ -94,11 +104,11 @@ The consumer should reject at least:
 
 ## 5. Status discipline
 
-The exact algebra and conditional transfer may be classified independently. Until `SAF1`--`SAF3` are proved for all sufficiently large `X`, the correct global status is
+The exact algebra and conditional transfer may be classified independently. `SAF1` is now proposed complete. Until `SAF2/SAF3` are proved for all sufficiently large `X`, the correct global status is
 
 ```text
 FULL ELEMENTARY PROPOSAL
-ACTIVE-FRAME THEOREM OPEN
+GENERATED FRAME/LEAKAGE THEOREM OPEN
 RH UNPROVED
 ```
 
