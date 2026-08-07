@@ -102,6 +102,7 @@ that
 \[
  S+T\overset d=\operatorname{Gamma}(2,1/2).
  \tag{T-23801.6}
+\]
 
 ## 4. Explicit finite packing
 
@@ -128,6 +129,7 @@ and
  \le {1\over\sqrt q}\log{X\over q}
  \qquad(2\le q\le X).
  \tag{T-23801.9}
+\]
 
 The proof uses the exact identity
 
@@ -148,6 +150,7 @@ For every `epsilon>0`, `L-23806` gives
  \sum_{n=2}^Xd_X(n)G_n
  \ge4\sqrt X-O_\epsilon(X^\epsilon).}
  \tag{T-23801.10}
+\]
 
 Combining (T-23801.2), (T-23801.8), and (T-23801.9),
 
@@ -158,6 +161,7 @@ Combining (T-23801.2), (T-23801.8), and (T-23801.9),
  \log{X\over q}
  \ge4\sqrt X-O_\epsilon(X^\epsilon).}
  \tag{T-23801.11}
+\]
 
 The constant four is exact. It is not obtained from the prime-number theorem:
 it is the product of the continuum carry mass `1/2`, the gamma shape-two
@@ -181,12 +185,14 @@ The exact square-screw scalar of `T-19801` is
  \left[N^{-1}\Phi(N^{-4},2,1/4)-\Phi(1,2,1/4)\right].
  \end{aligned}
  \tag{T-23801.12}
+\]
 
 It equals the zeta screw function at the square sample:
 
 \[
  \mathscr S(N)=\Psi(2\log N).
  \tag{T-23801.13}
+\]
 
 Equation (T-23801.11) gives, for every `epsilon>0`,
 
@@ -194,6 +200,7 @@ Equation (T-23801.11) gives, for every `epsilon>0`,
  \boxed{
  \Psi(2\log N)\le C_\epsilon N^\epsilon.}
  \tag{T-23801.14}
+\]
 
 The remaining gamma/Lerch terms are only logarithmic or bounded and are absorbed
 by the arbitrarily small power.
@@ -205,12 +212,14 @@ The unconditional explicit-formula derivative bound is
 \[
  |\Psi'(t)|\le C(1+t)^A e^{t/2}.
  \tag{T-23801.15}
+\]
 
 Adjacent square samples satisfy
 
 \[
  2\log(N+1)-2\log N\asymp N^{-1}=e^{-t/2}.
  \tag{T-23801.16}
+\]
 
 Therefore (T-23801.14) and the mean-value theorem give, for every `delta>0`,
 
@@ -219,6 +228,7 @@ Therefore (T-23801.14) and the mean-value theorem give, for every `delta>0`,
  \Psi(t)\le C_\delta(1+t)^{B_\delta}e^{\delta t}
  \qquad(t\ge0).}
  \tag{T-23801.17}
+\]
 
 This is the upper-envelope counterpart of the square-sampling theorem.
 
@@ -230,6 +240,7 @@ The one-sided Fourier--Laplace identity is
  \int_0^\infty\Psi(t)e^{izt}dt
  =-{1\over z^2}{\xi'\over\xi}(1/2-iz).
  \tag{T-23801.18}
+\]
 
 Fix `delta>0`. Add a sufficiently large positive polynomial multiple of
 `e^(delta t)` and one compactly supported correction so that
@@ -252,6 +263,7 @@ Letting `delta` tend to zero and applying functional-equation symmetry yields
 \[
  \boxed{\mathrm{RH}.}
  \tag{T-23801.19}
+\]
 
 This is the same exact upper-envelope transfer already isolated in `T-20205`;
 no zero ordinate or finite verified-height hypothesis enters.
