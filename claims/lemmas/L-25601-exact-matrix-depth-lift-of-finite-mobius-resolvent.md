@@ -11,7 +11,7 @@ Scope: exact source map and depth incidence; no coercive inequality
 
 ## 1. Scalar finite inverse data
 
-Fix `K>=1` and a truncation parameter `V`.  In an absolute-convergence
+Fix `K>=1` and a truncation parameter `V`. In an absolute-convergence
 half-plane put
 
 \[
@@ -27,7 +27,7 @@ Let
 C_V(s)=M_V(s)^{-1}
 \]
 
-where defined.  Then
+where defined. Then
 
 \[
 C_V(s)(1-R_V(s))=\zeta(s).
@@ -51,7 +51,7 @@ S_Ke_j=e_{j+1}\quad(0\le j<K-1),
 \tag{L-25601.4}
 \]
 
-Thus `S_K^K=0`.  Define
+Thus `S_K^K=0`. Define
 
 \[
 \boxed{
@@ -92,7 +92,7 @@ Define the matrix logarithmic derivative
 \tag{L-25601.8}
 \]
 
-Since every matrix is a polynomial in `S_K`, all factors commute.  Direct
+Since every matrix is a polynomial in `S_K`, all factors commute. Direct
 differentiation yields
 
 \[
@@ -126,18 +126,20 @@ Indeed,
 Let
 
 \[
-u_K=e_0,
+\ell_K=e_0,
 \qquad
 u_K=e_0+\cdots+e_{K-1}.
+\tag{L-25601.11}
 \]
 
-Then
+The left anchor `ell_K` reads the first depth row, while `nu_K` sums all depth
+columns. Then
 
 \[
-\nu_K^*\mathbf L_{K,V}\nu_K
+\ell_K^*\mathbf L_{K,V}\nu_K
 ={M_V'\over M_V}
 +R_V'\sum_{j=0}^{K-2}R_V^j.
-\tag{L-25601.11}
+\tag{L-25601.12}
 \]
 
 The complete zeta logarithmic derivative satisfies
@@ -145,7 +147,7 @@ The complete zeta logarithmic derivative satisfies
 \[
 -\frac{\zeta'}\zeta
 ={M_V'\over M_V}+{R_V'\over1-R_V}.
-\tag{L-25601.12}
+\tag{L-25601.13}
 \]
 
 Consequently
@@ -153,27 +155,27 @@ Consequently
 \[
 \boxed{
 -\frac{\zeta'}\zeta
--\nu_K^*\mathbf L_{K,V}\nu_K
+-\ell_K^*\mathbf L_{K,V}\nu_K
 ={R_V'R_V^{K-1}\over1-R_V}.}
-\tag{L-25601.13}
+\tag{L-25601.14}
 \]
 
 The arithmetic coefficients of `R_V` are supported strictly above `V`, while
-those of `R_V'` have the same support.  Hence the numerator
+those of `R_V'` have the same support. Hence the numerator
 `R_V'R_V^(K-1)` is supported strictly above
 
 \[
 (V+1)^K.
 \]
 
-If `V=ceil(X^(1/K))`, the right side of (L-25601.13) has zero coefficient
-through the endpoint `X`.  Therefore, coefficientwise through `X`,
+If `V=ceil(X^(1/K))`, the right side of (L-25601.14) has zero coefficient
+through the endpoint `X`. Therefore, coefficientwise through `X`,
 
 \[
 \boxed{
-\nu_K^*\mathbf L_{K,V}\nu_K
+\ell_K^*\mathbf L_{K,V}\nu_K
 =-\frac{\zeta'}\zeta.}
-\tag{L-25601.14}
+\tag{L-25601.15}
 \]
 
 This is the exact source synthesis map missing from packetwise uses of the
@@ -193,16 +195,16 @@ Their tensor product gives the depth-by-depth reflected source
 
 \[
 \mathbf L_+(w)\boxtimes\mathbf L_-(w).
-\tag{L-25601.15}
+\tag{L-25601.16}
 \]
 
 The scalar synthesis functional is
 
 \[
-(\nu_K\otimes\nu_K)^*
+(\ell_K\otimes\ell_K)^*
 [\mathbf L_+\boxtimes\mathbf L_-]
 (\nu_K\otimes\nu_K).
-\tag{L-25601.16}
+\tag{L-25601.17}
 \]
 
 Through endpoint `X` this equals
@@ -210,29 +212,29 @@ Through endpoint `X` this equals
 \[
 \left[-{\zeta'\over\zeta}(w+it)\right]
 \left[-{\zeta'\over\zeta}(w-is)\right].
-\tag{L-25601.17}
+\tag{L-25601.18}
 \]
 
-Inserting (L-25601.17) into the two-frequency block identity `L-9518` retains
+Inserting (L-25601.18) into the two-frequency block identity `L-9518` retains
 **every** depth cross term and reconstructs the physical factor-ratio normal
-Gram exactly.  There is no packet/global source mismatch.
+Gram exactly. There is no packet/global source mismatch.
 
 ## 6. Bounded incidence, but not bounded arithmetic charge
 
 The matrix generator `I-RS_K` has only a diagonal edge and one forward depth
-edge.  Consequently the depth-incidence graph has uniformly bounded local
+edge. Consequently the depth-incidence graph has uniformly bounded local
 degree, and all internal depth faces telescope exactly in the matrix product.
 
-This is a genuine bookkeeping improvement.  It does not imply that the
+This is a genuine bookkeeping improvement. It does not imply that the
 arithmetic coefficient supported on a surviving depth face has bounded divisor
-dimension or small norm.  The scalar synthesis functional still contains the
+dimension or small norm. The scalar synthesis functional still contains the
 fixed-ratio Möbius shell of PRs #229/#234.
 
 ## 7. Interaction with the reserve obstruction
 
-Equation (L-25601.16) gives an exact source map into the aggregate physical
-block.  By `R-25601`, the synthesis Gram has a nontrivial kernel and no strict
-Schur reserve on the full depth tensor space.  Thus the matrix lift closes the
+Equation (L-25601.17) gives an exact source map into the aggregate physical
+block. By `R-25601`, the synthesis Gram has a nontrivial kernel and no strict
+Schur reserve on the full depth tensor space. Thus the matrix lift closes the
 missing cross-term ledger but does not manufacture the arithmetic frame
 inequality.
 
