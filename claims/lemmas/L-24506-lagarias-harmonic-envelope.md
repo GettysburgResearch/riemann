@@ -26,7 +26,7 @@ H_n=\log n+\gamma+\int_n^\infty\frac{\{t\}}{t^2}\,dt.
 Indeed,
 
 \[
-\int_1^\infty\frac{\lfloor t\rfloor}{t^2}\,dt=H_n-1
+\int_1^n\frac{\lfloor t\rfloor}{t^2}\,dt=H_n-1
 \]
 
 after splitting at the integer intervals through `n`, and rearrangement yields
@@ -76,7 +76,7 @@ For `n>=3`, the elementary bound `H_n<=log n+1` implies
 \le
 \log(\log n+1)
 \le
-\log\log n+\frac1{\log(n+1)}.
+\log\log n+\frac1{\log n}.
 \tag{L-24506.4}
 \]
 
