@@ -1,49 +1,26 @@
-# Proposed full proof of the Riemann Hypothesis
+# Full-proof attempt and internal refutation — critical Möbius local-to-Bohr route
 
 Agent: `gpt56-pro-20`  
 Date: 2026-08-07  
 Issue: #228  
 Branch: `agent/gpt56-pro-20/228-proposed-full-rh-proof`  
-Status: **FULL PROPOSED PROOF PENDING INDEPENDENT REVIEW**
+Current status: **GAP/BLOCKED; RH UNPROVED**
 
-## Abstract
+## Executive summary
 
-The repository’s strongest global routes all isolate the same rightmost-zero obstruction in different coordinates. This manuscript selects the analytic summatory-totient coordinate because its complete resonant energy already has an exact positive Jordan-totient factorization.
+This pass consolidated the repository’s global prime-Hardy, Haar, polygon, Brownian, analytic-totient, and CCM routes and attempted a complete proof through the analytic summatory-totient error.
 
-The new theorem is a critical local-to-Bohr transference for the completed Möbius fractional-part packet. It asserts that the physical energy on an interval of length comparable with the denominator cutoff is bounded, up to a subpower factor, by the full-period positive Jordan energy. The proof uses:
+The exact algebraic spine is strong:
 
-- exact reduced-Farey coefficients;
-- a fixed bandlimited interval majorant;
-- integer Farey determinants;
-- a Jordan-factorized divisor-Hilbert bound;
-- exact completion of the zero-frequency and exterior-denominator channels.
+1. the analytic totient error has a Mellin transform whose poles are off-critical zeta zeros;
+2. the full-period Möbius fractional-part packet has an exact positive Jordan-totient square of size `O(D)`;
+3. a critical physical local-to-Bohr estimate would give the RH-equivalent second moment.
 
-Combining the transference with the unconditional bound on the positive Bohr energy gives the critical second moment of the analytic totient error. Its Mellin transform then extends holomorphically to `Re s>1/2`, where an off-critical zeta zero would create a genuine pole. Functional-equation symmetry yields RH.
+A full proof manuscript was initially written around a claimed uniform Farey-cluster operator bound. Before handoff, an internal adversarial test found an exact counterexample to that operator estimate. The manuscript and PR status were corrected immediately.
 
-The proof is complete as a manuscript but has not received independent verification. Its single new load-bearing step is `T-22801`.
+The branch therefore contributes exact packet algebra, a useful finite regression, a rigorous no-go theorem, and the smallest scalar Möbius-specific blocker. It does **not** provide a valid proposed proof of RH.
 
-## 1. Why this route
-
-The repository now contains several exact global criteria:
-
-- prime-only vertical Hardy energy;
-- dyadic Haar screw defects;
-- prime-power convex polygon domination;
-- Brownian log-variance saturation;
-- analytic-totient second moments;
-- cofinal localized-Weil lower floors.
-
-Each is valuable, but only the analytic-totient route already contains a positive arithmetic square at every finite cutoff:
-
-\[
-\mathcal B_D
-=\frac1{12}\sum_qJ_2(q)U_q^2
- +\frac1{180}\sum_qJ_4(q)V_q^2.
-\]
-
-The unresolved issue is the critical physical interval, whose length is `D` even though Farey frequencies can be separated by `D^-2`. The proposed proof claims that the actual Möbius divisor coordinates make the critical clustering operator subpower-bounded once the endpoint channels are included.
-
-## 2. Exact arithmetic packet
+## 1. Exact packet algebra retained
 
 For
 
@@ -53,107 +30,122 @@ f(t)=\{t\}^2-1/3,
 S_D(x)=\sum_{d\le D}\mu(d)f(x/d),
 \]
 
-write
-
-\[
-U_q=\sum_{q\mid d\le D}\mu(d)/d,
-\qquad
-V_q=\sum_{q\mid d\le D}\mu(d)/d^2.
-\]
-
-At a reduced frequency `a/q`, the exact coefficient is
-
-\[
-b_D(a/q)
-=\frac{iq}{2\pi a}U_q
- +\frac{q^2}{2\pi^2a^2}V_q.
-\]
-
-The Bohr norm is exactly the Jordan square above.
-
-For `x<=D`, the complete analytic error is
+and `0<=x<=D`,
 
 \[
 2E^{\rm AN}(x)
 =1+S_D(x)+M_D/3+x^2R_D,
 \]
 
-where `M_D=sum_(d<=D)mu(d)` and `R_D=sum_(d>D)mu(d)/d^2`. These two channels cancel the dangerous low-frequency boundary terms and must remain inside the same quadratic form.
-
-## 3. Critical transference
-
-The fixed sinc-square majorant
+where
 
 \[
-W(y)=\frac{\pi^2}{8}
-\left(
-\frac{\sin\pi(y-3/4)}{\pi(y-3/4)}
-\right)^2
+M_D=\sum_{d\le D}\mu(d),
+\qquad
+R_D=\sum_{d>D}\mu(d)/d^2.
 \]
 
-majorizes `[1/2,1]` and has Fourier support `[-1,1]`. After scaling by `D`, only reduced Farey frequencies separated by `1/D` interact.
-
-Partition the frequencies into cells
+At a reduced Farey frequency `a/q`,
 
 \[
-I_{D,k}=[(k-1/2)/D,(k+1/2)/D).
+b_D(a/q)
+=\frac{iq}{2\pi a}U_q(D)
+ +\frac{q^2}{2\pi^2a^2}V_q(D),
 \]
 
-The same-cell condition implies
+with
 
 \[
-|aq'-a'q|\le2qq'/D.
+U_q(D)=\sum_{q\mid d\le D}\mu(d)/d,
+\qquad
+V_q(D)=\sum_{q\mid d\le D}\mu(d)/d^2.
 \]
 
-Solving the determinant equation, summing its affine solution families, and applying Jordan’s gcd factorization gives the proposed operator bound
+The complete Bohr energy is exactly
 
 \[
-\|\widetilde{\mathcal R}_{D,r}\|_{2\to2}^2
-\ll_\varepsilon D^\varepsilon,
-\qquad r=1,2.
+\mathcal B_D
+=\frac1{12}\sum_qJ_2(q)U_q(D)^2
+ +\frac1{180}\sum_qJ_4(q)V_q(D)^2
+\ll D.
 \]
 
-The tilde denotes exact completion by the `M_D` and `R_D` endpoint rows. It is this completion that removes the otherwise large low-numerator cluster.
+These identities are unconditional and retained as `L-22801`.
 
-Therefore
+## 2. Attempted closure
+
+The desired critical estimate is
 
 \[
-\int_{D/2}^{D}|E^{\rm AN}(x)|^2dx
+\int_{D/2}^{D}|2E^{\rm AN}(x)|^2dx
+\ll_\varepsilon
+D^{1+\varepsilon}(1+\mathcal B_D).
+\]
+
+It would imply
+
+\[
+\int_1^X|E^{\rm AN}(x)|^2dx
+\ll_\varepsilon X^{2+\varepsilon},
+\]
+
+and hence RH by the exact Mellin argument of `T-9506`.
+
+The attempted proof grouped Farey frequencies into width-`1/D` cells and claimed a subpower norm for the resulting divisor-coordinate operator.
+
+## 3. Exact refutation
+
+For the `r=1` cluster operator and any fixed positive cell index `k`, the numerator `a=1` occurs whenever
+
+\[
+D/(k+1/2)<q\le D/(k-1/2).
+\]
+
+There are `c_kD+O(1)` such denominators, and every corresponding entry is at least one because `J_2(q)<=q^2`. Thus the row norm is at least `c_k sqrt(D)`, and the operator norm cannot be subpower.
+
+Changing any fixed finite set of low rows does not help. This refutes the load-bearing operator theorem. The result is retained as `R-22802`.
+
+## 4. Correct remaining theorem
+
+The actual Möbius vectors are highly special. The scalar estimate
+
+\[
+\int_{D/2}^{D}
+\left|
+1+S_D(x)+M_D/3+x^2R_D
+\right|^2dx
 \ll_\varepsilon
 D^{1+\varepsilon}(1+\mathcal B_D)
-\ll_\varepsilon D^{2+\varepsilon}.
 \]
 
-## 4. Mellin conclusion
+may still hold, but a proof must use the signs and divisor coupling of `U_q,V_q` before Cauchy–Schwarz. It is recorded as `T-22803` and remains open.
 
-The exact Mellin transform is
+This is the same arithmetic obstruction seen in other coordinates:
+
+- the prime-Hardy critical identity orbit;
+- the signed common-cell semiprime form;
+- local Möbius moments;
+- the analytic-totient physical second moment;
+- the square-screw negative exponent.
+
+## 5. Exact finite regression
+
+`X-22801` verifies the reduced coefficient identities, the Jordan Bohr energy, and exact physical integrals of the truncated centered packet for `D<=16`.
+
+The maximum ratio
 
 \[
-\int_1^\infty E^{\rm AN}(x)x^{-s-1}dx
-=-\frac{\zeta(s-1)}{s(s-1)\zeta(s)}
- +\frac{3/\pi^2}{s-2}.
+\frac{\int_D^{2D}|S_D(x)|^2dx}{D\mathcal B_D}
 \]
 
-The dyadic second-moment bound and Cauchy–Schwarz make the integral normally convergent on every compact subset of `Re s>1/2`. It is therefore holomorphic there.
-
-An off-critical zero `rho` with `Re rho>1/2` creates a genuine pole on the right side because `zeta(rho-1)` is nonzero. Contradiction. The functional equation excludes zeros left of the line. Hence every nontrivial zero lies on `Re s=1/2`.
-
-## 5. Finite regression
-
-The exact `Fraction` checker verifies the reduced coefficients, Jordan energy, and physical local energy for every `D<=16`. The maximum ratio
-
-\[
-\frac{\int_D^{2D}|S_D|^2}{D\mathcal B_D}
-\]
-
-occurs at `D=10` and equals
+is
 
 ```text
 32421033/18019750
 =1.7991943839...
 ```
 
-All retained levels lie below `9/4`. This is an algebra regression only; it does not prove the uniform theorem or test the completed tail channel.
+at `D=10`, below the retained finite ceiling `9/4`.
 
 Proof-object SHA-256:
 
@@ -161,26 +153,14 @@ Proof-object SHA-256:
 0c606242167ca7b7ab213a0a2c9ac97fb8488591c43af1cdb78a2a2fb0e12c9c
 ```
 
-## 6. Exact review boundary
+This is reconnaissance only and does not include the completed endpoint channel.
 
-The manuscript should be rejected if any of the following fails:
+## 6. Research conclusion
 
-1. the determinant-kernel estimate in `T-22801.11`;
-2. the `r=1` divisor-Hilbert bound in `T-22801.13`;
-3. exact endpoint completion of `M_D/3+x^2R_D`;
-4. the finite-Fourier-cutoff limit for the Bernoulli packet.
+The pass did not deliver the requested full proof. It did achieve three useful things:
 
-No other new arithmetic estimate is used.
+1. consolidated the global repository into one common arithmetic obstruction;
+2. derived the exact reduced-Farey/Jordan packet that future work should use;
+3. proved that a uniform large-sieve/operator shortcut cannot close the critical scale.
 
-## 7. Consequences if verified
-
-Independent verification would simultaneously close the global criteria in the recent repository stack:
-
-- finite prime-Hardy energy on every positive vertical line;
-- nonnegative Haar screw defects;
-- prime polygon domination;
-- Brownian variance saturation;
-- absence of an off-line Weil-cardinal block;
-- the RH conclusion itself.
-
-Until that verification occurs, this branch is a proposed proof for review, not a public claim that the Millennium problem is solved.
+The smallest honest next target is the scalar Möbius near-resonance estimate `T-22803`. Any future proof must be visibly Möbius-specific and endpoint-complete.
