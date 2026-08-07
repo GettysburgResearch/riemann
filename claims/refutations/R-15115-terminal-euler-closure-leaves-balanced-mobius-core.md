@@ -5,6 +5,7 @@ Title: Closing every packet with a macroscopic unrestricted lattice variable doe
 Status: **PROPOSED EXACT SCOPE THEOREM PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-04-f`  
 Created: 2026-08-07  
+Updated: 2026-08-07 to make every Euler-selected coordinate a complete active lattice  
 Dependencies: `L-15159`, `T-15123`, `L-15160`; terminal closure on PR #165 `L-15449/L-15450`  
 Scope: exact proof boundary after the strongest current Euler closure; no assertion that the balanced packet theorem is false
 
@@ -26,7 +27,7 @@ on every block lying inside the coefficient endpoint. In particular, the
 `T-15123` gives its upper exponential energy exponent as the rightmost zeta-zero
 displacement `Theta_zeta`.
 
-## 2. Easy and hard unrestricted-variable sectors
+## 2. A complete-lattice Euler partition
 
 In a tuple of the `j`-th Heath--Brown row, after `q=q0` is fixed, the remaining
 unrestricted variables are
@@ -35,40 +36,71 @@ unrestricted variables are
  r_1,\ldots,r_{j-1}.
 \]
 
-Fix `eta>0`. Partition the complete signed tuple manifest deterministically:
+Let the common compact window have support `[u_-,u_+]`, and fix `eta>0`.
+For one unrestricted coordinate `r_i`, freeze every other variable and write
+`A_i` for their complete product, including `q0`. The active `r_i` lattice is
+then
 
-- `easy`: the first unrestricted variable with `log r_i>=eta J` is selected;
-- `hard`: every unrestricted variable satisfies `log r_i<eta J`.
+\[
+ {e^{x-u_+}\over A_i}\le r_i\le {e^{x-u_-}\over A_i}.
+ \tag{R-15115.2}
+\]
 
-All contributions assigned to one selected variable are recombined with their
-exact binomial and Möbius signs before estimating them.
+Assign a frozen prefix to the first index `i` for which
 
-For the easy sector, freeze every variable except the selected complete lattice
-variable. Its complementary product is at most `exp((1-eta)J+O_K(1))`.
-`L-15160`, with Euler order `R>1/(2eta)`, gives
+\[
+ A_i\le e^{(1-\eta)J-u_+-2}.
+ \tag{R-15115.3}
+\]
+
+The condition is independent of `r_i`. Hence, after the other coordinates are
+frozen, the selected coordinate is still summed over its **complete active
+integer lattice**; no artificial lower cutoff is inserted. On `J<=x<=J+1`,
+(R-15115.2)--(R-15115.3) force every active value of that coordinate to be at
+least `e^(eta J+1)`.
+
+All tuple contributions with the same selected coordinate and frozen-prefix
+type are recombined with their exact binomial and Möbius signs before an
+estimate is made. `L-15160`, with Euler order `R>1/(2eta)`, then gives
 
 \[
  \boxed{
- E_{K,q_0}^{\rm easy}(J)=\exp(-c_{K,eta}J+o_K(J))}
- \tag{R-15115.2}
+ E_{K,q_0}^{\rm Euler}(J)
+ =\exp(-c_{K,eta}J+o_K(J))}
+ \tag{R-15115.4}
 \]
 
 for a suitable smooth safe window, after the fixed-order divisor and coefficient
 ledger is included. The first-order terminal theorem of `L-15449/L-15450` is
-the special case where the selected free variable carries the complete terminal
+the special case in which this complete free lattice carries the terminal
 large scale.
 
-Thus the entire contribution of tuples with a macroscopic unrestricted lattice
-variable is subexponential, in fact exponentially decaying.
+The residual packet consists exactly of frozen prefixes for which
 
-## 3. The complementary source is truncated-Möbius dominated
+\[
+ A_i>e^{(1-\eta)J-u_+-2}
+ \qquad\text{for every unrestricted coordinate }i.
+ \tag{R-15115.5}
+\]
 
-On the hard sector,
+For any active tuple in this residual packet,
+
+\[
+ r_i={n\over A_i}\le e^{\eta J+O_K(1)}
+ \tag{R-15115.6}
+\]
+
+for every `i`. Thus the Euler/residual decomposition is source-bound and never
+uses a truncated lattice in the Euler term.
+
+## 3. The residual source is truncated-Möbius dominated
+
+Equation (R-15115.6) gives
 
 \[
  r_1\cdots r_{j-1}
- \le \exp((j-1)\eta J).
- \tag{R-15115.3}
+ \le \exp((j-1)\eta J+O_K(1)).
+ \tag{R-15115.7}
 \]
 
 Since the active total product has logarithm `J+O_K(1)`, the product of the
@@ -77,7 +109,7 @@ truncated Möbius variables satisfies
 \[
  \log(d_1\cdots d_j)
  \ge [1-(j-1)\eta]J-O_K(1).
- \tag{R-15115.4}
+ \tag{R-15115.8}
 \]
 
 For `eta<1/(2K)`, at least half of the physical logarithmic scale is therefore
@@ -95,20 +127,20 @@ The deterministic first-crossing algorithm can split these variables into
 balanced factor groups, but it cannot turn them into the free-variable normal
 form of `L-15160`. This is the balanced truncated-Möbius core.
 
-## 4. The hard sector retains the spectral exponent
+## 4. The residual sector retains the spectral exponent
 
-Let `h_mu(J)`, `h_easy(J)`, and `h_hard(J)` denote the Gram vectors of the full,
-easy, and hard fixed-`q0` slices. Then
+Let `h_mu(J)`, `h_Euler(J)`, and `h_bal(J)` denote the Gram vectors of the full,
+Euler-closed, and residual fixed-`q0` slices. The exact prefix partition gives
 
 \[
- h_\mu=h_{\rm easy}+h_{\rm hard}.
- \tag{R-15115.5}
+ h_\mu=h_{\rm Euler}+h_{\rm bal}.
+ \tag{R-15115.9}
 \]
 
-Equation (R-15115.2) gives
+Equation (R-15115.4) gives
 
 \[
- \|h_{\rm easy}(J)\|=\exp(o(J)).
+ \|h_{\rm Euler}(J)\|=\exp(-cJ+o(J)).
 \]
 
 If `Theta_zeta>0`, `T-15123` gives an unbounded sequence of blocks on which
@@ -122,21 +154,22 @@ The reverse triangle inequality therefore forces
 \[
  \boxed{
  \limsup_{J\to\infty}
- {\log(1+\|h_{\rm hard}(J)\|^2)\over2J}
+ {\log(1+\|h_{\rm bal}(J)\|^2)\over2J}
  =\Theta_\zeta.}
- \tag{R-15115.6}
+ \tag{R-15115.10}
 \]
 
-The same conclusion is automatic when `Theta_zeta=0`.
+The same conclusion is automatic when `Theta_zeta=0`, because the logarithm
+contains `1` and all three energies are then subexponential.
 
-If the hard source is divided into finitely many balanced destination packets,
-Gram Cauchy--Schwarz gives, as in `L-15159`,
+If the residual source is divided into finitely many balanced destination
+packets, Gram Cauchy--Schwarz gives, as in `L-15159`,
 
 \[
  \boxed{
  \max_\tau E_{K,\tau}^{\rm balanced}(J)
- \ge {\|h_{\rm hard}(J)\|^2\over R_K^2}.}
- \tag{R-15115.7}
+ \ge {\|h_{\rm bal}(J)\|^2\over R_K^2}.}
+ \tag{R-15115.11}
 \]
 
 Hence at least one balanced packet retains the full rightmost-zero exponent.
@@ -147,12 +180,13 @@ The strongest current Euler machinery closes:
 
 1. terminal Type-I rows;
 2. their cutoff transitions;
-3. more generally, every packet with one unrestricted variable carrying any
-   fixed positive logarithmic fraction.
+3. more generally, every source-bound prefix class for which one unrestricted
+   coordinate has a complete active lattice carrying a fixed positive
+   logarithmic fraction.
 
 It does not close the complementary packet in which the macroscopic scale is
-carried by truncated Möbius variables. Equations (R-15115.6)--(R-15115.7) show
-that this complementary balanced family remains RH-bearing.
+carried by truncated Möbius variables. Equations (R-15115.10)--(R-15115.11)
+show that this complementary balanced family remains RH-bearing.
 
 Therefore the broad theorem `CP(K)` may be reduced to the balanced theorem
 `BTP(K)`, but it has not been proved. Any proof of `BTP(K)` with a
@@ -160,17 +194,18 @@ subexponential or vanishing-rate scale contraction is a genuine proof of the
 Möbius safe-energy criterion and hence of RH.
 
 This is not a circularity objection and does not show that `BTP(K)` is false.
-It prevents terminal Euler closure from being presented as the completion of
-the whole packet.
+It prevents terminal or higher-order Euler closure from being presented as the
+completion of the whole packet.
 
 ## 6. Proof boundary
 
 Closed here:
 
-- exact separation of the fixed-logarithm Möbius slice into Euler-easy and
-  truncated-Möbius hard sectors;
-- exponential closure of the easy sector under `L-15160`;
-- retention of the rightmost-zero exponent by the hard balanced sector;
+- a source-bound partition whose Euler coordinates remain complete active
+  lattices;
+- exponential closure of every Euler-selected prefix class under `L-15160`;
+- identification of the residual truncated-Möbius balanced core;
+- retention of the rightmost-zero exponent by that residual core;
 - reduction `CP(K) -> BTP(K)` at the level of the remaining analytic burden.
 
 Open:
