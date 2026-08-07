@@ -1,12 +1,13 @@
 # L-26203 — Exact multiplicative defect-to-slack transport certificate
 
 Claim ID: `L-26203`  
-Title: A finite family of positive incidence blocks converts prime slack into carry feasibility without decreasing the parabolic objective  
+Title: Positive incidence blocks transport violated prime constraints into existing prime slack without decreasing the parabolic objective  
 Status: **PROPOSED COMPLETE FINITE THEOREM PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro-source-specific`  
 Created: 2026-08-08  
-Dependencies: PR #248 `L-24501`, `L-24517`, `L-24520`; elementary finite LP duality  
-Scope: exact primal and dual certificate; existence for the parabolic residual remains open
+Corrected: 2026-08-08 before PR handoff  
+Dependencies: PR #248 `L-24501`, `L-24517`, `L-24520`; finite Farkas duality  
+Scope: exact bipartite primal and dual certificate; existence for the parabolic residual remains open
 
 ## 1. Prime-only carry residual
 
@@ -39,12 +40,21 @@ for primes `p<=X`.  Put
 \[
  d_X^+(p)=\max(d_X(p),0),
  \qquad
- d_X^-(p)=\max(-d_X(p),0).
+ d_X^-(p)=\max(-d_X(p),0),
 \tag{L-26203.3}
 \]
 
-A positive value is a violated prime constraint; a negative value is available
-slack.
+and
+
+\[
+ \mathcal P_X^+=\{p:d_X(p)>0\},
+ \qquad
+ \mathcal P_X^-=\{p:d_X(p)<0\}.
+\tag{L-26203.4}
+\]
+
+A prime in `mathcal P_X^+` is a violated constraint; a prime in
+`mathcal P_X^-` supplies capacity equal to `d_X^-(p)`.
 
 ## 2. Positive incidence block
 
@@ -58,7 +68,7 @@ and `t>=0`, add the constant block
 
 \[
  \delta b_m=t\,{\bf1}_{A<m\le B}.
-\tag{L-26203.4}
+\tag{L-26203.5}
 \]
 
 The exact divisor-gradient telescope gives, for every ordinary prime `p`,
@@ -69,7 +79,7 @@ The exact divisor-gradient telescope gives, for every ordinary prime `p`,
  =
  -t\,{\bf1}_{p\mid A}
  +t\,{\bf1}_{p\mid B}.}
-\tag{L-26203.5}
+\tag{L-26203.6}
 \]
 
 The block is coordinatewise nonnegative, so adding any family of such blocks
@@ -82,13 +92,13 @@ Its objective change is
  J_{\mathbb P,X}(b+\delta b)-J_{\mathbb P,X}(b)
  =
  t\log(B/A)\ge0.}
-\tag{L-26203.6}
+\tag{L-26203.7}
 \]
 
-Thus a block transports constraint mass from the prime divisors of `A` to the
-prime divisors of `B`, while weakly increasing the proof-facing objective.
+Thus a block removes residual mass from the prime divisors of `A`, deposits it
+at the prime divisors of `B`, and weakly increases the proof-facing objective.
 
-## 3. Exact transport certificate
+## 3. Exact bipartite transport certificate
 
 A **multiplicative defect-to-slack certificate** is a finite list
 
@@ -96,7 +106,7 @@ A **multiplicative defect-to-slack certificate** is a finite list
  \mathcal T_X
  =
  \{(A_\ell,B_\ell,t_\ell)\}_{\ell=1}^L
-\tag{L-26203.7}
+\tag{L-26203.8}
 \]
 
 with
@@ -105,19 +115,29 @@ with
  1\le A_\ell<B_\ell\le X,
  \qquad
  t_\ell\ge0,
-\tag{L-26203.8}
-\]
-
-such that, for every prime `p<=X`,
-
-\[
- \boxed{
- \sum_{\ell:p\mid A_\ell}t_\ell
- -
- \sum_{\ell:p\mid B_\ell}t_\ell
- \ge d_X(p).}
 \tag{L-26203.9}
 \]
+
+such that
+
+- every prime divisor of `A_ell` belongs to `mathcal P_X^+`;
+- every prime divisor of `B_ell` belongs to `mathcal P_X^-`;
+- the total outflow covers every defect:
+  \[
+  \boxed{
+  \sum_{\ell:p\mid A_\ell}t_\ell
+  \ge d_X^+(p)
+  \qquad(p\in\mathcal P_X^+);}
+  \tag{L-26203.10}
+  \]
+- the total inflow does not exceed available slack:
+  \[
+  \boxed{
+  \sum_{\ell:p\mid B_\ell}t_\ell
+  \le d_X^-(p)
+  \qquad(p\in\mathcal P_X^-).}
+  \tag{L-26203.11}
+  \]
 
 Define
 
@@ -128,23 +148,42 @@ Define
  +
  \sum_{\ell=1}^L
  t_\ell{\bf1}_{A_\ell<m\le B_\ell}.
-\tag{L-26203.10}
+\tag{L-26203.12}
 \]
 
-Then (L-26203.5) and (L-26203.9) give
+For `p in mathcal P_X^+`, equations (L-26203.6) and (L-26203.10) give
+
+\[
+ d_X^\star(p)
+ =d_X^+(p)-\sum_{\ell:p\mid A_\ell}t_\ell
+ \le0.
+\tag{L-26203.13}
+\]
+
+For `p in mathcal P_X^-`, equations (L-26203.6) and (L-26203.11) give
+
+\[
+ d_X^\star(p)
+ =-d_X^-(p)+\sum_{\ell:p\mid B_\ell}t_\ell
+ \le0.
+\tag{L-26203.14}
+\]
+
+All zero-residual prime rows are absent from the licensed endpoint products and
+remain unchanged. Therefore
 
 \[
  v_p(b_X^\star)
  \le p^{-1/2}\log(X/p)
  \qquad(p\le X),
-\tag{L-26203.11}
+\tag{L-26203.15}
 \]
 
 while
 
 \[
  b_X^\star(m)\ge0.
-\tag{L-26203.12}
+\tag{L-26203.16}
 \]
 
 Moreover,
@@ -155,29 +194,27 @@ Moreover,
  J_{\mathbb P,X}(b_X^{(0)})
  \ge
  4\sqrt X-O(\log^2X).
-\tag{L-26203.13}
+\tag{L-26203.17}
 \]
 
-The prime-only carry theorem therefore gives
+The prime-only carry theorem gives
 
 \[
  P_X
  =
  \sum_{p\le X}\frac{\log p}{\sqrt p}\log(X/p)
  \ge
- 4\sqrt X-O(\log^2X).
-\tag{L-26203.14}
+ 4\sqrt X-O(\log^2X),
+\tag{L-26203.18}
 \]
 
-The reviewed square-screw/Landau transfer then implies RH.
-
-Hence
+and the square-screw/Landau transfer then implies RH. Hence
 
 \[
  \boxed{
- \text{multiplicative defect-to-slack certificates for all large }X
+ \text{bipartite defect-to-slack certificates for all large }X
  \Longrightarrow\mathrm{RH}.}
-\tag{L-26203.15}
+\tag{L-26203.19}
 \]
 
 This implication is exact and uses no universal rank or automatic line
@@ -185,32 +222,55 @@ cancellation.
 
 ## 4. A source-bound restricted certificate
 
-For proof production, the unrestricted block family in Section 3 is too large.
-The dyadic parity-dipole proposal restricts to blocks generated by the exact
-source grammar:
+For proof production, the unrestricted block family is too large.  The dyadic
+parity-dipole proposal licenses only blocks generated by complete source words:
 
-1. `A` is a squarefree product of primes carrying positive parabolic defect;
-2. `B` is a squarefree product of primes carrying negative parabolic slack;
-3. the source word is one complete opposite-parity family of `L-26201`;
-4. every prime incidence in `A` and `B` is emitted explicitly;
-5. the corresponding two-frequency reflected cross term is retained.
+1. `A` is a squarefree product of primes from `mathcal P_X^+`;
+2. `B` is a squarefree product of primes from `mathcal P_X^-`;
+3. `A<B` is verified exactly;
+4. the source word contains every opposite-parity sibling of `L-26201`;
+5. every prime incidence in `A` and `B` is emitted explicitly;
+6. the corresponding two-frequency reflected cross term is retained.
 
-The theorem in Section 3 remains valid for any restricted family that satisfies
-(L-26203.9).
-
-The restriction is methodological, not logical.  It prevents a proof from
+The finite theorem in Section 3 remains valid for any restricted family that
+satisfies (L-26203.10)--(L-26203.11).  The restriction prevents a proof from
 hiding the RH-bearing scalar inside an unrestricted optimizer.
 
 ## 5. Exact Farkas/Hall dual
 
-Fix any finite licensed block family `mathcal A_X`.  Transport fails exactly
-when there exist nonnegative weights
+Fix a finite licensed block family `mathcal A_X`.  Let `O` and `I` be its
+outflow and inflow incidence matrices:
 
 \[
- \alpha_p\ge0,
+ O_{p,(A,B)}={\bf1}_{p\mid A}
+ \quad(p\in\mathcal P_X^+),
+\qquad
+ I_{p,(A,B)}={\bf1}_{p\mid B}
+ \quad(p\in\mathcal P_X^-).
+\tag{L-26203.20}
+\]
+
+The primal problem is
+
+\[
+ t\ge0,
+ \qquad
+ Ot\ge d_X^+,
+ \qquad
+ It\le d_X^-.
+\tag{L-26203.21}
+\]
+
+Finite Farkas duality gives the exact alternative: the primal is infeasible if
+and only if there exist nonnegative weights
+
+\[
+ \alpha_p\ge0
+ \quad(p\in\mathcal P_X^+),
  \qquad
  \beta_p\ge0
-\tag{L-26203.16}
+ \quad(p\in\mathcal P_X^-)
+\tag{L-26203.22}
 \]
 
 such that every licensed block obeys
@@ -219,31 +279,35 @@ such that every licensed block obeys
  \boxed{
  \sum_{p\mid A}\alpha_p
  \le
- \sum_{p\mid B}\beta_p
- \qquad((A,B)\in\mathcal A_X),}
-\tag{L-26203.17}
+ \sum_{p\mid B}\beta_p,}
+\tag{L-26203.23}
 \]
 
-but the weighted defect exceeds the weighted slack:
+but
 
 \[
  \boxed{
- \sum_p d_X^+(p)\alpha_p
+ \sum_{p\in\mathcal P_X^+}d_X^+(p)\alpha_p
  >
- \sum_p d_X^-(p)\beta_p.}
-\tag{L-26203.18}
+ \sum_{p\in\mathcal P_X^-}d_X^-(p)\beta_p.}
+\tag{L-26203.24}
 \]
 
-This is finite Farkas duality after separating positive and negative residual
-rows.
+Indeed, the multiplier condition in Farkas is
 
-A proof of the transport theorem may therefore work entirely on the dual side.
-It must show that every nonnegative Hall witness satisfying
-(L-26203.17) also satisfies the reverse of (L-26203.18).
+\[
+ O^T\alpha\le I^T\beta,
+\]
+
+and the strict separating inequality is exactly (L-26203.24).
+
+A proof of the transport theorem may therefore work entirely on the dual side:
+every nonnegative Hall witness satisfying (L-26203.23) must satisfy the reverse
+of (L-26203.24).
 
 ## 6. Why the reflected dyadic source is relevant
 
-The compact dipole of `L-26201` is exactly a signed inner/outer incidence row:
+The compact dipole of `L-26201` is an exact inner/outer incidence row:
 
 \[
  [m,2m)
@@ -255,26 +319,26 @@ The digital dual of `L-26202` converts the complete source into three boundary
 atoms, and the corrected two-frequency Selberg identity keeps the inner/outer
 cross terms as a Hermitian normal Gram.
 
-The proposed arithmetic closure is therefore the following source-specific
-dual statement:
+The proposed arithmetic closure is the source-specific dual statement:
 
 > Every Hall witness for the licensed multiplicative blocks has nonnegative
 > contraction against the complete reflected dyadic dipole source.
 
-Unlike generic line-cone annihilation, this statement retains the same-sign
+Unlike generic line-cone annihilation, this statement retains each same-sign
 Möbius cube and asks its actual opposite-parity siblings to pay it.
 
 ## 7. Fail-closed certificate schema
 
-A proof object for (L-26203.9) must include
+A primal proof object must include
 
 ```text
 X
 complete prime list
 directed/enclosed parabolic residuals
+positive-defect and negative-slack partitions
 every (A,B,t) block
 factorizations of A and B
-all prime-incidence rows
+all outflow and inflow incidences
 coordinate-nonnegativity replay
 constraint replay
 objective-gain replay
@@ -284,26 +348,27 @@ source-word and reflected-sibling identifiers
 A dual proof object must include
 
 ```text
-the licensed block grammar
+the complete licensed block grammar
 exact nonnegative Hall weights
 every block inequality
 the defect/slack contraction
-a strict contradiction to (L-26203.18)
+a contradiction to (L-26203.24)
 ```
 
-The consumer must reject an omitted prime, a composite with an undeclared prime
-factor, a negative block amount, `A>=B`, an independently widened repeated
-residual, or a missing reflected sibling.
+The consumer must reject an omitted prime, an endpoint with an undeclared prime
+factor, a negative block amount, `A>=B`, a prime assigned to the wrong side of
+the bipartition, an independently widened repeated residual, or a missing
+reflected sibling.
 
 ## 8. Proof boundary
 
 Closed exactly:
 
-- positive block transport;
+- positive incidence-block transport;
 - coordinate preservation;
-- prime-constraint replay;
+- separate defect coverage and slack capacity;
 - nondecreasing objective;
-- the implication from transport certificates to RH;
+- the implication from bipartite transport certificates to RH;
 - the finite Hall/Farkas dual.
 
 Open:
