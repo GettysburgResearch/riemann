@@ -41,8 +41,7 @@ second contributes `2(n-m+1)/(n+1)`.
 For a finite target `w(q)`, put
 
 \[
-\boxed{
-u_m
+\boxed{u_m
 =\sum_{k\le X/m}\mu(k)w(mk).}
 \tag{L-23802.2}
 \]
@@ -56,8 +55,7 @@ B_X^Tc=w,
 then (L-23802.1) gives
 
 \[
-\boxed{
-u_m
+\boxed{u_m
 =\sum_{n=m}^Xc(n)\frac{2m-n-1}{n+1}.}
 \tag{L-23802.3}
 \]
