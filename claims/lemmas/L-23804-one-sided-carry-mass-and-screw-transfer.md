@@ -121,7 +121,7 @@ Combining this with (L-23804.6),
 \ge
 {1\over2}\sum_{n=2}^Xn\,d_X(n)-O(\log^2X).
 }
-\tag{L-23804.7]
+\tag{L-23804.7}
 \]
 
 Accordingly, the single finite mass estimate
