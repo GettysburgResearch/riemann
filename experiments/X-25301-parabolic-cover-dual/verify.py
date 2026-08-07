@@ -5,6 +5,7 @@ This checker verifies:
   * the reciprocal-cell derivative signs on N=37,38,39;
   * the strict continuum excess floor E(theta)>2/5 on [1/40,1/37];
   * the formal von-Mangoldt/divisibility dual identity through a finite range;
+  * the same-scale prime-power cluster inverse matrices;
   * fail-closed mutations of the sharp threshold and prime-power manifest.
 
 Only Python integers and fractions.Fraction are used in proof arithmetic.
@@ -222,6 +223,86 @@ def formal_dual_mismatches(limit: int, omit_highest_prime_power: bool = False) -
     return bad
 
 
+def matrix_multiply(a: list[list[Fraction]], b: list[list[Fraction]]) -> list[list[Fraction]]:
+    rows = len(a)
+    cols = len(b[0])
+    inner = len(b)
+    return [
+        [sum(a[i][k] * b[k][j] for k in range(inner)) for j in range(cols)]
+        for i in range(rows)
+    ]
+
+
+def matrix_inverse(a: list[list[Fraction]]) -> list[list[Fraction]]:
+    n = len(a)
+    aug = [
+        [Fraction(a[i][j]) for j in range(n)]
+        + [Fraction(int(i == j)) for j in range(n)]
+        for i in range(n)
+    ]
+    for col in range(n):
+        pivot = next((row for row in range(col, n) if aug[row][col]), None)
+        if pivot is None:
+            raise ValueError("singular matrix")
+        aug[col], aug[pivot] = aug[pivot], aug[col]
+        scale = aug[col][col]
+        aug[col] = [value / scale for value in aug[col]]
+        for row in range(n):
+            if row == col:
+                continue
+            factor = aug[row][col]
+            if factor:
+                aug[row] = [
+                    aug[row][j] - factor * aug[col][j]
+                    for j in range(2 * n)
+                ]
+    return [row[n:] for row in aug]
+
+
+def cluster_matrix_checks() -> dict:
+    path_minima: dict[str, str] = {}
+    for n in (1, 2, 3):
+        matrix = [
+            [
+                Fraction(2 if i == j else (-1 if abs(i - j) == 1 else 0))
+                for j in range(n)
+            ]
+            for i in range(n)
+        ]
+        inverse = matrix_inverse(matrix)
+        minimum = min(value for row in inverse for value in row)
+        if minimum < 0:
+            raise AssertionError(f"path inverse {n} has negative entry")
+        path_minima[str(n)] = str(minimum)
+
+    exceptional = [
+        [Fraction(2), Fraction(-2), Fraction(2), Fraction(-2)],
+        [Fraction(-1), Fraction(2), Fraction(-1), Fraction(-1)],
+        [Fraction(0), Fraction(-1), Fraction(2), Fraction(-1)],
+        [Fraction(0), Fraction(0), Fraction(-1), Fraction(2)],
+    ]
+    claimed_inverse = [
+        [Fraction(3, 2), Fraction(2), Fraction(1), Fraction(3)],
+        [Fraction(3, 2), Fraction(3), Fraction(2), Fraction(4)],
+        [Fraction(1), Fraction(2), Fraction(2), Fraction(3)],
+        [Fraction(1, 2), Fraction(1), Fraction(1), Fraction(2)],
+    ]
+    identity = matrix_multiply(exceptional, claimed_inverse)
+    if identity != [
+        [Fraction(int(i == j)) for j in range(4)]
+        for i in range(4)
+    ]:
+        raise AssertionError("exceptional inverse mismatch")
+    if min(value for row in claimed_inverse for value in row) < 0:
+        raise AssertionError("exceptional inverse is not nonnegative")
+    return {
+        "path_inverse_minima": path_minima,
+        "exceptional_cluster": ["2", "3", "4", "5"],
+        "exceptional_inverse_minimum": "1/2",
+        "exceptional_inverse_verified": True,
+    }
+
+
 def build_result() -> dict:
     derivatives = {n: derivative_bracket_at_cell_left(n) for n in (37, 38, 39)}
     for n, enclosure in derivatives.items():
@@ -235,6 +316,7 @@ def build_result() -> dict:
     mismatches = formal_dual_mismatches(FORMAL_LIMIT)
     if mismatches:
         raise AssertionError(f"formal dual mismatch at {mismatches[:5]}")
+    clusters = cluster_matrix_checks()
 
     payload = {
         "schema": "riemann.x25301-parabolic-cover-dual.v1",
@@ -257,6 +339,7 @@ def build_result() -> dict:
         "margin_over_floor": fraction_summary(e37.lo - Fraction(2, 5)),
         "formal_dual_limit": FORMAL_LIMIT,
         "formal_dual_mismatches": len(mismatches),
+        "prime_power_cluster_matrices": clusters,
         "eventual_finite_excess_floor": "1/(4*sqrt(X))",
         "pnt_prime_log_mass_floor": "X/1000",
         "monotone_cover_cost_floor": "sqrt(X)/4000",
@@ -285,6 +368,9 @@ def self_tests() -> list[str]:
     assert Fraction(3, 1480) > Fraction(1, 1000)
     assert Fraction(1, 4) * Fraction(1, 1000) == Fraction(1, 4000)
     tests.append("PNT-to-cost constants")
+
+    assert cluster_matrix_checks()["exceptional_inverse_verified"]
+    tests.append("prime-power cluster inverse matrices")
 
     return tests
 
