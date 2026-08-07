@@ -232,35 +232,42 @@ Let
  \widehat D_R=D_R+\tau_RI.
 \]
 
-The positive operator Riemann--von Mangoldt theorem supplies
+The complete line-centered matrix is required to have a certified decomposition
 
 \[
  A_R^0=a_RD_R+C_R+E_R^0,
 \]
 
-with
+where
 
 \[
- |C_R|\preceq c_0\widehat D_R,
+ |C_R|\preceq c_{0,R}\widehat D_R,
  \qquad
  |E_R^0|\preceq\alpha_R\widehat D_R.
 \]
 
-The rank-one actual-minus-line theorem supplies
+No universal formula `a_R=log R` is asserted for the hybrid multi-scale
+profile. Every frequency branch must contribute in its actual normalization.
+
+The complete actual-minus-line matrix, including bounded and central zero
+ordinates, must satisfy
 
 \[
  |A_R-A_R^0|\preceq\delta_R\widehat D_R.
 \]
 
-When
+The rank-one support large sieve controls eligible high-ordinate oscillatory
+branches. It does **not** control a fixed low off-line zero; every bounded or
+central ordinate block must be retained and certified directly inside
+`delta_R`, or absorbed into a separately certified scalar shift.
+
+If
 
 \[
- a_R=\log R+O(1),
- \qquad
- \alpha_R+\delta_R=o(\log R),
+ c_R=a_R-c_{0,R}-\alpha_R-\delta_R>0,
 \]
 
-`L-19865` gives exactly
+then `L-19865` gives
 
 \[
  \boxed{
@@ -270,22 +277,32 @@ When
 where
 
 \[
- c_R=a_R-c_0-\alpha_R-\delta_R>0,
+ \sigma_R=-(c_{0,R}+\alpha_R+\delta_R)\tau_R.
 \]
 
-\[
- \sigma_R=-(c_0+\alpha_R+\delta_R)\tau_R.
-\]
-
-Choosing `tau_R=m_R=D_R(p_R)` gives the target-only upper estimate
+Choosing `tau_R=m_R=D_R(p_R)` gives
 
 \[
  A_R(p_R,p_R)-\sigma_R
- \le R^{o(1)}c_Rm_R.
+ \le C_R^{\rm tar}c_Rm_R,
 \]
 
-Because `m_R` is exponentially small and `theta_2(D_R)>=1`, the affine theorem
-forces exponential target-to-ground convergence.
+with
+
+\[
+ C_R^{\rm tar}
+ ={a_R+3(c_{0,R}+\alpha_R+\delta_R)\over c_R}.
+\]
+
+The exact closing rate is
+
+\[
+ \boxed{C_R^{\rm tar}m_R\to0.}
+\]
+
+Because the target residual may be made `e^{-BL}` for arbitrary fixed `B`, the
+criterion permits large but explicitly bounded profile losses. The scalar shift
+keeps the theorem weaker than cofinal positivity.
 
 ## 7. Full proposal `T-19813`
 
@@ -295,7 +312,7 @@ The final composition is:
 exact Xi global radical
 + exterior-supported exact finite complement
 -> exact complete residual Gram with target m_R and gap >=1
--> regularized affine one-sided local-Weyl estimate
+-> complete affine shifted one-sided profile estimate
 -> simple isolated even finite ground state
 -> moving-Hardy convergence to the Xi target
 -> finite real-zero theorem
@@ -337,21 +354,21 @@ removed. The one remaining theorem to reconstruct is:
  \boxed{
  \begin{gathered}
  A_R^0=a_RD_R+C_R+E_R^0,\\
- |C_R|\preceq c_0(D_R+m_RI),\\
+ |C_R|\preceq c_{0,R}(D_R+m_RI),\\
  |E_R^0|\preceq\alpha_R(D_R+m_RI),\\
  |A_R-A_R^0|\preceq\delta_R(D_R+m_RI),\\
- a_R=\log R+O(1),\quad
- \alpha_R+\delta_R=o(\log R),
+ c_R:=a_R-c_{0,R}-\alpha_R-\delta_R>0,\\
+ C_R^{\rm tar}m_R\to0,
  \end{gathered}}
 \]
 
-for the exact hybrid residual family of `L-19862` on one support in every large
-block.
+for the exact hybrid residual family of `L-19862`, including an exact finite
+certificate for every central ordinate block not covered by support averaging.
 
-The branch contains all abstract ingredients and corrected endpoint ledgers.
-The remaining task is source-specific normalization and interval/oscillatory
-assembly. It is weaker than unshifted positivity and weaker than a complete
-two-sided local-Weyl law.
+The branch contains the abstract Riemann--von Mangoldt, rank-one support-sieve,
+Bessel endpoint, stationary-alias, and geometric-fold components. The remaining
+task is source-specific normalization and their complete interval/operator
+assembly.
 
 Until that theorem is independently verified:
 
