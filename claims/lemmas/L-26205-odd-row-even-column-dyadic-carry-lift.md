@@ -60,10 +60,8 @@ For either value of `epsilon`,
 s>r.
 \]
 
-This is precisely the lower carry condition.
-
-Thus every lower carry cell is duplicated into the adjacent even/odd physical
-positions of the parent row.
+This is precisely the lower carry condition. Thus every lower carry cell is
+duplicated into the adjacent even and odd physical positions of the parent row.
 
 ## 2. Exact average and Hermitian isometry
 
@@ -73,7 +71,7 @@ Averaging (L-26205.1) over the `2n+2` parent positions gives
 \boxed{
 \beta_{2n+1,\,2q}=\beta_{nq}.
 }
-\tag{L-26205.2]
+\tag{L-26205.2}
 
 For every finite complex coefficient vector `(x_q)_(q<=n)`,
 
@@ -132,7 +130,7 @@ The logarithmic target scales as
 w_{2Y+1}(2q)
 ={}&2^{-1/2}w_Y(q)\\
 &+{1\over\sqrt{2q}}
-\log\left({2Y+1\over2Y}ight).
+\log\left({2Y+1\over2Y}\right).
 \end{aligned}}
 \tag{L-26205.6}
 
@@ -145,14 +143,14 @@ column has nonnegative residual
 s_{2Y+1}^{\uparrow}(2q)
 ={}&2^{-1/2}s_Y(q)\\
 &+{1\over\sqrt{2q}}
-\log\left({2Y+1\over2Y}ight).
+\log\left({2Y+1\over2Y}\right).
 \end{aligned}}
 \tag{L-26205.7}
 
-The last term is an explicit positive endpoint forcing of total size
-`O(Y^(-1/2))` after any fixed logarithmic weighting.
+The last term is an explicit positive endpoint forcing. Its unweighted sum over
+`q<=Y` is `O(Y^{-1/2})`.
 
-Thus the even-column half of the carry problem descends **exactly** from scale
+Thus the even-column half of the carry problem descends exactly from scale
 `2Y+1` to scale `Y`.
 
 ## 4. The sole digital obstruction: odd-column leakage
@@ -168,7 +166,7 @@ The lifted vector also contributes to odd columns. Define
  d(n)\beta_{2n+1,\,2r+1},
 \qquad1\le r\le Y.
 }
-\tag{L-26205.8]
+\tag{L-26205.8}
 
 There is no analogue of (L-26205.2) reducing this coefficient to one lower
 carry row. In a nonnegative packing, one must prove
@@ -176,7 +174,7 @@ carry row. In a nonnegative packing, one must prove
 \[
 \mathcal O_{Y,d}(r)
 \le w_{2Y+1}(2r+1)
-\tag{L-26205.9]
+\tag{L-26205.9}
 
 or remove the excess by an explicitly signed correction before positivity is
 restored.
@@ -186,73 +184,73 @@ ignored merely because the even-column subsystem is perfect.
 
 ## 5. Connection to the dyadic source
 
-The dyadic source has valuation layers
+For odd `m`, the dyadic source has valuation layers
 
 \[
 b_2(m)=\mu(m),
 \qquad
 b_2(2m)=-2\mu(m),
 \qquad
-b_2(4m)=\mu(m)
+b_2(4m)=\mu(m),
 \]
 
-for odd `m`, and vanishes on higher powers of two. Therefore the signed slack
+and it vanishes on higher powers of two. With zero padding outside the active
+constraint range, the signed slack is
 
 \[
 \Pi_2(X)
 =
-\sum_{m\ {m odd}}\mu(m)
-[s_X(m)-2s_X(2m)+s_X(4m)]
-\]
+\sum_{\substack{m\le X\\m\text{ odd}}}
+\mu(m)
+[s_X(m)-2s_X(2m)+s_X(4m)].
+\tag{L-26205.10}
 
-pairs precisely one odd-column channel with the two exact even descendants in
-(L-26205.7).
-
-This is the production geometry suggested by the parity comb:
+It pairs precisely one odd-column channel with the two even descendants in
+(L-26205.7). The production geometry suggested by the parity comb is therefore
 
 ```text
-odd parent column
+one odd parent column
 + two exact even descendants
 -> one dyadic second difference.
 ```
 
-The even terms already descend to half scale. A proof of PBD therefore needs
-only a signed identity controlling the odd leakage in the same Möbius-weighted
-combination.
+The even terms already descend to half scale. A proof of PBD needs only a signed
+identity controlling the odd leakage in this same Möbius-weighted combination.
 
-## 6. Odd-Leakage Descent target
+## 6. Odd-Leakage Descent research target
 
-One sufficient production theorem is:
-
-> **OLD — Odd-Leakage Descent.** For the canonical lower-scale greedy vector
-> `d_Y^gr` and its lift, the signed odd leakage, after every required feasibility
-> correction, satisfies
-> \[
-> \left|
-> \sum_{r\le Y}\mu(2r+1)
-> [w_{2Y+1}(2r+1)-\mathcal O_{Y,d_Y^{gr}}(r)]
-> -\mathcal C_Y
-> \right|
-> \le C\log^A(2Y),
-> \]
-> where `mathcal C_Y` is the exact combination of the two even residual layers
-> appearing in `Pi_2(Y)`.
-
-The theorem must be written with the correct odd indexing and every correction
-term; the schematic display only names the remaining channel. A production
-version which reconstructs
+A production **Odd-Leakage Descent** theorem should start from the canonical
+lower-scale greedy vector, apply the lift (L-26205.4), include every correction
+required to restore feasibility on odd columns, and emit an exact signed
+identity of the form
 
 \[
 \Pi_2(2Y+1)
 =
-\Pi_2(Y)+O(\log^A Y)
-\]
+\Pi_2(Y)
++\mathcal E_Y,
+\tag{L-26205.11}
 
-or a half-scale inequality implies PBD.
+or a one-sided half-scale inequality, with
+
+\[
+|\mathcal E_Y|\le C\log^A(2Y).
+\tag{L-26205.12}
+
+Equations (L-26205.11)--(L-26205.12) are a target, not a theorem proved in this
+file. A production proof must specify:
+
+1. the exact odd-column residual;
+2. every feasibility correction;
+3. all three dyadic valuation layers;
+4. the bottom charges at `2` and `3`;
+5. equality before absolute values.
+
+Such an identity would imply the PBD recurrence of `T-26201`.
 
 ## 7. Review mutations
 
-A checker for a future OLD certificate must reject:
+A checker for a future odd-leakage certificate must reject:
 
 ```text
 use beta_(2n,2q)=beta_(n,q)
@@ -275,6 +273,6 @@ Closed exactly:
 
 Open:
 
-- OLD;
+- Odd-Leakage Descent;
 - PBD/DSS;
 - RH.
