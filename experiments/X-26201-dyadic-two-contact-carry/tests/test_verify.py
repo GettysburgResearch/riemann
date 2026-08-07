@@ -51,3 +51,19 @@ def test_exact_bottom_charge_and_flow_invisibility() -> None:
         row["high_index_flow_delta"] == {"numerator": 0, "denominator": 1}
         for row in result["rows"]
     )
+
+
+def test_exact_digital_half_scale_lift() -> None:
+    result = run_script("verify_digital_lift.py")
+    assert (
+        result["sha256_without_digest"]
+        == "17e23d1e2ebc01cc7283d125c15c721d4743e69f906b17b715294f60b0e09b23"
+    )
+    assert (
+        result["classification"]
+        == "PASS_EXACT_ODD_ROW_EVEN_COLUMN_CARRY_ISOMETRY"
+    )
+    assert result["pointwise_duplicate_cases"] == 3780
+    assert result["average_cells"] == 1830
+    assert result["hermitian_rows"] == 60
+    assert result["even_row_mutation_rejected"] is True
