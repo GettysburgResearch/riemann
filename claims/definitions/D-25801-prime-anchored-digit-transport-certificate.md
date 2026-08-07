@@ -1,10 +1,11 @@
 # D-25801 — Prime-Anchored Digit Transport certificate
 
 Claim ID: `D-25801`  
-Title: A fail-closed source-specific transport certificate for the reciprocal-free depletion of the top reflected Möbius source  
+Title: A fail-closed source-specific transport certificate for the fixed-scale depletion dipole of the top reflected Möbius source  
 Status: **PROPOSED EXACT DEFINITION PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro-22`  
 Created: 2026-08-07  
+Corrected: 2026-08-07 after the recovery-wedge audit `R-25802`  
 Issue: #258  
 Frozen base: PR #250 at `f179ab93e7e0dc748e0e9fb9e5a6800b80b6d224`  
 Scope: one packet order and one logarithmic block; no claim that production certificates exist
@@ -27,14 +28,25 @@ Choose one fixed
 0<\delta_0<\frac13
 \]
 
-and put
+and the preferred dyadic radix
 
 \[
-m_K=\lfloor\delta_0K\rfloor,
+L(J)=\left\lfloor{\delta_0J\over\log2}\right\rfloor,
 \qquad
-Q=V^{m_K}.
+Q=2^{L(J)}.
 \tag{D-25801.1}
 \]
+
+Thus
+
+\[
+\log Q=\delta_0J+O(1).
+\tag{D-25801.2}
+\]
+
+An arithmetic radix satisfying the same scale relation may be substituted, but
+the dyadic choice must additionally pass the bit-layer and parity-comb
+mutations of `L-25806`.
 
 Let
 
@@ -42,25 +54,40 @@ Let
 T_{K,V}=\Lambda*r_V^{*(K-1)}
 \]
 
-be the complete top source of `L-25801`, and define its depletion
+be the complete top source of `L-25801`. Define the reciprocal-free potential
 
 \[
 Z_{K,V,Q}=a_Q*T_{K,V},
 \qquad
-a_Q=\mathbf1*(\varepsilon-\delta_Q).
-\tag{D-25801.2}
-\]
-
-The certificate uses the exact recovery
-
-\[
-T_{K,V}=H_Q*\mu_V*Z_{K,V,Q},
-\qquad
-H_Q=(\varepsilon-\delta_Q)^{-1},
+a_Q=\mathbf1*(\varepsilon-\delta_Q),
 \tag{D-25801.3}
 \]
 
-on the complete active coefficient range.
+and the fixed-scale depletion dipole
+
+\[
+\boxed{
+D_{K,V,Q}
+=(\varepsilon-\delta_Q)*T_{K,V}
+=\mu_V*Z_{K,V,Q}.}
+\tag{D-25801.4}
+\]
+
+The second equality is the source-specific nilpotent identity of `L-25803`.
+
+The physical field therefore satisfies exactly
+
+\[
+\boxed{
+\mathcal T_J
+=Q^{-1/2}\mathcal T_{J-\log Q}
++\mathcal D_J.}
+\tag{D-25801.5}
+\]
+
+`PADT` estimates `D` directly. It does **not** estimate `Z` at the current block
+and recover by an absolute `mu_V` bound; that shortcut is rejected by
+`R-25802`.
 
 ## 2. Definition of a `PADT(K,J)` object
 
@@ -100,17 +127,19 @@ cube.
 A sibling already proved Euler-small may be consumed only after its source
 incidence has been used in the transport identity.
 
-### C. Radix depletion ledger
+### C. Radix-depletion ledger
 
 The certificate exports:
 
 ```text
-Q=V^m_K
+Q=2^L with log Q=delta_0 J+O(1)
 arithmetic a_Q(n)=1-1_(Q|n)
 positive kernel C_Q
+dyadic bit-layer decomposition
 current row
 Q-shifted slack row
-stable inverse H_Q
+reciprocal-free potential Z
+signed dipole D=mu_V*Z
 ```
 
 and verifies coefficientwise
@@ -118,38 +147,48 @@ and verifies coefficientwise
 \[
 (\varepsilon-\delta_Q)T_{K,V}
 =\mu_V Z_{K,V,Q}.
-\tag{D-25801.4}
+\tag{D-25801.6}
 \]
 
-The `Q`-shifted row must be routed to scale
+The shifted field in (D-25801.5) lies at scale
 
 \[
-\le(1-\delta_0+O(1/K))J+O_K(1).
-\tag{D-25801.5}
+(1-\delta_0)J+O(1).
+\tag{D-25801.7}
 \]
+
+The geometric inverse `H_Q` may be exported as an algebraic audit, but it is not
+used for an absolute norm recovery.
 
 ### D. Reviewed two-frequency block
 
-Every current and flow edge is represented in the physical block Gram of
-`L-9518`. The object exports independent frequency variables, the block kernel
-`Phi_(J,alpha)(t-s)`, and the complete finite arithmetic normal Gram.
+Every current, slack row, and flow edge is represented in the physical block
+Gram of `L-9518`. The object exports independent frequency variables, the block
+kernel `Phi_(J,alpha)(t-s)`, and the complete finite arithmetic normal Gram.
 
 A one-frequency global integral is rejected.
 
-### E. Signed adjacent-flow ledger
+### E. Signed `mu_V` transport ledger
 
-For each source fiber, the object gives exact coefficients
+The factorization
+
+\[
+D=\mu_V*Z
+\]
+
+is retained with the Möbius signs. For every represented source fiber the object
+gives exact coefficients
 
 \[
 c_j=b_j+F_{j-1}-F_j
 \]
 
-and endpoint source vectors `v_j`, proving
+and endpoint vectors `v_j`, proving
 
 \[
 \sum_jc_jv_j
 =\sum_jb_jv_j+\sum_jF_j(v_{j+1}-v_j).
-\tag{D-25801.6}
+\tag{D-25801.8}
 \]
 
 Every edge record contains:
@@ -157,7 +196,8 @@ Every edge record contains:
 ```text
 flow ID and coefficient
 both source tuple projections
-marked anchor and prime-power coordinates
+truncated Möbius anchor a<=V
+marked prime-power/divisor coordinate
 induced signs
 residual cutoff status
 output and ratio cells
@@ -166,6 +206,8 @@ destination token
 
 The flow may be signed. Positive defect and negative slack must be transported
 together before a positive part or total variation is taken.
+
+Taking `sum_(a<=V)|mu(a)|/sqrt(a)` before this ledger is complete is rejected.
 
 ### F. Prime-power cluster ledger
 
@@ -177,14 +219,15 @@ After the cluster solve, every remaining positive child must have prime-power
 endpoint at most half that of its parent or have an explicit lower-scale source
 map.
 
-### G. Quadratic transport-cost certificate
+### G. Quadratic dipole-cost certificate
 
-Let `G_J^nabla` be the exact two-frequency Gram of the adjacent currents. The
-certificate proves
+Let `G_J^nabla` be the exact two-frequency Gram of the adjacent currents and let
+`D_J` be the complete dipole field after all source siblings are recombined.
+The certificate proves
 
 \[
 \boxed{
-F^*\mathcal G_J^\nabla F
+\|\mathcal D_J\|^2
 \le
 \exp\{(\eta_K+o_K(1))J\}
 \left[
@@ -193,25 +236,32 @@ F^*\mathcal G_J^\nabla F
 \max_{u\le(1-\delta_1)J+C_K}
 E_{K,\tau}(u)
 \right],}
-\tag{D-25801.7}
+\tag{D-25801.9}
 \]
 
 for one `delta_1>0` independent of `J` and with
 
 \[
 \eta_K\longrightarrow0
-\tag{D-25801.8}
+\tag{D-25801.10}
 \]
 
 along the proposed order sequence.
 
-The bound may be proved by exact LDL, interval LDL, cellwise SOS, a verified
-derivative-energy domination, or a combination. A scalar transport objective
-is only a scheduler until (D-25801.7) is authenticated.
+The proof object separately authenticates the flow contribution
+
+\[
+F^*\mathcal G_J^\nabla F
+\]
+
+and every boundary/lower-scale remainder. The bound may be proved by exact LDL,
+interval LDL, cellwise SOS, a verified derivative-energy domination, or a
+combination. A scalar carry objective is only a scheduler until the physical
+quadratic bound is authenticated.
 
 ### H. Remainder routes
 
-Every `b_j` row in (D-25801.6) is assigned exactly one destination:
+Every `b_j` row in (D-25801.8) is assigned exactly one destination:
 
 1. source-cancelled internal sibling;
 2. complete-lattice Euler row;
@@ -222,39 +272,37 @@ Every `b_j` row in (D-25801.6) is assigned exactly one destination:
 
 No undeclared same-scale remainder is permitted.
 
-### I. Recovery ledger
+### I. Dipole recurrence ledger
 
-The checker applies
+The checker verifies (D-25801.5) on the physical block and uses
 
 \[
-T=H_Q*\mu_V*Z
+\|u+v\|^2\le2\|u\|^2+2\|v\|^2
 \]
 
-only after the depleted estimate. It verifies
+to obtain
 
 \[
-\|H_Q^\#\|_{\rm TV}
-\le(1-Q^{-1/2})^{-1}
-\]
-
-and charges `mu_V` once:
-
-\[
-\left(\sum_{a\le V}{|\mu(a)|\over\sqrt a}\right)^2
+E_{\rm top}(J)
 \le
-\exp\left[\left({1\over K}+o_K(1)\right)J\right].
-\tag{D-25801.9}
+2Q^{-1}E_{\rm top}(J-\log Q)
++2E_D(J).
+\tag{D-25801.11}
 \]
 
-A second hidden truncated-coordinate charge is rejected.
+Because `Q=e^(delta_0 J+O(1))`, the first coefficient is exponentially small
+and the destination has a fixed logarithmic reserve.
+
+No absolute recovery wedge is present.
 
 ### J. Scalar firewalls
 
 The object must reproduce:
 
 1. one fixed-ratio Mertens shell, preferably `c=1/2` or `2/3`;
-2. the dyadic parity-comb three-tap mutation;
-3. the exact first-cell Mertens coefficient when the Farey adapter is used.
+2. the dyadic bit-layer factorization;
+3. the parity-comb three-tap mutation;
+4. the exact first-cell Mertens coefficient when the Farey adapter is used.
 
 These are source mutations, not additional assumptions.
 
@@ -278,20 +326,22 @@ almost-all short-interval theorem.
 Reject a purported certificate if any of the following occurs:
 
 - the aggregate zero Schur reserve of PR #250 is reused;
+- current-block control of `Z` is substituted for the dipole estimate;
+- `mu_V` is paid by total variation before signed transport;
 - a reciprocal-zeta inverse is hidden inside the transport theorem;
 - the high-rank Möbius hypercube is deleted without its lower-depth siblings;
 - the `Q`-shift is not a fixed fraction of `J`;
 - the flow is made nonnegative by discarding negative slack;
 - a same-scale cluster is solved one row at a time;
 - a prime-power child above the declared scale survives;
-- cross terms in `G_J^nabla` are discarded;
-- the recovery pays more than one `mu_V` coordinate;
+- cross terms in the physical Gram are discarded;
 - the parity or fixed-ratio mutation is absent;
 - finitely many orders are promoted to RH.
 
 ## 5. Proof boundary
 
 This definition converts the remaining source-specific contraction into one
-finite signed transport and Gram certificate. `T-25801` proves that an unbounded
-`PADT(K)` sequence implies RH. Construction of the production flow and its
-subexponential quadratic cost remains the load-bearing arithmetic theorem.
+finite signed dipole-transport and Gram certificate. Corrected `T-25801` proves
+that an unbounded `PADT(K)` sequence implies RH. Construction of the production
+flow and its subexponential quadratic cost remains the load-bearing arithmetic
+theorem.
