@@ -1,0 +1,26 @@
+Retained local replay
+=====================
+
+python3 verify.py
+  PASS
+  sha256_without_digest:
+  dd6f66f1e026178c1277f2fa634671d8868219e0303db505d9f0547df5eb0715
+
+python3 verify_bottom_charge.py
+  PASS_EXACT_DYADIC_BOTTOM_CHARGE_AND_FLOW_INVISIBILITY
+  sha256_without_digest:
+  395a7a89ea2267cfa5a3b805ead2646fa46a1761408f6ff048fed7b2e218757f
+
+pytest -q tests/test_verify.py
+  2 passed
+
+python3 recon.py
+  DISCOVERY_ONLY_POSITIVE_CARRY_INVERSE_THROUGH_5000
+  sha256_without_digest:
+  7a249c5a00cb1e5c6daa0434bcbdc40efef890f381f2ae1eb52091e8557f001e
+
+Scope
+-----
+The exact tests certify only the finite identities declared in X-26201.
+The reconnaissance is high-precision discovery, not an interval proof.
+No test proves DSS, PBD, Carry Saturation, or RH.
