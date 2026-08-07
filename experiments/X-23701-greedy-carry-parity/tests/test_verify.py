@@ -33,6 +33,21 @@ class GreedyCarryParityTests(unittest.TestCase):
         self.assertEqual(set(coefficients), set(range(2, X + 1)))
         self.assertTrue(all(2 <= blockers[n] <= n for n in blockers))
 
+    def test_mobius_row_collapse(self) -> None:
+        mu = verify.mobius_values(30)
+        for n in range(2, 30):
+            for m in range(2, n + 1):
+                self.assertEqual(
+                    verify.mobius_collapsed_entry(n, m, mu),
+                    Fraction(2 * m - n - 1, n + 1),
+                )
+
+    def test_adjoint_inverse_matches_greedy_control(self) -> None:
+        X = 20
+        target = {q: Fraction(X - q, q * X) for q in range(2, X + 1)}
+        greedy, _, _ = verify.greedy_minorant(X, target)
+        self.assertEqual(verify.adjoint_inverse(X, target), greedy)
+
     def test_negative_target_is_rejected(self) -> None:
         X = 5
         target = {q: Fraction(X - q, q * X) for q in range(2, X + 1)}
@@ -55,7 +70,9 @@ class GreedyCarryParityTests(unittest.TestCase):
         )
         self.assertEqual(result["carry_count_checks"], 276)
         self.assertEqual(result["binary_kummer_checks"], 322)
+        self.assertEqual(result["mobius_row_collapse_checks"], 276)
         self.assertEqual(result["synthetic_non_diagonal_blockers"], 0)
+        self.assertEqual(result["synthetic_adjoint_inverse_mismatches"], 0)
 
 
 if __name__ == "__main__":
