@@ -1,7 +1,7 @@
 # L-24502 — Parabolic seed and exact correction calculus
 
 Claim ID: `L-24502`  
-Status: `PROPOSED — exact finite/algebraic identities plus elementary inequalities`  
+Status: `PROPOSED COMPLETE IDENTITIES; former Divisibility Cover rejected by R-24501`  
 Scope: elementary carry minorant construction  
 Issue: #245
 
@@ -50,7 +50,7 @@ Using monotonicity from (L-24502.2) and elementary integral comparison gives
 \tag{L-24502.3}
 \]
 
-In particular the entire critical `4 sqrt(X)` main term is present before any arithmetic repair.
+Thus the complete critical `4 sqrt(X)` main term is present before arithmetic repair.
 
 ## 3. Adjacent-flow correction
 
@@ -85,9 +85,11 @@ Since
 \log\frac{j^2}{j^2-1}=j^{-2}+O(j^{-4}),
 \]
 
-transport far to the right is asymptotically cheap in the objective metric.
+signed transport far to the right is asymptotically cheap in the exact objective metric.
 
-## 4. Monotone tail-cover correction
+The endpoint-projected extension of this calculus is `L-24509`.
+
+## 4. Monotone tail subtraction identity
 
 Choose `alpha_m>=0`, put
 
@@ -114,45 +116,36 @@ J_X(b_X^{(0)})-J_X(\widetilde b)=\sum_{m=2}^X\alpha_m\log m.}
 \tag{L-24502.9}
 \]
 
-Thus it is sufficient to cover the positive constraint excess
+These are valid exact identities.
+
+## 5. Former Divisibility Cover — rejected
+
+The first version proposed nonnegative atoms satisfying
 
 \[
-e_X(q)=\bigl(v_q(b_X^{(0)})-w_X(q)\bigr)_+
+\sum_{kq\le X}\alpha_{kq}\ge e_X(q),
+\qquad
+\sum_{t=m}^X\alpha_t\le b_X^{(0)}(m),
+\qquad
+\sum_m\alpha_m\log m=O(\log^2X).
 \]
 
-by nonnegative divisibility atoms `alpha_m` while keeping the tail below the seed and the weighted cost polylogarithmic.
-
-## 5. Divisibility Cover Theorem (sufficient closure)
-
-A sufficient theorem is the existence, for every sufficiently large `X`, of `alpha_m>=0` satisfying
+`R-24501` proves that the first and third conditions are already incompatible. On the fixed prime band
 
 \[
-\sum_{kq\le X}\alpha_{kq}\ge e_X(q)
-\quad(q=p^a\le X),
-\tag{D1}
+X/40\le p\le X/32,
 \]
+
+the seed has excess at least `1/(20 sqrt(X))`, while the multiple sets of distinct band primes are disjoint below `X`. The prime number theorem then forces every nonnegative cover to cost
 
 \[
-\sum_{t=m}^X\alpha_t\le b_X^{(0)}(m)
-\quad(2\le m\le X),
-\tag{D2}
+\gg\sqrt X.
 \]
 
-and
+Therefore the monotone Divisibility Cover is **REJECTED**. The finite LP behavior in `O-24501` was pre-asymptotic.
 
-\[
-\sum_{m=2}^X\alpha_m\log m=O(\log^2X).
-\tag{D3}
-\]
-
-Then `tilde b` is feasible for the prime-power divisor-gradient LP and
-
-\[
-J_X(\widetilde b)\ge4\sqrt X-O(\log^2X).
-\]
-
-This theorem is not proved here; it is a clean monotone sufficient closure.
+The refutation does not affect signed adjacent transport: its weight is `j^-2+O(j^-4)` rather than `log j`, and negative slack may be retained before the final objective pairing.
 
 ## Status boundary
 
-The parabolic seed, its objective lower bound, and both correction identities are proposed complete elementary mathematics. The all-scale cover theorem remains open in this file.
+The seed, its objective lower bound, and both correction identities are retained. The monotone positive cover is not a surviving closure. Current full-proposal routes are the endpoint-projected Green energy of `T-24503` and, separately, a genuinely signed primitive-neighbor estimate.
