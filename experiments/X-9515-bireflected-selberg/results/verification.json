@@ -1,0 +1,52 @@
+{
+  "coefficient_limit": 24,
+  "formal_prime_variables_per_frequency": 9,
+  "proof_object_sha256": "c194c7cdcc5a13cf69baaed6cdf798666656b925ddfd07f614106c7a1a591165",
+  "schema": "riemann.x9515-bireflected-block-review.v1",
+  "scope": "exact finite algebra and scale geometry only; does not prove signed cancellation of the growing-dimensional terminal faces or a balanced Type-II estimate",
+  "terminal_counterfaces": [
+    {
+      "K": 20,
+      "delta": "1/5",
+      "free_short_divisor_coordinates": 3,
+      "long_exponent": "17/20",
+      "short_product_exponent": "3/20",
+      "strict_terminal_reserve": true
+    },
+    {
+      "K": 30,
+      "delta": "1/5",
+      "free_short_divisor_coordinates": 5,
+      "long_exponent": "5/6",
+      "short_product_exponent": "1/6",
+      "strict_terminal_reserve": true
+    },
+    {
+      "K": 50,
+      "delta": "1/5",
+      "free_short_divisor_coordinates": 9,
+      "long_exponent": "41/50",
+      "short_product_exponent": "9/50",
+      "strict_terminal_reserve": true
+    },
+    {
+      "K": 100,
+      "delta": "1/5",
+      "free_short_divisor_coordinates": 19,
+      "long_exponent": "81/100",
+      "short_product_exponent": "19/100",
+      "strict_terminal_reserve": true
+    },
+    {
+      "K": 200,
+      "delta": "1/5",
+      "free_short_divisor_coordinates": 39,
+      "long_exponent": "161/200",
+      "short_product_exponent": "39/200",
+      "strict_terminal_reserve": true
+    }
+  ],
+  "two_frequency_reflected_identity": true,
+  "verdict": "PASS_EXACT_BIREFLECTED_IDENTITY_AND_TERMINAL_GEOMETRY_MUTATION",
+  "wrong_generalized_lambda_sign_rejected": true
+}
