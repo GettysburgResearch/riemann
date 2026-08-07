@@ -30,11 +30,15 @@ Retained local execution:
 
 ```text
 verdict: SYNTHETIC_CRITICAL_FAREY_ALGEBRA_VERIFIED
-verify.py SHA-256:
-b7ebe3aef5eb3c4613a0b3b9250e6a2fe4d5a1a38b701c9011c4ed55679a8ff9
-result SHA-256:
-6d9da0f0c5d7e37216af156ff8a119749df22b0029137a9010fd2a864dbe6a97
+verify.py Git blob SHA-1:
+221c574a92c7f8950c8db9beecba59af43cd0c73
+result Git blob SHA-1:
+261ef51b7073f12847a57ead8c6330e999690afe
 ```
+
+The Git blob identities bind the exact committed bytes. A future SHA-256 ledger
+should be generated from a checkout of the frozen review head rather than copied
+from a pre-commit local prototype.
 
 ## Scope boundary
 
