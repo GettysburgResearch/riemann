@@ -126,14 +126,14 @@ Indeed,
 Let
 
 \[
-\ell_K=e_0,
+\ell_K=e_{K-1},
 \qquad
 u_K=e_0+\cdots+e_{K-1}.
 \tag{L-25601.11}
 \]
 
-The left anchor `ell_K` reads the first depth row, while `nu_K` sums all depth
-columns. Then
+For the declared forward shift, the left anchor `ell_K` reads the last depth
+row. Since `ell_K^*S_K^j nu_K=1` for every `0<=j<K`,
 
 \[
 \ell_K^*\mathbf L_{K,V}\nu_K
