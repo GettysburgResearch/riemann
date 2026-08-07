@@ -1,0 +1,25 @@
+{
+  "central": {
+    "carry_rows": 8128,
+    "comparison_rows": 8128,
+    "critical_abel_mass": 8,
+    "greedy_constraints": 780,
+    "greedy_levels": 39,
+    "partial_fraction_rows": 30,
+    "transform_rows": 256
+  },
+  "mutations": {
+    "beta_equals_b_rejected": true,
+    "carry_residue_mutation_rejected": true,
+    "missing_diagonal_blocker_rejected": true,
+    "missing_transform_boundary_rejected": true,
+    "reversed_beta_b_rejected": true,
+    "wrong_continuum_cell_rejected": true,
+    "wrong_critical_mass_rejected": true,
+    "wrong_partial_fraction_rejected": true
+  },
+  "proof_boundary": "Finite rational carry/kernel algebra only; DCRS, the prime-ramp asymptotic, and RH are not verified.",
+  "proof_object_sha256": "5638de49fc82948f1d411b20d85894ca04d6d7625f7627511173ed35cb47c916",
+  "schema": "riemann.x24501-carry-resolvent.v1",
+  "verdict": "PASS_EXACT_L24501_L24502_CARRY_RESOLVENT_ALGEBRA"
+}
