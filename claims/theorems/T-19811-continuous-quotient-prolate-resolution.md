@@ -39,15 +39,15 @@ and let `Q_lambda` be the closed localized Weil form with associated selfadjoint
  h\in C_c^\infty((\lambda^{-1},\lambda))
 \]
 
-is the exact restriction of a global arithmetic-radical vector. Since this smooth interior class is the defining form core, the graph closure of the exact radical relation has dense interior domain in `Dom Q_lambda`; no zeta-cycle support condition is needed for the continuous route.
+is the exact restriction of a global arithmetic-radical vector. Since this smooth interior class is the defining form core, the exact radical relation has dense interior domain in `Dom Q_lambda`; no zeta-cycle support condition is needed for the continuous route.
 
-Let `mathcal R_lambda` be that graph closure under the splitting
+Density and closure are distinct. Assume the following **minimum-tail compatibility gate**:
 
-\[
- J=P_\lambda J+(I-P_\lambda)J.
-\]
+1. the graph closure of the exact radical relation has a proper lower-semicontinuous ordinary-tail quotient form;
+2. this form admits the canonical linear minimum-tail lift of `L-19852/L-19855`;
+3. the graph-closed radical identity of `L-19856` holds on its domain.
 
-Let
+Equivalently, assume there is a closed operator
 
 \[
  \mathcal T_\lambda:
@@ -56,7 +56,13 @@ Let
  L^2((0,\lambda^{-1})\cup(\lambda,\infty),d^*u)
 \]
 
-be the canonical minimum-tail operator of `L-19855`. Define
+such that every pair
+
+\[
+ (v,\mathcal T_\lambda v)
+\]
+
+is in the graph-closed global radical relation and minimizes ordinary exterior norm among all such extensions. Define
 
 \[
  \boxed{
@@ -65,7 +71,7 @@ be the canonical minimum-tail operator of `L-19855`. Define
 \tag{T-19811.1}
 \]
 
-This is a proper closed nonnegative form. By `L-19856`, the exact radical-tail identity extends to the graph closure:
+Then `mathfrak D_lambda` is a proper closed nonnegative form, and `L-19856` gives
 
 \[
  Q_\lambda(v,w)
@@ -75,6 +81,8 @@ This is a proper closed nonnegative form. By `L-19856`, the exact radical-tail i
 \]
 
 on the canonical quotient domain.
+
+The compatibility gate is automatic if the relevant radical relation is closed in the ordinary interior/exterior Hilbert sum. It is not inferred merely from closure in a stronger Weil graph topology.
 
 ## 3. Load-bearing continuous quotient hypotheses
 
@@ -273,7 +281,7 @@ on every compact subset of the open centered critical strip.
 
 If `Xi` had a nonreal zero, choose a disk around it disjoint from the real axis. Every approximant is nonvanishing on that disk, while the locally uniform limit is not identically zero. Hurwitz gives a contradiction.
 
-Therefore the hypotheses of Section 3 imply
+Therefore the hypotheses of Sections 2--3 imply
 
 \[
  \boxed{\mathrm{RH}.}
@@ -301,11 +309,12 @@ appears in the RH implication.
 
 This is a complete logical composition, not an accepted verification of its analytic hypotheses. Independent review must reconstruct:
 
-1. the complete signed quotient hierarchy (T-19811.3)--(T-19811.4), including minimum-tail behavior outside the declared low prolate packet;
-2. the corrected Bessel/stationary-alias/Mellin-fold theorem `L-19853` in the full shrinking strip;
-3. the relative tail estimate descending through `L-19857` to (T-19811.6) on the complete canonical tail range;
-4. moving-Hardy target convergence (T-19811.7) in the exact normalization;
-5. normalization matching for the continuous Connes--van Suijlekom real-zero theorem.
+1. the minimum-tail compatibility gate in Section 2, or prove it jointly from the relative local-Weyl estimate;
+2. the complete signed quotient hierarchy (T-19811.3)--(T-19811.4), including minimum-tail behavior outside the declared low prolate packet;
+3. the corrected Bessel/stationary-alias/Mellin-fold theorem `L-19853` in the full shrinking strip;
+4. the relative tail estimate descending through `L-19857` to (T-19811.6) on the complete canonical tail range;
+5. moving-Hardy target convergence (T-19811.7) in the exact normalization;
+6. normalization matching for the continuous Connes--van Suijlekom real-zero theorem.
 
 The source form-core density itself is closed by `L-19860`.
 
