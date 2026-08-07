@@ -31,17 +31,20 @@ multiplicity. Choose `tau_R>0` and put
 
 ## 2. Line-centered gate
 
-Assume the complete residual profile satisfies the profile, derivative, and
-logarithmic-moment LMIs of `L-19821`. Then there are `a_R>0`, a Hermitian bounded
-density correction `C_R`, and an error `alpha_R>=0` such that
+Assume the complete residual profile satisfies a positive operator
+Riemann--von Mangoldt decomposition
 
 \[
  A_R^0=a_RD_R+C_R+E_R^0,
  \tag{L-19865.3}
 \]
 
+with `a_R>0`,
+
 \[
- -c_0\widehat D_R\preceq C_R\preceq c_0\widehat D_R,
+ -c_{0,R}\widehat D_R
+ \preceq C_R\preceq
+ c_{0,R}\widehat D_R,
  \tag{L-19865.4}
 \]
 
@@ -54,26 +57,29 @@ and
  \tag{L-19865.5}
 \]
 
-In the standard radial normalization,
+For a profile localized to ordinates comparable with one radial scale, the
+standard theorem gives
 
 \[
- a_R=\log R+O(1),
- \qquad
- \alpha_R=o(\log R).
+ a_R=\log R+O(1).
  \tag{L-19865.6}
 \]
 
-Equations (L-19865.3)--(L-19865.5) immediately give the one-sided bound
+For the hybrid multi-scale residual of `L-19862`, no universal formula such as
+(L-19865.6) is assumed: `a_R`, `c_(0,R)`, and `alpha_R` must be certified for
+the complete profile and its actual frequency partition.
+
+Equations (L-19865.3)--(L-19865.5) give
 
 \[
  A_R^0
  \succeq
- (a_R-c_0-\alpha_R)D_R
- -(c_0+\alpha_R)\tau_RI.
+ (a_R-c_{0,R}-\alpha_R)D_R
+ -(c_{0,R}+\alpha_R)\tau_RI.
  \tag{L-19865.7}
 \]
 
-## 3. Actual-minus-line gate
+## 3. Actual-minus-line gate, including central ordinates
 
 Assume the complete reflected/off-line block obeys
 
@@ -81,19 +87,15 @@ Assume the complete reflected/off-line block obeys
  \boxed{
  -\delta_R\widehat D_R
  \preceq A_R-A_R^0
- \preceq\delta_R\widehat D_R,}
+ \preceq\delta_R\widehat D_R.}
  \tag{L-19865.8}
 \]
 
-where
+The number `delta_R` must cover **all** ordinate ranges.
 
-\[
- \delta_R=o(\log R).
- \tag{L-19865.9}
-\]
-
-The rank-one Bessel support large sieve `L-19818` supplies (L-19865.8) on a
-positive-measure set of supports once the complete two-end profile satisfies:
+The rank-one Bessel support large sieve `L-19818` supplies the oscillatory part
+of (L-19865.8) for zero ordinates comparable with the support/radial scale once
+the complete two-end profile satisfies:
 
 ```text
 one pointwise graph envelope;
@@ -103,6 +105,13 @@ Bessel endpoint and stationary-alias ledgers;
 collective endpoint summation.
 ```
 
+It does not control a fixed or central ordinate block whose phase derivative is
+not on that dyadic scale. Such a block must be retained as an exact finite
+Hermitian matrix and certified inside (L-19865.8), or absorbed into an additional
+scalar shift with a separate target-line upper certificate. A hypothetical low
+off-line zero may not be silently placed in the high-frequency large-sieve
+remainder.
+
 The corrected `k>R` range is `L-19863`; the geometric periodization fold is
 `L-19864`.
 
@@ -111,18 +120,25 @@ The corrected `k>R` range is `L-19863`; the geometric periodization fold is
 Define
 
 \[
- c_R=a_R-c_0-\alpha_R-\delta_R
- \tag{L-19865.10}
+ c_R=a_R-c_{0,R}-\alpha_R-\delta_R
+ \tag{L-19865.9}
 \]
 
 and
 
 \[
- \sigma_R=-(c_0+\alpha_R+\delta_R)\tau_R.
+ \sigma_R=-(c_{0,R}+\alpha_R+\delta_R)\tau_R.
+ \tag{L-19865.10}
+\]
+
+Whenever
+
+\[
+ \boxed{c_R>0,}
  \tag{L-19865.11}
 \]
 
-For all sufficiently large `R`, `c_R>0`, and
+one has
 
 \[
  \boxed{
@@ -131,12 +147,12 @@ For all sufficiently large `R`, `c_R>0`, and
 \]
 
 This is the exact affine one-sided hypothesis of `L-19861`. It does not assert
-`A_R>=0`; indeed `sigma_R` is generally negative.
+`A_R>=0`; `sigma_R` is generally negative.
 
 ### Proof
 
 Add the lower sides of (L-19865.7) and (L-19865.8), separate the coefficients of
-`D_R` and `tau_RI`, and use (L-19865.10)--(L-19865.11). QED.
+`D_R` and `tau_RI`, and use (L-19865.9)--(L-19865.10). QED.
 
 ## 5. Target-only upper bound
 
@@ -152,8 +168,8 @@ The upper sides of (L-19865.3)--(L-19865.5) and (L-19865.8) give
 \[
  \begin{aligned}
  A_R(p_R,p_R)-\sigma_R
- \le{}&[a_R+c_0+\alpha_R+\delta_R]m_R\\
- &+2(c_0+\alpha_R+\delta_R)\tau_R.
+ \le{}&[a_R+c_{0,R}+\alpha_R+\delta_R]m_R\\
+ &+2(c_{0,R}+\alpha_R+\delta_R)\tau_R.
  \end{aligned}
  \tag{L-19865.14}
 \]
@@ -174,33 +190,37 @@ Then
  \tag{L-19865.16}
 \]
 
-where `C_R^tar` remains bounded if
-`alpha_R+delta_R=o(a_R)` and in any case is `R^(o(1))` under the declared
-profile budgets.
+where one may take
+
+\[
+ C_R^{\rm tar}
+ ={a_R+3(c_{0,R}+\alpha_R+\delta_R)\over c_R}.
+ \tag{L-19865.17}
+\]
 
 For the hybrid residual theorem `L-19862`,
 
 \[
  m_R\le e^{-B L_R}
- \tag{L-19865.17}
+ \tag{L-19865.18}
 \]
 
 with arbitrarily large fixed `B`, while
 
 \[
  \theta_2(D_R)\ge1.
- \tag{L-19865.18}
-\]
-
-Therefore
-
-\[
- {C_R^{\rm tar}m_R\over\theta_2(D_R)}\longrightarrow0.
  \tag{L-19865.19}
 \]
 
-`L-19861` then gives a simple isolated even ground line and an exponentially
-small ordinary target angle.
+The exact closing rate is therefore
+
+\[
+ \boxed{C_R^{\rm tar}m_R\longrightarrow0.}
+ \tag{L-19865.20}
+\]
+
+No particular asymptotic for `a_R` or `delta_R` is needed beyond
+(L-19865.11) and (L-19865.20).
 
 ## 6. Why the shift is load bearing
 
@@ -210,39 +230,46 @@ positivity on a dense diagonal. The small regularizing metric keeps every
 profile operation well typed and converts its loss into the scalar shift
 `sigma_R`.
 
-The target pays only
+The target pays
 
 \[
- |\sigma_R|=R^{o(1)}m_R,
+ |\sigma_R|
+ =(c_{0,R}+\alpha_R+\delta_R)m_R,
 \]
 
-which is negligible because its exact residual energy is exponentially small.
-Thus the shift removes circularity without damaging ground-state selection.
+which is negligible whenever (L-19865.20) holds. Thus the shift removes
+circularity without damaging ground-state selection.
 
 ## 7. Source-specific production interface
 
 For the exterior-cardinal hybrid reservoir of `L-19862`, a proof certificate for
-(L-19865.3)--(L-19865.9) must contain:
+(L-19865.3)--(L-19865.8) must contain:
 
 1. the exact global-minus-finite residual transform for every source column;
-2. a finite branch partition of its two-end phases;
-3. positive line-centered profile, derivative, and logarithmic-moment Grams;
-4. Bessel and support-derivative sums in the same `D_R+tau_RI` metric;
-5. the Bessel endpoint ledger, including the corrected `k>R` aggregate;
-6. the independent geometric fold ledger;
-7. a support-average certificate for every oscillatory actual-minus-line branch;
-8. a proof that all phase-neutral off-line terms are retained in the main or
-   scalar correction, not discarded.
+2. a complete frequency partition, including bounded and central ordinates;
+3. positive line-centered profile, derivative, and logarithmic-moment Grams on
+   every high-frequency branch;
+4. an exact finite matrix enclosure for every central ordinate block not covered
+   by support averaging;
+5. Bessel and support-derivative sums in the same `D_R+tau_RI` metric;
+6. the Bessel endpoint ledger, including the corrected `k>R` aggregate;
+7. the independent geometric fold ledger;
+8. a support-average certificate for every eligible oscillatory
+   actual-minus-line branch;
+9. a proof that all phase-neutral off-line terms are retained in the main,
+   central, or scalar correction, not discarded;
+10. the strict inequalities `c_R>0` and `C_R^tar m_R->0`.
 
-The smooth cardinal frame gives dimension `R^(o(1))` and graph envelope
-`R^(1/4+o(1))`; `L-19818` then has a strict power reserve. These source-specific
-bounds are a concrete analytic theorem, not implied by the abstract algebra.
+The smooth cardinal frame gives dimension `R^(o(1))` and a controlled graph
+envelope on the high-frequency branches; `L-19818` then has a power reserve
+there. The bounded-ordinate block remains an explicit finite affine gate rather
+than an inferred large-sieve consequence.
 
 ## 8. Proof boundary
 
 - Sections 1--6 are exact operator algebra.
-- `L-19821` and `L-19818` prove the abstract analytic mechanisms.
-- Independent review must still reconstruct the complete hybrid residual
-  profile and verify every LMI in Section 7 in the exact finite CCM
+- `L-19821` and `L-19818` prove the abstract high-frequency mechanisms.
+- Independent review must reconstruct the complete hybrid residual profile,
+  central block, and every LMI in Section 7 in the exact finite CCM
   normalization.
-- This is now the only indefinite-form input in the affine hybrid route.
+- This is the only indefinite-form input in the affine hybrid route.
