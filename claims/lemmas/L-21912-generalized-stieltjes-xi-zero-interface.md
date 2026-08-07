@@ -5,7 +5,8 @@ Title: A positive generalized Stieltjes representation of the logarithmic-curvat
 Status: **PROPOSED EXACT CONDITIONAL LEMMA PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-02-p`  
 Created: 2026-08-07  
-Dependencies: `L-21910`, `T-21904`; Sokal's characterization of generalized Stieltjes functions  
+Updated: 2026-08-07 after the Hadamard-constant and continuum-shadow audit  
+Dependencies: `L-21910`, `T-21904`, `L-21914`; Sokal's characterization of generalized Stieltjes functions  
 Scope: explicit positive-measure form of the final real-rootedness theorem
 
 ## 1. The tilted logarithmic law
@@ -14,7 +15,7 @@ For real
 
 \[
  x>-\frac12,
- \]
+\]
 
 put
 
@@ -36,7 +37,7 @@ Let
 
 \[
  Y=\log u
- \]
+\]
 
 under `P_x`, and denote its cumulants by
 
@@ -194,7 +195,7 @@ By `T-21904`, this implies
 No zero-spacing, simplicity, Bernstein interpolation, or Pick hypothesis is
 needed.
 
-## 5. Converse geometry under the standard Hadamard condition
+## 5. Converse geometry and the Hadamard constant
 
 Suppose conversely that all zeros of `C_Xi` are real and equal to
 `-alpha_j`, with multiplicities `m_j`, where `alpha_j>=1/2`, and that
@@ -204,27 +205,39 @@ Suppose conversely that all zeros of `C_Xi` are real and equal to
  \tag{L-21912.16}
 \]
 
-The genus-one Hadamard product then gives
+A genus-one Hadamard representation gives
 
 \[
  \boxed{
  \mathcal S_\Xi(z)
- =a+\sum_j\frac{m_j}{(z+\alpha_j)^2}}
+ =a_0+\sum_j\frac{m_j}{(z+\alpha_j)^2}}
  \tag{L-21912.17}
 \]
 
-for a nonnegative constant `a` corresponding to a possible Gaussian factor.
-Thus (L-21912.12) is, under the standard order condition, not merely sufficient
-but the exact positive-measure encoding of the zero set, with
+for one real constant `a_0` determined by the quadratic exponential factor of
+the entire function.
+
+Real-rootedness alone does **not** force `a_0>=0`. The positive Stieltjes
+representation (L-21912.12) is equivalent to the zero geometry together with
 
 \[
- d\rho_\Xi(t)=\sum_jm_j\delta_{\alpha_j}(dt).
+ \boxed{a_0\ge0.}
  \tag{L-21912.18}
 \]
 
-The coefficient integrality is automatic from the fact that the left side is a
-logarithmic derivative of an entire function; it need not be imposed in the
-forward certificate.
+For a genuine Laguerre–Pólya representation the Gaussian factor is
+`exp(-a z^2)` with `a>=0`, and then `a_0=2a>=0`. Without that sign, the converse
+is only a signed-constant representation.
+
+When (L-21912.18) holds, the representing measure is
+
+\[
+ d\rho_\Xi(t)=\sum_jm_j\delta_{\alpha_j}(dt).
+ \tag{L-21912.19}
+\]
+
+The atomic weights are the zero multiplicities because the left side is a
+logarithmic derivative of an entire function.
 
 ## 6. Real-variable proof protocol
 
@@ -238,7 +251,7 @@ Sokal's theorem gives a complete real-variable characterization of the class
   \sum_{j=0}^k{\binom kj}
   \frac{\Gamma(n+k+2)}{\Gamma(n+j+2)}
   x^j f^{(n+j)}(x).}
- \tag{L-21912.19}
+ \tag{L-21912.20}
 \]
 
 Then
@@ -249,7 +262,7 @@ Then
  \quad\Longleftrightarrow\quad
  F_{n,k}^{[2]}(x)\ge0
  \text{ for all }n,k\ge0,\ x>0.}
- \tag{L-21912.20}
+ \tag{L-21912.21}
 \]
 
 Apply this to the translated function
@@ -257,10 +270,10 @@ Apply this to the translated function
 \[
  f(x)=\mathcal S_\Xi(x-1/2),
  \qquad x>0.
- \tag{L-21912.21}
+ \tag{L-21912.22}
 \]
 
-Using (L-21912.10), every inequality in (L-21912.20) becomes an explicit finite
+Using (L-21912.10), every inequality in (L-21912.21) becomes an explicit finite
 linear combination of:
 
 ```text
@@ -272,13 +285,13 @@ positive powers of x.
 This is the exact all-order final theorem. It is a family of real inequalities,
 not a contour, zero census, or unbounded matrix packet.
 
-## 7. First shadow already known
+## 7. The first continuum member is closed
 
 The weakest member is
 
 \[
- \mathcal S_\Xi(x)\ge0,
- \tag{L-21912.22}
+ \mathcal S_\Xi(x)>0,
+ \tag{L-21912.23}
 \]
 
 or equivalently
@@ -286,15 +299,22 @@ or equivalently
 \[
  \boxed{
  4\operatorname{Var}_x(\log u)
- \le\psi_1\!\left(x+\frac12\right).}
- \tag{L-21912.23}
+ <\psi_1\!\left(x+\frac12\right).}
+ \tag{L-21912.24}
 \]
 
-At the integer lattice, the corresponding midpoint inequality is exactly the
-strict Csordas–Varga Turán inequality translated in `L-21911`.
+`L-21914` proves this for every real `x>-1/2` by an exact change of variables
+from Csordas–Varga Proposition 2.3. Thus
 
-Their theorem therefore proves the first discrete shadow of the Stieltjes
-hierarchy. It does not prove the complete family (L-21912.20).
+\[
+ \boxed{F_{0,0}^{[2]}(x)>0\quad(x>0)}
+ \tag{L-21912.25}
+\]
+
+is closed on the complete continuum, not merely at integer moments.
+
+The remaining Sokal inequalities have `n+k>0`. The classical theorem does not
+supply them.
 
 ## 8. What a genuine completion must do
 
@@ -308,12 +328,12 @@ Construct `rho_Xi` directly from the theta series, ideally by writing
  \psi_1\!\left(x+\frac12\right)
  -4\operatorname{Var}_x(\log u)
  =a+\int_{1/2}^\infty\frac{d\rho_\Xi(t)}{(x+t)^2}.
- \tag{L-21912.24}
+ \tag{L-21912.26}
 \]
 
 ### Real-variable hierarchy
 
-Prove every inequality in (L-21912.20), with the cumulant substitutions from
+Prove every inequality in (L-21912.21), with the cumulant substitutions from
 (L-21912.10).
 
 A proof of complete monotonicity alone is insufficient: generalized Stieltjes
@@ -328,12 +348,13 @@ Closed exactly:
 - the explicit logarithmic-curvature function;
 - generalized Stieltjes representation implies real-negative zeros;
 - the Sokal real-variable certificate;
-- the link of its first shadow to Csordas–Varga.
+- the continuum first member;
+- the corrected Hadamard-constant scope.
 
 Open:
 
 - construction of the positive measure `rho_Xi`;
-- the complete inequalities (L-21912.20);
+- the inequalities (L-21912.21) with `n+k>0`;
 - real-rootedness of `C_Xi`;
 - RH.
 
