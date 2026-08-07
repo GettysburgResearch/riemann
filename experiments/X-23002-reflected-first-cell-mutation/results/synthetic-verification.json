@@ -1,0 +1,31 @@
+{
+  "D": 100,
+  "first_cell_increment": 2,
+  "geometric_differences": {
+    "1": 2,
+    "2": 0,
+    "3": -3
+  },
+  "proof_boundary": "Finite Dirichlet-convolution and integer Mertens algebra only; no asymptotic estimate or RH conclusion.",
+  "proof_object_sha256": "42bf8ca0d7e05dec77d940d59a68e40ac7b78bcd518d435aca8021b02bb25f85",
+  "reconstruction": {
+    "1": {
+      "endpoint": 5,
+      "fixed_log_slice_mismatches": 0,
+      "mobius_mismatches": 0
+    },
+    "2": {
+      "endpoint": 25,
+      "fixed_log_slice_mismatches": 0,
+      "mobius_mismatches": 0
+    },
+    "3": {
+      "endpoint": 125,
+      "fixed_log_slice_mismatches": 0,
+      "mobius_mismatches": 0
+    }
+  },
+  "schema": "riemann.x23002-reflected-first-cell-mutation.v1",
+  "verdict": "EXACT_FIXED_LOG_SOURCE_IS_MOBIUS_AND_NOT_AUTOMATICALLY_KTH_DIFFERENCED",
+  "verified": true
+}
