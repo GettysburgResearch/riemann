@@ -142,7 +142,7 @@ Consequently,
  =\left(\frac1{4\pi^2}+\frac1{4\pi^4}\right)
  \left|M(D)-M(2D/3)\right|^2.
 }
-\tag{L-23003.9
+\tag{L-23003.9}
 \]
 
 ## 4. Critical-scale consequence
