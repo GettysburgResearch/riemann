@@ -5,6 +5,7 @@ Title: The parabolic endpoint atoms have a positive scale-invariant convolution 
 Status: **PROPOSED COMPLETE EXACT TRANSFORM THEOREM PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-08  
+Corrected: 2026-08-08 to separate the absolutely convergent Mellin derivation from its continuation to `Re(s)>1/2`  
 Issue family: `#245/#262`  
 Frozen base: PR #248 at `5f2b25f89afbb90a3bc4ca6d40148f530303eb54`  
 Dependencies: `L-26201`, `L-26202`; PR #252 `L-24501`  
@@ -24,7 +25,7 @@ Retain
 \tag{L-26204.1}
 \]
 
-The continuum carry response of the full parabolic seed is
+The continuum carry response of the complete parabolic seed is
 
 \[
  \boxed{
@@ -57,12 +58,13 @@ Then exactly
 \tag{L-26204.3}
 \]
 
-The function is nonnegative because it is the scaling limit of the positive
-carry-row response established in `L-26201`.
+The function is nonnegative: `L-26201` expresses every finite parabolic response
+as a positive carry-row combination, and the fixed-ratio scaling limit is
+(L-26204.2).
 
 ## 2. Endpoint derivative kernel
 
-At endpoint fraction `s`, the seed response at final-scale column `theta` is
+At endpoint fraction `s`, the response at final-scale column `theta` is
 
 \[
  R_s(\theta)
@@ -71,7 +73,7 @@ At endpoint fraction `s`, the seed response at final-scale column `theta` is
 \tag{L-26204.4}
 \]
 
-Differentiate with respect to `s`:
+Differentiating with respect to `s` gives
 
 \[
  \boxed{
@@ -88,7 +90,7 @@ where
 \tag{L-26204.6}
 \]
 
-Using (L-26204.3), the cell formula collapses to
+Using (L-26204.3), all logarithmic terms cancel and
 
 \[
  \boxed{
@@ -98,32 +100,32 @@ Using (L-26204.3), the cell formula collapses to
 \tag{L-26204.7}
 \]
 
-This is the continuum response kernel of one positive endpoint atom.
+This is the scale-invariant continuum response of one endpoint atom.
 
-## 3. Positivity and normalization
+## 3. Positivity and probability normalization
 
-The elementary integral bound
+The elementary decreasing-sum bound gives
 
 \[
- S_N\le1+\int_1^Nx^{-1/2}dx=2\sqrt N-1
+ S_N\le1+\int_1^Nx^{-1/2}dx=2\sqrt N-1.
 \tag{L-26204.8}
 \]
 
-and
+Also
 
 \[
- 2\sqrt N-1<\frac{2N}{\sqrt{N+1}}
+ 2\sqrt N-1<\frac{2N}{\sqrt{N+1}}.
 \tag{L-26204.9}
 \]
 
-imply, throughout the cell,
+Since `u>=1/(N+1)` throughout the cell,
 
 \[
  \frac{S_N}{\sqrt u}
  \le S_N\sqrt{N+1}<2N.
 \]
 
-Hence
+Therefore
 
 \[
  \boxed{k(u)>0\qquad(0<u<1).}
@@ -137,7 +139,7 @@ identity is
  \int_0^1F(u)du=4.
 \]
 
-Integration by parts in (L-26204.6) gives
+Integrating (L-26204.6) by parts yields
 
 \[
  \boxed{
@@ -145,12 +147,12 @@ Integration by parts in (L-26204.6) gives
 \tag{L-26204.11}
 \]
 
-Thus `k(u)/2` is an explicit probability density on the endpoint ratio
-`u=theta/s`.
+Thus `k(u)/2` is an explicit probability density for the ratio between an
+endpoint atom and the column scale it reaches.
 
 ## 4. Positive endpoint-scale convolution
 
-Let `lambda(s)>=0` be a continuum endpoint weight.  Its column response is
+Let `lambda(s)>=0` be a continuum endpoint weight. Its column response is
 
 \[
  \boxed{
@@ -177,7 +179,7 @@ and define the positive causal kernel
 \tag{L-26204.13}
 \]
 
-A change of variables gives
+A direct change of variables gives
 
 \[
  \boxed{
@@ -186,13 +188,7 @@ A change of variables gives
 \tag{L-26204.14}
 \]
 
-The critical target is
-
-\[
- h(e^{-t})=e^{t/2}t.
-\]
-
-Therefore exact endpoint-scale saturation is the scalar Volterra equation
+The normalized critical target is `t`; hence exact endpoint saturation is
 
 \[
  \boxed{(L*\varrho)(t)=t.}
@@ -204,7 +200,8 @@ minorant producer for this equation.
 
 ## 5. Mellin and Laplace symbols
 
-For `Re(s)>1/2`, finite dilation switching gives
+For `Re(s)>1`, absolute convergence permits switching the dilation sum and the
+Mellin integral:
 
 \[
  \int_0^1F(u)u^{s-1}du
@@ -220,13 +217,28 @@ The elementary integral is
 \tag{L-26204.17}
 \]
 
-Hence
+Thus initially in `Re(s)>1`,
 
 \[
- \boxed{
  \int_0^1F(u)u^{s-1}du
- =\zeta(s)\frac{s-1}{s(s-\frac12)^2}.}
+ =\zeta(s)\frac{s-1}{s(s-\frac12)^2}.
 \tag{L-26204.18}
+\]
+
+The cell formula (L-26204.3) gives
+
+\[
+ F(u)=O\!\left(u^{-1/2}(1+|\log u|)ight),
+\]
+
+so the left side is holomorphic for `Re(s)>1/2`. The factor `(s-1)zeta(s)`
+has a removable value at `s=1`, and the right side is holomorphic on the same
+half-plane away from the displayed boundary pole at `s=1/2`. Therefore the
+identity theorem continues (L-26204.18) throughout
+
+\[
+ \boxed{\operatorname{Re}s>1/2.}
+\tag{L-26204.19}
 \]
 
 Put
@@ -235,18 +247,22 @@ Put
  f(t)=e^{-t/2}F(e^{-t}).
 \]
 
-Equation (L-26204.6) gives `f'=varrho`, with `f(0)=0`.  Therefore
+Equation (L-26204.6) gives `f'=varrho`, with `f(0)=0`. Hence
 
 \[
  \boxed{
  \widehat\varrho(z)
  =\zeta\left(z+\frac12\right)
   \frac{z-\frac12}{z(z+\frac12)}.}
-\tag{L-26204.19}
+\tag{L-26204.20}
 \]
 
-The value at `z=1/2` is removable and equals two, in agreement with
-(L-26204.11) after critical weighting.
+At `z=1/2`, the zeta pole cancels and the removable value is two. Equivalently,
+
+\[
+ \int_0^\infty e^{-v/2}\varrho(v)dv
+ =\int_0^1k(u)du=2.
+\]
 
 ## 6. Exact equality weight
 
@@ -258,7 +274,7 @@ has symbol
  \widehat L_*(z)
  =\frac{z+\frac12}
  {z(z-\frac12)\zeta(z+\frac12)}.}
-\tag{L-26204.20}
+\tag{L-26204.21}
 \]
 
 The rational factor is
@@ -266,10 +282,11 @@ The rational factor is
 \[
  \frac{z+\frac12}{z(z-\frac12)}
  =\frac2{z-\frac12}-\frac1z.
-\tag{L-26204.21}
+\tag{L-26204.22}
 \]
 
-Thus the physical equality state is the explicit finite Möbius sum
+Using the Dirichlet series for `1/zeta(z+1/2)` in its absolute-convergence
+half-plane and then taking the causal inverse gives
 
 \[
  \boxed{
@@ -278,33 +295,29 @@ Thus the physical equality state is the explicit finite Möbius sum
  \left[
   2e^{(t-\log n)/2}-1
  \right].}
-\tag{L-26204.22}
+\tag{L-26204.23}
 \]
 
 Every hypothetical off-line zeta zero remains an uncancelled pole of
-(L-26204.20).  Positivity or boundary-tame approximation of `L_*` is therefore
-an RH-bearing theorem, not a routine Volterra fact.
+(L-26204.21). Positivity or boundary-tame approximation of `L_*` is therefore
+RH-bearing.
 
-At the critical point,
+The critical value is
 
 \[
  \boxed{\widehat L_*(1/2)=2.}
-\tag{L-26204.23}
+\tag{L-26204.24}
 \]
 
 The endpoint entropy score is
 
 \[
- 2\int_0^\infty e^{-t/2}L(t)dt.
+ 2\int_0^\infty e^{-t/2}L(t)dt,
 \]
 
-Hence the equality state has the exact sharp score
+so the equality state has exact score four.
 
-\[
- 2\widehat L_*(1/2)=4.
-\]
-
-## 7. Stable filter connection to the carry resolvent
+## 7. Stable-filter connection to the carry resolvent
 
 Let `mathfrak g(t)` be the canonical carry-resolvent state of PR #252:
 
@@ -315,36 +328,28 @@ Let `mathfrak g(t)` be the canonical carry-resolvent state of PR #252:
   8e^{(t-\log n)/2}
   -7-\frac32(t-\log n)
  \right].
-\tag{L-26204.24}
+\tag{L-26204.25}
 \]
 
-Its transform is
-
-\[
- \widehat{\mathfrak g}(z)
- =\frac{(z+\frac12)(z+\frac32)}
- {z^2(z-\frac12)\zeta(z+\frac12)}.
-\]
-
-Comparing with (L-26204.20) gives
+Its transform and (L-26204.21) satisfy
 
 \[
  \boxed{
  \widehat{\mathfrak g}(z)
  =\frac{z+\frac32}{z}\widehat L_*(z).}
-\tag{L-26204.25}
+\tag{L-26204.26}
 \]
 
-Equivalently, pointwise in causal locally integrable functions,
+Equivalently,
 
 \[
  \boxed{
  \mathfrak g(t)
- =L_*(t)+\frac32\int_0^tL_*(u)du.}
-\tag{L-26204.26}
+ =L_*(t)+\frac32\int_0^tL_*(u)du,}
+\tag{L-26204.27}
 \]
 
-Conversely,
+and the stable inverse filter is
 
 \[
  \boxed{
@@ -352,41 +357,40 @@ Conversely,
  =\mathfrak g(t)
  -\frac32\int_0^t
   e^{-\frac32(t-u)}\mathfrak g(u)du.}
-\tag{L-26204.27}
+\tag{L-26204.28}
 \]
 
-Thus the endpoint-scale state and the carry-resolvent state are related by
-mutually inverse stable first-order causal filters.  They expose the same
-open-strip poles and differ only in the positive producer coordinate.
+Thus the endpoint-scale equality state and the canonical carry state expose the
+same zeta poles and are mutually related by first-order causal filters.
 
-## 8. Consequence for the finite programme
+## 8. Finite-programme consequence
 
-The exact equality state `L_*` is simpler than the global carry state but still
-RH-bearing.  The endpoint-scale proposal does **not** assume `L_*>=0`.
-Instead it asks for finite nonnegative weights whose convolution stays below the
-target and loses only subpower critical mass.
-
-This is precisely `ESGS`.  In transform language:
+The exact equality state `L_*` is simpler than the global carry state but is
+still RH-bearing. The endpoint proposal does not assume `L_*>=0`. Instead it
+constructs finite nonnegative weights whose convolution stays below the target
+and asks that their lost critical mass be subpower.
 
 ```text
 exact global equality weight      L_*          reciprocal-zeta / signed;
-finite endpoint-scale greedy      L_(X)^+      nonnegative / leaves slack;
+finite endpoint-scale greedy      L_X^+        nonnegative / leaves slack;
 closing theorem                   critical mass lost = X^o(1).
 ```
 
-The stable filter (L-26204.26)--(L-26204.27) gives an exact bridge to DCRS and
-FGCM without identifying their finite positive producers term by term.
+This is `ESGS`, with `ESBT` as its blocker-coordinate sufficient theorem. The
+stable filter gives an exact bridge to DCRS and FGCM without identifying their
+finite positive producers term by term.
 
 ## 9. Proof boundary
 
 Established here, subject to review:
 
-1. the positive scale-invariant endpoint response kernel;
+1. the positive scale-invariant endpoint kernel;
 2. its probability normalization;
-3. the endpoint-scale Volterra equation;
-4. its exact zeta symbol and equality state;
-5. the critical mass two / entropy mass four;
-6. the stable causal equivalence with the canonical carry resolvent.
+3. the endpoint Volterra equation;
+4. the Mellin identity with its correct initial and continued domains;
+5. the exact zeta symbol and physical equality state;
+6. critical mass two / entropy mass four;
+7. the stable causal equivalence with the canonical carry resolvent.
 
 Open:
 
