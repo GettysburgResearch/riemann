@@ -1,83 +1,82 @@
-# L-23203 — Well-founded reduction of centered packet systems to terminal rows
+# L-23203 — Conditional finite complexity elimination
 
 Claim ID: `L-23203`  
-Title: A finite scale/complexity packet dictionary can be eliminated exactly until only strict lower-scale terms and an explicit terminal forcing family remain  
-Status: **PROPOSED EXACT COMPOSITION LEMMA PENDING INDEPENDENT REVIEW**  
+Title: Already-proved same-scale packet inequalities can be eliminated by a finite acyclic complexity induction  
+Status: **ABSTRACT INDUCTION VERIFIED WITH FIXES; FROZEN PACKET APPLICATION BLOCKED**  
 Authoring agent: `gpt56-pro-21`  
 Created: 2026-08-07  
+Corrected: 2026-08-07 after review of frozen PR #233  
 Issue: #232  
-Dependencies: `L-15156`, `L-15157`, `L-23201`; elementary induction  
-Scope: finite auxiliary-energy systems
+Dependencies: elementary finite induction  
+Scope: composition of supplied packet inequalities; it proves no analytic row estimate
 
-## 1. Packet order
+## 1. Abstract packet system
 
-Fix an identity order `K`. Let `mathfrak P_K` be a finite packet dictionary.
-Every packet type `tau` has:
+Fix `K`.  Let `mathfrak P_K` be a finite packet dictionary.  Every packet type
+`tau` has:
 
 - a nonnegative energy `E_tau(J)`;
-- a complexity rank `c(tau)` in `{0,...,C_K}`;
-- a scale destination;
-- one of the labels `balanced`, `reduced`, or `terminal`.
+- an integer complexity `c(tau)`;
+- declared same-scale and strict-lower-scale destinations;
+- explicitly declared forcing terms.
 
-The exact dictionaries of `L-15156` and `L-23201` are examples.
-
-Let
+Define a cumulative maximum with enough fixed support slack,
 
 \[
-M_K(X)=1+\max_{\tau}\max_{0\le J\le X}E_\tau(J).
+M_K(X)
+=
+1+
+\max_\tau
+\max_{0\le J\le X+C_K}
+E_\tau(J).
 \tag{L-23203.1}
 \]
 
-Fix one `0<delta<1/2` as permitted by `L-15157`, independently of `K`.
-Assume all coefficients below are nonnegative and have logarithm `o_K(J)` for
-fixed `K`.
+## 2. Required input inequalities
 
-## 2. Nonterminal row hypotheses
-
-A balanced packet obeys
+A balanced row must already satisfy a source-specific lower-scale estimate, for
+example
 
 \[
 E_\tau(J)
 \le A_\tau(J)
-+\sum_h b_{\tau h}(J)
- \max_{u\le(1-\delta)J+C_K}E_h(u),
++
+\sum_h b_{\tau h}(J)
+\max_{u\le(1-\delta)J+C_K}E_h(u),
 \tag{L-23203.2}
 \]
 
-or a tensor analogue whose weighted scale sum is at most `kappa_K<1`.
+or a declared tensor analogue.
 
-A reduced-complexity packet obeys
+A reduced-complexity row must already satisfy
 
 \[
 \begin{aligned}
-E_\tau(J)\le A_\tau(J)
-&+\sum_{c(h)<c(\tau)}
- a_{\tau h}(J)E_h(J+C_K)\\
-&+\sum_h b_{\tau h}(J)
- \max_{u\le(1-\delta)J+C_K}E_h(u).
+E_\tau(J)
+\le A_\tau(J)
+&+
+\sum_{c(h)<c(\tau)}a_{\tau h}(J)E_h(J+C_K)\\
+&+
+\sum_h b_{\tau h}(J)
+\max_{u\le(1-\delta)J+C_K}E_h(u).
 \end{aligned}
 \tag{L-23203.3}
 \]
 
-Here `A_tau` consists only of explicitly declared terminal forcing packets and
-finite source terms. No undeclared transition or cutoff row may be placed in
-`A_tau`.
+All coefficients are nonnegative and `exp(o_K(J))`.  The forcing `A_tau`
+contains only named terminal or finite source terms.
 
-## 3. Finite complexity elimination
+The inequalities (L-23203.2)--(L-23203.3) are hypotheses.  Scale labels and
+acyclicity do not prove them.
 
-Order the packet types by increasing complexity. For complexity zero,
-(L-23203.3) contains no same-scale packet. Suppose all ranks below `r` have
-already been expressed in terms of:
+## 3. Finite elimination
 
-1. terminal forcing at scale `J+O_K(1)`;
-2. energies at scale at most `(1-delta)J+O_K(1)`;
-3. finite source terms.
+Order the rows by increasing complexity.  Substitute the already-established
+formulas for lower-complexity rows into the next rank.  Since the dictionary is
+finite, finite sums and products of `exp(o_K(J))` coefficients remain
+`exp(o_K(J))`.
 
-Substituting those expressions into every rank-`r` row gives the same form. The
-number of substitutions is bounded by the finite dictionary size, and a finite
-product or sum of `exp(o_K(J))` coefficients remains `exp(o_K(J))`.
-
-Induction therefore proves:
+Induction yields
 
 \[
 \boxed{
@@ -86,76 +85,52 @@ M_K(J)
 e^{o_K(J)}
 \left[
 1+T_K(J)
-+\max_{u\le(1-\delta)J+O_K(1)}M_K(u)
++
+\max_{u\le(1-\delta)J+O_K(1)}M_K(u)
 \right],
 }
 \tag{L-23203.4}
 \]
 
-where `T_K(J)` is the maximum of the complete declared terminal forcing family.
+where `T_K` is the complete declared forcing family.  Tensor physical-scale
+weights are unchanged by same-scale complexity substitution.
 
-For tensor rows, the same elimination preserves the tensor scale weight
-`kappa_K`, because same-scale complexity substitution does not change the
-physical scale arguments.
+## 4. Frozen-application correction
 
-## 4. Terminal forcing theorem
+At the frozen PR #233 head, the proposal treated the balanced and reduced-row
+inequalities as though they followed from the geometric partition.  They did
+not.  In particular, the balanced Type-II inequality is the RH-bearing
+arithmetic theorem.
 
-Suppose the terminal family satisfies
+The actual Type-I source regrouping is now supplied by `L-23206`, which proves
+its inequalities by exact finite re-indexing followed by signed destination
+recombination.  The balanced input remains the open theorem `BTP(K)` of
+`L-23207`.
 
-\[
-\boxed{
-T_K(J)
-\le
-\exp\{(\eta_K+o_K(1))J\}
-\left[
-1+\max_{u\le(1-\delta)J+O_K(1)}M_K(u)
-\right].
-}
-\tag{L-23203.5}
-\]
+## 5. Review checks
 
-Then (L-23203.4) becomes a closed finite-vector recurrence with coefficient
-exponent `eta_K`. The scale-contraction theorem `T-15122` gives
-
-\[
-\limsup_{J\to\infty}\frac{\log M_K(J)}J
-\le\frac{\eta_K}{\delta}
-\tag{L-23203.6}
-\]
-
-in the linear case, or `eta_K/(1-kappa_K)` in the tensor case.
-
-Since `delta` is fixed, an increasing-order family closes the linear system as
-soon as `eta_K -> 0`. Thus **only the terminal packet family needs an
-independent arithmetic estimate**. Balanced and reduced-complexity rows are
-bookkeeping once their declared inequalities have been established.
-
-## 5. Exact review consequence
-
-A claimed proof packet must contain:
+A finite consumer must reject:
 
 ```text
-complete type dictionary
-complexity rank for every type
-all same-scale edges
-proof that every same-scale edge lowers complexity
-all strict-scale destinations
-the complete terminal type list
-all transition and cutoff residuals
-coefficient exponents
+same-scale cycles
+an edge that fails to lower complexity
+an undeclared forcing row
+an omitted cutoff or transition source
+a lower-scale destination above the declared reserve
+an analytic row label without a proved inequality
 ```
-
-The checker must reject:
-
-- a cycle among same-scale reduced-complexity rows;
-- an undeclared terminal row;
-- a same-scale edge with unchanged complexity;
-- a lower-scale destination above the declared contraction;
-- total variation before signed row recombination.
 
 ## 6. Proof boundary
 
-The induction is exact. It does not prove the row inequalities
-(L-23203.2)--(L-23203.3), nor the terminal estimate (L-23203.5). Its contribution
-is to reduce the broad `CP(K)` obligation of `M-15112` to one explicit terminal
-forcing theorem plus a finite acyclicity audit.
+Verified abstractly:
+
+- finite acyclic substitution;
+- preservation of subexponential coefficients;
+- preservation of tensor scale weights.
+
+Not proved by this lemma:
+
+- balanced Type-II estimates;
+- source-specific reduced-row inequalities;
+- terminal estimates;
+- RH.
