@@ -89,7 +89,7 @@ all displayed difference indices lie in `I_X`. The local families have bounded o
 
 \[
 \boxed{
- \sum_{\substack{X/5+2\le n\le2X/5-3\\n\ {m odd}}}
+ \sum_{\substack{X/5+2\le n\le2X/5-3\\ n\ {m odd}}}
  |h_{n+1}-2h_{2n+1}|^2
  \le 8\sum_{m\in I_X}|d_m|^2.
 }
@@ -173,7 +173,7 @@ Use the dyadic family (L-26107.7). For each eligible `n`,
  -2(h_{2n+1}-\overline h).
 \]
 
-There are `gg X` eligible odd integers and both index maps have bounded multiplicity. Summing squares and applying (L-26107.7)--(L-26107.11) yields
+There are `\gg X` eligible odd integers and both index maps have bounded multiplicity. Summing squares and applying (L-26107.7)--(L-26107.11) yields
 
 \[
  X|\overline h|^2
