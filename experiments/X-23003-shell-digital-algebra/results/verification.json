@@ -1,0 +1,25 @@
+{
+  "N": 512,
+  "coefficient_checks": {
+    "binary_digit_partial_sum_mismatches": 0,
+    "bit_layer_factorization_mismatches": 0,
+    "c2_convolved_b2_mismatches": 0,
+    "dyadic_shell_summatory_mismatches": 0,
+    "parity_convolved_b2_mismatches": 0
+  },
+  "proof_boundary": "Finite integer and rational-floor algebra only; no asymptotic shell estimate, parity-comb coercivity, or RH conclusion.",
+  "proof_object_sha256": "1fedcc71674943b736fc0b80a51be664372f58f58576bafceb5cf2c287a2df9c",
+  "ratio_transfer": [
+    {"dyadic_filter": 1, "first_cell": 1, "x": 1},
+    {"dyadic_filter": -1, "first_cell": -1, "x": 2},
+    {"dyadic_filter": -1, "first_cell": -1, "x": 3},
+    {"dyadic_filter": 0, "first_cell": 0, "x": 10},
+    {"dyadic_filter": -1, "first_cell": -1, "x": 31},
+    {"dyadic_filter": 2, "first_cell": 2, "x": 100},
+    {"dyadic_filter": 1, "first_cell": 1, "x": 255},
+    {"dyadic_filter": -7, "first_cell": -7, "x": 512}
+  ],
+  "schema": "riemann.x23003-shell-digital-algebra.result.v1",
+  "verdict": "EXACT_RATIO_SHELL_DIGITAL_AND_PARITY_COMB_COEFFICIENT_ALGEBRA_VERIFIED",
+  "verified": true
+}
