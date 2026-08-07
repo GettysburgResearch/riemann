@@ -12,6 +12,7 @@
     "64": -1
   },
   "digital_identity_limit": 512,
+  "mobius_row_collapse_checks": 276,
   "parity_rows": {
     "1": 1,
     "16": 0,
@@ -24,7 +25,9 @@
   },
   "schema": "X-23701-v1",
   "scope": "exact finite algebra and rational synthetic greedy feasibility only; does not verify logarithmic target asymptotics, DBT, or RH",
+  "synthetic_adjoint_inverse_mismatches": 0,
   "synthetic_coefficient_mass": "818910529/446185740",
+  "synthetic_discrete_convexity_failures": 0,
   "synthetic_endpoint": 24,
   "synthetic_mass": "16026161617007/2319050383650",
   "synthetic_min_coefficient": "0",
