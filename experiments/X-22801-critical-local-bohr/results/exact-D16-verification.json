@@ -1,0 +1,29 @@
+{
+  "classification": "EXACT_FINITE_REGRESSION_ONLY",
+  "coefficient_identity_checks": 1234,
+  "max_D": 16,
+  "maximum_ratio": "32421033/18019750",
+  "maximum_ratio_D": 10,
+  "proof_boundary": "This verifies exact reduced coefficients, the Jordan Bohr energy, and small-D physical integrals for the truncated centered packet. It does not verify the completed endpoint cancellation or the uniform Farey operator estimate in T-22801.",
+  "proof_object_sha256": "0c606242167ca7b7ab213a0a2c9ac97fb8488591c43af1cdb78a2a2fb0e12c9c",
+  "ratio_upper": "9/4",
+  "rows": [
+    {"D": 1, "bohr_energy": "4/45", "local_energy": "4/45", "ratio": "1"},
+    {"D": 2, "bohr_energy": "11/120", "local_energy": "11/60", "ratio": "1"},
+    {"D": 3, "bohr_energy": "41/270", "local_energy": "1129/2160", "ratio": "1129/984"},
+    {"D": 4, "bohr_energy": "41/270", "local_energy": "239/270", "ratio": "239/164"},
+    {"D": 5, "bohr_energy": "19027/81000", "local_energy": "6727/6480", "ratio": "33635/38054"},
+    {"D": 6, "bohr_energy": "1373/6750", "local_energy": "44354/28125", "ratio": "44354/34325"},
+    {"D": 7, "bohr_energy": "354/1225", "local_energy": "9743791/4134375", "ratio": "165149/141750"},
+    {"D": 8, "bohr_energy": "354/1225", "local_energy": "603956116/202584375", "ratio": "150989029/117085500"},
+    {"D": 9, "bohr_energy": "354/1225", "local_energy": "269320246/67528125", "ratio": "134660123/87814125"},
+    {"D": 10, "bohr_energy": "1471/5292", "local_energy": "1200779/240100", "ratio": "32421033/18019750"},
+    {"D": 11, "bohr_energy": "58498841/160083000", "local_energy": "257615356877/43578150000", "ratio": "2318538211893/1576543764950"},
+    {"D": 12, "bohr_energy": "58498841/160083000", "local_energy": "6815871028327/988679278125", "ratio": "13631742056654/8670990707225"},
+    {"D": 13, "bohr_energy": "14631161/32207175", "local_energy": "21150530244517417/2673388768050000", "ratio": "21150530244517417/15788163949558000"},
+    {"D": 14, "bohr_energy": "1519630457/3381753375", "local_energy": "24945443251777751/3457673738268750", "ratio": "24945443251777751/21752446250635100"},
+    {"D": 15, "bohr_energy": "2872439513/5797291500", "local_energy": "7517807075956054/677704052700675", "ratio": "1582696226517064/1060384781645189"},
+    {"D": 16, "bohr_energy": "2872439513/5797291500", "local_energy": "3213952380931457339/254139019762753125", "ratio": "3213952380931457339/2014731085125859100"}
+  ],
+  "schema": "riemann.x22801-critical-local-bohr.v1"
+}
