@@ -1,0 +1,203 @@
+{
+  "false_step_mutation_rejected": true,
+  "fixed_reserve_control": {
+    "K": 6,
+    "delta": "1/5",
+    "one_over_K_below_delta": true
+  },
+  "formal_moment_rows": [
+    {
+      "all_zero": true,
+      "difference_order": 1,
+      "formal_half_pole_moments": [
+        0
+      ]
+    },
+    {
+      "all_zero": true,
+      "difference_order": 2,
+      "formal_half_pole_moments": [
+        0,
+        0
+      ]
+    },
+    {
+      "all_zero": true,
+      "difference_order": 3,
+      "formal_half_pole_moments": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "all_zero": true,
+      "difference_order": 4,
+      "formal_half_pole_moments": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "all_zero": true,
+      "difference_order": 5,
+      "formal_half_pole_moments": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "all_zero": true,
+      "difference_order": 6,
+      "formal_half_pole_moments": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "all_zero": true,
+      "difference_order": 7,
+      "formal_half_pole_moments": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "all_zero": true,
+      "difference_order": 8,
+      "formal_half_pole_moments": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "schema": "X-15416-v1",
+  "scope": "exact finite combinatorial algebra only; does not independently verify the bounded-variation Euler estimate or BTP(K)",
+  "solution_geometry": [
+    {
+      "equation_invariant_count": 1,
+      "false_shift_residue_class_count": 3,
+      "false_shift_residue_classes": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "gcd": 5,
+      "q": 5,
+      "r": 5,
+      "reduced_solution_count_in_box": 60,
+      "true_step": [
+        1,
+        1
+      ],
+      "true_step_consistent": true,
+      "v": 5
+    },
+    {
+      "equation_invariant_count": 1,
+      "false_shift_residue_class_count": 1,
+      "false_shift_residue_classes": [
+        [
+          1,
+          1
+        ]
+      ],
+      "gcd": 1,
+      "q": 5,
+      "r": 1,
+      "reduced_solution_count_in_box": 27,
+      "true_step": [
+        5,
+        6
+      ],
+      "true_step_consistent": true,
+      "v": 6
+    },
+    {
+      "equation_invariant_count": 1,
+      "false_shift_residue_class_count": 2,
+      "false_shift_residue_classes": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "gcd": 4,
+      "q": 8,
+      "r": 4,
+      "reduced_solution_count_in_box": 27,
+      "true_step": [
+        2,
+        3
+      ],
+      "true_step_consistent": true,
+      "v": 12
+    }
+  ],
+  "terminal_exponent_rows": [
+    {
+      "amplitude_exponent": "-3/10",
+      "contracting": true,
+      "delta": "1/5",
+      "energy_exponent": "-3/5"
+    },
+    {
+      "amplitude_exponent": "-1/4",
+      "contracting": true,
+      "delta": "1/4",
+      "energy_exponent": "-1/2"
+    },
+    {
+      "amplitude_exponent": "-1/6",
+      "contracting": true,
+      "delta": "1/3",
+      "energy_exponent": "-1/3"
+    },
+    {
+      "amplitude_exponent": "-1/10",
+      "contracting": true,
+      "delta": "2/5",
+      "energy_exponent": "-1/5"
+    },
+    {
+      "amplitude_exponent": "-1/100",
+      "contracting": true,
+      "delta": "49/100",
+      "energy_exponent": "-1/50"
+    }
+  ],
+  "verdict": "SYNTHETIC_TERMINAL_EULER_GEOMETRY_VERIFIED"
+}
