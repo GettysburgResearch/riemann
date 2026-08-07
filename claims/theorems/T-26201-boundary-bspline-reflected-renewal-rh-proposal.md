@@ -46,46 +46,57 @@ coherent Mertens mode rather than averaging it away.
 
 ## 2. Consequence of `BSRC`
 
+Put
+
+\[
+ B=\frac14\log2,
+ \qquad
+ \delta=\frac34\log2.
+ \tag{T-26201.4}
+\]
+
 Assume `L-26203`, so for some fixed `R,M` one has
 
 \[
  \mathcal E_{R,M}(J)
  \le C(1+J)^A
  +\theta\left[
-  1+\max_{u\le J-\log2+C}
+  1+\max_{u\le J-\delta}
   \mathcal E_{R,M}(u)
  \right],
- \qquad 0<\theta<1.
- \tag{T-26201.4}
+ \qquad 0<\theta<1,
+ \tag{T-26201.5}
 \]
 
+where every graph energy is integrated over a block of length `B`.
+
 Absorb the finitely many initial blocks into one constant. Iteration over the
-strict delay gives
+fixed strict delay `delta` gives
 
 \[
  \boxed{
  \mathcal E_{R,M}(J)=O_{R,M}((1+J)^{A+1}).}
- \tag{T-26201.5}
-\]
-
-In particular,
-
-\[
- \int_0^X|U_R(t)|^2dt=\exp(o(X)).
  \tag{T-26201.6}
 \]
 
-The asymptotic version `L-26203.6` yields the same conclusion by first choosing
+Covering `[0,X]` by `O(X/B)` short blocks yields
+
+\[
+ \int_0^X|U_R(t)|^2dt=\exp(o(X)).
+ \tag{T-26201.7}
+\]
+
+The asymptotic version `L-26203.8` yields the same conclusion by first choosing
 one order for which the final contraction constant is strictly below one.
 
 ## 3. Hardy continuation
 
-Equation (T-26201.6) implies
+Equation (T-26201.7) implies
 
 \[
  e^{-\sigma t}U_R(t)\in L^2(0,\infty)
  \qquad(\sigma>0).
- \tag{T-26201.7}
+ \tag{T-26201.8}
 \]
 
 Paley-Wiener/Hardy theory for one-sided Laplace transforms therefore makes
@@ -93,7 +104,7 @@ Paley-Wiener/Hardy theory for one-sided Laplace transforms therefore makes
 
 \[
  \boxed{\Re z>0.}
- \tag{T-26201.8}
+ \tag{T-26201.9}
 \]
 
 The identity (T-26201.2), initially valid in its absolute-convergence
@@ -103,19 +114,19 @@ If `rho` were a nontrivial zeta zero with `Re rho>1/2`, then
 
 \[
  z_\rho=\rho-\frac12
- \tag{T-26201.9}
+ \tag{T-26201.10}
 \]
 
 would lie in `Re z>0`. The boundary numerator is nonzero at `z_rho` by
 Section 1, so the right side of (T-26201.2) would have an uncancelled pole. This
-contradicts (T-26201.8).
+contradicts (T-26201.9).
 
 Thus
 
 \[
  \zeta(s)\ne0
  \qquad(\Re s>1/2).
- \tag{T-26201.10}
+ \tag{T-26201.11}
 \]
 
 Functional-equation and conjugation symmetry give the reflected exclusion, and
@@ -123,7 +134,7 @@ all nontrivial zeros lie on the critical line:
 
 \[
  \boxed{\mathrm{RH}.}
- \tag{T-26201.11}
+ \tag{T-26201.12}
 \]
 
 ## 4. Independent carry replay
@@ -174,6 +185,6 @@ conditional deduction to RH         COMPLETE
 Riemann Hypothesis                   UNPROVED
 ```
 
-A reviewer should focus on the finite source LMI `L-26203.9`. Failure of that
+A reviewer should focus on the finite source LMI `L-26203.11`. Failure of that
 LMI rejects the proposal without affecting the exact carry, B-spline, or renewal
 identities.
