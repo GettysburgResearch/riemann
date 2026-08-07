@@ -155,7 +155,7 @@ Let `c_X` be the unique real triangular inverse
 
 \[
 B_X^Tc_X=w_X.
-\tag{L-23802.9]
+\tag{L-23802.9}
 \]
 
 Write `c_X=c_X^+-c_X^-` coordinatewise. Since `B_X>=0`,
