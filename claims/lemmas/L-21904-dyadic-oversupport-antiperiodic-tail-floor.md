@@ -269,23 +269,50 @@ has a uniform ordinary-tail moat.
 
 ## 6. Quotient version after a fixed low packet
 
-Let `W_R:R_L->L2(R)` be any fixed-dimensional low corrected-tail synthesis
-whose translated negative cells obey the same `o(1)` ledger.  Let
+Let `W_R:R_L->L2(R)` be a fixed-dimensional low corrected-tail synthesis.  To
+pass from the cardinal-only floor to a joint Schur floor, one must retain the
+following explicit cell hypothesis; negative-cell decay alone is not enough:
 
 \[
- B_L=\Pi_N\mathcal A_LW_R(R_L)\subset E_N(L).
+ \boxed{
+ \|\mathcal A_L f\|_{L^2(I_L)}
+ \le(\sqrt2+o(1))\|f\|_{L^2(\mathbb R)}
+ \quad
+ \text{for every }f\in\operatorname{Ran}(W_C\oplus W_R).
+ }
  \tag{L-21904.27}
 \]
 
-Choose the cardinal quotient `C_L` to be `G`-orthogonal to `B_L` and to the
+For compact two-cell source images this follows from the same parallelogram
+estimate as Section 5 plus the aggregate `o(1)` ledger for all remaining
+translated cells.  A production use with a prolate/BV low source must verify
+this joint translated-cell bound; it may not infer it from dimension alone.
+
+Put
+
+\[
+ B_L=\Pi_N\mathcal A_LW_R(R_L)\subset E_N(L)
+ \tag{L-21904.28}
+\]
+
+and choose the cardinal quotient `C_L` to be `G`-orthogonal to `B_L` and to the
 finite low vectors themselves.  Then for all `c in C_L` and `r in R_L`,
 
 \[
  \langle y_c,\mathcal A_LW_Rr\rangle=0.
- \tag{L-21904.28}
+ \tag{L-21904.29}
 \]
 
-Applying the preceding two-cell estimate to `W_Cc+W_Rr` gives
+Since `y_c in E_N(L)`, the high-Fourier part of `mathcal A_LW_Rr` is also
+orthogonal to `y_c`; hence
+
+\[
+ \|\mathcal A_L(W_Cc+W_Rr)\|_2^2
+ \ge\|y_c\|_2^2.
+ \tag{L-21904.30}
+\]
+
+Combining this with (L-21904.27) gives
 
 \[
  \boxed{
@@ -293,35 +320,39 @@ Applying the preceding two-cell estimate to `W_Cc+W_Rr` gives
  \|W_Cc+W_Rr\|_2^2
  \ge[1/2-o(1)]\|c\|_2^2.
  }
- \tag{L-21904.29}
+ \tag{L-21904.31}
 \]
 
 Equivalently, the ordinary-tail Schur short of the cardinal block by the fixed
-low packet has a uniform positive floor.
+low packet has a uniform positive floor, **provided the declared joint-cell
+bound (L-21904.27) is proved**.
 
-The codimension added in (L-21904.27) is at most twice `dim R_L`; it does not
+The codimension added in (L-21904.28) is at most twice `dim R_L`; it does not
 affect a growing complete Fourier diagonal.
 
 ## 7. Consequence and boundary
 
-This lemma closes the **ordinary metric/concentration** part of the hybrid
-completion:
+The unconditional-in-the-cardinal-frame conclusion is
 
 ```text
-fixed Xi/prolate low packet
-+ twice-period all-grid cardinal quotient
-=> complete ordinary corrected-tail Schur floor >=1/2-o(1).
+twice-period all-grid cardinals
+=> complete ordinary corrected-tail floor >=1/2-o(1).
 ```
 
-It does not prove the sign of the actual Weil form on the quotient.  A
-hypothetical off-line zero may still create a signed zero-side orbit.  That
-arithmetic sign must be handled by the line-centered/actual-orbit theorem or by
-an independent prime-side argument.
+The hybrid low-packet quotient additionally requires the explicit joint-cell
+hypothesis (L-21904.27).  This requirement is now stated rather than silently
+inferred.
+
+Neither conclusion proves the sign of the actual Weil form.  A hypothetical
+off-line zero may still create a signed zero-side orbit.  That arithmetic sign
+must be handled by the line-centered/actual-orbit theorem or by an independent
+prime-side argument.
 
 - The half-grid algebra and antiperiodization identity are exact.
 - The decay rate (L-21904.22) follows from the declared safe-support graph bound
   and classical Poisson decay; production must bind its constants in the exact
   source normalization.
-- The quotient floor is basis invariant after the stated finite orthogonal
-  enlargement.
+- The cardinal-only floor is complete under that graph bound.
+- The quotient floor is conditional on the joint translated-cell operator
+  bound (L-21904.27).
 - No RH conclusion is claimed by this lemma alone.
