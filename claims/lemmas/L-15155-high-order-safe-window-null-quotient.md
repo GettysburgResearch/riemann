@@ -1,12 +1,13 @@
-# L-15155 — High-order safe windows and the rowwise null-mode quotient
+# L-15155 — High-order safe windows and the null-mode quotient
 
 Claim ID: `L-15155`  
-Title: Boundary-safe finite differences annihilate every prescribed polynomial pole model, so exact decomposition rows may be centered independently before the adjoint Gram estimate  
+Title: Boundary-safe finite differences annihilate every certified polynomial pole model and provide an exact packet-centering quotient  
 Status: **PROPOSED EXACT LEMMA PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-04-f`  
 Created: 2026-08-07  
+Updated: 2026-08-07 after finite-cutoff companion audit  
 Dependencies: `L-15153`; PR #216 `L-21501/T-21502`  
-Scope: exact rowwise-centering repair for finite Vaughan/Heath--Brown packets
+Scope: exact null-space mechanism for finite Vaughan/Heath--Brown packets; no estimate for cutoff or transition residuals
 
 ## 1. Two boundary difference operators
 
@@ -27,7 +28,7 @@ and no zero in
  \tag{L-15155.2}
 \]
 
-Define the finite translation differences
+Define
 
 \[
  (\Delta_0f)(u)=f(u)-f(u-1),
@@ -41,7 +42,7 @@ and
  \tag{L-15155.4}
 \]
 
-Their bilateral Laplace multipliers are respectively
+Their bilateral Laplace multipliers are
 
 \[
  1-e^{-z}
@@ -59,7 +60,7 @@ For an integer `m>=1`, put
  \tag{L-15155.6}
 \]
 
-Then `H^[m]` is still compactly supported and piecewise linear, and
+Then `H^[m]` is compactly supported and piecewise linear, and
 
 \[
  \boxed{
@@ -81,7 +82,7 @@ Thus every `H^[m]` is independently safe for the rightmost-pole transfer.
 
 ## 2. Polynomial moment annihilation
 
-For `alpha in {0,1/2}` and `0<=r<m`, the order-`m` zero gives
+For `alpha in {0,1/2}` and `0<=r<m`,
 
 \[
  \boxed{
@@ -148,9 +149,9 @@ Put
 The finite Gram form descends exactly to the quotient of signed source measures
 by `mathcal N_m`.
 
-## 3. Independent rowwise centering
+## 3. Exact independent subtraction rule
 
-For finite signed measures `nu,tau`, write
+For signed measures `nu,tau`, write
 
 \[
  \mathfrak B_{J,m}(\nu,\tau)
@@ -158,14 +159,15 @@ For finite signed measures `nu,tau`, write
  \tag{L-15155.14}
 \]
 
-Let an exact finite arithmetic decomposition be
+Let
 
 \[
- \nu=\sum_{a=1}^R\nu_a.
+ \nu=\sum_{a=1}^R\nu_a
  \tag{L-15155.15}
 \]
 
-For each row choose an arbitrary polynomial pole companion
+be any finite exact decomposition. For each packet choose a source-bound
+companion
 
 \[
  \rho_a\in\mathcal N_m.
@@ -173,7 +175,7 @@ For each row choose an arbitrary polynomial pole companion
 \]
 
 No compatibility condition such as `sum rho_a=0` is required. Equations
-(L-15155.12)--(L-15155.14) give the exact identity
+(L-15155.12)--(L-15155.14) give
 
 \[
  \boxed{
@@ -184,17 +186,13 @@ No compatibility condition such as `sum rho_a=0` is required. Equations
  \tag{L-15155.17}
 \]
 
-Thus the concern that continuous main terms cancel only after all Vaughan or
-Heath--Brown rows are recombined is removed at the kernel level: each row may
-be centered by its own Laurent-polynomial companion, provided the window order
-exceeds the companion degree.
+This is an exact quotient identity. It says that a companion **already proved
+to lie in `N_m`** may be removed independently. It does not say that a proposed
+finite-cutoff main term lies in `N_m`.
 
-This is a quotient identity, not an asymptotic approximation.
+## 4. Positive auxiliary-vector reduction
 
-## 4. Positive row closure
-
-The kernel is positive semidefinite because it is a Gram of translated windows.
-Define the row energies
+Define
 
 \[
  E_a(J)=\mathfrak B_{J,m}(\nu_a-\rho_a,
@@ -222,23 +220,22 @@ Hence
  \tag{L-15155.20}
 \]
 
-Every cross row is therefore controlled by a finite vector of nonnegative
-self-energies. The decomposition does not have to identify each auxiliary row
-with the original prime block.
+Thus, after signed packet grouping and certified companion subtraction, all
+cross terms reduce to a finite vector of nonnegative self-energies.
 
-## 5. Application to fixed-order Heath--Brown rows
+## 5. Heath--Brown Laurent principal parts
 
-For a fixed identity order `K`, a row of the standard finite Heath--Brown
-identity has Dirichlet series
+For fixed order `K`, the unpartitioned `j`-th Heath--Brown summand has Dirichlet
+series
 
 \[
  M_V(s)^j[-\zeta'(s)]\zeta(s)^{j-1},
- \qquad1\le j\le K,
+ \qquad1\le j\le K.
  \tag{L-15155.21}
 \]
 
-where `M_V` is a finite Möbius polynomial. Its pole at `s=1` has order at most
-`j+1<=K+1`. The inverse pole model is therefore
+Its Laurent principal part at `s=1` has order at most `j+1<=K+1`. The inverse
+principal-part density is, beyond the fixed initial half-line endpoint,
 
 \[
  e^{u/2}\times
@@ -253,11 +250,19 @@ Choosing
  \tag{L-15155.23}
 \]
 
-places every row pole model in `mathcal N_m`. Consequently all rows can be
-centered independently before Type-I/Type-II estimates are applied.
+places that **global Laurent principal part** in `N_m`.
 
-This closes the rowwise-centering gate identified in the latest review. It does
-not supply the Type-II estimates themselves.
+However, a first-crossing partition of the finite summand introduces truncated
+factor ranges, shifted step boundaries, and compact transition sources. Those
+pieces are not automatically global polynomial densities. They must either:
+
+1. remain in the packet source;
+2. be separated and estimated explicitly; or
+3. be removed only after a separate certificate proves membership in `N_m`.
+
+Consequently this lemma closes the null-space mechanism, not the analytic
+rowwise-centering estimate. The companion and transition ledger belongs to
+`CP(K)` in `L-15156/M-15112`.
 
 ## 6. Proof boundary
 
@@ -265,12 +270,13 @@ Closed here:
 
 - explicit high-order compact safe windows;
 - their complete boundary zero geometry;
-- annihilation of every prescribed finite polynomial pole model;
-- exact independent row centering;
-- reduction of all cross terms to a finite vector of positive row energies.
+- annihilation of every certified finite polynomial pole model;
+- exact independent subtraction in the null quotient;
+- reduction of all cross packets to a finite vector of positive self-energies.
 
 Not closed:
 
-- subexponential bounds for the centered row energies;
-- closure of the auxiliary vector under a scale decomposition;
+- construction of useful companions for finite cutoff packets;
+- estimates of shifted-boundary and transition residuals;
+- subexponential bounds for the packet energies;
 - RH.
