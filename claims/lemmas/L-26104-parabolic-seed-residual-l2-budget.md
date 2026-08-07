@@ -46,7 +46,15 @@ and
 
 ## 2. Periodic selector decomposition
 
-Fix an integer `q>=2`. Let
+The row `q=X` has
+
+\[
+ v_X(b_X^{(0)})=b_X(X)-b_{X+1}=0,
+\]
+
+so its positive residual is zero. It remains to treat `2<=q<=X-1`.
+
+Let
 
 \[
  \chi_q(t)
@@ -71,10 +79,16 @@ Because the positive part of one period has length one and the compensating slop
 Let
 
 \[
- T_q=1+q\left\lfloor\frac{X-1}{q}\right\rfloor\le X.
+ T_q=1+q\left\lfloor\frac{X-1}{q}\right\rfloor.
 \]
 
-The final term `b_X(X)-b_(X+1)` is zero when `q|X`, so the exact finite constraint can be written
+For `q<=X-1`, one has `q<T_q<=X`. The intervals retained by `chi_q` correspond exactly to all nonzero terms in the finite constraint. If `q|X`, the omitted final term is
+
+\[
+ b_X(X)-b_{X+1}=0.
+\]
+
+Therefore
 
 \[
  v_q(b_X^{(0)})
@@ -140,7 +154,7 @@ Also
 
 \[
  \frac{b_X(q)}q
- =\frac{2L_q-4}{\sqrt q}+rac4{\sqrt X}
+ =\frac{2L_q-4}{\sqrt q}+\frac4{\sqrt X}
  \le\frac{2L_q+4}{\sqrt q}.
  \tag{L-26104.12}
 \]
@@ -193,6 +207,7 @@ Therefore
  \ll\log^{3/2}(2X)=X^{o(1)}.
 }
 \tag{L-26104.16}
+\]
 
 This proves `SAF1` unconditionally.
 
