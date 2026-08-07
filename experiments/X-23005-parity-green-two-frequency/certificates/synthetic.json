@@ -1,0 +1,9 @@
+{
+  "schema": "riemann.x23005.parity-green-two-frequency.v1",
+  "mobius_limit": 256,
+  "digit_bases": [2, 3, 5],
+  "dyadic_orders": [2, 3, 4, 5, 6, 7, 8],
+  "poincare_orders": [1, 2, 3, 4, 5, 8, 12],
+  "digital_recurrence_limit": 192,
+  "proof_boundary": "Exact finite coefficient, matrix, and formal-kernel algebra only; no asymptotic coercivity, PGC(R), Mertens estimate, or RH claim is certified."
+}
