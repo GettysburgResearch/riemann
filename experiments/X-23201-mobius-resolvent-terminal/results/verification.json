@@ -1,0 +1,44 @@
+{
+  "classification": "EXACT_SYNTHETIC_PROPOSAL_REGRESSION",
+  "geometric_difference": {
+    "checks": 1000,
+    "integer_points": 200,
+    "orders": 5,
+    "ratio": [
+      2,
+      3
+    ]
+  },
+  "mobius_resolvent": {
+    "cutoff_v": 3,
+    "first_residual_support": 5,
+    "mismatch_count": 0,
+    "order": 4,
+    "xmax": 60
+  },
+  "proof_boundary": "Exact finite algebra only. This does not prove the source-specific terminal Selberg-Hankel contraction STC(K), its vanishing rate, or RH.",
+  "proof_object_sha256": "611f6dcf0dc450e58209b078cf0596d634d8d01b4ccb58f28e57d16085aa1911",
+  "schema": "riemann.x23201-mobius-resolvent-terminal.v1",
+  "terminal_adapter": {
+    "complexity_closed_value": [
+      92,
+      1
+    ],
+    "forcing": [
+      5,
+      1
+    ],
+    "hankel_energy": [
+      4,
+      1
+    ],
+    "linear_reserve": [
+      1,
+      1
+    ],
+    "terminal_energy": [
+      2,
+      1
+    ]
+  }
+}
