@@ -6,7 +6,7 @@ Status: **FULL PROPOSAL PENDING INDEPENDENT REVIEW — `STC(K)` OPEN**
 Authoring agent: `gpt56-pro-21`  
 Created: 2026-08-07  
 Issue: #232  
-Base: PR #158 at `c5a57f33ae5c33fe16ded944ab2d3c50edc7fe07`  
+Base: PR #158 at `9ee33527aef3acbb281ebad367aeb1e51652d006`  
 Cross-branch inputs: PR #229 at `1daf03443265ce36cfb6efbd8de1ca9c702de793`; PR #216 at `b76eef1b769584aa9d66d082bfc6634126f986a2`  
 Scope: complete proposed proof architecture; RH is not claimed proved
 
@@ -81,6 +81,17 @@ certified. All remaining sources stay in the packet.
 All tuple rows sharing a destination are recombined with their exact signs
 before any norm.
 
+The fixed-reserve partition `L-15157` permits one number
+
+\[
+0<\delta<\frac12
+\]
+
+to be chosen independently of `K`. Balanced packets lie below
+`(1-delta)J+O_K(1)`, while every Type-I row exposes a complementary packet below
+`delta J+O_K(1)`. Thus the linear increasing-order target is `eta_K -> 0`;
+there is no artificial `1/K` loss in the scale reserve.
+
 ## 3. Reduction to terminal rows
 
 Apply `L-23203` to the finite packet dictionary.
@@ -95,7 +106,7 @@ complexity. After this well-founded elimination, the complete block satisfies
 e^{o_K(J)}
 \left[
 1+T_K(J)
-+\max_{u\le(1-\delta_K)J+O_K(1)}M_K(u)
++\max_{u\le(1-\delta)J+O_K(1)}M_K(u)
 \right],
 \tag{T-23201.3}
 \]
@@ -117,7 +128,7 @@ T_K(J)
 \le
 \exp\{(\eta_K+o_K(1))J\}
 \left[
-1+\max_{u\le(1-\delta_K)J+O_K(1)}M_K(u)
+1+\max_{u\le(1-\delta)J+O_K(1)}M_K(u)
 \right].
 \tag{T-23201.4}
 \]
@@ -128,7 +139,7 @@ Then `L-23203` yields a closed finite-vector recurrence, and `T-15122` gives
 \boxed{
 2\Theta_\zeta
 \le
-\frac{\eta_K}{\delta_K}
+\frac{\eta_K}{\delta}
 }
 \tag{T-23201.5}
 \]
@@ -144,16 +155,18 @@ in the linear case, or
 
 for the tensor recurrence.
 
-If `STC(K)` is proved for an unbounded sequence of orders with
+Because `delta` is fixed and positive, it is enough to prove `STC(K)` for an
+unbounded sequence of orders with
 
 \[
 \boxed{
-\frac{\eta_K}{\delta_K}\longrightarrow0
+\eta_K\longrightarrow0.
 }
 \tag{T-23201.7}
 \]
 
-or the tensor analogue, then
+The tensor alternative still requires
+`eta_K/(1-kappa_K) -> 0`. Under either condition,
 
 \[
 \Theta_\zeta=0.
@@ -209,7 +222,7 @@ The decisive questions are:
 - Does the positive Hankel mixture dominate the actual terminal kernel?
 - Is the Selberg forcing ledger source bound with the correct signs?
 - Does the residual route to a genuinely lower scale?
-- Does the rate tend to zero relative to the contraction?
+- Does the coefficient exponent `eta_K` tend to zero?
 - Does the certificate control the first-cell Mertens mutation?
 
 ## 7. Proof-producing form
@@ -227,7 +240,7 @@ positive exponential weights and exponents
 Hankel Gram/Loewner certificates
 Selberg forcing and linear-reserve intervals
 lower-scale residual routes
-eta_K, delta_K, or kappa_K
+eta_K, fixed delta, or kappa_K
 first-cell Mertens mutation
 ```
 
@@ -241,11 +254,12 @@ unbounded proof-producing family; finitely many passing orders do not imply RH.
 safe Hardy front door                         PROPOSED / inherited
 high-order null quotient                      PROPOSED EXACT
 finite Heath-Brown packet                     PROPOSED EXACT
+fixed-reserve packet partition                PROPOSED EXACT
 finite Möbius resolvent                       PROPOSED EXACT
 high-order Mertens equivalence                PROPOSED EXACT
 well-founded terminal reduction               PROPOSED EXACT
 positive Selberg-Hankel adapter                PROPOSED EXACT
-STC(K) construction and vanishing rate        OPEN
+STC(K) construction with eta_K -> 0           OPEN
 Riemann Hypothesis                            UNPROVED
 ```
 
