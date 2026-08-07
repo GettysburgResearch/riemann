@@ -1,0 +1,9 @@
+{
+  "schema": "riemann.x22801-critical-local-bohr.v1",
+  "max_D": 16,
+  "ratio_upper": [9, 4],
+  "expected_max_D": 10,
+  "expected_max_ratio": [32421033, 18019750],
+  "classification": "EXACT_FINITE_REGRESSION_ONLY",
+  "proof_boundary": "The certificate tests small-D exact arithmetic only. It is not evidence for the uniform theorem T-22801."
+}
