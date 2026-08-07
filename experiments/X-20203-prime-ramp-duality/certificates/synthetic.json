@@ -1,0 +1,44 @@
+{
+  "schema": "riemann.x20203-prime-ramp.synthetic.v1",
+  "q": [
+    {"numerator": "1", "denominator": "1"},
+    {"numerator": "-2", "denominator": "1"},
+    {"numerator": "1", "denominator": "1"}
+  ],
+  "lambda": [
+    {"numerator": "30", "denominator": "1"},
+    {"numerator": "-12", "denominator": "1"},
+    {"numerator": "2", "denominator": "1"}
+  ],
+  "half_ratio": {"numerator": "1", "denominator": "6"},
+  "samples": [
+    {
+      "s": {"numerator": "0", "denominator": "1"},
+      "value": {"numerator": "12", "denominator": "1"}
+    },
+    {
+      "s": {"numerator": "1", "denominator": "2"},
+      "value": {"numerator": "2", "denominator": "1"}
+    },
+    {
+      "s": {"numerator": "1", "denominator": "1"},
+      "value": {"numerator": "-8", "denominator": "1"}
+    },
+    {
+      "s": {"numerator": "3", "denominator": "2"},
+      "value": {"numerator": "-3", "denominator": "1"}
+    },
+    {
+      "s": {"numerator": "2", "denominator": "1"},
+      "value": {"numerator": "2", "denominator": "1"}
+    },
+    {
+      "s": {"numerator": "5", "denominator": "2"},
+      "value": {"numerator": "1", "denominator": "1"}
+    },
+    {
+      "s": {"numerator": "3", "denominator": "1"},
+      "value": {"numerator": "0", "denominator": "1"}
+    }
+  ]
+}
