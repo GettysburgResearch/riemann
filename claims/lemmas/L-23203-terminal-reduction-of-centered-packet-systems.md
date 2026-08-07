@@ -6,7 +6,7 @@ Status: **PROPOSED EXACT COMPOSITION LEMMA PENDING INDEPENDENT REVIEW**
 Authoring agent: `gpt56-pro-21`  
 Created: 2026-08-07  
 Issue: #232  
-Dependencies: `L-15156`, `L-23201`; elementary induction  
+Dependencies: `L-15156`, `L-15157`, `L-23201`; elementary induction  
 Scope: finite auxiliary-energy systems
 
 ## 1. Packet order
@@ -28,6 +28,7 @@ M_K(X)=1+\max_{\tau}\max_{0\le J\le X}E_\tau(J).
 \tag{L-23203.1}
 \]
 
+Fix one `0<delta<1/2` as permitted by `L-15157`, independently of `K`.
 Assume all coefficients below are nonnegative and have logarithm `o_K(J)` for
 fixed `K`.
 
@@ -39,7 +40,7 @@ A balanced packet obeys
 E_\tau(J)
 \le A_\tau(J)
 +\sum_h b_{\tau h}(J)
- \max_{u\le(1-\delta_K)J+C_K}E_h(u),
+ \max_{u\le(1-\delta)J+C_K}E_h(u),
 \tag{L-23203.2}
 \]
 
@@ -53,7 +54,7 @@ E_\tau(J)\le A_\tau(J)
 &+\sum_{c(h)<c(\tau)}
  a_{\tau h}(J)E_h(J+C_K)\\
 &+\sum_h b_{\tau h}(J)
- \max_{u\le(1-\delta_K)J+C_K}E_h(u).
+ \max_{u\le(1-\delta)J+C_K}E_h(u).
 \end{aligned}
 \tag{L-23203.3}
 \]
@@ -69,7 +70,7 @@ Order the packet types by increasing complexity. For complexity zero,
 already been expressed in terms of:
 
 1. terminal forcing at scale `J+O_K(1)`;
-2. energies at scale at most `(1-delta_K)J+O_K(1)`;
+2. energies at scale at most `(1-delta)J+O_K(1)`;
 3. finite source terms.
 
 Substituting those expressions into every rank-`r` row gives the same form. The
@@ -85,7 +86,7 @@ M_K(J)
 e^{o_K(J)}
 \left[
 1+T_K(J)
-+\max_{u\le(1-\delta_K)J+O_K(1)}M_K(u)
++\max_{u\le(1-\delta)J+O_K(1)}M_K(u)
 \right],
 }
 \tag{L-23203.4}
@@ -107,7 +108,7 @@ T_K(J)
 \le
 \exp\{(\eta_K+o_K(1))J\}
 \left[
-1+\max_{u\le(1-\delta_K)J+O_K(1)}M_K(u)
+1+\max_{u\le(1-\delta)J+O_K(1)}M_K(u)
 \right].
 }
 \tag{L-23203.5}
@@ -118,15 +119,16 @@ exponent `eta_K`. The scale-contraction theorem `T-15122` gives
 
 \[
 \limsup_{J\to\infty}\frac{\log M_K(J)}J
-\le\frac{\eta_K}{\delta_K}
+\le\frac{\eta_K}{\delta}
 \tag{L-23203.6}
 \]
 
 in the linear case, or `eta_K/(1-kappa_K)` in the tensor case.
 
-Thus **only the terminal packet family needs an independent arithmetic
-estimate**. Balanced and reduced-complexity rows are bookkeeping once their
-declared inequalities have been established.
+Since `delta` is fixed, an increasing-order family closes the linear system as
+soon as `eta_K -> 0`. Thus **only the terminal packet family needs an
+independent arithmetic estimate**. Balanced and reduced-complexity rows are
+bookkeeping once their declared inequalities have been established.
 
 ## 5. Exact review consequence
 
