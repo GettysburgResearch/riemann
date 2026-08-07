@@ -1,0 +1,124 @@
+{
+  "adjacent_flow": {
+    "identity_holds": true,
+    "lhs": [
+      "38189/6006",
+      "-177964/45045",
+      "-602933/360360"
+    ],
+    "rhs": [
+      "38189/6006",
+      "-177964/45045",
+      "-602933/360360"
+    ]
+  },
+  "cases": [
+    {
+      "K": 3,
+      "Q": 2,
+      "V": 10,
+      "X": 1000,
+      "depletion_mismatches": 0,
+      "dipole_mismatches": 0,
+      "nonmultiple_increment_mismatches": 0,
+      "recovery_mismatches": 0,
+      "top_nonzero_coefficients": 96,
+      "transposition_mismatches": 0
+    },
+    {
+      "K": 3,
+      "Q": 10,
+      "V": 10,
+      "X": 1000,
+      "depletion_mismatches": 0,
+      "dipole_mismatches": 0,
+      "nonmultiple_increment_mismatches": 0,
+      "recovery_mismatches": 0,
+      "top_nonzero_coefficients": 96,
+      "transposition_mismatches": 0
+    },
+    {
+      "K": 4,
+      "Q": 8,
+      "V": 8,
+      "X": 4096,
+      "depletion_mismatches": 0,
+      "dipole_mismatches": 0,
+      "nonmultiple_increment_mismatches": 0,
+      "recovery_mismatches": 0,
+      "top_nonzero_coefficients": 24,
+      "transposition_mismatches": 0
+    },
+    {
+      "K": 4,
+      "Q": 10,
+      "V": 10,
+      "X": 10000,
+      "depletion_mismatches": 0,
+      "dipole_mismatches": 0,
+      "nonmultiple_increment_mismatches": 0,
+      "recovery_mismatches": 0,
+      "top_nonzero_coefficients": 131,
+      "transposition_mismatches": 0
+    },
+    {
+      "K": 5,
+      "Q": 6,
+      "V": 6,
+      "X": 7776,
+      "depletion_mismatches": 0,
+      "dipole_mismatches": 0,
+      "nonmultiple_increment_mismatches": 0,
+      "recovery_mismatches": 0,
+      "top_nonzero_coefficients": 4,
+      "transposition_mismatches": 0
+    },
+    {
+      "K": 5,
+      "Q": 36,
+      "V": 6,
+      "X": 7776,
+      "depletion_mismatches": 0,
+      "dipole_mismatches": 0,
+      "nonmultiple_increment_mismatches": 0,
+      "recovery_mismatches": 0,
+      "top_nonzero_coefficients": 4,
+      "transposition_mismatches": 0
+    }
+  ],
+  "classification": "EXACT_SYNTHETIC_ALGEBRA_ONLY",
+  "dyadic_layers": {
+    "arithmetic_mismatches": 0,
+    "parity_mismatches": 0,
+    "physical_mismatches": 0,
+    "rows": 3584
+  },
+  "mutation_tests_passed": "7/7",
+  "mutations": {
+    "Q_equals_one_rejected": true,
+    "adjacent_flow_identity": true,
+    "generic_coercivity_not_claimed": true,
+    "missing_dyadic_layer_rejected": true,
+    "missing_inverse_identity_rejected": true,
+    "support_gate_required": true,
+    "wrong_increment_rejected": true
+  },
+  "not_verified": [
+    "the two-frequency zeta packet source map",
+    "a production PADT flow",
+    "a subexponential transport-cost theorem",
+    "PARC(K)",
+    "the Riemann hypothesis"
+  ],
+  "proof_object_sha256": "cfae02e722f534195e9bfef00065e5457b0da1e5a18a96589ea0e9560aa2a7b3",
+  "scope": [
+    "finite Dirichlet-convolution algebra",
+    "formal completely additive logarithm",
+    "positive nonmultiple-count increment identity",
+    "source-specific Q-depletion recovery",
+    "abstract adjacent-flow divergence",
+    "dyadic bit-layer and parity identities"
+  ],
+  "verdict": "PASS_EXACT_TOP_TRANSPOSE_DIGIT_DEPLETION_AND_FLOW_ALGEBRA",
+  "verify_py_sha256": "88f95846b827a4c62e1e23685534b2728c7f279ec807600b7deb7d0376f2e23a"
+}
