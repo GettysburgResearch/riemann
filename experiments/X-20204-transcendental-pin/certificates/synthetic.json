@@ -1,0 +1,28 @@
+{
+  "schema": "riemann.x20204-transcendental-pin.synthetic.v1",
+  "degree": 3,
+  "base_lambda": [
+    {"numerator": "30", "denominator": "1"},
+    {"numerator": "-12", "denominator": "1"},
+    {"numerator": "2", "denominator": "1"}
+  ],
+  "pin": {
+    "tap": 1,
+    "symbol": "exp(-3)",
+    "classification": "POSITIVE_TRANSCENDENTAL_OVER_ALGEBRAIC_BASE"
+  },
+  "residue": {
+    "parent_multiplicity": 2,
+    "descendant_multiplicities": [1, 3],
+    "expected_algebraic_part": {"numerator": "66", "denominator": "1"}
+  },
+  "ramp": {
+    "s": {"numerator": "1", "denominator": "2"},
+    "base_value": {"numerator": "2", "denominator": "1"},
+    "pin_coefficient": {"numerator": "1", "denominator": "2"}
+  },
+  "critical_support": {
+    "full_exponent": {"numerator": "2", "denominator": "1"},
+    "pin_exponent": {"numerator": "2", "denominator": "3"}
+  }
+}
