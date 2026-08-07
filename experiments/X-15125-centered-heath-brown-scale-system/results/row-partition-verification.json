@@ -1,0 +1,29 @@
+{
+  "K": 2,
+  "V": 3,
+  "X": 9,
+  "classification": "EXACT_TUPLE_AND_FIRST_CROSSING_REGRESSION",
+  "coefficient_mismatches": [],
+  "delta": "1/5",
+  "partition_failures": [],
+  "proof_boundary": "Finite tuple and deterministic Type-I/II partition check only; no analytic CP(K) estimate.",
+  "proof_sha256": "fb68b871d6c8cbf984ee018d5bf9d7ddef374811a5dce5b604af8215cadfe22f",
+  "sample_total": {
+    "2": [1,0,0,0],
+    "3": [0,1,0,0],
+    "4": [1,0,0,0],
+    "5": [0,0,1,0],
+    "6": [0,0,0,0],
+    "7": [0,0,0,1],
+    "8": [1,0,0,0],
+    "9": [0,1,0,0]
+  },
+  "schema": "X-15125-row-partition-v1",
+  "tuple_counts": {
+    "j1_I": 10,
+    "j1_II": 6,
+    "j2_I": 20,
+    "j2_II": 35
+  },
+  "verdict": "PASS"
+}
