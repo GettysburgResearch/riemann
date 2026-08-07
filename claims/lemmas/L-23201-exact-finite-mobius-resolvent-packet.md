@@ -1,13 +1,14 @@
-# L-23201 — Exact finite Möbius resolvent packet
+# L-23201 — Exact finite Möbius resolvent
 
 Claim ID: `L-23201`  
-Title: A truncated Möbius inverse and its residual geometric series give an exact finite signed packet through every prescribed endpoint  
-Status: **PROPOSED EXACT ALGEBRAIC LEMMA PENDING INDEPENDENT REVIEW**  
+Title: A truncated Möbius inverse and its residual geometric series give an exact finite signed expansion through every prescribed endpoint  
+Status: **CORE VERIFIED BY REVIEW; PACKET CLASSIFICATION REMAINS A SCHEMA**  
 Authoring agent: `gpt56-pro-21`  
 Created: 2026-08-07  
+Corrected: 2026-08-07 after review of frozen PR #233  
 Issue: #232  
 Dependencies: elementary Dirichlet convolution  
-Scope: direct scalar Möbius packet; no RH input
+Scope: exact scalar Möbius expansion; no packet estimate or RH input
 
 ## 1. Definitions
 
@@ -17,36 +18,31 @@ constant-one arithmetic function. For integers `X>=2` and `K>=2`, put
 \[
 V=\lceil X^{1/K}\rceil,
 \qquad
-\mu_V(n)=\mu(n)\mathbf 1_{n\le V},
-\tag{L-23201.1}
+\mu_V(n)=\mu(n)\mathbf1_{n\le V},
 \]
 
-and define the residual
+and
 
 \[
 \boxed{
-r_V=\epsilon-\mathbf 1*\mu_V.
+r_V=\epsilon-\mathbf1*\mu_V.
 }
-\tag{L-23201.2}
+\tag{L-23201.1}
 \]
 
 For every `n<=V`, all divisors of `n` occur in the truncated Möbius sum, so
 
 \[
-r_V(n)
-=
-\epsilon(n)-\sum_{d\mid n}\mu(d)
-=
-0.
-\tag{L-23201.3}
+r_V(n)=0.
+\tag{L-23201.2}
 \]
 
-Thus every nonzero coefficient of `r_V` is supported on an integer strictly
-larger than `V`.
+Thus every nonzero coefficient of `r_V` is supported on an integer at least
+`V+1`.
 
-## 2. Exact finite resolvent identity
+## 2. Exact finite resolvent
 
-The convolution identity
+The identity
 
 \[
 \epsilon=\mathbf1*\mu_V+r_V
@@ -56,10 +52,9 @@ and `mu*1=epsilon` give
 
 \[
 \mu=\mu_V+\mu*r_V.
-\tag{L-23201.4}
 \]
 
-Iterating `K` times yields
+Iterating `K` times,
 
 \[
 \mu
@@ -67,73 +62,61 @@ Iterating `K` times yields
 \sum_{j=0}^{K-1}\mu_V*r_V^{*j}
 +
 \mu*r_V^{*K}.
-\tag{L-23201.5}
+\tag{L-23201.3}
 \]
 
-Every nonzero coefficient of `r_V^{*K}` is supported above `V^K`, while
+Every nonzero coefficient of `r_V^{*K}` is supported at an integer at least
 
 \[
-V^K\ge X.
+(V+1)^K>V^K\ge X.
 \]
 
-Consequently, coefficient by coefficient for every `n<=X`,
+Consequently, coefficient by coefficient for every `n<=X`, including the
+endpoint,
 
 \[
 \boxed{
 \mu(n)
 =
 \sum_{j=0}^{K-1}
-\left(\mu_V*r_V^{*j}\right)(n).
+(\mu_V*r_V^{*j})(n).
 }
-\tag{L-23201.6}
+\tag{L-23201.4}
 \]
 
-This is the Möbius analogue of a finite Heath–Brown identity. It is a finite
-geometric resolvent for `1/zeta`; there is no asymptotic remainder at or below
-the declared endpoint.
+This is an exact finite geometric resolvent for `1/zeta`; there is no endpoint
+remainder.
 
-## 3. Explicit tuple packet
+## 3. Tuple expansion
 
-The `j`-th row in (L-23201.6) is a finite sum over tuples
+The `j`-th row is a finite sum over
 
 \[
 (d;n_1,\ldots,n_j),
 \qquad
-d\le V,\quad n_i>V,\quad
-dn_1\cdots n_j=n,
-\tag{L-23201.7}
+d\le V,
+\quad n_i>V,
+\quad dn_1\cdots n_j=n,
 \]
 
-with exact signed coefficient
+with coefficient
 
 \[
 \mu(d)r_V(n_1)\cdots r_V(n_j).
-\tag{L-23201.8}
 \]
 
-The residual coefficient itself is source bound:
+For `n>1`,
 
 \[
 r_V(n)
-=
--\sum_{\substack{d\mid n\\d\le V}}\mu(d)
-\qquad(n>1).
-\tag{L-23201.9}
+=-\sum_{\substack{d\mid n\\d\le V}}\mu(d),
 \]
 
-Hence every tuple can be expanded, if desired, into a finite divisor packet
-whose only signs are actual Möbius signs. No arbitrary vector or generic
-cluster coefficient enters the identity.
+so every residual factor may be expanded into actual Möbius/divisor signs.
 
-## 4. Fixed-ratio interval form
+## 4. Fixed-ratio scalar identity
 
-For `0<c<1`, summing (L-23201.6) over
-
-\[
-cX<n\le X
-\]
-
-gives the exact finite identity
+For `0<c<1`, summation of (L-23201.4) gives
 
 \[
 \boxed{
@@ -141,63 +124,45 @@ M(X)-M(cX)
 =
 \sum_{j=0}^{K-1}
 \sum_{cX<n\le X}
-(\mu_V*r_V^{*j})(n).
+(\mu_V*r_V^{*j})(n),
 }
-\tag{L-23201.10}
+\tag{L-23201.5}
 \]
 
-For large `X`, the `j=0` row vanishes because its support is at most `V`. The
-complete first critical Farey cell of `L-23003` is the specialization
-`c=2/3`.
+with the usual floor convention in `M(cX)`.  At `c=2/3`, this is the scalar
+coordinate decoded by the first critical Farey cell.
 
-Equation (L-23201.10) is the correct scalar replacement for the uniform
-Farey-cluster operator refuted in `R-22802`: the actual divisor signs remain
-inside every row until the final contraction.
+## 5. Packet-schema boundary
 
-## 5. Deterministic first-crossing dictionary
+The tuple formula permits a deterministic first-crossing classification into
+balanced, reduced Type-I, and terminal rows.  At the frozen PR #233 head this
+was described too strongly as a complete source-bound dictionary.
 
-Fix a threshold `0<delta<1/2`. Order the tuple variables as written in
-(L-23201.7) and stop at the first partial product at least `X^delta`.
+What is supplied here is only the **rule** for generating such a dictionary.
+A production packet must still emit:
 
-Each tuple receives exactly one label:
+```text
+complete tuple manifest
+actual complexity rank
+signed destination recombination
+all factor and cutoff boundaries
+all source-specific routing identities
+```
 
-1. **balanced Type II**, if the stopped product and its complement are both at
-   most `X^(1-delta+o_K(1))`;
-2. **reduced-complexity Type I**, if one side is below `X^delta` and expanding
-   its residual coefficient lowers the number of unresolved residual factors;
-3. **terminal Type I**, if no strict complexity reduction is obtained.
+The corrected source reduction is stated separately in `L-23206`; the balanced
+analytic estimate is `BTP(K)` in `L-23207`.
 
-All rows having the same label must be recombined with the signs in
-(L-23201.8) before Cauchy–Schwarz, divisor majorization, or total variation.
+## 6. Proof boundary
 
-This gives a finite combinatorial dictionary for each fixed `K`. It does not
-supply an analytic estimate for any packet.
+Verified by the review:
 
-## 6. Relationship to the prime packet
+- support of `r_V` above `V`;
+- the finite resolvent identity through `X`;
+- the fixed-ratio scalar expansion.
 
-The exact finite Heath–Brown packet of `L-15156` decomposes `Lambda`, whereas
-(L-23201.6) decomposes `mu`. They are two sides of the same inverse-zeta
-geometry:
+Not supplied by this lemma:
 
-- the prime packet is the natural input to the centered Selberg quadratic
-  identity and its positive Hankel adjoints;
-- the Möbius packet exposes the coherent first-cell Mertens mode that every
-  successful prime-energy proof must ultimately control.
-
-The proposed completion in Issue #232 uses the prime packet as the positive
-energy engine and the Möbius packet as a mandatory scalar audit coordinate.
-
-## 7. Proof boundary
-
-Closed here:
-
-- residual support above `V`;
-- the exact finite geometric resolvent;
-- the complete tuple signs and divisor formula;
-- a deterministic finite packet dictionary.
-
-Open:
-
-- every terminal packet estimate;
-- the vanishing-rate scale contraction;
+- a production packet manifest;
+- balanced or reduced-row energy estimates;
+- an unbounded recurrence;
 - RH.
