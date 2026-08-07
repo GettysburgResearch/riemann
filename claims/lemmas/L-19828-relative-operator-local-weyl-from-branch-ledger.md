@@ -1,18 +1,32 @@
 # L-19828 — The complete branch ledger implies the relative operator local-Weyl theorem
 
 Claim ID: `L-19828`  
-Status: **PROVED CONDITIONAL COMPOSITION FROM L-19827 AND L-16226; SPECIAL-FUNCTION STATUS INHERITED**  
+Status: **PROVED CONDITIONAL COMPOSITION FROM L-19827/L-19829 AND L-16226; SPECIAL-FUNCTION STATUS INHERITED**  
 Authoring agent: `gpt56-pro-09-p`  
 Created: 2026-08-07  
-Dependencies: complete branch/alias ledger `L-19827`; support large sieve `L-16226`; arithmetic tail floor `L-19826`; Riemann--von Mangoldt  
+Corrected: 2026-08-07 to remove a redundant source-inverse assumption  
+Dependencies: complete branch/alias ledger `L-19827/L-19829`; support large sieve `L-16226`; arithmetic tail floor `L-19826`; Riemann--von Mangoldt; source necessity theorem `L-19831`  
 Scope: the fourth theorem requested by the independent review
 
 ## 1. Statement
 
-Let `D_R` be the complete arithmetic omitted-tail Gram in one exact signed
-source metric, and let `A_R` be the exact localized zero-side/Weil matrix in the
-same coordinates. Assume the source/image metric loss satisfies the invariant
-gate of `L-19825`, and assume the complete profile conclusions of `L-19827`.
+Let `S_R` be a complete finite signed source packet with the same dimension as
+the finite CCM space `V_R`. Let
+
+\[
+ T_R:S_R\to V_R
+\]
+
+be its projected source map, not assumed injective in advance. Let `D_R` be the
+complete arithmetic omitted-tail Gram on `S_R`, and let
+
+\[
+ A_R=T_R^*A_{V,R}T_R
+\]
+
+be the exact pulled-back localized zero-side/Weil matrix. Assume the complete
+profile conclusions of `L-19827/L-19829` and the positive tail floor of
+`L-19826`.
 
 Then, in every sufficiently large dyadic radial block `[T,2T]`, there is a set
 `G_T` of relative measure `1-o(1)` such that for every `R in G_T`,
@@ -29,9 +43,12 @@ Then, in every sufficiently large dyadic radial block `[T,2T]`, there is a set
  \tag{L-19828.1}
 \]
 
-In particular, one may choose at least one support from every sufficiently large
-dyadic block. The theorem is unconditional with respect to the location of zeta
-zeros; hypothetical off-line zeros are included.
+At every sufficiently large good support, `L-19831` then implies that `T_R` is
+injective and hence bijective. Thus source injectivity is a consequence of the
+local-Weyl theorem, not an input to its proof.
+
+The theorem is unconditional with respect to the location of zeta zeros;
+hypothetical off-line zeros are included.
 
 ## 2. Exact zero-side normalization
 
@@ -62,7 +79,7 @@ does not change the argument.
 
 ## 3. Slow phase-diagonal kernel
 
-Use `L-19827` to decompose the profile kernel into:
+Use `L-19827/L-19829` to decompose the profile kernel into
 
 ```text
 K_R = K_R^diag + K_R^osc + K_R^fold + K_R^end.
@@ -79,8 +96,7 @@ alias. In the whitened `D_R` metric,
  \tag{L-19828.3}
 \]
 
-Holomorphic Taylor expansion in the shrinking strip gives, for the diagonal
-part,
+Holomorphic Taylor expansion in the shrinking strip gives
 
 \[
  \left\|
@@ -115,9 +131,8 @@ Let `N(t)` count nontrivial zeros with multiplicity. Riemann--von Mangoldt gives
  \tag{L-19828.6}
 \]
 
-The harmless normalization constant `c_0` is absorbed into the definition of
-`D_R`; equivalently one may replace `log R` throughout by `c_0 log R` and then
-renormalize `D_R`.
+The normalization constant `c_0` is absorbed into the definition of `D_R`.
+Equivalently one may retain `c_0 log R` throughout and rescale at the end.
 
 For the line-centered slow kernel,
 
@@ -136,7 +151,7 @@ is evaluated by Stieltjes integration. The main density gives
 
 because `log(t)=log R+log(t/R)` and `log(t/R)` is bounded on `[aR,bR]`.
 
-For the remainder, integration by parts gives
+For the remainder,
 
 \[
 \begin{aligned}
@@ -173,7 +188,7 @@ Equations (L-19828.4)--(L-19828.10) yield
  \tag{L-19828.11}
 \]
 
-After division by `log R`, the bounded `O(D)` term is already `o(log R D)`.
+After division by `log R`, the bounded `O(D)` term is already negligible.
 
 ## 5. Oscillatory branch families
 
@@ -196,7 +211,7 @@ with
  \tag{L-19828.13}
 \]
 
-by `L-19827`. The phase partition has the genuine separation required by
+by `L-19827/L-19829`. The phase partition has the genuine separation required by
 `L-16226`. Hence
 
 \[
@@ -205,13 +220,7 @@ by `L-19827`. The phase partition has the genuine separation required by
  \tag{L-19828.14}
 \]
 
-Choose, for example, the threshold
-
-\[
- q_T=T^{-1/8}.
-\]
-
-Markov's inequality gives a bad-support fraction
+Choose `q_T=T^-1/8`. Markov's inequality gives a bad-support fraction
 
 \[
  O(T^{-3/4}(\log T)^C).
@@ -222,9 +231,9 @@ The number of mode, branch, reflected, and compact-alias families is
 polylogarithmic. A union bound therefore leaves a relative-measure `1-o(1)` set
 on which every compact oscillatory family is `o(1)` simultaneously.
 
-The same argument applies directly to the off-line branch amplitudes. Their
-horizontal multipliers are bounded by `L-19827.42`, and their correctly extracted
-amplitudes still satisfy (L-19828.13). No smallness of `delta_rho` is assumed.
+The same argument applies to off-line branch amplitudes. Their horizontal
+multipliers are bounded, and their correctly extracted amplitudes still satisfy
+(L-19828.13). No smallness of `delta_rho` is assumed.
 
 ## 6. Fold families
 
@@ -247,7 +256,7 @@ Both are `o(1)` in the whitened metric.
 ## 7. Endpoint and infinite-alias families
 
 For the alias Gram, the first endpoint channel has already been summed as the
-`L2` logarithmic function of `L-19827.37`; higher channels and the retained
+`L2` logarithmic function of `L-19829`; higher channels and the retained
 remainder are absolutely summable.
 
 For support averaging, keep the first endpoint channel termwise. The `k`-th
@@ -261,7 +270,7 @@ majorized by
 \]
 
 The coefficient support derivative satisfies the `R A'` hypothesis. Applying
-the same zero-bin argument and then summing (L-19828.17) gives an endpoint bad
+the same zero-bin argument and summing (L-19828.17) gives an endpoint bad
 fraction tending to zero. The absolutely summable higher channels are easier.
 
 Thus all endpoint and infinite-alias errors are `o(1)` simultaneously on a
@@ -276,8 +285,7 @@ The continuous complete tail Gram has the same phase decomposition:
      +D_R^{\rm fold}+D_R^{\rm end}.
 \]
 
-Stationary phase, cubic van der Corput, and the collective endpoint theorem in
-`L-19827` give
+Stationary phase, cubic van der Corput, and the collective endpoint theorem give
 
 \[
  \left\|
@@ -296,14 +304,12 @@ Hence replacing `(log R)D_R^diag` in (L-19828.11) by `(log R)D_R` costs
  \tag{L-19828.19}
 \]
 
-in the whitened metric.
+in the whitened metric. `L-19826` supplies the complete signed Gram floor, so
+every whitening operation above is legitimate.
 
-`L-19826` supplies the complete signed Gram floor, so every whitening operation
-above is legitimate on the exact finite source space.
+## 9. Final estimate and source injectivity
 
-## 9. Final estimate
-
-On the common good-support set, combine:
+On the common good-support set, combine
 
 ```text
 slow Stieltjes error              O_D(1)+O(polylog/R),
@@ -326,13 +332,26 @@ Therefore
  \tag{L-19828.20}
 \]
 
-which is exactly (L-19828.1).
+which is (L-19828.1).
 
-Since the good set has positive measure in every sufficiently large dyadic
-block, choose one support from each block outside the countable exact zeta-cycle
-set and any finite deterministic transition set.
+For all sufficiently large good supports, the relative error is less than
+`(1/2)log R`. Thus
 
-## 10. Consequence for `T-19808`
+\[
+ A_R\succeq {1\over2}(\log R)D_R\succ0.
+\]
+
+Since `A_R=T_R^*A_{V,R}T_R`, `L-19831` gives
+
+\[
+ \ker T_R=\{0\}.
+\]
+
+Equal dimensions then give bijectivity. Exact and near source-cycle supports are
+therefore excluded by the analytic good-support estimate itself; no quantitative
+right inverse is assumed.
+
+## 10. Ground-state consequence
 
 Define
 
@@ -342,24 +361,35 @@ Define
    \over\log R}.
 \]
 
-Then `eta_R->0` on the selected sequence. Together with `L-19826`, the finite
-matrix obeys
+Then `eta_R->0` on the selected sequence. Together with `L-19826`,
+`L-19830`, and the elementary upper pullback metric bound, the exact finite
+matrix has
 
 \[
- (1-\eta_R)(\log R)D_R
- \preceq A_R\preceq
- (1+\eta_R)(\log R)D_R.
+ \mu_R=O((1+B_R)(\log R)d_4),
 \]
 
-The target/gap ratio is `O(polylog(R)d_4/d_6)+o(1)`, which tends to zero.
+while its second generalized scale is at least
+
+\[
+ c(\log R)d_6/K_R.
+\]
+
+Since
+
+\[
+ K_R(1+B_R)d_4/d_6\to0,
+\]
+
+the target excess divided by the complete gap tends to zero.
 
 ## 11. Proof boundary
 
-- The Stieltjes, large-sieve, fold-measure, endpoint summation, and diagonal
-  selection arguments are proved here.
-- The special-function profile and alias hypotheses are those proved/proposed in
-  `L-19827`; this theorem inherits their independent-review status.
-- The remaining source/image metric gate is the invariant condition of
-  `L-19825`.
-- No RH conclusion is claimed until that source gate and the imported CCM finite
-  real-zero interfaces are also closed.
+- The Stieltjes, large-sieve, fold-measure, endpoint summation, diagonal
+  selection, and source-injectivity consequences are proved here.
+- The special-function profile and alias hypotheses are those in
+  `L-19827/L-19829`; this theorem inherits their independent-review status.
+- The false fixed polylogarithmic singular-value gate of `R-19806` is not used.
+- No RH conclusion is claimed until the complete packet/target identification
+  and imported CCM finite real-zero interfaces are composed and independently
+  audited.
