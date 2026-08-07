@@ -1,36 +1,33 @@
-# L-23204 — Finite Selberg–Hankel certificate for terminal packet energies
+# L-23204 — Scalar Selberg–Hankel certificate adapter and packet-source firewall
 
 Claim ID: `L-23204`  
-Title: A positive exponential-adjoint majorant plus a source-bound residual gives a fail-closed terminal Type-I energy estimate  
-Status: **PROPOSED EXACT CERTIFICATE ADAPTER PENDING INDEPENDENT REVIEW**  
+Title: Positive exponential adjoints give a valid scalar terminal adapter only after an exact packet source map or coupled Selberg equation is supplied  
+Status: **ABSTRACT SCALAR ADAPTER VERIFIED WITH FIXES; FROZEN PACKET APPLICATION GAP/BLOCKED**  
 Authoring agent: `gpt56-pro-21`  
 Created: 2026-08-07  
+Corrected: 2026-08-07 after review of frozen PR #233  
 Issue: #232  
-Dependencies: PR #229 `L-23001`; PR #216 `L-21503`; `L-15157`; `L-23203`  
-Scope: finite terminal packet closure; construction of the certificate remains open
+Dependencies: PR #229 `L-23001`; PR #216 `L-21503`  
+Scope: optional analytic mechanism; not load bearing in corrected `T-23202`
 
-## 1. Centered Selberg equation
+## 1. Scalar centered Selberg identity
 
 Let
 
 \[
 dP_0(y)=e^{y/2}\mathbf1_{y\ge0}\,dy,
 \qquad
-\mathscr L\nu=y\,d\nu+2dP_0*d\nu.
-\tag{L-23204.1}
+\mathscr L\nu=y\,d\nu+2dP_0*d\nu,
 \]
 
-Use the exact centered Selberg equation in the normalization of `L-21503`:
+and assume the exact scalar centered equation
 
 \[
 \boxed{
 \mathscr L\nu+\nu*\nu=R.
 }
-\tag{L-23204.2}
+\tag{L-23204.1}
 \]
-
-The normalization, signs, and shift by `1/2` must be source bound in every
-production packet.
 
 For `lambda>1/2`, define
 
@@ -40,184 +37,151 @@ w_\lambda(s)
 \mathbf1_{s\ge\lambda}
 \left(\frac{\lambda-1/2}{s-1/2}\right)^2,
 \qquad
-f_\lambda(y)=
-\int_\lambda^\infty e^{-sy}w_\lambda(s)\,ds.
-\tag{L-23204.3}
+f_\lambda(y)=\int_\lambda^\infty e^{-sy}w_\lambda(s)ds.
 \]
 
-`L-23001` proves
+The reviewed scalar identity gives
 
 \[
 \mathscr L^*f_\lambda=e^{-\lambda y},
-\tag{L-23204.4}
+\tag{L-23204.2}
 \]
 
-and the Hankel kernel `f_lambda(u+v)` is positive semidefinite.
-
-## 2. One terminal packet
-
-Let `tau` be a terminal Type-I packet at output block `J`. Its exact
-source-bound energy is
+and
 
 \[
-E_\tau(J)
+f_\lambda(u+v)
 =
-\iint K_{\tau,J}(u,v)\,d\nu(u)d\nu(v),
-\qquad
-K_{\tau,J}\succeq0.
-\tag{L-23204.5}
+\int_\lambda^\infty w_\lambda(s)e^{-su}e^{-sv}ds
 \]
 
-A **finite terminal Selberg–Hankel certificate** consists of:
+is a positive Hankel Gram.
 
-1. exponents `lambda_ell>1/2`;
-2. nonnegative rational or directed weights `a_ell`;
-3. the positive Hankel mixture
-   \[
-   F_{\tau,J}(y)=\sum_{\ell=1}^{L}a_\ell f_{\lambda_\ell}(y);
-   \tag{L-23204.6}
-   \]
-4. a declared lower-scale positive kernel `K_tau,J^low`;
-5. a finite exact Loewner certificate on the actual represented source span:
-   \[
-   \boxed{
-   K_{\tau,J}(u,v)
-   \preceq
-   F_{\tau,J}(u+v)+K_{\tau,J}^{\rm low}(u,v);
-   }
-   \tag{L-23204.7}
-   \]
-6. a source-bound forcing estimate
-   \[
-   \boxed{
-   \langle R,F_{\tau,J}\rangle
-   -
-   \sum_\ell a_\ell H(\lambda_\ell)
-   \le A_{\tau,J},
-   }
-   \tag{L-23204.8}
-   \]
-   where
-   \[
-   H(\lambda)=\int e^{-\lambda y}\,d\nu(y);
-   \tag{L-23204.9}
-   \]
-7. a routing certificate
-   \[
-   \langle\nu\otimes\nu,K_{\tau,J}^{\rm low}\rangle
-   \le L_{\tau,J}
-   \tag{L-23204.10}
-   \]
-   expressed entirely in declared lower-scale auxiliary energies.
-
-No sign of `nu` is assumed.
-
-## 3. Exact terminal bound
-
-Pair (L-23204.2) with `F_tau,J`. Equations (L-23204.4) and
-(L-23204.6) give
-
-\[
-\begin{aligned}
-\langle\nu*\nu,F_{\tau,J}\rangle
-&=
-\langle R,F_{\tau,J}\rangle
--
-\langle\nu,\mathscr L^*F_{\tau,J}\rangle\\
-&=
-\langle R,F_{\tau,J}\rangle
--
-\sum_\ell a_\ell H(\lambda_\ell).
-\end{aligned}
-\tag{L-23204.11}
-\]
-
-The left side is nonnegative because `F_tau,J` is a positive Hankel mixture.
-Using the Loewner majorization and the two certificate bounds,
+For a finite positive mixture `F=sum a_ell f_(lambda_ell)`, pairing
+(L-23204.1) gives
 
 \[
 \boxed{
-E_\tau(J)\le A_{\tau,J}+L_{\tau,J}.
+\langle\nu*\nu,F\rangle
+=
+\langle R,F\rangle
+-
+\sum_\ell a_\ell
+\int e^{-\lambda_\ell y}d\nu(y).
 }
-\tag{L-23204.12}
+\tag{L-23204.3}
 \]
 
-This is an exact implication. The positive quadratic Selberg channel is retained
-rather than discarded or replaced by total variation.
+This scalar statement is valid.
 
-## 4. The terminal contraction certificate `STC(K)`
+## 2. Conditional kernel adapter
 
-Fix one `0<delta<1/2` using `L-15157`. For packet order `K`, `STC(K)` requires
-a certificate of the form above for every terminal type and every sufficiently
-large block, with
+Suppose one has a scalar energy
 
 \[
-A_{\tau,J}+L_{\tau,J}
-\le
-\exp\{(\eta_K+o_K(1))J\}
-\left[
-1+\max_h\max_{u\le(1-\delta)J+O_K(1)}E_h(u)
-\right].
-\tag{L-23204.13}
+E(J)=\iint K_J(u,v)d\nu(u)d\nu(v)
 \]
 
-The finite terminal list is supplied by the source packet dictionary. The
-certificate must bind:
+formed from the **same** source `nu` appearing in (L-23204.1), together with
+
+\[
+K_J\preceq F(u+v)+K_J^{\rm low}.
+\tag{L-23204.4}
+\]
+
+If directed bounds give
+
+\[
+\langle R,F\rangle-
+\sum_\ell a_\ell H(\lambda_\ell)
+\le A_J
+\]
+
+and
+
+\[
+\langle\nu\otimes\nu,K_J^{\rm low}\rangle\le L_J,
+\]
+
+then
+
+\[
+\boxed{E(J)\le A_J+L_J.}
+\tag{L-23204.5}
+\]
+
+This is the verified abstract adapter.
+
+## 3. Packet-source gap
+
+The auxiliary energies of PR #158 use packet-specific signed sources
+
+\[
+\nu_{K,\tau,J},
+\]
+
+not automatically the single global centered prime measure `nu` satisfying
+(L-23204.1).  The frozen proposal supplied neither
+
+1. an exact map `nu_(K,tau,J)=A_(K,tau,J)nu` with all induced cross terms, nor
+2. a well-typed coupled vector/matrix Selberg equation for the complete packet
+   vector.
+
+Consequently (L-23204.3) could not be applied to the terminal packet
+self-energies as written.
+
+The finite control
+
+\[
+h_1=v,
+\qquad h_2=-v
+\]
+
+has aggregate source zero but sum of self-energies `2||v||^2`, demonstrating
+why aggregate positivity alone is insufficient.
+
+## 4. Corrected role
+
+The terminal Type-I family is now closed directly by Euler cancellation in
+`L-23205/L-23206`, so this source-map gap is removed from the load-bearing proof
+spine.
+
+The scalar adjoint may still contribute to a future proof of the balanced
+Type-II theorem `BTP(K)`, but only after an explicit packet source map or coupled
+Selberg equation is emitted and reviewed.
+
+## 5. Type discipline for a future vector extension
+
+A valid vector/matrix extension must specify separately:
 
 ```text
-source and normalization digests
-terminal kernel
-positive exponential weights and exponents
-Hankel Gram/Loewner proof
-Selberg forcing contraction
-real-axis linear reserve
-lower-scale residual routes
-all endpoint and cutoff terms
-eta_K and fixed delta
+packet source Hilbert space
+linear Selberg operator on the vector source
+quadratic tensor/convolution channel
+matrix-valued forcing
+all packet cross terms
+scalar test or matrix test pairing
+Loewner order target
 ```
 
-Because `delta` is fixed, `eta_K -> 0` is sufficient in the linear system.
-Together with `L-23203` and `T-15122`, this closes the complete packet system and
-implies RH. The tensor version retains its separate
-`eta_K/(1-kappa_K) -> 0` requirement.
+A vector-valued linear term may not be added directly to a matrix-valued
+quadratic term without this typing.
 
-## 5. Connection to dyadic prime transport
+## 6. Proof boundary
 
-The linear quantities `H(lambda_ell)` are ordinary real-axis exponential
-probes. They are the natural interface to the prime-polygon and Haar/dilation
-transport reserves of PRs #218/#219.
+Retained:
 
-A valid production proof may pay (L-23204.8) through:
+- the scalar positive exponential adjoint;
+- the scalar Selberg pairing;
+- the conditional same-source kernel adapter.
 
-- an exact prime-transport reserve;
-- a directed real-axis Selberg identity;
-- a positive Stieltjes/Hankel factorization;
-- another independently reviewed one-sided inequality.
+Blocked at the frozen head:
 
-It may not assume compact stop-loss Hankel positivity: `R-23001` proves that
-shortcut false.
+- identification of terminal packet sources with the global Selberg source;
+- a coupled packet equation;
+- production `STC(K)` certificates.
 
-## 6. First-cell audit
+Not claimed:
 
-The complete output block controlled by `STC(K)` has the same rightmost-zero
-exponent as the original safe prime block. Through the cross-route transfer, it
-must in particular imply the fixed-ratio Mertens bounds of `L-23202`.
-
-Therefore a certificate that closes all terminal packets while leaving the
-first-cell Mertens coordinate uncontrolled is incomplete. The first-cell
-decoder is a mandatory mutation test, not an optional interpretation.
-
-## 7. Proof boundary
-
-Closed here:
-
-- the finite positive-Hankel adapter;
-- the exact Selberg pairing;
-- the terminal-energy implication;
-- the fail-closed certificate schema.
-
-Open:
-
-- construction of `STC(K)` for an unbounded sequence of orders;
-- the rate `eta_K -> 0`;
+- a balanced Type-II estimate;
 - RH.
