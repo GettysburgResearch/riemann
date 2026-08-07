@@ -1,13 +1,14 @@
 # L-23202 — High-order fixed-ratio Mertens differences retain the full RH exponent
 
 Claim ID: `L-23202`  
-Title: Every finite order of the geometric `2/3` difference is RH-equivalent, and the first Farey cell is its first rung  
-Status: **PROPOSED EXACT TRANSFER LEMMA PENDING INDEPENDENT REVIEW**  
+Title: Every finite order of the geometric `2/3` difference is RH-equivalent, while the first Farey cell supplies only the scalar first rung  
+Status: **CORE VERIFIED BY REVIEW WITH NOTATION AND INTERFACE FIXES**  
 Authoring agent: `gpt56-pro-21`  
 Created: 2026-08-07  
+Corrected: 2026-08-07 after review of frozen PR #233  
 Issue: #232  
-Dependencies: `L-23003`, `T-23002`; the classical Mertens criterion  
-Scope: full RH equivalence, not an estimate
+Dependencies: PR #229 `L-23003/T-23002`; the classical Mertens criterion  
+Scope: scalar RH equivalence, not a packet estimate or decoder
 
 ## 1. Geometric differences
 
@@ -17,7 +18,7 @@ Extend
 M(x)=\sum_{n\le x}\mu(n)
 \]
 
-by `M(x)=0` for `0<=x<1`. Put
+by `M(x)=0` for `0<=x<1`.  Put
 
 \[
 c=\frac23,
@@ -25,7 +26,6 @@ c=\frac23,
 (T_cF)(x)=F(cx),
 \qquad
 \Delta_c=I-T_c.
-\tag{L-23202.1}
 \]
 
 For every integer `m>=1`, define
@@ -33,35 +33,27 @@ For every integer `m>=1`, define
 \[
 G_m(x)=\Delta_c^mM(x)
 =
-\sum_{j=0}^{m}
-(-1)^j{m\choose j}M(c^jx).
-\tag{L-23202.2}
+\sum_{r=0}^{m}(-1)^r{m\choose r}M(c^rx).
+\tag{L-23202.1}
 \]
 
-## 2. Exact inversion
+All real arguments are interpreted through the defining floor in `M`.
 
-Because `T_c^jM(x)=0` for all sufficiently large `j`, the formal binomial
-series for `(I-T_c)^(-m)` terminates pointwise. Therefore
+## 2. Exact pointwise inversion
+
+For fixed `x`, `T_c^jM(x)=0` once `c^jx<1`.  Hence the formal binomial series
+terminates pointwise and gives
 
 \[
 \boxed{
 M(x)
 =
-\sum_{j=0}^{\infty}
-{m+j-1\choose j}
-G_m(c^jx),
+\sum_{j\ge0}{m+j-1\choose j}G_m(c^jx),
 }
-\tag{L-23202.3}
+\tag{L-23202.2}
 \]
 
-where the sum is finite for every fixed `x`.
-
-This can also be verified by applying `(I-T_c)^m` and using the generating
-identity
-
-\[
-\sum_{j\ge0}{m+j-1\choose j}z^j=(1-z)^{-m}.
-\]
+where the sum is finite at every `x`.
 
 ## 3. RH equivalence
 
@@ -71,88 +63,75 @@ For every fixed `m>=1`, the following are equivalent:
 2. for every `epsilon>0`,
    \[
    G_m(x)=O_{m,\epsilon}(x^{1/2+\epsilon});
+   \tag{L-23202.3}
+   \]
+3. for every `epsilon>0`,
+   \[
+   \boxed{
+   |G_m(x)|^2/x=O_{m,\epsilon}(x^\epsilon).
+   }
    \tag{L-23202.4}
    \]
-3. 
-   \[
-   |G_m(x)|^2/x=x^{o(1)}.
-   \tag{L-23202.5}
-   \]
 
-RH implies (L-23202.4) immediately from the classical bound for `M`.
+The third formulation is an upper bound; it is not a two-sided assertion
+`x^{o(1)}` and remains valid when `G_m` vanishes.
 
-Conversely, insert (L-23202.4) into (L-23202.3):
+RH implies (L-23202.3) from the classical Mertens formulation.  Conversely,
+substitution into (L-23202.2) gives
 
 \[
 |M(x)|
 \ll_{m,\epsilon}
-x^{1/2+\epsilon}
-\sum_{j\ge0}
-{m+j-1\choose j}
-c^{j(1/2+\epsilon)}.
+ x^{1/2+\epsilon}
+ \sum_{j\ge0}{m+j-1\choose j}c^{j(1/2+\epsilon)}.
 \]
 
-The series converges because its coefficients grow polynomially while
-`c^(1/2+epsilon)<1`. Hence
-
-\[
-M(x)=O_{m,\epsilon}(x^{1/2+\epsilon}),
-\]
-
-and the Mertens criterion gives RH.
-
-Thus increasing the difference order does not weaken the spectral target. It
-provides additional exact boundary cancellations while retaining the complete
-rightmost-zero exponent.
+The series converges, so the Mertens criterion gives RH.
 
 ## 4. First critical Farey cell
 
-`L-23003` proves, for integer `D`,
+For integer `D`, PR #229 proves
 
 \[
+\boxed{
 B_{D,1}
 =
 \left(\frac{i}{2\pi}+\frac1{2\pi^2}\right)
-\Delta_cM(D).
-\tag{L-23202.6}
+\left[M(D)-M(\lfloor2D/3\rfloor)\right].
+}
+\tag{L-23202.5}
 \]
 
-Thus the first positive critical Farey cell is the `m=1` member of the hierarchy.
-Repeatedly applying the same geometric difference gives
+Thus the first cell is the scalar `m=1` member of the hierarchy.  Applying
+finite differences to the scalar function `D -> B_(D,1)` produces the
+corresponding scalar geometric differences, with floors retained at every
+cutoff.
 
-\[
-\Delta_c^{m-1}B_{\bullet,1}(D)
-=
-\left(\frac{i}{2\pi}+\frac1{2\pi^2}\right)
-G_m(D),
-\tag{L-23202.7}
-\]
+No exact map is asserted here from `G_m` to the terminal or balanced
+Heath--Brown packet families.  Such a decoder must be constructed separately if
+used in a machine certificate.
 
-when the cell coefficient is interpreted at the corresponding real cutoff
-with the usual floor convention.
+## 5. Audit role
 
-Consequently any high-order packet proposal must eventually prove
-(L-23202.4), either explicitly in this coordinate or through an exact
-cross-route transfer.
+The scalar hierarchy is a proof firewall.  It shows that the coherent low
+Farey mode already carries the full square-root Möbius-cancellation burden.
+Therefore a proposed prime or Type-II proof that takes generic operator norms,
+removes low cells, or forgets the actual signed arithmetic vector is
+insufficient.
 
-## 5. Why this is the correct audit gate
-
-The row-growth counterexample in `R-22802` shows that arbitrary Farey vectors
-cannot satisfy a subpower critical-cluster operator bound. Equations
-(L-23202.6)--(L-23202.7) explain why: the coherent first row is already an
-RH-equivalent Mertens increment.
-
-Accordingly, a valid completion must retain at least one of:
-
-- the actual Möbius signs before divisor compression;
-- an exact Selberg quadratic identity that implies the same difference bound;
-- a source-specific terminal packet recurrence whose output controls `G_m`;
-- an independently verified RH-equivalent scalar of equal strength.
-
-A generic large sieve, deletion of low cells, or a finite positive ladder is
-not a substitute.
+This firewall is logical, not an already exported finite packet mutation.
 
 ## 6. Proof boundary
 
-This lemma proves the equivalence and exact inversion. It supplies no estimate
-for `G_m`. The square-root bound remains the RH-bearing arithmetic theorem.
+Verified by the review:
+
+- exact pointwise inversion;
+- equivalence with the Mertens formulation of RH;
+- the inherited first-cell identity.
+
+Open:
+
+- any bound for `G_m`;
+- a packet-level decoder into `G_m`;
+- the balanced Type-II theorem;
+- RH.
