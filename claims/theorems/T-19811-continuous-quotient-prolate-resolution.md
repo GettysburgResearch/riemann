@@ -4,7 +4,7 @@ Claim ID: `T-19811`
 Status: **PROPOSED FULL RESOLUTION COMPOSITION — CONTINUOUS QUOTIENT ANALYTICS REQUIRE INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro-09-q`  
 Created: 2026-08-07  
-Dependencies: canonical closed radical relation `L-19855`; graph-closed radical identity `L-19856`; closed quotient min--max `L-19852`; quotient local-Weyl descent `L-19857`; signed `d_4,d_6` source hierarchy `L-19823/L-19824/L-19841`; corrected branch ledger `L-19853`; target identity `L-19849`; continuous real-zero interface `L-19854`; Hardy-strip transform estimate `T-14301`  
+Dependencies: local Möbius form core `L-19860`; canonical closed radical relation `L-19855`; graph-closed radical identity `L-19856`; closed quotient min--max `L-19852`; quotient local-Weyl descent `L-19857`; signed `d_4,d_6` source hierarchy `L-19823/L-19824/L-19841`; corrected branch ledger `L-19853`; target identity `L-19849`; continuous real-zero interface `L-19854`; Hardy-strip transform estimate `T-14301`  
 Supersedes: the rejected finite congruence step in `T-19810`  
 Scope: full positive-direction RH proposal with no finite Fourier projection
 
@@ -33,13 +33,21 @@ Let
 
 and let `Q_lambda` be the closed localized Weil form with associated selfadjoint operator `A_lambda`.
 
-Let `mathcal R_lambda` be the graph closure of the exact global arithmetic-radical range under the splitting
+`L-19860` proves by finite Möbius inversion that every
+
+\[
+ h\in C_c^\infty((\lambda^{-1},\lambda))
+\]
+
+is the exact restriction of a global arithmetic-radical vector. Since this smooth interior class is the defining form core, the graph closure of the exact radical relation has dense interior domain in `Dom Q_lambda`; no zeta-cycle support condition is needed for the continuous route.
+
+Let `mathcal R_lambda` be that graph closure under the splitting
 
 \[
  J=P_\lambda J+(I-P_\lambda)J.
 \]
 
-At a non-zeta-cycle support the interior projection of the exact source range is dense. Let
+Let
 
 \[
  \mathcal T_\lambda:
@@ -293,14 +301,15 @@ appears in the RH implication.
 
 This is a complete logical composition, not an accepted verification of its analytic hypotheses. Independent review must reconstruct:
 
-1. graph-density of the arithmetic radical relation in the complete localized form domain—not merely ordinary `L2` density;
-2. the complete signed quotient hierarchy (T-19811.3)--(T-19811.4), including source directions outside the declared low packet;
-3. the corrected Bessel/stationary-alias/Mellin-fold theorem `L-19853` in the full shrinking strip;
-4. the relative tail estimate descending through `L-19857` to (T-19811.6);
-5. moving-Hardy target convergence (T-19811.7) in the exact CCM normalization;
-6. normalization matching for the continuous Connes--van Suijlekom real-zero theorem.
+1. the complete signed quotient hierarchy (T-19811.3)--(T-19811.4), including minimum-tail behavior outside the declared low prolate packet;
+2. the corrected Bessel/stationary-alias/Mellin-fold theorem `L-19853` in the full shrinking strip;
+3. the relative tail estimate descending through `L-19857` to (T-19811.6) on the complete canonical tail range;
+4. moving-Hardy target convergence (T-19811.7) in the exact normalization;
+5. normalization matching for the continuous Connes--van Suijlekom real-zero theorem.
 
-Until those survive:
+The source form-core density itself is closed by `L-19860`.
+
+Until the remaining items survive:
 
 ```text
 projection-free full proposal: PROPOSED
