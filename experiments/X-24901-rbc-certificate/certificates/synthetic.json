@@ -1,0 +1,20 @@
+{
+  "schema": "X-24901-RBC-SYNTHETIC-v1",
+  "K": 8,
+  "euler_order": 512,
+  "delta": {"num": 1, "den": 8},
+  "lower_scale": {"num": 7, "den": 8},
+  "returned_target_fraction": {"num": 1, "den": 2},
+  "same_scale_target_routes": 0,
+  "max_simultaneous_paid_coordinates": 6,
+  "top_row_euler_closed": false,
+  "physical_faces": ["window-left", "window-right"],
+  "faces": [
+    {"face": "internal-A", "sign": 1},
+    {"face": "internal-A", "sign": -1},
+    {"face": "internal-B", "sign": 1},
+    {"face": "internal-B", "sign": -1},
+    {"face": "window-left", "sign": -1},
+    {"face": "window-right", "sign": 1}
+  ]
+}
