@@ -1,0 +1,45 @@
+{
+  "C0_ldl_pivots": [
+    "2",
+    "23/8"
+  ],
+  "H0_ldl_pivots": [
+    "371/276",
+    "2134/1113",
+    "23805/8536"
+  ],
+  "actual_W_ldl_pivots": [
+    "31/16",
+    "2213/775"
+  ],
+  "actual_source_schur_direct": "-7394941/7329456",
+  "actual_source_schur_woodbury": "-7394941/7329456",
+  "certificate_sha256": "7e2190b267b74492a410907fc8e6489c5f8a589fef37466d9b034e94041bf86d",
+  "comparator_harmonic_source_vector": [
+    "1",
+    "-9/46",
+    "8/69"
+  ],
+  "comparator_source_schur": "5/4",
+  "conditional_negative_amplitude": "4069/2760",
+  "harmonic_vectors_from_trials": [
+    [
+      "1",
+      "-9/46",
+      "8/69"
+    ],
+    [
+      "1",
+      "-9/46",
+      "8/69"
+    ]
+  ],
+  "negative_channel_defect": "2213/2300",
+  "proof_object_sha256": "00b991cce684e4c9f2f8f4efb65726645acca621dcb2d67c33a4821ee05fa9e6",
+  "schema": "riemann.x20805.harmonic-trial-erasure.result.v1",
+  "trial_comparator_residual_dual_norms": [
+    "13/138",
+    "4153/1725"
+  ],
+  "verdict": "CERTIFIED_HARMONIC_TRIAL_ERASURE_AND_NEGATIVE_CHANNEL_UPDATE"
+}

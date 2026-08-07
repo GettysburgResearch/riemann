@@ -1,0 +1,150 @@
+{
+  "classification": "NON_DIRECTED_HIGH_PRECISION_RECONNAISSANCE",
+  "digits": 60,
+  "levels": [
+    {
+      "N": 1,
+      "c": 5,
+      "conditional_evaluation": "-0.0420898852993835358540629512325",
+      "conditional_zero_index": 3,
+      "direct_lowest_eigenvalue": "0.0000571275541226970858502938585519",
+      "first_frame_zero_indices": [1],
+      "joint_corrected_residual_ratio": "0.0000499302910322005576724011037733",
+      "joint_prime_side_schur_floor": "0.0000571566363185582195669455504117",
+      "kernel_metric": "245.152753475497362409239336064",
+      "prime_power_count": 4,
+      "rational_leja_pivots": [
+        "0.103622417485403684962712",
+        "-0.042089885299383535854063"
+      ],
+      "selected_frame_ratio": "0.00000722634528635766189454444663836"
+    },
+    {
+      "N": 2,
+      "c": 10,
+      "conditional_evaluation": "0.01973805350707381103362824713",
+      "conditional_zero_index": 9,
+      "direct_lowest_eigenvalue": "0.00000000533644495151871245880635183037",
+      "first_frame_zero_indices": [2, 1],
+      "joint_corrected_residual_ratio": "0.00000000399505055772599104432945907606",
+      "joint_prime_side_schur_floor": "0.00000000533728373245522826410785640181",
+      "kernel_metric": "290255.645280634042443875569664",
+      "prime_power_count": 7,
+      "rational_leja_pivots": [
+        "0.0502676107543024208289305",
+        "-0.0628738428630592405283067",
+        "0.0197380535070738110336282"
+      ],
+      "selected_frame_ratio": "0.00000000134223317472923721977839732574"
+    },
+    {
+      "N": 3,
+      "c": 20,
+      "conditional_evaluation": "-0.0400361390454788572829310560773",
+      "conditional_zero_index": 2,
+      "direct_lowest_eigenvalue": "4.34686113424806701007545977194e-14",
+      "first_frame_zero_indices": [1, 4, 22],
+      "joint_corrected_residual_ratio": "3.92554647217654255802813893637e-14",
+      "joint_prime_side_schur_floor": "4.34686257296168526707757995875e-14",
+      "kernel_metric": "380448890199.508156106200302895",
+      "prime_power_count": 12,
+      "rational_leja_pivots": [
+        "-0.0597282504763628576650255",
+        "-0.0299189502401080160141332",
+        "0.0116934944605252245240598",
+        "-0.0400361390454788572829311"
+      ],
+      "selected_frame_ratio": "4.2131610078514270904944102238e-15"
+    },
+    {
+      "N": 4,
+      "c": 50,
+      "conditional_evaluation": "-0.00751505527452940851879934359191",
+      "conditional_zero_index": 24,
+      "direct_lowest_eigenvalue": "3.38294540410547458660877848447e-18",
+      "first_frame_zero_indices": [1, 3, 7, 2],
+      "joint_corrected_residual_ratio": "1.66288079013387659629417550602e-18",
+      "joint_prime_side_schur_floor": "3.38306171806071156912788004678e-18",
+      "kernel_metric": "32831462587657.7550864594497248",
+      "prime_power_count": 23,
+      "rational_leja_pivots": [
+        "-0.041952789071026618976271",
+        "0.0269230823150104540222454",
+        "0.0137013432597080489800803",
+        "0.0091304717880135309947028",
+        "-0.00751505527452940851879934"
+      ],
+      "selected_frame_ratio": "1.72018092792683497283370454077e-18"
+    },
+    {
+      "N": 5,
+      "c": 100,
+      "conditional_evaluation": "-0.0100543198872817479432094641605",
+      "conditional_zero_index": 4,
+      "direct_lowest_eigenvalue": "1.79591713732869353700697701838e-22",
+      "first_frame_zero_indices": [1, 2, 6, 3, 19],
+      "joint_corrected_residual_ratio": "1.60737510046336986214751361214e-22",
+      "joint_prime_side_schur_floor": "1.79592080793678733123990672647e-22",
+      "kernel_metric": "5361530089993778543.01330623872",
+      "prime_power_count": 35,
+      "rational_leja_pivots": [
+        "-0.0596464570132809437388424",
+        "0.0233773838774373200302842",
+        "0.0145575764121867961154195",
+        "0.00843121396802679528165729",
+        "0.00742634430446947437986164",
+        "-0.0100543198872817479432095"
+      ],
+      "selected_frame_ratio": "1.88545707473417469092393114328e-23"
+    },
+    {
+      "N": 6,
+      "c": 200,
+      "conditional_evaluation": "-0.00417969756069299893573684647834",
+      "conditional_zero_index": 12,
+      "direct_lowest_eigenvalue": "2.49628866734672815678681912908e-27",
+      "first_frame_zero_indices": [2, 1, 7, 4, 23, 3],
+      "joint_corrected_residual_ratio": "2.25057645533164159738921291188e-27",
+      "joint_prime_side_schur_floor": "2.49629933812204894799473088745e-27",
+      "kernel_metric": "71095827545553290526099.4511891",
+      "prime_power_count": 60,
+      "rational_leja_pivots": [
+        "0.0312677535706477708449587",
+        "-0.0188516433054700893282074",
+        "-0.0138211412745614049195099",
+        "-0.00853334424515085852971249",
+        "0.00621867795354945198912894",
+        "-0.0186148301170158342563861",
+        "-0.00417969756069299893573685"
+      ],
+      "selected_frame_ratio": "2.4572288279040735060551797557e-28"
+    },
+    {
+      "N": 7,
+      "c": 500,
+      "conditional_evaluation": "-0.0550984279540248933276604535897",
+      "conditional_zero_index": 4,
+      "direct_lowest_eigenvalue": "4.81980570871083282983108140301e-33",
+      "first_frame_zero_indices": [5, 2, 1, 21, 3, 9, 65],
+      "joint_corrected_residual_ratio": "3.6308504218603866838283798472e-33",
+      "joint_prime_side_schur_floor": "4.81980622711245885233946415093e-33",
+      "kernel_metric": "2.55336384211626758647873273527e+30",
+      "prime_power_count": 114,
+      "rational_leja_pivots": [
+        "-0.0236755691311388729013331",
+        "0.0337414187692049779955455",
+        "0.0191874025287878241680958",
+        "-0.00752174467570738926469075",
+        "-0.0328562499980879289437485",
+        "-0.00842602343290038375415282",
+        "0.00312460723747936534558163",
+        "-0.0550984279540248933276605"
+      ],
+      "selected_frame_ratio": "1.18895580525207216851108430373e-33"
+    }
+  ],
+  "operator": "complete D-0001 polar + archimedean + every prime power q<=c",
+  "proof_boundary": "The matrix formulas are complete, but mpmath values and zeta-zero ordinates are nondirected. This table nominates directed levels and tests the structured frame; it is not a proof object.",
+  "schema": "riemann.x20704.growing-prime-side-recon.v1",
+  "zero_count": 100
+}

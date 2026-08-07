@@ -1,0 +1,13 @@
+{
+  "schema": "riemann.x20706.source-resolvent.v1",
+  "metric_diagonal": [1, 2, 2],
+  "source_functional": [1, 2, 2],
+  "complement_basis": [[-2, -2], [1, 0], [0, 1]],
+  "A": [
+    [3, {"numerator": 1, "denominator": 2}, {"numerator": 1, "denominator": 3}],
+    [{"numerator": 1, "denominator": 2}, 2, {"numerator": 1, "denominator": 4}],
+    [{"numerator": 1, "denominator": 3}, {"numerator": 1, "denominator": 4}, {"numerator": 5, "denominator": 2}]
+  ],
+  "pole_tau": 2,
+  "pole_vector": [1, {"numerator": 1, "denominator": 2}, {"numerator": 1, "denominator": 3}]
+}

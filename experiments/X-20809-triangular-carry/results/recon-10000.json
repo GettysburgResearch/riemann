@@ -1,0 +1,23 @@
+{
+  "exact": {
+    "classification": "PASS_EXACT_AVERAGED_CARRY_AND_ADJOINT_RECONSTRUCTION",
+    "coefficient_count": 13,
+    "minimum_coefficient": "13/210",
+    "target_sum": "1995724207/662547600",
+    "x": 14
+  },
+  "ordinary": {
+    "binomial_objective": 371.5124154811048,
+    "classification": "ORDINARY_RECONNAISSANCE_NOT_A_CERTIFICATE",
+    "coefficient_log_budget": 45.15283744257349,
+    "coefficient_sum": 24.52784203314936,
+    "endpoint_coefficient": 0.0,
+    "identity_error": 4.206412995699793e-12,
+    "lead": 400.9077624632988,
+    "lead_minus_4sqrtx": 0.907762463298809,
+    "minimum_positive_coefficient": 1.0003000695973407e-06,
+    "negative_count_below_minus_1e_12": 0,
+    "prime_ramp": 371.5124154811006,
+    "x": 10000
+  }
+}
