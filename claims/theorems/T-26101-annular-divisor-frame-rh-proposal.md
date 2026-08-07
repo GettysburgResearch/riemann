@@ -1,13 +1,13 @@
 # T-26101 — Full elementary RH proposal by annular divisor-gradient projection
 
 Claim ID: `T-26101`  
-Title: The parabolic carry seed, a slack-anchored annular active frame, and the square-screw transfer imply the Riemann Hypothesis  
-Status: **FULL ELEMENTARY PROPOSAL — `SAF2/SAF3` OPEN; RH UNPROVED**  
+Title: The parabolic carry seed, the annular dual frame, and the square-screw transfer imply the Riemann Hypothesis  
+Status: **FULL ELEMENTARY PROPOSAL — `ADF` OPEN; RH UNPROVED**  
 Authoring agent: `gpt56-pro-22`  
 Created: 2026-08-08  
 Issue: #261  
 Base: PR #254 at `be8405e543957ae64ddd10965e9d709e38beb5ff`  
-Depends on: PR #248 `L-24501/L-24502/T-24501`; PR #254 `R-25301/L-25301`; `L-26101`--`L-26104`
+Depends on: PR #248 `L-24501/L-24502/T-24501`; PR #254 `R-25301/L-25301`; `L-26101`--`L-26105`
 
 ## 1. Exact finite front door
 
@@ -71,7 +71,7 @@ and
 
 PR #254 proves that the seed is not close to feasible after positive parts are separated: its positive and negative von-Mangoldt weighted constraint masses are both of order at least `sqrt(X)`. The monotone cover therefore loses a fixed square-root amount and is rejected.
 
-The new `L-26104` nevertheless proves that the Euclidean positive-residual norm is small:
+`L-26104` proves the pointwise source estimate and its Euclidean consequence
 
 \[
 \boxed{
@@ -80,17 +80,17 @@ The new `L-26104` nevertheless proves that the Euclidean positive-residual norm 
 \tag{T-26101.5}
 \]
 
-Thus the initial source budget is closed unconditionally; only generated-frame conditioning and leakage remain.
+Thus the initial source budget is closed unconditionally.
 
-## 3. Signed annular repair
+## 3. Exact annular repair radius
 
-Fix the annulus
+Fix
 
 \[
  I_X=[\lceil9X/20\rceil,\lfloor4X/5\rfloor]
 \]
 
-and the exact matrix
+and
 
 \[
  A_X(q,j)
@@ -106,23 +106,72 @@ Let
  r_X(q)=v_q(b_X^{(0)})-w_X(q).
 \]
 
-Assume `SAF2/SAF3` of `L-26103`: a subpower lower frame moat for every source-generated active set and a fixed contraction of the complete positive leakage. Its active minimum-norm iteration constructs a real flow `F_X` supported on `I_X` with
+The minimum annular repair norm is
+
+\[
+ \mathcal R_X
+ =\inf\{\|F\|_2:A_XF\ge r_X\}.
+ \tag{T-26101.7}
+
+`L-26105` proves the exact dual formula
 
 \[
 \boxed{
+ \mathcal R_X
+ =\sup_{\substack{\lambda\ge0\\A_X^*\lambda\ne0}}
+ \frac{\langle\lambda,r_X\rangle_+}
+      {\|A_X^*\lambda\|_2}.
+}
+\tag{T-26101.8}
+
+Thus the sole finite arithmetic theorem may be stated without an existence gap.
+
+## 4. Annular Dual Frame theorem (`ADF`)
+
+Prove, for every nonnegative prime-power vector `lambda`,
+
+\[
+\boxed{
+ \left(
+  \sum_{q=p^a\le X}\lambda_qr_X(q)
+ \right)_+
+ \le X^{o(1)}
+ \left[
+  \sum_{j\in I_X}
+  \left(
+   2\sum_{q\mid j}\lambda_q
+   -\sum_{q\mid j-1}\lambda_q
+   -\sum_{q\mid j+1}\lambda_q
+  \right)^2
+ \right]^{1/2}.
+}
+\tag{ADF}
+
+By (T-26101.8), `ADF` is equivalent to
+
+\[
+\boxed{
+ \mathcal R_X=X^{o(1)}.
+}
+\tag{T-26101.9}
+
+The source-specific active projection and `SAF2/SAF3` of `L-26103` are a proposed constructive proof of `ADF`; they are not additional hypotheses once `ADF` is established.
+
+## 5. Feasible sharp carry vector
+
+Assume `ADF`, and choose an annular flow `F_X` with
+
+\[
  A_XF_X\ge r_X,
  \qquad
  \|F_X\|_2=X^{o(1)}.
-}
-\tag{T-26101.7}
-\]
+ \tag{T-26101.10}
 
 Define
 
 \[
  b_X(m)=b_X^{(0)}(m)+F_X(m-1)-F_X(m).
- \tag{T-26101.8}
-\]
+ \tag{T-26101.11}
 
 By `L-26102`, for all sufficiently large `X`,
 
@@ -137,14 +186,13 @@ and every prime-power constraint is feasible. Moreover,
  J_X(b_X)
  \ge4\sqrt X-X^{o(1)}.
 }
-\tag{T-26101.9}
-\]
+\tag{T-26101.12}
 
-The objective correction is actually `X^{-3/2+o(1)}`; the weaker displayed error is retained to match the global consumer.
+The objective correction is actually `X^{-3/2+o(1)}`.
 
-## 4. Sharp prime-ramp lower bound
+## 6. Sharp prime-ramp lower bound
 
-Combining (T-26101.2) and (T-26101.9),
+Combining (T-26101.2) and (T-26101.12),
 
 \[
 \boxed{
@@ -152,11 +200,11 @@ Combining (T-26101.2) and (T-26101.9),
  \frac{\Lambda(q)}{\sqrt q}\log\frac Xq
  \ge4\sqrt X-X^{o(1)}.
 }
-\tag{T-26101.10}
+\tag{T-26101.13}
 
 This is the complete prime-power ramp, with all exponents and no omitted endpoint.
 
-## 5. Square-screw transfer
+## 7. Square-screw transfer
 
 At `X=N^2`, use the exact square-screw identity frozen in the carry/square-screw stack:
 
@@ -167,37 +215,51 @@ At `X=N^2`, use the exact square-screw identity frozen in the carry/square-screw
   \frac{\Lambda(q)}{\sqrt q}
   \log\frac{N^2}{q}
  +O(\log N).
- \tag{T-26101.11}
+ \tag{T-26101.14}
 
-Equation (T-26101.10) gives the one-sided subpower envelope
+Equation (T-26101.13) gives
 
 \[
 \boxed{
  \Psi(2\log N)\le N^{o(1)}.
 }
-\tag{T-26101.12}
+\tag{T-26101.15}
 
-The unconditional derivative budget propagates this estimate between adjacent square samples. The upper-envelope Landau one-sign theorem then excludes every pole corresponding to a zeta zero with real part greater than `1/2`. Functional-equation symmetry gives
+The unconditional derivative budget propagates this estimate between adjacent square samples. The upper-envelope Landau one-sign theorem excludes every pole corresponding to a zeta zero with real part greater than `1/2`. Functional-equation symmetry gives
 
 \[
 \boxed{\mathrm{RH}.}
-\tag{T-26101.13}
+\tag{T-26101.16}
 
 The square-screw normalization, interpolation, and Landau orientation remain inherited dependencies and must be reviewed at their frozen commits.
 
-## 6. Why the remaining theorem is narrow
+## 8. Mandatory near-null firewall
 
-`SAF2/SAF3` do not assert:
+For
 
-- positivity of the exact Möbius carry inverse;
-- a contraction for every balanced Möbius packet;
-- a generic lower frame bound for every prime-power row subset;
-- a positive cover of the constraint defect;
-- bounded endpoint or Bohr rank.
+\[
+ \lambda_q=\Lambda(q),
+\]
 
-They concern one explicit source residual, one fixed annulus, and the active row sets generated by one deterministic projection algorithm. Negative seed slack is part of the theorem and cannot be discarded.
+one has exactly
 
-## 7. Full proposed spine
+\[
+ (A_X^*\Lambda)_j
+ =\log\frac{j^2}{j^2-1}
+\]
+
+and
+
+\[
+ \langle\Lambda,r_X\rangle
+ =J_X(b_X^{(0)})
+ -\sum_{q=p^a\le X}
+  \frac{\Lambda(q)}{\sqrt q}\log\frac Xq.
+\]
+
+Thus the von-Mangoldt vector is an arithmetic near-null direction whose numerator is the sharp prime-ramp deficit itself. `ADF` cannot follow from a generic frame lower bound or entrywise absolute estimate. A proof must use the source sign and show that every other nonnegative near-null vector is controlled by the same negative-slack mechanism.
+
+## 9. Full proposed spine
 
 ```text
 average binomial carries
@@ -205,9 +267,8 @@ average binomial carries
 -> parabolic seed with 4 sqrt(X)-O(log X) objective
 -> exact positive/negative constraint dipole
 -> polylog initial positive-residual norm
--> annular divisor-gradient Gram
--> source-specific active minimum-norm projection
--> SAF2 frame moat + SAF3 leakage contraction
+-> exact annular Hilbert-Farkas duality
+-> Annular Dual Frame inequality
 -> subpower-norm feasible flow
 -> sharp prime-ramp lower bound
 -> square-screw upper envelope
@@ -215,7 +276,7 @@ average binomial carries
 -> RH.
 ```
 
-## 8. Exact proof boundary
+## 10. Exact proof boundary
 
 ```text
 finite carry/divisor-gradient algebra       inherited / proposed exact
@@ -223,13 +284,13 @@ parabolic seed and sharp objective          inherited / proposed complete
 monotone positive cover                     refuted
 constraint dipole                           inherited / proposed complete
 initial residual L2 budget                  proposed complete
-divisor-gradient Gram factorization         proposed exact
 annular slack/cost transfer                  proposed complete
-SAF2 generated frame moat                   OPEN / RH-BEARING
-SAF3 positive leakage contraction           OPEN / RH-BEARING
-SAF2/3 -> sharp prime ramp                   proposed complete
+Hilbert-Farkas primal/dual equivalence       proposed complete
+Annular Dual Frame inequality               OPEN / RH-BEARING
+SAF2/SAF3 constructive route to ADF          OPEN
+ADF -> sharp prime ramp                      proposed complete
 sharp prime ramp -> RH                       inherited conditional transfer
 Riemann Hypothesis                           UNPROVED
 ```
 
-This is a serious full elementary proposal with one coupled source-specific theorem pair. It is not a claim that `SAF2/SAF3` or RH has already been proved.
+This is a full elementary proposal with one exact source-specific inequality. It is not a claim that `ADF` or RH has already been proved.
