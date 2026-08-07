@@ -1,23 +1,23 @@
-# L-26103 — Slack-anchored active projection on a fixed annulus
+# L-26103 — Source-specific active projection on a fixed annulus
 
 Claim ID: `L-26103`  
-Title: A source-specific active-frame and leakage contraction produces a subpower-norm signed carry repair  
-Status: **FULL-PROPOSAL HINGE — `SAF2/SAF3` OPEN; `SAF1` PROVED IN `L-26104`**  
+Title: Exact active minimum-norm corrections and the complete-period prime-power frame model  
+Status: **CORRECTED PROPOSED EXACT ALGEBRA — UNIFORM HALF-STEP LEAKAGE CONTRACTION WITHDRAWN**  
 Authoring agent: `gpt56-pro-22`  
 Created: 2026-08-08  
+Corrected: 2026-08-08  
 Issue: #261  
-Depends on: `L-26101`, `L-26102`, `L-26104`; PR #254 `L-25301`  
-Scope: exact iterative construction plus one explicit all-scale arithmetic theorem
+Depends on: `L-26101`, `L-26102`, `L-26104`, `L-26105`, `L-26106`; PR #254 `L-25301`  
+Scope: exact active-set construction and frame model; not the final arithmetic theorem
 
 ## 1. Fixed annular source
 
-Fix, for definiteness,
+Fix
 
 \[
  \alpha=\frac9{20},
  \qquad
  \beta=\frac45,
- \tag{L-26103.1}
 \]
 
 and let
@@ -26,29 +26,28 @@ and let
  I_X=[\lceil\alpha X\rceil,\lfloor\beta X\rfloor].
 \]
 
-Let `A_X` be the prime-power divisor-gradient matrix
+For prime powers `q<=X` and `j in I_X`, put
 
 \[
  A_X(q,j)
  =2\mathbf1_{q\mid j}
  -\mathbf1_{q\mid j-1}
  -\mathbf1_{q\mid j+1}.
+ \tag{L-26103.1}
+\]
+
+The exact parabolic residual is
+
+\[
+ r_q=v_q(b_X^{(0)})-q^{-1/2}\log(X/q).
  \tag{L-26103.2}
 \]
 
-The initial residual is
+The annular repair problem is
 
 \[
- r^{(0)}_q
- =v_q(b_X^{(0)})-q^{-1/2}\log(X/q).
+ A_XF\ge r.
  \tag{L-26103.3}
-\]
-
-The target is one annular flow `F` satisfying
-
-\[
- A_XF\ge r^{(0)}.
- \tag{L-26103.4}
 \]
 
 ## 2. Exact row compression
@@ -57,71 +56,58 @@ Two prime powers are equivalent at level `X` when they induce the same row on `I
 
 \[
  q\sim_Xq'
- \iff
- A_X(q,\cdot)=A_X(q',\cdot).
- \tag{L-26103.5}
+ \iff A_X(q,\cdot)=A_X(q',\cdot).
+ \tag{L-26103.4}
 \]
 
-For one equivalence class `C`, the constraints
-
-\[
- A_X(q,\cdot)F\ge r_q
- \qquad(q\in C)
-\]
-
-are exactly equivalent to the single constraint
+For one equivalence class `C`, the complete family of inequalities is exactly equivalent to
 
 \[
  A_X(C,\cdot)F\ge\max_{q\in C}r_q.
- \tag{L-26103.6}
+ \tag{L-26103.5}
 \]
 
-Thus duplicate rows are compressed without losing the strongest source residual. This is load bearing for high prime powers whose annular stencils may coincide.
+Thus duplicate rows may be compressed only after retaining the largest residual.
 
-## 3. Minimum-norm active correction
+## 3. Exact active minimum-norm correction
 
 Suppose a residual vector `r^(n)` has been produced. Compress identical rows and let
 
 \[
- S_n=\{C:r_C^{(n)}>0\}
- \tag{L-26103.7}
+ S_n=\{C:r_C^{(n)}>0\}.
 \]
 
-be the active classes. Put
+When
 
 \[
- H_n=A_{S_n}A_{S_n}^*.
+ H_n=A_{S_n}A_{S_n}^*
 \]
 
-When `H_n` is invertible, define the exact minimum-norm active correction
+is invertible, define
 
 \[
 \boxed{
  u_n=A_{S_n}^*H_n^{-1}r_{S_n}^{(n)}.
 }
-\tag{L-26103.8}
-\]
+\tag{L-26103.6}
 
-For a fixed damping factor `0<eta<1`, set
+For `0<eta<1`, set
 
 \[
  F^{(n+1)}=F^{(n)}+\eta u_n,
- \tag{L-26103.9}
 \]
 
 \[
  r^{(n+1)}=r^{(n)}-\eta A_Xu_n.
- \tag{L-26103.10}
-\]
+ \tag{L-26103.7}
 
-The active rows are reduced exactly:
+The currently active rows decrease exactly:
 
 \[
 \boxed{
  r_{S_n}^{(n+1)}=(1-\eta)r_{S_n}^{(n)}.
 }
-\tag{L-26103.11}
-\]
+\tag{L-26103.8}
 
 The increment has the exact energy identity
 
@@ -130,183 +116,117 @@ The increment has the exact energy identity
  \|u_n\|_2^2
  =\langle r_{S_n}^{(n)},H_n^{-1}r_{S_n}^{(n)}\rangle.
 }
-\tag{L-26103.12}
-\]
+\tag{L-26103.9}
 
-These statements are finite linear algebra. The only possible failure is leakage creating new positive residuals outside `S_n`.
+This is a useful finite producer and diagnostic for the active frame.
 
-## 4. Exact complete-period model
+## 4. Complete-period prime-power model
 
-The active matrix has more structure than an arbitrary sparse matrix.
+For different prime bases `p!=r`, the rows `A_(p^a)` and `A_(r^b)` are orthogonal over every complete common period. Each row has mean zero, and the residue coordinates separate through the Chinese remainder theorem.
 
-For different prime bases `p!=r`, the rows `A_(p^a)` and `A_(r^b)` have zero inner product over every complete period of length `p^a r^b`, because each row has mean zero and the residue coordinates separate by the Chinese remainder theorem.
-
-For one odd prime `p`, and `a<=b`, the complete-period mean is
+For one odd prime `p` and `a<=b`,
 
 \[
 \boxed{
- \mathbb M\bigl[A_{p^a}A_{p^b}\bigr]
- =\frac6{p^b}.
+ \mathbb M[A_{p^a}A_{p^b}]=\frac6{p^b}.
 }
-\tag{L-26103.13}
-\]
+\tag{L-26103.10}
 
-For `p=2`, the same formula holds once `a>=2`; the row `q=2` has the explicit harmless exceptional constants
+For `p=2`, the same formula holds once `a>=2`, while
 
 \[
  \mathbb M[A_2^2]=4,
  \qquad
  \mathbb M[A_2A_{2^b}]=\frac8{2^b}\quad(b>=2).
- \tag{L-26103.14}
-\]
+ \tag{L-26103.11}
 
-After normalizing the odd-prime chain by its diagonal, its correlation matrix is
+After diagonal normalization, an odd-prime chain has correlation
 
 \[
- R_p(a,b)=p^{-|a-b|/2}.
- \tag{L-26103.15}
+ R_p(a,b)=p^{-|a-b|/2}
 \]
 
-The finite Toeplitz matrices satisfy
+and the finite Toeplitz floor
 
 \[
 \boxed{
  R_p\succeq
  \frac{1-p^{-1/2}}{1+p^{-1/2}}I.
 }
-\tag{L-26103.16}
-\]
+\tag{L-26103.12}
 
-Thus complete prime-power chains have a uniform normalized frame floor. The remaining difficulty is the finite-annulus boundary interaction between different prime bases and the sign of leakage into inactive rows.
+Thus one complete prime-power chain is uniformly conditioned after normalization. The difficult arithmetic lies in finite-annulus boundaries, different-prime couplings, and the logarithmic near-null mode.
 
-## 5. Initial source budget is closed
+## 5. Closed initial source budget
 
-`L-26104` proves the pointwise estimate
+`L-26104` proves
 
 \[
- (r^{(0)}_q)_+
+ (r_q)_+
  \ll\frac{1+\log(X/q)}{\sqrt q}
- \tag{L-26103.17}
 \]
 
-for every prime power `q<=X`. Consequently
+and therefore
 
 \[
 \boxed{
- \|(r^{(0)})_+\|_2
- \ll\log^{3/2}(2X)=X^{o(1)}.
+ \|r_+\|_2\ll\log^{3/2}(2X).
 }
-\tag{SAF1}
-\]
+\tag{L-26103.13}
 
-The proof uses the mean-zero periodic selector for the first unit of each `q`-block and a single integration by parts. Thus the initial residual norm is no longer part of the open theorem.
+This part of the earlier `SAF` package is complete.
 
-## 6. Slack-Anchored Annular Frame theorem (`SAF`)
+## 6. Withdrawal of the uniform half-step contraction
 
-The remaining proposed theorem is the following source-specific pair of estimates.
+The exact identity (L-26103.8) controls only the rows active before the step. Leakage can activate previously negative rows.
 
-There exist an absolute constant
-
-\[
- 0<\rho<1
- \tag{L-26103.18}
-\]
-
-and a function `kappa_X=X^{-o(1)}` such that, for all sufficiently large `X`, the iteration (L-26103.8)--(L-26103.10), starting from the exact parabolic residual, has:
-
-### Generated active-frame moat
-
-For every nonempty active set produced by the iteration after exact row compression,
+Floating runs on the actual parabolic source contain individual half-steps for which
 
 \[
-\boxed{
- H_n\succeq\kappa_XI.
-}
-\tag{SAF2}
+ \|(r^{(n+1)})_+\|_2>\|(r^{(n)})_+\|_2.
 \]
 
-No claim is made for arbitrary subsets of prime-power rows; generic annular submatrices can be badly conditioned. The quantifier is only over the active sets generated by the exact source residual.
-
-### Positive-leakage contraction
+Therefore the formerly proposed per-step invariant
 
 \[
-\boxed{
  \|(r^{(n+1)})_+\|_2
- \le\rho\,\|(r^{(n)})_+\|_2.
-}
-\tag{SAF3}
+ \le\rho\|(r^{(n)})_+\|_2,
+ \qquad\rho<1,
 \]
 
-This inequality includes all newly activated prime powers, every same-base chain, and all consecutive-prime-power clusters.
+is withdrawn. It should not be sent to review as a theorem.
 
-## 7. Recursive invariant
+The correct globally monotone recursion is the projected-dual ascent of `L-26106`. Its Lyapunov function is the concave Hilbert--Farkas dual energy, not the positive-residual norm.
 
-Under `SAF2/SAF3`, define
+## 7. Current role of active frames
+
+Generated active Gram floors remain useful evidence and may contribute to a proof of the Annular Dual Frame inequality, but no active-set frame bound is now an independent hypothesis in the final theorem.
+
+The exact acceptance statement is `ADF` from `L-26105`, equivalently
 
 \[
- \Phi_n
- =\|(r^{(n)})_+\|_2
- +(1-\rho)\sqrt{\kappa_X}
-  \sum_{k<n}\|u_k\|_2.
- \tag{L-26103.19}
+ \inf\{\|F\|_2:A_XF\ge r\}=X^{o(1)}.
 \]
 
-By (L-26103.12), (SAF2), and (SAF3),
+The active half-step and the projected-dual iteration are primal producers for this finite optimum.
 
-\[
- \|u_n\|_2
- \le\kappa_X^{-1/2}\|(r^{(n)})_+\|_2,
-\]
+## 8. Proof boundary
 
-and the geometric contraction gives
-
-\[
-\boxed{
- \sum_{n\ge0}\eta\|u_n\|_2
- \le
- \frac{\eta}{(1-\rho)\sqrt{\kappa_X}}
- \|(r^{(0)})_+\|_2
- =X^{o(1)}.
-}
-\tag{L-26103.20}
-\]
-
-Hence `F^(n)` converges in the finite-dimensional annular space to a flow `F_X` satisfying
-
-\[
- A_XF_X\ge r^{(0)},
- \qquad
- \|F_X\|_2=X^{o(1)}.
- \tag{L-26103.21}
-\]
-
-`L-26102` then supplies primal positivity and negligible objective cost.
-
-## 8. Proposed proof mechanism for `SAF2/SAF3`
-
-A proof should combine four exact structures rather than use a generic singular-value bound.
-
-1. **Prime-power-chain compression.** Use (L-26103.13)--(L-26103.16) and keep only the strongest identical annular row.
-2. **Bounded same-scale clusters.** Use PR #254's nonnegative inverses for paths of length at most three and the exceptional cluster `{2,3,4,5}`.
-3. **Quotient-cell orthogonality.** For different prime bases, complete-period covariance is zero. Boundary terms are organized by the exact determinant equations `kq-lr in {-2,-1,0,1,2}` before any absolute summation.
-4. **Slack anchoring.** Leakage into an inactive row is charged against its actual negative seed slack. The macroscopic negative ledger from `L-25301` must be retained; replacing it by zero recreates the refuted monotone cover.
-
-The active projection is therefore a finite recursive implementation of constraint-dipole transport, not a black-box LP existence assertion.
-
-## 9. Proof boundary
-
-Exact in this file and `L-26104`:
+Exact:
 
 - row compression;
-- minimum-norm projection;
-- active residual reduction;
+- active minimum-norm correction;
+- active-row reduction;
 - projection energy identity;
-- complete-period prime-base orthogonality and chain covariance;
-- the polylogarithmic initial residual budget `SAF1`;
-- `SAF2/SAF3 =>` a convergent subpower-norm flow.
+- complete-period prime-base orthogonality and same-base covariance;
+- polylogarithmic initial residual budget.
+
+Withdrawn:
+
+- uniform contraction of the complete positive-residual norm at every active half-step.
 
 Open:
 
-- `SAF2` and `SAF3` uniformly for the parabolic source;
-- the full annular carry certificate;
+- `ADF`;
+- a subpower annular repair;
 - RH.
