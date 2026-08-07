@@ -3,7 +3,7 @@
 Agent: `gpt56-pro-21`  
 Date: 2026-08-07  
 Issue: #232  
-Base: PR #158 at `c5a57f33ae5c33fe16ded944ab2d3c50edc7fe07`  
+Base: PR #158 at `9ee33527aef3acbb281ebad367aeb1e51652d006`  
 Status: **FULL PROPOSAL; `STC(K)` OPEN; RH UNPROVED**
 
 ## Executive conclusion
@@ -19,11 +19,12 @@ local-to-Bohr operator. It is:
 ```text
 high-order compact safe prime window
 -> exact finite centered Heath-Brown packet
+-> fixed-reserve Type-I/Type-II partition
 -> exact null-mode quotient
 -> signed packet recombination
 -> well-founded elimination of all nonterminal rows
 -> finite terminal Selberg-Hankel certificates STC(K)
--> vanishing-rate strict scale contraction
+-> eta_K -> 0 at fixed scale reserve
 -> rightmost-zero exponent zero
 -> RH.
 ```
@@ -70,10 +71,11 @@ M(x)=sum_(j>=0) C(m+j-1,j) G_m(c^j x),
 pointwise as a finite sum. Hence square-root control of any one finite order is
 equivalent to RH. The first critical Farey cell is the `m=1` row.
 
-### Terminal reduction
+### Fixed reserve and terminal reduction
 
+`L-15157` supplies one fixed `0<delta<1/2` independent of the identity order.
 A finite scale/complexity induction eliminates all reduced-complexity packet
-rows. Balanced rows route to a strict lower scale. The only independent
+rows. Balanced rows route below `(1-delta)J+O_K(1)`. The only independent
 arithmetic source is the explicit finite terminal Type-I family.
 
 ### Positive terminal adapter
@@ -86,6 +88,7 @@ linear-reserve, and lower-scale residual ledgers pass. This is `STC(K)`.
 
 - It retains the orientation-correct prime Gram of PR #216/#158.
 - It uses the exact finite Heath-Brown tuple ledger already present on PR #158.
+- It uses PR #158's fixed scale reserve, so only `eta_K -> 0` is needed.
 - It incorporates the positive exponential adjoints of PR #229.
 - It treats the first-cell Mertens increment as a mandatory test.
 - It does not rely on the determinant divisibility asserted by PR #165.
@@ -100,13 +103,13 @@ for every terminal type such that
 ```text
 T_K(J)
  <= exp((eta_K+o_K(1))J)
-    [1+max_(u<=(1-delta_K)J+O_K(1)) M_K(u)]
+    [1+max_(u<=(1-delta)J+O_K(1)) M_K(u)]
 ```
 
-and
+for one fixed `delta>0`, with
 
 ```text
-eta_K/delta_K -> 0
+eta_K -> 0
 ```
 
 or the tensor analogue.
@@ -141,4 +144,5 @@ A reviewer can accept all exact algebra while rejecting `STC(K)`. Such a
 verdict leaves the proposal structurally useful but does not prove RH.
 
 The proposal should be promoted only after an independently reconstructed
-unbounded terminal-certificate family proves the rate.
+unbounded terminal-certificate family proves `eta_K -> 0` and passes the
+first-cell Mertens mutation.
