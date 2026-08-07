@@ -1,0 +1,14 @@
+{
+  "schema": "riemann.x22302-prime-energy-pole-tomography.v1",
+  "classification": "EXACT_SYNTHETIC_POLE_TOMOGRAPHY",
+  "residue_modulus_sq": "9",
+  "principal_part_dominance": "1/2",
+  "local_radius": "1",
+  "horizontal_offsets": ["1/2", "1/4", "1/8", "1/16"],
+  "puncture_scales": ["1/4", "1/8", "1/16", "1/32"],
+  "claimed": {
+    "scaled_inverse_distance_constant": "9/4",
+    "last_annulus_lower": "36"
+  },
+  "proof_object_sha256": "6a16cbe701ab9a7a2641b82b72c2294daa08174b9cd6a3b0bb96cd5ae984584f"
+}

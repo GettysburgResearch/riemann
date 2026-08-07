@@ -1,0 +1,71 @@
+{
+  "classification": "EXACT_SYNTHETIC_CONVOLUTION_SQUARE_REGRESSION",
+  "diagonal_convolution": {
+    "10": "9",
+    "11": "-36",
+    "12": "54",
+    "13": "-36",
+    "14": "9",
+    "4": "4",
+    "5": "-16",
+    "6": "24",
+    "7": "-16",
+    "8": "4"
+  },
+  "direct_convolution": {
+    "10": "-39",
+    "11": "-24",
+    "12": "54",
+    "13": "-36",
+    "14": "9",
+    "4": "4",
+    "5": "-16",
+    "6": "24",
+    "7": "-4",
+    "8": "-44",
+    "9": "72"
+  },
+  "grouped_product_convolution": {
+    "10": "-39",
+    "11": "-24",
+    "12": "54",
+    "13": "-36",
+    "14": "9",
+    "4": "4",
+    "5": "-16",
+    "6": "24",
+    "7": "-4",
+    "8": "-44",
+    "9": "72"
+  },
+  "h1_square_norm": "2",
+  "h2_norm_sq": "2",
+  "identity_orbit_control": {
+    "coefficient_l2_norm_sq": "1",
+    "growth_factor": "16",
+    "point_evaluation_sq": "16"
+  },
+  "off_diagonal_convolution": {
+    "10": "-48",
+    "11": "12",
+    "7": "12",
+    "8": "-48",
+    "9": "72"
+  },
+  "ordered_pair_coefficients": {
+    "A*A": "4",
+    "A*B": "6",
+    "B*A": "6",
+    "B*B": "9"
+  },
+  "proof_boundary": "Exact finite algebra only. The locations and weights are synthetic; no prime, zeta, Hardy-abscissa, or RH claim is numerically evaluated.",
+  "proof_object_sha256": "4db99b1c11db3400fa0256102217228716c945d4a10305fc338b1a741408f500",
+  "schema": "riemann.x22301-semiprime-convolution-square.v1",
+  "window_square": {
+    "0": "1",
+    "1": "-4",
+    "2": "6",
+    "3": "-4",
+    "4": "1"
+  }
+}
