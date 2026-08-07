@@ -5,6 +5,7 @@ Title: A source-specific reflected Hall inequality for the dyadic opposite-parit
 Status: **FULL PROPOSAL PENDING ADVERSARIAL REVIEW — THE REFLECTED DYADIC HALL IDENTITY IS OPEN**  
 Authoring agent: `gpt56-pro-source-specific`  
 Created: 2026-08-08  
+Corrected: 2026-08-08 before PR handoff  
 Source heads inspected: PR #257 `2f508a77a21593c7a8bc852a61e8b19c63367f8b`; PR #254 `be8405e06bc6c845267727b7347ea91f3593e16b`; PR #248 `45d327082422021955be81f1a49fde7b646ce1cb`; PR #244 `c81883549aa15ab16a77b19168647d0d39787f21`; PR #241 `3a227e7595e1fe9e38956048297aa97531c80e4e`; PR #236 `f1d51ae13da93a325349229a3701ae9f5f2f348d`  
 New dependencies: `L-26201`--`L-26203`  
 Scope: one source-specific arithmetic proposal replacing universal bounded-rank and automatic-line mechanisms
@@ -140,16 +141,22 @@ ordinary-prime constraints
 \tag{T-26201.10}
 \]
 
-The parabolic residual has a genuine signed dipole: its positive and negative
-von-Mangoldt weighted masses are both of square-root size, while their signed
-difference is the prime-ramp scalar.  Deleting the positive part loses the
-sharp constant; signed transport is mandatory.
+Put
+
+\[
+ d_X(p)=v_p(b_X^{(0)})-p^{-1/2}\log(X/p),
+\]
+
+and split the prime rows into positive defects `mathcal P_X^+` and negative
+slack `mathcal P_X^-`.  Both von-Mangoldt weighted ledgers are of square-root
+size, while their signed difference is the prime-ramp scalar.  Deleting the
+positive part loses the sharp constant; signed transport is mandatory.
 
 ## 4. Exact primal completion
 
 `L-26203` proves the following finite theorem.
 
-If there are nonnegative blocks
+Suppose there are nonnegative blocks
 
 \[
  (A_\ell,B_\ell,t_\ell),
@@ -158,24 +165,31 @@ If there are nonnegative blocks
 \tag{T-26201.11}
 \]
 
-such that
+such that every prime factor of `A_ell` lies in `mathcal P_X^+`, every prime
+factor of `B_ell` lies in `mathcal P_X^-`, and
 
 \[
  \sum_{\ell:p\mid A_\ell}t_\ell
- -
- \sum_{\ell:p\mid B_\ell}t_\ell
- \ge d_X(p)
+ \ge d_X^+(p)
+ \qquad(p\in\mathcal P_X^+),
 \tag{T-26201.12}
 \]
 
-for every prime `p<=X`, then
+\[
+ \sum_{\ell:p\mid B_\ell}t_\ell
+ \le d_X^-(p)
+ \qquad(p\in\mathcal P_X^-).
+\tag{T-26201.13}
+\]
+
+Then
 
 \[
  b_X^\star(m)
  =
  b_X^{(0)}(m)
  +\sum_\ell t_\ell{\bf1}_{A_\ell<m\le B_\ell}
-\tag{T-26201.13}
+\tag{T-26201.14}
 \]
 
 is nonnegative and feasible, while
@@ -183,7 +197,7 @@ is nonnegative and feasible, while
 \[
  J_{\mathbb P,X}(b_X^\star)
  \ge J_{\mathbb P,X}(b_X^{(0)}).
-\tag{T-26201.14}
+\tag{T-26201.15}
 \]
 
 It follows that
@@ -191,13 +205,13 @@ It follows that
 \[
  \sum_{p\le X}\frac{\log p}{\sqrt p}\log(X/p)
  \ge4\sqrt X-O(\log^2X),
-\tag{T-26201.15}
+\tag{T-26201.16}
 \]
 
 and the square-screw/Landau theorem gives RH.
 
-Thus the full problem has been reduced to an exact finite transport statement,
-not to pointwise Carry Saturation.
+Thus the full problem is reduced to an exact finite bipartite transport
+statement, not to pointwise Carry Saturation.
 
 ## 5. Reflected Dyadic Hall theorem
 
@@ -205,23 +219,34 @@ Fix the source-licensed block grammar generated from complete copies of
 `omega_2`, including every opposite-parity sibling and every reflected cross
 term.
 
-By finite Farkas duality, failure of the transport certificate produces
-nonnegative weights `alpha_p,beta_p` satisfying every licensed block inequality
+Finite Farkas duality gives the exact alternative.  Failure of the bipartite
+transport certificate produces nonnegative weights
+
+\[
+ \alpha_p\ge0
+ \quad(p\in\mathcal P_X^+),
+ \qquad
+ \beta_p\ge0
+ \quad(p\in\mathcal P_X^-)
+\tag{T-26201.17}
+\]
+
+satisfying every licensed block inequality
 
 \[
  \sum_{p\mid A}\alpha_p
  \le
  \sum_{p\mid B}\beta_p,
-\tag{T-26201.16}
+\tag{T-26201.18}
 \]
 
 but
 
 \[
- \sum_p d_X^+(p)\alpha_p
+ \sum_{p\in\mathcal P_X^+}d_X^+(p)\alpha_p
  >
- \sum_p d_X^-(p)\beta_p.
-\tag{T-26201.17}
+ \sum_{p\in\mathcal P_X^-}d_X^-(p)\beta_p.
+\tag{T-26201.19}
 \]
 
 The load-bearing proposed theorem is:
@@ -229,13 +254,13 @@ The load-bearing proposed theorem is:
 > **RDH — Reflected Dyadic Hall.**  
 > For the actual parabolic residual and the complete source-licensed block
 > grammar, every nonnegative pair `(alpha,beta)` satisfying
-> (T-26201.16) obeys
+> (T-26201.18) obeys
 > \[
 >  \boxed{
->  \sum_p d_X^+(p)\alpha_p
+>  \sum_{p\in\mathcal P_X^+}d_X^+(p)\alpha_p
 >  \le
->  \sum_p d_X^-(p)\beta_p.}
-> \tag{T-26201.18}
+>  \sum_{p\in\mathcal P_X^-}d_X^-(p)\beta_p.}
+> \tag{T-26201.20}
 > \]
 
 RDH implies the exact transport certificate by Farkas and hence RH by
@@ -252,8 +277,8 @@ Use the independent frequencies `t,s` and the physical block kernel
  \Phi_{J,\alpha}(t-s)
 \]
 
-of PR #241 `L-9518`.  Insert `A_2^\star`, `omega_2`, and
-`Lambda_2^\star` before decomposing any parity or carry band.
+of PR #241 `L-9518`.  Insert `A_2^star`, `omega_2`, and
+`Lambda_2^star` before decomposing any parity or carry band.
 
 For a Hall witness `(alpha,beta)`, the licensed block inequalities define one
 finite source vector
@@ -264,7 +289,7 @@ finite source vector
  \mathcal V_{\rm in}
  -
  \mathcal V_{\rm out},
-\tag{T-26201.19}
+\tag{T-26201.21}
 \]
 
 where the inner component is supported on the positive carry band `[m,2m)`
@@ -284,11 +309,14 @@ The corrected reflected identity yields the nonnegative normal Gram
   Q_{\mathcal V_{\rm out}}(x)
  \right|^2dx
  \ge0.}
-\tag{T-26201.20}
+\tag{T-26201.22}
 \]
 
 Every cross term is retained.  This is where the old scalar reflected proposal
 and the old line-cone proposal were insufficient.
+
+Equation (T-26201.22) is an interface, not yet a derivation of the Hall
+contraction.
 
 ## 7. Digital boundary closure
 
@@ -297,20 +325,23 @@ Convolve the same source with the binary-digit dual.  Equation
 
 \[
  1,\quad 2,\quad4.
-\tag{T-26201.21}
+\tag{T-26201.23}
 \]
 
-Abel summation against the nonnegative binary digit sums converts the
-non-Hermitian endpoint terms in the Hall contraction into a finite boundary
-ledger
+The proposed source calculation uses Abel summation against the nonnegative
+binary digit sums to convert all non-Hermitian endpoint terms in the Hall
+contraction into a finite boundary ledger
 
 \[
  \mathfrak D_X(\alpha,\beta)\ge0.
-\tag{T-26201.22}
+\tag{T-26201.24}
 \]
 
 All quotient-layer interiors have already been consumed by the compact carry
 dipole; no universal line cancellation is invoked.
+
+The sign in (T-26201.24) is part of the open symbolic identity and must be
+checked atom by atom.
 
 ## 8. Proposed exact reserve identity
 
@@ -318,33 +349,34 @@ The source-specific closing identity to be reconstructed is
 
 \[
  \boxed{
- \sum_p d_X^-(p)\beta_p
+ \sum_{p\in\mathcal P_X^-}d_X^-(p)\beta_p
  -
- \sum_p d_X^+(p)\alpha_p
+ \sum_{p\in\mathcal P_X^+}d_X^+(p)\alpha_p
  =
  \mathfrak R_X(\alpha,\beta)
  +\mathfrak D_X(\alpha,\beta)
- +\mathfrak O_X(\alpha,\beta),}
-\tag{T-26201.23}
+ +\mathfrak O_X(\alpha,\beta).}
+\tag{T-26201.25}
 \]
 
-where
+Here
 
 - `mathfrak R_X` is the two-frequency reflected normal Gram;
 - `mathfrak D_X` is the finite digital boundary ledger;
-- `mathfrak O_X` is the already-certified outer parabolic reserve and the
-  `O(log^2 X)` higher-prime-power correction.
+- `mathfrak O_X` is only the explicitly signed outer parabolic reserve on the
+  ordinary-prime rows.
 
-The proposal requires
+The higher-prime-power `O(log^2 X)` comparison is handled before this identity
+and is not hidden inside `mathfrak O_X`.
+
+The proposal requires an explicit formula and proof of
 
 \[
- \mathfrak O_X(\alpha,\beta)\ge0
-\tag{T-26201.24}
+ \mathfrak O_X(\alpha,\beta)\ge0.
+\tag{T-26201.26}
 \]
 
-after the exact prime-only projection and endpoint normalization.
-
-Equations (T-26201.20), (T-26201.22), and (T-26201.24) imply RDH.
+Equations (T-26201.22), (T-26201.24), and (T-26201.26) would imply RDH.
 
 This is the sole new source-specific hinge.  It is deliberately stronger than
 an inequality inferred from a generic operator norm and narrower than BTP for
@@ -365,13 +397,14 @@ identity (T-26201.2).
 
 ### Scalar Selberg versus local block
 
-The consumer is the two-frequency block (T-26201.20), not the global diagonal
+The consumer is the two-frequency block (T-26201.22), not the global diagonal
 integral.
 
 ### Carry positivity
 
 The primal correction consists only of positive blocks, so coefficient
-nonnegativity is automatic.
+nonnegativity is automatic.  Slack capacities are enforced separately from
+defect coverage.
 
 ### Mertens firewall
 
@@ -383,7 +416,7 @@ subexponential conclusion still carries the full fixed-ratio Mertens exponent.
 \[
 \begin{aligned}
 &\text{parabolic carry seed}\\
-&\to\text{prime-only residual dipole}\\
+&\to\text{prime-only defect/slack bipartition}\\
 &\to\text{exact dyadic opposite-parity source}\\
 &\to\text{compact inner/outer carry contraction}\\
 &\to\text{two-frequency reflected normal Gram}\\
@@ -395,7 +428,7 @@ subexponential conclusion still carries the full fixed-ratio Mertens exponent.
 &\to\text{square-screw/Landau}\\
 &\to\boxed{\mathrm{RH}}.
 \end{aligned}
-\tag{T-26201.25}
+\tag{T-26201.27}
 \]
 
 ## 11. Binary review outcome
@@ -408,10 +441,11 @@ Reject the proposal upon finding any one of:
 4. a reflected cross term estimated separately or omitted;
 5. a digital endpoint term with negative undeclared residue;
 6. a same-sign Möbius cube appearing without its opposite-parity family;
-7. a prime-power or endpoint term hidden in `mathfrak O_X`;
-8. a failure of the exact transport implication.
+7. a prime assigned to the wrong side of the defect/slack bipartition;
+8. an endpoint or outer-prime term hidden in `mathfrak O_X`;
+9. a failure of the exact transport implication.
 
-Acceptance requires an emitted symbolic identity (T-26201.23), not merely
+Acceptance requires an emitted symbolic identity (T-26201.25), not merely
 successful finite LPs.
 
 ## 12. Status boundary
@@ -419,7 +453,7 @@ successful finite LPs.
 ```text
 dyadic source and compact carry dipole       PROPOSED EXACT
 positive inverse and digital dual            PROPOSED EXACT
-multiplicative transport certificate         PROPOSED EXACT
+bipartite multiplicative transport theorem   PROPOSED EXACT
 transport certificate -> RH                  PROPOSED COMPLETE COMPOSITION
 two-frequency source map                     PROPOSED INTERFACE
 reflected dyadic Hall identity                OPEN / RH-BEARING HINGE
