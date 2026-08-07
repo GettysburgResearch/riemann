@@ -144,25 +144,40 @@ uses one-variable finite-difference positivity only.
 
 The single remaining theorem is `BSRC(R,M)` in `L-26203`.
 
-In the graph energy
+Use short blocks of length
+
+\[
+ B=\frac14\log2
+\]
+
+and the strict delay
+
+\[
+ \delta=\log2-B=\frac34\log2.
+\]
+
+Define
 
 \[
 \mathcal E_{R,M}(J)=
 \sum_{j=0}^M16^{-j}
-\int_J^{J+1}|\mathcal D_jU_R|^2,
+\int_J^{J+B}|\mathcal D_jU_R|^2.
 \]
 
-prove
+The target is
 
 \[
 \mathcal E_{R,M}(J)
 \le C(1+J)^A
 +\theta\left[1+
-\max_{u\le J-\log2+C}\mathcal E_{R,M}(u)
+\max_{u\le J-\delta}\mathcal E_{R,M}(u)
 \right]
 \]
 
 for one fixed `theta<1`.
+
+The short block is essential: every nonforcing column is delayed by at least
+`log 2`, so the entire current block maps strictly below `J-delta`.
 
 The proposed proof must combine:
 
@@ -178,9 +193,10 @@ aligned inverse-zeta vector.
 
 ## 6. Completion if the hinge holds
 
-The strict delay and `theta<1` give polynomial graph energy. Hence the fixed
-compact Möbius shell has subexponential `L2` growth. Its Laplace transform is
-holomorphic in `Re z>0`.
+The fixed strict delay and `theta<1` give polynomial short-block graph energy.
+A linear number of short blocks covers `[0,X]`, so the fixed compact Möbius shell
+has subexponential `L2` growth. Its Laplace transform is holomorphic in
+`Re z>0`.
 
 The explicit transform contains
 
@@ -214,6 +230,7 @@ The proposal should be rejected if review finds:
 - a scalar square in place of a reflected modulus square;
 - a lost noncoprime chain;
 - removal of the first fixed-ratio Mertens shell;
+- a current block not separated from its claimed past destination;
 - a contraction constant that depends on support or approaches one without a
   usable rate.
 
