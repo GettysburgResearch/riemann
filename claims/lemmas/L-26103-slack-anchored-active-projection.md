@@ -2,11 +2,11 @@
 
 Claim ID: `L-26103`  
 Title: A source-specific active-frame and leakage contraction produces a subpower-norm signed carry repair  
-Status: **FULL-PROPOSAL HINGE — ACTIVE-FRAME THEOREM OPEN**  
+Status: **FULL-PROPOSAL HINGE — `SAF2/SAF3` OPEN; `SAF1` PROVED IN `L-26104`**  
 Authoring agent: `gpt56-pro-22`  
 Created: 2026-08-08  
 Issue: #261  
-Depends on: `L-26101`, `L-26102`; PR #254 `L-25301`  
+Depends on: `L-26101`, `L-26102`, `L-26104`; PR #254 `L-25301`  
 Scope: exact iterative construction plus one explicit all-scale arithmetic theorem
 
 ## 1. Fixed annular source
@@ -179,28 +179,40 @@ The finite Toeplitz matrices satisfy
 
 Thus complete prime-power chains have a uniform normalized frame floor. The remaining difficulty is the finite-annulus boundary interaction between different prime bases and the sign of leakage into inactive rows.
 
-## 5. Slack-Anchored Annular Frame theorem (`SAF`)
+## 5. Initial source budget is closed
 
-The proposed closing theorem is the following source-specific statement.
-
-There exist absolute constants
+`L-26104` proves the pointwise estimate
 
 \[
- 0<\rho<1,
- \qquad C>0,
+ (r^{(0)}_q)_+
+ \ll\frac{1+\log(X/q)}{\sqrt q}
  \tag{L-26103.17}
 \]
 
-and functions `kappa_X=X^{-o(1)}`, `R_X=X^{o(1)}` such that, for all sufficiently large `X`, the iteration (L-26103.8)--(L-26103.10), starting from the exact parabolic residual, has:
-
-### Initial source budget
+for every prime power `q<=X`. Consequently
 
 \[
 \boxed{
- \|(r^{(0)})_+\|_2\le R_X.
+ \|(r^{(0)})_+\|_2
+ \ll\log^{3/2}(2X)=X^{o(1)}.
 }
 \tag{SAF1}
 \]
+
+The proof uses the mean-zero periodic selector for the first unit of each `q`-block and a single integration by parts. Thus the initial residual norm is no longer part of the open theorem.
+
+## 6. Slack-Anchored Annular Frame theorem (`SAF`)
+
+The remaining proposed theorem is the following source-specific pair of estimates.
+
+There exist an absolute constant
+
+\[
+ 0<\rho<1
+ \tag{L-26103.18}
+\]
+
+and a function `kappa_X=X^{-o(1)}` such that, for all sufficiently large `X`, the iteration (L-26103.8)--(L-26103.10), starting from the exact parabolic residual, has:
 
 ### Generated active-frame moat
 
@@ -227,16 +239,16 @@ No claim is made for arbitrary subsets of prime-power rows; generic annular subm
 
 This inequality includes all newly activated prime powers, every same-base chain, and all consecutive-prime-power clusters.
 
-## 6. Recursive invariant
+## 7. Recursive invariant
 
-Under `SAF`, define
+Under `SAF2/SAF3`, define
 
 \[
  \Phi_n
  =\|(r^{(n)})_+\|_2
  +(1-\rho)\sqrt{\kappa_X}
   \sum_{k<n}\|u_k\|_2.
- \tag{L-26103.18}
+ \tag{L-26103.19}
 \]
 
 By (L-26103.12), (SAF2), and (SAF3),
@@ -256,7 +268,7 @@ and the geometric contraction gives
  \|(r^{(0)})_+\|_2
  =X^{o(1)}.
 }
-\tag{L-26103.19}
+\tag{L-26103.20}
 \]
 
 Hence `F^(n)` converges in the finite-dimensional annular space to a flow `F_X` satisfying
@@ -265,12 +277,12 @@ Hence `F^(n)` converges in the finite-dimensional annular space to a flow `F_X` 
  A_XF_X\ge r^{(0)},
  \qquad
  \|F_X\|_2=X^{o(1)}.
- \tag{L-26103.20}
+ \tag{L-26103.21}
 \]
 
 `L-26102` then supplies primal positivity and negligible objective cost.
 
-## 7. Proposed proof mechanism for `SAF`
+## 8. Proposed proof mechanism for `SAF2/SAF3`
 
 A proof should combine four exact structures rather than use a generic singular-value bound.
 
@@ -281,19 +293,20 @@ A proof should combine four exact structures rather than use a generic singular-
 
 The active projection is therefore a finite recursive implementation of constraint-dipole transport, not a black-box LP existence assertion.
 
-## 8. Proof boundary
+## 9. Proof boundary
 
-Exact in this file:
+Exact in this file and `L-26104`:
 
 - row compression;
 - minimum-norm projection;
 - active residual reduction;
 - projection energy identity;
 - complete-period prime-base orthogonality and chain covariance;
-- `SAF =>` a convergent subpower-norm flow.
+- the polylogarithmic initial residual budget `SAF1`;
+- `SAF2/SAF3 =>` a convergent subpower-norm flow.
 
 Open:
 
-- `SAF1`--`SAF3` uniformly for the parabolic source;
+- `SAF2` and `SAF3` uniformly for the parabolic source;
 - the full annular carry certificate;
 - RH.
