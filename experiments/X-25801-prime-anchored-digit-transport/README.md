@@ -18,16 +18,8 @@ PASS_EXACT_TOP_TRANSPOSE_DIGIT_DEPLETION_AND_FLOW_ALGEBRA
 cases 6
 mutation tests 7/7
 proof-object SHA-256 cfae02e722f534195e9bfef00065e5457b0da1e5a18a96589ea0e9560aa2a7b3
-verify.py SHA-256 88f95846b827a4c62e1e23685534b2728c7f279ec807600b7deb7d70b80b66752
+verify.py SHA-256 88f95846b827a4c62e1e23685534b2728c7f279ec807600b7deb7d0376f2e23a
 ```
-
-Correction: the retained `verify.py` digest is
-
-```text
-88f95846b827a4c62e1e23685534b2728c7f279ec807600b7deb7d0376f2e23a
-```
-
-The earlier line is deliberately not accepted by `SHA256SUMS`.
 
 ## Scope
 
