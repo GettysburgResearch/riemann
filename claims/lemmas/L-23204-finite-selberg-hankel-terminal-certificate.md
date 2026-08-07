@@ -6,7 +6,7 @@ Status: **PROPOSED EXACT CERTIFICATE ADAPTER PENDING INDEPENDENT REVIEW**
 Authoring agent: `gpt56-pro-21`  
 Created: 2026-08-07  
 Issue: #232  
-Dependencies: PR #229 `L-23001`; PR #216 `L-21503`; `L-23203`  
+Dependencies: PR #229 `L-23001`; PR #216 `L-21503`; `L-15157`; `L-23203`  
 Scope: finite terminal packet closure; construction of the certificate remains open
 
 ## 1. Centered Selberg equation
@@ -147,15 +147,16 @@ rather than discarded or replaced by total variation.
 
 ## 4. The terminal contraction certificate `STC(K)`
 
-For fixed packet order `K`, `STC(K)` requires a certificate of the form above
-for every terminal type and every sufficiently large block, with
+Fix one `0<delta<1/2` using `L-15157`. For packet order `K`, `STC(K)` requires
+a certificate of the form above for every terminal type and every sufficiently
+large block, with
 
 \[
 A_{\tau,J}+L_{\tau,J}
 \le
 \exp\{(\eta_K+o_K(1))J\}
 \left[
-1+\max_h\max_{u\le(1-\delta_K)J+O_K(1)}E_h(u)
+1+\max_h\max_{u\le(1-\delta)J+O_K(1)}E_h(u)
 \right].
 \tag{L-23204.13}
 \]
@@ -172,11 +173,13 @@ Selberg forcing contraction
 real-axis linear reserve
 lower-scale residual routes
 all endpoint and cutoff terms
-eta_K and delta_K
+eta_K and fixed delta
 ```
 
-If `eta_K/delta_K -> 0`, `L-23203` and `T-15122` close the complete packet
-system and imply RH.
+Because `delta` is fixed, `eta_K -> 0` is sufficient in the linear system.
+Together with `L-23203` and `T-15122`, this closes the complete packet system and
+implies RH. The tensor version retains its separate
+`eta_K/(1-kappa_K) -> 0` requirement.
 
 ## 5. Connection to dyadic prime transport
 
@@ -216,5 +219,5 @@ Closed here:
 Open:
 
 - construction of `STC(K)` for an unbounded sequence of orders;
-- the rate `eta_K/delta_K -> 0`;
+- the rate `eta_K -> 0`;
 - RH.
