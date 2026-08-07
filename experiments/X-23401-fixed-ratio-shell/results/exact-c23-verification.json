@@ -1,0 +1,79 @@
+{
+  "c": {
+    "denominator": "3",
+    "numerator": "2"
+  },
+  "divisor_recurrence_rows": 95,
+  "finite_mellin_rows": 4,
+  "gram_blocks": [
+    {
+      "energy": {
+        "denominator": "1260",
+        "numerator": "89"
+      },
+      "segments": 6,
+      "x0": {
+        "denominator": "1",
+        "numerator": "4"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "8"
+      }
+    },
+    {
+      "energy": {
+        "denominator": "315",
+        "numerator": "17"
+      },
+      "segments": 6,
+      "x0": {
+        "denominator": "1",
+        "numerator": "5"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "10"
+      }
+    },
+    {
+      "energy": {
+        "denominator": "6435",
+        "numerator": "196"
+      },
+      "segments": 10,
+      "x0": {
+        "denominator": "1",
+        "numerator": "7"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "14"
+      }
+    },
+    {
+      "energy": {
+        "denominator": "765765",
+        "numerator": "17396"
+      },
+      "segments": 12,
+      "x0": {
+        "denominator": "1",
+        "numerator": "9"
+      },
+      "x1": {
+        "denominator": "1",
+        "numerator": "18"
+      }
+    }
+  ],
+  "high_order_rows": 672,
+  "max_n": 192,
+  "one_prime_barrier_rows": 12664,
+  "prime_renewal_rows": 95,
+  "proof_boundary": "Finite integer/Fraction algebra and Gram factorization only; no cofinal shell-energy estimate, Type-II bound, Mertens estimate, or RH claim is certified.",
+  "proof_object_sha256": "0772b74939f89a2e9ac45fe38fbc0e3fd4f131c9e3d83ecdbf7ab1debb3aeff1",
+  "schema": "riemann.x23401.fixed-ratio-shell.result.v1",
+  "verdict": "EXACT_FIXED_RATIO_MERTENS_SHELL_ALGEBRA_VERIFIED",
+  "verified": true
+}
