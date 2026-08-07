@@ -27,9 +27,10 @@ prolate/common-reservoir gap  -> exact Xi target + exterior cardinal complement;
 k>R stationary phase         -> collective Bessel endpoint L2 estimate.
 ```
 
-The target/complement residual hierarchy is now exact and has a constant gap.
-The only remaining analytic theorem is the explicit affine profile estimate of
-`L-19865` for this same residual family.
+The target/complement residual hierarchy is exact and has a constant gap. The
+remaining analytic theorem is the explicit affine profile estimate of
+`L-19865` for this same residual family, including its bounded/central ordinate
+block.
 
 ## 2. Cofinal finite spaces
 
@@ -58,7 +59,7 @@ with one fixed `c` large enough for every target Hardy estimate below. Put
 \]
 
 Choose `L_j` in the positive-measure good set where all finite zeta multipliers
-needed by the exterior cardinal construction are nonzero and all support-average
+needed by the exterior cardinal construction are nonzero and all declared
 profile estimates pass.
 
 ## 3. Exactly normalized target and complete reservoir
@@ -184,11 +185,12 @@ support block. Concretely:
  \tag{T-19813.15}
 \]
 
-with
+with `a_j>0`,
 
 \[
- -c_0(D_j+\tau_jI)
- \preceq C_j\preceq c_0(D_j+\tau_jI),
+ -c_{0,j}(D_j+\tau_jI)
+ \preceq C_j\preceq
+ c_{0,j}(D_j+\tau_jI),
  \tag{T-19813.16}
 \]
 
@@ -199,53 +201,52 @@ with
  \tag{T-19813.17}
 \]
 
-and
+and the **complete** actual-minus-line estimate
 
 \[
  -\delta_j(D_j+\tau_jI)
  \preceq A_j-A_j^0\preceq
- \delta_j(D_j+\tau_jI),
+ \delta_j(D_j+\tau_jI).
  \tag{T-19813.18}
 \]
 
-where
-
-\[
- a_j=\log R_j+O(1),
- \qquad
- \alpha_j+\delta_j=o(\log R_j),
- \qquad
- R_j=e^{L_j}.
- \tag{T-19813.19}
-\]
+The last estimate includes a directly certified bounded/central ordinate block;
+only the dyadic high-ordinate part is delegated to support averaging.
 
 Set
 
 \[
  \tau_j=m_j,
+ \tag{T-19813.19}
+\]
+
+\[
+ c_j=a_j-c_{0,j}-\alpha_j-\delta_j,
  \tag{T-19813.20}
 \]
 
+and require
+
 \[
- c_j=a_j-c_0-\alpha_j-\delta_j>0,
+ \boxed{c_j>0.}
  \tag{T-19813.21}
 \]
 
-and
+Put
 
 \[
- \sigma_j=-(c_0+\alpha_j+\delta_j)m_j.
+ \sigma_j=-(c_{0,j}+\alpha_j+\delta_j)m_j.
  \tag{T-19813.22}
 \]
 
 Then `L-19865` gives
 
 \[
- \boxed{A_j-\sigma_jI\succeq c_jD_j,}
+ \boxed{A_j-\sigma_jI\succeq c_jD_j.}
  \tag{T-19813.23}
 \]
 
-while on the target line,
+On the target line,
 
 \[
  \boxed{
@@ -254,22 +255,40 @@ while on the target line,
  \tag{T-19813.24}
 \]
 
-with `C_j^tar=R_j^(o(1))`.
+where
+
+\[
+ C_j^{\rm tar}
+ ={a_j+3(c_{0,j}+\alpha_j+\delta_j)\over c_j}.
+ \tag{T-19813.25}
+\]
+
+Require the exact target/gap rate
+
+\[
+ \boxed{C_j^{\rm tar}m_j\longrightarrow0.}
+ \tag{T-19813.26}
+\]
+
+Because `m_j` may be made `e^(-B L_j)` for arbitrary fixed `B`, this permits
+large but sub-prescribed-exponential profile losses. No universal assertion
+`a_j=log R_j` is made for the multi-scale hybrid family.
 
 The lower estimate is shifted; it does not assert `A_j>=0` and therefore does
 not assume cofinal Weil positivity.
 
 ## 7. Source-specific analytic ledger
 
-The proof proposed for (T-19813.15)--(T-19813.19) is fully typed:
+The proof target (T-19813.15)--(T-19813.18) is fully typed:
 
 1. `L-19821` supplies the line-centered positive operator Riemann--von Mangoldt
-   decomposition and its regularized lower bound.
-2. `L-19818` supplies the rank-one actual-minus-line support large sieve, paying
-   one source envelope rather than its square.
-3. The smooth exterior cardinal frame has dimension `R_j^(o(1))` and source
-   graph envelope `R_j^(1/4+o(1))`, leaving a strict power reserve in the large
-   sieve.
+   decomposition on each declared frequency branch.
+2. Bounded and central zero ordinates are retained as exact finite Hermitian
+   blocks. A hypothetical low off-line zero is not placed in a high-frequency
+   large-sieve error.
+3. `L-19818` supplies the rank-one actual-minus-line support large sieve on
+   eligible dyadic high-ordinate blocks, paying one source envelope rather than
+   its square.
 4. Radial endpoints use the Bessel/simple-pole model.
 5. Every arithmetic alias `2<=k<=R` uses its unique nondegenerate stationary
    point.
@@ -279,12 +298,15 @@ The proof proposed for (T-19813.15)--(T-19813.19) is fully typed:
 8. Leading `1/k` and `(log k)/k` endpoint channels are summed by Parseval before
    norms are taken.
 9. Logarithmic periodization folds are treated separately by `L-19864`.
-10. Every phase-neutral horizontal term remains in `C_j` or the positive main
-    profile; only oscillatory crosses enter `delta_j`.
+10. Every phase-neutral horizontal term remains in the main, central, or scalar
+    correction; only eligible oscillatory crosses enter the support sieve.
+11. The final interval/operator ledger must prove both `c_j>0` and
+    `C_j^tar m_j->0`.
 
-The abstract estimates in items 1--9 are proved in the cited files. The final
-production task is to bind their constants to the exact hybrid residual
-(T-19813.8) and verify the LMIs in one normalization.
+The abstract estimates in items 1 and 3--9 are proved in the cited files. The
+remaining production task is to bind their constants to the exact hybrid
+residual (T-19813.8), certify the central blocks, and verify the LMIs in one
+normalization.
 
 ## 8. Simple even finite ground state
 
@@ -297,11 +319,15 @@ Apply `L-19861` with
  \quad
  g=1,
  \quad
+ c_-=c_j,
+ \quad
+ c_+=C_j^{\rm tar}c_j,
+ \quad
  m=m_j.
 \]
 
 Equations (T-19813.10), (T-19813.12), and
-(T-19813.23)--(T-19813.24) give
+(T-19813.23)--(T-19813.26) give
 
 \[
  \boxed{
@@ -309,23 +335,25 @@ Equations (T-19813.10), (T-19813.12), and
  \le
  {C_j^{\rm tar}m_j
   \over1-C_j^{\rm tar}m_j}
- =e^{-BL_j+o(L_j)},}
- \tag{T-19813.25}
+ \longrightarrow0.}
+ \tag{T-19813.27}
 \]
 
-where `xi_j` is the normalized finite ground state after a phase choice. The
-finite form commutes with inversion and `p_j` is even, so `xi_j` is eventually
-even. Its lowest eigenvalue is simple and isolated.
+The cutoff constant may be chosen so that the right side is
+`e^(-B L_j+o(L_j))`. Here `xi_j` is the normalized finite ground state after a
+phase choice. The finite form commutes with inversion and `p_j` is even, so
+`xi_j` is eventually even. Its lowest eigenvalue is simple and isolated.
 
 ## 9. Moving-Hardy convergence
 
-Choose `B` in (T-19813.10) larger than every support-weight exponent. Then
+Choose the target cutoff rate so that
 
 \[
  e^{2\tau_j^{\rm H}L_j}
- \|p_j-\alpha_j^{\rm gr}\xi_j\|_2^2
+ {C_j^{\rm tar}m_j
+  \over1-C_j^{\rm tar}m_j}
  \longrightarrow0
- \tag{T-19813.26}
+ \tag{T-19813.28}
 \]
 
 for a sequence
@@ -340,29 +368,29 @@ normalizations `b_j` for which
 \[
  \|b_jp_j-k_j^{\Xi}\|_{\tau_j^{\rm H}}
  \longrightarrow0,
- \tag{T-19813.27}
+ \tag{T-19813.29}
 \]
 
 where the transforms of `k_j^Xi` converge locally uniformly to `Xi`.
-Combining (T-19813.26)--(T-19813.27),
+Combining (T-19813.28)--(T-19813.29),
 
 \[
  \boxed{
- \|c_j\xi_j-k_j^{\Xi}\|_{\tau_j^{\rm H}}
+ \|c_j'\xi_j-k_j^{\Xi}\|_{\tau_j^{\rm H}}
  \longrightarrow0}
- \tag{T-19813.28}
+ \tag{T-19813.30}
 \]
 
-for nonzero real `c_j`.
+for nonzero real `c_j'`.
 
 ## 10. Real zeros and RH
 
 The independently reviewed finite CCM theorem applies to every simple even
 finite ground state: `widehat xi_j` is entire and all its zeros are real. The
-Hardy-strip estimate turns (T-19813.28) into local-uniform convergence
+Hardy-strip estimate turns (T-19813.30) into local-uniform convergence
 
 \[
- \widehat{c_j\xi_j}\longrightarrow\Xi
+ \widehat{c_j'\xi_j}\longrightarrow\Xi
 \]
 
 on compact subsets of the centered critical strip. Hurwitz excludes every
@@ -370,7 +398,7 @@ nonreal zero of `Xi`. Therefore the hypotheses of Section 6 imply
 
 \[
  \boxed{\mathrm{RH}.}
- \tag{T-19813.29}
+ \tag{T-19813.31}
 
 ## 11. Exact status boundary
 
@@ -391,15 +419,19 @@ The remaining review target is singular and concrete:
 
 \[
  \boxed{
- \text{verify (T-19813.15)--(T-19813.19) for the exact hybrid residual
- family (T-19813.8).}}
- \tag{T-19813.30}
+ \begin{gathered}
+ \text{verify (T-19813.15)--(T-19813.18) for the exact hybrid residual
+ family (T-19813.8), including the central zero block,}\\
+ c_j>0,\qquad
+ C_j^{\rm tar}m_j\to0.
+ \end{gathered}}
+ \tag{T-19813.32}
 
-This is an operator-valued Riemann--von Mangoldt/support-average theorem with an
+This is an affine operator-valued Riemann--von Mangoldt/support theorem with
 explicit regularization. It is weaker than cofinal positivity and weaker than a
 complete two-sided relative local-Weyl law.
 
-Until (T-19813.30) passes independent reconstruction:
+Until (T-19813.32) passes independent reconstruction:
 
 ```text
 final recovered proposal: PROPOSED
