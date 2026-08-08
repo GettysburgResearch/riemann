@@ -1,0 +1,21 @@
+{
+  "classification": "EXACT_RATIONAL_GATE_PLUS_DECIMAL_RECONNAISSANCE",
+  "does_not_prove": [
+    "a lower bound for optimized Cycle Debt",
+    "impossibility of a coupled analytic/finite flow repair",
+    "RH or its negation"
+  ],
+  "exact_gate": {
+    "analytic_lower": "1/9",
+    "atomic_norm_constant": "7/26000",
+    "finite_upper": "51/1600",
+    "moat": "1141/14400"
+  },
+  "finite_mutation": {
+    "annulus_rows": 64,
+    "classification": "HIGH_PRECISION_RECONNAISSANCE_ONLY",
+    "minimum_scaled_boundary": "0.37946186263173924058571422192422047447078840632582"
+  },
+  "schema": "X-30501-terminal-boundary-obstruction-v1",
+  "sha256_without_digest": "4b0a73dd0237f422fb1e9e4c0e8dbcb3a050dc8e10994eab3bfcecf4c943506e"
+}
