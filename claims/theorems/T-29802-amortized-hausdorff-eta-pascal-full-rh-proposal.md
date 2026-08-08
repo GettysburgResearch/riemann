@@ -66,7 +66,7 @@ and contracts the declared positive coefficient norm:
 }
 \tag{T-29802.2}
 
-Every shifted correction is a faster positive power.  The analytic source cone is invariant and strictly contracting.
+Every shifted correction is a faster positive power. The analytic source cone is invariant and strictly contracting.
 
 ## 4. Exact finite cutoff source
 
@@ -95,11 +95,11 @@ and the exact alternating Euler remainder
 
 Both sequences decrease with the quotient index.
 
-Consequently every finite jet and exact remainder in PR #286 `L-28402` is a positive decreasing source on the common paired tail.  The unmatched first omitted terms remain in the explicit finite collar and are not silently paired.
+Consequently every finite jet and exact remainder in PR #286 `L-28402` is a positive decreasing source on the common paired tail. The unmatched first omitted terms remain in the explicit finite collar and are not silently paired.
 
 ## 5. Unequal eta pairs and exact Pascal payment
 
-For one paired tail let `V_e>=V_o>=0` be the internal even/odd source values.  Put
+For one paired tail let `V_e>=V_o>=0` be the internal even/odd source values. Put
 
 \[
  M={V_e\over2k},
@@ -114,7 +114,7 @@ Then `T<=M`, and
  M e_{2k}-T e_{2k+1}
  =(M-T)e_{2k}+T(e_{2k}-e_{2k+1}).
 }
-\tag{T-29802.5]
+\tag{T-29802.5}
 
 The dipole is the exact balanced Pascal sibling switch
 
@@ -122,7 +122,7 @@ The dipole is the exact balanced Pascal sibling switch
  [2k+2k]\to[(2k-1)+(2k+1)]
 \]
 
-at parent `4k`.  Its logarithmic objective cost is
+at parent `4k`. Its logarithmic objective cost is
 
 \[
  T\log{2k+1\over2k}.
@@ -134,11 +134,11 @@ Since the logarithm is below one,
 \boxed{
  (M-T)+T\log{2k+1\over2k}\le M.
 }
-\tag{T-29802.6]
+\tag{T-29802.6}
 
 Thus every boundary source unit pays both its residual lower-scale source and its complete Pascal objective cost without exceeding its incoming mass.
 
-This is the corrected invariant.  It permits unequal internal labels and does not require a uniform strict boundary factor.
+This is the corrected invariant. It permits unequal internal labels and does not require a uniform strict boundary factor.
 
 ## 6. Global amortized boundary ledger
 
@@ -155,7 +155,7 @@ After common-destination recombination, summing (T-29802.6) gives
  J_{a+1}(X)+C_a(X)
  \le J_a(X)+I_a(X).
 }
-\tag{T-29802.7]
+\tag{T-29802.7}
 
 Hence
 
@@ -164,7 +164,7 @@ Hence
  J_A(X)+\sum_{a<A}C_a(X)
  \le J_0(X)+\sum_{a<A}I_a(X).
 }
-\tag{T-29802.8]
+\tag{T-29802.8}
 
 The analytic injection obeys
 
@@ -172,20 +172,20 @@ The analytic injection obeys
  I_a(X)
  \le C_MA_a(X)
    +C_M'(1+a)^{r_M}\log^{s_M}(2X),
-\tag{T-29802.9]
+\tag{T-29802.9}
 
-where the polynomial term is the complete first-omitted collar of PR #286.  Because `A_a<=(6/7)^aA_0` and the cascade has only `O(log X)` half-scale levels,
+where the polynomial term is the complete first-omitted collar of PR #286. Because `A_a<=(6/7)^aA_0` and the cascade has only `O(log X)` half-scale levels,
 
 \[
 \boxed{
  J_A(X)+\sum_{a<A}C_a(X)
  =O(\log^B(2X))
 }
-\tag{T-29802.10]
+\tag{T-29802.10}
 
 for one fixed exponent `B`.
 
-The boundary state may persist, but it has a conserved finite budget.  It cannot create a polynomial or exponential debt.
+The boundary state may persist, but it has a conserved finite budget. It cannot create a polynomial or exponential debt.
 
 ## 7. Exact relation to Dyadic Commutator Debt
 
@@ -199,7 +199,7 @@ bottom logarithmic tree
 every odd node as an adjacent Pascal commutator.
 ```
 
-The lifted lower flow contributes exactly one-half of lower negative capacity debt.  The bottom tree is part of the finite collar in `J_a`.  Every odd commutator is one of the Pascal switches whose exact cost is counted in `C_a`.
+The lifted lower flow contributes exactly one-half of lower negative capacity debt. The bottom tree is part of the finite collar in `J_a`. Every odd commutator is one of the Pascal switches whose exact cost is counted in `C_a`.
 
 Therefore (T-29802.10) proves the open Dyadic Commutator Debt estimate:
 
@@ -207,7 +207,7 @@ Therefore (T-29802.10) proves the open Dyadic Commutator Debt estimate:
 \boxed{
  E_\eta(Y;d_Y)=O(\log^B(2Y)).
 }
-\tag{T-29802.11]
+\tag{T-29802.11}
 
 Substitution in the exact PR #272 recurrence gives
 
@@ -216,7 +216,7 @@ Substitution in the exact PR #272 recurrence gives
  N_\eta(2Y)
  \le{1\over2}N_\eta(Y)+O(\log^B(2Y)).
 }
-\tag{T-29802.12]
+\tag{T-29802.12}
 
 The exact unit-endpoint interpolation then yields polylogarithmic Cycle Debt at every endpoint.
 
@@ -230,13 +230,13 @@ The atomized Kummer identity and balanced entropy metric on PR #272 convert the 
  \log{X\over p^r}
  \ge4\sqrt X-O(\log^{B'}(2X)).
 }
-\tag{T-29802.13]
+\tag{T-29802.13}
 
-No source coefficient is clipped.  The complete objective cost has already been paid in the amortized ledger.
+No source coefficient is clipped. The complete objective cost has already been paid in the amortized ledger.
 
 ## 9. RH conclusion
 
-At `X=N^2`, the reviewed square-screw identity turns (T-29802.13) into a subpolynomial upper envelope for the zeta screw function.  Critical square sampling propagates the envelope to the half-line.  The one-sided Laplace transform and Landau pole theorem exclude every zero with real part greater than `1/2`; functional-equation symmetry excludes the reflected half.
+At `X=N^2`, the reviewed square-screw identity turns (T-29802.13) into a subpolynomial upper envelope for the zeta screw function. Critical square sampling propagates the envelope to the half-line. The one-sided Laplace transform and Landau pole theorem exclude every zero with real part greater than `1/2`; functional-equation symmetry excludes the reflected half.
 
 Thus the proposed chain is
 
@@ -249,7 +249,7 @@ Thus the proposed chain is
  \to\text{sharp prime ramp}
  \to\mathrm{RH}.
 }
-\tag{T-29802.14]
+\tag{T-29802.14}
 
 ## 10. Decisive adversarial test
 
@@ -282,4 +282,4 @@ DCD/Cycle Debt -> prime ramp -> RH                  IMPORTED CONDITIONAL CHAIN
 Riemann Hypothesis                                  FULL PROPOSED PROOF / UNVERIFIED
 ```
 
-This is the corrected full proposal for adversarial review.  `T-29801` remains as the discovery path and is superseded at the arbitrary-label boundary step by this theorem.
+This is the corrected full proposal for adversarial review. `T-29801` remains as the discovery path and is superseded at the arbitrary-label boundary step by this theorem.
