@@ -1,12 +1,12 @@
-# R-23803 — The current BTF recurrence is not yet an unconditional closure
+# R-23803 — The current producer sign is not yet an unconditional closure
 
 Claim ID: `R-23803`  
-Title: Exact recurrence algebra and long positivity scans do not establish the cofinal binary–ternary rate  
+Title: Exact recurrence algebra and long positivity scans do not establish cofinal binary–ternary producer positivity  
 Status: **SCOPE CORRECTION / ADVERSARIAL AUDIT**  
 Authoring agent: `gpt56-pro-09-w`  
 Created: 2026-08-08  
 Issue: #238  
-Dependencies: `L-23810`--`L-23812`, `T-23803`
+Dependencies: `L-23810`--`L-23814`, `T-23803`
 
 ## 1. What is durable
 
@@ -16,7 +16,9 @@ The following parts of the binary–ternary proposal are exact:
 2. the descending binary–ternary recurrence for `A_X`;
 3. exact reconstruction of every target column;
 4. the Pascal/divergence identity;
-5. the finite conditional deduction `BTF -> RH`.
+5. the finite conditional deduction `BTF -> RH`;
+6. the theorem `L-23814` that producer positivity automatically gives the
+   required `O((log X)^2)` BTF rate.
 
 These are useful and independently reviewable.
 
@@ -28,58 +30,51 @@ Large finite scans may show
  A_X(n)\ge0
 \]
 
-and small weighted variation for all tested endpoints.  Such scans are evidence
-only.  They do not prove either of the cofinal assertions
-
-\[
- A_X(n)\ge0\quad(2\le n\le X)
-\tag{R-23803.1}
-\]
-
-or
-
-\[
- \sum_{n=2}^X|A_X(n)|\sqrt n=X^{o(1)}.
-\tag{R-23803.2}
-\]
-
-In particular, mutation tests of the finite recurrence verify implementation
-and algebra, not the asymptotic theorem.
-
-## 3. Exact half-moment obstruction
-
-`L-23812` proves that if (R-23803.1) holds, then (R-23803.2) is equivalent up to
-absolute constants to
+for all tested endpoints.  Such scans are evidence only.  They do not prove the
+cofinal assertion
 
 \[
 \boxed{
- \mathfrak H_X
- =-\sum_{m=1}^Xr_X(m)\sqrt m=X^{o(1)}.}
-\tag{R-23803.3}
+ A_X(n)\ge0\qquad(2\le n\le X)
+}
+\tag{R-23803.1}
 \]
 
-Moreover
+for every sufficiently large `X`.
+
+Mutation tests of the finite recurrence verify implementation and algebra, not
+this all-level sign theorem.
+
+## 3. The weighted rate is no longer a separate hinge
+
+`L-23814` proves that if (R-23803.1) holds, then the exact balanced column load
+gives
 
 \[
- \mathfrak H_X
- =-\sum_{q=2}^Xh_{1/2}(q)
-   q^{-1/2}\log(X/q),
+\boxed{
+ \sum_{n=2}^{X}A_X(n)\sqrt n
+ =O((\log X)^2).}
+\tag{R-23803.2}
 \]
 
-where
+Since the coefficients are then nonnegative, this is the absolute weighted
+variation required by BTF.  Thus the current producer route has only one open
+theorem:
+
+```text
+cofinal producer positivity.
+```
+
+The scalar half-moment of `L-23812`,
 
 \[
- h_{1/2}(q)=\sum_{d\mid q}\mu(d)
- \left[\sqrt{q/d}-\sqrt{q/d-1}\right].
-\tag{R-23803.4}
+ \mathfrak H_X=-\sum_mr_X(m)\sqrt m,
 \]
 
-The Dirichlet series of this coefficient sequence contains `1/zeta(s)`.
-Therefore the rate in BTF is not a routine stability consequence of the
-fragmentation recurrence.  It retains the reciprocal-zeta channel in one
-explicit scalar coordinate.
-
-This does not refute BTF.  It identifies exactly what a proof must control.
+is an exact diagnostic.  Under positivity it also becomes `O((log X)^2)`.  Its
+Dirichlet representation contains `1/zeta(s)`, so it remains a useful mutation
+showing that the producer sign cannot be justified by a phase-blind estimate.
+It is not an additional hypothesis after `L-23814`.
 
 ## 4. Profit/debt obstruction
 
@@ -96,26 +91,28 @@ ramp.  It cannot be inferred from generic flow feasibility alone.
 
 ## 5. Correct proposal boundary
 
-The binary–ternary architecture should be presented as a full **conditional**
-proposal with the following exact hinge:
+The binary–ternary architecture should now be presented as a full
+**single-hinge conditional proposal**:
 
 ```text
-producer positivity
-+ scalar half-moment subpolynomiality
+cofinal positivity of the explicit producer
+-> O(log^2 X) weighted variation
+-> sharp prime ramp
+-> square-screw/Landau
+-> RH.
 ```
 
-or, equivalently, the original BTF statement.
-
-A genuinely unconditional proposal still needs a proof of that hinge, or a
-different positive transport theorem such as the profitable-debt criterion of
-`L-23813`.
+A genuinely unconditional proposal still needs a proof of producer positivity,
+or a different positive transport theorem such as the profitable-debt criterion
+of `L-23813`.
 
 ## 6. Classification
 
 ```text
 L-23810 exact inversion/divergence            RETAIN
 L-23811 exact recurrence identities           RETAIN
+L-23814 positivity -> BTF rate                 RETAIN
 T-23803 conditional deduction                 RETAIN
-BTF as an established theorem                 NOT PROVED
+producer positivity as established theorem    NOT PROVED
 accepted proof of RH                           NO
 ```
