@@ -1,0 +1,73 @@
+{
+  "classification": "PASS_ENDPOINT_FORMULA_RESERVE_AND_MELLIN_MUTATIONS",
+  "endpoint_cell_margin": {
+    "argmin": 10,
+    "exact_recurrence_numerator": "3N+2",
+    "minimum_N_10_to_100000": 0.00922899226260565
+  },
+  "finite_formula": {
+    "cases": 44847,
+    "maximum_absolute_error": 4.1300296516055823e-14
+  },
+  "mellin_rational_checks": [
+    {
+      "identity": true,
+      "z": [1, 1]
+    },
+    {
+      "identity": true,
+      "z": [3, 2]
+    },
+    {
+      "identity": true,
+      "z": [2, 1]
+    },
+    {
+      "identity": true,
+      "z": [5, 2]
+    }
+  ],
+  "mutations": {
+    "complete_scalar_not_one_signed": true,
+    "ordinary_equals_complete_minus_reserve": true,
+    "proper_power_reserve_positive": true,
+    "terminal_multiple_excluded": true
+  },
+  "schema": "X-27901-endpoint-reserve-v1",
+  "scope": "Finite/formal replay and numerical reconnaissance only. This does not prove the cofinal prime-power reserve, CEP, EPD, WSTS, or RH.",
+  "selected_endpoint_scalars": [
+    {
+      "X": 100,
+      "benchmark_minus_target": -0.2537755589788975,
+      "complete": -0.2537755589788984,
+      "identity_error": -8.881784197001252e-16,
+      "ordinary": -0.431950764074659,
+      "proper_power": 0.17817520509576058
+    },
+    {
+      "X": 1000,
+      "benchmark_minus_target": -0.43512934624402244,
+      "complete": -0.43512934624402155,
+      "identity_error": 8.881784197001252e-16,
+      "ordinary": -1.0309138299283616,
+      "proper_power": 0.5957844836843402
+    },
+    {
+      "X": 1398,
+      "benchmark_minus_target": 0.011743486898088573,
+      "complete": 0.011743486898082244,
+      "identity_error": -6.328271240363392e-15,
+      "ordinary": -0.7490244499757243,
+      "proper_power": 0.7607679368738067
+    },
+    {
+      "X": 10000,
+      "benchmark_minus_target": -0.5307595533442482,
+      "complete": -0.5307595533442345,
+      "identity_error": 1.3655743202889425e-14,
+      "ordinary": -1.8612714722072215,
+      "proper_power": 1.330511918862987
+    }
+  ],
+  "sha256_without_digest": "075a26346e614ff9255c7e56ff6b0365513a972e2d4a7d046f9524b0b686f8fc"
+}
