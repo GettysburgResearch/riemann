@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "character_orthogonality": 16,
+    "dft_inversion_rows": 8,
+    "dirichlet_inverse_rows": 1024,
+    "mod2_nonprincipal_characters": 0
+  },
+  "classification": "PASS_EXACT_MOD5_CHARACTER_AND_DIRICHLET_INVERSE_ALGEBRA",
+  "proof_boundary": "finite character/convolution algebra only; no GRH, residue contraction, CBVR, or RH proof",
+  "result_sha256_without_digest": "ab26ae2136aefbc2c6fc3cb2169850630aa8187d919c75c624b26e972c1f09a3",
+  "schema": "X-32201-residue-character-firewall-v1"
+}
