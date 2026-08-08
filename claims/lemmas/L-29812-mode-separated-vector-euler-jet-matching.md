@@ -6,12 +6,12 @@ Status: **PROPOSED COMPLETE EXACT SOURCE-DECOMPOSITION LEMMA**
 Authoring agent: `gpt56-02-r`  
 Created: 2026-08-08  
 Dependencies: `L-29809`, `L-29810`; positive integration  
-Scope: exact vector coefficient matching; signed balanced Pascal/debt realization remains separate
+Scope: exact formal vector coefficient matching; actual arithmetic source binding is treated by `L-29816`
 
 ## 1. Vector Euler jet
 
 Use the interleaved sequence of `L-29809` and let the starting index `N=2K` be
-even.  The node-labeled `m`th jet is
+even. The node-labeled `m`th jet is
 
 \[
  \boxed{
@@ -41,14 +41,14 @@ Since `N` is even,
  (-1)^r(-z)^{N+r}=z^{N+r}.
 \]
 
-Substituting (L-29812.2) into (L-29812.1) gives the exact split
+Substituting (L-29812.2) into (L-29812.1) gives
 
 \[
  \boxed{V_{N,m}=V_{N,m}^{\rm sm}+V_{N,m}^{\rm par},}
 \tag{L-29812.3}
 \]
 
-with
+where
 
 \[
 \boxed{
@@ -72,10 +72,9 @@ V_{N,m}^{\rm par}
 \tag{L-29812.5}
 \]
 
-Every coefficient of the parity source (L-29812.5) is nonnegative. It produces
-no source-sign debt.
+Every coefficient of the parity source is nonnegative.
 
-## 3. The smooth mode is exactly Hausdorff
+## 3. The smooth mode is Hausdorff
 
 Define
 
@@ -85,15 +84,14 @@ Define
 \tag{L-29812.6}
 \]
 
-Under the change of variable `y=z=e^(-qt)`, this is a Hausdorff moment sequence
-on `[0,1]`:
+Under `y=z=e^(-qt)`, this has the Hausdorff representation
 
 \[
  b_n=\int_{[0,1]}y^n\,d\nu_{q,s}(y)
 \tag{L-29812.7}
 \]
 
-for a positive measure `nu_(q,s)`.  Consequently
+for a positive measure `nu_(q,s)`. Consequently
 
 \[
  V_{N,m}^{\rm sm}
@@ -101,16 +99,15 @@ for a positive measure `nu_(q,s)`.  Consequently
 \tag{L-29812.8}
 \]
 
-is exactly the source class of `L-29810`.
+is the source class of `L-29810`.
 
-There exist nonnegative adjacent matching amounts `t_r` and nonnegative even
-residuals `rho_r` satisfying
+There are nonnegative adjacent matching amounts `t_r` and nonnegative
+residuals `rho_r` on the even levels such that
 
 \[
 \boxed{
 V_{N,m}^{\rm sm}
- =\sum_{r\ {
-text{ even}}}\rho_re_{N+r}
+ =\sum_{r\equiv0\,(2)}\rho_re_{N+r}
  +\sum_{r=0}^{m-1}t_r(-1)^r
   (e_{N+r}-e_{N+r+1}).}
 \tag{L-29812.9}
@@ -119,109 +116,77 @@ text{ even}}}\rho_re_{N+r}
 Every negative smooth-mode demand is paid, and
 
 \[
- \sum_{r\ {
-text{ even}}}\rho_r=\Delta^mb_N\ge0.
+ \sum_{r\equiv0\,(2)}\rho_r=\Delta^mb_N\ge0.
 \tag{L-29812.10}
 \]
 
-## 4. Full source decomposition
+## 4. Full formal source decomposition
 
-Combining (L-29812.5) and (L-29812.9),
+Combining the smooth matching and the parity source,
 
 \[
 \boxed{
 \begin{aligned}
 V_{N,m}
 ={}&V_{N,m}^{\rm par}
- +\sum_{r\ {
-text{ even}}}\rho_re_{N+r}\\
+ +\sum_{r\equiv0\,(2)}\rho_re_{N+r}\\
 &+\sum_{r=0}^{m-1}t_r(-1)^r
   (e_{N+r}-e_{N+r+1}).
 \end{aligned}}
 \tag{L-29812.11}
 \]
 
-Thus all source signs have been reduced to adjacent dipoles. There is no
-unmatched higher-order alternating node family.
+Thus every formal source sign is reduced to an adjacent dipole.
 
-The scalar residual of (L-29812.11) is
+The scalar residual agrees with `L-29809.6`:
 
 \[
  \Delta^ma_N
  =\Delta^mb_N
  +\sum_{r=0}^{m}{m\choose r}
   {1\over\Gamma(s)}\int_0^\infty
-  t^{s-1}\beta z^{N+r}dt,
+  t^{s-1}\beta z^{N+r}dt.
 \]
-
-in agreement with `L-29809.6`.
 
 ## 5. Positive superpositions
 
-The decomposition is preserved under every nonnegative superposition over
-exponents, stopped endpoints, Taylor channels, and Peano parameters:
+The decomposition is preserved under nonnegative superposition over exponents,
+stopped endpoints, Taylor channels, and Peano parameters:
 
 1. the parity source remains coefficientwise positive;
 2. the integrated smooth weights remain Hausdorff;
-3. the weighted Hall inequalities remain valid after integration;
-4. finite max-flow supplies one matching for the total smooth source.
-
-Hence the theorem applies to the corrected scalar Euler bank of `L-29809` after
-complete common-destination recombination.
+3. weighted Hall inequalities remain valid after integration;
+4. finite max-flow supplies a matching for the total smooth source.
 
 ## 6. Carry realization boundary
 
-For even `r`, the adjacent dipole
+For even `r`, the formal adjacent dipole has the forward orientation. For odd
+`r`, it has the reverse orientation. `R-29805` proves that a reverse divisor
+dipole cannot be a standalone nonnegative carry flow.
 
-\[
- e_{N+r}-e_{N+r+1}
-\]
+Moreover, withdrawn `L-29815` shows that one may not multiply the unscaled
+Pascal sibling by a common arithmetic destination: noncoprime chains break that
+tensorization.
 
-has the nonnegative central-to-sibling Pascal realization already used in
-`L-28302`.
-
-For odd `r`, the reverse dipole
-
-\[
- e_{N+r+1}-e_{N+r}
-\]
-
-cannot be a standalone nonnegative carry flow by `R-29805`. It must be retained
-as a signed adjacent-tree commutator or recombined with additional positive
-source columns.
-
-Therefore (L-29812.11) reduces the complete vector source problem to one
-explicit scalar debt ledger:
-
-\[
- \boxed{
- \mathcal D_{N,m}^{\leftarrow}
- =\sum_{\substack{0\le r<m\\r\ {
-text{ odd}}}}
- t_r\,\mathcal N_\omega(E_{N+r}),}
-\tag{L-29812.12}
-\]
-
-where `E_n=T_(n+1)-T_n` is the sparse adjacent-tree commutator of PR #272.
-
-A completed DCD proof must show that the sum of (L-29812.12) over every emitted
-jet and exact Euler remainder, after common-destination recombination, is
-polylogarithmic and is paired with the lower-flow odd leakage in the same
-metric.
+Therefore (L-29812.11) is a coefficient/source decomposition, not by itself an
+actual carry-flow construction. `L-29816` supplies the correct proof-facing
+route: retain the complete target on actual carry columns, perform the exact
+multiples-Möbius decoder, and realize the resulting node divergence with
+adjacent-tree commutators.
 
 ## 7. Proof boundary
 
 Proved here:
 
-- exact smooth/parity splitting of the node-labeled jet;
-- coefficientwise positivity of the entire parity mode;
-- Hausdorff structure of the complete smooth mode;
-- exact two-sided matching of all smooth negative demands;
-- reduction of every remaining sign to a reverse adjacent dipole.
+- exact smooth/parity splitting;
+- coefficientwise positivity of the parity mode;
+- Hausdorff structure of the smooth mode;
+- exact two-sided matching of every smooth negative demand;
+- reduction of formal signs to adjacent dipoles.
 
-Open:
+Not proved here:
 
-- the all-source bound for `mathcal D^leftarrow`;
-- exact recombination with PR #272's lower-flow odd leakage;
+- tensorized arithmetic source-to-carry binding;
+- all-generation boundary norm;
 - DCD;
 - RH.
