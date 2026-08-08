@@ -69,7 +69,7 @@ Equations (L-29005.3)--(L-29005.4) give the exact cancellation
 }
 \tag{L-29005.6}
 
-Thus every full tree `T_n` disappears.  The filtered endpoint is a compact
+Thus every full tree `T_n` disappears. The filtered endpoint is a compact
 four-edge object:
 
 \[
@@ -112,7 +112,7 @@ Hence
 \boxed{F(W_n)=-\frac12\log2.}
 \tag{L-29005.9}
 
-The complete Selberg forcing coordinate is linear in the carry chain.  Because
+The complete Selberg forcing coordinate is linear in the carry chain. Because
 an endpoint split `[m,1]` has forcing `log^2m`,
 
 \[
@@ -149,11 +149,10 @@ For every integer `n>=2`,
  F(W_n)^2-S(W_n)
  \ge\frac34\log^22>0.
 }
-\tag{L-29005.12
-}
+\tag{L-29005.12}
 
 Thus the dyadic opposite-parity filter removes the exact endpoint nullity of
-`L-29002`.  At the level of one complete fiber, the endpoint channel has a
+`L-29002`. At the level of one complete fiber, the endpoint channel has a
 strict logarithmically growing reserve.
 
 ## 5. Nonnegative superpositions
@@ -187,8 +186,7 @@ Consequently
    \left(\log2\log n-\frac12\log^22\right)
  \ge0.
 \end{aligned}}
-\tag{L-29005.13
-}
+\tag{L-29005.13}
 
 For a nonzero superposition supported on `n>=2`, the reserve is strict.
 
@@ -205,8 +203,8 @@ The finite filter in `L-29001` is exactly
 \]
 
 Therefore `W_n` is the geometric endpoint image naturally associated with the
-pole-preserving opposite-parity source.  What remains to be checked in the full
-independent-frequency packet is not the sign of one fiber.  It is the exact
+pole-preserving opposite-parity source. What remains to be checked in the full
+independent-frequency packet is not the sign of one fiber. It is the exact
 coefficient binding:
 
 ```text
@@ -216,7 +214,7 @@ retained in an ETSR recurrence?
 ```
 
 A complete source manifest answering the first way would close the endpoint
-channel outright.  If signed cross-fiber coefficients survive, equations
+channel outright. If signed cross-fiber coefficients survive, equations
 (L-29005.6)--(L-29005.13) are the correct local blocks for the recurrence.
 
 ## 7. Proof boundary
