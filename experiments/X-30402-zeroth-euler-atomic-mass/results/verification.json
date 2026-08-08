@@ -1,0 +1,62 @@
+{
+  "classification": "EXACT_ZEROTH_EULER_COMMON_TAIL_SQRT_MASS_MUTATION",
+  "does_not_prove": [
+    "the cofinal asymptotic without the written proof",
+    "nonexistence of every coupled source repair",
+    "Cycle Debt",
+    "RH"
+  ],
+  "minimal_control": {
+    "K_even": 2,
+    "K_odd": 2,
+    "Y": 96,
+    "q": 25
+  },
+  "rows": [
+    {
+      "X": 96,
+      "lower_fraction_denominator_bits": 137,
+      "lower_fraction_numerator_bits": 133,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 276
+    },
+    {
+      "X": 192,
+      "lower_fraction_denominator_bits": 274,
+      "lower_fraction_numerator_bits": 271,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 1128
+    },
+    {
+      "X": 384,
+      "lower_fraction_denominator_bits": 564,
+      "lower_fraction_numerator_bits": 561,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 4560
+    },
+    {
+      "X": 768,
+      "lower_fraction_denominator_bits": 1121,
+      "lower_fraction_numerator_bits": 1119,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 18336
+    },
+    {
+      "X": 1536,
+      "lower_fraction_denominator_bits": 2230,
+      "lower_fraction_numerator_bits": 2228,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 73536
+    },
+    {
+      "X": 3072,
+      "lower_fraction_denominator_bits": 4470,
+      "lower_fraction_numerator_bits": 4469,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 294528
+    }
+  ],
+  "schema": "X-30402-zeroth-euler-atomic-mass-v1",
+  "sha256_without_digest": "11522fe3473d961667b92fbec785d563bdea16ebd6cc79549492a19858c2298d",
+  "symbolic_atomic_contribution": "ell_Y/(10*sqrt(q)) at source node 5"
+}
