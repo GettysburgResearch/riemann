@@ -177,16 +177,20 @@ A_N(q)=\frac{qa(a-1)}2+a(r+1)
 
 and analogously for `A_M`.
 
-After multiplication by `2N(N+1)`, the numerator of (L-32204.11) is a quadratic polynomial in `b` whose `b^2` coefficient is
+Let
 
 \[
--q\,[a q(q-1)+r(r+1)]\le0.
+P=2N(N+1)K_{N,q}(M).
+\]
+
+After substitution of (L-32204.12), `P` is a quadratic polynomial in `b`; its `b^2` coefficient is
+
+\[
+\boxed{-q\,[a q(q-1)+r(r+1)]\le0.}
 \tag{L-32204.13}
 \]
 
-Thus, for fixed `a,q,r,s`, its minimum on the allowed integer interval for `b` occurs at one of the two endpoints.
-
-The endpoint conditions coming from `0<M-N<=N` are exactly
+Thus, for fixed `a,q,r,s`, the minimum on the allowed integer interval for `b` occurs at an endpoint.  The conditions `0<M-N<=N` give exactly
 
 ```text
 lower endpoint:
@@ -199,40 +203,96 @@ upper endpoint:
   b=a+1 if s<=2r-q.
 ```
 
-Each endpoint is reduced to a polynomial with nonnegative integer coefficients by the following nonnegative substitutions:
+The five endpoint certificates are as follows.  Every displayed auxiliary variable is nonnegative.
+
+### A. `b=0`, `s>r`
+
+Put
 
 ```text
-A: b=0,   s>r:
-   a=A+1, s=r+1+u, q=r+u+2+w.
-
-B: b=1,   s<=r:
-   a=A+1, r=s+v,   q=s+v+1+w.
-
-C: b=a-1, s>2r:
-   a=A+2, b=A+1,
-   s=2r+1+u, q=2r+u+2+w.
-   (The exceptional a=1 endpoint is case A.)
-
-D: b=a,   2r-q<s<=2r:
-   use u=2r-s and q=u+1+w;
-   split w<=u and w>=u and translate the remaining bounded residue
-   coordinate to its corresponding endpoint.  In both subcases the numerator
-   is a polynomial with nonnegative integer coefficients.
-
-E: b=a+1, s<=2r-q:
-   write r=q-1-v, s=q-2-2v-u, then q=u+2v+2+w;
-   the resulting numerator has nonnegative integer coefficients.
+a=A+1,
+s=r+1+u,
+q=r+u+2+w.
 ```
 
-No inequality involving a floor remains after these substitutions.  The exact symbolic coefficient check is included in `X-32202-floor-prefix`; it constructs (L-32204.12)--(L-32204.13) from integer polynomial arithmetic and verifies every endpoint certificate coefficientwise.  This is an all-parameter algebraic certificate, not an enumeration over bounded `N`.
-
-For illustration, case A factors as
+Then
 
 \[
-2N(N+1)K=(u+1)P_A(A,r,u,w)
+P=(u+1)P_A(A,r,u,w),
 \]
 
-with `P_A` having forty nonnegative integer monomials.  Case B has fifty nonnegative monomials.  The remaining endpoint certificates are checked in the same exact coefficient ring.
+and every coefficient of `P_A` is a nonnegative integer.
+
+### B. `b=1`, `s<=r`
+
+Put
+
+```text
+a=A+1,
+r=s+v,
+q=s+v+1+w.
+```
+
+The resulting polynomial `P_B(A,s,v,w)` has fifty monomials, all with nonnegative integer coefficients.
+
+### C. `b=a-1`, `s>2r`
+
+The case `a=1` is already A.  For `a>=2`, put
+
+```text
+a=A+2,
+b=A+1,
+s=2r+1+u,
+q=2r+u+2+w.
+```
+
+The resulting polynomial has sixty-four monomials, all with nonnegative integer coefficients.
+
+### D. `b=a`, `2r-q<s<=2r`
+
+Put
+
+\[
+u=2r-s,\qquad q=u+1+w,\qquad v=q-1-s.
+\]
+
+Then
+
+\[
+0\le v\le u+w
+\]
+
+and
+
+\[
+r=u+\frac{w-v}{2}.
+\]
+
+After clearing the harmless factor `4` introduced by this half-integral parametrization, `4P` is a cubic polynomial in `v`.  Write `L=u+w` and expand in the degree-three Bernstein basis on `0<=v<=L`:
+
+\[
+4P=\sum_{j=0}^{3}B_j(A,u,w)\binom3j
+\left(\frac vL\right)^j
+\left(1-\frac vL\right)^{3-j}
+\tag{L-32204.14}
+\]
+
+with the usual polynomial interpretation at `L=0`.  After clearing the powers of `L`, all four Bernstein coefficients `B_j` are polynomials in `A,u,w` with nonnegative integer coefficients.  Hence `P>=0` throughout the complete middle residue interval, not merely at its endpoints.
+
+### E. `b=a+1`, `s<=2r-q`
+
+Write
+
+```text
+a=A+1,
+r=q-1-v,
+s=q-2-2v-u,
+q=u+2v+2+w.
+```
+
+Equivalently `r=u+v+1+w` and `s=w`.  The resulting polynomial has sixty-four monomials, all with nonnegative integer coefficients.
+
+The exact symbolic checker in `X-32202-floor-prefix` reconstructs `P` from (L-32204.11)--(L-32204.13), performs precisely these substitutions, computes the four Bernstein coefficients in case D, and rejects if any certificate coefficient is negative.  It is an all-parameter polynomial certificate, not a finite enumeration of endpoints.
 
 This proves (L-32204.11).
 
@@ -243,7 +303,7 @@ For fixed `q<=N`, equations (L-32204.5) and (L-32204.10) give
 \[
 r(q)=\sum_{m=q}^{N}\Delta_m
      +\sum_{m=N+1}^{T-1}\Delta_m k_m(q).
-\tag{L-32204.14}
+\tag{L-32204.15}
 \]
 
 Since `T-1<=2N`, all prefix sums in the second term are nonnegative by (L-32204.11). Finite summation by parts gives
@@ -256,10 +316,10 @@ Since `T-1<=2N`, all prefix sums in the second term are nonnegative by (L-32204.
   (\Delta_M-\Delta_{M+1})K_{N,q}(M)
 \ge0.
 \end{aligned}
-\tag{L-32204.15}
+\tag{L-32204.16}
 \]
 
-The first term in (L-32204.14) is also nonnegative. Therefore `r(q)>=0`, proving (L-32204.4).
+The first term in (L-32204.15) is also nonnegative. Therefore `r(q)>=0`, proving (L-32204.4).
 
 ## 6. Critical hinge consequence
 
