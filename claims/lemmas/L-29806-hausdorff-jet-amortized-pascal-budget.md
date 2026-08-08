@@ -1,13 +1,13 @@
 # L-29806 — Hausdorff-jet amortized Pascal budget
 
 Claim ID: `L-29806`  
-Title: Pure-power Euler jets and exact remainders are decreasing Hausdorff moment sources; every unequal eta pair admits a capacity-feasible Pascal switch whose residual plus objective cost is at most the incoming source mass  
+Title: Pure-power Euler jets and exact remainders are decreasing Hausdorff moment sources; every ordered parity pair admits a capacity-feasible Pascal switch whose residual plus objective cost is at most the incoming source mass  
 Status: **PROPOSED COMPLETE EXACT LEMMA — INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-pro-global`  
 Created: 2026-08-08  
 Issue: #298  
 Dependencies: `L-29801`; PR #294 `L-28302`; elementary Laplace/Hausdorff moments  
-Scope: corrected all-generation boundary invariant; supersedes the need for a uniform eta factor on arbitrary jet labels
+Scope: corrected all-generation boundary invariant; uses the actual paired coefficients rather than imposing the special eta weights
 
 ## 1. Pure powers are Hausdorff moment sequences
 
@@ -27,7 +27,7 @@ The Laplace formula gives
  t^{s-1}e^{-xt}(e^{-ht})^jdt.
 \tag{L-29806.1}
 
-After the substitution `y=e^{-ht}`, this is a Hausdorff moment representation
+After `y=e^{-ht}`,
 
 \[
 \boxed{
@@ -35,30 +35,28 @@ After the substitution `y=e^{-ht}`, this is a Hausdorff moment representation
 }
 \tag{L-29806.2}
 
-for one finite positive measure `nu`.
-
-Therefore every finite difference is again a Hausdorff moment sequence:
+for one finite positive measure `nu`. Therefore
 
 \[
 \boxed{
  \Delta^mv_j
  =\int_{[0,1]}y^j(1-y)^m\,d\nu(y)
- \ge0.
+ \ge0,
 }
 \tag{L-29806.3}
 
-In particular it is decreasing in `j`.
+and the sequence is decreasing in `j`.
 
 ## 2. Exact Euler remainder is positive and decreasing
 
-For one finite-difference order `m`, define the exact alternating remainder
+For one finite-difference order `m`, define
 
 \[
  R_K^{(m)}
  =\sum_{j\ge K}(-1)^{j-K}\Delta^mv_j.
 \tag{L-29806.4}
 
-Using (L-29806.3) and summing the geometric series under the positive integral,
+Summing the geometric series under the positive integral gives
 
 \[
 \boxed{
@@ -69,76 +67,53 @@ Using (L-29806.3) and summing the geometric series under the positive integral,
 }
 \tag{L-29806.5}
 
-It is also decreasing in `K`.
+It is decreasing in `K`. These conclusions are preserved under nonnegative superposition over stopped endpoints, exponents, Taylor orders, Peano parameters, and common arithmetic destinations.
 
-Thus every finite Euler jet and every exact remainder from a pure-power source is not merely positive: it is a positive decreasing source along the paired quotient index.
+## 3. General ordered parity pair
 
-The result is preserved by nonnegative superposition over endpoints, exponents, Peano parameters, and common arithmetic destinations.
-
-## 3. Unequal eta pair
-
-Let `V_e,V_o>=0` be the internal source masses on one even/odd eta pair, and assume only
+Let `A_k,B_k` be the **actual recombined source coefficients** on the paired parity nodes `2k,2k+1`, and assume
 
 \[
- V_e\ge V_o.
+ A_k\ge B_k\ge0.
 \tag{L-29806.6}
 
-Put
+No special factorization
 
 \[
- a_k={1\over2k},
+ A_k=(2k)^{-1}V_e,
  \qquad
- c_k={1\over2k+1},
- \qquad
- \ell_k=\log{2k+1\over2k}.
+ B_k=(2k+1)^{-1}V_o
 \]
 
-The signed pair is
+is required. The eta comb of PR #294 is one special case.
+
+The exact decomposition is
 
 \[
- a_kV_e e_{2k}-c_kV_oe_{2k+1}.
-\]
-
-Since `a_k>c_k` and `V_e>=V_o`, the switch amount
-
-\[
- T_k=c_kV_o
+\boxed{
+ A_ke_{2k}-B_ke_{2k+1}
+ =(A_k-B_k)e_{2k}+B_k(e_{2k}-e_{2k+1}).
+}
 \tag{L-29806.7}
 
-is below the available central source
+The residual coefficient and the sibling-switch coefficient are both nonnegative. The dipole is the exact balanced Pascal switch of PR #294.
+
+## 4. Amortized source-plus-cost inequality
+
+The switch objective cost is
 
 \[
- M_k=a_kV_e.
-\]
-
-Hence
-
-\[
-\boxed{
- a_kV_e e_{2k}-c_kV_oe_{2k+1}
- =(M_k-T_k)e_{2k}+T_k(e_{2k}-e_{2k+1}),
-}
+ \operatorname{cost}_k
+ =B_k\log{2k+1\over2k}.
 \tag{L-29806.8}
 
-with nonnegative residual `M_k-T_k`. The dipole is realized by the same balanced sibling switch as in PR #294.
-
-This formula does not require the even and odd internal labels to be identical. It requires only the monotone source inequality (L-29806.6).
-
-## 4. Amortized mass-plus-cost inequality
-
-The exact objective cost of the switch is
-
-\[
- \operatorname{cost}_k=T_k\ell_k.
-\]
-
-Because `ell_k<1`,
+Since `log((2k+1)/(2k))<1`,
 
 \[
 \boxed{
- (M_k-T_k)+\operatorname{cost}_k
- =M_k-T_k(1-\ell_k)
- \le M_k.
+ (A_k-B_k)+\operatorname{cost}_k
+ =A_k-B_k\left(1-\log{2k+1\over2k}\right)
+ \le A_k.
 }
 \tag{L-29806.9}
 
@@ -149,74 +124,69 @@ residual source mass
 +
 paid logarithmic Pascal cost
 <=
-incoming even source mass.
+incoming even source coefficient.
 ```
 
-The inequality is strict whenever `T_k>0`, but no uniform strict factor is needed.
+This is the source invariant used below.
 
-Summing over all pairs and all common internal labels preserves (L-29806.9). Repeated destinations are combined before the inequality, so one source unit is never spent twice.
+## 5. Actual shifted cutoff coefficients are ordered
 
-## 5. Application to shifted cutoff jets
-
-In PR #286's first-omitted ledger, the even argument is smaller than the paired odd argument:
+In PR #286's cutoff ledger the shifted-even argument is smaller than the paired unshifted-odd argument:
 
 \[
  2kq-1<(2k+1)q.
+\tag{L-29806.10}
+
+For the base pure-power channel this directly gives
+
+\[
+ (2kq-1)^{-s}>((2k+1)q)^{-s}.
 \]
 
-Every pure-power finite difference and exact Euler remainder is decreasing by Sections 1–2. Therefore its even internal source mass is at least its odd internal source mass.
+After expanding the shift about `2kq`, every Taylor correction is a nonnegative **even-only** faster-power term. The unshifted base pair is ordered by monotonicity. Applying finite Euler transformation preserves the order because every finite-difference jet and exact remainder is a decreasing Hausdorff moment sequence by Sections 1–2.
 
-Equation (L-29806.8) applies to every:
+Therefore, after common-destination recombination, the actual coefficients satisfy (L-29806.6) on the complete common tail.
 
-- shifted or unshifted first-omitted value jet;
-- finite-difference Peano jet;
-- exact Euler remainder;
-- positive stopped-power endpoint component.
-
-This supplies the unequal-label source binding missing from the literal tensor statement in `L-29802`.
+The first omitted odd index can precede the shifted-even index by one. That single unmatched term per `(N,q)` is retained in the explicit collar of PR #286 and is not paired artificially.
 
 ## 6. Global telescoping budget
 
-Let `J_a` be the total positive boundary source mass entering cascade depth `a`, and let `C_a` be the logarithmic objective cost paid by the corresponding Pascal switches. Let `J_(a+1)` be the total residual boundary source passed to the next half endpoint.
+Let `J_a` be total positive boundary source mass entering cascade depth `a`, `C_a` the exact logarithmic cost of its Pascal switches, and `I_a` new source injected by the analytic bulk and collar.
 
-Summing (L-29806.9) gives
+Summing (L-29806.9) after common-destination recombination gives
 
 \[
 \boxed{
- J_{a+1}+C_a\le J_a+I_a,
+ J_{a+1}+C_a\le J_a+I_a.
 }
-\tag{L-29806.10}
+\tag{L-29806.11}
 
-where `I_a` is newly injected boundary source from the analytic bulk and the finite collar.
-
-Iteration yields the exact amortized estimate
+Hence
 
 \[
 \boxed{
  J_A+\sum_{a<A}C_a
  \le J_0+\sum_{a<A}I_a.
 }
-\tag{L-29806.11}
+\tag{L-29806.12}
 
 No homogeneous boundary contraction factor is required.
 
-PR #286's analytic state satisfies `A_(a+1)<=(6/7)A_a`, and its boundary injection obeys
+PR #286 gives
 
 \[
- I_a\le C_MA_a+\operatorname{poly}(a,\log X).
+ A_{a+1}\le{6\over7}A_a
 \]
 
-Hence
+for the analytic state and a fixed-order polylogarithmic collar bound. Therefore
 
 \[
  \sum_a I_a=O(\log^B(2X))
-\tag{L-29806.12}
+\tag{L-29806.13}
 
-through the `O(log X)` cascade depth. Equation (L-29806.11) gives a polylogarithmic total boundary source plus accumulated Pascal objective cost.
+through the `O(log X)` half-scale depth, and (L-29806.12) gives a polylogarithmic total residual source plus accumulated Pascal objective cost.
 
 ## 7. Corrected source graph
-
-The all-generation state is triangular in the following amortized sense:
 
 ```text
 analytic bulk
@@ -229,23 +199,21 @@ boundary source
      with residual+cost <= incoming source.
 ```
 
-Boundary source does not regenerate current-scale analytic bulk. Its residual may persist, but it carries a finite conserved budget and cannot create exponential or polynomial debt.
-
-This is stronger and safer than assigning one uniform `theta_*` to every unequal jet pair.
+Boundary source does not regenerate current-scale analytic bulk. Its residual may persist, but it carries a finite conserved budget.
 
 ## 8. Proof boundary
 
-Closed here, subject to independent verification of the exact arithmetic destination map:
+Closed here, subject to independent reconstruction of the arithmetic destination map:
 
-1. Hausdorff moment representation of every pure-power jet;
-2. positivity and monotonicity of every exact Euler remainder;
-3. capacity feasibility for unequal even/odd source labels;
-4. the local residual-plus-cost inequality;
-5. the global telescoping boundary budget;
-6. the polylogarithmic conclusion after analytic injection.
+1. Hausdorff representation of pure-power jets;
+2. positivity and monotonicity of exact Euler remainders;
+3. general ordered-pair Pascal decomposition;
+4. the local source-plus-cost inequality;
+5. actual coefficient order on the common shifted/unshifted tail;
+6. the global telescoping budget.
 
 Open review point:
 
-- verify that every emitted finite cutoff row pairs the declared smaller even argument with the declared larger odd argument after all quotient and endpoint coincidences are recombined.
+- verify every common-destination pairing, Taylor term, first-omitted convention, and unmatched collar row in the complete finite source manifest.
 
 No RH conclusion is stated in this lemma.
