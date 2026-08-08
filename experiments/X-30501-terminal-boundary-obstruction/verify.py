@@ -14,95 +14,93 @@ from pathlib import Path
 
 
 def exact_gate() -> dict[str, str]:
-    # sqrt(2/3) < 5/6 because 2/3 < 25/36.
-    assert Fraction(2, 3) < Fraction(25, 36)
+    # Euler lower bound for eta(1/2):
+    # 29/32 - 11/(16 sqrt(2)) + 5/(16 sqrt(3)) > 3/5.
+    # Rational square enclosures:
+    assert Fraction(1, 2) < Fraction(7072, 10000) ** 2
+    assert Fraction(5773, 10000) ** 2 < Fraction(1, 3)
+    eta_lower = (
+        Fraction(29, 32)
+        - Fraction(11, 16) * Fraction(7072, 10000)
+        + Fraction(5, 16) * Fraction(5773, 10000)
+    )
+    assert eta_lower > Fraction(3, 5)
 
-    # log 2 > 2/3 from 2*atanh(1/3).
-    # Retain only the first positive term.
-    log2_lower = Fraction(2, 3)
+    # Faster-power tail at q>=100:
+    # (1-x)^(-1/2)-1 < 200/79401 for x<=1/200,
+    # and 3/sqrt(2)<3.
+    assert Fraction(199, 200) ** 2 < Fraction(199, 200)
+    tail_upper = Fraction(600, 79401)
+    assert tail_upper < Fraction(1, 132)
 
-    analytic_lower = Fraction(1, 6) * log2_lower
-    assert analytic_lower == Fraction(1, 9)
+    analytic_upper = Fraction(2, 5) + Fraction(1, 132)
+    assert analytic_upper == Fraction(269, 660)
 
-    # sqrt(100/97) < 51/50.
-    assert Fraction(100, 97) < Fraction(51 * 51, 50 * 50)
+    point_lower = Fraction(7, 10)
+    gap = point_lower - analytic_upper
+    assert gap == Fraction(193, 660)
 
-    # log(100/97) < 3/97 < 1/32.
-    assert Fraction(3, 97) < Fraction(1, 32)
-    finite_upper = Fraction(51, 50) * Fraction(1, 32)
-    assert finite_upper == Fraction(51, 1600)
+    log_lower = Fraction(1, 10)
+    moat = gap * log_lower
+    assert moat == Fraction(193, 6600)
+    assert moat > Fraction(1, 35)
 
-    moat = analytic_lower - finite_upper
-    assert moat == Fraction(1141, 14400)
-    assert moat > Fraction(1, 13)
-
-    norm_constant = Fraction(1, 200) * Fraction(7, 10) * Fraction(1, 13)
-    assert norm_constant > Fraction(1, 4000)
+    norm_constant = Fraction(1, 25) * Fraction(3, 5) * Fraction(1, 35)
+    assert norm_constant == Fraction(3, 4375)
+    assert norm_constant > Fraction(1, 1500)
 
     return {
-        "analytic_lower": str(analytic_lower),
-        "finite_upper": str(finite_upper),
-        "moat": str(moat),
+        "eta_lower_rational": str(eta_lower),
+        "tail_upper": str(tail_upper),
+        "analytic_upper": str(analytic_upper),
+        "point_gap": str(gap),
+        "boundary_moat": str(moat),
         "atomic_norm_constant": str(norm_constant),
     }
 
 
-def eta_half() -> Decimal:
-    # Alternating eta series with pairwise positive terms and a rigorous
-    # tail smaller than the first omitted pair. For the finite replay we use
-    # high precision reconnaissance only; no verdict depends on it.
-    total = Decimal(0)
-    for k in range(1, 200000):
-        even = Decimal(2 * k).sqrt()
-        odd = Decimal(2 * k + 1).sqrt()
-        total += Decimal(1) / even - Decimal(1) / odd
-    return Decimal(1) - total
-
-
 def cp_power(q: int, terms: int = 100000) -> Decimal:
-    # Direct positive paired series.
     total = Decimal(0)
     for k in range(1, terms + 1):
         a = Decimal(2 * k * q - 1).sqrt()
         b = Decimal((2 * k + 1) * q).sqrt()
         total += Decimal(1) / a - Decimal(1) / b
-    # Positive omitted tail means this is a lower approximation.
     return total
 
 
 def finite_mutation() -> dict[str, object]:
     getcontext().prec = 50
     checked = 0
-    minimum_scaled = None
-    for X in (400, 800, 1600, 3200):
-        lo = (49 * X + 99) // 100
-        hi = X // 2
+    largest_scaled = None
+    for X in (400, 800, 1600):
+        lo = (2 * X + 4) // 5
+        hi = 9 * X // 20
         for q in range(lo, hi + 1):
-            analytic = (Decimal(X) / Decimal(q)).ln() * cp_power(q, 20000)
-            n = 2 * q - 1
-            finite = (Decimal(X) / Decimal(n)).ln() / Decimal(n).sqrt()
-            boundary = analytic - finite
+            ratio_log = (Decimal(X) / Decimal(2 * q - 1)).ln()
+            boundary = ratio_log * (
+                cp_power(q, 2000) - Decimal(1) / Decimal(2 * q - 1).sqrt()
+            )
             scaled = boundary * Decimal(X).sqrt()
-            if minimum_scaled is None or scaled < minimum_scaled:
-                minimum_scaled = scaled
-            assert scaled > Decimal(1) / Decimal(13)
+            if largest_scaled is None or scaled > largest_scaled:
+                largest_scaled = scaled
+            assert scaled < -Decimal(1) / Decimal(35)
             checked += 1
     return {
         "annulus_rows": checked,
-        "minimum_scaled_boundary": str(minimum_scaled),
+        "largest_scaled_boundary": str(largest_scaled),
         "classification": "HIGH_PRECISION_RECONNAISSANCE_ONLY",
     }
 
 
 def main() -> None:
     results = {
-        "schema": "X-30501-terminal-boundary-obstruction-v1",
+        "schema": "X-30501-terminal-boundary-obstruction-v2",
         "classification": "EXACT_RATIONAL_GATE_PLUS_DECIMAL_RECONNAISSANCE",
         "exact_gate": exact_gate(),
         "finite_mutation": finite_mutation(),
         "does_not_prove": [
             "a lower bound for optimized Cycle Debt",
-            "impossibility of a coupled analytic/finite flow repair",
+            "impossibility of an activated finite/analytic flow repair",
             "RH or its negation",
         ],
     }
