@@ -5,8 +5,8 @@ Title: The compact opposite-parity physical window is exactly a weighted carry s
 Status: **PROPOSED COMPLETE EXACT LEMMA PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro-source-specific`  
 Created: 2026-08-08  
-Dependencies: PR #268 `L-26201/L-26202`; PR #269 `L-26901/L-26903`; PR #241 `L-9518`  
-Scope: exact source map and norm identity; no lower-scale recurrence or RH conclusion
+Dependencies: PR #268 `L-26201/L-26202`; PR #269 `L-26901/L-26903`; PR #241 `L-9518`; `R-26802`  
+Scope: exact geometry for arbitrary source coefficients; no source-change estimate, recurrence, or RH conclusion
 
 ## 1. The compact source window
 
@@ -31,7 +31,6 @@ and put
  \tag{L-26802.1}
 \]
 
-The window is real, compactly supported, and belongs to \(L^1\cap L^2\).
 For integers \(m,r\ge1\), define
 
 \[
@@ -59,8 +58,8 @@ one has the exact floor identity
  \tag{L-26802.3}
 \]
 
-Thus \(g_m\) is not a model wavelet. It is the literal compact output of the
-complete opposite-parity arithmetic source.
+Thus \(g_m\) is the literal compact output of the complete opposite-parity
+arithmetic source.
 
 ## 2. Physical step signal
 
@@ -81,31 +80,16 @@ Define the integer potential
  \tag{L-26802.5}
 \]
 
-For almost every
-
-\[
- \log r\le t<\log(r+1),
-\]
-
-equation (L-26802.1) gives
-
-\[
- h_\omega(t-\log m)
- =\sqrt m\,e^{-t/2}g_m(r).
-\]
-
-Therefore
+For almost every \(t\) with \(\log r\le t<\log(r+1)\),
 
 \[
  \boxed{
- Q_x(t)=e^{-t/2}F_x(r)
- \qquad
- (\log r\le t<\log(r+1)).
+ Q_x(t)=e^{-t/2}F_x(r).
  }
  \tag{L-26802.6}
 \]
 
-In particular,
+Consequently,
 
 \[
  \boxed{
@@ -131,11 +115,10 @@ For a row \(n\), define
 PR #269 proves
 
 \[
- Z_{n,m}(j)
- =g_m(n)-g_m(j)-g_m(n-j).
+ Z_{n,m}(j)=g_m(n)-g_m(j)-g_m(n-j).
 \]
 
-Consequently,
+Therefore
 
 \[
  \boxed{
@@ -145,94 +128,142 @@ Consequently,
  \tag{L-26802.9}
 \]
 
-Thus the physical source and the carry feature are not merely analogous
-positive Grams. They are the same finite source before and after one explicit
-additive-split operator.
+The physical source and the carry feature are the same finite coefficient
+family before and after one explicit additive-split operator.
 
-## 4. Exact generalized-prime specialization
+## 4. Two distinct source specializations
 
 Let
 
 \[
  a_\omega(2^\nu u)=2\nu+2^{-\nu}
- \qquad(u\ {\rm odd})
+ \qquad(u\text{ odd}),
 \]
 
-be the positive inverse coefficient and define
+and
 
 \[
  \Lambda_\omega=\omega_2*(a_\omega\log).
 \]
 
-For the complete choice
+### 4.1 RH-sensitive physical source
+
+The correct RH-sensitive specialization is
 
 \[
- x_m=a_\omega(m)\log m,
+ \boxed{x_m=\Lambda_\omega(m).}
  \tag{L-26802.10}
 \]
 
-equations (L-26802.3) and finite convolution give
+Its physical transform contains
+
+\[
+ -\frac{A_\omega'}{A_\omega}(s)
+ =-\frac{\zeta'}{\zeta}(s)+\frac{E'}E(s),
+ \qquad
+ E(s)=(1-2^{-s})(1-2^{-s-1}),
+\]
+
+so every hypothetical off-line zeta zero remains a pole.
+
+Equations (L-26802.3) and finite convolution give
 
 \[
  \boxed{
- F_x(r)
- =\sum_{q\le r}\Lambda_\omega(q)
-  \left\lfloor\frac rq\right\rfloor .
+ F_\Lambda(r)
+ =\sum_{q\le r}(\omega_2*\Lambda_\omega)(q)
+  \left\lfloor\frac rq\right\rfloor,
  }
  \tag{L-26802.11}
 \]
 
-Hence
+and hence
 
 \[
  \boxed{
- (\mathcal S_nF_x)(j)
- =\sum_{q\le n}\Lambda_\omega(q)\chi_{n,q}(j),
+ (\mathcal S_nF_\Lambda)(j)
+ =\sum_{q\le n}(\omega_2*\Lambda_\omega)(q)\chi_{n,q}(j).
  }
  \tag{L-26802.12}
 \]
 
-the exact generalized-prime Kummer profile of PR #269.
+Denote this RH-sensitive carry feature by \(W_n\).
 
-Equations (L-26802.6) and (L-26802.12) are the requested source-specific
-physical-to-carry intertwiner.
+### 4.2 Positive-inverse carry source
+
+For
+
+\[
+ x_m=a_\omega(m)\log m,
+ \tag{L-26802.13}
+\]
+
+one instead obtains
+
+\[
+ \boxed{
+ (\mathcal S_nF_x)(j)
+ =\sum_{q\le n}\Lambda_\omega(q)\chi_{n,q}(j)
+ =:P_n(j),
+ }
+ \tag{L-26802.14}
+\]
+
+the generalized-prime Kummer profile controlled on PR #269.
+
+However, `R-26802` proves that the corresponding physical primitive is
+holomorphic at every zeta zero: the reciprocal-zeta pole cancels. Thus
+\(x=a_\omega\log\) is useful in carry space but is not the RH-sensitive
+physical source.
+
+The exact relation between the two carry coefficient sequences is
+
+\[
+ \boxed{
+ a_\omega*(\omega_2*\Lambda_\omega)=\Lambda_\omega.
+ }
+ \tag{L-26802.15}
+\]
+
+Transferring the strict reserve from \(P_n\) to \(W_n\), or proving a direct
+reserve for \(W_n\), is a separate arithmetic theorem.
 
 ## 5. Annular support and exact weighted isometry
 
-Assume now that
+Assume
 
 \[
  x_m=0\qquad\text{unless}\qquad M\le m<2M.
- \tag{L-26802.13}
+ \tag{L-26802.16}
 \]
 
 Then
 
 \[
- \operatorname{supp}F_x\subset [M,8M).
- \tag{L-26802.14}
+ \operatorname{supp}F_x\subset[M,8M).
+ \tag{L-26802.17}
 \]
 
-Choose the oversupport row
+Choose
 
 \[
  N=16M-1.
- \tag{L-26802.15}
+ \tag{L-26802.18}
 \]
 
-For \(1\le j<8M\),
+For \(1\le j<8M\), one has
 
 \[
  F_x(N)=F_x(N-j)=0,
 \]
 
-and therefore
+so
 
 \[
  (\mathcal S_NF_x)(j)=-F_x(j).
 \]
 
-Combining this with (L-26802.7) gives the exact identity
+Combining with (L-26802.7) gives
 
 \[
  \boxed{
@@ -241,30 +272,13 @@ Combining this with (L-26802.7) gives the exact identity
  \sum_{j=1}^{8M-1}
  \frac{|(\mathcal S_NF_x)(j)|^2}{j(j+1)}.
  }
- \tag{L-26802.16}
+ \tag{L-26802.19}
 \]
 
-This is a literal congruence between:
+This is an exact congruence for every annular coefficient sequence \(x\), in
+particular for the RH-sensitive sequence \(x=\Lambda_\omega\).
 
-```text
-physical space:
-    the compact log-prime normal signal Q_x;
-
-carry space:
-    the lower-half weighted split defect on row 16M-1.
-```
-
-No unidentified operator, compactness limit, or generic norm comparison remains
-on one annular source fiber.
-
-The unweighted normalized carry row is also quantitatively comparable. If
-
-\[
- \|u\|_{N,\mathrm{low}}^2
- =\frac1{N+1}\sum_{j=1}^{8M-1}|u(j)|^2,
-\]
-
-then
+The unweighted normalized lower-half row obeys
 
 \[
  \boxed{
@@ -274,61 +288,47 @@ then
  \le
  8M\|Q_x\|_2^2.
  }
- \tag{L-26802.17}
+ \tag{L-26802.20}
 \]
 
-For proof-facing work, the weighted identity (L-26802.16) is preferable because
-it has no scale loss.
+The weighted identity (L-26802.19) is the proof-facing form because it has no
+scale loss.
 
 ## 6. Four-color annular decomposition
 
-The output of an annulus \([M,2M)\) lies in \([M,8M)\). Annuli whose base
-scales differ by a factor \(16\) therefore have disjoint physical support.
+The output of \([M,2M)\) lies in \([M,8M)\). Annuli whose base scales differ
+by a factor \(16\) have disjoint physical support. Thus four color classes
+suffice for the unfiltered window.
 
-Consequently, the dyadic annuli split into four color classes
-
-\[
- M=2^{4r+c},
- \qquad c\in\{0,1,2,3\},
-\]
-
-such that the physical signals in each fixed color are orthogonal. The full
-physical energy is bounded by four times the sum of the four color energies.
-
-Thus a block recurrence may be proved color by color without discarding any
-source coefficient or reflected cross term within an annulus.
+The degree-four critical filters of `L-26804` enlarge this to eight colors.
 
 ## 7. What this closes
 
-The former F5PBT/SIFD formulation asked for an unspecified finite operator
-between the physical normal block and the carry transition Gram.
-
-On the compact source window \(h_\omega\), equations (L-26802.9) and
-(L-26802.16) construct that operator explicitly:
+The exact annular geometry and the physical-to-carry map for the RH-sensitive
+feature \(W_n\) are closed:
 
 \[
  \boxed{
- \text{annular physical normal Gram}
+ \text{annular RH-sensitive physical Gram}
  =
- \text{weighted lower-half carry split Gram}.
+ \text{weighted carry Gram of }W_n.
  }
 \]
 
-The physical-to-carry source-map problem is therefore closed on each complete
-annular fiber.
+No unidentified operator remains.
 
 ## 8. What remains open
 
 This lemma does not prove:
 
-1. that the reflected Selberg source energy is bounded by the annular
-   generalized-prime Gram;
-2. that all proper-divisor and digital boundary terms carry total charge below
-   the strict reserve;
-3. a lower-scale recurrence for the inverse-zeta source;
-4. Bottom-Charge Positivity;
-5. RH.
+1. a strict reserve for the RH-sensitive feature \(W_n\);
+2. transfer of PR #269's reserve from \(P_n\) through
+   \(a_\omega*W=P\);
+3. that all proper-divisor and digital boundary charges lie below the current
+   reserve;
+4. a lower-scale recurrence;
+5. Bottom-Charge Positivity;
+6. RH.
 
-Those obligations are isolated in `T-26802`. The critical square-root
-normalization is fully included in (L-26802.4)--(L-26802.7); replacing it by an
-unnormalized step norm is an automatic rejection.
+The source distinction in Section 4 is mandatory. Silently replacing \(W\) by
+\(P\) is an automatic rejection.
