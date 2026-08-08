@@ -31,15 +31,24 @@ Let
 p(z)=(1-z)(1-2z)(1-\sqrt2z)^2
 \]
 
-and define the parity analysis channels
+and
 
 \[
-B_+(s)=\frac{p(2^{-s})}{\zeta_{\rm odd}(s)^{-1}},
-\qquad
-B_-(s)=\frac{p(-2^{-s})}{\zeta_{\rm odd}(s)^{-1}},
+\mathcal O(s)=\prod_{p\ {m odd}}(1-p^{-s}).
 \]
 
-with the coefficient interpretation fixed by `L-26205`. Equivalently, both channels retain every odd-prime Möbius coefficient and differ only by `(-1)^{v_2}`.
+Define the parity analysis channels
+
+\[
+\boxed{
+B_+(s)=p(2^{-s})\mathcal O(s),
+\qquad
+B_-(s)=p(-2^{-s})\mathcal O(s).
+}
+\tag{T-26203.1}
+\]
+
+Both channels retain every odd-prime Möbius coefficient and differ only by the completely multiplicative twist `(-1)^{v_2}`.
 
 The exact frame theorem is
 
@@ -48,7 +57,7 @@ The exact frame theorem is
 |p(z)|^2+|p(-z)|^2\ge\frac{45}{4}
 \qquad\left(\frac12\le|z|\le\frac1{\sqrt2}\right).
 }
-\tag{T-26203.1}
+\tag{T-26203.2}
 \]
 
 The exact positive Bézout reconstruction is
@@ -57,7 +66,7 @@ The exact positive Bézout reconstruction is
 \boxed{
 U(z)p(z)+U(-z)p(-z)=1,
 }
-\tag{T-26203.2}
+\tag{T-26203.3}
 \]
 
 where `U` has four strictly positive real coefficients. Thus the inverse-zeta source is recovered by a finite dyadic synthesis; no infinite inverse and no compact-substrip loss is used.
@@ -65,9 +74,11 @@ where `U` has four strictly positive real coefficients. Thus the inverse-zeta so
 The fixed opposite-parity source
 
 \[
+\boxed{
 \Omega_2(s)
 =\frac{(1-2^{-s})(1-2^{-s-1})}{\zeta(s)}
-\tag{T-26203.3}
+}
+\tag{T-26203.4}
 \]
 
 is a degree-six finite synthesis of the parity pair by `L-26207`.
@@ -81,14 +92,14 @@ For a declared compact real window `H`, PR #241 gives the physical block
 =\frac1{(2\pi)^2}
 \iint F(t)\overline{F(s)}
 \Phi_J(t-s)\,dt\,ds,
-\tag{T-26203.4}
+\tag{T-26203.5}
 \]
 
 with two independent frequencies. Expanding it gives the complete factor-ratio normal Gram, including every translate cross term.
 
 A one-frequency vertical integral, a scalar analytic square, or a rowwise absolute-value estimate is not a dependency of this proposal.
 
-## 3. Positive bulk already closed
+## 3. Positive bulk already isolated
 
 The source is assembled in the following order.
 
@@ -106,14 +117,14 @@ For the synthesized source `omega_2`, PR #269 proves that every negative logarit
 
 \[
 \boxed{2m\le n<5m.}
-\tag{T-26203.5}
+\tag{T-26203.6}
 \]
 
 The inner band and the entire quotient tail `n>=5m` are nonnegative in the source-specific carry projection.
 
 ### 3.4 Uniform transition reserve
 
-On every sufficiently large transition row, the actual generalized-prime carry feature has a strict Schur reserve. A conservative reviewed target is
+On every sufficiently large transition row, the actual generalized-prime carry feature has a strict Schur reserve. A conservative constant is
 
 \[
 \boxed{
@@ -121,7 +132,7 @@ On every sufficiently large transition row, the actual generalized-prime carry f
 -\frac{|\langle Z,F\rangle|^2}{\langle Z,Z\rangle}
 \ge\frac1{60{,}000{,}000}\langle F,F\rangle.
 }
-\tag{T-26203.6]
+\tag{T-26203.7}
 \]
 
 Finite rows below the declared threshold belong to the production boundary.
@@ -140,7 +151,7 @@ It exports a linear source map
 \longrightarrow
 \mathcal H_m^{\rm carry}
 \oplus\mathcal H_m^{\rm bd}
-\tag{T-26203.7}
+\tag{T-26203.8}
 \]
 
 which:
@@ -154,11 +165,11 @@ which:
 
 ### 4.2 Physical-to-feature congruence
 
-The complete physical transition form has an exact decomposition
+The complete physical source ledger has an exact decomposition
 
 \[
 \boxed{
-\mathcal Q_m^{\rm phys}
+\mathcal L_m^{\rm phys}
 =
 \mathcal P_m
 +
@@ -169,64 +180,71 @@ The complete physical transition form has an exact decomposition
 \end{pmatrix}
 \mathcal T_m,
 }
-\tag{T-26203.8}
+\tag{T-26203.9}
 \]
 
 where `P_m>=0`, `G_m^tr` is the complete generalized-prime factor-five carry Gram, and `R_m^bd` is the complete boundary/lower-block ledger. No unidentified remainder is permitted.
 
-### 4.3 Strict source-image reserve
+### 4.3 Strict source-image recurrence
 
-After the transition source square is completed and the exact boundary routes are inserted, the production object proves
+After completing the transition source square and inserting every exact boundary route, the same ledger proves
 
 \[
 \boxed{
-\mathcal Q_m^{\rm phys}
-\succeq
-\kappa_0 m^2\mathcal E_m
--
-\sum_{r=1}^{R}\theta_r(m-r)^2\mathcal E_{m-r}
--C(1+m)^A I,
+\kappa_0m^2E_m+Q_m
+\le
+C(1+m)^A
++
+\sum_{r=1}^{R}\theta_r(m-r)^2E_{m-r},
 }
-\tag{T-26203.9]
+\tag{T-26203.10}
 \]
 
-with constants independent of `m`,
+where
 
 \[
+Q_m\ge0,
+\qquad
 \kappa_0>0,
 \qquad
 \theta_r\ge0,
 \qquad
 \boxed{\sum_{r=1}^{R}\theta_r<\kappa_0.}
-\tag{T-26203.10]
+\tag{T-26203.11}
 \]
 
 Here `E_m` is the block energy of the synthesized `omega_2` source or an explicitly equivalent paired energy. The exact equivalence map must be included in the certificate.
 
-This is `SIFD`.
+Equations (T-26203.8)--(T-26203.11), with one complete source manifest and one declared metric, constitute `SIFD`.
 
 ## 5. SIFD implies the shell-energy theorem
 
-Dropping the nonnegative physical form from the left of (T-26203.9) and taking a running maximum gives
+Put
 
 \[
-m^2E_m
+F_m=m^2E_m.
+\]
+
+Drop `Q_m`, divide (T-26203.10) by `kappa_0`, and take a running maximum. With
+
+\[
+\vartheta=\frac{\sum_r\theta_r}{\kappa_0}<1,
+\]
+
+one obtains
+
+\[
+F_m
 \le C_1(1+m)^A
-+\frac{\sum_r\theta_r}{\kappa_0}
-\max_{1\le r\le R}(m-r)^2E_{m-r}.
++\vartheta\max_{1\le r\le R}F_{m-r}.
 \]
 
-Because the displayed ratio is strictly less than one, induction yields
+Elementary induction gives
 
 \[
-E_m=O(m^{A-2}).
-\tag{T-26203.11}
-\]
-
-In particular,
-
-\[
-E_m=e^{o(m)}.
+F_m=O((1+m)^A),
+\qquad
+E_m=O((1+m)^{A-2})=e^{o(m)}.
 \tag{T-26203.12}
 \]
 
@@ -238,14 +256,14 @@ By `L-26209`, shell block energy gives a subpower Riesz estimate and controls th
 
 \[
 \boxed{\mathrm{SIFD}\Longrightarrow\mathrm{RH}.}
-\tag{T-26203.13]
+\tag{T-26203.13}
 \]
 
 Functional-equation symmetry supplies the opposite half of the critical line.
 
 ## 7. Why this is the canonical consolidation
 
-The following former hinges are now consumers or diagnostics, not separate open theorems:
+The following former hinges are now consumers or diagnostics, not separate assumptions of this proof:
 
 ```text
 Greedy Slack / DCRS;
@@ -284,7 +302,7 @@ complete-fiber half-pole nullity                 PROPOSED COMPLETE
 factor-five negative-row localization            PROPOSED COMPLETE
 carry-feature strict reserve                     PROPOSED COMPLETE
 shell/Riesz/collar/bottom-charge triangle        PROPOSED COMPLETE
-SIFD source-image congruence and charge bound    OPEN / RH-BEARING
+SIFD congruence and strict recurrence             OPEN / RH-BEARING
 SIFD -> shell energy -> RH                       COMPLETE CONDITIONAL CHAIN
 Riemann Hypothesis                               UNPROVED
 ```
