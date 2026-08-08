@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "average_zero_rows": 155,
+    "continuum_discrete_boundary_cases": 95,
+    "discrete_carry_source_cases": 95,
+    "factor18_vanishing_cases": 221,
+    "floor_profile_cases": 161,
+    "generalized_lambda_cases": 160,
+    "inverse_convolution_cases": 160,
+    "scaled_wavelet_cases": 1690,
+    "top_annulus_formal_cases": 94
+  },
+  "classification": "EXACT_RATIONAL_FORMAL_LOG_ALGEBRA",
+  "does_not_prove": [
+    "BT-PAE",
+    "prime-annulus subexponential energy",
+    "Riemann Hypothesis"
+  ],
+  "schema": "X-28005-binary-ternary-prime-annulus-v1",
+  "sha256_without_digest": "5a2dd4bc22d4aa899f88fb59a1426f1cdfdf957c1bc233ed507530e8edf87bbd"
+}
