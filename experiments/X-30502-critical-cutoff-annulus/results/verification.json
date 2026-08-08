@@ -13,10 +13,10 @@
   ],
   "analytic_completion": [
     "uniform shifted-tail error <= 6/q",
-    "unique divisor-source coefficient sigma(q)=Q_N(q) when 2q>M",
-    "atomic norm >= cN on q in [2N/5,4N/9]"
+    "the unqualified analytic-extension mutation has linear divisor-source norm",
+    "production stopped-power layers require the activation threshold Y>=2q-1"
   ],
-  "classification": "DIRECTED_CRITICAL_CUTOFF_ANNULUS_MARGIN_VERIFIED",
+  "classification": "DIRECTED_UNQUALIFIED_ANALYTIC_SPLIT_MUTATION_MARGIN_VERIFIED",
   "eta_interval_decimal": [
     "0.604898643417552208",
     "0.604898643883213497"
@@ -27,8 +27,8 @@
   ],
   "first_index_geometry_cases": 14703,
   "hasse_order": 30,
-  "proof_boundary": "directed constant and integer geometry only; the uniform-limit argument is in L-30503; cycle-optimized debt and RH are not proved",
+  "proof_boundary": "directed eta constant and omitted-index geometry for the unqualified analytic-split mutation only; L-30501 is the production boundary refutation; Cycle Debt and RH are unproved",
   "proved_margin": "H(5/2)>1/1000",
-  "schema": "X-30502-critical-cutoff-annulus-v1",
-  "sha256_without_digest": "19c01a240a263affe4d1c001eebae64f957b0f73f77af729447398f9a64ce1f6"
+  "schema": "X-30502-activation-mutation-v2",
+  "sha256_without_digest": "2b42cf16d26b23c3c4d01070c3390f75c1480b8e03b17f3bd70d32b0915b2012"
 }
