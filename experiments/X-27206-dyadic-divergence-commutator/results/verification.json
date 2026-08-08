@@ -1,0 +1,32 @@
+{
+  "classification": "EXACT_DYADIC_DIVERGENCE_COMMUTATOR_INTERFACES_VERIFIED",
+  "counts": {
+    "balanced_commutator_edges": 1298,
+    "commutator_recursions": 128,
+    "divergence_cases": 189,
+    "doubled_carry_cells": 43184,
+    "endpoint_increment_cases": 126,
+    "flow_cases": 189,
+    "mutations": {
+      "omit_bottom_charge": true,
+      "omit_odd_commutator": true,
+      "reverse_commutator_sign": true,
+      "wrong_even_scaling": true
+    }
+  },
+  "proof_object_sha256": "0d6bd92b43fcaf0a22eadbee0e013335137691ffa4779990a3417409db54d5c0",
+  "scope": {
+    "certifies": [
+      "target-divergence half-scale identity",
+      "central-tree adjacent-commutator recursion",
+      "exact signed flow and carry-column replay",
+      "endpoint-increment exact realization"
+    ],
+    "does_not_certify": [
+      "Dyadic Commutator Debt",
+      "Cycle Debt",
+      "a cofinal prime-ramp estimate",
+      "the Riemann Hypothesis"
+    ]
+  }
+}
