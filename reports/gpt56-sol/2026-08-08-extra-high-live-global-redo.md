@@ -5,11 +5,11 @@ Agent: `gpt56-sol`
 
 ## Purpose
 
-This pass deliberately redoes the two preceding research passes from the live repository rather than inheriting their narrative. Several claims which looked close to closure have moved materially since those passes.
-
-The pass does **not** claim RH is proved.
+This pass deliberately redoes the two preceding research passes from the live repository rather than inheriting their narrative. It then continues the requested full-problem attack. The result is a corrected global architecture plus new proved algebra; **RH is not claimed proved**.
 
 ## 1. Corrections to the previous two passes
+
+The earlier fast narrative substantially overstated how close several mechanisms were.
 
 ### 1.1 Rank-one parity contraction is false
 
@@ -26,19 +26,66 @@ Unequal channel multipliers force an indefinite direction. The ratio-three trans
 
 The raw opposite-parity annular signal is piecewise exponential with jump atoms and is not automatically in the absolutely-continuous Sobolev domain used by the digital-tail theorem. PR #263 now records that domain mismatch explicitly.
 
-### 1.3 Restricted Mersenne saturation is not a live completion
+### 1.3 Restricted Mersenne saturation is false at the claimed cofinal scope
 
-PR #314 gives a complete analytic Farkas obstruction to eventual restricted Mersenne saturation. The earlier Mersenne-collar proposal is therefore not a viable unconditional route.
+PR #314 supplies a hypothesis-matching Farkas obstruction to eventual Restricted Mersenne Saturation. The earlier Mersenne-collar route therefore cannot be promoted to a proof.
 
 ### 1.4 Terminal boundary atomization is false
 
-PRs #311/#313 and the later synthesis prove that the ordinary divisor-source atomic norm of the stopped critical boundary is linear in the endpoint. Any proof which source-inverts that boundary before recombination manufactures a macroscopic obstruction.
+PRs #311/#313/#317 show that ordinary divisor-source atomization of the stopped critical boundary has linear or polynomial cost on macroscopic quotient cells. Any proof which source-inverts that boundary before recombination manufactures a large obstruction.
 
 The same boundary has only logarithmic native paired/central-flow variation on PR #316. The order of operations is load bearing.
 
-## 2. Current durable arithmetic spine
+### 1.5 Strict contraction of the complete eta source is impossible
 
-The most robust finite coordinate is Cycle Debt on PR #272. For the exact target divergence `r_X`,
+PR #323 proves that the normalized eta transfer has multiplier
+
+\[
+1-\eta(1/2+i\xi),
+\]
+
+and at every critical zeta zero this equals **one** exactly. A source-blind translation-invariant norm containing that oscillatory mode cannot strictly contract the complete eta state.
+
+This is not merely a no-go. It fixes the correct scale threshold.
+
+## 2. The sharp spectral target is coefficient-one scale descent
+
+PR #333 proves the correct normalization. If `rho=beta+i gamma` is a zeta zero, the principal Mellin mode is neutral under eta propagation, while endpoint doubling changes its amplitude by
+
+\[
+2^{\rho-1/2},
+\qquad
+|2^{\rho-1/2}|=2^{\beta-1/2}.
+\]
+
+Therefore
+
+```text
+critical-line zero       scale factor 1;
+off-line zero            scale factor >1.
+```
+
+A recurrence
+
+\[
+\boxed{
+E(J)\le C(1+J)^A+E(J-\delta)
+}
+\]
+
+with one fixed `delta>0` already gives polynomial energy after `O(J)` iterations and hence the subexponential pole bound required for RH. Strict coefficient `<1` is unnecessary and, on the principal mode, impossible.
+
+The full proof architecture must therefore be triangular:
+
+```text
+principal dyadic RH mode       carry losslessly with coefficient one;
+transverse analytic channels   contract strictly;
+cutoff/cap channels            pay polylogarithmic source-complete debt;
+```
+
+## 3. Durable finite coordinate: Cycle Debt
+
+The most robust carry coordinate remains PR #272. For the exact target divergence `r_X`,
 
 \[
 \mathfrak N_\eta(X)
@@ -51,7 +98,7 @@ and finite LP duality gives
 \[
 \mathfrak N_\eta(X)
 =
-\max_F\left[-\sum_m r_X(m)F(m)\right],
+\max_F\left[-\sum_mr_X(m)F(m)\right],
 \]
 
 subject to
@@ -60,47 +107,9 @@ subject to
 0\le F(n)-F(j)-F(n-j)\le\omega_{n,j}.
 \]
 
-A subpower bound for this exact optimized debt gives the sharp prime ramp and RH. No generic rank, face-count, or absolute-source theorem is needed.
+A subpower bound gives the sharp prime ramp and RH. Generic bounded-rank, monotonicity, or source-free cone theorems have all failed against explicit separators/firewalls; the proof must preserve the actual principal source.
 
-## 3. Current constructive producer
-
-PR #317 supplies the cleanest exact finite producer after the cutoff corrections.
-
-For a finite sequence `r`, split the actual shifted residual as
-
-```text
-actual central residual
- = unshifted eta residual
-   + one-step lattice shift.
-```
-
-The lattice shift is terminated exactly by adjacent-tree commutators. The only propagated state is
-
-\[
-r_{j+1}(q)
-=
-\sum_{k\ge1}
-[r_j(2kq)-r_j((2k+1)q)].
-\]
-
-Its negative capacity is controlled by the explicit critical variation
-
-\[
-\mathcal V_N(r)
-=
-\operatorname{TV}(\sqrt n\,r(n))
-+2\sum_n\frac{|\sqrt n\,r(n)|}{n}.
-\]
-
-Thus the remaining arithmetic statement can be frozen as the explicit finite theorem
-
-\[
-\sum_j\mathcal V_{N_j}(r_j)=X^{o(1)}.
-\]
-
-This is `CEV`; it remains open and RH-bearing.
-
-## 4. Strongest boundary result
+## 4. Strongest existing boundary result
 
 PR #316 proves that the complete first activated boundary has
 
@@ -108,22 +117,20 @@ PR #316 proves that the complete first activated boundary has
 \sum_n\sqrt n\,|b_X(n)-b_X(n+1)|=O(\log X)
 \]
 
-and supplies the actual signed central-flow certificate with `O(log X)` negative capacity debt.
+and supplies the actual signed central-flow certificate with `O(log X)` negative capacity debt and a strict half-scale residual.
 
-It further proves, for every analytic depth `a` and every power exponent `s>=1/2`, that the fully telescoped fresh boundary profile
+It further proves, for every analytic depth `a` and every power exponent `s>=1/2`, that the fully telescoped **fresh** endpoint profile
 
 \[
 h_{a,X,s}(x)
 =x^{-s}\log\min\{2^a(x-1)+1,X\}
 \]
 
-has polylogarithmic native first-difference debt uniformly in the depth.
+has polylogarithmic native first-difference debt uniformly in depth.
 
-The only open part of that architecture is propagation/recombination of an already-injected boundary under later finite stages.
+What remains is propagation/recombination of an already-injected cap state under later stages.
 
-## 5. New theorem on this branch
-
-`L-32301` strengthens the analytic-bulk theorem of PR #286.
+## 5. New theorem `L-32301`: strong transverse contraction
 
 Define
 
@@ -133,30 +140,27 @@ Define
 \sum_{h\ge0}|a_h|(1+h)^4 64^{-h}.
 \]
 
-Then the exact shifted central operator obeys
+The exact shifted central operator obeys
 
 \[
 \boxed{
 \|\mathscr C f\|_{\sigma,\star}
 \le\frac67\|f\|_{\sigma,\star},
-\qquad \sigma\ge1/2.
+\qquad\sigma\ge1/2.
 }
 \]
 
-The proof is one line after PR #286: moving an exponent upward by `ell` changes the quartic weight by at most
+The proof uses the previously proved radius-`1/4` row bound and
 
 \[
-(1+\ell)^4 64^{-\ell}\le4^{-\ell},
+(1+\ell)^4 64^{-\ell}\le4^{-\ell}.
 \]
-
-so the weighted row is dominated by the already-certified radius-`1/4` row.
 
 For the all-depth endpoint profile, below its cap
 
 \[
 h_{a,X,s}(x)
-=x^{-s}
-\left[
+=x^{-s}\left[
 \log2^a+\log x
 -
 \sum_{\ell\ge1}
@@ -164,82 +168,166 @@ h_{a,X,s}(x)
 \right],
 \]
 
-and the complete faster-power tail has weighted norm below `log(4/3)<1/3`, uniformly in depth. Above the cap the profile is simply `log X x^{-s}`. The two branches are continuous and have exactly one derivative jump.
+and the complete faster-power tail has weighted norm below
 
-Therefore the all-generation obstruction cannot lie in:
+\[
+\log(4/3)<1/3
+\]
+
+uniformly in depth. Above the cap the profile is simply `log X x^{-s}`. The two branches are continuous and have exactly one derivative jump.
+
+Thus the all-generation obstruction cannot lie in analytic power tails, faster-power proliferation, polynomial exponent losses, or depth-dependent affine-log coefficients. All of those channels are strictly transverse and contractive.
+
+## 6. New theorem `L-32302`: the RH-sensitive current is already a dyadic dipole
+
+For an inverse pair `omega*a=epsilon`, with
+
+\[
+\Lambda=\omega*(a\log),
+\qquad
+W=\omega*\Lambda,
+\]
+
+one has exactly
+
+\[
+W(s)=\Omega'(s),
+\qquad
+\boxed{W(n)=-\omega(n)\log n}.
+\]
+
+For the opposite-parity source
+
+\[
+\omega_2
+=\mu-\frac32\delta_2*\mu+\frac12\delta_4*\mu,
+\]
+
+the local polynomial on every odd squarefree core is
+
+\[
+p(z)=(1-z)^2(1-z/2).
+\]
+
+The complete logarithmic source fiber is
+
+\[
+-\mu(u)[\log u\,p(z)+(\log2)zp'(z)].
+\]
+
+Because `p(1)=p'(1)=0`, every complete fiber has zero total mass. More strongly,
+
+\[
+\log u\,p(z)+(\log2)zp'(z)
+=
+\frac{1-z}{2}
+\left[(3\log2+\log u)z^2-(5\log2+3\log u)z+2\log u\right].
+\]
+
+Hence
+
+\[
+\boxed{W=(\varepsilon-\delta_2)*V}
+\]
+
+fiberwise for an explicit three-tap logarithmic source `V`. The normalized inverse of `(epsilon-delta_2)` has delays `2^{-j/2}` and is `ell^1`, so this dipole extraction does not change the exponential block-energy exponent.
+
+This is an important cross-route lesson: **move the complete RH-sensitive dipole before invoking any positive inverse or proper-divisor expansion**. Absolute source expansion destroys exactly this cancellation.
+
+## 7. Haar/bottom scalar and exact analytic cancellation
+
+PR #333 supplies the critical Haar source
+
+\[
+\nu_2=\mu-\sqrt2\,\delta_2*\mu,
+\]
+
+whose carry charge is the constant `sqrt(2)-1` on every interior split and negative only on endpoint neighbors. It gives the exact three-bottom-coordinate telescope
+
+\[
+\mathcal H_2(X)
+=
+\log X+
+\sum_a[-(1+\sqrt2)r_a(2)+\sqrt2 r_a(3)+\sqrt2 r_a(4)].
+\]
+
+The infinite analytic central resolvent then cancels the entire `log X` main term **exactly**:
+
+\[
+\log X+
+\sum_a\mathcal B(\mathscr C^aw_X^\infty)
+=
+\frac{\log2}{\zeta(1/2)}.
+\]
+
+Therefore all nonconstant arithmetic behavior is the finite cutoff Duhamel correction. This is an excellent one-sided consumer, but bounding that correction is still RH-bearing; the exact telescope does not itself close the proof.
+
+## 8. Leading full-problem architecture after the redo
+
+The strongest current architecture is now:
 
 ```text
-analytic power tails;
-faster-power proliferation;
-polynomial exponent losses;
-depth-dependent affine-log coefficients.
-```
-
-All of that is strictly contracted. The only surviving state is the propagated cap-interface boundary measure.
-
-## 6. Current leading routes after the redo
-
-### A. Cap-interface / Cycle-Debt renewal
-
-```text
-strict 6/7 analytic bulk
--> one cap-interface source per analytic channel
--> native paired central-flow certificate
--> propagate cap source without atomization
--> subpower Cycle Debt
--> sharp prime ramp
+exact principal dyadic source / Haar scalar
+-> extract complete dyadic dipole fibers
+-> contract every analytic/faster-power transverse channel (6/7)
+-> pay each fresh cap injection with the explicit polylog central-flow certificate
+-> propagate only the neutral cap/dipole principal state
+-> prove a coefficient-one fixed-scale recurrence
+-> polynomial Cycle Debt / shell energy / Haar scalar
+-> Mellin/Landau pole exclusion
 -> RH.
 ```
 
-This is the strongest route because every fresh injection is already polylogarithmic and the analytic interior is now uniformly contractive in a norm strong enough for the all-depth bookkeeping.
+A valid final theorem may be phrased as a Critical-Neutral Cap Recurrence:
 
-### B. Prime-annulus commutator
+\[
+D_{\rm cap}(2Y)
+\le D_{\rm cap}(Y)+C\log^A(2Y),
+\]
 
-PR #289 gives an exact fixed top-quarter statistic whose transform retains every zeta zero. Its local energy `PAE` is equivalent to RH. It is an excellent scalar firewall and possible consumer of a successful cap-renewal estimate, but no independent PAE bound is presently proved.
+or as an exactly equivalent coefficient-one recurrence for the principal dyadic physical energy. It must retain all Pascal-cycle freedom and all same-destination source recombination before a negative part or norm.
 
-### C. Five-adic renewal
+## 9. Other live routes after the redo
 
-PR #322 gives an exact five-block scaling identity and proposes a finite residue automaton. The local automaton has not been emitted, so the claimed `1/5` Cycle-Debt recurrence remains a research target rather than a proof.
+### Prime-annulus commutator
 
-### D. WSTS / elementary carry
+PR #289 gives an exact fixed top-quarter statistic retaining every zeta pole. Its local energy `PAE` is equivalent to RH. It is a clean scalar firewall, but no independent PAE bound is proved.
 
-PR #276 identifies WSTS as exactly RH-equivalent. It is a canonical scalar endpoint, not an easier final lemma.
+### Two-contact source / reflected Selberg
 
-## 7. Routes no longer treated as near-complete
+PRs #302/#330 close the source-matched current-scale interior reserve with an absolute scale-independent constant and absorb endpoint energy. The remaining theorem is a source-coupled lower-scale Schur recurrence for the principal inverse-zeta mode. This is very compatible with the coefficient-one neutral architecture above.
+
+### Square-root hinge carry route
+
+PRs #329/#332 reduce the elementary route to square-root hinge positivity. Directed positivity through large finite endpoints is evidence only; the inner hinge remains a Mertens/reciprocal-zeta theorem.
+
+### Brownian route
+
+The variance and convex-order reductions remain genuinely independent, but SAT/stop-loss saturation remains RH-equivalent and unproved.
+
+## 10. Routes no longer treated as near-complete
 
 ```text
 restricted Mersenne saturation          refuted
 terminal atomic boundary closure        refuted
 fixed-order Abel positivity             refuted
 rank-one parity contraction             refuted
+strict complete eta contraction         impossible at zeta modes
 conditional-Hankel carry closure        refuted
 monotone positive Divisibility Cover    refuted
+source-free five-adic automaton         scope-corrected / incomplete
 pure prime-tail subpower queue          refuted/proposed refuted
 ```
 
-Stronger source-specific descendants may remain open, but none of these mechanisms should be recycled as a completed proof.
+## 11. Exact current frontier
 
-## 8. Exact full-problem frontier
+A complete proof still requires a supplied theorem, not reviewer labor:
 
-The most precise live statement is now:
+> Preserve the principal dyadic cap/dipole source through each support-halving step and prove a coefficient-one delayed recurrence after every transverse analytic component and fresh cap injection has been discharged by the existing exact certificates.
 
-> Preserve the complete cap-interface source in its paired/central coordinate under every support-halving propagation step and prove that the sum of its optimized negative capacity debts is `X^{o(1)}`.
+The new work removes several previously suspected obstructions and fixes the correct spectral normalization, but this principal recurrence has not yet been proved.
 
-A proof may use:
-
-- the `6/7` quartic-weighted analytic reserve;
-- PR #316's all-depth fresh-boundary variation theorem;
-- PR #317's exact shift terminalization and eta-core producer;
-- PR #272's exact Pascal-cycle quotient and debt duality.
-
-It may not:
-
-- source-invert the boundary before recombination;
-- take rowwise absolute values on the eta/Mobius source;
-- delegate a transition identity to reviewers;
-- promote a finite ladder to the cofinal statement.
-
-## 9. Status
+## 12. Status
 
 ```text
 live graph re-audited                         YES
@@ -247,8 +335,10 @@ previous parity shortcut                      REFUTED
 previous raw-H1 shortcut                      WITHDRAWN
 Mersenne restricted saturation                REFUTED
 terminal atomic closure                       REFUTED
+strict complete eta contraction               IMPOSSIBLE / wrong target
 quartic-weighted analytic interior            PROPOSED COMPLETE
-fresh all-depth boundary injections           PROPOSED COMPLETE / imported
-propagated cap-interface renewal              OPEN / RH-BEARING
+RH-sensitive dyadic dipole factorization      PROPOSED COMPLETE
+fresh all-depth boundary injections           IMPORTED / PROPOSED COMPLETE
+coefficient-one neutral recurrence            OPEN / RH-BEARING
 unconditional proof of RH                     NO
 ```
