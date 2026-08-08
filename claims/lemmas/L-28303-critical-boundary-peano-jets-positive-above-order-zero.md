@@ -5,6 +5,7 @@ Title: Every first-omitted finite-difference jet of the critical power-log sourc
 Status: **PROPOSED COMPLETE EXACT CALCULUS LEMMA PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro-09-x`  
 Created: 2026-08-08  
+Corrected: 2026-08-08 to retain the order-dependent Peano range  
 Dependencies: PR #286 `L-28402`  
 Scope: critical-source boundary sign; no all-generation recurrence
 
@@ -42,59 +43,87 @@ where
  \tag{L-28303.3}
 \]
 
-In particular,
-
-\[
- H_m^{(1/2)}\ge2
- \qquad(m\ge1).
- \tag{L-28303.4}
-\]
-
-## 2. First-omitted range
-
-For an output coordinate of the finite central cascade one has
-
-\[
- q\le{X+1\over2}.
-\]
-
-The first omitted shifted or unshifted quotient argument differs from `X` by
-less than one complete even/odd step.  Hence every point in the associated
-Peano interval obeys the review-safe bound
-
-\[
- x\le3X.
- \tag{L-28303.5}
-\]
-
-Therefore
-
-\[
- \log(X/x)\ge-\log3>-2.
- \tag{L-28303.6}
-\]
-
-Combining (L-28303.2)--(L-28303.6),
+For `m>=1`, decreasing-integrand comparison gives the strict lower bound
 
 \[
  \boxed{
- (-1)^m f_X^{(m)}(x)>0
- \quad
- (m\ge1,\ X<x\le3X).
+ H_m^{(1/2)}
+ >\int_0^m{du\over u+1/2}
+ =\log(2m+1)
+ \ge\log(m+2).
  }
+ \tag{L-28303.4}
+\]
+
+## 2. Order-dependent first-omitted range
+
+Use the exact convention of `L-28402`: a boundary jet of order `m` is
+
+\[
+ \Delta_k^m f_X(kq+a),
+ \qquad a\in\{-1,0\},
+ \tag{L-28303.5}
+\]
+
+where the first omitted argument `x=kq+a` satisfies
+
+\[
+ X<x\le X+q,
+ \tag{L-28303.6}
+\]
+
+and the finite-difference step in the argument is `q`.  Every output coordinate
+satisfies
+
+\[
+ q\le{X+1\over2}.
  \tag{L-28303.7}
 \]
+
+Hence every point in the order-`m` Peano box obeys
+
+\[
+\begin{aligned}
+ x+t_1+\cdots+t_m
+ &\le X+(m+1)q\\
+ &\le X+{m+1\over2}(X+1)\\
+ &\le(m+2)X,
+\end{aligned}
+\tag{L-28303.8}
+\]
+
+where the last inequality uses `X>=2`.
+
+Therefore, throughout the complete box,
+
+\[
+ \log{X\over x+t_1+\cdots+t_m}
+ \ge-\log(m+2).
+ \tag{L-28303.9}
+\]
+
+Combining (L-28303.2), (L-28303.4), and (L-28303.9),
+
+\[
+ \boxed{
+ (-1)^m f_X^{(m)}(y)>0
+ }
+ \tag{L-28303.10}
+\]
+
+for every `m>=1` and every point `y` in its complete first-omitted Peano box.
+The order-dependent growth of the box is thus paid exactly by the increasing
+half-harmonic constant `H_m^(1/2)`.
 
 The zeroth profile has the opposite sign beyond the cutoff:
 
 \[
  f_X(x)<0
  \qquad(x>X).
- \tag{L-28303.8}
+ \tag{L-28303.11}
 \]
 
-Thus order zero is the unique adverse derivative channel on the complete
-first-omitted range.
+Thus order zero is the unique adverse derivative channel.
 
 ## 3. Positive Peano finite differences
 
@@ -112,49 +141,52 @@ The exact Peano formula is
  \int_{[0,h]^m}
  f^{(m)}(x+t_1+\cdots+t_m)
  \,dt_1\cdots dt_m.
- \tag{L-28303.9}
+ \tag{L-28303.12}
 \]
 
-Whenever the complete integration box lies in the first-omitted range
-`(X,3X]`, equations (L-28303.7) and (L-28303.9) give
+Equations (L-28303.10) and (L-28303.12) give
 
 \[
  \boxed{
- \Delta_h^m f_X(x)\ge0
- \qquad(m\ge1).
+ \Delta_q^m f_X(kq+a)>0
+ \qquad(m\ge1)
  }
- \tag{L-28303.10}
+ \tag{L-28303.13}
 \]
 
-Accordingly, every Euler boundary jet of orders `1,...,M-1` in `L-28402` has a
-nonnegative one-variable Peano source. No signed conversion is needed for those
-channels.
+at every first-omitted boundary jet of `L-28402`.
+
+Accordingly, every Euler boundary jet of orders `1,...,M-1` has a nonnegative
+one-variable Peano source.  No signed conversion is needed for those channels.
 
 ## 4. Zeroth collar
 
-The only adverse finite jet is the first omitted zeroth value. It is explicit:
+For `m=0`, the first omitted argument satisfies
 
 \[
- -f_X(x)=x^{-1/2}\log(x/X),
- \qquad X<x\le3X.
- \tag{L-28303.11}
+ X<x\le X+q\le2X.
+ \tag{L-28303.14}
 \]
 
-It has bounded normalized size
+The unique adverse value is therefore explicit and uniformly bounded:
 
 \[
- 0<-f_X(x)\le X^{-1/2}\log3.
- \tag{L-28303.12}
+ \boxed{
+ 0<-f_X(x)
+ =x^{-1/2}\log(x/X)
+ \le X^{-1/2}\log2.
+ }
+ \tag{L-28303.15}
 \]
 
 After the capacity normalization used in the carry cascade, the complete
 first-generation zeroth collar is at most polylogarithmic by the same divisor
-switch as `L-28402`.  Unlike the higher jets, this scalar collar must remain in
+switch as `L-28402`. Unlike the higher jets, this scalar collar must remain in
 the BJPR state and be recombined with the eta residual before a sign is taken.
 
 ## 5. Consequence for BJPR
 
-The boundary state is not an arbitrary signed jet bank.  For the exact critical
+The boundary state is not an arbitrary signed jet bank. For the exact critical
 source it has the typed form
 
 ```text
@@ -175,7 +207,7 @@ common-destination recombination.
 Closed exactly:
 
 - all ordinary derivatives of the critical power-log source;
-- strict sign on the complete first-omitted range for every order `m>=1`;
+- strict sign on the complete order-dependent first-omitted Peano box;
 - positive Peano representation of every positive-order boundary jet;
 - isolation and size of the unique adverse zeroth collar.
 
