@@ -14,44 +14,49 @@ the adjacent-tree commutator map. Its quantitative hinge is
 sum_a ||sigma_a||_at = polylog(X).
 ```
 
-The exact first aggregate boundary already satisfies
+After reconstructing the stopped-layer activation exactly, the first aggregate
+boundary is
 
 ```text
-||sigma_0||_at > X/4000.
+b_X(q)=log(X/(2q-1)) C p(q)-C_X w_X(q).
 ```
 
-The witness occupies the fixed annulus
+On
 
 ```text
-49X/100 <= q <= X/2.
+2X/5 <= q <= 9X/20
 ```
 
-On this annulus the finite central residual has only the row `2q-1`, while the
-analytic central residual retains a fixed positive eta coefficient. The
-boundary is therefore uniformly positive of size `X^-1/2`. Since these columns
-lie above half of the next endpoint, each is its own unique divisor-source
-coordinate. Summing the square-root weights gives a linear norm.
+one has
+
+```text
+b_X(q)<-1/(35 sqrt X).
+```
+
+These columns lie above half of the next endpoint, so each is its own unique
+divisor-source coordinate. Hence
+
+```text
+||sigma_0||_at > X/1500.
+```
+
+The first/all-generation polylog source norm is therefore false.
 
 ## What survives
 
-The adjacent commutator is still an exact and useful source map. Its
-`O(sqrt(m))` capacity bound is also valid. The error is applying that absolute
-map to a macroscopic boundary which must remain coupled to the positive flow
-that generated it.
+The adjacent commutator is still an exact source map, and its `O(sqrt(m))`
+capacity upper bound remains valid. The error is applying that absolute map to
+a macroscopic activated boundary.
 
-## Correct continuation
+## Exact flow origin and remaining target
 
-The next proof attempt should work in PR #272's explicit Pascal-cycle
-coordinates on the **difference of the analytic and finite positive flows**.
-It should not form the standalone boundary source norm.
+`L-30502` proves that every individual stopped boundary is the carry image of a
+difference of two nonnegative central flows. It also proves that aggregation
+must retain the output activation `Y>=2q-1`; an unqualified sum of the flow
+differences is not the aggregate boundary.
 
-No RH conclusion is claimed in this report.
+A repaired proof must emit the full activated finite/analytic flow manifest and
+optimize it in PR #272's Pascal-cycle space before negative capacity is measured.
+No smallness theorem for that optimized object is claimed here.
 
-## Exact repair interface
-
-`L-30502` reconstructs the boundary before divisor-source inversion as the
-carry image of the difference between the finite stopped central flow and the
-infinite analytic central flow. Both constituents are nonnegative. This proves
-that the appropriate remaining quantity is the cycle-optimized negative
-capacity of their difference, not the isolated source atomic norm. It does not
-assert that this optimized debt is small.
+RH remains unproved.
