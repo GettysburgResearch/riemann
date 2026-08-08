@@ -110,7 +110,64 @@ Define the physical field
 
 This is one finite prime-power sum at every endpoint and every `lambda`.
 
-## 3. Exact generalized-Chebyshev state
+## 3. Exact physical-source coefficient classification
+
+Collect the two terms in (L-32402.7) on the common centered-interval basis:
+
+\[
+ \boxed{
+ \sqrt X\,\mathfrak P_{\lambda,\theta}(\log X)
+ =\sum_{n\le X}c_\lambda(n)J_{n/X}(\theta),
+ }
+\tag{L-32402.8}
+\]
+
+where
+
+\[
+ \boxed{
+ c_\lambda(n)
+ =\Lambda_\lambda(n)
+  -\lambda\mathbf1_{2\mid n}\Lambda_\lambda(n/2).
+ }
+\tag{L-32402.9}
+\]
+
+The coefficients are completely explicit:
+
+\[
+ \boxed{
+ c_\lambda(n)=
+ \begin{cases}
+ (1+\lambda)\log2,&n=2,\\
+ (1-\lambda)\log2,&n=2^r,\ r\ge2,\\
+ \log p,&n=p^a,\ p\text{ odd},\\
+ -\lambda\log p,&n=2p^a,\ p\text{ odd},\\
+ 0,&\text{otherwise}.
+ \end{cases}}
+\tag{L-32402.10}
+\]
+
+For `r>=2`, the dyadic identity follows from
+
+\[
+ (1+\lambda^r)-\lambda(1+\lambda^{r-1})=1-\lambda.
+\]
+
+This classification singles out the two-contact endpoint `lambda=1`:
+
+- it is the **unique** parameter in the family which kills every dyadic source
+  coefficient `2^r`, `r>=2`;
+- it gives each odd prime power coefficient `+log p` and its double coefficient
+  `-log p`;
+- hence it is the unique endpoint with both complete high-dyadic cancellation
+  and opposite-sign odd/double pairing.
+
+At `lambda=-1`, by contrast, the odd prime powers and their doubles reinforce
+with the same sign, while the dyadic tower from `4` upward survives with weight
+`2 log 2`.
+
+## 4. Exact generalized-Chebyshev state
 
 Put
 
@@ -123,14 +180,14 @@ If `R=floor(log_2 x)`, then
 \[
  \Psi_\lambda(x)
  =\psi(x)+(\log2)\sum_{r=1}^{R}\lambda^r.
-\tag{L-32402.8}
+\tag{L-32402.11}
 \]
 
 The source-convolved state is
 
 \[
  C_\lambda(x)=\Psi_\lambda(x)-\lambda\Psi_\lambda(x/2).
-\tag{L-32402.9}
+\tag{L-32402.12}
 \]
 
 For every `x>=2`, the finite geometric sums telescope:
@@ -140,7 +197,7 @@ For every `x>=2`, the finite geometric sums telescope:
  C_\lambda(x)
  =\psi(x)-\lambda\psi(x/2)+\lambda\log2.
  }
-\tag{L-32402.10}
+\tag{L-32402.13}
 \]
 
 Consequently
@@ -152,10 +209,10 @@ Consequently
   -C_\lambda(\theta X)
   -C_\lambda((1-\theta)X),
  }
-\tag{L-32402.11}
+\tag{L-32402.14}
 \]
 
-with the obvious exact small-argument convention inherited from (L-32402.9).
+with the obvious exact small-argument convention inherited from (L-32402.12).
 The linear density
 
 \[
@@ -165,7 +222,7 @@ The linear density
 has zero Jensen defect, so every field in the homotopy is centered before any
 asymptotic estimate.
 
-## 4. Transform and pole residue
+## 5. Transform and pole residue
 
 Let
 
@@ -182,7 +239,7 @@ inverse source and the generalized-prime series gives
  =(1-\lambda2^{-s})N_\theta(s)L_\lambda(s),
  \qquad s=z+\frac12,
  }
-\tag{L-32402.12}
+\tag{L-32402.15}
 \]
 
 where
@@ -191,11 +248,11 @@ where
  L_\lambda=-{A_\lambda'\over A_\lambda}
  =-{\zeta'\over\zeta}
   +(\log2){\lambda2^{-s}\over1-\lambda2^{-s}}.
-\tag{L-32402.13}
+\tag{L-32402.16}
 \]
 
 If `rho` is a nontrivial zeta zero of multiplicity `m_rho`, the local Euler term
-in (L-32402.13) is analytic and
+in (L-32402.16) is analytic and
 
 \[
  \boxed{
@@ -203,7 +260,7 @@ in (L-32402.13) is analytic and
  [(1-\lambda2^{-s})N_\theta(s)L_\lambda(s)]
  =-m_\rho(1-\lambda2^{-\rho})N_\theta(\rho).
  }
-\tag{L-32402.14}
+\tag{L-32402.17}
 \]
 
 For `Re rho>1/2` and every `|lambda|<=1`,
@@ -215,13 +272,13 @@ For `Re rho>1/2` and every `|lambda|<=1`,
  \ge1-2^{-\operatorname{Re}\rho}
  >1-2^{-1/2}.
  }
-\tag{L-32402.15}
+\tag{L-32402.18}
 \]
 
 Thus the entire signed local-Euler segment has one uniform pole moat. No value
 of `lambda in [-1,1]` can cancel an off-line zeta zero.
 
-## 5. Vector residue in the carry-position variable
+## 6. Vector residue in the carry-position variable
 
 Fix any balanced interval
 
@@ -242,14 +299,14 @@ with `rho!=1`. Hence
 
 \[
  \int_{I_\eta}|N_\theta(\rho)|^2d\theta>0.
-\tag{L-32402.16}
+\tag{L-32402.19}
 \]
 
-Together with (L-32402.15), the `L^2(I_eta)` residue norm of every hypothetical
+Together with (L-32402.18), the `L^2(I_eta)` residue norm of every hypothetical
 off-line zero is bounded away from zero uniformly in `lambda` once the zero is
 fixed.
 
-## 6. Fixed-lambda RH criterion
+## 7. Fixed-lambda RH criterion
 
 For every fixed `lambda in [-1,1]`, define
 
@@ -257,7 +314,7 @@ For every fixed `lambda in [-1,1]`, define
  \mathscr E_{\lambda,\eta}(J)
  =\int_J^{J+1}\int_{I_\eta}
  |\mathfrak P_{\lambda,\theta}(t)|^2d\theta dt.
-\tag{L-32402.17}
+\tag{L-32402.20}
 \]
 
 The standard vector-valued Laplace argument used on PR #302 gives
@@ -268,16 +325,16 @@ The standard vector-valued Laplace argument used on PR #302 gives
  \iff
  \mathscr E_{\lambda,\eta}(J)=e^{o(J)}
  }
-\tag{L-32402.18}
+\tag{L-32402.21}
 \]
 
-for each fixed `lambda`. The reverse direction uses (L-32402.14)--
-(L-32402.16); the forward direction is the classical square-root Chebyshev
+for each fixed `lambda`. The reverse direction uses (L-32402.17)--
+(L-32402.19); the forward direction is the classical square-root Chebyshev
 error under RH.
 
-Equation (L-32402.18) is a criterion, not an unconditional energy bound.
+Equation (L-32402.21) is a criterion, not an unconditional energy bound.
 
-## 7. Strategic consequence
+## 8. Strategic consequence
 
 The ordinary Chebyshev Jensen field (`lambda=0`), the exact two-contact field
 (`lambda=1`), and a parity-alternating valuation field (`lambda=-1`) lie in one
@@ -286,14 +343,21 @@ optimize this one local dyadic Euler coordinate for finite geometry without
 introducing the nonprincipal character channels which arise from odd-prime
 residue automata.
 
+The coefficient classification (L-32402.10) also explains why `lambda=1` is the
+preferred source for the current project: it is the only point where the high
+dyadic tower disappears and every odd prime-power source is paired with an
+opposite-sign double.
+
 Conversely, merely finding a convenient `lambda` does not prove RH: every fixed
 member retains the full off-line pole obstruction.
 
-## 8. Proof boundary
+## 9. Proof boundary
 
 Closed exactly here, subject to review:
 
 - the nonnegative local-Euler Dirichlet family on `[-1,1]`;
+- the physical coefficient classification;
+- uniqueness of the high-dyadic-canceling opposite-sign endpoint `lambda=1`;
 - the finite carry atom for every parameter;
 - the closed generalized-Chebyshev formula;
 - uniform preservation of every off-line zeta pole;
