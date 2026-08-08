@@ -1,13 +1,14 @@
 # L-28012 — Balanced physical field to Selberg-reserve transference
 
 Claim ID: `L-28012`  
-Title: On every fixed balanced carry-position cone, the RH-sensitive atomized two-contact pole field is pointwise bounded by a polylogarithmic multiple of the explicit generalized-prime Selberg reserve  
+Title: On every fixed balanced interior carry-position cone, the RH-sensitive atomized two-contact pole field is pointwise bounded by a polylogarithmic multiple of the explicit generalized-prime Selberg reserve  
 Status: **PROPOSED COMPLETE SOURCE-BOUND TRANSFERENCE THEOREM — INDEPENDENT REVIEW REQUESTED**  
 Authoring agent: `gpt56-pro-09-v`  
 Created: 2026-08-08  
+Corrected: 2026-08-08 to retain the zero-reserve endpoint-neighbor boundary explicitly  
 Parent: PR #302  
 Dependencies: `L-28009`--`L-28011`  
-Scope: closes the physical-to-transverse carry estimate on balanced positions; no lower-scale recurrence or RH claim
+Scope: closes the physical-to-transverse carry estimate on balanced interior positions; no lower-scale recurrence or RH claim
 
 ## 1. The two fields in the same Dirichlet system
 
@@ -83,7 +84,7 @@ satisfies
  0\le\Lambda_2(m)\le2\log(2x).
 \]
 
-There are at most `floor(x)` such integers.  Hence, for every `x>=2`,
+There are at most `floor(x)` such integers. Hence, for every `x>=2`,
 
 \[
  \boxed{
@@ -107,7 +108,7 @@ and, because `j,k<=n`,
 
 No prime-number theorem or zero-free region is used.
 
-## 4. Balanced lower bound and reserve
+## 4. Balanced interior lower bound and reserve
 
 Fix
 
@@ -118,7 +119,9 @@ Fix
 and suppose
 
 \[
- \eta n\le j\le(1-\eta)n.
+ \eta n\le j\le(1-\eta)n,
+ \qquad
+ 2\le j\le n-2.
 \tag{L-28012.7}
 
 Kummer positivity gives
@@ -164,18 +167,20 @@ Combining (L-28012.6), (L-28012.8), and (L-28012.11) yields
  \end{aligned}
 \tag{L-28012.12}
 
-This is the desired source-bound transference.
+For the finitely many **interior** rows `n<N_eta`, `L-28009` gives strict
+reserve. Taking the finite maximum of `|Q_2|^2/R_2` over those rows extends
+(L-28012.12), after increasing the explicit constant, to every row satisfying
+(L-28012.7).
 
-The finitely many rows `n<N_eta` form an explicit boundary table.  Since the
-balanced set contains finitely many `(n,j)` there, one may take the maximum of
-`|Q_2|^2/R_2` over rows with `R_2>0`; rows with zero reserve are endpoint
-neighbors and do not occur once `eta n>1`.  Thus (after increasing the displayed
-constant) the same inequality holds for every balanced row.
+The qualification `2<=j<=n-2` is load bearing. For odd `n`, the endpoint-neighbor
+rows `j=1,n-1` have `R_2=0` but a nonzero pole field. They belong to the exact
+two-contact boundary and may not be absorbed into the interior constant.
 
-## 5. Carry-position normal Gram
+## 5. Carry-position interior normal Gram
 
-Let `dnu(n,j)>=0` be any finite nonnegative measure supported on balanced
-positions.  Multiplying (L-28012.12) and summing gives
+Let `dnu(n,j)>=0` be any finite nonnegative measure supported on positions
+satisfying (L-28012.7). Multiplying the corrected pointwise bound and summing
+gives
 
 \[
  \boxed{
@@ -183,37 +188,44 @@ positions.  Multiplying (L-28012.12) and summing gives
  \le C_\eta\log^2(2N)
  \sum_{n,j}d\nu(n,j)R_2(n,j),
  }
-\tag{L-28012.13]
+\tag{L-28012.13}
 
 where `N` is the largest parent in the support and `C_eta` is explicit.
 
-In particular, under the exact piecewise-rational carry-position integration of
-`L-28011`, the independent-frequency physical normal energy on one finite block
-is controlled by a polylogarithmic multiple of the complete source-matched
-Selberg reserve.
+Under the exact piecewise-rational carry-position integration of `L-28011`, the
+independent-frequency physical normal energy on the balanced **interior** of one
+finite block is therefore controlled by a polylogarithmic multiple of the
+complete source-matched Selberg reserve.
 
 There is no unspecified physical-to-carry operator, no inverse condition
 number, and no ambient-vector theorem.
 
-## 6. What remains after this theorem
+## 6. Exact boundary disposition
 
-The repository's former RTCT/CISR transference gap splits into two parts:
+The omitted positions are not an error term. They are the source coordinates
+
+\[
+ j\in\{0,1,n-1,n\}.
+\]
+
+The trivial positions `0,n` vanish. The two endpoint neighbors are exactly the
+unweighted two-contact source of `L-28005/L-28007` and PR #269 `L-26904`.
+Their contribution must be retained in the physical block and routed by the
+bottom-charge/lower-scale recurrence.
+
+Thus the repository's former RTCT/CISR gap now splits exactly as
 
 ```text
-balanced physical field
+balanced interior physical field
     -> explicit transverse reserve
        CLOSED here;
 
-unbalanced endpoint / unit-source boundary
+endpoint-neighbor / unit-source boundary
     -> exact two-contact and bottom-charge coordinate
-       retained by L-28007 and L-26904
+       RETAINED, not estimated here;
     -> strict lower-scale recurrence
        still open.
 ```
-
-Thus a completion no longer needs to prove a coupled interior source matrix or
-an abstract physical/carry frame inequality.  It must prove only the boundary
-recurrence while retaining the exact bottom source.
 
 ## 7. Proof boundary
 
@@ -221,13 +233,14 @@ Closed exactly or elementarily:
 
 - the physical field as a generalized-Chebyshev shell defect;
 - a source-independent elementary shell bound;
-- a quantitative balanced lower bound for the generalized-prime profile;
+- a quantitative balanced-interior lower bound;
 - a strict source-matched reserve;
 - pointwise physical-to-reserve domination with explicit polylogarithmic loss;
-- the induced finite normal-Gram inequality.
+- the induced finite interior normal-Gram inequality;
+- the exact exclusion and routing of zero-reserve endpoint neighbors.
 
 Open:
 
-- the unbalanced two-contact boundary recurrence;
+- the unweighted two-contact boundary recurrence;
 - a subpower bottom-charge estimate;
 - RH.
