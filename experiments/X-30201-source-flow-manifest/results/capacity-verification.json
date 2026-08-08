@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "eta_capacity_ratio": {
+      "cases": 10000,
+      "first_available": "1/6",
+      "first_required": "1/3",
+      "limit_k": 10000
+    },
+    "eta_tree_layer_cake": {
+      "cases": 44850,
+      "limit_N": 300
+    },
+    "general_decreasing_sources": {
+      "cases": 6318,
+      "limit_N": 80
+    }
+  },
+  "classification": "EXACT_FINITE_ALGEBRA_ONLY",
+  "does_not_prove": [
+    "SFC",
+    "cycle-adjusted capacity feasibility",
+    "Cycle Debt",
+    "RH"
+  ],
+  "schema": "X-30202-central-capacity-v1",
+  "sha256_without_digest": "3300081ea6a9fc2f0f495549bf189bd7f8807cf0808a17ee2c6ea671cbd26daf"
+}
