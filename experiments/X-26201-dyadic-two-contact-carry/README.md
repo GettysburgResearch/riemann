@@ -1,7 +1,7 @@
-# X-26201 — Dyadic two-contact carry and bottom-charge replay
+# X-26201 — Dyadic two-contact, factor-five dipole, and bottom-charge replay
 
-This experiment package supports `L-26201`--`L-26205` and the proposal
-`T-26201`.
+This experiment package supports `L-26201`--`L-26205`, `L-26901`,
+`R-26201`, `R-26901`, and the proposal `T-26201`.
 
 It uses only the Python standard library. The exact scripts use integers and
 `fractions.Fraction`; `recon.py` uses 60-digit `decimal.Decimal` arithmetic and
@@ -15,6 +15,7 @@ Run:
 python3 verify.py
 python3 verify_bottom_charge.py
 python3 verify_digital_lift.py
+python3 verify_factor_five.py
 ```
 
 `verify.py` checks:
@@ -85,6 +86,38 @@ Retained proof-object SHA-256:
 17e23d1e2ebc01cc7283d125c15c721d4743e69f906b17b715294f60b0e09b23
 ```
 
+`verify_factor_five.py` checks the new source-specific localization:
+
+```text
+Y_(n,m)(j)
+ =1_(m<=n<2m)-1_(m<=j<2m)-1_(m<=n-j<2m),
+
+Z_(n,m)(j)
+ =g_m(n)-g_m(j)-g_m(n-j),
+g_m=1_[m,2m)-(1/2)1_[2m,4m).
+```
+
+It replays:
+
+```text
+scaled b_2 box cells                         386,270
+pointwise omega_2 wavelet cells              386,270
+pointwise inner/outer sign cells              71,610
+exact factor-five Kummer product cases         2,505
+far-field monotonicity products                2,940
+odd-Mobius pointwise carry cells              13,040
+```
+
+The integer product comparison verifies that every negative logarithmic Kummer
+row is confined to `2m<=n<5m`. It also records actual negative transition
+examples, so a false claim of all-row positivity fails closed.
+
+Retained proof-object SHA-256:
+
+```text
+b2ff53b948da65a81082fa9a14d7f990c227bb47a6bb592458655ccec7a03f95
+```
+
 ## Finite reconnaissance
 
 Run:
@@ -117,22 +150,20 @@ This is not an interval certificate and is not promoted to Carry Saturation.
 pytest -q tests/test_verify.py
 ```
 
-The retained local replay reports three passing exact groups.
+The test file contains four exact replay groups.
 
 ## Proof boundary
 
 The package verifies exact finite algebra only. It does **not** prove:
 
-- Odd-Leakage Descent;
+- the factor-five transition normal-Gram contraction;
 - Dyadic Signed Slack (`DSS`);
 - Parity Blocker Descent (`PBD`);
 - positivity of the carry inverse for every endpoint;
 - a Green-to-physical-normal transference;
 - the Riemann Hypothesis.
 
-The load-bearing open scalar is
-
-```text
-Pi_2^gr(X) = sum_q b_2(q) s_X^gr(q)
-           = -3 T_X(2)+T_X(3).
-```
+The original description of unsigned odd-column leakage as the sole obstruction
+is corrected by `R-26901`: its signed load is automatically polylogarithmic,
+while the odd target remains RH-bearing. The preferred next object is the
+complete opposite-parity transition block `2m<=n<5m`.
