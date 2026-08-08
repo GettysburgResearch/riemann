@@ -4,13 +4,12 @@
 The checker uses only integer and Fraction arithmetic. It verifies:
 
 - the declared q interval has common shifted-even/odd first omitted index k=2;
-- the odd zeroth-jet source coordinate contributes 1/(10 sqrt(q));
-- a rational lower enclosure already dominates floor(sqrt(X))/1000 on the
-  tested endpoints;
-- the q-dependent source typing fails exactly at (N,q,k,s)=(18,5,2,1).
+- the literal frozen source interpretation has a square-root layer-cake lower bound;
+- the q-dependent source typing fails exactly at (N,q,k,s)=(18,5,2,1);
+- after correct multiples-Möbius inversion, the zeroth-jet source has an exact
+  linear atomic-mass lower bound.
 
-The cofinal lower bound is proved in R-30402. The source-type contradiction is
-an exact finite counterexample in R-30403.
+The cofinal arguments are written in R-30402--R-30404.
 """
 from __future__ import annotations
 
@@ -46,16 +45,13 @@ def q_interval(endpoint: int) -> range:
     return range(lo, hi + 1)
 
 
-def rational_lower_bound(X: int) -> tuple[Fraction, int]:
+def rational_layer_lower_bound(X: int) -> tuple[Fraction, int]:
     total = Fraction(0)
     rows = 0
     for Y in range((X + 1) // 2, X):
         for q in q_interval(Y):
             assert first_shifted_even(Y, q) == 2
             assert first_unshifted_odd(Y, q) == 2
-
-            # Atomic contribution is ell_Y/(10 sqrt(q)).
-            # Use ell_Y >= 1/(Y+1) and sqrt(q) <= ceil_sqrt(q).
             total += Fraction(1, 10 * (Y + 1) * ceil_sqrt(q))
             rows += 1
     return total, rows
@@ -95,14 +91,40 @@ def source_type_counterexample() -> dict[str, object]:
     }
 
 
-def main() -> None:
-    endpoints = [96, 192, 384, 768, 1536, 3072]
+def correct_source_linear_mass() -> list[dict[str, object]]:
+    # For m>N/4 the multiples-Mobius inversion has only d=1.
+    # The written proof gives sqrt(m)*sigma_m > 7/400 on every m in I_N.
+    # Verify the resulting exact rational lower bound.
+    assert 10000 < 81 * 125  # 1/(5 sqrt(5)) < 9/100 after squaring.
     rows = []
-    for X in endpoints:
-        lower, count = rational_lower_bound(X)
-        threshold = Fraction(isqrt(X), 1000)
+    for N in (48, 96, 192, 384, 768, 1536, 3072):
+        interval = list(q_interval(N))
+        Q = N // 2
+        assert all(2 * m > Q for m in interval)
+        count = len(interval)
+        lower = Fraction(7 * count, 400)
+        threshold = Fraction(N, 2000)
+        assert count >= Fraction(N, 24)
         assert lower > threshold
         rows.append(
+            {
+                "N": N,
+                "source_nodes": count,
+                "mobius_terms_per_node": 1,
+                "atomic_lower_gt_N_over_2000": True,
+            }
+        )
+    return rows
+
+
+def main() -> None:
+    endpoints = [96, 192, 384, 768, 1536, 3072]
+    layer_rows = []
+    for X in endpoints:
+        lower, count = rational_layer_lower_bound(X)
+        threshold = Fraction(isqrt(X), 1000)
+        assert lower > threshold
+        layer_rows.append(
             {
                 "X": X,
                 "source_rows": count,
@@ -120,10 +142,9 @@ def main() -> None:
     assert 5 * q > Y
 
     result = {
-        "schema": "X-30402-terminal-source-refutations-v2",
-        "classification": "EXACT_PR304_TERMINAL_SOURCE_CLAIMS_REFUTED",
-        "symbolic_atomic_contribution": "ell_Y/(10*sqrt(q)) at source node 5",
-        "rows": rows,
+        "schema": "X-30402-terminal-source-refutations-v3",
+        "classification": "EXACT_PR304_TERMINAL_SOURCE_PROOF_REFUTED",
+        "literal_layer_interpretation": layer_rows,
         "minimal_common_tail_control": {
             "Y": Y,
             "q": q,
@@ -131,8 +152,9 @@ def main() -> None:
             "K_odd": 2,
         },
         "source_type_counterexample": source_type_counterexample(),
+        "correct_mobius_source_linear_mass": correct_source_linear_mass(),
         "does_not_prove": [
-            "nonexistence of every coupled source repair",
+            "nonexistence of every coupled non-atomic source repair",
             "Cycle Debt",
             "RH",
         ],
