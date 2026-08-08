@@ -18,7 +18,7 @@ Extend a function `f` by zero on `(1,infinity)` and define
  \tag{L-28301.1}
 \]
 
-At every fixed `x` the sum is finite.  Introduce logarithmic coordinates
+At every fixed `x` the sum is finite. Introduce logarithmic coordinates
 
 \[
  G(t)=e^{-t}f(e^{-t})\mathbf1_{t\ge0}.
@@ -28,8 +28,7 @@ At every fixed `x` the sum is finite.  Introduce logarithmic coordinates
 For every integer `a>=1`,
 
 \[
- e^{-t}f(ae^{-t})
- ={1\over a}G(t-\log a).
+ e^{-t}f(ae^{-t})={1\over a}G(t-\log a).
  \tag{L-28301.3}
 \]
 
@@ -37,8 +36,7 @@ Therefore
 
 \[
  \boxed{
- e^{-t}(\mathcal Tf)(e^{-t})
- =(\mathfrak b*G)(t),
+ e^{-t}(\mathcal Tf)(e^{-t})=(\mathfrak b*G)(t),
  }
  \tag{L-28301.4}
 \]
@@ -57,7 +55,7 @@ where the locally finite signed logarithmic boundary comb is
  \tag{L-28301.5}
 \]
 
-This is the complete continuum boundary source.  It is already present before
+This is the complete continuum boundary source. It is already present before
 the discrete shift `2kq-1` is introduced.
 
 ## 2. Eta symbol and mass
@@ -89,9 +87,6 @@ At the mass point,
  \tag{L-28301.7}
 \]
 
-Thus the exact critical mass factor found in the one-pass carry computation is
-the total mass of the eta boundary comb.
-
 ## 3. Positive residual plus monotone dipoles
 
 Write
@@ -110,8 +105,8 @@ Write
 \tag{L-28301.8}
 \]
 
-The first line is a positive measure of total mass `rho`.  The second line is
-an adjacent logarithmic transport.  Its exact first-moment cost is
+The first line is a positive measure of total mass `rho`. The second line is
+an adjacent logarithmic transport. Its exact first-moment cost is
 
 \[
  \boxed{
@@ -145,12 +140,12 @@ Consequently
  \tag{L-28301.11}
 \]
 
-The last inequality uses the elementary bound `log 2>1/2`.
+The last inequality uses `log 2>1/2`.
 
 ## 4. Bounded-Lipschitz pairing
 
-For every bounded Lipschitz function `F`, the decomposition above gives the
-absolutely convergent estimate
+For every bounded Lipschitz function `F`, the decomposition gives the absolutely
+convergent estimate
 
 \[
  \boxed{
@@ -159,14 +154,12 @@ absolutely convergent estimate
  \rho\|F\|_\infty
  +\mathfrak c\,\operatorname{Lip}(F).
  }
- \tag{L-28301.12]
+ \tag{L-28301.12}
 \]
 
-Indeed the positive line costs its total mass, while each dipole costs its
-coefficient times the logarithmic displacement of its endpoints.
-
-This estimate retains the cancellation which is destroyed by the divergent
-termwise total variation
+The positive line costs its total mass; each dipole costs its coefficient times
+the logarithmic displacement of its endpoints. This retains the cancellation
+which is destroyed by the divergent termwise total variation
 
 \[
  \sum_k\left({1\over2k}+{1\over2k+1}\right)=\infty.
@@ -188,8 +181,8 @@ Let
  \tag{L-28301.14}
 \]
 
-Apply (L-28301.12) to `u mapsto F^(m)(t-u)`.  Since its Lipschitz constant is
-at most `||F^(m+1)||_infinity`,
+Apply (L-28301.12) to `u mapsto F^(m)(t-u)`. Its Lipschitz constant is at most
+`||F^(m+1)||_infinity`, so
 
 \[
  \|(\mathcal BF)^{(m)}\|_\infty
@@ -213,16 +206,16 @@ Summing for `0<=m<=M` yields
 \]
 
 Thus the complete analytic boundary operator has a strict current-jet reserve.
-The only exported quantity is one higher derivative.  There is no ambient
+The only exported quantity is one higher derivative. There is no ambient
 same-scale loss and no appeal to pointwise monotonicity of later iterates.
 
-For a function with a finite full jet norm
+For a function with finite full jet norm
 
 \[
  \mathcal J_\infty(F)=\sum_{m\ge0}\|F^{(m)}\|_\infty<\infty,
 \]
 
-monotone convergence gives the genuine contraction
+monotone convergence gives
 
 \[
  \boxed{
@@ -230,12 +223,13 @@ monotone convergence gives the genuine contraction
  \le\theta_*\mathcal J_\infty(F).
  }
  \tag{L-28301.17}
+\]
 
 ## 6. Boundary-jet interpretation
 
 For the stopped critical profile, ordinary derivatives generate endpoint delta
-jets.  `R-28301` shows that omitting them invalidates the smooth monotonicity
-argument.  The present theorem gives the corrected architecture:
+jets. `R-28301` shows that omitting them invalidates the smooth monotonicity
+argument. The corrected architecture is
 
 ```text
 smooth finite jet bank
@@ -254,8 +248,8 @@ The adjacent dipoles
 \]
 
 are the continuum counterparts of the adjacent-tree commutators on PR #272.
-This statement is an identification of source geometry, not yet an asserted
-isometry between the two completed norms.
+This identifies source geometry; it does not yet assert an isometry between the
+completed norms.
 
 ## 7. Proof boundary
 
