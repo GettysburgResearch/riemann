@@ -1,209 +1,172 @@
-# L-30503 — Critical cutoff annulus profile and norm separation
+# L-30503 — Activation firewall for the unqualified analytic boundary
 
 Claim ID: `L-30503`  
-Title: The first stopped critical boundary has a positive macroscopic annulus, forcing linear divisor-source atomic norm while retaining bounded local central variation  
-Status: **PROPOSED COMPLETE ASYMPTOTIC LEMMA — DIRECTED CONSTANT GATE REPLAYED**  
+Title: Extending every stopped layer into the analytic bulk before its first active row creates a different macroscopic boundary; the activation threshold `Y>=2q-1` is load bearing  
+Status: **EXACT SCOPE CORRECTION / MUTATION ANALYSIS — NOT THE PRODUCTION BOUNDARY**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-08  
+Corrected: 2026-08-08 after comparison with the exact active-layer formula in `L-30501`  
 Frozen target: PR #304 at `78b75fc17e27334a9950018528c1c6e083d74820`  
-Dependencies: PR #286 `L-28401/L-28402`; elementary eta/Hasse series and Möbius inversion on multiples  
-Scope: first complete aggregate boundary; refutes the atomic-norm closure but does not lower-bound cycle-optimized debt
+Dependencies: `L-30501`; PR #286 `L-28401/L-28402`; elementary eta/Hasse series  
+Scope: adversarial mutation showing why source activation cannot be omitted
 
-## 1. The complete first boundary
+## 1. Two different analytic splits
 
 Put
 
 \[
- f_N(x)=x^{-1/2}\log(N/x),
+ p(q)=q^{-1/2},
+ \qquad
+ w_X(q)=q^{-1/2}\log(X/q)\mathbf1_{q\le X}.
 \]
 
-using its analytic continuation for `x>N`.  For `q<=M=floor((N+1)/2)`, the difference between the infinite shifted central operator and the stopped finite operator is
+The **production** stopped-power decomposition activates the analytic central output at column `q` only for endpoint layers
+
+\[
+ Y\ge2q-1.
+\]
+
+Accordingly, `L-30501` proves that its actual first aggregate boundary is
 
 \[
  \boxed{
- Q_N(q)=
- \sum_{2kq-1>N}f_N(2kq-1)
- -\sum_{(2k+1)q>N}f_N((2k+1)q).
+ b_X(q)=
+ \log\frac{X}{2q-1}\,\mathscr Cp(q)
+ -\mathscr C_Xw_X(q).
  }
  \tag{L-30503.1}
 \]
 
-This is the same complete aggregate boundary denoted `b_X` in `L-30501`, up to the fixed sign convention used when the omitted tail is moved across the finite/infinite identity.
-
-Fix
-
-\[
- \frac{2N}{5}\le q\le\frac{4N}{9},
- \qquad r=\frac Nq\in\left[\frac94,\frac52\right].
- \tag{L-30503.2}
-\]
-
-Then the first omitted odd index is `1` and the first omitted shifted-even index is `2`. Hence
+A tempting but invalid shortcut is to extend every layer with `Y>=q` into the analytic bulk.  That produces instead
 
 \[
  \boxed{
- \sqrt q\,Q_N(q)
- =-\phi_r(3)
- +\sum_{k\ge2}
-  [\phi_r(2k-1/q)-\phi_r(2k+1)],
+ Q_X^{\rm all}(q)=
+ \log\frac Xq\,\mathscr Cp(q)
+ -\mathscr C_Xw_X(q).
+ }
+ \tag{L-30503.2}
+\]
+
+The two differ by the explicit positive analytic channel
+
+\[
+ \boxed{
+ Q_X^{\rm all}(q)-b_X(q)
+ =
+ \log\frac{2q-1}{q}\,\mathscr Cp(q).
  }
  \tag{L-30503.3}
 \]
 
-where
+Thus `Q_X^all` is **not** the production boundary.  It is the exact mutation obtained by ignoring the first-active-row condition.
+
+## 2. Annular profile of the mutation
+
+Let
 
 \[
- \phi_r(x)=x^{-1/2}\log(r/x).
+ f_X(x)=x^{-1/2}\log(X/x)
 \]
 
-## 2. Uniform limiting profile
-
-The derivative satisfies, uniformly for `r in [9/4,5/2]` and `x>=3`,
+on the analytic continuation beyond `X`.  The quantity in (L-30503.2) is equivalently the omitted-tail expression
 
 \[
- |\phi_r'(x)|
- \le x^{-3/2}[1+\tfrac12\log x].
+ Q_X^{\rm all}(q)
+ =
+ \sum_{2kq-1>X}f_X(2kq-1)
+ -\sum_{(2k+1)q>X}f_X((2k+1)q).
  \tag{L-30503.4}
 \]
 
-The right side is summable on the shifted even lattice. Therefore
+For
 
 \[
- \boxed{
- \sqrt q\,Q_N(q)=H(r)+O(1/q)
- }
+ \frac{2X}{5}\le q\le\frac{4X}{9},
+ \qquad r=\frac Xq\in\left[\frac94,\frac52\right],
+\]
+
+the first omitted odd and shifted-even indices are respectively `1` and `2`. Hence
+
+\[
+ \sqrt q\,Q_X^{\rm all}(q)
+ =-\phi_r(3)
+ +\sum_{k\ge2}[\phi_r(2k-1/q)-\phi_r(2k+1)],
  \tag{L-30503.5}
 \]
 
-uniformly on the complete annulus, where
+where `phi_r(x)=x^(-1/2)log(r/x)`.
+
+Uniformly on the annulus,
 
 \[
- H(r)=-\phi_r(3)+\sum_{k\ge2}[\phi_r(2k)-\phi_r(2k+1)].
+ \boxed{
+ \sqrt q\,Q_X^{\rm all}(q)=H(r)+O(1/q),
+ }
  \tag{L-30503.6}
 \]
 
-More explicitly, if
+with
 
 \[
- P(s)=1-\eta(s)-2^{-s},
-\]
-
-then termwise differentiation of the convergent eta series gives
-
-\[
- \boxed{
- H(r)=P(1/2)\log r+P'(1/2).
- }
+ H(r)=P(1/2)\log r+P'(1/2),
+ \qquad
+ P(s)=1-\eta(s)-2^{-s}.
  \tag{L-30503.7}
 \]
 
-The elementary majorant
+The elementary derivative majorant makes the error at most `6/q`.
+
+## 3. Directed mutation moat
+
+`X-30502` uses the globally convergent Hasse series and rational square-root/logarithm enclosures to prove
 
 \[
- \sum_{k\ge2}k^{-3/2}[1+\tfrac12\log(2k)]<6
-\]
-
-makes the error in (L-30503.5) at most `6/q`.
-
-## 3. Directed positive moat
-
-`X-30502` evaluates the globally convergent Hasse series
-
-\[
- \eta(s)=\sum_{n\ge0}2^{-n-1}\Delta^n[(k+1)^{-s}]_{k=0}
-\]
-
-with rational square-root and logarithm enclosures.  It proves
-
-\[
- \begin{aligned}
- P(1/2)&<0,\\
- H(5/2)&>\frac1{1000}.
- \end{aligned}
+ P(1/2)<0,
+ \qquad
+ H(5/2)>\frac1{1000}.
  \tag{L-30503.8}
 \]
 
-Because `P(1/2)<0`, `H(r)` is decreasing in `r`; hence
+Therefore the **unqualified mutation** has a positive macroscopic annulus and its isolated divisor-source atomic norm is linear.
+
+This does not supply an additional contradiction beyond `L-30501`, because the mutation is not the actual stopped-power boundary.  Instead it proves a fail-closed review rule:
 
 \[
- H(r)>\frac1{1000}
- \qquad(9/4\le r\le5/2).
+ \boxed{
+ \text{every source manifest must enforce }Y\ge2q-1
+ \text{ before inserting the analytic bulk.}
+ }
  \tag{L-30503.9}
 \]
 
-For all sufficiently large `N`, every integer `q` in the annulus therefore satisfies
+Deleting that activation condition changes both the sign and the annular constant of the boundary.
+
+## 4. Norm-separation observation
+
+On every fixed ratio cell, `Q_X^all` is a `C^1` profile at scale `X^{-1/2}`. Consequently
 
 \[
- \boxed{
- Q_N(q)>\frac1{2000\sqrt q}.
- }
+ \sum_{q\text{ in the cell}}
+ \sqrt q\,|Q_X^{\rm all}(q+1)-Q_X^{\rm all}(q)|=O(1),
  \tag{L-30503.10}
 \]
 
-## 4. Linear atomic norm
+even though its isolated divisor-source value norm is `Omega(X)`.
 
-Suppose the boundary load is represented on the next endpoint by an ordinary divisor source
+The same methodological warning applies to the true boundary of `L-30501`: atomic source conversion can destroy cancellations present in the central-flow coordinate.  The production repair must use the activated coupled flow in `L-30502`, not the mutation (L-30503.2).
 
-\[
- Q_N(q)=\sum_{\substack{m\le M\\q\mid m}}\sigma_N(m).
- \tag{L-30503.11}
-\]
-
-Multiples-Möbius inversion makes `sigma_N` unique.  On the annulus one has `2q>M`, so no proper multiple of `q` occurs in (L-30503.11). Therefore
-
-\[
- \boxed{
- \sigma_N(q)=Q_N(q)
- }
- \tag{L-30503.12}
-\]
-
-there.  Since the annulus contains at least `2N/45-2` integers,
-
-\[
- \boxed{
- \sum_{m\le M}\sqrt m\,|\sigma_N(m)|
- \ge \frac{N}{50000}
- }
- \tag{L-30503.13}
-\]
-
-for all sufficiently large `N`.
-
-This independently contradicts the polylogarithmic atomic-norm assertion in frozen PR #304 `L-30403/T-30401`.
-
-## 5. The correct norm is not the atomic norm
-
-The same calculation reveals why this obstruction does not automatically lower-bound Cycle Debt.  On a fixed ratio cell,
-
-\[
- Q_N(q)=N^{-1/2}B(q/N)+O(N^{-3/2}),
- \qquad
- B(\theta)=\theta^{-1/2}H(1/\theta),
- \tag{L-30503.14}
-\]
-
-with a continuously differentiable profile. Consequently
-
-\[
- \sum_{q\text{ in the annulus}}
- \sqrt q\,|Q_N(q+1)-Q_N(q)|=O(1).
- \tag{L-30503.15}
-\]
-
-Thus the boundary is macroscopic in the isolated divisor-source value norm but smooth in the first-difference coordinate used by central carry flows.  A viable repair must preserve this coupled flow structure and optimize in Pascal-cycle space before measuring negative capacity, exactly as stated in `L-30502`.
-
-## 6. Proof boundary
+## 5. Proof boundary
 
 Closed here:
 
-1. the exact first-index formula on a macroscopic annulus;
-2. the uniform eta profile and directed positive moat;
-3. a linear lower bound for the unique divisor-source atomic norm;
-4. bounded local first-difference variation of the same boundary.
+1. the exact difference between activated and unqualified analytic splits;
+2. the annular eta profile of the unqualified mutation;
+3. a directed positive margin for that mutation;
+4. the activation firewall and norm-separation warning.
 
-Not closed here:
+Not claimed:
 
-1. the global cycle-optimized boundary debt;
-2. a repaired all-generation recurrence;
-3. RH.
+1. that `Q_X^all` is the PR #304 production boundary;
+2. an additional refutation beyond `L-30501`;
+3. a cycle-debt estimate or RH.
