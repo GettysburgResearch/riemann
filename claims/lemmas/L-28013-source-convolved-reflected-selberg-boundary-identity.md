@@ -68,6 +68,7 @@ one has
  q_2=b_2*\Lambda_2=-b_2\log.
  }
 \tag{L-28013.4}
+\]
 
 Its Dirichlet series is `B_2(s)L_2(s)=B_2'(s)`, and every open-strip zeta zero
 remains an uncancelled pole.
@@ -91,7 +92,7 @@ Let
 \]
 
 and let `C_(t,-u)` be the Selberg coefficient sequence of the product
-`A_t A_(-u)`.  PR #241 `L-9518` proves
+`A_t A_(-u)`. PR #241 `L-9518` proves
 
 \[
  \boxed{
@@ -99,6 +100,7 @@ and let `C_(t,-u)` be the Selberg coefficient sequence of the product
  =2\Lambda_t*\Lambda_{-u}.
  }
 \tag{L-28013.5}
+\]
 
 Convolve the complete identity by `b_t*b_(-u)`. Associativity gives
 
@@ -111,6 +113,7 @@ Convolve the complete identity by `b_t*b_(-u)`. Associativity gives
  &\qquad=2q_t*q_{-u},
  \end{aligned}}
 \tag{L-28013.6}
+\]
 
 where
 
@@ -129,6 +132,7 @@ series is
 \[
  2|B_2(\sigma+it)L_2(\sigma+it)|^2.
 \tag{L-28013.7}
+\]
 
 ## 3. Localized physical block
 
@@ -138,6 +142,7 @@ Let `H` be a real compact safe window and let
  \mathcal Q_{2,H}(x)
  =\sum_{n\ge1}{q_2(n)\over\sqrt n}H(x-\log n).
 \tag{L-28013.8}
+\]
 
 For `alpha>1/2`, its Fourier transform is
 
@@ -167,7 +172,8 @@ The double-Fourier calculation of `L-9518`, now using (L-28013.6), gives
  \mathcal C^{\rm bdry}_{t,u}(\sigma)
  \,dt\,du,
  \end{aligned}}
-\tag{L-28013.9)
+\tag{L-28013.9}
+\]
 
 where
 
@@ -177,7 +183,8 @@ where
  =(b_t*b_{-u})*
   (C_{t,-u}-C_t-C_{-u}).
  }
-\tag{L-28013.10)
+\tag{L-28013.10}
+\]
 
 Equivalently, expanding the finite arithmetic block gives
 
@@ -187,14 +194,15 @@ Equivalently, expanding the finite arithmetic block gives
  =\sum_{m,n}{q_2(m)q_2(n)\over\sqrt{mn}}
  K_J^H(\log m,\log n).
  }
-\tag{L-28013.11)
+\tag{L-28013.11}
+\]
 
 Every source convolution and every independent-frequency cross term is retained.
 The parameter `alpha` disappears from the finite arithmetic identity.
 
 ## 4. Atomized carry specialization
 
-Choose the atomized carry-position window `H_theta` of `L-28011`.  Then the
+Choose the atomized carry-position window `H_theta` of `L-28011`. Then the
 finite physical field is
 
 \[
@@ -203,11 +211,12 @@ finite physical field is
  \sum_{m\le X}\Lambda_2(m)Y_{X,m}(\theta)
  ={1\over\sqrt X}
  \sum_{q\le X}q_2(q)C(X/q,\theta).
-\tag{L-28013.12)
+\tag{L-28013.12}
+\]
 
 Thus (L-28013.9)--(L-28013.11) specialize to the exact finite two-contact carry
-Gram `L-28011.14`.  The physical/carry identification and the reflected
-Selberg identity now concern the identical coefficient sequence `q_2`.
+Gram `L-28011.14`. The physical/carry identification and the reflected Selberg
+identity now concern the identical coefficient sequence `q_2`.
 
 ## 5. Source decomposition of the left side
 
@@ -225,7 +234,7 @@ unit/unweighted source excluded by logarithmic moments
     -> exact two-contact boundary L-28005/L-28007.
 ```
 
-No term may be deleted before the subtraction.  In particular, generalized-prime
+No term may be deleted before the subtraction. In particular, generalized-prime
 positivity alone does not sign the unweighted boundary, while the boundary may
 not be counted again inside the transverse reserve.
 
@@ -237,12 +246,12 @@ The formerly open statement
 construct the physical source map to the two-contact carry Gram
 ```
 
-is closed by (L-28013.6)--(L-28013.12).  The complete source map is convolution
+is closed by (L-28013.6)--(L-28013.12). The complete source map is convolution
 by `b_t*b_(-u)` in the reflected coefficient identity, and its finite carry
 realization is `Y_(X,m)(theta)`.
 
 Combined with `L-28012`, the balanced interior of the physical block is already
-controlled by the explicit transverse reserve.  The only remaining estimate is
+controlled by the explicit transverse reserve. The only remaining estimate is
 the source-convolved product/boundary return: prove that the unweighted
 endpoint coordinate in (L-28013.6) routes to strict lower scale with
 subpolynomial loss.
