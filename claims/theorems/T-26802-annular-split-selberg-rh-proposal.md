@@ -1,10 +1,11 @@
 # T-26802 — Critical annular source-change Selberg descent proposal for RH
 
 Claim ID: `T-26802`  
-Title: The RH-sensitive physical source has an exact annular carry image, and its difference from the reserved generalized-prime profile is a complete half-scale divisor family  
-Status: **FULL CONDITIONAL RH PROPOSAL — STRICT ANNULAR CHARGE/RESERVE INEQUALITY OPEN**  
+Title: The RH-sensitive physical source has an exact annular carry image, and every source change outside the current transition block descends to strict lower scale  
+Status: **FULL CONDITIONAL RH PROPOSAL — COMPLETE SOURCE-WEIGHTED TRANSITION/CHARGE INEQUALITY OPEN**  
 Authoring agent: `gpt56-pro-source-specific`  
 Created: 2026-08-08  
+Dependencies: `R-26802`, `R-26803`, `L-26802`--`L-26805`; PRs #241, #263, #269  
 Scope: global full-problem attack; RH is not claimed proved
 
 ## 1. Corrections absorbed
@@ -26,17 +27,19 @@ whose carry image has coefficient sequence
  \boxed{W=\omega_2*\Lambda_\omega.}
 \]
 
-`L-26805` then gives the exact source change
+`L-26805` gives the exact source change
 
 \[
  \boxed{a_\omega*W=\Lambda_\omega,}
 \]
 
-with identity coefficient one at the current scale and every remaining term at
+with identity coefficient one at the current scale and every other term at
 scale at most one half.
 
-Thus the source mismatch becomes a strict divisor descent rather than an
-uncontrolled same-scale inversion.
+A second correction is equally load bearing. PR #269 proves a uniform Schur
+reserve against each individual wavelet \(Z_{n,m}\). `R-26803` records that
+pairwise reserves do not imply a reserve against the complete transition span;
+the full source-weighted transition matrix remains part of the open theorem.
 
 ## 2. Exact arithmetic source
 
@@ -139,9 +142,9 @@ The split vectors are finite dyadic combinations of
 This is an exact critically normalized physical-to-carry congruence for the
 RH-sensitive source.
 
-## 4. Exact source-change descent to the reserved carry profile
+## 4. Exact source-change descent to the generalized-prime profile
 
-PR #269 proves a strict transition reserve for
+Define
 
 \[
  \mathcal P_N(j)
@@ -173,16 +176,16 @@ Every destination \(n/d\) is at most \(n/2\). In carry coordinates,
  \tag{T-26802.9}
 \]
 
-Thus the established reserved profile equals the current RH-sensitive profile
-plus a complete family of strict half-scale source rows. The current coefficient
-is exactly one; there is no same-scale condition number.
+Thus the generalized-prime profile equals the current RH-sensitive profile plus
+a complete strict half-scale family. The current coefficient is exactly one;
+there is no same-scale inverse loss.
 
 A production proof must complete the \(\mathcal P_N\) square before estimating
 the lower-scale family.
 
-## 5. Exact transition localization
+## 5. Exact transition localization and its true scope
 
-PR #269 proves for every source wavelet:
+PR #269 proves for every individual source wavelet:
 
 \[
  (\mathcal K(n,m))_-\ne0
@@ -191,17 +194,26 @@ PR #269 proves for every source wavelet:
  \tag{T-26802.10}
 \]
 
-The inner band and the complete quotient tail have the correct sign. The
-transition profile \(\mathcal P_N\) has an absolute source-specific Schur
-reserve. After (T-26802.9), every adverse current-scale row is therefore
-confined to the quotient cells
+The inner band and the complete quotient tail have the correct sign. PR #269
+also proves an absolute one-wavelet Schur reserve against the logarithmic or
+generalized-prime row.
+
+These results imply that every potentially adverse **individual** current
+source row is confined to
 
 \[
  \boxed{2,3,4.}
  \tag{T-26802.11}
 \]
 
-All other source-change terms are declared lower-scale rows.
+They do not prove a uniform angle between the target row and the span of all
+transition wavelets. `R-26803` gives the exact logical obstruction and floating
+source-specific evidence that the ambient transition-span angle may vanish.
+
+Therefore ASSD must retain the actual arithmetic coefficients and prove a
+reserve for the complete source-weighted transition matrix after the
+source-change and reflected cancellations. No ambient full-span coercivity is
+assumed.
 
 ## 6. Exact generalized Selberg lower-scale ledger
 
@@ -229,7 +241,8 @@ is at most half scale.
 
 The source-change family (T-26802.8) and the Selberg-defect family
 (T-26802.12) use the same positive inverse coefficients. They must be assembled
-in one reflected lower-block ledger, not charged separately by total variation.
+in one reflected lower-block ledger, not charged independently by total
+variation.
 
 The digital boundary
 
@@ -264,9 +277,10 @@ For each sufficiently large annulus and color, assemble:
 2. PR #241's independent-frequency reflected block;
 3. the exact critical annular split congruence (T-26802.5);
 4. the source-change square (T-26802.9);
-5. transition cells \(2,3,4\) and the PR #269 reserve;
-6. the proper-divisor Selberg ledger (T-26802.12);
-7. the digital boundary and every finite endpoint/collar row.
+5. the complete source-weighted transition matrix on cells \(2,3,4\);
+6. the one-wavelet sign/reserve lemmas as local inputs, not as the full moat;
+7. the proper-divisor Selberg ledger (T-26802.12);
+8. the digital boundary and every finite endpoint/collar row.
 
 The required production inequality is
 
@@ -300,31 +314,43 @@ and
 \]
 
 Here \(E_{r,c}\) is the declared parity-paired block energy of the RH-sensitive
-reciprocal-zeta source. Every lower-block coefficient must be derived from the
-source-change, Selberg-defect, or digital ledger; no undeclared norm estimate is
-permitted.
+reciprocal-zeta source. Every current and lower-block coefficient must be
+derived from the source manifest, source change, Selberg defect, or digital
+ledger.
 
-This strict charge/reserve inequality is the corrected `ASSD` theorem.
+The constant \(\kappa_0\) is the final **source-weighted** reserve after all
+transition cross terms and Schur complements. It is not imported from the
+pairwise PR #269 inequality.
 
-## 9. Why this is a full-problem attack
+## 9. Wider exact producers
+
+PR #263 `L-26210`--`L-26212` supplies an exact critical digital prefix bank,
+an exact hyperbola split with a strict lower-scale remainder, and the
+cancellation of the critical bank's \(O(M)\) cost by the annular
+\(M^{-1}\) normalization.
+
+Those lemmas are candidate producers for the ASSD source-weighted matrix. They
+do not by themselves prove the upper source-image estimate or the strict final
+reserve.
+
+## 10. Why this is still a full-problem attack
 
 The remaining theorem no longer asks for:
 
 - a physical-to-carry operator;
 - a safe compact window;
 - a parity reconstruction;
-- a generic carry frame;
 - control of quotient rows beyond factor five;
 - an unidentified Selberg remainder;
-- an inversion from \(P\) to \(W\);
+- an inversion from \(\mathcal P\) to \(\mathcal W\);
 - Bottom-Charge Positivity as an independent miracle;
-- full Carry Saturation, Green Energy, BTP, or Brownian SAT.
+- full Carry Saturation, Green Energy, generic BTP, or Brownian SAT.
 
-All source changes and remainders are exact strict-scale identities. The only
-open issue is whether their total reflected lower-block charge is strictly below
-the current annular reserve.
+Every source change and remainder is an exact strict-scale identity. The only
+open issue is the final source-weighted current reserve versus the complete
+declared lower-block charge.
 
-## 10. ASSD implies RH
+## 11. ASSD implies RH
 
 Let
 
@@ -357,7 +383,7 @@ equation symmetry then gives
  \tag{T-26802.18}
 \]
 
-## 11. Automatic rejection
+## 12. Automatic rejection
 
 Reject a claimed proof if it:
 
@@ -366,24 +392,28 @@ Reject a claimed proof if it:
 3. drops a source-change proper divisor;
 4. takes absolute values before completing the \(\mathcal P\) square;
 5. treats \(a_\omega\) as a summable contraction kernel;
-6. replaces the two-frequency block by a diagonal integral;
-7. omits a parity channel, dyadic delay, or reflected cross term;
-8. leaves a negative current row outside cells \(2,3,4\);
-9. drops the generalized Selberg defect;
-10. has total lower-block charge at least the reserve;
-11. promotes a finite matrix ladder to the uniform theorem.
+6. sums pairwise Schur inequalities as though the transition wavelets were
+   orthogonal;
+7. replaces the complete transition Gram by its diagonal blocks;
+8. replaces the two-frequency block by a diagonal integral;
+9. omits a parity channel, dyadic delay, or reflected cross term;
+10. leaves a negative current row outside cells \(2,3,4\);
+11. drops the generalized Selberg defect;
+12. has total lower-block charge at least the final source-weighted reserve;
+13. promotes a finite matrix ladder to the uniform theorem.
 
-## 12. Exact status
+## 13. Exact status
 
 ```text
-opposite-parity source and parity frame          proposed exact
-critical compact physical windows                proposed exact
-RH-sensitive annular physical/carry map          proposed exact + replay
-source-change current + half-scale identity      proposed exact + replay
-factor-five localization for reserved profile    proposed complete
-reserved generalized-prime carry Schur moat      proposed complete
-positive Selberg proper-divisor half-scale defect proposed exact + replay
-ASSD strict reflected charge/reserve inequality  OPEN / RH-BEARING
-ASSD -> shell energy -> RH                        complete conditional chain
-Riemann Hypothesis                                UNPROVED
+opposite-parity source and parity frame             proposed exact
+critical compact physical windows                   proposed exact
+RH-sensitive annular physical/carry map             proposed exact + replay
+source-change current + half-scale identity         proposed exact + replay
+factor-five localization of individual source rows proposed complete
+pairwise carry Schur reserves                        proposed complete
+full source-weighted transition reserve              OPEN / RH-BEARING
+positive Selberg proper-divisor half-scale defect   proposed exact + replay
+ASSD strict reflected charge/reserve inequality     OPEN / RH-BEARING
+ASSD -> shell energy -> RH                           complete conditional chain
+Riemann Hypothesis                                   UNPROVED
 ```
