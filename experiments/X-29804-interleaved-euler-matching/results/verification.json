@@ -1,0 +1,30 @@
+{
+  "classification": "EXACT_INTERLEAVED_EULER_AND_HAUSDORFF_MATCHING_VERIFIED",
+  "controls": {
+    "negative_odd_start_second_jet": "-2/105",
+    "one_sided_vector_deficit": "2/35",
+    "pair_first_actual_tail": "q=1,s=1,K=1 gives 1",
+    "pair_first_alternating_tail": "q=1,s=1,K=1 gives pi/2-1 (symbolic claim)"
+  },
+  "counts": {
+    "euler_identity_rows": 980,
+    "exact_source_counterexamples": 2,
+    "modal_difference_rows": 2240,
+    "weighted_hall_interval_rows": 110656
+  },
+  "proof_object_sha256": "9603b6041173939dac3f835266b030b9a122eb9b7549d774f13e7610f5c61307",
+  "scope": {
+    "certifies": [
+      "rational two-mode parity algebra",
+      "even-start Euler identity on rational Laplace fibers",
+      "all rational-grid weighted Hall interval inequalities",
+      "exact source-binding counterexamples"
+    ],
+    "does_not_certify": [
+      "continuous weighted Hall theorem beyond the proved claim text",
+      "two-orientation Pascal gadget",
+      "DCD",
+      "RH"
+    ]
+  }
+}
