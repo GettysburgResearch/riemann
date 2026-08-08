@@ -80,3 +80,19 @@ def test_factor_five_pointwise_dipole() -> None:
     assert result["checks"]["factor_five_kummer_nonnegativity"]["cases"] == 2505
     assert result["checks"]["odd_pointwise_carry"]["cases"] == 13040
     assert result["checks"]["transition_negative_examples"]["count"] > 0
+
+
+def test_uniform_carry_schur_structure() -> None:
+    result = run_script("verify_schur_structure.py")
+    assert (
+        result["sha256_without_digest"]
+        == "fe8287748e6c2e7320ca24e8db827044d77511dc2a72e401afb91a90e11365f0"
+    )
+    assert result["checks"]["rows"]["count"] == 113515
+    assert result["checks"]["rows"]["n_min"] == 210
+    assert result["checks"]["rows"]["n_max"] == 520
+    assert result["checks"]["maximum_wavelet_breaks"]["count"] <= 6
+    assert (
+        result["checks"]["reserve_denominator"]["value"]
+        >= result["checks"]["exact_required_denominator"]["value"]
+    )
