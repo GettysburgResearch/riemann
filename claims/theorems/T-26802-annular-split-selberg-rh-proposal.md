@@ -1,30 +1,44 @@
-# T-26802 — Annular split-Selberg descent proposal for RH
+# T-26802 — Critical annular source-change Selberg descent proposal for RH
 
 Claim ID: `T-26802`  
-Title: Exact annular physical/carry transference plus a positive half-scale Selberg defect reduce RH to one source-bound reserve inequality  
-Status: **FULL CONDITIONAL RH PROPOSAL — ANNULAR RESERVE INEQUALITY OPEN**  
+Title: The RH-sensitive physical source has an exact annular carry image, and its difference from the reserved generalized-prime profile is a complete half-scale divisor family  
+Status: **FULL CONDITIONAL RH PROPOSAL — STRICT ANNULAR CHARGE/RESERVE INEQUALITY OPEN**  
 Authoring agent: `gpt56-pro-source-specific`  
 Created: 2026-08-08  
 Scope: global full-problem attack; RH is not claimed proved
 
-## 1. Purpose
+## 1. Corrections absorbed
 
-The previous consolidated proposal `T-26801` left an unspecified
-physical-to-carry operator inside `F5PBT`.
+The first annular draft used the coefficient sequence
+\(a_\omega(m)\log m\) in both physical and carry roles. `R-26802` proves that
+its physical primitive cancels every reciprocal-zeta pole. That specialization
+is not an RH detector.
 
-`L-26802` removes that ambiguity for the compact opposite-parity window.
-`L-26804` proves that the identity survives every finite dyadic translation
-filter, in particular the critical Euler filter cancelling the pole and double
-half-pole modes. Thus the safe parity-paired physical channels themselves have
-explicit weighted carry splits.
+The exact annular geometry survives. The RH-sensitive physical coefficients are
 
-`L-26803` separately removes the unspecified Selberg remainder: its complete
-proper-divisor defect is nonnegative and lies at strict half scale.
+\[
+ \boxed{x_m=\Lambda_\omega(m),}
+\]
 
-The remaining theorem is therefore a quantitative reflected reserve inequality,
-not a source-map existence assertion.
+whose carry image has coefficient sequence
 
-## 2. Frozen exact source
+\[
+ \boxed{W=\omega_2*\Lambda_\omega.}
+\]
+
+`L-26805` then gives the exact source change
+
+\[
+ \boxed{a_\omega*W=\Lambda_\omega,}
+\]
+
+with identity coefficient one at the current scale and every remaining term at
+scale at most one half.
+
+Thus the source mismatch becomes a strict divisor descent rather than an
+uncontrolled same-scale inversion.
+
+## 2. Exact arithmetic source
 
 Retain
 
@@ -37,11 +51,11 @@ Retain
 with coefficient sequence \(\omega_2\), positive inverse \(a_\omega\), and
 nonnegative generalized-prime sequence \(\Lambda_\omega\).
 
-The parity frame and finite Bézout synthesis of PR #263 reconstruct this source
-without deleting any off-line zeta pole. PR #241 supplies the independent-
-frequency reflected physical block.
+The parity frame and finite Bézout synthesis of PR #263 reconstruct the
+reciprocal-zeta source without deleting any hypothetical off-line pole. PR #241
+supplies the independent-frequency reflected physical block.
 
-The compact physical window used in the source map is
+Use the compact window
 
 \[
  h_\omega(t)
@@ -49,44 +63,53 @@ The compact physical window used in the source map is
  \left[
  \mathbf1_{[0,\log2)}(t)
  -\frac12\mathbf1_{[\log2,\log4)}(t)
- \right].
+ \right],
  \tag{T-26802.2}
 \]
 
-Define the critical polynomial
+and the critical polynomial
 
 \[
  p_{\rm crit}(z)
- =(1-z)(1-2z)(1-\sqrt2z)^2
+ =(1-z)(1-2z)(1-\sqrt2z)^2.
 \]
 
-and the parity-paired safe windows
+The parity-paired safe windows are
 
 \[
  H_\pm=p_{\rm crit}(\pm\tau_{\log2})h_\omega.
- \tag{T-26802.2a}
+ \tag{T-26802.3}
 \]
 
-Their multipliers cancel the \(s=1\) mode and the double \(s=1/2\) mode.
-PR #263 supplies the two-channel frame and finite Bézout reconstruction.
+They cancel the \(s=1\) mode and the double \(s=1/2\) mode. PR #263 supplies
+the two-channel frame and finite Bézout reconstruction.
 
-## 3. Exact current-scale source map
+## 3. Exact RH-sensitive annular source map
 
 For a dyadic annulus
 
 \[
- \mathcal A_M=\{m:M\le m<2M\},
+ \mathcal A_M=[M,2M)\cap\mathbb N,
 \]
 
 put
 
 \[
- x_m=a_\omega(m)\log m\,\mathbf1_{\mathcal A_M}(m).
+ x_m=\Lambda_\omega(m)\mathbf1_{\mathcal A_M}(m).
+ \tag{T-26802.4}
 \]
 
-For the unfiltered window, `L-26802` gives the exact weighted split on row
-\(16M-1\). For the two critical windows, `L-26804` gives potentials
-\(F_{\pm,M}\) and the exact identities
+The corresponding physical transform contains
+
+\[
+ -\frac{A_\omega'}{A_\omega}(s)
+ =-\frac{\zeta'}{\zeta}(s)+\frac{E'}E(s),
+\]
+
+so every hypothetical off-line zeta zero remains a pole.
+
+`L-26802` gives the unfiltered exact weighted split. `L-26804` gives, for each
+critical parity window, potentials \(F_{\pm,M}\) satisfying
 
 \[
  \boxed{
@@ -96,45 +119,91 @@ For the unfiltered window, `L-26802` gives the exact weighted split on row
  \right\|_2^2
  =
  \sum_{j=1}^{128M-1}
- \frac{
- |(\mathcal S_{256M-1}F_{\pm,M})(j)|^2
- }{j(j+1)}.
+ \frac{|(\mathcal S_{256M-1}F_{\pm,M})(j)|^2}{j(j+1)}.
  }
- \tag{T-26802.3}
+ \tag{T-26802.5}
 \]
 
-The split vectors are finite dyadic combinations of the annular
-generalized-prime Kummer features. The critical square-root normalization,
-the main-pole cancellation, both parity channels, and every dyadic delay are
-included exactly.
+The split vectors are finite dyadic combinations of
 
-No generic operator theorem or unsafe unfiltered physical window is used.
+\[
+ \boxed{
+ \mathcal W_N(j)
+ =\sum_{q\le N}W(q)\chi_{N,q}(j),
+ \qquad
+ W=\omega_2*\Lambda_\omega.
+ }
+ \tag{T-26802.6}
+\]
 
-## 4. Exact transition localization
+This is an exact critically normalized physical-to-carry congruence for the
+RH-sensitive source.
+
+## 4. Exact source-change descent to the reserved carry profile
+
+PR #269 proves a strict transition reserve for
+
+\[
+ \mathcal P_N(j)
+ =\sum_{q\le N}\Lambda_\omega(q)\chi_{N,q}(j).
+ \tag{T-26802.7}
+\]
+
+`L-26805` proves coefficientwise
+
+\[
+ \boxed{
+ \Lambda_\omega(n)
+ =W(n)+
+ \sum_{\substack{d\mid n\\d\ge2}}
+ a_\omega(d)W(n/d).
+ }
+ \tag{T-26802.8}
+\]
+
+Every destination \(n/d\) is at most \(n/2\). In carry coordinates,
+
+\[
+ \boxed{
+ \mathcal P_N
+ =\mathcal W_N+
+ \sum_{d=2}^{N}a_\omega(d)
+ \sum_{m\le N/d}W(m)\chi_{N,dm}.
+ }
+ \tag{T-26802.9}
+\]
+
+Thus the established reserved profile equals the current RH-sensitive profile
+plus a complete family of strict half-scale source rows. The current coefficient
+is exactly one; there is no same-scale condition number.
+
+A production proof must complete the \(\mathcal P_N\) square before estimating
+the lower-scale family.
+
+## 5. Exact transition localization
 
 PR #269 proves for every source wavelet:
 
 \[
- (\mathcal K(n,m))_- \ne0
+ (\mathcal K(n,m))_-\ne0
  \quad\Longrightarrow\quad
  2m\le n<5m.
- \tag{T-26802.5}
+ \tag{T-26802.10}
 \]
 
-It also proves a uniform carry-feature Schur reserve and transfers that reserve
-to the actual generalized-prime profile.
-
-Consequently, after the annular map (T-26802.3), every potentially adverse
-current-scale forcing row lies in the three quotient cells
+The inner band and the complete quotient tail have the correct sign. The
+transition profile \(\mathcal P_N\) has an absolute source-specific Schur
+reserve. After (T-26802.9), every adverse current-scale row is therefore
+confined to the quotient cells
 
 \[
- 2,\quad3,\quad4.
- \tag{T-26802.6}
+ \boxed{2,3,4.}
+ \tag{T-26802.11}
 \]
 
-The inner band and the complete quotient tail have the correct sign.
+All other source-change terms are declared lower-scale rows.
 
-## 5. Exact lower-scale Selberg ledger
+## 6. Exact generalized Selberg lower-scale ledger
 
 Put
 
@@ -146,76 +215,72 @@ Put
 `L-26803` proves
 
 \[
+ \boxed{
  a_\omega(n)\log^2n
- =
- \mathcal F(n)
- +
- \sum_{\substack{k\mid n\\k\ge2}}
- a_\omega(k)\mathcal F(n/k).
- \tag{T-26802.7}
+ =\mathcal F(n)+
+ \sum_{\substack{d\mid n\\d\ge2}}
+ a_\omega(d)\mathcal F(n/d).
+ }
+ \tag{T-26802.12}
 \]
 
-Every argument \(n/k\) on the right is at most \(n/2\). Hence the complete
-proper-divisor Selberg defect is a nonnegative lower-block ledger delayed by at
-least \(\log2\).
+The proper-divisor defect is coefficientwise nonnegative and every destination
+is at most half scale.
 
-The three digital boundary atoms
+The source-change family (T-26802.8) and the Selberg-defect family
+(T-26802.12) use the same positive inverse coefficients. They must be assembled
+in one reflected lower-block ledger, not charged separately by total variation.
+
+The digital boundary
 
 \[
  \varepsilon-\frac52\delta_2+\delta_4
- \tag{T-26802.8}
+ \tag{T-26802.13}
 \]
 
-are retained separately. No boundary term is absorbed into the proper-divisor
-sum.
+and every finite collar row remain explicit.
 
-## 6. Eight-color orthogonality
+## 7. Eight-color orthogonality
 
-The critical filtered output of \(\mathcal A_M\) lies in
-\([M,128M)\). Annuli with base scales differing by \(256\) have disjoint
-physical support.
+The critical filtered output of \(\mathcal A_M\) lies in \([M,128M)\).
+Annuli whose base scales differ by \(256\) have disjoint physical support.
 
-Split all dyadic annuli into the eight colors
+Split dyadic annuli into eight colors
 
 \[
  M=2^{8r+c},
  \qquad c=0,1,\ldots,7.
- \tag{T-26802.9}
+ \tag{T-26802.14}
 \]
 
-Within each fixed color, both parity-filtered physical signals are orthogonal
-across annuli. The full energy is bounded by a fixed multiple of the sum of the
-eight color energies. Thus a recurrence may be proved independently on a
-fixed eight-channel system.
+Within one color, both parity-filtered physical signals are orthogonal across
+annuli. The complete source is therefore a fixed eight-channel system.
 
-## 7. Sole open theorem — Annular Split-Selberg Descent (`ASSD`)
+## 8. Sole open theorem — Corrected Annular Split-Selberg Descent (`ASSD`)
 
-For each sufficiently large annulus and each color, assemble:
+For each sufficiently large annulus and color, assemble:
 
-1. the complete parity-paired source manifest;
+1. the complete parity-paired RH-sensitive source manifest;
 2. PR #241's independent-frequency reflected block;
-3. the exact congruence (T-26802.3);
-4. all transition cells \(2,3,4\);
-5. the generalized-prime carry Schur reserve;
-6. every proper-divisor route from (T-26802.7);
-7. the three digital boundary atoms;
-8. all finite endpoint and collar rows.
+3. the exact critical annular split congruence (T-26802.5);
+4. the source-change square (T-26802.9);
+5. transition cells \(2,3,4\) and the PR #269 reserve;
+6. the proper-divisor Selberg ledger (T-26802.12);
+7. the digital boundary and every finite endpoint/collar row.
 
 The required production inequality is
 
 \[
  \boxed{
  \kappa_0 E_{r,c}+Q_{r,c}
- \le
- C(1+r)^A
- +
+ \le C(1+r)^A+
  \sum_{\ell\ge1}\sum_{d=0}^{7}
  \theta_{\ell,c,d}E_{r-\ell,d},
  }
- \tag{T-26802.10}
+ \tag{T-26802.15}
 \]
 
-where
+with
 
 \[
  Q_{r,c}\ge0,
@@ -223,101 +288,102 @@ where
  \kappa_0>0,
  \qquad
  \theta_{\ell,c,d}\ge0,
- \tag{T-26802.11}
 \]
 
-and the strict reserve condition is
+and
 
 \[
  \boxed{
- \sup_c
- \sum_{\ell,d}\theta_{\ell,c,d}
- <\kappa_0.
+ \sup_c\sum_{\ell,d}\theta_{\ell,c,d}<\kappa_0.
  }
- \tag{T-26802.12}
+ \tag{T-26802.16}
 \]
 
-Here \(E_{r,c}\) is the declared block energy of the parity-paired
-inverse-zeta source, or an exactly equivalent synthesized \(\omega_2\) energy.
-The equivalence map must be included in the proof object.
+Here \(E_{r,c}\) is the declared parity-paired block energy of the RH-sensitive
+reciprocal-zeta source. Every lower-block coefficient must be derived from the
+source-change, Selberg-defect, or digital ledger; no undeclared norm estimate is
+permitted.
 
-Equations (T-26802.10)--(T-26802.12) are `ASSD`.
+This strict charge/reserve inequality is the corrected `ASSD` theorem.
 
-## 8. Why ASSD is narrower than the former hinges
+## 9. Why this is a full-problem attack
 
-ASSD does not ask for:
+The remaining theorem no longer asks for:
 
-- a physical-to-carry operator: `L-26802/L-26804` give the safe parity-channel maps explicitly;
-- a generic carry frame: only the actual annular source is used;
-- control of quotient rows beyond factor five: their sign is closed;
-- an unsigned Selberg remainder: `L-26803` routes it positively to half scale;
+- a physical-to-carry operator;
+- a safe compact window;
+- a parity reconstruction;
+- a generic carry frame;
+- control of quotient rows beyond factor five;
+- an unidentified Selberg remainder;
+- an inversion from \(P\) to \(W\);
 - Bottom-Charge Positivity as an independent miracle;
-- full Carry Saturation, Greedy Slack, Green Energy, BTP, or Brownian SAT.
+- full Carry Saturation, Green Energy, BTP, or Brownian SAT.
 
-The only open issue is whether the total declared lower-block and boundary
-charge is strictly smaller than the reflected current-scale reserve.
+All source changes and remainders are exact strict-scale identities. The only
+open issue is whether their total reflected lower-block charge is strictly below
+the current annular reserve.
 
-## 9. ASSD implies RH
+## 10. ASSD implies RH
 
 Let
 
 \[
- F_r=\max_{c}E_{r,c}.
+ F_r=\max_cE_{r,c}.
 \]
 
-Dropping \(Q_{r,c}\) and using (T-26802.12) gives
+Dropping \(Q_{r,c}\) and using (T-26802.16) gives
 
 \[
- F_r
- \le
- C_1(1+r)^A+\vartheta\max_{\ell\ge1}F_{r-\ell},
- \qquad
- \vartheta<1.
+ F_r\le C_1(1+r)^A+\vartheta\max_{\ell\ge1}F_{r-\ell},
+ \qquad \vartheta<1.
 \]
 
 Induction yields
 
 \[
  F_r=O((1+r)^A)=e^{o(r)}.
- \tag{T-26802.13}
+ \tag{T-26802.17}
 \]
 
-The finite parity synthesis transfers the same exponent to the dyadic fixed-
-ratio Mertens shell. PR #263 `L-26209` then gives the Riesz and bottom-charge
-estimates, and the uncancelled reciprocal-zeta Mellin pole excludes every zero
-with real part greater than \(1/2\). Functional-equation symmetry yields
+The finite parity synthesis transfers the same exponent to the dyadic
+fixed-ratio Mertens shell. PR #263 `L-26209` gives the Riesz and bottom-charge
+estimates. Their Mellin transform has an uncancelled reciprocal-zeta pole at
+every hypothetical zero with real part greater than \(1/2\). Functional-
+equation symmetry then gives
 
 \[
  \boxed{\mathrm{ASSD}\Longrightarrow\mathrm{RH}.}
- \tag{T-26802.14}
+ \tag{T-26802.18}
 \]
 
-## 10. Automatic rejection
+## 11. Automatic rejection
 
-Reject a proposed ASSD proof if it:
+Reject a claimed proof if it:
 
-1. replaces the compact normalized window by an unnormalized step;
-2. uses one Fourier frequency instead of PR #241's two-frequency block;
-3. omits a parity channel, dyadic delay, or reflected cross term;
-4. partitions an odd-core fiber before exact recombination;
-5. identifies the carry and physical Grams without replaying (T-26802.3);
-6. drops the proper-divisor defect rather than routing it through
-   (T-26802.7);
-7. leaves a transition row outside cells \(2,3,4\);
-8. charges a same-scale boundary term as lower scale;
-9. has total lower-block coefficient at least the current reserve;
-10. promotes a finite matrix ladder to the uniform recurrence.
+1. uses \(a_\omega\log\) as the RH-sensitive physical coefficient;
+2. silently replaces \(\mathcal W\) by \(\mathcal P\);
+3. drops a source-change proper divisor;
+4. takes absolute values before completing the \(\mathcal P\) square;
+5. treats \(a_\omega\) as a summable contraction kernel;
+6. replaces the two-frequency block by a diagonal integral;
+7. omits a parity channel, dyadic delay, or reflected cross term;
+8. leaves a negative current row outside cells \(2,3,4\);
+9. drops the generalized Selberg defect;
+10. has total lower-block charge at least the reserve;
+11. promotes a finite matrix ladder to the uniform theorem.
 
-## 11. Exact status
+## 12. Exact status
 
 ```text
-opposite-parity source and parity frame       proposed exact
-critical parity-filtered compact windows       proposed exact
-critical filtered annular split isometries     proposed exact + replay
-factor-five transition localization            proposed complete
-actual generalized-prime carry reserve         proposed complete
-positive proper-divisor half-scale defect      proposed exact + replay
-ASSD strict reflected recurrence               OPEN / RH-BEARING
-ASSD -> shell energy -> RH                     complete conditional chain
-Riemann Hypothesis                             UNPROVED
+opposite-parity source and parity frame          proposed exact
+critical compact physical windows                proposed exact
+RH-sensitive annular physical/carry map          proposed exact + replay
+source-change current + half-scale identity      proposed exact + replay
+factor-five localization for reserved profile    proposed complete
+reserved generalized-prime carry Schur moat      proposed complete
+positive Selberg proper-divisor half-scale defect proposed exact + replay
+ASSD strict reflected charge/reserve inequality  OPEN / RH-BEARING
+ASSD -> shell energy -> RH                        complete conditional chain
+Riemann Hypothesis                                UNPROVED
 ```
