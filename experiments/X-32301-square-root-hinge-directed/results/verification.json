@@ -1,0 +1,49 @@
+{
+  "classification": "DIRECTED_FINITE_SHARP_NOMINATIONS_VERIFIED",
+  "digits": 30,
+  "endpoints": [
+    {
+      "endpoint": 100,
+      "endpoint_zero": true,
+      "minimum_lower_bound_denominator": "9702000000000000000000000000000000",
+      "minimum_lower_bound_index": 99,
+      "minimum_lower_bound_scaled_numerator": "4987437106619954734479820974800",
+      "strictly_positive_coefficients": 98
+    },
+    {
+      "endpoint": 1000,
+      "endpoint_zero": true,
+      "minimum_lower_bound_denominator": "997002000000000000000000000000000000",
+      "minimum_lower_bound_index": 999,
+      "minimum_lower_bound_scaled_numerator": "15807433476107018535267474866000",
+      "strictly_positive_coefficients": 998
+    },
+    {
+      "endpoint": 10000,
+      "endpoint_zero": true,
+      "minimum_lower_bound_denominator": "99970002000000000000000000000000000000",
+      "minimum_lower_bound_index": 9999,
+      "minimum_lower_bound_scaled_numerator": "49998749937496093476541783730000",
+      "strictly_positive_coefficients": 9998
+    },
+    {
+      "endpoint": 100000,
+      "endpoint_zero": true,
+      "minimum_lower_bound_denominator": "9999700002000000000000000000000000000000",
+      "minimum_lower_bound_index": 99999,
+      "minimum_lower_bound_scaled_numerator": "158113487721735009662171005100000",
+      "strictly_positive_coefficients": 99998
+    },
+    {
+      "endpoint": 1000000,
+      "endpoint_zero": true,
+      "minimum_lower_bound_denominator": "999997000002000000000000000000000000000000",
+      "minimum_lower_bound_index": 999999,
+      "minimum_lower_bound_scaled_numerator": "499999874999937499958499731000000",
+      "strictly_positive_coefficients": 999998
+    }
+  ],
+  "proof_boundary": "directed finite hinge-inverse signs only; does not prove SHARP for all endpoints or RH",
+  "schema": "X-32301-square-root-hinge-directed-v1",
+  "sha256_without_digest": "bff870a0959743a9aa2fcdcd97f372cdb9d79c402d6349ce9a8c8ef8c81286fd"
+}
