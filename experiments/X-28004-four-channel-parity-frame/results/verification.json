@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "forcing_twist_sum_cases": 500,
+    "hadamard_norm_cases": 100,
+    "one_variable_bezout_identities": 2,
+    "tensor_bezout_nonzero_coefficients": 1
+  },
+  "classification": "EXACT_Q_SQRT2_SQRT3_POLYNOMIAL_ALGEBRA",
+  "does_not_prove": [
+    "four-channel physical upper estimate",
+    "BTEBC",
+    "Riemann Hypothesis"
+  ],
+  "schema": "X-28004-four-channel-parity-frame-v1",
+  "sha256_without_digest": "b339810189bb94626524b9da21ef8e787cd05d38df517f81a86a51866ea6a617"
+}
