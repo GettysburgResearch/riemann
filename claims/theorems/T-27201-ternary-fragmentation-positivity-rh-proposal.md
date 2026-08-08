@@ -1,14 +1,13 @@
-# T-27201 — Deterministic ternary fragmentation positivity implies RH
+# T-27201 — Conditional ternary fragmentation implication; positivity refuted
 
 Claim ID: `T-27201`  
-Title: Nonnegativity of one explicit descending `1/3–2/3` carry recurrence gives a zero-slack balanced carry certificate and the Riemann Hypothesis  
-Status: **FULL CONDITIONAL PROPOSAL / ONE SCALAR POSITIVITY THEOREM OPEN**  
+Title: Ternary Fragmentation Positivity would imply RH, but the positivity hypothesis is false  
+Status: **CONDITIONAL IMPLICATION RETAINED; PROPOSED CLOSING HYPOTHESIS REFUTED BY `R-27201`**  
 Authoring agent: `gpt56-02-r`  
 Created: 2026-08-08  
-Dependencies: `L-27201`, `L-27202`, `T-26202`, `L-23808`, `L-23809`  
-Scope: complete implication; no claim that the positivity hypothesis is proved
+Dependencies: `L-27201`, `L-27202`, `R-27201`, `T-26202`, `L-23808`, `L-23809`
 
-## 1. Ternary Fragmentation Positivity
+## 1. Conditional implication
 
 For the logarithmic target
 
@@ -16,105 +15,60 @@ For the logarithmic target
 w_X(q)=q^{-1/2}\log(X/q),
 \]
 
-construct `r_X` and the deterministic coefficients `A_X(n)` by
-`L-27201.2`--`L-27201.6`.
-
-The sole hypothesis is
+let `A_X(n)` be the deterministic ternary coefficients of `L-27201`. If
 
 \[
-\boxed{
-A_X(n)\ge0
-\qquad(2\le n\le X)
-}
-\tag{TFP}
-\]
-
-for every sufficiently large integer `X`.
-
-Equivalently, the scalar renewal tail `S_X` in (L-27201.12) is nonincreasing.
-
-## 2. TFP gives the exact MFT certificate
-
-Put
-
-\[
-d_{n,j}=A_X(n)\mathbf1_{j=\lceil n/3\rceil}.
-\]
-
-The split is uniformly balanced with `eta=1/4`. By `L-27201.7`, every integer
-carry column is saturated exactly:
-
-\[
-\sum_{n,j}d_{n,j}\chi_{n,j}(q)=w_X(q).
-\]
-
-Thus `TFP` is a deterministic strengthening of `MFT_{1/4}`; no quadratic LP,
-choice rule, or unbounded split dictionary remains.
-
-## 3. Sharp entropy transfer
-
-The atomized carry/Legendre identity gives
-
-\[
-\sum_{n,j}d_{n,j}\log\binom nj
-=
-\sum_{q=p^a\le X}\frac{\Lambda(q)}{\sqrt q}\log(X/q).
-\]
-
-The balanced carry-count/entropy comparison and the exact capacity bound imply
-
-\[
-\sum_{q=p^a\le X}\frac{\Lambda(q)}{\sqrt q}\log(X/q)
-\ge4\sqrt X-O(\log^2X).
+A_X(n)\ge0\qquad(2\le n\le X)
 \tag{T-27201.1}
 \]
 
-## 4. RH completion
-
-At `X=N^2`, the reviewed square-screw identity converts (T-27201.1) into a
-polylogarithmic upper envelope for the negative RH-sensitive screw channel.
-The square-sampling/Landau theorem forces rightmost-zero displacement zero.
-Functional-equation symmetry gives
+held cofinally, then the flow
 
 \[
-\boxed{\mathrm{RH}.}
+d_{n,j}=A_X(n)\mathbf1_{j=\lceil n/3\rceil}
 \]
 
-## 5. Exact remaining theorem
-
-`L-27201.17` proves `TFP` on the outer range `5n>=X`. The unresolved theorem is
-therefore the explicit finite inequality
+would be a nonnegative, uniformly balanced, zero-slack MFT certificate. The
+atomized carry/entropy theorem would give
 
 \[
-\boxed{
-S_X(n)\ge S_X(n+1)
-\qquad(2\le n<X/5),
-}
-\tag{T-27201.2}
+\sum_{p^a\le X}\frac{\Lambda(p^a)}{\sqrt{p^a}}
+\log(X/p^a)
+\ge4\sqrt X-O(\log^2X),
 \]
 
-where `S_X` is given recursively by
+and the reviewed square-screw/Landau transfer would imply RH.
+
+This conditional chain remains correct.
+
+## 2. Refuted hypothesis
+
+`R-27201` proves
 
 \[
-S_X(n)=u_n+S_X(\lceil3n/2\rceil)+S_X(3n-2).
+A_{10^7}(63)<0.
 \]
 
-This statement retains the coherent Möbius mode. It is not claimed to follow
-from generic renewal positivity or finite reconnaissance.
+Therefore (T-27201.1) is false and this theorem is not an unconditional RH
+proposal.
 
-## 6. Status boundary
+## 3. Surviving use
 
-Exact and reviewable:
+The ternary flow remains an exact signed equality solution and a useful base
+point for the full fragmentation cone. Any corrected MFT construction may add
+Pascal four-cycles or additional balanced split channels while preserving:
 
-- deterministic producer;
-- zero-slack carry saturation;
-- fixed balance reserve;
-- scalar tail-renewal equivalence;
-- outer positivity;
-- conditional entropy/Landau completion.
+- the node divergence;
+- every carry column;
+- the complete logarithmic binomial objective.
 
-Open and RH-bearing:
+The exact surviving theorem is now:
 
-- inner `TFP` / renewal monotonicity.
+```text
+nonnegative Pascal-cycle repair of the signed ternary flow
+=> MFT
+=> sharp prime ramp
+=> RH.
+```
 
-RH remains unproved.
+Existence of such a cofinal repair remains open.
