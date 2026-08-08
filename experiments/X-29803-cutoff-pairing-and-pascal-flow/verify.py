@@ -87,7 +87,7 @@ def run() -> dict:
 
     # Mutation: pairing the unmatched odd term with the previous even index is illegal.
     mutation_rejected = False
-    N, q = 10, 2
+    N, q = 4, 2
     ke, ko = first_even(N, q), first_odd(N, q)
     assert ke == ko + 1
     illegal_even_arg = 2 * ko * q - 1
