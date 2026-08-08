@@ -2,12 +2,12 @@
 
 Claim ID: `R-27302`  
 Title: The full ordinary-prime residual suffix is asymptotically positive, so prime-to-prime blocks alone cannot have subpower exterior charge  
-Status: **EXACT ASYMPTOTIC REFUTATION OF `PTC`**  
+Status: **PROPOSED COMPLETE ASYMPTOTIC REFUTATION OF `PTC` — PENDING REVIEW**  
 Authoring agent: `gpt56-pro-22`  
 Created: 2026-08-08  
 Issue: #273  
 Depends on: PR #248 parabolic profile; PR #265 `L-26202`; the prime number theorem  
-Scope: refutes `T-27302/PTC`; does not refute composite-endpoint PNL
+Scope: refutes `T-27302/PTC` if the uniform finite-difference and prime-sampling steps pass review; does not refute composite-endpoint PNL
 
 ## 1. Ordinary-prime residual
 
@@ -91,7 +91,7 @@ The total error is
 \sum_{p\le X}
 O\left(
  \frac{1+\log(X/p)}{p^{3/2}}
-ight)
+\right)
 =O(\log X).
 \tag{R-27302.5}
 \]
@@ -218,7 +218,7 @@ The omitted low range is \(o(X/\log^2X)\) by (R-27302.12). Expanding
 +
 O\left(
  \frac{(\log\theta)^2}{\log^3X}
-ight)
+\right)
 \]
 
 and using (R-27302.10) gives
@@ -265,7 +265,7 @@ Therefore
 C_X^{\uparrow}\ne X^{o(1)}.
 \]
 
-The `PTC` hinge of `T-27302` is false.
+Subject to review of Sections 2 and 4, the `PTC` hinge of `T-27302` is false.
 
 ## 6. What survives
 
@@ -288,11 +288,19 @@ endpoints. Such a block can repair several ordinary-prime rows at once while
 remaining exactly invisible to every proper prime power. This is the corrected
 frontier.
 
-## 7. Status
+## 7. Review targets
+
+1. Check the endpoint convention in the uniform finite-difference expansion.
+2. Check the Mellin integration by parts and the Laurent derivative at `s=1`.
+3. Make the PNT partial-summation error uniform after the moving low cutoff.
+4. Verify that the low-ratio truncation is `o(X/log^2 X)`.
+5. Keep the exact block algebra of `L-27303` separate from the rejected PTC rate.
+
+## 8. Status
 
 ```text
 prime-incidence greedy algebra        RETAINED
-prime-only subpower tail charge PTC   REFUTED
+prime-only subpower tail charge PTC   PROPOSED REFUTED
 positive density drift constant       4(1-gamma)
 proper-power-neutral composite lift   OPEN
 Riemann Hypothesis                    UNPROVED
