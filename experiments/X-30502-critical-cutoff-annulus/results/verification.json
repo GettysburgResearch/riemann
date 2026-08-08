@@ -1,0 +1,34 @@
+{
+  "H_5_over_2_interval_decimal": [
+    "0.010952557097211857",
+    "0.010952564974473577"
+  ],
+  "P_interval_decimal": [
+    "-0.312005425069761021",
+    "-0.312005424604099733"
+  ],
+  "P_prime_interval_decimal": [
+    "0.296840236383090031",
+    "0.296840243833670629"
+  ],
+  "analytic_completion": [
+    "uniform shifted-tail error <= 6/q",
+    "unique divisor-source coefficient sigma(q)=Q_N(q) when 2q>M",
+    "atomic norm >= cN on q in [2N/5,4N/9]"
+  ],
+  "classification": "DIRECTED_CRITICAL_CUTOFF_ANNULUS_MARGIN_VERIFIED",
+  "eta_interval_decimal": [
+    "0.604898643417552208",
+    "0.604898643883213497"
+  ],
+  "eta_prime_interval_decimal": [
+    "0.193288827900602967",
+    "0.193288835351183565"
+  ],
+  "first_index_geometry_cases": 14703,
+  "hasse_order": 30,
+  "proof_boundary": "directed constant and integer geometry only; the uniform-limit argument is in L-30503; cycle-optimized debt and RH are not proved",
+  "proved_margin": "H(5/2)>1/1000",
+  "schema": "X-30502-critical-cutoff-annulus-v1",
+  "sha256_without_digest": "19c01a240a263affe4d1c001eebae64f957b0f73f77af729447398f9a64ce1f6"
+}
