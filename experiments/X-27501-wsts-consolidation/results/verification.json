@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "dyadic_shell_telescope": {
+      "cases": 8128,
+      "max_X": 128
+    },
+    "finite_dyadic_ratio": {
+      "cases": 4998,
+      "range": "[1/3,1/2]"
+    },
+    "logarithmic_error_budget": {
+      "L3_coefficient": "1/3",
+      "L4_coefficient": "1/12"
+    },
+    "normalized_tail_derivative": {
+      "formal_terms": 3,
+      "identity": "J'=2 theta^-3/2[N theta+1-(S_N+1)sqrt(theta)]"
+    },
+    "prime_tail_queue": {
+      "cases": 19530,
+      "max_length": 6
+    },
+    "stieltjes_integration_by_parts": {
+      "events": 4,
+      "segments": 5,
+      "value": "-182/15"
+    },
+    "weighted_skorokhod_charge": {
+      "cases": 19530,
+      "max_length": 6
+    },
+    "weighted_tail_abel": {
+      "cases": 3905,
+      "max_length": 5
+    },
+    "zero_cost_weighted_transfer": {
+      "cases": 30
+    }
+  },
+  "classification": "EXACT_FINITE_ALGEBRA_ONLY",
+  "does_not_prove": [
+    "RH",
+    "WSTS",
+    "Chebyshev error bound",
+    "cofinal prime-sampling estimate"
+  ],
+  "schema": "X-27501-wsts-consolidation-v1",
+  "sha256_without_digest": "bed2adcc56608f1fcd42227c6603eaa7ed7bb00b0afd3a39de78d64c0486d03c"
+}
