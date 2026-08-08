@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "delete_d2_mutation_coefficient_at_m2": 2,
+    "hyperbola_coefficient_cases": 32640,
+    "local_euler_coefficient_cases": 256,
+    "max_R": 256,
+    "max_abs_omega23": 4,
+    "strict_delay_pair_cases": 170444
+  },
+  "classification": "EXACT_INTEGER_CONVOLUTION_ALGEBRA",
+  "does_not_prove": [
+    "BTEBC",
+    "physical bank upper estimate",
+    "Riemann Hypothesis"
+  ],
+  "schema": "X-28002-omega23-prefix-bank-v1",
+  "sha256_without_digest": "6acf516e24858910b6865d091123a04fa8a74c28a6a9f03f311e59c6f1f60a8f"
+}
