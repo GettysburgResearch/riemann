@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """Exact regression for the zeroth Euler common-tail atomic-mass obstruction.
 
-The checker uses only integer and Fraction arithmetic.  It verifies:
+The checker uses only integer and Fraction arithmetic. It verifies:
 
 - the declared q interval has common shifted-even/odd first omitted index k=2;
 - the odd source coordinate contributes the symbolic atomic amount 1/(10 sqrt(q));
 - a rational lower enclosure obtained from
     log(1+1/Y) >= 1/(Y+1),
     1/sqrt(q) >= 1/ceil_sqrt(q)
-  already grows at square-root scale on the tested endpoints.
+  already dominates floor(sqrt(X))/1000 on the tested endpoints.
 
-It proves finite algebra and lower enclosures only.  The cofinal lower bound is
+It proves finite algebra and lower enclosures only. The cofinal lower bound is
 proved in R-30402.
 """
 from __future__ import annotations
@@ -67,19 +67,15 @@ def main() -> None:
     rows = []
     for X in endpoints:
         lower, count = rational_lower_bound(X)
-        # A deliberately weak exact square-root mutation.
         threshold = Fraction(isqrt(X), 1000)
         assert lower > threshold
         rows.append(
             {
                 "X": X,
                 "source_rows": count,
-                "rational_lower_numerator": lower.numerator,
-                "rational_lower_denominator": lower.denominator,
-                "floor_sqrt_over_1000": {
-                    "numerator": threshold.numerator,
-                    "denominator": threshold.denominator,
-                },
+                "lower_gt_floor_sqrt_over_1000": True,
+                "lower_fraction_numerator_bits": lower.numerator.bit_length(),
+                "lower_fraction_denominator_bits": lower.denominator.bit_length(),
             }
         )
 
