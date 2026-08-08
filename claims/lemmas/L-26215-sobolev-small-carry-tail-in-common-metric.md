@@ -1,12 +1,12 @@
-# L-26215 — The strict digital source tail is Sobolev-small in the common carry metric
+# L-26215 — Sobolev-small digital tails after a declared smoothing intertwiner
 
 Claim ID: `L-26215`  
-Title: The signed strict-delay tail of every annular bank observation inherits the explicit binary-digit `H^1 -> L^2` decay without source substitution  
-Status: **PROPOSED COMPLETE ANALYTIC ADAPTER PENDING INDEPENDENT REVIEW**  
+Title: The binary-digit tail has explicit `H^1 -> L^2` decay, but application to the raw annular step signal requires a separate smoothing/source-map theorem  
+Status: **SCOPE-CORRECTED CONDITIONAL ADAPTER — RAW CARRY APPLICATION OPEN**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-08  
-Depends on: `L-26213`, `L-26214`; PR #236 `L-23016`; PR #268 `L-26802/L-26804`  
-Scope: fixed compact smoothing or declared Sobolev source domain; no estimate for the finite current feature, commutator boundary, or RH
+Depends on: `L-26213`, `L-26214`; PR #236 `L-23016`; `L-26204`  
+Scope: exact physical tail identity and Sobolev estimate on an `H^1` carrier; no direct estimate for the unsmoothed carry signal
 
 ## 1. The digital tail operator
 
@@ -23,7 +23,7 @@ define
 =\sum_{n\ge Y}\frac{c_2(n)}{\sqrt n}\tau_{\log n}.
 \]
 
-PR #236 `L-23016` proves, for every causal source in the declared Sobolev domain,
+PR #236 `L-23016` proves, for every causal source in its declared absolutely-continuous Sobolev domain,
 
 \[
 \boxed{
@@ -34,7 +34,7 @@ PR #236 `L-23016` proves, for every causal source in the declared Sobolev domain
 }
 \tag{L-26215.1}
 
-where one explicit choice satisfies
+where
 
 \[
 \boxed{
@@ -43,126 +43,91 @@ where one explicit choice satisfies
 }
 \tag{L-26215.2}
 
-The same estimate holds on cumulative finite horizons with the declared upper endpoint collar.
+This theorem is retained exactly at that scope.
 
-## 2. Tail observation of an annular source
+## 2. Exact source identity
 
-Let `x` be any finite annular coefficient sequence and let
-
-\[
-Q_x=h_\omega*\alpha_x
-\]
-
-be the compact opposite-parity physical signal of `L-26213`.
-
-The coefficient tail is
-
-\[
-x_Y^{\rm tail}=c_{\ge Y}*x.
-\]
-
-By the exact source intertwiner `L-26213`,
+For every finite coefficient sequence `x`, the source intertwiner of `L-26213` gives, as a causal distribution and in `L^2`,
 
 \[
 \boxed{
-Q_{x_Y^{\rm tail}}
+Q_{c_{\ge Y}*x}
 =\mathcal T_YQ_x.
 }
 \tag{L-26215.3}
 
-Therefore (L-26215.1) gives
+Thus whenever the chosen physical carrier `Q_x` belongs to the Sobolev domain of (L-26215.1),
 
 \[
 \boxed{
 \|Q_{c_{\ge Y}*x}\|_2
 \le
-\varepsilon_Y\|Q_x\|_{H^1_*},
+\varepsilon_Y
+\left(\|Q_x\|_2+\|Q_x'\|_2\right).
 }
 \tag{L-26215.4}
 
-where
+The same statement holds after convolution with a fixed compact `C_c^1` smoother, because smoothing commutes with every translation and with arithmetic source convolution.
+
+## 3. Scope correction for the raw annular window
+
+The compact window `h_omega` used in `L-26213` is piecewise exponential with jump discontinuities. For a generic finite annular coefficient sequence, the raw signal
 
 \[
-\|Q_x\|_{H^1_*}=\|Q_x\|_2+\|Q_x'\|_2.
+Q_x=h_\omega*\alpha_x
 \]
 
-For the critical parity-filtered windows, the same statement holds componentwise because the finite translation filters commute with the digital tail and with the physical derivative.
+is not in `H^1`: its distributional derivative contains the source jump atoms.
 
-## 3. Exact transfer to the carry source tail
+Therefore (L-26215.1) may **not** be applied directly to the raw `Q_x`, and the equality of its `L^2` norm with the weighted carry norm does not by itself supply an `H^1` estimate.
 
-The carry split of `Q_(c_>=Y*x)` has coefficient source
+The earlier version of this lemma silently combined these incompatible domains. That inference is withdrawn.
+
+## 4. Two legitimate completion interfaces
+
+A proof may recover the intended tail decay through either of the following explicit routes.
+
+### 4.1 Smoothed annular intertwiner
+
+Choose a fixed zero-safe compact smoother `g` and prove an exact source map from
 
 \[
-\omega_2*(c_{\ge Y}*x),
+g*Q_x
 \]
 
-which is exactly the tail `T_(Y,M)` of `L-26214` for the RH-sensitive annular coefficient.
+to a positive integral or finite direct sum of the carry rows used in the factor-five reserve. Then (L-26215.4) applies to `g*Q_x`.
 
-By the common weighted isometry `L-26213`, its complete weighted carry vector `V_tail` satisfies
+The smoothing-to-carry source map is not supplied by `L-26213` and remains a production obligation.
 
-\[
-\boxed{
-\|V_{\rm tail}\|_{\mathscr H_w}
-=\|Q_{c_{\ge Y}*x}\|_2.
-}
-\tag{L-26215.5}
+### 4.2 Six-factor positive potential
 
-Combining (L-26215.4) and (L-26215.5),
+`L-26204` represents the complete Euler-fiber source as
 
 \[
-\boxed{
-\|V_{\rm tail}\|_{\mathscr H_w}
-\le
-\varepsilon_Y\|Q_x\|_{H^1_*},
-\qquad
-\varepsilon_Y=O((\log Y)/\sqrt Y).
-}
-\tag{L-26215.6}
-
-No absolute value is taken on the Möbius source, and no pole-blind source replaces `x`.
-
-## 4. Uniform absorption in the critical hyperbola bank
-
-In `L-26211`, every current prefix has length at least `N`. Hence every individual strict-prefix tail obeys
-
-\[
-\|V_{\rm tail}\|_{\mathscr H_w}
-\le
-\varepsilon_N\|Q_x\|_{H^1_*}.
+Z=\partial_t^2(\partial_t-1/2)Y_K,
 \]
 
-The production ledger must still recombine repeated product destinations before summing the bank. But once the exact synthesis weights are assembled in the common metric, every residual tail column carries the same vanishing Sobolev factor `epsilon_N`.
+where `K` is a six-factor compact convolution. The potential has sufficient spline regularity to furnish a Sobolev carrier after the declared boundary operator is incorporated.
 
-Thus the tail is no longer an unquantified RH-bearing source. The only unsuppressed current-scale object in each observation is the finite three-scale generalized-prime feature of `L-26214`, together with the explicit pole-preserving boundary/commutator channel.
+A production proof must still connect that smoother carrier to the exact annular/factor-five carry feature without dropping endpoint atoms.
 
-## 5. Consequence for the remaining theorem
+## 5. Surviving exact conclusion
 
-The annular banked source theorem may now be stated without a generic lower-scale tail hypothesis. It remains to prove a complete signed estimate for
+The physical tail identity (L-26215.3) and the Sobolev estimate (L-26215.4) are valid under their explicit regularity hypothesis. They show that no new arithmetic estimate is needed once a Sobolev-compatible physical-to-carry intertwiner is constructed.
 
-```text
-finite three-scale generalized-prime current feature
-+
-pole-preserving commutator and endpoint collars
-+
-recombined bank synthesis,
-```
-
-while the strict digital tail is an absorbable `o(1)` Sobolev perturbation.
-
-A valid proof must use the complete synthesis ledger; multiplying `epsilon_N` by a total-variation bound for all synthesis coefficients may erase its decay and is not justified by this lemma.
+They do **not** currently prove that the raw strict-prefix carry tail is `O((log Y)/sqrt Y)` in the weighted carry norm.
 
 ## 6. Proof boundary
 
-Closed, subject to review:
+Closed exactly:
 
-- exact identification of the coefficient tail with the physical digital-tail operator;
-- the explicit `O((log Y)/sqrt Y)` Sobolev bound;
-- exact transfer to the common weighted carry norm;
-- uniform vanishing factor for every prefix in the critical hyperbola bank.
+- identification of the coefficient tail with the physical digital-tail operator;
+- the `O((log Y)/sqrt Y)` estimate on an `H^1` carrier;
+- commutation with a declared fixed smoothing.
 
 Open:
 
-- signed recombination of all bank tails without a total-variation loss;
-- the finite current-feature/boundary reserve;
+- a Sobolev-compatible smoothing/potential-to-carry intertwiner;
+- a quantitative raw carry-tail estimate;
 - the annular recurrence;
 - RH.
