@@ -1,0 +1,40 @@
+{
+  "classification": "PASS_CONTINUUM_ONE_CROSSING_AND_FINITE_RECONNAISSANCE",
+  "continuum": {
+    "D_at_1_over_7": -0.012849754830424165,
+    "D_at_1_over_8": 0.09310309584295662,
+    "D_at_1_over_9": 0.10653536326642488,
+    "derivative_left_margins": {
+      "N10": 0.0175753514427317,
+      "N8": -0.014253377367007936,
+      "N9": 0.45008811266088067,
+      "minimum_N9_to_200000": 0.0175753514427317
+    },
+    "negative_cell_maxima": [
+      {"N": 2, "maximum": -0.30326971910079115, "theta_at_max": 0.4806428051306827},
+      {"N": 3, "maximum": -0.15252285714869185, "theta_at_max": 0.25},
+      {"N": 4, "maximum": -0.1465793449733468, "theta_at_max": 0.22527718280407602},
+      {"N": 5, "maximum": -0.021529971712721974, "theta_at_max": 0.16666666666666666},
+      {"N": 6, "maximum": -0.011168875882033191, "theta_at_max": 0.1492020083022506}
+    ],
+    "root_bracket": [0.1408520350138399, 0.14085203501383993]
+  },
+  "external_discovery_only": {
+    "crossing_ratio_at_max_X": 0.1408523,
+    "max_X": 10000000,
+    "note": "The 10^7 scan was exploratory and is not replayed by this standard-library script.",
+    "one_crossing_violations": 0,
+    "positive_weighted_tail_violations": 0
+  },
+  "finite_shell_scans": [
+    {"X": 100, "all_coordinates": true, "crossing_ratio": 0.17, "first_negative": 17, "maximum_tail_start": 97, "maximum_weighted_prime_tail": -0.00256419748967841, "sign_changes": 1, "total_weighted_shell": -0.4642222157955587},
+    {"X": 1000, "all_coordinates": true, "crossing_ratio": 0.142, "first_negative": 142, "maximum_tail_start": 997, "maximum_weighted_prime_tail": -0.00011045201812308737, "sign_changes": 1, "total_weighted_shell": -0.7514202416672952},
+    {"X": 5000, "all_coordinates": true, "crossing_ratio": 0.141, "first_negative": 705, "maximum_tail_start": 4999, "maximum_weighted_prime_tail": -1.204886296586615e-05, "sign_changes": 1, "total_weighted_shell": -1.0303475261270985},
+    {"X": 20000, "all_coordinates": true, "crossing_ratio": 0.1409, "first_negative": 2818, "maximum_tail_start": 19997, "maximum_weighted_prime_tail": -1.7517008446646197e-06, "sign_changes": 1, "total_weighted_shell": -1.288212970572611},
+    {"X": 100000, "all_coordinates": false, "crossing_ratio": 0.14087, "first_negative": 14087, "maximum_tail_start": 99991, "maximum_weighted_prime_tail": -1.8219674752900594e-07, "sign_changes": 1, "total_weighted_shell": -1.602718543755997},
+    {"X": 200000, "all_coordinates": false, "crossing_ratio": 0.140905, "first_negative": 28181, "maximum_tail_start": 199999, "maximum_weighted_prime_tail": -6.823695033632625e-08, "sign_changes": 1, "total_weighted_shell": -1.704921523295516}
+  ],
+  "schema": "X-27901-dyadic-one-crossing-v1",
+  "scope": "Continuum structure and finite numerical reconnaissance only. This does not prove cofinal FSCR, EPD, WSTS, or RH.",
+  "sha256_without_digest": "cf3007f56fb5a85f008bcd99723b4c24c1323e8252601eaaa9e821d4649c402d"
+}
