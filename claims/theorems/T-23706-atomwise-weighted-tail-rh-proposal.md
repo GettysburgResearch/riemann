@@ -10,28 +10,29 @@ Scope: full Riemann Hypothesis
 
 ## 1. Atomwise Weighted-Tail Order
 
-Retain the endpoint residual atom `e_T(q)` from `L-23717`.  The proposed theorem is
+Retain the endpoint residual atom `e_T(q)` from `L-23717`. The proposed theorem is
 
 > **AWTO.** For every integer `T>=3` and every real `z>=2`,
 > \[
 > \boxed{
 > \mathcal A_T(z)
 > =
-> \sum_{\substack{z\le p<T\\p\ {m prime}}}
+> \sum_{\substack{z\le p<T\\p\,\text{prime}}}
 > (\log p)e_T(p)
 > \le0.
 > }
 > \tag{AWTO}
 > \]
 
-Every object is finite.  In the radical coordinate of `L-23717`, this is exactly
+Every object is finite. In the radical coordinate of `L-23717`, this is exactly
 
 \[
 \sum_{m=2}^{T-1}
 F_T(m)[L_z(m)-L_z(m-1)]
 \le
 \ell_T
-\sum_{z\le p<T}\frac{\log p}{\sqrt p}.
+\sum_{\substack{z\le p<T\\p\,\text{prime}}}
+\frac{\log p}{\sqrt p}.
 \tag{T-23706.1}
 \]
 
@@ -39,7 +40,7 @@ No zero, contour, limiting operator, or omitted tail occurs in the statement.
 
 ## 2. AWTO makes the shell charge identically zero
 
-Let `2<=Y<X`.  The exact endpoint telescope of `L-23717` gives, for every lower cutoff `z`,
+Let `2<=Y<X`. The exact endpoint telescope of `L-23717` gives, for every lower cutoff `z`,
 
 \[
 \mathcal S_{X,Y}(z)
@@ -48,7 +49,7 @@ Let `2<=Y<X`.  The exact endpoint telescope of `L-23717` gives, for every lower 
 \tag{T-23706.2}
 \]
 
-Under AWTO every summand is nonpositive.  Therefore
+Under AWTO every summand is nonpositive. Therefore
 
 \[
 \boxed{
@@ -82,7 +83,7 @@ PR #276 proves, subject to its declared review boundary,
 \tag{T-23706.5}
 \]
 
-Equation (T-23706.4) is stronger than `WSTS`.  Consequently
+Equation (T-23706.4) is stronger than `WSTS`. Consequently
 
 \[
 \boxed{\mathrm{AWTO}\Longrightarrow\mathrm{RH}.}
@@ -102,7 +103,7 @@ e_T(q)\le0
 \tag{T-23706.7}
 \]
 
-Hence the complete upper half of every atom is already feasible term by term.  The theorem is not a same-scale prime-spacing problem.  Its positive debt is confined to lower quotient layers and must be transported into the explicit upper-half slack.
+Hence the complete upper half of every atom is already feasible term by term. The theorem is not a same-scale prime-spacing problem. Its positive debt is confined to lower quotient layers and must be transported into the explicit upper-half slack.
 
 The full prime-tail inequality also has the source-complete form
 
@@ -111,7 +112,8 @@ The full prime-tail inequality also has the source-complete form
 F_T(m)\Delta L_z(m)
 -
 \ell_T
-\sum_{z\le p<T}\frac{\log p}{\sqrt p}
+\sum_{\substack{z\le p<T\\p\,\text{prime}}}
+\frac{\log p}{\sqrt p}
 \le0.
 \tag{T-23706.8}
 \]
@@ -142,7 +144,7 @@ On each layer the endpoint profile is the fixed concave function
 F_T(m)=2\ell_T\sqrt m+\eta_Tm.
 \]
 
-The upper boundary of every layer is retained explicitly.  The `r=1` layer is already nonpositive by `L-23717`.
+The upper boundary of every layer is retained explicitly. The `r=1` layer is already nonpositive by `L-23717`.
 
 ### 5.2 Pascal/radical decomposition
 
@@ -152,7 +154,7 @@ Use the exact carry identity
 \Gamma_T(p)=\sum_n a_T(n)\beta_{np}
 \]
 
-with `a_T>=0`.  For a split `j+(n-j)=n`, the prime set counted by the first carry is a divisor of the squarefree kernel of `binom(n,j)`.  The missing proper-power channels are retained as a positive digital reserve, not discarded through `G_n^(prime)<=G_n`.
+with `a_T>=0`. For a split `j+(n-j)=n`, the prime set counted by the first carry is a divisor of the squarefree kernel of `binom(n,j)`. The missing proper-power channels are retained as a positive digital reserve, not discarded through `G_n^(prime)<=G_n`.
 
 The required output is an exact decomposition of (T-23706.8) into:
 
@@ -165,11 +167,11 @@ strictly lower endpoint atoms.
 
 ### 5.3 Reflected local square only on the trace-zero residue
 
-The final fluctuation is paired with the reviewed two-frequency physical reflected block of PR #241.  Its complete Hermitian square must be written in the endpoint-atom source coordinates.  Aggregate all-line positivity or the old one-frequency block identification is insufficient.
+The final fluctuation is paired with the reviewed two-frequency physical reflected block of PR #241. Its complete Hermitian square must be written in the endpoint-atom source coordinates. Aggregate all-line positivity or the old one-frequency block identification is insufficient.
 
 ### 5.4 Lower-scale telescope
 
-Every nonboundary output must have endpoint at most `(T-1)/2`.  A valid proof may establish the stronger recurrence
+Every nonboundary output must have endpoint at most `(T-1)/2`. A valid proof may establish the stronger recurrence
 
 \[
 \mathcal A_T(z)
@@ -179,11 +181,11 @@ Every nonboundary output must have endpoint at most `(T-1)/2`.  A valid proof ma
 \tag{T-23706.9}
 \]
 
-with a nonpositive or summable boundary ledger `R_T`.  Since the upper half is already negative, iteration then proves AWTO.
+with a nonpositive or summable boundary ledger `R_T`. Since the upper half is already negative, iteration then proves AWTO.
 
 ## 6. Why this is a full-problem attack
 
-AWTO is not another global norm equivalent to RH.  It asks for a local theorem on one explicit positive endpoint atom.  It would simultaneously close:
+AWTO is not another global norm equivalent to RH. It asks for a local theorem on one explicit positive endpoint atom. It would simultaneously close:
 
 ```text
 WSTS and the weighted shell-tail route;
@@ -193,7 +195,7 @@ the ordinary-prime carry minorant;
 the square-screw rightmost-zero exponent.
 ```
 
-The proposal is sharply falsifiable.  One endpoint and one prime cutoff with `A_T(z)>0` rejects AWTO while preserving all exact decompositions.
+The proposal is sharply falsifiable. One endpoint and one prime cutoff with `A_T(z)>0` rejects AWTO while preserving all exact decompositions.
 
 ## 7. Mandatory review tests
 
