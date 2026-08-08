@@ -138,9 +138,40 @@ The quantity
 \]
 
 is therefore the sum of the generalized-prime Kummer reserve and the exact
-second logarithmic curvature of the inverse-source deformation. Unlike an
-arbitrary rescaling of `L-32405`, every factor in (L-32711.8) is fixed by the
-same Q=4 source.
+second logarithmic curvature of the inverse-source deformation.
+
+Equivalently, define the two-channel row path
+
+\[
+ v_e(\tau)=
+ \bigl(1+\mathcal L_e(J_\tau),\;\mathcal L_e(K_\tau)\bigr).
+ \tag{L-32711.9}
+\]
+
+Then
+
+\[
+ v_e(0)=(1,Y_e),
+ \qquad
+ v_e'(0)=(P_e,Q_e),
+ \qquad
+ v_e''(0)=(S_e,T_e),
+\]
+
+and hence
+
+\[
+ \boxed{
+ \mathcal A_e
+ =\|v_e'(0)\|_2^2
+ -\langle v_e(0),v_e''(0)\rangle.
+ }
+ \tag{L-32711.10}
+\]
+
+This is the natural two-channel second-variation object for a future Hermitian
+polarization. Unlike an arbitrary rescaling of `L-32405`, every factor is fixed
+by the same Q=4 source.
 
 ## 3. Elementary bound for the unweighted source charge
 
@@ -152,7 +183,7 @@ PR #337 `L-32706` gives exactly
  a=\lfloor\log_4j\rfloor,
  \quad c=\lfloor\log_4k\rfloor,
  \quad r=\lfloor\log_4n\rfloor.
- \tag{L-32711.9}
+ \tag{L-32711.11}
 \]
 
 Hence, on every nontrivial row,
@@ -162,7 +193,7 @@ Hence, on every nontrivial row,
  |Y_e|\le 3\log_4 n+4
  \ll\log(2n).
  }
- \tag{L-32711.10}
+ \tag{L-32711.12}
 \]
 
 In the cofinal quarter-balanced cone `Y_e` is in fact positive and grows only
@@ -184,14 +215,14 @@ one has
 \[
  |b_4(m)|\le1+3\lfloor\log_4m\rfloor
  \ll\log(2m).
- \tag{L-32711.11}
+ \tag{L-32711.13}
 \]
 
 Since `q_4(m)=-b_4(m)log m`,
 
 \[
  \boxed{|q_4(m)|\ll\log^2(2m).}
- \tag{L-32711.12}
+ \tag{L-32711.14}
 \]
 
 PR #325 `L-32405.11` supplies the completely elementary generalized-prime mass
@@ -199,10 +230,10 @@ bound
 
 \[
  \sum_{d\le x}\Lambda_4(d)<\frac{10}{3}x.
- \tag{L-32711.13}
+ \tag{L-32711.15}
 \]
 
-Using (L-32711.1), finite divisor switching, and (L-32711.12)--(L-32711.13),
+Using (L-32711.1), finite divisor switching, and (L-32711.14)--(L-32711.15),
 
 \[
 \begin{aligned}
@@ -214,21 +245,21 @@ Using (L-32711.1), finite divisor switching, and (L-32711.12)--(L-32711.13),
    +n\sum_{a\le n}{\log^2(2a)\over a}\\
  &\ll\boxed{n\log^3(2n)}.
 \end{aligned}
- \tag{L-32711.14}
+ \tag{L-32711.16}
 \]
 
 Every carry indicator is zero or one, so
 
 \[
  \boxed{|T_e|\ll n\log^3(2n).}
- \tag{L-32711.15}
+ \tag{L-32711.17}
 \]
 
 Consequently
 
 \[
  \boxed{|Y_eT_e|\ll n\log^4(2n).}
- \tag{L-32711.16}
+ \tag{L-32711.18}
 \]
 
 No PNT, zero-free region, or RH-scale cancellation is used in this estimate.
@@ -240,18 +271,18 @@ From (L-32711.4),
 \[
  \mathcal R_e
  >{n^2(\log2)^2\over320}
- \tag{L-32711.17}
+ \tag{L-32711.19}
 \]
 
 throughout the quarter-balanced cone once `n>=4735`.
 
-Equations (L-32711.16)--(L-32711.17) give
+Equations (L-32711.18)--(L-32711.19) give
 
 \[
  { |Y_eT_e|\over\mathcal R_e}
  \ll{\log^4(2n)\over n}
  \longrightarrow0
- \tag{L-32711.18}
+ \tag{L-32711.20}
 \]
 
 uniformly over all quarter-balanced positions. Since `Q_e^2>=0`, there exists a
@@ -269,7 +300,7 @@ one has
  \mathcal A_e
  =\mathcal R_e+Q_e^2-Y_eT_e>0.
  }
- \tag{L-32711.19}
+ \tag{L-32711.21}
 \]
 
 More strongly,
@@ -279,7 +310,7 @@ More strongly,
  \mathcal A_e
  \ge(1-o(1))\mathcal R_e+Q_e^2
  }
- \tag{L-32711.20}
+ \tag{L-32711.22}
 \]
 
 uniformly on the cofinal balanced cone.
@@ -304,7 +335,7 @@ is not used in the cofinal proof above.
 Closed here, subject to independent review:
 
 1. the exact source-deformation identities through second order;
-2. the source-complete augmented reserve (L-32711.8);
+2. the two-channel curvature identity (L-32711.10);
 3. elementary logarithmic growth of the bare source charge;
 4. elementary `O(n log^3 n)` second-current bound;
 5. uniform cofinal positivity and asymptotic domination by the ordinary Q=4
@@ -312,8 +343,8 @@ Closed here, subject to independent review:
 
 Still open:
 
-1. polarization/placement of `A_e` in the complete independent-frequency
-   physical block;
+1. Hermitian polarization/placement of `A_e` in the complete
+   independent-frequency physical block;
 2. treatment of the finite low-parent base table if an all-row theorem is desired;
 3. the neutral block recurrence;
 4. RH.
