@@ -1,0 +1,16 @@
+{
+  "classification": "EXACT_ALL_PARAMETER_FLOOR_PREFIX_POSITIVITY_VERIFIED",
+  "b2_coefficient": "-q*(a*q**2 - a*q + r**2 + r)",
+  "certificates": {
+    "A": {"monomials": 40, "negative_coefficients": 0},
+    "B": {"monomials": 50, "negative_coefficients": 0},
+    "C": {"monomials": 64, "negative_coefficients": 0},
+    "D0": {"monomials": 36, "negative_coefficients": 0},
+    "D1": {"monomials": 36, "negative_coefficients": 0},
+    "D2": {"monomials": 36, "negative_coefficients": 0},
+    "D3": {"monomials": 33, "negative_coefficients": 0},
+    "E": {"monomials": 64, "negative_coefficients": 0}
+  },
+  "proof_object_sha256": "2556eefa48881c1f998801f88f84bd5bf801a0323a92d1a92b19687fa2e256dd",
+  "scope": "Exact symbolic polynomial certificate for L-32204 only; no CHS or RH conclusion."
+}
