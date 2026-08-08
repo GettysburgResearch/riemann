@@ -1,0 +1,16 @@
+{
+  "classification": "FLOATING_AND_HIGH_PRECISION_RECONNAISSANCE_ONLY",
+  "raw_mutation": {
+    "N": 75,
+    "height": 120,
+    "critical_line_crossings": 36,
+    "strip_winding_count": 38,
+    "approximate_root": "0.71058467639965048 + 111.46024679129043 i"
+  },
+  "norlund_scans": [
+    {"N": 500, "height": 300, "critical_line_crossings": 138, "strip_winding_count": 138},
+    {"N": 1000, "height": 2000, "critical_line_crossings": 1517, "strip_winding_count": 1517},
+    {"N": 2000, "height": 2000, "critical_line_crossings": 1517, "strip_winding_count": 1517}
+  ],
+  "warning": "No interval arithmetic or cofinal theorem is supplied."
+}

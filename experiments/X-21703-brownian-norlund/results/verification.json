@@ -1,0 +1,25 @@
+{
+  "classification": "EXACT_RATIONAL_FINITE_ALGEBRA_ONLY",
+  "counts": {
+    "dirichlet_rows": 80,
+    "harmonic_collapses": 136,
+    "laplace_rows": 64,
+    "moment_rows": 112,
+    "norlund_rows": 48,
+    "normalizations": 16
+  },
+  "mutations": {
+    "cesaro_substitution_rejected": true,
+    "missing_double_poles_rejected": true,
+    "shape_two_control": true,
+    "wrong_harmonic_endpoint_rejected": true
+  },
+  "proof_object_sha256": "a112d0e37e820d1ebabaa1e2b8b6cad517a0631012c81543b37ec3f2fca88393",
+  "scope_exclusions": [
+    "BLNRZ real-zero theorem",
+    "raw-truncation off-line root certification",
+    "asymptotic zero convergence",
+    "Riemann Hypothesis"
+  ],
+  "verdict": "PASS_EXACT_BROWNIAN_GAMMA_NORLUND_ALGEBRA"
+}
