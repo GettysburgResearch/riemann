@@ -67,3 +67,16 @@ def test_exact_digital_half_scale_lift() -> None:
     assert result["average_cells"] == 1830
     assert result["hermitian_rows"] == 60
     assert result["even_row_mutation_rejected"] is True
+
+
+def test_factor_five_pointwise_dipole() -> None:
+    result = run_script("verify_factor_five.py")
+    assert (
+        result["sha256_without_digest"]
+        == "b2ff53b948da65a81082fa9a14d7f990c227bb47a6bb592458655ccec7a03f95"
+    )
+    assert result["checks"]["scaled_b2_box_profile"]["cases"] == 386270
+    assert result["checks"]["pointwise_omega2_wavelet"]["cases"] == 386270
+    assert result["checks"]["factor_five_kummer_nonnegativity"]["cases"] == 2505
+    assert result["checks"]["odd_pointwise_carry"]["cases"] == 13040
+    assert result["checks"]["transition_negative_examples"]["count"] > 0
