@@ -134,7 +134,7 @@ BTF yields
  \mathcal P(X)
  =4\sqrt X+X^{o(1)}.
 }
-\tag{T-23803.5]
+\tag{T-23803.5}
 
 In particular,
 
