@@ -1,0 +1,15 @@
+component	frozen_source	status	review_note
+adjacent-tree divisor atom	PR304:L-30402	VERIFIED	exact load 1_(q|m)
+adjacent commutator capacity upper bound	PR304:L-30402	VERIFIED_WITH_FIXES	useful upper bound for a genuine fixed source
+shifted scalar ordering A_k>=B_k	PR304:L-30402	VERIFIED	scalar q-fiber statement only
+q-dependent fiber as divisor source	PR304:L-30402	FALSE	N=18,q=5,k=2,s=1 gives 49/19000 versus -1/250
+correct multiples-Mobius source	R-30403/R-30404	VERIFIED	must invert complete boundary vector
+zeroth-jet atomic norm	R-30404	OMEGA_N	greater than N/2000 for N>=48
+polylog complete boundary atomic norm	PR304:L-30403	FALSE	contradicted by zeroth common-tail source
+terminal every-source Phi lift	PR304:T-30401	REJECTED_AS_COMPLETION	absolute source norm is macroscopic
+6/7 analytic bulk contraction	PR286:L-28401	RETAINED	not sufficient for boundary
+Hausdorff common-tail positivity	PR301:L-29808	RETAINED
+does not bind source to low-debt flow
+Cycle Debt to RH consumer	PR272	CONDITIONAL_RETAINED	requires actual subpower debt
+coupled zeroth-tail cancellation	-	OPEN	no proof supplied here
+Riemann Hypothesis	-	UNPROVED	PR304 does not close it

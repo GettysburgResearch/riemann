@@ -1,0 +1,21 @@
+{
+  "classification": "PASS_EXACT_CORRECT_BOUNDARY_SOURCE_LINEAR_ATOMIC_MASS",
+  "rows": [
+    {"endpoint": 30, "source_endpoint": 15, "cell_first": 8, "cell_last": 10, "cell_count": 3, "atomic_lower_bound": "3/20", "licensed_endpoint_bound": ">30/480"},
+    {"endpoint": 48, "source_endpoint": 24, "cell_first": 13, "cell_last": 16, "cell_count": 4, "atomic_lower_bound": "1/5", "licensed_endpoint_bound": ">48/480"},
+    {"endpoint": 96, "source_endpoint": 48, "cell_first": 25, "cell_last": 32, "cell_count": 8, "atomic_lower_bound": "2/5", "licensed_endpoint_bound": ">96/480"},
+    {"endpoint": 192, "source_endpoint": 96, "cell_first": 49, "cell_last": 64, "cell_count": 16, "atomic_lower_bound": "4/5", "licensed_endpoint_bound": ">192/480"},
+    {"endpoint": 384, "source_endpoint": 192, "cell_first": 97, "cell_last": 128, "cell_count": 32, "atomic_lower_bound": "8/5", "licensed_endpoint_bound": ">384/480"},
+    {"endpoint": 768, "source_endpoint": 384, "cell_first": 193, "cell_last": 256, "cell_count": 64, "atomic_lower_bound": "16/5", "licensed_endpoint_bound": ">768/480"},
+    {"endpoint": 1536, "source_endpoint": 768, "cell_first": 385, "cell_last": 512, "cell_count": 128, "atomic_lower_bound": "32/5", "licensed_endpoint_bound": ">1536/480"},
+    {"endpoint": 3072, "source_endpoint": 1536, "cell_first": 769, "cell_last": 1024, "cell_count": 256, "atomic_lower_bound": "64/5", "licensed_endpoint_bound": ">3072/480"}
+  ],
+  "schema": "X-30402-correct-boundary-source-linear-mass-v1",
+  "scope": "exact integer/rational replay of R-30404; the written theorem is cofinal; this artifact does not prove a non-absolute coupled estimate, Cycle Debt, WSTS, or RH",
+  "symbolic_inequalities": {
+    "cell_count": "#I_N >= N/24",
+    "mobius_inversion": "m>Q/2, hence sigma_m=h_N(m)",
+    "per_node": "sqrt(m)*sigma_m > 1/2-1/sqrt(5) > 1/20",
+    "total": "||sigma_N||_at > N/480"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "classification": "EXACT_PR304_TERMINAL_SOURCE_PROOF_REFUTED",
+  "correct_mobius_source_linear_mass": [
+    {
+      "N": 48,
+      "atomic_lower_gt_N_over_2000": true,
+      "mobius_terms_per_node": 1,
+      "source_nodes": 4
+    },
+    {
+      "N": 96,
+      "atomic_lower_gt_N_over_2000": true,
+      "mobius_terms_per_node": 1,
+      "source_nodes": 8
+    },
+    {
+      "N": 192,
+      "atomic_lower_gt_N_over_2000": true,
+      "mobius_terms_per_node": 1,
+      "source_nodes": 16
+    },
+    {
+      "N": 384,
+      "atomic_lower_gt_N_over_2000": true,
+      "mobius_terms_per_node": 1,
+      "source_nodes": 32
+    },
+    {
+      "N": 768,
+      "atomic_lower_gt_N_over_2000": true,
+      "mobius_terms_per_node": 1,
+      "source_nodes": 64
+    },
+    {
+      "N": 1536,
+      "atomic_lower_gt_N_over_2000": true,
+      "mobius_terms_per_node": 1,
+      "source_nodes": 128
+    },
+    {
+      "N": 3072,
+      "atomic_lower_gt_N_over_2000": true,
+      "mobius_terms_per_node": 1,
+      "source_nodes": 256
+    }
+  ],
+  "does_not_prove": [
+    "nonexistence of every coupled non-atomic source repair",
+    "Cycle Debt",
+    "RH"
+  ],
+  "literal_layer_interpretation": [
+    {
+      "X": 96,
+      "lower_fraction_denominator_bits": 137,
+      "lower_fraction_numerator_bits": 133,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 276
+    },
+    {
+      "X": 192,
+      "lower_fraction_denominator_bits": 274,
+      "lower_fraction_numerator_bits": 271,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 1128
+    },
+    {
+      "X": 384,
+      "lower_fraction_denominator_bits": 564,
+      "lower_fraction_numerator_bits": 561,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 4560
+    },
+    {
+      "X": 768,
+      "lower_fraction_denominator_bits": 1121,
+      "lower_fraction_numerator_bits": 1119,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 18336
+    },
+    {
+      "X": 1536,
+      "lower_fraction_denominator_bits": 2230,
+      "lower_fraction_numerator_bits": 2228,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 73536
+    },
+    {
+      "X": 3072,
+      "lower_fraction_denominator_bits": 4470,
+      "lower_fraction_numerator_bits": 4469,
+      "lower_gt_floor_sqrt_over_1000": true,
+      "source_rows": 294528
+    }
+  ],
+  "minimal_common_tail_control": {
+    "K_even": 2,
+    "K_odd": 2,
+    "Y": 96,
+    "q": 25
+  },
+  "schema": "X-30402-terminal-source-refutations-v3",
+  "sha256_without_digest": "f1489351731335860a26909ce922ed27025e7bd6de89c97abd06e7e27a5ae4dd",
+  "source_type_counterexample": {
+    "actual_boundary": "49/19000",
+    "declared_divisor_source_load": "-1/250",
+    "endpoint": 18,
+    "exponent": 1,
+    "k": 2,
+    "mismatch": true,
+    "q": 5
+  }
+}
