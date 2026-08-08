@@ -7,73 +7,54 @@ Created: 2026-08-08
 
 ## 1. What the obstruction means
 
-The first boundary is macroscopically large in the divisor-source norm but is
-created as the difference of two structured flows:
+The first boundary is macroscopically large in the divisor-source norm. Yet
+`L-30502` proves that each stopped layer originates as
 
 ```text
-positive analytic central flow
+positive finite central flow
 minus
-positive finite central flow.
+positive infinite central flow.
 ```
 
-Taking its atomic norm separately destroys precisely the cancellation needed
-for the sharp constant four.
+The difficulty is not source existence. It is the column-dependent activation
+`Y>=2q-1`, which prevents those layerwise differences from being collapsed into
+one source-independent flow before the cutoff ledger is assembled.
 
-This is the same failure pattern as:
-
-- the monotone positive-part cover;
-- the prime-only queue;
-- fixed Abel positivity;
-- rowwise absolute values in reflected packets.
+Taking the final divisor-source atomic norm destroys precisely the structured
+cancellation needed for the sharp constant four. This is the same failure
+pattern as the monotone positive-part cover, the prime-only queue, fixed Abel
+positivity, and rowwise absolute values in reflected packets.
 
 ## 2. Correct next object
 
-Let \(d_{\rm an}\) be the positive analytic-bank flow and \(d_{\rm fin}\) the
-positive finite central flow on the same stopped-power layer. The boundary
-source is the carry image of
+A valid proof must retain the finite stopped layer, analytic layer, and active
+output destinations in one manifest, map that manifest to the explicit
+Pascal-cycle basis of PR #272, and only then minimize negative capacity.
+
+The load-bearing quantity is an activated-flow optimization, not
 
 \[
-d_{\rm fin}-d_{\rm an}.
+\|\sigma\|_{\rm at}.
 \]
 
-The load-bearing quantity is therefore not
+No polylogarithmic estimate for that activated-flow optimization is claimed in
+this audit.
 
-\[
-\|\sigma\|_{\rm at},
-\]
+## 3. Concrete production target
 
-but the negative capacity after **joint cycle optimization**:
-
-\[
-\boxed{
-\inf_z
-\mathcal N_\omega
-\bigl(
-d_{\rm fin}-d_{\rm an}+C_\eta z
-\bigr).
-}
-\tag{O-30501.1}
-\]
-
-At the first critical stage, \(d_{\rm fin}\) is nonnegative and its residual is
-decreasing. Thus the linear source lower bound does not imply linear optimized
-debt.
-
-## 3. New proof programme
-
-A valid continuation should emit the two flows themselves and solve their
-difference in the explicit Pascal-cycle basis of PR #272:
+The next artifact should emit:
 
 ```text
-stopped-power analytic tree;
-finite endpoint tree;
-their exact shared-edge cancellation;
-remaining noncanonical cycle coordinates;
-capacity-weighted negative part.
+every stopped endpoint Y;
+its finite positive central flow;
+its infinite analytic positive flow;
+the exact active destination set q<=floor((Y+1)/2);
+all shared-edge cancellations;
+the remaining fundamental-cycle coordinates;
+the capacity-weighted negative part.
 ```
 
-The first two central stages are already nonnegative. The source ledger should
-start only after those complete positive stages have been removed.
+The first two complete central stages should be removed before the boundary
+manifest is formed, since they are already nonnegative.
 
-This is a finite constructive theorem, not a source-norm estimate and not an
-RH-equivalent scalar restatement.
+This is a finite constructive target, not another RH-equivalent scalar.
