@@ -26,8 +26,9 @@ For the compact opposite-parity window, PR #268 `L-26802` constructs the physica
 8M\,\|Q_x\|_2^2.
 }
 \tag{L-26212.1}
+\]
 
-For the degree-four critical parity filters, `L-26804` gives the same exact weighted isometry on row \(256M-1\); replacing the unfiltered carry norm by the direct sum of the two parity-channel norms changes only one absolute finite constant.  Denote a valid common constant by \(C_{\rm ann}\).
+For the degree-four critical parity filters, `L-26804` gives the same exact weighted isometry on row \(256M-1\); replacing the unfiltered carry norm by the direct sum of the two parity-channel norms changes only one absolute finite constant. Denote a valid common constant by \(C_{\rm ann}\).
 
 Thus, in either form,
 
@@ -38,11 +39,12 @@ Thus, in either form,
 \frac{C_{\rm ann}}M
 \|V_x\|_{\rm car}^2.
 }
-\tag{L-26212.2]
+\tag{L-26212.2}
+\]
 
 ## 2. Hilbert-valued critical bank
 
-The proof of `L-26210` is Hilbert valued.  Let \(R=M\), let \(V_x\) play the role of the target vector, and let \(V_{x,d}\) be the complete carry vector exported by the strict digital prefix \(C_{<M/d}\) and the declared scale-\(d\) source translation.  Then
+The proof of `L-26210` is Hilbert valued. Let \(R=M\), let \(V_x\) play the role of the target vector, and let \(V_{x,d}\) be the complete carry vector exported by the strict digital prefix \(C_{<M/d}\) and the declared scale-\(d\) source translation. Then
 
 \[
 \boxed{
@@ -52,7 +54,8 @@ C_{\rm bank}M
 \sum_{d<M}\pi_M(d)
 \|V_{x,d}\|_{\rm car}^2,
 }
-\tag{L-26212.3]
+\tag{L-26212.3}
+\]
 
 where
 
@@ -72,7 +75,7 @@ and
 {\sum_{r<M}|\omega_2(r)|r^{-1/2}}.
 \]
 
-The factor \(M\) is the sharp critical order.  It may not be replaced by a polylogarithm on a source class containing genuine critical-line modes.
+The factor \(M\) is the sharp critical order. It may not be replaced by a polylogarithm on a source class containing genuine critical-line modes.
 
 ## 3. Exact cancellation of scales
 
@@ -86,9 +89,10 @@ C_{\rm ann}C_{\rm bank}
 \sum_{d<M}\pi_M(d)
 \|V_{x,d}\|_{\rm car}^2.
 }
-\tag{L-26212.4]
+\tag{L-26212.4}
+\]
 
-The critical factor \(M\) has disappeared exactly.  It is paid by the conversion from an unweighted row feature to the critically normalized physical annulus.
+The critical factor \(M\) has disappeared exactly. It is paid by the conversion from an unweighted row feature to the critically normalized physical annulus.
 
 This explains why the critical-order correction of PR #236 does not destroy the annular programme: the physical/carry isometry carries precisely the reciprocal scale.
 
@@ -100,7 +104,7 @@ Take
 x_m=\Lambda_\omega(m)\mathbf1_{[M,2M)}(m).
 \]
 
-Then \(Q_x\) is the RH-sensitive annular physical source of PR #268 `L-26802`, and \(V_x\) is its exact carry split \(W_n\).  The strict prefixes in (L-26212.3) are source-bound digital observations of this same feature; they are not the pole-blind generalized-prime profile \(P_n\) unless the complete source-change ledger proves that identification.
+Then \(Q_x\) is the RH-sensitive annular physical source of PR #268 `L-26802`, and \(V_x\) is its exact carry split \(W_n\). The strict prefixes in (L-26212.3) are source-bound digital observations of this same feature; they are not the pole-blind generalized-prime profile \(P_n\) unless the complete source-change ledger proves that identification.
 
 The exact relation
 
@@ -108,13 +112,14 @@ The exact relation
 c_2*(\omega_2*\Lambda_\omega)
 =
 \left(\varepsilon-\frac52\delta_2+\delta_4\right)*\Lambda_\omega
-\tag{L-26212.5]
+\tag{L-26212.5}
+\]
 
-shows that the complete bank output is a finite three-scale combination of the generalized-prime feature.  `L-26211` further splits the bank into a current critical component and a strict lower-scale remainder.
+shows that the complete bank output is a finite three-scale combination of the generalized-prime feature. `L-26211` further splits the bank into a current critical component and a strict lower-scale remainder.
 
 ## 5. Consequence for the live full proposal
 
-The remaining annular theorem no longer needs to overcome a polynomial conditioning loss.  It must prove only that the weighted bank observations in (L-26212.4) are the sum of:
+The remaining annular theorem no longer needs to overcome a polynomial conditioning loss. It must prove only that the weighted bank observations in (L-26212.4) are the sum of:
 
 1. the factor-five transition form on quotient cells \(2,3,4\);
 2. the nonnegative proper-divisor half-scale defect of PR #268 `L-26803`;
