@@ -26,8 +26,13 @@ python3 verify_schur_structure.py
   sha256_without_digest:
   fe8287748e6c2e7320ca24e8db827044d77511dc2a72e401afb91a90e11365f0
 
+python3 verify_positive_synthesis.py
+  PASS
+  sha256_without_digest:
+  11e5e76a49b49ab2f838d7a829936b4e46bed5482c0d0a717fb4161f6b99eeda
+
 pytest -q tests/test_verify.py
-  5 passed
+  6 passed
 
 python3 recon.py
   DISCOVERY_ONLY_POSITIVE_CARRY_INVERSE_THROUGH_5000
