@@ -14,8 +14,8 @@ The live graph has changed materially since PR #251.
   combination and that its continuum defect has ordered zero-cost transport.
 - PR #272 gives the complete Pascal-cycle kernel, a canonical balanced tree,
   exact cycle-debt duality, and a dyadic divergence commutator normal form.
-- PR #291 now proposes a cofinal proof that the finite dyadic shell has exactly
-  one sign crossing.
+- PR #291 proposes a cofinal proof that the finite dyadic shell has exactly one
+  sign crossing.
 - PR #286 gives a strict `6/7` contraction for the shifted analytic central
   bulk, leaving only finite cutoff boundary states.
 - PR #285 identifies the full central resolvent with `1/eta(s)` and localizes
@@ -80,10 +80,9 @@ odd columns are the divisor dipoles
 
 Therefore a lower positive flow can be doubled without disturbing a single even
 column. The complete odd discrepancy is Möbius-decoded into a charge on odd
-nodes, and the lift is possible exactly when that charge can be routed through
-a finite network whose arc capacities are the actual lower edge masses.
+nodes.
 
-The shared-capacity constraint is essential:
+The sparse edge-local correction has shared capacities
 
 ```text
 x_e>=0,
@@ -91,32 +90,58 @@ y_e>=0,
 x_e+y_e<=2^(-1/2)d_e.
 ```
 
-The max-flow/min-cut alternative is written explicitly. A failure produces a
-finite potential witness; a success emits every upper split coefficient.
+and an exact max-flow/min-cut alternative.  This is the first local layer, not
+the whole upper kernel.
 
-## 4. Boundary state
+## 4. Why complete Pascal circulation is necessary
 
-The local sibling lift preserves the MCF menu for every non-Mersenne lower edge.
-It deliberately does not pretend that a lower Mersenne extreme edge can be
-lifted locally: its even lift is outside the upper binary window. Those edges
-form a logarithmic boundary state by `L-29201` and require a complete positive
-Pascal/tree reconstruction.
+A convenient sibling lift need not expose all legal positive upper flows.  The
+upper MCF menu has a complete zero-even-column kernel: signed combinations of
+upper splits that leave every even carry column unchanged.  PR #272's
+fundamental cycles provide finite coordinates for the ambient carry-preserving
+kernel.
+
+The corrected production theorem therefore permits a source-bound correction
+
+```text
+c_X in K_even
+```
+
+whose declared Pascal/fundamental-cycle expansion is emitted and whose final
+split vector is nonnegative.  The complete odd equation is
+
+```text
+sibling divisor flow + odd image of c_X = decoded odd target z_X.
+```
+
+This avoids confusing failure of one local lift with failure of support-feasible
+MCF.  It also gives a stronger fail-closed dual: a rejected construction must
+produce a potential not paid by either a sibling arc or a declared zero-even
+cycle.
+
+## 5. Boundary state
+
+The sibling and cycle lift preserve the MCF menu for ordinary non-Mersenne
+sources.  A lower Mersenne extreme edge cannot simply be doubled: its local even
+lift is outside the upper binary window.  Those edges form a logarithmic
+boundary state by `L-29201` and require complete positive Pascal/tree
+reconstruction.
 
 The top lower parent `Y` also lacks the odd parent `2Y+1`; it is a separate
 finite endpoint state.
 
-This is the correct boundary rather than an unspecified collar:
+The corrected decomposition is
 
 ```text
-ordinary lower edges  -> capacitated odd divisor network;
+ordinary lower edges  -> sibling baseline + zero-even Pascal circulation;
 Mersenne lower edges  -> logarithmic positive reconstruction;
 top endpoint          -> finite correction.
 ```
 
-## 5. Full proposal
+## 6. Full proposal
 
-The proposed theorem `PPMFL` constructs compatible lower and upper flows through
-those three channels at every doubling and unit endpoint. Then
+The theorem `PPMFL` constructs compatible lower and upper flows through those
+three channels at every doubling and unit endpoint. Then
 
 ```text
 PPMFL
@@ -128,29 +153,34 @@ PPMFL
 ```
 
 The proposal does not import WSTS, EPD, a prime-ramp sign, a Mertens bound, a
-reflected block norm, or generic carry saturation. Its open theorem is a finite
-positive allocation and reconstruction problem.
+reflected block norm, or generic unrestricted carry saturation. Its open theorem
+is a finite positive allocation/circulation and boundary reconstruction problem.
 
-## 6. What was achieved and what was not
+## 7. What was achieved and what was not
 
 Achieved exactly:
 
 - the collar-rate obligation is eliminated;
 - the parity-sibling floor identities are complete;
 - the odd discrepancy is decoded exactly;
-- the positive lift is reduced to a capacitated network with an exact cut dual;
+- the sibling-only subproblem has an exact capacitated cut dual;
 - support preservation is proved away from the declared boundary;
+- the complete zero-even Pascal coordinate is stated as the necessary repair
+  space rather than silently omitted;
 - a standard-library exact regression covers more than two million sibling
   identities.
 
 Not achieved:
 
-- all-scale feasibility of the source-specific odd network;
+- a complete source-bound basis for the upper zero-even kernel inside the MCF
+  menu;
+- all-scale combined sibling/cycle feasibility;
 - positive reconstruction of the Mersenne boundary state;
 - endpoint-compatible recursive PPMFL;
 - RH.
 
 The result is a more concrete full attack, not a completed proof. The next
-mathematical target is now unambiguous: prove the cut inequalities using the
-lower fragmentation conservation law, or emit a cut potential that rejects the
-parity lift and forces a pivot.
+mathematical target is now precise: construct the parity-compatible zero-even
+cycle basis and prove the combined cut inequalities from the lower
+fragmentation conservation law, or emit a finite cut potential that rejects the
+entire factor-two route and forces a pivot.
