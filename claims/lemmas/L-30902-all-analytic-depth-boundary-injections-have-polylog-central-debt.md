@@ -61,8 +61,7 @@ such that away from the single cap point
  |h_{a,X,s}'(x)|
  \le A_s(1+\log X)x^{-s-1},
 }
-\tag{L-30902.3
-}
+\tag{L-30902.3}
 
 and
 
@@ -71,22 +70,32 @@ and
  |u_{a,X,s}'(x)|
  \le B_s(1+\log X)x^{-s-1}.
 }
-\tag{L-30902.4
-}
+\tag{L-30902.4}
 
 The cap lies at
 
 \[
- x_*=1+\frac{X-1}{L}
+ x_*=1+\frac{X-1}{L}.
 \tag{L-30902.5}
 
-and produces one jump in `u` of magnitude at most
+The one-sided derivatives give the exact jump
 
 \[
- C_s x_*^{-s}.
+\boxed{
+ |[u]_{x_*}|
+ =\frac{Lx_*^{1-s}}X.
+}
 \tag{L-30902.6}
 
-Every constant is independent of the depth `a` and endpoint `X`.
+Since `L(x_*-1)+1=X`,
+
+\[
+ |[u]_{x_*}|
+ \le2x_*^{-s}
+\tag{L-30902.7}
+
+for every nontrivial cap `x_*>=2`.  Every constant is independent of the depth
+`a` and endpoint `X`.
 
 ## 3. Derivative of the shifted boundary
 
@@ -107,10 +116,11 @@ As in `L-30901`,
  u(A_k)-u(B_k)+h'(A_k)
  \right].
 \end{aligned}
-\tag{L-30902.7}
+\tag{L-30902.8}
 
-The intervals `[A_k,B_k]` are disjoint.  The smooth part of one pair is bounded
-by (L-30902.3)--(L-30902.4), and at most one pair contains the cap.  Since
+The intervals `[A_k,B_k]` are disjoint for fixed `q`.  The smooth part of one
+pair is bounded by (L-30902.3)--(L-30902.4), and at most one pair contains the
+cap.  Since
 
 \[
  A_k\ge kq,
@@ -124,13 +134,13 @@ one obtains
  |G_{a,X,s}'(q)|
  \le
  C_s(1+\log X)q^{-s-1}
- +\frac{C_s x_*^{-s}}q
+ +\frac{|[u]_{x_*}|}{q}
   \mathbf1_{\{\text{one pair crosses }x_*\}}.
 }
-\tag{L-30902.8
-}
+\tag{L-30902.9}
 
-The indicator is retained to avoid charging the cap at every output column.
+The indicator prevents the cap jump from being charged once for every dilation
+leg at the same output coordinate.
 
 ## 4. Weighted adjacent variation
 
@@ -140,7 +150,7 @@ Let
  M_a=\left\lfloor\frac{x_*+1}{2}\right\rfloor
 \]
 
-be the natural output support of the boundary.  Integrating (L-30902.8) across
+be the natural output support of the boundary.  Integrating (L-30902.9) across
 every unit interval and summing gives
 
 \[
@@ -151,12 +161,14 @@ every unit interval and summing gives
  C_s(1+\log X)
  \sum_{n=2}^{M_a}n^{-s-1/2}\\
  &\quad+
- C_sx_*^{-s}
- \sum_{\substack{n:\text{a pair}\
-                    \text{crosses }x_*}}
- n^{-1/2}.
+ |[u]_{x_*}|
+ \sum_{n=2}^{M_a}n^{-1/2}.
 \end{aligned}
-\tag{L-30902.9}
+\tag{L-30902.10}
+
+The second line deliberately drops the crossing indicator.  This avoids any
+false claim that one fixed dilation index can cross the cap for only one output
+integer.
 
 For the smooth term,
 
@@ -167,44 +179,21 @@ For the smooth term,
   C(1+\log X),&s=1/2,\\
   C_s,&s>1/2.
  \end{cases}
-\tag{L-30902.10}
+\tag{L-30902.11}
 
-For the cap term, each crossing pair is determined by
-
-\[
- 2kn-1<x_*<(2k+1)n.
-\]
-
-For fixed `k`, this contains at most one integer `n`, and such an integer obeys
-
-\[
- n\asymp\frac{x_*}{k}.
-\]
-
-Therefore
+For the cap term, (L-30902.7) and `M_a<=x_*` give
 
 \[
 \begin{aligned}
- x_*^{-s}
- \sum_{\text{crossing }n}n^{-1/2}
- &\le
- Cx_*^{-s-1/2}
- \sum_{k\le x_*/3}\sqrt k\\
- &\le Cx_*^{1-s}.
+ |[u]_{x_*}|
+ \sum_{n=2}^{M_a}n^{-1/2}
+ &\le Cx_*^{-s}\sqrt{x_*}\\
+ &=Cx_*^{1/2-s}\\
+ &\le C,
 \end{aligned}
-\tag{L-30902.11}
-
-This crude estimate is already uniform for every faster exponent `s>=1`; it is
-`O(1)`.  At the critical exponent `s=1/2`, the cap jump has the sharper exact
-form
-
-\[
- |[u]_{x_*}|=\frac{Lx_*^{1/2}}X
- \le Cx_*^{-1/2},
 \tag{L-30902.12}
 
-because `L(x_*-1)+1=X`.  Substitution in place of (L-30902.6) again makes the
-cap contribution `O(1)`.
+because `s>=1/2`.
 
 The final endpoint coefficient is bounded by the same paired formula. Hence
 
@@ -218,8 +207,7 @@ The final endpoint coefficient is bounded by the same paired formula. Hence
   C_s(1+\log X),&s>1/2,
  \end{cases}
 }
-\tag{L-30902.13
-}
+\tag{L-30902.13}
 
 uniformly in the analytic depth `a`.
 
@@ -239,8 +227,7 @@ on the central split `[n,floor(n/2)]`.  Then
  L(d_{a,X,s})
  =G_{a,X,s}-\mathcal T G_{a,X,s}
 }
-\tag{L-30902.15
-}
+\tag{L-30902.15}
 
 and, because every central split has capacity at most `2sqrt(n)`,
 
@@ -253,8 +240,7 @@ and, because every central split has capacity at most `2sqrt(n)`,
   C_s(1+\log X),&s>1/2.
  \end{cases}
 }
-\tag{L-30902.16
-}
+\tag{L-30902.16}
 
 The remaining load is supported at a strict half scale.
 
