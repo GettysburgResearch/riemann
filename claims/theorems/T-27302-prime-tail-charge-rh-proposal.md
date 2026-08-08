@@ -1,14 +1,14 @@
 # T-27302 — Prime residual suffix-charge proposal for RH
 
 Claim ID: `T-27302`  
-Title: A subpower maximum suffix of the parabolic ordinary-prime residual implies the Riemann Hypothesis  
-Status: **FULL ELEMENTARY PROPOSAL — `PTC` OPEN; RH UNPROVED**  
+Title: A subpower maximum suffix of the parabolic ordinary-prime residual would imply RH, but the proposed suffix bound has positive density drift  
+Status: **REJECTED AS A COMPLETION — `PTC` PROPOSED REFUTED BY `R-27302`**  
 Authoring agent: `gpt56-pro-22`  
 Created: 2026-08-08  
 Issue: #273  
-Depends on: `L-27301`--`L-27303`; PR #248 `L-24517/L-24520`; PR #265 `L-26202`; PR #271 boundary lift
+Depends on: `L-27301`--`L-27303`; `R-27302`; PR #248 `L-24517/L-24520`; PR #265 `L-26202`; PR #271 boundary lift
 
-## 1. Exact residual
+## 1. Conditional implication retained
 
 Let \(p_1<\cdots<p_N\le X\) be the primes through \(X\), and define
 
@@ -21,143 +21,82 @@ v_{p_i}(b_X^{(0)})
 \tag{T-27302.1}
 \]
 
-The parabolic ordinary-prime objective satisfies
+The exact greedy prime-incidence construction in `L-27303` has exterior charge
 
 \[
-J_{\mathbb P,X}(b_X^{(0)})
-\ge4\sqrt X-O(\log^2X).
-\tag{T-27302.2}
-\]
-
-## 2. Prime Tail Charge theorem (`PTC`)
-
-Prove
-
-\[
-\boxed{
 C_X^{\uparrow}
 =
 \max_{1\le k\le N}
-\left(
- \sum_{j=k}^{N}r_j
-\right)_+
-=X^{o(1)}.
-}
-\tag{PTC}
+\left(\sum_{j=k}^{N}r_j\right)_+.
+\tag{T-27302.2}
 \]
 
-This is one explicit scalar family. It has no arbitrary operator, packet, or
-hidden flow quantifier.
-
-## 3. Exact constructive lift
-
-`L-27303` constructs a nonnegative sum of constant blocks between consecutive
-ordinary primes. Every internal prime residual becomes nonpositive, every
-proper-prime-power response is unchanged, and the only remaining row is one
-exterior prime \(Y>X\) carrying exactly \(C_X^{\uparrow}\).
-
-The construction is optimal among all nonnegative upward prime-incidence block
-transports.
-
-## 4. Prime-ramp consequence
-
-The interior blocks have nonnegative physical objective increment. The exterior
-affine boundary lift therefore gives
+If one had
 
 \[
-P_X
-\ge
-J_{\mathbb P,X}(b_X^{(0)})
--C_X^{\uparrow}\log Y.
+C_X^{\uparrow}=X^{o(1)},
 \tag{T-27302.3}
 \]
 
-Choose \(Y<2X\) by Bertrand's postulate. Under PTC,
+then the proper-power-neutral prime blocks and the affine boundary lift would
+give
 
 \[
-C_X^{\uparrow}\log Y=X^{o(1)},
+P_X\ge4\sqrt X-X^{o(1)},
 \]
 
-and hence
+and the inherited square-screw/Landau chain would imply RH. This conditional
+calculation is retained.
+
+## 2. The proposed rate is false
+
+`R-27302` computes the full ordinary-prime residual sum:
 
 \[
 \boxed{
-P_X\ge4\sqrt X-X^{o(1)}.
+\sum_{p\le X}r_X(p)
+=
+\left(4(1-\gamma)+o(1)\right)
+\frac{\sqrt X}{\log^2X}.
 }
 \tag{T-27302.4}
 \]
 
-Adding the proper-prime-power tail changes the ramp by only \(O(\log^2X)\).
-The inherited square-screw identity, interpolation estimate, Landau one-sign
-theorem, and functional-equation symmetry then give RH.
-
-Thus
+The full suffix beginning at \(2\) is one of the suffixes in (T-27302.2).
+Therefore
 
 \[
-\boxed{\mathrm{PTC}\Longrightarrow\mathrm{RH}.}
+\boxed{
+C_X^{\uparrow}
+\ge
+\left(4(1-\gamma)+o(1)\right)
+\frac{\sqrt X}{\log^2X}.
+}
 \tag{T-27302.5}
 \]
 
-## 5. Why PTC is the sharpest current finite target
+Hence (T-27302.3) fails. Prime-to-prime upward blocks alone cannot preserve the
+sharp constant.
 
-The hierarchy is now
+The exact greedy algebra and proper-power neutrality in `L-27303` remain valid;
+only their proposed asymptotic closure is rejected.
 
-```text
-annular ADF
-  -> subpower L2 flow
-  -> affine boundary control
-  -> PTC-type scalar control;
+## 3. Corrected frontier
 
-PNL
-  -> exact zero boundary charge;
+The positive drift is a sampling-density effect. A viable proper-power-neutral
+repair must use squarefree composite collector endpoints. Such a collector can
+reduce several ordinary-prime residuals at once while remaining invisible to
+every proper prime power.
 
-PTC
-  -> only subpower exterior charge.
-```
+The corrected full proposal is `T-27303`.
 
-`PTC` is weaker than exact PNL and much weaker than the annular `L^2` frame.
-It retains precisely the one-sided error tolerated by the square-screw consumer.
-
-## 6. Continuum evidence and exact firewall
-
-The continuum parabolic defect satisfies the exact tail inequality
-
-\[
-\int_\theta^1E(u)\,du\le0.
-\]
-
-Therefore the continuum analogue of \(C_X^{\uparrow}\) is zero.  The open
-arithmetic problem is to transfer this order to the ordinary-prime finite
-residual with only subpower discrepancy.
-
-The full suffix beginning at \(p_1=2\) contains the logarithmic prime-ramp mode;
-a proof of PTC cannot be obtained from the PNT with a conventional
-zero-free-region error, nor by taking absolute values.
-
-## 7. Reviewer-first rejection conditions
-
-Reject a claimed proof of PTC if it:
-
-- omits any ordinary prime through \(X\);
-- replaces residual suffixes by continuum integrals without a subpower finite
-  error;
-- transports mass downward while using the upward-block formula;
-- forgets the exterior charge at \(Y\);
-- allows a block endpoint that is not an ordinary prime and still claims exact
-  proper-power neutrality;
-- invokes PNT error terms of size \(X^{1/2-o(1)}\) as though they were
-  subpower;
-- removes the suffix beginning at \(2\), which contains the RH-bearing scalar
-  mode.
-
-## 8. Status
+## 4. Status
 
 ```text
-ordinary-prime positive feasibility       PROPOSED COMPLETE
-prime-incidence greedy construction       PROPOSED COMPLETE
-least suffix-charge formula               PROPOSED COMPLETE
-continuum tail inequality                 INHERITED
-finite prime tail charge PTC              OPEN / RH-BEARING
-PTC -> prime ramp -> RH                   PROPOSED COMPLETE
-Riemann Hypothesis                        UNPROVED
+prime-incidence greedy algebra        RETAINED EXACT
+PTC conditional implication           RETAINED
+PTC all-scale rate                     PROPOSED REFUTED
+T-27302 as full completion             REJECTED
+squarefree composite collector route  OPEN
+Riemann Hypothesis                     UNPROVED
 ```
