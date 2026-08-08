@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "digital_prime_correction": {
+      "cases": 5148
+    },
+    "generalized_von_mangoldt_convolution": {
+      "cases": 100
+    },
+    "positive_inverse_convolution": {
+      "cases": 100
+    },
+    "positive_wavelet_synthesis": {
+      "cases": 5148
+    }
+  },
+  "schema": "X-26903-positive-wavelet-synthesis-v1",
+  "scope": "exact formal additive-weight algebra only; no asymptotic reserve threshold, physical transference, DSS, or RH",
+  "sha256_without_digest": "11e5e76a49b49ab2f838d7a829936b4e46bed5482c0d0a717fb4161f6b99eeda"
+}
