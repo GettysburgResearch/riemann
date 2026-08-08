@@ -64,7 +64,7 @@ and define recursively
 }
 \tag{L-29003.4}
 
-Every edge of `T_n` is `1/3`-balanced and hence `1/4`-balanced.  Induction gives
+Every edge of `T_n` is `1/3`-balanced and hence `1/4`-balanced. Induction gives
 
 \[
 \boxed{
@@ -119,8 +119,9 @@ Consequently
 }
 \tag{L-29003.10}
 
-In the explicit Pascal-cycle basis of PR #272, this difference is a finite
-balanced cycle combination.
+In the explicit split-chain complex of PR #272, this difference is a finite
+Pascal-cycle combination. No claim that every individual cycle is itself
+balanced is needed; the replacement trees `T_n,T_(n-1)` are balanced.
 
 The carry and entropy identities are
 
@@ -147,7 +148,7 @@ object: it is a balanced-tree commutator.
 
 ## 4. Abel summation of an endpoint family
 
-Let `c_2,...,c_N` be arbitrary real coefficients.  Replacing every endpoint
+Let `c_2,...,c_N` be arbitrary real coefficients. Replacing every endpoint
 edge by its tree commutator gives
 
 \[
@@ -172,12 +173,11 @@ Therefore
  \qquad
  \Delta c_n=c_n-c_{n+1}.
 }
-\tag{L-29003.14
-}
+\tag{L-29003.14}
 
 with exact equality of every carry column and the complete entropy objective.
 
-This is the proof-facing endpoint Abel transform.  The current-scale endpoint
+This is the proof-facing endpoint Abel transform. The current-scale endpoint
 family becomes:
 
 - one declared outer tree `c_N T_N`;
@@ -193,27 +193,25 @@ If
  c_n\ge c_{n+1}\ge0,
 \]
 
-then every coefficient on the right side of (L-29003.14) is nonnegative.  More
-generally the negative balanced-tree mass is bounded exactly by the negative
-variation
+then every coefficient on the right side of (L-29003.14) is nonnegative. More
+generally the negative balanced-tree mass is bounded by
 
 \[
 \boxed{
  \sum_{n=2}^{N-1}(-\Delta c_n)_+\,\|T_n\|,
 }
-\tag{L-29003.15
-}
+\tag{L-29003.15}
 
 in any additive edge metric.
 
 In the capacity metric of PR #272, a central tree has a completely explicit
-finite cost.  Hence an endpoint source is reduced to one one-dimensional
+finite cost. Hence an endpoint source is reduced to one one-dimensional
 variation theorem rather than an arbitrary balanced Type-II packet.
 
 ## 6. Connection to the prime-annulus boundary
 
 `L-29002` proves that the complete Selberg forcing consumes the whole Kummer
-square only on the endpoint neighbors `j=1,n-1`.  The dyadic two-contact source
+square only on the endpoint neighbors `j=1,n-1`. The dyadic two-contact source
 on PR #269 is supported exactly on those two positions.
 
 Equation (L-29003.14) supplies the missing exact geometric operation:
@@ -227,7 +225,7 @@ zero-reserve endpoint source
 
 The remaining arithmetic question is whether the complete prime-annulus source,
 after every reflected cross term is assembled, has subpower negative tree
-variation.  That is the named theorem in `T-29001`.
+variation. That is the named theorem in `T-29001`.
 
 ## 7. Proof boundary
 
