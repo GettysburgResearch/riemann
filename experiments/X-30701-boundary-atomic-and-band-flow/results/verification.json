@@ -1,0 +1,33 @@
+{
+  "arithmetic": "INTEGER_AND_FRACTION",
+  "band_rows": 210089,
+  "classification": "EXACT_BOUNDARY_ATOMIC_LINEAR_MOAT_AND_TOP_BAND_STEP_FLOW",
+  "minimum_count_margin": 133,
+  "moat": {
+    "log_5_4_lower": "1/5",
+    "moat_lower": "1/1820",
+    "sqrt_gap_lower": "1/364",
+    "verified": true
+  },
+  "mutation_tests": {
+    "reject_bad_left_sqrt": true,
+    "reject_bad_right_sqrt": true,
+    "reject_missing_endpoint": true,
+    "reject_nondecreasing_profile": true,
+    "reject_second_multiple": true
+  },
+  "proof_object_sha256": "6443211853336997ebdea4ca94675d9d7ea1ea207ee6a66c5115f08ec188dc5b",
+  "scope": {
+    "not_verified": [
+      "all-generation cycle-optimized leakage control",
+      "Cycle Debt",
+      "Riemann Hypothesis"
+    ],
+    "verified": [
+      "rational lower moat c0>1/1820",
+      "macroscopic band has at least X/80 isolated divisor coordinates",
+      "outer decreasing band has an exact nonnegative central-step realization"
+    ]
+  },
+  "top_band_flow_checks": 7085
+}
