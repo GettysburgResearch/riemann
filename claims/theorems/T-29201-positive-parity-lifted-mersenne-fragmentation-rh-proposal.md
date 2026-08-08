@@ -1,7 +1,7 @@
-# T-29201 — Positive parity-lifted Mersenne fragmentation proposal for RH
+# T-29201 — Positive parity-cycle Mersenne fragmentation proposal for RH
 
 Claim ID: `T-29201`  
-Title: A source-complete factor-two parity lift would construct the exact Mersenne-supported carry flow and prove RH  
+Title: A source-complete factor-two parity lift with zero-even Pascal completion would construct the exact Mersenne-supported carry flow and prove RH  
 Status: **SERIOUS FULL CONDITIONAL PROPOSAL — `PPMFL` IS OPEN**  
 Authoring agent: `gpt56-sol`  
 Created: 2026-08-08  
@@ -100,14 +100,14 @@ Thus the only issue is exact finite support feasibility.
 ## 3. Positive Parity Mersenne Flow Lift (`PPMFL`)
 
 Put `X=2Y` and `alpha=2^(-1/2)`.  A `PPMFL(Y)` certificate consists of the
-following data.
+following source-complete data.
 
 ### 3.1 Lower support flow
 
 A complete `SF-MCF(Y)` flow `d_Y`, including every split and every carry-column
 replay.
 
-### 3.2 Ordinary parity-sibling allocation
+### 3.2 Ordinary parity-sibling baseline
 
 For every non-Mersenne lower edge `e=[n,j]`, nonnegative numbers
 
@@ -118,28 +118,74 @@ x_e,y_e,
 \]
 
 allocate the three siblings of `L-29202`.  Every even column is then solved
-exactly, and the odd columns are solved if and only if the explicit odd-node
-network satisfies
+exactly.  The sibling differences contribute the explicit odd-node incidence
 
 \[
-B_{\rm odd}(x,y)=z_X.
+B_{\rm odd}(x,y).
 \tag{T-29201.9}
 \]
 
-The complete target charge `z_X` is the odd-multiple Möbius transform
-(L-29202.9), not an estimated surrogate.
+The complete target charge `z_X` is the odd-multiple Möbius transform in
+`L-29202.9`, not an estimated surrogate.
 
-### 3.3 Mersenne boundary reconstruction
+The edge-local network equation
+
+\[
+B_{\rm odd}(x,y)=z_X
+\tag{T-29201.10}
+\]
+
+is a particularly strong sufficient certificate, but it is **not assumed to be
+necessary**.  A valid proof may need carry-preserving circulation among several
+upper parents before nonnegativity becomes visible.
+
+### 3.3 Complete zero-even-column Pascal completion
+
+Let `E_X^{\rm MCF}` be the upper support menu and let
+
+\[
+K_X^{\rm even}
+=\left\{c\in\mathbb R^{E_X^{\rm MCF}}:
+ \sum_{e\in E_X^{\rm MCF}}c_e\chi_e(2q)=0
+ \text{ for every }q\right\}.
+\tag{T-29201.11}
+\]
+
+The certificate may add a signed correction
+
+\[
+c_X\in K_X^{\rm even}
+\tag{T-29201.12}
+\]
+
+provided the **final** split coefficients are nonnegative.  It must emit a
+complete parity-compatible Pascal/fundamental-cycle decomposition of `c_X`.
+No unnamed nullspace vector is permitted.
+
+The complete ordinary odd-column equation is therefore
+
+\[
+\boxed{
+B_{\rm odd}(x,y)+L_{\rm odd}(c_X)=z_X.
+}
+\tag{T-29201.13}
+\]
+
+This is the correct factor-two construction target.  The local sibling network
+is its sparse first layer; the zero-even cycle space supplies every legal
+carry-preserving redistribution that the local lift misses.
+
+### 3.4 Mersenne boundary reconstruction
 
 The lifted image of every lower Mersenne extreme edge is recombined with all of
-its lower descendants and replaced by a nonnegative flow using only the upper
-support menu (T-29201.2)--(T-29201.3).  The replacement must preserve every
-carry column exactly.
+its descendants and with the zero-even cycle correction, then replaced by a
+nonnegative flow using only the upper support menu (T-29201.2)--(T-29201.3).
+The replacement must preserve every carry column exactly.
 
 Its input mass is logarithmic by (T-29201.4), but small mass is not a substitute
 for exact reconstruction.
 
-### 3.4 Endpoint and bottom rows
+### 3.5 Endpoint and bottom rows
 
 The certificate includes:
 
@@ -152,30 +198,38 @@ every orientation and symmetric duplicate convention.
 
 No endpoint row may be hidden in an `O(1)` term.
 
-### 3.5 Final upper flow
+### 3.6 Final upper flow
 
-After ordinary sibling allocation, Mersenne reconstruction, and endpoint
-correction, the emitted flow is a complete `SF-MCF(X)` object.
+After sibling allocation, zero-even Pascal completion, Mersenne reconstruction,
+and endpoint correction, the emitted flow is a complete `SF-MCF(X)` object.
 
 The theorem `PPMFL` asserts that compatible certificates exist recursively from
 one fixed finite base through every dyadic doubling and every intervening unit
 endpoint.
 
-## 4. Exact finite acceptance test
+## 4. Exact finite acceptance tests
 
-The ordinary parity network is accepted only by one of two proof objects:
+The ordinary parity stage is accepted by either:
 
-1. a primal list of all `x_e,y_e` satisfying nonnegativity, shared capacities,
-   and exact node divergence; or
-2. a proof that every potential satisfies the cut inequality
-   \[
-   \sum_mz_X(m)\phi(m)
-   \le
-   \alpha\sum_ed_Y(e)
-   \max(0,\Delta_{e,1}\phi,\Delta_{e,2}\phi).
-   \]
+1. a primal list of `x_e,y_e` and parity-cycle coefficients satisfying shared
+   capacities, exact even-zero conditions, exact odd charge, and final
+   nonnegativity; or
+2. an exact dual proof for the combined sibling-plus-zero-even-cycle polytope.
 
-The Mersenne and endpoint states require their own exact Pascal/tree manifests.
+For the sibling-only subproblem the dual reduces to
+
+\[
+\sum_mz_X(m)\phi(m)
+\le
+\alpha\sum_ed_Y(e)
+\max(0,\Delta_{e,1}\phi,\Delta_{e,2}\phi).
+\tag{T-29201.14}
+\]
+
+A complete PPMFL proof must additionally certify that every dual direction
+annihilating the sibling arcs is paid by an emitted parity-compatible Pascal
+cycle or belongs to the declared Mersenne/endpoint state.
+
 Floating feasibility, a generic operator norm, and a finite positive ladder are
 not production proofs.
 
@@ -194,7 +248,7 @@ PPMFL\Longrightarrow SF\text{-}MCF
 \Longrightarrow \mathcal R_\eta(X)\ge-O(\log X)
 \Longrightarrow RH.
 }
-\tag{T-29201.10}
+\tag{T-29201.15}
 \]
 
 Every arrow after `PPMFL` is exact or already isolated in the frozen inputs.
@@ -202,20 +256,18 @@ Every arrow after `PPMFL` is exact or already isolated in the frozen inputs.
 ## 6. Why this is not another renamed scalar
 
 The open object is not a bound on Mertens, WSTS, a prime-ramp discrepancy, or a
-physical block norm.  It is a finite positive allocation theorem with:
+physical block norm.  It is a finite positive construction theorem with:
 
-- explicitly listed variables;
-- fixed local sibling identities;
-- exact capacity constraints;
+- explicitly listed sibling variables;
+- fixed floor identities;
+- exact shared capacities;
 - an exact odd-divisor node charge;
-- a standard max-flow/min-cut alternative;
+- a complete zero-even Pascal-cycle coordinate;
+- a finite primal/dual alternative;
 - a logarithmic, explicitly declared boundary state.
 
-A failed cut produces a concrete finite countercertificate.  A successful
+A failed dual produces a concrete finite countercertificate.  A successful
 construction produces the complete carry flow consumed by the proof.
-
-The arithmetic difficulty has not disappeared, but it is no longer hidden in
-an unnamed cancellation estimate.
 
 ## 7. Mandatory mutations
 
@@ -229,7 +281,8 @@ R-28102 compact-boundary monotonicity failure;
 PR #239 same-sign high-rank Mobius cube;
 PR #229 exact 2/3 first-cell Mertens decoder;
 all lower Mersenne extreme edges;
-the unavailable top odd sibling at n=Y.
+the unavailable top odd sibling at n=Y;
+a synthetic target where the sibling-only network is insufficient.
 ```
 
 ## 8. Exact status
@@ -238,7 +291,8 @@ the unavailable top odd sibling at n=Y.
 eta source and Mersenne sign localization       inherited proposed exact
 Mersenne collar rate                            proved automatically here
 parity-sibling/divisor-network algebra          proposed complete exact
-ordinary odd-network feasibility                OPEN / SOURCE-SPECIFIC
+complete zero-even Pascal coordinate            inherited finite basis / source binding open
+combined parity-cycle feasibility               OPEN / SOURCE-SPECIFIC
 Mersenne boundary reconstruction                OPEN / SOURCE-SPECIFIC
 endpoint-compatible recursive PPMFL             OPEN / LOAD BEARING
 PPMFL -> SF-MCF -> RH                            COMPLETE CONDITIONAL CHAIN
