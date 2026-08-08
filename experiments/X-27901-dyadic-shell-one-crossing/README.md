@@ -1,6 +1,6 @@
 # X-27901 — Dyadic shell one-crossing replay
 
-This standard-library package supports the proposed claims `L-27901`--`L-27903` and the full proposal `T-27901`.
+This standard-library package supports `L-27901`--`L-27904` and the full proposal `T-27901`.
 
 ## Run
 
@@ -27,12 +27,12 @@ The script reconstructs the reciprocal-cell shell formula and reports:
 - the unique continuum zero bracket;
 - the signs at `1/7`, `1/8`, and `1/9`;
 - the maxima of the six negative upper cells;
-- the derivative-left margins through cell 200,000;
+- derivative-left margins through cell 200,000;
 - all-coordinate finite shell scans through `X=20,000`;
 - prime-coordinate scans through `X=200,000`;
 - the maximum weighted prime tail and its start.
 
-The retained finite scans have one sign change and no positive weighted prime tail.
+Every retained finite shell has one sign change and no positive weighted prime tail.
 
 ## Separate discovery
 
@@ -54,13 +54,13 @@ This evidence is discovery only.
 
 ## Proof boundary
 
-The package does not prove:
+The package does not prove the analytic claims. In particular, it does not certify:
 
-- the analytic all-cell inequalities in `L-27901`;
-- cofinal finite shell-crossing rigidity `FSCR`;
+- the all-cell inequalities in `L-27901`;
+- the Euler/Hurwitz asymptotics and transition derivative in `L-27904`;
 - endpoint prime domination `EPD`;
 - squarefree collector existence `ESC`;
 - WSTS;
 - RH.
 
-A reviewer must check the written analytic proof and the cofinal production gates independently. Finite scans are not substitutes for those theorems.
+`FSCR` is claimed by the written analytic theorem `L-27904`, not by this finite replay. A reviewer must verify that proof independently. The scans are mutation and discovery evidence only.
