@@ -82,7 +82,7 @@ The standard floor integral, initially for `Re(s)>1`, gives
 \tag{L-29001.7}
 \]
 
-Thus a zeroth-order carry window has the expected zeta factor.  Averaging over
+Thus a zeroth-order carry window has the expected zeta factor. Averaging over
 `theta` recovers the canonical carry kernel of PR #289, but averaging before
 squaring discards the transverse carry-position frame.
 
@@ -133,7 +133,7 @@ Let
  \lambda=\sum_{q\ge1}\frac{\Lambda(q)}{\sqrt q}\delta_{\log q}
 \]
 
-and define the ordinary-prime commutator field
+and define the ordinary-prime pole field
 
 \[
 \boxed{
@@ -194,9 +194,9 @@ make
  1-\theta^s-(1-\theta)^s
 \]
 
-identically zero.  Differentiation would give
+identically zero. Differentiation would give
 `theta^(s-1)=(1-theta)^(s-1)` on an interval, which is possible only for
-`s=1`.  Nontrivial zeta zeros are not equal to one.
+`s=1`. Nontrivial zeta zeros are not equal to one.
 
 On the full interval one has the explicit control
 
@@ -224,7 +224,7 @@ For real `X>=1`, define
 \tag{L-29001.18}
 \]
 
-The coefficient identity `Lambda*omega_2=-omega_2 log` gives
+Then finite convolution gives
 
 \[
 \boxed{
@@ -234,22 +234,41 @@ The coefficient identity `Lambda*omega_2=-omega_2 log` gives
    \sum_{r\le X}(\Lambda*\omega_2)(r)
    C\!\left(\frac Xr,\theta\right)\\
  &=\frac1{\sqrt X}
-   \sum_{m\le X}\Lambda(m)Z_{X,m}(\theta)\\
- &=-\frac1{\sqrt X}
-   \sum_{r\le X}\omega_2(r)\log r
-   C\!\left(\frac Xr,\theta\right).
+   \sum_{m\le X}\Lambda(m)Z_{X,m}(\theta).
 \end{aligned}}
 \tag{L-29001.19}
 \]
 
 No limit or approximation enters this formula.
 
+There is a small but load-bearing logarithmic gauge in coefficient coordinates.
+Writing
+
+\[
+ e=\varepsilon-\frac32\delta_2+\frac12\delta_4,
+ \qquad \omega_2=e*\mu,
+\]
+
+Leibniz differentiation gives
+
+\[
+\boxed{
+ \Lambda*\omega_2
+ =(e\log)*\mu-\omega_2\log,
+}
+\tag{L-29001.20}
+\]
+
+not `-omega_2 log` by itself.  This is the atomized analogue of the explicit
+deterministic gauge separated on PR #289.  Formula (L-29001.19), which uses the
+ordinary-prime convolution directly, is gauge correct.
+
 Let
 
 \[
  g_m(y)=\mathbf1_{m\le y<2m}
         -\frac12\mathbf1_{2m\le y<4m}.
-\tag{L-29001.20}
+\tag{L-29001.21}
 \]
 
 The real-variable version of the divisor-prefix collapse on PR #269 gives
@@ -259,11 +278,11 @@ The real-variable version of the divisor-prefix collapse on PR #269 gives
  Z_{X,m}(\theta)
  =g_m(X)-g_m(\theta X)-g_m((1-\theta)X).
 }
-\tag{L-29001.21}
+\tag{L-29001.22}
 \]
 
 Thus the exact physical source is one fixed-ratio carry wavelet for every
-balanced position.  For `theta in [eta,1-eta]`, only scales
+balanced position. For `theta in [eta,1-eta]`, only scales
 
 \[
  m>\frac{\eta X}{4}
@@ -281,7 +300,7 @@ Define the balanced atomized block energy
  =\int_J^{J+1}\int_\eta^{1-\eta}
   |\mathfrak P_\theta(t)|^2\,d\theta\,dt.
 }
-\tag{L-29001.22}
+\tag{L-29001.23}
 \]
 
 At each fixed `X=e^t`, equation (L-29001.19) gives
@@ -294,7 +313,7 @@ At each fixed `X=e^t`, equation (L-29001.19) gives
  \Lambda(m)\Lambda(n)\,
  \mathcal K_{\eta,X}(m,n),
 \end{aligned}}
-\tag{L-29001.23}
+\tag{L-29001.24}
 \]
 
 where
@@ -306,7 +325,7 @@ where
    Z_{X,m}(\theta)Z_{X,n}(\theta)\,d\theta
  \succeq0.
 }
-\tag{L-29001.24}
+\tag{L-29001.25}
 \]
 
 The kernel is a finite piecewise-rational object: every breakpoint belongs to
@@ -316,11 +335,11 @@ one of the explicit sets
  \left\{\frac{am}{X},1-\frac{am}{X}:a=1,2,4\right\}
 \]
 
-for an active scale `m`.  Consequently a production proof can emit the exact
+for an active scale `m`. Consequently a production proof can emit the exact
 carry Gram without a numerical Fourier inversion or an unproved
 physical-to-carry map.
 
-Equations (L-29001.22)--(L-29001.24) are the independent-frequency normal
+Equations (L-29001.23)--(L-29001.25) are the independent-frequency normal
 orientation: the carry-position variable is retained until after the square.
 
 ## 7. Vector-valued RH criterion
@@ -333,7 +352,7 @@ The following statements are equivalent:
  \iff
  \mathscr E_\eta(J)=e^{o(J)}.
 }
-\tag{L-29001.25}
+\tag{L-29001.26}
 
 Under RH, the standard bound
 
@@ -346,15 +365,15 @@ subexponential estimate uniformly for balanced `theta`.
 
 Conversely, `mathscr E_eta(J)=e^{o(J)}` puts the vector-valued signal
 `theta mapsto mathfrak P_theta(t)` in every exponentially weighted `L^2`
-half-plane.  Its vector-valued Laplace transform is therefore holomorphic in
-`Re(z)>0`.  A zero `rho` with `Re(rho)>1/2` would create the pole vector
+half-plane. Its vector-valued Laplace transform is therefore holomorphic in
+`Re(z)>0`. A zero `rho` with `Re(rho)>1/2` would create the pole vector
 
 \[
  -m_\rho E(\rho)N_\theta(\rho),
 \]
 
 whose squared norm is the strictly positive number
-`m_rho^2|E(rho)|^2 mathfrak A_eta(rho)`.  This is impossible.  Functional-equation symmetry gives RH.
+`m_rho^2|E(rho)|^2 mathfrak A_eta(rho)`. This is impossible. Functional-equation symmetry gives RH.
 
 ## 8. What this changes in the proof graph
 
@@ -367,8 +386,8 @@ physical independent-frequency block
 ```
 
 For the complete atomized bank, that map is the identity (L-29001.19), and the
-normal Gram is exactly (L-29001.24).  The remaining problem is no longer
-transference.  It is a source-specific estimate for one explicit finite-ratio
+normal Gram is exactly (L-29001.25). The remaining problem is no longer
+transference. It is a source-specific estimate for one explicit finite-ratio
 carry Gram.
 
 ## 9. Proof boundary
