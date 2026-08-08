@@ -9,19 +9,21 @@ Freeze PR #304 at
 Reconstruct, in this order:
 
 1. the stopped-power identity of PR #301;
-2. the analytic coefficient lower bound in `L-28401`;
-3. the top-annulus finite residual;
-4. the exact aggregate boundary `b_X`;
-5. the unique divisor source on `M=floor((X+1)/2)`;
-6. the atomic lower bound of `L-30501`.
+2. the active-output condition `Y>=2q-1`;
+3. the exact aggregate formula (L-30501.4);
+4. the transition-annulus finite residual;
+5. the upper bound for the analytic power tail;
+6. the unique divisor source on `M=floor((X+1)/2)`;
+7. the atomic lower bound of `L-30501`;
+8. the per-layer flow identity and activation firewall of `L-30502`.
 
 Automatic rejection of `R-30501` occurs if any one of the following is shown:
 
-- the aggregate boundary is not (L-30501.4);
-- a finite central term other than `w_X(2q-1)` survives on the declared annulus;
-- the analytic faster-power coefficients have a negative contribution;
+- the active analytic weight is not `log(X/(2q-1))`;
+- a finite central term other than `w_X(2q-1)` survives on the declared band;
+- the eta Euler lower bound or faster-power upper bound is wrong;
 - the PR #304 source is allowed support beyond the declared next endpoint;
 - the source norm used in `L-30403` is not the square-root atomic norm.
 
-Do not attempt to rescue PR #304 by citing cancellation in the optimized flow:
-that is a different theorem and is explicitly left open by this audit.
+Cancellation in the optimized flow does not rescue the frozen atomic-norm
+claim. It is a distinct theorem and remains open.
