@@ -1,0 +1,23 @@
+{
+  "classification": "EXACT_RATIONAL_FINITE_ALGEBRA_ONLY",
+  "counts": {
+    "binomial_cardinal_rows": 300,
+    "mellin_sample_rows": 855,
+    "norlund_derivative_rows": 171,
+    "raw_derivative_rows": 300
+  },
+  "mutations": {
+    "cesaro_weight_mutation_rejected": true,
+    "missing_product_derivative_rejected": true,
+    "unsquared_cardinal_rejected": true,
+    "wrong_mellin_power_rejected": true
+  },
+  "proof_object_sha256": "e36d9ce0ce8ee3ea9f4127aa08e52dc028876a8d7ff3826f1dcee8b9f29454e8",
+  "scope_exclusions": [
+    "Norlund half-plane stability",
+    "reciprocal complete monotonicity",
+    "zero certification",
+    "Riemann Hypothesis"
+  ],
+  "verdict": "PASS_EXACT_NORLUND_CARDINAL_DERIVATIVE_SAMPLING"
+}
