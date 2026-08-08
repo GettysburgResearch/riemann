@@ -16,8 +16,13 @@ python3 verify_digital_lift.py
   sha256_without_digest:
   17e23d1e2ebc01cc7283d125c15c721d4743e69f906b17b715294f60b0e09b23
 
+python3 verify_factor_five.py
+  PASS
+  sha256_without_digest:
+  b2ff53b948da65a81082fa9a14d7f990c227bb47a6bb592458655ccec7a03f95
+
 pytest -q tests/test_verify.py
-  3 passed
+  4 passed
 
 python3 recon.py
   DISCOVERY_ONLY_POSITIVE_CARRY_INVERSE_THROUGH_5000
@@ -28,4 +33,5 @@ Scope
 -----
 The exact tests certify only the finite identities declared in X-26201.
 The reconnaissance is high-precision discovery, not an interval proof.
-No test proves Odd-Leakage Descent, DSS, PBD, Carry Saturation, or RH.
+No test proves factor-five transition contraction, DSS, PBD, Carry Saturation,
+or RH.
