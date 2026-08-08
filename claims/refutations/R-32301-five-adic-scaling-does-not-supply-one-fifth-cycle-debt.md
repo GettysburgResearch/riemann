@@ -31,7 +31,7 @@ The factor `5^{-1/2}` is exactly critical for the source-adapted capacity metric
 \omega_{n,j}\asymp_\eta \sqrt n.
 \]
 
-Scaling node labels by five multiplies the natural square-root capacity by `sqrt(5)`.  Consequently the coefficient `5^{-1/2}` cancels that scaling at first order.  It does not create a factor `1/5` reserve.
+Scaling node labels by five multiplies the natural square-root capacity by `sqrt(5)`. Consequently the coefficient `5^{-1/2}` cancels that scaling at first order. It does not create a factor `1/5` reserve.
 
 ## 2. Exact finite witness
 
@@ -57,14 +57,42 @@ Therefore a coefficient scaled by `5^{-1/2}` has capacity ratio
 \tag{R-32301.2}
 \]
 
-For example the three positive terms `q=2,3,6` alone give
+It is enough to retain only the positive columns `q=2,3,6`. Dividing their scaled contribution by `omega_(2,1)=1/sqrt(2)` gives
 
 \[
-5^{-1/2}\omega_{10,5}
->
-5^{-1/2}\left(2^{-1/2}+3^{-1/2}+6^{-1/2}\right)
->2^{-1/2}.
+{1\over\sqrt5}+\sqrt{2\over15}+{1\over\sqrt{15}}.
 \]
+
+Each term has the following exact rational lower bound:
+
+\[
+{1\over\sqrt5}>{4\over9},
+\qquad
+\sqrt{2\over15}>{1\over3},
+\qquad
+{1\over\sqrt{15}}>{1\over4}.
+\]
+
+Indeed these reduce after squaring positive quantities to
+
+\[
+{1\over5}>{16\over81},
+\qquad
+{2\over15}>{1\over9},
+\qquad
+{1\over15}>{1\over16}.
+\]
+
+Hence
+
+\[
+{1\over\sqrt5}+\sqrt{2\over15}+{1\over\sqrt{15}}
+>{4\over9}+{1\over3}+{1\over4}
+={37\over36}>1.
+\tag{R-32301.3}
+\]
+
+This proves (R-32301.2) without floating-point arithmetic.
 
 Thus even the canonical lifted edge is not contracted by `1/5`; its critical capacity is of the same order as the original edge.
 
@@ -89,12 +117,12 @@ Its contribution to the square-root moment is exactly
 \[
 -5^{-1/2}r_Y(a)\sqrt{5a}
 =-r_Y(a)\sqrt a.
-\tag{R-32301.3}
+\tag{R-32301.4}
 \]
 
 Hence the critical mode has eigenvalue **one**, not `1/5`, under the raw factor-five scaling.
 
-The remaining residue commutators may still modify or cancel this mode, but that is precisely the new arithmetic content which a five-state automaton would have to prove.  It cannot be removed from the proof by quotienting the critical mode without a separate estimate.
+The remaining residue commutators may still modify or cancel this mode, but that is precisely the new arithmetic content which a five-state automaton would have to prove. It cannot be removed from the proof by quotienting the critical mode without a separate estimate.
 
 ## 4. Cross-branch identification
 
@@ -105,13 +133,13 @@ PR #277 proves the exact coefficient identity
 =-\sum_{q\le X}h_{1/2}(q)q^{-1/2}\log(X/q),
 \]
 
-with reciprocal-zeta Dirichlet series.  New `L-32301` further proves
+with reciprocal-zeta Dirichlet series. New `L-32301` further proves
 
 \[
 \operatorname{sgn}h_{1/2}(n)=(-1)^{\omega(n)}.
 \]
 
-Therefore the mode which PR #322 proposes to quotient is the same coherent parity-sensitive Möbius mode that survived the binary–ternary audit.  It is not a harmless scaling eigenvector.
+Therefore the mode which PR #322 proposes to quotient is the same coherent parity-sensitive Möbius mode that survived the binary–ternary audit. It is not a harmless scaling eigenvector.
 
 ## 5. Correct five-adic frontier
 
