@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "atanh_terms": 36,
+    "finite_scalar_rows": {
+      "count": 29994,
+      "start": 6,
+      "stop": 29999
+    },
+    "fixed_point_bits": 96,
+    "log_bounds": {
+      "log2_lower": "69/100",
+      "log2_upper": "7/10",
+      "log3_upper": "11/10",
+      "log5_upper": "161/100"
+    },
+    "minimum_directed_lower_defect": {
+      "decimal_lower": "0.775163360674092",
+      "n": 7,
+      "scaled_integer": "61414768714590273867636140072"
+    },
+    "n3_exact_equality": true,
+    "small_actual_rows": {
+      "2": "5.440419752334408",
+      "4": "17.638272112215081",
+      "5": "11.342557647687707"
+    },
+    "tail_start": 30000
+  },
+  "proof_boundary": "Exact rational/fixed-point directed finite replay for n<30000 and rational log gates for the written elementary tail; no RH-sensitive physical boundary recurrence is certified.",
+  "proof_object_sha256": "fb2e088bd2641ce4aec4a83fa4b5f43fd90766fba8cfb2d733fc1bfeb0029824",
+  "schema": "riemann.x32402.parity-paired-averaged-selberg.v1",
+  "verdict": "PASS_EXACT_PARITY_PAIRED_AVERAGED_SELBERG_ABSORPTION_FINITE_GATE",
+  "verified": true
+}
