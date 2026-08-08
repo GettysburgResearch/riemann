@@ -6,7 +6,7 @@ Status: **PROPOSED COMPLETE EXACT FINITE TRANSPORT LEMMA**
 Authoring agent: `gpt56-02-r`  
 Created: 2026-08-08  
 Dependencies: finite weighted Hall/max-flow theorem; Taylor's formula with integral remainder  
-Scope: exact coefficient/source matching for the Euler jet bank; balanced Pascal realization of both transport orientations is treated separately
+Scope: abstract Hausdorff coefficient matching; the corrected interleaved application is `L-29812`
 
 ## 1. Hausdorff jet weights
 
@@ -53,14 +53,14 @@ and nonnegative residuals `rho_r>=0` on the even levels such that
 \[
 \boxed{
  w_r=t_{r-1}+t_r
- \qquad(r\text{ odd}),}
+ \qquad(r\equiv1\!\!\pmod2),}
 \tag{L-29810.5}
 \]
 
 \[
 \boxed{
  w_r=\rho_r+t_{r-1}+t_r
- \qquad(r\text{ even}),}
+ \qquad(r\equiv0\!\!\pmod2),}
 \tag{L-29810.6}
 \]
 
@@ -71,16 +71,10 @@ Equivalently,
 \[
 \boxed{
  V_{N,m}
- =\sum_{r\ {m even}}\rho_re_{N+r}
-  +\sum_{r=0}^{m-1}t_r\,arepsilon_r
-    (e_{N+r}-e_{N+r+1}),}
+ =\sum_{r\equiv0\,(2)}\rho_re_{N+r}
+  +\sum_{r=0}^{m-1}t_r(-1)^r
+    (e_{N+r}-e_{N+r+1}).}
 \tag{L-29810.7}
-\]
-
-where
-
-\[
- \varepsilon_r=(-1)^r.
 \]
 
 Thus every odd demand is paid by its two neighboring even source levels and no
@@ -90,14 +84,14 @@ The total residual is exactly
 
 \[
  \boxed{
- \sum_{r\ {m even}}\rho_r=\Delta^ma_N.}
+ \sum_{r\equiv0\,(2)}\rho_r=\Delta^ma_N.}
 \tag{L-29810.8}
 \]
 
 ## 3. Weighted Hall reduction
 
 Consider the path graph on `0,1,...,m`, with even vertices as supplies and odd
-vertices as demands.  By finite weighted Hall/max-flow duality, equations
+vertices as demands. By finite weighted Hall/max-flow duality,
 (L-29810.5)--(L-29810.6) hold if and only if every set of odd vertices has
 weight no larger than its neighboring even vertices.
 
@@ -108,13 +102,13 @@ Every connected component of such a set is an interval of odd levels
 \]
 
 with `a,b` odd. Neighbor sets of distinct components are disjoint. It is
-therefore enough to prove
+enough to prove
 
 \[
 \boxed{
- \sum_{\substack{a\le r\le b\\r\ {m odd}}}w_r
+ \sum_{\substack{a\le r\le b\\r\equiv1\,(2)}}w_r
  \le
- \sum_{\substack{a-1\le r\le b+1\\0\le r\le m\\r\ {m even}}}w_r.}
+ \sum_{\substack{a-1\le r\le b+1\\0\le r\le m\\r\equiv0\,(2)}}w_r.}
 \tag{L-29810.9}
 \]
 
@@ -153,7 +147,7 @@ where
 \tag{L-29810.12}
 \]
 
-Let `l=a-1`, and let `u=min(b+1,m)`.  The desired supply-minus-demand is
+Let `l=a-1`, and let `u=min(b+1,m)`. The desired supply-minus-demand is
 
 \[
  P_u(y)-P_{l-1}(y).
@@ -168,7 +162,7 @@ Here `l` is even and `l-1` is odd. If `u<m`, then `u` is even and
 \]
 
 If `u=m`, then `P_m=(1-y)^m`, so the same difference is either
-`A_(l-1)>=0` or `(1-y)^m>=0` when `l=0`.  If `l=0`, the lower partial sum is
+`A_(l-1)>=0` or `(1-y)^m>=0` when `l=0`. If `l=0`, the lower partial sum is
 absent and `P_u>=0` directly.
 
 This proves every interval inequality (L-29810.9), hence the weighted Hall
@@ -181,38 +175,21 @@ Integrating the interval inequalities first gives the Hall inequalities for the
 actual weights (L-29810.2), and finite max-flow then supplies one matching for
 the integrated source.
 
-The theorem is therefore stable under every nonnegative superposition used in
-the stopped-power/Taylor/Peano source ledger.
+The theorem is stable under every nonnegative superposition of Hausdorff
+sources.
 
-## 6. Application to the corrected Euler bank
+## 6. Scope correction
 
-`L-29809` proves that the scalar coefficient sequences emitted from an
-even-start interleaved Euler transform are Hausdorff moment sequences in the
-paired index. For each finite order `m`, equation (L-29810.7) gives the complete
-node-labeled source decomposition which was missing from scalar positivity.
+`R-29806` proves that the complete shifted-even/unshifted-odd interleaved node
+sequence is not Hausdorff. Therefore this theorem may not be applied to that
+sequence before mode separation.
 
-The order-two control of `R-29804` is repaired at the coefficient level by
-allowing the right even source to pay the preceding odd demand.
+`L-29812` supplies the correct use:
 
-## 7. Remaining Pascal orientation theorem
+- apply `L-29810` to the smooth `z^n` mode;
+- keep the parity `(-z)^n` mode coefficientwise positive after the Euler sign.
 
-Equation (L-29810.7) contains both orientations:
-
-\[
- e_{2h}-e_{2h+1}
- \quad\text{and}\quad
- e_{2h+2}-e_{2h+1}.
-\]
-
-The first is the central-to-sibling carry dipole already used in `L-28302`.
-A completed source-to-flow theorem must also realize the second orientation by
-an exact nonnegative balanced Pascal gadget, or pair the two orientations in a
-larger nonnegative cycle.
-
-This is a finite local carry problem. It is no longer a coefficient-sign or
-Hausdorff-matching problem.
-
-## 8. Proof boundary
+## 7. Proof boundary
 
 Proved here:
 
@@ -222,9 +199,9 @@ Proved here:
 - residual positive mass equals the scalar finite difference;
 - the theorem is stable under positive source superposition.
 
-Open:
+Not proved here:
 
-- nonnegative balanced Pascal realization of the right-to-left orientation;
-- complete source-to-PR-272 DCD congruence;
+- that an arbitrary interleaved source is Hausdorff;
+- arithmetic source-to-carry binding;
 - DCD;
 - RH.
