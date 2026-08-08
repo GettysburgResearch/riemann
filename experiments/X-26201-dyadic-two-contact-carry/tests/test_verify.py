@@ -96,3 +96,18 @@ def test_uniform_carry_schur_structure() -> None:
         result["checks"]["reserve_denominator"]["value"]
         >= result["checks"]["exact_required_denominator"]["value"]
     )
+
+
+def test_positive_inverse_wavelet_synthesis() -> None:
+    result = run_script("verify_positive_synthesis.py")
+    assert (
+        result["sha256_without_digest"]
+        == "11e5e76a49b49ab2f838d7a829936b4e46bed5482c0d0a717fb4161f6b99eeda"
+    )
+    assert result["checks"]["positive_inverse_convolution"]["cases"] == 100
+    assert (
+        result["checks"]["generalized_von_mangoldt_convolution"]["cases"]
+        == 100
+    )
+    assert result["checks"]["positive_wavelet_synthesis"]["cases"] == 5148
+    assert result["checks"]["digital_prime_correction"]["cases"] == 5148
