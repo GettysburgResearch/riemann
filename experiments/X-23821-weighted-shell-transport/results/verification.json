@@ -1,0 +1,83 @@
+{
+  "charged_case": {
+    "final_weighted_residual": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "objective_change": "0",
+    "tails": [
+      "0",
+      "-4",
+      "-3",
+      "-2"
+    ],
+    "transfers": [
+      {
+        "destination": 3,
+        "destination_endpoint_removal": "5/7",
+        "raw_prime_transfer": "1",
+        "source": 0,
+        "weighted_amount": "2"
+      },
+      {
+        "destination": 2,
+        "destination_endpoint_removal": "3/10",
+        "raw_prime_transfer": "1/2",
+        "source": 0,
+        "weighted_amount": "1"
+      },
+      {
+        "destination": 1,
+        "destination_endpoint_removal": "1/6",
+        "raw_prime_transfer": "1/2",
+        "source": 0,
+        "weighted_amount": "1"
+      }
+    ]
+  },
+  "classification": "EXACT_WEIGHTED_TAIL_TRANSPORT_VERIFIED",
+  "direct_case": {
+    "final_weighted_residual": [
+      "0",
+      "-1",
+      "-3",
+      "0"
+    ],
+    "objective_change": "0",
+    "tails": [
+      "-4",
+      "-7",
+      "-6",
+      "-2"
+    ],
+    "transfers": [
+      {
+        "destination": 3,
+        "destination_endpoint_removal": "5/7",
+        "raw_prime_transfer": "1",
+        "source": 0,
+        "weighted_amount": "2"
+      },
+      {
+        "destination": 2,
+        "destination_endpoint_removal": "3/10",
+        "raw_prime_transfer": "1/2",
+        "source": 0,
+        "weighted_amount": "1"
+      }
+    ]
+  },
+  "general_tails": [
+    "1",
+    "-3",
+    "-2",
+    "-1"
+  ],
+  "least_boundary_charge": "1",
+  "mutations_rejected": 4,
+  "proof_boundary": "Exact rational weighted-tail coupling, zero-objective carry transport, and least in-support boundary charge only; no shell asymptotic or RH claim.",
+  "proof_object_sha256": "41753d1842a8c0e7f39bc45b97cafb9c429bae4f5bd9728247a853a7af90502b",
+  "schema": "riemann.x23821-weighted-shell-transport.v1"
+}
