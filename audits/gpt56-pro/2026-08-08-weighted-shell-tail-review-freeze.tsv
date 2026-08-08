@@ -1,0 +1,12 @@
+kind	identifier	path_or_ref	immutable_sha	status	review_role
+source	PR-248	agent/gpt56-pro-25/245-parabolic-carry-transport	5f2b25f89afbb90a3bc4ca6d40148f530303eb54	FROZEN_DEPENDENCY	parabolic seed; signed carry consumer; prime-only reduction; incidence blocks
+source	PR-202	agent/gpt56-pro-09-i/198-square-screw-criterion	d4c8e59f8f3f992a76fd48ad13bef78505dca7cc	FROZEN_DEPENDENCY	square-screw and one-sided Landau consumer
+claim	L-23823	claims/lemmas/L-23823-normalized-tail-and-fixed-ratio-shell-majorization.md	2f0fcc930c20449b73ef6084414921f839c40e63	PROPOSED_COMPLETE	self-contained continuum shell order
+claim	L-23824	claims/lemmas/L-23824-zero-cost-weighted-prime-tail-transport.md	c758f96806861161f7c7d67201176c9bb3ef16cb	PROPOSED_COMPLETE	exact weighted prime transport
+claim	L-23825	claims/lemmas/L-23825-finite-shell-profile-and-prime-sampling-remainder.md	f127d6041e7a22e5f17bfe82ae706f057efd37c1	PROPOSED_COMPLETE	finite shell and Chebyshev remainder
+claim	L-23826	claims/lemmas/L-23826-in-support-weighted-tail-charge-and-shell-sum.md	8c311d3c3e56ee3f16414eb5be9c8cbddfc08dec	PROPOSED_COMPLETE	in-support charge and shell telescope
+claim	T-23811	claims/theorems/T-23811-weighted-shell-tail-carry-proposal.md	bbd58586be89453654e1974f274f7b757178d676	CONDITIONAL_COMPLETE	WSTS to prime ramp to RH
+method	M-23811	claims/methodology/M-23811-weighted-shell-tail-review-protocol.md	da2b8723faf638d23d69bf54f144b9692f01a3d8	PROPOSED_REVIEW_PROTOCOL	fail-closed mutations
+experiment	X-23821	experiments/X-23821-weighted-shell-transport/results/verification.json	b01ea7f198c525c1d654488014590e3c9686796b	EXACT_FINITE_CONTROL	transport replay only
+hinge	WSTS	T-23811.5 / L-23825.25	OPEN	OPEN_RH_BEARING	uniform subpolynomial weighted shell-tail bound
+conclusion	RH	N/A	N/A	NOT_PROVED	promotion forbidden before WSTS and dependency review
