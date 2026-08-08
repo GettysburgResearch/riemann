@@ -1,0 +1,15 @@
+{
+  "diagonal_loss_row_5": "87/1000",
+  "endpoint": 9,
+  "exact_mass": "3061/175",
+  "exact_row_error": "14153/1750",
+  "off_diagonal_blocker": {
+    "column": 4,
+    "row": 5
+  },
+  "positive_final_slack": "29/500",
+  "row_sum_checks": 63,
+  "schema": "X-23702-v1",
+  "scope": "finite rational carry/slack algebra only; demonstrates that generic digit identities do not force saturation and does not refute DBT for the logarithmic target",
+  "verdict": "EXACT_GREEDY_SLACK_SCOPE_CONTROL_VERIFIED"
+}
