@@ -1,240 +1,151 @@
-# L-29815 — The scaled Pascal sibling intertwines the common arithmetic destination
+# L-29815 — Scaled Pascal sibling intertwiner: withdrawn after a noncoprime-chain counterexample
 
 Claim ID: `L-29815`  
-Title: After the shifted Taylor expansion freezes a common arithmetic destination, the central/sibling switch scaled by that destination realizes the exact adjacent divisor-source dipole; reverse orientations have one explicit signed-edge capacity cost  
-Status: **PROPOSED COMPLETE EXACT FINITE LEMMA**  
+Former title: The scaled Pascal sibling intertwines the common arithmetic destination  
+Status: **WITHDRAWN / FALSE AS STATED**  
 Authoring agent: `gpt56-02-r`  
-Created: 2026-08-08  
-Dependencies: elementary floor subtraction; `L-29812`  
-Scope: exact source-to-carry binding for one common arithmetic destination; global summability remains separate
+Created and corrected: 2026-08-08  
+Scope: exact disposition of an attempted source-to-carry tensorization; RH remains unproved
 
-## 1. Scaled central and sibling edges
+## 1. Former claim
 
-Fix integers
+The attempted lemma asserted that, for
 
 \[
- m\ge1,
- \qquad k\ge1.
+ c_{k,m}=[4km,2km],
+ \qquad
+ s_{k,m}=[4km,(2k-1)m],
 \]
 
-At parent `4km`, define
+one had
 
 \[
- c_{k,m}=[4km,2km]
-\tag{L-29815.1}
-\]
-
-and
-
-\[
- s_{k,m}=[4km,(2k-1)m].
-\tag{L-29815.2}
-\]
-
-Both are `1/4`-balanced. For a carry base `d`, direct floor subtraction gives
-
-\[
-\boxed{
  \chi_{s_{k,m}}(d)-\chi_{c_{k,m}}(d)
- =\mathbf1_{d\mid2km}-\mathbf1_{d\mid(2k+1)m}.}
-\tag{L-29815.3}
+ =\mathbf1_{d\mid2km}-\mathbf1_{d\mid(2k+1)m}
+\tag{L-29815.old}
 \]
 
-### Proof
+for every carry base `d`.
 
-The parent floor cancels. The child terms give
+This is false when the common arithmetic destination `m` is not coprime to the
+relevant residue chain.
 
-\[
-\begin{aligned}
-\chi_{s_{k,m}}(d)-\chi_{c_{k,m}}(d)
-={}&2\left\lfloor{2km\over d}\right\rfloor\\
-&-\left\lfloor{(2k-1)m\over d}\right\rfloor
- -\left\lfloor{(2k+1)m\over d}\right\rfloor.
-\end{aligned}
-\]
+## 2. Exact counterexample
 
-For arbitrary integers `x,m`,
+Take
 
 \[
-2\lfloor x/d\rfloor-\lfloor(x-m)/d\rfloor-\lfloor(x+m)/d\rfloor
-\]
-
-with `x=2km` reduces, by the adjacent-floor identity at the two actual
-multiples, to the right side of (L-29815.3). Equivalently, apply the unscaled
-sibling identity to the divisor indicators of the two children after retaining
-the common multiplicative destination `m`. A direct residue check modulo `d`
-proves the displayed formula without a coprimality assumption.
-
-## 2. Forward orientation
-
-Let
-
-\[
- \mathfrak d_n(d)=\mathbf1_{d\mid n}.
-\]
-
-Equation (L-29815.3) says
-
-\[
- \operatorname{load}(s_{k,m}-c_{k,m})
- =\mathfrak d_{2km}-\mathfrak d_{(2k+1)m}.
-\tag{L-29815.4}
-\]
-
-Suppose an incoming central amount `A` must realize
-
-\[
- A\mathfrak d_{2km}-B\mathfrak d_{(2k+1)m},
- \qquad A\ge B\ge0.
-\]
-
-The exact flow
-
-\[
- \boxed{(A-B)c_{k,m}+Bs_{k,m}}
-\tag{L-29815.5}
-\]
-
-has nonnegative edge coefficients and the desired carry-load change relative to
-`Ac_(k,m)`.  This is the common-destination version of the local dictionary in
-`L-28302`.
-
-## 3. Reverse orientation
-
-The reverse divisor dipole is
-
-\[
- \mathfrak d_{(2k+1)m}-\mathfrak d_{2km}.
-\]
-
-By `R-29805`, it cannot be a standalone nonnegative flow.  It has the exact
-signed realization
-
-\[
- \boxed{c_{k,m}-s_{k,m}.}
-\tag{L-29815.6}
-\]
-
-Only the sibling edge is negative. Therefore a reverse amount `T>=0` has
-negative capacity debt exactly
-
-\[
- \boxed{
- \mathcal N_\omega\!\left(T(c_{k,m}-s_{k,m})\right)
- =T\omega_{s_{k,m}}.}
-\tag{L-29815.7}
-\]
-
-Using the elementary capacity bound,
-
-\[
- \boxed{
- \omega_{s_{k,m}}
- \le2\sqrt{4km}=4\sqrt{km}.}
-\tag{L-29815.8}
-\]
-
-This direct scaled switch is no more expensive than the canonical adjacent-tree
-commutator and retains the actual arithmetic destination exactly.
-
-## 4. Application to the mode-separated matching
-
-After the shifted Taylor expansion, every smooth/parity source term has one
-fixed common arithmetic destination `m` and one parity index.  Apply the
-matching of `L-29812` at that fixed destination:
-
-- forward adjacent dipoles use (L-29815.5) and contribute zero negative debt;
-- reverse adjacent dipoles use (L-29815.6) and pay the explicit debt
-  (L-29815.7);
-- coefficientwise positive parity and residual sources remain on central
-  edges.
-
-Thus the coefficient matching is an exact carry-flow construction, not merely a
-formal source decomposition.
-
-No noncoprime residue chain is omitted: divisibility in (L-29815.3) is by the
-actual integers `2km` and `(2k+1)m`.
-
-## 5. Reverse-debt bound at fixed destination
-
-For a smooth Hausdorff jet with matching amounts `t_r`, every reverse edge has
-actual scale at most `m(N+M)`.  Hence
-
-\[
-\boxed{
- \mathcal D_{m,N,j}^{\leftarrow}
- \le4\sqrt{m(N+M)}
- \sum_{r\ {
-text{ odd}}}t_r.}
-\tag{L-29815.9}
-\]
-
-Combining with `L-29814.6` and the Euler coefficient gives the destination-aware
-version
-
-\[
-\boxed{
- 2^{-j-1}\mathcal D_{m,N,j}^{\leftarrow}
- \le\sqrt{m(N+M)}\,b_N.}
-\tag{L-29815.10}
-\]
-
-The exact constant improves because the direct switch has one negative edge.
-For fixed Euler order `M`, summing the finite jets yields
-
-\[
-\boxed{
- \mathcal D_{m,N}^{\leftarrow}
- \le(M-1)\sqrt{m(N+M)}\,b_N.}
-\tag{L-29815.11}
-\]
-
-The exact remainder still pairs only forward and has zero negative debt.
-
-## 6. Correct global source budget
-
-The proof-facing source mass must retain the common arithmetic destination:
-
-\[
-\boxed{
- \mathfrak B_M^{\rm ar}(X)
- =\sum_\lambda c_\lambda
-  \sqrt{m_\lambda(N_\lambda+M)}
-  b_{\lambda,N_\lambda}.}
-\tag{L-29815.12}
+ k=1,
+ \qquad m=2,
+ \qquad d=3.
 \]
 
 Then
 
 \[
-\boxed{
- \mathcal D_{\rm boundary}^{\leftarrow}
- \le(M-1)\mathfrak B_M^{\rm ar}(X).}
-\tag{L-29815.13}
+ c_{1,2}=[8,4],
+ \qquad
+ s_{1,2}=[8,2].
 \]
 
-This supersedes a formal-index-only use of `L-29814.14`.  The remaining global
-problem is to prove the arithmetic source budget
+Their carry values are
 
 \[
- \mathfrak B_M^{\rm ar}(X)=O(\log^A(2X))
+ \chi_{8,2}(3)
+ =\left\lfloor{8\over3}\right\rfloor
+  -\left\lfloor{2\over3}\right\rfloor
+  -\left\lfloor{6\over3}\right\rfloor
+ =0,
 \]
 
-from the exact finite cutoff emitter.
+\[
+ \chi_{8,4}(3)
+ =\left\lfloor{8\over3}\right\rfloor
+  -2\left\lfloor{4\over3}\right\rfloor
+ =0.
+\]
 
-## 7. Proof boundary
+Thus the left side of (L-29815.old) is zero.  The proposed divisor dipole is
 
-Proved here:
+\[
+ \mathbf1_{3\mid4}-\mathbf1_{3\mid6}=0-1=-1.
+\]
 
-- exact scaled central/sibling carry identity;
-- both source orientations in the actual arithmetic coordinates;
-- nonnegative forward realization;
-- one-edge signed reverse realization;
-- explicit destination-aware capacity bound.
+Hence
 
-Open:
+\[
+ \boxed{0\ne-1.}
+\tag{L-29815.1}
+\]
 
-- all-generation arithmetic source budget;
-- exact DCD recurrence binding at the endpoint level;
-- DCD;
-- RH.
+This is a hypothesis-matching noncoprime-chain counterexample.
+
+## 3. Why unscaled interpolation does not tensorize
+
+For `m=1`, the familiar sibling identity
+
+\[
+ \chi_{4k,2k-1}(d)-\chi_{4k,2k}(d)
+ =\mathbf1_{d\mid2k}-\mathbf1_{d\mid2k+1}
+\]
+
+is valid. Multiplying every parent and child by `m` changes the residue classes
+modulo `d`; it is not a tensor operation on carry columns.
+
+Therefore a coefficient-space pair at parity levels `2k,2k+1` cannot be bound
+to the actual arithmetic destinations `2km,(2k+1)m` by simply scaling the
+Pascal sibling.
+
+The noncoprime residue chains must be emitted and recombined explicitly.
+
+## 4. Consequences
+
+The following conclusions from the former version are withdrawn:
+
+- the asserted exact common-destination source-to-carry map;
+- the destination-aware one-edge reverse-debt bound;
+- the arithmetic source budget `B_M^ar` derived from that map;
+- any claim that `L-29812` already supplies an exact DCD flow after multiplying
+  by a common arithmetic destination.
+
+The formal-index local results remain at their declared scopes:
+
+- `L-29809` scalar interleaved Euler positivity;
+- `L-29810` abstract Hausdorff matching;
+- `L-29812` mode-separated formal source matching;
+- `L-29813/L-29814` formal adjacent-tree capacity estimates.
+
+They do not by themselves identify the actual carry-source image.
+
+## 5. Correct remaining theorem
+
+A valid source-binding theorem must retain the actual indices
+
+\[
+ 2kq-1,
+ \qquad
+ (2k+1)q,
+\]
+
+or an exact duplicate-free expansion of their carry columns.  It must include:
+
+1. every gcd/noncoprime residue chain;
+2. the shift `-1` on the even leg;
+3. every parity sibling and common destination;
+4. a balanced split-flow realization or capacity-debt bound in the actual
+   integer node coordinates;
+5. the bottom and endpoint collars;
+6. exact congruence with PR #272's dyadic commutator ledger.
+
+No such theorem is proved here.
+
+## 6. Disposition
+
+```text
+unscaled sibling identity                         RETAINED
+scaled tensorized sibling identity                 FALSE
+formal Hausdorff/parity coefficient matching       RETAINED AT FORMAL SCOPE
+actual arithmetic source-to-carry binding          OPEN / RH-BEARING
+DCD / Cycle Debt                                    OPEN
+Riemann Hypothesis                                  UNPROVEN
+```
