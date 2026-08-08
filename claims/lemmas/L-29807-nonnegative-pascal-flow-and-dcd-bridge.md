@@ -44,7 +44,7 @@ its nearest balanced sibling. PR #294 gives
 \[
  \chi_{s_k}(q)-\chi_{c_k}(q)
  =\mathbf1_{q\mid2k}-\mathbf1_{q\mid2k+1}.
-\tag{L-29807.2]
+\tag{L-29807.2}
 
 The exact nonnegative edge assignment is
 
@@ -52,7 +52,7 @@ The exact nonnegative edge assignment is
 \boxed{
  d_k=(M-T)c_k+Ts_k.
 }
-\tag{L-29807.3]
+\tag{L-29807.3}
 
 Both coefficients are nonnegative.
 
@@ -79,7 +79,7 @@ Since `d_k` has no negative coefficient,
 \boxed{
  \mathcal N_\omega(d_k)=0.
 }
-\tag{L-29807.4]
+\tag{L-29807.4}
 
 Thus the complete common paired Hausdorff tail is not merely bounded in the Cycle-Debt metric. It contributes no negative capacity debt at all.
 
@@ -94,13 +94,13 @@ The central-to-sibling replacement loses
  \operatorname{cost}_k
  =T\log{2k+1\over2k}.
 }
-\tag{L-29807.5]
+\tag{L-29807.5}
 
 `L-29806` proves
 
 \[
  (M-T)+\operatorname{cost}_k\le M.
-\tag{L-29807.6]
+\tag{L-29807.6}
 
 Hence the incoming central source pays both the residual source passed to the next half endpoint and the complete entropy/von-Mangoldt objective loss.
 
@@ -122,7 +122,7 @@ Therefore
 \boxed{
  \mathcal N_\omega(d_{\rm tail})=0.
 }
-\tag{L-29807.7]
+\tag{L-29807.7}
 
 Its total objective loss is bounded by the amortized source budget of `L-29806`.
 
@@ -135,7 +135,7 @@ That lemma proves a polylogarithmic first-generation capacity bound
 \[
  \operatorname{Cap}(J_N^{(M)})
  \le C_M(1+\log N)^{M+2}.
-\tag{L-29807.8]
+\tag{L-29807.8}
 
 Realize the collar by its declared balanced flow and call its negative capacity debt `D_collar(N)`. Since negative debt is bounded by total capacity,
 
@@ -144,7 +144,7 @@ Realize the collar by its declared balanced flow and call its negative capacity 
  D_{\rm collar}(N)
  \le C_M(1+\log N)^{M+2}.
 }
-\tag{L-29807.9]
+\tag{L-29807.9}
 
 No unmatched row is discarded.
 
@@ -166,7 +166,7 @@ plus the odd channel which is canceled by the paired source construction. The bo
  \le D_{\rm collar}(2Y)
  =O(\log^{M+2}(2Y)).
 }
-\tag{L-29807.10]
+\tag{L-29807.10}
 
 This is exactly the Dyadic Commutator Debt estimate `T-27203.4`, with an explicit fixed logarithmic exponent.
 
