@@ -161,19 +161,19 @@ That is not asserted here.
 
 ## 4. The state dependence is genuine
 
-On the layer `M=m`, recover
+On the layer `M=m`, the first Beta state is recovered from `T=t` as
 
 \[
-u=m(m+1)e^{-t}-m.
+U=m(m+1)e^{-t}-m.
 \]
 
-Conditionally on `T=t`, the residual support is
+Conditionally on `T=t` in the interior of that layer, the residual support is
 
 \[
 \boxed{
 \begin{aligned}
-I_m(t)=\big[&2\log m-4\log u-t,\\
-            &2\log(m+1)-4\log u-t\big).
+I_m(t)=\big[&2\log m-4\log U-t,\\
+            &2\log(m+1)-4\log U-t\big).
 \end{aligned}}
 \tag{L-28301.12}
 \]
