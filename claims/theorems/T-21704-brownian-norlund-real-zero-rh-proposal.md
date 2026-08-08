@@ -1,124 +1,323 @@
-# T-21704 — A direct Brownian Nörlund real-zero proposal for RH
+# T-21704 — Direct Brownian Green–Robin real-zero proposal for RH
 
 Claim ID: `T-21704`  
-Title: Real zeros of explicit finite Brownian gamma approximants would prove the Riemann Hypothesis by Hurwitz  
-Status: **FULL GLOBAL PROPOSAL — ONE FINITE REAL-ZERO THEOREM OPEN**  
+Title: A real-zero theorem for explicit Brownian random-walk Green approximants would prove the Riemann Hypothesis by Rouché  
+Status: **FULL GLOBAL PROPOSAL — ONE SOURCE-SPECIFIC REAL-ZERO THEOREM OPEN**  
 Authoring agent: `gpt56-sol`  
 Created: 2026-08-08  
-Dependencies: `L-21705`, `L-21706`; Hurwitz or Rouché theorem  
+Corrected and strengthened: 2026-08-08  
+Dependencies: `L-21705`--`L-21708`; Rouché's theorem  
 RH status: **UNPROVED**
 
-## 1. Proposed proof spine
+## 1. Canonical producer
+
+Retain the finite Brownian gamma sums
 
 \[
-\boxed{
-\begin{aligned}
-&\text{Brownian bridge range}\\
-&\longrightarrow\text{finite independent Gamma(2) spectral sums}\\
-&\longrightarrow\text{logarithmic Nörlund occupation average}\\
-&\longrightarrow\text{exact functional-equation approximants }\mathcal X_N\\
-&\longrightarrow\boxed{\text{BLNRZ: every finite strip zero lies on }1/2}\\
-&\longrightarrow\text{local uniform convergence to }4\xi\\
-&\longrightarrow\mathrm{RH}.
-\end{aligned}}
+S_K=\sum_{j=1}^K\frac{\Gamma_{2,j}}{j^2},
+\qquad
+m_K(s)=\pi^{-s/2}\mathbb E[S_K^{s/2}].
 \tag{T-21704.1}
 \]
 
-This route attacks the zeros of `xi` directly. It does not pass through the prime ramp, WSTS, a Mertens bound, the balanced Type-II theorem, or a Weil-form inequality.
-
-## 2. Conditional completion
-
-Assume BLNRZ on an unbounded sequence `N_j`. Suppose `rho` is a zero of `xi` with
+Put
 
 \[
-0<\operatorname{Re}\rho<1,
+\omega_K=\left(\frac{\binom{2K}{K}}{4^K}\right)^2,
 \qquad
-\operatorname{Re}\rho\ne\frac12.
-\]
-
-Choose a closed disk `D` centered at `rho`, contained in the open critical strip and disjoint from the critical line, whose boundary contains no zero of `xi`.
-
-By (L-21706.8),
-
-\[
-\mathcal X_{N_j}\longrightarrow4\xi
-\]
-
-uniformly on `D`. Rouché's theorem therefore gives, for all sufficiently large `j`, the same positive number of zeros of `mathcal X_(N_j)` and `xi` inside `D`. This contradicts BLNRZ because `D` does not meet the critical line.
-
-Hence every nontrivial zeta zero lies on the critical line:
-
-\[
-\boxed{\mathrm{BLNRZ}\Longrightarrow\mathrm{RH}.}
+Z_N=\sum_{K=1}^N\omega_K,
+\qquad
+\lambda_{N,K}=\frac{\omega_K}{Z_N}.
 \tag{T-21704.2}
 \]
 
-No separate zero-density, prime number theorem, or functional-equation symmetry step is required beyond the construction itself.
+Define
 
-## 3. Why this is not another equivalence-only endpoint
+\[
+\boxed{
+ m_N^{\rm G}(s)=\sum_{K=1}^N\lambda_{N,K}m_K(s),
+ \qquad
+ \mathcal C_N(s)=m_N^{\rm G}(s)+m_N^{\rm G}(1-s).}
+\tag{T-21704.3}
+\]
 
-BLNRZ asks for an all-`N` theorem about finite phase-type distributions and finite Dirichlet splines. The input data are
+The weights are normalized return probabilities of a planar simple random walk. They are not fitted from zeta zeros.
+
+`L-21707` proves the elementary lower bound
+
+\[
+\omega_K\ge\frac1{4K},
+\qquad
+Z_N\ge\frac14H_N,
+\]
+
+and consequently
+
+\[
+\boxed{
+|\mathcal C_N(s)-4\xi(s)|
+\le
+\frac{4\zeta(2)}{H_N}
+\bigl(|s|+|1-s|\bigr),
+\qquad0\le\operatorname{Re}s\le1.}
+\tag{T-21704.4}
+\]
+
+Thus `mathcal C_N` converges locally uniformly to `4 xi` throughout the critical strip.
+
+The logarithmic Nörlund approximants of `L-21706` remain a closely related producer with the slightly sharper factor `zeta(2)/H_N`. The central-binomial producer is now preferred because its complete coefficient array collapses to one exact random-walk Green profile.
+
+## 2. Exact Green collapse
+
+Define
+
+\[
+p_K(z)=
+\frac{\Gamma(2K+1)}
+{4^K\Gamma(K+1-z)\Gamma(K+1+z)}.
+\tag{T-21704.5}
+\]
+
+At integer `n`,
+
+\[
+p_K(n)=\frac{\binom{2K}{K-n}}{4^K}
+\]
+
+is a one-dimensional simple-random-walk transition probability. The normalized Green profile is
+
+\[
+\boxed{
+G_N(z)=\frac1{Z_N}\sum_{K=1}^Np_K(z)^2.}
+\tag{T-21704.6}
+\]
+
+Writing
+
+\[
+m_N^{\rm G}(s)
+=\pi^{-s/2}\Gamma(1+s/2)D_N^{\rm G}(s),
+\]
+
+`L-21707` proves exactly
+
+\[
+\boxed{
+D_N^{\rm G}(s)
+=2\sum_{n=1}^N
+\left[(s-1)G_N(n)-nG_N'(n)\right]n^{-s}.}
+\tag{T-21704.7}
+\]
+
+No triangular coefficient forest remains: the whole finite arithmetic object is one sampled Green function and its derivative.
+
+## 3. Exact positive truncation defect
+
+The same lemma proves
+
+\[
+\boxed{
+D_N^{\rm G}(s)
+=2(s-1)\zeta(s)
+-2\pi\sin\frac{\pi s}{2}
+\int_0^\infty A_N(y)y^{1-s}dy,}
+\tag{T-21704.8}
+\]
+
+for `-4<Re(s)<2`, where
+
+\[
+A_N(y)=\frac{G_N(iy)-1}{\sinh^2\pi y}\ge0.
+\tag{T-21704.9}
+\]
+
+Moreover, with the truncations coupled to the full Brownian sum
+
+\[
+S_\infty=\sum_{j\ge1}\frac{\Gamma_{2,j}}{j^2},
+\]
+
+one has
+
+\[
+\boxed{
+\pi^2A_N(\sqrt q)
+=\int_0^\infty e^{-qx}b_N(x)dx,}
+\tag{T-21704.10}
+\]
+
+where
+
+\[
+\boxed{
+ b_N(x)=
+ \sum_{K=1}^N\lambda_{N,K}
+ \mathbb P(S_K\le x<S_\infty)\ge0.}
+\tag{T-21704.11}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+2\xi(s)-m_N^{\rm G}(s)
+=\frac{s}{2}\pi^{-s/2}
+\int_0^\infty b_N(x)x^{s/2-1}dx.}
+\tag{T-21704.12}
+\]
+
+The finite-to-infinite error is the actual positive occupation time between the truncated and complete gamma sums. It is not an opaque analytic remainder.
+
+## 4. Exact Robin-fiber geometry
+
+Let `T_N(x)=P(S>x)` be the tail of the central-binomial cutoff mixture. Put
+
+\[
+W_N(a)=e^{a/2}T_N(\pi e^{2a})
+\]
+
+and
+
+\[
+H_a(z)=\cosh(az)+2z\sinh(az).
+\]
+
+`L-21708` proves
+
+\[
+\boxed{
+\mathcal C_N\left(\frac12+z\right)
+=\int_{-\infty}^{\infty}W_N(a)H_a(z)da.}
+\tag{T-21704.13}
+\]
+
+For every `a>0`, `H_a` is the characteristic determinant of the nonnegative self-adjoint Robin problem
+
+\[
+-u''=\lambda u,
+\quad u'(0)=0,
+\quad u'(a)+\tfrac12u(a)=0,
+\]
+
+and all its zeros lie on the imaginary `z` axis. For `a<0`, `H_a` has exactly one reflected real pair, determined by
+
+\[
+2z\tanh(|a|z)=1.
+\]
+
+Thus the entire finite zero problem is concentrated in one explicit operation:
 
 ```text
-rates 1^2,1^2,2^2,2^2,...,N^2,N^2;
-positive cutoff probabilities 1/(K H_N);
-finite gamma convolution;
-finite Hermite divided differences.
+negative logarithmic-length Robin fibers
++ positive logarithmic-length Robin fibers
+-> one global no-double-spend self-adjoint assembly.
 ```
 
-A proof could in principle use only finite total positivity, Sturm theory, canonical systems, or special-function identities. The limiting zeta function enters only after the finite real-zero theorem is established.
+Every favorable fiber is already solved. The source of every possible off-line pair is visible.
 
-The theorem is still RH-bearing: an invalid proof may hide the limiting zero problem in a uniform total-positivity or Hermite–Biehler assertion. The review protocol is therefore fail closed.
+## 5. Sole load-bearing theorem — BGRRZ
 
-## 4. Adversarial mutations
+> **Brownian Green–Robin Real-Zero theorem (`BGRRZ`).** There is an unbounded sequence `N_j`—more strongly, every `N`—such that every zero of
+> \[
+> \mathcal C_{N_j}(s)
+> \]
+> in
+> \[
+> 0<\operatorname{Re}s<1
+> \]
+> lies on `Re(s)=1/2`.
 
-A proposed proof must survive all of the following.
+A production proof must use the exact Green or Robin source, for example by constructing:
 
-1. **Raw-cutoff mutation.** Replacing the logarithmic mean by `m_N` must not remain covered; raw symmetrizations exhibit off-line pairs numerically.
-2. **Generic-spectrum mutation.** Replacing `n^2` by arbitrary increasing rates must fail; random phase-type spectra exhibit off-line zeros.
-3. **Weight mutation.** The proof must expose where `1/K` is used; it may not silently prove all positive averages.
-4. **Finite-height mutation.** Argument-principle agreement below a finite height is evidence only.
-5. **Limit-first mutation.** No property of `xi` or its zeros may be used to prove the finite theorem.
-6. **Jensen-universality mutation.** Eventual low-degree hyperbolicity or local Hermite asymptotics is insufficient.
-7. **Hidden Hermite–Biehler mutation.** Any asserted half-plane modulus inequality must include its complete zero-free and mean-type proof.
-8. **Eisenstein embedding mutation.** A positive-measure analogy is insufficient; the exact finite transform and normalization must match `mathcal X_N`.
+1. a canonical system for the complete mixture (T-21704.13);
+2. a positive Schur complement transporting the negative-length Robin sector into the positive sector;
+3. an all-order Lee--Yang Wronskian certificate for the even kernel of `L-21708`;
+4. a common-interlacing theorem for the transported fiber family.
 
-## 5. Current evidence
+The theorem may not be replaced by a finite contour count, positivity of the occupation defect, or fiberwise spending without a global capacity ledger.
 
-The exact checker `X-21703` validates the finite gamma, partial-fraction, moment, and Nörlund identities only.
+## 6. BGRRZ implies RH
 
-Floating/high-precision reconnaissance currently finds:
+Assume BGRRZ and suppose `rho` is an off-line zero of `xi` in the open critical strip. Choose a closed disk `D` centered at `rho`, contained in that strip and disjoint from the critical line, with zero-free boundary.
+
+By (T-21704.4),
+
+\[
+\mathcal C_{N_j}\longrightarrow4\xi
+\]
+
+uniformly on `D`. Rouché's theorem gives the same positive number of zeros of `mathcal C_(N_j)` and `xi` in `D` for all sufficiently large `j`, contradicting BGRRZ. Therefore
+
+\[
+\boxed{\mathrm{BGRRZ}\Longrightarrow\mathrm{RH}.}
+\tag{T-21704.14}
+\]
+
+The limiting zeta function enters only after the finite real-zero theorem is proved.
+
+## 7. Reconnaissance and exact replay
+
+The exact checker `X-21704` verifies the Green coefficient collapse, normalization, finite-product order, Wallis bound, and mutations using rational arithmetic:
 
 ```text
-raw N=75:  one reflected off-line pair near height 111.46;
-raw N=100: one reflected off-line pair near height 111.48;
+coefficient rows             408
+normalization rows            48
+finite-product order rows    680
+Wallis rows                  512
+mutations                    4/4
 
-logarithmic Nörlund:
-N<=500, height<=300       contour count = critical-line count;
-N=1000, height<=2000      contour count = critical-line count;
-N=2000, height<=2000      contour count = critical-line count.
+PASS_EXACT_BROWNIAN_GREEN_DEFECT_ALGEBRA
+proof-object SHA-256
+65442b5fb1ff09e06c7f237102cc289bb9c28f6d33f1b12cea7f54d0670277d7
 ```
 
-These are discovery records, not certificates. The exact theorem remains open.
+It does not certify the contour theorem, BGRRZ, or RH.
 
-## 6. Review order
-
-1. `L-21705-finite-brownian-gamma-truncations.md`
-2. `X-21703-brownian-norlund/verify.py`
-3. `L-21706-logarithmic-norlund-xi-approximants.md`
-4. `O-21705-raw-truncation-failure-and-norlund-reconnaissance.md`
-5. `M-21702-brownian-norlund-review-protocol.md`
-6. this theorem
-7. the inherited BPY normalization on PR #217
-8. future BLNRZ production proof
-
-## 7. Exact status
+Binary64 reconnaissance for the central-binomial producer gives matching strip and critical-line counts at the retained controls:
 
 ```text
-finite Brownian/gamma algebra              PROPOSED COMPLETE + EXACT REPLAY
-quantitative convergence to xi             PROPOSED COMPLETE
-raw finite real-zero shortcut              NUMERICALLY REJECTED / NOT USED
-BLNRZ                                      OPEN / RH-BEARING
-BLNRZ -> RH                                COMPLETE CONDITIONAL ARGUMENT
-Riemann Hypothesis                         UNPROVED
+N=100,  height=300     138 / 138
+N=500,  height=300     138 / 138
+N=1000, height=500     269 / 269
+N=1000, height=2000   1517 / 1517
+```
+
+These are discovery records only.
+
+## 8. Automatic rejection tests
+
+Reject a claimed completion if it:
+
+1. also proves the known-failing raw cutoff without identifying a false hypothesis;
+2. uses only `A_N>=0` or complete monotonicity of the truncation defect;
+3. drops the actual `a<0` Robin sector;
+4. spends one favorable fiber independently on multiple unfavorable fibers;
+5. invokes generic log-concavity or `TP_2` in place of an all-order theorem;
+6. changes the square spectrum `1^2,2^2,...` or the central-binomial weights silently;
+7. uses a property of `xi` or its zeros inside the finite proof;
+8. promotes finite winding counts to an all-height result.
+
+## 9. Review order and status
+
+Review:
+
+1. `L-21705` finite gamma algebra;
+2. `L-21707` Green/occupation identity;
+3. `X-21704` exact replay;
+4. `L-21708` Robin-fiber decomposition;
+5. `L-21706` and the original Nörlund mutation;
+6. this theorem;
+7. a future BGRRZ production certificate.
+
+Exact boundary:
+
+```text
+finite Brownian/gamma construction       PROPOSED COMPLETE
+Green coefficient collapse               PROPOSED COMPLETE + exact replay
+positive occupation defect               PROPOSED COMPLETE
+Robin-fiber localization                  PROPOSED COMPLETE
+critical-strip convergence                PROPOSED COMPLETE
+BGRRZ                                     OPEN / RH-BEARING
+BGRRZ -> RH                               COMPLETE CONDITIONAL
+Riemann Hypothesis                        UNPROVED
 ```
