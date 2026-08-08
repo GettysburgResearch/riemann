@@ -145,6 +145,7 @@ and the number of stages is `O(log X)`.  Iterating (T-28301.2) gives
 \sum_jD_j(X)=O(\log^{A+B+1}(2X))=X^{o(1)}.
 }
 \tag{T-28301.3}
+\]
 
 The certificate may instead export the equivalent single bound on the
 cycle-optimized debt `mathfrak N_eta(X)` of PR #272.
