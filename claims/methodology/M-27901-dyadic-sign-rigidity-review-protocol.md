@@ -1,7 +1,7 @@
 # M-27901 — Fail-closed review protocol for dyadic sign rigidity
 
 Claim ID: `M-27901`  
-Title: Adversarial review contract for the dyadic one-crossing and endpoint-domination proposal  
+Title: Adversarial review contract for cofinal dyadic one-crossing and endpoint domination  
 Status: **METHODOLOGY / REVIEW CONTRACT**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-08  
@@ -11,11 +11,12 @@ Frozen parent: PR #276 at `a65a02b9463c1cc3a10d0af03ab359a637e357cd`
 
 1. `L-27901-dyadic-shell-continuum-one-crossing.md`
 2. `L-27902-uniform-shell-floor-error-and-crossing-reduction.md`
-3. `L-27903-one-crossing-collapses-wsts-to-one-total-shell.md`
-4. `X-27901-dyadic-shell-one-crossing/`
-5. `T-27901-dyadic-sign-rigidity-full-rh-proposal.md`
-6. PR #276 `T-27501` only after the new reductions verify
-7. the future `FSCR` and `ESC/EPD` production certificates
+3. `L-27904-cofinal-finite-dyadic-shell-crossing.md`
+4. `L-27903-one-crossing-collapses-wsts-to-one-total-shell.md`
+5. `X-27901-dyadic-shell-one-crossing/`
+6. `T-27901-dyadic-sign-rigidity-full-rh-proposal.md`
+7. PR #276 `T-27501`
+8. the future `ESC/EPD` production certificate
 
 ## 2. Continuum theorem checks
 
@@ -27,71 +28,91 @@ A reviewer must verify independently:
 - the odd/even sum–integral lower bounds;
 - the six negative upper cells;
 - the positive `N>=8` sector;
-- uniqueness and simplicity of the cell-7 zero.
+- uniqueness and simplicity of the cell-seven zero.
 
 A numerical root bracket is not a proof of the all-cell sign theorem.
 
 ## 3. Shell-error checks
 
-The critical identity is the exact cancellation
+The critical identity is
 
 ```text
 B_c(u)=2 sqrt(u) log(1/c)+4u(1-c^(-1/2)),  u<=c.
 ```
 
-A reviewer must reject the sharpening if:
+Reject the sharpening if:
 
-- the floor ratio `c=floor(X/2)/X` is replaced silently by `1/2`;
-- the endpoint `m=Y` is counted twice or omitted;
+- `c=floor(X/2)/X` is silently replaced by `1/2`;
+- `m=floor(X/2)` is counted twice or omitted;
 - `B(1)=B'(1)=0` is used with the wrong one-sided convention;
-- a logarithmic factor reappears in the final `q^-3/2` remainder;
-- the finite target shell is normalized by `sqrt(Y)` rather than `sqrt(X)`.
+- a logarithmic factor remains in the final `q^-3/2` remainder;
+- the target shell is normalized by `sqrt(Y)` rather than `sqrt(X)`.
 
-## 4. FSCR production object
+## 4. Cofinal FSCR checks
 
-A valid proof of finite shell-crossing rigidity must export:
+`L-27904` is a proof claim, not a proposed production schema. Review all four of its cofinal mechanisms:
 
-1. an exact integer formula for the shell residual;
-2. a rigorous positive lower sector;
-3. a rigorous negative upper sector;
-4. a monotone or single-root transition proof in quotient cell seven;
-5. a cofinal certificate for every fixed low coordinate;
-6. the odd-endpoint correction `Y=floor(X/2)`;
-7. exact source and target endpoint conventions.
+1. **normalized zero-ratio moat**
+   ```text
+   sqrt(theta)D(theta)
+    -> -(zeta(1/2)+1)log2 >0;
+   ```
+2. **fixed-coordinate limit**
+   ```text
+   s_X(q)
+    -> -(log2)/sqrt(q)
+       [1+integral_0^1 zeta(1/2,1+t/q)dt] >0;
+   ```
+3. **transition derivative**
+   ```text
+   X^(3/2) d s_X(x)/dx
+    =D'(x/X)+O(1/X)
+   ```
+   uniformly in quotient cell seven;
+4. **negative upper sector**, including the exact outer-cell inequality.
 
-The bounded collar and finite low dictionary may be certified by rational interval arithmetic, but the proof must supply an analytic threshold beyond which the dictionary is complete.
+Reject FSCR if:
+
+- the Hurwitz derivative has the wrong sign;
+- the eta-series bound does not imply `zeta(1/2)<-1`;
+- the normalized `c_X`-dependent moat is not uniform near zero;
+- the derivative error is only `O(1)` after scaling;
+- reciprocal-cell boundaries or odd endpoints are omitted;
+- finite scans are substituted for any cofinal step.
 
 ## 5. Endpoint domination production object
 
-A valid `ESC/EPD` proof must export:
+The sole open theorem is `EPD`, preferably through `ESC`.
+
+A valid squarefree-collector certificate must export:
 
 - the exact endpoint atom `dot b_X`;
 - every ordinary-prime residual;
-- a squarefree collector manifest or an independent physical source map;
-- exact zero response on every proper prime power if collectors are used;
+- a duplicate-free squarefree collector manifest;
+- exact zero response on every proper prime power;
 - nonnegative physical objective change;
 - the complete Farkas dual;
-- explicit treatment of the logarithmic ray `y_p=log p`;
-- all boundary and endpoint terms.
+- explicit treatment of `y_p=log p`;
+- all endpoint and support terms.
 
-A proof that establishes feasibility for every transverse dual mode but leaves the logarithmic ray assumed has not proved `EPD`.
+A proof that controls every transverse dual mode but leaves the logarithmic ray assumed has not proved EPD.
+
+A valid reflected-boundary alternative must retain independent frequencies and the endpoint commutator before any carry-window zeta cancellation.
 
 ## 6. Mandatory mutations
 
-A proof object must reject at least:
-
 ```text
 M1  change floor(X/2) to X/2 at odd endpoints;
-M2  delete the shell subtraction before taking signs;
+M2  delete shell subtraction before taking signs;
 M3  reverse the derivative orientation in cell 7;
-M4  claim all-cell monotonicity from finite scans;
-M5  omit one low coordinate;
-M6  widen the transition collar with X;
+M4  replace the fixed-coordinate limit by a finite scan;
+M5  reverse Hurwitz-zeta monotonicity;
+M6  remove one low coordinate from the uniform argument;
 M7  use the unweighted prime queue refuted on PR #274;
-M8  use a composite collector with a proper prime-power divisor;
+M8  use a collector endpoint divisible by a proper prime power;
 M9  delete the logarithmic dual ray;
-M10 infer RH from continuum one-crossing alone;
-M11 promote the X=10^7 scan to a theorem;
+M10 infer EPD from continuum tail order alone;
+M11 promote the X=10^7 scan to EPD;
 M12 lose the dyadic or 2/3 Mertens mutation.
 ```
 
@@ -101,14 +122,13 @@ M12 lose the dyadic or 2/3 Mertens mutation.
 continuum cell algebra                  VERIFIED / FALSE / UNPROVEN
 continuum one-crossing                  VERIFIED / FALSE / UNPROVEN
 uniform shell floor error               VERIFIED / FALSE / UNPROVEN
-bounded-gate reduction                  VERIFIED / FALSE / UNPROVEN
-FSCR                                    VERIFIED / FALSE / UNPROVEN
+cofinal FSCR                            VERIFIED / FALSE / UNPROVEN
 one-crossing tail collapse              VERIFIED / FALSE / UNPROVEN
 endpoint derivative identity            VERIFIED / FALSE / UNPROVEN
 ESC/EPD                                 VERIFIED / FALSE / UNPROVEN
-FSCR+EPD -> WSTS                        VERIFIED / FALSE / UNPROVEN
+EPD -> zero WSTS debt                   VERIFIED / FALSE / UNPROVEN
 WSTS -> RH                              inherited, separately reviewed
 RH                                      only if every prior row verifies
 ```
 
-Reserve `FALSE` for a hypothesis-matching counterexample. A missing cofinal gate is `UNPROVEN`, not a refutation of the sign architecture.
+Reserve `FALSE` for a hypothesis-matching counterexample. A failure of one ESC construction leaves EPD open unless it contradicts the exact EPD statement.
