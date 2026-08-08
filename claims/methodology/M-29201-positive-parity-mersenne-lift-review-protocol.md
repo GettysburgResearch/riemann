@@ -1,4 +1,4 @@
-# M-29201 — Positive parity-Mersenne lift review protocol
+# M-29201 — Positive parity-cycle Mersenne lift review protocol
 
 Status: **FAIL-CLOSED PRODUCTION AND ADVERSARIAL REVIEW PROTOCOL**  
 Target: `T-29201`  
@@ -26,11 +26,14 @@ research/gpt56-sol/280-mellin-commutator-closure
 3. Reconstruct the odd-multiple Möbius inversion.
 4. Derive the shared-capacity support function in (L-29202.14).
 5. Verify binary-window preservation for every ordinary lower edge.
-6. Isolate every lower Mersenne edge and the top endpoint before testing any induction.
-7. Review a proposed primal or dual odd-network certificate.
-8. Review the positive Mersenne boundary reconstruction.
-9. Replay every upper carry column independently from the emitted flow.
-10. Only then invoke `T-28001`'s Mellin--Landau consumer.
+6. Reconstruct the complete upper MCF edge set and the linear map to all even carry columns.
+7. Verify every claimed generator of the zero-even-column kernel against all even columns.
+8. Express each generator in the PR #272 Pascal/fundamental-cycle basis; reject opaque nullspace vectors.
+9. Isolate every lower Mersenne edge and the top endpoint before testing any induction.
+10. Review a proposed primal or dual certificate for the combined sibling-plus-cycle polytope.
+11. Review the positive Mersenne boundary reconstruction.
+12. Replay every upper carry column independently from the emitted final flow.
+13. Only then invoke `T-28001`'s Mellin--Landau consumer.
 
 ## Mandatory production object
 
@@ -38,11 +41,16 @@ For every retained endpoint, emit:
 
 ```text
 lower complete flow;
-upper complete flow;
+upper support menu;
+baseline upper flow;
 all ordinary sibling masses x_e,y_e;
 all shared capacity slacks;
 odd target h_X and decoded charge z_X;
-node-divergence replay of the odd network;
+complete zero-even correction c_X;
+Pascal/fundamental-cycle coordinates of c_X;
+replay that c_X annihilates every even column;
+replay that sibling plus cycle correction realizes z_X;
+final nonnegative upper split coefficients;
 Mersenne boundary source and reconstruction;
 bottom and top endpoint rows;
 full carry-column replay;
@@ -55,11 +63,13 @@ eta-source pairing.
 Reject upon any:
 
 ```text
-negative split coefficient;
+negative final split coefficient;
 missing ordered orientation;
-even column changed by an odd repair;
+even column changed by the final correction;
 odd divisor incidence replaced by a norm;
 separate capacities x_e<=c and y_e<=c used instead of x_e+y_e<=c;
+sibling-only feasibility silently assumed;
+zero-even nullspace vector not decomposed into declared cycles;
 forbidden lift of a lower Mersenne extreme edge;
 unavailable parent 2Y+1 used at the endpoint;
 undeclared Pascal cycle;
@@ -70,6 +80,6 @@ lost 2/3 Mertens or same-sign Mobius-cube mutation.
 
 ## Acceptance boundary
 
-The local algebra can be accepted independently. `PPMFL` is accepted only after
-one source-complete recursive certificate or a proof of all its exact cut
-inequalities. Until then RH remains unproved.
+The collar and local sibling algebra can be accepted independently. `PPMFL` is
+accepted only after one source-complete recursive certificate or a proof of all
+combined sibling/cycle cut inequalities. Until then RH remains unproved.
