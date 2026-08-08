@@ -100,7 +100,7 @@ Therefore `mu` satisfies the exact closed equation
 +\mu*\mu
 =p(\tau)^2R.
 }
-\tag{L-26203.8]
+\tag{L-26203.8}
 \]
 
 The quadratic term is the literal self-convolution of the same filtered source. No undifferenced copy of `nu` remains.
@@ -117,14 +117,14 @@ H(s)=\langle\nu,e^{-s\cdot}\rangle,
 M(s)=P(s)H(s),
 \qquad
 \mathcal R(s)=\langle R,e^{-s\cdot}\rangle.
-\tag{L-26203.9]
+\tag{L-26203.9}
 \]
 
 The original Riccati equation is
 
 \[
 -H'(s)+\frac{2}{s-1/2}H(s)+H(s)^2=\mathcal R(s).
-\tag{L-26203.10]
+\tag{L-26203.10}
 \]
 
 Substituting `M=PH` gives
@@ -136,7 +136,7 @@ Substituting `M=PH` gives
 +M(s)^2
 =P(s)^2\mathcal R(s).
 }
-\tag{L-26203.11]
+\tag{L-26203.11}
 \]
 
 This is the Laplace transform of (L-26203.8).
@@ -148,7 +148,7 @@ Assume
 \[
 P(u)>0
 \qquad(u\ge s_0>1).
-\tag{L-26203.12]
+\tag{L-26203.12}
 \]
 
 Define
@@ -160,7 +160,7 @@ Define
  {P(u)^2(u-1/2)^2},
  \qquad u\ge s_0.
 }
-\tag{L-26203.13]
+\tag{L-26203.13}
 \]
 
 Then
@@ -168,7 +168,7 @@ Then
 \[
 \frac{m_{P,s_0}'(u)}{m_{P,s_0}(u)}
 =-2\frac{P'(u)}{P(u)}-\frac{2}{u-1/2}.
-\tag{L-26203.14]
+\tag{L-26203.14}
 \]
 
 Multiplying (L-26203.11) by `m_(P,s_0)`, integrating on `[s_0,infinity)`, and integrating the derivative term by parts cancels the complete interior linear density. The boundary is normalized by
@@ -185,7 +185,7 @@ Hence
  +\int_{s_0}^{\infty}m_{P,s_0}(u)M(u)^2du
  =\int_{s_0}^{\infty}m_{P,s_0}(u)P(u)^2\mathcal R(u)du.
 }
-\tag{L-26203.15]
+\tag{L-26203.15}
 \]
 
 The kernel
@@ -209,7 +209,7 @@ Substituting `M=PH` into (L-26203.15) gives
 &=P(s_0)(s_0-1/2)^2
  \int_{s_0}^{\infty}\frac{\mathcal R(u)}{(u-1/2)^2}du.
 \end{aligned}
-\tag{L-26203.16]
+\tag{L-26203.16}
 \]
 
 After division by `P(s_0)`, this is exactly the unfiltered positive-exponential identity. Thus fixed polynomial filtering preserves the closed square but does not strengthen the real-axis positive-adjoint estimate.
