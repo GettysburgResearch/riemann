@@ -1,0 +1,21 @@
+{
+  "A": 30,
+  "B": 43,
+  "amount": "7/5",
+  "classification": "EXACT_SQUAREFREE_COLLECTOR_INCIDENCE_CONTROL",
+  "formal_objective_ratio": "43/30",
+  "omega_A": 3,
+  "omega_B": 1,
+  "prime_incidence_change": "-14/5",
+  "prime_response": {
+    "2": "-7/5",
+    "3": "-7/5",
+    "43": "7/5",
+    "5": "-7/5"
+  },
+  "proof_object_sha256": "05097e2a74e36a917feb7911407cb30485c9b14a1ab0f497346973254ea11c03",
+  "proper_power_mismatches": 0,
+  "proper_power_rows": [4, 8, 16, 32, 9, 27, 25],
+  "schema": "riemann.x27303-squarefree-collector.v1",
+  "verdict": "PASS_EXACT_SQUAREFREE_COLLECTOR_ALGEBRA"
+}
