@@ -80,14 +80,30 @@ For one fixed Möbius coordinate `k`, the contribution to `u_X(m)` is
 m^{-1/2}k^{-1/2}\log(X/(mk)).
 \]
 
-In the tail term of (L-23709.2), put `\ell=mt`. The Riemann sum converges to
+In the tail term of (L-23709.2), put `\ell=mt`. The Riemann sum contributes
 
 \[
-\int_1^{y/k}t^{-1/2}\log\frac{y}{kt}\,dt
-=rac4{\sqrt{k}}-2\left(\log\frac yk+2\right),
+\frac{\mu(k)}{\sqrt k}
+\int_1^{y/k}t^{-1/2}\log\frac{y}{kt}\,dt.
 \]
 
-after the elementary substitution `t=r^2`. Adding the leading `m u_X(m)` term and simplifying gives exactly the kernel in (L-23709.3). Since only finitely many `k<=y` occur on a compact quotient interval, the convergence is locally uniform away from its integer boundaries. One-sided limits follow by retaining the entering Möbius atom.
+The elementary substitution `t=r^2` gives the exact integral
+
+\[
+\boxed{
+\int_1^{y/k}t^{-1/2}\log\frac{y}{kt}\,dt
+=4\sqrt{\frac yk}-2\log\frac yk-4.
+}
+\tag{L-23709.5a}
+\]
+
+Adding the leading `m u_X(m)` contribution `log(y/k)` gives
+
+\[
+4\sqrt{y/k}-4-\log(y/k)=p(y/k),
+\]
+
+which proves (L-23709.5). Since only finitely many `k<=y` occur on a compact quotient interval, the convergence is locally uniform away from its integer boundaries. One-sided limits follow by retaining the entering Möbius atom.
 
 ## 3. Mellin transform and zero firewall
 
@@ -95,8 +111,8 @@ For `Re z>1/2`,
 
 \[
 \int_1^\infty p(y)y^{-z-1}\,dy
-=rac4{z-1/2}-\frac4z-\frac1{z^2}
-=rac{z+1/2}{z^2(z-1/2)}.
+=\frac4{z-1/2}-\frac4z-\frac1{z^2}
+=\frac{z+1/2}{z^2(z-1/2)}.
 \tag{L-23709.6}
 \]
 
@@ -105,7 +121,7 @@ Therefore
 \[
 \boxed{
 \int_1^\infty\mathfrak S(y)y^{-z-1}\,dy
-=rac{z+1/2}
+=\frac{z+1/2}
  {z^2(z-1/2)\zeta(z+1/2)}.
 }
 \tag{L-23709.7}
@@ -138,7 +154,7 @@ Its transform acquires the exact Euler factor
 \[
 \boxed{
 \widehat{\mathfrak S_5}(z)
-=rac{(1-5^{-(z+1/2)})(z+1/2)}
+=\frac{(1-5^{-(z+1/2)})(z+1/2)}
  {z^2(z-1/2)\zeta(z+1/2)}.
 }
 \tag{L-23709.10}
@@ -178,7 +194,7 @@ For `y>=5`,
 H_5(y)=
 \frac{16}{5}\sqrt y-4+\frac4{\sqrt5}
 -\left(1-\frac1{\sqrt5}\right)\log y
--rac{\log5}{\sqrt5}.
+-\frac{\log5}{\sqrt5}.
 \tag{L-23709.12}
 \]
 
