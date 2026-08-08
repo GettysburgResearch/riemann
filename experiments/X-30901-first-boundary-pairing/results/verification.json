@@ -1,0 +1,50 @@
+{
+  "checks": [
+    "direct versus min-paired formal logarithm coefficients",
+    "disjoint paired intervals",
+    "at most one cutoff-crossing pair per output coordinate"
+  ],
+  "classification": "PASS_EXACT_FIRST_BOUNDARY_PAIRED_LOG_IDENTITY",
+  "cutoff_crossing_pairs": 620,
+  "does_not_prove": [
+    "the analytic derivative inequalities without the written proof",
+    "CBVR",
+    "Cycle Debt",
+    "RH"
+  ],
+  "formal_coefficient_comparisons": 98740,
+  "rows": [
+    {
+      "X": 31,
+      "cutoff_crossing_pairs": 8,
+      "formal_coefficient_comparisons": 816
+    },
+    {
+      "X": 64,
+      "cutoff_crossing_pairs": 21,
+      "formal_coefficient_comparisons": 2040
+    },
+    {
+      "X": 127,
+      "cutoff_crossing_pairs": 36,
+      "formal_coefficient_comparisons": 4754
+    },
+    {
+      "X": 256,
+      "cutoff_crossing_pairs": 79,
+      "formal_coefficient_comparisons": 10994
+    },
+    {
+      "X": 511,
+      "cutoff_crossing_pairs": 155,
+      "formal_coefficient_comparisons": 24782
+    },
+    {
+      "X": 1024,
+      "cutoff_crossing_pairs": 321,
+      "formal_coefficient_comparisons": 55354
+    }
+  ],
+  "schema": "X-30901-first-boundary-pairing-v1",
+  "sha256_without_digest": "0f9cde1c40b3ace7919f8115cacfdd0bc5802215d9bbf12d8f79ff22259ee524"
+}
