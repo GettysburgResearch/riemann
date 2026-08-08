@@ -84,7 +84,8 @@ Then normalized physical translation gives the exact source identity
 \boxed{
 \mathcal A_aQ_x=Q_{a*x}.
 }
-\tag{L-26213.2]
+\tag{L-26213.2}
+\]
 
 The corresponding potential has the exact formula
 
@@ -93,7 +94,8 @@ The corresponding potential has the exact formula
 F_{a*x}(r)
 =\sum_da(d)F_x\!\left(\left\lfloor{r\over d}\right\rfloor\right).
 }
-\tag{L-26213.3]
+\tag{L-26213.3}
+\]
 
 Indeed
 
@@ -113,7 +115,8 @@ Combining (L-26213.1)--(L-26213.3), every multiplicative prefix observation has 
 \sum_da(d)F_x\!\left(\left\lfloor{r\over d}\right\rfloor\right)
 \right|^2.
 }
-\tag{L-26213.4]
+\tag{L-26213.4}
+\]
 
 No annulus-dependent metric is introduced.
 
@@ -139,7 +142,8 @@ Therefore
 \|D_dF\|_{\mathscr H_w}^2
 ={1\over d}\|F\|_{\mathscr H_w}^2.
 }
-\tag{L-26213.5]
+\tag{L-26213.5}
+\]
 
 This is the exact critical square-root scaling already built into the normalized translation coefficient `d^{-1/2}`.
 
@@ -191,7 +195,8 @@ Consequently
 =\sum_{j=1}^{U-1}
 { |(\mathcal S_NF_{a*x})(j)|^2\over j(j+1)}.
 }
-\tag{L-26213.6]
+\tag{L-26213.6}
+\]
 
 Every bank prefix `a=a_Y` with `Y<=R` therefore lives in the **same** row `N`, the same lower-half coordinate set, and the same weight `1/[j(j+1)]`. Smaller supports are represented by zeros, not by changing the metric.
 
