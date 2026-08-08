@@ -1,6 +1,6 @@
-# X-30402 — Zeroth Euler common-tail atomic-mass mutation
+# X-30402 — PR #304 terminal-source refutations
 
-This standard-library checker supports `R-30402`.
+This standard-library checker supports `R-30402` and `R-30403`.
 
 Run:
 
@@ -24,14 +24,26 @@ It verifies with exact integer and `fractions.Fraction` arithmetic that:
    ell_Y >= 1/(Y+1),
    1/sqrt(q) >= 1/ceil_sqrt(q)
    ```
-   already exceeds `floor(sqrt(X))/1000` on the retained endpoints.
+   already exceeds `floor(sqrt(X))/1000` on the retained endpoints;
+4. at
+   ```text
+   (N,q,k,s)=(18,5,2,1),
+   ```
+   the actual zeroth boundary value is
+   ```text
+   49/19000,
+   ```
+   whereas the declared divisor-source load in column `5` is
+   ```text
+   -1/250.
+   ```
 
 Retained digest:
 
 ```text
-11522fe3473d961667b92fbec785d563bdea16ebd6cc79549492a19858c2298d
+cee6b423067889dcaaf718569e7082946d5cb61f943e288d97a96856b3940925
 ```
 
-The all-endpoint `Omega(sqrt X)` lower bound is proved in `R-30402`; the finite replay is a mutation check, not an asymptotic proof.
+The all-endpoint `Omega(sqrt X)` lower bound is proved in `R-30402`. The source-type mismatch in `R-30403` is an exact finite contradiction.
 
 The package does not refute every possible coupled source repair and does not prove Cycle Debt or RH.
