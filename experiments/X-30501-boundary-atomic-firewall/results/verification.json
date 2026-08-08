@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "central_entropy_increment": {
+      "binomial_increment_rows": 1998
+    },
+    "radical_bounds": {
+      "sqrt3_lower_numerator": 577,
+      "sqrt5_lower_numerator": 447,
+      "sqrt6_upper_numerator": 409
+    },
+    "top_cell_geometry": {
+      "endpoint_count_checks": 1881,
+      "source_singletons": 332467,
+      "top_cell_rows": 332467
+    }
+  },
+  "classification": "EXACT_BOUNDARY_ATOMIC_NORM_FIREWALL",
+  "does_not_prove": [
+    "a cancellation-preserving Haar bound",
+    "Cycle Debt",
+    "the prime-ramp estimate",
+    "RH"
+  ],
+  "schema": "X-30501-boundary-atomic-firewall-v1",
+  "sha256_without_digest": "32c1317529f8559b845fe3016d50424e9d213c9d7f6de3ea8be0672253eb3016",
+  "theorem_constants": {
+    "atomic_norm_lower": "N/240 for N>=120",
+    "top_cell_scaled_boundary_upper": "-1/20"
+  }
+}
