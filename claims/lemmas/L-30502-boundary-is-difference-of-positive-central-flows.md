@@ -1,75 +1,51 @@
-# L-30502 — The cutoff boundary is the carry image of a difference of positive central flows
+# L-30502 — Each stopped cutoff boundary is a difference of positive central flows
 
 Claim ID: `L-30502`  
-Title: Before taking any source norm, every stopped-power cutoff boundary is exactly the difference of its finite and infinite nonnegative central first-difference flows  
+Title: Before source inversion, every individual stopped-power cutoff boundary is exactly the carry image of a finite/infinite positive-flow difference; active-layer truncation must be retained in aggregation  
 Status: **PROPOSED COMPLETE EXACT LEMMA — independent review requested**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-08  
 Frozen context: PR #304 at `78b75fc17e27334a9950018528c1c6e083d74820`  
 Dependencies: PR #280 central residual identity; PR #301 `L-29801`  
-Scope: exact finite flow identity; no quantitative Cycle-Debt estimate
+Scope: exact per-layer flow identity and aggregation firewall; no quantitative Cycle-Debt estimate
 
 ## 1. Central first-difference flow
 
-For a nonnegative decreasing sequence
-
-\[
-r(2)\ge r(3)\ge\cdots\ge0,
-\qquad r(n)=0\text{ eventually},
-\]
-
-put
+For a nonnegative decreasing sequence `r`, put
 
 \[
 a_r(n)=r(n)-r(n+1)\ge0.
-\tag{L-30502.1}
 \]
 
-Let `D(r)` be the central split flow assigning coefficient `a_r(n)` to
+Let `D(r)` assign coefficient `a_r(n)` to the central split
 
 \[
 [n,\lfloor n/2\rfloor].
 \]
 
-Write `L_q(D(r))` for its carry load. The exact residual operator of PR #280 is
+The exact residual operator is
 
 \[
-\mathcal T r(q)=r(q)-L_q(D(r)).
-\tag{L-30502.2}
+\mathcal Tr(q)=r(q)-L_q(D(r)).
+\tag{L-30502.1}
 \]
 
-No asymptotic estimate enters this identity.
+## 2. One stopped layer
 
-## 2. Finite and infinite stopped powers
-
-Fix a decreasing sequence `p(n)` and an endpoint `Y`. Define
+Fix a decreasing sequence `p` and an endpoint `Y`, and define
 
 \[
 p_Y(n)=p(n)\mathbf1_{n\le Y}.
-\tag{L-30502.3}
 \]
 
-Both `p` and `p_Y` are decreasing, and therefore both flows
+Both `D(p)` and `D(p_Y)` are coefficientwise nonnegative. For every output
+column
 
 \[
-D(p),\qquad D(p_Y)
+q\le\left\lfloor\frac{Y+1}{2}\right\rfloor,
 \]
 
-are coefficientwise nonnegative.
-
-Let
-
-\[
-\mathcal T_\infty p(q)=p(q)-L_q(D(p))
-\]
-
-and
-
-\[
-\mathcal T_Yp_Y(q)=p_Y(q)-L_q(D(p_Y)).
-\]
-
-For every `q<=Y`, one has `p_Y(q)=p(q)`, so subtraction gives
+one has `p_Y(q)=p(q)`, and therefore
 
 \[
 \boxed{
@@ -77,15 +53,10 @@ For every `q<=Y`, one has `p_Y(q)=p(q)`, so subtraction gives
 =
 L_q\bigl(D(p_Y)-D(p)\bigr).
 }
-\tag{L-30502.4}
+\tag{L-30502.2}
 \]
 
-Thus the cutoff boundary is already the carry image of one explicit signed
-balanced flow obtained as the difference of two nonnegative central flows.
-
-## 3. Exact coefficient support
-
-The coefficients of this difference are
+The exact row coefficients are
 
 \[
 \begin{aligned}
@@ -94,95 +65,75 @@ D(p_Y)-D(p)
 &-\sum_{n>Y}[p(n)-p(n+1)]
 [n,\lfloor n/2\rfloor].
 \end{aligned}
-\tag{L-30502.5}
+\tag{L-30502.3}
 \]
 
-Indeed, the first differences agree below `Y`; at row `Y`, stopping replaces
-`p(Y)-p(Y+1)` by `p(Y)`; and every row above `Y` is deleted.
+Thus each individual cutoff boundary is the carry image of a difference of two
+positive central flows.
 
-Equation (L-30502.5) exposes the exact cancellation suppressed by converting the
-boundary first into an isolated divisor source.
+## 3. Active-layer aggregation
 
-## 4. Aggregate logarithmic target
-
-For the critical stopped-power resolution of PR #301,
+For the critical stopped-power resolution
 
 \[
-w_X(q)
-=
+w_X(q)=
 \sum_{Y=1}^{X-1}\ell_Yp_Y(q),
 \qquad
 \ell_Y=\log\frac{Y+1}{Y}>0,
 \qquad
 p(q)=q^{-1/2},
-\tag{L-30502.6}
 \]
 
-sum (L-30502.4) with weights `ell_Y`. On the declared next endpoint,
+column `q` receives a boundary from layer `Y` only when `Y>=2q-1`. Hence
 
 \[
 \boxed{
-b_X(q)=L_q(B_X),}
-\tag{L-30502.7}
-\]
-
-where
-
-\[
-\boxed{
-B_X=
-\sum_{Y=1}^{X-1}\ell_Y
-\bigl[D(p_Y)-D(p)\bigr].
+b_X(q)
+=
+\sum_{Y=2q-1}^{X-1}
+\ell_Y
+L_q\bigl(D(p_Y)-D(p)\bigr).
 }
-\tag{L-30502.8}
+\tag{L-30502.4}
 \]
 
-The scalar `b_X` is exactly the first aggregate boundary of `L-30501`.
-Consequently the large divisor-source norm in `L-30501` is the image norm of a
-flow difference whose two constituents are positive.
+This is equivalent to the scalar formula in `L-30501`.
 
-## 5. Correct optimization interface
-
-Let `C_eta` denote the balanced Pascal-cycle matrix of PR #272. Since adding a
-cycle does not change any carry load, every flow representing the aggregate
-boundary has the form
+The lower limit `2q-1` depends on the output column. Therefore one may **not**
+drop the active-layer indicator and replace (L-30502.4) by the carry load of
 
 \[
-B_X+C_\eta z.
+\sum_{Y=1}^{X-1}\ell_Y[D(p_Y)-D(p)].
 \]
 
-The proof-facing boundary cost is therefore
+That source-independent sum has extra contributions from layers which have no
+output coordinate at `q`.
 
-\[
-\boxed{
-\inf_z\mathcal N_\omega(B_X+C_\eta z),
-}
-\tag{L-30502.9}
+## 4. Correct optimization interface
 
-not the triangle estimate
+A repaired flow proof must retain an explicit layer or cutoff-state label until
+the active destinations are assembled. Only then may it pass to the finite
+Pascal-cycle normal form.
 
-\[
-\mathcal N_\omega(\Phi(\sigma_X))
-\le24\|\sigma_X\|_{\rm at}.
-\]
+The proof-facing object is therefore the cycle-optimized negative capacity of
+the **activated finite manifest**, not the isolated divisor-source norm and not
+the unqualified sum of the per-layer flow differences.
 
-The identity does not prove that (L-30502.9) is polylogarithmic. It proves that
-the large source norm does not itself lower-bound the optimized debt, and it
-provides the exact flow object that a repaired theorem must estimate.
+This lemma proves the exact positive-flow origin of every layer, but it does not
+construct a polylogarithmic activated-flow certificate.
 
-## 6. Proof boundary
+## 5. Proof boundary
 
 Closed exactly:
 
-1. the finite/infinite cutoff boundary as a carry-load difference;
+1. the per-layer finite/infinite boundary as a carry-load difference;
 2. positivity of both constituent central flows;
-3. the exact row coefficients of their difference;
-4. aggregation over the positive logarithmic endpoint layer cake;
-5. the correct Pascal-cycle optimization interface.
+3. the exact row support of their difference;
+4. the active-layer condition `Y>=2q-1`;
+5. the aggregation firewall preventing an invalid source-independent sum.
 
 Open:
 
-1. a subpower or polylogarithmic bound for the optimized debt in
-   (L-30502.9);
+1. a subpower or polylogarithmic activated Pascal-cycle certificate;
 2. the resulting sharp prime ramp;
 3. RH.
