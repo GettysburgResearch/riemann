@@ -173,7 +173,7 @@ In particular there is an absolute constant, for example
  \tag{L-32408.9}
 \]
 
-Thus the only error created by a noninteger endpoint is logarithmic, not an
+Thus the only new source created by a noninteger endpoint is logarithmic, not an
 RH-scale source.
 
 ## 4. Exact full-theta cell integral
@@ -218,11 +218,11 @@ Fix the pole-detecting carry-position interval
 PR #297 `L-29001` proves that every nontrivial zero has a nonzero residue vector
 on any fixed balanced interval, so restricting to `I` loses no zeta-zero pole.
 
-For all sufficiently large `n`, every complete `theta X` cell contained in `I`
-corresponds in (L-32408.7) to a quarter-balanced row of both `n` and `n-1`.
-Only `O(1)` edge cells are clipped by the endpoints of `I`; by (L-32408.9)
-and the elementary Chebyshev bounds in `L-32405`, their total contribution is
-polynomial-logarithmic after the critical normalization.
+For all sufficiently large `n`, **every** `theta X` cell which meets `I`, including
+the at most two cells clipped by the endpoints of `I`, corresponds in
+(L-32408.7) to a quarter-balanced row of both `n` and `n-1`. The clipped cells
+therefore use the same current-to-reserve estimate as the complete cells; they
+are not discarded or charged separately.
 
 Let
 
@@ -244,8 +244,9 @@ on every quarter-balanced row. Also
  |a+b|^2\le(1+\epsilon)|a|^2+(1+\epsilon^{-1})|b|^2.
 \]
 
-Using (L-32408.9) for the boundary term in the second branch, one obtains the
-cofinal physical estimate
+Using (L-32408.9) for the repeated divisor-boundary term in the second branch,
+and noting that there are `O(X)` carry-position cells each of length `1/X`, one
+obtains the cofinal physical estimate
 
 \[
  \boxed{
@@ -268,8 +269,9 @@ where
 The same statement holds with any fixed balanced interval strictly inside
 `(1/4,3/4)`.
 
-The `O(log^2 X/X)` term includes the divisor boundary and the finitely many
-clipped carry-position cells; it is exponentially small in logarithmic scale.
+The `O(log^2 X/X)` term comes from the divisor boundary `gamma_4(n)` and its
+cross-term allocation. Every clipped carry-position cell itself remains inside
+the reserve sum.
 
 ## 6. Unit logarithmic blocks
 
@@ -302,7 +304,8 @@ Closed here, subject to independent review:
 2. the exact neighboring-row plus divisor-boundary decomposition;
 3. the sparse logarithmic classification of the divisor boundary;
 4. the exact full-theta physical cell integral;
-5. transfer of `L-32407` to a fixed pole-detecting balanced interval;
+5. transfer of `L-32407` to a fixed pole-detecting balanced interval, including
+   the clipped endpoint cells;
 6. the cofinal physical reserve-absorption estimate with coefficient tending to
    zero;
 7. its unit-logarithmic-block form.
