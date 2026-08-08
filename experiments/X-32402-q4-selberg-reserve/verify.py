@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Exact interval replay for L-32405 (Q=4 balanced Selberg--Kummer reserve).
+Exact interval replay for L-32405/L-32407 (Q=4 balanced reserve and physical transference).
 
 Standard library only. All transcendental quantities are enclosed by
 Fraction-based atanh series and then converted to fixed-point integer intervals.
@@ -143,13 +143,31 @@ for a in lambda_support:
         C_lo[product] += mul_lo(lam_lo[a], lam_lo[b])
         C_hi[product] += mul_hi(lam_hi[a], lam_hi[b])
 
+# Physical current coefficients c_4 = e_4 * Lambda_4, where
+# e_4(1)=1 and e_4(4^r)=-3.
+phys_lo = [0] * (N + 1)
+phys_hi = [0] * (N + 1)
+for n in range(2, N + 1):
+    lo = lam_lo[n]
+    hi = lam_hi[n]
+    q = 4
+    while q <= n:
+        if n % q == 0:
+            lo -= 3 * lam_hi[n // q]
+            hi -= 3 * lam_lo[n // q]
+        if q > n // 4:
+            break
+        q *= 4
+    phys_lo[n] = lo
+    phys_hi[n] = hi
+
 # Floor/carry primitives:
 # sum_q f(q) floor(M/q) = sum_{m<=M} sum_{q|m} f(q).
 def cumulative_floor_intervals(coeff_lo, coeff_hi):
     divisor_lo = [0] * (N + 1)
     divisor_hi = [0] * (N + 1)
     for d in range(2, N + 1):
-        if coeff_hi[d] == 0:
+        if coeff_lo[d] == 0 and coeff_hi[d] == 0:
             continue
         for m in range(d, N + 1, d):
             divisor_lo[m] += coeff_lo[d]
@@ -164,10 +182,13 @@ def cumulative_floor_intervals(coeff_lo, coeff_hi):
 
 PREF1_LO, PREF1_HI = cumulative_floor_intervals(lam_lo, lam_hi)
 PREF2_LO, PREF2_HI = cumulative_floor_intervals(C_lo, C_hi)
+PHYS_LO, PHYS_HI = cumulative_floor_intervals(phys_lo, phys_hi)
 
 rows = 0
 minimum_margin = None
 minimum_row = None
+maximum_physical_ratio = Fraction(0)
+maximum_physical_row = None
 
 for n in range(4, N + 1):
     for j in range((n + 3) // 4, n // 2 + 1):
@@ -183,6 +204,18 @@ for n in range(4, N + 1):
         if minimum_margin is None or margin < minimum_margin:
             minimum_margin = margin
             minimum_row = (n, j, P_lo, S_hi)
+
+        Q_lo = PHYS_LO[n] - PHYS_HI[j] - PHYS_HI[k]
+        Q_hi = PHYS_HI[n] - PHYS_LO[j] - PHYS_LO[k]
+        Q_abs = max(abs(Q_lo), abs(Q_hi))
+        if Q_abs * Q_abs > 4 * margin:
+            raise AssertionError(
+                ("physical transference failure", n, j, Q_lo, Q_hi, margin)
+            )
+        ratio = Fraction(Q_abs * Q_abs, margin)
+        if ratio > maximum_physical_ratio:
+            maximum_physical_ratio = ratio
+            maximum_physical_row = (n, j)
 
 # Rational gates used by the analytic tail proof.
 assert Fraction(69, 100) < LOG2_LO
@@ -208,6 +241,13 @@ result = {
     "minimum_row": [minimum_row[0], minimum_row[1]],
     "minimum_margin_scaled_square": minimum_margin,
     "tail_ratio_upper": [ratio_upper.numerator, ratio_upper.denominator],
+    "physical_transference_finite_constant": 4,
+    "maximum_physical_ratio_row": [
+        maximum_physical_row[0], maximum_physical_row[1]
+    ],
+    "maximum_physical_ratio_interval_upper": [
+        maximum_physical_ratio.numerator, maximum_physical_ratio.denominator
+    ],
 }
 payload = json.dumps(result, sort_keys=True, separators=(",", ":")).encode()
 result["result_sha256"] = hashlib.sha256(payload).hexdigest()
