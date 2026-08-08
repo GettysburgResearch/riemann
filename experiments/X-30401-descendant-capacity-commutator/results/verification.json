@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "commutator_capacity_majorant": {
+      "argmax": 832,
+      "cases": 1024,
+      "largest_integer_majorant_ratio": "400/29",
+      "limit_h": 1024,
+      "proved_bound": "majorant <= 24 ceil_sqrt(h+1)"
+    },
+    "commutator_source": {
+      "divisor_source_cases": 13040,
+      "limit_h": 160
+    },
+    "descendant_capacity": {
+      "expanded_capacity_cases": 12636,
+      "factor_two_recurrence_cases": 12636,
+      "limit_endpoint": 80
+    },
+    "paired_shifted_source": {
+      "limit_k": 80,
+      "paired_carry_replay_cases": 622080,
+      "source_order_cases": 3840
+    },
+    "scope_witnesses": {
+      "expanded_value_N4_n2": "3/4",
+      "insufficient_expanded_value_N6_n4": "1/20",
+      "model_required_value_N6_n4": "1/5",
+      "root_only_value_N4_n2": "1/6"
+    }
+  },
+  "classification": "EXACT_DESCENDANT_CAPACITY_AND_COMMUTATOR_ALGEBRA",
+  "does_not_prove": [
+    "the complete PR #286 source manifest",
+    "the all-generation atomic-norm bound",
+    "Cycle Debt",
+    "RH"
+  ],
+  "schema": "X-30401-descendant-capacity-commutator-v1",
+  "sha256_without_digest": "b41721d6b9c6f82d05156f28be954d878e8f0560b3216188ddfbc3e7e9d6236d"
+}
