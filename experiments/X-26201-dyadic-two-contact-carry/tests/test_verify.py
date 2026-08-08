@@ -111,3 +111,25 @@ def test_positive_inverse_wavelet_synthesis() -> None:
     )
     assert result["checks"]["positive_wavelet_synthesis"]["cases"] == 5148
     assert result["checks"]["digital_prime_correction"]["cases"] == 5148
+
+
+def test_selberg_carry_moment_tower() -> None:
+    result = run_script("verify_moment_tower.py")
+    assert (
+        result["sha256_without_digest"]
+        == "eaaed5595e09e6b7d0f9fd990f42bea3e99d4c4e180fd04d78b7d2fa8434c2af"
+    )
+    assert (
+        result["classification"]
+        == "PASS_EXACT_SELBERG_CARRY_MOMENT_TOWER_AND_BOUNDARY_FIREWALL"
+    )
+    assert result["checks"]["convolutions"]["rows"] == 72
+    assert result["checks"]["moment_tower"]["pointwise_cells"] == 2698
+    assert (
+        result["checks"]["moment_tower"]["nonzero_unit_boundary_cells"]
+        == 411
+    )
+    assert (
+        result["checks"]["moment_tower"]["coefficient_mutation_rejected"]
+        == 1
+    )
