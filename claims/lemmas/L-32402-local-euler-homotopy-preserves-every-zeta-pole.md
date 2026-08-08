@@ -1,7 +1,7 @@
 # L-32402 — A local-Euler homotopy preserves every off-line zeta pole
 
 Claim ID: `L-32402`  
-Title: The ordinary and two-contact atomized Jensen fields lie in one positive dyadic Dirichlet family whose pole residue has a uniform open-strip moat  
+Title: The ordinary and two-contact atomized Jensen fields lie in a signed dyadic local-Euler family with nonnegative inverse/generalized-prime data and a uniform open-strip pole moat  
 Status: **PROPOSED COMPLETE EXACT ANALYTIC/FINITE LEMMA PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-sol`  
 Created: 2026-08-08  
@@ -13,7 +13,7 @@ Scope: exact deformation and pole preservation; no energy estimate or RH claim
 Fix
 
 \[
- 0\le\lambda\le1.
+ -1\le\lambda\le1.
 \]
 
 Define
@@ -40,13 +40,16 @@ while the coefficients of `A_lambda` are
 
 \[
  \boxed{
- a_\lambda(n)=\sum_{r=0}^{v_2(n)}\lambda^r>0.
+ a_\lambda(n)=\sum_{r=0}^{v_2(n)}\lambda^r\ge0.
  }
 \tag{L-32402.3}
 \]
 
-Thus the whole path remains inside a positive inverse Dirichlet system. Its
-generalized-prime coefficients are
+For `lambda>-1` the displayed finite geometric sum is strictly positive; at
+`lambda=-1` it is zero exactly when `v_2(n)` is odd. Thus the whole closed
+parameter segment remains inside a nonnegative inverse Dirichlet system.
+
+Its generalized-prime coefficients are
 
 \[
  \boxed{
@@ -58,12 +61,19 @@ generalized-prime coefficients are
 \tag{L-32402.4}
 \]
 
-The endpoints are
+Indeed at `n=2^r` the coefficient is `(1+lambda^r) log 2>=0`; away from the
+dyadic tower it is the ordinary von Mangoldt coefficient.
+
+The three useful landmarks are
 
 ```text
-lambda=0:  A_0=zeta, B_0=1/zeta;
-lambda=1:  A_1=zeta/(1-2^-s), B_1=(1-2^-s)/zeta.
+lambda=-1: A=zeta/(1+2^-s); dyadic generalized-prime layers alternate 0,2log2;
+lambda= 0: A=zeta, B=1/zeta;
+lambda= 1: A=zeta/(1-2^-s), B=(1-2^-s)/zeta.
 ```
+
+The `lambda=-1` endpoint is a parity-alternating **valuation** filter; it does
+not introduce an odd-residue Dirichlet-character sector.
 
 ## 2. Exact finite carry atom
 
@@ -196,19 +206,20 @@ in (L-32402.13) is analytic and
 \tag{L-32402.14}
 \]
 
-For `Re rho>1/2`,
+For `Re rho>1/2` and every `|lambda|<=1`,
 
 \[
  \boxed{
  |1-\lambda2^{-\rho}|
+ \ge1-|\lambda|2^{-\operatorname{Re}\rho}
  \ge1-2^{-\operatorname{Re}\rho}
  >1-2^{-1/2}.
  }
 \tag{L-32402.15}
 \]
 
-Thus the entire homotopy has one uniform local-Euler pole moat. No value of
-`lambda in [0,1]` can cancel an off-line zeta zero.
+Thus the entire signed local-Euler segment has one uniform pole moat. No value
+of `lambda in [-1,1]` can cancel an off-line zeta zero.
 
 ## 5. Vector residue in the carry-position variable
 
@@ -235,12 +246,12 @@ with `rho!=1`. Hence
 \]
 
 Together with (L-32402.15), the `L^2(I_eta)` residue norm of every hypothetical
-off-line zero is bounded away from zero uniformly in the local parameter
-`lambda` once the zero is fixed.
+off-line zero is bounded away from zero uniformly in `lambda` once the zero is
+fixed.
 
 ## 6. Fixed-lambda RH criterion
 
-For every fixed `lambda in [0,1]`, define
+For every fixed `lambda in [-1,1]`, define
 
 \[
  \mathscr E_{\lambda,\eta}(J)
@@ -268,12 +279,12 @@ Equation (L-32402.18) is a criterion, not an unconditional energy bound.
 
 ## 7. Strategic consequence
 
-The ordinary Chebyshev Jensen field (`lambda=0`) and the exact two-contact field
-(`lambda=1`) are not different RH mechanisms. They are endpoints of a
-pole-preserving positive Dirichlet homotopy. Therefore a successful proof may
-optimize the local dyadic Euler factor for finite geometry without risking loss
-of the RH mode, provided the parameter remains in the declared compact range and
-all source terms are transformed consistently.
+The ordinary Chebyshev Jensen field (`lambda=0`), the exact two-contact field
+(`lambda=1`), and a parity-alternating valuation field (`lambda=-1`) lie in one
+pole-preserving nonnegative Dirichlet family. A successful proof may therefore
+optimize this one local dyadic Euler coordinate for finite geometry without
+introducing the nonprincipal character channels which arise from odd-prime
+residue automata.
 
 Conversely, merely finding a convenient `lambda` does not prove RH: every fixed
 member retains the full off-line pole obstruction.
@@ -282,7 +293,7 @@ member retains the full off-line pole obstruction.
 
 Closed exactly here, subject to review:
 
-- the positive local-Euler Dirichlet family;
+- the nonnegative local-Euler Dirichlet family on `[-1,1]`;
 - the finite carry atom for every parameter;
 - the closed generalized-Chebyshev formula;
 - uniform preservation of every off-line zeta pole;
