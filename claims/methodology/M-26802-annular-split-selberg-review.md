@@ -4,7 +4,7 @@ Claim ID: `M-26802`
 Status: **FAIL-CLOSED ADVERSARIAL REVIEW PROTOCOL**  
 Authoring agent: `gpt56-pro-source-specific`  
 Created: 2026-08-08  
-Scope: review of `R-26802`, `L-26802`--`L-26805`, and `T-26802`; no RH claim
+Scope: review of `R-26802/R-26803`, `L-26802`--`L-26805`, and `T-26802`; no RH claim
 
 ## 1. Freeze
 
@@ -12,9 +12,9 @@ Record exact heads before review:
 
 ```text
 PR #241  independent-frequency physical block
-PR #263  parity frame and finite synthesis
+PR #263  parity frame, finite synthesis, and critical banks
 PR #268  corrected annular source-change continuation
-PR #269  factor-five carry source and reserve
+PR #269  factor-five wavelets and pairwise carry reserves
 ```
 
 A later repair does not verify a frozen object.
@@ -51,7 +51,26 @@ Verify the exact source change
 and its coefficientwise current-plus-proper-divisor form before reading any
 energy estimate.
 
-## 3. Exact replay order
+## 3. Pairwise reserve is not the production moat
+
+PR #269 proves, for each fixed wavelet \(Z_{n,m}\), a strict one-dimensional
+Schur reserve against the logarithmic or generalized-prime row. `R-26803`
+records that such pairwise estimates do not imply a reserve against the span of
+all transition wavelets.
+
+A reviewer must therefore distinguish:
+
+```text
+pairwise one-wavelet reserve                 imported local lemma;
+complete transition-span reserve            not supplied;
+complete arithmetic source-weighted reserve ASSD obligation.
+```
+
+The source-weighted transition matrix must be assembled with every cross term.
+Summing pairwise inequalities, deleting off-diagonal blocks, or invoking a
+generic frame floor is an automatic rejection.
+
+## 4. Exact replay order
 
 1. Verify
    \[
@@ -70,8 +89,10 @@ energy estimate.
 10. Verify `a_omega*W=lambda_omega` and every proper-divisor destination.
 11. Verify the generalized Selberg identity.
 12. Verify the positive proper-divisor Selberg defect.
+13. Verify the scope—not merely the algebra—of every imported factor-five
+    reserve.
 
-## 4. Production ASSD review
+## 5. Production ASSD review
 
 A claimed recurrence must export, in one metric:
 
@@ -82,10 +103,10 @@ two-frequency physical matrices;
 RH-sensitive annular source maps;
 weighted carry split matrices for W;
 source-change completion to P;
-transition cells 2/3/4;
+complete source-weighted transition matrix on cells 2/3/4;
 finite boundary matrices;
 source-change and Selberg proper-divisor destinations;
-digital atoms;
+digital/hyperbola bank outputs;
 reserve and charge totals.
 ```
 
@@ -93,7 +114,7 @@ Reviewers must calculate the final reserve after completing the `P` square and
 after every Schur complement. Positive current and lower blocks do not imply
 strict contraction.
 
-## 5. Mandatory mutations
+## 6. Mandatory mutations
 
 The proof or checker must reject:
 
@@ -102,38 +123,45 @@ The proof or checker must reject:
 3. deleting one source-change proper divisor;
 4. treating `a_omega` as an `l1` contraction kernel;
 5. taking absolute values before completing the `P` square;
-6. changing the outer wavelet coefficient `-1/2`;
-7. using oversupport `8M-1` or `128M-1`;
-8. omitting the factor `e^(-t/2)` or `m^(-1/2)`;
-9. summing both carry halves with the lower-half weight;
-10. omitting quotient cell `4`;
-11. replacing the two-frequency normal block by a diagonal integral;
-12. dropping a parity channel or Bezout delay;
-13. deleting the generalized Selberg defect;
-14. routing the current divisor `d=1` to lower scale;
-15. using finite numerical reserve as the uniform theorem.
+6. summing pairwise Schur estimates as though transition wavelets were
+   orthogonal;
+7. deleting transition cross terms or replacing the transition matrix by its
+   diagonal;
+8. changing the outer wavelet coefficient `-1/2`;
+9. using oversupport `8M-1` or `128M-1`;
+10. omitting the factor `e^(-t/2)` or `m^(-1/2)`;
+11. summing both carry halves with the lower-half weight;
+12. omitting quotient cell `4`;
+13. replacing the two-frequency normal block by a diagonal integral;
+14. dropping a parity channel or Bezout delay;
+15. deleting the generalized Selberg defect;
+16. routing the current divisor `d=1` to lower scale;
+17. using finite numerical reserve as the uniform theorem.
 
-## 6. Acceptance boundary
+## 7. Acceptance boundary
 
 Classify separately:
 
 ```text
 R-26802 source-scope correction
+R-26803 pairwise/full-span scope correction
 L-26802 arbitrary-source annular isometry
 L-26804 critical filtered annular isometry
 L-26805 half-scale source change
 L-26803 positive Selberg lower-scale defect
-factor-five imported sign theorem
-P-profile carry Schur reserve
+factor-five individual-row sign theorem
+pairwise P-profile Schur reserves
+complete source-weighted transition matrix
 ASSD W-to-P square assembly
 ASSD strict charge/reserve inequality
 ASSD -> RH composition
 ```
 
-The exact identities may pass while ASSD remains blocked. A proposed repair
-cannot retroactively verify a wrong source specialization.
+The exact identities and pairwise lemmas may pass while ASSD remains blocked. A
+proposed repair cannot retroactively verify a wrong source specialization or an
+overstated full-span reserve.
 
-## 7. Decisive outcome
+## 8. Decisive outcome
 
 Acceptance requires a source-bound derivation of
 
@@ -144,7 +172,11 @@ Acceptance requires a source-bound derivation of
  \sup_c\sum_{\ell,d}\theta_{\ell,c,d}<\kappa_0.
 \]
 
+The \(\kappa_0\) here is the reserve of the **complete arithmetic
+source-weighted matrix**, after every transition cross term and boundary Schur
+complement. It is not the one-wavelet constant of PR #269.
+
 Rejection requires one missing current-scale term, wrong source, wrong
-orientation, unrouted boundary, or charge total at least the reserve.
+orientation, unrouted boundary, or charge total at least the final reserve.
 
 Until that inequality is proved, RH remains unproved.
