@@ -1,0 +1,11 @@
+{
+  "schema": "riemann.x23803.mixed-pascal-directed.result.v1",
+  "verdict": "PASS_DIRECTED_FINITE_MIXED_PASCAL",
+  "X": 4096,
+  "precision": 90,
+  "weights": ["31/32", "1/32"],
+  "strict_positive_rows": 4094,
+  "uncertified_rows": [],
+  "terminal_divergence_contains_zero": true,
+  "scope": "finite directed check only; this does not certify MPR, BCT/BTF, or RH"
+}
