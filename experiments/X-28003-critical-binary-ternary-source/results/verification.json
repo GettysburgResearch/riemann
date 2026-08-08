@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "factor108_vanishing_cases": 22,
+    "finite_floor_support": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      9,
+      12,
+      18,
+      36
+    ],
+    "floor_profile_cases": 201,
+    "generalized_lambda_formal_cases": 150,
+    "inverse_convolution_cases": 200,
+    "scaled_carry_wavelet_cases": 780
+  },
+  "classification": "EXACT_Q_SQRT2_SQRT3_ALGEBRA",
+  "does_not_prove": [
+    "compact-source subexponential energy",
+    "physical source-image transition theorem",
+    "Riemann Hypothesis"
+  ],
+  "schema": "X-28003-critical-binary-ternary-source-v1",
+  "sha256_without_digest": "69bdd744471b399457febfe9e8929af6cc577f3c5b0e0050809d2937cc794530"
+}
