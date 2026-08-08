@@ -63,7 +63,7 @@ Thus
 }
 \tag{L-29004.4}
 
-The linear density (L-29004.3) cancels exactly.  If
+The linear density (L-29004.3) cancels exactly. If
 
 \[
  \widetilde A(y)=A(y)-\frac38y,
@@ -116,10 +116,9 @@ Expansion of the square and the substitution `u=theta X` give the exact identity
   +\frac2XJ(X)
   +\frac2X(A*A)(X).
 }
-\tag{L-29004.7
-}
+\tag{L-29004.7}
 
-No prime estimate enters this formula.  The right side is automatically
+No prime estimate enters this formula. The right side is automatically
 nonnegative because it is the square on the left.
 
 For the linear model `A_0(y)=3y/8`, the four terms cancel exactly.
@@ -143,19 +142,23 @@ Then the block energy of `L-29001` is
 }
 \tag{L-29004.9}
 
-Consequently RH is equivalent to
+Consequently the local-energy criterion for RH is
 
 \[
 \boxed{
- \mathcal J_\eta(X)=X^{1+o(1)}
+ \int_J^{J+1}e^{-t}\mathcal J_\eta(e^t)dt=e^{o(J)}.
 }
 \tag{L-29004.10}
 
-in the corresponding local-energy sense, or more explicitly to
+The pointwise shorthand
 
 \[
- \int_J^{J+1}e^{-t}\mathcal J_\eta(e^t)dt=e^{o(J)}.
+ \mathcal J_\eta(X)=X^{1+o(1)}
 \]
+
+is sufficient but is not asserted equivalent without an additional local
+regularity argument. The block formulation (L-29004.10) is the reviewed
+criterion.
 
 This normalization is exact: an off-line zero `rho=beta+i gamma` contributes
 at scale `X^(2 beta)` to `mathcal J_eta(X)` and at exponent `2 beta-1` after the
@@ -164,7 +167,7 @@ factor `X^-1`.
 ## 5. Connection to prime-annulus and carry programmes
 
 Averaging (L-29004.4) over `theta` recovers the scalar top-quarter commutator on
-PR #289.  Squaring before averaging gives the exact carry Gram of `L-29001`.
+PR #289. Squaring before averaging gives the exact carry Gram of `L-29001`.
 Thus:
 
 ```text
