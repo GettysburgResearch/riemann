@@ -82,6 +82,7 @@ Therefore
  [\ell(X)-\ell(q)].
 \end{aligned}
 \tag{L-27604.4}
+\]
 
 ## 3. The divisor collapse
 
@@ -89,7 +90,7 @@ Put
 
 \[
  e=\mathbf1*\omega_2
- =\varepsilon-\frac32\delta_2+rac12\delta_4.
+ =\varepsilon-\frac32\delta_2+\frac12\delta_4.
 \tag{L-27604.5}
 \]
 
