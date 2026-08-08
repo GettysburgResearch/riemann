@@ -83,10 +83,10 @@ def sqrt_integer(n: int) -> Interval:
     return Interval(lower, Fraction(root + 1, scale))
 
 
-def _atanh_log_unit(u: Fraction) -> Interval:
-    """Outward bracket for log(u), assuming 1 <= u < 2."""
-    if not (1 <= u < 2):
-        raise ValueError("unit argument outside [1,2)")
+def _atanh_log(u: Fraction) -> Interval:
+    """Outward bracket for log(u), assuming 1 <= u <= 2."""
+    if not (1 <= u <= 2):
+        raise ValueError("atanh log argument outside [1,2]")
     z = (u - 1) / (u + 1)
     total = Fraction(0)
     power = z
@@ -108,8 +108,8 @@ def log_rational(x: Fraction) -> Interval:
     while unit < 1:
         unit *= 2
         exponent -= 1
-    log_unit = _atanh_log_unit(unit)
-    log_two = _atanh_log_unit(Fraction(2))
+    log_unit = _atanh_log(unit)
+    log_two = _atanh_log(Fraction(2))
     return log_unit + exponent * log_two
 
 
