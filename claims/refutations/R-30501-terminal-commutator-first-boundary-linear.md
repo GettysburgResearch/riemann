@@ -15,58 +15,42 @@ PR #304 uses
 \sum_a\|\sigma_a\|_{\rm at}
 =
 O((1+\log X)^B)
-\tag{R-30501.1}
 \]
 
-as `L-30403.8/T-30401.4`, and then terminates every source separately by
+as `L-30403.8/T-30401.4`, and then terminates every source separately through
+the adjacent-tree map.
 
-\[
-\Phi(\sigma_a)
-=
-\sum_m\sigma_a(m)E_{m-1}.
-\]
-
-`L-30501` proves that the complete **first** aggregated source already obeys
+`L-30501` reconstructs the active stopped-power aggregation exactly and proves
+that the complete first source already obeys
 
 \[
 \boxed{
-\|\sigma_0\|_{\rm at}>X/4000
+\|\sigma_0\|_{\rm at}>X/1500
 }
-\qquad(X\ge200).
-\tag{R-30501.2}
+\qquad(X\ge250).
 \]
 
-Therefore (R-30501.1) is false. The terminal-source composition cannot yield
-polylogarithmic Cycle Debt by the displayed triangle estimate.
+Therefore the displayed first/all-generation polylogarithmic atomic-norm claim
+is false.
 
-## Why common-destination recombination does not repair the claim
+## Why source recombination does not repair the claim
 
-The source in `L-30501` is formed only after:
-
-```text
-the full positive stopped-power endpoint sum;
-the complete analytic/finite difference;
-all first-generation arithmetic destinations.
-```
-
-On the annulus
+The source in `L-30501` is formed after the complete positive stopped-power sum
+and all first-generation arithmetic destinations. On
 
 \[
-49X/100\le q\le X/2
+2X/5\le q\le9X/20,
 \]
 
-the next endpoint contains no proper multiple of \(q\). Hence triangular
-divisor inversion forces
+the next endpoint contains no proper multiple of `q`; triangular divisor
+inversion forces
 
 \[
-\sigma_0(q)=b_X(q)>0.
+\sigma_0(q)=b_X(q)<-1/(35\sqrt X).
 \]
 
-There is no further source-level common-destination cancellation available in
-that range.
-
-Keeping the stopped layers separate is worse: by the triangle inequality, the
-sum of their atomic norms is at least the norm of their aggregate.
+There is no further source-level common-destination cancellation in this band.
+Keeping stopped layers separate is worse by the triangle inequality.
 
 ## Correct verdict
 
@@ -80,14 +64,14 @@ T-30401 as a complete RH proof                  UNPROVEN
 Riemann Hypothesis                              UNPROVEN
 ```
 
-This does not show that the optimized signed flow has linear debt. It shows
-that PR #304's specific strategy of terminating each boundary source through
-the absolute adjacent-commutator estimate overpays a macroscopic positive
-boundary state.
+This does not lower-bound the optimized signed-flow debt. It shows that PR #304's
+specific strategy of terminating each boundary through the absolute source norm
+overpays a macroscopic transition state.
 
 ## Required repair
 
-The top-annulus source must remain coupled to the positive analytic/finite
-flow before the negative-capacity functional is taken. A corrected proof must
-construct that coupled flow explicitly; it cannot bound the boundary source
-in isolation.
+`L-30502` shows that every individual stopped boundary originates as a
+difference of two positive central flows, but the active-layer condition is
+column dependent. A corrected proof must emit the complete activated flow
+manifest and optimize it in the Pascal-cycle space before negative capacity is
+taken.
