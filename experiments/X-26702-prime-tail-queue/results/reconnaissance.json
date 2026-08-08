@@ -1,0 +1,66 @@
+{
+  "classification": "FLOATING_RECONNAISSANCE_ONLY",
+  "proof_boundary": "Binary64 exploration of L-26704; no directed intervals, cofinal estimate, prime-tail theorem, or RH claim.",
+  "levels": [
+    {
+      "X": 100,
+      "last_positive_start": null,
+      "max_point_residual": 0.2591840688640965,
+      "maximizing_start": null,
+      "min_point_residual": -0.07811865229703863,
+      "prime_count": 25,
+      "queue": 0.0,
+      "total_tail": -0.4583048375796728
+    },
+    {
+      "X": 1000,
+      "last_positive_start": 3,
+      "max_point_residual": 1.2806014928958085,
+      "maximizing_start": 2,
+      "min_point_residual": -0.023055391461012847,
+      "prime_count": 168,
+      "queue": 1.5705446208545886,
+      "total_tail": 1.5705446208545886
+    },
+    {
+      "X": 10000,
+      "last_positive_start": 11,
+      "max_point_residual": 2.4422824643272856,
+      "maximizing_start": 2,
+      "min_point_residual": -0.0073062093474489664,
+      "prime_count": 1229,
+      "queue": 5.825735322756362,
+      "total_tail": 5.825735322756362
+    },
+    {
+      "X": 100000,
+      "last_positive_start": 53,
+      "max_point_residual": 3.648318599184803,
+      "maximizing_start": 2,
+      "min_point_residual": -0.002311724787136784,
+      "prime_count": 9592,
+      "queue": 13.736686873348201,
+      "total_tail": 13.736686873348201
+    },
+    {
+      "X": 1000000,
+      "last_positive_start": 347,
+      "max_point_residual": 4.868381068101778,
+      "maximizing_start": 2,
+      "min_point_residual": -0.000731060326640328,
+      "prime_count": 78498,
+      "queue": 28.725320379566767,
+      "total_tail": 28.725320379566767
+    },
+    {
+      "X": 2000000,
+      "last_positive_start": 601,
+      "max_point_residual": 5.236730519364899,
+      "maximizing_start": 2,
+      "min_point_residual": -0.0005169048552044813,
+      "prime_count": 148933,
+      "queue": 35.624603720520945,
+      "total_tail": 35.624603720520945
+    }
+  ]
+}
