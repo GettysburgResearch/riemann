@@ -1,0 +1,97 @@
+{
+  "E_at_1_over_37": {
+    "lower": {
+      "decimal": "0.437704402479769938",
+      "denominator_bits": 13984,
+      "numerator_bits": 13983,
+      "sha256": "e06d7384ee65795c371339bbb0b5b5563ea3d86dd4e3012fc15eb445f89708e8"
+    },
+    "upper": {
+      "decimal": "0.437704402479769938",
+      "denominator_bits": 13987,
+      "numerator_bits": 13986,
+      "sha256": "d07e24877ce3e2f8bedde9e62e1b46f606a66680a8ccdd18ac0ef0a04a1bb685"
+    }
+  },
+  "cell_derivative_brackets": {
+    "37": {
+      "lower": {
+        "decimal": "-0.257147441031820023",
+        "denominator_bits": 13823,
+        "numerator_bits": 13821,
+        "sha256": "c9ff8ce46ec13c8c0febcfa48811edd12be6009416045654374126d6b90abdfe"
+      },
+      "upper": {
+        "decimal": "-0.257147441031820023",
+        "denominator_bits": 13804,
+        "numerator_bits": 13802,
+        "sha256": "4d7cc275b6e5938b17c810fe587366ff5608a6051bd8c016bd73d0e121d47be6"
+      }
+    },
+    "38": {
+      "lower": {
+        "decimal": "-0.26417304119341245",
+        "denominator_bits": 15280,
+        "numerator_bits": 15278,
+        "sha256": "f547e4a555da6dc95786f25977564d0856ea08f731c44583988173bd0e7ad14c"
+      },
+      "upper": {
+        "decimal": "-0.26417304119341245",
+        "denominator_bits": 15272,
+        "numerator_bits": 15270,
+        "sha256": "fbf0e3981b24d30ea816d31ddde4319d0665b0efee4ca7a8bfa5d44a15d471a5"
+      }
+    },
+    "39": {
+      "lower": {
+        "decimal": "-0.271007760438874035",
+        "denominator_bits": 15285,
+        "numerator_bits": 15283,
+        "sha256": "cc0f2b0e35fdb37e9a2abc3bcfeecf453c42bde41b6f7a0bd17a73df6ef23a72"
+      },
+      "upper": {
+        "decimal": "-0.271007760438874035",
+        "denominator_bits": 15276,
+        "numerator_bits": 15274,
+        "sha256": "600ca7a021f2ec0341d3dff221e116cd0263c7084d1caf8273b5cac217c88d7d"
+      }
+    }
+  },
+  "classification": "EXACT_RATIONAL_CONTINUUM_AND_DUAL_REFUTATION_CONTROL",
+  "eventual_finite_excess_floor": "1/(4*sqrt(X))",
+  "formal_dual_limit": 128,
+  "formal_dual_mismatches": 0,
+  "interval_bits": 180,
+  "log_terms": 120,
+  "margin_over_floor": {
+    "decimal": "0.037704402479769937",
+    "denominator_bits": 13984,
+    "numerator_bits": 13979,
+    "sha256": "1efec7a28a76d8e225418de2e51e55eb586f2af99503bf9c2f0f593cf58c218f"
+  },
+  "monotone_cover_cost_floor": "sqrt(X)/4000",
+  "pnt_prime_log_mass_floor": "X/1000",
+  "prime_power_cluster_matrices": {
+    "exceptional_cluster": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "exceptional_inverse_minimum": "1/2",
+    "exceptional_inverse_verified": true,
+    "path_inverse_minima": {
+      "1": "1/2",
+      "2": "1/3",
+      "3": "1/4"
+    }
+  },
+  "proof_object_sha256": "96692edee3a7825c22543c98443d08cf2d1d4901f254c50faad2bffeb484426c",
+  "schema": "riemann.x25301-parabolic-cover-dual.v1",
+  "strict_floor": "2/5",
+  "theta_band": [
+    "1/40",
+    "1/37"
+  ],
+  "verdict": "MONOTONE_DIVISIBILITY_COVER_POLYLOG_COST_REFUTED"
+}
