@@ -18,7 +18,7 @@ b_X(m)=2\sqrt m\left[\log\frac Xm-2\left(1-\sqrt{\frac mX}\right)\right]
 \tag{L-23717.1}
 \]
 
-and extend `b_X(m)=0` for `m>X`.  Retain the divisor-gradient response
+and extend `b_X(m)=0` for `m>X`. Retain the divisor-gradient response
 
 \[
 v_q(b_X)=\sum_{kq\le X}\bigl[b_X(kq)-b_X(kq+1)\bigr]
@@ -67,7 +67,7 @@ PR #265 proves that the associated row atom
 a_T=d_T-d_{T-1}
 \]
 
-is coefficientwise nonnegative.  Hence `Gamma_T` is the response of one genuine nonnegative average-binomial carry atom.  This positivity is useful but is not used to infer the sign of `e_T`.
+is coefficientwise nonnegative. Hence `Gamma_T` is the response of one genuine nonnegative average-binomial carry atom. This positivity is useful but is not used to infer the sign of `e_T`.
 
 ## 2. Closed endpoint profile
 
@@ -88,7 +88,7 @@ F_T(m)=2\ell_T\sqrt m+\eta_Tm
 \tag{L-23717.9}
 \]
 
-with `F_T(T)=0`.  Direct subtraction of (L-23717.1) gives
+with `F_T(T)=0`. Direct subtraction of (L-23717.1) gives
 
 \[
 \boxed{b_T(m)-b_{T-1}(m)=F_T(m)\qquad(2\le m\le N).}
@@ -105,7 +105,7 @@ Therefore, for every `2<=q<T`,
 \tag{L-23717.11}
 \]
 
-where the convention `F_T(T)=0` handles the entering right endpoint exactly.  No continuum approximation or prime theorem occurs in this formula.
+where the convention `F_T(T)=0` handles the entering right endpoint exactly. No continuum approximation or prime theorem occurs in this formula.
 
 ## 3. Exact shell telescope
 
@@ -132,7 +132,7 @@ For a real lower cutoff `z>=2`, define the ordinary-prime atom tail
 \[
 \mathcal A_T(z)
 =
-\sum_{\substack{z\le p<T\\p\ {m prime}}}
+\sum_{\substack{z\le p<T\\p\,\text{prime}}}
 (\log p)e_T(p)
 \tag{L-23717.14}
 \]
@@ -142,7 +142,7 @@ and the finite shell tail
 \[
 \mathcal S_{X,Y}(z)
 =
-\sum_{\substack{z\le p\le X\\p\ {m prime}}}
+\sum_{\substack{z\le p\le X\\p\,\text{prime}}}
 (\log p)s_{X,Y}(p).
 \tag{L-23717.15}
 \]
@@ -171,11 +171,11 @@ L_z(m)=
 \tag{L-23717.17}
 \]
 
-Swap the two finite sums in (L-23717.11).  The positive occurrence `p|m` and the negative occurrence `p|m-1` give
+Swap the two finite sums in (L-23717.11). The positive occurrence `p|m` and the negative occurrence `p|m-1` give
 
 \[
 \boxed{
-\sum_{\substack{z\le p<T\\p\ {m prime}}}
+\sum_{\substack{z\le p<T\\p\,\text{prime}}}
 (\log p)\Gamma_T(p)
 =
 \sum_{m=2}^{N}
@@ -192,7 +192,7 @@ Thus the atomwise weighted-tail assertion is the explicit finite radical inequal
 F_T(m)\,[L_z(m)-L_z(m-1)]
 \le
 \ell_T
-\sum_{\substack{z\le p\le N\\p\ {m prime}}}
+\sum_{\substack{z\le p\le N\\p\,\text{prime}}}
 \frac{\log p}{\sqrt p}.
 }
 \tag{L-23717.19}
@@ -208,7 +208,7 @@ For every integer
 \frac N2<q<N,
 \]
 
-only the first multiple occurs.  Equation (L-23717.11) gives
+only the first multiple occurs. Equation (L-23717.11) gives
 
 \[
 \Gamma_T(q)
@@ -251,7 +251,7 @@ Combining (L-23717.20)--(L-23717.22),
 \tag{L-23717.23}
 \]
 
-At the possible endpoint `q=N`, equation (L-23717.11) gives `Gamma_T(N)=F_T(N)`.  Put `x=1/N`.  The required inequality is
+At the possible endpoint `q=N`, equation (L-23717.11) gives `Gamma_T(N)=F_T(N)`. Put `x=1/N`. The required inequality is
 
 \[
 (2-x)\log(1+x)
