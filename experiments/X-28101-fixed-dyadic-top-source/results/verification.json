@@ -1,0 +1,113 @@
+{
+  "arithmetic": "INTEGER_AND_FRACTION",
+  "cases": [
+    {
+      "K": 3,
+      "V": 4,
+      "dipole_recovery_mismatches": 0,
+      "dyadic_factorization_mismatches": 0,
+      "first_top": 50,
+      "fixed_dyadic_shift_nonzero": 0,
+      "fixed_fraction_shift_nonzero": 0,
+      "limit": 64,
+      "parity_factorization_mismatches": 0,
+      "support_lower_bound": 50,
+      "top_normal_mismatches": 0,
+      "top_recovery_mismatches": 0
+    },
+    {
+      "K": 4,
+      "V": 4,
+      "dipole_recovery_mismatches": 0,
+      "dyadic_factorization_mismatches": 0,
+      "first_top": 250,
+      "fixed_dyadic_shift_nonzero": 0,
+      "fixed_fraction_shift_nonzero": 0,
+      "limit": 256,
+      "parity_factorization_mismatches": 0,
+      "support_lower_bound": 250,
+      "top_normal_mismatches": 0,
+      "top_recovery_mismatches": 0
+    },
+    {
+      "K": 4,
+      "V": 6,
+      "dipole_recovery_mismatches": 0,
+      "dyadic_factorization_mismatches": 0,
+      "first_top": 686,
+      "fixed_dyadic_shift_nonzero": 0,
+      "fixed_fraction_shift_nonzero": 0,
+      "limit": 1296,
+      "parity_factorization_mismatches": 0,
+      "support_lower_bound": 686,
+      "top_normal_mismatches": 0,
+      "top_recovery_mismatches": 0
+    },
+    {
+      "K": 4,
+      "V": 10,
+      "dipole_recovery_mismatches": 0,
+      "dyadic_factorization_mismatches": 0,
+      "first_top": 2662,
+      "fixed_dyadic_shift_nonzero": 17,
+      "fixed_fraction_shift_nonzero": 0,
+      "limit": 10000,
+      "parity_factorization_mismatches": 0,
+      "support_lower_bound": 2662,
+      "top_normal_mismatches": 0,
+      "top_recovery_mismatches": 0
+    },
+    {
+      "K": 5,
+      "V": 6,
+      "dipole_recovery_mismatches": 0,
+      "dyadic_factorization_mismatches": 0,
+      "first_top": 4802,
+      "fixed_dyadic_shift_nonzero": 0,
+      "fixed_fraction_shift_nonzero": 0,
+      "limit": 7776,
+      "parity_factorization_mismatches": 0,
+      "support_lower_bound": 4802,
+      "top_normal_mismatches": 0,
+      "top_recovery_mismatches": 0
+    }
+  ],
+  "classification": "EXACT_FIXED_DYADIC_TOP_SOURCE_AND_FIBER_CONGRUENCE_VERIFIED",
+  "common_fiber_lifted_reserve": [
+    [
+      "1",
+      "-1/2"
+    ],
+    [
+      "-1/2",
+      "19"
+    ]
+  ],
+  "mutation_tests": {
+    "common_fiber_psd_congruence": true,
+    "dyadic_factorization": true,
+    "fixed_dyadic_nonvacuity": true,
+    "fixed_fraction_vacuity": true,
+    "opposite_parity_factorization": true,
+    "top_normal_form": true,
+    "two_stable_recoveries": true
+  },
+  "proof_object_sha256": "b8980012fe9f4b116b77e1e4c6c2bd70dc323cb5e74113c5aa3070c4c12b3fc5",
+  "scope": {
+    "not_verified": [
+      "physical boundary-commutator source map",
+      "fibered factor-five transition certificate",
+      "cofinal block recurrence",
+      "Riemann Hypothesis"
+    ],
+    "verified": [
+      "top prime-anchor normal form on finite controls",
+      "vacuity of Q=V shifted top source through V^K",
+      "nonvacuity of fixed Q=2 on a finite control",
+      "fixed dyadic b_2 factorization",
+      "opposite-parity omega_2 factorization",
+      "stable dyadic geometric recoveries",
+      "finite PSD common-fiber congruence"
+    ]
+  }
+}
