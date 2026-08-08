@@ -1,0 +1,22 @@
+{
+  "convolution_rows_checked": 1024,
+  "critical_bank_rate": "W_R^2 <= 25 R",
+  "finite_output_coefficients": {
+    "1": "1",
+    "2": "-5/2",
+    "4": "1"
+  },
+  "hyperbola_coefficient_cases": 511,
+  "kappa_Q_sqrt2": [
+    "-3/2",
+    "5/4"
+  ],
+  "kappa_squared_Q_sqrt2": [
+    "43/8",
+    "-15/4"
+  ],
+  "proof_object_sha256_without_digest": "8b74e20b45ff4acca5071ab4acd2a6db5a10b3ad1165133204cafbfe2b41362b",
+  "scope": "Exact finite convolution, prefix-bank, and constant algebra only. No physical bank upper bound, cofinal transition theorem, or RH result.",
+  "source_coefficient_supremum": "5/2",
+  "verdict": "PASS_EXACT_CRITICAL_DIGITAL_PREFIX_BANK"
+}
