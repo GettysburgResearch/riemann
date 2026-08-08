@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-"""Exact regression for the zeroth Euler common-tail atomic-mass obstruction.
+"""Exact regressions for the frozen PR #304 terminal-source claims.
 
 The checker uses only integer and Fraction arithmetic. It verifies:
 
 - the declared q interval has common shifted-even/odd first omitted index k=2;
-- the odd source coordinate contributes the symbolic atomic amount 1/(10 sqrt(q));
-- a rational lower enclosure obtained from
-    log(1+1/Y) >= 1/(Y+1),
-    1/sqrt(q) >= 1/ceil_sqrt(q)
-  already dominates floor(sqrt(X))/1000 on the tested endpoints.
+- the odd zeroth-jet source coordinate contributes 1/(10 sqrt(q));
+- a rational lower enclosure already dominates floor(sqrt(X))/1000 on the
+  tested endpoints;
+- the q-dependent source typing fails exactly at (N,q,k,s)=(18,5,2,1).
 
-It proves finite algebra and lower enclosures only. The cofinal lower bound is
-proved in R-30402.
+The cofinal lower bound is proved in R-30402. The source-type contradiction is
+an exact finite counterexample in R-30403.
 """
 from __future__ import annotations
 
@@ -62,6 +61,40 @@ def rational_lower_bound(X: int) -> tuple[Fraction, int]:
     return total, rows
 
 
+def source_type_counterexample() -> dict[str, object]:
+    endpoint = 18
+    q0 = 5
+    k = 2
+    exponent = 1
+    assert first_shifted_even(endpoint, q0) == k
+    assert first_unshifted_odd(endpoint, q0) == k
+
+    A = Fraction(1, 2 * k * (2 * k * q0 - 1) ** exponent)
+    B = Fraction(1, (2 * k + 1) * ((2 * k + 1) * q0) ** exponent)
+
+    actual = Fraction(1, 2) * (A - B)
+    declared_source_load = Fraction(1, 2) * (
+        A * int((2 * k) % q0 == 0)
+        - B * int((2 * k + 1) % q0 == 0)
+    )
+
+    assert A == Fraction(1, 76)
+    assert B == Fraction(1, 125)
+    assert actual == Fraction(49, 19000)
+    assert declared_source_load == Fraction(-1, 250)
+    assert actual != declared_source_load
+
+    return {
+        "endpoint": endpoint,
+        "q": q0,
+        "k": k,
+        "exponent": exponent,
+        "actual_boundary": str(actual),
+        "declared_divisor_source_load": str(declared_source_load),
+        "mismatch": True,
+    }
+
+
 def main() -> None:
     endpoints = [96, 192, 384, 768, 1536, 3072]
     rows = []
@@ -79,7 +112,6 @@ def main() -> None:
             }
         )
 
-    # Minimal first-omitted control.
     Y, q = 96, 25
     assert q in q_interval(Y)
     assert 2 * q - 1 <= Y
@@ -88,13 +120,18 @@ def main() -> None:
     assert 5 * q > Y
 
     result = {
-        "schema": "X-30402-zeroth-euler-atomic-mass-v1",
-        "classification": "EXACT_ZEROTH_EULER_COMMON_TAIL_SQRT_MASS_MUTATION",
+        "schema": "X-30402-terminal-source-refutations-v2",
+        "classification": "EXACT_PR304_TERMINAL_SOURCE_CLAIMS_REFUTED",
         "symbolic_atomic_contribution": "ell_Y/(10*sqrt(q)) at source node 5",
         "rows": rows,
-        "minimal_control": {"Y": Y, "q": q, "K_even": 2, "K_odd": 2},
+        "minimal_common_tail_control": {
+            "Y": Y,
+            "q": q,
+            "K_even": 2,
+            "K_odd": 2,
+        },
+        "source_type_counterexample": source_type_counterexample(),
         "does_not_prove": [
-            "the cofinal asymptotic without the written proof",
             "nonexistence of every coupled source repair",
             "Cycle Debt",
             "RH",
