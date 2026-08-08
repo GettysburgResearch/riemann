@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "constant_affine_split_defect": 44850,
+    "mobius_floor_affine_projection": 4999,
+    "sparse_first_entrance_hitting": 31125
+  },
+  "classification": "EXACT_SPARSE_FIRST_ENTRANCE_AND_RIESZ_FIREWALL_REPLAY",
+  "does_not_prove": [
+    "the Mobius-Riesz one-sign inequality",
+    "a five-adic source-specific contraction",
+    "producer positivity",
+    "RH"
+  ],
+  "schema": "riemann.x32301.shakeup-firewalls.v1",
+  "sha256_without_digest": "d040af35ce34e217f52ee15d72f7a30e0f52d210da9ba9c6c64d4d70ca3d85d8"
+}
