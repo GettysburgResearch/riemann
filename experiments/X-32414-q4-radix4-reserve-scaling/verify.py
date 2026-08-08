@@ -22,8 +22,7 @@ def scale(c, a):
 
 
 def log2_interval():
-    # log 2 = 2 atanh(1/3), with a positive geometric tail.
-    x = Fraction(1, 3)
+    x = Fraction(1, 3)  # log 2 = 2 atanh(1/3)
     s = Fraction(0)
     xp = x
     for r in range(M):
@@ -132,25 +131,36 @@ for k in range(1, 6):
             ROWS.append((n, j))
 ROWS = sorted(set(ROWS))
 
-rows = []
+proof_rows = []
+display_rows = []
 for n, j in ROWS:
     lo, hi = s4_interval(n, j)
     slo, shi = s4_interval(4 * n, 4 * j)
     margin_lo = 16 * lo - shi
     assert margin_lo > 0, (n, j, margin_lo)
-    # This integer is only a compact orientation field.  The proof uses
-    # margin_lo itself above, which is an exact Fraction.
+    proof_rows.append(
+        {
+            "n": n,
+            "j": j,
+            "margin_lo_num": str(margin_lo.numerator),
+            "margin_lo_den": str(margin_lo.denominator),
+        }
+    )
     milli = (1000 * margin_lo.numerator) // margin_lo.denominator
-    rows.append({"n": n, "j": j, "margin_floor_milli": int(milli)})
+    display_rows.append({"n": n, "j": j, "margin_floor_milli": int(milli)})
 
-core = {
+proof_core = {
     "classification": "PASS_EXACT_Q4_RADIX4_SECOND_MOMENT_SMALL_ROWS",
-    "atanh_terms": M,
-    "rows": rows,
+    "terms": M,
+    "rows": proof_rows,
 }
 digest = hashlib.sha256(
-    json.dumps(core, sort_keys=True, separators=(",", ":")).encode()
+    json.dumps(proof_core, sort_keys=True, separators=(",", ":")).encode()
 ).hexdigest()
-result = dict(core)
-result["sha256"] = digest
+result = {
+    "classification": proof_core["classification"],
+    "atanh_terms": M,
+    "rows": display_rows,
+    "sha256": digest,
+}
 print(json.dumps(result, indent=2, sort_keys=True))
