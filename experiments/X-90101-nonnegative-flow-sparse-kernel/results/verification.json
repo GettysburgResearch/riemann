@@ -1,0 +1,122 @@
+{
+  "adversarial_sparse_consumer": [
+    {
+      "X": 2000,
+      "min_exit": 20,
+      "min_sigma": -0.47121158669253504,
+      "n": 20,
+      "nA_n": 0.04593060742849986,
+      "sparse_trace": {
+        "20": 1.0,
+        "30": 0.3333333333333333,
+        "31": 0.3225806451612903,
+        "39": 0.2564102564102564
+      }
+    },
+    {
+      "X": 3000,
+      "min_exit": 25,
+      "min_sigma": -0.8138646554274033,
+      "n": 25,
+      "nA_n": -0.5633436528223965,
+      "sparse_trace": {
+        "25": 1.0,
+        "38": 0.32894736842105265,
+        "49": 0.25510204081632654
+      }
+    }
+  ],
+  "nonnegative_flow_cone": {
+    "exact_pairing_cases": 3,
+    "threshold_decompositions": 31
+  },
+  "positive_kernels": {
+    "cases": 293,
+    "max_direct_vs_abel_error": "2.173363e-70",
+    "positive_abel_terms": 2533,
+    "strictly_positive_cases": 203
+  },
+  "scale_dictionary": {
+    "cases": 12,
+    "max_kernel_scaling_error": "1.4489087e-70",
+    "max_primitive_scaling_error": "1.8111358e-70"
+  },
+  "tail_budget_reconnaissance": [
+    {
+      "X": 2000,
+      "bottom_pixel": {
+        "A_star": 2.481546998023987,
+        "free_min": -0.4712115866925386,
+        "status": "FINITE"
+      },
+      "depth": 100,
+      "n": 20,
+      "sparse_producer": {
+        "A_star": null,
+        "free_min": 0.04593060742846444,
+        "status": "FREE"
+      }
+    },
+    {
+      "X": 3000,
+      "bottom_pixel": {
+        "A_star": 2.1888065338134766,
+        "free_min": -0.8138646554274069,
+        "status": "FINITE"
+      },
+      "depth": 120,
+      "n": 25,
+      "sparse_producer": {
+        "A_star": 3.573681950569153,
+        "free_min": -0.5633436528224045,
+        "status": "FINITE"
+      }
+    },
+    {
+      "X": 3000,
+      "bottom_pixel": {
+        "A_star": 1.3895628452301025,
+        "free_min": -3.056338823193986,
+        "status": "FINITE"
+      },
+      "depth": 200,
+      "n": 15,
+      "sparse_producer": {
+        "A_star": 1.8431867361068726,
+        "free_min": -3.3930598344614245,
+        "status": "FINITE"
+      }
+    },
+    {
+      "X": 4000,
+      "bottom_pixel": {
+        "A_star": 1.4605129957199097,
+        "free_min": -2.6748863333869064,
+        "status": "FINITE"
+      },
+      "depth": 200,
+      "n": 20,
+      "sparse_producer": {
+        "A_star": 2.1222931146621704,
+        "free_min": -3.2247221612807544,
+        "status": "FINITE"
+      }
+    },
+    {
+      "X": 4000,
+      "bottom_pixel": {
+        "A_star": 1.326212227344513,
+        "free_min": -4.790708649936869,
+        "status": "FINITE"
+      },
+      "depth": 266,
+      "n": 15,
+      "sparse_producer": {
+        "A_star": 1.662551462650299,
+        "free_min": -5.700427966616204,
+        "status": "FINITE"
+      }
+    }
+  ],
+  "verifier_sha256": "237bb1fa992350d2a1ff71bae8f5e2cb7789583d901f4ebe8127dc072567f9f9"
+}
