@@ -1,407 +1,283 @@
-# L-34406 — The aligned odd-source relative Jordan curvature has no bare/second-current cross
+# L-34406 — Corrected aligned odd-source relative Jordan curvature
 
-Claim ID: `L-34406`
+Claim ID: `L-34406`  
+Status: **PROPOSED COMPLETE EXACT RELATIVE-CURVATURE THEOREM — CORRECTED AFTER R-90009; INDEPENDENT REVIEW REQUIRED**  
+Created: 2026-08-09  
+Corrected: 2026-08-09 by `gpt56-sol`  
+Dependencies: `L-34404`; PR #345 `L-34404` vector-curvature pattern; `R-90009`; `L-90010`  
+Scope: exact odd-prime relative state on aligned radix-four rows. The original bare-charge formula and uncentered zero claim were false; the cross-free curvature survives after the exact constant recentering below. No current upper bound or RH conclusion is claimed.
 
-Status: **PROPOSED COMPLETE EXACT RELATIVE-CURVATURE THEOREM — INDEPENDENT REVIEW REQUIRED**
-
-Created: 2026-08-09
-
-Dependencies: `L-34404`; PR #345 `L-34404` vector-curvature pattern; elementary dyadic carry scaling
-
-Scope: exact odd-prime/odd-Möbius relative state on aligned radix-four rows.  It eliminates the bare-times-second-current cross identically and produces a clean positive critical-scale curvature.  It does not upper-bound the odd current innovation and does not prove RH.
-
-## 1. Odd Möbius source
+## 1. Odd source and reserve
 
 Put
-
 \[
-\boxed{
-B_{\rm odd}(s)
-=\prod_{p\ {m odd}}(1-p^{-s})
-=\sum_{n\ge1}\frac{b_{\rm odd}(n)}{n^s}.
-}
+B_{\rm odd}(s)=\prod_{p\ {m odd}}(1-p^{-s})
+=\sum_{n\ge1}b_{\rm odd}(n)n^{-s},
+\]
+so
+\[
+b_{\rm odd}(n)=\mu(n)\mathbf1_{2\nmid n}.
+\]
+Its inverse has generalized-prime sequence
+\[
+\Lambda_{\rm odd}(n)=\Lambda(n)\mathbf1_{2\nmid n},
+\]
+and Selberg sequence
+\[
+C_{\rm odd}=\Lambda_{\rm odd}\log+
+\Lambda_{\rm odd}*\Lambda_{\rm odd}.
+\]
+For one row `e=(n,j)`, write
+\[
+O(e)=\mathcal L_e(\Lambda_{\rm odd}),
+\qquad
+S(e)=\mathcal L_e(C_{\rm odd}),
+\qquad
+R_{\rm odd}(e)=O(e)^2-S(e).
 \tag{L-34406.1}
 \]
-
-Thus
-
+`L-34404` proves on every fixed balanced cone
 \[
-b_{\rm odd}(n)
-=\begin{cases}
-\mu(n),&n\text{ odd},\\
-0,&n\text{ even}.
-\end{cases}
-\]
-
-Its inverse is the odd Euler product
-
-\[
-A_{\rm odd}(s)=B_{\rm odd}(s)^{-1},
-\]
-
-with generalized-prime sequence
-
-\[
-\Lambda_{\rm odd}(n)
-=\Lambda(n)\mathbf1_{n\ {m odd}}.
+\Delta_4R_{\rm odd}(e)
+:=R_{\rm odd}(4e)-16R_{\rm odd}(e)
+=\Theta_\eta(n\log n)>0
 \tag{L-34406.2}
 \]
+cofinally.
 
-The corresponding Selberg sequence is
-
-\[
-C_{\rm odd}
-=\Lambda_{\rm odd}\log
- +\Lambda_{\rm odd}*\Lambda_{\rm odd}.
-\tag{L-34406.3}
-\]
-
-The deterministic first/second carry coordinates are precisely the odd-prime quantities `O,S_odd` of `L-34404`, and
-
-\[
-R_{\rm odd}=O^2-S_{\rm odd}.
-\tag{L-34406.4}
-\]
-
-## 2. The divisor prefix is the pure dyadic tower
+## 2. Correct bare-source carry
 
 Since
-
 \[
-\frac1{\zeta(s)}
-=(1-2^{-s})B_{\rm odd}(s),
+\mathbf1*b_{\rm odd}=\sum_{r\ge0}\delta_{2^r},
 \]
-
-one has
-
+the general prefix/carry identity gives
 \[
-\boxed{
-\zeta(s)B_{\rm odd}(s)
-=\frac1{1-2^{-s}}
-=\sum_{r\ge0}2^{-rs}.
-}
-\tag{L-34406.5}
+Y_{\rm odd}(n,j)
+=C_2(n)-C_2(j)-C_2(n-j),
+\tag{L-34406.3}
 \]
-
-Hence
-
+where
 \[
-\boxed{
-\mathbf1*b_{\rm odd}
-=\sum_{r\ge0}\delta_{2^r}.
-}
-\tag{L-34406.6}
+C_2(0)=0,
+\qquad
+C_2(x)=1+\lfloor\log_2x\rfloor\quad(x\ge1).
 \]
-
-For one row `e=(n,j)` define the bare source charge
-
-\[
-Y_{\rm odd}(e)
-=\mathcal L_e(b_{\rm odd}).
-\]
-
-The general prefix/carry identity therefore gives the exact binary-carry count
-
+Thus for a nontrivial split `n=j+k`,
 \[
 \boxed{
 Y_{\rm odd}(n,j)
-=\sum_{r\ge1}\chi_{n,2^r}(j).
+=\lfloor\log_2n\rfloor
+-\lfloor\log_2j\rfloor
+-\lfloor\log_2k\rfloor-1.
+}
+\tag{L-34406.4}
+\]
+In particular
+\[
+\boxed{
+Y_{\rm odd}(4n,4j)=Y_{\rm odd}(n,j)-2.
+}
+\tag{L-34406.5}
+\]
+The previous version's formulas
+\[
+Y_{\rm odd}=\sum_r\chi_{n,2^r}
+\]
+and
+\[
+Y_{\rm odd}(4e)=Y_{\rm odd}(e)
+\]
+were false; `R-90009` records the exact counterexample and correction.
+
+At source level,
+\[
+(\varepsilon-\delta_4)*b_{\rm odd}
+=(\varepsilon+\delta_2)*\mu,
+\tag{L-34406.6}
+\]
+and the carry of `mu` on every nontrivial row is `-1`. Therefore
+\[
+\boxed{
+\mathcal L_{4e}((\varepsilon-\delta_4)*b_{\rm odd})=-2.
 }
 \tag{L-34406.7}
 \]
 
-(The `r=0`, `d=1` column has zero carry identically.)
+## 3. Odd Jordan deformation
 
-In particular `Y_odd>=0` and `Y_odd=O(log n)`.
-
-## 3. Exact radix-four invariance of the bare charge
-
-Let
-
+Define
 \[
-e^+=(4n,4j).
-\]
-
-For `r=1,2`, the parent and both children are divisible by `2^r`, so
-
-\[
-\chi_{4n,2^r}(4j)=0.
+J_{{\rm odd},\tau}(s)
+=\frac{A_{\rm odd}(s-\tau)}{A_{\rm odd}(s)},
+\qquad
+K_{{\rm odd},\tau}=b_{\rm odd}*J_{{\rm odd},\tau}.
 \tag{L-34406.8}
 \]
-
-For every `r>=3`, exact division by four gives
-
+Then
 \[
-\boxed{
-\chi_{4n,2^r}(4j)
-=\chi_{n,2^{r-2}}(j).
-}
+J_0=\varepsilon,
+\qquad J_0'=\Lambda_{\rm odd},
+\qquad J_0''=C_{\rm odd},
+\]
+while
+\[
+K_0=b_{\rm odd},
+\qquad K_0'=q_{\rm odd},
+\qquad K_0''=t_{\rm odd}.
+\]
+Write
+\[
+Q_{\rm odd}(e)=\mathcal L_e(q_{\rm odd}).
+\]
+
+For the scalar relative coordinate put
+\[
+F_e(\tau)=1+\mathcal L_e(J_{{\rm odd},\tau}),
+\]
+\[
+H_e^{(4)}(\tau)=\frac{F_{4e}(\tau)}{F_e(4\tau)}.
 \tag{L-34406.9}
 \]
-
-Therefore (L-34406.7) telescopes by a pure index shift:
-
+Then
 \[
-\begin{aligned}
-Y_{\rm odd}(4n,4j)
-&=\sum_{r\ge3}\chi_{n,2^{r-2}}(j)\\
-&=\sum_{\ell\ge1}\chi_{n,2^\ell}(j)\\
-&=Y_{\rm odd}(n,j).
-\end{aligned}
+H_e^{(4)}(0)=1
 \]
-
-Thus
-
+and the standard Jordan calculation gives
 \[
 \boxed{
-Y_{\rm odd}(e^+)-Y_{\rm odd}(e)=0.
+-\bigl(\log H_e^{(4)}\bigr)''(0)
+=\Delta_4R_{\rm odd}(e).
 }
 \tag{L-34406.10}
 \]
 
-This is exact for every nontrivial integer row; no asymptotic or balanced-cone assumption is needed.
+## 4. Correctly centered source-difference leg
 
-## 4. Odd Jordan deformation and source jets
-
-Define the positive odd-prime Jordan deformation
-
+The uncentered source difference has base value `-2`, not zero. Define instead
 \[
 \boxed{
-J_{{\rm odd},\tau}(s)
-=\frac{A_{\rm odd}(s-\tau)}{A_{\rm odd}(s)}.
+\widetilde G_e^{(4)}(\tau)
+=2+
+\mathcal L_{4e}
+\bigl((\varepsilon-\delta_4)*K_{{\rm odd},\tau}\bigr).
 }
 \tag{L-34406.11}
 \]
-
-The same local Euler calculation used throughout the Jordan branches gives coefficientwise positivity for `tau>=0`, and
-
+By (L-34406.7),
 \[
-J_{{\rm odd},0}=\varepsilon,
-\qquad
-J_{{\rm odd},0}'=\Lambda_{\rm odd},
-\qquad
-J_{{\rm odd},0}''=C_{\rm odd}.
+\boxed{
+\widetilde G_e^{(4)}(0)=0.
+}
 \tag{L-34406.12}
 \]
-
-Source-convolve
-
+The constant `2` has zero derivatives, hence
 \[
-K_{{\rm odd},\tau}
-=b_{\rm odd}*J_{{\rm odd},\tau}.
+\boxed{
+(\widetilde G_e^{(4)})'(0)
+=Q_{\rm odd}(4e)-Q_{\rm odd}(e)
+=:I_{\rm odd}^{(4)}(e).
+}
 \tag{L-34406.13}
 \]
+The second derivative is unchanged but does not enter the curvature because the zeroth source coordinate vanishes.
 
-Its first three jets are
-
+Put
 \[
-K_{{\rm odd},0}=b_{\rm odd},
-\quad
-K_{{\rm odd},0}'=q_{\rm odd},
-\quad
-K_{{\rm odd},0}''=t_{\rm odd}.
+\widetilde W_e^{(4)}(\tau)
+=\bigl(H_e^{(4)}(\tau),\widetilde G_e^{(4)}(\tau)\bigr).
+\]
+For
+\[
+\mathfrak C(W)=\|W'(0)\|^2-
+\operatorname{Re}\langle W(0),W''(0)\rangle,
+\]
+we obtain the exact corrected identity
+\[
+\boxed{
+\mathfrak C(\widetilde W_e^{(4)})
+=\Delta_4R_{\rm odd}(e)
++|I_{\rm odd}^{(4)}(e)|^2.
+}
 \tag{L-34406.14}
 \]
+Thus the desired absence of a bare-times-second-current cross is real, but it comes from an **explicit constant centering**, not from scale-four invariance of the odd bare carry.
 
-For one row write
+## 5. Scale two is the finer state
 
+`L-90010` proves the stronger scale-two decomposition
 \[
-Q_{\rm odd}(e)=\mathcal L_e(q_{\rm odd}),
-\qquad
-T_{\rm odd}(e)=\mathcal L_e(t_{\rm odd}).
-\]
-
-## 5. Relative vector path
-
-Define the scalar row partition
-
-\[
-F_e^{\rm odd}(\tau)
-=1+\mathcal L_e(J_{{\rm odd},\tau})
-\]
-
-and the relative scale-four coordinate
-
-\[
-\boxed{
-H_e^{\rm odd}(\tau)
-=\frac{F_{e^+}^{\rm odd}(\tau)}
-       {F_e^{\rm odd}(4\tau)}.
-}
+\Delta_2R_{\rm odd}(e)
+=R_{\rm odd}(2e)-4R_{\rm odd}(e)
+=\Theta_\eta(n\log n)>0
 \tag{L-34406.15}
 \]
-
-Exactly as in PR #345,
-
+cofinally, together with the centered cross-free state
 \[
-H_e^{\rm odd}(0)=1,
-\]
-
-\[
-(H_e^{\rm odd})'(0)
-=O(e^+)-4O(e),
-\]
-
-and
-
-\[
-\boxed{
--\bigl(\log H_e^{\rm odd}\bigr)''(0)
-=R_{\rm odd}(e^+)-16R_{\rm odd}(e)
-=\Delta_4R_{\rm odd}(e).
-}
+\mathfrak C(W_e^{(2)})
+=\Delta_2R_{\rm odd}(e)
++|Q_{\rm odd}(2e)-Q_{\rm odd}(e)|^2.
 \tag{L-34406.16}
 \]
-
-Now define the relative source-difference leg directly on the scaled row,
-
+Moreover
 \[
 \boxed{
-G_e^{\rm odd}(\tau)
-=\mathcal L_{e^+}
-\bigl((\varepsilon-\delta_4)*K_{{\rm odd},\tau}\bigr).
+\Delta_4R_{\rm odd}(e)
+=\Delta_2R_{\rm odd}(2e)+4\Delta_2R_{\rm odd}(e).
 }
 \tag{L-34406.17}
 \]
+Thus the scale-four state in this file is best viewed as the two-step aggregate of the finer doubling ledger.
 
-Aligned carry scaling gives
+## 6. Relation to the compact source
 
-\[
-G_e^{\rm odd}(0)
-=Y_{\rm odd}(e^+)-Y_{\rm odd}(e)=0
-\tag{L-34406.18}
-\]
-
-by (L-34406.10), while
-
-\[
-\boxed{
-(G_e^{\rm odd})'(0)
-=Q_{\rm odd}(e^+)-Q_{\rm odd}(e)
-=:I_{\rm odd}(e).
-}
-\tag{L-34406.19}
-\]
-
-The second derivative is the corresponding relative second current, but its value will not enter the curvature because the zeroth source coordinate vanishes exactly.
-
-## 6. Cross-free relative curvature
-
-Put
-
-\[
-\boxed{
-W_e^{\rm odd}(\tau)
-=\bigl(H_e^{\rm odd}(\tau),G_e^{\rm odd}(\tau)\bigr).
-}
-\tag{L-34406.20}
-\]
-
-For a Hilbert-valued path use
-
-\[
-\mathfrak C(W)
-=\|W'(0)\|^2
- -\operatorname{Re}\langle W(0),W''(0)\rangle.
-\]
-
-The first coordinate contributes `Delta_4 R_odd` by (L-34406.16).  The second coordinate has zeroth value zero and first derivative `I_odd`.  Therefore
-
-\[
-\boxed{
-\mathfrak C(W_e^{\rm odd})
-=\Delta_4R_{\rm odd}(e)+|I_{\rm odd}(e)|^2.
-}
-\tag{L-34406.21}
-\]
-
-There is **no** bare-times-second-current term.
-
-This should be compared with the full Q=4 relative curvature
-
-\[
-\Delta_4R+I_\circ^2-Y_\circ T_\circ,
-\]
-
-where the final cross is only lower order but not zero.  The odd-source state removes it algebraically.
-
-## 7. Critical scale
-
-`L-34404` proves on every fixed balanced cone, cofinally and uniformly,
-
-\[
-\boxed{
-\Delta_4R_{\rm odd}(e)
-=\Theta_\eta(n\log n)
-}
-\tag{L-34406.22}
-\]
-
-and in particular
-
-\[
-\Delta_4R_{\rm odd}(e)
-\ge12h_\eta n\log n.
-\]
-
-Hence the relative odd-source curvature is the clean positive state
-
-\[
-\boxed{
-\mathfrak C(W_e^{\rm odd})
-=\Theta_\eta(n\log n)+|I_{\rm odd}(e)|^2
->0
-}
-\tag{L-34406.23}
-\]
-
-outside one finite base.
-
-It is source-complete at the odd-prime level and contains the RH-sensitive odd current innovation with coefficient one.
-
-## 8. Relation to the compact Q=4 source
-
-The compact source itself factors over the same odd Euler core:
-
+The compact source still factors exactly as
 \[
 B_\circ(s)=T(2^{-s})B_{\rm odd}(s),
 \qquad
-T(z)=(1-z)(1-4z^2).
-\tag{L-34406.24}
+T(z)=(1-z)(1-4z^2),
+\tag{L-34406.18}
 \]
-
-Thus its full logarithmic current splits exactly as
-
+so
 \[
-\boxed{
-q_\circ
-=T(z)q_{\rm odd}+\dot T(z)b_{\rm odd}.
-}
-\tag{L-34406.25}
+q_\circ=Tq_{\rm odd}+T'b_{\rm odd}.
+\tag{L-34406.19}
 \]
+`L-90010` resolves this on a fully aligned dyadic chain into two scale-two current innovations plus an explicit logarithmic bare gauge. This is the preferred recurrence coordinate after the present correction.
 
-The first term is the odd-source current passed through one fixed finite dyadic filter.  The second is an explicit finite bare-source gauge.  The same pattern persists through the second derivative.
+## 7. Boundary
 
-Therefore (L-34406.21) is a natural scale-matched state for the final compact-current recurrence: the difficult arithmetic current lives in `I_odd`, while all dyadic differentiation is a finite explicit gauge.
+Corrected and retained:
 
-The theorem does **not** infer an upper bound for `I_odd` from positivity of the curvature; that would again reverse the logical direction.
+```text
+odd-prime reserve and its scale-four critical moat
+the positive odd Jordan deformation
+cross-free scale-four vector curvature after +2 centering
+compact source factorization over the odd carrier
+```
 
-## 9. Proof boundary
+Removed as false:
 
-Closed exactly here:
+```text
+Y_odd = sum of dyadic carry columns
+Y_odd >= 0
+Y_odd(4e)=Y_odd(e)
+uncentered source-difference leg has zero base value
+```
 
-1. odd Möbius source and positive odd generalized primes;
-2. pure-dyadic divisor prefix;
-3. exact radix-four invariance of the bare charge;
-4. positive odd Jordan deformation;
-5. relative scalar log-curvature `Delta_4 R_odd`;
-6. exact vanishing of the relative source zeroth coordinate;
-7. cross-free vector curvature `Delta_4R_odd+I_odd^2`;
-8. factorization of the compact source over the same odd carrier.
+Strengthened in `L-90010`:
+
+```text
+fresh critical moat at every doubling
+cross-free centered scale-two vector state
+exact compact-current two-tap routing through scale-two innovations
+```
 
 Still open:
 
-1. an upper/dissipative law for the cross-free relative curvature;
-2. control of `I_odd` or the compact current by a coefficient-one delayed recurrence;
-3. global subexponential energy;
-4. RH.
+```text
+upper/dissipative law for the centered relative curvature
+lossless coefficient-one two-state recurrence
+subpower current energy
+RH
+```
