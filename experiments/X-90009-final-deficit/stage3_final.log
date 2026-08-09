@@ -1,0 +1,58 @@
+=== (A) exact mu shells, chain 2^20 -> 2^7 ===
+  X_j=2^20= 1048576  T^s(2) =   -2.0262   [t=3s]
+  X_j=2^19=  524288  T^s(2) =   -1.8807   [t=5s]
+  X_j=2^18=  262144  T^s(2) =   -1.7800   [t=5s]
+  X_j=2^17=  131072  T^s(2) =   -1.6172   [t=6s]
+  X_j=2^16=   65536  T^s(2) =   -1.5370   [t=6s]
+  X_j=2^15=   32768  T^s(2) =   -1.3601   [t=6s]
+  X_j=2^14=   16384  T^s(2) =   -1.2564   [t=6s]
+  X_j=2^13=    8192  T^s(2) =   -1.1331   [t=6s]
+  X_j=2^12=    4096  T^s(2) =   -0.9986   [t=6s]
+  X_j=2^11=    2048  T^s(2) =   -0.9166   [t=6s]
+  X_j=2^10=    1024  T^s(2) =   -0.7461   [t=6s]
+  X_j=2^9=     512  T^s(2) =   -0.6897   [t=6s]
+  X_j=2^8=     256  T^s(2) =   -0.5583   [t=6s]
+(A) signed sum = -16.499979   A(2^20) - A(2^7) = -16.499979   gap = -1.67e-12
+(A) A(2^20) = -18.8752  A(2^7) = -2.3752
+(A) sum of positive parts = +0.0000   sum|s_j| = 16.5000
+(A) signs: -------------   #neg = 13/13
+(A) consecutive-shell correlation (mu, across j): +0.996
+=== (B) class-H shell moments, chain 2^17 -> 2^8 ===
+/tmp/claude-0/-home-user-riemann/d379fac9-baa2-5637-b561-9823a1c28acc/scratchpad/stage3_final.py:131: RuntimeWarning: divide by zero encountered in log
+  lg = np.log(np.arange(0, X0+1, dtype=float)); lg[0] = 0
+  [B] scale 2^17: kernel+fibers done  (t=9s)
+  [B] scale 2^16: kernel+fibers done  (t=9s)
+  [B] scale 2^15: kernel+fibers done  (t=9s)
+  [B] scale 2^14: kernel+fibers done  (t=9s)
+  [B] scale 2^13: kernel+fibers done  (t=9s)
+  [B] scale 2^12: kernel+fibers done  (t=9s)
+  [B] scale 2^11: kernel+fibers done  (t=9s)
+  [B] scale 2^10: kernel+fibers done  (t=9s)
+  [B] scale 2^9: kernel+fibers done  (t=9s)
+  [B] scale 2^8: kernel+fibers done  (t=9s)
+(B) kernel telescope: max|sum_j c^(j) - (C_top - C_bot)| = 2.27e-13
+(B) per-shell class MEAN E[shell_j] = -287.15 -201.19 -140.53 -97.76 -67.65 -46.48 -31.64 -21.27 -14.06 -9.09
+(B) per-shell class SD/sqrt(X_j):    0.559 0.550 0.538 0.523 0.504 0.480 0.450 0.414 0.372 0.322
+(B) consecutive shell corr over H (fluctuation part): +1.000 +1.000 +1.000 +1.000 +1.000 +1.000 +0.999 +0.999 +0.999
+(B) signed total over H: mean = -916.83, SD = 630.22 = 1.7408 sqrt(X0), sqrt(E total^2) = 1112.55
+(B) sum_j SD(shell_j) = 630.68   SD(top shell) = 202.26 = 0.5587 sqrt(X0)
+(B) full-anticorrelation floor (|SD_top - sum_others|) = 226.16
+(B) mu shells at 2^17..2^8: -0.831 -0.878 -0.829 -0.847 -0.844 -0.833 -0.837 -0.783 -0.811 -0.751
+(B) 30 random f: sample mean = -944.75 (exact -916.83), sample SD = 734.88 (exact 630.22); mean|total| = 944.75; max|total| = 2712.38
+=== (C) pretender distances of random f ===
+(C) X0=2^17, loglog X0 = 2.467; pretender family: real chi mod q<=12, |t|<=60
+(C) lambda: M = 1.357 at (q=7, t=51.10)
+(C) 25 random f: min M = 1.186, median = 1.322, max = 1.383
+(C) WITNESS (seed 90009, sample #2): signed telescope total = -2712.38 = -7.492 sqrt(X0);  M_f = 1.398 (vs lambda M = 1.357);  min over 30 B-samples M = 1.059
+(C) B-samples with |total| >= 2 sqrt(X0): 14/30, all with M >= 1.241
+(C) => every sampled f has M >= 1.186 (vs cap 2loglogX+O(1) ~ 4.93): far from EVERY pretender, yet (B) shells are ~sqrt(X)-scale.
+=== (D) deficit arithmetic ===
+(D) floors vs demand   [shell scale: divide by sqrt(X); entries are eta = supply/sqrt X]
+    Hall-sharp class-H floor: (log X)^(-2kappa), 2kappa = 0.65735 (optimal, GS Decay Ex.1)
+          X    LL  eta_Hall=(logX)^-.657  eta_GHS2nd=LL/L  eta_cplx@Mcap  demand@eps=.1 deficit=HallvsX^.1
+    1e6     2.63              1.780e-01        1.901e-01      3.275e-02      3.981e-03          4.471e+01
+    1e12    3.32              1.128e-01        1.201e-01      1.000e-02      1.585e-05          7.120e+03
+    1e20    3.83              8.066e-02        8.316e-02      4.083e-03      1.000e-08          8.066e+06
+    1e40    4.52              5.114e-02        4.911e-02      1.184e-03      1.000e-16          5.114e+14
+    (deficit column = X^{0.4-o(1)}: a full power at every scale; at eps->0 it is X^{1/2-o(1)})
+[total t=13s]
