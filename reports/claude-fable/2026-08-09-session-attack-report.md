@@ -40,3 +40,16 @@ Three sequential strikes at the remaining open core, kill-criteria set in advanc
 
 Everything now rides on **one scalar per X**: \([T^s(2)]_+\) — the one-sided ramp deficit — with the provable-positivity cone proven unable to reach it, the dBN lane closed, the spectral lane closed, averaging circular, and the elementary-ladder lane PNT-calibrated. The scalar's unconditional status equals the zero-free-strip width (T-90001 §5), by theorem. The remaining problem is the classical wall, now stated in its sharpest known elementary form, with every tried lane fenced by a theorem rather than a memory.
 
+---
+
+# Final-pass addendum (third dispatch, same day)
+
+Two thrusts at the Q4 gate and GFEP-full, each with adversarial review. **No unconditional proposal was reached; the two hinges converged.**
+
+| Thrust | Outcome | Files |
+|---|---|---|
+| **Q4 gate** | Decompiled: \(I_2=\psi_{\rm odd}(2n)-\psi_{\rm odd}(2j)-\psi_{\rm odd}(2k)\) exactly — a three-point Chebyshev fluctuation, not a Möbius window. Eventual-form gate ⇒ RH **proved** (multiplier consumer, unconditional dlVP anchor); but the gate is **strictly stronger than RH** (Montgomery-class), its "cofinally" wording is vacuous, margins decay 0.62→0.055 (small-n artifact), unconditional route closed by calibration. GPT-wave repairs verified; reserve constant corrected (6H). | `T-90004`, `X-90006`, comment on PR #350 |
+| **GFEP-full** | **Chain map proved: GFEP-full ⇒ RH via exact algebra at every step** — a second one-statement RH-sufficient hinge. **Band 2 certified: GFEP now proved for all n > X/20.** Dominance conjecture refuted with proof (deep sources ride the same transport; fence promoted to magnitude-hardness: even RH-strength majorants insufficient); conditional-reduction salvage dead on review (it would have proven "half-plane ⇒ RH"). Razor's-edge measurement: |neg|/pos margin climbs 0.156→0.948→~1.00 as n descends. PNT-tie identity with exact boundary term. | `T-90005`, `X-90004` (+certificates) |
+
+**Converged end-state:** both remaining hinges — \([T^s(2)]_+\) and GFEP at \(n=o(X)\) — are the same Möbius-tail one-sidedness at √-scale. The campaign leaves: two independent one-statement gates with fully proved exact consumers to RH, certified deterministic frontiers, and impossibility theorems covering every majorant-, transport-, spectral-, flow-, and cone-shaped attack attempted by either model family. RH remains unproved.
+
