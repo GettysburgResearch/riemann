@@ -39,3 +39,10 @@ CBVR (PR #316) refuted as designed (R-90001, independently confirmed). SHARP cle
 ## 6. Boundary
 
 Every item keeps its authoring agent's own status label; nothing here proves WSTS or RH. The right next targets, in order: (1) review T-90001 (the equivalence, now small); (2) promote Lemma S from verified-to-\(5\cdot10^5\) to a theorem (its cell equation is explicit — likely provable by the same per-cell calculus as the Moat); (3) chase T-90001's three flags; (4) treat §3 as a wall map for all future "producer" proposals.
+
+## 7. Post-review riders (Strike B, same session)
+
+- **§1 rider:** Lemma S is now Theorem S (`T-90002`), with the z-collapse Corollary C proved: \(B_X=[T^s(2)]_++O^*(5.7\cdot10^4X^{-3/2}\log X)\) for \(X\ge10^5\). For general ratios \(c\in[0.44,0.47]\) the profile has THREE crossings (see `L-90003` §5) — single-crossing is a realized-range property.
+- **§4 rider (ladder decrement law, PROVED_SKETCH):** \(V_K/\sqrt X-4=4m(K)\log X-4(l(K)+1)-16m(K)+\varepsilon\), \(|\varepsilon|\le0.062\) measured; X-uniform closure is PNT-equivalent and depth \(K=X^{o(1)}\) closure is zero-free-region strength — the elementary-ladder lane is calibrated, matching T-90001 §5.
+- **§5 rider:** GFEP is now PROVED for all \(n>X/10\) (`T-90003`), the negative-band positivity carried entirely by ancestry transport; the uniform bottom sign pattern is RH-hard (Landau fence, `T-90003` §3); GFEP's open core is exactly \(n=o(X)\).
+

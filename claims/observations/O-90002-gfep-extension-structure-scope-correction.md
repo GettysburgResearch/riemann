@@ -24,3 +24,8 @@ Scans: **full** (every \(n\), every band \(p\)) at \(X\le10^5\) (≈2.5×10^9 pr
 ## 3. Boundary
 
 Discovery evidence only; nothing here proves GFEP below the top fifth (open, RH-bearing per the branch), `WSTS`, or `RH`. The \(X^{-1/2}\)-scale minima mean float64 sign conclusions are reliable only because margins are ≥1e-3 at \(10^6\); a future scan at \(10^8\) should switch the tightest bands to the exact-fraction path. Files: scratchpad `gfep.py`, `scan.py`, `validate.py`, `branch_verify.py`.
+
+## 4. Post-review update (same session)
+
+Finding 3's numerically-observed structure is now largely proved in `T-90003`: \(R_X(m)\ge0\) for \(m\ge\lceil X/5\rceil\) (L-28002 re-proved with a repair), \(R_X(m)\le0\) on windows inside \([1/41,1/5]\) (certified), GFEP proved for all \(n>X/10\), and the uniform bottom sign pattern shown RH-hard.
+
