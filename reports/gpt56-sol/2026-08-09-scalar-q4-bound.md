@@ -1,44 +1,19 @@
-# Exact Q4 aligned innovation bound derivation
+# WITHDRAWN — false Q4 aligned innovation bound
 
-For future stacking on PR #345, let `L=log 4` and use its compact current `q_circ` and actual innovation `i_circ=q_circ-L delta_4*b_4`.
+The first version of this note confused two different transforms:
 
-On an aligned row `(4n,4j)`, `k=n-j`, the own compact current is
+```text
+carry(Lambda) = log binomial;
+additive prefix defect of psi != log binomial.
+```
 
-\[
-Q_\circ
-=\log\binom{4n}{4j}-4\log\binom nj-4L.
-\]
-
-The delayed gauge is exactly `L Y_4(n,j)`, hence
+The correct aligned innovation contains
 
 \[
-I_\circ
-=\log\frac{\binom{4n}{4j}}{\binom nj^4}
- -4L-LY_4(n,j).
+\psi(4n)-\psi(4j)-\psi(4k)
+-4[\psi(n)-\psi(j)-\psi(k)],
 \]
 
-The binomial ratio lies between `1` and `(n+1)^4`, while
+plus the explicit dyadic terms. It is not proved `O(log n)`.
 
-\[
-|Y_4(n,j)|\le3\lfloor\log_4n\rfloor+1.
-\]
-
-Thus, for `n>=2`,
-
-\[
-|I_\circ(n,j)|\le21\log n.
-\]
-
-PR #342 gives, for `n>=12005^2` on the quarter-balanced cone,
-
-\[
-\Delta_4R\ge(\log2)n\log n.
-\]
-
-Using `log2>1/2`, `log n<=sqrt(n)`, and `sqrt(n)>=12005>882`,
-
-\[
-I_\circ^2\le441\log^2n<\Delta_4R.
-\]
-
-This closes the scalar aligned innovation inequality cofinally. It does not close the independent-frequency physical block.
+See corrected `L-32305`. PR #345's innovation-square domination remains open and RH-bearing.
