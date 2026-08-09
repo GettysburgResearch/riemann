@@ -38,7 +38,7 @@ The default finite endpoint is `10^6`; use `--max-x` to change it.
    dyadic shell is negative and the ratio `shell/log X` moves toward
    
    ```text
-   kappa = -0.15954671491971181285...
+   kappa = -0.1595467149197118020982729938...
    ```
    
    The centered remainder remains bounded on the retained rows.
