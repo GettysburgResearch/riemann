@@ -23,3 +23,20 @@ RH remains unproved and WSTS remains exactly as hard as RH — now as a *theorem
 2. Promote Lemma S (z-collapse) to a theorem via the same per-cell calculus as the Moat.
 3. Chase T-90001's three flags (C_E constants; real-X interpolation; Theorem B citations).
 4. Gate all future "producer" PRs on the O-90004 §3 wall map.
+
+---
+
+# Addendum: the strike session (same day, second dispatch)
+
+Three sequential strikes at the remaining open core, kill-criteria set in advance, adversarial review of all new work (prior work left to the external review track per project owner's instruction).
+
+| Strike | Outcome | Files |
+|---|---|---|
+| **A — dBN flow** | Lane **closed by theorems**: no one-sided prime-side certifier exists at t>0 (divergence + truncation sign-flip + classical-wall translation); the cost of \(\Lambda\to0\) via the existing architecture is superexponential; the dynamics schema stalls at death time 0.34 even with perfect statistics. Survivor: the **Tilted Moat Lemma** (the moat deepens monotonically along the flow; the tilt is a low-pass filter). | `R-90002`, `L-90002`, `O-90005` |
+| **B — monotone/operator positivity** | **T-90002: Lemma S promoted** — z-collapse proved; WSTS is now ONE scalar per X: \(B_X=[T^s(2)]_++O^*(X^{-3/2}\log X)\). **T-90003: GFEP proved for all n>X/10** (certified gates; positivity carried by ancestry over a wholly negative diagonal — the Perron–Frobenius pattern at theorem level); Landau fence: the uniform bottom sign pattern is RH-hard; GFEP's open core is exactly n=o(X). Plus: c-monotone moat, PSD c-Gram that provably cannot manufacture zero-side positivity, PNT-calibrated ladder decrement law, cone-blindness witness, three-crossing warning for general ratios. | `T-90002` (+addendum), `T-90003`, `L-90003`, riders in `O-90002`/`O-90004`, `X-90004` |
+| **C — carry-resolvent spectral probe** | **Structure theorem**: the inverse carry matrix is exactly Möbius × elementary (no truncation error; subsumes L-32701 with closed forms for all rows); spectrum provably arithmetic-free; **no PSD/spectral realization exists** — first failure at exactly T=10 with an exact rational witness, cause ζ-blind (the pure sawtooth reproduces it to 0.6%). Carry positivity is a cone statement, not a spectral one. | `O-90006`, `X-90005` |
+
+## State of the open core after the strikes
+
+Everything now rides on **one scalar per X**: \([T^s(2)]_+\) — the one-sided ramp deficit — with the provable-positivity cone proven unable to reach it, the dBN lane closed, the spectral lane closed, averaging circular, and the elementary-ladder lane PNT-calibrated. The scalar's unconditional status equals the zero-free-strip width (T-90001 §5), by theorem. The remaining problem is the classical wall, now stated in its sharpest known elementary form, with every tried lane fenced by a theorem rather than a memory.
+
