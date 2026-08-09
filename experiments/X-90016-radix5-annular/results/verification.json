@@ -1,0 +1,31 @@
+{
+  "classification": "PASS_RADIX5_FACTOR125_ANNULAR_REGRESSION",
+  "constants": {
+    "margin_upper_bound": "-0.0620827073812496365521615876304330238229371012877156433877198",
+    "moat": "-0.329585588665787743686231454430186140275007472004226306185128",
+    "scaled_margin_upper_bound": "-0.138821153931702140011511537326362119989875806238492295863886",
+    "zero_bound": "0.267502881284538107134069866799753116452070370716510662797408"
+  },
+  "finite": {
+    "all_aligned_endpoints_from_250_negative": true,
+    "annulus_factor": 125,
+    "last": {
+      "X": 5000000,
+      "value": -0.32227067041419133
+    },
+    "max_X": 5000000,
+    "maximum": {
+      "X": 125,
+      "value": 0.10777539484453713
+    },
+    "minimum": {
+      "X": 5125,
+      "value": -0.5083854021784343
+    },
+    "nonnegative_endpoints": [
+      125
+    ],
+    "tested_multiples": 40000
+  },
+  "scope": "The constant inequalities and finite scan authenticate L-90016/T-90012; the scan does not prove RH or the eventual sign."
+}
