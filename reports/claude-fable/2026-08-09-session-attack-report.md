@@ -53,3 +53,17 @@ Two thrusts at the Q4 gate and GFEP-full, each with adversarial review. **No unc
 
 **Converged end-state:** both remaining hinges — \([T^s(2)]_+\) and GFEP at \(n=o(X)\) — are the same Möbius-tail one-sidedness at √-scale. The campaign leaves: two independent one-statement gates with fully proved exact consumers to RH, certified deterministic frontiers, and impossibility theorems covering every majorant-, transport-, spectral-, flow-, and cone-shaped attack attempted by either model family. RH remains unproved.
 
+---
+
+# The Exact Flow Gambit (fourth dispatch — the final final pass)
+
+The last unfenced proof-shape (exactness/structure rather than size) was played to completion: GFEP as flow feasibility, min-cut characterization, counting interpretation, embedded skeptic, full adversarial review (all load-bearing artifacts independently re-implemented and reproduced).
+
+**Verdict: WALL_RENAMED — unanimous across three coordinate systems, with proved bridges between them.**
+
+- `T-90006`: the certificate cone is simplicial with extreme rays exactly the exit pixels (Martin boundary); LP duals are literally \(H_{p^*}\) (to 5.6e-17); **no threshold/dyadic min-cut criterion exists** (Theorem B). The wall lives in the cut *values*: every deep cut pairs \(C_N\) at unbounded \(N\) against harmonic measure.
+- `T-90007`: the τ dictionary is **sign-universal algebra with zero arithmetic content**; positive-kernel form \(\Sigma(p)=\sum_k\mu(k)c_p(k)\), \(c_p\ge0\) everywhere tested (conjectured); and the **constraint-relative refutation**: an adversarial sign source satisfying every proved campaign constraint AND the full RH-hard bottom pattern drives \(\min_p\Sigma\) to −0.47 — a stored finite certificate making the proves-too-much detector permanent: any structural closure of GFEP-full is pre-refuted.
+- `L-90004`: counting coordinates (U = divisor-lattice primitive of w; GFEP = Möbius-signed transport-weighted chain count), the exact doubling alignment (network doubling mirrors \(\mu(2j)=-\mu(j)\)), within-row convexity closing the injective method exactly at the known frontier, and **injection impossibility proved** (two pigeonhole mechanisms, exact witnesses, margins tending to 1).
+
+**Campaign end-state:** the open core of RH, in this repository's coordinates, is per-exit positivity of a Möbius-signed transport count whose certificate cone is exactly the exit pixels, whose aggregate margin is huge, whose difficulty is pure disaggregation (bottom-of-window exits \(p\in[n,1.3n]\)), and for which every size-based, structure-based, spectral, flow, tilt, and averaging method available to either model family is excluded by theorems with certificates. RH remains unproved — and the map of why is complete.
+
