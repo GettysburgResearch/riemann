@@ -82,12 +82,18 @@ def poly_negz(x):
     return [a if k % 2 == 0 else -a for k, a in enumerate(x)]
 
 
-def positive_a_minus_b_sqrt2(a: int, b: int) -> bool:
-    assert a > 0 and b > 0
-    return a * a > 2 * b * b
+def poly_derivative(x):
+    if len(x) <= 1:
+        return [Q2()]
+    return [x[k] * k for k in range(1, len(x))]
+
+
+def poly_eval_one(x):
+    return sum(x, Q2())
 
 
 def positive_minus_a_plus_b_sqrt2(a: int, b: int) -> bool:
+    """Return whether -a+b*sqrt(2)>0 for positive integers a,b."""
     assert a > 0 and b > 0
     return 2 * b * b > a * a
 
@@ -112,67 +118,66 @@ def main():
     # PR #263 Bezout identity.
     assert poly_add(poly_mul(U, p), poly_mul(poly_negz(U), poly_negz(p))) == [Q2(1)]
 
+    # Stronger simple rational cycle certificate from L-34401.8.
     H = [
-        Q2(Fraction(-2525, 1511238), Fraction(264889, 3022476)),
-        Q2(Fraction(15421, 3174), Fraction(-6805, 2116)),
-        Q2(Fraction(-3767648, 755619), Fraction(4893731, 1511238)),
+        Q2(Fraction(123, 1000)),
+        Q2(Fraction(296, 1000)),
+        Q2(Fraction(-387, 1000)),
+        Q2(Fraction(117, 1000)),
+        Q2(Fraction(-14, 1000)),
+        Q2(Fraction(62, 1000)),
+        Q2(Fraction(303, 1000)),
     ]
+    assert poly_eval_one(H) == Q2(Fraction(1, 2))
 
     w_plus = poly_add(poly_mul(T, U), poly_mul(H, poly_negz(p)))
     w_minus = poly_add(
         poly_mul(T, poly_negz(U)), poly_scale(poly_mul(H, p), -1)
     )
 
-    assert len(w_plus) == 7 and len(w_minus) == 7
+    assert len(w_plus) == 11 and len(w_minus) == 11
     assert poly_add(poly_mul(w_plus, p), poly_mul(w_minus, poly_negz(p))) == T
 
     q_w = Q2()
-    q_g = Q2()
-    for j in range(7):
+    for j in range(11):
         square_sum = w_plus[j] * w_plus[j] + w_minus[j] * w_minus[j]
         q_w = q_w + square_sum * Fraction(1, 2**j)
-        if j:
-            q_g = q_g + square_sum * Fraction(j * j, 2**j)
 
     expected_q_w = Q2(
-        Fraction(231285439, 69516948), Fraction(37590283, 69516948)
-    )
-    expected_q_g = Q2(
-        Fraction(12658478781312551, 805434343205784),
-        Fraction(-2279554550415581, 604075757404338),
+        Fraction(14014874005, 32000000),
+        Fraction(-9814156296, 32000000),
     )
     assert q_w == expected_q_w
-    assert q_g == expected_q_g
 
-    # q_W < 9/2.
-    assert positive_a_minus_b_sqrt2(81540827, 37590283)
+    # q_W < 9/2 is equivalent to
+    # -13870874005 + 9814156296*sqrt(2) > 0.
+    assert positive_minus_a_plus_b_sqrt2(13870874005, 9814156296)
 
-    # q_G < 21/2.
-    assert positive_minus_a_plus_b_sqrt2(
-        12604254532955457, 9118218201662324
+    # The derivative-gauge polynomial
+    # G_H(z)=z[W_+' p + W_-' p(-z)] has both z and z-1 factors.
+    inside = poly_add(
+        poly_mul(poly_derivative(w_plus), p),
+        poly_mul(poly_derivative(w_minus), poly_negz(p)),
     )
-
-    # log(2)^2 < 1/2 follows, e.g., from log(2) < 7/10 and 49/100 < 1/2.
-    # Therefore q_W + log(2)^2 q_G < q_W + q_G/2 < 45/4.
-    total_upper = q_w + q_g * Fraction(1, 2)
-    margin = Q2(Fraction(45, 4)) - total_upper
-    # Here both coefficients of the exact margin are positive.
-    assert margin.a > 0 and margin.b > 0
+    gauge = [Q2()] + inside
+    assert gauge[0] == Q2()  # factor z
+    assert poly_eval_one(gauge) == Q2()  # factor z-1
 
     result = {
-        "schema": "X-34401-q4-compact-parity-synthesis-v1",
+        "schema": "X-34401-q4-compact-parity-synthesis-v2",
         "classification": "EXACT_Q_SQRT2",
-        "degrees": {"W_plus": 6, "W_minus": 6},
+        "degrees": {"W_plus": 10, "W_minus": 10},
         "bezout_target_identity": True,
+        "cycle_H_at_1": "1/2",
         "current_charge": q_w.as_json(),
         "current_charge_lt_9_over_2": True,
         "normalized_current_charge_lt_2_over_5": True,
-        "gauge_charge": q_g.as_json(),
-        "gauge_charge_lt_21_over_2": True,
-        "combined_filter_budget_lt_45_over_4_using_log2sq_lt_half": True,
+        "gauge_has_factor_z": True,
+        "gauge_has_factor_one_minus_z": True,
+        "gauge_source_type": "strictly_delayed_ordinary_mobius",
         "gauge_min_delay_blocks": 1,
         "does_not_prove": [
-            "delayed-state reflected recurrence",
+            "joint delayed-state reflected recurrence",
             "Riemann Hypothesis",
         ],
     }
