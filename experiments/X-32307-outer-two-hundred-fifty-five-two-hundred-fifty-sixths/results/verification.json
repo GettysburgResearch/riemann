@@ -2,8 +2,9 @@
   "adverse_transition_gates_positive": true,
   "adverse_transition_min_margin": {
     "K": 141,
-    "lower_margin_scaled_1e16": "7359711752558316",
-    "orientation_decimal": "0.0919963969069789"
+    "lower_margin_scaled": "919963969069789",
+    "orientation_decimal": "0.0919963969069789",
+    "scale": "10000000000000000"
   },
   "classification": "DIRECTED_OUTER_TWO_HUNDRED_FIFTY_FIVE_TWO_HUNDRED_FIFTY_SIXTHS_SHARP_VERIFIED",
   "continuum_tail_lower_gt_3_over_40": true,
@@ -18,11 +19,12 @@
   "same_cell_gates_positive": true,
   "same_cell_min_margin": {
     "K": 139,
-    "lower_margin_scaled_1e16": "1092549598760356",
-    "orientation_decimal": "0.0136568699845045"
+    "lower_margin_scaled": "136568699845044",
+    "orientation_decimal": "0.0136568699845045",
+    "scale": "10000000000000000"
   },
   "schema": "X-32307-outer-two-hundred-fifty-five-two-hundred-fifty-sixths-v1",
-  "sha256_without_digest": "ac03ded24611dfcb9cca0af6a647cd261b2434406f49b896d16eb27aabeba485",
+  "sha256_without_digest": "21c66a0647a1f4fdf0d53f1ad04f52b95ba9f47b56f7f91efd133753f577db10",
   "tail_at_T262144_gt_1_over_16": true,
   "tail_error_upper_lt_3162": true
 }
