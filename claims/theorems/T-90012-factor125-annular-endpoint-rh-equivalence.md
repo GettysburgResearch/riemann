@@ -53,7 +53,7 @@ The unscaled radix-five moat and zero bounds of `L-90016` are
  C_5
  ={1+\zeta(1/2)\over2}
  (1-5^{-1/2})(\log5)^2
- =-0.3295855705855169\ldots,
+ =-0.32958558866578774368\ldots,
 \]
 
 and
@@ -61,14 +61,14 @@ and
 \[
  Z_5
  =4(1+5^{-1/2})(\log\xi)''(1/2)
- =0.2674744115484307\ldots .
+ =0.26750288128453810713\ldots .
 \]
 
 Thus
 
 \[
  C_5+Z_5
- =-0.06211115903708618\ldots .
+ =-0.06208270738124963655\ldots .
 \]
 
 After multiplication by `sqrt(5)`,
@@ -76,7 +76,7 @@ After multiplication by `sqrt(5)`,
 \[
 \boxed{
  \limsup_{X\to\infty}\mathcal V_5(X)
- \le-0.13888471955955921\ldots .
+ \le-0.13882115393170214001\ldots .
 }
 \tag{T-90012.2}
 \]
@@ -121,15 +121,17 @@ This is the narrowest integer-radix annulus presently supplied with a phase-blin
 
 ## 5. Finite reconnaissance
 
-Every aligned endpoint `X=125N` through five million was checked in the same radical-switching implementation used by `X-90015`:
+`X-90016` checked every aligned endpoint `X=125N` through five million:
 
 ```text
 aligned endpoints tested: 40,000;
-least-negative unscaled value: -0.1992050665... at X=125;
-all retained values: negative.
+nonnegative endpoints:    X=125 only;
+all X=125N from 250 through 5,000,000: negative;
+minimum unscaled value:   -0.5083854021... at X=5,125;
+last unscaled value:      -0.3222706704... at X=5,000,000.
 ```
 
-This evidence is not used in the proof.
+The first endpoint correction is a finite-base fact and has no bearing on the eventual theorem. This evidence is not used in the proof.
 
 ## 6. Frontier
 
@@ -161,3 +163,5 @@ Still open:
 
 1. unconditional proof of (T-90012.4);
 2. RH.
+
+Replay: `experiments/X-90016-radix5-annular/verify.py`.
