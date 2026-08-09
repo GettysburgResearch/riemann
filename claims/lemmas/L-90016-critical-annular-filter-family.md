@@ -179,11 +179,11 @@ Direct differentiation gives
 
 Thus the phase-blind margin is strictly increasing with the radix.
 
-Numerically, with broad retained intervals,
+A high-precision replay with broad retained corridors gives
 
 \[
  \mathfrak m(4)
- =-0.1121600546\ldots<0,
+ =-0.05608120615662845608\ldots<0,
 \]
 
 while
@@ -191,7 +191,7 @@ while
 \[
 \boxed{
  \mathfrak m(5)
- =0.06211115903708618\ldots>0.
+ =0.06208270738124963655\ldots>0.
 }
 \tag{L-90016.11}
 \]
@@ -241,7 +241,7 @@ The scaled RH-side margin is
 \[
 \boxed{
  \sqrt5\,\mathfrak m(5)
- =0.13888471955955921\ldots .
+ =0.13882115393170214001\ldots .
 }
 \tag{L-90016.15}
 \]
@@ -262,3 +262,5 @@ Still open:
 1. unconditional sign of the radix-five annular scalar;
 2. a phase-sensitive radix-four result;
 3. RH.
+
+Replay: `experiments/X-90016-radix5-annular/verify.py`.
