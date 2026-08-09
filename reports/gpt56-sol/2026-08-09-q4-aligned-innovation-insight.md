@@ -1,44 +1,19 @@
-# Q4 aligned innovation simplification
+# Q4 aligned innovation scope correction
 
-A fresh audit of PR #345 gives an exact simplification which is useful but also a scope firewall.
+The first version of this note was wrong and is superseded by the corrected `L-32305`.
 
-For an aligned quarter-balanced row `(4n,4j)`, with `k=n-j` and `L=log 4`, the compact one-step current of `L-34401` satisfies
+The exact aligned compact-current row is
 
 \[
+\begin{aligned}
 \mathcal L_{4n,4j}(q_\circ)
-=\log\frac{\binom{4n}{4j}}{\binom nj^4}-4L.
+={}&\psi(4n)-\psi(4j)-\psi(4k)\\
+&-4[\psi(n)-\psi(j)-\psi(k)]-4\log4,
+\end{aligned}
 \]
 
-The actual innovation is
+not a binomial-factorial ratio. The error was substituting Kummer's carry identity for `Lambda` into an additive defect of the Chebyshev prefix `psi`.
 
-\[
-i_\circ=q_\circ-L\,\delta_4*b_4,
-\]
+Thus the actual innovation retains a genuine radix-four Chebyshev fluctuation and remains RH-bearing. No `O(log n)` scalar innovation theorem is claimed.
 
-and exact carry scaling gives
-
-\[
-\mathcal L_{4n,4j}(\delta_4*b_4)=Y_4(n,j).
-\]
-
-Hence
-
-\[
-\boxed{
-I_\circ(n,j)
-=\log\frac{\binom{4n}{4j}}{\binom nj^4}
- -4\log4-(\log4)Y_4(n,j).
-}
-\]
-
-The aligned innovation is therefore prime-free. In particular it is only `O(log n)` because the binomial ratio is between one and `(n+1)^4` and `Y_4=O(log n)` explicitly.
-
-Combined with PR #342's cofinal moat
-
-\[
-\Delta_4R\ge(\log2)n\log n,
-\]
-
-this proves scalar aligned-row innovation domination cofinally. It does **not** solve the independent-frequency physical block: the fact that the aligned carry row is prime-free is precisely why this scalar coordinate alone cannot be the all-zero pole frame.
-
-A stacked proof with exact constants is being prepared separately; the remaining RH burden is the continuous/two-frequency Hermitian placement, not the aligned scalar arithmetic estimate.
+The correction is pushed immediately; the SHARP outer-seven-eighths theorem is unaffected.
