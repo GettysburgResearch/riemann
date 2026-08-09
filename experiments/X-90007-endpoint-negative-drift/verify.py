@@ -16,7 +16,9 @@ from typing import List, Tuple
 
 import mpmath as mp
 
-ZETA_HALF = mp.mpf("-1.4603545088095868128894991525152980124672293310126")
+# Set precision before constructing any retained transcendental constant.
+mp.mp.dps = 80
+ZETA_HALF = mp.zeta(mp.mpf("0.5"))
 KAPPA = (1 + ZETA_HALF) * mp.log(2) / 2
 
 
@@ -38,14 +40,14 @@ def mobius_table(n: int) -> List[int]:
     return mu
 
 
-_MU = mobius_table(80)
+_MU = mobius_table(100)
 
 
 def minus_zeta_log_derivative(s: mp.mpf | mp.mpc) -> mp.mpf | mp.mpc:
     return -mp.zeta(s, derivative=1) / mp.zeta(s)
 
 
-def prime_log_series_cont(s: mp.mpf | mp.mpc, cutoff: int = 70):
+def prime_log_series_cont(s: mp.mpf | mp.mpc, cutoff: int = 90):
     return mp.fsum(
         _MU[m] * minus_zeta_log_derivative(m * s)
         for m in range(1, cutoff + 1)
@@ -53,7 +55,7 @@ def prime_log_series_cont(s: mp.mpf | mp.mpc, cutoff: int = 70):
     )
 
 
-def shifted_difference_cont(w: mp.mpf | mp.mpc, order: int = 34):
+def shifted_difference_cont(w: mp.mpf | mp.mpc, order: int = 42):
     return mp.fsum(
         (-1) ** (r + 1)
         * mp.rf(w, r)
@@ -71,7 +73,6 @@ def endpoint_transform(z: mp.mpf):
 
 
 def laurent_check() -> dict:
-    mp.mp.dps = 60
     rows = []
     target_a = (1 + ZETA_HALF) / 2
     target_shell = KAPPA
@@ -82,8 +83,8 @@ def laurent_check() -> dict:
         rows.append(
             {
                 "z": text,
-                "z3_Ahat": mp.nstr(z**3 * ahat, 30),
-                "z2_shell_hat": mp.nstr(z**2 * shat, 30),
+                "z3_Ahat": mp.nstr(z**3 * ahat, 40),
+                "z2_shell_hat": mp.nstr(z**2 * shat, 40),
             }
         )
     last_a = mp.mpf(rows[-1]["z3_Ahat"])
@@ -93,8 +94,9 @@ def laurent_check() -> dict:
     if abs(last_s - target_shell) > mp.mpf("5e-4"):
         raise AssertionError("shell Laurent coefficient did not converge")
     return {
-        "target_z3_Ahat": mp.nstr(target_a, 40),
-        "target_z2_shell_hat": mp.nstr(target_shell, 40),
+        "zeta_half": mp.nstr(ZETA_HALF, 60),
+        "target_z3_Ahat": mp.nstr(target_a, 60),
+        "target_z2_shell_hat": mp.nstr(target_shell, 60),
         "rows": rows,
     }
 
@@ -170,7 +172,7 @@ def finite_check(max_x: int) -> dict:
     if abs(rows[-1]["shell_over_logX"] - kappa_float) > 0.035:
         raise AssertionError("finite shell ratio left the declared regression corridor")
     return {
-        "kappa": mp.nstr(KAPPA, 40),
+        "kappa": mp.nstr(KAPPA, 60),
         "max_X": max_x,
         "rows": rows,
     }
