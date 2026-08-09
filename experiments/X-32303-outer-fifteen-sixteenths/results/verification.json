@@ -1,0 +1,58 @@
+{
+  "adverse_transition_margins": {
+    "10": "9/10",
+    "14": "17/50",
+    "15": "1/1"
+  },
+  "classification": "DIRECTED_OUTER_FIFTEEN_SIXTEENTHS_SHARP_VERIFIED",
+  "finite_coefficient_rows_checked": 30451,
+  "finite_endpoint_max": 255,
+  "fixed_inner_local_lower_gates": {
+    "10": true,
+    "11": true,
+    "12": true,
+    "13": true,
+    "14": true,
+    "15": true,
+    "8": true,
+    "9": true
+  },
+  "fixed_inner_state_lower_gates": {
+    "10": true,
+    "11": true,
+    "12": true,
+    "13": true,
+    "14": true,
+    "15": true,
+    "8": true,
+    "9": true
+  },
+  "fixed_positive_cell_gates": {
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+  },
+  "minimum_finite_certificate": {
+    "T": 255,
+    "denominator": 64262,
+    "digits": 40,
+    "j": 254,
+    "lower_numerator_scaled": "79765165213397307271037153395064694116490"
+  },
+  "proof_boundary": "finite base through T=255 plus fixed radical gates only; T>=256 is analytic in L-32307; RH is not certified",
+  "same_cell_margin_lower_bounds": {
+    "10": "7/5",
+    "11": "43/50",
+    "12": "87/100",
+    "13": "7/25",
+    "14": "21/25",
+    "15": "3/2",
+    "8": "39/50",
+    "9": "37/50"
+  },
+  "schema": "X-32303-outer-fifteen-sixteenths-v1",
+  "sha256_without_digest": "badcd19989598f9b8f553b1fc6dc5993208cd1636c2b0e89affca5ff9b8b3473",
+  "tail_reserve_at_T256_gt_13_over_100": true
+}
