@@ -245,27 +245,69 @@ outside the same finite base.
 
 Thus the false `bare=0` mechanism is unnecessary for positivity: the **correct nonzero bare charge makes the second-current term favorable**.
 
-## 6. Stronger interpretation
+## 6. Manifest positive decomposition
 
-The repaired ledger is now
+PR #346 `L-34404` defines
+
+\[
+E_{\rm odd}(e)=O(4e)-4O(e)
+\]
+
+and proves the exact reserve-increment identity
+
+\[
+\boxed{
+\Delta_4R_{\rm odd}
+=E_{\rm odd}(8O+E_{\rm odd})
+ -\left[S_{\rm odd}(4e)-16S_{\rm odd}(e)\right].
+}
+\tag{L-34407.19}
+
+Substitute (L-34407.19) into (L-34407.17).  The forcing terms combine without approximation:
+
+\[
+\boxed{
+\begin{aligned}
+\mathfrak C(W_e^{\rm odd})
+={}&|I_{\rm odd}(e)|^2
+ +E_{\rm odd}(e)\bigl(8O(e)+E_{\rm odd}(e)\bigr)\\
+&+16S_{\rm odd}(e)
+ +2S_{\rm odd}(2e)
+ +S_{\rm odd}(4e).
+\end{aligned}}
+\tag{L-34407.20}
+
+This is the most useful repaired form.
+
+Every Selberg term on the second line is nonnegative for every row.  On every fixed balanced cone, `L-34404` proves cofinally
+
+\[
+O(e)\ge0,
+\qquad
+E_{\rm odd}(e)\ge0.
+\]
+
+Therefore every displayed summand in (L-34407.20) is individually nonnegative cofinally.
+
+The false cross-free simplification would have *deleted* the last two positive forcing scales.  The corrected ledger instead exposes a five-piece positive package:
 
 ```text
-critical odd-prime reserve increment
-+
-true odd-source current innovation square
-+
-scale-two odd Selberg forcing
-+
-scale-four odd Selberg forcing.
+odd current innovation square;
+odd first-moment scale cross;
+scale-e odd Selberg forcing with weight 16;
+scale-2e odd Selberg forcing with weight 2;
+scale-4e odd Selberg forcing with weight 1.
 ```
 
-The two extra forcing terms were hidden by the incorrect cross-free simplification. They are positive deterministic/source-matched resources, not errors.
+This form is particularly suited to the remaining reflected/Hermitian problem because every non-current term is now an already-typed generalized-prime or Selberg forcing at one of three explicit adjacent scales.
 
-This is structurally stronger for a future dissipative proof: the relative state contains an additional exact positive Selberg moat at the two immediately adjacent radix-two scales.
+## 7. Stronger interpretation
 
-It still does not upper-bound `I_odd`; positivity remains a lower/containment statement.
+The repaired relative state is not merely positive after a cancellation estimate.  Cofinally it is a **manifest sum of source-matched nonnegative pieces** before any norm or reflected recombination.
 
-## 7. Proof boundary
+It still does not upper-bound `I_odd`; positivity remains a lower/containment statement.  The new opportunity is narrower: a reflected identity only has to route the three explicit forcing scales in (L-34407.20) to the dissipative side while retaining the current square.
+
+## 8. Proof boundary
 
 Closed exactly:
 
@@ -277,7 +319,8 @@ Closed exactly:
    =S_{\rm odd}(4e)+S_{\rm odd}(2e);
    \]
 4. nonnegativity of the relative second current;
-5. the repaired positive curvature (L-34407.17).
+5. the repaired positive curvature (L-34407.17);
+6. the manifest decomposition (L-34407.20).
 
 Open:
 
