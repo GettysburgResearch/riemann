@@ -1,87 +1,472 @@
-# T-90001 — The theta bridge: WSTS ⟺ RH as a short self-contained theorem
+# T-90001 — The theta bridge: WSTS <=> RH as a short resident proof spine
 
-Claim ID: `T-90001` (provisional range 90001+; allocate at registry before integration)
-Status: **PROPOSED EQUIVALENCE — BOTH DIRECTIONS WRITTEN AND INDEPENDENTLY RE-DERIVED THIS SESSION; FOUR NAMED FLAGS REMAIN (none arithmetic, none deep; verification-trail disclosure: §6)**
-Authoring: `claude-fable-5` session `riemann-proof-review-8nz34i` — composed from 10+ independent derivation agents with cross-examination; all load-bearing identities machine-validated; the Moat Lemma's key identity re-verified by the session author (sympy + mpmath + hand proof of `S_N ≤ 2√N − 1`)
-Date: 2026-08-09
-Supersedes (as proof architecture only): the dependency stack of `T-27501` — `L-23823`–`L-23826`, `T-23811`, the PR #248 seed bound, and the source-pinned square-screw/Landau consumer. Frozen reviewed objects keep their identities.
-Scope: full equivalence `WSTS ⟺ RH` in standard analytic number theory. **RH itself remains unproved; WSTS remains exactly as hard as RH — this note proves the reduction, sharply, and nothing more.**
+Claim ID: `T-90001` (provisional range 90001+; allocate at registry before integration)  
+Status: **PROPOSED COMPLETE EQUIVALENCE SPINE — independent review required; WSTS and RH remain unproved**  
+Original authoring: `claude-fable-5` session `riemann-proof-review-8nz34i`  
+Audit/extension: `gpt56-sol`, 2026-08-09  
+Resident companions: `L-90006` (WSTS => RH), `L-90007` (RH => WSTS), `L-90005` (even-endpoint deterministic z-collapse)  
+Scope: full equivalence `WSTS <=> RH` in standard analytic number theory. The theorem is a reduction/criterion, not a proof of RH.
 
 ## 0. Objects
 
-\(b_X(m)=2\sqrt m(\log(X/m)-2(1-\sqrt{m/X}))\) on \([2,X]\), zero outside; \(b_X(X)=b_X'(X)=0\) by design. \(v_q=\sum_{k\le X/q}[b_X(kq)-b_X(kq+1)]\) (defined for every integer \(q\ge2\); prime-free); \(r_X(q)=v_q-q^{-1/2}\log(X/q)\); \(Y=\lfloor X/2\rfloor\); \(s_X(p)=r_X(p)-\mathbf1_{p\le Y}r_Y(p)\); \(T^s(z)=\sum_{z\le p\le X}(\log p)s_X(p)\); \(B_X=\max_{2\le z\le X}[T^s(z)]_+\). WSTS: \(B_X=O_\varepsilon(X^\varepsilon)\). \(E(t)\) denotes the scaled profile below; \(R(t)=\vartheta(t)-t\).
-
-Scaled profile: \(g(u)=(\log u+4)/\sqrt u-4\) (\(=-\frac{d}{du}[b_X(uX)/\sqrt X]\)); \(F(\theta)=\sum_{k\le1/\theta}g(k\theta)\); \(E(\theta)=F(\theta)-\theta^{-1/2}\log(1/\theta)\); on the cell \(1/(N+1)<\theta\le1/N\):
-\(E(\theta)=\theta^{-1/2}[A_N+(S_N+1)\log\theta+4S_N]-4N\), \(S_N=\sum_{k\le N}k^{-1/2}\), \(A_N=\sum_{k\le N}k^{-1/2}\log k\) — **verified against the raw definition to 1e-30**. \(H(\theta)=\int_\theta^1E\); \(E_c(\theta)=E(\theta)-c^{-1/2}E(\theta/c)\mathbf1_{\theta\le c}\); \(H_c(\theta)=\int_\theta^1E_c\).
-
-## 1. Proposition 1 (unconditional bridge; explicit floor)
-
-For integers \(X\ge4\), \(c=Y/X\in[1/3,1/2]\), all \(z\in[2,X]\):
+For integer `X>=4`, put
 \[
-T^s(z)=\sqrt X\,H_c(z/X)+\mathcal E_{X,Y}(z)+\mathrm{fl}(z),\qquad
-\mathcal E_{X,Y}(z)=X^{-1/2}\!\int_{[z,X]}\!E_c(t/X)\,dR(t),
+b_X(m)=2\sqrt m\left(\log(X/m)-2(1-\sqrt{m/X})\right)
+\]
+on `[2,X]` and zero outside. By construction
+\[
+b_X(X)=b_X'(X)=0.
+\]
+For every integer `q>=2`, define
+\[
+v_q=\sum_{k\le X/q}[b_X(kq)-b_X(kq+1)],
 \]
 \[
-|\mathrm{fl}(z)|\le\zeta(3/2)\,(-\zeta'(3/2))\,(2+\log X)\approx10.3\,(2+\log X).
+r_X(q)=v_q-q^{-1/2}\log(X/q).
 \]
-Hence \(B_X\le\sup_z[\sqrt X H_c(z/X)]_++\sup_z(\mathcal E_{X,Y}(z))_++10.3(2+\log X)\).
-Proof mechanism: \(b(kq)-b(kq+1)=X^{-1/2}\int_0^1g((kq+t)/X)dt\) — for the top cell \(kq\le X<kq+1\) this requires extending \(b_X\) by its formula to \([X,X+1]\) (harmless: the \(C^1\) tangency makes the discrepancy vs the zero-extension \(\le\tfrac12X^{-3/2}\) per modulus, absorbed by the floor's \(\ge2\times\) slack); \(|g'(u)|=u^{-3/2}|\log u+2|/2\), which is **not** monotone on \((0,1]\), so the cell-sup step routes through the decreasing majorant \(M(u)=u^{-3/2}(2-\log u)/2\) (\(M'<0\) for \(u<e^{8/3}\)); this gives the per-modulus floor \(|r_X(q)-X^{-1/2}E(q/X)|\le(\zeta(3/2)/2)q^{-3/2}(2+\log(X/q))\), uniform to \(q=2\), no prime input; difference at \(X,Y\), sum over integers, Stieltjes-split \(d\vartheta=dt+dR\). (Session author checked the \(g'\) bound, the per-cell summation, and the constant arithmetic by hand.) Validated numerically at machine precision at \(X=500\ldots2\cdot10^5\), all \(z\) (four independent implementations; two normal forms reconciled to 4.6e-11).
-
-## 2. The Moat Lemma (proved)
-
+Let
 \[
-\boxed{\;H\le0\ \text{on}\ (0,1],\qquad H_c(\theta)\le0\ \text{for every }c\in(0,1)\ \text{and all }\theta\in(0,1].\;}
+Y=\lfloor X/2\rfloor,
+\qquad
+s_X(p)=r_X(p)-\mathbf1_{p\le Y}r_Y(p),
 \]
-*Proof.* Let \(J(\theta)=H(\theta)/\sqrt\theta\); \(J(1)=0\); \(J\) continuous. On each cell, using the exact \(E\)-cell formula and the per-cell antiderivative (**verified symbolically and to 12 digits at six cells spanning \(N=1\ldots32\)**),
 \[
-J'(\theta)=2\theta^{-3/2}\bigl[N\theta+1-(S_N+1)\sqrt\theta\bigr]
-\ \ge\ 2\theta^{-3/2}\bigl(\sqrt{N\theta}-1\bigr)^2\ \ge\ 0,
+T_X^s(z)=\sum_{z\le p\le X}(\log p)s_X(p),
+\qquad
+B_X=\max_{2\le z\le X}[T_X^s(z)]_+.
 \]
-the middle inequality being exactly \(S_N\le2\sqrt N-1\) (induction: \(2\sqrt N-2\sqrt{N-1}=2/(\sqrt N+\sqrt{N-1})\ge N^{-1/2}\), equality at \(N=1\)). The antiderivative is global and explicit: on the cell of index \(N\), \(H(\theta)=-2\sqrt\theta[A_N+(S_N+1)\log\theta+2S_N-2]+4N\theta-4\); one checks \(H'=-E\) per cell, \(H(1)=0\) (at \(N=1\): \(S_1=1,A_1=0\)), and the jump of \(H\) at every knot \(\theta=1/N\) is identically zero (using \(A_N=A_{N-1}+N^{-1/2}\log N\), \(S_N=S_{N-1}+N^{-1/2}\)) — so no integration constant is dropped and \(J=H/\sqrt\theta\) is continuous. \(J\) nondecreasing per cell + continuous + \(J(1)=0\): \(H=\sqrt\theta\,J\le0\). For \(\theta\le c\): \(H_c(\theta)=\sqrt\theta[J(\theta)-J(\theta/c)]\le0\) by monotonicity (\(\theta/c>\theta\)); for \(\theta>c\), \(H_c=H\le0\). ∎
-Note the lemma holds for **every** ratio \(c\in(0,1)\), so \(Y=\lfloor X/2\rfloor\) discreteness is free. Scaling profile (at \(c=1/2\)): \(\min H_c\approx-0.123\) at \(\theta\approx0.141\) (three independent measurements agree to 3 digits; the threshold constant is the root of an explicit \(N=7/N'=3\) cell equation). At \(c=1/3\) the minimum deepens to \(\approx-0.175\) at \(\theta\approx0.120\) with a different extremal cell pair; the lemma itself asserts only \(H_c\le0\), for every \(c\).
-
-## 3. RH ⇒ WSTS (complete modulo Flag 1)
-
-Profile bounds \(|E_c(\theta)|\le C_E\theta^{-1/2}(1+\log(1/\theta))\), \(|E_c'(\theta)|\le C_E'\theta^{-3/2}(1+\log(1/\theta))\) with absolute constants (argument of `L-27501` §3–4, independently reconstructed; measured sups 0.244/0.410). Integration by parts in \(\mathcal E_{X,Y}\), Schoenfeld under RH applied **once**, Prop. 1 + Moat:
+The Weighted Shell-Tail Stability statement is
 \[
-\boxed{\;\text{RH}\ \Rightarrow\ B_X\le C\log^3(2X)\;}
+\boxed{
+\forall\varepsilon>0,
+\qquad B_X=O_\varepsilon(X^\varepsilon).
+}
+\tag{WSTS}
 \]
-(honest exponent **3**, not the packet's 4: the dyadic difference cancels one \(\log\) — the discrete-difference envelope is \(\sup_t t^{3/2}|\Delta d_s|=\log2\), constant in \(X\); measured truth \(\approx0.0084\log^2\); observed \(B_X=0\) outright at all tested \(X\le5\cdot10^5\)). A sharper route bounds the zero-sum absolutely: \(\sum_\rho4|\sin(\gamma\log2/2)|/\gamma^2\approx0.076\) uniformly in \(X\), suggesting \(\log^2\); not needed for the equivalence.
 
-## 4. WSTS ⇒ RH (complete modulo Flag 2; three independent write-ups agree)
-
-Dual identity (**verified to 12–23 digits**, and \(\hat E(1)=\int_0^1E=0\) exactly — the \(4\sqrt X\) cancellation in dual form; warning: a 3-term truncation of \(E\) suggests a spurious \(+0.001\sqrt X\) drift — the full resummation gives exactly 0):
+For the continuum bridge put
 \[
-\hat E(w)=\int_0^1E(t)t^{w-1}dt=\zeta(w)\hat g(w)-(w-\tfrac12)^{-2},\qquad
-\hat g(w)=-(w-\tfrac12)^{-2}+4(w-\tfrac12)^{-1}-4/w .
+g(u)=\frac{\log u+4}{\sqrt u}-4,
+\qquad
+F(\theta)=\sum_{k\le1/\theta}g(k\theta),
 \]
-Consumer: \(z=2\) reading of \(B_X\) + dyadic telescope gives \(A_X:=\sum_{p\le X}(\log p)r_X(p)\le C_\varepsilon'X^\varepsilon\); the floor sums are absolutely \(O(\log X)\), so with \(\Phi(X)=X^{-1/2}\int_{[2,X]}E(t/X)dR(t)\), \(A_X=\Phi(X)+O(\log2X)\); Mellin:
 \[
-G(w)=\int_1^\infty D_X\,X^{-w-1}dX=-\hat E(w+\tfrac12)\,\frac{\zeta'}{\zeta}(w+\tfrac12)+H_0(w),\ H_0\ \text{holomorphic in }\Re w>0,
+E(\theta)=F(\theta)-\theta^{-1/2}\log(1/\theta).
 \]
-whose only singularities in \(\Re w>0\) are simple poles at \(w=\rho-\frac12\) with residue \(m_\rho(\rho-\frac12)^{-2}\ne0\); \(w=\frac12\) is regular (\(\hat E(1)=0\)); **no \(1/\zeta\) factor appears anywhere** (passes the repo's R-26902 discipline check explicitly); real-singularity audit on the positive axis uses \(\eta>0\Rightarrow\zeta<0\) on \((0,1)\). Landau's one-sign theorem on the nonnegative-integrand transform of \(C''X^\varepsilon-(4\sqrt X-\mathcal R(X))\), where \(\mathcal R(X)=\sum_{p\le X}(\log p)p^{-1/2}\log(X/p)\) is the ramp sum (NOT the \(\vartheta\)-error \(R(t)\) of §0 — distinct symbols), \(\varepsilon\)-diagonal over a putative zero, functional equation. Classical inputs only: Mertens, Chebyshev \(\psi-\vartheta\ll\sqrt x\), Stirling, Landau. One variant of this consumer was adversarially cross-examined in-session (all four flagged suspects — integrand nonnegativity, Fubini exchange, \(\vartheta/\psi\), \(\varepsilon\)-diagonal — checked clean); two further independent write-ups (explicit-\(\hat E\) route; \(z=2\)-endpoint route) agree.
-En route, (T-27501.4) — the sharp one-sided ramp — is derived from WSTS alone. **This replaces the repo's source-pinned square-screw consumer.**
-Blind-spot audit: the dyadic shell kernel vanishes at \(\gamma\in(2\pi/\log2)\mathbb Z\); the consumers above act on the **undifferenced** \(z=2\) functional (weight \(-(\rho-\frac12)^{-2}\), never zero), so no blind spot. Any shell-only equivalence argument at fixed \(z\) is incomplete — audit flag for the original T-27501 architecture.
+On
+\[
+\frac1{N+1}<\theta\le\frac1N,
+\]
+let
+\[
+S_N=\sum_{k\le N}k^{-1/2},
+\qquad
+A_N=\sum_{k\le N}k^{-1/2}\log k.
+\]
+Then exactly
+\[
+\boxed{
+E(\theta)=\theta^{-1/2}
+[A_N+(S_N+1)\log\theta+4S_N]-4N.
+}
+\tag{T-90001.1}
+\]
+Finally put
+\[
+H(\theta)=\int_\theta^1E(u)\,du,
+\]
+\[
+E_c(\theta)=E(\theta)-c^{-1/2}E(\theta/c)\mathbf1_{\theta\le c},
+\qquad
+H_c(\theta)=\int_\theta^1E_c(u)\,du.
+\]
 
-## 5. Calibration and unconditional status (derived this session; full write-ups not retained in-repo — reprove at review)
+## 1. Unconditional bridge with explicit floor error
 
-- **Theorem A.** Unconditionally \(B_X\le C\sqrt X\exp(-c(\log X)^{3/5}(\log\log X)^{-1/5})\) (Vinogradov–Korobov applied through Prop. 1).
-- **Theorem B** (window). For \(4\le X\le X_0\approx2.2\cdot10^{25}\): \(B_X\le(1/(48\pi))\log^4X+\)lower order (this \(\log^4\) is the unconditional-window bound, distinct from §3's RH-conditional \(\log^3\)), via Büthe/Platt–Trudgian partial verification (**Flag 3: literature constants quoted from memory; check before integration**).
-- **Theorem C** (exact calibration). If \(B_X\le CX^{1/2-\delta}\) then \(\zeta\ne0\) on \(\Re s>1-\delta\); conversely a zero-free strip of width \(\eta\) gives \(B_X\ll X^{1/2-\eta}\log^3X\). **The unconditional exponent of \(B_X\) is identically the best zero-free-strip width — currently 0.** The elementary programme's open core *is* the classical wall, as a theorem rather than a slogan.
+Let
+\[
+c=Y/X\in[1/3,1/2].
+\]
+For every `2<=z<=X`,
+\[
+\boxed{
+T_X^s(z)
+=\sqrt X\,H_c(z/X)
++\mathcal E_{X,Y}(z)
++\mathrm{fl}_{X,Y}(z),
+}
+\tag{T-90001.2}
+\]
+where, with
+\[
+R(t)=\vartheta(t)-t,
+\]
+\[
+\boxed{
+\mathcal E_{X,Y}(z)
+=X^{-1/2}\int_{[z,X]}E_c(t/X)\,dR(t),
+}
+\tag{T-90001.3}
+\]
+and
+\[
+\boxed{
+|\mathrm{fl}_{X,Y}(z)|
+\le
+\zeta(3/2)(-\zeta'(3/2))(2+\log X).
+}
+\tag{T-90001.4}
+\]
 
-## 6. Flags
+The per-modulus estimate behind (T-90001.2) is
+\[
+\boxed{
+\left|r_X(q)-X^{-1/2}E(q/X)\right|
+\le
+\frac{\zeta(3/2)}2q^{-3/2}
+\left(2+\log\frac Xq\right).
+}
+\tag{T-90001.5}
+\]
 
-0. **The three §4 consumer write-ups are not physically in this repository** — the committed §4 is a dense summary; the full arguments live in session workflow journals. Reproducing them on the page is the first review task. (This is the largest single gap between this note and theorem-grade residency.)
-1. **\(C_E,C_E'\) explicit values** (absolute-constant version proved — sufficient for §3; the specific value 1 rests on Euler–Maclaurin bookkeeping + certification to \(N=2\cdot10^4\)).
-2. **Real-\(X\) interpolation** \(|A_X-A_{\lfloor X\rfloor}|\ll\log X/\sqrt X\) feeding the Mellin integral in one consumer variant (elementary jump audit; sketched; the cross-examined variant handles continuity directly).
-3. **Theorem B's cited numerical constants** (not load-bearing for the equivalence).
+Two post-verification repairs are load bearing in this derivation.
 
-Adversarial-verification disclosure: the dedicated verify stage for the final assembly was killed by a session usage limit; in its place, the session author hand-verified the Moat identity chain (sympy/mpmath scripts retained), the floor-constant arithmetic, the \(S_N\) inequality, the \(E\)-cell formula, and the Landau mechanism shape; one consumer variant carries a full in-session adversarial cross-examination; every numerical claim was replicated by ≥2 independent implementations. Statuses above preserve the authoring agents' own PROVED / PROVED_SKETCH labels; nothing was upgraded.
+First, the top cell `kq<=X<kq+1` is handled by extending the analytic formula for
+`b_X` through `[X,X+1]`; the discrepancy from the declared zero extension is
+quadratic because `b_X(X)=b_X'(X)=0`, and is absorbed by the displayed floor
+slack.
 
-## 7. What this changes
+Second,
+\[
+|g'(u)|={u^{-3/2}\over2}|\log u+2|
+\]
+is **not** monotone on `(0,1]`.  The correct cell-sup argument uses the decreasing
+majorant
+\[
+M(u)={u^{-3/2}\over2}(2-\log u),
+\qquad 0<u\le1.
+\]
+This is the repaired E2/E3-type issue from the source session; no false
+monotonicity is used here.
 
-The reviewable surface of `WSTS ⟺ RH` shrinks from ~40 lemma files + an unreviewed consumer to: Prop. 1 + Moat + profile bounds + Schoenfeld (forward), and radical bridge + telescope + \(\hat E\)-dual + Landau (converse) — an estimated **12–15 page** self-contained paper, Lean-friendly (the Moat is 5 lines of calculus; the floor bound is a \(\zeta(3/2)\)-sum; the consumer's classical inputs are Mathlib-adjacent). Recommended: tomorrow's review targets THIS packet first; if it survives, retire the L-23823–26 stack as architecture (keeping frozen identities) and re-point `T-27501` at it.
+## 2. Moat Lemma
 
-## 8. Artifacts
+For every `0<theta<=1`,
+\[
+\boxed{H(\theta)\le0.}
+\tag{T-90001.6}
+\]
+More generally, for every `c in (0,1)`,
+\[
+\boxed{H_c(\theta)\le0.}
+\tag{T-90001.7}
+\]
 
-Scratchpad scripts (all rerunnable): `validator.py`, `d2_validator.py`, `xcheck.py`, `xmellin.py`, `wsts_converse.py`, `wsts_verify.py`, `wsts_verify2.py`, `kernel_profile.py`, plus the session author's Moat verification (sympy/mpmath, in `moat_check` history). Full agent reports in the session workflow journals.
+### Proof
+
+Let
+\[
+J(\theta)=H(\theta)/\sqrt\theta.
+\]
+On one reciprocal cell, direct differentiation of the exact antiderivative gives
+\[
+\boxed{
+J'(\theta)
+=2\theta^{-3/2}
+[N\theta+1-(S_N+1)\sqrt\theta].
+}
+\tag{T-90001.8}
+\]
+The elementary induction
+\[
+S_N\le2\sqrt N-1
+\tag{T-90001.9}
+\]
+follows because
+\[
+2\sqrt N-2\sqrt{N-1}
+={2\over\sqrt N+\sqrt{N-1}}
+\ge N^{-1/2}.
+\]
+Therefore
+\[
+J'(\theta)
+\ge
+2\theta^{-3/2}(\sqrt{N\theta}-1)^2
+\ge0.
+\tag{T-90001.10}
+\]
+
+No integration constant is hidden.  On the `N`th cell,
+\[
+\boxed{
+H(\theta)
+=-2\sqrt\theta
+[A_N+(S_N+1)\log\theta+2S_N-2]
++4N\theta-4.
+}
+\tag{T-90001.11}
+\]
+One checks `H'=-E`, `H(1)=0`, and exact continuity at every knot using
+\[
+A_N=A_{N-1}+N^{-1/2}\log N,
+\qquad
+S_N=S_{N-1}+N^{-1/2}.
+\]
+Thus `J` is continuous and nondecreasing, with `J(1)=0`; hence `J<=0` to the
+left of one and (T-90001.6) follows.
+
+For `theta<=c`,
+\[
+H_c(\theta)
+=\sqrt\theta[J(\theta)-J(\theta/c)]\le0,
+\]
+while for `theta>c`, `H_c=H`.  This proves (T-90001.7).  In particular the
+finite ratio `floor(X/2)/X` is covered exactly; no idealized `c=1/2` replacement
+is needed for the Moat.
+
+## 3. RH implies WSTS
+
+`L-90007` supplies a resident proof with no numerical profile constant.  From
+(T-90001.1), elementary sum-integral comparison gives
+\[
+|E(\theta)|
+\ll\theta^{-1/2}[1+\log(1/\theta)],
+\tag{T-90001.12}
+\]
+\[
+|E'(\theta)|
+\ll\theta^{-3/2}[1+\log(1/\theta)]
+\tag{T-90001.13}
+\]
+on reciprocal-cell interiors, with continuity at the knots.  The same bounds
+hold uniformly for `E_c`, `1/3<=c<=1/2`.
+
+Under RH, the classical von Koch estimate gives
+\[
+R(t)=O(\sqrt t\log^2(2t)).
+\]
+Stieltjes integration by parts in (T-90001.3) therefore yields uniformly in `z`
+\[
+\boxed{
+\mathcal E_{X,Y}(z)\ll\log^4(2X).
+}
+\tag{T-90001.14}
+\]
+The Moat makes the continuum term in (T-90001.2) nonpositive, and the floor
+error is only logarithmic. Hence
+\[
+\boxed{
+\mathrm{RH}\Longrightarrow B_X\ll\log^4(2X)
+\Longrightarrow\mathrm{WSTS}.
+}
+\tag{T-90001.15}
+\]
+
+The source session reports an additional dyadic-difference cancellation giving
+`O(log^3 X)`.  That sharper exponent is **not load bearing** and is not promoted
+here without its complete resident bookkeeping.  The conservative `log^4`
+bound already proves the implication.
+
+## 4. WSTS implies RH
+
+`L-90006` supplies a resident consumer that avoids both the historical
+square-screw stack and the session-only `hat E` derivation.
+
+Put
+\[
+A_X=\sum_{p\le X}(\log p)r_X(p).
+\]
+At `z=2`, the shell identity is exactly
+\[
+\boxed{T_X^s(2)=A_X-A_{\lfloor X/2\rfloor}.}
+\tag{T-90001.16}
+\]
+Thus WSTS and dyadic iteration give, one-sidedly,
+\[
+\boxed{A_X\ll_\varepsilon X^\varepsilon.}
+\tag{T-90001.17}
+\]
+
+Let
+\[
+P(X)=\sum_{p\le X}{\log p\over\sqrt p}\log{X\over p}.
+\tag{T-90001.18}
+\]
+The complete prime-power seed objective satisfies the exact divisor-switched
+identity
+\[
+\sum_{q\le X}\Lambda(q)v_q(b_X)
+=\sum_{n=2}^{X}b_X(n)\log{n\over n-1}.
+\tag{T-90001.19}
+\]
+Comparison with its elementary integral gives
+\[
+\sum_{q\le X}\Lambda(q)v_q(b_X)
+=4\sqrt X+O(\log(2X)).
+\]
+Using (T-90001.5) and (T-90001.12), the contribution of prime powers `p^k`,
+`k>=2`, is `O(log^3(2X))`.  Hence
+\[
+\boxed{
+\sum_{p\le X}(\log p)v_p(b_X)
+=4\sqrt X+O(\log^3(2X)).
+}
+\tag{T-90001.20}
+\]
+Since `A_X` is this seed objective minus `P(X)`, WSTS implies the sharp one-sided
+ramp
+\[
+\boxed{
+4\sqrt X-P(X)\ll_\varepsilon X^\varepsilon.
+}
+\tag{T-90001.21}
+\]
+for integer `X`.  On `N<=X<N+1`,
+\[
+P(X)-P(N)
+=\log(X/N)\sum_{p\le N}{\log p\over\sqrt p}
+\ll{\log(2N)\over\sqrt N},
+\]
+so the same bound holds for real `X`.
+
+Now put
+\[
+F(X)=4\sqrt X-P(X).
+\]
+For `Re z>1/2`, direct Fubini gives
+\[
+\int_1^\infty P(X)X^{-z-1}dX
+={1\over z^2}\sum_p{\log p\over p^{z+1/2}}.
+\]
+Writing
+\[
+Q(s)=\sum_p\sum_{k\ge2}{\log p\over p^{ks}},
+\]
+which is holomorphic for `Re s>1/2`, the Euler product yields
+\[
+\boxed{
+\widehat F(z)
+={4\over z-1/2}
++{1\over z^2}{\zeta'\over\zeta}\left(z+{1\over2}\right)
++{1\over z^2}Q\left(z+{1\over2}\right).
+}
+\tag{T-90001.22}
+\]
+The zeta pole at `s=1` cancels the explicit pole at `z=1/2`.  If `rho` is a
+nontrivial zero with `Re rho>1/2`, then (T-90001.22) has the uncancelled pole
+\[
+z_\rho=\rho-1/2,
+\qquad
+\operatorname*{Res}_{z=z_\rho}\widehat F(z)
+={m_\rho\over(\rho-1/2)^2}\ne0.
+\tag{T-90001.23}
+\]
+There is no singularity on the positive real axis: `zeta(s)<0` on `(0,1)` by
+the alternating eta identity, `zeta(s)>0` for `s>1`, and the sole pole at one
+was just cancelled.
+
+Given a hypothetical zero with
+\[
+\delta=\Re\rho-1/2>0,
+\]
+choose `0<epsilon<delta`.  By (T-90001.21), for a sufficiently large constant
+`C`,
+\[
+G_\varepsilon(X)=CX^\varepsilon-F(X)\ge0
+\qquad(X\ge1).
+\]
+Its Mellin transform is
+\[
+{C\over z-\varepsilon}-\widehat F(z).
+\]
+Landau's one-sign theorem forces the real abscissa of convergence to be the
+only positive-real singularity, namely `z=epsilon`.  But then the defining
+nonnegative transform is holomorphic throughout `Re z>epsilon`, contradicting
+the genuine pole (T-90001.23), whose real part is `delta>epsilon`.
+Therefore no zero lies to the right of the critical line.  Functional-equation
+symmetry gives
+\[
+\boxed{\mathrm{WSTS}\Longrightarrow\mathrm{RH}.}
+\tag{T-90001.24}
+\]
+
+No `1/zeta` factor appears in this consumer; no zeta zero can be hidden by a
+finite shell blind spot.
+
+## 5. Deterministic z-collapse: a new structural simplification
+
+`L-90005` proves more of the formerly numerical Lemma S.  For exact dyadic/even
+endpoints there is one continuum sign crossing
+\[
+\boxed{
+c_*=0.1408520350138399254409579889\ldots
+}
+\tag{T-90001.25}
+\]
+and the exact finite shell obeys
+\[
+q\le c_*X-1\Longrightarrow s_X(q)>0,
+\]
+\[
+q\ge c_*X+158\Longrightarrow s_X(q)<0.
+\tag{T-90001.26}
+\]
+Consequently, for even `X`,
+\[
+\boxed{
+B_X=[T_X^s(2)]_+ +O(X^{-3/2}\log(2X)).
+}
+\tag{T-90001.27}
+\]
+The previous `0.1408512...` value was only a coarse numerical approximation.
+This result removes the `z`-maximum geometry on even endpoints, but it does not
+bound the surviving RH-bearing scalar `T_X^s(2)`.
+
+## 6. Audit disposition of the source-session flags
+
+The source branch arrived with four named presentation/review flags.  Their
+current disposition on this branch is:
+
+- **Former Flag 0 (full converse consumers absent): CLOSED for the proof spine.**
+  `L-90006` is a complete resident prime-ramp/Landau consumer.
+- **Former Flag 1 (specific numerical profile constants): REMOVED FROM THE
+  LOAD-BEARING CLAIM.** `L-90007` proves the needed absolute-constant profile
+  bounds directly; no claimed constant `1`, `0.244`, or `0.410` is required.
+- **Former Flag 2 (real-X interpolation of `A_X`): NOT NEEDED.** The resident
+  consumer interpolates the prime ramp directly by (T-90001.21), with an
+  `O(log X/sqrt X)` error.
+- **Former Flag 3 (finite-height literature constants): NON-LOAD-BEARING AND
+  EXCLUDED FROM THIS THEOREM.** Any finite verified window belongs in a separate
+  calibration note after source checking.
+
+The post-verification notation repair distinguishing the prime ramp from
+`R(t)=vartheta(t)-t`, the top-cell tangency repair, the nonmonotone-`g'` repair,
+and the global Moat antiderivative are all retained.
+
+## 7. Exact theorem boundary
+
+Proposed complete, subject to independent review:
+
+```text
+unconditional finite theta bridge              T-90001 §1
+Moat H_c <= 0 for every c in (0,1)             T-90001 §2
+RH => WSTS with O(log^4 X)                     L-90007 / §3
+WSTS => one-sided prime ramp                    L-90006 / §4
+prime-ramp Mellin/Landau consumer => RH         L-90006 / §4
+WSTS <=> RH                                     T-90001
+exact dyadic continuum one-crossing             L-90005
+finite even-endpoint bounded transition         L-90005
+```
+
+Still open:
+
+```text
+WSTS unconditionally                            OPEN / RH-EQUIVALENT
+surviving endpoint prime-ramp scalar            OPEN / RH-BEARING
+odd-endpoint version of the sharp z-collapse    OPEN / deterministic
+Riemann Hypothesis                              UNPROVEN
+```
+
+The practical review surface is now `T-90001 + L-90006 + L-90007`; `L-90005` is
+a structural simplification, not an additional RH assumption.
