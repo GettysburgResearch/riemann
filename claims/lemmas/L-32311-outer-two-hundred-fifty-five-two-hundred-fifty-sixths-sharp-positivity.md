@@ -258,7 +258,6 @@ The same fixed-cell checker proves, for every positive-Möbius transition in `12
 L_K+\frac K8-\frac12>0.
 }
 \tag{L-32311.17}
-\]
 
 The smallest adverse-transition margin occurs at
 
@@ -305,7 +304,7 @@ It certifies:
 Retained result digest:
 
 ```text
-ac03ded24611dfcb9cca0af6a647cd261b2434406f49b896d16eb27aabeba485
+b16e68ee2a8c9b342711b9d71c802d927081ddd881395d85b09353c5870b5716
 ```
 
 The replay proves only the finite and fixed-radical statements above. It does not certify the inner `1/256` or RH.
