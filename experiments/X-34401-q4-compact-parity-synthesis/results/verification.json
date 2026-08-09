@@ -1,27 +1,25 @@
 {
   "bezout_target_identity": true,
   "classification": "EXACT_Q_SQRT2",
-  "combined_filter_budget_lt_45_over_4_using_log2sq_lt_half": true,
   "current_charge": {
-    "a": "231285439/69516948",
-    "b": "37590283/69516948"
+    "a": "14014874005/32000000",
+    "b": "-9814156296/32000000"
   },
   "current_charge_lt_9_over_2": true,
+  "cycle_H_at_1": "1/2",
   "degrees": {
-    "W_minus": 6,
-    "W_plus": 6
+    "W_minus": 10,
+    "W_plus": 10
   },
   "does_not_prove": [
-    "delayed-state reflected recurrence",
+    "joint delayed-state reflected recurrence",
     "Riemann Hypothesis"
   ],
-  "gauge_charge": {
-    "a": "12658478781312551/805434343205784",
-    "b": "-2279554550415581/604075757404338"
-  },
-  "gauge_charge_lt_21_over_2": true,
+  "gauge_has_factor_one_minus_z": true,
+  "gauge_has_factor_z": true,
   "gauge_min_delay_blocks": 1,
+  "gauge_source_type": "strictly_delayed_ordinary_mobius",
   "normalized_current_charge_lt_2_over_5": true,
-  "schema": "X-34401-q4-compact-parity-synthesis-v1",
-  "sha256_without_digest": "48b3b03122bbbba98998ed8650b8fe9e6d3ff9843390a15d711bcc14c3f5984e"
+  "schema": "X-34401-q4-compact-parity-synthesis-v2",
+  "sha256_without_digest": "05fbc3e49a729957d3253593d566e131f100964d1ac80144b4ae423c47ffd65e"
 }
