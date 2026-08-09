@@ -1,0 +1,15 @@
+{
+  "all_bernstein_coefficients_strictly_positive": true,
+  "classification": "EXACT_Q_SQRT2_BERNSTEIN",
+  "critical_jet_frame": "2|q_circ|^2 <= |q_+|^2+|q_-|^2+|B_+|^2+|B_-|^2",
+  "determinant_bernstein_coefficients": 36,
+  "determinant_polynomial_verified": true,
+  "does_not_prove": [
+    "final reflected no-double-spend recurrence",
+    "Riemann Hypothesis"
+  ],
+  "principal_minor_bernstein_coefficients": 10,
+  "principal_minor_polynomial_verified": true,
+  "schema": "X-34402-q4-parity-jet-frame-v1",
+  "sha256_without_digest": "4a4c3cffc2b803827776066aaab27bb8d058a31ad0bac3fe41e1f3b8654982b6"
+}
