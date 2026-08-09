@@ -1,0 +1,28 @@
+{
+  "adverse_transition_gates_positive": true,
+  "adverse_transition_min_margin": {
+    "K": 141,
+    "lower_margin_scaled_1e16": "7359711752558316",
+    "orientation_decimal": "0.0919963969069789"
+  },
+  "classification": "DIRECTED_OUTER_TWO_HUNDRED_FIFTY_FIVE_TWO_HUNDRED_FIFTY_SIXTHS_SHARP_VERIFIED",
+  "continuum_tail_lower_gt_3_over_40": true,
+  "digits": 16,
+  "finite_tail_endpoint_max": 262143,
+  "finite_tail_endpoint_min": 256,
+  "finite_tail_endpoints_checked": 261888,
+  "finite_tail_min_margin_endpoint": 511,
+  "finite_tail_min_margin_scaled": "648552276503135893624447172192",
+  "new_cells_strictly_negative": true,
+  "proof_boundary": "imports L-32310 for j>T/128; finite tail gate T=256..262143; T>=262144 analytic; fixed quotient gates K=128..255; RH not certified",
+  "same_cell_gates_positive": true,
+  "same_cell_min_margin": {
+    "K": 139,
+    "lower_margin_scaled_1e16": "1092549598760356",
+    "orientation_decimal": "0.0136568699845045"
+  },
+  "schema": "X-32307-outer-two-hundred-fifty-five-two-hundred-fifty-sixths-v1",
+  "sha256_without_digest": "ac03ded24611dfcb9cca0af6a647cd261b2434406f49b896d16eb27aabeba485",
+  "tail_at_T262144_gt_1_over_16": true,
+  "tail_error_upper_lt_3162": true
+}
