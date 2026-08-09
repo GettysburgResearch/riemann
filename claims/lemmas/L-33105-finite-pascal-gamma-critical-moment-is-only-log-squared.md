@@ -157,7 +157,8 @@ Integral comparison yields a uniform constant bound, and
 \boxed{
 \mathbb E[V_n^{-1/2}]\to\frac43.
 }
-\tag{L-33105.10]
+\tag{L-33105.10}
+\]
 
 Therefore two finite Pascal generations have uniformly bounded ordinary square-root amplification. The only logarithmic growth appears at the much stronger exponential boundary corresponding to the continuum Gamma moment pole.
 
