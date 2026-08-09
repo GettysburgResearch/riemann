@@ -8,19 +8,19 @@ Scope: structural results about the WSTS functional; no RH claim
 
 ## 1. The z-max is (almost) redundant [top half PROVED; collapse conditional on Lemma S]
 
-**Proposition A (unconditional top-half kill).** For every prime \(Y<p<X\): \(s_X(p)\le-b_X(p)/p<0\) (with sandwich \(\ge-b_X(p)/p-2^{3/2}X^{-3/2}\)); hence \(T^s(z)\le0\) for ALL \(z>Y\) regardless of the primes, and \(B_X=\max_{2\le z\le Y}[T^s(z)]_+\). The knife-edge region \(z\approx X\) (margins \(\sim10^{-6}\)) carries **zero** RH-sensitivity. Top-half reservoir: \(T^s(Y+1)=-(2-2\sqrt2\log2)\sqrt X(1+o(1))=-0.0395\sqrt X\).
+**Proposition A (unconditional top-half kill).** For every prime \(Y<p<X\): \(s_X(p)\le-b_X(p)/p<0\) (with sandwich \(\ge-b_X(p)/p-2^{3/2}X^{-3/2}\)). *Proof.* \(2p>X\) forces \(v_p(b_X)=b_X(p)-b_X(p+1)\); on \([Y,X]\), \(b_X''(m)=m^{-3/2}(1-\tfrac12\log(X/m))>0\) (since \(X/m\le2+2/(X-1)<e^2\)), so by convexity \(b_X(p)-b_X(p+1)\le-b_X'(p)\); and \(-b_X'(m)-m^{-1/2}\log(X/m)=-m^{-1/2}[2\log(X/m)-4(1-\sqrt{m/X})]=-b_X(m)/m\), which is \(<0\) on \([2,X)\) because \(\varphi(u)=\log(1/u)-2(1-\sqrt u)\) decreases strictly to \(\varphi(1)=0\). ∎; hence \(T^s(z)\le0\) for ALL \(z>Y\) regardless of the primes, and \(B_X=\max_{2\le z\le Y}[T^s(z)]_+\). The knife-edge region \(z\approx X\) (margins \(\sim10^{-6}\)) carries **zero** RH-sensitivity. Top-half reservoir: \(T^s(Y+1)=-(2-2\sqrt2\log2)\sqrt X(1+o(1))=-0.0395\sqrt X\).
 
 **Lemma S (verified exactly to \(X=5\cdot10^5\); statement NUMERICAL_ONLY).** \(s_X(q)>0\) for all integers \(2\le q<c^*X\) and \(\le0\) for \(c^*X<q\le Y\), \(c^*=0.1408512\ldots\) (root of an explicit \(N=7/N'=3\) cell equation), with \(O(1)\) ambiguous integers at the threshold. At \(X=5\cdot10^5\): zero exceptions among 64,497 integers below threshold (min \(\sqrt q\,s=+0.0256\)) and none above (max \(\sqrt q\,s=-0.0028\)).
 
 **Collapse (conditional on Lemma S).** \(B_X=[T^s(2)]_+ +O(X^{-1}\log^2X)\): the max over \(z\) is redundant and WSTS \(\iff[\sum_{p\le X}(\log p)s_X(p)]_+=O_\varepsilon(X^\varepsilon)\) — one scalar per \(X\), equal (Stirling bridge) to minus the ramp deficit. Bulk argmax is exactly \(z=2\) at every tested \(X\); binding margin \(-T^s(2)\approx0.17\log X+0.4\).
 
-## 2. Explicit-formula geometry [PROVED unless noted]
+## 2. Explicit-formula geometry [PROVED unless tagged (numerical)]
 
 - The dyadic shell part of the WSTS kernel is exactly the right half of the **Fejér kernel of support \(\log2\)** translated to \(\log Y\); on the critical line its weight is \(2|\sin(\gamma\log2/2)|/\gamma^2\).
 - **Blind spots:** the shell kernel vanishes identically at \(\gamma\in(2\pi/\log2)\mathbb Z\approx9.0647\mathbb Z\). Shell-only equivalence arguments at fixed \(z\) are therefore incomplete; the surviving consumers (T-90001 §4) act on the undifferenced \(z=2\) functional, whose per-zero weight \(-(\rho-\frac12)^{-2}\) never vanishes.
 - **Small-support Weil positivity cannot touch WSTS** (Bochner): any even \(L^1\) function with nonnegative transform and \(G(0)=0\) is 0; every evenized WSTS tail kernel vanishes at 0. The known unconditional positivity regime (support \(\sim\log2\), primes {2,3}) intersects the WSTS test family only at 0.
-- Under RH the shell zero-sum is absolutely bounded: \(\sum_\rho4|\sin(\gamma\log2/2)|/\gamma^2\approx0.076+\) tail \(<0.005\), uniformly in \(X\).
-- Lomb–Scargle of the detrended \(z=2\) functional over 260 scales peaks exactly at \(\gamma_1..\gamma_5\) with amplitudes matching \(4|\sin(\gamma\log2/2)|/\gamma^2\) within 0.98–1.14 — the dual is not just formal; the zeros are visible in the data.
+- Under RH the shell zero-sum is absolutely bounded: \(\sum_\rho4|\sin(\gamma\log2/2)|/\gamma^2\approx0.076+\) tail \(<0.005\), uniformly in \(X\) (numerical evaluation over 500 zeros; the tail estimate is analytic).
+- (numerical) Lomb–Scargle of the detrended \(z=2\) functional over 260 scales peaks exactly at \(\gamma_1..\gamma_5\) with amplitudes matching \(4|\sin(\gamma\log2/2)|/\gamma^2\) within 0.98–1.14 — the dual is not just formal; the zeros are visible in the data.
 
 ## 3. Hardness map: what cannot work [key items PROVED]
 

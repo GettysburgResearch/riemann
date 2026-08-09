@@ -1,7 +1,7 @@
 # T-90001 — The theta bridge: WSTS ⟺ RH as a short self-contained theorem
 
 Claim ID: `T-90001` (provisional range 90001+; allocate at registry before integration)
-Status: **PROPOSED COMPLETE EQUIVALENCE — BOTH DIRECTIONS WRITTEN AND INDEPENDENTLY RE-DERIVED THIS SESSION; THREE NAMED BOOKKEEPING FLAGS REMAIN (none arithmetic, none deep)**
+Status: **PROPOSED EQUIVALENCE — BOTH DIRECTIONS WRITTEN AND INDEPENDENTLY RE-DERIVED THIS SESSION; FOUR NAMED FLAGS REMAIN (none arithmetic, none deep; verification-trail disclosure: §6)**
 Authoring: `claude-fable-5` session `riemann-proof-review-8nz34i` — composed from 10+ independent derivation agents with cross-examination; all load-bearing identities machine-validated; the Moat Lemma's key identity re-verified by the session author (sympy + mpmath + hand proof of `S_N ≤ 2√N − 1`)
 Date: 2026-08-09
 Supersedes (as proof architecture only): the dependency stack of `T-27501` — `L-23823`–`L-23826`, `T-23811`, the PR #248 seed bound, and the source-pinned square-screw/Landau consumer. Frozen reviewed objects keep their identities.
@@ -25,7 +25,7 @@ T^s(z)=\sqrt X\,H_c(z/X)+\mathcal E_{X,Y}(z)+\mathrm{fl}(z),\qquad
 |\mathrm{fl}(z)|\le\zeta(3/2)\,(-\zeta'(3/2))\,(2+\log X)\approx10.3\,(2+\log X).
 \]
 Hence \(B_X\le\sup_z[\sqrt X H_c(z/X)]_++\sup_z(\mathcal E_{X,Y}(z))_++10.3(2+\log X)\).
-Proof mechanism: \(b(kq)-b(kq+1)=X^{-1/2}\int_0^1g((kq+t)/X)dt\); \(|g'(u)|=u^{-3/2}|\log u+2|/2\) gives the per-modulus floor \(|r_X(q)-X^{-1/2}E(q/X)|\le(\zeta(3/2)/2)q^{-3/2}(2+\log(X/q))\), uniform to \(q=2\), no prime input; difference at \(X,Y\), sum over integers, Stieltjes-split \(d\vartheta=dt+dR\). (Session author checked the \(g'\) bound, the per-cell summation, and the constant arithmetic by hand.) Validated numerically at machine precision at \(X=500\ldots2\cdot10^5\), all \(z\) (four independent implementations; two normal forms reconciled to 4.6e-11).
+Proof mechanism: \(b(kq)-b(kq+1)=X^{-1/2}\int_0^1g((kq+t)/X)dt\) — for the top cell \(kq\le X<kq+1\) this requires extending \(b_X\) by its formula to \([X,X+1]\) (harmless: the \(C^1\) tangency makes the discrepancy vs the zero-extension \(\le\tfrac12X^{-3/2}\) per modulus, absorbed by the floor's \(\ge2\times\) slack); \(|g'(u)|=u^{-3/2}|\log u+2|/2\), which is **not** monotone on \((0,1]\), so the cell-sup step routes through the decreasing majorant \(M(u)=u^{-3/2}(2-\log u)/2\) (\(M'<0\) for \(u<e^{8/3}\)); this gives the per-modulus floor \(|r_X(q)-X^{-1/2}E(q/X)|\le(\zeta(3/2)/2)q^{-3/2}(2+\log(X/q))\), uniform to \(q=2\), no prime input; difference at \(X,Y\), sum over integers, Stieltjes-split \(d\vartheta=dt+dR\). (Session author checked the \(g'\) bound, the per-cell summation, and the constant arithmetic by hand.) Validated numerically at machine precision at \(X=500\ldots2\cdot10^5\), all \(z\) (four independent implementations; two normal forms reconciled to 4.6e-11).
 
 ## 2. The Moat Lemma (proved)
 
@@ -37,8 +37,8 @@ Proof mechanism: \(b(kq)-b(kq+1)=X^{-1/2}\int_0^1g((kq+t)/X)dt\); \(|g'(u)|=u^{-
 J'(\theta)=2\theta^{-3/2}\bigl[N\theta+1-(S_N+1)\sqrt\theta\bigr]
 \ \ge\ 2\theta^{-3/2}\bigl(\sqrt{N\theta}-1\bigr)^2\ \ge\ 0,
 \]
-the middle inequality being exactly \(S_N\le2\sqrt N-1\) (induction: \(2\sqrt N-2\sqrt{N-1}=2/(\sqrt N+\sqrt{N-1})\ge N^{-1/2}\), equality at \(N=1\)). So \(J\) is nondecreasing with \(J(1)=0\): \(H=\sqrt\theta\,J\le0\). For \(\theta\le c\): \(H_c(\theta)=\sqrt\theta[J(\theta)-J(\theta/c)]\le0\) by monotonicity (\(\theta/c>\theta\)); for \(\theta>c\), \(H_c=H\le0\). ∎
-Note the lemma holds for **every** ratio \(c\in(0,1)\), so \(Y=\lfloor X/2\rfloor\) discreteness is free. Scaling profile: \(\min H_c\approx-0.123\) at \(\theta\approx0.141\) (three independent measurements agree to 3 digits; the threshold constant is the root of an explicit \(N=7/N'=3\) cell equation).
+the middle inequality being exactly \(S_N\le2\sqrt N-1\) (induction: \(2\sqrt N-2\sqrt{N-1}=2/(\sqrt N+\sqrt{N-1})\ge N^{-1/2}\), equality at \(N=1\)). The antiderivative is global and explicit: on the cell of index \(N\), \(H(\theta)=-2\sqrt\theta[A_N+(S_N+1)\log\theta+2S_N-2]+4N\theta-4\); one checks \(H'=-E\) per cell, \(H(1)=0\) (at \(N=1\): \(S_1=1,A_1=0\)), and the jump of \(H\) at every knot \(\theta=1/N\) is identically zero (using \(A_N=A_{N-1}+N^{-1/2}\log N\), \(S_N=S_{N-1}+N^{-1/2}\)) — so no integration constant is dropped and \(J=H/\sqrt\theta\) is continuous. \(J\) nondecreasing per cell + continuous + \(J(1)=0\): \(H=\sqrt\theta\,J\le0\). For \(\theta\le c\): \(H_c(\theta)=\sqrt\theta[J(\theta)-J(\theta/c)]\le0\) by monotonicity (\(\theta/c>\theta\)); for \(\theta>c\), \(H_c=H\le0\). ∎
+Note the lemma holds for **every** ratio \(c\in(0,1)\), so \(Y=\lfloor X/2\rfloor\) discreteness is free. Scaling profile (at \(c=1/2\)): \(\min H_c\approx-0.123\) at \(\theta\approx0.141\) (three independent measurements agree to 3 digits; the threshold constant is the root of an explicit \(N=7/N'=3\) cell equation). At \(c=1/3\) the minimum deepens to \(\approx-0.175\) at \(\theta\approx0.120\) with a different extremal cell pair; the lemma itself asserts only \(H_c\le0\), for every \(c\).
 
 ## 3. RH ⇒ WSTS (complete modulo Flag 1)
 
@@ -48,7 +48,7 @@ Profile bounds \(|E_c(\theta)|\le C_E\theta^{-1/2}(1+\log(1/\theta))\), \(|E_c'(
 \]
 (honest exponent **3**, not the packet's 4: the dyadic difference cancels one \(\log\) — the discrete-difference envelope is \(\sup_t t^{3/2}|\Delta d_s|=\log2\), constant in \(X\); measured truth \(\approx0.0084\log^2\); observed \(B_X=0\) outright at all tested \(X\le5\cdot10^5\)). A sharper route bounds the zero-sum absolutely: \(\sum_\rho4|\sin(\gamma\log2/2)|/\gamma^2\approx0.076\) uniformly in \(X\), suggesting \(\log^2\); not needed for the equivalence.
 
-## 4. WSTS ⇒ RH (complete; three independent write-ups agree)
+## 4. WSTS ⇒ RH (complete modulo Flag 2; three independent write-ups agree)
 
 Dual identity (**verified to 12–23 digits**, and \(\hat E(1)=\int_0^1E=0\) exactly — the \(4\sqrt X\) cancellation in dual form; warning: a 3-term truncation of \(E\) suggests a spurious \(+0.001\sqrt X\) drift — the full resummation gives exactly 0):
 \[
@@ -59,18 +59,19 @@ Consumer: \(z=2\) reading of \(B_X\) + dyadic telescope gives \(A_X:=\sum_{p\le 
 \[
 G(w)=\int_1^\infty D_X\,X^{-w-1}dX=-\hat E(w+\tfrac12)\,\frac{\zeta'}{\zeta}(w+\tfrac12)+H_0(w),\ H_0\ \text{holomorphic in }\Re w>0,
 \]
-whose only singularities in \(\Re w>0\) are simple poles at \(w=\rho-\frac12\) with residue \(m_\rho(\rho-\frac12)^{-2}\ne0\); \(w=\frac12\) is regular (\(\hat E(1)=0\)); **no \(1/\zeta\) factor appears anywhere** (passes the repo's R-26902 discipline check explicitly); real-singularity audit on the positive axis uses \(\eta>0\Rightarrow\zeta<0\) on \((0,1)\). Landau's one-sign theorem on the nonnegative-integrand transform of \(C''X^\varepsilon-(4\sqrt X-R(X))\), \(\varepsilon\)-diagonal over a putative zero, functional equation. Classical inputs only: Mertens, Chebyshev \(\psi-\vartheta\ll\sqrt x\), Stirling, Landau. One variant of this consumer was adversarially cross-examined in-session (all four flagged suspects — integrand nonnegativity, Fubini exchange, \(\vartheta/\psi\), \(\varepsilon\)-diagonal — checked clean); two further independent write-ups (explicit-\(\hat E\) route; \(z=2\)-endpoint route) agree.
+whose only singularities in \(\Re w>0\) are simple poles at \(w=\rho-\frac12\) with residue \(m_\rho(\rho-\frac12)^{-2}\ne0\); \(w=\frac12\) is regular (\(\hat E(1)=0\)); **no \(1/\zeta\) factor appears anywhere** (passes the repo's R-26902 discipline check explicitly); real-singularity audit on the positive axis uses \(\eta>0\Rightarrow\zeta<0\) on \((0,1)\). Landau's one-sign theorem on the nonnegative-integrand transform of \(C''X^\varepsilon-(4\sqrt X-\mathcal R(X))\), where \(\mathcal R(X)=\sum_{p\le X}(\log p)p^{-1/2}\log(X/p)\) is the ramp sum (NOT the \(\vartheta\)-error \(R(t)\) of §0 — distinct symbols), \(\varepsilon\)-diagonal over a putative zero, functional equation. Classical inputs only: Mertens, Chebyshev \(\psi-\vartheta\ll\sqrt x\), Stirling, Landau. One variant of this consumer was adversarially cross-examined in-session (all four flagged suspects — integrand nonnegativity, Fubini exchange, \(\vartheta/\psi\), \(\varepsilon\)-diagonal — checked clean); two further independent write-ups (explicit-\(\hat E\) route; \(z=2\)-endpoint route) agree.
 En route, (T-27501.4) — the sharp one-sided ramp — is derived from WSTS alone. **This replaces the repo's source-pinned square-screw consumer.**
 Blind-spot audit: the dyadic shell kernel vanishes at \(\gamma\in(2\pi/\log2)\mathbb Z\); the consumers above act on the **undifferenced** \(z=2\) functional (weight \(-(\rho-\frac12)^{-2}\), never zero), so no blind spot. Any shell-only equivalence argument at fixed \(z\) is incomplete — audit flag for the original T-27501 architecture.
 
-## 5. Calibration and unconditional status (proved this session)
+## 5. Calibration and unconditional status (derived this session; full write-ups not retained in-repo — reprove at review)
 
 - **Theorem A.** Unconditionally \(B_X\le C\sqrt X\exp(-c(\log X)^{3/5}(\log\log X)^{-1/5})\) (Vinogradov–Korobov applied through Prop. 1).
-- **Theorem B** (window). For \(4\le X\le X_0\approx2.2\cdot10^{25}\): \(B_X\le(1/(48\pi))\log^4X+\)lower order, via Büthe/Platt–Trudgian partial verification (**Flag 3: literature constants quoted from memory; check before integration**).
+- **Theorem B** (window). For \(4\le X\le X_0\approx2.2\cdot10^{25}\): \(B_X\le(1/(48\pi))\log^4X+\)lower order (this \(\log^4\) is the unconditional-window bound, distinct from §3's RH-conditional \(\log^3\)), via Büthe/Platt–Trudgian partial verification (**Flag 3: literature constants quoted from memory; check before integration**).
 - **Theorem C** (exact calibration). If \(B_X\le CX^{1/2-\delta}\) then \(\zeta\ne0\) on \(\Re s>1-\delta\); conversely a zero-free strip of width \(\eta\) gives \(B_X\ll X^{1/2-\eta}\log^3X\). **The unconditional exponent of \(B_X\) is identically the best zero-free-strip width — currently 0.** The elementary programme's open core *is* the classical wall, as a theorem rather than a slogan.
 
-## 6. Flags (all that separates this from theorem-grade)
+## 6. Flags
 
+0. **The three §4 consumer write-ups are not physically in this repository** — the committed §4 is a dense summary; the full arguments live in session workflow journals. Reproducing them on the page is the first review task. (This is the largest single gap between this note and theorem-grade residency.)
 1. **\(C_E,C_E'\) explicit values** (absolute-constant version proved — sufficient for §3; the specific value 1 rests on Euler–Maclaurin bookkeeping + certification to \(N=2\cdot10^4\)).
 2. **Real-\(X\) interpolation** \(|A_X-A_{\lfloor X\rfloor}|\ll\log X/\sqrt X\) feeding the Mellin integral in one consumer variant (elementary jump audit; sketched; the cross-examined variant handles continuity directly).
 3. **Theorem B's cited numerical constants** (not load-bearing for the equivalence).
