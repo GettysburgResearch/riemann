@@ -90,7 +90,7 @@ has transform `(1-2^-z)Ahat(z)` and hence the exact negative drift coefficient
 
 ```text
 kappa=(1+zeta(1/2))log(2)/2
-     =-0.15954671491971181285...
+     =-0.1595467149197118020982729938...
 ```
 
 This analytically explains the persistent negative endpoint shell seen in every
