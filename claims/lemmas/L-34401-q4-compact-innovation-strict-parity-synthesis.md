@@ -1,14 +1,14 @@
 # L-34401 — The compact Q=4 innovation has a strict parity-frame synthesis
 
 Claim ID: `L-34401`  
-Title: A quadratic Bézout cycle reconstructs the Q=4 compact innovation with critical current-synthesis charge below two fifths of the parity-frame reserve, and differentiation creates only strict-delay gauges  
+Title: A finite Bézout cycle reconstructs the Q=4 compact innovation with critical current charge below two fifths of the parity-frame reserve, while the complete derivative gauge factors through a strictly delayed ordinary Möbius source  
 Status: **PROPOSED COMPLETE EXACT FINITE-FILTER THEOREM — INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-sol`  
 Created: 2026-08-09  
-Dependencies: PR #263 `L-26205/L-26206`; PR #342 `L-34003`; elementary polynomial algebra  
-Scope: exact compact-source/current synthesis and critical filter budget; no global delayed-state recurrence or RH conclusion
+Dependencies: PR #263 `L-26205/L-26206`; PR #334 `L-32408`; PR #342 `L-34003`; elementary polynomial algebra  
+Scope: exact compact-source/current synthesis and gauge typing; no final delayed-state recurrence or RH conclusion
 
-## 1. Sources
+## 1. Common odd Euler core
 
 Put
 
@@ -21,45 +21,38 @@ z=2^{-s},
 and retain the parity analysis polynomial
 
 \[
- p(z)=(1-z)(1-2z)(1-\sqrt2 z)^2.
+p(z)=(1-z)(1-2z)(1-\sqrt2 z)^2.
 \]
 
-The two parity sources are
+The parity sources are
 
 \[
- B_+(s)=p(z)\mathcal O(s),
+B_+(s)=p(z)\mathcal O(s),
 \qquad
- B_-(s)=p(-z)\mathcal O(s).
+B_-(s)=p(-z)\mathcal O(s).
 \tag{L-34401.1}
 \]
 
-PR #263 proves the exact frame reserve
+PR #263 proves on the closed critical annulus
 
 \[
-\boxed{|p(z)|^2+|p(-z)|^2\ge {45\over4}}
-\tag{L-34401.2}
+{1\over2}\le |z|\le{1\over\sqrt2}
 \]
 
-throughout the closed critical annulus
+the uniform frame reserve
 
 \[
-{1\over2}\le|z|\le {1\over\sqrt2}.
+\boxed{|p(z)|^2+|p(-z)|^2\ge {45\over4}.}
+\tag{L-34401.2}
 \]
 
 The compact Q=4 innovation source of PR #342 is
 
 \[
- B_\circ(s)
- ={1-4^{1-s}\over\zeta(s)}.
+B_\circ(s)={1-4^{1-s}\over\zeta(s)}.
 \]
 
-Since
-
-\[
-{1\over\zeta(s)}=(1-z)\mathcal O(s),
-\]
-
-its odd-core numerator is the degree-three polynomial
+Since `1/zeta=(1-z)O`,
 
 \[
 \boxed{
@@ -70,14 +63,14 @@ B_\circ(s)=T(z)\mathcal O(s).
 \tag{L-34401.3}
 \]
 
-Thus the live Q=4 compact innovation and the live parity frame are finite polynomial sources over the **same** odd Euler core.
+Thus the compact Q=4 innovation and the parity frame are finite polynomial sources over exactly the same odd Euler core.
 
 ## 2. Bézout cycle freedom
 
-PR #263 gives
+PR #263 supplies
 
 \[
- U(z)p(z)+U(-z)p(-z)=1,
+U(z)p(z)+U(-z)p(-z)=1,
 \tag{L-34401.4}
 \]
 
@@ -104,62 +97,57 @@ W_-(z)&=T(z)U(-z)-H(z)p(z).
 \tag{L-34401.6}
 \]
 
-Then the cycle terms cancel exactly and
+The cycle terms cancel identically:
 
 \[
-\boxed{
-W_+(z)p(z)+W_-(z)p(-z)=T(z).
-}
+\boxed{W_+(z)p(z)+W_-(z)p(-z)=T(z).}
 \tag{L-34401.7}
 \]
 
-This is genuine synthesis freedom, not an approximation.
+No approximation or inverse filter occurs.
 
-## 3. An explicit strict certificate
+## 3. A simple exact certificate
 
 Take
 
 \[
-H(z)=h_0+h_1z+h_2z^2
+\boxed{
+H(z)={1\over1000}
+\left(
+123+296z-387z^2+117z^3-14z^4+62z^5+303z^6
+\right).
+}
 \tag{L-34401.8}
 \]
 
-with
+In particular,
 
 \[
-\boxed{
-\begin{aligned}
-h_0&=-{2525\over1511238}+{264889\sqrt2\over3022476},\\
-h_1&={15421\over3174}-{6805\sqrt2\over2116},\\
-h_2&=-{3767648\over755619}+{4893731\sqrt2\over1511238}.
-\end{aligned}}
+\boxed{H(1)={1\over2}.}
 \tag{L-34401.9}
 \]
-
-The coefficients are merely one exact certificate; no optimality claim is needed.
 
 Write
 
 \[
-W_\pm(z)=\sum_{j=0}^{6}w_{\pm,j}z^j.
+W_\pm(z)=\sum_{j=0}^{10}w_{\pm,j}z^j.
 \]
 
-On the critical line, multiplication by `z^j` is a delay of `j log 2` with squared amplitude `2^{-j}`. Define the complete two-channel critical Cauchy charge
+On the critical line, `z^j` is a delay by `j log 2` with squared amplitude `2^{-j}`. Define
 
 \[
- q_W
- =\sum_{j=0}^{6}
- (w_{+,j}^2+w_{-,j}^2)2^{-j}.
+q_W=\sum_{j=0}^{10}
+(w_{+,j}^2+w_{-,j}^2)2^{-j}.
 \tag{L-34401.10}
 \]
 
-Exact simplification in `Q(sqrt(2))` gives
+Exact arithmetic in `Q(sqrt(2))` gives
 
 \[
 \boxed{
- q_W
- ={231285439+37590283\sqrt2\over69516948}
- =4.0917522304\ldots .
+q_W
+={14014874005-9814156296\sqrt2\over32000000}
+=4.2362833733\ldots .
 }
 \tag{L-34401.11}
 \]
@@ -175,53 +163,45 @@ Indeed
 
 \[
 {9\over2}-q_W
-={81540827-37590283\sqrt2\over69516948}>0,
+={-13870874005+9814156296\sqrt2\over32000000}>0,
 \]
 
-and the last numerator is positive because
+because
 
 \[
-81540827^2-2\cdot37590283^2
-=3822847715803751>0.
+2(9814156296)^2-(13870874005)^2
+=234181942048139207>0.
 \]
 
-Combining (L-34401.2) and (L-34401.12),
+Comparing with (L-34401.2),
 
 \[
 \boxed{
- {q_W\over45/4}<{2\over5}.
+{q_W\over45/4}<{2\over5}.
 }
 \tag{L-34401.13}
 \]
 
-Thus the compact Q=4 source has a finite parity synthesis whose complete critical coefficient-square charge is strictly below two fifths of the fixed parity-frame reserve.
+Thus the **complete current-scale finite synthesis** of the compact innovation uses less than two fifths of the fixed parity-frame coefficient reserve.
 
-## 4. Source reconstruction
+No numerical optimization statement is used: (L-34401.8) is simply an explicit exact certificate.
 
-Substituting `z=2^{-s}` into (L-34401.7) gives the exact Dirichlet-source identity
+## 4. Exact source reconstruction
+
+Substituting `z=2^{-s}` in (L-34401.7),
 
 \[
 \boxed{
- B_\circ(s)
- =W_+(2^{-s})B_+(s)
- +W_-(2^{-s})B_-(s).
+B_\circ(s)
+=W_+(2^{-s})B_+(s)
++W_-(2^{-s})B_-(s).
 }
 \tag{L-34401.14}
 \]
 
-All delays are at most `6 log 2`. There is no infinite inverse and no division by a vertical-line multiplier.
+The synthesis has only the declared delays `0,log2,...,10log2`.
 
-For block energies
-
-\[
-E_m=\int_{I_m}(|B_+(x)|^2+|B_-(x)|^2)\,dx,
-\qquad
-I_m=[m\log2,(m+1)\log2],
-\]
-
-ordinary Hilbert-space Cauchy--Schwarz gives the corresponding finite-delay source estimate with coefficient budget `q_W`.
-
-## 5. Differentiate: the current gauge is strictly delayed
+## 5. Differentiate the reconstruction
 
 Let
 
@@ -237,77 +217,87 @@ Since
 =-(\log2)zW_\pm'(z),
 \]
 
-differentiating (L-34401.14) gives exactly
+differentiating (L-34401.14) gives
 
 \[
 \boxed{
 \begin{aligned}
 q_\circ={}&W_+(z)q_+ +W_-(z)q_-\\
 &-(\log2)z
-\bigl[W_+'(z)B_+ +W_-'(z)B_-\bigr].
+\left[W_+'(z)B_+ +W_-'(z)B_-\right].
 \end{aligned}}
 \tag{L-34401.15}
 \]
 
-The first line is the current synthesis. Its critical weighted square charge is exactly `q_W<2/5*(45/4)`.
+The first line is the complete parity-current synthesis and has the strict charge (L-34401.13).
 
-The second line is the complete derivative gauge. It contains an explicit factor `z`. Hence
+The second line is the exact derivative gauge. We now identify its source completely rather than leaving it as an arbitrary parity state.
+
+## 6. The derivative gauge is only delayed ordinary Möbius source
+
+Define
 
 \[
-\boxed{
-\text{every gauge term is delayed by at least one }\log2\text{ block.}
-}
+G_H(z)
+=z\left[W_+'(z)p(z)+W_-'(z)p(-z)\right].
 \tag{L-34401.16}
 \]
 
-There is **no zero-delay current gauge**.
-
-This is stronger than synthesizing the full inverse-zeta current and only afterwards applying the Q=4 high-pass: the main-pole-killing polynomial has been included before the Bézout cycle is optimized.
-
-## 6. Optional exact gauge-size firewall
-
-Define the derivative coefficient-square budget
+It has an explicit factor `z` by definition. Direct differentiation of (L-34401.6), followed by evaluation at `z=1`, gives for an arbitrary cycle polynomial `H`
 
 \[
- q_G
- =\sum_{j=1}^{6}j^2
- (w_{+,j}^2+w_{-,j}^2)2^{-j}.
+\boxed{G_H(1)=3-6H(1).}
 \tag{L-34401.17}
 \]
 
-The exact value is
+For the certificate (L-34401.8), equation (L-34401.9) therefore gives
 
 \[
-\boxed{
-q_G
-={37975436343937653-9118218201662324\sqrt2
- \over2416303029617352}
-< {21\over2}.
-}
+G_H(1)=0.
+\]
+
+Consequently there is one polynomial
+
+\[
+R_H(z)\in\mathbf Q(\sqrt2)[z],
+\qquad \deg R_H\le11,
+\]
+
+such that
+
+\[
+\boxed{G_H(z)=z(z-1)R_H(z).}
 \tag{L-34401.18}
 \]
 
-For example the final inequality follows from
+Since
 
 \[
-2(9118218201662324)^2-(12604254532955457)^2
-=7416574014724026340238696083103>0.
+B_0(s)={1\over\zeta(s)}=(1-z)\mathcal O(s),
 \]
 
-Since `(log 2)^2<1/2`, the purely filter-theoretic direct-sum coefficient budget obeys
+the derivative gauge in (L-34401.15) becomes exactly
 
 \[
- q_W+(\log2)^2q_G
- <q_W+{q_G\over2}
- <{45\over4}.
+\boxed{
+-(\log2)G_H(z)\mathcal O(s)
+=(\log2)zR_H(z)B_0(s).
+}
 \tag{L-34401.19}
 \]
 
-Equation (L-34401.19) is only a coefficient-budget firewall. It does **not** authorize spending one Selberg reserve twice on current and bare-source species. The useful production statement is the strict current-scale bound (L-34401.13) together with the strict delay (L-34401.16).
+This has two important consequences:
 
-## 7. Connection to the actual Q=4 current innovation
+1. every gauge term is delayed by at least one `log 2` block;
+2. every gauge term is an **ordinary Möbius boundary source**, not a new parity/current species.
 
-PR #342 proves the exact source identity
+PR #334 `L-32408` already identifies the reconstructed ordinary Möbius boundary as the coefficient-one unweighted boundary channel. Thus the compact-innovation differentiation introduces no new source type.
+
+Equation (L-34401.19) is a source identity only; this lemma does not spend the same reflected reserve twice on the current and delayed boundary channels.
+
+## 7. Actual Q=4 current innovation
+
+PR #342 proves
 
 \[
 (\varepsilon-\delta_4)q_4
@@ -315,35 +305,36 @@ PR #342 proves the exact source identity
 \tag{L-34401.20}
 \]
 
-In critically normalized physical coordinates every `delta_4` term is a strict delay by `log 4`. Therefore combining (L-34401.15) and (L-34401.20) gives the complete source classification
+In critically normalized physical coordinates, every `delta_4` term is delayed by `log 4`. Combining (L-34401.15), (L-34401.19), and (L-34401.20) gives the exact source classification
 
 ```text
 current scale:
-    finite parity-current synthesis, charge < 2/5 of the fixed frame reserve;
+    finite parity-current synthesis,
+    critical charge < 2/5 of the fixed parity-frame reserve;
 
 strictly earlier blocks:
-    the parity bare-source derivative gauge;
-    the explicit Q=4 bare-source gauge.
+    finite ordinary-Mobius boundary gauge from (L-34401.19);
+    explicit Q=4 bare-source gauge from (L-34401.20).
 ```
 
-Thus the **balanced compact innovation has no unsynthesized current-scale source left**. The remaining obstruction is a delayed-state/reflected-ledger problem, not a current-scale arithmetic transference problem.
+Hence the compact innovation has **no unsynthesized current-scale arithmetic source** and **no new derivative-gauge source species**.
 
-## 8. What this closes and what remains
+## 8. Proof boundary
 
-Closed exactly in this lemma:
+Closed exactly here:
 
 1. finite source reconstruction of `B_circ` from the parity pair;
-2. an explicit quadratic cycle certificate;
-3. strict critical current-synthesis charge `<2/5`;
-4. exact derivative identity;
-5. absence of every zero-delay derivative gauge;
-6. composition with the live Q=4 compact innovation source.
+2. explicit rational cycle polynomial (L-34401.8);
+3. exact critical synthesis charge and strict `<2/5` bound;
+4. exact differentiated current identity;
+5. Möbius factorization of the complete derivative gauge;
+6. strict-delay classification of every gauge term;
+7. composition with the live Q=4 current innovation.
 
-Not closed:
+Still open:
 
-1. source-convolved reflected accounting of the delayed parity bare-source gauge;
-2. joint accounting with PR #341's terminal Q=4 state without double spending;
-3. the final coefficient-one block recurrence;
-4. RH.
+1. joint reflected accounting of the delayed Möbius boundary and the delayed Q=4 bare state without double spending;
+2. composition with PR #341's terminal-state curvature theorem into one coefficient-one block recurrence;
+3. RH.
 
-A reviewer should verify the finite polynomial identities and exact inequalities above. No missing delayed-state recurrence is delegated as an exercise.
+A reviewer is asked to verify the finite identities and inequalities supplied above, not to construct the remaining recurrence.
