@@ -12,7 +12,7 @@ The replay checks:
 - the explicit Cauchy–Sobolev kernel against its defining bilateral integral;
 - strict positivity of a finite evaluation Gram;
 - the two exact pole-cardinal values;
-- the index shift `q -> q+2` and pole-null index `q` on exact synthetic blocks;
+- the hyperbolic pole index shift `q -> q+1` and pole-null index `q` on exact synthetic blocks;
 - the digamma/Lévy jump identity on three Gaussian tests at 70 digits;
 - the heat-trace sign for positive spectra and exponential detection of one negative eigenvalue;
 - the globally convergent heat-moment expansion;

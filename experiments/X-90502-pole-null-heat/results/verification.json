@@ -63,45 +63,45 @@
       }
     ]
   },
-  "index_two_shift": [
+  "index_one_shift": [
     {
       "off_line_pairs": 0,
-      "pole_free_negative_index": 2,
+      "pole_free_negative_index": 1,
       "pole_null_negative_index": 0
     },
     {
       "off_line_pairs": 1,
-      "pole_free_negative_index": 3,
+      "pole_free_negative_index": 2,
       "pole_null_negative_index": 1
     },
     {
       "off_line_pairs": 2,
-      "pole_free_negative_index": 4,
+      "pole_free_negative_index": 3,
       "pole_null_negative_index": 2
     },
     {
       "off_line_pairs": 3,
-      "pole_free_negative_index": 5,
+      "pole_free_negative_index": 4,
       "pole_null_negative_index": 3
     },
     {
       "off_line_pairs": 4,
-      "pole_free_negative_index": 6,
+      "pole_free_negative_index": 5,
       "pole_null_negative_index": 4
     },
     {
       "off_line_pairs": 5,
-      "pole_free_negative_index": 7,
+      "pole_free_negative_index": 6,
       "pole_null_negative_index": 5
     },
     {
       "off_line_pairs": 6,
-      "pole_free_negative_index": 8,
+      "pole_free_negative_index": 7,
       "pole_null_negative_index": 6
     },
     {
       "off_line_pairs": 7,
-      "pole_free_negative_index": 9,
+      "pole_free_negative_index": 8,
       "pole_null_negative_index": 7
     }
   ],
@@ -148,7 +148,21 @@
         ]
       ]
     ],
-    "max_error": 0.0
+    "max_error": 0.0,
+    "pole_free_block": [
+      [
+        0.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        0.0
+      ]
+    ],
+    "pole_free_eigenvalues": [
+      -1.0,
+      1.0
+    ]
   },
   "scope": "Finite algebra and high-precision identity checks only. The trace-class, global index, and form-domain proofs are analytic and require independent review. No RH sign theorem is claimed.",
   "verdict": "PASS_X_90502_POLE_NULL_LEVY_HEAT"
