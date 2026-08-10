@@ -1,188 +1,191 @@
 # T-90301 — Inertia-tolerant Q4 recurrence as a full RH proposal
 
 Claim ID: `T-90301`  
-Title: The corrected two-state Q4 reflected programme can replace full polarized PSD by a scalar negative-eigenvalue defect; a polynomial defect ledger gives the coefficient-one recurrence and RH  
-Status: **FULL CONDITIONAL PROPOSAL — NEW REDUCTION COMPLETE, DEFECT ESTIMATE OPEN / RH-BEARING**  
+Title: The corrected two-state Q4 reflected programme does not need polarized PSD; the zero-bare relative source has an unconditionally subcritical bad eigenvalue, leaving only the complete block/delayed-state composition  
+Status: **FULL CONDITIONAL PROPOSAL — ROW-LEVEL INERTIA DEFECT CLOSED COFINALLY; GLOBAL BLOCK RECURRENCE OPEN / RH-BEARING**  
 Authoring agent: `gpt56-sol`  
 Created: 2026-08-10  
-Dependencies: `L-90301`, `L-90302`, `R-90301`; PRs #341, #342, #345, #346, #350; resident vector-valued pole-energy consumer  
+Updated: 2026-08-10 after `L-90304`  
+Dependencies: `L-90301`–`L-90304`, `R-90301`; PRs #341, #342, #345, #346, #350; resident vector-valued pole-energy consumer  
 Scope: corrected Q4/Jordan route only
 
-## 1. Frozen source-complete state
+## 1. Source-complete two-state principle
 
-Use the corrected Q2/Q4 source order and root-Haar state on PR #350 together with the exact two-state reflected ledger on PR #341.
-
-At each physical logarithmic block `J`, let
+For a twice differentiable two-state path `V`, put
 
 \[
-K_J
-\]
-
-be the complete `2 x 2` Hermitian jet-curvature matrix **after**:
-
-1. independent-frequency localization;
-2. complete source convolution;
-3. corrected second-current source order;
-4. root/low-pass state assembly;
-5. inclusion of every product-current and individual reflected term;
-6. explicit finite collars and gauges.
-
-Put
-
-\[
-E(J)=\operatorname{tr}K_J,
+K_V=V'V'^*-rac12(VV''^*+V''V^*),
 \qquad
-\delta(J)=\operatorname{tr}(K_J)_-.
+\delta(V)=\operatorname{tr}(K_V)_-.
 \tag{T-90301.1}
 \]
 
-The existing Q4 work supplies, at row/finite-block scope subject to its reviews:
-
-```text
-state dimension                                      exactly 2;
-true RH-sensitive current                            correctly placed;
-source-complete scalar augmented curvature           cofinally positive;
-critical radix-four/odd-prime reserve increment      Theta(n log n);
-complete product/individual reflected ledger         two-state;
-current-scale finite parity synthesis                strict reserve;
-all unresolved gauges                                strictly delayed / finite collar;
-neutral principal all-pass return                    explicit coefficient one.
-```
-
-The earlier proof target demanded `K_J >= 0`.  `L-90301` shows that this is stronger than the synthesis argument needs.
-
-## 2. Exact replacement for polarized PSD
-
-For every parameter-independent synthesis operator `W` with
+`L-90301` proves that every parameter-independent synthesis with `W^*W<=qI` obeys
 
 \[
-W^*W\le qI,
-\]
-
-`L-90301` gives
-
-\[
-\operatorname{tr}(W K_J W^*)
-\le q[E(J)+\delta(J)].
+\boxed{
+\mathcal C(WV)
+\le q\,[\mathcal C(V)+\delta(V)].
+}
 \tag{T-90301.2}
 \]
 
-Because the state dimension is two,
+Thus full polarized PSD is sufficient but not necessary.
+
+For a two-state matrix with positive trace,
 
 \[
-\delta(J)
-=\max\left(0,
-\frac{\sqrt{2\|K_J\|_F^2-E(J)^2}-E(J)}2
-\right),
+\boxed{
+\delta(V)\le\frac{(-\det K_V)_+}{\operatorname{tr}K_V}.
+}
 \tag{T-90301.3}
 \]
 
-and, when `E(J)>0`,
+`L-90302/L-90303` reduce the determinant to one source/current Wronskian and then to one square-versus-reserve scalar for the relative Q4 path.
+
+## 2. Zero-bare relative source closes the row-level inertia defect
+
+The decisive extra source difference is
 
 \[
-\delta(J)
-\le\frac{(-\det K_J)_+}{E(J)}.
+b_\diamond
+=(\varepsilon-\delta_4)
+ *(\varepsilon-4\delta_4)*\mu.
 \tag{T-90301.4}
 \]
 
-`L-90302` further gives an exact Wronskian expression for `det K_J`.  Thus the missing matrix theorem has become one scalar arithmetic defect.
-
-## 3. The production theorem — Q4 Inertia-Defect Recurrence (QIDR)
-
-A complete proof should emit the actual finite synthesis and establish the following statement, not merely cite it.
-
-> **QIDR.** There exist fixed `delta0>0`, `A<infinity`, and a complete source-bound Q4 block decomposition such that, for every sufficiently large `J`, the exact reflected ledger satisfies
-> \[
-> \boxed{
-> \mathcal E(J)
-> \le \mathcal E(J-\delta_0)
-> +C(1+J)^A
-> +D(J),
-> }
-> \tag{T-90301.5}
-> \]
-> where `mathcal E(J)` is the RH-sensitive physical block energy and the complete inertia forcing obeys
-> \[
-> \boxed{D(J)\le C(1+J)^A.}
-> \tag{T-90301.6}
-> \]
-> Every current-scale synthesis contribution is estimated using (T-90301.2), and `D(J)` is the explicitly emitted sum of the corresponding negative spectral masses.  The sole coefficient-one return is the declared delayed principal state.
-
-A stronger but still sufficient rowwise form is
+Its divisor prefix is
 
 \[
-(-\det K_J)_+
-\ll n\log^B n
+\varepsilon-5\delta_4+4\delta_{16},
+\]
+
+so its bare field is exactly zero on every sufficiently deep balanced row.
+
+`L-90304` couples this source leg to the compact-source relative Jordan coordinate.  Its jets are
+
+\[
+\boxed{
+V(0)=(1,0),
+\qquad
+V'(0)=(E,I),
+\qquad
+V''(0)=(E^2-R,T),
+}
+\tag{T-90301.5}
+\]
+
+where
+
+```text
+R = compact-source radix-four reserve increment = Theta_eta(n log n);
+E = O_eta(log n);
+I = the genuine RH-sensitive compact current innovation;
+T = O(n) by an exact filtered Selberg identity.
+```
+
+Therefore
+
+\[
+K=
+\begin{pmatrix}
+R&EI-T/2\\
+EI-T/2&I^2
+\end{pmatrix},
+\qquad
+\operatorname{tr}K=R+I^2>0.
+\tag{T-90301.6}
+\]
+
+Completing the determinant defect in the unknown current gives the **current-independent** estimate
+
+\[
+\boxed{
+\delta(K)
+\le\frac{T^2}{4(R-E^2)}
+=O_\eta\!\left(\frac n{\log n}\right).
+}
 \tag{T-90301.7}
 \]
 
-on the critical physical rows.  Since the existing scalar moat gives `E(J) >> n log n` there, (T-90301.4) turns (T-90301.7) into only polylogarithmic negative spectral mass.
+After critical physical normalization this is only `O_eta(1/log n)`.
+
+Thus the former statement
+
+```text
+prove the complete polarized arithmetic 2x2 matrix PSD
+```
+
+is no longer the RH-bearing row theorem.  The matrix may be indefinite; its entire bad direction is already proved lower-order on the source which carries the hard compact innovation.
+
+## 3. The remaining production theorem — Q4 Inertia-Defect Recurrence (QIDR)
+
+What remains is a block/global composition theorem, not a new RH-scale current estimate.
+
+> **QIDR.** Assemble the exact independent-frequency source-convolved block using the zero-bare relative source, the corrected Q2/Q4 finite state, and the resident terminal all-pass state.  Prove that for all sufficiently large logarithmic blocks `J`,
+> \[
+> \boxed{
+> \mathcal E(J)
+> \le
+> \mathcal E(J-\delta_0)
+> +C(1+J)^A,
+> }
+> \tag{T-90301.8}
+> \]
+> for fixed `delta0>0,A<infinity`, after charging the rowwise negative spectral mass from (T-90301.7), the fixed finite collars, and every strictly delayed gauge exactly once.
+
+The source order is mandatory: the extra `(epsilon-delta_4)` difference must be formed before the reflected individual terms are separated.  On deep balanced blocks the bare field is then exactly zero, so those individual reflected terms vanish at that source scope.
+
+The exact Q2/Q4 state identities on PR #350 supply the finite delayed-state dictionary.  `R-90301` prevents using the all-pass factor as a source-blind contraction: it is J-unitary on functional-equation off-line pairs.
 
 ## 4. QIDR implies RH
 
-Iterating (T-90301.5) through `O(J)` fixed delays gives
+Iterating (T-90301.8) through `O(J)` fixed delays gives
 
 \[
-\mathcal E(J)=O((1+J)^{A+1}).
-\tag{T-90301.8}
-\]
-
-Hence
-
-\[
-\mathcal E(J)=e^{o(J)}.
-\]
-
-The resident vector-valued pole criterion for the Q4 physical current then excludes every zeta zero with real part greater than one half.  Functional-equation symmetry gives
-
-\[
-\boxed{\mathrm{QIDR}\Longrightarrow\mathrm{RH}.}
+\mathcal E(J)=O((1+J)^{A+1})=e^{o(J)}.
 \tag{T-90301.9}
 \]
 
-No reviewer is being asked to prove QIDR: it is explicitly the remaining production theorem.
-
-## 5. Why this is a genuine weakening
-
-The previous target was
+The resident vector-valued pole criterion for the compact/Q4 physical current then excludes every zeta zero with real part greater than one half. Functional-equation symmetry gives
 
 \[
-K_J\ge0
-\quad\Longleftrightarrow\quad
-\delta(J)=0.
+\boxed{\mathrm{QIDR}\Longrightarrow\mathrm{RH}.}
+\tag{T-90301.10}
 \]
 
-QIDR allows `K_J` to be indefinite at every scale.  It requires only that the **magnitude of the bad spectral direction** be polynomially payable after complete source recombination.
+## 5. Why the Claude import materially changes the frontier
 
-This is exactly the conceptual import from Claude's unconditional two-thirds theorem: the off-line part of a finite compression need not be made positive; one should use its inertia quantitatively and spend only what the final inequality sees.
+Before this branch, the safe route required the full matrix sign `K>=0`; scalar curvature positivity was correctly known to be insufficient.
 
-In the present repo this idea is unusually sharp because the corrected Q4 state is already two-dimensional.  There is only one possible bad eigenvalue once the scalar curvature is positive.
+The Claude-style proof-order principle says to retain the indefinite direction and pay only the spectral quantity the consumer sees.  In the present two-state source this does more than rename the problem:
 
-## 6. Mandatory firewall
+1. `L-90301` reduces synthesis to negative spectral mass;
+2. `L-90302/L-90303` reduce that mass to one determinant/Wronskian scalar;
+3. `L-90304` chooses the zero-bare source and proves the bad eigenvalue `O(n/log n)` **without any estimate of the unknown current**.
 
-`R-90301` proves that the normalized Q4 Euler-Blaschke factor is J-unitary on every functional-equation off-line pair.  Therefore QIDR may **not** be justified by a source-blind all-pass iteration or by claiming that the Q4 filter itself shrinks hyperbolic zero blocks.
+That removes a previously RH-strength-looking local matrix theorem.
 
-A valid proof must obtain the defect bound from the complete source-specific Selberg/Jordan/carry ledger.
+## 6. Coefficient-charge firewall
+
+PR #346 also contains a finite Bézout synthesis whose coefficient-energy charge is `<2/5` of a parity-frame reserve.  That number is **not** automatically the operator constant `q` in (T-90301.2): convolution/filter cross terms must be retained.  The exact jet-frame theorem on the same branch gives an operator-level `1/2` current/bare inequality, but the present proof does not multiply unrelated constants to manufacture a recurrence.
+
+QIDR must use one declared Hilbert/block metric throughout.
 
 ## 7. Exact status
 
 ```text
 Claude-style inertia synthesis inequality               PROPOSED COMPLETE EXACT
-two-state negative spectral mass formula                PROPOSED COMPLETE EXACT
-Wronskian/determinant reduction                         PROPOSED COMPLETE EXACT
-all-pass hyperbolic-pair shortcut                       REFUTED EXACTLY
-corrected Q4 state dimension                            IMPORTED EXACT / REVIEW
-source-complete scalar critical moat                    IMPORTED COFINAL / REVIEW
-Q4 inertia-defect estimate                              OPEN / RH-BEARING
-QIDR coefficient-one recurrence                         OPEN / RH-BEARING
+two-state Wronskian/determinant reduction               PROPOSED COMPLETE EXACT
+relative Q4 square-vs-reserve identity                  PROPOSED COMPLETE EXACT
+zero-bare source field                                  IMPORTED / PROPOSED COMPLETE EXACT
+zero-bare second-current T=O(n)                         PROPOSED COMPLETE
+row bad eigenvalue delta=O(n/log n)                     PROPOSED COMPLETE COFINAL
+source-blind all-pass/inertia shortcut                  REFUTED EXACTLY
+full polarized PSD as required local theorem            SUPERSEDED / TOO STRONG
+independent-frequency block + delayed-state composition OPEN / RH-BEARING
 QIDR -> polynomial energy -> RH                         COMPLETE CONDITIONAL
 Riemann Hypothesis                                      UNPROVEN
 ```
 
-The preferred next calculation is no longer a full matrix PSD certificate.  It is the source-specific scalar
-
-\[
-\boxed{(-\det K_J)_+}
-\]
-
-or its Wronskian form from `L-90302`, with every Q2/Q4 filter and product-carry collision left intact.
+No reviewer is asked to invent the row-level matrix estimate; it is supplied in `L-90304`.  The remaining review/production target is the complete block composition with one consistent operator metric.
