@@ -1,12 +1,13 @@
-# R-90201 — The frozen binary–ternary GFEP exit and producer are not eventually positive
+# R-90201 — The frozen binary–ternary GFEP exit, producer positivity, and BTF all fail
 
 Claim ID: `R-90201`  
 Status: **PROPOSED COMPLETE ANALYTIC REFUTATION WITH DIRECTED INTERVAL CERTIFICATE — INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-10  
-Depends on: `L-90204` Euler–fragmentation factorization; `L-90205` renewal continuation; `L-90207` integer Landau transfer; exact first-entrance definitions of `L-28001/L-32301`  
+Strengthened: 2026-08-10, near-conservation resonance  
+Depends on: `L-90204`, `L-90205`, `L-90207`; exact first-entrance definitions of `L-28001/L-32301`; frozen producer `L-23811`  
 Certificate: `X-90204-certified-fragmentation-resonance`  
-Scope: refutes full coordinatewise GFEP, pointwise positivity, and the absolute-variation BTF estimate of the frozen half-binary/half-ternary producer; it does not refute the conditional implications from those hypotheses to RH and does not prove or disprove RH
+Scope: refutes full coordinatewise GFEP, pointwise positivity, and subpower absolute variation of the frozen half-binary/half-ternary producer; it does not refute the downstream conditional consumers and does not prove or disprove RH
 
 ## 1. Two fixed traces at `n=2`
 
@@ -17,9 +18,7 @@ Let
  \tag{R-90201.1}
 \]
 
-be the bottom first-entrance exit of the frozen half-binary/half-ternary chain.
-
-Write
+be the bottom first-entrance exit of the frozen half-binary/half-ternary chain. Write
 
 \[
  G_2(m)=mE_2(m,2),
@@ -28,7 +27,7 @@ Write
  \tag{R-90201.2}
 \]
 
-The boundary values are
+The boundary is
 
 \[
  G_2(1)=0,
@@ -47,167 +46,154 @@ and for every `m>=4`,
  \tag{R-90201.4}
 \]
 
-The actual producer trace at `n=2` uses
+The actual producer trace at node two is
 
 \[
  h_2(2)=1,
- \qquad
- h_2(3)=Q(3,2)=\frac23.
+ \qquad h_2(3)=Q(3,2)=\frac23,
  \tag{R-90201.5}
 \]
 
-Put
+so
 
 \[
- P_2(X)=2A_X(2)
- =\Sigma_{X,2}(2)+\frac23\Sigma_{X,2}(3),
+ \boxed{
+ P_2(X):=2A_X(2)
+ =\Sigma_{X,2}(2)+\frac23\Sigma_{X,2}(3).
+ }
  \tag{R-90201.6}
 \]
 
-and let
-
-\[
- G_P(m)=mh_2(m),
- \qquad a_P(m)=G_P(m)-G_P(m-1).
- \tag{R-90201.7}
-\]
-
-Its boundary values are
+Its Green trace satisfies
 
 \[
  G_P(1)=0,
  \qquad G_P(2)=2,
- \qquad G_P(3)=2,
+ \qquad G_P(3)=2.
+ \tag{R-90201.7}
+\]
+
+`L-90205` gives the exact global bounds
+
+\[
+ \boxed{|a_2(m)|\le4,\qquad |a_P(m)|\le2.}
  \tag{R-90201.8}
 \]
 
-with the same recurrence above the boundary.
-
-`L-90205` gives the global exact bounds
-
-\[
- |a_2(m)|\le4,
- \qquad
- |a_P(m)|\le2.
- \tag{R-90201.9}
-\]
-
-## 2. Common characteristic and trace numerators
+## 2. Common characteristic
 
 For either trace `T in {2,P}`, put
 
 \[
  \mathcal A_T(u)=\sum_{m\ge1}a_T(m)m^{-u}
- \tag{R-90201.10}
+ \tag{R-90201.9}
 \]
 
-in the initial half-plane. `L-90205` proves the continuation
+in its initial half-plane. `L-90205` proves
 
 \[
  \boxed{
- \mathcal A_T(u)={N_T(u)\over\Delta(u)},
+ \mathcal A_T(u)=\frac{N_T(u)}{\Delta(u)},
  \qquad \Re u>0,
+ }
+ \tag{R-90201.10}
+\]
+
+where `N_T` is analytic and
+
+\[
+ \boxed{
+ \Delta(u)=1-\frac12\left[2^{1-u}+3^{-u}+(3/2)^{-u}\right].
  }
  \tag{R-90201.11}
 \]
 
-where
-
-\[
- \Delta(u)=1-\frac12
- \left[2^{1-u}+3^{-u}+(3/2)^{-u}\right]
- \tag{R-90201.12}
-\]
-
-and `N_T` is analytic on `Re u>0`.
-
-For reference, the finite renewal defects on `m=1,2,3,4` are
+The finite renewal defects are
 
 \[
  (b_2(1),b_2(2),b_2(3),b_2(4))=(0,2,-4,2),
- \tag{R-90201.13}
+ \tag{R-90201.12}
 \]
 
 \[
  (b_P(1),b_P(2),b_P(3),b_P(4))=(0,2,-2,0).
- \tag{R-90201.14}
+ \tag{R-90201.13}
 \]
 
-The remaining parts of `N_T` are the absolutely convergent shifted-difference series of `L-90205`.
+The rest of each numerator is the absolutely convergent shifted-difference series of `L-90205`.
 
-## 3. Certified simple resonance
+## 3. Certified near-conservation resonance
 
-Define
+Let
 
 \[
 \begin{aligned}
- c={}&0.7422293980561885240550493534416845585452288947464107663790628089924\\
- &+17.3619424994722740596801161362202749268628893017519727763861538918768i
+ c={}&0.9965737487663334042655023867051966592025584349245531871104107217274\\
+ &+108.6843160063763813085769124318175668569125542061140136301106006425683i
 \end{aligned}
- \tag{R-90201.15}
+ \tag{R-90201.14}
 \]
 
-and
+and let
 
 \[
  r=10^{-18}.
+ \tag{R-90201.15}
+\]
+
+The directed verifier proves
+
+\[
+ |\Delta(c)|<1.717\times10^{-69},
  \tag{R-90201.16}
 \]
 
-The directed interval verifier proves on the disk `|u-c|<r`:
-
 \[
- |\Delta(c)|<3.425\times10^{-68},
+ |\Delta'(c)|>0.66532,
+ \qquad
+ \sup_{|u-c|\le r}|\Delta''(u)|<0.49760.
  \tag{R-90201.17}
 \]
 
-\[
- |\Delta'(c)|>0.70517,
- \qquad
- \sup_{|u-c|\le r}|\Delta''(u)|<0.61507.
- \tag{R-90201.18}
-\]
-
-Thus on `|w|=r`,
+Hence, on `|w|=r`,
 
 \[
  |\Delta(c)+R_2(w)|
- <3.076\times10^{-37}
- <7.051\times10^{-19}
- <|\Delta'(c)w|,
- \tag{R-90201.19}
+ <2.488\times10^{-37}
+ <6.653\times10^{-19}
+ <|\Delta'(c)w|.
+ \tag{R-90201.18}
 \]
 
-where `|R_2(w)|<=sup|Delta''|r^2/2`. Rouché's theorem gives exactly one zero, counted with multiplicity, in the disk. Denote it by `u_0`. It is simple and satisfies
+Rouché's theorem gives exactly one zero, counted with multiplicity, in the disk. Call it `u_0`. It is simple and
 
 \[
  \boxed{
- \Re u_0>0.742229398056188523,
- \qquad
- \Im u_0\ne0.
+ \Re u_0>0.996573748766333403,
+ \qquad \Im u_0\ne0.
  }
+ \tag{R-90201.19}
+\]
+
+## 4. Directed numerator noncancellation
+
+The verifier constructs every increment through `R=20000` as an exact `Fraction`, evaluates the complete finite numerator over a directed complex interval enclosure of the root disk, and bounds the remaining infinite series analytically.
+
+For the bottom exit,
+
+\[
+ \boxed{|N_2(u_0)|>0.00987978337.}
  \tag{R-90201.20}
 \]
 
-## 4. Certified numerator noncancellation
-
-The verifier constructs every increment through `R=20000` as an exact `Fraction`, evaluates the finite numerator over the complete rectangular enclosure of the root disk with directed complex interval arithmetic, and bounds the infinite shifted-difference tail using (R-90201.9).
-
-For the exit trace,
+For the sparse producer,
 
 \[
- |N_2(u_0)|>0.2815082855.
+ \boxed{|N_P(u_0)|>0.00199031875.}
  \tag{R-90201.21}
 \]
 
-For the sparse producer trace,
-
-\[
- |N_P(u_0)|>0.0895557448.
- \tag{R-90201.22}
-\]
-
-The tail estimate used for a trace with `|a(m)|<=A_0` is
+The analytic tail estimate for a trace with `|a(m)|<=A_0` is
 
 \[
 \begin{aligned}
@@ -224,21 +210,35 @@ The tail estimate used for a trace with `|a(m)|<=A_0` is
  \qquad
  \sigma=\inf\Re u.
 \end{aligned}
+ \tag{R-90201.22}
+\]
+
+and gives
+
+\[
+ T_R<0.007855148\quad(T=2),
+ \qquad
+ T_R<0.003927574\quad(T=P).
  \tag{R-90201.23}
 \]
 
-It gives the directed upper bounds
+These are already subtracted in the margins (R-90201.20)--(R-90201.21). Thus both continued fragmentation factors have a genuine simple pole at `u_0`.
+
+There is also an exact structural check. The two exit traces satisfy
 
 \[
- T_R<0.025277315\quad(T=2),
- \qquad
- T_R<0.012638658\quad(T=P),
+ G_2(m)+G_3(m)=m,
  \tag{R-90201.24}
 \]
 
-well below the finite interval modulus margins.
+and the producer trace is `G_P=G_2+(2/3)G_3`. The total trace has no nonconservation characteristic pole, so at every zero of `Delta` other than `u=1`,
 
-Therefore both continued fragmentation factors have a genuine simple pole at `u_0`.
+\[
+ \boxed{N_P(u)=\frac13N_2(u).}
+ \tag{R-90201.25}
+\]
+
+The independent directed producer calculation is retained as a mutation check.
 
 ## 5. Physical Mellin poles
 
@@ -246,7 +246,7 @@ By `L-90204`, with
 
 \[
  s_0=u_0-\frac12,
- \tag{R-90201.25}
+ \tag{R-90201.26}
 \]
 
 we have
@@ -254,10 +254,10 @@ we have
 \[
  \boxed{
  \widehat{\Sigma_2}(s)
- ={N_2(s+1/2)
-   \over s^2\Delta(s+1/2)\zeta(s+1/2)},
+ =\frac{N_2(s+1/2)}
+ {s^2\Delta(s+1/2)\zeta(s+1/2)},
  }
- \tag{R-90201.26}
+ \tag{R-90201.27}
 \]
 
 and
@@ -265,68 +265,72 @@ and
 \[
  \boxed{
  \widehat{P_2}(s)
- ={N_P(s+1/2)
-   \over s^2\Delta(s+1/2)\zeta(s+1/2)}.
- }
- \tag{R-90201.27}
-\]
-
-The point `s_0` is nonreal and
-
-\[
- \boxed{
- \Re s_0>0.242229398056188523.
+ =\frac{N_P(s+1/2)}
+ {s^2\Delta(s+1/2)\zeta(s+1/2)}.
  }
  \tag{R-90201.28}
 \]
 
-Since $u_0\ne1$, the meromorphic function `1/zeta(u)` cannot have a zero there; if `u_0` happens to be a zeta zero, it contributes an additional pole rather than a cancellation. Hence both transforms are singular at `s_0`.
+The certified pole satisfies
+
+\[
+ \boxed{
+ \Re s_0>0.496573748766333403.
+ }
+ \tag{R-90201.29}
+\]
+
+The reciprocal zeta factor cannot cancel this pole: `1/zeta(u)` has a zero only at the pole `u=1`; if `u_0` itself were a zeta zero, it would add another pole.
 
 ## 6. No positive-real singularity
 
-For real `s>1/2`, the original absolutely convergent fragmentation/Euler factorization is analytic.
+For real `s>1/2`, the original absolutely convergent factorization is analytic.
 
-For `0<s<1/2`, put $u=s+1/2\in(1/2,1)$. The real function
+For `0<s<1/2`, put `u=s+1/2 in (1/2,1)`. The real function
 
 \[
  2^{1-u}+3^{-u}+(3/2)^{-u}
 \]
 
-is strictly decreasing and equals two only at `u=1`; hence $\Delta(u)\ne0$. Also $\zeta(u)\ne0$ on the real interval $(0,1)$: the alternating eta series is positive for $u>0$, while $\zeta(u)=\eta(u)/(1-2^{1-u})$.
+is strictly decreasing and equals two only at `u=1`; hence `Delta(u)\ne0`. Also `zeta(u)\ne0` on `(0,1)`: the alternating eta series is positive for `u>0`, while
+
+\[
+ \zeta(u)=\frac{\eta(u)}{1-2^{1-u}}.
+\]
 
 At `s=1/2`, `Delta(u)` has a simple zero and `zeta(u)` has a simple pole, so
 
 \[
  \Delta(u)\zeta(u)\longrightarrow\Delta'(1)\ne0.
- \tag{R-90201.29}
+ \tag{R-90201.30}
 \]
 
-Because each `N_T` is analytic, the apparent point is removable. Thus both continued physical transforms are holomorphic at every positive real `s`.
+The apparent point is removable. Both physical transforms are therefore holomorphic at every positive real `s`.
 
-## 7. Integer sign oscillation and polynomial excursions
+## 7. Integer oscillation and essentially square-root excursions
 
-The increment bounds (R-90201.9) and `L-90207` give
+The increment bounds and `L-90207` give
 
 \[
  |\Sigma_2(X)-\Sigma_2(\lfloor X\rfloor)|
  \le16{1+\log X\over\sqrt X},
- \tag{R-90201.30}
+ \tag{R-90201.31}
 \]
 
 \[
  |P_2(X)-P_2(\lfloor X\rfloor)|
  \le8{1+\log X\over\sqrt X}.
- \tag{R-90201.31}
+ \tag{R-90201.32}
 \]
 
-Each transform has a nonreal singularity with positive real part and no positive-real singularity. Applying `L-90207` separately to each trace gives
+The nonreal pole and absence of positive-real singularities imply
 
 \[
  \boxed{
  \Sigma_{N,2}(2)
  \text{ takes both signs for arbitrarily large integers }N,
  }
- \tag{R-90201.32}
+ \tag{R-90201.33}
 \]
 
 and
@@ -336,77 +340,77 @@ and
  A_N(2)
  \text{ takes both signs for arbitrarily large integers }N.
  }
- \tag{R-90201.33}
+ \tag{R-90201.34}
 \]
 
 More sharply, for every
 
 \[
- 0\le\delta<0.242229398056188523,
+ 0\le\delta<0.496573748766333403,
+ \tag{R-90201.35}
 \]
 
-`L-90207` gives
+we have
 
 \[
- [\Sigma_{N,2}(2)]_+,\ [-\Sigma_{N,2}(2)]_+
+ [\Sigma_{N,2}(2)]_+,
+ \ [-\Sigma_{N,2}(2)]_+
  \ne O(N^\delta),
- \tag{R-90201.34}
+ \tag{R-90201.36}
 \]
 
 and
 
 \[
- [A_N(2)]_+,\ [-A_N(2)]_+
+ [A_N(2)]_+,
+ \ [-A_N(2)]_+
  \ne O(N^\delta).
- \tag{R-90201.35}
+ \tag{R-90201.37}
 \]
 
-Consequently:
+Thus the deterministic policy creates two-sided excursions at every fixed exponent strictly below square root up to the certified gap `0.003426...`.
+
+## 8. Consequences
 
 1. **GFEP-full is false.** The fixed coordinate `(n,p)=(2,2)` is negative at arbitrarily large integer endpoints.
-2. **Pointwise positivity of the frozen half-binary/half-ternary producer is false.** Its coefficient at node two is negative at arbitrarily large endpoints.
-3. **The frozen-producer BTF estimate of `L-23811.13` is false.** Since
+2. **Pointwise positivity of the frozen half-binary/half-ternary producer is false.** Its node-two coefficient changes sign cofinally.
+3. **The frozen BTF estimate `L-23811.13` is false.** Since
    \[
-   \operatorname{BTF}(N)=\sum_{n=2}^N|A_N(n)|\sqrt n
+   \operatorname{BTF}(N)
+   =\sum_{n=2}^N|A_N(n)|\sqrt n
    \ge\sqrt2|A_N(2)|,
    \]
-   (R-90201.35) rules out `BTF(N)=N^{o(1)}` and every bound `O(N^delta)` with `delta<0.242229398056188523`. The weaker signed pairing condition `L-23811.15` is not refuted by this single coordinate.
-4. The conditional implications
-   \[
-   \mathrm{GFEP}\Rightarrow\mathrm{RH}
-   \]
-   and
-   \[
-   \text{producer positivity or BTF}\Rightarrow\mathrm{RH}
-   \]
-   remain logically valid; this theorem refutes their frozen-producer antecedents, not their consumers.
-5. The positive-kernel, flow, and Boolean-descendant identities remain exact. Their empty Möbius boundary coefficient oscillates because a deterministic fragmentation resonance survives.
+   it is not `O(N^delta)` for any `delta<0.496573748766333403`, and in particular is not `N^{o(1)}`.
+4. The weaker signed pairing condition `L-23811.15`, Cycle Debt, and state-dependent policies are not refuted by this single coordinate.
+5. The conditional implications from GFEP, positivity, or BTF to RH remain logically valid; their frozen-policy antecedents are false.
 
-## 8. Route consequence
+## 9. Route consequence
 
-The Exact Flow Gambit has now reached a definitive end for the frozen binary–ternary chain:
+The Exact Flow Gambit and the fixed binary–ternary producer now have a definitive status:
 
 ```text
 positive packet kernels                    PROVED
-multiplicative/nonempty class directions   DESCENDANT-POSITIVE
-empty current coefficient                  CERTIFIED OSCILLATORY
+nonempty multiplicative directions         PROPER DESCENDANTS
+empty frozen coefficient                   CERTIFIED OSCILLATORY
 GFEP-full                                   REFUTED
-frozen producer pointwise positivity       REFUTED
-frozen producer BTF absolute variation     REFUTED POLYNOMIALLY
+frozen producer positivity                 REFUTED
+frozen BTF absolute variation              REFUTED NEAR SQUARE-ROOT SCALE
+signed pairing / Cycle Debt                STILL LIVE
 ```
 
-A future fragmentation route must change the policy/kernel, weaken the target to the signed pairing estimate or cycle-optimized debt, or use a different analytic consumer. It cannot complete RH by proving eventual positivity or subpower absolute variation of this frozen producer.
+A future fragmentation route must change the policy, retain signed cancellation, or use a different consumer. `L-90208` identifies the resonance-free uniform Pascal policy as the canonical remaining stationary front.
 
-## 9. Certificate and proof boundary
+## 10. Certificate boundary
 
 `X-90204-certified-fragmentation-resonance` verifies:
 
 - one simple characteristic zero in the stated disk by Rouché;
-- exact dyadic increment recurrences;
+- exact dyadic recurrence coefficients;
 - directed finite numerator intervals;
 - analytic infinite-tail bounds;
-- nonzero exit and producer numerator margins.
+- nonzero exit and producer margins;
+- 39,998 exact trace-relation checks.
 
-The Landau, polynomial-excursion, and integer-interpolation deductions are proved in `L-90207` and this file.
+The Landau, quantitative excursion, and integer-interpolation deductions are proved in `L-90207` and this file.
 
-This refutation proves no statement about the truth or falsity of RH. It also does not refute Cycle Debt, the signed pairing estimate, prime-endpoint criteria, or alternative state-dependent fragmentation policies.
+This refutation proves no statement about the truth or falsity of RH. It does not refute the prime-endpoint, annular, uniform-Pascal, signed-pairing, or cycle-optimized routes.
