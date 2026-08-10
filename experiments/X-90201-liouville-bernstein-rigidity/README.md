@@ -114,4 +114,4 @@ The package authenticates exact finite algebra and the declared numerical
 reconnaissance. It does **not** prove the empty GFEP coefficient nonnegative at
 unbounded depth, producer positivity, Form A, or RH.
 
-`SHA256SUMS` binds this README, the verifier, and the retained JSON result.
+`SHA256SUMS` binds this README and the retained JSON result, and records the committed Git blob identity of the verifier.
