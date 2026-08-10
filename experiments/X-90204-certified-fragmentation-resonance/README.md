@@ -1,8 +1,9 @@
-# X-90204 — Certified frozen-fragmentation resonance
+# X-90204 — Certified near-conservation frozen-fragmentation resonance
 
 This package supplies the directed numerical certificate used by `R-90201`.
 It does **not** numerically search for sign changes of the endpoint functions.
-Instead it certifies one nonreal pole of their continued Mellin transforms.
+Instead it certifies one nonreal pole of their continued Mellin transforms,
+with real exponent greater than `0.49657` after the critical shift.
 The Landau and integer-interpolation deductions are proved in `L-90207` and
 `R-90201`.
 
@@ -33,8 +34,8 @@ and rewrites `results/verification.json`.
 The script uses `mpmath.iv` at 70 decimal digits. Around
 
 ```text
-u = 0.7422293980561885240550493534416845585...
-  + 17.3619424994722740596801161362202749269... i
+u = 0.9965737487663334042655023867051966592...
+  +108.6843160063763813085769124318175668569... i
 ```
 
 it takes the radius `1e-18` and verifies
@@ -45,7 +46,11 @@ it takes the radius `1e-18` and verifies
 ```
 
 Therefore the disk contains exactly one zero of `Delta`, counted with
-multiplicity, and the zero is simple.
+multiplicity, and the zero is simple. The shifted physical pole satisfies
+
+```text
+Re(u-1/2) > 0.496573748766333403.
+```
 
 ### 2. Exact fragmentation increments
 
@@ -68,8 +73,8 @@ tail is bounded analytically from the global exact increment bounds
 The resulting full numerator margins are
 
 ```text
-|N_exit(u0)|     > 0.2815082855,
-|N_producer(u0)| > 0.0895557448.
+|N_exit(u0)|     > 0.00987978337,
+|N_producer(u0)| > 0.00199031875.
 ```
 
 Thus neither characteristic pole cancels.
@@ -77,5 +82,5 @@ Thus neither characteristic pole cancels.
 ## Scope
 
 The package certifies finite recurrence algebra, one simple characteristic
-zero, and two nonzero numerator values. It does not invoke zeta values, the
-prime number theorem, RH, or a finite endpoint sign scan.
+zero, and two nonzero numerator values. It does not invoke zeta values, a zeta
+zero table, a finite endpoint sign scan, the PNT, or RH.
