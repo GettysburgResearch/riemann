@@ -7,23 +7,27 @@ Status: exact theorem packet plus finite replay; RH unproved
 ## Import order
 
 1. `claims/lemmas/L-90201-generalized-von-mangoldt-liouville-extremality.md`
-2. `claims/theorems/T-90201-boolean-bernstein-descendant-hierarchy.md`
-3. `experiments/X-90201-liouville-bernstein-rigidity/README.md`
-4. `experiments/X-90201-liouville-bernstein-rigidity/verify.py`
-5. `claims/observations/O-90201-multiplicative-bootstrap-reassessment.md`
-6. `reports/gpt56-pro/2026-08-10-liouville-bernstein-rigidity.md`
+2. `claims/lemmas/L-90202-completely-additive-liouville-extremality-cone.md`
+3. `claims/theorems/T-90201-boolean-bernstein-descendant-hierarchy.md`
+4. `claims/theorems/T-90202-uniform-multiplicative-ramp-class-is-equivalent-to-rh.md`
+5. `experiments/X-90201-liouville-bernstein-rigidity/README.md`
+6. `experiments/X-90202-additive-liouville-cone/README.md`
+7. `claims/observations/O-90201-multiplicative-bootstrap-reassessment.md`
+8. `reports/gpt56-pro/2026-08-10-liouville-bernstein-rigidity.md`
 
 ## Claims changed relative to PR #351
 
 ```text
 T-90008 ramp lambda-extremality              CONJECTURED -> PROVED EXACT
 Form A over H iff lambda slice                CONDITIONAL -> PROVED EXACT
+uniform real multiplicative cube Form A       NEW EXACT RH EQUIVALENCE
+logarithmic prime extraction                  extended to all nonnegative additive costs
 per-exit lambda-extremality                   isolated conjecture -> hereditary descendant theorem
 single-flip mechanism                         first layer -> complete mixed hierarchy
 2^pi(K) exhaustive class search               replaced by O(K) descendant certificate
 T-90009 class-uniformity deficit              scoped to empty lambda coefficient
 GFEP / producer empty coefficient              OPEN / RH-BEARING
-RH                                              UNPROVED
+RH                                              UNPROVEN
 ```
 
 ## Cross-PR relationship
@@ -48,6 +52,9 @@ No claim in this handoff depends on merging PR #355 first.
 ```text
 python3 experiments/X-90201-liouville-bernstein-rigidity/verify.py
 PASS_X_90201_LIOUVILLE_BERNSTEIN_RIGIDITY
+
+python3 experiments/X-90202-additive-liouville-cone/verify.py
+PASS_X_90202_ADDITIVE_LIOUVILLE_CONE
 ```
 
-Remote-byte SHA verification should be repeated after connector upload.
+The retained manifests bind the replay outputs at their declared assurance scopes. GitHub currently reports no Actions workflow for this stack.
