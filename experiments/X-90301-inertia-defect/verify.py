@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Exact regressions for L-90301/L-90302/R-90301.
+"""Exact regressions for L-90301/L-90302/L-90303/R-90301.
 
-Standard-library only.  The finite exhaustive loops verify algebraic identities;
-the analytic/theorem statements remain in the markdown proofs.
+Standard-library only. The finite exhaustive loops verify algebraic identities;
+the analytic/arithmetic closing estimates remain in the markdown proofs.
 """
 from fractions import Fraction
 from itertools import product
@@ -22,6 +22,15 @@ def scale(c, A):
     return [[c * A[i][j] for j in range(2)] for i in range(2)]
 
 
+def mm(A, B):
+    return [[sum(A[i][k] * B[k][j] for k in range(len(B)))
+             for j in range(len(B[0]))] for i in range(len(A))]
+
+
+def transpose(A):
+    return [list(row) for row in zip(*A)]
+
+
 def det(A):
     return A[0][0] * A[1][1] - A[0][1] * A[1][0]
 
@@ -38,6 +47,10 @@ def wedge(x, y):
     return x[0] * y[1] - x[1] * y[0]
 
 
+def curvature(v, a, b):
+    return add(outer(a, a), scale(Fraction(-1, 2), add(outer(v, b), outer(b, v))))
+
+
 def main():
     vals = (-2, -1, 0, 1, 2)
     determinant_rows = 0
@@ -46,12 +59,26 @@ def main():
         v = [Fraction(coords[0]), Fraction(coords[1])]
         a = [Fraction(coords[2]), Fraction(coords[3])]
         b = [Fraction(coords[4]), Fraction(coords[5])]
-        K = add(outer(a, a), scale(Fraction(-1, 2), add(outer(v, b), outer(b, v))))
+        K = curvature(v, a, b)
         rhs = wedge(v, a) * wedge(a, b) - Fraction(1, 4) * wedge(v, b) ** 2
         assert det(K) == rhs
         determinant_rows += 1
         assert frob2(K) - tr(K) ** 2 == -2 * det(K)
         trace_rows += 1
+
+    relative_rows = 0
+    for E, I, Y, R, T in product(vals, repeat=5):
+        v = [Fraction(1), Fraction(Y)]
+        a = [Fraction(E), Fraction(I)]
+        b = [Fraction(E * E - R), Fraction(T)]
+        K = curvature(v, a, b)
+        D = Fraction(I - Y * E)
+        C = Fraction(T - 2 * E * I + Y * (E * E + R))
+        assert det(K) == R * D * D - Fraction(1, 4) * C * C
+        M = [[Fraction(1), Fraction(0)], [-Fraction(Y), Fraction(1)]]
+        Kc = mm(mm(M, K), transpose(M))
+        assert Kc == [[Fraction(R), -C / 2], [-C / 2, D * D]]
+        relative_rows += 1
 
     # Exact Q=4 all-pass cross-multiplication at many rational x.
     # phi(s)=(1/2)(x-4)/(x-1), phi(1-s)=2(x-1)/(x-4).
@@ -67,13 +94,14 @@ def main():
             allpass_rows += 1
 
     result = {
-        "schema": "X-90301-inertia-defect-v1",
+        "schema": "X-90301-inertia-defect-v2",
         "classification": "PASS_EXACT_TWO_STATE_INERTIA_WRONSKIAN_IDENTITIES",
         "real_integer_wronskian_rows": determinant_rows,
         "trace_frobenius_determinant_rows": trace_rows,
+        "relative_q4_square_vs_reserve_rows": relative_rows,
         "q4_allpass_rational_rows": allpass_rows,
         "proof_boundary": (
-            "finite exact algebra only; no arithmetic Q4 determinant estimate and no RH conclusion"
+            "finite exact algebra only; no arithmetic Q4 inertia-defect estimate and no RH conclusion"
         ),
     }
     raw = json.dumps(result, sort_keys=True, indent=2) + "\n"
