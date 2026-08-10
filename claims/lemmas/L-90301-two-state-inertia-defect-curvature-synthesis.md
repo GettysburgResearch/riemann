@@ -45,7 +45,8 @@ and define its negative spectral mass
 
 \[
 \boxed{\delta(K)=\operatorname{tr}K_- .}
-\tag{L-90301.4]
+\tag{L-90301.4}
+\]
 
 ## 2. Inertia-tolerant synthesis inequality
 
@@ -198,8 +199,7 @@ The scalar curvature is already source-complete and cofinally positive on the co
 or, equivalently when `t_J>0`, the scalar determinant excess
 
 \[
-\boxed{
-e_J=(-2\det K_J)_+.}
+\boxed{e_J=(-2\det K_J)_+.}
 \tag{L-90301.13}
 \]
 
