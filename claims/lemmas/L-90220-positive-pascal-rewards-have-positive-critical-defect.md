@@ -117,69 +117,118 @@ At the square-root exponent,
  \tag{L-90220.11}
 \]
 
-Put `N=j+1>=3`.  The elementary induction
+Put `N=j+1>=3`.  The integral lower bound for the decreasing function
+`t^(-1/2)` is
 
 \[
- \sum_{n=1}^{N}\frac1{\sqrt n}\ge2\sqrt N-1
+ \sum_{n=1}^{N}\frac1{\sqrt n}
+ \ge\int_1^{N+1}t^{-1/2}\,dt
+ =2\sqrt{N+1}-2.
  \tag{L-90220.12}
 \]
 
-gives
-
-\[
-\begin{aligned}
- B_j(1/2)
- &\ge
- \frac4{\sqrt N}-\frac2N
- -\sqrt{N-1}+\frac{N-3}{\sqrt N}\\
- &=
- \frac{N+1}{\sqrt N}
- -\sqrt{N-1}-\frac2N.
-\end{aligned}
- \tag{L-90220.13}
-\]
-
-Now
-
-\[
- \sqrt{N(N-1)}<N-\frac12,
-\]
-
-because the square of the right side exceeds `N(N-1)` by `1/4`.  Hence
-
-\[
- \frac{N+1}{\sqrt N}-\sqrt{N-1}
- =
- \frac{N+1-\sqrt{N(N-1)}}{\sqrt N}
- >
- \frac3{2\sqrt N}.
- \tag{L-90220.14}
-\]
-
-Since `N>=3` implies `3sqrt(N)>4`,
+Therefore
 
 \[
  \boxed{
  B_j(1/2)
- >
- \frac3{2\sqrt N}-\frac2N
- >0
- \qquad(j\ge2).
+ \ge
+ L_N:=
+ \frac{4\sqrt{N+1}}{N}-\frac4N
+ -\sqrt{N-1}+\frac{N-3}{\sqrt N}.
  }
+ \tag{L-90220.13}
+\]
+
+For `N>=8`, use `sqrt(N+1)>sqrt(N)` and
+
+\[
+ \sqrt{N(N-1)}<N-\frac12
+\]
+
+to obtain
+
+\[
+\begin{aligned}
+ L_N
+ &>
+ \frac{N+1}{\sqrt N}
+ -\sqrt{N-1}-\frac4N\\
+ &>
+ \frac3{2\sqrt N}-\frac4N
+ >0,
+\end{aligned}
+ \tag{L-90220.14}
+\]
+
+because `3sqrt(N)>8`.
+
+The five remaining values are elementary radical inequalities:
+
+\[
+\begin{array}{c|c}
+N&\text{positive lower certificate}\\ \hline
+3&
+1+\dfrac1{\sqrt3}>\sqrt2,\\[2mm]
+4&
+\sqrt5-\sqrt3>\dfrac12,\\[2mm]
+5&
+\dfrac{4\sqrt6}{5}+\dfrac2{\sqrt5}>\dfrac{14}{5},\\[3mm]
+6&
+\dfrac{2\sqrt7}{3}+\dfrac3{\sqrt6}>
+\sqrt5+\dfrac23,\\[3mm]
+7&
+\dfrac{8\sqrt2}{7}+\dfrac4{\sqrt7}>
+\sqrt6+\dfrac47.
+\end{array}
  \tag{L-90220.15}
+\]
+
+For example, the last four follow respectively from
+
+\[
+ \sqrt5>\sqrt3+\frac12,
+ \qquad
+ \sqrt6>\frac{12}{5},\quad\sqrt5<\frac94,
+\]
+
+\[
+ \sqrt7>\frac{21}{8},\quad
+ \frac3{\sqrt6}>\frac65,\quad
+ \sqrt5<\frac94,
+\]
+
+and
+
+\[
+ \sqrt2>\frac75,\quad
+ \frac4{\sqrt7}>\frac32,\quad
+ \sqrt6<\frac52.
+\]
+
+The `N=3` line follows after squaring the positive quantities, since
+`sqrt(3)<3`.
+
+Thus
+
+\[
+ \boxed{
+ B_j(1/2)>0\qquad(j\ge2).
+ }
+ \tag{L-90220.16}
 \]
 
 No asymptotic estimate or zeta input enters.
 
 ## 3. Global critical-defect theorem
 
-Equations (L-90220.9) and (L-90220.15) immediately give
+Equations (L-90220.9) and (L-90220.16) immediately give
 
 \[
  \boxed{
  Q_d(1/2)>0
  }
- \tag{L-90220.16}
+ \tag{L-90220.17}
 \]
 
 for every nonzero nonnegative uniform-Pascal reward satisfying
