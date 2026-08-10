@@ -6,7 +6,7 @@ Authoring agent: `gpt56-pro`
 Created: 2026-08-10  
 Depends on: `L-90204` Euler–fragmentation factorization; `L-90205` renewal continuation; `L-90207` integer Landau transfer; exact first-entrance definitions of `L-28001/L-32301`  
 Certificate: `X-90204-certified-fragmentation-resonance`  
-Scope: refutes full coordinatewise GFEP and pointwise positivity of the frozen half-binary/half-ternary producer; it does not refute the conditional implications from those hypotheses to RH and does not prove or disprove RH
+Scope: refutes full coordinatewise GFEP, pointwise positivity, and the absolute-variation BTF estimate of the frozen half-binary/half-ternary producer; it does not refute the conditional implications from those hypotheses to RH and does not prove or disprove RH
 
 ## 1. Two fixed traces at `n=2`
 
@@ -303,7 +303,7 @@ At `s=1/2`, `Delta(u)` has a simple zero and `zeta(u)` has a simple pole, so
 
 Because each `N_T` is analytic, the apparent point is removable. Thus both continued physical transforms are holomorphic at every positive real `s`.
 
-## 7. Integer sign oscillation and refutation
+## 7. Integer sign oscillation and polynomial excursions
 
 The increment bounds (R-90201.9) and `L-90207` give
 
@@ -339,20 +339,48 @@ and
  \tag{R-90201.33}
 \]
 
+More sharply, for every
+
+\[
+ 0\le\delta<0.242229398056188523,
+\]
+
+`L-90207` gives
+
+\[
+ [\Sigma_{N,2}(2)]_+,\ [-\Sigma_{N,2}(2)]_+
+ \ne O(N^\delta),
+ \tag{R-90201.34}
+\]
+
+and
+
+\[
+ [A_N(2)]_+,\ [-A_N(2)]_+
+ \ne O(N^\delta).
+ \tag{R-90201.35}
+\]
+
 Consequently:
 
 1. **GFEP-full is false.** The fixed coordinate `(n,p)=(2,2)` is negative at arbitrarily large integer endpoints.
 2. **Pointwise positivity of the frozen half-binary/half-ternary producer is false.** Its coefficient at node two is negative at arbitrarily large endpoints.
-3. The conditional implications
+3. **The frozen-producer BTF estimate of `L-23811.13` is false.** Since
+   \[
+   \operatorname{BTF}(N)=\sum_{n=2}^N|A_N(n)|\sqrt n
+   \ge\sqrt2|A_N(2)|,
+   \]
+   (R-90201.35) rules out `BTF(N)=N^{o(1)}` and every bound `O(N^delta)` with `delta<0.242229398056188523`. The weaker signed pairing condition `L-23811.15` is not refuted by this single coordinate.
+4. The conditional implications
    \[
    \mathrm{GFEP}\Rightarrow\mathrm{RH}
    \]
    and
    \[
-   \text{producer positivity}\Rightarrow\mathrm{RH}
+   \text{producer positivity or BTF}\Rightarrow\mathrm{RH}
    \]
-   remain logically valid; this theorem refutes their antecedents, not their consumers.
-4. The positive-kernel, flow, and Boolean-descendant identities remain exact. Their empty Möbius boundary coefficient oscillates because a deterministic fragmentation resonance survives.
+   remain logically valid; this theorem refutes their frozen-producer antecedents, not their consumers.
+5. The positive-kernel, flow, and Boolean-descendant identities remain exact. Their empty Möbius boundary coefficient oscillates because a deterministic fragmentation resonance survives.
 
 ## 8. Route consequence
 
@@ -364,9 +392,10 @@ multiplicative/nonempty class directions   DESCENDANT-POSITIVE
 empty current coefficient                  CERTIFIED OSCILLATORY
 GFEP-full                                   REFUTED
 frozen producer pointwise positivity       REFUTED
+frozen producer BTF absolute variation     REFUTED POLYNOMIALLY
 ```
 
-A future fragmentation route must change the policy/kernel, weaken the target to a signed debt estimate, or use a different analytic consumer. It cannot complete RH by proving eventual positivity of this frozen producer.
+A future fragmentation route must change the policy/kernel, weaken the target to the signed pairing estimate or cycle-optimized debt, or use a different analytic consumer. It cannot complete RH by proving eventual positivity or subpower absolute variation of this frozen producer.
 
 ## 9. Certificate and proof boundary
 
@@ -378,6 +407,6 @@ A future fragmentation route must change the policy/kernel, weaken the target to
 - analytic infinite-tail bounds;
 - nonzero exit and producer numerator margins.
 
-The Landau and integer-interpolation deductions are proved in prose in `L-90207` and this file.
+The Landau, polynomial-excursion, and integer-interpolation deductions are proved in `L-90207` and this file.
 
-This refutation proves no statement about the truth or falsity of RH. It also does not refute Cycle Debt, prime-endpoint criteria, or alternative state-dependent fragmentation policies.
+This refutation proves no statement about the truth or falsity of RH. It also does not refute Cycle Debt, the signed pairing estimate, prime-endpoint criteria, or alternative state-dependent fragmentation policies.
