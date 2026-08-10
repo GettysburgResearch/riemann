@@ -1,0 +1,35 @@
+{
+  "base_cost": 0.1942982608973168,
+  "expected_base_cost": 0.19429826089731705,
+  "far_tail_operator_threshold_for_m1": 0.0006906773056558007,
+  "final_interpolation_error": 1.7479732840296338e-11,
+  "final_min_gram_eigenvalue": 0.00043131101683516453,
+  "gates": {
+    "base_formula": true,
+    "constraint_monotonicity": true,
+    "exact_interpolation": true,
+    "local_negative_value": true,
+    "positive_gram": true
+  },
+  "length": 8.0,
+  "local_weil_value": -2.0,
+  "nested_capture_costs": [
+    0.1942982608973168,
+    0.22528233149614169,
+    0.46843438932323944,
+    18.1885974585797,
+    2895.708290430931
+  ],
+  "pair": [
+    [
+      0.37,
+      0.12
+    ],
+    [
+      0.37,
+      -0.12
+    ]
+  ],
+  "ratio": 1.160835201795836,
+  "status": "PASS_ZETA23_FINITE_ISOLATION"
+}

@@ -1,0 +1,50 @@
+{
+  "arithmetic_class": "EXACT_CLOSED_FORM_PLUS_FLOATING_REGRESSION",
+  "checks": {
+    "finite_packet_decorrelation": 5,
+    "kernel_and_correlation": 200,
+    "target_and_reflection": 30,
+    "terminal_packet": 12,
+    "threat_budget": 18
+  },
+  "classification": "PASS_GAUSSIAN_TERMINAL_PAIR_ALGEBRA",
+  "not_certified": [
+    "Riemann-von Mangoldt theorem",
+    "infinite zero-tail interchange",
+    "Weil explicit formula continuity",
+    "arithmetic lower floor",
+    "Riemann Hypothesis"
+  ],
+  "terminal_packet": [
+    {
+      "nuisance_square_sum": 9.641133590116448,
+      "sigma": 2.0,
+      "target_norm": 1.3482655476747014
+    },
+    {
+      "nuisance_square_sum": 0.9666311540697515,
+      "sigma": 4.0,
+      "target_norm": 0.10958881015497925
+    },
+    {
+      "nuisance_square_sum": 0.22471222148355416,
+      "sigma": 6.0,
+      "target_norm": 0.01428862018092296
+    },
+    {
+      "nuisance_square_sum": 0.04733745643861416,
+      "sigma": 8.0,
+      "target_norm": 0.0016020071187702032
+    },
+    {
+      "nuisance_square_sum": 0.007204398385809349,
+      "sigma": 10.0,
+      "target_norm": 0.00012256838271711354
+    },
+    {
+      "nuisance_square_sum": 0.0007895748391366794,
+      "sigma": 12.0,
+      "target_norm": 5.892622679970327e-06
+    }
+  ]
+}
