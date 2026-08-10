@@ -1,0 +1,20 @@
+{
+  "classification": "PASS_EXACT_TWO_CONTACT_BROWNIAN_NORMAL_FORM",
+  "counts": {
+    "coefficient_rows": 640,
+    "energy_rows": 3,
+    "gram_rows": 961,
+    "no_go_rows": 7,
+    "wavelet_rows": 10000
+  },
+  "no_go": [
+    {"X": 16, "active": 2, "budget": "28/195", "energy": "11/64"},
+    {"X": 24, "active": 3, "budget": "1319/9177", "energy": "73/288"},
+    {"X": 32, "active": 4, "budget": "87248/606825", "energy": "43/128"},
+    {"X": 40, "active": 5, "budget": "825521/5740735", "energy": "67/160"},
+    {"X": 64, "active": 8, "budget": "214929765056/1494381620655", "energy": "171/256"},
+    {"X": 80, "active": 10, "budget": "1246836776381876/8668767785502825", "energy": "267/320"},
+    {"X": 128, "active": 16, "budget": "19833197963426141689275136/137886544033889167868726375", "energy": "683/512"}
+  ],
+  "proof_digest_sha256": "41ee0afdaed3eed68a293ca33466d0462bd1535e4c75eb53bea213d334cccbfd"
+}
