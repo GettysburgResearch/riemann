@@ -1,0 +1,25 @@
+{
+  "kernel_gram_minimum_eigenvalue": 0.03148682031923947,
+  "kernel_max_error": "1.6587384e-13",
+  "kernel_pairs": 25,
+  "positive_symbol_sandwich_minimum_eigenvalue": 1.8492911859747124e-19,
+  "scope": "High-precision sine/Cauchy identities and a finite positive-symbol sandwich only; no zeta symbol sign theorem or RH claim.",
+  "shift_checks": [
+    {
+      "correlation_error": "0.0",
+      "energy_error": "8.7511152e-62",
+      "y": "0.3"
+    },
+    {
+      "correlation_error": "0.0",
+      "energy_error": "7.7787691e-62",
+      "y": "0.9"
+    },
+    {
+      "correlation_error": "1.9446923e-62",
+      "energy_error": "0.0",
+      "y": "2.0"
+    }
+  ],
+  "verdict": "PASS_X_90506_SINE_CAUCHY_SANDWICH"
+}
