@@ -1,0 +1,60 @@
+{
+  "a": 0.55,
+  "cardinal_error": 4.938532946740155e-15,
+  "compact_capture_costs": [
+    104083.67136268494,
+    189.36843477075251,
+    28.150679146052802,
+    16.631934655353618,
+    15.074452064827526
+  ],
+  "compact_kernel_frobenius_errors": [
+    1.0452159031276522,
+    0.19845278436631794,
+    0.045768253932979806,
+    0.011459596531049394,
+    0.002984703705828854
+  ],
+  "compact_radii": [
+    2.0,
+    4.0,
+    6.0,
+    8.0,
+    10.0
+  ],
+  "final_strip_min_eigenvalue": 0.009554614312111949,
+  "gates": {
+    "cardinal_values": true,
+    "compact_cost_convergence": true,
+    "compact_kernel_convergence": true,
+    "constraint_monotonicity": true,
+    "negative_pair_value": true,
+    "packet_independent_bound": true,
+    "positive_strip_gram": true,
+    "rank_one_schur_bound": true,
+    "schur_identity": true
+  },
+  "local_weil_value": -2.0000000000000036,
+  "nested_strip_capture_costs": [
+    5.775000000000006,
+    6.129792132313129,
+    11.474930421202204,
+    13.148945216581382,
+    14.86442293766328
+  ],
+  "nuisance_count": 4,
+  "rank_one_schur_residual_min_eigenvalue": 0.12037941119602869,
+  "status": "PASS_XI_CARDINAL_GRAM_CAPTURE",
+  "target_pair": [
+    [
+      0.35,
+      0.22
+    ],
+    [
+      0.35,
+      -0.22
+    ]
+  ],
+  "target_schur_capture_cost": 14.864422937663253,
+  "weighted_source_norm": 23504.08446840178
+}
