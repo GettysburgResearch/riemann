@@ -4,7 +4,7 @@ Claim ID: `T-90205`
 Status: **FULL CONDITIONAL PROPOSAL — ONE EXPLICIT HINGE THEOREM OPEN; INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-10  
-Depends on: `L-90209`; exact carry/divergence equivalence `L-23810`; positive hinge decomposition of the critical target; resident positive-fragmentation/RH consumer  
+Depends on: `L-90212`; exact carry/divergence equivalence `L-23810`; positive hinge decomposition of the critical target; resident positive-fragmentation/RH consumer  
 Scope: explicit replacement for the refuted frozen producer; RH is not claimed
 
 ## 1. Square-root hinge target
@@ -28,7 +28,7 @@ Let `r^(T)` be its unique Möbius node divergence:
 \tag{T-90205.2}
 \]
 
-Apply the ordered quarter-balanced policy of `L-90209` and let `M^(T)` be its
+Apply the ordered quarter-balanced policy of `L-90212` and let `M^(T)` be its
 exact occupation:
 
 \[
@@ -52,20 +52,19 @@ The proposed theorem is
 > \tag{T-90205.4}
 > \]
 
-By `L-90209/L-33107`, OBH is exactly the assertion that the fixed explicit
+By `L-90212/L-33107`, OBH is exactly the assertion that the fixed explicit
 policy emits a nonnegative quarter-balanced fragmentation of every square-root
 hinge.
 
-This is not a generic convex-target theorem.  `O-90209` records the exact step
+This is not a generic convex-target theorem. `O-90209` records the exact step
 target counterexample
 
 \[
  w(q)=\mathbf1_{2\le q\le8},
- \qquad
- M_4=-\frac43
+ \qquad M_4=-\frac43
 \]
 
-for the same policy.  Any proof of OBH must therefore use the arithmetic and
+for the same policy. Any proof of OBH must therefore use the arithmetic and
 square-root structure of (T-90205.1).
 
 ## 3. Exact positive hinge decomposition of the critical target
@@ -74,8 +73,7 @@ Fix a final endpoint `X` and put
 
 \[
  x_q=q^{-1/2},
- \qquad
- f_X(x)=2x\log\frac{x}{x_X}.
+ \qquad f_X(x)=2x\log\frac{x}{x_X}.
 \tag{T-90205.5}
 \]
 
@@ -99,7 +97,7 @@ Moreover
 Let
 
 \[
- s_T=rac{f_X(x_T)-f_X(x_{T+1})}{x_T-x_{T+1}}
+ s_T=\frac{f_X(x_T)-f_X(x_{T+1})}{x_T-x_{T+1}}
  \qquad(2\le T\le X-1).
 \tag{T-90205.8}
 \]
@@ -108,8 +106,7 @@ Convexity gives
 
 \[
  s_{T-1}-s_T\ge0,
- \qquad
- s_{X-1}>0.
+ \qquad s_{X-1}>0.
 \]
 
 The exact nodal hinge representation is
@@ -123,21 +120,17 @@ The exact nodal hinge representation is
 \tag{T-90205.9}
 \]
 
-This is simply the piecewise-linear convex interpolation formula evaluated at
-the nodes `x_q`; no approximation is involved.
-
-Thus the critical logarithmic target is a **positive superposition of the
-square-root hinges**.
+This is the piecewise-linear convex interpolation formula at the nodes `x_q`;
+no approximation enters. Thus the critical logarithmic target is a **positive
+superposition of the square-root hinges**.
 
 ## 4. OBH gives one explicit nonnegative critical flow
 
-Embed the OBH flow for a hinge `h_T` into the endpoint `X>=T` by setting every
-parent coefficient above `T` to zero.  Triangularity shows it remains the same
-exact hinge realization.
-
-All hinge flows use the same split policy `pi_n` of `L-90209`.  Therefore the
-positive linear combination in (T-90205.9) is again a flow using that same
-policy, with total occupation
+Embed the OBH flow for `h_T` into an endpoint `X>=T` by setting every parent
+coefficient above `T` to zero. Triangularity preserves the exact hinge
+realization. All hinge flows use the same split policy `pi_n` of `L-90212`, so
+the positive combination in (T-90205.9) is again a flow using that policy, with
+occupation
 
 \[
  \boxed{
@@ -148,13 +141,8 @@ policy, with total occupation
 \tag{T-90205.10}
 \]
 
-Under OBH every term is nonnegative, so
-
-\[
- M_n^{(X),\mathrm{crit}}\ge0.
-\]
-
-Linearity of the carry loads and (T-90205.9) give exact saturation
+Under OBH every term is nonnegative. Linearity of the carry loads gives exact
+saturation
 
 \[
  \boxed{
@@ -170,59 +158,56 @@ critical target at every endpoint.
 
 ## 5. RH consequence
 
-There are two already-resident consumers.
+There are two resident consumers.
 
 1. The carry/binomial route converts a nonnegative exact balanced saturation
-   into the sharp complete prime-power ramp and then applies the Landau pole
-   exclusion.
-2. More directly, the affine potential firewall `L-32302` shows that any
-   cofinal nonnegative exact fragmentation of the critical target already
-   forces the reciprocal-zeta one-sign criterion and hence RH.
+   into the sharp complete prime-power ramp and applies Landau pole exclusion.
+2. More directly, `L-32302` shows that any cofinal nonnegative exact
+   fragmentation of the critical target forces a reciprocal-zeta one-sign
+   criterion and hence RH.
 
 Therefore
 
 \[
- \boxed{
- \mathrm{OBH}\Longrightarrow\mathrm{RH}.
- }
+ \boxed{\mathrm{OBH}\Longrightarrow\mathrm{RH}.}
 \tag{T-90205.12}
 \]
 
-Every arrow after OBH is already exact/standard; the entire new arithmetic
-burden is the single sign theorem (T-90205.4).
+The new arithmetic burden is entirely the sign theorem (T-90205.4).
 
-## 6. Why this route survives the new resonance refutation
+## 6. Why this route survives the frozen resonance refutation
 
-`T-90204` refutes the frozen half-binary/half-ternary producer because its
-finite scale menu has almost-periodic deterministic resonances with real part
-arbitrarily close to the conservation line.
-
+`R-90201` refutes the frozen half-binary/half-ternary producer because its
+finite ratio menu has a surviving near-conservation deterministic resonance.
 The ordered policy is qualitatively different:
 
 - every parent uses a whole balanced interval of splits;
 - the continuum selected-child law is absolutely continuous;
-- `L-90209` proves a strict deterministic spectral gap for that continuum law;
-- no finite-ratio resonance mechanism pre-refutes OBH.
+- `L-90212` proves a strict deterministic spectral gap for that continuum law;
+- no finite-ratio almost-periodic mechanism pre-refutes OBH.
 
 Thus OBH is not a relabeling of the dead producer theorem.
 
 ## 7. Finite evidence and automatic rejection tests
 
-`O-90209/X-90205` retain the following reconnaissance:
+`O-90209/X-90205-ordered-balanced-hinges` retain:
 
 - exhaustive hinge scan at every `3<=T<=2000`: zero negative occupations;
 - smallest strictly positive nonterminal coordinate in that sweep:
   `M_1999^(2000)=0.0111789419955...`;
 - spot hinges through `T=10^6`: zero negative coordinates;
-- direct critical target at `X=10^3,10^4,10^5,10^6`: zero negative coordinates;
+- additional hostile discovery sweeps through `T=5e7`: zero negative
+  coordinates for the quarter-balanced and the cleaner one-third-balanced
+  ordered policies;
+- direct critical target at `X=10^3,10^4,10^5,10^6`: zero negatives;
 - generic step target `1_(q<=8)`: exact failure `M_4=-4/3`.
 
-These are evidence and mutation tests, not a proof of OBH.
+The scans are reconnaissance, not a proof of OBH.
 
 Reject a proposed proof if it:
 
 - proves positivity for every decreasing/convex target (false by the step
-  counterexample);
+  mutation);
 - replaces the Möbius divergence by an unsigned majorant;
 - silently imports positivity of the full internal-Pascal inverse (SHARP);
 - uses only the continuum spectral gap without controlling finite arithmetic
