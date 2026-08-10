@@ -45,7 +45,7 @@ Applying the corresponding endpoint filter gives the universal age kernel
  \boxed{
  K_P(a)=\sum_{j=0}^{d}c_jh_+(a-jL).
  }
- \tag{R-90208.4]
+ \tag{R-90208.4}
 \]
 
 Indeed
@@ -77,16 +77,16 @@ Translation therefore gives the exact filtered transform
  \int_0^\infty K_P(a)e^{-za}\,da
  =P(e^{-zL})\frac{z-1/2}{z^2}.
  }
- \tag{R-90208.7]
+ \tag{R-90208.7}
 \]
 
 At the critical source exponent,
 
 \[
  \boxed{
- \int_0^\infty K_P(a)e^{-a/2}\,da=0
+ \int_0^\infty K_P(a)e^{-a/2}\,da=0.
  }
- \tag{R-90208.8]
+ \tag{R-90208.8}
 \]
 
 for **every** finite filter `P`, independently of its coefficients, roots,
@@ -98,26 +98,21 @@ exponential source is neutral.
 ## 3. Universal one-sign filtering is impossible
 
 A nonzero function which is everywhere nonnegative has strictly positive
-integral against the strictly positive weight `e^{-a/2}`.  Likewise a nonzero
-everywhere nonpositive function has strictly negative integral.  Equation
+integral against the strictly positive weight `e^{-a/2}`. Likewise a nonzero
+everywhere nonpositive function has strictly negative integral. Equation
 (R-90208.8) therefore implies that `K_P` cannot be one-signed unless it vanishes
 identically.
 
 But a nonzero finite filter cannot give `K_P identically 0`: let `j_0` be its
-smallest index with `c_(j_0)!=0`.  On the interval
+smallest index with `c_(j_0)!=0`. On a sufficiently short interval immediately
+to the right of `j_0L`, the first active translated kernel contributes the
+nonzero affine term
 
 \[
- j_0L<a<(j_0+1)L
+ c_{j_0}\left(1-\frac{a-j_0L}{2}\right),
 \]
 
-before the next active delay, `K_P` contains the nonzero affine term
-
-\[
- c_{j_0}\left(1-\frac{a-j_0L}{2}\right)
-\]
-
-plus no earlier nonzero translated kernel.  In particular it is not identically
-zero on a sufficiently short interval to the right of `j_0L`.
+so the filtered kernel is not identically zero.
 
 Hence
 
@@ -127,7 +122,7 @@ Hence
  \quad\Longrightarrow\quad
  K_P\text{ takes both positive and negative values.}
  }
- \tag{R-90208.9]
+ \tag{R-90208.9}
 \]
 
 This theorem is stronger than a no-go for the preferred factor-64 polynomial:
@@ -143,7 +138,7 @@ If
  \tag{R-90208.10}
 \]
 
-then the filtered kernel is compactly supported.  Indeed, once every delay is
+then the filtered kernel is compactly supported. Indeed, once every delay is
 active,
 
 \[
@@ -155,7 +150,7 @@ active,
  \tag{R-90208.11}
 \]
 
-This covers the compact annular filters of PR #352.  Equation (R-90208.8) then
+This covers the compact annular filters of PR #352. Equation (R-90208.8) then
 says even more geometrically: the compact kernel has exactly zero critical
 exponential mass, so positive and negative lobes are compulsory.
 
@@ -173,7 +168,7 @@ Take `L=log 2` and the unscaled preferred polynomial of `L-90023`,
 \]
 
 Its kernel is therefore forced to change sign before any arithmetic source is
-inserted.  Direct exact piecewise evaluation gives three age sectors:
+inserted. Direct piecewise evaluation gives three age sectors:
 
 ```text
 positive near age 0,
@@ -183,7 +178,7 @@ positive again near the oldest dyadic ages,
 
 and returns to zero after age `6 log 2` because of (R-90208.10).
 
-The sign changes are not a defect of the chosen `3/4` coefficient.  They are a
+The sign changes are not a defect of the chosen `3/4` coefficient. They are a
 consequence of the universal zero moment (R-90208.8), so every alternative
 finite factor-64 dressing has the same source-blind obstruction.
 
@@ -200,7 +195,7 @@ pointwise sign of the filtered Green kernel
 => RH criterion.
 ```
 
-It does **not** say the filtered endpoint scalar itself lacks a sign.  A proof
+It does **not** say the filtered endpoint scalar itself lacks a sign. A proof
 may still exploit arithmetic timing inside the positive source, for example:
 
 - the strict between-integer decrease and prime-power jumps of `R_Lambda`;
