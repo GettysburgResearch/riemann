@@ -1,6 +1,6 @@
 # Integration-wave route Rosetta stone
 
-**Cutoff:** `2026-08-11T05:37:06Z`  
+**Cutoff:** `2026-08-10T22:28:10Z`  
 **Frozen base:** `d6409319b4041cd09bee85f55a344631508f2501`
 
 This document maps repository acronyms and apparently separate proposals to canonical mathematical objects. An alias means that two routes share an exact object or an explicit transform. It does not mean that every claimed theorem transfers between them.
