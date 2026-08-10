@@ -111,16 +111,32 @@ Using `I=D+YE`, one checks
 
 Substitution in `L-90302.3` and completion of the square gives (L-90303.5).
 
-Equivalently, apply the parameter-independent shear which sends the zeroth jet `(1,Y)` to `(1,0)`.  In those centered coordinates the curvature matrix is
+Equivalently, apply the parameter-independent determinant-one shear
 
 \[
-\begin{pmatrix}
-R & ED-C/2\\
-ED-C/2 & D^2
-\end{pmatrix},
+M=\begin{pmatrix}1&0\\-Y&1\end{pmatrix}
 \]
 
-whose determinant is immediately `RD^2-(ED-C/2)^2`; replacing the centered second coordinate by its definition yields exactly (L-90303.5).  The Wronskian derivation is coordinate-free and is the preferred proof.
+which sends the zeroth jet `(1,Y)` to `(1,0)`.  The transformed jets are
+
+\[
+(1,0),\qquad(E,D),\qquad(E^2-R,\,T-Y(E^2-R)).
+\]
+
+Since `K` transforms by congruence and `det M=1`, its determinant is unchanged.  In these centered coordinates the curvature matrix is exactly
+
+\[
+\boxed{
+MKM^*
+=\begin{pmatrix}
+R&-C/2\\
+-C/2&D^2
+\end{pmatrix}.
+}
+\tag{L-90303.5a}
+\]
+
+Its determinant is immediately `RD^2-C^2/4`.  The Wronskian derivation remains the coordinate-free proof.
 
 ## 3. Exact inertia defect
 
