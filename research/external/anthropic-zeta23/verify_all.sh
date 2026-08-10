@@ -25,7 +25,8 @@ python3 "$REPO/experiments/X-zeta23-support-optimizer/optimize_support.py" \
 for experiment in \
   X-zeta23-gabor-fusion \
   X-zeta23-finite-isolation \
-  X-zeta23-xi-cardinal-capture
+  X-zeta23-xi-cardinal-capture \
+  X-zeta23-terminal-arithmetic-floor
 do
   temp="$(mktemp)"
   (
