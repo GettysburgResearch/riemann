@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Exact regressions for L-90301/L-90302/L-90303/R-90301.
+"""Exact regressions for L-90301--L-90304 and R-90301.
 
 Standard-library only. The finite exhaustive loops verify algebraic identities;
-the analytic/arithmetic closing estimates remain in the markdown proofs.
+the cofinal analytic estimates remain in the markdown proofs.
 """
 from fractions import Fraction
 from itertools import product
@@ -80,6 +80,25 @@ def main():
         assert Kc == [[Fraction(R), -C / 2], [-C / 2, D * D]]
         relative_rows += 1
 
+    # L-90304: when Y=0 and H=R-E^2>0, the unknown-current
+    # quadratic has an exact current-independent maximum T^2/(4H).
+    completion_rows = 0
+    for R in range(1, 6):
+        for E in vals:
+            H = R - E * E
+            if H <= 0:
+                continue
+            for I, T in product(vals, repeat=2):
+                lhs = Fraction((T - 2 * E * I) ** 2, 4 * R) - I * I
+                rhs = (
+                    Fraction(T * T, 4 * H)
+                    - Fraction(H, R)
+                    * (Fraction(I) + Fraction(T * E, 2 * H)) ** 2
+                )
+                assert lhs == rhs
+                assert lhs <= Fraction(T * T, 4 * H)
+                completion_rows += 1
+
     # Exact Q=4 all-pass cross-multiplication at many rational x.
     # phi(s)=(1/2)(x-4)/(x-1), phi(1-s)=2(x-1)/(x-4).
     allpass_rows = 0
@@ -94,14 +113,16 @@ def main():
             allpass_rows += 1
 
     result = {
-        "schema": "X-90301-inertia-defect-v2",
+        "schema": "X-90301-inertia-defect-v3",
         "classification": "PASS_EXACT_TWO_STATE_INERTIA_WRONSKIAN_IDENTITIES",
         "real_integer_wronskian_rows": determinant_rows,
         "trace_frobenius_determinant_rows": trace_rows,
         "relative_q4_square_vs_reserve_rows": relative_rows,
+        "zero_bare_current_independent_completion_rows": completion_rows,
         "q4_allpass_rational_rows": allpass_rows,
         "proof_boundary": (
-            "finite exact algebra only; no arithmetic Q4 inertia-defect estimate and no RH conclusion"
+            "finite exact algebra only; analytic O(n/log n) theorem is in L-90304; "
+            "no global Q4 recurrence and no RH conclusion"
         ),
     }
     raw = json.dumps(result, sort_keys=True, indent=2) + "\n"
