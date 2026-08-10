@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "aligned_filtered_chebyshev_carry": {
+      "failures": [],
+      "pass": true,
+      "tested_rows": 4560
+    },
+    "compact_current_coefficient_identity": {
+      "failures": [],
+      "pass": true,
+      "tested_coefficients": 384
+    },
+    "compact_current_prefix_identity": {
+      "failures": [],
+      "pass": true,
+      "tested_prefixes": 384
+    },
+    "delayed_bare_gauge_scaling": {
+      "failures": [],
+      "pass": true,
+      "tested_rows": 4560
+    },
+    "one_convolve_b4": {
+      "failures": [],
+      "pass": true,
+      "tested_coefficients": 384
+    }
+  },
+  "classification": "FINITE_EXACT_COEFFICIENT_REGRESSION_NOT_RH_PROOF",
+  "max_coefficient": 384,
+  "max_parent_row": 96,
+  "proof_boundary": "Checks exact finite source/current/carry identities only. It does not prove the von Koch estimate, T-90302, PIG, or RH.",
+  "verdict": "PASS_X_90402_PIG_EQUIVALENCE_ALGEBRA"
+}
