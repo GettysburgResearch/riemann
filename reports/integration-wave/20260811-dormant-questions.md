@@ -1,6 +1,6 @@
 # Dormant but live questions after the 2026-08-11 archaeology pass
 
-**Cutoff:** `2026-08-11T05:37:06Z`  
+**Cutoff:** `2026-08-10T22:28:10Z`  
 **Frozen base:** `d6409319b4041cd09bee85f55a344631508f2501`  
 **Purpose:** rank narrow, falsifiable, infrastructure-rich questions that were abandoned, eclipsed, or never independently closed.
 
