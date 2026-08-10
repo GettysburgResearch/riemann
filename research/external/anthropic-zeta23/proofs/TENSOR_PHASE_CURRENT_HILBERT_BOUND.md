@@ -1,7 +1,7 @@
 # Tensor phase current collapse and the four-adic Hilbert bound
 
 Status: **PROPOSED COMPLETE EXACT ARITHMETIC THEOREM — INDEPENDENT REVIEW REQUIRED**  
-Scope: finite main-pole-killing tensor phase bank, its source reserve, channel DFT, and coefficient/mean-square operator bounds; no complete Weil floor and no RH claim  
+Scope: finite main-pole-killing tensor phase bank, its source reserve, channel DFT, and coefficient/mean-square bounds; no complete Weil floor and no RH claim  
 Depends on: PR #325 `L-32415`; ordinary Selberg–Kummer reserve; finite Fourier orthogonality; Montgomery–Vaughan's Dirichlet-polynomial mean-value theorem
 
 ## 1. Finite main-pole source and tensor phase bank
@@ -9,63 +9,49 @@ Depends on: PR #325 `L-32415`; ordinary Selberg–Kummer reserve; finite Fourier
 Put
 
 \[
-a(s)=4^{1-s},
-\qquad L=\log4,
+a(s)=4^{1-s},\qquad L=\log4,
 \]
 
 and retain the finite Q4 main-pole source
 
 \[
-B_\sharp(s)=\frac{1-a(s)}{\zeta(s)},
+B_\sharp(s)={1-a(s)\over\zeta(s)},
 \qquad
 b_\sharp=(\varepsilon-4\delta_4)*\mu.
 \tag{TP.1}
 \]
 
-PR #325 proves that its inverse/generalized-prime coefficients are positive, every nontrivial zeta-zero pole is retained, and its quarter-balanced Selberg–Kummer reserve
+PR #325 proves that this system has positive inverse and generalized-prime coefficients, retains every nontrivial zeta-zero pole, and has a strict quarter-balanced Selberg–Kummer reserve
 
 \[
-\mathcal R_\sharp=P_\sharp^2-S_\sharp
+\mathcal R_\sharp=P_\sharp^2-S_\sharp>0.
 \]
 
-is strictly positive on every row.
-
-Fix integers `k>=1`, `M>=2`, and let
+For integers `k>=1`, `M>=2`, and
 
 \[
-\boldsymbol\omega=(\omega_1,\ldots,\omega_k)
-\in\Omega_M^k.
+\boldsymbol\omega=(\omega_1,\ldots,\omega_k)\in\Omega_M^k,
 \]
 
-Define
+define
 
 \[
-\boxed{
 F_{\boldsymbol\omega}(s)
 =\prod_{\ell=1}^k(1-\omega_\ell a(s)),
 \qquad
 B_{\boldsymbol\omega}=F_{\boldsymbol\omega}B_\sharp.
-}
 \tag{TP.2}
 \]
 
-Every channel remains main-pole killing because the common factor `B_sharp` vanishes at `s=1`.
-
-On the critical line, `|a|=2`, and independent phase averaging gives the exact tensor frame
+Every channel remains main-pole killing because the common factor `B_sharp` vanishes at `s=1`. On the critical line `|a|=2`, and independent phase averaging gives
 
 \[
-\boxed{
-\frac1{M^k}
-\sum_{\boldsymbol\omega\in\Omega_M^k}
-|F_{\boldsymbol\omega}(1/2+it)|^2
-=5^k.
-}
+{1\over M^k}\sum_{\boldsymbol\omega}
+|F_{\boldsymbol\omega}(1/2+it)|^2=5^k.
 \tag{TP.3}
 \]
 
-The frame is a tensor product of `k` one-stage critical frames; no binomial-power conditioning is present.
-
-## 2. Complete source reserve after independent phase separation
+## 2. Complete phase-separated source reserve
 
 Let
 
@@ -75,28 +61,20 @@ Let
 \qquad A_{\boldsymbol\omega}=B_{\boldsymbol\omega}^{-1}.
 \]
 
-Finite logarithmic differentiation gives
+Logarithmic differentiation gives
 
 \[
-\boxed{
 \Lambda_{\boldsymbol\omega}
 =\Lambda_\sharp
 +L\sum_{\ell=1}^k\sum_{r\ge1}
 \omega_\ell^r4^r\delta_{4^r}.
-}
 \tag{TP.4}
 \]
 
-Fix an integer carry endpoint `n`, put
+Fix a carry endpoint `n`, put `R=floor(log_4 n)`, and assume
 
 \[
-R=\lfloor\log_4n\rfloor,
-\]
-
-and assume
-
-\[
-\boxed{M>2R.}
+M>2R.
 \tag{TP.5}
 \]
 
@@ -106,75 +84,58 @@ For a carry row `e=(n,j)`, set
 d_r(e)=L4^r\chi_{n,4^r}(j).
 \]
 
-Then
+Then independent Fourier orthogonality gives
 
 \[
-P_{\boldsymbol\omega}(e)
-=P_\sharp(e)+
-\sum_{\ell=1}^k\sum_{r=1}^{R}
-\omega_\ell^rd_r(e).
-\]
-
-Independent Fourier orthogonality gives
-
-\[
-\boxed{
-\frac1{M^k}\sum_{\boldsymbol\omega}
+{1\over M^k}\sum_{\boldsymbol\omega}
 |P_{\boldsymbol\omega}(e)|^2
 =P_\sharp(e)^2+k\sum_{r=1}^{R}d_r(e)^2.
-}
 \tag{TP.6}
 \]
 
-Let
+If
 
 \[
 C_{\boldsymbol\omega}
 =\Lambda_{\boldsymbol\omega}\log
- +\Lambda_{\boldsymbol\omega}*\Lambda_{\boldsymbol\omega}.
+ +\Lambda_{\boldsymbol\omega}*\Lambda_{\boldsymbol\omega},
 \]
 
-Every term containing a phase-dependent local factor has nonzero phase in at least one independent coordinate. The condition `M>2R` also prevents a same-coordinate local/local phase from returning to zero. Hence
+then every term containing a phase-dependent local factor has nonzero phase in at least one independent coordinate. The condition `M>2R` also prevents a same-coordinate local/local phase from returning to zero. Hence, through the complete endpoint,
 
 \[
-\boxed{
-\frac1{M^k}\sum_{\boldsymbol\omega}
-C_{\boldsymbol\omega}=C_\sharp
-}
+{1\over M^k}\sum_{\boldsymbol\omega}C_{\boldsymbol\omega}=C_\sharp.
 \tag{TP.7}
 \]
 
-through the complete endpoint. Consequently the averaged row reserve is exactly
+Therefore the averaged row reserve is exactly
 
 \[
 \boxed{
 \mathcal R_{k,M}(e)
-=\mathcal R_\sharp(e)
-+k\sum_{r=1}^{R}d_r(e)^2
-\ge0.
+=\mathcal R_\sharp(e)+k\sum_{r=1}^{R}d_r(e)^2\ge0.
 }
 \tag{TP.8}
+\]
 
-Thus independent phase depth adds only positive local storage; it creates no mixed Selberg debt.
+Independent phase depth adds only positive local storage and creates no mixed Selberg debt.
 
-## 3. Exact tensor DFT of the bare sources and currents
+## 3. Exact tensor DFT of sources and currents
 
-For a subset `S subset {1,...,k}`, write `|S|=r` and let `chi_S` be the corresponding product character on `Omega_M^k`. Use the normalized DFT
+For a subset `S` of `{1,...,k}`, put `r=|S|` and let `chi_S` be the corresponding product character on `Omega_M^k`. With the normalized tensor DFT,
 
 \[
 \widehat B_S
-=\frac1{M^k}\sum_{\boldsymbol\omega}
-\overline{\chi_S(\boldsymbol\omega)}
-B_{\boldsymbol\omega}.
+={1\over M^k}\sum_{\boldsymbol\omega}
+\overline{\chi_S(\boldsymbol\omega)}B_{\boldsymbol\omega},
 \]
 
-Since every phase coordinate appears only linearly in (TP.2), the only nonzero DFT modes are subsets, and
+one has exactly
 
 \[
-\boxed{
 \widehat B_S=(-a)^rB_\sharp.
-}
 \tag{TP.9}
+\]
 
 Put
 
@@ -183,67 +144,60 @@ q_\sharp=B_\sharp',
 \qquad q_{\boldsymbol\omega}=B_{\boldsymbol\omega}'.
 \]
 
-Because `a'=-La`, differentiation of (TP.9) gives
+Since `a'=-La`, differentiation gives
 
 \[
-\boxed{
-\widehat q_S
-=(-a)^r(q_\sharp-rLB_\sharp).
-}
+\widehat q_S=(-a)^r(q_\sharp-rLB_\sharp).
 \tag{TP.10}
-
-All DFT modes outside `{0,1}^k` vanish identically.
-
-Channel Parseval and `|a|^2=4` now give
-
-\[
-\boxed{
-\frac1{M^k5^k}\sum_{\boldsymbol\omega}
-|q_{\boldsymbol\omega}|^2
-=\sum_{r=0}^k
-\binom kr\frac{4^r}{5^k}
-|q_\sharp-rLB_\sharp|^2.
-}
-\tag{TP.11}
-
-The weights are the law of a binomial variable
-
-\[
-J\sim\operatorname{Binomial}(k,4/5).
 \]
 
-Therefore the whole current bank collapses exactly to
+All DFT modes outside `{0,1}^k` vanish. Channel Parseval and `|a|^2=4` yield
+
+\[
+{1\over M^k5^k}\sum_{\boldsymbol\omega}|q_{\boldsymbol\omega}|^2
+=\sum_{r=0}^k\binom kr{4^r\over5^k}
+|q_\sharp-rLB_\sharp|^2.
+\tag{TP.11}
+\]
+
+The weights are the law of `J ~ Binomial(k,4/5)`, so the complete bank collapses to
 
 \[
 \boxed{
-\frac1{M^k5^k}\sum_{\boldsymbol\omega}
-|q_{\boldsymbol\omega}|^2
-=\left|q_\sharp-rac{4k}{5}LB_\sharp\right|^2
-+rac{4k}{25}L^2|B_\sharp|^2.
+{1\over M^k5^k}\sum_{\boldsymbol\omega}|q_{\boldsymbol\omega}|^2
+=\left|q_\sharp-{4k\over5}LB_\sharp\right|^2
++{4k\over25}L^2|B_\sharp|^2.
 }
 \tag{TP.12}
-
-After atomized physical localization, `zeta B_sharp N_theta=(1-a)N_theta` is deterministic. Thus the tensor bank carries only one genuine pole current, one deterministic linear gauge, and one deterministic variance term. Its complete causal current cost is quadratic, not exponential, in `k`.
-
-## 4. Critical polynomial norm of an arbitrary channel direction
-
-Equip channel coefficient vectors with the averaged norm
-
-\[
-\|x\|_{\rm ch}^2
-=\frac1{M^k}\sum_{\boldsymbol\omega}|x_{\boldsymbol\omega}|^2.
 \]
 
-For `||x||_ch=1`, synthesize the normalized scalar multiplier
+After atomized physical localization,
+
+\[
+\zeta B_\sharp N_\theta=(1-a)N_\theta
+\]
+
+is deterministic. Thus the tensor bank carries one genuine pole current, one deterministic linear gauge, and one deterministic variance term. Its causal current cost is quadratic, not exponential, in `k`.
+
+## 4. Uniform coherent channel norm
+
+Equip channel vectors with
+
+\[
+\|x\|_{\rm ch}^2={1\over M^k}
+\sum_{\boldsymbol\omega}|x_{\boldsymbol\omega}|^2.
+\]
+
+For `||x||_ch=1`, synthesize
 
 \[
 H_x(a)
-=\frac1{M^k5^{k/2}}
+={1\over M^k5^{k/2}}
 \sum_{\boldsymbol\omega}
-\overline{x_{\boldsymbol\omega}}
-F_{\boldsymbol\omega}(a)
-=\sum_{r=0}^kh_r a^r.
+\overline{x_{\boldsymbol\omega}}F_{\boldsymbol\omega}(a)
+=\sum_{r=0}^kh_ra^r.
 \tag{TP.13}
+\]
 
 Let `xhat_S` be the unitary tensor DFT of `x`. Then
 
@@ -252,20 +206,7 @@ h_r={(-1)^r\over5^{k/2}}
 \sum_{|S|=r}\widehat x_S.
 \]
 
-Cauchy–Schwarz and DFT Parseval imply
-
-\[
-\begin{aligned}
-\sum_{r=0}^k4^r|h_r|^2
-&\le
-\sum_{r=0}^k
-{4^r\binom kr\over5^k}
-\sum_{|S|=r}|\widehat x_S|^2\\
-&\le\sum_S|\widehat x_S|^2=1.
-\end{aligned}
-\]
-
-Hence
+Cauchy–Schwarz and DFT Parseval give
 
 \[
 \boxed{
@@ -273,49 +214,42 @@ Hence
 :=\sum_{r=0}^k4^r|h_r|^2\le1.
 }
 \tag{TP.14}
-
-This estimate is uniform in the channel count and tensor depth.
-
-## 5. Two-layer four-adic support and exact bandedness
-
-The common source coefficient
-
-\[
-b_\sharp(n)=\mu(n)-4\mathbf1_{4\mid n}\mu(n/4)
 \]
 
-has a special support law:
+This is uniform in channel count and tensor depth.
+
+## 5. Two-layer four-adic support
+
+The common source coefficient satisfies
+
+\[
+b_\sharp(n)=\mu(n)-4\mathbf1_{4\mid n}\mu(n/4).
+\]
+
+Its support obeys
 
 \[
 \boxed{
-b_\sharp(n)\ne0
-\Longrightarrow v_4(n)\in\{0,1\}.}
+b_\sharp(n)\ne0\Longrightarrow v_4(n)\in\{0,1\}.}
 \tag{TP.15}
+\]
 
-Indeed a squarefree integer has `v_4=0`, while the second tap produces exactly the layer `v_4=1`; every deeper layer contains a square factor and vanishes under `mu`.
+A squarefree integer has `v_4=0`; the second tap produces exactly `v_4=1`; every deeper layer contains a square factor and vanishes under `mu`.
 
-Therefore the coefficient sequence of `a^rB_sharp` is supported only on the two four-adic layers
+Therefore the coefficients of `a^rB_sharp` lie only on the two layers
 
 \[
 v_4(n)\in\{r,r+1\}.
 \tag{TP.16}
-
-At any integer `n`, a sum
-
-\[
-\sum_rh_ra^rB_\sharp
 \]
 
-has at most two nonzero mode contributions. This gives a uniform banded coefficient Gram before any analytic estimate.
-
-For a finite sequence `d(n)`, put
+At every integer, a sum `sum_r h_r a^r B_sharp` has at most two nonzero mode contributions. For
 
 \[
-\|d\|_{1/2,X}^2
-=\sum_{n\le X}{|d(n)|^2\over n}.
+\|d\|_{1/2,X}^2=\sum_{n\le X}{|d(n)|^2\over n},
 \]
 
-If `H(a)=sum h_r a^r`, then the two-layer law and `|u+v|^2<=2(|u|^2+|v|^2)` give
+this bandedness and `|b_sharp(n)|<=4` give
 
 \[
 \boxed{
@@ -323,28 +257,9 @@ If `H(a)=sum h_r a^r`, then the two-layer law and `|u+v|^2<=2(|u|^2+|v|^2)` give
 \le32(1+\log X)\|H\|_{\rm crit}^2.
 }
 \tag{TP.17}
-
-Here we used only `|b_sharp(n)|<=4` and the harmonic-sum bound.
-
-Differentiating the Dirichlet series gives the sharper load-bearing form
-
-\[
-\boxed{
-\|(H(a)B_\sharp)'\|_{1/2,X}^2
-\le32(1+\log X)(\log X)^2
-\|H\|_{\rm crit}^2.
-}
-\tag{TP.18}
-
-Indeed the coefficient arising from mode `r` and base integer `m` is
-
-\[
--4^rh_rb_\sharp(m)\log(4^rm),
 \]
 
-and `4^rm<=X` makes the logarithm at most `log X`.
-
-Likewise, for every derivative order `d>=0`,
+Differentiating the Dirichlet series gives, for every integer `d>=0`,
 
 \[
 \boxed{
@@ -352,62 +267,69 @@ Likewise, for every derivative order `d>=0`,
 \le32(1+\log X)(\log X)^{2d}
 \|H\|_{\rm crit}^2.
 }
-\tag{TP.19}
+\tag{TP.18}
+\]
 
-Combining with (TP.14), every unit channel direction has source, current, and second-current coefficient norms bounded by fixed powers of `log X`, independently of `k`.
+Indeed the coefficient from mode `r` and base integer `m` is a multiple of
 
-## 6. Montgomery–Vaughan operator corollary
+\[
+4^rh_rb_\sharp(m)\log^d(4^rm),
+\]
 
-Let `c_x^{(d)}(n)` be the coefficients of the `d`th derivative in (TP.19), truncated at `X`, and form
+and `4^rm<=X` bounds the logarithm by `log X`.
+
+Combining (TP.14) and (TP.18), every coherent unit channel direction has source, current, and second-current coefficient norms bounded by fixed powers of `log X`, independently of `k`.
+
+## 6. Montgomery–Vaughan mean-square corollary
+
+Let `c_x^(d)(n)` be the coefficients of the `d`th derivative in (TP.18), truncated at `X`, and put
 
 \[
 D_{x,X}^{(d)}(t)
-=\sum_{n\le X}{c_x^{(d)}(n)\over\sqrt n}\,n^{-it}.
+=\sum_{n\le X}{c_x^{(d)}(n)\over\sqrt n}n^{-it}.
 \]
 
 The classical Montgomery–Vaughan mean-value theorem gives
 
 \[
 \int_{-T}^{T}|D_{x,X}^{(d)}(t)|^2dt
-\ll(T+X)
-\sum_{n\le X}{|c_x^{(d)}(n)|^2\over n}.
+\ll(T+X)\sum_{n\le X}{|c_x^{(d)}(n)|^2\over n}.
 \]
 
-Therefore, uniformly over every tensor depth, channel count, and unit channel direction,
+Hence, uniformly over tensor depth, channel count, and coherent unit channel direction,
 
 \[
 \boxed{
 {1\over T}\int_{-T}^{T}|D_{x,X}^{(d)}(t)|^2dt
 \ll(1+X/T)(1+\log X)^{2d+1}.
 }
-\tag{TP.20}
+\tag{TP.19}
+\]
 
-In the natural regime `T>=X`, the bare source, current, and second current have respectively `O(log X)`, `O(log^3 X)`, and `O(log^5 X)` normalized mean square.
+In the natural regime `T>=X`, the bare source, current, and second current have normalized mean square `O(log X)`, `O(log^3 X)`, and `O(log^5 X)`, respectively.
 
-This is the first powered-Euler arithmetic estimate on the branch which is uniform over **coherent channel vectors**, rather than only the averaged diagonal bank.
+## 7. Exact remaining boundary
 
-## 7. What this closes and what remains
-
-The theorem closes:
+This theorem closes:
 
 ```text
 independent phase source reserve             exact and positive;
-tensor channel proliferation                 collapses to subset DFT;
-causal current bank                          exact binomial two-state law;
-arbitrary coherent channel synthesis         critical coefficient norm <=1;
-source/current coefficient Gram              uniformly two-layer banded;
-Dirichlet mean-square operator cost           polylogarithmic, uniform in k.
+tensor channel proliferation                 subset-DFT collapse;
+causal current bank                          exact binomial law;
+arbitrary coherent channel synthesis         critical norm <=1;
+source/current coefficient Gram              two-layer banded;
+Dirichlet mean-square cost                    polylogarithmic, uniform in k.
 ```
 
-It does **not** by itself prove the corrected Weil-kernel floor. The complete Gabor/Weil compression contains an archimedean term and a prime-shift Toeplitz operator whose worst coherent direction is not controlled merely by a vertical mean square. Equivalently, the reflected left-half-plane boundary state is not the same object as the causal current Gram in (TP.12).
+It does **not** prove the corrected Weil-kernel floor. The complete Gabor/Weil compression contains an archimedean term and a prime-shift Toeplitz operator whose worst coherent direction is not controlled merely by vertical mean square. Equivalently, the reflected left-half-plane boundary state is not the causal current Gram in (TP.12).
 
-Thus the remaining theorem has been narrowed further:
+The remaining theorem is:
 
-> convert the uniform coefficient/mean-square estimate (TP.20), together with the positive tensor reserve (TP.8), into a lower bound for the complete source-convolved reflected block on the Xi-cardinal or Gaussian terminal direction.
+> Convert the coherent coefficient estimate (TP.19), together with the positive tensor reserve (TP.8), into a lower bound for the complete source-convolved reflected block on the Xi-cardinal or Gaussian terminal direction.
 
 Any proof must retain the exact reflected subtraction. Replacing the complete block by its causal current Gram or by a Frobenius average is an automatic rejection.
 
-## Exact boundary
+## Exact status
 
 ```text
 tensor critical frame                         PROPOSED COMPLETE EXACT
