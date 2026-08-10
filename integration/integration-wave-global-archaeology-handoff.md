@@ -1,6 +1,6 @@
 # Global archaeology handoff for the next sole integrator
 
-**Review cutoff:** `2026-08-11T05:37:06Z`  
+**Review cutoff:** `2026-08-10T22:28:10Z`  
 **Frozen main:** `d6409319b4041cd09bee85f55a344631508f2501`  
 **Review branch:** `review/integration-wave-20260811-archaeology`  
 **Scope:** review and genealogy only; no theorem packets were integrated and no source branch was modified.
