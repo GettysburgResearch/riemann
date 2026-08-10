@@ -1,0 +1,75 @@
+{
+  "alias_polyphase": {
+    "alias_tax": 0.009197678062857095,
+    "dual_period": 1.25,
+    "kernel_absolute_error": 4.21953008004068e-15,
+    "pass": true,
+    "period_mean_diag_error": 2.2204463524798415e-16,
+    "period_mean_square_error": 6.661338147750939e-16,
+    "support_length": 2.0
+  },
+  "classification": "FINITE_NUMERICAL_DIAGNOSTIC_NOT_ANALYTIC_PROOF",
+  "no_alias_multirate": {
+    "absolute_error": 6.358913397817709e-12,
+    "dual_periods": [
+      2.37,
+      2.6457513110645907
+    ],
+    "pass": true,
+    "support_length": 2.0
+  },
+  "prime_power_resonance": {
+    "pass": true,
+    "prime": 5,
+    "rows": [
+      {
+        "absolute_error": 0.0,
+        "alias_frequency": 1.6094379124341003,
+        "n": 5,
+        "prime_power_frequency": 1.6094379124341003,
+        "r": 1
+      },
+      {
+        "absolute_error": 0.0,
+        "alias_frequency": 3.2188758248682006,
+        "n": 25,
+        "prime_power_frequency": 3.2188758248682006,
+        "r": 2
+      },
+      {
+        "absolute_error": 8.881784197001252e-16,
+        "alias_frequency": 4.828313737302301,
+        "n": 125,
+        "prime_power_frequency": 4.8283137373023015,
+        "r": 3
+      },
+      {
+        "absolute_error": 0.0,
+        "alias_frequency": 6.437751649736401,
+        "n": 625,
+        "prime_power_frequency": 6.437751649736401,
+        "r": 4
+      },
+      {
+        "absolute_error": 0.0,
+        "alias_frequency": 8.047189562170502,
+        "n": 3125,
+        "prime_power_frequency": 8.047189562170502,
+        "r": 5
+      }
+    ]
+  },
+  "proof_boundary": "The replay samples Poisson/alias identities and constants numerically. It does not prove the distributional Poisson formula, trace asymptotics, Montgomery--Vaughan estimates, or any statement about RH.",
+  "scalar_optimizer": {
+    "closed_form": 0.7532960678560707,
+    "optimal_error": 2.4547046140188655e-07,
+    "pass": true,
+    "quadrature": {
+      "flat": 0.7499996250001874,
+      "optimal_cosine": 0.7532958223856093,
+      "quadratic": 0.752437302821365,
+      "quartic": 0.7532270987835569
+    }
+  },
+  "verdict": "PASS_X_90401_MULTIRATE_ALIAS"
+}
