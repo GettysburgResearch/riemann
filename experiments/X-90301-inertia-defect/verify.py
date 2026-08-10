@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Exact regressions for L-90301/L-90302/R-90301.
+
+Standard-library only.  The finite exhaustive loops verify algebraic identities;
+the analytic/theorem statements remain in the markdown proofs.
+"""
+from fractions import Fraction
+from itertools import product
+import hashlib, json
+from pathlib import Path
+
+
+def outer(x, y):
+    return [[x[i] * y[j] for j in range(2)] for i in range(2)]
+
+
+def add(A, B):
+    return [[A[i][j] + B[i][j] for j in range(2)] for i in range(2)]
+
+
+def scale(c, A):
+    return [[c * A[i][j] for j in range(2)] for i in range(2)]
+
+
+def det(A):
+    return A[0][0] * A[1][1] - A[0][1] * A[1][0]
+
+
+def tr(A):
+    return A[0][0] + A[1][1]
+
+
+def frob2(A):
+    return sum(A[i][j] * A[i][j] for i in range(2) for j in range(2))
+
+
+def wedge(x, y):
+    return x[0] * y[1] - x[1] * y[0]
+
+
+def main():
+    vals = (-2, -1, 0, 1, 2)
+    determinant_rows = 0
+    trace_rows = 0
+    for coords in product(vals, repeat=6):
+        v = [Fraction(coords[0]), Fraction(coords[1])]
+        a = [Fraction(coords[2]), Fraction(coords[3])]
+        b = [Fraction(coords[4]), Fraction(coords[5])]
+        K = add(outer(a, a), scale(Fraction(-1, 2), add(outer(v, b), outer(b, v))))
+        rhs = wedge(v, a) * wedge(a, b) - Fraction(1, 4) * wedge(v, b) ** 2
+        assert det(K) == rhs
+        determinant_rows += 1
+        assert frob2(K) - tr(K) ** 2 == -2 * det(K)
+        trace_rows += 1
+
+    # Exact Q=4 all-pass cross-multiplication at many rational x.
+    # phi(s)=(1/2)(x-4)/(x-1), phi(1-s)=2(x-1)/(x-4).
+    allpass_rows = 0
+    for num in range(-100, 101):
+        for den in range(1, 18):
+            x = Fraction(num, den)
+            if x in (1, 4):
+                continue
+            p = Fraction(1, 2) * (x - 4) / (x - 1)
+            q = 2 * (x - 1) / (x - 4)
+            assert p * q == 1
+            allpass_rows += 1
+
+    result = {
+        "schema": "X-90301-inertia-defect-v1",
+        "classification": "PASS_EXACT_TWO_STATE_INERTIA_WRONSKIAN_IDENTITIES",
+        "real_integer_wronskian_rows": determinant_rows,
+        "trace_frobenius_determinant_rows": trace_rows,
+        "q4_allpass_rational_rows": allpass_rows,
+        "proof_boundary": (
+            "finite exact algebra only; no arithmetic Q4 determinant estimate and no RH conclusion"
+        ),
+    }
+    raw = json.dumps(result, sort_keys=True, indent=2) + "\n"
+    result["sha256_without_digest"] = hashlib.sha256(raw.encode()).hexdigest()
+    out = json.dumps(result, sort_keys=True, indent=2) + "\n"
+    path = Path(__file__).with_name("results") / "verification.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(out, encoding="utf-8")
+    print(out, end="")
+
+
+if __name__ == "__main__":
+    main()
