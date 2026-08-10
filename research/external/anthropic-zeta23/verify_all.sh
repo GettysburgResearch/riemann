@@ -22,6 +22,21 @@ python3 "$REPO/experiments/X-zeta23-support-optimizer/optimize_support.py" \
   --nodes 128 --iterations 18 --targets 0.70 0.80 0.90 \
   --json "$OUT/support-optimizer.json"
 
+for experiment in \
+  X-zeta23-gabor-fusion \
+  X-zeta23-finite-isolation \
+  X-zeta23-xi-cardinal-capture
+do
+  temp="$(mktemp)"
+  (
+    cd "$REPO/experiments/$experiment"
+    python3 verify.py --json "$temp"
+    cmp "$temp" results/verification.json
+    sha256sum -c SHA256SUMS
+  )
+  rm -f "$temp"
+done
+
 python3 -m unittest discover -s "$HERE/tests" -p 'test_*.py' -v
 
 (
