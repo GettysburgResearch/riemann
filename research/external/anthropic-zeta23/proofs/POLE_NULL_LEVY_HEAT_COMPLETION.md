@@ -28,7 +28,7 @@ exp(-a|y|)(|y|+1/a).
 
 Thus the complete zero and prime sides are trace class, while all global Xi-cardinal sources remain in the space.
 
-## 2. The two inevitable negative directions
+## 2. The one inevitable hyperbolic negative direction
 
 The centered functions
 
@@ -39,13 +39,13 @@ E_-(z)=Xi(z)(1+2 i z)
 
 vanish at every nontrivial zero and interpolate the two pole coordinates `z=+i/2,-i/2` exactly.
 
-For the pole-free form `Q=W-P`, their Gram is `-I_2`. Every off-line Xi-cardinal can be corrected by `E_+,E_-` to vanish at both pole coordinates without changing any zero value.
+For the pole-free form `Q=W-P`, their Gram is the negative hyperbolic block `-[[0,1],[1,0]]`. Every off-line Xi-cardinal can be corrected by `E_+,E_-` to vanish at both pole coordinates without changing any zero value.
 
 Hence, exactly,
 
 ```text
 negative index(Q)
- = 2 + number of reflected off-line zero pairs.
+ = 1 + number of reflected off-line zero pairs.
 ```
 
 Equivalently, after projecting to the two pole-null constraints, the negative index is exactly the number of off-line pairs.
@@ -53,7 +53,7 @@ Equivalently, after projecting to the two pole-null constraints, the negative in
 This converts RH from positivity into a fixed-index theorem:
 
 ```text
-RH <=> negative index(Q)=2.
+RH <=> negative index(Q)=1.
 ```
 
 ## 3. Gamma factor as a Lévy energy
@@ -106,10 +106,10 @@ converges for every complex beta and has an absolutely convergent all-prime expa
 The live target is no longer a generic determinant sign. It is one of:
 
 ```text
-prove the pole-free Lévy-prime form has index at most two;
+prove the pole-free Lévy-prime form has index at most one;
 prove the projected heat pressure is nonpositive;
 construct a positivity-preserving Feynman-Kac/polymer expansion
 for the constrained operator.
 ```
 
-These targets retain sensitivity to a single off-line pair, remove the pole rank-two nuisance exactly, and expose the archimedean side as a genuine Markov jump energy.
+These targets retain sensitivity to a single off-line pair, remove the pole hyperbolic plane exactly, and expose the archimedean side as a genuine Markov jump energy.

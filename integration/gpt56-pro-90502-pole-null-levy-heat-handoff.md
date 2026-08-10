@@ -6,7 +6,7 @@ Status: proposed exact theorem packet; finite replay; RH unproved
 ## Import order
 
 1. `L-90505-cauchy-sobolev-trace-class-completion.md`
-2. `L-90506-pole-cardinals-and-exact-index-two-shift.md`
+2. `L-90506-pole-cardinals-and-exact-index-one-shift.md`
 3. `L-90507-archimedean-levy-form-and-entire-heat-criterion.md`
 4. `T-90502-pole-null-fredholm-heat-rh-equivalence.md`
 5. external proof note and report
@@ -22,7 +22,7 @@ Status: proposed exact theorem packet; finite replay; RH unproved
 ## Exact new frontier
 
 ```text
-prove n_-(Q)<=2,
+prove n_-(Q)<=1,
 ```
 
 or equivalently

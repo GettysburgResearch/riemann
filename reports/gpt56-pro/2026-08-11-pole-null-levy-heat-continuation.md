@@ -1,4 +1,4 @@
-# Continuation report: pole-null Cauchy kernel, exact index-two shift, and heat amplification
+# Continuation report: pole-null Cauchy kernel, exact index-one shift, and heat amplification
 
 Date: 2026-08-11  
 Proposed stack: Fredholm-Pontryagin PR on top of PR #365  
@@ -9,7 +9,7 @@ Status: theorem packet and finite replay; RH unproved
 The first packet produced a trace-class Weil operator whose Fredholm determinant has one positive root per off-line pair. Two features remained unnecessarily opaque:
 
 1. its evaluation kernel was only estimated, not explicit;
-2. the positive pole term obscured the physical prime/gamma competition.
+2. the hyperbolic pole term obscured the physical prime/gamma competition.
 
 Both can be removed exactly.
 
@@ -39,7 +39,7 @@ which again makes the all-prime series summable.
 
 This supplies a concrete rational kernel for exact finite determinants and interpolation experiments.
 
-## 3. Pole cardinals and exact index two
+## 3. Pole cardinals and exact index one
 
 The two functions
 
@@ -48,20 +48,20 @@ E_+=Xi(z)(1-2iz),
 E_-=Xi(z)(1+2iz)
 ```
 
-are exact cardinals at the pole coordinates `+i/2,-i/2` and vanish at all nontrivial zeros. For `Q=W-P`, they form a negative identity block.
+are exact cardinals at the pole coordinates `+i/2,-i/2` and vanish at all nontrivial zeros. For `Q=W-P`, they form a negative hyperbolic block of signature `(1,1)`.
 
 Correct every off-line Xi-cardinal by subtracting its two pole values against `E_+,E_-`. The corrected cardinal stays super-Gaussian, keeps its pair values, and becomes pole-null.
 
 This proves
 
 ```text
-n_-(Q)=q+2,
+n_-(Q)=q+1,
 n_-(W restricted to pole-null tests)=q,
 ```
 
 where `q` is the number of off-line reflected pairs.
 
-Thus RH is exactly the fixed-index statement `n_-(Q)=2`.
+Thus RH is exactly the fixed-index statement `n_-(Q)=1`.
 
 ## 4. Exact Lévy-prime form
 
@@ -108,10 +108,10 @@ pole-null index = off-line pairs           PROPOSED COMPLETE
 gamma Lévy jump representation             PROPOSED COMPLETE
 pole-free diamagnetic inequality            PROPOSED COMPLETE
 entire heat-trace RH criterion              PROPOSED COMPLETE
-index(Q)<=2                                 OPEN / RH-EQUIVALENT
+index(Q)<=1                                 OPEN / RH-EQUIVALENT
 Theta(beta)<=0                              OPEN / RH-EQUIVALENT
 Feynman-Kac/polymer domination              OPEN
 Riemann Hypothesis                          UNPROVEN
 ```
 
-The strongest conceptual target is now a Pontryagin-index-two theorem for an explicit Lévy operator perturbed by the prime-power adjacency.
+The strongest conceptual target is now a Pontryagin-index-one theorem for an explicit Lévy operator perturbed by the prime-power adjacency.
