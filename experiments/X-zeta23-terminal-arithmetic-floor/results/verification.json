@@ -1,0 +1,137 @@
+{
+  "autocorrelation_samples": {
+    "0.0": {
+      "absolute_error": 3.3306690738754696e-16,
+      "exact": [
+        0.6581186418378903,
+        0.0
+      ],
+      "numeric": [
+        0.6581186418378899,
+        0.0
+      ]
+    },
+    "0.3": {
+      "absolute_error": 2.7755575615628914e-16,
+      "exact": [
+        0.28426949661158424,
+        -0.5726149102348053
+      ],
+      "numeric": [
+        0.2842694966115844,
+        -0.5726149102348055
+      ]
+    },
+    "2.0": {
+      "absolute_error": 2.3193453981493567e-16,
+      "exact": [
+        0.02740622126892763,
+        -0.05616313538203483
+      ],
+      "numeric": [
+        0.027406221268927545,
+        -0.056163135382034615
+      ]
+    },
+    "4.0": {
+      "absolute_error": 2.1677797545656835e-16,
+      "exact": [
+        0.17734898518432562,
+        0.22717988159762662
+      ],
+      "numeric": [
+        0.1773489851843258,
+        0.22717988159762675
+      ]
+    }
+  },
+  "decay": [
+    {
+      "a": 0.2116,
+      "autocorrelation_prefactor": 1.2558417087899476,
+      "sigma": 2.0,
+      "spectral_mass": 1.504845794078664
+    },
+    {
+      "a": 0.4761000000000001,
+      "autocorrelation_prefactor": 0.11953917596338158,
+      "sigma": 3.0,
+      "spectral_mass": 0.28451065685337856
+    },
+    {
+      "a": 0.8464,
+      "autocorrelation_prefactor": 0.0167196826436827,
+      "sigma": 4.0,
+      "spectral_mass": 0.05998976597465016
+    },
+    {
+      "a": 1.3225,
+      "autocorrelation_prefactor": 0.0024738039577029258,
+      "sigma": 5.0,
+      "spectral_mass": 0.011401553685465604
+    }
+  ],
+  "gates": {
+    "autocorrelation_formula": true,
+    "completed_chebyshev_normal_form": true,
+    "mass_decay": true,
+    "moment_support_barrier": true,
+    "spectral_mass_formula": true,
+    "target_values": true
+  },
+  "moment_support_barrier": [
+    {
+      "largest_exponent_from_r_lambda_below_2": 0.02,
+      "off_line_depth": 0.01,
+      "strictly_below_compression_dimension_exponent": true
+    },
+    {
+      "largest_exponent_from_r_lambda_below_2": 0.2,
+      "off_line_depth": 0.1,
+      "strictly_below_compression_dimension_exponent": true
+    },
+    {
+      "largest_exponent_from_r_lambda_below_2": 0.5,
+      "off_line_depth": 0.25,
+      "strictly_below_compression_dimension_exponent": true
+    },
+    {
+      "largest_exponent_from_r_lambda_below_2": 0.98,
+      "off_line_depth": 0.49,
+      "strictly_below_compression_dimension_exponent": true
+    }
+  ],
+  "normal_form": {
+    "absolute_error": 1.6921531960700786e-05,
+    "completed_chebyshev_discrepancy_integral": 0.31260898769663287,
+    "direct_pole_minus_prime": 0.367091650728888,
+    "low_pole_remainder": 0.054465741500294415,
+    "normal_form_value": 0.3670747291969273,
+    "pole_integral": 4.3223417010795906e-05,
+    "prime_sum": -0.3670484273118772
+  },
+  "parameters": {
+    "grid_points": 240001,
+    "prime_cutoff": 442413,
+    "sigma": 1.5,
+    "t_max": 13.0,
+    "x": 3.7,
+    "y": 0.23
+  },
+  "spectral_mass": {
+    "absolute_error": 2.6645352591003757e-15,
+    "exact": 4.135081380776811,
+    "numeric": 4.135081380776814
+  },
+  "status": "PASS_TERMINAL_GAUSSIAN_ARITHMETIC_FLOOR_NORMAL_FORM",
+  "target_values": [
+    [
+      0.9999999999999992,
+      -0.0
+    ],
+    [
+      -0.9999999999999992,
+      0.0
+    ]
+  ]
+}
