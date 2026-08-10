@@ -1,4 +1,4 @@
-# Certified fragmentation resonance: GFEP and frozen BTF are false, uniform Pascal survives
+# Certified near-conservation fragmentation resonance: GFEP and frozen BTF are false, uniform Pascal survives
 
 Authoring agent: `gpt56-pro`  
 Date: 2026-08-10  
@@ -10,24 +10,24 @@ Status: exact theorem/refutation packet plus directed interval certificate; RH u
 The frozen half-binary/half-ternary first-entrance programme has a deterministic complex resonance which survives in both its bottom GFEP exit and its actual node-two producer coefficient. A directed interval certificate places one simple characteristic zero at
 
 ```text
-u = 0.7422293980561885240...
-   +17.3619424994722740597... i
+u = 0.9965737487663334042655023867051966592...
+   +108.6843160063763813085769124318175668569... i
 ```
 
 inside a disk of radius `1e-18`, and proves nonzero trace numerators with margins
 
 ```text
-|N_exit|     > 0.2815082855,
-|N_producer| > 0.0895557448.
+|N_exit|     > 0.00987978337,
+|N_producer| > 0.00199031875.
 ```
 
 After the critical shift, the Mellin pole has real part greater than
 
 ```text
-0.242229398056188523.
+0.496573748766333403.
 ```
 
-Landau plus a proved integer-interpolation estimate yields arbitrarily large positive and negative integer values of
+Landau plus a proved integer-interpolation theorem yields arbitrarily large positive and negative integer values of
 
 ```text
 Sigma_(N,2)(2)
@@ -35,14 +35,18 @@ and
 A_N(2).
 ```
 
-Both signs exceed every fixed power `N^delta`, in the non-O sense, for every `delta<0.242229398056188523`.
+More strongly, both positive and negative parts are not `O(N^delta)` for every fixed
+
+```text
+delta < 0.496573748766333403.
+```
 
 Consequently:
 
 ```text
 GFEP-full                                   REFUTED
 frozen binary-ternary pointwise positivity REFUTED
-frozen BTF absolute variation              REFUTED POLYNOMIALLY
+frozen BTF absolute variation              REFUTED NEAR SQUARE-ROOT SCALE
 signed pairing / Cycle Debt                NOT REFUTED
 RH                                           UNPROVED
 ```
@@ -55,20 +59,42 @@ The source coefficients are positive Stieltjes packets and all nonempty multipli
 Delta(u)=1-1/2[2^(1-u)+3^(-u)+(3/2)^(-u)].
 ```
 
-The resonance is a pole of the fragmentation transfer itself. Large finite positivity is therefore compatible with eventual sign oscillation: the first certified resonance has imaginary frequency about `17.36` and a relatively small power exponent about `0.2422`.
+The resonance is a pole of the fragmentation transfer itself. Large finite positivity is compatible with eventual sign oscillation because the certified residue is small and the first near-conservation frequency used here is high, about `108.68`. The exponent lies only about `0.00342625` below the square-root line.
 
 ## Certificate architecture
 
 `X-90204-certified-fragmentation-resonance` uses:
 
 1. `mpmath.iv` at 70 decimal digits;
-2. a Rouché disk certified from directed bounds on `Delta`, `Delta'`, and `Delta''`;
+2. a radius-`1e-18` Rouché disk certified from directed bounds on `Delta`, `Delta'`, and `Delta''`;
 3. exact `Fraction` recurrence coefficients through `R=20000`;
 4. directed complex interval evaluation of the finite numerator;
 5. analytic shifted-difference tail bounds from the exact global increment bounds;
 6. 39,998 exact trace-relation checks.
 
-No zeta-value approximation, zero table, finite endpoint sign scan, PNT, or RH input appears in the certificate.
+No zeta-value approximation, zeta-zero table, finite endpoint sign scan, PNT, or RH input appears in the certificate.
+
+## Exact fixed-trace relation
+
+For the two `n=2` exit traces,
+
+```text
+G_2(m)+G_3(m)=m.
+```
+
+The sparse producer trace is
+
+```text
+G_P=G_2+(2/3)G_3.
+```
+
+The total trace `G(m)=m` has no nonconservation characteristic pole. Hence at every characteristic zero `u!=1`,
+
+```text
+N_P(u)=N_2(u)/3.
+```
+
+The verifier nevertheless evaluates both numerators independently as a mutation-sensitive check.
 
 ## General policy theorem
 
@@ -100,7 +126,7 @@ and deterministic transfer
 A_n(u)=n^(1-u)+(2-n)(n+1)^(-u)+2/(n+1) zeta(u,n+2).
 ```
 
-This has no deterministic nonreal poles. The uniform Pascal/SHARP route is therefore the canonical resonance-free fragmentation front.
+This has no deterministic nonreal poles. The uniform Pascal/SHARP route is therefore the canonical resonance-free stationary fragmentation front.
 
 ## Two-row compression
 
@@ -128,10 +154,10 @@ omega=(epsilon-delta_2)*(2epsilon-delta_2)*mu
 already present in the two-low-row SHARP theorem. If `H(T)` denotes the corresponding square-root-hinge scalar, then in logarithmic time
 
 ```text
-S(e^t)=2H(e^t)+integral_0^t H(e^u) du.
+S(e^t)=2H(e^t)+integral_0^t H(e^u)du.
 ```
 
-Thus the low-row SHARP and critical-log routes are the same source under one positive Volterra smoothing. Full SHARP is far stronger than the RH consumer.
+Thus the low-row SHARP and critical-log routes are the same source under one positive Volterra smoothing. Full SHARP is far stronger than the actual RH consumer.
 
 ## Correct route selection
 
