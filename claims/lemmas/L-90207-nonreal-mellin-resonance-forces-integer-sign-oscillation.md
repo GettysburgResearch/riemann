@@ -112,13 +112,41 @@ otherwise the defining Mellin integral would be analytic in a half-plane contain
 
 The case (L-90207.6) is identical after replacing `F` by `-F`. Thus neither eventual integer sign is possible. ∎
 
-## 3. Interpolation bound for transported fragmentation traces
+## 3. Quantitative strengthening — both signs exceed every lower power
+
+Let `0<=delta<beta`. Under the same assumptions,
+
+\[
+ [F(N)]_+\ne O(N^\delta),
+ \qquad
+ [-F(N)]_+\ne O(N^\delta).
+ \tag{L-90207.12}
+\]
+
+Indeed, suppose for example that `[-F(N)]_+<=C_1N^delta` eventually. The interpolation hypothesis gives
+
+\[
+ F(X)+C_2X^\delta+C{1+\log X\over\sqrt X}\ge0
+ \qquad(X\gg1)
+\]
+
+for a suitable `C_2`. The added power has Mellin transform
+
+\[
+ {C_2\over s-\delta},
+\]
+
+whose only positive-real singularity is at `s=delta<beta`; it is analytic at the nonreal point `s_0`. The decaying interpolation correction has transform (L-90207.9). The modified transform therefore retains the singularity `s_0`, so its abscissa of convergence is at least `beta`. Landau would force a real singularity at an abscissa `>=beta`, but every added correction and `\widehat F` are holomorphic on that real range. This is impossible. The positive-part assertion follows by replacing `F` by `-F`.
+
+Thus a certified resonance at real part `beta` produces positive and negative integer excursions larger than every fixed power `N^delta` with `delta<beta`, in the precise non-`O` sense.
+
+## 4. Interpolation bound for transported fragmentation traces
 
 Let `a(m)` be a real sequence satisfying
 
 \[
  |a(m)|\le A_0,
- \tag{L-90207.12}
+ \tag{L-90207.13}
 \]
 
 and define the Möbius-transported critical trace
@@ -129,7 +157,7 @@ and define the Möbius-transported critical trace
  \sum_{\substack{m,k\ge1\\k\ {\rm squarefree}\\mk\le X}}
  a(m)\mu(k)(mk)^{-1/2}\log\frac X{mk}.
  }
- \tag{L-90207.13}
+ \tag{L-90207.14}
 \]
 
 For `N<=X<N+1`, no new positive-weight integer product activates. Terms with `mk=N` have zero weight at `X=N`, so exactly
@@ -139,7 +167,7 @@ For `N<=X<N+1`, no new positive-weight integer product activates. Terms with `mk
  =\log\frac XN
  \sum_{mk\le N\atop k\ {\rm squarefree}}
  {a(m)\mu(k)\over\sqrt{mk}}.
- \tag{L-90207.14}
+ \tag{L-90207.15}
 \]
 
 Using
@@ -157,7 +185,7 @@ we obtain
  \sum_{mk\le N}{a(m)\mu(k)\over\sqrt{mk}}
  \right|
  \le2A_0\sqrt N(1+\log N).
- \tag{L-90207.15}
+ \tag{L-90207.16}
 \]
 
 Since `log(X/N)<=1/N` and `N>=X/2` for `X>=2`,
@@ -167,7 +195,7 @@ Since `log(X/N)<=1/N` and `N>=X/2` for `X>=2`,
  |F(X)-F(N)|
  \le4A_0{1+\log X\over\sqrt X}.
  }
- \tag{L-90207.16}
+ \tag{L-90207.17}
 \]
 
 The same estimate, without subtracting adjacent endpoints, gives the polynomial bound
@@ -176,19 +204,20 @@ The same estimate, without subtracting adjacent endpoints, gives the polynomial 
  |F(X)|
  \le 2A_0\sqrt X(1+\log X)\log X
  =O(\sqrt X\log^2X),
- \tag{L-90207.17}
+ \tag{L-90207.18}
 \]
 
 so the finite-abscissa hypothesis used in the Landau argument is automatic.
 Thus every bounded-increment fragmentation trace of `L-90205` satisfies all hypotheses of the integer-transfer theorem once its continued transform has the stated singularity structure.
 
-## 4. Proof boundary
+## 5. Proof boundary
 
 Proved exactly:
 
 - a general nonreal-resonance obstruction to eventual sign on integer endpoints;
 - preservation of the obstruction after the explicit decaying interpolation correction;
-- the uniform interpolation estimate (L-90207.16) for every bounded transported fragmentation increment.
+- the polynomial-size two-sided excursion theorem (L-90207.12);
+- the uniform interpolation estimate (L-90207.17) for every bounded transported fragmentation increment.
 
 Not proved here:
 
