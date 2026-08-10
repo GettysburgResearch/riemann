@@ -1,0 +1,40 @@
+{
+  "coherent_multiwindow": {
+    "channels": 4,
+    "coisometry_error": 1.5291880404208083e-14,
+    "congruence_relative_error": 7.67814234679935e-15,
+    "extra_zero_eigenvalues": 96,
+    "n": 32,
+    "spectral_error": 3.126388037344441e-13,
+    "trace_power_errors": {
+      "1": 7.260724680295166e-15,
+      "2": 1.287468454717567e-16,
+      "3": 3.737207808492788e-14,
+      "4": 5.099941028530257e-16
+    }
+  },
+  "gates": {
+    "coisometry": true,
+    "congruence": true,
+    "depth_lower_bound": true,
+    "pair_eigenvalues": true,
+    "rect_bilinear": true,
+    "rect_norm": true,
+    "spectrum": true
+  },
+  "offline_pair": {
+    "actual_negative_magnitude": 0.1608352017958361,
+    "bilinear_relative_error": 8.378622368482288e-06,
+    "cutoff": 30000,
+    "eigenvalue_error": 1.1102230246251565e-16,
+    "length": 8.0,
+    "negative_eigenvalue": -0.160835201795836,
+    "norm_relative_error": 7.217753524027157e-06,
+    "positive_eigenvalue": 2.160835201795836,
+    "quadratic_lower_bound": 0.1536,
+    "ratio": 1.160835201795836,
+    "x": 0.37,
+    "y": 0.12
+  },
+  "status": "PASS_ZETA23_GABOR_FUSION"
+}

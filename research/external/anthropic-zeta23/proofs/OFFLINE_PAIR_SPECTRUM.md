@@ -1,0 +1,236 @@
+# Exact off-line pair spectrum in the complete critical Gabor frame
+
+**Status:** `PROPOSED NATIVE THEOREM / EXACT FULL-LATTICE ALGEBRA`
+
+The Zeta23 paper uses only the fact that a reflected off-line pair contributes a form of signature `(1,1)`. In the complete critical Gabor frame one can compute the two nonzero eigenvalues exactly. The negative eigenvalue records the horizontal depth of the zero at the natural scale `1/L`.
+
+## 1. Setup
+
+Let `psi` be real and even, supported in `[-L/2,L/2]`, with `psi` not identically zero. Put
+
+```text
+v=psi^2,
+V(z)=int_(-L/2)^(L/2) v(u) exp(i z u) du.
+```
+
+Take the complete critical lattice
+
+```text
+tau_k=T+2pi k/L, k in Z,
+```
+
+and define the evaluation vector
+
+```text
+u_z=(hat(psi)(z-tau_k))_(k in Z).
+```
+
+The Poisson identity of the paper analytically continues to complex arguments:
+
+```text
+sum_k hat(psi)(z-tau_k)hat(psi)(w-tau_k)
+ =L V(z-w).                                           (OP1)
+```
+
+Let
+
+```text
+z=x+iy, y not equal 0.
+```
+
+Since `psi` is real and even,
+
+```text
+u_conj(z)=conj(nu_z).
+```
+
+## 2. Two-row Gram matrix
+
+Let `A_z` be the two-row evaluation map with rows given by evaluation at `z` and `conj(z)`. From `(OP1)`,
+
+```text
+A_z A_z*
+ = [[A,C],[C,A]],
+
+A=L V(2iy)
+ =L int v(u)cosh(2yu)du,
+C=L V(0)
+ =L int v(u)du.                                      (OP2)
+```
+
+Because `v` is even and has positive mass away from zero,
+
+```text
+A>C>0.
+```
+
+## 3. Pair spectrum theorem
+
+A zero pair of multiplicity `m` contributes the hyperbolic form
+
+```text
+J_m=m [[0,1],[1,0]]
+```
+
+on its two evaluation coordinates. Its pullback to coefficient space is
+
+```text
+Q_z=A_z* J_m A_z.
+```
+
+The two nonzero eigenvalues of `Q_z` are exactly
+
+```text
+boxed:
+lambda_+(z)=m(A+C),
+lambda_-(z)=-m(A-C).                                  (OP3)
+```
+
+After the Zeta23 atom normalization by `C`, they are
+
+```text
+boxed:
+lambda_+/C=m(1+r_y),
+lambda_-/C=-m(r_y-1),
+
+r_y=V(2iy)/V(0)
+   =[int v(u)cosh(2yu)du]/[int v(u)du].              (OP4)
+```
+
+### Proof
+
+The nonzero eigenvalues of `A_z*J_mA_z` equal the eigenvalues of
+
+```text
+J_m A_zA_z*
+ =m [[C,A],[A,C]].
+```
+
+The latter matrix has eigenvectors `(1,1)` and `(1,-1)` and eigenvalues `m(C+A)` and `m(C-A)`. Since `A>C`, the second is negative. `square`
+
+The result proves exact rank two and exact signature `(1,1)` for every off-line pair in the complete critical frame. No independence hypothesis is needed beyond `y not equal 0`; the determinant is
+
+```text
+-m^2(A^2-C^2)<0.
+```
+
+## 4. Quantitative depth moat
+
+Let
+
+```text
+mu_2(v)= [int u^2 v(u)du]/[int v(u)du].
+```
+
+Since `cosh t-1>=t^2/2`,
+
+```text
+boxed:
+r_y-1
+ >=2 y^2 mu_2(v).                                    (OP5)
+```
+
+Thus the normalized negative eigenvalue obeys
+
+```text
+boxed:
+-lambda_-/C
+ >=2m y^2 mu_2(v).                                   (OP6)
+```
+
+For a scaled profile `v(u)=v_0(u/L)`, this is a fixed multiple of
+
+```text
+m (yL)^2.
+```
+
+Therefore the natural narrow-box scale is explicit:
+
+```text
+|beta-1/2|=o(1/L)   -> pair negativity vanishes,
+|beta-1/2| about c/L -> fixed negative moat,
+|beta-1/2| much larger than 1/L -> rapidly growing negative moat.
+```
+
+At Zeta23 bandwidth one, `L` is asymptotic to `log T`.
+
+## 5. Rectangular-window control
+
+For
+
+```text
+v=1_[-L/2,L/2],
+```
+
+one has
+
+```text
+r_y=sinh(yL)/(yL),
+```
+
+so the normalized pair eigenvalues are
+
+```text
+m[1+sinh(yL)/(yL)]
+```
+
+and
+
+```text
+-m[sinh(yL)/(yL)-1].                                (OP7)
+```
+
+The small-depth expansion is
+
+```text
+-lambda_-/C
+ =m (yL)^2/6+O(m(yL)^4).
+```
+
+The sharp rectangular window is unsuitable for the paper's global far-zero tail estimate, but it is an exact local control for the pair spectrum.
+
+## 6. Smooth finite-grid approximation
+
+Assume now `psi` is `C^2` and retain only a finite consecutive set of lattice points. If every omitted point is at horizontal distance at least `D+jh`, where `h=2pi/L`, two integrations by parts give
+
+```text
+|hat(psi)(x+iy)|
+ <=exp(|y|L/2)||psi''||_1 |x|^(-2).
+```
+
+Hence each omitted tail satisfies
+
+```text
+sum_omitted |hat(psi)(z-tau_k)|^2
+ <=2 exp(|y|L)||psi''||_1^2
+    [D^(-4)+L/(6pi D^3)].                            (OP8)
+```
+
+The same bound controls the omitted bilinear sum by Cauchy–Schwarz. Therefore the finite two-row Gram matrix converges quantitatively to `(OP2)`, and its two pair eigenvalues converge to `(OP3)` whenever the zero is separated from the modulation endpoints.
+
+## 7. Bridge to the complete-kernel classifier
+
+The repository's off-line-cardinal theorem constructs a zero-invisible direction with complete Weil value `-2m` and proves that positive-complement Schur elimination cannot repair it. The present theorem identifies the corresponding negative direction in the complete Gabor evaluation plane:
+
+```text
+row-space eigenvector (1,-1)
+<-> coefficient witness generated by the difference of the two evaluation rows.
+```
+
+The two results are complementary:
+
+- Zeta23 uses only the count of positive directions of off-line blocks;
+- the kernel classifier uses isolation of the negative direction;
+- `(OP3)` supplies an explicit depth-dependent bridge between them.
+
+## 8. Why this is not yet RH
+
+For a sum of many zero packets, positive on-line atoms and other hyperbolic blocks can interact with one pair's two-dimensional plane. Frobenius norm is not the sum of the individual pair Frobenius norms, and negative eigenvalue magnitudes cannot be added before a source-complete isolation theorem.
+
+A full proof through this route requires one of:
+
+1. a complete kernel capture theorem isolating each off-line difference direction with controlled metric;
+2. a global inequality preventing cancellation of the depth moats in `(OP6)`;
+3. additional prime-side moments strong enough to detect the resulting negative spectrum.
+
+The theorem nevertheless upgrades “one off-line pair has one negative direction” to an exact quantitative spectral statement at the natural `1/log T` scale.
