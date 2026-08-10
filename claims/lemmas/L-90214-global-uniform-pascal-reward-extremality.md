@@ -124,14 +124,14 @@ The forced rewards at states two and three already consume
 
 \[
  \frac23d(2)+\frac12d(3)
- =\frac r3+rac16
+ =\frac r3+\frac16
  \tag{L-90214.13}
 \]
 
 of the unit budget (L-90214.12). Every remaining term is nonnegative. Hence
 
 \[
- 1\ge\frac r3+rac16,
+ 1\ge\frac r3+\frac16,
 \]
 
 so
