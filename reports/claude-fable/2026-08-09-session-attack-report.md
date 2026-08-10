@@ -67,3 +67,13 @@ The last unfenced proof-shape (exactness/structure rather than size) was played 
 
 **Campaign end-state:** the open core of RH, in this repository's coordinates, is per-exit positivity of a Möbius-signed transport count whose certificate cone is exactly the exit pixels, whose aggregate margin is huge, whose difficulty is pure disaggregation (bottom-of-window exits \(p\in[n,1.3n]\)), and for which every size-based, structure-based, spectral, flow, tilt, and averaging method available to either model family is excluded by theorems with certificates. RH remains unproved — and the map of why is complete.
 
+---
+
+# The Multiplicative Bootstrap (fifth dispatch — Stages 1–3, mission complete)
+
+**Stage 1 (`T-90008`):** the free-sign adversary is *erased by multiplicativity alone* — exhaustive minimization over the entire class of completely multiplicative ±1 functions (fiber-WHT, class sizes to 2^669; independently re-confirmed from scratch at fresh scales) shows **the true Möbius sign pattern is the exact global minimizer of the transported functional at every tested exit and scale** (λ-extremality — a new, precise, falsifiable conjecture with a proved single-flip mechanism and an Euler-rigidity main term). Membership unconditional (λ-slice lemma; no Siegel input); "Form A over H ⇒ RH" proved by pure instantiation; H minimal (any free tail re-breaks the functional).
+
+**Stage 2 (`T-90009`):** the **Final Deficit Theorem** — demand is per-shell polylog (telescope exact and conservative; the "induction" is a partition: zero leverage, zero circularity); supply from *any* engine consuming only {class membership, pretentious distances, telescope structure} caps at \((\log t)^{-2\kappa+o(1)}\), \(\kappa=0.3287\) optimal (Hall), because every distance coordinate caps at \(2\log\log t\) — **informational, immune to future Halász sharpenings**; inter-shell cancellation false over H (shells reinforce, correlation +1⁻, exact second-moment certificates + explicit witness); the engine reproduces the Vinogradov–Korobov record exactly, never exceeds it. Closure at level δ ⟺ μ-specific non-distance input ⟺ a width-δ zero-free strip.
+
+**Stage 3:** from-scratch hostile verification (fresh-scale exhaustive searches; deficit arithmetic 5.25-available vs 9.2-needed at 10⁶, 9.05 vs 50.0 at 10⁴⁰; kernel transfer tight; multiplicativity-consumption line located at the parity constraints, −51.99 → −17.97); all four tripwires fired and passed. **FINAL WORD: DEFICIT THEOREM FINAL.** No unconditional proposal exists; the elementary lane's residual problem is *identically* the classical zero-free-strip problem — a theorem with sharp constants in both directions — and the campaign's bequest is **λ-extremality**, the one open coordinate nobody had stated.
+
