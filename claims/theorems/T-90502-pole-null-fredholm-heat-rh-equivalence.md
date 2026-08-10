@@ -4,14 +4,14 @@ Claim ID: `T-90502`
 Status: **FULL EXACT EQUIVALENCE PROPOSAL â€” PRIME-SIDE SIGN THEOREM OPEN; INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-11  
-Depends on: `L-90505`, `L-90506`, `L-90507`; Xi-cardinal capture on PR #365  
+Depends on: `L-90505`, corrected `L-90506`, `L-90507`; Xi-cardinal capture on PR #365  
 Scope: one explicit pole-null trace-class completion
 
 Fix `1/2<a<c`, use the Cauchyâ€“Sobolev completion `J_(a,c)`, and let
 
 \[
  A_{a,c}^{(0)}
-\]
+ \]
 
 be the trace-class Weil operator projected to the two pole-null constraints. Define
 
@@ -23,80 +23,4 @@ be the trace-class Weil operator projected to the two pole-null constraints. Def
 \[
  \Theta_{a,c}(\beta)
  =\operatorname{tr}
- (e^{-\beta A_{a,c}^{(0)}}-I),
-\]
-
-and
-
-\[
- H_d^{(0)}
- =\bigl(
- \operatorname{tr}[(A_{a,c}^{(0)})^{i+j+1}]
- \bigr)_{0\le i,j\le d}.
-\]
-
-Then the following are equivalent:
-
-\[
- \boxed{
- \begin{aligned}
- &\text{(i) RH;}\\
- &\text{(ii) }A_{a,c}^{(0)}\succeq0;\\
- &\text{(iii) }D_{a,c}^{(0)}(t)>0\quad(t>0);\\
- &\text{(iv) }\Theta_{a,c}(\beta)\le0\quad(\beta>0);\\
- &\text{(v) }\operatorname{tr}
- [A_{a,c}^{(0)}e^{-\beta A_{a,c}^{(0)}}]\ge0
- \quad(\beta>0);\\
- &\text{(vi) }H_d^{(0)}\succeq0\quad(d\ge0).
- \end{aligned}}
- \tag{T-90502.1}
-\]
-
-If RH is false, the number of positive zeros of `D^(0)`, counted with multiplicity, equals the number of distinct reflected off-line pairs. Equivalently, the pole-free unprojected form has negative index exactly two more than that number:
-
-\[
- n_-(Q)=2+n_-(A_{a,c}^{(0)}).
- \tag{T-90502.2}
-\]
-
-The prime-side form of the projected operator contains no pole term and is the exact LÃ©vyâ€“prime competition
-
-\[
-\begin{aligned}
- W(f,f)={}&
- \int_0^\infty
- \frac{e^{-y/2}}{1-e^{-2y}}
- \|f-T_yf\|_2^2\,dy\\
- &+2\pi\mu(0)\|f\|_2^2
- -2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
- \Re\langle f,T_{\log n}f\rangle,
-\end{aligned}
- \tag{T-90502.3}
-\]
-
-subject only to the two explicit pole-null constraints.
-
-Therefore any one of the following would prove RH:
-
-```text
-pole-null Leeâ€“Yang theorem:
-    D_(a,c)^(0)(t)>0 for t>0;
-
-heat-pressure theorem:
-    Theta_(a,c)(beta)<=0 for beta>0;
-
-all-order prime-word theorem:
-    tr[A^(0) exp(-beta A^(0))]>=0 for beta>0;
-
-fixed-index theorem:
-    the unprojected pole-free form Q has negative index exactly two.
-```
-
-The fixed-index formulation is the sharpest conceptual compression:
-
-```text
-two negative directions are forced by the known poles at s=0,1;
-every additional negative direction is exactly one off-line zero pair.
-```
-
-No unconditional proof of any displayed closing theorem is claimed.
+ (e^{-\beta A_{a,c}^{(0)}}-I),)qt()…¹()ql(!}‘yì À¥ô(€õq‰¥° (q½Á•É…Ñ½É¹…µ•íÑÉõl¡}í„±õyì À¥ô¥yì­¤­¨¬Åõt(q‰¥È¥}ìÁq±”¤±©q±”‘ô¸)qt()Q¡•¸Ñ¡”™½±±½Ý¥¹œ…É”•ÅÕ¥Ù…±•¹Ðè()ql(q‰½á•‘ì(q‰•¥¹í…±¥¹•‘ô(€™qÑ•áÑì¡¤¤I íõqp(€™qÑ•áÑì¡¥¤¤õ}í„±õyì À¥õqÍÕ•ÄÀíqp(€™qÑ•áÑì¡¥¥¤¤õ}í„±õyì À¥ô¡Ð¤øÁqÅÕ…¡ÐøÀ¤íqp(€™qÑ•áÑì¡¥Ø¤õqQ¡•Ñ…}í„±ô¡q‰•Ñ„¥q±”ÁqÅÕ…¡q‰•Ñ„øÀ¤íqp(€™qÑ•áÑì¡Ø¤õq½Á•É…Ñ½É¹…µ•íÑÉô(m}í„±õyì À¥õ•yìµq‰•Ñ„}í„±õyì À¥õõuq”À(qÅÕ…¡q‰•Ñ„øÀ¤íqp(€™qÑ•áÑì¡Ù¤¤õ!}‘yì À¥õqÍÕ•ÄÁqÅÕ…¡‘q”À¤¸(q•¹‘í…±¥¹•‘õô(qÑ…íP´äÀÔÀÈ¸Åô)qt()%˜I ¥Ì™…±Í”°Ñ¡”¹Õµ‰•È½˜Á½Í¥Ñ¥Ù”é•É½Ì½˜x À¥€°½Õ¹Ñ•Ý¥Ñ µÕ±Ñ¥Á±¥¥Ñä°•ÅÕ…±ÌÑ¡”¹Õµ‰•È½˜‘¥ÍÑ¥¹ÐÉ•™±•Ñ•½™˜µ±¥¹”Á…¥ÉÌ¸ÅÕ¥Ù…±•¹Ñ±ä°Ñ¡”Á½±”µ™É•”Õ¹ÁÉ½©•Ñ•™½É´¡…Ì¹•…Ñ¥Ù”¥¹‘•à•á…Ñ±ä½¹”µ½É”Ñ¡…¸Ñ¡…Ð¹Õµ‰•Èè()ql(¹|´¡D¤ôÄ­¹|´¡}í„±õyì À¥ô¤¸(qÑ…íP´äÀÔÀÈ¸Éô)qt()Q¡”ÁÉ¥µ”µÍ¥‘”™½É´½˜Ñ¡”ÁÉ½©•Ñ•½Á•É…Ñ½È½¹Ñ…¥¹Ì¹¼Á½±”Ñ•É´…¹¥ÌÑ¡”•á…Ð3¥ÙçŠMÁÉ¥µ”½µÁ•Ñ¥Ñ¥½¸()ql)q‰•¥¹í…±¥¹•‘ô(\¡˜±˜¤õíô˜(q¥¹Ñ|Áyq¥¹™Ñä(q™É…í•yìµä¼ÉõõìÄµ•yì´Éåõô(qñ˜µQ}å™qñ|ÉxÉp±‘åqp(€˜¬ÉqÁ¥qµÔ À¥qñ™qñ|ÉxÈ(€´ÉqÍÕµ}í¹q”Éõq™É…íq1…µ‰‘„¡¸¥õíqÍÅÉÐ¹ô(qI•q±…¹±”˜±Q}íq±½œ¹õ™qÉ…¹±”°)q•¹‘í…±¥¹•‘ô(qÑ…íP´äÀÔÀÈ¸Íô)qt()ÍÕ‰©•Ð½¹±äÑ¼Ñ¡”ÑÝ¼•áÁ±¥¥ÐÁ½±”µ¹Õ±°½¹ÍÑÉ…¥¹ÑÌ¸()Q¡•É•™½É”…¹ä½¹”½˜Ñ¡”™½±±½Ý¥¹œÝ½Õ±ÁÉ½Ù”I è()Ñ•áÐ)Á½±”µ¹Õ±°1•—ŠMe…¹œÑ¡•½É•´è(€€€|¡„±Œ¥x À¤¡Ð¤øÀ™½ÈÐøÀì()¡•…ÐµÁÉ•ÍÍÕÉ”Ñ¡•½É•´è(€€€Q¡•Ñ…|¡„±Œ¤¡‰•Ñ„¤ðôÀ™½È‰•Ñ„øÀì()…±°µ½É‘•ÈÁÉ¥µ”µÝ½ÉÑ¡•½É•´è(€€€ÑÉmx À¤•áÀ µ‰•Ñ„x À¤¥tøôÀ™½È‰•Ñ„øÀì()™¥á•µ¥¹‘•àÑ¡•½É•´è(€€€Ñ¡”Õ¹ÁÉ½©•Ñ•Á½±”µ™É•”™½É´D¡…Ì¹•…Ñ¥Ù”¥¹‘•à•á…Ñ±ä½¹”¸)€()Q¡”™¥á•µ¥¹‘•à™½ÉµÕ±…Ñ¥½¸¥ÌÑ¡”Í¡…ÉÁ•ÍÐ½¹•ÁÑÕ…°½µÁÉ•ÍÍ¥½¸è()Ñ•áÐ)½¹”¡åÁ•É‰½±¥Œ¹•…Ñ¥Ù”‘¥É•Ñ¥½¸¥Ì™½É•‰äÑ¡”­¹½Ý¸Á½±”Á…¥È…ÐÌôÀ°Äì)•Ù•Éä…‘‘¥Ñ¥½¹…°¹•…Ñ¥Ù”‘¥É•Ñ¥½¸¥Ì•á…Ñ±ä½¹”½™˜µ±¥¹”é•É¼Á…¥È¸)€()9¼Õ¹½¹‘¥Ñ¥½¹…°ÁÉ½½˜½˜…¹ä‘¥ÍÁ±…å•±½Í¥¹œÑ¡•½É•´¥Ì±…¥µ•¸(
