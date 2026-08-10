@@ -92,7 +92,7 @@ Hence every double-neutral filter has an explicit negative reward state:
 \[
  \boxed{
  \exists m\le2^{J+1}-1:\quad
- d(m)\le-rac{2}{(2^{J+1}-1)(2^{J+1}-2)}.
+ d(m)\le-\frac{2}{(2^{J+1}-1)(2^{J+1}-2)}.
  }
  \tag{L-90219.8}
 \]
