@@ -1,0 +1,63 @@
+{
+  "classification": "PASS_ZETA23_CONFLUENT_CLUSTER_RENORMALIZATION",
+  "cluster_convergence": [
+    {
+      "epsilon": 0.2,
+      "max_entry_error": 0.012070637086173619,
+      "raw_determinant_abs": 9.092442924322752e-15,
+      "transformed_min_cholesky_pivot": 9.876356076282153e-06
+    },
+    {
+      "epsilon": 0.1,
+      "max_entry_error": 0.006040079039845381,
+      "raw_determinant_abs": 2.2363407041304365e-18,
+      "transformed_min_cholesky_pivot": 9.909546745766218e-06
+    },
+    {
+      "epsilon": 0.05,
+      "max_entry_error": 0.0030206348613539546,
+      "raw_determinant_abs": 5.470014395709728e-22,
+      "transformed_min_cholesky_pivot": 9.917146652993624e-06
+    },
+    {
+      "epsilon": 0.025,
+      "max_entry_error": 0.001510391857085125,
+      "raw_determinant_abs": 1.3445695837234155e-25,
+      "transformed_min_cholesky_pivot": 1.0018040897002876e-05
+    }
+  ],
+  "control_jet_cost": 12.0,
+  "multi_cluster_min_cholesky_pivot": 3.321152187881957e-06,
+  "pair_depth_scaling": [
+    {
+      "depth_target_cost": 11.976025125594523,
+      "pair_weil_value": -0.08000000000000002,
+      "y": 0.2,
+      "y2_unit_cost": 11.976025125594525
+    },
+    {
+      "depth_target_cost": 11.994001571158329,
+      "pair_weil_value": -0.020000000000000004,
+      "y": 0.1,
+      "y2_unit_cost": 11.994001571158329
+    },
+    {
+      "depth_target_cost": 11.998500098208273,
+      "pair_weil_value": -0.005000000000000001,
+      "y": 0.05,
+      "y2_unit_cost": 11.998500098208272
+    },
+    {
+      "depth_target_cost": 11.999625006154636,
+      "pair_weil_value": -0.0012500000000000002,
+      "y": 0.025,
+      "y2_unit_cost": 11.999625006154636
+    },
+    {
+      "depth_target_cost": 11.999906250396865,
+      "pair_weil_value": -0.00031250000000000006,
+      "y": 0.0125,
+      "y2_unit_cost": 11.999906250396867
+    }
+  ]
+}
