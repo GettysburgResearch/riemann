@@ -1,8 +1,8 @@
-# Integration handoff — Liouville–Bernstein rigidity and maximal positive-convolution cone
+# Integration handoff — Liouville rigidity, maximal positive cone, and certified fragmentation resonance
 
 Branch: `research/gpt56-pro/90102-liouville-bernstein-extremality`  
 Base: PR #351 head `22a94f431d7f4cd87db5f3efdd97b086f8f60183`  
-Status: exact theorem packet plus finite replay; RH unproved
+Status: exact theorem/refutation packet plus directed replay; RH unproved
 
 ## Import order
 
@@ -12,12 +12,17 @@ Status: exact theorem packet plus finite replay; RH unproved
 4. `claims/theorems/T-90201-boolean-bernstein-descendant-hierarchy.md`
 5. `claims/theorems/T-90202-uniform-multiplicative-ramp-class-is-equivalent-to-rh.md`
 6. `claims/theorems/T-90203-positive-convolution-descendant-superposition.md`
-7. `experiments/X-90201-liouville-bernstein-rigidity/README.md`
-8. `experiments/X-90202-additive-liouville-cone/README.md`
-9. `experiments/X-90203-positive-convolution-cone/README.md`
-10. `claims/observations/O-90201-multiplicative-bootstrap-reassessment.md`
-11. `reports/gpt56-pro/2026-08-10-liouville-bernstein-rigidity.md`
-12. `reports/gpt56-pro/2026-08-10-maximal-positive-convolution-cone.md`
+7. `claims/lemmas/L-90204-euler-fragmentation-mellin-factorization.md`
+8. `claims/lemmas/L-90205-fragmentation-increment-renewal-and-continuation.md`
+9. `claims/lemmas/L-90206-fragmentation-characteristic-has-no-spectral-gap.md`
+10. `claims/lemmas/L-90207-nonreal-mellin-resonance-forces-integer-sign-oscillation.md`
+11. `claims/refutations/R-90201-frozen-gfep-exit-and-producer-eventual-positivity-fail.md`
+12. `experiments/X-90204-certified-fragmentation-resonance/README.md`
+13. `claims/lemmas/L-90208-finite-atomic-no-gap-and-uniform-pascal-resonance-free.md`
+14. `claims/lemmas/L-90209-two-low-row-zero-safe-volterra-bridge.md`
+15. `claims/observations/O-90201-multiplicative-bootstrap-reassessment.md`
+16. `reports/gpt56-pro/2026-08-10-certified-fragmentation-resonance-and-policy-dichotomy.md`
+17. earlier reports and `X-90201..X-90203` support packages
 
 ## Claims changed relative to PR #351
 
@@ -26,59 +31,107 @@ T-90008 ramp lambda-extremality              CONJECTURED -> PROVED EXACT
 Form A over H iff lambda slice                CONDITIONAL -> PROVED EXACT
 uniform real multiplicative cube Form A       NEW EXACT RH EQUIVALENCE
 uniform Form A over maximal cone C_mu          NEW EXACT RH EQUIVALENCE
-logarithmic prime extraction                  extended to arbitrary prime-power measures
 positive source cone                          classified exactly as b=mu*h, h>=0
-real multiplicative cube                      proved to be one face of C_mu
-per-exit lambda-extremality                   isolated conjecture -> hereditary descendant theorem
-single-flip mechanism                         first layer -> complete mixed hierarchy
-all positive-convolution deformations          positive dilation sums of true descendants
-2^pi(K) exhaustive class search               replaced by O(K) descendant certificate
-T-90009 class-uniformity deficit              scoped to empty lambda coefficient
-GFEP / producer empty coefficient             OPEN / RH-BEARING
-RH                                             UNPROVEN
+all nonempty class directions                  proper-descendant arithmetic
+Euler/source versus fragmentation geometry     exact Mellin factorization
+frozen binary-ternary continuation              meromorphic through RH-facing strip
+finite-atomic stationary policy gap             IMPOSSIBLE GENERICALLY
+fixed GFEP coordinate Sigma_(N,2)(2)             CERTIFIED TWO-SIDED OSCILLATION
+frozen producer A_N(2)                           CERTIFIED TWO-SIDED OSCILLATION
+frozen producer pointwise positivity             REFUTED
+frozen BTF absolute variation                     REFUTED POLYNOMIALLY
+GFEP-full                                         REFUTED
+uniform Pascal deterministic resonance            ABSENT / EXPLICIT TRANSFER
+low-row SHARP and critical-log criteria            SAME ZERO-SAFE SOURCE
+signed pairing / Cycle Debt                        NOT REFUTED
+RH                                                   UNPROVEN
 ```
 
-## Maximal-cone meaning
+## Certified resonance
 
-Every normalized source `b` has `b=mu*h`, `h=1*b`. The condition `h>=0` is
-**equivalent** to simultaneous nonnegative extraction for all localized prime
-valuation probes `v_p`. Thus this is the largest source cone on which all such
-prime arithmetic remains positive.
-
-For every critical scaled GFEP kernel,
+The characteristic
 
 ```text
-F_(mu*h)(X)=sum_a h(a)/sqrt(a) F_mu(X/a).
+Delta(u)=1-1/2[2^(1-u)+3^(-u)+(3/2)^(-u)]
 ```
 
-At a first GFEP or sparse-producer failure, the Möbius source is therefore the
-minimizer over this entire cone, not merely over completely multiplicative
-signs. The unit-source renewal is the extreme choice `h=1`; its inverse is the
-Möbius-signed boundary step where positivity is lost.
-
-## Cross-PR relationship
-
-PR #355 independently proves positivity of every transported Stieltjes/path
-kernel and restores the genuine nonnegative-throughput cut cone. This packet
-does not duplicate those proofs and is based directly on the later head of PR
-#351. After both are imported, the sparse producer has:
+has exactly one simple zero in the radius-`1e-18` disk around
 
 ```text
-positive packet kernels
-+
-complete hereditary Boolean derivative hierarchy
-+
-maximal positive-convolution descendant cone
-+
-one remaining empty coefficient.
+0.7422293980561885240550493534...
++17.3619424994722740596801161362... i.
 ```
 
-PR #353 supplies a separate positive-occupancy/mean-age coordinate for the
-prime endpoint and complete prime-power gap. It is the preferred cross-route
-continuation because it uses temporal/occupancy structure destroyed by arbitrary
-positive Dirichlet convolution.
+Directed numerator margins are
 
-No claim in this handoff depends on merging PR #355 or #353 first.
+```text
+|N_exit|     > 0.2815082855,
+|N_producer| > 0.0895557448.
+```
+
+After shifting by `1/2`, the physical Mellin pole has real part exceeding
+`0.242229398056188523`. `L-90207` transfers it to integer endpoints and proves
+both signs are not `O(N^delta)` for any smaller `delta`.
+
+This is a refutation of the frozen policy's antecedents, not its downstream RH
+consumer.
+
+## Policy dichotomy
+
+Every finite atomic stationary characteristic
+
+```text
+Delta_nu(u)=1-sum_j b_j v_j^u,
+sum_j b_j v_j=1
+```
+
+has nonconservation zeros with real parts approaching one. The uniform continuum
+split instead has
+
+```text
+Delta_unif(u)=(u-1)/(u+1).
+```
+
+Its exact discrete analogue, the uniform internal Pascal chain, has explicit
+hitting law and deterministic factor
+
+```text
+A_n(u)=n^(1-u)+(2-n)(n+1)^(-u)+2/(n+1) zeta(u,n+2),
+```
+
+with no deterministic nonreal poles. This selects uniform Pascal/SHARP as the
+canonical resonance-free fragmentation front.
+
+## Two-row route
+
+The uniform-Pascal critical-log scalar
+
+```text
+S(X)=5c_X(2)+3c_X(3)
+```
+
+and the two-low-row SHARP hinge scalar use the same arithmetic source
+
+```text
+omega=(epsilon-delta_2)*(2epsilon-delta_2)*mu.
+```
+
+In logarithmic time,
+
+```text
+S(e^t)=2H(e^t)+integral_0^t H(e^u)du.
+```
+
+Both have a zero-safe reciprocal-zeta numerator. Full SHARP is therefore much
+stronger than the actual two-row RH consumer.
+
+## Cross-PR status corrections
+
+- PR #292: `GFEP` is no longer an open positivity conjecture; it is refuted by a fixed oscillatory coordinate.
+- PR #247: pointwise frozen producer positivity and BTF absolute variation are refuted; the weaker signed pairing estimate remains live.
+- PR #355: its positive Stieltjes packets and genuine cut-cone theorems remain correct; their empty coefficient is now known to oscillate for the frozen policy.
+- PR #353: the prime-endpoint positive-occupancy route is unaffected and becomes a higher-priority front.
+- PR #329/#335: the uniform Pascal/SHARP route is unaffected and is now singled out by the resonance classification.
 
 ## Validation
 
@@ -91,6 +144,11 @@ PASS_X_90202_ADDITIVE_LIOUVILLE_CONE
 
 python3 experiments/X-90203-positive-convolution-cone/verify.py
 PASS_X_90203_POSITIVE_CONVOLUTION_CONE
+
+python3 experiments/X-90204-certified-fragmentation-resonance/verify.py
+PASS_X_90204_CERTIFIED_FRAGMENTATION_RESONANCE
 ```
 
-The retained manifests bind the replay outputs at their declared assurance scopes. GitHub currently reports no Actions workflow for this stack.
+The resonance verifier uses exact Fractions, 70-digit directed complex intervals,
+a Rouché disk, and analytic infinite-tail bounds. GitHub currently reports no
+Actions workflow for this stack.
