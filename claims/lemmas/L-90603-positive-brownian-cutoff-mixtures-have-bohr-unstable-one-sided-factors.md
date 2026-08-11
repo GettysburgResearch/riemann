@@ -175,19 +175,13 @@ For large `N` the selected vectors can therefore cancel the bounded residual exa
 
 \[
  \boxed{
- \sum_{n=1}^Nb_{N,n}\chi(n)n^{-\beta}=0.
+ B_{\lambda,N,\chi}(\beta)
+ :=\sum_{n=1}^Nb_{N,n}\chi(n)n^{-\beta}=0.
  }
  \tag{L-90603.18}
 \]
 
-A generic arbitrarily small perturbation of the selected phases splits any multiple zero, so the twist may be chosen with a simple zero `w_0` as close to `beta` as desired and still satisfying
-
-\[
- \frac12<\operatorname{Re}w_0<1.
- \tag{L-90603.19}
-\]
-
-(The multiple-zero equations add the independent complex condition `B'_(lambda,N,chi)=0`; the polygon solution set has positive dimension once the selected block is large, and is not contained in that proper real-analytic subset.)
+The finite Dirichlet polynomial `B_(lambda,N,chi)` is not identically zero, so its zero at `beta` is isolated. No simplicity assumption is needed in either the one-sided or symmetrized transfer.
 
 ## 4. Actual one-sided zeros
 
@@ -197,19 +191,19 @@ Kronecker supplies `t_j->infinity` for which the ordinary vertical translates co
  \frac{D_{\lambda,N}(w+it_j)}{it_j}
  \longrightarrow
  B_{\lambda,N,\chi}(w)
- \tag{L-90603.20}
+ \tag{L-90603.19}
 \]
 
-locally uniformly. Hurwitz gives simple zeros
+locally uniformly. Hurwitz gives zeros
 
 \[
  s_j=w_j+it_j,
  \qquad
- w_j\to w_0,
- \tag{L-90603.21}
+ w_j\to\beta,
+ \tag{L-90603.20}
 \]
 
-of `D_(lambda,N)`. The gamma prefactor in (L-90603.2) has no zeros, so these are also zeros of `m_(lambda,N)`. This proves the theorem.
+of `D_(lambda,N)`, counted with the multiplicity of the limiting zero if necessary. The gamma prefactor in (L-90603.2) has no zeros, so these are also zeros of `m_(lambda,N)`. This proves the theorem.
 
 ## 5. The two repository mixtures satisfy the hypothesis
 
@@ -226,7 +220,7 @@ one has
 \[
  \sum_{N/2\le K\le N}\lambda_{N,K}
  =\frac{\log2+o(1)}{\log N},
- \tag{L-90603.22}
+ \tag{L-90603.21}
 \]
 
 so (L-90603.5) holds.
