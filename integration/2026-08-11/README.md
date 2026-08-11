@@ -2,7 +2,9 @@
 
 **Cutoff:** `2026-08-11T08:20:51Z`  
 **Pre-merge validation cutoff:** `2026-08-11T09:05:27Z`  
-**Frozen main:** `d6409319b4041cd09bee85f55a344631508f2501`  
+**Post-merge delta census:** `2026-08-11T09:13:13Z`  
+**Frozen pre-integration main:** `d6409319b4041cd09bee85f55a344631508f2501`  
+**Merged integration commit:** `0552d80078111ac677fa163995d8c1bfddc61f0d`  
 **Review evidence:** draft PRs #369, #370, #371 and #372 at their exact recorded heads  
 **Scientific verdict:** **the Riemann Hypothesis is neither proved nor disproved in the frozen graph.**
 
@@ -10,7 +12,9 @@ This directory is the canonical synthesis of the four-reviewer integration wave.
 
 The pre-merge confirmation is resident in `VERIFICATION_REPORT.md`. `REFUTATION_EVIDENCE.tsv` binds every load-bearing false/no-go/corrupted claim to an exact resolvable evidence path and records two stale reviewer-ledger alias corrections.
 
-The August 1 integration snapshot and PR #214 remain immutable historical baselines. `main` is therefore a historical base, not the current scientific state.
+> **Current delta alert:** `POST_MERGE_DELTA_ADDENDUM.md` is normative for PRs #375 and #376, which were created after the scientific cutoff but surfaced only in the final census. PR #376 claims to refute the old raw-Brownian cofinal-stability finish. It is unreviewed, but production on that exact theorem is suspended pending an independent delta review.
+
+The August 1 integration snapshot and PR #214 remain immutable historical baselines. The frozen pre-integration `main` was a historical base rather than the live scientific state.
 
 ## 1. The central result of the review wave
 
@@ -120,15 +124,21 @@ is not controlled unconditionally. `RH ⇒ PIG` is reviewed as valid. The revers
 
 ### E. Raw Brownian / Dirichlet–Hermite approximation
 
-This is the strongest genuinely independent live proof proposal in the reviewed non-carry corpus.
+At the scientific cutoff this was the strongest genuinely independent live proof proposal in the reviewed non-carry corpus.
 
-The finite gamma/Dirichlet factorization, explicit all-`N` exponential numerator, reciprocal confluent-Hermite identity, local-uniform convergence to the centered `xi` target and finite stability through the reviewed small cases survive. The conclusion-producing theorem remains
+The finite gamma/Dirichlet factorization, explicit all-`N` exponential numerator, reciprocal confluent-Hermite identity, local-uniform convergence to the centered `xi` target and finite stability through the reviewed small cases survive.
+
+The reviewed conclusion-producing theorem was
 
 ```text
 E[Q_N^z] != 0 for Re z > 1/4
 ```
 
-for all sufficiently large `N`, or merely an unbounded cofinal sequence. This theorem is open.
+for all sufficiently large `N`, or merely an unbounded cofinal sequence.
+
+**Post-cutoff warning:** PR #376 at `2ef174866ba9ce3a1c4939797ca223680bb21734` claims a high-frequency Bohr-instability theorem that refutes exactly this global all-large-`N` and cofinal finish. The claim is unreviewed and receives no canonical verdict, but new work on the old finish is suspended until its selected-prime, phase, Kronecker, vertical-limit and Hurwitz arguments are independently reconstructed.
+
+If #376 survives, the reviewed finite algebra remains useful while the live alternatives become height-dependent truncation, a redesigned raw producer, or the aggregate symmetrized route.
 
 ### F. Symmetrized Brownian / Robin
 
@@ -151,7 +161,7 @@ B - Z* C^{-1} Z <= B  when C > 0,
 
 so a positive complement cannot rescue an already negative kernel direction; and the square-screw scalar is a principal coordinate of the enlarged matrix.
 
-The complete corrected arithmetic floor remains RH-bearing. The independently reviewed portion of PR #368 includes the hyperbolic pole correction and clean Darboux/rank-one Fredholm criteria. Later odd-sector/sine-Cauchy additions and PR #373 are post-review deltas and are not canonically promoted here.
+The complete corrected arithmetic floor remains RH-bearing. The independently reviewed portion of PR #368 includes the hyperbolic pole correction and clean Darboux/rank-one Fredholm criteria. Later odd-sector/sine-Cauchy additions, PR #373 and PR #375 are post-review deltas and are not canonically promoted here.
 
 ### H. Finite Robin, Nicolas, Li, Pick and Loewner searches
 
@@ -164,7 +174,7 @@ The upstream fixed-window Theorems A–E and the pinned Lean source are register
 - short-window and growing-conductor extensions;
 - co-lattice, multirate, alias and prime-resonant constructions;
 - Xi-cardinal and confluent-cluster packets;
-- Fredholm/heat criteria;
+- Fredholm/heat and terminal heat-residue criteria;
 - every Q4 transfer.
 
 Finite coherent/no-alias window-bank no-gain theorems redirect the zero-proportion programme toward genuinely growing or richer arithmetic architectures.
@@ -175,12 +185,14 @@ Where broad archaeology and a specialist review disagree, the specialist reconst
 
 The most important instance is PIG. The archaeology packet inherited a source-branch label suggesting an RH-equivalence firewall. The Q4 specialist independently found that only `RH ⇒ PIG` is presently established; `PIG ⇒ RH` still requires an exact complete block recurrence and pole-energy adapter. The canonical status is therefore `UNPROVEN / RH-BEARING`, not `VERIFIED EQUIVALENCE`.
 
+Post-cutoff descendants do not alter a frozen specialist verdict until independently reviewed. They are nevertheless surfaced immediately when they threaten a recommended production target, as PR #376 does for raw global Brownian stability.
+
 ## 4. What is closest to a genuine proof mechanism?
 
 No ranking measures mathematical difficulty, but the reviewed frontiers divide naturally:
 
 1. **Signed elementary transport:** policy Green debt, all-generation capacity-faithful boundary recurrence, adaptive endpoint score control.
-2. **Raw Brownian stability:** one explicit cofinal half-plane nonvanishing theorem.
+2. **Raw Brownian:** urgent independent review of the claimed Bohr-instability refutation before choosing between global stability, height-dependent truncation or producer redesign.
 3. **Aggregate Brownian canonical system:** conceptually independent but not yet constructed.
 4. **Q4 positive innovation/current assembly:** substantial corrected finite infrastructure, but the decisive positive energy and exact integrated consumer remain open.
 5. **Complete-kernel/Fredholm positivity:** clean global criteria whose prime-side positivity is itself RH-bearing.
@@ -194,20 +206,21 @@ Compact RH-equivalent criteria are not ranked as evidence of proximity merely be
 - Surviving lemmas from failed proofs are integrated independently.
 - Every claim has separate mathematical, review, lifecycle, RH-relationship and computation statuses.
 - Every load-bearing `FALSE`, no-go or corrupted row has an exact evidence binding in `REFUTATION_EVIDENCE.tsv`.
-- Post-review descendants do not inherit reviewed status.
+- Post-review and post-cutoff descendants do not inherit reviewed status.
 - Heavy retained experiments are referenced by hash and scope; they are not represented as rerun by this pass.
 
 ## 6. Directory map
 
-- `CUTOFF.yaml` — global freeze, validation freeze and temporal normalization.
+- `CUTOFF.yaml` — global freeze, validation freeze, correction census and temporal normalization.
 - `REVIEW_SOURCES.tsv` — exact reviewer packets and authority boundaries.
-- `CLAIM_LEDGER.tsv` — canonical high-leverage claim registry.
+- `CLAIM_LEDGER.tsv` — canonical high-leverage claim registry at the scientific cutoff.
 - `REFUTATION_EVIDENCE.tsv` — exact evidence commits and resolvable paths for false/no-go/corrupted claims.
 - `VERIFICATION_REPORT.md` — completed pre-merge confirmation and audit record.
+- `POST_MERGE_DELTA_ADDENDUM.md` — normative correction for concurrently created PRs #375 and #376.
 - `ROUTE_DAGS.md` — established arrows and first open load-bearing nodes.
 - `REFUTATIONS_AND_FIREWALLS.md` — exact dead mechanisms and scope warnings.
-- `OPEN_HINGES.md` — prioritized live and dormant research questions.
-- `POST_REVIEW_DELTA.md` — unreviewed source movement through the cutoff.
+- `OPEN_HINGES.md` — prioritized live questions, including the #376 review alert.
+- `POST_REVIEW_DELTA.md` — quarantined source movement and post-cutoff work.
 - `CANONICAL_EXTRACTION_PLAN.md` — theorem packet boundaries and proposed promotion rules.
 - `NEXT_INTEGRATOR.md` — operational handoff.
 

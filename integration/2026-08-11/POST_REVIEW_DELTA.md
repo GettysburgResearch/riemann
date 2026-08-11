@@ -1,6 +1,8 @@
-# Post-review delta through the global cutoff
+# Post-review and post-cutoff delta census
 
-The four specialist reports freeze exact source SHAs. Three scientifically material descendants moved beyond the responsible review snapshots before the global integration cutoff. They are included in the repository census but **not promoted to reviewed mathematics**.
+The four specialist reports freeze exact source SHAs. Three scientifically material descendants were already beyond the responsible review snapshots at the scientific cutoff. Two additional draft PRs were created after the scientific cutoff but just before the pre-merge validation cutoff and were surfaced only by the final post-merge census. All five are included in the repository census but **not promoted to reviewed mathematics**.
+
+`POST_MERGE_DELTA_ADDENDUM.md` is normative for the late discovery of PRs #375 and #376.
 
 ## 1. PR #337 — new Q4 full proposal after specialist snapshot
 
@@ -74,10 +76,37 @@ Its own declared remaining theorem is all-order prime-side positivity, explicitl
 
 No retained finite checker can establish the trace-class/index arguments or the all-prime sign. Review should also compare this construction with the corrected pole block and clean completions on the reviewed PR #368 snapshot.
 
+## 4. PR #375 — terminal Gaussian heat-residue extension
+
+**Created:** `2026-08-11T08:55:34Z`  
+**Head at correction census:** `a3662f62ac0f1a7ec21bca3498938fedcbeeddba`  
+**Base:** PR #367 head `2a725fb71794dfca11e76c1af2a49e6b3ea8bc9c`.
+
+The branch proposes an entire Gaussian Mellin transform, critical-line contour-shift residue kernel, exact target weight `-2m`, fusion with the terminal-pair threat exponent and a finite linear prime-certificate completeness theorem under false RH.
+
+Its own terminal scalar sign and corrected-kernel floor remain open/RH-equivalent.
+
+**Integration status:** `POST_REVIEW_DELTA / UNREVIEWED / QUARANTINED`.
+
+It requires an independent contour, sign, multiplicity, boundary, tail and directed-strictness audit. It does not inherit upstream Zeta23 formalization or the reviewed status of its ancestors.
+
+## 5. PR #376 — claimed raw Brownian cofinal-stability refutation
+
+**Created:** `2026-08-11T09:04:04Z`  
+**Head at correction census:** `2ef174866ba9ce3a1c4939797ca223680bb21734`  
+**Base:** reviewed raw Brownian head `fed85f2969a5ab9f09890cd89bd6b57ff2115320`.
+
+The branch claims a high-frequency Bohr-instability theorem: for every sufficiently large truncation index, the explicit raw Brownian numerator has infinitely many zeros approaching each vertical line with `1/4 < Re z < 1/2`. If correct, this refutes the reviewed route's proposed global all-large-`N` and cofinal half-plane stability finish while preserving its finite algebra and compact-height convergence.
+
+**Integration status:** `POST_REVIEW_DELTA / UNREVIEWED / QUARANTINED / URGENT`.
+
+Until independently reviewed, suspend work whose sole objective is raw global cofinal half-plane stability. Review must check selected-prime estimates, composite dependence, probabilistic residual control, polygon closure, Kronecker approximation, vertical-limit convergence, Hurwitz transfer and quantifier order.
+
 ## Delta policy
 
 1. A descendant does not inherit an ancestor review verdict.
-2. The canonical ledger names both the reviewed snapshot and current head.
-3. New full proposals remain quarantined until one independent reconstruction is deposited.
+2. The canonical ledger names both the reviewed snapshot and current head where available.
+3. New full proposals and refutations remain quarantined until one independent reconstruction is deposited.
 4. Historical source branches are not rewritten or closed by integration.
 5. Work created after `2026-08-11T08:20:51Z` belongs to the next delta queue, even if based on a reviewed branch.
+6. PR #376 is the first Brownian delta-review priority before further raw cofinal-stability production.

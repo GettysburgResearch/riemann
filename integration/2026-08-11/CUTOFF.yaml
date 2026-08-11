@@ -7,6 +7,7 @@ cutoff_asia_jerusalem: '2026-08-11T11:20:51+03:00'
 main_sha: d6409319b4041cd09bee85f55a344631508f2501
 main_role: historical integration base, not the live scientific frontier
 integration_branch: integration/20260811-major-review-synthesis
+merged_integration_commit: 0552d80078111ac677fa163995d8c1bfddc61f0d
 review_wave:
   - pr: 369
     lane: elementary arithmetic
@@ -32,6 +33,7 @@ review_wave:
 verification_pass:
   cutoff_utc: '2026-08-11T09:05:27Z'
   validated_initial_pr_head: ec7109a3950b4cd471aeca05ad41f89be373e36b
+  final_merged_pr_head: b0cb5a6360771ff7b890531e10fc03c70c394052
   main_sha_reconfirmed: d6409319b4041cd09bee85f55a344631508f2501
   authoritative_review_artifacts_resolved: 18
   authoritative_review_artifacts_missing: 0
@@ -44,9 +46,27 @@ verification_pass:
   note: >-
     No CI workflow was configured for the integration head. Verification used exact GitHub
     commit, comparison, contents, review-thread and status APIs; no heavy experiment was rerun.
+post_merge_delta_census:
+  cutoff_utc: '2026-08-11T09:13:13Z'
+  addendum: integration/2026-08-11/POST_MERGE_DELTA_ADDENDUM.md
+  discovery_note: >-
+    A final post-merge census surfaced PRs #375 and #376, created after the scientific cutoff
+    but before the validation cutoff and not returned by the earlier recent-PR query. The
+    scientific freeze is unchanged; the prior no-later-PR census sentence is superseded.
+  newly_quarantined:
+    - pr: 375
+      created_utc: '2026-08-11T08:55:34Z'
+      head: a3662f62ac0f1a7ec21bca3498938fedcbeeddba
+      lane: terminal Gaussian heat residue and finite linear witnesses
+    - pr: 376
+      created_utc: '2026-08-11T09:04:04Z'
+      head: 2ef174866ba9ce3a1c4939797ca223680bb21734
+      lane: claimed raw Brownian cofinal-stability refutation
+      priority: urgent independent delta review
 post_review_delta_policy: >-
-  Any source head that moved beyond the SHA independently reviewed by the responsible lane
-  is quarantined as POST_REVIEW_DELTA. Such a descendant does not inherit the ancestor verdict.
+  Any source head that moved beyond the SHA independently reviewed by the responsible lane,
+  or any work created after the scientific cutoff, is quarantined as POST_REVIEW_DELTA. Such
+  a descendant does not inherit the ancestor verdict.
 heavy_compute_policy: >-
   No heavy experiment was rerun during integration. Review packets inspected retained code,
   manifests, hashes, outputs, and scopes; only lightweight exact counterexamples were added.
