@@ -94,10 +94,9 @@ Using \(A=\sqrt xB-R\),
 \boxed{
  \Psi(x)=2xR'(x)+3R(x)
  =\frac2{\sqrt x}\frac d{dx}
- \left[x^{3/2}R(x)\right]
+ \left[x^{3/2}R(x)\right].
 }
-\tag{L-91108.9
-}
+\tag{L-91108.9}
 on every open arithmetic cell. Since \(R\) is continuous, the final expression has no delta mass at the knots and agrees with the right-derivative convention of `L-32314`.
 
 Equivalently,
