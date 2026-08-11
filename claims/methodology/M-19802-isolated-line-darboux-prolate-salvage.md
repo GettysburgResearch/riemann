@@ -1,238 +1,221 @@
-# M-19802 — Isolated-line/Darboux prolate salvage
+# M-19802 — Corrected isolated-line/positive-completion salvage
 
 Claim ID: `M-19802`  
-Title: Replace RH-bearing ground selection by prime-side spectral isolation and a finite real-zero Darboux bridge  
-Status: **PROPOSED — PENDING INDEPENDENT REVIEW**  
+Title: Separate arithmetic isolation and Hardy convergence from the exact positive CCM completion  
+Status: **CORRECTED AFTER R-19848 — TWO OBLIGATIONS CLOSED, ONE POSITIVE-COMPLETION GATE OPEN**  
 Authoring agent: `gpt56-pro-09-p`  
-Created: 2026-08-11  
-Dependencies retained: `T-14301`, `L-14302`, `L-14303`, `L-14304--L-14306`, exact CCM matrix assembly, finite Schur/LDL infrastructure  
-Scope: salvage architecture after `R-21501`, `R-19846` and `R-19847`  
+Created: 2026-08-11; corrected 2026-08-11  
+Depends on: `L-19862`, `L-19867`, `L-19868`, `R-19848`, and the finite CCM/Caratheodory--Fejer theorem  
 Nonclaim: RH is not proved
 
-## 1. Motivation
+## 1. Correction to the first version
 
-The historical prolate resolution used two invalid or RH-bearing transfers:
-
-1. its off-line support-average application failed the parent scaled-derivative
-   hypothesis;
-2. after that repair, complete ground-state coercivity would still exclude the
-   even negative Xi-cardinal vector produced by any hypothetical off-line zero.
-
-Therefore no improvement of high-frequency constants can by itself rescue the
-complete ground-line proof.
-
-The correct salvage is to separate two questions:
+The first version proposed that a simple isolated even **interior** eigenline of
+the finite localized Weil matrix might inherit the CCM real-zero conclusion.
+`R-19848` gives an exact `3 x 3` counterexample inside the CCM divided-difference
+matrix class:
 
 ```text
-Can the Xi-like line be isolated spectrally?
-Can a suitable finite real-zero theorem be applied without requiring that line
-be the bottom of the complete Weil spectrum?
+spectrum                  -1, 0, 3
+simple even target        eigenvalue 0
+orthogonal singular moat  1
+target residual            0
+transform numerator        z^2+1.
 ```
 
-The first is compatible with lower negative modes.  The second is the genuinely
-new conceptual theorem.
+Thus perfect two-sided isolation does not imply real zeros.
 
-## 2. Finite setup
-
-Let `lambda>1`, let `N` be a finite Fourier cutoff and let
+The first version also allowed a Darboux step of the form
 
 \[
- A_{\lambda,N}=QW_\lambda^N
+ \widehat\xi^{\,D}=P\widehat\xi
 \]
 
-be the exact real symmetric CCM matrix in the audited centered convention.  Let
+with `P` real-rooted.  This cannot remove any nonreal zero of `hat xi`; it only
+adds zeros.  That proposed escape is withdrawn.
+
+## 2. What is now proved
+
+### 2.1 Exact arithmetic isolated line
+
+The exterior-cardinal residual Gram of `L-19862` has block form
 
 \[
- p_{\lambda,N}=P_Nk_\lambda
+ D=\begin{pmatrix}m&b^*\\b&C\end{pmatrix},
+ \qquad C\succeq I.
 \]
 
-be the projected CCM prolate target, or let `p_(lambda,N)` be the exactly
-normalized Xi-radical projection supplied by a separately reviewed source
-construction.
-
-Let `M_(lambda,N)` be the positive Hardy metric in the chosen moving strip, and
-put
+With the exact metric `G=diag(1,C)`, `L-19867` proves
 
 \[
- \mu_{\lambda,N}
- ={\langle A_{\lambda,N}p_{\lambda,N},p_{\lambda,N}\rangle
-   \over\|p_{\lambda,N}\|^2},
+ \|Dw\|_{G^{-1}}\ge\|w\|_G
+ \qquad(w\perp p)
 \]
+
+and
 
 \[
- r_{\lambda,N}
- =P_{p^\perp}(A_{\lambda,N}-\mu_{\lambda,N}I)p_{\lambda,N}.
+ \|Dp\|_{G^{-1}}^2\le m+m^2.
 \]
 
-The finite producer must use only prime, pole and archimedean data.  Zeta zeros
-may be used for validation or falsification but not to construct the matrix or
-the certificate.
+Since `m<=C_B exp(-BL)` at any prescribed exponential rate on a suitable
+cofinal cutoff, the two-sided moat is exactly `g=1` and `b/g->0`.  The resulting
+generalized ground line converges exponentially to the Xi target.
 
-## 3. Prime-side isolated-line gate
+### 2.2 Complete target-side moving-Hardy rate
 
-The primary finite target is the two-sided estimate
+`L-19868` proves, on one explicit quadratic-log schedule,
+
+\[
+ \|\iota_L\widetilde\xi_L-r_\Xi\|_{\tau_L}
+ =O(e^{-cL}),
+ \qquad
+ \tau_L\uparrow1/2.
+\]
+
+Its ledger retains:
+
+```text
+exterior support tail;
+all periodization copies / aliases;
+exact endpoint matching after periodization;
+finite Fourier cutoff;
+normalization;
+isolated-line displacement;
+per-level directed interval radius.
+```
+
+The transforms therefore converge locally uniformly to a nonzero multiple of
+`Xi` on every closed substrip.
+
+## 3. The one surviving theorem
+
+The remaining problem is not an abstract non-ground spectral theorem.  It is the
+construction, for the **specific convergent line** `xi_j`, of an independent
+positive CCM/Loewner completion.
+
+Let
+
+\[
+ D_{0,j}=\operatorname{diag}(-N_j,\ldots,N_j),
+ \qquad
+ \eta_j=(1,\ldots,1)^T
+\]
+
+in the audited uncentered convention.  The required finite object is a real
+parity-invariant matrix `Q_j` such that
 
 \[
  \boxed{
- \|(A_{\lambda,N}-\sigma_{\lambda,N}I)w\|_{M^{-1}}
- \ge g_{\lambda,N}\|w\|_M,
- \qquad w\perp p_{\lambda,N},
- }
+ Q_j\succeq0,
+ \qquad
+ \ker Q_j=\mathbb C\xi_j,}
 \tag{M-19802.1}
 \]
 
-combined with
+and
 
 \[
  \boxed{
- \|(A_{\lambda,N}-\sigma_{\lambda,N}I)p_{\lambda,N}\|_{M^{-1}}
- \le b_{\lambda,N},
- \qquad {b_{\lambda,N}\over g_{\lambda,N}}\to0.
- }
+ [D_{0,j},Q_j]
+ =|\beta_j\rangle\langle\eta_j|
+  -|\eta_j\rangle\langle\beta_j|.}
 \tag{M-19802.2}
 \]
 
-Unlike a one-sided lower floor, (M-19802.1) allows eigenvalues below
-`sigma_(lambda,N)`.  It is therefore not contradicted merely by the off-line
-Xi-cardinal direction in `R-19846`.
-
-Standard a posteriori spectral theory then yields a unique simple eigenline
-`xi_(lambda,N)` near `p_(lambda,N)` and
+Equivalently, in matrix entries,
 
 \[
- \inf_{c\ne0}
- \|c\xi_{\lambda,N}-p_{\lambda,N}\|_M
- \ll {b_{\lambda,N}\over g_{\lambda,N}}.
+ (Q_j)_{kk}=a_{j,k},
+ \qquad
+ (Q_j)_{k\ell}
+ ={b_{j,k}-b_{j,\ell}\over k-\ell}
+ \quad(k\ne\ell),
 \tag{M-19802.3}
 \]
 
-Parity must be certified simultaneously.  An exact even target and parity-
-commuting matrix imply that a unique nearby line is even, provided the odd
-sector has the same exclusion moat around `sigma_(lambda,N)`.
+with the usual parity conditions.
 
-## 4. Three-block producer
+If (M-19802.1)--(M-19802.3) are proved, the finite CCM theorem gives that the
+Fourier transform of `xi_j` has only real zeros.  Combining this with
+`L-19868` and Hurwitz proves RH.
 
-Use the orthogonal decomposition
+This completion does not require `xi_j` to be the ground line of the localized
+Weil matrix.  But positivity is now displayed openly in `Q_j`; it is not
+silently inferred from isolation in another matrix.
 
-\[
- H_N
- =\operatorname{span}\{p\}\oplus L\oplus H,
-\]
+## 4. Exact finite LMI form
 
-where:
-
-- `L` is a finite central block containing every constant, pole, endpoint,
-  certified-zero and low boundary coordinate that cannot be treated as a tail;
-- `H` is the exterior/high-frequency complement.
-
-Write
+For a fixed nonzero real vector `xi` with all coordinates retained, the
+commutator relation and kernel condition are finite linear equations in the
+real variables
 
 \[
- A-\sigma I
- =\begin{pmatrix}
- a&r_L^*&r_H^*\\
- r_L&B&Z^*\\
- r_H&Z&C
- \end{pmatrix}.
+ a_k,\ b_k.
 \]
 
-The producer should certify:
-
-1. exact candidate-row bounds for `r_L,r_H`;
-2. an absolute high-block gap
-   \[
-    C^*M_H^{-1}C\succeq g_H^2M_H;
-   \]
-3. an exact finite low-block singular-value moat after Schur correction;
-4. the odd-sector analogue;
-5. perturbation survival under all directed assembly radii.
-
-Current square-support all-prime tail bounds are naturally useful for `r_H` and
-`Z`.  Packet-leverage/bathtub estimates may supply a high-block floor.  The
-anchor/Christoffel and interval-LDL machinery may certify `L`.
-
-A one-sided claim `C\succeq hM_H` is optional; the load-bearing result is the
-absolute exclusion moat around `sigma`.
-
-## 5. Required finite real-zero bridge
-
-Spectral isolation alone does not imply that the Fourier--Mellin transform of
-`xi_(lambda,N)` has only real zeros.  One of the following must be proved.
-
-### 5.1 Non-ground CCM real-zero theorem
-
-Prove, for the exact finite CCM matrix and rank-one perturbation, that a
-specified simple isolated even eigenline has a real-zero transform under
-explicit finite hypotheses not requiring it to be the lowest line.
-
-The proof must expose the precise replacement for the ground-state variational
-step in the existing CCM theorem.  Abstract self-adjointness is not sufficient.
-
-### 5.2 Darboux/Christoffel groundification
-
-Construct an exact finite modification `A -> A^D` and transform
-`xi -> xi^D` such that:
-
-1. `xi^D` is the simple even ground line of an allowed CCM/Caratheodory--Fejer
-   object;
-2. `hat(xi^D)=P_N(z)hat(xi)(z)` with `P_N` explicitly real-rooted and
-   nonvanishing on every nonreal compact under consideration;
-3. every lower finite line is removed or lifted by a source-bound operation;
-4. normalization and determinant convergence are uniform in the moving strip.
-
-The positive-anchor/Christoffel and corrected Darboux/Fredholm stacks are the
-natural finite algebra for this task, but no existing claim proves all four
-properties.
-
-## 6. Moving-Hardy closure
-
-Let `tau_j -> 1/2`, `lambda_j -> infinity` and choose `N_j` beyond the explicit
-weighted projection-tail threshold.  The final quantitative target is
+Thus the remaining theorem is a concrete semidefinite feasibility problem:
 
 \[
  \boxed{
- \|(I-P_{N_j})k_{\lambda_j}\|_{\lambda_j,\tau_j}
- +{b_{\lambda_j,N_j}\over g_{\lambda_j,N_j}}
- \longrightarrow0.
- }
+ \text{find }(a,b)
+ \text{ satisfying (M-19802.3), }Q(a,b)\xi=0,
+ \text{ and }Q(a,b)|_{\xi^\perp}\succ0.}
 \tag{M-19802.4}
 \]
 
-If Section 5 supplies finite real-zero transforms, (M-19802.4), the audited CCM
-prolate limit and Hurwitz give RH.
+A directed certificate consists of exact rational/dyadic enclosures for `xi`,
+a rational nullspace parameterization of the linear equations, and an outward
+LDL proof on the complement.  The residual-Gram moat of `L-19867` is useful as
+a conditioning model, but it does not itself prove that the LMI slice
+(M-19802.4) intersects the positive cone.
 
-## 7. Why this architecture uses later repository work correctly
+## 5. Why the gate is conclusion-producing
 
-- `R-21501/L-21503` are not needed if the matrix is assembled directly from the
-  prime side; no actual-zero selector is compared with a line-centered model.
-- `R-19846` is respected: negative cardinal modes may lie below the target.
-- `L-19862` is reinterpreted as a source of an isolated target/residual geometry,
-  not a ground-state floor.
-- Current PR #202 tail estimates are used for finite row/cross errors, not to
-  assert positivity of the RH-equivalent constant coordinate.
-- `T-14301` is retained only after a new finite real-zero bridge has been proved.
+The counterexample `R-19848` proves that the positive-completion cone can be
+empty even when the target is perfectly isolated in another exact CCM matrix.
+Conversely, the finite CCM theorem shows that any point of the cone proves the
+finite real-zero statement.
 
-## 8. Binary falsifiers
+Therefore the positivity of (M-19802.4) is precisely the missing real-zero
+content.  It may be attacked through:
 
-The proposal fails if any of the following is proved:
+```text
+an arithmetic Loewner/Pick representation;
+a source-bound positive moment measure;
+a total-positive or canonical-system factorization;
+a rank-changing Darboux construction with an explicit no-cancellation proof.
+```
 
-1. a finite CCM example with a well-isolated simple even interior eigenline whose
-   transform necessarily has a nonreal zero, ruling out Section 5.1 in the
-   required class;
-2. a proof that every admissible Darboux groundification introduces a pole or
-   nonreal zero factor incompatible with Hurwitz;
-3. a prime-side model in which the Xi target is never isolated from the complete
-   finite spectrum on any cofinal sequence;
-4. a directed lower bound showing `b/g` remains bounded away from zero.
+A real-rooted multiplier alone is ruled out.
 
-## 9. Exact remaining deliverables
+## 6. Correct conditional completion
 
-1. source-bound prime-side interval matrices at several growing supports;
-2. reconnaissance tables for the two-sided target singular gap, not the ground
-   gap;
-3. one theorem proving the asymptotic isolation moat;
-4. one theorem of type 5.1 or 5.2;
-5. a final moving-Hardy directed ledger.
+The following chain is now fully rigorous as a conditional theorem:
 
-Until items 3 and 4 are proved, this remains a serious research proposal rather
-than a proof of RH.
+\[
+\begin{aligned}
+&\text{positive CCM completion (M-19802.1)--(M-19802.3)}\\
+&\quad\Longrightarrow
+\text{every finite }\widehat\xi_j\text{ is real-rooted}\\
+&\quad\Longrightarrow
+\widehat\xi_j\to C\Xi\text{ locally uniformly by L-19868}\\
+&\quad\Longrightarrow
+\Xi\text{ has no nonreal zero by Hurwitz}\\
+&\quad\Longrightarrow \mathrm{RH}.
+\end{aligned}
+\tag{M-19802.5}
+\]
+
+The first arrow is the sole open arrow.
+
+## 7. Status boundary
+
+```text
+positive residual-Gram isolated line          PROVED (L-19867)
+complete target-side moving-Hardy rate         PROVED (L-19868)
+arbitrary isolated interior CCM real-zero      FALSE (R-19848)
+real-rooted multiplicative Darboux repair       FALSE AS A REPAIR (R-19848)
+positive CCM completion for the convergent line OPEN / RH-BEARING
+Riemann Hypothesis                              UNPROVED
+```
