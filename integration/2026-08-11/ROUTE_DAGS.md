@@ -1,6 +1,6 @@
 # Canonical route DAGs
 
-These DAGs show only independently reviewed arrows through the integration cutoff. A boxed node is the first open load-bearing theorem. Post-review deltas are excluded.
+These DAGs show independently reviewed arrows through the integration cutoff, together with the independently reviewed PR #376 Brownian delta at head `0ed0e7de3aa1b81bb832df53d861dd6f27f2db8b`. Other post-review deltas remain excluded. A boxed node is the first open load-bearing theorem.
 
 ## 1. Signed elementary transport
 
@@ -109,41 +109,79 @@ RH
 
 ## 5. Raw Brownian / Dirichlet–Hermite
 
+The exact finite infrastructure survives:
+
 ```text
-S_N = Σ_{j<=N} Gamma_{2,j}/j^2
+S_N = Σ_(j<=N) Gamma_(2,j)/j^2
   ↓ exact beta-gamma/Dirichlet factorization
 D_N(s) = zero-free gamma factor × E[Q_N^(s/2)]
   ↓ exact divided-difference/Hermite representation
 explicit exponential numerator H_N(z)
-  ↓
+```
+
+The former closing arrow is now refuted:
+
+```text
+[FALSE TARGET]
+H_N(z) != 0 for Re z>1/4 for all large N,
+or on any unbounded cofinal sequence
+
+  ↑ contradicted by reviewed L-90601 / R-90601
+
+for every fixed 1/4<σ<1/2 and every sufficiently large N,
+H_N has infinitely many zeros z_j with
+Re z_j→σ and |Im z_j|→∞
+```
+
+Therefore the current raw finite producer cannot prove RH through global all-large/cofinal half-plane stability.
+
+The live Brownian alternatives are now:
+
+```text
 ┌──────────────────────────────────────────────────────────────┐
-│ H_N(z) != 0 for Re z>1/4 for all large N, or for an          │
-│ unbounded cofinal sequence                                   │
+│ height-dependent theorem with N=N(T), or                    │
+│ structurally redesigned finite producer without Bohr zeros, │
+│ or a direct infinite canonical system for the limiting xi   │
 └──────────────────────────────────────────────────────────────┘
-  ↓ local-uniform convergence and Rouché
-xi has no off-critical zero
-  ↓
+  ↓ if independently completed
 RH
 ```
 
-This route is genuinely independent of carry and Q4. Its boxed theorem is not supplied by the symmetrized positive-mixture arguments.
+Local-uniform convergence and fixed-zero `1/N` displacement remain valid; they do not control zeros escaping to infinite height for fixed `N`.
 
 ## 6. Symmetrized Brownian / Robin
+
+The corrected one-fiber theorem remains exact:
 
 ```text
 corrected centered Robin fiber
   ↓ exact one-fiber self-adjoint classification
 individual favorable fiber has critical-line zeros
+```
+
+But the current finite mixture finishes are refuted:
+
+```text
+logarithmic Nörlund or central-binomial Green positive mixture
+  ↓ reviewed L-90603
+one-sided Bohr zeros in every fixed 1/2<Re s<1 strip
+  ↓ reviewed L-90604
+functional-equation symmetrization inherits nearby off-line zeros
   ↓
-[REFUTED EASY CLOSURES]
-  finite reflected-tail domination
-  arbitrary positive-mixture real-rootedness
-  ↓
+current BLNRZ / BGRRZ finite-real-zero theorems FALSE
+```
+
+Thus neither fiberwise self-adjointness, positive averaging nor exact functional-equation symmetry gives aggregate finite real-rootedness for these exact producers.
+
+The surviving global Brownian possibility is not a canonical system proving real-rootedness of these finite functions; they are already known to have off-line zeros. What remains open is:
+
+```text
 ┌──────────────────────────────────────────────────────────────┐
-│ construct an aggregate canonical system or                  │
-│ Hermite–Biehler realization for the complete mixture         │
+│ a direct infinite canonical/Hermite–Biehler system for xi,  │
+│ a height-dependent symmetrized construction, or             │
+│ a genuinely redesigned finite mixture outside L-90603       │
 └──────────────────────────────────────────────────────────────┘
-  ↓
+  ↓ if independently completed
 RH
 ```
 
