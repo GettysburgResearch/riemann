@@ -5,6 +5,7 @@ Title: Applying the critical adjoint to the dyadic dipole produces the unique ph
 Status: **PROPOSED COMPLETE EXACT FINITE-CARRY THEOREM — INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-11  
+Corrected: 2026-08-11 to distinguish full and column-one-deleted Riesz sums  
 Dependencies: `L-90423`, `L-90424`, `L-90426`; elementary prefix averaging  
 Scope: source and finite carry image; no sign or RH claim
 
@@ -108,7 +109,7 @@ This is a source-specific finite compression, not a universal bounded-rank geome
 
 ## 3. Pairing with an arbitrary carry target
 
-Suppose a finite target `w(q)` has the triangular representation
+Suppose a finite target `w(q)` on columns `2<=q<=X` has the triangular representation
 
 \[
 w(q)=\sum_{n=q}^X c(n)\beta_{nq}.
@@ -119,7 +120,7 @@ Pairing with `b_*` and switching finite sums gives exactly
 
 \[
 \boxed{
-\sum_{q\le X}b_*(q)w(q)
+\sum_{q=2}^X b_*(q)w(q)
  =\sum_{n=2}^{15}Y_*(n)c(n),
 }
 \tag{L-90427.9}
@@ -129,40 +130,96 @@ for every `X>=15`.
 
 Thus every target consumer of the phase-locked source is a fixed fourteen-row scalar. No coefficient above row fifteen enters.
 
-## 4. Relation to the two-row dipole
+## 4. Full and column-one-deleted Riesz sums
 
-Let
+The distinction in this section is load bearing. Define
 
 \[
-\mathcal R_f(X)
- =\sum_{n\le X}\frac{f(n)}{\sqrt n}
-   \log\frac Xn.
+\mathcal R_f^{\rm full}(X)
+ =\sum_{1\le n\le X}\frac{f(n)}{\sqrt n}
+   \log\frac Xn,
 \tag{L-90427.10}
+\]
+
+and
+
+\[
+\mathcal R_f^{\circ}(X)
+ =\sum_{2\le n\le X}\frac{f(n)}{\sqrt n}
+   \log\frac Xn.
+\tag{L-90427.11}
 \]
 
 For a source dilation,
 
 \[
-\mathcal R_{\delta_d*f}(X)
- =d^{-1/2}\mathcal R_f(X/d).
-\tag{L-90427.11}
+\boxed{
+\mathcal R_{\delta_d*f}^{\rm full}(X)
+ =d^{-1/2}\mathcal R_f^{\rm full}(X/d).
+}
+\tag{L-90427.12}
 \]
 
 Using (L-90427.2),
 
 \[
 \boxed{
-\mathcal R_{b_*}(X)
- =\mathcal R_{\omega_2}(X)
-  -3\sqrt2\,\mathcal R_{\omega_2}(X/2)
-  +4\mathcal R_{\omega_2}(X/4).
+\mathcal R_{b_*}^{\rm full}(X)
+ =\mathcal R_{\omega_2}^{\rm full}(X)
+  -3\sqrt2\,\mathcal R_{\omega_2}^{\rm full}(X/2)
+  +4\mathcal R_{\omega_2}^{\rm full}(X/4).
 }
-\tag{L-90427.12}
+\tag{L-90427.13}
 \]
 
-Thus the fourteen-row source is not independent of the two-row bottom charge: it is its exact critically adjointed three-scale filter.
+Both sources have coefficient one at `n=1`, so
 
-## 5. Proof boundary
+\[
+\mathcal R_f^{\rm full}(X)
+ =\mathcal R_f^{\circ}(X)+\log X.
+\tag{L-90427.14}
+\]
+
+Consequently the actual carry-column pairing, which deletes column one, satisfies
+
+\[
+\boxed{
+\begin{aligned}
+\mathcal R_{b_*}^{\circ}(X)
+={}&\mathcal R_{\omega_2}^{\circ}(X)
+ -3\sqrt2\,\mathcal R_{\omega_2}^{\circ}(X/2)
+ +4\mathcal R_{\omega_2}^{\circ}(X/4)\\
+&+(4-3\sqrt2)\log X
+ +(3\sqrt2-8)\log2.
+\end{aligned}}
+\tag{L-90427.15}
+\]
+
+The last line is an explicit elementary gauge. It may not be omitted when translating between the finite carry charge and the full convolution identity.
+
+## 5. Exact Möbius-adjoint coordinate and the column-one firewall
+
+For a target `w(2),...,w(X)`, extend it by `w(1)=0` and define
+
+\[
+u_m=\sum_{k\le X/m}\mu(k)w(mk).
+\tag{L-90427.16}
+\]
+
+Since `b_*=c_* *\mu` with `c_*=\mathbf1*b_*`, finite switching gives
+
+\[
+\boxed{
+\sum_{q=2}^X b_*(q)w(q)
+ =u_1-\frac{15}{2}u_2
+  +\frac{35}{2}u_4-15u_8+4u_{16}.
+}
+\tag{L-90427.17}
+\]
+
+The `u_1` term is mandatory. Dropping it would silently restore the deleted column-one target value and is false in general.
+
+## 6. Proof boundary
 
 Closed exactly here:
 
@@ -170,10 +227,12 @@ Closed exactly here:
 2. finite prefix potential;
 3. exact fourteen-row carry image;
 4. finite target pairing;
-5. exact scale relation to the two-row dipole.
+5. full Riesz scale relation;
+6. exact column-one gauge;
+7. five-state Möbius-adjoint representation including `u_1`.
 
 Open:
 
 1. a critical bound or sign for the fourteen-row scalar;
-2. the corresponding two-row filtered bound;
+2. the corresponding filtered bottom charge;
 3. RH.
