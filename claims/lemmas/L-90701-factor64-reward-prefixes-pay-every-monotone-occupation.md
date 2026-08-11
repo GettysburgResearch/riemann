@@ -1,10 +1,10 @@
-# L-90701 — Factor-64 reward prefixes pay every nonincreasing Pascal occupation
+# L-90701 — Factor-64 reward prefixes control every occupation by upward variation
 
 Claim ID: `L-90701`  
 Status: **PROPOSED COMPLETE EXACT FINITE/ABEL LEMMA — INDEPENDENT REVIEW REQUIRED**  
 Created: 2026-08-11  
 Depends on: `L-90217` (the exact factor-64 signed reward)  
-Scope: uniform-Pascal reward geometry; no proof that the critical arithmetic occupation is nonincreasing and no RH conclusion
+Scope: uniform-Pascal reward geometry; no proof of the critical arithmetic occupation-variation bound and no RH conclusion
 
 ## 1. Setup
 
@@ -115,7 +115,7 @@ the retained verifier reconstructs them from the short \(\mathbb Q(\sqrt2)\) dat
 
 ## 3. Monotone-occupation payment
 
-Let \(M(m)\ge0\) be finitely supported and nonincreasing. Set \(M(m)=0\) past its support. Finite Abel summation gives
+Let \(M(m)\) be a finitely supported nonincreasing real sequence, extended by zero past its support. Such a sequence is automatically nonnegative. Finite Abel summation gives
 
 \[
 \sum_{m\ge2}d_{64}(m)M(m)
@@ -138,16 +138,25 @@ In particular the complete negative block \(13,\ldots,63\) is automatically paid
 
 This is stronger than the original 51-state target `L-90217.25`, but under an additional structural hypothesis on the occupation.
 
-## 4. A stable nonmonotone defect bound
+## 4. Stable bound for arbitrary signed occupations
 
-For an arbitrary finitely supported nonnegative occupation define its total upward variation
+Let now \(M(m)\) be an **arbitrary real finitely supported sequence**, again extended by zero, and define its total upward variation
 
 \[
 V_+(M)=\sum_{m\ge2}[M(m+1)-M(m)]_+.
 \tag{L-90701.12}
 \]
 
-Writing \(\Delta_m=M(m)-M(m+1)\), the total positive variation is \(M(2)+V_+(M)\), while the total negative variation is \(V_+(M)\). From (L-90701.3),
+Put \(\Delta_m=M(m)-M(m+1)\). Since \(\sum_m\Delta_m=M(2)\),
+
+\[
+\sum_m[\Delta_m]_+=M(2)+V_+(M),
+\qquad
+\sum_m[-\Delta_m]_+=V_+(M).
+\tag{L-90701.13}
+\]
+
+No sign assumption on \(M\) is used. From the two-sided bound (L-90701.3),
 
 \[
 \begin{aligned}
@@ -163,37 +172,41 @@ Thus
 \[
 \boxed{
 \sum_{m\ge2}d_{64}(m)M(m)
-\ge\frac9{10}M(2)-\frac65V_+(M).
+\ge\frac9{10}M(2)-\frac65V_+(M)
 }
-\tag{L-90701.13}
+\tag{L-90701.14}
 \]
+
+for **every signed occupation**.
 
 A sufficient payment condition is therefore
 
 \[
-\boxed{V_+(M)\le\frac34M(2).}
-\tag{L-90701.14}
+\boxed{M(2)\ge0,
+\qquad
+V_+(M)\le\frac34M(2).}
+\tag{L-90701.15}
 \]
 
-The original factor-64/Pascal bridge has consequently been reduced from a 51-coordinate signed comparison to one scalar **upward-variation bound** for the critical uniform-Pascal Green occupation.
+The original factor-64/Pascal bridge has consequently been reduced from a 51-coordinate signed comparison—and without assuming SHARP/nonnegativity of every occupation coordinate—to one scalar **upward-variation bound** plus the single base sign \(M(2)\ge0\).
 
 ## 5. Consequence for the live route
 
 The result separates the remaining work cleanly:
 
 ```text
-factor-64 reward algebra                       exact
-all reward prefixes uniformly positive         proved here
-every nonincreasing occupation pays the debt   proved here
-bounded upward variation pays the debt         proved here
-critical arithmetic occupation variation       open / RH-bearing
-factor-64 sign and RH                           unproved
+factor-64 reward algebra                           exact
+all reward prefixes uniformly positive             proved here
+every nonincreasing occupation pays the debt       proved here
+arbitrary signed occupation variation bound        proved here
+critical base sign and upward variation            open / RH-bearing
+factor-64 sign and RH                               unproved
 ```
 
-A continuation should estimate \(V_+(M)\) directly from the explicit Green formula
+A continuation should estimate \(M(2)\) and \(V_+(M)\) directly from the explicit Green formula
 
 \[
 M_n=s_n+\frac2{n+1}\sum_{m>n}s_m,
 \]
 
-rather than return to the 51 individual states.
+rather than return to the 51 individual states or assume full SHARP.
