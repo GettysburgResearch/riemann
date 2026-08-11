@@ -1,42 +1,44 @@
-# M-19802 — Corrected isolated-line/positive-completion salvage
+# M-19802 — Corrected isolated-line/asymptotic-symmetrizer salvage
 
 Claim ID: `M-19802`  
-Title: Separate arithmetic isolation and Hardy convergence from the exact positive CCM completion  
-Status: **CORRECTED AFTER R-19848 — TWO OBLIGATIONS CLOSED, ONE POSITIVE-COMPLETION GATE OPEN**  
+Title: Separate arithmetic isolation and Hardy convergence from the rank-two CCM commutator defect  
+Status: **CORRECTED AFTER R-19848/R-19849 AND L-19869 — TWO OBLIGATIONS CLOSED, ONE EXPLICIT COMMUTATOR GATE OPEN**  
 Authoring agent: `gpt56-pro-09-p`  
 Created: 2026-08-11; corrected 2026-08-11  
-Depends on: `L-19862`, `L-19867`, `L-19868`, `R-19848`, and the finite CCM/Caratheodory--Fejer theorem  
+Depends on: `L-19862`, `L-19867`, `L-19868`, `L-19869`, `R-19848`, `R-19849`  
 Nonclaim: RH is not proved
 
-## 1. Correction to the first version
+## 1. Exact correction to the first version
 
 The first version proposed that a simple isolated even **interior** eigenline of
-the finite localized Weil matrix might inherit the CCM real-zero conclusion.
-`R-19848` gives an exact `3 x 3` counterexample inside the CCM divided-difference
-matrix class:
+a finite CCM matrix might inherit the ground-state real-zero conclusion.
+`R-19848` gives an exact `3 x 3` counterexample inside the CCM
+divided-difference class:
 
 ```text
 spectrum                  -1, 0, 3
 simple even target        eigenvalue 0
 orthogonal singular moat  1
-target residual            0
-transform numerator        z^2+1.
+target residual           0
+transform numerator       z^2+1.
 ```
 
-Thus perfect two-sided isolation does not imply real zeros.
+`R-19849` strengthens this: the same target line has no nonzero positive CCM
+completion in that dimension.  Thus perfect isolation is logically independent
+of the positive-kernel statement used by the finite theorem.
 
-The first version also allowed a Darboux step of the form
+The first version also allowed a Darboux step
 
 \[
  \widehat\xi^{\,D}=P\widehat\xi
 \]
 
-with `P` real-rooted.  This cannot remove any nonreal zero of `hat xi`; it only
-adds zeros.  That proposed escape is withdrawn.
+with `P` real-rooted.  Such multiplication cannot remove a nonreal zero of
+`hat xi`; it only adds zeros.  That proposed repair is withdrawn.
 
-## 2. What is now proved
+## 2. What is proved
 
-### 2.1 Exact arithmetic isolated line
+### 2.1 Exact source-side isolated line
 
 The exterior-cardinal residual Gram of `L-19862` has block form
 
@@ -45,11 +47,11 @@ The exterior-cardinal residual Gram of `L-19862` has block form
  \qquad C\succeq I.
 \]
 
-With the exact metric `G=diag(1,C)`, `L-19867` proves
+With `G=diag(1,C)`, `L-19867` proves
 
 \[
  \|Dw\|_{G^{-1}}\ge\|w\|_G
- \qquad(w\perp p)
+ \qquad(w\perp p),
 \]
 
 and
@@ -59,10 +61,11 @@ and
 \]
 
 Since `m<=C_B exp(-BL)` at any prescribed exponential rate on a suitable
-cofinal cutoff, the two-sided moat is exactly `g=1` and `b/g->0`.  The resulting
-generalized ground line converges exponentially to the Xi target.
+cofinal cutoff, the two-sided moat is exactly `g=1`, the residual ratio tends
+to zero, and the unique even generalized low line converges exponentially to
+the Xi target.
 
-### 2.2 Complete target-side moving-Hardy rate
+### 2.2 Complete moving-Hardy target rate
 
 `L-19868` proves, on one explicit quadratic-log schedule,
 
@@ -73,7 +76,7 @@ generalized ground line converges exponentially to the Xi target.
  \tau_L\uparrow1/2.
 \]
 
-Its ledger retains:
+The estimate retains:
 
 ```text
 exterior support tail;
@@ -85,129 +88,132 @@ isolated-line displacement;
 per-level directed interval radius.
 ```
 
-The transforms therefore converge locally uniformly to a nonzero multiple of
-`Xi` on every closed substrip.
+The transforms converge locally uniformly to a nonzero multiple of `Xi` on
+every closed substrip.
 
-## 3. The one surviving theorem
+## 3. Positive symmetrizer already available
 
-The remaining problem is not an abstract non-ground spectral theorem.  It is the
-construction, for the **specific convergent line** `xi_j`, of an independent
-positive CCM/Loewner completion.
+Let `lambda_(j,-)` be the lowest generalized eigenvalue of the residual pencil
+`(D_j,G_j)` and put
+
+\[
+ \boxed{Q_j=D_j-\lambda_{j,-}G_j.}
+\tag{M-19802.1}
+\]
+
+Then
+
+\[
+ Q_j\succeq0,
+ \qquad
+ \ker Q_j=\mathbb C\xi_j,
+\tag{M-19802.2}
+\]
+
+and the quotient floor tends to one.  Thus the missing theorem is no longer the
+existence of some positive form with the target as kernel.
+
+## 4. The exact non-ground gate
 
 Let
 
 \[
- D_{0,j}=\operatorname{diag}(-N_j,\ldots,N_j),
- \qquad
- \eta_j=(1,\ldots,1)^T
+ \Lambda_j=\operatorname{diag}(\lambda_{j,k})
 \]
 
-in the audited uncentered convention.  The required finite object is a real
-parity-invariant matrix `Q_j` such that
+be the real frequency/scaling operator, let `eta_j` be its evaluation vector,
+and normalize `eta_j^T xi_j=1`.  Define
 
 \[
- \boxed{
- Q_j\succeq0,
- \qquad
- \ker Q_j=\mathbb C\xi_j,}
-\tag{M-19802.1}
+ T_j=\Lambda_j-|\Lambda_j\xi_j\rangle\langle\eta_j|,
+\tag{M-19802.3}
 \]
 
 and
 
 \[
- \boxed{
- [D_{0,j},Q_j]
- =|\beta_j\rangle\langle\eta_j|
-  -|\eta_j\rangle\langle\beta_j|.}
-\tag{M-19802.2}
-\]
-
-Equivalently, in matrix entries,
-
-\[
- (Q_j)_{kk}=a_{j,k},
- \qquad
- (Q_j)_{k\ell}
- ={b_{j,k}-b_{j,\ell}\over k-\ell}
- \quad(k\ne\ell),
-\tag{M-19802.3}
-\]
-
-with the usual parity conditions.
-
-If (M-19802.1)--(M-19802.3) are proved, the finite CCM theorem gives that the
-Fourier transform of `xi_j` has only real zeros.  Combining this with
-`L-19868` and Hurwitz proves RH.
-
-This completion does not require `xi_j` to be the ground line of the localized
-Weil matrix.  But positivity is now displayed openly in `Q_j`; it is not
-silently inferred from isolation in another matrix.
-
-## 4. Exact finite LMI form
-
-For a fixed nonzero real vector `xi` with all coordinates retained, the
-commutator relation and kernel condition are finite linear equations in the
-real variables
-
-\[
- a_k,\ b_k.
-\]
-
-Thus the remaining theorem is a concrete semidefinite feasibility problem:
-
-\[
- \boxed{
- \text{find }(a,b)
- \text{ satisfying (M-19802.3), }Q(a,b)\xi=0,
- \text{ and }Q(a,b)|_{\xi^\perp}\succ0.}
+ \alpha_j=Q_j\Lambda_j\xi_j.
 \tag{M-19802.4}
 \]
 
-A directed certificate consists of exact rational/dyadic enclosures for `xi`,
-a rational nullspace parameterization of the linear equations, and an outward
-LDL proof on the complement.  The residual-Gram moat of `L-19867` is useful as
-a conditioning model, but it does not itself prove that the LMI slice
-(M-19802.4) intersects the positive cone.
+The finite CCM polynomial is the nonzero characteristic factor of `T_j`.
+`L-19869` proves that every one of its roots has imaginary part at most
 
-## 5. Why the gate is conclusion-producing
+\[
+\boxed{
+\varepsilon_j
+={1\over2}
+\left\|(Q_j)_{\xi_j^\perp}^{-1/2}
+\left(
+ Q_j\Lambda_j-\Lambda_jQ_j
+ -|\alpha_j\rangle\langle\eta_j|
+ +|\eta_j\rangle\langle\alpha_j|
+\right)_{\xi_j^\perp}
+(Q_j)_{\xi_j^\perp}^{-1/2}
+\right\|.}
+\tag{M-19802.5}
+\]
 
-The counterexample `R-19848` proves that the positive-completion cone can be
-empty even when the target is perfectly isolated in another exact CCM matrix.
-Conversely, the finite CCM theorem shows that any point of the cone proves the
-finite real-zero statement.
+Consequently
 
-Therefore the positivity of (M-19802.4) is precisely the missing real-zero
-content.  It may be attacked through:
+\[
+ \boxed{\varepsilon_j\longrightarrow0}
+\tag{M-19802.6}
+\]
+
+combined with `L-19868` proves RH.  This is a genuine non-ground theorem:
+finite approximants are allowed to have nonreal zeros, but all such zeros lie
+in a strip shrinking to the real axis.
+
+The exact positive CCM/Loewner completion is the special case
+`epsilon_j=0`.  It is sufficient but no longer required.
+
+## 5. Why this does not hide the ground hypothesis
+
+The positivity is displayed explicitly in `Q_j`, which is constructed from the
+residual Gram and not from a one-sided lower bound for the indefinite localized
+Weil matrix.  The remaining datum is the normalized failure of `Q_j` to obey
+the CvS rank-two scaling commutator.  It is neither implied by the isolated-line
+moat nor by target convergence: `R-19848/R-19849` are exact finite falsifiers.
+
+In entry form, defect zero is
+
+\[
+ (\lambda_{j,k}-\lambda_{j,\ell})(Q_j)_{k\ell}
+ =\eta_{j,k}\alpha_{j,\ell}
+  -\alpha_{j,k}\eta_{j,\ell}.
+\tag{M-19802.7}
+\]
+
+Thus (M-19802.6) is a finite, source-bound, directed operator estimate.  Natural
+attacks are:
 
 ```text
-an arithmetic Loewner/Pick representation;
-a source-bound positive moment measure;
-a total-positive or canonical-system factorization;
-a rank-changing Darboux construction with an explicit no-cancellation proof.
+an approximate derivative intertwining for the exterior-cardinal synthesis;
+a boundary Green identity with only endpoint rank-two residues;
+a Loewner/Pick representation plus a vanishing non-Loewner remainder;
+a rank-changing Darboux construction whose noncancellation error is quantified.
 ```
-
-A real-rooted multiplier alone is ruled out.
 
 ## 6. Correct conditional completion
 
-The following chain is now fully rigorous as a conditional theorem:
+The following chain is rigorous:
 
 \[
 \begin{aligned}
-&\text{positive CCM completion (M-19802.1)--(M-19802.3)}\\
+&\varepsilon_j\to0\\
 &\quad\Longrightarrow
-\text{every finite }\widehat\xi_j\text{ is real-rooted}\\
+\text{every finite transform zero has }|\Im z|\le\varepsilon_j\\
 &\quad\Longrightarrow
 \widehat\xi_j\to C\Xi\text{ locally uniformly by L-19868}\\
 &\quad\Longrightarrow
 \Xi\text{ has no nonreal zero by Hurwitz}\\
 &\quad\Longrightarrow \mathrm{RH}.
 \end{aligned}
-\tag{M-19802.5}
+\tag{M-19802.8}
 \]
 
-The first arrow is the sole open arrow.
+The first line is the sole open arrow.
 
 ## 7. Status boundary
 
@@ -215,7 +221,8 @@ The first arrow is the sole open arrow.
 positive residual-Gram isolated line          PROVED (L-19867)
 complete target-side moving-Hardy rate         PROVED (L-19868)
 arbitrary isolated interior CCM real-zero      FALSE (R-19848)
-real-rooted multiplicative Darboux repair       FALSE AS A REPAIR (R-19848)
-positive CCM completion for the convergent line OPEN / RH-BEARING
+same-dimensional positive completion universal FALSE (R-19849)
+asymptotic positive-symmetrizer theorem        PROVED (L-19869)
+normalized rank-two commutator defect -> 0      OPEN / RH-BEARING
 Riemann Hypothesis                              UNPROVED
 ```
