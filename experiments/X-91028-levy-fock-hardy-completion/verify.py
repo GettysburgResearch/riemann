@@ -28,15 +28,18 @@ def sieve_lambdas(limit: int) -> list[tuple[int, float, float]]:
     for p in range(2, limit + 1):
         if is_prime[p]:
             primes.append(p)
-            if p * p <= limit:
-                for k in range(p * p, limit + 1, p):
+            step = p
+            start = p * p
+            if start <= limit:
+                for k in range(start, limit + 1, step):
                     is_prime[k] = False
     rows: list[tuple[int, float, float]] = []
     for p in primes:
         n = p
         r = 1
         while n <= limit:
-            rows.append((n, math.log(p), 1.0 / r))
+            lam = math.log(p)
+            rows.append((n, lam, 1.0 / r))
             if n > limit // p:
                 break
             n *= p
@@ -92,6 +95,7 @@ def min_eigenvalue_hermitian(matrix: list[list[complex]]) -> float:
 def build_report() -> dict:
     rows = sieve_lambdas(250)
 
+    # Exact spectral-factor and scaling identities.
     spectral_rows = []
     max_spectral_error = mp.mpf(0)
     max_scaling_error = mp.mpf(0)
@@ -112,11 +116,13 @@ def build_report() -> dict:
                 }
             )
 
+    # Calderon admissibility constant.
     integrand = lambda u: abs(psi_hat(1, u)) ** 2 / u
     admissibility_numeric = mp.quad(integrand, [0, 1, mp.inf])
     admissibility_closed = mp.mpf(15) * mp.log(2) / 16
     admissibility_error = abs(admissibility_numeric - admissibility_closed)
 
+    # One-particle Fock identity and scale cocycle.
     a = 0.73
     b = 0.41
     s = 0.82 + 0.31j
@@ -129,6 +135,7 @@ def build_report() -> dict:
     cocycle_rhs = log_q_finite(rows, a, z) + log_q_finite(rows, b, z + 2 * a)
     cocycle_error = abs(cocycle_lhs - cocycle_rhs)
 
+    # The boundary multiplier is exactly compound Poisson.
     c = 1 + 2 * a
     theta = 1.37
     log_char = 0j
@@ -138,6 +145,7 @@ def build_report() -> dict:
     ratio_log = log_q_finite(rows, a, c + 1j * theta) - log_q_finite(rows, a, c)
     poisson_error = abs(cmath.exp(log_char) - cmath.exp(ratio_log))
 
+    # Positive Fock coherent kernel: exp(<v_s,v_t>).
     points = [0.62 + 0.1j, 0.77 - 0.25j, 1.05 + 0.42j, 0.69 + 0.55j]
     fock_gram = []
     for sj in points:
@@ -147,6 +155,7 @@ def build_report() -> dict:
         fock_gram.append(row)
     fock_gram_min = min_eigenvalue_hermitian(fock_gram)
 
+    # Synthetic RH-side screw/wavelet Gram.
     gammas = [-37.0, -24.5, -14.2, 14.2, 24.5, 37.0]
     multiplicities = [1, 2, 1, 1, 2, 1]
     packet = [
@@ -173,6 +182,7 @@ def build_report() -> dict:
         screw_gram.append(row)
     screw_gram_min = min_eigenvalue_hermitian(screw_gram)
 
+    # Diagonal equals the one-Weil-square residual.
     diagonal_rows = []
     max_diagonal_error = 0.0
     for aa, xx in ((0.8, -3.0), (1.2, 4.0), (1.6, 0.5)):
@@ -196,12 +206,14 @@ def build_report() -> dict:
             }
         )
 
+    # Removable bridge value and causal/anti-causal normalization.
     a_bridge = mp.mpf("1.25")
     eps = mp.mpf("1e-25")
     bridge_numeric = psi_hat(a_bridge, eps) / eps
     bridge_closed = mp.sqrt(378) / (16 * a_bridge)
     bridge_error = abs(bridge_numeric - bridge_closed)
 
+    # A diagonal-positive matrix need not be positive: exact finite firewall.
     diagonal_firewall = [[1.0, 1.75], [1.75, 1.0]]
     firewall_min = min_eigenvalue_hermitian(diagonal_firewall)
 
