@@ -1,6 +1,8 @@
 # X-91028 — Lévy–Fock–Hardy completion regression
 
-This finite replay supports `L-91028`–`L-91031` and `T-91006`.
+This finite replay supports `L-91030`–`L-91033`, `T-91007`, and `R-91007`,
+with main's `L-91028`, `L-91029`, and `T-91006` retained as upstream local
+inputs.
 
 It checks:
 
