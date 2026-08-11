@@ -189,7 +189,7 @@ The Christoffel–Hankel amplifier reduces this to
 The ratio is
 
 \[
- \frac{2\log3}{\log(4/3)}=7.638170\ldots.
+ \frac{2\log3}{\log(4/3)}=7.6376833586\ldots.
 \]
 
 The gain comes from using all correlations among the first `2n` moments and choosing the unique optimal polynomial direction, rather than waiting for one raw coefficient to change sign.
