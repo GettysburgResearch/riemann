@@ -1,0 +1,48 @@
+{
+  "gates": {
+    "exact_torus_triangle": true,
+    "finite_observed_gap": true,
+    "one_root_per_phase_block": true,
+    "root_residuals_small": true,
+    "roots_are_distinct": true,
+    "roots_stay_near_sigma": true
+  },
+  "proof_object_sha256": "ae011e49bc9b2ff35386883e32fdc42f38e6d4477e22cc4b8bfd2b7d413593d0",
+  "return_blocks": {
+    "block_size_in_exact_p2_returns": 2000,
+    "count": 30,
+    "max_observed_root_gap": 16457.001582420773,
+    "max_real_displacement": 0.0005960914980921439,
+    "max_root_residual": 3.184182019339489e-11,
+    "sample_rows": [
+      {
+        "block": 0,
+        "phase_error": 0.00019683044154120445,
+        "root_imag": 3519.0282694899556,
+        "root_real": 0.3000276347725954,
+        "root_residual": 2.6087128725318046e-13
+      },
+      {
+        "block": 29,
+        "phase_error": 0.0028351064519392803,
+        "root_imag": 271286.3337788403,
+        "root_real": 0.3003975997254998,
+        "root_residual": 3.129095608049447e-11
+      }
+    ]
+  },
+  "scope": "finite diagnostic only; syndetic recurrence follows analytically from Kronecker minimality, compactness and Rouche",
+  "status": "PASS_X_90603_BOHR_SYNDETIC_RECURRENCE",
+  "torus_zero": {
+    "residual": 0.0,
+    "sigma": 0.3,
+    "u": [
+      -0.8849471469840208,
+      -0.46569147194772853
+    ],
+    "v": [
+      -0.8044987719094496,
+      0.593954313054621
+    ]
+  }
+}
