@@ -8,7 +8,7 @@ Dependencies: the CCM determinant identity; elementary finite-dimensional spectr
 Scope: exact boundary of every proposed non-ground positive-completion theorem  
 Nonclaim: no source-bound completion is constructed for the Xi-like target
 
-## 1. Setup
+## 1. Real CCM setup
 
 Let
 
@@ -18,10 +18,10 @@ Let
  \tag{T-19814.1}
 \]
 
-with distinct nodes.  Let `xi in C^n` and let `eta in C^n` satisfy
+with distinct nodes.  Let `xi,eta in R^n` satisfy
 
 \[
- \eta^*\xi=1.
+ \eta^{\mathsf T}\xi=1.
  \tag{T-19814.2}
 \]
 
@@ -37,6 +37,11 @@ Then `T_xi xi=0`.  The CCM determinant identity identifies the nonzero
 spectrum of `T_xi` with the nonuniversal zeros of the finite Fourier transform
 associated with `xi`.
 
+The complex Hermitian version is identical after adding the diagonal
+compatibility conditions
+`Im(u_i conjugate(eta_i))=0`; the repository application is real, so the
+statement below is kept in the exact real CCM convention.
+
 ## 2. Characterization theorem
 
 The following are equivalent.
@@ -46,51 +51,54 @@ The following are equivalent.
 The operator induced by `T_xi` on
 
 \[
- \mathbb C^n/\mathbb C\xi
+ \mathbb R^n/\mathbb R\xi
  \tag{T-19814.4}
 \]
 
-is diagonalizable and has only real eigenvalues.
+is diagonalizable over `R` and has only real eigenvalues.
 
 ### (B) Positive exact symmetrizer
 
-There exists a Hermitian positive semidefinite matrix `Q` such that
+There exists a real symmetric positive semidefinite matrix `Q` such that
 
 \[
- \ker Q=\mathbb C\xi
+ \ker Q=\mathbb R\xi
  \tag{T-19814.5}
 \]
 
 and
 
 \[
- \boxed{QT_\xi=T_\xi^*Q.}
+ \boxed{QT_\xi=T_\xi^{\mathsf T}Q.}
  \tag{T-19814.6}
 \]
 
 ### (C) Positive CCM divided-difference completion
 
-There exists a Hermitian positive semidefinite matrix `Q`, with kernel
-`C xi`, whose off-diagonal entries obey
+There exists a real symmetric positive semidefinite matrix `Q`, with kernel
+`R xi`, whose off-diagonal entries obey
 
 \[
  \boxed{
  (d_j-d_i)Q_{ij}
- =u_i\overline{\eta_j}
-  -\eta_i\overline{u_j},
+ =u_i\eta_j-\eta_i u_j,
  \qquad i\ne j,
  }
  \tag{T-19814.7}
 \]
 
-for one vector `u`.  When `eta=mathbf1` and all data are real, this is exactly
+for one real vector `u`, and whose diagonal entries satisfy `Qxi=0`.  When
+`eta=mathbf1`, this is exactly
 
 \[
- Q_{ij}={b_i-b_j\over d_i-d_j}
+ Q_{ij}={b_i-b_j\over d_i-d_j},
+ \qquad i\ne j,
  \tag{T-19814.8}
 \]
 
-with `b=-u`, while the diagonal entries are free.
+with `b=-u`; the diagonal is then the unique completion required by `Qxi=0`
+whenever every `xi_i` is nonzero, and more generally is any compatible real CCM
+diagonal.
 
 Consequently, in the generic simple-root case,
 
@@ -119,7 +127,7 @@ on the real axis.
 ## 4. Proof that (A) implies (B)
 
 Let `bar T` denote the induced quotient operator.  By (A), choose an invertible
-matrix `V` on the quotient and a real diagonal matrix `R` such that
+real matrix `V` on the quotient and a real diagonal matrix `R` such that
 
 \[
  \bar T=VRV^{-1}.
@@ -129,24 +137,24 @@ matrix `V` on the quotient and a real diagonal matrix `R` such that
 Define the positive quotient metric
 
 \[
- \bar Q=(V^{-1})^*V^{-1}.
+ \bar Q=(V^{-1})^{\mathsf T}V^{-1}.
  \tag{T-19814.11}
 \]
 
 Then
 
 \[
- \bar Q\bar T=\bar T^*\bar Q.
+ \bar Q\bar T=\bar T^{\mathsf T}\bar Q.
  \tag{T-19814.12}
 \]
 
-Lift `bar Q` to `C^n` by declaring `xi` orthogonal to the quotient and null.
-The resulting Hermitian matrix `Q` satisfies
+Lift `bar Q` to `R^n` by declaring `xi` orthogonal to the quotient and null.
+The resulting real symmetric matrix `Q` satisfies
 
 \[
  Q\succeq0,
- \qquad\ker Q=\mathbb C\xi,
- \qquad QT_\xi=T_\xi^*Q.
+ \qquad\ker Q=\mathbb R\xi,
+ \qquad QT_\xi=T_\xi^{\mathsf T}Q.
  \tag{T-19814.13}
 \]
 
@@ -176,21 +184,20 @@ Since `Qxi=0`, expanding (T-19814.6) gives
 Taking the `(i,j)` entry for `i!=j` gives exactly
 (T-19814.7).  Thus (B) implies (C).
 
-Conversely, (T-19814.7), together with freely chosen diagonal entries, is
-precisely the off-diagonal content of (T-19814.15).  If `Qxi=0`, its diagonal
-part follows as well: both sides of
+Conversely, assume (C), set `u=Q Lambda xi`, and define
 
 \[
  E=Q\Lambda-\Lambda Q-|u\rangle\langle\eta|
-   +|\eta\rangle\langle u|
+   +|\eta\rangle\langle u|.
  \tag{T-19814.16}
 \]
 
-are skew-Hermitian, `E` has zero off-diagonal entries, and a skew-Hermitian
-diagonal with real CCM data is zero.  Hence (T-19814.15) and (B) hold.
+Equation (T-19814.7) says every off-diagonal entry of `E` vanishes.  All data
+are real, and each diagonal entry of both commutators in (T-19814.16) is zero.
+Thus `E=0`, which is (T-19814.15), hence (B).
 
-For `eta=mathbf1` and real data, setting `b_i=-u_i` rewrites
-(T-19814.7) as (T-19814.8).
+For `eta=mathbf1`, setting `b_i=-u_i` rewrites (T-19814.7) as
+(T-19814.8).
 
 ## 6. Repeated roots and closure
 
@@ -221,7 +228,8 @@ answer.
 
 ## 8. Proof boundary
 
-- The equivalence is exact finite-dimensional algebra.
+- The equivalence is exact finite-dimensional algebra in the real CCM
+  convention.
 - It does not impose or recover a ground-state hypothesis for the original
   localized Weil matrix.
 - It proves that a generic non-ground positive-completion theorem cannot be
