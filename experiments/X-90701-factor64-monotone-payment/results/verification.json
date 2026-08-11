@@ -1,0 +1,110 @@
+{
+  "D63": {
+    "rational": "287507839016581/144403552893600",
+    "sqrt2_coefficient": "-3505206185202867065700643/4977965827801356915837312"
+  },
+  "D_infinity": {
+    "rational": "198115163415781/144403552893600",
+    "sqrt2_coefficient": "-423608291802027070182307/4977965827801356915837312"
+  },
+  "block_sums": {
+    "negative_13_15": {
+      "rational": "53/546",
+      "sqrt2_coefficient": "-1/12"
+    },
+    "negative_16_31": {
+      "rational": "849728754059/10314539492400",
+      "sqrt2_coefficient": "-8066209431179/27505438646400"
+    },
+    "negative_32_63": {
+      "rational": "-416/651",
+      "sqrt2_coefficient": "-50519225495478448442768729/1182266884102822267511361600"
+    },
+    "positive_2_12": {
+      "rational": "4313/1760",
+      "sqrt2_coefficient": "-319/1120"
+    }
+  },
+  "coordinates": {
+    "A": [
+      {
+        "rational": "2",
+        "sqrt2_coefficient": "0"
+      },
+      {
+        "rational": "5",
+        "sqrt2_coefficient": "-2"
+      },
+      {
+        "rational": "5",
+        "sqrt2_coefficient": "-5"
+      },
+      {
+        "rational": "-7",
+        "sqrt2_coefficient": "-5"
+      },
+      {
+        "rational": "-39",
+        "sqrt2_coefficient": "7"
+      },
+      {
+        "rational": "-39",
+        "sqrt2_coefficient": "39"
+      }
+    ],
+    "S": [
+      {
+        "rational": "1",
+        "sqrt2_coefficient": "0"
+      },
+      {
+        "rational": "3/4",
+        "sqrt2_coefficient": "-1/2"
+      },
+      {
+        "rational": "0",
+        "sqrt2_coefficient": "-3/8"
+      },
+      {
+        "rational": "-3/4",
+        "sqrt2_coefficient": "0"
+      },
+      {
+        "rational": "-1",
+        "sqrt2_coefficient": "3/8"
+      },
+      {
+        "rational": "0",
+        "sqrt2_coefficient": "1/2"
+      },
+      {
+        "rational": "0",
+        "sqrt2_coefficient": "0"
+      }
+    ]
+  },
+  "finite_prefix_scan": {
+    "minimum_directed_lower": "1957/2000",
+    "minimum_index": 2,
+    "through": 10000
+  },
+  "gates": {
+    "block_13_15_gt_minus_1_40": true,
+    "block_16_31_gt_minus_1_3": true,
+    "block_2_12_gt_2": true,
+    "block_32_63_gt_minus_7_10": true,
+    "d63_above_9_10": true,
+    "monotone_occupation_trials": true,
+    "prefix_bounds_through_10000": true,
+    "radical_enclosure": true,
+    "reward_sign_classification": true,
+    "signed_occupation_variation_trials": true,
+    "sum_coefficients_zero": true,
+    "tail_limit_below_21_10": true
+  },
+  "monotone_occupation_trials": 500,
+  "proof_object_sha256": "684ddaa21788d77e9b7d3833a7aacc7986f7c311feee26c3a421220577364baf",
+  "scope": "exact factor-64 reward algebra only; critical occupation variation and RH remain open",
+  "signed_occupation_variation_trials": 500,
+  "status": "PASS_X_90701_FACTOR64_MONOTONE_PAYMENT"
+}
