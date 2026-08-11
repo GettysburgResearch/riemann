@@ -1,11 +1,14 @@
 # Second major integration pass — scientific front door
 
 **Cutoff:** `2026-08-11T08:20:51Z`  
+**Pre-merge validation cutoff:** `2026-08-11T09:05:27Z`  
 **Frozen main:** `d6409319b4041cd09bee85f55a344631508f2501`  
 **Review evidence:** draft PRs #369, #370, #371 and #372 at their exact recorded heads  
 **Scientific verdict:** **the Riemann Hypothesis is neither proved nor disproved in the frozen graph.**
 
 This directory is the canonical synthesis of the four-reviewer integration wave. It does not merge research branches wholesale and does not erase the history of failed full proposals. It integrates claims by exact mathematical object, frozen source SHA, scope and independent review verdict.
+
+The pre-merge confirmation is resident in `VERIFICATION_REPORT.md`. `REFUTATION_EVIDENCE.tsv` binds every load-bearing false/no-go/corrupted claim to an exact resolvable evidence path and records two stale reviewer-ledger alias corrections.
 
 The August 1 integration snapshot and PR #214 remain immutable historical baselines. `main` is therefore a historical base, not the current scientific state.
 
@@ -190,14 +193,17 @@ Compact RH-equivalent criteria are not ranked as evidence of proximity merely be
 - Exact refutations attach to exact hypotheses; they do not kill wider classes by association.
 - Surviving lemmas from failed proofs are integrated independently.
 - Every claim has separate mathematical, review, lifecycle, RH-relationship and computation statuses.
+- Every load-bearing `FALSE`, no-go or corrupted row has an exact evidence binding in `REFUTATION_EVIDENCE.tsv`.
 - Post-review descendants do not inherit reviewed status.
 - Heavy retained experiments are referenced by hash and scope; they are not represented as rerun by this pass.
 
 ## 6. Directory map
 
-- `CUTOFF.yaml` — global freeze and temporal normalization.
+- `CUTOFF.yaml` — global freeze, validation freeze and temporal normalization.
 - `REVIEW_SOURCES.tsv` — exact reviewer packets and authority boundaries.
 - `CLAIM_LEDGER.tsv` — canonical high-leverage claim registry.
+- `REFUTATION_EVIDENCE.tsv` — exact evidence commits and resolvable paths for false/no-go/corrupted claims.
+- `VERIFICATION_REPORT.md` — completed pre-merge confirmation and audit record.
 - `ROUTE_DAGS.md` — established arrows and first open load-bearing nodes.
 - `REFUTATIONS_AND_FIREWALLS.md` — exact dead mechanisms and scope warnings.
 - `OPEN_HINGES.md` — prioritized live and dormant research questions.
