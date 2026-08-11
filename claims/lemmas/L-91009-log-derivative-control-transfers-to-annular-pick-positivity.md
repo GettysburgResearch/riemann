@@ -28,7 +28,7 @@ Assume that for some fixed `c_0>0`, uniformly for large `T`,
 whenever
 
 \[
- |t-T|\le2,
+ \bigl||t|-T\bigr|\le4,
  \qquad
  \sigma\ge1-c_0\eta(T).
 \tag{L-91009.3}
@@ -112,7 +112,13 @@ so
 \tag{L-91009.7}
 \]
 
-Also `|Im r_w|<=1`, so the height remains within the range of (L-91009.3), after harmless adjustment of `T` by an absolute constant.
+Also `|Im r_w|<=1`. Since `T=|x|+3`, this gives
+
+\[
+ \bigl||\Im(s_x+r_w)|-T\bigr|\le4,
+\]
+
+so (L-91009.3) applies uniformly.
 
 Using
 
