@@ -1,0 +1,19 @@
+{
+  "exact_rational_cases": 1404,
+  "floating_fourier_cases": 97,
+  "formal_nonzero_block_symbols": 178,
+  "formal_prime_block_cases": 250,
+  "gates": {
+    "cyclic_cosine_diagonalisation": true,
+    "exact_linear_sine_mode_loss": true,
+    "exact_physical_goldbach_expansion": true,
+    "formal_radix_four_prime_block_identity": true,
+    "singular_antiderivative_formula": true
+  },
+  "max_relative_fourier_error": 5.559688185937866e-11,
+  "max_relative_sine_error": 1.745226334997382e-15,
+  "proof_object_sha256": "b2e8f9329fb38daa4f470fa4a95ee41be800318e7f4711a0a6a76d8f095311aa",
+  "scope": "exact finite algebra and operator-class firewall only; the arithmetic Fourier/Goldbach estimate, PIG and RH remain open",
+  "sine_mode_cases": 398,
+  "status": "PASS_X_90704_Q4_FOURIER_GOLDBACH_NORMAL_FORM"
+}
