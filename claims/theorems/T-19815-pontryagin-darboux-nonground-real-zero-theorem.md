@@ -6,7 +6,7 @@ Authoring agent: `gpt56-pro-09-p`
 Created: 2026-08-12  
 Dependencies: the CCM determinant identity; finite-dimensional Pontryagin spectral theory; Paley--Wiener  
 Scope: exact replacement for the false assertion that every isolated even interior CCM line is already real-rooted  
-Nonclaim: the Darboux factors are not proved to escape on a cofinal Riemann-data sequence
+Nonclaim: the total vertical Darboux defect is not proved to vanish on a cofinal Riemann-data sequence
 
 ## 1. Setup
 
@@ -89,21 +89,14 @@ For generalized root vectors `x` at `lambda` and `y` at `mu`, the identity
  \tag{T-19815.8}
 \]
 
-implies
-
-\[
- [p(T)x,y]_Q=[x,p(T)y]_Q
- \tag{T-19815.9}
-\]
-
-for every real polynomial `p`.  If `lambda` and `mu` both lie in the upper half
-plane, then `lambda` is not equal to `conjugate(mu)`.  The minimal polynomials
-of the two generalized root spaces are therefore coprime after conjugation.
-A Bezout identity inserted into (T-19815.9) gives
+implies the corresponding polynomial identity.  If `lambda` and `mu` both lie
+in the upper half-plane, then `lambda` is not equal to `conjugate(mu)`.  The
+minimal polynomials of the two generalized root spaces are therefore coprime
+after conjugation.  A Bezout identity gives
 
 \[
  [x,y]_Q=0.
- \tag{T-19815.10}
+ \tag{T-19815.9}
 \]
 
 Hence `M_+` is a neutral subspace.  In a Pontryagin space with negative index
@@ -112,140 +105,209 @@ the negative subspace is injective on a neutral subspace.  Therefore
 
 \[
  \dim M_+\le\kappa,
- \tag{T-19815.11}
+ \tag{T-19815.10}
 \]
 
 which proves (T-19815.7), including algebraic multiplicity.
 
-## 4. Exact Darboux division
+## 4. Darboux deletion
 
 Let the upper-half-plane nonuniversal zeros be
 
 \[
  \alpha_1,\ldots,\alpha_r,
  \qquad r\le\kappa,
- \tag{T-19815.12}
+ \tag{T-19815.11}
 \]
 
-listed with algebraic multiplicity.  Define the real polynomial
+listed with algebraic multiplicity.  Define
 
 \[
  B_\xi(z)
  =\prod_{j=1}^r(z-\alpha_j)(z-\overline{\alpha_j}).
- \tag{T-19815.13}
+ \tag{T-19815.12}
 \]
 
 Since every factor divides `F_xi`, the quotient
 
 \[
- \boxed{
- F_\xi^{D}(z)={F_\xi(z)\over B_\xi(z)}
- }
+ F_\xi^{\rm del}(z)={F_\xi(z)\over B_\xi(z)}
+ \tag{T-19815.13}
+\]
+
+is entire and has only real zeros.  This is the deletion version of the finite
+non-ground Darboux theorem.
+
+## 5. Darboux vertical flattening
+
+Write
+
+\[
+ \alpha_j=a_j+ib_j,
+ \qquad b_j>0.
  \tag{T-19815.14}
 \]
 
-is entire.  Every nonuniversal zero of `F_xi^D` is real; the universal lattice
-zeros are real as well.  Thus
+Instead of deleting the conjugate pair, move it vertically to the real axis:
 
 \[
- \boxed{F_\xi^D\text{ has only real zeros}.}
+ \boxed{
+ F_\xi^{\flat}(z)
+ =F_\xi(z)
+  \prod_{j=1}^r
+  { (z-a_j)^2
+   \over
+    (z-\alpha_j)(z-\overline{\alpha_j})}.}
  \tag{T-19815.15}
 \]
 
-This is the finite non-ground Darboux theorem.  It does not replace the
-interior line by a ground line and it does not assume `Q>=0`.
-
-## 5. Support and parity
-
-A finite Fourier transform is an entire function of exponential type `L/2` and
-belongs to the Paley--Wiener class.  Division by a polynomial which divides the
-function preserves exponential type and square integrability on the real axis.
-Therefore `F_xi^D` is the Fourier transform of an `L2` source supported on the
-same interval.
-
-Equivalently, each division by `(z-alpha)` is the compact-support
-zero-resolvent operation: because the numerator vanishes at `alpha`, the lower
-and upper primitive formulas coincide and do not create an exterior tail.
-
-If `xi` is even, the nonreal zeros occur in the appropriate reflected quartets.
-The product `B_xi` may then be grouped into even real factors, and
-`F_xi^D` remains even.
-
-## 6. Exact limit criterion
-
-Normalize
+The denominator divides `F_xi`, so `F_xi^flat` is entire.  Every removed pair is
+replaced by a double real zero at `a_j`; all other zeros are already real.
+Therefore
 
 \[
- \widetilde B_j(z)={B_{\xi_j}(z)\over B_{\xi_j}(0)}
+ \boxed{F_\xi^{\flat}\text{ has only real zeros}.}
  \tag{T-19815.16}
 \]
 
-when zero is not one of the removed roots.  Suppose
+No ground-state hypothesis has been introduced.
+
+## 6. Support, norm and parity
+
+A finite Fourier transform is an entire function of exponential type `L/2` in
+the Paley--Wiener class.  Polynomial division by an actual zero factor preserves
+exponential type.  On the real axis,
 
 \[
- F_{\xi_j}\longrightarrow \Xi
+ \left|
+ { (x-a_j)^2
+  \over (x-a_j)^2+b_j^2}
+ \right|\le1.
  \tag{T-19815.17}
 \]
 
-locally uniformly.  The Darboux transforms converge to the same limit if and
-only if
+Hence
 
 \[
- \boxed{
- \widetilde B_j(z)\longrightarrow1
- }
+ \|F_\xi^{\flat}\|_{L^2(\mathbb R)}
+ \le\|F_\xi\|_{L^2(\mathbb R)}.
  \tag{T-19815.18}
 \]
 
-locally uniformly.  A sufficient condition is
+Paley--Wiener therefore gives an `L2` inverse transform supported on the same
+interval.  Equivalently, each division is the compact-support zero-resolvent
+operation; the inserted real factor is a local differential operator.
 
-\[
- \sum_{\operatorname{Im}\alpha>0}
- {m_\alpha\over1+|\alpha|}
- \longrightarrow0,
- \tag{T-19815.19}
-\]
+If `xi` is even, group the nonreal roots in reflected quartets.  The complete
+flattening factor is then even and `F_xi^flat` remains even.
 
-because the logarithm of each normalized conjugate-pair factor is
-`O_K((1+|alpha|)^-1)` on a fixed compact `K`.
+## 7. Stable off-axis limit criterion
 
-Under (T-19815.18), every `F_xi_j^D` is real-rooted and converges locally
-uniformly to `Xi`; Hurwitz then gives RH.
-
-## 7. Necessity of factor escape
-
-If `Xi` has a nonreal zero `rho`, local uniform convergence in (T-19815.17)
-forces zeros of `F_xi_j` to remain near `rho`.  Those zeros must occur among the
-Darboux factors.  Consequently (T-19815.18) cannot hold.
-
-Thus, relative to a locally uniform Xi approximation,
+Let `F_j` be real finite transforms converging locally uniformly to `Xi`, and
+let `b_(j,l)>0` be the imaginary parts of their upper-half-plane nonreal roots.
+Assume
 
 \[
  \boxed{
- \text{Darboux-factor escape}
- \quad\Longleftrightarrow\quad
- \text{no persistent nonreal limit zero}.}
+ V_j:=\sum_l b_{j,l}^2\longrightarrow0.}
+ \tag{T-19815.19}
+\]
+
+For a compact set `K` at distance `delta>0` from the real axis, eventually every
+`b_(j,l)<delta/2`.  The individual flattening factor satisfies uniformly on
+`K`
+
+\[
+ \left|
+ { (z-a)^2
+  \over (z-a)^2+b^2}-1
+ \right|
+ \le {4b^2\over\delta^2}.
  \tag{T-19815.20}
 \]
 
-The finite theorem is unconditional; its cofinal factor-escape condition is the
-remaining RH-bearing statement.
+The product estimate and (T-19815.19) give
 
-## 8. Relation to the other finite results
+\[
+ \prod_l{(z-a_{j,l})^2
+          \over(z-a_{j,l})^2+b_{j,l}^2}
+ \longrightarrow1
+ \tag{T-19815.21}
+\]
 
-- `kappa=0` recovers the positive CCM theorem: no Darboux factor is needed.
-- `R-19848` has `kappa=1` and exactly one conjugate pair `±i`; division by
-  `z^2+1` leaves a constant real-rooted transform.
+uniformly on `K`.  Consequently
+
+\[
+ F_j^{\flat}\longrightarrow\Xi
+ \tag{T-19815.22}
+\]
+
+locally uniformly on every compact subset of `C minus R`.
+
+Every `F_j^flat` has only real zeros.  If `Xi` had one nonreal zero, choose a
+small disk around it disjoint from the real axis; Hurwitz applied on that disk
+would give a contradiction.  Therefore
+
+\[
+ \boxed{V_j\to0\quad\Longrightarrow\quad RH.}
+ \tag{T-19815.23}
+\]
+
+## 8. Relation to approximate symmetrizers
+
+`L-19869` shows that an operator-norm commutator defect `epsilon_j` places every
+nonreal root in `|Im z|<=epsilon_j`.  If `d_j` is the degree of the nonuniversal
+polynomial, then
+
+\[
+ V_j\le d_j\epsilon_j^2.
+ \tag{T-19815.24}
+\]
+
+Thus the quantitative condition
+
+\[
+ \boxed{d_j\epsilon_j^2\longrightarrow0}
+ \tag{T-19815.25}
+\]
+
+is sufficient for the exact vertically flattened Darboux transforms to converge
+off the real axis to `Xi` and prove RH.
+
+A Hilbert--Schmidt commutator estimate can replace (T-19815.25) directly,
+because the sum of squared imaginary parts of the spectrum is bounded by the
+squared Hilbert--Schmidt norm of the skew-adjoint part in the symmetrized
+metric.
+
+## 9. Necessity of vertical control
+
+If `Xi` has a nonreal zero `rho`, local uniform convergence forces a zero of
+`F_j` to remain near `rho`.  Therefore
+
+\[
+ \liminf_j V_j\ge |\operatorname{Im}\rho|^2>0.
+ \tag{T-19815.26}
+\]
+
+So the vertical-defect condition is genuinely conclusion producing; it cannot
+follow from finite isolation alone.
+
+## 10. Relation to the other finite results
+
+- `kappa=0` recovers the positive CCM theorem: no Darboux operation is needed.
+- `R-19848` has `kappa=1` and one pair `±i`; deletion leaves a constant, while
+  vertical flattening replaces `z^2+1` by `z^2`.
 - `T-19814` characterizes the special case in which the Darboux polynomial is
   trivial.
-- `L-19869` replaces exact division by an approximate positive symmetrizer and
-  confines the factors to a shrinking strip.
+- `L-19869` is the approximate metric route to (T-19815.25).
 
-## 9. Proof boundary
+## 11. Proof boundary
 
-- The negative-index count and Darboux real-zero conclusion are exact.
+- The negative-index count, compact-support Darboux deletion and vertical
+  flattening are exact.
 - No lowest-eigenvalue or ground-state hypothesis is used.
-- The construction uses the finite nonreal roots, so it is not by itself a
-  prime-side proof mechanism.
-- To complete the Riemann proposal one must prove factor escape, or construct
-  the equivalent source-bound approximate symmetrizer of `L-19869`.
+- The construction uses the finite nonreal roots and therefore is not by itself
+  a prime-side proof mechanism.
+- The remaining theorem is a source-bound total vertical-defect estimate such as
+  `V_j->0`, or the stronger anisotropic commutator estimate of `L-19869` with
+  rate (T-19815.25).
