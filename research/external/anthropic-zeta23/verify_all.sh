@@ -26,7 +26,8 @@ for experiment in \
   X-zeta23-gabor-fusion \
   X-zeta23-finite-isolation \
   X-zeta23-xi-cardinal-capture \
-  X-zeta23-terminal-arithmetic-floor
+  X-zeta23-terminal-arithmetic-floor \
+  X-zeta23-terminal-heat-residue
 do
   temp="$(mktemp)"
   (
