@@ -1,0 +1,27 @@
+{
+  "all_nontrivial_target_pick_determinants_negative": true,
+  "all_one_green_hankel_leading_minors_positive": true,
+  "all_positive_partial_fraction_residues": true,
+  "checks": {
+    "bare_one_green_hankel_orders": 5,
+    "bare_one_green_partial_fractions": 8,
+    "functional_equation_samples": 7,
+    "modified_channel_hankel_orders": 5,
+    "modified_rational_partial_fractions": 8,
+    "pick_determinant_formula": 28,
+    "strict_schwarz_pick_failures": 8,
+    "strictly_negative_two_point_pick_determinants": 28
+  },
+  "parameters": {
+    "u": "1/8",
+    "y": "1/4"
+  },
+  "scope": "Exact rational identities and finite matrixes only; no xi evaluation, no Nevanlinna-Pick proof formalization, and no RH conclusion.",
+  "selected_exact_values": {
+    "bare_hankel_det_order_5": "6637795022746735813783970576/235788390619903272453440641878375",
+    "modified_hankel_det_order_5": "1456373976321609569997389641738584064/55898098697844715869776007060793808705042625",
+    "pick_det_q_1_10_r_3": "-107648000/128223042363",
+    "schwarz_gap_q_1": "-8/1815"
+  },
+  "status": "PASS_SAFE_JORDAN_PICK_CONTINUATION_FIREWALL"
+}
