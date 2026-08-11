@@ -1,0 +1,96 @@
+{
+  "depth_rows": [
+    {
+      "depth_threshold": 0.4999179503599705,
+      "half_minus_depth": 8.204964002950232e-05,
+      "log_T": 1000.0,
+      "ratio_to_eta": 0.015626282130824527
+    },
+    {
+      "depth_threshold": 0.49999678811843107,
+      "half_minus_depth": 3.211881568931929e-06,
+      "log_T": 100000.0,
+      "ratio_to_eta": 0.015625050186019864
+    },
+    {
+      "depth_threshold": 0.4999999725388863,
+      "half_minus_depth": 2.746111371632054e-08,
+      "log_T": 100000000.0,
+      "ratio_to_eta": 0.0156250004475504
+    }
+  ],
+  "gates": {
+    "annular_penetration": true,
+    "depth_transfer_scale": true,
+    "positive_catalan_background": true,
+    "radial_penetration": true,
+    "sqrt_linear_bound": true,
+    "sublog_model": true
+  },
+  "parameters": {
+    "c1": 0.015625
+  },
+  "scale_rows": [
+    {
+      "B_over_logT_model": 0.19044912476405543,
+      "eta_vk": 0.005250746104708462,
+      "linear_lower": 0.49983591418422785,
+      "log_T": 1000.0,
+      "main_to_error_model": 5.250746104708462,
+      "phi_at_radius": 0.22224653522153007,
+      "radial_t_min": 0.24991795709211395,
+      "radius": 0.750082042907886,
+      "sqrt_inequality_slack": 8.203617574265021e-05,
+      "sqrt_lower": 0.4999179503599705
+    },
+    {
+      "B_over_logT_model": 0.0972953071318615,
+      "eta_vk": 0.001027798800865831,
+      "linear_lower": 0.49996788128747294,
+      "log_T": 10000.0,
+      "main_to_error_model": 10.27798800865831,
+      "phi_at_radius": 0.22222698070284136,
+      "radial_t_min": 0.24998394064373652,
+      "radius": 0.7500160593562635,
+      "sqrt_inequality_slack": 1.6059098352394496e-05,
+      "sqrt_lower": 0.49998394038582533
+    },
+    {
+      "B_over_logT_model": 0.04864765356593076,
+      "eta_vk": 0.00020555976017316618,
+      "linear_lower": 0.4999935762574946,
+      "log_T": 100000.0,
+      "main_to_error_model": 20.555976017316617,
+      "phi_at_radius": 0.22222317389389193,
+      "radial_t_min": 0.24999678812874726,
+      "radius": 0.7500032118712527,
+      "sqrt_inequality_slack": 3.2118609364917283e-06,
+      "sqrt_lower": 0.49999678811843107
+    },
+    {
+      "B_over_logT_model": 0.02399508612242883,
+      "eta_vk": 4.167519945116071e-05,
+      "linear_lower": 0.49999869765001714,
+      "log_T": 1000000.0,
+      "main_to_error_model": 41.67519945116071,
+      "phi_at_radius": 0.22222241516321167,
+      "radial_t_min": 0.24999934882500863,
+      "radius": 0.7500006511749914,
+      "sqrt_inequality_slack": 6.511745674342428e-07,
+      "sqrt_lower": 0.4999993488245846
+    },
+    {
+      "B_over_logT_model": 0.005689864077968634,
+      "eta_vk": 1.757511227503724e-06,
+      "linear_lower": 0.4999999450777741,
+      "log_T": 100000000.0,
+      "main_to_error_model": 175.7511227503724,
+      "phi_at_radius": 0.22222223035884875,
+      "radial_t_min": 0.24999997253888706,
+      "radius": 0.7500000274611129,
+      "sqrt_inequality_slack": 2.7461112162008305e-08,
+      "sqrt_lower": 0.4999999725388863
+    }
+  ],
+  "status": "PASS_VK_ANNULAR_PICK_RAY"
+}
