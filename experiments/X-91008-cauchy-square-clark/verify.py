@@ -74,6 +74,24 @@ def jordan_ratio_coefficient(a: int, n: int) -> Fraction:
     return value
 
 
+def sieve_ratio_coefficient(a: int, n: int) -> Fraction:
+    value = Fraction(1, 1)
+    for p in prime_factors(n):
+        value *= Fraction(p**(2*a)-1, p**(2*a))
+    return value
+
+
+def dyadic_increment(a: mp.mpf, u: mp.mpf) -> mp.mpf:
+    return line_n(2*a, u)-line_n(a, u)
+
+
+def dyadic_channel_square(a: mp.mpf, u: mp.mpf) -> mp.mpf:
+    den = (a*a+u*u)*(4*a*a+u*u)
+    g1 = 2*mp.sqrt(6)*a**3*u/den
+    g2 = mp.sqrt(15)*a**2*u**2/den
+    return g1*g1+g2*g2
+
+
 def divisors(n: int) -> list[int]:
     return [d for d in range(1, n+1) if n % d == 0]
 
@@ -238,10 +256,41 @@ def main() -> int:
         assert err < mp.mpf("1e-60")
         checks += 1
 
+    max_dyadic_square_error = mp.mpf(0)
+    for a in [mp.mpf("0.11"),mp.mpf("0.37"),mp.mpf("0.81")]:
+        for u in [mp.mpf("0"),mp.mpf("0.07"),mp.mpf("0.9"),mp.mpf("4.2")]:
+            lhs = dyadic_increment(a,u)
+            rhs = dyadic_channel_square(a,u)
+            err = abs(lhs-rhs)
+            max_dyadic_square_error = max(max_dyadic_square_error,err)
+            assert lhs >= -mp.mpf("1e-65") and err < mp.mpf("1e-60")
+            checks += 1
+
+    exact_sieve_checks = 0
+    for a in [1,2,3]:
+        for n in range(1,101):
+            qa = sieve_ratio_coefficient(a,n)
+            assert 0 < qa <= 1
+            exact_sieve_checks += 1
+    for a,b in [(1,1),(1,2),(2,3)]:
+        for n in range(1,81):
+            lhs = sieve_ratio_coefficient(a+b,n)
+            rhs = sum(
+                sieve_ratio_coefficient(a,d)
+                *sieve_ratio_coefficient(b,n//d)
+                *Fraction(1,(n//d)**(2*a))
+                for d in divisors(n)
+            )
+            assert lhs == rhs
+            exact_sieve_checks += 1
+    checks += exact_sieve_checks
+
     result: dict[str,Any] = {
         "classification": "PASS_CAUCHY_SQUARE_CLARK_JORDAN_BRIDGE",
         "checks": checks,
         "exact_jordan_cocycle_checks": exact_jordan_checks,
+        "exact_sieve_cocycle_checks": exact_sieve_checks,
+        "max_dyadic_two_channel_square_error": mp.nstr(max_dyadic_square_error,12),
         "max_primitive_identity_error": mp.nstr(max_primitive_error,12),
         "max_curvature_derivative_error": mp.nstr(max_derivative_error,12),
         "max_projector_integral_error": mp.nstr(max_integral_error,12),
