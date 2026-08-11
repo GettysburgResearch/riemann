@@ -1,7 +1,7 @@
 # L-90604 — Functional-equation symmetrization inherits the one-sided Bohr zeros off the critical line
 
 Claim ID: `L-90604`  
-Status: **PROPOSED COMPLETE ROUCHÉ TRANSFER THEOREM — INDEPENDENT REVIEW REQUIRED**  
+Status: **PROPOSED COMPLETE STIRLING / HURWITZ TRANSFER THEOREM — INDEPENDENT REVIEW REQUIRED**  
 Created: 2026-08-11  
 Depends on: `L-90603`; uniform Stirling asymptotics  
 Scope: finite Brownian functional-equation symmetrizations
@@ -39,126 +39,146 @@ Fix `1/2<beta<1`. Under the top-mass hypothesis of `L-90603`, every sufficiently
 
 In particular, the finite functional-equation symmetrization has infinitely many zeros off `Re s=1/2`.
 
-## 2. Simple one-sided vertical-limit zeros
+No simplicity of the limiting or finite one-sided zeros is required.
 
-By `L-90603`, after an arbitrarily small generic phase perturbation there is a simple torus zero `w_0` with
+## 2. One-sided vertical limit
 
-\[
- \frac12<\operatorname{Re}w_0<1.
-\]
-
-There are vertical shifts `t_j->infinity` and simple zeros
+By `L-90603` there is a completely multiplicative unimodular twist `chi` such that
 
 \[
- s_j=w_j+it_j,
- \qquad
- D_N(s_j)=0,
- \qquad
- w_j\to w_0,
+ B_{N,\chi}(\beta)=0,
  \tag{L-90604.4}
 \]
 
-such that
-
-\[
- \frac{D_N'(s_j)}{it_j}\longrightarrow B_{N,\chi}'(w_0)\ne0.
- \tag{L-90604.5}
-\]
-
-The last statement follows by locally uniform convergence of the vertical translates and their derivatives.
-
-Put
-
-\[
- x=\operatorname{Re}w_0-\frac12>0.
- \tag{L-90604.6}
-\]
-
-## 3. Gamma imbalance off the central line
-
-Uniform Stirling asymptotics on a fixed neighborhood of `w_0` give
+where `B_(N,chi)` is a nonzero finite Dirichlet polynomial. Kronecker supplies a sequence `t_j->infinity` for which
 
 \[
  \boxed{
- \frac{|A(1-s)|}{|A(s)|}
- \ll |\operatorname{Im}s|^{1/2-\operatorname{Re}s}
- =O(t_j^{-x+o(1)}).
+ \frac{D_N(w+it_j)}{it_j}
+ \longrightarrow B_{N,\chi}(w)
  }
+ \tag{L-90604.5}
+\]
+
+locally uniformly in `w`.
+
+Choose a closed disk `K` centered at `beta`, small enough that
+
+\[
+ \operatorname{Re}w\ge\frac12+\delta
+ \qquad(w\in K)
+ \tag{L-90604.6}
+\]
+
+for some `delta>0`, and whose boundary contains no zero of `B_(N,chi)`.
+
+## 3. The reflected term vanishes after normalization
+
+Define on `K`
+
+\[
+ \mathcal Y_j(w)
+ =\frac{\mathcal X_N(w+it_j)}{it_jA(w+it_j)}.
  \tag{L-90604.7}
 \]
 
-The finite Dirichlet polynomial `D_N(1-s)` has size `O_N(t_j)` there, while (L-90604.5) gives
+The gamma factor has no zeros, so this normalization is analytic. Expanding,
 
 \[
- |D_N'(s_j)|\asymp_N t_j.
+ \mathcal Y_j(w)
+ =\frac{D_N(w+it_j)}{it_j}
+ +\frac{A(1-w-it_j)}{A(w+it_j)}
+  \frac{D_N(1-w-it_j)}{it_j}.
  \tag{L-90604.8}
 \]
 
-## 4. Rouché near each one-sided zero
-
-Take
+Because `D_N(s)=sB_N(s)+A_N(s)` with finite Dirichlet polynomials `A_N,B_N`,
 
 \[
- r_j=t_j^{-x/2}.
+ \sup_{w\in K}
+ \left|\frac{D_N(1-w-it_j)}{it_j}\right|
+ \le C_{N,K}.
  \tag{L-90604.9}
 \]
 
-On `|s-s_j|=r_j`, Taylor's theorem, (L-90604.5), and the finite exponential-polynomial derivative bounds give
+Uniform Stirling asymptotics give
 
 \[
- |m_N(s)|
- \ge c_N|A(s_j)|t_jr_j
+ \boxed{
+ \sup_{w\in K}
+ \left|\frac{A(1-w-it_j)}{A(w+it_j)}\right|
+ \ll_K t_j^{1/2-\inf_{w\in K}\operatorname{Re}w}
+ \le t_j^{-\delta+o(1)}.
+ }
  \tag{L-90604.10}
 \]
 
-for all large `j`. The logarithmic derivative of `A` is `O(log t_j)`, and `r_j log t_j->0`, so replacing `A(s)` by `A(s_j)` costs only `1+o(1)`.
-
-On the same circle, (L-90604.7) and the finite size bound for `D_N(1-s)` give
+Indeed the powers in Stirling are
 
 \[
- |m_N(1-s)|
- \le C_N|A(s_j)|t_jt_j^{-x+o(1)}.
+ |A(w+it)|\asymp_K
+ t^{1/2+\operatorname{Re}w/2}e^{-\pi t/4},
+ \qquad
+ |A(1-w-it)|\asymp_K
+ t^{1-\operatorname{Re}w/2}e^{-\pi t/4}.
+\]
+
+Combining (L-90604.5), (L-90604.9), and (L-90604.10),
+
+\[
+ \boxed{
+ \mathcal Y_j(w)\longrightarrow B_{N,\chi}(w)
+ }
  \tag{L-90604.11}
+\]
+
+locally uniformly on `K`.
+
+## 4. Hurwitz transfer
+
+The limit is not identically zero and has a zero at `beta`. Hurwitz's theorem, or Rouché on the boundary of a sufficiently small zero-isolating disk, gives zeros `w_j` of `Y_j` with
+
+\[
+ w_j\longrightarrow\beta.
+ \tag{L-90604.12}
 \]
 
 Therefore
 
 \[
- \frac{|m_N(1-s)|}{|m_N(s)|}
- \ll_N\frac{t_j^{-x+o(1)}}{r_j}
- =t_j^{-x/2+o(1)}\to0.
- \tag{L-90604.12}
-\]
-
-Rouché shows that `mathcal X_N=m_N(s)+m_N(1-s)` has one zero `rho_j` in the disk `|s-s_j|<r_j`. Hence
-
-\[
- \rho_j-s_j\to0,
- \qquad
- \operatorname{Re}\rho_j\to\operatorname{Re}w_0>1/2.
+ \rho_j=w_j+it_j
  \tag{L-90604.13}
 \]
 
-Repeating for the infinitely many separated shifts proves the theorem.
+are zeros of `mathcal X_N`, with
+
+\[
+ |\operatorname{Im}\rho_j|\to\infty,
+ \qquad
+ \operatorname{Re}\rho_j\to\beta>1/2.
+\]
+
+Choosing the Kronecker return sequence with increasing gaps makes these zeros distinct. This proves the theorem.
 
 ## 5. Interpretation
 
-Functional-equation symmetrization cannot repair a one-sided high-frequency zero away from the central line. On `Re s>1/2`, Stirling makes the reflected term polynomially smaller by the factor
+Functional-equation symmetrization cannot repair a one-sided high-frequency torus zero away from the central line. On `Re s>1/2`, Stirling makes the reflected term polynomially smaller after the natural `it A(s)` normalization:
 
 \[
  |t|^{1/2-\operatorname{Re}s}.
 \]
 
-The dominant one-sided zero therefore survives with a vanishing displacement.
+The entire symmetrized vertical limit is therefore the same one-sided twisted Dirichlet polynomial.
 
-This phenomenon is independent of all bounded-height scans and of local-uniform convergence to xi.
+This phenomenon is independent of bounded-height scans, local-uniform convergence to xi, and multiplicity of the limiting zero.
 
 ## 6. Proof boundary
 
 Proved here:
 
-- exact survival of simple one-sided Bohr zeros under functional-equation symmetrization;
-- infinitely many off-line zeros of each sufficiently large symmetrized positive cutoff mixture.
+- direct locally uniform vertical-limit convergence for the symmetrized producer;
+- infinitely many off-line zeros of each sufficiently large symmetrized positive cutoff mixture;
+- no simplicity hypothesis.
 
 Not proved:
 
