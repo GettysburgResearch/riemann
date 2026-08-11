@@ -1,26 +1,46 @@
 # Integration handoff — Lévy–Fock–Hardy radical reset
 
-## Freeze
+## Freeze and drift reconciliation
 
 ```text
-base main: d8536ff561f269523a8997be289b49fea1d23267
-branch:    research/gpt56-pro/91028-levy-fock-hardy-completion
-cutoff:    2026-08-11T19:46:07Z
-RH:        unproved
+repository:       gfreund123/riemann
+creation base:    d8536ff561f269523a8997be289b49fea1d23267
+main at PR open:  b837c12199dd407116f604ce6c938039d1a76da4
+branch:           research/gpt56-pro/91028-levy-fock-hardy-completion
+PR:               #400
+cutoff:           2026-08-11T20:51:40Z
+RH:               unproved
 ```
+
+Main advanced during the session and claimed IDs `L-91028`, `L-91029`, and
+`T-91006`.  The local additions were therefore renumbered before handoff:
+
+```text
+L-91030  Jordan source -> bosonic Fock product system
+L-91031  zeta screw -> causal/anti-causal Cauchy localization
+L-91032  one fixed safe scale is a complete screw form core
+L-91033  boundary Jordan channel -> explicit Poisson chaos complement
+T-91007  RH <=> one fixed-scale Levy-Hardy Gram positivity
+R-91007  diagonal Cauchy-gate polarization firewall
+```
+
+Main's `T-91006` is retained as the Cauchy–Jordan Hardy Intertwiner proposal.
+`T-91007` should be read as a fixed-scale completion and sharpening of that
+proposal, not as a competing reuse of its identifier.
 
 ## Review order
 
 1. `literature/external/2026-08-11-nakamura-suzuki-screw-source-lock.md`
-2. `claims/lemmas/L-91028-generalized-jordan-source-has-an-explicit-bosonic-fock-product-system.md`
-3. `claims/lemmas/L-91029-zeta-screw-kernel-localizes-through-the-causal-cauchy-wavelet.md`
-4. `claims/lemmas/L-91030-one-fixed-safe-scale-is-a-form-core-for-the-zeta-screw-kernel.md`
-5. `claims/theorems/T-91006-rh-is-one-fixed-safe-scale-levy-hardy-gram-positivity.md`
-6. `claims/lemmas/L-91031-boundary-jordan-channel-has-an-explicit-poisson-chaos-complement.md`
-7. `claims/refutations/R-91006-diagonal-cauchy-gates-cannot-replace-the-fixed-scale-levy-gram.md`
-8. `experiments/X-91028-levy-fock-hardy-completion/`
-9. `reports/gpt56-pro/2026-08-11-levy-fock-hardy-radical-reset.md`
-10. parent main claims `L-91014`–`L-91026`.
+2. main `L-91028`, main `L-91029`, and main `T-91006`
+3. `claims/lemmas/L-91030-generalized-jordan-source-has-an-explicit-bosonic-fock-product-system.md`
+4. `claims/lemmas/L-91031-zeta-screw-kernel-localizes-through-the-causal-cauchy-wavelet.md`
+5. `claims/lemmas/L-91032-one-fixed-safe-scale-is-a-form-core-for-the-zeta-screw-kernel.md`
+6. `claims/theorems/T-91007-rh-is-one-fixed-safe-scale-levy-hardy-gram-positivity.md`
+7. `claims/lemmas/L-91033-boundary-jordan-channel-has-an-explicit-poisson-chaos-complement.md`
+8. `claims/refutations/R-91007-diagonal-cauchy-gates-cannot-replace-the-fixed-scale-levy-gram.md`
+9. `experiments/X-91028-levy-fock-hardy-completion/`
+10. `reports/gpt56-pro/2026-08-11-levy-fock-hardy-radical-reset.md`
+11. parent main claims `L-91014`–`L-91029`.
 
 ## Exact new objects
 
@@ -61,12 +81,12 @@ The local stack proposes, subject to independent review,
 ```text
 RH
 <=>
-K_(a0) is PSD on every finite rational carrier/orientation packet
+K_(a0) is PSD on every finite rational carrier/orientation/bridge packet
 ```
 
-for **one arbitrary fixed** `a0>1/2`.
+for one arbitrary fixed `a0>1/2`.
 
-The most review-sensitive joint is the weighted Hardy–Wiener form-core theorem:
+The most review-sensitive joint is `L-91032`:
 
 ```text
 span{causal modulated derivatives,
@@ -76,9 +96,13 @@ span{causal modulated derivatives,
 complete weighted mean-zero screw space.
 ```
 
-The distributional half-line argument and bridge integrals should be checked
-cold, including Fourier signs, boundary atoms at zero and the weighted-space
-continuity estimate.
+Check cold:
+
+- distributional inversion in the half-line Wiener argument;
+- Fourier orientation and boundary atoms at zero;
+- nonvanishing of the causal mother almost everywhere;
+- bridge half-line integrals;
+- weighted-space continuity of the screw form.
 
 ## Exact finite replay
 
@@ -101,16 +125,16 @@ The replay proves finite identities and synthetic controls only.
 
 ```text
 Nakamura–Suzuki screw/ID criterion                IMPORTED PUBLISHED
+main CJHI and compound-Poisson spine              RETAINED / OPEN
 Jordan source bosonic Fock realization            PROPOSED COMPLETE EXACT
-compound-Poisson boundary channel                 PROPOSED COMPLETE EXACT
 causal screw localization                         PROPOSED COMPLETE EXACT
 admissibility constant                            EXACT
 one-fixed-scale form core                         PROPOSED COMPLETE / REVIEW PRIORITY
 one-fixed-scale RH criterion                      PROPOSED COMPLETE / RH-EQUIVALENT
 diagonal-only closure                             REFUTED EXACTLY
-conservative completed Fock/Hardy colligation     OPEN / RH-EQUIVALENT
+completed Poisson-Fock/Hardy colligation           OPEN / RH-EQUIVALENT
 Riemann Hypothesis                                UNPROVED
 ```
 
-Do not merge as a proof claim.  Preserve upstream/local separation: none of
-these local additions is part of the Anthropic Zeta23 Lean formalization.
+Do not merge as a proof claim.  None of these local additions is part of the
+Anthropic Zeta23 Lean formalization.
