@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact replay for R-19848 and L-19867's finite algebra."""
+"""Exact replay for R-19848, R-19849 and L-19867's finite algebra."""
 
 from fractions import Fraction
 import json
@@ -29,6 +29,14 @@ def poly_add(p, q):
     for i, x in enumerate(q):
         out[i] += x
     return out
+
+
+def lin_add(*forms):
+    return tuple(sum(form[i] for form in forms) for i in range(3))
+
+
+def lin_scale(c, form):
+    return tuple(c * x for x in form)
 
 
 def main():
@@ -66,6 +74,32 @@ def main():
         P = poly_add(P, term)
     assert P == [Fraction(1), Fraction(0), Fraction(1)]
 
+    # Formal classification of every parity-invariant N=1 CCM matrix.
+    # Variables are ordered (a,d,u):
+    a_form = (Fraction(1), Fraction(0), Fraction(0))
+    d_form = (Fraction(0), Fraction(1), Fraction(0))
+    u_form = (Fraction(0), Fraction(0), Fraction(1))
+    Q_form = [
+        [a_form, u_form, u_form],
+        [u_form, d_form, u_form],
+        [u_form, u_form, a_form],
+    ]
+    qxi = []
+    for row in Q_form:
+        qxi.append(
+            lin_add(*(lin_scale(target[j], row[j]) for j in range(3)))
+        )
+    assert qxi == [
+        (Fraction(1), Fraction(0), Fraction(0)),
+        (Fraction(0), Fraction(-1), Fraction(2)),
+        (Fraction(1), Fraction(0), Fraction(0)),
+    ]
+    # Q xi=0 forces a=0,d=2u; the resulting spectrum is (-u,0,3u),
+    # so no nonzero u gives a positive-semidefinite matrix.
+    assert matvec(A, odd) == [-x for x in odd]
+    assert matvec(A, target) == [Fraction(0)] * 3
+    assert matvec(A, upper) == [3 * x for x in upper]
+
     # Generic residual-Gram control for L-19867.
     m = Fraction(1, 16)
     C = [Fraction(2), Fraction(3)]
@@ -84,6 +118,7 @@ def main():
         "orthogonal_singular_moat": "1",
         "transform_numerator": ["1", "0", "1"],
         "nonreal_roots": ["+i", "-i"],
+        "positive_completion_cone": "empty except zero",
         "residual_gram_theta": str(theta),
         "residual_gram_target_bound": str(m + m * m),
     }
