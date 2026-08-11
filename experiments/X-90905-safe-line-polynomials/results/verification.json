@@ -1,0 +1,54 @@
+{
+  "gates": {
+    "coefficient_endpoints": true,
+    "exact_polynomial_recurrence": true,
+    "gamma_integral_identity": true,
+    "one_sign_variation": true,
+    "sharp_root_window": true,
+    "strict_root_monotonicity": true
+  },
+  "integral_sample_count": 36,
+  "max_gamma_integral_error": 1.1869459682199748e-66,
+  "orders_checked": 61,
+  "recurrence_checks": 180,
+  "scope": "Finite exact/high-precision polynomial checks only; no Riemann-data sign and no RH claim.",
+  "selected_roots": {
+    "0": {
+      "tau": 1.618033988749895,
+      "tau_squared_minus_2k_plus_2": 0.6180339887498949
+    },
+    "1": {
+      "tau": 2.1038034027355366,
+      "tau_squared_minus_2k_plus_2": 0.4259887573616221
+    },
+    "10": {
+      "tau": 4.7003702049801035,
+      "tau_squared_minus_2k_plus_2": 0.09348006386469801
+    },
+    "2": {
+      "tau": 2.5132679715277884,
+      "tau_squared_minus_2k_plus_2": 0.3165158967074043
+    },
+    "20": {
+      "tau": 6.484484785691728,
+      "tau_squared_minus_2k_plus_2": 0.04854293586748818
+    },
+    "3": {
+      "tau": 2.8719797144769394,
+      "tau_squared_minus_2k_plus_2": 0.2482674803670421
+    },
+    "40": {
+      "tau": 9.056746700188954,
+      "tau_squared_minus_2k_plus_2": 0.024660791383504438
+    },
+    "5": {
+      "tau": 3.488622002001427,
+      "tau_squared_minus_2k_plus_2": 0.17048347284844304
+    },
+    "60": {
+      "tau": 11.046108807854331,
+      "tau_squared_minus_2k_plus_2": 0.016519794957031517
+    }
+  },
+  "status": "PASS_X_90905_SAFE_LINE_POLYNOMIALS"
+}
