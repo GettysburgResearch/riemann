@@ -3,7 +3,8 @@
 Claim ID: `L-91030`  
 Status: **PROPOSED COMPLETE UNCONDITIONAL LARGE-SCALE THEOREM — INDEPENDENT REVIEW REQUIRED**  
 Created: 2026-08-12  
-Depends on: `L-91026`  
+Corrected: 2026-08-12 — replaced a double-counted integral estimate by a monotonicity proof and exact finite lower certificate  
+Depends on: `L-91026`; exact certificate in `X-91023`  
 RH status: **unproved**
 
 ## 1. Scaled variables
@@ -106,67 +107,139 @@ Therefore
 
 The inequality is strict for the zeta source.
 
-## 3. An elementary zeta bound
+## 3. Monotonicity of `s zeta(1+s)`
 
-For `s>0`, monotonicity of `x^(-1-s)` gives
+Put
 
 \[
- \zeta(1+s)
- \ge
- 1+2^{-1-s}+\int_2^\infty x^{-1-s}\,dx.
+ G(s)=s\zeta(1+s).
 \]
 
-Thus
+Then
 
 \[
- \boxed{
- s\zeta(1+s)
- \ge
- g(s):=s+\left(1+\frac s2\right)2^{-s}.
- }
+ G'(s)
+ =1+\sum_{n\ge2}n^{-1-s}(1-s\log n).
  \tag{L-91030.6}
 \]
 
-The function `g` is increasing for `s>=2/3`. Indeed,
+Discarding the nonnegative terms gives
 
 \[
- g'(s)
- =1+2^{-s}
- \left[\frac12-\left(1+\frac s2\right)\log2\right]>0,
+ G'(s)
+ \ge1-\sum_{n\ge2}
+ n^{-1-s}(s\log n-1)_+.
+ \tag{L-91030.7}
 \]
 
-because the magnitude of the negative correction is maximal at `s=2/3` and is less than one.
-
-At the left endpoint,
+The continuous function
 
 \[
- g(2/3)
- =\frac23+\frac43\,2^{-2/3}
- >\sqrt2.
+ h_s(x)=x^{-1-s}(s\log x-1)_+
 \]
 
-For a completely rational certification one may use
+is nonnegative and unimodal. For any nonnegative unimodal function on the half-line,
 
 \[
- 2^{1/3}<1.26,
+ \sum_{n\ge2}h_s(n)
+ \le\int_1^\infty h_s(x)\,dx+\max_{x\ge1}h_s(x).
+\]
+
+Here
+
+\[
+ \int_1^\infty h_s(x)\,dx=\frac{e^{-1}}s,
+\]
+
+and
+
+\[
+ \max h_s
+ =\frac{s}{1+s}e^{-2-1/s}
+ <e^{-2}.
+\]
+
+Thus, for `s>=2/3`,
+
+\[
+ \sum_{n\ge2}h_s(n)
+ <\frac{3}{2e}+e^{-2}<1.
+\]
+
+The last inequality follows, for example, from `e>8/3`. Therefore
+
+\[
+ \boxed{G'(s)>0\qquad(s\ge2/3).}
+ \tag{L-91030.8}
+\]
+
+## 4. Exact lower certificate at `s=2/3`
+
+Since `x^(-5/3)` is decreasing,
+
+\[
+ \zeta(5/3)
+ \ge
+ \sum_{n=1}^{30}n^{-5/3}
+ +\int_{31}^{\infty}x^{-5/3}\,dx.
+\]
+
+Consequently
+
+\[
+ \boxed{
+ G(2/3)
+ \ge
+ L_{30}:=
+ \frac23\sum_{n=1}^{30}n^{-5/3}
+ +31^{-2/3}.
+ }
+ \tag{L-91030.9}
+\]
+
+The exact integer/rational certificate in `X-91023` proves
+
+\[
+ \boxed{
+ L_{30}>\frac{1414214}{10^6}>\sqrt2.
+ }
+ \tag{L-91030.10}
+\]
+
+For completeness, the replay chooses, for every `1<=n<=31`, the least integer `U_n` satisfying
+
+\[
+ U_n^3\ge n\,10^{18}.
+\]
+
+Then
+
+\[
+ n^{-5/3}\ge\frac{10^{12}}{nU_n^2},
  \qquad
- \sqrt2<1.415,
+ 31^{-2/3}\ge\frac{10^{12}}{U_{31}^2},
 \]
 
-which gives `g(2/3)>1.50>1.415`.
+so the complete lower bound is a `Fraction` computation. The rational upper bound for `sqrt(2)` is certified by
 
-Therefore
+\[
+ (1414214/10^6)^2>2.
+\]
+
+Combining (L-91030.8) and (L-91030.10),
 
 \[
  \boxed{
  s\ge\frac23
  \quad\Longrightarrow\quad
- r_s=\frac1{s\zeta(1+s)}<\frac1{\sqrt2}.
+ s\zeta(1+s)>\sqrt2
+ \quad\Longrightarrow\quad
+ r_s<\frac1{\sqrt2}.
  }
- \tag{L-91030.7}
+ \tag{L-91030.11}
 \]
 
-Combining (L-91030.5) and (L-91030.7),
+Equations (L-91030.5) and (L-91030.11) yield
 
 \[
  \boxed{
@@ -174,11 +247,11 @@ Combining (L-91030.5) and (L-91030.7),
  \qquad
  (a\ge1/3,\ t\ge0).
  }
- \tag{L-91030.8}
+ \tag{L-91030.12}
 
-## 4. Consequence
+## 5. Consequence
 
-This strengthens `L-91027` from `a>=1/2` to `a>=1/3` using only the unit atom and an elementary integral lower bound for zeta.
+This strengthens `L-91027` from `a>=1/2` to `a>=1/3` using the unit atom, monotonicity of `s zeta(1+s)`, and one finite exact lower certificate.
 
 Together with `L-91028`, the unresolved arithmetic scale interval is
 
