@@ -1,0 +1,18 @@
+{
+  "classification": "PASS_FACTOR54_EQUALITY_RESERVE_WINDOW_BOUNDS",
+  "equality_weight_upper": {
+    "cell_N": 1,
+    "certified_below": 1.83,
+    "upper": 1.8284271247461903,
+    "x": 2.0
+  },
+  "reserve_lower_for_x_at_least_2": {
+    "cell_N": 1,
+    "certified_above": 0.41,
+    "lower": 0.41421356237309504,
+    "x": 2.0
+  },
+  "reserve_nonnegative_on_full_window": true,
+  "scope": "All assertions use exact Fraction arithmetic and directed rational square-root enclosures. Decimal fields are readable summaries only.",
+  "window_x_upper": 54.219127937418335
+}
