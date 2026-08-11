@@ -16,7 +16,7 @@ from pathlib import Path
 
 STATUS = "PASS_X_90701_FACTOR64_MONOTONE_PAYMENT"
 
-Pair = tuple[Fraction, Fraction]
+Pair = tuple[Fraction, Fraction]  # a + b sqrt(2)
 
 
 def add(x: Pair, y: Pair) -> Pair:
@@ -29,6 +29,7 @@ def scale(x: Pair, c: Fraction | int) -> Pair:
 
 
 def lower(x: Pair) -> Fraction:
+    """Directed lower value using 707/500 < sqrt(2) < 283/200."""
     lo = Fraction(707, 500)
     hi = Fraction(283, 200)
     return x[0] + x[1] * (lo if x[1] >= 0 else hi)
@@ -38,6 +39,10 @@ def upper(x: Pair) -> Fraction:
     lo = Fraction(707, 500)
     hi = Fraction(283, 200)
     return x[0] + x[1] * (hi if x[1] >= 0 else lo)
+
+
+def mul_pair_rational(x: Pair, q: Fraction) -> Pair:
+    return x[0] * q, x[1] * q
 
 
 Q: list[Pair] = [
@@ -85,15 +90,25 @@ def pair_sum(start: int, end: int) -> Pair:
     return total
 
 
+def exact_dot(weights: list[Fraction], occupation: list[Fraction]) -> Fraction:
+    return sum((w * x for w, x in zip(weights, occupation)), Fraction())
+
+
 def main() -> dict[str, object]:
     gates: dict[str, bool] = {}
 
     gates["radical_enclosure"] = Fraction(707, 500) ** 2 < 2 < Fraction(283, 200) ** 2
     gates["sum_coefficients_zero"] = S[6] == (Fraction(0), Fraction(0))
 
+    signs = {}
     for m in range(2, 1001):
         value_lo, value_hi = lower(reward(m)), upper(reward(m))
-        ok = value_hi < 0 if 13 <= m <= 63 else value_lo > 0
+        if 13 <= m <= 63:
+            ok = value_hi < 0
+            signs[m] = -1
+        else:
+            ok = value_lo > 0
+            signs[m] = 1
         if not ok:
             raise AssertionError(("reward sign", m, reward(m), value_lo, value_hi))
     gates["reward_sign_classification"] = True
@@ -109,11 +124,13 @@ def main() -> dict[str, object]:
     gates["block_16_31_gt_minus_1_3"] = lower(blocks["negative_16_31"]) > -Fraction(1, 3)
     gates["block_32_63_gt_minus_7_10"] = lower(blocks["negative_32_63"]) > -Fraction(7, 10)
 
+    prefixes: list[Pair] = []
     running: Pair = (Fraction(0), Fraction(0))
     min_lower = None
     min_index = None
     for m in range(2, 10001):
         running = add(running, reward(m))
+        prefixes.append(running)
         this_lower = lower(running)
         if min_lower is None or this_lower < min_lower:
             min_lower = this_lower
@@ -124,6 +141,7 @@ def main() -> dict[str, object]:
             raise AssertionError(("prefix upper bound", m, running, upper(running)))
     gates["prefix_bounds_through_10000"] = True
 
+    # Analytic tail control after 63.
     d63 = pair_sum(2, 63)
     tail_total = scale((Fraction(-39), Fraction(39)), Fraction(1, 63))
     dinfty = add(d63, tail_total)
@@ -141,7 +159,11 @@ def main() -> dict[str, object]:
             drop = Fraction(rng.randint(0, 4), 100) * current
             current = max(Fraction(0), current - drop)
         d_pairs = [reward(m) for m in range(2, length + 1)]
-        dot_lo = sum(lower(d) * x for d, x in zip(d_pairs, occ))
+        # Directed lower dot product.
+        dot_lo = sum(
+            (lower(d) * x if lower(d) >= 0 else lower(d) * x)
+            for d, x in zip(d_pairs, occ)
+        )
         if dot_lo < Fraction(9, 10) * occ[0]:
             raise AssertionError(("Abel payment", dot_lo, occ[0]))
         abel_trials += 1
