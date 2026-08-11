@@ -1,7 +1,7 @@
-# Factor-64 continuation: the 51-state debt collapses to upward occupation variation
+# Factor-64 continuation: the 51-state debt collapses to signed upward variation
 
 **Date:** 2026-08-11  
-**Status:** exact finite theorem proposed for independent review  
+**Status:** exact finite theorem and firewall proposed for independent review  
 **RH:** unproved
 
 ## Result
@@ -18,13 +18,13 @@ satisfy
 \frac9{10}<D(M)<\frac{21}{10}.
 \]
 
-Therefore every finitely supported nonnegative nonincreasing occupation pays the entire signed reward:
+Therefore every finitely supported nonincreasing real occupation pays the entire signed reward:
 
 \[
 \sum_m d_{64}(m)M(m)\ge\frac9{10}M(2).
 \]
 
-For a general nonnegative occupation,
+More importantly, for an **arbitrary signed** finitely supported sequence,
 
 \[
 \sum_m d_{64}(m)M(m)
@@ -32,24 +32,39 @@ For a general nonnegative occupation,
 \sum_m[M(m+1)-M(m)]_+.
 \]
 
-Thus the previous 51-coordinate payment target is reduced to one scalar upward-variation bound. The sufficient condition is
+Thus the previous 51-coordinate target is reduced, without assuming full SHARP/nonnegativity, to
 
 \[
-\sum_m[M(m+1)-M(m)]_+\le\frac34M(2).
+M(2)\ge0,
+\qquad
+V_+(M)\le\frac34M(2).
 \]
+
+## Exact monotonicity firewall
+
+The actual critical Green occupation is not monotone. At `X=14`, exact directed log/radical arithmetic gives
+
+\[
+M(7)-M(6)>0.01360425141641651157.
+\]
+
+Every other adjacent difference is negative, and
+
+\[
+\frac{V_+(M)}{M(2)}<0.007.
+\]
+
+So monotonicity is false, while the stable variation gate survives the first counterexample with very large slack.
 
 ## Significance
 
-This does not prove the critical occupation bound. It identifies exactly what the factor-64/Pascal bridge still consumes: not arbitrary signed Cycle Debt, but control of upward variation in the explicit uniform-Pascal Green occupation.
+The factor-64/Pascal bridge no longer consumes 51 separate state inequalities or full coordinatewise SHARP. It consumes one base sign and one scalar upward-variation estimate for the explicit Green occupation.
 
 ## Verification
 
 ```text
 PASS_X_90701_FACTOR64_MONOTONE_PAYMENT
+PASS_X_90703_CRITICAL_OCCUPATION_FIREWALL
 ```
 
-The replay rebuilds the polynomial coordinates, finite block sums and all prefix bounds in `Q(sqrt(2))`, with the directed enclosure
-
-\[
-707/500<\sqrt2<283/200.
-\]
+The first replay rebuilds the `Q(sqrt(2))` reward and tests the signed variation inequality; the second uses rational atanh-series log enclosures and reciprocal-square-root intervals at denominator `10^70`.
