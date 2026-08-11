@@ -4,11 +4,14 @@
 
 ```text
 integration cutoff: 2026-08-11T08:20:51Z
+pre-merge validation cutoff: 2026-08-11T09:05:27Z
 main: d6409319b4041cd09bee85f55a344631508f2501
 synthesis branch: integration/20260811-major-review-synthesis
 review evidence: PRs #369–#372 at the heads in REVIEW_SOURCES.tsv
 RH: unproved
 ```
+
+The completed confirmation pass is recorded in `VERIFICATION_REPORT.md`. Exact evidence paths for false/no-go/corrupted claims are in `REFUTATION_EVIDENCE.tsv`. Those files correct two stale reviewer-ledger aliases without changing either mathematical verdict.
 
 ## Mandatory first checks
 
@@ -20,6 +23,7 @@ RH: unproved
 6. Never import pre-#354 odd-source Q4 formulas without the convolution/prefix correction.
 7. Block binary-corrupted T-90502.
 8. Preserve the exact upstream/local formalization boundary for Anthropic Zeta23.
+9. Use `REFUTATION_EVIDENCE.tsv`, not stale aliases in a source review table, when resolving terminal-boundary or Mersenne refutation files.
 
 ## Immediate delta-review queue
 
@@ -42,7 +46,18 @@ These reviews should be theorem-level, lightweight and adversarial; do not rerun
 
 ## Validation obligations
 
-A future validator should check:
+The pre-merge pass completed the following for this synthesis:
+
+- exact review-head and main-SHA confirmation;
+- resolution of all 18 authoritative review artifacts;
+- changed-file and merge-base audit;
+- PR comments/reviews/threads/status audit;
+- row-by-row high-leverage status reconciliation;
+- exact refutation-evidence mapping;
+- post-review delta quarantine confirmation;
+- compatibility review against the durable front-door validator.
+
+A future validator should recheck:
 
 - exact SHA syntax and reachability;
 - duplicate claim keys;
@@ -50,7 +65,7 @@ A future validator should check:
 - no canonical claim points to a post-review head;
 - every `FALSE` row has an exact counterexample/no-go source;
 - every `RH_EQUIVALENT` row is distinct from `INDEPENDENT_PROGRESS`;
-- every computation-bearing claim declares exact/directive/empirical scope;
+- every computation-bearing claim declares exact/directed/empirical scope;
 - every external claim declares upstream versus local provenance.
 
 ## Suggested next creation allocation
