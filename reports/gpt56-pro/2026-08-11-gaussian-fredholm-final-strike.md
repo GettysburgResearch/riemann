@@ -105,7 +105,7 @@ For the powered reflected channel this lower bound is exponential in the power k
 
 Therefore the claimed exponential off-line amplification is paid somewhere: in the strip/form metric or, equivalently, in weighted causal coefficient mass. A polynomial derivative gauge and unit critical-line L2 energy do not imply a subexponential complete arithmetic block.
 
-This does not disprove the phase-bank criterion. It proves that its remaining subexponential complete arithmetic block estimate is the conclusion-producing RH-strength theorem, not bookkeeping.
+This does not disprove the phase-bank criterion. It proves that its remaining subexponential estimate is the conclusion-producing RH-strength theorem, not leftover bookkeeping.
 
 ## 5. The remaining target
 
