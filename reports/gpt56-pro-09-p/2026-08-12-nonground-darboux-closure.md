@@ -11,8 +11,8 @@ The exact finite counterexample `R-19848` shows that a perfectly isolated simple
 even interior CCM eigenline can have transform polynomial `z^2+1`.  Thus the
 generic non-ground conclusion is false.
 
-The attack nevertheless closes the precise finite theory and two of the three
-quantitative components.
+The attack nevertheless closes the precise finite theory, a genuine
+Pontryagin--Darboux replacement, and two of the three quantitative components.
 
 ## 1. Isolated-line geometry
 
@@ -72,16 +72,47 @@ Q_xi=diag(1/xi_j)-11^T
 is an exact positive CCM completion with kernel `xi`, and the transform zeros
 strictly interlace the lattice nodes.
 
-`L-19872` constructs the unique minimal-degree real-rooted sign corrector for an
+`L-19872` constructs the minimal-degree real-rooted sign corrector for an
 arbitrary nonzero real finite coefficient vector: insert one root in every gap
 where the data change sign.
+
+### Genuine non-ground Pontryagin--Darboux theorem
+
+`T-19815` proves that if an exact shifted CCM form has negative index `kappa`,
+then the interior-line transform has at most `kappa` conjugate pairs of nonreal
+zeros, counted algebraically.  This uses the induced Pontryagin metric and does
+not assume that the line is lowest.
+
+The theorem supplies two exact same-support Darboux operations:
+
+```text
+delete every nonreal conjugate pair;
+move every pair a+/-ib vertically to a double real zero at a.
+```
+
+The vertically flattened transform remains in the same Paley--Wiener support
+class, has only real zeros, and has no larger real-axis L2 norm.  If
+
+```text
+V_j=sum_(upper roots alpha) Im(alpha)^2 ->0,
+```
+
+then the flattened transforms converge to Xi on every compact set away from
+the real axis, and Hurwitz proves RH.  The approximate symmetrizer estimate
+`epsilon_j` implies
+
+```text
+V_j <= degree_j * epsilon_j^2.
+```
+
+Thus `degree_j epsilon_j^2 ->0` is one explicit conclusion-producing rate.
 
 ### Scalar Darboux firewalls
 
 The centered CCM vector is `(-1)^k` times the centered Fourier sample.  Hence a
 raw-positive Xi target alternates on the complete lattice.
 
-`R-19852` proves the resulting dichotomy:
+`R-19851/R-19852` prove the resulting dichotomy:
 
 ```text
 polynomial phase correction
@@ -99,7 +130,7 @@ Matrix-valued colligations are not excluded.
 
 ## 3. Approximate symmetrizer theorem
 
-`L-19869` supplies the strongest correct non-ground replacement.  If
+`L-19869` supplies the strongest root-free non-ground replacement.  If
 
 ```text
 Q_j>=0,
@@ -157,8 +188,10 @@ substrip.
 
 ## Exact remaining theorem
 
-The entire surviving proof burden is now one source-specific anisotropic
-commutator estimate:
+The entire surviving proof burden can be stated in either of two equivalent
+source-specific forms.
+
+### Anisotropic approximate symmetrizer
 
 ```text
 construct Q_j from prime/pole/archimedean source data,
@@ -166,9 +199,22 @@ ker Q_j=C xi_j,
 1/2 ||Q_j^-1/2(Q_jT_j-T_j*Q_j)Q_j^-1/2|| ->0.
 ```
 
-Equivalently, construct a matrix-valued Darboux/CCM colligation whose positive
-metric is source-bound and whose defect tends to zero.  No current theorem
-supplies this estimate.
+For the explicit Darboux limit rate it is enough to prove
+
+```text
+degree_j * epsilon_j^2 -> 0.
+```
+
+### Total vertical Darboux defect
+
+```text
+construct the exact shifted CCM form prime-side,
+bound its nonreal root pairs without locating them,
+sum Im(alpha)^2 ->0.
+```
+
+A Hilbert--Schmidt commutator estimate implies the second condition directly.
+No current theorem proves either source-bound estimate.
 
 ## Exact status
 
@@ -177,10 +223,12 @@ positive residual-pencil isolated line             PROVED
 actual localized-Weil isolated line                 OPEN
 complete moving-Hardy target rate                   PROVED
 generic isolated-interior real-zero theorem         FALSE
+negative-index non-ground zero-pair bound            PROVED
+same-support Pontryagin--Darboux real-zero transform PROVED
 exact positive completion characterization          PROVED
 one-sign non-ground CCM theorem                     PROVED
 finite minimal real-rooted sign correction          PROVED
 scalar centered Darboux preservation                BLOCKED BY EXACT FIREWALLS
-source-bound anisotropic approximate symmetrizer    OPEN / RH-BEARING
+source-bound anisotropic/vertical-defect estimate    OPEN / RH-BEARING
 Riemann Hypothesis                                  UNPROVED
 ```
