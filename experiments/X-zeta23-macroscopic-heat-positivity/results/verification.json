@@ -1,0 +1,130 @@
+{
+  "annulus_mass_1_2": 0.233252710671984,
+  "fixed_q_center_rows": [
+    {
+      "log_integral": 1.483318695960446,
+      "x": 10.0
+    },
+    {
+      "log_integral": 2.071832803950411,
+      "x": 30.0
+    },
+    {
+      "log_integral": 2.765246738996654,
+      "x": 100.0
+    },
+    {
+      "log_integral": 3.414271213966575,
+      "x": 300.0
+    },
+    {
+      "log_integral": 4.131354069518348,
+      "x": 1000.0
+    }
+  ],
+  "gates": {
+    "fixed_q_center_growth": true,
+    "paired_log_lower_bound": true,
+    "pole_O_inverse_q_bound": true,
+    "prime_envelope_superdecay": true,
+    "small_q_annulus_bound": true
+  },
+  "paired_log": {
+    "minimum_slack": 0.722134717433197,
+    "worst_grid_point": [
+      0.0,
+      0.058823529411765
+    ]
+  },
+  "pole_bound_rows": [
+    {
+      "bound_holds": true,
+      "coarse_bound": 7.607588823428846,
+      "numeric_sup_without_exp_q_over_4": 7.450135890948189,
+      "q": 0.05
+    },
+    {
+      "bound_holds": true,
+      "coarse_bound": 3.928794411714423,
+      "numeric_sup_without_exp_q_over_4": 3.771923352476897,
+      "q": 0.1
+    },
+    {
+      "bound_holds": true,
+      "coarse_bound": 0.985758882342885,
+      "numeric_sup_without_exp_q_over_4": 0.833723479928322,
+      "q": 0.5
+    },
+    {
+      "bound_holds": true,
+      "coarse_bound": 0.617879441171442,
+      "numeric_sup_without_exp_q_over_4": 0.472366552283751,
+      "q": 1.0
+    },
+    {
+      "bound_holds": true,
+      "coarse_bound": 0.433939720585721,
+      "numeric_sup_without_exp_q_over_4": 0.303265329856317,
+      "q": 2.0
+    }
+  ],
+  "prime_envelope_rows": [
+    {
+      "all_integer_envelope": 7.022931167316502,
+      "q": 0.05
+    },
+    {
+      "all_integer_envelope": 4.404628879606079,
+      "q": 0.03
+    },
+    {
+      "all_integer_envelope": 1.56822777169411,
+      "q": 0.02
+    },
+    {
+      "all_integer_envelope": 0.021017765562468,
+      "q": 0.01
+    },
+    {
+      "all_integer_envelope": 7.07853354e-07,
+      "q": 0.005
+    },
+    {
+      "all_integer_envelope": 3.035411e-09,
+      "q": 0.004
+    }
+  ],
+  "small_q_rows": [
+    {
+      "annulus_lower_bound": 2.098581972412037,
+      "minimum_sampled_log_integral": 14.679273341020352,
+      "q": 0.2,
+      "ratio": 6.994853445800119
+    },
+    {
+      "annulus_lower_bound": 8.492047065613534,
+      "minimum_sampled_log_integral": 45.833909352681914,
+      "q": 0.1,
+      "ratio": 5.397274532106059
+    },
+    {
+      "annulus_lower_bound": 31.249616750708913,
+      "minimum_sampled_log_integral": 145.1789430175669,
+      "q": 0.05,
+      "ratio": 4.64578315234133
+    },
+    {
+      "annulus_lower_bound": 108.83815078634773,
+      "minimum_sampled_log_integral": 463.53369030327775,
+      "q": 0.025,
+      "ratio": 4.258926552447654
+    },
+    {
+      "annulus_lower_bound": 365.6846217769722,
+      "minimum_sampled_log_integral": 1494.9572300482955,
+      "q": 0.0125,
+      "ratio": 4.088105271651419
+    }
+  ],
+  "status": "PASS_MACROSCOPIC_FIRST_HERMITE_POSITIVITY"
+}
