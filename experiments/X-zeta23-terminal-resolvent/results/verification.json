@@ -1,0 +1,36 @@
+{
+  "checks": 738,
+  "classification": "PASS_TERMINAL_RESOLVENT_DERIVATIVE_HIERARCHY",
+  "max_alpha_derivative_relative_error": "3.63524351011e-81",
+  "max_laplace_moment_relative_error": "8.45229953236e-81",
+  "max_rational_identity_error": "6.62173613142e-82",
+  "max_safe_euler_atom_relative_error": "7.96817972362e-82",
+  "max_target_normalization_error": "0.0",
+  "minimum_sampled_line_kernel": "0.0",
+  "minimum_sampled_safe_euler_margin": "0.118587133068",
+  "minimum_synthetic_line_hankel_eigenvalue": "0.00282441977765",
+  "scope": "finite algebra and numerical controls only; no RH claim",
+  "synthetic_normalized_scalar_by_order": {
+    "0": "10.9693510922259539420772384693",
+    "1": "4.82979802199350752156995970613",
+    "16": "-2.00126882759693986230902128438",
+    "2": "2.10046631671773462198772833695",
+    "32": "-2.00000444198831194630356695647",
+    "4": "-0.24994787832158116672392239575",
+    "48": "-2.00000001046990754342742649899",
+    "64": "-1.99999999996573401767242215527",
+    "8": "-1.67320855557294267016693996643"
+  },
+  "synthetic_terminal_raw_moments": {
+    "0": "0.120527373463150782186316",
+    "16": "-213492990192150.958940823",
+    "32": "-4.39777389887206892343581e+37",
+    "4": "-1.25267590047305325523379",
+    "8": "-55049.8434780006336286165"
+  },
+  "synthetic_threat_exponents": [
+    "-0.328",
+    "-1.4736",
+    "-4.1207"
+  ]
+}
