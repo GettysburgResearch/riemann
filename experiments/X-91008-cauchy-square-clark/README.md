@@ -7,9 +7,10 @@ This finite replay checks:
 - the exact line and reflected-pair mass/second-moment projectors;
 - the Cauchy-square Fourier transform and hyperbolic depth multiplier;
 - Clark boundary-phase orientation;
-- generalized-Jordan coefficient positivity;
-- the positive shifted cocycle;
-- the \(a=1/2\) Euler-totient specialization.
+- generalized-Jordan coefficient positivity and positive shifted cocycle;
+- the normalized positive sieve cocycle;
+- the \(a=1/2\) Euler-totient specializations;
+- the exact two-channel square for the dyadic soft-count increment.
 
 Run:
 
@@ -25,5 +26,7 @@ Expected verdict:
 PASS_CAUCHY_SQUARE_CLARK_JORDAN_BRIDGE
 ```
 
-The replay proves finite algebra and synthetic high-precision identities only.
-It does not prove prime-side soft-count monotonicity or RH.
+The retained replay performs 1,228 checks, including 540 generalized-Jordan
+and 540 normalized-sieve cocycle checks. It proves finite algebra and synthetic
+high-precision identities only. It does not prove the Dyadic Cauchy-Square
+Gate, prime-side soft-count monotonicity, or RH.
