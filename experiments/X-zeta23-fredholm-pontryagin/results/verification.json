@@ -1,0 +1,235 @@
+{
+  "cutoff_stability": [
+    {
+      "coefficient": -0.09072642547268257,
+      "cutoff": 2,
+      "error": 0.002306205751624754,
+      "trace_norm_bound": 0.2710609294463927
+    },
+    {
+      "coefficient": -0.0902591477109673,
+      "cutoff": 5,
+      "error": 0.001838927989909478,
+      "trace_norm_bound": 0.07944333581275641
+    },
+    {
+      "coefficient": -0.08923556179411099,
+      "cutoff": 10,
+      "error": 0.0008153420730531713,
+      "trace_norm_bound": 0.028658107840633648
+    },
+    {
+      "coefficient": -0.08873008086339174,
+      "cutoff": 20,
+      "error": 0.00030986114233391704,
+      "trace_norm_bound": 0.01030664295828374
+    },
+    {
+      "coefficient": -0.0885281134690372,
+      "cutoff": 40,
+      "error": 0.00010789374797938456,
+      "trace_norm_bound": 0.003267362609261658
+    },
+    {
+      "coefficient": -0.08842021972105782,
+      "cutoff": 80,
+      "error": 0.0,
+      "trace_norm_bound": 0.0
+    }
+  ],
+  "exterior_amplification": {
+    "1": {
+      "expected": 1,
+      "observed": 1
+    },
+    "2": {
+      "expected": 7,
+      "observed": 7
+    },
+    "3": {
+      "expected": 21,
+      "observed": 21
+    },
+    "4": {
+      "expected": 35,
+      "observed": 35
+    },
+    "5": {
+      "expected": 35,
+      "observed": 35
+    },
+    "6": {
+      "expected": 21,
+      "observed": 21
+    },
+    "7": {
+      "expected": 7,
+      "observed": 7
+    },
+    "8": {
+      "expected": 1,
+      "observed": 1
+    }
+  },
+  "fredholm_control": {
+    "exponential_tail_at_bound": 5.701645623142058e-22,
+    "finite_degree_bound_exclusive": 65,
+    "first_negative_exterior_degree": 3,
+    "mixed_eigenvalues": [
+      2.0,
+      0.7,
+      -0.25
+    ],
+    "mixed_exterior_coefficients": [
+      1.0,
+      2.45,
+      0.7249999999999999,
+      -0.35
+    ],
+    "positive_axis_root": 4.0,
+    "positive_eigenvalues": [
+      1.7,
+      0.8,
+      0.35,
+      0.12
+    ],
+    "positive_exterior_coefficients": [
+      1.0,
+      2.97,
+      2.5770000000000004,
+      0.7442,
+      0.05712
+    ],
+    "root_residual": 0.0,
+    "trace_radius": 11.8
+  },
+  "gates": {
+    "exterior_coefficient_trace_norm_stability": true,
+    "exterior_signature_amplification": true,
+    "finite_degree_tail_bound": true,
+    "gaussian_overlap_law": true,
+    "mixed_exterior_detects_negative_spectrum": true,
+    "mixed_shifted_hankel_detects": true,
+    "noncommutative_prime_word_expansion": true,
+    "phase_bank_boundary_unitarity": true,
+    "phase_bank_strip_norm_growth": true,
+    "positive_axis_fredholm_root": true,
+    "positive_exterior_coefficients": true,
+    "positive_shifted_hankel_psd": true,
+    "prime_weighted_tail_decreases": true
+  },
+  "hankel_control": {
+    "mixed_min_eigenvalues": [
+      2.45,
+      -0.02990461167036007,
+      -0.1407265980452141
+    ],
+    "positive_min_eigenvalues": [
+      2.97,
+      0.3457649230686137,
+      0.01725838219715407
+    ]
+  },
+  "overlap_control": {
+    "max_relative_error": 1.0284882433191062e-15,
+    "rows": [
+      {
+        "exact": 1.4668932442853486,
+        "numeric": 1.4668932442853484,
+        "relative_error": 1.513706643547933e-16,
+        "y": 0.0
+      },
+      {
+        "exact": 1.338964729002621,
+        "numeric": 1.3389647290026208,
+        "relative_error": 1.6583305005384998e-16,
+        "y": 0.5
+      },
+      {
+        "exact": 0.6452591403200546,
+        "numeric": 0.6452591403200546,
+        "relative_error": 0.0,
+        "y": 1.5
+      },
+      {
+        "exact": 0.05492134133560993,
+        "numeric": 0.05492134133560994,
+        "relative_error": 2.526847937491354e-16,
+        "y": 3.0
+      },
+      {
+        "exact": 2.882498010694545e-06,
+        "numeric": 2.882498010694548e-06,
+        "relative_error": 1.0284882433191062e-15,
+        "y": 6.0
+      }
+    ],
+    "sigma": 0.73
+  },
+  "phase_bank_firewall": {
+    "critical_mean_square_errors": [
+      0.0,
+      2.220446049250313e-16,
+      6.661338147750939e-16,
+      1.3322676295501878e-15,
+      1.9984014443252818e-15,
+      2.6645352591003757e-15
+    ],
+    "growth_ratio_last_first": 4979.593456501043,
+    "reflected_bank_multiplier_lower_bounds": [
+      2.1433835582444316,
+      3.0339190635558118,
+      7.841231121996672,
+      80.65890053643642,
+      921.4453194872,
+      10673.178741405894
+    ],
+    "right_half_plane_mean_squares": [
+      0.2482720949906535,
+      0.1830344343836866,
+      0.11191605708198236,
+      0.04949366271550291,
+      0.02369456050085776,
+      0.011765932301712037
+    ]
+  },
+  "prime_tail_control": {
+    "finite_limit": 200000,
+    "rows": [
+      {
+        "cutoff": 100,
+        "finite_tail_to_200000": 2.6550379653042184
+      },
+      {
+        "cutoff": 500,
+        "finite_tail_to_200000": 0.8509928336327586
+      },
+      {
+        "cutoff": 2000,
+        "finite_tail_to_200000": 0.2410073374046947
+      },
+      {
+        "cutoff": 10000,
+        "finite_tail_to_200000": 0.03712328947857942
+      },
+      {
+        "cutoff": 50000,
+        "finite_tail_to_200000": 0.00344320103423566
+      },
+      {
+        "cutoff": 100000,
+        "finite_tail_to_200000": 0.0008698799508816696
+      }
+    ],
+    "sigma": 0.18
+  },
+  "scope": "finite algebra and diagnostics only; RH is not proved",
+  "status": "PASS_FREDHOLM_PONTRYAGIN_FINAL_STRIKE",
+  "word_expansion_errors": [
+    0.0,
+    1.1102230246251565e-16,
+    7.6115004056520615e-19,
+    1.110223978007148e-15,
+    1.7763568394017532e-15
+  ]
+}
