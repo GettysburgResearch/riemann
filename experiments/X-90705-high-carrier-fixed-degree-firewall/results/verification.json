@@ -1,0 +1,156 @@
+{
+  "first_negative_degrees": [
+    5,
+    9,
+    17,
+    29,
+    52,
+    90
+  ],
+  "gates": {
+    "every_fixed_exterior_degree_positive": true,
+    "first_detecting_degree_strictly_increases": true,
+    "fixed_hankel_degrees_eventually_positive": true,
+    "normalized_fredholm_root_escapes": true,
+    "normalized_trace_norm_convergence": true,
+    "one_negative_eigenvalue_persists": true,
+    "uniform_trace_norm_perturbation": true
+  },
+  "proof_object_sha256": "4d0ce6a913803c93612f8d89abf6285c0c5438061b0a059dcda306a4abaef603",
+  "rows": [
+    {
+      "carrier": 10.0,
+      "dimension": 28,
+      "first_negative_exterior_degree": 5,
+      "fixed_exterior_coefficients_1_to_4": [
+        15.098499458483941,
+        59.570982422915286,
+        91.06766643431624,
+        50.93701027081199
+      ],
+      "moving_negative_index": 7,
+      "negative_eigenvalue": -0.7959183673469388,
+      "negative_index": 1,
+      "normalized_hankel_min_eigenvalues_degrees_0_to_2": [
+        1.509849945848394,
+        0.1475419831683193,
+        -0.00010321634032242715
+      ],
+      "normalized_positive_axis_root": 12.564102564102564,
+      "normalized_trace_norm_error": 0.1,
+      "perturbation_trace_norm": 1.0
+    },
+    {
+      "carrier": 30.0,
+      "dimension": 44,
+      "first_negative_exterior_degree": 9,
+      "fixed_exterior_coefficients_1_to_4": [
+        47.67389306710555,
+        649.104220574095,
+        3983.523216242661,
+        13373.387310459579
+      ],
+      "moving_negative_index": 11,
+      "negative_eigenvalue": -0.7520661157024793,
+      "negative_index": 1,
+      "normalized_hankel_min_eigenvalues_degrees_0_to_2": [
+        1.5891297689035173,
+        0.18324258531191617,
+        0.001737970096872933
+      ],
+      "normalized_positive_axis_root": 39.89010989010989,
+      "normalized_trace_norm_error": 0.03333333333333333,
+      "perturbation_trace_norm": 1.0
+    },
+    {
+      "carrier": 100.0,
+      "dimension": 80,
+      "first_negative_exterior_degree": 17,
+      "fixed_exterior_coefficients_1_to_4": [
+        162.25118663375645,
+        7750.860808157107,
+        172922.20305373176,
+        2205237.8719925303
+      ],
+      "moving_negative_index": 20,
+      "negative_eigenvalue": -0.75,
+      "negative_index": 1,
+      "normalized_hankel_min_eigenvalues_degrees_0_to_2": [
+        1.6225118663375644,
+        0.19605541694249806,
+        0.0020149927632454588
+      ],
+      "normalized_positive_axis_root": 133.33333333333334,
+      "normalized_trace_norm_error": 0.010000000000000005,
+      "perturbation_trace_norm": 1.0
+    },
+    {
+      "carrier": 300.0,
+      "dimension": 140,
+      "first_negative_exterior_degree": 29,
+      "fixed_exterior_coefficients_1_to_4": [
+        490.344997751447,
+        71514.31319907296,
+        4923547.525579418,
+        195988834.34244016
+      ],
+      "moving_negative_index": 35,
+      "negative_eigenvalue": -0.7551020408163265,
+      "negative_index": 1,
+      "normalized_hankel_min_eigenvalues_degrees_0_to_2": [
+        1.6344833258381561,
+        0.20045722261842375,
+        0.002087440749730067
+      ],
+      "normalized_positive_axis_root": 397.29729729729735,
+      "normalized_trace_norm_error": 0.003333333333333352,
+      "perturbation_trace_norm": 1.0
+    },
+    {
+      "carrier": 1000.0,
+      "dimension": 256,
+      "first_negative_exterior_degree": 52,
+      "fixed_exterior_coefficients_1_to_4": [
+        1640.0354363086808,
+        803696.2533352098,
+        186794711.12231198,
+        25222934484.80179
+      ],
+      "moving_negative_index": 64,
+      "negative_eigenvalue": -0.755859375,
+      "negative_index": 1,
+      "normalized_hankel_min_eigenvalues_degrees_0_to_2": [
+        1.6400354363086806,
+        0.2024738629670807,
+        0.0021181969623491567
+      ],
+      "normalized_positive_axis_root": 1322.9974160206718,
+      "normalized_trace_norm_error": 0.0010000000000000002,
+      "perturbation_trace_norm": 1.0
+    },
+    {
+      "carrier": 3000.0,
+      "dimension": 440,
+      "first_negative_exterior_degree": 90,
+      "fixed_exterior_coefficients_1_to_4": [
+        4926.99176079074,
+        7267169.119232687,
+        5093387947.293074,
+        2077970308637.2075
+      ],
+      "moving_negative_index": 110,
+      "negative_eigenvalue": -0.7520661157024793,
+      "negative_index": 1,
+      "normalized_hankel_min_eigenvalues_degrees_0_to_2": [
+        1.642330586930247,
+        0.20330407009586393,
+        0.0021305481679825137
+      ],
+      "normalized_positive_axis_root": 3989.0109890109893,
+      "normalized_trace_norm_error": 0.00033333333333333614,
+      "perturbation_trace_norm": 1.0
+    }
+  ],
+  "scope": "finite moving-tail model only; the analytic high-carrier theorem is proved separately and RH remains open",
+  "status": "PASS_X_90705_HIGH_CARRIER_FIXED_DEGREE_FIREWALL"
+}
