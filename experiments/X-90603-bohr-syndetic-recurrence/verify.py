@@ -114,7 +114,7 @@ def main() -> dict[str, object]:
             "max_observed_root_gap": max(gaps),
             "max_real_displacement": max(abs(z.real - sigma) for z in roots),
             "max_root_residual": max(abs(polynomial(z)) for z in roots),
-            "rows": rows,
+            "sample_rows": [rows[0], rows[-1]],
         },
         "scope": (
             "finite diagnostic only; syndetic recurrence follows analytically "
