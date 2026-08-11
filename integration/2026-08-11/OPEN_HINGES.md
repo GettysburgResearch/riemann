@@ -2,6 +2,8 @@
 
 This roadmap ranks theorem interfaces, not PR activity. An item is high priority when it is explicit, independently falsifiable, supported by exact infrastructure and not already known to be merely an RH-equivalent restatement.
 
+> **Post-cutoff alert:** PR #376 at `2ef174866ba9ce3a1c4939797ca223680bb21734` claims to refute raw global all-large-`N` and cofinal Brownian half-plane stability. It is unreviewed and quarantined, but conclusion-changing if correct. Suspend production aimed solely at that exact theorem until the delta review in `POST_MERGE_DELTA_ADDENDUM.md` is complete.
+
 ## Priority A — strongest live mechanisms
 
 ### A1. Source-specific policy Green debt
@@ -45,19 +47,27 @@ Analyze signed entropy score, not unsigned slack.
 
 **Binary falsifier:** a dual feasible score separating every packing in the proposed policy class by a fixed positive fraction of `log^2 X`.
 
-### A5. Raw Brownian cofinal half-plane stability
+### A5. Raw Brownian Bohr-instability delta review and route redesign
 
-Prove
+The reviewed packet leaves open
 
 ```text
 E[Q_N^z] != 0,  Re z>1/4,
 ```
 
-for all sufficiently large `N`, or for an unbounded cofinal sequence.
+for all sufficiently large `N`, or an unbounded cofinal sequence. PR #376 claims the opposite: high-frequency zeros for every sufficiently large `N` in every fixed strip `1/4<Re z<1/2`.
 
-Promising coordinates include the sampled derivative sum, reciprocal Hermite interpolation, beta-Dirichlet recursion and an aggregate canonical-system realization.
+The immediate theorem task is now to verify or refute #376's selected-prime/Steinhaus/polygon/Kronecker/Hurwitz chain. Until that review is complete, do not spend a creation lane proving the old global cofinal target.
 
-**Binary falsifier:** a directed certified zero with `Re z>1/4` for one relevant finite `N`, plus an argument that the failure persists cofinally if claiming a route-level obstruction.
+If #376 survives, the live Brownian alternatives become:
+
+```text
+height-dependent truncation N=N(T)
+producer redesign avoiding multiplicative torus zeros
+aggregate symmetrized Brownian canonical system
+```
+
+**Binary falsifier for #376:** one rigorously identified failure in its phase-mass, independence, approximation, vertical-limit, Hurwitz or quantifier argument.
 
 ### A6. Aggregate canonical system for the corrected Brownian mixture
 
@@ -114,7 +124,7 @@ with complete packet capture, radical tails and all arithmetic sources.
 
 For the corrected Darboux or minimal rank-one completion, prove the full prime-side Fredholm determinant or heat-pressure sign.
 
-Later odd-sector, sine-Cauchy and Gaussian-Pontryagin reductions are not independently reviewed in this pass.
+Later odd-sector, sine-Cauchy, Gaussian-Pontryagin and terminal heat-residue reductions are not independently reviewed in this pass. PR #375 is now part of the delta queue.
 
 ## Priority C — finite searches and conventional progress
 
@@ -149,4 +159,4 @@ Complete uniform trace, zero-counting, taper, pole, end-effect, conductor and om
 
 ## Research allocation recommendation
 
-For the next creation wave, allocate most effort to A1–A5. Keep one independent lane on B1 because the Q4 finite infrastructure is unusually developed, but do not permit another full-proof claim unless the exact integrated current consumer is resident. Maintain B5/B6 as operator benchmarks and C1/C2 as finite falsification programmes.
+For the next creation wave, allocate most effort to A1–A4. Make A5 an independent adversarial review, not a proof-production lane, until PR #376 is resolved. Keep one independent lane on B1 because the Q4 finite infrastructure is unusually developed, but do not permit another full-proof claim unless the exact integrated current consumer is resident. Maintain B5/B6 as operator benchmarks and C1/C2 as finite falsification programmes.
