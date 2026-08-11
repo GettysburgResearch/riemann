@@ -174,20 +174,16 @@ separate indefinite matrix is used.
 Let `xi_j` be finite real vectors on growing real node sets, and let `F_j` be
 the corresponding finite CCM Fourier transforms.  Suppose:
 
-1. `F_j -> F` locally uniformly on `C`, with `F` not identically zero;
+1. `F_j -> F` locally uniformly on a domain containing the zeros under
+   consideration, with `F` not identically zero;
 2. for each `j` there is `Q_j>=0`, `ker Q_j=C xi_j`;
 3. `epsilon(Q_j,xi_j)->0`.
 
-Then
-
-\[
- \boxed{\text{every zero of }F\text{ is real}.}
-\tag{L-19869.12}
-\]
+Then every zero of `F` in that domain is real.
 
 For the uniform Fourier lattice, the zeros not represented by `P_(xi_j)` are
-the universal sine zeros and are already real.  Equation (L-19869.8) therefore
-places every zero of `F_j` in the strip
+the universal sine zeros and are already real.  Equation (L-19869.8) places
+every remaining zero of `F_j` in
 
 \[
  |\operatorname{Im}z|\le\varepsilon(Q_j,\xi_j).
@@ -196,7 +192,7 @@ places every zero of `F_j` in the strip
 If `F` had a zero `rho` with positive distance from the real line, choose a
 small closed disk around `rho` disjoint from the shrinking strips.  Hurwitz (or
 Rouche on the boundary) forces `F_j` to have a zero in that disk for all large
-`j`, contradiction.  This proves (L-19869.12).
+`j`, contradiction.
 
 ## 5. Application to the residual isolated line
 
@@ -204,7 +200,7 @@ Let `D_j,G_j,xi_j,lambda_(j,-)` be the residual pencil of `L-19867`, and put
 
 \[
  \boxed{Q_j=D_j-\lambda_{j,-}G_j.}
-\tag{L-19869.13}
+\tag{L-19869.12}
 \]
 
 Then
@@ -212,18 +208,23 @@ Then
 \[
  Q_j\succeq0,
  \qquad
- \ker Q_j=\mathbb C\xi_j,
+ \ker Q_j=\mathbb C\xi_j.
+\tag{L-19869.13}
+\]
+
+On the `G_j`-orthogonal representative of the quotient, one has the relative
+floor
+
+\[
+ \boxed{
+ Q_j\succeq(1-\lambda_{j,-})G_j
+ \succeq(1-m_j)G_j,}
 \tag{L-19869.14}
 \]
 
-and its positive quotient floor is at least
+so the positive quotient is uniformly nondegenerate in the natural residual
+metric.
 
-\[
- 1-\lambda_{j,-}\ge1-m_j\to1.
-\tag{L-19869.15}
-\]
-
-Therefore no additional positivity theorem is needed to form the symmetrizer.
 The sole remaining non-ground gate is the explicit normalized commutator defect
 
 \[
@@ -237,31 +238,30 @@ The sole remaining non-ground gate is the explicit normalized commutator defect
  +|\eta_j\rangle\langle\alpha_j|
  \right)_{\mathcal H}
  (Q_j)_{\mathcal H}^{-1/2}
- \right\|	o0,}
-\tag{L-19869.16}
+ \right\|\longrightarrow0,}
+\tag{L-19869.15}
 \]
 
-where `alpha_j=Q_j Lambda_j xi_j`.
-
-If (L-19869.16) holds, `L-19868` supplies local-uniform convergence to a
-nonzero multiple of `Xi`, and (L-19869.12) proves RH.
+where `alpha_j=Q_j Lambda_j xi_j` and the quotient norm is the intrinsic
+`Q_j` norm.  If (L-19869.15) holds, `L-19868` supplies local-uniform convergence
+to a nonzero multiple of `Xi`, and the asymptotic theorem proves RH.
 
 ## 6. Relationship to the exact positive-completion gate
 
-The exact gate in corrected `M-19802` asks for a positive CCM matrix with kernel
-`xi_j`.  That is the special case `epsilon_j=0` of the present theorem.  The
-asymptotic theorem is strictly weaker: finite transforms may have nonreal zeros,
-but every such zero must lie within `epsilon_j` of the real axis.
+An exact positive CCM matrix with kernel `xi_j` is the special case
+`epsilon_j=0`.  The asymptotic theorem is strictly weaker: finite transforms
+may have nonreal zeros, but every such zero must lie within `epsilon_j` of the
+real axis.
 
 `R-19848/R-19849` show that isolation alone gives no control of
-(L-19869.16).  For their exact counterexample, the positive CCM completion cone
+(L-19869.15).  For their exact counterexample, the positive CCM completion cone
 is empty.  Thus the commutator defect is a genuine additional datum, not a
 rephrasing of the singular moat.
 
 ## 7. Proof boundary
 
 The determinant identity, quotient spectral estimate, and limiting theorem are
-proved.  The arithmetic estimate (L-19869.16) for the residual source hierarchy
+proved.  The arithmetic estimate (L-19869.15) for the residual source hierarchy
 is not proved here.  It is now the smallest explicit non-ground/Darboux
 replacement: a positive symmetrizer is already available, and only its
 rank-two scaling-commutator defect must be shown to vanish.
