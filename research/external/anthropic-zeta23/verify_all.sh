@@ -30,7 +30,8 @@ for experiment in \
   X-zeta23-terminal-heat-residue \
   X-zeta23-zero-heat-monotonicity \
   X-zeta23-macroscopic-heat-positivity \
-  X-zeta23-diagonal-heat-wedge
+  X-zeta23-diagonal-heat-wedge \
+  X-zeta23-first-hermite-large-values
 do
   temp="$(mktemp)"
   (

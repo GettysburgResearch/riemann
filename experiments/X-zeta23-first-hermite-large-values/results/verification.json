@@ -1,0 +1,277 @@
+{
+  "coefficient_energy": [
+    {
+      "absolute_error_from_q": 0.2619713209532395,
+      "energy": 1.7380286790467605,
+      "energy_over_q": 0.8690143395233803,
+      "error_over_sqrt_q": 0.1852416975224331,
+      "q": 2.0
+    },
+    {
+      "absolute_error_from_q": 0.33053893536529877,
+      "energy": 3.6694610646347012,
+      "energy_over_q": 0.9173652661586753,
+      "error_over_sqrt_q": 0.16526946768264938,
+      "q": 4.0
+    },
+    {
+      "absolute_error_from_q": 0.4876766147835667,
+      "energy": 7.512323385216433,
+      "energy_over_q": 0.9390404231520542,
+      "error_over_sqrt_q": 0.17241972066977987,
+      "q": 8.0
+    }
+  ],
+  "exceptional_optimization": {
+    "epsilon": 0.25,
+    "eventual_length_budget": true,
+    "kappa": 0.02,
+    "model_constant": 8.0,
+    "rows": [
+      {
+        "Bkq_over_L": 0.08,
+        "Q": 1000000.0,
+        "k_at_worst_q": 1,
+        "log_height_L": 100000000.0,
+        "log_union_fraction_model": -7.1308978302968455,
+        "markov_base_model": 8.000008e-10
+      },
+      {
+        "Bkq_over_L": 0.152,
+        "Q": 1000000000.0,
+        "k_at_worst_q": 19,
+        "log_height_L": 1000000000000.0,
+        "log_union_fraction_model": -540.0597554092774,
+        "markov_base_model": 1.52000002888e-13
+      },
+      {
+        "Bkq_over_L": 0.1592,
+        "Q": 1000000000000.0,
+        "k_at_worst_q": 199,
+        "log_height_L": 1e+16,
+        "log_union_fraction_model": -7669.481122046311,
+        "markov_base_model": 1.592000000316808e-17
+      },
+      {
+        "Bkq_over_L": 0.15992,
+        "Q": 1000000000000000.0,
+        "k_at_worst_q": 1999,
+        "log_height_L": 1e+20,
+        "log_union_fraction_model": -95687.14333749423,
+        "markov_base_model": 1.5992000000031966e-21
+      },
+      {
+        "Bkq_over_L": 0.16,
+        "Q": 1e+18,
+        "k_at_worst_q": 20000,
+        "log_height_L": 1e+24,
+        "log_union_fraction_model": -1141851.0273804339,
+        "markov_base_model": 1.6000000000000317e-25
+      }
+    ],
+    "truncation_B": 8.0,
+    "union_fraction_strictly_decreases": true
+  },
+  "gates": {
+    "coefficient_energy_scale": true,
+    "exceptional_optimization": true,
+    "finite_torus_moment_bound": true,
+    "gaussian_truncation_tail": true,
+    "prime_block_uniform_bound": true,
+    "time_mean_square_matches_energy": true
+  },
+  "gaussian_tail": [
+    {
+      "B": 8.0,
+      "boundary_exponent": -12.0,
+      "completed_square": -12.0,
+      "decay_at_least_exp_minus_12q": true,
+      "identity_error": 0.0,
+      "q": 1.0
+    },
+    {
+      "B": 8.0,
+      "boundary_exponent": -24.0,
+      "completed_square": -24.0,
+      "decay_at_least_exp_minus_12q": true,
+      "identity_error": 0.0,
+      "q": 2.0
+    },
+    {
+      "B": 8.0,
+      "boundary_exponent": -48.0,
+      "completed_square": -48.0,
+      "decay_at_least_exp_minus_12q": true,
+      "identity_error": 0.0,
+      "q": 4.0
+    },
+    {
+      "B": 8.0,
+      "boundary_exponent": -96.0,
+      "completed_square": -96.0,
+      "decay_at_least_exp_minus_12q": true,
+      "identity_error": 0.0,
+      "q": 8.0
+    },
+    {
+      "B": 8.0,
+      "boundary_exponent": -192.0,
+      "completed_square": -192.0,
+      "decay_at_least_exp_minus_12q": true,
+      "identity_error": 0.0,
+      "q": 16.0
+    }
+  ],
+  "parameters": {
+    "von_mangoldt_limit": 250000
+  },
+  "prime_blocks": [
+    {
+      "block_l1": 0.5487264786177642,
+      "bound_holds": true,
+      "elementary_bound": 5.0202159720854755,
+      "prime": 2,
+      "q": 1.0
+    },
+    {
+      "block_l1": 0.4118574261437437,
+      "bound_holds": true,
+      "elementary_bound": 4.502196885691203,
+      "prime": 3,
+      "q": 1.0
+    },
+    {
+      "block_l1": 0.21664906832665126,
+      "bound_holds": true,
+      "elementary_bound": 3.9061878676515764,
+      "prime": 5,
+      "q": 1.0
+    },
+    {
+      "block_l1": 0.3292749311066858,
+      "bound_holds": true,
+      "elementary_bound": 3.1052442537712412,
+      "prime": 11,
+      "q": 1.0
+    },
+    {
+      "block_l1": 0.1715268156628066,
+      "bound_holds": true,
+      "elementary_bound": 2.303650588804329,
+      "prime": 29,
+      "q": 1.0
+    },
+    {
+      "block_l1": 0.8993182154753596,
+      "bound_holds": true,
+      "elementary_bound": 5.0202159720854755,
+      "prime": 2,
+      "q": 4.0
+    },
+    {
+      "block_l1": 0.7432986008085504,
+      "bound_holds": true,
+      "elementary_bound": 4.502196885691203,
+      "prime": 3,
+      "q": 4.0
+    },
+    {
+      "block_l1": 0.5520487386902967,
+      "bound_holds": true,
+      "elementary_bound": 3.9061878676515764,
+      "prime": 5,
+      "q": 4.0
+    },
+    {
+      "block_l1": 0.25387678435369637,
+      "bound_holds": true,
+      "elementary_bound": 3.1052442537712412,
+      "prime": 11,
+      "q": 4.0
+    },
+    {
+      "block_l1": 0.16074525332322329,
+      "bound_holds": true,
+      "elementary_bound": 2.303650588804329,
+      "prime": 29,
+      "q": 4.0
+    },
+    {
+      "block_l1": 1.2435348803621769,
+      "bound_holds": true,
+      "elementary_bound": 5.0202159720854755,
+      "prime": 2,
+      "q": 16.0
+    },
+    {
+      "block_l1": 1.0708539133733468,
+      "bound_holds": true,
+      "elementary_bound": 4.502196885691203,
+      "prime": 3,
+      "q": 16.0
+    },
+    {
+      "block_l1": 0.8762911787813031,
+      "bound_holds": true,
+      "elementary_bound": 3.9061878676515764,
+      "prime": 5,
+      "q": 16.0
+    },
+    {
+      "block_l1": 0.6140294372031189,
+      "bound_holds": true,
+      "elementary_bound": 3.1052442537712412,
+      "prime": 11,
+      "q": 16.0
+    },
+    {
+      "block_l1": 0.37161766944558106,
+      "bound_holds": true,
+      "elementary_bound": 2.303650588804329,
+      "prime": 29,
+      "q": 16.0
+    }
+  ],
+  "status": "PASS_FIRST_HERMITE_LARGE_VALUES",
+  "time_mean_square": {
+    "coefficient_energy": 2.5022613710928043,
+    "cutoff": 500,
+    "interval_length": 2400.0,
+    "interval_start": 10000.0,
+    "q": 3.0,
+    "ratio": 0.9963672800699689,
+    "sampled_mean_square": 2.4931713563398885,
+    "samples": 12000
+  },
+  "torus_moments": {
+    "prime_blocks": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "q": 3.0,
+    "root_order": 12,
+    "rows": [
+      {
+        "bernstein_moment_bound": 163.22846578434195,
+        "bound_holds": true,
+        "k": 1,
+        "moment_2k": 0.6321757653064614
+      },
+      {
+        "bernstein_moment_bound": 277156.9007967138,
+        "bound_holds": true,
+        "k": 2,
+        "moment_2k": 0.7108364954846554
+      },
+      {
+        "bernstein_moment_bound": 1293907985.4019315,
+        "bound_holds": true,
+        "k": 3,
+        "moment_2k": 1.074422228395097
+      }
+    ],
+    "variance": 0.6322846578434194
+  }
+}
