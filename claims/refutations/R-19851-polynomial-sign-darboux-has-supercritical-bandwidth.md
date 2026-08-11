@@ -107,7 +107,7 @@ absolute constant `C` satisfies
 
 ## 4. Lower bound beyond H
 
-For large `H`, (R-19851.2 gives `d_H>=2H`.  On
+For large `H`, (R-19851.2) gives `d_H>=2H`.  On
 `t in [d_H,2d_H]`, every real root `gamma` of `M_H` obeys
 
 \[
