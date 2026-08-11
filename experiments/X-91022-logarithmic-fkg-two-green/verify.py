@@ -31,7 +31,7 @@ def main()->int:
     ap=argparse.ArgumentParser(); ap.add_argument('--json',type=Path); args=ap.parse_args()
     checks=0
     minimum_gap=None; minimum_nontrivial=None
-    selected={}
+    selected={}; terminal_gap_digits={}
     for s in [1,2,3,4]:
         H=Fraction(0); A=Fraction(0); P=Fraction(1)
         for N in range(1,501):
@@ -44,11 +44,17 @@ def main()->int:
             if minimum_gap is None or gap<minimum_gap: minimum_gap=gap
             if N>1 and (minimum_nontrivial is None or gap<minimum_nontrivial): minimum_nontrivial=gap
             checks+=1
-            if N in [2,10,100,500]:
+            if N in [2,10]:
                 selected[f's={s},N={N}']={
                     'conditional_expectation':str(A/H),
                     'unconditioned_product':str(P),
                     'gap':str(gap),
+                }
+            if N==500:
+                terminal_gap_digits[str(s)]={
+                    'numerator_digits':len(str(gap.numerator)),
+                    'denominator_digits':len(str(gap.denominator)),
+                    'positive':gap>0,
                 }
     # Exact divisor-expansion identity F_s(n)=sum_(d|n) mu(d)d^-s.
     def mobius(n:int)->int:
@@ -68,6 +74,7 @@ def main()->int:
         'minimum_exact_gap_including_N1':str(minimum_gap),
         'minimum_exact_nontrivial_gap':str(minimum_nontrivial),
         'selected_exact_controls':selected,
+        'terminal_gap_size_controls':terminal_gap_digits,
         'scope':'finite exact arithmetic controls only; Harris-FKG and Bernstein transfer remain written proofs, and RH is not claimed',
     }
     text=json.dumps(result,indent=2,sort_keys=True)+'\n'
