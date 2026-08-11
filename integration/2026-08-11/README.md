@@ -1,18 +1,18 @@
 # Second major integration pass — scientific front door
 
-**Cutoff:** `2026-08-11T08:20:51Z`  
+**Scientific cutoff:** `2026-08-11T08:20:51Z`  
 **Pre-merge validation cutoff:** `2026-08-11T09:05:27Z`  
 **Post-merge delta census:** `2026-08-11T09:13:13Z`  
 **Frozen pre-integration main:** `d6409319b4041cd09bee85f55a344631508f2501`  
-**Merged integration commit:** `0552d80078111ac677fa163995d8c1bfddc61f0d`  
-**Review evidence:** draft PRs #369, #370, #371 and #372 at their exact recorded heads  
-**Scientific verdict:** **the Riemann Hypothesis is neither proved nor disproved in the frozen graph.**
+**Principal integration merge:** `0552d80078111ac677fa163995d8c1bfddc61f0d`  
+**PR #376 review merge:** `a88bed9711b1b2057fb258354924056c5ad8696b`  
+**Scientific verdict:** **the Riemann Hypothesis is neither proved nor disproved.**
 
-This directory is the canonical synthesis of the four-reviewer integration wave. It does not merge research branches wholesale and does not erase the history of failed full proposals. It integrates claims by exact mathematical object, frozen source SHA, scope and independent review verdict.
+This directory is the canonical synthesis of the four-reviewer integration wave and its exact post-cutoff review overlays. It does not merge research branches wholesale and does not erase the history of failed full proposals. Claims are integrated by exact mathematical object, source SHA, scope and independent review verdict.
 
-The pre-merge confirmation is resident in `VERIFICATION_REPORT.md`. `REFUTATION_EVIDENCE.tsv` binds every load-bearing false/no-go/corrupted claim to an exact resolvable evidence path and records two stale reviewer-ledger alias corrections.
+The pre-merge confirmation is resident in `VERIFICATION_REPORT.md`. `REFUTATION_EVIDENCE.tsv` binds cutoff-era false/no-go/corrupted claims to exact evidence. `POST_CUTOFF_CLAIM_RESOLUTIONS.tsv` and `POST_CUTOFF_REFUTATION_EVIDENCE.tsv` are normative overlays for independently reviewed later work.
 
-> **Current delta alert:** `POST_MERGE_DELTA_ADDENDUM.md` is normative for PRs #375 and #376, which were created after the scientific cutoff but surfaced only in the final census. PR #376 claims to refute the old raw-Brownian cofinal-stability finish. It is unreviewed, but production on that exact theorem is suspended pending an independent delta review.
+> **Resolved Brownian delta:** PR #376 at `0ed0e7de3aa1b81bb832df53d861dd6f27f2db8b` is **VERIFIED WITH FIXES** by review PR #388. Raw all-large/cofinal half-plane stability and the current logarithmic Nörlund and central-binomial Green finite-real-zero finishes are false. Finite Brownian probability, gamma, Dirichlet, Hermite, occupation, corrected one-fiber and compact-height results survive.
 
 The August 1 integration snapshot and PR #214 remain immutable historical baselines. The frozen pre-integration `main` was a historical base rather than the live scientific state.
 
@@ -20,12 +20,13 @@ The August 1 integration snapshot and PR #214 remain immutable historical baseli
 
 The repository is not best described as hundreds of independent RH proofs. It contains a smaller number of recurring mathematical objects, a substantial verified finite substrate, several exact no-go theorems, many compact RH-bearing criteria, and a handful of live conclusion-producing interfaces.
 
-Two headline changes are mandatory:
+Three headline changes are mandatory:
 
 1. **The frozen half-binary/half-ternary GFEP, producer-positivity and BTF programme is false.** A certified characteristic resonance forces cofinal sign oscillation for the frozen policy. This does not refute signed Cycle Debt, adaptive or nonstationary policies, continuum policies, uniform Pascal, SHARP, endpoint occupancy or annular packing.
 2. **The submitted Q4 aggregate-inertia full composition is false at its synthesis/current interface.** Its exact source, physical placement, reserve, two-state identities and aggregate negative-inertia lemmas leave valuable infrastructure. They do not establish the positive innovation-energy bound or the complete integrated pole-energy recurrence.
+3. **The current global finite Brownian stability finishes are false.** The reviewed Bohr-instability theorem rules out raw all-large/cofinal half-plane stability and propagates to the current logarithmic Nörlund and central-binomial Green functional-equation symmetrizations. This does not invalidate their finite algebra or local approximation results.
 
-No stale source PR should continue to advertise either failed composition as an open full proof without an explicit refutation/supersession edge.
+No stale source PR should advertise a refuted composition or antecedent as an open full proof without an explicit review/refutation edge.
 
 ## 2. Canonical route families
 
@@ -62,13 +63,13 @@ Finite carry identities, the Möbius divergence, fragmentation/Farkas equivalenc
 - source-specific signed policy Green debt;
 - state-dependent, nonstationary or continuum fragmentation;
 - an all-generation capacity-faithful boundary recurrence after equal-destination recombination;
-- recursively admissible critical-hinge saturation.
+- recursively admissible critical-hinge saturation, subject to review of later counterexamples.
 
 ### B. SHARP and low-row zero-safe sources
 
 Uniform-Pascal Green occupation and SHARP are the same sign problem in exact coordinates. Strict positivity is reviewed throughout the outer `255/256`; the inner/all-depth state remains open. The two-low-row critical-log scalar, CN3 and adjacent-dyadic Mertens-flux formulations are closely identified RH-bearing coordinates, not unconditional closures.
 
-Live finite mechanisms include the low-row source, the factor-64 finite Pascal payment and recursive inner-region compression. A positive Pascal reward cannot be exactly square-root critical-neutral; literal divisor-flow CN3 and positive double-neutral annular realizations are false at their declared scope.
+Live finite mechanisms include the low-row source and factor-64 finite Pascal payment. A positive Pascal reward cannot be exactly square-root critical-neutral; literal divisor-flow CN3 and positive double-neutral annular realizations are false at their declared scope. Later claims about recursive hinge failure and factor-64 payment require exact delta review before the priority map is changed again.
 
 ### C. Endpoint, WSTS, occupancy, prime-power and annular flux
 
@@ -87,7 +88,7 @@ These are one source family.
 - the endpoint/Gamma/Pascal probability-law relation;
 - signed packing-score loss as the faithful finite objective.
 
-WSTS, endpoint eventual negativity, complete-prime-power `o(log^2 X)`, CN3 and factor-64 eventual sign are RH-bearing criteria. The reviewed independent mechanisms are positive occupancy, adaptive signed packing, the 51-state factor-64 Pascal payment and radix-four endpoint-detail score control.
+WSTS, endpoint eventual negativity, complete-prime-power `o(log^2 X)`, CN3 and factor-64 eventual sign are RH-bearing criteria. The reviewed independent mechanisms are positive occupancy, adaptive signed packing, the finite factor-64 Pascal payment and radix-four endpoint-detail score control.
 
 ### D. Q2/Q4 reflected–Jordan–Hermitian sources
 
@@ -122,32 +123,45 @@ I(J) = ∫ |I_circ(n,j)|^2/n dν_J
 
 is not controlled unconditionally. `RH ⇒ PIG` is reviewed as valid. The reverse direction is not promoted: the exact complete integrated recurrence and the adapter from the PIG block to the resident vector pole-energy consumer remain incomplete. PIG is therefore recorded as **RH-bearing and open**, not as an established equivalence.
 
-### E. Raw Brownian / Dirichlet–Hermite approximation
+Later Q4 full proposals and Fourier/Goldbach normal forms receive no inherited verdict and must be checked against every resident firewall.
 
-At the scientific cutoff this was the strongest genuinely independent live proof proposal in the reviewed non-carry corpus.
+### E. Brownian finite algebra and raw Bohr instability
 
-The finite gamma/Dirichlet factorization, explicit all-`N` exponential numerator, reciprocal confluent-Hermite identity, local-uniform convergence to the centered `xi` target and finite stability through the reviewed small cases survive.
+The following finite structure survives review:
 
-The reviewed conclusion-producing theorem was
+- gamma/Dirichlet factorization;
+- explicit all-`N` exponential numerator;
+- reciprocal confluent-Hermite identity;
+- reviewed `N=2,3,4` stability;
+- local-uniform convergence to the centered `xi` target;
+- fixed-compact `1/N` expansion and fixed-zero displacement at corrected scope.
+
+The former closing theorem is now false:
 
 ```text
-E[Q_N^z] != 0 for Re z > 1/4
+E[Q_N^z] != 0 for Re z>1/4
 ```
 
-for all sufficiently large `N`, or merely an unbounded cofinal sequence.
+cannot hold for all sufficiently large `N` or on any unbounded cofinal sequence for the current raw producer. The reviewed theorem proves infinitely many high-frequency zeros for every sufficiently large `N` in every fixed strip `1/4<Re z<1/2`.
 
-**Post-cutoff warning:** PR #376 at `2ef174866ba9ce3a1c4939797ca223680bb21734` claims a high-frequency Bohr-instability theorem that refutes exactly this global all-large-`N` and cofinal finish. The claim is unreviewed and receives no canonical verdict, but new work on the old finish is suspended until its selected-prime, phase, Kronecker, vertical-limit and Hurwitz arguments are independently reconstructed.
+The live finite Brownian alternatives are:
 
-If #376 survives, the reviewed finite algebra remains useful while the live alternatives become height-dependent truncation, a redesigned raw producer, or the aggregate symmetrized route.
+- a height-dependent theorem with `N=N(T)`;
+- a redesigned producer avoiding the selected-prime Bohr mechanism;
+- a redesigned mixture outside the reviewed top-half-mass class.
 
 ### F. Symmetrized Brownian / Robin
 
-The corrected one-fiber self-adjoint classification survives. Two easy aggregate closures are false:
+The corrected one-fiber self-adjoint classification survives. The following aggregate finite closures are false:
 
 - finite reflected-tail domination;
-- preservation of real-rootedness under arbitrary positive superposition of individually good fibers.
+- arbitrary positive-superposition real-rootedness;
+- the current logarithmic Nörlund finite-real-zero finish;
+- the current central-binomial Green/Robin finite-real-zero finish.
 
-A live completion would require an actual aggregate canonical system or Hermite–Biehler realization.
+The later review shows that the covered positive mixtures have one-sided Bohr zeros and that functional-equation symmetrization inherits nearby off-line zeros. Exact functional-equation symmetry and favorable individual fibers do not imply aggregate finite real-rootedness.
+
+Live Brownian directions are a direct infinite canonical/Hermite–Biehler system for `xi`, a height-dependent symmetrized construction or a genuinely redesigned finite mixture outside the no-go hypotheses.
 
 ### G. Weil, screw, carrier, kernel, Fredholm and Schur programmes
 
@@ -161,7 +175,7 @@ B - Z* C^{-1} Z <= B  when C > 0,
 
 so a positive complement cannot rescue an already negative kernel direction; and the square-screw scalar is a principal coordinate of the enlarged matrix.
 
-The complete corrected arithmetic floor remains RH-bearing. The independently reviewed portion of PR #368 includes the hyperbolic pole correction and clean Darboux/rank-one Fredholm criteria. Later odd-sector/sine-Cauchy additions, PR #373 and PR #375 are post-review deltas and are not canonically promoted here.
+The complete corrected arithmetic floor remains RH-bearing. The independently reviewed portion of PR #368 includes the hyperbolic pole correction and clean Darboux/rank-one Fredholm criteria. Later odd-sector/sine-Cauchy additions, Gaussian-Pontryagin, terminal heat-residue and fixed-degree-carrier descendants require delta review.
 
 ### H. Finite Robin, Nicolas, Li, Pick and Loewner searches
 
@@ -174,27 +188,27 @@ The upstream fixed-window Theorems A–E and the pinned Lean source are register
 - short-window and growing-conductor extensions;
 - co-lattice, multirate, alias and prime-resonant constructions;
 - Xi-cardinal and confluent-cluster packets;
-- Fredholm/heat and terminal heat-residue criteria;
+- Fredholm/heat, terminal heat-residue and first-Hermite criteria;
 - every Q4 transfer.
 
 Finite coherent/no-alias window-bank no-gain theorems redirect the zero-proportion programme toward genuinely growing or richer arithmetic architectures.
 
-## 3. Review-conflict resolution
+## 3. Review-conflict and delta resolution
 
 Where broad archaeology and a specialist review disagree, the specialist reconstruction controls the mathematical verdict and archaeology controls genealogy.
 
-The most important instance is PIG. The archaeology packet inherited a source-branch label suggesting an RH-equivalence firewall. The Q4 specialist independently found that only `RH ⇒ PIG` is presently established; `PIG ⇒ RH` still requires an exact complete block recurrence and pole-energy adapter. The canonical status is therefore `UNPROVEN / RH-BEARING`, not `VERIFIED EQUIVALENCE`.
+The first important instance is PIG. The archaeology packet inherited a source-branch label suggesting an RH-equivalence firewall. The Q4 specialist independently found that only `RH ⇒ PIG` is presently established; `PIG ⇒ RH` still requires an exact complete block recurrence and pole-energy adapter.
 
-Post-cutoff descendants do not alter a frozen specialist verdict until independently reviewed. They are nevertheless surfaced immediately when they threaten a recommended production target, as PR #376 does for raw global Brownian stability.
+The second is Brownian stability. The cutoff ledger correctly recorded the pre-#376 state as open. PR #388 later independently verified the conclusion-changing post-cutoff refutation. The cutoff ledger remains immutable, while `POST_CUTOFF_CLAIM_RESOLUTIONS.tsv` and `POST_CUTOFF_REFUTATION_EVIDENCE.tsv` provide the normative live overlay.
 
 ## 4. What is closest to a genuine proof mechanism?
 
 No ranking measures mathematical difficulty, but the reviewed frontiers divide naturally:
 
-1. **Signed elementary transport:** policy Green debt, all-generation capacity-faithful boundary recurrence, adaptive endpoint score control.
-2. **Raw Brownian:** urgent independent review of the claimed Bohr-instability refutation before choosing between global stability, height-dependent truncation or producer redesign.
-3. **Aggregate Brownian canonical system:** conceptually independent but not yet constructed.
-4. **Q4 positive innovation/current assembly:** substantial corrected finite infrastructure, but the decisive positive energy and exact integrated consumer remain open.
+1. **Signed elementary transport:** policy Green debt, all-generation capacity-faithful boundary recurrence and adaptive endpoint score control.
+2. **Q4 positive innovation/current assembly:** substantial corrected finite infrastructure, but the decisive positive energy and exact integrated consumer remain open.
+3. **Redesigned or height-dependent Brownian constructions:** finite algebra survives, but the former global finite producers are ruled out.
+4. **Direct infinite Brownian/canonical system:** conceptually independent but not yet constructed.
 5. **Complete-kernel/Fredholm positivity:** clean global criteria whose prime-side positivity is itself RH-bearing.
 
 Compact RH-equivalent criteria are not ranked as evidence of proximity merely because they have short statements.
@@ -205,23 +219,26 @@ Compact RH-equivalent criteria are not ranked as evidence of proximity merely be
 - Exact refutations attach to exact hypotheses; they do not kill wider classes by association.
 - Surviving lemmas from failed proofs are integrated independently.
 - Every claim has separate mathematical, review, lifecycle, RH-relationship and computation statuses.
-- Every load-bearing `FALSE`, no-go or corrupted row has an exact evidence binding in `REFUTATION_EVIDENCE.tsv`.
+- Every load-bearing `FALSE`, no-go or corrupted row has an exact evidence binding.
+- The scientific-cutoff ledger remains frozen; later reviews enter through exact-SHA overlays.
 - Post-review and post-cutoff descendants do not inherit reviewed status.
-- Heavy retained experiments are referenced by hash and scope; they are not represented as rerun by this pass.
+- Heavy retained experiments are referenced by hash and scope; they are not represented as rerun.
 
 ## 6. Directory map
 
-- `CUTOFF.yaml` — global freeze, validation freeze, correction census and temporal normalization.
-- `REVIEW_SOURCES.tsv` — exact reviewer packets and authority boundaries.
-- `CLAIM_LEDGER.tsv` — canonical high-leverage claim registry at the scientific cutoff.
-- `REFUTATION_EVIDENCE.tsv` — exact evidence commits and resolvable paths for false/no-go/corrupted claims.
+- `CUTOFF.yaml` — global freeze, validation freeze, correction census and post-cutoff review resolutions.
+- `REVIEW_SOURCES.tsv` — exact original reviewer packets and authority boundaries.
+- `CLAIM_LEDGER.tsv` — canonical high-leverage registry at the scientific cutoff.
+- `POST_CUTOFF_CLAIM_RESOLUTIONS.tsv` — normative claim-status overlays from later independent reviews.
+- `REFUTATION_EVIDENCE.tsv` — exact cutoff-era evidence commits and paths.
+- `POST_CUTOFF_REFUTATION_EVIDENCE.tsv` — exact evidence for later independently reviewed refutations.
 - `VERIFICATION_REPORT.md` — completed pre-merge confirmation and audit record.
-- `POST_MERGE_DELTA_ADDENDUM.md` — normative correction for concurrently created PRs #375 and #376.
-- `ROUTE_DAGS.md` — established arrows and first open load-bearing nodes.
-- `REFUTATIONS_AND_FIREWALLS.md` — exact dead mechanisms and scope warnings.
-- `OPEN_HINGES.md` — prioritized live questions, including the #376 review alert.
+- `POST_MERGE_DELTA_ADDENDUM.md` — post-cutoff census and reviewed Brownian resolution.
+- `ROUTE_DAGS.md` — established arrows, refuted arrows and first live alternatives.
+- `REFUTATIONS_AND_FIREWALLS.md` — cutoff-era dead mechanisms and scope warnings.
+- `OPEN_HINGES.md` — prioritized live questions after the Brownian resolution.
 - `POST_REVIEW_DELTA.md` — quarantined source movement and post-cutoff work.
-- `CANONICAL_EXTRACTION_PLAN.md` — theorem packet boundaries and proposed promotion rules.
-- `NEXT_INTEGRATOR.md` — operational handoff.
+- `CANONICAL_EXTRACTION_PLAN.md` — theorem packet boundaries and promotion rules.
+- `NEXT_INTEGRATOR.md` — operational handoff and current four-lane review queue.
 
-The four original review PRs remain frozen evidence deposits and are not merged by this pass.
+The original review PRs and PR #388 remain exact evidence deposits; the front door is not a substitute for their detailed proofs.

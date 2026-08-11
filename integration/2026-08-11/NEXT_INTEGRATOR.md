@@ -1,108 +1,162 @@
 # Next-integrator handoff
 
-## Frozen identity
+## Frozen identity and exact overlays
 
 ```text
-integration cutoff: 2026-08-11T08:20:51Z
-pre-merge validation cutoff: 2026-08-11T09:05:27Z
-post-merge delta census: 2026-08-11T09:13:13Z
-frozen pre-integration main: d6409319b4041cd09bee85f55a344631508f2501
-merged integration commit: 0552d80078111ac677fa163995d8c1bfddc61f0d
-review evidence: PRs #369–#372 at the heads in REVIEW_SOURCES.tsv
-RH: unproved
+scientific integration cutoff: 2026-08-11T08:20:51Z
+pre-merge validation cutoff:   2026-08-11T09:05:27Z
+post-merge delta census:        2026-08-11T09:13:13Z
+frozen pre-integration main:    d6409319b4041cd09bee85f55a344631508f2501
+principal integration merge:    0552d80078111ac677fa163995d8c1bfddc61f0d
+post-merge census merge:        3a441dfa2d287b17b22dcd5dbfc0123355ce8232
+PR #376 review merge:           a88bed9711b1b2057fb258354924056c5ad8696b
+RH:                             unproved
 ```
 
-The completed confirmation pass is recorded in `VERIFICATION_REPORT.md`. Exact evidence paths for false/no-go/corrupted claims are in `REFUTATION_EVIDENCE.tsv`. Those files correct two stale reviewer-ledger aliases without changing either mathematical verdict.
+The scientific-cutoff `CLAIM_LEDGER.tsv` remains immutable. `POST_CUTOFF_CLAIM_RESOLUTIONS.tsv` and `POST_CUTOFF_REFUTATION_EVIDENCE.tsv` are normative overlays for independently reviewed later work.
 
-`POST_MERGE_DELTA_ADDENDUM.md` is normative for PRs #375 and #376, which were created after the scientific cutoff but surfaced only in the final post-merge census.
+The completed confirmation pass is recorded in `VERIFICATION_REPORT.md`. Exact evidence paths for cutoff-era false/no-go/corrupted claims are in `REFUTATION_EVIDENCE.tsv`. `POST_MERGE_DELTA_ADDENDUM.md` records the later Brownian resolution and unresolved post-cutoff work.
 
 ## Mandatory first checks
 
 1. Confirm `main` and every review/source head before applying any verdict.
-2. Treat PRs #337 at `36b3...`, #368 beyond `f695...`, #373 at `34fe...`, #375 at `a366...`, and #376 at `2ef1...` as unreviewed deltas.
-3. Do not restore frozen GFEP, producer positivity or BTF to `OPEN`; they are false for the frozen policy.
-4. Do not restore PR #359 as a live complete proof; its synthesis/current arrows are false.
-5. Do not label PIG an established RH equivalence. The reviewed state proves `RH ⇒ PIG`; the complete reverse assembly remains open.
-6. Never import pre-#354 odd-source Q4 formulas without the convolution/prefix correction.
-7. Block binary-corrupted T-90502.
-8. Preserve the exact upstream/local formalization boundary for Anthropic Zeta23.
-9. Use `REFUTATION_EVIDENCE.tsv`, not stale aliases in a source review table, when resolving terminal-boundary or Mersenne refutation files.
-10. Suspend new work aimed solely at raw global all-large-`N`/cofinal Brownian stability until PR #376 receives an independent review.
+2. Do not restore frozen GFEP, producer positivity or BTF to `OPEN`; they are false for the frozen policy.
+3. Do not restore PR #359 as a live complete proof; its synthesis/current arrows are false.
+4. Do not label PIG an established RH equivalence. The reviewed state proves `RH ⇒ PIG`; the complete reverse assembly remains open.
+5. Never import pre-#354 odd-source Q4 formulas without the convolution/prefix correction.
+6. Block binary-corrupted T-90502.
+7. Preserve the exact upstream/local formalization boundary for Anthropic Zeta23.
+8. Use exact evidence overlays rather than stale aliases or superseded source-branch descriptions.
+9. Do not restore raw all-large/cofinal Brownian half-plane stability as an open target. PR #376 at `0ed0e7de3aa1b81bb832df53d861dd6f27f2db8b` is independently `VERIFIED WITH FIXES` by PR #388.
+10. Do not restore the current logarithmic Nörlund or central-binomial Green finite-real-zero finishes. Their finite algebra, local convergence and corrected one-fiber results remain valid.
 
-## Immediate delta-review queue
+## Resolved post-cutoff review
 
-1. **PR #376** `2ef174866ba9ce3a1c4939797ca223680bb21734`: claimed high-frequency Bohr refutation of raw Brownian cofinal stability. This is conclusion-changing if correct.
-2. **PR #337** delta `46a4... → 36b3...`: new Q4 Hermitian/dissipation proposal.
-3. **PR #368** delta `f695... → 0234...`: odd half-line and sine-Cauchy reductions.
-4. **PR #375** `a3662f62ac0f1a7ec21bca3498938fedcbeeddba`: terminal Gaussian heat residues and finite linear witnesses.
-5. **PR #373** `34fe...`: Gaussian Fredholm–Pontryagin criteria.
-
-These reviews should be theorem-level, lightweight and adversarial; do not rerun large experiment packages unless a reviewer finds a genuinely load-bearing numerical dependency.
-
-## PR #376 binary review tests
-
-A valid review must resolve:
+### PR #376 — Brownian Bohr instability
 
 ```text
-selected-prime coefficient lower bounds
-suppression of multiples and composite dependence
-uniform Steinhaus residual estimate
-polygon closure with available phase mass
-simultaneous Kronecker approximation
-local-uniform vertical-limit convergence
-Hurwitz transfer to actual H_N zeros
-quantifier order in N, height and strip coordinate
+reviewed source head: 0ed0e7de3aa1b81bb832df53d861dd6f27f2db8b
+review PR:            #388
+review head:          ede3f2db2fe0c571964d2e603ba5d91ee463091a
+review verdict:       VERIFIED WITH FIXES
+merge commit:         a88bed9711b1b2057fb258354924056c5ad8696b
 ```
 
-Until then, retain the reviewed finite Brownian algebra and compact-height convergence, but do not invest in proving the exact global cofinal theorem that #376 claims impossible.
+Canonical effects:
+
+- raw all-large/cofinal half-plane stability: `FALSE`;
+- current logarithmic Nörlund and central-binomial Green finite-real-zero finishes: `FALSE`;
+- finite Brownian gamma/Dirichlet/Hermite/occupation algebra: retained;
+- compact-height convergence and fixed-zero `1/N` displacement: retained at corrected scope;
+- live alternatives: height-dependent truncation, producer redesign and a direct infinite canonical/Hermite-Biehler system.
+
+Before extracting source theorems, apply the four wording/scope fixes listed in PR #388 rather than rewriting source history.
+
+## Immediate live review lanes
+
+The live graph has moved materially beyond the August 11 cutoff. Review by lineage, not by PR count.
+
+### Lane 1 — elementary corrections and endpoint payment
+
+Review together:
+
+```text
+#381  8b32a5941a349df16bdce59909ad66741293cb0a
+#382  d5630815f68554649445cbe19989b562dc685bd3
+```
+
+Priority questions:
+
+- Does #382 genuinely refute recursive critical-hinge residual monotonicity and generic convex-cone preservation?
+- What survives from top-half elimination?
+- Does #381 correctly reduce the factor-64 payment to signed upward variation, and is that independent progress or an RH-bearing restatement?
+
+This lane is urgent because #382 directly changes a current Priority-A mechanism.
+
+### Lane 2 — current Q4 proof and normal-form lineage
+
+Review the exact live descendants and dependencies around:
+
+```text
+#337  36b3bebea80e18f965f304638e2123c4d2363a09  (re-query before use)
+#383  01d3c8689290ddc6eb2d274467fdbfddacc7da81
+#386  66e60006bedbababefae22ad8f88f06753139a2b
+#389  cde084ee1f82f7cd750f2b80843b772f177c45fe  (Q4 claims only)
+```
+
+Test every proposal against the existing coefficient/operator, multiplier/inertia, small-inertia/current, source-order, reserve-double-spending and exact-consumer firewalls. Do not treat another local normal form as closure unless the complete positive-current consumer is proved.
+
+### Lane 3 — operator, Fredholm and fixed-degree blindness
+
+Review together:
+
+```text
+#368  023434958a4c115c4d1f7d93ea310716f8bd81ae
+#373  34fe2037ba33bc61fc1e6ce04c7e74ab7b13e794
+#387  388ba7feb9927025d46a70963389ec45c9ead2ac
+#389  cde084ee1f82f7cd750f2b80843b772f177c45fe  (Fredholm/operator claims only)
+```
+
+Separate exact trace-class/index criteria from prime-side positivity. Check pole conventions, domains, parity reduction, finite nonlinear witness completeness and the claimed fixed-degree/high-carrier blindness theorem.
+
+### Lane 4 — terminal heat and first-Hermite lineage
+
+Review the source lineage and current descendants around:
+
+```text
+#375  a3662f62ac0f1a7ec21bca3498938fedcbeeddba
+#378  e1d74d60956329486f94c45e26d105608c973397
+#379  589f1c05ccaf248cf08c87fefa7d5ab6d2380708
+#384  95ed673529fd4ed8ac9308f6ef43e11bda1954c1
+#385  ea2d7c26c1fd3a58c3e31609cb2411ea0c0fd20a
+#390  ea20af8867c3119c23efc27738d343aac2f79362
+#389  cde084ee1f82f7cd750f2b80843b772f177c45fe  (heat/Hermite claims only)
+```
+
+Trace the exact theorem chain from the terminal Gaussian heat residue to safe-Euler resolvents, zero-heat criteria, broad-kernel positivity and almost-everywhere first-Hermite positivity. Separate unconditional local positivity from the RH-equivalent zero-heat sign. Do not inherit upstream Zeta23 formalization.
+
+### Lower urgency — Brownian density strengthening
+
+PR #380 at `23d93b0555bb70ee39b0d87ff278a062a51651bc` strengthens the already integrated Bohr no-go to positive vertical density. It is worth reviewing for canonical completeness but is not conclusion-changing for route selection.
 
 ## Packet-extraction order
 
-1. Cross-cutting firewalls and refutations.
+1. Cross-cutting firewalls and refutations, including the PR #376/#388 Brownian no-go packet.
 2. Carry/fragmentation/Markov infrastructure plus #356 no-go.
-3. Endpoint/occupancy/annular packet.
-4. Corrected Robin packet and reviewed finite raw Brownian algebra; defer the raw global frontier until #376 review.
-5. Corrected Q4 source/state infrastructure, excluding failed full composition.
-6. Operator/kernel/Fredholm reviewed snapshot.
+3. Endpoint/occupancy/annular packet after #381/#382 review.
+4. Brownian finite algebra, corrected one-fiber packet and Bohr-instability firewalls.
+5. Corrected Q4 source/state infrastructure, excluding every failed or unreviewed full composition.
+6. Operator/kernel/Fredholm reviewed snapshots.
 7. External Zeta23 provenance.
 8. Finite witness programmes.
 
 ## Validation obligations
 
-The pre-merge pass completed the following for the frozen synthesis:
-
-- exact review-head and main-SHA confirmation;
-- resolution of all 18 authoritative review artifacts;
-- changed-file and merge-base audit;
-- PR comments/reviews/threads/status audit;
-- row-by-row high-leverage status reconciliation;
-- exact refutation-evidence mapping;
-- compatibility review against the durable front-door validator.
-
-The final census corrected the earlier recent-PR result by adding #375 and #376 to quarantine. A future validator should recheck:
+A future validator should check:
 
 - exact SHA syntax and reachability;
-- duplicate claim keys;
+- duplicate claim keys across the frozen ledger and all overlays;
 - required supersession/refutation edges;
-- no canonical claim points to a post-review head;
+- no reviewed claim points to a later unreviewed head;
 - every `FALSE` row has an exact counterexample/no-go source;
 - every `RH_EQUIVALENT` row is distinct from `INDEPENDENT_PROGRESS`;
 - every computation-bearing claim declares exact/directed/empirical scope;
 - every external claim declares upstream versus local provenance;
-- every PR created after the scientific cutoff is represented in the delta census.
+- every post-cutoff PR is represented in the delta census;
+- every resolved quarantine has a review PR, reviewed source head and normative overlay.
 
 ## Suggested next creation allocation
 
-Prioritize:
+While the four review lanes run, prioritize new work on:
 
 ```text
 source-specific policy Green debt
-all-generation boundary recurrence
+all-generation capacity-faithful boundary recurrence
 adaptive endpoint signed-score packing
 ```
 
-Maintain one independent Q4 lane focused on the complete positive-current consumer rather than new local reserves. Keep operator/Fredholm routes as exact global criteria and hostile benchmarks until a genuinely independent prime-side sign mechanism appears. Do not relaunch raw global Brownian cofinal stability before #376 review; a redesigned height-dependent or aggregate Brownian route remains a separate possibility.
+Suspend recursive critical-hinge production pending #382 review. Maintain one Q4 lane focused only on the complete positive-current consumer. For Brownian work, pursue height-dependent truncation, producer redesign or a direct infinite system—not the refuted global finite-stability targets.
 
 ## Review-branch preservation
 
-Do not delete the branches of PRs #369–#372 until their full reports and TSVs have been copied into a merged audit archive. This synthesis contains their conclusions but not every line-by-line reconstruction.
+Do not delete the branches of PRs #369–#372 or #388 until their reports and TSVs have permanent audit residency. The front door summarizes their conclusions but does not replace their line-by-line reviews.

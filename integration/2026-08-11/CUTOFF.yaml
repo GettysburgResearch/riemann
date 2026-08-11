@@ -8,6 +8,8 @@ main_sha: d6409319b4041cd09bee85f55a344631508f2501
 main_role: historical integration base, not the live scientific frontier
 integration_branch: integration/20260811-major-review-synthesis
 merged_integration_commit: 0552d80078111ac677fa163995d8c1bfddc61f0d
+post_merge_census_commit: 3a441dfa2d287b17b22dcd5dbfc0123355ce8232
+pr376_review_merge_commit: a88bed9711b1b2057fb258354924056c5ad8696b
 review_wave:
   - pr: 369
     lane: elementary arithmetic
@@ -58,18 +60,38 @@ post_merge_delta_census:
       created_utc: '2026-08-11T08:55:34Z'
       head: a3662f62ac0f1a7ec21bca3498938fedcbeeddba
       lane: terminal Gaussian heat residue and finite linear witnesses
+      status: UNREVIEWED
     - pr: 376
       created_utc: '2026-08-11T09:04:04Z'
-      head: 2ef174866ba9ce3a1c4939797ca223680bb21734
-      lane: claimed raw Brownian cofinal-stability refutation
-      priority: urgent independent delta review
+      initial_head: 2ef174866ba9ce3a1c4939797ca223680bb21734
+      reviewed_head: 0ed0e7de3aa1b81bb832df53d861dd6f27f2db8b
+      lane: raw and finite-mixture Brownian Bohr instability
+      status: RESOLVED_BY_INDEPENDENT_REVIEW
+post_cutoff_review_resolutions:
+  - review_pr: 388
+    reviewed_source_pr: 376
+    reviewed_source_head: 0ed0e7de3aa1b81bb832df53d861dd6f27f2db8b
+    review_head: ede3f2db2fe0c571964d2e603ba5d91ee463091a
+    review_cutoff_utc: '2026-08-11T12:31:26Z'
+    merged_review_commit: a88bed9711b1b2057fb258354924056c5ad8696b
+    verdict: VERIFIED_WITH_FIXES
+    claim_overlay: integration/2026-08-11/POST_CUTOFF_CLAIM_RESOLUTIONS.tsv
+    evidence_overlay: integration/2026-08-11/POST_CUTOFF_REFUTATION_EVIDENCE.tsv
+    detailed_report: reports/integration-wave/20260811-pr376-brownian-bohr-instability-review.md
+    status_table: audits/integration-wave/20260811-pr376-brownian-bohr-instability-status.tsv
+    scientific_effect: >-
+      The current raw all-large/cofinal stability target and the current logarithmic Nörlund
+      and central-binomial Green finite-real-zero finishes are false. Finite Brownian algebra,
+      compact-height convergence and corrected one-fiber results survive.
 post_review_delta_policy: >-
   Any source head that moved beyond the SHA independently reviewed by the responsible lane,
   or any work created after the scientific cutoff, is quarantined as POST_REVIEW_DELTA. Such
-  a descendant does not inherit the ancestor verdict.
+  a descendant does not inherit the ancestor verdict. A later independent review is recorded
+  as a separate exact-SHA overlay rather than rewriting the frozen scientific-cutoff ledger.
 heavy_compute_policy: >-
-  No heavy experiment was rerun during integration. Review packets inspected retained code,
-  manifests, hashes, outputs, and scopes; only lightweight exact counterexamples were added.
+  No heavy experiment was rerun during integration or the PR #376 delta review. Review packets
+  inspected retained code, manifests, hashes, outputs, and scopes; analytic verdicts do not
+  rely on floating reconnaissance.
 scientific_status:
   riemann_hypothesis: UNPROVEN
   accepted_complete_proof: NONE
