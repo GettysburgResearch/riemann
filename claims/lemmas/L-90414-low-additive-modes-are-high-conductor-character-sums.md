@@ -1,7 +1,7 @@
-# L-90414 — The remaining low additive modes are high-conductor Dirichlet-character prime sums
+# L-90414 — The remaining low additive modes are large-modulus Dirichlet-character prime sums
 
 Claim ID: `L-90414`  
-Title: Every low residue in the compact-Q4 major arc has an exact Dirichlet-character expansion with conductor at least the square-root scale  
+Title: Every low residue in the compact-Q4 major arc has an exact Dirichlet-character expansion with reduced additive modulus at least the square-root scale  
 Status: **PROPOSED COMPLETE EXACT HYBRID REDUCTION — INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-11  
@@ -94,7 +94,7 @@ prime dividing \(q\), one obtains the exact identity
 \tag{L-90414.4}
 \]
 
-The second line is a completely explicit local-conductor correction and obeys
+The second line is a completely explicit local-modulus correction and obeys
 
 \[
 \boxed{
@@ -105,9 +105,12 @@ The second line is a completely explicit local-conductor correction and obeys
 \tag{L-90414.5}
 \]
 
-Taking imaginary parts yields \(P(X,a)\).
+Taking imaginary parts yields \(P(X,a)\). The characters in
+(L-90414.4) are characters modulo \(q\); an imprimitive character may have
+primitive conductor strictly smaller than \(q\). The theorem asserts a large
+**additive modulus**, not that every primitive conductor is large.
 
-## 3. Conductors in the PIG major arc
+## 3. Moduli in the PIG major arc
 
 For
 
@@ -140,7 +143,7 @@ q'
 \]
 
 Therefore every nonzero additive mode left open by `L-90412` is an exact
-linear combination of prime sums twisted by characters of conductor at least
+linear combination of prime sums twisted by characters modulo an integer at least
 the square-root scale, plus an explicit polylogarithmic correction.
 
 ## 4. Consequence
@@ -154,7 +157,7 @@ number of periods      at most sqrt(N);
 weight in PIG          inverse-square in the additive frequency.
 ```
 
-The decomposition connects the Q4 PIG obstruction to the growing-conductor
+The decomposition connects the Q4 PIG obstruction to the growing-modulus/conductor
 Dirichlet-L direction of the imported Claude programme. A positive proportion
 of critical zeros for those \(L\)-functions is not by itself enough to bound
 \(\psi(Y,\chi)\) at the square-root scale. A successful continuation needs a
