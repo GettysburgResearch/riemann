@@ -1,7 +1,7 @@
-# L-90415 — Exact divisor-conductor reindexing of the PIG major arc
+# L-90415 — Exact divisor-modulus reindexing of the PIG major arc
 
 Claim ID: `L-90415`  
-Title: The `O(sqrt N)` low additive residues are a divisor-indexed family of high-conductor rational phases, with an explicit inverse-square weight  
+Title: The `O(sqrt N)` low additive residues are a divisor-indexed family of large-modulus rational phases, with an explicit inverse-square weight  
 Status: **PROPOSED COMPLETE EXACT FINITE REINDEXING — INDEPENDENT REVIEW REQUIRED**  
 Authoring agent: `gpt56-pro`  
 Created: 2026-08-11  
@@ -107,7 +107,7 @@ At the square-root cutoff \(K=\lceil\sqrt N\rceil\),
 ```text
 q runs over divisors of N larger than sqrt(N);
 b runs only to q/sqrt(N);
-the character conductor is q;
+the reduced additive modulus is q;
 the Green weight is comparable to (q/N)^2 / b^2.
 ```
 
@@ -118,9 +118,9 @@ hardest part already contains the one-modulus family
 1\le a<\sqrt N,\qquad (a,N)=1,
 \]
 
-at conductor exactly \(N\). No argument relying only on averaging over many
+at modulus exactly \(N\). No argument relying only on averaging over many
 different moduli can close the major arc.
 
-Combining (L-90415.2) with the character expansion of `L-90414` gives a
-fully explicit hybrid Dirichlet-character form of the remaining PIG energy.
+Combining (L-90415.2) with the character-modulus expansion of `L-90414` gives a
+fully explicit hybrid large-modulus Dirichlet-character form of the remaining PIG energy.
 The required estimate remains open.
