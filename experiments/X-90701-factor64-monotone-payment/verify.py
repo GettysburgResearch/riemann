@@ -169,6 +169,26 @@ def main() -> dict[str, object]:
         abel_trials += 1
     gates["monotone_occupation_trials"] = True
 
+    signed_trials = 0
+    for _ in range(500):
+        length = rng.randint(4, 90)
+        occ = [Fraction(rng.randint(-60, 60), rng.randint(1, 30)) for _m in range(2, length + 1)]
+        d_pairs = [reward(m) for m in range(2, length + 1)]
+        dot_lo = sum(
+            (lower(d) * x if x >= 0 else upper(d) * x)
+            for d, x in zip(d_pairs, occ)
+        )
+        extended = occ + [Fraction(0)]
+        variation = sum(
+            max(Fraction(0), extended[j + 1] - extended[j])
+            for j in range(len(occ))
+        )
+        rhs = Fraction(9, 10) * occ[0] - Fraction(6, 5) * variation
+        if dot_lo < rhs:
+            raise AssertionError(("signed variation", dot_lo, rhs))
+        signed_trials += 1
+    gates["signed_occupation_variation_trials"] = True
+
     if not all(gates.values()):
         raise AssertionError([name for name, ok in gates.items() if not ok])
 
@@ -191,6 +211,7 @@ def main() -> dict[str, object]:
             "minimum_index": min_index,
         },
         "monotone_occupation_trials": abel_trials,
+        "signed_occupation_variation_trials": signed_trials,
         "scope": "exact factor-64 reward algebra only; critical occupation variation and RH remain open",
     }
     payload = json.dumps(result, sort_keys=True, separators=(",", ":")).encode()
