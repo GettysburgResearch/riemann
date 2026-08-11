@@ -1,0 +1,64 @@
+{
+  "classification": "PASS_X_90602_BROWNIAN_MIXTURE_INSTABILITY",
+  "coefficient_checks": 7368,
+  "exact_weight_checks": 268,
+  "mixture_rows": [
+    {
+      "N": 10,
+      "max_leading_coefficient": 0.99819801660215,
+      "min_leading_coefficient": 2.000406370208616e-12,
+      "mixture": "log",
+      "top_mass_times_log_N": 0.6647891658542625
+    },
+    {
+      "N": 10,
+      "max_leading_coefficient": 1.033123779939016,
+      "min_leading_coefficient": 2.2118348439792107e-12,
+      "mixture": "green",
+      "top_mass_times_log_N": 0.7261189409776496
+    },
+    {
+      "N": 20,
+      "max_leading_coefficient": 1.1378966141083473,
+      "min_leading_coefficient": 1.462778599125587e-24,
+      "mixture": "log",
+      "top_mass_times_log_N": 0.640133395673894
+    },
+    {
+      "N": 20,
+      "max_leading_coefficient": 1.178485016906109,
+      "min_leading_coefficient": 1.6036729131566909e-24,
+      "mixture": "green",
+      "top_mass_times_log_N": 0.6977126589816197
+    },
+    {
+      "N": 40,
+      "max_leading_coefficient": 1.2537419450622211,
+      "min_leading_coefficient": 1.0111112136768958e-48,
+      "mixture": "log",
+      "top_mass_times_log_N": 0.6300849507785308
+    },
+    {
+      "N": 40,
+      "max_leading_coefficient": 1.2969634119432394,
+      "min_leading_coefficient": 1.0979205689868052e-48,
+      "mixture": "green",
+      "top_mass_times_log_N": 0.682240309876341
+    },
+    {
+      "N": 60,
+      "max_leading_coefficient": 1.3109720237618567,
+      "min_leading_coefficient": 7.630563677386609e-73,
+      "mixture": "log",
+      "top_mass_times_log_N": 0.6283563505257823
+    },
+    {
+      "N": 60,
+      "max_leading_coefficient": 1.3547190572671748,
+      "min_leading_coefficient": 8.241394030425876e-73,
+      "mixture": "green",
+      "top_mass_times_log_N": 0.6773836353699386
+    }
+  ],
+  "scope": "Finite mixture algebra only; the off-line high-frequency theorem is the written selected-prime/Steinhaus/Kronecker/Rouche proof."
+}

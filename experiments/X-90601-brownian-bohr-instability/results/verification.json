@@ -1,0 +1,38 @@
+{
+  "classification": "PASS_X_90601_BROWNIAN_BOHR_INSTABILITY",
+  "continuum_cancellation_samples": [
+    [
+      0.1,
+      0.3
+    ],
+    [
+      0.25,
+      7.0
+    ],
+    [
+      -1.2,
+      2.5
+    ]
+  ],
+  "exact_coefficient_ratio_checks": 3160,
+  "liouville_probe_sigma_quarter": {
+    "N79": 0.006229492615643657,
+    "N80": -0.002781938773864517
+  },
+  "multiple_tail_eta_upper": 2.1630560520999448e-07,
+  "root_N60_high": {
+    "absolute_residual": 1.4289480766565971e-11,
+    "imag": 270.25661198043434,
+    "newton_steps": 3,
+    "real": 0.2526864586875894,
+    "relative_residual": 4.757514859810121e-15
+  },
+  "root_N63": {
+    "absolute_residual": 7.25212529640797e-13,
+    "imag": 55.82354339041126,
+    "newton_steps": 3,
+    "real": 0.2508380937103963,
+    "relative_residual": 1.144300396745986e-15
+  },
+  "scope": "Finite algebra and numerical diagnostics only; the unconditional high-frequency refutation is the written Steinhaus-polygon-Kronecker-Hurwitz proof."
+}
