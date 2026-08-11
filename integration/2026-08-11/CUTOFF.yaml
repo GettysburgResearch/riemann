@@ -29,6 +29,21 @@ review_wave:
       The declared timestamp is later than this integration's observed wall-clock cutoff.
       It is not used as a chronological boundary. Every accepted finding is pinned instead
       to the review head and the exact source SHAs recorded in the review packet.
+verification_pass:
+  cutoff_utc: '2026-08-11T09:05:27Z'
+  validated_initial_pr_head: ec7109a3950b4cd471aeca05ad41f89be373e36b
+  main_sha_reconfirmed: d6409319b4041cd09bee85f55a344631508f2501
+  authoritative_review_artifacts_resolved: 18
+  authoritative_review_artifacts_missing: 0
+  unresolved_review_threads: 0
+  workflow_runs: 0
+  combined_status_contexts: 0
+  stale_reviewer_path_aliases_corrected: 2
+  report: integration/2026-08-11/VERIFICATION_REPORT.md
+  refutation_evidence: integration/2026-08-11/REFUTATION_EVIDENCE.tsv
+  note: >-
+    No CI workflow was configured for the integration head. Verification used exact GitHub
+    commit, comparison, contents, review-thread and status APIs; no heavy experiment was rerun.
 post_review_delta_policy: >-
   Any source head that moved beyond the SHA independently reviewed by the responsible lane
   is quarantined as POST_REVIEW_DELTA. Such a descendant does not inherit the ancestor verdict.
