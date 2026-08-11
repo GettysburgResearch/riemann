@@ -1,0 +1,96 @@
+{
+  "finite_tail_control": {
+    "actual": 0.006485280404802501,
+    "envelope": 0.011349896705229926
+  },
+  "gates": {
+    "kernel_finite_difference": true,
+    "prime_continuum_three_point": true,
+    "real_part_formula": true,
+    "tail_envelope": true,
+    "target_residue_minus_two": true,
+    "threat_exponent_identity": true,
+    "three_gaussian_factorization": true
+  },
+  "kernel_identity": {
+    "max_error": 1.1102230246251565e-16,
+    "sample_errors": [
+      1.1102230246251565e-16,
+      1.734723475976807e-17,
+      7.911556306605241e-17,
+      9.469747252991005e-17,
+      7.979727989493313e-17
+    ]
+  },
+  "parameters": {
+    "a": 0.08265625,
+    "integral_steps": 48000,
+    "prime_limit": 162754,
+    "sigma": 1.25,
+    "t_max": 12.0,
+    "x": 3.7,
+    "y": 0.23
+  },
+  "prime_continuum": {
+    "absolute_error": 6.38378239159465e-16,
+    "delta_D_real": -0.019091931400919332,
+    "direct_value": -0.01909193140091997,
+    "scalar_direct": 0.5792920315835312,
+    "scalar_from_D": 0.5792920315835118
+  },
+  "real_part_formula": {
+    "max_error": 1.3877787807814457e-17,
+    "sample_errors": [
+      2.168404344971009e-19,
+      1.734723475976807e-18,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  "status": "PASS_TERMINAL_GAUSSIAN_HEAT_RESIDUE",
+  "target_residue": {
+    "error_from_minus_two": 1.3100631690576847e-14,
+    "kernel_at_target": -0.014875355763845483,
+    "normalized_contribution": -1.999999999999987
+  },
+  "threat_exponent": [
+    {
+      "d": 0.11,
+      "error": 0.0,
+      "expanded": -0.10090000000000002,
+      "factored": -0.10090000000000002,
+      "r": 0.07
+    },
+    {
+      "d": 0.31,
+      "error": 6.938893903907228e-18,
+      "expanded": 0.043899999999999995,
+      "factored": 0.04389999999999999,
+      "r": -0.19
+    },
+    {
+      "d": 0.44,
+      "error": 2.7755575615628914e-17,
+      "expanded": -0.043600000000000055,
+      "factored": -0.04360000000000003,
+      "r": 0.53
+    },
+    {
+      "d": 0.23,
+      "error": 0.0,
+      "expanded": 0.0,
+      "factored": 0.0,
+      "r": 0.0
+    }
+  ],
+  "three_gaussian_factorization": {
+    "max_error": 4.163336342344337e-17,
+    "sample_errors": [
+      0.0,
+      4.163336342344337e-17,
+      3.729655473350135e-17,
+      2.0816681711721685e-17,
+      1.0842021724855044e-19
+    ]
+  }
+}
