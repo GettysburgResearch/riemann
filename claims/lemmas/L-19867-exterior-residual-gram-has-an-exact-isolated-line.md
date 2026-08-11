@@ -10,42 +10,34 @@ Nonclaim: this is not a lower bound for the indefinite localized Weil matrix
 
 ## 1. Abstract finite theorem
 
-Let `H` be a finite-dimensional Hilbert space with an orthogonal decomposition
+Let
 
 \[
  H=\mathbb Cp\oplus E,
- \qquad \|p\|=1.
+ \qquad \|p\|=1,
 \tag{L-19867.1}
 \]
 
-Let `D` be a positive semidefinite Hermitian matrix.  Write its block form as
+be an orthogonal decomposition, and let
 
 \[
  D=
  \begin{pmatrix}
  m&b^*\\
  b&C
- \end{pmatrix},
+ \end{pmatrix}\succeq0,
  \qquad
  m=\langle p,Dp\rangle,
+ \qquad C\succeq I_E.
 \tag{L-19867.2}
 \]
 
-and assume
-
-\[
- C\succeq I_E.
-\tag{L-19867.3}
-\]
-
-Define the positive metric
+Define
 
 \[
  \mathcal G=
- \begin{pmatrix}
- 1&0\\0&C
- \end{pmatrix}.
-\tag{L-19867.4}
+ \begin{pmatrix}1&0\\0&C\end{pmatrix}.
+\tag{L-19867.3}
 \]
 
 Then the following statements hold exactly.
@@ -58,15 +50,14 @@ For every `w in E`,
  \boxed{
  \|Dw\|_{\mathcal G^{-1}}
  \ge \|w\|_{\mathcal G}.}
-\tag{L-19867.5}
+\tag{L-19867.4}
 \]
 
-Thus the isolated-line gate holds at shift `sigma=0` with the exact singular
-moat
+Thus the isolated-line gate at shift `sigma=0` has the exact singular moat
 
 \[
  \boxed{g=1.}
-\tag{L-19867.6}
+\tag{L-19867.5}
 \]
 
 ### (b) Target residual
@@ -76,17 +67,16 @@ The target row satisfies
 \[
  \boxed{
  \|Dp\|_{\mathcal G^{-1}}^2
- \le m+m^2.}
-\tag{L-19867.7}
+ \le m+m^2,}
+\tag{L-19867.6}
 \]
 
-Consequently
+and hence
 
 \[
  \boxed{
- {b_{\rm tar}\over g}
- \le\sqrt{m+m^2}.}
-\tag{L-19867.8}
+ {b_{\rm tar}\over g}\le\sqrt{m+m^2}.}
+\tag{L-19867.7}
 \]
 
 ### (c) Exact generalized spectrum
@@ -96,53 +86,62 @@ Put
 \[
  c=C^{-1/2}b,
  \qquad \theta=\|c\|^2.
+\tag{L-19867.8}
+\]
+
+Then
+
+\[
+ 0\le\theta\le m,
 \tag{L-19867.9}
 \]
 
-Positivity of `D` gives
-
-\[
- 0\le\theta\le m.
-\tag{L-19867.10}
-\]
-
-The generalized eigenvalues of `(D,mathcal G)` consist of the eigenvalue `1`
+and the generalized spectrum of `(D,mathcal G)` consists of the eigenvalue `1`
 on `c^perp subset E`, together with
 
 \[
  \boxed{
  \lambda_\pm
  ={1+m\pm\sqrt{(1-m)^2+4\theta}\over2}.}
-\tag{L-19867.11}
+\tag{L-19867.10}
 \]
 
 If `0<=m<1`, then
 
 \[
- \lambda_-\le m<1\le\lambda_+,
+ \lambda_-\le m<1\le\lambda_+.
+\tag{L-19867.11}
+\]
+
+Thus `lambda_-` is a unique simple generalized ground eigenvalue and
+
+\[
+ \boxed{
+ \lambda_2(D,\mathcal G)\ge1.}
 \tag{L-19867.12}
 \]
 
-so `lambda_-` is a unique simple generalized ground eigenvalue and
+When `dim E>=2`, as in every nontrivial application of `L-19862`, the subspace
+`c^perp` is nonzero and therefore
 
 \[
  \boxed{\lambda_2(D,\mathcal G)=1.}
 \tag{L-19867.13}
 \]
 
+(The equality also holds in dimension one when `c=0`; otherwise the second
+eigenvalue is `lambda_+>1`.)
+
 ### (d) Ground-line convergence
 
-Let `xi` be the generalized ground line.  In the whitened coordinates
-`mathcal G^(1/2)H`, it has a representative
+In whitened coordinates, the generalized ground line has a representative
 
 \[
- \begin{pmatrix}
- 1\\-c/(1-\lambda_-)
- \end{pmatrix}.
+ \begin{pmatrix}1\\-c/(1-\lambda_-)\end{pmatrix}.
 \tag{L-19867.14}
 \]
 
-Therefore its metric angle from the target obeys
+Consequently
 
 \[
  \boxed{
@@ -151,17 +150,18 @@ Therefore its metric angle from the target obeys
 \tag{L-19867.15}
 \]
 
-In particular the isolated line converges to `p` whenever `m->0`.
+If `D`, `mathcal G`, and `p` commute with parity, uniqueness also makes `xi`
+even.
 
 ## 2. Proof
 
 For `w=(0,y) in E`,
 
 \[
- Dw=(b^*y,Cy).
+ Dw=(b^*y,Cy),
 \]
 
-Hence
+so
 
 \[
 \begin{aligned}
@@ -169,31 +169,30 @@ Hence
  &=|b^*y|^2+(Cy)^*C^{-1}(Cy)\\
  &=|b^*y|^2+y^*Cy\\
  &\ge y^*Cy
- =\|w\|_{\mathcal G}^2,
+ =\|w\|_{\mathcal G}^2.
 \end{aligned}
 \]
 
-which proves (L-19867.5).
+This proves (L-19867.4).
 
-The Schur complement of the positive block `C` in `D` is nonnegative:
+The Schur complement of `C` in the positive matrix `D` gives
 
 \[
  m-b^*C^{-1}b\ge0.
 \tag{L-19867.16}
 \]
 
-Thus
+Therefore
 
 \[
 \begin{aligned}
  \|Dp\|_{\mathcal G^{-1}}^2
- &=(m,b)^*\begin{pmatrix}1&0\\0&C^{-1}\end{pmatrix}(m,b)\\
  &=m^2+b^*C^{-1}b\\
  &\le m^2+m,
 \end{aligned}
 \]
 
-proving (L-19867.7).
+which proves (L-19867.6).
 
 Whitening gives
 
@@ -203,15 +202,14 @@ Whitening gives
 \tag{L-19867.17}
 \]
 
-It is the identity on `c^perp`.  Its restriction to
-`span{p,c}` has characteristic polynomial
+It is the identity on `c^perp`; on `span{p,c}` its characteristic polynomial is
 
 \[
- (m-\lambda)(1-\lambda)-\theta,
+ (m-\lambda)(1-\lambda)-\theta.
 \]
 
-which gives (L-19867.11).  Equation (L-19867.10) is exactly
-(L-19867.16).  The ordering (L-19867.12) follows because
+This proves (L-19867.10).  Equation (L-19867.9) is (L-19867.16), and
+(L-19867.11) follows from
 
 \[
  \sqrt{(1-m)^2+4\theta}\ge1-m.
@@ -237,19 +235,25 @@ which proves (L-19867.14)--(L-19867.15).
 
 Apply the theorem to the exact residual Gram `D_(L,N)` of `L-19862`:
 
-- `p_(L,N)` is the exactly normalized Xi-radical target;
-- `E=p_(L,N)^perp`;
-- the exterior-cardinal lifts give
-  \[
-  D_{L,N}|_E\succeq I_E;
-  \]
-- the target residual energy obeys, for every prescribed `B>0` on a suitable
-  quadratic-log cutoff,
-  \[
-  m_{L,N}=D_{L,N}(p,p)\le C_Be^{-BL}.
-  \]
+```text
+p_(L,N)                         exactly normalized Xi target;
+E                               p_(L,N)-perp;
+D_(L,N)|_E >= I                 exterior-cardinal complement floor;
+m_(L,N)=D_(L,N)(p,p)            target residual energy.
+```
 
-Therefore there is a cofinal sequence `(L_j,N_j)` for which
+For every prescribed `B>0`, a suitable quadratic-log cutoff gives
+
+\[
+ m_{L,N}\le C_Be^{-BL}.
+\tag{L-19867.18}
+\]
+
+Choose the complement basis and exterior source lifts parity-equivariantly.
+Then `D`, `mathcal G`, and `p` commute with parity and the unique low line is
+even.
+
+On the resulting cofinal sequence,
 
 \[
  \boxed{
@@ -257,24 +261,22 @@ Therefore there is a cofinal sequence `(L_j,N_j)` for which
  \qquad
  {b_j\over g_j}
  \le\sqrt{C_Be^{-BL_j}+C_B^2e^{-2BL_j}}
- \longrightarrow0.}
-\tag{L-19867.18}
+ \longrightarrow0,}
+\tag{L-19867.19}
 \]
 
-The generalized ground line `xi_j` is simple and satisfies
+and
 
 \[
  \boxed{
  \sin\angle_{\mathcal G_j}(\xi_j,p_j)
  \le {\sqrt{C_B}e^{-BL_j/2}
        \over1-C_Be^{-BL_j}}.}
-\tag{L-19867.19}
+\tag{L-19867.20}
 \]
 
-This is a complete two-sided moat and residual-ratio theorem on an unbounded
-source-bound arithmetic hierarchy.  It uses no zeta-zero locations to determine
-the sign of a Weil matrix and is compatible with lower eigenvalues of unrelated
-indefinite operators.
+This proves a source-bound, unbounded, even isolated-line hierarchy without
+asserting a sign for the indefinite localized Weil matrix.
 
 ## 4. Directed robustness
 
@@ -284,14 +286,14 @@ Let
  H_j=\mathcal G_j^{-1/2}D_j\mathcal G_j^{-1/2}
 \]
 
-and suppose an outward-rounded producer encloses it by `Htilde_j` with
+and suppose an outward-rounded producer returns `Htilde_j` with
 
 \[
  \|Htilde_j-H_j\|\le\delta_j.
-\tag{L-19867.20}
+\tag{L-19867.21}
 \]
 
-For all sufficiently large `j`, the exact generalized spectral gap is at least
+For all large `j`, the exact low spectral gap is at least
 
 \[
  1-\lambda_{-,j}\ge1-m_j\ge3/4.
@@ -302,19 +304,18 @@ If `delta_j<=1/8`, Weyl and Davis--Kahan give a unique enclosed low line and
 \[
  \sin\angle(\widetilde\xi_j,\xi_j)
  \le {2\delta_j\over1-m_j}.
-\tag{L-19867.21}
+\tag{L-19867.22}
 \]
 
-Because every finite source integral and zeta value used after nonresonant
-support selection is a computable real/complex number, interval precision may
-be increased until any prescribed rational `delta_j>0` is reached.  Thus one
-may impose `delta_j<=e^{-BL_j/2}` without changing the analytic hierarchy.
+Every finite source integral and nonresonant zeta value is computable, so ball
+precision may be increased until any prescribed positive rational `delta_j` is
+reached.  In particular one may impose `delta_j<=e^{-BL_j/2}` separately at
+every level.
 
 ## 5. Proof boundary
 
 This theorem proves obligation 1 for the **positive arithmetic residual Gram**.
 It does not prove that the localized Weil matrix has an isolated Xi line, nor
-that the residual Gram belongs to the rank-two CCM commutator class required to
-turn its ground vector into a real-zero Fourier--Mellin transform.  `R-19848`
-shows that this missing real-zero bridge cannot be inferred from isolation
-alone.
+that the residual Gram belongs to the rank-two CCM commutator class needed for
+a real-zero Fourier--Mellin conclusion.  `R-19848` proves that isolation alone
+cannot supply that missing bridge.
