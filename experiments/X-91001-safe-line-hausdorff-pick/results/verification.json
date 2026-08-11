@@ -1,0 +1,37 @@
+{
+  "absolute_euler_radial_threshold": "0.75",
+  "checks": 1270,
+  "classification": "PASS_SINGLE_SAFE_LINE_HAUSDORFF_PICK_COMPLETION",
+  "max_critical_line_kernel_error": "0.0",
+  "max_exact_bernstein_partition_error": "0",
+  "max_finite_difference_kernel_error": "2.63243416779e-81",
+  "max_laguerre_gamma_relative_error": "2.62525437063e-81",
+  "max_square_root_generating_relative_error": "8.85322420673e-32",
+  "max_stieltjes_generating_series_error": "1.8026105099e-17",
+  "minimum_sampled_critical_line_beta_kernel": "0.0",
+  "minimum_synthetic_beta_hankel_eigenvalue": "-3.28883790784e-82",
+  "minimum_synthetic_hausdorff_difference": "3.22881929082e-7",
+  "minimum_synthetic_pick_eigenvalue": "1.32384601804e-5",
+  "scope": "finite algebra and synthetic controls only; no Riemann-data sign or RH claim",
+  "synthetic_coefficient_root_growth": {
+    "16": "1.01294625923687635675755",
+    "32": "1.04527343195621718195684",
+    "4": "0.838929300825749838384188",
+    "64": "1.06182186831428366646364",
+    "8": "0.951260341054946696261443",
+    "96": "1.06739603018670872691833"
+  },
+  "synthetic_coefficient_root_growth_limit": "1.07863229425088987164276",
+  "synthetic_interior_pole": "0.9271",
+  "synthetic_interior_pole_residue": "0.339261327800193600011895",
+  "target_beta_cell_by_difference_order": {
+    "0": "-0.452870415691873391021144",
+    "1": "0.0252949477247387840618926",
+    "2": "-0.0014128420807081424103834",
+    "3": "0.0000789138908979629748804582",
+    "4": "-0.00000440771283761191148894123",
+    "5": "0.00000024619154166367872216766",
+    "6": "-1.37509582451785496807826e-8",
+    "7": "7.68055845391136393320031e-10"
+  }
+}
