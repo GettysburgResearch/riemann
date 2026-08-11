@@ -1,0 +1,37 @@
+{
+  "cone_formula_rows": 24252,
+  "gates": {
+    "directed_margin": true,
+    "exact_top_inverse_cone": true,
+    "fifth_stage_coefficient_positive": true,
+    "fourth_residual_increases": true
+  },
+  "proof_object_sha256": "0e3d59152a6a4e4139e634c2289ed38a6dc864804d13545f72f41129838f457f",
+  "scope": "exact finite cone and counterexample only; CHS, average-carry positivity and RH remain open",
+  "status": "PASS_X_90702_CRITICAL_HINGE_MONOTONICITY_FIREWALL",
+  "witness": {
+    "T": 894,
+    "endpoints": [
+      894,
+      447,
+      223,
+      111,
+      55
+    ],
+    "next_coefficient": {
+      "functional_sha256": "fce40c1121417cc395ce94254be48f4a30f7200fe437f48da6624b032aab5a75",
+      "functional_terms": 371,
+      "lower": "0.0063467169625847600035111693183509865408",
+      "quantity": "c5(28)",
+      "upper": "0.0063467169625847600035111693183509865408"
+    },
+    "radical_denominator": "10^60",
+    "residual_difference": {
+      "functional_sha256": "1455599de44d3ea907c5d1e878238f36fcd010bd1e51c802fc6fdd8e24876914",
+      "functional_terms": 408,
+      "lower": "-0.0000046377510381049308919876975697252129",
+      "quantity": "h4(28)-h4(29)",
+      "upper": "-0.0000046377510381049308919876975697252129"
+    }
+  }
+}
