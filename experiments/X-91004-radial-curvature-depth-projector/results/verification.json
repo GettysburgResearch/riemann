@@ -1,0 +1,50 @@
+{
+  "checks": 73,
+  "classification": "PASS_RADIAL_CURVATURE_DEPTH_PROJECTOR",
+  "depth_projector_samples": [
+    {
+      "a": "0.3",
+      "d": "0.1",
+      "expected": "29.088820866572159615",
+      "integral": "29.088820866572159615"
+    },
+    {
+      "a": "0.5",
+      "d": "0.2",
+      "expected": "6.2831853071795864769",
+      "integral": "6.2831853071795864769"
+    },
+    {
+      "a": "0.3",
+      "d": "0.4",
+      "expected": "0.0",
+      "integral": "-4.4320808677933105818e-62"
+    },
+    {
+      "a": "0.5",
+      "d": "0.7",
+      "expected": "0.0",
+      "integral": "-1.6019274612222856681e-63"
+    }
+  ],
+  "fourier_polynomial_identity": true,
+  "matched_pole_pick_diagonal": "-23589785.4044133701",
+  "matched_target_curvature_right_limits": [
+    "-105800.0",
+    "-105800000.0",
+    "-105800000000.0"
+  ],
+  "max_derivative_jet_error": "3.88938454866e-62",
+  "max_peano_relative_error": "1.55575381947e-61",
+  "pick_block_eigenvalues": [
+    [
+      "-0.272786885245901639",
+      "0.272786885245901639"
+    ],
+    [
+      "-0.557803004250891665",
+      "0.557803004250891665"
+    ]
+  ],
+  "scope": "finite algebra and high-precision synthetic checks only; no Riemann-data sign or RH claim"
+}
