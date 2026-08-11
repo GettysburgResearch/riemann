@@ -98,11 +98,13 @@
     "prefix_bounds_through_10000": true,
     "radical_enclosure": true,
     "reward_sign_classification": true,
+    "signed_occupation_variation_trials": true,
     "sum_coefficients_zero": true,
     "tail_limit_below_21_10": true
   },
   "monotone_occupation_trials": 500,
-  "proof_object_sha256": "f1dd4a0cea4a9e54ea3751e12033ac59670309c092f7ded4c16ce9a56c9699cf",
+  "proof_object_sha256": "684ddaa21788d77e9b7d3833a7aacc7986f7c311feee26c3a421220577364baf",
   "scope": "exact factor-64 reward algebra only; critical occupation variation and RH remain open",
+  "signed_occupation_variation_trials": 500,
   "status": "PASS_X_90701_FACTOR64_MONOTONE_PAYMENT"
 }
