@@ -2,7 +2,7 @@
 
 This roadmap ranks theorem interfaces, not PR activity. An item is high priority when it is explicit, independently falsifiable, supported by exact infrastructure and not already known to be merely an RH-equivalent restatement.
 
-> **Post-cutoff alert:** PR #376 at `2ef174866ba9ce3a1c4939797ca223680bb21734` claims to refute raw global all-large-`N` and cofinal Brownian half-plane stability. It is unreviewed and quarantined, but conclusion-changing if correct. Suspend production aimed solely at that exact theorem until the delta review in `POST_MERGE_DELTA_ADDENDUM.md` is complete.
+> **Reviewed Brownian delta:** PR #376 at `0ed0e7de3aa1b81bb832df53d861dd6f27f2db8b` is **VERIFIED WITH FIXES**. Raw all-large/cofinal half-plane stability and the current logarithmic Nörlund and central-binomial Green finite-real-zero finishes are false. Preserve the finite algebra and compact-height convergence, but redirect Brownian work to height-dependent truncation, producer redesign or a direct infinite canonical system. See `POST_MERGE_DELTA_ADDENDUM.md` and `reports/integration-wave/20260811-pr376-brownian-bohr-instability-review.md`.
 
 ## Priority A — strongest live mechanisms
 
@@ -47,33 +47,35 @@ Analyze signed entropy score, not unsigned slack.
 
 **Binary falsifier:** a dual feasible score separating every packing in the proposed policy class by a fixed positive fraction of `log^2 X`.
 
-### A5. Raw Brownian Bohr-instability delta review and route redesign
+### A5. Height-dependent Brownian truncation or producer redesign
 
-The reviewed packet leaves open
+The exact global target
 
 ```text
 E[Q_N^z] != 0,  Re z>1/4,
 ```
 
-for all sufficiently large `N`, or an unbounded cofinal sequence. PR #376 claims the opposite: high-frequency zeros for every sufficiently large `N` in every fixed strip `1/4<Re z<1/2`.
+for all sufficiently large `N`, or on any unbounded cofinal sequence, is false for the current raw producer. PR #376 proves high-frequency zeros for every sufficiently large `N` in every fixed strip `1/4<Re z<1/2`. The current logarithmic Nörlund and central-binomial Green mixtures are likewise Bohr-unstable, and their functional-equation symmetrizations inherit off-line zeros.
 
-The immediate theorem task is now to verify or refute #376's selected-prime/Steinhaus/polygon/Kronecker/Hurwitz chain. Until that review is complete, do not spend a creation lane proving the old global cofinal target.
-
-If #376 survives, the live Brownian alternatives become:
+The live finite Brownian alternatives are:
 
 ```text
-height-dependent truncation N=N(T)
-producer redesign avoiding multiplicative torus zeros
-aggregate symmetrized Brownian canonical system
+height-dependent truncation N=N(T), proving stability only for |Im s|<=T;
+a redesigned finite producer outside the selected-prime Bohr mechanism;
+a redesigned positive mixture outside the L-90603 top-half-mass class.
 ```
 
-**Binary falsifier for #376:** one rigorously identified failure in its phase-mass, independence, approximation, vertical-limit, Hurwitz or quantifier argument.
+A height-dependent theorem must include a quantitative relation between `N` and `T` strong enough for a diagonal Rouché argument covering every fixed xi zero while staying below the first uncontrolled finite height.
 
-### A6. Aggregate canonical system for the corrected Brownian mixture
+**Binary falsifier:** a proof that the proposed `N(T)` still enters a Bohr-unstable height range below `T`, or a selected-prime phase block surviving in the redesigned coefficients with sufficient total mass for polygon closure.
 
-Construct one Hermite–Biehler/canonical-system object for the complete symmetrized mixture. Do not rely on fiberwise positivity or finite reflected-tail domination.
+### A6. Direct infinite canonical system for the Brownian/xi limit
 
-**Binary falsifier:** a finite exact approximant violating the structural interlacing or total-positivity hypothesis of the proposed aggregate system.
+Construct a Hermite–Biehler or canonical-system object for the limiting `xi` representation directly. Do not seek a canonical system proving global real-rootedness of the current finite Nörlund or Green mixtures: PR #376 proves that those exact finite functions already have infinitely many off-line zeros.
+
+A valid infinite construction must establish its own operator domain, boundary conditions, trace/determinant convergence and identification with `xi`; it may use the finite Brownian probability and occupation identities as approximation data, but not a false inheritance of finite real-rootedness.
+
+**Binary falsifier:** an exact incompatibility between the proposed Hamiltonian/boundary data and the Brownian Mellin kernel, or a finite compression whose required interlacing fails in a way that persists in the proposed limit topology.
 
 ## Priority B — live but closer to established RH-bearing walls
 
@@ -159,4 +161,4 @@ Complete uniform trace, zero-counting, taper, pole, end-effect, conductor and om
 
 ## Research allocation recommendation
 
-For the next creation wave, allocate most effort to A1–A4. Make A5 an independent adversarial review, not a proof-production lane, until PR #376 is resolved. Keep one independent lane on B1 because the Q4 finite infrastructure is unusually developed, but do not permit another full-proof claim unless the exact integrated current consumer is resident. Maintain B5/B6 as operator benchmarks and C1/C2 as finite falsification programmes.
+For the next creation wave, allocate most effort to A1–A4. Treat A5 as a genuinely redesigned theorem rather than a continuation of the false cofinal target, and keep A6 independent of finite real-rootedness. Maintain one independent lane on B1 because the Q4 finite infrastructure is unusually developed, but do not permit another full-proof claim unless the exact integrated current consumer is resident. Maintain B5/B6 as operator benchmarks and C1/C2 as finite falsification programmes.
