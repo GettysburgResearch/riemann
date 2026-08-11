@@ -7,44 +7,28 @@
     "roots_are_distinct": true,
     "roots_stay_near_sigma": true
   },
-  "proof_object_sha256": "e292fc55d402d2476cbe41cd46ed96fca598f38865c191b5d83cc06b28c1b160",
+  "proof_object_sha256": "ae011e49bc9b2ff35386883e32fdc42f38e6d4477e22cc4b8bfd2b7d413593d0",
   "return_blocks": {
     "block_size_in_exact_p2_returns": 2000,
     "count": 30,
     "max_observed_root_gap": 16457.001582420773,
     "max_real_displacement": 0.0005960914980921439,
     "max_root_residual": 3.184182019339489e-11,
-    "rows": [
-      {"block": 0, "phase_error": 0.00019683044154120445, "root_imag": 3519.0282694899556, "root_real": 0.3000276347725954, "root_residual": 2.6087128725318046e-13},
-      {"block": 1, "phase_error": 0.0005945941510356844, "root_imag": 9547.067050986601, "root_real": 0.2999164915681335, "root_residual": 9.650666837598501e-13},
-      {"block": 2, "phase_error": 0.0017817308306917062, "root_imag": 18589.12522319136, "root_real": 0.2997496365727563, "root_residual": 6.831170107716701e-13},
-      {"block": 3, "phase_error": 0.0029688668753261936, "root_imag": 27631.18339534779, "root_real": 0.2995826132858126, "root_residual": 1.962682396922241e-12},
-      {"block": 4, "phase_error": 0.0041560018885109925, "root_imag": 36673.24156745581, "root_real": 0.29941542163688406, "root_residual": 3.4081286827852253e-13},
-      {"block": 5, "phase_error": 0.003131744123392595, "root_imag": 53130.24314987658, "root_real": 0.3004391453085104, "root_residual": 3.5384965439801543e-12},
-      {"block": 6, "phase_error": 0.0019446081756876433, "root_imag": 62172.30132223246, "root_real": 0.3002728180981216, "root_residual": 2.325434788025814e-12},
-      {"block": 7, "phase_error": 0.0007574715428514963, "root_imag": 71214.35949454029, "root_real": 0.30010632281964317, "root_residual": 3.555368737421198e-12},
-      {"block": 8, "phase_error": 3.395301431633911e-05, "root_imag": 77242.3982760521, "root_real": 0.29999523256605964, "root_residual": 4.8076533414556224e-12},
-      {"block": 9, "phase_error": 0.0008253775952714313, "root_imag": 83270.4370575425, "root_real": 0.2998840675619761, "root_residual": 5.5237508565803965e-12},
-      {"block": 10, "phase_error": 0.0020125141710913316, "root_imag": 92312.49522973788, "root_real": 0.29971717985367774, "root_residual": 3.753430503447875e-12},
-      {"block": 11, "phase_error": 0.00319965006695911, "root_imag": 101354.5534018849, "root_real": 0.2995501238470353, "root_residual": 3.3831561383174932e-12},
-      {"block": 12, "phase_error": 0.0040880959895528615, "root_imag": 117811.55498406732, "root_real": 0.30057301575746515, "root_residual": 7.754440476979421e-12},
-      {"block": 13, "phase_error": 0.002900960956188699, "root_imag": 126853.61315646184, "root_real": 0.3004068238902047, "root_residual": 1.9245818804016624e-12},
-      {"block": 14, "phase_error": 0.0017138247843324701, "root_imag": 135895.67132880838, "root_real": 0.30024046401197724, "root_residual": 1.774345253478837e-11},
-      {"block": 15, "phase_error": 0.0005266880668632424, "root_imag": 144937.72950110686, "root_real": 0.3000739360557118, "root_residual": 1.231046657635978e-11},
-      {"block": 16, "phase_error": 0.00013097584342584717, "root_imag": 147951.74889186234, "root_real": 0.3000183893713017, "root_residual": 4.557199463859783e-12},
-      {"block": 17, "phase_error": 0.0010561610285171198, "root_imag": 156993.8070640966, "root_real": 0.29985163719859703, "root_residual": 1.459287072634586e-11},
-      {"block": 18, "phase_error": 0.0022432975283496514, "root_imag": 166035.86523628255, "root_real": 0.2996847167798865, "root_residual": 2.0624341091920666e-11},
-      {"block": 19, "phase_error": 0.0034304332378157004, "root_imag": 175077.92340842017, "root_real": 0.2995176280349252, "root_residual": 1.6258688004422094e-11},
-      {"block": 20, "phase_error": 0.004253024517859228, "root_imag": 188520.90559985436, "root_real": 0.30059609149809213, "root_residual": 5.163637017480999e-12},
-      {"block": 21, "phase_error": 0.003065889601375112, "root_imag": 197562.96377225555, "root_real": 0.3004299229598033, "root_residual": 5.355352602197678e-13},
-      {"block": 22, "phase_error": 0.0018787535464983073, "root_imag": 206605.02194460877, "root_real": 0.30026358642701934, "root_residual": 7.813353081926747e-12},
-      {"block": 23, "phase_error": 0.0006916169461078719, "root_imag": 215647.08011691392, "root_real": 0.30009708182452893, "root_residual": 3.184182019339489e-11},
-      {"block": 24, "phase_error": 9.980761534455096e-05, "root_imag": 221675.11889842397, "root_real": 0.2999859853465698, "root_residual": 1.1254045341985168e-12},
-      {"block": 25, "phase_error": 0.000891232161168374, "root_imag": 227703.15767991258, "root_real": 0.2998748141284363, "root_residual": 2.709658084923312e-11},
-      {"block": 26, "phase_error": 0.002078368737715856, "root_imag": 236745.21585210526, "root_real": 0.29970791708044237, "root_residual": 1.047107561937448e-11},
-      {"block": 27, "phase_error": 0.0032655045820051483, "root_imag": 245787.2740242496, "root_real": 0.29954085174221856, "root_residual": 1.7338490615452072e-12},
-      {"block": 28, "phase_error": 0.0040222414947515845, "root_imag": 262244.2756064484, "root_real": 0.3005638009176977, "root_residual": 6.0849914865328905e-12},
-      {"block": 29, "phase_error": 0.0028351064519392803, "root_imag": 271286.3337788403, "root_real": 0.3003975997254998, "root_residual": 3.129095608049447e-11}
+    "sample_rows": [
+      {
+        "block": 0,
+        "phase_error": 0.00019683044154120445,
+        "root_imag": 3519.0282694899556,
+        "root_real": 0.3000276347725954,
+        "root_residual": 2.6087128725318046e-13
+      },
+      {
+        "block": 29,
+        "phase_error": 0.0028351064519392803,
+        "root_imag": 271286.3337788403,
+        "root_real": 0.3003975997254998,
+        "root_residual": 3.129095608049447e-11
+      }
     ]
   },
   "scope": "finite diagnostic only; syndetic recurrence follows analytically from Kronecker minimality, compactness and Rouche",
@@ -52,7 +36,13 @@
   "torus_zero": {
     "residual": 0.0,
     "sigma": 0.3,
-    "u": [-0.8849471469840208, -0.46569147194772853],
-    "v": [-0.8044987719094496, 0.593954313054621]
+    "u": [
+      -0.8849471469840208,
+      -0.46569147194772853
+    ],
+    "v": [
+      -0.8044987719094496,
+      0.593954313054621
+    ]
   }
 }
