@@ -1,4 +1,4 @@
-# Critical-hinge continuation: monotonicity and generic convexity fail; exact weighted targets survive
+# Critical-hinge continuation: monotonicity and atomwise cone positivity fail; exact weighted targets survive
 
 **Date:** 2026-08-11  
 **RH:** unproved
@@ -65,6 +65,37 @@ c_T(n)=\sum_{K=n}^{T-1}\omega_{T,K}a_K(n).
 
 The live theorem is the specific weighted cancellation of this signed response kernel under the square-root weights \(\omega_{T,K}\sim3K^{-5/2}/4\).
 
+## 4. Atomwise Hausdorff positivity also fails
+
+The square-root hinge is also a positive Hausdorff mixture of truncated geometric atoms,
+
+\[
+q^{-1/2}-T^{-1/2}
+=\frac1{\sqrt\pi}\int_0^1
+(x^{q-1}-x^{T-1})(-\log x)^{-1/2}\,dx.
+\]
+
+But the individual geometric response is signed as well. At
+
+\[
+T=126,\qquad x=99/100,
+\]
+
+the exact average-carry inverse of \(x^q-x^{126}\) satisfies
+
+\[
+g(9)=-0.00066584534761921811\ldots<0.
+\]
+
+Thus neither of the two natural positive-mixture strategies works atomwise:
+
+```text
+positive linear-hinge mixture + atomwise-positive inverse      false;
+positive Hausdorff/geometric mixture + atomwise-positive inverse false.
+```
+
+A proof must establish cancellation after integrating the signed response kernel against the **specific square-root weight**.
+
 ## Verification
 
 ```text
@@ -72,4 +103,4 @@ PASS_X_90702_CRITICAL_HINGE_MONOTONICITY_FIREWALL
 PASS_X_90706_SIGNED_LINEAR_HINGE_RESPONSE
 ```
 
-The first replay uses directed radical intervals. The second reconstructs the complete `E=60` inverse with exact `Fraction` arithmetic and verifies 95,040 hinge-basis decomposition identities.
+The first replay uses directed radical intervals. The second reconstructs both the complete `E=60` linear-hinge inverse and the `E=126`, `x=99/100` geometric inverse with exact `Fraction` arithmetic, verifies all rows, and checks 95,040 hinge-basis decomposition identities.
