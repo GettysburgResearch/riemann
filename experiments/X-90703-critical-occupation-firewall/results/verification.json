@@ -1,0 +1,40 @@
+{
+  "M2": {
+    "lower": "1.9440684670534688605278440559916513789210",
+    "upper": "1.9440684670534688605278440559916721909476"
+  },
+  "X": 14,
+  "adjacent_signs": {
+    "10": "negative",
+    "11": "negative",
+    "12": "negative",
+    "13": "negative",
+    "2": "negative",
+    "3": "negative",
+    "4": "negative",
+    "5": "negative",
+    "6": "positive",
+    "7": "negative",
+    "8": "negative",
+    "9": "negative"
+  },
+  "gates": {
+    "M2_positive_large": true,
+    "critical_occupation_not_monotone": true,
+    "factor64_variation_gate_has_slack": true,
+    "only_one_upward_step": true,
+    "upward_variation_small": true
+  },
+  "proof_object_sha256": "7a9ae62984736fc829943db42aec7114164bba75dccac4181e810905468fc72d",
+  "scope": "exact X=14 firewall only; no cofinal variation theorem or RH",
+  "status": "PASS_X_90703_CRITICAL_OCCUPATION_FIREWALL",
+  "upward_step": {
+    "functional": "6:-6/1;7:11/1;8:-37/7;9:-1/28;10:-1/28;11:-1/28;12:167/28;13:-1/28;14:-309/28",
+    "functional_sha256": "73ac20b8927b45a801023d1e92fb25ace321fcff033bb2777154695803a5f888",
+    "index": 6,
+    "lower": "0.0136042514164165115744643782240243913692",
+    "quantity": "M(7)-M(6)",
+    "upper": "0.0136042514164165115744643782240243913692"
+  },
+  "upward_variation_over_M2_upper": "0.0069978252551134794121942264101550207710"
+}
