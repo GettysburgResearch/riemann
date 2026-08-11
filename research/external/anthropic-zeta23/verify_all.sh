@@ -31,7 +31,8 @@ for experiment in \
   X-zeta23-zero-heat-monotonicity \
   X-zeta23-macroscopic-heat-positivity \
   X-zeta23-diagonal-heat-wedge \
-  X-zeta23-first-hermite-large-values
+  X-zeta23-first-hermite-large-values \
+  X-zeta23-linear-resolution-rigidity
 do
   temp="$(mktemp)"
   (
