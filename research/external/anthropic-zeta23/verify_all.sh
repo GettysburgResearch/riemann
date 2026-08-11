@@ -27,7 +27,8 @@ for experiment in \
   X-zeta23-finite-isolation \
   X-zeta23-xi-cardinal-capture \
   X-zeta23-terminal-arithmetic-floor \
-  X-zeta23-terminal-heat-residue
+  X-zeta23-terminal-heat-residue \
+  X-zeta23-zero-heat-monotonicity
 do
   temp="$(mktemp)"
   (
