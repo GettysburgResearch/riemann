@@ -2,7 +2,7 @@
 
 Date: 2026-08-11  
 Agent: `gpt56-pro-09-p`  
-Branch at completion: `agent/gpt56-pro-09-i/198-square-screw-criterion`  
+Branch: `agent/gpt56-pro-09-i/198-square-screw-criterion`  
 Scientific status: **RH remains unproved**
 
 ## Requested obligations
@@ -31,14 +31,15 @@ it proves exactly
 ```
 
 Thus `g=1` and `b/g<=sqrt(m+m^2)`.  Since the Xi target residual can be made
-`O(exp(-BL))` at any prescribed exponential rate, one obtains a cofinal isolated
-line converging exponentially to the target.  The generalized second eigenvalue
-is exactly one.
+`O(exp(-BL))` at any prescribed exponential rate, one obtains a cofinal even
+isolated line converging exponentially to the target.  The generalized second
+eigenvalue is at least one and is exactly one in the actual complement
+dimensions.
 
-This is an unconditional source/arithmetic theorem.  It is not an isolated-line
-theorem for the indefinite localized Weil matrix.
+This is an unconditional source/arithmetic theorem.  It is not an
+isolated-line theorem for the indefinite localized Weil matrix.
 
-### Obligation 2 — false as stated
+### Obligation 2a — the generic exact statement is false
 
 `R-19848` gives the exact parity-invariant CCM matrix
 
@@ -64,23 +65,59 @@ The matrix has the exact divided-difference form
 A_ij=(b_i-b_j)/(i-j), b=(-1,0,1),
 ```
 
-and arbitrary allowed even diagonal `(0,2,0)`, so the counterexample lies inside
-the finite CCM/Loewner class, not merely among arbitrary Hermitian matrices.
+and allowed even diagonal `(0,2,0)`, so the counterexample lies inside the
+finite CCM/Loewner class.  `R-19849` proves more: every parity-invariant CCM
+matrix with this vector in its kernel is a scalar multiple of `A`, so its
+positive-completion cone is empty except for the zero matrix.
 
-A multiplier `Q(z)` having only real zeros cannot repair the defect, because
-every nonreal zero of `F` remains a zero of `QF`.
+A multiplier having only real zeros cannot repair the defect, because every
+nonreal zero of `F` remains a zero of `QF`.
 
-The correct replacement is an **independent positive CCM completion** for the
-same isolated line:
+### Obligation 2b — a genuine asymptotic non-ground theorem is proved
+
+`L-19869` associates to a finite target `xi` the companion operator
 
 ```text
-Q_j >= 0,
-ker Q_j = C xi_j,
-[D0,Q_j] = |beta_j><eta|-|eta><beta_j|.
+T_xi = Lambda-|Lambda xi><eta|,
 ```
 
-The finite CCM theorem then gives real zeros, but existence of this completion is
-not implied by spectral isolation.  It is the sole remaining RH-bearing gate.
+whose nonzero characteristic factor is exactly the finite CCM polynomial.  For
+any positive semidefinite `Q` with `ker Q=C xi`, define
+
+```text
+epsilon(Q,xi)
+ =1/2 || Q_quot^(-1/2)(Q T_xi-T_xi^*Q)_quot Q_quot^(-1/2) ||.
+```
+
+Every finite polynomial root then satisfies
+
+```text
+|Im z| <= epsilon(Q,xi).
+```
+
+Therefore, if the finite transforms converge locally uniformly and
+`epsilon_j->0`, every zero of the limit is real.  This is a true non-ground
+extension: finite transforms may have nonreal zeros, but they are squeezed into
+a vanishing strip.
+
+For the residual pencil, the positive symmetrizer is already available:
+
+```text
+Q_j=D_j-lambda_(j,-)G_j >=0,
+ker Q_j=C xi_j.
+```
+
+The sole remaining gate is the explicit normalized rank-two commutator defect
+
+```text
+1/2 ||Q_j^(-1/2)[
+ Q_j Lambda_j-Lambda_j Q_j
+ -|alpha_j><eta_j|+|eta_j><alpha_j|
+]Q_j^(-1/2)||_quot ->0,
+alpha_j=Q_j Lambda_j xi_j.
+```
+
+Exact positive CCM completion is the special case where this defect is zero.
 
 ### Obligation 3 — proved for the residual-Gram line
 
@@ -111,34 +148,35 @@ delta_L <= exp(-4L),
 ```
 
 with sufficiently large fixed `kappa`, the complete error is `O(exp(-cL))`.
-The audited source-to-strip inequality yields locally uniform convergence of the
-finite transforms to a nonzero multiple of Xi on every closed substrip.
+The audited source-to-strip inequality yields locally uniform convergence to a
+nonzero multiple of Xi on every closed substrip.
 
 ## Corrected proof chain
 
-The complete surviving chain is
-
 ```text
-exact positive residual-Gram isolation        PROVED
-complete moving-Hardy convergence              PROVED
-positive CCM/Loewner completion for same line OPEN / RH-BEARING
-finite real-zero theorem                       then automatic
-Hurwitz                                        then automatic
-RH                                             UNPROVED
+exact positive residual-Gram isolation          PROVED
+complete moving-Hardy convergence                PROVED
+asymptotic positive-symmetrizer theorem          PROVED
+normalized rank-two commutator defect -> 0        OPEN / RH-BEARING
+finite zeros enter a shrinking real strip         then automatic
+Hurwitz                                            then automatic
+RH                                                 UNPROVED
 ```
 
-The old phrasing as three independent obligations was misleading.  Isolation and
-convergence are analytic/linear-algebraic.  The finite real-zero property is not
-a generic consequence of either; its positivity completion contains the central
-arithmetic sign.
+The original three obligations were not independent.  Isolation and convergence
+are analytic/linear-algebraic.  The generic exact non-ground statement is false.
+The surviving conclusion-producing datum is now one explicit commutator defect,
+not a hidden ground-state hypothesis.
 
 ## Files
 
 ```text
 R-19848  exact isolated-interior counterexample and multiplier firewall
+R-19849  exact empty positive-completion cone
 L-19867  exact residual-Gram isolated-line theorem
 L-19868  complete moving-Hardy target-rate ledger
-M-19802  corrected positive-completion programme
+L-19869  asymptotic non-ground symmetrizer theorem
+M-19802  corrected commutator-defect programme
 X-19843  exact Fraction-only replay
 ```
 
