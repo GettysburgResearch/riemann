@@ -1,0 +1,38 @@
+{
+  "dirichlet_constants": {
+    "N^-1_zeta_s-2": "-4",
+    "N^-2_zeta_s-2": "2",
+    "N^-2_zeta_s-4": "4",
+    "N^-3_zeta_s-2": "-2/3",
+    "N^-3_zeta_s-4": "-14/3",
+    "N^-3_zeta_s-6": "-8/3"
+  },
+  "gates": {
+    "dirichlet_shift_constants": true,
+    "first_shift_coefficients": true,
+    "second_inverse_coefficient": true,
+    "second_shift_coefficients": true,
+    "third_inverse_coefficient": true,
+    "third_shift_coefficients": true
+  },
+  "mu1": {
+    "1": "2",
+    "2": "-1",
+    "3": "1/3"
+  },
+  "mu1_sq_minus_mu2_over_2": {
+    "2": "2",
+    "3": "-7/3"
+  },
+  "mu2": {
+    "2": "4",
+    "3": "-10/3"
+  },
+  "mu3": {
+    "3": "8"
+  },
+  "status": "PASS_X_90603_BROWNIAN_THIRD_ORDER",
+  "third_inverse_combination": {
+    "3": "-4/3"
+  }
+}

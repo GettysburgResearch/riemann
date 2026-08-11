@@ -1,0 +1,27 @@
+{
+  "bounded_heat_firewall_max": 0.0,
+  "chebyshev_degree_bound": 7.0347903167777375,
+  "chebyshev_degree_used": 8,
+  "chebyshev_quadratic": -0.046503810004261105,
+  "chebyshev_theoretical_upper": -0.042703380485921406,
+  "cyclic_determinant_error": 2.221926954028311e-16,
+  "exterior_firewall_first_negative": 14,
+  "exterior_firewall_predicted": 14,
+  "exterior_subset_max_error": 1.709850039333105e-10,
+  "gates": {
+    "bounded_heat_firewall": true,
+    "chebyshev_hankel_detection": true,
+    "cyclic_determinant": true,
+    "explicit_heat_detection": true,
+    "exterior_firewall": true,
+    "exterior_subset_formula": true,
+    "kernel_semigroup": true,
+    "lenard_principal_minors": true
+  },
+  "heat_beta_star": 105.67084363170449,
+  "heat_lower_bound": 4120.627444388796,
+  "heat_value": 4686.250000000664,
+  "kernel_semigroup_max_error": 1.169333740946854e-09,
+  "minimum_lenard_principal_minor": 6.940706580769904,
+  "status": "PASS_X_90901_FERMIONIC_LENARD_HIERARCHY"
+}
