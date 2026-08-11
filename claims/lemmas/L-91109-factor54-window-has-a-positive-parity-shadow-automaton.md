@@ -99,7 +99,7 @@ For the reserve channel \(a=1\), define the Hall margins
 }
 \tag{L-91109.8}
 
-The exact checker `X-91102` proves
+The exact checker `X-91103` proves
 \[
 \boxed{
  \mathcal H_{1,t}(x)>\frac{39}{100}
@@ -135,7 +135,7 @@ For the equality channel \(a=2\), define
 }
 \tag{L-91109.12}
 
-The directed checker proves
+The directed checker `X-91103` proves
 \[
 \boxed{
  \mathcal H_{2,t}^{+}(x)>\frac{11}{100}
@@ -222,6 +222,7 @@ Every nontrivial squarefree integer has a unique least prime. Therefore
  p_k^{-1/2}E_{k+1}^{(a)}(x/p_k),
 }
 \tag{L-91109.21}
+\]
 where
 \[
  \phi_a(x)=a\sqrt x-1.
