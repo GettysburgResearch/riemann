@@ -1,22 +1,34 @@
 {
-  "endpoint": 60,
-  "exact_reconstruction_rows": 59,
+  "exact_geometric_reconstruction_rows": 125,
+  "exact_hinge_reconstruction_rows": 59,
   "gates": {
-    "all_rows_reconstruct_exactly": true,
+    "all_geometric_rows_reconstruct_exactly": true,
+    "all_hinge_rows_reconstruct_exactly": true,
+    "exact_negative_geometric_response": true,
     "exact_negative_hinge_response": true,
     "left_neighbour_positive": true,
     "positive_hinge_basis_decomposition": true,
     "right_neighbour_positive": true
   },
   "hinge_decomposition_rows": 95040,
-  "proof_object_sha256": "28ad78e780e89082748abbe7f675aaf68a68df27be3c5e2e4c9959019b3f393b",
-  "scope": "exact generic convex-cone counterexample and decomposition only; square-root weighted cancellation, CHS and RH remain open",
-  "status": "PASS_X_90706_SIGNED_LINEAR_HINGE_RESPONSE",
-  "witness": {
+  "linear_hinge_witness": {
     "coefficient": "-2/55",
     "coefficient_index": 11,
+    "endpoint": 60,
     "inverse_vector_sha256": "b9776b1a56065269ec77246cde372fa7a6abc8f8b52adc27063630593d652d16",
     "left_neighbour": "53/45",
     "right_neighbour": "131/33"
+  },
+  "proof_object_sha256": "588913ce8182d11cefeebff81ed6eb924f00a951405e71c41c394d8dcdc76c03",
+  "scope": "exact generic convex/geometric atom counterexamples and decomposition only; square-root weighted cancellation, CHS and RH remain open",
+  "status": "PASS_X_90706_SIGNED_LINEAR_HINGE_RESPONSE",
+  "truncated_geometric_witness": {
+    "coefficient_decimal": "-0.00066584534761921811",
+    "coefficient_index": 9,
+    "denominator_digits": 253,
+    "endpoint": 126,
+    "inverse_vector_sha256": "2c796d99413f3716ec15b46a3abe2caac509f99f76d3e7bce2c3e18cb320f1d0",
+    "numerator_digits": 249,
+    "x": "99/100"
   }
 }
