@@ -1,57 +1,70 @@
-# O-91301 — Exact equality rows supersede collar-based reset bookkeeping
+# O-91301 — Lifecycle after the exact equality-row peel refutation
 
 Claim ID: `O-91301`  
 Status: **NORMATIVE LIFECYCLE / SCOPE CORRECTION**  
 Created: 2026-08-12  
-Depends on: `L-91112`, `L-91113`, `R-91101`, `L-91303`, `L-91306`  
+Corrected after: `R-91102`  
+Depends on: `R-91102`, corrected `L-91112`, `L-91113`, `R-91101`, `L-91303`, `L-91306`  
 RH status: **unproved**
 
-## 1. Retained mathematics
+## 1. Refuted shortcut
 
-`L-91303` proves a useful uniform Euler--Maclaurin expansion for the finite
-equality seed and pins its continuum crossing to `c0 X+O(1)`.  `L-91306`
-proves detailed asymptotics for the martingale-quantization collar and its top
-endpoint ratio.
+The load-bearing identity proposed in historical `L-91112`,
 
-These statements remain useful diagnostics for approximate or discretized reset
-implementations.
+\[
+ b_X^\star(m)
+ =\int_m^X L(X/s)\partial_sb_s(m)ds,
+\]
 
-## 2. Superseded proof role
+is false.  The integral produces the continuum Volterra seed, not the exact
+finite Riemann-sum seed.  `R-91102` gives the exact counterexample `X=3,m=2`.
 
-They are no longer load bearing for the preferred exact reset.
+Therefore the claimed exact finite outer peel, terminal saturation and zero-debt
+score split are withdrawn.
 
-`L-91112` uses the exact equality rows and proves exact outer ordinary and
-radix-four saturation, including the complete terminal annulus.  Consequently
-no target/continuum error, quantization collar or terminal quotient collar is
-present in that proof architecture.
+## 2. Retained finite route
 
-Therefore the following historical description is superseded:
+`L-91303` and `L-91306` are again load bearing:
 
 ```text
-the final reset gate is a bounded finite collar certificate.
+L-91303  finite Euler correction, c0 X+O(1) splice, parity/knot packets;
+L-91110  positive martingale quantization;
+L-91111  positive width-three collar;
+L-91306  terminal quotient localization;
+L-91109  finite parity shadow;
+L-91113  sixteen-prime Boolean forcing and delayed rough-prime renewal.
 ```
 
-## 3. Correct final interface
+The continuum endpoint frame and the positive component-row formula retained in
+corrected `L-91112` remain useful, but they do not identify the finite seed
+exactly.
 
-`L-91113` closes the full Boolean state of every prime through 53 and gives the
-exact delayed rough-prime renewal.  `R-91101` proves that positivity of its
-finite forcing does not imply positivity of the underlying `(L,R)` state by
-coefficientwise inversion.
+## 3. Two independent remaining gates
 
-The final reset gate is instead:
+The corrected reset has two separate obligations:
 
-```text
-construct a capacity-faithful positive allocation of the delayed rough-prime
-renewal, preserving coefficient-one score transfer and bounded additive debt.
-```
+1. **finite discretization/capacity lift:** transport the Euler correction,
+   positive quantization collar and bounded terminal quotient cells through the
+   three-integer divisor stencils and the finite parity shadow;
+2. **delayed rough-prime allocation:** allocate the globally positive Boolean
+   forcing between the current state and the contracted rough-prime copies of
+   `(L,R)` with coefficient-one score transfer.
+
+`R-91101` proves that the second cannot be replaced by coefficientwise inversion.
+`L-91307` proves the rough renewal is critical and requires a mixed two-state or
+explicit boundary-port allocation.
 
 ## 4. Lifecycle
 
 ```text
-L-91303 finite Euler correction       RETAINED DIAGNOSTIC / NOT LOAD BEARING
-L-91306 collar localization           RETAINED DIAGNOSTIC / NOT LOAD BEARING
-L-91112 exact equality-row peel        PREFERRED OUTER RESET
-L-91113 Boolean forcing/renewal        PREFERRED ARITHMETIC INTERFACE
-R-91101 rough-prime scope correction   NORMATIVE
-RH                                    UNPROVED
+historical L-91112 exact finite peel        REFUTED
+corrected L-91112 infinitesimal/component rows RETAINED
+L-91303 finite Euler correction             LOAD BEARING
+L-91110/L-91111 quantization/collar          LOAD BEARING
+L-91306 terminal localization               LOAD BEARING
+L-91113 Boolean forcing/renewal              LOAD BEARING
+R-91101/R-91102 scope corrections            NORMATIVE
+finite capacity lift                         OPEN
+rough-prime mixed allocation                  OPEN / RH-BEARING
+RH                                            UNPROVED
 ```
