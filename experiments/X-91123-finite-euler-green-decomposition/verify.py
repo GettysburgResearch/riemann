@@ -29,29 +29,30 @@ def direct_dictionary(primes, row, maximum):
         first = divisor * (row + 2)
         if first <= maximum:
             for multiple in range(first, maximum + 1, divisor):
-                quotient = multiple // divisor
-                if quotient >= row + 2:
-                    out[multiple] += mu * c
+                out[multiple] += mu * c
     return out
 
 
 def green_dictionary(primes, row, maximum):
-    product = 1
-    mu_map = {}
-    for divisor, mu in divisors_with_mu(primes):
-        product *= 1 if divisor != 1 else 1
-        mu_map[divisor] = mu
+    mu_map = dict(divisors_with_mu(primes))
     product = 1
     for prime in primes:
         product *= prime
 
     c = Fraction(2, row * (row - 1))
-    boundary_left = Fraction(row + 2, row)
+    left = Fraction(row + 2, row)
     out = {}
     for k in range(1, maximum + 1):
         coefficient = c if gcd(k, product) == 1 else Fraction(0)
+
+        # The full rough tail includes every quotient m.  The actual component
+        # row has zero coefficient for m<row, so these sectors must be removed.
+        for m in range(1, row):
+            if k % m == 0 and k // m in mu_map:
+                coefficient -= c * mu_map[k // m]
+
         if k % row == 0 and k // row in mu_map:
-            coefficient += boundary_left * mu_map[k // row]
+            coefficient += left * mu_map[k // row]
         if k % (row + 1) == 0 and k // (row + 1) in mu_map:
             coefficient -= mu_map[k // (row + 1)]
         out[k] = coefficient
@@ -81,7 +82,6 @@ def certify():
             assert direct == green, (primes, row)
             checks += maximum
 
-            # Verify the one-new-prime coefficient identity.
             new_prime = 11 if 11 not in primes else 13
             direct_enlarged = direct_dictionary(
                 list(primes) + [new_prime], row, maximum
@@ -115,10 +115,10 @@ def certify():
         "prime_sets": [[2, 3], [2, 3, 5], [2, 3, 5, 7]],
         "rows": "2..12",
         "scope": (
-            "Exact Fraction arithmetic verifies the coefficient dictionary, "
-            "the one-new-prime renewal identity, and coefficientwise positivity "
-            "of the rough Green bulk. It does not certify the P_79 two-spline "
-            "inequality or RH."
+            "Exact Fraction arithmetic verifies the complete finite-boundary "
+            "coefficient dictionary, the one-new-prime renewal identity, and "
+            "coefficientwise positivity of the rough Green bulk. It does not "
+            "certify the P_79 finite-boundary inequality or RH."
         ),
     }
 
