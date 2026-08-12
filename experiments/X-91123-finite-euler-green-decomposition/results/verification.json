@@ -1,0 +1,11 @@
+{
+  "classification": "PASS_FINITE_EULER_GREEN_DECOMPOSITION",
+  "formal_coefficient_checks": 60774,
+  "prime_sets": [
+    [2, 3],
+    [2, 3, 5],
+    [2, 3, 5, 7]
+  ],
+  "rows": "2..12",
+  "scope": "Exact Fraction arithmetic verifies the complete finite-boundary coefficient dictionary, the one-new-prime renewal identity, and coefficientwise positivity of the rough Green bulk. It does not certify the P_79 finite-boundary inequality or RH."
+}
