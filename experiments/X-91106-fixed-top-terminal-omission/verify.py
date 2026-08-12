@@ -12,12 +12,12 @@ def sqrt_bounds(n:int):
 
 def main():
     rt2_lo,rt2_hi=sqrt_bounds(2)
-    rt55_lo,rt55_hi=sqrt_bounds(55)
+    _,rt55_hi=sqrt_bounds(55)
     assert rt2_hi < Fraction(17,12)
     assert rt55_hi < Fraction(15,2)
 
     W=10000
-    omission_lower=Fraction(W)* (2-rt2_hi)-800
+    omission_lower=Fraction(W)*(2-rt2_hi)-800
     full_overfill_upper=512*rt55_hi+204
     assert omission_lower > 5033
     assert full_overfill_upper < 4044
@@ -26,12 +26,9 @@ def main():
 
     # Direct finite checks of the three terminal derivative brackets.
     b1=2-rt2_hi
-    b2=4-rt55_hi*0  # placeholder removed below; use exact interval arithmetic explicitly
-    # J=2: 4-sqrt(3)(1+1/sqrt(2)) > 2-sqrt(2).
     rt3_lo,rt3_hi=sqrt_bounds(3)
     invrt2_hi=1/rt2_lo
     j2_lower=4-rt3_hi*(1+invrt2_hi)
-    # J=3: 6-2(1+1/sqrt(2)+1/sqrt(3)) > 2-sqrt(2).
     invrt3_hi=1/rt3_lo
     j3_lower=6-2*(1+invrt2_hi+invrt3_hi)
     assert j2_lower > b1
