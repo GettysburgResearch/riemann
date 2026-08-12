@@ -1,0 +1,19 @@
+{
+  "classification": "PASS_ROUGH_PORT_NON_TENSORIZATION_COUNTEREXAMPLE",
+  "floors": {
+    "x_over_67": 70,
+    "x_over_71": 66,
+    "x_over_product_below_one": true
+  },
+  "mixed_detail_interval": {
+    "lower_decimal": -1.3395667803001414,
+    "upper_decimal": -1.3395667803001414
+  },
+  "scales": [
+    67,
+    71
+  ],
+  "scope": "Exact Fraction arithmetic with directed rational square-root enclosures of denominator 10^70.",
+  "strict_gate": "upper < -133/100",
+  "x": 4690
+}
