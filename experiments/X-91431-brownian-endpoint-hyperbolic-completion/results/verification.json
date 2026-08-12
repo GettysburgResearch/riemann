@@ -1,0 +1,15 @@
+{
+  "checks": 12,
+  "endpoint_matrix_eigenvalues": [
+    "-1/2",
+    "1/2"
+  ],
+  "negative_exponential_witness": "2*cos(xi*(z2-z1))=-2 at xi=pi/(z2-z1)",
+  "scope": "exact finite algebra only; theta reserve domination and RH are not proved",
+  "sharp_diagonal_coefficient": "1/2 before the outer factor, 1/4 in L-91422.9",
+  "signature": [
+    2,
+    2
+  ],
+  "verdict": "PASS_BROWNIAN_ENDPOINT_HYPERBOLIC_COMPLETION"
+}
