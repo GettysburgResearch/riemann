@@ -3,6 +3,7 @@
 Claim ID: `O-19854`  
 Status: **RESEARCH SYNTHESIS — NEW LEMMAS REMAIN SUBJECT TO INDEPENDENT REVIEW**  
 Created: 2026-08-12  
+Corrected: 2026-08-12 after `L-91112/L-91113/R-91101`  
 RH status: **unproved**
 
 ## 1. Why three fronts
@@ -15,7 +16,7 @@ mechanisms:
 
 1. a fixed-scale completed Jordan/Suzuki first-chaos colligation;
 2. a theta/Brownian positive-bulk Dirichlet-to-Neumann construction;
-3. a finite factor-54 parity reset in the elementary endpoint/carry programme.
+3. a factor-54 parity reset in the elementary endpoint/carry programme.
 
 No route is declared proved through to RH.
 
@@ -64,7 +65,7 @@ The source-minus-output defect has the explicit positive feature
 
 Thus the exact remaining construction is one fixed first-chaos/Stinespring lift
 of Suzuki's radial family whose source normal curvature is the Jordan plus
-gamma/pole curvature.  Independent amplitude realizations at each scale do not
+gamma/pole curvature. Independent amplitude realizations at each scale do not
 suffice.
 
 ## 3. Front B — theta/Brownian boundary system
@@ -108,14 +109,14 @@ The BPY Gamma/Beta reservoir admits the hyperbolic coordinates
 and its complete local carré du champ acts only in the positive direction
 
 \[
- \partial_\Delta-	anh\Delta\partial_S.
+ \partial_\Delta-\tanh\Delta\partial_S.
 \]
 
 `L-91304` analytically continues the two-channel state to the unit disk and
 proves the strict Schur bound
 
 \[
- \sup_{z\in D}\|\mathbf x(z)\|^2
+ \sup_{z\in\mathbb D}\|\mathbf x(z)\|^2
  \le\frac{\pi e^{-\pi}}6<\frac1{32}.
 \]
 
@@ -125,27 +126,26 @@ Nevertheless its prescribed symmetric scalar completion is exactly Xi:
  1-[\mathbf x(z),\mathbf x(z)]=4M(z/2).
 \]
 
-Thus generic Schur completion is not enough.  The remaining theorem is an exact
+Thus generic Schur completion is not enough. The remaining theorem is an exact
 Brownian/theta DtN identity realizing this **particular** Xi scalar port as the
 boundary energy of the positive beta/theta bulk.
 
 ## 4. Front C — factor-54 reset
 
-This is currently the most finite and operational front.
+This is currently the most concrete arithmetic front, but its correct final
+interface is not finite-collar inversion.
 
-PR #399 already proves:
+PR #399 proves:
 
 ```text
 positive equality and reserve states on 1 <= x <= 54.219...;
-33-state squarefree parity shadows;
-a 16-prime finite automaton;
-positive martingale B-spline quantization;
-a coefficientwise-positive quantization collar;
+33 active first-window parity states;
+the full 65,536-state Boolean forcing from primes <=53;
+positive martingale/endpoint row geometry;
 a conditional coefficient-one reset -> RH theorem.
 ```
 
-`L-91303` sharpens the finite-versus-continuum transfer.  Uniformly for
-`n>=X/55`,
+`L-91303` supplies a useful diagnostic expansion
 
 \[
  b_X^\star(n)
@@ -154,53 +154,58 @@ a conditional coefficient-one reset -> RH theorem.
  +O(X^{-3/2}),
 \]
 
-where
+and proves `K_X=c_0X+O(1)`.  `L-91306` localizes the B-spline collar.  These
+results are retained as asymptotic diagnostics.
+
+They are no longer load bearing for the preferred exact reset.  Concurrent
+`L-91112` proves that the exact equality rows themselves:
+
+```text
+are nonnegative throughout the certified outer window;
+saturate every ordinary column above K_X exactly;
+saturate every radix-four detail, including the terminal annulus, exactly;
+turn the target mismatch and all three collars into one exact inner residual;
+split the score without outer debt.
+```
+
+`L-91113` then absorbs **every** combination of the sixteen primes through 53
+into a globally positive Boolean forcing.  The remaining arithmetic is the
+exact delayed renewal
 
 \[
- \mathscr D(\theta)
- =\theta^{-1/2}
-  \sum_{k\le1/\theta}\frac{\mu(k)}{\sqrt k}
-  \log\frac1{k\theta}.
+ \boxed{
+ \mathbf F^{(53)}(x)
+ =\sum_{\substack{m\in\mathcal M_{59}\\m\le x}}
+ m^{-1/2}\mathbf U(x/m),
+ \qquad
+ \mathbf U=(L,R),
+ }
 \]
 
-Consequently the finite reset splice obeys
+where every nontrivial delay has `m>=59` and therefore lands below one complete
+factor-54 reset scale.
 
-\[
- K_X=c_0X+O(1),
-\]
+`R-91101` is the mandatory scope correction: positivity of
+`F^(53)` does not imply positivity of `U`, because the causal inverse of
+`I+K_59` alternates.  The exact remaining gate is:
 
-rather than requiring an `epsilon X` retreat.  The corrected seed remainder
-causes only `O(X^-1)` relative interior carry loss.
+> construct a capacity-faithful positive allocation of the globally positive
+> Boolean forcing between the current inner row residual and the delayed
+> rough-prime copies of the contracted `(L,R)` state, with coefficient-one
+> score transfer and bounded additive debt.
 
-The endpoint inverse of the first Euler correction is explicit:
-
-\[
- \mathcal E\mathscr D(1/x)
- =\frac x2\sum_{k\le x}\frac{\mu(k)}{\sqrt k}
- [3\log(x/k)+5],
-\]
-
-with reciprocal-knot atoms `mu(N)/sqrt(N)`.  Every unsigned coefficient is
-positive, so the correction lives in the same even/odd parity states as the
-original reset.  Its total normalized mass is `O(1/X)` and is absorbed by the
-fixed Hall margin `>0.11` for all sufficiently large `X`.
-
-The remaining reset gate is now strictly finite:
-
-> lift the robust 33-state parity transport and the bounded terminal quotient
-> collars through the three-consecutive-integer divisor stencils, preserving
-> endpoint nonnegativity and coefficient-one transfer of the `(L,R)` state.
-
-All continuum error, splice drift, bulk quantization score and interior carry
-loss are already paid.
+Thus all finite collars and all finite Euler factors are closed; the survivor is
+one delayed rough-prime renewal allocation.
 
 ## 5. Ranking
 
-### First: factor-54 reset
+### First: factor-54 rough-prime allocation
 
-This has the smallest remaining interface: a finite carry/capacity lift repeated
-self-similarly.  It does not require analytic continuation through an unknown
-zero set.
+This remains the strongest near-term route because all finite Euler states,
+outer rows, endpoint collars and score splits are explicit.  The remaining
+operator is an infinite but strongly delayed positive renewal with a finite
+state/output interface.  A successful proof should seek a positive branching
+or Schur allocation, not positivity of the alternating inverse.
 
 ### Second: fixed Suzuki colligation
 
@@ -214,14 +219,31 @@ This has the richest explicit positive bulk and probability structure.  It now
 has a strict Schur state and one exact beta tangent direction, but the prescribed
 Xi scalar port remains the conclusion-bearing boundary identification.
 
-## 6. Exact status
+## 6. A common architecture
+
+The three survivors have the same abstract shape:
 
 ```text
-three independent attacks pursued                YES
-new exact operator identities                    YES
-new finite reset asymptotics                      YES
-factor-54 finite collar lift                      OPEN
-fixed first-chaos Suzuki lift                     OPEN
-Brownian/theta Xi-port DtN identity               OPEN
-Riemann Hypothesis                                UNPROVED
+positive enlarged source/reservoir;
+a fixed observation or allocation map;
+a signed critical boundary response;
+prove the response is a contraction/Schur complement of the reservoir.
+```
+
+The firewalls also agree: taking absolute values, optimizing an arbitrary
+metric, or inverting a positive renewal coefficientwise cannot close the
+critical sign.  The required map must preserve all cross-scale/cross-channel
+terms.
+
+## 7. Exact status
+
+```text
+three independent attacks pursued                    YES
+new exact operator identities                        YES
+exact outer equality-row peel                        PROVED ON #399
+all primes <=53 / Boolean forcing                     PROVED ON #399
+delayed rough-prime allocation                        OPEN / RH-BEARING
+fixed first-chaos Suzuki lift                         OPEN / RH-BEARING
+Brownian/theta Xi-port DtN identity                   OPEN / RH-BEARING
+Riemann Hypothesis                                    UNPROVED
 ```
