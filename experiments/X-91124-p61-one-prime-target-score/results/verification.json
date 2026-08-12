@@ -1,0 +1,25 @@
+{
+  "classification": "PASS_P61_ONE_PRIME_TARGET_SCORE_SURPLUS",
+  "divisor_states": 262144,
+  "global_prefix_maximum": {
+    "activation_divisor": 1,
+    "numerator": "117288381359406970983270",
+    "value": "1"
+  },
+  "minimum_prefix_for_z_ge_67": {
+    "activation_divisor": 70,
+    "common_numerator": "1926272088479361233555",
+    "decimal": 0.01642338368177051,
+    "reduced_fraction": "55036345385124606673/3351096610268770599522"
+  },
+  "one_prime_first_moment_gap": {
+    "certified_above": "1498/1000000",
+    "decimal": 0.0014980105474421545,
+    "fraction": "336338530534578047569/224523472888007630167974"
+  },
+  "prefix_checks": 262144,
+  "product_P61": 117288381359406970983270,
+  "scope": "Exact integer/Fraction arithmetic certifies every P61 divisor prefix, the uniform one-prime first-moment gap, and the affine target/score interpolation. Positivity of the endpoint forcings at a=1,2 is imported from the directed theorem L-91328. The finite Green-boundary row inequality and RH remain open.",
+  "small_primes": [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61],
+  "target_and_score_lower_coefficient": "9/50"
+}
