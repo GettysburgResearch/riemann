@@ -1,12 +1,13 @@
-# T-91301 — The prime Poisson first chaos embeds explicitly in the completed two-sided Hardy tangent
+# T-91301 — The ordinary-prime Poisson first chaos has an explicit completed-boundary Hardy component
 
 Claim ID: `T-91301`  
-Status: **PROVED EXACT PRIME-COMPONENT EMBEDDING; COMPLETED CURVATURE DOMINATION OPEN**  
+Status: **PROVED EXACT PRIME BOUNDARY-COMPONENT COLLIGATION; COMMON COMPLETED SOURCE MAP OPEN**  
 Created: 2026-08-12  
-Depends on: `L-91035`, `L-91036`, `L-91306`, `L-91307`, `R-91301`  
+Corrected: 2026-08-12  
+Depends on: `L-91035`, `L-91036`, `L-91306`, `L-91307`, `L-91401`, `R-91301`, `R-91402`  
 RH status: **unproved**
 
-## 1. Statement
+## 1. Exact prime component
 
 Fix
 
@@ -19,140 +20,145 @@ Let
 
 \[
  d\beta_4(u)
- =4\sum_{n=p^k}\Lambda(n)n^{-9/2}\delta_{\log n}(du)
+ =4\sum_{n=p^k}\Lambda(n)n^{-9/2}
+  \delta_{\log n}(du)
+\tag{T-91301.1}
 \]
 
 and
 
 \[
  (\mathsf H_{\beta_4}g)(t)
- =\int_{(t,\infty)}g(u-t)d\beta_4(u).
+ =\int_{u>t}g(u-t)d\beta_4(u).
+\tag{T-91301.2}
 \]
 
 Then:
 
-1. `H_(beta_4)` is, after the standard Hardy Fourier reflection, exactly the
-   positive-frequency block of the ordinary-prime Suzuki scattering
-   connection;
-2. there is an explicit positive-metric isometry
+1. after the standard Hardy reflection, `H_(beta_4)` is exactly the
+   positive-frequency Hankel block of the ordinary-prime Suzuki scattering
+   score;
+2. the explicit maps `D_0,D_1,D_2` of `L-91307` satisfy
    \[
-    \mathcal U_{\beta_4}g
-    =(\mathsf H_{\beta_4}g,D_0g,D_1g,D_2g)
+    \boxed{
+    \|g\|^2
+    =\|\mathsf H_{\beta_4}g\|^2
+     +\|D_0g\|^2+\|D_1g\|^2+\|D_2g\|^2;
+    }
+    \tag{T-91301.3}
    \]
-   with `D_0,D_1,D_2` given in `L-91307`;
-3. reflection gives the anti-causal orientation, and direct sum gives a fully
-   polarized two-sided embedding;
-4. the explicit gamma/pole boundary factor acts as the skew covariant
-   connection of `L-91306`, placing the two prime outputs inside Suzuki's
-   completed model-space normal tangent.
+3. reflection gives the opposite Hardy orientation;
+4. the gamma/pole factor enters the observed completed boundary derivative as
+   the skew covariant connection of `L-91306`.
 
-Therefore the source-linear prime Poisson output requested by CJHI is not an
-abstract Fock square root: it has one explicit first-chaos/tail-Hankel Julia
-realization.
+Thus the actual ordinary-prime source-linear output has an explicit
+first-chaos/tail-Hankel Julia realization.  No square root of an unknown Weil
+matrix is used.
 
-## 2. Exact operator diagram
+## 2. Completed-boundary placement
 
-```text
-ordinary-prime Poisson score first chaos
-       |
-       | exact positive atomic measure beta_4
-       v
-causal tail-Hankel H_(beta_4) + explicit Julia environment
-       |
-       | reflection / direct sum / delay unitaries
-       v
-prime two-sided Hardy tangent
-       |
-       | gamma/pole moving-unitary connection M_(Gamma_4)
-       v
-Suzuki completed two-sided model-space normal tangent.
-```
-
-At operator level,
+Write on the real boundary
 
 \[
- P_-M_{\chi_4^{\rm p}}P_+
- \simeq\mathsf H_{\beta_4},
- \tag{T-91301.1}
+ \Theta_a=\Gamma_aZ_a.
 \]
 
-and
+The moving-unitary identity of `L-91306` is
 
 \[
  \boxed{
- (I-Q_4)a\partial_aM_{\Theta_a}|_{a=4}
- =M_{\Gamma_4}(I-R_4)
- \left[a\partial_aV_a+A_4V_a\right]_{a=4}.
+ (I-Q_a)\partial_{\log a}M_{\Theta_a}
+ =M_{\Gamma_a}(I-R_a)
+  \left(\partial_{\log a}V_a+A_aV_a\right).
  }
- \tag{T-91301.2}
+\tag{T-91301.4}
 \]
 
-The prime component inside the bracket is (T-91301.1); `A_4` is the explicit
-gamma/pole connection.
+The ordinary-prime Hankel block is the prime component inside the covariant
+source derivative.  The gamma/pole factor is retained rather than discarded as
+a signed scalar remainder.
 
-## 3. Why higher Fock chaos disappears
+This is an exact placement at the **observed boundary-tangent level**.  It is
+not yet an isometry from the prime Poisson probability source to the completed
+xi Fisher probability source; `R-91402` proves that those two laws cannot be
+identified as the same positive Levy source.
 
-`L-91036` proves that a source-linear target annihilates every Poisson chaos of
-order at least two. Consequently the full bosonic Fock space contributes only
+## 3. Correct delay statement
 
-```text
-vacuum/amplitude channel
-+ first-chaos tangent channel
-+ orthogonal unused environment.
-```
-
-The first item is completed by Suzuki's imported amplitude isometry
-`L-91035`; the second is completed by `L-91307`. Higher chaos is not a missing
-output port.
-
-## 4. What is and is not completed
-
-The following component is now closed:
+A raw delay does not generally preserve `K_(Theta_a)`.  For the positive Hardy
+delay `S_tau`, `L-91401` supplies the exact Julia split
 
 \[
  \boxed{
- \text{prime Poisson-Fock source-linear output}
+ S_\tau g=T_\tau g+M_{\Theta_a}R_\tau g,
+ }
+\tag{T-91301.5}
+\]
+
+where
+
+\[
+ T_\tau^*T_\tau+R_\tau^*R_\tau=I.
+\tag{T-91301.6}
+\]
+
+For every mixed-delay packet,
+
+\[
+ \boxed{
+ \langle S_{\tau_i}g_i,S_{\tau_j}g_j\rangle
+ =\langle T_{\tau_i}g_i,T_{\tau_j}g_j\rangle
+  +\langle R_{\tau_i}g_i,R_{\tau_j}g_j\rangle.
+ }
+\tag{T-91301.7}
+\]
+
+Thus the prime Hardy output extends to two orientations and arbitrary positive
+delays once the explicit leakage reserve is retained.  Raw delay invariance is
+not claimed.
+
+## 4. Higher chaos
+
+`L-91036` shows that, within a chosen positive Poisson product system, an
+exactly source-linear target uses only compensated first chaos.  Hence higher
+prime Poisson chaoses are unused environment for the ordinary-prime tangent.
+
+This does not imply that the completed xi Fisher law is Poisson infinitely
+divisible.  That separate shortcut is refuted by `R-91402`.
+
+## 5. What remains
+
+The closed component is
+
+\[
+ \boxed{
+ \text{ordinary-prime Poisson first chaos}
  \longrightarrow
- \text{completed two-sided Hardy tangent plus positive auxiliary reserve}.
+ \text{two-sided delayed prime Hardy output}
+ \oplus
+ \text{explicit Julia reserves}.
  }
+\tag{T-91301.8}
 \]
 
-The word `completed` means that the archimedean/pole amplitude and its radial
-motion are retained as the covariant unitary factor of `L-91306`; they are not
-discarded or replaced by a scalar remainder.
-
-This theorem does **not** assert
-
-\[
- C_a^{\rm src}\succeq\mathcal J_a^*\mathcal J_a.
-\]
-
-That inequality compares the completed Fisher curvature of `L-91309` with the
-square of the **sum** of the prime and gamma/pole Hankel connections. Its cross
-term is load bearing. Establishing it is corrected `T-91008` and is
-RH-equivalent.
-
-## 5. Source-type firewall
-
-The measure used here is the actual scattering-score measure
-
-\[
- a\Lambda(n)n^{-a-1/2}\delta_{\log n}.
-\]
-
-It is not the normalized Jordan-curvature measure of `L-91037`. Replacing one
-by the other without an explicit transport violates `R-91301`.
+The open completion is a renormalized source map that sends the prime
+Poisson/Julia source together with gamma/pole/theta channels into the completed
+Fisher--Hankel source of `L-91316`, preserving the visible block and every
+auxiliary norm.  After that map is constructed, its defect must still be
+identified with the delayed zeta screw/Weil Gram.
 
 ## 6. Exact boundary
 
 ```text
-Suzuki completed amplitude embedding                 IMPORTED PROVED
-source-linear reduction to first chaos               EXACT
-ordinary-prime score measure                          EXACT
-prime score Hardy Hankel block                        EXACT
-explicit positive Julia reserve at a0=4              EXACT
-two-sided/reflected/delayed prime embedding           EXACT
-gamma/pole covariant placement                        EXACT
-completed Fisher curvature >= total Hardy shape      OPEN / RH-EQUIVALENT
-Riemann Hypothesis                                    UNPROVED
+ordinary-prime score measure                         EXACT
+prime score -> Hardy tail-Hankel                     EXACT
+explicit positive Julia reserve at a0=4             EXACT
+opposite Hardy orientation                          EXACT
+raw-delay invariance of K_Theta                     REFUTED
+compressed delays + leakage                         EXACT
+gamma/pole placement at observed tangent level      EXACT
+prime Poisson law = completed Fisher law            REFUTED
+renormalized common completed source map             OPEN
+common-source defect = delayed screw/Weil Gram       OPEN / RH-BEARING
+Riemann Hypothesis                                   UNPROVED
 ```
