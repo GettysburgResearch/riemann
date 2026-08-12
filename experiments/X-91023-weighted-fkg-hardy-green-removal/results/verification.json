@@ -1,0 +1,95 @@
+{
+  "boundary_density_reconnaissance": [
+    {
+      "a": "0.01",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "0.0242170620056508639838522"
+    },
+    {
+      "a": "0.03",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "0.0720857920588283312164738"
+    },
+    {
+      "a": "0.05",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "0.119315514451727922100166"
+    },
+    {
+      "a": "0.1",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "0.235429224046601932869166"
+    },
+    {
+      "a": "0.2",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "0.465085210619327400383597"
+    },
+    {
+      "a": "0.4",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "0.950604884584362936837078"
+    },
+    {
+      "a": "0.8",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "2.20044066281686522632916"
+    },
+    {
+      "a": "1.5",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "5.70726256415440798471035"
+    },
+    {
+      "a": "3.0",
+      "left_limit_at_log_n_plus_1": "1",
+      "minimum_B": "19.5412826222044739807568"
+    }
+  ],
+  "checks": 1318,
+  "classification": "PASS_WEIGHTED_FKG_HARDY_GREEN_REMOVAL",
+  "exact_weighted_fkg_checks": 531,
+  "first_cell_samples": [
+    {
+      "a": "0.005",
+      "explicit_eventual_threshold_T": "32366.5293455159595",
+      "minimum_sampled_first_cell_B": "0.01213394992385457856953"
+    },
+    {
+      "a": "0.02",
+      "explicit_eventual_threshold_T": "1980.62389493123052",
+      "minimum_sampled_first_cell_B": "0.04823977692794266933409"
+    },
+    {
+      "a": "0.1",
+      "explicit_eventual_threshold_T": "69.6093459900687652",
+      "minimum_sampled_first_cell_B": "0.2354292240466019328692"
+    },
+    {
+      "a": "0.3",
+      "explicit_eventual_threshold_T": "4.57624864316965227",
+      "minimum_sampled_first_cell_B": "0.7006188410776613799992"
+    },
+    {
+      "a": "0.5",
+      "explicit_eventual_threshold_T": "0.260006115845641561",
+      "minimum_sampled_first_cell_B": "1.22140285206928723067"
+    },
+    {
+      "a": "1.0",
+      "explicit_eventual_threshold_T": "0.0",
+      "minimum_sampled_first_cell_B": "3.017664681094527774744"
+    },
+    {
+      "a": "3.0",
+      "explicit_eventual_threshold_T": "0.0",
+      "minimum_sampled_first_cell_B": "12.304359050580330614"
+    }
+  ],
+  "max_hardy_laplace_error": "5.22411444046e-70",
+  "max_symmetric_square_error": "9.05567907883e-72",
+  "max_zero_mass_error": "2.29082586402e-73",
+  "minimum_eventual_bound_margin": "0.0000306852819440054691",
+  "minimum_sampled_first_cell_boundary_density": "0.0121339499238545786",
+  "scope": "exact finite FKG consequences and transform algebra; floating finite boundary-density reconnaissance only; no CJHI or RH claim"
+}

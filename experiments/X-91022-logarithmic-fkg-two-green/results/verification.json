@@ -1,0 +1,55 @@
+{
+  "checks": 2900,
+  "classification": "PASS_LOGARITHMIC_INTEGER_FKG_TWO_GREEN",
+  "minimum_exact_gap_including_N1": "0",
+  "minimum_exact_nontrivial_gap": "1/64",
+  "scope": "finite exact arithmetic controls only; Harris-FKG and Bernstein transfer remain written proofs, and RH is not claimed",
+  "selected_exact_controls": {
+    "s=1,N=10": {
+      "conditional_expectation": "223513/310002",
+      "gap": "5103127/18522000",
+      "unconditioned_product": "768/1225"
+    },
+    "s=1,N=2": {
+      "conditional_expectation": "5/6",
+      "gap": "1/8",
+      "unconditioned_product": "3/4"
+    },
+    "s=2,N=10": {
+      "conditional_expectation": "285205223/325502100",
+      "gap": "69634507/555660000",
+      "unconditioned_product": "15314/18375"
+    },
+    "s=2,N=2": {
+      "conditional_expectation": "11/12",
+      "gap": "1/16",
+      "unconditioned_product": "7/8"
+    },
+    "s=3,N=10": {
+      "conditional_expectation": "64451344619/68355441000",
+      "gap": "9007988333/163364040000",
+      "unconditioned_product": "6656/7203"
+    },
+    "s=3,N=2": {
+      "conditional_expectation": "23/24",
+      "gap": "1/32",
+      "unconditioned_product": "15/16"
+    },
+    "s=4,N=10": {
+      "conditional_expectation": "13966001291411/14354642610000",
+      "gap": "476090231833/19059138000000",
+      "unconditioned_product": "8205616331/8508543750"
+    },
+    "s=4,N=2": {
+      "conditional_expectation": "47/48",
+      "gap": "1/64",
+      "unconditioned_product": "31/32"
+    }
+  },
+  "terminal_gap_size_controls": {
+    "1": {"denominator_digits": 566, "numerator_digits": 566, "positive": true},
+    "2": {"denominator_digits": 754, "numerator_digits": 753, "positive": true},
+    "3": {"denominator_digits": 933, "numerator_digits": 932, "positive": true},
+    "4": {"denominator_digits": 1177, "numerator_digits": 1176, "positive": true}
+  }
+}
