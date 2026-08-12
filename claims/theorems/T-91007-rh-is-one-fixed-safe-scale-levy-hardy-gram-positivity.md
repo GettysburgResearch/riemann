@@ -1,258 +1,78 @@
-# T-91007 — RH is one fixed safe-scale Lévy–Hardy Gram positivity theorem
+# T-91007 — Scalar fixed-scale Lévy–Hardy criterion: blocked and superseded
 
 Claim ID: `T-91007`  
-Status: **PROPOSED COMPLETE RH-EQUIVALENT FIXED-SCALE CRITERION — INDEPENDENT REVIEW REQUIRED**  
+Status: **UNPROVEN / ORIGINAL REVERSE IMPLICATION USED FALSE `L-91032`; SUPERSEDED BY `T-91008`**  
 Created: 2026-08-11  
-Depends on: main `T-91006` (CJHI proposal), `L-91030`, `L-91031`, `L-91032`, `L-91033`, and Suzuki's screw criterion  
+Corrected: 2026-08-12  
 RH status: **unproved**
 
-## 1. Statement
+## 1. Original proposal
 
-Fix one arbitrary scale
-
-\[
- a_0>\frac12.
-\]
-
-Let
+The original packet fixed one `a_0>1/2`, used one causal Cauchy mother, its
+anti-causal reflection and one bridge, and proposed
 
 \[
- \mathfrak I=(\{+,-\}\times\mathbb R)\sqcup\{\star\}.
-\]
-
-For `(epsilon,x)`, let `F_(epsilon,x)` be the causal or anti-causal wavelet of
-`L-91031` at scale `a_0`; let `F_star=b_(a_0)` be the bridge of `L-91032`.
-Define
-
-\[
- \boxed{
- \mathbb K_{a_0}(i,j)=
- \iint G_\zeta(t,u)F_i(t)\overline{F_j(u)}dtdu.
- }
- \tag{T-91007.1}
-\]
-
-Then, subject to independent review of the form-core theorem,
-
-\[
- \boxed{
  \mathrm{RH}
  \Longleftrightarrow
  \mathbb K_{a_0}\succeq0
- \text{ on every finite subset of }\mathfrak I.
- }
- \tag{T-91007.2}
 \]
 
-Any one fixed `a_0>1/2` is complete.  The quantifier over scale is removed.
+on every finite carrier/orientation/bridge packet.
 
-## 2. RH gives an explicit Lévy Gram
+The forward implication under RH was the zero-side Lévy Gram.  The reverse
+implication relied entirely on the claim that the scalar family was dense in
+the complete weighted mean-zero screw space.
 
-Under RH,
+## 2. Why the proof is invalid
 
-\[
- \nu_\zeta=
- \sum_\gamma\frac{m_\gamma}{\gamma^2}\delta_\gamma
-\]
+`R-91008` gives an exact hidden jump vector supported beyond an interior zero
+of the physical causal mother.  Hence the scalar causal family has more than
+the declared one-dimensional half-line defect.  `L-91032` is false as stated,
+and positivity on its finite Gram packets does not imply positivity of the
+complete screw form.
 
-is positive and, for every mean-zero test,
+This is not a minor regularity gap.  The missing directions are explicit
+nonzero vectors.
 
-\[
- \mathbb K_{a_0}(i,j)=
- \int\widehat F_i(\lambda)
- \overline{\widehat F_j(\lambda)}d\nu_\zeta(\lambda).
- \tag{T-91007.3}
-\]
+## 3. What survives
 
-For the two Hardy families,
-
-\[
- \boxed{
- \mathbb K_{a_0}((\epsilon,x),(\delta,y))=
- \sum_\gamma m_\gamma
- \Psi_{a_0}^\epsilon(\gamma-x)
- \overline{\Psi_{a_0}^\delta(\gamma-y)}.
- }
- \tag{T-91007.4}
-\]
-
-The bridge entries arise from the same Gram formula.  Hence every finite
-matrix is positive semidefinite.
-
-## 3. Fixed-scale positivity recovers the entire screw form
-
-Assume the right side of (T-91007.2).  Positivity holds on the algebraic span
-of the indexed tests.  `L-91032` proves that this span is dense in
-
-\[
- \mathcal H_{\eta,0}
- =\{f\in L^2(e^{\eta|t|}dt):\int f=0\}
-\]
-
-for any `1<eta<2a_0`.  The screw form is continuous in that norm, so it is
-nonnegative on all of `H_(eta,0)`, in particular on Suzuki's compact smooth
-mean-zero test space.  Suzuki's theorem gives RH.
-
-No terminal-pair selection, zero interpolation, Gram inversion, growing
-support or cofinal scale hierarchy is used in this implication.
-
-## 4. The previous recurrence is only one diagonal
-
-For the causal diagonal,
-
-\[
- \boxed{
- \mathbb K_{a_0}((+,x),(+,x))
- =a_0^4\mathcal R_x(a_0),
- }
- \tag{T-91007.5}
-\]
-
-where `R_x(a)` is the three-square residual in `T-91005`.
-
-Thus the normalized Cauchy recurrence observes only
-
-\[
- \operatorname{diag}\mathbb K_{a_0}.
-\]
-
-The cross-carrier, causal/anti-causal and bridge entries are the polarization
-needed to recover the complete screw/Weil form.
-
-The radical replacement is
+The following statements from the original packet remain valid at their
+stated or proposed scopes:
 
 ```text
-all scale-by-scale scalar gates
-    -> one fixed-scale matrix kernel;
-
-terminal-pair isolation
-    -> Hardy-Wiener completeness;
-
-moving prime cutoffs and asymptotics
-    -> absolutely convergent fixed Euler entries.
+under RH the scalar two-orientation kernel is a Lévy Gram;
+the scalar recurrence is one causal diagonal;
+every fixed-safe-scale entry is absolutely Eulerian;
+finite negative matrices would be finite countercertificates;
+full carrier polarization is essential.
 ```
 
-## 5. Fixed safe-scale prime-side form
+The RH equivalence is not retained for the scalar index set.
 
-Every indexed test is a finite one-sided exponential-polynomial combination
-with rates among `a_0,2a_0,4a_0`.  Its Guinand–Weil entry has the form
+## 4. Corrected criterion
 
-\[
- \boxed{
- \mathbb K_{a_0}(i,j)=
- \mathbb K_{\Gamma,\mathrm{pole}}(i,j)
- -2\Re\sum_{n\ge2}
- \frac{\Lambda(n)}{\sqrt n}\mathcal W_{i,j}(\log n),
- }
- \tag{T-91007.6}
-\]
-
-with
+`L-91034` introduces a positive delay fibre.  The corrected index set is
 
 \[
- \mathcal W_{i,j}(t)=O_{i,j}(\operatorname{poly}(t)e^{-a_0t}).
+ (\{+,-\}\times\mathbb R\times[0,\infty))
+ \sqcup\{\star\}.
 \]
 
-Since `a_0>1/2`, the prime series converges absolutely.  Each entry is also a
-finite algebraic combination of safe `-zeta'/zeta` derivatives in `Re(s)>1`,
-plus explicit rational/polygamma terms.
+Subject to independent review of the repaired density theorem, positivity on
+every finite delayed packet is equivalent to the full screw positivity and
+hence to RH.
 
-The remaining sign is therefore the fixed source-explicit domination
+The corrected final component is not a full-Fock-to-one-scalar-Hardy map.  By
+`L-91035`--`L-91037` it is a completed **first-chaos tangent lift** into the
+delayed two-sided Hardy reserve.  Its normative statement is `T-91008`.
 
-\[
- \boxed{
- \mathbb K_{\Gamma,\mathrm{pole}}
- \succeq
- \mathbb K_{\mathrm{prime}}
- }
- \tag{T-91007.7}
-\]
-
-on the complete two-Hardy-channel carrier space.
-
-## 6. Completion of main's CJHI target
-
-Main's `T-91006` isolates the Cauchy–Jordan Hardy Intertwiner as the final open
-compatibility theorem.  The present stack makes both sides of that proposed
-intertwiner explicit:
+## 5. Exact boundary
 
 ```text
-source environment:
-  prime-power compound-Poisson bosonic Fock product system;
-
-source polarization:
-  full phase-vector and Wiener-Itô chaos kernels;
-
-output environment:
-  causal and anti-causal rational Hardy channels;
-
-output completion:
-  one bridge vector;
-
-completed reserve:
-  gamma/pole scattering channel.
-```
-
-A conclusion-producing proof is the construction of one positive-metric
-isometry
-
-\[
- \boxed{
- \mathcal U:
- \mathcal H_{\Gamma,\mathrm{pole}}
- \oplus\Gamma_s(L^2(\nu_a))
- \longrightarrow
- \mathcal H_{\mathrm{Hardy}}\oplus\mathcal E
- }
- \tag{T-91007.8}
-\]
-
-whose transfer kernel is `mathbb K_(a_0)`.  If it is constructed,
-(T-91007.7) is automatic and RH follows.
-
-Conversely, positivity of `mathbb K_(a_0)` supplies a Kolmogorov/Stinespring
-factorization.  Thus this conservative colligation target is exactly sharp,
-not a weaker sufficient condition.
-
-## 7. Countable reduction and finite countercertificates
-
-Continuity in the carriers implies rational carriers suffice.  Every finite
-entry has an absolutely convergent Euler expression and an elementary tail
-bound.  Consequently
-
-\[
- \boxed{
- \neg\mathrm{RH}
- \Longrightarrow
- \begin{array}{c}
- \text{one finite rational carrier/orientation packet},\\
- \text{one finite prime-power cutoff},\\
- \text{one strictly negative directed eigenvalue interval}.
- \end{array}
- }
- \tag{T-91007.9}
-\]
-
-No negative Riemann-data matrix is claimed to have been found.
-
-## 8. Exact boundary
-
-Closed, subject to independent review:
-
-```text
-one arbitrary fixed safe scale a_0>1/2 is complete;
-RH -> explicit Lévy Gram;
-fixed-scale Gram PSD -> full Suzuki screw positivity -> RH;
-Cauchy residual is one diagonal;
-all entries are absolutely Eulerian;
-false RH has a finite rational-carrier finite-prime matrix witness;
-CJHI reduced to one explicit conservative Poisson-Fock/Hardy colligation.
-```
-
-Open:
-
-```text
-construction of that completed colligation;
-unconditional fixed-scale cross-Gram PSD;
-Riemann Hypothesis.
+RH -> scalar fixed-scale Lévy Gram                 RETAINED
+scalar Gram -> full screw form                     FALSE PROOF / NOT ESTABLISHED
+scalar fixed-scale RH equivalence                  BLOCKED
+corrected delayed fixed-scale criterion            PROPOSED COMPLETE in T-91008
+completed first-chaos tangent intertwiner          OPEN / RH-EQUIVALENT
+Riemann Hypothesis                                 UNPROVED
 ```
