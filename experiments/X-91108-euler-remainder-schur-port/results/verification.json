@@ -1,0 +1,26 @@
+{
+  "classification": "PASS_EULER_REMAINDER_SCHUR_PORT_AND_POSITIVE_CUBES",
+  "eta_euler_terms": 16,
+  "eta_lower": 0.6048983739403347,
+  "off_diagonal_mass_bound": {
+    "decimal": 3.9848468313220575,
+    "exact": "2958824445050880/742518990138757",
+    "upper": "4"
+  },
+  "scope": "Exact Fraction arithmetic with directed rational square-root enclosures. The script certifies the sharp N=1 zeta-half gate, the finite endpoint-mass corridor, and representative exact Euler-cube products. The all-cell and general-cube identities are proved analytically in L-91316 and L-91317.",
+  "sharp_cell_one_threshold_upper": 1.4602372915256612,
+  "small_prime_endpoint_mass": {
+    "decimal": 4.482952685237315,
+    "exact": "3328677500682240/742518990138757",
+    "upper": "9/2"
+  },
+  "smallest_positive_euler_difference_lower": 0.020124802513254447,
+  "strict_threshold_margin_lower": 0.00011656669852704771,
+  "tested_boolean_cube_sizes": [
+    1,
+    3,
+    8,
+    16
+  ],
+  "zeta_half_abs_lower": 1.4603538582241882
+}
