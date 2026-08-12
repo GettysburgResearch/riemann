@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Numerical regression for L-91402/L-91403/T-91401."""
+"""Numerical regression for L-91402/L-91403/T-91401 and R-91403."""
 from __future__ import annotations
 
 import argparse
@@ -102,9 +102,10 @@ def source_gram(
     plastic_log: mp.mpf,
     rows: list[tuple[int, int, int]],
     lambda_prime: mp.mpf,
-) -> tuple[np.ndarray, np.ndarray]:
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     size = len(carriers)
     gram = np.zeros((size, size), dtype=complex)
+    negative_gram = np.zeros((size, size), dtype=complex)
     derivatives = np.array(
         [complex(direct_log_phase_derivative(sigma, t)) for t in carriers],
         dtype=complex,
@@ -121,6 +122,12 @@ def source_gram(
                 * abs(quasi_density(sigma, x)),
                 [0, plastic_log, mp.mpf("0.5"), 1, mp.inf],
             )
+            negative = mp.quad(
+                lambda x: carrier_feature(s, x)
+                * mp.conj(carrier_feature(t, x))
+                * (-quasi_density(sigma, x)),
+                [plastic_log, mp.mpf("0.5"), 1, mp.inf],
+            )
             atomic = sum(
                 carrier_feature(s, mp.log(n))
                 * mp.conj(carrier_feature(t, mp.log(n)))
@@ -129,11 +136,15 @@ def source_gram(
                 for n, k, _p in rows
             )
             gram[i, j] = complex(drift_s * mp.conj(drift_t) + continuous + atomic)
+            negative_gram[i, j] = complex(negative)
 
     observed = derivatives / float(mp.sqrt(score_norm_sq))
     defect = gram - np.outer(observed, np.conjugate(observed))
     defect = (defect + defect.conj().T) / 2
-    return defect, derivatives
+    negative_gram = (negative_gram + negative_gram.conj().T) / 2
+    signed_defect = defect - 2 * negative_gram
+    signed_defect = (signed_defect + signed_defect.conj().T) / 2
+    return defect, signed_defect, negative_gram, derivatives
 
 
 def build() -> dict[str, object]:
@@ -168,7 +179,7 @@ def build() -> dict[str, object]:
     prime_summand_error = abs(prime_score_from_quasi - prime_score_direct)
 
     carriers = [mp.mpf("0.31"), mp.mpf("0.83"), mp.mpf("1.37")]
-    defect, _derivatives = source_gram(
+    defect, signed_defect, negative_gram, _derivatives = source_gram(
         sigma,
         carriers,
         plastic_log,
@@ -176,6 +187,11 @@ def build() -> dict[str, object]:
         lambda_prime,
     )
     defect_eigenvalues = np.linalg.eigvalsh(defect)
+    signed_defect_eigenvalues = np.linalg.eigvalsh(signed_defect)
+    negative_channel_eigenvalues = np.linalg.eigvalsh(negative_gram)
+    jordan_subtraction_error = np.linalg.norm(
+        signed_defect - (defect - 2 * negative_gram)
+    )
     score_norm_sq = source_score_norm_squared(sigma, plastic_log, rows)
 
     gates = {
@@ -183,6 +199,8 @@ def build() -> dict[str, object]:
         "completed_derivative": derivative_error < mp.mpf("1e-15"),
         "prime_direct_summand": prime_summand_error < mp.mpf("1e-60"),
         "positive_source_auxiliary": float(defect_eigenvalues.min()) > -1e-12,
+        "jordan_subtraction_identity": float(jordan_subtraction_error) < 1e-13,
+        "signed_defect_not_automatic": float(signed_defect_eigenvalues.min()) < -1e-8,
     }
     assert all(gates.values())
 
@@ -207,6 +225,9 @@ def build() -> dict[str, object]:
         "prime_summand_error": float(prime_summand_error),
         "source_score_norm_squared": float(score_norm_sq),
         "source_auxiliary_eigenvalues": [float(x) for x in defect_eigenvalues],
+        "negative_channel_eigenvalues": [float(x) for x in negative_channel_eigenvalues],
+        "signed_defect_eigenvalues": [float(x) for x in signed_defect_eigenvalues],
+        "jordan_subtraction_error": float(jordan_subtraction_error),
     }
 
 
