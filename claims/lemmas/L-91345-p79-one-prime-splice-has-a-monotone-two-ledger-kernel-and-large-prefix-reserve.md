@@ -12,29 +12,27 @@ Fix a prime `p>=83`, put
 
 \[
  r=p^{-1/2},
- \qquad1\le y<83,
+ \qquad 1\le y<83,
 \]
 
-and let `d` be a squarefree divisor of `P_79`.  Define causally
+and let `d` be a squarefree divisor of `P_79`. Define causally
 
 \[
- K_\Psi(d)
- =W_\Psi(py,d)-rW_\Psi(y,d),
+ K_\Psi(d)=W_\Psi(py,d)-rW_\Psi(y,d),
 \]
 
 \[
- K_S(d)
- =W_S(py,d)-rW_S(y,d),
+ K_S(d)=W_S(py,d)-rW_S(y,d),
 \]
 
 where
 
 \[
- W_\Psi(x,d)=d^{-1/2}[4\sqrt{x/d}-3]\,1_{d\le x},
+ W_\Psi(x,d)=d^{-1/2}[4\sqrt{x/d}-3]\,\mathbf 1_{d\le x},
 \]
 
 \[
- W_S(x,d)=d^{-1/2}[5\sqrt{x/d}-3]\,1_{d\le x}.
+ W_S(x,d)=d^{-1/2}[5\sqrt{x/d}-3]\,\mathbf 1_{d\le x}.
 \]
 
 Both splice atoms are strictly positive whenever `d<=py`.
@@ -49,18 +47,14 @@ If `d<=y`, then
 
 \[
  \boxed{
- K_\Psi(d)
- =\frac{1-r}{\sqrt d}
-  [4(1+r)t_d-3],
+ K_\Psi(d)=\frac{1-r}{\sqrt d}[4(1+r)t_d-3],
  }
 \tag{L-91345.1}
 \]
 
 \[
  \boxed{
- K_S(d)
- =\frac{1-r}{\sqrt d}
-  [5(1+r)t_d-3].
+ K_S(d)=\frac{1-r}{\sqrt d}[5(1+r)t_d-3].
  }
 \tag{L-91345.2}
 \]
@@ -74,6 +68,7 @@ If `y<d<=py`, then
  K_S(d)=\frac{5t_d-3}{\sqrt d}.
  }
 \tag{L-91345.3}
+\]
 
 ## 2. Score per target unit is ordered
 
@@ -90,7 +85,7 @@ Then
  q'(u)=\frac3{(5u-3)^2}>0.
 \]
 
-Equations (L-91345.1)--(L-91345.3) give
+Equations (L-91345.1)–(L-91345.3) give
 
 \[
  \frac{K_\Psi(d)}{K_S(d)}
@@ -100,9 +95,10 @@ Equations (L-91345.1)--(L-91345.3) give
   q(t_d),&y<d\le py.
  \end{cases}
 \tag{L-91345.4}
+\]
 
-The variable `t_d` decreases with `d`.  At the interface `d=y`, the argument
-jumps downward from `(1+r)sqrt(p)=sqrt(p)+1` to `sqrt(p)`. Therefore
+The variable `t_d` decreases with `d`. At the interface `d=y`, the argument
+jumps downward from `(1+r)\sqrt p=\sqrt p+1` to `\sqrt p`. Therefore
 
 \[
  \boxed{
@@ -112,36 +108,36 @@ jumps downward from `(1+r)sqrt(p)=sqrt(p)+1` to `sqrt(p)`. Therefore
  \ge
  \frac{K_\Psi(d_2)}{K_S(d_2)}.
  }
-\tag{L-91345.5
- }
+\tag{L-91345.5}
+\]
 
 Consequently every no-upward transport in target-mass units is automatically
-score-superordinate, exactly as in the terminal theorem `L-91342`.
+score-superordinate.
 
 ## 3. Three exact `P_79` prefix gates
 
 For an odd squarefree divisor threshold `t`, define
 
 \[
- A_0(t)
- =\sum_{\substack{e\le t\\\mu(e)=1}}\frac1e
-  -\sum_{\substack{o\le t\\\mu(o)=-1}}\frac1o,
+ A_0(t)=
+ \sum_{\substack{e\le t\\\mu(e)=1}}\frac1e
+ -\sum_{\substack{o\le t\\\mu(o)=-1}}\frac1o,
 \tag{L-91345.6}
 \]
 
 \[
- A_8(t)
- =\sum_{\substack{e\le t+8\\\mu(e)=1}}\frac1e
-  -\sum_{\substack{o\le t\\\mu(o)=-1}}\frac1o,
+ A_8(t)=
+ \sum_{\substack{e\le t+8\\\mu(e)=1}}\frac1e
+ -\sum_{\substack{o\le t\\\mu(o)=-1}}\frac1o,
 \tag{L-91345.7}
 \]
 
 and
 
 \[
- B_8(t)
- =\sum_{\substack{e\le t+8\\\mu(e)=1}}\frac1{\sqrt e}
-  -\sum_{\substack{o\le t\\\mu(o)=-1}}\frac1{\sqrt o}.
+ B_8(t)=
+ \sum_{\substack{e\le t+8\\\mu(e)=1}}\frac1{\sqrt e}
+ -\sum_{\substack{o\le t\\\mu(o)=-1}}\frac1{\sqrt o}.
 \tag{L-91345.8}
 \]
 
@@ -151,41 +147,33 @@ The standard-library checker `X-91124` streams all
  2^{22}=4,194,304
 \]
 
-divisors of `P_79` in increasing order.  The `1/d` sums are exact integers over
-the common denominator `P_79`; the square-root sum uses directed rational
+divisors of `P_79` in increasing order. The reciprocal sums are exact integers
+over the common denominator `P_79`; the square-root sum uses directed rational
 intervals. It proves
 
 \[
- \boxed{
- A_0(t)>\frac1{25}
- \qquad(t\ge83),
- }
+ \boxed{A_0(t)>\frac1{25}\qquad(t\ge83),}
 \tag{L-91345.9}
 \]
 
 \[
- \boxed{
- A_8(t)>\frac1{5000}
- \qquad(t\ge1),
- }
+ \boxed{A_8(t)>\frac1{5000}\qquad(t\ge1),}
 \tag{L-91345.10}
 \]
 
 and
 
 \[
- \boxed{
- B_8(t)<\frac32
- \qquad(t\ge1).
- }
+ \boxed{B_8(t)<\frac32\qquad(t\ge1).}
 \tag{L-91345.11}
+\]
 
-The exact minima are:
+The exact extrema occur at:
 
 ```text
-raw reciprocal prefix:       t=105;
-8-shifted reciprocal prefix: t=73;
-maximum shifted sqrt prefix: t=399.
+raw reciprocal minimum:       t=105;
+8-shifted reciprocal minimum: t=73;
+shifted sqrt-prefix maximum:  t=399.
 ```
 
 The exact rational minimum in (L-91345.10) is
@@ -205,7 +193,7 @@ Let an active odd threshold satisfy
 \]
 
 Use only even capacities `e<=t`; the additional capacities through `t+8` are
-nonnegative and may be ignored.  Since `t<=py`, the parent part of the target
+nonnegative and may be ignored. Since `t<=py`, the parent part of the target
 Hall margin is at least
 
 \[
@@ -213,7 +201,7 @@ Hall margin is at least
 \]
 
 Because `t>=83>y`, the child prefix contains the complete finite `P_79` target
-forcing at endpoint `y`.  Positivity of the finite Euler factors and the global
+forcing at endpoint `y`. Positivity of the finite Euler factors and the global
 upper corridor give
 
 \[
@@ -227,15 +215,15 @@ Hence the one-prime Hall margin obeys
  \mathcal H_{p,y,t}
  &>\frac4{25}\sqrt{py}-\frac92
    -\frac4{\sqrt p}\sqrt y\\
- &\ge\frac4{25}\sqrt t-rac92-rac{332}{\sqrt t}.
+ &\ge\frac4{25}\sqrt t-\frac92-\frac{332}{\sqrt t}.
 \end{aligned}
-\tag{L-91345.12
- }
+\tag{L-91345.12}
+\]
 
 The right side increases for `t>0`. At `t=4096`, it equals
 
 \[
- \frac{256}{25}-\frac92-rac{83}{16}
+ \frac{256}{25}-\frac92-\frac{83}{16}
  =\frac{221}{400}>0.
 \]
 
@@ -247,8 +235,8 @@ Therefore
  \qquad
  (p\ge83,\ 1\le y<83,\ t\ge4096).
  }
-\tag{L-91345.13
- }
+\tag{L-91345.13}
+\]
 
 No large-prime or large-threshold Hall obstruction remains.
 
@@ -257,18 +245,16 @@ No large-prime or large-threshold Hall obstruction remains.
 The complete one-prime target Hall problem is now reduced to
 
 \[
- \boxed{
- t<4096.
- }
+ \boxed{t<4096.}
 \]
 
 Only divisors of the fixed finite product `P_79` occur, the child parameter is
 in the compact interval `1<=y<83`, and each Hall margin is affine in `sqrt(y)`
-on finitely many activation cells. A displacement-eight reconnaissance is
+on finitely many activation cells. Displacement-eight reconnaissance is
 strictly positive, while displacement seven has negative examples.
 
-However, displacement `e<=o+8` does not automatically preserve the score and
-row inequalities of Section 2.  The remaining finite theorem must construct the
+However, support `e<=o+8` does not automatically preserve the score and row
+inequalities of Section 2. The remaining finite theorem must construct the
 bounded upward correction from positive interval/butterfly or common endpoint
 port packets, and verify target, score and every inherited row simultaneously.
 
