@@ -1,0 +1,42 @@
+{
+  "classification": "PASS_FACTOR54_BOOLEAN_SHADOW_FORCING",
+  "coefficient_check_limit": 200000,
+  "divisor_states": 65536,
+  "equality_global_minimum": {
+    "decimal": 0.3186174007676585,
+    "lower": "1836266151204259397609708461973685251626747877529983901037/5763232475000000000000000000000000000000000000000000000000",
+    "x": 33
+  },
+  "next_prime": 59,
+  "product_P53": 32589158477190044730,
+  "reserve_global_minimum": {
+    "decimal": 0.0,
+    "lower": "0",
+    "x": 1
+  },
+  "reserve_minimum_for_x_ge_2": {
+    "decimal": 0.41421356237309503,
+    "lower": "20710678118654752440084436210484903928483593768847/50000000000000000000000000000000000000000000000000",
+    "x": 2
+  },
+  "rough_prime_renewal_coefficient_checks": 200000,
+  "scope": "All sign assertions use exact integer/Fraction arithmetic and directed fixed-denominator square-root enclosures. The renewal replay is coefficient-wise integer arithmetic.",
+  "small_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53
+  ]
+}
