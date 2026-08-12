@@ -1,9 +1,10 @@
 # L-91413 — A plastic-aligned scale turns the continuous Cauchy recurrence into a positive Lévy increment
 
 Claim ID: `L-91413`  
-Status: **PROVED EXACT SIGN-ALIGNMENT AND SCALAR NORMAL FORM; PRIME SAMPLING GATE OPEN**  
+Status: **PROVED EXACT SIGN-ALIGNMENT AND SCALAR NORMAL FORM; UNCOUPLED FULL-PACKET SAMPLING REFUTED**  
 Created: 2026-08-12  
-Depends on: `L-91022`, `L-91404`, `L-91410`  
+Corrected: 2026-08-12  
+Depends on: `L-91022`, `L-91404`, `L-91410`; corrected by `R-91405`  
 RH status: **unproved**
 
 ## 1. The two independent sign switches
@@ -104,7 +105,6 @@ there is a unique
  \tau_*=1.164606978873629364392900917962\ldots
  }
 \tag{L-91413.9}
-\]
 
 such that
 
@@ -297,10 +297,10 @@ Equivalently,
  }
 \tag{L-91413.21}
 
-Every object in this formula is nonnegative except the final explicit prime
-sampling decrement.
+Every object in this scalar formula is nonnegative except the final explicit
+prime sampling decrement.
 
-## 7. The new aligned arithmetic gate
+## 7. Scalar gate and the polarized firewall
 
 The scalar recurrence at the aligned scale would follow from
 
@@ -316,23 +316,25 @@ The scalar recurrence at the aligned scale would follow from
 
 for every real `x`.
 
-The fully polarized strengthening is the sampling/Dirichlet-form inequality
+A first version proposed the uncoupled fully polarized strengthening
 
 \[
-\boxed{
- \int_0^\infty
-  |F(u)|^2d\omega_\diamond(u)
- \ge
- \sum_{n\ge2}c_n|F(\log n)|^2
- }
+ \int|F|^2d\omega_\diamond
+ \ge\sum_nc_n|F(\log n)|^2.
 \tag{L-91413.23}
 
-on the exact carrier/delay source range, with the finite anchor and connection
-coordinates inserted according to `L-91412`.
+`R-91405` proves that (L-91413.23) is false on finite carrier packets: Fejér
+averages isolate any one prime atom while converging to zero in the absolutely
+continuous norm.  Even finitely many independent anchor coordinates do not
+repair pure measure domination.
 
-This is a concrete continuum-versus-prime-log sampling theorem.  It has not
-been proved.  It is stronger than the scalar gate and remains RH-bearing once
-combined with the corrected form core.
+Therefore plastic alignment is a scalar sign normal form and a component of
+the full CPPD ledger.  It does not replace the coupled endpoint and connection
+ports of `T-91402`.  The valid all-packet target remains
+
+\[
+ \mathcal C_a^\lambda+\mathcal P_a\succeq\mathcal N_a.
+\]
 
 ## 8. Numerical diagnostics, not proof
 
@@ -357,6 +359,8 @@ plastic-aligned safe scale                            EXACT
 continuous sign mismatch vanishes there               EXACT
 nonprime scalar channel is a positive Levy increment EXACT
 all prime residual coefficients have one sign         EXACT
-aligned full-packet sampling domination               OPEN / RH-BEARING
+uncoupled continuous-to-atomic Gram domination         REFUTED
+scalar aligned carrier gate                           OPEN / RH-BEARING
+coupled CPPD full-packet gate                         OPEN / RH-EQUIVALENT
 Riemann Hypothesis                                    UNPROVED
 ```
