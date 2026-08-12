@@ -1,4 +1,4 @@
-# Suzuki amplitude embedding, scalar-core refutation and corrected tangent frontier — 2026-08-12
+# Suzuki amplitude embedding, scalar-core refutation and corrected full-Gram frontier — 2026-08-12
 
 ## Freeze
 
@@ -19,35 +19,40 @@ explicitly embed the prime Poisson-Fock output
 into the completed two-sided Hardy reserve
 ```
 
-contains two mathematically distinct tasks.
+splits into three distinct levels.
 
-1. **Amplitude transport.**  Complete the positive generalized-Jordan source by
-the gamma and pole factors and realize the completed xi scattering ratio as a
-positive-metric two-sided Hardy operator.
-2. **Tangent transport.**  Differentiate that scattering family in the
-normalized radial direction and prove positivity of the resulting
-Wigner--Smith/screw curvature.
+1. **Amplitude transport.** Complete the positive generalized-Jordan source by
+   the gamma and pole factors and realize the completed xi scattering ratio as
+   a positive-metric two-sided Hardy operator.
+2. **Scalar tangent transport.** Differentiate the scattering family in the
+   normalized radial direction and recover the scalar Cauchy soft count.
+3. **Full Gram transport.** Preserve every carrier, delay, Hardy-orientation and
+   bridge cross term, obtaining the complete screw/Weil matrix kernel.
 
-The first task was already solved, in a form that exactly matches the
-repository's source, by Suzuki's multiplicative Hankel operator.  This session
-imports and identifies that operator explicitly.
+The first level was already solved, for exactly the repository's Jordan
+coefficients, by Suzuki's multiplicative Hankel operator.  This session imports
+and identifies it explicitly.
 
-The second task is the actual RH-bearing component.  It does not follow from
-amplitude unitarity.  This session:
+The second level has an exact Wigner--Smith commutator identity, but
+`R-91009` shows that amplitude unitarity does not sign it.
 
-- finds and proves an exact flaw in the previous scalar fixed-scale form-core
-  theorem;
+The third level is the actual RH-bearing component.  `R-91010` proves that the
+scalar commutator is not its polarization.  No full positive source-to-output
+factorization is proved.
+
+The session also:
+
+- proves an exact flaw in the previous scalar fixed-scale form-core theorem;
 - repairs the density problem by an energy-preserving delay fibre;
-- proves that a source-linear positive construction must reduce from full
-  Poisson Fock space to the compensated first chaos;
+- reduces every natural source-linear Poisson construction to compensated
+  first chaos;
 - factors the normalized generalized-Jordan radial curvature as an explicit
   positive one-particle Gram;
-- rewrites the remaining tangent lift as a positive commutator for Suzuki's
-  unitary involution;
-- states the corrected CDFHTI theorem.
+- imports Suzuki's June 2026 localized Weil-operator theorem, which confirms
+  that the unshifted lowest-eigenvalue sign is exactly the remaining gate;
+- states the corrected CDFHGI full-Gram theorem.
 
-No positive factorization of that final commutator is proved.  RH remains
-unproved.
+RH remains unproved.
 
 ## I. Exact scalar-core refutation
 
@@ -67,15 +72,13 @@ where
  \beta=\frac{163+5\sqrt{561}}{28}.
 \]
 
-Exact partial fractions give the causal impulse
+Exact partial fractions give
 
 \[
  \psi(t)=-Ae^{-t}+Bte^{-t}+Cte^{-2t}+Ae^{-4t}+Dte^{-4t}
 \]
 
-with algebraic `A,B,C,D` recorded in `R-91008`.
-
-Directed intervals prove
+with algebraic `A,B,C,D` in `R-91008`.  Directed intervals prove
 
 \[
  \psi(31/20)>0,
@@ -83,21 +86,25 @@ Directed intervals prove
  \psi(8/5)<0,
 \]
 
-and hence a zero
+and hence
 
 \[
  \tau_0=1.5698664803365582563\ldots .
 \]
 
-For the weighted causal space, the nonzero vector
+The nonzero weighted step
 
 \[
  h_0(t)=e^{-\eta t}\mathbf1_{(\tau_0/a,\infty)}(t)
 \]
 
-is orthogonal to every carrier derivative.  Its derivative is a Dirac mass at
-a zero of the mother.  This is the distributional solution missed by the
-claim that `H' psi=0` and `psi` nonzero almost everywhere force `H'=0`.
+is orthogonal to every scalar carrier derivative.  Its derivative is a Dirac
+mass at a zero of the mother.  This is the distributional solution missed by
+the implication
+
+```text
+H' psi=0 and psi nonzero almost everywhere -> H'=0.
+```
 
 Therefore `L-91032` is false and `T-91007` is blocked.
 
@@ -110,25 +117,22 @@ For any positive probability density `w`, define
  =\sqrt{w(\tau)}e^{-iu\tau}F(u).
 \]
 
-This is an isometry and preserves the scalar residual density exactly.
-Physically it replaces one mother by all of its positive delays.
-
-The vector-valued pointwise energy is
+This is an isometry and preserves the scalar residual density exactly.  Its
+physical vector-valued energy is
 
 \[
  E_{a,w}(t)=\int_0^tw(\tau)|\psi_a(t-\tau)|^2d\tau>0
  \qquad(t>0).
 \]
 
-Hence there is no common physical zero.  The repaired delayed causal family
-has only the true half-line integral defect; reflection gives the other
-half-line; one bridge fills their difference inside global mean zero.
-
-This yields the corrected proposed fixed-scale form core `L-91034`.
+Hence no common physical zero survives.  The delayed causal family has only
+the true positive-half-line integral defect, the reflected family has the
+negative-half-line defect, and one bridge fills their difference in the global
+mean-zero space.  This is the proposed repaired form core `L-91034`.
 
 ## III. Suzuki closes the amplitude embedding
 
-Suzuki uses
+Suzuki's coefficients are
 
 \[
  c_a(n)=n^a\prod_{p\mid n}(1-p^{-2a})=n^aq_a(n),
@@ -154,7 +158,7 @@ The multiplicative Hankel operator
  (\mathsf H_af)(x)=\int_0^\infty h_a(xy)f(y)dy
 \]
 
-is a positive-metric isometry in the unconditional safe range, and
+is a positive-metric isometry in the unconditional safe range and
 
 \[
  \mathcal M_{1/2}\mathsf H_a
@@ -171,9 +175,9 @@ positive generalized-Jordan coefficients
 -> two-sided Hardy reflection with multiplier Theta_a.
 ```
 
-This is `L-91035`.
+This is imported as `L-91035`.
 
-## IV. Why the amplitude is not the proof
+## IV. Why amplitude unitarity is not the sign
 
 For the inner control
 
@@ -181,48 +185,38 @@ For the inner control
  \Theta_a(z)=e^{ia^2z},
 \]
 
-the boundary phase delay is positive, but the normalized radial soft curvature
-is
+the boundary phase delay is positive, while the normalized radial soft
+curvature is
 
 \[
  -a^3/4<0.
 \]
 
-More generally, differentiating a unitary path gives a self-adjoint tangent
-generator with no sign.  PR #398 supplies a stronger zeta-shaped control that
-retains symmetry, cocycle and safe Jordan positivity while its target Pick
-matrix is indefinite.
-
-Therefore Suzuki's amplitude isometry cannot be differentiated and declared
-positive without a new theorem.  This is `R-91009`.
+Differentiating a unitary path gives a self-adjoint tangent generator with no
+sign.  PR #398 supplies a stronger zeta-shaped control retaining symmetry,
+cocycle and safe Jordan positivity while its target Pick matrix is indefinite.
+This is `R-91009`.
 
 ## V. Higher Fock chaos cannot repair a linear target
 
 Under intensity scaling `r nu`, a positive product-system-compatible output
-kernel has the orthogonal chaos expansion
+kernel has
 
 \[
  K_r=\sum_{m\ge1}r^mK_m,
  \qquad K_m\succeq0.
 \]
 
-The explicit formula target is linear in the source intensity.  If
-
-\[
- K_r=rK_1
-\]
-
-for every `r`, positivity forces
+If the target is exactly source-linear, `K_r=rK_1`, positivity forces
 
 \[
  K_m=0\qquad(m\ge2).
 \]
 
-Thus the full Poisson Fock space is the correct dilation, but the actual
-conclusion-producing map must act on the compensated first chaos.  This is
-`L-91036`.
+Thus full Poisson Fock space is the canonical dilation, but the
+conclusion-producing map acts on compensated first chaos.  This is `L-91036`.
 
-## VI. The exact positive source tangent
+## VI. Exact positive source tangent
 
 The normalized Jordan radial curvature is
 
@@ -231,11 +225,10 @@ The normalized Jordan radial curvature is
  =-\partial_a[a^{-1}\log Q_a(z)].
 \]
 
-Its Euler coefficients are
+Its prime-power coefficients are
 
 \[
- \frac{1-(1+2a\log n)n^{-2a}}{ka^2}>0
- \qquad(n=p^k).
+ \frac{1-(1+2a\log n)n^{-2a}}{ka^2}>0.
 \]
 
 It has the one-particle Gram factor
@@ -243,61 +236,76 @@ It has the one-particle Gram factor
 \[
  w_{a,s}(r,n)
  =\frac2a\sqrt{r\Lambda(n)\log n}\,n^{-s-r},
- \qquad 0<r<a,
+ \qquad0<r<a,
 \]
 
-with
+and
 
 \[
  \mathscr C_a^{\rm J}(s+\bar t)
  =\langle w_{a,s},w_{a,t}\rangle.
 \]
 
-Thus the safe normalized-curvature source is already a complete positive
-first-chaos kernel, not an unknown arithmetic sign.  This is `L-91037`.
+The entire safe generalized-prime normalized curvature is therefore a positive
+first-chaos kernel with complete carrier polarization.  This is `L-91037`.
 
-## VII. Positive-commutator endpoint
+## VII. The scalar Wigner--Smith shadow
 
-For Suzuki's boundary multiplier define
+For Suzuki's boundary multiplier put
 
 \[
  B_a(x)=-i\partial_a[a^{-1}\log\Theta_a(x)].
 \]
 
-The Cauchy soft count is
+Then
 
 \[
- \mathcal N_x(a)=-\frac{a^3}{4}B_a'(x).
+ \mathcal N_x(a)=-\frac{a^3}{4}B_a'(x),
 \]
 
-In Mellin coordinates Suzuki's unitary involution is
+and, with `P=-i partial_x`,
 
 \[
- \mathsf S_a=M_{\Theta_a}\mathsf R.
+ M_{\mathcal N(a)}
+ =-\frac{a^3}{4}i[P,M_{B_a}].
 \]
 
-Its normalized tangent is multiplication by `B_a`.  With
+This is an exact scalar-diagonal identity, retained in corrected `L-91038`.
+
+It is **not** the complete screw Gram.  For one real zero ordinate, the true
+carrier kernel is
 
 \[
- \mathsf P=-i\partial_x,
+ \Psi_a(\gamma-x)\overline{\Psi_a(\gamma-y)},
 \]
 
-one gets
+which is generically nonzero when `x!=y`; the multiplication surrogate has
+zero off-diagonal distribution kernel.  `R-91010` records this exact
+polarization refutation.
+
+## VIII. Correct full-Gram endpoint
+
+Let
+
+\[
+ \mathcal A_a^{\rm del}:
+ \ell^2_{\rm fin}(\mathfrak I_a^{\rm del})
+ \longrightarrow\mathcal H_{\eta,0}
+\]
+
+synthesize delayed causal, anti-causal and bridge tests.  The actual target is
 
 \[
  \boxed{
- M_{\mathcal N_x(a)}
- =-\frac{a^3}{4}i[\mathsf P,M_{B_a}].
+ \mathbb K_a^{\rm del}
+ =
+ (\mathcal A_a^{\rm del})^*
+ \mathfrak Q_\zeta
+ \mathcal A_a^{\rm del}.
  }
 \]
 
-The final theorem is therefore a positive-commutator factorization of the
-normalized tangent of an explicit unitary scattering operator.  This is
-`L-91038`.
-
-## VIII. Corrected final theorem
-
-`T-91008` states CDFHTI:
+`T-91008` states CDFHGI: construct an explicit source-ordered isometry
 
 \[
  \mathcal C_{a_0}:
@@ -308,14 +316,43 @@ normalized tangent of an explicit unitary scattering operator.  This is
  \oplus\mathfrak e_{a_0}
 \]
 
-must be a source-ordered isometry whose defect kernel is the complete delayed
-screw Gram.
+whose **complete** defect kernel is `K_(a_0)^del`, including every carrier,
+delay, orientation and bridge cross term.
 
-If constructed, it proves RH by the repaired form-core theorem and Suzuki's
-screw criterion.  Under RH an existential Kolmogorov factorization exists; the
-open problem is the explicit source construction.
+If constructed, this proves RH by the repaired form-core theorem and Suzuki's
+screw criterion.  Under RH an existential Kolmogorov factorization exists;
+the open problem is the explicit source construction.
 
-## IX. Verification
+## IX. Suzuki 2026 localized-operator confirmation
+
+Suzuki's June 2026 paper constructs the localized Weil operator explicitly:
+
+\[
+ B_a=D^*G_aD,
+ \qquad
+ A_a=\text{Friedrichs extension of }B_a.
+\]
+
+Its lowest eigenvalue
+
+\[
+ \lambda_a=\inf Q_W^a(v)/\|v\|_2^2
+\]
+
+is continuous, is positive for sufficiently small support, and becomes
+negative at some support if RH is false.  A shifted positive Hilbert norm exists
+for every `lambda<lambda_a`, but inserting such a shift does not prove the
+unshifted sign.  The source lock is
+`2026-08-12-suzuki-2026-weil-quadratic-source-lock.md`.
+
+This independently confirms the corrected boundary:
+
+```text
+positive shifted/self-adjoint realizations are available;
+unshifted full-Gram positivity is the RH gate.
+```
+
+## X. Verification
 
 The retained finite replay returns
 
@@ -347,7 +384,8 @@ full Fock dilation                                     EXACT
 source-linear target -> first-chaos reduction          PROPOSED COMPLETE
 normalized Jordan curvature first-chaos                EXACT
 amplitude unitarity -> tangent sign                     REFUTED
-Suzuki tangent = positive-commutator target             EXACT REDUCTION
-CDFHTI explicit positive tangent factorization          OPEN / RH-EQUIVALENT
+scalar commutator -> full delayed Gram                 REFUTED
+Suzuki localized Weil operator                         IMPORTED PROVED
+CDFHGI explicit completed full-Gram factorization      OPEN / RH-EQUIVALENT
 Riemann Hypothesis                                     UNPROVED
 ```
