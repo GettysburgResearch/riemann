@@ -1,7 +1,7 @@
 # X-91306 — Covariant tail-Hankel completion replay
 
-This finite replay supports `L-91306`, `L-91307`, `L-91313`, `R-91301`,
-`T-91301`, and `T-91302`.
+This finite replay supports `L-91306`, `L-91307`, `L-91313`, `L-91401`,
+`R-91301`, `R-91402`, `T-91301`, and the corrected scope of `T-91302`.
 
 It checks:
 
@@ -15,11 +15,16 @@ It checks:
 - a finite moving-unitary covariant-tangent identity;
 - the vector-valued Fisher-Hankel score projection;
 - the exact scalar-plus-orthogonal-auxiliary Pythagorean identity;
-- invariance of the scalar Hardy Gram under a finite delay unitary.
+- failure of raw model-space delay invariance in a finite shift model;
+- the exact compressed-delay decomposition `S_j=T_j+M_Theta R_j`;
+- the compressed semigroup law for `T_j`;
+- the leakage cocycle for `R_j`;
+- the fully polarized mixed-delay Pythagorean identity.
 
 The replay proves finite algebra and numerical analytic controls only. It does
-not identify the Fisher auxiliary with the full delayed zeta screw defect or
-prove RH.
+not construct the renormalized map from the prime Poisson/Julia source to the
+completed Fisher-Hankel source, identify its auxiliary with the delayed zeta
+screw defect, or prove RH.
 
 Run:
 
