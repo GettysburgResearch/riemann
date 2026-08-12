@@ -1,0 +1,21 @@
+{
+  "classification": "PASS_P79_TERMINAL_TARGET_HALL",
+  "component_derivative_checks": 3321,
+  "component_derivative_minimum": {
+    "cell": 82,
+    "certified_above": "1/6",
+    "lower_decimal": 0.18105313553289762,
+    "right_endpoint": "83",
+    "row": 81
+  },
+  "next_rough_prime": 83,
+  "scope": "All signs use exact Fraction arithmetic with directed rational square-root and logarithm enclosures. The transport, score superordination, and exact row factorization are symbolic in L-91342.",
+  "target_hall_checks": 27,
+  "target_hall_minimum": {
+    "certified_above": "7/100",
+    "endpoint_used": "83",
+    "lower_decimal": 0.07307554067941859,
+    "threshold": 13
+  },
+  "terminal_window": "1 <= x < 83"
+}
