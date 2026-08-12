@@ -1,0 +1,18 @@
+{
+  "analytic_tail": "For Y>=536, integers in (Y/4,Y] give the elementary lower bound in L-91553.12.",
+  "base_margin": {
+    "certified_above": "3",
+    "endpoint": 67,
+    "lower_decimal": 3.276400719554967
+  },
+  "checks": 470,
+  "classification": "PASS_COMPONENT_ENTROPY_FIXED67_DOMINATION",
+  "finite_cell_derivative_checks": 469,
+  "minimum_derivative": {
+    "certified_above": "22",
+    "child_floor": 1,
+    "lower_decimal": 22.174754292085815,
+    "parent_cell_left": 67
+  },
+  "scope": "Exact Fraction arithmetic with directed rational square-root and logarithm enclosures. This certifies the finite interval part of the fixed-67 entropy-score domination, not native root-amplitude normalization or RH."
+}
