@@ -1,0 +1,92 @@
+{
+  "classification": "PASS_P61_FORTY_ONE_DIVISOR_CORE_REDUCTION",
+  "prefix_certificate": {
+    "abel_core_total_coefficient": "336338530534578047569/224523472888007630167974",
+    "divisor_states": 262144,
+    "global_prefix_maximum": {
+      "activation_divisor": 1,
+      "value": "1"
+    },
+    "minimum_prefix_for_z_ge_67": {
+      "activation_divisor": 70,
+      "decimal": 0.01642338368177051,
+      "fraction": "55036345385124606673/3351096610268770599522"
+    },
+    "prefix_at_66": {
+      "decimal": 0.016216344344296394,
+      "fraction": "316998129951549613081/19548063559901161830545"
+    },
+    "small_core_divisors": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      10,
+      11,
+      13,
+      14,
+      15,
+      17,
+      19,
+      21,
+      22,
+      23,
+      26,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      37,
+      38,
+      39,
+      41,
+      42,
+      43,
+      46,
+      47,
+      51,
+      53,
+      55,
+      57,
+      58,
+      59,
+      61,
+      62,
+      65,
+      66
+    ],
+    "small_core_size": 41,
+    "uniform_adjoined_prime_floor": {
+      "certified_above": "1498/1000000",
+      "decimal": 0.0014980105474421545,
+      "fraction": "336338530534578047569/224523472888007630167974"
+    }
+  },
+  "profile_certificate": {
+    "alpha_minimum": {
+      "lower_decimal": 0.004766432566613647,
+      "row": 66
+    },
+    "j_range": "2 <= j <= 66",
+    "kappa_minimum": {
+      "lower_decimal": 0.002865597989910782,
+      "row": 66
+    },
+    "rows_checked": 65,
+    "second_cell_minimum": {
+      "certified_above": "7/1000",
+      "lower_decimal": 0.007554260364637693,
+      "row": 66
+    },
+    "unbounded_tail_lower_minimum": {
+      "certified_above": "7/1000",
+      "lower_decimal": 0.007596916957436848,
+      "row": 66
+    }
+  },
+  "scope": "Exact Fraction arithmetic and directed rational square-root/logarithm enclosures certify the global profile lower bounds for j=2,...,66, the complete P_61 prefix corridor, the forty-one small divisors, and the Abel-core coefficient dictionary. The checker does not certify the remaining one-variable core inequality C_j(X)>=0 and does not prove the Riemann Hypothesis."
+}
