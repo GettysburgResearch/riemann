@@ -1,27 +1,16 @@
 # L-91313 — The completed Fisher phase feature has an exact vector-valued Hardy colligation
 
 Claim ID: `L-91313`  
-Status: **PROVED EXACT MODEL-SPACE COMPRESSION AND POSITIVE AUXILIARY FACTORIZATION**  
+Status: **PROVED EXACT FISHER/MODEL-SPACE COLLIGATION; PRIME-POISSON SOURCE IDENTIFICATION OPEN**  
 Created: 2026-08-12  
-Depends on: `L-91301`, `L-91306`, `L-91309`, `L-91312`  
+Corrected: 2026-08-12  
+Depends on: `L-91301`, `L-91306`, `L-91309`, `L-91312`, `L-91316`, `L-91401`, `R-91402`  
 RH status: **unproved**
 
-## 1. Purpose
+## 1. Completed Fisher source feature
 
-`L-91312` expresses the complete boundary phase tangent as a Fisher covariance
-on one fixed completed source space, but leaves the Hardy/model-space
-compression open.  The compression is automatic once the carrier features are
-kept as a vector-valued Hardy symbol.
-
-This lemma constructs the exact conservative tangent colligation.  Its
-auxiliary defect is explicit and positive.  No claim is made that this
-auxiliary is already the zeta screw/Weil defect; that final identification is
-separate and RH-bearing.
-
-## 2. Completed source feature
-
-Fix a safe `a>1/2`.  Let `P_a` be the completed exponential-tilt law of
-`L-91309`, put
+Fix a safe `a>1/2`.  Let `P_a` be the completed xi probability law of
+`L-91309`, and put
 
 \[
  \sigma_a(Y)=Y-\mathbb E_aY,
@@ -29,7 +18,7 @@ Fix a safe `a>1/2`.  Let `P_a` be the completed exponential-tilt law of
  V_a=\mathbb E_a[\sigma_a^2]>0,
  \qquad
  e_a=\sigma_a/\sqrt{V_a}.
- \tag{L-91313.1}
+\tag{L-91313.1}
 \]
 
 Let
@@ -38,17 +27,17 @@ Let
  h_{a,x}(Y)
  =\frac{e^{-ixY}}{\varphi_a(-x)}
   -\frac{e^{ixY}}{\varphi_a(x)}
- \tag{L-91313.2}
+\tag{L-91313.2}
 \]
 
-be the centered phase feature of `L-91312`, and let
+be the centered phase feature of `L-91312`, and write
 
 \[
  m_a(x)=a\partial_a\Theta_a(x).
- \tag{L-91313.3}
+\tag{L-91313.3}
 \]
 
-Define the vector-valued boundary symbol
+Define
 
 \[
  \boxed{
@@ -56,87 +45,82 @@ Define the vector-valued boundary symbol
  =a\sqrt{V_a}\,\Theta_a(x)h_{a,x}(Y)
  \in L^2(P_a).
  }
- \tag{L-91313.4}
+\tag{L-91313.4}
 \]
 
-Let the fixed score contraction be
+The normalized score contraction
 
 \[
- \boxed{
- c_a(v)=\langle v,e_a\rangle_{L^2(P_a)}.
- }
- \tag{L-91313.5}
+ c_a(v)=\langle v,e_a\rangle_{L^2(P_a)}
+\tag{L-91313.5}
 \]
 
-With the inner-product convention chosen consistently with `L-91312.10`,
+satisfies, with the repository inner-product convention,
 
 \[
  \boxed{
  c_a(\mathbf h_a(x))=-m_a(x).
  }
- \tag{L-91313.6}
+\tag{L-91313.6}
 \]
 
-Thus the scalar completed tangent is one fixed rank-one observation of the
-source-valued phase feature.
+Thus the completed scalar phase tangent is one rank-one observation of an
+explicit positive source-valued feature.
 
-## 3. Vector-valued Hardy Hankel operator
+## 2. Vector-valued Hardy Hankel operator
 
-Let
+Put
 
 \[
  \mathcal S_a=L^2(P_a),
  \qquad
  \mathscr H_a=
  (P_-\otimes I_{\mathcal S_a})
- M_{\mathbf h_a}P_+.
- \tag{L-91313.7}
+ M_{\mathbf h_a}P_+,
+\tag{L-91313.7}
 \]
 
-It is initially defined on the common rational/exponential Hardy core; all
-identities extend whenever the corresponding closed quadratic forms are
-finite.
-
-Let
+initially on the common rational/exponential Hardy core.  Let
 
 \[
  H_{m_a}=P_-M_{m_a}P_+.
- \tag{L-91313.8}
+\tag{L-91313.8}
 \]
 
-Because the scalar contraction acts only in the source fibre, it commutes with
-both Hardy projections.  Equation (L-91313.6) gives
+Since the score contraction acts only in the source fibre, it commutes with the
+Hardy projections, and
 
 \[
  \boxed{
  H_{m_a}
- =-(I_{H^2_-}\otimes c_a)\mathscr H_a.
+ =-(I_{H_-^2}\otimes c_a)\mathscr H_a.
  }
- \tag{L-91313.9
-}
+\tag{L-91313.9}
+\]
 
-This is the missing model-space/Hardy compression in `L-91312`.
+This is the exact Fisher-source observation of the completed tangent Hankel
+block.
 
-## 4. Exact Pythagorean auxiliary
+## 3. Exact positive auxiliary
 
 Let
 
 \[
  \Pi_a=|e_a\rangle\langle e_a|
- \]
+\]
 
-be the score projection in `S_a`, and define
+and define
 
 \[
  \boxed{
  \mathscr E_a
- =(I_{H^2_-}\otimes(I-\Pi_a))\mathscr H_a.
+ =(I_{H_-^2}\otimes(I-\Pi_a))\mathscr H_a.
  }
- \tag{L-91313.10}
+\tag{L-91313.10}
 \]
 
-Orthogonal decomposition of the source fibre gives, for every Hardy input
-`f,g`,
+Orthogonal decomposition in the Fisher source fibre gives, for every Hardy
+input pair `f,g`,
 
 \[
  \boxed{
@@ -144,7 +128,7 @@ Orthogonal decomposition of the source fibre gives, for every Hardy input
  =\langle H_{m_a}f,H_{m_a}g\rangle
   +\langle\mathscr E_af,\mathscr E_ag\rangle.
  }
- \tag{L-91313.11}
+\tag{L-91313.11}
 \]
 
 Equivalently,
@@ -152,116 +136,140 @@ Equivalently,
 \[
  \boxed{
  \mathscr H_a^*\mathscr H_a
- =H_{m_a}^*H_{m_a}+\mathscr E_a^*\mathscr E_a
- \succeq H_{m_a}^*H_{m_a}.
+ =H_{m_a}^*H_{m_a}+\mathscr E_a^*\mathscr E_a.
  }
- \tag{L-91313.12}
+\tag{L-91313.12}
 \]
 
-No Douglas square root of an unknown target appears: both the observation and
-the auxiliary projection are explicit.
+No square root of an unknown target kernel occurs.
 
-## 5. Suzuki model-space shape
+## 4. Suzuki model-space shape
 
-By `L-91306`, after the canonical completed unitary conjugation the
-model-space normal tangent is the scalar Hankel block `H_(m_a)`.  With the
-normalization of `L-91301`,
+After the completed unitary conjugation of `L-91306`, the scalar Hankel block
+is Suzuki's model-space normal tangent.  In the normalization of `L-91301`,
 
 \[
  \boxed{
  \mathcal J_a^*\mathcal J_a
  =2H_{m_a}^*H_{m_a}.
  }
- \tag{L-91313.13}
+\tag{L-91313.13}
 \]
 
-Hence the explicit completed Fisher-Hardy reserve
+Hence
 
 \[
  \boxed{
  \mathcal C_a^{\rm phase}
  :=2\mathscr H_a^*\mathscr H_a
- }
- \tag{L-91313.14}
-\]
-
-has the exact conservative decomposition
-
-\[
- \boxed{
- \mathcal C_a^{\rm phase}
  =\mathcal J_a^*\mathcal J_a
   +2\mathscr E_a^*\mathscr E_a.
  }
- \tag{L-91313.15}
+\tag{L-91313.14}
 \]
 
-Thus the model-space projection, causal/anti-causal Hardy split, and every
-carrier cross term are compatible with the Fisher covariance contraction.
+This is an exact positive completed Fisher/model-space colligation.
 
-## 6. Delays, orientations, and bridge packets
-
-Positive Hardy delays are inner multipliers and commute with the fibre
-contraction `c_a`.  Reflection gives the opposite Hardy orientation.  Taking
-direct sums therefore preserves (L-91313.11) on every finite
-carrier/orientation/delay packet.
-
-Any bridge vector belonging to the closed delayed form core is treated by the
-same closed operator identity; no separate scalar polarization is needed.
-
-## 7. Relation to the prime Poisson component
-
-`T-91301` embeds the actual ordinary-prime score first chaos by the explicit
-tail-Hankel Julia dilation.  The completed vector symbol (L-91313.4) is the
-source-specific prime-plus-gamma/pole phase feature.  Its score projection
-recovers the sum of those tangent channels, while the orthogonal fibre is a
-positive completed auxiliary.
-
-This is the operator-level embedding requested by CJHI:
-
-```text
-completed source phase first chaos
- -> two-sided Hardy tangent
-  + explicit positive orthogonal source fibre.
-```
-
-## 8. The remaining defect identity
-
-The positive auxiliary
+`L-91316` gives the equivalent model-space source form
 
 \[
- 2\mathscr E_a^*\mathscr E_a
- \tag{L-91313.16}
+ \mathcal J_a
+ =a\sqrt{2V_a}\,\mathcal C_a\mathcal A_a.
+\tag{L-91313.15}
 \]
 
-is canonical for the Fisher phase-feature colligation.  It has not been proved
-to equal the delayed zeta screw/Weil Gram of `T-91008`.
+## 5. Correct delay and orientation extension
 
-That equality cannot be inferred merely because both forms are positive under
-RH.  Establishing
+A raw positive Hardy delay does not generally preserve `K_(Theta_a)`.  For
+`g in K_(Theta_a)`, `L-91401` supplies
+
+\[
+ S_\tau g=T_\tau g+M_{\Theta_a}R_\tau g
+\tag{L-91313.16}
+\]
+
+orthogonally.  The delayed completed tangent is
+
+\[
+ \widetilde{\mathcal J}_aS_\tau g
+ =\mathcal J_aT_\tau g,
+\tag{L-91313.17}
+\]
+
+while `R_tau g` is retained as a positive Julia leakage coordinate.
+
+For arbitrary mixed delays,
 
 \[
  \boxed{
- 2\mathscr E_a^*\mathscr E_a
- =\mathbb K_a^{\rm del}
+ \langle S_{\tau_i}g_i,S_{\tau_j}g_j\rangle
+ =\langle T_{\tau_i}g_i,T_{\tau_j}g_j\rangle
+  +\langle R_{\tau_i}g_i,R_{\tau_j}g_j\rangle.
  }
- \tag{L-91313.17}
+\tag{L-91313.18}
 \]
 
-on the corrected delayed core would finish CDFHGI and prove RH.  A strict
-positive domination with the correct coefficient-one bookkeeping may also
-suffice if it is connected to the resident screw criterion, but an arbitrary
-larger reserve does not.
+Applying the same construction after Hardy reflection gives the opposite
+orientation.  Thus all delay and orientation geometry is exact once the
+leakage is included; raw invariance is not asserted.
 
-## 9. Exact boundary
+The two Hardy pieces of the finite bridge admit the same resident/leakage
+boundary decomposition.  Their arithmetic source norm remains open.
+
+## 6. Relation to the ordinary-prime Poisson component
+
+`T-91301` gives an explicit tail-Hankel Julia dilation for the actual
+ordinary-prime Poisson first chaos.  The present lemma gives an explicit
+Fisher-Hankel dilation for the completed xi probability source.
+
+The scalar observations are compatible with the same completed phase tangent,
+but the source laws are not identical.  `R-91402` imports Nakamura's theorem
+that the completed law is not infinitely divisible for safe `a>1/2`, and hence
+cannot be the same positive Poisson/Levy law.
+
+Therefore the following remains **unproved**:
 
 ```text
-Fisher phase feature as vector Hardy symbol          EXACT
-score observation recovers completed phase tangent  EXACT
-model-space/Hardy projection intertwining            EXACT
-full polarized Pythagorean auxiliary                 EXACT
-delays and two orientations                          EXACT
-prime first-chaos component                          T-91301
-auxiliary = delayed zeta screw defect                OPEN / RH-EQUIVALENT
-Riemann Hypothesis                                   UNPROVED
+ordinary-prime Poisson/Julia source
+ -> completed Fisher phase source
+  + positive renormalization environment.
+```
+
+The present lemma is exact on the Fisher side; it does not construct that
+renormalized source map.
+
+## 7. Correct remaining theorem
+
+Construct the common source map `W_a` of corrected `T-91302`.  Once this map
+identifies the Fisher-Hankel source norm with the completed prime/gamma/pole
+source norm, the resulting source-minus-output auxiliary must be shown to equal
+
+\[
+ \mathbb K_a^{\rm del},
+\]
+
+the corrected delayed zeta screw/Weil Gram with both orientations and the
+bridge.
+
+The canonical Fisher auxiliary
+
+\[
+ 2\mathscr E_a^*\mathscr E_a
+\]
+
+cannot be declared to be that defect before the common-source map is proved.
+
+## 8. Exact boundary
+
+```text
+completed Fisher phase feature                         EXACT
+score observation recovers completed phase tangent     EXACT
+Fisher/model-space Hardy colligation                    EXACT
+positive orthogonal Fisher auxiliary                    EXACT
+raw delay invariance                                    REFUTED
+compressed delay/orientation geometry                   EXACT
+ordinary-prime Poisson source = completed Fisher source REFUTED
+renormalized common source map                          OPEN
+common-source defect = delayed screw/Weil Gram          OPEN / RH-BEARING
+Riemann Hypothesis                                      UNPROVED
 ```
