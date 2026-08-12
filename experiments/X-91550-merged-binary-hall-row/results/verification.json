@@ -1,0 +1,54 @@
+{
+  "classification": "PASS_MERGED_BINARY_HALL_ROW_CORRIDORS",
+  "component_derivative_checks": 1431,
+  "component_derivative_minimum": {
+    "alpha_range": "1 <= alpha <= 5/3",
+    "cell": 54,
+    "certified_above": "1/25",
+    "lower_decimal": 0.06477914220635762,
+    "right_endpoint": "55",
+    "row": 53
+  },
+  "hall_by_corridor": {
+    "hazard_score": {
+      "alpha_used": "6/5",
+      "certified_above": "1/250",
+      "endpoint_used": "55",
+      "lower_decimal": 0.27559576641278893,
+      "threshold": 13
+    },
+    "hazard_target": {
+      "alpha_used": "6/5",
+      "certified_above": "1/250",
+      "endpoint_used": "55",
+      "lower_decimal": 0.27559576641278893,
+      "threshold": 13
+    },
+    "survival_score": {
+      "alpha_used": "5/3",
+      "certified_above": "1/250",
+      "endpoint_used": "55",
+      "lower_decimal": 0.007875034703026309,
+      "threshold": 13
+    },
+    "survival_target": {
+      "alpha_used": "3/2",
+      "certified_above": "1/250",
+      "endpoint_used": "55",
+      "lower_decimal": 0.10348958174222725,
+      "threshold": 13
+    }
+  },
+  "hall_checks": 72,
+  "hall_global_minimum": {
+    "alpha_used": "5/3",
+    "certified_above": "1/250",
+    "corridor": "survival_score",
+    "endpoint_used": "55",
+    "lower_decimal": 0.007875034703026309,
+    "threshold": 13
+  },
+  "rough_prime_floor": 67,
+  "scope": "Exact Fraction arithmetic with directed rational square-root and logarithm enclosures. The conservative parameter corridors contain all survival/hazard target and score channels for p>=67. This replay certifies the merged finite Hall/row inequalities, not the outer loss assembly or RH.",
+  "window": "1 <= x < 55"
+}
