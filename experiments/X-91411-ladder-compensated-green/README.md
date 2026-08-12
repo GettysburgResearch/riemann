@@ -3,8 +3,9 @@
 This finite replay supports:
 
 - `L-91411` — gamma ladder minus one pole channel;
-- `L-91412` — compensated Wick–Green identity;
-- `L-91413` — plastic-aligned positive Lévy increment;
+- corrected `L-91412` — compensated Wick–Green identity;
+- corrected `L-91413` — plastic-aligned positive Lévy increment;
+- `R-91405` — atomic-isolation firewall;
 - the normal-form statements in `T-91402`.
 
 It checks:
@@ -22,7 +23,10 @@ It checks:
     =2 a^-4 int (1-cos(xu)) e^(-u/2) B(u) r_a(u) du;
    ```
 7. a safe-line numerical value of the full recurrence anchor at the aligned
-   scale.
+   scale;
+8. Fejér isolation of the `log 2` prime atom: the continuous aligned norm
+   decays while the truncated atomic norm remains near the positive `c_2`
+   weight, illustrating the exact no-go proved in `R-91405`.
 
 Run:
 
@@ -38,6 +42,18 @@ Retained verdict:
 PASS_LADDER_COMPENSATED_GREEN_ALIGNMENT
 ```
 
+Selected controls:
+
+```text
+gamma-ladder identity error      2.26e-72
+aligned scale                    4.141567360753047
+full recurrence anchor           3.9916640442489516e-4
+Fejer continuous norm, T=320     2.8423095579433486e-5
+Fejer atomic norm, T=320         5.930743269605442e-4
+target c_2 weight                5.980231539132879e-4
+```
+
 The replay proves the finite rational compensated identity exactly and checks
 analytic identities numerically at high precision.  It does not prove CPPD,
-the prime-log sampling inequality, the delayed screw Gram sign, or RH.
+the delayed screw Gram sign, or RH.  The pure continuous-to-prime sampling
+inequality is refuted, not proposed.
