@@ -1,8 +1,9 @@
-# L-91324 — Positive affine Pascal functors erase rough colors without capacity loss
+# L-91324 — Positive affine Pascal functors erase rough colors in ordinary-column Schur ports
 
 Claim ID: `L-91324`  
-Status: **PROPOSED COMPLETE EXACT PHYSICAL-PROJECTION THEOREM — INDEPENDENT REVIEW REQUIRED**  
+Status: **PROPOSED COMPLETE EXACT ORDINARY-PROJECTION THEOREM — DETAIL/CAPACITY ASSEMBLY SEPARATE**  
 Created: 2026-08-12  
+Corrected: 2026-08-12 after hostile audit of the signed radix-four difference  
 Depends on: `L-91110`, `L-91316`, `L-91318`–`L-91320`  
 RH status: **unproved**
 
@@ -32,13 +33,18 @@ At an ordinary physical integer column `Q`, this reads
 \]
 
 Thus a colored child `(m,q)` produces a nonnegative value also when `Q` is not
-divisible by `m`.  Previous route summaries called this value *leakage* and left
-open whether summing colors could spend one physical capacity more than once.
+divisible by `m`. Previous route summaries called this value *leakage* and left
+open whether a branchwise matrix port remained valid after colors were forgotten.
 
-The point of this theorem is that no separate estimate of that leakage is
-needed.  Physical evaluation after affine lift is itself a positive linear
-functor.  Every port domination proved before color erasure therefore survives
-color erasure exactly, including at nonmultiples.
+The exact statement proved here is:
+
+> physical evaluation of an affine lift is a positive linear functor, so every
+> positive-semidefinite ordinary-column port domination survives at all physical
+> columns, including nonmultiples.
+
+This does **not** say that arbitrary integer-column child feasibility extends to
+all real columns, and it does not infer a radix-four inequality by subtracting
+two ordinary inequalities.
 
 ## 2. Positive endpoint-to-row maps
 
@@ -51,7 +57,7 @@ nonnegative finite row vectors:
 \]
 
 The nearest-neighbour martingale/B-spline quantization of `L-91110` is the
-canonical example.  The identity map on an already finite row vector is another.
+canonical example. The identity map on an already finite row vector is another.
 
 For a row vector `d`, define the affine lift
 
@@ -87,14 +93,10 @@ Using (L-91324.2),
 \tag{L-91324.6}
 
 This identity is valid for every physical integer `Q`; no divisibility
-assumption occurs.  It is the exact color-forgetting formula.
+assumption occurs. It is the exact ordinary-column color-forgetting formula.
 
-The same construction applies to ordinary carry, radix-four detail, row score,
-and any finite nonnegative combination of physical columns.  For the
-radix-four detail one simply uses the difference of the already allocated
-ordinary columns after the positive detail target has been fixed; branchwise
-port domination is proved at the ordinary-column level and hence survives both
-terms.
+The same positive-functor argument applies to row score and to every finite
+**nonnegative** combination of ordinary physical columns.
 
 ## 3. Matrix ports survive every positive functor
 
@@ -115,9 +117,10 @@ be a matrix-valued endpoint density satisfying
  \mathbf K(x)\succeq c\,V(x)I_2
  \qquad\text{pointwise},
  }
-\tag{L-91324.7}
+\tag{L-91324.7
+}
 
-with `V>=0` and `c>0`.  Apply `mathfrak P_(m,Q)` entrywise.  Since a positive
+with `V>=0` and `c>0`. Apply `mathfrak P_(m,Q)` entrywise. Since a positive
 weighted sum of positive-semidefinite matrices is positive semidefinite,
 
 \[
@@ -130,8 +133,8 @@ weighted sum of positive-semidefinite matrices is positive semidefinite,
 
 for every real or physical integer column `Q`.
 
-More generally, for any family of branches `b`, possibly with different
-dilations and positive quantizers,
+More generally, for any family of already assigned branch ports `b`, possibly
+with different dilations and positive quantizers,
 
 \[
  \boxed{
@@ -141,9 +144,10 @@ dilations and positive quantizers,
  }
 \tag{L-91324.9}
 
-Thus summing colors before or after physical evaluation gives the same port
-reserve.  Overlap of their uncolored supports cannot invalidate a domination
-which was established branchwise against the same branch ports.
+Thus overlapping uncolored supports cannot invalidate a branchwise Schur
+inequality. This theorem does not decide whether the same parent port has been
+assigned to more than one branch; conservative port assignment is a separate
+ledger, treated by `L-91325` and the final reset assembly.
 
 ## 4. Application to the rough-prime Schur reserve
 
@@ -165,8 +169,8 @@ For every remaining rough prime `p>=67`, the minimal projective correction of
  \tau_p=p^{-1/2}(1-p^{-1/2})<\frac19.
 \tag{L-91324.11}
 
-Apply (L-91324.8) to the exact endpoint quantization and affine Pascal lift used
-on that branch.  At every physical column `Q`, including `p\nmid Q`,
+Apply (L-91324.8) to one assigned branch port, its exact endpoint quantization,
+and its affine Pascal lift. At every physical column `Q`, including `p\nmid Q`,
 
 \[
  \boxed{
@@ -176,89 +180,106 @@ on that branch.  At every physical column `Q`, including `p\nmid Q`,
  }
 \tag{L-91324.12}
 
-The nonmultiple contribution on the left is therefore paid by the
-*nonmultiple contribution of the same positive port on the right*.  There is no
-additional leakage term.
+The nonmultiple contribution of the branch correction is therefore paid by the
+nonmultiple contribution of the **same assigned branch port**. There is no extra
+ordinary-column leakage term.
 
-The least-prime routing of `L-91317` assigns every source packet to one branch.
-Consequently the corresponding branch ports are not duplicated.  Summing
-(L-91324.12) over the complete least-prime tree and using (L-91324.9) proves that
-the complete collection of projective corrections remains inside the sum of the
-available physical ports at every ordinary column.
+## 5. Main rough transition and ordinary physical placement
 
-## 5. Main rough transition requires no colored correction
-
-The projective correction was the only part for which the colored description
-was potentially dangerous.  The paired-interior and activation-frontier terms
-of `L-91317` already have coefficientwise nonnegative source formulas and a
-direct ordinary-row/carry realization.  They may therefore be placed in the
-physical column space before any affine bookkeeping is introduced.
+The paired-interior and activation-frontier terms of `L-91317` have
+coefficientwise nonnegative source formulas and a direct ordinary-row/carry
+realization. They may be placed in the physical column space before any affine
+bookkeeping is introduced.
 
 Equivalently, one may keep the affine description: equation (L-91324.6) says
-that summing its colors is exactly a positive physical evaluation.  In either
+that physical evaluation is exact at every real rescaled column. In either
 coordinate, no cancellation or norm estimate is used.
 
-Combining `L-91317`, `L-91319`, `L-91320`, and the present theorem gives:
+Combining `L-91317`, `L-91319`, `L-91320`, and the present theorem gives, at the
+ordinary branch-port scope:
 
 ```text
 positive main rough source routing                 physical / exact;
-projective state correction                        inside branch Schur port;
+projective state correction                        inside assigned branch port;
 affine carry and score lift                         positive / exact;
-forgetting colors                                   positive functor;
-nonmultiple physical-column load                    paid by the same port;
-source duplication                                  excluded by least-prime labels.
+ordinary physical color erasure                     positive functor;
+nonmultiple ordinary-column load                    paid by same branch port.
 ```
 
-Hence the colored-to-uncolored operation named as open in
-`L-91318`–`L-91320` is closed at the branch-port scope actually used by the
-factor-54 reset.
+## 6. Radix-four scope firewall
 
-## 6. Atomized interpretation
+The radix-four operator is
 
-The same fact can be seen before averaging.  A parent split has the unique form
+\[
+ \mathcal D_4C(q)=C(q)-2C(4q).
+\]
+
+It is not a positive linear functional. Therefore
+
+\[
+ C_1(q)\ge C_2(q),\qquad C_1(4q)\ge C_2(4q)
+\]
+
+does **not** by itself imply
+
+\[
+ \mathcal D_4C_1(q)\ge\mathcal D_4C_2(q).
+\]
+
+The present theorem must not be used for that invalid subtraction.
+
+There are two legitimate ways to return to detail coordinates:
+
+1. apply the exact affine covariance directly to a child statement already
+   established for the real-column detail kernel;
+2. prove ordinary slack and reconstruct it from nonnegative detail slack by the
+   positive radix-four renewal of `L-90029`.
+
+The factor-54 route uses ordinary-column Schur domination only for the auxiliary
+projective port; the outer detail capacities remain governed by
+`L-91114/L-91115` and the final source-faithful recursion.
+
+## 7. Atomized interpretation
+
+A parent split has the unique form
 
 \[
  J=mj+r,
  \qquad0\le r<m.
 \]
 
-At matched columns, every residue phase reproduces the child carry.  At
-unmatched columns all atomized carries remain nonnegative.  Uniform averaging
-over the residue phases gives exactly (L-91324.2).  A branch port and its
-correction use the same residue phases and the same positive weights; therefore
-phase averaging cannot reverse their order.
+At matched columns every residue phase reproduces the child carry. At unmatched
+columns all atomized carries remain nonnegative. Uniform averaging gives exactly
+(L-91324.2). A branch port and its correction use the same residue phases and
+the same positive weights; therefore phase averaging cannot reverse their
+ordinary-column matrix order.
 
-This explains categorically why a separate polyphase cancellation theorem was
-the wrong target: the required relation is domination, and positive functors
-preserve domination automatically.
+## 8. What remains
 
-## 7. What remains
-
-This theorem closes physical color projection for the already constructed
-branchwise rough transition and Schur port.  It does not by itself prove that
-the complete recursively assembled endpoint vector equals the canonical reset
-state required by `T-91101`.
-
-The remaining assembly obligation is now:
+This theorem closes ordinary physical color projection for an already assigned
+branch port. It does not prove:
 
 ```text
-compose the branchwise positive physical transitions into one contracted
-endpoint state, keep all final endpoint coefficients nonnegative, and write the
-coefficient-one score/column ledger explicitly across generations.
+real-column feasibility of an arbitrary child packing;
+radix-four domination by subtraction;
+conservative assignment of the parent port to the complete rough tree;
+or the all-generation endpoint-vector ledger.
 ```
 
-No additional real-column, residue-class, or colored-capacity estimate remains.
+`L-91325` supplies the positive one-scale endpoint renewal needed for the port
+assignment. Their combination leaves the explicit recursive assembly as the
+next theorem.
 
-## 8. Verification boundary
+## 9. Verification boundary
 
 The companion replay checks:
 
 ```text
 146,026 exact real-column affine covariance identities;
 matched and nonmatched physical columns;
-positive 2x2 port preservation under branch sums;
+positive 2x2 ordinary-port preservation under branch sums;
 the exact p>=67 threshold tau_p<1/9;
-synthetic least-prime branch superpositions.
+synthetic assigned-branch superpositions.
 ```
 
 Retained verdict:
@@ -267,16 +288,16 @@ Retained verdict:
 PASS_POSITIVE_FUNCTOR_COLOR_ERASURE
 ```
 
-## 9. Proof boundary
+## 10. Proof boundary
 
 ```text
-physical evaluation after affine lift            POSITIVE LINEAR
-exact nonmultiple real-column covariance           EXACT
-PSD Schur domination after physical projection     EXACT
-branch-sum color erasure                            EXACT
-rough projective correction after color erasure    CLOSED
-main rough source physical realization             AVAILABLE
-recursive endpoint-state assembly                  OPEN
-coefficient-one all-generation ledger              OPEN / RH-BEARING
-Riemann Hypothesis                                 UNPROVEN
+ordinary physical evaluation after affine lift       POSITIVE LINEAR
+exact nonmultiple real-column covariance              EXACT
+PSD Schur domination after ordinary projection        EXACT
+assigned-branch color erasure                          EXACT
+radix-four subtraction from ordinary domination       NOT VALID
+conservative branch-port assignment                    SEPARATE
+recursive endpoint-state assembly                      OPEN
+coefficient-one all-generation ledger                  OPEN / RH-BEARING
+Riemann Hypothesis                                     UNPROVEN
 ```
