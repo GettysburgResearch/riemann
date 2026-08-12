@@ -1,0 +1,24 @@
+{
+  "classification": "PASS_COMMON_ROUGH_HILBERT_COLLIGATION",
+  "functional_energy_constants": {
+    "endpoint_score": 34,
+    "sharp": 25
+  },
+  "metric": {
+    "H": [
+      [
+        2,
+        -3
+      ],
+      [
+        -3,
+        5
+      ]
+    ],
+    "determinant": 1
+  },
+  "product_diagonalization": true,
+  "scope": "All identities use exact Fraction arithmetic.",
+  "single_packet_exact_checks": 4,
+  "three_factor_telescope": true
+}
