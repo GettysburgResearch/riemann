@@ -1,14 +1,15 @@
 # T-91401 — The prime Poisson-Fock output embeds explicitly in the completed two-sided Hardy reserve
 
 Claim ID: `T-91401`  
-Status: **PROVED EXACT SOURCE-ORDERED Fock/TANGENT EMBEDDING; ZETA-SCREW DEFECT IDENTITY OPEN**  
+Status: **PROVED EXACT Fock/TANGENT EMBEDDING AND POSITIVE DILATION; SIGNED SCREW GATE OPEN**  
 Created: 2026-08-12  
-Depends on: `L-91036`, `L-91306`, `L-91307`, `L-91316`, `L-91401`, `L-91402`, `L-91403`  
+Corrected: 2026-08-12 by `R-91403`  
+Depends on: `L-91036`, `L-91306`, `L-91307`, `L-91316`, `L-91401`--`L-91403`, `R-91403`  
 RH status: **unproved**
 
-## 1. Statement
+## 1. Explicit prime one-particle and Fock embeddings
 
-Fix any safe scale
+Fix
 
 \[
  a>\frac12,
@@ -24,28 +25,36 @@ Let
   \delta_{r\log p}(dx)
 \]
 
-be Nakamura's positive prime atomic Lévy measure, and let
-
-\[
- d\beta_a(x)=a x\,d\mathsf N_\sigma(x)
-\tag{T-91401.1}
-\]
-
-be the ordinary-prime logarithmic-radius score measure.
-
-Then multiplication by `sqrt(a x)` gives the explicit one-particle isometry
+be Nakamura's positive prime atomic Lévy measure. The ordinary-prime radial
+score measure is
 
 \[
  \boxed{
- \mathcal I_a^{\rm p}:
- L^2(\beta_a)\hookrightarrow L^2(\mathsf N_\sigma),
- \qquad
- (\mathcal I_a^{\rm p}g)(x)=\sqrt{a x}\,g(x).
+ d\beta_a(x)=a x\,d\mathsf N_\sigma(x).
+ }
+\tag{T-91401.1}
+\]
+
+Therefore
+
+\[
+ \boxed{
+ (\mathcal I_a^{\rm p}g)(x)=\sqrt{a x}\,g(x)
  }
 \tag{T-91401.2}
 \]
 
-Its symmetric second quantization gives
+defines an isometry
+
+\[
+ \boxed{
+ \mathcal I_a^{\rm p}:
+ L^2(\beta_a)\hookrightarrow L^2(\mathsf N_\sigma).
+ }
+\tag{T-91401.3}
+\]
+
+Its symmetric second quantization is the explicit full-Fock embedding
 
 \[
  \boxed{
@@ -54,51 +63,29 @@ Its symmetric second quantization gives
  \hookrightarrow
  \Gamma_s(\mathcal S_\sigma),
  }
-\tag{T-91401.3}
+\tag{T-91401.4}
 \]
 
 where
 
 \[
- \boxed{
  \mathcal S_\sigma
  =\mathbb C
   \oplus L^2(\nu_\sigma^+)
   \oplus L^2(\nu_\sigma^-)
- }
-\tag{T-91401.4}
-\]
-
-is the explicit positive two-channel completed source.
-
-The conclusion-producing first-chaos image has an exact vector-valued Hardy
-colligation whose norm-one score observation is Suzuki's complete tangent.
-After compressed delays and reflection,
-
-\[
- \boxed{
- \text{prime Poisson-Fock source-linear output}
- \hookrightarrow
- \text{completed two-sided delayed Hardy tangent}
- \oplus
- \text{explicit positive reserve}.
- }
 \tag{T-91401.5}
 \]
 
-This does not assert that the completed xi probability law is infinitely
-divisible. The embedding uses the positive Jordan decomposition of its signed
-quasi-Lévy tangent source.
+is the positive two-channel completed source of `L-91402`.
 
-## 2. Explicit completed source channels
+By `L-91036`, the source-linear Hardy tangent reads only the compensated
+first-chaos image. Higher prime chaos sectors are nevertheless embedded
+isometrically and remain orthogonal unused environment.
 
-Nakamura's safe quasi-Lévy measure has the Jordan decomposition
+## 2. Completed positive source channels
 
-\[
- d\nu_\sigma=d\nu_\sigma^+-d\nu_\sigma^-.
-\]
-
-Let `varpi` be the plastic constant and `kappa=log(varpi)`. Then
+Let `varpi>1` be the plastic constant and `kappa=log(varpi)`. Nakamura's signed
+quasi-Lévy measure has the positive Jordan decomposition
 
 \[
  d\nu_\sigma^+
@@ -124,22 +111,23 @@ where
 \tag{T-91401.8}
 \]
 
-All source metrics are positive. The channels are:
+Thus the completed source consists explicitly of
 
 ```text
-prime atoms                                  positive;
-short archimedean jumps  0<x<log(varpi)     positive;
-long archimedean jumps   x>log(varpi)        positive metric,
-                                              negative observation sign;
-deterministic Nakamura drift                  scalar.
+prime atoms;
+short positive archimedean jumps;
+long archimedean jumps carried in a positive metric with negative sign
+stored in the observation;
+one deterministic Nakamura drift connection.
 ```
 
-The sign of the completion is stored in the score vector, not the Hilbert
-metric.
+This does not identify the completed xi probability law with one positive
+Poisson law; Nakamura proves that law is not infinitely divisible for
+`sigma>1`.
 
-## 3. Exact completed tangent feature
+## 3. Source-valued completed tangent
 
-Let
+Define
 
 \[
  F_t(x)=e^{itx}-1-itx\mathbf1_{x\le1/2},
@@ -160,23 +148,21 @@ Put
  e_\sigma=s_\sigma/\mathfrak n_\sigma,
 \]
 
-and
-
 \[
- v_{\sigma,t}=(-2it\lambda_\sigma',G_t,G_t).
+ v_{\sigma,t}=(-2it\lambda_\sigma',G_t,G_t)
 \]
 
-The explicit source-valued symbol
+and
 
 \[
  \boxed{
  \mathbf q_a(t)
- =a\mathfrak n_\sigma\Theta_a(t)v_{\sigma,t}
+ =a\mathfrak n_\sigma\Theta_a(t)v_{\sigma,t}.
  }
 \tag{T-91401.9}
 \]
 
-satisfies
+The norm-one score observation satisfies
 
 \[
  \boxed{
@@ -186,14 +172,8 @@ satisfies
 \tag{T-91401.10}
 \]
 
-At every prime atom `x=r log p>1/2`, the compensation vanishes and
-
-\[
- a x\frac{p^{-r\sigma}}r
- =a\Lambda(p^r)(p^r)^{-a-1/2}.
-\]
-
-Hence the observed atomic channel is exactly
+At every prime atom `x=r log p>1/2`, the compensation vanishes and the observed
+atomic channel is exactly
 
 \[
  \boxed{
@@ -203,9 +183,9 @@ Hence the observed atomic channel is exactly
 \tag{T-91401.11}
 \]
 
-## 4. Positive Hardy colligation
+## 4. Completed Hardy colligation
 
-Define on the common Hardy form core
+On the common Hardy form core, define
 
 \[
  \mathscr Q_a
@@ -217,7 +197,7 @@ Define on the common Hardy form core
  H_{m_a}=P_-M_{a\partial_a\Theta_a}P_+.
 \]
 
-The score observation gives
+Then
 
 \[
  H_{m_a}=(I\otimes c_\sigma)\mathscr Q_a.
@@ -232,7 +212,7 @@ Let
   \mathscr Q_a.
 \]
 
-Then
+Orthogonal source-fibre decomposition gives
 
 \[
  \boxed{
@@ -243,27 +223,30 @@ Then
 \tag{T-91401.13}
 \]
 
-Since Suzuki's model-space reserve satisfies
+Since Suzuki's canonical model-space reserve satisfies
 
 \[
  \mathcal J_a^*\mathcal J_a
  =2H_{m_a}^*H_{m_a},
 \]
 
-we obtain the completed positive reserve identity
+we have the exact positive-dilation identity
 
 \[
  \boxed{
- 2\mathscr Q_a^*\mathscr Q_a
+ \mathcal C_a^{\rm abs}
+ :=2\mathscr Q_a^*\mathscr Q_a
  =\mathcal J_a^*\mathcal J_a
-  +2\mathscr R_a^*\mathscr R_a.
+  +\mathcal D_a^{\rm abs},
+ \qquad
+ \mathcal D_a^{\rm abs}=2\mathscr R_a^*\mathscr R_a\succeq0.
  }
 \tag{T-91401.14}
 \]
 
-## 5. Ordinary-prime tail-Hankel Julia node
+## 5. Prime tail-Hankel Julia node
 
-After the standard Hardy reflection, the prime visible block is exactly
+After the standard Hardy reflection, the prime visible block is
 
 \[
  (\mathsf H_{\beta_a}g)(t)
@@ -277,7 +260,7 @@ At `a=4`,
  \beta_4((0,\infty))<\frac{85}{196}<1,
 \]
 
-and
+and `L-91307` gives
 
 \[
  \boxed{
@@ -288,15 +271,12 @@ and
 \tag{T-91401.16}
 \]
 
-Thus the first-chaos prime node has its own completely explicit local Julia
-reserve inside the completed source colligation.
-
-By `L-91036`, the linear Hardy output uses this compensated first-chaos node;
-the higher sectors of (T-91401.3) remain orthogonal unused environment.
+Thus the prime first-chaos node has its own completely explicit Julia reserve
+inside the completed colligation.
 
 ## 6. Delays, orientations, and bridge placement
 
-For a positive delay `S_tau` on `K_(Theta_a)`, put
+For a positive delay `S_tau` on `K_(Theta_a)`, define
 
 \[
  T_\tau=P_aS_\tau|_{K_{\Theta_a}},
@@ -321,75 +301,109 @@ coordinates. The delayed source feature is
 \]
 
 Reflection supplies the opposite Hardy orientation. The two Hardy components
-of the finite bridge are projected into the same resident/leakage geometry.
-Their exact coefficient-one screw-defect identification remains open.
+of the finite bridge have the same explicit resident/leakage placement.
 
-## 7. What is and is not completed
-
-Closed exactly:
-
-```text
-prime Poisson one-particle space -> completed source atomic channel;
-full symmetric-Fock second-quantized embedding;
-ordinary-prime score as observed direct summand;
-archimedean/pole/theta completion in two positive channels plus drift;
-completed model-space tangent observation;
-positive source-fibre auxiliary;
-two Hardy orientations and compressed positive delays;
-bridge geometric placement.
-```
-
-Not claimed:
-
-```text
-the completed xi probability law is one positive Poisson law;
-the constructed positive reserve already equals the zeta screw/Weil defect.
-```
-
-## 8. Sole remaining RH-bearing identity
-
-Let
-
-\[
- \mathcal D_a^{\rm QL,del,bridge}
-\]
-
-be the joint positive reserve formed from:
-
-```text
-2 mathscr R_a*mathscr R_a;
-compressed-delay leakage Grams;
-reflected-orientation leakage;
-finite bridge leakage.
-```
-
-The exact remaining theorem is
+Consequently the requested embedding component is closed:
 
 \[
  \boxed{
- \mathcal D_a^{\rm QL,del,bridge}
- =\mathbb K_a^{\rm del}
+ \Gamma_s(L^2(\beta_a))
+ \hookrightarrow
+ \Gamma_s(\mathcal S_\sigma)
+ \longrightarrow
+ \text{completed two-sided delayed Hardy tangent}
+ \oplus\text{positive dilation reserve}.
  }
 \tag{T-91401.18}
 \]
 
-on every finite carrier/delay/orientation/bridge packet in the resident
-Guinand--Weil/Suzuki normalization.
+## 7. The positive reserve is not the signed screw defect
 
-If (T-91401.18) holds, the delayed screw Gram is positive and corrected
-`T-91008` proves RH. The identity has not been established.
+Let `mathscr Q_(a,-)` be the long-jump component of `mathscr Q_a`. The natural
+source form linear in Nakamura's signed measure is
+
+\[
+ \mathcal C_a^{\rm sgn}
+ =\mathcal C_a^{\rm abs}
+  -4\mathscr Q_{a,-}^*\mathscr Q_{a,-}.
+\tag{T-91401.19}
+\]
+
+Hence its source-minus-shape form is
+
+\[
+ \boxed{
+ \mathcal D_a^{\rm sgn}
+ =\mathcal D_a^{\rm abs}
+  -4\mathscr Q_{a,-}^*\mathscr Q_{a,-}.
+ }
+\tag{T-91401.20}
+\]
+
+This is `R-91403`. The earlier shortcut
+
+```text
+positive dilation reserve = delayed zeta screw/Weil defect
+```
+
+is therefore withdrawn. It would replace the signed source by its total
+variation.
+
+## 8. Correct remaining RH-bearing theorem
+
+Two obligations remain.
+
+### A. Signed source lock
+
+Prove on the full delayed two-sided-plus-bridge core that
+
+\[
+ \boxed{
+ \mathbb K_a^{\rm del}
+ =\mathcal D_a^{\rm sgn,del,bridge}.
+ }
+\tag{T-91401.21}
+\]
+
+This fixes the rational Cauchy mother, deterministic connection, all delay and
+orientation cross terms, and the bridge in one Guinand--Weil/Suzuki
+normalization.
+
+### B. Long-jump domination
+
+After (T-91401.21), positivity is equivalent to
+
+\[
+ \boxed{
+ \mathcal D_a^{\rm abs,del,bridge}
+ \succeq
+ 4\mathscr Q_{a,-}^*\mathscr Q_{a,-}.
+ }
+\tag{T-91401.22}
+\]
+
+This is the explicit remaining operator inequality: the positive Julia reserve
+must absorb the long-jump archimedean channel after the exact structured
+compression.
+
+A finite hostile packet in `X-91402` shows that this domination is not automatic
+before the Hardy/model-space/delay/bridge source lock.
+
+If (T-91401.21)--(T-91401.22) hold, the delayed screw Gram is positive and
+corrected `T-91008` gives RH. Neither statement has been established.
 
 ## 9. Exact boundary
 
 ```text
 prime one-particle embedding I_a^p                   EXACT
 full prime Fock embedding Gamma_s(I_a^p)             EXACT
-completed safe quasi-Levy source split               EXACT
-ordinary-prime score as direct positive summand      EXACT
-prime tail-Hankel Julia dilation                     EXACT
-complete tangent multiplier as score observation    EXACT
-completed two-sided delayed Hardy colligation        EXACT
-explicit positive reserve                           EXACT
-reserve = delayed zeta screw/Weil defect             OPEN / RH-BEARING
+prime-inclusive completed positive source            EXACT
+ordinary-prime tail-Hankel visible block             EXACT
+completed tangent score observation                 EXACT
+positive two-sided delayed Hardy dilation            EXACT
+positive total-variation reserve                     EXACT
+positive reserve = signed screw defect               REFUTED
+signed quasi-Levy source lock to screw Gram           OPEN
+positive reserve >= long-jump channel                OPEN / RH-BEARING
 Riemann Hypothesis                                   UNPROVED
 ```
