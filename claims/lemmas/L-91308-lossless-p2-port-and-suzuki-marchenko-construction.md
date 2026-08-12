@@ -1,167 +1,89 @@
-# L-91308 — A lossless `p=2` port regularizes the Suzuki–de Branges construction without changing the open-strip Xi zeros
+# L-91308 — The phase-locked `p=2` packet is a lossless local port, not a hard-range Suzuki regularizer
 
 Claim ID: `L-91308`  
-Status: **FULL CONSTRUCTIVE CANONICAL-SYSTEM PROGRAMME; ONE POSITIVE MARCHENKO IDENTITY OPEN**  
+Status: **CORRECTED / LOCAL PORT RETAINED; REGULARIZATION CLAIM REFUTED**  
 Created: 2026-08-12  
+Corrected: 2026-08-12  
 RH status: **unproved**
 
-## 1. The exact local port
+## 1. Surviving local facts
 
 Let
 
 \[
-Q_*(y)=(1-y)(1-2y)(2-y)(1-4y)
-      =2-15y+35y^2-30y^3+8y^4.
-\tag{L-91308.1}
+Q_*(y)=(1-y)(1-2y)(2-y)(1-4y).
 \]
 
-The self-dual adelic wavelet of the parent programme has completed Tate scalar
+The associated local Tate factor satisfies
 
 \[
-\Xi_*(s)=2^{2s}Q_*(2^{-s})\xi(s).
-\tag{L-91308.2}
-\]
-
-Its local factor is
-
-\[
-\boxed{
 2^{2s}Q_*(2^{-s})
-=
-16A_2(s)A_2(1-s),
-\qquad
-A_2(s)=(1-2^{-s})(1-2^{-s-1}).
-}
-\tag{L-91308.3}
+=16(1-2^{-s})(1-2^{-s-1})
+   (1-2^{s-1})(1-2^{s-2}),
 \]
 
-Neither `A_2(s)` nor `A_2(1-s)` vanishes in `0<Re(s)<1`. Thus
+or equivalently `16 A_2(s)A_2(1-s)`. It has no zero in the open critical
+strip. The dyadic radial synthesis symbol
 
 \[
-\Xi_*(s)=0,\quad 0<\Re s<1
-\iff
-\xi(s)=0.
-\tag{L-91308.4}
+G(z)=2\sqrt2-13z+11\sqrt2z^2-4z^3
 \]
 
-The local factor is not to be ignored: it has known zeros outside the open
-critical strip. It must be represented as a finite lossless boundary port and
-Schur-eliminated before the reduced characteristic determinant is interpreted.
+has a positive unit-circle lower bound, so the radial orbit is a stable Riesz
+system.
 
-## 2. Stable radial synthesis
+These exact statements remain useful. The packet is a finite, zero-safe,
+lossless local boundary port and may be Schur-eliminated from a completed
+system.
 
-The radial `p=2` shell space is identified with `ell^2(Z)`. The dyadic dilates
-of the local wavelet have synthesis symbol
+## 2. Refuted claim
+
+`R-91303` computes the leading singular coefficient of the filtered Suzuki
+kernel at every odd integer:
 
 \[
-G(z)=2\sqrt2-13z+11\sqrt2 z^2-4z^3.
-\tag{L-91308.5}
+\kappa_\omega
+=35+(1-2^{-2\omega})(-15\,2^\omega+2\,2^{2\omega}).
 \]
 
-The phase-lock theorem gives
+For `0<omega<=1/2`,
 
 \[
-\inf_{|z|=1}|G(z)|>0.
-\tag{L-91308.6}
+\kappa_\omega
+\ge37-\frac{15}{2}\sqrt2
+>\frac{103}{4}>0.
 \]
 
-Hence the local synthesis map is boundedly invertible: there is no hidden local
-kernel, missing radial state, or conditioning escape.
+Therefore the filtered kernel still has an
+`(x-N)^(omega-1)` singularity at every odd integer. It is not locally `L2` in
+the hard range, and the corresponding ordinary Hilbert--Schmidt/trace-class
+Fredholm construction does not follow.
 
-## 3. Regularized multiplicative Hankel operator
+## 3. Corrected Suzuki route
 
-Let `H_a` denote Suzuki's multiplicative Hankel operator formally associated
-with `Theta_a`. Let `R_2` be the finite Laurent polynomial in the dyadic
-dilation induced by `Q_*`. Define the regularized operator
+The proper global repair is:
 
-\[
-\mathsf H_{a,*}
-=
-\mathsf R_2\,\mathsf H_a\,\mathsf R_2^\sharp.
-\tag{L-91308.7}
-\]
+1. `L-91311`: deconvolve all integer singularities through the exact all-prime
+   generalized-Jordan Dirichlet inverse;
+2. `L-91312`: apply one Green primitive, raising the sole endpoint exponent
+   from `omega-1` to `omega`;
+3. build compatible finite integrated Hankel/Marchenko systems from the
+   primitive kernel;
+4. prove their global source/output losslessness by `OVOT_omega` or the
+   minimal one-node exhaustion `ONAE_omega`;
+5. retain the present `p=2` packet only as the finite local boundary port.
 
-On the Mellin boundary its multiplier is the original `Theta_a` multiplied
-by the explicit finite local all-pass ratio arising from (L-91308.3). The
-period-16 packet has four vanishing moments; after the pole/gamma subtraction
-already present in the completed kernel, the proposed operator `H_(a,*)` has
-trace-class compact truncations
+The fixed local packet does not replace the all-prime arithmetic operation.
 
-\[
-\mathsf K_{a,x}
-=
-P_x\mathsf H_{a,*}P_x.
-\tag{L-91308.8}
-\]
+## 4. Exact status
 
-The analytic task here is a direct kernel estimate from the explicit
-theta-wavelet formula, not a zero-side assumption.
-
-## 4. Suzuki–Marchenko tau functions
-
-For `x>0`, define
-
-\[
-\tau_{a,\pm}(x)=\det(I\pm\mathsf K_{a,x}).
-\tag{L-91308.9}
-\]
-
-When both determinants are nonzero, the standard Burnol–Suzuki Marchenko
-construction forms a positive diagonal Hamiltonian, up to the normalization of
-the canonical coordinate, from the determinant ratio
-
-\[
-m_a(x)=\frac{\tau_{a,+}(x)}{\tau_{a,-}(x)},
-\qquad
-H_a(x)=
-\begin{pmatrix}
-m_a(x)^{-2}&0\\
-0&m_a(x)^2
-\end{pmatrix}.
-\tag{L-91308.10}
-\]
-
-The exact normalization is to be matched against Suzuki's canonical-system
-convention before promotion. Positivity of (L-91308.10) is automatic once the
-tau functions are real and nonzero.
-
-## 5. The canonical-route closing identity
-
-The source-specific theorem to prove is:
-
-> **Regularized Marchenko Identity (`RMI_a`).**  
-> For every rational `0<a<1/2`, the trace-class operators
-> `K_(a,x)` satisfy
-> \[
-> \tau_{a,+}(x)\tau_{a,-}(x)>0\qquad(x>0),
-> \]
-> and the canonical system obtained from (L-91308.10), after exact Schur
-> elimination of the finite `p=2` port, has terminal structure function
-> \[
-> E_a(z)=\xi\!\left(\frac12+a-iz\right)
-> \]
-> up to a real zero-free scalar factor.
-
-This is not a restatement of innerness if it is proved from the explicit
-theta-wavelet kernel and Fredholm resolvent equations. It is circular if
-nonvanishing of the tau functions is inferred from assumed innerness.
-
-## 6. Why `RMI_a` finishes route I
-
-`RMI_a` yields `H_a(x)>=0` and recovers `E_a`. The de Branges Lagrange
-identity then gives `K_a^E>=0`, hence `K_a^Theta>=0` by `L-91307`.
-Therefore `Theta_a` is meromorphic inner.
-
-For any predetermined `a_j -> 0`, innerness for every `a_j` excludes
-all zeros to the right of the critical line. Functional symmetry then gives RH.
-
-## 7. What remains to be established on this route
-
-1. Trace-class bounds for `K_(a,x)` from the explicit regularized theta kernel.
-2. A source-side proof that `I+/-K_(a,x)` are injective for every `x`, without
-   assuming innerness.
-3. Exact matching of the recovered terminal structure function after local
-   port elimination.
-
-These three steps are the canonical-system reading of the single optical
-theorem stated in `T-91302`.
+```text
+open-strip local zero-safety                 EXACT
+stable radial Riesz synthesis                EXACT
+finite lossless p=2 boundary port            PROPOSED COMPLETE
+hard-range local regularization              FALSE
+all-prime deconvolution                       L-91311
+one-primitive local regularization            L-91312
+global integrated Marchenko losslessness      OPEN / RH-BEARING
+Riemann Hypothesis                            UNPROVED
+```
