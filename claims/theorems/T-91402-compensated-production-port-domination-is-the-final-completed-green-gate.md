@@ -4,7 +4,7 @@ Claim ID: `T-91402`
 Status: **FULL CONDITIONAL RH PROPOSAL / EXPLICIT OPERATOR DOMINATION OPEN**  
 Created: 2026-08-12  
 Corrected: 2026-08-12  
-Depends on: corrected `T-91008`; `L-91409`--`L-91413`  
+Depends on: corrected `T-91008`; `L-91409`--`L-91413`; `R-91404/R-91405`  
 RH status: **unproved**
 
 ## 1. Purpose
@@ -168,7 +168,7 @@ Conversely, under RH the zero-side Lévy Gram supplies an existential positive
 factorization of `K_a^del`.  The open burden is the explicit arithmetic
 production-port domination (T-91402.2).
 
-## 8. Plastic-aligned specialization
+## 8. Plastic-aligned scalar specialization and its firewall
 
 At
 
@@ -178,9 +178,8 @@ At
 \]
 
 `L-91413` proves that the continuous scalar nonprime channel is a positive
-Lévy increment and that every prime residual coefficient has one sign.
-The scalar shadow of CPPD becomes the explicit continuum-versus-prime-log
-sampling comparison
+Lévy increment and that every prime residual coefficient has one sign.  The
+scalar shadow of CPPD becomes the explicit continuum-versus-prime-log formula
 
 \[
  \int(1-\cos(xu))d\omega_\diamond(u)
@@ -188,9 +187,15 @@ sampling comparison
  \sum_{n\ge2}c_n(1-\cos(x\log n)).
 \tag{T-91402.3}
 
-The fully polarized form is a weighted sampling inequality on the exact
-source range.  This aligned specialization is a preferred concrete attack,
-not a proved conclusion.
+This is a useful scalar normal form.  It is not a legal uncoupled full-packet
+strategy.  `R-91405` proves that the absolutely continuous aligned measure
+cannot dominate the atomic prime sampling measure on the complete carrier
+defect span: Fejér packets isolate one prime atom while their continuous norm
+tends to zero.
+
+Therefore the plastic-aligned specialization must remain coupled to the
+connection and endpoint ports in (T-91402.2).  Their role is structural, not
+bookkeeping.
 
 ## 9. Gamma-ladder reading
 
@@ -217,12 +222,13 @@ Reject a claimed proof if it:
 3. treats the full long channel as negative after `L-91412` has split its
    positive endpoints from its adverse production;
 4. replaces the signed completed source by total variation;
-5. ignores arbitrary mixed delays or uses raw delay invariance of the model
+5. tries to dominate the prime atomic norm by the aligned absolutely
+   continuous measure alone;
+6. ignores arbitrary mixed delays or uses raw delay invariance of the model
    space;
-6. omits one Hardy orientation or the bridge;
-7. loses coefficient one;
-8. proves only scalar diagonals;
-9. uses numerical PSD scans as the all-packet theorem;
+7. omits one Hardy orientation or the bridge;
+8. loses coefficient one;
+9. proves only scalar diagonals or numerical PSD scans;
 10. assumes the target screw Gram positive before constructing the source map.
 
 ## 11. Exact boundary
@@ -234,6 +240,7 @@ full completed source identity                        EXACT
 positive production ledger                           EXPLICIT
 adverse endpoint/production ledger                    EXPLICIT
 deterministic connection                              EXPLICIT
-CPPD coefficient-one domination                       OPEN / RH-EQUIVALENT
+pure continuous-to-atomic domination                  REFUTED
+CPPD coefficient-one coupled domination               OPEN / RH-EQUIVALENT
 Riemann Hypothesis                                    UNPROVED
 ```
