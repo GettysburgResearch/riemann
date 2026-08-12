@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Exact/numerical regression for L-91306/L-91307/R-91301/T-91301."""
+"""Exact/numerical regression for the covariant Poisson/Fisher/Hardy packet."""
 from __future__ import annotations
-import argparse, json, math
+import argparse, json
 from fractions import Fraction as F
 from pathlib import Path
 import mpmath as mp
@@ -53,38 +53,53 @@ def covariant():
 
 def fisher_hankel():
  e=np.array([1,2j,-1],complex); e=e/np.linalg.norm(e)
- coeff={
-  2:np.array([.3+.1j,-.2j,.4],complex),
-  3:np.array([-.1+.2j,.25,.15j],complex),
-  4:np.array([.05,-.3+.1j,.2],complex),
-  5:np.array([-.2j,.08,.12-.04j],complex),
- }
- M=N=3
- Hvec=np.zeros((M*3,N),complex)
+ coeff={2:np.array([.3+.1j,-.2j,.4],complex),3:np.array([-.1+.2j,.25,.15j],complex),4:np.array([.05,-.3+.1j,.2],complex),5:np.array([-.2j,.08,.12-.04j],complex)}
+ M=N=3; Hvec=np.zeros((M*3,N),complex)
  for t in range(1,M+1):
-  for s in range(1,N+1):
-   Hvec[3*(t-1):3*t,s-1]=coeff.get(t+s,np.zeros(3))
+  for s in range(1,N+1): Hvec[3*(t-1):3*t,s-1]=coeff.get(t+s,np.zeros(3))
  C=np.zeros((M,M*3),complex)
- for t in range(M):
-  C[t,3*t:3*(t+1)]=e.conj()
- Hm=-(C@Hvec)
- Pi=np.outer(e,e.conj())
- E=np.zeros_like(Hvec)
- for t in range(M):
-  E[3*t:3*(t+1),:]=(np.eye(3)-Pi)@Hvec[3*t:3*(t+1),:]
- lhs=Hvec.conj().T@Hvec
- rhs=Hm.conj().T@Hm+E.conj().T@E
- phases=np.diag(np.exp(1j*np.array([.2,.7,1.1])))
- delayed=phases@Hm
- return float(np.linalg.norm(lhs-rhs)),float(np.linalg.norm(delayed.conj().T@delayed-Hm.conj().T@Hm)),[float(x) for x in np.linalg.eigvalsh(E.conj().T@E)]
+ for t in range(M): C[t,3*t:3*(t+1)]=e.conj()
+ Hm=-(C@Hvec); Pi=np.outer(e,e.conj()); E=np.zeros_like(Hvec)
+ for t in range(M): E[3*t:3*(t+1),:]=(np.eye(3)-Pi)@Hvec[3*t:3*(t+1),:]
+ lhs=Hvec.conj().T@Hvec; rhs=Hm.conj().T@Hm+E.conj().T@E
+ return float(np.linalg.norm(lhs-rhs)),[float(x) for x in np.linalg.eigvalsh(E.conj().T@E)]
+
+def compressed_delay():
+ """Finite unilateral-shift model of L-91401, away from truncation boundary."""
+ N,m=12,4
+ S=np.zeros((N,N),complex)
+ for j in range(N-1): S[j+1,j]=1
+ P=np.diag([1.0]*m+[0.0]*(N-m)); M=np.linalg.matrix_power(S,m)
+ Sp=lambda j:np.linalg.matrix_power(S,j)
+ T=lambda j:P@Sp(j)@P
+ R=lambda j:M.conj().T@Sp(j)@P
+ decomp=semi=cocycle=0.0
+ basis=np.eye(N,dtype=complex)
+ for j in range(4):
+  for k in range(m):
+   g=basis[:,k]
+   decomp=max(decomp,float(np.linalg.norm(Sp(j)@g-T(j)@g-M@R(j)@g)))
+ for j in range(3):
+  for k in range(3):
+   semi=max(semi,float(np.linalg.norm((T(j+k)-T(j)@T(k))@P)))
+   cocycle=max(cocycle,float(np.linalg.norm((R(j+k)-R(j)@T(k)-Sp(j)@R(k))@P)))
+ rng=np.random.default_rng(9130601); delays=[0,1,2,3]; gs=[]
+ for _ in delays:
+  z=rng.normal(size=N)+1j*rng.normal(size=N); gs.append(P@z)
+ left=sum((Sp(d)@g for d,g in zip(delays,gs)),np.zeros(N,complex))
+ resident=sum((T(d)@g for d,g in zip(delays,gs)),np.zeros(N,complex))
+ leakage=sum((R(d)@g for d,g in zip(delays,gs)),np.zeros(N,complex))
+ packet=abs(float(np.vdot(left,left).real)-float(np.vdot(resident,resident).real+np.vdot(leakage,leakage).real))
+ g=basis[:,m-1]; raw_resident=float(np.linalg.norm(P@S@g)); raw_leak=float(np.linalg.norm(R(1)@g))
+ return {'decomposition_error':decomp,'semigroup_error':semi,'leakage_cocycle_error':cocycle,'mixed_packet_error':packet,'raw_delay_resident_norm':raw_resident,'raw_delay_leakage_norm':raw_leak}
 
 def build():
  rows=pp(200); a=mp.mpf('1.7'); x=mp.mpf('.83'); err=abs(a*mp.diff(lambda z:logz(z,x,rows),a)-score(a,x,rows)); ratios=[]
  for n,k in rows[:18]:
   u=mp.log(n); c=a+mp.mpf('.5'); j=(1-(1+2*a*u)*mp.e**(-2*a*u))*mp.e**(-c*u)/(k*a*a); s=a*u*mp.e**(-c*u)/k; ratios.append(float(s/j))
- mass=4*(-mp.diff(lambda z:mp.log(mp.zeta(z)),mp.mpf('4.5'))); bound=F(85,196); t=tail_exact(); ce,sk,eigs=covariant(); fe,fd,aux=fisher_hankel()
- gates={'score':err<mp.mpf('1e-55'),'mismatch':max(ratios)-min(ratios)>1,'mass':mass<mp.mpf(bound.numerator)/bound.denominator<1,'tail':True,'covariant':ce<1e-14 and sk<1e-14,'fisher_hankel':fe<1e-14 and fd<1e-14}; assert all(gates.values())
- return {'status':'PASS_COVARIANT_TAIL_HANKEL_COMPLETION','gates':gates,'prime_score_error':float(err),'ratio_spread':max(ratios)-min(ratios),'safe_mass':float(mass),'safe_bound':f'{bound.numerator}/{bound.denominator}','tail':t,'covariant_shape_eigenvalues':eigs,'fisher_hankel_error':fe,'delay_unitary_error':fd,'fisher_auxiliary_eigenvalues':aux}
+ mass=4*(-mp.diff(lambda z:mp.log(mp.zeta(z)),mp.mpf('4.5'))); bound=F(85,196); t=tail_exact(); ce,sk,eigs=covariant(); fe,aux=fisher_hankel(); delay=compressed_delay()
+ gates={'score':err<mp.mpf('1e-55'),'mismatch':max(ratios)-min(ratios)>1,'mass':mass<mp.mpf(bound.numerator)/bound.denominator<1,'tail':True,'covariant':ce<1e-14 and sk<1e-14,'fisher_hankel':fe<1e-14,'compressed_delay':max(delay['decomposition_error'],delay['semigroup_error'],delay['leakage_cocycle_error'],delay['mixed_packet_error'])<1e-13 and delay['raw_delay_resident_norm']==0.0 and abs(delay['raw_delay_leakage_norm']-1)<1e-14}; assert all(gates.values())
+ return {'status':'PASS_COVARIANT_TAIL_HANKEL_COMPLETION','gates':gates,'prime_score_error':float(err),'ratio_spread':max(ratios)-min(ratios),'safe_mass':float(mass),'safe_bound':f'{bound.numerator}/{bound.denominator}','tail':t,'covariant_shape_eigenvalues':eigs,'fisher_hankel_error':fe,'fisher_auxiliary_eigenvalues':aux,'compressed_delay':delay}
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--json',type=Path);a=p.parse_args();s=json.dumps(build(),sort_keys=True,separators=(',',':'))+'\n'; a.json.write_text(s) if a.json else print(s,end='')
