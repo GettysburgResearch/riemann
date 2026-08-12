@@ -15,9 +15,9 @@ current-boundary file is
 claims/observations/O-91302-current-minimal-proof-boundary.md
 ```
 
-The branch depends conceptually on draft PRs #396, #400, #401, and #402 and on
-the phase-locked adelic theta-wavelet packet. Preserve exact provenance; do
-not silently promote inherited `PROPOSED` claims.
+The branch depends conceptually on draft PRs #396, #400, #401, #402, and #404,
+and on the phase-locked adelic theta-wavelet packet. Preserve exact provenance;
+do not silently promote inherited `PROPOSED` claims.
 
 ## Epistemic status
 
@@ -30,8 +30,8 @@ ask reviewers to fill the open proof: NO
 ```
 
 The reviewers' job is to verify or refute the mathematics actually supplied.
-The open analytic intertwiner remains an explicitly marked research target,
-not an exercise delegated to them.
+The open analytic intertwiner/lossless colligation remains an explicitly marked
+research target, not an exercise delegated to them.
 
 ## Superseded first version
 
@@ -56,8 +56,11 @@ R-91305  bare one-node scalar norm matching is vacuous.
 7. `L-91314`–`L-91316` — aligned node charts.
 8. `L-91317`–`L-91319` — exact positive source telescope and vector.
 9. `L-91320` — zero-factor-independent stable-port ledger.
-10. both experiment directories and SHA ledgers.
-11. reports and this handoff.
+10. `L-91321` — exact dyadic cascade/minimality reduction.
+11. `L-91322` — finite-packet prime controllability and Hardy observability.
+12. `T-91304` — lossless two-section cascade descent proposal.
+13. both experiment directories and SHA ledgers.
+14. reports and this handoff.
 
 ## Exact results to verify
 
@@ -72,10 +75,14 @@ one-node model-space zero-port detector;
 three aligned node formulas;
 pole-node finite part and positive dyadic innovation;
 all-generation first-chaos source vector;
-zero-factor-independent stable-port decomposition.
+zero-factor-independent stable-port decomposition;
+completed scalar dyadic cocycle;
+annular zeros as internal pole--zero cancellations;
+finite-packet confluent-Vandermonde controllability;
+finite-packet Cauchy/Hardy observability.
 ```
 
-## Exact open theorem
+## Exact open theorem — static form
 
 For every `a` in one predetermined sequence `a_j downarrow0`, construct a
 single closable analytic source-to-model map
@@ -97,9 +104,33 @@ positive metric with no signed same-scale output;
 one-node exhaustion after the critical and deterministic stable outputs.
 ```
 
-The exact model ledger then forces the positive crossed-zero port to vanish,
-giving the zero-free half-plane `Re(s)>1/2+a`. The sequence `a_j downarrow0`
-and functional symmetry would give RH.
+## Equivalent open theorem — dynamic form
 
-This intertwiner has **not** been constructed. No reviewer should treat the
-proposal as a proof until it is.
+Construct the lossless two-section colligation `LTSC_a` of `T-91304` for the
+exact factorization
+
+\[
+ \Phi_{2a}(w)=\Phi_a(w)\Phi_a(w+2a).
+\]
+
+Its scalar output must be the completed coarse quotient and its complete detail
+output must retain the causal/anti-causal Cauchy channels, bridge, coupled
+Brownian/theta reserve, Poisson/Fock complement, and local `p=2` port.
+
+Finite annular zero packets are already controllable and observable by
+`L-91322`. The remaining analytic obligations are:
+
+```text
+derive the natural couplings from one common completed boundary map;
+prove positive-metric closability;
+prove the unitary optical identity;
+control infinite-height tails and closure.
+```
+
+If the coarse quotient is inner, losslessness forces the detail transfer to
+vanish; minimality then excludes every annular zero and descends innerness from
+scale `2a` to scale `a`. Starting from the unconditional regime `a>=1/2` and
+iterating down a dyadic lattice would prove RH.
+
+Neither the static intertwiner nor `LTSC_a` has been constructed. No reviewer
+should treat the proposal as a proof until one is.
