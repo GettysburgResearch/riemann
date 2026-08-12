@@ -51,13 +51,40 @@ def covariant():
  V=np.array([[1,0],[0,1],[0,0]],complex); R=V@V.conj().T; N=(np.eye(3)-R)@(A+B)@V
  return float(np.linalg.norm(N-(np.eye(3)-R)@(A+B)@V)),float(np.linalg.norm(A+A.conj().T)),[float(x) for x in np.linalg.eigvalsh(N.conj().T@N)]
 
+def fisher_hankel():
+ e=np.array([1,2j,-1],complex); e=e/np.linalg.norm(e)
+ coeff={
+  2:np.array([.3+.1j,-.2j,.4],complex),
+  3:np.array([-.1+.2j,.25,.15j],complex),
+  4:np.array([.05,-.3+.1j,.2],complex),
+  5:np.array([-.2j,.08,.12-.04j],complex),
+ }
+ M=N=3
+ Hvec=np.zeros((M*3,N),complex)
+ for t in range(1,M+1):
+  for s in range(1,N+1):
+   Hvec[3*(t-1):3*t,s-1]=coeff.get(t+s,np.zeros(3))
+ C=np.zeros((M,M*3),complex)
+ for t in range(M):
+  C[t,3*t:3*(t+1)]=e.conj()
+ Hm=-(C@Hvec)
+ Pi=np.outer(e,e.conj())
+ E=np.zeros_like(Hvec)
+ for t in range(M):
+  E[3*t:3*(t+1),:]=(np.eye(3)-Pi)@Hvec[3*t:3*(t+1),:]
+ lhs=Hvec.conj().T@Hvec
+ rhs=Hm.conj().T@Hm+E.conj().T@E
+ phases=np.diag(np.exp(1j*np.array([.2,.7,1.1])))
+ delayed=phases@Hm
+ return float(np.linalg.norm(lhs-rhs)),float(np.linalg.norm(delayed.conj().T@delayed-Hm.conj().T@Hm)),[float(x) for x in np.linalg.eigvalsh(E.conj().T@E)]
+
 def build():
  rows=pp(200); a=mp.mpf('1.7'); x=mp.mpf('.83'); err=abs(a*mp.diff(lambda z:logz(z,x,rows),a)-score(a,x,rows)); ratios=[]
  for n,k in rows[:18]:
   u=mp.log(n); c=a+mp.mpf('.5'); j=(1-(1+2*a*u)*mp.e**(-2*a*u))*mp.e**(-c*u)/(k*a*a); s=a*u*mp.e**(-c*u)/k; ratios.append(float(s/j))
- mass=4*(-mp.diff(lambda z:mp.log(mp.zeta(z)),mp.mpf('4.5'))); bound=F(85,196); t=tail_exact(); ce,sk,eigs=covariant()
- gates={'score':err<mp.mpf('1e-55'),'mismatch':max(ratios)-min(ratios)>1,'mass':mass<mp.mpf(bound.numerator)/bound.denominator<1,'tail':True,'covariant':ce<1e-14 and sk<1e-14}; assert all(gates.values())
- return {'status':'PASS_COVARIANT_TAIL_HANKEL_COMPLETION','gates':gates,'prime_score_error':float(err),'ratio_spread':max(ratios)-min(ratios),'safe_mass':float(mass),'safe_bound':f'{bound.numerator}/{bound.denominator}','tail':t,'covariant_shape_eigenvalues':eigs}
+ mass=4*(-mp.diff(lambda z:mp.log(mp.zeta(z)),mp.mpf('4.5'))); bound=F(85,196); t=tail_exact(); ce,sk,eigs=covariant(); fe,fd,aux=fisher_hankel()
+ gates={'score':err<mp.mpf('1e-55'),'mismatch':max(ratios)-min(ratios)>1,'mass':mass<mp.mpf(bound.numerator)/bound.denominator<1,'tail':True,'covariant':ce<1e-14 and sk<1e-14,'fisher_hankel':fe<1e-14 and fd<1e-14}; assert all(gates.values())
+ return {'status':'PASS_COVARIANT_TAIL_HANKEL_COMPLETION','gates':gates,'prime_score_error':float(err),'ratio_spread':max(ratios)-min(ratios),'safe_mass':float(mass),'safe_bound':f'{bound.numerator}/{bound.denominator}','tail':t,'covariant_shape_eigenvalues':eigs,'fisher_hankel_error':fe,'delay_unitary_error':fd,'fisher_auxiliary_eigenvalues':aux}
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--json',type=Path);a=p.parse_args();s=json.dumps(build(),sort_keys=True,separators=(',',':'))+'\n'; a.json.write_text(s) if a.json else print(s,end='')
