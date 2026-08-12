@@ -1,0 +1,24 @@
+{
+  "analytic_margin": "43/192",
+  "classification": "PASS_ROUGH_SCALE_ENDPOINT_PORT_RENEWAL",
+  "directed_decimal_scale_checks": 90000,
+  "exact_derivative_polynomial_checks": 10000,
+  "exact_geometric_normalization_checks": 150,
+  "maximum_quotient_block": 1500,
+  "minimum_scanned_difference": {
+    "block": 1500,
+    "lower_decimal": "0.0084714573142309844752123776906848189162035142273215863650",
+    "residue": 0,
+    "scale": 64,
+    "x": "96000.999999999999999999999999999999"
+  },
+  "rough_scales_scanned": [
+    64,
+    67,
+    71,
+    101,
+    127,
+    257
+  ],
+  "scope": "The theorem is analytic. Decimal scans are high-precision mutation guards at cell endpoints; all displayed proof constants and geometric normalizations are exact."
+}
