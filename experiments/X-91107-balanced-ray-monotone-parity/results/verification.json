@@ -1,0 +1,30 @@
+{
+  "balanced_hall_minimum": {
+    "cell_N": 54,
+    "certified_above": "1/5",
+    "lower": 0.23109399665120745,
+    "support": "e <= o",
+    "threshold": 13,
+    "x": "100000000000000/1844367547103"
+  },
+  "carry_and_detail_checks": 80190,
+  "checks": 82749,
+  "classification": "PASS_BALANCED_RAY_MONOTONE_PARITY_LIFT",
+  "interval_seed_edges_checked": 1485,
+  "kappa_interval": [
+    1.0300532710791446,
+    2.7638196577539906
+  ],
+  "scope": "The replay certifies the no-upward Hall margin and the exact nonnegative interval-seed/carry/detail identities. It does not certify nonnegative endpoint-row coefficients for the interval seed.",
+  "strict_equality_hall_minimum": {
+    "cell_N": 54,
+    "certified_above": "-9/50",
+    "lower": -0.17517991727223045,
+    "threshold": 13,
+    "x": "100000000000000/1844367547103"
+  },
+  "zeta_half_interval": [
+    -1.580168825924249,
+    -1.3399455979571917
+  ]
+}
