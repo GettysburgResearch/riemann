@@ -1,16 +1,17 @@
-# O-91302 — Current minimal proof boundary after hostile correction
+# O-91302 — Current minimal proof boundary after hostile correction and dyadic descent
 
 Observation ID: `O-91302`  
 Status: **CURRENT HANDOFF / FAIL-CLOSED**  
 Created: 2026-08-12  
+Updated: 2026-08-12  
 RH status: **unproved**
 
 ## 1. What is now exact
 
 ### Model geometry
 
-For each `a>0`, the horizontal Xi quotient has the exact meromorphic-inner
-port decomposition
+For each `a>0`, the horizontal Xi quotient has the exact positive port
+decomposition
 
 \[
  \mathcal K_a^{\rm src}
@@ -31,6 +32,10 @@ At one interior point `eta`,
  \xi(s)\ne0\quad(\Re s>\tfrac12+a).
  \tag{O-91302.2}
 \]
+
+The one-node implication is meaningful only after a common analytic
+arithmetic-to-model map has been constructed; `R-91305` rules out arbitrary
+one-dimensional norm fitting.
 
 ### Safe arithmetic source
 
@@ -61,8 +66,8 @@ and
  \tag{O-91302.4}
 \]
 
-The positive source Hilbert vector of `L-91319` has norm squared `F(a)` before
-the remaining Cauchy/model normalization.
+The explicit vector of `L-91319` has source norm squared `F(a)` before the
+remaining completed Cauchy/model normalization.
 
 ### Local and stochastic coordinates
 
@@ -73,6 +78,35 @@ the Brownian log-odds cell is a positive Delta-channel;
 the full Brownian boundary form requires coupled (S,Delta) coordinates.
 ```
 
+### Dyadic cascade geometry
+
+Put
+
+\[
+ X(w)=\xi(\tfrac12+w),
+ \qquad
+ \Phi_a(w)=\frac{X(w)}{X(w+2a)}.
+ \tag{O-91302.5}
+\]
+
+Then
+
+\[
+ \boxed{
+ \Phi_{2a}(w)=\Phi_a(w)\Phi_a(w+2a).
+ }
+ \tag{O-91302.6}
+\]
+
+If the coarse quotient is inner, every possible fine-scale pole is a zero of
+horizontal depth `a<d<=2a` hidden by the canceled intermediate Xi factor.
+Thus annular zeros are exactly internal pole--zero cancellation states.
+
+`L-91322` closes the finite algebraic minimality problem: for every finite
+value/jet packet, one suitably chosen prime and finitely many of its powers give
+a full confluent-Vandermonde controllability matrix, while the Cauchy/Hardy
+carrier family is observable by rational uniqueness.
+
 ## 2. What was refuted
 
 ```text
@@ -81,21 +115,24 @@ artanh(D/A) is the one-copy BPY logarithm;                          FALSE
 one-Green positivity alone implies target Pick positivity;         FALSE
 Green stationarity plus pointwise contractivity closes the map;     FALSE
 an arbitrary one-node scalar norm fit has mathematical content;     FALSE
+scalar cocycle identity alone implies cascade minimality;            FALSE
 ```
 
 The corrected branch files supersede every earlier use of these shortcuts.
 
-## 3. The exact remaining theorem
+## 3. Two equivalent forms of the exact remaining theorem
 
-Construct, for every `a` in one fixed sequence `a_j downarrow0`, a **single
-closable analytic source-to-model intertwiner**
+### Static analytic intertwiner
+
+Construct, for every `a` in one fixed sequence `a_j downarrow0`, a single
+closable analytic source-to-model intertwiner
 
 \[
  \mathfrak J_a:
  \mathcal H_a^{\rm arith}
  \longrightarrow
  \mathscr S_a^{\rm model}
- \tag{O-91302.5}
+ \tag{O-91302.7}
 \]
 
 with all of the following properties:
@@ -112,37 +149,67 @@ with all of the following properties:
    horizontal-scattering cocycles.
 4. **Tangent compatibility.** The first two logarithmic source jets map to the
    declared causal/anti-causal Cauchy, theta, coupled Brownian, and local
-   `p=2` boundary channels with the exact normalizations.
+   `p=2` boundary channels with exact normalization.
 5. **Positive metric.** No indefinite auxiliary metric or same-scale signed
    remainder is allowed.
 6. **One-node exhaustion.** On one pole-, anchor-, or cocycle-aligned vector,
    the critical and deterministic stable outputs exhaust the model source
    norm.
 
-The one-node step is meaningful only because items 1--5 rigidly fix the map
-before the norm is compared.
+### Dynamic lossless cascade
 
-## 4. Why this proves RH
+Equivalently, construct `LTSC_a` of `T-91304`: a positive-metric unitary
+colligation for the two-section factorization (O-91302.6) whose scalar transfer
+is the completed coarse quotient and whose complete detail output consists of
 
-The safe amplitude identity and analytic closure identify the output transfer
-with `Theta_a`. The exact model ledger and one-node exhaustion force the
-positive zero-port diagonal to vanish, so `Theta_a` has no pole in the right
-half-plane. Hence
+```text
+causal Cauchy;
+anti-causal Cauchy;
+bridge;
+coupled Brownian/theta S--Delta reserve;
+Poisson/Fock complement;
+local p=2 port.
+```
+
+The finite annular states are already controllable and observable by
+`L-91322`. The remaining analytic obligations are to derive those couplings
+from one common completed boundary map, prove closability and positive metric,
+and control infinite-height tails.
+
+If the coarse quotient is inner, the unitary optical identity forces every
+detail transfer to vanish. Minimality then excludes every annular zero and
+descends innerness from scale `2a` to scale `a`.
+
+## 4. Why either form proves RH
+
+All nontrivial zeros have horizontal depth `<1/2`, so the completed quotient is
+inner at every scale `A>=1/2`. A lossless/minimal dyadic cascade descends this
+unconditional terminal innerness to every positive scale.
+
+Equivalently, the static exact model ledger plus one-node exhaustion forces the
+positive zero-port diagonal to vanish, giving
 
 \[
  \xi(s)\ne0\qquad(\Re s>\tfrac12+a).
- \tag{O-91302.6}
+ \tag{O-91302.8}
 \]
 
-Doing this for `a_j downarrow0`, then applying the functional equation, gives
-RH.
+Doing this on a sequence `a_j downarrow0`, then applying the functional
+equation, gives RH.
 
-## 5. Epistemic status
+## 5. Current closure status
 
 ```text
-full unconditional proposal                    YES
-complete source and model normal forms          YES / review required
-hostile controls                               INCLUDED
-source-to-model analytic intertwiner            OPEN / RH-BEARING
-accepted proof of RH                            NO
+scalar completed cocycle                           EXACT
+terminal large-scale innerness                     UNCONDITIONAL
+annular zeros = internal pole--zero cancellations  EXACT
+finite-packet prime controllability                EXACT
+finite-packet Hardy observability                  EXACT
+global positive source normal forms                CONSTRUCTED / REVIEW REQUIRED
+completed analytic source-to-model intertwiner     OPEN / RH-BEARING
+lossless two-section colligation LTSC_a            OPEN / RH-BEARING
+infinite-state closure and tail                     OPEN
+accepted proof of RH                               NO
 ```
+
+The branch is a corrected full unconditional proposal, not a proof of RH.
