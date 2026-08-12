@@ -1,0 +1,13 @@
+{
+  "classification": "PASS_UNIFORM_FOUR_STATE_REGENERATION_SPLIT",
+  "coefficient_upper": "1/50",
+  "corridor": [
+    "4/3",
+    "3/2"
+  ],
+  "current_channel_parameter": "4/3*(1+50/(49*sqrt(p)))",
+  "doeblin_coefficient": "(1-p^(-1/2))/50",
+  "scope": "Exact symbolic state split, SHARP observation, corridor gate, and finite subpartition contraction. The Riemann conclusion additionally requires the typed least-prime measure subpartition stated in L-91332.",
+  "synthetic_branch_residual": "7/500",
+  "worst_prime_integer_gate": "400^2 < 49^2*67"
+}
