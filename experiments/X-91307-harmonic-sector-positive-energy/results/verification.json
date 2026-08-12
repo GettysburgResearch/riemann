@@ -1,0 +1,41 @@
+{
+  "checks": 111,
+  "max_factorization_error": 2.7755575615628914e-17,
+  "max_fiber_cocycle_error": 6.938893903907228e-17,
+  "max_model_projection_error": 0.0,
+  "planted_model_defect": 1.0,
+  "scope": "finite algebra only; source-defined charge neutralization, positive-energy membership, OCIPE, innerness, and RH are not proved",
+  "threshold_rows": [
+    {
+      "K": 1,
+      "first_convergent_exponent": "3/2",
+      "last_divergent_exponent": "3/4",
+      "omega": "1/8"
+    },
+    {
+      "K": 1,
+      "first_convergent_exponent": "6/5",
+      "last_divergent_exponent": "3/5",
+      "omega": "1/5"
+    },
+    {
+      "K": 2,
+      "first_convergent_exponent": "3/2",
+      "last_divergent_exponent": "1",
+      "omega": "1/4"
+    },
+    {
+      "K": 3,
+      "first_convergent_exponent": "4/3",
+      "last_divergent_exponent": "1",
+      "omega": "1/3"
+    },
+    {
+      "K": 5,
+      "first_convergent_exponent": "6/5",
+      "last_divergent_exponent": "1",
+      "omega": "2/5"
+    }
+  ],
+  "verdict": "PASS_X_91307_HARMONIC_SECTOR_POSITIVE_ENERGY"
+}
