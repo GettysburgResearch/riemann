@@ -28,17 +28,21 @@ def run() -> dict[str, object]:
     assert sp.simplify(score_h - r * (2 * r + 1) * (beta_h * X - Y)) == 0
     checks += 4
 
-    assert sp.factor(alpha_s - sp.Rational(4, 3)) == 2 * r / (3 * (r + 3))
-    assert sp.factor(sp.Rational(3, 2) - alpha_s) == (1 - r) / (2 * (r + 3))
-    assert sp.factor(alpha_h - 1) == r / (r + 2)
-    assert sp.factor(beta_h - alpha_h) == r / ((r + 2) * (2 * r + 1))
-    assert sp.factor(sp.Rational(6, 5) - beta_h) == (1 - 2 * r) / (5 * (2 * r + 1))
+    assert sp.simplify(alpha_s - sp.Rational(4, 3) - 2 * r / (3 * (r + 3))) == 0
+    assert sp.simplify(sp.Rational(3, 2) - alpha_s - (1 - r) / (2 * (r + 3))) == 0
+    assert sp.simplify(alpha_h - 1 - r / (r + 2)) == 0
+    assert sp.simplify(beta_h - alpha_h - 3 * r / ((r + 2) * (2 * r + 1))) == 0
+    assert sp.simplify(sp.Rational(6, 5) - beta_h - (1 - 8 * r) / (5 * (2 * r + 1))) == 0
     checks += 5
 
     q_s = ((2 * r + 4) * z - (r + 3)) / ((r + 1) * (5 * z - 3))
     q_h = ((2 * r + 2) * z - (r + 2)) / ((4 * r + 1) * z - (2 * r + 1))
-    assert sp.factor(sp.diff(q_s, z)) == (3 - r) / ((r + 1) * (5 * z - 3) ** 2)
-    assert sp.factor(sp.diff(q_h, z)) == 3 * r / ((4 * r + 1) * z - (2 * r + 1)) ** 2
+    assert sp.simplify(
+        sp.diff(q_s, z) - (3 - r) / ((r + 1) * (5 * z - 3) ** 2)
+    ) == 0
+    assert sp.simplify(
+        sp.diff(q_h, z) - 3 * r / ((4 * r + 1) * z - (2 * r + 1)) ** 2
+    ) == 0
     checks += 2
 
     # Verify exact target and score recombination in channel coordinates.
