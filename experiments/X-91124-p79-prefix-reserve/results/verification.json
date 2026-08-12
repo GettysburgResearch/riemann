@@ -1,0 +1,25 @@
+{
+  "classification": "PASS_P79_PREFIX_RESERVE",
+  "divisors_streamed": 4194304,
+  "odd_thresholds": 2097152,
+  "raw_reciprocal_minimum": {
+    "certified_above": "1/25",
+    "decimal": 0.04539722861442574,
+    "denominator": "3217644767340672907899084554130",
+    "numerator": "146072155102975244838597331401",
+    "threshold": 105
+  },
+  "scope": "The reciprocal-prefix gates are exact integer comparisons over the common denominator P79. The inverse-square-root gate uses directed rational enclosures. This checker does not certify the finite low-prefix upward-correction theorem or RH.",
+  "shifted_inverse_sqrt_maximum": {
+    "certified_below": "3/2",
+    "directed_upper_decimal": 1.4720752261873724,
+    "threshold": 399
+  },
+  "shifted_reciprocal_minimum": {
+    "certified_above": "1/5000",
+    "decimal": 0.00021539986872883254,
+    "denominator": "3217644767340672907899084554130",
+    "numerator": "693080260501195886848851250",
+    "threshold": 73
+  }
+}
