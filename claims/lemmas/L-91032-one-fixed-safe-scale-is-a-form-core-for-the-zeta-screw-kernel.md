@@ -1,280 +1,102 @@
-# L-91032 — One fixed safe scale is a form core for the zeta screw kernel
+# L-91032 — Scalar fixed-scale form core: refuted and superseded
 
 Claim ID: `L-91032`  
-Status: **PROPOSED COMPLETE HARDY–WIENER FORM-CORE THEOREM — INDEPENDENT REVIEW REQUIRED**  
+Status: **REFUTED EXACTLY BY `R-91008`; SUPERSEDED BY DELAY-FIBRE REPAIR `L-91034`**  
 Created: 2026-08-11  
-Depends on: `L-91031`; Suzuki's screw criterion  
+Corrected: 2026-08-12  
 RH status: **unproved**
 
-## 1. Weighted screw space
+## 1. Original claim
 
-Fix one scale
+The original packet claimed that, for one fixed `a_0>1/2`, the carrier
+modulations of one causal Cauchy mother span the positive-half-line weighted
+zero-integral space, the reflected mother spans the negative-half-line
+counterpart, and one bridge fills the remaining global defect.
+
+The proposed proof used the distributional identity
 
 \[
- a_0>\frac12
+ H'\overline{\psi_{a_0}}=0
 \]
 
-and choose
+and inferred that `H` is constant because `psi_(a_0)` is nonzero almost
+everywhere.
+
+## 2. Exact failure
+
+`R-91008` computes the causal impulse explicitly and proves that it has a
+positive-time zero
 
 \[
- 1<\eta<2a_0.
-\]
-
-Put
-
-\[
- \mathcal H_\eta=L^2(\mathbb R,e^{\eta|t|}dt),
+ \tau_0/a_0,
  \qquad
- \mathcal H_{\eta,0}=
- \left\{f\in\mathcal H_\eta:\int_\mathbb R f(t)dt=0\right\}.
- \tag{L-91032.1}
+ \tau_0=1.5698664803365582563\ldots .
 \]
 
-Suzuki's unconditional growth bound has the form
+The weighted vector
 
 \[
- |g_\zeta(t)|\ll e^{|t|/2-c\sqrt{|t|}}.
+ h_0(t)=e^{-\eta t}
+ \mathbf1_{(\tau_0/a_0,\infty)}(t)
 \]
 
-Therefore
+is orthogonal to every carrier modulation of the causal derivative family.
+Its derivative contains a Dirac mass at the zero of the mother, so
 
 \[
- \boxed{
- |\mathfrak Q_\zeta(f,h)|
- \le C_\eta\|f\|_{\mathcal H_\eta}
-              \|h\|_{\mathcal H_\eta}
- }
- \tag{L-91032.2}
+ \psi_{a_0}\delta_{\tau_0/a_0}=0.
 \]
 
-for `f,h in H_(eta,0)`.  The screw form is continuous in this weighted norm.
+Thus “nonzero almost everywhere” is insufficient against point-supported
+distributions.  The scalar causal orthogonal complement has dimension at
+least two, not one.  Reflection gives an independent anti-causal hidden jump,
+and one bridge cannot repair the resulting global codimension.
 
-## 2. Causal and anti-causal physical mothers
+Therefore the original density statement is false.
 
-Let
+## 3. Surviving pieces
 
-\[
- \psi^+=(\Psi_{a_0})^\vee,
- \qquad
- \psi^-=(\overline{\Psi_{a_0}})^\vee.
-\]
-
-By `L-91026/L-91031`, `psi^+` is supported on `[0,infinity)` and is a nonzero
-finite sum of
-
-\[
- (A_c+B_ct)e^{-ca_0t},
- \qquad c\in\{1,2,4\},
-\]
-
-while `psi^-` is its reflected anti-causal partner.
-
-The wavelets of `L-91031` are
-
-\[
- \boxed{
- f_x^+(t)=-i\frac d{dt}\left(e^{ixt}\psi^+(t)\right),
- }
- \tag{L-91032.3}
-\]
-
-and
-
-\[
- \boxed{
- f_x^-(t)=-i\frac d{dt}\left(e^{ixt}\psi^-(t)\right).
- }
- \tag{L-91032.4}
-\]
-
-They belong to `H_eta` because `eta<2a_0`, and each has integral zero.
-
-## 3. Exact positive-half-line closure
-
-Let
-
-\[
- \mathcal H_{\eta,+}=L^2((0,\infty),e^{\eta t}dt).
-\]
-
-Suppose `h in H_(eta,+)` is orthogonal to every `f_x^+`.  Put
-
-\[
- H(t)=h(t)e^{\eta t}.
-\]
-
-Using (L-91032.3), orthogonality gives
-
-\[
- x\widehat{H\overline{\psi^+}}(x)
- +i\widehat{H\overline{(\psi^+)'}}(x)=0
- \qquad(x\in\mathbb R).
- \tag{L-91032.5}
-\]
-
-Taking inverse Fourier transforms distributionally,
-
-\[
- -i(H\overline{\psi^+})'
- +iH\overline{(\psi^+)'}
- =-iH'\overline{\psi^+}=0.
- \tag{L-91032.6}
-\]
-
-The causal mother is analytic and nonzero almost everywhere on `(0,infinity)`,
-so `H` is constant.  Thus
-
-\[
- h(t)=Ce^{-\eta t}.
-\]
-
-Conversely this vector is orthogonal to every `f_x^+`, because the weighted
-inner product is `C int_0^infinity f_x^+`.
-
-Therefore
-
-\[
- \boxed{
- \overline{\operatorname{span}}^{\mathcal H_{\eta,+}}
- \{f_x^+:x\in\mathbb R\}
- =\left\{f:\int_0^\infty f(t)dt=0\right\}.
- }
- \tag{L-91032.7}
-\]
-
-Reflection gives
-
-\[
- \boxed{
- \overline{\operatorname{span}}^{\mathcal H_{\eta,-}}
- \{f_x^-:x\in\mathbb R\}
- =\left\{f:\int_{-\infty}^0 f(t)dt=0\right\}.
- }
- \tag{L-91032.8}
-\]
-
-Thus each Hardy orientation has exactly one half-line defect.
-
-## 4. One bridge fills the global defect
-
-Because `Psi_a` has a simple zero at zero,
-
-\[
- H_a^+(u)=\frac{\Psi_a(u)}u,
- \qquad
- H_a^-(u)=\frac{\overline{\Psi_a(u)}}u
-\]
-
-have removable values, with
-
-\[
- \boxed{
- H_a^+(0)=H_a^-(0)=\frac{\sqrt{378}}{16a}.
- }
- \tag{L-91032.9}
-\]
-
-Define the bridge by
-
-\[
- \boxed{
- \widehat b_a(u)=H_a^+(u)-H_a^-(u).
- }
- \tag{L-91032.10}
-\]
-
-It is a causal-minus-anti-causal exponential polynomial.  Its total integral
-is zero, while its two half-line integrals are opposite and nonzero:
-
-\[
- \int_0^\infty b_a(t)dt=rac{\sqrt{378}}{16a},
- \qquad
- \int_{-\infty}^0b_a(t)dt=-\frac{\sqrt{378}}{16a}.
- \tag{L-91032.11}
-\]
-
-Hence the bridge fills the remaining direction inside the global mean-zero
-hyperplane.
-
-Combining (L-91032.7), (L-91032.8), and (L-91032.11),
-
-\[
- \boxed{
- \overline{\operatorname{span}}^{\mathcal H_\eta}
- \left(
- \{f_x^+,f_x^-:x\in\mathbb R\}\cup\{b_{a_0}\}
- \right)
- =\mathcal H_{\eta,0}.
- }
- \tag{L-91032.12}
-\]
-
-## 5. Positivity consequence
-
-Let
-
-\[
- \mathfrak I=(\{+,-\}\times\mathbb R)\sqcup\{\star\},
-\]
-
-where `star` denotes the bridge.  For indexed tests `F_i`, define
-
-\[
- \mathbb K_{a_0}(i,j)=\mathfrak Q_\zeta(F_i,F_j).
- \tag{L-91032.13}
-\]
-
-If every finite matrix from this kernel is positive semidefinite, then the
-screw form is nonnegative on the algebraic span.  By continuity and
-(L-91032.12), it is nonnegative on all of `H_(eta,0)`, hence on Suzuki's compact
-smooth mean-zero test space.  Suzuki's theorem then gives RH.
-
-The reverse implication follows from the Lévy Gram under RH.
-
-## 6. No scale limit remains
-
-The result holds for every one fixed choice `a_0>1/2`.  At that scale:
+The following parts of the original packet remain useful:
 
 ```text
-all tests decay faster than the unconditional screw growth;
-all prime series converge absolutely;
-all rational poles remain in one fixed safe half-plane;
-no a->0, a->infinity, heat, support or derivative-order limit appears.
+weighted screw-form continuity, subject to its declared review;
+causal/anti-causal support and exponential decay;
+mean-zero carrier derivatives;
+the need for a bridge between half-line integral defects;
+one fixed safe scale as a desirable target.
 ```
 
-The full difficulty has moved into cross-carrier, two-orientation matrix
-positivity.
+The scalar completeness assertion and every theorem using it are not retained.
 
-## 7. Review warning
+## 4. Correct repair
 
-The load-bearing joints are:
+`L-91034` replaces the single mother by an energy-preserving direct integral of
+all positive delays:
 
-```text
-the distributional inversion in (L-91032.6);
-boundary terms at t=0;
-nonvanishing of the causal mother almost everywhere;
-the signs and half-line integrals in the bridge;
-continuity of the screw form in H_eta.
-```
+\[
+ (\mathcal J_wF)(u,\tau)
+ =\sqrt{w(\tau)}e^{-iu\tau}F(u).
+\]
 
-They require cold independent review.
+The delayed copies have no common physical zero.  The repaired causal family
+has only the true half-line integral defect; the reflected family has the
+opposite defect; one bridge then gives a proposed complete global form core.
 
-## 8. Boundary
+## 5. Consequential corrections
 
-Closed here, subject to independent review:
+- `T-91007` is blocked because its reverse implication used this false density
+  theorem.
+- The corrected fixed-scale criterion and final tangent-intertwiner target are
+  `T-91008`.
+- No claim of RH follows from the scalar family.
 
-```text
-continuous weighted screw form at one safe scale;
-exact causal and anti-causal half-line closures;
-one-dimensional half-line defects;
-one bridge fills the global mean-zero defect;
-one fixed scale is a complete screw form core.
-```
-
-Open:
+## 6. Exact boundary
 
 ```text
-unconditional fixed-scale cross-Gram positivity;
-conservative completed Fock/Hardy colligation;
-RH.
+scalar causal form core                          FALSE
+one scalar two-sided family plus bridge          FALSE
+interior causal impulse zero                     EXACT
+delay-fibre common-zero repair                   PROPOSED COMPLETE in L-91034
+corrected delayed fixed-scale criterion          PROPOSED in T-91008
+Riemann Hypothesis                               UNPROVED
 ```
