@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+"""Exact/numerical regression for the covariant Poisson/Fisher/Hardy packet."""
+from __future__ import annotations
+import argparse, json
+from fractions import Fraction as F
+from pathlib import Path
+import mpmath as mp
+import numpy as np
+mp.mp.dps=70
+
+def pp(N):
+ s=[1]*(N+1); s[:2]=[0,0]; ps=[]
+ for p in range(2,N+1):
+  if s[p]:
+   ps.append(p)
+   if p*p<=N:
+    for q in range(p*p,N+1,p): s[q]=0
+ out=[]
+ for p in ps:
+  n=p;k=1
+  while n<=N:
+   out.append((n,k)); n*=p;k+=1
+ return sorted(out)
+
+def logz(a,x,rows):
+ c=a+mp.mpf('.5'); return sum(-2j*mp.power(n,-c)*mp.sin(x*mp.log(n))/k for n,k in rows)
+def score(a,x,rows):
+ c=a+mp.mpf('.5'); return sum(2j*a*mp.log(n)*mp.power(n,-c)*mp.sin(x*mp.log(n))/k for n,k in rows)
+
+def tail_exact():
+ w={2:F(1,20),3:F(1,30),5:F(1,40),7:F(1,50)}; U=max(w)
+ g={1:F(3,7),2:F(-2,5),3:F(5,11),4:F(1,3),5:F(-4,13),6:F(2,9),7:F(1,8),8:F(-1,10)}
+ k={1:F(-1,4),2:F(5,9),3:F(2,7),4:F(-3,8),5:F(1,6),6:F(4,15),7:F(-2,11),8:F(3,14)}
+ val=lambda f,m:f.get(m,F(0)); Wv=lambda m:sum((x for u,x in w.items() if u>=m),F(0)); Wt=lambda j:sum((x for u,x in w.items() if u>=j+1),F(0))
+ H=lambda f,j:sum((x*val(f,u-j) for u,x in w.items() if u>=j+1),F(0))
+ def q(f,h):
+  M=max(max(f),max(h)); inp=sum((val(f,m)*val(h,m) for m in range(1,M+1)),F(0)); out=sum((H(f,j)*H(h,j) for j in range(U)),F(0)); d0=sum(((1-Wv(m))*val(f,m)*val(h,m) for m in range(1,M+1)),F(0)); var=d2=F(0)
+  for j in range(U):
+   W=Wt(j)
+   if not W: continue
+   hf,hh=H(f,j),H(h,j); mf,mh=hf/W,hh/W
+   var+=sum((x*(val(f,u-j)-mf)*(val(h,u-j)-mh) for u,x in w.items() if u>=j+1),F(0)); d2+=(1/W-1)*hf*hh
+  return inp,out+d0+var+d2
+ gg=q(g,g); gk=q(g,k); kk=q(k,k); assert gg[0]==gg[1] and gk[0]==gk[1] and kk[0]==kk[1]
+ Hmat=[[w.get(r+s,F(0)) for s in range(1,4)] for r in range(1,4)]
+ return {'quadratic':str(gg[0]),'polarized':str(gk[0]),'second_quadratic':str(kk[0]),'hankel':[[str(x) for x in row] for row in Hmat]}
+
+def covariant():
+ A=np.array([[0,1j,.2],[1j,0,-.35j],[-.2,-.35j,0]],complex); A=(A-A.conj().T)/2
+ B=np.array([[0,-.4,.25j],[.4,0,.3],[.25j,-.3,0]],complex); B=(B-B.conj().T)/2
+ V=np.array([[1,0],[0,1],[0,0]],complex); R=V@V.conj().T; N=(np.eye(3)-R)@(A+B)@V
+ return float(np.linalg.norm(N-(np.eye(3)-R)@(A+B)@V)),float(np.linalg.norm(A+A.conj().T)),[float(x) for x in np.linalg.eigvalsh(N.conj().T@N)]
+
+def fisher_hankel():
+ e=np.array([1,2j,-1],complex); e=e/np.linalg.norm(e)
+ coeff={2:np.array([.3+.1j,-.2j,.4],complex),3:np.array([-.1+.2j,.25,.15j],complex),4:np.array([.05,-.3+.1j,.2],complex),5:np.array([-.2j,.08,.12-.04j],complex)}
+ M=N=3; Hvec=np.zeros((M*3,N),complex)
+ for t in range(1,M+1):
+  for s in range(1,N+1): Hvec[3*(t-1):3*t,s-1]=coeff.get(t+s,np.zeros(3))
+ C=np.zeros((M,M*3),complex)
+ for t in range(M): C[t,3*t:3*(t+1)]=e.conj()
+ Hm=-(C@Hvec); Pi=np.outer(e,e.conj()); E=np.zeros_like(Hvec)
+ for t in range(M): E[3*t:3*(t+1),:]=(np.eye(3)-Pi)@Hvec[3*t:3*(t+1),:]
+ lhs=Hvec.conj().T@Hvec; rhs=Hm.conj().T@Hm+E.conj().T@E
+ return float(np.linalg.norm(lhs-rhs)),[float(x) for x in np.linalg.eigvalsh(E.conj().T@E)]
+
+def compressed_delay():
+ """Finite unilateral-shift model of L-91401, away from truncation boundary."""
+ N,m=12,4
+ S=np.zeros((N,N),complex)
+ for j in range(N-1): S[j+1,j]=1
+ P=np.diag([1.0]*m+[0.0]*(N-m)); M=np.linalg.matrix_power(S,m)
+ Sp=lambda j:np.linalg.matrix_power(S,j)
+ T=lambda j:P@Sp(j)@P
+ R=lambda j:M.conj().T@Sp(j)@P
+ decomp=semi=cocycle=0.0
+ basis=np.eye(N,dtype=complex)
+ for j in range(4):
+  for k in range(m):
+   g=basis[:,k]
+   decomp=max(decomp,float(np.linalg.norm(Sp(j)@g-T(j)@g-M@R(j)@g)))
+ for j in range(3):
+  for k in range(3):
+   semi=max(semi,float(np.linalg.norm((T(j+k)-T(j)@T(k))@P)))
+   cocycle=max(cocycle,float(np.linalg.norm((R(j+k)-R(j)@T(k)-Sp(j)@R(k))@P)))
+ rng=np.random.default_rng(9130601); delays=[0,1,2,3]; gs=[]
+ for _ in delays:
+  z=rng.normal(size=N)+1j*rng.normal(size=N); gs.append(P@z)
+ left=sum((Sp(d)@g for d,g in zip(delays,gs)),np.zeros(N,complex))
+ resident=sum((T(d)@g for d,g in zip(delays,gs)),np.zeros(N,complex))
+ leakage=sum((R(d)@g for d,g in zip(delays,gs)),np.zeros(N,complex))
+ packet=abs(float(np.vdot(left,left).real)-float(np.vdot(resident,resident).real+np.vdot(leakage,leakage).real))
+ g=basis[:,m-1]; raw_resident=float(np.linalg.norm(P@S@g)); raw_leak=float(np.linalg.norm(R(1)@g))
+ return {'decomposition_error':decomp,'semigroup_error':semi,'leakage_cocycle_error':cocycle,'mixed_packet_error':packet,'raw_delay_resident_norm':raw_resident,'raw_delay_leakage_norm':raw_leak}
+
+def build():
+ rows=pp(200); a=mp.mpf('1.7'); x=mp.mpf('.83'); err=abs(a*mp.diff(lambda z:logz(z,x,rows),a)-score(a,x,rows)); ratios=[]
+ for n,k in rows[:18]:
+  u=mp.log(n); c=a+mp.mpf('.5'); j=(1-(1+2*a*u)*mp.e**(-2*a*u))*mp.e**(-c*u)/(k*a*a); s=a*u*mp.e**(-c*u)/k; ratios.append(float(s/j))
+ mass=4*(-mp.diff(lambda z:mp.log(mp.zeta(z)),mp.mpf('4.5'))); bound=F(85,196); t=tail_exact(); ce,sk,eigs=covariant(); fe,aux=fisher_hankel(); delay=compressed_delay()
+ gates={'score':err<mp.mpf('1e-55'),'mismatch':max(ratios)-min(ratios)>1,'mass':mass<mp.mpf(bound.numerator)/bound.denominator<1,'tail':True,'covariant':ce<1e-14 and sk<1e-14,'fisher_hankel':fe<1e-14,'compressed_delay':max(delay['decomposition_error'],delay['semigroup_error'],delay['leakage_cocycle_error'],delay['mixed_packet_error'])<1e-13 and delay['raw_delay_resident_norm']==0.0 and abs(delay['raw_delay_leakage_norm']-1)<1e-14}; assert all(gates.values())
+ return {'status':'PASS_COVARIANT_TAIL_HANKEL_COMPLETION','gates':gates,'prime_score_error':float(err),'ratio_spread':max(ratios)-min(ratios),'safe_mass':float(mass),'safe_bound':f'{bound.numerator}/{bound.denominator}','tail':t,'covariant_shape_eigenvalues':eigs,'fisher_hankel_error':fe,'fisher_auxiliary_eigenvalues':aux,'compressed_delay':delay}
+
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--json',type=Path);a=p.parse_args();s=json.dumps(build(),sort_keys=True,separators=(',',':'))+'\n'; a.json.write_text(s) if a.json else print(s,end='')
+if __name__=='__main__':main()
