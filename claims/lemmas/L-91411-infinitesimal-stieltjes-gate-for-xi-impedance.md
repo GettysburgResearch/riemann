@@ -1,8 +1,8 @@
-# L-91411 — The Brownian–theta Pick problem has an infinitesimal Stieltjes gate
+# L-91411 — The Brownian–theta Pick problem has an infinitesimal Stieltjes–Herglotz gate
 
 Claim ID: `L-91411`  
-Status: **EXACT KERNEL/FEATURE REDUCTION; STIELTJES MEASURE CONSTRUCTION OPEN**  
-Created: 2026-08-12  
+Status: **EXACT KERNEL/FEATURE REDUCTION; POSITIVE SPECTRAL DATA CONSTRUCTION OPEN**  
+Created: 2026-08-12; normalization corrected 2026-08-12  
 Authoring agent: `gpt56-pro`  
 Depends on: PR #401 at `82fe81e52d8c221c8649376d759aa8d0ee64c0c7`, especially `L-91105/L-91106` and `L-91310/L-91319`  
 RH status: **unproved**
@@ -100,62 +100,77 @@ The full finite-shift problem has become an infinitesimal positive-real problem.
 No matrix-valued integration ambiguity remains because each integrand in
 (L-91411.5) is conjugated by a positive diagonal matrix.
 
-## 3. A Stieltjes representation gives an explicit two-channel feature map
+## 3. Correct Stieltjes–Herglotz feature representation
 
-Let `h:(0,infinity)->R`. Suppose a positive measure `mu` on `[0,infinity)`
-satisfies the necessary integrability and
+The first version of this lemma omitted the possible nonnegative linear term.
+That omission made the proposed class too small: even a centered Gaussian law
+has `h_a(r)` proportional to `r`. The corrected sufficient representation is as
+follows.
+
+Let `h:(0,infinity)->R`. Suppose there are a constant `beta>=0` and a positive
+measure `mu` on `[0,infinity)` satisfying the necessary integrability such that
 
 \[
 \boxed{
- h(r)=r\int_0^\infty\frac{d\mu(t)}{r^2+t}.
+ h(r)=\beta r
+ +r\int_0^\infty\frac{d\mu(t)}{r^2+t}.
 }
-\tag{L-91411.7
-}
+\tag{L-91411.7}
+\]
 
 Then
 
 \[
+\boxed{
 \begin{aligned}
 \frac{h(r)+h(s)}{r+s}
-&=\int_0^\infty
- \frac{rs+t}{(r^2+t)(s^2+t)}\,d\mu(t)\\
-&=\int_0^\infty
+={}&\beta\\
+&+\int_0^\infty
  \left[
   \frac r{r^2+t}\frac s{s^2+t}
   +\frac{\sqrt t}{r^2+t}
    \frac{\sqrt t}{s^2+t}
  \right]d\mu(t).
-\end{aligned}
+\end{aligned}}
 \tag{L-91411.8}
 \]
 
-Hence the kernel is a literal Gram with feature vector
+Hence the kernel is a literal Gram with one constant feature and one
+continuous two-channel feature:
 
 \[
 \boxed{
-\Phi_r(t)=
+\Phi_r
+=\sqrt\beta
+\oplus
 \left(
  \frac r{r^2+t},
  \frac{\sqrt t}{r^2+t}
-\right).
+\right)_{t\ge0}.
 }
 \tag{L-91411.9}
 \]
 
+The integral part also allows an atom at `t=0`, which produces a `1/r` term.
+Thus (L-91411.7) is the natural odd Herglotz/Stieltjes form with both the linear
+and reciprocal boundary channels visible.
+
 This proves the following sufficient theorem.
 
-> **Infinitesimal Stieltjes Gate (`ISG_a`).** For each `0<=u<=a`, construct a
-> positive measure `mu_u` such that
+> **Infinitesimal Stieltjes–Herglotz Gate (`ISHG_a`).** For each `0<=u<=a`,
+> construct `beta_u>=0` and a positive measure `mu_u` such that
 > \[
-> h_u(r)=r\int_0^\infty\frac{d\mu_u(t)}{r^2+t}.
+> h_u(r)=\beta_ur
+> +r\int_0^\infty\frac{d\mu_u(t)}{r^2+t}.
 > \]
 
 Then every matrix in (L-91411.6) is PSD; (L-91411.5) gives every Xi Pick
 matrix; the safe continuation theorem on PR #398 yields the zero-free
 half-plane and hence RH along a cofinal sequence `a->0`.
 
-This is a constructive realization target: `mu_u` is precisely the spectral
-measure that a theta Dirichlet-to-Neumann model would have to produce.
+This is a constructive realization target: `beta_u` is the Gaussian/linear
+bulk channel, while `mu_u` is the nontrivial theta Dirichlet-to-Neumann spectral
+measure.
 
 ## 4. Brownian meaning of the infinitesimal state
 
@@ -190,22 +205,23 @@ and
 \tag{L-91411.12}
 \]
 
-The source in `ISG_a` is consequently a symmetrized Fisher response. PR #401's
+The source in `ISHG_a` is consequently a symmetrized Fisher response. PR #401's
 Stein decomposition says that its constant-Stein part already has a positive
-rank-two feature and that all non-Gaussian difficulty is the variability of the
-canonical Stein kernel. In the present coordinate, that remaining task is:
+Gaussian rank-two feature and that all non-Gaussian difficulty is the
+variability of the canonical Stein kernel. In the corrected coordinate, the
+linear coefficient `beta_a` absorbs precisely such a Gaussian bulk; the
+remaining task is
 
 \[
 \boxed{
-\text{convert the theta/Gamma--Beta Fisher response }h_a(r)
-\text{ into the Stieltjes spectral measure }\mu_a.
+\text{represent the residual theta/Gamma--Beta Fisher response by }\mu_a\ge0.
 }
 \tag{L-91411.13}
 \]
 
 ## 5. Exact two-point frontier
 
-The first nontrivial Pick test has a particularly simple scalar form. Put
+Put
 
 \[
 q_a(r)=\frac{\ell_a(r)}r.
@@ -265,21 +281,21 @@ PR #401 gives, for an arbitrary test `F`,
 \tag{L-91411.16}
 \]
 
-The first term is the Gaussian two-channel feature. `ISG_a` asserts that the
-complete covariance, including `D_u`, is still representable by the two-channel
-continuum (L-91411.9) after enlarging the spectral parameter `t`. Thus the
-Stieltjes measure is a precise target for absorbing the Stein variability; it
-is not another generic positivity slogan.
+The first term is the finite-dimensional Gaussian feature and should feed the
+`beta_u` channel. `ISHG_a` asks that the full covariance, including
+`D_u`, be represented after adjoining the positive continuum indexed by `t`.
+Thus the corrected Herglotz data give a precise target for absorbing the Stein
+variability; they are not another generic positivity slogan.
 
 ## 7. Proof boundary
 
 ```text
 finite-shift Pick defect as integral of infinitesimal kernels   EXACT
-Stieltjes feature factorization                                 EXACT
+linear-plus-Stieltjes feature factorization                     EXACT
 Brownian Fisher expression for h_a                              EXACT
 monotonicity of ell_a                                           EXACT
 2-point determinant reduction                                   EXACT
-construction of mu_a from theta/Gamma--Beta bulk                OPEN / RH-BEARING
+construction of beta_a,mu_a from theta/Gamma--Beta bulk         OPEN / RH-BEARING
 all-size Xi Pick positivity                                     OPEN
 Riemann Hypothesis                                               UNPROVED
 ```
