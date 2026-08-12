@@ -1,0 +1,25 @@
+{
+  "amplitude_test_dimension": 9,
+  "amplitude_to_model_forcing_nonzero": true,
+  "arithmetic": "exact Gaussian integers; no floating point",
+  "block_formula_checks": 50,
+  "delays": [
+    0,
+    2,
+    4,
+    7,
+    9
+  ],
+  "finite_model": "Theta(z)=z^m; H2=K_Theta orthogonal-sum z^m H2",
+  "leakage_cocycle_identities_checked": 245,
+  "model_dimension_m": 11,
+  "packet_amplitude_norm_squared": 5388,
+  "packet_leakage_norm_squared": 5228,
+  "packet_model_norm_squared": 16584,
+  "packet_raw_norm_squared": 27200,
+  "packet_size": 5,
+  "pairwise_cross_gram_identities_checked": 25,
+  "state_semigroup_identities_checked": 245,
+  "three_channel_pythagorean_identity": true,
+  "verdict": "PASS_FULL_HARDY_DELAY_COLLIGATION"
+}

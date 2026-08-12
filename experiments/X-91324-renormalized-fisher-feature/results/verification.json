@@ -1,0 +1,48 @@
+{
+  "arithmetic": "exact Gaussian rationals; no floating point",
+  "checks": [
+    {
+      "K_equals_abs_phi_sq_H": true,
+      "d_log_theta_da": "(0,-16/89)",
+      "frequency_quarters": 1,
+      "normalized_diagonal_H": "68704/7921",
+      "phi": "(5/19,-8/19)",
+      "pointwise_abs_k_sq_le_4": true,
+      "renormalized_diagonal_K": "3616/1691",
+      "theta": "(-39/89,80/89)"
+    },
+    {
+      "K_equals_abs_phi_sq_H": true,
+      "d_log_theta_da": "(0,0)",
+      "frequency_quarters": 2,
+      "normalized_diagonal_H": "0",
+      "phi": "(3/19,0)",
+      "pointwise_abs_k_sq_le_4": true,
+      "renormalized_diagonal_K": "0",
+      "theta": "(1,0)"
+    },
+    {
+      "K_equals_abs_phi_sq_H": true,
+      "d_log_theta_da": "(0,16/89)",
+      "frequency_quarters": 3,
+      "normalized_diagonal_H": "68704/7921",
+      "phi": "(5/19,8/19)",
+      "pointwise_abs_k_sq_le_4": true,
+      "renormalized_diagonal_K": "3616/1691",
+      "theta": "(-39/89,-80/89)"
+    }
+  ],
+  "frequencies_checked": 3,
+  "mean": "-2/19",
+  "support": [
+    -1,
+    0,
+    2
+  ],
+  "tilted_probabilities": [
+    "8/19",
+    "8/19",
+    "3/19"
+  ],
+  "verdict": "PASS_RENORMALIZED_FISHER_FEATURE"
+}
