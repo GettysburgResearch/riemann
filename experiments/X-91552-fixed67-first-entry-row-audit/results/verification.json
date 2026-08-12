@@ -1,0 +1,41 @@
+{
+  "cells": 143715,
+  "certified_bounds": {
+    "dilation_bonus": "1/100",
+    "parent": "1/100",
+    "raw_splice": "3/250"
+  },
+  "classification": "PASS_FIXED67_FIRST_ENTRY_ROW_AUDIT",
+  "endpoint_quantity_checks": 862290,
+  "log_terms": 90,
+  "minima": {
+    "bonus": {
+      "cell_left": 4488,
+      "endpoint": 4489,
+      "lower_decimal": "0.010539196481300355",
+      "lower_fixed": "1053919648130035459965757617058216",
+      "row": 66,
+      "upper_decimal": "0.010539196481300355",
+      "upper_fixed": "1053919648130035980723899057793861"
+    },
+    "parent": {
+      "cell_left": 4422,
+      "endpoint": 4422,
+      "lower_decimal": "0.012407770154759505",
+      "lower_fixed": "1240777015475950396196671404872699",
+      "row": 66,
+      "upper_decimal": "0.012407770154759505",
+      "upper_fixed": "1240777015475950894301622114041553"
+    },
+    "raw": {
+      "cell_left": 4488,
+      "endpoint": 4489,
+      "lower_decimal": "0.012214088105776916",
+      "lower_fixed": "1221408810577691675028170515872476",
+      "row": 66,
+      "upper_decimal": "0.012214088105776916",
+      "upper_fixed": "1221408810577692151871060401752893"
+    }
+  },
+  "scale": 100000000000000000000000000000000000
+}
