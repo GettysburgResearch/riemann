@@ -3,6 +3,7 @@
 Claim ID: `T-91402`  
 Status: **FULL CONDITIONAL RH PROPOSAL / EXPLICIT OPERATOR DOMINATION OPEN**  
 Created: 2026-08-12  
+Corrected: 2026-08-12  
 Depends on: corrected `T-91008`; `L-91409`--`L-91413`  
 RH status: **unproved**
 
@@ -20,10 +21,12 @@ compressed delays;
 one bridge.
 ```
 
-`L-91409` factors the complete prime packet.  `L-91412` closes the previously
-missing Lévy-compensated continuous packet.  No prime sum, zero sum, carrier
-cross term, delay cross term, orientation cross term, or bridge cross term is
-left without a source coordinate.
+`L-91409` factors the complete prime packet.  Corrected `L-91412` closes the
+previously missing Lévy-compensated continuous packet using the direct physical
+translation orbit at the singular short-jump endpoint and the safe mode split
+on the long tail.  No prime sum, zero sum, carrier cross term, delay cross
+term, orientation cross term, or bridge cross term is left without a source
+coordinate.
 
 The remaining theorem is no longer an embedding construction.  It is one
 coefficient-one domination between two explicit positive Gram ledgers.
@@ -40,7 +43,7 @@ be the direct-sum Gram of the following explicit source maps:
 
 ```text
 prime jump production                  D_prime;
-short continuous jump production       D_short;
+short translation production           S_u f-f;
 short compensation production          C-J;
 long continuous endpoint ports         U_long and V_long;
 compressed-delay leakage;
@@ -48,9 +51,9 @@ reflected copies of every preceding port;
 all corresponding bridge production coordinates.
 ```
 
-Every summand is a Gram in a positive Hilbert space.  The mode formulas are
-those of `L-91409`, with the compensated short-channel replacement of
-`L-91412`.
+Every summand is a Gram in a positive Hilbert space.  The prime and long-tail
+mode formulas are those of `L-91409`; the short singular channel is the direct
+translation source of corrected `L-91412`.
 
 ## 3. Endpoint and adverse-production ledger
 
@@ -64,7 +67,6 @@ be the direct-sum Gram of
 
 ```text
 prime endpoint ports                   U_prime and V_prime;
-short continuous endpoints             U_short and V_short;
 short compensation endpoints           C and J;
 long continuous jump production        D_long;
 reflected copies;
@@ -76,7 +78,10 @@ only by placing these ports on the right side of the comparison.
 
 This is sharper than the total-variation subtraction of `R-91403`: the long
 channel contributes positive endpoint reserve, and only its jump-production
-port remains adverse.
+port remains adverse.  Likewise the singular short channel does not carry two
+independent uncentered endpoint norms; after the exact compensation its only
+endpoint charges are the physical no-jump trace `C` and the finite connection
+vector `J`.
 
 ## 4. Deterministic completed connection
 
@@ -121,7 +126,7 @@ This is the packet-level combination of:
 ```text
 L-91409  prime Wick-Green identity;
 L-91410  completed source lock;
-L-91412  compensated continuous Wick-Green identity.
+L-91412  corrected compensated continuous Wick-Green identity.
 ```
 
 Equation (T-91402.1) is a source identity.  It does not assert positivity.
@@ -200,34 +205,35 @@ prime first chaos
 at each safe tangent scale.  It may be used to construct the connection block
 or a conservative realization of CPPD.  The three-scale recurrence still has
 a nontrivial negative ladder after its scale signs are inserted, so the
-one-pole statement alone does not prove (T-91402.2).
+one-pole statement alone does not prove (T-91402.2); see `R-91404`.
 
 ## 10. Binary rejection tests
 
 Reject a claimed proof if it:
 
 1. drops the short-jump Lévy compensation;
-2. treats the full long channel as negative after `L-91412` has split its
+2. reuses the prime mode-split endpoint traces at `u=0` rather than the direct
+   physical translation orbit;
+3. treats the full long channel as negative after `L-91412` has split its
    positive endpoints from its adverse production;
-3. replaces the signed completed source by total variation;
-4. ignores arbitrary mixed delays or uses raw delay invariance of the model
+4. replaces the signed completed source by total variation;
+5. ignores arbitrary mixed delays or uses raw delay invariance of the model
    space;
-5. omits one Hardy orientation or the bridge;
-6. loses coefficient one;
-7. proves only scalar diagonals;
-8. uses numerical PSD scans as the all-packet theorem;
-9. replaces the actual ordinary-prime source by normalized Jordan curvature;
+6. omits one Hardy orientation or the bridge;
+7. loses coefficient one;
+8. proves only scalar diagonals;
+9. uses numerical PSD scans as the all-packet theorem;
 10. assumes the target screw Gram positive before constructing the source map.
 
 ## 11. Exact boundary
 
 ```text
-prime packet factorization                           EXACT
-continuous compensated packet factorization          EXACT
-full completed source identity                       EXACT
-positive production ledger                          EXPLICIT
-adverse endpoint/production ledger                   EXPLICIT
-deterministic connection                             EXPLICIT
-CPPD coefficient-one domination                      OPEN / RH-EQUIVALENT
-Riemann Hypothesis                                   UNPROVED
+prime packet factorization                            EXACT
+continuous compensated packet factorization           EXACT
+full completed source identity                        EXACT
+positive production ledger                           EXPLICIT
+adverse endpoint/production ledger                    EXPLICIT
+deterministic connection                              EXPLICIT
+CPPD coefficient-one domination                       OPEN / RH-EQUIVALENT
+Riemann Hypothesis                                    UNPROVED
 ```
