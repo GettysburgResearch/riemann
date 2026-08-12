@@ -1,30 +1,26 @@
-# L-91038 — The Suzuki tangent lift is one positive-commutator problem
+# L-91038 — Suzuki's normalized tangent gives the scalar Cauchy commutator
 
 Claim ID: `L-91038`  
-Status: **PROPOSED COMPLETE EXACT OPERATOR REDUCTION — INDEPENDENT REVIEW REQUIRED**  
+Status: **EXACT SCALAR OPERATOR IDENTITY; FULL-KERNEL REDUCTION REFUTED BY `R-91010`**  
 Created: 2026-08-12  
-Depends on: `L-91035`, `L-91037`, `R-91009`, main `L-91023`  
+Corrected: 2026-08-12  
+Depends on: `L-91035`, `L-91037`, `R-91009`, `R-91010`, main `L-91023`  
 RH status: **unproved**
 
 ## 1. Suzuki orientation
 
-Use Suzuki's upper-half-plane convention
+Use
 
 \[
  \Theta_a(z)
  =\frac{\xi(1/2-a-iz)}{\xi(1/2+a-iz)}.
- \tag{L-91038.1}
 \]
 
-For `a>=1/2`, this is meromorphic inner unconditionally.  On the real axis
-put
+For safe `a>=1/2`, this is meromorphic inner unconditionally.  On the real
+axis put
 
 \[
- \boxed{
- q_a(x)
- =-i\Theta_a(x)^{-1}\partial_x\Theta_a(x).
- }
- \tag{L-91038.2}
+ q_a(x)=-i\Theta_a(x)^{-1}\partial_x\Theta_a(x).
 \]
 
 Functional-equation symmetry gives
@@ -32,119 +28,58 @@ Functional-equation symmetry gives
 \[
  q_a(x)=2\Re\frac{\xi'}{\xi}
  \left(\frac12+a-ix\right).
- \tag{L-91038.3}
 \]
 
-Thus, after reflecting the carrier, this is the Wigner--Smith delay of main
-`L-91023`.
-
-## 2. Normalized radial tangent symbol
+## 2. Normalized radial tangent
 
 Define
 
 \[
- \boxed{
  B_a(x)
- =-i\partial_a
- \left[\frac1a\log\Theta_a(x)\right].
- }
- \tag{L-91038.4}
+ =-i\partial_a[a^{-1}\log\Theta_a(x)].
 \]
 
-Since the boundary multiplier is unimodular, `B_a(x)` is real wherever
-finite.  Differentiating in the carrier,
+Then
 
 \[
- \boxed{
- \partial_xB_a(x)
- =\partial_a\left[\frac{q_a(x)}a\right].
- }
- \tag{L-91038.5}
+ \partial_xB_a(x)=\partial_a[q_a(x)/a]
 \]
 
-The Cauchy soft count is therefore
+and the scalar Cauchy soft count is
 
 \[
  \boxed{
  \mathcal N_x(a)
  =-\frac{a^3}{4}\partial_xB_a(x).
  }
- \tag{L-91038.6}
+ \tag{L-91038.1}
 \]
 
-Thus radial Cauchy positivity is the monotonicity
+In Mellin spectral coordinates Suzuki's completed Hankel operator is
 
 \[
- B_a'(x)\le0.
- \tag{L-91038.7}
+ \mathsf S_a=M_{\Theta_a}\mathsf R.
 \]
 
-## 3. Tangent generator of Suzuki's unitary involution
-
-In Mellin spectral coordinates, Suzuki's completed Hankel operator is
+Its normalized tangent is the self-adjoint multiplication operator
 
 \[
- \mathsf S_a=M_{\Theta_a}\mathsf R,
- \qquad
- (\mathsf RF)(x)=F(-x),
- \tag{L-91038.8}
+ \mathsf B_a=M_{B_a(x)}.
 \]
 
-and satisfies `S_a^2=I`.  Differentiation gives
-
-\[
- \mathsf S_a\partial_a\mathsf S_a
- =-M_{\partial_a\log\Theta_a}.
- \tag{L-91038.9}
-\]
-
-The normalized self-adjoint tangent operator is therefore
+With `P=-i partial_x`,
 
 \[
  \boxed{
- \mathsf B_a
- =-i\partial_a\left[\frac1a\log\Theta_a\right](X)
- =M_{B_a(x)}.
+ M_{\mathcal N(a)}
+ =-\frac{a^3}{4}i[\mathsf P,\mathsf B_a].
  }
- \tag{L-91038.10}
-
-No abstract existence theorem is needed: the tangent operator is explicit
-multiplication by `(L-91038.4)`.
-
-## 4. Positive-commutator form
-
-Let
-
-\[
- \mathsf P=-i\partial_x
+ \tag{L-91038.2}
 \]
 
-on the usual smooth spectral core.  Then
+This is an exact Mourre-type identity for the **scalar diagonal**.
 
-\[
- i[\mathsf P,\mathsf B_a]
- =M_{B_a'}.
- \tag{L-91038.11}
-\]
-
-Consequently
-
-\[
- \boxed{
- M_{\mathcal N_x(a)}
- =-\frac{a^3}{4}
-  i[\mathsf P,\mathsf B_a].
- }
- \tag{L-91038.12}
-\]
-
-The scalar Cauchy gate is a Mourre-type positive-commutator assertion for the
-normalized tangent of Suzuki's completed scattering involution.
-
-The fully polarized delayed screw kernel in `T-91008` is the form-core lift of
-this commutator identity.
-
-## 5. Exact source split
+## 3. Source split
 
 From
 
@@ -152,65 +87,67 @@ From
  \Theta_a=\Gamma_aQ_a
 \]
 
-one has
+one gets
 
 \[
- \boxed{
  \mathsf B_a
  =\mathsf B_a^{\Gamma,\mathrm{pole}}
   +\mathsf B_a^{\rm J}.
- }
- \tag{L-91038.13}
 \]
 
 On a safe line, `L-91037` factors the normalized Jordan radial derivative as
-one positive first-chaos Gram.  The gamma/pole term is an explicit
-polygamma/rational multiplier.  Analytic continuation to the symmetric
-boundary combines them into the real tangent symbol `B_a`.
+one positive first-chaos Gram.  The gamma/pole term is explicit.  Their
+completed recombination gives the scalar tangent symbol `B_a`.
 
-CDFHTI is exactly a positive-metric factorization of the negative commutator
-in `(L-91038.12)` after this completed recombination.
+## 4. Exact firewall
 
-## 6. Why the amplitude isometry stops here
+`R-91010` proves that the multiplication operator in `(L-91038.2)` is not the
+fully polarized delayed screw kernel.
 
-For a differentiable unitary path, the tangent generator is only
-self-adjoint.  Its commutator with the translation generator has no automatic
-sign.  The control in `R-91009` has
+For one synthetic real zero, the true carrier kernel is
 
 \[
- \Theta_a(z)=e^{ia^2z},
- \qquad
- B_a(x)=x,
- \qquad
- -i[\mathsf P,\mathsf B_a]=-I.
+ \Psi_a(\gamma-x)\overline{\Psi_a(\gamma-y)},
 \]
 
-Thus the exact amplitude embedding of `L-91035` cannot be promoted to a
-positive tangent embedding without a new arithmetic theorem.
+which is generically nonzero for `x!=y`.  The multiplication surrogate has
+off-diagonal distribution kernel zero.  Therefore the complete carrier,
+delay, orientation and bridge Gram cannot be replaced by `(L-91038.2)`.
 
-## 7. Correct final target
+The earlier statement that CDFHTI was equivalent to a positive factorization
+of this single commutator was false.
 
-The remaining component may now be stated without Fock shorthand:
+## 5. Correct use
 
-> Construct an explicit source-ordered factorization of
-> 
-> \[
-> -i[\mathsf P,\mathsf B_{a_0}]
-> \]
-> 
-> as `C^*C` on the corrected delayed two-sided Hardy form core, for one fixed
-> safe `a_0>1/2`, with the source vectors of `L-91037` and the exact gamma/pole
-> tangent retained.
+The scalar commutator remains useful for:
 
-By `T-91008`, such a factorization proves RH.  It has not been constructed.
+```text
+diagonal estimates;
+pointwise Cauchy gates;
+normalization checks;
+identifying the radial source derivative;
+constructing necessary scalar tests of a full colligation.
+```
 
-## 8. Exact boundary
+The actual conclusion-producing operator is
+
+\[
+ (\mathcal A_a^{\rm del})^*
+ \mathfrak Q_\zeta
+ \mathcal A_a^{\rm del},
+\]
+
+where `A_a^del` synthesizes arbitrary finite superpositions of delayed causal,
+anti-causal and bridge tests.  `T-91008` is corrected accordingly.
+
+## 6. Exact boundary
 
 ```text
 Suzuki amplitude involution                         IMPORTED PROVED
 normalized tangent multiplier                       EXACT
-Cauchy soft count = negative tangent commutator      EXACT
-safe Jordan component = positive first chaos        EXACT
-completed negative-commutator factorization          OPEN / RH-EQUIVALENT
+scalar Cauchy soft count = tangent commutator        EXACT
+commutator = full delayed screw Gram                 FALSE
+safe Jordan scalar tangent = positive first chaos   EXACT
+full source-ordered delayed Gram factorization       OPEN / RH-EQUIVALENT
 Riemann Hypothesis                                   UNPROVED
 ```
