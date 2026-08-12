@@ -3,6 +3,7 @@
 Claim ID: `L-91412`  
 Status: **PROVED EXACT COMPENSATED FULL-PACKET FACTORIZATION; FINAL DOMINATION OPEN**  
 Created: 2026-08-12  
+Corrected: 2026-08-12  
 Depends on: `L-91408`, `L-91409`, `L-91410`  
 RH status: **unproved**
 
@@ -28,6 +29,12 @@ part of the completed base measure is different:
 where
 
 \[
+ \kappa=\log\varpi<\frac12
+\]
+
+and
+
+\[
  d\mathfrak M_{\rm c}^+(u)
  =\left(\frac1{2u}+O(1)\right)du
  \quad(u\downarrow0).
@@ -36,9 +43,16 @@ where
 
 The uncentered endpoint vectors used in the prime Wick--Green identity are not
 separately square integrable against this measure.  Their difference is
-square integrable, because the two endpoints have the same no-jump trace.
-The correct operation is therefore a compensated, rather than an uncentered,
-Wick--Green split.
+square integrable, because the two physical endpoints have the same no-jump
+trace.  The correct operation is therefore a compensated, rather than an
+uncentered, Wick--Green split.
+
+A scope point is load bearing.  The safe mode-split maps of `L-91408` were
+constructed to control the infinite prime tail.  Their individual mode
+components do not have a common trace at `u=0`.  They must not be reused
+unchanged at the singular short-jump endpoint.  On the bounded interval
+`0<u<kappa` the correct source is the direct physical translation orbit, for
+which the common trace is literal.
 
 ## 2. Abstract compensated two-vector identity
 
@@ -161,56 +175,97 @@ and the finite connection identity
 
 finishes the proof.
 
-## 4. Application to the short completed channel
+## 4. Direct physical source for the short completed channel
 
-For the causal source maps of `L-91408`, the two endpoint states satisfy
+Let `f_i` be any causal carrier/delay test from `L-91408`, regarded as a
+vector in
 
 \[
- U_i(u)=C_i+O_H(u),
+ H=L^2(\mathbb R,dv).
+\]
+
+For `0<u<kappa`, put
+
+\[
+ \boxed{
+ U_i^{\rm sh}(u)=S_uf_i,
  \qquad
- V_i(u)=C_i+O_H(u)
- \quad(u\downarrow0).
- \tag{L-91412.8}
-\]
+ (S_uf)(v)=f(v+u),
+ \qquad
+ V_i^{\rm sh}(u)=f_i,
+ \qquad
+ C_i=f_i.
+ }
+\tag{L-91412.8}
 
-The estimate follows directly from the finite exponential-polynomial mode
-form and the relative-degree-three conditions
-
-\[
- \psi_a(0)=\psi_a'(0)=0.
-\]
-
-Since `dM_c^+(u)~du/(2u)`, one has
+Then
 
 \[
- \int_0^h
- \|U_i(u)-C_i\|^2d\mathfrak M_{\rm c}^+(u)<\infty,
+ \langle U_i^{\rm sh}(u),V_j^{\rm sh}(u)\rangle
+ =\int_\mathbb R f_i(v+u)\overline{f_j(v)}dv,
+\tag{L-91412.9}
 \]
 
-and likewise for `V_i`; moreover the Bochner integral (L-91412.4) converges.
-Therefore (L-91412.6) gives an exact positive-metric factorization of every
-pure-orientation short-jump completed block.
+and the reverse inner product gives the opposite jump direction.  These are
+exactly the physical cross-correlation kernels entering the elementary
+continuous source in `L-91410`.
 
-For mixed causal/anti-causal labels the zero-jump overlap vanishes, so
+Because the residual impulse is a finite exponential polynomial and
 
 \[
- C_i=0
+ \psi_a(0)=\psi_a'(0)=0,
 \]
 
-and the identity reduces to the ordinary triangular Wick--Green factorization
-of `L-91409`.
+every delayed carrier test belongs to `H1(R)`.  Hence the translation estimate
 
-## 5. Delays and the bridge
+\[
+ \|S_uf_i-f_i\|_2
+ \le u\|f_i'\|_2
+\tag{L-91412.10}
+\]
 
-A physical delay changes the no-jump trace `C_i` linearly and preserves the
-`O(u)` expansion.  Hence arbitrary finite mixed-delay packets satisfy the same
-identity with one common packet-level `C` and `J` map.
+holds.  Since `dM_c^+(u)~du/(2u)`,
 
-The bridge components have the same finite exponential-polynomial modes as the
-causal and anti-causal mothers.  The removable zero of `Psi_a/u` gives the
-same common-trace property and the same `O(u)` compensation.  Therefore all
-bridge-to-carrier, bridge-to-delay, and bridge-to-opposite-orientation
-continuous cross terms are included.
+\[
+ \int_0^\kappa
+ \|S_uf_i-f_i\|_2^2d\mathfrak M_{\rm c}^+(u)<\infty,
+\tag{L-91412.11}
+\]
+
+and
+
+\[
+ J_i^{\rm sh}
+ =\int_0^\kappa(S_uf_i-f_i)d\mathfrak M_{\rm c}^+(u)
+\tag{L-91412.12}
+\]
+
+converges in `H`.  Taking `h=kappa`, the compensation indicator is one on the
+whole short channel, `tilde V_i=0`, and (L-91412.6) gives its exact
+positive-metric factorization.
+
+This construction is deliberately different from the prime mode-split source:
+finite short-jump support makes the direct translation orbit square
+integrable after centering, and its common no-jump trace is exact.
+
+## 5. Opposite orientation, delays, and bridge
+
+The reflected anti-causal family is treated by the reflected translation
+orbit.  For a causal/anti-causal mixed pair, the zero-jump inner product is
+zero: the two physical states have disjoint half-line support up to a null
+boundary point.  Hence the mixed compensation coordinate is zero and the
+ordinary triangular Green identity of `L-91409` applies.
+
+A physical delay preserves `H1`, the common-trace identity, and the estimate
+(L-91412.10).  Arbitrary finite mixed-delay packets therefore satisfy one
+joint compensated identity before any norm is taken.
+
+The two bridge components are also finite exponential-polynomial half-line
+states.  Since `Psi_a(u)/u` has a removable value at zero and relative degree
+four, their physical representatives lie in `H1` and obey the same translation
+estimate.  Thus every bridge-to-carrier, bridge-to-delay, and bridge-to-
+opposite-orientation continuous cross term has an explicit compensated source
+coordinate.
 
 ## 6. The long channel needs no compensation
 
@@ -219,18 +274,18 @@ The positive measure
 \[
  d\mathfrak M^-(u)
  =-e^{-u/2}B(u)\mathbf1_{u>\kappa}du
- \tag{L-91412.9}
+ \tag{L-91412.13}
 \]
 
-is supported away from zero.  Its source vectors are individually square
-integrable after the safe exponential tilts.  Taking `C=J=0` in
-(L-91412.6) gives the ordinary identity
+is supported away from zero.  Here the safe exponential mode split of
+`L-91408/L-91409` is appropriate: its source vectors are individually square
+integrable after the mode-dependent tilts.  The ordinary identity is
 
 \[
  K^-=\operatorname{Gram}(D^-)
      -\operatorname{Gram}(U^-)
      -\operatorname{Gram}(V^-).
- \tag{L-91412.10}
+ \tag{L-91412.14}
 \]
 
 Because the completed signed measure is `M_plus-M_minus`, the long channel
@@ -243,7 +298,7 @@ enters with the opposite sign:
   +\operatorname{Gram}(V^-)
   -\operatorname{Gram}(D^-).
  }
- \tag{L-91412.11}
+ \tag{L-91412.15}
 \]
 
 This is a sharper port ledger than treating the entire long channel as one
@@ -252,27 +307,36 @@ only its jump-production port enters negatively.
 
 ## 7. Exact full continuous packet ledger
 
-Let tildes denote the compensated short-channel maps.  On every finite
-carrier/delay/orientation/bridge packet the complete continuous source block is
+Let
+
+\[
+ \widetilde U^{\rm sh}_i(u)=S_uf_i-f_i,
+ \qquad
+ J_i=J_i^{\rm sh}.
+\]
+
+On every finite carrier/delay/orientation/bridge packet the complete
+continuous source block is
 
 \[
 \boxed{
 \begin{aligned}
  K^{\rm cont}
 ={}&
- \operatorname{Gram}(\widetilde U^+-\widetilde V^+)
+ \operatorname{Gram}(\widetilde U^{\rm sh})
  +\operatorname{Gram}(C-J)\\
 &+\operatorname{Gram}(U^-)
  +\operatorname{Gram}(V^-)\\
-&-\operatorname{Gram}(\widetilde U^+)
- -\operatorname{Gram}(\widetilde V^+)\\
 &-\operatorname{Gram}(C)
  -\operatorname{Gram}(J)
  -\operatorname{Gram}(D^-).
 \end{aligned}}
-\tag{L-91412.12}
+\tag{L-91412.16}
 
-Every displayed Gram is taken in an explicit positive Hilbert space.
+For the short channel `tilde V=0`, so the redundant endpoint terms in the
+abstract identity cancel before (L-91412.16).  Every displayed Gram is taken
+in an explicit positive Hilbert space.
+
 Together with the prime packet of `L-91409`, this closes the full compensated
 atomic-plus-continuous source factorization requested in `L-91410`.
 
@@ -285,9 +349,9 @@ The drift term
 \]
 
 of `L-91410` is a finite carrier kernel obtained from the six safe pole jets.
-Equation (L-91412.12) does not assign it an arbitrary positive norm.  It places
+Equation (L-91412.16) does not assign it an arbitrary positive norm.  It places
 the two genuine compensation vectors `C` and `J` beside that deterministic
-connection, so the remaining comparison is now a finite connection Schur
+connection, so the remaining comparison is a finite connection Schur
 complement coupled to explicit production and endpoint ports.
 
 ## 9. Correct remaining domination
@@ -296,9 +360,8 @@ After adjoining the prime source, the negative side is no longer an opaque
 continuous tail.  It consists of
 
 ```text
-short-channel endpoint ports;
-short compensation ports C and J;
-long-channel jump-production D_minus;
+short compensation endpoints C and J;
+long-channel jump production D_minus;
 prime endpoint ports;
 the finite deterministic connection Schur complement.
 ```
@@ -307,7 +370,7 @@ The positive side consists of
 
 ```text
 prime jump production;
-short jump production;
+short translation production;
 short connection production C-J;
 long endpoint ports;
 delay leakage and reflected copies.
@@ -319,14 +382,15 @@ remaining RH-bearing theorem.
 ## 10. Exact boundary
 
 ```text
-abstract compensated Wick-Green identity             EXACT
-short singular continuous channel factorized         EXACT
-long channel endpoint/production reversal             EXACT
-all carriers and delays                               EXACT
-both Hardy orientations                               EXACT
-bridge continuous source placement                    EXACT
+abstract compensated Wick-Green identity              EXACT
+short singular channel via direct translations         EXACT
+incorrect reuse of prime mode traces at u=0            EXCLUDED
+long channel endpoint/production reversal              EXACT
+all carriers and delays                                EXACT
+both Hardy orientations                                EXACT
+bridge continuous source placement                     EXACT
 full atomic-plus-continuous packet source factorization EXACT
-deterministic connection Schur complement             EXPLICIT
-positive production >= negative ledger                OPEN / RH-BEARING
-Riemann Hypothesis                                    UNPROVED
+deterministic connection Schur complement              EXPLICIT
+positive production >= negative ledger                 OPEN / RH-BEARING
+Riemann Hypothesis                                     UNPROVED
 ```
