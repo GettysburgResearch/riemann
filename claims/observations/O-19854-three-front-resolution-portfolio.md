@@ -3,18 +3,17 @@
 Claim ID: `O-19854`  
 Status: **RESEARCH SYNTHESIS — NEW LEMMAS REMAIN SUBJECT TO INDEPENDENT REVIEW**  
 Created: 2026-08-12  
-Corrected: 2026-08-12 after `L-91112/L-91113/R-91101`  
+Corrected after: `R-91102`  
 RH status: **unproved**
 
 ## 1. Why three fronts
 
 The positive residual/vertical-defect route on PR #202 has reduced its complete
-conclusion to a source-bound derivative-intertwining estimate.  That estimate
-is exact but remains RH-strength.  To avoid repeatedly optimizing the same
-finite symmetrizer, this continuation pursued three structurally independent
-mechanisms:
+conclusion to a source-bound derivative-intertwining estimate.  To avoid
+repeatedly optimizing the same finite symmetrizer, this continuation pursued
+three structurally independent mechanisms:
 
-1. a fixed-scale completed Jordan/Suzuki first-chaos colligation;
+1. a completed Jordan/Suzuki first-chaos colligation;
 2. a theta/Brownian positive-bulk Dirichlet-to-Neumann construction;
 3. a factor-54 parity reset in the elementary endpoint/carry programme.
 
@@ -22,83 +21,46 @@ No route is declared proved through to RH.
 
 ## 2. Front A — fixed Suzuki colligation
 
-On PR #400, `L-91301` identifies the exact model-space tangent leakage for the
-safe inner family
+On PR #400:
 
-\[
- \Theta_a(z)=\frac{\xi(1/2-a-iz)}{\xi(1/2+a-iz)}.
-\]
+- `L-91301` identifies the exact model-space tangent leakage for the safe inner
+  family:
+  \[
+  -P_a\partial_{\log a}^2P_aP_a=2\mathcal B_a^*\mathcal B_a;
+  \]
+- `L-91305` proves exact curvature data processing under one fixed source
+  colligation;
+- `L-91308` places the complete Jordan multiplier family in one nested marked
+  Poisson product system;
+- `L-91309` places the completed amplitudes in one fixed Riemann-density
+  exponential family with Fisher tangent
+  \[
+  \partial_aq_a=-\frac12(Y-\mathbb E_aY)q_a.
+  \]
 
-If `P_a` projects onto `K_(Theta_a)`, then
-
-\[
- -P_a\partial_{\log a}^2P_aP_a
- =2\mathcal B_a^*\mathcal B_a,
-\]
-
-with the canonical first-chaos feature
-
-\[
- \mathcal J_a=\sqrt2\,M_{a\partial_a\Theta_a}^*P_a.
-\]
-
-`L-91305` proves a data-processing theorem.  If the whole safe inner family is
-the compression of one fixed source colligation
-
-\[
- M_{\Theta_a}=CV_a,
-\]
-
-where `C` is independent of `a` and `V_a` is isometric, then the output shape is
-the contracted source-normal tangent and
-
-\[
- (N_a^H)^*N_a^H\preceq(N_a^S)^*N_a^S.
-\]
-
-The source-minus-output defect has the explicit positive feature
-
-\[
- f\longmapsto
- \binom{(I-C^*C)^{1/2}N_a^Sf}{Q_aCN_a^Sf}.
-\]
-
-Thus the exact remaining construction is one fixed first-chaos/Stinespring lift
-of Suzuki's radial family whose source normal curvature is the Jordan plus
-gamma/pole curvature. Independent amplitude realizations at each scale do not
-suffice.
+The remaining construction is one fixed Lax--Phillips/de Branges observation
+which maps this common Poisson/Fisher source connection to Suzuki's whole inner
+family.  Independent amplitude realizations at each scale are insufficient.
 
 ## 3. Front B — theta/Brownian boundary system
 
-On PR #401, `L-91302` proves
+On PR #401:
 
 \[
  \Psi(v)=4B''(v)-\frac14B(v),
- \qquad
- B'(0)=-\frac18,
+ \qquad B'(0)=-\frac18,
 \]
 
-and the one-port Green identity
-
-\[
- 2M(q)=\frac12+\left(q^2-\frac14\right)
-       \int_0^\infty B(v)\cosh(qv/2)dv.
-\]
-
-The exact state is two-channel:
+and the exact two-channel theta state is
 
 \[
  x_q(v)=\sqrt{2(1/4-q^2)B(v)}
  \binom{\cosh(qv/4)}{\sinh(qv/4)},
-\]
-
-and
-
-\[
+ \qquad
  \|x_q\|^2=1-4M(q).
 \]
 
-The BPY Gamma/Beta reservoir admits the hyperbolic coordinates
+The BPY Gamma/Beta reservoir has hyperbolic coordinates
 
 \[
  S=\frac12\log(A^2-D^2)+\log(\pi/2),
@@ -106,46 +68,44 @@ The BPY Gamma/Beta reservoir admits the hyperbolic coordinates
  \Delta=\operatorname{artanh}(D/A),
 \]
 
-and its complete local carré du champ acts only in the positive direction
+and a positive local direction
 
 \[
- \partial_\Delta-\tanh\Delta\partial_S.
+ \partial_\Delta-	anh\Delta\partial_S.
 \]
 
-`L-91304` analytically continues the two-channel state to the unit disk and
-proves the strict Schur bound
-
-\[
- \sup_{z\in\mathbb D}\|\mathbf x(z)\|^2
- \le\frac{\pi e^{-\pi}}6<\frac1{32}.
-\]
-
-Nevertheless its prescribed symmetric scalar completion is exactly Xi:
+The analytic two-channel state is strict Schur on the unit disk, while its
+symmetric scalar defect is exactly the completed Xi moment:
 
 \[
  1-[\mathbf x(z),\mathbf x(z)]=4M(z/2).
 \]
 
-Thus generic Schur completion is not enough. The remaining theorem is an exact
-Brownian/theta DtN identity realizing this **particular** Xi scalar port as the
-boundary energy of the positive beta/theta bulk.
+The remaining theorem is an exact Brownian/theta DtN realization of this
+**particular** Xi scalar port.  An arbitrary Schur defect factor is not enough.
 
-## 4. Front C — factor-54 reset
+## 4. Front C — corrected factor-54 reset
 
-This is currently the most concrete arithmetic front, but its correct final
-interface is not finite-collar inversion.
+This remains the most concrete arithmetic front, but it has **two** live gates.
 
-PR #399 proves:
+The preferred exact-row shortcut is invalid.  `R-91102` proves that historical
+`L-91112` confused the finite Riemann-sum equality seed with its continuum
+Volterra integral.  Therefore exact outer saturation and exact collar removal
+do not follow.
+
+The retained finite route is:
 
 ```text
-positive equality and reserve states on 1 <= x <= 54.219...;
-33 active first-window parity states;
-the full 65,536-state Boolean forcing from primes <=53;
-positive martingale/endpoint row geometry;
-a conditional coefficient-one reset -> RH theorem.
+positive continuum equality density;
+positive martingale B-spline quantization;
+positive width-three collar;
+L-91303 finite Euler correction and quotient-knot parity packets;
+L-91306 terminal quotient localization;
+finite parity shadow and sixteen-prime Boolean forcing;
+delayed rough-prime allocation.
 ```
 
-`L-91303` supplies a useful diagnostic expansion
+`L-91303` proves
 
 \[
  b_X^\star(n)
@@ -154,72 +114,59 @@ a conditional coefficient-one reset -> RH theorem.
  +O(X^{-3/2}),
 \]
 
-and proves `K_X=c_0X+O(1)`.  `L-91306` localizes the B-spline collar.  These
-results are retained as asymptotic diagnostics.
+pins the splice to `c0 X+O(1)`, and shows that the normalized first correction
+has only `O(1/X)` parity/knot mass.  `L-91306` localizes the terminal collar to
+bounded neighborhoods of four quotient interfaces.
 
-They are no longer load bearing for the preferred exact reset.  Concurrent
-`L-91112` proves that the exact equality rows themselves:
-
-```text
-are nonnegative throughout the certified outer window;
-saturate every ordinary column above K_X exactly;
-saturate every radix-four detail, including the terminal annulus, exactly;
-turn the target mismatch and all three collars into one exact inner residual;
-split the score without outer debt.
-```
-
-`L-91113` then absorbs **every** combination of the sixteen primes through 53
-into a globally positive Boolean forcing.  The remaining arithmetic is the
-exact delayed renewal
+`L-91113` closes all prime factors through 53 and gives the exact delayed
+renewal
 
 \[
- \boxed{
  \mathbf F^{(53)}(x)
  =\sum_{\substack{m\in\mathcal M_{59}\\m\le x}}
  m^{-1/2}\mathbf U(x/m),
- \qquad
- \mathbf U=(L,R),
- }
+ \qquad \mathbf U=(L,R).
 \]
 
-where every nontrivial delay has `m>=59` and therefore lands below one complete
-factor-54 reset scale.
+`L-91307` proves this renewal is critical rather than norm-small:
 
-`R-91101` is the mandatory scope correction: positivity of
-`F^(53)` does not imply positivity of `U`, because the causal inverse of
-`I+K_59` alternates.  The exact remaining gate is:
+\[
+ \sum_{\substack{m\le x\\(m,P_{53})=1}}m^{-1/2}
+ =2\delta_{53}\sqrt x+\zeta(1/2)\beta_{53}+O(x^{-1/2}).
+\]
 
-> construct a capacity-faithful positive allocation of the globally positive
-> Boolean forcing between the current inner row residual and the delayed
-> rough-prime copies of the contracted `(L,R)` state, with coefficient-one
-> score transfer and bounded additive debt.
+Its centered equality and reserve channels have opposite constant boundary
+signs, so scalar positive branch domination is impossible.  A successful reset
+must retain mixed `(L,R)` cross terms and/or an explicit finite boundary port.
 
-Thus all finite collars and all finite Euler factors are closed; the survivor is
-one delayed rough-prime renewal allocation.
+The two surviving reset gates are therefore:
+
+1. a finite divisor-faithful lift of the Euler/quantization/terminal collars;
+2. a mixed two-state positive allocation of the delayed rough-prime renewal,
+   preserving coefficient-one score transfer and bounded debt.
 
 ## 5. Ranking
 
-### First: factor-54 rough-prime allocation
+### First: corrected factor-54 reset
 
-This remains the strongest near-term route because all finite Euler states,
-outer rows, endpoint collars and score splits are explicit.  The remaining
-operator is an infinite but strongly delayed positive renewal with a finite
-state/output interface.  A successful proof should seek a positive branching
-or Schur allocation, not positivity of the alternating inverse.
+It still has the smallest and most arithmetic interface.  The finite
+Euler/collar side is quantitatively controlled, and the infinite renewal is
+delayed by at least 59.  However it is a critical two-channel allocation, not a
+small-kernel recursion.
 
 ### Second: fixed Suzuki colligation
 
-This has the cleanest operator target: construct one fixed first-chaos lifting
-and invoke exact curvature data processing.  The missing lift must preserve the
-whole radial family, not one scale at a time.
+It has the cleanest operator target and now a common Poisson/Fisher source
+space.  The missing map is one fixed amplitude-to-inner scattering
+colligation preserving the radial connection.
 
 ### Third: theta/Brownian DtN
 
-This has the richest explicit positive bulk and probability structure.  It now
-has a strict Schur state and one exact beta tangent direction, but the prescribed
-Xi scalar port remains the conclusion-bearing boundary identification.
+It has the richest explicit positive bulk and probability structure.  The
+prescribed Xi scalar port remains the conclusion-bearing boundary
+identification.
 
-## 6. A common architecture
+## 6. Common architecture
 
 The three survivors have the same abstract shape:
 
@@ -230,20 +177,18 @@ a signed critical boundary response;
 prove the response is a contraction/Schur complement of the reservoir.
 ```
 
-The firewalls also agree: taking absolute values, optimizing an arbitrary
-metric, or inverting a positive renewal coefficientwise cannot close the
-critical sign.  The required map must preserve all cross-scale/cross-channel
-terms.
+Taking absolute values, optimizing an arbitrary metric, or inverting a positive
+renewal coefficientwise destroys the required cross-channel information.
 
 ## 7. Exact status
 
 ```text
 three independent attacks pursued                    YES
-new exact operator identities                        YES
-exact outer equality-row peel                        PROVED ON #399
-all primes <=53 / Boolean forcing                     PROVED ON #399
-delayed rough-prime allocation                        OPEN / RH-BEARING
-fixed first-chaos Suzuki lift                         OPEN / RH-BEARING
+new exact operator/source identities                  YES
+historical exact equality-row peel                    REFUTED
+finite Euler/quantization/collar lift                  OPEN
+mixed delayed rough-prime allocation                  OPEN / RH-BEARING
+fixed completed Suzuki colligation                    OPEN / RH-BEARING
 Brownian/theta Xi-port DtN identity                   OPEN / RH-BEARING
 Riemann Hypothesis                                    UNPROVED
 ```
