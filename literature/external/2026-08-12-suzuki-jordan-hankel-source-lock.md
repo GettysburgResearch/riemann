@@ -2,9 +2,9 @@
 
 ## Primary source
 
-Masatoshi Suzuki, **A canonical system of differential equations arising from the Riemann zeta-function**, RIMS Kôkyûroku Bessatsu B34 (2012), 397–435; arXiv:`1204.1827`.
+Masatoshi Suzuki, **A canonical system of differential equations arising from the Riemann zeta-function**, RIMS Kôkyûroku Bessatsu B34 (2012), 397–435; arXiv:`1204.1827v2`.
 
-The online arXiv source inspected for this packet reports a version date of 2026-03-22.  Exact theorem numbering below follows that source.
+The official arXiv record inspected for this packet reports submission on 2012-04-09 and revision v2 on 2016-09-23.  Exact theorem numbering follows that source.
 
 ## Imported statements
 
