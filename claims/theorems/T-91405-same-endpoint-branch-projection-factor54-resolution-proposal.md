@@ -3,7 +3,7 @@
 Claim ID: `T-91405`  
 Status: **PROPOSED COMPLETE RH COMPOSITION — INDEPENDENT ADVERSARIAL REVIEW REQUIRED**  
 Created: 2026-08-13  
-Depends on: finite root entry `L-91413/L-91414`; exact least-prime partition `L-91335/L-91336`; common child extraction `L-91410/L-91411`; same-endpoint physical projection `L-91415`; packet cone `L-91412`; packet envelope `L-91406/T-91401`; endpoint-score RH criterion  
+Depends on: finite root entry `L-91413/L-91414`; exact least-prime partition `L-91335/L-91336`; common child extraction `L-91410/L-91411`; same-endpoint physical projection `L-91415/L-91416`; packet cone `L-91412`; packet envelope `L-91406/T-91401`; endpoint-score RH criterion  
 Mandatory firewalls: `R-91102`, `R-91303`–`R-91310`, `R-91401`–`R-91404`  
 RH status: **proposed, not established**
 
@@ -52,7 +52,8 @@ Apply `L-91415` separately:
 
 Every output is a positive physical `(L,R)` packet with exact target. Its score
 deficit is bounded by its positive `X^-` mass, and its physical mass is bounded
-by the original hidden mass.
+by the original hidden mass. `L-91416` gives the direct nonnegative component
+rows for those positive equality/reserve measures.
 
 The canonical recursive child `alpha_j Iu` requires no projection and retains
 the tail index `j+1`.
@@ -60,19 +61,15 @@ the tail index `j+1`.
 Thus no unmatched mode mass is moved between endpoints, and the PR #431 branch
 counterexample is respected rather than denied.
 
-## 4. Packet and mass decomposition
+## 4. Target, row and mass decomposition
 
 Let `P_current` denote the sum of the projected survival packet and all projected
-branch excesses. Let `P_j` be the canonical recursive children. Positive
-additivity gives one exact typed decomposition in all target, score, row and
-boundary coordinates:
+branch excesses. Let `P_j` be the canonical recursive children.
 
-\[
-\boxed{
-P=P_{\rm current}+\sum_jP_j.
-}
-\tag{T-91405.3
-}
+The source and target measures decompose exactly. Every current row is
+nonnegative, and child row packets use the exact affine pushforward. The score
+need not decompose exactly because `L-91415` clips an out-of-cone score; its
+complete shortfall is instead charged to the local debt.
 
 For the additive hidden/packet mass,
 
@@ -80,11 +77,16 @@ For the additive hidden/packet mass,
 \boxed{
 \sum_jm(P_j)\le m(P),
 }
-\tag{T-91405.4
+\tag{T-91405.3
 }
 
-and the total local score deficit of `P_current` is at most `C_fin m(P)` for one
-absolute finite-window constant.
+and the total local score deficit plus the fixed finite physical corrections is
+at most
+
+\[
+\boxed{C_{\rm fin}m(P).}
+\tag{T-91405.4
+}
 
 Every child endpoint satisfies
 
@@ -130,8 +132,8 @@ A complete proof review must still reconstruct:
 
 1. the measure-level source interpretation of `L-91336`;
 2. the exact target/row covariance when a canonical child is placed at `X/p_j`;
-3. the claim that every positive `(L,R)` output of `L-91415` belongs to the
-   resident finite packet cone with one uniform debt constant;
+3. the equality/reserve row realization and the uniform finite debt constant in
+   `L-91415/L-91416`;
 4. one-use summation before quantization/collar/port charges;
 5. the bounded root mass and exact sign of the endpoint-score RH criterion.
 
