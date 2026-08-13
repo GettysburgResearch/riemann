@@ -1,0 +1,38 @@
+{
+  "classification": "PASS_P79_LITERAL_ENTROPY_DOMINATION",
+  "finite_gaps": {
+    "E_P79_83_upper_decimal": "20.828929935343",
+    "F4_margin_over_18": "0.907123129001",
+    "F4_min_location": [
+      83,
+      "right"
+    ],
+    "F5_margin_over_18": "1.026180268819",
+    "F5_min_location": [
+      83,
+      "right"
+    ],
+    "residual_entropy_minus_score_lower": "86/9",
+    "residual_entropy_minus_target_lower": "86/9"
+  },
+  "global_corridors": {
+    "activation_states": 4194304,
+    "global_A_max": "52541123207025505248824623351/292513160667333900718098595830",
+    "global_A_max_activation": 221,
+    "global_A_upper": "1/5",
+    "global_B_lower_activation": 9823,
+    "global_B_lower_decimal": "-1.240902393564305",
+    "global_B_upper_activation": 341,
+    "global_B_upper_decimal": "1.429239671138712",
+    "global_abs_A_upper": "1",
+    "global_abs_B_upper": "3/2"
+  },
+  "scope": "Exact/directed proof that the literal P79 Euler residual component entropy dominates both the target and declared source score for all p>=83 and 1<=y<83. This does not by itself prove that the finite frontier/quantization assembly retains the full literal entropy, nor the Riemann Hypothesis.",
+  "theta": {
+    "analytic_F_lower_at_10000": "3929/100",
+    "analytic_theta_ratio_lower": "27503/50000",
+    "finite_min_cell": 180,
+    "finite_min_margin_decimal": "1.527334624591",
+    "real_cell_start": 179
+  }
+}
