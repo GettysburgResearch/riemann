@@ -1,0 +1,24 @@
+{
+  "classification": "RECONNAISSANCE_ONLY_NOT_A_PROOF",
+  "p_values": [67, 101, 509, 5003],
+  "integer_y_range": [1, 67],
+  "row_range": [2, 66],
+  "candidate_cutoffs": "all positive-parity P61 divisors with y<c<2000",
+  "tuples_checked": 2834260,
+  "negative_values_found": 0,
+  "minimum_observed": {
+    "value": 0.0004658401787496618,
+    "p": 67,
+    "y": 30,
+    "row": 66,
+    "cutoff": 1995,
+    "cutoff_row_active": false
+  },
+  "minimum_active_cutoff_observed": {
+    "value": 0.051894793681661916,
+    "p": 509,
+    "y": 17,
+    "row": 66,
+    "cutoff": 129
+  }
+}
