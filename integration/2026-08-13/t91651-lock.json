@@ -1,0 +1,25 @@
+{
+  "schema": "t91651-lock-v1",
+  "branch": "research/gpt56-pro/91355-causal-packet-budget",
+  "parent_commit": "8e1dc61b158e25af5d730debe218aa930d61d30c",
+  "review_pr": 443,
+  "review_head": "38b34b0093c2b2bde07d0a45f4295a4d56322a3e",
+  "status": "proposed_not_verified",
+  "files": {
+    "R91650": ["claims/refutations/R-91650-pr431-counterexamples-remain-binding.md", "ebe579de962d6688d340a51693d9f739d9af4927"],
+    "R91651": ["claims/refutations/R-91651-source-fraction-does-not-scale-signed-packet-deficit.md", "c8f0dcdd6cc6c5bf67fbfc0130e7acd4c70b0857"],
+    "R91652": ["claims/refutations/R-91652-free-certificate-equality-requires-a-realization-map.md", "d4c8f503403aa4f8a96797f63936574baa286c04"],
+    "L91650": ["claims/lemmas/L-91650-causal-coefficient-budget-and-child-mass-contraction.md", "16d6ef678fe172c6add5886cae55773d165d23f8"],
+    "L91652": ["claims/lemmas/L-91652-provenance-mathematical-types.md", "16c8bcf4733d74106b377595396faa2a76289de8"],
+    "L91653": ["claims/lemmas/L-91653-complete-endpoint-data-and-deficit.md", "8c5398370c3dccc47e3a3e8877aa26a0a7824429"],
+    "L91654": ["claims/lemmas/L-91654-causal-generators-are-complete-admissible-endpoint-data.md", "3b05866c86d6c239ddf212652830ac253c9df41d"],
+    "L91655": ["claims/lemmas/L-91655-root-finite-correction-ledger.md", "1b1038aa682207b28ae1b72585a733e71088e80b"],
+    "L91656": ["claims/lemmas/L-91656.md", "3b988332cb661e9ff99b409cf9963915318a5f04"],
+    "T91650": ["claims/theorems/T-91650-provenance-certificate-envelope-reset.md", "f2150bc906024525b434fecee7e56de40f9e2b4e"],
+    "T91651": ["claims/theorems/T-91651-provenance-causal-packet-factor54-resolution-proposal.md", "d0a299ee080c0d08a2f1977f94b90f3ef5b6f011"],
+    "O91650": ["claims/observations/O-91650-t91651-dependency-order.md", "f819d5f24d2b691b954febfc392cc50eb983e226"],
+    "X91650_script": ["experiments/X-91650-t91651-foundational/verify.py", "3727a1c248bfd3328158238119c3db1d6096d68a"],
+    "X91650_result": ["experiments/X-91650-t91651-foundational/results/verification.json", "e776a24ef3cfff32165427f76811045157ce67c7"]
+  },
+  "proof_object_sha256": "6ee53731cd02f9115fe0e5f76ccfa3cd383045c0f1bfd1b2ddbb007174dd0280"
+}
