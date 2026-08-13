@@ -83,7 +83,7 @@ def main():
       'sqrt_cutoff_lower_scaled':str(root_lower_scaled),
       'sqrt_cutoff_upper_scaled':str(root_upper_scaled),
       'sqrt_scale_denominator':str(DEN),
-      'lower_margin_at_x_2000':str(margin),
+      'lower_margin_gate':'1/4',
       'lower_margin_decimal':float(margin),
       'scope':(
         'Exact Fraction arithmetic and fixed-denominator directed square-root '
