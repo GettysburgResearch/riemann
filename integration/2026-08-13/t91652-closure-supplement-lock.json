@@ -1,0 +1,71 @@
+{
+  "schema": "riemann.t91652.closure-supplement-lock.v1",
+  "created_utc": "2026-08-13T20:55:00Z",
+  "repository": "gfreund123/riemann",
+  "base_branch": "research/gpt56-pro/91355-causal-packet-budget",
+  "base_commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+  "primary_lock": {
+    "path": "integration/2026-08-13/t91652-full-ledger-lock.json",
+    "blob": "0e540aa962e07c6c9b8cfb56b0798c7d1e2439fb",
+    "scope": "50-object corrected provenance and root import ledger"
+  },
+  "supplement_entries": [
+    {
+      "id": "R91654",
+      "path": "claims/refutations/R-91654-canonical-p61-row-is-not-native-ramp-feasible.md",
+      "blob": "409d63af63e249873d001858ee7fec944f0a7005",
+      "status": "exact_normalization_firewall"
+    },
+    {
+      "id": "L91661",
+      "path": "claims/lemmas/L-91661-finite-euler-overdraw-is-the-exact-rough-child-reservoir.md",
+      "blob": "9de33cccaa9728cf6749ed2592ee2bd932b0ad3a",
+      "status": "proved_exact_least_prime_decomposition"
+    },
+    {
+      "id": "L91662",
+      "path": "claims/lemmas/L-91662-one-sided-endpoint-upper-bound-is-sufficient.md",
+      "blob": "b5a4be7838f6f7d04e2664ffdc88e5eb89c54b41",
+      "status": "proved_exact_conclusion_lemma"
+    },
+    {
+      "id": "T91652",
+      "path": "claims/theorems/T-91652-corrected-provenance-causal-factor54-resolution-proposal.md",
+      "blob": "d99b86e37b32cd105ba2ee82f2052b78c3f2bd64",
+      "status": "proposed_complete_rh_proof_independent_reconstruction_required"
+    },
+    {
+      "id": "X91651_CORRECTED_README",
+      "path": "experiments/X-91651-corrected-provenance-envelope/README.md",
+      "blob": "4c06c089842d17679d6763e1cd87646ded7dac60",
+      "status": "replay_documentation"
+    },
+    {
+      "id": "X91651_CORRECTED_SCRIPT",
+      "path": "experiments/X-91651-corrected-provenance-envelope/verify.py",
+      "blob": "c2ae9923dfd5a18e0bec24465a3f899e204973d6",
+      "status": "exact_algebra_replay"
+    },
+    {
+      "id": "X91651_CORRECTED_RESULT",
+      "path": "experiments/X-91651-corrected-provenance-envelope/results/verification.json",
+      "blob": "af67ae8c9e36a33214c13cae0454a1a7e5aad0fd",
+      "status": "retained_pass_result"
+    },
+    {
+      "id": "X91651_CORRECTED_SHA256",
+      "path": "experiments/X-91651-corrected-provenance-envelope/SHA256SUMS",
+      "blob": "4258bbbb0122c35403fbdf8ab5140a36aec9d54e",
+      "status": "checksum_ledger"
+    },
+    {
+      "id": "T91652_CLOSURE_REPORT",
+      "path": "reports/gpt56-pro/2026-08-13-corrected-provenance-causal-closure.md",
+      "blob": "5c37730658c9325fb9eafb7ae03b6e101e8a71a8",
+      "status": "review_report"
+    }
+  ],
+  "normative_rule": "Read the primary lock and this supplement conjunctively. The primary lock freezes inherited proof inputs; this supplement freezes the new firewall, repair, conclusion, proposal, replay, and report.",
+  "review_boundary": "L-91659 and its frozen root current imports remain the load-bearing independent reconstruction target.",
+  "rh_status": "PENDING INDEPENDENT REVIEW"
+}

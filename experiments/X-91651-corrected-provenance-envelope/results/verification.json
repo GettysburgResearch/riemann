@@ -1,0 +1,64 @@
+{
+  "endpoint": {
+    "limsup_upper": "0",
+    "positive_Cpp_control": "1/10",
+    "strict_threshold": true,
+    "two_sided_bound_claimed": false
+  },
+  "envelope": {
+    "C_root": "11",
+    "C_star": "7",
+    "coarse_bound": "8",
+    "exact_fixed_point": "289864575/40077938",
+    "native_upper_coarse": "443",
+    "native_upper_exact": "8046772184/20038969",
+    "root_mass": "54"
+  },
+  "lock": {
+    "all_full_sha1": true,
+    "blob_count_checked": 14
+  },
+  "proof_object_sha256": "1e93e462f5d8ec99e4a5652097a9dfd83bcc5ee32b758dfc1f3ea66564f26c12",
+  "reset": {
+    "alpha": [
+      "1/81",
+      "2/225",
+      "4/605",
+      "8/1859"
+    ],
+    "lambda": [
+      "1/9",
+      "4/45",
+      "4/55",
+      "8/143"
+    ],
+    "r": [
+      "1/9",
+      "1/10",
+      "1/11",
+      "1/13"
+    ],
+    "recursive_mass": "1331287/41409225",
+    "recursive_mass_lt_one_eighth": true,
+    "survival": [
+      "1",
+      "8/9",
+      "4/5",
+      "8/11",
+      "96/143"
+    ]
+  },
+  "rough_reservoir": {
+    "finite_limit": 1000,
+    "first_nontrivial_rough_integer": 67,
+    "rough_integer_count": 150,
+    "unique_least_prime_partition": true
+  },
+  "schema": "riemann.t91652.corrected-provenance-envelope.v1",
+  "scope": {
+    "checks": "finite algebra, type ledger, and least-prime partition only",
+    "does_not_check": "root Hall/collar/omission/port analytic imports",
+    "rh_established_by_replay": false
+  },
+  "verdict": "PASS_CORRECTED_PROVENANCE_ENVELOPE_ALGEBRA"
+}
