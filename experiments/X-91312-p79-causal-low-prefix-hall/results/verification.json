@@ -1,0 +1,44 @@
+{
+  "child": {
+    "directed_checks": 78540,
+    "minimum_score_location": [
+      31,
+      "33",
+      "left"
+    ],
+    "minimum_score_lower": "703279666140520506291607978281/534315031250000000000000000000",
+    "minimum_target_location": [
+      2,
+      "1",
+      "right"
+    ],
+    "minimum_target_lower": "1"
+  },
+  "classification": "PASS_P79_CAUSAL_LOW_PREFIX_HALL",
+  "complete_directed_inequalities": 18180604,
+  "hall": {
+    "directed_checks": 18102064,
+    "finite_prime_plus_tail_cases": 91090,
+    "minimum_score_location": [
+      79,
+      83,
+      "85/83",
+      "left"
+    ],
+    "minimum_score_lower": "336676924841033296288413552043308061340677023995998545308669039554195137/214509651156044860526605636942000000000000000000000000000000000000000000",
+    "minimum_score_lower_decimal": "1.569518774687289",
+    "minimum_target_location": [
+      73,
+      83,
+      "2",
+      "left"
+    ],
+    "minimum_target_lower": "257701598853054446894221240985485745653058426086484062449267203205689709869/145463144997317943395076155250000000000000000000000000000000000000000000000",
+    "minimum_target_lower_decimal": "1.771593752203047",
+    "real_breakpoints": 4616606,
+    "score_margin_certified_above": "3/2",
+    "target_margin_certified_above": "7/4"
+  },
+  "scope": "Exact fixed-denominator interval proof of the true causal P79 low-prefix target and declared-score Hall margins for every prime p>=83, every real 1<=y<83, and every active mu=-1 threshold t<4096. Finite primes below full parent support are enumerated; the infinite full-support tail is reduced by an exact monotonicity argument. The replay does not export a source-labelled Hall flow, prove LRPT, or prove RH.",
+  "thresholds": 385
+}
