@@ -1,10 +1,11 @@
 # R-91310 — The `P_79` real-prefix score surplus used by `L-91351` is false
 
 Claim ID: `R-91310`  
-Status: **EXACT SCALAR COUNTEREXAMPLE — DIRECT-ROW PROPOSAL REQUIRES A PHYSICAL-ENTROPY REPAIR**  
+Status: **EXACT SCALAR COUNTEREXAMPLE — RAW PHYSICAL-ENTROPY REPAIR NOW AVAILABLE**  
 Created: 2026-08-13  
+Updated: 2026-08-13 after independent `L-91353/X-91311` reconstruction  
 Frozen main under review: `d688cc7cb73eea9e50f10352a50516ab2c4f4625`  
-Depends on: `L-91345-p79-one-prime-splice-has-a-monotone-two-ledger-kernel-and-large-prefix-reserve.md`; `L-91351-p79-one-prime-splice-is-a-terminal-child-plus-positive-arithmetic-row.md`  
+Depends on: `L-91345`; `L-91351`; primary repair `L-91352/X-91130`; independent repair `L-91353/X-91311`; first-cell replay `X-91310`  
 RH status: **unproved**
 
 ## 1. The assertion under audit
@@ -33,9 +34,9 @@ The next line of that proof promotes the active-threshold estimate from
  \tag{R-91310.2}
 \]
 
-That promotion is invalid. The theorem in `L-91345` controls the Hall prefix
-only at its declared odd squarefree demand thresholds. It does not control the
-entire real step function between those thresholds.
+That promotion is invalid.  `L-91345` controls the Hall prefix only at its
+declared odd squarefree demand thresholds.  It does not control the entire real
+step function between those thresholds.
 
 ## 2. Exact witness
 
@@ -102,10 +103,10 @@ No floating-point sign decision is involved in (R-91310.5).
  -\sum_{o\le t,\mu(o)=-1}\frac1o
 \]
 
-at an odd squarefree divisor demand threshold `t`. Its retained minimum for the
-large-threshold gate occurs at `t=105`, where the prefix is positive. The real
-step function before that threshold is different. In particular, the complete
-prefix at `x=83` is the negative rational number (R-91310.3).
+at an odd squarefree divisor demand threshold `t`.  Its retained minimum for
+the large-threshold gate occurs at `t=105`, where the prefix is positive.  The
+real step function before that threshold is different.  In particular, the
+complete prefix at `x=83` is the negative rational number (R-91310.3).
 
 Thus
 
@@ -123,7 +124,7 @@ The following parts of `L-91351` survive this counterexample:
 exact Euler target split;
 exact Euler row split;
 inherited residual-row positivity, conditional on L-91346;
-positivity of the residual target and residual score separately;
+positivity of the residual target and residual source score separately;
 terminal-child coefficient p^(-1/2).
 ```
 
@@ -137,31 +138,67 @@ residual source score > residual source target
 The premise is false at `(p,y)=(83,1)`, and source score is not automatically
 the literal entropy of the positive component row.
 
-## 5. Repair direction
+Accordingly, the original version of `T-91304` is false as submitted.  Its
+recurrence cannot be justified by the scalar surplus.
 
-The correct quantity is the physical component-row entropy
+## 5. Stronger raw-row repair
 
-\[
- \sum_{j\ge2}D_{Pp}(py;j)G_j,
-\]
-
-not the scalar source label `mathfrak S_(Pp)(py)`. The companion theorem
-`L-91352` computes that entropy exactly and proves the stronger inequality
+The correct physical quantity is
 
 \[
- \sum_{j\ge2}D_{Pp}(py;j)G_j
- >\frac43\sqrt{py}
- >\mathfrak T_{Pp}(py),\mathfrak S_{Pp}(py).
+ \mathcal E_{P,p}(py)
+ =\sum_{j\ge2}D_{Pp}(py;j)G_j,
 \]
 
-Accordingly, this refutation removes one false scalar sentence while leaving a
-potentially stronger physical repair.
+the literal entropy of the exact component row.
+
+The primary continuation `L-91352` proves, using the positive von Mangoldt
+convolution and an explicit Chebyshev bound,
+
+\[
+ \mathcal E_{P,p}(py)>\frac43\sqrt{py}
+ >\mathfrak S_{Pp}(py),
+ \tag{R-91310.6}
+\]
+
+and
+
+\[
+ \mathcal E_{P,p}(py)-\mathfrak T_{Pp}(py)
+ >\frac4{15}\sqrt{py}.
+ \tag{R-91310.7}
+\]
+
+The independent continuation `L-91353/X-91311` avoids the imported Chebyshev
+bound.  It streams all `2^22` `P_79` activation states, certifies every real cell
+through `10,000`, proves an elementary tail estimate, and obtains the uniform
+absolute moat
+
+\[
+ \boxed{
+ \mathcal E_{P,p}(py)-\mathfrak T_{Pp}(py)>\frac{86}{9},
+ \qquad
+ \mathcal E_{P,p}(py)-\mathfrak S_{Pp}(py)>\frac{86}{9}.
+ }
+ \tag{R-91310.8}
+\]
+
+Thus the scalar counterexample is not a raw physical-entropy obstruction.  It
+instead forces the proof to use the literal component entropy rather than the
+declared source-score label.
+
+## 6. Remaining boundary
+
+Neither repair by itself proves that the later finite frontier, collar, common
+port and one-use quantizer preserve the same literal entropy.  That
+source-faithful assembly is the first open conclusion-producing theorem.
 
 ```text
 L-91351.10 exact first-moment identity             VALID
-L-91351 pointwise A_P(x)>1/25 for all x>=83        FALSE
-L-91351.11 strict scalar score-over-target surplus FALSE
-T-91304 scalar favorable-loss justification         INVALID AS WRITTEN
-physical component-entropy repair                    PROPOSED IN L-91352
-Riemann Hypothesis                                  UNPROVEN
+pointwise A_P(x)>1/25 for all real x>=83           FALSE
+strict scalar score-over-target surplus            FALSE
+literal raw-row entropy > target and source score  PROVED / TWO INDEPENDENT ROUTES
+finite-frontier entropy preservation               OPEN / RH-BEARING
+corrected factor-54 loss recurrence                OPEN
+Riemann Hypothesis                                 UNPROVEN
 ```
