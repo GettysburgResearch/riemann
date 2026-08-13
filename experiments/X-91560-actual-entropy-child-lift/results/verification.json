@@ -1,0 +1,29 @@
+{
+  "H67_lower": "39.2031645789172167573099137010299320638104447",
+  "H67_upper": "39.2031645789172167573099803322672735159358621",
+  "actual_debt_countermodel": {
+    "S": 1,
+    "T": 1,
+    "actual_S_minus_H_debt": 1,
+    "old_T_minus_S_debt": 0,
+    "row_entropy": 0
+  },
+  "affine_counterexample": {
+    "affine_child_lower": "0.105080551370872780241378505574789106630090663",
+    "affine_parent_row": 200,
+    "certified_comparison": "parent < 1/2000 < 1/10 < affine child",
+    "child_Y": 3,
+    "child_row": 2,
+    "p": 67,
+    "parent_Y": 201,
+    "parent_upper": "0.000356216889047703967130698377179640228701638403"
+  },
+  "certified_margin_lower": "1.27640071955496690754139507736028476940801067",
+  "checks": 10476,
+  "exact_Km_range": [
+    2,
+    201
+  ],
+  "rhs67_upper": "37.9267638593622498497685186236696472944024341",
+  "verdict": "PASS_FACTOR54_ACTUAL_ENTROPY_AND_CHILD_LIFT_REPAIR"
+}
