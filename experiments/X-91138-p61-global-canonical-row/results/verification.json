@@ -1,0 +1,76 @@
+{
+  "asymptotic_profile": {
+    "compact_F_minimum_cell_start": 2,
+    "compact_F_minimum_lower": 2.5668809469582947,
+    "compact_F_minimum_u": 2,
+    "compact_endpoint_checks": 81,
+    "global_F_minus_3over4_sqrt_minimum_lower": 0.1547430065942528,
+    "global_endpoint_checks": 524207,
+    "global_minimum_cell_start": 78,
+    "global_minimum_u": 82,
+    "stationary_minimum_exclusions": 209475
+  },
+  "asymptotic_row_start": 511,
+  "classification": "PASS_P61_CANONICAL_FINITE_EULER_ROW_GLOBAL_POSITIVITY",
+  "divisor_states": 262144,
+  "finite_compact_rows": {
+    "finite_compact_interval_checks": 8600064,
+    "finite_row_maximum_j": 510,
+    "minimum_positive_scaled_row_X": 4,
+    "minimum_positive_scaled_row_j": 2,
+    "minimum_positive_scaled_row_lower": 2.9407744304056416,
+    "scaled_row_definition": "j(j-1) D_(P61,X)(j)"
+  },
+  "finite_green_tails": {
+    "anchor_index_at_minimum": 490,
+    "beta_61_lower": 0.0022144006338674633,
+    "beta_61_upper": 0.0022144006338674633,
+    "finite_green_tail_rows": 509,
+    "green_tail_start": "X=67j",
+    "minimum_green_tail_j": 510,
+    "minimum_green_tail_lower": 9.201232977366989e-05,
+    "minimum_log_coefficient_lower": 0.00037145231877361176,
+    "wasserstein_upper_at_minimum": 0.00038266799849865073
+  },
+  "finite_row_cutoff": 510,
+  "mass_and_activation_corridors": {
+    "compact_abs_reciprocal_divisor_mass": "19131436546793978395621/5331290061791225953785",
+    "compact_abs_sqrt_divisor_mass_upper": 9.86028673146269,
+    "compact_activation_strip_at": 6,
+    "compact_activation_strip_divisors": [
+      6
+    ],
+    "compact_activation_strip_upper": 0.408248290463863,
+    "global_activation_strip_at": 69,
+    "global_activation_strip_divisors": [
+      69
+    ],
+    "global_activation_strip_upper": 0.1203858530857692,
+    "large_row_compact_margin": "3491/4080",
+    "large_row_global_margin": "181/1632",
+    "q_512_over_511_upper": 1.0048914104964317,
+    "total_abs_reciprocal_divisor_mass": "399441300081868800/86204059532560853",
+    "total_abs_sqrt_divisor_mass_upper": 59.423461968782085
+  },
+  "scope": "The directed gates certify the finite and fixed-constant inputs to L-91364. Together with the analytic approximation and Green lemmas stated there, they prove D_(P61,X)(j)>=0 for every real X and every integer j>=2. This checker does not audit the imported literal-entropy benchmark, endpoint-port normalization, the CFFP composition, or RH.",
+  "small_prime_block": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61
+  ]
+}
