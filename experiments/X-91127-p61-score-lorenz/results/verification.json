@@ -1,0 +1,69 @@
+{
+  "A_prefix_range": {
+    "certified_inside": "[-1,1]",
+    "maximum": "1",
+    "maximum_at": 1,
+    "minimum": "-2323/30030",
+    "minimum_at": 13
+  },
+  "F_derivative_checks": 524287,
+  "child_score_envelope_checks": 2926,
+  "classification": "PASS_P61_SCORE_HALL_AND_LORENZ_PREFIX",
+  "divisor_states": 262144,
+  "left_prefix_D_checks": 262143,
+  "maximum_child_score_hall_over_sqrt_y": {
+    "cell": 66,
+    "certified_below": "4",
+    "endpoint": 67,
+    "threshold": 2,
+    "upper_decimal": 3.4604590161297426
+  },
+  "minimum_F_derivative": {
+    "cell_start": 31,
+    "certified_above": "1/40",
+    "endpoint": 33,
+    "lower_decimal": 0.027732085136165575
+  },
+  "minimum_left_prefix_D": {
+    "certified_above": "3/40",
+    "cutoff": 91,
+    "lower_decimal": 0.0777554756479038
+  },
+  "minimum_nonterminal_score_hall_bound": {
+    "certified_above": "9/5",
+    "lower_decimal": 1.858000478280502,
+    "threshold": 47
+  },
+  "minimum_shifted_reciprocal_prefix": {
+    "certified_above": "1/67",
+    "lower_decimal": 0.017279492587289596,
+    "threshold": 47
+  },
+  "radius_seven_witness": {
+    "negative": true,
+    "threshold": 47,
+    "value": "-184943596214571/204963260862830470"
+  },
+  "score_hall_prefix_checks": 131072,
+  "scope": "Exact reciprocal arithmetic and directed square-root enclosures certify the score-currency displacement-eight Hall gates and the three finite prefix inequalities used by the symbolic Lorenz/likelihood-ratio theorem. The checker does not certify the remaining row subordination or RH.",
+  "small_prime_block": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61
+  ]
+}
