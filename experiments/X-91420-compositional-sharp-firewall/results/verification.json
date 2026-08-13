@@ -1,0 +1,10 @@
+{
+  "checks": 16,
+  "minimum_sample_defect": 0.0980884709546677,
+  "scope": "exact finite algebra only; FSRP_X and RH are not proved",
+  "two_factor_defect": [
+    "0",
+    "12*r*s*(1-r)*(1-s)"
+  ],
+  "verdict": "PASS_X_91420_COMPOSITIONAL_SHARP_FIREWALL"
+}
