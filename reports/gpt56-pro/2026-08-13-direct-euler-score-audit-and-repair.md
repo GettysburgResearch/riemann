@@ -1,9 +1,9 @@
-# Direct Euler factor-54 score audit and physical-entropy repair
+# Direct Euler factor-54 score and causal-Hall audit
 
 Date: 2026-08-13  
 Reviewed main: `d688cc7cb73eea9e50f10352a50516ab2c4f4625`  
 Review branch: `review/gpt56-pro/91304-direct-row-score-audit`  
-Verdict: **one advertised scalar surplus is exactly false; two independent physical component-entropy arguments repair the raw-row score interface; the finite-frontier assembly and loss recurrence remain unproved; RH remains unproved**
+Verdict: **one advertised scalar surplus is exactly false; two independent physical component-entropy arguments repair the raw-row score interface; the noncausal finite Hall checker is superseded by an 18.18-million-inequality causal certificate; live flow provenance and the finite-frontier loss recurrence remain unproved; RH remains unproved**
 
 ## Executive finding
 
@@ -24,7 +24,11 @@ This does not refute the direct-row architecture.  It reveals that the proof was
 using the wrong score.  The native loss is governed by the literal entropy of
 the exact component row, not by its declared source-score label.
 
-## Exact counterexample
+A second independent review finding was also correct: the old low-prefix Hall
+formula omitted the parent cutoff `d<=py`.  That sign gate has now been repaired
+with the true causal kernel.
+
+## Exact scalar counterexample
 
 For `P=P_79`,
 
@@ -44,9 +48,9 @@ Hence
  {8902150522975861711854133933093}<0.
 \]
 
-The active-demand threshold theorem in `L-91345` cannot be promoted to every
-real endpoint `x>=83`.  This exact counterexample is retained in `R-91310` and
-replayed independently by both `X-91130` and `X-91310`.
+The active-demand threshold theorem cannot be promoted to every real endpoint
+`x>=83`.  This exact counterexample is retained in `R-91310` and replayed
+independently by both `X-91130` and `X-91310`.
 
 ## Primary physical repair
 
@@ -118,7 +122,7 @@ Thus the exact raw row has the explicit physical target margin
 
 This is `L-91352/X-91130`.
 
-## Independent elementary confirmation
+## Independent elementary entropy confirmation
 
 `L-91353/X-91311` proves the same raw-row sign without the imported Chebyshev
 bound.  It combines:
@@ -149,7 +153,7 @@ and
  \qquad(1\le y<83).
 \]
 
-Since `p^(-1/2)<1/9`, this yields the independent residual moat
+Since `p^(-1/2)<1/9`, this yields
 
 \[
  \boxed{
@@ -167,29 +171,95 @@ PASS_P79_LITERAL_ENTROPY_DOMINATION
 
 and records the exact finite extrema and analytic tail constants.
 
-## What the repair does and does not establish
+## Exact causal Hall repair
 
-The arithmetic score joint is now repaired at the raw-row level:
+The historical `L-91350.2` replaced the parent kernel by the complete formal
+prefix through `t+8`.  When
+
+\[
+ t\le py<t+8,
+\]
+
+this inserted positive capacities at `e>py` that were absent from the causal
+parent.
+
+`L-91354/X-91312` restores the exact parent and child cutoffs.  For fixed `p`
+and `t`, the true Hall margin is affine in `sqrt(y)` between child activations
+`y=d` and parent activations `y=e/p`.  The replay evaluates both sides of every
+activation.
+
+Once `p>=max(83,t+8)`, the parent prefix is complete.  Exact reciprocal-prefix
+positivity and exact child-margin positivity prove monotonicity in `p`, reducing
+the infinite tail to one boundary per threshold.
+
+The complete census is
+
+```text
+P_79 sign thresholds:                 385
+finite prime plus tail cases:       91,090
+child-margin directed checks:       78,540
+causal Hall directed checks:    18,102,064
+all directed inequalities:      18,180,604
+```
+
+It proves
+
+\[
+ \boxed{
+ \mathcal H_{4,t}^{(8)}(p,y)>\frac74,
+ \qquad
+ \mathcal H_{5,t}^{(8)}(p,y)>\frac32.
+ }
+\]
+
+The global score minimum occurs at
+
+\[
+ t=79,
+ \qquad p=83,
+ \qquad y\to(85/83)^-,
+\]
+
+immediately before the omitted parent capacity at `py=85` activates.  This is
+precisely the real cell missed by the old formula.
+
+Retained verdict:
+
+```text
+PASS_P79_CAUSAL_LOW_PREFIX_HALL
+```
+
+The old `L-91350/X-91127` claim is marked superseded rather than silently reused.
+
+## What the repairs do and do not establish
+
+Two arithmetic interfaces are now closed:
 
 ```text
 exact Euler residual row
   -> literal component entropy
-  -> entropy strictly exceeds target and declared score.
+  -> entropy strictly exceeds target and declared score;
+
+true causal target/score capacities
+  -> strict finite Hall inequalities.
 ```
 
-It does **not** follow merely from this that a later positive packing, collar or
-quantizer realizes the same entropy.  The exact remaining theorem is the
-source-faithful finite-frontier entropy-preservation statement `SFFEP` isolated
-in the corrected `T-91304`.
+It does **not** follow merely from separate Hall feasibility that one common
+source-labelled flow has the needed score, row bonuses and scalar branch
+weights.  Nor does raw entropy automatically survive an arbitrary later collar
+or quantizer.
 
-`SFFEP` must simultaneously provide:
+The exact remaining theorem is the source-faithful frontier statement
+`SFFEP/LRPT` isolated in `T-91304` and `O-91312`.  It must:
 
-1. exact nonnegative realization of every noninherited row `j>y`;
-2. ordinary and radix-four capacity feasibility at every integer column;
-3. target exactness with no duplication;
-4. literal entropy loss bounded by one absolute homogeneous debt;
-5. actual scalar branch weights summing to at most one;
-6. one-use collar and endpoint-port accounting after branch summation.
+1. export one canonical target Hall flow from the causal capacities;
+2. prove score superordination for that same flow;
+3. prove every normalized component-row bonus for that same flow;
+4. retain the literal child coefficient `p^(-1/2)`;
+5. realize every noninherited row `j>y` and every target-null bonus;
+6. respect ordinary and radix-four integer capacities;
+7. produce actual scalar target weights summing to at most one;
+8. charge collar and endpoint port once after branch summation.
 
 ## Proof-residency and independent-review boundary
 
@@ -198,17 +268,17 @@ ancestors named under their historical paths, including the finite producer
 packets and `T-91302`.  A future proof claim must consolidate these ancestors or
 supply an exact path-plus-SHA manifest.
 
-The independent review PR `#431` also retains four live obstructions:
+Of the four concrete objections in review PR `#431`, the causal Hall objection
+is now closed.  Three remain:
 
 ```text
-L-91350.2 omits a parent causal support cutoff;
 hidden hazard score is not automatically the score of an r-scaled child;
 pointwise source fractions are not automatically signed-loss weights;
 noninherited frontier rows are not covered by L-91346.
 ```
 
-The raw entropy theorem supplies a strong positive budget for attacking these
-joints.  It does not silently discharge them.
+The entropy and Hall theorems supply strong positive budgets for attacking these
+joints.  They do not silently discharge them.
 
 ## Replay
 
@@ -222,6 +292,9 @@ python3 verify.py
 
 cd ../X-91311-p79-literal-entropy-domination
 python3 verify.py
+
+cd ../X-91312-p79-causal-low-prefix-hall
+python3 verify.py
 ```
 
 Retained results:
@@ -230,6 +303,7 @@ Retained results:
 PASS_DIRECT_EULER_SCORE_INTERFACE_AUDIT_AND_REPAIR
 PASS_P79_FIRST_CELL_SCORE_REFUTATION_AND_ENTROPY_REPAIR
 PASS_P79_LITERAL_ENTROPY_DOMINATION
+PASS_P79_CAUSAL_LOW_PREFIX_HALL
 ```
 
 ## Final boundary
@@ -237,8 +311,10 @@ PASS_P79_LITERAL_ENTROPY_DOMINATION
 ```text
 false real-prefix scalar surplus                 REFUTED EXACTLY
 literal direct-row entropy                       COMPUTED EXACTLY
-positive von Mangoldt convolution                PROVED EXACTLY
 uniform raw-row physical score moat              PROVED BY TWO ROUTES
+old noncausal Hall formula                       SUPERSEDED
+true causal finite Hall signs                    PROVED EXACT/DIRECTED
+source-labelled Hall flow/row provenance         OPEN / LRPT
 finite-frontier entropy preservation             OPEN / SFFEP
 scalar branch-loss homogeneity                   OPEN
 full factor-54 recurrence                        UNPROVEN / EXPLICIT GAP
