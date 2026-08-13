@@ -23,10 +23,12 @@ def subcritical_checks():
         partial += power
         power *= theta
     exact = Fraction(1, 1) / (1 - theta)
+    tail = power / (1 - theta)
     assert partial < exact
     assert exact == Fraction(8, 7)
-    assert exact - partial == power / (1 - theta)
-    return exact, power / (1 - theta)
+    assert exact - partial == tail
+    assert tail > 0
+    return exact
 
 def butterfly_dual_checks():
     instances = [
@@ -50,14 +52,14 @@ def butterfly_dual_checks():
 
 def main():
     strip_checks, minimum_strip = activation_strip_checks()
-    geometric_exact, geometric_tail = subcritical_checks()
+    geometric_exact = subcritical_checks()
     butterfly_checks = butterfly_dual_checks()
     result = {
         "classification": "PASS_CFFP_THREE_ROUTE_REDUCTIONS",
         "activation_strip_integer_checks": strip_checks,
         "minimum_sampled_activation_margin": str(minimum_strip),
         "subcritical_geometric_factor": str(geometric_exact),
-        "subcritical_tail_after_100": str(geometric_tail),
+        "subcritical_tail_after_100_positive": True,
         "butterfly_dual_identity_checks": butterfly_checks,
         "scope": (
             "Exact rational regression for L-91370, T-91311 and L-91372. "
