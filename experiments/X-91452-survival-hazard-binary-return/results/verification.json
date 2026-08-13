@@ -1,0 +1,14 @@
+{
+  "checks": 54,
+  "minimum_sample_matrix_entry": "0",
+  "scope": "exact finite algebra only; physical row/capacity lift and RH are not proved",
+  "symbolic_score_identity": "s(C_p+H_p)=s+(0,r(1-r))",
+  "symbolic_target_identity": "t(C_p+H_p)=t",
+  "three_prime_target_fractions": [
+    "0.064422636775240757542735042879912258040508519968988",
+    "0.053827835039704105772432974509895961657417352974478",
+    "0.046076233612012176815518043047125051246467600732164",
+    "0.83567329457304295986931393956306672905560652632437"
+  ],
+  "verdict": "PASS_SURVIVAL_HAZARD_BINARY_RETURN"
+}

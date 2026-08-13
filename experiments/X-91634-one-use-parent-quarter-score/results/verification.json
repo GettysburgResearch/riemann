@@ -1,0 +1,27 @@
+{
+  "atanh_terms": 24,
+  "beta_nonnegative_cells": 0,
+  "checks": 50689,
+  "classification": "PASS_ONE_USE_PARENT_QUARTER_SCORE_K4_ENDPOINT_CERTIFICATE",
+  "common_cells": 16896,
+  "digits": 24,
+  "maximum_location": [
+    "open",
+    256,
+    256,
+    "1",
+    [
+      1,
+      4,
+      16,
+      64,
+      256
+    ],
+    -40.90578249007928,
+    -40.90578249007928
+  ],
+  "maximum_upper_decimal": "-40.905782490079282354",
+  "maximum_upper_scaled_integer": "-40905782490079280555064767",
+  "scale_integer": "1000000000000000000000000",
+  "scope": "Exact integer/fixed-point interval arithmetic. Square roots use integer isqrt enclosures; logarithms use atanh partial sums with a positive rigorous tail. On each common cell beta=-C(floor(256x))<0, so the only critical point is a minimum and both one-sided endpoints suffice. Activated knot values are checked separately. Certifies the corrected one-use parent score scalar; physical one-use row assembly is supplied separately by L-91621 and the exact parent equality-row score identity."
+}
