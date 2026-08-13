@@ -1,10 +1,17 @@
 # L-91547 — Both Hall residual sources contract by one fixed deterministic 67-split
 
+> **CAPACITY ASSEMBLY CORRECTED AFTER `R-91558`.**  The source, target, score
+> and component-row split below is exact.  The former instruction to affine-lift
+> the fixed-67 finite child is withdrawn: affine lifting can overdraw unmatched
+> detail columns.  The correct physical operation is the nested identity
+> embedding proved in `L-91559`.
+
 Claim ID: `L-91547`  
-Status: **PROVED EXACT SYMMETRIC POST-HALL CONTRACTION THEOREM**  
+Status: **PROVED EXACT SYMMETRIC POST-HALL CONTRACTION / IDENTITY-EMBEDDING THEOREM**  
 Created: 2026-08-13  
-Depends on: `L-91540`, `L-91545`  
-RH status: **unproved pending merged producer and loss audits**
+Corrected: 2026-08-13  
+Depends on: `L-91540`, `L-91545`, `R-91558`, `L-91559`  
+RH status: **unproved pending merged producer and native-entry audits**
 
 ## 1. Positive source measures after Hall
 
@@ -33,7 +40,7 @@ masses satisfy
 Every matched Hall edge has already been removed into a target-null positive
 current row bonus.  No next-prime color is attached to `c_s` or `c_h`.
 
-## 2. Apply the same split to both types
+## 2. Apply the same source split to both types
 
 For `tau in {s,h}` define
 
@@ -42,17 +49,18 @@ For `tau in {s,h}` define
  \tag{L-91547.3}
 \]
 
-Apply `L-91540` with the single geometric scale `67`.  The actual child measure
-is
+The actual child source measure is
 
 \[
+ \boxed{
  c_\tau^{\rm child}
  =c_\tau|_{\{n\le X/67\}},
+ }
  \tag{L-91547.4}
 \]
 
-retaining the same paired type `tau` and now evaluated at endpoint `X/67`.
-For target, score, and every exact component row one has
+retaining the same paired type `tau` and evaluated at endpoint `X/67`.
+For each scalar kernel `K=T_tau,S_tau`, `L-91540` gives
 
 \[
  \boxed{
@@ -65,7 +73,20 @@ For target, score, and every exact component row one has
  \tag{L-91547.5}
 \]
 
-The residual is current-generation data.
+For the exact component row, endpoint monotonicity gives
+
+\[
+ \boxed{
+ R_{\tau,X}(c_\tau)
+ =R_{\tau,X/67}(c_\tau^{\rm child})
+  +R_\tau^{\rm residual},
+ \qquad
+ R_\tau^{\rm residual}\ge0.
+ }
+ \tag{L-91547.6}
+\]
+
+The activation frontier `n>X/67` is included in the positive residual.
 
 ## 3. Subprobability target weights
 
@@ -74,10 +95,10 @@ Normalize the parent target in (L-91547.2) to one and put
 \[
  \omega_\tau
  =\mathfrak T_{\tau,X/67}(c_\tau^{\rm child}).
- \tag{L-91547.6}
+ \tag{L-91547.7}
 \]
 
-Summing the positive target residuals in (L-91547.5) gives
+Summing the positive target residuals gives
 
 \[
  \boxed{
@@ -87,20 +108,20 @@ Summing the positive target residuals in (L-91547.5) gives
  \qquad
  \omega_s+\omega_h\le1.
  }
- \tag{L-91547.7}
+ \tag{L-91547.8}
 \]
 
 Both child endpoints equal
 
 \[
  \boxed{Y_s=Y_h=X/67<c_0X.}
- \tag{L-91547.8}
+ \tag{L-91547.9}
 \]
 
-After target normalization, the total positive local debt of the two geometric
-residuals is at most their total residual target and hence at most one.
+The scalar target/score statement is independent of how a finite child packing
+is placed back into the parent row space.
 
-## 4. Why this is stronger than the ordered-prime placement
+## 4. Why arithmetic colors are no longer recursive
 
 The original binary-return architecture sent the hazard output through a
 variable-`p` affine child lift and sent survival to the next ordered rough prime.
@@ -108,43 +129,92 @@ Neither operation is needed after `L-91545`:
 
 ```text
 Hall has already made both target-bearing outputs positive sources;
-paired-type endpoint monotonicity supplies a geometric split for either type;
+paired-type endpoint monotonicity supplies a geometric endpoint split;
 the factor-54 consumer needs contraction, not arithmetic provenance.
 ```
 
-Only the fixed scale-`67` affine functor is needed when arbitrary child packings
-are assembled in parent coordinates.  Its normalization is the resident exact
-identity of `L-91318`; no Hall coefficient is transported through a variable
-rough-prime lift.
-
-Thus the following are removed from the load-bearing chain:
+Thus the following remain removed from the load-bearing source ledger:
 
 ```text
 ordered-prime survival recursion;
-unique-next-prime color transport;
-variable-p hazard affine normalization;
+unique-next-prime Hall color transport;
+variable-p hazard normalization;
 repeated one-prime Hall projection.
 ```
 
-## 5. Row and quantization assembly
+## 5. Correct physical child placement
 
-For both types, the child component row at endpoint `X/67` is lifted by the same
-positive affine map.  All current residuals and Hall row bonuses remain at the
-parent endpoint.  Push the two child measures to the parent continuum
-coordinate, sum them with the current rows, and apply `L-91329` once.
+The child row at endpoint `X/67` and the parent row at endpoint `X` are vectors
+indexed by the same average-binomial row variable.  Therefore use the identity
+embedding
 
-Because (L-91547.7) is a target subprobability identity before quantization, the
-fixed affine lift and collar cannot duplicate target mass.
+\[
+ \boxed{
+ \iota(d)(n)=d(n).
+ }
+ \tag{L-91547.10}
+\]
 
-## 6. Boundary
+Do not apply the affine map `n -> 67(n+1)-1`.
+
+`L-91559` identifies the exact positive component-detail target
+
+\[
+ \Theta_Y(q)
+ =q^{-1/2}
+  [H(Y/q)-H(Y/(4q))]
+ \tag{L-91547.11}
+\]
+
+and proves that it is monotone in `Y`.  For the canonical child packet, any
+nonnegative row `d_child` satisfying its detail capacities may replace the
+canonical component row directly:
+
+\[
+ \boxed{
+ d_{\rm parent}
+ =R_\tau^{\rm residual}+d_{\rm child}.
+ }
+ \tag{L-91547.12}
+\]
+
+The result is nonnegative and consumes no more than the canonical parent detail
+capacity at every physical integer column.  Scores are inserted with coefficient
+one because the identity embedding changes neither row coefficients nor
+entropy.
+
+Applying this simultaneously to `c_s,c_h`, and retaining the Hall bonuses in
+the current row, gives the exact parent-capacity replacement theorem
+`L-91559.27--28`.
+
+## 6. Why the affine instruction was wrong
+
+`R-91558` proves that the canonical detail-feasible child `Q_3`, affinely lifted
+by `67` to endpoint `201`, overdraws the unmatched physical detail column
+`200` by a factor greater than `277`.  Matched-fiber covariance and positive
+off-fiber ordinary carry do not imply radix-four capacity feasibility.
+
+Accordingly, the old statements
+
+```text
+fixed-67 child -> affine Pascal image;
+affine leakage is harmless;
+L-91329 automatically repairs arbitrary lifted finite children
+```
+
+are withdrawn from this theorem.
+
+## 7. Boundary
 
 ```text
 positive survival/hazard residual sources           EXACT
-same deterministic 67-split for both types           EXACT
+same deterministic 67 source split for both types    EXACT
 both child endpoints equal X/67                      EXACT
 child target weights sum <=1                         EXACT
-variable-p affine hazard joint                       REMOVED
+component-row current residual nonnegative           EXACT
+fixed-67 identity physical embedding                 EXACT / L-91559
+fixed-67 affine detail embedding                     FALSE / R-91558
 ordered-prime recursive color joint                  REMOVED
-fixed-67 affine/collar integration                    RESIDENT / MERGED AUDIT
+live one-prime entry normalization                    REPLAY REQUIRED
 Riemann Hypothesis                                   UNPROVEN
 ```
