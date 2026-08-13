@@ -3,9 +3,9 @@
 Claim ID: `T-91304`  
 Status: **CORRECTED CONDITIONAL COMPOSITION — UNPROVEN / EXPLICIT GAP**  
 Created: 2026-08-13  
-Corrected: 2026-08-13 after `R-91310` and the physical repairs `L-91352/L-91353`  
+Corrected: 2026-08-13 after `R-91310`, `L-91352/L-91353`, and the causal Hall repair `L-91354`  
 Frozen main under review: `d688cc7cb73eea9e50f10352a50516ab2c4f4625`  
-Depends on: exact Euler identities `L-91351`; inherited-row theorem `L-91346`; physical score repairs `L-91352/L-91353`; terminal projection, finite producer and loss consumer only at their exact source commits; mandatory firewalls `R-91102`, `R-91303`–`R-91310`, `R-91552`, and the exact findings of review PR `#431`  
+Depends on: exact Euler identities `L-91351`; inherited-row theorem `L-91346`; physical score repairs `L-91352/L-91353`; corrected causal Hall theorem `L-91354`; terminal projection, finite producer and loss consumer only at their exact source commits; mandatory firewalls `R-91102`, `R-91303`–`R-91310`, `R-91552`, and the surviving exact findings of review PR `#431`  
 RH status: **unproved**
 
 ## 1. Corrected architecture
@@ -43,7 +43,7 @@ The statements below are consequently split into:
 
 ```text
 resident exact arithmetic identities;
-resident exact/directed raw-row score theorems;
+resident exact/directed raw-row score and Hall theorems;
 source-pinned conditional finite producer and loss consumer;
 one explicit source-faithful frontier theorem still to be proved.
 ```
@@ -163,7 +163,47 @@ Thus the arithmetic score interface is repaired at the exact **raw-row** level.
 This does not yet identify the score of a later packed, collared or quantized
 object with (T-91304.4).
 
-## 5. Exact remaining theorem
+## 5. Correct causal low-prefix Hall gate
+
+Review PR `#431` correctly observed that the historical display `L-91350.2`
+dropped the parent support cutoff.  When
+
+\[
+ t\le py<t+8,
+\]
+
+formal positive sources above `py` were incorrectly inserted into the parent
+capacity.
+
+`L-91354/X-91312` restores both causal cutoffs and evaluates the left and right
+states at every parent and child activation.  It proves, for every prime
+`p>=83`, every real `1<=y<83`, and every active sign-demand threshold
+`t<4096`,
+
+\[
+ \boxed{
+ \mathcal H_{4,t}^{(8)}(p,y)>\frac74,
+ \qquad
+ \mathcal H_{5,t}^{(8)}(p,y)>\frac32.
+ }
+ \tag{T-91304.10}
+\]
+
+The directed replay contains `18,180,604` inequalities.  Its score minimum is
+the left limit at
+
+\[
+ t=79,
+ \qquad p=83,
+ \qquad y=85/83,
+\]
+
+immediately before the formerly omitted parent capacity at `py=85` activates.
+
+This closes the scalar causal Hall inequalities.  It does not export a
+source-labelled flow or establish the row-provenance packet required below.
+
+## 6. Exact remaining theorem
 
 The first open conclusion-producing statement is the following.
 
@@ -191,7 +231,12 @@ partition does not automatically produce scalar coefficients for an unrelated
 worst-case signed loss functional.  Likewise, the coefficient `r=p^-1/2` in the
 exact child term cannot disappear from the recurrence.
 
-## 6. Why `SFFEP` would yield the recurrence
+The cross-stack observation `O-91312` reduces this further to a constructive
+**Live Row-Provenance Theorem (`LRPT`)**: export one causal Hall flow from the
+margins (T-91304.10), retain the exact row bonuses and child coefficient, and
+prove that the resulting scalar target weights are a subprobability vector.
+
+## 7. Why `SFFEP` would yield the recurrence
 
 Assume the source-pinned finite producer and loss consumer are valid at their
 exact normalizations, and assume `SFFEP`.
@@ -214,7 +259,7 @@ then give
  \qquad
  X_b\le c_0X+C_1,
  }
- \tag{T-91304.10}
+ \tag{T-91304.11}
 \]
 
 for absolute constants `C,C_1` and fixed `c_0<1`.
@@ -223,50 +268,57 @@ Expanding the subprobability tree gives
 
 \[
  \mathfrak L_X=O(\log X)=o(\log^2X).
- \tag{T-91304.11}
+ \tag{T-91304.12}
 \]
 
 The source-pinned endpoint-score consumer would then imply RH.  This is a
-conditional implication only; `SFFEP` is not proved here.
+conditional implication only; `SFFEP/LRPT` is not proved here.
 
-## 7. Exact hostile-review findings still active
+## 8. Hostile-review findings still active
 
-The independent reconstruction in PR `#431` identifies additional joints that
-must be repaired or bypassed:
+One finding of PR `#431` is now repaired:
 
 ```text
-L-91350.2 drops the parent causal support cutoff;
-the checked low-prefix Hall certificate therefore does not prove its stated theorem;
-a hidden hazard score is not automatically the score of an r-scaled canonical child;
-pointwise source fractions are not automatically scalar signed-loss weights;
-noninherited frontier rows are not covered by L-91346.
+parent causal support missing from L-91350.2   CLOSED / L-91354
 ```
 
-The raw-row entropy theorem removes none of those typing and assembly
-obligations.  It supplies the correct score budget with which to attack them.
+The remaining joints are:
 
-## 8. Verification retained on this branch
+```text
+a hidden hazard score is not automatically the score of an r-scaled canonical child;
+pointwise source fractions are not automatically scalar signed-loss weights;
+noninherited frontier rows are not covered by L-91346;
+the live source-labelled Hall flow and row bonuses have not been exported as one packet.
+```
+
+The raw-row entropy theorem and causal Hall theorem supply the correct score and
+capacity budgets.  They do not silently discharge these typing and assembly
+obligations.
+
+## 9. Verification retained on this branch
 
 ```text
 X-91130  exact first-cell refutation and imported-psi physical repair;
 X-91310  independent first-cell target/entropy enclosure;
 X-91311  4,194,304-state and all-real-cell elementary entropy proof;
+X-91312  18,180,604-inequality causal Hall certificate;
 X-91125  independently replayed inherited-row certificate, source-pinned.
 ```
 
-No replay certifies `SFFEP`, the complete finite producer, the branch-loss
+No replay certifies `SFFEP/LRPT`, the complete finite producer, the branch-loss
 homogeneity interface or the final loss-to-RH consumer.
 
-## 9. Status boundary
+## 10. Status boundary
 
 ```text
 exact Euler row/target/source-score identities      PROVED
 strict scalar source-score surplus                  FALSE / R-91310
 literal raw-row entropy surplus                     PROVED / TWO ROUTES
 inherited rows 2<=j<=y                              PROVED EXACT/DIRECTED AT SOURCE
-true low-prefix Hall theorem                        UNPROVEN AFTER PR #431
+true causal low-prefix Hall theorem                 PROVED / L-91354
+source-labelled Hall flow export                    OPEN
 noninherited frontier realization                   OPEN
-source-faithful entropy-preserving assembly          OPEN / SFFEP
-scalar substochastic loss recurrence                 CONDITIONAL ON SFFEP
+source-faithful entropy-preserving assembly          OPEN / SFFEP-LRPT
+scalar substochastic loss recurrence                 CONDITIONAL ON SFFEP-LRPT
 Riemann Hypothesis                                  UNPROVEN
 ```
