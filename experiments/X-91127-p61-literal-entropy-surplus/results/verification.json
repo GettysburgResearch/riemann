@@ -1,0 +1,40 @@
+{
+  "B_min_cell": {
+    "certified_above": 13,
+    "left": 69,
+    "lower_decimal": 13.206841030812344
+  },
+  "D67": {
+    "certified_above": 15,
+    "lower_decimal": 15.357081610029466
+  },
+  "E67": {
+    "certified_below": 18,
+    "lower_decimal": 17.692431915723827,
+    "upper_decimal": 17.692431915723827
+  },
+  "analytic_B_tail_margin": "334/25",
+  "checks": {
+    "B_cells": 14933,
+    "divisor_states": 262144,
+    "terminal_score_cells": 66
+  },
+  "classification": "PASS_P61_LITERAL_ENTROPY_SURPLUS",
+  "one_prime_entropy_surplus": {
+    "certified_above": "893/100"
+  },
+  "prefix_corridors": {
+    "B0_at_67_lower_decimal": -0.557222603351079,
+    "max_A1_upper_decimal": -0.09932038821840972,
+    "max_B0_upper_decimal": 1.3389359669022527,
+    "min_A0_lower": "55036345385124606673/3351096610268770599522",
+    "min_B0_lower_decimal": -0.9733332678433327,
+    "sum_abs_inv_sqrt_upper_decimal": 59.423461968782085
+  },
+  "terminal_score_min": {
+    "cell": 32,
+    "certified_above": 1,
+    "endpoint": 33,
+    "lower_decimal": 1.3162266172734038
+  }
+}
