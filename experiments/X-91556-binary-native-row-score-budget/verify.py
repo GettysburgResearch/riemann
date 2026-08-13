@@ -53,9 +53,15 @@ def run() -> dict[str, object]:
     assert sp.simplify(qh.subs(z, 1) - sp.Rational(1, 2)) == 0
     checks += 6
 
-    # Exact half-corridor factorizations.
-    assert sp.factor(2 * Ts - Ss_native) == (1 - r) * (3 - r) * (z - 1)
-    assert sp.factor(2 * Th - Sh_native) == r * (4 - r) * (z - 1)
+    # Exact half-corridor factorizations.  Use algebraic equality rather than
+    # structural expression equality so the replay is insensitive to SymPy's
+    # chosen factor ordering.
+    assert sp.simplify(
+        2 * Ts - Ss_native - (1 - r) * (3 - r) * (z - 1)
+    ) == 0
+    assert sp.simplify(
+        2 * Th - Sh_native - r * (4 - r) * (z - 1)
+    ) == 0
     checks += 2
 
     # The fixed-67 score slopes match the physical row coefficients exactly.
