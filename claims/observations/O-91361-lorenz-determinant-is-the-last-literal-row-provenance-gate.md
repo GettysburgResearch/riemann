@@ -1,60 +1,78 @@
-# O-91361 — One full Lorenz determinant is the last literal row-provenance gate in the causal factor-54 route
+# O-91361 — Corrected frontier after the causal-monotonicity refutation
 
 Claim ID: `O-91361`  
-Status: **CURRENT SYNTHESIS / PROPOSED RESOLUTION PATH**  
+Status: **CURRENT SYNTHESIS / NO RH CLAIM**  
 Created: 2026-08-13  
+Corrected after: `R-91311`  
 RH status: **unproved**
 
-The exact nonduplicating packet budget of `L-91355` reduces every rough generation to:
+## 1. Lorenz route correction
+
+The historical version of this handoff treated continuous causal row-per-score ordering as closed by `L-91360`. That premise is false. `R-91311` proves that the causal profile has negative logarithmic derivative at
+
+\[
+ j=66,
+ \qquad p=67,
+ \qquad z=133/2.
+\]
+
+Accordingly:
 
 ```text
-survival and current causal packets: total parent coefficient at most one;
-canonical contracted children: total coefficient below one eighth.
+continuous causal row-per-score ordering       REFUTED / R-91311
+discrete ordering on actual P61 divisors       OPEN
+full Lorenz determinant                        OPEN
+Lorenz row provenance                          NOT CLOSED
 ```
 
-The true causal target/score Hall theorem supplies a positive score-Lorenz residual source. `L-91360` proves that, for every row, causal row mass per score unit decreases with the source node. `L-91358` shows that literal row subordination is then equivalent to the single full-packet determinant
+The abstract bathtub theorem `L-91358` remains valid whenever its order hypothesis is supplied.
 
-\[
-\boxed{
-\mathscr D_j(p,y)
-=E_R^{(j)}(p,y)O_S(p,y)
- -E_S(p,y)O_R^{(j)}(p,y)
-\ge0,
-}
-\]
+## 2. Surviving exact packet route
 
-for
-
-\[
-p\ge67,\qquad1\le y\le67,\qquad2\le j\le66.
-\]
-
-If this determinant holds, the Lorenz residual is one hereditary positive source which is score-exact and target-subordinate, while
-
-\[
-\text{signed arithmetic row}
-=	ext{residual-source row}+	ext{positive target-null row bonus}.
-\]
-
-The literal entropy surplus theorem on PR #437 then applies to the complete row, including the bonus. Together with the nested same-index physical embedding and the one-use finite collar/port ledger, the packet-valued consumer gives
-
-\[
-\mathfrak L_X
-\le\frac18\sup_{Y\le c_0X+C_0}\mathfrak L_Y+O(1),
-\]
-
-and hence an `o(log^2 X)` loss bound.
-
-Thus the strongest factor-54 proposal now has one explicit first open sign:
+The robust conclusions on this branch are:
 
 ```text
-causal row/score ratio ordering             CLOSED / L-91360
-source nonduplication and child mass <1/8  CLOSED / L-91355
-literal one-prime entropy surplus           CLOSED ON PR #437
-full Lorenz determinant D_j(p,y)>=0         OPEN / FINITE-ANALYTIC
-row provenance after determinant            IMMEDIATE / L-91358
-full factor-54 composition                  PROPOSED
-Riemann Hypothesis                          UNPROVED
+nonduplicating causal packet budget            L-91355
+positive two-ledger map rigidity               L-91356
+uniform finite Lorenz cutoff                   L-91357
+single-endpoint normalized row monotonicity    L-91359
+same-index multiplicative child functor        L-91361
+P61 stopping-line packet decomposition         L-91362
+packet-envelope reduction                      T-91307
 ```
 
-Numerical reconnaissance is not a proof object. A production theorem must use directed cells or an analytic determinant factorization and must preserve the causal support cutoffs.
+The last three results replace both the Lorenz dependence and the unsafe affine child map.
+
+## 3. Exact current gate
+
+`L-91362` writes every paired root packet as
+
+\[
+ P_X=F_{61,X}
+ +\sum_{d\mid P_{61}}
+  \sum_{p\ge67}(dp)^{-1/2}P_{X/(dp)}^{(d,p)}
+\]
+
+with source-disjoint actual child packets. `L-91361` embeds every child packing by same-index scaling in all row, ordinary, radix-four and score coordinates. `T-91307` then reduces the complete route to one fixed producer theorem:
+
+> **Complete Finite-Forcing Producer (`CFFP`).** For each of the two fixed labelled `P_61` finite-forcing packets, construct one nonnegative physical row realization with ordinary and radix-four capacities, literal entropy, terminal correction, collar and common port, and bound its local deficit by a uniform constant times packet mass.
+
+A proof gives
+
+\[
+ \Lambda(X)\le C_{\rm fin}+\Lambda(X/67),
+\]
+
+hence `O(log X)=o(log^2 X)` endpoint loss and RH through the resident consumer.
+
+## 4. Correct boundary
+
+```text
+parallel-parent duplication                    CLOSED
+actual rough-child source disjointness         CLOSED
+same-index child row/capacity embedding        CLOSED
+packet-envelope recursion                      CLOSED CONDITIONAL
+continuous causal Lorenz ordering              FALSE
+CFFP complete finite-forcing producer          OPEN / RH-BEARING
+Riemann Hypothesis                             UNPROVEN
+```
