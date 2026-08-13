@@ -1,0 +1,20 @@
+{
+  "checks": 17,
+  "classification": "PASS_BINARY_NATIVE_ROW_SCORE_BUDGET",
+  "discarded_favorable_score": "r(1-r)(z-1)",
+  "native_scores": {
+    "hazard": "r^2(5z-3)",
+    "sum": "5z-3",
+    "survival": "(1-r^2)(5z-3)"
+  },
+  "row_coefficients": {
+    "hazard": "r^2",
+    "sum": "1",
+    "survival": "1-r^2"
+  },
+  "scope": "Exact symbolic one-prime target/score/row normalization only. Hall existence, directed component-row monotonicity, native J_Lambda boundary, finite collar assembly, and RH are not certified by this replay.",
+  "target_per_native_score_derivatives": {
+    "hazard": "(4-r)/(r(5z-3)^2)",
+    "survival": "(3-r)/((1+r)(5z-3)^2)"
+  }
+}
