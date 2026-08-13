@@ -1,0 +1,42 @@
+{
+  "classification": "PASS_P61_ONE_PRIME_ROW_SPLICE",
+  "crossover": "11286/325",
+  "geometry": {
+    "KR_j": 66,
+    "mass_j": 66,
+    "max_KR": 3.7869544483082,
+    "max_mass": 1.1867000188838006
+  },
+  "global": {
+    "E_at": 91,
+    "M_at": 221,
+    "beta": [
+      0.0022144006338674633,
+      0.0022144006338674633
+    ],
+    "max_abs_E": 1.15249768774792,
+    "max_abs_M": 1.3389359669022527,
+    "states": 262144
+  },
+  "large_margin": "9973/81250",
+  "p67": {
+    "F_at": "93/67",
+    "bulk_at": "181/67",
+    "lip_at": "221/67",
+    "max_F": 1.1804082972863625,
+    "max_lip": 1.3736879266899433,
+    "min_bulk_ratio": 3.7461153564110234,
+    "p": 67
+  },
+  "p67_margin": "2489/3250",
+  "p71": {
+    "F_at": "93/71",
+    "bulk_at": "191/71",
+    "lip_at": "221/71",
+    "max_F": 1.1723816616770482,
+    "max_lip": 1.3726948078952894,
+    "min_bulk_ratio": 3.8627448209221793,
+    "p": 71
+  },
+  "scope": "Directed fixed-denominator Decimal-log, exact integer square-root, and exact Fraction comparisons certify the P61 finite gates. The analytic comparison proves every p>=67 inherited row. This does not by itself certify the complete ordinary/radix-four splice or RH."
+}
