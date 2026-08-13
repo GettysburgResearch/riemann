@@ -1,1 +1,17 @@
-{"classification":"EMPIRICAL_ONLY"}
+{
+  "cases": 120,
+  "classification": "EMPIRICAL_THREE_ROUTE_RECONNAISSANCE_ONLY",
+  "j_grid": [2, 10, 20, 40, 60, 66],
+  "largest_upward_edge_used_by_left_greedy": 4,
+  "minima": {
+    "cutoff_determinant": [0.0008536086054483781, {"cutoff": 46, "j": 66, "p": 67, "y": 1.0}],
+    "full_even_odd_determinant": [0.10966195941022176, {"cutoff": 46, "j": 66, "p": 67, "y": 1.0}],
+    "inner_discrete_order_gap": [7.155381046388461e-07, {"cutoff": 689, "j": 66, "p": 1009, "y": 67.0}],
+    "literal_lorenz_row_gap": [0.0019079896612261302, {"cutoff": 46, "j": 66, "p": 67, "y": 1.0}],
+    "shift8_greedy_row_gain": [0.0019079896612261302, {"cutoff": 46, "j": 66, "p": 67, "y": 1.0}]
+  },
+  "p_grid": [67, 83, 101, 251, 1009],
+  "proof_status": "NOT_A_PROOF_OBJECT",
+  "scope": "Binary64 sparse-grid reconnaissance. It supports route selection only and proves no all-parameter inequality or RH.",
+  "y_grid": [1.0, 10.0, 30.0, 67.0]
+}
