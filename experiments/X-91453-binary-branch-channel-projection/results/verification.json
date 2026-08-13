@@ -1,0 +1,41 @@
+{
+  "checks": 38,
+  "hazard_score_parameter": "(4r+1)/(2r+1)",
+  "hazard_target_parameter": "2(r+1)/(r+2)",
+  "parameter_samples": [
+    {
+      "alpha_h": "1.05756818555709700352025246236",
+      "alpha_s": "1.35941977665073903644502891603",
+      "beta_h": "1.19636040545626825301440329285",
+      "p": "67"
+    },
+    {
+      "alpha_h": "1.05601519274329582071119533503",
+      "alpha_s": "1.35870266386575661012737974892",
+      "beta_h": "1.19182536636347339195922805690",
+      "p": "71"
+    },
+    {
+      "alpha_h": "1.05528524910871155441836184417",
+      "alpha_s": "1.35836586507718759502399892782",
+      "beta_h": "1.18968126798021829472091734279",
+      "p": "73"
+    },
+    {
+      "alpha_h": "1.04739392367801930655195664969",
+      "alpha_s": "1.35473540885709447196083538527",
+      "beta_h": "1.16597681693032763443751061676",
+      "p": "101"
+    },
+    {
+      "alpha_h": "1.01549678332021669494995463905",
+      "alpha_s": "1.34025655514284959957302499654",
+      "beta_h": "1.05923335392743717823190743141",
+      "p": "1009"
+    }
+  ],
+  "scope": "exact finite algebra only; directed Hall inputs imported; all-generation type stability and RH are not proved",
+  "survival_score_parameter": "5/3",
+  "survival_target_parameter": "2(r+2)/(r+3)",
+  "verdict": "PASS_BINARY_BRANCH_CHANNEL_PROJECTION"
+}
