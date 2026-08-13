@@ -1,0 +1,23 @@
+{
+  "classification": "PASS_PR431_CONTROLS_AND_REGENERATION",
+  "support_cutoff": {
+    "extra_even_sources": [85, 86, 87],
+    "a4_integer_square_gaps": [563, 554, 545],
+    "a5_integer_square_gaps": [1310, 1301, 1292]
+  },
+  "mode_branch_controls": [
+    {"r": "1/9", "target": "2/9", "branch_score": "1/81", "r_child_score": "1/9"},
+    {"r": "2/11", "target": "4/11", "branch_score": "4/121", "r_child_score": "2/11"},
+    {"r": "3/17", "target": "6/17", "branch_score": "9/289", "r_child_score": "3/17"}
+  ],
+  "restriction_loss_control": {
+    "parent_mass": "1",
+    "restricted_mass": "1/2",
+    "parent_loss": "7/5",
+    "restricted_loss": "7/5",
+    "false_scaled_bound": "7/10"
+  },
+  "aggregate_regeneration_controls": 3,
+  "proof_object_sha256": "8cfddb19e0414ed02c6a726ed2783d64eb71f2515bfb6b84b08751a410399cc7",
+  "scope": "Exact integer and rational controls only. This result does not certify the finite producer, packet normalization, or RH."
+}

@@ -1,0 +1,25 @@
+{
+  "classification": "PASS_SCALE_WEIGHTED_ROUGH_CONTRACTION",
+  "identity": "sqrt(X/p)||Dtilde_p z||_1 < (5/32)sqrt(X)||z||_1 for p>=67,z>=0",
+  "prime_checks": [
+    {"ell1_norm_pair": ["64/67", "2"], "p": 67, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["68/71", "2"], "p": 71, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["70/73", "2"], "p": 73, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["76/79", "2"], "p": 79, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["80/83", "2"], "p": 83, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["86/89", "2"], "p": 89, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["94/97", "2"], "p": 97, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["98/101", "2"], "p": 101, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["100/103", "2"], "p": 103, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["104/107", "2"], "p": 107, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["106/109", "2"], "p": 109, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["110/113", "2"], "p": 113, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["124/127", "2"], "p": 127, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["128/131", "2"], "p": 131, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["134/137", "2"], "p": 137, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["254/257", "2"], "p": 257, "scale_weighted_upper": "5/32"},
+    {"ell1_norm_pair": ["1006/1009", "2"], "p": 1009, "scale_weighted_upper": "5/32"}
+  ],
+  "scope": "Exact matrix algebra and rational p>64 bounds. The replay does not construct the disjoint least-prime source partition or prove a score-loss comparison.",
+  "uniform_bound": "5/32"
+}

@@ -1,0 +1,14 @@
+{
+  "classification": "PASS_SCORE_HALL_AND_COEFFICIENT_ONE_CHILD",
+  "geometric_split_checks": [
+    {"r": "1/8", "slack_score_surplus": "7/8"},
+    {"r": "1/9", "slack_score_surplus": "8/9"},
+    {"r": "1/10", "slack_score_surplus": "9/10"},
+    {"r": "1/16", "slack_score_surplus": "15/16"},
+    {"r": "1/32", "slack_score_surplus": "31/32"}
+  ],
+  "ratio_derivative_numerator": "3",
+  "scope": "Exact rational algebra plus imported directed Hall lower bounds. This does not prove the all-generation physical-column composition or RH.",
+  "score_hall_margin": "3/100",
+  "sharp_hall_margin": "3/5"
+}

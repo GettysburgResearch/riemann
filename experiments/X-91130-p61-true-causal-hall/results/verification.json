@@ -1,0 +1,50 @@
+{
+  "child_hall_gates": 55200,
+  "classification": "PASS_P61_TRUE_CAUSAL_SHIFT8_HALL",
+  "directed_cell_gates": 55052,
+  "finite_threshold_bound": 4096,
+  "large_prefix_score_lower_at_4096": "17737/1600",
+  "large_prefix_target_lower_at_4096": "4469/400",
+  "minimum_score_location": [
+    "diag",
+    66,
+    "66",
+    "69",
+    "1",
+    "69/67"
+  ],
+  "minimum_score_lower": 2.0910114169817495,
+  "minimum_target_location": [
+    "diag",
+    66,
+    "66",
+    "69",
+    "1",
+    "69/67"
+  ],
+  "minimum_target_lower": 2.08044436220983,
+  "odd_thresholds_checked": 319,
+  "proof_object_sha256": "d68de10aedfdc73033a2f21038164cd4a3a675284df89cc3475e84d461aa5d39",
+  "scope": "Fixed-point directed intervals include every parent activation boundary d/p and every child activation boundary. The finite certificate covers all odd P61 thresholds below 4096; the displayed exact corridor inequalities cover all larger thresholds. This certifies target/score Hall feasibility only, not row typing or RH.",
+  "shift": 8,
+  "small_prime_block": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61
+  ]
+}

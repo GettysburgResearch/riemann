@@ -1,0 +1,90 @@
+{
+  "classification": "PASS_FACTOR54_POSITIVE_PARITY_SHADOW",
+  "equality_hall_minimum": {
+    "cell_N": 54,
+    "certified_above": 0.11,
+    "lower": 0.11551245060961335,
+    "support": "e <= o+1",
+    "threshold": 31,
+    "x": 54.219127937418335
+  },
+  "even_squarefree_states": [
+    1,
+    6,
+    10,
+    14,
+    15,
+    21,
+    22,
+    26,
+    33,
+    34,
+    35,
+    38,
+    39,
+    46,
+    51
+  ],
+  "least_prime_recursion": {
+    "limit": 500,
+    "squarefree_states_checked": 305,
+    "unique_least_prime_toggles": 305
+  },
+  "next_prime_contraction": {
+    "next_prime": 59,
+    "one_over_59": 0.01694915254237288,
+    "root_lower": 0.01844367547103,
+    "strict": true
+  },
+  "odd_squarefree_states": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    30,
+    31,
+    37,
+    41,
+    42,
+    43,
+    47,
+    53
+  ],
+  "primes_through_53": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53
+  ],
+  "reserve_hall_minimum": {
+    "cell_N": 54,
+    "certified_above": 0.39,
+    "lower": 0.3944202939114026,
+    "support": "e <= o",
+    "threshold": 13,
+    "x": 54.219127937418335
+  },
+  "reset_root_bracket": [
+    "1844367547103/100000000000000",
+    "368873509421/20000000000000"
+  ],
+  "scope": "All asserted Hall inequalities use exact Fraction arithmetic and directed rational square-root enclosures. Decimal fields are readable summaries only."
+}

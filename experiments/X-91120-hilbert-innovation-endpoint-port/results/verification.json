@@ -1,0 +1,20 @@
+{
+  "H": [
+    ["2", "-3"],
+    ["-3", "5"]
+  ],
+  "bounded_mass_constant": "147",
+  "classification": "PASS_HILBERT_INNOVATION_ENDPOINT_PORT",
+  "endpoint_embedding_constant": "63/2",
+  "rank_one_checks": [
+    {"harmonic_over_tau2": "12192/5329", "innovation_det": "22815/16777216", "r": "1/8"},
+    {"harmonic_over_tau2": "4131/1808", "innovation_det": "13280/43046721", "r": "1/9"},
+    {"harmonic_over_tau2": "3980/1737", "innovation_det": "376239/2500000000", "r": "1/10"},
+    {"harmonic_over_tau2": "11187/4860", "innovation_det": "210000/2143588811", "r": "1/11"},
+    {"harmonic_over_tau2": "9504/4125", "innovation_det": "67595/1074954240", "r": "1/12"},
+    {"harmonic_over_tau2": "32640/14025", "innovation_det": "15215625/1099511627776", "r": "1/16"},
+    {"harmonic_over_tau2": "261888/111507", "innovation_det": "1065250125/1125899906842624", "r": "1/32"}
+  ],
+  "scope": "Exact Fraction algebra. This verifies the common quadratic port budget, not the least-prime positive source partition or RH.",
+  "three_factor_telescope": true
+}

@@ -1,0 +1,32 @@
+{
+  "F_at_1_over_55_upper": -0.0007143128230155691,
+  "F_at_root_bracket": [
+    -2.3101328594118986e-14,
+    3.116025068940107e-14
+  ],
+  "classification": "PASS_OUTER_EQUALITY_CORRECTION_ONE_CROSSING",
+  "minimum_outer_continuum_equality_weight": {
+    "cell_N": 32,
+    "lower": 0.3186174007676585,
+    "x": 33.0
+  },
+  "minimum_positive_endpoint_derivative": {
+    "cell_N": 6,
+    "knot_M": 6,
+    "lower": 0.0840989782716399
+  },
+  "minimum_positive_knot": {
+    "N": 54,
+    "lower": 0.00020274097344654679
+  },
+  "root_bracket": [
+    "1844367547103/100000000000000",
+    "368873509421/20000000000000"
+  ],
+  "root_decimal_bracket": [
+    0.01844367547103,
+    0.01844367547105
+  ],
+  "scope": "Assertions use exact Fraction arithmetic with directed rational square-root and atanh-log enclosures. Decimal fields are readable summaries only.",
+  "uniform_finite_sum_integral_error_constant_upper": 112.17000104982269
+}

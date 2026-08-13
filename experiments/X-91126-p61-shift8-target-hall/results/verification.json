@@ -1,0 +1,45 @@
+{
+  "child_envelope_checks": 2926,
+  "classification": "PASS_P61_SHIFT8_TARGET_HALL",
+  "divisor_states": 262144,
+  "maximum_child_hall_over_sqrt_y": {
+    "cell": 66,
+    "certified_below": "3",
+    "endpoint": 67,
+    "threshold": 2,
+    "upper_decimal": 2.6937923494630756
+  },
+  "minimum_nonterminal_parent_minus_child_lower_bound": {
+    "certified_above": "9/5",
+    "lower_decimal": 1.8405418611550084,
+    "threshold": 47
+  },
+  "minimum_shifted_reciprocal_prefix": {
+    "certified_above": "1/67",
+    "lower_decimal": 0.017279492587289596,
+    "threshold": 47
+  },
+  "odd_prefix_checks": 131072,
+  "scope": "Exact reciprocal prefixes and directed fixed-point square-root enclosures certify the displacement-eight Ferrers Hall inequalities for the P61 one-prime target.  The symbolic theorem separately uses the resident positive total target for terminal thresholds x<t+8. This does not certify score/row subordination or RH.",
+  "shift": 8,
+  "small_prime_block": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61
+  ]
+}

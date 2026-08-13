@@ -1,0 +1,18 @@
+{
+  "classification": "PASS_CANONICAL_ROUGH_CHILD_SOURCE_PARTITION",
+  "identity": "w_Psi(x,n)-w_Psi(x,pn)=(1-p^-1/2)w_Psi(x/p,n)+4(1-p^-1/2)sqrt(x)/n",
+  "prime_checks": [
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 67},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 71},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 73},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 79},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 83},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 89},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 97},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 101},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 127},
+    {"B_pair": ["1", "-1"], "child_scale_lt_c0": true, "p": 257}
+  ],
+  "scope": "Exact algebra in Q[r]/(r^2-1/p), plus rational factor-54 and Hall-margin checks. This does not prove the parallel least-prime source partition.",
+  "sharp_no_upward_hall_margin": "3/5"
+}

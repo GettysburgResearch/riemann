@@ -1,0 +1,17 @@
+{
+  "butterfly_levels_checked": 53,
+  "classification": "PASS_INTERVAL_SEED_POSITIVE_BUTTERFLY_LIFT",
+  "maximum_B_over_A": {
+    "level_T": 55,
+    "upper": 0.9939013471168407
+  },
+  "minimum_A_minus_B": {
+    "level_T": 55,
+    "lower": 3.801720169694919e-06
+  },
+  "monotone_edges_checked": 1431,
+  "recurrence_steps_checked": 26235,
+  "scope": "Directed Fraction/sqrt/log intervals certify A_T>B_T>0 and the uniform ratio. The recurrence induction and exact seed identity are symbolic. Baseline endpoint-weight and positive-boundary capacity compatibility are not certified.",
+  "uniform_boundary_overshoot_ratio_upper": "199/200",
+  "unit_mass_intensity_upper": 1604.1824781776772
+}

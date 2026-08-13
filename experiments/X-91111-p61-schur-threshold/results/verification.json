@@ -1,0 +1,50 @@
+{
+  "classification": "PASS_FACTOR54_P61_BOOLEAN_AND_SCHUR_THRESHOLD",
+  "coefficient_check_limit": 100000,
+  "divisor_states": 262144,
+  "endpoint_mass": {
+    "decimal": 4.633671572404227,
+    "exact": "399441300081868800/86204059532560853",
+    "upper": "14/3"
+  },
+  "equality_global_minimum": {
+    "decimal": 0.3186174007676585,
+    "lower": "10650343676984704506136309079447374459435137689677524650238187985938193/33426748355000000000000000000000000000000000000000000000000000000000000",
+    "x": 33
+  },
+  "next_prime": 67,
+  "product_P61": 117288381359406970983270,
+  "reserve_global_minimum": {
+    "decimal": 0.0,
+    "lower": "0",
+    "x": 1
+  },
+  "reserve_minimum_for_x_ge_2": {
+    "decimal": 0.41421356237309503,
+    "lower": "828427124746190097603377448419396157139343750753896146353357/2000000000000000000000000000000000000000000000000000000000000",
+    "x": 2
+  },
+  "rough_prime_renewal_coefficient_checks": 100000,
+  "schur_threshold_gate": "81*67 < 76^2",
+  "scope": "All Boolean sign assertions use exact integer/Fraction arithmetic and directed fixed-denominator square-root enclosures. The renewal replay is coefficient-wise integer arithmetic. The p>=67 Schur threshold is an exact integer-square comparison.",
+  "small_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61
+  ]
+}

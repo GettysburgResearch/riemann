@@ -1,0 +1,12 @@
+{
+  "affine_real_column_checks": 146026,
+  "classification": "PASS_POSITIVE_FUNCTOR_COLOR_ERASURE",
+  "nonmultiple_physical_column_checks": 128736,
+  "rough_threshold": {
+    "certificate": "81*67 < 76^2",
+    "conclusion": "1/sqrt(p)-1/p < 1/9 for p>=67",
+    "first_prime": 67
+  },
+  "scope": "Exact Fraction arithmetic. Synthetic port checks illustrate the general PSD-preservation proof; the theorem itself is linear-algebraic.",
+  "synthetic_branch_port_checks": 119
+}

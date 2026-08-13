@@ -1,0 +1,15 @@
+{
+  "affine_real_column_checks": 238385,
+  "atomized_carry_checks": 1041250,
+  "binomial_injection_checks": 11340,
+  "classification": "PASS_AFFINE_PASCAL_DILATION_AND_SCORE_AMPLIFICATION",
+  "integer_beta_checks": 5050,
+  "scope": "Exact integer and Fraction arithmetic. The checker verifies the continuous-column Pascal extension, affine covariance, atomized carry covariance, and the finite binomial inequalities underlying G_(m(n+1)-1) >= m G_n. The general proofs are in L-91318.",
+  "tested_lift_factors": [
+    2,
+    3,
+    5,
+    7,
+    59
+  ]
+}

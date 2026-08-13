@@ -1,0 +1,13 @@
+{
+  "cell_derivative_checks": 1431,
+  "classification": "PASS_NORMALIZED_COMPONENT_ROW_MONOTONICITY",
+  "minimum_derivative_numerator": {
+    "cell_N": 54,
+    "certified_above": "1/20",
+    "lower": 0.06492395944762279,
+    "right_endpoint": "100000000000000/1844367547103",
+    "row_n": 53
+  },
+  "scope": "Directed Fraction/sqrt/log intervals certify monotonicity of Q_Y(n)/(sqrt(Y)-1) on the full factor-54 window. Hall coupling and exact row positivity are proved symbolically in L-91322.",
+  "window_upper": "100000000000000/1844367547103"
+}

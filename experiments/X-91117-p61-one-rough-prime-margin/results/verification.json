@@ -1,0 +1,33 @@
+{
+  "classification": "PASS_P61_ONE_ROUGH_PRIME_MARGIN",
+  "directed_endpoint_channel_checks": 1048414,
+  "divisor_cells": 262144,
+  "exact_margin_checks": [
+    "3/40 - 1/67 > 3/50",
+    "9/100 - 2/67 > 3/50"
+  ],
+  "first_rough_prime": 67,
+  "minimum_gate_margins": {
+    "1": {
+      "cell_left": 91,
+      "cell_right": 93,
+      "decimal": 0.0027554756479038025,
+      "lower": "10099539956809380914480297405890864918983182436650653065955702971376825416893688678064662899350976502529950063272797531/3665261917481467843227187500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "x": 91
+    },
+    "2": {
+      "cell_left": 70,
+      "cell_right": 74,
+      "decimal": 0.007522258457824966,
+      "lower": "25207814819582833691737006156134260993549227350297544895539091532581774221412448784235725451461294316844595603822144109/3351096610268770599522000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "x": 74
+    }
+  },
+  "normalized_gates": {
+    "equality": "9/100",
+    "reserve": "3/40"
+  },
+  "one_rough_prime_margin": "3/50",
+  "scope": "All forcing gates use exact integer/Fraction arithmetic and directed fixed-denominator inverse-square-root enclosures. The theorem concerns one new least rough prime per reset; it does not assert scalar tensorization over distinct rough primes.",
+  "small_primes": [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61]
+}

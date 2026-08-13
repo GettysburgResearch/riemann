@@ -1,0 +1,33 @@
+{
+  "classification": "PASS_ONE_ROUGH_PRIME_HALL_CORRIDOR",
+  "equality": {
+    "cell_N": 54,
+    "certified_above": "1/400",
+    "checks": 2148,
+    "minimum_lower_decimal": 0.0026457476284583443,
+    "parameter_endpoint": 1,
+    "threshold": 31,
+    "x": 54.219127937418335
+  },
+  "equality_parameter_interval": [
+    "2",
+    "2(1+1/sqrt(67))"
+  ],
+  "equality_support": "e <= o+1",
+  "reserve": {
+    "cell_N": 54,
+    "certified_above": "8/25",
+    "checks": 2148,
+    "minimum_lower_decimal": 0.3248325526058641,
+    "parameter_endpoint": 1,
+    "threshold": 13,
+    "x": 54.219127937418335
+  },
+  "reserve_parameter_interval": [
+    "1",
+    "1+1/sqrt(67)"
+  ],
+  "reserve_support": "e <= o",
+  "rough_prime_floor": 67,
+  "scope": "Directed Fraction/square-root intervals certify both parameter endpoints on every reset cell and threshold. Hall margins are affine in the parameter, so the complete intervals follow. This is a one-new-prime reset-boundary theorem, not multiprime scalar tensorization."
+}

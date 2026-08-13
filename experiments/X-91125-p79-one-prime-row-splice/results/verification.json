@@ -1,0 +1,43 @@
+{
+  "classification": "PASS_P79_ONE_PRIME_ROW_SPLICE",
+  "crossover": "328/9",
+  "geometry": {
+    "KR_j": 82,
+    "mass_j": 82,
+    "max_KR": 3.8653634562569104,
+    "max_mass": 1.2150313676695992
+  },
+  "global": {
+    "E_at": 2717,
+    "M_at": 341,
+    "beta": [
+      0.0013424741937663638,
+      0.0013424741937663638
+    ],
+    "max_abs_E": 1.3350166016823197,
+    "max_abs_M": 1.4292396711387123,
+    "states": 4194304
+  },
+  "large_margin": "18779/1417500",
+  "p83": {
+    "F_at": "2769/83",
+    "bulk_at": "233/83",
+    "lip_at": "589/83",
+    "max_F": 1.4078633346416227,
+    "max_lip": 1.461757633807528,
+    "min_bulk_ratio": 3.8777489267871528,
+    "p": 83
+  },
+  "p83_margin": "38381/90000",
+  "p89": {
+    "F_at": "3445/89",
+    "bulk_at": "233/89",
+    "lip_at": "341/89",
+    "max_F": 1.4010612249974905,
+    "max_lip": 1.4593920581738729,
+    "min_bulk_ratio": 4.022437118733291,
+    "p": 89
+  },
+  "runtime_seconds": 10.844960451126099,
+  "scope": "Directed fixed-denominator Decimal-log, exact integer square-root, and exact Fraction comparisons certify the finite gates. The analytic comparison then proves every p>=83 inherited row. This does not certify the remaining low-prefix target transport or RH."
+}
