@@ -1,10 +1,18 @@
-# L-91549 — The affine child lift is score-loss nonexpansive for typed packets
+# L-91549 — The affine child lift is score-loss nonexpansive on matched fibers, but is not physically detail-capacity faithful
+
+> **CORRECTED AFTER `R-91558`.**  The entropy-amplification and conditional
+> score-loss inequalities below are exact.  The former claim that the affine
+> lift supplied a capacity-faithful fixed-67 physical assembly is false.
+> `R-91558` gives the exact canonical counterexample `Y=3`, row `Q_3`,
+> `m=67`, parent column `Q=200`.  The fixed-67 reset must use the nested
+> identity embedding of `L-91559`, not this affine lift.
 
 Claim ID: `L-91549`  
-Status: **PROVED EXACT FIXED-AFFINE LOSS THEOREM**  
+Status: **PARTIALLY RETAINED SCORE THEOREM / PHYSICAL DETAIL-CAPACITY APPLICATION REFUTED**  
 Created: 2026-08-13  
-Depends on: `L-91318`, `L-91329`, `L-91540/L-91547`  
-RH status: **unproved pending native-loss integration audit**
+Corrected: 2026-08-13  
+Depends on: `L-91318`; corrected by `R-91558/L-91559`  
+RH status: **unproved**
 
 ## 1. Child packing and loss
 
@@ -16,7 +24,7 @@ source score
  \tag{L-91549.1}
 \]
 
-Let `d(n)>=0` be any feasible finite child row packing with entropy score
+Let `d(n)>=0` be a finite child row packing with entropy score
 
 \[
  \mathcal S_Y(d)=\sum_nd(n)G_n.
@@ -32,11 +40,11 @@ Its packet loss is
  \tag{L-91549.3}
 \]
 
-No positivity of `ell_Y` is required for the algebra below.
+No positivity of `ell_Y` is required.
 
-## 2. Exact affine lift
+## 2. Exact affine score lift
 
-Use the affine map
+Use
 
 \[
  \Phi_m(n)=m(n+1)-1
@@ -54,11 +62,12 @@ and define
 
 with zero coefficients off the affine image.
 
-`L-91318` proves simultaneously:
+`L-91318` proves:
 
-1. exact matched-fiber carry covariance;
-2. nonnegative leakage on every other physical column;
-3. entropy amplification
+1. exact carry covariance on the matched fiber `Q=mq`;
+2. exact radix-four covariance on that same matched fiber;
+3. nonnegativity of the lifted row;
+4. entropy amplification
    \[
    \boxed{
    \mathcal S_X(D)
@@ -68,22 +77,13 @@ with zero coefficients off the affine image.
    \tag{L-91549.6}
    \]
 
-The target covariance is exactly the critical factor `m^-1/2` already present
-in (L-91549.5), so no second branch coefficient is introduced.
+The fourth statement is global and independent of capacity feasibility.
 
-## 3. Parent branch score has coefficient one
+## 3. Conditional inherited-loss inequality
 
-The positive typed source decomposition of `L-91540/L-91547` assigns to this
-child the coefficient-one declared score
-
-\[
- J_Y.
- \tag{L-91549.7}
-\]
-
-All endpoint change appears in the positive parent residual; it does not
-multiply the inherited child score.  Therefore the parent score deficit carried
-by the lifted child is
+If an external theorem has already proved that `D` is admissible in the parent
+physical capacity ledger and if the child declared score enters with
+coefficient one, then
 
 \[
 \begin{aligned}
@@ -93,27 +93,27 @@ by the lifted child is
 \end{aligned}
 \]
 
-Hence
+Hence, under those two hypotheses,
 
 \[
  \boxed{
  \ell_X^{\rm inherited}(D)
  \le\ell_Y(d).
  }
- \tag{L-91549.8}
+ \tag{L-91549.7}
 \]
 
-The affine lift is loss nonexpansive.  In fact it has the favorable reserve
+The favorable score reserve is
 
 \[
  \mathcal S_X(D)-\mathcal S_Y(d)
  \ge(\sqrt m-1)\mathcal S_Y(d).
- \tag{L-91549.9}
+ \tag{L-91549.8}
 \]
 
-## 4. Target-mass scaling
+## 4. Target-mass homogeneity
 
-If the actual child packet has target mass `omega>=0`, positive homogeneity gives
+For an actual child packet of target mass `omega>=0`, positive homogeneity gives
 
 \[
  J_Y\mapsto\omega J_Y,
@@ -121,58 +121,97 @@ If the actual child packet has target mass `omega>=0`, positive homogeneity give
  d\mapsto\omega d,
  \qquad
  \ell_Y\mapsto\omega\ell_Y.
+ \tag{L-91549.9}
+\]
+
+Therefore, whenever the externally supplied parent-capacity embedding exists,
+
+\[
+ \boxed{
+ \ell_X^{\rm inherited}
+ \le\omega\ell_Y(\widehat d).
+ }
  \tag{L-91549.10}
 \]
 
-Applying (L-91549.8) to the scaled packet yields
+This algebra never creates a factor `sqrt(m)`, `m`, or `m^-1/2` in front of
+the child loss.
+
+## 5. The former physical-capacity application is false
+
+Matched-fiber covariance does not imply feasibility at unmatched physical
+columns.  Positive ordinary carry outside the matched fiber is adverse in an
+upper-capacity problem, and the radix-four operator is not positive.
+
+`R-91558` takes the canonical child component packet
 
 \[
- \boxed{
- \ell_X^{\rm inherited}
- \le\omega\ell_Y(\widehat d),
- }
+ d=Q_3,
+ \qquad
+ d(2)=\frac3{\sqrt2}\log\frac32,
  \tag{L-91549.11}
 \]
 
-where `widehat d` is target-normalized.  Thus the inherited loss coefficient is
-at most the child target mass.  There is no factor `sqrt(m)`, `m`, or
-`m^-1/2` multiplying the loss.
-
-For the normative reset of `L-91547`, `m=67` for both child types.
-
-## 5. Several children and one physical quantization
-
-Apply (L-91549.5) to every positive child endpoint measure, push all images into
-the parent continuum coordinate, and sum.  `L-91329` quantizes this total measure
-once.  Positivity and linearity preserve (L-91549.11) under the sum:
+which is detail feasible at endpoint `3`.  Its affine `m=67` image at endpoint
+`201` consumes at physical detail column `200`
 
 \[
- \boxed{
- \ell_X^{\rm inherited}
- \le\sum_b\omega_b
-  \ell_{Y_b}(\widehat d_b).
- }
+ \frac{597}{201\sqrt{134}}\log\frac32
  \tag{L-91549.12}
 \]
 
-The one global safety factor, top omission and collar add only their resident
-bounded current-generation debt.
+while the available target is only
 
-## 6. Scope firewall
+\[
+ \frac1{\sqrt{200}}\log\frac{201}{200}.
+ \tag{L-91549.13}
+\]
 
-This theorem concerns the score deficit of an already identified positive typed
-child packet.  It does not prove that the signed arithmetic source produces the
-child, nor that the typed packet loss is the same object as the native loss
-consumed by PR `#352`; that final identification is a separate audit.
+The first quantity is strictly larger.  Thus the following old implication is
+withdrawn:
 
 ```text
-matched-fiber capacity covariance                    EXACT
-nonmatched physical leakage                          POSITIVE
-entropy score amplification                          EXACT
-coefficient-one typed child score                    EXACT ON L-91540/47
-inherited affine score loss <= child loss             EXACT
-loss coefficient <= target mass                      EXACT
-fixed-67 affine normalization joint                  CLOSED
-native PR352 loss identification                      AUDIT REQUIRED
+child detail feasible
+ -> affine fixed-67 image detail feasible at the parent.
+```
+
+Likewise, positivity and linearity alone do not justify summing arbitrary
+affinely lifted finite children and invoking `L-91329`; that theorem requires
+an independently proved positive endpoint-measure identity before
+quantization.
+
+## 6. Correct fixed-67 replacement
+
+For the deterministic fixed-67 architecture, no dilation is necessary.  The
+child and parent rows already live in the same physical row space.
+`L-91559` proves the exact nested identity
+
+\[
+ d_X=a(Q_X-Q_{X/67})+d_{X/67},
+ \tag{L-91549.14}
+\]
+
+with coefficientwise nonnegative current row and exact ordinary/radix-four
+capacity replacement.  Its score is
+
+\[
+ \mathcal S(d_X)
+ =a[\mathcal E(X)-\mathcal E(X/67)]
+  +\mathcal S(d_{X/67}),
+ \tag{L-91549.15}
+\]
+
+so the inherited loss again has coefficient one, now without any capacity gap.
+
+## 7. Boundary
+
+```text
+matched-fiber affine carry covariance                EXACT
+matched-fiber affine detail covariance               EXACT
+affine entropy amplification                         EXACT
+affine inherited-loss inequality                     EXACT CONDITIONAL
+unmatched physical detail feasibility                FALSE / R-91558
+fixed-67 affine capacity joint                        WITHDRAWN
+fixed-67 identity-embedding capacity joint            EXACT / L-91559
 Riemann Hypothesis                                   UNPROVEN
 ```
