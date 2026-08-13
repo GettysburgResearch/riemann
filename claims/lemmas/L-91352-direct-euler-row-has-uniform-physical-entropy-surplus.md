@@ -1,10 +1,11 @@
 # L-91352 — The direct `P_79` Euler residual row has a uniform physical-entropy surplus
 
 Claim ID: `L-91352`  
-Status: **PROPOSED COMPLETE EXACT/EXPLICIT REPAIR THEOREM — INDEPENDENT REVIEW REQUIRED**  
+Status: **PROPOSED COMPLETE EXACT/EXPLICIT REPAIR THEOREM — INDEPENDENT CONFIRMATION AVAILABLE**  
 Created: 2026-08-13  
+Updated: 2026-08-13 with independent `L-91353/X-91311` confirmation  
 Frozen main parent: `d688cc7cb73eea9e50f10352a50516ab2c4f4625`  
-Depends on: exact component entropy `R-91552.4`; direct row identity `L-91351`; inherited-row positivity `L-91346`; positive truncated Euler factorization `L-91317`; Eberl, *Concrete bounds for Chebyshev's prime counting functions* (AFP, 2024), theorem `psi(x)>=0.9x` for `x>=41`; replay `X-91130`  
+Depends on: exact component entropy `R-91552.4`; direct row identity `L-91351`; inherited-row positivity `L-91346`; positive truncated Euler factorization `L-91317`; Eberl, *Concrete bounds for Chebyshev's prime counting functions* (AFP, 2024), theorem `psi(x)>=0.9x` for `x>=41`; replay `X-91130`; independent theorem `L-91353/X-91311`  
 RH status: **unproved**
 
 ## 1. Physical entropy, not declared source score
@@ -40,7 +41,7 @@ and retain the exact finite Euler row
  =\sum_{d\mid P}\frac{\mu(d)}{\sqrt d}Q_{x/d}(j)
 \]
 
-with causal zero extension. Its literal average-binomial entropy is
+with causal zero extension.  Its literal average-binomial entropy is
 
 \[
 \boxed{
@@ -92,7 +93,7 @@ Consequently
 \tag{L-91352.3}
 \]
 
-This is a coefficientwise positive arithmetic formula. It also explains why a
+This is a coefficientwise positive arithmetic formula.  It also explains why a
 scalar source label need not equal the row entropy: the row contains a positive
 rough multiplier `a` in addition to the prime-power variable `b`.
 
@@ -123,7 +124,7 @@ For every term with `ab<=y`, its residual logarithmic coefficient is
 \tag{L-91352.5}
 \]
 
-Terms with `y<ab<=x` occur only in the parent and are also positive. Keeping
+Terms with `y<ab<=x` occur only in the parent and are also positive.  Keeping
 only the subfamily `a=1` gives
 
 \[
@@ -228,7 +229,7 @@ Then
 \]
 
 The ramp `R` is continuous at every prime-power activation because the entering
-term has logarithm zero. Hence `F_p` is strictly increasing on the complete
+term has logarithm zero.  Hence `F_p` is strictly increasing on the complete
 real interval `1<=y<83`.
 
 At `y=1`, the function
@@ -310,7 +311,7 @@ For
 \]
 
 the positive truncated Euler factorization shows that adjoining a new prime
-preserves positivity. The exact recurrence
+preserves positivity.  The exact recurrence
 
 \[
  F_{a,Qq}(X)=F_{a,Q}(X)-q^{-1/2}F_{a,Q}(X/q)
@@ -370,7 +371,7 @@ Equations (L-91352.15) and (L-91352.18) give
 Therefore, provided the inherited-row positivity theorem `L-91346` and the
 resident exact current-frontier/collar assembly survive review in the same row
 normalization, the direct current-generation arithmetic row has strictly
-negative physical score loss. The false scalar inequality refuted in
+negative physical score loss.  The false scalar inequality refuted in
 `R-91310` is not needed.
 
 This repair is stronger than the original claim:
@@ -383,10 +384,36 @@ correct physical statement:
     literal component-row entropy > declared score and target.
 ```
 
-## 8. Scope firewall
+## 8. Independent elementary confirmation
 
-This theorem does not establish the complete factor-54 proof by itself. It
-repairs one exact interface only. The following still require independent
+`L-91353/X-91311` independently reconstructs the same raw-row conclusion without
+using the imported bound (L-91352.8).  Its proof consists of:
+
+```text
+all 4,194,304 P_79 activation states;
+all real endpoint cells through 10,000;
+an elementary central-binomial/prime-power lower bound for the tail;
+a compact child-corridor upper bound.
+```
+
+It obtains, for both the target and the declared source score,
+
+\[
+ \boxed{
+ \mathcal E_{P,p}(py)-\mathfrak T_{Pp}(py)>\frac{86}{9},
+ \qquad
+ \mathcal E_{P,p}(py)-\mathfrak S_{Pp}(py)>\frac{86}{9}.
+ }
+ \tag{L-91352.20}
+\]
+
+This is a weaker asymptotic margin than (L-91352.19), but it is a second,
+source-independent certification of the sign needed at the raw-row interface.
+
+## 9. Scope firewall
+
+This theorem does not establish the complete factor-54 proof by itself.  It
+repairs one exact interface only.  The following still require independent
 source-bound review:
 
 ```text
@@ -400,10 +427,10 @@ substochastic recurrence and the final loss-to-RH consumer.
 ```text
 exact component-row entropy                       EXACT
 positive von Mangoldt convolution                 EXACT
-uniform physical entropy > (4/3)sqrt(py)          EXACT FROM IMPORTED PSI BOUND
-source target/score upper corridor                EXACT
+uniform physical entropy > target and score       TWO INDEPENDENT PROOFS
 false scalar score-over-target surplus            NOT USED
-current arithmetic physical loss                  STRICTLY FAVORABLE, CONDITIONAL ON EXACT ROW ASSEMBLY
+current arithmetic physical loss                  FAVORABLE AT THE RAW-ROW LEVEL
+finite-frontier entropy preservation              OPEN / RH-BEARING
 full factor-54 composition                        REVIEW REQUIRED
 Riemann Hypothesis                                UNPROVEN
 ```
