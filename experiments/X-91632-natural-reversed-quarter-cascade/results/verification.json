@@ -1,0 +1,22 @@
+{
+  "atanh_terms": 24,
+  "beta_nonnegative_cells": 0,
+  "checks": 50689,
+  "classification": "PASS_NATURAL_REVERSED_QUARTER_CASCADE_K4_ENDPOINT_CERTIFICATE",
+  "common_cells": 16896,
+  "digits": 24,
+  "maximum_location": [
+    "open",
+    256,
+    256,
+    "1",
+    [1, 4, 16, 64, 256],
+    -50.713279228041586,
+    -50.713279228041586
+  ],
+  "maximum_upper_decimal": "-50.713279228041585611",
+  "maximum_upper_scaled_integer": "-50713279228041586751036503",
+  "runtime_seconds": 3.774075984954834,
+  "scale_integer": "1000000000000000000000000",
+  "scope": "Exact integer/fixed-point interval arithmetic. Square roots use integer isqrt enclosures; logarithms use atanh partial sums with a positive rigorous tail. On each common cell beta<0, so the only critical point is a minimum and both one-sided endpoints suffice. Activated knot values are checked separately. Scalar sign only; no physical capacity theorem or RH."
+}
