@@ -1,0 +1,10 @@
+{
+  "K_upper_decimal": -0.0012235131450945846,
+  "classification": "PASS_GLOBAL_SCORE_NORMALIZED_COMPONENT_MONOTONICITY_REDUCTION",
+  "eta_lower_decimal": 0.0026794228096793955,
+  "large_Y_start": 83,
+  "minimum_bracket_decimal": 0.02826663895660755,
+  "minimum_row": 66,
+  "rows_checked": 65,
+  "scope": "Exact rational arithmetic and directed square-root/logarithm intervals certify the 65 fixed large-Y gates. This retained summary omits the enormous exact fraction strings emitted by the checker. Together with the finite-window theorem, this proves global single-endpoint score-normalized component monotonicity; it does not prove causal monotonicity, the row determinant, or RH."
+}

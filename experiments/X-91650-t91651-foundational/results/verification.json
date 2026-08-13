@@ -1,0 +1,22 @@
+{
+  "analytic_gate": {
+    "D67_lower": 1.276400719554967,
+    "D67_upper": 1.276400719554967,
+    "certified_above": "1",
+    "corrects_historical_value": "3.2764"
+  },
+  "classification": "PASS_T91651_FOUNDATIONAL_REPLAY",
+  "formal_rational_test": {
+    "child_cancellation": "0",
+    "child_mass": "16121/490050",
+    "child_mass_gate": "1/8",
+    "survival_plus_hazards": "1"
+  },
+  "proof_object_sha256": "6ee53731cd02f9115fe0e5f76ccfa3cd383045c0f1bfd1b2ddbb007174dd0280",
+  "root_coefficient_mass_gate": {
+    "active_nodes_strictly_below": 55,
+    "mass_upper": 54,
+    "per_node_coefficient_upper": 1
+  },
+  "scope": "This standard-library replay checks the exact coefficient algebra, the strict child-mass gate, and a directed base value D(67)>1. It does not independently certify the imported finite Hall/collar theorems or the complete RH composition."
+}

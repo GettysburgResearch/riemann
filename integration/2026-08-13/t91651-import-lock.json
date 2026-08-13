@@ -1,0 +1,21 @@
+{
+  "schema": "t91651-import-lock-v1",
+  "imports": {
+    "L91355": ["claims/lemmas/L-91355-constant-mode-hazard-weights-give-a-nonduplicating-causal-packet-budget.md", "6cf936e913a12d037d218d69e68021579fdffaaf"],
+    "L91406": ["claims/lemmas/L-91406-endpoint-packet-deficit-is-homogeneous-and-subadditive.md", "cd497b657933feaffbf83f00a596180a14c574ca"],
+    "T91401": ["claims/theorems/T-91401-packet-envelope-substochastic-reset-consumer.md", "ff6fd06eb079ea6879197c8a75eca972f89f04a7"],
+    "L91340": ["claims/lemmas/L-91340-finite-forcing-has-a-positive-score-exact-target-subordinate-kernel-representation.md", "7f5b242f022cf4449cc1dd29e26e3cef0241ef82"],
+    "L91341": ["claims/lemmas/L-91341-score-normalized-component-monotonicity-lifts-the-positive-forcing-to-every-row.md", "26a7aa577cff529981bcb1b90d6a2ad5b66f023c"],
+    "L91110": ["claims/lemmas/L-91110-positive-martingale-bspline-quantization-is-score-favorable.md", "759772291997cf979cd77e409021cd934408a645"],
+    "L91114": ["claims/lemmas/L-91114-finite-continuum-mismatch-gains-one-carry-derivative.md", "40a333d70a7c61eaef36c3d4483825b283bbcd6f"],
+    "L91115": ["claims/lemmas/L-91115-fixed-top-omission-closes-the-terminal-detail-annulus.md", "0f02ceda21979b7823fd3cc8eaf7741cca179b64"],
+    "L90029": ["claims/lemmas/L-90029-radix-four-detail-packing-has-positive-target-and-positive-endpoint-atoms.md", "11dfb291596c634216b45132a3d6b075af4463bc"],
+    "L91112": ["claims/lemmas/L-91112-exact-equality-row-peel-removes-all-three-collars.md", "b2ab7854622234ef0a7f7afb9f510e1d6574cab8"],
+    "L90027": ["claims/lemmas/L-90027-finite-endpoint-atoms-have-positive-radix-four-column-details.md", "e30dd2e45aaebe8407762912d2520645ad226249"]
+  },
+  "review_boundary": [
+    "reconstruct the finite root and correction constants",
+    "audit the endpoint comparison sign and normalization",
+    "do not treat the proposal as an accepted proof"
+  ]
+}
