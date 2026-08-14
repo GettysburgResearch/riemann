@@ -6,7 +6,7 @@ It checks:
 
 ```text
 all local dependency paths exist;
-all local Git blob hashes match the final manifest;
+all local Git blob hashes match the final v2 manifest;
 all identifiers and paths are unique;
 no placeholder blob is present;
 R-91659/L-91670/L-91671/T-91656 are load bearing;
@@ -21,9 +21,10 @@ Run from the repository root:
 
 ```bash
 python3 experiments/X-91671-final-single-sharp-lock/verify.py \
-  --manifest integration/2026-08-14/t91656-dependency-manifest.json \
+  --manifest integration/2026-08-14/t91656-dependency-manifest-v2.json \
   --json experiments/X-91671-final-single-sharp-lock/results/verification.json
 ```
 
-A PASS result certifies the declared repository freeze only. It does not prove
-the mathematics or RH.
+The earlier `t91656-dependency-manifest.json` is superseded. A PASS result
+certifies the declared repository freeze only. It does not prove the mathematics
+or RH.
