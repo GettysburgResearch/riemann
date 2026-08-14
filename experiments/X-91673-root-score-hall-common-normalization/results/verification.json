@@ -1,0 +1,37 @@
+{
+  "classification": "PASS_ROOT_SCORE_HALL_COMMON_NORMALIZATION_ALGEBRA",
+  "common_normalization_algebra": {
+    "finite_endpoint_integration": true,
+    "one_global_quantizer": true,
+    "ordinary_response_commutes": true,
+    "radix_four_via_two_ordinary_maps": true,
+    "row_bonus_nonnegative": true,
+    "same_index_scaling": true,
+    "score_identity": true,
+    "target_slack_nonnegative": true
+  },
+  "directed_root_checks": {
+    "hall_checks": 1074,
+    "hall_minimum_lower": "> 0.04406045",
+    "required_hall_margin": "> 0.03",
+    "row_checks": 1431,
+    "row_minimum_lower": "> 0.3512584",
+    "required_row_margin": "> 0.05"
+  },
+  "root_window": {
+    "c0_bracket": [
+      "0.01844367547103",
+      "0.01844367547105"
+    ],
+    "x_upper": "< 54.2192"
+  },
+  "scope": "Exact Fraction arithmetic with directed rational square-root and logarithm intervals. The replay certifies the finite root domain, common score/target/row algebra, response commutation, endpoint integration, and the stopped-leaf firewall. It does not certify the imported analytic endpoint producer, the external endpoint-to-RH chain, or RH.",
+  "stopped_leaf_firewall": {
+    "hall_transport_exists": false,
+    "normalized_margin": "-2.140 < margin < -2.139",
+    "p": 67,
+    "parent": 871,
+    "physical_margin": "strictly negative",
+    "y": 13
+  }
+}
