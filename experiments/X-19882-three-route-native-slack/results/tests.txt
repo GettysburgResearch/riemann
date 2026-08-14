@@ -1,0 +1,16 @@
+test_bad_geometric_parameter_fails (test_verify.ThreeRouteVerifierTests.test_bad_geometric_parameter_fails) ... ok
+test_child_overallocation_fails (test_verify.ThreeRouteVerifierTests.test_child_overallocation_fails) ... ok
+test_child_slack_above_capacity_fails (test_verify.ThreeRouteVerifierTests.test_child_slack_above_capacity_fails) ... ok
+test_control_passes (test_verify.ThreeRouteVerifierTests.test_control_passes) ... ok
+test_duplicate_passive_node_fails (test_verify.ThreeRouteVerifierTests.test_duplicate_passive_node_fails) ... ok
+test_graph_depth_mutation_fails (test_verify.ThreeRouteVerifierTests.test_graph_depth_mutation_fails) ... ok
+test_graph_feature_mutation_fails (test_verify.ThreeRouteVerifierTests.test_graph_feature_mutation_fails) ... ok
+test_negative_passive_weight_fails (test_verify.ThreeRouteVerifierTests.test_negative_passive_weight_fails) ... ok
+test_negative_root_slack_fails (test_verify.ThreeRouteVerifierTests.test_negative_root_slack_fails) ... ok
+test_noncontractive_recurrence_fails (test_verify.ThreeRouteVerifierTests.test_noncontractive_recurrence_fails) ... ok
+test_root_capacity_identity_mutation_fails (test_verify.ThreeRouteVerifierTests.test_root_capacity_identity_mutation_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.005s
+
+OK
