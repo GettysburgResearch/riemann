@@ -1,0 +1,53 @@
+{
+  "child_interface_firewall": {
+    "classification": "PASS_CHILD_INTERFACE_ONE_SCALAR_FIREWALL",
+    "same_scalar_identity": "2*(sqrt(67)+1)=(2*sqrt(67)+1)+1",
+    "sign_proof": "2>3/sqrt(134) because 4*134>9; plus 4/sqrt(67)>0",
+    "target_atom_difference": "2+4/sqrt(67)-3/sqrt(134)"
+  },
+  "classification": "PASS_TARGET_LORENZ_VECTOR_PRIMAL_DUAL",
+  "controls": [
+    {
+      "atoms": 4,
+      "coordinates": 2,
+      "cutoff_index": 1,
+      "row_maxima": [
+        "39",
+        "25"
+      ],
+      "score_min": "8",
+      "target_mass": "5",
+      "vertices": 7
+    },
+    {
+      "atoms": 3,
+      "coordinates": 1,
+      "cutoff_index": 1,
+      "row_maxima": [
+        "31/2"
+      ],
+      "score_min": "5/2",
+      "target_mass": "7/2",
+      "vertices": 4
+    }
+  ],
+  "exact_arithmetic": "fractions and integer square comparisons",
+  "fixture_count": 242,
+  "not_proved_by_replay": [
+    "the P61 arithmetic Target-Lorenz row margins",
+    "the live atomwise native-root allocation",
+    "the Riemann Hypothesis"
+  ],
+  "proof_object_sha256": "1bef66a2fdb2cf23fdb3cbe880ca35fb9f14d487f81719d0e68ddeb5e262f491",
+  "proved_by_replay": [
+    "greedy exact-target removal maximizes every nonincreasing coordinate",
+    "the same removal minimizes every nondecreasing score coordinate",
+    "cutoff dual upper and lower bounds equal the greedy objectives",
+    "a failed coordinate demand is separated from every feasible removal",
+    "the causal target cutoff cannot globally depend on one scalar",
+    "the Lorenz margin dominates the full signed-packet cutoff determinant"
+  ],
+  "rh_established_by_replay": false,
+  "total_coordinate_vertex_checks": 26380,
+  "total_vertex_checks": 9428
+}
