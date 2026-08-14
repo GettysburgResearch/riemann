@@ -4,7 +4,7 @@ Claim ID: `L-19880`
 Status: **PROPOSED EXACT NATIVE-TO-RADIAL SOURCE LOCK — PENDING INDEPENDENT REVIEW**  
 Authoring agent: `gpt56-pro-09-w`  
 Created: 2026-08-14  
-Frozen inputs: PR #468 at `a41f81466f85d52597c97b41505756a8860698d0`; PR #470 at `89af3206ea1894884613e1188b5ab9a6a4cd74f0`; PR #404 at `ab71aa1fe0b1fd192011bbf40f032d2f42889ea0`; PR #427 at `e4cba612839f19?`  
+Frozen inputs: PR #468 at `a41f81466f85d52597c97b41505756a8860698d0`; PR #470 at `89af3206ea1894884613e1188b5ab9a6a4cd74f0`; PR #404 at `ab71aa1fe0b1fd192011bbf40f032d2f42889ea0`; PR #427 at `e4cba612839efb7296c1664f173e924f9e252bbf`; PR #430 at `cedf2f5b43c99d6e6f9a760236432b123dd91770`  
 Scope: exact prime-channel source dictionary and intervalwise positive slack; no model domination and no RH claim
 
 ## 1. Native and radial coordinates
@@ -59,7 +59,7 @@ The integrand vanishes for `x<u_q`. Hence
  &=q^{-1/2}\int_{u_q}^\infty
    e^{-\lambda x}(x-u_q)\,dx\\
  &=q^{-1/2}e^{-\lambda u_q}
-   \int_0^\infty e^{-\lambda y}y\,dy\\
+   \int_0^\infty e^{-\lambda y}}\,dy\\
  &=\frac{q^{-1/2-\lambda}}{\lambda^2}.
 \end{aligned}
 \]
