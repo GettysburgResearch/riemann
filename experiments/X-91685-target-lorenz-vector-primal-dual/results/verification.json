@@ -1,0 +1,33 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "checks": [
+    {
+      "classification": "PASS_SIMULTANEOUS_TARGET_BATHTUB",
+      "exact_vertex_comparisons": 7,
+      "fixtures": 2
+    },
+    {
+      "classification": "PASS_EXPLICIT_CUTOFF_FARKAS_SEPARATOR",
+      "cutoff_index": 2,
+      "strict_dual_gap": "1/7"
+    },
+    {
+      "classification": "PASS_VECTOR_SUPPORT_FUNCTION_DUAL",
+      "exact_multiplier_tests": 180
+    },
+    {
+      "classification": "PASS_FULL_TARGET_DETERMINANT_SUFFICIENCY",
+      "row_fixtures": 4
+    },
+    {
+      "case_1_lower_bound": ">5",
+      "case_2_lower_bound": ">8",
+      "classification": "PASS_TARGET_DOMINATION_THROUGH_QUOTIENT_FIVE",
+      "positive_constant_lower_bound": ">4/5"
+    }
+  ],
+  "classification": "PASS_TARGET_LORENZ_VECTOR_PRIMAL_DUAL",
+  "proof_object_sha256": "f4ee167558901914b9a637333719b19f31f593b3c61141ac1f87e9cc1329e6d4",
+  "rh_established_by_replay": false,
+  "scope": "exact abstract common-source primal/dual theorem and exact low-quotient radical gates; no global P61 row-determinant sign is certified"
+}
