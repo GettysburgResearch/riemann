@@ -1,0 +1,24 @@
+{
+  "base_physical_entropy_margin": "1/2",
+  "base_terms_checked": 9,
+  "checks": {
+    "boolean_entropy_density_regression": 4488,
+    "directed_prime_power_base_terms": 9,
+    "log_67_below_9_over_2": 1,
+    "p30_declared_score_bound": 1,
+    "positive_log_derivative_margin": 1,
+    "sqrt_41_over_67_below_4_over_5": 1,
+    "sqrt_67_below_33_over_4": 1
+  },
+  "classification": "PASS_P61_PHYSICAL_ENTROPY_DEBT_ABSORPTION",
+  "declared_score_upper_coefficient": "4/3",
+  "density_regression_checks": 4488,
+  "density_regression_max_n": 4489,
+  "derivative_margin": "1402/5025",
+  "derivative_margin_decimal": "0.279004975124378109",
+  "p30_density": "4/15",
+  "p61_prime_count": 18,
+  "r67_subset_lower_decimal": "11.926060840949531214",
+  "r67_threshold": "23/2",
+  "scope": "Exact Fraction arithmetic and outward square-root/logarithm enclosures certify the base and scalar constants in the P_61 physical-entropy moat. The Boolean regression checks the exact nonnegative entropy-density formula through n=4489. Together with the published Chebyshev bound psi(x)>=0.9x for x>=41 and the algebra in L-91682, this proves that every P_61 one-prime causal signed row with p>=67 and 1<=y<67 has literal physical entropy exceeding its signed declared score by more than 1/2. It does not prove the target/row determinants, the finite causal profile corridor, the root equality realization, or RH."
+}
