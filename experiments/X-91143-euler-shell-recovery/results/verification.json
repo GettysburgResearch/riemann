@@ -1,0 +1,16 @@
+{
+  "classification": "PASS_EULER_SHELL_RECOVERY_AND_FIREWALL",
+  "entropy_bound_checks": 4999,
+  "last_shell_weight_checks": 14,
+  "normalized_shell_monotonicity_counterexample": {
+    "certified_below": "-1/4000",
+    "derivative_upper": -0.0003995965236462658,
+    "j": 5,
+    "numerator_upper": -0.032181614920460316,
+    "p": 67,
+    "z": "201/40"
+  },
+  "positive_shell_density_checks": 897,
+  "scope": "The replay certifies the algebraic convexification, last-shell weights, the native-row-hard shell firewall, representative positive shell-density formulas, the elementary entropy bound, and a directed monotonicity counterexample. It does not prove Hereditary Typed Entry, CFFP, or RH.",
+  "shell_firewall_factor_checks": 61863
+}
