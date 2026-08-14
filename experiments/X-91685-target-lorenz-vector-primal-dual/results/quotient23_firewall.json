@@ -1,0 +1,23 @@
+{
+  "arithmetic_class": "DIRECTED_DECIMAL_INTERVAL",
+  "classification": "PASS_ATOM_ONE_QUOTIENT_TWENTY_THREE_FIREWALL",
+  "endpoint": 1012,
+  "interval_hi": "-0.0003543982654283312355891702999937581564383419799599225565971156744476670653302980778254571248048932069",
+  "interval_lo": "-0.0003543982654283312355891702999937581564383419799599225565971156744476670657465223917699025287620452876",
+  "odd_sources": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19
+  ],
+  "proof_object_sha256": "138e315bfd1baf5511cf3066efc27aeba4a0cc2bf4090ce1cc8594d114511ff7",
+  "quotient": "23",
+  "refuted_claim": "atom d=1 alone dominates every active odd component row",
+  "rh_established_by_replay": false,
+  "row": 44,
+  "target_lorenz_refuted": false
+}
