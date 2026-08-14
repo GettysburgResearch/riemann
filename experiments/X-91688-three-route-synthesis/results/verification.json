@@ -1,0 +1,41 @@
+{
+  "proof_boundary": {
+    "actual_xi_all_finite_string_membership": "OPEN",
+    "analytic_root_endpoint_realization": "OPEN",
+    "riemann_hypothesis": "UNPROVED",
+    "sontr_nrct": "OPEN"
+  },
+  "proof_object_sha256": "ea21d61eefe384f9264ae6f2e8582f0163a68aaece72a7a744e8d6996bcee590",
+  "route_a": {
+    "exponent_box": "0..3",
+    "filter_checks": 256,
+    "monomial_cases": 64,
+    "owner_partition_checks": 64,
+    "verdict": "PASS_ROUGH_PRIME_DELETION_AND_FIRST_OWNER_PARTITION",
+    "weights": ["1/2", "1/3", "1/5"]
+  },
+  "route_b": {
+    "harmonic_54": "250503836021181200128409/54749786241679275146400",
+    "mass_54_correction_multiplier": "10152",
+    "synthetic_flow": [["2", "0"], ["1", "0"]],
+    "synthetic_profile_norm": "1",
+    "synthetic_signed_vector": ["8/3", "4/3"],
+    "synthetic_total_score_mass": "10",
+    "universal_score_mass_bound": "375/2",
+    "verdict": "PASS_ROOT_HALL_ONE_USE_STABILITY"
+  },
+  "route_c": {
+    "negative_data": ["92/105", "64/105", "13/30", "1/3", "403/2310"],
+    "nodes": ["1", "2", "4", "7", "11"],
+    "positive_data": ["92/105", "64/105", "13/30", "1/3", "317/1155"],
+    "positive_h0_psd": true,
+    "positive_h1_psd": true,
+    "positive_moments": ["29/40425", "1/4900", "3/4900", "9/4900", "727/4900"],
+    "separator_coefficients": ["1/180", "-2/45", "8/63", "-49/360", "121/2520"],
+    "separator_polynomial": "s^2",
+    "separator_value": "-739/176400",
+    "verdict": "PASS_FINITE_STRING_TWO_HANKEL_AND_EXACT_SEPARATOR"
+  },
+  "schema": "riemann.three-route-synthesis.v1",
+  "verdict": "PASS_THREE_ROUTE_STRUCTURAL_ADVANCE"
+}
