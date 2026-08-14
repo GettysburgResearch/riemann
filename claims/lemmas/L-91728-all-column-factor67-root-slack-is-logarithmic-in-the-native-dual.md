@@ -1,7 +1,7 @@
 # L-91728 — The repaired all-column factor-67 root slack is logarithmic in the native dual
 
 Claim ID: `L-91728`  
-Status: **PROPOSED COMPLETE NATIVE-DUAL ROOT-COST THEOREM ON FROZEN ALL-COLUMN INPUTS — REVIEW REQUIRED**  
+Status: **PROPOSED COMPLETE ONE-SHOT NATIVE-DUAL ROOT-COST THEOREM ON FROZEN ALL-COLUMN INPUTS — REVIEW REQUIRED**  
 Created: 2026-08-15  
 Frozen inputs: PR #479 at `518b6a5ec2b49b7decbd4c2e349d0ee5b26bfc9b`; `L-91378`; fixed-width omission/base estimates; `Y_4` support computation of PR #477  
 RH status: **unproved**
@@ -131,9 +131,9 @@ estimates their total native cost is
 
 This is an explicit independent reconstruction input.
 
-## 7. Local root bound
+## 7. One-shot root bound
 
-The final slack is bounded by the preceding one-use charges.  Hence
+The final root slack is bounded by the preceding one-use charges.  Hence
 
 \[
  \boxed{
@@ -142,8 +142,11 @@ The final slack is bounded by the preceding one-use charges.  Hence
  \tag{L-91728.7}
 \]
 
-Combining `L-91727`, the exact causal coefficient sum `<1/8`, and child endpoint
-reduction gives
+This theorem applies only to the native factor-67 **root realization**.  It does
+not assert that arbitrary positive descendants carry another finite root frame,
+quantizer, collar or common port.  Their complete contribution is handled by
+the positive causal envelope and the compact root-mass bound of `L-91731`.
+Combining (L-91728.7) with `L-91731` gives
 
 \[
  \boxed{
@@ -162,7 +165,8 @@ all-column mismatch/collar native cost         o(1) / PR #479
 square-root thinning native cost               <4290 log X
 activation collar/refinement cost              o(1) / PR #479
 fixed terminal/base/common-port cost           O(1) / FROZEN REVIEW
-local packet-native root slack                 O(log X)
-recursive native deficit                       O(log X) / L-91727
+one-shot packet-native root slack              O(log X)
+positive descendant contribution               O(1) / L-91731
+complete native root deficit                   O(log X) / T-91724
 Riemann Hypothesis                             UNPROVED
 ```
