@@ -3,22 +3,24 @@
 ## Frozen predecessor and repair
 
 ```text
-repository:                 gfreund123/riemann
-proposal PR:                #455
-review predecessor:         PR #457
-review head:                e136fcf42fbab1195fc193e64ce4039d1a1d416c
-reviewed false proposal:    9dba11b2f1130c0aa8dba5846ec3c2e658326474
-base branch:                research/gpt56-pro/91663-direct-root-review-response
-base SHA:                   f41797c91497dc462f549a127d8494bbe4ccde2f
-normative content commit:   6b56f65f4970be887d1b9567455594b8be6ca96d
-manifest commit:            cd01edfcdd11c6f52cf00dc885f187ef55a63f7f
-manifest blob:              f591f627c1a0734c0750b591324cd0439b08264a
-connector audit commit:     940998db3f53a4060f346f2a7ed2b1af31c20fcc
-connector audit blob:       4a5995f0e8ba726e614df14f17ae4c72edc251c9
+repository:                  gfreund123/riemann
+proposal PR:                 #455
+review predecessor:          PR #457
+review head:                 e136fcf42fbab1195fc193e64ce4039d1a1d416c
+reviewed false proposal:     9dba11b2f1130c0aa8dba5846ec3c2e658326474
+base branch:                 research/gpt56-pro/91663-direct-root-review-response
+base SHA:                    f41797c91497dc462f549a127d8494bbe4ccde2f
+normative content commit:    c696d2a356eeacb3097d4ea6cc727b84548d7a03
+v2 manifest commit:          bc5b5c62e75fc1e53d91e9513a63561f82188bbd
+v2 manifest blob:            30b4a3d163de1e04972419bc91e5990a08089c56
+v2 connector audit commit:   89762b245ed35afd376c7f1fd76eafb64eeacc03
+v2 connector audit blob:     5ec9477c709ef1f9b92f2e8116e125094f1ab2f9
 ```
 
 The final self-excluding lock is written after this handoff and must be read
-with the dependency manifest.
+with `t91656-dependency-manifest-v2.json`. The earlier manifest and connector
+audit are superseded because the first manifest named a pre-final content
+commit.
 
 ## Review disposition
 
@@ -112,9 +114,9 @@ X-91670:
   PASS_SINGLE_SHARP_NORMALIZATION_HARDENING
   a5b07f68367447da089ef8d8fa84adf2ea2615b4fcbb8f038d7f23cf5dc49dda
 
-X-91671 connector audit:
-  PASS_T91656_FINAL_SINGLE_SHARP_LOCK_CONNECTOR_AUDIT
-  4ee8bc90ee634def1c4c4a0005be2d11d02fb9fb01ab588e287552a895f7759e
+X-91671 v2 connector audit:
+  PASS_T91656_FINAL_SINGLE_SHARP_LOCK_CONNECTOR_AUDIT_V2
+  bfe4eac50cc6cbb8f899b4b255330ce5e63477ad8f4d98f824fca11746f5c971
 ```
 
 The connector audit validates the declared repository freeze. It explicitly
