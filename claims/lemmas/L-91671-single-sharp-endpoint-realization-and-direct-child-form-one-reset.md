@@ -23,7 +23,7 @@ where:
 
 ```text
 ell       source and generation labels;
-J         benchmark owned by the packet;
+J         declared equality score owned by the packet (not J_Lambda);
 S_dec     declared row-budgeted score;
 S_lit     literal score of the finite row;
 T,Omega   ordinary and radix-four physical targets;
@@ -245,22 +245,43 @@ The frozen endpoint realization proves
 
 Hence `d_X` is simultaneously ordinarily and radix-four feasible.
 
-## 6. Exact score recurrence
+## 6. Exact equality-deficit recurrence and native loss
 
-Let `J_X` and `J_{K_X}^{ch}` denote the declared scores owned by the parent and
-actual child packet. Since the same-index embedding changes neither row
-coefficients nor literal score,
+Let
+
+\[
+J_X^{\rm eq}
+\quad\text{and}\quad
+J_{K_X}^{\rm eq,ch}
+\]
+
+be the actual declared equality scores owned by the parent packet and the
+actual child packet. The child score is the score of its source-restricted
+typed packet; it is not replaced by a source-mass fraction or by an unrelated
+full native packet.
+
+Define the equality deficit
+
+\[
+\mathcal D_X(d_X)=J_X^{\rm eq}-\mathcal S(d_X).
+\tag{L-91671.19}
+\]
+
+Since the same-index embedding changes neither row coefficients nor literal
+score,
 
 \[
 \boxed{
 \begin{aligned}
-\operatorname{Loss}_X(d_X)
-&=J_X-\mathcal S(d_X)\\
-&=\bigl[J_X-J_{K_X}^{ch}
--\mathcal S(R_X^{\rm par}-R_X^{\rm ch})\bigr]
-+\operatorname{Loss}_{K_X}(d_{K_X}).
+\mathcal D_X(d_X)
+&=
+\bigl[
+J_X^{\rm eq}-J_{K_X}^{\rm eq,ch}
+-\mathcal S(R_X^{\rm par}-R_X^{\rm ch})
+\bigr]\\
+&\qquad+\mathcal D_{K_X}^{\rm ch}(d_{K_X}).
 \end{aligned}}
-\tag{L-91671.19}
+\tag{L-91671.20}
 \]
 
 The recursive coefficient is exactly one.
@@ -273,17 +294,62 @@ effective absolute charge per generation. Therefore
 
 \[
 \boxed{
-\operatorname{Loss}_X(d_X)
+\mathcal D_X(d_X)
 \le
 C_{\rm reset}
-+\operatorname{Loss}_{K_X}(d_{K_X}),
++\mathcal D_{K_X}^{\rm ch}(d_{K_X}),
 \qquad
 K_X\le X/67+C_0,
 }
-\tag{L-91671.20}
+\tag{L-91671.21}
 \]
 
 with `C_reset` independent of `X`, the number of leaves, and the child packing.
+Iteration gives
+
+\[
+\mathcal D_X(d_X)=O(\log X).
+\tag{L-91671.22}
+\]
+
+The literal score of the canonical finite row is, exactly,
+
+\[
+\mathcal S(c_X)
+=
+\sum_{r\le X}\frac{\Lambda(r)}{\sqrt r}\log\frac Xr
+=P_\Lambda(X).
+\tag{L-91671.23}
+\]
+
+This is not identified with `4sqrt(X)`. The continuum equality score is the
+**declared** score; the finite row score is the **literal** score, and their
+difference is precisely a packet deficit.
+
+Finally, the native parabolic loss is
+
+\[
+\mathfrak L_X(d_X)
+=
+J_\Lambda(X)-\mathcal S(d_X)
+=
+[J_\Lambda(X)-4\sqrt X]+\mathcal D_X(d_X).
+\tag{L-91671.24}
+\]
+
+The elementary benchmark bound
+`J_Lambda(X)<4sqrt(X)+4log(X)` therefore gives
+
+\[
+\boxed{
+\mathfrak L_X(d_X)
+\le4\log X+\mathcal D_X(d_X)
+=O(\log X).
+}
+\tag{L-91671.25}
+\]
+
+Thus no equality between `P_Lambda(X)` and `4sqrt(X)` is asserted or needed.
 
 ## 7. Ownership table
 
@@ -320,7 +386,7 @@ single-SHARP source normalization              EXACT
 source-disjoint Hall/Fubini                    FROZEN / RECONSTRUCT
 same-index child replacement                   EXACT
 one physical row                               EXPLICIT
-coefficient-one loss identity                  EXACT
+coefficient-one deficit identity               EXACT
 bounded current debt                           FROZEN / RECONSTRUCT
 Riemann Hypothesis                             UNPROVED
 ```
