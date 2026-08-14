@@ -1,0 +1,152 @@
+{
+  "checker_scope": {
+    "authenticates": [
+      "new current/child algebra",
+      "terminal-support identity",
+      "inherited/frontier coverage logic",
+      "hostile-leaf formula normalization",
+      "local file and dependency-lock hashes"
+    ],
+    "does_not_authenticate": [
+      "the imported global L-91364 directed proof",
+      "the imported inherited-row and entropy certificates",
+      "the PR468 rough-reservoir reconstruction",
+      "the NRSLI native-reservoir/stopping-line allocation",
+      "the Native-Root Capacity Theorem",
+      "the endpoint-frame/collar/mismatch/top/port estimates",
+      "the endpoint-to-RH analytic implication"
+    ]
+  },
+  "claim": "T-91658",
+  "created_utc": "2026-08-14",
+  "cross_branch_inputs": [
+    {
+      "claim": "R-91660",
+      "commit": "9e138832258d19c252fe60597e36d02bfb95fe39",
+      "path": "claims/refutations/R-91660-stopped-leaf-survival-hall-prefix-fails.md",
+      "role": "independent review firewall"
+    },
+    {
+      "claim": "L-91674",
+      "commit": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+      "path": "claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md",
+      "role": "formal root integration and one-global-quantizer theorem"
+    },
+    {
+      "claim": "L-91680",
+      "commit": "8642e062b6c6f5a4c7d443a1ee5a6e9ecf3e4706",
+      "path": "claims/lemmas/L-91680-target-proportional-causal-projection-is-an-exact-source-faithful-producer.md",
+      "role": "latest proportional comparison"
+    },
+    {
+      "claim": "L-91681",
+      "commit": "8642e062b6c6f5a4c7d443a1ee5a6e9ecf3e4706",
+      "path": "claims/lemmas/L-91681-arithmetic-divisor-gap-closes-the-causal-order-for-p-at-least-500000.md",
+      "role": "independent high-p consistency check"
+    },
+    {
+      "claim": "PR466/L-91682",
+      "commit": "1fdac6bdc81edbc288d3a29503d53f1d0cffc76b",
+      "path": "claims/lemmas/L-91682-literal-p61-row-entropy-absorbs-target-proportional-score-debt.md",
+      "role": "independent entropy/debt absorption"
+    },
+    {
+      "claim": "PR467/L-91682",
+      "commit": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+      "path": "claims/lemmas/L-91682-complete-arithmetic-causal-profile-and-lorenz-cutoffs.md",
+      "role": "complete causal profiles and finite Lorenz cutoffs"
+    },
+    {
+      "claim": "PR467/L-91683",
+      "commit": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+      "path": "claims/lemmas/L-91683-target-proportional-score-debt-is-compactly-supported.md",
+      "role": "compact aggregate debt closure"
+    },
+    {
+      "claim": "PR467/L-91684",
+      "commit": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+      "path": "claims/lemmas/L-91684-target-lorenz-producer-and-single-row-gate.md",
+      "role": "latest producer and explicit remaining row family"
+    },
+    {
+      "claim": "PR468/L-91379",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/lemmas/L-91379-finite-euler-row-is-the-native-row-plus-an-exact-rough-reservoir.md",
+      "role": "exact native-capacity rough-reservoir firewall"
+    },
+    {
+      "claim": "PR468/O-91377",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/observations/O-91377-one-prime-finite-euler-rows-are-the-strongest-current-positive-generator-candidate.md",
+      "role": "latest one-prime current-generator frontier"
+    },
+    {
+      "claim": "PR468/T-91314",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/theorems/T-91314-native-root-capacity-theorem-is-the-single-remaining-producer.md",
+      "role": "controlling native-root producer interface"
+    },
+    {
+      "claim": "PR468/R-91312",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/refutations/R-91312-canonical-p61-row-is-not-a-native-root-packing.md",
+      "role": "canonical-row native-capacity overdraw firewall"
+    }
+  ],
+  "normative_dependencies": [
+    {
+      "claim": "L-91345",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91345-p61-one-prime-target-and-score-have-a-uniform-positive-surplus.md"
+    },
+    {
+      "claim": "L-91347",
+      "commit": "0e9f9b54ed2bccbdd1d0957095a61ec2e7e32c56",
+      "path": "claims/lemmas/L-91347-p61-one-prime-inherited-row-splice-is-strictly-positive.md"
+    },
+    {
+      "claim": "L-91348",
+      "commit": "77fd0e1333bfe8a7cd90c833e12ba55a45475bb6",
+      "path": "claims/lemmas/L-91348-p61-one-prime-euler-row-has-uniform-literal-entropy-surplus.md"
+    },
+    {
+      "claim": "L-91363",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91363-p61-finite-euler-row-has-positive-rough-capacity-and-entropy-densities.md"
+    },
+    {
+      "claim": "L-91364",
+      "commit": "6a1dcdf14bb48d4df9cce16e5941087ac05e7934",
+      "path": "claims/lemmas/L-91364-p61-canonical-finite-euler-row-is-globally-nonnegative.md"
+    },
+    {
+      "claim": "L-91621",
+      "commit": "f41797c91497dc462f549a127d8494bbe4ccde2f",
+      "path": "imports/t91653/claims/lemmas/L-91621-stopping-line-hallization-sums-to-one-native-row.md"
+    },
+    {
+      "claim": "L-91654",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91654-causal-generators-are-complete-admissible-endpoint-data.md"
+    },
+    {
+      "claim": "L-91661",
+      "commit": "d44c45b3ececa878296914a49e49279b10a1f637",
+      "path": "claims/lemmas/L-91661-finite-euler-overdraw-is-the-exact-rough-child-reservoir.md"
+    },
+    {
+      "claim": "L-91663",
+      "commit": "f41797c91497dc462f549a127d8494bbe4ccde2f",
+      "path": "claims/lemmas/L-91663-direct-hall-child-replacement-is-native-capacity-faithful.md"
+    },
+    {
+      "claim": "L-91670",
+      "commit": "1b502acbe511776178da3dc916e3cd3464cd5e77",
+      "path": "claims/lemmas/L-91670-single-sharp-channel-has-exact-native-row-normalization.md"
+    }
+  ],
+  "proposed_base_branch": "research/gpt56-pro/91381-euler-shell-recovery",
+  "proposed_base_pr": 468,
+  "proposed_base_sha": "a41f81466f85d52597c97b41505756a8860698d0",
+  "proposed_branch": "research/gpt56-pro/91685-hall-free-raw-residual"
+}

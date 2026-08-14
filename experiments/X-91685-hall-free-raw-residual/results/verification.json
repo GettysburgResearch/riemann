@@ -1,0 +1,62 @@
+{
+  "dependency_lock": {
+    "cross_branch_input_count": 12,
+    "lock_sha256": "ce0c5b0f940f35cef6f5c44f35810c119e4f6c138441727cedb71fdf47542f67",
+    "normative_dependency_count": 10,
+    "proposed_base_sha": "a41f81466f85d52597c97b41505756a8860698d0",
+    "proposed_branch": "research/gpt56-pro/91685-hall-free-raw-residual"
+  },
+  "exact_ledger": {
+    "formal_linear_checks": 11
+  },
+  "exact_support": {
+    "sector_partition_cases": 17622,
+    "terminal_nonzero_mobius_terms": 5358,
+    "terminal_support_equalities": 5358
+  },
+  "hostile_leaf": {
+    "classification": "high-precision diagnostic, not imported-certificate replay",
+    "min_full_positive_row": 870,
+    "min_full_positive_value": "0.000039036423824404762594378011731372740288479187210559542661067008477761277704208172",
+    "min_observed_row": 66,
+    "min_observed_value": "0.0083815482754633380104356899436506668455590554820706248557213328673706658744886034",
+    "p": 67,
+    "precision_digits": 80,
+    "row_checks": 870,
+    "score": "21.255440682037664112266583457333606542550446982432838418188299628884800083672502",
+    "score_minus_target": "4.737264475668577649040576848359797708740576728367585828053320134170897154490156",
+    "target": "16.518176206369086463226006608973808833809870254065252590134979494713902929182346",
+    "terminal_zero_row": 871,
+    "x": 871,
+    "y": 13
+  },
+  "local_content_sha256": {
+    "claims/lemmas/L-91685-complete-p61-raw-residual-is-a-hall-free-stopped-leaf-generator.md": "5fba427d5519472e0b0fd47987da8c6a556b80716526d20372d1583c160f1599",
+    "claims/observations/O-91685-hall-free-raw-residual-proof-dag.md": "be75ed67e91a8e915b6ab079690f74cb5d6ace31362068d8a1dbc698c200f82f",
+    "claims/theorems/T-91658-hall-free-stopped-leaf-reduction-to-the-root-realization.md": "94e163130cc56028cc205427861c2ad94c7968aae57f281b34573c129795136b",
+    "integration/2026-08-14/t91658-hall-free-dependency-lock.json": "ce0c5b0f940f35cef6f5c44f35810c119e4f6c138441727cedb71fdf47542f67",
+    "reports/gpt56-pro/2026-08-14-hall-free-raw-residual-stopping-line-attack.md": "ea9906d95abc42b8cce36b60ad4ec9d1ec972521dc0bb60936129fac6d2f2798",
+    "standalone/2026-08-14-hall-free-raw-residual/CLAIM_STATUS.md": "047b51a0c87d69aa2de3cf16c75ad82374c0b3f6938f4ffccb0fde496a329ed6",
+    "standalone/2026-08-14-hall-free-raw-residual/README.md": "64803438a93f95ef635a64d7cbb683e8a9f12d5983d638824fbf07713e44feb5"
+  },
+  "record_sha256": "5aae381704bad1ef1fc960e52c701ed19f85e00bff14523bc5f40e77a41b3705",
+  "scope": {
+    "authenticates": [
+      "new current-plus-child algebra",
+      "terminal-support identity",
+      "inherited/frontier coverage logic",
+      "hostile-leaf formula normalization",
+      "local content and dependency-lock hashes"
+    ],
+    "does_not_authenticate": [
+      "imported global L-91364 directed proof",
+      "imported inherited-row and entropy certificates",
+      "PR468 rough-reservoir reconstruction",
+      "NRSLI native-reservoir/stopping-line allocation",
+      "Native-Root Capacity Theorem",
+      "endpoint-frame/collar/mismatch/top/port estimates",
+      "endpoint-to-RH analytic implication"
+    ]
+  },
+  "verdict": "PASS_HALL_FREE_RAW_RESIDUAL_ALGEBRA"
+}
