@@ -1,0 +1,51 @@
+{
+  "arithmetic_class": "FLOATING_RECONNAISSANCE",
+  "classification": "PASS_FLOATING_TARGET_LORENZ_RECONNAISSANCE",
+  "minimum_full_target_determinant": {
+    "cutoff": 35,
+    "margin": 0.08176660268985265,
+    "p": 67.0,
+    "quotient": 1.0151515151515151,
+    "row": 66,
+    "y": 1.0
+  },
+  "minimum_lorenz_margin": {
+    "cutoff": 35,
+    "margin": 0.0019079896612261005,
+    "p": 67.0,
+    "quotient": 1.0151515151515151,
+    "row": 66,
+    "y": 1.0
+  },
+  "minimum_lorenz_margin_after_exact_quotient_five_region": {
+    "cutoff": 35,
+    "margin": 0.006705970983859784,
+    "p": 67.0,
+    "quotient": 5.07567803030303,
+    "row": 66,
+    "y": 4.999923076923076
+  },
+  "p_values": [
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+    101,
+    127,
+    151,
+    251,
+    509,
+    1009,
+    2003,
+    5003
+  ],
+  "parameter_points": 1995,
+  "proof_status": "not a directed or exact certificate",
+  "record_sha256": "cdea6b256e970b3d26d5200b244e21e95f6a4ce62bfde35ca6bd09776b781a6c",
+  "rh_established_by_replay": false,
+  "row_tests": 129675,
+  "y_points_per_p": 133
+}
