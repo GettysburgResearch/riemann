@@ -1,135 +1,241 @@
-# L-91669 — The direct-row ledger has no hidden outer packet and loses at most \(2\log X\) of equality score
+# L-91669 — The one-use equality realization and the direct arithmetic child form one nonduplicating reset
 
 Claim ID: `L-91669`  
-Status: **PROPOSED COMPLETE ALL-DEPTH SCORE/CAPACITY THEOREM ON FROZEN INPUTS — INDEPENDENT RECONSTRUCTION REQUIRED**  
+Status: **PROPOSED COMPLETE CAPACITY/SCORE COMPOSITION ON FROZEN INPUTS — INDEPENDENT RECONSTRUCTION REQUIRED**  
 Created: 2026-08-14  
-Supersedes in the direct-row route: the vague recurrence constant and the
-historical outer/collar/port ownership table in `L-91667`  
-Primary inputs: `L-26204`, `L-91540`, `L-91545`, `L-91554`, `L-91556`,
-`L-91559`, `L-91622`, `L-91663`, `L-91666`, `L-91668`  
+Final hardening correction: the reciprocal-zeta equality weight is used only on
+its certified finite positive window; the outer equality producer remains
+load bearing as the one-use score/realization front door and is not deleted or
+added as a second copy of native capacity.  
+Primary inputs: `L-91107`, `L-91110`, `L-91111`, `L-91114`, `L-91115`,
+`L-91320`, `L-91540`, `L-91545`, `L-91554`, `L-91556`, `L-91557`,
+`L-91559`, `L-91560`, `L-91621`, `L-91622`, `L-91663`, `L-91666`,
+`L-91668`, `L-91665`  
 RH status: **unproved pending reconstruction**
 
-## 1. Normative normalization
+## 1. Two representations of one root datum
 
-Put
+There are two load-bearing descriptions of the same root equality datum.
+
+### Score/endpoint representation
+
+`L-26204/L-91557` give the exact continuum equality state.  At physical scale
+\(X\), its critical score is
 
 \[
- t=\log X.
+ \boxed{J_{\rm eq}(X)=4\sqrt X.}
  \tag{L-91669.1}
 \]
 
-The equality-density theorem `L-26204` has the normalized target equation
+The reciprocal-zeta equality weight is
 
 \[
- \boxed{(L_*\ast\varrho)(t)=t}
+ L_*(u)=
+ \sum_{n\le e^u}\frac{\mu(n)}{\sqrt n}
+ \left(2e^{(u-\log n)/2}-1\right).
  \tag{L-91669.2}
 \]
 
-and exact critical score
+No global sign is assumed.  `L-91107` proves only the finite-window statement
 
 \[
  \boxed{
- 2\int_0^\infty e^{-u/2}L_*(u)\,du=4.
+ L_*(u)>0.3186
+ \quad
+ 0\le u\le\log(c_0^{-1}),
+ \qquad
+ c_0=0.01844367547104\ldots .
  }
  \tag{L-91669.3}
 \]
 
-After physical scaling, the root equality packet \(P_X^{\rm eq}\) therefore has
+This is the positive outer equality window used at each reset.  The unresolved
+inner state is passed to a contracted generation; the same signed inverse is
+not continued beyond its certified window.
+
+### Exact finite-row representation
+
+For real \(Y\ge1\), let \(Q_Y\) be the literal positive component row, and put
 
 \[
  \boxed{
- M_X(P_X^{\rm eq})=\log X,
- \qquad
- J_X(P_X^{\rm eq})=4\sqrt X.
+ c_X(j)=
+ \sum_{n\le X}\frac{\mu(n)}{\sqrt n}Q_{X/n}(j).
  }
  \tag{L-91669.4}
 \]
 
-Here \(M\) is the target ledger used in `L-91540/L-91622`, and \(J\) is the
-row-budgeted declared score.  Equation (L-91669.4) is not a change of
-normalization: `L-91556`, `L-91621`, and `L-91557` use this same native target
-and score normalization.  A review which finds a scalar rescaling between
-these files rejects this theorem.
-
-## 2. Positive root entry
-
-`L-91668` supplies a positive source-disjoint realization of the exact native
-row
-
-\[
- c_X(j)=\sum_{n\le X}\frac{\mu(n)}{\sqrt n}Q_{X/n}(j),
- \tag{L-91669.5}
-\]
-
-with
-
-\[
- \Gamma(c_X;q)=w_X(q),
- \qquad
- \Xi(c_X;q)=\Omega_X(q).
- \tag{L-91669.6}
-\]
-
-The leafwise Hall output is a positive direct sum of survival and hazard typed
-packets, together with positive target-null current row bonuses.  It preserves
-the root target exactly and superordinates the root declared score:
-
-\[
- \sum_\alpha M_X(P_{\alpha,X})=\log X,
- \tag{L-91669.7}
-\]
-
-\[
- \sum_\alpha J_X(P_{\alpha,X})\ge4\sqrt X.
- \tag{L-91669.8}
-\]
-
-The sum in (L-91669.7) is over positive source-disjoint typed packets after the
-Hall step.  Hall bonuses are not assigned target mass and have nonnegative
-literal score.
-
-## 3. Fixed-\(67\) source restriction
-
-For one positive typed packet \(P=(\tau,\nu,Y)\), restrict the source to
-
-\[
- \nu^{\rm ch}=\nu|_{\{n\le Y/67\}}
- \tag{L-91669.9}
-\]
-
-and evaluate it at endpoint \(Y/67\), retaining the same type.  Write
-\(P^{\rm ch}\) for this canonical child.  Target positivity gives the exact
-split
+`L-91663` proves exactly
 
 \[
  \boxed{
- M_Y(P)
- =
- M_{Y/67}(P^{\rm ch})+M_Y^{\rm term}(P),
+ \Gamma(c_X;q)=w_X(q),
  \qquad
- M_Y^{\rm term}(P)\ge0.
+ \Xi(c_X;q)=\Omega_X(q).
+ }
+ \tag{L-91669.5}
+\]
+
+`L-91668` supplies the labelled arithmetic source identity whose observation is
+exactly (L-91669.4), rather than merely a scalar packet with the same target.
+
+The score representation and the finite-row representation are not added.
+The endpoint-frame construction is the one-use realization map which turns the
+root equality datum into the finite source/row packet consumed below.  A
+reviewer must reject the proposal if the source identity used in `L-91557` and
+the finite identity used in `L-91668` are not the same normalized datum.
+
+## 2. The current endpoint realization is used once
+
+Put
+
+\[
+ K=\lceil c_0X\rceil,
+ \qquad W=10000.
+ \tag{L-91669.6}
+\]
+
+On the positive window, `L-91110` performs one martingale/B-spline
+quantization of the equality density.  Its endpoint weights are nonnegative,
+it reproduces both endpoint-frame modes exactly in the inherited bulk, and it
+is score-favorable.
+
+The remaining current terms are:
+
+```text
+one width-three positive quantization collar;
+one finite/continuum mismatch packet;
+one interior safety factor sigma_K=(1+175/K)^(-1);
+one fixed top omission and terminal-annulus packet;
+one corrected P_61/67 boundary port when that adapter is invoked.
+```
+
+`L-91111`, `L-91114`, `L-91115`, and `L-91320` prove that these terms have
+nonnegative endpoint ownership, consume the physical outer and boundary
+capacities at most once, and have one-generation score charge bounded by an
+effective absolute constant \(C_{\rm cur}\).
+
+All current continuum terms are summed before the single quantization.  They
+are then part of the complete current row.  They are never:
+
+```text
+quantized separately by rough color;
+reintroduced on a child;
+added on top of a second copy of c_X;
+or charged once per Hall leaf.
+```
+
+This is the exact meaning of “one-use current packet.”
+
+## 3. Explicit labelled arithmetic entry
+
+`L-91330` gives the atomwise positive two-channel split.  `L-91333` gives the
+nonduplicating least-prime tree.  `L-91668` now explicitly supplies the source
+identity antecedent of `L-91621`, proves unique fixed-\(X\) ownership, and
+identifies the observed root row with \(c_X\).
+
+Apply the exact native cocycle and frozen no-upward Hall transport separately on
+every stopped leaf.  The complete finite parent row has the literal identity
+
+\[
+ \boxed{
+ R_{\rm parent}
+ =R_{\rm pre}
+ +R_s(c_s)+R_h(c_h)+B_s+B_h,
+ }
+ \tag{L-91669.7}
+\]
+
+where every term is coefficientwise nonnegative, \(c_s,c_h\) are positive
+target-bearing source measures, and \(B_s,B_h\) are target-null positive
+current rows.  Hall is chosen leafwise before summation and is never commuted
+through the rough tree.
+
+The label of every term records:
+
+```text
+endpoint-frame owner;
+least-prime leaf;
+source index;
+survival/hazard type;
+generation.
+```
+
+No label has two owners.
+
+## 4. Same-index child replacement after the complete current sum
+
+Restrict both positive residual sources to their canonical fixed-\(67\) child,
+and let \(R_{\rm ch}\) be the complete canonical child row.  Let
+\(d_{\rm ch}\) be an arbitrary row feasible for the complete child capacities.
+After all current endpoint, mismatch, collar, terminal, port, and Hall terms
+have been summed once, define
+
+\[
+ \boxed{
+ d_X=R_{\rm parent}-R_{\rm ch}+d_{\rm ch}.
+ }
+ \tag{L-91669.8}
+\]
+
+Endpoint monotonicity gives \(d_X\ge0\).  `L-91559/L-91663` give, for every
+physical integer column \(q\ge2\),
+
+\[
+ \boxed{
+ \Gamma(d_X;q)
+ =\Gamma(R_{\rm parent};q)-\Gamma(R_{\rm ch};q)
+ +\Gamma(d_{\rm ch};q)
+ \le\Gamma(R_{\rm parent};q),
+ }
+ \tag{L-91669.9}
+\]
+
+\[
+ \boxed{
+ \Xi(d_X;q)
+ =\Xi(R_{\rm parent};q)-\Xi(R_{\rm ch};q)
+ +\Xi(d_{\rm ch};q)
+ \le\Xi(R_{\rm parent};q).
  }
  \tag{L-91669.10}
 \]
 
-The term \(M_Y^{\rm term}(P)\) includes both source atoms which leave the child
-support and the positive target residual of surviving atoms.  For a positive
-direct sum, (L-91669.10) is summed before normalization.
+The outer-current realization and the arithmetic direct row are stages of the
+single parent row in (L-91669.8), not independent capacity copies.  The child
+is inserted at the same literal row indices.  No affine lift, fractional
+column, scalar child surrogate, duplicated small-prime block, or formal
+coordinatewise complement is used.
 
-Iterate until the endpoint is below \(67\).  Since every target term is positive
-and every child belongs to exactly one parent, telescoping gives
+## 5. Physical columns are exhausted explicitly
+
+The complete current parent row is feasible by the following exhaustive
+partition.
+
+```text
+q<K:          exact inherited bulk reproduction and native child identity;
+K<=q<=X/4:   L-91114 mismatch-plus-collar safety inequality;
+X/4<q<X:     L-91115 fixed top-omission inequality;
+q>=X:        triangular zero.
+```
+
+Equations (L-91669.9)--(L-91669.10) then replace the canonical child without
+increasing either response.  Hence the final row satisfies
 
 \[
  \boxed{
- \sum_{r\ge0}M_r^{\rm term}=M_0=\log X.
+ \Gamma(d_X;q)\le w_X(q),
+ \qquad
+ \Xi(d_X;q)\le\Omega_X(q)
+ \quad(q\ge2).
  }
  \tag{L-91669.11}
 \]
 
-There is no factor equal to the number of leaves or the number of generations.
-Equation (L-91669.11) is the global source-disjoint terminal-mass firewall.
+This is one displayed simultaneous inequality for the complete summed row.  It
+is not inferred from a list of heterogeneous local feasibility claims.
 
-## 4. Nonterminal score is paid coefficient one
+## 6. Nonterminal score transfer
 
 For one source atom with local quotient \(Z\ge67\), its literal component
 entropy is
@@ -146,184 +252,90 @@ entropy is
 \[
  \boxed{
  E(Z)-E(Z/67)
- \ge
- 5\left(\sqrt Z-\sqrt{Z/67}\right).
+ \ge5(\sqrt Z-\sqrt{Z/67}).
  }
  \tag{L-91669.13}
 \]
 
-After multiplication by either exact branch coefficient
+After multiplication by the exact branch coefficients
+\(\kappa_s=1-p^{-1}\) and \(\kappa_h=p^{-1}\), the literal current row pays the
+complete row-budgeted declared-score difference with coefficient one.  No
+positive score debt is charged on a nonterminal arithmetic edge.
 
-\[
- \kappa_s=1-p^{-1},
- \qquad
- \kappa_h=p^{-1},
- \qquad
- \kappa_s+\kappa_h=1,
- \tag{L-91669.14}
-\]
+## 7. Terminal and generation accounting
 
-the canonical current row difference pays the complete declared-score
-difference of that source atom.  Consequently no positive score debt is
-charged on any nonterminal edge.
-
-## 5. Terminal debt is at most twice terminal target
-
-At a terminal quotient \(1\le Z<67\), the exact physical corridor in
-`L-91540/L-91622` gives
+At a terminal quotient \(1\le Z<67\), `L-91622` gives
 
 \[
  \boxed{
  [J_{\rm term}(Z)-\mathcal S_{\rm term}(Z)]_+
- \le2\,M_{\rm term}(Z).
+ \le2M_{\rm term}(Z).
  }
+ \tag{L-91669.14}
+\]
+
+Equivalently, `L-91554` supplies an independent fixed-Euler sourcewise bound
+(`<3600` for `P_61`).  Source disjointness implies that terminal target is
+spent once.  Thus terminal debt is charged to total terminal mass, never to the
+number of stopped leaves.  In the root normalization its all-depth contribution
+is \(O(\log X)\); if the exact target normalization \(M_0=\log X\) is used, the
+bound is at most \(2\log X\).
+
+The current analytic/discrete charge \(C_{\rm cur}\) is incurred once per
+factor-\(67\) generation.  There are at most
+
+\[
+ 1+\left\lceil\frac{\log X}{\log67}\right\rceil
  \tag{L-91669.15}
 \]
 
-Sum (L-91669.15) over all terminal atoms, labels, and depths.  Source
-disjointness and (L-91669.11) give
-
-\[
- \boxed{
- \Delta_{\rm terminal}(X)
- \le
- 2\sum_{r\ge0}M_r^{\rm term}
- =
- 2\log X.
- }
- \tag{L-91669.16}
-\]
-
-This replaces both of the following unsafe estimates:
-
-```text
-constant per stopped leaf;
-constant per depth times the root target.
-```
-
-The finite-Euler bound \(<3600\) in `L-91554` remains a valid independent
-sourcewise cross-check, but it is not needed for the global asymptotic.  The
-load-bearing global charge is (L-91669.16).
-
-## 6. All-depth same-index physical assembly
-
-At one parent packet, let \(R_Y(P)\) be its canonical literal row and let
-\(R_{Y/67}(P^{\rm ch})\) be the canonical child row, placed at the same integer
-row indices.  Endpoint monotonicity gives
-
-\[
- R_Y(P)-R_{Y/67}(P^{\rm ch})\ge0.
- \tag{L-91669.17}
-\]
-
-If \(d_{\rm ch}\) is feasible for the complete child capacities, define
-
-\[
- d_Y(P)
- =
- R_Y(P)-R_{Y/67}(P^{\rm ch})+d_{\rm ch}.
- \tag{L-91669.18}
-\]
-
-`L-91559/L-91663` give, for every physical integer column \(q\ge2\),
-
-\[
- \Gamma(d_Y(P);q)
- \le\Gamma(R_Y(P);q),
- \tag{L-91669.19}
-\]
-
-\[
- \Xi(d_Y(P);q)
- \le\Xi(R_Y(P);q).
- \tag{L-91669.20}
-\]
-
-Start at the finite terminal layer and apply (L-91669.18) upward.  The tree is
-finite for fixed \(X\), all row differences are nonnegative, and all Hall
-bonuses are nonnegative current rows.  Summing the typed packets at each common
-endpoint gives one finite row \(d_X\ge0\) such that
-
-\[
- \boxed{
- \Gamma(d_X;q)\le w_X(q),
- \qquad
- \Xi(d_X;q)\le\Omega_X(q)
- \quad(q\ge2).
- }
- \tag{L-91669.21}
-\]
-
-The child is inserted by the identity on row indices.  No affine lift,
-fractional column, small-prime reintroduction, or formal residual complement is
-used.
-
-## 7. Explicit score lower bound
-
-The root declared score is at least \(4\sqrt X\) by (L-91669.8).  Every
-nonterminal declared-score difference is paid by literal entropy, every Hall
-bonus has nonnegative literal score, and the entire terminal deficit is bounded
-by (L-91669.16).  Therefore the row constructed in Section 6 satisfies
+generations.  Therefore the complete row realizes the root equality score up
+to logarithmic debt:
 
 \[
  \boxed{
  \mathcal S_X(d_X)
- \ge4\sqrt X-2\log X.
+ \ge4\sqrt X-C_1\log X-C_2
  }
- \tag{L-91669.22}
+ \tag{L-91669.16}
 \]
 
-For the finitely many endpoints \(1\le X<67\), enlarge the right side by one
-absolute finite-base constant if desired.  This does not affect any asymptotic
-conclusion.
+for effective absolute constants \(C_1,C_2\).  This is the exact scope needed
+by the endpoint consumer; no absolute all-depth score transfer is asserted.
 
-## 8. The direct route has one physical row, not two
-
-The load-bearing capacity row is exactly the row built in Section 6.  The
-following historical objects are **not added as row summands** in this route:
+## 8. What the corrected composition uses
 
 ```text
-continuum outer equality producer;
-B-spline quantization;
-width-three collar;
-finite/continuum mismatch packet;
-top-omission packet;
-common endpoint port.
+finite-window positivity of L_*                     yes, load bearing
+global positivity of L_*                            no, forbidden
+outer equality producer and one quantization        yes, current only
+finite mismatch/collar/top omission                 yes, current only
+corrected P_61/67 port                               at most once per generation
+labelled arithmetic source tree                     yes
+leafwise Hall                                       yes
+same-index child replacement                        yes
+outer packet added as second c_X copy               no
+terminal constant per leaf                          no
+score debt                                           O(log X)
+Riemann Hypothesis                                   unproved pending review
 ```
 
-Those objects remain valuable independent constructions and audits for the
-older `T-91101/T-91561` architecture.  They are not needed after the exact native
-row response, positive leafwise realization, and same-index child replacement
-have been proved.
+## 9. Exact falsifiers
 
-The equality-density transform `L-26204` is consumed only for the exact root
-target and score in (L-91669.4).  It does not contribute a second finite row or
-consume a second copy of native capacity.
-
-## 9. Review falsifiers
-
-Reject this theorem on the first occurrence of any of:
+Reject this lemma immediately if any of the following occurs:
 
 ```text
-the target in L-26204 is not the target ledger of L-91556/L-91622;
-the root target is not exactly log X in that normalization;
-a source atom appears in two terminal layers;
-terminal target masses do not telescope to the root target;
-the terminal deficit bound exceeds 2T;
-a nonterminal fixed-67 entropy difference fails;
-a child is inserted at changed row indices;
-an outer/collar/mismatch/port row is added on top of d_X;
-ordinary or radix-four capacity is overdrawn in one column.
-```
-
-```text
-root target                                      log X, exact
-root declared score                              4 sqrt(X), exact
-source-disjoint terminal target sum              <= log X, exact
-all-depth terminal score debt                    <= 2 log X
-nonterminal score debt                           zero
-ordinary/detail physical assembly                exact same-index
-final finite-row score                           >=4 sqrt(X)-2 log(X)
-historical outer packet                          not load bearing
-Riemann Hypothesis                               unproved pending review
+L_* is used outside the certified first 54.2 quotient cells;
+the continuum equality datum and finite c_X datum have different normalization;
+one current endpoint packet is quantized twice;
+one current mismatch, collar, omission, or port is copied to a child;
+one arithmetic source appears in two stopped leaves;
+Hall is commuted through the rough tree;
+the complete current row is not summed before child subtraction;
+one physical column range is omitted;
+an outer-current row and c_X are charged as independent capacity copies;
+C_cur depends on X or on the number of leaves;
+terminal debt is charged per leaf instead of terminal mass;
+L-91666 fails;
+a child changes literal row indices.
 ```
