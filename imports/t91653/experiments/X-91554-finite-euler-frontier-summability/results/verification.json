@@ -1,0 +1,20 @@
+{
+  "P61": {
+    "certified_below": 3600,
+    "directed_lower_decimal": "3534.675221310728116446",
+    "directed_upper_decimal": "3534.675221310728116447"
+  },
+  "P79": {
+    "certified_below": 5600,
+    "directed_lower_decimal": "5514.240940010343290686",
+    "directed_upper_decimal": "5514.240940010343290687"
+  },
+  "checks": 4,
+  "classification": "PASS_FINITE_EULER_FRONTIER_SUMMABILITY",
+  "formula": "2*(4*sqrt(67)-3)*product_{q|P}(1+q^(-1/2)); all square roots use directed rational enclosures.",
+  "scope": "This replay certifies only the explicit finite Euler-product constants in L-91554. The parent-index support, Hall coefficient domination, score telescope, physical capacity assembly, and RH implication are mathematical interfaces requiring independent reconstruction.",
+  "support": {
+    "P61_prime_count": 18,
+    "P79_prime_count": 22
+  }
+}
