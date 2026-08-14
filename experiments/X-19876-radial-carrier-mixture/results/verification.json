@@ -1,0 +1,27 @@
+{
+  "checks": 10,
+  "max_measure_error": "2E-91",
+  "old_intertwiner_mismatch": "0.0402609269702282580852045720393325085982208573808088996291841068436311613762149481072653349",
+  "per_atom_tail_errors": [
+    "1E-91",
+    "1E-91",
+    "1E-92",
+    "1E-92",
+    "0E-92"
+  ],
+  "scope": {
+    "does_not_prove": [
+      "the radial direct-integral Julia/Fisher source lock",
+      "the delayed Weil defect identity",
+      "the Riemann Hypothesis"
+    ],
+    "proves": [
+      "finite-atom radial measure identity",
+      "finite-atom tail-Hankel anticommutator identity",
+      "two-carrier pointwise isometry",
+      "old input-multiplier intertwiner fails"
+    ]
+  },
+  "tail_hankel_error": "0E-91",
+  "verdict": "PASS_RADIAL_JORDAN_SCATTERING_CARRIER_MIXTURE"
+}
