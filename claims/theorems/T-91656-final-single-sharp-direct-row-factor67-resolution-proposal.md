@@ -199,7 +199,7 @@ give
 No affine lift, fractional physical column, duplicated small-prime block,
 formal complement, or source-fraction weighting of signed loss is used.
 
-## 6. Score transfer
+## 6. Equality-deficit transfer
 
 For
 
@@ -220,7 +220,7 @@ E(Y)-E(Y/67)
 \]
 
 Thus every nonterminal current row difference pays the complete inherited
-row-budgeted score difference with coefficient one.
+row-budgeted declared-score difference with coefficient one.
 
 Terminal debt is bounded by total terminal target mass. The target masses
 telescope over source-disjoint leaves, so no leaf-count factor occurs.
@@ -238,50 +238,74 @@ C_{\rm quant}+C_{\rm mismatch}+C_{\rm top}
 where every term is the effective absolute bound in its frozen theorem. Each
 term is charged once per generation and none is child-owned.
 
-The exact loss normal form is
+Write `J_X^eq` for the parent equality score and `J_K^eq,ch` for the declared
+score of the actual child packet. Define
+
+\[
+\mathcal D_X(d_X)=J_X^{\rm eq}-\mathcal S(d_X).
+\tag{T-91656.20}
+\]
+
+The exact deficit normal form is
 
 \[
 \boxed{
-\operatorname{Loss}_X(d_X)
+\mathcal D_X(d_X)
 =
-\bigl[J_X-J_K-\mathcal S(R_X^{\rm par}-R_X^{\rm ch})\bigr]
-+\operatorname{Loss}_K(d_K).
+\bigl[J_X^{\rm eq}-J_K^{\rm eq,ch}
+-\mathcal S(R_X^{\rm par}-R_X^{\rm ch})\bigr]
++\mathcal D_K^{\rm ch}(d_K).
 }
-\tag{T-91656.20}
+\tag{T-91656.21}
 \]
 
 Therefore
 
 \[
 \boxed{
-\operatorname{Loss}_X(d_X)
-\le C_{\rm reset}
-+\operatorname{Loss}_{K_X}(d_K).
+\mathcal D_X(d_X)
+\le C_{\rm reset}+\mathcal D_{K_X}^{\rm ch}(d_K).
 }
-\tag{T-91656.21}
+\tag{T-91656.22}
 \]
 
 After `O(log X)` generations,
 
 \[
-\operatorname{Loss}_X(d_X)=O(\log X).
-\tag{T-91656.22}
+\mathcal D_X(d_X)=O(\log X).
+\tag{T-91656.23}
 \]
 
-## 7. Finite dual and endpoint conclusion
+The canonical finite row has literal score
+
+\[
+\mathcal S(c_X)=P_\Lambda(X),
+\tag{T-91656.24}
+\]
+
+whereas the continuum equality packet has declared score `4sqrt(X)`. These are
+not equated. Their difference is the initial equality deficit which the reset
+recurrence controls.
+
+## 7. Native loss, finite dual, and endpoint conclusion
 
 The elementary benchmark bound is
 
 \[
 J_\Lambda(X)<4\sqrt X+4\log X.
-\tag{T-91656.23}
+\tag{T-91656.25}
 \]
 
-Combining with the score lower bound gives
+Consequently
 
 \[
-\mathfrak L_X(d_X)=O(\log X)=o(\log^2X).
-\tag{T-91656.24}
+\begin{aligned}
+\mathfrak L_X(d_X)
+&:=J_\Lambda(X)-\mathcal S(d_X)\\
+&=[J_\Lambda(X)-4\sqrt X]+\mathcal D_X(d_X)\\
+&=O(\log X)=o(\log^2X).
+\end{aligned}
+\tag{T-91656.26}
 \]
 
 For every ordinarily feasible row,
@@ -299,7 +323,7 @@ Hence
 \boxed{
 F_\Lambda(X)\le\mathfrak L_X(d_X)=o(\log^2X).
 }
-\tag{T-91656.25}
+\tag{T-91656.27}
 \]
 
 The frozen higher-prime-power separation gives
@@ -308,7 +332,7 @@ The frozen higher-prime-power separation gives
 F_\Lambda(X)-A(X)
 =
 \frac{-1-\zeta(1/2)}4\log^2X+o(\log^2X),
-\tag{T-91656.26}
+\tag{T-91656.28}
 \]
 
 with positive coefficient. Therefore `A(X)` is eventually negative. The frozen
@@ -350,7 +374,7 @@ one current packet is charged twice or copied to a child;
 one physical ordinary or detail column is overdrawn;
 L-91666 fails;
 C_reset depends on X or the number of leaves;
-the loss coefficient is not exactly one;
+the deficit coefficient is not exactly one;
 the finite dual or endpoint analytic sign reverses.
 ```
 
