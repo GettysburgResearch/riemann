@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "leftmost_optimizer_vertex_checks": 923,
+    "native_reservoir_separator": {
+      "X": 136,
+      "active_rough_terms": [
+        67
+      ],
+      "q": 2,
+      "separating_functional": "ordinary-capacity coordinate q=2",
+      "strict_lower_bound": "1/816"
+    },
+    "rough_convolution_n": 300,
+    "row_farkas_fixture": {
+      "gap": "1/7",
+      "maximum_row": "5",
+      "odd_demand": "36/7"
+    },
+    "y4_dual_q_limit": 256
+  },
+  "classification": "PASS_EXACT_NATIVE_ROOT_COMPILATION_SEPARATOR",
+  "meaning": "PR #464's fixed-window Hall algebra cannot directly satisfy the exact native NRCT while its positive rough reservoir is retained. The X=136,q=2 ordinary capacity is an exact separating functional. The target-Lorenz and direct-Y4 programs are fail-closed successor routes.",
+  "native_root_capacity_theorem_proved": false,
+  "proof_object_sha256": "4f269de3620833db490c66e8a36f777ef4cc3fc8f41190dcbf9c0a17e498535a",
+  "riemann_hypothesis_established": false
+}
