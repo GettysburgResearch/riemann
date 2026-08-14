@@ -1,0 +1,51 @@
+{
+  "schema": "riemann.pr451.independent-review.v1",
+  "created_utc": "2026-08-14T04:09:40Z",
+  "repository": "gfreund123/riemann",
+  "main_at_review": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+  "reviewed_pr": 451,
+  "reviewed_base_branch": "research/gpt56-pro/91661-corrected-provenance-closure",
+  "reviewed_base_sha": "d44c45b3ececa878296914a49e49279b10a1f637",
+  "reviewed_head_branch": "research/gpt56-pro/91663-direct-root-review-response",
+  "reviewed_head_sha": "f41797c91497dc462f549a127d8494bbe4ccde2f",
+  "review_branch": "review/gpt56-pro/91663-pr451-independent-review",
+  "verdict": "false_as_written",
+  "rh_status": "unproved",
+  "first_broken_arrow": "L-91621.12 -> L-91663.9",
+  "counterexample": {
+    "p": 67,
+    "y": 13,
+    "parent_parameter_x": 871,
+    "negative_threshold": 13,
+    "A_13": "-2323/30030",
+    "normalized_hall_margin_interval": [
+      "-2.139513718150115658",
+      "-2.139513718150115658"
+    ],
+    "physical_survival_margin_interval": [
+      "-5.863841709602757759",
+      "-5.863841709602757759"
+    ]
+  },
+  "retained_claims": [
+    "L-91663.1--.8 native response identities",
+    "conditional L-91663.11--.13 same-index child replacement",
+    "least-prime source disjointness before Hall",
+    "corrected P61 normalization below 14/3",
+    "corrected entropy bases at 67"
+  ],
+  "review_files": [
+    "reports/gpt56-pro/2026-08-14-pr451-independent-review.md",
+    "claims/refutations/R-91656-pr451-stopped-leaf-hall-domain-fails.md",
+    "experiments/X-91664-pr451-stopped-leaf-hall-refutation/README.md",
+    "experiments/X-91664-pr451-stopped-leaf-hall-refutation/verify.py",
+    "experiments/X-91664-pr451-stopped-leaf-hall-refutation/results/verification.json",
+    "experiments/X-91664-pr451-stopped-leaf-hall-refutation/SHA256SUMS"
+  ],
+  "artifact_sha256": {
+    "verify.py": "b27257831cdd246fe9b2815f91fa9a076d3cc5b8a3763536636e605920a57567",
+    "README.md": "59f3ac2d7f5e024c17cfc99a6aa09be0624effcc96ce03ec7290f914c2d714ae",
+    "results/verification.json": "b5021a3763dbe25eb801b09a33ea9025222c7d2dbcc879508a7c9e71a6f9cb5d"
+  },
+  "replay_verdict": "PASS_PR451_STOPPED_LEAF_HALL_REFUTATION"
+}
