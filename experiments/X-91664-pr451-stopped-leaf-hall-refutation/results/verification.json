@@ -1,0 +1,23 @@
+{
+  "classification": "PASS_PR451_STOPPED_LEAF_HALL_REFUTATION",
+  "counterexample": {
+    "A_13": "-2323/30030",
+    "negative_threshold": 13,
+    "no_upward_hall_transport_exists": false,
+    "normalized_margin_lower": "-2.139513718150115658",
+    "normalized_margin_upper": "-2.139513718150115658",
+    "p": 67,
+    "parent_parameter_x": 871,
+    "physical_survival_margin_lower": "-5.863841709602757759",
+    "physical_survival_margin_upper": "-5.863841709602757759",
+    "y": 13
+  },
+  "infinite_family": {
+    "all_rough_primes_p_at_least_67": true,
+    "fixed_y": 13,
+    "reason": "g(u)=2u(1+2u)/(1+3u) is strictly increasing for u>0, while A_13<0, so the prefix margin is decreasing in p."
+  },
+  "reviewed_head": "f41797c91497dc462f549a127d8494bbe4ccde2f",
+  "reviewed_pr": 451,
+  "scope": "Exact Fraction arithmetic and directed rational square-root enclosures. This refutes the universal stopped-leaf Hall assertion L-91621.12 and the resulting universal positive Hall row identity L-91663.9. It does not refute the native response identities or the conditional same-index child-replacement algebra."
+}
