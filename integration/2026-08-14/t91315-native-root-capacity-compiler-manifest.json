@@ -1,0 +1,28 @@
+{
+  "base_sha": "a41f81466f85d52597c97b41505756a8860698d0",
+  "classification": "EXACT_SEPARATOR_AND_FAIL_CLOSED_NRCT_CAMPAIGN",
+  "files": [
+    {"path": "audits/gpt56-pro/2026-08-14-native-root-capacity-compiler-status.tsv", "sha256": "96a9934bd83115a5aed4041b8830754533207a86de26f58d53eac09f87bd4bef"},
+    {"path": "claims/lemmas/L-91386-leftmost-target-lorenz-solves-the-monotone-stopped-leaf-lp.md", "sha256": "ca22e6d62b0e055f28b638700769209629da3adb07af1d3036a9230e124b15af"},
+    {"path": "claims/lemmas/L-91387-target-lorenz-row-gate-is-a-finite-cell-farkas-campaign.md", "sha256": "b4e53267d44050b2332ddcc64087a6738108b1a4b6883f1c59dc4bc4d7ddcf7b"},
+    {"path": "claims/lemmas/L-91388-direct-y4-native-slack-is-a-fail-closed-linear-program.md", "sha256": "5abe06b618102276d1e39499460df7b5dbeef66b5b5afc9dee017746e56dd5b7"},
+    {"path": "claims/observations/O-91390-native-root-capacity-three-route-frontier.md", "sha256": "66e8ddbd82aabf7ed921c8c93ed932a29131749ff14a62ffe34564ac938910b0"},
+    {"path": "claims/refutations/R-91316-pr464-root-hall-has-an-exact-native-reservoir-separator.md", "sha256": "4be102a51f64575530b4aa7d63548481ad9de75b11ffc25385ebfe468be447f7"},
+    {"path": "claims/theorems/T-91315-native-root-capacity-compiler-returns-a-certificate-or-separator.md", "sha256": "bb87cbcf06ec0ac8f736e051ff11544ecb061604a1d50a2155b245c4b62f0729"},
+    {"path": "experiments/X-91144-native-root-capacity-compiler/README.md", "sha256": "cfdec3f9e8878b630974ac49d3d550238c2e71d87144fc7c647d8c7b0811a4e6"},
+    {"path": "experiments/X-91144-native-root-capacity-compiler/SHA256SUMS", "sha256": "c682839620412bb2a5e8e9dc9465f73abc2c3a0f66df61b217c823d41e1db9c4"},
+    {"path": "experiments/X-91144-native-root-capacity-compiler/results/verification.json", "sha256": "eb70bc26f0345a65aa4043740e4cd6bd843f407a58b6cedae19e4861d0925df3"},
+    {"path": "experiments/X-91144-native-root-capacity-compiler/verify.py", "sha256": "ccabc3cf482fe3db9963559700d52e648a5df486c5621a8908a92e25f9af4c9b"},
+    {"path": "integration/2026-08-14/t91315-native-root-capacity-compiler-handoff.md", "sha256": "aa2f17ebcf0a2d4919390d070fc0dab9f2bfecbb35f466fc9c3611bc5d0a24b9"},
+    {"path": "reports/gpt56-pro/2026-08-14-native-root-capacity-compilation-and-separators.md", "sha256": "41aaac0e12783db9bfbbcbf4b3af194747fbd3ff5befa3017a2203d23dae6975"}
+  ],
+  "nrct_proved": false,
+  "repository": "gfreund123/riemann",
+  "rh_proved": false,
+  "source_heads": {
+    "pr454": "a0409d54250bc211d62718a1aedb6fa020d7f091",
+    "pr463": "9e138832258d19c252fe60597e36d02bfb95fe39",
+    "pr464": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+    "pr467": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6"
+  }
+}
