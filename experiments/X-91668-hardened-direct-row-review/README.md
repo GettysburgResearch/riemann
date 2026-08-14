@@ -3,7 +3,7 @@
 This standard-library replay supports `L-91668`, `L-91669`, and the algebraic
 shell of `T-91655`.
 
-Run from the experiment directory:
+Run from the experiment directory in a full checkout of the locked branch:
 
 ```bash
 python3 verify.py \
@@ -15,8 +15,11 @@ Expected:
 
 ```text
 PASS_HARDENED_DIRECT_ROW_REVIEW_PACKET
-proof object: 669a507b06a5720c18968abad812c2572d9e5e595393d2d0b27d6e530169f88d
+proof object: 01de592e71de67768a8c6bf42dd303db6bb9795674f73adab3073684cd012218
 ```
+
+The checker fails closed unless every one of the `19` load-bearing repository
+files exists and has the exact Git blob SHA in the dependency manifest.
 
 ## What is replayed
 
@@ -34,7 +37,7 @@ same-index ordinary and detail replacement algebra;
 terminal target-mass telescope;
 all-depth terminal debt <= 2 root target;
 rejection of source-fraction weighting of an unrelated signed deficit;
-complete dependency-manifest syntax and frozen SHAs.
+complete dependency-manifest syntax and all 19 frozen Git blobs.
 ```
 
 Retained structural counts:
@@ -65,4 +68,5 @@ rh_established_by_replay                = false
 ```
 
 A passing replay means the new source-ownership and ledger shell is internally
-consistent.  It is not an independent acceptance of the complete RH proposal.
+consistent and exactly bound to its repository inputs.  It is not an
+independent acceptance of the complete RH proposal.
