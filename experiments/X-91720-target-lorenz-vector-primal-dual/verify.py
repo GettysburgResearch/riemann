@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact replay for L-91685 and R-91685.
+"""Exact replay for L-91720 and R-91720.
 
 This checker uses only Fraction arithmetic for the optimization theorem.  The
 algebraic child-interface counterexample is decided by integer square
@@ -143,7 +143,7 @@ def check_fixture(
         assert upper_dual(t, mass, q, c) == row_star
         row_stars.append(row_star)
 
-        # L-91687: the unused right tail has ratio at most the cutoff ratio.
+        # L-91722: the unused right tail has ratio at most the cutoff ratio.
         total_row = sum((qi * ti for qi, ti in zip(q, t)), Fraction(0))
         residual_row = total_row - row_star
         residual_target = sum(t, Fraction(0)) - mass
@@ -196,7 +196,7 @@ def check_child_interface_counterexample() -> dict[str, object]:
 
 
 def main() -> None:
-    rng = random.Random(91685)
+    rng = random.Random(91720)
     fixtures: list[dict[str, object]] = []
     total_vertices = 0
     total_coordinate_checks = 0

@@ -1,10 +1,10 @@
-# L-91685 — Target-Lorenz is the exact common-source vector primal/dual
+# L-91720 — Target-Lorenz is the exact common-source vector primal/dual
 
-Claim ID: `L-91685`  
+Claim ID: `L-91720`  
 Status: **PROVED EXACT ORDERED-CONE OPTIMIZATION AND SEPARATION THEOREM**  
 Created: 2026-08-14  
 Depends on: elementary fractional-knapsack duality; for the `P_61` specialization, `L-91682/L-91684`  
-Replay: `X-91685-target-lorenz-vector-primal-dual`  
+Replay: `X-91720-target-lorenz-vector-primal-dual`  
 RH status: **unproved**
 
 ## 1. Ordered typed source problem
@@ -44,7 +44,7 @@ An exact-target common-source removal is a vector
  0\le u_i\le1,
  \qquad
  \sum_i u_i t_i=M.
-\tag{L-91685.1}
+\tag{L-91720.1}
 \]
 
 It uses the same source coefficient `u_i` in target, score and every physical
@@ -56,7 +56,7 @@ coordinate. Put
  S(u)=\sum_i u_is_i,
  \quad
  R(u)=\sum_i u_ir_i.
-\tag{L-91685.2}
+\tag{L-91720.2}
 \]
 
 ## 2. Opposite monotone profiles
@@ -69,7 +69,7 @@ Assume the vector row-per-target profile is nonincreasing in cone order:
  \Longrightarrow
  \frac{r_i}{t_i}-\frac{r_k}{t_k}\in K.
  }
-\tag{L-91685.3}
+\tag{L-91720.3}
 \]
 
 Assume the score-per-target profile is nondecreasing:
@@ -80,7 +80,7 @@ Assume the score-per-target profile is nondecreasing:
  \Longrightarrow
  \frac{s_i}{t_i}\le\frac{s_k}{t_k}.
  }
-\tag{L-91685.4}
+\tag{L-91720.4}
 \]
 
 Thus moving target mass left is simultaneously favorable for every physical
@@ -102,20 +102,20 @@ with the evident endpoint conventions. Define `u^*` by
  u_c^*=\frac{M-\sum_{i<c}t_i}{t_c},
  \qquad
  u_i^*=0\quad(i>c).
-\tag{L-91685.5}
+\tag{L-91720.5}
 \]
 
 This is the leftmost Target-Lorenz submeasure.
 
 ## 4. Simultaneous vector extremality
 
-For every exact-target removal `u` satisfying (L-91685.1),
+For every exact-target removal `u` satisfying (L-91720.1),
 
 \[
  \boxed{
  R(u^*)-R(u)\in K,
  }
-\tag{L-91685.6}
+\tag{L-91720.6}
 \]
 
 and
@@ -124,7 +124,7 @@ and
  \boxed{
  S(u^*)\le S(u).
  }
-\tag{L-91685.7}
+\tag{L-91720.7}
 \]
 
 ### Proof
@@ -145,7 +145,7 @@ and changes score by
 
 Iteration proves both assertions. Equivalently, apply every functional in the
 dual cone `K^*` and use scalar fractional-knapsack duality; closedness of `K`
-then recovers (L-91685.6).
+then recovers (L-91720.6).
 
 The important point is simultaneity: no coordinate chooses its own source
 submeasure.
@@ -158,7 +158,7 @@ Let `ell in K^*` and put
  q_i=\frac{\ell(r_i)}{t_i}.
 \]
 
-By (L-91685.3), `q_i` is nonincreasing. With
+By (L-91720.3), `q_i` is nonincreasing. With
 
 \[
  \lambda_\ell=q_c,
@@ -174,7 +174,7 @@ every exact-target removal obeys
  +\sum_{i<c}\bigl(\ell(r_i)-\lambda_\ell t_i\bigr)
  =\ell(R(u^*)).
 }
-\tag{L-91685.8}
+\tag{L-91720.8}
 \]
 
 Indeed, after subtracting `lambda_ell M`, the coefficients are nonnegative to
@@ -199,10 +199,10 @@ every exact-target removal obeys
  +\sum_{i<c}(s_i-\lambda_St_i)
  =S(u^*).
 }
-\tag{L-91685.9}
+\tag{L-91720.9}
 \]
 
-Equations (L-91685.8)--(L-91685.9) are explicit dual certificates, not only an
+Equations (L-91720.8)--(L-91720.9) are explicit dual certificates, not only an
 existence theorem.
 
 ## 6. Complete primal-or-dual alternative
@@ -217,14 +217,14 @@ If
 
 \[
  \boxed{R(u^*)-R_O\in K}
-\tag{L-91685.10}
+\tag{L-91720.10}
 \]
 
 and
 
 \[
  \boxed{S(u^*)\le S_O,}
-\tag{L-91685.11}
+\tag{L-91720.11}
 \]
 
 then `u^*` is one common-source certificate satisfying target, score and every
@@ -250,47 +250,47 @@ and
 
 \[
  R(\nu)=E_R-R(U^*)\preceq_K E_R-O_R.
-\tag{L-91685.12}
+\tag{L-91720.12}
 \]
 
 The nonnegative physical bonus is exactly
 
 \[
  B=R(U^*)-R_O\in K.
-\tag{L-91685.13}
+\tag{L-91720.13}
 \]
 
 ### Dual separator
 
-If (L-91685.10) fails, finite-dimensional cone separation gives an
+If (L-91720.10) fails, finite-dimensional cone separation gives an
 `ell in K^*` with
 
 \[
  \ell(R(u^*))<\ell(R_O).
 \]
 
-Then (L-91685.8) proves
+Then (L-91720.8) proves
 
 \[
  \boxed{
  \ell(R(u))<\ell(R_O)
  \quad\text{for every exact-target common-source removal }u.
  }
-\tag{L-91685.14}
+\tag{L-91720.14}
 \]
 
 Thus the failed coordinate is an obstruction to the entire common-source
 submeasure cone, not merely to the greedy ansatz. For a product cone, one may
 take `ell` to be the failed coordinate projection.
 
-If (L-91685.11) fails, (L-91685.9) proves
+If (L-91720.11) fails, (L-91720.9) proves
 
 \[
  \boxed{
  S(u)>S_O
  \quad\text{for every exact-target common-source removal }u.
  }
-\tag{L-91685.15}
+\tag{L-91720.15}
 \]
 
 The score failure is likewise a complete separator.
@@ -335,7 +335,7 @@ producer. It is the exact optimizer for the complete common-source problem:
  \mathfrak L_j(p,y)=R_j(U^*)-O_R^{(j)}\ge0
  \quad(2\le j\le66)
  }
-\tag{L-91685.16}
+\tag{L-91720.16}
 \]
 
 is necessary and sufficient for the existence of an exact-target even-source
@@ -343,18 +343,18 @@ submeasure satisfying every row inequality, while the already proved score
 comparison is simultaneously optimal.
 
 A negative value of `mathfrak L_j` automatically emits the exact dual bound
-(L-91685.8) with
+(L-91720.8) with
 
 \[
  \lambda_j=\frac{K_R^{(j)}(c)}{K_T(c)}.
-\tag{L-91685.17}
+\tag{L-91720.17}
 \]
 
 No high-dimensional linear program is needed to decide this source cone.
 
 ## 8. Positive response consequence
 
-When (L-91685.16) holds, the row bonus `B>=0` is one literal nonnegative row.
+When (L-91720.16) holds, the row bonus `B>=0` is one literal nonnegative row.
 Every ordinary and radix-four response obtained from the resident positive row
 maps is therefore subordinate in the same source coefficients. This conclusion
 does not create or copy a boundary collar, mismatch packet, omission or common
@@ -364,7 +364,7 @@ port; those coordinates remain in the one-use root ledger.
 
 This theorem completely solves the **optimization and duality** of the
 common-source submeasure problem. It does not prove the arithmetic signs in
-(L-91685.16), export the live collar/port allocation, or prove RH.
+(L-91720.16), export the live collar/port allocation, or prove RH.
 
 ```text
 common exact-target source cone                 EXACT

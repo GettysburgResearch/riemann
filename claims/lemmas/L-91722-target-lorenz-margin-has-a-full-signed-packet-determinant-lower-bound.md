@@ -1,6 +1,6 @@
-# L-91687 — The Target-Lorenz margin has a full signed-packet determinant lower bound
+# L-91722 — The Target-Lorenz margin has a full signed-packet determinant lower bound
 
-Claim ID: `L-91687`  
+Claim ID: `L-91722`  
 Status: **PROVED EXACT SUFFICIENT REDUCTION**  
 Created: 2026-08-14  
 Depends on: `L-91682`, `L-91684`  
@@ -12,12 +12,12 @@ For one causal leaf, write the complete signed target and row as
 
 \[
  \mathscr T=E_T-O_T>0,
-\tag{L-91687.1}
+\tag{L-91722.1}
 \]
 
 \[
  \mathscr R_j=E_R^{(j)}-O_R^{(j)}.
-\tag{L-91687.2}
+\tag{L-91722.2}
 \]
 
 Let `U` be the leftmost even target submeasure with
@@ -36,7 +36,7 @@ Then
 
 \[
  T(\nu)=\mathscr T.
-\tag{L-91687.3}
+\tag{L-91722.3}
 \]
 
 The Target-Lorenz row margin is
@@ -47,7 +47,7 @@ The Target-Lorenz row margin is
  &=R_j(U)-O_R^{(j)}\\
  &=\mathscr R_j-R_j(\nu).
 \end{aligned}
-\tag{L-91687.4}
+\tag{L-91722.4}
 \]
 
 ## 2. Right-tail bound
@@ -74,10 +74,10 @@ Integrating in target currency gives
  \le\rho_j(c)T(\nu)
  =\rho_j(c)\mathscr T.
 }
-\tag{L-91687.5}
+\tag{L-91722.5}
 \]
 
-Substitution into (L-91687.4) proves
+Substitution into (L-91722.4) proves
 
 \[
 \boxed{
@@ -86,7 +86,7 @@ Substitution into (L-91687.4) proves
  \mathscr R_j(p,y)
  -\rho_j(c;p,y)\mathscr T(p,y).
 }
-\tag{L-91687.6}
+\tag{L-91722.6}
 \]
 
 ## 3. Full signed determinant gate
@@ -100,10 +100,10 @@ Since `K_T(c)>0`, the sufficient sign condition is
   -\mathscr T(p,y)K_R^{(j)}(c;p,y)
  \ge0.
 }
-\tag{L-91687.7}
+\tag{L-91722.7}
 \]
 
-Indeed, (L-91687.7) is precisely
+Indeed, (L-91722.7) is precisely
 
 \[
  \mathscr R_j-\rho_j(c)\mathscr T\ge0.
@@ -124,19 +124,19 @@ If
  c\ge py/j,
 \]
 
-then `K_R^(j)(c)=0` by `L-91686`. Equation (L-91687.7) reduces to
+then `K_R^(j)(c)=0` by `L-91721`. Equation (L-91722.7) reduces to
 
 \[
  \mathscr R_jK_T(c)\ge0,
 \]
 
-and (L-91687.6) becomes the exact equality
+and (L-91722.6) becomes the exact equality
 
 \[
  \mathfrak L_j=\mathscr R_j.
 \]
 
-Thus `L-91686` is the zero-cutoff-row sector of the present determinant route.
+Thus `L-91721` is the zero-cutoff-row sector of the present determinant route.
 
 ## 5. Correct cell form
 
@@ -148,14 +148,14 @@ Using
 \]
 
 the target factors are quadratic-algebraic after multiplication by `A`, as in
-`R-91685`. On a fixed parent/child row activation cell,
+`R-91720`. On a fixed parent/child row activation cell,
 
 \[
  Q_Y(j)=C_{j,N}\log Y-D_{j,N}
 \]
 
 makes both `mathscr R_j` and `K_R^(j)(c)` explicit
-algebraic-logarithmic functions. Hence (L-91687.7) defines a smaller
+algebraic-logarithmic functions. Hence (L-91722.7) defines a smaller
 fail-closed cell campaign than the original prefix determinant:
 
 ```text

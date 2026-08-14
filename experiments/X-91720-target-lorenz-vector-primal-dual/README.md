@@ -1,4 +1,4 @@
-# X-91685 — Target-Lorenz vector primal/dual replay
+# X-91720 — Target-Lorenz vector primal/dual replay
 
 Run from this directory:
 
@@ -18,8 +18,8 @@ PASS_TARGET_LORENZ_VECTOR_PRIMAL_DUAL
 checks the ordered-cone theorem through finite scalar projections, exact
 fractional-knapsack vertices, equality of the greedy objectives with their
 cutoff dual bounds, deliberate primal successes, deliberate dual failures, and
-the child-interface firewall of `R-91685`, and the exact right-tail/full-signed
-determinant lower bound of `L-91687`.
+the child-interface firewall of `R-91720`, and the exact right-tail/full-signed
+determinant lower bound of `L-91722`.
 
 Expected discovery verdict:
 

@@ -1,6 +1,6 @@
-# L-91686 — Beyond row support, the Target-Lorenz margin is the complete signed row
+# L-91721 — Beyond row support, the Target-Lorenz margin is the complete signed row
 
-Claim ID: `L-91686`  
+Claim ID: `L-91721`  
 Status: **PROVED EXACT SUPPORT REDUCTION; STRICT SIGN IMPORTS REVIEWED ROW THEOREMS**  
 Created: 2026-08-14  
 Depends on: `L-91684`; for strict positivity, `L-91346/L-91364`  
@@ -22,7 +22,7 @@ Let `U` be the leftmost even target submeasure of exact odd target mass and let
 
 \[
  \mathfrak L_j(p,y)=R_j(U)-O_R^{(j)}.
-\tag{L-91686.1}
+\tag{L-91721.1}
 \]
 
 ## 2. Exact row support
@@ -54,7 +54,7 @@ Therefore
  K_R^{(j)}(d)=0
  \qquad(d\ge x/j).
 }
-\tag{L-91686.2}
+\tag{L-91721.2}
 \]
 
 All nonzero row source lies strictly to the left of `x/j`.
@@ -65,11 +65,11 @@ Assume
 
 \[
 \boxed{c\ge x/j.}
-\tag{L-91686.3}
+\tag{L-91721.3}
 \]
 
 By definition of the leftmost submeasure, every even source atom `e<c` is used
-with coefficient one. Equation (L-91686.2) shows that this includes every even
+with coefficient one. Equation (L-91721.2) shows that this includes every even
 atom with nonzero row. A possibly fractional cutoff atom has zero row whenever
 `c=x/j`, and every atom beyond `c` has zero row.
 
@@ -77,7 +77,7 @@ Hence
 
 \[
  R_j(U)=E_R^{(j)}.
-\tag{L-91686.4}
+\tag{L-91721.4}
 \]
 
 The odd row is already the complete odd demand, so
@@ -88,14 +88,14 @@ The odd row is already the complete odd demand, so
  =E_R^{(j)}-O_R^{(j)}
  =\sum_{d\mid P_{61}}\mu(d)K_R^{(j)}(d).
 }
-\tag{L-91686.5}
+\tag{L-91721.5}
 \]
 
 Thus no cutoff determinant remains in this regime.
 
 ## 4. Existing strict row inputs
 
-If `j<=y`, the right side of (L-91686.5) is the inherited causal one-prime row
+If `j<=y`, the right side of (L-91721.5) is the inherited causal one-prime row
 of `L-91346`, which has the directed lower bound
 
 \[
@@ -104,7 +104,7 @@ of `L-91346`, which has the directed lower bound
 
 on its stated frozen inputs.
 
-If `j>y`, the child row is inactive and (L-91686.5) is the canonical finite
+If `j>y`, the child row is inactive and (L-91721.5) is the canonical finite
 Euler row
 
 \[
@@ -114,7 +114,7 @@ Euler row
 which is strictly positive for `x>j` under `L-91364`. Here `x=py>=67>j`.
 
 Therefore, subject to independent reconstruction of those retained row
-theorems, every cell satisfying (L-91686.3) is strictly closed.
+theorems, every cell satisfying (L-91721.3) is strictly closed.
 
 ## 5. Reduced arithmetic frontier
 
@@ -122,10 +122,10 @@ The only Target-Lorenz cells not covered by this support reduction satisfy
 
 \[
 \boxed{c<x/j.}
-\tag{L-91686.6}
+\tag{L-91721.6}
 \]
 
-Since `c` is one of 185 even divisors below 2000, (L-91686.6) is a strong
+Since `c` is one of 185 even divisors below 2000, (L-91721.6) is a strong
 quotient restriction for the remaining exact cell certificate.
 
 ## 6. Boundary

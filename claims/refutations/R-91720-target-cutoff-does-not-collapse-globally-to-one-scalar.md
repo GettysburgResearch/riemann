@@ -1,6 +1,6 @@
-# R-91685 — The causal target cutoff does not globally collapse to one scalar
+# R-91720 — The causal target cutoff does not globally collapse to one scalar
 
-Claim ID: `R-91685`  
+Claim ID: `R-91720`  
 Status: **EXACT SCOPE CORRECTION / ALGEBRAIC COUNTEREXAMPLE**  
 Created: 2026-08-14  
 Depends on: the causal target atom of `L-91348/L-91682`  
@@ -26,7 +26,7 @@ Inside the child-active regime `d<=y`, the causal target atom is
  \left[
   \frac{4u(s+1)}d-\frac3{\sqrt d}
  \right].
-\tag{R-91685.1}
+\tag{R-91720.1}
 \]
 
 Because the prefactor is common, it is tempting to conclude that all target
@@ -40,7 +40,7 @@ That conclusion is false globally. For `d>y` the child term is inactive and
 
 \[
  K_T(d)=\frac{4A}{d}-\frac3{\sqrt d},
-\tag{R-91685.2}
+\tag{R-91720.2}
 \]
 
 so crossing `d=y` changes the formula.
@@ -65,7 +65,7 @@ Both have the same proposed scalar:
  \sqrt{y_1}(\sqrt{p_1}+1)
  =2(a+1)
  =\sqrt{y_2}(\sqrt{p_2}+1).
-\tag{R-91685.3}
+\tag{R-91720.3}
 \]
 
 At `d=2`, however, the first packet is child-active and the second is
@@ -76,7 +76,7 @@ child-inactive. Direct simplification gives
  K_T(2;p_2,y_2)-K_T(2;p_1,y_1)
  =2+\frac4{\sqrt{67}}-\frac3{\sqrt{134}}>0.
 }
-\tag{R-91685.4}
+\tag{R-91720.4}
 \]
 
 The sign is exact: `2>3/sqrt(134)` because `4*134>9`, and
@@ -96,7 +96,7 @@ The globally valid formula is
  -\mathbf1_{d\le u^2}\frac{u}{A}
   \left(\frac{4u}{d}-\frac3{\sqrt d}\right).
 }
-\tag{R-91685.5}
+\tag{R-91720.5}
 \]
 
 Multiplying by the positive `A` gives
@@ -108,7 +108,7 @@ Multiplying by the positive `A` gives
  -\mathbf1_{d\le u^2}
   \left(\frac{4u^2}{d}-\frac{3u}{\sqrt d}\right).
 }
-\tag{R-91685.6}
+\tag{R-91720.6}
 \]
 
 On a fixed child-activation cell the indicator set is fixed. Every cumulative
