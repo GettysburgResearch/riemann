@@ -1,0 +1,55 @@
+{
+  "classification": "PASS_HARDENED_DIRECT_ROW_REVIEW_PACKET",
+  "core": {
+    "dependency_manifest": {
+      "forbidden_shortcuts": [
+        "AFFINE67",
+        "HALL_TREE_COMMUTATION",
+        "L91659",
+        "OUTER_PACKET_DUPLICATION",
+        "P53_AT_P61",
+        "SOURCE_FRACTION_LOSS"
+      ],
+      "load_bearing_entries": 19,
+      "locally_checked_git_blobs": 19,
+      "manifest_sha256": "4b5075e2f8f79360a2c0cbd5a752eae5d75bfb8ae7d6fa7240f9d19867adfd00",
+      "new_blobs_pending_final_lock": 0
+    },
+    "ledger_algebra": {
+      "all_depth_terminal_debt_le_2_root_target": true,
+      "branch_coefficients_sum_to_one": true,
+      "exact_fraction_checks": 965,
+      "factor67_depth_probe_max": 32,
+      "ordinary_and_detail_same_index_no_overdraw": true,
+      "signed_deficit_source_fraction_shortcut_rejected": true,
+      "terminal_mass_telescope_exact": true,
+      "terminal_profile_sha256": "3bc35de7fa414ba607faeb27daa586ee2b3334bcf27df54271e7f71c121b24f4"
+    },
+    "scope": {
+      "actual_frozen_hall_cells_replayed_here": false,
+      "arithmetic_source_ownership_replayed": true,
+      "endpoint_contour_replayed_here": false,
+      "fixed67_analytic_replay_delegated_to_X91666": true,
+      "rh_established_by_replay": false
+    },
+    "source_partition": {
+      "current_rough_frontier_records": 37728,
+      "endpoints": [
+        67,
+        469,
+        4096,
+        10000,
+        65536,
+        120000
+      ],
+      "finite_P61_records": 6989,
+      "least_prime_recursion_edges": 126638,
+      "limit": 120000,
+      "ownership_sha256": "88e402b38d9822d806a5471f89beef97433b82c9ecda10c601ba0e98b20a46cf",
+      "squarefree_source_records": 121696,
+      "stopped_records": 76979
+    }
+  },
+  "proof_object_sha256": "01de592e71de67768a8c6bf42dd303db6bb9795674f73adab3073684cd012218",
+  "schema": "riemann.t91655.hardening-replay.v1"
+}

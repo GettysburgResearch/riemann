@@ -1,0 +1,36 @@
+{
+  "classification": "PASS_SINGLE_SHARP_NORMALIZATION_HARDENING",
+  "core": {
+    "loss": {
+      "checks": 199,
+      "recursive_loss_coefficient": 1,
+      "source_fraction_shortcut_used": false
+    },
+    "normalization": {
+      "checks": 52,
+      "old_balanced_reserve_row_multiplier": 3,
+      "old_native_row_claim_false": true,
+      "row_digest": "59a62dab39c27467b91866814fa53ac6faef705414802e0f57ec9d52d61b43ae",
+      "single_sharp_identity": "w_Psi=3*w_(4/3)",
+      "single_sharp_row_multiplier": 1,
+      "target_score_ratio_strictly_increasing": true
+    },
+    "scope": {
+      "expensive_hall_cells_replayed": false,
+      "fixed67_theorem_replayed_in_X91666": true,
+      "outer_endpoint_certificate_replayed": false,
+      "rh_established_by_replay": false
+    },
+    "source_tree": {
+      "finite_seed_fubini_checks": 60,
+      "formal_score_convolution_checks": 1008,
+      "least_prime_edge_checks": 9123,
+      "limit": 5000,
+      "ownership_digest": "a70d52195804faec9b464a897bfa4f366473a9cf54372256790abf324aeed70d",
+      "source_atom_nonduplication": true,
+      "squarefree_records": 3042
+    }
+  },
+  "proof_object_sha256": "a5b07f68367447da089ef8d8fa84adf2ea2615b4fcbb8f038d7f23cf5dc49dda",
+  "schema": "riemann.t91656.single-sharp-hardening.v1"
+}

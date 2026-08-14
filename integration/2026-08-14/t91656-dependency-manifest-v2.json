@@ -1,0 +1,319 @@
+{
+  "artifacts": [
+    {
+      "blob_sha": "ed63c5497f607b05db88e88e53d578285d98e051",
+      "id": "SPP_README",
+      "path": "standalone/2026-08-14-full-direct-row-closure/README.md"
+    },
+    {
+      "blob_sha": "18ca1c17ec701fc4c1d4e05ea10a3ed039660574",
+      "id": "SPP_STATUS",
+      "path": "standalone/2026-08-14-full-direct-row-closure/CLAIM_STATUS.md"
+    },
+    {
+      "blob_sha": "6d276721e4b328094a7f168f330b7a257f9261c1",
+      "id": "SPP_REVIEW_SPEC",
+      "path": "standalone/2026-08-14-full-direct-row-closure/FINAL_REVIEW_SPECIFICATION.md"
+    },
+    {
+      "blob_sha": "e1766765531acf5bcb2422e006e7b258b436a249",
+      "id": "FINAL_REPORT",
+      "path": "reports/gpt56-pro/2026-08-14-single-sharp-final-hardening.md"
+    },
+    {
+      "blob_sha": "b94a5d7e311ae3e859a93d78181835a498d00d13",
+      "id": "X91670_README",
+      "path": "experiments/X-91670-single-sharp-normalization-hardening/README.md"
+    },
+    {
+      "blob_sha": "f38075c2138ae08a22bede011293d6f200b62649",
+      "id": "X91670_SCRIPT",
+      "path": "experiments/X-91670-single-sharp-normalization-hardening/verify.py"
+    },
+    {
+      "blob_sha": "4a3feb98db91df9e72afc01b6bb816822887e88e",
+      "id": "X91670_RESULT",
+      "path": "experiments/X-91670-single-sharp-normalization-hardening/results/verification.json"
+    },
+    {
+      "blob_sha": "d6c9b10748b24dd9b59350652ad80266e78f47d6",
+      "id": "X91671_README",
+      "path": "experiments/X-91671-final-single-sharp-lock/README.md"
+    },
+    {
+      "blob_sha": "6c1e20636cf6d1b384c7db11b8a6f6be38934c42",
+      "id": "X91671_SCRIPT",
+      "path": "experiments/X-91671-final-single-sharp-lock/verify.py"
+    }
+  ],
+  "base_branch": "research/gpt56-pro/91663-direct-root-review-response",
+  "base_commit": "f41797c91497dc462f549a127d8494bbe4ccde2f",
+  "content_commit": "c696d2a356eeacb3097d4ea6cc727b84548d7a03",
+  "explicit_nonclaims": [
+    "global positivity of the reciprocal-zeta equality weight",
+    "the balanced/reserve two-row realization",
+    "the validator proves the mathematics",
+    "the replay establishes RH",
+    "current corrections may be appended to a second copy of c_X",
+    "P_Lambda(X)=4sqrt(X)"
+  ],
+  "external_endpoint_chain": [
+    {
+      "blob_sha": "bfe7b71eb2db0a2ad4d987e75b43d5872fc84d37",
+      "id": "L90020_PP",
+      "path": "claims/lemmas/L-90020-prime-square-occupancy-gap-is-minus-one-minus-zeta-half.md",
+      "role": "prime-square coefficient",
+      "source_commit": "ed566f3198e236c54ba18049181016536f56d456"
+    },
+    {
+      "blob_sha": "9c93dc10bb12d85785d16f4643dd81d3070c0043",
+      "id": "T90011_PP",
+      "path": "claims/theorems/T-90011-subquadratic-complete-prime-power-parabolic-gap-is-equivalent-to-rh.md",
+      "role": "subquadratic complete-gap criterion",
+      "source_commit": "ed566f3198e236c54ba18049181016536f56d456"
+    },
+    {
+      "blob_sha": "21eae10025b03b724233d49ea09fbc90f4aa66fd",
+      "id": "T90008",
+      "path": "claims/theorems/T-90008-undifferenced-prime-endpoint-negativity-is-equivalent-to-rh.md",
+      "role": "Mellin-Landau endpoint implication",
+      "source_commit": "906b5a477a1ed7c88a40db7569924f15f3d54b72"
+    }
+  ],
+  "external_transform_chain": [
+    {
+      "blob_sha": "bce315dc84db189a1e36e98c37130ea7b6ae5744",
+      "id": "L26204",
+      "path": "claims/lemmas/L-26204-endpoint-scale-kernel-and-mobius-weight-state.md",
+      "role": "endpoint kernel, equality density and score four",
+      "source_commit": "e0ad1484d70098eb7c8be17655ea08568d5e2cd2"
+    }
+  ],
+  "firewalls": [
+    {
+      "blob_sha": "da772b191b4617ec7ab114b09e229ce744737ecf",
+      "id": "R91658",
+      "path": "claims/refutations/R-91658-equality-weight-only-window-positive-and-outer-realization-remains-load-bearing.md",
+      "role": "forbids global equality-weight positivity and preserves one-use realization"
+    },
+    {
+      "blob_sha": "d95e2681fe350a566fe317c9850b9a328ec868c6",
+      "id": "L91668_REJECTED",
+      "path": "claims/lemmas/L-91668-exact-labelled-source-partition-closes-native-row-entry.md",
+      "role": "rejected factor-three root theorem"
+    },
+    {
+      "blob_sha": "f4f5b933dc389bf37cb9500392e8da8c79b1e309",
+      "id": "L91669_SUPERSEDED",
+      "path": "claims/lemmas/L-91669-direct-row-proof-ledger-has-no-hidden-outer-packet.md",
+      "role": "superseded ledger"
+    },
+    {
+      "blob_sha": "5bdbb56c08771273785334a3c0594b95f7b8b679",
+      "id": "T91655_REJECTED",
+      "path": "claims/theorems/T-91655-hardened-direct-row-factor67-resolution-proposal.md",
+      "role": "rejected proposal"
+    }
+  ],
+  "load_bearing": [
+    {
+      "blob_sha": "2504964ccd6e9fe33859ad391135650927406b9c",
+      "id": "R91659",
+      "path": "claims/refutations/R-91659-balanced-reserve-row-has-factor-three-overcount.md",
+      "role": "exact factor-three refutation and normalization firewall",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "9bcccee513dfb5730affed8cfbde8d737f0bc967",
+      "id": "L91666",
+      "path": "claims/lemmas/L-91666-fixed67-literal-entropy-difference-pays-native-score.md",
+      "role": "global fixed-67 literal entropy theorem",
+      "status": "proved_analytic_directed"
+    },
+    {
+      "blob_sha": "6ef4ab3ae0ab85cbdded84c6a365942f12c320fd",
+      "id": "L91670",
+      "path": "claims/lemmas/L-91670-single-sharp-channel-has-exact-native-row-normalization.md",
+      "role": "single-SHARP source recursion, one-copy row and score normalization",
+      "status": "proved_exact_on_frozen_M1_gate"
+    },
+    {
+      "blob_sha": "b6276367c8c857841df6bbdebf6a4ce3b0e2c835",
+      "id": "L91671",
+      "path": "claims/lemmas/L-91671-single-sharp-endpoint-realization-and-direct-child-form-one-reset.md",
+      "role": "typed finite/continuum bridge, one physical row, equality-deficit recurrence",
+      "status": "proposed_complete_reconstruct"
+    },
+    {
+      "blob_sha": "86b34695ad2e79deebfb5c65b33a8992abfc92be",
+      "id": "T91656",
+      "path": "claims/theorems/T-91656-final-single-sharp-direct-row-factor67-resolution-proposal.md",
+      "role": "normative conclusion-producing proposal",
+      "status": "complete_proposal_review_required"
+    },
+    {
+      "blob_sha": "c3c5c54b0ba38730bfbd2718f9a807af411ff7d2",
+      "id": "L91322",
+      "path": "claims/lemmas/L-91322-normalized-component-row-monotonicity-lifts-the-parity-shadow-exactly.md",
+      "role": "directed a=1 endpoint gate M1>1/20 used in L91670",
+      "status": "directed_exact_frozen"
+    },
+    {
+      "blob_sha": "d32f2b29398afa816ff2a52e8bf72f589d5e1a23",
+      "id": "L91107",
+      "path": "claims/lemmas/L-91107-continuum-endpoint-inverse-is-the-reciprocal-zeta-equality-weight.md",
+      "role": "finite-window equality density and endpoint inverse",
+      "status": "proposed_complete_reconstruct"
+    },
+    {
+      "blob_sha": "7597e989eb2501c6f8a3dd2db77e72fa7fd5acf0",
+      "id": "L91110",
+      "path": "claims/lemmas/L-91110-positive-martingale-bspline-quantization-is-score-favorable.md",
+      "role": "one positive score-favorable quantization",
+      "status": "proposed_complete_reconstruct"
+    },
+    {
+      "blob_sha": "2b090187db6ca87c632281f38055d35972151316",
+      "id": "L91111",
+      "path": "claims/lemmas/L-91111-martingale-quantization-collar-is-a-small-positive-seed.md",
+      "role": "one positive width-three collar",
+      "status": "proposed_complete_reconstruct"
+    },
+    {
+      "blob_sha": "40a3f606455d758d1d9e54f37c68bb55822aab6e",
+      "id": "L91114",
+      "path": "claims/lemmas/L-91114-finite-continuum-mismatch-gains-one-carry-derivative.md",
+      "role": "finite/continuum mismatch and interior safety",
+      "status": "proposed_complete_reconstruct"
+    },
+    {
+      "blob_sha": "0f02ba0e67b02c4e5622e76ad64ac0ac1fd9de2d",
+      "id": "L91115",
+      "path": "claims/lemmas/L-91115-fixed-top-omission-closes-the-terminal-detail-annulus.md",
+      "role": "top omission and terminal columns",
+      "status": "proposed_complete_reconstruct"
+    },
+    {
+      "blob_sha": "de137e616e0f35e87923ad21856b23f1d079323e",
+      "id": "L91320_PORT",
+      "path": "claims/lemmas/L-91320-absorbing-59-and-61-makes-the-schur-port-dominate-every-rough-state-correction.md",
+      "role": "corrected P61/67 one-use port",
+      "status": "proved_exact_reconstruct_routing"
+    },
+    {
+      "blob_sha": "95d5667c5638842a0c8989a649f8c718c51393e1",
+      "id": "L91540",
+      "path": "claims/lemmas/L-91540-paired-positive-kernel-types-are-hereditary-under-subprobability-branching.md",
+      "role": "positive typed branching",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "9f4c4c3c7a5a7cd4ec8fcb48ac56a07dc29f16a4",
+      "id": "L91545",
+      "path": "claims/lemmas/L-91545-target-hall-output-splits-into-a-hereditary-source-and-a-target-null-row-bonus.md",
+      "role": "Hall residual source and positive row bonus",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "0e2d13102f6efd4823b1b2f91aa41513c9fed8db",
+      "id": "L91550",
+      "path": "claims/lemmas/L-91550-merged-binary-channels-have-uniform-directed-hall-and-row-margins.md",
+      "role": "frozen no-upward Hall and normalized-row cells",
+      "status": "directed_exact_frozen"
+    },
+    {
+      "blob_sha": "782f492474f6565506516ab6165bf0c758013a41",
+      "id": "L91554",
+      "path": "claims/lemmas/L-91554-finite-euler-support-makes-the-native-frontier-debt-summable.md",
+      "role": "terminal/frontier debt bound",
+      "status": "proved_exact_directed"
+    },
+    {
+      "blob_sha": "06e2e60c562b1be07d33e973bb1a94438a3c1523",
+      "id": "L91556",
+      "path": "claims/lemmas/L-91556-binary-return-has-an-exact-native-row-score-budget.md",
+      "role": "exact one-prime target, row-budgeted score and row coefficients",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "adabeecc6511128231599d77c922ff991b450850",
+      "id": "L91557",
+      "path": "claims/lemmas/L-91557-equality-density-score-front-door-and-native-upper-bound.md",
+      "role": "equality score 4sqrtX and benchmark comparison",
+      "status": "proved_score_consumer_reconstruct_assembly"
+    },
+    {
+      "blob_sha": "2c514bbe93eb990c3809801b62bd5ac451642c2c",
+      "id": "L91559",
+      "path": "claims/lemmas/L-91559-nested-component-packets-have-an-exact-identity-embedding.md",
+      "role": "same-index arbitrary-child ordinary/detail replacement",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "bb3a5e5c90abab6c5043423ea08792bbbb5a5148",
+      "id": "L91560",
+      "path": "claims/lemmas/L-91560-binary-controlled-cocycle-is-exact-in-native-row-space.md",
+      "role": "one-prime target/score/row cocycle",
+      "status": "proved_exact_frozen"
+    },
+    {
+      "blob_sha": "b077de48c97586786b65e570fad4d246c64c91f7",
+      "id": "L91562",
+      "path": "claims/lemmas/L-91562-native-row-budget-does-not-change-the-merged-target-hall-certificate.md",
+      "role": "Hall normalization compatibility",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "4c83e63a8a4770635f7fa89ecb24ca734f4f3229",
+      "id": "L91621",
+      "path": "claims/lemmas/L-91621-stopping-line-hallization-sums-to-one-native-row.md",
+      "role": "source-disjoint stopping line, leafwise Hall and measurable Fubini",
+      "status": "proved_conditional_on_single_sharp_source_identity"
+    },
+    {
+      "blob_sha": "42db1034ed2068291d5798c1daa98abbc13a5c96",
+      "id": "L91622",
+      "path": "claims/lemmas/L-91622-direct-row-fixed67-reset-has-a-target-mass-envelope.md",
+      "role": "historical direct reset envelope supporting terminal mass telescope",
+      "status": "proved_conditional"
+    },
+    {
+      "blob_sha": "151cc93ff5d0a5ffb3b0225eda9001dd9d406a3d",
+      "id": "L91663",
+      "path": "claims/lemmas/L-91663-direct-hall-child-replacement-is-native-capacity-faithful.md",
+      "role": "exact native response and simultaneous child residual inequalities",
+      "status": "proved_exact_on_frozen_hall_inputs"
+    },
+    {
+      "blob_sha": "11dfb291596c634216b45132a3d6b075af4463bc",
+      "id": "L90029",
+      "path": "claims/lemmas/L-90029-radix-four-detail-packing-has-positive-target-and-positive-endpoint-atoms.md",
+      "role": "detail-to-ordinary positive telescope",
+      "status": "proposed_exact_reconstruct"
+    },
+    {
+      "blob_sha": "022aac53ba683951150ffc6ff164f59534a50a13",
+      "id": "L91660",
+      "path": "claims/lemmas/L-91660-native-endpoint-deficit-dominates-the-complete-prime-power-gap.md",
+      "role": "finite von-Mangoldt dual",
+      "status": "proved_exact"
+    }
+  ],
+  "proof_object_x91670": "a5b07f68367447da089ef8d8fa84adf2ea2615b4fcbb8f038d7f23cf5dc49dda",
+  "proposal_branch": "research/gpt56-pro/91666-full-direct-row-closure",
+  "proposal_pr": 455,
+  "recursive_quantity": "equality deficit, then native loss",
+  "repository": "gfreund123/riemann",
+  "review_predecessor": {
+    "head": "e136fcf42fbab1195fc193e64ce4039d1a1d416c",
+    "pr": 457,
+    "reviewed_proposal_head": "9dba11b2f1130c0aa8dba5846ec3c2e658326474"
+  },
+  "root_normalization": "single-SHARP: w_Psi=3*w_(4/3)",
+  "schema": "riemann.t91656.single-sharp-dependency-manifest.v1",
+  "supersedes": {
+    "blob_sha": "f591f627c1a0734c0750b591324cd0439b08264a",
+    "path": "integration/2026-08-14/t91656-dependency-manifest.json",
+    "reason": "earlier manifest named a pre-final content commit"
+  }
+}

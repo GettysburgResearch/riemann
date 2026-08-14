@@ -1,0 +1,25 @@
+{
+  "classification": "PASS_T91656_FINAL_SINGLE_SHARP_LOCK_CONNECTOR_AUDIT_V2",
+  "core": {
+    "content_commit": "c696d2a356eeacb3097d4ea6cc727b84548d7a03",
+    "external_objects_declared": 4,
+    "local_objects_declared": 39,
+    "manifest_blob": "30b4a3d163de1e04972419bc91e5990a08089c56",
+    "manifest_commit": "bc5b5c62e75fc1e53d91e9513a63561f82188bbd",
+    "repository": "gfreund123/riemann",
+    "scope": {
+      "local_checkout_validator_executed": false,
+      "mathematics_validated": false,
+      "reason_local_validator_not_executed": "runtime DNS could not resolve github.com for checkout",
+      "repository_freeze_validated": true,
+      "rh_established": false
+    },
+    "supersedes_connector_audit_blob": "4a5995f0e8ba726e614df14f17ae4c72edc251c9",
+    "tree_api_recursive_checked": true,
+    "tree_api_truncated": false,
+    "validation_mode": "connected GitHub object API plus corrected v2 manifest",
+    "x91670_proof_object": "a5b07f68367447da089ef8d8fa84adf2ea2615b4fcbb8f038d7f23cf5dc49dda"
+  },
+  "proof_object_sha256": "bfe4eac50cc6cbb8f899b4b255330ce5e63477ad8f4d98f824fca11746f5c971",
+  "schema": "riemann.t91656.final-single-sharp-lock.connector-audit.v2"
+}

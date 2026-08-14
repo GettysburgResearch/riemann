@@ -1,0 +1,108 @@
+{
+  "schema": "riemann.t91654.direct-row-supplement-lock.v1",
+  "repository": "gfreund123/riemann",
+  "proposal_pr": 455,
+  "base_branch": "research/gpt56-pro/91663-direct-root-review-response",
+  "base_sha": "f41797c91497dc462f549a127d8494bbe4ccde2f",
+  "proposal_branch": "research/gpt56-pro/91666-full-direct-row-closure",
+  "normative_theorem_sha": "529a951f00538555b9437b68e93fbc9674a96779",
+  "parent_lock": {
+    "path": "integration/2026-08-14/t91653-direct-root-lock.json",
+    "blob_sha": "d12acb429b694467c5c33d84a57590bb4cceb9d5",
+    "reading_rule": "read conjunctively with this supplement"
+  },
+  "new_objects": [
+    {
+      "id": "L-91666",
+      "path": "claims/lemmas/L-91666-fixed67-literal-entropy-difference-pays-native-score.md",
+      "blob_sha": "9bcccee513dfb5730affed8cfbde8d737f0bc967",
+      "status": "proved_analytic_plus_directed_finite"
+    },
+    {
+      "id": "L-91667",
+      "path": "claims/lemmas/L-91667-direct-native-equality-row-gives-complete-one-use-root-reset.md",
+      "blob_sha": "355d20888c497f5ddee536208cd3980f8269123d",
+      "status": "proposed_complete_root_theorem_on_frozen_inputs"
+    },
+    {
+      "id": "T-91654",
+      "path": "claims/theorems/T-91654-full-direct-row-factor67-resolution-proposal.md",
+      "blob_sha": "14c8f0d801804302a821059d64d40a7eb1c84cf1",
+      "status": "complete_rh_proof_proposal_independent_review_required"
+    },
+    {
+      "id": "R-91656",
+      "path": "claims/refutations/R-91656-old-grrt-cffp-frontier-is-superseded-by-direct-native-row-reset.md",
+      "blob_sha": "a2f27699a66dda34ed04ace5f930005e214a732b",
+      "status": "supersession_map_old_review_objections_retained"
+    },
+    {
+      "id": "X-91666-script",
+      "path": "experiments/X-91666-full-direct-row-closure/verify.py",
+      "blob_sha": "61c221c382a54012ea2dc36a68c64e62cff762d9",
+      "status": "standard_library_directed_replay"
+    },
+    {
+      "id": "X-91666-readme",
+      "path": "experiments/X-91666-full-direct-row-closure/README.md",
+      "blob_sha": "3e3c4d3527e0fe914b27452d59ffbd5a907326de",
+      "status": "scope_and_replay_instructions"
+    },
+    {
+      "id": "X-91666-result",
+      "path": "experiments/X-91666-full-direct-row-closure/results/verification.json",
+      "blob_sha": "ad31e29ab3b088ae9f9dcb81ae1f842137b199c9",
+      "proof_object_sha256": "2162b25bbfc824848bdd1fbf9bdf074f07194de23d21de510c48d39c0f33004d",
+      "status": "pass_as_scoped_rh_false"
+    },
+    {
+      "id": "SPP-91666-front-door",
+      "path": "standalone/2026-08-14-full-direct-row-closure/README.md",
+      "blob_sha": "2c453e0db72f8903f4ffaf4b226fc2cd8b73eb10",
+      "status": "review_front_door"
+    },
+    {
+      "id": "SPP-91666-status",
+      "path": "standalone/2026-08-14-full-direct-row-closure/CLAIM_STATUS.md",
+      "blob_sha": "6bb531113376b07765dfd50fdc60e635bc39f1ae",
+      "status": "controlling_status_boundary"
+    },
+    {
+      "id": "T-91654-report",
+      "path": "reports/gpt56-pro/2026-08-14-full-direct-row-closure.md",
+      "blob_sha": "944f44e13fd0d0d3c91f8d4451169abd74b2c5e0",
+      "status": "mathematical_summary"
+    },
+    {
+      "id": "T-91654-handoff",
+      "path": "integration/2026-08-14/t91654-review-handoff.md",
+      "blob_sha": "e8f08613c408c70d153c46e60a3f1e8fc9dc748d",
+      "status": "hostile_reconstruction_order"
+    }
+  ],
+  "conclusion_chain": [
+    "native equality response is exactly the native ordinary/detail target",
+    "source-disjoint leafwise Hall gives a positive realization of the same row",
+    "same-index child subtraction and arbitrary replacement preserve ordinary/detail feasibility",
+    "L-91666 pays the complete inherited score difference coefficient one",
+    "all root-only finite corrections are current and charged once",
+    "Loss_X <= Loss_(X/67+C0)+C_reset",
+    "Loss_X=O(log X)=o(log^2 X)",
+    "F_Lambda(X)<=Loss_X",
+    "prime-square drift plus Mellin-Landau implies RH"
+  ],
+  "mandatory_review_replays": [
+    "X-91666 fixed67 proof",
+    "frozen Hall prefixes and normalized-row cells from the parent lock",
+    "source-disjoint stopping-line census",
+    "same-index ordinary/detail child replacement",
+    "finite mismatch/collar/terminal/safety and corrected P61/67 port one-use ledger",
+    "endpoint dual and analytic consumer"
+  ],
+  "explicit_nonclaims": [
+    "the replay alone establishes RH",
+    "the old L-91659 formal complement is valid",
+    "the imported expensive finite certificates were rerun in this pass",
+    "RH is accepted before independent reconstruction"
+  ]
+}

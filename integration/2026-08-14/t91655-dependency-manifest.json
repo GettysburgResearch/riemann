@@ -1,0 +1,199 @@
+{
+  "base_branch": "research/gpt56-pro/91663-direct-root-review-response",
+  "external_endpoint_chain": [
+    {
+      "blob_sha": "bfe7b71eb2db0a2ad4d987e75b43d5872fc84d37",
+      "id": "L90020_PP",
+      "path": "claims/lemmas/L-90020-prime-square-occupancy-gap-is-minus-one-minus-zeta-half.md",
+      "role": "prime-square coefficient",
+      "source_commit": "ed566f3198e236c54ba18049181016536f56d456"
+    },
+    {
+      "blob_sha": "9c93dc10bb12d85785d16f4643dd81d3070c0043",
+      "id": "T90011_PP",
+      "path": "claims/theorems/T-90011-subquadratic-complete-prime-power-parabolic-gap-is-equivalent-to-rh.md",
+      "role": "subquadratic complete-gap endpoint criterion",
+      "source_commit": "ed566f3198e236c54ba18049181016536f56d456"
+    },
+    {
+      "blob_sha": "21eae10025b03b724233d49ea09fbc90f4aa66fd",
+      "id": "T90008",
+      "path": "claims/theorems/T-90008-undifferenced-prime-endpoint-negativity-is-equivalent-to-rh.md",
+      "role": "Mellin-Landau prime endpoint implication",
+      "source_commit": "906b5a477a1ed7c88a40db7569924f15f3d54b72"
+    }
+  ],
+  "external_transform_chain": [
+    {
+      "blob_sha": "bce315dc84db189a1e36e98c37130ea7b6ae5744",
+      "id": "L26204",
+      "path": "claims/lemmas/L-26204-endpoint-scale-kernel-and-mobius-weight-state.md",
+      "role": "exact equality-density transform and score 4 sqrt(X)",
+      "source_commit": "e0ad1484d70098eb7c8be17655ea08568d5e2cd2"
+    }
+  ],
+  "forbidden_shortcuts": [
+    {
+      "id": "L91659",
+      "reason": "formal coordinatewise complement lacked simultaneous feasibility proof"
+    },
+    {
+      "id": "AFFINE67",
+      "reason": "fixed-67 affine Pascal lift overdraws unmatched physical detail columns"
+    },
+    {
+      "id": "P53_AT_P61",
+      "reason": "obsolete P53 port bound is false after adjoining 59 and 61"
+    },
+    {
+      "id": "SOURCE_FRACTION_LOSS",
+      "reason": "positive source mass does not scale an arbitrary signed packet deficit"
+    },
+    {
+      "id": "HALL_TREE_COMMUTATION",
+      "reason": "Hall is nonlinear; it is applied leafwise and never commuted through the tree"
+    },
+    {
+      "id": "OUTER_PACKET_DUPLICATION",
+      "reason": "direct-row route does not add historical outer, collar, mismatch, or port packets on top of c_X"
+    }
+  ],
+  "load_bearing": [
+    {
+      "blob_sha": "11dfb291596c634216b45132a3d6b075af4463bc",
+      "id": "L90029",
+      "path": "claims/lemmas/L-90029-radix-four-detail-packing-has-positive-target-and-positive-endpoint-atoms.md",
+      "role": "detail-to-ordinary positive telescope and finite dual interface",
+      "status": "proposed_exact_telescope"
+    },
+    {
+      "blob_sha": "50df537eeb6c2f69c106cae2d65997849fe8c4c0",
+      "id": "L91330",
+      "path": "claims/lemmas/L-91330-balanced-two-channel-reset-has-an-exact-nonduplicating-row-partition.md",
+      "role": "atomwise positive two-channel source split and one-reset row observation",
+      "status": "proposed_complete_exact_one_reset"
+    },
+    {
+      "blob_sha": "468c3790af7471ca019dff411d6571fc735a773d",
+      "id": "L91333",
+      "path": "claims/lemmas/L-91333-balanced-reserve-paired-channels-have-an-exact-least-prime-source-partition.md",
+      "role": "exact nonduplicating labelled least-prime source tree",
+      "status": "proved_exact_source_tree"
+    },
+    {
+      "blob_sha": "95d5667c5638842a0c8989a649f8c718c51393e1",
+      "id": "L91540",
+      "path": "claims/lemmas/L-91540-paired-positive-kernel-types-are-hereditary-under-subprobability-branching.md",
+      "role": "typed positive branching and target-mass envelope",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "9f4c4c3c7a5a7cd4ec8fcb48ac56a07dc29f16a4",
+      "id": "L91545",
+      "path": "claims/lemmas/L-91545-target-hall-output-splits-into-a-hereditary-source-and-a-target-null-row-bonus.md",
+      "role": "Hall residual source, score superordination, positive row bonus",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "0e2d13102f6efd4823b1b2f91aa41513c9fed8db",
+      "id": "L91550",
+      "path": "claims/lemmas/L-91550-merged-binary-channels-have-uniform-directed-hall-and-row-margins.md",
+      "role": "finite no-upward Hall and row corridor certificate",
+      "status": "directed_exact_frozen"
+    },
+    {
+      "blob_sha": "ffc14547760dde53d2d85ff337431bf5db1a96f9",
+      "id": "L91553",
+      "path": "claims/lemmas/L-91553-exact-component-entropy-and-fixed-67-score-domination.md",
+      "role": "component entropy identity and historical fixed-67 inequality",
+      "status": "superseded_for_global_inequality_by_L91666"
+    },
+    {
+      "blob_sha": "782f492474f6565506516ab6165bf0c758013a41",
+      "id": "L91554",
+      "path": "claims/lemmas/L-91554-finite-euler-support-makes-the-native-frontier-debt-summable.md",
+      "role": "sourcewise terminal debt telescope and P61 bound",
+      "status": "proved_exact_directed"
+    },
+    {
+      "blob_sha": "06e2e60c562b1be07d33e973bb1a94438a3c1523",
+      "id": "L91556",
+      "path": "claims/lemmas/L-91556-binary-return-has-an-exact-native-row-score-budget.md",
+      "role": "exact target, row-budgeted score, and literal-row coefficients",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "2c514bbe93eb990c3809801b62bd5ac451642c2c",
+      "id": "L91559",
+      "path": "claims/lemmas/L-91559-nested-component-packets-have-an-exact-identity-embedding.md",
+      "role": "same-index arbitrary-child ordinary/detail replacement",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "bb3a5e5c90abab6c5043423ea08792bbbb5a5148",
+      "id": "L91560",
+      "path": "claims/lemmas/L-91560-binary-controlled-cocycle-is-exact-in-native-row-space.md",
+      "role": "one-prime residual plus unique child cocycle",
+      "status": "proved_exact_frozen"
+    },
+    {
+      "blob_sha": "b077de48c97586786b65e570fad4d246c64c91f7",
+      "id": "L91562",
+      "path": "claims/lemmas/L-91562-native-row-budget-does-not-change-the-merged-target-hall-certificate.md",
+      "role": "native normalization of frozen Hall certificate",
+      "status": "proved_exact"
+    },
+    {
+      "blob_sha": "4c83e63a8a4770635f7fa89ecb24ca734f4f3229",
+      "id": "L91621",
+      "path": "claims/lemmas/L-91621-stopping-line-hallization-sums-to-one-native-row.md",
+      "role": "leafwise Hall summation and measurable positive Fubini",
+      "status": "proved_conditional_on_source_identity"
+    },
+    {
+      "blob_sha": "42db1034ed2068291d5798c1daa98abbc13a5c96",
+      "id": "L91622",
+      "path": "claims/lemmas/L-91622-direct-row-fixed67-reset-has-a-target-mass-envelope.md",
+      "role": "direct physical reset and logarithmic packet envelope",
+      "status": "proved_conditional_on_root_entry"
+    },
+    {
+      "blob_sha": "151cc93ff5d0a5ffb3b0225eda9001dd9d406a3d",
+      "id": "L91663",
+      "path": "claims/lemmas/L-91663-direct-hall-child-replacement-is-native-capacity-faithful.md",
+      "role": "exact native response and simultaneous child residual inequalities",
+      "status": "proved_exact_on_frozen_hall_inputs"
+    },
+    {
+      "blob_sha": "9bcccee513dfb5730affed8cfbde8d737f0bc967",
+      "id": "L91666",
+      "path": "claims/lemmas/L-91666-fixed67-literal-entropy-difference-pays-native-score.md",
+      "role": "global fixed-67 score theorem",
+      "status": "proved_analytic_directed"
+    },
+    {
+      "blob_sha": "01d78f86b72e38a058fbe709a9e0897fb64a6aa7",
+      "id": "L91668",
+      "path": "claims/lemmas/L-91668-exact-labelled-source-partition-closes-native-row-entry.md",
+      "role": "discharges L91621 source-partition antecedent and identifies root row with c_X",
+      "status": "new_hardening_theorem"
+    },
+    {
+      "blob_sha": "2563665b26e63df8bb21c1fdb74769a34aeed4f4",
+      "id": "L91669",
+      "path": "claims/lemmas/L-91669-direct-row-proof-ledger-has-no-hidden-outer-packet.md",
+      "role": "minimal one-use proof ledger and explicit nondependencies",
+      "status": "new_hardening_theorem"
+    },
+    {
+      "blob_sha": "393df457e9036c34b7ab562e48d755bc395690c5",
+      "id": "T91655",
+      "path": "claims/theorems/T-91655-hardened-direct-row-factor67-resolution-proposal.md",
+      "role": "normative complete proposal",
+      "status": "complete_proposal_review_required"
+    }
+  ],
+  "proposal_branch": "research/gpt56-pro/91666-full-direct-row-closure",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t91655.hardened-dependency-manifest.v1"
+}

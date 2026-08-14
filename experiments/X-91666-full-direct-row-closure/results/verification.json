@@ -1,0 +1,43 @@
+{
+  "classification": "PASS_FULL_DIRECT_ROW_CLOSURE_ALGEBRA",
+  "core": {
+    "causal_reset": {
+      "child_cancellation_exact": true,
+      "parent_partition_exact": true,
+      "test_recursive_mass": "6823/245025",
+      "test_recursive_mass_lt_1_over_8": true
+    },
+    "fixed67": {
+      "F67_gt_3": true,
+      "F67_lower": "3.27640071955496690754",
+      "F67_upper": "3.27640071955496690754",
+      "G469_gt_100": true,
+      "G469_lower": "131.79826205432501804194",
+      "analytic_tail_start": 469,
+      "finite_cell_min_N": 67,
+      "finite_cells_checked": 402,
+      "finite_derivative_margin_gt_22": true,
+      "finite_derivative_margin_lower": "22.17475429208581621652"
+    },
+    "iteration": {
+      "depth": 22,
+      "probe_endpoint": 3322737661703085672358476688602579601,
+      "shape": "O(log X)=o(log^2 X)"
+    },
+    "native_response": {
+      "detail_identity": "Xi(c_X;q)=Omega_X(q)",
+      "mobius_convolution_checked_through": 1200,
+      "ordinary_identity": "Gamma(c_X;q)=w_X(q)"
+    },
+    "same_index_replacement": {
+      "detail_no_overdraw": true,
+      "ordinary_no_overdraw": true
+    },
+    "scope": {
+      "expensive_hall_and_outer_certificates_replayed": false,
+      "rh_established_by_replay": false
+    }
+  },
+  "proof_object_sha256": "2162b25bbfc824848bdd1fbf9bdf074f07194de23d21de510c48d39c0f33004d",
+  "schema": "riemann.t91654.full-direct-row-closure.v1"
+}

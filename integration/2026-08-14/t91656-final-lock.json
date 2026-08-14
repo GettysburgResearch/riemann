@@ -1,0 +1,63 @@
+{
+  "base_commit": "f41797c91497dc462f549a127d8494bbe4ccde2f",
+  "connector_audit_v2": {
+    "blob_sha": "5ec9477c709ef1f9b92f2e8116e125094f1ab2f9",
+    "classification": "PASS_T91656_FINAL_SINGLE_SHARP_LOCK_CONNECTOR_AUDIT_V2",
+    "commit": "89762b245ed35afd376c7f1fd76eafb64eeacc03",
+    "path": "experiments/X-91671-final-single-sharp-lock/results/connector-verification-v2.json",
+    "proof_object_sha256": "bfe4eac50cc6cbb8f899b4b255330ce5e63477ad8f4d98f824fca11746f5c971"
+  },
+  "content_commit": "c696d2a356eeacb3097d4ea6cc727b84548d7a03",
+  "explicit_nonclaims": [
+    "this lock validates the mathematics",
+    "the replays establish RH",
+    "global positivity of the reciprocal-zeta equality weight",
+    "the rejected balanced/reserve row normalization",
+    "P_Lambda(X)=4sqrt(X)"
+  ],
+  "handoff": {
+    "blob_sha": "090cf5d086bf32fbd735ae325a859ebf7907f662",
+    "commit": "64317c17b435844a9ef340845982fca01c13d2a8",
+    "path": "integration/2026-08-14/t91656-review-handoff.md"
+  },
+  "lock_semantics": {
+    "final_lock_is_self_excluding": true,
+    "manifest_freezes_the_mathematical_content_commit": true,
+    "reviewer_must_read_v2_manifest_handoff_and_this_lock_together": true
+  },
+  "manifest_v2": {
+    "blob_sha": "30b4a3d163de1e04972419bc91e5990a08089c56",
+    "commit": "bc5b5c62e75fc1e53d91e9513a63561f82188bbd",
+    "path": "integration/2026-08-14/t91656-dependency-manifest-v2.json"
+  },
+  "normative_blobs": {
+    "L91666": "9bcccee513dfb5730affed8cfbde8d737f0bc967",
+    "L91670": "6ef4ab3ae0ab85cbdded84c6a365942f12c320fd",
+    "L91671": "b6276367c8c857841df6bbdebf6a4ce3b0e2c835",
+    "R91659": "2504964ccd6e9fe33859ad391135650927406b9c",
+    "T91656": "86b34695ad2e79deebfb5c65b33a8992abfc92be",
+    "X91670_result": "4a3feb98db91df9e72afc01b6bb816822887e88e",
+    "final_review_specification": "6d276721e4b328094a7f168f330b7a257f9261c1"
+  },
+  "parent_before_lock": "64317c17b435844a9ef340845982fca01c13d2a8",
+  "proposal_branch": "research/gpt56-pro/91666-full-direct-row-closure",
+  "proposal_pr": 455,
+  "rejected_or_superseded_blobs": {
+    "L91668_REJECTED": "d95e2681fe350a566fe317c9850b9a328ec868c6",
+    "L91669_SUPERSEDED": "f4f5b933dc389bf37cb9500392e8da8c79b1e309",
+    "T91655_REJECTED": "5bdbb56c08771273785334a3c0594b95f7b8b679"
+  },
+  "review_predecessor": {
+    "head": "e136fcf42fbab1195fc193e64ce4039d1a1d416c",
+    "pr": 457,
+    "reviewed_proposal_head": "9dba11b2f1130c0aa8dba5846ec3c2e658326474"
+  },
+  "root_normalization": "single-SHARP: w_Psi=3*w_(4/3), row profile Q/(4sqrt(Y)-3)",
+  "schema": "riemann.t91656.final-single-sharp-lock.v2",
+  "status": {
+    "complete_proof_proposal": true,
+    "independent_review_required": true,
+    "rh_established": false
+  },
+  "supersedes_final_lock_blob": "3ae46924f519b79a8397eea6b6803eb097e23e1f"
+}
