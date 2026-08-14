@@ -1,0 +1,49 @@
+{
+  "cases": 23954,
+  "checks": 3842496,
+  "child_margin_checks": 32472,
+  "child_score_minimum": {
+    "decimal": 1.316226617273401,
+    "location": [
+      31,
+      33,
+      "left"
+    ],
+    "lower_fraction": "15437808944216484137086367600955768410100000000000000000/11728838135940697098327000000000000000000000000000000000"
+  },
+  "child_target_minimum": {
+    "decimal": 1.0,
+    "location": [
+      2,
+      1,
+      "right"
+    ],
+    "lower_fraction": "11728838135940697098327000000000000000000000000000000000/11728838135940697098327000000000000000000000000000000000"
+  },
+  "classification": "PASS_P61_CAUSAL_COALESCED_TARGET_SCORE_HALL",
+  "proof_object_sha256": "55f7bbe3c92c7593f05df9cd9a0e1607db733aade4b81b8050b809fb1862facc",
+  "scope": "P61 exact causal K4/K5 Hall, displacement 8, all p>=67 and 1<=y<67. The infinite prime tail uses positive full reciprocal prefixes and the separately replayed positive child margins. Row gain remains separate.",
+  "score_minimum": {
+    "decimal": 1.650373868028859,
+    "location": [
+      31,
+      67,
+      "R",
+      34,
+      "left"
+    ],
+    "lower_fraction": "1296916853447088362878672020885532431482500000000000000000/785832155108026705587909000000000000000000000000000000000"
+  },
+  "target_minimum": {
+    "decimal": 1.8394722392747769,
+    "location": [
+      31,
+      67,
+      "R",
+      34,
+      "left"
+    ],
+    "lower_fraction": "1445516434050685695679997228777408261506940000000000000000/785832155108026705587909000000000000000000000000000000000"
+  },
+  "thresholds": 198
+}
