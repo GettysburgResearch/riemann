@@ -1,0 +1,24 @@
+{
+  "combined_overdraw": "6/5 > 1",
+  "overdraw_fixture_rejected": true,
+  "passing_fixture": {
+    "allocations": 14,
+    "atoms": 3,
+    "channels_seen": [
+      "collar",
+      "hall",
+      "mismatch",
+      "omission",
+      "outer",
+      "recursive_child",
+      "shared_port",
+      "stop"
+    ],
+    "checks": 166,
+    "native_coordinates": 6
+  },
+  "rh_proved": false,
+  "scope": "generic certificate theorem and synthetic controls; live L-91659 data absent",
+  "separate_bound": "3/5 <= 1",
+  "verdict": "PASS_NATIVE_ROOT_LEDGER_CERTIFICATE"
+}
