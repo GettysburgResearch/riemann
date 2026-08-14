@@ -14,12 +14,12 @@ consumer.  Two tempting shortcuts are fenced:
 2. global canonical shell-row positivity contains the full native Möbius row
    and is therefore not a weaker producer target.
 
-The genuinely weaker conclusion-producing theorem is now **Hereditary Typed
-Entry** (`HTE`): construct one exact positive packet decomposition in every
-physical coordinate, with children of total target mass below `1/8` and no
-rough-reservoir duplication.  Once HTE holds, the current physical row may be
-chosen to be zero.  Its local benchmark debt is only logarithmic per unit target
-mass, and strict subcriticality yields an `O(log X)` global deficit.
+The logarithmic-debt calculation is valid only per unit target mass.  It does
+not close the unnormalized native root, whose target mass is on square-root
+scale.  `R-91315` therefore blocks the zero-row shortcut.  The remaining
+producer must still realize the leading benchmark through a nonnegative current
+row while routing source-disjoint children without duplicating the rough
+reservoir.
 
 ## New exact chain
 
@@ -30,8 +30,9 @@ shell ordinary/detail/entropy densities positive     L-91382
 shell row = positive Green bulk + finite boundary    L-91383
 canonical global shell positivity native-row hard    R-91314
 zero-row causal debt <= 5 log(3X) target mass         L-91385
-subcritical logarithmic recurrence -> O(log X)       T-91316
-Hereditary Typed Entry -> RH                          T-91317 + T-91313
+subcritical normalized recurrence -> O(log X)        T-91316
+zero-row native closure                               FALSE / R-91315
+positive native current-row producer                  OPEN / T-91314
 ```
 
 ## Why logarithmic local debt is sufficient
@@ -61,16 +62,11 @@ producer with debt at most `5 log(3Y)` times target mass.
 
 ## Exact open theorem
 
-The sole conclusion-producing producer is now:
-
-> Construct the exact positive source/target/row/detail/entropy/port identity
-> that places the native signed arithmetic packet into the positive typed
-> causal cone and routes source-disjoint children of total target mass below
-> one eighth to endpoints at most `X/67+C_0`.
-
-The theorem must use the same target mass in the local debt estimate and the
-child contraction.  It must include every collar and common port before any
-hidden source coordinate is observed.
+Construct the Native-Root Capacity Theorem of `T-91314`: one nonnegative
+current row and source-disjoint contracted children, all inside the native
+ordinary/detail capacities, with absolute `o(log^2 X)` weighted slack.  The
+current row must realize the square-root leading benchmark; a normalized
+logarithmic target-mass bound is insufficient.
 
 ## Verification
 

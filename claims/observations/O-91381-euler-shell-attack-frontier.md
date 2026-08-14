@@ -12,16 +12,12 @@ The shell attack produced four durable conclusions.
    output densities.
 3. Global canonical shell-row positivity is not a weaker producer theorem: it
    contains the full native row when the next prime exceeds `X/j`.
-4. In a strictly subcritical packet tree, a logarithmic local debt bound is
-   enough.  After positive typed entry, even the zero row gives such a bound.
+4. A logarithmic local debt bound is valid per unit target mass, but it does not
+   close the unnormalized native root unless that root mass is uniformly bounded.
+   `R-91315` fences this second normalization shortcut.
 
-The strongest next theorem is therefore not shell-row positivity.  It is the
-Hereditary Typed Entry of `T-91317`: prove that the exact first-hazard or
-stopping-line source identity is also an identity in the target-mass, ordinary,
-detail, row, entropy, collar and common-port coordinates, with child target
-mass below one eighth and no duplicated rough reservoir.
-
-This is a narrower and safer target than the earlier Native-Root Capacity
-Theorem because it no longer asks for a positive current row.  It asks only for
-an exact positive typed packet decomposition; the local physical producer may
-be the zero row.
+The strongest next theorem is therefore still a positive current-row producer
+in the exact native normalization.  It must realize the square-root leading
+benchmark, respect the one-use native capacities, and route source-disjoint
+children without duplicating the rough reservoir.  The zero row cannot supply
+that leading score.
