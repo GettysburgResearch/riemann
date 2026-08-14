@@ -1,0 +1,60 @@
+{
+  "schema": "riemann.x19882-three-route-native-slack.v1",
+  "slack_cocycle": {
+    "y4": [2, 3, 5],
+    "omega": [10, 12, 9],
+    "current_response": [5, 6, 4],
+    "root_slack": [3, "9/2", 4],
+    "children": [
+      {
+        "alpha": "1/16",
+        "capacity": [16, 16, 16],
+        "slack": [4, 2, 0]
+      },
+      {
+        "alpha": "1/32",
+        "capacity": [32, 16, 0],
+        "slack": [0, 4, 0]
+      }
+    ]
+  },
+  "subcritical_recurrence": {
+    "rho": "3/32",
+    "local_constant": 2,
+    "local_slope": 3,
+    "depth": 8
+  },
+  "depth_graph": {
+    "source_depth_diagonal": [1, 2, 3],
+    "model_depth_diagonal": [1, 2],
+    "environment_depth_diagonal": [3],
+    "source_features": [
+      [1, 0],
+      [1, 1],
+      [0, 1]
+    ],
+    "model_features": [
+      [1, 0],
+      [1, 1]
+    ],
+    "environment_features": [
+      [0, 1]
+    ],
+    "splitting_isometry": [
+      [1, 0, 0],
+      [0, 1, 0],
+      [0, 0, 1]
+    ]
+  },
+  "passive_string": {
+    "geometric_parameter": "1/2",
+    "atoms": [
+      {"location": 1, "weight": 2},
+      {"location": 3, "weight": 5}
+    ],
+    "derivative_order": 2,
+    "nodes": [1, 2, 4, 7],
+    "ramp_activation": 3,
+    "ramp_partial_terms": 7
+  }
+}

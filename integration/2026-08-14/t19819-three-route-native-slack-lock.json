@@ -1,0 +1,74 @@
+{
+  "schema": "riemann.t19819-three-route-native-slack-lock.v2",
+  "created": "2026-08-14",
+  "status": "ROUTE_A_CANDIDATE_CORRECTED_ON_FROZEN_INPUTS_ROUTES_B_C_OPEN",
+  "rh_proved": false,
+  "branch": "research/gpt56-pro/19882-three-route-native-slack-closure",
+  "base": {
+    "pr": 472,
+    "branch": "research/gpt56-pro/19880-native-radial-laplace-dictionary",
+    "head": "bb364396e09717237351d4aed9aadf6c570cb7fc"
+  },
+  "normative_content_commit": "f2bd50298d00c1dcf81fc82f267ccb8b2161be39",
+  "frozen_inputs": {
+    "pr430": "cedf2f5b43c99d6e6f9a760236432b123dd91770",
+    "pr435": "42a6929df3b637a151a2612b977fcabd2e774599",
+    "pr453": "a9cecbd3228bc26d4d0c3375c9694ee1e836f66a",
+    "pr471": "4ac821701177edb67a77fe43e89cc2a7a53af68a",
+    "pr472": "bb364396e09717237351d4aed9aadf6c570cb7fc",
+    "pr473": "13ad1fdbf06edc931dc0c524327b701c5c8f86a3"
+  },
+  "new_claims": {
+    "R-19882": "factor-67 absolute 4sqrt(X) score conclusion is misnormalized",
+    "L-19882": "exact native detail-slack cocycle and subcritical recurrence",
+    "L-19883": "four depth graph-Grams force radial module locality",
+    "L-19884": "native deficit generates a positive Stieltjes double-Laplace string",
+    "L-19885": "Y4 prime-power sparsity makes all factor-67 physical root errors summable",
+    "T-19819": "three-route closure frontier",
+    "T-19820": "corrected factor-67 native-slack closure packet"
+  },
+  "replays": {
+    "X-19882": {
+      "path": "experiments/X-19882-three-route-native-slack",
+      "verdict": "PASS_THREE_ROUTE_NATIVE_SLACK_PACKET",
+      "proof_object_sha256": "40097c04506b682b960086650a6d99ead02c5af877686d3de7285904bedd13b4",
+      "mutation_tests": 11
+    },
+    "X-19885": {
+      "path": "experiments/X-19885-y4-factor67-root-cost",
+      "verdict": "PASS_Y4_SPARSE_FACTOR67_ROOT_COST_PACKET",
+      "proof_object_sha256": "b9b061b50eb11901d1f4f76c596117cf30e4a932029c5388a2d5b6dc9d7b8b7c",
+      "support_check_through": 200000,
+      "mutation_tests": 4
+    }
+  },
+  "route_status": {
+    "route_A": {
+      "name": "corrected factor-67 native slack",
+      "status": "CANDIDATE_COMPLETE_ON_FROZEN_INPUTS_PENDING_HOSTILE_RECONSTRUCTION",
+      "correct_conclusion": "J_Lambda(X)-H(d_X)=O(1)",
+      "rejected_conclusion": "4sqrt(X)-H(d_X)=O(1)",
+      "remaining_review": [
+        "common-parent exact capacity identity",
+        "positive top omission and bounded base/current-port literal score",
+        "complete endpoint consumer reconstruction"
+      ]
+    },
+    "route_B": {
+      "name": "depth graph-Gram radial locality",
+      "status": "OPEN_INDEPENDENT_PRODUCER",
+      "remaining_statement": "DGGC_a"
+    },
+    "route_C": {
+      "name": "passive native-defect string",
+      "status": "OPEN_INDEPENDENT_PRODUCER",
+      "remaining_statement": "PSI_a"
+    }
+  },
+  "status_boundary": {
+    "absolute_4sqrt_score_conclusion": "REJECTED_AS_WRITTEN",
+    "route_A_corrected_composition": "PROPOSED_CANDIDATE_PENDING_REVIEW",
+    "routes_B_C": "OPEN",
+    "riemann_hypothesis": "UNPROVED"
+  }
+}
