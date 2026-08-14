@@ -306,10 +306,11 @@ def verify_manifest(repo_root: Path, manifest_path: Path) -> dict[str, Any]:
             continue
         assert len(sha) == 40 and all(c in "0123456789abcdef" for c in sha)
         path = repo_root / item["path"]
-        if path.exists():
-            actual = git_blob_sha(path.read_bytes())
-            assert actual == sha, (item["id"], actual, sha)
-            checked_blobs += 1
+        assert path.is_file(), (item["id"], str(path))
+        actual = git_blob_sha(path.read_bytes())
+        assert actual == sha, (item["id"], actual, sha)
+        checked_blobs += 1
+    assert pending_new_blobs == 0
 
     for group in ("external_transform_chain", "external_endpoint_chain"):
         for item in manifest[group]:
