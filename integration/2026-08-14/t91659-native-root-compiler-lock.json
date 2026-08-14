@@ -1,0 +1,100 @@
+{
+  "schema": "riemann.native_root_compiler_lock.v1",
+  "created_utc": "2026-08-14T16:57:25Z",
+  "review_cutoff_utc": "2026-08-14T16:57:25Z",
+  "repository": "gfreund123/riemann",
+  "current_main": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+  "requested_frontier": {
+    "pr": 468,
+    "head": "a41f81466f85d52597c97b41505756a8860698d0"
+  },
+  "publication_parent": {
+    "pr": 469,
+    "branch": "research/gpt56-pro/91685-hall-free-raw-residual",
+    "head": "3cf685181bd367b92cdcfeef9249e0b9b542a09e",
+    "tree": "2ded132df3c8c57d23aa173d30012541b9148fa0"
+  },
+  "cross_branch_inputs": [
+    {
+      "pr": 454,
+      "head": "a0409d54250bc211d62718a1aedb6fa020d7f091",
+      "objects": [
+        {
+          "path": "claims/lemmas/L-91671-atomwise-provenance-partition-is-the-exact-native-root-ledger-certificate.md",
+          "blob": "46843fb5a92143619ac7e4f0254a9465e39cc8b3"
+        }
+      ]
+    },
+    {
+      "pr": 464,
+      "head": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+      "objects": [
+        {
+          "path": "claims/lemmas/L-91673-fixed-window-score-hall-is-an-explicit-simultaneous-native-root-decomposition.md",
+          "blob": "23fb955f36fce30c9ecc115f040dfc47a209c61e"
+        },
+        {
+          "path": "claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md",
+          "blob": "270333b3587f691aafb26d62e6e29f4c37e3eff5"
+        },
+        {
+          "path": "claims/theorems/T-91657-root-score-hall-causal-envelope-resolution-proposal.md",
+          "blob": "e0d0f043ff8c8dc0ef8f47ac78eb54fed72be396"
+        },
+        {
+          "path": "claims/refutations/R-91102-exact-row-peel-confuses-finite-equality-seed-with-continuum-volterra-seed.md",
+          "blob": "f310e33f3e1f24ca80a410ea231c567012fb55e4"
+        }
+      ]
+    },
+    {
+      "pr": 467,
+      "head": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+      "objects": [
+        {
+          "path": "claims/lemmas/L-91682-complete-arithmetic-causal-profile-and-lorenz-cutoffs.md",
+          "blob": "c4782482950f0b0bdf32cddb05d0d41aff32bfaf"
+        },
+        {
+          "path": "claims/lemmas/L-91684-target-lorenz-producer-and-single-row-gate.md",
+          "blob": "87179be63afacad808b7def50f507ee542062018"
+        }
+      ]
+    },
+    {
+      "pr": 469,
+      "head": "3cf685181bd367b92cdcfeef9249e0b9b542a09e",
+      "objects": [
+        {
+          "path": "claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md",
+          "blob": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d"
+        },
+        {
+          "path": "claims/lemmas/L-91379-finite-euler-row-is-the-native-row-plus-an-exact-rough-reservoir.md",
+          "blob": "1f8c3bdac1a33454685960e05d8f8b062503d81c"
+        },
+        {
+          "path": "claims/lemmas/L-91685-complete-p61-raw-residual-is-a-hall-free-stopped-leaf-generator.md",
+          "blob": "7183aa2deca729954ee7bde932e07494e120698f"
+        }
+      ]
+    }
+  ],
+  "new_claims": [
+    "R-91686",
+    "L-91686",
+    "L-91687",
+    "T-91659",
+    "O-91686"
+  ],
+  "classification": "EXACT_NATIVE_ROOT_COMPILATION_DISCREPANCY_AND_SEPARATOR",
+  "proof_object_sha256": "1e12626cf83dc908d5638de4f472a6b5fe3bc38515fa23abe0555fd58cea61be",
+  "content_manifest": {
+    "path": "standalone/2026-08-14-native-root-compiler-separator/CONTENT_SHA256SUMS",
+    "sha256": "a4693fc09d7cfb46586852ae3fad6a36be1466b4570454728cecaca6161b2795"
+  },
+  "pass_native_root_capacity_theorem": false,
+  "rh_established": false,
+  "exact_boundary": "The root-Hall algebra remains conditional on a finite source-owned endpoint/port/slack realization. The raw PR #469 current-plus-child basis is exactly separated at (136,67,2), and its raw current alone is separated on X=2(p+1) for every prime p>=71. SONTR remains open.",
+  "branch_movement_rule": "Any later correction or descendant at a different SHA controls over this lock after explicit comparison."
+}
