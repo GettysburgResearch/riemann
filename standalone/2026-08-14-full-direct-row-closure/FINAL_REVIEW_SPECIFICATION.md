@@ -81,8 +81,8 @@ be rejected.
 7. `L-91559`, `L-91663`: verify same-index arbitrary-child replacement in every
    ordinary and radix-four column.
 8. `L-91666`: rerun all 402 finite cells and the analytic tail.
-9. `L-91671.19--20`: verify the exact coefficient-one loss identity and the
-   `X`-independent current constant.
+9. `L-91671.19--25`: verify the exact coefficient-one equality-deficit identity,
+   the `X`-independent current constant, and the conversion to native loss.
 10. `L-91557`, `L-91660`, and the frozen endpoint chain: verify the score front
     door, benchmark, finite dual, prime-square coefficient, Mellin pole, Landau
     sign, and functional equation.
@@ -112,19 +112,33 @@ The endpoint producer, quantizer, collar, mismatch, safety factor, top packet,
 port, and Hall bonuses are ownership stages of `R_X^{par}`. They are not
 additional summands after this formula.
 
-## Exact loss rule
+## Exact deficit and native-loss rule
 
-The reviewer must derive
+The reviewer must distinguish the equality deficit from the native benchmark
+loss. First derive
 
 \[
-\operatorname{Loss}_X(d_X)
+\mathcal D_X(d_X)
 =
-[J_X-J_K-\mathcal S(R_X^{\rm par}-R_X^{\rm ch})]
+[J_X^{\rm eq}-J_K^{\rm eq,ch}
+-\mathcal S(R_X^{\rm par}-R_X^{\rm ch})]
 +
-\operatorname{Loss}_K(d_K)
+\mathcal D_K^{\rm ch}(d_K)
 \]
 
 before applying inequalities. The recursive coefficient must be one.
+
+Then verify
+
+\[
+\mathfrak L_X(d_X)
+=
+[J_\Lambda(X)-4\sqrt X]+\mathcal D_X(d_X),
+\]
+
+using `J_Lambda(X)<4sqrt(X)+4log(X)`. The finite-row identity
+`S(c_X)=P_Lambda(X)` must be retained and must not be confused with the declared
+continuum equality score `4sqrt(X)`.
 
 ## Required computations
 
@@ -150,7 +164,8 @@ root-only packet copied to child;
 ordinary/detail overdraw;
 fixed-67 inequality failure;
 current constant grows with X or leaf count;
-loss coefficient differs from one;
+equality-deficit coefficient differs from one;
+P_Lambda is identified with 4sqrt(X);
 endpoint sign or pole cancellation wrong.
 ```
 
