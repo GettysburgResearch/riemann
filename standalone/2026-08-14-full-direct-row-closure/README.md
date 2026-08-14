@@ -50,6 +50,7 @@ claims/theorems/
 experiments/
   X-91666-full-direct-row-closure/
   X-91670-single-sharp-normalization-hardening/
+  X-91671-final-single-sharp-lock/
 
 standalone/2026-08-14-full-direct-row-closure/
   README.md
@@ -57,12 +58,15 @@ standalone/2026-08-14-full-direct-row-closure/
   FINAL_REVIEW_SPECIFICATION.md
 
 integration/2026-08-14/
-  t91656-dependency-manifest.json
+  t91656-dependency-manifest-v2.json
+  t91656-review-handoff.md
   t91656-final-lock.json
 ```
 
 Historical `L-91668`, `L-91669`, and `T-91655` are explicitly rejected or
-superseded and must not be used as alternate proofs.
+superseded and must not be used as alternate proofs. The earlier
+`t91656-dependency-manifest.json` is superseded by the `v2` manifest because its
+content-commit label preceded the last theorem-text hardening.
 
 ## Exact finite/continuum bridge
 
@@ -99,37 +103,49 @@ object is an ownership stage inside `R_parent`. None is appended afterward.
 
 ## Exact recurrence
 
+The recursive quantity is the equality deficit
+
 \[
-\operatorname{Loss}_X(d_X)
+\mathcal D_X(d_X)=J_X^{\rm eq}-\mathcal S(d_X).
+\]
+
+It satisfies
+
+\[
+\mathcal D_X(d_X)
 =
-[J_X-J_K-\mathcal S(R_{\rm parent}-R_{\rm child})]
+[J_X^{\rm eq}-J_K^{\rm eq,ch}
+-\mathcal S(R_{\rm parent}-R_{\rm child})]
 +
-\operatorname{Loss}_K(d_{\rm child}).
+\mathcal D_K^{\rm ch}(d_{\rm child}).
 \]
 
 The fixed-67 theorem and one-use current bounds give
 
 \[
-\operatorname{Loss}_X
-\le C_{\rm reset}+\operatorname{Loss}_{X/67+C_0},
+\mathcal D_X
+\le C_{\rm reset}+\mathcal D_{X/67+C_0},
 \]
 
-hence
+hence `D_X=O(log X)`. The native benchmark loss is formed only afterward:
 
 \[
-\operatorname{Loss}_X=O(\log X)=o(\log^2X).
+\mathfrak L_X
+=[J_\Lambda(X)-4\sqrt X]+\mathcal D_X=O(\log X).
 \]
 
-The finite dual and frozen endpoint chain then give the proposed RH conclusion.
+The exact finite dual and frozen endpoint chain then give the proposed RH
+conclusion.
 
 ## Replays
 
 ```text
 PASS_FULL_DIRECT_ROW_CLOSURE_ALGEBRA
 PASS_SINGLE_SHARP_NORMALIZATION_HARDENING
+PASS_T91656_FINAL_SINGLE_SHARP_LOCK_CONNECTOR_AUDIT
 ```
 
-The new proof object is
+The single-SHARP proof object is
 
 ```text
 a5b07f68367447da089ef8d8fa84adf2ea2615b4fcbb8f038d7f23cf5dc49dda
@@ -139,5 +155,6 @@ Neither replay establishes RH.
 
 ## Review
 
-Begin with `FINAL_REVIEW_SPECIFICATION.md`. The first mandatory check is the
+Begin with `FINAL_REVIEW_SPECIFICATION.md`, then read the `v2` dependency
+manifest, handoff, and final lock. The first mandatory mathematical check is the
 factor-three refutation and the single-SHARP replacement.
