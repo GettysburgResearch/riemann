@@ -1,0 +1,23 @@
+{
+  "arithmetic_class": "DIRECTED_DECIMAL_INTERVAL",
+  "classification": "PASS_P19_ODD_ROW_PREFIX_THROUGH_QUOTIENT_TWENTY_TWO",
+  "domain": "max(67,5j)<=x<=22j; all activation walls are integer and cell interiors are affine in log x",
+  "endpoint_tests": 37303,
+  "minimum_endpoint": 1452,
+  "minimum_lower_decimal": "0.0001614750920097278923565164379415659499997518187892040788768873653658331597972384548283887978920986210",
+  "minimum_row": 66,
+  "odd_sources": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19
+  ],
+  "proof_object_sha256": "b7058883cf97b033f0d22d9864c09b4c73b844746d5878c5f2a2cbb240c6580e",
+  "rh_established_by_replay": false,
+  "rounding_contract": "100-digit Decimal sqrt/ln with 1e-78 outward padding after every operation",
+  "rows": "4<=j<=66"
+}
