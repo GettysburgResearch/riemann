@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "Y4_weighted_overdraw_lower": "1/1215",
+      "asymptotic_family": {
+        "current_only_overdraw_lower_formula": "log((p+1)/67)/sqrt(134)",
+        "mechanism": "the child removes only the m=p rough term; the positive m=67 reservoir remains in the raw current",
+        "p71_directed_decimal": "0.00621756338047064637",
+        "parameters": "every prime p>=71; X=2(p+1), y=2(p+1)/p, q=2",
+        "uniform_exact_lower_bound": "5/834"
+      },
+      "child_status": "child adds the same strictly positive delta in both coordinates",
+      "classification": "PASS_EXACT_RAW_LEAF_NATIVE_CAPACITY_SEPARATOR",
+      "detail_current_status": "raw current alone equals Omega_136(2)",
+      "directed_decimal": "0.00127982848320622325",
+      "endpoint_X": 136,
+      "exact_lower_bound": "1/810",
+      "exact_overdraw": "log(68/67)/sqrt(134)",
+      "farkas_multipliers": {
+        "capacity_z": 1,
+        "equality_y": -1
+      },
+      "farkas_value": "-log(68/67)/sqrt(134)",
+      "ordinary_current_status": "raw current alone equals w_136(2)",
+      "physical_column_q": 2,
+      "rough_in_X_over_4q": [
+        1
+      ],
+      "rough_in_X_over_q": [
+        1,
+        67
+      ],
+      "rough_prime_p": 67,
+      "terminal_y": "136/67"
+    },
+    {
+      "classification": "PASS_FINITE_CONTINUUM_REALIZATION_DEFECT",
+      "compiler_consequence": "formal endpoint integration cannot be identified with the finite equality seed without an explicit mismatch/current realization generator",
+      "directed_decimal": "0.162186656605969162",
+      "exact_defect": "4*sqrt(2)-4*sqrt(3)+(5*sqrt(2)/2)*log(3/2)",
+      "exact_lower_bound": "1/10",
+      "probe": "X=3,m=2"
+    },
+    {
+      "atoms": 5,
+      "classification": "PASS_LORENZ_CUTOFF_IS_EXACT_SIMULTANEOUS_LP_BASIS",
+      "cutoff_index_zero_based": 2,
+      "deliberate_infeasible_row_gap": "1/7",
+      "exchange_probes": 8,
+      "leftmost_basis": [
+        "1",
+        "3/2",
+        "2/5",
+        "0",
+        "0"
+      ],
+      "live_consequence": "under the frozen monotone profiles, a negative L_j(p,y) is already an exact Farkas separator for the full box LP; no alternative non-leftmost basis can repair it",
+      "row_dual_upper": "481/30",
+      "score_dual_lower": "293/30",
+      "target_mass": "20/3"
+    },
+    {
+      "classification": "PASS_HOSTILE_LEAF_TARGET_LORENZ_OPTIMAL_ROW",
+      "cutoff": 123,
+      "cutoff_fraction_directed_decimal": [
+        "0.283843792756777528",
+        "0.283843792756777528"
+      ],
+      "directed_margin_decimal": "0.00838154827546333801",
+      "directed_margin_lower_decimal": "0.00838154827546333801",
+      "interpretation": "the historically hostile p=67,y=13,row=66 cell is feasible at the exact LP-optimal leftmost basis; this does not certify the remaining activation cells",
+      "p": 67,
+      "row": 66,
+      "row_active_divisors": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        11,
+        13
+      ],
+      "y": 13
+    },
+    {
+      "Y4_zero_columns": 3962,
+      "classification": "PASS_Y4_ZERO_SCORE_FREE_TRIANGULAR_REPAIR",
+      "exact_transfer_columns_checked": 200,
+      "first_zero_columns": [
+        6,
+        10,
+        14,
+        15,
+        18,
+        21,
+        22,
+        24,
+        26,
+        30,
+        33,
+        34,
+        35,
+        38,
+        39,
+        40,
+        42,
+        45,
+        46,
+        50
+      ],
+      "next_row_gain": "q(q-3)/((q-1)(q-2)) times slack",
+      "radix4_dual_recurrence_checks": 4999,
+      "range": 5000,
+      "scope": "a zero-weight detail slack at q moves row reserve downward with no literal-score cost; lower rows also change and must be controlled by the full triangular LP",
+      "top_row_cost": "(q+1)/(q-1) times slack"
+    }
+  ],
+  "classification": "EXACT_NATIVE_ROOT_COMPILATION_DISCREPANCY_AND_SEPARATOR",
+  "exact_boundary": "PR #464 root-Hall algebra compiles only after a finite source-owned endpoint/port/slack realization; PR #469 raw current+child is exactly separated from native capacity at (136,67,2), and the raw current alone is separated on the infinite family X=2(p+1), p>=71 prime. The missing object is a source-owned native current-thinning/realization generator.",
+  "pass_native_root_capacity_theorem": false,
+  "proof_object_sha256": "1e12626cf83dc908d5638de4f472a6b5fe3bc38515fa23abe0555fd58cea61be",
+  "rh_established_by_replay": false
+}

@@ -1,0 +1,17 @@
+clause	frozen_source	compiler_status	exact_output_or_discrepancy
+native normalization	L-91377/L-91378/L-91379 on PR #468 head a41f81466f85d52597c97b41505756a8860698d0	PASS	full Mobius row has w_X, Omega_X, J_Lambda; finite Euler row equals native plus exact rough reservoir
+fixed-window score/target/row decomposition	L-91673 on PR #464 head 2eb70463f3d0ae791a9f140694d2ace7032ae864	PASS AT ABSTRACT FIBER	one common Hall transport gives score equality, target slack, and nonnegative row bonuses
+endpoint integration and common quantizer	L-91674 on PR #464 head 2eb70463f3d0ae791a9f140694d2ace7032ae864	FORMAL PASS	positive-linear commutation only; analytic finite producer remains a hypothesis
+finite equality realization	R-91102 on PR #464 head 2eb70463f3d0ae791a9f140694d2ace7032ae864	FAIL	at X=3,m=2 defect 4sqrt2-4sqrt3+(5sqrt2/2)log(3/2)>1/10
+child endpoint scale	T-91657 on PR #464	PASS	Y_b<=X/67 and same-index placement
+recursive coefficient sum	T-91657 on PR #464	PASS	sum alpha_b<1/8
+current row sign on terminal raw leaves	L-91685 on PR #469 head 3cf685181bd367b92cdcfeef9249e0b9b542a09e	PASS ON FROZEN INPUTS	G_(p,y)>=0 in every component row
+ordinary one-use capacity	R-91686	FAIL FOR RAW BASIS	at X=136,p=67,q=2 current saturates w and child adds delta>1/810; for every prime p>=71 raw current overdraws by >5/834 on X=2(p+1)
+detail one-use capacity	R-91686	FAIL FOR RAW BASIS	at X=136,p=67,q=2 current saturates Omega and child adds the same delta
+boundary/common port	PR #464 formal V and T-91314	NOT EXPORTED	no live atomwise one-use port/correction vector
+current debt <=2 target	L-91375 plus PR #464 C_fin	NOT COMPILED AT ROOT	proportional debt holds after positive typed entry; finite root correction is not identified with T-91314.4
+atomwise provenance	L-91671 on PR #454 head a0409d54250bc211d62718a1aedb6fa020d7f091	NOT EXPORTED	generic certificate theorem exists; live source/channel allocation absent
+Y4-weighted slack	L-91378/T-91314	NOT EXPORTED	no immutable nonnegative s(q); raw q=2 weighted violation >1/1215
+stopped-leaf LP basis	L-91686 using L-91682/L-91684	PASS REDUCTION	leftmost target cutoff is exact score minimum and simultaneous all-row maximum; negative margin is a Farkas separator
+direct radix-four repair	L-91687	PASS REDUCTION	ordinary constraints follow from detail slack; Y4-zero columns are exact score-free triangular directions
+final	T-91659	EXACT DISCREPANCY AND SEPARATOR	PASS_NATIVE_ROOT_CAPACITY_THEOREM=false; missing theorem is source-owned native thinning and realization (SONTR)
