@@ -1,0 +1,31 @@
+{
+  "schema": "riemann.t91661.factor67.reserve-closure.v1",
+  "created": "2026-08-14",
+  "repository": "gfreund123/riemann",
+  "pull_request": 473,
+  "branch": "research/gpt56-pro/91690-factor67-sontr",
+  "branch_base": "13ad1fdbf06edc931dc0c524327b701c5c8f86a3",
+  "core_commit": "e9d42d1661300cbabb9cf5ceac0453fccfad5daa",
+  "core_tree": "31da9a72cc199798cea0103cf0e026b6b18b03dd",
+  "frozen_inputs": {
+    "first_owner_partition_pr471": "4ac821701177edb67a77fe43e89cc2a7a53af68a",
+    "factor67_sontr_parent": "13ad1fdbf06edc931dc0c524327b701c5c8f86a3",
+    "root_endpoint_frame_pr464": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+    "complete_causal_profiles_pr467": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+    "p61_67_port_input": "9deddaa92c1b709b052e0994bd9a6dc0bb307366"
+  },
+  "new_claims": [
+    "L-91692",
+    "T-91661",
+    "O-91692"
+  ],
+  "experiment": "X-91692-factor67-reserve-closure",
+  "proof_object_sha256": "28057cf7b8b3705fc047cdc28be4bd8e6482ede4df37e8145e970e445163008c",
+  "content_manifest_sha256": "e8f99623070d23b615814a1b51dd716bf8fa8579663f987df72e3db42c8fe2f7",
+  "status": {
+    "compact_reserve_obligation": "PROVED_ON_FROZEN_INPUTS",
+    "sontr_nrct": "REVIEW_READY_PROPOSAL",
+    "endpoint_to_rh": "FROZEN_CONDITIONAL",
+    "riemann_hypothesis": "UNPROVEN"
+  }
+}

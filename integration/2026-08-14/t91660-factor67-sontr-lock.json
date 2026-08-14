@@ -1,0 +1,68 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/91686-three-route-closure",
+    "head": "4ac821701177edb67a77fe43e89cc2a7a53af68a",
+    "pr": 471
+  },
+  "classification": "PASS_FACTOR67_TARGET_HALL_SONTR_ROOT_PACKET",
+  "content_manifest": {
+    "path": "standalone/2026-08-14-factor67-sontr/CONTENT_SHA256SUMS",
+    "sha256": "67db34ae629372c0f30db272038c7c0a386bb6a72fbf0e8296cf8b34fc97f66d"
+  },
+  "created_utc": "2026-08-14T19:34:00Z",
+  "experiment": "X-91690-factor67-sontr",
+  "firewall": "The finite equality seed is not identified with its continuum Volterra model. The construction uses positive thinning and a one-use finite correction reserve.",
+  "frozen_inputs": [
+    {
+      "head": "906b5a477a1ed7c88a40db7569924f15f3d54b72",
+      "pr": 352,
+      "scope": "positive radix-four endpoint packing and inverse"
+    },
+    {
+      "head": "9deddaa92c1b709b052e0994bd9a6dc0bb307366",
+      "pr": 399,
+      "scope": "endpoint frame, positive quantizer, mismatch, omission, factor-67 finite block"
+    },
+    {
+      "head": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "pr": 439,
+      "scope": "causal identity, positivity and recursive coefficient budget"
+    },
+    {
+      "head": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+      "pr": 464,
+      "scope": "simultaneous root Hall normalization and one-global-quantizer intertwining"
+    },
+    {
+      "head": "a41f81466f85d52597c97b41505756a8860698d0",
+      "pr": 468,
+      "scope": "native normalization, Y4 dual and NRCT interface"
+    },
+    {
+      "head": "89af3206ea1894884613e1188b5ab9a6a4cd74f0",
+      "pr": 470,
+      "scope": "native separator, direct slack firewall and SONTR specification"
+    },
+    {
+      "head": "4ac821701177edb67a77fe43e89cc2a7a53af68a",
+      "pr": 471,
+      "scope": "exact rough first-owner partition"
+    }
+  ],
+  "head_branch": "research/gpt56-pro/91690-factor67-sontr",
+  "movement_rule": "A later correction or descendant at a different SHA controls only after explicit comparison.",
+  "new_claims": [
+    "L-91690",
+    "L-91691",
+    "T-91660",
+    "O-91690"
+  ],
+  "proof_object_sha256": "37774aeb5a1843c75ce14b8a0a6c167f743faa60e9582d2939acf6d7addce53a",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t91660.factor67_sontr_lock.v1",
+  "status": {
+    "native_root_capacity_theorem": "CANDIDATE_COMPLETE_REVIEW_REQUIRED",
+    "riemann_hypothesis": "UNPROVED_PENDING_INDEPENDENT_RECONSTRUCTION",
+    "sontr": "CANDIDATE_COMPLETE_REVIEW_REQUIRED"
+  }
+}

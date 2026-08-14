@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "classification": "PASS_FACTOR67_EQUALITY_ROW_DENSITY_BOUND",
+      "interpretation": "the one-global B-spline collar is controlled by the equality-row density L, not by the Hall target density Psi",
+      "maximum_cell": 1,
+      "maximum_sharp_target_upper": "2.656854249492380195",
+      "maximum_upper": "1.828427124746190097",
+      "minimum_cell": 32,
+      "minimum_lower": "0.318617400767658500",
+      "safe_bounds": "159/500 < L(x) < 183/100 < 2 for 1 <= x < 67",
+      "sharp_target_density_exceeds_two": true
+    },
+    {
+      "bonus_nonnegative": true,
+      "classification": "PASS_TARGET_HALL_TOTAL_ROW_TRANSPARENCY",
+      "hall_induced_finite_continuum_error": "0",
+      "ordinary_response_exact": true,
+      "radix_four_response_exact": true,
+      "row_identity": true,
+      "target_exact": true
+    },
+    {
+      "C67_decimal_upper": "18.471726914982250849",
+      "C67_upper": "19",
+      "classification": "PASS_EXPLICIT_FACTOR67_RESERVE_WITHOUT_ABSTRACT_OPERATOR_NORM",
+      "global_thinning_loss_bound": "1-sigma_K < 11926/X",
+      "interior_relative_error": "5655/(32 K)",
+      "safety_factor": "K/(K+178)",
+      "strict_interior_slack": "[41/(32(K+178))] Omega_X(q)",
+      "strict_terminal_margin": 581,
+      "terminal_omission_lower": 5033,
+      "terminal_overfill_upper": 4452
+    },
+    {
+      "bottom_width_two": "unused labelled thinning; never copied to a child",
+      "classification": "PASS_SUPPORT_COMPATIBLE_BOTTOM_AND_TOP_SOURCE_OWNERSHIP",
+      "outer_support_start": "K+2",
+      "strict_root_window": "X/(K+2) < 67",
+      "top_density": "L(x)=2 sqrt(x)-1 >= 1 on 1<=x<2",
+      "top_hall_is_trivial": true
+    },
+    {
+      "aggregate_port_covers_aggregate_correction": true,
+      "branch_correction": "tau_p V_b < (1/9) V_b",
+      "branch_port_reserve": "M_b >= (1/9) V_b I",
+      "classification": "PASS_ONE_AGGREGATE_P61_67_COMMON_PORT",
+      "normalized_mass_bound": "prod_(p<=61)(1+1/p) < 14/3",
+      "ports_charged": 1
+    },
+    {
+      "child_packets_after_grouping": 2,
+      "classification": "PASS_GLOBAL_THIN_THEN_GROUPED_CAUSAL_SPLIT",
+      "coefficient_sum": "9/100",
+      "outer_coefficients_repeated": false,
+      "parent_identity": true,
+      "source_fibers": 3
+    },
+    {
+      "classification": "PASS_NONZERO_FINITE_CONTINUUM_DEFECT_RETAINED",
+      "decimal_lower": "0.162186656605969161",
+      "safe_lower": "1/10"
+    }
+  ],
+  "classification": "PASS_FACTOR67_COMPACT_RESERVE_PROOF_OBLIGATION",
+  "conclusion": "The root Hall map is exact in the total equality row, so its Hall-induced finite/continuum error is zero. The only physical errors are the explicit factor-67 quadrature and B-spline collar terms; K/(K+178) leaves strict interior margin 41/[32(K+178)] and the top omission leaves terminal margin 581 X^(-3/2). The P61/67 port aggregates once, and causal children are grouped by prime with the original coefficient sum below 1/8.",
+  "proof_object_sha256": "28057cf7b8b3705fc047cdc28be4bd8e6482ede4df37e8145e970e445163008c",
+  "rh_established_by_replay": false,
+  "scope": "Exact algebra plus directed rational square-root/logarithm bounds. The replay closes the compact reserve obligation on the frozen endpoint, Hall, port and causal interfaces. It does not independently reconstruct every frozen theorem or establish RH."
+}
