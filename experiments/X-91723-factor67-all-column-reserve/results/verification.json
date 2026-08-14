@@ -1,0 +1,63 @@
+{
+  "classification": "PASS_FACTOR67_ALL_COLUMN_SQRTK_RESERVE",
+  "constant_reduction": {
+    "adjacent_mismatch_constant": "19/2",
+    "all_q_detail_mismatch_constant": "171/4",
+    "all_q_ordinary_mismatch_constant": "57/2",
+    "collar_plus_mismatch_constant": "971/4",
+    "integer_square_left": 8485569,
+    "integer_square_right": 8520192,
+    "relative_before_q_ge_2": "2913/16",
+    "uniform_relative_constant": 129
+  },
+  "imported_not_replayed": [
+    "factor-67 adjacent mismatch bound |epsilon_X(n)| < 19/2 n^(-3/2)",
+    "all-column B-spline collar bound < 200/(q sqrt(K))",
+    "terminal omission reserve 5033 X^(-3/2)",
+    "root Hall, rough ownership, common port and endpoint consumer"
+  ],
+  "mutation_tests": {
+    "mutations_detected": 3
+  },
+  "proof_object_sha256": "4dc67ad903809ab8747ff01b7f59be23b023d0469cd386b2054894e0b5269f14",
+  "rh_established_by_replay": false,
+  "symbolic_samples": {
+    "hostile_exact_surrogates": [
+      {
+        "slack_fraction": "1000/130001",
+        "sqrtK_surrogate": "1/1000",
+        "used_fraction": "129001/130001"
+      },
+      {
+        "slack_fraction": "1/131",
+        "sqrtK_surrogate": "1",
+        "used_fraction": "130/131"
+      },
+      {
+        "slack_fraction": "3/397",
+        "sqrtK_surrogate": "7/3",
+        "used_fraction": "394/397"
+      },
+      {
+        "slack_fraction": "1/230",
+        "sqrtK_surrogate": "100",
+        "used_fraction": "229/230"
+      },
+      {
+        "slack_fraction": "1/1000130",
+        "sqrtK_surrogate": "1000000",
+        "used_fraction": "1000129/1000130"
+      }
+    ]
+  },
+  "thinning_algebra": {
+    "new_thinning": "sqrt(K)/(sqrt(K)+130)",
+    "relative_error": "129/sqrt(K)",
+    "score_loss_upper": 4290,
+    "sqrt67_upper": "33/4",
+    "strict_detail_slack": "Omega_X(q)/(sqrt(K)+130)",
+    "terminal_comparison_from_K": 2,
+    "terminal_square_left": 31684,
+    "terminal_square_right_at_K2": 33800
+  }
+}

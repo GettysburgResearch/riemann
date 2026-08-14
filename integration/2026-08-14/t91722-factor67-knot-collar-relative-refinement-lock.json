@@ -1,0 +1,116 @@
+{
+  "branch": "research/gpt56-pro/91723-factor67-all-column-reserve",
+  "classification": "T91722_FACTOR67_KNOT_COLLAR_RELATIVE_REFINEMENT_LOCK",
+  "created": "2026-08-14",
+  "frozen_dependencies": [
+    {
+      "git_blob": "d32f2b29398afa816ff2a52e8bf72f589d5e1a23",
+      "path": "claims/lemmas/L-91107-continuum-endpoint-inverse-is-the-reciprocal-zeta-equality-weight.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "7597e989eb2501c6f8a3dd2db77e72fa7fd5acf0",
+      "path": "claims/lemmas/L-91110-positive-martingale-bspline-quantization-is-score-favorable.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "270333b3587f691aafb26d62e6e29f4c37e3eff5",
+      "path": "claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md",
+      "ref": "2eb70463f3d0ae791a9f140694d2ace7032ae864"
+    },
+    {
+      "git_blob": "f4ec8889ab4f922be51bcdadf3572d4d22a2e314",
+      "path": "claims/lemmas/L-91689-fixed-window-root-hall-has-a-universal-one-use-stability-bound.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "e38d470205633a189b14cd01b4175fa84057ec96",
+      "path": "claims/lemmas/L-91692-target-hall-is-row-transparent-and-the-factor67-reserve-is-explicit.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "031e096e6c679b94f1449946d10a49862d46973d",
+      "path": "claims/lemmas/L-91694-positive-direct-integrals-preserve-subcritical-target-mass.md",
+      "ref": "9f16ce483954d4233b68ee09cb6bec47400aa3cc"
+    },
+    {
+      "git_blob": "2f51cbd8bf667b24fcb882a1326ff65469c4219a",
+      "path": "claims/lemmas/L-91723-factor67-all-column-reserve-uses-square-root-thinning.md",
+      "ref": "fd8413b6ec650574c016c9c5a673e365c21ea837"
+    }
+  ],
+  "local_files": [
+    {
+      "path": "REVIEW_HANDOFF_91724.md",
+      "sha256": "642ef19dde3e670b6cadf3681f800b686fb16e95c487e5e63feaf5cb622a0455"
+    },
+    {
+      "path": "claims/lemmas/L-91724-activation-knot-collars-make-root-refinement-uniformly-native-relative.md",
+      "sha256": "04837dc13cc0ac672b1cbf1a33351155c49b1465a51764cbd5406be00c60507d"
+    },
+    {
+      "path": "claims/observations/O-91724-activation-knot-collar-frontier.md",
+      "sha256": "2356d081046435bb6747dc7d82db0bd4cb24328e028a6ae2b1e154908bc71a0b"
+    },
+    {
+      "path": "claims/refutations/R-91724-lipschitz-alone-does-not-prove-native-relative-root-convergence.md",
+      "sha256": "1f6bfd629505abef02fea5918f2fcf96e982e74647f144acb986cf6c1a942099"
+    },
+    {
+      "path": "claims/theorems/T-91722-knot-collar-and-all-column-root-repair.md",
+      "sha256": "aa3abced3fdabdaa0b8e873f7008413460fe2b19ee62b828f956091722f94c4b"
+    },
+    {
+      "path": "experiments/X-91724-factor67-knot-collar-relative-refinement/README.md",
+      "sha256": "f8ff6ad76d597e6f2b8e1590870b118493155cd43a9692c0ed51311b1f07e602"
+    },
+    {
+      "path": "experiments/X-91724-factor67-knot-collar-relative-refinement/SHA256SUMS",
+      "sha256": "64c3866caf6123a39ccf32776108ac57bac633b66a3fcf323d9a0c25e05ed677"
+    },
+    {
+      "path": "experiments/X-91724-factor67-knot-collar-relative-refinement/results/verification.json",
+      "sha256": "154f82a57d9fc249a6ba7e9e2bb811192c45f7fa638fee4e8098e5f6280058d1"
+    },
+    {
+      "path": "experiments/X-91724-factor67-knot-collar-relative-refinement/verify.py",
+      "sha256": "ba6fce5d04f74d16a1959fa4bd788c4ec4f66a0069a349714702026fdb099a44"
+    },
+    {
+      "path": "reports/gpt56-pro/2026-08-14-factor67-knot-collar-relative-refinement.md",
+      "sha256": "3450784b515ef0bd7d7ceef56bb7a45506e8810aa9db08eef148f15b0e7717d3"
+    }
+  ],
+  "lock_sha256": "1770f6e625e13687f167c9f40536e63ea45ecefef61ddb57005847b146917d3c",
+  "new_results": {
+    "N_knot_collar_mass": "<8*N*eta",
+    "collar_score_cost": "arbitrarily o(1)",
+    "endpoint_density": "<183/50<4",
+    "final_normalized_reserve": ">1/(2*(sqrt(K)+130))",
+    "initial_normalized_reserve": "1/(sqrt(K)+130)",
+    "interpolation_score_cost": "arbitrarily o(1)",
+    "relative_interpolation_error": "L_eta*h/(2*m_eta)"
+  },
+  "origin": {
+    "base_head": "9f16ce483954d4233b68ee09cb6bec47400aa3cc",
+    "base_pr": 476,
+    "pre_extension_head": "fd8413b6ec650574c016c9c5a673e365c21ea837",
+    "review_pr": 479
+  },
+  "proof_boundary": {
+    "RH": "unproved",
+    "activation_collar": "proved_exact_on_frozen_density",
+    "child_mass": "import_L91694_exact",
+    "full_stack": "independent_reconstruction_required",
+    "raw_lipschitz_relative_inference": "refuted_exact",
+    "relative_refinement": "proved_exact_on_finite_cell_hypotheses",
+    "reserve_payment": "proved_conditional_on_C_norm_and_L91723"
+  },
+  "replay": {
+    "classification": "PASS_FACTOR67_KNOT_COLLAR_RELATIVE_REFINEMENT",
+    "mutations_detected": 3,
+    "proof_object_sha256": "78b06f7dc034f76c1b65bb0146ec22164588581134dc887771d19315d9b71550",
+    "random_fraction_checks": 500
+  },
+  "repository": "gfreund123/riemann"
+}

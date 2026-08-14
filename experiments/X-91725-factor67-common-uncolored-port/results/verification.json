@@ -1,0 +1,117 @@
+{
+  "classification": "PASS_FACTOR67_ONE_UNCOLORED_COMMON_PORT",
+  "colored_projection_used": false,
+  "imported_not_replayed": [
+    "the analytic P61 matrix-port construction and |B|<8V/9",
+    "the physical causal-generator theorem L-91654",
+    "the root Hall and endpoint-frame producer",
+    "the actual frozen finite correction demand",
+    "terminal and endpoint-consumer inputs"
+  ],
+  "integration": {
+    "classification": "PASS_POSITIVE_INTEGRATED_COMMON_PORT",
+    "exact_random_fixtures": 300,
+    "sample_records": [
+      {
+        "current_source_mass": "9/7",
+        "demand": [
+          "144/35",
+          "0",
+          "144/35"
+        ],
+        "fibers": 1,
+        "port": [
+          "36/7",
+          "0",
+          "36/7"
+        ],
+        "thinning": "19/20"
+      },
+      {
+        "current_source_mass": "2017/570",
+        "demand": [
+          "1113734233/243097400",
+          "0",
+          "1113734233/243097400"
+        ],
+        "fibers": 6,
+        "port": [
+          "1235380483/72929220",
+          "77919619/10939383",
+          "1235380483/72929220"
+        ],
+        "thinning": "7/20"
+      },
+      {
+        "current_source_mass": "1/50",
+        "demand": [
+          "0",
+          "0",
+          "0"
+        ],
+        "fibers": 1,
+        "port": [
+          "56/475",
+          "-112/4275",
+          "56/475"
+        ],
+        "thinning": "7/10"
+      },
+      {
+        "current_source_mass": "253/100",
+        "demand": [
+          "112241/10800",
+          "0",
+          "112241/10800"
+        ],
+        "fibers": 3,
+        "port": [
+          "117533/3150",
+          "46597/4725",
+          "117533/3150"
+        ],
+        "thinning": "7/10"
+      }
+    ]
+  },
+  "mass": {
+    "classification": "PASS_UNIFORM_ROOT_PORT_MASS",
+    "integrated_upper": "252",
+    "per_unit_upper": "14/3",
+    "root_mass_upper": "54"
+  },
+  "mutation_tests": {
+    "mutations_detected": 3
+  },
+  "ownership": {
+    "classification": "PASS_ZERO_CHILD_PORT_ONE_OWNER",
+    "records": [
+      {
+        "child_coefficient": "0",
+        "child_port": "0",
+        "current_port": "1",
+        "total": "1"
+      },
+      {
+        "child_coefficient": "1/10",
+        "child_port": "0",
+        "current_port": "1",
+        "total": "1"
+      },
+      {
+        "child_coefficient": "1/8",
+        "child_port": "0",
+        "current_port": "1",
+        "total": "1"
+      },
+      {
+        "child_coefficient": "7/8",
+        "child_port": "0",
+        "current_port": "1",
+        "total": "1"
+      }
+    ]
+  },
+  "proof_object_sha256": "86d9a6c94126f84852ca245f47520707c0b175ca551649d9f52b53ed4dbbfb0e",
+  "rh_established_by_replay": false
+}

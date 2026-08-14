@@ -1,0 +1,156 @@
+{
+  "classification": "PASS_FACTOR67_KNOT_COLLAR_RELATIVE_REFINEMENT",
+  "collar_mass": {
+    "classification": "PASS_ATOMLESS_KNOT_COLLAR_MASS_BOUND",
+    "endpoint_density_upper": "183/50",
+    "records": [
+      {
+        "coarse_bound": "2/25",
+        "knots": 1,
+        "radius": "1/100",
+        "sharp_bound": "183/2500"
+      },
+      {
+        "coarse_bound": "7/1250",
+        "knots": 7,
+        "radius": "1/10000",
+        "sharp_bound": "1281/250000"
+      },
+      {
+        "coarse_bound": "3/1250000",
+        "knots": 300,
+        "radius": "1/1000000000",
+        "sharp_bound": "549/250000000"
+      }
+    ]
+  },
+  "imported_not_replayed": [
+    "factor-67 equality density 0<L(x)<183/100",
+    "finite root activation-cell description",
+    "fixed-window Hall amplification 10152",
+    "bounded one-use correction-map norm",
+    "all-column reserve from L-91723",
+    "mass-weighted direct-integral contraction L-91694",
+    "terminal, common-port and endpoint-consumer inputs"
+  ],
+  "interpolation": {
+    "classification": "PASS_POSITIVE_BARYCENTRIC_LIPSCHITZ_BOUND",
+    "midpoint_equality": true,
+    "minimum_gap": "49/7406250",
+    "random_fraction_checks": 500,
+    "relative_bound": "L_eta*h/(2*m_eta)"
+  },
+  "mutation_tests": {
+    "mutations_detected": 3
+  },
+  "ownership": {
+    "classification": "PASS_ONE_USE_BARYCENTRIC_ENDPOINT_OWNERSHIP",
+    "collar_owner": "unused positive source",
+    "records": [
+      {
+        "left": "0",
+        "right": "1"
+      },
+      {
+        "left": "1/7",
+        "right": "6/7"
+      },
+      {
+        "left": "1/2",
+        "right": "1/2"
+      },
+      {
+        "left": "1",
+        "right": "0"
+      }
+    ]
+  },
+  "proof_object_sha256": "78b06f7dc034f76c1b65bb0146ec22164588581134dc887771d19315d9b71550",
+  "raw_counterexample": {
+    "classification": "PASS_RAW_LIPSCHITZ_RELATIVE_COUNTEREXAMPLE",
+    "model": "V(t)=c(t)=t^2, chord V_h(t)=h t",
+    "records": [
+      {
+        "N": 2,
+        "relative_error": "1"
+      },
+      {
+        "N": 10,
+        "relative_error": "9"
+      },
+      {
+        "N": 100,
+        "relative_error": "99"
+      },
+      {
+        "N": 10000,
+        "relative_error": "9999"
+      }
+    ],
+    "supremum": "infinite"
+  },
+  "reserve": {
+    "classification": "PASS_ALL_COLUMN_RESERVE_PAYS_RELATIVE_REFINEMENT",
+    "records": [
+      {
+        "amplified_error": "1/262",
+        "correction_norm_surrogate": "1",
+        "epsilon": "1/2659824",
+        "initial_reserve": "1/131",
+        "remaining_reserve": "1/262",
+        "sqrtK_surrogate": "1"
+      },
+      {
+        "amplified_error": "3/794",
+        "correction_norm_surrogate": "5/2",
+        "epsilon": "1/6717240",
+        "initial_reserve": "3/397",
+        "remaining_reserve": "3/794",
+        "sqrtK_surrogate": "7/3"
+      },
+      {
+        "amplified_error": "1/460",
+        "correction_norm_surrogate": "11",
+        "epsilon": "1/51369120",
+        "initial_reserve": "1/230",
+        "remaining_reserve": "1/460",
+        "sqrtK_surrogate": "100"
+      },
+      {
+        "amplified_error": "1/2000260",
+        "correction_norm_surrogate": "1/7",
+        "epsilon": "7/20306639520",
+        "initial_reserve": "1/1000130",
+        "remaining_reserve": "1/2000260",
+        "sqrtK_surrogate": "1000000"
+      }
+    ]
+  },
+  "rh_established_by_replay": false,
+  "score": {
+    "classification": "PASS_VANISHING_KNOT_COLLAR_SCORE_SCHEDULE",
+    "records": [
+      {
+        "X": 10,
+        "collar_mass_budget": "1/10100",
+        "score_loss": "1/101",
+        "score_majorant": "100",
+        "target_upper": "1/100"
+      },
+      {
+        "X": 1000,
+        "collar_mass_budget": "1/500500000",
+        "score_loss": "999/1001000000",
+        "score_majorant": "999/2",
+        "target_upper": "1/1000000"
+      },
+      {
+        "X": 1000000,
+        "collar_mass_budget": "1/10001000000000000",
+        "score_loss": "1/1000100000000",
+        "score_majorant": "10000",
+        "target_upper": "1/1000000000000"
+      }
+    ]
+  }
+}
