@@ -23,17 +23,25 @@ activation knots             collars + positive cell refinement PR #479;
 common port                  uncolored integrated port PR #479;
 root capacity identity       L-91730;
 local native scalar          sparse-Y4 all-column estimate L-91728;
-10152 reserve                existing all-column reserve pays it, L-91729.
+10152 reserve                existing all-column reserve pays it, L-91729;
+positive descendants         bounded causal envelope L-91731.
 ```
 
-The key new distinction is that target mass and packet capacity have different
-jobs.  Target monotonicity verifies the abstract HTR normalization.  The literal
-native endpoint theorem is proved instead by the exact packet-capacity cocycle,
-using the causal coefficients directly.
+Target mass and packet capacity have different jobs.  Target monotonicity
+verifies the abstract HTR normalization.  The literal native endpoint theorem is
+proved by the exact packet-capacity cocycle.
 
-On the frozen terminal/base/port inputs, the corrected local root cost is
-`O(log X)`, dominated by the native cost of the square-root source thinning.
-The exact subcritical cocycle then gives
+The finite all-column realization is charged once at the native root.  It costs
+`O(log X)`, dominated by the native cost of square-root source thinning.  It is
+not repeated on arbitrary descendants.  After root Hall every child is already
+a positive typed packet, so the exact causal envelope gives
+
+\[
+ \Delta(P)\le C_+m(P).
+\]
+
+The factor-67 integrated root target is below `3300`; hence all descendants
+contribute only an absolute constant.  Therefore
 
 \[
  J_\Lambda(X)-\mathcal H(d_X)=O(\log X)=o(\log^2X).
@@ -45,6 +53,7 @@ The exact subcritical cocycle then gives
 review of frozen #476                         VERIFIED
 new target-mass theorem                       PROVED
 new packet capacity/slack algebra              PROVED
+one-shot root / positive descendant split      PROVED CONDITIONALLY
 all-column/knot/port repairs                   PR #479 / RECONSTRUCT
 fixed terminal/base/port native cost           FROZEN / RECONSTRUCT
 corrected composition                          T-91724 / REVIEW
