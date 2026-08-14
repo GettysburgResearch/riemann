@@ -17,9 +17,9 @@ import hashlib
 import json
 from fractions import Fraction
 from pathlib import Path
-from typing import Any, Sequence
+from typing import Any, Iterable, Sequence
 
-SCHEMA = "riemann.t91661.triple-closure.v1"
+SCHEMA = "riemann.t91662.triple-closure.v1"
 
 
 def fs(x: Fraction) -> str:
@@ -33,7 +33,7 @@ def canonical_sha(payload: dict[str, Any]) -> str:
 
 
 def exact_pd(matrix: Sequence[Sequence[Fraction]]) -> tuple[bool, list[Fraction]]:
-    """Exact symmetric LDL after positive symmetric pivot swaps."""
+    """Exact symmetric LDL without pivoting after symmetric positive pivot swaps."""
     a = [list(map(Fraction, row)) for row in matrix]
     n = len(a)
     if any(len(row) != n for row in a):
@@ -46,6 +46,7 @@ def exact_pd(matrix: Sequence[Sequence[Fraction]]) -> tuple[bool, list[Fraction]
         for i in range(n):
             if a[i][i] <= 0:
                 continue
+            # symmetric pivot
             if i:
                 a[0], a[i] = a[i], a[0]
                 for row in a:
@@ -65,6 +66,7 @@ def exact_pd(matrix: Sequence[Sequence[Fraction]]) -> tuple[bool, list[Fraction]
 
 
 def route_a() -> dict[str, Any]:
+    # Two normalized endpoint fibers with strict per-fiber child-mass ratios.
     root_weights = [Fraction(2, 5), Fraction(3, 5)]
     fiber_ratios = [Fraction(7, 100), Fraction(3, 40)]
     if sum(root_weights) != 1:
@@ -75,6 +77,7 @@ def route_a() -> dict[str, Any]:
     if not global_ratio < Fraction(1, 8):
         raise AssertionError("direct integral lost subcriticality")
 
+    # Safety thinning can only decrease recursive mass.
     sigma = Fraction(997, 1000)
     thinned_ratio = sigma * global_ratio
     if not thinned_ratio < global_ratio < Fraction(1, 8):
@@ -102,6 +105,8 @@ def route_b() -> dict[str, Any]:
     if not reserve < 1:
         raise AssertionError("thinning is not positive")
 
+    # If an approximation with relative error delta is scaled by 1-reserve,
+    # the remaining normalized capacity is still strictly positive.
     leftover = reserve - (1 - reserve) * delta
     if leftover <= 0:
         raise AssertionError("reserve does not absorb the corrected error")
@@ -145,6 +150,7 @@ def hankel(m: Sequence[Fraction], shift: int, size: int) -> list[list[Fraction]]
 
 
 def route_c() -> dict[str, Any]:
+    # A finite positive critical-zero model: y(q)=sum_l 2/(q+gamma_l^2).
     nodes = [Fraction(1), Fraction(2), Fraction(4), Fraction(7), Fraction(11)]
     squared_zeros = [Fraction(1), Fraction(9), Fraction(25)]
     weights = [Fraction(2), Fraction(2), Fraction(2)]
@@ -161,6 +167,8 @@ def route_c() -> dict[str, Any]:
     if not pd0 or not pd1:
         raise AssertionError("positive Stieltjes control did not give PD Hankel pairs")
 
+    # Check the exact transformed-measure moment formula
+    # m_k = sum_l 2*s_l^k / prod_i(q_i+s_l).
     direct = []
     for k in range(len(nodes)):
         value = Fraction(0)
@@ -193,7 +201,7 @@ def verify(_: dict[str, Any] | None = None) -> dict[str, Any]:
         "proof_boundary": {
             "factor67_endpoint_imports": "FROZEN_RECONSTRUCTION_REQUIRED",
             "endpoint_to_rh_consumer": "FROZEN_RECONSTRUCTION_REQUIRED",
-            "actual_xi_hankel_positivity": "DERIVED_FROM_RH_IN_L-92113",
+            "actual_xi_hankel_positivity": "DERIVED_FROM_RH_IN_L-92114",
             "riemann_hypothesis": "PROPOSAL_PENDING_INDEPENDENT_REVIEW",
         },
         "verdict": "PASS_TRIPLE_CLOSURE_FINITE_ALGEBRA",
