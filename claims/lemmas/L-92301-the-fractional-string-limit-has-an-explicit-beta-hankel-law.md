@@ -132,14 +132,16 @@ compact interval,
  \boxed{
  \frac{2}{x\ell_x}
  D_{x,u}H_n(x^2u)D_{x,u}
- =u^{-\alpha_x}C_n(\alpha_x)
+ =u^{1-\alpha_x}C_n(\alpha_x)
   +O_{n,u}(\ell_x^{-2})+O_{n,u}((x\ell_x)^{-1}).
  }
  \tag{L-92301.6}
 \]
 
-(The displayed diagonal includes the powers of `u` precisely so that the
-right-hand side is the unweighted beta moment matrix.)
+The exponent `1-alpha_x` follows from the two powers of `u` in the diagonal
+scaling and the derivative order `i+j+1`.  It is a positive scalar factor and
+therefore has no effect on the inertia or determinant sign of the limiting
+moment matrix.
 
 Since `alpha_x -> 1/2` and `C_n(1/2)` is strictly positive,
 
