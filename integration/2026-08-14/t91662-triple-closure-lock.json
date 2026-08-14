@@ -1,0 +1,30 @@
+{
+  "base_branch": "research/gpt56-pro/91690-factor67-sontr-freeze-13ad1fd",
+  "base_pr": 473,
+  "base_sha": "13ad1fdbf06edc931dc0c524327b701c5c8f86a3",
+  "created": "2026-08-14",
+  "experiment": "X-91692-triple-closure",
+  "frozen_inputs": {
+    "endpoint_consumer_pr_468_base": "a41f81466f85d52597c97b41505756a8860698d0",
+    "factor67_sontr_pr_473": "13ad1fdbf06edc931dc0c524327b701c5c8f86a3",
+    "passive_string_pr_453": "a9cecbd3228bc26d4d0c3375c9694ee1e836f66a",
+    "three_route_pr_471": "4ac821701177edb67a77fe43e89cc2a7a53af68a"
+  },
+  "head_branch": "research/gpt56-pro/91692-triple-closure-proposal",
+  "new_claims": [
+    "L-91694",
+    "L-91695",
+    "L-92114",
+    "T-91662",
+    "O-91694"
+  ],
+  "proof_object_sha256": "86c3ae839de47e74668e1e86e283a64ddb9a0bdd05842ca73686dc695c0651fc",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t91662.triple-closure-lock.v1",
+  "status": {
+    "A_sontr": "COMPLETE_PROPOSAL_REVIEW_REQUIRED",
+    "B_reserve": "PROVED_EXACT",
+    "C_hankel": "PROVED_FROM_RH",
+    "riemann_hypothesis": "PROPOSAL_PENDING_INDEPENDENT_REVIEW"
+  }
+}
