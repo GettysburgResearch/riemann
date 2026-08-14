@@ -1,0 +1,71 @@
+{
+  "proof_boundary": {
+    "actual_xi_hankel_positivity": "DERIVED_FROM_RH_IN_L-92113",
+    "endpoint_to_rh_consumer": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "factor67_endpoint_imports": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "riemann_hypothesis": "PROPOSAL_PENDING_INDEPENDENT_REVIEW"
+  },
+  "proof_object_sha256": "08a23b3798da655c47a8bb87fc67baf30fcd56f53542c40d63550ca9a02a7ab0",
+  "route_a": {
+    "fiber_child_mass_ratios": [
+      "7/100",
+      "3/40"
+    ],
+    "global_child_mass_ratio": "73/1000",
+    "root_weights": [
+      "2/5",
+      "3/5"
+    ],
+    "thinned_child_mass_ratio": "72781/1000000",
+    "thinning_factor": "997/1000",
+    "verdict": "PASS_MASS_WEIGHTED_DIRECT_INTEGRAL_BELOW_ONE_EIGHTH"
+  },
+  "route_b": {
+    "correction_norm": "7/3",
+    "epsilon": "1/100000000",
+    "error_bound": "2961/12500000",
+    "one_use_reserve": "2961/6250000",
+    "post_error_leftover": "18515017521/78125000000000",
+    "verdict": "PASS_ADAPTIVE_ONE_USE_RESERVE_DOMINATES_10152_ERROR"
+  },
+  "route_c": {
+    "barycentric_moments": [
+      "2253749/3224707200",
+      "2373101/3224707200",
+      "3552869/3224707200",
+      "1293137/248054400",
+      "202131989/3224707200"
+    ],
+    "data": [
+      "83/65",
+      "274/297",
+      "1174/1885",
+      "7/16",
+      "29/90"
+    ],
+    "h0_ldl_pivots": [
+      "2253749/3224707200",
+      "47886/146493685",
+      "256/23943"
+    ],
+    "h1_ldl_pivots": [
+      "2373101/3224707200",
+      "549694/154251565"
+    ],
+    "nodes": [
+      "1",
+      "2",
+      "4",
+      "7",
+      "11"
+    ],
+    "squared_zero_support": [
+      "1",
+      "9",
+      "25"
+    ],
+    "verdict": "PASS_POSITIVE_STIELTJES_DATA_GIVE_BOTH_HANKEL_PAIRS_PD"
+  },
+  "schema": "riemann.t91661.triple-closure.v1",
+  "verdict": "PASS_TRIPLE_CLOSURE_FINITE_ALGEBRA"
+}
