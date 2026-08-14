@@ -1,0 +1,84 @@
+{
+  "schema": "riemann.x19880-native-radial-laplace-dictionary.v1",
+  "geometric_parameter": "1/2",
+  "interval_weights": [
+    "2/5",
+    "3/5"
+  ],
+  "modes": [
+    {
+      "activation_index": 1,
+      "ramp_weight": 2,
+      "owner_fractions": [
+        "1/3",
+        "1/2"
+      ],
+      "feature": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "activation_index": 2,
+      "ramp_weight": 3,
+      "owner_fractions": [
+        "1/4",
+        "1/4"
+      ],
+      "feature": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "activation_index": 3,
+      "ramp_weight": 4,
+      "owner_fractions": [
+        "1/8",
+        "3/8"
+      ],
+      "feature": [
+        1,
+        -1,
+        0
+      ]
+    }
+  ],
+  "claimed_slack_matrix": [
+    [
+      "5/12",
+      "-1/4",
+      "1/6"
+    ],
+    [
+      "-1/4",
+      "5/8",
+      "3/8"
+    ],
+    [
+      "1/6",
+      "3/8",
+      "13/24"
+    ]
+  ],
+  "radix_four_columns": [
+    {
+      "q": 6,
+      "expected_y4_zero": true
+    },
+    {
+      "q": 24,
+      "expected_y4_zero": true
+    },
+    {
+      "q": 36,
+      "expected_y4_zero": false
+    },
+    {
+      "q": 64,
+      "expected_y4_zero": false
+    }
+  ]
+}
