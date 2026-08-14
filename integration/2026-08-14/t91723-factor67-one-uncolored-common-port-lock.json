@@ -1,0 +1,97 @@
+{
+  "branch": "research/gpt56-pro/91723-factor67-all-column-reserve",
+  "classification": "T91723_FACTOR67_ONE_UNCOLORED_COMMON_PORT_LOCK",
+  "created": "2026-08-14",
+  "frozen_dependencies": [
+    {
+      "git_blob": "de137e616e0f35e87923ad21856b23f1d079323e",
+      "path": "claims/lemmas/L-91320-absorbing-59-and-61-makes-the-schur-port-dominate-every-rough-state-correction.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "3b05866c86d6c239ddf212652830ac253c9df41d",
+      "path": "claims/lemmas/L-91654-causal-generators-are-complete-admissible-endpoint-data.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "270333b3587f691aafb26d62e6e29f4c37e3eff5",
+      "path": "claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md",
+      "ref": "2eb70463f3d0ae791a9f140694d2ace7032ae864"
+    },
+    {
+      "git_blob": "f4ec8889ab4f922be51bcdadf3572d4d22a2e314",
+      "path": "claims/lemmas/L-91689-fixed-window-root-hall-has-a-universal-one-use-stability-bound.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "031e096e6c679b94f1449946d10a49862d46973d",
+      "path": "claims/lemmas/L-91694-positive-direct-integrals-preserve-subcritical-target-mass.md",
+      "ref": "9f16ce483954d4233b68ee09cb6bec47400aa3cc"
+    }
+  ],
+  "local_files": [
+    {
+      "path": "REVIEW_HANDOFF_91725.md",
+      "sha256": "13b5c90ff350ea21c5a79034e86739e11dcd02a3311fe0a09be02d522affe58c"
+    },
+    {
+      "path": "claims/lemmas/L-91725-factor67-causal-route-has-one-uncolored-common-root-port.md",
+      "sha256": "6c711b6f667e877a1b1936c836b9b0463afce7c5622e876fd1e117c7fc678335"
+    },
+    {
+      "path": "claims/observations/O-91725-factor67-port-dependency-scope.md",
+      "sha256": "1beae618b6c320a0e186119de863cb9faf536ccb9fb7d8326e059349410597af"
+    },
+    {
+      "path": "claims/theorems/T-91723-factor67-finite-root-repair-has-one-common-port.md",
+      "sha256": "679d0aa618fa8c572597a1ea55fb6d546442fb546eecdec318a5f527bd9e67fe"
+    },
+    {
+      "path": "experiments/X-91725-factor67-common-uncolored-port/README.md",
+      "sha256": "1db7d199507068babcf9d41275219017d9488863ec6addda390163f3ab090643"
+    },
+    {
+      "path": "experiments/X-91725-factor67-common-uncolored-port/SHA256SUMS",
+      "sha256": "f9dfbe8124af23e3211b7dd9d7dda1998f5ee06edd17b04c993989a9a478c5ed"
+    },
+    {
+      "path": "experiments/X-91725-factor67-common-uncolored-port/results/verification.json",
+      "sha256": "378bd8a4bdc6a4b06b253582c800a68e118ca1b0a28ee865cac03fc59ae742f3"
+    },
+    {
+      "path": "experiments/X-91725-factor67-common-uncolored-port/verify.py",
+      "sha256": "3f21bb3cd8c55bd7c205ce20766b6d1b49bd93acf9b96ad2ac05246b19269640"
+    },
+    {
+      "path": "reports/gpt56-pro/2026-08-14-factor67-one-uncolored-common-port.md",
+      "sha256": "46be637fe69e9dae95cd32172395c6e54afce0f39933092be0f6f80258929999"
+    }
+  ],
+  "lock_sha256": "c5a7956aaf521384877681d520a59eeec921746f06887fb8c86410c7d62e1d72",
+  "new_results": {
+    "colored_projection": "not used by physical causal route",
+    "common_port": "positive integral of fiber ports",
+    "integrated_port_mass": "<252",
+    "recursive_child_port": "0"
+  },
+  "origin": {
+    "base_head": "9f16ce483954d4233b68ee09cb6bec47400aa3cc",
+    "base_pr": 476,
+    "pre_extension_head": "36df89a0e968a1cac2af01246eb8e9a446454c4c",
+    "review_pr": 479
+  },
+  "proof_boundary": {
+    "RH": "unproved",
+    "actual_corrections": "frozen_review_input",
+    "colored_projection": "not_used",
+    "common_uncolored_port": "proved_exact_on_frozen_fiber_inequalities",
+    "terminal_endpoint": "review_required"
+  },
+  "replay": {
+    "classification": "PASS_FACTOR67_ONE_UNCOLORED_COMMON_PORT",
+    "exact_random_fixtures": 300,
+    "mutations_detected": 3,
+    "proof_object_sha256": "86d9a6c94126f84852ca245f47520707c0b175ca551649d9f52b53ed4dbbfb0e"
+  },
+  "repository": "gfreund123/riemann"
+}
