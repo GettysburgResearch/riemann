@@ -1,0 +1,24 @@
+{
+  "benchmark_convolution_checks": 4000,
+  "classification": "PASS_NATIVE_ROOT_NORMALIZATION_AND_DUAL_PACKET",
+  "injectivity_regression_checks": 498,
+  "least_prime_partition_checks": 13131,
+  "one_prime_scan_commands": [
+    "c++ -O3 scan_oneprime.cpp -o scan_oneprime",
+    "./scan_oneprime 67 200 200",
+    "./scan_oneprime 71 200 200",
+    "./scan_oneprime 83 200 200",
+    "./scan_oneprime 127 200 200",
+    "c++ -O3 random_oneprime.cpp -o random_oneprime && ./random_oneprime"
+  ],
+  "radix4_dual_checks": 5001,
+  "rough_convolution_checks": 100000,
+  "scope": "The formal prime-log checks prove the M\u00f6bius benchmark identity, the positive radix-four dual recurrence, and the finite-Euler/rough convolution dictionary on a large exact regression range. The capacity witness and target-debt algebra are exact. The C++ one-prime scans are discovery evidence only and do not prove the global one-prime row theorem, NRCT, CFFP, or RH.",
+  "strict_capacity_overdraw_witness": {
+    "X": 136,
+    "decimal": 0.001279828483206227,
+    "exact": "log(68/67)/sqrt(134)",
+    "q": 2
+  },
+  "target_debt_checks": 45
+}
