@@ -1,0 +1,671 @@
+{
+  "classification": "EXACT_SYNTHETIC_THREE_ROUTE_REGRESSION",
+  "depth_graph": {
+    "environment_depth_diagonal": [
+      {
+        "denominator": "1",
+        "numerator": "3"
+      }
+    ],
+    "feature_count": 2,
+    "graph_blocks": {
+      "00": [
+        [
+          {
+            "denominator": "1",
+            "numerator": "2"
+          },
+          {
+            "denominator": "1",
+            "numerator": "1"
+          }
+        ],
+        [
+          {
+            "denominator": "1",
+            "numerator": "1"
+          },
+          {
+            "denominator": "1",
+            "numerator": "2"
+          }
+        ]
+      ],
+      "01": [
+        [
+          {
+            "denominator": "1",
+            "numerator": "3"
+          },
+          {
+            "denominator": "1",
+            "numerator": "2"
+          }
+        ],
+        [
+          {
+            "denominator": "1",
+            "numerator": "2"
+          },
+          {
+            "denominator": "1",
+            "numerator": "5"
+          }
+        ]
+      ],
+      "10": [
+        [
+          {
+            "denominator": "1",
+            "numerator": "3"
+          },
+          {
+            "denominator": "1",
+            "numerator": "2"
+          }
+        ],
+        [
+          {
+            "denominator": "1",
+            "numerator": "2"
+          },
+          {
+            "denominator": "1",
+            "numerator": "5"
+          }
+        ]
+      ],
+      "11": [
+        [
+          {
+            "denominator": "1",
+            "numerator": "5"
+          },
+          {
+            "denominator": "1",
+            "numerator": "4"
+          }
+        ],
+        [
+          {
+            "denominator": "1",
+            "numerator": "4"
+          },
+          {
+            "denominator": "1",
+            "numerator": "13"
+          }
+        ]
+      ]
+    },
+    "intertwining_verified": true,
+    "model_depth_diagonal": [
+      {
+        "denominator": "1",
+        "numerator": "1"
+      },
+      {
+        "denominator": "1",
+        "numerator": "2"
+      }
+    ],
+    "source_depth_diagonal": [
+      {
+        "denominator": "1",
+        "numerator": "1"
+      },
+      {
+        "denominator": "1",
+        "numerator": "2"
+      },
+      {
+        "denominator": "1",
+        "numerator": "3"
+      }
+    ],
+    "verdict": "PASS_FOUR_DEPTH_GRAPH_GRAMS_AND_INTERTWINING"
+  },
+  "passive_string": {
+    "atoms": [
+      {
+        "damped_weight": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "location": 1,
+        "weight": {
+          "denominator": "1",
+          "numerator": "2"
+        }
+      },
+      {
+        "damped_weight": {
+          "denominator": "8",
+          "numerator": "5"
+        },
+        "location": 3,
+        "weight": {
+          "denominator": "1",
+          "numerator": "5"
+        }
+      }
+    ],
+    "barycentric_moments": [
+      {
+        "denominator": "6720",
+        "numerator": "31"
+      },
+      {
+        "denominator": "6720",
+        "numerator": "37"
+      },
+      {
+        "denominator": "1344",
+        "numerator": "11"
+      },
+      {
+        "denominator": "6720",
+        "numerator": "109"
+      }
+    ],
+    "derivative_hankel": [
+      [
+        {
+          "denominator": "8",
+          "numerator": "13"
+        },
+        {
+          "denominator": "8",
+          "numerator": "23"
+        },
+        {
+          "denominator": "8",
+          "numerator": "53"
+        }
+      ],
+      [
+        {
+          "denominator": "8",
+          "numerator": "23"
+        },
+        {
+          "denominator": "8",
+          "numerator": "53"
+        },
+        {
+          "denominator": "8",
+          "numerator": "143"
+        }
+      ],
+      [
+        {
+          "denominator": "8",
+          "numerator": "53"
+        },
+        {
+          "denominator": "8",
+          "numerator": "143"
+        },
+        {
+          "denominator": "8",
+          "numerator": "413"
+        }
+      ]
+    ],
+    "derivative_hankel_pivots": [
+      {
+        "denominator": "8",
+        "numerator": "13"
+      },
+      {
+        "denominator": "13",
+        "numerator": "20"
+      },
+      {
+        "denominator": "1",
+        "numerator": "0"
+      }
+    ],
+    "derivative_moments": [
+      {
+        "denominator": "8",
+        "numerator": "13"
+      },
+      {
+        "denominator": "8",
+        "numerator": "23"
+      },
+      {
+        "denominator": "8",
+        "numerator": "53"
+      },
+      {
+        "denominator": "8",
+        "numerator": "143"
+      },
+      {
+        "denominator": "8",
+        "numerator": "413"
+      }
+    ],
+    "finite_string_h0": [
+      [
+        {
+          "denominator": "6720",
+          "numerator": "31"
+        },
+        {
+          "denominator": "6720",
+          "numerator": "37"
+        }
+      ],
+      [
+        {
+          "denominator": "6720",
+          "numerator": "37"
+        },
+        {
+          "denominator": "1344",
+          "numerator": "11"
+        }
+      ]
+    ],
+    "finite_string_h0_pivots": [
+      {
+        "denominator": "6720",
+        "numerator": "31"
+      },
+      {
+        "denominator": "620",
+        "numerator": "1"
+      }
+    ],
+    "finite_string_h1": [
+      [
+        {
+          "denominator": "6720",
+          "numerator": "37"
+        },
+        {
+          "denominator": "1344",
+          "numerator": "11"
+        }
+      ],
+      [
+        {
+          "denominator": "1344",
+          "numerator": "11"
+        },
+        {
+          "denominator": "6720",
+          "numerator": "109"
+        }
+      ]
+    ],
+    "finite_string_h1_pivots": [
+      {
+        "denominator": "6720",
+        "numerator": "37"
+      },
+      {
+        "denominator": "740",
+        "numerator": "3"
+      }
+    ],
+    "geometric_parameter": {
+      "denominator": "2",
+      "numerator": "1"
+    },
+    "geometric_ramp_closed_value": {
+      "denominator": "4",
+      "numerator": "1"
+    },
+    "nodes": [
+      {
+        "denominator": "1",
+        "numerator": "1"
+      },
+      {
+        "denominator": "1",
+        "numerator": "2"
+      },
+      {
+        "denominator": "1",
+        "numerator": "4"
+      },
+      {
+        "denominator": "1",
+        "numerator": "7"
+      }
+    ],
+    "stieltjes_values": [
+      {
+        "denominator": "32",
+        "numerator": "21"
+      },
+      {
+        "denominator": "24",
+        "numerator": "11"
+      },
+      {
+        "denominator": "280",
+        "numerator": "81"
+      },
+      {
+        "denominator": "16",
+        "numerator": "3"
+      }
+    ],
+    "verdict": "PASS_POSITIVE_STIELTJES_DOUBLE_LAPLACE_ANALOGUE"
+  },
+  "proof_boundary": "Fraction-only regression of the exact slack cocycle, subcritical affine recurrence, four graph-Gram blocks, generator intertwining, positive derivative Hankel tower, finite Stieltjes string tests, and a geometric-ramp transform analogue. It does not reconstruct PR #473, prove DGGC_a or PSI_a, or establish RH.",
+  "proof_object_sha256": "40097c04506b682b960086650a6d99ead02c5af877686d3de7285904bedd13b4",
+  "schema": "riemann.x19882-three-route-native-slack-verification.v1",
+  "slack_cocycle": {
+    "child_weighted_contribution": {
+      "denominator": "4",
+      "numerator": "5"
+    },
+    "children": [
+      {
+        "alpha": {
+          "denominator": "16",
+          "numerator": "1"
+        },
+        "capacity": [
+          {
+            "denominator": "1",
+            "numerator": "16"
+          },
+          {
+            "denominator": "1",
+            "numerator": "16"
+          },
+          {
+            "denominator": "1",
+            "numerator": "16"
+          }
+        ],
+        "response": [
+          {
+            "denominator": "1",
+            "numerator": "12"
+          },
+          {
+            "denominator": "1",
+            "numerator": "14"
+          },
+          {
+            "denominator": "1",
+            "numerator": "16"
+          }
+        ],
+        "slack": [
+          {
+            "denominator": "1",
+            "numerator": "4"
+          },
+          {
+            "denominator": "1",
+            "numerator": "2"
+          },
+          {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        ],
+        "weighted_slack": {
+          "denominator": "1",
+          "numerator": "14"
+        }
+      },
+      {
+        "alpha": {
+          "denominator": "32",
+          "numerator": "1"
+        },
+        "capacity": [
+          {
+            "denominator": "1",
+            "numerator": "32"
+          },
+          {
+            "denominator": "1",
+            "numerator": "16"
+          },
+          {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        ],
+        "response": [
+          {
+            "denominator": "1",
+            "numerator": "32"
+          },
+          {
+            "denominator": "1",
+            "numerator": "12"
+          },
+          {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        ],
+        "slack": [
+          {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          {
+            "denominator": "1",
+            "numerator": "4"
+          },
+          {
+            "denominator": "1",
+            "numerator": "0"
+          }
+        ],
+        "weighted_slack": {
+          "denominator": "1",
+          "numerator": "12"
+        }
+      }
+    ],
+    "current_response": [
+      {
+        "denominator": "1",
+        "numerator": "5"
+      },
+      {
+        "denominator": "1",
+        "numerator": "6"
+      },
+      {
+        "denominator": "1",
+        "numerator": "4"
+      }
+    ],
+    "dimension": 3,
+    "final_response": [
+      {
+        "denominator": "4",
+        "numerator": "27"
+      },
+      {
+        "denominator": "4",
+        "numerator": "29"
+      },
+      {
+        "denominator": "1",
+        "numerator": "5"
+      }
+    ],
+    "final_slack": [
+      {
+        "denominator": "4",
+        "numerator": "13"
+      },
+      {
+        "denominator": "4",
+        "numerator": "19"
+      },
+      {
+        "denominator": "1",
+        "numerator": "4"
+      }
+    ],
+    "final_weighted_slack": {
+      "denominator": "4",
+      "numerator": "163"
+    },
+    "omega": [
+      {
+        "denominator": "1",
+        "numerator": "10"
+      },
+      {
+        "denominator": "1",
+        "numerator": "12"
+      },
+      {
+        "denominator": "1",
+        "numerator": "9"
+      }
+    ],
+    "root_slack": [
+      {
+        "denominator": "1",
+        "numerator": "3"
+      },
+      {
+        "denominator": "2",
+        "numerator": "9"
+      },
+      {
+        "denominator": "1",
+        "numerator": "4"
+      }
+    ],
+    "root_weighted_slack": {
+      "denominator": "2",
+      "numerator": "79"
+    },
+    "total_child_alpha": {
+      "denominator": "32",
+      "numerator": "3"
+    },
+    "verdict": "PASS_EXACT_NATIVE_SLACK_COCYCLE",
+    "y4": [
+      {
+        "denominator": "1",
+        "numerator": "2"
+      },
+      {
+        "denominator": "1",
+        "numerator": "3"
+      },
+      {
+        "denominator": "1",
+        "numerator": "5"
+      }
+    ]
+  },
+  "subcritical_recurrence": {
+    "closed_values": [
+      {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      {
+        "denominator": "1",
+        "numerator": "5"
+      },
+      {
+        "denominator": "32",
+        "numerator": "271"
+      },
+      {
+        "denominator": "1024",
+        "numerator": "12077"
+      },
+      {
+        "denominator": "32768",
+        "numerator": "494983"
+      },
+      {
+        "denominator": "1048576",
+        "numerator": "19310741"
+      },
+      {
+        "denominator": "33554432",
+        "numerator": "729020863"
+      },
+      {
+        "denominator": "1073741824",
+        "numerator": "26883124541"
+      },
+      {
+        "denominator": "34359738368",
+        "numerator": "974002571191"
+      }
+    ],
+    "depth": 8,
+    "final_envelope": {
+      "denominator": "29",
+      "numerator": "832"
+    },
+    "local_constant": {
+      "denominator": "1",
+      "numerator": "2"
+    },
+    "local_slope": {
+      "denominator": "1",
+      "numerator": "3"
+    },
+    "rho": {
+      "denominator": "32",
+      "numerator": "3"
+    },
+    "values": [
+      {
+        "denominator": "1",
+        "numerator": "0"
+      },
+      {
+        "denominator": "1",
+        "numerator": "5"
+      },
+      {
+        "denominator": "32",
+        "numerator": "271"
+      },
+      {
+        "denominator": "1024",
+        "numerator": "12077"
+      },
+      {
+        "denominator": "32768",
+        "numerator": "494983"
+      },
+      {
+        "denominator": "1048576",
+        "numerator": "19310741"
+      },
+      {
+        "denominator": "33554432",
+        "numerator": "729020863"
+      },
+      {
+        "denominator": "1073741824",
+        "numerator": "26883124541"
+      },
+      {
+        "denominator": "34359738368",
+        "numerator": "974002571191"
+      }
+    ],
+    "verdict": "PASS_SUBCRITICAL_LOGARITHMIC_ENVELOPE_ANALOGUE"
+  },
+  "verdict": "PASS_THREE_ROUTE_NATIVE_SLACK_PACKET"
+}
