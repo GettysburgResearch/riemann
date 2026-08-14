@@ -5,9 +5,9 @@ Status: **PROVED EXACT NORMALIZATION / SOURCE-TREE THEOREM ON FROZEN ROW-MONOTON
 Created: 2026-08-14  
 Supersedes for root normalization: `L-91330`'s two-channel row conclusion and
 the false row identification in `L-91668`  
-Primary inputs: the parameter-`a` source recursion of `L-91333`, the normalized
-component-row monotonicity of `L-91322/L-91330`, and the exact parent
-target/score/row normalization of `L-91556`  
+Primary inputs: the parameter-`a` source recursion of `L-91333`, the directed
+`a=1` endpoint gate of `L-91322`, and the exact parent target/score/row
+normalization of `L-91556`  
 RH status: **unproved**
 
 ## 1. One typed source atom
@@ -99,9 +99,50 @@ Define the single SHARP normalized row profile
 \tag{L-91670.8}
 \]
 
-The normalized component-row theorem proves that
-`\mathcal Q_{j,4/3}` is nondecreasing in `Y`; hence the same is true of
-`\mathcal H_{\Psi,j}`.
+The required monotonicity is retained here explicitly. On an activation cell
+`N<=Y<N+1`, write
+
+\[
+Q_Y(j)=C_{j,N}\log Y-D_{j,N},
+\qquad C_{j,N}>0.
+\tag{L-91670.9}
+\]
+
+For `a>=1`, set
+
+\[
+\mathcal Q_{j,a}(Y)=\frac{Q_Y(j)}{a\sqrt Y-1}.
+\]
+
+Direct differentiation gives
+
+\[
+2Y(a\sqrt Y-1)^2\mathcal Q_{j,a}'(Y)
+=M_a(Y),
+\]
+
+\[
+M_a(Y)=a\sqrt Y[2C_{j,N}-Q_Y(j)]-2C_{j,N},
+\qquad
+M_a'(Y)=-\frac{aQ_Y(j)}{2\sqrt Y}\le0.
+\tag{L-91670.10}
+\]
+
+The directed endpoint theorem `L-91322` gives `M_1>1/20` at every right cell
+endpoint. It follows that `2C_(j,N)-Q_Y(j)>0`, and hence
+
+\[
+M_a(Y)
+=
+M_1(Y)+(a-1)\sqrt Y[2C_{j,N}-Q_Y(j)]
+>M_1(Y)>1/20.
+\tag{L-91670.11}
+\]
+
+Thus `\mathcal Q_(j,a)` is strictly increasing for every `a>=1`, in particular
+for `a=4/3`; therefore `\mathcal H_(Psi,j)=\mathcal Q_(j,4/3)/3` is strictly
+increasing as well. This imports only the directed `a=1` endpoint gate of
+`L-91322`, not the false two-channel row conclusion of `L-91330`.
 
 Atomwise,
 
@@ -111,7 +152,7 @@ t_X(n)\mathcal H_{\Psi,j}(X/n)
 =
 \frac1{\sqrt n}Q_{X/n}(j).
 }
-\tag{L-91670.9}
+\tag{L-91670.12}
 \]
 
 After the parity observation, `(-1)^{\omega(n)}=\mu(n)`, the signed row is
@@ -120,14 +161,14 @@ After the parity observation, `(-1)^{\omega(n)}=\mu(n)`, the signed row is
 \boxed{
 \frac{\mu(n)}{\sqrt n}Q_{X/n}(j).
 }
-\tag{L-91670.10}
+\tag{L-91670.13}
 \]
 
 Thus the complete fixed-endpoint observation is exactly one copy of
 
 \[
 c_X(j)=\sum_{n\le X}\frac{\mu(n)}{\sqrt n}Q_{X/n}(j).
-\tag{L-91670.11}
+\tag{L-91670.14}
 \]
 
 The old factor-three overcount is absent.
@@ -139,7 +180,7 @@ The target-per-row-budgeted-score ratio is
 \[
 q_\Psi(z)=\frac{4z-3}{5z-3},
 \qquad z=\sqrt Y\ge1.
-\tag{L-91670.12}
+\tag{L-91670.15}
 \]
 
 Its derivative is
@@ -148,7 +189,7 @@ Its derivative is
 \boxed{
 q_\Psi'(z)=\frac3{(5z-3)^2}>0.
 }
-\tag{L-91670.13}
+\tag{L-91670.16}
 \]
 
 Consequently every no-upward Hall edge is score-superordinate in the same
@@ -162,7 +203,7 @@ The triple
 =
 (4\sqrt Y-3,\ 5\sqrt Y-3,\ Q_Y)
 }
-\tag{L-91670.14}
+\tag{L-91670.17}
 \]
 
 is exactly the native parent triple consumed by `L-91556/L-91560`. Therefore no
@@ -176,11 +217,11 @@ For a no-upward edge `e<=o`, one has `X/e>=X/o` and hence
 \mathcal H_{\Psi,j}(X/e)
 -
 \mathcal H_{\Psi,j}(X/o)\ge0.
-\tag{L-91670.15}
+\tag{L-91670.18}
 \]
 
 The target Hall transport therefore lifts to every component row, while
-(L-91670.13) gives score superordination. Matched edges produce nonnegative
+(L-91670.16) gives score superordination. Matched edges produce nonnegative
 target-null row bonuses; unmatched even masses remain positive source measures.
 
 This statement is stable under finite or countable source-disjoint sums and
@@ -199,7 +240,7 @@ The following operation is forbidden:
 \]
 
 Its left side is three times the right side. The only load-bearing root
-normalization in the successor proposal is (L-91670.8)--(L-91670.10).
+normalization in the successor proposal is (L-91670.8)--(L-91670.14).
 
 ```text
 single SHARP source positivity                    EXACT
