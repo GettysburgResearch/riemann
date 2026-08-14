@@ -1,0 +1,98 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/91685-hall-free-raw-residual",
+    "pr": 469,
+    "sha": "3cf685181bd367b92cdcfeef9249e0b9b542a09e"
+  },
+  "binding_nonclaims": [
+    "does not prove common row gain",
+    "does not prove positive native entry",
+    "does not prove Y4 slack",
+    "does not prove RH"
+  ],
+  "claim": "T-91659",
+  "created": "2026-08-14",
+  "frozen_blobs": [
+    {
+      "blob": "270333b3587f691aafb26d62e6e29f4c37e3eff5",
+      "claim": "L-91674",
+      "commit": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+      "path": "claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md"
+    },
+    {
+      "blob": "87179be63afacad808b7def50f507ee542062018",
+      "claim": "L-91684",
+      "commit": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+      "path": "claims/lemmas/L-91684-target-lorenz-producer-and-single-row-gate.md"
+    },
+    {
+      "blob": "64a05d49643d461febd164b173b7896bcf3516aa",
+      "claim": "L-91377",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/lemmas/L-91377-full-mobius-row-has-the-exact-native-capacity-and-benchmark.md"
+    },
+    {
+      "blob": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d",
+      "claim": "L-91378",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md"
+    },
+    {
+      "blob": "1f8c3bdac1a33454685960e05d8f8b062503d81c",
+      "claim": "L-91379",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/lemmas/L-91379-finite-euler-row-is-the-native-row-plus-an-exact-rough-reservoir.md"
+    },
+    {
+      "blob": "6398026e281b14a1da39de2eb0a119ac583dae27",
+      "claim": "T-91314",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/theorems/T-91314-native-root-capacity-theorem-is-the-single-remaining-producer.md"
+    },
+    {
+      "blob": "7183aa2dea12e786b3e2feff0514b83ecb8a333d",
+      "claim": "L-91685",
+      "commit": "3cf685181bd367b92cdcfeef9249e0b9b542a09e",
+      "path": "claims/lemmas/L-91685-complete-p61-raw-residual-is-a-hall-free-stopped-leaf-generator.md"
+    },
+    {
+      "blob": "fa1154413cba99e17a352be794ad92f88523c48b",
+      "claim": "L-91364",
+      "commit": "e2c97d5902bcc5c94d0b6f2f7de0756b84ce6cad",
+      "path": "claims/lemmas/L-91364-canonical-p61-finite-euler-row-is-globally-nonnegative.md"
+    },
+    {
+      "blob": "77c4fb77ced7833fa1c1e2e8535156490f2ad64e",
+      "claim": "L-91415",
+      "commit": "9aeccd55779689d3ee105d16a0caf6f600ff1ea2",
+      "path": "claims/lemmas/L-91415-lorenz-fraction-cancels-to-a-prefix-determinant.md"
+    },
+    {
+      "blob": "2894d0a1135d91af532f3476e1f3f6f9e4e636b7",
+      "claim": "L-91416",
+      "commit": "9aeccd55779689d3ee105d16a0caf6f600ff1ea2",
+      "path": "claims/lemmas/L-91416-pointwise-cutoff-minors-are-nonnegative.md"
+    },
+    {
+      "blob": "3ba62d4cb47fcbfe454cb1995e9b36239312496d",
+      "claim": "L-91419",
+      "commit": "9aeccd55779689d3ee105d16a0caf6f600ff1ea2",
+      "path": "claims/lemmas/L-91419-joint-coalesced-flow-repairs-the-hostile-stopped-leaf.md"
+    }
+  ],
+  "frozen_external_heads": {
+    "pr464": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+    "pr467": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+    "pr468": "a41f81466f85d52597c97b41505756a8860698d0",
+    "pr469": "3cf685181bd367b92cdcfeef9249e0b9b542a09e"
+  },
+  "new_claims": [
+    "R-91686",
+    "L-91686",
+    "L-91687",
+    "L-91688",
+    "L-91689",
+    "T-91659"
+  ],
+  "status": "conditional-synthesis-not-rh-proof"
+}
