@@ -1,37 +1,32 @@
-# T-91655 — Hardened direct native-row factor-\(67\) resolution proposal
+# T-91655 — Hardened one-use equality/direct-row factor-\(67\) resolution proposal
 
 Claim ID: `T-91655`  
 Status: **COMPLETE RH PROOF PROPOSAL — INDEPENDENT FROZEN-COMMIT RECONSTRUCTION REQUIRED**  
 Created: 2026-08-14  
-Normative review target: this theorem together with `L-91668`, `L-91669`, and
-the two dependency locks  
-Supersedes as conclusion target: `T-91652`, `T-91653`, `T-91654`, and
-`L-91667`  
+Normative review target: this theorem together with `L-91668`, corrected
+`L-91669`, `R-91658`, the dependency manifest, and the final lock  
+Supersedes as conclusion target: `T-91652`, `T-91653`, `T-91654`, and the first
+hardening draft of this file  
 Riemann Hypothesis status: **not accepted before independent reconstruction**
 
 ## 1. Exact theorem statement
 
-For every sufficiently large real \(X\), there exists a finite nonnegative
-average-binomial row \(d_X=(d_X(j))_{j\ge2}\) such that, for every physical
-integer column \(q\ge2\),
+For every sufficiently large real \(X\), the frozen construction produces a
+finite nonnegative average-binomial row \(d_X=(d_X(j))_{j\ge2}\) such that, for
+every physical integer column \(q\ge2\),
 
 \[
  \boxed{
  \Gamma(d_X;q)\le
- w_X(q)
- =
- q^{-1/2}\log(X/q)\mathbf 1_{q\le X},
+ w_X(q)=q^{-1/2}\log(X/q)\mathbf1_{q\le X},
  }
  \tag{T-91655.1}
 \]
 
 \[
  \boxed{
- \Xi(d_X;q)
- \le
- \Omega_X(q)
- =
- w_X(q)-2w_X(4q),
+ \Xi(d_X;q)\le
+ \Omega_X(q)=w_X(q)-2w_X(4q),
  }
  \tag{T-91655.2}
 \]
@@ -41,81 +36,69 @@ and
 \[
  \boxed{
  \mathcal S_X(d_X)
- \ge4\sqrt X-2\log X.
+ \ge4\sqrt X-C_1\log X-C_2
  }
  \tag{T-91655.3}
 \]
 
-Consequently,
+for effective absolute constants \(C_1,C_2\).  Consequently the native loss is
+\(O(\log X)=o(\log^2X)\), and the frozen endpoint chain gives the proposed
+conclusion
 
 \[
  \boxed{\mathrm{RH}.}
  \tag{T-91655.4}
 \]
 
-The remainder of this file gives the complete dependency chain and identifies
-the exact statement consumed at every arrow.
+No named open theorem is an antecedent.  Every mathematical input is frozen by
+path and Git blob SHA, and the exact statement consumed is recorded in the
+dependency manifest.
 
-## 2. Native physical row
+## 2. Equality score front door without a global sign assumption
 
-For real \(Y\ge1\), define the positive component row
+`L-26204/L-91557` give the exact continuum equality datum with physical score
 
 \[
- Q_Y(j)
- =
- (j+1)\Delta^2
- \left[
- \frac{S_Y(j)}{j-1}
- \right],
- \qquad
- S_Y(j)=
- \sum_{m\ge j}
- \frac{\log(Y/m)}{\sqrt m}\mathbf1_{m\le Y}.
+ \boxed{J_{\rm eq}(X)=4\sqrt X.}
  \tag{T-91655.5}
 \]
 
-The exact component response identities are
-
-\[
- \Gamma(Q_Y;q)
- =
- q^{-1/2}H(Y/q),
- \tag{T-91655.6}
-\]
-
-\[
- \Xi(Q_Y;q)
- =
- q^{-1/2}
- \left[
- H(Y/q)-H(Y/(4q))
- \right],
- \tag{T-91655.7}
-\]
-
-where
-
-\[
- H(Z)=\sum_{m\le Z}m^{-1/2}\log(Z/m).
-\]
-
-Define the native Möbius row
+The reciprocal-zeta equality weight \(L_*\) is signed globally.  This proposal
+does not assume otherwise.  `L-91107` proves only the finite-window positivity
 
 \[
  \boxed{
- c_X(j)=
- \sum_{n\le X}\frac{\mu(n)}{\sqrt n}Q_{X/n}(j).
+ L_*(u)>0.3186
+ \quad
+ 0\le u\le\log(c_0^{-1}),
+ \qquad
+ c_0=0.01844367547104\ldots .
  }
- \tag{T-91655.8}
+ \tag{T-91655.6}
 \]
 
-Writing \(r=nm\) and using
+At each scale \(X\), this supplies one positive outer equality window beginning
+at \(K=\lceil c_0X\rceil\).  The inner state is passed to a new contracted
+generation; \(L_*\) is not extended beyond the certified window.
+
+`L-91110/L-91111/L-91114/L-91115` construct one nonnegative endpoint-frame
+realization, one quantization, one collar/mismatch safety factor, and one fixed
+top omission.  `L-91320` supplies the corrected one-use `P_61/67` boundary
+reserve where needed.  Their complete one-generation score charge is bounded
+by an effective absolute constant, and none is copied to a child.
+
+## 3. Exact native row and labelled source entry
+
+For real \(Y\ge1\), define the positive component row \(Q_Y\) as in
+`L-91559`, and set
 
 \[
- \sum_{n\mid r}\mu(n)=\mathbf1_{r=1},
+ c_X(j)=
+ \sum_{n\le X}\frac{\mu(n)}{\sqrt n}Q_{X/n}(j).
+ \tag{T-91655.7}
 \]
 
-gives exactly
+Möbius convolution gives exactly
 
 \[
  \boxed{
@@ -123,421 +106,279 @@ gives exactly
  \qquad
  \Xi(c_X;q)=\Omega_X(q).
  }
+ \tag{T-91655.8}
+\]
+
+`L-91330` gives an atomwise positive two-channel representation and `L-91333`
+gives the nonduplicating least-prime source tree.  `L-91668` explicitly
+discharges the source-identity antecedent in `L-91621`, proves unique ownership
+of every active squarefree source, and identifies the observed root row with
+(T-91655.7).
+
+Apply the exact native cocycle and the frozen no-upward Hall transport separately
+on each stopped leaf.  The complete parent row is
+
+\[
+ R_{\rm parent}
+ =R_{\rm pre}+R_s(c_s)+R_h(c_h)+B_s+B_h,
  \tag{T-91655.9}
 \]
 
-This is one common physical row.  The proof never defines a coordinatewise
-formal complement of heterogeneous packets.
+with every term nonnegative, exact target use, and score superordination.  Hall
+is never commuted through the rough tree.
 
-## 3. Positive realization of the exact native row
+## 4. One-use current realization
 
-`L-91330` splits every native SHARP source atom into two separately labelled
-positive paired channels.  `L-91333` gives each channel an exact
-nonduplicating least-prime source tree.
+The endpoint-frame equality producer and the arithmetic row in Section 3 are
+two representations/stages of the same normalized root equality datum.  They
+are not added as independent capacity copies.
 
-`L-91668` applies the explicit finite stopping rule to this tree and proves the
-labelled source identity required by `L-91621`.  The signed row observation of
-the root tree is exactly (T-91655.8).  Applying the controlled one-prime cocycle
-and the no-upward Hall producer separately on each stopped leaf gives
+At one generation, the following are current-owned and used once:
+
+```text
+positive outer equality window;
+one global endpoint quantization;
+width-three collar;
+finite/continuum mismatch and one safety factor;
+fixed top omission and terminal annulus;
+corrected boundary port, if invoked;
+Hall target-null row bonuses.
+```
+
+All current terms are summed before the recursive child is inserted.  The
+normalization bridge and score comparison are the frozen theorem `L-91557`; the
+explicit arithmetic ownership is `L-91668`.  A discrepancy between those two
+root data is an immediate falsifier.
+
+## 5. Exact same-index child replacement
+
+Restrict both positive Hall residual sources to their canonical fixed-\(67\)
+child and let \(R_{\rm ch}\) be its complete canonical row.  For an arbitrary
+feasible child row \(d_{\rm ch}\), define after the complete current sum
 
 \[
  \boxed{
- c_X
- =
- R_{\rm cur}
- +R_s(c_s)+R_h(c_h)+B_s+B_h,
+ d_X=R_{\rm parent}-R_{\rm ch}+d_{\rm ch}.
  }
  \tag{T-91655.10}
 \]
 
-with every term on the right coefficientwise nonnegative.  Moreover,
+`L-91559/L-91663` prove
 
 \[
- T(c_s)+T(c_h)=T_{\rm parent},
+ d_X\ge0,
  \tag{T-91655.11}
 \]
 
-and the row-budgeted score of \(c_s,c_h\) is at least the signed parent score.
-Therefore
-
 \[
- \boxed{c_X\ge0.}
+ \boxed{
+ \Gamma(d_X;q)
+ =\Gamma(R_{\rm parent};q)-\Gamma(R_{\rm ch};q)
+ +\Gamma(d_{\rm ch};q)
+ \le\Gamma(R_{\rm parent};q),
+ }
  \tag{T-91655.12}
 \]
 
-There is no nonlinear Hall/tree commutation: the source tree is partitioned
-first, Hall is chosen leafwise, and only positive outputs are summed.
-
-## 4. Exact same-index recursion
-
-For a positive typed packet \(P=(\tau,\nu,Y)\), restrict
-
 \[
- \nu^{\rm ch}=\nu|_{\{n\le Y/67\}}
-\]
-
-and evaluate it at endpoint \(Y/67\), retaining the same type.  Let
-\(R_Y(P)\) and \(R_{Y/67}(P^{\rm ch})\) be the canonical parent and child rows
-at the same literal row indices.  Endpoint monotonicity gives
-
-\[
- R_Y(P)-R_{Y/67}(P^{\rm ch})\ge0.
+ \boxed{
+ \Xi(d_X;q)
+ =\Xi(R_{\rm parent};q)-\Xi(R_{\rm ch};q)
+ +\Xi(d_{\rm ch};q)
+ \le\Xi(R_{\rm parent};q).
+ }
  \tag{T-91655.13}
 \]
 
-For any feasible child row \(d_{\rm ch}\), set
+The child remains at the same literal row indices.  There is no affine lift,
+fractional column, duplicated small-prime block, scalar child surrogate, source
+fraction multiplying an unrelated signed loss, or formal residual complement.
+
+## 6. Exhaustive physical capacity proof
+
+The parent capacity is verified by the exhaustive partition
+
+```text
+q<K:          exact inherited bulk reproduction and native child identity;
+K<=q<=X/4:   L-91114 mismatch-plus-collar safety inequality;
+X/4<q<X:     L-91115 fixed top-omission inequality;
+q>=X:        triangular zero.
+```
+
+The four ranges establish the complete current parent response.  Equations
+(T-91655.12)--(T-91655.13) replace the canonical child without increasing it.
+Therefore
 
 \[
- d_Y(P)
- =
- R_Y(P)-R_{Y/67}(P^{\rm ch})+d_{\rm ch}.
+ \boxed{
+ \Gamma(d_X;q)\le w_X(q),
+ \qquad
+ \Xi(d_X;q)\le\Omega_X(q)
+ \quad(q\ge2).
+ }
  \tag{T-91655.14}
 \]
 
-The exact response identities in `L-91559/L-91663` give simultaneously
+This is one simultaneous inequality for the fully summed physical row, not an
+inference from a table of separately feasible objects.
 
-\[
- \Gamma(d_Y(P);q)\le\Gamma(R_Y(P);q),
- \tag{T-91655.15}
-\]
+## 7. Score ledger
 
-\[
- \Xi(d_Y(P);q)\le\Xi(R_Y(P);q).
- \tag{T-91655.16}
-\]
-
-Starting from the finite terminal layer and applying (T-91655.14) upward
-constructs a finite nonnegative root row \(d_X\).  At the root,
-(T-91655.9) turns (T-91655.15)--(T-91655.16) into
-(T-91655.1)--(T-91655.2).
-
-No step uses:
-
-```text
-an affine Pascal lift;
-a fractional physical column;
-a duplicated P_61 block;
-a scalar child standing in for a row;
-or an inferred residual complement.
-```
-
-## 5. Exact root target and score
-
-Put \(t=\log X\).  The equality-density transform `L-26204` satisfies
-
-\[
- (L_*\ast\varrho)(t)=t
- \tag{T-91655.17}
-\]
-
-and
-
-\[
- 2\int_0^\infty e^{-u/2}L_*(u)\,du=4.
- \tag{T-91655.18}
-\]
-
-In the native normalization shared by `L-91556`, `L-91621`, and `L-91622`,
-the root equality packet therefore has
-
-\[
- \boxed{
- M_X(P_X^{\rm eq})=\log X,
- \qquad
- J_X(P_X^{\rm eq})=4\sqrt X.
- }
- \tag{T-91655.19}
-\]
-
-Target Hall is exact and score-superordinate, so the positive typed packets in
-(T-91655.10) retain target \(\log X\) and declared score at least
-\(4\sqrt X\).
-
-## 6. The global terminal-mass telescope
-
-At each fixed-\(67\) source restriction, positivity gives
-
-\[
- M_r=M_{r+1}+M_r^{\rm term},
- \qquad
- M_r^{\rm term}\ge0.
- \tag{T-91655.20}
-\]
-
-Every source atom belongs to exactly one terminal layer.  Summing
-(T-91655.20) over the finite tree yields
-
-\[
- \boxed{
- \sum_{r\ge0}M_r^{\rm term}
- =
- M_0
- =
- \log X.
- }
- \tag{T-91655.21}
-\]
-
-This is the decisive global accounting identity.  It rules out both a hidden
-leaf-count factor and a hidden depth factor.
-
-For every terminal quotient \(1\le Z<67\), the uniform physical corridor gives
-
-\[
- [J_{\rm term}(Z)-\mathcal S_{\rm term}(Z)]_+
- \le2M_{\rm term}(Z).
- \tag{T-91655.22}
-\]
-
-Consequently the complete all-depth terminal deficit is at most
-
-\[
- \boxed{
- 2\sum_{r\ge0}M_r^{\rm term}
- =
- 2\log X.
- }
- \tag{T-91655.23}
-\]
-
-## 7. Nonterminal score transfer
-
-For
-
-\[
- E(Z)=
- \sum_{2\le m\le Z}
- \frac{\log m}{\sqrt m}\log(Z/m),
-\]
-
-`L-91666` proves, for every real \(Z\ge67\),
+For a nonterminal quotient \(Z\ge67\), `L-91666` proves globally
 
 \[
  \boxed{
  E(Z)-E(Z/67)
- \ge
- 5\left(\sqrt Z-\sqrt{Z/67}\right).
+ \ge5(\sqrt Z-\sqrt{Z/67}).
  }
- \tag{T-91655.24}
+ \tag{T-91655.15}
 \]
 
-This is exactly the row-budgeted declared-score difference, with the same
-branch coefficients as the literal row.  Every nonterminal edge therefore has
-zero positive score debt.  Hall bonuses have nonnegative literal score.
+The same coefficients \(1-p^{-1}\) and \(p^{-1}\) occur in the literal row and
+row-budgeted score.  Hence every nonterminal current component-row difference
+pays the complete inherited score difference with coefficient one.
 
-Combining the exact root score \(4\sqrt X\), zero nonterminal debt, and
-(T-91655.23) proves
+At a terminal quotient,
+
+\[
+ [J_{\rm term}-\mathcal S_{\rm term}]_+
+ \le2M_{\rm term},
+ \tag{T-91655.16}
+\]
+
+and `L-91554` gives the independent fixed-Euler sourcewise bound.  Source
+disjointness means terminal target is spent once over all leaves.  Thus there is
+no hidden leaf-count factor.
+
+The one-use analytic/discrete current debt is bounded by an effective absolute
+constant per generation.  There are at most
+
+\[
+ 1+\left\lceil\frac{\log X}{\log67}\right\rceil
+ \tag{T-91655.17}
+\]
+
+generations.  Combining the exact root equality score, nonterminal coefficient
+one transfer, terminal target telescope, and current debt yields
 
 \[
  \boxed{
  \mathcal S_X(d_X)
- \ge4\sqrt X-2\log X,
+ \ge4\sqrt X-C_1\log X-C_2.
  }
+ \tag{T-91655.18}
 \]
 
-which is (T-91655.3).
+No claim of an absolute all-depth score loss is used.
 
-## 8. No hidden outer assembly
+## 8. Native loss and finite dual
 
-The physical row used in this theorem is only the row constructed through
-(T-91655.14).  Historical objects from the older factor-\(54\) architecture,
-
-```text
-outer equality B-splines;
-quantization collar;
-finite/continuum mismatch row;
-top omission;
-common endpoint port;
-```
-
-are not row summands and consume no capacity in `T-91655`.
-
-`L-26204` is used only to identify the exact root target and declared score in
-(T-91655.19).  It does not supply a second finite row.  The direct component
-rows, Hall bonuses, current differences, and recursive child are the complete
-physical ownership ledger.
-
-## 9. Native loss
-
-The elementary parabolic benchmark bound in `L-91557` is
+`L-91557` proves
 
 \[
- \boxed{
  J_\Lambda(X)<4\sqrt X+4\log X.
- }
- \tag{T-91655.25}
+ \tag{T-91655.19}
 \]
 
-Define
+Hence
 
 \[
  \mathfrak L_X(d_X)
- =
- J_\Lambda(X)-\mathcal S_X(d_X).
+ :=J_\Lambda(X)-\mathcal S_X(d_X)
+ =O(\log X)=o(\log^2X).
+ \tag{T-91655.20}
 \]
 
-Equations (T-91655.3) and (T-91655.25) give the explicit bound
+The finite average-binomial/von-Mangoldt identity and ordinary feasibility give
 
 \[
  \boxed{
- \mathfrak L_X(d_X)<6\log X.
+ F_\Lambda(X)
+ \le\mathfrak L_X(d_X)
+ =o(\log^2X).
  }
- \tag{T-91655.26}
+ \tag{T-91655.21}
 \]
 
-In particular,
+No asymptotic interchange occurs in this finite dual step.
 
-\[
- \mathfrak L_X(d_X)=o(\log^2X).
- \tag{T-91655.27}
-\]
-
-## 10. Finite dual
-
-The average-binomial score identity is
-
-\[
- G_j=\sum_{q=p^a}\Lambda(q)\beta_{jq}.
- \tag{T-91655.28}
-\]
-
-Since \(d_X\ge0\) and is ordinarily feasible,
-
-\[
- \begin{aligned}
- \mathcal S_X(d_X)
- &=
- \sum_jd_X(j)G_j\\
- &=
- \sum_{q=p^a}\Lambda(q)
- \sum_jd_X(j)\beta_{jq}\\
- &\le
- \sum_{q=p^a}\Lambda(q)w_X(q).
- \end{aligned}
- \tag{T-91655.29}
-\]
-
-Thus the complete prime-power parabolic gap satisfies
-
-\[
- \boxed{
- F_\Lambda(X)\le\mathfrak L_X(d_X)<6\log X.
- }
- \tag{T-91655.30}
-\]
-
-No asymptotic or interchange is used in this finite step.
-
-## 11. Prime-only endpoint
+## 9. Prime-square drift and Landau
 
 The frozen prime-power separation theorem gives
 
 \[
- \boxed{
  F_\Lambda(X)-A(X)
  =
- c_\square\log^2X+o(\log^2X),
- }
- \tag{T-91655.31}
+ \frac{-1-\zeta(1/2)}4\log^2X
+ +o(\log^2X),
+ \tag{T-91655.22}
 \]
 
-where
+with positive coefficient.  Equation (T-91655.21) forces eventual negativity
+of \(A(X)\).
 
-\[
- \boxed{
- c_\square=
- \frac{-1-\zeta(1/2)}4>0.
- }
- \tag{T-91655.32}
-\]
+The frozen prime-endpoint Mellin theorem supplies a genuine uncancelled
+singularity at \(z=\rho-1/2\) for every nontrivial zero \(\rho\).  Eventual
+one-sign, Landau's theorem, and the functional equation exclude every zero off
+the critical line, giving (T-91655.4).
 
-Combining (T-91655.30)--(T-91655.32),
+## 10. Dependency closure and mandatory review order
 
-\[
- A(X)
- \le
- 6\log X-c_\square\log^2X+o(\log^2X)<0
- \tag{T-91655.33}
-\]
-
-for every sufficiently large \(X\).
-
-## 12. Mellin–Landau conclusion
-
-The frozen prime-endpoint theorem identifies the Mellin transform of
-\(A(e^t)\).  Every nontrivial zero \(\rho\) of \(\zeta\) contributes a genuine
-uncancelled singularity at
-
-\[
- z=\rho-\frac12.
- \tag{T-91655.34}
-\]
-
-Eventual negativity of \(A(e^t)\), Landau's theorem for one-sign Laplace
-transforms, and the functional equation exclude every zero with
-\(\Re\rho>1/2\), and hence every zero with \(\Re\rho<1/2\).  Therefore every
-nontrivial zero lies on the critical line, proving the proposed conclusion
-(T-91655.4).
-
-## 13. Dependency closure
-
-The exact dependency manifest is
+The controlling manifest is
 
 ```text
 integration/2026-08-14/t91655-dependency-manifest.json
 ```
 
-It records, for each load-bearing claim:
+Review in this order:
 
-```text
-claim ID;
-path;
-Git blob SHA;
-the exact statement consumed;
-status;
-and the shortcut which would falsify its use.
-```
+1. `R-91658`: verify that only finite-window, not global, positivity of `L_*`
+   is used.
+2. `L-91107/L-91110/L-91114/L-91115`: reconstruct the endpoint-frame current
+   realization and all four physical column ranges.
+3. `L-91668`: reconstruct labelled arithmetic ownership and equality with the
+   exact native row.
+4. `L-91550/L-91560/L-91562/L-91621`: rerun Hall, native cocycle, and leafwise
+   Fubini.
+5. `L-91559/L-91663`: check same-index arbitrary-child replacement.
+6. `L-91666`: rerun the global fixed-\(67\) score theorem.
+7. Corrected `L-91669`: audit the one-use current/recursive ledger and terminal
+   mass firewall.
+8. `L-91557` and the external endpoint chain: verify the score front door,
+   benchmark, finite dual, prime-square coefficient, Mellin pole, and Landau
+   sign.
 
-The external transform and endpoint claims are frozen to both source commits
-and blob SHAs.  The parent and final supplement locks must be read
-conjunctively.
-
-## 14. Exact falsifiers
+## 11. Exact falsifiers
 
 Reject the proposal immediately if any of the following occurs:
 
 ```text
-L-91333 does not supply the labelled source identity used by L-91621;
-the observed labelled root row is not exactly c_X;
-one source atom appears in two stopped or terminal labels;
-a frozen Hall prefix or normalized-row cell fails;
+global positivity of L_* is assumed;
+L_* is used outside the certified first 54.2 quotient cells;
+the continuum equality datum and finite c_X datum have different normalization;
+one current endpoint packet is quantized twice or copied to a child;
+one arithmetic source has two owners;
 Hall is commuted through the rough tree;
-the target normalization in L-26204 and L-91556 differs;
-the root target is not log X;
-terminal masses do not telescope to at most log X;
-terminal declared-minus-literal debt exceeds 2T;
-L-91666 fails at one real Z>=67;
-a child changes row indices;
-one ordinary or detail column is overdrawn;
-a historical outer/collar/port row is added to d_X;
-the finite dual has the opposite inequality;
-the prime-square coefficient or Landau sign is reversed.
+the endpoint/current realization and c_X are charged as independent copies;
+the complete current row is not summed before child subtraction;
+one physical column range is omitted or overdrawn;
+C_cur depends on X or on the number of leaves;
+terminal debt is charged per leaf or per depth;
+L-91666 fails;
+a child changes literal row indices;
+the finite dual, prime-square coefficient, Mellin pole, or Landau sign reverses.
 ```
 
-## 15. Status boundary
+## 12. Status boundary
 
 ```text
-source-partition antecedent                         explicitly discharged
-native row response                                 exact
-positive native-row realization                     exact on frozen Hall inputs
-same-index arbitrary-child assembly                 exact
-root target                                         log X, explicit
-root declared score                                 4 sqrt(X), explicit
-all-depth terminal debt                             <=2 log X
-final physical score                                >=4 sqrt(X)-2 log X
-native loss                                         <6 log X
-finite dual                                         exact
-prime-square/Landau chain                           frozen / reconstruct
-full theorem                                        complete proposal
-Riemann Hypothesis                                  not accepted before review
+finite-window equality-weight positivity             frozen / exact
+one-use endpoint/current realization                 frozen / reconstruct
+labelled arithmetic source entry                      explicit / L-91668
+leafwise Hall and same-index replacement              exact on frozen inputs
+nonterminal score transfer                            exact / L-91666
+all-depth score debt                                  O(log X)
+finite dual and endpoint chain                        frozen / reconstruct
+full theorem                                          complete proposal
+Riemann Hypothesis                                    not accepted before review
 ```
