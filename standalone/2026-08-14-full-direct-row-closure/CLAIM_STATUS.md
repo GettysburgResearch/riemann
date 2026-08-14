@@ -1,48 +1,52 @@
-# `SPP-91666` claim status
+# `T-91656` final claim status
 
-This table is controlling. The packet is a complete proof proposal for hostile
-reconstruction; it is not an accepted proof of RH before that reconstruction.
+This table controls the successor packet.
 
-| Claim | Status in this packet | Review boundary |
+| Claim | Status | Review boundary |
 |---|---|---|
-| PR #443/#450 rejection of `L-91659` | **accepted / permanent** | the old formal-complement argument is not reused |
-| native equality response `Gamma(c_X)=w_X` | **proved exact** | Möbius convolution |
-| native detail response `Xi(c_X)=Omega_X` | **proved exact** | exact radix-four difference |
-| paired stopping-line source identity | **proved on frozen inputs** | replay source-disjoint leaf census |
-| leafwise Hall residualization | **proved on frozen inputs** | replay Hall prefixes and normalized-row corridors |
-| global Hall/source Fubini identity | **proved on frozen inputs** | verify measurable simple-measure limit |
-| `c_X>=0` | **proved from the positive Hall identity** | depends on preceding frozen inputs |
-| same-index arbitrary-child replacement | **proved exact** | ordinary and detail inequalities displayed |
-| fixed-67 entropy inequality `L-91666` | **proved analytic + directed finite** | rerun 402 cells and analytic tail |
-| one-use current ownership ledger | **proposed complete** | reconstruct mismatch, collar, terminal, safety and corrected port once |
-| factor-67 loss recurrence | **proposed complete** | check one-use ledger and constants are independent of `X` |
-| `Loss_X=O(log X)` | **exact consequence of the recurrence** | no further arithmetic input |
-| finite dual `F_Lambda<=Loss_X` | **proved exact** | average-binomial/von-Mangoldt identity |
-| prime-square drift and Landau implication | **proved on stated classical inputs** | audit contour and PNT inputs |
-| `T-91654` | **complete RH proof proposal** | independent frozen-commit reconstruction required |
-| Riemann Hypothesis | **not yet accepted** | pending review of the full packet |
+| Old balanced/reserve row gives one native row | **FALSE** | exact factor-three calculation |
+| `R-91659` | **PROVED EXACT** | symbolic algebra |
+| Single-SHARP source `3P^(4/3)` | **PROVED EXACT** | least-prime recursion |
+| Single-SHARP row normalization | **PROVED EXACT** | one-copy atom identity |
+| Native parent target/score/row triple | **EXACT** | matches `L-91556` |
+| Finite equality seed to `c_X` | **PROVED EXACT** | finite Fubini + linear row operator |
+| Continuum equality seed relation | **FROZEN / RECONSTRUCT** | `L-91107/L-91114` |
+| Leafwise Hall and source Fubini | **FROZEN / RECONSTRUCT** | actual finite certificates |
+| Same-index child replacement | **PROVED EXACT** | ordinary/detail identities |
+| `L-91666` fixed-67 score theorem | **PROVED ANALYTIC + DIRECTED** | 402 cells + tail |
+| One-use current ownership | **PROPOSED COMPLETE** | audit endpoint/collar/top/port once |
+| Coefficient-one loss identity | **PROVED EXACT** | algebra before estimates |
+| Reset constant independent of `X` | **FROZEN / RECONSTRUCT** | finite current inputs |
+| `Loss_X=O(log X)` | **CONSEQUENCE** | once recurrence is accepted |
+| Finite dual | **PROVED EXACT** | von Mangoldt/binomial identity |
+| Endpoint RH chain | **FROZEN / RECONSTRUCT** | prime-square and Mellin-Landau inputs |
+| `T-91656` | **COMPLETE PROPOSAL** | independent review required |
+| Riemann Hypothesis | **UNPROVED** | pending review |
 
 ## Supersession map
 
 ```text
-L-91659 / T-91652 root sections       superseded; objections retained
-SPP-91661 GRRT/CFFP frontier           alternate research routes, no longer antecedents
-T-91653 direct response                precursor
-L-91666 + L-91667 + T-91654            current review target
+L-91668     rejected as native-row proof
+L-91669     superseded
+T-91655     rejected and superseded
+R-91659     normalization firewall
+L-91670     normative root normalization
+L-91671     normative one-generation ledger
+T-91656     normative conclusion target
 ```
 
 ## Exact falsifiers
 
-Reject the proposal immediately if any of the following occurs:
-
 ```text
-one source atom appears in two stopping leaves;
-a frozen Hall prefix or normalized-row cell fails;
-the summed Hall row differs from the exact native equality row;
-ordinary or detail child replacement overdraws a physical column;
-L-91666 fails at any real endpoint;
-a root-only mismatch/collar/terminal/port packet is copied to a child;
-the corrected port uses the obsolete P53 normalization;
-C_reset grows with X;
-the finite dual or analytic endpoint sign is reversed.
+old balanced/reserve row normalization used;
+source atom duplicated;
+finite and continuum seeds misidentified;
+global positivity of reciprocal-zeta equality weight assumed;
+one current packet counted twice;
+root-only packet copied to child;
+ordinary/detail overdraw;
+fixed-67 inequality failure;
+current constant grows with X or leaf count;
+loss coefficient differs from one;
+endpoint sign or pole cancellation wrong.
 ```
