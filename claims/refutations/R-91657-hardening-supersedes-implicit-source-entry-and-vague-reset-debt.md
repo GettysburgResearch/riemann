@@ -1,28 +1,28 @@
-# R-91657 — Hardening supersedes the implicit source entry and vague reset-debt ledger in `T-91654`
+# R-91657 — Final hardening supersedes the implicit source entry and ambiguous reset ledger in `T-91654`
 
 Claim ID: `R-91657`  
 Status: **EXACT SCOPE CORRECTION AND SUPERSESSION RECORD**  
 Created: 2026-08-14  
 Reviewed precursor: PR #455 through head
 `1a6443778095ef2af434c28a53ab2edb347499e3`  
-Replacement target: `L-91668`, `L-91669`, `T-91655`  
+Replacement target: `L-91668`, corrected `L-91669`, `R-91658`, corrected
+`T-91655`  
 RH status: **unproved pending independent reconstruction**
 
-## 1. The source partition was mathematically available but not explicitly consumed
+## 1. The source partition was available but not explicitly consumed
 
-`L-91621` begins with an exact labelled positive source identity and then proves
-that leafwise Hall outputs sum to one native row.  `L-91667/T-91654` cited the
-conclusion without naming the exact theorem which supplies that antecedent.
+`L-91621` assumes an exact labelled positive source identity and then proves
+that leafwise Hall outputs sum to one native row.  `L-91667/T-91654` cited its
+conclusion without naming the theorem which supplies that antecedent.
 
-The source theorem is `L-91333`.  Together with the atomwise two-channel split
-of `L-91330`, it supplies the complete positive nonduplicating least-prime tree.
-`L-91668` now:
+The source theorem is `L-91333`, after the atomwise two-channel split of
+`L-91330`.  `L-91668` now:
 
 1. states the finite stopping rule;
 2. proves unique ownership of every active squarefree source atom;
 3. writes the exact direct-sum source identity;
-4. identifies its signed row observation with \(c_X\);
-5. then invokes leafwise Hall.
+4. identifies its signed observation with the native row \(c_X\);
+5. only then invokes leafwise Hall.
 
 Accordingly:
 
@@ -32,96 +32,66 @@ unnamed source-identity antecedent            removed
 L-91668 explicit source-entry theorem         normative
 ```
 
-## 2. The old `C_reset` wording concealed two different possible overcounts
+## 2. The old `C_reset` wording allowed hidden leaf and depth overcounts
 
-The precursor stated
+The precursor stated a bounded per-generation recurrence but did not make it
+impossible to charge either one terminal constant per stopped leaf or one root
+target at every depth.
 
-\[
- \operatorname{Loss}_X
- \le
- \operatorname{Loss}_{X/67+C_0}+C_{\rm reset}
-\]
-
-and described a bounded current ledger.  That wording did not make it
-impossible for a reader to charge either:
+The final ledger separates two charges:
 
 ```text
-one terminal constant per stopped leaf;
-or one root-target constant at every depth.
+current analytic/discrete charge: one effective constant per generation;
+terminal arithmetic charge: proportional only to target mass which terminates.
 ```
 
-Neither is the load-bearing accounting.
+Source disjointness makes terminal target telescope over all leaves and depths.
+The number of current generations is \(O(\log X)\).  Hence the complete debt is
+\(O(\log X)\), with no leaf-count factor and no source fraction multiplying an
+unrelated signed deficit.
 
-The correct global object is terminal target mass.  At each fixed-\(67\) split,
+## 3. The first hardening draft overcorrected the outer/current layer
 
-\[
- M_r=M_{r+1}+M_r^{\rm term}.
-\]
+The first versions of `L-91669/T-91655` attempted to delete the historical
+outer equality realization and identify the exact equality score directly with
+one finite arithmetic packet.  `R-91658` withdraws that compression.
 
-Source disjointness gives
-
-\[
- \sum_rM_r^{\rm term}=M_0=\log X.
-\]
-
-Since terminal declared-minus-literal score is at most \(2M^{\rm term}\), the
-complete all-depth debt is at most \(2\log X\).  `L-91669` records this
-telescoping ledger and `T-91655` obtains the explicit final bound
-
-\[
- \operatorname{Loss}_X<6\log X.
-\]
-
-Thus:
+The reciprocal-zeta equality weight is signed globally and positive only on the
+certified first factor-\(54.2\) quotient window.  The final proposal therefore
+retains, as one-use current objects:
 
 ```text
-constant per leaf                                 forbidden
-target mass times depth                           forbidden
-terminal target telescoped once                   normative
-vague C_reset                                     superseded
+finite-window equality producer;
+one endpoint quantization;
+collar and finite/continuum mismatch;
+top omission and terminal annulus;
+corrected boundary reserve where invoked;
+score/normalization bridge L-91557.
 ```
 
-## 3. Historical outer packets are not physical summands in the direct route
-
-The ownership table in `L-91667` listed the outer equality producer,
-quantization collar, finite/continuum mismatch, top omission, and common port.
-That made it possible to read the proposal as adding those rows on top of the
-exact native row \(c_X\).
-
-The hardened route does not do this.  Its sole physical row is assembled from:
-
-```text
-the positive leafwise realization of c_X;
-canonical current-minus-child component rows;
-same-index recursive child rows;
-positive Hall bonuses.
-```
-
-`L-26204` is consumed only for the exact root target \(\log X\) and declared
-score \(4\sqrt X\).  It supplies no second finite row.
-
-The outer/collar/mismatch/port construction remains an independent historical
-route and audit.  It is not load bearing in `T-91655`.
+They are not independent capacity copies added on top of \(c_X\).  They are the
+current realization stage of the same root equality datum.  The direct
+arithmetic row closes the recursive physical replacement stage.
 
 ## 4. Retained mathematics
 
-The following precursor results are retained:
-
 ```text
-exact native response Gamma(c_X)=w_X;
-exact native detail response Xi(c_X)=Omega_X;
-same-index ordinary/detail child replacement;
-global fixed-67 entropy theorem L-91666;
-finite von-Mangoldt dual;
-prime-square and Landau endpoint chain.
+exact native response Gamma(c_X)=w_X                  retained
+exact native detail response Xi(c_X)=Omega_X          retained
+finite-window equality-weight positivity              retained
+one-use endpoint realization                          retained
+same-index ordinary/detail child replacement          retained
+global fixed-67 entropy theorem L-91666                retained
+finite von-Mangoldt dual                              retained
+prime-square and Landau endpoint chain                retained
 ```
 
-The following precursor formulations are superseded:
+Superseded formulations:
 
 ```text
 implicit use of the L-91621 source antecedent;
-vague C_reset recurrence;
-outer/current ownership table in the direct-row proof;
+vague C_reset ownership;
+outer packet deletion in the first hardening draft;
 T-91654 as the normative conclusion target.
 ```
 
@@ -130,7 +100,8 @@ T-91654 as the normative conclusion target.
 ```text
 L-91667 / T-91654                         historical precursors
 L-91668                                  explicit source entry
-L-91669                                  explicit all-depth score/capacity ledger
-T-91655                                  normative complete proposal
+R-91658                                  outer-sign/realization firewall
+corrected L-91669                        final one-use current/recursive ledger
+corrected T-91655                        normative complete proposal
 Riemann Hypothesis                       not accepted before review
 ```
