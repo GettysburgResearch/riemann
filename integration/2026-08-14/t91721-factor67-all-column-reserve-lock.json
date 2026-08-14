@@ -1,0 +1,109 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/91692-triple-closure-proposal",
+    "head": "9f16ce483954d4233b68ee09cb6bec47400aa3cc",
+    "pr": 476,
+    "tree": "a8481b204193563235e5af7d0be44866a3b025f5"
+  },
+  "branch": "research/gpt56-pro/91723-factor67-all-column-reserve",
+  "classification": "T91721_FACTOR67_ALL_COLUMN_RESERVE_LOCK",
+  "created": "2026-08-14",
+  "files": [
+    {
+      "path": "REVIEW_HANDOFF_91723.md",
+      "sha256": "c4b05919d4672fbea4de0602738154fde924d4a9e972b98b99b9036cf9d45e3f"
+    },
+    {
+      "path": "claims/lemmas/L-91723-factor67-all-column-reserve-uses-square-root-thinning.md",
+      "sha256": "0b2e5d04721839434869f4a97d9ca4e8925fade023ed40776454b02d5ab61bee"
+    },
+    {
+      "path": "claims/observations/O-91723-factor67-small-column-reserve-repair.md",
+      "sha256": "a1a83b4c53a251f6b18a2f531849b7e978661e6f3574f4163596c963124f41ec"
+    },
+    {
+      "path": "claims/theorems/T-91721-factor67-all-column-reserve-supplement.md",
+      "sha256": "aa56a6b79da879fd6b201f84dedac780c19e715fe0026d8efe321845d18caf05"
+    },
+    {
+      "path": "experiments/X-91723-factor67-all-column-reserve/README.md",
+      "sha256": "e3a354b6846774c6ec0f7698f4810818fb2a5973e0f78974b38a37408945b5d1"
+    },
+    {
+      "path": "experiments/X-91723-factor67-all-column-reserve/SHA256SUMS",
+      "sha256": "052c54b5cd8fcb7a9c533886635fef63f3c7985edb31598b1a9140afe2ed5953"
+    },
+    {
+      "path": "experiments/X-91723-factor67-all-column-reserve/results/verification.json",
+      "sha256": "003ea52758ac2c01a49c7406ddaa9f3c16dbb78f5cccb21c3fc141d6ff2d0993"
+    },
+    {
+      "path": "experiments/X-91723-factor67-all-column-reserve/verify.py",
+      "sha256": "b27dac919aa3f9784186f96ab1baf043dce59e691fc6fc4ae0370cb6fed0fbc9"
+    },
+    {
+      "path": "reports/gpt56-pro/2026-08-14-factor67-all-column-reserve.md",
+      "sha256": "a84cc9862c923a949fe9d69d6a05067d8489c1d3f4dbb5d9231651710a36d7ce"
+    }
+  ],
+  "frozen_dependencies": [
+    {
+      "git_blob": "2b090187db6ca87c632281f38055d35972151316",
+      "path": "claims/lemmas/L-91111-martingale-quantization-collar-is-a-small-positive-seed.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "7305924b9e49c3da4614c872cf60a11489c98a9d",
+      "path": "claims/lemmas/L-91691-factor67-finite-realization-has-one-use-native-capacity.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "e38d470205633a189b14cd01b4175fa84057ec96",
+      "path": "claims/lemmas/L-91692-target-hall-is-row-transparent-and-the-factor67-reserve-is-explicit.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "23cd82e4aee27e0126b0b0cf569f0fae08534f1e",
+      "path": "claims/theorems/T-91661-factor67-compact-reserve-closes-the-sontr-producer-gate.md",
+      "ref": "71d6a859ea741fe035de709e8d10ed37301b778e"
+    },
+    {
+      "git_blob": "031e096e6c679b94f1449946d10a49862d46973d",
+      "path": "claims/lemmas/L-91694-positive-direct-integrals-preserve-subcritical-target-mass.md",
+      "ref": "9f16ce483954d4233b68ee09cb6bec47400aa3cc"
+    },
+    {
+      "git_blob": "e6325bb2be8640f88feab5e150cf7bac6ac873e4",
+      "path": "claims/lemmas/L-91695-adaptive-one-use-thinning-closes-root-reserve.md",
+      "ref": "9f16ce483954d4233b68ee09cb6bec47400aa3cc"
+    }
+  ],
+  "lock_sha256": "e714fba82c87b76c73ff765ec3615389d8d107ce5b77846f2414e8e339092d63",
+  "new_results": {
+    "all_q_detail_mismatch": "171/(4 q sqrt(K))",
+    "all_q_ordinary_mismatch": "57/(2 q sqrt(K))",
+    "combined_collar_mismatch": "971/(4 q sqrt(K))",
+    "relative_error": "<129/sqrt(K)",
+    "score_loss": "<4290",
+    "strict_detail_slack": "Omega_X(q)/(sqrt(K)+130)",
+    "thinning": "sqrt(K)/(sqrt(K)+130)"
+  },
+  "proof_boundary": {
+    "RH": "unproved",
+    "child_mass": "import_L91694_exact",
+    "full_stack": "independent_reconstruction_required",
+    "nonterminal_capacity": "closed_on_frozen_inputs",
+    "small_columns": "closed_on_frozen_carry_cell_ownership",
+    "terminal": "imported_and_improved"
+  },
+  "replay": {
+    "classification": "PASS_FACTOR67_ALL_COLUMN_SQRTK_RESERVE",
+    "mutations_detected": 3,
+    "proof_object_sha256": "4dc67ad903809ab8747ff01b7f59be23b023d0469cd386b2054894e0b5269f14"
+  },
+  "repository": "gfreund123/riemann",
+  "reviewed_factor67": {
+    "head": "71d6a859ea741fe035de709e8d10ed37301b778e",
+    "pr": 473
+  }
+}
