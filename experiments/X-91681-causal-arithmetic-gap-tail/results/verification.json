@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "K_negative": 65,
+    "eta_positive": 65,
+    "large_Y_bracket_positive": 65,
+    "tail_gap_margin_positive": 65
+  },
+  "classification": "PASS_CAUSAL_ARITHMETIC_GAP_TAIL",
+  "exact_record_digest_sha256": "7d486f36c93d481aced2b984fd7503d5cdc537e13789ebc3a065a1e436eb1e2a",
+  "minimum_gap_ratio": "66/65",
+  "minimum_lhs_decimal": 7.642744994742504e-09,
+  "minimum_margin_decimal": 6.837339628557394e-09,
+  "minimum_rhs_decimal": 8.054053661851098e-10,
+  "minimum_row": 66,
+  "rough_prime_tail_start": 500000,
+  "row_range": [
+    2,
+    66
+  ],
+  "rows_checked": 65,
+  "scope": "Exact Fraction arithmetic and directed square-root/logarithm intervals prove the sufficient arithmetic-gap inequality for every row 2<=j<=66 at p=500000. Monotonicity of A_j(p) and (p-1)/sqrt(p) extends it to every real p>=500000. Combined with L-91359, this proves discrete inner-divisor causal row-per-score ordering on the unbounded rough-prime tail. It does not certify the finite corridor 67<=p<500000, the global even/odd determinant, packet score debt, or RH."
+}
