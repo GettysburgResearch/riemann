@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "classification": "PASS_GLOBAL_TARGET_NORMALIZED_COMPONENT_MONOTONICITY",
+      "minimum_gate_decimal": 0.021494430046404923,
+      "minimum_row": 66,
+      "rows": 65
+    },
+    {
+      "child_cells": 1584,
+      "classification": "PASS_COMPLETE_ARITHMETIC_CAUSAL_SCORE_PROFILE",
+      "minimum_child_cell": 33,
+      "minimum_gap_decimal": 0.00256430147432384,
+      "minimum_row": 33,
+      "rough_range": "all real p>=67"
+    },
+    {
+      "child_cells": 1584,
+      "classification": "PASS_COMPLETE_ARITHMETIC_CAUSAL_TARGET_PROFILE",
+      "minimum_child_cell": 33,
+      "minimum_gap_decimal": 0.001615055022515162,
+      "minimum_row": 33,
+      "rough_range": "all real p>=67"
+    },
+    {
+      "A_gap": "852772323997294585715/23457676271881394196654",
+      "B_upper_decimal": 0.11693640470536501,
+      "classification": "PASS_P61_SCORE_AND_TARGET_LORENZ_CUTOFF_2000",
+      "cutoff": 2000,
+      "divisor_states": 262144,
+      "even_cutoff_nodes": 185,
+      "score_margin_decimal": 0.2872879542771085,
+      "target_margin_decimal": 0.1596685205984678
+    },
+    {
+      "aggregate_compact_debt_upper": "39321600000000000",
+      "classification": "PASS_TARGET_PROPORTIONAL_SCORE_DEBT_COMPACT_SUPPORT",
+      "delta_lower": 2,
+      "delta_min_prefix_start": 501942,
+      "prefix_states": 256805,
+      "tail": "zero score debt for every real p>=500000"
+    }
+  ],
+  "classification": "PASS_POST_HALL_COMPLETE_PROFILE_AND_DEBT_PACKET",
+  "proof_object_sha256": "7cce71153cd751be8c2b20a2bd3d136e4ef926912d4e036b4b0ec3fa4c13bd42",
+  "remaining_gate": "target-Lorenz/full physical row determinant family; replay does not certify RH",
+  "rh_established_by_replay": false
+}
