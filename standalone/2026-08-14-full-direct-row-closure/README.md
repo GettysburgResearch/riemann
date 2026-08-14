@@ -1,53 +1,117 @@
-# Full direct-row factor-67 closure packet
+# Final single-SHARP direct-row factor-67 packet
 
-**Packet ID:** `SPP-91666`  
+**Packet ID:** `SPP-91670`  
 **Date:** 2026-08-14  
 **Status:** **complete RH proof proposal; independent reconstruction required**  
-**Riemann Hypothesis:** **not treated as established before that review**
+**RH:** **unproved pending review**
 
-## Why this packet exists
+## Critical correction
 
-The earlier standalone packet `SPP-91661` correctly left two root routes open:
-`GRRT` and `CFFP`. Subsequent direct-row work changes the root architecture
-rather than assuming either open theorem.
-
-The new route uses one exact native equality row `c_X` with
+The prior hardening used the balanced/reserve target split to identify one native
+component row. That row normalization was false:
 
 \[
-\Gamma(c_X)=w_X,
+(1+\kappa_*)+(2-\kappa_*)=3.
+\]
+
+The old realization produced `3c_X`.
+
+The normative packet uses one SHARP channel instead:
+
+\[
+w_\Psi=3w_{4/3},
 \qquad
-\Xi(c_X)=\Omega_X,
+\mathcal H_{\Psi,j}(Y)=\frac{Q_Y(j)}{4\sqrt Y-3},
 \]
 
-proves a positive source-disjoint Hall realization of that same row, subtracts
-one complete canonical fixed-67 child, and inserts an arbitrary feasible child
-at the same row indices. Thus, after the complete current row is summed,
+so
 
 \[
-\Gamma(d_X)=w_X-\Gamma(R_{ch})+\Gamma(d_{ch})\le w_X,
+w_\Psi\mathcal H_{\Psi,j}
+=\frac1{\sqrt n}Q_Y(j)
 \]
 
-\[
-\Xi(d_X)=\Omega_X-\Xi(R_{ch})+\Xi(d_{ch})\le\Omega_X.
-\]
+exactly.
 
-This directly answers the root-capacity objection to `L-91659`.
-
-## Main theorem files
+## Normative files
 
 ```text
-claims/lemmas/L-91666-fixed67-literal-entropy-difference-pays-native-score.md
-claims/lemmas/L-91667-direct-native-equality-row-gives-complete-one-use-root-reset.md
-claims/theorems/T-91654-full-direct-row-factor67-resolution-proposal.md
-claims/refutations/R-91656-old-grrt-cffp-frontier-is-superseded-by-direct-native-row-reset.md
+claims/refutations/
+  R-91659-balanced-reserve-row-has-factor-three-overcount.md
+
+claims/lemmas/
+  L-91666-fixed67-literal-entropy-difference-pays-native-score.md
+  L-91670-single-sharp-channel-has-exact-native-row-normalization.md
+  L-91671-single-sharp-endpoint-realization-and-direct-child-form-one-reset.md
+
+claims/theorems/
+  T-91656-final-single-sharp-direct-row-factor67-resolution-proposal.md
+
+experiments/
+  X-91666-full-direct-row-closure/
+  X-91670-single-sharp-normalization-hardening/
+
+standalone/2026-08-14-full-direct-row-closure/
+  README.md
+  CLAIM_STATUS.md
+  FINAL_REVIEW_SPECIFICATION.md
+
+integration/2026-08-14/
+  t91656-dependency-manifest.json
+  t91656-final-lock.json
 ```
 
-The closure is
+Historical `L-91668`, `L-91669`, and `T-91655` are explicitly rejected or
+superseded and must not be used as alternate proofs.
+
+## Exact finite/continuum bridge
+
+Let `b_X^star` be the exact finite equality seed, `bar b_X^star` its continuum
+endpoint-frame realization, and `E_X` their finite/continuum mismatch. The
+normative theorem proves
+
+\[
+ b_X^\star=\overline b_X^\star+E_X,
+ \qquad
+ \mathcal R[b_X^\star]=c_X.
+\]
+
+Thus the continuum score datum and finite arithmetic row are linked by one
+explicit seed identity and one linear row operator; they are not merely named
+as two packets with the same target.
+
+Only the certified first `54.2` quotient cells of the reciprocal-zeta equality
+weight are used positively. No global sign of that weight is assumed.
+
+## One physical row
+
+At one generation, let `R_parent` be the complete current parent row and
+`R_child` the canonical fixed-67 child row. For any feasible child replacement,
+
+\[
+\boxed{
+ d_X=R_{\rm parent}-R_{\rm child}+d_{\rm child}.
+}
+\]
+
+Every endpoint, quantization, collar, mismatch, safety, terminal, port, and Hall
+object is an ownership stage inside `R_parent`. None is appended afterward.
+
+## Exact recurrence
+
+\[
+\operatorname{Loss}_X(d_X)
+=
+[J_X-J_K-\mathcal S(R_{\rm parent}-R_{\rm child})]
++
+\operatorname{Loss}_K(d_{\rm child}).
+\]
+
+The fixed-67 theorem and one-use current bounds give
 
 \[
 \operatorname{Loss}_X
-\le
-\operatorname{Loss}_{X/67+C_0}+C_{reset},
+\le C_{\rm reset}+\operatorname{Loss}_{X/67+C_0},
 \]
 
 hence
@@ -56,98 +120,24 @@ hence
 \operatorname{Loss}_X=O(\log X)=o(\log^2X).
 \]
 
-The exact finite dual gives
+The finite dual and frozen endpoint chain then give the proposed RH conclusion.
 
-\[
-F_\Lambda(X)\le\operatorname{Loss}_X,
-\]
-
-and the prime-square/Landau endpoint theorem then yields the proposed RH
-conclusion.
-
-## New proof supplied here
-
-The former `L-91664` was only an index to a partial replay. `L-91666` now gives a
-complete proof of
-
-\[
-E(Y)-E(Y/67)
-\ge5(\sqrt Y-\sqrt{Y/67})
-\qquad(Y\ge67).
-\]
-
-It consists of:
-
-```text
-base F(67)>3;
-402 exact directed derivative cells through 469;
-an analytic monotone integral tail for all Y>=469.
-```
-
-Retained exact margins:
-
-```text
-F(67)                         > 3.2764007195549669
-minimum finite derivative     > 22.1747542920858
-analytic-tail base G(469)     > 131.798262054325
-```
-
-## Exact one-use ledger
-
-The root theorem fixes ownership before optimization:
-
-```text
-outer equality packet         current only
-one global quantization       current only
-width-three collar            same quantization
-finite/continuum mismatch     current only
-safety factor                 once after current sum
-fixed top/terminal packet     current only
-corrected P61/67 port         current only
-Hall bonuses                  current only
-canonical restricted child    recursive, child-owned capacities only
-```
-
-No correction is copied to a child, no finite small-prime block is reintroduced,
-and no affine or fractional-column child placement is used.
-
-## Verification
-
-```bash
-cd experiments/X-91666-full-direct-row-closure
-python3 verify.py --json results/verification.json
-```
-
-Retained verdict:
+## Replays
 
 ```text
 PASS_FULL_DIRECT_ROW_CLOSURE_ALGEBRA
-proof object: 2162b25bbfc824848bdd1fbf9bdf074f07194de23d21de510c48d39c0f33004d
+PASS_SINGLE_SHARP_NORMALIZATION_HARDENING
 ```
 
-The replay checks the new fixed-67 theorem and algebraic shell. It does not
-replace hostile reconstruction of the frozen Hall, source-tree, mismatch,
-collar, terminal, port, or endpoint analytic inputs, and explicitly records
-`rh_established_by_replay=false`.
-
-## Review order
-
-1. `L-91666` and `X-91666`.
-2. `L-91621/L-91663`: native equality row and leafwise Hall identity.
-3. `L-91559/L-91667`: same-index arbitrary-child replacement.
-4. `L-91114/L-91115/L-91320`: one-use finite current packets.
-5. `L-91557`: equality score front door and native benchmark bound.
-6. `T-91654`: recurrence, finite dual, prime-square drift, Landau.
-
-## Status boundary
+The new proof object is
 
 ```text
-fixed-67 score theorem                    PROVED
-native ordinary/detail response           EXACT
-positive leafwise Hall row                EXACT ON FROZEN INPUTS
-same-index arbitrary-child replacement    EXACT
-one-use finite current ledger             PROPOSED COMPLETE / RECONSTRUCT
-loss O(log X)                             CONSEQUENCE
-full theorem                              COMPLETE PROPOSAL / REVIEW REQUIRED
-Riemann Hypothesis                        NOT YET ACCEPTED
+a5b07f68367447da089ef8d8fa84adf2ea2615b4fcbb8f038d7f23cf5dc49dda
 ```
+
+Neither replay establishes RH.
+
+## Review
+
+Begin with `FINAL_REVIEW_SPECIFICATION.md`. The first mandatory check is the
+factor-three refutation and the single-SHARP replacement.
