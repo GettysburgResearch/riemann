@@ -5,7 +5,7 @@ Status: **CANDIDATE CORRECTED SONTR / NATIVE-SLACK / RH COMPOSITION ON FROZEN IN
 Created: 2026-08-15  
 Frozen base: PR #479 at `518b6a5ec2b49b7decbd4c2e349d0ee5b26bfc9b`  
 Review input: PR #480 at `d6d9c051abb20a47f3ce7adb45de33bfc2b933b9`  
-Additional inputs: `L-91378`, `L-91650`, `L-91658`, `L-91690`, `L-91723--L-91730`  
+Additional inputs: `L-91378`, `L-91650`, `L-91658`, `L-91690`, `L-91723--L-91731`  
 RH status: **unproved pending independent reconstruction**
 
 ## 1. Frozen review accepted
@@ -115,7 +115,7 @@ and the exact native scalar cocycle
  \tag{T-91724.6}
 \]
 
-## 5. Local native cost
+## 5. One-shot native root cost
 
 `L-91728` uses the exact sparse support of `Y_4` and PR #479's all-column bound.
 The all-column mismatch/collar and knot-refinement costs are `o(1)`.  The common
@@ -129,40 +129,59 @@ fixed-width/base/port inputs the remaining cost is `O(1)`.  Thus
  \tag{T-91724.7}
 \]
 
-This is the proof-relevant local scalar.  No estimate of
-`4sqrt(X)-H(d_X)` occurs.
+This finite realization is applied once, at the native root.  Positive
+descendants are not assumed to have the native root form.
 
-## 6. Subcritical native recurrence
+## 6. Positive causal descendants
 
-Normalized same-index placement preserves the numerical native deficit.  From
-(T-91724.1), (T-91724.6) and (T-91724.7),
+After the root Hall entry every child is already a positive typed packet.
+`L-91731` applies the exact positive causal reset and the proportional debt
+theorem to obtain one uniform constant `C_+` with
 
 \[
- D(X)\le A_0+4290\log(2X)+\rho D(X/67+1),
- \qquad \rho<\frac18.
+ \Delta(P)\le C_+m(P)
  \tag{T-91724.8}
 \]
 
-Iteration yields
+for every complete positive descendant, including all of its later descendants.
+
+The factor-67 root target has an absolute compact bound.  On one fiber its
+positive target mass is below `165`; the positive endpoint measure has total
+mass below `20`.  Hence
+
+\[
+ M_{\rm root}<3300.
+ \tag{T-91724.9}
+\]
+
+Together with (T-91724.2),
+
+\[
+ \int_Ba(b)\Delta_b\,d\nu(b)
+ <\frac{825}{2}C_+.
+ \tag{T-91724.10}
+\]
+
+Combining (T-91724.6), (T-91724.7) and (T-91724.10) yields
 
 \[
  \boxed{
  J_\Lambda(X)-\mathcal H(d_X)
+ \le A_0+\frac{825}{2}C_++4290\log(2X)
  =O(\log X)=o(\log^2X).
  }
- \tag{T-91724.9}
+ \tag{T-91724.11}
 \]
 
-The direct coefficient recurrence proves the native endpoint bound; the
-weighted target theorem independently verifies the Hereditary Typed Reset
-normalization.
+Thus the logarithmic finite-root realization is charged once, while the exact
+positive causal envelope handles the entire recursive tree.
 
 ## 7. Endpoint and safe-Xi consequences
 
-The resident one-sided endpoint theorem consumes exactly (T-91724.9).  If the
-frozen factor-67 Hall, all-column realization, fixed terminal/base/port and
-endpoint-consumer inputs survive independent reconstruction, it gives the
-proposed implication to RH.
+The resident one-sided endpoint theorem consumes exactly (T-91724.11).  If the
+frozen factor-67 Hall, all-column realization, fixed terminal/base/port,
+positive causal envelope and endpoint-consumer inputs survive independent
+reconstruction, it gives the proposed implication to RH.
 
 Only after that conclusion, `L-92114` gives positive definiteness of every finite
 safe-Xi Hankel pair.  It is a downstream corollary.
@@ -180,7 +199,7 @@ activation-knot relative refinement PR #479;
 one uncolored common port;
 packet-capacity identity L-91730;
 fixed top/base/port native cost in L-91728;
-same-index native-deficit covariance;
+positive descendant envelope or root mass bound L-91731;
 one-sided native endpoint orientation.
 ```
 
@@ -191,7 +210,8 @@ small columns q<K                             REPAIRED
 activation-knot refinement                    REPAIRED
 actual weighted child target <1/8             PROVED
 packet-native capacity/slack cocycle           PROVED
-local native root cost O(log X)                PROPOSED COMPLETE / REVIEW
+one-shot local native root cost O(log X)       PROPOSED COMPLETE / REVIEW
+positive descendant contribution              O(1) / L-91731
 corrected native deficit O(log X)              CANDIDATE COMPLETE
 endpoint implication                          FROZEN / RECONSTRUCT
 safe-Xi Hankel positivity                     RH COROLLARY
