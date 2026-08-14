@@ -1,0 +1,34 @@
+{
+  "schema": "riemann.t19818-native-radial-dictionary-lock.v1",
+  "created": "2026-08-14",
+  "status": "PROPOSED_EXACT_SOURCE_LOCK_AND_CONDITIONAL_COMPLETION",
+  "rh_proved": false,
+  "base": {
+    "pr": 202,
+    "branch": "agent/gpt56-pro-09-i/198-square-screw-criterion",
+    "head": "5656091917835721e6f08cfb4e0fece72aaa9828"
+  },
+  "normative_content_commit": "d60a35cf873148fb9ff267782d454834b57d1a9e",
+  "frozen_inputs": {
+    "pr404": "ab71aa1fe0b1fd192011bbf40f032d2f42889ea0",
+    "pr427": "e4cba612839efb7296c1664f173e924f9e252bbf",
+    "pr430": "cedf2f5b43c99d6e6f9a760236432b123dd91770",
+    "pr435": "42a6929df3b637a151a2612b977fcabd2e774599",
+    "pr468": "a41f81466f85d52597c97b41505756a8860698d0",
+    "pr470": "89af3206ea1894884613e1188b5ab9a6a4cd74f0"
+  },
+  "key_blobs": {
+    "L-19880": "123d8fb32cc8c3456913b16aed194822ba44f937",
+    "L-19881": "516e829882683f94142496102323f958d399958b",
+    "T-19818": "b691429d7806b4f6dc18a6841aa06656a9595baf",
+    "X-19880-verifier": "251d30546c1c66f11de79f556ce61d1472be4ef5",
+    "X-19880-checksum-ledger": "77a23e818580c27ca5ea8b4b1020fce20f5f1143",
+    "review-handoff": "16903a8516fee33e4428404e57b40ce988bf7c3d"
+  },
+  "retained_verdict": "PASS_EXACT_NATIVE_RADIAL_DICTIONARY_ANALOGUE",
+  "proof_object_sha256": "43f4cee50a89f21d1d68277c995aab2efa558da89e9fc674fe55ea4651634fd2",
+  "open_obligations": [
+    "SONTR",
+    "NRMA_a"
+  ]
+}
