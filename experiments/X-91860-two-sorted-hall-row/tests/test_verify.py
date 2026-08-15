@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import sys
 import unittest
 from pathlib import Path
 
@@ -9,6 +10,7 @@ VERIFY = HERE.parents[1] / "verify.py"
 SPEC = importlib.util.spec_from_file_location("x91860_verify", VERIFY)
 assert SPEC and SPEC.loader
 M = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = M
 SPEC.loader.exec_module(M)
 
 

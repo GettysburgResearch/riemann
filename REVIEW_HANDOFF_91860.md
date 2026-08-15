@@ -8,7 +8,10 @@ comparison PR #500:
 d73c1e7a1a482cac31581211a84db43cc34c824e
 
 accepted review PR #501:
-2f58a65097206c4b80142cead52282161302d10c
+ab5bd0ffc7a8092d62e879431dbd9f295f79f072
+
+successor draft PR:
+#506
 ```
 
 Review `R-91860` first. The successor is invalid if the Hall bonus is again treated as a target-bearing or declared-score packet.
