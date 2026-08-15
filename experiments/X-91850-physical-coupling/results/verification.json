@@ -1,0 +1,32 @@
+{
+  "classification": "PASS_PHYSICAL_COUPLING_COMPILER_91850",
+  "exact_rational_fixture": true,
+  "hostile_mutations_rejected": 15,
+  "mutations": [
+    "odd-underfill",
+    "even-overdraw",
+    "negative-flow",
+    "upward-edge",
+    "negative-bonus",
+    "duplicate-owner",
+    "bad-causal-sum",
+    "recursive-export",
+    "missing-cell",
+    "malformed-cell",
+    "label-quantizer",
+    "bad-quantizer-sum",
+    "quantizer-outside-stencil",
+    "signed-as-source",
+    "capacity-overrun"
+  ],
+  "native_ledger": {
+    "nonterminal": 4,
+    "omissions": 1,
+    "terminal": 48972,
+    "thinning": 12012
+  },
+  "native_total": 60989,
+  "proof_object_sha256": "2ae59e526e23e551c0683dc12d577c8da8e57bc98d787c9f3abcc7258d922d05",
+  "randomized_trials": 64,
+  "rh_established": false
+}
