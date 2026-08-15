@@ -1,0 +1,49 @@
+{
+  "schema": "riemann.target_lorenz.directed_tail.control.v1",
+  "repository": "gfreund123/riemann",
+  "base_pr": 497,
+  "base_head": "bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74",
+  "base_branch": "research/gpt56-pro/93600-target-lorenz-complete-successor",
+  "origin_pr": 468,
+  "origin_head": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+  "compact_claim": {
+    "claim": "L-91781",
+    "path": "claims/lemmas/L-91781-compact-real-parameter-proportional-avlt-through-166000.md",
+    "blob": "2c16327c6653009667fa06ddbb24628ff583c0fe",
+    "domain": "x=py<166000",
+    "minimum_certified_lower": "0.001"
+  },
+  "compact_result": {
+    "path": "experiments/X-91780-target-lorenz-compact-avlt/results/verification.json",
+    "blob": "2fda156232fc9d4e9ae36066870b613270161166",
+    "classification": "PASS_TARGET_LORENZ_COMPACT_PROPORTIONAL_AVLT",
+    "x_upper_exclusive": 166000,
+    "activation_row_cells": 702511095
+  },
+  "pr497_tail": {
+    "claim": "L-93601",
+    "path": "claims/lemmas/L-93601-the-complete-target-lorenz-determinant-is-positive-on-the-unbounded-tail.md",
+    "blob": "14a371e5734d5d2c10cdb2738e263fd22d3202cd",
+    "generator_blob": "f5e7a2c751aee1b8e60b2277e8cdf1e3d887efdb",
+    "tail_lower_inclusive": 166000,
+    "event_records": 51118080
+  },
+  "correct_review_heads": {
+    "490": "6f46c2cf4e84d51c744263f7e92a0e1743de5148",
+    "491": "f5fb88c80f56e0b4e221c90f6362cf20413db02f",
+    "492": "9be030febf71135efbbb8a997f6cee2335ed719a"
+  },
+  "pr497_lock_stale_review_heads": {
+    "490": "6f46c7c0422c957162f094c21f210bf43fc85d4a",
+    "491": "f5fb4ce0ca0954fdfc7bf90077df4f9473ecc030"
+  },
+  "correct_sibling_heads": {
+    "493": "37f14be7c8bd16b3096baf08f6ba2cbc550797ac",
+    "494": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c"
+  },
+  "pr497_lock_stale_sibling_heads": {
+    "493": "37f14d47b4b82c53cf6a14aa02ef58c51e311ef5",
+    "494": "146855b4e91157dd9dbb9307c187623848d7c04e"
+  },
+  "rh_established": false
+}
