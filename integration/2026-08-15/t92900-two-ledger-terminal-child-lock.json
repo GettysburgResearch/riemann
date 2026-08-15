@@ -1,0 +1,31 @@
+{
+  "base_branch": "research/gpt56-pro/92880-standalone-gates-ab-closure",
+  "base_pr": 489,
+  "base_sha": "0bb487c8a0782f601be0a3041743b357ad93726a",
+  "frozen_pr488_head": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+  "normative_sha256": {
+    "claims/lemmas/L-92900-two-ledger-source-observation-composition.md": "164d5b35238ec44c2dd73fdad11902cd31087875b61bb7219e4a72e949356325",
+    "claims/lemmas/L-92901-factor67-two-ledger-root-cost-below-60989.md": "502825c2be04d1737bfa8bba5f3f884b3082dc5fb5de85054ceb450f3480a7d5",
+    "claims/lemmas/L-92902-first-generation-children-terminalize-below-6039-over-8.md": "6494a45e322f5b64ede0ab00672ebc42fc224f29c661edbebfaa812799da5c89",
+    "claims/observations/O-92900-route-disposition-and-terminal-child-frontier.md": "b5c88ba02d85bb2d582a7f45ab155361af73391d341df8153c858fab3f07c17a",
+    "claims/refutations/R-92900-signed-defect-is-not-unused-positive-source.md": "31a339bc68c410e86f4c0586d52b9c44a713b8d58235d88e29c3ad954910bc49",
+    "claims/theorems/T-92900-two-ledger-terminal-child-factor67-proposal.md": "056a779e06bc8d92d853c438ca4238634617c64c17dda4c46707b776c7ddb779",
+    "experiments/X-92900-two-ledger-terminal-child/README.md": "8b68da149a6d8085c78b1797787e973186964910c0232bd0b95939a82ac0a9c8",
+    "experiments/X-92900-two-ledger-terminal-child/results/verification.json": "f4e428f34ded82352888a75a7bc8a6384445eb36b00694e6a4adbc6e6f0ad5ed",
+    "experiments/X-92900-two-ledger-terminal-child/tests/test_verify.py": "d73576d571e717e0cb8235765e4a8239074549ec54f22ec65dd887d9847a3693",
+    "experiments/X-92900-two-ledger-terminal-child/verify.py": "c60ce8d15fb63d8b0ae2dd2881d2eb5c79ce3f267ac55088e7b7ee592a8d9a42",
+    "imports/t92900/IMPORT_MANIFEST.json": "c139de03112e8364224956fd0ecaea226b22f7037b90c3f9ae6f371c08d5a861",
+    "reports/gpt56-pro/2026-08-15-pr488-pr489-falsification-and-terminal-child-repair.md": "5375f2765a0a1534fbf35fe10565ceda51068b2489b9483247211fd40f136bef",
+    "standalone/2026-08-15-two-ledger-terminal-child/CLAIM_STATUS.md": "01af0b8009042ad9b581001edcfb37e17dbcd51139c5fca0a7b91065a2235f7a",
+    "standalone/2026-08-15-two-ledger-terminal-child/README.md": "4d7ff2b1a9f3a9ba2465fb5ace45a09d99795cd81bbf7297e405b37decccbbc5",
+    "standalone/2026-08-15-two-ledger-terminal-child/REVIEW_SPECIFICATION.md": "e65ee24146df31867d6b0a63e9ce7cf0da58bc0089980ba2e981b477951e0139"
+  },
+  "portful_schur_demand": "not used; zero-port specialization",
+  "proof_object_sha256": "24deb9d1bdce2510df4fd02b47ad856e6a3d532f3b4e43e7f6d123df921bb1f4",
+  "proposal": "T-92900",
+  "publication_branch": "research/gpt56-pro/92900-rough-lift-normalization-firewall",
+  "repository": "gfreund123/riemann",
+  "review_pr490_head": "6f46c2cf4e84d51c744263f7e92a0e1743de5148",
+  "schema": "t92900-two-ledger-terminal-child-lock-v2",
+  "status": "candidate-complete proposal on frozen inputs; RH unproved pending review"
+}
