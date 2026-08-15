@@ -1,0 +1,102 @@
+{
+  "evidence": {
+    "k0": 149253731343284,
+    "native_cost": {
+      "actual_children": "6039/8",
+      "benchmark_bridge_used": false,
+      "root": "60989",
+      "strict_integer_bound": 61744,
+      "total": "493951/8"
+    },
+    "native_source_tree": {
+      "actual_children": [
+        [
+          "5",
+          "6",
+          "8",
+          "10"
+        ],
+        [
+          "4",
+          "5",
+          "7",
+          "8"
+        ]
+      ],
+      "current": [
+        "8",
+        "10",
+        "13",
+        "16"
+      ],
+      "native": [
+        "17",
+        "21",
+        "28",
+        "34"
+      ],
+      "rough_lift": [
+        "19",
+        "24",
+        "33",
+        "41"
+      ],
+      "rough_reservoir": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ]
+    },
+    "q2": {
+      "conditional_correction_upper": "1/400",
+      "conditional_final_lower": "343/3600",
+      "conditional_thinned_ideal_lower": "22/225",
+      "historical_threshold": "109/1200",
+      "unqualified_pr_application": "WITHDRAWN",
+      "unthinned_rough_lift_lower": "1/9"
+    },
+    "two_ledger": {
+      "root_slack": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "signed_error": [
+        "1",
+        "-1",
+        "2",
+        "3"
+      ],
+      "signed_error_is_source_positive": false,
+      "unused_capacity": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ]
+    }
+  },
+  "mutations": {
+    "benchmark_bridge": true,
+    "drop_child": true,
+    "duplicate_owner": true,
+    "duplicate_root_correction": true,
+    "resurrect_unqualified_pr_falsifier": true,
+    "rough_lift_substitution": true,
+    "signed_error_as_source": true,
+    "standard_child_capacity_promotion": true
+  },
+  "ok": true,
+  "proof_boundary": {
+    "endpoint_consumer": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "native_source_tree_compiler": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "q2_rough_lift_separator": "PROVED_EXACT",
+    "riemann_hypothesis": "UNPROVED_PENDING_REVIEW",
+    "unqualified_109_over_1200_pr_falsifier": "WITHDRAWN"
+  },
+  "proof_object_sha256": "cdc76c31a5bb81066dee381d13aaa9027d1d72e6e696212c4545c67ffabecebe",
+  "schema": "riemann.t92930.native-source-tree-firewall.v1",
+  "verdict": "PASS_NATIVE_SOURCE_TREE_Q2_FIREWALL_AND_HYBRID"
+}

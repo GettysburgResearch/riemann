@@ -1,0 +1,28 @@
+{
+  "schema": "t92930-native-source-tree-firewall-lock-v1",
+  "repository": "gfreund123/riemann",
+  "base_pr": 500,
+  "base_branch": "research/gpt56-pro/91850-physical-coupling-compiler",
+  "base_sha": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+  "frozen_comparison_pr": 496,
+  "frozen_comparison_sha": "96f8a6b3cc3d474217633e16d4caa490a0aae518",
+  "frozen_volterra_pr": 495,
+  "frozen_volterra_sha": "50f45b46cbe3c471d6e702c41c7ef178b530e1ab",
+  "intended_branch": "research/gpt56-pro/92930-native-source-tree-firewall",
+  "proposal": "T-92930",
+  "proof_object_sha256": "cdc76c31a5bb81066dee381d13aaa9027d1d72e6e696212c4545c67ffabecebe",
+  "normative_paths": [
+    "claims/refutations/R-92930-q2-rough-lift-falsifier-scope-and-withdrawal.md",
+    "claims/lemmas/L-92930-native-source-tree-is-not-the-p61-rough-lift.md",
+    "claims/lemmas/L-92931-physical-coupling-exports-actual-native-children.md",
+    "claims/lemmas/L-92932-actual-child-terminalization-needs-only-actual-capacities.md",
+    "claims/lemmas/L-92933-hybrid-coupling-native-deficit-below-61744.md",
+    "claims/lemmas/L-92934-actual-children-may-be-internalized-by-one-label-blind-quantizer.md",
+    "claims/theorems/T-92930-native-coupling-actual-child-terminalization-proposal.md",
+    "experiments/X-92930-native-source-tree-firewall/results/verification.json",
+    "imports/t92930/IMPORT_MANIFEST.json",
+    "standalone/2026-08-15-native-source-tree-firewall/REVIEW_SPECIFICATION.md"
+  ],
+  "status": "candidate-complete proposal on frozen inputs; unqualified PR-specific 109/1200 claim withdrawn; RH unproved pending review",
+  "publication_head": null
+}
