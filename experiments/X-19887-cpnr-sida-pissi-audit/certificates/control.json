@@ -1,0 +1,19 @@
+{
+  "schema": "riemann.x19887-cpnr-sida-pissi-audit.v1",
+  "log2_lower": "2/3",
+  "log2_upper": "7/10",
+  "sqrt2_upper": "3/2",
+  "sqrt67_upper": "33/4",
+  "omega": ["5", "4", "3"],
+  "current": ["2", "1", "1"],
+  "alphas": ["1/16", "1/32"],
+  "child_caps": [["8", "4", "0"], ["0", "8", "8"]],
+  "y4": ["2", "3", "5"],
+  "child_slacks": [["1/2", "1/4", "0"], ["0", "1/2", "1/4"]],
+  "sqrtK_plus_130": "140",
+  "pissi_lhs_measure_type": "pure_point",
+  "pissi_native_branch_measure_type": "absolutely_continuous",
+  "pissi_native_branch_mass": "1/7",
+  "interval_lengths": ["1/2", "1/4", "1/8", "1/16"],
+  "sida_lipschitz_constant": "12"
+}
