@@ -1,0 +1,39 @@
+{
+  "cutoff": 123,
+  "detail_count": 870,
+  "detail_sha256": "ca8588a398da9b51f5cc57254290588568385c6543485466121785b97b6f49a6",
+  "endpoint": {
+    "benchmark_bridge": false,
+    "native_cost": 60989,
+    "orientation": "F_Lambda <= native_deficit",
+    "rh_proved": false
+  },
+  "frozen_pr507": "dfaa70cd2eefcabbf6717e3da060792904c7f357",
+  "minimum_positive_detail": "3.894678794880337393170435383991149404212217415152266655851576E-5",
+  "minimum_positive_ordinary": "3.894678794880337393170435383991149404212217415152266655851576E-5",
+  "minimum_positive_row": "3.903642382440476259437801173137274028847918721055954266106701E-5",
+  "normalization": {
+    "q4_after_common_ordinary": true,
+    "rough_lift_parent": false,
+    "same_coefficient_both_channels": true,
+    "score": "2E+R",
+    "target": "E+2R"
+  },
+  "occurrence_count": 229,
+  "occurrences_sha256": "4e85b8b34497d61d349e8ed13dd447812daeb48506917027195d717b121b2d8d",
+  "ordinary_count": 870,
+  "ordinary_sha256": "4e3475fcdca2a905032589d553f953ec707e4ea999554324d7dfed28d42661b5",
+  "proof_object_sha256": "16ae2c8fac446ca0043e729b4804d3761348a493705378d889f43fa06d1a6913",
+  "row_count": 870,
+  "rows_sha256": "33c75ab1b2fdb9a03ccf9160ee9bc34207ccf23f03d8940d63c94557dfc4fa21",
+  "schema": "riemann.t93900.live.summary.v2",
+  "score": {
+    "residual": "2.387744039975521874551850379487831342833557740920663471130023E+1",
+    "signed": "2.125544068203766411226658345733360654255044698243283841818830E+1",
+    "surplus": "2.621999717717554633251920337544706885785130426773796293111934E+0"
+  },
+  "x2_separator": {
+    "k1_difference": "2*(sqrt(2)-1)>0",
+    "tau_from_k2": "1"
+  }
+}

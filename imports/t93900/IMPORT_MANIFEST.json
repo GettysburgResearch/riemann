@@ -1,0 +1,43 @@
+{
+  "repository": "gfreund123/riemann",
+  "base_pr": 507,
+  "base_branch": "research/gpt56-pro/92930-native-source-tree-firewall",
+  "base_sha": "dfaa70cd2eefcabbf6717e3da060792904c7f357",
+  "comparison_heads": {
+    "pr501": "ab5bd0ffc7a8092d62e879431dbd9f295f79f072",
+    "pr502": "db45b778d8c26e03ef1ad6b6f48959638be28b7c",
+    "pr505": "1113fe6d55e955a8d9de7b43ceb24f5792870550",
+    "pr508": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr509": "e01daee9cdfea35d2a7d2591f1df6c8080084119"
+  },
+  "imports": [
+    {"commit":"dfaa70cd2eefcabbf6717e3da060792904c7f357","path":"claims/lemmas/L-92930-native-source-tree-is-not-the-p61-rough-lift.md","blob":"165c1682d0b84d45edb2c81fa05f7e0650e8a131","role":"normalization firewall"},
+    {"commit":"dfaa70cd2eefcabbf6717e3da060792904c7f357","path":"claims/lemmas/L-92931-physical-coupling-exports-actual-native-children.md","blob":"cdc9fed664e455d628f05742f4b4b5ed7f59aba4","role":"actual child types"},
+    {"commit":"dfaa70cd2eefcabbf6717e3da060792904c7f357","path":"claims/lemmas/L-92934-actual-children-may-be-internalized-by-one-label-blind-quantizer.md","blob":"e32b3f0c7749eb2f0bab7bb94cc75f19d0d8e5d2","role":"one-shot actual-child specialization"},
+    {"commit":"e01daee9cdfea35d2a7d2591f1df6c8080084119","path":"claims/lemmas/L-91870-native-hybrid-source-is-the-exact-input-marginal.md","blob":"e5417cde505f7347d618c69f2896aa6f40df092c","role":"native hybrid marginal"},
+    {"commit":"e01daee9cdfea35d2a7d2591f1df6c8080084119","path":"claims/lemmas/L-91871-native-source-incidences-first-owners-and-placements-are-one-use.md","blob":"839a1d4b21aad2cff68cf4a722d919cd3d7fd831","role":"incidence and placement framework"},
+    {"commit":"e01daee9cdfea35d2a7d2591f1df6c8080084119","path":"claims/lemmas/L-91872-one-block-diagonal-label-blind-quantizer-realizes-the-complete-fiber.md","blob":"31cffa46ea20c43549942ad2e93857faa046ec7c","role":"block-diagonal quantizer"},
+    {"commit":"e01daee9cdfea35d2a7d2591f1df6c8080084119","path":"claims/lemmas/L-91873-native-small-q-detail-y4-and-endpoint-consumer-are-one-chain.md","blob":"f7e34e4d8292ef6f5866bd2d068fe2c59d19f5aa","role":"all-column and endpoint chain"},
+    {"commit":"4ae97dffd1f76ed3244b8f3028560ffa80663caf","path":"claims/lemmas/L-93783-target-lorenz-has-an-explicit-typed-leaf-marginal-and-current-only-row-bonus.md","blob":"4ddef8f256b2f24da06eb849f721b8d4853566e4","role":"typed Target-Lorenz leaf"},
+    {"commit":"4ae97dffd1f76ed3244b8f3028560ffa80663caf","path":"claims/lemmas/L-93784-the-explicit-typed-leaves-compile-to-one-native-feasible-common-parent.md","blob":"27663d8fa4378743372a04ea60be52d8d3b5c92d","role":"Target-Lorenz common parent"},
+    {"commit":"bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74","path":"claims/lemmas/L-93602-complete-arithmetic-vector-lorenz-theorem.md","blob":"10de1bb7d0103fb856b3d76c981f2cf012598e9e","role":"complete AVLT"},
+    {"commit":"bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74","path":"claims/lemmas/L-91720-target-lorenz-is-the-exact-common-source-vector-primal-dual.md","blob":"58bbf6982251389592cf09528e3b252f090c2922","role":"exact Target-Lorenz optimizer"},
+    {"commit":"d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6","path":"claims/lemmas/L-91682-complete-arithmetic-causal-profile-and-lorenz-cutoffs.md","blob":"c4782482950f0b0bdf32cddb05d0d41aff32bfaf","role":"live causal atom formulas and profile order"},
+    {"commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","path":"claims/lemmas/L-91377-full-mobius-row-has-the-exact-native-capacity-and-benchmark.md","blob":"64a05d49643d461febd164b173b7896bcf3516aa","role":"native normalization"},
+    {"commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","path":"imports/t91850/frozen/claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md","blob":"270333b3587f691aafb26d62e6e29f4c37e3eff5","role":"positive integration and q/4q commutation"},
+    {"commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","path":"claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md","blob":"6f08ad402d43039ab37a63289c314ec68c74325c","role":"all-column comparison"},
+    {"commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","path":"claims/lemmas/L-91756-one-shot-root-slack-below-61000.md","blob":"e76a85fd2bc5da385ebc7701bbda5b1de1f99fce","role":"native cost ledger"},
+    {"commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","path":"claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md","blob":"809b950e9b8d05db8fd688bd6d358046dc2c33da","role":"actual stopping-line children"},
+    {"commit":"dfaa70cd2eefcabbf6717e3da060792904c7f357","path":"claims/lemmas/L-91333-balanced-reserve-paired-channels-have-an-exact-least-prime-source-partition.md","blob":"468c3790af7471ca019dff411d6571fc735a773d","role":"paired source tree"},
+    {"commit":"dfaa70cd2eefcabbf6717e3da060792904c7f357","path":"claims/lemmas/L-91402-paired-source-stopping-line-regrouping.md","blob":"4f07a9f38ac89eec72bda30c54594caca7fecd04","role":"source-tree regrouping"}
+  ],
+  "forbidden_shortcuts": [
+    "single Volterra row scalar used as complete SHARP target/score feature",
+    "row-first P61 rough lift used as native parent",
+    "full native child capacity inferred from endpoint scale",
+    "different source coefficients by coordinate or channel",
+    "signed comparison treated as positive source",
+    "branchwise detail before common q and 4q sums",
+    "J_Lambda(X)-4sqrt(X) upper-bound bridge"
+  ]
+}
