@@ -1,0 +1,139 @@
+{
+  "audited_prs": [
+    {
+      "head": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "mutable": false,
+      "pr": 488
+    },
+    {
+      "head": "0bb487c8a0782f601be0a3041743b357ad93726a",
+      "mutable": false,
+      "pr": 489
+    }
+  ],
+  "benchmark_bridge_used": false,
+  "classification": "CANDIDATE_COMPLETE_UNCONDITIONAL_ON_FROZEN_INPUTS_REVIEW_REQUIRED",
+  "controlling_bound": "493951/8 < 61744",
+  "imports": [
+    {
+      "blob": "4435271b43aadc2933817fc7965a52bde2b394f6",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91840-restriction-before-quadrature-closes-partial-cell-ownership.md"
+    },
+    {
+      "blob": "813fffd0d686d542416d0a6f95a736e972d68552",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91843-sequential-source-ledger-produces-the-corrected-native-root-identity.md"
+    },
+    {
+      "blob": "525e74ea7177754ea05e646e276476a74b20bc77",
+      "commit": "0bb487c8a0782f601be0a3041743b357ad93726a",
+      "path": "claims/lemmas/L-92880-factor67-root-hall-closes-the-finite-common-source-row-gain-gate.md"
+    },
+    {
+      "blob": "4952b4f1597377acf0e8cb592493c88208e121cc",
+      "commit": "0bb487c8a0782f601be0a3041743b357ad93726a",
+      "path": "claims/lemmas/L-92881-actual-factor67-common-parent-has-an-exact-native-capacity-ledger.md"
+    },
+    {
+      "blob": "2f58ad6b9dd78211923381a0383456c2eabafca9",
+      "commit": "0bb487c8a0782f601be0a3041743b357ad93726a",
+      "path": "claims/lemmas/L-92883-one-positive-reserve-pays-every-root-correction-at-logarithmic-native-cost.md"
+    },
+    {
+      "blob": "809b950e9b8d05db8fd688bd6d358046dc2c33da",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md"
+    },
+    {
+      "blob": "723fd87ffc6fc6378d5c89328ad244744e34bfe8",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91375-positive-typed-causal-generators-have-target-mass-debt-at-most-two.md"
+    },
+    {
+      "blob": "a13a1eb80eaae15b5b29057d928ee1ed347ed55e",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91732-factor67-direct-integrals-have-actual-target-normalized-children.md"
+    },
+    {
+      "blob": "6f08ad402d43039ab37a63289c314ec68c74325c",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md"
+    },
+    {
+      "blob": "5c270b48bfbced3a106c299240a1593cb4394c23",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91737-factor67-retained-root-target-mass-is-below-3020.md"
+    },
+    {
+      "blob": "5f741cc4db4f78d1ea64e055ee286f1bffe2e460",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91751-positive-causal-packets-form-a-hereditary-closed-class.md"
+    },
+    {
+      "blob": "fec5faf530abcbb6358f9a11c02d9c2443b5d615",
+      "commit": "39d2cbc7cabf31ac1f8013f2f6d1785c86a4fdeb",
+      "path": "claims/lemmas/L-91754-exact-measurable-whole-cell-hall-integration.md"
+    },
+    {
+      "blob": "e76a85fd2bc5da385ebc7701bbda5b1de1f99fce",
+      "commit": "39d2cbc7cabf31ac1f8013f2f6d1785c86a4fdeb",
+      "path": "claims/lemmas/L-91756-one-shot-root-slack-below-61000.md"
+    },
+    {
+      "blob": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md"
+    },
+    {
+      "blob": "d6ff62992b4ff6ac19a5b10713b5f2defe40a951",
+      "commit": "5acd9007b4f4bb1792466f5013c39bf4eac33f9e",
+      "path": "claims/lemmas/L-19885-radix-four-dual-sparsity-makes-factor67-root-errors-summable.md"
+    },
+    {
+      "blob": "07ab23971e6096f7e8b45543d9ec87b420a3e0b4",
+      "commit": "116d0ffb42602d5711abdba15aeb3ba9de076984",
+      "path": "claims/lemmas/L-19887-elementary-chebyshev-bound-makes-factor67-sqrt-thinning-native-cost-bounded.md"
+    },
+    {
+      "blob": "bfe7b71eb2db0a2ad4d987e75b43d5872fc84d37",
+      "commit": "ed566f3198e236c54ba18049181016536f56d456",
+      "path": "claims/lemmas/L-90020-prime-square-occupancy-gap-is-minus-one-minus-zeta-half.md"
+    },
+    {
+      "blob": "9c93dc10bb12d85785d16f4643dd81d3070c0043",
+      "commit": "ed566f3198e236c54ba18049181016536f56d456",
+      "path": "claims/theorems/T-90011-subquadratic-complete-prime-power-parabolic-gap-is-equivalent-to-rh.md"
+    },
+    {
+      "blob": "21eae10025b03b724233d49ea09fbc90f4aa66fd",
+      "commit": "906b5a477a1ed7c88a40db7569924f15f3d54b72",
+      "path": "claims/theorems/T-90008-undifferenced-prime-endpoint-negativity-is-equivalent-to-rh.md"
+    }
+  ],
+  "intended_branch": "research/gpt56-pro/92900-two-ledger-terminal-child-closure",
+  "internal_unrealized_children_used": false,
+  "new_files_sha256": {
+    "claims/lemmas/L-92900-two-ledger-source-observation-composition.md": "b7020c8b9271327f817f7dbd6dd2776d00bdec07ec0fbde61373f0caecf0fe34",
+    "claims/lemmas/L-92901-factor67-two-ledger-root-cost-below-60989.md": "efaa373af9c6febc1467e216d2fad6a6b489f90892a0411b29a08903d5c583d4",
+    "claims/lemmas/L-92902-first-generation-children-terminalize-below-6039-over-8.md": "c8033803fe06d035bec560f9391df605189a354b1551d02f2f4b074a9ff3c674",
+    "claims/observations/O-92900-route-disposition-and-terminal-child-frontier.md": "4fb3e57e62d424f12baccedbeaa2fec78eb4298ffb7e9dfcd543d71a90bb8210",
+    "claims/refutations/R-92900-signed-defect-is-not-unused-positive-source.md": "115b7cabf9ce9d933d05dacab226d5ed9a2f777f010a6642d8f2de03b6bd0ef4",
+    "claims/theorems/T-92900-two-ledger-terminal-child-factor67-proposal.md": "53969faf318b8b7682d05dd946b8b91d65397a32255b3565037cd07f84735f48",
+    "experiments/X-92900-two-ledger-terminal-child/README.md": "abed0ccf6ae86cf9a41e21c9dcbe9df98ecda7f954b1d4716b1653f16805195f",
+    "experiments/X-92900-two-ledger-terminal-child/results/verification.json": "55b4e26bb48d187034890a6f05fb0fb3d8be79455b6454b915591489f844ced9",
+    "experiments/X-92900-two-ledger-terminal-child/tests/test_verify.py": "493526b8ca29c03a72668d186f6faf39c350dc7293406e62a5a53d1c3e8e07d9",
+    "experiments/X-92900-two-ledger-terminal-child/verify.py": "85758a1bf9f81878e7696bc8ee987f21f408e383a21cb950ee7ecd7c4f5acdda",
+    "integration/2026-08-15/t92900-publication-handoff.md": "e07adeadc161d9e828cded2bcdeb6f502465a6e6224eb7af9c6dc91ca55b794c",
+    "reports/gpt56-pro/2026-08-15-pr488-pr489-falsification-and-terminal-child-repair.md": "cda80ec63617cbdb9754b01b0c9e1a378508fdb079b2745a12a5579bca0679ff",
+    "standalone/2026-08-15-two-ledger-terminal-child/CLAIM_STATUS.md": "35f85ef8bbef1c8f9abbf2b23dd194f6d87838382beaec13619ff52aec798f8b",
+    "standalone/2026-08-15-two-ledger-terminal-child/README.md": "61664da92a19f2d2f72cba9230d175a5cb3f4b0947e5dd89cf7ab19d5409a2e0",
+    "standalone/2026-08-15-two-ledger-terminal-child/REVIEW_SPECIFICATION.md": "b83ed4a02bd0dae7ca98065f8fb1a1f612bfd8024d9f60906b55c8e1d850f23f"
+  },
+  "publication_base_pr": 488,
+  "publication_base_sha": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+  "recursive_tree_used": false,
+  "repository": "gfreund123/riemann",
+  "rh_status": "unproved pending independent review",
+  "schema": "riemann.t92900.two-ledger-terminal-child.lock.v1"
+}
