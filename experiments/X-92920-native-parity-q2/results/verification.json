@@ -1,0 +1,63 @@
+{
+  "content_ledger": {
+    "entries": 20,
+    "ledger_sha256": "fc24616a351d843e68719ee8df4f5ef6791a6d0d061d3db1ba83f1f8af2cad7e"
+  },
+  "manifest": {
+    "dependency_count": 18,
+    "required_paths": 7
+  },
+  "mutations_caught": {
+    "drop_orientation": true,
+    "duplicate_owner": true,
+    "forbidden_benchmark_bridge": true,
+    "label_dependent_quantizer": true,
+    "promote_full_capacity": true,
+    "q2_budget_not_strict": true,
+    "wrong_base_pin": true
+  },
+  "ok": true,
+  "paired_normalization": {
+    "full_capacity_promotion": false,
+    "native": [
+      "11",
+      "17",
+      "23",
+      "29"
+    ],
+    "orientation_retained": true,
+    "output": [
+      "11",
+      "17",
+      "23",
+      "29"
+    ],
+    "reservoir": [
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    "rough_lift": [
+      "13",
+      "20",
+      "28",
+      "36"
+    ]
+  },
+  "proof_object_sha256": "6f18cd9f0c459ee8a41483cecfd777c65c63dba738d0a611b213d8e0302e5458",
+  "q2": {
+    "K": 149253731343284,
+    "X": 10000000000000000,
+    "correction_upper": "2800576272675862505353999298560006479/1164003263915522800000000000000000000000",
+    "ideal_rough_excess_lower": "31048691/254522375",
+    "separator": "109/1200",
+    "sqrt_K_lower": 12216944,
+    "verdict": "PASS_EXACT_CONDITIONAL_Q2_ROUGH_LIFT_SEPARATOR"
+  },
+  "rh_proved": false,
+  "root_cost": 60989,
+  "schema": "riemann.t92920.native-parity-q2.v1",
+  "scope": "exact normalization algebra, q=2 directed rational separator, finite ownership and publication authentication; frozen analytic and endpoint inputs require independent reconstruction",
+  "verdict": "PASS_NATIVE_PARITY_Q2_NORMALIZATION_COMPILER"
+}
