@@ -1,0 +1,41 @@
+{
+  "base_pr": 494,
+  "base_sha": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c",
+  "compatible_inputs": {
+    "pr508": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr509": "e01daee9cdfea35d2a7d2591f1df6c8080084119"
+  },
+  "constants": {
+    "adjacent_den": 2,
+    "adjacent_num": 19,
+    "claimed_bound": 61000,
+    "collar": 200,
+    "combined_den": 4,
+    "combined_num": 971,
+    "detail_den": 4,
+    "detail_num": 171,
+    "nonterminal_cost": 4,
+    "omission_cost": 1,
+    "ordinary_den": 2,
+    "ordinary_num": 57,
+    "relative": 129,
+    "rho_denominator": 8,
+    "rho_numerator": 1,
+    "terminal_cost": 48972,
+    "terminal_overfill": 4452,
+    "terminal_reserve": 5033,
+    "thinning_cost": 12012,
+    "thinning_shift": 130,
+    "total_cost": 60989
+  },
+  "forbidden": [
+    "finite equality row equals continuum Volterra row",
+    "signed defect is a positive source packet",
+    "actual child response promoted to full child capacity",
+    "shared ancestry proves the common input",
+    "J_Lambda(X)-4sqrt(X)=O(log X)"
+  ],
+  "packet": "T-93880",
+  "review_pr": 502,
+  "review_sha": "db45b778d8c26e03ef1ad6b6f48959638be28b7c"
+}
