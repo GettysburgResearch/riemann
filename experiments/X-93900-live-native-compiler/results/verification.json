@@ -1,0 +1,23 @@
+{
+  "classification": "PASS_LIVE_NATIVE_SOURCE_TO_PHYSICAL_ROW_COMPILER",
+  "detail": 870,
+  "mutations_rejected": [
+    "drop-occurrence",
+    "duplicate-owner",
+    "break-channel",
+    "different-coefficients",
+    "rough-lift",
+    "branchwise-detail",
+    "negative-bonus",
+    "signed-as-source",
+    "full-child-promotion",
+    "benchmark-bridge"
+  ],
+  "native_deficit_bound": 60989,
+  "occurrences": 229,
+  "ordinary": 870,
+  "proof_object_sha256": "16ae2c8fac446ca0043e729b4804d3761348a493705378d889f43fa06d1a6913",
+  "rh_established": false,
+  "rows": 870,
+  "verification_sha256": "e52677c9a20e7f1d3a2ae87d2371c6d37e5b1e8dd4638832fd8dff733ccf692f"
+}
