@@ -1,0 +1,20 @@
+{
+  "classification": "FAIL_L91763_INFINITESIMAL_CAUSAL_GENERATOR_POSITIVITY",
+  "directed_interval": {
+    "coarse_certificate": "-184291/10^9 < D < -184290/10^9 < 0",
+    "lower_decimal": "-0.000184290451709773350064541167",
+    "lower_fraction": "-79295867811673735846641099562967000707339877738693618579004929011187/430276593692176034054992320918698110900119089694900000000000000000000000",
+    "sqrt_denominator": 1000000000000000000000000,
+    "upper_decimal": "-0.000184290451709773350060969736",
+    "upper_fraction": "-10879393063761636557948324856811783507172947757791692766891729802176831/59033948654566551872344955504357841703526675959250700000000000000000000000"
+  },
+  "exact_expression": "4 + 15*sqrt(14)/13 - 15*sqrt(15)/7 - 1/(91*sqrt(1005)) - (15*sqrt(14)-14*sqrt(15))/(13*sqrt(67))",
+  "proof_object_sha256": "e68063f61782dce2ffe7b513b04e7a852cd442db6a686f2c0f24f992427f5258",
+  "scope": "exact rational interval certificate for p_1005(14)-67^(-1/2)p_15(14); no large sweep",
+  "witness": {
+    "child_endpoint": 15,
+    "p": 67,
+    "parent_endpoint": 1005,
+    "row": 14
+  }
+}
