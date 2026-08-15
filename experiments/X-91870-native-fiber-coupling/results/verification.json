@@ -1,0 +1,34 @@
+{
+  "audits": {
+    "mobius_convolution_checks": 5000,
+    "q4_checks": 15360,
+    "separator_lower": "1/816",
+    "squarefree_owner_checks": 3042
+  },
+  "classification": "PASS_NATIVE_FIBER_PHYSICAL_COUPLING_91870",
+  "exact_rational_certificate": true,
+  "fixture_cost": "460135995223/679317789150",
+  "hostile_mutations_rejected": 18,
+  "mutations": [
+    "rough-lift-parent",
+    "missing-native-occurrence",
+    "duplicate-owner",
+    "bad-first-owner",
+    "odd-underfill",
+    "even-overdraw",
+    "double-child-coefficient",
+    "bad-placement-mass",
+    "missing-cell",
+    "label-quantizer",
+    "bad-quantizer",
+    "drop-small-q",
+    "branchwise-detail",
+    "capacity-overdraw",
+    "signed-as-source",
+    "cost-falsified",
+    "wrong-endpoint-orientation",
+    "benchmark-bridge"
+  ],
+  "proof_object_sha256": "44e823fca8b694c812e99009087250b281fe5518f1167b0943962d49c133b8af",
+  "scientific_status": "candidate on frozen analytic inputs; RH unproved"
+}
