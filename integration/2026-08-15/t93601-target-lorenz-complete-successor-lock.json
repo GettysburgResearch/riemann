@@ -1,0 +1,175 @@
+{
+  "schema": "riemann.target-lorenz.complete-successor-lock.v1",
+  "created_utc": "2026-08-15T14:20:57Z",
+  "repository": "gfreund123/riemann",
+  "main_at_cutoff": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+  "origin": {
+    "pull_request": 468,
+    "branch": "research/gpt56-pro/91381-euler-shell-recovery",
+    "head": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+    "tree": "6d95c29b72aa0cfc1e92436e61742e07b559a54f"
+  },
+  "successor": {
+    "branch": "research/gpt56-pro/93600-target-lorenz-complete-successor",
+    "normative_content_commit": "9421eb45bcd10f0b7cdf4881a7adddbc295c8b64"
+  },
+  "frozen_dependencies": [
+    {
+      "claim": "L-91780",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91780-proportional-determinant-reduces-target-lorenz-row-gain.md",
+      "blob": "aeddda0288be0b8f5484d75e5bdee20c2ce4d70f"
+    },
+    {
+      "claim": "L-91781",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91781-compact-real-parameter-proportional-avlt-through-166000.md",
+      "blob": "2c16327c6653009667fa06ddbb24628ff583c0fe"
+    },
+    {
+      "claim": "L-91782",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91782-p61-tail-parity-determinant-has-seven-fourths-reserve.md",
+      "blob": "56f3c67166bdd7e118690c2eff443fb3789330ea"
+    },
+    {
+      "claim": "L-91682",
+      "commit": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+      "path": "claims/lemmas/L-91682-complete-arithmetic-causal-profile-and-lorenz-cutoffs.md",
+      "blob": "c4782482950f0b0bdf32cddb05d0d41aff32bfaf"
+    },
+    {
+      "claim": "L-91684",
+      "commit": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6",
+      "path": "claims/lemmas/L-91684-target-lorenz-producer-and-single-row-gate.md",
+      "blob": "87179be63afacad808b7def50f507ee542062018"
+    },
+    {
+      "claim": "L-91720",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91720-target-lorenz-is-the-exact-common-source-vector-primal-dual.md",
+      "blob": "58bbf6982251389592cf09528e3b252f090c2922"
+    },
+    {
+      "claim": "L-91362",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md",
+      "blob": "809b950e9b8d05db8fd688bd6d358046dc2c33da"
+    },
+    {
+      "claim": "L-91650",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91650-causal-coefficient-budget-and-child-mass-contraction.md",
+      "blob": "16d6ef678fe172c6add5886cae55773d165d23f8"
+    },
+    {
+      "claim": "L-91107",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91107-continuum-endpoint-inverse-is-the-reciprocal-zeta-equality-weight.md",
+      "blob": "d32f2b29398afa816ff2a52e8bf72f589d5e1a23"
+    },
+    {
+      "claim": "L-91110",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91110-positive-martingale-bspline-quantization-is-score-favorable.md",
+      "blob": "7597e989eb2501c6f8a3dd2db77e72fa7fd5acf0"
+    },
+    {
+      "claim": "L-91364",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91364-p61-canonical-finite-euler-row-is-globally-nonnegative.md",
+      "blob": "073a4faf35fb72722b55d8fff7a665ea51c42091"
+    },
+    {
+      "claim": "L-91733",
+      "commit": "005ae49723898d8661d407a0433a6d69cb6d6efc",
+      "path": "claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md",
+      "blob": "6f08ad402d43039ab37a63289c314ec68c74325c"
+    },
+    {
+      "claim": "L-19885",
+      "commit": "5acd9007b4f4bb1792466f5013c39bf4eac33f9e",
+      "path": "claims/lemmas/L-19885-radix-four-dual-sparsity-makes-factor67-root-errors-summable.md",
+      "blob": "d6ff62992b4ff6ac19a5b10713b5f2defe40a951"
+    },
+    {
+      "claim": "L-91377",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91377-full-mobius-row-has-the-exact-native-capacity-and-benchmark.md",
+      "blob": "64a05d49643d461febd164b173b7896bcf3516aa"
+    },
+    {
+      "claim": "L-91378",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md",
+      "blob": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d"
+    },
+    {
+      "claim": "L-91379",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91379-finite-euler-row-is-the-native-row-plus-an-exact-rough-reservoir.md",
+      "blob": "1f8c3bdac1a33454685960e05d8f8b062503d81c"
+    },
+    {
+      "claim": "L-91380",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/lemmas/L-91380-zero-native-detail-slack-forces-the-full-mobius-row.md",
+      "blob": "5bf6448f30652e2c35d66f23f7d82ee17c7ce0b3"
+    },
+    {
+      "claim": "T-91313",
+      "commit": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+      "path": "claims/theorems/T-91313-explicit-endpoint-deficit-to-rh-consumer.md",
+      "blob": "ac39938db2c684a001c98d3f858dd950af781b59"
+    }
+  ],
+  "review_inputs": [
+    {
+      "pr": 490,
+      "head": "6f46c7c0422c957162f094c21f210bf43fc85d4a",
+      "warning": "common endpoint packet and actual aggregate port demand must be derived"
+    },
+    {
+      "pr": 491,
+      "head": "f5fb4ce0ca0954fdfc7bf90077df4f9473ecc030",
+      "warning": "actual child responses cannot be promoted to full child capacities without a positive completion"
+    },
+    {
+      "pr": 492,
+      "head": "9be030febf71135efbbb8a997f6cee2335ed719a",
+      "warning": "mismatch, collar and taper are signed observation data rather than positive source stages"
+    }
+  ],
+  "branch_movement_observed": [
+    {
+      "pr": 493,
+      "head": "37f14d47b4b82c53cf6a14aa02ef58c51e311ef5",
+      "disposition": "independent sibling; not imported"
+    },
+    {
+      "pr": 494,
+      "head": "146855b4e91157dd9dbb9307c187623848d7c04e",
+      "disposition": "independent sibling; not imported"
+    }
+  ],
+  "replays": [
+    {
+      "experiment": "X-93600-target-lorenz-tail",
+      "verdict": "PASS_COMPLETE_TARGET_LORENZ_TAIL_AVLT",
+      "proof_object_sha256": "e30b0e4e08802002b160ddfaaefebb4b6ab8aa5a3562785fc854cc93f4101aa0"
+    },
+    {
+      "experiment": "X-93601-target-lorenz-native-endpoint",
+      "verdict": "PASS_TARGET_LORENZ_TWO_LEDGER_NATIVE_ENDPOINT_PACKET",
+      "proof_object_sha256": "7207cbe3b241173e02d3c9a346056df861801522e4633675ecc2740711f96f02"
+    }
+  ],
+  "proof_boundary": {
+    "complete_avlt": "candidate complete on frozen compact/tail inputs",
+    "common_parent": "explicit positive direct integral on frozen tree/frame inputs",
+    "native_feasibility": "candidate complete on frozen all-column/terminal estimates",
+    "native_y4_cost": "candidate complete; <61000",
+    "endpoint_consumer": "frozen conditional",
+    "riemann_hypothesis": "unproved pending hostile independent reconstruction"
+  }
+}
