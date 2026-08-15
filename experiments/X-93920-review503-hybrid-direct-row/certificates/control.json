@@ -1,0 +1,45 @@
+{
+  "schema": "riemann.x93920.review503-hybrid-direct-row.control.v1",
+  "genealogy": {
+    "pr495_sha": "50f45b46cbe3c471d6e702c41c7ef178b530e1ab",
+    "review503_sha": "db77e5792966edf080604fd4b69fb00f07739681",
+    "pr508_sha": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr352_sha": "906b5a477a1ed7c88a40db7569924f15f3d54b72",
+    "pr353_sha": "ed566f3198e236c54ba18049181016536f56d456",
+    "pr509_sha": "e01daee9cdfea35d2a7d2591f1df6c8080084119"
+  },
+  "route": {
+    "preserved_claims": ["L-91760", "L-91761", "L-91762"],
+    "forbidden_claims": ["L-91763", "T-92910"],
+    "uses_derivative_fibre_causal_generator": false,
+    "uses_rough_lift_as_parent_marginal": false,
+    "uses_bulk_quantizer": false,
+    "uses_pr509_as_confirmation": false,
+    "anchored_target_lorenz_import": true,
+    "ordinary_and_4q_share_one_row": true,
+    "small_q_included": true,
+    "finite_dual_orientation": "F_Lambda<=native_deficit",
+    "forbidden_benchmark_bridge": true,
+    "exported_children": 0,
+    "auxiliary_port": 0
+  },
+  "constants": {
+    "minimum_X": 1000000000000,
+    "top_anchor_sqrt_multiplier": 6,
+    "top_anchor_additive": 4,
+    "relative_mismatch_constant": 23,
+    "thinning_shift": 24,
+    "thinning_native_cost_bound": 3456,
+    "mismatch_native_cost_bound": 1,
+    "total_native_deficit_bound": 3457
+  },
+  "mandatory_witness": {
+    "p": 67,
+    "child_endpoint": 15,
+    "parent_endpoint": 1005,
+    "row": 14,
+    "coarse_lower_numerator": -184291,
+    "coarse_upper_numerator": -184290,
+    "coarse_denominator": 1000000000
+  }
+}

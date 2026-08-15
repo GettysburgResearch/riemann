@@ -1,0 +1,13 @@
+{
+  "schema": "riemann.t93920.genealogy.v1",
+  "base": {"pr": 495, "sha": "50f45b46cbe3c471d6e702c41c7ef178b530e1ab"},
+  "review": {"pr": 503, "sha": "db77e5792966edf080604fd4b69fb00f07739681"},
+  "anchored_import": {"pr": 508, "sha": "4ae97dffd1f76ed3244b8f3028560ffa80663caf"},
+  "endpoint_imports": [
+    {"pr": 352, "sha": "906b5a477a1ed7c88a40db7569924f15f3d54b72"},
+    {"pr": 353, "sha": "ed566f3198e236c54ba18049181016536f56d456"}
+  ],
+  "comparison_only": {"pr": 509, "sha": "e01daee9cdfea35d2a7d2591f1df6c8080084119"},
+  "preserved": ["L-91760", "L-91761", "L-91762"],
+  "forbidden": ["L-91763", "T-92910"]
+}
