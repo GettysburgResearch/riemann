@@ -1,0 +1,81 @@
+{
+  "arithmetic_class": "EXACT_FRACTION",
+  "classification": "PASS_TARGET_LORENZ_TYPED_LEAF_COMMON_PARENT_NATIVE_LEDGER",
+  "common_ordinary_before_detail_identity": true,
+  "current_only_bonus_has_zero_source_target_by_type": true,
+  "exported_recursive_family_size": 0,
+  "fixture_count": 512,
+  "mutation_checks": {
+    "benchmark_bridge_inserted": true,
+    "bonus_given_positive_source_target": true,
+    "detail_before_common_ordinary_with_changed_coefficient": true,
+    "duplicate_owner": true,
+    "full_child_capacity_promoted": true,
+    "nonzero_port_in_declared_operation_set": true,
+    "row_specific_target_lorenz_coefficient": true,
+    "signed_error_called_positive_source": true
+  },
+  "native_charge_classes": {
+    "large_x_base": 0,
+    "nonterminal_signed": 4,
+    "port": 0,
+    "positive_omissions": 1,
+    "terminal_signed": 48972,
+    "thinning": 12012
+  },
+  "native_charge_total": 60989,
+  "ordinary_feasibility_from_positive_radix_inverse": true,
+  "proof_object_sha256": "9257bb9697ec2a09fcc6b55906cf6274f067f622e328d9a67230d6c725834636",
+  "replay_scope": "exact compiler and ownership algebra; does not prove L-91781, the directed tail, the endpoint-frame density, all-column analytic estimates, or RH",
+  "rh_established_by_replay": false,
+  "root_port_demand": 0,
+  "same_target_lorenz_coefficients_in_all_coordinates": true,
+  "sample_fixture": {
+    "bonus": [
+      "2/11",
+      "3/11",
+      "4/11",
+      "5/11",
+      "1/11",
+      "2/11"
+    ],
+    "ideal_xi": [
+      "4245/11",
+      "4245/88",
+      "1415/176"
+    ],
+    "label": "(1001, ('67',), 67, 2, 1)",
+    "native_cost": "2699537/52800",
+    "native_slack": [
+      "7641/200",
+      "3113/640",
+      "42167/52800"
+    ],
+    "nu": [
+      "0",
+      "1/2",
+      "1"
+    ],
+    "row": [
+      "750/11",
+      "828/11",
+      "906/11",
+      "984/11",
+      "1057/11",
+      "1135/11"
+    ],
+    "score_slack": "2/7",
+    "signed_error": [
+      "849/2200",
+      "-283/7040",
+      "283/52800"
+    ],
+    "u": [
+      "1",
+      "1/2",
+      "0"
+    ]
+  },
+  "signed_observation_ledger_separate": true,
+  "unique_leaf_owner_count": 512
+}

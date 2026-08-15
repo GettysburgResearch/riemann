@@ -1,0 +1,86 @@
+{
+  "compact_freeze": {
+    "L-91781_blob": "2c16327c6653009667fa06ddbb24628ff583c0fe",
+    "domain": "x<166000",
+    "result_blob": "2fda156232fc9d4e9ae36066870b613270161166"
+  },
+  "controlling_proposal": {
+    "base_head": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+    "base_pr": 468,
+    "branch": "research/gpt56-pro/93600-target-lorenz-complete-successor",
+    "content_manifest_blob": "02486e13672ebfe682004ce72ffe78df0a932ba2",
+    "head": "bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74",
+    "pr": 497
+  },
+  "corrected_live_heads": {
+    "490": "6f46c2cf4e84d51c744263f7e92a0e1743de5148",
+    "491": "f5fb88c80f56e0b4e221c90f6362cf20413db02f",
+    "492": "9be030febf71135efbbb8a997f6cee2335ed719a",
+    "493": "37f14be7c8bd16b3096baf08f6ba2cbc550797ac",
+    "494": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c"
+  },
+  "created_utc": "2026-08-15T19:09:43Z",
+  "endpoint_consumer_cross_branch_freeze": {
+    "pr352": {
+      "L-90004_blob": "17036c42170750956743555458104bdbada954e4",
+      "L-90006_blob": "201de91c1f38334da7dc54cab04f78a8720c4bd6",
+      "T-90008_blob": "21eae10025b03b724233d49ea09fbc90f4aa66fd",
+      "head": "906b5a477a1ed7c88a40db7569924f15f3d54b72"
+    },
+    "pr353": {
+      "L-90020_blob": "bfe7b71eb2db0a2ad4d987e75b43d5872fc84d37",
+      "T-90011_blob": "9c93dc10bb12d85785d16f4643dd81d3070c0043",
+      "head": "ed566f3198e236c54ba18049181016536f56d456"
+    }
+  },
+  "intended_successor": {
+    "branch": "research/gpt56-pro/93780-target-lorenz-directed-hardening",
+    "claim_range": "93780--93785",
+    "theorem_range": "93780--93781"
+  },
+  "local_proof_objects": {
+    "content_manifest_sha256": "dc6c5cbe9bb7d1ba890b0e840408a09eab8653a68542a77664bef49fe6358de9",
+    "directed_tail_proof_object": "1f7d06a686a378da950da3cf41250ed97077e7afb9886740b7d114bfcf624dbb",
+    "directed_tail_result_sha256": "b9bdf66618c023f9dde25634536cabfb0482005cf5141f990804120923ca25ec",
+    "typed_ledger_proof_object": "9257bb9697ec2a09fcc6b55906cf6274f067f622e328d9a67230d6c725834636",
+    "typed_ledger_result_sha256": "fe45678772ca73a6f2bf160ae78272584573f4437029c9f2f63e997536ab353b"
+  },
+  "pr497_claim_blobs": {
+    "L-93600": "36a4b94417f0b93ec26f356fe0e5de530c20c1e2",
+    "L-93601": "14a371e5734d5d2c10cdb2738e263fd22d3202cd",
+    "L-93602": "10de1bb7d0103fb856b3d76c981f2cf012598e9e",
+    "L-93603": "4d3b5ce87fede185ac016ef1a0ac4ed5f1c888b5",
+    "L-93604": "47e65c66989afc1252672d70dd442f4d2a284956",
+    "L-93605": "a2f689c10c21dd7f7a3bfab3f11a60a99834f15a",
+    "R-93600": "b9c949c177377a63574e03ebb9333c7bca703525",
+    "T-93600": "7aa655ddfbca4845b0e6733e2a8aa98b7378a01c",
+    "T-93601": "3741f18782e8366eccb2cd7e00f8091fe05ea208"
+  },
+  "producer_dependencies": {
+    "L-19885_blob": "d6ff62992b4ff6ac19a5b10713b5f2defe40a951",
+    "L-91107_blob": "d32f2b29398afa816ff2a52e8bf72f589d5e1a23",
+    "L-91110_blob": "7597e989eb2501c6f8a3dd2db77e72fa7fd5acf0",
+    "L-91362_blob": "809b950e9b8d05db8fd688bd6d358046dc2c33da",
+    "L-91378_blob": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d",
+    "L-91650_blob": "16d6ef678fe172c6add5886cae55773d165d23f8",
+    "L-91720_blob": "58bbf6982251389592cf09528e3b252f090c2922",
+    "L-91733_blob": "6f08ad402d43039ab37a63289c314ec68c74325c",
+    "T-91313_blob": "ac39938db2c684a001c98d3f858dd950af781b59"
+  },
+  "proof_boundary": {
+    "common_parent_native": "candidate complete on frozen frame/all-column estimates",
+    "compact_theorem": "frozen directed import",
+    "directed_tail": "proved on PR497 analytic formula",
+    "endpoint_consumer": "cross-branch frozen conditional",
+    "riemann_hypothesis": "unproved pending hostile independent reconstruction",
+    "row66_extremality": "proved for certificate minima",
+    "typed_leaf_compiler": "exact algebra conditional on complete AVLT"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.target-lorenz.directed-hardening-lock.v1",
+  "unpublished_93420_provenance": {
+    "disposition": "superseded by PR497; do not publish",
+    "patch_sha256": "f3515ba65699bd5eafb833b6dfce3f03e48d0aeb0768335ee6e9436e341b021f",
+    "zip_sha256": "6f217d537a30f2e8fc4516946caa87b97e8f3ba41a0ee988a6bb4744c93a5921"
+  }
+}
