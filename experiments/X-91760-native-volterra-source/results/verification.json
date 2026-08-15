@@ -1,0 +1,92 @@
+{
+  "causal_child_sum": "7/128",
+  "negative_total": "9",
+  "observation_results": {
+    "detail": [
+      "-1/6",
+      "-121/70"
+    ],
+    "ordinary": [
+      "29/6",
+      "1013/70"
+    ],
+    "row": [
+      "41/15",
+      "-121/70"
+    ]
+  },
+  "positive_density": "14",
+  "positive_total": "23",
+  "proof_boundary": "Exact rational regression for the formal Volterra atom identity, rank-one source coupling, finite/continuum/mismatch observations, literal source restriction, rough/root disjointness, subcritical child mass, and the positive-source/signed-observation two-ledger residual. It does not certify the frozen analytic reserve stack, endpoint consumer, or RH.",
+  "proof_object_sha256": "783da11279e2dde564081af770f9bea976b34e400b54fc4c31f1d6a228c20bee",
+  "residual_weights": [
+    "70/23",
+    "98/23",
+    "154/23"
+  ],
+  "root_labels": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    10,
+    30,
+    61
+  ],
+  "rough_labels": [
+    67,
+    71,
+    73
+  ],
+  "rough_volterra_jacobian": [
+    {
+      "coefficient": "1/18",
+      "m": "1"
+    },
+    {
+      "coefficient": "1/36",
+      "m": "4"
+    },
+    {
+      "coefficient": "1/54",
+      "m": "9"
+    }
+  ],
+  "schema": "riemann.x91760-native-volterra-source.v1",
+  "source_partition": {
+    "bottom": "2",
+    "retained": "14",
+    "top": "3",
+    "total": "19"
+  },
+  "two_ledger_residual": [
+    "4",
+    "9",
+    "6"
+  ],
+  "verdict": "PASS_NATIVE_VOLTERRA_RANK_ONE_COMMON_PARENT_SOURCE",
+  "volterra_cases": [
+    {
+      "constant_coefficient": "16",
+      "log_Y_over_n_coefficient": "-4",
+      "sqrt_Y": "6",
+      "sqrt_k": "1",
+      "sqrt_n": "2"
+    },
+    {
+      "constant_coefficient": "12",
+      "log_Y_over_n_coefficient": "-3",
+      "sqrt_Y": "9",
+      "sqrt_k": "2",
+      "sqrt_n": "3"
+    },
+    {
+      "constant_coefficient": "32/3",
+      "log_Y_over_n_coefficient": "-8/3",
+      "sqrt_Y": "12",
+      "sqrt_k": "3",
+      "sqrt_n": "4"
+    }
+  ]
+}
