@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.t92910-native-volterra-source-lock.v1",
+  "created": "2026-08-15",
+  "base_pr": 493,
+  "base_sha": "37f14be7c8bd16b3096baf08f6ba2cbc550797ac",
+  "review_pr": 492,
+  "new_claims": [
+    "L-91760",
+    "L-91761",
+    "L-91762",
+    "L-91763",
+    "O-91760",
+    "T-92910"
+  ],
+  "experiment": "X-91760-native-volterra-source",
+  "expected_verdict": "PASS_NATIVE_VOLTERRA_RANK_ONE_COMMON_PARENT_SOURCE",
+  "expected_digest": "783da11279e2dde564081af770f9bea976b34e400b54fc4c31f1d6a228c20bee",
+  "rh_established": false,
+  "review_boundary": "New source identities and their instantiation of the frozen causal source ledger require independent reconstruction; PR #493 closing constants and endpoint inputs are not re-certified by this lock."
+}
