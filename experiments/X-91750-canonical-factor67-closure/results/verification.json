@@ -1,0 +1,117 @@
+{
+  "common_parent": {
+    "coefficient_sum": "1/12",
+    "coefficients": [
+      "1/20",
+      "1/30"
+    ],
+    "native_vector": [
+      "587/30",
+      "523/30",
+      "473/20",
+      "267/20",
+      "214/15",
+      "733/60"
+    ],
+    "parent_typed_vector": [
+      "587/30",
+      "523/30",
+      "473/20",
+      "267/20",
+      "169/15",
+      "433/60"
+    ],
+    "port_children_zero": true,
+    "root_delta": "21",
+    "root_slack": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "3",
+      "5"
+    ],
+    "source_atoms": 8,
+    "verdict": "PASS_EXACT_COMMON_PARENT_PACKET_AND_CAPACITY_IDENTITY"
+  },
+  "endpoint": {
+    "complete_gap_limsup": "0",
+    "prime_endpoint_limsup": "-1/5",
+    "synthetic_positive_moat": "1/5",
+    "verdict": "PASS_ONE_SIDED_NATIVE_DEFICIT_TO_PRIME_ENDPOINT_SIGN_ALGEBRA"
+  },
+  "hereditary_class": {
+    "complete_descendant_deficit_bound": "6600/7",
+    "depth_ratios": [
+      "2",
+      "9/4",
+      "73/32",
+      "585/256",
+      "4681/2048",
+      "37449/16384",
+      "299593/131072",
+      "2396745/1048576",
+      "19173961/8388608",
+      "153391689/67108864",
+      "1227133513/536870912",
+      "9817068105/4294967296",
+      "78536544841/34359738368",
+      "628292358729/274877906944",
+      "5026338869833/2199023255552",
+      "40210710958665/17592186044416",
+      "321685687669321/140737488355328",
+      "2573485501354569/1125899906842624",
+      "20587884010836553/9007199254740992",
+      "164703072086692425/72057594037927936",
+      "1317624576693539401/576460752303423488",
+      "10540996613548315209/4611686018427387904",
+      "84327972908386521673/36893488147419103232",
+      "674623783267092173385/295147905179352825856",
+      "5396990266136737387081/2361183241434822606848"
+    ],
+    "first_generation_child_mass": "825/2",
+    "root_mass_bound": "3300",
+    "uniform_ratio_bound": "16/7",
+    "verdict": "PASS_HEREDITARY_POSITIVE_CAUSAL_PACKET_CLASS"
+  },
+  "native_cost": {
+    "all_column_square_witness": "8485569 < 8520192",
+    "amplified_error": "1/1840",
+    "formal_y4_support_checks": 8191,
+    "nonzero_y4_columns": 1568,
+    "normalized_reserve": "1/230",
+    "terminal_margin": 581,
+    "thinning_log_coefficient": "4290",
+    "verdict": "PASS_DIRECT_NATIVE_Y4_COST_AND_RESERVE_FIREWALL"
+  },
+  "one_shot_total_row": {
+    "causal_coefficient_sum": "1/12",
+    "children_reprocessed": false,
+    "common_thinning": "9/10",
+    "final_total_row": [
+      "1859/200",
+      "321/50",
+      "1121/200",
+      "93/25"
+    ],
+    "native_delta": "13",
+    "native_slack": [
+      "0",
+      "0",
+      "2",
+      "3"
+    ],
+    "verdict": "PASS_ONE_SHOT_COMMON_PARENT_TERMINALIZES_CHILD_COLOURS"
+  },
+  "proof_boundary": {
+    "all_column_endpoint_estimates": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "pr481_two_packets": "ONE_FACTOR67_METHOD",
+    "pr482_pr484_reviews": "ACCEPTED_AT_FROZEN_HEADS",
+    "prime_square_and_landau": "FROZEN_ANALYTIC_RECONSTRUCTION_REQUIRED",
+    "riemann_hypothesis": "PROPOSAL_PENDING_INDEPENDENT_REVIEW",
+    "root_hall_and_profile": "FROZEN_RECONSTRUCTION_REQUIRED"
+  },
+  "proof_object_sha256": "769c91efbb6c170974dbfd60a6dab115cc5194b912234fa1897ac0b939b96345",
+  "schema": "riemann.t91751.canonical-factor67-closure.v2",
+  "verdict": "PASS_CANONICAL_FACTOR67_ONE_SHOT_NATIVE_ENDPOINT_ALGEBRA"
+}
