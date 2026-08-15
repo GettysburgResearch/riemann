@@ -1,0 +1,38 @@
+{
+  "schema": "riemann.review.pr505-pr507.exact-head.v1",
+  "repository": "gfreund123/riemann",
+  "review_base": {
+    "branch": "main",
+    "commit": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+    "tree": "6285c0ec5fa5eee91a4d4ab779bc9117b9ecc0ea"
+  },
+  "shared": {
+    "pr496": {
+      "commit": "96f8a6b3cc3d474217633e16d4caa490a0aae518",
+      "tree": "aa9933522d3e4dd0ee8287c6dcfcce2f03c015bc"
+    },
+    "pr500": {
+      "commit": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+      "tree": "72421c74d9d5f92aa4c36e5ad571b29442aad42b"
+    }
+  },
+  "targets": {
+    "pr505": {
+      "commit": "1113fe6d55e955a8d9de7b43ceb24f5792870550",
+      "tree": "8f6ffe32961062e1c53e2bcba1415fa51d7ead6f",
+      "parent": "d73c1e7a1a482cac31581211a84db43cc34c824e"
+    },
+    "pr507": {
+      "commit": "dfaa70cd2eefcabbf6717e3da060792904c7f357",
+      "tree": "f8fdef949b85ebe0be5a1e745da33241b426731d",
+      "content_commit": "dc69e84c9f72a2d32eb13957815e2d02b6303a93",
+      "content_tree": "b1e863c529980393499b1bc1227e290369e0f61d",
+      "base": "d73c1e7a1a482cac31581211a84db43cc34c824e"
+    }
+  },
+  "validation": {
+    "verdict": "PASS_EXACT_ORIENTED_CHILD_Q2_NEGATIVE_COORDINATE_OBSTRUCTION",
+    "proof_object_sha256": "ddd7c681300e6b4400c509811148998a18488e4511ba181a847e97c095296694"
+  },
+  "rh_proved": false
+}
