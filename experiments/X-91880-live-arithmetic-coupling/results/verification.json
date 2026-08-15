@@ -1,0 +1,59 @@
+{
+  "anchored_replacement": {
+    "classification": "HIGH_PRECISION_DIAGNOSTIC_ONLY__FROZEN_AVLT_IS_THE_PROOF",
+    "cutoff": 133,
+    "cutoff_fraction": "0.156105760624364601544158107080566830205592738248293849123677",
+    "minimum_row": 66,
+    "minimum_row_reserve": "0.0095574237414383338110108251310024523467621155643527554934432",
+    "p": 67,
+    "parent": 1005,
+    "score_reserve": "2.888770392403921853554327026879354507292836159039773070880",
+    "y": 15
+  },
+  "bulk_rank_one": {
+    "active_colours": 23,
+    "all_colours_below_67": true,
+    "negative_mass": "15.27152487607934437663045416990725576718264336056792783041553697190628",
+    "positive_mass": "16.10292109661454699476033688713501458329448594663689849320623198694975",
+    "residual_mass": "0.83139622053520261812988271722775881611184258606897066279069501504347",
+    "x": "36"
+  },
+  "classification": "PASS_LIVE_ARITHMETIC_COUPLING_91880",
+  "frozen_pr509_head": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+  "hostile_mutations_rejected": [
+    "infinitesimal_causal",
+    "bulk_rough_owner",
+    "synthetic_anchored_leaf",
+    "coordinate_dependent_coefficients",
+    "duplicate_owner",
+    "double_path_coefficient",
+    "label_dependent_quantizer",
+    "partial_cell",
+    "branchwise_detail",
+    "small_q_missing",
+    "signed_as_source",
+    "bad_endpoint_orientation",
+    "benchmark_bridge"
+  ],
+  "native_charge": {
+    "nonterminal": 4,
+    "omissions": 1,
+    "terminal": 48972,
+    "thinning": 12012
+  },
+  "native_charge_total": 60989,
+  "pr503_witness": {
+    "coarse": "-184291/10^9 < D < -184290/10^9 < 0",
+    "lower": "-79295867811673735846641099562967000707339877738693618579004929011187/430276593692176034054992320918698110900119089694900000000000000000000000",
+    "upper": "-10879393063761636557948324856811783507172947757791692766891729802176831/59033948654566551872344955504357841703526675959250700000000000000000000000"
+  },
+  "proof_object_sha256": "e044d1bbf2170bd8e8d71eacfd4799341822c49ab8e2b3629e1aee7e51f660f3",
+  "rh_established_by_replay": false,
+  "scope": "Exact PR503 interval, exact structural algebra, high-precision actual bulk/anchored arithmetic diagnostics, and fail-closed type mutations. The replay does not replace the frozen directed AVLT, all-column analytic estimates, prime-square theorem, Mellin transform or Landau theorem.",
+  "structural_fixture": {
+    "coordinate_record_count": 8,
+    "fixture_y4_cost": "1097501795427627297893319446227/1406010891919281381637886782800",
+    "q4_identity_count": 63,
+    "small_q_covered": [2,3,4,5,6,7]
+  }
+}
