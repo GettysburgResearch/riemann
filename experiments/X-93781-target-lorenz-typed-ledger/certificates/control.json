@@ -1,0 +1,36 @@
+{
+  "schema": "riemann.target_lorenz.typed_leaf_native_ledger.control.v1",
+  "base_pr": 497,
+  "base_head": "bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74",
+  "leaf_type": {
+    "positive_source": "nu=E-U",
+    "current_only_physical_bonus": "B=R(U)-R(O)",
+    "score_surplus": "sigma=S(O)-S(U)",
+    "target_identity": "T(nu)=T(E)-T(O)",
+    "row_identity": "R(nu)+B=R(E)-R(O)"
+  },
+  "operation_order": [
+    "exact stopped leaf and unique first owner",
+    "one Target-Lorenz coefficient vector",
+    "positive omissions",
+    "one common thinning",
+    "one common pushforward",
+    "one positive global quantizer",
+    "common ordinary sum at q and 4q",
+    "radix-four detail",
+    "signed observation comparison",
+    "native numerical complement"
+  ],
+  "native_charge_classes": {
+    "thinning": 12012,
+    "nonterminal_signed_comparison": 4,
+    "terminal_signed_comparison": 48972,
+    "positive_omissions": 1,
+    "root_port": 0,
+    "large_x_base": 0,
+    "total": 60989
+  },
+  "exported_recursive_family_size": 0,
+  "root_port_demand": 0,
+  "rh_established": false
+}
