@@ -1,0 +1,34 @@
+{
+  "schema": "t92920-import-manifest-v1",
+  "repository": "gfreund123/riemann",
+  "frozen_pr496_head": "96f8a6b3cc3d474217633e16d4caa490a0aae518",
+  "base_pr500_head": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+  "intended_branch": "research/gpt56-pro/92920-native-parity-q2-compiler",
+  "dependencies": [
+    {"path":"claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md","blob_sha":"809b950e9b8d05db8fd688bd6d358046dc2c33da","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"paired stopping-line source identity"},
+    {"path":"claims/lemmas/L-91377-full-mobius-row-has-the-exact-native-capacity-and-benchmark.md","blob_sha":"64a05d49643d461febd164b173b7896bcf3516aa","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"native normalization"},
+    {"path":"claims/lemmas/L-91379-finite-euler-row-is-the-native-row-plus-an-exact-rough-reservoir.md","blob_sha":"1f8c3bdac1a33454685960e05d8f8b062503d81c","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"rough-lift identity"},
+    {"path":"claims/lemmas/L-91361-multiplicative-source-children-embed-by-same-index-scaling.md","blob_sha":"d87a6272ada8e12be2e1abaffb81cbe3ffe9bd77","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"actual child placement"},
+    {"path":"claims/lemmas/L-91650-causal-coefficient-budget-and-child-mass-contraction.md","blob_sha":"16d6ef678fe172c6add5886cae55773d165d23f8","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"causal coefficient identity"},
+    {"path":"claims/lemmas/L-91654-causal-generators-are-complete-admissible-endpoint-data.md","blob_sha":"3b05866c86d6c239ddf212652830ac253c9df41d","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"positive physical causal rows"},
+    {"path":"claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md","blob_sha":"270333b3587f691aafb26d62e6e29f4c37e3eff5","source_commit":"2eb70463f3d0ae791a9f140694d2ace7032ae864","role":"positive linear composition"},
+    {"path":"claims/lemmas/L-91688-rough-prime-deletion-gives-an-exact-first-owner-reservoir-partition.md","blob_sha":"99c8458f57aa2b9c889360f36d85d6a9e22d695e","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"native versus rough first ownership"},
+    {"path":"claims/lemmas/L-91690-factor67-target-hall-is-a-source-owned-root-thinning.md","blob_sha":"1b14f531bbe7fb3a56397414d666c669252c4a02","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"root Hall/profile theorem"},
+    {"path":"claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md","blob_sha":"6f08ad402d43039ab37a63289c314ec68c74325c","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"all-column comparison"},
+    {"path":"claims/lemmas/L-91754-exact-measurable-whole-cell-hall-integration.md","blob_sha":"fec5faf530abcbb6358f9a11c02d9c2443b5d615","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"whole-cell common quantizer"},
+    {"path":"claims/lemmas/L-91756-one-shot-root-slack-below-61000.md","blob_sha":"e76a85fd2bc5da385ebc7701bbda5b1de1f99fce","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"native cost ledger"},
+    {"path":"claims/lemmas/L-91850-source-owned-physical-coupling-compiler.md","blob_sha":"316ab03d5e6eb4c1724b5a142761942a3d307c4f","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"physical coupling base"},
+    {"path":"claims/lemmas/L-91851-factor67-one-shot-is-one-coupling-output-marginal.md","blob_sha":"1b193b73a577a003b2c46075377b17fdb362f63b","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"one-shot actual-child implementation"},
+    {"path":"claims/lemmas/L-91853-physical-coupling-native-slack-cost-below-60989.md","blob_sha":"1bec3f65d2c60c7c44de2010fb88a6339157df79","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"direct physical-coupling cost"},
+    {"path":"claims/theorems/T-91750-one-sided-native-deficit-consumer-implies-rh-without-a-benchmark-bridge.md","blob_sha":"0e918637615607e9d7132dfd39c163ba2a5236ef","source_commit":"d73c1e7a1a482cac31581211a84db43cc34c824e","role":"endpoint consumer"},
+    {"path":"claims/lemmas/L-91760-native-mobius-row-has-an-exact-rank-one-volterra-source-disintegration.md","blob_sha":"f6add3a702a4c6d741522854af2b12311e28bd56","source_commit":"50f45b46cbe3c471d6e702c41c7ef178b530e1ab","role":"independent native Volterra normalization cross-check"},
+    {"path":"claims/lemmas/L-91761-rank-one-mobius-cancellation-is-source-owned-and-rough-disjoint.md","blob_sha":"bb1db9f5f866de07113ab568f4891c237bdecc6a","source_commit":"50f45b46cbe3c471d6e702c41c7ef178b530e1ab","role":"independent rank-one source ownership cross-check"}
+  ],
+  "forbidden_substitutions": [
+    "rough lift equals native packet",
+    "actual child response equals full native child capacity",
+    "orientation bit may be erased before physical placement",
+    "signed finite comparison is positive source",
+    "J_Lambda(X)-4sqrt(X) upper bound"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.t92920.native-parity-q2.v1",
+  "repository": "gfreund123/riemann",
+  "frozen_pr496_head": "96f8a6b3cc3d474217633e16d4caa490a0aae518",
+  "base_pr500_head": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+  "intended_branch": "research/gpt56-pro/92920-native-parity-q2-compiler",
+  "x0": 10000000000000000,
+  "rough_prime": 67,
+  "sqrt_k_lower": 12216944,
+  "inverse_sqrt67_num": 61,
+  "inverse_sqrt67_den": 500,
+  "rough_excess_num": 7,
+  "rough_excess_den": 75,
+  "correction_budget_num": 1,
+  "correction_budget_den": 400,
+  "separator_num": 109,
+  "separator_den": 1200,
+  "top_width": 10002,
+  "root_cost": 60989,
+  "expected_verdict": "PASS_NATIVE_PARITY_Q2_NORMALIZATION_COMPILER"
+}
