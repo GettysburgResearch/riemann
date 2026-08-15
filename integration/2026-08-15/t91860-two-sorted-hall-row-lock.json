@@ -1,0 +1,60 @@
+{
+  "claim": "T-91860",
+  "created_utc": "2026-08-15",
+  "forbidden_inputs": [
+    "Hall bonus as a complete target-null declared-score packet",
+    "J_Lambda(X)-4sqrt(X) as a pre-RH estimate"
+  ],
+  "frozen_dependency_blobs": {
+    "L-91545": "9f4c4c3c7a5a7cd4ec8fcb48ac56a07dc29f16a4",
+    "L-91690": "1b14f531bbe7fb3a56397414d666c669252c4a02",
+    "L-91733": "6f08ad402d43039ab37a63289c314ec68c74325c",
+    "L-91754": "fec5faf530abcbb6358f9a11c02d9c2443b5d615",
+    "L-91755": "4d504038bc8b00e8bbd95997241ced67b14b897f",
+    "L-91756": "e76a85fd2bc5da385ebc7701bbda5b1de1f99fce",
+    "T-91750": "0e918637615607e9d7132dfd39c163ba2a5236ef"
+  },
+  "frozen_heads": {
+    "494": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c",
+    "499": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+    "500": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+    "501": "ab5bd0ffc7a8092d62e879431dbd9f295f79f072"
+  },
+  "load_bearing_files": [
+    "claims/refutations/R-91860-target-null-hall-bonus-is-row-only.md",
+    "claims/lemmas/L-91860-two-sorted-hall-fibre.md",
+    "claims/lemmas/L-91861-one-block-realization-of-two-sorted-fibre.md",
+    "claims/lemmas/L-91862-same-row-all-column-complement.md",
+    "claims/lemmas/L-91863-same-row-direct-y4-cost-below-60989.md",
+    "claims/theorems/T-91860-two-sorted-hall-row-factor67-successor.md",
+    "experiments/X-91860-two-sorted-hall-row/verify.py"
+  ],
+  "one_row_identifier_required": true,
+  "publication": {
+    "base_branch": "research/gpt56-pro/91820-positive-common-parent-response-complement",
+    "base_pr": 499,
+    "base_sha": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+    "draft_pr": 506,
+    "head_branch": "research/gpt56-pro/91860-two-sorted-hall-row-successor",
+    "head_resolution": "read the full remote branch ref and draft PR head; no self-referential SHA is embedded"
+  },
+  "repository": "gfreund123/riemann",
+  "status": "candidate-complete successor proposal on frozen inputs; RH unproved pending hostile reconstruction",
+  "type_firewall": {
+    "row_sort": [
+      "target-null Hall bonus",
+      "anchored finite row"
+    ],
+    "signed_observation": [
+      "finite/continuum comparison",
+      "bulk collar",
+      "terminal comparison"
+    ],
+    "source_sort": [
+      "Hall residual",
+      "rough first owner",
+      "causal current",
+      "internal child source"
+    ]
+  }
+}
