@@ -1,0 +1,97 @@
+{
+  "composition": {
+    "one_shot_exported_sum": "0",
+    "recursive_coefficient_sum": "1/12",
+    "synthetic_delta": "20",
+    "verdict": "PASS_CORRECTED_NATIVE_ROOT_COMPOSITION"
+  },
+  "first_owner": {
+    "coefficient_sum": "13/120",
+    "owner_counts": {
+      "67": 18,
+      "71": 6,
+      "73": 2
+    },
+    "residual": 1,
+    "verdict": "PASS_FIRST_OWNER_RESTRICTED_CHILD_OPERATORS"
+  },
+  "mutations_caught": [
+    "full_cell_for_partial",
+    "duplicate_owner",
+    "shared_port_overdraw",
+    "duplicate_stage_owner",
+    "drop_unused",
+    "benchmark_bridge",
+    "drop_child_capacity"
+  ],
+  "native_cost": {
+    "benchmark_bridge_used": false,
+    "classes": {
+      "base": 0,
+      "nonterminal": 4,
+      "omissions": 1,
+      "port": 0,
+      "terminal": 48972,
+      "thinning": 12012
+    },
+    "strict_bound": 61000,
+    "total": 60989,
+    "verdict": "PASS_DIRECT_Y4_COST_LEDGER"
+  },
+  "partial_cells": {
+    "carry_q2": "7/12",
+    "retained_cells": {
+      "4": "1/4",
+      "5": "-1/18",
+      "6": "0",
+      "7": "-1/16",
+      "8": "1/3"
+    },
+    "verdict": "PASS_RESTRICTION_BEFORE_QUADRATURE"
+  },
+  "port": {
+    "aggregate_surplus": [
+      [
+        "159/4",
+        "6/5"
+      ],
+      [
+        "6/5",
+        "234/5"
+      ]
+    ],
+    "classes": 6,
+    "verdict": "PASS_COMPLETE_SIX_CLASS_COMMON_PORT",
+    "y4_port_cost": "0"
+  },
+  "proof_boundary": {
+    "analytic_hall_capacity_consumer": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "base_pr487_head": "39d2cbc7cabf31ac1f8013f2f6d1785c86a4fdeb",
+    "review_pr484_head": "aadf3541f9959e27a5e0eea890a13a8eb0467b01",
+    "riemann_hypothesis": "UNPROVED_PENDING_REVIEW"
+  },
+  "proof_object_sha256": "d956cc27339e5c0207a8955cfb0f63d2561b63079c96926d6956b904dbd64e43",
+  "schema": "riemann.t91840.pr484-exact-root-composition.v1",
+  "sequential_ledger": {
+    "atoms": 28,
+    "native_vector": [
+      "203/50",
+      "203/25",
+      "609/50",
+      "406/25",
+      "203/10",
+      "609/25"
+    ],
+    "root_slack": [
+      "28/25",
+      "56/25",
+      "84/25",
+      "112/25",
+      "28/5",
+      "168/25"
+    ],
+    "stages": 14,
+    "verdict": "PASS_FOURTEEN_STAGE_SOURCE_LEDGER"
+  },
+  "verdict": "PASS_PR484_EXACT_ROOT_COMPOSITION_RECOVERY"
+}
