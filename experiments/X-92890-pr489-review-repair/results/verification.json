@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "base_pin": true,
+    "endpoint_moat_landau": true,
+    "full_capacity_promotion_removed": true,
+    "native_cost": true,
+    "required_paths": true,
+    "terminal_margin": true,
+    "zero_port_decompiled": true
+  },
+  "mutations": {
+    "base_fails": true,
+    "full_capacity_fails": true,
+    "nonzero_port_fails": true,
+    "terminal_fails": true,
+    "total_fails": true
+  },
+  "ok": true,
+  "proof_object_sha256": "00a84210d9d89e067142c68aa797d5e0750798f6c977926219497c06400b8464",
+  "rh_proved": false,
+  "scope": "finite algebra, constants, file/pin authentication; analytic Hall, endpoint and Mellin inputs require independent reconstruction",
+  "verdict": "PASS_PR489_REVIEW_REPAIRED_ONE_SHOT_PACKET"
+}

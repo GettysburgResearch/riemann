@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "cells": 66,
+      "classification": "PASS_EQUALITY_AND_RESERVE_STATE_POSITIVE_THROUGH_67",
+      "minimum_L_cell": 32,
+      "minimum_L_decimal": 0.3186174007676585,
+      "minimum_L_endpoint": 33,
+      "minimum_L_safe_rational": "159/500",
+      "minimum_R_cell": 1,
+      "minimum_R_decimal": 0.41421356237309503,
+      "minimum_R_safe_rational": "2/5"
+    },
+    {
+      "classification": "PASS_FACTOR67_ROOT_TARGET_HALL",
+      "minimum_decimal": 0.3593176605985002,
+      "minimum_safe_rational": "7/20",
+      "minimum_threshold": 13,
+      "odd_thresholds": 22,
+      "uniform_rational_margin": "7/20",
+      "worst_endpoint": 67
+    },
+    {
+      "classification": "PASS_TARGET_HALL_SCORE_AND_ROW_ORDER_INTERFACE",
+      "consequence": "no-upward target Hall is score-superordinate and all-row-superordinate",
+      "row_per_target_input": "L-91682: Q_Y(j)/(4 sqrt(Y)-3) is increasing",
+      "score_per_target_derivative": "-3/(4z-3)^2 < 0"
+    },
+    {
+      "C67_decimal_upper": 18.471726914982252,
+      "C67_upper": "19",
+      "adjacent_mismatch": "(19/2) n^(-3/2)",
+      "chosen_safety_factor": "1/(1+178/K)",
+      "classification": "PASS_FACTOR67_FINITE_CONTINUUM_AND_TERMINAL_CONSTANTS",
+      "detail_mismatch": "(285/8) q^(-3/2)",
+      "interior_relative_constant": "5655/32",
+      "interior_safe_integer_constant": 177,
+      "ordinary_mismatch": "(57/2) q^(-3/2)",
+      "terminal_overfill_upper_coefficient": 4452,
+      "top_omission_lower_coefficient": 5033
+    },
+    {
+      "bound": "sum alpha_i < 1/sqrt(67) < 1/8",
+      "classification": "PASS_FACTOR67_SUBCRITICAL_COEFFICIENT_GATE",
+      "integer_square_witness": "64 < 67"
+    },
+    {
+      "classification": "PASS_FINITE_CONTINUUM_FIREWALL_RETAINED",
+      "decimal": 0.16218665660596915,
+      "safe_rational_lower": "1/10",
+      "statement": "finite equality seed is not the continuum Volterra seed"
+    }
+  ],
+  "classification": "PASS_FACTOR67_TARGET_HALL_SONTR_ROOT_PACKET",
+  "formal_composition": "target-Hall root fiber + positive endpoint integration + one global quantizer + causal mass <1/8",
+  "proof_object_sha256": "37774aeb5a1843c75ce14b8a0a6c167f743faa60e9582d2939acf6d7addce53a",
+  "rh_established_by_replay": false,
+  "scope": "Exact/directed compact-window and analytic constants. Imported endpoint-frame, positive quantizer, causal reset, common-port and endpoint-consumer theorems require independent reconstruction. The replay alone does not establish SONTR, NRCT, or RH.",
+  "sontr_established_by_replay": false
+}

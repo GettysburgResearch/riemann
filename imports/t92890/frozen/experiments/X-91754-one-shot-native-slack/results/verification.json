@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "constants": {
+      "nonterminal_at_X0": "<4",
+      "omissions_at_X0": "<1",
+      "total_upper": "61000"
+    },
+    "firewalls": {
+      "scan": "PASS"
+    },
+    "one_shot": {
+      "trials": 3000
+    },
+    "y4": {
+      "range": 20000,
+      "zero_columns": 16646
+    }
+  },
+  "classification": "PASS_ONE_SHOT_SONTR_NRCT_HARDENING_ALGEBRA",
+  "nrct_established_by_replay": false,
+  "proof_object_sha256": "f1065b2326671048f6550ed8f216ca29029df58acdb0a39cc4f4293a32c4f418",
+  "rh_established_by_replay": false,
+  "scope": "Finite algebra/constants only; imported Hall, capacity, prime-square and Landau theorems require independent reconstruction.",
+  "sontr_established_by_replay": false
+}

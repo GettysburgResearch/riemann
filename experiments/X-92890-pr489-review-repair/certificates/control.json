@@ -1,0 +1,34 @@
+{
+  "base_pr": 489,
+  "base_sha": "0bb487c8a0782f601be0a3041743b357ad93726a",
+  "constants": {
+    "ceiling": 61000,
+    "claimed_total": 60989,
+    "nonterminal": 4,
+    "omissions": 1,
+    "rough_factor": 67,
+    "terminal": 48972,
+    "terminal_overfill": 4452,
+    "terminal_reserve": 5033,
+    "thinning": 12012
+  },
+  "forbidden_controlling_claims": [
+    "sum_b beta_b U_b Omega_{Y_b}",
+    "positive reserve packet of mass",
+    "J_Lambda(X)-4sqrt(X)=O(log X)"
+  ],
+  "required_paths": [
+    "claims/refutations/R-92890-full-child-capacity-promotion-is-removed.md",
+    "claims/lemmas/L-92890-gate-a-children-terminalize-by-their-actual-responses.md",
+    "claims/lemmas/L-92891-whole-cell-one-shot-row-is-native-feasible.md",
+    "claims/lemmas/L-92892-one-shot-correction-stack-has-zero-schur-demand.md",
+    "claims/lemmas/L-92893-direct-native-slack-cost-is-below-61000.md",
+    "claims/theorems/T-92890-native-deficit-below-61000-implies-rh.md",
+    "claims/theorems/T-92891-pr489-review-repaired-one-shot-resolution-proposal.md",
+    "standalone/2026-08-15-92890-pr489-review-repair/REVIEW_SPECIFICATION.md"
+  ],
+  "review_prs": {
+    "490": "6f46c2cf4e84d51c744263f7e92a0e1743de5148",
+    "491": "f5fb88c80f56e0b4e221c90f6362cf20413db02f"
+  }
+}
