@@ -1,0 +1,89 @@
+{
+  "base_branch": "research/gpt56-pro/91850-physical-coupling-compiler",
+  "base_pr": 500,
+  "base_sha": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+  "base_tree": "72421c74d9d5f92aa4c36e5ad571b29442aad42b",
+  "imports": [
+    {
+      "blob": "316ab03d5e6eb4c1724b5a142761942a3d307c4f",
+      "commit": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+      "path": "claims/lemmas/L-91850-source-owned-physical-coupling-compiler.md",
+      "role": "abstract coupling"
+    },
+    {
+      "blob": "1b193b73a577a003b2c46075377b17fdb362f63b",
+      "commit": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+      "path": "claims/lemmas/L-91851-factor67-one-shot-is-one-coupling-output-marginal.md",
+      "role": "predecessor factor67 instantiation"
+    },
+    {
+      "blob": "f6add3a702a4c6d741522854af2b12311e28bd56",
+      "commit": "50f45b46cbe3c471d6e702c41c7ef178b530e1ab",
+      "path": "claims/lemmas/L-91760-native-mobius-row-has-an-exact-rank-one-volterra-source-disintegration.md",
+      "role": "native Volterra source"
+    },
+    {
+      "blob": "bb1db9f5f866de07113ab568f4891c237bdecc6a",
+      "commit": "50f45b46cbe3c471d6e702c41c7ef178b530e1ab",
+      "path": "claims/lemmas/L-91761-rank-one-mobius-cancellation-is-source-owned-and-rough-disjoint.md",
+      "role": "bulk rank-one Hall"
+    },
+    {
+      "blob": "809b950e9b8d05db8fd688bd6d358046dc2c33da",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md",
+      "role": "native stopping line"
+    },
+    {
+      "blob": "99c8458f57aa2b9c889360f36d85d6a9e22d695e",
+      "commit": "4ac821701177edb67a77fe43e89cc2a7a53af68a",
+      "path": "claims/lemmas/L-91688-rough-prime-deletion-gives-an-exact-first-owner-reservoir-partition.md",
+      "role": "first-owner audit"
+    },
+    {
+      "blob": "10de1bb7d0103fb856b3d76c981f2cf012598e9e",
+      "commit": "bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74",
+      "path": "claims/lemmas/L-93602-complete-arithmetic-vector-lorenz-theorem.md",
+      "role": "all-parameter positive leaf row"
+    },
+    {
+      "blob": "4d3b5ce87fede185ac016ef1a0ac4ed5f1c888b5",
+      "commit": "bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74",
+      "path": "claims/lemmas/L-93603-target-lorenz-leaf-identities-give-a-concrete-positive-common-parent.md",
+      "role": "anchored leaf integration"
+    },
+    {
+      "blob": "617b89e2eaba3a6e5a01c74a8328536b5b5dd321",
+      "commit": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+      "path": "claims/lemmas/L-91821-whole-cell-integration-and-one-labelled-quantizer.md",
+      "role": "anchored plus bulk quantizer"
+    },
+    {
+      "blob": "fd8d22afa8092e269680034fd8f4512b8b4b1dde",
+      "commit": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+      "path": "claims/lemmas/L-91822-all-column-nonnegative-response-complements.md",
+      "role": "small-q and all-column capacity"
+    },
+    {
+      "blob": "ffc93b6ca65a7a501390597d875ff6c2e44e0128",
+      "commit": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+      "path": "claims/lemmas/L-91823-direct-native-y4-cost-of-response-complement.md",
+      "role": "native Y4 cost"
+    },
+    {
+      "blob": "8cc30c1d4b8121415ff4b0f880d1bdf7ad8f0bae",
+      "commit": "96f8a6b3cc3d474217633e16d4caa490a0aae518",
+      "path": "claims/lemmas/L-92900-two-ledger-source-observation-composition.md",
+      "role": "source/observation type discipline"
+    },
+    {
+      "blob": "2a393c6fcdce79dab9425bc479853675c013760c",
+      "commit": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+      "path": "claims/theorems/T-91820-one-sided-response-complement-endpoint-consumer.md",
+      "role": "endpoint consumer"
+    }
+  ],
+  "repository": "gfreund123/riemann",
+  "rh_status": "unproved pending independent review",
+  "successor_branch": "research/gpt56-pro/91870-native-fiber-physical-coupling"
+}
