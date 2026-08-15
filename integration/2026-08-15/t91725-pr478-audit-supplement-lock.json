@@ -1,0 +1,36 @@
+{
+  "artifacts": {
+    "claims/lemmas/L-91732-factor67-direct-integrals-have-actual-target-normalized-children.md": "93373c21d2e10518e51fce3e33d30c92b78fdb71ab07c0945ae1df8d62a446a7",
+    "claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md": "d24f57d6c690aa11d93201fd2d7776e5d9e60c7f82d8bfbbcb5008d762989247",
+    "claims/lemmas/L-91734-activation-knot-collars-have-vanishing-score-by-absolute-continuity.md": "02a8d7a3acd7f32e5432d9533870c7f97022a38e945e0f489f79a5c33bd02baf",
+    "claims/lemmas/L-91735-square-root-thinning-has-logarithmic-native-cost.md": "7a794b569ec3d31a0e03ef2791b755dd81fc4871870b824aea78af06e9d35e57",
+    "claims/lemmas/L-91736-actual-mass-children-obey-the-native-slack-cocycle.md": "34a5a0006b973fe381d408e235298a2ccd8034d1e2521535dc06df3e770f14db",
+    "claims/lemmas/L-91737-factor67-retained-root-target-mass-is-below-3020.md": "3e2c052828f87d53ec2a8d7075bb1772e0c14cfaf4135c5c7bc1544ce98cfacf",
+    "claims/refutations/R-91727-pr478-review-is-locally-correct-but-not-exhaustive.md": "12754a477a3f7d1afdca49bab640cc31458de44359f5ac5f891e4988dc8bec4b",
+    "claims/theorems/T-91725-pr478-audit-supplements-corrected-factor67-proposal.md": "743068b07284cb503f731cc6fd8bbed3867333c07fb6f304fbb92ab58b073d5d",
+    "experiments/X-91732-pr478-audit-supplement/README.md": "d613be8322b4f065e599a7891b497f3206537f67bd8740644984b8a616d9252f",
+    "experiments/X-91732-pr478-audit-supplement/results/verification.json": "0e77a2e25a2575dea67c9568e301be0f9f769b2d908195b93ffdf9edccea58e7",
+    "experiments/X-91732-pr478-audit-supplement/verify.py": "cb0d6d3d2daada36554c2187d13e2af1cbd84b0c6e5ad67cbf49425ce00acd56",
+    "reports/gpt56-pro/2026-08-15-pr478-audit-supplement.md": "e7a3a0699232541641e0c7a6d47a6ebc9f92c413fb89291432ab3b0ef98a5e89"
+  },
+  "base_head_before_supplement": "f41bbd7608cc70bc2a8002d43ef99b5e35977968",
+  "base_pr": 481,
+  "claim": "T-91725",
+  "frozen_inputs": {
+    "pr473": "71d6a859ea741fe035de709e8d10ed37301b778e",
+    "pr477": "5acd9007b4f4bb1792466f5013c39bf4eac33f9e",
+    "pr479": "518b6a5ec2b49b7decbd4c2e349d0ee5b26bfc9b",
+    "pr480": "d6d9c051abb20a47f3ce7adb45de33bfc2b933b9",
+    "pr481_reviewed": "f41bbd7608cc70bc2a8002d43ef99b5e35977968",
+    "pr482": "b8428601ad0f046442558b677e5b3ed3139e7527"
+  },
+  "open_reconstruction_obligations": [
+    "concrete post-Hall/post-quantization corrected packet equality",
+    "instantiated complete common-port demand",
+    "exact Y4 pairing of terminal/base/port corrections",
+    "frozen endpoint/WSTS and Mellin-Landau consumer"
+  ],
+  "review_pr": 482,
+  "rh_established": false,
+  "status": "conditional audit supplement; RH unproved"
+}
