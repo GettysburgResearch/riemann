@@ -1,0 +1,104 @@
+{
+  "base_pr": 486,
+  "base_sha": "0d8badeda73626598a74dc3ef009b67a74af3b81",
+  "classification": "FINAL_COMPLETE_RH_PROOF_PROPOSAL_REVIEW_REQUIRED",
+  "files": {
+    "claims/lemmas/L-91754-exact-measurable-whole-cell-hall-integration.md": "3f3d95235464b86ce32ad4c9841cdcdeb410659db20efa52d600854f225d31d0",
+    "claims/lemmas/L-91755-one-shot-port-free-total-row.md": "baa8d62539075d6e519e5644ba971534441087ced029d661486aca4240427e12",
+    "claims/lemmas/L-91756-one-shot-root-slack-below-61000.md": "095327be35f352258dffbc00017f6af5481004031f07ed1bdb992f72b645da00",
+    "claims/observations/O-91754-final-one-shot-sontr-nrct-dag.md": "4e2146fa1a6835f079db821121c28338c79d69db521c140816812f0e92e50603",
+    "claims/refutations/R-91754-benchmark-bridge-is-rh-bearing.md": "9e2aed84d1cb10498b0598ef5b1bfe72bc08eea235e7dd637e9db22c2d771afa",
+    "claims/theorems/T-91752-one-shot-factor67-proves-sontr-nrct.md": "9fbb9125b6ef16f6dc0e2e87750f7db46adb9edb58e72d8755024ac89b0570c5",
+    "experiments/X-91754-one-shot-native-slack/results/verification.json": "c884ad04aaa991fc3b961d171b84febb78ecbdaf1dac4f05cc6ef9c4246462ba",
+    "experiments/X-91754-one-shot-native-slack/verify.py": "a7d2cc7ecfcf77eb930d7f37b8be2b66c3a0db5c2bb0755970630d1a2a17c4b8",
+    "reports/gpt56-pro/2026-08-15-one-shot-exact-root-sontr-nrct.md": "b6c641f7a61c58f34ac28492dc1b82589ade4977675cca6e957f52aaeb5a0b89",
+    "standalone/2026-08-15-one-shot-sontr-nrct/CLAIM_STATUS.md": "044cf77f4210205787cdd4b8bed667c25a00b641d71fd9f857c3e6d3b124dfe3",
+    "standalone/2026-08-15-one-shot-sontr-nrct/README.md": "63a515f141471388817c38514f5d3ee03afda30f523de82544a0e5e54b3f2168",
+    "standalone/2026-08-15-one-shot-sontr-nrct/REVIEW_SPECIFICATION.md": "2550486032816002bea141cdf3dc97cd86fa6608945e17c105041c5e913b739c"
+  },
+  "imports": [
+    {
+      "blob": "1b14f531bbe7fb3a56397414d666c669252c4a02",
+      "commit": "71d6a859ea741fe035de709e8d10ed37301b778e",
+      "path": "claims/lemmas/L-91690-factor67-target-hall-is-a-source-owned-root-thinning.md"
+    },
+    {
+      "blob": "99c8458f57aa2b9c889360f36d85d6a9e22d695e",
+      "commit": "4ac821701177edb67a77fe43e89cc2a7a53af68a",
+      "path": "claims/lemmas/L-91688-rough-prime-deletion-gives-an-exact-first-owner-reservoir-partition.md"
+    },
+    {
+      "blob": "270333b3587f691aafb26d62e6e29f4c37e3eff5",
+      "commit": "2eb70463f3d0ae791a9f140694d2ace7032ae864",
+      "path": "claims/lemmas/L-91674-positive-endpoint-frame-commutes-with-root-hall-and-one-global-quantization.md"
+    },
+    {
+      "blob": "6f08ad402d43039ab37a63289c314ec68c74325c",
+      "commit": "005ae49723898d8661d407a0433a6d69cb6d6efc",
+      "path": "claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md"
+    },
+    {
+      "blob": "7597e989eb2501c6f8a3dd2db77e72fa7fd5acf0",
+      "commit": "71d6a859ea741fe035de709e8d10ed37301b778e",
+      "path": "claims/lemmas/L-91110-positive-martingale-bspline-quantization-is-score-favorable.md"
+    },
+    {
+      "blob": "2b090187db6ca87c632281f38055d35972151316",
+      "commit": "71d6a859ea741fe035de709e8d10ed37301b778e",
+      "path": "claims/lemmas/L-91111-martingale-quantization-collar-is-a-small-positive-seed.md"
+    },
+    {
+      "blob": "40a3f606455d758d1d9e54f37c68bb55822aab6e",
+      "commit": "71d6a859ea741fe035de709e8d10ed37301b778e",
+      "path": "claims/lemmas/L-91114-finite-continuum-mismatch-gains-one-carry-derivative.md"
+    },
+    {
+      "blob": "0f02ba0e67b02c4e5622e76ad64ac0ac1fd9de2d",
+      "commit": "71d6a859ea741fe035de709e8d10ed37301b778e",
+      "path": "claims/lemmas/L-91115-fixed-top-omission-closes-the-terminal-detail-annulus.md"
+    },
+    {
+      "blob": "64a05d49643d461febd164b173b7896bcf3516aa",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/lemmas/L-91377-full-mobius-row-has-the-exact-native-capacity-and-benchmark.md"
+    },
+    {
+      "blob": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d",
+      "commit": "a41f81466f85d52597c97b41505756a8860698d0",
+      "path": "claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md"
+    },
+    {
+      "blob": "d6ff62992b4ff6ac19a5b10713b5f2defe40a951",
+      "commit": "5acd9007b4f4bb1792466f5013c39bf4eac33f9e",
+      "path": "claims/lemmas/L-19885-radix-four-dual-sparsity-makes-factor67-root-errors-summable.md"
+    },
+    {
+      "blob": "07ab23971e6096f7e8b45543d9ec87b420a3e0b4",
+      "commit": "116d0ffb42602d5711abdba15aeb3ba9de076984",
+      "path": "claims/lemmas/L-19887-elementary-chebyshev-bound-makes-factor67-sqrt-thinning-native-cost-bounded.md"
+    },
+    {
+      "blob": "bfe7b71eb2db0a2ad4d987e75b43d5872fc84d37",
+      "commit": "ed566f3198e236c54ba18049181016536f56d456",
+      "path": "claims/lemmas/L-90020-prime-square-occupancy-gap-is-minus-one-minus-zeta-half.md"
+    },
+    {
+      "blob": "9c93dc10bb12d85785d16f4643dd81d3070c0043",
+      "commit": "ed566f3198e236c54ba18049181016536f56d456",
+      "path": "claims/theorems/T-90011-subquadratic-complete-prime-power-parabolic-gap-is-equivalent-to-rh.md"
+    },
+    {
+      "blob": "21eae10025b03b724233d49ea09fbc90f4aa66fd",
+      "commit": "906b5a477a1ed7c88a40db7569924f15f3d54b72",
+      "path": "claims/theorems/T-90008-undifferenced-prime-endpoint-negativity-is-equivalent-to-rh.md"
+    }
+  ],
+  "publication_base_sha": "0d8badeda73626598a74dc3ef009b67a74af3b81",
+  "publication_branch": "research/gpt56-pro/91754-exact-one-shot-sontr-nrct",
+  "repository": "gfreund123/riemann",
+  "reviewed_prs": [
+    482,
+    484
+  ],
+  "rh_status": "unproved pending independent review"
+}
