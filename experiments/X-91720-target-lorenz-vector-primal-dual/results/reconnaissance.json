@@ -1,0 +1,41 @@
+{
+  "classification": "PASS_TARGET_LORENZ_STRUCTURED_RECONNAISSANCE",
+  "minimum_case": {
+    "cutoff": 35,
+    "cutoff_fraction": 0.9115466943424922,
+    "p": 67,
+    "quotient": 1.0151515151515151,
+    "row": 66,
+    "y": 1
+  },
+  "minimum_full_signed_determinant_case": {
+    "cutoff": 35,
+    "p": 67,
+    "quotient": 1.0151515151515151,
+    "row": 66,
+    "y": 1
+  },
+  "minimum_full_signed_determinant_lower_bound_decimal": 0.0019079896612261354,
+  "minimum_margin_decimal": 0.0019079896612261354,
+  "negative_margin_count": 0,
+  "proof_status": "discovery only; binary64 signs do not certify real parameter cells",
+  "record_sha256": "4db44d8259c9d3e9baf4ba54c8740f791d12a2602042ec67c9d4c42a6d51c739",
+  "rh_established_by_replay": false,
+  "scope": {
+    "cases": 17160,
+    "integer_y": [
+      1,
+      66
+    ],
+    "p": [
+      67,
+      71,
+      83,
+      127
+    ],
+    "rows": [
+      2,
+      66
+    ]
+  }
+}

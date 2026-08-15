@@ -1,0 +1,170 @@
+{
+  "claim_renumbering": {
+    "L-91685": "L-91720",
+    "L-91686": "L-91721",
+    "L-91687": "L-91722",
+    "O-91685": "O-91720",
+    "R-91685": "R-91720",
+    "T-91685": "T-91720",
+    "X-91685": "X-91720"
+  },
+  "classification": "T91720_TARGET_LORENZ_VECTOR_LOCK",
+  "created": "2026-08-14",
+  "frozen_dependencies": [
+    {
+      "git_blob": "c4782482950f0b0bdf32cddb05d0d41aff32bfaf",
+      "path": "claims/lemmas/L-91682-complete-arithmetic-causal-profile-and-lorenz-cutoffs.md",
+      "ref": "a41f81466f85d52597c97b41505756a8860698d0"
+    },
+    {
+      "git_blob": "87179be63afacad808b7def50f507ee542062018",
+      "path": "claims/lemmas/L-91684-target-lorenz-producer-and-single-row-gate.md",
+      "ref": "a41f81466f85d52597c97b41505756a8860698d0"
+    },
+    {
+      "git_blob": "809b950e9b8d05db8fd688bd6d358046dc2c33da",
+      "path": "claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md",
+      "ref": "a41f81466f85d52597c97b41505756a8860698d0"
+    },
+    {
+      "git_blob": "723fd87ffc6fc6378d5c89328ad244744e34bfe8",
+      "path": "claims/lemmas/L-91375-positive-typed-causal-generators-have-target-mass-debt-at-most-two.md",
+      "ref": "a41f81466f85d52597c97b41505756a8860698d0"
+    },
+    {
+      "git_blob": "6398026e281b14a1da39de2eb0a119ac583dae27",
+      "path": "claims/theorems/T-91314-native-root-capacity-theorem-is-the-single-remaining-producer.md",
+      "ref": "a41f81466f85d52597c97b41505756a8860698d0"
+    },
+    {
+      "git_blob": "46843ebbd87d84b43e786c3bbe7aeea705f2526e",
+      "path": "claims/lemmas/L-91671-atomwise-provenance-partition-is-the-exact-native-root-ledger-certificate.md",
+      "ref": "a0409d54250bc211d62718a1aedb6fa020d7f091",
+      "source_pr": 454
+    }
+  ],
+  "local_files": [
+    {
+      "path": "REVIEW_HANDOFF_TARGET_LORENZ.md",
+      "sha256": "22fd43faf796b416371f590081ef1cd4104b2c80997c64876da4dd6e4151fef1"
+    },
+    {
+      "path": "audits/gpt56-pro/2026-08-14-target-lorenz-vector-claim-status.md",
+      "sha256": "14f6fc7ee48c237493b769d6c6aa5a0e5a1837d1cff785ae412fe6e829c0e3c9"
+    },
+    {
+      "path": "claims/lemmas/L-91720-target-lorenz-is-the-exact-common-source-vector-primal-dual.md",
+      "sha256": "6e9a35bb8cb24a48f1dad1e7e0bbcaaac4fe8d5d1cc80ef8b3ee1a08eb33d9bf"
+    },
+    {
+      "path": "claims/lemmas/L-91721-target-lorenz-beyond-row-support-equals-the-complete-signed-row.md",
+      "sha256": "b9f1aa5e761284cff7356b88aeed81e5be9598e8941d458e7216ee425ed17605"
+    },
+    {
+      "path": "claims/lemmas/L-91722-target-lorenz-margin-has-a-full-signed-packet-determinant-lower-bound.md",
+      "sha256": "58558f859d6a723c743949552cb02cb3627b74a9c158f43703990ce7ef0cb88b"
+    },
+    {
+      "path": "claims/observations/O-91720-target-lorenz-vector-frontier.md",
+      "sha256": "c056301df16bf107342d192b4b91543f80c0e9477a109e0f20fe04b511d10715"
+    },
+    {
+      "path": "claims/refutations/R-91720-target-cutoff-does-not-collapse-globally-to-one-scalar.md",
+      "sha256": "de69b7ebe9a0115f265f5c14ef2c3f675a449a4a79ece014f038f67fac8f0950"
+    },
+    {
+      "path": "claims/theorems/T-91720-target-lorenz-vector-producer-native-root-resolution-proposal.md",
+      "sha256": "8471c7f9f8db24e7a2efc23a3dea95824a1e65dff24daa5df9babf3182a85ae2"
+    },
+    {
+      "path": "experiments/X-91720-target-lorenz-vector-primal-dual/README.md",
+      "sha256": "0eda92f349dc95d46d8f54872470c9a99fd5a0dda2d39abc751211eebfd59dc8"
+    },
+    {
+      "path": "experiments/X-91720-target-lorenz-vector-primal-dual/SHA256SUMS",
+      "sha256": "63e9749f283005692399c7ab87dfcd6b0e465199cb17bb806d87534b860bb95a"
+    },
+    {
+      "path": "experiments/X-91720-target-lorenz-vector-primal-dual/recon.py",
+      "sha256": "32eb9875621cf6b680573527f2fc345ca3fb497ae0450fa02c17a72c16503807"
+    },
+    {
+      "path": "experiments/X-91720-target-lorenz-vector-primal-dual/results/reconnaissance.json",
+      "sha256": "086a2cfe6f978755ebef55856db45c9967d1965f2388ec55b7b7f73263e60a76"
+    },
+    {
+      "path": "experiments/X-91720-target-lorenz-vector-primal-dual/results/verification.json",
+      "sha256": "ba1c91c4ac3913444d4359280f3e7fa464b146a22467f993e4fcd0d2d2e096bf"
+    },
+    {
+      "path": "experiments/X-91720-target-lorenz-vector-primal-dual/verify.py",
+      "sha256": "b95e57ca99fb5149d00a173e47e4d113ea1e9b200ac05368c41469def59b2657"
+    },
+    {
+      "path": "integration/2026-08-14/t91720-claim-collision-resolution.md",
+      "sha256": "a91502ec747428270f8088f60cc2ce43c7de2a09f35b68973ae9f2894f309bf0"
+    },
+    {
+      "path": "reports/gpt56-pro/2026-08-14-target-lorenz-vector-primal-dual.md",
+      "sha256": "787d83d64477d7667812bf943e1d921a45ab1763920a55337f2cae7e7cd8f0b8"
+    }
+  ],
+  "lock_sha256": "cb4fc2b0fec0fdaef2f01922e5c14e765aeb3dbf566ff729d90759da3cac74cf",
+  "observed_live_descendants": [
+    {
+      "head": "3cf685181bd367b92cdcfeef9249e0b9b542a09e",
+      "pr": 469
+    },
+    {
+      "head": "89af3206ea1894884613e1188b5ab9a6a4cd74f0",
+      "pr": 470
+    },
+    {
+      "head": "4ac821701177edb67a77fe43e89cc2a7a53af68a",
+      "pr": 471
+    },
+    {
+      "head": "71d6a859ea741fe035de709e8d10ed37301b778e",
+      "pr": 473
+    },
+    {
+      "head": "6cba90ea10163abd62b051c83c8bfd8cc2f901da",
+      "pr": 475
+    }
+  ],
+  "origin": {
+    "branch": "research/gpt56-pro/91381-euler-shell-recovery",
+    "original_parent": "a41f81466f85d52597c97b41505756a8860698d0",
+    "pr": 468,
+    "stacked_base": "d5e03a3a63bd05b43abf4b5e37905f86e9ec59d6"
+  },
+  "proof_boundary": {
+    "AVLT": "open_on_target_lorenz_route",
+    "NRCT": "not_accepted_here",
+    "RH": "unproved",
+    "factor67_SONTR": "live_candidate_pr473_review_required",
+    "full_signed_determinant_gate": "proved_sufficient_reduction_signs_open",
+    "one_scalar_cutoff": "refuted_exact",
+    "support_regime_c_ge_py_over_j": "exact_reduction_imported_strict_sign",
+    "vector_primal_dual": "proved_exact"
+  },
+  "renumber_cutoff": "2026-08-14T19:56:18Z",
+  "replays": {
+    "discovery": {
+      "cases": 17160,
+      "classification": "PASS_TARGET_LORENZ_STRUCTURED_RECONNAISSANCE",
+      "minimum_full_signed_determinant_lower_bound_decimal": 0.0019079896612261354,
+      "negative_margin_count": 0,
+      "proof_status": "discovery only; binary64 signs do not certify real parameter cells",
+      "record_sha256": "4db44d8259c9d3e9baf4ba54c8740f791d12a2602042ec67c9d4c42a6d51c739"
+    },
+    "exact": {
+      "classification": "PASS_TARGET_LORENZ_VECTOR_PRIMAL_DUAL",
+      "coordinate_vertex_checks": 27813,
+      "fixtures": 242,
+      "proof_object_sha256": "fc4b6e70a6a05977ecd869e65e9811f1f11efec915ef1c54a4377a9ff0ae3137",
+      "vertex_checks": 9613
+    }
+  },
+  "repository": "gfreund123/riemann"
+}
