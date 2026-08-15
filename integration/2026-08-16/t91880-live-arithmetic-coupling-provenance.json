@@ -1,0 +1,24 @@
+{
+  "frozen_base": {
+    "branch": "research/gpt56-pro/91870-native-fiber-physical-coupling",
+    "head": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+    "pr": 509,
+    "tree": "3b367c4f2817983cec1ad45556ac2d0721a908d9"
+  },
+  "imports": [
+    {"blob":"e5417cde505f7347d618c69f2896aa6f40df092c","commit":"e01daee9cdfea35d2a7d2591f1df6c8080084119","path":"claims/lemmas/L-91870-native-hybrid-source-is-the-exact-input-marginal.md"},
+    {"blob":"839a1d4b21aad2cff68cf4a722d919cd3d7fd831","commit":"e01daee9cdfea35d2a7d2591f1df6c8080084119","path":"claims/lemmas/L-91871-native-source-incidences-first-owners-and-placements-are-one-use.md"},
+    {"blob":"885b3305421d8aa277a3b7c644b3c32b5d6933ed","commit":"db77e5792966edf080604fd4b69fb00f07739681","path":"experiments/reviews/X-PR495-volterra-causal-counterexample/verify.py"},
+    {"blob":"4ddef8f256b2f24da06eb849f721b8d4853566e4","commit":"4ae97dffd1f76ed3244b8f3028560ffa80663caf","path":"claims/lemmas/L-93783-target-lorenz-has-an-explicit-typed-leaf-marginal-and-current-only-row-bonus.md"},
+    {"blob":"27663d8fa4378743372a04ea60be52d8d3b5c92d","commit":"4ae97dffd1f76ed3244b8f3028560ffa80663caf","path":"claims/lemmas/L-93784-the-explicit-typed-leaves-compile-to-one-native-feasible-common-parent.md"},
+    {"blob":"acde2e63c8f272cff65de67886836fa18d32b716","commit":"4ae97dffd1f76ed3244b8f3028560ffa80663caf","path":"claims/lemmas/L-93785-the-hardened-common-parent-has-native-y4-deficit-below-61000.md"},
+    {"blob":"fd8d22afa8092e269680034fd8f4512b8b4b1dde","commit":"99d3983b57f82941131caa8d9c36e4947f1179a0","path":"claims/lemmas/L-91822-all-column-nonnegative-response-complements.md"},
+    {"blob":"ffc93b6ca65a7a501390597d875ff6c2e44e0128","commit":"99d3983b57f82941131caa8d9c36e4947f1179a0","path":"claims/lemmas/L-91823-direct-native-y4-cost-of-response-complement.md"},
+    {"blob":"2a393c6fcdce79dab9425bc479853675c013760c","commit":"99d3983b57f82941131caa8d9c36e4947f1179a0","path":"claims/theorems/T-91820-one-sided-response-complement-endpoint-consumer.md"}
+  ],
+  "intended_branch": "research/gpt56-pro/91880-live-arithmetic-coupling",
+  "repair_inputs": {"499":"99d3983b57f82941131caa8d9c36e4947f1179a0","508":"4ae97dffd1f76ed3244b8f3028560ffa80663caf"},
+  "repository": "gfreund123/riemann",
+  "reviews": {"501":"ab5bd0ffc7a8092d62e879431dbd9f295f79f072","503":"db77e5792966edf080604fd4b69fb00f07739681","504":"fe1a3c94379c3d159efa05ea216d12643e63be16"},
+  "scientific_status": "candidate complete on frozen inputs; RH unproved pending independent review"
+}
