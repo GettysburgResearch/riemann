@@ -1,0 +1,45 @@
+{
+  "schema": "riemann.t91724.native-slack-repair-lock.v3",
+  "created": "2026-08-15",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/91726-pr476-native-slack-repair",
+  "base": {
+    "pr": 479,
+    "sha": "518b6a5ec2b49b7decbd4c2e349d0ee5b26bfc9b"
+  },
+  "core_packet_head_before_final_lock": "5e6af538832c5c575bfc1cdeb8311ddea66363e4",
+  "frozen_inputs": {
+    "rejected_proposal_pr476": "9f16ce483954d4233b68ee09cb6bec47400aa3cc",
+    "review_pr480": "d6d9c051abb20a47f3ce7adb45de33bfc2b933b9",
+    "native_slack_pr477": "5acd9007b4f4bb1792466f5013c39bf4eac33f9e",
+    "all_column_pr479": "518b6a5ec2b49b7decbd4c2e349d0ee5b26bfc9b",
+    "factor67_root_initial": "13ad1fdbf06edc931dc0c524327b701c5c8f86a3",
+    "endpoint_consumer": "a41f81466f85d52597c97b41505756a8860698d0"
+  },
+  "normative_claims": [
+    "R-91726",
+    "L-91726",
+    "L-91727",
+    "L-91728",
+    "L-91729",
+    "L-91730",
+    "L-91731",
+    "T-91724"
+  ],
+  "experiment": "X-91726-pr476-native-slack-repair",
+  "proof_objects": {
+    "main": "54d86a9b59b55ac0d7903ae901df9b13851523571230b3518f0d60277f9b332f",
+    "root_once": "21032b872847eb0793fd90eadcddf671aacb8b5994ac46f9c76c3a7b9bebd2b0"
+  },
+  "status": {
+    "pr480_frozen_review": "ACCEPTED",
+    "weighted_child_target": "PROVED",
+    "packet_native_cocycle": "PROVED",
+    "all_column_knot_port": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "one_shot_root_mass_bound": "PROVED_ON_FROZEN_DENSITY_INPUT",
+    "local_native_root_cost": "PROPOSED_COMPLETE_REVIEW_REQUIRED",
+    "positive_descendant_envelope": "PROVED_CONDITIONAL_ON_EXACT_POSITIVE_PACKET_INPUTS",
+    "endpoint_to_rh": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "riemann_hypothesis": "UNPROVED"
+  }
+}

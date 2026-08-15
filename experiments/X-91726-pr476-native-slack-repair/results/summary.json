@@ -1,0 +1,11 @@
+{
+  "schema": "riemann.x91726.summary.v1",
+  "verdict": "PASS_PR476_NATIVE_SLACK_REPAIR_FINITE_ALGEBRA",
+  "proof_object_sha256": "54d86a9b59b55ac0d7903ae901df9b13851523571230b3518f0d60277f9b332f",
+  "checks": [
+    "PASS_ACTUAL_SHARP_TARGET_WEIGHTED_CHILD_MASS_BELOW_ONE_EIGHTH",
+    "PASS_PACKET_NATIVE_SLACK_VECTOR_AND_SCALAR_COCYCLE",
+    "PASS_ALL_COLUMN_Y4_SUPPORT_NATIVE_COST_AND_STRICT_RESERVE"
+  ],
+  "scope": "Exact finite regression only; frozen analytic and endpoint inputs remain independent reconstruction obligations. RH is unproved."
+}
