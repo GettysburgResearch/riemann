@@ -1,0 +1,16 @@
+{
+  "all_column": {
+    "nonterminal_relative_numerator": 129,
+    "terminal_margin": 581
+  },
+  "causal": {
+    "coefficient_sum_identity": true,
+    "recursive_mass_below_one_eighth": true
+  },
+  "endpoint_orientation": "F_Lambda<=native_deficit",
+  "mutations_rejected": 10,
+  "native_cost": "A0+4290*log(2X)",
+  "quantizers": 1,
+  "source_observation_ledgers_disjoint": true,
+  "verdict": "PASS_T91821_POSITIVE_COMMON_PARENT_RESPONSE_COMPLEMENT"
+}
