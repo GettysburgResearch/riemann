@@ -1,0 +1,71 @@
+{
+  "mutations_caught": [
+    "signed_as_source",
+    "reserve_overrun",
+    "drop_child",
+    "duplicate_owner",
+    "child_mass",
+    "duplicate_root_correction",
+    "benchmark_bridge"
+  ],
+  "native_cost": {
+    "benchmark_bridge_used": false,
+    "child_bound": "6039/8",
+    "combined_total": "493951/8",
+    "root_classes": {
+      "base": "0",
+      "nonterminal_signed_comparison": "4",
+      "port": "0",
+      "positive_omissions": "1",
+      "terminal_signed_comparison": "48972",
+      "thinning": "12012"
+    },
+    "root_total": "60989",
+    "strict_integer_bound": 61744,
+    "verdict": "PASS_DIRECT_ROOT_PLUS_TERMINAL_CHILD_COST"
+  },
+  "proof_boundary": {
+    "analytic_root_and_endpoint_inputs": "FROZEN_RECONSTRUCTION_REQUIRED",
+    "pr488_frozen_head": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+    "pr489_frozen_head": "0bb487c8a0782f601be0a3041743b357ad93726a",
+    "riemann_hypothesis": "UNPROVED_PENDING_REVIEW"
+  },
+  "proof_object_sha256": "64b4f13c625802462641fd36d20494ed35c07e287623a28195821934bb2b983b",
+  "schema": "riemann.t92900.two-ledger-terminal-child.v1",
+  "terminal_children": {
+    "coefficient_fixture": "7/64",
+    "fixture_weighted_deficit": "42273/64",
+    "parent_target_mass_bound": "6039/2",
+    "universal_child_deficit_bound": "6039/8",
+    "verdict": "PASS_FIRST_GENERATION_CHILD_TERMINALIZATION"
+  },
+  "two_ledger": {
+    "native_vector": [
+      "17",
+      "21",
+      "28",
+      "34"
+    ],
+    "positive_unused": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "root_slack": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "signed_error": [
+      "1",
+      "-1",
+      "2",
+      "3"
+    ],
+    "signed_error_is_source_positive": false,
+    "verdict": "PASS_TWO_LEDGER_NATIVE_IDENTITY"
+  },
+  "verdict": "PASS_TWO_LEDGER_TERMINAL_CHILD_FACTOR67_ALGEBRA"
+}
