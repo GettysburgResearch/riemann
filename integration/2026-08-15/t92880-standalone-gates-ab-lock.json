@@ -1,0 +1,22 @@
+{
+  "base_branch": "research/gpt56-pro/91840-pr484-exact-root-composition",
+  "base_pr": 488,
+  "base_sha": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+  "head_branch": "research/gpt56-pro/92880-standalone-gates-ab-closure",
+  "normative_paths": [
+    "claims/lemmas/L-92880-factor67-root-hall-closes-the-finite-common-source-row-gain-gate.md",
+    "claims/lemmas/L-92881-actual-factor67-common-parent-has-an-exact-native-capacity-ledger.md",
+    "claims/lemmas/L-92882-common-schur-port-demand-is-explicit-and-one-use.md",
+    "claims/lemmas/L-92883-one-positive-reserve-pays-every-root-correction-at-logarithmic-native-cost.md",
+    "claims/lemmas/L-92884-native-slack-cocycle-closes-gate-b-at-logarithmic-cost.md",
+    "claims/theorems/T-92880-standalone-factor67-gates-ab-resolution-proposal.md",
+    "imports/t92880/IMPORT_MANIFEST.json",
+    "experiments/X-92880-standalone-gates-ab/results/verification.json",
+    "standalone/2026-08-15-92880-gates-ab/REVIEW_SPECIFICATION.md"
+  ],
+  "proposal": "T-92880",
+  "repository": "gfreund123/riemann",
+  "schema": "t92880-lock-v1",
+  "sibling_pr_488": "stronger one-shot specialization; not silently imported as proof of T-92880",
+  "status": "candidate-complete proposal; RH unproved pending independent review"
+}

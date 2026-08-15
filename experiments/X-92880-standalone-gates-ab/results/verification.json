@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "base_pin": true,
+    "dependency_count": true,
+    "mutations": true,
+    "port_fallback_rounding": true,
+    "port_tau": true,
+    "preferred_root_cost": true,
+    "required_paths": true,
+    "rho": true,
+    "root_mass": true,
+    "terminal_margin": true,
+    "unique_dependency_paths": true,
+    "unique_dependency_shas": true
+  },
+  "mutations": {
+    "duplicate_dependency_path_fails": true,
+    "rho_equal_one_eighth_fails": true,
+    "terminal_overdraw_fails": true,
+    "wrong_base_pin_fails": true
+  },
+  "ok": true,
+  "proof_object_sha256": "a17c0c53d9ebf710b3ad942315d728411760cd62a7b20adff5c52a98e520b735",
+  "rh_proved": false,
+  "scope": "finite algebra, constants, path/manifest authentication; analytic inputs require independent reconstruction",
+  "verdict": "PASS_STANDALONE_GATES_AB_NATIVE_SLACK_PACKET"
+}

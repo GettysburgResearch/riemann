@@ -1,0 +1,87 @@
+{
+  "base_branch": "research/gpt56-pro/91840-pr484-exact-root-composition",
+  "base_pr": 488,
+  "base_sha": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+  "dependencies": [
+    {
+      "blob_sha": "f4ec8889ab4f922be51bcdadf3572d4d22a2e314",
+      "path": "claims/lemmas/L-91689-fixed-window-root-hall-has-a-universal-one-use-stability-bound.md",
+      "role": "root Hall stability"
+    },
+    {
+      "blob_sha": "1b14f531bbe7fb3a56397414d666c669252c4a02",
+      "path": "claims/lemmas/L-91690-factor67-target-hall-is-a-source-owned-root-thinning.md",
+      "role": "Gate A source flow"
+    },
+    {
+      "blob_sha": "7305924b9e49c3da4614c872cf60a11489c98a9d",
+      "path": "claims/lemmas/L-91691-factor67-finite-realization-has-one-use-native-capacity.md",
+      "role": "finite realization"
+    },
+    {
+      "blob_sha": "a13a1eb80eaae15b5b29057d928ee1ed347ed55e",
+      "path": "claims/lemmas/L-91732-factor67-direct-integrals-have-actual-target-normalized-children.md",
+      "role": "actual target-mass children"
+    },
+    {
+      "blob_sha": "6f08ad402d43039ab37a63289c314ec68c74325c",
+      "path": "claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md",
+      "role": "all-column reserve"
+    },
+    {
+      "blob_sha": "f1a125760d515c4d08b85d4c309b3f582fbd1705",
+      "path": "claims/lemmas/L-91734-activation-knot-collars-have-vanishing-score-by-absolute-continuity.md",
+      "role": "knot/refinement"
+    },
+    {
+      "blob_sha": "61e39aa13b5118d19e1bb42848c6477294ab3941",
+      "path": "claims/lemmas/L-91736-actual-mass-children-obey-the-native-slack-cocycle.md",
+      "role": "native cocycle"
+    },
+    {
+      "blob_sha": "5c270b48bfbced3a106c299240a1593cb4394c23",
+      "path": "claims/lemmas/L-91737-factor67-retained-root-target-mass-is-below-3020.md",
+      "role": "root mass"
+    },
+    {
+      "blob_sha": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d",
+      "path": "claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md",
+      "role": "Y4 dual"
+    },
+    {
+      "blob_sha": "17f3dbc389ac7d13954cc2a174dfdeea09a341c1",
+      "path": "claims/lemmas/L-91385-zero-row-gives-logarithmic-debt-for-positive-causal-packets.md",
+      "role": "positive reserve cost"
+    },
+    {
+      "blob_sha": "03cef858b53d06fe7ee3325906637d1c8c454501",
+      "path": "claims/theorems/T-91312-subcritical-target-mass-reset-has-uniform-deficit.md",
+      "role": "positive causal envelope"
+    },
+    {
+      "blob_sha": "ac39938db2c684a001c98d3f858dd950af781b59",
+      "path": "claims/theorems/T-91313-explicit-endpoint-deficit-to-rh-consumer.md",
+      "role": "one-sided endpoint consumer"
+    },
+    {
+      "blob_sha": "813fffd0d686d542416d0a6f95a736e972d68552",
+      "path": "claims/lemmas/L-91843-sequential-source-ledger-produces-the-corrected-native-root-identity.md",
+      "role": "source telescoping"
+    },
+    {
+      "blob_sha": "2d68430b29a4cca0dcefd65d4ecf9f26eee92d82",
+      "path": "claims/lemmas/L-91844-direct-y4-accounting-for-the-complete-root-ledger.md",
+      "role": "PR488 independent cost cross-check"
+    }
+  ],
+  "forbidden_shortcuts": [
+    "stopped-leaf Hall",
+    "source-mass fraction scales signed score loss",
+    "affine Pascal child lift",
+    "canonical P61 row equals native capacity",
+    "finite equality seed equals continuum seed",
+    "J_Lambda(X)-4sqrt(X) upper bound"
+  ],
+  "repository": "gfreund123/riemann",
+  "schema": "t92880-import-manifest-v1"
+}
