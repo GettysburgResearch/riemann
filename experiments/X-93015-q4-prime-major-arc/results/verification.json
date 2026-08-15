@@ -1,0 +1,24 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_WITH_FORMAL_PRIME_LOG_SYMBOLS",
+  "classification": "PASS_X_93015_Q4_PRIME_MAJOR_ARC_LOCALIZATION",
+  "complete_gram_checks": 80,
+  "does_not_prove": [
+    "the analytic Chebyshev bound",
+    "the Fourier square-root minor-arc estimate",
+    "the remaining distinct-prime major-arc estimate",
+    "the Riemann Hypothesis"
+  ],
+  "hostile_mutations_detected": 144,
+  "orthogonal_projection_checks": 1920,
+  "prime_power_orbit_support_checks": 2239,
+  "proves": [
+    "exact complete source and row prime-base partitions on finite fixtures",
+    "exact complete-row diagonal/cross Gram identity",
+    "sum-before-square diagonal inequalities",
+    "abstract projected distinct-block cross bound"
+  ],
+  "row_reconstruction_checks": 4380,
+  "same_prime_unequal_power_terms_retained": 2366,
+  "source_coefficient_checks": 4380,
+  "tower_diagonal_checks": 2484
+}
