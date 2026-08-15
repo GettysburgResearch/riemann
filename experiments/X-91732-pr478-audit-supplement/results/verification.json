@@ -1,0 +1,47 @@
+{
+  "actual_mass": {
+    "alpha_sum": "6823/245025",
+    "parent_mass": "427/132",
+    "recursive_mass": "103/2904",
+    "strict_one_eighth": true
+  },
+  "all_columns": {
+    "all_columns": true,
+    "combined": "971/4",
+    "detail": "171/4",
+    "ordinary": "57/2",
+    "relative_constant": 129,
+    "strict_denominator": 130
+  },
+  "classification": "PASS_PR478_AUDIT_SUPPLEMENT_ON_PR481_V2",
+  "file_firewalls": {
+    "checked": 9,
+    "pr482_boundary_retained": true
+  },
+  "native_cocycle": {
+    "beta_sum": "13/120",
+    "exact": true,
+    "paired_identity": "33219502/2297295"
+  },
+  "open_reconstruction_obligations": [
+    "concrete post-Hall/post-quantization corrected packet equality",
+    "instantiated complete common-port demand",
+    "exact Y4 pairing of terminal/base/port corrections",
+    "frozen endpoint/WSTS and Mellin-Landau consumer"
+  ],
+  "proof_object_sha256": "549fe6d5394d70a7f899644766810108409ec87999d97f7061ff5f3f553ea137",
+  "rh_established_by_replay": false,
+  "root_mass": {
+    "endpoint_measure_upper": "183/10",
+    "fiber_target_upper": "165",
+    "harmonic_66": "209060999005535159677640233/43787662374178602500420800",
+    "integrated_target_upper": "6039/2",
+    "lt_3020": true
+  },
+  "score_scope": {
+    "continuum_bound_lt_4290": true,
+    "continuum_shortfall": "53720/147",
+    "native_bound": "4318",
+    "native_deficit": "57689/147"
+  }
+}
