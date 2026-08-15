@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "constants": {
+      "terminal_margin": 581,
+      "total": 60989
+    },
+    "content_hashes": {
+      "checked": 24
+    },
+    "firewalls": {
+      "forbidden_count": 5
+    },
+    "mellin": {
+      "formula": "m_rho/(rho-1/2)^2 != 0"
+    },
+    "paths": {
+      "required": 11
+    },
+    "prime_square": {
+      "partial": 0.4592364752867156,
+      "tail_upper": 0.00223606797749979
+    },
+    "y4": {
+      "range": 50000,
+      "zero_columns": 42551
+    }
+  },
+  "mutations": {
+    "bad_thinning": true,
+    "cost_overdraw": true,
+    "terminal_overdraw": true,
+    "wrong_base": true
+  },
+  "ok": true,
+  "proof_object_sha256": "ce096c4b6aa8bcfe7c09babd41a06df13aae2644de632b959ed6ecab9d0e3a83",
+  "rh_proved": false,
+  "scope": "finite algebra, provenance, constants and interface firewalls; large directed AVLT, PNT and Landau proofs require independent reconstruction",
+  "verdict": "PASS_UPSTREAM_SPINE_RECONSTRUCTION_PACKET"
+}
