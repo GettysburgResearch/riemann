@@ -1,0 +1,29 @@
+{
+  "conditional_costs": {
+    "one_shot": "60989",
+    "terminal_arithmetic_only": "493951/8"
+  },
+  "frozen": {
+    "pr500": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+    "pr505": "1113fe6d55e955a8d9de7b43ceb24f5792870550",
+    "pr507": "dfaa70cd2eefcabbf6717e3da060792904c7f357"
+  },
+  "oriented_child": {
+    "branchwise_positive_realization": false,
+    "detail_q2_upper": -0.11975759271329574,
+    "ordinary_q2_upper": -2.7594999788096697
+  },
+  "proof_object_sha256": "b106f71b96a2515bee9f4eecf6df97d6daa90d6f77271125941ac031efbbf9f3",
+  "qualified_109_over_1200": true,
+  "required_interface": {
+    "joint_before_channel_subtraction": true,
+    "joint_compiler_constructed": false,
+    "one_use_input_ownership": true,
+    "ordinary_q_and_4q_same_total_row": true,
+    "separate_child_positive_capacity": false,
+    "signed_finite_comparison_separate": true,
+    "single_global_quantizer": true
+  },
+  "rh_proved": false,
+  "verdict": "PASS_T92940_JOINT_NATIVE_CANCELLATION_GATE"
+}
