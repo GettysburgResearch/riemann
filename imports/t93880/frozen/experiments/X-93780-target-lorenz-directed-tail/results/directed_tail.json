@@ -1,0 +1,480 @@
+{
+  "arithmetic_class": "65_INDEPENDENT_BOOST_FENV_INTERVAL_UINT128_EVENT_SWEEPS",
+  "classification": "PASS_DIRECTED_ALL_ROW_TARGET_LORENZ_TAIL_AND_ROW66_EXTREMALITY",
+  "divisor_count": 262144,
+  "event_records_total": 51118080,
+  "extremality_scope": "global minimum of the published analytic lower-envelope certificate, not a pointwise ordering of the exact determinants",
+  "global_full_lower": "26.7858198871370029384154",
+  "global_minimum_row": 66,
+  "global_minimum_x": "166000",
+  "global_parent_derivative_lower": "0.239715873017393344695408",
+  "global_parent_lower": "79.2368736388876360662859",
+  "nearest_competitor_lower": "28.2416190476757020220989",
+  "nearest_competitor_row": 65,
+  "proof_object_sha256": "536e814f8f51bd8994c305f312f22fd9d4d2005cd1f7f9d8461393f0b30a0fe3",
+  "rh_established_by_replay": false,
+  "row66_extremality_separation_lower": "1.4549658353305580556214",
+  "row66_interval_upper_at_boundary": "26.7866532123451439664775",
+  "row_records": [
+    {
+      "full_lower": "744.307623283867510366463",
+      "minimum_x": "166005",
+      "parent_derivative_lower": "171.828130812728900586595",
+      "parent_lower": "32097.9608491620200201311",
+      "row": 2
+    },
+    {
+      "full_lower": "3573.75311335626204467531",
+      "minimum_x": "166056",
+      "parent_derivative_lower": "55.5687246319198330790635",
+      "parent_lower": "13594.9524205959700919877",
+      "row": 3
+    },
+    {
+      "full_lower": "3044.58531592105719898456",
+      "minimum_x": "166056",
+      "parent_derivative_lower": "27.6912404655528031106882",
+      "parent_lower": "7896.45107422452877488084",
+      "row": 4
+    },
+    {
+      "full_lower": "2365.44257291763791206663",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "17.1685993994513302115385",
+      "parent_lower": "5291.89545266231114695188",
+      "row": 5
+    },
+    {
+      "full_lower": "1835.76043378414563267409",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "11.6715487479242030852828",
+      "parent_lower": "3843.21000487710189563729",
+      "row": 6
+    },
+    {
+      "full_lower": "1555.16361005507179526842",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "8.67038707240577730984977",
+      "parent_lower": "2956.8060920765481052186",
+      "row": 7
+    },
+    {
+      "full_lower": "1239.42707143173142692039",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "6.76577668328656836030031",
+      "parent_lower": "2356.53036538770428287571",
+      "row": 8
+    },
+    {
+      "full_lower": "1013.41903872125112956449",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "5.43230176102392584057757",
+      "parent_lower": "1933.93837409413336247966",
+      "row": 9
+    },
+    {
+      "full_lower": "891.518623325670311718927",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "4.48412799406001369786901",
+      "parent_lower": "1626.6355119434802116718",
+      "row": 10
+    },
+    {
+      "full_lower": "758.290518710170180494146",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "3.79453473783133478640546",
+      "parent_lower": "1392.61204398285413619263",
+      "row": 11
+    },
+    {
+      "full_lower": "685.857433070305976596793",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "3.26528393147697808848555",
+      "parent_lower": "1209.44654258060889784332",
+      "row": 12
+    },
+    {
+      "full_lower": "597.781711600625861924297",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "2.86582816899458164773725",
+      "parent_lower": "1063.02325202315926977459",
+      "row": 13
+    },
+    {
+      "full_lower": "555.629966683466869625808",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "2.54887988409956099070814",
+      "parent_lower": "944.299907922117155445463",
+      "row": 14
+    },
+    {
+      "full_lower": "491.173172680910704451796",
+      "minimum_x": "166155",
+      "parent_derivative_lower": "2.27174186386854993200714",
+      "parent_lower": "843.995824668697096293535",
+      "row": 15
+    },
+    {
+      "full_lower": "436.002277484403210072728",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "2.02398560843253017471275",
+      "parent_lower": "758.625417222036163789057",
+      "row": 16
+    },
+    {
+      "full_lower": "394.486429302227356447075",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.83554834157765541207807",
+      "parent_lower": "691.62773212761669633375",
+      "row": 17
+    },
+    {
+      "full_lower": "356.636037531260439464865",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.67580478114542435032556",
+      "parent_lower": "631.755937642922922981015",
+      "row": 18
+    },
+    {
+      "full_lower": "324.587508016254313342186",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.54617477496373594459019",
+      "parent_lower": "580.686682788856363079955",
+      "row": 19
+    },
+    {
+      "full_lower": "294.590512839584182491759",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.42897242698208362828277",
+      "parent_lower": "533.982523696749537656104",
+      "row": 20
+    },
+    {
+      "full_lower": "269.256471453883020589216",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.32232792463793370177535",
+      "parent_lower": "493.848217792115266683295",
+      "row": 21
+    },
+    {
+      "full_lower": "249.275133496863905188668",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.22816317515191674196104",
+      "parent_lower": "460.781829918874884649549",
+      "row": 22
+    },
+    {
+      "full_lower": "246.259015875611797452561",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.1439888788405957455131",
+      "parent_lower": "429.354792658249383052738",
+      "row": 23
+    },
+    {
+      "full_lower": "225.838592225702422505718",
+      "minimum_x": "166152",
+      "parent_derivative_lower": "1.07291173724238003488966",
+      "parent_lower": "399.509849611615026759859",
+      "row": 24
+    },
+    {
+      "full_lower": "209.392426499897309877252",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "1.00874956002941558322675",
+      "parent_lower": "374.613557884013178067573",
+      "row": 25
+    },
+    {
+      "full_lower": "195.41639688289606278937",
+      "minimum_x": "166023",
+      "parent_derivative_lower": "0.950839464392288252270799",
+      "parent_lower": "353.018975140008012481019",
+      "row": 26
+    },
+    {
+      "full_lower": "181.849863728697457007644",
+      "minimum_x": "166023",
+      "parent_derivative_lower": "0.898044312775205636183857",
+      "parent_lower": "332.412413326915676919926",
+      "row": 27
+    },
+    {
+      "full_lower": "171.013143312740618778856",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.849528014212798667675105",
+      "parent_lower": "315.270394049084946880291",
+      "row": 28
+    },
+    {
+      "full_lower": "159.727702292809833756194",
+      "minimum_x": "166315",
+      "parent_derivative_lower": "0.806246494680087010648549",
+      "parent_lower": "297.944976318841390050541",
+      "row": 29
+    },
+    {
+      "full_lower": "150.189197354209018148153",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.765858595484942168956505",
+      "parent_lower": "283.011557343497794470011",
+      "row": 30
+    },
+    {
+      "full_lower": "141.014644454574792131752",
+      "minimum_x": "166439",
+      "parent_derivative_lower": "0.729739441209217332606676",
+      "parent_lower": "268.787119604318805538013",
+      "row": 31
+    },
+    {
+      "full_lower": "132.565681296512602113658",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.696389303156601060065031",
+      "parent_lower": "255.768739304934458952956",
+      "row": 32
+    },
+    {
+      "full_lower": "124.88011122648163035015",
+      "minimum_x": "166155",
+      "parent_derivative_lower": "0.665325031711150899241085",
+      "parent_lower": "243.662037865807608399971",
+      "row": 33
+    },
+    {
+      "full_lower": "127.54135108068410366794",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.636453720672468942589403",
+      "parent_lower": "232.158379284051848950865",
+      "row": 34
+    },
+    {
+      "full_lower": "120.675229437903542201172",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.60965299864043893463602",
+      "parent_lower": "222.192980411236669188724",
+      "row": 35
+    },
+    {
+      "full_lower": "113.463993917087766195862",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.584512854544094227619064",
+      "parent_lower": "211.877437910566487733189",
+      "row": 36
+    },
+    {
+      "full_lower": "107.50782330684872233062",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.560831334432880520310221",
+      "parent_lower": "203.062638426895303467302",
+      "row": 37
+    },
+    {
+      "full_lower": "101.515135122602090593514",
+      "minimum_x": "166098",
+      "parent_derivative_lower": "0.539291950518886357838263",
+      "parent_lower": "194.385094941762413420228",
+      "row": 38
+    },
+    {
+      "full_lower": "96.4143320106745402228721",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.518569119668834804088263",
+      "parent_lower": "186.848789688342279885492",
+      "row": 39
+    },
+    {
+      "full_lower": "91.1714625149978285315045",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.499600162118285451919335",
+      "parent_lower": "179.167521689506086757238",
+      "row": 40
+    },
+    {
+      "full_lower": "86.941308069688052355406",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.481815414517401049651104",
+      "parent_lower": "172.654108583950972446997",
+      "row": 41
+    },
+    {
+      "full_lower": "82.5068053646937788897509",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.464949723269040801637174",
+      "parent_lower": "166.081811429123970047517",
+      "row": 42
+    },
+    {
+      "full_lower": "78.3292755497335527470338",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.449464707049278572396348",
+      "parent_lower": "159.864729407555692233812",
+      "row": 43
+    },
+    {
+      "full_lower": "74.5931399806583063788468",
+      "minimum_x": "166005",
+      "parent_derivative_lower": "0.434738233638889939717577",
+      "parent_lower": "154.252477283850659192655",
+      "row": 44
+    },
+    {
+      "full_lower": "70.892123520346812859394",
+      "minimum_x": "166005",
+      "parent_derivative_lower": "0.420578266000912325456351",
+      "parent_lower": "148.726361777559294541363",
+      "row": 45
+    },
+    {
+      "full_lower": "67.7044413440481194291221",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.40712621915360692226066",
+      "parent_lower": "143.715730022476425004064",
+      "row": 46
+    },
+    {
+      "full_lower": "65.0148578651327220673251",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.394324138833150815517531",
+      "parent_lower": "139.326174792035758304154",
+      "row": 47
+    },
+    {
+      "full_lower": "62.2753507083699719554249",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.382210823226212340845282",
+      "parent_lower": "135.002576498051951370272",
+      "row": 48
+    },
+    {
+      "full_lower": "59.6475687763007799968574",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.370747812452660316341006",
+      "parent_lower": "130.866133099053254681965",
+      "row": 49
+    },
+    {
+      "full_lower": "56.7058091607613226001195",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.360141035366614215121372",
+      "parent_lower": "126.401300100130478003269",
+      "row": 50
+    },
+    {
+      "full_lower": "53.8973402182228502610429",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.349983863868446564739101",
+      "parent_lower": "122.161659652703135182928",
+      "row": 51
+    },
+    {
+      "full_lower": "51.264723351812190185739",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.339819291279132860050978",
+      "parent_lower": "118.149311811173465112946",
+      "row": 52
+    },
+    {
+      "full_lower": "48.7234384278443916141411",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.330583250940660983662172",
+      "parent_lower": "114.350589776548933085288",
+      "row": 53
+    },
+    {
+      "full_lower": "46.3751646354978754246968",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.321538941005163437700764",
+      "parent_lower": "110.715197837054346467756",
+      "row": 54
+    },
+    {
+      "full_lower": "44.379043600309135145926",
+      "minimum_x": "166155",
+      "parent_derivative_lower": "0.312918528061544225216378",
+      "parent_lower": "107.528351538403662994437",
+      "row": 55
+    },
+    {
+      "full_lower": "42.2165490762118836010064",
+      "minimum_x": "166155",
+      "parent_derivative_lower": "0.304996221659982287463228",
+      "parent_lower": "104.229557613686914158136",
+      "row": 56
+    },
+    {
+      "full_lower": "40.0438855902889159418812",
+      "minimum_x": "166155",
+      "parent_derivative_lower": "0.297104853079341848056446",
+      "parent_lower": "100.933146661624456905116",
+      "row": 57
+    },
+    {
+      "full_lower": "38.1819170035678986906136",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.289675199870172569494888",
+      "parent_lower": "98.0330389733028411819449",
+      "row": 58
+    },
+    {
+      "full_lower": "36.5132548663878854465493",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.282771571830919819106904",
+      "parent_lower": "95.3397702443590412957342",
+      "row": 59
+    },
+    {
+      "full_lower": "35.073586166728266361875",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.275759947404089720342669",
+      "parent_lower": "92.9060291023963224985028",
+      "row": 60
+    },
+    {
+      "full_lower": "33.8590646787259268585269",
+      "minimum_x": "166530",
+      "parent_derivative_lower": "0.269277652896944673827388",
+      "parent_lower": "90.6252970394387647040669",
+      "row": 61
+    },
+    {
+      "full_lower": "32.9124564580112119738243",
+      "minimum_x": "166098",
+      "parent_derivative_lower": "0.262741806583684805212172",
+      "parent_lower": "88.7974523265936868041127",
+      "row": 62
+    },
+    {
+      "full_lower": "31.4425528068789877991774",
+      "minimum_x": "166257",
+      "parent_derivative_lower": "0.256662945289594897628656",
+      "parent_lower": "86.4010566332255180582723",
+      "row": 63
+    },
+    {
+      "full_lower": "29.7869867021212207207348",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.250819541333374216679443",
+      "parent_lower": "83.9312141245505709610808",
+      "row": 64
+    },
+    {
+      "full_lower": "28.2416190476757020220989",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.24514169803516019284723",
+      "parent_lower": "81.5277215494058391867527",
+      "row": 65
+    },
+    {
+      "full_lower": "26.7858198871370029384154",
+      "minimum_x": "166000",
+      "parent_derivative_lower": "0.239715873017393344695408",
+      "parent_lower": "79.2368736388876360662859",
+      "row": 66
+    }
+  ],
+  "rows": [
+    2,
+    66
+  ],
+  "tail_start": 166000
+}

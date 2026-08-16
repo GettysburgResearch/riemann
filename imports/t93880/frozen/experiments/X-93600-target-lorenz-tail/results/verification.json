@@ -1,0 +1,52 @@
+{
+  "analytic_reserve_audit": {
+    "component_remainder_numerator": 10,
+    "differentiated_scaled_bound": "0.16777002141221994344794022728297957922536806115389952447725055595111362313762617",
+    "elementary_scaled_bound": "3.0833333333333333333333333333333333333333333333333333333333333333333333333333333",
+    "published_ramp_constant": 5,
+    "total_scaled_bound": "3.2511033547455532767812735606163129125587013944872328578105838892844469564709595"
+  },
+  "arithmetic_class": "UINT128_EVENT_SWEEP_LONG_DOUBLE_WITH_ANALYTIC_RESERVE",
+  "certified_full_lower_bound": 26,
+  "certified_parent_derivative_lower_bound": 0.23,
+  "certified_parent_lower_bound": 79,
+  "child_correction_monotone_between_events": true,
+  "classification": "PASS_COMPLETE_TARGET_LORENZ_TAIL_AVLT",
+  "computed_full_minimum": "26.7862360081531554745204",
+  "computed_full_minimum_row": 66,
+  "computed_full_minimum_x": "166000",
+  "computed_max_child_correction": "31353.6532258781501294465",
+  "computed_max_child_correction_row": 2,
+  "computed_max_child_correction_x": "166005",
+  "computed_parent_derivative_minimum": "0.239717426712385715521867",
+  "computed_parent_derivative_row": 66,
+  "computed_parent_derivative_x": "658141",
+  "computed_parent_minimum": "79.2372897599037880680961",
+  "computed_parent_minimum_row": 66,
+  "computed_parent_minimum_x": "166000",
+  "divisor_count": 262144,
+  "domain": "x=py>=166000, p>=67, 1<=y<67, 2<=j<=66",
+  "domain_join_audit": {
+    "compact_last_integer": 165999,
+    "mutation_checks": {
+      "delete_child_correction": true,
+      "open_boundary_gap": true,
+      "raise_derivative_certificate_to_point24": true,
+      "raise_full_certificate_to_27": true,
+      "raise_parent_certificate_to_80": true
+    },
+    "tail_first_real_endpoint": 166000
+  },
+  "event_records": 51118080,
+  "generator_sha256": "bbe12b0e9e7499314e955a0d350f713361afa17a626783cb6b398cfe601dc721",
+  "last_interval_polynomial_derivative_minimum": "7.96564741157290702069481e+36",
+  "last_interval_second_derivative_polynomial_minimum": "3.02963579320146412706883e+48",
+  "proof_object_sha256": "e30b0e4e08802002b160ddfaaefebb4b6ab8aa5a3562785fc854cc93f4101aa0",
+  "ramp_remainder_constant_used": 5,
+  "replay_scope": "rebuilds the exact-event sweep and validates the analytic reserve, thresholds, domain join and hostile mutations; it does not certify the frozen compact theorem or establish RH",
+  "rh_established_by_replay": false,
+  "roundoff_guard": "one-unit reserve below the computed full margin; exact uint128 event ordering",
+  "row_count": 65,
+  "stderr_line_count": 65,
+  "tail_start": 166000
+}

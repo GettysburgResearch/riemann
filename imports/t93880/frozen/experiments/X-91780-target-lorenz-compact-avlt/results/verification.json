@@ -1,0 +1,30 @@
+{
+  "classification": "PASS_TARGET_LORENZ_COMPACT_PROPORTIONAL_AVLT",
+  "domain": {
+    "p_lower": 67,
+    "y_lower": 1,
+    "y_upper_exclusive": 67,
+    "x_equals_py_upper_exclusive": 166000,
+    "row_lower": 2,
+    "row_upper": 66
+  },
+  "activation_row_cells": 702511095,
+  "coarse_direct_passes": 702511091,
+  "coarse_dependency_exceptions": [[127,1,63],[129,1,64],[131,1,65],[133,1,66]],
+  "minimum_raw_direct_lower": 0.0012010574018749666,
+  "minimum_raw_direct_cell": [125,1,62],
+  "minimum_certified_direct_lower": 0.001,
+  "exception_certified_lowers": {
+    "127,1,63": 0.329048733868,
+    "129,1,64": 0.324125573978,
+    "131,1,65": 0.320026347386,
+    "133,1,66": 0.315372789821
+  },
+  "tail_prefix_states": 259133,
+  "tail_prefix_minimum_start": 168113,
+  "tail_prefix_minimum_lower": 1.7529746231757814,
+  "tail_prefix_target": 1.75,
+  "analytic_tail_avlt_proved": false,
+  "live_native_allocation_proved": false,
+  "rh_established_by_replay": false
+}
