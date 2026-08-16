@@ -1,0 +1,9 @@
+claim_id	short_statement	mathematical_type	review_verdict	rh_relationship	dependencies	surviving_scope	integration_action	notes
+L-93250	Centered Bernoulli/cubic projection and Mellin multiplier	UNCONDITIONAL THEOREM	VERIFIED WITH FIXES	Below RH	Q4 source normalization	Exact projection, interpolation, zero-safe multiplier	Retain	Make weighted-source interpolation dependency explicit
+T-93251	Centered Q4 energy is RH-equivalent	RH-EQUIVALENT CRITERION	VERIFIED	Equivalent to RH	L-93250; classical von Koch; zeta functional equation	Both directions reconstruct	Retain with criterion label	No unconditional energy bound is supplied
+L-93252	Prime-block scalar diagonal and coherence inverse theorem	ROUTE INFRASTRUCTURE	VERIFIED WITH FIXES	Below RH	L-93015 tower bounds	Same-prime scalar diagonal O(N log N)	Retain	Inverse coherence is not decorrelation
+T-93253	Mean-free distinct-prime major-arc criterion	RH-EQUIVALENT CRITERION	VERIFIED WITH FIXES	Equivalent to RH	T-93251; L-93015	Zero mode, diagonal and minor arc removed	Retain with imported-bound pins	Surviving modes remain RH-bearing
+R-93254	Cardinality-only alignment cannot prove decorrelation	REFUTATION	VERIFIED	Firewall	Elementary finite model	Rules out dimension/count shortcut	Retain	Exact saturated example
+T-93255	CPBD closes the cubic route	CONDITIONAL IMPLICATION	VERIFIED; PRODUCER OPEN	CPBD is equivalent to RH	L-93250--L-93253	Clean producer interface	Do not promote as proof	No CPBD estimate is proved
+X-93250	Exact finite regression	DISCOVERY ONLY	VERIFIED	No RH conclusion	Finite rational fixtures	Authenticates algebra and mutations	Retain	Does not certify analytic imports
+RH	Riemann Hypothesis	--	UNPROVEN	--	CPBD or equivalent prime coherence	No conclusion	No promotion	
