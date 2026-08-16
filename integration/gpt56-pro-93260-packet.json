@@ -1,0 +1,45 @@
+{
+  "packet_id": "93260",
+  "title": "hostile cubic reconstruction, minimal-switch geometry, positive Peano potential, and Mobius large-divisor localization",
+  "created": "2026-08-16",
+  "repository": "gfreund123/riemann",
+  "frozen_parent": {
+    "pull_request": 498,
+    "branch": "research/gpt56-pro/93250-centered-q4-cubic-closure",
+    "sha": "6cc0da2fa5711017e260ebdcea4ba8c22e453288"
+  },
+  "publication": {
+    "branch": "research/gpt56-pro/93260-minimal-switch-cubic-dispersion",
+    "commit_message": "advance cubic route via positive potential and Mobius dispersion",
+    "draft_pull_request": true
+  },
+  "arithmetic_class": "EXACT_RATIONAL_WITH_SYMBOLIC_LOG4_PAIR",
+  "retained_verdict": "PASS_X_93260_CUBIC_DISPERSION",
+  "scientific_status": {
+    "riemann_hypothesis": "UNPROVED",
+    "centered_cubic_spine": "RECONSTRUCTED",
+    "large_modulus_display": "CORRECTED_NON_LOAD_BEARING",
+    "prime_only_minimal_switch_criterion": "PROPOSED_COMPLETE",
+    "positive_peano_potential": "PROPOSED_COMPLETE",
+    "small_mobius_divisors": "CLOSED_UNCONDITIONALLY",
+    "large_divisor_mobius_tail": "OPEN_RH_BEARING",
+    "first_hermite_one_carrier_exclusion": "OPEN_RH_BEARING"
+  },
+  "forbidden_unconditional_inputs": [
+    "M(x)=O(sqrt(x) polylog(x))",
+    "psi(x)-x=O(sqrt(x) polylog(x))",
+    "macroscopic critical Selberg integral",
+    "pointwise large-sieve cancellation at additive frequency 1/N",
+    "CPBD",
+    "large-divisor Mobius square-root cancellation",
+    "First-Hermite one-carrier exclusion"
+  ],
+  "external_analytic_input": [
+    "classical unconditional prime number theorem, used only for two limiting statements"
+  ],
+  "replay": {
+    "directory": "experiments/X-93260-cubic-dispersion",
+    "command": "python3 verify.py --json /tmp/verification.json && cmp /tmp/verification.json results/verification.json && sha256sum -c SHA256SUMS",
+    "content_ledger": "integration/gpt56-pro-93260-content-sha256.txt"
+  }
+}
