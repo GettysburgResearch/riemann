@@ -1,0 +1,15 @@
+object	frozen_source	verdict	boundary
+PR498_head	6cc0da2fa5711017e260ebdcea4ba8c22e453288	FROZEN	unchanged parent
+cell_predecessor_N-j-1	L-93250	VERIFIED	N-j mutation false
+centered_normalization	L-93250/T-93251	VERIFIED	integral equals N times normalized variance
+Bernoulli_weight	L-93250	VERIFIED	mean zero; norm squared 1/180
+cubic_Riesz_identity	L-93250	VERIFIED	exact finite prefix reversal
+cubic_Mellin_multiplier	L-93250	VERIFIED	(s-1)/(3(s+1)(s+2)(s+3))
+real_endpoint_interpolation	L-94049	VERIFIED_WITH_PINNED_LEMMA	uses sum m|c(m)|=O(N^2), no RH estimate
+open_strip_pole_survival	L-93250/T-93251	VERIFIED	all auxiliary factors nonzero
+centered_energy_equivalence	T-93251	VERIFIED_RH_EQUIVALENT_CRITERION	not an unconditional estimate
+mean_free_major_arc	T-93253	VERIFIED_WITH_IMPORTS	pins PR474 L-93015
+CPBD	T-93255	OPEN_RH_EQUIVALENT	must not be called proved
+R-93254	PR498	BINDING	block count and half-plane alignment do not upper-bound total
+phase_locked_successor	94050 packet	NEW_PROPOSED_UNCONDITIONAL	all sublinear excess beyond constant four
+RH	global	UNPROVEN	leading fixed supercritical constant remains

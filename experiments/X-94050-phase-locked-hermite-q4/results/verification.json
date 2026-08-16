@@ -1,0 +1,43 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_PLUS_FINITE_FLOAT_DIAGNOSTICS",
+  "checks": {
+    "critical_saddle_moment_checks": 80,
+    "critical_shift_factor_checks": 9,
+    "cubic_mellin_checks": 39,
+    "cubic_weight_checks": 104,
+    "endpoint_projection_checks": 200,
+    "finite_prime_envelope_diagnostics": 9,
+    "finite_prime_envelope_sanity_passes": 3,
+    "fixed_order_wedge_checks": 30,
+    "hostile_mutations_detected": 7,
+    "maximum_modulus_grid_checks": 36,
+    "phase_lock_factor_checks": 2,
+    "positive_annulus_centering_checks": 9997,
+    "positive_annulus_negative_values": 5499,
+    "positive_annulus_positive_values": 4498,
+    "sublinear_order_profile_checks": 9,
+    "terminal_pair_sign_checks": 20,
+    "vertical_depth_checks": 501
+  },
+  "frozen_pr498_head": "6cc0da2fa5711017e260ebdcea4ba8c22e453288",
+  "result": "PASS_X_94050_PHASE_LOCKED_HERMITE_Q4",
+  "scope": {
+    "authenticates": [
+      "centered cubic finite algebra",
+      "phase-lock Laurent factorization",
+      "critical shift factorization and vanishing shift moments",
+      "terminal sign on finite controls",
+      "fixed-order wedge and sublinear-profile algebra",
+      "selected finite prime and strip diagnostics",
+      "hostile mutations"
+    ],
+    "does_not_authenticate": [
+      "Chebyshev and Stirling analytic inputs",
+      "terminal-pair theorem",
+      "uniform Hermite derivative estimates",
+      "asymptotic coefficient variance",
+      "signed prime cancellation",
+      "Riemann Hypothesis"
+    ]
+  }
+}
