@@ -1,0 +1,12 @@
+claim_id	short_statement	mathematical_type	review_verdict	rh_relationship	dependencies	surviving_scope	integration_action	notes
+L-93780	Directed zeta-half primitive intervals	UNCONDITIONAL THEOREM	VERIFIED WITH FIXES	Below RH	Decimal; Euler--Maclaurin B2 remainder	Published six-decimal enclosures	Retain	Pin Python/libmpdec versions
+L-93781	Directed all-event Target-Lorenz tail positivity	PROPOSED COMPLETE THEOREM	UNPROVEN / GAP	Producer input	Boost rounded_transc_std; L-93600	Event reduction and interval algebra only	Do not promote	Declared sqrt/log inclusion contract fails exact self-test
+L-93782	Row-66 extremality and compact/tail join	CONDITIONAL IMPLICATION	VERIFIED CONDITIONALLY	Below RH	L-91781; L-93781	Aggregation and domain partition	Retain conditional	Numerical bounds inherit L-93781 gap
+L-93783	Typed Target-Lorenz leaf marginal	UNCONDITIONAL THEOREM	VERIFIED	Below RH	L-91720; complete AVLT	Correct nu/B/sigma compiler for an actual leaf	Retain	Does not create the leaf
+L-93784	Typed leaves compile to native common parent	PROPOSED COMPLETE THEOREM	UNPROVEN / GAP	RH-bearing producer	L-91362; L-91650; endpoint frame	One-quantizer/all-column algebra conditional	Do not promote	Initial endpoint-fibre-to-tree identity absent
+L-93785	Native Y4 cost below 61000	CONDITIONAL IMPLICATION	VERIFIED CONDITIONALLY	Feeds endpoint consumer	L-93784; sparse Y4 bounds	Cost arithmetic	Retain conditional	Not reached absent common parent
+T-93780	Directed native-root resolution	PROPOSED COMPLETE THEOREM	UNPROVEN / GAP	Would imply endpoint criterion	L-93780--L-93785	No complete producer	Request changes	Two independent gaps
+T-93781	Endpoint-to-RH composition	CONDITIONAL IMPLICATION	VERIFIED CONDITIONALLY	Would imply RH	T-91313 and frozen consumer	Correct one-sided orientation	Retain conditional	Producer antecedent absent
+X-93780	Large directed tail artifact	EMPIRICAL ONLY	UNPROVEN AS DIRECTED CERTIFICATE	No RH conclusion	Boost/fenv long double	Exhaustive event census	Retain as reconnaissance	No valid transcendental inclusion proof
+X-93781	Typed ledger regression	DISCOVERY ONLY	VERIFIED SYNTHETIC	No RH conclusion	Fraction fixtures	Compiler/type algebra	Retain	Does not generate actual leaves
+RH	Riemann Hypothesis	--	UNPROVEN	--	Native producer + endpoint chain	No conclusion	No promotion	
