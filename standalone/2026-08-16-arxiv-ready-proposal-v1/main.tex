@@ -1,0 +1,1092 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{verbatim}
+
+\definecolor{navy}{HTML}{17324D}
+\definecolor{bluegray}{HTML}{49657A}
+\definecolor{pale}{HTML}{F3F6F8}
+\definecolor{warn}{HTML}{8A2D20}
+\definecolor{warnbg}{HTML}{FFF4F1}
+\definecolor{good}{HTML}{1F6D4A}
+\definecolor{goodbg}{HTML}{F0F8F4}
+\definecolor{amber}{HTML}{8A5A00}
+\definecolor{amberbg}{HTML}{FFF9EA}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=navy,
+  citecolor=good,
+  urlcolor=bluegray,
+  pdftitle={The Native Factor-67 Compiler: A Conditional Proof Proposal and Adversarial Audit for the Riemann Hypothesis},
+  pdfauthor={ChatGPT Pro; Gideon Freund; Agentic Polymath Project},
+  pdfsubject={Riemann hypothesis proof proposal and audit},
+  pdfkeywords={Riemann hypothesis, explicit formula, positive certificates, factor 67, interval arithmetic, proof audit}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Native Factor-67 Compiler}}
+\fancyhead[R]{\small\textsc{Proposal v1 -- 16 August 2026}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\Large\bfseries\color{navy}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\large\bfseries\color{navy}}{\thesubsection}{0.65em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{bluegray}}{\thesubsubsection}{0.65em}{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Certification clause}
+\newtheorem{protocol}[theorem]{Protocol}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+\newtcolorbox{statusbox}[1][]{enhanced,breakable,colback=warnbg,colframe=warn,
+  boxrule=0.9pt,arc=1.5mm,left=2.5mm,right=2.5mm,top=2mm,bottom=2mm,
+  title=Proof status,fonttitle=\bfseries,#1}
+\newtcolorbox{resultbox}[1][]{enhanced,breakable,colback=goodbg,colframe=good,
+  boxrule=0.9pt,arc=1.5mm,left=2.5mm,right=2.5mm,top=2mm,bottom=2mm,
+  title=Main conditional result,fonttitle=\bfseries,#1}
+\newtcolorbox{auditbox}[1][]{enhanced,breakable,colback=amberbg,colframe=amber,
+  boxrule=0.9pt,arc=1.5mm,left=2.5mm,right=2.5mm,top=2mm,bottom=2mm,
+  title=Adversarial audit finding,fonttitle=\bfseries,#1}
+\newtcolorbox{interfacebox}[1][]{enhanced,breakable,colback=pale,colframe=bluegray,
+  boxrule=0.7pt,arc=1.5mm,left=2.5mm,right=2.5mm,top=2mm,bottom=2mm,
+  title=Interface contract,fonttitle=\bfseries,#1}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\N}{\mathbb N}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\Mob}{\mu}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\Cert}{\mathsf{Cert}_{67}}
+\newcommand{\Src}{\mathsf P}
+\newcommand{\Bonus}{\mathsf B}
+\newcommand{\Obs}{\mathsf O}
+\newcommand{\Nat}{\mathrm{nat}}
+\newcommand{\TL}{\mathrm{TL}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\repoid}[1]{\texttt{#1}}
+
+\setlist[itemize]{leftmargin=1.45em,itemsep=0.25em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=0.3em,topsep=0.35em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\allowdisplaybreaks
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1.25cm}
+{\small\bfseries\color{bluegray} AGENTIC POLYMATH PROJECT \;\textbullet\; ARXIV-READY PROPOSAL V1}\par
+\vspace{1.0cm}
+{\fontsize{27}{32}\selectfont\bfseries\color{navy}
+The Native Factor-67 Compiler}\par
+\vspace{0.3cm}
+{\fontsize{18}{23}\selectfont\color{bluegray}
+A Conditional Proof Proposal and Adversarial Audit\\
+for the Riemann Hypothesis}\par
+\vspace{1.15cm}
+{\large
+\textbf{ChatGPT Pro}\textsuperscript{1}\quad
+\textbf{Gideon Freund}\textsuperscript{2}\quad
+\textbf{Agentic Polymath Project}\textsuperscript{3}}
+\par
+\vspace{0.35cm}
+{\small
+\textsuperscript{1}Principal synthesis, reconstruction, and adversarial audit\\
+\textsuperscript{2}Research harness, prompter, and project steward\\
+\textsuperscript{3}Distributed mathematical collaboration and repository provenance}
+\par
+\vfill
+\begin{minipage}{0.88\textwidth}
+\begin{statusbox}
+This manuscript is a \emph{proof proposal}, not an announcement that the Riemann hypothesis has been proved.  It gives the strongest end-to-end composition recovered from the repository, proves the algebraic and analytic compiler around it, and isolates two load-bearing certification obligations that are definitely not presently discharged: a genuinely outward-rounded Target--Lorenz tail certificate and an unambiguous native-normalization/benchmark identity.  The main theorem is conditional on those obligations.  The current repository therefore does not establish \(\RH\); the remaining imported finite clauses also require independent replay.
+\end{statusbox}
+\end{minipage}
+\vfill
+{\large Version 1.0 -- 16 August 2026}\par
+\vspace{0.2cm}
+{\small Frozen research base: active proposal line through pull request \#524, head \texttt{079a80308a218e924d86030c4df40410df960592}.}
+\end{titlepage}
+
+\begin{abstract}
+We reconstruct the strongest presently composable Riemann-hypothesis proposal in the Agentic Polymath repository.  Its central device is a native factor-67 compiler that converts an exact signed arithmetic source into a nonnegative feasible source while preserving the required target marginal and paying only bounded dual cost.  Three type firewalls are essential: complete target-bearing sources, current-row-only positive bonuses, and signed observations must never be promoted into one another; the outer Volterra fibre must remain unsplit; and the rough-prime lift must not be identified with the native marginal.  With these corrections, the finite and continuum pieces fit into a single same-row identity.  A common thinning factor
+\[
+\tau_K=\frac{\sqrt K}{\sqrt K+130},\qquad K=\floor{X/67}+1,
+\]
+repairs every fourth-order column, and the sparse \(Y_4\) dual yields the explicit cost
+\[
+0\le J_{\Nat}(X)-H(d_X)<60989\qquad(X\ge 10^{12}).
+\]
+Combined with a frozen prime-square moat and a Mellin--Landau converse, this would imply \(\RH\).
+
+The implication is conditional on a compact certification package \(\Cert\).  One clause requires rigorous positivity for the Target--Lorenz tail beyond \(166000\); the available program uses singleton values returned by standard \texttt{sqrt} and \texttt{log} calls inside an interval wrapper and therefore does not prove outward enclosure.  A second clause resolves an inherited notation and normalization collision: one dependency uses \(J_\Lambda\) for the smoothed prime sum, while the endpoint consumer uses \(P_\Lambda\) for that sum and reserves \(J\) for the native benchmark.  We formulate the exact identity and growth bound that a valid certificate must establish.  Thus the manuscript supplies a dependency-closed conditional proof, an explicit failure ledger, and a reproducible route to a machine-checkable closure, but it does not claim an unconditional proof of \(\RH\).
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+The Riemann hypothesis asserts that every nontrivial zero of the Riemann zeta function has real part \(1/2\).  The repository studied here contains several long proof architectures.  By August 2026 the most advanced positive endpoint route had concentrated around a factor-67 arithmetic compiler.  The attractive feature of that route is not a single spectacular inequality, but a modular implication:
+\[
+\begin{aligned}
+\text{exact native source}
+&\Longrightarrow \text{positive feasible source of bounded dual defect}\\
+&\Longrightarrow \text{eventual one-sided explicit-formula remainder}\\
+&\Longrightarrow \RH.
+\end{aligned}
+\]
+The danger is precisely the modularity.  A source that is positive in one row is not automatically a complete source; a signed identity is not a positive decomposition; a continuum fibre cannot be split merely because its integrated coefficient is positive; and two objects with the same total mass need not have the same native marginal.  Several earlier proposals failed at one of these interfaces.
+
+This paper has four goals.
+
+First, it places the live factor-67 proposal in one notation and proves its compositional algebra without referring the reader to a graph of repository files.  Second, it enforces a three-sorted type system that rules out the known illegal promotions.  Third, it carries the construction through localization, thinning, the sparse fourth-order dual, and the Mellin--Landau endpoint.  Fourth, it performs a hostile audit of every non-symbolic input and states the exact certification package still required.
+
+The result is intentionally stronger than a survey and weaker than an accepted proof.  It is a complete conditional argument with named, finite verification obligations.  Those obligations are sufficiently sharp that an independent reviewer can reject or certify the proposal without reverse-engineering the repository.
+
+\subsection{What is new in this synthesis}
+
+The main synthesis is the simultaneous use of the following corrections.
+
+\begin{enumerate}
+\item \textbf{Three-sorted source calculus.}  Complete sources \(\Src\), current-row bonuses \(\Bonus\), and signed observations \(\Obs\) have disjoint interfaces.  Only \(\Src\) objects can be recursively compiled.
+\item \textbf{Native parent initialization.}  The finite tree starts directly from the native occurrence atoms, not from a rough-prime lift or a synthetic endpoint parent.
+\item \textbf{Unsplit outer coupling.}  The Volterra fibre \(p_s\) is transported only by a rank-one coupling at fixed \(s\); it is never causally subdivided.
+\item \textbf{Same-row accounting.}  The residual source and the current-only bonus are inserted in the same physical row.  This makes the exact row identity visible before any positivity conclusion is drawn.
+\item \textbf{One common thinning.}  The factor \(\tau_K\) is applied after the positive block has been assembled.  The all-column and terminal estimates are then charged in the sparse \(Y_4\) dual.
+\item \textbf{Notation firewall.}  The smoothed prime sum is denoted \(P_\Lambda\), while the native benchmark is denoted \(J_{\Nat}\).  Their relation is a theorem obligation, not a typographical convention.
+\item \textbf{Certificate firewall.}  A numerical interval computation counts as proof only when every elementary function is outward-enclosed and the event partition is independently replayable.
+\end{enumerate}
+
+\subsection{The headline theorem}
+
+Let
+\begin{equation}\label{eq:prime-sum}
+P_\Lambda(X):=\sum_{n\le X}\frac{\Lambda(n)}{\sqrt n}\log\frac Xn
+\end{equation}
+be the smoothed von Mangoldt sum.  Let \(c_X\) be the exact native source, \(H\) the native benchmark functional, and
+\[
+J_{\Nat}(X):=H(c_X),\qquad F_\Lambda(X):=J_{\Nat}(X)-P_\Lambda(X).
+\]
+The definitions of the response maps and the certification package are given in \cref{sec:framework,sec:certificate}.
+
+\begin{resultbox}
+Assume \(\Cert\).  For every \(X\ge 10^{12}\) there is a nonnegative native-feasible source \(d_X\) satisfying
+\[
+0\le \Delta_X:=J_{\Nat}(X)-H(d_X)<60989.
+\]
+Consequently \(F_\Lambda(X)\le \Delta_X=o(\log^2X)\).  Under the prime-square occupancy identity proved in \cref{sec:endpoint}, the associated explicit-formula remainder is eventually negative.  Landau's one-sign theorem then excludes a nontrivial zeta zero off the critical line, and the functional equation gives \(\RH\).
+\end{resultbox}
+
+The theorem is proved in \cref{sec:composition}.  Its present logical status is summarized by the following equally important statement.
+
+\begin{theorem}[Current proof status]\label{thm:status}
+The repository state audited for this manuscript does not establish \(\Cert\).  In particular:
+\begin{enumerate}
+\item the published Target--Lorenz tail computation does not outward-enclose its calls to \texttt{sqrt} and \texttt{log}; and
+\item the inherited sources use the symbol \(J_\Lambda\) for two different quantities, leaving the normalization and the \(O(\sqrt X)\) benchmark bound formally ambiguous until an explicit identity is supplied.
+\end{enumerate}
+Therefore this manuscript does not establish the Riemann hypothesis unconditionally.
+\end{theorem}
+
+\section{Notation and the three-sorted proof system}\label{sec:framework}
+
+\subsection{Arithmetic notation}
+
+Throughout, \(\mu\) is the M\"obius function, \(\Lambda\) the von Mangoldt function, and \(X\ge 10^{12}\) unless otherwise stated.  Put
+\begin{equation}\label{eq:K-W}
+K:=\floor{X/67}+1,\qquad W:=10000,
+\qquad \tau_K:=\frac{\sqrt K}{\sqrt K+130}.
+\end{equation}
+For \(x\ge1\) and \(k\le x\), define the positive factor-67 coefficient
+\begin{equation}\label{eq:ell}
+\ell_x(k):=\frac1{\sqrt k}\left(2\sqrt{\frac xk}-1\right).
+\end{equation}
+The outer signed coefficient is \(\mu(k)\ell_x(k)\), and its total is
+\begin{equation}\label{eq:Lx}
+L(x):=\sum_{k\le x}\mu(k)\ell_x(k).
+\end{equation}
+
+The exact continuum density used to initialize the native source is
+\begin{equation}\label{eq:dstar}
+d_X^*(t):=\sum_{k\le X/t}\frac{\mu(k)}{\sqrt{kt}}
+          \log\frac{X}{kt},\qquad 1\le t\le X.
+\end{equation}
+Its discrete tail profile is
+\begin{equation}\label{eq:bstar}
+b_X^*(n):=\sum_{m=n}^{\floor X}d_X^*(m).
+\end{equation}
+The native realization operator \(R\) sends the profile to the source \(c_X:=Rb_X^*\).  Rather than rely on a coordinate convention for \(R\), we specify the source by its complete response tuple
+\begin{equation}\label{eq:response-tuple}
+\mathcal R(c):=\bigl(C_c,\Xi_c,H(c),(v_q(c))_{q\ge1},(R_j(c))_{j\ge2}\bigr).
+\end{equation}
+Every equality involving sources below is an equality in this tuple.  This is the most economical standalone definition: the proof uses no property of an internal coordinate vector that is not visible in \(\mathcal R\).
+
+\subsection{The notation firewall}
+
+The project inherited two incompatible uses of \(J_\Lambda\).  One family of files used it for the prime sum \eqref{eq:prime-sum}; another endpoint theorem denoted that sum by \(P_\Lambda\) and used \(J\) for the exact native benchmark.  We adopt the latter semantic distinction:
+\begin{equation}\label{eq:notation-firewall}
+\boxed{
+P_\Lambda(X)=\sum_{n\le X}\frac{\Lambda(n)}{\sqrt n}\log\frac Xn,
+\qquad
+J_{\Nat}(X)=H(c_X),
+\qquad
+F_\Lambda=J_{\Nat}-P_\Lambda.}
+\end{equation}
+No step in this paper identifies \(P_\Lambda\) and \(J_{\Nat}\) merely because an imported file used the same letter for both.
+
+\begin{auditbox}
+The elementary Chebyshev argument proves
+\[
+P_\Lambda(X)<8(\log2)\sqrt X\qquad(X\ge2),
+\]
+whereas the thinning charge requires a bound for \(J_{\Nat}(X)\).  A valid proof must derive the required \(O(\sqrt X)\) bound for \(J_{\Nat}\) from the native definitions; a proved comparison such as \(J_{\Nat}\le 2P_\Lambda\) would suffice.  This is clause \(\mathrm{N}_{67}\) of \(\Cert\).
+\end{auditbox}
+
+\subsection{Three source sorts}
+
+\begin{definition}[Complete source, current bonus, observation]\label{def:sorts}
+A \emph{complete source} \(u\in\Src\) carries target, score, row, response, and provenance data.  It may be recursively decomposed or inserted into the positive physical block.  A \emph{current-row bonus} \(B\in\Bonus\) is a nonnegative row vector attached to the current occurrence only; it has no target, no inherited score, no descendant mass, and no fourth-order response.  A \emph{signed observation} \(E\in\Obs\) may be paired against a dual or bounded in response norm, but it is not a positive source.
+\end{definition}
+
+The legal operations are
+\[
+\Src+\Src\to\Src,
+\qquad
+\Bonus+\Bonus\to\Bonus,
+\qquad
+\Obs+\Obs\to\Obs,
+\qquad
+(\Src,\Bonus)\to\text{same-row block}.
+\]
+There are deliberately no coercions \(\Bonus\to\Src\), \(\Obs\to\Src\), or \(\Obs\to\Bonus\).
+
+\begin{interfacebox}
+A row identity of the form
+\[
+R(\nu)+B=R(E)-R(O),\qquad \nu\in\Src,\;B\in\Bonus,
+\]
+does not imply that \(\nu+B\) is a complete source.  The bonus may be used only in that row.  This rule is the repair for the exact \(q=2\) Hall obstruction.
+\end{interfacebox}
+
+\subsection{Ownership}
+
+Every literal native occurrence is assigned the label
+\begin{equation}\label{eq:label}
+\lambda=(m,k,d,h,i,\epsilon,c),
+\end{equation}
+recording its cell, M\"obius index, stopping-line divisor, depth, local occurrence, sign, and coefficient.  A deterministic first-owner map sends each label to exactly one leaf of the finite tree.  Outer continuum fibres are labelled by \((s,k)\) and remain outside that tree.
+
+\begin{definition}[One-use invariant]\label{def:one-use}
+A construction satisfies the one-use invariant when every native literal label has exactly one of the following statuses: retained residual source, absorbed negative source, current-only row bonus, retained outer fibre, top omission, or signed localization error.  No label may have two statuses and no label may disappear without entering the signed-error ledger.
+\end{definition}
+
+This invariant is the combinatorial backbone of the exact coefficient identity in \cref{lem:global-exact}.
+
+\section{The native source and its finite--continuum split}\label{sec:native}
+
+\subsection{Native normalization}
+
+The exact source has three distinguished responses:
+\begin{equation}\label{eq:native-normalization}
+C_{c_X}=w_X,
+\qquad
+\Xi(c_X)=\Omega_X,
+\qquad
+H(c_X)=J_{\Nat}(X).
+\end{equation}
+Here \(C\) is the target marginal, \(\Xi\) the ordinary complement response, and \(H\) the native benchmark functional.  The first two equalities encode the source-to-endpoint normalization; the third defines the benchmark once the normalization is fixed.  Clause \(\mathrm N_{67}\) of \(\Cert\) requires these equalities in a single coordinate convention and supplies the growth estimate needed in \cref{sec:cost}.
+
+At the occurrence level, the inner native coefficient is
+\begin{equation}\label{eq:inner-coeff}
+a_{m,k}:=\frac{|\mu(k)|}{\sqrt{km}}\log\frac{X}{km},
+\qquad km\le X.
+\end{equation}
+The sign is \(\operatorname{sgn}\mu(k)\).  Starting the finite compiler from these atoms avoids the false identification of a rough-prime lift with the native marginal.
+
+\subsection{Outer Volterra atoms}
+
+For \(1\le m\le s\), set
+\begin{equation}\label{eq:gs}
+g_s(m):=\left(\sqrt m-\frac m{\sqrt s}\right)\1_{m\le s},
+\qquad p_s:=Rg_s.
+\end{equation}
+Clause \(\mathrm N_{67}\) requires the native source calculus to give \(p_s\ge0\).  Its outer integral is
+\begin{equation}\label{eq:outer-source}
+\bar c_{\mathrm{out}}
+=
+\int_{K+2}^{X}\frac2s
+\sum_{k\le X/s}\mu(k)\ell_{X/s}(k)p_s\,\dd s.
+\end{equation}
+For fixed \(s\), the factor \(p_s\) is one indivisible physical fibre.  A proposal may couple its arithmetic coefficients, but may not split the vector \(p_s\) according to a causal stopping line.
+
+The need for this rule is not philosophical.  At \((p,y,s,j)=(67,15,1005,14)\), direct evaluation gives
+\begin{equation}\label{eq:volterra-counterexample}
+-\frac{184291}{10^9}
+< p_{1005}(14)-67^{-1/2}p_{15}(14)
+< -\frac{184290}{10^9}<0.
+\end{equation}
+Thus an apparently natural branchwise positive split is false.
+
+\subsection{Cell decomposition}
+
+Write the adjacent-cell error as
+\begin{equation}\label{eq:eps-cell}
+\epsilon_X(m):=d_X^*(m)-\int_m^{m+1}d_X^*(t)\,\dd t,
+\qquad
+E_{\mathrm{out}}(n):=\sum_{\substack{m\ge K+2\\m\ge n}}\epsilon_X(m).
+\end{equation}
+Split the outer cells into the retained region
+\[
+K+2\le m\le X-W-3
+\]
+and the top collar
+\[
+X-W-2\le m\le X-1.
+\]
+Then the exact source identity is
+\begin{equation}\label{eq:exact-split}
+\boxed{
+c_X=c_{\mathrm{in}}+\bar c_{\mathrm{ret}}+\bar c_{\mathrm{top}}+R E_{\mathrm{out}}.}
+\end{equation}
+The inner term contains whole native cells \(m\le K+1\); the outer retained and top terms are unsplit Volterra integrals.  Equation \eqref{eq:exact-split} is an equality of complete response tuples.
+
+\begin{lemma}[Exact split from adjacent-cell summation]\label{lem:exact-split}
+Assume \eqref{eq:dstar}--\eqref{eq:eps-cell} and the linearity of \(R\).  Then \eqref{eq:exact-split} holds, and every contribution to the right-hand side has a unique cell owner.
+\end{lemma}
+
+\begin{proof}
+On each outer cell \([m,m+1]\), add and subtract the constant value \(d_X^*(m)\).  The integral pieces assemble into \(\bar c_{\mathrm{ret}}+\bar c_{\mathrm{top}}\), while the differences telescope in the discrete tail \(E_{\mathrm{out}}\).  The cells \(m\le K+1\), retained outer cells, and top cells are disjoint.  Linearity of \(R\) gives the source identity, and the partition gives unique ownership.
+\end{proof}
+
+\section{The inner two-sorted compiler}\label{sec:inner}
+
+\subsection{A generic Hall residual lemma}
+
+We first isolate the exact algebra used at both compact and deep leaves.
+
+\begin{lemma}[Two-sorted Hall residual]\label{lem:hall-residual}
+Let \(E\) and \(O\) be finite sets of positive and negative source atoms.  Each atom \(a\) has a positive target \(T(a)>0\), a score \(S(a)\), and row values \(R_j(a)\).  Suppose there is a nonnegative transport \(t(o,e)\) such that
+\begin{align}
+\sum_{e\in E}t(o,e)&=T(o) &&(o\in O),\label{eq:hall1}\\
+\sum_{o\in O}t(o,e)&\le T(e) &&(e\in E),\label{eq:hall2}
+\end{align}
+and on every used edge
+\begin{align}
+\frac{S(e)}{T(e)}&\le \frac{S(o)}{T(o)},\label{eq:score-order}\\
+\frac{R_j(e)}{T(e)}&\ge \frac{R_j(o)}{T(o)}\qquad\text{for every current row }j.\label{eq:row-order}
+\end{align}
+Define
+\begin{align}
+c_e&:=1-\frac1{T(e)}\sum_o t(o,e)\ge0,\label{eq:ce}\\
+\nu&:=\sum_{e\in E}c_e e\in\Src,\label{eq:nu}\\
+\sigma&:=\sum_{o,e}t(o,e)\left(\frac{S(o)}{T(o)}-\frac{S(e)}{T(e)}\right)\ge0,\label{eq:sigma}\\
+B_j&:=\sum_{o,e}t(o,e)\left(\frac{R_j(e)}{T(e)}-\frac{R_j(o)}{T(o)}\right)\ge0.\label{eq:Bj}
+\end{align}
+Then
+\begin{align}
+T(\nu)&=T(E)-T(O),\label{eq:target-id}\\
+S(\nu)&=S(E)-S(O)+\sigma,\label{eq:score-id}\\
+R_j(\nu)+B_j&=R_j(E)-R_j(O).\label{eq:row-id}
+\end{align}
+Moreover \(B=(B_j)_j\) is a current-only bonus and cannot be promoted to a complete source.
+\end{lemma}
+
+\begin{proof}
+Equation \eqref{eq:hall2} gives \(c_e\ge0\).  Multiplying \eqref{eq:ce} by \(T(e)\), summing in \(e\), and using \eqref{eq:hall1} gives \eqref{eq:target-id}.  The score identity follows by expanding \(S(\nu)\), inserting \(\sum_o t(o,e)\), and grouping the transported terms.  The row identity is identical.  The signs of \(\sigma\) and \(B_j\) follow from \eqref{eq:score-order} and \eqref{eq:row-order}.  Only the residual coefficients \(c_e\) multiply complete source atoms; the differences in \eqref{eq:Bj} are row coordinates without target or score data, so they have sort \(\Bonus\), not \(\Src\).
+\end{proof}
+
+\subsection{Why one-sorted Hall is impossible}
+
+At the \(q=2\) root, the score ordering and row ordering cannot simultaneously be encoded as a complete target-null positive packet.  In the language of \cref{lem:hall-residual}, the residual \(\nu\), score slack \(\sigma\), and row bonus \(B\) are all nonnegative, but only \(\nu\) is a complete source.  Any proof that recursively splits \(B\) has silently added target and score coordinates that the Hall construction never supplied.
+
+\begin{proposition}[Type firewall at the root]\label{prop:q2-firewall}
+The valid output of the factor-67 root Hall step is the pair \((\nu,B)\in\Src\times\Bonus\) satisfying \eqref{eq:target-id}--\eqref{eq:row-id}.  There is in general no complete source \(u\ge0\) having target zero, exact score, and row vector \(B\).
+\end{proposition}
+
+\begin{proof}
+The first assertion is \cref{lem:hall-residual}.  The second is witnessed by the exact \(q=2\) separator in the native model: the target and score constraints determine a cone face on which the required row coordinate has the wrong sign.  Clause \(\mathrm F_{67}\) records the finite rational certificate.  The proposition is used only negatively: it forbids the illegal promotion \(\Bonus\to\Src\).
+\end{proof}
+
+\subsection{Compact and deep leaves}
+
+For compact leaves, the transport is obtained from a finite Hall table.  The root coefficients may be represented by
+\begin{align}
+T_x(k)&:=\frac{4\sqrt{x/k}-3}{\sqrt k},\label{eq:Tx}\\
+S_x(k)&:=\frac{5\sqrt{x/k}-3}{\sqrt k},\label{eq:Sx}\\
+R_{x,j}(k)&:=\frac{Q_{x/k}(j)}{\sqrt k},\label{eq:Rxj}
+\end{align}
+where \(Q_y(j)\) is the native row kernel fixed by the response tuple.  The finite table covers \(67\le x\le166000\) and rows \(2\le j\le66\).
+
+For the tail, the arithmetic part is compressed into the Target--Lorenz functions
+\begin{align}
+\chi_2(s)&=1-2^{-s},\label{eq:chi2}\\
+\chi_3(s)&=1+2^{-s}-2\cdot3^{-s},\label{eq:chi3}\\
+\chi_4(s)&=1+2^{-s}+3^{-s}-2\cdot4^{-s}.
+\end{align}
+A finite event partition in \(x\) reduces all target, score, derivative, and causal inequalities to interval evaluations on boxes.  The claimed worst row is \(66\).  The algebraic consequences of those inequalities are correct; the current floating-point proof of the inequalities is not.
+
+\begin{assumption}[Finite and tail typed-leaf certificate \(\mathrm F_{67}\)]\label{ass:F67}
+For every native inner occurrence, the compact table and the rigorous tail certificate produce a transport satisfying \eqref{eq:hall1}--\eqref{eq:row-order}, with exact occurrence ownership.  The compact range is \(67\le x\le166000\); the tail is \(x\ge166000\).  The certificate must include exact or outward-rounded lower bounds for target Hall slack, score-ratio slack, and every row-ratio slack.
+\end{assumption}
+
+\begin{lemma}[Inner same-row realization]\label{lem:inner-realization}
+Assume \(\mathrm F_{67}\).  The entire inner native source admits an exact decomposition
+\begin{equation}\label{eq:inner-decomp}
+c_{\mathrm{in}}=d_{\mathrm{src}}^0\;\dotplus\;B_{\mathrm{in}}
+\end{equation}
+in the same-row sense: \(d_{\mathrm{src}}^0\in\Src\) is nonnegative and complete, \(B_{\mathrm{in}}\in\Bonus\) is current-only and rowwise nonnegative, the target marginal is exact, the score is superordinate, and every row satisfies
+\begin{equation}\label{eq:inner-row-exact}
+R_j(d_{\mathrm{src}}^0)+B_{\mathrm{in},j}=R_j(c_{\mathrm{in}}).
+\end{equation}
+Every native inner occurrence is used exactly once.
+\end{lemma}
+
+\begin{proof}
+Apply \cref{lem:hall-residual} independently at each first-owned leaf supplied by \(\mathrm F_{67}\).  Add all residual complete sources and all current-only bonuses within their respective sorts.  Target identities telescope through the finite tree; nonnegative score slacks accumulate; row identities add in the same physical row.  The first-owner labelling prevents duplication, and the finite tree exhausts the inner labels.  No bonus is recursed or assigned a response coordinate.
+\end{proof}
+
+\section{The unsplit outer rank-one compiler}\label{sec:outer}
+
+The outer range has \(x=X/s<67\).  At fixed \(s\), abbreviate \(a_k=\ell_x(k)>0\), and split the arithmetic coefficients by M\"obius sign:
+\begin{equation}\label{eq:Ppm}
+P_+(x):=\sum_{\substack{k\le x\\\mu(k)=1}}a_k,
+\qquad
+P_-(x):=\sum_{\substack{k\le x\\\mu(k)=-1}}a_k.
+\end{equation}
+Then \(L(x)=P_+(x)-P_-(x)\).
+
+\begin{assumption}[Factor-67 outer margin \(\mathrm O_{67}\)]\label{ass:O67}
+For \(1\le x<67\),
+\begin{equation}\label{eq:outer-margin}
+L(x)>\frac{159}{500}.
+\end{equation}
+The lower bound is certified on the finitely many floor-pattern intervals of \(x\).
+\end{assumption}
+
+\begin{lemma}[Rank-one cancellation without fibre splitting]\label{lem:rank-one}
+Assume \(\mathrm O_{67}\).  At fixed \(s\), define
+\begin{equation}\label{eq:rank-one}
+t_x(o,e):=\frac{a_o a_e}{P_+(x)}
+\qquad(\mu(o)=-1,\;\mu(e)=1).
+\end{equation}
+Then every negative coefficient is exhausted, the positive residual is
+\begin{equation}\label{eq:outer-residual}
+r_x(e)=a_e\frac{P_+(x)-P_-(x)}{P_+(x)}\ge0,
+\end{equation}
+and the physical row contribution is exactly
+\begin{equation}\label{eq:outer-row}
+\sum_e r_x(e)p_s=L(x)p_s\ge0.
+\end{equation}
+No subvector of \(p_s\) is introduced.
+\end{lemma}
+
+\begin{proof}
+For a negative index \(o\),
+\[
+\sum_e t_x(o,e)=a_o\frac{\sum_e a_e}{P_+}=a_o.
+\]
+For a positive index \(e\), the absorbed amount is
+\[
+\sum_o t_x(o,e)=a_e\frac{P_-}{P_+},
+\]
+which gives \eqref{eq:outer-residual}.  The strict margin makes the residual nonnegative.  All coefficients multiply the same vector \(p_s\), so their sum is \(L(x)p_s\).  The calculation modifies only the scalar coefficient of the intact fibre.
+\end{proof}
+
+Integrating \cref{lem:rank-one} gives a nonnegative retained outer source \(\bar c_{\mathrm{ret}}\).  The top collar is deliberately omitted and later paid by a terminal reserve.
+
+\section{Localization, all-column repair, and terminal reserve}\label{sec:localization}
+
+\subsection{The unthinned positive block}
+
+Let \(I_{\mathrm{src}}\) and \(I_{\mathrm{bonus}}\) insert the inner residual and bonus into the same physical row, and let \(Q_{\mathrm{bulk}}\) realize retained outer cells.  The block operator is
+\begin{equation}\label{eq:Qhyb}
+Q_{\mathrm{hyb}}:=I_{\mathrm{src}}\oplus I_{\mathrm{bonus}}\oplus Q_{\mathrm{bulk}}.
+\end{equation}
+With \(C_{\mathrm{ret}}\) denoting the localized correction selected from \(E_{\mathrm{out}}\), define
+\begin{equation}\label{eq:d0}
+d_X^0:=I_{\mathrm{src}}d_{\mathrm{src}}^0+I_{\mathrm{bonus}}B_{\mathrm{in}}
+       +\bar c_{\mathrm{ret}}+RC_{\mathrm{ret}}.
+\end{equation}
+The type system is internal to the construction: after insertion, \(d_X^0\) is a physical nonnegative source, but the bonus was never independently treated as target-bearing.
+
+\begin{lemma}[Global exact identity]\label{lem:global-exact}
+Under \(\mathrm F_{67}\) and \(\mathrm O_{67}\),
+\begin{equation}\label{eq:cminusd0}
+\boxed{
+c_X-d_X^0=\bar c_{\mathrm{top}}+R(E_{\mathrm{out}}-C_{\mathrm{ret}}).}
+\end{equation}
+Moreover \(d_X^0\ge0\) and satisfies the exact target and score conditions before thinning.
+\end{lemma}
+
+\begin{proof}
+Subtract \eqref{eq:d0} from the exact split \eqref{eq:exact-split}.  The inner difference vanishes row by row by \eqref{eq:inner-row-exact}; the retained outer term is exact by \cref{lem:rank-one}; and the localization term leaves \(R(E_{\mathrm{out}}-C_{\mathrm{ret}})\).  The top collar was never inserted and remains as \(\bar c_{\mathrm{top}}\).  Positivity follows from the inner residual and current-row bonus, the outer margin, and the positive realization of \(C_{\mathrm{ret}}\).  One-use ownership prevents an additional term.
+\end{proof}
+
+\subsection{Fourth-order responses}
+
+For a source \(u\), let \(v_q(u)\) be its \(q\)-column response and let \(D_4v_q(u)\) be the fourth-order difference paired with the sparse \(Y_4\) dual.  Its normalization is fixed by the adjoint identity
+\begin{equation}\label{eq:D4-adjoint}
+\ip{Y_4}{D_4v(u)}=\ip{\mathcal Y_4}{u},
+\end{equation}
+where \(Y_4(q)\) obeys
+\begin{equation}\label{eq:Y4-rec}
+Y_4(q)=\frac1{2q^2}+2Y_4(4q),
+\qquad
+|Y_4(q)|<\frac8{3q^2}.
+\end{equation}
+This formulation removes any ambiguity about whether \(D_4\) acts forward or backward on a chosen coordinate convention.
+
+The localization estimates needed below are
+\begin{align}
+|v_q(E_{\mathrm{out}})|&<\frac{57}{2q\sqrt K},\label{eq:loc57}\\
+|D_4v_q(E_{\mathrm{out}}-C_{\mathrm{ret}})|&<\frac{971}{4q\sqrt K},\label{eq:loc971}\\
+\frac{|D_4v_q(E_{\mathrm{out}}-C_{\mathrm{ret}})|}{\Omega_X(q)}&<\frac{129}{\sqrt K}
+\qquad(q\le X/4).\label{eq:loc129}
+\end{align}
+The last inequality is the all-column relative bound.
+
+\begin{assumption}[Localization certificate \(\mathrm L_{67}\)]\label{ass:L67}
+There is a first-owner localization \(C_{\mathrm{ret}}\) for which \eqref{eq:loc57}--\eqref{eq:loc129} hold simultaneously, with no artificial cutoff atom and with exact carry accounting.
+\end{assumption}
+
+\subsection{Common thinning}
+
+Define
+\begin{equation}\label{eq:dthin}
+d_X:=\tau_K d_X^0.
+\end{equation}
+Then
+\begin{equation}\label{eq:cminusd}
+c_X-d_X=(1-\tau_K)c_X
++\tau_K\left[\bar c_{\mathrm{top}}+R(E_{\mathrm{out}}-C_{\mathrm{ret}})\right].
+\end{equation}
+Consequently the fourth-order endpoint defect is
+\begin{equation}\label{eq:e4}
+e_X^{(4)}=(1-\tau_K)\Omega_X
++\tau_K\left[\Xi(\bar c_{\mathrm{top}})+D_4v(E_{\mathrm{out}}-C_{\mathrm{ret}})\right].
+\end{equation}
+Since
+\begin{equation}\label{eq:thinning-slack}
+1-\tau_K=\frac{130}{\sqrt K+130},
+\end{equation}
+the relative reserve is larger than \(129/\sqrt K\).  Thus \eqref{eq:loc129} repairs every nonterminal column \(q\le X/4\).
+
+\subsection{Terminal columns}
+
+For the top omission, the fourth-order response has a one-sided derivative lower bound.  Summing the top collar of width \(W=10000\) gives
+\begin{equation}\label{eq:top-reserve}
+\text{top response removed}>5033X^{-3/2}.
+\end{equation}
+The worst all-column overfill is
+\begin{equation}\label{eq:overfill}
+\text{localized overfill}<4452X^{-3/2}.
+\end{equation}
+Hence the terminal margin is at least
+\begin{equation}\label{eq:terminal-margin}
+(5033-4452)X^{-3/2}=581X^{-3/2}>0.
+\end{equation}
+
+\begin{proposition}[All-column nonnegativity]\label{prop:all-column}
+Assume \(\mathrm L_{67}\) and the terminal bounds \eqref{eq:top-reserve}--\eqref{eq:overfill}.  Then \(e_X^{(4)}(q)\ge0\) for every fourth-order column.  The ordinary complement
+\begin{equation}\label{eq:ordinary-complement}
+e_X^{\mathrm{ord}}(q):=\sum_{h\ge0}2^h e_X^{(4)}(4^h q)
+\end{equation}
+is also nonnegative.
+\end{proposition}
+
+\begin{proof}
+For \(q\le X/4\), combine the thinning reserve in the first term of \eqref{eq:e4} with \eqref{eq:loc129}; the constant \(130\) strictly dominates \(129\).  The terminal columns are covered by \eqref{eq:terminal-margin}.  Every summand in \eqref{eq:ordinary-complement} is therefore nonnegative.
+\end{proof}
+
+\section{The sparse \texorpdfstring{\(Y_4\)}{Y4} dual and the constant 60989}\label{sec:cost}
+
+\subsection{Dual identity}
+
+Let \(Y_4\) be the sparse dual generated by \eqref{eq:Y4-rec}.  Native feasibility and adjunction give
+\begin{equation}\label{eq:dual-identity}
+\Delta_X:=J_{\Nat}(X)-H(d_X)=\ip{Y_4}{e_X^{(4)}}\ge0.
+\end{equation}
+The nonnegativity follows from \cref{prop:all-column} and the sign of the dual weights in the native cone.
+
+The cost is divided according to the exact error ledger.  The conservative bounds inherited by the live proposal are shown in \cref{tab:cost}.
+
+\begin{table}[ht]
+\centering
+\caption{Dual-cost ledger.  Strict inequalities add to \(60989\).}\label{tab:cost}
+\begin{tabularx}{0.88\textwidth}{@{}Xr@{}}
+\toprule
+Contribution & Upper bound\\
+\midrule
+Common thinning, \((1-\tau_K)J_{\Nat}(X)\) & \(12012\)\\
+Nonterminal signed localization error & \(4\)\\
+Terminal signed localization and top collar & \(48972\)\\
+Endpoint omissions and rounding collars & \(1\)\\
+Exact coefficient and same-row identities & \(0\)\\
+\midrule
+Total & \(60989\)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{The benchmark-growth clause}
+
+The thinning charge is
+\begin{equation}\label{eq:thin-charge}
+(1-\tau_K)J_{\Nat}(X)
+=\frac{130}{\sqrt K+130}J_{\Nat}(X).
+\end{equation}
+Because \(K> X/67\), the conservative estimate
+\begin{equation}\label{eq:Jnat-bound}
+J_{\Nat}(X)\le 16(\log2)\sqrt X
+\end{equation}
+gives a uniform value below \(12012\).  The elementary Chebyshev proof establishes \eqref{eq:Jnat-bound} with \(J_{\Nat}\) replaced by \(P_\Lambda\).  The proposal therefore requires the following explicit clause.
+
+\begin{assumption}[Native normalization and benchmark clause \(\mathrm N_{67}\)]\label{ass:N67}
+In one fixed coordinate convention, the native source satisfies \eqref{eq:native-normalization}, the endpoint gap is \(F_\Lambda=J_{\Nat}-P_\Lambda\), the Volterra atoms satisfy \(p_s=Rg_s\ge0\), and
+\begin{equation}\label{eq:N67-options}
+J_{\Nat}(X)\le 16(\log2)\sqrt X.
+\end{equation}
+The estimate must be proved from the native source definitions.  It may follow from a separately proved comparison with \(P_\Lambda\), but never from a shared symbol.
+\end{assumption}
+
+\begin{lemma}[Elementary prime-sum estimate]\label{lem:cheb}
+For \(X\ge2\),
+\begin{equation}\label{eq:prime-cheb}
+P_\Lambda(X)<8(\log2)\sqrt X.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let \(\psi(t)=\sum_{n\le t}\Lambda(n)\).  The elementary Chebyshev bound \(\psi(t)\le 2(\log2)t\) is sufficient.  Partial summation in \eqref{eq:prime-sum} gives an integral against the decreasing derivative of \(t^{-1/2}\log(X/t)\).  Bounding \(\psi(t)\) by \(2(\log2)t\) and evaluating the resulting elementary integral yields a constant at most \(8\log2\).  The estimate is intentionally conservative.
+\end{proof}
+
+\begin{proposition}[Bounded native defect]\label{prop:60989}
+Assume \(\mathrm N_{67}\), \(\mathrm L_{67}\), and the terminal estimates.  Then
+\begin{equation}\label{eq:60989}
+0\le\Delta_X<60989.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The lower bound is \eqref{eq:dual-identity}.  Clause \(\mathrm N_{67}\) and \eqref{eq:thin-charge} give the first line of \cref{tab:cost}.  The localization bounds \eqref{eq:loc57}--\eqref{eq:loc971}, the dual decay \eqref{eq:Y4-rec}, and the terminal collar give the next three lines.  Exact identities cost zero.  Adding the strict upper bounds gives \(12012+4+48972+1=60989\).
+\end{proof}
+
+\section{Endpoint transport and the Mellin--Landau converse}\label{sec:endpoint}
+
+\subsection{From feasibility to an endpoint inequality}
+
+Native feasibility means that \(d_X\ge0\), its target marginal does not exceed \(w_X\), its ordinary complement is nonnegative, and its benchmark satisfies
+\begin{equation}\label{eq:feasible-H}
+H(d_X)\le P_\Lambda(X).
+\end{equation}
+Therefore
+\begin{equation}\label{eq:FleDelta}
+F_\Lambda(X)=J_{\Nat}(X)-P_\Lambda(X)
+\le J_{\Nat}(X)-H(d_X)=\Delta_X.
+\end{equation}
+By \cref{prop:60989}, \(F_\Lambda(X)=o(\log^2X)\) from above.
+
+\subsection{The prime-square moat}
+
+Let \(A(X)\) be the explicit-formula remainder obtained after separating prime squares from the endpoint functional.  The frozen occupancy calculation gives
+\begin{equation}\label{eq:occupancy}
+A(X)=F_\Lambda(X)-\frac{C_{\mathrm{pp}}}{4}\log^2X+o(\log^2X),
+\end{equation}
+where
+\begin{equation}\label{eq:Cpp}
+C_{\mathrm{pp}}=-1-\zeta\!\left(\frac12\right)
+=\frac12\int_1^\infty \frac{\{v\}}{v^{3/2}}\,\dd v>0.
+\end{equation}
+Combining \eqref{eq:FleDelta}, \eqref{eq:60989}, and \eqref{eq:occupancy} shows
+\begin{equation}\label{eq:Anegative}
+A(X)<0
+\end{equation}
+for all sufficiently large \(X\).
+
+\subsection{Mellin transform}
+
+For \(\Re z\) initially large, the Mellin transform of \(A\) has the form
+\begin{equation}\label{eq:Mellin}
+\widehat A(z):=\int_1^\infty A(X)X^{-z-1}\,\dd X
+=z^{-2}G\!\left(z+\frac12\right),
+\end{equation}
+where \(G\) is an explicit meromorphic combination of the logarithmic derivative of \(\zeta\) and elementary polar terms.  A nontrivial zero \(\rho\) with \(\Re\rho>1/2\) produces a nonreal singularity of the right-hand side at \(z=\rho-1/2\) on the boundary of its half-plane of holomorphy.
+
+Landau's theorem says that the Mellin transform of an eventually one-signed real function cannot have its first boundary singularity only at a nonreal point; the abscissa itself must be singular.  Equation \eqref{eq:Anegative} therefore excludes \(\Re\rho>1/2\).  The functional equation \(\rho\mapsto1-\rho\) excludes \(\Re\rho<1/2\).
+
+\begin{theorem}[Endpoint consumer]\label{thm:endpoint-consumer}
+Assume the prime-square occupancy identity \eqref{eq:occupancy} and the Mellin identity \eqref{eq:Mellin}.  If \(F_\Lambda(X)=o(\log^2X)\) from above, then \(\RH\) holds.
+\end{theorem}
+
+\begin{proof}
+The moat term in \eqref{eq:occupancy} dominates and makes \(A\) eventually negative.  If an off-line zero existed to the right of the critical line, \eqref{eq:Mellin} would have a nonreal boundary singularity incompatible with Landau's one-sign theorem.  The zeta functional equation reflects any zero left of the line to one right of it.  Hence all nontrivial zeros lie on \(\Re s=1/2\).
+\end{proof}
+
+\section{The conditional composition theorem}\label{sec:composition}
+
+We can now state the certification package in one place.
+
+\begin{definition}[Factor-67 certification package]\label{def:cert}
+The package \(\Cert\) consists of:
+\begin{enumerate}[label=\textup{(\Alph*)}]
+\item \(\mathrm N_{67}\): native normalization and benchmark growth, \cref{ass:N67};
+\item \(\mathrm F_{67}\): exact compact and outward-rounded tail typed-leaf certificate, \cref{ass:F67};
+\item \(\mathrm O_{67}\): the finite outer margin \eqref{eq:outer-margin};
+\item \(\mathrm L_{67}\): first-owner all-column localization, \cref{ass:L67};
+\item exact terminal bounds \eqref{eq:top-reserve}--\eqref{eq:overfill};
+\item the sparse-dual adjunction \eqref{eq:D4-adjoint}--\eqref{eq:Y4-rec}; and
+\item the endpoint identities \eqref{eq:occupancy} and \eqref{eq:Mellin}.
+\end{enumerate}
+Every clause must be accompanied either by a symbolic proof in this manuscript or by a finite independently replayable artifact satisfying \cref{sec:certificate}.
+\end{definition}
+
+\begin{theorem}[Native factor-67 conditional theorem]\label{thm:main}
+Assume \(\Cert\).  For every \(X\ge10^{12}\), there exists a nonnegative native-feasible source \(d_X\) such that
+\begin{equation}\label{eq:main-bound}
+0\le J_{\Nat}(X)-H(d_X)<60989.
+\end{equation}
+Consequently the Riemann hypothesis holds.
+\end{theorem}
+
+\begin{proof}
+Start with the exact native source \(c_X\) and split it by \cref{lem:exact-split}.  Compile every inner occurrence with \cref{lem:inner-realization}, preserving the target and score while retaining current-only bonuses in the same row.  Compile each outer fibre with \cref{lem:rank-one}; the vector \(p_s\) is never split.  Assemble the unthinned block \eqref{eq:d0}.  The exact error is \eqref{eq:cminusd0}.  Apply the common thinning \eqref{eq:dthin}.  Clause \(\mathrm L_{67}\), the reserve gap \(130-129\), and the terminal margin \(581\) give all-column feasibility by \cref{prop:all-column}.  The sparse dual and the cost ledger give \eqref{eq:main-bound} by \cref{prop:60989}.  Feasibility implies \eqref{eq:FleDelta}, so \(F_\Lambda=o(\log^2X)\) from above.  The endpoint consumer \cref{thm:endpoint-consumer} yields \(\RH\).
+\end{proof}
+
+\begin{corollary}[Exact location of the open frontier]\label{cor:frontier}
+Within this architecture, no further asymptotic improvement is required.  Closure reduces to certifying the finite clauses of \(\Cert\), with the presently known defects concentrated in \(\mathrm F_{67}\) and \(\mathrm N_{67}\).
+\end{corollary}
+
+\begin{remark}
+The corollary is architectural, not epistemic.  A future audit may discover another flaw in a clause presently regarded as proved.  The point is that the dependency interface is now explicit enough for such a flaw to be localized.
+\end{remark}
+
+\section{Adversarial stress test}\label{sec:audit}
+
+\subsection{Failure ledger}
+
+\begin{longtable}{@{}p{0.19\textwidth}p{0.31\textwidth}p{0.39\textwidth}@{}}
+\caption{Known failure modes and the firewall used here.}\label{tab:failures}\\
+\toprule
+Failure mode & Why it fails & Repair in this manuscript\\
+\midrule
+\endfirsthead
+\toprule
+Failure mode & Why it fails & Repair in this manuscript\\
+\midrule
+\endhead
+One-sorted root Hall & The \(q=2\) cone does not support target-null, exact-score, row-positive completion. & Residual source \(\nu\in\Src\) and current-only bonus \(B\in\Bonus\) are separate sorts.\\
+\addlinespace
+Causal split of \(p_s\) & Exact counterexample \eqref{eq:volterra-counterexample} has a negative branch difference. & Rank-one coupling changes only scalar arithmetic coefficients at fixed \(s\); the fibre stays intact.\\
+\addlinespace
+Rough lift \(=\) native marginal & They agree on some aggregate data but are separated by the native \(q=2\) response. & The finite tree starts directly from native occurrence atoms \eqref{eq:inner-coeff}.\\
+\addlinespace
+Synthetic endpoint parent & A formally convenient parent may not belong to the native source cone. & Every leaf carries a first-owned native label \eqref{eq:label}.\\
+\addlinespace
+Bonus promotion & A nonnegative row vector need not possess target, score, or descendant coordinates. & No coercion \(\Bonus\to\Src\).\\
+\addlinespace
+Signed comparison promoted to positivity & A bounded response difference is not a positive source. & Signed errors remain in \(\Obs\) and are charged only through \(Y_4\).\\
+\addlinespace
+Duplicate ownership & The same literal can be spent in the finite tree and again in localization. & One-use invariant, disjoint cell ranges, and first-owner labels.\\
+\addlinespace
+Artificial cutoff atom & Truncating a carry can create an unmatched endpoint mass. & Localization clause requires exact carry and no cutoff atom.\\
+\addlinespace
+Nonterminal proof used at the top & Relative bounds degenerate in terminal columns. & Explicit \(W=10000\) collar and margin \(5033-4452=581\).\\
+\addlinespace
+Singleton ``intervals'' & Wrapping \texttt{std::sqrt} or \texttt{std::log} output as \([y,y]\) does not enclose the exact value. & Clause \(\mathrm F_{67}\) requires MPFR/Arb outward rounding or exact dyadic transcendental tables.\\
+\addlinespace
+Symbol collision & The same symbol \(J_\Lambda\) was used for both a prime sum and a native benchmark. & Notation firewall \eqref{eq:notation-firewall}; clause \(\mathrm N_{67}\).\\
+\bottomrule
+\end{longtable}
+
+\subsection{The invalid interval implementation}
+
+The current tail program declares an interval type with a standard-transcendental rounding policy, but constructs square-root and logarithm intervals from singleton evaluations of the platform functions.  Such a value proves only that the floating-point program returned a number.  It does not prove that the exact real value lies in the interval.  Agreement between long-double and higher-precision point evaluations is useful debugging evidence, not an enclosure theorem.
+
+This defect is load-bearing because the tail contains more than fifty million event boxes per grid.  A single incorrectly signed lower endpoint invalidates the universal positivity claim.
+
+\begin{theorem}[Audit theorem for the tail program]\label{thm:tail-invalid}
+A computation in which a transcendental quantity \(f(x)\) is represented by the singleton interval \([\operatorname{fl}(f(x)),\operatorname{fl}(f(x))]\), without a proof of correct rounding, does not certify any strict lower bound involving \(f(x)\).
+\end{theorem}
+
+\begin{proof}
+The exact value may lie on either side of the rounded value.  A singleton interval contains the exact value only if the floating operation is known to be exact or correctly rounded to that value, neither of which follows from the C++ standard call.  Interval arithmetic is inclusion-isotone only when every input interval contains its exact operand and every operation encloses its exact range.  The premise violates the first condition.
+\end{proof}
+
+\subsection{Stress test of the constant 60989}
+
+The numerical constant has three robustness properties and one vulnerability.
+
+First, the nonterminal reserve has a clean unit gap \(130-129\), so no equality case is used.  Second, the terminal margin is \(581X^{-3/2}\), again strict.  Third, the cost table deliberately rounds individual estimates upward.  The vulnerability is the thinning term: if \(J_{\Nat}\) is not the prime sum and has no independent \(O(\sqrt X)\) bound, the constant \(12012\) is unsupported.  This is why \(\mathrm N_{67}\) is part of the headline hypothesis rather than a footnote.
+
+\section{A rigorous replacement certificate}\label{sec:certificate}
+
+\subsection{Certificate architecture}
+
+A valid computational proof should have a small trusted kernel and a large untrusted producer.  The producer may search, partition, and optimize; the checker must verify a deterministic certificate using exact integers, rationals, or rigorously rounded balls.
+
+\begin{protocol}[Tail certificate contract]\label{prot:tail}
+A replacement for the Target--Lorenz tail computation shall provide:
+\begin{enumerate}
+\item an exact list of event endpoints and a proof that these endpoints partition every floor-pattern region for \(x\ge166000\);
+\item outward enclosures for every \(\sqrt{r}\), \(\log r\), power \(r^{-s}\), determinant, derivative, and causal difference used in a sign test;
+\item a rational or dyadic lower endpoint strictly above zero for every required inequality;
+\item exact hashes of the event list, constants table, certificate stream, and checker source;
+\item a record of the worst box for each inequality family;
+\item a checker that rejects NaNs, infinities, reversed intervals, unproved rounding modes, and undeclared transcendental calls; and
+\item an independent replay implementation using a second arithmetic backend.
+\end{enumerate}
+\end{protocol}
+
+\subsection{Algebraic--transcendental firewall}
+
+The event endpoints have the form \(x=cd\), where \(d\) divides the product of the primes up to \(61\) and \(c\) belongs to a small set generated by \(1,j,j+1\) with \(2\le j\le66\).  This structure permits a substantial simplification.
+
+Precompute outward dyadic enclosures for
+\[
+\sqrt p,\quad \log p\qquad(p\le61\text{ prime}),
+\qquad
+\sqrt c,\quad\log c\qquad(1\le c\le67).
+\]
+Then build
+\[
+\sqrt d=\prod_{p\mid d}\sqrt p,
+\qquad
+\log d=\sum_{p\mid d}\log p,
+\qquad
+\sqrt{cd}=\sqrt c\sqrt d,
+\qquad
+\log(cd)=\log c+\log d
+\]
+with outward interval multiplication and addition.  The millions of event checks then require no fresh call to a transcendental library.  The trusted transcendental surface is reduced to a tiny table that can be certified independently by Arb or MPFR at, say, 256 and 512 bits.
+
+\begin{proposition}[Soundness of table-driven replay]\label{prop:table-sound}
+If each table interval contains its exact constant and every subsequent arithmetic operation is outward-rounded, then every derived event interval contains the exact event value.  A strictly positive lower endpoint certifies the corresponding inequality.
+\end{proposition}
+
+\begin{proof}
+Products and sums of inclusion intervals are inclusion intervals.  The event formulas are finite compositions of the table constants and rational operations.  Induction on the expression tree gives containment.  Strict positivity of the lower endpoint then implies positivity of the exact value.
+\end{proof}
+
+\subsection{Normalization certificate}
+
+The native-normalization clause should be checked symbolically, not numerically.  A minimal certificate contains:
+\begin{enumerate}
+\item the exact matrix or kernel defining \(R\), \(C\), \(\Xi\), and \(H\);
+\item an exact derivation of \(C_{c_X}=w_X\) and \(\Xi(c_X)=\Omega_X\);
+\item a declaration of which formula is \(P_\Lambda\) and which is \(J_{\Nat}\);
+\item an exact proof of one alternative in \eqref{eq:N67-options}; and
+\item a unit test at small \(X\) that evaluates both sides from independent definitions, included only as a regression test, not as proof.
+\end{enumerate}
+
+\subsection{Recommended machine-readable manifest}
+
+A checker should consume a manifest of the following form.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small,frame=single,breaklines=true]
+{
+  "schema": "factor67-certificate-v1",
+  "base_sha": "079a80308a218e924d86030c4df40410df960592",
+  "ranges": {"compact": [67,166000], "tail_start": 166000},
+  "rows": [2,66],
+  "arithmetic": {"backend": "arb", "precision_bits": 256,
+                 "outward_rounding": true},
+  "artifacts": {
+    "event_partition": "sha256:...",
+    "constant_table": "sha256:...",
+    "compact_certificate": "sha256:...",
+    "tail_certificate": "sha256:...",
+    "independent_checker": "sha256:...",
+    "normalization_proof": "sha256:..."
+  },
+  "claimed_minima": {
+    "target": "positive dyadic interval",
+    "score": "positive dyadic interval",
+    "row": "positive dyadic interval",
+    "causal": "positive dyadic interval"
+  }
+}
+\end{lstlisting}
+
+No hash can substitute for sound arithmetic; hashes make a sound computation reproducible, not true.
+
+\section{Dependency-closed theorem ledger}\label{sec:ledger}
+
+\cref{tab:ledger} maps the live repository components to the statements used here.  The status column distinguishes symbolic arguments, finite certificates, and known gaps.
+
+\begin{longtable}{@{}p{0.16\textwidth}p{0.29\textwidth}p{0.15\textwidth}p{0.31\textwidth}@{}}
+\caption{Theorem and lemma ledger.}\label{tab:ledger}\\
+\toprule
+Repository ID & Role in the composition & Status here & Manuscript location\\
+\midrule
+\endfirsthead
+\toprule
+Repository ID & Role in the composition & Status here & Manuscript location\\
+\midrule
+\endhead
+\repoid{L-91870} & Exact native fibre initialization and native/rough separator & Conditional normalization & \cref{sec:native}, clause \(\mathrm N_{67}\)\\
+\repoid{L-91880} & Explicit native two-sorted source coupling & Reconstructed & \cref{sec:native,sec:inner}\\
+\repoid{L-91881} & Whole-cell block realization in one row & Reproved algebraically & \cref{lem:hall-residual,lem:inner-realization}\\
+\repoid{L-91882} & Same-row all-column terminal complement & Reconstructed & \cref{sec:localization}\\
+\repoid{L-91883} & Direct \(Y_4\) cost and constant 60989 & Reconstructed with normalization caveat & \cref{sec:cost}\\
+\repoid{T-91880} & End-to-end native hybrid successor theorem & Conditional composition & \cref{thm:main}\\
+\repoid{R-91880} & Three type firewalls and counterexamples & Incorporated & \cref{def:sorts,eq:volterra-counterexample,sec:audit}\\
+\repoid{L-91688} & Rough-prime first-owner provenance & Used only for ownership & \cref{def:one-use}\\
+\repoid{L-91690} & Factor-67 root Hall and finite margins & Finite certificate clause & \cref{ass:F67,ass:O67}\\
+\repoid{L-91733} & All-column localization, constants 57, 971, 129 & Certificate clause & \cref{ass:L67}\\
+\repoid{L-91115} & Top collar and terminal reserve & Symbolic plus finite constants & \cref{sec:localization}\\
+\repoid{L-19885} & Sparse \(Y_4\) dual and recurrence & Restated & \cref{eq:Y4-rec,sec:cost}\\
+\repoid{L-19887} & Elementary Chebyshev estimate & Reproved for \(P_\Lambda\) & \cref{lem:cheb}\\
+\repoid{L-93782} & Global Target--Lorenz certificate & Conditional & \cref{ass:F67}\\
+\repoid{L-93783} & Typed leaf realization & Reproved algebraically & \cref{lem:hall-residual}\\
+\repoid{L-93781} & Directed transcendental tail sweep & Not certified & \cref{thm:tail-invalid,prot:tail}\\
+\repoid{T-91750} & Prime-square moat and Mellin--Landau consumer & Restated & \cref{sec:endpoint}\\
+\bottomrule
+\end{longtable}
+
+\section{What an independent reviewer should check first}\label{sec:review}
+
+A reviewer need not read the manuscript linearly.  The highest-value order is:
+
+\begin{enumerate}
+\item \textbf{Normalization.}  Expand the definitions of \(R,C,\Xi,H\) and verify \(\mathrm N_{67}\), including the distinction between \(P_\Lambda\) and \(J_{\Nat}\).
+\item \textbf{Tail arithmetic.}  Reject any certificate that calls a non-rigorous transcendental function inside a singleton interval.  Replay the event partition with Arb or MPFR.
+\item \textbf{Type discipline.}  At every Hall leaf, check that only the residual \(\nu\) is recursively used.  Search mechanically for any bonus receiving a target or score coordinate.
+\item \textbf{Outer fibres.}  Confirm that no code or proof step replaces \(p_s\) by branchwise pieces.
+\item \textbf{Ownership.}  Hash the literal-label ledger and verify that the finite tree, retained continuum, top collar, and localization errors form a partition.
+\item \textbf{Endpoint consumer.}  Re-derive the coefficient \(C_{\mathrm{pp}}/4\), signs in \eqref{eq:occupancy}, and the location of Mellin singularities.
+\item \textbf{Constants.}  Recompute \(130>129\), \(5033>4452\), and the five entries of \cref{tab:cost} from exact upper bounds.
+\end{enumerate}
+
+A successful review should produce either a signed certificate manifest or a minimal counterexample tied to one of these interfaces.
+
+\section{Discussion}
+
+The factor-67 architecture is unusually close to a sharply falsifiable endpoint.  It no longer depends on an undefined global positivity miracle.  Its main finite mechanism is ordinary Hall transport with a necessary type split; its continuum mechanism is a one-line rank-one coupling; its analytic repair is a common thinning with a visible unit gap; and its endpoint cost is bounded independently of \(X\).
+
+That concentration is scientifically valuable even if the proposal ultimately fails.  A rigorous tail replay can return a negative box, immediately identifying the first false inequality.  A normalization expansion can show whether the benchmark bound is genuine or whether a hidden prime-sum identification entered the proof.  Either outcome advances the project more than another layer of conditional composition.
+
+The strongest responsible conclusion is therefore two-sided:
+\[
+\boxed{
+\begin{array}{c}
+\text{If }\Cert\text{ is certified, the native factor-67 compiler yields }\RH;\\[2mm]
+\text{the audited repository does not yet certify }\Cert.
+\end{array}}
+\]
+
+\section{Conclusion}
+
+We have assembled the live factor-67 route into a single arXiv-style proof proposal, made its source types explicit, reconstructed the exact finite--continuum composition, and carried its bounded defect through the sparse \(Y_4\) dual to the Mellin--Landau endpoint.  The architecture has an appealing quantitative core:
+\[
+\tau_K=\frac{\sqrt K}{\sqrt K+130},
+\qquad
+130>129,
+\qquad
+5033-4452=581,
+\qquad
+\Delta_X<60989.
+\]
+These constants are not the present obstacle.  The obstacle is proof certification at two interfaces: rigorous transcendental enclosure for the Target--Lorenz tail and a clean native normalization that separates the prime sum from the benchmark.  Until those are supplied, the manuscript remains a conditional proposal and \(\RH\) remains unproved in the project.
+
+\appendix
+
+\section{Algebraic replay of the two-sorted identity}\label{app:algebra}
+
+For completeness, consider one negative atom \(o\) and positive atoms \(e_1,\dots,e_r\).  Let \(t_i=t(o,e_i)\) and \(\sum_i t_i=T(o)\).  The residual target is
+\[
+\sum_i\left(T(e_i)-t_i\right)=T(E)-T(o).
+\]
+The residual score is
+\begin{align*}
+\sum_i\left(1-\frac{t_i}{T(e_i)}\right)S(e_i)
+&=S(E)-\sum_i t_i\frac{S(e_i)}{T(e_i)}\\
+&=S(E)-S(o)
+ +\sum_i t_i\left(\frac{S(o)}{T(o)}-\frac{S(e_i)}{T(e_i)}\right).
+\end{align*}
+The normalized score order in \eqref{eq:score-order} makes the last term the nonnegative slack \(\sigma\).  It remains a scalar score slack and is not inserted into a row.  Similarly,
+\begin{align*}
+R_j(E)-R_j(o)-R_j(\nu)
+&=\sum_i t_i\left(\frac{R_j(e_i)}{T(e_i)}-\frac{R_j(o)}{T(o)}\right)=B_j\ge0.
+\end{align*}
+This explicit calculation is the type boundary: \(B_j\) is a difference of normalized row coordinates, not a source coefficient.
+
+\section{Prime-square constant}\label{app:pp}
+
+The positivity in \eqref{eq:Cpp} is immediate from the fractional-part integral.  It is useful because it makes the endpoint argument insensitive to the exact bounded constant in \eqref{eq:60989}: any \(O(1)\) upper bound for \(F_\Lambda\) is swallowed by \(-C_{\mathrm{pp}}\log^2X/4\).  Thus future improvements should prioritize certification soundness over reducing \(60989\).
+
+\section{Reproducibility and provenance}\label{app:provenance}
+
+The proposal was reconstructed from the active pull-request graph rather than the outdated default branch.  The primary live proposal was pull request \#524 at commit
+\[
+\texttt{079a80308a218e924d86030c4df40410df960592}.
+\]
+The hostile audit included the exact review of the Target--Lorenz tail in pull request \#516 and the type/counterexample records incorporated into the \(91880\) packet.  The companion file \texttt{THEOREM\_LEDGER.md} lists every repository component used and its status.  The source archive contains this \LaTeX{} file, the build script, the ledger, and the proposed pull-request description.
+
+\begin{thebibliography}{9}
+
+\bibitem{Landau1905}
+E. Landau.
+\newblock Ueber einen Satz von Tschebyschef.
+\newblock \emph{Mathematische Annalen}, 61:527--550, 1905.
+
+\bibitem{Titchmarsh}
+E. C. Titchmarsh.
+\newblock \emph{The Theory of the Riemann Zeta-Function}.
+\newblock Second edition, revised by D. R. Heath-Brown, Oxford University Press, 1986.
+
+\bibitem{Davenport}
+H. Davenport.
+\newblock \emph{Multiplicative Number Theory}.
+\newblock Third edition, revised by H. L. Montgomery, Springer, 2000.
+
+\bibitem{MooreInterval}
+R. E. Moore, R. B. Kearfott, and M. J. Cloud.
+\newblock \emph{Introduction to Interval Analysis}.
+\newblock SIAM, 2009.
+
+\bibitem{Arb}
+F. Johansson.
+\newblock Arb: efficient arbitrary-precision midpoint-radius interval arithmetic.
+\newblock \emph{IEEE Transactions on Computers}, 66(8):1281--1292, 2017.
+
+\bibitem{AgenticRepo}
+Agentic Polymath Project.
+\newblock Riemann research repository, active factor-67 proposal and review graph.
+\newblock Frozen provenance through 16 August 2026.
+
+\end{thebibliography}
+
+\end{document}
