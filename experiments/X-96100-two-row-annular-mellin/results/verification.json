@@ -1,0 +1,70 @@
+{
+  "base_pr535_head": "988e9bfa55e7ed13c0ddbcab2f6138a83fd4f743",
+  "exact_noncancellation": {
+    "factorization": "-3*(a-1)*(a-2)",
+    "substituted_coefficients": [
+      -6,
+      9,
+      -3
+    ]
+  },
+  "extended_scans": {
+    "long_double_kahan": "rows 2 and 3 through 20000000: PASS",
+    "secondary_double": "rows 2 and 3 through 250000000: PASS"
+  },
+  "negative_controls": {
+    "native_gap_at_X3": -0.0580822000634349,
+    "unsmoothed_step_minimum": -0.10956425463519515
+  },
+  "proof_object_sha256": "80035fd9bf49a953da41b94530e9a11224b8015e12db3b9e4f277860d1c67f9e",
+  "rh_established": false,
+  "row_scans": [
+    {
+      "limit": 1000000,
+      "minimum": 0.8601213824334588,
+      "minimum_at": 3,
+      "row": 2
+    },
+    {
+      "limit": 1000000,
+      "minimum": 0.3321866439421303,
+      "minimum_at": 4,
+      "row": 3
+    }
+  ],
+  "schema": "riemann.x96100.two-row-annular-mellin.v1",
+  "scientific_boundary": "finite regression only; TAP4 and RH are not proved",
+  "triangular_inverse": [
+    {
+      "endpoint": 32,
+      "minimum": 0.0,
+      "row_2": 1.513794270549671,
+      "row_3": 0.5621530410876184
+    },
+    {
+      "endpoint": 67,
+      "minimum": 0.0,
+      "row_2": 1.5141654412553667,
+      "row_3": 0.5476955943187811
+    },
+    {
+      "endpoint": 128,
+      "minimum": 0.0,
+      "row_2": 1.531805609772312,
+      "row_3": 0.5732026065232788
+    },
+    {
+      "endpoint": 257,
+      "minimum": 0.0,
+      "row_2": 1.511212233888841,
+      "row_3": 0.5526509393316972
+    },
+    {
+      "endpoint": 512,
+      "minimum": 0.0,
+      "row_2": 1.5268162127180198,
+      "row_3": 0.5674556419974147
+    }
+  ],
+  "verdict": "PASS_TWO_ROW_ANNULAR_MELLIN_HARDENING_96100"
+}

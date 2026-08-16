@@ -1,0 +1,30 @@
+{
+  "base": {
+    "commit": "988e9bfa55e7ed13c0ddbcab2f6138a83fd4f743",
+    "pr": 535
+  },
+  "claims": [
+    "R-96100",
+    "L-96100",
+    "L-96101",
+    "L-96102",
+    "T-96100",
+    "M-96100",
+    "O-96100"
+  ],
+  "compared": {
+    "pr541": "e381f444191e214cc992208b16d30a8d5fd461ac",
+    "pr542": "ca5fb69c15cda29b3b589660f9be44ea2f440677"
+  },
+  "experiment": "X-96100-two-row-annular-mellin",
+  "proof_object_sha256": "80035fd9bf49a953da41b94530e9a11224b8015e12db3b9e4f277860d1c67f9e",
+  "rh_established": false,
+  "schema": "riemann.t96100.two-row-annular-lock.v1",
+  "status": {
+    "annular_transform": "PROVED",
+    "normalization_firewall": "PROVED",
+    "rh": "UNPROVEN",
+    "tap4": "OPEN_RH_BEARING",
+    "two_row_noncancellation": "PROVED"
+  }
+}
