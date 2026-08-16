@@ -1,0 +1,47 @@
+{
+  "continuation_branch": "research/gpt56-pro/93300-critical-vaughan-heat-bridge",
+  "files_sha256": {
+    "claims/lemmas/L-93300-zero-safe-endpoint-order-kernel-family.md": "f439713c2f48b3c146b4c3e4973058e5e737822839345271c60deb7a954ac1a9",
+    "claims/lemmas/L-93301-prime-power-compression-to-large-prime-wavelet.md": "7a831da5be99e0050f27bf04c38e7dae4a4f25e9e199574e12abe317978b8a96",
+    "claims/lemmas/L-93302-cubic-wavelet-cell-sums-and-vaughan-type-i.md": "40dcc0ca80a4bed1384bffe61667a6f7c8423eb3db4df89ba9e5a483ae1c7ef4",
+    "claims/lemmas/L-93303-balanced-boundary-type-ii-carrier-normal-form.md": "8cac2e9ec4c16addafc0ce9ddef1c8cf4794bfaf487d7a926495747cc4090c2e",
+    "claims/lemmas/L-93304-cubic-endpoint-third-difference-local-inversion.md": "12474ed481890a70e7ff8bd70991906e4f0fdbf4efab754fa8ef458eb5500ebd",
+    "claims/observations/O-93300-first-hermite-q4-carrier-interface.md": "ab1c2fa05ba2b60d83c7067dcda8be70076e09f5ce093ccab9c88a27cb94b701",
+    "claims/refutations/R-93300-pr498-cubic-spine-audit-and-cpbd-boundary.md": "8f495013fdd2d7cae0bed494121f29a5584c646673f22e4210c1c0c3940b947d",
+    "claims/refutations/R-93301-coefficient-blind-bilinear-dispersion-firewall.md": "54ad93a98e4d5e06d6acfc31186ce2bed4970ffb26eb023071441af52e76ee8a",
+    "claims/theorems/T-93300-balanced-cubic-wavelet-dispersion-closure.md": "4513b67399c329577f2dbffd870972c74c906dd570c50d3acf6daa4069b0a0a0",
+    "experiments/X-93300-cubic-wavelet-vaughan/README.md": "558af7a78ccc59e2d21447c53bab69c82d88fd8693fffe54b9a826da95f692be",
+    "experiments/X-93300-cubic-wavelet-vaughan/results/verification.json": "5381ba19f0cd335a6dd5cdd765ed50c64fa33830f2500ed7206e5f5c08ea3089",
+    "experiments/X-93300-cubic-wavelet-vaughan/verify.py": "f55bf9a68eed45edb7e0a4a89a0f7239dd3b5b6ee81ed62cf10f0cdc4e20df87",
+    "integration/2026-08-16/t93300-first-hermite-q4-handoff.md": "4e9882b62fdc0182824ea77f4acb8cb391dbc790a1bcd511d4fee407b79c66d0",
+    "reports/gpt56-pro/2026-08-16-first-hermite-q4-cubic-wavelet-vaughan.md": "8c5062c7cebe388a040e32d4fb20da995ba752343363a32907dc05f89d74d6bd",
+    "standalone/2026-08-16-cubic-wavelet-vaughan/CLAIM_STATUS.md": "89678faa06895f19d0fe9edb5907cc93b7886c1cc6bf0d505a8038a7ab4b731d",
+    "standalone/2026-08-16-cubic-wavelet-vaughan/README.md": "cbf662d9f9a1dcf8a423c65946dc6291aac6c3cf69df76c9f65ac7dd3d9e792c",
+    "standalone/2026-08-16-cubic-wavelet-vaughan/REVIEW_SPECIFICATION.md": "7bd77b9cfdc2ab0cda1561c63705739395d79acd719f17908dfbde1503fa49ae",
+    "standalone/2026-08-16-cubic-wavelet-vaughan/validate.sh": "9ca195c78f29b97c98428f92c7dc937ece4083b7ee7e2db2f24d470660902526"
+  },
+  "frozen_base_branch": "research/gpt56-pro/93250-centered-q4-cubic-closure",
+  "frozen_base_pr": 498,
+  "frozen_base_sha": "6cc0da2fa5711017e260ebdcea4ba8c22e453288",
+  "generated_files_excluded": [
+    "__pycache__",
+    "*.pyc"
+  ],
+  "pre_continuation_files": [
+    "claims/refutations/R-93300-pr498-cubic-spine-audit-and-cpbd-boundary.md",
+    "claims/lemmas/L-93300-zero-safe-endpoint-order-kernel-family.md"
+  ],
+  "pre_continuation_head": "9681cd6d9416511768219e966971cfd910469b8d",
+  "proof_object_sha256": "a8c5ffcedc4c3a4b7829ce8ea3f5b4b6f6a92647dcf2ccd48a053806d2652f2b",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t93300.cubic-wavelet-vaughan-lock.v2",
+  "status": {
+    "balanced_type_ii": "open / RH-bearing",
+    "deep_hyperbola": "proved unconditional",
+    "endpoint_order_family": "proved exact",
+    "pr498_spine": "verified with frozen analytic inputs",
+    "prime_power_compression": "proved unconditional",
+    "rh_established": false,
+    "vaughan_type_i": "proved unconditional"
+  }
+}
