@@ -1,0 +1,22 @@
+{
+  "base": {
+    "branch": "main",
+    "sha": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131"
+  },
+  "forbidden": [
+    "L-91763",
+    "T-92910",
+    "rough-lift parent",
+    "PR509 as confirmation",
+    "J_Lambda-4sqrt(X) benchmark bridge"
+  ],
+  "frozen_inputs": {
+    "pr352": "906b5a477a1ed7c88a40db7569924f15f3d54b72",
+    "pr353": "ed566f3198e236c54ba18049181016536f56d456",
+    "pr495": "50f45b46cbe3c471d6e702c41c7ef178b530e1ab",
+    "pr508": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr509_comparison_only": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+    "review503": "db77e5792966edf080604fd4b69fb00f07739681"
+  },
+  "schema": "riemann.t94000.genealogy.v1"
+}
