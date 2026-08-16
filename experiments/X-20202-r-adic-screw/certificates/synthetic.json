@@ -1,0 +1,40 @@
+{
+  "schema": "riemann.x20202-r-adic-screw.synthetic.v1",
+  "r": 5,
+  "lerch_y": [
+    {"numerator": "1", "denominator": "2"},
+    {"numerator": "3", "denominator": "4"},
+    {"numerator": "1", "denominator": "16"}
+  ],
+  "prime_exponents": [
+    {
+      "u": {"numerator": "1", "denominator": "4"},
+      "sign": "negative"
+    },
+    {
+      "u": {"numerator": "1", "denominator": "3"},
+      "sign": "zero"
+    },
+    {
+      "u": {"numerator": "1", "denominator": "2"},
+      "sign": "positive"
+    }
+  ],
+  "mixture": {
+    "dilations": [2, 3],
+    "coefficients": [
+      {"numerator": "1", "denominator": "1"},
+      {"numerator": "2", "denominator": "1"}
+    ],
+    "parent_multiplicity": 3,
+    "descendant_multiplicities": [3, 3]
+  },
+  "cocycle": {
+    "r": 2,
+    "s": 3,
+    "psi_t": {"numerator": "5", "denominator": "7"},
+    "psi_st": {"numerator": "11", "denominator": "13"},
+    "psi_rst": {"numerator": "17", "denominator": "19"},
+    "expected_value": {"numerator": "3301", "denominator": "133"}
+  }
+}
