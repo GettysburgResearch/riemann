@@ -1,0 +1,44 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_WITH_ANALYTIC_FIREWALLS",
+  "checks": [
+    "peano_D2_over_x",
+    "peano_mellin_double_zero",
+    "factor64_low_cell_cancellation",
+    "factor64_piecewise_polynomials",
+    "factor64_nonnegative_support",
+    "positive_log_convolution_constant",
+    "centered_cubic_positive_mellin_smoothing",
+    "centered_cubic_piece_identity",
+    "first_hermite_fourier_polynomial",
+    "cubic_real_axis_nonvanishing",
+    "positive_transport_curvature_countermodel",
+    "absolute_gaussian_depth_firewall"
+  ],
+  "counts": {
+    "exact_core_checks": 12,
+    "hostile_mutations": 4,
+    "rational_support_grid_rows": 3003
+  },
+  "depth_gaps": [
+    "6/25",
+    "3/16",
+    "9/100",
+    "99/10000"
+  ],
+  "mutations_detected": [
+    "curvature_from_positive_transport",
+    "depth_equals_saddle",
+    "single_mellin_zero",
+    "wrong_scale_constant"
+  ],
+  "proof_object_sha256": "f5305ce590da44516751f102318d23964c429ce786e1442fb455ce1dc9c6324e",
+  "rh_established": false,
+  "sid0_proved": false,
+  "sidh_proved": false,
+  "support_grid_minima": [
+    "0",
+    "36",
+    "0"
+  ],
+  "verdict": "PASS_X_93270_PEANO_HEAT_RESET"
+}
