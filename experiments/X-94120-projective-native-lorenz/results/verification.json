@@ -1,0 +1,41 @@
+{
+  "classification": "PASS_PROJECTIVE_NATIVE_LORENZ_FULL_CANDIDATE_94120",
+  "hostile_mutations_rejected": 16,
+  "mutations": [
+    "intermediate_child_observed",
+    "rough_lift_parent",
+    "coordinate_dependent_coefficients",
+    "branchwise_detail",
+    "duplicate_first_owner",
+    "parent_overdraw",
+    "frontier_not_contractive",
+    "repeated_thinning",
+    "signed_defect_is_source",
+    "full_child_capacity_promotion",
+    "bad_endpoint_orientation",
+    "benchmark_bridge",
+    "q4-before-common-row",
+    "two-thinnings",
+    "cost-at-gate",
+    "wrong-orientation-text"
+  ],
+  "native_deficit_upper": 3457,
+  "projective_proof_object_sha256": "54aee8201596cb0914d1e9bf340f9089835accc7bb53ab7495ee535240f2a4c4",
+  "q2_obstruction": {
+    "X": "536",
+    "m": "67",
+    "ordinary_q": "2",
+    "oriented_child_upper": "-1/9",
+    "rational_lower": "1/9",
+    "rough_lower": "log(4)/sqrt(134)",
+    "strict": "true"
+  },
+  "registry_summary": {
+    "X": 536,
+    "finite_occurrence_count": 2473,
+    "rough_atom_count": 160,
+    "squarefree_count": 327
+  },
+  "scientific_status": "unconditional full proof candidate; RH not treated as established pending hostile independent reconstruction",
+  "verification_sha256": "76ff7913f667fb18120f87953a4715e9620265dce85144a368583416f55609e7"
+}

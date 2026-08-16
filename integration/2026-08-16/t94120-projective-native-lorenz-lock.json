@@ -1,0 +1,22 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/93920-review503-hybrid-direct-row",
+    "pr": 513,
+    "sha": "4275fe97aa5ba885210abb6296c7048386e5909d"
+  },
+  "branch": "research/gpt56-pro/94120-projective-native-lorenz-closure",
+  "created": "2026-08-16",
+  "dependencies": {
+    "pr352_endpoint": "906b5a477a1ed7c88a40db7569924f15f3d54b72",
+    "pr353_prime_square": "ed566f3198e236c54ba18049181016536f56d456",
+    "pr508_directed_target_lorenz": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr514_obstruction": "944dabba065271f08f3cade0215292dcfbab590f",
+    "prior_94020_release_sha256": "c17db84944c4b2fbd783d22153c66cddb7653116ad2feeaed8c7731ae3169906",
+    "review504": "fe1a3c94379c3d159efa05ea216d12643e63be16",
+    "review512": "625a9273696a1f017f32d37bf9052423ee8590c7"
+  },
+  "publication_policy": "add-only; base and all siblings frozen",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t94120.lock.v1",
+  "scientific_status": "unconditional full proof candidate; RH not established pending independent review"
+}
