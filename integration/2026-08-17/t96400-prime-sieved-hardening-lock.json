@@ -1,0 +1,27 @@
+{
+  "base_pr": 542,
+  "base_sha": "ca5fb69c15cda29b3b589660f9be44ea2f440677",
+  "classification": {
+    "RH": "unproved",
+    "TRP23": "open_rh_bearing",
+    "frontier_chain": "false_as_proof",
+    "global_rough_block": "false_as_proof",
+    "two_row_consumer": "proved_exact"
+  },
+  "compared": {
+    "pr537": "2c2d4dd834ee61c54a6f8bdd7ba204a01896d593",
+    "pr541": "e381f444191e214cc992208b16d30a8d5fd461ac",
+    "pr548": "7c7677e3dda318f8f8ccb813c4ca38f14448a538",
+    "pr549": "4ef69785b84b3801627956c3f0c9cf0ce56299aa"
+  },
+  "controlling_claims": [
+    "R-96400",
+    "L-96400",
+    "L-96401",
+    "T-96400",
+    "M-96400"
+  ],
+  "created_utc": "2026-08-17",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t96400.lock.v1"
+}
