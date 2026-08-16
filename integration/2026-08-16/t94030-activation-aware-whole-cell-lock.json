@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.t94030.activation-aware-whole-cell.v1",
+  "created_utc": "2026-08-16T02:07:18Z",
+  "base": {
+    "pr": 518,
+    "commit": "3277b831b30f4783ed3b087df57e95b9f7dfd7b0",
+    "tree": "72a88732a054c33b1e1fe5a751bd2c6442a13f8a"
+  },
+  "claims": ["R-94030", "M-94030", "T-94030", "O-94030"],
+  "status": {
+    "activation_counterexample": "PROVED",
+    "AAWCC": "PROPOSED_OPEN",
+    "endpoint_chain": "CONDITIONAL_NOT_REACHED",
+    "rh": "UNPROVEN"
+  },
+  "proof_object_sha256": "60719aed92ff52ce86f0ea5b4ed062848f558547c6bf9030cb6d3141808db36e"
+}
