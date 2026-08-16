@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.review.pr518-pr521.exact-head.v1",
+  "created_utc": "2026-08-16T02:07:18Z",
+  "repository": "gfreund123/riemann",
+  "main_at_start": {
+    "commit": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+    "tree": "6285c0ec5fa5eee91a4d4ab779bc9117b9ecc0ea"
+  },
+  "reviewed": {
+    "pr518": {
+      "commit": "3277b831b30f4783ed3b087df57e95b9f7dfd7b0",
+      "tree": "72a88732a054c33b1e1fe5a751bd2c6442a13f8a",
+      "base": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c"
+    },
+    "pr521": {
+      "commit": "b4a60a54b1d730a73ab1eb6bb571485dd40438d0",
+      "tree": "da684b92762623b5a83ddfd7df9605784d69dab6",
+      "base": "4ae97dffd1f76ed3244b8f3028560ffa80663caf"
+    }
+  },
+  "excluded_evidence": {
+    "pr508_invalid_interval_certificate": true,
+    "used_for_any_positive_verdict": false
+  },
+  "proof_object_sha256": "df92016bf83f5cb2eb6825a7228756c58586e7ca1d3155393263d001c12efa30",
+  "status": {
+    "pr518": "REQUEST_CHANGES_AT_L92911",
+    "pr521_local_registry": "VERIFIED_WITH_SCOPE_FIX",
+    "pr521_JNTLC": "OPEN",
+    "rh": "UNPROVEN"
+  }
+}
