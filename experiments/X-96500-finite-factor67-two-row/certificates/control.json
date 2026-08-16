@@ -1,0 +1,12 @@
+{
+  "causal_prime_sets": [
+    [67],
+    [67, 71],
+    [67, 71, 73, 79],
+    [101, 103, 107]
+  ],
+  "expected_verdict": "PASS_FINITE_FACTOR67_TWO_ROW_CANDIDATE_ALGEBRA",
+  "mutation_count": 12,
+  "scan_limit": 500000,
+  "schema": "riemann.x96500.control.v1"
+}
