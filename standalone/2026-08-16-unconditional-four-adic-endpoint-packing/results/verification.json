@@ -1,0 +1,127 @@
+{
+  "arithmetic_class": "HIGH_PRECISION_DECIMAL_FINITE_REGRESSION_PLUS_EXACT_INTEGER_SUPPORT",
+  "detail_positivity_checks": 8001,
+  "diagonal_bound_checks": 126,
+  "greedy": [
+    {
+      "X": 32,
+      "benchmark": "9.571372596569514305503518406318928196107324770509336705374221726727040",
+      "blocker_count": 0,
+      "blockers": [],
+      "deficit": "0E-70",
+      "deficit_bound": "2195.890268013906740233791360779503367663184425653288645054314270075071",
+      "largest_slack_column": 1,
+      "max_ell_over_log_2X": "0",
+      "max_normalized_first_crossing_increment": "0",
+      "positive_coefficients": 30
+    },
+    {
+      "X": 64,
+      "benchmark": "17.08153962958904651528169492708562907110645678617811451882713017331668",
+      "blocker_count": 0,
+      "blockers": [],
+      "deficit": "0E-70",
+      "deficit_bound": "2561.871979349557863606089920909420595607048496595503419230033315087583",
+      "largest_slack_column": 1,
+      "max_ell_over_log_2X": "0",
+      "max_normalized_first_crossing_increment": "0",
+      "positive_coefficients": 62
+    },
+    {
+      "X": 128,
+      "benchmark": "28.47824097540564957176683592008178704373920324929665741936362435703989",
+      "blocker_count": 2,
+      "blockers": [
+        {
+          "T": 11,
+          "ell": "0.1027226081414279842459424721322784293152118488936298938908876804569323",
+          "minimizer": 9
+        },
+        {
+          "T": 4,
+          "ell": "0.1263992496481939136152897002253012052506021516425632578820962906185165",
+          "minimizer": 2
+        }
+      ],
+      "deficit": "0.009492269209794378995420138881355209486050664170336371985121547995113662",
+      "deficit_bound": "2927.853690685208986978388481039337823550912567537718193405752360100095",
+      "largest_slack_column": 10,
+      "max_ell_over_log_2X": "0.02279444632994192647324539264134315898255526543031425804094203653500198",
+      "max_normalized_first_crossing_increment": "0.009630244513258873523057106762401102748301110833777802552270720042837403",
+      "positive_coefficients": 124
+    },
+    {
+      "X": 256,
+      "benchmark": "45.35051700175722162947210448172576534733979742283079022901146975776408",
+      "blocker_count": 2,
+      "blockers": [
+        {
+          "T": 10,
+          "ell": "0.207459111835787517297882917803605162481610343029704407376089349067187",
+          "minimizer": 8
+        },
+        {
+          "T": 5,
+          "ell": "0.1374248330846568146658831244127718977860914857844148082138540676833038",
+          "minimizer": 3
+        }
+      ],
+      "deficit": "0.008300815960479472627485469562195753039205528182222550674994573687635846",
+      "deficit_bound": "3293.835402020860110350687041169255051494776638479932967581471405112607",
+      "largest_slack_column": 9,
+      "max_ell_over_log_2X": "0.03325558131474661162721947095217977580284809428804820914425495145435617",
+      "max_normalized_first_crossing_increment": "0.01728825931964895977482357648363376354013419525247536728134077908893225",
+      "positive_coefficients": 252
+    },
+    {
+      "X": 512,
+      "benchmark": "70.01948380895722899133312541636207623257071186099412319932964837895730",
+      "blocker_count": 4,
+      "blockers": [
+        {
+          "T": 13,
+          "ell": "0.0095737894293994856605254348234889623287906337420367799694337456904895",
+          "minimizer": 11
+        },
+        {
+          "T": 6,
+          "ell": "0.2744248859707206270454881919417767317998326188260094975977875837569049",
+          "minimizer": 2
+        },
+        {
+          "T": 5,
+          "ell": "0.1296330687171222644846496234699347870060170326345238130945956967469843",
+          "minimizer": 2
+        },
+        {
+          "T": 4,
+          "ell": "0.4401051432806348964385137490631905469874782069777184470475106256755173",
+          "minimizer": 2
+        }
+      ],
+      "deficit": "0.05352035653450116365930228019702444456370625964245246925490823272284923",
+      "deficit_bound": "3659.817113356511233722985601299172279438640709422147741757190450125118",
+      "largest_slack_column": 12,
+      "max_ell_over_log_2X": "0.06349375076806986609101385087089175450886394449543584554207094057968958",
+      "max_normalized_first_crossing_increment": "0.01077720924470771666264415585660433604670339873602829909800227197404120",
+      "positive_coefficients": 506
+    }
+  ],
+  "max_y4_recurrence_error": "1E-68",
+  "minimum_detail": "0.00003528968061294913715176764476255300136942264791225533931713434517379",
+  "mutations_rejected": [
+    "arbitrary_residual_not_first_crossing_eligible",
+    "different_q_4q_coefficient_rejected",
+    "endpoint_orientation_reversal_rejected",
+    "negative_atom_rejected",
+    "smooth_dual_substitution_rejected",
+    "zero_row_shortcut_rejected_by_sparse_dual"
+  ],
+  "precision_digits": 70,
+  "proof_object_sha256": "197057508b93b51cae5813454bd02186c45e366e7a6ca8f56dd18dbe5fe901b5",
+  "rh_status": "RH_CANDIDATE_UNDER_UNREVIEWED_FIRST_CROSSING_LEMMA",
+  "schema": "riemann.t94200.four-adic-endpoint-packing.verification.v1",
+  "scientific_status": "unconditional proof proposal; first-crossing lemma unreviewed; RH not accepted",
+  "verdict": "PASS_T94200_FOUR_ADIC_ENDPOINT_PACKING_CANDIDATE",
+  "y4_recurrence_checks": 4999
+}
