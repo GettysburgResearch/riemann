@@ -1,0 +1,83 @@
+{
+  "schema": "riemann.target-lorenz.live-marginal-lock.v1",
+  "created_utc": "2026-08-16T00:25:46Z",
+  "repository": "gfreund123/riemann",
+  "main_at_cutoff": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+  "base": {
+    "pull_request": 508,
+    "branch": "research/gpt56-pro/93780-target-lorenz-directed-hardening",
+    "head": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "tree": "7f63bb7c2aeb08d79ef0bbab04181027d5fb3547",
+    "movement_rule": "reject publication if the base branch no longer resolves to this exact head"
+  },
+  "intended_successor": {
+    "branch": "research/gpt56-pro/94020-target-lorenz-live-marginal",
+    "status": "publication-ready local packet; remote ref not created in this runtime"
+  },
+  "frozen_inputs": [
+    {
+      "claim": "L-91107",
+      "commit": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+      "path": "claims/lemmas/L-91107-continuum-endpoint-inverse-is-the-reciprocal-zeta-equality-weight.md",
+      "blob": "d32f2b29398afa816ff2a52e8bf72f589d5e1a23",
+      "scope": "exact endpoint root x=X/s and equality fibre"
+    },
+    {
+      "claim": "L-91362",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md",
+      "blob": "809b950e9b8d05db8fd688bd6d358046dc2c33da",
+      "scope": "exact P61 finite forcing, actual paired rough children and source owners"
+    },
+    {
+      "claim": "L-91650",
+      "commit": "706445c01d4a5c9f852a4faf1329bd9858dc727a",
+      "path": "claims/lemmas/L-91650-causal-coefficient-budget-and-child-mass-contraction.md",
+      "blob": "16d6ef678fe172c6add5886cae55773d165d23f8",
+      "scope": "exact lambda/alpha and normalized beta/gamma coefficients"
+    },
+    {
+      "claim": "PR508 directed arithmetic and typed leaf packet",
+      "commit": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+      "tree": "7f63bb7c2aeb08d79ef0bbab04181027d5fb3547",
+      "scope": "frozen monolithic input; no 51,118,080-event rerun in this successor"
+    }
+  ],
+  "review_and_comparison_heads": [
+    {"pr": 504, "head": "fe1a3c94379c3d159efa05ea216d12643e63be16", "disposition": "live-marginal objection accepted"},
+    {"pr": 507, "head": "dfaa70cd2eefcabbf6717e3da060792904c7f357", "disposition": "source-tree/rough-lift and first-owner schema retained only"},
+    {"pr": 509, "head": "e01daee9cdfea35d2a7d2591f1df6c8080084119", "disposition": "finite/continuum hybrid marginal and owner schema retained only"},
+    {"pr": 511, "head": "6ece82279cb03474ebc79914db572f6ff095d238", "disposition": "E/R two-channel identities retained; single-leaf compiler insufficient"},
+    {"pr": 512, "head": "625a9273696a1f017f32d37bf9052423ee8590c7", "disposition": "negative child-coordinate review accepted"},
+    {"pr": 513, "head": "4275fe97aa5ba885210abb6296c7048386e5909d", "disposition": "direct positive outer Volterra row retained only"},
+    {"pr": 514, "head": "944dabba065271f08f3cade0215292dcfbab590f", "disposition": "joint cancellation necessity accepted"}
+  ],
+  "new_claims": [
+    "R-94020",
+    "L-94020",
+    "L-94021",
+    "L-94022",
+    "L-94023",
+    "L-94024",
+    "M-94020",
+    "T-94020",
+    "O-94020"
+  ],
+  "replay": {
+    "experiment": "X-94020-live-endpoint-source",
+    "classification": "PASS_LIVE_ENDPOINT_SOURCE_TREE_AND_JOINT_CANCELLATION_GATE",
+    "generator_proof_object_sha256": "38a5376b596fe7f638d803457836278a26b44f2fec8028d3adadd27ba2032463",
+    "verification_sha256": "d2ce818cce6616fb566a402ffef72773d7fcbac717cfda9ff8d27127fc940654",
+    "full_tail_rerun": false
+  },
+  "proof_boundary": {
+    "directed_tail": "frozen PR #508 input",
+    "live_source_registry": "proved exact / generated",
+    "outer_fibre": "proved directed",
+    "finite_forcing_weights": "proved exact",
+    "branchwise_actual_children": "false by exact q=2 separator",
+    "joint_native_target_lorenz_coupling": "open",
+    "native_y4_and_endpoint": "conditional on open joint producer and frozen analytic inputs",
+    "riemann_hypothesis": "unproved"
+  }
+}
