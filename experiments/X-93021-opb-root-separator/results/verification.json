@@ -1,0 +1,41 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_PLUS_DIRECTED_DECIMAL_PRIMITIVES",
+  "classification": "PASS_X_93021_OPB_ROOT_SEPARATOR",
+  "directed_x20_flow_checks": 20,
+  "directed_x40_root_completed_flow_checks": 39,
+  "directed_x40_separator_checks": 6,
+  "does_not_prove": [
+    "a polylogarithmic bound for the redesigned transverse borrowing cone",
+    "One-sided Parity Borrowing",
+    "polylogarithmic Cycle Debt",
+    "the Riemann Hypothesis"
+  ],
+  "exact_primal_dual_checks": 9,
+  "hostile_mutations_detected": 5,
+  "proves": [
+    "the all-scale dyadic root face is a feasible carry-discrepancy witness",
+    "an exact rational primal/dual root-face fixture",
+    "root neutrality alone is not sufficient for a positive interior flow",
+    "a symbolic and directed positive full-target flow at X=20",
+    "the exact directed OPB zero-borrowing separator B_40 > 1/200",
+    "an exact symbolic and directed positive interior flow for the root-completed X=40 target"
+  ],
+  "root_floor_checks": 255,
+  "root_neutral_farkas_checks": 5,
+  "root_split_checks": 8320,
+  "symbolic_x20_flow_checks": 36,
+  "symbolic_x40_root_completed_flow_checks": 76,
+  "x20_minimum_flow_lower": "0.00727463778225685618748284541589110053344473269986297001101724917780923650424750787508100864895558711",
+  "x20_minimum_flow_parent": 5,
+  "x40_root_completed_minimum_flow_edge": [
+    18,
+    6,
+    12
+  ],
+  "x40_root_completed_minimum_flow_lower": "0.000066493014608572880117791212786860651518936309933582163091459337542172133285810006786959371588287316",
+  "x40_root_objective_interval": [
+    "0.005740295120307345228689786472174551875891271922499555470126889035736078088133890979556891890987820701",
+    "0.005740295120307345228689786472174551875891271922499555470126889035736078088133890979556891890987822497"
+  ],
+  "x40_separator": "B_40 > 1/200"
+}

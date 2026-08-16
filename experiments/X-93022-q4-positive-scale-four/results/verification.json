@@ -1,0 +1,26 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_AND_FORMAL_PRIME_LOG",
+  "classification": "PASS_X_93022_Q4_POSITIVE_SCALE_FOUR",
+  "complete_row_fibre_checks": 4650,
+  "dirichlet_inverse_checks": 768,
+  "does_not_prove": [
+    "an aggregate transverse source bound at the critical scale",
+    "a square-root bound for the Q4 endpoint mean",
+    "One-sided Parity Borrowing",
+    "the Riemann Hypothesis"
+  ],
+  "hostile_mutations_detected": 5,
+  "positive_generalized_prime_checks": 2304,
+  "prefix_haar_factorization_checks": 4743,
+  "principal_channel_no_go_checks": 96,
+  "principal_transverse_checks": 9468,
+  "proves": [
+    "G4 has explicit positive coefficients and A4*G4=epsilon",
+    "the G4 generalized-prime sequence and Lambda_+ are nonnegative",
+    "c_circ=(epsilon-2 delta_2)*Lambda_+ coefficientwise",
+    "the complete endpoint row is a source-owned positive superposition of Haar carry fibres",
+    "every small fibre is one principal constant plus a compact transverse boundary",
+    "the principal channel has unbounded row norm and cannot be discarded"
+  ],
+  "source_factorization_checks": 768
+}
