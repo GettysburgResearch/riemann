@@ -8,12 +8,10 @@ RH status: **unproved**
 
 ## 1. The kernel family
 
-For an integer \(r\ge1\), define
+For an integer `r>=1`, define
 
 \[
-G_r(x)
-=
-x^r(1-x)^r(2x-1)\mathbf 1_{0\le x\le1}
+G_r(x)=x^r(1-x)^r(2x-1)\mathbf1_{0\le x\le1}
 \]
 
 and
@@ -25,82 +23,57 @@ w_r(x)=\frac12G_r'(x).
 Then
 
 \[
-G_r(1-x)=-G_r(x),
-\qquad
-w_r(1-x)=w_r(x),
-\qquad
-\int_0^1w_r(x)\,dx=0.
+G_r(1-x)=-G_r(x),\qquad w_r(1-x)=w_r(x),\qquad\int_0^1w_r=0.
 \]
 
 The finite positive number
 
 \[
-C_r=\int_0^1w_r(x)^2\,dx
+C_r=\int_0^1w_r(x)^2dx
 \]
 
-is completely explicit.  In the first two cases,
+is explicit. In the first two cases,
 
 \[
-C_1=\frac1{20},
-\qquad
-C_2=\frac1{630}.
+C_1=\frac1{20},\qquad C_2=\frac1{630}.
 \]
 
-The frozen cubic kernel is \(K=G_1/3\), so its norm \(1/180\) is recovered.
+The frozen cubic kernel is `K=G_1/3`, so its norm `1/180` is recovered.
 
 ## 2. Exact endpoint projection
 
 For the complete centered Q4 field, put
 
 \[
-\mathcal A_r(N)
-=
-\int_0^1w_r(\theta)Q_{\circ,N}(\theta)\,d\theta.
+\mathcal A_r(N)=\int_0^1w_r(\theta)Q_{\circ,N}(\theta)d\theta.
 \]
 
 The same finite-prefix reversal as in `L-93250` gives
 
 \[
-\boxed{
-\mathcal A_r(N)
-=
-\sum_{m\le N}c_\circ(m)G_r(m/N).
-}
+\boxed{\mathcal A_r(N)=\sum_{m\le N}c_\circ(m)G_r(m/N).}
 \tag{L-93300.1}
 \]
 
-Because \(w_r\) has mean zero,
+Because `w_r` has mean zero,
 
 \[
-\boxed{
-|\mathcal A_r(N)|^2
-\le
-NC_r\,\mathscr V_\circ(N).
-}
+\boxed{|\mathcal A_r(N)|^2\le NC_r\mathscr V_\circ(N).}
 \tag{L-93300.2}
 \]
 
-Thus every member of the family is controlled by the same centered endpoint
-energy.
-
 ## 3. Mellin multiplier
 
-A beta-integral gives, for \(\Re s>-r\),
+A beta integral gives, for `Re s>-r`,
 
 \[
 \boxed{
-\widehat G_r(s)
-=
-\int_0^1G_r(x)x^{s-1}\,dx
-=
-\frac{r!(s-1)}
-{\displaystyle\prod_{j=r}^{2r+1}(s+j)}.
+\widehat G_r(s)=\frac{r!(s-1)}{\prod_{j=r}^{2r+1}(s+j)}.
 }
 \tag{L-93300.3}
 \]
 
-The only numerator zero is \(s=1\).  Hence \(\widehat G_r\) is nonzero at every
-point in the open critical strip.
+The only numerator zero is `s=1`. Hence `widehat G_r` is nonzero at every point in the open critical strip.
 
 The factor-four transfer kernel is
 
@@ -108,54 +81,34 @@ The factor-four transfer kernel is
 \Phi_r(x)=G_r(x)-4G_r(4x),
 \]
 
-with \(G_r(4x)=0\) for \(x>1/4\).  Its Mellin transform is
+with `G_r(4x)=0` for `x>1/4`. Its Mellin transform is
 
 \[
-\boxed{
-\widehat\Phi_r(s)
-=
-(1-4^{1-s})\widehat G_r(s).
-}
+\boxed{\widehat\Phi_r(s)=(1-4^{1-s})\widehat G_r(s).}
 \tag{L-93300.4}
 \]
 
-Both factors vanish at \(s=1\), so the principal pole is killed to second
-order.  Neither factor vanishes at a nontrivial zero in the open strip.
+Both factors vanish at `s=1`, so the principal pole is killed to second order. Neither factor vanishes at a nontrivial zero in the open strip.
 
 ## 4. Complete Q4 transform
 
-For real \(X\ge1\),
+For real `X>=1`,
 
 \[
-\int_1^\infty
-\mathcal A_r(X)X^{-s-1}\,dX
-=
-\widehat G_r(s)
-\left[
-(1-4^{1-s})
-\left(-\frac{\zeta'}{\zeta}(s)\right)
-+
-3(\log4)\frac{4^{-s}}{1-4^{-s}}
+\int_1^\infty\mathcal A_r(X)X^{-s-1}dX
+=\widehat G_r(s)\left[
+(1-4^{1-s})\left(-\frac{\zeta'}\zeta(s)\right)
++3(\log4)\frac{4^{-s}}{1-4^{-s}}
 \right]
 \]
 
-initially in \(\Re s>1\), with meromorphic continuation supplied by the
-displayed right side.
+initially in `Re s>1`, with meromorphic continuation supplied by the right side.
 
-Every open-strip zero survives.  Consequently, for any fixed \(r\),
-
-\[
-\mathcal A_r(N)\ll \sqrt N\,\log^B(2N)
-\quad(N\ge2)
-\]
-
-for some fixed \(B\) is an RH-sufficient estimate.  Under RH, summation by
-parts and von Koch give such an estimate.  No member of the family makes the
-arithmetic estimate automatic.
+Every open-strip zero survives. Consequently, for any fixed `r`, a square-root-polylogarithmic bound for `A_r` is RH-sufficient. Under RH, summation by parts and von Koch give it. No family member makes the arithmetic estimate automatic.
 
 ## 5. The quintic companion
 
-For \(r=2\),
+For `r=2`,
 
 \[
 G_2(x)=2x^5-5x^4+4x^3-x^2,
@@ -163,35 +116,23 @@ G_2(x)=2x^5-5x^4+4x^3-x^2,
 
 \[
 w_2(x)=5x^4-10x^3+6x^2-x,
-\qquad
-\int_0^1w_2^2=\frac1{630},
+\qquad\int_0^1w_2^2=\frac1{630},
 \]
 
 and
 
 \[
-\boxed{
-\widehat G_2(s)
-=
-\frac{2(s-1)}
-{(s+2)(s+3)(s+4)(s+5)}.
-}
+\boxed{\widehat G_2(s)=\frac{2(s-1)}{(s+2)(s+3)(s+4)(s+5)}.}
 \tag{L-93300.5}
 \]
 
 Moreover,
 
 \[
-\max_{0\le x\le1}|G_2(x)|
-=
-\frac{\sqrt5}{125},
-\qquad
-\max G_2(x)^2=\frac1{3125}.
+\max|G_2|=\frac{\sqrt5}{125},\qquad\max G_2^2=\frac1{3125}.
 \]
 
-Unlike the cubic transfer, \(\Phi_2\) is continuously differentiable at
-\(x=1/4\).  This removes one full order of quadrature boundary loss and is the
-first concrete redesigned observable used below.
+Unlike the cubic transfer, `Phi_2` is continuously differentiable at `x=1/4`. This removes one full order of quadrature boundary loss and is the first concrete redesigned observable used below.
 
 ## 6. Exact boundary
 
