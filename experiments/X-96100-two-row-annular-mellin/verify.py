@@ -154,7 +154,6 @@ def main() -> int:
     polynomial_coefficients = [-6, 9, -3]
     assert polynomial_coefficients == [-6, 9, -3]
 
-    x = 3.0
     j_value = (
         2 * math.sqrt(2)
         * (math.log(1.5) - 2 * (1 - math.sqrt(2 / 3)))
@@ -179,7 +178,7 @@ def main() -> int:
             "native_gap_at_X3": native_gap,
         },
         "extended_scans": {
-            "long_double_kahan": "rows 2 and 3 through 150000000: PASS",
+            "long_double_kahan": "rows 2 and 3 through 20000000: PASS",
             "secondary_double": "rows 2 and 3 through 250000000: PASS",
         },
         "scientific_boundary": "finite regression only; TAP4 and RH are not proved",
