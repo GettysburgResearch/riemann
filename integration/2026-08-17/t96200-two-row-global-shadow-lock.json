@@ -1,0 +1,29 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/96000-prime-sieved-row-mellin-landau",
+    "pr": 542,
+    "sha": "ca5fb69c15cda29b3b589660f9be44ea2f440677",
+    "tree": "b960b5e38e58bef7e1cd7697cfeb6dc84e7839a8"
+  },
+  "compared": [
+    {
+      "pr": 541,
+      "scope": "normalization firewall",
+      "sha": "e381f444191e214cc992208b16d30a8d5fd461ac"
+    },
+    {
+      "pr": 537,
+      "scope": "row formulas; original fixed-product proof superseded",
+      "sha": "2c2d4dd834ee61c54a6f8bdd7ba204a01896d593"
+    }
+  ],
+  "created": "2026-08-17",
+  "forbidden_promotions": [
+    "fixed-product cube creates cross-knot convexity",
+    "finite scan proves global transport",
+    "physical Y4 slack equals full arithmetic gap",
+    "RH established before independent reconstruction"
+  ],
+  "rh_established": false,
+  "schema": "riemann.t96200.source-lock.v1"
+}
