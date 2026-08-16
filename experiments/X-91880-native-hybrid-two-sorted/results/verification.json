@@ -1,0 +1,83 @@
+{
+  "arithmetic_sector": {
+    "K": 62,
+    "X": 4096,
+    "inner": 11850,
+    "inner_rough": 5760,
+    "occurrences": 23953,
+    "outer": 12103
+  },
+  "bulk": {
+    "edges": 4,
+    "positive_residual_mass": "5"
+  },
+  "capacity": {
+    "native_total": 60989,
+    "small_q_count": 31,
+    "terminal_margin": 581
+  },
+  "identity": {
+    "dimension": 4,
+    "same_row_identity": true
+  },
+  "leaf": {
+    "bonus": [
+      "5/7",
+      "6/7"
+    ],
+    "nu": [
+      "1/7",
+      "1",
+      "1"
+    ],
+    "sigma": "15/7"
+  },
+  "mutation_names": [
+    "erase_q2_score_obstruction",
+    "promote_bonus_to_complete_packet",
+    "causal_split_volterra_row",
+    "rough_lift_as_native_parent",
+    "duplicate_inner_occurrence",
+    "duplicate_first_owner",
+    "bonus_given_rough_owner",
+    "bulk_colour_dependent_feature",
+    "bulk_odd_marginal_failure",
+    "bulk_even_overdraw",
+    "partial_outer_cell",
+    "second_quantizer",
+    "label_dependent_quantizer",
+    "top_omission_changed_row",
+    "drop_small_q",
+    "branchwise_detail",
+    "terminal_margin_reversed",
+    "signed_error_as_source",
+    "wrong_y4_row_id",
+    "wrong_endpoint_orientation",
+    "benchmark_bridge"
+  ],
+  "mutations_rejected": 21,
+  "proof_object_sha256": "a6e5324eddcb44e89fb5902a02d243c5c5220d5573f2dfed93c635f982b7d075",
+  "q2_score": {
+    "denominator_positive": true,
+    "forced_edge": "2->1",
+    "numerator_negative": true
+  },
+  "rough_lift": {
+    "lower": "1/9",
+    "published_regression": "109/1200"
+  },
+  "scientific_status": "candidate on frozen analytic inputs; RH unproved",
+  "verdict": "PASS_T91880_NATIVE_HYBRID_TWO_SORTED_COMPILER",
+  "volterra_causal": {
+    "interval": [
+      "-184291/1000000000",
+      "-18429/100000000"
+    ],
+    "witness": {
+      "child": 15,
+      "p": 67,
+      "parent": 1005,
+      "row": 14
+    }
+  }
+}

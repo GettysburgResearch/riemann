@@ -1,0 +1,48 @@
+{
+  "base": {
+    "head": "3d44cf10f8b5f36fd06a57a745550a25142e3658",
+    "pr": 506,
+    "tree": "44bd663d5754dc2ad4a9842a72f26f5276ff57bb"
+  },
+  "dependency_blobs": {
+    "PR500-import:L-19885": "d6ff62992b4ff6ac19a5b10713b5f2defe40a951",
+    "PR507:L-92930": "165c1682d0b84d45edb2c81fa05f7e0650e8a131",
+    "PR508:L-93782": "6b7894930953ec7b1e6a9f657ad6a30e6cb2dd50",
+    "PR508:L-93783": "4ddef8f256b2f24da06eb849f721b8d4853566e4",
+    "PR509:L-91870": "e5417cde505f7347d618c69f2896aa6f40df092c",
+    "PR495:L-91760": "f6add3a702a4c6d741522854af2b12311e28bd56",
+    "base:L-19887": "07ab23971e6096f7e8b45543d9ec87b420a3e0b4",
+    "base:L-91110": "7597e989eb2501c6f8a3dd2db77e72fa7fd5acf0",
+    "base:L-91115": "0f02ba0e67b02c4e5622e76ad64ac0ac1fd9de2d",
+    "base:L-91362": "809b950e9b8d05db8fd688bd6d358046dc2c33da",
+    "base:L-91688": "99c8458f57aa2b9c889360f36d85d6a9e22d695e",
+    "base:L-91690": "1b14f531bbe7fb3a56397414d666c669252c4a02",
+    "base:L-91691": "7305924b9e49c3da4614c872cf60a11489c98a9d",
+    "base:L-91733": "6f08ad402d43039ab37a63289c314ec68c74325c",
+    "base:T-91750": "0e918637615607e9d7132dfd39c163ba2a5236ef",
+    "review501:q2_score_obstruction": "d7d7218804ee580744fabee15c29baab671f5f9f",
+    "review503:volterra_causal_result": "f8f20cc87b5cd8dd5d25e31e6d35cf491f5acdf2"
+  },
+  "forbidden": [
+    "complete target-null Hall packet",
+    "causal split of Volterra p_s",
+    "row-first P61 rough lift as native parent",
+    "signed comparison as positive source",
+    "J_Lambda(X)-4sqrt(X) benchmark bridge"
+  ],
+  "frozen_heads": {
+    "499": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+    "501": "ab5bd0ffc7a8092d62e879431dbd9f295f79f072",
+    "503_review_495": "db77e5792966edf080604fd4b69fb00f07739681",
+    "506": "3d44cf10f8b5f36fd06a57a745550a25142e3658",
+    "507": "dfaa70cd2eefcabbf6717e3da060792904c7f357",
+    "508": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "509": "e01daee9cdfea35d2a7d2591f1df6c8080084119"
+  },
+  "proof_objects": {
+    "directed_avlt_tail": "536e814f8f51bd8994c305f312f22fd9d4d2005cd1f7f9d8461393f0b30a0fe3",
+    "typed_avlt_leaf": "9257bb9697ec2a09fcc6b55906cf6274f067f622e328d9a67230d6c725834636",
+    "volterra_causal_counterexample": "e68063f61782dce2ffe7b513b04e7a852cd442db6a686f2c0f24f992427f5258"
+  },
+  "repository": "gfreund123/riemann"
+}
