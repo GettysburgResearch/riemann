@@ -1,0 +1,66 @@
+{
+  "arithmetic_class": "ANALYTIC_EXACT_PROOF_PLUS_HIGH_PRECISION_DECIMAL_REGRESSION",
+  "detail_checks": 32385,
+  "greedy": [
+    {
+      "X": 64,
+      "benchmark": "17.08153962958904651528169492708562907110645678617811451882713017331668",
+      "blockers": [],
+      "coefficient_sha256": "0a36cc35d4af732c32bd3427e3aa10f0b9fa3d9da8d9722ee45cbc1d49cdd7b8",
+      "deficit": "0E-70",
+      "largest_slack_column": 1,
+      "positive_coefficients": 62,
+      "slack_sha256": "75c5e72ae9ecb028c5a73c48d79c5d96bebbba6edbe27eeb0314eb8cbac6b3df"
+    },
+    {
+      "X": 128,
+      "benchmark": "28.47824097540564957176683592008178704373920324929665741936362435703989",
+      "blockers": [
+        {"T": 11, "q": 9},
+        {"T": 4, "q": 2}
+      ],
+      "coefficient_sha256": "bd66d92b34f5801e05ed60e878ceeab9df6b1889c4ee61d2f76fb7afe16aa309",
+      "deficit": "0.009492269209794378995420138881355209486050664170336371985121547995113662",
+      "largest_slack_column": 10,
+      "positive_coefficients": 124,
+      "slack_sha256": "c08d013f2496779e6b2ee88d2a8d18975c33a36b3e42c51030eeb9f2097e2cbf"
+    },
+    {
+      "X": 256,
+      "benchmark": "45.35051700175722162947210448172576534733979742283079022901146975776408",
+      "blockers": [
+        {"T": 10, "q": 8},
+        {"T": 5, "q": 3}
+      ],
+      "coefficient_sha256": "91da978eb0f139fe5ead8371dc0b0161181b170314e68dc4b531bd381fb96614",
+      "deficit": "0.008300815960479472627485469562195753039205528182222550674994573687635846",
+      "largest_slack_column": 9,
+      "positive_coefficients": 252,
+      "slack_sha256": "62e608de785aa54a45e3ad1a22f2f08c3793f5edd82d910a49ea9a1971fa77ca"
+    }
+  ],
+  "harmonic_checks": 20000,
+  "minimum_detail": "0.00000718788535924696351935859172954377630443433397680448173534541055336",
+  "minimum_harmonic_margin": "2.94572588117135141606569309641385105713021540959938848631404E-8",
+  "minimum_positive_row": "0.0000084756079389316951330784688973850249031870221132407145473205233412829",
+  "mutations_rejected": [
+    "activation_cell_source_not_imported",
+    "benchmark_bridge_rejected",
+    "branchwise_detail_before_common_sum_rejected",
+    "branchwise_negative_child_rejected",
+    "different_q_and_4q_coefficients_rejected",
+    "exact_all_row_negative_coordinate_separated",
+    "negative_endpoint_atom_rejected",
+    "rough_lift_not_native_parent",
+    "score_coefficient_mismatch_rejected",
+    "unproved_blocker_localization_not_promoted",
+    "wrong_endpoint_orientation_rejected"
+  ],
+  "ok": true,
+  "proof_object_sha256": "93a37cab05f5f3da2317b62124c67192fb810f11bb1db44a9a141b4575acb20e",
+  "response_crosschecks": 754,
+  "rh_established": false,
+  "row_checks": 8001,
+  "scientific_status": "unconditional finite native compiler; blocker localization open; RH unproved",
+  "verdict": "PASS_NATIVE_ENDPOINT_DETAIL_COMPILER_94100"
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "riemann.t94100.import-manifest.v1",
+  "repository": "gfreund123/riemann",
+  "base_pr": 511,
+  "base_branch": "research/gpt56-pro/93900-live-native-certificate-compiler",
+  "base_sha": "6ece82279cb03474ebc79914db572f6ff095d238",
+  "review_and_comparison_heads": {
+    "pr_512": "625a9273696a1f017f32d37bf9052423ee8590c7",
+    "pr_514": "944dabba065271f08f3cade0215292dcfbab590f",
+    "pr_516": "2492bd48f8e2bafacfc04fc9237c06219b8c9bf8",
+    "pr_521": "b4a60a54b1d730a73ab1eb6bb571485dd40438d0",
+    "pr_525": "d2b715942fead08935e4480b5b9254b8c836a116",
+    "pr_527": "687587b98071879e7f8034f66b5d95b3b76b016a"
+  },
+  "dependencies": [
+    {
+      "path": "claims/lemmas/L-24502-discrete-carry-kernel-and-greedy-minorant.md",
+      "commit": "05244c3cbfeb92254acfe29dc920c19a2c002392",
+      "blob_sha": "3ec2a34d483b230fb56e7afadd6129b025c292f1",
+      "role": "exact average-binomial carry coefficient"
+    },
+    {
+      "path": "claims/lemmas/L-26201-parabolic-seed-positive-endpoint-scale-frame.md",
+      "commit": "e0ad1484d70098eb7c8be17655ea08568d5e2cd2",
+      "blob_sha": "b423f48b6cd3f3364810125a11a26c7772acd57d",
+      "role": "historical endpoint-atom construction; positivity re-proved in L-94100"
+    },
+    {
+      "path": "claims/lemmas/L-26203-endpoint-scale-greedy-and-blocker-slack.md",
+      "commit": "e0ad1484d70098eb7c8be17655ea08568d5e2cd2",
+      "blob_sha": "f48616a740995a4fa9556f43652be52a3a768a7d",
+      "role": "historical ordinary-column endpoint greedy comparison"
+    },
+    {
+      "path": "claims/lemmas/L-26204-endpoint-scale-kernel-and-mobius-weight-state.md",
+      "commit": "e0ad1484d70098eb7c8be17655ea08568d5e2cd2",
+      "blob_sha": "bce315dc84db189a1e36e98c37130ea7b6ae5744",
+      "role": "endpoint-scale transform context; not load-bearing in finite compiler"
+    },
+    {
+      "path": "claims/lemmas/L-91377-full-mobius-row-has-the-exact-native-capacity-and-benchmark.md",
+      "commit": "6ece82279cb03474ebc79914db572f6ff095d238",
+      "blob_sha": "64a05d49643d461febd164b173b7896bcf3516aa",
+      "role": "native row and capacity normalization"
+    },
+    {
+      "path": "claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md",
+      "commit": "6ece82279cb03474ebc79914db572f6ff095d238",
+      "blob_sha": "d8ae67fb4ae0914cf45da4107c43a803ab158a1d",
+      "role": "positive Y4 dual"
+    },
+    {
+      "path": "claims/theorems/T-91750-one-sided-native-deficit-consumer-implies-rh-without-a-benchmark-bridge.md",
+      "commit": "6ece82279cb03474ebc79914db572f6ff095d238",
+      "blob_sha": "0e918637615607e9d7132dfd39c163ba2a5236ef",
+      "role": "conditional endpoint consumer"
+    },
+    {
+      "path": "claims/lemmas/L-19887-elementary-chebyshev-bound-makes-factor67-sqrt-thinning-native-cost-bounded.md",
+      "commit": "116d0ffb42602d5711abdba15aeb3ba9de076984",
+      "blob_sha": "07ab23971e6096f7e8b45543d9ec87b420a3e0b4",
+      "role": "elementary Chebyshev estimate reused only in blocker support pricing"
+    },
+    {
+      "path": "claims/refutations/R-92940-oriented-stopping-line-children-have-a-negative-physical-coordinate.md",
+      "commit": "944dabba065271f08f3cade0215292dcfbab590f",
+      "blob_sha": "c5787ce463f4c05760bf0fba9b8b459ddf7ef725",
+      "role": "binding negative q=2 child obstruction"
+    }
+  ],
+  "forbidden_shortcuts": [
+    "branchwise positive realization of oriented rough children",
+    "exact positive preservation of every native component row without proving c_X>=0",
+    "Target-Lorenz tail imported through the invalid Boost transcendental inclusion contract",
+    "integer whole cells assumed to avoid all source activation knots",
+    "row-first P61 rough lift used as the native parent",
+    "different coefficients in q and 4q",
+    "signed finite comparison promoted to positive source",
+    "J_Lambda(X)-4sqrt(X) upper benchmark bridge",
+    "NEDB inferred from finite reconnaissance"
+  ]
+}

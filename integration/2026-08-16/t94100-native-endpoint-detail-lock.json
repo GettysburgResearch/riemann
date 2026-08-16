@@ -1,0 +1,35 @@
+{
+  "base_pr": 511,
+  "base_sha": "6ece82279cb03474ebc79914db572f6ff095d238",
+  "exact_status": {
+    "all_row_exact_compiler": "equivalent to native row positivity",
+    "blocker_localization": "open",
+    "endpoint_consumer": "frozen conditional",
+    "finite_native_compiler": "proved",
+    "riemann_hypothesis": "unproved"
+  },
+  "forbidden_promotions": [
+    "PR #511 treated as completed work",
+    "branchwise oriented child placed in positive row cone",
+    "uncertified Target-Lorenz tail imported",
+    "finite blocker scan promoted to asymptotic theorem"
+  ],
+  "head_branch": "research/gpt56-pro/94100-native-endpoint-detail-compiler",
+  "normative_paths": [
+    "audits/gpt56-pro/2026-08-16-pr511-negative-child-and-native-endpoint-route.tsv",
+    "claims/refutations/R-94100-exact-all-row-native-compiler-is-full-sharp.md",
+    "claims/lemmas/L-94100-parabolic-endpoint-atoms-have-positive-radix-four-detail.md",
+    "claims/lemmas/L-94101-native-endpoint-detail-greedy-is-an-all-scale-feasible-compiler.md",
+    "claims/lemmas/L-94102-blocker-localization-prices-native-y4-deficit.md",
+    "claims/theorems/T-94100-native-endpoint-scale-successor-and-sharp-separator.md",
+    "experiments/X-94100-native-endpoint-detail/generate.py",
+    "experiments/X-94100-native-endpoint-detail/verify.py",
+    "experiments/X-94100-native-endpoint-detail/results/certificate-X256.summary.json",
+    "experiments/X-94100-native-endpoint-detail/results/verification.json",
+    "imports/t94100/IMPORT_MANIFEST.json",
+    "standalone/2026-08-16-native-endpoint-detail/REVIEW_SPECIFICATION.md"
+  ],
+  "proposal": "T-94100",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t94100.lock.v1"
+}
