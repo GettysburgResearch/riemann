@@ -1,0 +1,21 @@
+{
+  "packet": "T-92911",
+  "base_pr": 494,
+  "base_sha": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c",
+  "accepted_closing_review": 502,
+  "inspected_nonloadbearing_prs": [508, 509],
+  "claims": [
+    "R-92910",
+    "L-92910",
+    "L-92911",
+    "L-92912",
+    "L-92913",
+    "L-92914",
+    "T-92910",
+    "T-92911"
+  ],
+  "manifest": "imports/t92910/IMPORT_MANIFEST.json",
+  "experiment": "experiments/X-92910-upstream-spine-reconstruction",
+  "review_front_door": "standalone/2026-08-16-92910-upstream-spine/README.md",
+  "status": "candidate proof proposal; independent reconstruction required; RH unproved"
+}
