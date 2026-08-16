@@ -1,0 +1,29 @@
+{
+  "compatible_sources": [
+    {
+      "pr": 508,
+      "sha": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+      "used_scope": "anchored compact+tail Target-Lorenz and typed leaf compiler only"
+    },
+    {
+      "pr": 509,
+      "sha": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+      "used_scope": "exact native hybrid marginal and block-diagonal source coupling only"
+    }
+  ],
+  "frozen_base": {
+    "branch": "research/gpt56-pro/92890-pr489-review-repaired-one-shot",
+    "pr": 494,
+    "sha": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c"
+  },
+  "generated_date": "2026-08-16",
+  "intended_branch": "research/gpt56-pro/93880-upstream-spine-reconstruction",
+  "packet": "T-93880",
+  "repository": "gfreund123/riemann",
+  "review": {
+    "accepted_scope": "one-shot closing implementation on frozen upstream inputs",
+    "pr": 502,
+    "sha": "db45b778d8c26e03ef1ad6b6f48959638be28b7c"
+  },
+  "status": "candidate-complete; independent review required; RH unproved"
+}
