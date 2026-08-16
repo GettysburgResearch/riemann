@@ -1,0 +1,27 @@
+{
+  "anti_harmonic_checks": 2047,
+  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL_WITH_FORMAL_PRIME_LOGS",
+  "channel_swap_checks": 4094,
+  "classification": "PASS_X_95170_CARRY_ROOT_JULIA_CRITICAL_RIGIDITY",
+  "coefficient_checks": 2048,
+  "does_not_prove": [
+    "Hardy theorem",
+    "Landau one-sign theorem",
+    "trace-free Schur extraction",
+    "Cycle Debt",
+    "Riemann Hypothesis"
+  ],
+  "energy_bound_checks": 1,
+  "hostile_mutations_detected": 3,
+  "polynomial_and_mellin_checks": 4,
+  "positive_mass_checks": 1,
+  "proves": [
+    "finite g2/b2 coefficient formulas and positivity",
+    "coefficient-one two-channel swap through N=2048",
+    "anti-harmonic signed recursion through N=2048",
+    "PSD carry-current fixtures through parent 128",
+    "exact logarithmic energy and mass constants",
+    "no-common-zero polynomial reduction"
+  ],
+  "psd_carry_checks": 8128
+}
