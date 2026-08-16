@@ -1,0 +1,51 @@
+{
+  "affine": {
+    "endpoint_a": [
+      "6",
+      "7/6",
+      "7/4"
+    ],
+    "endpoint_b": [
+      "19/3",
+      "2",
+      "2"
+    ],
+    "mean": [
+      "31/5",
+      "5/3",
+      "19/10"
+    ],
+    "theta": "2/5"
+  },
+  "frontier": {
+    "anchored_source": "ACTUAL_SOURCE_MARGINAL_REQUIRED",
+    "old_t94000_endpoint_consumer": "REJECTED",
+    "pr508_tail": "MPFR_FULL_ARTIFACT_REQUIRED",
+    "pr537_frontier_chain": "GLOBAL_CROSS_PRODUCT_TRANSPORT_MISSING",
+    "rh": "UNPROVEN"
+  },
+  "normalization": {
+    "F=J-P": "7",
+    "H": "90",
+    "J": "100",
+    "J-H": "10",
+    "P": "93",
+    "Y4=P-H": "3",
+    "identity": "J-H=(J-P)+(P-H)"
+  },
+  "physical_cost": {
+    "bound": "<3457",
+    "meaning": "P_Lambda-H only",
+    "mismatch_upper": "1102/40723",
+    "thinning": "55776/25",
+    "total_upper": "2271393598/1018075"
+  },
+  "proof_boundary": "Exact normalization, affine compression, physical cost arithmetic, and fail-closed import status. Does not prove F_Lambda=o(log^2 X), the anchored source theorem, fixed-row positivity, or RH.",
+  "proof_object_sha256": "fcb2a76e126261f29054d9ca5ff8f5da497fb928262c865bd8314993263b009e",
+  "review503_witness": {
+    "lower": "-1842909/10000000000",
+    "upper": "-1842901/10000000000"
+  },
+  "schema": "riemann.x96200.affine-volterra-hardening.result.v1",
+  "verdict": "PASS_T96200_AFFINE_VOLTERRA_HARDENING_AND_FAIL_CLOSED_FRONTIER"
+}

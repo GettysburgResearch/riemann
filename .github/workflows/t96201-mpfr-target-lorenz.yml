@@ -1,0 +1,33 @@
+name: T96201 MPFR Target-Lorenz tail
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'experiments/X-96201-mpfr-target-lorenz-hardening/**'
+      - '.github/workflows/t96201-mpfr-target-lorenz.yml'
+
+jobs:
+  mpfr-tail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: fetch frozen PR #508 object
+        run: git fetch origin 4ae97dffd1f76ed3244b8f3028560ffa80663caf
+      - name: install MPFR
+        run: sudo apt-get update && sudo apt-get install -y libmpfr-dev libgmp-dev
+      - name: smoke
+        working-directory: experiments/X-96201-mpfr-target-lorenz-hardening
+        run: |
+          g++ -O2 -std=c++17 smoke.cpp -lmpfr -lgmp -o smoke
+          ./smoke
+      - name: full directed sweep
+        working-directory: experiments/X-96201-mpfr-target-lorenz-hardening
+        run: python3 rewrite_and_run.py --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: t96201-mpfr-target-lorenz-tail
+          path: experiments/X-96201-mpfr-target-lorenz-hardening/work

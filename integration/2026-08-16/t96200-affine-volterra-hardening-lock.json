@@ -1,0 +1,31 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/94000-standalone-reset-rh-candidate",
+    "pr": 533,
+    "sha": "624db1e68f0197a002a542ffa37375dc7b26e197"
+  },
+  "frozen": {
+    "pr353": "ed566f3198e236c54ba18049181016536f56d456",
+    "pr495": "50f45b46cbe3c471d6e702c41c7ef178b530e1ab",
+    "pr508": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr513": "4275fe97aa5ba885210abb6296c7048386e5909d",
+    "pr537": "2c2d4dd834ee61c54a6f8bdd7ba204a01896d593",
+    "pr541": "e381f444191e214cc992208b16d30a8d5fd461ac",
+    "pr542": "ca5fb69c15cda29b3b589660f9be44ea2f440677",
+    "review503": "db77e5792966edf080604fd4b69fb00f07739681",
+    "review516": "2492bd48f8e2bafacfc04fc9237c06219b8c9bf8"
+  },
+  "preserved": [
+    "review503 firewall",
+    "L-91760 Volterra identity",
+    "L-94000 affine compression",
+    "same-row q/4q detail",
+    "physical P_Lambda-H packing bound"
+  ],
+  "schema": "riemann.t96200.affine-volterra-hardening.genealogy.v1",
+  "withdrawn": [
+    "T-94000 endpoint implication",
+    "L-94003 as written",
+    "PR508 directed transcendental certificate"
+  ]
+}
