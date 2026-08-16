@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "verdict": "PASS_UPSTREAM_SPINE_RECONSTRUCTION_PACKET",
+  "checks": {
+    "constants": true,
+    "quantizer_martingale": true,
+    "y4_recurrence_to_20000": true,
+    "frozen_hall_profile_and_one_shot_replays": true,
+    "required_paths": true
+  },
+  "mutations": {
+    "terminal_overdraw_fails": true,
+    "native_total_fails": true
+  },
+  "scope": "finite/directed reconstruction, constants, provenance and endpoint composition; independent human proof review remains required",
+  "rh_proved": false
+}
