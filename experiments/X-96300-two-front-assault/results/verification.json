@@ -1,0 +1,105 @@
+{
+  "affine_moment_cone": {
+    "alpha": "3/5",
+    "beta": "4/5",
+    "row": [
+      "26/3",
+      "23/10",
+      "53/20"
+    ]
+  },
+  "annular_tent": [
+    {
+      "tent_over_exp": "0",
+      "v": "0"
+    },
+    {
+      "tent_over_exp": "1/2",
+      "v": "1/2"
+    },
+    {
+      "tent_over_exp": "3/2",
+      "v": "3/2"
+    },
+    {
+      "tent_over_exp": "1",
+      "v": "2"
+    },
+    {
+      "tent_over_exp": "0",
+      "v": "3"
+    },
+    {
+      "tent_over_exp": "0",
+      "v": "7/2"
+    }
+  ],
+  "formal_cutoff": 96,
+  "formal_feedback_identity": "mu*Lambda=-mu*log",
+  "genealogy": {
+    "base_pr": 544,
+    "base_sha": "d4dcd1256dc9c8e110c860cff87b3f89aee842a5",
+    "pr353_sha": "ed566f3198e236c54ba18049181016536f56d456",
+    "pr541_sha": "e381f444191e214cc992208b16d30a8d5fd461ac",
+    "pr542_sha": "ca5fb69c15cda29b3b589660f9be44ea2f440677",
+    "pr546_sha": "f920202ea15c577bf05fa58370bdc3d8313868cd"
+  },
+  "mellin_bridges": [
+    {
+      "C": "20",
+      "L": "20/3",
+      "V": "16/9",
+      "s": "3/4"
+    },
+    {
+      "C": "15/2",
+      "L": "3",
+      "V": "1",
+      "s": "1"
+    },
+    {
+      "C": "308/75",
+      "L": "28/15",
+      "V": "16/25",
+      "s": "5/4"
+    },
+    {
+      "C": "35/24",
+      "L": "5/6",
+      "V": "1/4",
+      "s": "2"
+    }
+  ],
+  "open_producers": [
+    "ACTQ_h",
+    "SPRP",
+    "VRP",
+    "AMCP"
+  ],
+  "proof_boundary": "Exact annular kernel, scale multiplier, positive-base single-row algebra, finite convolution, formal prime feedback, affine moment cone and Mellin-coordinate bridges. Does not prove any producer or RH.",
+  "proof_object_sha256": "fa2cacdc80a74b9bf8d7a1fe9fe561b2aa898184e590ae9ca0b2fa0f6ca57d18",
+  "rh_established": false,
+  "schema": "riemann.x96300.two-front-assault.result.v1",
+  "single_row": {
+    "factorization": "-3(a-1)(a-2)",
+    "numerator": [
+      "-6",
+      "9",
+      "-3"
+    ],
+    "positive_base": [
+      "15",
+      "6",
+      "3",
+      "6",
+      "6",
+      "6",
+      "6"
+    ],
+    "weights": [
+      5,
+      3
+    ]
+  },
+  "verdict": "PASS_T96300_RADICAL_TWO_FRONT_ASSAULT_ALGEBRA"
+}
