@@ -1,0 +1,46 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/93260-minimal-switch-cubic-dispersion",
+    "pr": 531,
+    "sha": "e1b3b03d97d47c5046aa84f31e51c925d92baabd",
+    "tree": "d3cd06a5276bef34b538364f9d115cada07644e0"
+  },
+  "created": "2026-08-16",
+  "forbidden_promotions": [
+    "NEDB -> RH without F_Lambda control",
+    "weighted physical slack = J_Lambda-H(d)",
+    "large-divisor Mobius tail treated as proved",
+    "First-Hermite pointwise gate treated as proved",
+    "raw Brownian cofinal stability treated as proved"
+  ],
+  "frozen_compared_sources": [
+    {
+      "paths": {
+        "claims/lemmas/L-94100-parabolic-endpoint-atoms-have-positive-radix-four-detail.md": "4f33a78519f59c17a1d456dc6b0659996038e66e",
+        "claims/lemmas/L-94101-native-endpoint-detail-greedy-is-an-all-scale-feasible-compiler.md": "6664b830097f37fb70dbeecbaea6ea0974929d06",
+        "claims/lemmas/L-94102-blocker-localization-prices-native-y4-deficit.md": "8b902acbfb2194c504c0850e2fda631c346fe3d5"
+      },
+      "pr": 530,
+      "sha": "6c818a35094b978863a08bde4227d1f4ad9b65d4"
+    },
+    {
+      "paths": {
+        "claims/lemmas/L-90023-any-near-seed-feasible-packing-closes-the-complete-gap.md": "04c178e4abd54a32f10d4a96cee6d4cd1f7c319b"
+      },
+      "pr": 353,
+      "sha": "ed566f3198e236c54ba18049181016536f56d456"
+    },
+    {
+      "paths": {
+        "claims/lemmas/L-93261-minimal-two-switch-double-zero-kernel.md": "24874c9078f27eb9920af533fc2e6594da35dfb6",
+        "claims/lemmas/L-93263-positive-logarithmic-peano-potential.md": "36f221a5af6649f4b88021be4214bd3ef008a4e8",
+        "claims/lemmas/L-93265-double-zero-mobius-large-divisor-localization.md": "af7dbde883df3ce40bd4e29a382eb970a7a580a8"
+      },
+      "pr": 531,
+      "sha": "e1b3b03d97d47c5046aa84f31e51c925d92baabd"
+    }
+  ],
+  "rh_established": false,
+  "schema": "riemann.t94200.source-lock.v1",
+  "status": "exact normalization correction and arithmetic route reset"
+}
