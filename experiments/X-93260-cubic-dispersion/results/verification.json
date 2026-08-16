@@ -1,0 +1,29 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_WITH_SYMBOLIC_LOG4_PAIR",
+  "checks": {
+    "balanced_large_divisor_bilinear": 48,
+    "base_two_q4_coefficients": 12,
+    "double_mellin_moments": 2,
+    "finite_radix4_telescopes": 64,
+    "formal_mobius_hyperbola": 48,
+    "hostile_mutations_detected": 4,
+    "j_cumulative_square": 1,
+    "j_piecewise_grid": 1296,
+    "k_mellin_polynomial": 1,
+    "minimal_two_switch_signs": 3,
+    "modulus_correction_fixture": 1,
+    "positive_peano_curvature_identities": 4,
+    "positive_peano_grid": 5040,
+    "positive_peano_mellin_log4_pair": 1,
+    "w_piecewise_grid": 3311
+  },
+  "not_authenticated": [
+    "classical prime number theorem input for the infinite Abel limit",
+    "second-order Euler summation theorem used in the explicit L-93265 constant",
+    "large-divisor Mobius cancellation",
+    "First-Hermite one-carrier exclusion",
+    "Riemann Hypothesis"
+  ],
+  "proof_object_sha256": "ebe485928c5a516945a64586e46e4aba3ae7c4a6a81a8819c6b568a9a9c97540",
+  "verdict": "PASS_X_93260_CUBIC_DISPERSION"
+}
