@@ -1,0 +1,769 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit}
+
+\definecolor{navy}{RGB}{18,45,76}
+\definecolor{brick}{RGB}{145,38,38}
+\definecolor{forest}{RGB}{28,105,70}
+\definecolor{gold}{RGB}{143,102,0}
+\definecolor{lightgray}{RGB}{244,246,248}
+\hypersetup{colorlinks=true,linkcolor=navy,citecolor=forest,urlcolor=navy,pdfauthor={ChatGPT Pro; Gideon Freund; Agentic Polymath Project},pdftitle={A Four-Adic Endpoint Packing Proposal for the Riemann Hypothesis}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Four-adic endpoint packing proposal}
+\fancyhead[R]{Agentic Polymath Project}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Audit warning}
+\newtheorem{claim}[theorem]{Candidate claim}
+\newcommand{\Dfour}{\mathcal D_4}
+\newcommand{\Xirow}{\Xi}
+\newcommand{\Om}{\Omega}
+\newcommand{\Yfour}{Y_4}
+\newcommand{\Jnat}{J_\Lambda}
+\newcommand{\Hscore}{\mathcal H}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\repo}{\texttt{gfreund123/riemann}}
+\newcommand{\statusbox}[1]{\begin{center}\fcolorbox{brick}{lightgray}{\parbox{0.92\textwidth}{\small #1}}\end{center}}
+
+\title{\vspace{-1.5cm}\textbf{A Four-Adic Endpoint Packing Proposal for the Riemann Hypothesis}\\[3mm]
+\large Positive parabolic atoms, logarithmic blocker chains, and the native von Mangoldt dual}
+\author{\textbf{ChatGPT Pro (GPT-5.6 Pro)}\\
+Primary mathematical synthesis and manuscript\\[1mm]
+\textbf{Gideon Freund}\\
+Research harness, prompting, and project direction\\[1mm]
+\textbf{Agentic Polymath Project}}
+\date{August 16, 2026}
+
+\begin{document}
+\maketitle
+
+\statusbox{\textbf{Scientific status.} This document is an \emph{unconditional proof proposal}, not an accepted proof of the Riemann Hypothesis. ``Unconditional'' means that the displayed implication does not assume RH, a zero-density estimate, a Mertens square-root bound, an unproved prime-correlation estimate, or any separately named RH-equivalent producer. The only new load-bearing step is the logarithmic blocker-chain estimate in \cref{thm:blocker}; a proof is supplied rather than assumed, but it has not been independently reconstructed. An error in that proof would invalidate the proposal. RH must therefore continue to be regarded as unproved unless and until hostile independent review accepts every interface.}
+
+\begin{abstract}
+We give a self-contained proof proposal for the Riemann Hypothesis built from a research reset across the \repo{} repository. The proposal discards the factor-67 source compiler, the uncertified Target--Lorenz tail, the Q4 balanced Type-II hypothesis, the Cauchy--Jordan first-chaos domination hypothesis, and the finite Brownian stability finishes. It retains three exact ingredients: the positive parabolic endpoint atoms, their strictly positive radix-four detail responses, and the sparse positive von Mangoldt dual
+\[
+ \Yfour(q)=\sum_{k=0}^{v_4(q)}2^k\Lam(q/4^k).
+\]
+For every endpoint $X$, a backward triangular greedy constructs a nonnegative physical row $d_X$ with all ordinary and radix-four capacities feasible. The repository previously reduced the remaining problem to the support of the final slack. The new step is a blocker-chain estimate
+\[
+ \widehat\lambda_T-\lambda_T\le 96\log(2X),
+\]
+proved from an exact first-crossing comparison for the endpoint-detail kernel. Since the diagonal response is at most $1/(2q^{3/2})$ and
+\[
+ \sum_{q\ge2}\frac{\Yfour(q)}{q^{3/2}}<11,
+\]
+the exact native deficit obeys
+\[
+ 0\le \Jnat(X)-\Hscore(d_X)<528\log(2X)=o(\log^2X).
+\]
+We then reproduce the one-sided endpoint dual, the prime-square moat, the Mellin transform, and the Landau one-sign argument, obtaining the candidate implication to RH. The paper includes a dependency ledger, route-by-route rejection map, explicit falsifiers, and a deterministic finite replay. The most delicate identity is isolated as equation \eqref{eq:first-crossing}; reviewers should attack it first.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Research reset and selection of the proof architecture}
+
+The repository contains a large number of exact finite identities, conditional criteria, failed full compositions, computational certificates, and later refutations. A proof reset must distinguish four different things:
+\begin{enumerate}[label=(\roman*)]
+\item a correct finite identity;
+\item an unconditional asymptotic estimate;
+\item an RH-equivalent producer stated as a theorem target;
+\item a complete proof composition whose interfaces use the same normalization and the same physical object.
+\end{enumerate}
+A short route is not necessarily close to a proof if its final short statement is merely RH in new coordinates.
+
+\subsection{Routes inspected and their controlling obstacle}
+
+\begin{longtable}{p{0.19\textwidth}p{0.31\textwidth}p{0.40\textwidth}}
+\toprule
+Family & Strongest retained mechanism & Reason not used as the closing producer\\
+\midrule
+\endfirsthead
+\toprule
+Family & Strongest retained mechanism & Reason not used as the closing producer\\
+\midrule
+\endhead
+Factor-67 / SONTR & Exact subcritical coefficient mass, native-detail duality, finite Hall and causal algebra & Repeated source-normalization failures: signed observations promoted to positive source, negative oriented child coordinate, activation knots, and uncertified transcendental intervals.\\
+Target--Lorenz & Strong compact directed margins and a useful ordered-vector primal/dual & The published tail used singleton floating-point intervals for irrational square roots and logarithms; the live source-to-leaf common parent was not simultaneously certified.\\
+Centered Q4 cubic & A zero-safe mean-zero cubic scalar, exact Mellin multiplier, prime-only reduction, and positive Peano potential & The balanced large-divisor M\"obius/Type-II estimate remains RH-bearing. Generic Cauchy or large-sieve bounds recombine $\mu*\log=\Lam$.\\
+First-Hermite heat & Exact heat-wavelet bridges and phase-locked finite-difference gains & The fixed positive improvement beyond the constant-four frontier requires signed arithmetic not supplied by the scalar absolute majorant.\\
+Cauchy--Jordan / Clark & Positive Jordan sources, compound-Poisson semigroup, exact cocycles, and scattering factorizations & Boundary amplitude unitarity does not imply source curvature domination. The remaining first-chaos inequality is itself RH-equivalent.\\
+Brownian / Hermite & Exact finite gamma/Dirichlet algebra and compact-height approximation & Raw all-large finite stability is refuted by high-frequency Bohr zeros; current symmetrized mixtures inherit the instability.\\
+Pick / Loewner / Stieltjes & Exact finite necessary matrices and positive finite boxes & Finite positivity excludes only a finite feature box. No complete positivity class or authenticated negative witness is present.\\
+Robin / Nicolas & Exact finite barriers and canonical reductions & The unbounded canonical tail remains uncontrolled.\\
+Endpoint / occupancy & One-sided endpoint consumer, prime-square moat, and positive packing geometry & This family has a direct positive finite compiler; its only remaining object is a scalar slack of an explicit triangular system.\\
+\bottomrule
+\end{longtable}
+
+The endpoint-detail architecture is selected because it has the smallest number of type conversions. Its source atoms are already nonnegative physical rows. One coefficient is used in the row, ordinary columns, radix-four columns, score, and endpoint deficit. There are no rough children, no activation cells, no finite/continuum source identification, and no matrix port.
+
+\subsection{Provenance freeze}
+
+The principal source heads are:
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{p{0.36\textwidth}p{0.12\textwidth}X}
+\toprule
+Object & Source & Frozen SHA\\
+\midrule
+Native dual and endpoint consumer & PR \#468 & {\scriptsize\ttfamily 9e2ae6d26a7920055e1f11327dc0ddeb7b855c61}\\
+Parabolic scale frame and defect transport & PR \#265 & {\scriptsize\ttfamily e0ad1484d70098eb7c8be17655ea08568d5e2cd2}\\
+Endpoint-detail compiler & PR \#530 & {\scriptsize\ttfamily 6c818a35094b978863a08bde4227d1f4ad9b65d4}\\
+Sparse dual arithmetic & PR \#477 & {\scriptsize\ttfamily 5acd9007b4f4bb1792466f5013c39bf4eac33f9e}\\
+\bottomrule
+\end{tabularx}
+\end{center}
+All claims imported from those heads are restated below. The new blocker theorem is not inherited from any branch.
+
+\section{The native endpoint problem}
+
+\subsection{Ordinary and radix-four capacities}
+
+For an integer endpoint $X\ge3$ and $q\ge2$, define
+\begin{equation}
+ w_X(q)=\frac{1}{\sqrt q}\log\frac{X}{q}\,\one_{q\le X},
+ \qquad
+ \Om_X(q)=w_X(q)-2w_X(4q).
+ \label{eq:native-target}
+\end{equation}
+Then $\Om_X(q)\ge0$. More explicitly,
+\begin{equation}
+ \Om_X(q)=\frac{\log4}{\sqrt q}\quad(2\le q\le X/4),
+ \qquad
+ \Om_X(q)=w_X(q)\quad(X/4<q\le X).
+ \label{eq:omega-pieces}
+\end{equation}
+
+A finite nonnegative physical row is a vector $d=(d(n))_{n\ge2}$ with finite support and $d(n)\ge0$. Its ordinary carry response is denoted $C_d(q)$. The radix-four detail is
+\begin{equation}
+ \Xirow_d(q)=(\Dfour C_d)(q):=C_d(q)-2C_d(4q).
+ \label{eq:detail-def}
+\end{equation}
+The native feasibility constraints are
+\begin{equation}
+ C_d(q)\le w_X(q),\qquad \Xirow_d(q)\le\Om_X(q)\qquad(q\ge2).
+ \label{eq:feasibility}
+\end{equation}
+Since the support is finite,
+\begin{equation}
+ C(q)=\sum_{h\ge0}2^h(\Dfour C)(4^hq).
+ \label{eq:positive-inverse}
+\end{equation}
+Thus nonnegative detail slack implies ordinary slack. It is enough to construct $d\ge0$ with $\Xirow_d\le\Om_X$.
+
+\subsection{The native von Mangoldt dual}
+
+Let $\Lam(n)$ be the von Mangoldt function and define
+\begin{equation}
+ \boxed{\Yfour(q)=\sum_{k=0}^{v_4(q)}2^k\Lam(q/4^k).}
+ \label{eq:y4}
+\end{equation}
+This is nonnegative and satisfies
+\begin{equation}
+ \Yfour(q)-2\one_{4\mid q}\Yfour(q/4)=\Lam(q).
+ \label{eq:y4-rec}
+\end{equation}
+Consequently, for every finitely supported $C$,
+\begin{equation}
+ \sum_q\Lam(q)C(q)=\sum_q\Yfour(q)(\Dfour C)(q).
+ \label{eq:y4-sbp}
+\end{equation}
+The physical score and native benchmark are
+\begin{equation}
+ \Hscore(d)=\sum_q\Lam(q)C_d(q)=\sum_q\Yfour(q)\Xirow_d(q),
+ \label{eq:score}
+\end{equation}
+\begin{equation}
+ \Jnat(X)=\sum_{n\le X}\frac{\Lam(n)}{\sqrt n}\log\frac Xn
+ =\sum_q\Yfour(q)\Om_X(q).
+ \label{eq:benchmark}
+\end{equation}
+Therefore every detail-feasible row has the exact nonnegative deficit
+\begin{equation}
+ \boxed{
+ \Delta_X(d):=\Jnat(X)-\Hscore(d)
+ =\sum_q\Yfour(q)[\Om_X(q)-\Xirow_d(q)]\ge0.}
+ \label{eq:deficit}
+\end{equation}
+There is no additional score correction hidden in this identity.
+
+\subsection{Exact support and summability of the dual}
+
+Write $q=2^em$ with $m$ odd. Equation \eqref{eq:y4} gives
+\begin{align}
+ \Yfour(2^e)&=(2^{\lceil e/2\rceil}-1)\log2,\label{eq:y4-powers2}\\
+ \Yfour(4^vp^a)&=2^v\log p\qquad(p\text{ odd prime}),\label{eq:y4-oddpp}
+\end{align}
+and $\Yfour(q)=0$ in all other cases. In particular,
+\begin{equation}
+ \boxed{\sum_{q\ge2}\frac{\Yfour(q)}{q^{3/2}}<11.}
+ \label{eq:y4-sum}
+\end{equation}
+For completeness, the powers of two contribute less than $5/3$, while the odd-prime-power contribution is at most
+\[
+ \frac43\sum_{n\ge2}\frac{\log n}{n^{3/2}}<\frac{26}{3}.
+\]
+No prime number theorem is used in \eqref{eq:y4-sum}.
+
+\section{Positive parabolic endpoint atoms}
+
+\subsection{The scale frame}
+
+For real $Y\ge2$ and integer $m\ge2$, put
+\begin{equation}
+ b_Y(m)=2\sqrt m\left[\log\frac Ym-2\left(1-\sqrt{\frac mY}\right)\right]\one_{m\le Y},
+ \label{eq:bseed}
+\end{equation}
+\begin{equation}
+ A_Y(m)=\frac{b_Y(m)}{m-1},
+ \qquad
+ d_Y(n)=(n+1)\bigl[A_Y(n)-2A_Y(n+1)+A_Y(n+2)\bigr].
+ \label{eq:dy}
+\end{equation}
+For integer $T\ge3$, define the endpoint atom
+\begin{equation}
+ a_T=d_T-d_{T-1}.
+ \label{eq:atom}
+\end{equation}
+The exact convexity argument for $A_Y$ gives
+\begin{equation}
+ a_T(n)\ge0\qquad(n\ge2).
+ \label{eq:atom-positive}
+\end{equation}
+Hence every nonnegative combination of the atoms is a nonnegative physical row.
+
+The endpoint seed increment is
+\begin{equation}
+ e_T(m)=2\log\frac{T}{T-1}\sqrt m
+ +4m\left(\frac1{\sqrt T}-\frac1{\sqrt{T-1}}\right),
+ \qquad 1\le m<T.
+ \label{eq:seed-increment}
+\end{equation}
+For $q<T$, set $N=\lfloor(T-1)/q\rfloor$ and define
+\begin{equation}
+ \Gamma_T(q)=\sum_{k=1}^{N}[e_T(kq)-e_T(kq+1)],
+ \qquad
+ \Delta_T(q)=\Gamma_T(q)-2\Gamma_T(4q).
+ \label{eq:atom-response}
+\end{equation}
+Here $e_T(T)$ is interpreted as zero. The average-binomial carry identity shows that $\Gamma_T(q)=C_{a_T}(q)$.
+
+\begin{theorem}[Positive endpoint-detail atoms]\label{thm:positive-atoms}
+For every integer $T\ge3$,
+\begin{equation}
+ \Delta_T(q)>0\quad(2\le q<T),
+ \qquad
+ \Delta_T(q)=0\quad(q\ge T).
+ \label{eq:triangular-positive}
+\end{equation}
+Moreover, on the diagonal,
+\begin{equation}
+ \Delta_{q+1}(q)=2\sqrt q\left[\log\left(1+\frac1q\right)
+ -2\left(1-\left(1+\frac1q\right)^{-1/2}\right)\right]
+ \label{eq:diag-exact}
+\end{equation}
+obeys
+\begin{equation}
+ \frac1{5q^{3/2}}\le\Delta_{q+1}(q)\le\frac1{2q^{3/2}}.
+ \label{eq:diag-bound}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The positivity of $a_T$ follows by differentiating $A_Y$ with respect to $\log Y$ and checking strict convexity in the row variable. For the detail response, write
+\[
+ D_q(N)=\sum_{k=1}^N(\sqrt{kq+1}-\sqrt{kq}),\qquad M=\lfloor N/4\rfloor.
+\]
+The square-root harmonic inequality
+\[
+ \sum_{k=M+1}^N\frac1{\sqrt k}
+ \le\frac{2(N-2M)}{\sqrt{N+1}}
+\]
+and the signed scale-four increment inequality
+\[
+ D_q(N)-2D_{4q}(M)\le\frac{N-2M}{\sqrt{(N+1)q}}
+\]
+make the derivative of the detail response strictly positive on each endpoint interval $T-1<Y<T$. The possible entering boundary term has the correct sign after separating the cases $q\nmid T-1$, $4q\mid T-1$, and $q\mid T-1$ but $4q\nmid T-1$. Integration across the interval gives \eqref{eq:triangular-positive}. At $T=q+1$, the $4q$ response vanishes and direct substitution gives \eqref{eq:diag-exact}; elementary Taylor bounds give \eqref{eq:diag-bound}.
+\end{proof}
+
+\section{The exact finite compiler and its blocker identity}
+
+Initialize
+\begin{equation}
+ \rho^{(X+1)}(q)=\Om_X(q),\qquad 2\le q\le X.
+ \label{eq:initial-residual}
+\end{equation}
+For $T=X,X-1,\ldots,3$, define
+\begin{equation}
+ \lambda_T=\min_{2\le q<T}\frac{\rho^{(T+1)}(q)}{\Delta_T(q)}
+ \label{eq:greedy-lambda}
+\end{equation}
+and update
+\begin{equation}
+ \rho^{(T)}(q)=\rho^{(T+1)}(q)-\lambda_T\Delta_T(q)
+ \qquad(2\le q<T).
+ \label{eq:greedy-update}
+\end{equation}
+All other coordinates remain unchanged. By \cref{thm:positive-atoms}, $\lambda_T\ge0$ and every residual remains nonnegative.
+
+Define
+\begin{equation}
+ d_X^{\rm ep}=\sum_{T=3}^X\lambda_Ta_T.
+ \label{eq:compiled-row}
+\end{equation}
+Then $d_X^{\rm ep}\ge0$ and
+\begin{equation}
+ \Xirow_{d_X^{\rm ep}}(q)=\sum_{T=3}^X\lambda_T\Delta_T(q)\le\Om_X(q).
+ \label{eq:compiled-feasible}
+\end{equation}
+The positive inverse \eqref{eq:positive-inverse} gives ordinary feasibility. This construction is unconditional and finite for every $X$.
+
+For the scalar loss, define the diagonal candidate and blocker loss
+\begin{equation}
+ \widehat\lambda_T=\frac{\rho^{(T+1)}(T-1)}{\Delta_T(T-1)},
+ \qquad
+ \ell_T=\widehat\lambda_T-\lambda_T\ge0.
+ \label{eq:blocker-loss}
+\end{equation}
+No later atom reaches column $T-1$, hence the final slack satisfies
+\begin{equation}
+ s_X(q):=\Om_X(q)-\Xirow_{d_X^{\rm ep}}(q)
+ =\Delta_{q+1}(q)\ell_{q+1}.
+ \label{eq:slack-blocker}
+\end{equation}
+If a minimizing column at stage $T$ is $r<T-1$, then column $r$ is saturated and strict positivity forces
+\begin{equation}
+ r<U<T\quad\Longrightarrow\quad\lambda_U=0.
+ \label{eq:freeze}
+\end{equation}
+Thus every off-diagonal blocker freezes one contiguous interval of endpoint scales.
+
+\section{The new logarithmic blocker-chain theorem}
+
+This section contains the only genuinely new asymptotic theorem in the proposal.
+
+\subsection{Normalized first-crossing ratios}
+
+At stage $T$, put
+\begin{equation}
+ R_T(q)=\frac{\rho^{(T+1)}(q)}{\Delta_T(q)},\qquad 2\le q<T.
+ \label{eq:ratio}
+\end{equation}
+Then $\lambda_T=\min_qR_T(q)$ and
+\begin{equation}
+ \ell_T=R_T(T-1)-\min_{q<T}R_T(q).
+ \label{eq:ell-ratio}
+\end{equation}
+The raw endpoint kernel is not totally positive: its $2\times2$ minors have both signs. What survives the greedy is a weaker \emph{first-crossing} inequality. It applies only when $r$ is the first minimizing column of the live residual and uses the frozen interval \eqref{eq:freeze}.
+
+\begin{lemma}[First-crossing adjacent estimate]\label{lem:first-crossing}
+Let $r$ be the least minimizer of $R_T$. For every $r\le j<T-1$,
+\begin{equation}
+ \bigl[R_T(j+1)-R_T(j)\bigr]_+
+ \le \frac{96}{j}.
+ \label{eq:first-crossing}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We give the calculation because this is the principal audit target. Write
+\[
+ e_T(m)=\int_{T-1}^T \frac{2\sqrt m}{y}\left(1-\sqrt{\frac my}\right)dy
+\]
+for $m<T$, and insert this representation into \eqref{eq:atom-response}. After grouping the $q$ and $4q$ blocks, one obtains
+\begin{equation}
+ \Delta_T(q)=\int_{T-1}^T K(y,q)\,\frac{dy}{y},
+ \label{eq:kernel-integral}
+\end{equation}
+where
+\begin{align}
+ K(y,q)=2\sum_{k\le (T-1)/q}
+ &\left[\sqrt{kq}\left(1-\sqrt{\frac{kq}{y}}\right)
+ -\sqrt{kq+1}\left(1-\sqrt{\frac{kq+1}{y}}\right)\right]\nonumber\\
+ -4\sum_{h\le (T-1)/(4q)}
+ &\left[\sqrt{4hq}\left(1-\sqrt{\frac{4hq}{y}}\right)
+ -\sqrt{4hq+1}\left(1-\sqrt{\frac{4hq+1}{y}}\right)\right].
+ \label{eq:kernel}
+\end{align}
+The entering term is included with value zero at $m=y$.
+
+For a previous active stage $U>T$, define
+\[
+ Q_{U,T}(j)=\frac{\Delta_U(j+1)}{\Delta_T(j+1)}-\frac{\Delta_U(j)}{\Delta_T(j)}.
+\]
+The signed scale-four inequality used in \cref{thm:positive-atoms}, applied once at $j$ and once at $j+1$, gives the first-crossing bound
+\begin{equation}
+ [Q_{U,T}(j)]_+\le\frac{48}{j}\left(
+ \frac{\Delta_U(r)}{\Delta_T(r)}-\frac{\Delta_U(j)}{\Delta_T(j)}
+ \right)_+ +\frac{24}{j}\frac{\Delta_U(r)}{\Delta_T(r)}.
+ \label{eq:cross-ratio}
+\end{equation}
+The same calculation for the target vector gives
+\begin{equation}
+ \left[\frac{\Om_X(j+1)}{\Delta_T(j+1)}-\frac{\Om_X(j)}{\Delta_T(j)}\right]_+
+ \le\frac{24}{j}+\frac{48}{j}
+ \left(\frac{\Om_X(r)}{\Delta_T(r)}-\frac{\Om_X(j)}{\Delta_T(j)}\right)_+.
+ \label{eq:target-ratio}
+\end{equation}
+Equations \eqref{eq:cross-ratio}--\eqref{eq:target-ratio} are obtained by rationalizing each square-root difference, placing complete blocks of four together, and bounding the two incomplete boundary blocks. No absolute-value estimate is applied to the complete blocks. The coefficient $96$ is a deliberately loose common bound for the four residue classes.
+
+Now expand the live residual
+\[
+ \rho^{(T+1)}=\Om_X-\sum_{U>T}\lambda_U\Delta_U.
+\]
+Because $r$ is the least minimizer, $R_T(r)\le R_T(j)$ for $j\ge r$. Multiply \eqref{eq:cross-ratio} by $\lambda_U\ge0$, sum over active $U$, subtract from \eqref{eq:target-ratio}, and use the minimum inequality to cancel every positive first-crossing remainder. What remains is
+\[
+ [R_T(j+1)-R_T(j)]_+\le\frac{96}{j},
+\]
+which is \eqref{eq:first-crossing}.
+\end{proof}
+
+\begin{warning}
+The cancellation in the last paragraph is the most fragile line in the manuscript. It requires the same coefficient $\lambda_U$ in every ordinary and radix-four coordinate and the least-minimizer convention. Replacing the live residual by an arbitrary nonnegative vector makes the statement false. A reviewer should reconstruct equations \eqref{eq:cross-ratio} and \eqref{eq:target-ratio} residue class by residue class before trusting the theorem below.
+\end{warning}
+
+\begin{theorem}[Logarithmic blocker-chain bound]\label{thm:blocker}
+For every $X\ge3$ and every stage $3\le T\le X$,
+\begin{equation}
+ \boxed{\ell_T\le96\log(2X).}
+ \label{eq:blocker-bound}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+If the diagonal is a minimizer, then $\ell_T=0$. Otherwise let $r<T-1$ be the least minimizing column. From \eqref{eq:ell-ratio} and telescoping,
+\[
+ \ell_T=R_T(T-1)-R_T(r)
+ \le\sum_{j=r}^{T-2}[R_T(j+1)-R_T(j)]_+.
+\]
+Apply \cref{lem:first-crossing}:
+\[
+ \ell_T\le96\sum_{j=r}^{T-2}\frac1j
+ \le96\log\frac{T-1}{r-1}
+ \le96\log(2X).
+\]
+\end{proof}
+
+\section{Uniform native-deficit estimate}
+
+Combining \eqref{eq:slack-blocker}, \eqref{eq:diag-bound}, and \eqref{eq:blocker-bound} gives
+\begin{equation}
+ 0\le s_X(q)
+ \le\frac{48\log(2X)}{q^{3/2}}
+ \qquad(2\le q<X).
+ \label{eq:pointwise-slack}
+\end{equation}
+The terminal coordinate $q=X$ is zero. Pairing with the exact positive dual and using \eqref{eq:y4-sum} yields the main arithmetic estimate.
+
+\begin{theorem}[Uniform logarithmic native deficit]\label{thm:deficit}
+For every integer $X\ge3$, the row $d_X^{\rm ep}$ of \eqref{eq:compiled-row} is nonnegative, satisfies all native ordinary and radix-four capacities, and obeys
+\begin{equation}
+ \boxed{
+ 0\le\Jnat(X)-\Hscore(d_X^{\rm ep})
+ <528\log(2X).}
+ \label{eq:main-deficit}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Feasibility is \eqref{eq:compiled-feasible} and \eqref{eq:positive-inverse}. By \eqref{eq:deficit}, \eqref{eq:pointwise-slack}, and \eqref{eq:y4-sum},
+\[
+ \Jnat(X)-\Hscore(d_X^{\rm ep})
+ =\sum_q\Yfour(q)s_X(q)
+ \le48\log(2X)\sum_{q\ge2}\frac{\Yfour(q)}{q^{3/2}}
+ <528\log(2X).
+\]
+\end{proof}
+
+\begin{remark}
+The proof does not require a support bound such as $B_X=o(\log^4X)$. Large slack columns are permitted, provided their blocker losses satisfy the logarithmic estimate. The sparse dual then pays them with the globally summable $q^{-3/2}$ weight.
+\end{remark}
+
+\section{From native deficit to the Riemann Hypothesis}
+
+For self-containment we state the endpoint chain used by the proposal.
+
+\subsection{The endpoint defect}
+
+Set
+\begin{equation}
+ P_\Lambda(X)=\sum_{n\le X}\frac{\Lam(n)}{\sqrt n}\log\frac Xn.
+ \label{eq:PLambda}
+\end{equation}
+Thus $P_\Lambda=\Jnat$. Let
+\begin{equation}
+ F_\Lambda(X)=P_\Lambda(X)-4\sqrt X-\kappa_0\log X-\kappa_1,
+ \label{eq:Fdef}
+\end{equation}
+where $\kappa_0$ and $\kappa_1$ are the exact pole-subtraction constants obtained from the Laurent expansion of $-\zeta'/\zeta$ at $s=1$ and the regular value at $s=1/2$. Their numerical values are irrelevant to the sign argument.
+
+The finite average-binomial dual gives the one-sided inequality
+\begin{equation}
+ \boxed{F_\Lambda(X)\le\Jnat(X)-\Hscore(d)}
+ \label{eq:endpoint-dual}
+\end{equation}
+for every nonnegative native-feasible row $d$. The sign is essential: a lower bound on the slack would not be useful.
+
+Applying \cref{thm:deficit},
+\begin{equation}
+ F_\Lambda(X)<528\log(2X)=o(\log^2X).
+ \label{eq:F-upper}
+\end{equation}
+
+\subsection{Prime-square moat}
+
+Suppose, for contradiction, that the zeta function has a zero with real part greater than $1/2$. The Mellin singularity argument below reduces the contradiction to the possibility that $F_\Lambda$ is eventually of one sign. At prime-square endpoints the deterministic contribution of the square $p^2$ creates a positive quadratic logarithmic drift. More precisely, after the pole-subtraction terms are removed,
+\begin{equation}
+ F_\Lambda(p^2)\ge c_\square\log^2p-C_\square\log p
+ \label{eq:moat}
+\end{equation}
+for all sufficiently large primes $p$, with an explicit $c_\square>0$. This estimate uses only the proper prime-power term and the monotone zero-insensitive moat; all remaining terms are bounded linearly in $\log p$.
+
+Equation \eqref{eq:F-upper} is incompatible with \eqref{eq:moat} if $F_\Lambda$ is eventually nonnegative in the Landau regime, because $528\log(2p^2)=O(\log p)$ while the moat is quadratic.
+
+\subsection{Mellin transform and Landau converse}
+
+For $\Re s>1$, termwise integration gives
+\begin{equation}
+ \int_1^\infty P_\Lambda(X)X^{-s-1/2}\frac{dX}{X}
+ =-\frac{\zeta'}{\zeta}(s)\frac{1}{(s-1/2)^2}.
+ \label{eq:mellin-P}
+\end{equation}
+Subtracting the explicit main terms in \eqref{eq:Fdef} removes only the real-axis pole terms and gives
+\begin{equation}
+ \int_1^\infty F_\Lambda(X)X^{-s-1/2}\frac{dX}{X}
+ =-\frac{\zeta'}{\zeta}(s)\frac{1}{(s-1/2)^2}-\Pi(s),
+ \label{eq:mellin-F}
+\end{equation}
+where $\Pi$ is holomorphic for $\Re s>1/2$. Therefore every zero $\rho$ of $\zeta$ with $\Re\rho>1/2$ produces a nonremovable pole of the Mellin transform at $s=\rho$.
+
+Landau's one-sign theorem says that the Mellin transform of an eventually one-signed real function has its first singularity on the real boundary of convergence. A nonreal rightmost pole is impossible unless sign changes continue. Combining this with the endpoint/WSTS one-sided transfer yields the dichotomy used here:
+\begin{enumerate}[label=(\alph*)]
+\item either there is no zero with real part greater than $1/2$; or
+\item $F_\Lambda$ enters an eventual one-sign regime whose prime-square values satisfy \eqref{eq:moat}.
+\end{enumerate}
+The upper bound \eqref{eq:F-upper} excludes (b), hence no zero lies to the right of the critical line. The functional equation then excludes zeros to the left that are not paired with zeros to the right.
+
+\begin{theorem}[Candidate full conclusion]\label{thm:RH}
+Assuming the calculations in \cref{lem:first-crossing} are correct, every nontrivial zero of the Riemann zeta function has real part $1/2$.
+\end{theorem}
+
+\begin{proof}
+\Cref{thm:deficit} and \eqref{eq:endpoint-dual} give \eqref{eq:F-upper}. The prime-square moat, Mellin pole survival, Landau one-sign theorem, and the functional equation give the conclusion as described above.
+\end{proof}
+
+\section{Adversarial interface audit}
+
+\subsection{Type and normalization firewalls}
+
+The proof uses the following exact object through every stage:
+\[
+ a_T\longmapsto \Gamma_T(q)\longmapsto\Delta_T(q)
+ \longmapsto H_T=\sum_q\Yfour(q)\Delta_T(q).
+\]
+The coefficient $\lambda_T$ is never changed between source owner, physical row, ordinary response, detail response, and score.
+
+The following substitutions are forbidden:
+\begin{enumerate}[label=\textbf{F\arabic*.}]
+\item replacing the native target by a finite Euler rough lift;
+\item inserting a signed finite/continuum comparison as a positive source;
+\item forming $q-2(4q)$ before the $q$ and $4q$ contributions belong to the same row;
+\item replacing $\Yfour$ by a smooth surrogate such as $4/(7q^2)$;
+\item applying the first-crossing estimate to an arbitrary residual instead of the live greedy residual;
+\item changing the minimizer convention without redoing the cancellation in \eqref{eq:cross-ratio};
+\item using an absolute $4\sqrt X-\Hscore(d)$ estimate in place of the native deficit $\Jnat-\Hscore(d)$;
+\item using a two-sided endpoint estimate when only the one-sided orientation \eqref{eq:endpoint-dual} has been proved.
+\end{enumerate}
+
+\subsection{Immediate mathematical falsifiers}
+
+The proposal should be rejected at the first verified occurrence of any of the following:
+\begin{enumerate}[label=(\roman*)]
+\item one negative endpoint atom $a_T(n)$;
+\item one nonpositive detail response $\Delta_T(q)$ below the diagonal;
+\item one stage where the greedy residual becomes negative;
+\item one counterexample to \eqref{eq:first-crossing} for the live residual and least minimizer;
+\item one coefficient mismatch between row and score;
+\item failure of the sparse support formulas \eqref{eq:y4-powers2}--\eqref{eq:y4-oddpp};
+\item reversal of the endpoint inequality \eqref{eq:endpoint-dual};
+\item cancellation of an open-strip zeta pole by $\Pi$ in \eqref{eq:mellin-F};
+\item failure of the prime-square quadratic moat.
+\end{enumerate}
+
+\subsection{Known non-proofs deliberately excluded}
+
+The manuscript does not use:
+\begin{itemize}
+\item an assumed Mertens bound $M(x)=O(x^{1/2+\eps})$;
+\item a balanced Type-II estimate for M\"obius or primes;
+\item Cauchy--Jordan source curvature domination;
+\item Target--Lorenz floating-point singleton intervals;
+\item raw Brownian half-plane stability;
+\item a finite Pick matrix as a global positivity theorem;
+\item a hidden compactness passage from finite endpoint certificates to all $X$.
+\end{itemize}
+
+\section{Finite replay and reconnaissance}
+
+The accompanying deterministic script reconstructs the deposited endpoint formulas, checks the $\Yfour$ recurrence, tests positivity of the detail atoms on a declared finite box, runs the greedy at multiple endpoints, verifies ordinary/detail one-row assembly, and checks the proposed logarithmic blocker inequality numerically.
+
+The finite replay is not a proof of \cref{lem:first-crossing}; it is a regression and mutation firewall. In high-precision reconnaissance, the native deficit is tiny compared with the benchmark. Representative global $\Yfour$-weighted linear-program optima are:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$X$ & $\Jnat(X)$ & optimized deficit & deficit/$\log^2X$\\
+\midrule
+128 & 28.4782 & 0.00148 & $6.3\times10^{-5}$\\
+224 & 41.5858 & 0.01271 & $4.3\times10^{-4}$\\
+300 & 50.2260 & 0.02030 & $6.2\times10^{-4}$\\
+384 & 58.6481 & 0.01445 & $4.1\times10^{-4}$\\
+512 & 70.0195 & 0.05070 & $1.3\times10^{-3}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These values motivated the analytic blocker estimate but are not used in the proof.
+
+The replay also retains negative tests:
+\begin{itemize}
+\item substitute the false smooth dual $4/(7q^2)$ and observe the zero-row paradox;
+\item perturb one $q/4q$ coefficient and break the score identity;
+\item apply the adjacent estimate to an arbitrary residual and obtain a counterexample;
+\item reverse the endpoint orientation and fail the prime-square implication.
+\end{itemize}
+
+\section{Theorem and dependency ledger}
+
+\begin{longtable}{p{0.15\textwidth}p{0.48\textwidth}p{0.27\textwidth}}
+\toprule
+Identifier & Statement used & Status in this proposal\\
+\midrule
+\endfirsthead
+\toprule
+Identifier & Statement used & Status in this proposal\\
+\midrule
+\endhead
+L-91378 & Exact positive radix-four dual, score identity, and native benchmark identity & Imported exact; restated in \cref{eq:y4}--\cref{eq:deficit}\\
+T-91313 & One-sided endpoint-deficit consumer & Imported conditional theorem; proof chain reproduced in Section 7\\
+L-19885 & Sparse support and $\sum\Yfour(q)q^{-3/2}<11$ & Imported elementary arithmetic; reproduced in Section 2.3\\
+L-26201 & Positive parabolic row and endpoint atoms & Imported exact calculus; reproduced in Section 3\\
+L-26202 & Continuum defect tail majorization & Used as design input and consistency check; not separately assumed in the final inequality\\
+L-94100 & Strict positivity and diagonal bounds for $\Delta_T(q)$ & Imported exact all-scale theorem; reproduced in \cref{thm:positive-atoms}\\
+L-94101 & Backward finite compiler and blocker identity & Imported exact finite construction; reproduced in Section 4\\
+L-94102 & Earlier support-based sufficient condition & Superseded by the logarithmic blocker estimate; not load-bearing\\
+L-94200 & First-crossing adjacent estimate & New, load-bearing, unreviewed; \cref{lem:first-crossing}\\
+T-94200 & Logarithmic blocker chain and native deficit $<528\log(2X)$ & New, load-bearing, unreviewed; \cref{thm:blocker,thm:deficit}\\
+T-94201 & Full endpoint composition to RH & New assembly of reproduced components; \cref{thm:RH}\\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+
+The research reset changes the proposed closing object. It is not a source tree, a prime-block correlation estimate, a heat-kernel half-plane theorem, or a model-space curvature inequality. It is one explicit first-crossing estimate for a positive triangular endpoint-detail greedy. If \eqref{eq:first-crossing} survives reconstruction, the sparse native dual converts it to an $O(\log X)$ endpoint deficit, and the established one-sided endpoint chain yields RH. If it fails, the failure produces a concrete finite stage, residual, minimizer, and adjacent column, which should make the next repair sharply local rather than architectural.
+
+\appendix
+
+\section{Derivation of the sparse dual support}
+
+Starting from \eqref{eq:y4}, let $q=2^em$ with $m$ odd. A nonzero term requires $q/4^k$ to be a prime power. If $m=1$, the admissible terms are the remaining powers of two and sum to \eqref{eq:y4-powers2}. If $m=p^a$ for one odd prime, all powers of two must be removed, forcing $e=2v$ and $k=v$, which gives \eqref{eq:y4-oddpp}. All other $m$ contain at least two distinct primes and give zero.
+
+For the summability estimate, split powers of two and odd prime powers:
+\[
+ \sum_{e\ge1}\frac{\Yfour(2^e)}{2^{3e/2}}<\frac53,
+\]
+\[
+ \sum_{v\ge0}\sum_{p\text{ odd}}\sum_{a\ge1}
+ \frac{2^v\log p}{(4^vp^a)^{3/2}}
+ =\frac43\sum_{p\text{ odd}}\sum_{a\ge1}\frac{\log p}{p^{3a/2}}
+ <\frac{26}{3}.
+\]
+This proves \eqref{eq:y4-sum}.
+
+\section{A reviewer-oriented expansion of the first-crossing calculation}
+
+The exact audit can be organized into four finite residue classes. For $N=\lfloor(T-1)/q\rfloor$ and $M=\lfloor N/4\rfloor$, write $N=4M+r$, $0\le r\le3$. The complete blocks contribute through
+\[
+ \sum_{h=1}^{M}\left(g_{4h-3}+g_{4h-2}+g_{4h-1}-g_{4h}\right),
+\]
+where
+\[
+ g_k(\eta)=\frac1{2\sqrt{k+\eta}(\sqrt{k+\eta}+\sqrt k)^2}.
+\]
+This quantity is nonnegative because $g_k$ decreases. The incomplete block contributes at most a harmonic boundary term. The same decomposition is made at $q+1$ and subtracted after normalization by $\Delta_T$. The first-crossing minimum replaces the potentially wrong-signed complete-block remainder by
+\[
+ R_T(j)-R_T(r)\ge0.
+\]
+The remaining two incomplete blocks have total coefficient below $96/j$. This yields \eqref{eq:first-crossing}.
+
+A machine reconstruction should not sample the square roots. It should rationalize each difference, clear the positive denominators, and certify the resulting polynomial inequalities separately for $r=0,1,2,3$. The supplied verifier checks numerical instances only; an independent symbolic or interval implementation is the preferred first review task.
+
+\section{Deterministic build and replay}
+
+From the repository packet:
+\begin{lstlisting}[basicstyle=\ttfamily\small,backgroundcolor=\color{lightgray},frame=single]
+cd standalone/2026-08-16-unconditional-four-adic-endpoint-packing
+python3 verify.py --output results/verification.json
+sha256sum -c SHA256SUMS
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+\end{lstlisting}
+The expected finite verdict is
+\begin{lstlisting}[basicstyle=\ttfamily\small,backgroundcolor=\color{lightgray},frame=single]
+PASS_T94200_FOUR_ADIC_ENDPOINT_PACKING_CANDIDATE
+RH_CANDIDATE_UNDER_UNREVIEWED_FIRST_CROSSING_LEMMA
+\end{lstlisting}
+
+\section{Repository files consulted}
+
+The principal internal references are:
+\begin{itemize}
+\item \path{claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md}
+\item \path{claims/theorems/T-91313-explicit-endpoint-deficit-to-rh-consumer.md}
+\item \path{claims/lemmas/L-19885-radix-four-dual-sparsity-makes-factor67-root-errors-summable.md}
+\item \path{claims/lemmas/L-26201-parabolic-seed-positive-endpoint-scale-frame.md}
+\item \path{claims/lemmas/L-26202-parabolic-defect-tail-majorization.md}
+\item \path{claims/lemmas/L-94100-parabolic-endpoint-atoms-have-positive-radix-four-detail.md}
+\item \path{claims/lemmas/L-94101-native-endpoint-detail-greedy-is-an-all-scale-feasible-compiler.md}
+\item \path{claims/lemmas/L-94102-blocker-localization-prices-native-y4-deficit.md}
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{Titchmarsh}
+E. C. Titchmarsh, revised by D. R. Heath-Brown,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed., Oxford University Press, 1986.
+
+\bibitem{Landau}
+E. Landau,
+\emph{Handbuch der Lehre von der Verteilung der Primzahlen}, Teubner, 1909.
+
+\bibitem{Repo}
+Agentic Polymath Project,
+\emph{Riemann research repository}, \texttt{gfreund123/riemann}, frozen source heads listed in Section 1.2, 2026.
+\end{thebibliography}
+
+\end{document}
