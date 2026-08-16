@@ -1,0 +1,151 @@
+name: T91880 consolidated package
+
+on:
+  push:
+    branches:
+      - automation/t91880-consolidated-package-079a8030
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build and validate package
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE_SHA: 3d44cf10f8b5f36fd06a57a745550a25142e3658
+          HEAD_SHA: 079a80308a218e924d86030c4df40410df960592
+          BASE_BRANCH: research/gpt56-pro/91860-two-sorted-hall-row-successor
+          HEAD_BRANCH: research/gpt56-pro/91880-native-hybrid-two-sorted-recovery-20260816-a
+          PR_NUMBER: '524'
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$PWD"
+          PKG="$ROOT/T91880-consolidated-publication"
+          FILES="$PKG/repository-files"
+          rm -rf "$PKG"
+          mkdir -p "$FILES"
+
+          mapfile -t paths < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA")
+          test "${#paths[@]}" -eq 26
+          for path in "${paths[@]}"; do
+            mkdir -p "$FILES/$(dirname "$path")"
+            git show "$HEAD_SHA:$path" > "$FILES/$path"
+          done
+          chmod +x "$FILES/experiments/X-91880-native-hybrid-two-sorted/verify.py"
+
+          git diff --binary "$BASE_SHA" "$HEAD_SHA" > "$PKG/T91880-repository.patch"
+          gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq .body > "$PKG/PR_BODY.md"
+
+          cat > "$PKG/PUBLISH_ONE_COMMAND.sh" <<'SCRIPT'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+          REPO_DIR="${1:-.}"
+          BRANCH="${2:-research/gpt56-pro/91880-native-hybrid-two-sorted-republish-$(date -u +%Y%m%d%H%M%S)}"
+          BASE_BRANCH='research/gpt56-pro/91860-two-sorted-hall-row-successor'
+          BASE_SHA='3d44cf10f8b5f36fd06a57a745550a25142e3658'
+          cd "$REPO_DIR"
+          test -d .git
+          test -z "$(git status --porcelain)"
+          git fetch origin "$BASE_BRANCH"
+          test "$(git rev-parse "origin/$BASE_BRANCH")" = "$BASE_SHA"
+          git switch -c "$BRANCH" "$BASE_SHA"
+          git apply --index "$HERE/T91880-repository.patch"
+          git commit -m 'publish exact recovered T-91880 packet'
+          git push -u origin "$BRANCH"
+          gh pr create --draft --base "$BASE_BRANCH" --head "$BRANCH" \
+            --title 'proposal: recovered native hybrid two-sorted compiler (T-91880)' \
+            --body-file "$HERE/PR_BODY.md"
+          SCRIPT
+          chmod +x "$PKG/PUBLISH_ONE_COMMAND.sh"
+
+          {
+            echo "T-91880 consolidated package validation"
+            echo "repository=$GITHUB_REPOSITORY"
+            echo "pr=https://github.com/$GITHUB_REPOSITORY/pull/$PR_NUMBER"
+            echo "base_sha=$BASE_SHA"
+            echo "head_sha=$HEAD_SHA"
+            echo "files=${#paths[@]}"
+            echo
+            cd "$FILES/experiments/X-91880-native-hybrid-two-sorted"
+            python3 verify.py --mutations --output results/replayed-verification.json
+            cmp results/replayed-verification.json results/verification.json
+            python3 -m unittest discover -s tests -v
+            python3 -m py_compile verify.py tests/test_verify.py
+            sha256sum -c SHA256SUMS
+            cd "$FILES/standalone/2026-08-16-native-hybrid-two-sorted"
+            sha256sum -c CONTENT_SHA256SUMS
+            cd "$FILES"
+            sha256sum -c FACTOR67_91880_SHA256SUMS
+          } > "$PKG/VALIDATION.txt" 2>&1
+
+          branch_sha="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/$HEAD_BRANCH" --jq .object.sha)"
+          pr_head="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq .head.sha)"
+          pr_base="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq .base.sha)"
+          test "$branch_sha" = "$HEAD_SHA"
+          test "$pr_head" = "$HEAD_SHA"
+          test "$pr_base" = "$BASE_SHA"
+
+          jq -n \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg pr_url "https://github.com/$GITHUB_REPOSITORY/pull/$PR_NUMBER" \
+            --arg base_branch "$BASE_BRANCH" \
+            --arg base_sha "$BASE_SHA" \
+            --arg head_branch "$HEAD_BRANCH" \
+            --arg head_sha "$HEAD_SHA" \
+            --arg branch_ref_sha "$branch_sha" \
+            --arg replay_verdict 'PASS_T91880_NATIVE_HYBRID_TWO_SORTED_COMPILER' \
+            --arg proof_object_sha256 'a6e5324eddcb44e89fb5902a02d243c5c5220d5573f2dfed93c635f982b7d075' \
+            --arg theorem_sha256 '727d6d70e640c68986206d636913ebb2351de9f7a241b031416c8484f793d0dc' \
+            --arg root_ledger_blob 'b50a43a347814adcc3dc9a9c3e92c2a0f7318979' \
+            '{success:true,repository:$repository,pr_url:$pr_url,base_branch:$base_branch,base_sha:$base_sha,head_branch:$head_branch,head_sha:$head_sha,branch_ref_sha:$branch_ref_sha,repository_file_count:26,commit_count:2,replay_verdict:$replay_verdict,proof_object_sha256:$proof_object_sha256,theorem_sha256:$theorem_sha256,root_ledger_blob:$root_ledger_blob,frozen_heads:{"499":"99d3983b57f82941131caa8d9c36e4947f1179a0","506":"3d44cf10f8b5f36fd06a57a745550a25142e3658"}}' \
+            > "$PKG/REMOTE_VALIDATION.json"
+
+          cat > "$PKG/README.md" <<EOF
+          # T-91880 consolidated publication package
+
+          This archive is generated from the verified remote head \`$HEAD_SHA\` of draft PR #$PR_NUMBER.
+
+          Contents:
+
+          - \`repository-files/\`: the exact 26 add-only repository files;
+          - \`T91880-repository.patch\`: patch from frozen #506 to the final head;
+          - \`PR_BODY.md\`: exact current draft-PR body;
+          - \`VALIDATION.txt\`: replay, tests, compilation, and all checksum ledgers;
+          - \`REMOTE_VALIDATION.json\`: exact remote metadata and frozen refs;
+          - \`PUBLISH_ONE_COMMAND.sh\`: one-command publisher for a clean local clone;
+          - \`PACKAGE_SHA256SUMS\`: package-level integrity ledger.
+
+          RH remains unproved pending independent reconstruction.
+          EOF
+
+          (
+            cd "$PKG"
+            find . -type f ! -name PACKAGE_SHA256SUMS -print0 \
+              | sort -z \
+              | xargs -0 sha256sum > PACKAGE_SHA256SUMS
+          )
+          (
+            cd "$ROOT"
+            zip -X -q -r T91880-consolidated-publication.zip T91880-consolidated-publication
+          )
+          unzip -t T91880-consolidated-publication.zip
+          sha256sum T91880-consolidated-publication.zip > T91880-consolidated-publication.zip.sha256
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: t91880-consolidated-publication
+          path: |
+            T91880-consolidated-publication.zip
+            T91880-consolidated-publication.zip.sha256
+          if-no-files-found: error
+          retention-days: 30
