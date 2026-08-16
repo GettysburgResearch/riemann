@@ -1,0 +1,41 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "bcd_proved": false,
+  "first_hermite": {
+    "critical_one_carrier_imported": false,
+    "fourier_symbol_checks": 1
+  },
+  "frozen_base": "6cc0da2fa5711017e260ebdcea4ba8c22e453288",
+  "kernel": {
+    "first_nonzero_log_moment": "log(4)/36",
+    "grid_residue_checks": 512,
+    "integral_F": "0",
+    "mellin_zero_order_at_s1": 2
+  },
+  "mutations": {
+    "change_aU_strict_threshold": 5,
+    "drop_four_adic_gauge": 11,
+    "replace_scale_four_factor": 11,
+    "reverse_vaughan_sign": 8
+  },
+  "prime_shell": {
+    "large_prime_single_power_checks": 231,
+    "prime_block_reconstructions": 11,
+    "source_reorganizations": 11
+  },
+  "proof_object_sha256": "283634ae3674d2a5059c79528c1b02a37bdb7d43b8b3210fd20f3aeb2e5835dd",
+  "rh_established": false,
+  "schema": "riemann.x93300.cubic-shell-balanced-dispersion.v1",
+  "vaughan": {
+    "grouped_type_ii_checks": 8,
+    "identity_checks": 8,
+    "remaining": "balanced near-hyperbola BCD",
+    "safe_ranges": [
+      "Lambda<=N^(1/3)",
+      "mu<=N^(1/3)*log",
+      "mu<=N^(1/3)*Lambda<=N^(1/3)*1",
+      "TypeII product<=N^(3/4)"
+    ]
+  },
+  "verdict": "PASS_CUBIC_SHELL_BALANCED_DISPERSION_REDUCTION"
+}
