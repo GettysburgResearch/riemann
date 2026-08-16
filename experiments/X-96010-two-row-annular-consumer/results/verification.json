@@ -1,0 +1,117 @@
+{
+  "affine_cell_contract": "integer knots are exhaustive because coefficients are affine in log(X) on each unit cell",
+  "beta_crosscheck": {
+    "cases": [
+      {
+        "X": 8,
+        "error": 0.0,
+        "row": 2
+      },
+      {
+        "X": 8,
+        "error": 2.220446049250313e-16,
+        "row": 3
+      },
+      {
+        "X": 12,
+        "error": 0.0,
+        "row": 2
+      },
+      {
+        "X": 12,
+        "error": 2.220446049250313e-16,
+        "row": 3
+      },
+      {
+        "X": 16,
+        "error": 1.1102230246251565e-15,
+        "row": 2
+      },
+      {
+        "X": 16,
+        "error": 0.0,
+        "row": 3
+      },
+      {
+        "X": 31,
+        "error": 6.661338147750939e-16,
+        "row": 2
+      },
+      {
+        "X": 31,
+        "error": 0.0,
+        "row": 3
+      },
+      {
+        "X": 64,
+        "error": 8.881784197001252e-16,
+        "row": 2
+      },
+      {
+        "X": 64,
+        "error": 6.661338147750939e-16,
+        "row": 3
+      },
+      {
+        "X": 97,
+        "error": 5.10702591327572e-15,
+        "row": 2
+      },
+      {
+        "X": 97,
+        "error": 0.0,
+        "row": 3
+      },
+      {
+        "X": 128,
+        "error": 7.771561172376096e-15,
+        "row": 2
+      },
+      {
+        "X": 128,
+        "error": 3.552713678800501e-15,
+        "row": 3
+      }
+    ],
+    "maximum_error": 7.771561172376096e-15
+  },
+  "limit": 1000000,
+  "mutations_rejected": [
+    "identify <Y4,Omega> with J_Lambda",
+    "drop F_Lambda",
+    "omit scale factor 1-4^-s",
+    "replace rows 2 and 3 by one unproved universal kernel",
+    "treat a finite scan as RH proof"
+  ],
+  "normalization_counterexample": {
+    "F_Lambda_3": "-0.12333217242659779753081867333726780185206230834303",
+    "proved_upper_bound": "-289/5000"
+  },
+  "proof_object_sha256": "ec3eadcd7174c7dc3b742f63e1e3b28c1034b89940b46647839212dacb754325",
+  "rh_established": false,
+  "row_scans": [
+    {
+      "argmin": 3,
+      "minimum": 0.860121382433459,
+      "negative_count_below_-1e-11": 0,
+      "row": 2
+    },
+    {
+      "argmin": 4,
+      "minimum": 0.33218664394213004,
+      "negative_count_below_-1e-11": 0,
+      "row": 3
+    }
+  ],
+  "schema": "riemann.x96010.two-row-annular-consumer.v1",
+  "scientific_status": "exact consumer and finite reductions; two-row positivity remains unproved",
+  "two_row_noncancellation": {
+    "elimination_polynomial": "-3*(x-1)*(x-2)",
+    "open_strip_common_zero": false,
+    "roots": [
+      1,
+      2
+    ]
+  },
+  "verdict": "PASS_TWO_ROW_ANNULAR_CONSUMER_HARDENING_AND_SCAN"
+}
