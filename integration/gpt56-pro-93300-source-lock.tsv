@@ -1,0 +1,13 @@
+role	path_or_pr	ref	status	notes
+frozen_proposal	PR #498	6cc0da2fa5711017e260ebdcea4ba8c22e453288	FROZEN	centered cubic source, energy criterion, major-arc localization, CPBD firewall
+base_first_hermite	PR #483	87bd7ad2127f98b6141b4c03355556f2b95f6404	FROZEN	prime-block Hilbert lemma and First-Hermite tower grouping
+q4_major_arc	PR #474	0a7e95a6d22f4bed9bbfa4e04b632b2c5827b53b	FROZEN	prime diagonal and square-root major-arc localization
+first_hermite_formula	PR #392	d2387cd21eb891a8801fd122bc8d0ddd7c1c0fc4	FROZEN	comparison only; no one-carrier exclusion imported
+first_hermite_energy	PR #390	ea20af8867c3119c23efc27738d343aac2f79362	FROZEN	comparison only; V(q)=q+O(sqrt(q))
+new_spine	claims/lemmas/L-93300-pr498-centered-cubic-spine-hostile-reconstruction.md	branch head	CURRENT	hostile analytic reconstruction
+new_firewall	claims/refutations/R-93300-magnitude-only-and-rh-strength-firewall.md	branch head	CURRENT	forbids generic magnitude and hidden RH inputs
+new_shell	claims/lemmas/L-93301-cubic-scale-four-prime-shell.md	branch head	CURRENT	large-prime shell reduction
+new_moments	claims/lemmas/L-93302-scale-four-double-moment-and-discrete-cancellation.md	branch head	CURRENT	double Mellin moment and exact mod-four grids
+new_vaughan	claims/lemmas/L-93303-vaughan-closes-unbalanced-cubic-ranges.md	branch head	CURRENT	Type-I and low-product Type-II closure
+new_heat_bridge	claims/lemmas/L-93304-first-hermite-heat-wavelet-bridge.md	branch head	CURRENT	exact Calderon/First-Hermite bridge
+open_producer	claims/theorems/T-93305-balanced-cubic-dispersion-closure-candidate.md	branch head	OPEN	balanced near-hyperbola covariance; RH-equivalent
