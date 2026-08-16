@@ -1,0 +1,110 @@
+{
+  "delta_counterexample": {
+    "compact_supremum_unbounded": true,
+    "definition": "Delta(t)=1/|t-2| for t!=2; Delta(2)=0",
+    "repair": "use a tail supremum after a threshold",
+    "tail_ratio_samples": [
+      {
+        "Delta_over_t": "1/80",
+        "T": 10
+      },
+      {
+        "Delta_over_t": "1/9800",
+        "T": 100
+      },
+      {
+        "Delta_over_t": "1/998000",
+        "T": 1000
+      },
+      {
+        "Delta_over_t": "1/99980000",
+        "T": 10000
+      }
+    ],
+    "witnesses": [
+      {
+        "Delta_t": "10",
+        "M": 10,
+        "t": "21/10"
+      },
+      {
+        "Delta_t": "100",
+        "M": 100,
+        "t": "201/100"
+      },
+      {
+        "Delta_t": "1000",
+        "M": 1000,
+        "t": "2001/1000"
+      },
+      {
+        "Delta_t": "10000",
+        "M": 10000,
+        "t": "20001/10000"
+      }
+    ]
+  },
+  "endpoint_third_difference_checks": 540,
+  "fixed_order_wedge_checks": 84,
+  "frozen_heads": {
+    "pr498": "6cc0da2fa5711017e260ebdcea4ba8c22e453288",
+    "pr519": "fb15b598734546230aa51a16dda28488d214729f",
+    "pr520": "41db5f783c751e66c786f18fa7fbd6d9bf229a8d",
+    "pr523": "f2e2e96c48285f59a8df807ba49122778cb10ff4"
+  },
+  "normalization": {
+    "A1_equals_3A": true,
+    "G1_equals_3K": true,
+    "W1_equals_3F": true,
+    "grid_checks": 5141,
+    "source_checks": 43
+  },
+  "phase_lock": {
+    "D_coefficients": {
+      "-1": "-2",
+      "0": "5",
+      "1": "-2"
+    },
+    "critical_conjugated_coefficients": {
+      "-1": "-1",
+      "0": "5",
+      "1": "-4"
+    },
+    "factorization_verified": true
+  },
+  "proof_boundary": "Exact finite algebra and the arbitrary-Delta logical counterexample. Does not prove balanced Type II, analytic growing-order Hermite bounds, the terminal-pair theorem, or RH.",
+  "proof_object_sha256": "46b1e17e3e989a79fe9bd4e3d4bb3e6169672f923eb256625f7c8a6caedf0f8b",
+  "schema": "riemann.review.pr519-pr523-pr520.v1",
+  "vaughan": {
+    "records": [
+      {
+        "N": 31,
+        "grouped_checks": 31
+      },
+      {
+        "N": 48,
+        "grouped_checks": 48
+      },
+      {
+        "N": 64,
+        "grouped_checks": 64
+      },
+      {
+        "N": 81,
+        "grouped_checks": 81
+      },
+      {
+        "N": 96,
+        "grouped_checks": 96
+      }
+    ],
+    "signs": [
+      "+Lambda_small",
+      "+mu_small*log",
+      "-mu_small*Lambda_small*1",
+      "+mu_large*Lambda_large*1"
+    ],
+    "strict_divisor_cut": "d>U"
+  },
+  "verdict": "PASS_PR519_PR523_PR520_EXACT_HEAD_REVIEW_ALGEBRA"
+}
