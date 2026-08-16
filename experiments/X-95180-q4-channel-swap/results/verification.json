@@ -1,0 +1,28 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_AND_FORMAL_PRIME_LOG",
+  "channel_swap_checks": 2046,
+  "classification": "PASS_X_95180_Q4_CHANNEL_SWAP_PEANO_FLUX",
+  "coefficient_checks": 1024,
+  "does_not_prove": [
+    "critical centered-flux extraction",
+    "centered cubic square-root bound",
+    "balanced Mobius dispersion",
+    "Riemann Hypothesis"
+  ],
+  "dyadic_pair_checks": 122,
+  "energy_bound_checks": 1,
+  "finite_scale_flux_checks": 5,
+  "hostile_mutations_detected": 4,
+  "peano_positivity_and_curvature_checks": 260,
+  "principal_pole_algebra_checks": 4,
+  "proves": [
+    "finite g4/a4 coefficients and positive channels",
+    "coefficient-one channel swap through N=1024",
+    "signed reciprocal recursion through N=1024",
+    "exact 12/5 Hilbert-energy bound",
+    "dyadic shell sign pairing",
+    "piecewise Peano curvature identity",
+    "finite exact scale-four Peano difference identity"
+  ],
+  "signed_reciprocal_checks": 1023
+}
