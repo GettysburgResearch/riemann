@@ -1,0 +1,111 @@
+{
+  "base_branch": "research/gpt56-pro/91870-native-fiber-physical-coupling",
+  "base_pr": 509,
+  "base_sha": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+  "classification": "CANDIDATE_COMPLETE_LIVE_ARITHMETIC_COUPLING_REVIEW_REQUIRED",
+  "files": {
+    "README.md": "75d422d386ced85226fb7d61bd29ec5d55b11a7d3d3c43a24900cb3e5346624b",
+    "claims/lemmas/L-91880-live-native-source-space.md": "30b49c3dedef2702856699994578179f0c31b38c6c85cc2ad74dc9e1fa3d684e",
+    "claims/lemmas/L-91881-live-bulk-and-anchored-incidence-coupling.md": "f7838b666b83b6c71ef1471fce6ec049a8b57c0213451fb27792a1a7e5490d08",
+    "claims/lemmas/L-91882-one-coefficient-signature-and-single-quantizer.md": "910013c80daccda6ef7ce508b5349f9046be2f7823cb34d24c357898862052bb",
+    "claims/lemmas/L-91883-native-capacity-y4-and-consumer.md": "4b8d3944a8a54eeb48f93be32dd2d5feb4fd2865519cd3e4df6289578f567add",
+    "claims/observations/O-91880-review-order-and-route-disposition.md": "5d191e0a51f82744650f4a5bcc4ab840d01bf2a520a9d1b76a53dad6ccad4850",
+    "claims/refutations/R-91880-volterra-infinitesimal-is-not-a-causal-generator.md": "599fecf50deb06ab52bdc61bccf1272ff059d278778b6f0677bc5b49cc8a85a9",
+    "claims/theorems/T-91880-live-arithmetic-coupling-endpoint-proposal.md": "887541ad39adb526fe2fa29e00f9a20d871144ab22e66e1f9111c8d7d3efed2e",
+    "experiments/X-91880-live-arithmetic-coupling/README.md": "df14e0bedd9d6f6b39bd287e12837600f79df9602ebcf5e15272ca1fce05edcf",
+    "experiments/X-91880-live-arithmetic-coupling/native_arithmetic.py": "2aaf824b24bf7f1975624d7eecb54e76d10176aace3b06cd34e7194e4a1ca9e1",
+    "experiments/X-91880-live-arithmetic-coupling/results/verification.json": "045964810f50dfe9c49edb7228bf6da5bcffe28126c1ca6704fd509f2332da32",
+    "experiments/X-91880-live-arithmetic-coupling/tests/test_native_arithmetic.py": "f7c64493a6bf26b6871f568c6b92b83db7bea2ce2a0ed50f40025461e8a2bd84",
+    "experiments/X-91880-live-arithmetic-coupling/verify.py": "a98817e36bbb76073c76ee689ea232b1524c165adbdaa6cd7d1fbe5ba8555891",
+    "integration/2026-08-16/t91880-publication-handoff.md": "a32c74cb9ca86d8d591d4b57d5dcccf8fd3f95c717b8ba36db3f173df19c474b",
+    "reports/gpt56-pro/2026-08-16-live-arithmetic-coupling-successor.md": "50482cf4528e739e65b0fac28e213ebdc39a4605773d11cd0e42b2648147181e",
+    "standalone/2026-08-16-live-arithmetic-coupling/CLAIM_STATUS.md": "d6adfa09fca46fb94e5493ff36e4306c9fe1800a447590a635ecf3a24c7702cd",
+    "standalone/2026-08-16-live-arithmetic-coupling/PROOF.md": "f67ea0cbe0510479ee1664331e7839a8540cd702128ab5bb43ff8be531db32a4",
+    "standalone/2026-08-16-live-arithmetic-coupling/README.md": "75d422d386ced85226fb7d61bd29ec5d55b11a7d3d3c43a24900cb3e5346624b",
+    "standalone/2026-08-16-live-arithmetic-coupling/REVIEW_SPECIFICATION.md": "1c869ba248972641b1df6b9a9192b372aaea7134870fc36ee00ee401f16148e2"
+  },
+  "head_branch": "research/gpt56-pro/91880-live-arithmetic-coupling",
+  "imports": [
+    {
+      "blob": "e5417cde505f7347d618c69f2896aa6f40df092c",
+      "commit": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+      "path": "claims/lemmas/L-91870-native-hybrid-source-is-the-exact-input-marginal.md",
+      "pr": 509
+    },
+    {
+      "blob": "839a1d4b21aad2cff68cf4a722d919cd3d7fd831",
+      "commit": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+      "path": "claims/lemmas/L-91871-native-source-incidences-first-owners-and-placements-are-one-use.md",
+      "pr": 509
+    },
+    {
+      "blob": "31cffa46ea20c43549942ad2e93857faa046ec7c",
+      "commit": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+      "path": "claims/lemmas/L-91872-one-block-diagonal-label-blind-quantizer-realizes-the-complete-fiber.md",
+      "pr": 509
+    },
+    {
+      "blob": "f7e34e4d8292ef6f5866bd2d068fe2c59d19f5aa",
+      "commit": "e01daee9cdfea35d2a7d2591f1df6c8080084119",
+      "path": "claims/lemmas/L-91873-native-small-q-detail-y4-and-endpoint-consumer-are-one-chain.md",
+      "pr": 509
+    },
+    {
+      "blob": "cd019ef583dbff2ae79ea75268ba011d6b5523a6",
+      "commit": "ab5bd0ffc7a8092d62e879431dbd9f295f79f072",
+      "path": "reports/integration-wave/20260815-pr499-pr500-native-source-repair-comparison.md",
+      "pr": 501
+    },
+    {
+      "blob": "885b3305421d8aa277a3b7c644b3c32b5d6933ed",
+      "commit": "db77e5792966edf080604fd4b69fb00f07739681",
+      "path": "experiments/reviews/X-PR495-volterra-causal-counterexample/verify.py",
+      "pr": 503
+    },
+    {
+      "blob": "7c9a5cbee4f96aa7e208789cfc43130adc867f2e",
+      "commit": "1113fe6d55e955a8d9de7b43ceb24f5792870550",
+      "path": "claims/lemmas/L-92920-paired-stopping-line-native-rough-bifurcation.md",
+      "pr": 505
+    },
+    {
+      "blob": "602c19de5e82b42c452ad06db4f6aa17211f72c2",
+      "commit": "3d44cf10f8b5f36fd06a57a745550a25142e3658",
+      "path": "claims/lemmas/L-91860-two-sorted-hall-fibre.md",
+      "pr": 506
+    },
+    {
+      "blob": "4ddef8f256b2f24da06eb849f721b8d4853566e4",
+      "commit": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+      "path": "claims/lemmas/L-93783-target-lorenz-has-an-explicit-typed-leaf-marginal-and-current-only-row-bonus.md",
+      "pr": 508
+    },
+    {
+      "blob": "27663d8fa4378743372a04ea60be52d8d3b5c92d",
+      "commit": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+      "path": "claims/lemmas/L-93784-the-explicit-typed-leaves-compile-to-one-native-feasible-common-parent.md",
+      "pr": 508
+    },
+    {
+      "blob": "10de1bb7d0103fb856b3d76c981f2cf012598e9e",
+      "commit": "bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74",
+      "path": "claims/lemmas/L-93602-complete-arithmetic-vector-lorenz-theorem.md",
+      "pr": 497
+    },
+    {
+      "blob": "809b950e9b8d05db8fd688bd6d358046dc2c33da",
+      "commit": "9acd381fa168db02a03646ab16851daebbf4d0fd",
+      "path": "claims/lemmas/L-91362-p61-stopping-line-is-finite-forcing-plus-actual-rough-child-packets.md",
+      "pr": 488
+    },
+    {
+      "blob": "64a05d49643d461febd164b173b7896bcf3516aa",
+      "commit": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+      "path": "imports/t91850/frozen/claims/lemmas/L-91377-full-mobius-row-has-the-exact-native-capacity-and-benchmark.md",
+      "pr": 500
+    }
+  ],
+  "repository": "gfreund123/riemann",
+  "rh_status": "unproved",
+  "validation_proof_object": "a94ca77c01333e095ccb175fb0dca534e9292c3580299c243d346063acf63a35"
+}
