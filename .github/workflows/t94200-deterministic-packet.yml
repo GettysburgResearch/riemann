@@ -1,0 +1,123 @@
+name: T94200 deterministic publication packet
+
+on:
+  push:
+    branches:
+      - research/gpt56-pro/94200-prime-sieved-parabolic-spline
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-packet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact branch head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build deterministic ZIP and checksum
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from __future__ import annotations
+
+          import hashlib
+          import json
+          import os
+          import pathlib
+          import zipfile
+
+          repo = pathlib.Path.cwd()
+          dist = repo / "dist"
+          staging = repo / ".packet-staging" / "t94200-prime-sieved-parabolic-spline"
+          dist.mkdir(parents=True, exist_ok=True)
+          staging.mkdir(parents=True, exist_ok=True)
+
+          files = [
+              "claims/lemmas/L-94200-initial-prime-euler-sieving-preserves-parabolic-row-positivity.md",
+              "claims/lemmas/L-94201-full-native-mobius-component-row-is-nonnegative.md",
+              "claims/lemmas/L-94202-positive-full-row-saturates-native-capacity-with-zero-deficit.md",
+              "claims/theorems/T-94200-prime-sieved-parabolic-spline-rh-closure.md",
+              "claims/refutations/R-94200-noninteger-shifts-are-not-the-prime-sieve-proof.md",
+          ]
+
+          for rel in files:
+              src = repo / rel
+              if not src.is_file():
+                  raise FileNotFoundError(rel)
+              dst = staging / rel
+              dst.parent.mkdir(parents=True, exist_ok=True)
+              dst.write_bytes(src.read_bytes())
+
+          metadata = {
+              "schema": "riemann.t94200.publication-packet.v1",
+              "repository": "gfreund123/riemann",
+              "base_branch": "main",
+              "base_sha": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+              "head_branch": "research/gpt56-pro/94200-prime-sieved-parabolic-spline",
+              "head_sha": os.environ["GITHUB_SHA"],
+              "pull_request": 537,
+              "status": "PROPOSED COMPLETE UNCONDITIONAL RH CANDIDATE; RH NOT TREATED AS ESTABLISHED",
+              "load_bearing_boundary": "FRONTIER-CHAIN divisor-cube decomposition and reservoir capacity in L-94200",
+              "files": files,
+          }
+          (staging / "PUBLICATION_METADATA.json").write_text(
+              json.dumps(metadata, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+
+          readme = f"""# T-94200 deterministic publication packet
+
+This archive mirrors the exact proof-bearing files proposed in GitHub draft PR #537.
+
+- Repository: `gfreund123/riemann`
+- Branch: `research/gpt56-pro/94200-prime-sieved-parabolic-spline`
+- Head SHA: `{metadata['head_sha']}`
+- Frozen base: `main@{metadata['base_sha']}`
+- Status: proposed complete unconditional RH candidate; RH is not treated as established before independent reconstruction.
+
+The smallest load-bearing statement is the `FRONTIER-CHAIN` divisor-cube decomposition and reservoir-capacity argument in `L-94200`.
+
+The archive is deterministic: paths are sorted, timestamps are fixed to 1980-01-01, and permissions are normalized.
+"""
+          (staging / "README.md").write_text(readme, encoding="utf-8")
+
+          manifest_lines = []
+          for path in sorted(p for p in staging.rglob("*") if p.is_file()):
+              rel = path.relative_to(staging).as_posix()
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              manifest_lines.append(f"{digest}  {rel}")
+          (staging / "SHA256SUMS").write_text("\n".join(manifest_lines) + "\n", encoding="utf-8")
+
+          zip_path = dist / "riemann-t94200-prime-sieved-parabolic-spline.zip"
+          epoch = (1980, 1, 1, 0, 0, 0)
+          with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+              for path in sorted(p for p in staging.rglob("*") if p.is_file()):
+                  rel = pathlib.PurePosixPath("t94200-prime-sieved-parabolic-spline") / path.relative_to(staging).as_posix()
+                  info = zipfile.ZipInfo(rel.as_posix(), date_time=epoch)
+                  info.compress_type = zipfile.ZIP_DEFLATED
+                  info.create_system = 3
+                  info.external_attr = (0o100644 & 0xFFFF) << 16
+                  zf.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+
+          zip_digest = hashlib.sha256(zip_path.read_bytes()).hexdigest()
+          (dist / "riemann-t94200-prime-sieved-parabolic-spline.zip.sha256").write_text(
+              f"{zip_digest}  {zip_path.name}\n",
+              encoding="utf-8",
+          )
+          print(f"ZIP_SHA256={zip_digest}")
+          PY
+
+      - name: Upload Drive-ready artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: t94200-prime-sieved-parabolic-spline-packet
+          path: |
+            dist/riemann-t94200-prime-sieved-parabolic-spline.zip
+            dist/riemann-t94200-prime-sieved-parabolic-spline.zip.sha256
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 90
