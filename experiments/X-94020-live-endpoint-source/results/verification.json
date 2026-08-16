@@ -1,0 +1,1206 @@
+{
+  "actual_terminal_leaf": {
+    "active_p61_atoms": 229,
+    "atom_formula": "mu(d)/sqrt(d)*(Q_(py/d)-p^(-1/2)Q_(y/d))",
+    "child_active_atoms": 9,
+    "divisor_registry_sha256": "8ad7313111d71ffb01ea275ba473a6101d975c231e42a65396d427b307b4adff",
+    "owner": 67,
+    "p": 67,
+    "preview": [
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(1)/sqrt(1)",
+        "d": 1,
+        "mu": 1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "even",
+        "path_coefficient": "1/sqrt(1)",
+        "row_formula": "mu(1)/sqrt(1)*(Q_(871/1)-1/sqrt(67)*Q_(13/1))",
+        "score_formula": "mu(1)/sqrt(1)*(S(871/1)-1/sqrt(67)*S(13/1))",
+        "target_formula": "mu(1)/sqrt(1)*(T(871/1)-1/sqrt(67)*T(13/1))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(2)/sqrt(2)",
+        "d": 2,
+        "mu": -1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(2)",
+        "row_formula": "mu(2)/sqrt(2)*(Q_(871/2)-1/sqrt(67)*Q_(13/2))",
+        "score_formula": "mu(2)/sqrt(2)*(S(871/2)-1/sqrt(67)*S(13/2))",
+        "target_formula": "mu(2)/sqrt(2)*(T(871/2)-1/sqrt(67)*T(13/2))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(3)/sqrt(3)",
+        "d": 3,
+        "mu": -1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(3)",
+        "row_formula": "mu(3)/sqrt(3)*(Q_(871/3)-1/sqrt(67)*Q_(13/3))",
+        "score_formula": "mu(3)/sqrt(3)*(S(871/3)-1/sqrt(67)*S(13/3))",
+        "target_formula": "mu(3)/sqrt(3)*(T(871/3)-1/sqrt(67)*T(13/3))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(5)/sqrt(5)",
+        "d": 5,
+        "mu": -1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(5)",
+        "row_formula": "mu(5)/sqrt(5)*(Q_(871/5)-1/sqrt(67)*Q_(13/5))",
+        "score_formula": "mu(5)/sqrt(5)*(S(871/5)-1/sqrt(67)*S(13/5))",
+        "target_formula": "mu(5)/sqrt(5)*(T(871/5)-1/sqrt(67)*T(13/5))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(6)/sqrt(6)",
+        "d": 6,
+        "mu": 1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "even",
+        "path_coefficient": "1/sqrt(6)",
+        "row_formula": "mu(6)/sqrt(6)*(Q_(871/6)-1/sqrt(67)*Q_(13/6))",
+        "score_formula": "mu(6)/sqrt(6)*(S(871/6)-1/sqrt(67)*S(13/6))",
+        "target_formula": "mu(6)/sqrt(6)*(T(871/6)-1/sqrt(67)*T(13/6))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(7)/sqrt(7)",
+        "d": 7,
+        "mu": -1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(7)",
+        "row_formula": "mu(7)/sqrt(7)*(Q_(871/7)-1/sqrt(67)*Q_(13/7))",
+        "score_formula": "mu(7)/sqrt(7)*(S(871/7)-1/sqrt(67)*S(13/7))",
+        "target_formula": "mu(7)/sqrt(7)*(T(871/7)-1/sqrt(67)*T(13/7))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(10)/sqrt(10)",
+        "d": 10,
+        "mu": 1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "even",
+        "path_coefficient": "1/sqrt(10)",
+        "row_formula": "mu(10)/sqrt(10)*(Q_(871/10)-1/sqrt(67)*Q_(13/10))",
+        "score_formula": "mu(10)/sqrt(10)*(S(871/10)-1/sqrt(67)*S(13/10))",
+        "target_formula": "mu(10)/sqrt(10)*(T(871/10)-1/sqrt(67)*T(13/10))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(11)/sqrt(11)",
+        "d": 11,
+        "mu": -1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(11)",
+        "row_formula": "mu(11)/sqrt(11)*(Q_(871/11)-1/sqrt(67)*Q_(13/11))",
+        "score_formula": "mu(11)/sqrt(11)*(S(871/11)-1/sqrt(67)*S(13/11))",
+        "target_formula": "mu(11)/sqrt(11)*(T(871/11)-1/sqrt(67)*T(13/11))"
+      },
+      {
+        "child_active": true,
+        "common_causal_scalar": "mu(13)/sqrt(13)",
+        "d": 13,
+        "mu": -1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(13)",
+        "row_formula": "mu(13)/sqrt(13)*(Q_(871/13)-1/sqrt(67)*Q_(13/13))",
+        "score_formula": "mu(13)/sqrt(13)*(S(871/13)-1/sqrt(67)*S(13/13))",
+        "target_formula": "mu(13)/sqrt(13)*(T(871/13)-1/sqrt(67)*T(13/13))"
+      },
+      {
+        "child_active": false,
+        "common_causal_scalar": "mu(14)/sqrt(14)",
+        "d": 14,
+        "mu": 1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "even",
+        "path_coefficient": "1/sqrt(14)",
+        "row_formula": "mu(14)/sqrt(14)*(Q_(871/14)-1/sqrt(67)*Q_(13/14))",
+        "score_formula": "mu(14)/sqrt(14)*(S(871/14)-1/sqrt(67)*S(13/14))",
+        "target_formula": "mu(14)/sqrt(14)*(T(871/14)-1/sqrt(67)*T(13/14))"
+      },
+      {
+        "child_active": false,
+        "common_causal_scalar": "mu(15)/sqrt(15)",
+        "d": 15,
+        "mu": 1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "even",
+        "path_coefficient": "1/sqrt(15)",
+        "row_formula": "mu(15)/sqrt(15)*(Q_(871/15)-1/sqrt(67)*Q_(13/15))",
+        "score_formula": "mu(15)/sqrt(15)*(S(871/15)-1/sqrt(67)*S(13/15))",
+        "target_formula": "mu(15)/sqrt(15)*(T(871/15)-1/sqrt(67)*T(13/15))"
+      },
+      {
+        "child_active": false,
+        "common_causal_scalar": "mu(17)/sqrt(17)",
+        "d": 17,
+        "mu": -1,
+        "ordinary_contract": "apply the same causal scalar to ordinary q and ordinary 4q before detail",
+        "owner": 67,
+        "parent_active": true,
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(17)",
+        "row_formula": "mu(17)/sqrt(17)*(Q_(871/17)-1/sqrt(67)*Q_(13/17))",
+        "score_formula": "mu(17)/sqrt(17)*(S(871/17)-1/sqrt(67)*S(13/17))",
+        "target_formula": "mu(17)/sqrt(17)*(T(871/17)-1/sqrt(67)*T(13/17))"
+      }
+    ],
+    "root_parameter_formula": "x=p*y",
+    "target_formula": "mu(d)/sqrt(d)*(T(py/d)-p^(-1/2)T(y/d))",
+    "x": 871,
+    "y": 13
+  },
+  "certificate_file_sha256": {
+    "causal_weights_871.json": "ed60a0d964990006f0687504e391c40243f6c8bb5d42e968696c9571e9767d67",
+    "finite_endpoint_registry_536.json": "3c4bfa659eb4a498cac3dadfeafd44f04560a0b780043f3a88fc49f0cd2c4a74",
+    "native_source_registry_536.json": "cb2b17769c292858ef11420170b44e5278eac7e9b7a92d184a5b87fdcd5de894",
+    "outer_two_channel_cells.json": "916db11bda318ac43c15d10e86ee186bada5a34416086f47b57b33937e6bba8f",
+    "terminal_leaf_67_13.json": "f81dfd59ac546ac4761b9695327572527f20e48d99ed69c968963ba5f7e2df6d"
+  },
+  "classification": "PASS_LIVE_ENDPOINT_SOURCE_TREE_AND_JOINT_CANCELLATION_GATE",
+  "finite_endpoint_registry": {
+    "X": 536,
+    "anchored_adapter_exact_witness": {
+      "X": 536,
+      "conclusion": "no atomwise coefficient-preserving identification",
+      "endpoint_cell": 8,
+      "finite_log_coefficient": 0,
+      "k": 67,
+      "paired_E_coefficient": "1/sqrt(67)",
+      "root_parameter": 67,
+      "sharp_T_coefficient": "1/sqrt(67)"
+    },
+    "examples": [
+      {
+        "common_coordinate_scalar": "mu(1)/sqrt(1)*log(536/1)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(1)/sqrt(1)*log(536/1)",
+        "first_owner": "root",
+        "k": 1,
+        "mu": 1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 1,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(2)/sqrt(2)*log(536/2)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(2)/sqrt(2)*log(536/2)",
+        "first_owner": "root",
+        "k": 2,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 2,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(3)/sqrt(3)*log(536/3)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(3)/sqrt(3)*log(536/3)",
+        "first_owner": "root",
+        "k": 3,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 3,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(5)/sqrt(5)*log(536/5)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(5)/sqrt(5)*log(536/5)",
+        "first_owner": "root",
+        "k": 5,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 5,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(6)/sqrt(6)*log(536/6)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(6)/sqrt(6)*log(536/6)",
+        "first_owner": "root",
+        "k": 6,
+        "mu": 1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 6,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(7)/sqrt(7)*log(536/7)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(7)/sqrt(7)*log(536/7)",
+        "first_owner": "root",
+        "k": 7,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 7,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(10)/sqrt(10)*log(536/10)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(10)/sqrt(10)*log(536/10)",
+        "first_owner": "root",
+        "k": 10,
+        "mu": 1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 10,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(11)/sqrt(11)*log(536/11)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(11)/sqrt(11)*log(536/11)",
+        "first_owner": "root",
+        "k": 11,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 11,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(13)/sqrt(13)*log(536/13)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(13)/sqrt(13)*log(536/13)",
+        "first_owner": "root",
+        "k": 13,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 13,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(14)/sqrt(14)*log(536/14)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(14)/sqrt(14)*log(536/14)",
+        "first_owner": "root",
+        "k": 14,
+        "mu": 1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 14,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(15)/sqrt(15)*log(536/15)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(15)/sqrt(15)*log(536/15)",
+        "first_owner": "root",
+        "k": 15,
+        "mu": 1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 15,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(17)/sqrt(17)*log(536/17)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(17)/sqrt(17)*log(536/17)",
+        "first_owner": "root",
+        "k": 17,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 17,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(19)/sqrt(19)*log(536/19)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(19)/sqrt(19)*log(536/19)",
+        "first_owner": "root",
+        "k": 19,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 19,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(21)/sqrt(21)*log(536/21)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(21)/sqrt(21)*log(536/21)",
+        "first_owner": "root",
+        "k": 21,
+        "mu": 1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 21,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(22)/sqrt(22)*log(536/22)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(22)/sqrt(22)*log(536/22)",
+        "first_owner": "root",
+        "k": 22,
+        "mu": 1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 22,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(23)/sqrt(23)*log(536/23)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 1,
+        "finite_coefficient": "mu(23)/sqrt(23)*log(536/23)",
+        "first_owner": "root",
+        "k": 23,
+        "mu": -1,
+        "root_parameter": "536/1",
+        "root_parameter_decimal": 536.0,
+        "rough_history": [],
+        "small_divisor": 23,
+        "zero_boundary": false
+      },
+      {
+        "common_coordinate_scalar": "mu(67)/sqrt(536)*log(536/536)",
+        "coordinate_contract": [
+          "source incidence",
+          "component-row occurrence",
+          "ordinary q occurrence",
+          "ordinary 4q occurrence",
+          "boundary occurrence",
+          "literal-score occurrence"
+        ],
+        "endpoint_cell": 8,
+        "finite_coefficient": "mu(67)/sqrt(536)*log(536/536)",
+        "first_owner": "67",
+        "k": 67,
+        "mu": -1,
+        "root_parameter": "536/8",
+        "root_parameter_decimal": 67.0,
+        "rough_history": [
+          67
+        ],
+        "small_divisor": 1,
+        "zero_boundary": true
+      }
+    ],
+    "finite_endpoint_occurrences": 2473,
+    "first_owner_counts": {
+      "101": 9,
+      "103": 9,
+      "107": 9,
+      "109": 7,
+      "113": 7,
+      "127": 7,
+      "131": 7,
+      "137": 5,
+      "139": 5,
+      "149": 5,
+      "151": 5,
+      "157": 5,
+      "163": 5,
+      "167": 5,
+      "173": 5,
+      "179": 3,
+      "181": 3,
+      "191": 3,
+      "193": 3,
+      "197": 3,
+      "199": 3,
+      "211": 3,
+      "223": 3,
+      "227": 3,
+      "229": 3,
+      "233": 3,
+      "239": 3,
+      "241": 3,
+      "251": 3,
+      "257": 3,
+      "263": 3,
+      "269": 1,
+      "271": 1,
+      "277": 1,
+      "281": 1,
+      "283": 1,
+      "293": 1,
+      "307": 1,
+      "311": 1,
+      "313": 1,
+      "317": 1,
+      "331": 1,
+      "337": 1,
+      "347": 1,
+      "349": 1,
+      "353": 1,
+      "359": 1,
+      "367": 1,
+      "373": 1,
+      "379": 1,
+      "383": 1,
+      "389": 1,
+      "397": 1,
+      "401": 1,
+      "409": 1,
+      "419": 1,
+      "421": 1,
+      "431": 1,
+      "433": 1,
+      "439": 1,
+      "443": 1,
+      "449": 1,
+      "457": 1,
+      "461": 1,
+      "463": 1,
+      "467": 1,
+      "479": 1,
+      "487": 1,
+      "491": 1,
+      "499": 1,
+      "503": 1,
+      "509": 1,
+      "521": 1,
+      "523": 1,
+      "67": 17,
+      "71": 15,
+      "73": 15,
+      "79": 13,
+      "83": 13,
+      "89": 13,
+      "97": 9,
+      "root": 2192
+    },
+    "registry_sha256": "669f1ff2a1a08935d7fc96e860a6edca7335553a37f365ce6e40faf469059c3f",
+    "zero_boundary_occurrences": 4
+  },
+  "finite_forcing_causal_allocation": {
+    "X": 871,
+    "beta_sum": "1.0000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "exact_formulas": {
+      "beta_p": "lambda_p/(1-s)",
+      "gamma_p": "p^(-1/2)*beta_p",
+      "lambda_p": "p^(-1/2)*product_(q<p)(1-q^(-1/2))",
+      "s": "product_p(1-p^(-1/2))"
+    },
+    "first_prime": 67,
+    "gamma_sum": "0.10131969134610859181081435323119243217258678463430851265237462202193831604733390",
+    "gamma_upper": "1/sqrt(67)<1/8",
+    "last_prime": 863,
+    "preview": [
+      {
+        "alpha_decimal": "0.014925373134328358208955223880597014925373134328358208955223880597014925373134328",
+        "beta_decimal": "0.12223306010215053305426527971682107240658078506150727447099142047860776080359138",
+        "beta_formula": "p^(-1/2)*prod_(q<67)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/67",
+        "gamma_decimal": "0.014933145034650591618034744698518595617636265605745031427098781743307558963748083",
+        "gamma_formula": "p^(-1/2)*beta_67",
+        "lambda_decimal": "0.12216944435630522343214483171244670834149980321638865616517485377199503902180743",
+        "owner": 67,
+        "p": 67,
+        "prefix_survival_product_decimal": "1",
+        "r": "1/sqrt(67)"
+      },
+      {
+        "alpha_decimal": "0.012363810642868940515040213637852863262795777419487483715983452763774717760256232",
+        "beta_decimal": "0.10423356822060805968023302720104258666697532640834102836504594446560983694858784",
+        "beta_formula": "p^(-1/2)*prod_(q<71)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/71",
+        "gamma_decimal": "0.012370248693231536695127642465970772309507732542583237058375027553845051968556762",
+        "gamma_formula": "p^(-1/2)*beta_71",
+        "lambda_decimal": "0.10417932024400557190395277057062669387510095303420593778333705696008514183964680",
+        "owner": 71,
+        "p": 71,
+        "prefix_survival_product_decimal": "0.87783055564369477656785516828755329165850019678361134383482514622800496097819257",
+        "r": "1/sqrt(71)"
+      },
+      {
+        "alpha_decimal": "0.010597962128762865817313731475574336955936975941772676795225864236546846837514326",
+        "beta_decimal": "0.090596178568278932242946434000364736925607814877988271365589796705315281766395039",
+        "beta_formula": "p^(-1/2)*prod_(q<73)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/73",
+        "gamma_decimal": "0.010603480671216863639367528601135373250795529919384504147665493313114915792040307",
+        "gamma_formula": "p^(-1/2)*beta_73",
+        "lambda_decimal": "0.090549028120883281051866580567555497094458119963172173519875998881084600369295052",
+        "owner": 73,
+        "p": 73,
+        "prefix_survival_product_decimal": "0.77365123539968920466390239771692659778339924374940540605148808926791981913854577",
+        "r": "1/sqrt(73)"
+      },
+      {
+        "alpha_decimal": "0.0086468633832760243495194407234097607682144446048890282598938239289472812502436798",
+        "beta_decimal": "0.076895022581759633631172200588123846771204445917421700214393132120690717897702257",
+        "beta_formula": "p^(-1/2)*prod_(q<79)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/79",
+        "gamma_decimal": "0.0086513659548171153598845968845888292453476692308491206508100153816718173550955357",
+        "gamma_formula": "p^(-1/2)*beta_79",
+        "lambda_decimal": "0.076855002850524544465380623102607055462958856847194257665667905098352044193446713",
+        "owner": 79,
+        "p": 79,
+        "prefix_survival_product_decimal": "0.68310220727880592361203581714937110068894112378623323253161209038683521876925072",
+        "r": "1/sqrt(79)"
+      },
+      {
+        "alpha_decimal": "0.0073041831858829081824898216150212535569395453848076984923607733167287129466964337",
+        "beta_decimal": "0.066578926521932246133930805015768937910713409778611200504404442980443184322745634",
+        "beta_formula": "p^(-1/2)*prod_(q<83)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/83",
+        "gamma_decimal": "0.0073079866005878612024061560637878754651959207628874557975855190726672632910222297",
+        "gamma_formula": "p^(-1/2)*beta_83",
+        "lambda_decimal": "0.066544275764888830935178075608967592440507705918480659444735635459439254321022579",
+        "owner": 83,
+        "p": 83,
+        "prefix_survival_product_decimal": "0.60624720442828137914665519404676404522598226693903897486594418528848317457580401",
+        "r": "1/sqrt(83)"
+      },
+      {
+        "alpha_decimal": "0.0060640778501504780697918777352561399189379164159613293867551522452701564073570944",
+        "beta_decimal": "0.057238185424390812128845050334379573274630908510447058106497489417991595114981483",
+        "beta_formula": "p^(-1/2)*prod_(q<89)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/89",
+        "gamma_decimal": "0.0060672355205265194793907881829058957943881799274275014684853217983251648183381957",
+        "gamma_formula": "p^(-1/2)*beta_89",
+        "lambda_decimal": "0.057208396021641983389660067196841803024125753951575335650838876892393265140501898",
+        "owner": 89,
+        "p": 89,
+        "prefix_survival_product_decimal": "0.53970292866339254821147711843779645278547456102055831542120854982904392025478143",
+        "r": "1/sqrt(89)"
+      },
+      {
+        "alpha_decimal": "0.0049741704396056759259981139303191201006324619285462162862924708550170170630338098",
+        "beta_decimal": "0.049015407229702577000690670098394424901142059479612676638360725240538471259792396",
+        "beta_formula": "p^(-1/2)*prod_(q<97)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/97",
+        "gamma_decimal": "0.0049767605763141177478034546179819087878960526291814492019453211405458564300733812",
+        "gamma_formula": "p^(-1/2)*beta_97",
+        "lambda_decimal": "0.048989897341573921281384929838772955166269056963936784109221403211229086591562916",
+        "owner": 97,
+        "p": 97,
+        "prefix_survival_product_decimal": "0.48249453264175056482181705124095464976134880706898297977036967293665065511427953",
+        "r": "1/sqrt(97)"
+      },
+      {
+        "alpha_decimal": "0.0042921251019819469657468526871503138078720767337133286699123591061922927576506599",
+        "beta_decimal": "0.043157784735289261574188634685508479453337699324785827677379949290805787125612593",
+        "beta_formula": "p^(-1/2)*prod_(q<101)(1-q^(-1/2))/(1-s)",
+        "child_parameter": "871/101",
+        "gamma_decimal": "0.0042943600858689786587746973054044626487601489658513653064389646078456396282903525",
+        "gamma_formula": "p^(-1/2)*beta_101",
+        "lambda_decimal": "0.043135323425209383756567704417924355119120706763088816207692808748544162589300179",
+        "owner": 101,
+        "p": 101,
+        "prefix_survival_product_decimal": "0.43350463530017664354043212140218169459507975010504619566114826972542156852271661",
+        "r": "1/sqrt(101)"
+      }
+    ],
+    "registry_sha256": "add22f5ae8e802d2e5e1cbf2563377b16516cd26e8b2cbda55c00ad58a455df0",
+    "scope": "allocates the P61 finite-forcing parent; does not cancel the actual oriented rough-child marginal",
+    "survival_decimal": "0.00052044631617784708569639209599269595378721927206068398993268643748398645894008497",
+    "terminal_prime_count": 132
+  },
+  "frozen_base": {
+    "head": "4ae97dffd1f76ed3244b8f3028560ffa80663caf",
+    "pr": 508
+  },
+  "generator_sha256": "ed758bf72b5a93eb14470de1af8199a2fa13bb8ba24ce9972633ee88803e1f58",
+  "joint_gate_status": "OPEN: finite forcing and oriented rough children must be coupled before positive physical realization",
+  "mutation_checks": {
+    "child_mass_not_subcritical": true,
+    "declare_child_nonnegative": true,
+    "drop_orientation": true,
+    "duplicate_owner": true,
+    "erase_common_q4_contract": true,
+    "identify_log_with_paired_atom": true,
+    "lose_parent_allocation": true,
+    "omit_p61_leaf": true,
+    "promote_to_rh": true
+  },
+  "native_source_registry": {
+    "X": 536,
+    "actual_rough_child_atoms": 160,
+    "atoms_preview": [
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "5/1"
+        },
+        "first_owner": "root",
+        "k": 1,
+        "mu": 1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "-1",
+          "sqrt_X_coefficient": "2/1"
+        },
+        "parity": "even",
+        "path_coefficient": "1/sqrt(1)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "4/1"
+        },
+        "small_divisor": 1
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-5/2"
+        },
+        "first_owner": "root",
+        "k": 2,
+        "mu": -1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "1",
+          "sqrt_X_coefficient": "-2/2"
+        },
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(2)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-4/2"
+        },
+        "small_divisor": 2
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-5/3"
+        },
+        "first_owner": "root",
+        "k": 3,
+        "mu": -1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "1",
+          "sqrt_X_coefficient": "-2/3"
+        },
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(3)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-4/3"
+        },
+        "small_divisor": 3
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-5/5"
+        },
+        "first_owner": "root",
+        "k": 5,
+        "mu": -1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "1",
+          "sqrt_X_coefficient": "-2/5"
+        },
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(5)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-4/5"
+        },
+        "small_divisor": 5
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "5/6"
+        },
+        "first_owner": "root",
+        "k": 6,
+        "mu": 1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "-1",
+          "sqrt_X_coefficient": "2/6"
+        },
+        "parity": "even",
+        "path_coefficient": "1/sqrt(6)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "4/6"
+        },
+        "small_divisor": 6
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-5/7"
+        },
+        "first_owner": "root",
+        "k": 7,
+        "mu": -1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "1",
+          "sqrt_X_coefficient": "-2/7"
+        },
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(7)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-4/7"
+        },
+        "small_divisor": 7
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "5/10"
+        },
+        "first_owner": "root",
+        "k": 10,
+        "mu": 1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "-1",
+          "sqrt_X_coefficient": "2/10"
+        },
+        "parity": "even",
+        "path_coefficient": "1/sqrt(10)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "4/10"
+        },
+        "small_divisor": 10
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-5/11"
+        },
+        "first_owner": "root",
+        "k": 11,
+        "mu": -1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "1",
+          "sqrt_X_coefficient": "-2/11"
+        },
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(11)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-4/11"
+        },
+        "small_divisor": 11
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-5/13"
+        },
+        "first_owner": "root",
+        "k": 13,
+        "mu": -1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "1",
+          "sqrt_X_coefficient": "-2/13"
+        },
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(13)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-4/13"
+        },
+        "small_divisor": 13
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "5/14"
+        },
+        "first_owner": "root",
+        "k": 14,
+        "mu": 1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "-1",
+          "sqrt_X_coefficient": "2/14"
+        },
+        "parity": "even",
+        "path_coefficient": "1/sqrt(14)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "4/14"
+        },
+        "small_divisor": 14
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "5/15"
+        },
+        "first_owner": "root",
+        "k": 15,
+        "mu": 1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "-1",
+          "sqrt_X_coefficient": "2/15"
+        },
+        "parity": "even",
+        "path_coefficient": "1/sqrt(15)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "-3",
+          "sqrt_X_coefficient": "4/15"
+        },
+        "small_divisor": 15
+      },
+      {
+        "declared_score_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(5*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-5/17"
+        },
+        "first_owner": "root",
+        "k": 17,
+        "mu": -1,
+        "paired_equality_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(2*sqrt(X/k)-1)",
+          "inverse_sqrt_k_coefficient": "1",
+          "sqrt_X_coefficient": "-2/17"
+        },
+        "parity": "odd",
+        "path_coefficient": "1/sqrt(17)",
+        "rough_history": [],
+        "single_sharp_target_coefficient": {
+          "formula": "mu(k)/sqrt(k)*(4*sqrt(X/k)-3)",
+          "inverse_sqrt_k_coefficient": "3",
+          "sqrt_X_coefficient": "-4/17"
+        },
+        "small_divisor": 17
+      }
+    ],
+    "finite_forcing_atoms": 167,
+    "first_owner_counts": {
+      "101": 4,
+      "103": 4,
+      "107": 4,
+      "109": 3,
+      "113": 3,
+      "127": 3,
+      "131": 3,
+      "137": 3,
+      "139": 3,
+      "149": 3,
+      "151": 3,
+      "157": 3,
+      "163": 3,
+      "167": 3,
+      "173": 3,
+      "179": 2,
+      "181": 2,
+      "191": 2,
+      "193": 2,
+      "197": 2,
+      "199": 2,
+      "211": 2,
+      "223": 2,
+      "227": 2,
+      "229": 2,
+      "233": 2,
+      "239": 2,
+      "241": 2,
+      "251": 2,
+      "257": 2,
+      "263": 2,
+      "269": 1,
+      "271": 1,
+      "277": 1,
+      "281": 1,
+      "283": 1,
+      "293": 1,
+      "307": 1,
+      "311": 1,
+      "313": 1,
+      "317": 1,
+      "331": 1,
+      "337": 1,
+      "347": 1,
+      "349": 1,
+      "353": 1,
+      "359": 1,
+      "367": 1,
+      "373": 1,
+      "379": 1,
+      "383": 1,
+      "389": 1,
+      "397": 1,
+      "401": 1,
+      "409": 1,
+      "419": 1,
+      "421": 1,
+      "431": 1,
+      "433": 1,
+      "439": 1,
+      "443": 1,
+      "449": 1,
+      "457": 1,
+      "461": 1,
+      "463": 1,
+      "467": 1,
+      "479": 1,
+      "487": 1,
+      "491": 1,
+      "499": 1,
+      "503": 1,
+      "509": 1,
+      "521": 1,
+      "523": 1,
+      "67": 6,
+      "71": 6,
+      "73": 6,
+      "79": 5,
+      "83": 5,
+      "89": 5,
+      "97": 4,
+      "root": 167
+    },
+    "registry_sha256": "a45d6040afcf2c3e57ec5341b65fded4fbe7ee1ae38ab9aca8d4e217f808f17a",
+    "squarefree_source_atoms": 327
+  },
+  "outer_two_channel_certificate": {
+    "E_global_lower_decimal": 0.3186174007676585,
+    "E_global_lower_fraction": "4630584207384654133102743078020597591058755517251097659475149609/14533368850000000000000000000000000000000000000000000000000000000",
+    "E_min_cell": 32,
+    "R_global_lower_decimal": 0.0,
+    "R_global_lower_fraction": "0",
+    "R_min_cell": 1,
+    "cell_count": 66,
+    "certificate_sha256": "2dc391a31ba8fe5a3affba8635ec4d7ba353803941e41edf3e13cc9be2ae8c03",
+    "domain": "1<=x<67",
+    "identity": {
+      "S": "2E+R",
+      "T": "E+2R"
+    }
+  },
+  "proof_object_sha256": "38a5376b596fe7f638d803457836278a26b44f2fec8028d3adadd27ba2032463",
+  "q2_branchwise_child_obstruction": {
+    "X": 536,
+    "actual_oriented_child_detail": "<=-log(4)/sqrt(134)<-1/9",
+    "actual_oriented_child_ordinary": "<=-log(4)/sqrt(134)<-1/9",
+    "conclusion": "branchwise nonnegative physical realization impossible",
+    "elementary_lower_bound": "1/9",
+    "proof": "log(2)>2/3 and sqrt(134)<12",
+    "q": 2,
+    "rough_factor": 67,
+    "rough_ordinary_term": "log(4)/sqrt(134)"
+  },
+  "rh_established_by_replay": false,
+  "schema": "riemann.target-lorenz.live-endpoint-source.v2",
+  "verification_scope": "full deterministic source/owner and endpoint occurrence files, outer two-channel cell certificate, real P61 terminal leaf, complete causal parent weights, common q/4q coordinate contract, and q=2 obstruction; the joint native coupling remains open",
+  "verification_sha256": "d2ce818cce6616fb566a402ffef72773d7fcbac717cfda9ff8d27127fc940654"
+}
