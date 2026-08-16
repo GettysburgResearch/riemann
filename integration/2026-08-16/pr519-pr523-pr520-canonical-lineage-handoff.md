@@ -48,15 +48,23 @@ PR #523 owns `R-93300` and `L-93300` because its commits at
 `2026-08-16T00:28:24Z` and `00:28:46Z` predate PR #519's colliding commits at
 `01:17:58Z` and `01:18:27Z`.
 
-Before integration, map the PR #519 block to:
+Before integration, apply the exact first-owner mapping:
 
 ```text
-R-93320
-L-93320 ... L-93324
-T-93325
-O-93320
-M-93320
-X-93320
+PR #523 retains:
+R-93300, L-93300, T-93300
+
+PR #519 retains:
+L-93301 ... L-93304, T-93305, O/M/X-93300
+
+PR #519 moves:
+R-93300 -> R-93320
+L-93300 -> L-93320
+
+PR #523 continuation moves:
+L-93301 ... L-93304 -> L-93310 ... L-93313
+R-93301 -> R-93310
+O/X-93300 -> O/X-93310
 ```
 
 Do not rewrite historical source branches. Publish one explicit reconciled
@@ -66,11 +74,11 @@ successor.
 
 ```text
 PR #498
-  -> PR #523 identifier-owning endpoint-order family
-  -> reconciled successor importing PR #519's F-normalized cubic,
-     mod-four, additive and Calderon material under 93320 IDs
+  -> reconciled successor based on PR #519's complete F-normalized cubic
+  -> import PR #523's earlier L-93300 endpoint-order family
+  -> import PR #523 r>=2, carrier and endpoint inversion under 93310 IDs
+  -> place PR #519's colliding R/L-93300 at R/L-93320
   -> mark PR #523 r=1 as SUPERSEDED / NORMALIZATION DUPLICATE
-  -> retain PR #523 r>=2, critical carrier and endpoint inversion
 ```
 
 Balanced dispersion remains open:
