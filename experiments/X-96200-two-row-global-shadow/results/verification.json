@@ -1,0 +1,38 @@
+{
+  "butterfly_checks": 48,
+  "coefficient_checks": [
+    {"A": 3.0, "B": 0.0, "C": 1.0, "j": 2},
+    {"A": 2.0, "B": 0.6666666666666666, "C": 0.3333333333333333, "j": 3}
+  ],
+  "fixed_product_checks": [
+    {"factorizations": 4, "knot_spread": 0.0, "n": 6},
+    {"factorizations": 6, "knot_spread": 0.0, "n": 12},
+    {"factorizations": 8, "knot_spread": 8.881784197001252e-16, "n": 30},
+    {"factorizations": 12, "knot_spread": 8.881784197001252e-16, "n": 60},
+    {"factorizations": 16, "knot_spread": 8.881784197001252e-16, "n": 210}
+  ],
+  "frozen_base": "ca5fb69c15cda29b3b589660f9be44ea2f440677",
+  "full_row_scans": [
+    {"j": 2, "last": 16.041071345088156, "limit": 2000000, "minimum": 0.0, "minimum_at": 2},
+    {"j": 3, "last": 5.821229452183102, "limit": 2000000, "minimum": 0.0, "minimum_at": 3}
+  ],
+  "global_transport_proved_by_replay": false,
+  "mutations_rejected": [
+    "claim_rh_by_replay_rejected",
+    "cross_knot_inside_fixed_product_rejected",
+    "drop_second_row_rejected",
+    "duplicate_owner_rejected",
+    "finite_scan_promoted_to_proof_rejected",
+    "large_row_asymptotic_required_rejected",
+    "shared_reservoir_rejected",
+    "stale_endpoint_normalization_rejected",
+    "unbracketed_shoulder_rejected",
+    "wrong_barycentric_weight_rejected"
+  ],
+  "ok": true,
+  "partial_sieve_checks": 128,
+  "proof_object_sha256": "d3b2bb6a1bb13e092ef2936bb9b415ceabdf5176cd4d98b93f5b509c75fcbb5d",
+  "rh_established_by_replay": false,
+  "schema": "riemann.x96200.two-row-global-shadow.v1",
+  "verdict": "PASS_TWO_ROW_GLOBAL_SHADOW_DIAGNOSTICS"
+}
