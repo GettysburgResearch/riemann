@@ -1,0 +1,50 @@
+{
+  "classification": "PASS_PROJECTIVE_CANONICAL_FULL_ROW_MELLIN_LANDAU_CANDIDATE",
+  "mutations_rejected": [
+    "benchmark_bridge_rejected",
+    "compact_tail_boundary_gap_rejected",
+    "coordinate_dependent_leaf_coefficients_rejected",
+    "duplicate_first_owner_rejected",
+    "frontier_mass_at_least_one_eighth_rejected",
+    "intermediate_oriented_child_observation_rejected",
+    "old_pr534_endpoint_gap_rejected",
+    "one_row_cancellation_assumption_rejected",
+    "q4_before_common_sum_rejected",
+    "rough_lift_for_native_parent_rejected",
+    "singleton_transcendental_interval_rejected",
+    "volterra_causal_family_switch_rejected"
+  ],
+  "normalization_firewall": "J-H=F+<Y4,Omega-Xi>; endpoint packing close not used",
+  "outer": {
+    "cell_argument": "on each [N,N+1], c_X(j) is affine in log X; endpoint positivity covers the full real cell",
+    "classification": "PASS_MPFR_DIRECTED_OUTER_NATIVE_ROW_1_TO_67",
+    "endpoint_row_checks": 4355,
+    "minimum_endpoint": 67,
+    "minimum_positive_lower_bound": "0.00190798966122613211700185",
+    "minimum_row": 66,
+    "mpfr_version": "4.2.2",
+    "rh_established_by_replay": false
+  },
+  "proof_object_sha256": "cc0696b466fbd733043471b322a57f681fd4b845db8cd7225b0861d7a273bb72",
+  "registry": {
+    "beta_sum": "1.000000000000000000000000000000000000000000000000000000000000000000000000000000009905",
+    "finite_occurrences": 2473,
+    "gamma_sum": "0.10131969134610859181081435323119243217258678463430851265237462202193831604733390730004",
+    "leaf_atoms": 229,
+    "native_atoms": 327,
+    "rough_weights": 132
+  },
+  "replay_scope": "finite coverage, directed tail, source-registry/type algebra and two-row noncancellation; independent proof reconstruction still required",
+  "rh_established_by_replay": false,
+  "schema": "riemann.t96300.projective-full-row-landau.v1",
+  "source_family": "canonical Q from root through terminal leaves; Volterra causal reset absent",
+  "tail": {
+    "events": 51118080,
+    "minimum": "26.7858198871370094575061",
+    "proof_object_sha256": "ba6b137b64819a9d01e706ffffdf100b091e49034895e6eeb280b56f514c99c5"
+  },
+  "two_row_noncancellation": {
+    "open_strip_modulus": "1/2<|2^-z|<1",
+    "resultant_factor": "-3(x-1)(x-2)"
+  }
+}

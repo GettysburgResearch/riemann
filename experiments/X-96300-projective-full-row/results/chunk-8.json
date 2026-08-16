@@ -1,0 +1,22 @@
+{
+  "arithmetic_class": "MPFR_256_DIRECTED_BASE_PLUS_BOOST_FENV_BASIC_INTERVAL_UINT128_EVENT_SWEEP",
+  "classification": "PASS_MPFR_BASE_DIRECTED_TARGET_LORENZ_TAIL_AVLT",
+  "mpfr_version": "4.2.2",
+  "tail_start": 166000,
+  "divisor_count": 262144,
+  "row_count": 9,
+  "event_records": 7077888,
+  "unique_event_groups": 6160384,
+  "directed_full_lower_bound": "26.7858198871370094575061",
+  "directed_full_minimum_row": 66,
+  "directed_full_minimum_x": "166000",
+  "directed_full_interval_upper_at_minimum": "26.7866532123451376208589",
+  "directed_parent_lower_bound": "79.2368736388876425819072",
+  "directed_parent_derivative_lower_bound": "0.239715873017393372044407",
+  "row66_extremality_separation_lower": "1.45496583533057111461972",
+  "row66_nearest_competitor": 65,
+  "last_interval_second_derivative_polynomial_lower": "5.27926149412521409074362e+48",
+  "last_interval_polynomial_derivative_lower": "7.96562477779048900553492e+36",
+  "rounding_contract": "MPFR 256-bit RNDD/RNDU enclosures for sqrt/log of base integers 1..67 and 166000; every event sqrt/log derived only by outward basic interval multiplication/addition; no libm transcendental call in the sweep",
+  "rh_established_by_replay": false
+}

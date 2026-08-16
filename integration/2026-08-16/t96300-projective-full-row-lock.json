@@ -1,0 +1,22 @@
+{
+  "schema": "riemann.t96300.lock.v1",
+  "created": "2026-08-16",
+  "base_pr": 534,
+  "base_branch": "research/gpt56-pro/94120-projective-native-lorenz-closure",
+  "base_sha": "ef18bdda5a65334695008e4c1f5986833160d84f",
+  "normalization_correction": {"pr": 541, "sha": "e381f444191e214cc992208b16d30a8d5fd461ac"},
+  "mpfr_smoke_predecessor": {"pr": 544, "sha": "d4dcd1256dc9c8e110c860cff87b3f89aee842a5"},
+  "two_row_noncancellation": {"pr": 546, "sha": "f920202ea15c577bf05fa58370bdc3d8313868cd"},
+  "compact_avlt": {
+    "source_ref": "9e2ae6d26a7920055e1f11327dc0ddeb7b855c61",
+    "path": "claims/lemmas/L-91781-compact-real-parameter-proportional-avlt-through-166000.md",
+    "blob": "2c16327c6653009667fa06ddbb24628ff583c0fe"
+  },
+  "proportional_reduction": {
+    "path": "claims/lemmas/L-91780-proportional-determinant-reduces-target-lorenz-row-gain.md",
+    "blob": "aeddda0288be0b8f5484d75e5bdee20c2ce4d70f"
+  },
+  "tail_proof_object": "ba6b137b64819a9d01e706ffffdf100b091e49034895e6eeb280b56f514c99c5",
+  "packet_verification": "cc0696b466fbd733043471b322a57f681fd4b845db8cd7225b0861d7a273bb72",
+  "rh_established": false
+}
