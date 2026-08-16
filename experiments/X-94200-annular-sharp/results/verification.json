@@ -1,0 +1,196 @@
+{
+  "base_pr530_head": "6c818a35094b978863a08bde4227d1f4ad9b65d4",
+  "endpoint_checks": [
+    {
+      "X": 8,
+      "maximum_annular_response_error": "1E-70",
+      "maximum_native_response_error": "1E-70",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 12,
+      "maximum_annular_response_error": "1E-70",
+      "maximum_native_response_error": "1E-70",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 16,
+      "maximum_annular_response_error": "4E-70",
+      "maximum_native_response_error": "1E-70",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 24,
+      "maximum_annular_response_error": "2E-70",
+      "maximum_native_response_error": "1E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 32,
+      "maximum_annular_response_error": "2E-70",
+      "maximum_native_response_error": "1E-70",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 48,
+      "maximum_annular_response_error": "4E-70",
+      "maximum_native_response_error": "2E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 64,
+      "maximum_annular_response_error": "3E-70",
+      "maximum_native_response_error": "2E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 96,
+      "maximum_annular_response_error": "2.3E-69",
+      "maximum_native_response_error": "2E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 128,
+      "maximum_annular_response_error": "3.6E-69",
+      "maximum_native_response_error": "2E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 192,
+      "maximum_annular_response_error": "4.3E-69",
+      "maximum_native_response_error": "4E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 256,
+      "maximum_annular_response_error": "5.6E-69",
+      "maximum_native_response_error": "6E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 384,
+      "maximum_annular_response_error": "7.4E-69",
+      "maximum_native_response_error": "5E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 512,
+      "maximum_annular_response_error": "1.28E-68",
+      "maximum_native_response_error": "3E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 768,
+      "maximum_annular_response_error": "1.34E-68",
+      "maximum_native_response_error": "1.2E-68",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 1024,
+      "maximum_annular_response_error": "1.27E-68",
+      "maximum_native_response_error": "8E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    }
+  ],
+  "mutations_rejected": [
+    "unsmoothed step target",
+    "omit quarter-scale term",
+    "change beta diagonal",
+    "use different row coefficients by column",
+    "replace real X/4 by floor(X/4)",
+    "reverse native endpoint orientation",
+    "claim replay proves RH"
+  ],
+  "negative_controls": [
+    {
+      "X": 16,
+      "index": 8,
+      "minimum": "-0.1183161951314475018325422724829044441220096561848117060107572911400601"
+    },
+    {
+      "X": 32,
+      "index": 16,
+      "minimum": "-0.1322365666588448508204772080364446232303341747040104475009095128176862"
+    },
+    {
+      "X": 64,
+      "index": 32,
+      "minimum": "-0.1095642546351950776626779680392490778204009353004887886799915294233422"
+    },
+    {
+      "X": 128,
+      "index": 64,
+      "minimum": "-0.08298245251077632390432801019311313849052556779478902186258922650869797"
+    }
+  ],
+  "nonmultiple_checks": [
+    {
+      "X": 67,
+      "maximum_annular_response_error": "4E-70",
+      "maximum_native_response_error": "3E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 127,
+      "maximum_annular_response_error": "2.8E-69",
+      "maximum_native_response_error": "5E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 255,
+      "maximum_annular_response_error": "8.3E-69",
+      "maximum_native_response_error": "4E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 511,
+      "maximum_annular_response_error": "6.6E-69",
+      "maximum_native_response_error": "5E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 769,
+      "maximum_annular_response_error": "1.07E-68",
+      "maximum_native_response_error": "8E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    },
+    {
+      "X": 997,
+      "maximum_annular_response_error": "2.14E-68",
+      "maximum_native_response_error": "7E-69",
+      "minimum_annular_row": "0E-69",
+      "minimum_native_row": "0E-69"
+    }
+  ],
+  "proof_object_sha256": "5413cd8160ca2ce73ad38a6a0e53f786754a470055638de0612610c8cb174286",
+  "rh_established": false,
+  "schema": "riemann.t94200.annular-sharp-regression.v1",
+  "scientific_status": "candidate full proof proposal; independent reconstruction required",
+  "symbolic_contract": {
+    "annulus": "I(w_X-w_(X/4)) = c_X-c_(X/4)",
+    "inverse": "backward triangular solve for beta_(n,q)",
+    "load_bearing_theorem": "L-94201 four-block Peano identity",
+    "telescope": "c_X = sum_j [c_(X/4^j)-c_(X/4^(j+1))]"
+  },
+  "verdict": "PASS_ANNULAR_SHARP_CANDIDATE_REGRESSION"
+}
