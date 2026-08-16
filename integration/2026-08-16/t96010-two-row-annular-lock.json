@@ -1,0 +1,28 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/94200-four-adic-annular-sharp",
+    "commit": "988e9bfa55e7ed13c0ddbcab2f6138a83fd4f743",
+    "pr": 535,
+    "tree": "bc77126e0cac597bdb921c87f66b6d43206c938c"
+  },
+  "branch": "research/gpt56-pro/96010-two-row-annular-mellin-landau",
+  "claims": [
+    "R-96010",
+    "R-96011",
+    "L-96010",
+    "L-96011",
+    "L-96012",
+    "T-96010",
+    "T-96011",
+    "M-96010",
+    "O-96010"
+  ],
+  "proof_object_sha256": "ec3eadcd7174c7dc3b742f63e1e3b28c1034b89940b46647839212dacb754325",
+  "schema": "riemann.t96010.lock.v1",
+  "status": {
+    "direct_consumer": "PROVED",
+    "rh": "UNPROVEN",
+    "two_row_noncancellation": "PROVED",
+    "two_row_positivity": "OPEN"
+  }
+}

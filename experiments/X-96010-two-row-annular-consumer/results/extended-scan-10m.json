@@ -1,0 +1,17 @@
+{
+  "N": 10000000,
+  "elapsed_sec": 4.5382750034332275,
+  "formula": "log4*S[floor(X/4)] + logX*(S[X]-S[floor(X/4)]) - (T[X]-T[floor(X/4)])",
+  "rows": {
+    "2": {
+      "X": 3,
+      "minimum": 0.860121382433459,
+      "negative_count_below_-1e-10": 0
+    },
+    "3": {
+      "X": 4,
+      "minimum": 0.33218664394213004,
+      "negative_count_below_-1e-10": 0
+    }
+  }
+}
