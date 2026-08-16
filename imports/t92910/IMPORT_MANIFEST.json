@@ -1,0 +1,32 @@
+{
+  "packet": "T-92911",
+  "base_pr": 494,
+  "base_sha": "1468ff62c7377f3f6cc1744ef6eafc3df3172d5c",
+  "accepted_closing_review": 502,
+  "inspected_nonloadbearing_prs": [508, 509],
+  "forbidden_shortcuts": [
+    "promote actual child response to full child capacity",
+    "treat numerical native slack as a positive source packet",
+    "infer PSD domination from trace or mass",
+    "repeat Hall, quantizer, correction or port on an internal child",
+    "use an upper bound for J_Lambda-4sqrt(X)"
+  ],
+  "frozen_blobs": [
+    {"path":"claims/lemmas/L-91682-complete-arithmetic-causal-profile-and-lorenz-cutoffs.md","blob_sha":"c4782482950f0b0bdf32cddb05d0d41aff32bfaf"},
+    {"path":"claims/lemmas/L-91690-factor67-target-hall-is-a-source-owned-root-thinning.md","blob_sha":"1b14f531bbe7fb3a56397414d666c669252c4a02"},
+    {"path":"claims/lemmas/L-91732-factor67-direct-integrals-have-actual-target-normalized-children.md","blob_sha":"a13a1eb80eaae15b5b29057d928ee1ed347ed55e"},
+    {"path":"claims/lemmas/L-91733-retained-cell-euler-mismatch-closes-all-physical-columns.md","blob_sha":"6f08ad402d43039ab37a63289c314ec68c74325c"},
+    {"path":"claims/lemmas/L-91750-the-factor67-common-parent-compiler-is-an-exact-typed-packet-equality.md","blob_sha":"9aeb5bc86c6d854700951da626806d7d2085e2d6"},
+    {"path":"claims/lemmas/L-91754-exact-measurable-whole-cell-hall-integration.md","blob_sha":"fec5faf530abcbb6358f9a11c02d9c2443b5d615"},
+    {"path":"claims/lemmas/L-91755-one-shot-port-free-total-row.md","blob_sha":"4d504038bc8b00e8bbd95997241ced67b14b897f"},
+    {"path":"claims/lemmas/L-91756-one-shot-root-slack-below-61000.md","blob_sha":"e76a85fd2bc5da385ebc7701bbda5b1de1f99fce"},
+    {"path":"claims/lemmas/L-91378-radix-four-dual-diagonalizes-the-native-endpoint-deficit.md","blob_sha":"d8ae67fb4ae0914cf45da4107c43a803ab158a1d"},
+    {"path":"claims/lemmas/L-90004-prime-seed-mellin-symbol.md","blob_sha":"17036c42170750956743555458104bdbada954e4"},
+    {"path":"imports/t91653/external/claims/lemmas/L-90020-prime-square-occupancy-gap-is-minus-one-minus-zeta-half.md","blob_sha":"bfe7b71eb2db0a2ad4d987e75b43d5872fc84d37"},
+    {"path":"imports/t91653/external/claims/theorems/T-90008-undifferenced-prime-endpoint-negativity-is-equivalent-to-rh.md","blob_sha":"21eae10025b03b724233d49ea09fbc90f4aa66fd"},
+    {"path":"experiments/X-91690-factor67-sontr/verify.py","blob_sha":"20485a04c53fb27340ca44fd092c7684b28d6e89"},
+    {"path":"experiments/X-91690-factor67-sontr/results/verification.json","blob_sha":"bf0f4fb9367181859e485ec48ded057d7809c0cf"},
+    {"path":"experiments/X-91754-one-shot-native-slack/verify.py","blob_sha":"97ab6680892eff4e3b9f566b94ef418a45c48403"},
+    {"path":"experiments/X-91754-one-shot-native-slack/results/verification.json","blob_sha":"02d9eb6a093a70ff02d9912a104b078a279b5f9a"}
+  ]
+}
