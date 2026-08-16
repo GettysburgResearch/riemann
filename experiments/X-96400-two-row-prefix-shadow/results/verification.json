@@ -6,32 +6,64 @@
       "final_float": 13.494338622597486,
       "minimum_at": 3,
       "minimum_float": 0.860121382433459,
-      "range": [3, 200000]
+      "range": [
+        3,
+        200000
+      ]
     },
     "3": {
       "classification": "diagnostic_only",
       "final_float": 4.882548341825427,
       "minimum_at": 4,
       "minimum_float": 0.33218664394213016,
-      "range": [4, 200000]
+      "range": [
+        4,
+        200000
+      ]
     }
   },
   "exact": {
     "coefficient_identity_limit": 5000,
-    "common_zero_polynomial": [-3, 9, -6],
-    "fixed_product": {"P": 6, "j": 3, "n": 24, "residual": "-1"},
+    "common_zero_polynomial": [
+      -3,
+      9,
+      -6
+    ],
+    "fixed_product": {
+      "P": 6,
+      "j": 3,
+      "n": 24,
+      "residual": "-1"
+    },
     "r2_table": {
-      "0,0": -1, "0,2": 1, "1,0": 3, "1,1": -2,
-      "1,2": -1, "2,0": -2, "2,1": 2
+      "0,0": -1,
+      "0,2": 1,
+      "1,0": 3,
+      "1,1": -2,
+      "1,2": -1,
+      "2,0": -2,
+      "2,1": 2
     },
     "r3_table": {
-      "0,0": -1, "0,1": 6, "0,2": -5, "1,1": -5,
-      "1,2": 5, "2,0": -2, "2,1": 2, "3,0": 3, "3,1": -3
+      "0,0": -1,
+      "0,1": 6,
+      "0,2": -5,
+      "1,1": -5,
+      "1,2": 5,
+      "2,0": -2,
+      "2,1": 2,
+      "3,0": 3,
+      "3,1": -3
     },
     "rough_store": {
       "P": 30,
-      "actual_rough_integers": [7],
-      "block": [2, 10],
+      "actual_rough_integers": [
+        7
+      ],
+      "block": [
+        2,
+        10
+      ],
       "claimed_lower_statement": "sqrt(2)*log(5)>2",
       "exact_upper_statement": "1/sqrt(7)<1/2",
       "p": 5,
