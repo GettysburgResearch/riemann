@@ -1,21 +1,13 @@
-# L-96501 — The complete first-owner tree terminates at finite depth for every endpoint
+# L-96501 — The complete paired first-owner stopping tree terminates at finite depth for every endpoint
 
 Claim ID: `L-96501`  
 Status: **PROPOSED COMPLETE SOURCE-EXHAUSTION THEOREM — HOSTILE REVIEW REQUIRED**  
 Created: 2026-08-17  
-Depends on: `L-96500`; frozen first-owner stopping-line typing from PR #550
+Depends on: `L-96500`; exact paired stopping theorem `L-91362`; causal identity `L-91650`; frozen reconstruction `L-96302`
 
 ## 1. Labelled state
 
-A node is a tuple
-
-\[
-v=(\gamma_v,Z_v,\mathfrak h_v,P_v),
-\]
-
-where `gamma_v>=0`, `P_v` is positive labelled source, `Z_v` is its endpoint
-scale, and `h_v` is the ordered rough-prime history. The root is the exact
-positive parity-labelled native source
+The root is the exact positive parity-labelled native source
 
 \[
 \mathscr N_X=
@@ -24,77 +16,104 @@ positive parity-labelled native source
 \tag{L-96501.1}
 \]
 
-Its signed component-row marginal is the native Möbius row `c_X`.
+Signed component-row observation is postponed. When it is finally applied, the
+row marginal is exactly the native Möbius row `c_X`.
 
-## 2. Expansion rule
-
-At an unresolved node with `Z_v>=67`, apply (L-96500.1) on each first-owner
-source slice. Deposit the survivor and all current paired-edge terms in the
-current ledger. Export only the positive `alpha_i` children, with history
-`h_v` extended by their unique least owner.
-
-The expansion is source-disjoint because the first-owner slices are disjoint.
-It is source-exhaustive because (L-96500.1) is an equality before any
-observation. Paired edge terms remain paired; the negative side is never
-promoted to a positive physical row.
-
-## 3. Finite depth
-
-Every unresolved child obeys
+Every squarefree colour has the unique factorization
 
 \[
-Z_{v'}\le {Z_v\over67}.
+k=d p_1\cdots p_t,
+\qquad d\mid P_{61},
+\qquad67\le p_1<\cdots<p_t.
 \tag{L-96501.2}
 \]
 
-Thus every path has length at most
+The label records `d`, the ordered rough history, parity, causal path and least
+unused rough owner.
+
+## 2. Exact paired stopping step
+
+The exact least-prime stopping identity of `L-91362`, with the coefficients
+reconstructed in `L-96500`, partitions one unresolved paired source as
 
 \[
-D_X=\max\!\left(0,
-\left\lceil {\log(X/67)\over\log67}\right\rceil+1\right).
+\mathscr P_v=\mathscr G(v)\oplus\mathscr F(v).
 \tag{L-96501.3}
 \]
 
-After `D_X` layers all leaves have scale below 67. There is no infinite tree,
-no limiting frontier, and no interchange of a limit with a row observation.
+Here `G(v)` is the finite family of stopped current leaves produced by the full
+paired identity, and `F(v)` is the unresolved paired frontier. Intermediate
+oriented children remain inside `F(v)` and are never observed as positive rows.
+Every source occurrence appears in exactly one side because the least-prime
+owner is unique and the parent coefficients sum to one.
 
-## 4. Exact finite stopping line
+For every frontier component `v'` of `F(v)`,
 
-Iterating the finite equalities yields
+\[
+Z_{v'}\le Z_v/67,
+\qquad
+M(\mathscr F(v))<M(\mathscr P_v)/8.
+\tag{L-96501.4}
+\]
+
+The scale estimate is the termination mechanism; the mass estimate is only an
+independent audit and does not invoke rough-number density.
+
+## 3. Finite iteration
+
+Substitute (L-96501.3) only in the unresolved frontier. After `n` levels,
+
+\[
+\mathscr N_X=\mathscr G_n\oplus\mathscr F_n,
+\qquad
+\operatorname{scale}(\mathscr F_n)\le X/67^n.
+\tag{L-96501.5}
+\]
+
+Choose
+
+\[
+D_X=\min\{n:X/67^n<67\}.
+\tag{L-96501.6}
+\]
+
+Then the construction stops after exactly finitely many substitutions. Every
+leaf in `G_{D_X}` is a canonical current leaf
+
+\[
+(p,y,d),\qquad p\ge67,\quad1\le y<67,\quad d\mid P_{61},
+\]
+
+and every remaining source in `F_{D_X}` has outer scale below 67. There is no
+infinite projective limit, no residual frontier, and no interchange of a limit
+with physical observation.
+
+Thus the exact finite stopping line is
 
 \[
 \boxed{
 \mathscr N_X
- =\mathscr C_X
+ =\bigoplus_{\ell\in\mathcal L_X}
+   \gamma_\ell\mathscr D(p_\ell,y_\ell,d_\ell)
  \oplus
- \bigoplus_{\ell\in\mathcal L_X}
-   \gamma_\ell\,
-   \mathscr D(p_\ell,y_\ell,d_\ell),}
-\tag{L-96501.4}
+ \bigoplus_{u\in\mathcal O_X}\eta_u\mathscr N_{x_u},}
+\tag{L-96501.7}
 \]
 
-where
+where all coefficients are nonnegative, `1<=x_u<67`, and every root occurrence
+has exactly one leaf owner. The same path coefficient occurs in target, score,
+every component row, ordinary `q`, ordinary `4q`, and detail.
 
-```text
-C_X        is current positive source plus paired current edges;
-L_X        is a finite set of terminal first-owner leaves;
-p_l>=67;
-1<=y_l<67;
-d_l divides P_61 and mu(d_l) is nonzero;
-gamma_l>=0.
-```
+## 4. Proof
 
-Every root source occurrence has exactly one terminal/current owner, and the
-same path coefficient is present in target, score, every component row,
-ordinary `q`, ordinary `4q`, and detail. No rough-prefix reservoir appears.
-
-The proof is induction on
+Induct on the integer rank
 
 \[
 \operatorname{rk}(v)=\min\{m:Z_v/67^m<67\}.
 \]
 
-Rank zero is terminal. For positive rank, (L-96500.1) partitions the source;
-all unresolved children have lower rank by (L-96501.2), so the induction closes
-in finitely many steps. Source disjointness is inherited from the unique
-first-owner label at each step.
+Rank zero is an outer terminal source. At positive rank, the exact paired
+stopping theorem gives (L-96501.3), unique first ownership, and lower rank for
+every unresolved frontier component by (L-96501.4). Apply the induction
+hypothesis separately to those disjoint components and take their finite direct
+sum. This proves (L-96501.7) and source exhaustion.
