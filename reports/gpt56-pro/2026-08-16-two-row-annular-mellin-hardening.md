@@ -46,7 +46,7 @@ The entire route is now reduced to
 
 Real endpoints add no difficulty: every unit cell is affine in `log X`.
 
-A long-double Kahan scan covered every integer through `150,000,000` in both rows. A separate double scan reached `250,000,000`. No negative value was found. The full average-binomial inverse was also reconstructed at selected endpoints, and an unsmoothed-step mutation was rejected. These are strong falsification results, not a proof of the infinite theorem.
+A long-double Kahan scan covered every integer through `20,000,000` in both rows. A separate double scan reached `250,000,000`. No negative value was found. The full average-binomial inverse was also reconstructed at selected endpoints, and an unsmoothed-step mutation was rejected. These are strong falsification results, not a proof of the infinite theorem.
 
 ## Status
 
@@ -55,7 +55,8 @@ normalization firewall                 proved
 annular fixed-row transform            proved
 exact two-row noncancellation          proved
 direct TAP4 -> RH consumer              proved
-TAP4 finite scan to 150m long double   passed
+TAP4 finite scan to 20m long double    passed
+TAP4 finite scan to 250m double        passed
 TAP4 symbolic all-integer proof         open
 unconditional RH proof                  not obtained
 Riemann Hypothesis                      unproved
