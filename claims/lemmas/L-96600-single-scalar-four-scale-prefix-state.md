@@ -42,7 +42,7 @@ No prime-sieved transport is used.
 
 ## 2. Odd-core packet
 
-If `d` is odd and squarefree, then the contribution of its complete two-adic orbit is
+If `d>1` is odd and squarefree, then the contribution of its complete two-adic orbit is
 
 \[
 \boxed{
@@ -50,6 +50,13 @@ If `d` is odd and squarefree, then the contribution of its complete two-adic orb
 =\mu(d)(-6,15,-12,3).
 }
 \tag{L-96600.2}
+\]
+
+The unit core is the sole exception because of the separate `6*1_(n=1)` term:
+
+\[
+\boxed{(a_*(1),a_*(2),a_*(4),a_*(8))=(0,15,-12,3).}
+\tag{L-96600.2a}
 \]
 
 All higher two-adic multiples vanish. This is the complete signed arithmetic packet behind the single scalar; the three-prime mode has disappeared exactly.
