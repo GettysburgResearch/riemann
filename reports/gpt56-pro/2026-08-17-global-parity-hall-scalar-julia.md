@@ -12,9 +12,16 @@ comparison:   #562 bottom-contact Julia terminalization
 
 ## Result
 
-The `5:3` scalar reduces the conclusion-producing cone to one reciprocal state. Adaptive even depth solves the homogeneous parity truncation, and all rough finite differences are nonnegative away from activation walls. Cumulative parity is carried exactly by a positive Julia conjugation. The remaining sign is one globally owned activation-boundary functional, `GABPT`.
+The `5:3` scalar reduces the conclusion-producing cone to one reciprocal state.
+Adaptive even depth solves the homogeneous parity truncation, and all rough
+finite differences are nonnegative away from activation walls. Cumulative
+parity is carried exactly by a positive Julia conjugation. The remaining sign is
+one globally owned activation-boundary functional, `GABPT`.
 
-The annular reserve is retained only as a possible one-use boundary budget; its parity-blind root composition is not imported. The Julia trace retains the real zeta pole, so source-blind PSD positivity cannot replace the trace-free scalar producer.
+The annular reserve is retained only as a possible one-use boundary budget; its
+parity-blind root composition is not imported. The Julia trace retains the real
+zeta pole, so source-blind PSD positivity cannot replace the trace-free scalar
+producer.
 
 ## Boundary
 

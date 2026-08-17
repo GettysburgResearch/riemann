@@ -23,9 +23,14 @@ standalone/2026-08-17-global-parity-hall/global-parity-hall-scalar-julia-97240.p
 ```bash
 python3 experiments/X-97240-global-parity-hall/verify.py \
   --output experiments/X-97240-global-parity-hall/results/verification.json
+sha256sum -c T97240_CONTENT_SHA256SUMS
 ```
 
-Expected: `PASS_T97240_GLOBAL_PARITY_HALL_SCALAR_JULIA_REDUCTION`.
+Expected:
+
+```text
+PASS_T97240_GLOBAL_PARITY_HALL_SCALAR_JULIA_REDUCTION
+```
 
 ## Scientific boundary
 
