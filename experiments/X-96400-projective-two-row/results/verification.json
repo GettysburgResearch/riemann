@@ -1,0 +1,36 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_PLUS_DIRECTED_DECIMAL_Q2",
+  "baseline": {
+    "interval": {
+      "records": 7,
+      "recursive_mass": "6823/245025"
+    },
+    "no_common_zero": {
+      "factorization": "-3(x-1)(x-2)",
+      "strip_excludes": [
+        "x=1",
+        "x=2"
+      ]
+    },
+    "normalization": {
+      "F": "6/5",
+      "full": "14/5",
+      "packing": "8/5"
+    },
+    "q2": "-0.46771127447307455885195364466830025062134714668996329480304177330555663324407298"
+  },
+  "hostile_mutations_rejected": [
+    "duplicate_demand",
+    "physicalize_pending",
+    "bonus_given_target",
+    "different_row_coefficients",
+    "drop_q2_obstruction",
+    "wrong_mellin_factorization",
+    "packing_equals_full_deficit",
+    "promote_finite_B_scan"
+  ],
+  "proof_object_sha256": "3ce8b216e2b4760533c249ebb3bedf6223d65d3d0403df850e26839bf5c4a6b2",
+  "rh_established_by_replay": false,
+  "scope": "finite source/refinement algebra and Mellin numerator algebra only",
+  "verdict": "PASS_T96400_PROJECTIVE_STOPPING_LINE_TWO_ROW"
+}
