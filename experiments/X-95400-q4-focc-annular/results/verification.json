@@ -1,0 +1,47 @@
+{
+  "annihilation_checks": 17,
+  "classification": "PASS_X_95400_Q4_FOCC_ANNULAR_HARDENING",
+  "does_not_prove": [
+    "SACF",
+    "FOCC",
+    "OCHD",
+    "Riemann Hypothesis"
+  ],
+  "exact_kernel_checks": 60,
+  "firewall_checks": 30,
+  "floating_reconnaissance": [
+    {
+      "X": 256,
+      "annular_sum": 1.906046190845282,
+      "cross": -1.2217931526622396,
+      "diagonal": 4.854805234298048
+    },
+    {
+      "X": 1000,
+      "annular_sum": 0.3212714358364592,
+      "cross": -8.885559480091587,
+      "diagonal": 8.988774815576006
+    },
+    {
+      "X": 10000,
+      "annular_sum": -0.1120869776056388,
+      "cross": -22.546974365739523,
+      "diagonal": 22.55953785628829
+    },
+    {
+      "X": 100000,
+      "annular_sum": -0.49264855289011067,
+      "cross": -44.350262862150956,
+      "diagonal": 44.59296545881568
+    }
+  ],
+  "frozen_base_pr": 573,
+  "frozen_base_sha": "0865242eb9dc0ed6094afc8a87a52b974c6f1307",
+  "gcd_checks": 8358,
+  "hostile_mutations_detected": 4,
+  "inverse_checks": 36,
+  "pair_count_checks": 704,
+  "ratio_checks": 6600,
+  "square_checks": 37,
+  "type_i_checks": 829
+}
