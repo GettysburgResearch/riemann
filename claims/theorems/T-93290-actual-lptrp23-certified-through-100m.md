@@ -31,6 +31,7 @@ and for every
  \frac13A_3^\sharp(N)>0.82136720504591819.
 }
 \tag{T-93290.2}
+\]
 
 The certified minima occur at `N=2` and `N=4`, respectively. Therefore, by
 `L-93290`,
@@ -42,6 +43,7 @@ The certified minima occur at `N=2` and `N=4`, respectively. Therefore, by
  c_X^{>3}(3)>0\quad(X>3)
 }
 \tag{T-93290.3}
+\]
 
 for every real
 
