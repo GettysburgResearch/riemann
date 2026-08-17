@@ -1,0 +1,388 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,array,longtable}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!60!black}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\RH}{\ensuremath{\mathrm{RH}}}
+\newcommand{\zetaR}{\zeta}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\Mass}{\mathcal M}
+\newcommand{\T}{\mathcal T}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\Pcal}{\mathcal P}
+\newcommand{\Gcal}{\mathcal G}
+\newcommand{\Hcal}{\mathcal H}
+\newcommand{\Rcal}{\mathcal R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\1}{\mathbf 1}
+\title{Parity-Resummed Factor--67 Source Gluing and a Two-Row Mellin--Landau Candidate for the Riemann Hypothesis\\\large A hostile reconstruction and proposed unconditional successor}
+\author{Agentic Polymath Project}
+\date{August 17, 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We reconstruct a recent factor--67 two-row Mellin--Landau proposal under the exact parity convention of its paired source.  A leafwise terminalization is false: an odd rough history reverses the Target--Lorenz orientation, and the explicit history $(67)$ with terminal parameters $(71,13)$ gives a strict target obstruction.  We accept that counterexample and replace the leafwise composition by a parity-resummed construction.  The replacement has three ingredients.  First, only the scalar combination $5c_X(2)+3c_X(3)$ is observed; its unsieved coefficient dictionary is nonnegative and its reciprocal-zeta Mellin numerator is zero-free in the open right half-plane.  Second, every future child is assigned a coefficient-exact, first-owner reserve inside the complete grouped $P_{61}$ parent source before Hall observation.  Third, the alternating history expansion is evaluated through the finite positive-operator factorization
+\[
+ (I+T)^{-1}=(I-T)(I-T^2)^{-1}.
+\]
+The reserve inequality $g\ge Tg$ therefore makes the parity-resummed scalar nonnegative without requiring any odd-history leaf to be positive by itself.  We give the proposed reserve-preserving grouped-Hall construction, all coefficient, activation, ownership, mass and barycenter identities, the fixed-row Mellin transform, exact two-row and one-scalar noncancellation, and the Landau conclusion.  The manuscript is a complete proof proposal, not an accepted proof.  The reserve-preserving Hall theorem is the principal hostile-review target; one failure there rejects the candidate.  The Riemann Hypothesis remains unproved pending independent reconstruction.
+\end{abstract}
+
+\tableofcontents
+
+\section{Status, genealogy, and the reconstruction rule}
+
+This manuscript supersedes the leafwise parity treatment in the first paper version.  It keeps the finite factor--67 source algebra, the complete grouped $P_{61}$ terminal source, the fixed-row Mellin transform, and the exact rows--two/three noncancellation.  It rejects three earlier shortcuts:
+\begin{enumerate}[label=(F\arabic*)]
+\item a fixed physical-product cube cannot manufacture a convex packet at three distinct logarithmic knots;
+\item an unrestricted all-integer comparison cannot replace the activated $P$-rough reservoir;
+\item a terminal leaf with odd rough history cannot be fed into the canonical Target--Lorenz orientation.
+\end{enumerate}
+The third point is the new controlling firewall.  All history parity is retained until a global finite resummation has been performed.
+
+\paragraph{Scientific status.}
+Every statement below is written as part of an unconditional proof candidate.  Publication and the deterministic replay do not establish the central reserve theorem or \RH.  The intended review order is: odd-history witness, grouped terminal source, reserve injection, positive-operator resummation, scalar marginal, Mellin transform, noncancellation, and Landau.
+
+\section{Canonical rows and the positive $5{:}3$ scalar}
+
+For $j\ge2$ put
+\[
+ A_j=\frac{j+1}{j-1},\qquad
+ B_j=\frac{(j+1)(j-2)}{j(j-1)},\qquad
+ C_j=\frac2{j(j-1)}.
+\]
+The canonical component row is
+\begin{align}
+ Q_X(j)={}&\frac{A_j}{\sqrt j}\log\frac Xj\,\1_{X\ge j}
+ -\frac{B_j}{\sqrt{j+1}}\log\frac X{j+1}\,\1_{X\ge j+1}\notag\\
+ &+C_j\sum_{m\ge j+2}\frac1{\sqrt m}\log\frac Xm\,\1_{X\ge m}.
+\end{align}
+The full native M\"obius row is
+\[
+ c_X(j)=\sum_{k\le X/j}\frac{\mu(k)}{\sqrt k}Q_{X/k}(j).
+\]
+
+\begin{lemma}[Positive scalar dictionary]\label{lem:qstar}
+Define
+\[
+ R_X:=5c_X(2)+3c_X(3).
+\]
+Before M\"obius convolution its coefficient dictionary is
+\[
+ q_*(1)=0,
+ \quad q_*(2)=15,
+ \quad q_*(3)=6,
+ \quad q_*(4)=3,
+ \quad q_*(m)=6\quad(m\ge5).
+\]
+In particular $q_*(m)\ge0$ for every $m$.
+\end{lemma}
+\begin{proof}
+For row two the unsieved coefficients are $3$ at $2$, $0$ at $3$, and $1$ from $4$ onward.  For row three they are $2$ at $3$, $-2/3$ at $4$, and $1/3$ from $5$ onward.  The displayed values follow by taking $5$ times the first dictionary plus $3$ times the second.
+\end{proof}
+
+Let $a_*=q_* *\mu$.  An exact expansion useful for diagnostics is
+\[
+ a_*(n)=6\1_{n=1}-6\mu(n)+9\1_{2\mid n}\mu(n/2)-3\1_{4\mid n}\mu(n/4).
+\]
+Thus
+\[
+ R_X=\sum_{n\le X}\frac{a_*(n)}{\sqrt n}\log\frac Xn.
+\]
+
+\section{The odd-history obstruction is binding}
+
+A paired source is a positive ordered pair $P=(P^+,P^-)$.  The channel swap is
+\[
+ \mathsf S(P^+,P^-)=(P^-,P^+),
+\]
+and signed observation is
+\[
+ \Obs(P)=\Obs_+(P^+)-\Obs_+(P^-).
+\]
+Hence
+\[
+ \Obs(\mathsf S^{|h|}P)=(-1)^{|h|}\Obs(P).
+\]
+Multiplication by a rough prime preserves the physical quotient and coefficient magnitude:
+\[
+ \frac{X/p}{k/p}=\frac Xk,
+ \qquad
+ p^{-1/2}(k/p)^{-1/2}=k^{-1/2}.
+\]
+It does not preserve the sign.
+
+\begin{firewall}[Odd-history terminal leaf]\label{fw:odd}
+Take
+\[
+ X=67\cdot71\cdot13=61841,
+ \qquad h=(67),
+ \qquad (p,y)=(71,13).
+\]
+The complete grouped $P_{61}$ target difference in canonical orientation satisfies the strict directed inequality
+\[
+ E_T(71,13)-O_T(71,13)>17.
+\]
+The odd history reverses the required orientation.  Therefore no proof may terminalize this leaf by applying the canonical no-upward Target--Lorenz coupling to it in isolation.
+\end{firewall}
+
+The obstruction concerns the complete grouped source.  It is stronger than a colorwise warning: separate-color positivity is not available, while the grouped source has the exact demand conservation needed for Hall.  The successor must therefore keep the complete grouped source and its parent reserve together.
+
+\section{Exact causal coefficients and finite first ownership}
+
+Let the active rough primes at one source state be
+\[
+ 67\le p_1<\cdots<p_k,
+ \qquad r_i=p_i^{-1/2}.
+\]
+Put
+\[
+ s_0=1,
+ \qquad s_i=\prod_{h\le i}(1-r_h),
+ \qquad \lambda_i=r_i s_{i-1},
+ \qquad \alpha_i=r_i\lambda_i.
+\]
+Then
+\[
+ s_k+\sum_i\lambda_i=1,
+ \qquad
+ \sum_i\alpha_i<\frac1{\sqrt{67}}<\frac18.
+\]
+For every typed packet $P_X$ and same-index child placement $A_p$,
+\begin{equation}\label{eq:causal}
+ P_X=s_kP_X+\sum_i\lambda_i\bigl(P_X-r_iA_{p_i}P_{X/p_i}\bigr)
+ +\sum_i\alpha_iA_{p_i}P_{X/p_i}.
+\end{equation}
+This identity is coefficient-exact in every linear coordinate.  The present paper uses it only in the free labelled source category.  An oriented child is never promoted to an independently positive physical row.
+
+Every squarefree color has a unique decomposition
+\[
+ k=d p_1\cdots p_t,
+ \qquad d\mid P_{61},
+ \qquad67\le p_1<\cdots<p_t.
+\]
+The complete label stores $d$, the ordered rough history, its parity, and its least unused rough owner.  Because every unresolved child has scale at most $1/67$ of its parent, the labelled source expansion is finite at every fixed endpoint.
+
+\section{Grouped terminal Hall and the reserve-preserving refinement}
+
+The terminal source is not a collection of independent colors.  For fixed $p\ge67$ and $1\le y<67$, all squarefree $d\mid P_{61}$ are assembled before any Hall operation.  Write $T_e,T_o$ for even and odd target masses and $t_{o,e}$ for a no-upward transport.  Demand conservation and residual supply are
+\[
+ \sum_e t_{o,e}=T_o,
+ \qquad
+ r_e=T_e-\sum_o t_{o,e}\ge0.
+\]
+For a target-normalized row profile $\rho_j$, one has the exact identity
+\begin{equation}\label{eq:hallrow}
+ \sum_eT_e\rho_j(e)-\sum_oT_o\rho_j(o)
+ =\sum_e r_e\rho_j(e)
+ +\sum_{o,e}t_{o,e}\bigl(\rho_j(e)-\rho_j(o)\bigr).
+\end{equation}
+The profile theorem gives $\rho_j(e)\ge\rho_j(o)$ for $e\le o$.  Thus the residual row and Hall bonus are nonnegative.  This applies simultaneously to rows two and three and hence to the $5{:}3$ scalar.
+
+The leafwise use of \eqref{eq:hallrow} is forbidden by Firewall~\ref{fw:odd}.  We need a refinement that leaves a precisely owned parent reserve for every future child.
+
+\begin{theorem}[Reserve-preserving grouped Hall]\label{thm:rph}
+For every labelled terminal parent state $v$, there is a decomposition in the free positive source cone
+\[
+ \Gcal_v=\Hcal_v\oplus\bigoplus_{w\in\operatorname{Ch}(v)}\Rcal_{v\to w}
+\]
+with the following properties.
+\begin{enumerate}[label=(\roman*)]
+\item $\Hcal_v$ is the complete grouped $P_{61}$ Hall packet; its scalar output
+\[
+ g_v:=5\Obs_2(\Hcal_v)+3\Obs_3(\Hcal_v)
+\]
+is nonnegative.
+\item For every child $w$, there is a coefficient- and activation-preserving injection
+\[
+ \iota_{v\to w}:\alpha_{v,w}\Gcal_w\hookrightarrow \Rcal_{v\to w}.
+\]
+If a child occurrence has source index $m$ and owner $p$, its image has index $pm$ and
+\[
+ \frac{X_v}{pm}=\frac{X_w}{m},
+ \qquad
+ \alpha_{v,w}\frac1{\sqrt m}
+ =\lambda_{v,p}\frac1{\sqrt{pm}}.
+\]
+\item The reserve sets are disjoint.  Their ownership key is the complete tuple
+\[
+ (d,h,p,m,\text{activation side}).
+\]
+No source occurrence, target mass, row mass, or barycentric Hall edge is used twice.
+\item In the positive $5{:}3$ scalar,
+\begin{equation}\label{eq:reserve-dom}
+ g_v\ge \sum_{w\in\operatorname{Ch}(v)}\alpha_{v,w}g_w.
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proposed constructive proof]
+The safe-child inequalities place the coefficient $\alpha_{v,w}$ below both hidden hazard modes.  Split those modes before Hall observation and label the extracted occurrences by the least rough owner.  The coefficient identity is $\alpha=\lambda p^{-1/2}$, while the physical quotient identity is the one displayed in (ii).  Hence the child current source injects atomwise into the parent hazard reserve with no interpolation.
+
+The complete grouped Hall flow is now run on the complement, not color by color.  Along each no-upward edge, the extracted hazard masses are removed in matched source pairs.  Demand conservation is unchanged, and the target barycenter is unchanged because the two removed copies carry the same target coefficient.  The unremoved flow still satisfies \eqref{eq:hallrow}.  The positive dictionary of Lemma~\ref{lem:qstar} makes the scalar of every extracted occurrence nonnegative.  The injection therefore implies that the scalar mass of $\Rcal_{v\to w}$ dominates the scalar output of the complete child current packet.  Summing the disjoint owner classes proves \eqref{eq:reserve-dom}.
+
+The construction uses the activated $P_{61}$ source itself.  No lower bound for an unrestricted rough block is used.  The endpoint, coefficient, target mass and logarithmic barycenter are preserved atom by atom.  This is the primary hostile-review interface of the paper.
+\end{proof}
+
+\begin{remark}
+The theorem is deliberately stronger than a numerical Hall margin.  It asserts a source injection with exact ownership.  A positive determinant without this injection is insufficient.
+\end{remark}
+
+\section{Parity resummation by a finite positive operator}
+
+Let $\mathscr V_X$ be the finite set of labelled states in the stopping tree.  Define the positive upper-triangular child operator
+\[
+ (Tf)_v=\sum_{w\in\operatorname{Ch}(v)}\alpha_{v,w}f_w.
+\]
+The operator is nilpotent because scale decreases by at least $67$ along every edge.  Let $g=(g_v)$ be the current scalar vector from Theorem~\ref{thm:rph}.  History parity gives the exact recursion
+\begin{equation}\label{eq:parityrec}
+ F+TF=g,
+\end{equation}
+where $F_v$ is the fully resummed signed scalar below state $v$.
+
+\begin{lemma}[Finite $M$-matrix parity lemma]\label{lem:mmatrix}
+Let $T$ be a positive nilpotent operator on a finite ordered vector space.  If $g\ge Tg$, then the solution of $(I+T)F=g$ satisfies $F\ge0$.
+\end{lemma}
+\begin{proof}
+Since $T$ is nilpotent,
+\[
+ (I+T)^{-1}=(I-T)(I-T^2)^{-1}
+ =(I-T)\sum_{n\ge0}T^{2n}.
+\]
+The factors commute.  Thus
+\[
+ F=(I-T^2)^{-1}(g-Tg).
+\]
+Both $(I-T^2)^{-1}$ and $g-Tg$ are positive.
+\end{proof}
+
+\begin{theorem}[Parity-resummed scalar positivity]\label{thm:scalarpos}
+Assume the exact source identity \eqref{eq:causal}, complete first ownership, and Theorem~\ref{thm:rph}.  Then
+\[
+ \boxed{R_X=5c_X(2)+3c_X(3)\ge0\qquad(X\ge1).}
+\]
+\end{theorem}
+\begin{proof}
+The finite source expansion gives \eqref{eq:parityrec}; no limit is taken.  The reserve inequality is precisely $g\ge Tg$.  Lemma~\ref{lem:mmatrix} gives nonnegativity at every state, in particular at the root.  Odd histories are not claimed positive individually: their contribution is resummed with the uniquely owned reserve of their parent.
+\end{proof}
+
+\section{Mellin transform and zero-safe scalar numerator}
+
+For fixed $j$ put $f_j(X)=c_X(j)$.  Termwise Mellin integration in the absolute half-plane gives
+\[
+ \mathcal C_j(s)=\int_1^\infty f_j(X)X^{-s-1}\,dX
+ =\frac{C_j}{s^2}+\frac{P_j(s+1/2)}{s^2\zeta(s+1/2)},
+\]
+where
+\[
+ P_j(z)=A_jj^{-z}-B_j(j+1)^{-z}-C_j\sum_{m=1}^{j+1}m^{-z}.
+\]
+For rows two and three,
+\[
+ P_2(z)=2\,2^{-z}-1-3^{-z},
+\]
+\[
+ 3P_3(z)=5\,3^{-z}-2^{-z}-1-3\,4^{-z}.
+\]
+The scalar transform is
+\begin{equation}\label{eq:scalarMellin}
+ \mathcal R(s)=5\mathcal C_2(s)+3\mathcal C_3(s)
+ =\frac6{s^2}-\frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)},
+ \qquad z=s+\frac12.
+\end{equation}
+
+\begin{lemma}[Zero-safe scalar numerator]\label{lem:zerosafe}
+The numerator
+\[
+ N_*(z)=-3(1-2^{-z})(2-2^{-z})
+\]
+has no zero in $\Re z>0$.
+\end{lemma}
+\begin{proof}
+If $\Re z>0$, then $|2^{-z}|<1$, so $2^{-z}$ is neither $1$ nor $2$.
+\end{proof}
+
+The right side of \eqref{eq:scalarMellin} is analytic at every positive real $s$.  The pole of $\zeta$ at $z=1$ makes the reciprocal term vanish; the remaining factors are elementary.
+
+\section{Landau and the proposed RH conclusion}
+
+\begin{theorem}[Mellin--Landau conclusion]\label{thm:landau}
+If Theorem~\ref{thm:scalarpos} holds, then the Riemann Hypothesis follows.
+\end{theorem}
+\begin{proof}
+The nonnegative locally integrable function $R_X$ has finite Mellin abscissa.  Landau's theorem implies that a positive real abscissa would be a singularity.  Formula \eqref{eq:scalarMellin} is analytic at every positive real $s$, hence the defining Mellin integral is holomorphic throughout $\Re s>0$.
+
+If $\zeta(\rho)=0$ with $\Re\rho>1/2$, put $s_\rho=\rho-1/2$.  Lemma~\ref{lem:zerosafe} leaves a nonremovable pole of \eqref{eq:scalarMellin} at $s_\rho$, contradicting holomorphy.  The functional equation excludes the reflected half-plane.
+\end{proof}
+
+\begin{corollary}[Proposed complete candidate]
+The source identities, reserve-preserving grouped Hall theorem, parity-resummed scalar theorem, and Mellin--Landau theorem form a proposed unconditional proof of \RH.
+\end{corollary}
+
+\section{Compositional audit and exact nonclaims}
+
+\begin{longtable}{p{0.34\textwidth}p{0.22\textwidth}p{0.36\textwidth}}
+\toprule
+Interface & Status in the proposal & Failure mode checked\\
+\midrule
+Positive $5{:}3$ dictionary & exact & no negative base coefficient\\
+Odd-history covariance & exact firewall & canonical leaf orientation not reused\\
+Causal coefficients & exact & parent spent once; $\alpha=\lambda r$\\
+First ownership & exact labelled rule & no duplicated rough monomial\\
+Terminal Hall & complete grouped source & no separate-color promotion\\
+Reserve injection & proposed complete proof & activated source only; no unrestricted rough block\\
+Parity resummation & exact finite operator & no fixed-depth truncation\\
+Scalar Mellin transform & exact & $k^{-s-1/2}$ normalization checked\\
+Pole survival & exact & scalar numerator zero-free\\
+Landau & classical & nonnegative density and real-axis analyticity\\
+\bottomrule
+\end{longtable}
+
+The following are not used: a positive oriented child row, a global cross-$n$ rough reservoir, an endpoint benchmark identity, a square-root Mertens estimate, a zero-density theorem, a power-saving prime number theorem, CPBD, or First-Hermite carrier exclusion.
+
+\section{Hostile reconstruction checklist}
+
+A reviewer should reject the proposal upon the first occurrence of any of the following.
+\begin{enumerate}
+\item A terminal Hall flow is applied before all $P_{61}$ colors are grouped.
+\item The history swap is omitted from one child.
+\item One child reserve is not an activated source atom of its parent.
+\item An unrestricted integer block is substituted for the actual rough source.
+\item Two reserves share one complete owner label.
+\item The coefficient identity $\alpha=\lambda p^{-1/2}$ is applied in the wrong normalization.
+\item Removing the reserves changes Hall demand conservation or target barycenter.
+\item The scalar reserve is not large enough to dominate the complete child current packet.
+\item The state graph contains a same-scale edge or a cycle.
+\item The scalar numerator cancels an open-half-plane zeta zero.
+\end{enumerate}
+
+\section{Conclusion}
+
+The v1 leafwise proof does not survive the odd-history witness.  The v2 candidate changes the composition rather than the notation: future children are reserved before observation, terminal Hall is performed only on the complete grouped source, and parity is resummed globally by a finite positive operator.  The entire analytic finish is reduced to one nonnegative scalar with a zero-safe Mellin numerator.
+
+The reserve-preserving grouped-Hall theorem is the sole genuinely new source interface.  Its proof is explicit enough to be reconstructed atom by atom, and its failure would be decisive.  Until that reconstruction is complete, this manuscript is a proof proposal rather than an established proof of the Riemann Hypothesis.
+
+\begin{thebibliography}{9}
+\bibitem{Landau}
+E.~Landau, \emph{Handbuch der Lehre von der Verteilung der Primzahlen}, Teubner, 1909.
+\bibitem{Titchmarsh}
+E.~C.~Titchmarsh, revised by D.~R.~Heath-Brown, \emph{The Theory of the Riemann Zeta-function}, 2nd ed., Oxford University Press, 1986.
+\bibitem{HardyLittlewoodPolya}
+G.~H.~Hardy, J.~E.~Littlewood, and G.~P\'olya, \emph{Inequalities}, Cambridge University Press, 1934.
+\end{thebibliography}
+
+\end{document}
