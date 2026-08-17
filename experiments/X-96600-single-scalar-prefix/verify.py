@@ -58,7 +58,9 @@ def validate(data):
     if N<1024: raise ValueError('formal cutoff too small')
     for n in range(1,N+1):
         if a_direct(n)!=a_formula(n): raise ValueError(('full coefficient',n))
-    for d in range(1,N//8+1,2):
+    unit=[a_formula(1),a_formula(2),a_formula(4),a_formula(8)]
+    if unit != [0,15,-12,3]: raise ValueError(('unit-core packet',unit))
+    for d in range(3,N//8+1,2):
         if mobius(d)==0: continue
         got=[a_formula(d),a_formula(2*d),a_formula(4*d),a_formula(8*d)]
         want=[-6*mobius(d),15*mobius(d),-12*mobius(d),3*mobius(d)]
@@ -85,14 +87,15 @@ def validate(data):
       'verdict':'PASS_T96600_SINGLE_SCALAR_PREFIX_AND_FILTER_FIREWALL',
       'formal_cutoff':N,
       'coefficient_formula':'6*1_{n=1}-6mu(n)+9*1_{2|n}mu(n/2)-3*1_{4|n}mu(n/4)',
-      'odd_core_packet':[-6,15,-12,3],
+      'unit_core_packet':[0,15,-12,3],
+      'nonunit_odd_core_packet':[-6,15,-12,3],
       'prime_stages':stages,
       'numerator_factorization':'-3(a-1)(a-2)',
       'green_positive_real_zero':'s=1/2',
       'genealogy':genealogy,
       'open_producers':['SCPS','eventual prefix positivity','ACTQ_2'],
       'rh_established':False,
-      'proof_boundary':'Exact scalar convolution, odd-core packet, finite-prime ledger and recurrence, and finite-shift zero firewall. Does not prove SCPS, ACTQ2, scalar positivity, or RH.'}
+      'proof_boundary':'Exact scalar convolution, unit/nonunit odd-core packets, finite-prime ledger and recurrence, and finite-shift zero firewall. Does not prove SCPS, ACTQ2, scalar positivity, or RH.'}
     canonical=json.dumps(out,sort_keys=True,separators=(',',':')).encode()
     out['proof_object_sha256']=hashlib.sha256(canonical).hexdigest()
     return out
