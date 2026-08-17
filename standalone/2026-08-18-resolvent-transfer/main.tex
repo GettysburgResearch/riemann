@@ -1,0 +1,396 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\Src}{\mathsf{Src}}
+\newcommand{\NCBI}{\mathrm{NCBI}_{67}}
+\title{Raw-to-Contracted Parity Resolvents and the Minimal Two-Channel Source Repair\\
+\large A Statement-to-Use Reconstruction of the Factor--67 Scalar Frontier}
+\author{Agentic Polymath Project}
+\date{18 August 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A recent factor--67 programme obtained a rigorous all-real finite-$P_{61}$
+scalar bias and a genuinely subcritical safe-child coefficient budget.  The two
+statements do not yet compose: the native rough recursion carries a raw
+parity-swapped child coefficient $r=p^{-1/2}$, whereas the safe recursive ledger
+carries a smaller coefficient $t$.  We give the exact statement-to-use theorem
+for this interface.
+
+On every finite rough-history DAG, the native parity-resummed scalar is
+$f=(I+R)^{-1}b$, where $R$ is the raw child operator.  Replacing $R$ by a
+contracted positive operator $T$ forces the current
+\[
+ g=(I+T)(I+R)^{-1}b=b+(T-R)f.
+\]
+The current is therefore nonlocal in the complete child scalar.  A two-node
+separator shows that if $t<r$, no universal source-local one-channel current can
+be coefficientwise nonnegative: a positive datum at the child forces current
+coefficient $t-r<0$ at the parent.  More generally, the exact transfer has an
+alternating nonzero coefficient at every available history depth.
+
+We then repair the literal source identity.  In the positive paired parity
+cone, for any $0\le t\le r$, the leftover $(r-t)$ copy of the swapped child is
+placed in the current and the $t$ copy in the recursive ledger.  The source is
+positive, first-owner exact, activation exact, and the raw coefficient is spent
+once.  Two parity channels are minimal: no nonzero positive scalar functional
+can intertwine a positive swap with the sign character.
+
+Finally we prove an exposure-conservation theorem.  Contracting the recursive
+ledger relocates, but cannot reduce, the total raw signed child exposure.  The
+repaired $P_{61}$ interval $1/42\le F/M\le1/8$ therefore cannot be composed with
+the $<1/8$ recursive mass by replacing raw exposure with safe exposure.  The
+correct remaining theorem is one nonlocal Bellman current inequality, denoted
+$\NCBI$.  It is a resolvent form of the common CPSL67/GPHT*/GABPT/TFPE/ACBI
+frontier.  We prove the reduction but not $\NCBI$.  The Riemann Hypothesis
+remains unproved.
+\end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\textbf{Scientific status.}
+The paper proves an exact source repair, an exact one-channel no-go theorem,
+and a sharper global frontier.  It is not a proof of the Riemann Hypothesis.}}
+\end{center}
+
+\tableofcontents
+
+\section{Live proof delta}
+
+The frozen base is draft PR \#576 at
+\texttt{0f6ea6eae813c1d867ae50744cf5fd57e2720bb7}.  Its most important
+arithmetic result is the repaired complete-$P_{61}$ annular scalar bias
+\begin{equation}
+ \frac1{42}M(x)\le F(x)\le\frac18M(x),\qquad x\ge67,
+ \label{eq:p61bias}
+\end{equation}
+with all-real coverage.  It also correctly distinguishes two failed
+interfaces:
+\begin{enumerate}
+\item a same-channel positive restriction was consumed later as a
+parity-swapped restriction;
+\item injection into a child reserve was consumed later as domination by the
+disjoint Hall complement.
+\end{enumerate}
+
+The exact unresolved statement was described as a literal source identity
+having a positive current, source-disjoint contracted children, and every raw
+rough coefficient retained.  We solve the source-identity part below.  The
+remaining obstruction is not source positivity but the signed scalar of that
+positive source current.
+
+\section{Finite rough-history operators}
+
+Let $V$ be a finite directed acyclic graph, ordered so every child follows its
+parent.  For a scalar vector $f=(f_v)_{v\in V}$ define the nonnegative,
+strictly upper-triangular raw child operator
+\[
+ (Rf)_v=\sum_{v\to w}r_{v,w}f_w,
+ \qquad r_{v,w}\ge0.
+\]
+The raw coefficient is the coefficient occurring in the literal native source;
+for a single rough prime it is $p^{-1/2}$ together with the parity swap.
+
+Let $b_v$ be the local complete grouped scalar before future rough factors.  The
+signed parity recursion is
+\begin{equation}
+ f+Rf=b.
+ \label{eq:rawrec}
+\end{equation}
+Nilpotence gives the finite expansion
+\[
+ f=(I+R)^{-1}b=(I-R+R^2-\cdots)b.
+\]
+No convergence assumption is involved.
+
+\section{The exact resolvent transfer}
+
+\begin{theorem}[Raw-to-contracted transfer]
+\label{thm:transfer}
+Let $T$ be any other nonnegative strictly upper-triangular operator.  The same
+$f$ satisfies
+\[
+ f+Tf=g
+\]
+if and only if
+\begin{equation}
+ \boxed{
+ g=(I+T)(I+R)^{-1}b=b+(T-R)f.
+ }
+ \label{eq:forcedcurrent}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Substitute $f=(I+R)^{-1}b$ into $g=(I+T)f$.  Conversely,
+\eqref{eq:forcedcurrent} implies $(I+T)f=g$.
+\end{proof}
+
+Equation \eqref{eq:forcedcurrent} is the complete statement-to-use contract.
+The current is not a freely selected finite-$P_{61}$ object.  If a raw
+coefficient is reduced, the omitted coefficient reappears in the current and
+multiplies the complete child scalar.
+
+\subsection{Chain expansion}
+
+On a chain $0\to1\to\cdots\to L$, write the edge coefficients as $r_i$ and
+$t_i$.  Backward substitution gives
+\[
+ f_i=b_i-r_if_{i+1},
+ \qquad
+ g_i=b_i+(t_i-r_i)f_{i+1}.
+\]
+Hence the coefficient of $b_k$, $k\ge1$, in $g_0$ is
+\begin{equation}
+ \boxed{
+ (-1)^{k-1}(t_0-r_0)r_1\cdots r_{k-1}.
+ }
+ \label{eq:chaincoef}
+\end{equation}
+For constant $r,t$ this becomes
+\begin{equation}
+ g=b+(t-r)\sum_{k\ge1}(-r)^{k-1}S^kb,
+ \label{eq:nonlocalseries}
+\end{equation}
+where $S$ is the forward shift and the series ends at the finite chain depth.
+Unless $t=r$, every available depth occurs.
+
+\section{A universal one-channel positivity obstruction}
+
+\begin{theorem}[Two-node separator]
+\label{thm:separator}
+Suppose $0\le t<r$.  There is a positive local datum for which the exact
+contracted one-channel current is negative.
+\end{theorem}
+
+\begin{proof}
+Take two nodes and $b=(0,1)$.  Equation \eqref{eq:rawrec} gives
+$f=(-r,1)$.  Therefore
+\[
+ g_0=f_0+tf_1=t-r<0.
+\]
+\end{proof}
+
+\begin{corollary}[Safe-child local no-go]
+A universal source-local one-channel positive current cannot replace the raw
+factor--67 edge $r=p^{-1/2}$ by the safe coefficient
+$t=\alpha=\lambda r<r$ while retaining exact parity and arbitrary positive
+child data.
+\end{corollary}
+
+\begin{corollary}[No fixed-depth repair]
+Any current formula depending only on histories of depth at most $m$ fails on a
+chain of depth $m+1$ whenever $t\ne r$.
+\end{corollary}
+
+\begin{remark}
+The theorem is deliberately scoped.  The actual arithmetic local datum is not
+arbitrary.  Arithmetic correlations may make the forced nonlocal current
+positive.  What is excluded is a generic local source theorem deduced solely
+from $t<r$, positivity of the input cone, or the finite-$P_{61}$ bias.
+\end{remark}
+
+\section{Exact positive paired-source repair}
+
+The scalar obstruction does not prevent a positive source identity.  It shows
+why the parity state must remain two-channel.
+
+Let $\Src_+=\R_+^2$ and define the positive swap
+\[
+ \mathsf S(x,y)=(y,x).
+\]
+Signed observation is $\ell(x,y)=x-y$, so
+$\ell(\mathsf SP)=-\ell(P)$.
+
+\begin{theorem}[Positive contracted paired-source identity]
+\label{thm:paired}
+Suppose the literal raw first-owner identity is
+\begin{equation}
+ P_v=B_v\oplus\bigoplus_w r_{v,w}\mathsf SP_w,
+ \label{eq:rawsource}
+\end{equation}
+with source-disjoint summands.  For arbitrary
+$0\le t_{v,w}\le r_{v,w}$ put
+\begin{equation}
+ C_v(t)=B_v\oplus\bigoplus_w(r_{v,w}-t_{v,w})\mathsf SP_w.
+ \label{eq:currentpacket}
+\end{equation}
+Then
+\begin{equation}
+ \boxed{
+ P_v=C_v(t)\oplus\bigoplus_wt_{v,w}\mathsf SP_w.
+ }
+ \label{eq:contractedsource}
+\end{equation}
+Every term is positive, every raw coefficient is spent exactly once, and all
+activation and first-owner labels are unchanged.
+\end{theorem}
+
+\begin{proof}
+The source supports are inherited from \eqref{eq:rawsource}.  On each edge the
+leftover and recursive coefficients add to the raw coefficient:
+$(r-t)+t=r$.
+\end{proof}
+
+Applying signed observation gives
+\begin{align}
+ f_v&=b_v-\sum_wr_{v,w}f_w,\label{eq:signedraw}\\
+ c_v&=b_v-\sum_w(r_{v,w}-t_{v,w})f_w,\label{eq:signedcurrent}\\
+ f_v&=c_v-\sum_wt_{v,w}f_w.\label{eq:signedcontracted}
+\end{align}
+Thus the positive source current is exact, but its signed observation is the
+nonlocal current \eqref{eq:forcedcurrent}.
+
+\begin{theorem}[Two parity channels are minimal]
+There is no nonzero positive scalar functional $\phi:\R_+^2\to\R_+$ satisfying
+$\phi(\mathsf SP)=-\phi(P)$ for every positive $P$.
+\end{theorem}
+
+\begin{proof}
+Both $\phi(P)$ and $\phi(\mathsf SP)$ are nonnegative, while the displayed
+identity makes them negatives.  Hence both vanish for every $P$.
+\end{proof}
+
+This explains why a paired source can be positive while every exact
+one-channel signed current fails positivity on some input.
+
+\section{Why the safe-child budget does not pay raw scalar debt}
+
+Let a local base packet have unsigned mass $M$ and scalar at least $\ell M$.
+For child $w$, assume $0\le f_w\le u m_w$.  Splitting the raw coefficient
+$r_w$ into current coefficient $r_w-t_w$ and recursive coefficient $t_w$ gives
+\begin{equation}
+ \sum_w(r_w-t_w)f_w+\sum_wt_wf_w=\sum_wr_wf_w.
+ \label{eq:exposure}
+\end{equation}
+Thus the strongest interval-only lower bound is
+\begin{equation}
+ \boxed{
+ f_v\ge \ell M-u\sum_wr_wm_w,
+ }
+ \label{eq:rawbound}
+\end{equation}
+independently of the contracted budget.
+
+With the repaired constants from PR \#576,
+\[
+ \ell=\frac1{42},\qquad u=\frac18,
+\]
+so the local interval argument needs
+\begin{equation}
+ \frac{\sum_wr_wm_w}{M}\le\frac{\ell}{u}=\frac4{21}.
+ \label{eq:criticalraw}
+\end{equation}
+The statement
+\[
+ \sum_wt_wm_w<\frac18M
+\]
+does not imply \eqref{eq:criticalraw}.  For example raw fraction $1/4$ and
+contracted fraction $1/10$ satisfy the safe budget while
+\[
+ \frac1{42}-\frac18\cdot\frac14=-\frac1{1344}<0.
+\]
+
+\begin{firewall}
+A safe-child coefficient theorem controls the recursive ledger.  It does not
+change the raw coefficient appearing in the native Möbius source.  The leftover
+$r-t$ must be present in the current and must be paid in the same signed
+coordinate.
+\end{firewall}
+
+\section{The exact remaining Bellman inequality}
+
+Let $f=(I+R)^{-1}b$ be the native scalar and let $T$ be a chosen contracted
+operator.  The source current \eqref{eq:currentpacket} has scalar
+\[
+ c=b-(R-T)f.
+\]
+A sufficient positive-resolvent condition is
+\begin{equation}
+ \boxed{
+ \NCBI:\qquad c\ge Tc.
+ }
+ \label{eq:ncbi}
+\end{equation}
+Indeed,
+\[
+ (I+T)^{-1}=(I-T)(I-T^2)^{-1},
+\]
+and $c\ge Tc$ gives
+\[
+ f=(I+T)^{-1}c=(I-T)(I-T^2)^{-1}c\ge0.
+\]
+
+The condition is global because $c$ contains the complete child scalar $f$.
+The two-node separator proves this dependence cannot be removed in a universal
+one-channel source-local theorem.
+
+At scalar scope, \eqref{eq:ncbi} is a resolvent normal form for the common
+frontier appearing elsewhere as CPSL67, GPHT*, ASHP67, GABPT, TFPE, ACBI, or
+RJTE.  Those formulations use different source or dual coordinates, but each
+must produce the nonlocal correlation missing from the interval estimate
+\eqref{eq:rawbound}.
+
+\section{Consequences for the live portfolio}
+
+\begin{longtable}{p{0.25\textwidth}p{0.68\textwidth}}
+\toprule
+Object & Disposition \\
+\midrule
+PR \#565 bias & The old $1/40$ constant is false; PR \#576's repaired $1/42$
+bound survives.  The safe recursive mass cannot replace raw exposure.\\
+PR \#566 reserve theorem & Injection into a reserve does not imply domination
+by the Hall complement.  The exact current is the resolvent transfer
+\eqref{eq:forcedcurrent}.\\
+PR \#576 source frontier & The literal positive paired-source identity is now
+closed by Theorem \ref{thm:paired}.  Signed current positivity remains global.\\
+PRs \#569, \#570, \#575 & GABPT/RJTE/CPSL67 are structurally compatible with
+$\NCBI$ because they retain nonlocal parity or trace information.\\
+Q4 and carry routes & Unchanged; their independent FOCC and root-port frontiers
+remain separate.\\
+\bottomrule
+\end{longtable}
+
+\section{Machine reconstruction}
+
+The exact checker uses rational arithmetic.  It verifies random finite
+resolvent conjugacies, exact two-node separators, all-depth chain coefficients,
+positive paired-source splits, raw coefficient conservation, the $4/21$
+critical exposure threshold, and six hostile mutations.  Its retained verdict
+is
+\begin{center}
+\texttt{PASS\_T97500\_RAW\_CONTRACTED\_RESOLVENT\_AND\_TWO\_CHANNEL\_SOURCE\_REPAIR}.
+\end{center}
+The checker does not prove \eqref{eq:ncbi} or RH.
+
+\section{Conclusion}
+
+The repaired finite-$P_{61}$ bias and the factor--67 safe-child budget are both
+real advances.  Their former composition failed because it silently changed
+the coefficient of the native rough child.  We have supplied the exact positive
+source repair and proved that the remaining one-channel scalar current is
+necessarily nonlocal.  Contraction only reallocates raw exposure; it does not
+remove it.
+
+The sharpest remaining obligation is therefore not another local bias constant
+or another source partition.  It is the global Bellman/trace-free inequality
+\eqref{eq:ncbi}, or an equivalent CPSL67/GABPT/TFPE/ACBI theorem, in the actual
+activated arithmetic source.  Until that theorem is proved, the Riemann
+Hypothesis remains open.
+
+\end{document}
