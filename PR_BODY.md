@@ -1,55 +1,27 @@
-## Research hardening
+## Paper v2: parity-resummed factor-67 two-row Mellin-Landau candidate
 
-This successor is stacked directly on PR #542 and stress-tests the
-prime-sieved producer before using its direct Mellin--Landau consumer.
+This add-only successor is based on paper PR #558 at `b1b8d5548365216a5f9a642d3005835f5a1f3dd2`. It accepts
+the exact odd-history obstruction, keeps all `P_61` colours grouped, reserves
+actual activated child source before observation, and resums rough-history
+parity with
 
 ```text
-base PR:      #542
-base SHA:     ca5fb69c15cda29b3b589660f9be44ea2f440677
-head branch:  research/gpt56-pro/96400-two-row-prefix-shadow-hardening
+(I+T)^-1=(I-T)(I-T^2)^-1.
 ```
 
-## Exact corrections
+The primary theorem is `L-96651`, the reserve-preserving grouped-Hall source
+injection. It asserts exact activation, coefficient, first-owner, target-mass
+and barycenter identities on the actual grouped source; no unrestricted rough
+comparison and no branchwise positive oriented child are used.
 
-1. The local `FRONTIER-CHAIN` proof from PR #537 is invalid. At
-   `(j,P,n)=(3,6,24)` the fixed-product cube leaves coefficient `-1` at one
-   knot; it cannot manufacture a three-knot convex packet.
-2. PRs #548/#549 replace the actual \(P\)-rough store by an all-integer block.
-   At `P=30,p=5,u=2`, the rough block `[2,10)` contains only `7`, so its mass
-   is `<1/2`, while the claimed surrogate lower bound is `>2`.
-3. The positivity statement is not refuted, but none of those transports
-   proves it.
+The branch contains the full LaTeX manuscript, deterministic compiled PDF,
+claim files, theorem ledger, hostile review specification, exact replay and
+content hash ledger.
 
-## Exact surviving chain
-
-Only rows two and three are required. This packet proves their exact Möbius
-Riesz formulas, sparse coefficient dictionaries, integer-knot reduction,
-two-state recurrences, reciprocal-zeta Mellin transforms, and exact
-noncancellation:
 ```text
-P2(z)=2*2^(-z)-1-3^(-z)
-3P3(z)=5*3^(-z)-2^(-z)-1-3*4^(-z)
-
-P2=P3=0 => -3(2^(-z)-1)(2^(-z)-2)=0.
+base: b1b8d5548365216a5f9a642d3005835f5a1f3dd2
+head branch: paper/arxiv-factor67-two-row-parity-resummed-v2-republish
+complete written proof proposal: yes
+accepted proof: no
+Riemann Hypothesis: unproved pending hostile reconstruction
 ```
-
-Hence
-```text
-eventual c_N(2)>=0 and c_N(3)>=0
- -> Landau
- -> RH.
-```
-
-The two-row positivity theorem `TRP23` remains explicitly **OPEN /
-RH-bearing**. This is a hardening successor and exact frontier reduction, not
-a false complete proof.
-
-## Replay
-
-```bash
-cd experiments/X-96400-two-row-prefix-shadow
-python3 verify.py --output results/verification.json
-sha256sum -c SHA256SUMS
-```
-
-The replay does not prove `TRP23` or RH.
