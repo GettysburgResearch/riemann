@@ -1,0 +1,19 @@
+{
+  "packet_id": "93290",
+  "repository": "gfreund123/riemann",
+  "base_pr": 546,
+  "base_branch": "research/gpt56-pro/93280-phase-locked-two-row-landau",
+  "base_sha": "f920202ea15c577bf05fa58370bdc3d8313868cd",
+  "base_tree": "7469eab34c2fec05e4dc975bab0006a2a45532a8",
+  "intended_branch": "research/gpt56-pro/93290-actual-lptrp-covariance-spectrum",
+  "commit_message": "advance actual LPTRP rows and phase-locked covariance spectrum",
+  "status": {
+    "actual_rows_through_100m": "PROVED",
+    "all_real_endpoints_through_100m": "PROVED",
+    "fixed_finite_sieve_eventual": "PROVED",
+    "covariance_positive_spectrum": "PROVED",
+    "growing_prime_tail": "OPEN_RH_BEARING",
+    "scid_pl": "OPEN_RH_BEARING",
+    "rh": "UNPROVED"
+  }
+}
