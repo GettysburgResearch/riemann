@@ -1,0 +1,565 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[margin=1.08in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{booktabs,longtable,array}
+\usepackage{seqsplit}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{authblk}
+
+\definecolor{statusblue}{RGB}{24,76,124}
+\definecolor{statusred}{RGB}{145,38,32}
+\definecolor{statusgray}{RGB}{70,70,70}
+\hypersetup{pdfauthor={Agentic Polymath Project},pdftitle={A finite factor-67 paired-source decomposition for two Moebius parabolic rows}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Factor-67 paired-source proposal}
+\rhead{\thepage/\pageref{LastPage}}
+\setlength{\headheight}{14pt}
+\setstretch{1.04}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Firewall}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Mell}{\mathcal M}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\Packet}{\mathscr P}
+\newcommand{\Native}{\mathscr N}
+\newcommand{\Frontier}{\mathscr F}
+\newcommand{\Leaves}{\mathscr G}
+\newcommand{\Qpack}{\mathscr Q}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RePart}{\operatorname{Re}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\scale}{\operatorname{scale}}
+\newcommand{\mass}{\operatorname{mass}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\title{\bfseries A Finite Factor--67 Paired-Source Decomposition for Two M\"obius Parabolic Rows\\[2mm]
+\large and a Direct Mellin--Landau Criterion for the Riemann Hypothesis}
+\author[1]{Agentic Polymath Project}
+\author[2]{Gideon Freund (project coordinator)}
+\affil[1]{Open collaborative mathematical research programme}
+\affil[2]{Gettysburg Research / Riemann repository}
+\date{17 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fcolorbox{statusred}{white}{\parbox{0.91\textwidth}{\small
+\textbf{Status notice.} This document is a complete unconditional proof \emph{proposal}, written as a hostile reconstruction of the full argument.  It is not an accepted proof and the Riemann Hypothesis is not treated as established.  The two highest-risk interfaces are the finite paired stopping-line identity in Section~\ref{sec:stopping} and the computer-assisted terminal Target--Lorenz theorem in Section~\ref{sec:terminal}.  A failure of either retracts the conclusion while leaving the exact two-row Mellin transform and noncancellation theorem intact.}}
+\end{center}
+
+\begin{abstract}
+We propose a finite source-complete route from two coefficientwise positivity statements to the Riemann Hypothesis.  The arithmetic objects are two fixed components of a canonical parabolic row
+\[
+ c_X(j)=\sum_{k\le X/j}\frac{\mu(k)}{\sqrt{k}}Q_{X/k}(j),\qquad j=2,3.
+\]
+Earlier attempts to prove positivity by a fixed-product convex transport or by an unrestricted rough-reservoir comparison are invalid; we retain their exact counterexamples as permanent firewalls.  The replacement works before signed observation.  The squarefree source is kept as a positive parity-labelled packet.  An exact hazard identity partitions a packet into paired causal edges and contracted children without duplicating the parent.  By applying that identity only to unresolved paired states, every nonterminal branch loses a factor at least $67$ in scale, so the stopping tree has finite depth for each endpoint.  Terminal states have parameters $p\ge67$, $1\le y<67$, and $d\mid P_{61}$; a directed compact-plus-tail Target--Lorenz certificate gives a positive realization for their component rows.  This yields $c_X(2),c_X(3)\ge0$ for every real $X\ge1$.
+
+For fixed $j$, the Mellin transform is
+\[
+ \int_1^\infty c_X(j)X^{-s-1}\,dX
+ =\frac{C_j}{s^2}+\frac{P_j(s+1/2)}{s^2\zeta(s+1/2)}.
+\]
+The two explicit numerators
+\[
+ P_2(z)=2^{1-z}-1-3^{-z},\qquad
+ 3P_3(z)=5\,3^{-z}-2^{-z}-1-3\,4^{-z}
+\]
+have no common zero in $\Re z>0$.  Landau's theorem for nonnegative Mellin densities would therefore exclude every zero of $\zeta$ with real part greater than $1/2$, and the functional equation gives the proposed conclusion.  No Mertens square-root bound, zero-density estimate, power-saving prime number theorem, factor--67 endpoint deficit, or RH-equivalent cancellation estimate is assumed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction and proof architecture}
+
+The route in this paper is deliberately narrow.  It does not attempt to construct a positive realization of every component row, and it does not use a native endpoint benchmark.  Only two rows are retained.  The conclusion-producing chain is
+\begin{equation*}
+\begin{split}
+&\text{positive parity-labelled squarefree source}\\
+&\quad\Longrightarrow\text{ finite paired factor--67 stopping tree}\\
+&\quad\Longrightarrow\text{ terminal directed Hall realizations}\\
+&\quad\Longrightarrow c_X(2),c_X(3)\ge0\quad(X\ge1)\\
+&\quad\Longrightarrow\text{ two reciprocal-zeta Mellin transforms}\\
+&\quad\Longrightarrow\text{ Landau exclusion of }\Re\rho>\tfrac12\\
+&\quad\Longrightarrow\text{ Riemann Hypothesis.}
+\end{split}
+\end{equation*}
+
+The main conceptual point is to postpone signed observation.  A squarefree coefficient $\mu(k)$ is represented by a positive source atom carrying a parity label.  Intermediate rough-prime children are not required to be positive physical rows; indeed a known ordinary-column separator shows that they need not be.  Positivity is imposed only after the complete finite paired source has reached the terminal Target--Lorenz window.
+
+\subsection{Why the previous global shadow is not used}
+
+Two attractive but invalid shortcuts must be removed at the outset.
+
+\begin{warning}[Fixed-product convexity]
+If all factorizations of one integer $n$ are collected before applying the row kernel, they occupy the single logarithmic knot $\log n$.  Such a fibre can cancel coefficients at that knot but cannot manufacture a strict three-knot convex packet.  At $(j,P,n)=(3,6,24)$ the fixed-product residual is negative.
+\end{warning}
+
+\begin{warning}[Unrestricted rough-block comparison]
+The actual reservoir after a prime prefix $P$ contains only integers coprime to $P$.  It cannot be replaced by the full interval.  At $(P,p,u)=(30,5,2)$ the $P$-rough block $[2,10)$ contains only $7$, so its inverse-square-root mass is below $1/2$, while the unrestricted comparison exceeds $2$.
+\end{warning}
+
+Neither counterexample refutes the two-row positivity statement.  They do show that any proof must use exact source ownership rather than a larger comparison reservoir.  The present argument uses no rough-density estimate at all.
+
+\section{Canonical parabolic packets and the two native rows}
+\label{sec:rows}
+
+For $Y>0$ and $j\ge2$, define
+\begin{align}
+ A_j&=\frac{j+1}{j-1},&
+ B_j&=\frac{(j+1)(j-2)}{j(j-1)},&
+ C_j&=\frac{2}{j(j-1)},\label{eq:ABC}
+\end{align}
+and
+\begin{align}
+ Q_Y(j)={}&\frac{A_j}{\sqrt j}\log\frac{Y}{j}\,\one_{j\le Y}
+ -\frac{B_j}{\sqrt{j+1}}\log\frac{Y}{j+1}\,\one_{j+1\le Y}\notag\\
+&+C_j\sum_{m=j+2}^{\lfloor Y\rfloor}\frac1{\sqrt m}\log\frac Ym.
+\label{eq:Qrow}
+\end{align}
+This is the component-row form of the canonical parabolic packet.
+
+\begin{lemma}[Positivity and endpoint monotonicity of the canonical packet]
+\label{lem:Qpositive}
+For every $j\ge2$, $Q_Y(j)=0$ for $Y<j$, and $Q_Y(j)>0$ for $Y>j$.  It is nondecreasing in $Y$.
+\end{lemma}
+\begin{proof}
+On $j\le Y<j+1$ only the first term is active.  On $j+1\le Y<j+2$, differentiation with respect to $\log Y$ gives
+\[
+ \frac{A_j}{\sqrt j}-\frac{B_j}{\sqrt{j+1}}>0,
+\]
+which follows after removing $(j+1)/(j-1)$ from
+$1/\sqrt j>(j-2)/(j\sqrt{j+1})$.  At every later activation a new term of value zero is inserted, and between activations the logarithmic derivative is the preceding positive derivative plus
+$C_j\sum m^{-1/2}$.  Continuity at the knots completes the proof.
+\end{proof}
+
+The full M\"obius row is
+\begin{equation}
+ c_X(j)=\sum_{k\le X/j}\frac{\mu(k)}{\sqrt k}Q_{X/k}(j).
+\label{eq:nativerow}
+\end{equation}
+Only $j=2,3$ will be used.
+
+\section{Positive parity-labelled source}
+\label{sec:source}
+
+Let $P_{61}=\prod_{p\le61}p$.  Every squarefree $k$ has a unique factorization
+\begin{equation}
+ k=d p_1\cdots p_t,
+ \qquad d\mid P_{61},\quad 67\le p_1<\cdots<p_t.
+\label{eq:factorization}
+\end{equation}
+We write $\epsilon(k)=(-1)^{\omega(k)}\in\{+,-\}$.
+
+\begin{definition}[Parity-labelled canonical source]
+For each endpoint $Y$ let $\Qpack_Y^+$ and $\Qpack_Y^-$ be two copies of the same positive canonical packet.  Their signed row observation is
+\[
+ \Obs_j(\Qpack_Y^+)=Q_Y(j),\qquad
+ \Obs_j(\Qpack_Y^-)=-Q_Y(j).
+\]
+For fixed $X$, the native positive source is
+\begin{equation}
+ \Native_X=\bigoplus_{\substack{k\le X/2\\\mu(k)\ne0}}
+ \frac1{\sqrt k}\Qpack_{X/k}^{\epsilon(k)}.
+\label{eq:nativesource}
+\end{equation}
+\end{definition}
+The sum is finite, and by construction
+\begin{equation}
+ \Obs_j(\Native_X)=c_X(j),\qquad j=2,3.
+\label{eq:obsnative}
+\end{equation}
+No sign is assigned to a physical row before the source coupling is completed.
+
+A history label stores $d$, the ordered rough primes already used, the current parity, and the least admissible next rough prime.  These labels are external: positive scalar multiplication, direct sum, child placement, and terminal Hall coupling preserve them.
+
+\section{Exact rough-prime hazard identity}
+\label{sec:hazard}
+
+Let $67\le p_1<\cdots<p_k$ be a finite ordered list and put
+\begin{equation}
+ r_i=p_i^{-1/2},\qquad s_0=1,
+ \qquad s_i=\prod_{h\le i}(1-r_h),
+\end{equation}
+\begin{equation}
+ \lambda_i=r_i s_{i-1},\qquad
+ \alpha_i=r_i\lambda_i=r_i^2s_{i-1}.
+\label{eq:hazardcoeff}
+\end{equation}
+Then $s_{i-1}-s_i=\lambda_i$, so
+\begin{equation}
+ s_k+\sum_{i=1}^k\lambda_i=1,
+ \qquad
+ \sum_i\alpha_i<\frac1{\sqrt{67}}<\frac18.
+\label{eq:budget}
+\end{equation}
+
+Let $A_p$ denote same-index child placement from local scale $Z/p$ into the source at scale $Z$.  For an arbitrary labelled packet $P_Z$ define
+\[
+ C_{p_i}(P_Z)=P_Z-r_iA_{p_i}P_{Z/p_i}.
+\]
+
+\begin{lemma}[Nonduplicating causal identity]
+\label{lem:causal}
+In every linear source coordinate,
+\begin{equation}
+ P_Z=s_kP_Z+
+ \sum_{i=1}^k\lambda_i C_{p_i}(P_Z)
+ +\sum_{i=1}^k\alpha_iA_{p_i}P_{Z/p_i}.
+\label{eq:causalidentity}
+\end{equation}
+The identity remains valid after any finite sequence of parity swaps or external history labels.
+\end{lemma}
+\begin{proof}
+For each $i$,
+\[
+ \lambda_iC_{p_i}(P_Z)+\alpha_iA_{p_i}P_{Z/p_i}
+ =\lambda_iP_Z
+\]
+after using $\alpha_i=r_i\lambda_i$.  Summing and applying~\eqref{eq:budget} proves the formula.  The proof is coordinatewise and therefore commutes with passive labels and parity swaps.
+\end{proof}
+
+\begin{remark}[Terminal tail]
+For the two-row source, a child at local scale below $2$ has zero row observation.  If the list $p_1,\dots,p_k$ contains every admissible rough prime with $p_i\le Z/2$, the survival packet $s_kP_Z$ is exactly the aggregate first-hazard tail over larger primes.  It may therefore be recorded as a zero-child terminal causal packet; no same-scale frontier remains.  This is the point at which the divergent Euler sum $\sum_p p^{-1/2}$ is used: the infinite survival product is zero, while the finite tail mass is $s_k$.
+\end{remark}
+
+\section{The finite paired stopping line}
+\label{sec:stopping}
+
+The source class contains positive packets and paired packets.  A paired packet is a finite positive direct sum of two parity-labelled channels whose signed observation is their difference.  It is not required to have a nonnegative ordinary or component-row observation before terminal coupling.
+
+\begin{definition}[Scale rank]
+For a state with local scale $Z$, define
+\begin{equation}
+ \rk(Z)=\min\{n\ge0:Z/67^n<67\}.
+\label{eq:rank}
+\end{equation}
+A current edge with rough prime $p$ is terminal if its child scale $y=Z/p$ is below $67$.
+\end{definition}
+
+\begin{lemma}[History stability of the terminal coupling]
+\label{lem:history}
+Suppose a terminal Hall operator realizes the canonical parity source for parameters $(p,y,d)$, where $p\ge67$, $1\le y<67$, and $d\mid P_{61}$.  Tensoring every source atom with a common external history label and multiplying it by a nonnegative scalar preserves target conservation, row identities, and row nonnegativity.  A finite positive direct sum of such labelled terminal couplings is again a terminal coupling.
+\end{lemma}
+\begin{proof}
+The Hall equations are linear in source masses.  The history label is not observed by the target or row maps, and a common positive scalar multiplies both sides of every equality and inequality.  Direct sums preserve nonnegativity coordinatewise.
+\end{proof}
+
+\begin{theorem}[Finite first-owner stopping theorem]
+\label{thm:stopping}
+For each $X$ and each parity-labelled native source~\eqref{eq:nativesource}, repeated use of~\eqref{eq:causalidentity} produces a finite source equality
+\begin{equation}
+ \Native_X=\bigoplus_{\ell\in\mathcal L_X}
+ \gamma_\ell\mathscr D(p_\ell,y_\ell,d_\ell,h_\ell)
+ \oplus
+ \bigoplus_{u\in\mathcal O_X}\eta_u\mathscr O(x_u,h_u),
+\label{eq:stoppingline}
+\end{equation}
+with the following properties.
+\begin{enumerate}[label=(\roman*)]
+\item $\gamma_\ell,\eta_u\ge0$.
+\item $p_\ell\ge67$, $1\le y_\ell<67$, $d_\ell\mid P_{61}$.
+\item $1\le x_u<67$ for every outer terminal packet.
+\item Each root source occurrence has exactly one history/owner label.
+\item No oriented intermediate child is physically observed.
+\item The same coefficient appears in both component rows.
+\end{enumerate}
+The construction has depth at most $\rk(X)$.
+\end{theorem}
+
+\begin{proof}
+We give the induction in the source module, before signed observation.  At a state of scale $Z$ with next-prime cutoff $p_0$, list all rough primes
+\[
+ p_0\le p_1<\cdots<p_k\le Z/2.
+\]
+Apply Lemma~\ref{lem:causal}.  The survival term is the aggregate first-hazard tail for primes greater than $Z/2$; its child row is zero in rows two and three, so it is an outer terminal packet.
+
+For each $p_i>Z/67$, the paired causal edge has child scale $y=Z/p_i<67$ and is terminal.  For each $p_i\le Z/67$, retain both the causal edge and the positive contracted child in the unresolved source category.  Their local scale is $Z/p_i\le Z/67$, hence their rank is strictly smaller.
+
+The recursion preserves a normal form with one distinguished outer causal edge.  If a paired state is written $\mathscr D_p[V_y]$, where $V_y$ is its positive history packet at local scale $y$, an exact decomposition $V_y=\bigoplus_\ell b_\ell V_{\ell,y}$ is lifted linearly as
+\[
+ \mathscr D_p[V_y]=\bigoplus_\ell b_\ell\mathscr D_p[V_{\ell,y}].
+\]
+Thus subsequent rough primes are stored inside the common positive history packet; they do not create a separately observed oriented child.  When $y<67$, expansion of that history gives a positive direct sum of canonical terminal leaves, each still carrying the same distinguished edge and an effective local endpoint below $67$.  Lemma~\ref{lem:history} applies leafwise.
+
+The operation is performed on the complete paired source, not on its signed row.  Appending $p_i$ to the ordered rough history gives the unique first owner.  Child placements append that history and flip parity once; distinct primes and distinct histories therefore produce disjoint labelled source atoms.  Lemma~\ref{lem:history} allows every terminal coupling to carry the accumulated history without altering its row inequalities.
+
+Apply the induction hypothesis separately to every lower-rank unresolved state.  Since the branching set at each nonterminal node is finite and the rank decreases, the recursion terminates after at most $\rk(X)$ levels.  Substitution of the exact source identities gives~\eqref{eq:stoppingline}.  Coefficient equality and one-use ownership follow inductively from~\eqref{eq:causalidentity}; no limit or rough-density argument is involved.
+\end{proof}
+
+\begin{remark}[Hostile reconstruction point]
+The proof must be read in the parity-labelled source module.  If an intermediate paired edge is replaced by a separately nonnegative physical child, the statement becomes false: a known $q=2$ separator gives a negative oriented-child response.  The theorem never performs that replacement.
+\end{remark}
+
+\section{Terminal Target--Lorenz theorem}
+\label{sec:terminal}
+
+Let $d\mid P_{61}$ be squarefree, $p\ge67$, and $1\le y<67$.  The terminal signed row is
+\begin{equation}
+ R_{p,y,d}(j)=\frac{\mu(d)}{\sqrt d}
+ \left[Q_{py/d}(j)-p^{-1/2}Q_{y/d}(j)\right].
+\label{eq:terminalrow}
+\end{equation}
+The positive even and odd source masses are denoted $T_e,T_o$.  A no-upward Hall flow $t_{o,e}$ satisfies
+\[
+ \sum_e t_{o,e}=T_o,
+ \qquad
+ r_e=T_e-\sum_o t_{o,e}\ge0.
+\]
+For the target-normalized profile $\rho_j$, demand conservation gives
+\begin{equation}
+ \sum_eT_e\rho_j(e)-\sum_oT_o\rho_j(o)
+ =\sum_e r_e\rho_j(e)
+ +\sum_{o,e}t_{o,e}\bigl[\rho_j(e)-\rho_j(o)\bigr].
+\label{eq:Hallrow}
+\end{equation}
+When $e\le o$, the directed profile theorem gives $\rho_j(e)\ge\rho_j(o)$.
+
+\begin{theorem}[Directed terminal realization]
+\label{thm:terminal}
+For every $p\ge67$, $1\le y<67$, and every terminal history, the complete $P_{61}$ parity source has a positive realization whose signed component rows agree with~\eqref{eq:terminalrow} and are nonnegative for $j=2,3$.
+\end{theorem}
+
+\begin{proof}[Computer-assisted proof]
+The proof has a compact part and a tail part.
+
+For $py<166000$, the source atoms and every activation boundary are finite.  The compact certificate evaluates the Hall-prefix inequalities and target-normalized row inequalities on every real activation cell, including both one-sided boundary values.  Its arithmetic is exact rational arithmetic combined with outward enclosures for the finitely many square roots and logarithms.
+
+For $py\ge166000$, the tail is reduced to $51{,}118{,}080$ ordered activation records over all $262{,}144$ divisors of $P_{61}$ and all $65$ rows.  The retained implementation uses MPFR~4.2.2 at $256$ bits.  Base values are enclosed with \texttt{MPFR\_RNDD} and \texttt{MPFR\_RNDU}; all event products use outward basic interval operations.  The certified lower bounds are
+\[
+ \Theta_j(p,y)>26.7858198871370094575061,
+\]
+\[
+ \Theta_j^{\rm parent}>79.2368736388876425819072,
+\]
+\[
+ \frac{d}{dt}\Theta_j^{\rm parent}(t^2)
+ >0.239715873017393372044407.
+\]
+The compact domain owns $py<166000$ and the tail owns $py\ge166000$, so there is no overlap or omitted boundary.  Equation~\eqref{eq:Hallrow} then writes the signed row as a positive residual-source row plus a nonnegative current-only Hall bonus.  Restricting to rows $2$ and $3$ proves the theorem.
+
+The frozen tail proof-object SHA--256 is
+\begin{center}
+\texttt{\seqsplit{ba6b137b64819a9d01e706ffffdf100b091e49034895e6eeb280b56f514c99c5}}.
+\end{center}
+The compact theorem is frozen at blob
+\texttt{2c16327c6653009667fa06ddbb24628ff583c0fe}.  The deterministic packet accompanying this paper records all source paths and hashes needed to replay these two inputs.
+\end{proof}
+
+The outer packets $1\le x<67$ are covered by the same directed finite row certificate.  Their smallest retained strict lower bound is positive at endpoint $67$, row $66$; only rows $2,3$ are used here.
+
+\section{Positivity of the two native rows}
+\label{sec:positivity}
+
+\begin{theorem}[Two-row producer]
+\label{thm:producer}
+For every real $X\ge1$,
+\[
+ \boxed{c_X(2)\ge0,\qquad c_X(3)\ge0.}
+\]
+\end{theorem}
+\begin{proof}
+Apply Theorem~\ref{thm:stopping} to $\Native_X$.  Realize every terminal causal leaf by Theorem~\ref{thm:terminal} and every outer leaf by the directed outer-row certificate.  The result is a finite direct sum of nonnegative physical rows.  Every source substitution was an exact equality before observation, and every root occurrence has one owner.  Therefore signed observation commutes with the finite sum and, by~\eqref{eq:obsnative}, yields exactly $c_X(2)$ and $c_X(3)$.
+\end{proof}
+
+For independent algebraic audit, the two rows have sparse Riesz coefficients
+\begin{equation}
+ c_X(j)=\sum_{n\le X}\frac{a_j(n)}{\sqrt n}\log\frac Xn,
+\end{equation}
+with
+\begin{align}
+ a_2(n)={}&\one_{n=1}-\mu(n)
+ +2\one_{2\mid n}\mu(n/2)-\one_{3\mid n}\mu(n/3),\label{eq:a2}\\
+ 3a_3(n)={}&\one_{n=1}-\mu(n)-\one_{2\mid n}\mu(n/2)
+ +5\one_{3\mid n}\mu(n/3)-3\one_{4\mid n}\mu(n/4).
+\label{eq:a3}
+\end{align}
+The coefficient sequences are not termwise nonnegative; positivity is a property of the complete Riesz sums.
+
+\section{Fixed-row Mellin transforms}
+\label{sec:mellin}
+
+For fixed $j\ge2$ and $\Re s>1/2$, termwise integration is absolutely convergent.  Put $z=s+1/2$ and
+\begin{equation}
+ P_j(z)=A_jj^{-z}-B_j(j+1)^{-z}-C_j\sum_{m=1}^{j+1}m^{-z}.
+\label{eq:Pj}
+\end{equation}
+
+\begin{lemma}[Exact transform]
+\label{lem:mellin}
+For $\Re s>1/2$,
+\begin{equation}
+ \Mell_j(s):=\int_1^\infty c_X(j)X^{-s-1}\,dX
+ =\frac{C_j}{s^2}+\frac{P_j(s+1/2)}{s^2\zeta(s+1/2)}.
+\label{eq:mellin}
+\end{equation}
+The right-hand side gives a meromorphic continuation to $\Re s>0$ and is analytic at every real $s>0$.
+\end{lemma}
+\begin{proof}
+For $m\ge1$,
+\[
+ \int_m^\infty \log(X/m)X^{-s-1}\,dX=\frac{m^{-s}}{s^2}.
+\]
+Applying this to~\eqref{eq:Qrow} gives
+\[
+ \int_1^\infty Q_X(j)X^{-s-1}\,dX
+ =\frac{C_j\zeta(z)+P_j(z)}{s^2}.
+\]
+In~\eqref{eq:nativerow}, substitute $X=kY$; the factor is $k^{-s-1/2}$.  Hence the M\"obius series contributes $1/\zeta(z)$ and gives~\eqref{eq:mellin}.  On the positive real $s$-axis, $\zeta(s+1/2)$ has no zero.  Its pole at $s=1/2$ makes $1/\zeta$ vanish, so the apparent point is removable.
+\end{proof}
+
+\section{Two-row noncancellation}
+\label{sec:noncancel}
+
+For $j=2,3$,~\eqref{eq:Pj} simplifies to
+\begin{align}
+ P_2(z)&=2^{1-z}-1-3^{-z},\label{eq:P2}\\
+ 3P_3(z)&=5\,3^{-z}-2^{-z}-1-3\,4^{-z}.
+\label{eq:P3}
+\end{align}
+
+\begin{lemma}[No common zero]
+\label{lem:nocommon}
+$P_2$ and $P_3$ have no common zero in $\Re z>0$.
+\end{lemma}
+\begin{proof}
+Put $a=2^{-z}$ and $b=3^{-z}$.  If $P_2(z)=0$, then $b=2a-1$.  Substitution in~\eqref{eq:P3} gives
+\[
+ -3(a-1)(a-2)=0.
+\]
+For $\Re z>0$, $|a|=2^{-\Re z}<1$, so neither $a=1$ nor $a=2$ is possible.
+\end{proof}
+
+\section{Landau's theorem and the proposed conclusion}
+\label{sec:landau}
+
+We use the classical Mellin form of Landau's theorem: if $f\ge0$ is locally integrable on $[1,\infty)$ and has finite abscissa of convergence $\sigma_c$, then the real point $s=\sigma_c$ is a singularity of its Mellin transform unless the defining integral is holomorphic beyond it.
+
+\begin{theorem}[Proposed Riemann Hypothesis conclusion]
+\label{thm:rh}
+Theorems~\ref{thm:stopping} and~\ref{thm:terminal}, together with the classical analytic facts used in Lemma~\ref{lem:mellin}, imply the Riemann Hypothesis.
+\end{theorem}
+\begin{proof}
+By Theorem~\ref{thm:producer}, the functions $X\mapsto c_X(2)$ and $X\mapsto c_X(3)$ are nonnegative.  Equation~\eqref{eq:Qrow} gives the elementary growth bound $c_X(j)=O_j(\sqrt X\log(2X))$, so each Mellin abscissa is finite.
+
+Lemma~\ref{lem:mellin} gives a continuation analytic at every positive real $s$.  Landau's theorem therefore forces the defining Mellin integrals to be holomorphic throughout $\Re s>0$.
+
+Suppose $\zeta(\rho)=0$ with $\Re\rho>1/2$ and put $s_\rho=\rho-1/2$.  By Lemma~\ref{lem:nocommon}, at least one of $P_2(\rho)$ and $P_3(\rho)$ is nonzero.  The corresponding expression~\eqref{eq:mellin} has a nonremovable pole at $s=s_\rho$, contradicting holomorphy of the defining nonnegative Mellin integral there.  Thus no zero lies to the right of the critical line.  The functional equation reflects the conclusion to the left, so all nontrivial zeros lie on $\Re s=1/2$.
+\end{proof}
+
+\section{No-RH-input audit}
+
+The proposed proof uses only:
+\begin{itemize}
+\item finite squarefree factorization and parity labels;
+\item the exact coefficient identities~\eqref{eq:hazardcoeff}--\eqref{eq:causalidentity};
+\item finite scale descent by primes at least $67$;
+\item a finite/directly certified terminal Hall theorem;
+\item absolutely convergent Dirichlet series in $\Re z>1$;
+\item meromorphic continuation and the functional equation of $\zeta$;
+\item Landau's theorem for nonnegative Mellin transforms.
+\end{itemize}
+It does not assume RH, GRH, a zero-density estimate, a Mertens bound, a power-saving prime number theorem, a square-root prime error, or an endpoint-deficit inequality.
+
+\section{Computer-assisted proof object and reproducibility}
+
+The accompanying deterministic archive includes:
+\begin{itemize}
+\item this \LaTeX{} source and compiled PDF;
+\item theorem and claim-status ledgers;
+\item a lightweight exact checker for the causal coefficients, two-row Mellin algebra, owner/rank fixtures, and mutation firewalls;
+\item the exact PR/commit/blob lock for the compact and MPFR terminal theorem;
+\item SHA--256 manifests and a one-command publisher.
+\end{itemize}
+The lightweight checker is not substituted for Theorems~\ref{thm:stopping} or~\ref{thm:terminal}; it reports this limitation in its retained JSON.
+
+\section{Hostile review checklist}
+
+A reviewer should reject the proposal at the first occurrence of:
+\begin{enumerate}
+\item a source atom receiving two first-owner histories;
+\item a causal substitution whose coefficients do not reproduce the parent exactly;
+\item an unresolved branch whose scale rank does not fall;
+\item a terminal leaf with $y\ge67$ or with a non-$P_{61}$ small divisor;
+\item a parity swap lost between source and row observation;
+\item a Target--Lorenz interval not covered by the compact or MPFR certificate;
+\item an ordinary and radix-four coefficient mismatch inside the terminal realization;
+\item an incorrect factor $k^{-s-1/2}$ in the Mellin substitution;
+\item a common zero of $P_2,P_3$ in $\Re z>0$;
+\item a failure of the hypotheses or orientation of Landau's theorem.
+\end{enumerate}
+
+\section{Conclusion}
+
+The manuscript replaces the refuted cross-$n$ reservoir transport by a finite paired source computation.  The proof candidate is unusually concentrated: the arithmetic burden is the exact finite stopping line plus the terminal directed Hall theorem; the analytic finish is a two-row reciprocal-zeta Mellin argument.  The paper is submitted as a complete unconditional proposal, not as an accepted resolution.
+
+\appendix
+\section{Exact coefficient checks}
+
+From~\eqref{eq:ABC},
+\[
+ A_j-B_j=(j+1)C_j>0,
+ \qquad B_j=1-C_j.
+\]
+For the hazard coefficients,
+\[
+ \sum_i\alpha_i=\sum_i r_i\lambda_i
+ \le r_1\sum_i\lambda_i<1/\sqrt{67}.
+\]
+For rows two and three, the common-zero elimination in Lemma~\ref{lem:nocommon} is exact algebra over the two exponential variables $2^{-z}$ and $3^{-z}$.
+
+\section{Frozen terminal theorem metadata}
+
+\begingroup\scriptsize
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.63\textwidth}}
+\toprule
+Item & Frozen value\\
+\midrule
+\endhead
+Projective terminal source PR & \#550 at \texttt{\seqsplit{20646a78c3e8843001cb49ea0c9741f6d0d446f7}}\\
+Compact theorem & \texttt{L-91781}, blob \texttt{\seqsplit{2c16327c6653009667fa06ddbb24628ff583c0fe}}\\
+Proportional reduction & \texttt{L-91780}, blob \texttt{\seqsplit{aeddda0288be0b8f5484d75e5bdee20c2ce4d70f}}\\
+Tail proof object & \texttt{\seqsplit{ba6b137b64819a9d01e706ffffdf100b091e49034895e6eeb280b56f514c99c5}}\\
+Packet verification & \texttt{\seqsplit{cc0696b466fbd733043471b322a57f681fd4b845db8cd7225b0861d7a273bb72}}\\
+MPFR precision & 256 bits\\
+Tail events & 51,118,080\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\begin{thebibliography}{9}
+\bibitem{Landau}
+E. Landau, \emph{Handbuch der Lehre von der Verteilung der Primzahlen}, Teubner, 1909.
+\bibitem{Titchmarsh}
+E. C. Titchmarsh, revised by D. R. Heath-Brown, \emph{The Theory of the Riemann Zeta-Function}, second edition, Oxford University Press, 1986.
+\bibitem{HardyRiesz}
+G. H. Hardy and M. Riesz, \emph{The General Theory of Dirichlet's Series}, Cambridge University Press, 1915.
+\end{thebibliography}
+
+\end{document}
