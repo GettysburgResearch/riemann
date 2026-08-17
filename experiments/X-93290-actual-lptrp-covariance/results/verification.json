@@ -1,0 +1,36 @@
+{
+  "activation_checks": 9,
+  "actual_filtered_coefficient_checks": 4000,
+  "arithmetic_class": "EXACT_RATIONAL_PLUS_EXACT_U128_FINITE_CERTIFICATE",
+  "covariance_checks": {
+    "gauge_identity": "-119/30",
+    "one_atom_pointwise_samples": [
+      "1",
+      "-1",
+      "1",
+      "-1"
+    ],
+    "positive_spectral_quadratic_form": "332"
+  },
+  "mutations_detected": 4,
+  "p5_monotone_cone_refutation": {
+    "row2_difference_upper": "-9/8",
+    "row3_scaled_difference_upper": "-55/14"
+  },
+  "proof_object_sha256": "7730adf4f5fdc0e004db24e3066d098698af1ea8f40916f6ee48285db2b1b745",
+  "row_certificate": {
+    "limit": 100000000,
+    "minimum_row2_prefix_scaled_integer": "2121320343559642572",
+    "minimum_three_times_row3_prefix_scaled_integer": "2464101615137754582",
+    "real_endpoint_upper_exclusive": 100000001
+  },
+  "scientific_flags": {
+    "actual_lptrp23_through_100m_proved": true,
+    "fixed_finite_sieve_eventual_proved": true,
+    "growing_prime_tail_proved": false,
+    "positive_covariance_spectrum_proved": true,
+    "rh_established": false,
+    "scid_pl_proved": false
+  },
+  "verdict": "PASS_X_93290_ACTUAL_LPTRP_COVARIANCE"
+}

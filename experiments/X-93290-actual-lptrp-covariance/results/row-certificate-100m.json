@@ -1,0 +1,21 @@
+{
+  "arithmetic_class": "INTEGER_COEFFICIENTS_PLUS_EXACT_U128_SQRT_BRACKETS",
+  "coefficient_checks": 200000000,
+  "final_row2_prefix_lower_bound_decimal": "8.934803901407767209",
+  "final_row3_prefix_lower_bound_decimal": "3.132711092705793064",
+  "limit": 100000000,
+  "max_abs_row2_coefficient": 3,
+  "max_abs_three_times_row3_coefficient": 6,
+  "minimum_row2_prefix_at": 2,
+  "minimum_row2_prefix_lower_bound_decimal": "2.121320343559642572",
+  "minimum_row2_prefix_scaled_integer": "2121320343559642572",
+  "minimum_row3_prefix_at": 4,
+  "minimum_row3_prefix_lower_bound_decimal": "0.821367205045918194",
+  "minimum_three_times_row3_prefix_scaled_integer": "2464101615137754582",
+  "real_endpoint_consequence": "rows 2 and 3 are nonnegative for every real X in [1,limit+1) by exact activation monotonicity",
+  "rh_established": false,
+  "scale_denominator": 1000000000000000000,
+  "verdict": "PASS_ACTUAL_LPTRP23_PREFIX_CERTIFICATE",
+  "zero_or_negative_row2_prefix_at": 0,
+  "zero_or_negative_row3_prefix_at": 0
+}
