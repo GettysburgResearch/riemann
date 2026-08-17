@@ -1,0 +1,22 @@
+{
+  "classification": "PASS_T97400_REPAIRED_P61_BIAS",
+  "mpfr_version": "4.2.2",
+  "precision_bits": 256,
+  "long_double_mantissa_bits": 64,
+  "finite_end": 1000000,
+  "compact_C0_interval": [-13.721771741974681191, -13.721771741974681191],
+  "compact_error_sample_abs_upper": 3.248791006502458778,
+  "compact_error_derivative_upper": 1.8391992437613517986,
+  "compact_error_coverage_upper": 3.2671829989400720251,
+  "base_F_min": {"N": 3, "lower": 4.3006069121672947375},
+  "base_M_minus_F_min": {"N": 5, "lower": 3.3471532697131465284},
+  "old_40F_minus_M_min": {"N": 184, "lower": -18.114417591649672801, "upper": -18.114417591649601746},
+  "finite_42F_minus_M_min": {"N": 184, "lower": 3.2727417058979848541, "upper": 3.2727417058980594611},
+  "finite_M_minus_8F_min": {"N": 67, "lower": 135.51661277216024359, "upper": 135.51661277216027202},
+  "tail_42F_minus_M_min": {"left": "1000110", "right": "1001220", "lower": 119.87156415034559132},
+  "tail_M_minus_8F_min": {"left": "1000000", "right": "1000110", "lower": 40007.499398295200081},
+  "divisor_count": 262144,
+  "claimed_old_one_over_40": false,
+  "repaired_one_over_42": true,
+  "RH_established_by_replay": false
+}
