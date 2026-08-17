@@ -1,0 +1,34 @@
+{
+  "schema": "riemann.x97200.rjte-completion-port.control.v1",
+  "frozen": {
+    "pr570": "992404909d6c2940ae8ae849633fe5530ed79db0",
+    "pr564": "c74fe9bd7fd284718f4dcef8328af07e553d9d90",
+    "pr557": "d11b08938c4db6a6192e96c564a7818cffc77100",
+    "pr561": "db9bdc63c855c6ddf664b763d748f8155a6a2c67"
+  },
+  "finite_overshoot": {
+    "odd_primes": [3, 5, 7, 11, 13],
+    "endpoint": 26,
+    "bits": 200
+  },
+  "trace_counterexample": {
+    "endpoint": 500,
+    "decimal_precision": 80
+  },
+  "completion_diagnostic": {
+    "endpoint": 8192,
+    "bits": 220,
+    "prime_order": "descending"
+  },
+  "firewalls": {
+    "rjte_proved": false,
+    "tfpe_proved": false,
+    "fcbi_proved": false,
+    "rh_established": false,
+    "pr564_metadata_is_theorem": false,
+    "compiler_alone_implies_boundary": false,
+    "trace_alone_implies_tfpe": false,
+    "eventual_rjte_equals_unmodified_complete_monotonicity": false
+  },
+  "expected_mutations": 12
+}
