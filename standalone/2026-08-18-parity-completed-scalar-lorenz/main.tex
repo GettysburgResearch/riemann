@@ -1,0 +1,297 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,enumitem,microtype}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\PhiX}{\Phi_X}
+\title{Parity-Completed Factor--67 Gluing and the Scalar Lorenz Frontier\\\large A hostile reconstruction of a two-row Mellin--Landau proposal for the Riemann hypothesis}
+\author{Agentic Polymath Project}
+\date{August 18, 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We reconstruct a parity-resummed factor--67 proposal from its literal arithmetic source to its reciprocal-zeta Mellin transform. Two mandatory adversarial inputs alter the claimed conclusion. Correct owner incidence and Cauchy--Binet propagate determinant signs but do not imply the global target capacity required by Hall. Exact matching of the scalar $5Q(2)+3Q(3)$ generally decreases row two while increasing row three, so scalar exactness cannot be promoted to two-row feasibility. We prove the complete finite parity owner ledger, the exact completed-parity scalar Hall problem as a fractional-knapsack/Lorenz linear program with one-parameter dual, the precise scope of the compact-plus-MPFR terminal certificate, and the full Mellin--Landau implication. The first unsupported arrow is the uniform completed-parity scalar Lorenz inequality, denoted \textup{CPSL67}. Its dual already contains the conclusion-producing scalar sign. Thus the manuscript gives a sharp conditional reduction and an exact downgrade, not a proof of the Riemann hypothesis.
+\end{abstract}
+
+\tableofcontents
+
+\section{Frozen genealogy, status, and interface discipline}
+
+The base is PR~\#566 at
+\[
+\texttt{2407b4ffe5024a2e3898922cf0b722d5cf69e496}.
+\]
+The mandatory adversarial inputs are PR~\#574 at
+\[
+\texttt{74fba7f3e55fa9a53d1eb814e5067f5011ef5e86}
+\]
+and PR~\#575 at
+\[
+\texttt{265c481ebd02807ab7d9a95cb0cf905a22c1876f}.
+\]
+Repository claims supply provenance only. Every theorem consumed below is restated with its source category, coordinates, quantifiers, orientation and exact conclusion.
+
+\paragraph{Scientific status.}
+The paper proves a complete conditional chain
+\[
+\mathrm{CPSL67}\Longrightarrow R_X\ge0\text{ eventually}\Longrightarrow\mathrm{RH}.
+\]
+It does not prove CPSL67 and therefore does not prove RH.
+
+\section{Canonical rows and the unique scalar}
+
+For $j\ge2$, set
+\[
+ A_j=\frac{j+1}{j-1},\qquad
+ B_j=\frac{(j+1)(j-2)}{j(j-1)},\qquad
+ C_j=\frac2{j(j-1)}.
+\]
+For real $Y\ge1$, define
+\begin{align}
+Q_Y(j)={}&\frac{A_j}{\sqrt j}\log\frac Yj\,\1_{Y\ge j}
+-\frac{B_j}{\sqrt{j+1}}\log\frac Y{j+1}\,\1_{Y\ge j+1}\notag\\
+&+C_j\sum_{m\ge j+2}\frac1{\sqrt m}\log\frac Ym\,\1_{Y\ge m}.
+\end{align}
+Every entering hinge vanishes at its activation knot, hence $Q_Y(j)$ is continuous in $Y$. The native M\"obius row is
+\[
+ c_X(j)=\sum_{k\le X/j}\frac{\mu(k)}{\sqrt k}Q_{X/k}(j).
+\]
+
+\begin{lemma}[Positive $5{:}3$ dictionary]\label{lem:dictionary}
+Let
+\[
+ R_X=5c_X(2)+3c_X(3).
+\]
+Before M\"obius convolution, its coefficient dictionary is
+\[
+ q_*(1)=0,\quad q_*(2)=15,\quad q_*(3)=6,\quad q_*(4)=3,\quad q_*(m)=6\ (m\ge5).
+\]
+In particular $q_*(m)\ge0$.
+\end{lemma}
+\begin{proof}
+For row two the coefficients are $3$ at $2$, $0$ at $3$, and $1$ from $4$ onward. For row three they are $2$ at $3$, $-2/3$ at $4$, and $1/3$ from $5$ onward. Taking five times row two plus three times row three gives the stated dictionary.
+\end{proof}
+
+Let $a_*=q_* *\mu$. Direct convolution gives
+\[
+ a_*(n)=6\1_{n=1}-6\mu(n)+9\1_{2\mid n}\mu(n/2)-3\1_{4\mid n}\mu(n/4),
+\]
+and
+\[
+ R_X=\sum_{n\le X}\frac{a_*(n)}{\sqrt n}\log\frac Xn.
+\]
+
+\section{The literal completed-parity source}
+
+Let
+\[
+ P_{61}=\prod_{p\le61}p.
+\]
+Every squarefree source index has the unique factorization
+\[
+ k=d p_1\cdots p_t,\qquad d\mid P_{61},\qquad67\le p_1<\cdots<p_t.
+\]
+Let $h(k)=(p_1,\ldots,p_t)$. A paired source is an ordered pair $(E,O)$, the parity swap is $S(E,O)=(O,E)$, and signed observation is $\Obs(E,O)=R(E)-R(O)$. Hence
+\[
+ \Obs(S^mP)=(-1)^m\Obs(P).
+\]
+Moving a rough prime $p$ from the source index to the history preserves activation and magnitude:
+\[
+ \frac{X/p}{k/p}=\frac Xk,\qquad p^{-1/2}(k/p)^{-1/2}=k^{-1/2}.
+\]
+Thus every literal occurrence retains coefficient magnitude $k^{-1/2}$, activation $X/k$, and character $\mu(d)(-1)^{|h|}=\mu(k)$. The expansion is finite for fixed $X$.
+
+For active rough primes put
+\[
+ r_i=p_i^{-1/2},\quad s_0=1,\quad s_i=\prod_{h\le i}(1-r_h),\quad
+ \lambda_i=r_i s_{i-1},\quad\alpha_i=r_i\lambda_i.
+\]
+Then
+\begin{equation}\label{eq:causal}
+P=s_kP+\sum_i\lambda_i(P-r_iU_iP_i)+\sum_i\alpha_iU_iP_i
+\end{equation}
+is exact because $s_k+\sum_i\lambda_i=1$ and $\alpha_i=r_i\lambda_i$. We use \eqref{eq:causal} only in the free labelled source category. An oriented difference is never declared a positive physical row.
+
+\begin{proposition}[Atomwise conservation]\label{prop:atom}
+After expanding \eqref{eq:causal} at every node and cancelling each $-\lambda_ir_i$ occurrence against the corresponding $+\alpha_i$ child, every original root occurrence remains exactly once with its original coefficient, activation and parity. Applying the scalar observation only after completed parity yields exactly $R_X=5c_X(2)+3c_X(3)$.
+\end{proposition}
+\begin{proof}
+The claim is coefficientwise. The only duplicated label in one generation is the child label $U_iP_i$, whose total coefficient is $-\lambda_ir_i+\alpha_i=0$. First ownership and unique factorization keep different labels disjoint. Finite induction completes the proof.
+\end{proof}
+
+\section{The odd-history witness and the failure of leafwise Hall}
+
+\begin{firewall}[Binding witness]\label{fw:odd}
+Take
+\[
+ X=67\cdot71\cdot13=61841,\qquad h=(67),\qquad(p,y)=(71,13).
+\]
+The complete grouped $P_{61}$ target gap in canonical orientation satisfies
+\[
+ E_T(71,13)-O_T(71,13)>17.
+\]
+The history is odd, so actual even capacity is $O_T$ and actual odd demand is $E_T$. Canonical leafwise exact-target Hall is impossible.
+\end{firewall}
+
+The witness does not refute global compensation. It proves that any valid construction must combine histories before asserting target feasibility.
+
+\section{Why determinant transport is not global Hall}
+
+Let $H$ be terminal-by-source owner incidence and $K$ the terminal target/scalar feature matrix. The correct product is $M=H^{\mathsf T}K$. After ordering sources by terminal owner, nonnegative incidence minors and Cauchy--Binet propagate terminal determinant signs.
+
+\begin{proposition}[TP2 does not imply target capacity]\label{prop:tp2}
+Take
+\[
+ H=I_2,\qquad K=\begin{pmatrix}1&1\\2&4\end{pmatrix}.
+\]
+Every entry is positive and $\det K=2>0$, but if the first row is even supply and the second odd demand, target capacity is $1<2$. Hence owner incidence plus target/scalar TP2 does not imply Hall feasibility.
+\end{proposition}
+
+\section{Scalar exactness is not two-row feasibility}
+
+Put
+\[
+ \rho(Y)=\frac{Q_Y(3)}{Q_Y(2)},\qquad Y>2.
+\]
+The exact analytic argument of the mandatory adversarial input proves that $\rho$ is nondecreasing. Let $Y_e\ge Y_o>2$, $q_i=Q_{Y_i}(2)$, $\rho_i=\rho(Y_i)$, and choose $u$ by scalar exactness
+\[
+ u q_e(5+3\rho_e)=bq_o(5+3\rho_o).
+\]
+Then
+\[
+ \Delta_2=-\frac{3bq_o(\rho_e-\rho_o)}{5+3\rho_e}\le0,
+ \qquad
+ \Delta_3=\frac{5bq_o(\rho_e-\rho_o)}{5+3\rho_e}\ge0,
+\]
+with $5\Delta_2+3\Delta_3=0$. Therefore scalar exactness cannot be promoted to two nonnegative rows. The present route remains in the scalar quotient through the Mellin consumer.
+
+\section{The exact completed-parity Lorenz program}
+
+Fix real $X$ and fully expand the finite source with cumulative parity and activation sides. Let even atoms have capacities $a_i\ge0$, target masses $t_i>0$ and scalar coordinates $r_i$. Let the odd source totals be
+\[
+ T_O=\sum_ob_ot_o,\qquad R_O=\sum_ob_or_o.
+\]
+We seek $0\le u_i\le a_i$ with
+\[
+ \sum_i t_i u_i=T_O,\qquad\sum_i r_i u_i\ge R_O.
+\]
+Define
+\[
+ \PhiX(T)=\max\left\{\sum_i r_i u_i:0\le u_i\le a_i,\ \sum_i t_i u_i=T\right\}.
+\]
+
+\begin{theorem}[Finite scalar Lorenz theorem]\label{thm:lorenz}
+The completed-parity scalar problem is feasible if and only if
+\[
+ T_O\le T_E:=\sum_i a_it_i,\qquad R_O\le\PhiX(T_O).
+\]
+Order atoms by $\theta_i=r_i/t_i$ decreasing and put $A_k=\sum_{i\le k}a_it_i$. For $A_{k-1}\le T\le A_k$,
+\[
+ \PhiX(T)=\sum_{i<k}a_ir_i+\theta_k(T-A_{k-1}).
+\]
+Moreover,
+\[
+ \PhiX(T)=\min_{\lambda\in\R}\left[\lambda T+\sum_i a_i(r_i-\lambda t_i)_+\right].
+\]
+\end{theorem}
+\begin{proof}
+This is the fractional-knapsack exchange argument. If $\theta_i>\theta_j$ and both coefficients are interior, transfer a small target amount from $j$ to $i$; the target equality is fixed and the objective increases. Thus all larger ratios saturate first and at most one atom is fractional. Weak duality is immediate; equality holds at the threshold $\lambda=\theta_k$.
+\end{proof}
+
+\begin{definition}[CPSL67]
+For every sufficiently large real $X$, including both one-sided activation limits, the completed-parity atom table satisfies
+\[
+ T_O\le T_E,\qquad R_O\le\PhiX(T_O).
+\]
+\end{definition}
+
+At dual threshold $\lambda=0$, the inequality already contains the conclusion-producing scalar sign. CPSL67 is therefore the arithmetic theorem carrying zero-free-strip strength.
+
+\section{Exact scope of the terminal certificate}
+
+For canonical terminal parameters $p\ge67$, $1\le y<67$ and rows $2\le j\le66$, the compact theorem covers $py<166000$ cell by cell, including one-sided limits. The MPFR theorem covers $py\ge166000$ using 256-bit directed primitive enclosures and outward interval arithmetic; the boundary belongs to the tail. It certifies nonnegative canonical Target--Lorenz row margins for the complete grouped $P_{61}$ source.
+
+It does not reverse orientation after odd history, prove global target capacity, prove CPSL67, or justify colorwise terminalization. It is a valid local input to the global Lorenz program.
+
+\section{Real endpoints and activation sides}
+
+All logarithmic row hinges are continuous at activation. The target $4\sqrt Y-3$, however, is already nonzero at $Y=1$. Hence a source-complete target calculation must retain atoms with $X/2<k\le X$ even when their row or scalar coordinate vanishes. Omitting them changes target capacity. The finite atom table is piecewise analytic in $X$ and must be checked on open cells and at both one-sided knot limits.
+
+\section{The scalar Mellin transform}
+
+Since $|a_*(n)|\le24$,
+\[
+ |R_X|\le24\log X\sum_{n\le X}n^{-1/2}
+ \le60\sqrt X(1+\log X),\qquad X\ge2.
+\]
+Thus the Mellin integral converges absolutely for $\Re s>1/2$. With $z=s+1/2$, substitution $X=kY$ contributes $k^{-s-1/2}$. Fubini gives
+\begin{equation}\label{eq:mellin}
+\int_1^\infty R_X X^{-s-1}\,dX
+=\frac6{s^2}-\frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)}.
+\end{equation}
+The $6/s^2$ term is the unit source.
+
+For real $s>0$, $\zeta(s+1/2)$ has no real zero. At $z=1$, $1/\zeta(z)$ vanishes, so \eqref{eq:mellin} is removable. The finite numerator is zero-free for $\Re z>0$, because there $|2^{-z}|<1$. A zeta zero of arbitrary multiplicity with real part greater than $1/2$ therefore gives a nonremovable pole in $\Re s>0$.
+
+\section{Landau and the conditional RH theorem}
+
+\begin{theorem}\label{thm:conditional}
+CPSL67 implies the Riemann hypothesis.
+\end{theorem}
+\begin{proof}
+CPSL67 gives a feasible completed-parity scalar coupling, hence $R_X\ge0$ eventually. Put $X=e^t$. After removing a compact initial interval, the Mellin transform is the Laplace transform of a nonnegative locally integrable function plus an entire term. Landau's theorem forces the real abscissa of convergence to be a singularity unless continuation extends farther left. Equation \eqref{eq:mellin} is analytic at every positive real $s$, so the abscissa is at most zero and the defining transform is holomorphic for $\Re s>0$. An off-line zero would create a nonremovable pole there, contradiction. The functional equation reflects the conclusion.
+\end{proof}
+
+\section{Independent executable reconstruction}
+
+The accompanying verifier reconstructs the coefficient dictionary, parity and owner invariants, formal causal cancellation, the odd-history target witness, the scalar/two-row tradeoff, the exact Lorenz primal and dual on rational fixtures, literal finite target/scalar atom tables, and the Mellin numerator. It mutation-tests every load-bearing interface. Computation is used only for finite certificate verification and falsification; it does not prove CPSL67 or RH.
+
+\section{Response matrix for the mandatory adversarial inputs}
+
+\begin{center}
+\begin{tabular}{p{0.48\linewidth}p{0.42\linewidth}}
+\toprule
+Finding & Disposition\\
+\midrule
+Correct product is $H^{\mathsf T}K$ & Independently reproved\\
+Owner ordering required for incidence minors & Accepted and incorporated\\
+TP2/Cauchy--Binet does not imply global Hall & Accepted; old implication withdrawn\\
+Odd-history witness is binding & Reproduced and used as firewall\\
+Completed-parity owner ledger is finite & Independently reproved\\
+$Q_3/Q_2$ monotonicity & Accepted at its exact scope\\
+Scalar exactness does not lift to two rows & Accepted; route kept scalar\\
+Finite Lorenz LP and dual & Independently reproved\\
+Uniform CPSL67 remains open & Accepted as first unsupported arrow\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Final status}
+
+\[
+\boxed{\text{completed-parity owner ledger: proved exactly}}
+\]
+\[
+\boxed{\text{finite scalar Lorenz primal/dual: proved exactly}}
+\]
+\[
+\boxed{\text{CPSL67: open and RH-bearing}}
+\]
+\[
+\boxed{\text{Riemann hypothesis: unproved}}
+\]
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
