@@ -1,0 +1,18 @@
+{
+  "schema": "riemann.x96600.single-scalar-prefix.v1",
+  "formal_cutoff": 4096,
+  "prime_stages": [2, 3, 5, 7, 11, 13],
+  "genealogy": {
+    "base_pr": 551,
+    "base_sha": "c8702aef34a25c614f91dea1ecc6e787478e8170",
+    "comparison_pr": 552,
+    "comparison_sha": "81df9c3f507aba0e5f21187044583a0d6fb90db9"
+  },
+  "firewalls": {
+    "scps_proved": false,
+    "actq2_proved": false,
+    "rh_established": false,
+    "imports_pr552_transport": false,
+    "finite_scan_promoted": false
+  }
+}
