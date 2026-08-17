@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.x97400.parity-completed-scalar-lorenz.v1",
+  "classification": "PASS_T97400_PARITY_COMPLETED_SCALAR_LORENZ_RECONSTRUCTION",
+  "history_character_checks": 20,
+  "causal_coefficient_fixtures": 3,
+  "lorenz_primal_dual_fixtures": 3,
+  "odd_history_target_gap_lower_fixture": "3401/200",
+  "mellin_numerator": "-3*(1-2^(-z))*(2-2^(-z))",
+  "L96651_proved": false,
+  "CPSL67_proved": false,
+  "terminal_51M_campaign_rerun": false,
+  "rh_established": false,
+  "not_proved_by_replay": [
+    "CPSL67",
+    "full MPFR terminal campaign",
+    "Landau theorem",
+    "RH"
+  ],
+  "note": "Run verify.py to regenerate the full deterministic result, including its proof-object SHA-256. The canonical richer result and all finite literal-source diagnostics are included in the deterministic ZIP mirrored in Google Drive."
+}
