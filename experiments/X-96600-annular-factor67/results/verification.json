@@ -1,0 +1,93 @@
+{
+  "causal_identity": [
+    {
+      "alpha_sum": "1/4489",
+      "primes": [
+        67
+      ]
+    },
+    {
+      "alpha_sum": "9463/22629049",
+      "primes": [
+        67,
+        71
+      ]
+    },
+    {
+      "alpha_sum": "72405667/120590202121",
+      "primes": [
+        67,
+        71,
+        73
+      ]
+    },
+    {
+      "alpha_sum": "5281159972221/14721014762775721",
+      "primes": [
+        101,
+        103,
+        107,
+        109
+      ]
+    }
+  ],
+  "compact": {
+    "range": [
+      1,
+      2000
+    ],
+    "row2_argmin": 104,
+    "row2_ge67_min": "1.5050988958009577059529370736282106766715173803272515148108653483354418082983863",
+    "row3_argmin": 102,
+    "row3_ge67_min": "0.54033074294833479746686296583528874762415746936078963029646264059471073085307949",
+    "small_row2_max": "2.2733979566711452617315239307765799955356066803566514937198442243074386059292010",
+    "small_row3_max": "0.95361334236433481311128737673564843073251266859777839245946265011590535233608557"
+  },
+  "divisors": 262144,
+  "negative_controls": [
+    "fixed-product convex packets",
+    "all-integer rough store",
+    "individual d-color positivity",
+    "branchwise child observation"
+  ],
+  "phi": {
+    "bound": "abs(Phi)<3/2",
+    "events": 524288,
+    "float_max": [
+      1.4195858312707166,
+      602
+    ],
+    "float_min": [
+      -1.1462988516172703,
+      15960
+    ],
+    "high_precision_max": "1.4195858312707202692577434488718163659800969874120549574918402766429482483459608",
+    "high_precision_min": "-1.1462988516172686676218511334198952474674959821063122281516986224860266789823868"
+  },
+  "proof_object_sha256": "ee02d2c5bbefda69f658f4f1475e2be1c1a85db9354fde5cf93a69d0c6526b58",
+  "quadrature": {
+    "statement": "K(x)=2sqrt(x)+zeta(1/2)log4+e4(x), |e4(x)|<=1/(6sqrt(x))",
+    "tail_method": "two-term Euler-Maclaurin; small cells directed"
+  },
+  "rh_established": false,
+  "runtime_seconds": 2.059720993041992,
+  "schema": "riemann.x96600.annular-factor67.v1",
+  "tail": {
+    "A_min_at": 70,
+    "A_min_ge67": 0.01642338368177052,
+    "row2_lower": [
+      6.606311136626891,
+      2002
+    ],
+    "row3_lower": [
+      0.6509565644229856,
+      2002
+    ],
+    "start": 2000
+  },
+  "terminal": {
+    "row2": ">7/5-(5/2)/sqrt67>87/80",
+    "row3": ">1/2-1/sqrt67>3/8"
+  },
+  "verdict": "PASS_SOURCE_COMPLETE_ANNULAR_FACTOR67_CANDIDATE"
+}
