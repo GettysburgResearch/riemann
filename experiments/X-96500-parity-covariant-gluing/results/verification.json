@@ -1,0 +1,134 @@
+{
+  "activation_and_coefficient": {
+    "activation_identity": "(X/p)/(k/p)=X/k",
+    "coefficient_identity": "p^(-1/2)(k/p)^(-1/2)=k^(-1/2)",
+    "exact_activation_and_coefficient_checks": 309120,
+    "ordered_histories_checked": 16,
+    "parity_identity": "epsilon(h)=(-1)^len(h)",
+    "quotient_fixture": [
+      1,
+      70
+    ],
+    "rough_prime_fixture": [
+      67,
+      71,
+      73,
+      79
+    ],
+    "small_divisor_fixture": [
+      1,
+      2,
+      6,
+      30
+    ],
+    "verdict": "activation and magnitude commute; sign carries the parity cocycle"
+  },
+  "classification": "PASS_X_96500_PARITY_COVARIANT_GLUE_AUDIT",
+  "fixed_depth_star_counterexample": {
+    "certified": "A_2(200000)<-11 and A_3(200000)<-2",
+    "classification": "PASS_MPFR_DIRECTED_TWO_LEVEL_STAR_NEGATIVITY",
+    "endpoint": 200000,
+    "mpfr_version": "4.2.2",
+    "precision_bits": 256,
+    "row_2": {
+      "lower": "-11.2745354467343289724470811741",
+      "rough_primes": 9574,
+      "upper": "-11.2745354467343289715797194361"
+    },
+    "row_3": {
+      "lower": "-2.11516352829808095838658166254",
+      "rough_primes": 6627,
+      "upper": "-2.11516352829808095816974122805"
+    },
+    "sha256": "70d9b329eef30c1b23b20b00f5883c03e7a76f8e9986bd6271f9406f41236b62"
+  },
+  "frozen": {
+    "base_head": "20646a78c3e8843001cb49ea0c9741f6d0d446f7",
+    "base_pr": 550,
+    "main_at_cutoff": "994bd4bedcc8b61cebabaf005cc69225fc3fe459",
+    "parent_head": "ef18bdda5a65334695008e4c1f5986833160d84f",
+    "parent_pr": 534
+  },
+  "mutations": {
+    "activation_is_not_misdiagnosed_as_failure": true,
+    "dropping_history_parity_is_detected": true,
+    "one_prime_parity_blind_terminalization_is_rejected": true,
+    "recursive_grandchild_requires_two_prime_reset": true,
+    "reverse_exact_target_hall_is_rejected": true,
+    "two_level_current_star_positivity_is_rejected": true
+  },
+  "odd_history_obstruction": {
+    "active_p61_atoms": 239,
+    "canonical_target_gap": {
+      "lower": "17.005086538219052590698455753606",
+      "upper": "17.005086538219052590698455753606",
+      "width_upper": "0.000000000000000000000000000000000000000000000000000000293052"
+    },
+    "certified_rational_statement": "E_T(71,13)-O_T(71,13)>17",
+    "even_target": {
+      "lower": "238.236769968802241851178078781701",
+      "upper": "238.236769968802241851178078781701",
+      "width_upper": "0.000000000000000000000000000000000000000000000000000000142412"
+    },
+    "incoming_history": [
+      67
+    ],
+    "incoming_parity": "odd",
+    "odd_target": {
+      "lower": "221.231683430583189260479623028094",
+      "upper": "221.231683430583189260479623028094",
+      "width_upper": "0.000000000000000000000000000000000000000000000000000000150639"
+    },
+    "reverse_hall_feasible": false,
+    "reverse_hall_required_inequality": "O_T(71,13)>=E_T(71,13)",
+    "root_endpoint": 61841,
+    "terminal_child_endpoint": 13,
+    "terminal_prime": 71
+  },
+  "proof_object_sha256": "918b3ccfb7f99d764e01302ffc2f358fda0e3e2ccfc27eeb038799cf0ee05293",
+  "schema": "riemann.x96500.parity-covariant-gluing.v1",
+  "scope": {
+    "RH_established": false,
+    "TRP23_proved": false,
+    "full_row_nonnegativity_refuted": false,
+    "global_parity_hall_producer_proved": false,
+    "parity_blind_L96302_proved": false,
+    "parity_blind_L96302_refuted_as_an_argument": true,
+    "two_level_star_positive_producer_proved": false,
+    "two_level_star_positive_producer_refuted": true,
+    "two_level_star_source_identity_proved": true
+  },
+  "two_level_star": {
+    "even_grandchild_count": 11,
+    "exact_identity": "P_j(x)=b_j(x)+sum_p p^(-1/2) S b_(p+)(x/p)+sum_(p<q)(pq)^(-1/2) P_(q+)(x/(pq))",
+    "expected_subsets": 16,
+    "first_level_base_count": 4,
+    "grandchild_parity_reset": true,
+    "partition_disjoint_and_exhaustive": true,
+    "recursive_scale_bound": "x/(pq)<=x/(67*71)",
+    "root_base_count": 1,
+    "rough_prime_fixture": [
+      67,
+      71,
+      73,
+      79
+    ],
+    "source_subsets": 16
+  },
+  "two_row_noncancellation": {
+    "P2": "2*x-1-y",
+    "common_roots_for_x": [
+      1,
+      2
+    ],
+    "factorization": "-3*(x-1)*(x-2)",
+    "open_strip_common_zero": false,
+    "strip_modulus": "1/2<|2^(-z)|<1 for 0<Re(z)<1",
+    "substitution_polynomial_coefficients": [
+      -3,
+      9,
+      -6
+    ],
+    "three_P3": "5*y-x-1-3*x^2"
+  }
+}

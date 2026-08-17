@@ -1,0 +1,1018 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{seqsplit}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{firewall}[theorem]{Firewall}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\PP}{\mathcal P}
+\newcommand{\TT}{\mathcal T}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\SSS}{\mathcal S}
+\newcommand{\dd}{\,d}
+\newcommand{\zetaR}{\zeta}
+\newcommand{\GPHT}{\mathrm{GPHT}_{2,3}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\sha}[1]{\texttt{\seqsplit{#1}}}
+
+\title{Parity-Covariant Gluing and Fixed-Depth Obstructions for Native M\"obius Rows\\
+\large A Hostile Reconstruction of a Two-Row Mellin--Landau Route}
+\author{Agentic Polymath Project}
+\date{17 August 2026}
+
+\hypersetup{pdftitle={Parity-Covariant Gluing and Fixed-Depth Obstructions for Native Mobius Rows},pdfauthor={Agentic Polymath Project},pdfsubject={Hostile reconstruction of a projective paired-source route to the Riemann Hypothesis}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A projective paired-source proposal attempted to prove coefficientwise
+nonnegativity of a canonical M\"obius row by stopping a rough-prime recursion at
+one-prime leaves, applying one canonical Target--Lorenz transport to every
+leaf, and then invoking a two-row Mellin--Landau argument.  We give a standalone
+hostile reconstruction of the complete chain.
+
+The coefficient magnitudes and every component-row activation indicator are
+transported exactly through arbitrary rough-prime histories.  The missing
+interface is a parity cocycle: a history of length $m$ multiplies the signed
+terminal marginal by $(-1)^m$.  The published terminal realization is
+one-sided and is not invariant under this cocycle.  We prove a necessary and
+sufficient parity-covariant gluing theorem and exhibit the explicit odd-history
+leaf
+\[
+ X=67\cdot71\cdot13,\qquad h=(67),\qquad(p,y)=(71,13).
+\]
+Exact dyadic rational interval arithmetic over all $239$ active $P_{61}$
+divisors proves
+\[
+ E_T(71,13)-O_T(71,13)>17,
+\]
+whereas the odd history requires the reverse Target--Lorenz orientation.
+
+We next show that the obvious parity repair also fails.  Iterating any fixed
+depth $L$ gives an exact disjoint source decomposition, but its current block
+has leading sign $(-1)^{L-1}(\log\log X)^{L-1}$.  Hence an even depth restores
+canonical recursive parity only by making the current block eventually
+negative.  A $256$-bit MPFR certificate already gives
+\[
+ B_{2,200000}(2)<-11,\qquad B_{2,200000}(3)<-2.
+\]
+Thus no fixed-depth local reset can close the route.
+
+As a clean replacement we prove a global parity-aware common-source gluing
+theorem.  At each finite endpoint it either produces one source-faithful
+positive row after all history parities are incorporated, or emits a separating
+dual certificate.  Its two-row specialization $\GPHT$ is the exact remaining
+global producer.  Finally, we reprove the fixed-row reciprocal-zeta Mellin
+transform, a self-contained Landau lemma, and the fact that rows two and three
+have no common open-strip cancellation.  Therefore $\GPHT$ implies the Riemann
+Hypothesis.  The producer is not proved here.  The unconditional content of the
+paper is the corrected gluing theorem, the explicit counterexample, the
+fixed-depth no-go theorem, the global primal-dual architecture, and the exact
+Mellin--Landau reduction.  The Riemann Hypothesis remains unproved.
+\end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\textbf{Scientific status.}
+This manuscript is an unconditional correction and reduction, not an
+announcement of a proof of the Riemann Hypothesis.  It withdraws the parity-blind
+composition used in the predecessor full-row proposal and isolates a new
+parity-aware producer.}}
+\end{center}
+
+\tableofcontents
+
+\section{Introduction}
+
+The route studied here starts from a family of positive component rows
+$Q_X(j)$ and forms the signed M\"obius row
+\begin{equation}
+ c_X(j)=\sum_{k\le X/j}\frac{\mu(k)}{\sqrt{k}}Q_{X/k}(j),
+ \qquad j\ge2.
+ \label{eq:native-row}
+\end{equation}
+A proposed proof of $c_X(j)\ge0$ for all $X$ and $j$ used three ideas:
+
+\begin{enumerate}[label=(\roman*)]
+\item encode the sign $\mu(k)$ as the difference of two positive parity channels;
+\item expand squarefree $k$ by ordered rough-prime histories and stop when the
+remaining quotient lies below $67$;
+\item realize every stopped one-prime leaf by the same positive Target--Lorenz
+map, then sum the resulting positive rows.
+\end{enumerate}
+
+The downstream analytic implication is unusually short.  If rows two and three
+are nonnegative, their Mellin transforms contain $1/\zeta(s+1/2)$, while their
+finite Mellin numerators cannot vanish simultaneously at a point of the open
+critical strip.  A nonnegative-transform theorem of Landau then excludes every
+zero with real part greater than $1/2$.
+
+The burden is therefore entirely upstream: does the positive source tree really
+produce the signed row in \eqref{eq:native-row} without changing signs, copying
+source atoms, or dropping activations?  This paper reconstructs that interface
+at atom level.
+
+The answer separates cleanly into two parts.  Magnitudes and activations are
+correct.  If a rough prime $p$ is moved from the source index into the path,
+then
+\[
+ p^{-1/2}(k/p)^{-1/2}=k^{-1/2},
+ \qquad
+ \frac{X/p}{k/p}=\frac{X}{k}.
+\]
+The sign is not invariant: the parity channels are exchanged once, and the
+signed observation changes sign.  After $m$ rough primes, the terminal datum is
+$(-1)^m$ times its canonical local orientation.  The predecessor proof retained
+this parity in its labels but omitted it from the terminal realization.
+
+Our main unconditional contributions are:
+
+\begin{itemize}
+\item a necessary-and-sufficient parity-covariant projective gluing theorem;
+\item an exact proof that rough placement preserves every row activation and
+coefficient magnitude while contributing the cocycle $(-1)^{|h|}$;
+\item a proof-grade odd-history obstruction with target gap greater than $17$;
+\item an exact depth-$L$ source expansion and a no-go theorem for every fixed
+local parity reset;
+\item a global parity-aware common-source primal-dual theorem;
+\item a self-contained two-row Mellin--Landau consumer.
+\end{itemize}
+
+The corrected architecture does not terminalize one-prime leaves independently
+and does not attempt another fixed-depth reset.  It expands the finite source at
+a fixed endpoint, incorporates every cumulative history parity, and applies one
+global common-source transport.  The resulting producer is $\GPHT$.  Separate
+leafwise certificates cannot prove it, because they would reuse source capacity
+and erase the parity cocycle.
+
+\section{Canonical component rows and native M\"obius rows}
+
+\subsection{The component row}
+
+For $j\ge2$, set
+\[
+ A_j=\frac{j+1}{j-1},\qquad
+ B_j=\frac{(j+1)(j-2)}{j(j-1)},\qquad
+ C_j=\frac{2}{j(j-1)}.
+\]
+The canonical component row is
+\begin{align}
+ Q_X(j)={}&
+ \frac{A_j}{\sqrt j}\log\frac Xj\,\1_{X\ge j}
+ -\frac{B_j}{\sqrt{j+1}}\log\frac X{j+1}\,\1_{X\ge j+1}
+ \notag\\
+ &+C_j\sum_{m\ge j+2}
+ \frac1{\sqrt m}\log\frac Xm\,\1_{X\ge m}.
+ \label{eq:Q}
+\end{align}
+Every sum in this paper is causally extended by zero.  In particular,
+$Q_X(j)=0$ when $X<j$.  Between consecutive integer knots, $Q_X(j)$ is affine
+in $\log X$.
+
+The full native row is \eqref{eq:native-row}.  No sign assertion is built into
+its definition.  The exact ordinary-capacity and entropy identities that
+motivated the row are useful background, but the present paper uses only the
+component formula \eqref{eq:Q} and its Mellin transform.
+
+\subsection{Squarefree source notation}
+
+Let
+\[
+ P_{61}=\prod_{p\le61}p.
+\]
+Every squarefree source index has a unique factorization
+\begin{equation}
+ k=d\,p_1\cdots p_t,
+ \qquad d\mid P_{61},
+ \qquad 67\le p_1<\cdots<p_t.
+ \label{eq:factorization}
+\end{equation}
+We call $h(k)=(p_1,\ldots,p_t)$ its ordered rough history.  Since $k$ is
+squarefree,
+\begin{equation}
+ \mu(k)=\mu(d)(-1)^t.
+ \label{eq:mu-parity}
+\end{equation}
+The factor $(-1)^t$ is the cocycle omitted by the parity-blind gluing step.
+
+\section{Positive paired sources and the parity cocycle}
+
+\subsection{Paired source category}
+
+A paired source is a pair $P=(E,O)$ of positive measures.  Let
+\[
+ S(E,O)=(O,E)
+\]
+be the parity swap.  Given a positive row map $R$, define signed observation by
+\begin{equation}
+ \OO(P)=R(E)-R(O).
+ \label{eq:observation}
+\end{equation}
+The fundamental identity is immediate.
+
+\begin{lemma}[Parity cocycle]
+For every integer $m\ge0$,
+\begin{equation}
+ \OO(S^mP)=(-1)^m\OO(P).
+ \label{eq:parity-cocycle}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The claim for $m=1$ follows by exchanging the two terms in
+\eqref{eq:observation}; induction gives the result.
+\end{proof}
+
+\subsection{Activation and coefficient covariance}
+
+The concern that arbitrary rough histories might move a row across an activation
+boundary is natural.  It is not the failing interface.
+
+\begin{theorem}[Exact rough-placement functor]
+\label{thm:activation}
+Suppose $p\mid k$ is one rough factor.  Moving $p$ from the source index into
+the path sends $(X,k)$ to $(X/p,k/p)$ and multiplies the child coefficient by
+$p^{-1/2}$.  Then
+\begin{equation}
+ \frac{X/p}{k/p}=\frac Xk,
+ \qquad
+ p^{-1/2}(k/p)^{-1/2}=k^{-1/2}.
+ \label{eq:activation-functor}
+\end{equation}
+Consequently every indicator $\1_{X/k\ge j}$ and every value
+$k^{-1/2}Q_{X/k}(j)$ is transported without change in magnitude.  After a
+history $h$ the signed value is
+\begin{equation}
+ (-1)^{|h|}k^{-1/2}Q_{X/k}(j).
+ \label{eq:history-signed-row}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Both identities in \eqref{eq:activation-functor} are algebraic.  The row
+activation depends only on the ratio $X/k$.  The sign statement follows from
+\eqref{eq:parity-cocycle}.
+\end{proof}
+
+\begin{remark}
+The theorem covers one-sided activation boundaries exactly.  If $X/k=j$, then
+both parent and placed child lie on the same boundary.  No continuity or
+floating-point argument is involved.
+\end{remark}
+
+\section{The corrected projective gluing theorem}
+
+We now state the abstract interface in the form needed for a rigorous source
+composition.
+
+\begin{definition}[Labelled projective source tree]
+A labelled projective source tree consists of:
+\begin{enumerate}[label=(\alph*)]
+\item a finite or finitely terminating rooted tree;
+\item at each node $v$, a positive paired source $P_v$ and an ordered rough
+history $h(v)$;
+\item a one-use direct-sum source identity expressing each nonterminal $P_v$ as
+current source plus positive multiples of child sources;
+\item at every terminal node, a canonical local signed datum $K_v$.
+\end{enumerate}
+The root-oriented terminal datum is
+\[
+ \eps(v)K_v,
+ \qquad \eps(v)=(-1)^{|h(v)|}.
+\]
+\end{definition}
+
+\begin{theorem}[Parity-covariant projective gluing]
+\label{thm:parity-gluing}
+Assume every source atom has one owner and every recursive coefficient is
+nonnegative.  A family of positive terminal rows preserves the exact root
+marginal if each terminal row realizes
+\begin{equation}
+ \eps(v)K_v.
+ \label{eq:correct-terminal}
+\end{equation}
+Conversely, replacing a terminal datum by a positive row realizing $K_v$ while
+$\eps(v)=-1$ does not preserve the root marginal unless $K_v=0$ in every
+observed coordinate.
+\end{theorem}
+
+\begin{proof}
+Apply signed observation to the direct-sum identity at every node.  By
+\eqref{eq:parity-cocycle}, the observation of the terminal source at $v$ is
+$\eps(v)K_v$.  Substitution of exact terminal realizations therefore preserves
+the root identity.  Since all coefficients are nonnegative and ownership is
+one-use, the substituted sum is positive.
+
+For necessity, suppose $\eps(v)=-1$ but the installed row realizes $K_v$.
+Choose an observed coordinate on which $K_v\ne0$.  The correct contribution is
+$-K_v$ and the installed contribution is $K_v$, changing the root coordinate
+by $2K_v$.  No label bookkeeping can remove this change after the terminal
+source has been replaced.
+\end{proof}
+
+\begin{corollary}[When parity-blind gluing is legal]
+A terminal map proved only for canonical orientation can be applied to every
+leaf only if all stopped histories are even, or if both $K_v$ and $-K_v$ have
+separately proved positive realizations.
+\end{corollary}
+
+\begin{firewall}
+Storing the parity in the source label is not sufficient.  The terminal
+realization itself must use the label through \eqref{eq:correct-terminal}.
+\end{firewall}
+
+\section{An explicit odd-history obstruction}
+
+\subsection{The terminal target atoms}
+
+The canonical one-prime terminal construction uses the target kernel
+\begin{equation}
+ T(u)=(4\sqrt u-3)\1_{u\ge1}.
+ \label{eq:T}
+\end{equation}
+For a terminal prime $p\ge67$, child endpoint $1\le y<67$, and small divisor
+$d\mid P_{61}$, define
+\begin{equation}
+ t_d(p,y)=\frac1{\sqrt d}
+ \left[T(py/d)-\frac1{\sqrt p}T(y/d)\right].
+ \label{eq:target-atom}
+\end{equation}
+The canonical even and odd target masses are
+\begin{equation}
+ E_T(p,y)=\sum_{\substack{d\mid P_{61}\\ \mu(d)=1}}t_d(p,y),
+ \qquad
+ O_T(p,y)=\sum_{\substack{d\mid P_{61}\\ \mu(d)=-1}}t_d(p,y).
+ \label{eq:EO}
+\end{equation}
+Inactive terms vanish causally.
+
+The Target--Lorenz map used in the predecessor route is oriented from canonical
+even supply to canonical odd demand.  It selects an even submeasure of target
+mass $O_T$ and leaves a positive even residual.  Thus it requires $E_T\ge O_T$.
+
+\subsection{The path \texorpdfstring{$67\to71$}{67 to 71} at endpoint 61841}
+
+Take
+\begin{equation}
+ X=67\cdot71\cdot13=61841.
+ \label{eq:X-obstruction}
+\end{equation}
+After the first rough factor $67$, the node endpoint is $923=71\cdot13$.  The
+next terminal current leaf has $(p,y)=(71,13)$.  The incoming history has length
+one, so Theorem~\ref{thm:parity-gluing} reverses the canonical orientation.
+Actual even supply is the canonical odd mass $O_T(71,13)$, while actual odd
+demand is the canonical even mass $E_T(71,13)$.
+
+\begin{theorem}[Directed target obstruction]
+\label{thm:target-obstruction}
+For $(p,y)=(71,13)$,
+\begin{equation}
+ E_T(71,13)-O_T(71,13)>17.
+ \label{eq:gap17}
+\end{equation}
+Consequently the reversed exact-target Hall condition
+$O_T(71,13)\ge E_T(71,13)$ is impossible.
+\end{theorem}
+
+\begin{proof}
+There are $239$ active squarefree divisors $d\mid P_{61}$ with $d\le923$.
+The supplied verifier encloses every square root by exact dyadic rationals with
+denominator $2^{192}$.  For a rational $a/b>0$, it computes
+\[
+ n=\left\lfloor\sqrt{\left\lfloor a2^{384}/b\right\rfloor}\right\rfloor
+\]
+and uses
+\[
+ \frac{n}{2^{192}}
+ \le \sqrt{a/b}
+ \le \frac{n+1}{2^{192}},
+\]
+with equality detected by exact integer arithmetic.  Interval addition,
+multiplication, subtraction, and reciprocal are then rational operations.
+Applying these operations to \eqref{eq:target-atom} and summing by M\"obius
+parity yields
+\begin{align*}
+E_T(71,13)&\in
+[238.236769968802241851178078781701\ldots,\\
+&\hspace{31mm}238.236769968802241851178078781702\ldots],\\
+O_T(71,13)&\in
+[221.231683430583189260479623028094\ldots,\\
+&\hspace{31mm}221.231683430583189260479623028095\ldots].
+\end{align*}
+The resulting rational lower bound for the difference exceeds $17$.
+The complete rational endpoints are retained in the deterministic verification
+object; the decimals above are display strings only.
+\end{proof}
+
+\begin{corollary}[Failure of parity-blind terminalization]
+The canonical Target--Lorenz terminal map cannot be substituted on the leaf
+\eqref{eq:X-obstruction} after history $(67)$ while preserving the complete
+target datum.  Therefore the parity-blind projective composition does not prove
+$c_X(j)\ge0$.
+\end{corollary}
+
+\begin{remark}
+The conclusion is deliberately narrow.  It refutes the proof interface, not the
+inequality $c_X(j)\ge0$.  Different rough histories may cancel globally.  Any
+successful successor must retain that global cancellation or provide a new
+positive joint source decomposition.
+\end{remark}
+
+\section{Fixed-depth parity resets and their obstruction}
+
+The odd-history obstruction suggests advancing the source by an even number of
+rough primes before recursing.  Source-theoretically this is exact.  Positivity,
+however, imposes a second and independent constraint.
+
+Let $p_j,p_{j+1},\ldots$ be the allowed ordered rough primes.  Let $P_j(x)$ be
+the corresponding paired source, and let $b_j(x)$ be the base consisting of
+histories with no allowed rough prime.  Unique least-prime factorization gives
+\begin{equation}
+ P_j(x)=b_j(x)\oplus
+ \bigoplus_{k\ge j}p_k^{-1/2}S P_{k+1}(x/p_k).
+ \label{eq:one-level}
+\end{equation}
+
+\begin{theorem}[Exact depth-$L$ expansion]
+\label{thm:depth-L}
+For every fixed integer $L\ge1$,
+\begin{align}
+ P_j(x)={}&
+ \bigoplus_{r=0}^{L-1}
+ \ \bigoplus_{j\le k_1<\cdots<k_r}
+ (p_{k_1}\cdots p_{k_r})^{-1/2}S^r
+ b_{k_r+1}\!\left(\frac{x}{p_{k_1}\cdots p_{k_r}}\right)
+ \notag\\
+ &\oplus
+ \bigoplus_{j\le k_1<\cdots<k_L}
+ (p_{k_1}\cdots p_{k_L})^{-1/2}S^L
+ P_{k_L+1}\!\left(\frac{x}{p_{k_1}\cdots p_{k_L}}\right),
+ \label{eq:depth-L}
+\end{align}
+where the $r=0$ term is $b_j(x)$.  The partition is disjoint and exhaustive.
+The recursive packets have parity $(-1)^L$ and endpoint at most
+$x/(p_j\cdots p_{j+L-1})$.
+\end{theorem}
+
+\begin{proof}
+Classify a finite rough history by whether its length is smaller than $L$.  A
+history of length $r<L$ has unique ordered primes $p_{k_1}<\cdots<p_{k_r}$ and
+terminates in the corresponding base.  A history of length at least $L$ has a
+unique first $L$-tuple and a remaining history in $P_{k_L+1}$.  Coefficients
+factor multiplicatively and the swaps contribute $S^r$ or $S^L$.
+\end{proof}
+
+For $P=P_{61}$, write the positive finite-Euler row
+\begin{equation}
+ D_{P,Y}(q)=\sum_{d\mid P}\frac{\mu(d)}{\sqrt d}Q_{Y/d}(q).
+ \label{eq:finite-euler-row}
+\end{equation}
+After signed observation, the current block in \eqref{eq:depth-L} at rough
+threshold $67$ is
+\begin{equation}
+ B_{L,X}(q)=
+ \sum_{\substack{m\le X/q\\m\ \mathrm{squarefree}\\
+                   p\mid m\Rightarrow p\ge67\\\omega(m)<L}}
+ \frac{\mu(m)}{\sqrt m}D_{P,X/m}(q).
+ \label{eq:fixed-depth-current}
+\end{equation}
+For $L=2$ this is the root base minus all one-rough-prime bases.
+
+\begin{lemma}[Finite-Euler principal term]
+\label{lem:finite-euler-asymptotic}
+For each fixed row $q\ge2$,
+\begin{equation}
+ D_{P,Y}(q)=a_q\sqrt Y+O_q(\log(2Y)),
+ \qquad
+ a_q=\frac{8}{q(q-1)}\prod_{\substack{\ell\le61\\\ell\ \mathrm{prime}}}
+ \left(1-\frac1\ell\right)>0.
+ \label{eq:finite-euler-asymptotic}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The tail in \eqref{eq:Q} is a Riemann sum for
+\[
+ \int_1^Y t^{-1/2}\log(Y/t)\,dt=4\sqrt Y-4-2\log Y.
+\]
+Integral comparison for the positive decreasing summand gives
+\[
+ Q_Y(q)=4C_q\sqrt Y+O_q(\log(2Y)).
+\]
+Insert this in the finite sum \eqref{eq:finite-euler-row}.  The principal
+coefficient is
+\[
+ 4C_q\sum_{d\mid P}\frac{\mu(d)}d
+ =\frac{8}{q(q-1)}\prod_{\ell\mid P}(1-\ell^{-1}).
+\]
+\end{proof}
+
+We use the following standard fixed-order form of the almost-prime estimates.
+It is included to make the obstruction independent of numerical evidence.
+
+\begin{lemma}[Reciprocal rough almost-primes]
+\label{lem:rough-almost-primes}
+Fix $r\ge1$ and a fixed prime threshold $z$.  Put
+\[
+ H_z(X)=\sum_{z\le p\le X}\frac1p.
+\]
+For squarefree integers all of whose prime factors are at least $z$,
+\begin{align}
+ \sum_{\substack{m\le X\\\omega(m)=r}}
+ \frac1m
+ &=\frac{H_z(X)^r}{r!}+O_{r,z}(H_z(X)^{r-1}),
+ \label{eq:reciprocal-almost-prime}\\
+ \sum_{\substack{m\le X\\\omega(m)=r}}
+ \frac{\log(2X/m)}{\sqrt m}
+ &=O_{r,z}\!\left(
+ \frac{\sqrt X\,H_z(X)^{r-1}}{\log X}
+ \right).
+ \label{eq:half-almost-prime}
+\end{align}
+Moreover $H_z(X)=\log\log X+O_z(1)$.
+\end{lemma}
+
+\begin{proof}
+Mertens' theorem for primes gives the last assertion.  Expanding the $r$-fold
+prime harmonic sum, deleting repeated primes, imposing increasing order, and
+then imposing the product cutoff changes the result by
+$O_{r,z}(H_z^{r-1})$; this proves \eqref{eq:reciprocal-almost-prime} by induction
+on $r$.
+
+For \eqref{eq:half-almost-prime}, the same induction gives the classical
+fixed-order Landau bound
+\[
+ A_r(t):=\#\{m\le t:\omega(m)=r\}
+ \ll_{r,z}\frac{t(\log\log t)^{r-1}}{\log t}.
+\]
+Partial summation against the decreasing function
+$t^{-1/2}\log(2X/t)$, splitting at $\sqrt X$, yields the displayed bound.
+All constants may depend on the fixed $r$ and $z$.
+\end{proof}
+
+\begin{theorem}[Fixed-depth parity-reset no-go]
+\label{thm:fixed-depth-no-go}
+For every fixed $L\ge2$ and fixed row $q\ge2$,
+\begin{equation}
+ \frac{B_{L,X}(q)}{\sqrt X}
+ =a_q\frac{(-1)^{L-1}}{(L-1)!}
+  (\log\log X)^{L-1}
+ +O_{L,q}((\log\log X)^{L-2}).
+ \label{eq:fixed-depth-asymptotic}
+\end{equation}
+Consequently no fixed depth can simultaneously restore canonical parity and
+leave an eventually nonnegative current block:
+\begin{itemize}
+\item if $L$ is even, the recursive parity is canonical but
+$B_{L,X}(q)<0$ for all sufficiently large $X$;
+\item if $L$ is odd, the leading current term is positive but the recursive
+packets retain odd parity.
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+Insert \eqref{eq:finite-euler-asymptotic} into
+\eqref{eq:fixed-depth-current}.  The principal part is
+\[
+ a_q\sqrt X
+ \sum_{r=0}^{L-1}(-1)^r
+ \sum_{\substack{m\le X/q\\\omega(m)=r}}
+ \frac1m.
+\]
+Lemma~\ref{lem:rough-almost-primes} shows that the term of highest degree in
+$H_{67}(X)$ is the $r=L-1$ term.  The accumulated error from the
+$O_q(\log(2X/m))$ remainder is, by
+\eqref{eq:half-almost-prime},
+$o(\sqrt X(\log\log X)^{L-1})$.  Since
+$H_{67}(X)=\log\log X+O(1)$, \eqref{eq:fixed-depth-asymptotic} follows.
+The parity statements come from Theorem~\ref{thm:depth-L}.
+\end{proof}
+
+The first repaired depth already fails at a moderate explicit endpoint.
+
+\begin{theorem}[Directed two-level counterexample]
+\label{thm:star-counterexample}
+At $X=200000$, the depth-two current block satisfies
+\begin{equation}
+ B_{2,200000}(2)<-11,
+ \qquad
+ B_{2,200000}(3)<-2.
+ \label{eq:star-counterexample}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The accompanying program evaluates \eqref{eq:fixed-depth-current} with
+$256$-bit MPFR intervals and directed rounding for every square root, logarithm,
+addition, multiplication, division, and subtraction.  It includes all $9574$
+active rough primes in row two and all $6627$ in row three.  The retained
+intervals are
+\begin{align*}
+B_{2,200000}(2)&\in[-11.2745354467343290,-11.2745354467343289],\\
+B_{2,200000}(3)&\in[-2.1151635282980810,-2.1151635282980809].
+\end{align*}
+The upper endpoints imply \eqref{eq:star-counterexample}.
+\end{proof}
+
+\begin{firewall}
+Advancing by a fixed even number of primes repairs the sign of the recursive
+packet but cannot yield a globally positive local current producer.  Increasing
+the fixed depth merely postpones the same obstruction.  A viable successor must
+balance parity globally, use a depth growing with the endpoint, or retain sign
+inside a non-scalar positive state.
+\end{firewall}
+
+\section{A clean global parity-aware gluing theorem}
+
+The fixed-depth no-go leaves a natural exact architecture: expand the finite
+source at a fixed endpoint, retain the cumulative parity of every atom, and
+solve one global common-source problem before any signed observation.
+
+Let $E$ and $O$ be the actual positive even and odd source atoms after all
+rough-history swaps, with nonnegative source coefficients $a_e$ and $b_o$.
+Give atom $i$ a strictly positive target $t_i$, a score $s_i$, and a row vector
+$r_i$ in a closed finite-dimensional cone $K$.  In the
+conclusion-producing application one may take $K=\R_+^2$ for rows two and three,
+or $K=\R_+^{65}$ for rows $2$ through $66$.
+
+A global exact-target removal is a coefficient vector
+\begin{equation}
+ 0\le u_e\le a_e,
+ \qquad
+ \sum_{e\in E}u_et_e=\sum_{o\in O}b_ot_o.
+ \label{eq:global-target}
+\end{equation}
+Use the same $u_e$ in target, score, and every row.
+
+\begin{theorem}[Global parity-aware common-source gluing]
+\label{thm:global-gluing}
+Suppose a vector $u$ satisfying \eqref{eq:global-target} also satisfies
+\begin{equation}
+ \sum_eu_er_e-\sum_ob_or_o\in K,
+ \qquad
+ \sum_eu_es_e\le\sum_ob_os_o.
+ \label{eq:global-row-score}
+\end{equation}
+Then the signed source has the exact positive typed decomposition
+\begin{equation}
+ (E-O)=(\nu;B;\sigma),
+ \label{eq:global-typed}
+\end{equation}
+where
+\begin{align}
+ \nu_e&=a_e-u_e\ge0,\\
+ B&=\sum_eu_er_e-\sum_ob_or_o\in K,\\
+ \sigma&=\sum_ob_os_o-\sum_eu_es_e\ge0.
+\end{align}
+Its row marginal is
+\begin{equation}
+ R(E)-R(O)=R(\nu)+B\in K.
+ \label{eq:global-positive-row}
+\end{equation}
+Conversely, if the compact feasible set defined by
+\eqref{eq:global-target}--\eqref{eq:global-row-score} is empty, finite-dimensional
+separation supplies a dual functional that excludes every common-source
+removal, not merely a chosen greedy transport.
+\end{theorem}
+
+\begin{proof}
+Split each even coefficient once as $a_e=u_e+(a_e-u_e)$.  Exact target equality
+uses all odd target and leaves the positive residual source $\nu$.  The two
+inequalities in \eqref{eq:global-row-score} define the target-null positive row
+bonus $B$ and score surplus $\sigma$, giving
+\eqref{eq:global-positive-row}.  For the converse, the coefficient box is
+compact and convex, the target condition is affine, and the cone constraints
+are closed and convex.  If their intersection is empty, the finite-dimensional
+strong separation theorem gives the asserted dual certificate.
+\end{proof}
+
+\begin{definition}[Global parity-Hall producer]
+The statement $\GPHT$ asserts that the complete, parity-correct finite source at
+every endpoint admits the common-source certificate of
+Theorem~\ref{thm:global-gluing} with $K=\R_+^2$ for rows two and three.
+\end{definition}
+
+\begin{corollary}[Full-recursion reduction]
+\label{cor:GPHT-rows}
+If $\GPHT$ holds for every sufficiently large endpoint, then
+$c_X(2),c_X(3)\ge0$ for every sufficiently large $X$.
+\end{corollary}
+
+\begin{proof}
+The full rough-prime tree is finite at fixed $X$ and is a disjoint expansion of
+the original squarefree source.  Activation and coefficient covariance are
+exact by Theorem~\ref{thm:activation}.  Apply
+Theorem~\ref{thm:global-gluing} once after all history parities have been
+incorporated.  Equation \eqref{eq:global-positive-row} gives the two row
+inequalities.
+\end{proof}
+
+\begin{remark}
+The theorem is a genuine architectural repair but not a proof of $\GPHT$.
+Unlike the predecessor, it does not commute a nonlinear Hall map through the
+rough tree and does not reuse a root base at separate leaves.  The remaining
+producer is global and finite at each endpoint; it can emit either a common
+positive packing or an exact dual separator.
+\end{remark}
+
+
+\section{The exact two-row Mellin--Landau consumer}
+
+This section is independent of the projective source architecture.  It proves
+that eventual nonnegativity of rows two and three implies the Riemann
+Hypothesis.
+
+\subsection{Fixed-row Mellin transform}
+
+For fixed $j\ge2$ and $\Re s>1/2$, termwise integration is absolute and
+\begin{equation}
+ \int_m^\infty \log\frac Xm X^{-s-1}\dd X=\frac{m^{-s}}{s^2}.
+ \label{eq:ramp-mellin}
+\end{equation}
+With $z=s+1/2$, define
+\begin{align}
+ H_j(z)&=A_jj^{-z}-B_j(j+1)^{-z}
+ +C_j\sum_{m\ge j+2}m^{-z},\\
+ P_j(z)&=A_jj^{-z}-B_j(j+1)^{-z}
+ -C_j\sum_{m=1}^{j+1}m^{-z}.
+ \label{eq:Pj}
+\end{align}
+Then $H_j(z)=C_j\zeta(z)+P_j(z)$.
+
+\begin{theorem}[Reciprocal-zeta row transform]
+For $\Re s>1/2$,
+\begin{equation}
+ \boxed{
+ \int_1^\infty c_X(j)X^{-s-1}\dd X
+ =\frac{C_j}{s^2}
+ +\frac{P_j(s+1/2)}{s^2\zeta(s+1/2)}.}
+ \label{eq:mellin-transform}
+\end{equation}
+The right side gives meromorphic continuation to $\Re s>0$ and is analytic at
+every positive real $s$.
+\end{theorem}
+
+\begin{proof}
+Integrating \eqref{eq:Q} and using \eqref{eq:ramp-mellin} gives
+$H_j(s+1/2)/s^2$.  In \eqref{eq:native-row}, substitute $X=kY$ and sum the
+absolutely convergent Dirichlet series
+\[
+ \sum_{k\ge1}\frac{\mu(k)}{k^{s+1/2}}
+ =\frac1{\zeta(s+1/2)}.
+\]
+Since $H_j=C_j\zeta+P_j$, equation \eqref{eq:mellin-transform} follows.  On the
+positive real axis, $\zeta(s+1/2)$ has no zero; its pole at $s=1/2$ becomes a
+zero of $1/\zeta$.
+\end{proof}
+
+\subsection{Two-row noncancellation}
+
+For rows two and three, let $x=2^{-z}$ and $y=3^{-z}$.  Direct simplification
+gives
+\begin{equation}
+ P_2(z)=2x-1-y,
+ \qquad
+ 3P_3(z)=5y-x-1-3x^2.
+ \label{eq:P23}
+\end{equation}
+
+\begin{theorem}[No common open-strip cancellation]
+If $0<\Re z<1$, then $P_2(z)$ and $P_3(z)$ do not vanish simultaneously.
+\end{theorem}
+
+\begin{proof}
+If $P_2=0$, then $y=2x-1$.  Substitution in the second equation of
+\eqref{eq:P23} gives
+\[
+ -3x^2+9x-6=-3(x-1)(x-2)=0.
+\]
+But $1/2<|2^{-z}|<1$ in the open strip, excluding both $x=1$ and $x=2$.
+\end{proof}
+
+\subsection{A self-contained Landau lemma}
+
+\begin{lemma}[Landau for a nonnegative Laplace density]
+\label{lem:landau}
+Let $g:[0,\infty)\to[0,\infty)$ be locally integrable and let
+\[
+ F(s)=\int_0^\infty g(t)e^{-st}\dd t
+\]
+have finite abscissa of convergence $\sigma_c$.  Then $F$ cannot be holomorphic
+in a neighborhood of the real point $\sigma_c$.
+\end{lemma}
+
+\begin{proof}
+Assume $F$ is holomorphic in a disk of radius $R>0$ centered at a real
+$\sigma_1>\sigma_c$ with $\sigma_1-\sigma_c<R$.  Cauchy's estimate gives
+\[
+ \frac{|F^{(n)}(\sigma_1)|}{n!}\le MR^{-n}
+\]
+for some $M$.  Positivity permits differentiation under the integral and removes
+absolute values:
+\[
+ (-1)^nF^{(n)}(\sigma_1)
+ =\int_0^\infty t^ng(t)e^{-\sigma_1t}\dd t\ge0.
+\]
+For $0<\delta<R$, monotone convergence yields
+\begin{align*}
+\int_0^\infty g(t)e^{-(\sigma_1-\delta)t}\dd t
+&=\sum_{n\ge0}\frac{\delta^n}{n!}
+\int_0^\infty t^ng(t)e^{-\sigma_1t}\dd t\\
+&\le M\sum_{n\ge0}(\delta/R)^n<\infty.
+\end{align*}
+Choosing $\delta>\sigma_1-\sigma_c$ contradicts the definition of
+$\sigma_c$.
+\end{proof}
+
+By the change of variables $X=e^t$, the same statement applies to nonnegative
+Mellin densities $f(X)X^{-s-1}\dd X$.
+
+\begin{theorem}[Two-row positivity implies RH]
+\label{thm:TRP-RH}
+If $c_X(2)$ and $c_X(3)$ are nonnegative for every sufficiently large $X$, then
+the Riemann Hypothesis holds.
+\end{theorem}
+
+\begin{proof}
+Removing a compact initial interval changes each Mellin transform by an entire
+function.  Apply Lemma~\ref{lem:landau} to the nonnegative tail.  Since the
+meromorphic formula \eqref{eq:mellin-transform} is analytic at every positive
+real point, the abscissa of convergence is at most zero, so the tail transform
+is holomorphic in $\Re s>0$.
+
+If $\rho$ were a nontrivial zero with $\Re\rho>1/2$, then
+$s_0=\rho-1/2$ would lie in $\Re s>0$.  At least one of $P_2(\rho)$ and
+$P_3(\rho)$ is nonzero, so the corresponding expression
+\eqref{eq:mellin-transform} has a pole at $s_0$, a contradiction.  The
+functional equation and conjugation symmetry then place every nontrivial zero
+on $\Re s=1/2$.
+\end{proof}
+
+\begin{corollary}
+The global parity-Hall producer $\GPHT$ implies the Riemann Hypothesis.
+\end{corollary}
+
+\section{What survives and what is withdrawn}
+
+\begin{center}
+\begin{tabular}{p{0.54\textwidth}p{0.32\textwidth}}
+\toprule
+Interface & Status \\
+\midrule
+Canonical component-row formula & exact \\
+Rough-history coefficient magnitude & exact \\
+Rough-history row activation & exact \\
+Cumulative parity $(-1)^{|h|}$ & exact \\
+Canonical Target--Lorenz terminal map & one orientation only \\
+Parity-blind arbitrary-history gluing & refuted as an argument \\
+Full-row nonnegativity $c_X(j)\ge0$ & open, not refuted \\
+Depth-$L$ parity-aware source identity & exact \\
+Fixed-depth local positive producer & impossible \\
+Global producer $\GPHT$ & open and RH-bearing \\
+Fixed-row reciprocal-zeta Mellin transform & exact \\
+Rows two and three noncancellation & exact \\
+Riemann Hypothesis & unproved \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The directed Target--Lorenz tail calculations from the predecessor remain valid
+at their stated canonical-orientation scope.  They do not repair the sign
+cocycle.  Likewise, the exact coefficient contraction and one-use source
+ledgers remain useful.  The failed step is the claim that one canonical
+terminal map may be substituted after arbitrary rough histories.
+
+\section{Deterministic verification}
+
+The accompanying verifier uses Python's arbitrary-precision integers and
+\code{Fraction} class for the dyadic target obstruction, together with direct
+$256$-bit MPFR intervals for the fixed-depth current block.  It checks:
+
+\begin{enumerate}[label=(\arabic*)]
+\item $16$ ordered rough histories over the fixture primes
+$67,71,73,79$;
+\item $309120$ exact coefficient, ratio, activation, and parity identities;
+\item all $239$ active $P_{61}$ atoms in the leaf $(71,13)$;
+\item the rational interval inequality \eqref{eq:gap17};
+\item a disjoint and exhaustive two-level partition of every subset of the
+four-prime fixture;
+\item a $256$-bit directed MPFR evaluation of the complete depth-two current
+block at $X=200000$;
+\item the exact polynomial factorization in \eqref{eq:P23};
+\item hostile mutations that drop history parity, reverse Hall capacity, or
+terminalize a one-prime leaf parity-blindly.
+\end{enumerate}
+
+The retained verdict is
+\begin{verbatim}
+PASS_X_96500_PARITY_COVARIANT_GLUE_AUDIT
+918b3ccfb7f99d764e01302ffc2f358fda0e3e2ccfc27eeb038799cf0ee05293
+E_T(71,13)-O_T(71,13)>17
+\end{verbatim}
+The finite fixture authenticates the exact formulas and the counterexample.  It
+does not prove $\GPHT$, two-row positivity, or RH.
+
+\section{Conclusion}
+
+The hostile reconstruction resolves the parity and activation question sharply.
+Row activation and coefficient magnitude are preserved under every rough-prime
+placement.  The nontrivial interface is the sign cocycle.  A single preceding
+rough prime reverses the canonical one-prime leaf, and the published
+Target--Lorenz map cannot be reversed even at target-mass level for the explicit
+leaf $(71,13)$.
+
+The obvious fixed-depth repair is not viable.  Odd depth leaves the recursive
+parity reversed; even depth restores it but creates an eventually negative
+current Euler truncation.  The exact row-two and row-three counterexample at
+$X=200000$ makes this obstruction concrete.  Thus the route cannot be repaired
+by merely grouping two, four, or any other fixed number of rough levels.
+
+The clean surviving architecture is global.  At a fixed endpoint the complete
+source tree is finite, so every cumulative parity can be incorporated before
+one common-source transport is applied.  Theorem~\ref{thm:global-gluing} carries
+all source, target, score, and row coordinates with one coefficient vector and
+has an exact dual alternative.  Its two-row producer $\GPHT$ is the remaining
+arithmetic theorem.  The downstream analytic chain is complete:
+$\GPHT$ implies eventual positivity of rows two and three, and that positivity
+implies RH through the reciprocal-zeta Mellin transforms and Landau's theorem.
+No proof of $\GPHT$ is contained here.  Accordingly, RH remains unproved.
+
+\appendix
+\section{Exact interval certificate schema}
+
+For completeness, the target certificate is determined by the following finite
+algorithm.
+
+\begin{enumerate}[label=(\roman*)]
+\item Generate every squarefree divisor $d$ of $P_{61}$ with $d\le923$.
+\item Determine $\mu(d)$ by parity of its prime subset.
+\item Enclose each square root in \eqref{eq:target-atom} by the exact dyadic
+method in Theorem~\ref{thm:target-obstruction}.
+\item Apply outward rational interval arithmetic to obtain $t_d$.
+\item Sum $t_d$ separately over $\mu(d)=1$ and $\mu(d)=-1$.
+\item Subtract the upper odd endpoint from the lower even endpoint.
+\end{enumerate}
+
+Every operation is an integer or rational operation.  The certificate is
+therefore independent of the host floating-point environment.
+
+\section{Repository provenance and claim boundary}
+
+The reconstruction froze the predecessor projective full-row proposal at head
+\sha{20646a78c3e8843001cb49ea0c9741f6d0d446f7}, stacked on the projective
+native-Lorenz proposal at
+\sha{ef18bdda5a65334695008e4c1f5986833160d84f}.  The observed main branch at
+the audit cutoff was
+\sha{994bd4bedcc8b61cebabaf005cc69225fc3fe459}.
+
+The present manuscript makes no claim that the full native row is negative.  It
+withdraws only the parity-blind proof.  Its new theorem labels are:
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\code{L-96500} & parity-covariant projective gluing \\
+\code{L-96501} & activation and coefficient covariance \\
+\code{R-96500} & explicit odd-history obstruction \\
+\code{L-96502} & exact depth-$L$ parity expansion \\
+\code{R-96501} & fixed-depth positive-reset no-go \\
+\code{L-96503} & global parity-aware common-source gluing \\
+\code{T-96500} & $\GPHT\Rightarrow$ two-row positivity $\Rightarrow$ RH \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{Riemann1859}
+B. Riemann,
+\emph{Ueber die Anzahl der Primzahlen unter einer gegebenen Groesse},
+Monatsberichte der Berliner Akademie, 1859.
+
+\bibitem{Landau}
+E. Landau,
+classical singularity theorem for Dirichlet and Laplace transforms with
+nonnegative coefficients.  A self-contained form sufficient here is proved as
+Lemma~\ref{lem:landau}.
+\end{thebibliography}
+
+\end{document}

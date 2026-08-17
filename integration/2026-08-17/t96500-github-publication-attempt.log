@@ -1,0 +1,20 @@
+UTC: 2026-08-16T23:56:53Z
+repository: gfreund123/riemann
+intended base: research/gpt56-pro/96300-projective-full-row-landau@20646a78c3e8843001cb49ea0c9741f6d0d446f7
+intended head: research/gpt56-pro/96500-parity-covariant-gluing
+
+GitHub connector status:
+- authentication/permission setting: connected, Allow all actions
+- exposed repository actions in this runtime: read/search/fetch only
+- branch creation action: not exposed
+- file/commit write action: not exposed
+- pull-request creation action: not exposed
+
+Local git fallback:
+- git installed
+- gh absent
+- HTTPS lookup failed: Could not resolve host github.com
+
+Result: remote branch and draft PR were not created. No remote SHA or URL is claimed.
+A deterministic mail patch and fail-closed publisher script are supplied beside
+the release archive.
