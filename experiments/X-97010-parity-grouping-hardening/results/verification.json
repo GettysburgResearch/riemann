@@ -1,0 +1,40 @@
+{
+  "not_proved_by_replay": [
+    "ASHP67",
+    "Landau theorem",
+    "RH"
+  ],
+  "parity_checks": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true,
+    "9": true,
+    "10": true,
+    "11": true
+  },
+  "scalar_depth_two_upper": "-62.71816781856588773240782086465",
+  "scope": [
+    "accumulated parity character",
+    "grouping commutation",
+    "5:3 scalar numerator factorization",
+    "depth-two frozen scalar negativity",
+    "fixed-depth sign dichotomy"
+  ],
+  "sign_table": {
+    "1": {"current_leading_sign": 1, "recursive_parity_canonical": false},
+    "2": {"current_leading_sign": -1, "recursive_parity_canonical": true},
+    "3": {"current_leading_sign": 1, "recursive_parity_canonical": false},
+    "4": {"current_leading_sign": -1, "recursive_parity_canonical": true},
+    "5": {"current_leading_sign": 1, "recursive_parity_canonical": false},
+    "6": {"current_leading_sign": -1, "recursive_parity_canonical": true},
+    "7": {"current_leading_sign": 1, "recursive_parity_canonical": false},
+    "8": {"current_leading_sign": -1, "recursive_parity_canonical": true}
+  },
+  "verdict": "PASS_T97010_PARITY_GROUPING_HARDENING_ALGEBRA"
+}
