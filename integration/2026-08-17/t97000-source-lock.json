@@ -1,0 +1,31 @@
+{
+  "base": {
+    "pr": 557,
+    "sha": "d11b08938c4db6a6192e96c564a7818cffc77100"
+  },
+  "first_review_target": "L-97001.7",
+  "imports": {
+    "directed_terminal": {
+      "pr": 550,
+      "sha": "20646a78c3e8843001cb49ea0c9741f6d0d446f7"
+    },
+    "factor67_source": {
+      "pr": 555,
+      "sha": "341697b4694ba7f44f2ba2be73cb3fc982939412"
+    },
+    "transport_firewalls": {
+      "pr": 552,
+      "sha": "81df9c3f507aba0e5f21187044583a0d6fb90db9"
+    }
+  },
+  "new_claims": [
+    "R-97000",
+    "L-97000",
+    "L-97001",
+    "L-97002",
+    "L-97003",
+    "T-97000"
+  ],
+  "rh_established": false,
+  "schema": "riemann.t97000.source-lock.v1"
+}
