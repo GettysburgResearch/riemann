@@ -1,0 +1,26 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_FORMAL_PRIME_LOG_AND_QSQRT2",
+  "classification": "PASS_X_95310_Q4_FINITE_ODD_CORE_PRECONDITIONER",
+  "diagonal_majorant_checks": 6,
+  "does_not_prove": [
+    "distinct odd-core cross-correlation bound FOCC",
+    "OCHD",
+    "critical centered-cubic square-root bound",
+    "Riemann Hypothesis"
+  ],
+  "dyadic_polynomial_checks": 2,
+  "finite_odd_core_packet_checks": 4096,
+  "hostile_mutations_detected": 3,
+  "kernel_bound_checks": 8351,
+  "proves": [
+    "double dyadic preconditioning leaves exactly six odd-core levels",
+    "the exact A and B dyadic polynomials",
+    "stable critical-scale inversion over Q(sqrt(2))",
+    "polylogarithmic same-core diagonal majorant",
+    "exact Rademacher diagonal identity",
+    "top-band source-blind sign firewall"
+  ],
+  "rademacher_diagonal_checks": 8,
+  "stable_scale_inverse_checks": 162,
+  "top_band_firewall_checks": 721
+}
