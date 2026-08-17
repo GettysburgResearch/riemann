@@ -1,0 +1,646 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{url}
+
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Parity-contractive annular factor-67}
+\rhead{Hostile reconstruction}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+\setlist{nosep}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newtheorem{problem}[theorem]{Open Problem}
+
+\newcommand{\Psmall}{P_{61}}
+\newcommand{\Rough}{\mathcal R}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Ree}{\operatorname{Re}}
+\newcommand{\Ann}{\mathcal A}
+\newcommand{\Source}{\mathcal N}
+\newcommand{\Base}{\mathcal B}
+\newcommand{\Mass}{\mathfrak m}
+\newcommand{\Obs}{\mathfrak f}
+
+\title{\textbf{Parity-Contractive Annular Factor-67 After Hostile Reconstruction}\\
+\large Exact refutation, literal all-history recursion, and a direct Mellin--Landau frontier for the Riemann Hypothesis}
+\author{GPT-5.6 Pro, Agentic Polymath Project\\
+\small Frozen repository reconstruction dated 17 August 2026}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.92\textwidth}
+\textbf{Explicit proof-status line.}
+This manuscript does \emph{not} establish the Riemann Hypothesis.
+It proves an exact counterexample to the load-bearing finite-bias claim in PR~\#565, proves a separate source-type no-go theorem for its recursive composition, reconstructs the literal all-history source and the complete scalar Mellin--Landau consumer, and identifies the first remaining RH-bearing arithmetic sign theorem.
+\end{minipage}}
+\end{center}
+
+\begin{abstract}
+PR~\#565 proposed to prove eventual nonnegativity of a scale-four annular scalar by combining a finite $P_{61}$ signed-bias certificate, a factor-67 causal decomposition, exact low-child recombination, and a strict parity contraction.  The downstream scalar has an exact reciprocal-zeta Mellin transform whose finite numerator cannot cancel a nontrivial zeta zero, so the intended Landau consumer is exceptionally compact.
+
+We reconstruct the entire argument at exact frozen heads, with PRs~\#574 and~\#575 imposed as mandatory global-Hall, parity, scalar-lift, and ownership firewalls.  Two independent failures occur before the consumer.  First, the asserted universal inequality
+\[
+  \frac1{40}\le \frac{F(x)}{M(x)}\le\frac18\qquad(x\ge67)
+\]
+is false.  A 256-bit MPFR enclosure at $x=184$ gives
+\[
+  \frac{F(184)}{M(184)}
+  =0.023984293558766304673\ldots <\frac1{40}.
+\]
+Second, the finite $P_{61}$ packet and the complete rough-history source cannot be the same object at the point where the finite bias is used.  If $P_x$ denotes the finite packet, its scalar is $F(x)$ but it omits the native rough histories.  If it denotes the complete source, the advertised currents retain unresolved rough histories and are not controlled by $F/M$; moreover the low-child recombination returns the same-rank full packet rather than a terminal packet.
+
+We replace the compressed tree by the exact ordered all-history recursion, prove first-owner uniqueness, cumulative parity, coefficient preservation, base cases, and finite termination, and run the $X=61841$ odd-history witness through the literal construction.  We also give a complete proof of the single-scalar annular Mellin transform, below-support convention, continuity, growth, Fubini step, nonvanishing scale factor, zero noncancellation, Landau hypotheses, and functional-equation finish.
+
+The strongest surviving statement is fail-closed: eventual positivity of one explicit all-history scalar implies RH, but neither a finite $P_{61}$ bias interval nor the raw $<1/8$ coefficient budget proves that positivity.  The first unsupported arrow and the exact corrected frontier are stated explicitly.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Frozen source ledger and reconstruction rules}
+
+\subsection{Exact freezes}
+The primary target is PR~\#565 at
+\[
+\texttt{339e3367660f40c74795802a6f8170b15e19b13a}.
+\]
+The mandatory adversarial inputs are PR~\#574 at
+\[
+\texttt{74fba7f3e55fa9a53d1eb814e5067f5011ef5e86}
+\]
+and PR~\#575 at
+\[
+\texttt{265c481ebd02807ab7d9a95cb0cf905a22c1876f}.
+\]
+We also freeze the direct annular consumer of PR~\#547, the $5{:}3$ scalar algebra of PR~\#559, the parity correction of PR~\#561, and the negative transport controls of PR~\#552.  The complete machine-readable ledger is included in the accompanying archive.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l l l Y@{}}
+\toprule
+Source & Frozen SHA & Role & Disposition \\
+\midrule
+PR~\#565 & \texttt{339e3367...} & primary proposal & hostilely reconstructed; producer rejected \\
+PR~\#547 & \texttt{d60f93b0...} & annular consumer & independently reproved \\
+PR~\#559 & \texttt{88d97ade...} & $5{:}3$ scalar & finite and Mellin algebra retained \\
+PR~\#561 & \texttt{db9bdc63...} & parity firewall & accepted and reproved \\
+PR~\#574 & \texttt{74fba7f3...} & global Hall firewall & accepted \\
+PR~\#575 & \texttt{265c481e...} & scalar-lift/ownership firewall & accepted \\
+PR~\#556 & \texttt{a4feca04...} & finite $P_{61}$ definitions & definitions retained, composition not imported \\
+PR~\#552 & \texttt{81df9c3f...} & failed-reservoir controls & accepted \\
+\bottomrule
+\end{tabularx}
+\caption{Frozen dependency ledger.  Reuse of the same source in multiple routes is not counted as independent confirmation.}
+\end{table}
+
+\subsection{Reconstruction rules}
+Every use of an imported statement is checked at the exact point of use.  In particular:
+\begin{enumerate}[label=(R\arabic*)]
+\item finite $P_{61}$ data, full rough-history data, physical rows, and scalar observations are distinct types;
+\item cumulative rough-history parity is an active sign cocycle, not a passive label;
+\item raw causal coefficients are not normalized recursive masses until the survivor denominator and actual source masses are included;
+\item a scalar identity is not a two-row identity;
+\item local Lorenz determinants, checkerboard signs, or singleton Hall inequalities are not global one-use source allocations;
+\item a finite computation certifies only the exact finite domain covered with outward rounding.
+\end{enumerate}
+These rules are the formal expression of the ``certificate versus use'' delta emphasized by the repository's recent review history.
+
+\section{Standalone definitions}
+
+\subsection{The scale-four hinge}
+\begin{definition}[Scale-four logarithmic hinge]
+For real $x>0$ and integer $n\ge1$, define
+\[
+ H_x(n)=\min\!\left(\log4,\log\frac xn\right)_+.
+\]
+Thus $H_x(n)=0$ for $x\le n$, it equals $\log(x/n)$ for $n<x<4n$, and it equals $\log4$ for $x\ge4n$.
+\end{definition}
+Every term enters continuously at $x=n$ and reaches its plateau continuously at $x=4n$.
+
+\subsection{The positive $5{:}3$ base dictionary}
+The exact scalar from PR~\#559 is
+\[
+ R_X=5c_X(2)+3c_X(3).
+\]
+Its unsieved positive dictionary is
+\[
+ q_\star(2)=15,\qquad q_\star(3)=6,\qquad q_\star(4)=3,
+ \qquad q_\star(m)=6\quad(m\ge5).
+\]
+Define
+\[
+ A_\star(x)=\sum_{m\ge2}\frac{q_\star(m)}{\sqrt m}H_x(m).
+\]
+The sum is finite for every $x$.
+
+\subsection{Finite $P_{61}$ packet}
+Put
+\[
+ \Psmall=\prod_{p\le61}p.
+\]
+The finite positive parity-labelled packet $\Base_x$ has one atom for each squarefree $d\mid\Psmall$ and each $m\ge2$ with $dm\le x$, of unsigned weight
+\[
+ \frac{q_\star(m)}{\sqrt{dm}}H_x(dm),
+\]
+placed in the channel determined by $\mu(d)$.  Its signed scalar and unsigned mass are
+\begin{align}
+ F(x)&=\sum_{d\mid\Psmall}\frac{\mu(d)}{\sqrt d}A_\star(x/d),\label{eq:F}\\
+ M(x)&=\sum_{d\mid\Psmall}\frac1{\sqrt d}A_\star(x/d).\label{eq:M}
+\end{align}
+These are finite $P_{61}$ quantities.  They are not the full native rough-source scalar and mass.
+
+\subsection{Complete scalar coefficient formula}
+Let
+\[
+ a_\star(n)=6\one_{n=1}-6\mu(n)
+ +9\one_{2\mid n}\mu(n/2)-3\one_{4\mid n}\mu(n/4),
+\]
+where a term with nonintegral argument is absent.  The full scalar and its annulus are
+\begin{align}
+ R_X&=\sum_{n\le X}\frac{a_\star(n)}{\sqrt n}\log\frac Xn,
+ \qquad R_X=0\quad(0<X<1),\label{eq:RX}\\
+ \Ann_X&=R_X-R_{X/4}
+ =\sum_{n\le X}\frac{a_\star(n)}{\sqrt n}H_X(n).\label{eq:AX}
+\end{align}
+The arithmetic producer must prove eventual nonnegativity of $\Ann_X$.
+
+\section{Statement-to-use audit of PR~\#565}
+
+\begin{longtable}{@{}p{0.18\textwidth}p{0.27\textwidth}p{0.27\textwidth}p{0.20\textwidth}@{}}
+\toprule
+Interface & What the source statement actually gives & What the composition needs & Verdict \\
+\midrule
+\endhead
+Finite bias & asserted $1/40\le F/M\le1/8$; retained replay says the directed certificate was not replayed & universal lower and upper cone & lower bound false \\
+One-prime current & finite packet minus a placed finite child & every full-source current & type mismatch \\
+Low child & exact cancellation to $\lambda P_x$ & terminal rank descent & same full packet returns \\
+Recursive mass & $\sum\alpha_i<1/8$ & normalized actual child mass in same source type & missing normalization and current cone \\
+Parity & one sign flip per rough prime & cumulative path sign & correct \\
+Scalar & positive $5{:}3$ base dictionary & one scalar consumer & legitimate simplification \\
+Hall & no global allocation displayed & source-faithful positive packing, if used & PR~\#574/\#575 LP required \\
+Consumer & fixed scalar Mellin transform & Landau finish & independently correct \\
+\bottomrule
+\end{longtable}
+
+The two failures proved below are independent: correcting the finite constant would not fix the source type, and correcting the source type would not prove a replacement finite-bias interval.
+
+\section{The finite $P_{61}$ bias claim is false}
+
+\subsection{Continuum structure}
+Both $F$ and $M$ are continuous.  Their activation knots are of the form $dm$ and $4dm$ with $d\mid\Psmall$, $m\ge2$.  On every open interval between consecutive knots, $F$ and $M$ are affine in $\log x$.  Thus a finite continuum certificate must cover every knot and use an outward-rounded endpoint or derivative argument on every interval.
+
+The retained PR~\#565 checker did not replay the alleged directed certificate: its result file states
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+"directed_certificate_replayed_here": false.
+\end{lstlisting}
+We therefore rebuilt the exact finite sums independently.
+
+\subsection{A 256-bit MPFR counterexample}
+\begin{theorem}[Exact failure of the $1/40$ lower bias]\label{thm:bias-false}
+At $x=184$,
+\[
+ \frac{F(184)}{M(184)}<\frac1{40}.
+\]
+More precisely,
+\begin{align*}
+ F(184)&\in[10.69357964877382995080531550498546444404,\
+              10.69357964877382995080531550498546444405],\\
+ M(184)&\in[445.85760354260283631557807730110764267277,\
+              445.85760354260283631557807730110764267278],
+\end{align*}
+and hence
+\[
+ \frac{F(184)}{M(184)}
+ \in[0.02398429355876630467327315865313747748,\
+      0.02398429355876630467327315865313747749].
+\]
+\end{theorem}
+
+\begin{proof}
+Only divisors $d\mid\Psmall$ with $2d\le184$ occur, giving exactly 611 nonzero $(d,m)$ terms.  The accompanying C++ verifier uses MPFR 4.2.2 at 256 bits.  Square roots, logarithms, products, quotients, and signed sums are rounded downward for lower endpoints and upward for upper endpoints.  The resulting interval for
+\[
+ 40F(184)-M(184)
+\]
+is contained in
+\[
+ (-18.114417591649638284,-18.114417591649638282),
+\]
+which is strictly negative.
+\end{proof}
+
+The same certificate proves the local inequalities
+\[
+ \frac1{50}<\frac{F(184)}{M(184)}<\frac1{20}.
+\]
+No universal replacement interval is promoted from this one endpoint or from any finite diagnostic scan.
+
+\subsection{Conditional arithmetic with corrected-looking constants}
+It is useful to record what would happen if a universal interval
+\[
+ \frac1{50}\le\frac FM\le\frac1{20}
+\]
+and the correct full-current source cone were available.  With recursive mass $\rho=1/8$, the formal current upper constant would be
+\[
+ \frac1{20}\frac{1+\rho}{1-\rho}=\frac9{140},
+\]
+and the formal residual margin would be
+\[
+ \frac1{50}(1-\rho)-\frac9{140}\rho=\frac{53}{5600}>0.
+\]
+This is exact rational algebra.  It is not a theorem because the current is not a finite packet controlled by $F/M$.
+
+\section{Literal all-history source recursion}
+
+Let
+\[
+67=p_1<p_2<p_3<\cdots
+\]
+be the rough primes and let $S$ swap the two positive parity channels.
+
+\subsection{Definition of the full source}
+For $j\ge1$, define $\Source_j(x)$ as follows.  An atom consists of:
+\begin{itemize}
+\item a squarefree finite color $d\mid\Psmall$;
+\item an ordered squarefree rough history $p_{i_1}<\cdots<p_{i_r}$ with every $i_\nu\ge j$;
+\item a base index $m\ge2$;
+\item activation $d p_{i_1}\cdots p_{i_r}m\le x$;
+\item unsigned weight
+\[
+ \frac{q_\star(m)}{\sqrt{d p_{i_1}\cdots p_{i_r}m}}
+ H_x(d p_{i_1}\cdots p_{i_r}m);
+\]
+\item parity $\mu(d)(-1)^r$.
+\end{itemize}
+For fixed $x$, every length-$r$ history has product at least $67^r$, so the direct sum is finite.
+
+\subsection{Exact first-owner theorem}
+\begin{theorem}[All-history first-owner recursion]\label{thm:all-history}
+For every $j$ and $x$,
+\begin{equation}
+\boxed{
+ \Source_j(x)=\Base_x\oplus
+ \bigoplus_{\substack{k\ge j\\p_k\le x/2}}
+ p_k^{-1/2}S\Source_{k+1}(x/p_k).
+}
+\label{eq:all-history-source}
+\end{equation}
+Every atom has exactly one owner, coefficients and activations are preserved, cumulative parity is correct, and the recursion terminates after finitely many steps.
+\end{theorem}
+
+\begin{proof}
+An atom has either empty rough history, in which case it belongs to $\Base_x$, or it has a unique least rough prime $p_k$.  Remove that prime.  The remaining history lies in $\Source_{k+1}(x/p_k)$.  Conversely, placing $p_k$ reconstructs the unique original history.
+
+Coefficient preservation is exact:
+\[
+ p_k^{-1/2}
+ \frac{q_\star(m)H_{x/p_k}(n)}{\sqrt n}
+ =
+ \frac{q_\star(m)H_x(p_kn)}{\sqrt{p_kn}}.
+\]
+The channel swap contributes the missing factor $-1$ in the signed coefficient.  The owner sets are disjoint because the least rough prime is unique.  Finite termination follows from the product bound $2\cdot67^r\le x$.
+\end{proof}
+
+Let $R_j(x)$ denote signed scalar observation and $U_j(x)$ unsigned mass.  Applying the two channel functionals to \eqref{eq:all-history-source} yields
+\begin{align}
+ R_j(x)&=F(x)-
+ \sum_{\substack{k\ge j\\p_k\le x/2}}
+ p_k^{-1/2}R_{k+1}(x/p_k),\label{eq:Rrec}\\
+ U_j(x)&=M(x)+
+ \sum_{\substack{k\ge j\\p_k\le x/2}}
+ p_k^{-1/2}U_{k+1}(x/p_k).\label{eq:Urec}
+\end{align}
+If $x<2p_j$, the sums are empty and $(R_j,U_j)=(F,M)$.  The complete annular scalar is
+\[
+ \Ann_X=R_1(X).
+\]
+
+\subsection{Coefficient cross-check}
+Every squarefree integer $k$ has a unique factorization
+\[
+ k=d p_{i_1}\cdots p_{i_r},
+ \qquad d\mid\Psmall,
+\]
+so its parity is $\mu(d)(-1)^r=\mu(k)$.  Summing the base dictionary over all histories gives the coefficient $a_\star$ in \eqref{eq:AX}.  Thus the direct Riesz formula and the all-history recursion are two exact representations of the same scalar.
+
+\section{Why the frozen parity contraction is ill-typed}
+
+\begin{theorem}[Finite/full packet dichotomy]\label{thm:type-no-go}
+No single interpretation of the packet $P_x$ in the frozen PR~\#565 proof makes both of the following uses valid:
+\begin{enumerate}
+\item its root observation is the complete annular scalar $\Ann_x$;
+\item every causal current is controlled by the finite ratio $F(x)/M(x)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+If $P_x=\Base_x$, then the current is a finite packet and the finite ratio is typed, but the root scalar is only $F(x)$ and omits every nonempty rough history.
+
+If $P_x=\Source_j(x)$, then the root scalar is complete.  However the current
+\[
+ \Source_j(x)-p_j^{-1/2}S\Source_{j+1}(x/p_j)
+\]
+still contains the base packet and all histories whose least rough prime exceeds $p_j$.  Its scalar and mass are not $F(x)$ and $M(x)$.  Hence the finite certificate cannot be applied.
+\end{proof}
+
+\subsection{Low-child recombination is not rank descent}
+The algebraic identity
+\[
+ \lambda(P_x-rSP_{x/p})+\lambda rSP_{x/p}=\lambda P_x
+\]
+is exact.  If $P_x$ is full, it returns the same full packet at the same scale and with the same unresolved histories.  It is not a terminal object.  If $P_x$ is finite, it is non-native.  The frozen proof treats this cancellation as both source exactness and rank descent, but the two meanings are incompatible.
+
+\subsection{The raw $<1/8$ coefficient bound}
+The inequality $\sum\alpha_i<1/8$ is an exact coefficient statement.  A normalized child-mass theorem additionally requires actual source masses and the correct survivor denominator, as emphasized by PR~\#575.  Even a valid normalized mass bound would not provide the missing full-current scalar cone.
+
+\section{The $X=61841$ odd-history witness}
+PR~\#561 takes
+\[
+ X=67\cdot71\cdot13=61841
+\]
+and follows the history $(67)$ to local terminal parameters $(71,13)$.  The path parity is odd, so the canonical Target--Lorenz orientation is reversed.  Its directed target certificate proves the canonical surplus exceeds 17; a parity-blind terminal map cannot be installed.
+
+The literal all-history scalar decomposes diagnostically as follows:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+finite $P_{61}$ base & $+387.576553051377\ldots$ \\
+all odd one-prime histories & $-408.909828960219\ldots$ \\
+all even two-prime histories & $+30.867932911878\ldots$ \\
+\midrule
+total & $+9.534657003037\ldots$ \\
+direct Riesz value & $+9.534657003031\ldots$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The specific history $(67)$ contributes
+\[
+ -67^{-1/2}F(923)=-6.09839539048\ldots,
+\]
+and $(67,71)$ contributes
+\[
+ (67\cdot71)^{-1/2}F(13)=0.16698471655\ldots.
+\]
+These values are diagnostics, not a sign proof.
+
+At the node $x=923$, the proposed low-child recombination is
+\[
+ \lambda(\Source(923)-71^{-1/2}S\Source(13))
+ +\lambda71^{-1/2}S\Source(13)
+ =\lambda\Source(923).
+\]
+The odd-history source is not removed.  The same full node returns.  The exact recursion \eqref{eq:Rrec} retains the negative history until the complete alternating scalar is formed.
+
+\section{Mandatory PR~\#574/\#575 firewalls}
+
+\subsection{Global Hall allocation}
+PR~\#574 proves that checkerboard inequalities, local determinant signs, and Cauchy--Binet expansions do not establish a global one-use Hall allocation.  A physical row construction must solve the complete source-faithful primal problem, including target, score, all rows, first moments, and ownership, or present a dual certificate.
+
+This manuscript makes no physical packing claim.  The scalar $R_1(X)$ is evaluated directly from the literal source, so no Hall allocation is hidden in the corrected frontier.  If a future argument converts scalar positivity to a positive physical row, the complete PR~\#574/\#575 LP becomes mandatory.
+
+\subsection{Scalar does not lift to two rows}
+PR~\#575 proves that scalar exactness or positivity does not imply two-row feasibility.  The vector $(1,-1)$ has positive $5{:}3$ scalar $2$ while its third coordinate is negative.  We use only the single scalar consumer and make no componentwise inference.
+
+\subsection{Ownership and normalization}
+The first-owner theorem above proves literal disjointness.  Normalized recursive mass is not inferred from raw coefficients.  These findings are accepted, not evaded.
+
+\section{Complete single-scalar annular consumer}
+
+\subsection{Support and continuity}
+The convention $R_X=0$ for $0<X<1$ makes $R_{X/4}$ unambiguous for every $X>0$.  At $X=n$, an entering term has logarithm zero.  At $X=4n$, the entering term of $R_{X/4}$ also has logarithm zero.  Hence $R_X$ and $\Ann_X$ are continuous with matching one-sided limits at every ordinary and scaled knot.  Between knots, the active sets are fixed and both functions are affine in $\log X$.
+
+\subsection{Growth and absolute Fubini}
+Since $|a_\star(n)|\le24$,
+\[
+ |R_X|
+ \le24\sum_{n\le X}n^{-1/2}\log(X/n)
+ =O(\sqrt X),
+\]
+and the same is true of $\Ann_X$.  Thus the Mellin integral has finite abscissa and converges absolutely for $\Ree s>1/2$.
+
+For $n\ge1$ and $\Ree s>0$,
+\[
+ \int_n^\infty\log(X/n)X^{-s-1}\,dX=\frac{n^{-s}}{s^2}.
+\]
+Absolute convergence for $\Ree s>1/2$ permits termwise integration.
+
+\subsection{Dirichlet numerator and annular factor}
+Put $z=s+1/2$.  Direct summation gives
+\begin{align}
+ \sum_{n\ge1}\frac{a_\star(n)}{n^z}
+ &=6-\frac{6-9\,2^{-z}+3\,4^{-z}}{\zeta(z)}\\
+ &=6-\frac{3(1-2^{-z})(2-2^{-z})}{\zeta(z)}.
+\end{align}
+Therefore
+\[
+ \int_1^\infty R_XX^{-s-1}\,dX
+ =\frac6{s^2}
+ -\frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)}.
+\]
+The below-support convention permits the substitution $X=4Y$ without a boundary term:
+\[
+ \int_1^\infty R_{X/4}X^{-s-1}\,dX
+ =4^{-s}\int_1^\infty R_YY^{-s-1}\,dY.
+\]
+Hence
+\begin{equation}
+\boxed{
+ \int_1^\infty \Ann_XX^{-s-1}\,dX
+ =(1-4^{-s})
+ \left[
+ \frac6{s^2}
+ -\frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)}
+ \right].
+}
+\label{eq:mellin}
+\end{equation}
+
+\subsection{Noncancellation}
+If $\Ree s>0$, then $|4^{-s}|<1$, so $1-4^{-s}\ne0$.  The finite numerator vanishes only if
+\[
+ 2^{-z}=1\quad\text{or}\quad2^{-z}=2.
+\]
+These force $\Ree z=0$ and $\Ree z=-1$, respectively.  No nontrivial zero in $0<\Ree z<1$ is cancelled.
+
+\subsection{Landau's theorem and the functional equation}
+\begin{theorem}[Direct scalar consumer]\label{thm:consumer}
+If $\Ann_X\ge0$ for all sufficiently large $X$, then the Riemann Hypothesis holds.
+\end{theorem}
+
+\begin{proof}
+Removing a compact initial interval changes the Mellin transform by an entire function.  Under $X=e^t$, the remaining transform is a Laplace transform of a nonnegative locally integrable function with finite abscissa of convergence.  Landau's theorem states that a finite abscissa is a singularity on the real axis; see \cite[Ch.~II]{titchmarsh} or \cite{landau1905}.
+
+The right side of \eqref{eq:mellin} has no positive-real singularity.  At $s=1/2$, $1/\zeta(s+1/2)$ vanishes because zeta has a pole at 1; zeta has no positive real zero.  Therefore the abscissa is at most zero, and the transform is analytic throughout $\Ree s>0$.
+
+If $\zeta(\rho)=0$ with $\Ree\rho>1/2$, then $s=\rho-1/2$ lies in $\Ree s>0$.  The noncancellation result forces a pole of \eqref{eq:mellin}, contradiction.  The functional equation maps a zero with real part below $1/2$ to one with real part above $1/2$.  Hence every nontrivial zero lies on the critical line.
+\end{proof}
+
+All hypotheses of the consumer are now explicit.  No $J_\Lambda/P_\Lambda/F_\Lambda$ endpoint bridge is used.
+
+\section{Corrected frontier theorem}
+
+\begin{theorem}[Strongest honest successor]\label{thm:frontier}
+The following statements are unconditional:
+\begin{enumerate}[label=(\alph*)]
+\item the exact $5{:}3$ dictionary and its zero-safe Mellin numerator;
+\item cumulative rough-history parity and coefficient preservation;
+\item the finite all-history source recursion \eqref{eq:all-history-source}--\eqref{eq:Urec};
+\item Theorem~\ref{thm:bias-false};
+\item Theorem~\ref{thm:type-no-go};
+\item the direct implication in Theorem~\ref{thm:consumer}.
+\end{enumerate}
+The first remaining producer is eventual positivity of the literal all-history scalar $R_1(X)=\Ann_X$.  This producer is not established by PR~\#565.
+\end{theorem}
+
+\begin{problem}[Global annular scalar positivity]
+Prove unconditionally that
+\[
+ R_1(X)=F(X)-\sum_{p\ge67}p^{-1/2}R_{>p}(X/p)\ge0
+\]
+for all sufficiently large $X$, with the recursion continued over all ordered rough histories.
+\end{problem}
+
+A useful abstract contraction remains available.  If every \emph{full-source} current $D$ satisfies
+\[
+ a\Mass(D)\le\Obs(D)\le b\Mass(D)
+\]
+and the normalized swapped-child mass is at most $\rho$ with
+\[
+ a(1-\rho)>b\rho,
+\]
+then the parent scalar is positive.  PR~\#565 supplies only a proposed finite-base cone, not the full-current cone.  Establishing the latter would be a genuine new theorem of zero-free-strip strength.
+
+\section{Independent implementation and mutation tests}
+The implementation was written after the contracts above were frozen.  It includes:
+\begin{enumerate}
+\item a 256-bit MPFR proof of Theorem~\ref{thm:bias-false};
+\item independent finite implementations of $F$ and $M$;
+\item a direct implementation of \eqref{eq:AX};
+\item ordered-history decomposition at $X=61841$;
+\item exact rational checks of the conditional constants;
+\item the scalar numerator factorization;
+\item hostile mutations of every load-bearing interface.
+\end{enumerate}
+The retained verdict is
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+PASS_HOSTILE_RECONSTRUCTION_AND_FAIL_CLOSED_FRONTIER
+3ebf273d143b4ee1924cb9bee3e7096b5f15c92d7692926938a4e3f1a9a8ad87
+\end{lstlisting}
+
+Rejected mutations include the stale $1/40$ lower bound, finite/full packet identification, same-rank recombination called rank descent, parity-blind terminalization, scalar-to-row lifting, local Hall signs called global feasibility, omission of $1-4^{-s}$, and promotion of a finite diagnostic to a universal theorem.
+
+\section{Conclusion and RH status}
+The annular consumer is sound and unusually sharp: one scalar, one finite numerator, and no endpoint-normalization bridge.  The arithmetic producer in PR~\#565 is not sound.  Its finite $P_{61}$ lower constant is false, and its recursive composition applies a finite certificate to a full source current of another type.
+
+The strongest durable result is therefore a complete hostile reconstruction and fail-closed frontier:
+\begin{center}
+\begin{tabular}{ll}
+finite $P_{61}$ lower bias $1/40$ & \textbf{false} \\
+exact all-history source recursion & \textbf{proved} \\
+parity-contractive induction as written & \textbf{invalid composition} \\
+single-scalar Mellin transform & \textbf{proved} \\
+pole noncancellation & \textbf{proved} \\
+Landau implication & \textbf{proved conditionally} \\
+global annular scalar positivity & \textbf{open / RH-bearing} \\
+Riemann Hypothesis & \textbf{unproved} \\
+\end{tabular}
+\end{center}
+No RH-equivalent estimate has been relabeled as an unconditional input.  A future proof must establish the literal alternating all-history scalar or solve a complete global source problem satisfying the PR~\#574/\#575 contracts.
+
+\appendix
+\section{Exact coefficient derivation}
+Let
+\[
+ F_\mu(X)=\sum_{n\le X}\frac{\mu(n)}{\sqrt n}\log\frac Xn.
+\]
+The fixed-row identities yield
+\[
+5c_X(2)+3c_X(3)
+=6\log X-6F_\mu(X)+\frac9{\sqrt2}F_\mu(X/2)-\frac32F_\mu(X/4).
+\]
+Reindexing the dilates gives the coefficient $a_\star$ in \eqref{eq:RX}.  Its Dirichlet series is
+\[
+6-\frac{6-9\,2^{-z}+3\,4^{-z}}{\zeta(z)}
+=6-\frac{3(1-2^{-z})(2-2^{-z})}{\zeta(z)}.
+\]
+
+\section{Finite interval certificate at $x=184$}
+The verifier enumerates all $d\mid\Psmall$ with $2d\le184$ and all $m\ge2$ with $dm\le184$.  For each term it computes an outward interval for
+\[
+ \frac{q_\star(m)}{\sqrt{dm}}H_{184}(dm).
+\]
+If $4dm\le184$, $H$ is the outward interval for $\log4$; otherwise it is the outward logarithm of the outward quotient $184/(dm)$.  Signed terms use the opposite endpoint when subtracted.  The exact source is included in the archive as
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
+experiments/X-97350-hostile-reconstruction/src/bias_x184_mpfr.cpp
+\end{lstlisting}
+
+\section{Interface contracts}
+\begin{longtable}{@{}p{0.20\textwidth}p{0.20\textwidth}p{0.22\textwidth}p{0.28\textwidth}@{}}
+\toprule
+Interface & Input & Output & Contract \\
+\midrule
+\endhead
+finite observation & positive $\Base_x$ & $(F,M)$ & exact finite $d\mid P_{61}$ sum \\
+full source & $\Base_x$ plus histories & $(R_j,U_j)$ & least-prime direct sum \\
+rough placement & source atom & placed atom & activation/magnitude preserved, sign swapped \\
+finite bias to current & $(F,M)$ & current cone & valid only after all rough histories are absent \\
+low recombination & current plus child & $\lambda P_x$ & exact, but no full-source rank descent \\
+global Hall & all source atoms & positive row & complete LP and dual required \\
+scalar consumer & eventual $\Ann_X\ge0$ & RH & Mellin, Landau, functional equation \\
+\bottomrule
+\end{longtable}
+
+\section{Computational classification}
+The MPFR endpoint calculation is a finite proof object.  The $X=61841$ history totals and any broader scans are diagnostics.  The verifier itself records this distinction in its JSON result and sets
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+"rh_established": false
+\end{lstlisting}
+
+\begin{thebibliography}{9}
+\bibitem{landau1905}
+E. Landau, ``Ueber einen Satz von Tschebyschef,'' \emph{Mathematische Annalen} 61 (1905), 527--550.
+
+\bibitem{titchmarsh}
+E. C. Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by D. R. Heath-Brown, Oxford University Press, 1986.
+
+\bibitem{davenport}
+H. Davenport, \emph{Multiplicative Number Theory}, 3rd ed., revised by H. L. Montgomery, Springer, 2000.
+
+\bibitem{repo565}
+Agentic Polymath Project, PR 565, frozen at \texttt{339e3367660f40c74795802a6f8170b15e19b13a}, 2026.
+
+\bibitem{repo574}
+Agentic Polymath Project, PR 574, frozen at \texttt{74fba7f3e55fa9a53d1eb814e5067f5011ef5e86}, 2026.
+
+\bibitem{repo575}
+Agentic Polymath Project, PR 575, frozen at \texttt{265c481ebd02807ab7d9a95cb0cf905a22c1876f}, 2026.
+\end{thebibliography}
+
+\end{document}
