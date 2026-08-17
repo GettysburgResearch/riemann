@@ -62,7 +62,7 @@ example, raw child fraction `1/4` and contracted fraction `1/10` satisfy the
 safe recursive budget but give
 
 \[
- \frac1{42}-\frac18\frac14=-\frac1{1344}<0.
+ \frac1{42}-\frac18\frac14=-\frac5{672}<0.
 \]
 
 Thus the `<1/8` coefficient theorem is valuable source bookkeeping, but it
