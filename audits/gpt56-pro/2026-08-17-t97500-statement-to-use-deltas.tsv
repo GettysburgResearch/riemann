@@ -1,0 +1,8 @@
+interface	preceding_statement	consumed_statement	exact_delta	disposition
+PR566 natural recursion	(I+R)F=b with r=p^-1/2 and cumulative parity	(I+A)F=g with alpha-child operator	g=b-(R-A)F; residual full descendants omitted	BROKEN
+PR566 reserve/current	reserve scalar >= alpha child scalar	Hall-complement current scalar >= alpha child scalar	disjoint reserve and complement are different objects	BROKEN
+PR566 M-matrix	g>=Rg for natural R	positive resummation	g-Rg=(I-R^2)F is depth-two current, negative at X=200000	FALSE PREMISE
+PR569 adaptive depth	weights p^-1/2 in source-mass homogeneous model	useful partial rough stopping line	8 sum p^-1/2 exceeds nilpotence depth asymptotically	VALID BUT TAUTOLOGICAL
+critical row adaptive depth	leading history weight 1/(p1...pj)	exact activated growing-order current	restrict p<=(log X)^(1/4); exact P61 cube positive at depth O(log log log X)	VERIFIED SOURCE-COMPLETE BLOCK
+PR565 source restriction	P-r A_p P_child same-channel positive restriction	P-r S A_p P_child positive paired current	parity swap changes source cone and coefficient	BROKEN (PR576)
+PR575 scalar Hall	exact 5:3 scalar equality	component rows 2 and 3 separately positive	scalar-exact edge has opposite row-2/row-3 changes	FALSE LIFT
