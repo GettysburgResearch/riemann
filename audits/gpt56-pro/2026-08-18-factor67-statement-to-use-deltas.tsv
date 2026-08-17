@@ -1,0 +1,7 @@
+route	producer_claim	consumer_claim	produced_object	consumed_object	exact_delta	witness	verdict
+PR565	L-96602	L-97101	same-channel positive restriction	parity-swapped current with canonical P61 F,M	swap changes source channel; P61 marginals and future-parity parent cannot both apply	one even atom gives (e,0)-S(e,0)=(e,-e)	FALSE AS INTERFACE
+PR565	L-97101/L-97102	T-97100	causal identity whose low child cancels	actual rough Euler scalar with coefficient -p^-1/2	root marginal returns parent instead of adding rough Möbius factor	one-prime coefficient vector	UNPROVEN / MISMATCH
+PR566	L-96651(ii)-(iii)	L-96651(iv)	reserve scalar dominates injected child	Hall-complement scalar dominates child	reserve and Hall complement are disjoint summands	H=1/2,R=1,alpha*Gchild=1	NOT DERIVED
+PR566	L-96651(iv)	L-96652	g>=Tg	M-matrix positivity	none if premise is actually proved	abstract theorem exact	VERIFIED CONDITIONAL
+P61	L-97100	L-97101	F>=M/40	current contraction	constant false	x=184	FALSE
+P61	L-97400	L-97401	F>=M/42 and F<=M/8	critical <1/8 contraction	exactly sufficient once source identity exists	directed finite-plus-tail certificate	VERIFIED

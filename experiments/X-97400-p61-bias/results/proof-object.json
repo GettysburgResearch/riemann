@@ -1,0 +1,19 @@
+{
+  "RH_established": false,
+  "directed_p61_bias_proved": true,
+  "global_source_producer_proved": false,
+  "inputs": {
+    "interface-verification.json": {
+      "classification": "PASS_T97400_SOURCE_INTERFACE_FIREWALLS",
+      "sha256": "28516f984814b579d5892c5cbe0ff18157a5df7a99be61cce5ea6fda47ce948c"
+    },
+    "verification.json": {
+      "classification": "PASS_T97400_REPAIRED_P61_BIAS",
+      "sha256": "9a7c7264f244830221c89f14113b92164ace4fb5bf03ec6b85195641fc58966f"
+    }
+  },
+  "pr565_source_interface_refuted": true,
+  "pr566_implication_refuted": true,
+  "proof_object_sha256": "c5028a377da7515a1fbd1c0dbf03046caa818d560f6aff0f8e86d0e7f640318a",
+  "schema": "riemann.x97400.proof-object.v1"
+}
