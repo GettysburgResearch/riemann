@@ -1,0 +1,107 @@
+{
+  "classification": "PROVED_EXACT_CONDITIONAL_REDUCTION_GLOBAL_PRODUCER_OPEN",
+  "content": {
+    "missing": [],
+    "required_files": 8
+  },
+  "finite_lorenz_lp": {
+    "fixture_digest": "1d4cb7ce402afec1f8aedad009652da4989b4c196e73b0edf768fe39c9785148",
+    "greedy_equals_vertex_equals_dual": true,
+    "rational_fixtures": 32
+  },
+  "former_candidate_complete_claim_survives": false,
+  "hostile_mutations_rejected": [
+    "drop_history_parity",
+    "scalar_exact_claims_two_rows",
+    "ratio_lift_without_row2_exactness",
+    "ignore_target_direction",
+    "leafwise_canonical_terminal",
+    "fixed_even_depth_positive",
+    "ascending_lorenz_fill",
+    "promote_conditional_to_unconditional",
+    "omit_theorem_files"
+  ],
+  "imported_certificates": {
+    "depth_two_scalar_upper": "-62.71816781856588773240782086465",
+    "odd_history_target_gap_lower": "17.005086538219052590698455753607",
+    "reverse_target_hall_feasible": false
+  },
+  "mellin_numerator": {
+    "ascending_coefficients": [
+      "-6",
+      "9",
+      "-3"
+    ],
+    "factorization": "-3*(x-1)*(x-2)",
+    "zero_free_half_plane": "Re(z)>0 implies |2^(-z)|<1"
+  },
+  "normalization_tradeoff": {
+    "row2_exact": {
+      "delta_row2": "0",
+      "delta_row3": "7/12"
+    },
+    "scalar_exact": {
+      "delta_row2": "-5/16",
+      "delta_row3": "25/48",
+      "five_delta2_plus_three_delta3": "0"
+    }
+  },
+  "not_proved_by_replay": [
+    "CPSL67",
+    "GPHT*",
+    "ASHP67",
+    "Landau theorem",
+    "RH"
+  ],
+  "parity": {
+    "activation_identity": "(X/p)/(k/p)=X/k",
+    "coefficient_squared_identity": "p^(-1)*(k/p)^(-1)=k^(-1)",
+    "history_character_checks": {
+      "0": true,
+      "1": true,
+      "10": true,
+      "11": true,
+      "12": true,
+      "13": true,
+      "14": true,
+      "15": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": true
+    }
+  },
+  "precise_downgrade": "CPSL67/GPHT*/ASHP67 OPEN AND RH-BEARING",
+  "proof_object_sha256": "c325cc4f96dc0fe0a3ab4e91aa79bbe3937811ebb2bcef977875d7c71094df5c",
+  "rh_established": false,
+  "schema": "riemann.x97300.completed-parity-reconstruction.v1",
+  "terminal_ratio": {
+    "A": "-0.05240624280729599538254680110093412798963243514822028455113521602741089462518684",
+    "B": "0.0852919489009090490985925618135048516778429199486190108705176244110353576290121",
+    "derivative_numerator_min_N4_to_1000": "0.33696022966208233559112243953345793052744834884686389392186680132077886705476375",
+    "sample_ratios": [
+      "0",
+      "0",
+      "0.040726338841663301461177896123905400606376153590955780591411699772073308933248186",
+      "0.14994037664184594089814299629879742998840737505578940873995915798654055080995177",
+      "0.22591779941197969122554163815900046800034089940161836166269557577105801735911949",
+      "0.25079790699206947305895973846649006337552318270694135907874920192660096877816845",
+      "0.28033374089249915826188954326828286099711443371877004207320231632251304492507485",
+      "0.29663916325039631142806479800690324257360841768970221802984864690611393558863957",
+      "0.30566061507383317590307108246630428780256325966139140896177473265741505744142209",
+      "0.31480908484056317653114942897531876317499579950417625718944428018714082594350270",
+      "0.31921344769866568375923068688128963861507868509854798471103733397500368812211614",
+      "0.32177313410676115837098416385532194742181594714854954258917320668940978470777664"
+    ],
+    "tail_cancellation": {
+      "2": "-3",
+      "3": "6",
+      "4": "-3"
+    }
+  },
+  "verdict": "PASS_T97300_COMPLETED_PARITY_RECONSTRUCTION_AND_DOWNGRADE"
+}
