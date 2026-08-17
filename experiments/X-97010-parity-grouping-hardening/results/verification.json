@@ -27,14 +27,38 @@
     "fixed-depth sign dichotomy"
   ],
   "sign_table": {
-    "1": {"current_leading_sign": 1, "recursive_parity_canonical": false},
-    "2": {"current_leading_sign": -1, "recursive_parity_canonical": true},
-    "3": {"current_leading_sign": 1, "recursive_parity_canonical": false},
-    "4": {"current_leading_sign": -1, "recursive_parity_canonical": true},
-    "5": {"current_leading_sign": 1, "recursive_parity_canonical": false},
-    "6": {"current_leading_sign": -1, "recursive_parity_canonical": true},
-    "7": {"current_leading_sign": 1, "recursive_parity_canonical": false},
-    "8": {"current_leading_sign": -1, "recursive_parity_canonical": true}
+    "1": {
+      "current_leading_sign": 1,
+      "recursive_parity_canonical": false
+    },
+    "2": {
+      "current_leading_sign": -1,
+      "recursive_parity_canonical": true
+    },
+    "3": {
+      "current_leading_sign": 1,
+      "recursive_parity_canonical": false
+    },
+    "4": {
+      "current_leading_sign": -1,
+      "recursive_parity_canonical": true
+    },
+    "5": {
+      "current_leading_sign": 1,
+      "recursive_parity_canonical": false
+    },
+    "6": {
+      "current_leading_sign": -1,
+      "recursive_parity_canonical": true
+    },
+    "7": {
+      "current_leading_sign": 1,
+      "recursive_parity_canonical": false
+    },
+    "8": {
+      "current_leading_sign": -1,
+      "recursive_parity_canonical": true
+    }
   },
   "verdict": "PASS_T97010_PARITY_GROUPING_HARDENING_ALGEBRA"
 }

@@ -27,6 +27,7 @@ def apply_swap(v: tuple[int, int], depth: int) -> tuple[int, int]:
 
 
 def main() -> None:
+    # Accumulated parity character and a parity-blind negative control.
     fixture = (17, 5)
     parity_checks = {
         depth: obs(apply_swap(fixture, depth)) == ((-1) ** depth) * obs(fixture)
@@ -35,17 +36,21 @@ def main() -> None:
     assert all(parity_checks.values())
     assert obs(apply_swap(fixture, 1)) != obs(fixture)
 
+    # Grouping acts diagonally: here G is multiplication by 7 on each channel.
     grouped = (7 * fixture[0], 7 * fixture[1])
     for depth in range(12):
         lhs = obs(apply_swap(grouped, depth))
         rhs = ((-1) ** depth) * obs(grouped)
         assert lhs == rhs
 
+    # Exact numerator identity in x=2^{-z}; y cancels.
     # 5(2x-1-y) + (5y-x-1-3x^2) = -3(x-1)(x-2).
+    # Compare coefficients in ascending powers of x.
     lhs = (-6, 9, -3)
     rhs = (-6, 9, -3)
     assert lhs == rhs
 
+    # Frozen directed upper endpoints from PR #561, R-96501.
     getcontext().prec = 80
     b2_upper = Decimal("-11.2745354467343289715797194361")
     b3_upper = Decimal("-2.11516352829808095816974122805")
@@ -53,6 +58,7 @@ def main() -> None:
     threshold = Decimal("-62.7181678185658877324")
     assert scalar_upper < threshold
 
+    # Fixed-depth sign dichotomy.
     sign_table = {
         L: {
             "current_leading_sign": 1 if ((-1) ** (L - 1)) > 0 else -1,
@@ -60,7 +66,7 @@ def main() -> None:
         }
         for L in range(1, 9)
     }
-    for row in sign_table.values():
+    for L, row in sign_table.items():
         assert not (
             row["current_leading_sign"] > 0
             and row["recursive_parity_canonical"]
