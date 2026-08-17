@@ -1,0 +1,16 @@
+{
+  "base_pr": 562,
+  "base_sha": "9537096f498c7ee0ca2141394f43f0a2f704cce4",
+  "classification": "exact correction and successor; RH unproved",
+  "commit_message": "research: refute PICR and expose the exact carry root port",
+  "intended_branch": "research/gpt56-pro/95300-carry-root-port-separator-repair",
+  "replay": "PASS_X_95300_PICR_SEPARATOR_AND_ROOT_PORT_REPAIR",
+  "schema": "riemann.gpt56-pro.95300.packet.v1",
+  "scientific_disposition": {
+    "PICR": "false",
+    "minimal_root_port": "proved exact",
+    "one_channel_positive_completion": "open / RH-bearing",
+    "positive_two_channel_realization": "proved exact",
+    "signed_transverse_realization": "proved exact"
+  }
+}
