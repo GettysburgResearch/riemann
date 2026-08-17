@@ -1,0 +1,10 @@
+{
+  "classification": "PASS_MPFR_DIRECTED_TWO_LEVEL_STAR_NEGATIVITY",
+  "mpfr_version": "4.2.2",
+  "precision_bits": 256,
+  "endpoint": 200000,
+  "row_2": {"lower": "-11.2745354467343289724470811741", "upper": "-11.2745354467343289715797194361", "rough_primes": 9574},
+  "row_3": {"lower": "-2.11516352829808095838658166254", "upper": "-2.11516352829808095816974122805", "rough_primes": 6627},
+  "certified": "A_2(200000)<-11 and A_3(200000)<-2",
+  "rh_established_by_replay": false
+}
