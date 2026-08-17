@@ -1,0 +1,27 @@
+{
+  "schema": "riemann.t97400.source-lock.v1",
+  "created": "2026-08-18",
+  "base_pr": 566,
+  "base_sha": "2407b4ffe5024a2e3898922cf0b722d5cf69e496",
+  "mandatory_inputs": {
+    "pr574": "74fba7f3e55fa9a53d1eb814e5067f5011ef5e86",
+    "pr575": "265c481ebd02807ab7d9a95cb0cf905a22c1876f"
+  },
+  "binding_witness": {
+    "X": 61841,
+    "history": [67],
+    "terminal": [71, 13],
+    "target_gap": ">17"
+  },
+  "first_unsupported_arrow": "CPSL67",
+  "new_claims": [
+    "R-97400",
+    "L-97400",
+    "L-97401",
+    "L-97402",
+    "L-97403",
+    "L-97404",
+    "T-97400"
+  ],
+  "rh_established": false
+}
