@@ -1,0 +1,35 @@
+{
+  "base_pr": 555,
+  "base_sha": "341697b4694ba7f44f2ba2be73cb3fc982939412",
+  "firewalls": {
+    "common_zero_polynomial_coefficients": [
+      -3,
+      9,
+      -6
+    ],
+    "rough_store": [
+      7
+    ],
+    "rough_store_mass": 0.3779644730092272,
+    "unrestricted_mass": 3.7047701332758285
+  },
+  "hazard_checks": 24,
+  "proof_object_sha256": "8593c3a48270c49fff3e05034e5896aba77443b48b7eb002b1e1b3f978c0d895",
+  "rank_checks": 24,
+  "rh_established_by_replay": false,
+  "schema": "riemann.x96600.paper-reconstruction.v1",
+  "squarefree_factorization_checks": 60794,
+  "stopping_line_proved_by_replay": false,
+  "terminal_avlt_proved_by_replay": false,
+  "terminal_compact_blob": "2c16327c6653009667fa06ddbb24628ff583c0fe",
+  "terminal_tail_proof_object": "ba6b137b64819a9d01e706ffffdf100b091e49034895e6eeb280b56f514c99c5",
+  "two_row_diagnostic": {
+    "limit": 1000000,
+    "negative_witness": null,
+    "row2_argmin": 2,
+    "row2_minimum": 0.0,
+    "row3_argmin": 2,
+    "row3_minimum": 0.0
+  },
+  "verdict": "PASS_ARXIV_FACTOR67_TWO_ROW_RECONSTRUCTION_ALGEBRA"
+}
