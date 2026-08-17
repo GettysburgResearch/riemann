@@ -1,0 +1,31 @@
+{
+  "analysis_vector_bound_checks": 10,
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_AND_FORMAL_PRIME_LOG",
+  "classification": "PASS_X_95280_Q4_PASSIVE_STATE_HALF_DERIVATIVE",
+  "compact_boundary_checks": 2048,
+  "core_energy_checks": 2,
+  "does_not_prove": [
+    "odd-core arithmetic half-derivative",
+    "critical centered cubic square-root bound",
+    "balanced Mobius dispersion",
+    "Riemann Hypothesis"
+  ],
+  "half_derivative_firewall_checks": 4,
+  "hostile_mutations_detected": 4,
+  "logarithmic_jordan_checks": 2048,
+  "normalized_d4_checks": 2048,
+  "passive_identity_checks": 256,
+  "peano_positivity_curvature_checks": 34181,
+  "proves": [
+    "exact scale-four isometry in g4/n geometry",
+    "compact four-level reciprocal boundary state",
+    "stable radius-one-quarter realization",
+    "exact passive identity 64||r||^2-25||y||^2=9||f+Uf||^2",
+    "compact logarithmic Jordan input",
+    "exact normalized d4/n output",
+    "Peano potential and curvature analysis bounds",
+    "source-blind half-derivative norm-growth firewall"
+  ],
+  "scale_four_isometry_checks": 512,
+  "stable_state_checks": 2048
+}
