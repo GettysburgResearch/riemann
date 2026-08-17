@@ -1,0 +1,30 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "classification": "PASS_X_95270_CARRY_BOTTOM_TRACE_TERMINALIZATION",
+  "does_not_prove": [
+    "positive interior critical realization",
+    "SHARP",
+    "Cycle Debt",
+    "Riemann Hypothesis"
+  ],
+  "floor_potential_checks": 512,
+  "hostile_mutations_detected": 5,
+  "interior_carry_current_checks": 8317,
+  "positive_julia_column_checks": 2047,
+  "proves": [
+    "exact 5:3 coefficient and floor-potential formulas",
+    "interior split defect equals minus three bottom contacts",
+    "positive two-scale Julia compression",
+    "trace reserve pays every bottom contact",
+    "exact Schur energy constant 1323/88 per odd squarefree core",
+    "exact scalar interval on the positive two-leaf cone",
+    "generic PSD carry target need not have a positive node source"
+  ],
+  "qstar_checks": 512,
+  "scalar_interval_checks": 93,
+  "schur_energy_checks": 1,
+  "source_filter_checks": 2048,
+  "source_type_firewall_checks": 1,
+  "terminal_tree_checks": 814,
+  "uniqueness_checks": 2
+}

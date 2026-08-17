@@ -1,0 +1,23 @@
+{
+  "base_pr": 553,
+  "base_sha": "5496d87ad04dc288921cc397213f93f451f10d36",
+  "branch": "research/gpt56-pro/95270-carry-bottom-trace-terminalization",
+  "expected_replay": "PASS_X_95270_CARRY_BOTTOM_TRACE_TERMINALIZATION",
+  "open_gate": "Positive Interior Critical Realization (PICR)",
+  "packet": {
+    "base_pr": 553,
+    "base_sha": "5496d87ad04dc288921cc397213f93f451f10d36",
+    "branch": "research/gpt56-pro/95270-carry-bottom-trace-terminalization",
+    "claim_namespace": "95270",
+    "classification": "substantive unconditional successor; RH unproved",
+    "open_gate": "Positive Interior Critical Realization (PICR)",
+    "replay": "PASS_X_95270_CARRY_BOTTOM_TRACE_TERMINALIZATION",
+    "route": "carry-bottom-trace-terminalization",
+    "schema": "riemann.gpt56-pro.packet.v1"
+  },
+  "replay_command": "python3 experiments/X-95270-carry-bottom-trace/verify.py --output /tmp/carry.json",
+  "route": "carry",
+  "schema": "riemann.gpt56-pro.verified-publication.v1",
+  "scientific_status": "Riemann Hypothesis remains unproved",
+  "source_lock_tsv": "role\tpr\tsha\tpath_or_scope\nbase\t553\t5496d87ad04dc288921cc397213f93f451f10d36\tcomplete parent packet\nfixed_row_consumer\t326\tf8030b7fab808956f6e7968d3699685d7fb2cf6c\tT-32403 and row duals\nsingle_scalar_check\t557\td11b08938c4db6a6192e96c564a7818cffc77100\tL-96600 only\npositive_cone\t538\tb7ed54922cee0bb6a62fd189f0f83edd3ff7441a\tL-95040/L-95041\n"
+}
