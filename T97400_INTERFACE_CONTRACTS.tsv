@@ -1,0 +1,11 @@
+interface	preceding_statement	next_step_needs	exact_match	verdict
+literal source -> completed parity	unique factorization; coefficient/activation/parity preserved	finite atom table with one owner and both activation sides	yes	PROVED EXACT
+causal identity -> source conservation	formal cancellation alpha_i=lambda_i/sqrt(p_i)	root marginal unchanged after all internal cancellations	yes in free labelled source	PROVED EXACT
+canonical terminal certificate -> odd-history leaf	canonical orientation row margins	reversed orientation after odd history	no	INAPPLICABLE / binding witness
+owner incidence + TP2 -> Hall	nonnegative minors of H^T K	total target capacity and Lorenz dominance	no	FALSE AS IMPLICATION
+scalar exactness -> two rows	5Delta2+3Delta3=0	Delta2>=0 and Delta3>=0	no	FALSE / R-97300
+scalar source -> scalar Lorenz LP	finite capacities targets and scalar coordinates	common coefficient vector at target-plus-scalar scope	yes	PROVED EXACT
+finite LP -> uniform producer	one exact endpoint optimization	all real X including one-sided knots	no	OPEN / CPSL67
+CPSL67 -> scalar sign	R_O<=Phi_X(T_O)	R_X>=0 eventually	yes	PROVED EXACT
+scalar sign -> Mellin holomorphy	eventual R_X>=0 plus growth	Landau hypotheses and analytic continuation	yes	PROVED EXACT CONDITIONAL
+Mellin holomorphy -> RH	zero-safe numerator and functional equation	exclusion of beta>1/2 zeros	yes	PROVED EXACT CONDITIONAL
