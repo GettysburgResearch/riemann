@@ -1,0 +1,30 @@
+{
+  "freeze": {
+    "base": {
+      "branch": "research/gpt56-pro/96600-source-complete-annular-factor67",
+      "pr": 556,
+      "sha": "a4feca0457d310c72054f274040f93b0503f658b"
+    },
+    "classification": "candidate-complete successor; hostile reconstruction required",
+    "compared": {
+      "pr559": {
+        "sha": "88d97adef8a42c5baf2f52c2c259a4ef536bdfdd"
+      },
+      "pr561": {
+        "sha": "db9bdc63c855c6ddf664b763d748f8155a6a2c67"
+      }
+    },
+    "intended_branch": "research/gpt56-pro/97100-parity-contractive-annular-recovery",
+    "publication_type": "recovered deterministic publication; not byte-identical to an unavailable earlier packet",
+    "repository": "gfreund123/riemann",
+    "rh_established": false,
+    "schema": "riemann.t97101.recovery-publication.v1"
+  },
+  "proof_object_sha256": "21dea98e32f209f559b9ac1744139cc78ccc41969289b80d415037374628f90e",
+  "schema": "riemann.t97101.recovery-lock.v1",
+  "status": {
+    "p61_bias": "CANDIDATE_CERTIFICATE",
+    "parity_contraction": "EXACT_FROM_BIAS",
+    "rh": "PROPOSED_NOT_ESTABLISHED"
+  }
+}

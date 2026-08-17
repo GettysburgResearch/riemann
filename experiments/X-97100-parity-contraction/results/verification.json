@@ -1,0 +1,27 @@
+{
+  "bias_contract": {
+    "directed_certificate_replayed_here": false,
+    "lower": "1/40",
+    "upper": "1/8"
+  },
+  "current_upper": "9/56",
+  "frozen_heads": {
+    "pr556": "a4feca0457d310c72054f274040f93b0503f658b",
+    "pr559": "88d97adef8a42c5baf2f52c2c259a4ef536bdfdd",
+    "pr561": "db9bdc63c855c6ddf664b763d748f8155a6a2c67"
+  },
+  "low_child_recombination": "lambda*(P-r*S child)+lambda*r*S child=lambda*P",
+  "positive_base_dictionary": {
+    "2": 15,
+    "3": 6,
+    "4": 3,
+    "tail": 6
+  },
+  "proof_object_sha256": "21dea98e32f209f559b9ac1744139cc78ccc41969289b80d415037374628f90e",
+  "rh_established": false,
+  "scalar_numerator": "-3*(1-2^-z)*(2-2^-z)",
+  "schema": "riemann.x97100.parity-contraction-recovery.v1",
+  "scientific_status": "candidate complete; P61 bias certificate requires independent reconstruction",
+  "strict_root_margin": "1/960",
+  "verdict": "PASS_PARITY_CONTRACTIVE_ANNULAR_RECOVERY_ALGEBRA"
+}
