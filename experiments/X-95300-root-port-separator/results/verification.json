@@ -1,0 +1,26 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_AND_MULTIRADICAL",
+  "classification": "PASS_X_95300_PICR_SEPARATOR_AND_ROOT_PORT_REPAIR",
+  "does_not_prove": [
+    "eventual sign of the root port",
+    "one-channel positive root-neutral realization",
+    "SHARP",
+    "Riemann Hypothesis"
+  ],
+  "hostile_mutations_detected": 5,
+  "interior_annihilator_checks": 2109,
+  "mertens_increment_checks": 1010,
+  "multiples_inversion_checks": 3036,
+  "proves": [
+    "every interior carry column has zero b2 response",
+    "PICR target has nonzero root response for every tested T>=7",
+    "interior span has exactly one physical-column quotient",
+    "gamma=chi_(3,1)=delta_3 is a minimal root port",
+    "multiples Mobius inversion reconstructs the exact node divergence",
+    "the root-port increment is the adjacent-dyadic Mertens flux"
+  ],
+  "radical_noncancellation_checks": 506,
+  "root_port_checks": 396,
+  "source_support_checks": 1024,
+  "span_rank_checks": 50
+}
