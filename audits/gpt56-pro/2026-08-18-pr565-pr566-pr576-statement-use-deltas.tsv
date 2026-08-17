@@ -1,0 +1,9 @@
+interface	preceding statement	consumed statement	exact delta	status after T97500
+PR565 P61 bias	L-97400: scalar inequalities on complete grouped P61 observation F,M	positive current source with swapped rough child and recursive mass <1/8	scalar observation does not create the literal raw source identity; raw r exposure was replaced by contracted alpha exposure	bias repaired; source delta remains
+PR565 low-child recombination	lambda(P-r S child)+alpha S child=lambda P	retention of native rough coefficient -r in the final scalar	with alpha=lambda r the rough child coefficient cancels inside this block; no native -r remains there	exact coefficient firewall retained
+PR566 reserve injection	alpha G_child injects into a disjoint parent reserve	Hall-complement scalar g >= T g	reserve domination is not current domination	generic implication refuted by PR576
+PR576 missing source object	need a positive current plus contracted children preserving every raw coefficient	literal paired-source identity	current must contain leftover (r-t) S child source	constructed exactly in L-97501
+contracted scalar current	positive paired source current C=B+(R-T)S child	coefficientwise nonnegative one-channel scalar current	signed observation is b-(R-T)f and can be negative	universal local promotion refuted in R-97500
+safe child budget	sum t m < 1/8 M	bound on total negative rough scalar exposure	t-split relocates but does not reduce raw exposure sum r f	proved exact in L-97502
+correct successor	raw f=(I+R)^-1 b	contracted f=(I+T)^-1 c	c=(I+T)(I+R)^-1 b=b-(R-T)f	proved exact in L-97500
+remaining producer	P61 local bias and literal source tree	nonnegative scalar current sufficient for M-matrix consumer	nonlocal Bellman inequality c>=Tc	NCBI67 open / RH-bearing
