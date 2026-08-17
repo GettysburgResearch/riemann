@@ -1,0 +1,31 @@
+{
+  "channel_swap": "exact",
+  "cutoff": 256,
+  "dyadic_inverse_fibre": [
+    "1",
+    "-5/2",
+    "2",
+    "-1/2"
+  ],
+  "energy_constant": "4149/1666",
+  "genealogy": {
+    "base_pr": 557,
+    "base_sha": "d11b08938c4db6a6192e96c564a7818cffc77100",
+    "pr556_sha": "a4feca0457d310c72054f274040f93b0503f658b",
+    "pr559_sha": "88d97adef8a42c5baf2f52c2c259a4ef536bdfdd",
+    "pr561_sha": "db9bdc63c855c6ddf664b763d748f8155a6a2c67"
+  },
+  "generalized_prime_source": "nonnegative",
+  "open_producer": "RJTE: sum_(n<=N)b_diamond(n)/sqrt(n) <= 1 eventually",
+  "parity_status": {
+    "pr556_global": "rejected",
+    "pr559_terminal": "rejected",
+    "pr561": "retained"
+  },
+  "proof_boundary": "Exact reciprocal factorization, coefficient channels, generalized-prime swap, parity firewall, energy and prefix reduction. Does not prove RJTE or RH.",
+  "proof_object_sha256": "bd80c2e2aa4358943927fcf3a87e59a60dc09967b42102518272787652e0bba7",
+  "rh_established": false,
+  "schema": "riemann.x97100.root-julia.result.v1",
+  "trace_constant": "16/3",
+  "verdict": "PASS_T97100_PARITY_SAFE_SINGLE_SCALAR_ROOT_JULIA"
+}

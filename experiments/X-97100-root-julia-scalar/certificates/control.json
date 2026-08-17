@@ -1,0 +1,26 @@
+{
+  "cutoff": 256,
+  "firewalls": {
+    "imports_pr556_global": false,
+    "imports_pr559_terminal": false,
+    "parity_blind_terminal": false,
+    "rh_established": false,
+    "rjte_proved": false
+  },
+  "genealogy": {
+    "base_pr": 557,
+    "base_sha": "d11b08938c4db6a6192e96c564a7818cffc77100",
+    "pr556_sha": "a4feca0457d310c72054f274040f93b0503f658b",
+    "pr559_sha": "88d97adef8a42c5baf2f52c2c259a4ef536bdfdd",
+    "pr561_sha": "db9bdc63c855c6ddf664b763d748f8155a6a2c67"
+  },
+  "odd_history_terminal": {
+    "history": [
+      67
+    ],
+    "p": 2521,
+    "parity": -1,
+    "y": 66
+  },
+  "schema": "riemann.x97100.root-julia.control.v1"
+}
