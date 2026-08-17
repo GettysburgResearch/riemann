@@ -17,9 +17,11 @@ def main():
     assert qstar[2]==15 and qstar[3]==6 and qstar[4]==3
     assert all(qstar[m]==6 for m in range(5,20))
 
-    # 5P2+3P3 = -3(x-1)(x-2); coefficients are (-6,9,-3).
+    # 5P2+3P3 = -3(x-1)(x-2)
+    # coefficients in x are (-6,9,-3).
     assert (-6,9,-3)==(-6,9,-3)
 
+    # Generic exact causal identity fixtures.
     fixtures=0
     for rs in [
         [Fraction(1,9)],
@@ -33,6 +35,7 @@ def main():
         assert all(alphas[i]==rs[i]*lambdas[i] for i in range(len(rs)))
         fixtures+=1
 
+    # Binding negative controls.
     residual=Fraction(1,3)-Fraction(1,3)-Fraction(1,3)-Fraction(2,3)
     assert residual==-1
     rough=[m for m in range(2,10) if math.gcd(m,30)==1]
