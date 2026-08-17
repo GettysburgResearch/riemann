@@ -1,0 +1,32 @@
+{
+  "base_pr": 561,
+  "base_sha": "db9bdc63c855c6ddf664b763d748f8155a6a2c67",
+  "bonferroni_fixtures": [
+    {"L": 10, "S": "49/50", "m": 1, "z": "1/50"},
+    {"L": 10, "S": "9261/10000", "m": 2, "z": "3/40"},
+    {"L": 10, "S": "1842939/2000000", "m": 3, "z": "2/25"},
+    {"L": 10, "S": "5528817/6250000", "m": 4, "z": "3/25"},
+    {"L": 10, "S": "204566229/250000000", "m": 5, "z": "39/200"},
+    {"L": 10, "S": "7978082931/10000000000", "m": 6, "z": "11/50"},
+    {"L": 12, "S": "374969897757/500000000000", "m": 7, "z": "7/25"},
+    {"L": 12, "S": "37122019877943/50000000000000", "m": 8, "z": "29/100"},
+    {"L": 12, "S": "7090305796687113/10000000000000000", "m": 9, "z": "67/200"},
+    {"L": 12, "S": "163077033323803599/250000000000000000", "m": 10, "z": "83/200"},
+    {"L": 12, "S": "15818472232408949103/25000000000000000000", "m": 11, "z": "89/200"},
+    {"L": 14, "S": "2958054307460473482261/5000000000000000000000", "m": 12, "z": "51/100"}
+  ],
+  "classification": "PASS_T97240_GLOBAL_PARITY_HALL_SCALAR_JULIA_REDUCTION",
+  "diagnostics": {"smooth_interior_cases": 6},
+  "does_not_prove": ["GABPT", "eventual scalar positivity", "Riemann Hypothesis"],
+  "exact_checks": {
+    "adaptive_bonferroni_cases": 12,
+    "history_parity_conjugations": 3992,
+    "julia_psd_columns": 20000,
+    "reciprocal_state_factorization": 20000,
+    "scalar_convolution": 20000
+  },
+  "gabpt_proved_by_replay": false,
+  "proof_object_sha256": "dd7e4adc8db92bdcc0b4ca658bf19064fdf2c98e31323db76b70f6b0a8e15908",
+  "rh_established_by_replay": false,
+  "schema": "riemann.t97240.v1"
+}
