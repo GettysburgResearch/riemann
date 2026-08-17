@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,microtype}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\RR}{\mathcal R}
+\newcommand{\BB}{\mathcal B}
+\newcommand{\II}{\mathcal I}
+\title{Adaptive Parity--Hall Reduction for Native M\"obius Rows\\\large A Single-Scalar Julia Lift and Activation-Boundary Frontier}
+\author{Agentic Polymath Project}
+\date{17 August 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A parity-aware reconstruction of a projective rough-prime route reduced the
+positivity of native M\"obius rows to a global common-source problem, but proved
+that every fixed local parity reset fails. We continue that route in three
+steps. First, the unique conclusion-producing combination
+\(\RR_X=5c_X(2)+3c_X(3)\) collapses the two-row cone to one reciprocal state
+whose Mellin numerator has no zero in the relevant half-plane. Second, an
+adaptive Bonferroni theorem proves that variable even depth restores positivity
+in the complete homogeneous rough product, while a repeated-integral formula
+proves that every smooth-interior rough finite difference is nonnegative.
+Hence the remaining sign is supported only on histories crossing a row
+activation boundary. Third, we construct an exact positive \(2\times2\) Julia
+lift in which cumulative rough-history parity acts by diagonal conjugation and
+the off-diagonal is precisely the \(5{:}3\) scalar. The positive trace retains
+the real zeta pole, so matrix positivity alone cannot feed Landau. The entire
+unresolved producer is localized to one globally owned activation-boundary
+functional, denoted GABPT. We prove GABPT implies the Riemann Hypothesis through
+one fixed Mellin transform. GABPT is not proved here; RH remains unproved.
+\end{abstract}
+\begin{center}\fbox{\parbox{0.92\textwidth}{\textbf{Status.} This is an
+unconditional reduction and interface repair, not a proof of RH. The remaining
+arithmetic theorem is stated explicitly as GABPT.}}\end{center}
+\tableofcontents
+
+\section{The native rows and the unique scalar}
+For the canonical component row \(Q_X(j)\), write
+\[
+c_X(j)=\sum_{k\le X/j}\frac{\mu(k)}{\sqrt{k}}Q_{X/k}(j).
+\]
+The parity audit of the predecessor shows that cumulative rough history changes
+the sign of a terminal observation by \((-1)^{|h|}\); magnitudes and activations
+remain unchanged. The two fixed rows have an exact conclusion-producing
+combination.
+
+\begin{theorem}[Single-scalar collapse]\label{thm:scalar}
+Put \(\RR_X=5c_X(2)+3c_X(3)\). Then
+\[
+\RR_X=\sum_{n\le X}\frac{a_*(n)}{\sqrt n}\log\frac Xn,
+\]
+where
+\[
+a_*(n)=6\1_{n=1}-6\mu(n)+9\1_{2\mid n}\mu(n/2)
+-3\1_{4\mid n}\mu(n/4).
+\]
+The unsieved dictionary \(q_*=1*a_*\) is
+\[
+q_*(1)=0,\quad q_*(2)=15,\quad q_*(3)=6,\quad q_*(4)=3,
+\quad q_*(m)=6\ (m\ge5).
+\]
+\end{theorem}
+\begin{proof}
+Insert the exact coefficient dictionaries of rows two and three and collect the
+M\"obius shifts. Convolution with the constant-one sequence gives the displayed
+finite values; for \(m\ge5\) every boundary correction has entered and the
+constant tail is six.
+\end{proof}
+
+Let \(b=(\delta_1-\delta_2)*\mu\) and
+\[
+G(X)=\sum_{n\le X}\frac{b(n)}{\sqrt n}\log\frac Xn.
+\]
+Direct convolution gives
+\[
+a_*=6\delta_1-3(2\delta_1-\delta_2)*b,
+\]
+hence
+\begin{equation}\label{eq:recip}
+\RR_X=6\log X-3\left(2G(X)-2^{-1/2}G(X/2)\right).
+\end{equation}
+This is the first simplification: the global parity-Hall problem has only one
+scalar output and one reciprocal state.
+
+\section{The fixed-depth obstruction and adaptive depth}
+The predecessor proved that every fixed even depth eventually makes the current
+Euler block negative, whereas every fixed odd depth leaves the recursive parity
+reversed. This rules out a fixed local reset, not a variable stopping rule.
+
+Let \(0\le r_i\le r_{\max}<1\), let \(e_k\) be the elementary symmetric sums,
+and put \(z=\sum_i r_i\). The complete rough product is
+\[
+P=\prod_i(1-r_i)=\sum_{k\ge0}(-1)^ke_k>0.
+\]
+
+\begin{theorem}[Adaptive Bonferroni positivity]\label{thm:bonf}
+For an even integer \(L>z\), put
+\[
+S_{L-1}=\sum_{k=0}^{L-1}(-1)^ke_k.
+\]
+If
+\[
+L\log\frac{L}{ez}>\frac{z}{1-r_{\max}},
+\]
+then \(S_{L-1}>0\). For rough-prime weights \(r_i=p_i^{-1/2}\), the smallest
+even integer with \(L\ge8(z+1)\) is sufficient.
+\end{theorem}
+\begin{proof}
+Since \(-\log(1-r)\le r/(1-r_{\max})\),
+\[
+P\ge \exp\left(-\frac{z}{1-r_{\max}}\right).
+\]
+Maclaurin's inequality gives \(e_k\le z^k/k!\). A Chernoff bound for the
+exponential tail yields
+\[
+\sum_{k\ge L}e_k\le \sum_{k\ge L}\frac{z^k}{k!}
+\le\left(\frac{ez}{L}\right)^L.
+\]
+The assumed inequality makes the absolute omitted tail smaller than \(P\), so
+\(S_{L-1}=P-\sum_{k\ge L}(-1)^ke_k>0\). For
+\(r_{\max}\le67^{-1/2}\), the explicit linear choice has ample room.
+\end{proof}
+
+The theorem explains why the fixed-depth asymptotic does not settle the global
+problem: the correct depth may grow with the accumulated rough hazard.
+
+\section{Smooth-interior positivity}
+Critical conjugation turns the logarithmic ramp into
+\[
+\phi(u)=u e^{u/2}\1_{u\ge0}.
+\]
+\begin{lemma}[Positive derivatives]\label{lem:der}
+For \(r\ge1\) and \(u>0\),
+\[
+\phi^{(r)}(u)=e^{u/2}\left(\frac{u}{2^r}+\frac{r}{2^{r-1}}\right)>0.
+\]
+\end{lemma}
+\begin{proof}
+Differentiate \(u e^{u/2}\) and induct on \(r\).
+\end{proof}
+
+\begin{theorem}[Smooth-interior finite differences]\label{thm:interior}
+If \(a_i\ge0\) and \(u\ge a_1+\cdots+a_r\), then
+\[
+\prod_{i=1}^r(I-T_{a_i})\phi(u)
+=\int_0^{a_1}\!\cdots\!\int_0^{a_r}
+\phi^{(r)}(u-v_1-\cdots-v_r)\,dv_1\cdots dv_r\ge0.
+\]
+\end{theorem}
+\begin{proof}
+Apply \(f(u)-f(u-a)=\int_0^a f'(u-v)\,dv\) repeatedly. The activation
+assumption keeps the complete integration cube in the smooth region, and
+Lemma~\ref{lem:der} supplies the sign.
+\end{proof}
+
+Thus a rough history can contribute negatively only when its translation cube
+crosses an activation boundary. This localizes the producer sharply.
+
+\section{Exact activation-boundary localization}
+Fully expand the finite parity-labelled source at fixed endpoint \(X\). Assign
+every history to the smooth-interior class if its complete translation cube
+stays within one active row cell; assign it to the boundary class otherwise.
+One-use ownership gives the exact decomposition
+\begin{equation}\label{eq:IB}
+\RR_X=\II_X+\BB_X.
+\end{equation}
+Theorem~\ref{thm:interior} gives \(\II_X\ge0\). The remaining statement is:
+
+\begin{definition}[GABPT]
+The Global Activation-Boundary Parity Transport theorem is
+\[
+\BB_X\ge-\II_X
+\]
+for every sufficiently large \(X\), with every cumulative history parity and
+source coefficient used exactly once.
+\end{definition}
+
+GABPT is equivalent to eventual nonnegativity of \(\RR_X\). It is a global,
+variable-depth theorem. Separate leafwise transports cannot prove it, because
+odd histories reverse orientation and independent leaf budgets duplicate the
+same source reserve.
+
+\section{A positive parity-covariant Julia lift}
+Let \(g_2(n)=v_2(n)+1\) and
+\[
+h_*(n)=6g_2(n)+3\1_{2\mid n}g_2(n/2).
+\]
+Define
+\[
+\mathcal J_*(n)=\begin{pmatrix}h_*(n)&a_*(n)\\a_*(n)&h_*(n)\end{pmatrix}.
+\]
+\begin{theorem}[Julia positivity and parity conjugation]\label{thm:julia}
+For every \(n\), \(h_*(n)\ge|a_*(n)|\), so \(\mathcal J_*(n)\succeq0\).
+If \(D=\operatorname{diag}(1,-1)\), then for every rough history \(h\),
+\[
+D^{|h|}\mathcal J_*(n)D^{|h|}\succeq0,
+\]
+and its off-diagonal is \((-1)^{|h|}a_*(n)\).
+\end{theorem}
+\begin{proof}
+For an odd squarefree core \(d>1\), the only nonzero dyadic levels have
+\[
+(|a_*|,h_*)=(6,6),(15,15),(12,24),(3,33).
+\]
+The unit core is checked directly, and nonsquarefree odd cores have zero scalar
+coefficient. Diagonal conjugation preserves the PSD cone and flips the
+off-diagonal once per parity swap.
+\end{proof}
+
+The theorem repairs the parity interface exactly: one need not positively
+realize both a scalar datum and its negative. Both are off-diagonal faces of one
+positive matrix state.
+
+\section{Why the positive trace does not finish Landau}
+The Dirichlet series of \(g_2\) is
+\[
+\sum_{n\ge1}\frac{g_2(n)}{n^z}=\frac{\zeta(z)}{1-2^{-z}}.
+\]
+After excluding the nonphysical unit column, the Julia diagonal has symbol
+\[
+H(z)=3(2+2^{-z})\frac{\zeta(z)}{1-2^{-z}}-6.
+\]
+It retains the pole at \(z=1\).
+
+\begin{firewall}[Source-blind Julia promotion]
+The positive eigenchannels \(H(z)\pm A(z)\) retain the same real pole. Their
+Mellin abscissa is therefore the shifted value \(1/2\), not zero. PSD Julia
+gluing preserves parity but cannot, by its trace alone, provide the Landau
+continuation needed for RH. The trace-free off-diagonal scalar remains the
+conclusion-producing quantity.
+\end{firewall}
+
+\section{The annular reserve}
+The complete \(P_{61}\) scale-four annular theorem supplies strong local lower
+bounds for rows two and three. Its local certificate is useful, but its
+parity-blind root composition cannot be imported after the odd-history
+counterexample. In the present architecture an annular reserve may be used only
+as one globally owned budget against \(\BB_X\). It may not be copied among
+leaves, used in canonical orientation after odd histories, or reclassified as
+recursive source mass. Proving the required one-use domination is one possible
+route to GABPT.
+
+\section{The Mellin--Landau consumer}
+\begin{theorem}[Exact scalar transform]\label{thm:mellin}
+For \(z=s+1/2\), initially in the absolute half-plane,
+\[
+\int_1^\infty\RR_X X^{-s-1}\,dX
+=\frac6{s^2}-\frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)}.
+\]
+\end{theorem}
+\begin{proof}
+Integrate each logarithmic ramp using
+\[
+\int_n^\infty\log(X/n)X^{-s-1}\,dX=\frac{n^{-s}}{s^2},
+\]
+then insert the Dirichlet series of \(a_*\).
+\end{proof}
+
+\begin{theorem}[GABPT implies RH]\label{thm:rh}
+If GABPT holds, then the Riemann Hypothesis holds.
+\end{theorem}
+\begin{proof}
+GABPT makes \(\RR_X\) nonnegative for all sufficiently large \(X\). Removing a
+finite initial interval changes its Mellin transform by an entire function.
+Landau's theorem forces the tail transform to be holomorphic through
+\(\Re s>0\), since the displayed meromorphic expression has no positive-real
+singularity. A zero \(\rho\) of \(\zeta\) with \(\Re\rho>1/2\) would create a
+pole at \(s=\rho-1/2\). The numerator cannot cancel it: its zeros require
+\(2^{-\rho}=1\) or \(2\), which force \(\Re\rho=0\) or \(-1\). This is a
+contradiction. Functional symmetry gives RH.
+\end{proof}
+
+\section{Hostile reconstruction checklist}
+Reject the route at the first occurrence of any of the following:
+\begin{enumerate}
+\item a rough history whose cumulative parity is recorded but not applied;
+\item an activation-boundary history counted in both \(\II_X\) and \(\BB_X\);
+\item an annular reserve copied into more than one global owner;
+\item a PSD carry column promoted to a positive arithmetic node source;
+\item the Julia trace used as though its Mellin abscissa were zero;
+\item a finite replay represented as a proof of GABPT;
+\item a claim that this paper proves RH unconditionally.
+\end{enumerate}
+
+\section{Conclusion}
+The fixed-depth no-go is not the end of the parity-Hall programme. Adaptive
+depth proves positivity in the homogeneous product, and complete monotonicity of
+the critical ramp proves every smooth-interior history positive. The parity
+cocycle admits an exact PSD Julia implementation. These results compress the
+open producer to one globally owned activation-boundary scalar. That scalar is
+the correct target for the next proof or exact separator. GABPT remains open,
+and the Riemann Hypothesis remains unproved.
+
+\end{document}
