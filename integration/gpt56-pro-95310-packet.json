@@ -1,0 +1,16 @@
+{
+  "base_pr": 563,
+  "base_sha": "c4cc65cccb3f13a6499506cf3c26bd521c455864",
+  "classification": "exact reduction and diagonal closure; RH unproved",
+  "commit_message": "research: compact OCHD to a finite odd-core correlation",
+  "intended_branch": "research/gpt56-pro/95310-q4-finite-odd-core-preconditioner",
+  "replay": "PASS_X_95310_Q4_FINITE_ODD_CORE_PRECONDITIONER",
+  "schema": "riemann.gpt56-pro.95310.packet.v1",
+  "scientific_disposition": {
+    "FOCC": "open / RH-bearing",
+    "critical_dyadic_tail": "six-band finite packet",
+    "same_core_diagonal": "polylogarithmic",
+    "source_blind_inference": "refuted",
+    "stable_preconditioner_inverse": "proved exact"
+  }
+}
