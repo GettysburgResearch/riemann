@@ -1,0 +1,585 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Rcal}{\mathcal R}
+\newcommand{\Fcal}{\mathcal F}
+\newcommand{\Scal}{\mathcal S}
+\newcommand{\Lcal}{\mathcal L}
+\newcommand{\CSHT}{\mathrm{CSHT}_{67}}
+\newcommand{\LAPBR}{\mathrm{LAPBR}_{67}}
+\title{Threshold-Flexible Causality for the Factor--67 Annular Scalar:\\Exact Source Completion, a Subcritical-Depth No-Go, and the Critical-Saddle Frontier}
+\author{Agentic Polymath Project}
+\date{August 18, 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We reconstruct the threshold-flexible factor--67 causal method at the level of
+individual native rough occurrences.  Every rough edge carries its literal
+coefficient $r=p^{-1/2}$, and every threshold split is the one-use partition
+$(r-a)+a=r$.  The missing one-prime compensation $r-2r^2$, and in general the
+nonlocal resolvent term $(R-A)F$, are therefore compulsory.  We prove that the
+root observation of the completed owner tree is the native annular scalar, not
+the finite $P_{61}$ base; at $X=184$ the distinction exceeds $1.36314$.
+
+The source ledger does not imply positivity.  Let $C_L(X)$ be the exact native
+current obtained by stopping before rough depth $L$, with $L$ even.  We prove
+that
+\[
+ L(X)\log L(X)=o(\log\log X)
+ \quad\Longrightarrow\quad C_L(X)<0
+\]
+for all sufficiently large $X$.  This refutes the large-prime residual theorem
+$\LAPBR$ proposed for the adaptive depth $L=O(\log\log\log X)$.  A directed
+256-bit calculation also certifies the adjacent finite sign change
+$C_2(32605)>0>C_2(32606)$ and $C_2(61841)<-21.3$, while the native scalar at
+$61841$ is positive.  On the constructive side, we prove positivity whenever
+the least rough prime is at least $Y^\theta$ with $\theta>e^{-1}$.
+
+The surviving producer must operate in the critical rough-depth window
+$k\asymp\log\log X$ and transport complete odd-depth native occurrences into
+even-depth occurrences with one common source ledger.  We formulate this as
+$\CSHT$.  The paper proves the source and no-go theorems unconditionally; it
+does not prove $\CSHT$ or the Riemann Hypothesis.
+\end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\textbf{Scientific status.}
+The threshold-flexible subcritical-depth method is decided negatively.  The
+new exact source theorems and high-prime sector are unconditional.  The
+critical-saddle transport and the Riemann Hypothesis remain unproved.}}
+\end{center}
+
+\tableofcontents
+
+\section{The annular scalar and the frozen finite base}
+
+For $j\ge2$, let $c_X(j)$ denote the native Mobius component row used by the
+fixed-row Mellin consumer.  We study the annular $5{:}3$ scalar
+\begin{equation}\label{eq:native-scalar}
+ \Acal_X
+ =5\bigl(c_X(2)-c_{X/4}(2)\bigr)
+ +3\bigl(c_X(3)-c_{X/4}(3)\bigr).
+\end{equation}
+Before Mobius convolution its coefficient dictionary is
+\begin{equation}\label{eq:qstar}
+ q_*(2)=15,\quad q_*(3)=6,\quad q_*(4)=3,
+ \quad q_*(n)=6\quad(n\ge5),
+\end{equation}
+with $q_*(1)=0$.
+
+Put $P_{61}=\prod_{p\le61}p$.  The grouped finite-Euler annular scalar is
+\begin{equation}\label{eq:bdef}
+ b(X)=F_{61}(X)
+ =\sum_{d\mid P_{61}}{\mu(d)\over\sqrt d}A_*(X/d),
+\end{equation}
+where
+\[
+ A_*(Y)=\sum_{n\ge2}{q_*(n)\over\sqrt n}
+        \min\!\left(\log4,\log{Y\over n}\right)_+.
+\]
+We use the following independently certified theorem as a frozen arithmetic
+input.
+
+\begin{proposition}[Sharp finite-$P_{61}$ base]\label{prop:base}
+The function $b$ is nonnegative for every real $Y\ge1$ and
+\[
+ b(Y)=a\sqrt Y+O(1),
+ \qquad
+ a=12\prod_{p\le61}\left(1-{1\over p}\right)>0.
+\]
+For $Y\ge67$, its unsigned companion $M(Y)$ satisfies
+\[
+ {1\over42}M(Y)\le b(Y)\le {1\over8}M(Y).
+\]
+The global ratio minimum occurs at $Y=184$ and is
+\[
+ {b(184)\over M(184)}
+ =0.02398429355876630467327315865\ldots>{1\over42}.
+\]
+\end{proposition}
+
+The directed proof of Proposition~\ref{prop:base} is part of the frozen base
+packet.  The present paper does not reuse the false earlier constant $1/40$.
+
+\section{The native root and one exact owner per rough occurrence}
+
+Let
+\[
+ \Rcal_{67}^{\mathrm{sf}}
+ =\{m:m\text{ is squarefree and }p\mid m\Rightarrow p\ge67\}.
+\]
+
+\begin{theorem}[Native rough convolution]\label{thm:native-root}
+For every real endpoint $X$,
+\begin{equation}\label{eq:root-convolution}
+ \boxed{
+ \Acal_X=\sum_{m\in\Rcal_{67}^{\mathrm{sf}}}
+ {\mu(m)\over\sqrt m}\,b(X/m).
+ }
+\end{equation}
+The sum is finite.  If $m=p_1\cdots p_t$ with
+$67\le p_1<\cdots<p_t$, then the unique history owner of that occurrence has
+coefficient $m^{-1/2}$ and parity $(-1)^t$.
+\end{theorem}
+
+\begin{proof}
+Every squarefree native index has a unique factorization
+\[
+ k=d p_1\cdots p_t,
+ \qquad d\mid P_{61},
+ \qquad67\le p_1<\cdots<p_t.
+\]
+The finite and rough Euler functions have disjoint prime support, hence
+\[
+ \mu=\mu_{P_{61}}*\mu_{\Rcal_{67}^{\mathrm{sf}}}.
+\]
+Convolving \eqref{eq:qstar} and applying the same annular hinge proves
+\eqref{eq:root-convolution} coefficientwise.
+
+Moving one prime $p$ into the ordered history replaces $(X,k)$ by
+$(X/p,k/p)$.  Both native invariants are exact:
+\[
+ {X/p\over k/p}={X\over k},
+ \qquad
+ p^{-1/2}(k/p)^{-1/2}=k^{-1/2}.
+\]
+The paired parity channel swaps once, so the complete sign is
+$\mu(d)(-1)^t=\mu(k)$.  Unique factorization gives one ordered first-owner
+history.  The hinge makes the sum finite.
+\end{proof}
+
+\begin{firewall}[Ownership is not positivity]
+Theorem~\ref{thm:native-root} proves coefficient, activation and parity
+provenance.  It does not imply that a stopped current or a terminal leaf has
+nonnegative signed observation.
+\end{firewall}
+
+At $X=184$, only the rough primes $67,71,73,79,83,89$ occur.  Directly from
+\eqref{eq:root-convolution},
+\[
+ \Acal_{184}=b(184)-D_{184},
+ \qquad
+ D_{184}>1.3631478826704517.
+\]
+The directed replay gives
+\[
+ b(184)\in[10.69357964877382966,10.69357964877383023],
+\]
+\[
+ \Acal_{184}\in[9.33043176610337787,9.33043176610337847].
+\]
+Thus any low-child recombination returning $b(184)$ fails the native-root
+identity before positivity is discussed.
+
+\section{Threshold policies and the exact residual}
+
+Let the finite rough-history DAG be ordered from parents to children.  Let $R$
+be its raw nonnegative edge operator; the entry on a prime-$p$ edge is
+$r=p^{-1/2}$.  Let $S$ denote parity-channel swap.
+
+\begin{theorem}[One-use threshold ledger]\label{thm:threshold-ledger}
+At an edge $v\to w$, choose any $a_{v,w}$ with
+$0\le a_{v,w}\le r_{v,w}$.  The raw positive paired-source occurrence has the
+unique one-use partition
+\begin{equation}\label{eq:edge-split}
+ r_{v,w}SP_w
+ =(r_{v,w}-a_{v,w})SP_w\oplus a_{v,w}SP_w.
+\end{equation}
+Consequently every native occurrence is either assigned one deterministic
+owner or is partitioned into disjoint suboccurrences whose coefficient sum is
+its original coefficient.  No threshold policy changes the raw coefficient.
+\end{theorem}
+
+\begin{proof}
+Equation \eqref{eq:edge-split} is an identity in the positive paired-source
+cone.  Induct along the unique ordered history of
+Theorem~\ref{thm:native-root}.  At every edge the two subcoefficients add to
+$r$.  Multiplication along the path therefore gives exactly
+$\prod_i p_i^{-1/2}$.  Distinct owner labels are disjoint by construction.
+\end{proof}
+
+Let $b$ now denote the vector of local grouped observations and let $F$ denote
+the exact native completed-parity scalar.  The raw recursion is
+\begin{equation}\label{eq:raw-recursion}
+ F+RF=b.
+\end{equation}
+
+\begin{theorem}[Raw-to-contracted resolvent]\label{thm:resolvent}
+For any nonnegative threshold operator $A$ with $0\le A\le R$, the same native
+scalar satisfies
+\begin{equation}\label{eq:contracted-recursion}
+ F+AF=g
+\end{equation}
+if and only if
+\begin{equation}\label{eq:forced-current}
+ \boxed{g=(I+A)(I+R)^{-1}b=b-(R-A)F.}
+\end{equation}
+The positive current source is
+\begin{equation}\label{eq:positive-current}
+ C_v=B_v\oplus\bigoplus_w(r_{v,w}-a_{v,w})SP_w,
+\end{equation}
+while the recursive source is
+$\bigoplus_w a_{v,w}SP_w$.
+\end{theorem}
+
+\begin{proof}
+Since $R$ is nilpotent, $F=(I+R)^{-1}b$.  Substitution into
+\eqref{eq:contracted-recursion} gives \eqref{eq:forced-current}.  Equation
+\eqref{eq:positive-current} is the direct sum of the residual pieces in
+\eqref{eq:edge-split}.  Adding the recursive pieces recovers the raw parent.
+Signed observation gives exactly \eqref{eq:forced-current}.
+\end{proof}
+
+\subsection{The one-prime correction}
+
+For one prime, let $r=p^{-1/2}$.  If a proposed packet has already charged one
+$r^2$ child in the current and another $r^2$ child recursively, the omitted
+positive source is
+\begin{equation}\label{eq:delta}
+ \boxed{\delta_p=r-2r^2=r(1-2r)>0.}
+\end{equation}
+Indeed $\delta_p+2r^2=r$.  A cleaner split with one recursive $r^2$ child has
+residual $r-r^2$.  Both are instances of $(R-A)F$.
+
+\begin{corollary}[Raw-exposure conservation]\label{cor:exposure}
+For every child scalar $F_w$,
+\[
+ (r-a)F_w+aF_w=rF_w.
+\]
+Threshold contraction relocates raw exposure; it does not reduce it.
+\end{corollary}
+
+\begin{firewall}[Minimal two-node separator]\label{fw:two-node}
+Take $b=(0,1)$, one raw edge $r>0$, and one threshold $0\le a<r$.  Then
+$F=(-r,1)$ and the exact parent current is
+\[
+ g_0=F_0+aF_1=a-r<0.
+\]
+Thus no universal local one-channel positive current can implement a strict
+threshold contraction.
+\end{firewall}
+
+\section{The odd-history stress case}
+
+The preceding source identities preserve parity rather than hiding it.  This is
+mandatory at
+\[
+ X=67\cdot71\cdot13=61841,
+ \qquad h=(67),
+ \qquad(p,y)=(71,13).
+\]
+A 192-bit exact dyadic enclosure over all 239 active $P_{61}$ divisors proves
+\begin{equation}\label{eq:odd-gap}
+ E_T(71,13)-O_T(71,13)>17.
+\end{equation}
+The incoming history is odd, so a leafwise canonical Hall operation would need
+the reverse inequality $O_T\ge E_T$.  Equation \eqref{eq:odd-gap} excludes it.
+The threshold ledger passes this test because it never reorients the child; it
+also shows why ownership alone is insufficient.
+
+\section{Exact stopped currents}
+
+For even $L\ge2$, define the natural current through depth $L-1$ by
+\begin{equation}\label{eq:CL}
+ C_L(X)=
+ \sum_{\substack{m\in\Rcal_{67}^{\mathrm{sf}}\\\omega(m)<L}}
+ {\mu(m)\over\sqrt m}\,b(X/m).
+\end{equation}
+This is the literal current obtained by expanding the raw recursion for
+$L-1$ levels.  Since $L$ is even, the unresolved depth-$L$ frontier has canonical
+parity, but that fact does not determine the sign of $C_L$.
+
+The finite replay gives
+\[
+ C_2(32605)>0>C_2(32606),
+\]
+with strict 256-bit intervals, and
+\[
+ C_2(61841)<-21.3,
+ \qquad
+ \Acal_{61841}>9.5.
+\]
+Thus even an exact negative current can telescope with its remaining frontier
+to a positive native root.
+
+\section{Subcritical threshold depths are eventually negative}
+
+\begin{theorem}[Subcritical-depth no-go]\label{thm:no-go}
+Let $L=L(X)\ge2$ be even and suppose
+\[
+ L(X)\log L(X)=o(\log\log X).
+\]
+Then the exact current \eqref{eq:CL} satisfies
+\[
+ \boxed{C_L(X)<0}
+\]
+for every sufficiently large $X$.
+\end{theorem}
+
+\begin{proof}
+Put $k=L-1$, so $k$ is odd, and define
+\[
+ z_X=\sum_{67\le p\le X}{1\over p},
+ \qquad
+ W=X^{1/(2k)},
+ \qquad
+ z_W=\sum_{67\le p\le W}{1\over p}.
+\]
+By Proposition~\ref{prop:base}, there are constants $0<c<C$ such that
+\[
+ b(Y)\ge c\sqrt Y\quad(Y\text{ sufficiently large}),
+ \qquad
+ |b(Y)|\le C\sqrt Y\quad(Y\ge1).
+\]
+Every product of $k$ primes at most $W$ is at most $\sqrt X$, so all selected
+last-layer arguments are at least $\sqrt X$.  If $e_j(S)$ denotes the elementary
+symmetric sum of degree $j$ in $\{1/p:p\in S\}$, then we may discard all other
+negative levels and obtain
+\begin{equation}\label{eq:upper-current}
+ C_L(X)
+ \le C\sqrt X\sum_{j=0}^{k-1}e_j(\{67\le p\le X\})
+ -c\sqrt X\,e_k(\{67\le p\le W\}).
+\end{equation}
+
+The multinomial expansion gives
+\[
+ e_j(\{p\le X\})\le {z_X^j\over j!}.
+\]
+Let $s_2=\sum_{p\ge67}p^{-2}<\infty$.  In the ordered expansion of $z_W^k$,
+the total weight of tuples with a repeated coordinate is at most
+$\binom{k}{2}s_2z_W^{k-2}$.  Hence
+\begin{equation}\label{eq:eklower}
+ e_k(\{p\le W\})
+ \ge {z_W^k\over k!}
+ \left(1-{\binom{k}{2}s_2\over z_W^2}\right).
+\end{equation}
+
+The hypothesis implies $k/z_X\to0$, so
+\[
+ \sum_{j=0}^{k-1}{z_X^j\over j!}
+ \le(1+o(1)){z_X^{k-1}\over(k-1)!}.
+\]
+Mertens' theorem gives
+\[
+ z_W=z_X-\log(2k)+o(1).
+\]
+Therefore
+\begin{align*}
+ {e_k(\{p\le W\})
+  \over z_X^{k-1}/(k-1)!}
+ &\ge(1-o(1)){z_W\over k}
+ \left({z_W\over z_X}\right)^{k-1}\\
+ &\longrightarrow\infty.
+\end{align*}
+Indeed $k\log k=o(z_X)$ makes the exponential factor tend to one, while
+$z_W/k\to\infty$.  The negative last layer in
+\eqref{eq:upper-current} dominates all preceding positive layers.  This proves
+the theorem.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:no-go} includes every fixed even depth and every polylogarithmic
+adaptive depth.  It does not claim that a stopping depth in the critical window
+$L\asymp\log\log X$ fails.
+\end{remark}
+
+\section{The large-prime adaptive residual is false}
+
+A recent adaptive proposal sets
+\[
+ Z_X=(\log X)^{1/4}
+\]
+and takes the smallest even $L_X$ satisfying
+\[
+ L_X\ge8\left(1+\sum_{67\le p\le Z_X}{1\over p}\right).
+\]
+It decomposes
+\[
+ C_{L_X}(X)=\Scal_X+\Lcal_X,
+\]
+where $\Scal_X$ uses only primes at most $Z_X$ and $\Lcal_X$ contains histories
+meeting a larger prime.  The small-prime theorem proves $\Scal_X>0$ eventually.
+
+\begin{corollary}[Refutation of $\LAPBR$]\label{cor:lapbr}
+For the preceding schedule,
+\[
+ \boxed{\Lcal_X<0}
+\]
+for all sufficiently large $X$.
+\end{corollary}
+
+\begin{proof}
+Mertens' theorem gives $L_X=O(\log\log\log X)$, hence
+$L_X\log L_X=o(\log\log X)$.  Theorem~\ref{thm:no-go} gives
+$C_{L_X}(X)<0$.  Since $\Scal_X>0$,
+\[
+ \Lcal_X=C_{L_X}(X)-\Scal_X<0.
+\]
+\end{proof}
+
+Thus the proposed universal inequality $\LAPBR$ is not an open estimate waiting
+for a sharper large sieve; it has the wrong sign asymptotically.
+
+\section{A positive high-least-prime sector}
+
+The negative result suggests separating genuinely terminal large primes from
+the critical bulk.
+
+\begin{theorem}[High-least-prime positivity]\label{thm:high-prime}
+Fix $\theta>e^{-1}$.  Define
+\[
+ \Fcal_{p_0}(Y)=
+ \sum_{\substack{m\in\Rcal_{67}^{\mathrm{sf}}\\P^-(m)\ge p_0}}
+ {\mu(m)\over\sqrt m}b(Y/m).
+\]
+Uniformly for states satisfying $p_0\ge Y^\theta$,
+\[
+ \boxed{\Fcal_{p_0}(Y)>0}
+\]
+for all sufficiently large $Y$.
+\end{theorem}
+
+\begin{proof}
+Since $3\theta>1$, an active rough product contains at most two primes.  Hence
+\[
+ \Fcal_{p_0}(Y)=b(Y)
+ -\sum_{p\ge p_0}{1\over\sqrt p}b(Y/p)
+ +\sum_{p<q\atop p,q\ge p_0}{1\over\sqrt{pq}}b(Y/(pq)).
+\]
+The last sum is nonnegative by Proposition~\ref{prop:base}.  Moreover,
+\begin{align*}
+ \sum_{Y^\theta\le p\le Y/2}{1\over\sqrt p}b(Y/p)
+ &=a\sqrt Y\sum_{Y^\theta\le p\le Y/2}{1\over p}
+   +O\left(\sum_{p\le Y}p^{-1/2}\right)\\
+ &=a\sqrt Y\bigl(\log(1/\theta)+o(1)\bigr)
+   +O(\sqrt Y/\log Y).
+\end{align*}
+Because $\log(1/\theta)<1$ and $b(Y)=a\sqrt Y+O(1)$, the one-prime subtraction
+is strictly smaller than the parent for large $Y$.  Positivity follows.
+\end{proof}
+
+\section{Reinvented path: the critical-saddle transport}
+
+Put
+\[
+ T_k(X)=
+ \sum_{\substack{m\in\Rcal_{67}^{\mathrm{sf}}\\\omega(m)=k}}
+ {1\over\sqrt m}b(X/m).
+\]
+Then
+\begin{equation}\label{eq:depth-series}
+ \Acal_X=\sum_{k\ge0}(-1)^kT_k(X).
+\end{equation}
+Theorem~\ref{thm:no-go} says that stopping substantially before the saddle of
+the reciprocal-prime elementary symmetric sequence exposes a dominant odd
+layer.  Theorem~\ref{thm:high-prime} removes a genuine high-least-prime sector.
+The remaining mass lies near
+\[
+ k\asymp\sum_{p\le X}{1\over p}\asymp\log\log X.
+\]
+
+\begin{definition}[Critical-Saddle History Transport, $\CSHT$]
+For every sufficiently large real $X$, remove the sector covered by
+Theorem~\ref{thm:high-prime}.  On the remaining active history DAG, construct a
+nonnegative one-use flow from every odd-depth native occurrence to even-depth
+native occurrences such that:
+\begin{enumerate}
+\item every source coefficient, activation, first owner and history parity is
+      preserved;
+\item each even occurrence is used at most once;
+\item all odd scalar demand is covered;
+\item if target or physical coordinates are included, the same edge
+      coefficient is used in every coordinate.
+\end{enumerate}
+Equivalently, produce the exact finite Hall/Lorenz primal or an exact separating
+dual on every activation cell.
+\end{definition}
+
+\begin{theorem}[Conditional conclusion]\label{thm:conditional}
+If $\CSHT$ holds, then $\Acal_X\ge0$ eventually.  The exact annular Mellin
+transform is
+\[
+ (1-4^{-s})\left[
+ {6\over s^2}
+ -{3(1-2^{-z})(2-2^{-z})\over s^2\zeta(z)}
+ \right],
+ \qquad z=s+\tfrac12.
+\]
+The finite numerator is zero-free for $\Re z>0$.  The fixed-sign
+Mellin--Landau argument would therefore imply RH.
+\end{theorem}
+
+\begin{proof}
+The transport makes the even side of \eqref{eq:depth-series} dominate the odd
+side.  The Mellin identity and zero-free finite numerator are exact.  Landau's
+real-abscissa theorem gives the stated conditional implication.
+\end{proof}
+
+Theorem~\ref{thm:conditional} is not an unconditional RH proof because $\CSHT$
+is open.  Unlike the refuted threshold scheme, it identifies the depth and the
+source coordinates where a future proof must genuinely win.
+
+\section{Replay and mandatory stress cases}
+
+The deterministic packet contains an MPFR 4.2.2 producer at 256 bits and an
+exact rational verifier.  It checks:
+\begin{center}
+\begin{tabular}{p{0.32\textwidth}p{0.58\textwidth}}
+\toprule
+Case & Certified contract\\
+\midrule
+one prime $p=67$ & $\delta_p=r-2r^2>0$ and both residual conventions sum to $r$\\
+$X=184$ & finite $P_{61}$ base differs from the native root by more than $1.36$\\
+$67\cdot71\cdot13$ & 239-atom odd-history target gap exceeds $17$\\
+two-node thinning & exact current $a-r<0$\\
+$X=32605,32606$ & directed adjacent depth-two sign change\\
+$X=61841$ & depth-two current below $-21.3$ while native scalar exceeds $9.5$\\
+raw exposure & $(r-a)+a=r$ edge by edge and through the resolvent\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Expected replay verdict:
+\[
+\texttt{PASS\_T97700\_THRESHOLD\_FLEXIBLE\_CAUSAL\_DECISION}.
+\]
+The replay authenticates finite algebra and strict finite signs.  The
+asymptotic theorems are proved in the text, not inferred from the fixtures.
+
+\section{Final boundary}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Native first-owner coefficient ledger & proved exact\\
+Residual $r-2r^2$ and $(R-A)F$ & proved exact\\
+Root equals native annular scalar & proved exact\\
+Raw-exposure conservation & proved exact\\
+Subcritical threshold-depth positivity & false\\
+$\LAPBR$ & false\\
+High-least-prime sector & proved positive\\
+$\CSHT$ & open / RH-bearing\\
+Riemann Hypothesis & unproved\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}
