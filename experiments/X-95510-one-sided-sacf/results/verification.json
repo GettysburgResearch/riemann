@@ -1,0 +1,59 @@
+{
+  "automatic_cross_lower_bound": true,
+  "base_pr": 580,
+  "base_sha": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05",
+  "moment_lcm_checks": [
+    {
+      "abs_error": 0.0,
+      "ell": 2,
+      "q": 0
+    },
+    {
+      "abs_error": 4.547473508864641e-13,
+      "ell": 2,
+      "q": 1
+    },
+    {
+      "abs_error": 3.637978807091713e-12,
+      "ell": 2,
+      "q": 2
+    },
+    {
+      "abs_error": 0.0,
+      "ell": 4,
+      "q": 0
+    },
+    {
+      "abs_error": 1.30385160446167e-08,
+      "ell": 4,
+      "q": 1
+    },
+    {
+      "abs_error": 2.2351741790771484e-08,
+      "ell": 4,
+      "q": 2
+    },
+    {
+      "abs_error": 0.0,
+      "ell": 6,
+      "q": 0
+    },
+    {
+      "abs_error": 4.57763671875e-05,
+      "ell": 6,
+      "q": 1
+    },
+    {
+      "abs_error": 0.00018310546875,
+      "ell": 6,
+      "q": 2
+    }
+  ],
+  "one_sided_upper_suffices": true,
+  "proof_object_sha256": "586fb155587b05d73b2e5ba3e103ae0d8539a7e3c561cff2f3e89aa7e4f49e8e",
+  "rh_established": false,
+  "schema": "riemann.t95510.one-sided-sacf-moments.v1",
+  "stable_inverse_mass": "64/21",
+  "uosacf_proved": false,
+  "verdict": "PASS_T95510_ONE_SIDED_SUBPOWER_AND_MOMENT_COMPRESSION"
+}
