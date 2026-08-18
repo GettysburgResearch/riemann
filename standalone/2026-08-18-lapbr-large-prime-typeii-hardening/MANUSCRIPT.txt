@@ -1,0 +1,85 @@
+T-97700 LARGE-PRIME PARITY BOUNDARY
+A no-go theorem for LAPBR67 and an exact signed Type-II frontier
+Agentic Polymath Project - 18 August 2026
+
+STATUS
+The adaptive small-prime cube is retained. The proposed nonnegative large-prime
+residual LAPBR67 is disproved. The replacement is an exact largest-prime Bellman
+identity and the open one-sided signed Type-II estimate BLPTE67. RH is unproved.
+
+1. ADAPTIVE-DEPTH NO-GO
+The published depth satisfies L=O(log log log X), while the total reciprocal
+mass of active rough primes is asymptotic to log log X. A product-safe
+lower bound for the final odd elementary-symmetric layer shows that it dominates
+all preceding layers. Consequently the full depth-L current is eventually
+negative, and the large-prime residual is more negative than the positive
+small-prime cube. Therefore LAPBR67 is false; no constant adjustment repairs it.
+
+2. COMPLETE SMALL-PRIME CUBE
+Let Z=(log X)^(1/4) and Q_Z be the product of primes 67<=p<=Z. Define
+
+  B_Z(X) = SUM_(d|Q_Z) mu(d) b(X/d)/sqrt(d),
+  U_Z(X) = B_Z(X)/sqrt(X).
+
+Using b(Y)=a_* sqrt(Y)+c_*+O(Y^(-3/2)) uniformly over d|Q_Z gives
+
+  B_Z(X) = a_* sqrt(X) PROD_(67<=p<=Z)(1-1/p)
+           + c_* PROD_(67<=p<=Z)(1-1/sqrt(p)) + o(1),
+
+so B_Z(X)>0 for all sufficiently large X and U_Z(X) is comparable to 1/log Z.
+
+3. LARGEST-PRIME BELLMAN OWNERSHIP
+Adjoin the primes p>Z in increasing order. The exact normalized recurrence is
+
+  U_i(Y) = U_(i-1)(Y) - p_i^(-1) U_(i-1)(Y/p_i).
+
+Telescoping gives
+
+  U_full(X) = U_Z(X) - SUM_(Z<p<=X/2) p^(-1) U_<p(X/p).
+
+Every nonempty large-prime history is owned exactly once by its largest prime.
+Expanding the child yields the source-faithful signed correlation
+
+  U_<p(Y) = SUM_(v squarefree, Z<P^-(v), P^+(v)<p)
+            mu(v) U_Z(Y/v)/v.
+
+4. TYPE-I / TYPE-II SPLIT
+Split at p=X/Z. For p>X/Z, the child endpoint is below Z, so no additional
+large prime can be active. This terminal Type-I range satisfies
+
+  I_Z(X) = O((log Z)^2/log X) = o(U_Z(X)).
+
+The remaining signed term is
+
+  T_Z(X) = SUM_(Z<p<=X/Z) p^(-1)
+           SUM_(v squarefree, Z<P^-(v), P^+(v)<p)
+           mu(v) U_Z(X/(pv))/v.
+
+BLPTE67 is the one-sided estimate
+
+  T_Z(X) <= U_Z(X)-I_Z(X).
+
+It is source-faithful and preserves every Mobius sign and largest-prime owner.
+No unrestricted reservoir or source-blind large sieve is used.
+
+5. EXACT BOUNDARY
+The Bellman identity gives
+
+  U_full(X)=U_Z(X)-I_Z(X)-T_Z(X).
+
+Therefore BLPTE67 implies U_full(X)>=0. The inherited annular Mellin-Landau
+consumer would then imply RH. T-97700 does not prove BLPTE67 or RH.
+
+THEOREM LEDGER
+  Adaptive small-prime cube              RETAINED POSITIVE
+  LAPBR67                                 REFUTED
+  Complete small-prime cube              PROVED POSITIVE
+  Largest-prime Bellman identity          PROVED EXACT
+  Terminal Type-I                         CLOSED
+  BLPTE67                                 OPEN / RH-BEARING
+  Riemann Hypothesis                      UNPROVED
+
+REPLAY VERDICT
+  PASS_T97700_LAPBR_NO_GO_AND_TYPEII_REDUCTION_ALGEBRA
+Proof object:
+  d01eaca56c2277f7244c29b57ef2902d70b2ef157bad02d8afe01ca26dc4310d

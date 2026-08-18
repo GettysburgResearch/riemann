@@ -1,0 +1,308 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{setspace}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Ccal}{\mathfrak C}
+\newcommand{\Bcal}{\mathfrak B}
+\newcommand{\Ical}{\mathfrak I}
+\newcommand{\Tcal}{\mathfrak T}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{T-97701 / C4MBI67}
+\rhead{\thepage/\pageref{LastPage}}
+\setlength{\headheight}{14pt}
+\setstretch{1.04}
+\title{\bfseries The Critical Four-Band M\"obius Boundary\\[1mm]
+\large Exact reconstruction of BLPTE67 and the missing T-97701 publication}
+\author{Agentic Polymath Project}
+\date{18 August 2026}
+\begin{document}
+\maketitle
+\begin{center}
+\fcolorbox{red!65!black}{white}{\parbox{0.91\textwidth}{\small
+\textbf{Status.} The exact identities and equivalences in this manuscript are
+proved. The one-sided inequality C4MBI67 is not proved. Consequently the
+Riemann Hypothesis remains unproved. This manuscript also corrects a publication
+failure: the T-97701 files announced in a PR \#590 comment were absent from the
+live branch and from the old T-97700 ZIP.}}
+\end{center}
+\begin{abstract}
+The factor--67 large-prime programme was reduced in T-97700 to a one-sided
+largest-prime Bellman inequality called BLPTE67.  We reconstruct the missing
+continuation and prove that, at root scope, this inequality is not a generic
+Type-II estimate: it is exactly the original annular scalar sign.  The scalar
+has a sparse coefficient dictionary, and scale-four annularization converts it
+into four explicit logarithmic bands of the critical M\"obius prefix
+$B_{1/2}(t)=\sum_{n\le t}\mu(n)n^{-1/2}$.  We call the resulting sign
+C4MBI67.  We also derive an exact prime--M\"obius owner decomposition in which
+each squarefree product is allocated with weights $\log p/\log n$.  Finally, a
+finite mutation proves that unsigned source-blind Type-II data cannot decide the
+required one-sided sign.  Thus BLPTE67, C4MBI67 and eventual annular positivity
+are equivalent; the sign remains open and RH-bearing.
+\end{abstract}
+\tableofcontents
+
+\section{Publication reconstruction and frozen scope}
+The frozen base is PR \#590 at commit
+\texttt{4f1283c67f0d4a4b504badd4c4113ba227521162}.  Its exact largest-prime
+Bellman decomposition is retained.  The present packet supplies the missing
+T-97701 claim files, checker, full manuscript, compiled PDF and content ledger.
+It uses a fresh archive name and does not reuse the old archive with SHA--256
+\texttt{bf79073d4dbc482a1ff634a06ec4cd8d2f5a6ff3181c209fca86aec96b3ff640}.
+
+\section{The sparse scalar and annularization}
+Let
+\[
+ R_X=5c_X(2)+3c_X(3).
+\]
+The exact scalar dictionary is
+\begin{equation}\label{eq:astar}
+ a_*(n)=6\one_{n=1}-6\mu(n)
+ +9\one_{2\mid n}\mu(n/2)-3\one_{4\mid n}\mu(n/4).
+\end{equation}
+Thus
+\[
+ R_X=\sum_{n\le X}\frac{a_*(n)}{\sqrt n}\log\frac Xn.
+\]
+Define
+\[
+ H_Y(n)=\min\!\left(\log4,\log\frac Yn\right)_+.
+\]
+The annular scalar is
+\begin{equation}\label{eq:annular}
+ \Acal_X=R_X-R_{X/4}
+ =\sum_{n\ge1}\frac{a_*(n)}{\sqrt n}H_X(n).
+\end{equation}
+
+\begin{lemma}[Exact sparse reconstruction]\label{lem:sparse}
+Put
+\[
+ \kappa_X(n)=-6H_X(n)+\frac9{\sqrt2}H_{X/2}(n)
+              -\frac32H_{X/4}(n).
+\]
+Then
+\begin{equation}\label{eq:kappa}
+ \boxed{\Acal_X=6H_X(1)+\sum_{n\ge1}\frac{\mu(n)}{\sqrt n}\kappa_X(n).}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use $H_{X/2}(m)=H_X(2m)$ and $H_{X/4}(m)=H_X(4m)$.  Relative to the basis
+$H_X(n)/\sqrt n$, the three terms in $\kappa$ contribute
+$-6\mu(m)$ at $m$, $9\mu(m)$ at $2m$, and $-3\mu(m)$ at $4m$.
+Together with the boundary atom, this is exactly~\eqref{eq:astar}.
+\end{proof}
+
+\section{The critical four-band boundary}
+Define
+\[
+ B_{1/2}(t)=\sum_{n\le t}\frac{\mu(n)}{\sqrt n}.
+\]
+
+\begin{lemma}[Hinge integration]\label{lem:hinge}
+For every $Y>0$,
+\[
+ \sum_{n\ge1}\frac{\mu(n)}{\sqrt n}H_Y(n)
+ =\int_{Y/4}^{Y}B_{1/2}(t)\frac{dt}{t}.
+\]
+\end{lemma}
+\begin{proof}
+The identity
+$H_Y(n)=\int_{Y/4}^{Y}\one_{n\le t}\,dt/t$ is pointwise exact.  Only finitely
+many $n$ occur, so Fubini is elementary.
+\end{proof}
+
+Let
+\[
+ \Ccal_X=\sum_{n\ge1}\frac{\mu(n)}{\sqrt n}\kappa_X(n).
+\]
+Combining Lemma~\ref{lem:hinge} at scales $X,X/2,X/4$ gives the main identity.
+
+\begin{theorem}[Four-band M\"obius boundary]\label{thm:c4}
+For every real $X>0$,
+\begin{align}
+ \Ccal_X={}&-\frac32\int_{X/16}^{X/8}B_{1/2}(t)\frac{dt}{t}\notag\\
+ &+\frac{9\sqrt2-3}{2}\int_{X/8}^{X/4}B_{1/2}(t)\frac{dt}{t}\notag\\
+ &+\frac{9\sqrt2-12}{2}\int_{X/4}^{X/2}B_{1/2}(t)\frac{dt}{t}\notag\\
+ &-6\int_{X/2}^{X}B_{1/2}(t)\frac{dt}{t}.
+ \label{eq:fourband}
+\end{align}
+\end{theorem}
+\begin{proof}
+The coefficient $-3/2$ is active on $[X/16,X/4]$, $9/\sqrt2=9\sqrt2/2$
+on $[X/8,X/2]$, and $-6$ on $[X/4,X]$.  Adding the active coefficients on
+the four successive bands yields precisely the vector displayed in
+\eqref{eq:fourband}.
+\end{proof}
+
+\begin{definition}[C4MBI67]
+The critical four-band M\"obius inequality at endpoint $X$ is
+\[
+ \boxed{\Ccal_X\ge-6H_X(1).}
+\]
+For $X\ge4$, this threshold is $-6\log4$.
+\end{definition}
+By~\eqref{eq:kappa}, C4MBI67$(X)$ is equivalent to $\Acal_X\ge0$.
+
+\section{BLPTE67 is the same root sign}
+Retain the exact Bellman notation of T-97700.  The complete small-prime cube is
+$U_Z(X)$, the terminal term is $\Ical_Z(X)$, and the remaining signed Type-II
+term is $\Tcal_Z(X)$.  Then
+\begin{equation}\label{eq:bellman}
+ U_{\rm full}(X)=U_Z(X)-\Ical_Z(X)-\Tcal_Z(X).
+\end{equation}
+At the root, normalization gives
+\begin{equation}\label{eq:normalization}
+ U_{\rm full}(X)=\Acal_X/\sqrt X.
+\end{equation}
+
+\begin{theorem}[Exact root equivalence]\label{thm:equiv}
+Writing BLPTE67$(X)$ for
+\[
+ \Tcal_Z(X)\le U_Z(X)-\Ical_Z(X),
+\]
+one has, pointwise,
+\[
+ \boxed{
+ \mathrm{BLPTE67}(X)
+ \Longleftrightarrow U_{\rm full}(X)\ge0
+ \Longleftrightarrow \Acal_X\ge0
+ \Longleftrightarrow \mathrm{C4MBI67}(X).}
+\]
+\end{theorem}
+\begin{proof}
+The first equivalence is a rearrangement of~\eqref{eq:bellman}; the second is
+\eqref{eq:normalization}; the third is~\eqref{eq:kappa}.
+\end{proof}
+
+\begin{firewall}
+The theorem is a root-endpoint equivalence.  A state-wise Bellman theorem has
+additional quantifiers and is not silently obtained from this statement.
+\end{firewall}
+
+\section{Exact logarithmic prime ownership}
+For squarefree $n>1$,
+\begin{equation}\label{eq:mu-log}
+ \mu(n)\log n=-\sum_{p\mid n}\mu(n/p)\log p.
+\end{equation}
+
+\begin{theorem}[Prime--M\"obius owner decomposition]\label{thm:owner}
+\begin{align}
+ \sum_{n>1}\frac{\mu(n)}{\sqrt n}\kappa_X(n)
+ ={}&-\sum_{p\le X}\frac{\log p}{\sqrt p}
+ \sum_{\substack{m\le X/p\\p\nmid m}}
+ \frac{\mu(m)}{\sqrt m}
+ \frac{\kappa_X(pm)}{\log(pm)}.
+ \label{eq:owner}
+\end{align}
+Every squarefree product $n$ is spent exactly once in aggregate, through the
+nonnegative owner weights $\log p/\log n$.
+\end{theorem}
+\begin{proof}
+Multiply~\eqref{eq:mu-log} by
+$\kappa_X(n)/(\sqrt n\log n)$ and write $n=pm$.  The owner weights sum to one
+because $\sum_{p\mid n}\log p=\log n$.
+\end{proof}
+
+Define the right-hand side without its leading minus sign as $\Bcal_X$.  Then
+\[
+ \Acal_X=6H_X(1)+\kappa_X(1)-\Bcal_X.
+\]
+Therefore
+\begin{equation}\label{eq:owner-target}
+ \Acal_X\ge0
+ \Longleftrightarrow
+ \Bcal_X\le6H_X(1)+\kappa_X(1).
+\end{equation}
+For $X\ge16$ the threshold is
+\[
+ \left(\frac9{\sqrt2}-\frac32\right)\log4
+ =\frac{9\sqrt2-3}{2}\log4.
+\]
+
+\section{Why unsigned Type-II information is insufficient}
+\begin{proposition}[Exact mutation]\label{prop:mutation}
+Let two atoms have equal coefficient magnitudes and the same unsigned owner
+metadata, but distinct kernel responses $K_1>K_2>0$.  The sign vectors
+$(+1,-1)$ and $(-1,+1)$ preserve support, magnitudes, $\ell^1$, $\ell^2$ and
+every unsigned owner mass, while their one-sided functionals are
+$K_1-K_2$ and $-(K_1-K_2)$.
+\end{proposition}
+
+\begin{proof}
+All unsigned invariants are unchanged under simultaneous sign reversal.  The
+linear functional changes sign and is nonzero because $K_1\ne K_2$.
+\end{proof}
+
+\begin{firewall}
+This is a countermodel to a proof mechanism, not a counterexample to the
+M\"obius inequality.  It proves that a source-blind large sieve or an unsigned
+block norm cannot by itself decide~\eqref{eq:owner-target}.  A valid proof must
+retain arithmetic covariance between $\mu(m)$ and the four-band kernel.
+\end{firewall}
+
+\section{Analytic consumer and exact boundary}
+The inherited Mellin transform is
+\[
+ (1-4^{-s})\left[
+ \frac6{s^2}-
+ \frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)}
+ \right],\qquad z=s+\tfrac12.
+\]
+The elementary finite numerator is zero-free for $\Re z>0$, and the annular
+factor is zero-free for $\Re s>0$.  Hence eventual positivity of $\Acal_X$
+would imply RH through Landau's theorem.  The present work proves the exact
+form of that sign; it does not establish it.
+
+\begin{longtable}{p{0.48\textwidth}p{0.34\textwidth}}
+\toprule
+Statement & Status\\
+\midrule
+Four-band identity & proved exact\\
+Logarithmic prime ownership & proved exact\\
+BLPTE67/C4MBI67/annular equivalence & proved exact at root\\
+Unsigned Type-II closure & refuted as a general implication\\
+C4MBI67 sign & open / RH-bearing\\
+Riemann Hypothesis & unproved\\
+\bottomrule
+\end{longtable}
+
+\section{Replay and publication contract}
+The independent replay reconstructs the sparse dictionary on 500 coordinates,
+the four-band vector in $\mathbb Q(\sqrt2)$, logarithmic ownership on every
+squarefree integer through 500, 125 exact Bellman test states, and the unsigned
+mutation.  It records
+\[
+ \texttt{c4mbi67\_sign\_proved=false},\qquad
+ \texttt{rh\_established=false}.
+\]
+The compiled PDF, preflight, inspection report, complete source and checksum
+ledger are included.  The fresh deterministic ZIP is named with
+\texttt{t97701-c4mbi67-publication-recovery}; the old T-97700 ZIP is not reused.
+
+\section{Conclusion}
+The large-prime Bellman decomposition remains exact, but its root Type-II gate
+is simply the original annular sign in another coordinate system.  The exact
+critical core is the four-band M\"obius boundary~\eqref{eq:fourband}, equivalently
+the prime-owned bilinear form~\eqref{eq:owner}.  The next successful attack must
+exploit the actual M\"obius covariance.  The sign and RH remain open.
+\end{document}
