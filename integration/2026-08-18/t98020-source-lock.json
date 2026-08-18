@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.t98020.quantitative-dickman-corridor.v1",
+  "created_utc": "2026-08-18",
+  "base": {
+    "pr": 602,
+    "head_sha": "ab9f76cfa03dd4924e04f31b44087ff7e3c76f63"
+  },
+  "compared": {
+    "pr594": "ef76157a516c520a0f829ea4ee346c62759743ed",
+    "pr599": "8daa0a5d94de56c68a1ce710824b26cacc1a9bbc",
+    "pr601": "defe55d449e5ae37bcd989cf4e7dd4266eacbc3d"
+  },
+  "status": {
+    "uniform_discrete_dickman_discrepancy": "PROVED",
+    "near_critical_native_state_positivity": "PROVED",
+    "bounded_remainder_method_sharpness": "PROVED_AT_DECLARED_SCOPE",
+    "CBRC67": "OPEN",
+    "GPC67": "OPEN",
+    "RH": "UNPROVEN"
+  }
+}
