@@ -1,0 +1,107 @@
+{
+  "above_saddle_absolute_no_go": [
+    {
+      "c": 1.5,
+      "log_main_over_absolute_error": -3681.7231767655667,
+      "loglogY": 10000.0,
+      "u": 1628.6043071371942
+    },
+    {
+      "c": 1.5,
+      "log_main_over_absolute_error": -39725.07429266114,
+      "loglogY": 100000.0,
+      "u": 13028.834457097555
+    },
+    {
+      "c": 1.5,
+      "log_main_over_absolute_error": -416438.4635498456,
+      "loglogY": 1000000.0,
+      "u": 108573.62047581296
+    }
+  ],
+  "cbrc67_proved": false,
+  "critical_window_dominance": [
+    {
+      "epsilon": 0.1,
+      "log_main_over_error_leading": 2350.7332792495044,
+      "loglogY": 10000.0,
+      "logloglogY": 9.210340371976184,
+      "u": 977.1625842823165
+    },
+    {
+      "epsilon": 0.1,
+      "log_main_over_error_leading": 20579.234037495873,
+      "loglogY": 100000.0,
+      "logloglogY": 11.512925464970229,
+      "u": 7817.300674258533
+    },
+    {
+      "epsilon": 0.1,
+      "log_main_over_error_leading": 186334.08565278922,
+      "loglogY": 1000000.0,
+      "logloglogY": 13.815510557964274,
+      "u": 65144.17228548777
+    }
+  ],
+  "distinct_tuple_fixture": {
+    "literal": "48/77",
+    "ordered_with_repeats": "3367852/5187875",
+    "repeated_mass_upper_fixture": "222413/5187875",
+    "u": "3.698958057527"
+  },
+  "finite_diagnostics": [
+    {
+      "S": 0.12706099660131154,
+      "Y": 50000,
+      "absolute_difference": 0.013189618713072893,
+      "comparison_scale_u_over_logz": 0.6119977934816424,
+      "rho_grid": 0.11387137788823865,
+      "u": 2.5732626053358185,
+      "within_coarse_scale": true,
+      "z": 67
+    },
+    {
+      "S": 0.14184843091941468,
+      "Y": 100000,
+      "absolute_difference": 0.010205930715993738,
+      "comparison_scale_u_over_logz": 0.540529747798392,
+      "rho_grid": 0.13164250020342094,
+      "u": 2.4946099290273906,
+      "within_coarse_scale": true,
+      "z": 101
+    },
+    {
+      "S": 0.21064982706739085,
+      "Y": 250000,
+      "absolute_difference": 0.007974141825212472,
+      "comparison_scale_u_over_logz": 0.4071064410568339,
+      "rho_grid": 0.20267568524217838,
+      "u": 2.249447481276963,
+      "within_coarse_scale": true,
+      "z": 251
+    },
+    {
+      "S": 0.31497454460032376,
+      "Y": 250000,
+      "absolute_difference": 0.0071096553016311015,
+      "comparison_scale_u_over_logz": 0.32120371735416403,
+      "rho_grid": 0.30786488929869266,
+      "u": 1.9980766867728077,
+      "within_coarse_scale": true,
+      "z": 503
+    }
+  ],
+  "frozen_heads": {
+    "pr594": "ef76157a516c520a0f829ea4ee346c62759743ed",
+    "pr599": "8daa0a5d94de56c68a1ce710824b26cacc1a9bbc",
+    "pr601": "defe55d449e5ae37bcd989cf4e7dd4266eacbc3d",
+    "pr602": "ab9f76cfa03dd4924e04f31b44087ff7e3c76f63"
+  },
+  "gpc67_proved": false,
+  "positive_range": "u <= (1-eps) loglog(Y)/logloglog(Y)",
+  "proof_object_sha256": "e672f35c5b47d211a18195d081129804d1b7e03db0bf268b17aebcdae89a4aef",
+  "rh_established": false,
+  "schema": "riemann.x98020.quantitative-dickman.v1",
+  "uniform_formula": "F(Y,z)=a*sqrt(Y)*rho(u)+O(sqrt(Y)*u/log(z))",
+  "verdict": "PASS_T98020_QUANTITATIVE_DICKMAN_CORRIDOR"
+}
