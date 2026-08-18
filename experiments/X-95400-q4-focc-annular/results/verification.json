@@ -1,14 +1,15 @@
 {
-  "annihilation_checks": 17,
+  "activation_checks": 68575,
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_QSQRT2_PLUS_FLOATING_RECONNAISSANCE",
   "classification": "PASS_X_95400_Q4_FOCC_ANNULAR_HARDENING",
+  "cubic_annihilation_checks": 17,
   "does_not_prove": [
-    "SACF",
+    "SACF separated coprime Type-II bound",
     "FOCC",
     "OCHD",
     "Riemann Hypothesis"
   ],
-  "exact_kernel_checks": 60,
-  "firewall_checks": 30,
+  "exact_kernel_coefficient_checks": 60,
   "floating_reconnaissance": [
     {
       "X": 256,
@@ -37,11 +38,22 @@
   ],
   "frozen_base_pr": 573,
   "frozen_base_sha": "0865242eb9dc0ed6094afc8a87a52b974c6f1307",
-  "gcd_checks": 8358,
+  "gcd_decomposition_checks": 13014,
   "hostile_mutations_detected": 4,
-  "inverse_checks": 36,
-  "pair_count_checks": 704,
-  "ratio_checks": 6600,
-  "square_checks": 37,
-  "type_i_checks": 829
+  "pair_count_bound_checks": 1358,
+  "positive_kernel_firewall_checks": 30,
+  "proves": [
+    "safe factor-1024 annularization",
+    "ten exact Q(sqrt2) kernel bands",
+    "stable inverse with l1 mass 64/21",
+    "exact band, ratio and gcd decomposition",
+    "O(log^2 X) annular diagonal",
+    "polylog near-diagonal and large-gcd bounds",
+    "source-faithful Type I identity",
+    "source-blind positive-kernel and fixed-window barriers"
+  ],
+  "ratio_checks": 13000,
+  "square_identity_checks": 47,
+  "stable_inverse_checks": 36,
+  "type_i_formal_checks": 829
 }
