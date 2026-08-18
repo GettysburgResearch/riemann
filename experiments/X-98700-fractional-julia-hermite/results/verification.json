@@ -1,0 +1,67 @@
+{
+  "base_sha": "edf28c9ad14ccbf5b18b9ced45f3c2fc4ce8221d",
+  "factorization_checks": 512,
+  "finite_positive_filter_firewall_n4": "-31/16",
+  "fractional_coefficients_checked": 512,
+  "minimum_Q": "0",
+  "minimum_S": "0",
+  "proof_object_sha256": "d533b11dae9b6838a9f3220c55b6367b208f012832659fc9157e1ac341e37d53",
+  "rh_established": false,
+  "schema": "riemann.t98700.fractional-julia-hermite.v1",
+  "tao_fixtures": [
+    {
+      "A": "2/3",
+      "C": "88/117",
+      "P": [
+        3
+      ],
+      "x": 26
+    },
+    {
+      "A": "8/15",
+      "C": "33869/54000",
+      "P": [
+        3,
+        5
+      ],
+      "x": 80
+    },
+    {
+      "A": "16/35",
+      "C": "44590171/79380000",
+      "P": [
+        3,
+        5,
+        7
+      ],
+      "x": 160
+    },
+    {
+      "A": "4/15",
+      "C": "7059611/12441600",
+      "P": [
+        2,
+        3,
+        5
+      ],
+      "x": 96
+    },
+    {
+      "A": "4058/15015",
+      "C": "1789478/2927925",
+      "P": [
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "x": 26
+    }
+  ],
+  "theta_delta_rate_fixture": {
+    "delta": "1/5",
+    "theta": "1/10000"
+  },
+  "verdict": "PASS_T98700_FRACTIONAL_JULIA_TAO_HERMITE_ALGEBRA"
+}
