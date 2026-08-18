@@ -1,0 +1,50 @@
+{
+  "base_pr": 582,
+  "base_sha": "699f9f119a66823702e96fba95cc8b14b8251c60",
+  "bridge": {
+    "cases": 96,
+    "jump_count": 4,
+    "prime_count": 3
+  },
+  "corridor_exponent_algebra": {
+    "strict_margin": "obtained by choosing c0 sufficiently small",
+    "u_log_power": "-3/4",
+    "u_power": "3/8",
+    "vk_log_power": "1/4",
+    "vk_power": "3/8"
+  },
+  "critical_saddle_QMP67": "OPEN_RH_BEARING",
+  "diagnostic": {
+    "classification": "DIAGNOSTIC_ONLY",
+    "horizon": 100000000,
+    "minimum_slack": "0.188199976219113106072",
+    "minimum_witness": {
+      "coordinate": 48379,
+      "prime": 3
+    },
+    "sha256": "8a65b7796307f7eeab1aff12275f5cc9a4beb6f2d23aef6ea1240ef782135697"
+  },
+  "half_order_symbolic": {
+    "checked": 31,
+    "coordinates": 31,
+    "horizon": 256
+  },
+  "large_state_certificate": {
+    "horizon": 100000000,
+    "independent_rows": 4056,
+    "quotient_coordinates": 19999,
+    "sqrt_horizon": 10000
+  },
+  "linear_state_lower_bound": "PROVED_EXACT_OMEGA_SQRT_N",
+  "namespace": "T98400",
+  "proof_object_sha256": "0006d347e8ef7c518d602fccf3dafb7ba4c8cf8ba5b993e2819c83da8b1e9b15",
+  "quotient_markov_closure": "PROVED_EXACT",
+  "rh_established": false,
+  "schema": "riemann.x98400.future-profile.result.v1",
+  "small_state_certificate": {
+    "horizon": 4096,
+    "independent_rows": 26,
+    "sqrt_horizon": 64
+  },
+  "verdict": "PASS_T98400_FUTURE_PROFILE_MINIMALITY_BRIDGE_AND_CORRIDOR"
+}
