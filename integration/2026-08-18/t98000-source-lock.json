@@ -1,5 +1,5 @@
 {
-  "schema": "riemann.t98000.zero-marginal-lorenz.v1",
+  "schema": "riemann.t98000.zero-marginal-lorenz.v2",
   "created_utc": "2026-08-18T06:05:00Z",
   "frozen": {
     "pr590": "4f1283c67f0d4a4b504badd4c4113ba227521162",
@@ -7,7 +7,8 @@
     "pr594": "ef76157a516c520a0f829ea4ee346c62759743ed",
     "pr596": "40bfd7e70521f4205e95d3960812a6cef6073c05"
   },
-  "proof_object_sha256": "58d3191b80bd7f4763733423b5f94671f2626a19b2a81ce4547170e27e6ee7bc",
+  "proof_object_sha256": "7b6042d0e6d1632ae35cce1018dd97316c51acb954f64981ae42f3af5deb4dd5",
+  "certificate_class": "EXACT_RATIONAL_INTERVALS",
   "status": {
     "ordered_ratio": "PROVED",
     "one_switch_lorenz": "PROVED",
