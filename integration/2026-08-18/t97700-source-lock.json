@@ -1,0 +1,24 @@
+{
+  "schema": "riemann.t97700.factor67-lorenz-bellman.v1",
+  "cutoff_utc": "2026-08-18T03:35:00Z",
+  "frozen": {
+    "main": "f789265569013ebff254b082c2e0428970bdaf57",
+    "pr576": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7",
+    "pr581": "62aaa54ac49f0aa89fd58f14a539cc53089f884c",
+    "pr582": "699f9f119a66823702e96fba95cc8b14b8251c60",
+    "pr584": "e919c6afd1e95fffa505f7ba3f532cb12b8c410c",
+    "pr587": "8a0f074c5b96600b461fdd6e23b47ee2162c4a70"
+  },
+  "remote_exact_core_proof_object": "c604f54409e9c65641f6f31e065a815b18b41d557e96f81ea8d19e6e73977385",
+  "companion_diagnostic_proof_object": "ee9911196efd3b5b4270e868c1ea67bbfce5b6bd197036a972c9e6441484c2e7",
+  "status": {
+    "dual_slack_recurrence": "PROVED",
+    "ncbi_cpsl_equivalence": "REFUTED",
+    "future_quotient_minimality": "PROVED",
+    "bellman_cone_mechanism": "PROVED",
+    "LBP67_membership": "OPEN",
+    "CPSL67": "OPEN",
+    "NCBI67": "OPEN",
+    "RH": "UNPROVEN"
+  }
+}
