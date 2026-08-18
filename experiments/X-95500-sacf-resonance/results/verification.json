@@ -1,0 +1,57 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_FORMAL_PRIME_LOG_AND_QSQRT2",
+  "autocorrelation_gram_checks": 12,
+  "classification": "PASS_X_95500_Q4_SACF_CRITICAL_RESONANCE",
+  "does_not_prove": [
+    "SACF",
+    "FOCC",
+    "OCHD",
+    "Riemann Hypothesis"
+  ],
+  "dual_frequency_checks": 256,
+  "exponent_dictionary_checks": 10,
+  "finite_euler_product_checks": 128,
+  "floating_reconnaissance": [
+    {
+      "X": 1000,
+      "annular_sum": 0.3212714358364601,
+      "cross": -8.88555948009158,
+      "diagonal": 8.988774815576,
+      "square": 0.10321533548442072
+    },
+    {
+      "X": 10000,
+      "annular_sum": -0.11208697760563445,
+      "cross": -22.54697436573953,
+      "diagonal": 22.559537856288294,
+      "square": 0.012563490548765998
+    },
+    {
+      "X": 100000,
+      "annular_sum": -0.49264855289011056,
+      "cross": -44.350262862150934,
+      "diagonal": 44.592965458815655,
+      "square": 0.24270259666472005
+    }
+  ],
+  "frozen_base_pr": 580,
+  "frozen_base_sha": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05",
+  "gcd_bijection_checks": 19599,
+  "hostile_mutations_detected": 5,
+  "kernel_factor_checks": 6,
+  "local_euler_checks": 512,
+  "logarithmic_derivative_checks": 8400,
+  "odd_mertens_identity_checks": 8192,
+  "partial_summation_checks": 88,
+  "proves": [
+    "critical gcd Euler resonance 1-u-v+uv=(1-u)(1-v)",
+    "exact gcd triple factorization of two odd Mobius reciprocal states",
+    "complete logarithmic channels are derivatives of the same tensor product",
+    "annular J0 has no zero in the off-line counterexample strip",
+    "ratio autocorrelation is positive spectral mass",
+    "any fixed SACF power saving implies a fixed zeta zero-free strip",
+    "odd-Mertens state is a finite dyadic sum of the ordinary Mertens state",
+    "exact partial summation interface for the ten-band classical gain"
+  ],
+  "zero_frequency_checks": 2
+}
