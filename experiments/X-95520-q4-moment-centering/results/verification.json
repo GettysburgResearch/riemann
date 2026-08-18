@@ -1,0 +1,30 @@
+{
+  "A2_zero_order_at_t_half": 2,
+  "B2_zero_order_at_t_half": 1,
+  "W_mellin_at_half": "4/315",
+  "finite_difference_inverse_orders_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "frozen_pr580": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05",
+  "interior_zero_inverse_growth_at_n20": 1024.0,
+  "not_proved_by_replay": [
+    "SACF",
+    "FOCC",
+    "RH"
+  ],
+  "proof_object_sha256": "efd06455c291019ae7a0f500d6cebfe9313e5d58cbec58789aeb4b0b5609f5ad",
+  "proved_by_replay": [
+    "A2_B2_multiplicity",
+    "W_mellin_at_half",
+    "binomial_inverse",
+    "interior_zero_power_loss_prototype"
+  ],
+  "rh_established": false,
+  "schema": "riemann.x95520.q4-moment-centering.v1",
+  "verdict": "PASS_X95520_Q4_MOMENT_CENTERING_ALGEBRA"
+}
