@@ -12,7 +12,7 @@ This packet is intentionally distinct from PR #576.
 ```text
 base PR:      #565
 base SHA:     339e3367660f40c74795802a6f8170b15e19b13a
-head branch:  research/gpt56-pro/97630-corrected-p61-bias-annular-closure
+head branch:  research/gpt56-pro/97630-cutoff239-annular-reconstruction
 ```
 
 ## Main statements
