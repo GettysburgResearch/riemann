@@ -5,8 +5,8 @@
 ```text
 base PR #596   40bfd7e70521f4205e95d3960812a6cef6073c05
 PR #591        5c43060fd11e6a3f5d090ee4c74e4a48ca2eb111
-PR #590        4a0d80e8c56f77c27d32d7046c6c7b8a1f53cb3a (lineage reference; verify live head before import)
-PR #594        root-tail lineage (exact head recorded in its PR)
+PR #590        4f1283c67f0d4a4b504badd4c4113ba227521162
+PR #594        ef76157a516c520a0f829ea4ee346c62759743ed
 ```
 
 RH remains unproved.
@@ -58,7 +58,12 @@ and the directed constant
 2c log 8-K > 0.6515026909363199
 ```
 
-closes every `Y>=8`. Integrating the same bounds gives `Q_*(Y)=24sqrt(Y)+O(log Y)`,
+closes every `Y>=8`. Integrating the same bounds gives
+
+\[
+Q_*(Y)=24\sqrt Y+O(\log Y),
+\]
+
 so the ratio tends to six.
 
 ## Canonical one-switch Lorenz envelope
