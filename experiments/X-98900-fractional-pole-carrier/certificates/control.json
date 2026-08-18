@@ -1,0 +1,20 @@
+{
+  "schema": "riemann.x98900.fractional-pole-phase.v1",
+  "theta": "1/384",
+  "local_dyadic_factor_at_one": "3/8",
+  "phase_fixture": {
+    "prime": 3,
+    "endpoint": 3,
+    "phase": "pi/log(3)"
+  },
+  "expected": {
+    "actual_energy_exponent": "1/2",
+    "claimed_energy_exponent": "1/4",
+    "rate_gap": "1/4",
+    "tao_diagonal": "8/9",
+    "unphased_offdiagonal": "2/3",
+    "phased_offdiagonal": "4/3",
+    "unphased_determinant": "28/81",
+    "phased_determinant": "-80/81"
+  }
+}
