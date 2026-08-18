@@ -1,0 +1,623 @@
+# Hostile Reconstruction of the Factor-67 Proposals in PRs #565 and #566
+
+**Arithmetic repair, source-interface refutations, and the exact completed-parity Lorenz frontier**
+
+Agentic Polymath Project, August 18, 2026
+
+> **Scientific status.** Neither PR #565 nor PR #566 proves global scalar positivity or the Riemann Hypothesis. The fixed-row scalar/Mellin algebra, the canonical Target-Lorenz terminal theorem, the finite positive-operator lemma, and a corrected finite-$P_{61}$ bias with constant $1/42$ survive. The missing uniform theorem is completed-parity common-source/Lorenz feasibility (`CPSL67`) together with an exact one-use history recursion.
+
+# Scope, exact genealogy, and reconstruction standard
+
+The task is not to review prose at a high level. It is to determine whether every symbol in each proposed implication can be traced to one common mathematical object. We therefore adopt the following reconstruction standard.
+
+<div class="definition">
+
+**Definition 1** (Source-faithful reconstruction). *A proof step is *source-faithful* if all target, score, component-row, parity, activation, and coefficient coordinates are images of one explicitly defined positive source vector under fixed linear maps. A label is not a source partition; a scalar inequality is not a source injection; and equality of total mass and barycenter is not a Hall certificate.*
+
+</div>
+
+The principal frozen heads are listed in Table <a href="#tab:genealogy" data-reference-type="ref" data-reference="tab:genealogy">1</a>. The review packet also incorporates the later hardening PR \#576 because it independently records the $x=184$ countercertificate and the repaired $1/42$ theorem. We independently reran and slightly strengthened its directed certificate by correcting the rational mesh helpers to divide outward before applying logarithm or square root. The still later PR \#577 is used for its exact finite scalar Lorenz primal/dual theorem; its uniform inequality `CPSL67` is explicitly open.
+
+## Frozen genealogy
+
+| PR | Role | Exact head | Reconstructed status |
+|---|---|---|---|
+| #497 | Euler-ramp / Target-Lorenz tail input | `bd2a3c32ab50d8a8cec39c4b51ccd63349b23a74` | analytic ramp estimate reconstructed |
+| #547 | annular fixed-row Mellin-Landau consumer | `d60f93b0e207a83a283fb229eb988aa4c404765d` | conditional consumer survives |
+| #556 | source-complete annular factor-67 predecessor | `a4feca0457d310c72054f274040f93b0503f658b` | parity-blind source composition rejected |
+| #558 | first arXiv-style two-row proposal | `b1b8d5548365216a5f9a642d3005835f5a1f3dd2` | odd-history terminalization rejected |
+| #559 | single 5:3 scalar predecessor | `88d97adef8a42c5baf2f52c2c259a4ef536bdfdd` | scalar front end survives; source theorem absent |
+| #561 | parity-covariant gluing / fixed-depth no-go | `db9bdc63c855c6ddf664b763d748f8155a6a2c67` | binding firewall; global producer left open |
+| #565 | parity-contractive annular proposal | `339e3367660f40c74795802a6f8170b15e19b13a` | refuted as proof |
+| #566 | parity-resummed reserve/Hall proposal | `2407b4ffe5024a2e3898922cf0b722d5cf69e496` | central reserve theorem insufficient |
+| #575 | scalar-lift downgrade | `265c481ebd02807ab7d9a95cb0cf905a22c1876f` | scalar exactness does not imply two-row positivity |
+| #576 | finite-P61 hardening | `0f6ea6eae813c1d867ae50744cf5fd57e2720bb7` | 1/42 arithmetic repair reconstructed |
+| #577 | parity-completed scalar Lorenz reconstruction | `ae85922195c12a29944e624337bae2167091929b` | finite primal/dual exact; uniform `CPSL67` open |
+
+The supplied PR \#566 ZIP, its embedded PDF, and the PR \#565 recovery ZIP were checked against their published SHA-256 ledgers. The PR \#566 PDF was rendered page by page; no layout defect affects the mathematical audit. Reproducibility hashes and the original packets are included in the companion archive.
+
+# Canonical rows and the unique positive $5{:}3$ scalar
+
+For $j\ge2$, define $$A_j=\frac{j+1}{j-1},\qquad
+B_j=\frac{(j+1)(j-2)}{j(j-1)},\qquad
+C_j=\frac2{j(j-1)}.$$ The canonical unsieved row is $$\begin{aligned}
+Q_X(j)={}&\frac{A_j}{\sqrt j}\log\frac Xj\,\mathbf 1_{X\ge j}
+-\frac{B_j}{\sqrt{j+1}}\log\frac X{j+1}\,\mathbf 1_{X\ge j+1}\notag\\
+&+C_j\sum_{m\ge j+2}\frac1{\sqrt m}\log\frac Xm\,\mathbf 1_{X\ge m},
+\end{aligned}$$ and the native Mobius row is $$c_X(j)=\sum_{k\le X/j}\frac{\mu(k)}{\sqrt k}Q_{X/k}(j).$$ These are finite sums for fixed $X$.
+
+<div class="lemma">
+
+**Lemma 2** (Exact row dictionaries). *Let $q_j(m)$ denote the unsieved coefficient at source index $m$. Then $$q_2(2)=3,\quad q_2(3)=0,\quad q_2(m)=1\ (m\ge4),$$ and $$q_3(3)=2,\quad q_3(4)=-\frac23,\quad q_3(m)=\frac13\ (m\ge5),$$ with zero coefficients below the first displayed index.*
+
+</div>
+
+<div class="proof">
+
+*Proof.* Substitute $j=2,3$ into $A_j,B_j,C_j$. At $j=2$, $B_2=0$ and $C_2=1$. At $j=3$, $A_3=2$, $B_3=2/3$, and $C_3=1/3$. ◻
+
+</div>
+
+<div class="theorem">
+
+**Theorem 3** (Positive scalar dictionary). *For $$R_X=5c_X(2)+3c_X(3),$$ the unsieved dictionary is $$q_{\!*}(1)=0,\qquad q_{\!*}(2)=15,\qquad q_{\!*}(3)=6,
+\qquad q_{\!*}(4)=3,
+\qquad q_{\!*}(m)=6\ (m\ge5).$$ In particular, $q_{\!*}$ is coefficientwise nonnegative.*
+
+</div>
+
+<div class="proof">
+
+*Proof.* Take $5q_2+3q_3$ coefficient by coefficient. The exceptional values are $5\cdot3=15$, $3\cdot2=6$, and $5-2=3$; the stable tail is $5+1=6$. ◻
+
+</div>
+
+Writing $a_{\!*}=q_{\!*}*\mu$, one obtains the useful exact formula $$a_{\!*}(n)=6\mathbf 1_{n=1}-6\mu(n)
++9\mathbf 1_{2\mid n}\mu(n/2)-3\mathbf 1_{4\mid n}\mu(n/4).$$ Thus $$R_X=\sum_{n\le X}\frac{a_{\!*}(n)}{\sqrt n}\log\frac Xn.$$ The positivity of $q_{\!*}$ is a source-side asset, but it does not make the Mobius-convolved scalar positive. Every disputed theorem in PRs \#565 and \#566 is an attempted mechanism for controlling the alternating rough-prime history after this convolution.
+
+# Exact Mellin transforms and the conditional Landau endpoint
+
+This section reconstructs the analytic endpoint independently of either arithmetic producer.
+
+<div class="lemma">
+
+**Lemma 4** (Fixed-row Mellin transform). *For $\Re s>1/2$ and $z=s+1/2$, $$\mathcal C_j(s):=\int_1^\infty c_X(j)X^{-s-1}\,dX
+=\frac{C_j}{s^2}+\frac{P_j(z)}{s^2\zeta(z)},$$ where $$P_j(z)=A_jj^{-z}-B_j(j+1)^{-z}-C_j\sum_{m=1}^{j+1}m^{-z}.$$*
+
+</div>
+
+<div class="proof">
+
+*Proof.* For $m\ge1$ and $\Re s>0$, $$\int_m^\infty \log(X/m)X^{-s-1}\,dX=\frac{m^{-s}}{s^2}.$$ In the absolute half-plane $\Re s>1/2$, interchange the finite-at-each-$X$ Mobius sum and the Mellin integral. The factor $k^{-1/2}$ combines with $X=kY$ to produce $k^{-z}$, and $\sum\mu(k)k^{-z}=1/\zeta(z)$. The stable tail $C_j\sum_{m\ge1}m^{-z}$ supplies $C_j\zeta(z)$, giving the displayed constant plus reciprocal-zeta term. ◻
+
+</div>
+
+For rows two and three, $$P_2(z)=2\,2^{-z}-1-3^{-z},$$ $$3P_3(z)=5\,3^{-z}-1-2^{-z}-3\,4^{-z}.$$ Their scalar combination simplifies to $$\label{eq:scalarMellin}
+\mathcal R(s):=5\mathcal C_2(s)+3\mathcal C_3(s)
+=\frac6{s^2}-\frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)}.$$
+
+<div class="lemma">
+
+**Lemma 5** (Zero-safe numerator). *The numerator $-3(1-2^{-z})(2-2^{-z})$ has no zero in $\Re z>0$.*
+
+</div>
+
+<div class="proof">
+
+*Proof.* If $\Re z>0$, then $|2^{-z}|<1$, so $2^{-z}$ is neither $1$ nor $2$. ◻
+
+</div>
+
+For the annular scalar $$\mathcal A_X=R_X-R_{X/4},$$ the Mellin transform is $(1-4^{-s})\mathcal R(s)$. The annular factor is nonzero in $\Re s>0$.
+
+<div id="thm:landau" class="theorem">
+
+**Theorem 6** (Conditional scalar Mellin–Landau implication). *Assume $R_X\ge0$ for all sufficiently large $X$, or assume $\mathcal A_X\ge0$ for all sufficiently large $X$. Then the Riemann Hypothesis follows.*
+
+</div>
+
+<div class="proof">
+
+*Proof.* The row formula gives polynomial growth, hence a finite Mellin abscissa. Landau’s theorem for a Mellin transform of an eventually nonnegative locally integrable function says that a finite real abscissa of convergence is a singular point. Formula <a href="#eq:scalarMellin" data-reference-type="eqref" data-reference="eq:scalarMellin">[eq:scalarMellin]</a>, and its annular multiple, are analytic on the positive real $s$-axis: at $z=1$ the reciprocal zeta factor vanishes, and the remaining elementary factors are regular. Therefore the abscissa is at most $0$, so the defining Mellin integral is holomorphic throughout $\Re s>0$.
+
+If $\zeta(\rho)=0$ with $\Re\rho>1/2$, put $s=\rho-1/2$. Then $\Re s>0$, $s\ne0$, and the zero-safe numerator leaves a nonremovable pole at $s$. This contradicts holomorphy. The functional equation reflects any zero with $\Re\rho<1/2$ to one with real part greater than $1/2$. Hence all nontrivial zeros lie on the critical line. ◻
+
+</div>
+
+<div class="remark">
+
+**Remark 7**. *Theorem <a href="#thm:landau" data-reference-type="ref" data-reference="thm:landau">6</a> is an implication, not a producer. The review question is entirely whether either PR constructs a source-faithful proof of the required scalar nonnegativity.*
+
+</div>
+
+# Paired sources, parity covariance, and the common-source rule
+
+A paired positive source is $P=(P^+,P^-)$ with signed observation $$\mathcal O(P)=\mathcal O_+(P^+)-\mathcal O_+(P^-).$$ Let $\mathsf S(P^+,P^-)=(P^-,P^+)$. Then $$\mathcal O(\mathsf S^hP)=(-1)^h\mathcal O(P).$$ Rough multiplication preserves physical quotient and coefficient magnitude: $$\frac{X/p}{k/p}=\frac Xk,
+\qquad
+p^{-1/2}(k/p)^{-1/2}=k^{-1/2},$$ but it reverses the parity channel.
+
+<div id="fw:odd" class="firewall">
+
+**Firewall 8** (Odd-history Target–Lorenz obstruction). *At $$X=67\cdot71\cdot13=61841,
+\qquad h=(67),
+\qquad(p,y)=(71,13),$$ the complete grouped $P_{61}$ target calculation in canonical orientation satisfies $$E_T(71,13)-O_T(71,13)>17.$$ The incoming history has odd length. It therefore requires the reversed orientation, which is incompatible with the strict canonical inequality. A canonical terminal Hall row cannot be installed leafwise at this state.*
+
+</div>
+
+The directed computation behind Firewall <a href="#fw:odd" data-reference-type="ref" data-reference="fw:odd">8</a> is not a cosmetic warning. It falsifies the “history labels are passive” interface in the first paper. It also rules out any successor that silently resets parity at a stopping depth. PR \#561 further proves that fixed even-depth reset makes the current block eventually negative; the surviving architecture must retain all history parity globally.
+
+The correct finite-dimensional source model has states indexed by a complete tuple such as $$(d,h,D,\text{activation side},\text{physical atom}),
+\qquad d\mid P_{61},$$ and one coefficient vector must be used simultaneously in source, target, score, row, and parity coordinates. This is the project-level global parity-Hall/common-source obligation, denoted GPHT23 in PR \#561.
+
+# The exact causal split: what it proves and what it does not
+
+Let $67\le p_1<\cdots<p_k$ be active rough primes, $r_i=p_i^{-1/2}$, and $$s_0=1,\qquad s_i=\prod_{h\le i}(1-r_h),
+\qquad \lambda_i=r_is_{i-1},
+\qquad \alpha_i=r_i\lambda_i.$$ Then $$s_k+\sum_i\lambda_i=1,
+\qquad
+\sum_i\alpha_i\le r_1\sum_i\lambda_i<\frac1{\sqrt{67}}<\frac18.$$ For any linear packet symbols $P_X$ and $A_pP_{X/p}$, $$\label{eq:causal}
+P_X=s_kP_X+\sum_i\lambda_i(P_X-r_iA_{p_i}P_{X/p_i})
++\sum_i\alpha_iA_{p_i}P_{X/p_i}.$$ Indeed the coefficient of every formal child is $-\lambda_ir_i+\alpha_i=0$, while the parent coefficient is $s_k+\sum\lambda_i=1$.
+
+<div class="firewall">
+
+**Firewall 9** (Tautological-split firewall). *Identity <a href="#eq:causal" data-reference-type="eqref" data-reference="eq:causal">[eq:causal]</a> is exact algebra, but by itself it creates no Euler factor and no rough history. Any proof using it must separately prove that the current packets are positive restrictions of the actual source and that the final child packets form a disjoint, exhaustive, source-faithful history expansion. A least-owner label does not establish these properties.*
+
+</div>
+
+This firewall is decisive for PR \#565. Its terminal recombination uses $\alpha_i=\lambda_ir_i$ to cancel the child in exactly the same way as the tautological identity. That cancellation is not the native Mobius coefficient $-r_i$.
+
+# Reconstruction of PR \#565
+
+PR \#565 proposes positivity of the annular scalar $$\mathcal A_X=5[c_X(2)-c_{X/4}(2)]+3[c_X(3)-c_{X/4}(3)].$$ Define $$H_x(n)=\min\!\left(\log4,\log\frac xn\right)_+,
+\qquad
+A_{\!*}(x)=\sum_{m\ge2}\frac{q_{\!*}(m)}{\sqrt m}H_x(m).$$ For $P_{61}=\prod_{p\le61}p$, let $$F(x)=\sum_{d\mid P_{61}}\frac{\mu(d)}{\sqrt d}A_{\!*}(x/d),
+\qquad
+M(x)=\sum_{d\mid P_{61}}\frac1{\sqrt d}A_{\!*}(x/d).$$ The intended proof has four steps.
+
+1.  Prove $0\le F\le M$ below $67$ and $M/40\le F\le M/8$ above $67$.
+
+2.  For a rough prime $p$, set $r=p^{-1/2}$, $y=x/p$, and define the parity-swapped current $$C_{x,p}=P_x-r\mathsf S A_pP_y.$$ Claim $$m(C_{x,p})=M(x)-rM(y),\qquad f(C_{x,p})=F(x)+rF(y).$$
+
+3.  Recombine every low child before observation: $$\lambda(P_x-r\mathsf SA_pP_y)+\alpha\mathsf SA_pP_y=\lambda P_x.$$
+
+4.  Bound high children by $H_x<M(x)/8$ and induct: $$f(P_x)=f(C_x)-\sum_i\alpha_if(P_{x/p_i}).$$ The advertised lower margin is $$\frac1{40}\left(1-\frac18\right)-\frac16\frac18=\frac1{960}.$$
+
+Every one of these interfaces must refer to the same all-history source. The first inequality is false as stated; the second and third use the wrong source type; and the fourth never defines an exhaustive source partition.
+
+# First refutation of PR \#565: the $1/40$ bias is false
+
+<div id="ref:x184" class="refutation">
+
+**Refutation 10** (Exact $x=184$ countercertificate). *At $x=184$, $$\begin{aligned}
+F(184)&=10.69357964877382995080531550498546444\ldots,\\
+M(184)&=445.85760354260283631557807730110764267\ldots,
+\end{aligned}$$ so $$\frac{F(184)}{M(184)}=0.02398429355876630467\ldots<\frac1{40},$$ and $$40F(184)-M(184)=-18.114417591649638\ldots<0.$$*
+
+</div>
+
+<div class="proof">
+
+*Proof.* Enumerate the $P_{61}$ divisors with $d\le92$ and evaluate the finite sums defining $F$ and $M$ at 100 decimal digits. The independent 256-bit interval scan certifies $$40F(184)-M(184)\in
+[-18.114417591649674468,-18.114417591649602078].$$ The complete source and output are included in and . ◻
+
+</div>
+
+The advertised $1/960$ proof therefore fails before any history induction is considered. Merely weakening $1/40$ to $1/42$, however, does not repair the source interface.
+
+# Second refutation of PR \#565: the current is not a positive restriction
+
+Write a paired packet as $P=(E,O)$. The genuine same-channel positive restriction associated with removing a $p$-divisible child is $$P_x-rA_pP_y=(E_x-rA_pE_y,\;O_x-rA_pO_y).$$ PR \#565 instead uses $$P_x-r\mathsf SA_pP_y=(E_x-rA_pO_y,\;O_x-rA_pE_y).$$ These are not the same source object.
+
+<div id="ref:oneatom" class="refutation">
+
+**Refutation 11** (One-atom source-type countermodel). *Take $P_x=P_y=(1,0)$ and let $0<r<1$ (in the application $r=p^{-1/2}$). If same-index placement sends the child atom to the same even channel, the genuine restriction is $$(1,0)-r(1,0)=(1-r,0),$$ a positive paired source. PR \#565 instead subtracts the swapped atom: $$(1,0)-r(0,1)=(1,-r),$$ which has a negative odd-channel mass and is not a positive source packet. Consequently the quantities called unsigned mass and positive current in PR \#565 are not the marginals of the stated positive $P_{61}$ restriction. The parity swap belongs to the signed observation of a placed child; it cannot be inserted into a positive source subtraction without a separate source theorem.*
+
+</div>
+
+The low-child recombination exposes the same problem algebraically. For one active prime, $$\lambda(P-r\mathsf SA_pP_y)+\alpha\mathsf SA_pP_y=\lambda P,
+\qquad\alpha=\lambda r.$$ The coefficient of the child is zero. The actual one-prime Euler history has coefficient $-r$, not zero. Thus the proposed induction proves a tautological decomposition of the bare finite-$P_{61}$ packet, not the full native Mobius scalar.
+
+<div id="ref:depthone" class="refutation">
+
+**Refutation 12** (Failure at the first rough prime). *The mismatch can be seen without any abstract source language. Suppose one rough prime $p$ is active and write $r=p^{-1/2}$. The causal coefficients are $$s=1-r,\qquad \lambda=r,\qquad \alpha=r^2.$$ Let $F(x)$ and $F(y)$, $y=x/p$, denote the signed finite-$P_{61}$ scalar at the parent and child scales. PR \#565 assigns the swapped current the scalar $F(x)+rF(y)$. Its complete nonrecursive current is therefore $$sF(x)+\lambda\bigl(F(x)+rF(y)\bigr)
+=F(x)+r^2F(y).$$ The all-history recursion then subtracts the parity-swapped final child with coefficient $\alpha$ and returns $$F(x)+r^2F(y)-\alpha F(y)=F(x).$$ By contrast, adjoining one genuine rough Euler factor to the $P_{61}$ source gives $$F(x)-rF(y).$$ The proposed recursion is therefore already wrong at depth one, by the nonzero term $rF(y)$. No choice of the lower bias constant repairs this coefficient identity.*
+
+</div>
+
+<div class="firewall">
+
+**Firewall 13** (Base-case and all-history failure). *The inequality for $F(x)$ is a theorem about one bare finite-$P_{61}$ marginal. It is a valid terminal base object. It does not assign $F$ and $M$ to a nonterminal history state. Before an induction can start, one must prove an exact map from every native squarefree occurrence to one state, one current restriction, and one final child, with no duplication or omission and with parity carried in the observation. PR \#565 supplies no such map.*
+
+</div>
+
+# A repaired finite-$P_{61}$ theorem
+
+The finite arithmetic statement can be repaired independently of the failed history induction.
+
+<div id="thm:p61" class="theorem">
+
+**Theorem 14** (Repaired complete $P_{61}$ bias). *For the $F,M$ defined above, $$0\le F(x)\le M(x)\qquad(1\le x<67),$$ and $$\boxed{\frac1{42}M(x)\le F(x)\le\frac18M(x)\qquad(x\ge67).}$$*
+
+</div>
+
+We give the proof in four stages.
+
+## Euler-ramp estimate
+
+Let $$S(Y)=\sum_{n\le Y}\frac1{\sqrt n}\log\frac Yn.$$
+
+<div id="lem:ramp" class="lemma">
+
+**Lemma 15** (Uniform ramp expansion). *For every real $Y\ge1$, $$S(Y)=4\sqrt Y+\zeta(1/2)\log Y+\zeta'(1/2)+R(Y),
+\qquad |R(Y)|<5Y^{-3/2}.$$*
+
+</div>
+
+<div class="proof">
+
+*Proof.* Let $N=\lfloor Y\rfloor$, $a=N+1$, and $h=\log(a/Y)$. Express the finite sum through the Hurwitz zeta tail: $$S(Y)=\log Y\,[\zeta(1/2)-\zeta(1/2,a)]
++[\zeta'(1/2)-\partial_s\zeta(s,a)|_{s=1/2}].$$ Euler–Maclaurin after the $B_2$ term gives $$\zeta(s,a)=\frac{a^{1-s}}{s-1}+\frac12a^{-s}
++\frac{s}{12}a^{-s-1}+\mathcal R(s,a),$$ where $$\mathcal R(s,a)=-\frac{s(s+1)}2
+\int_a^\infty \overline B_2(t)t^{-s-2}\,dt,
+\qquad |\overline B_2(t)|\le\frac16.$$ Substitution and differentiation at $s=1/2$ yield $$R(Y)=\sqrt a(4-2h-4e^{-h/2})
++\frac h{2\sqrt a}
+-\frac{1/12-h/24}{a^{3/2}}+\mathcal E(Y).$$ Since $0\le h\le1/(a-1)$ and $$0\ge4-2h-4e^{-h/2}\ge-\frac{h^2}{2},$$ the first three displayed terms, multiplied by $a^{3/2}$, have absolute sum less than $25/8$. Differentiating the Euler remainder gives $$|\mathcal E(Y)|
+\le a^{-3/2}\left(\frac19+\frac h{24}+\frac1{36}\right)
+<\frac15a^{-3/2}.$$ Because $a>Y$, the deliberately loose bound $5Y^{-3/2}$ follows. ◻
+
+</div>
+
+For $$K(Y)=\sum_{n\ge1}\frac1{\sqrt n}H_Y(n)=S(Y)-S(Y/4),$$ we obtain, for $Y\ge16$, $$K(Y)=2\sqrt Y+\zeta(1/2)\log4+E_K(Y),
+\qquad |E_K(Y)|<45Y^{-3/2}.$$ Using $$A_{\!*}(Y)=6K(Y)-6H_Y(1)+\frac9{\sqrt2}H_Y(2)-\frac32H_Y(4),$$ we get $$\label{eq:Aasymp}
+A_{\!*}(Y)=12\sqrt Y+C_0+E(Y),
+\qquad |E(Y)|<5\quad(Y\ge2),$$ where $$C_0=\left(6\zeta(1/2)-\frac{15}{2}+\frac9{\sqrt2}\right)\log4
+=-13.72177174197468\ldots.$$ For $Y\ge16$, the ramp remainder gives $|E(Y)|<270Y^{-3/2}<5$. On $2\le Y\le16$, the companion certificate samples a $0.01$ mesh, bounds the derivative on every activation cell, and uses outward MPFR division before the monotone logarithm and square root. It certifies $$\sup_{2\le Y\le16}|E(Y)|<3.267183<5.$$
+
+## Finite real-cell certificate
+
+Let $f(n)$ and $m(n)$ be the coefficient sequences obtained from $q_{\!*}$ by convolution with the signed and unsigned divisor kernels supported on $d\mid P_{61}$. For any coefficient sequence $b(n)$ define $$W_b(x)=\sum_{n\le x}\frac{b(n)}{\sqrt n}H_x(n),$$ $$S_b(N)=\sum_{n\le N}\frac{b(n)}{\sqrt n},
+\qquad
+T_b(N)=\sum_{n\le N}\frac{b(n)\log n}{\sqrt n}.$$ If $N=\lfloor x\rfloor$ and $K=\lfloor x/4\rfloor$, then $$\label{eq:cell}
+W_b(x)=(\log4)S_b(K)+\log x\,[S_b(N)-S_b(K)]-[T_b(N)-T_b(K)].$$ Within every activation cell, this is affine in $\log x$, so its minimum occurs at an endpoint. The interval replay evaluates all endpoints through $10^6$ for $$b_{\rm low}=42f-m,
+\qquad
+b_{\rm up}=m-8f.$$ It certifies $$\min_{67\le x\le10^6}(42F(x)-M(x))
+\ge3.2727417058979848816,$$ attained in the scan at $x=184$, and $$\min_{67\le x\le10^6}(M(x)-8F(x))
+\ge135.51661277216024908,$$ with scan minimizer $x=67$. The compact inequalities $F\ge0$ and $M-F\ge0$ below $67$ are certified in the same endpoint reduction.
+
+The replay included with this reconstruction also repairs two formal rounding defects in the first published $1/42$ certificate. A rational mesh argument $a/b$ is first enclosed by MPFR division with `RNDD`/`RNDU` before applying monotone logarithm or square root; it is never rounded to nearest and then treated as exact. Likewise the mesh-coverage and tail-penalty expressions are evaluated by outward interval operations rather than by point arithmetic followed by one final rounding. The corrected 256-bit replay retains the same minimizers and leaves margins far larger than the total enclosure widths.
+
+## Unbounded tail
+
+Fix $a_d=42\mu(d)-1$ for the lower inequality and $a_d=1-8\mu(d)$ for the upper inequality. On an interval where $$D_x=\{d\mid P_{61}:2d\le x\}$$ is fixed, equation <a href="#eq:Aasymp" data-reference-type="eqref" data-reference="eq:Aasymp">[eq:Aasymp]</a> gives $$\sum_{d\in D_x}\frac{a_d}{\sqrt d}A_{\!*}(x/d)
+\ge12\sqrt x\sum_{d\in D_x}\frac{a_d}{d}
+-20\left|\sum_{d\in D_x}\frac{a_d}{\sqrt d}\right|
+-5\sum_{d\in D_x}\frac{|a_d|}{\sqrt d}.$$ The active set changes only at $x=2d$. All $2^{18}=262144$ divisors are enumerated. On each finite event interval the lower bound is affine in $\sqrt x$, so both endpoints suffice; on the final interval the leading coefficient is certified positive. The corrected replay gives $$42F(x)-M(x)>119.87156415034558
+\quad(x\ge10^6),$$ and $$M(x)-8F(x)>40007.49939829520
+\quad(x\ge10^6).$$ This completes the proof of Theorem <a href="#thm:p61" data-reference-type="ref" data-reference="thm:p61">14</a>.
+
+## What the repair buys
+
+If an exact source-faithful all-history theorem supplied a high-child unsigned mass ratio $h<1/\sqrt{67}$ and a child upper bias $1/6$, then the repaired lower bias would give $$\frac1{42}(1-h)-\frac16h
+=\frac{1-8h}{42}>\frac{1-8/\sqrt{67}}{42}>\frac1{2730}>0.$$ At the coarser endpoint $h=1/8$, the margin is exactly zero. Thus strict factor–67 mass, not merely the slogan “less than one eighth,” is essential. The arithmetic is sufficient, but only after the missing source theorem is proved.
+
+# Ownership, rough-child mass, and base cases in PR \#565
+
+We now answer the requested interfaces explicitly.
+
+#### Rough-child mass.
+
+The numerical inequality $$\sum_i\alpha_iM(x/p_i)\le M(x)\sum_i\alpha_i<\frac{M(x)}{\sqrt{67}}$$ is valid if every child really has the same finite-$P_{61}$ mass functional $M$, $M$ is monotone, and the child occurrences are disjoint. The first two statements hold for bare packets. The third, and the identification of a nonterminal history state with a bare packet, are not proved.
+
+#### First ownership.
+
+The factorization $$k=d p_1\cdots p_t,
+\qquad d\mid P_{61},
+\qquad67\le p_1<\cdots<p_t,$$ is unique. This proves a unique *number-theoretic history label*. It does not prove that the current and child source atoms used by the induction are an exact partition of the original source, because activation side, channel, target atom, and Hall-edge use must also be included and shown disjoint.
+
+#### Base cases.
+
+For $x<67$ there is no rough prime, so the complete finite-$P_{61}$ packet is indeed terminal. At the first nontrivial rough scale, however, PR \#565 recombines the low child to zero rather than retaining the native rough coefficient. The induction therefore fails at its first transition, not merely at a deep history.
+
+#### All-history induction.
+
+A decreasing rank proves finiteness only after the state map is defined. The proposal never defines a state-dependent positive source whose $F,M$ marginals satisfy its current formulas. Hence the induction hypothesis has no source-faithful domain.
+
+# Reconstruction of PR \#566
+
+PR \#566 accepts the odd-history obstruction and replaces leafwise positivity by an operator resummation. Its exact algebraic components are:
+
+1.  the positive $5{:}3$ dictionary and scalar Mellin transform;
+
+2.  the causal coefficients $s,\lambda,\alpha$;
+
+3.  a proposed decomposition at every state $v$, $$\mathcal G_v=\mathcal H_v\oplus\bigoplus_w\mathcal R_{v\to w};$$
+
+4.  a proposed injection $\alpha_{v,w}\mathcal G_w\hookrightarrow\mathcal R_{v\to w}$;
+
+5.  the asserted domination $$g_v\ge\sum_w\alpha_{v,w}g_w,
+    \qquad
+     g_v=5\mathcal O_2(\mathcal H_v)+3\mathcal O_3(\mathcal H_v);$$
+
+6.  the parity recursion $(I+T)F=g$ and factorization $$(I+T)^{-1}=(I-T)(I-T^2)^{-1}.$$
+
+The last item is correct. The fourth does not imply the fifth under the definitions given.
+
+# Reconstruction of the imported Target–Lorenz theorem
+
+Because PR \#566 relies on the directed compact-plus-MPFR terminal result, we reconstruct its exact one-sided scope. Put $$P_{61}=\prod_{q\le61}q,
+\qquad
+\mathcal T(z)=4\sqrt z-3\quad(z\ge1).$$ For $p\ge67$, $1\le y<67$, and $d\mid P_{61}$ with $d\le py$, define the target atom $$\label{eq:KT}
+K_T(d;p,y)=\frac1{\sqrt d}
+\left[\mathcal T(py/d)-p^{-1/2}\mathbf1_{d\le y}\mathcal T(y/d)\right].$$ The base even source consists of the active divisors with $\mu(d)=+1$ and the base odd source of those with $\mu(d)=-1$: $$E_T(p,y)=\sum_{\substack{d\mid P_{61},\ d\le py\\\mu(d)=1}}K_T(d;p,y),
+\qquad
+O_T(p,y)=\sum_{\substack{d\mid P_{61},\ d\le py\\\mu(d)=-1}}K_T(d;p,y).$$ Every active target atom is positive. If $d\le y$ and $z=y/d\ge1$, then $$\mathcal T(pz)-p^{-1/2}\mathcal T(z)
+=(1-p^{-1/2})\bigl[4(\sqrt p+1)\sqrt z-3\bigr]>0.$$ If $y<d\le py$, the child term is inactive and $K_T=d^{-1/2}\mathcal T(py/d)>0$.
+
+A canonical Target–Lorenz coupling chooses a submeasure $U$ of the even target atoms with total target mass $O_T$, using only no-upward edges $e\le o$. If $t_{o,e}$ is the flow, $r_e=T_e-\sum_o t_{o,e}\ge0$, and $\rho_j$ is the target-normalized row profile, then $$\label{eq:TLrow}
+\sum_eT_e\rho_j(e)-\sum_oT_o\rho_j(o)
+=\sum_e r_e\rho_j(e)
++\sum_{o,e}t_{o,e}\bigl(\rho_j(e)-\rho_j(o)\bigr).$$ The directed profile theorem proves $\rho_j(e)\ge\rho_j(o)$ whenever $e\le o$, simultaneously for the declared score, every component row $2\le j\le66$, ordinary coordinates, radix-four coordinates, and boundary coordinates. Thus the right side of <a href="#eq:TLrow" data-reference-type="eqref" data-reference="eq:TLrow">[eq:TLrow]</a> is a positive residual-source row plus a nonnegative current-only Hall bonus, all using one common coefficient vector.
+
+The computer-assisted proof has two exhaustive domains. The compact certificate covers every real activation cell with $py<166000$, including one-sided boundaries. The tail covers $py\ge166000$ by enumerating all $2^{18}=262144$ divisors, all $65$ rows, and $51{,}118{,}080$ exact activation records. MPFR at 256 bits, with directed base square roots/logarithms and outward arithmetic thereafter, certifies $$\Theta_j(p,y)>26.7858198871370094575061,$$ $$\Theta_j^{\rm parent}>79.2368736388876425819072,
+\qquad
+\frac{d}{dt}\Theta_j^{\rm parent}(t^2)
+>0.239715873017393372044407.$$ The boundary $py=166000$ belongs to the tail, so the domains are disjoint and exhaustive. This establishes the canonical-orientation terminal theorem on the complete grouped $P_{61}$ source.
+
+Its scope is crucial. It proves a one-sided coupling from the base even channel to the base odd demand. It neither proves a reverse-orientation producer nor permits arbitrary reserve removal. At $(p,y)=(71,13)$ one has $E_T-O_T>17$; after the legitimate odd history $(67)$ the channels swap, so even the target feasibility inequality reverses. The imported theorem is therefore a valid canonical terminal building block but cannot itself solve odd-history compensation.
+
+# Hall/Lorenz capacity and why moments are insufficient
+
+For an ordered no-upward transport from supply $E$ to demand $O$ with edges $e\le o$, feasibility is equivalent to total-mass equality together with the complete prefix family $$\label{eq:hallprefix}
+O(({-}\infty,t])\le E(({-}\infty,t])
+\qquad\text{for every threshold }t.$$ Equivalent suffix conventions may be used, but one inequality is required at every activation threshold.
+
+The exact global common-source problem can be written as a finite cone program. After every history swap, enumerate the available global even atoms by $i$. Atom $i$ has capacity $b_i$, target $t_i>0$, declared score $s_i$, order coordinate $e_i$, and physical row vector $r_i$ in a closed product cone $K$. Let $(T_O,S_O,R_O)$ be the total odd demand. One common coefficient vector $u$ must satisfy $$\label{eq:globalprimal}
+0\le u_i\le b_i,
+\qquad
+\sum_i u_it_i=T_O,
+\qquad
+\sum_i u_is_i\le S_O,
+\qquad
+\sum_i u_ir_i-R_O\in K.$$ For an ordered no-upward realization it must additionally satisfy every prefix inequality $$\label{eq:globalprefix}
+\sum_{i:e_i\le t}u_it_i\ge O(({-}\infty,t])
+\qquad\text{for every activation threshold }t.$$ A reserve-aware version introduces nonnegative child allocations $z_{i,w}$ with $$\sum_w z_{i,w}\le b_i,$$ requires each vector $z_{\cdot,w}$ to be the literal activation- and coefficient-preserving image of $\alpha_{v,w}\mathcal G_w$, and replaces $b_i$ in <a href="#eq:globalprimal" data-reference-type="eqref" data-reference="eq:globalprimal">[eq:globalprimal]</a>–<a href="#eq:globalprefix" data-reference-type="eqref" data-reference="eq:globalprefix">[eq:globalprefix]</a> by the residual capacity $b_i-\sum_wz_{i,w}$. This is the global Lorenz-capacity theorem that first ownership must support. If infeasible, finite-dimensional separation gives an explicit Farkas separator; mass and barycenter alone cannot decide it.
+
+## Exact scalar Lorenz dual and the uniform frontier
+
+At target-plus-$5{:}3$-scalar scope, the common-source problem has a particularly sharp finite solution. Completely expand one fixed endpoint $X$, retaining every rough history, cumulative parity, owner, and one-sided activation state. Let the actual even atoms be indexed by $i=1,\ldots,M$. Atom $i$ has capacity $a_i\ge0$, target $t_i>0$, and scalar coordinate $r_i$. Let the complete odd source have target and scalar demands $$T_O=\sum_o b_ot_o,
+\qquad
+R_O=\sum_o b_or_o.$$ The scalar common-source problem is $$0\le u_i\le a_i,
+\qquad
+\sum_i t_iu_i=T_O,
+\qquad
+\sum_i r_iu_i\ge R_O.$$ For $0\le T\le T_E:=\sum_i a_it_i$, define $$\Phi_X(T)=\max\left\{\sum_i r_iu_i:
+0\le u_i\le a_i,\ \sum_i t_iu_i=T\right\}.$$ Then feasibility is equivalent to $$T_O\le T_E,
+\qquad
+R_O\le\Phi_X(T_O).$$ Order the atoms by decreasing ratio $\theta_i=r_i/t_i$, and put $A_k=\sum_{i\le k}a_it_i$. For the unique $k$ with $A_{k-1}\le T\le A_k$, $$\Phi_X(T)=\sum_{i<k}a_ir_i+\theta_k(T-A_{k-1}).$$ Thus the optimizer saturates larger scalar-per-target ratios first and has at most one fractional atom. Equivalently, $$\label{eq:lorenzdual}
+\Phi_X(T)=\min_{\lambda\in\mathbb R}
+\left[\lambda T+\sum_i a_i(r_i-\lambda t_i)_+\right].$$ Weak duality is immediate, and equality follows by taking $\lambda=\theta_k$ at the threshold. A minimizing $\lambda$ is an exact finite separator when the inequality fails.
+
+The theorem above is finite and unconditional for each explicitly supplied endpoint ledger. What remains open is the uniform assertion that the completed-parity native source satisfies $$T_O\le T_E,
+\qquad R_O\le\Phi_X(T_O)$$ for every real $X$, including both one-sided activation limits. PR \#577 names this assertion `CPSL67`. It is the scalar specialization of the global common-source producer and is RH-bearing; the one-parameter dual does not prove its own uniform inequality.
+
+<div id="ref:moments" class="refutation">
+
+**Refutation 16** (Mass and barycenter do not preserve Hall feasibility). *Let $$E=\tfrac12\delta_0+\tfrac12\delta_2,
+\qquad O=\delta_1.$$ Both have total mass $1$ and barycenter $1$. Nevertheless, at $t=1$ the demand prefix has mass $1$ while the supply prefix has mass $1/2$, so no no-upward coupling exists.*
+
+</div>
+
+PR \#566 says that matched reserve removal preserves demand conservation and target barycenter. By Refutation <a href="#ref:moments" data-reference-type="ref" data-reference="ref:moments">16</a>, those two moments do not imply that the Hall complement still satisfies all prefix inequalities. A valid reserve theorem must provide either an explicit residual flow or a directed certificate for every residual prefix after every reserve extraction.
+
+The imported compact-plus-MPFR Target–Lorenz theorem supplies canonical-orientation terminal inequalities on the complete grouped source. It does not state that arbitrary source atoms may be removed while preserving every prefix margin. Nor can its canonical orientation be applied to an odd-history leaf because Firewall <a href="#fw:odd" data-reference-type="ref" data-reference="fw:odd">8</a> reverses the required order.
+
+# Refutation of the PR \#566 reserve implication
+
+<div id="ref:reserve" class="refutation">
+
+**Refutation 17** (Reserve injection is disjoint from the asserted current). *Under PR \#566’s definitions, the injected child lies in $\mathcal R_{v\to w}$ while $g_v$ is the scalar of $\mathcal H_v$. Take one child with $\alpha=1/10$, child scalar $g_w=10$, reserve scalar $1$, and Hall-complement scalar $g_v=1/2$. The reserve injection is coefficient-exact and scalar-exact: $$\operatorname{scalar}(\mathcal R_{v\to w})=1=\alpha g_w.$$ But $$g_v=\frac12<1=\alpha g_w.$$ Thus the injection into the reserve does not imply the claimed Hall-current domination.*
+
+</div>
+
+This is not a numerical pathology. It is a mismatch between the summand containing the evidence and the summand used in the inequality. The proof text silently replaces the scalar of the Hall complement by the scalar of the total current.
+
+#### First ownership.
+
+PR \#566 lists an owner key $(d,h,p,m,\text{activation side})$. No atomwise map is given from the child source to parent hazard atoms, no proof establishes disjoint ranges across all modes, and no residual Hall prefix certificate is supplied. The owner tuple is therefore a specification, not a theorem.
+
+#### Global Lorenz capacity.
+
+The decisive missing object is a reserve-aware common-source flow satisfying every prefix inequality after extraction. The deterministic replay explicitly does not construct or verify it. Consequently L-96651 is not a completed theorem.
+
+# The finite positive-operator lemma survives
+
+<div id="lem:operator" class="lemma">
+
+**Lemma 18** (Parity resummation). *Let $T$ be a positive nilpotent operator on a finite ordered vector space. If $g\ge Tg$ and $$(I+T)F=g,$$ then $F\ge0$.*
+
+</div>
+
+<div class="proof">
+
+*Proof.* Nilpotence gives $$(I+T)^{-1}=I-T+T^2-T^3+\cdots
+=(I-T)(I-T^2)^{-1}.$$ Since $T$ commutes with $I-T^2$, $$F=(I-T^2)^{-1}(g-Tg).$$ The inverse is the finite positive sum $I+T^2+T^4+\cdots$, and $g-Tg\ge0$. ◻
+
+</div>
+
+The lemma is useful and conceptually clean. It does not manufacture its hypothesis. Odd-history compensation is complete only after $g\ge Tg$ has been proved in the actual common-source cone.
+
+# A corrected reserve theorem template
+
+There is a precise way to repair the logical form of PR \#566.
+
+<div id="repair:total" class="repair">
+
+**Repair 19** (Corrected one-use total-current formulation). *At each state $v$, let $$\mathcal G_v=\mathcal H_v\oplus\bigoplus_w\mathcal R_{v\to w},
+\qquad
+\widetilde g_v=\phi(\mathcal G_v),$$ where $\phi$ is the positive $5{:}3$ source functional. A sufficient theorem would prove all of the following in one source category:*
+
+1.  *$\phi(\mathcal H_v)\ge0$ through an explicit residual Hall flow satisfying every prefix constraint;*
+
+2.  *the reserve ranges are disjoint, and each injection $\alpha_{v,w}\mathcal G_w\hookrightarrow\mathcal R_{v\to w}$ preserves activation, channel, target, score, every row coordinate, and $\phi$;*
+
+3.  *an atomwise one-use identity proves the exact parity recursion $$(I+T)U=\widetilde g,$$ with every reserve occurrence assigned exactly once–not simultaneously counted in $\widetilde g$ and again as an independent recursive child;*
+
+4.  *the state graph is finite, so $T$ is positive and nilpotent.*
+
+*Then positivity and the reserve injections give $$\widetilde g_v
+=\phi(\mathcal H_v)+\sum_w\phi(\mathcal R_{v\to w})
+\ge\sum_w\alpha_{v,w}\widetilde g_w=(T\widetilde g)_v.$$ Lemma <a href="#lem:operator" data-reference-type="ref" data-reference="lem:operator">18</a>, applied to the independently proved recursion in (iii), yields $U\ge0$ and hence root positivity.*
+
+</div>
+
+Merely redefining $g_v$ as the scalar of the whole parent does not prove item (iii). Without a one-use identity, the same reserve may be included once in $\widetilde g_v$ and a second time through $TU$, producing a different source expansion. Repair <a href="#repair:total" data-reference-type="ref" data-reference="repair:total">19</a> therefore states a sufficient theorem rather than deriving it from PR \#566. Its conditions (i)–(iii) are an explicit form of the global parity-Hall/common-source obligation already isolated as open in PR \#561.
+
+# One common theorem would close both architectures
+
+The two proposals are best understood as attempts to prove the following source theorem by different scalar shadows.
+
+<div id="thm:required" class="theorem">
+
+**Theorem 20** (Global parity-aware factor–67 source theorem, required). *For every endpoint $X$, there exists a finite acyclic state system with:*
+
+1.  *one positive common-source vector at each state, indexed by complete $P_{61}$ color, ordered rough history, parity, activation side, and physical atom;*
+
+2.  *an exact, exhaustive, nonduplicating first-owner partition of the native Mobius source;*
+
+3.  *same-channel positive restrictions for all current packets;*
+
+4.  *parity swap only in the observation/placement map dictated by cumulative history;*
+
+5.  *either a reserve-aware residual Hall flow satisfying every prefix inequality, or an equivalent common-source cone certificate;*
+
+6.  *a state-value vector $U$, a positive current vector $g$, and a positive nilpotent child operator $T$ satisfying the exact one-use recursion $$(I+T)U=g,
+    \qquad g\ge Tg;$$*
+
+7.  *root state value $U_{\rm root}$ equal to $R_X$ (or to the annular scalar $\mathcal A_X$).*
+
+*Then $R_X\ge0$ (respectively $\mathcal A_X\ge0$), and Theorem <a href="#thm:landau" data-reference-type="ref" data-reference="thm:landau">6</a> implies $\mathrm{RH}$.*
+
+</div>
+
+<div class="proof">
+
+*Proof.* Conditions (a)–(d) identify the exact native source and history action. Condition (e) proves positivity of the common current/Hall component without leafwise parity reset. Condition (f) and Lemma <a href="#lem:operator" data-reference-type="ref" data-reference="lem:operator">18</a> yield $U\ge0$. Condition (g) identifies its root coordinate with the desired scalar. The Mellin–Landau implication is Theorem <a href="#thm:landau" data-reference-type="ref" data-reference="thm:landau">6</a>. ◻
+
+</div>
+
+Theorem <a href="#thm:required" data-reference-type="ref" data-reference="thm:required">20</a> is not a disguised restatement of scalar positivity: it is a finite source-feasibility theorem with explicit coefficients and Hall prefixes. Its target-plus-scalar specialization is precisely the uniform `CPSL67` obligation of PR \#577, together with an exact one-use rough-history recursion. A certificate can in principle prove or refute it at each finite endpoint. Neither PR \#565 nor PR \#566 supplies that certificate.
+
+# Comparative verdict
+
+<div id="tab:verdict">
+
+| Interface                         | PR \#565              | PR \#566                 | reconstructed status                            |
+|:----------------------------------|:----------------------|:-------------------------|:------------------------------------------------|
+| Interface                         | PR \#565              | PR \#566                 | reconstructed status                            |
+| Canonical rows                    | imported              | explicit                 | exact                                           |
+| Positive $5{:}3$ dictionary       | imported              | explicit                 | exact                                           |
+| Scalar Mellin transform           | imported              | explicit                 | exact                                           |
+| Zero-safe numerator               | imported              | explicit                 | exact                                           |
+| Odd-history cocycle               | accepted              | accepted                 | exact and binding                               |
+| Canonical terminal Target–Lorenz  | imported              | imported                 | usable only in canonical orientation            |
+| $P_{61}$ lower bias               | $1/40$                | not central              | $1/40$ false; $1/42$ proved                     |
+| Rough-child mass                  | scalar bound          | $\sum\alpha<1/8$         | algebraic bound exact, source ownership missing |
+| Positive current                  | parity-swapped        | Hall complement          | \#565 current has wrong source type             |
+| First ownership                   | asserted              | owner tuple asserted     | no atomwise exhaustive partition                |
+| Hall/Lorenz after reserve removal | not supplied          | mass+barycenter argument | all prefix inequalities missing                 |
+| Odd-history compensation          | contraction induction | positive operator        | operator lemma exact; hypotheses absent         |
+| All-history induction             | claimed finite        | claimed finite           | state/source map not proved                     |
+| Global scalar positivity          | claimed               | claimed                  | unproved                                        |
+| RH                                | proposed              | proposed                 | unproved                                        |
+
+Interface-by-interface verdict.
+
+</div>
+
+# Research directions after the audit
+
+The audit changes the optimal next move. Further tuning of scalar constants is no longer the bottleneck: the $1/42$ theorem is strong enough at factor $67$. The next proof attempt should work directly in the finite common-source cone.
+
+A serious closure program should:
+
+1.  Freeze one endpoint $X$ and enumerate every activated source atom with complete history and channel labels.
+
+2.  Construct the least-owner partition as an actual map, then verify disjointness and exhaustiveness by hashable atom identifiers.
+
+3.  Form the residual Hall linear program after proposed reserve extraction and check every prefix inequality exactly or with directed intervals.
+
+4.  Use Farkas duality: if feasibility fails, export a finite separator rather than weakening the type system.
+
+5.  Define $g$ from the total current source, prove the atomwise one-use identity $(I+T)U=g$ without double-counting reserves, and then verify $g-Tg\ge0$ in the same coordinate system.
+
+6.  Only after the source theorem passes should the exact scalar Mellin–Landau consumer be invoked.
+
+This is ambitious but sharply finite at every endpoint. It also prevents recurrence of the central error in both proposals: proving a scalar shadow for one packet while silently substituting it for a different all-history source.
+
+# Conclusion
+
+The two proposals contain real advances. They isolate the useful positive $5{:}3$ scalar, retain the exact factor–67 mass economy, recognize the odd-history obstruction, and identify a valid positive-operator mechanism for compensating alternating parity. The finite-$P_{61}$ arithmetic can be repaired from $1/40$ to $1/42$ with a complete directed certificate.
+
+But the repaired arithmetic does not bridge the common-source gap. PR \#565 subtracts the parity-swapped child where a same-channel positive restriction is required and then cancels the child through a tautological split. PR \#566 injects the child into a reserve summand but asserts domination for a disjoint Hall-complement scalar, while preserving only moments rather than the full Lorenz prefix family. The two routes therefore converge on the same open theorem: global parity-aware common-source feasibility with exact first ownership, residual Hall capacity, and a one-use history recursion. At target-plus-scalar scope its uniform Lorenz inequality is `CPSL67`.
+
+Accordingly, $$\boxed{\text{Neither PR \#565 nor PR \#566 proves the Riemann Hypothesis.}}$$ The strongest durable result of this reconstruction is the repaired finite-$P_{61}$ bias theorem together with a precise, source-typed statement of the remaining global obligation.
+
+# Exact countercertificate data
+
+The high-precision $x=184$ values are: $$\begin{aligned}
+F(184)&=10.69357964877382995080531550498546444404894853387789461064\ldots,\\
+M(184)&=445.85760354260283631557807730110764267277487310271681815646\ldots,\\
+F(184)-M(184)/40&=-0.45286043979124095708413642754222662277042329369002584327\ldots,\\
+42F(184)-M(184)&=3.27274170589802161824517390828186397728096532015475549057\ldots.
+\end{aligned}$$
+
+# Directed certificate summary
+
+The corrected replay uses MPFR 4.2.2 at 256 bits and 64-bit-mantissa `long double`. Its frozen output is:
+
+    finite_end                         1000000
+    compact error coverage upper      3.2671829989400722391
+    min finite (42F-M)                3.2727417058979848816 at N=184
+    min finite (M-8F)                 135.51661277216024908 at N=67
+    min tail (42F-M)                  119.87156415034558509
+    min tail (M-8F)                   40007.499398295202997
+    divisors enumerated               262144
+
+The implementation uses `-fno-fast-math` and `-ffp-contract=off`. The compact rational mesh first computes lower and upper rational quotients, then applies the monotone logarithm or square root with directed rounding.
+
+# Reproduction commands
+
+From the root of the companion archive:
+
+    ./scripts/run_all.sh
+    ./manuscript/build.sh
+    sha256sum -c SHA256SUMS
+
+The full certificate is in . Exact source-interface countermodels are in ; scalar and operator algebra is in ; the direct $x=184$ evaluation is in .
+
+# Repository sources
+
+The primary repository objects are:
+
+- <https://github.com/gfreund123/riemann/pull/565>
+
+- <https://github.com/gfreund123/riemann/pull/566>
+
+- <https://github.com/gfreund123/riemann/pull/576>
+
+- <https://github.com/gfreund123/riemann/pull/577>
+
+- <https://github.com/gfreund123/riemann/pull/561>
+
+- <https://github.com/gfreund123/riemann/pull/547>
+
+- <https://github.com/gfreund123/riemann/pull/497>
+
+The exact upstream ZIPs and the parity-obstruction PDF are included under in the companion archive.
+
+<div class="thebibliography">
+
+9 E. Landau, *Handbuch der Lehre von der Verteilung der Primzahlen*, Teubner, 1909. E. C. Titchmarsh, revised by D. R. Heath-Brown, *The Theory of the Riemann Zeta-function*, 2nd ed., Oxford University Press, 1986. G. H. Hardy, J. E. Littlewood, and G. Pólya, *Inequalities*, Cambridge University Press, 1934.
+
+</div>
