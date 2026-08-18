@@ -1,0 +1,25 @@
+{
+  "adaptive_layer_negative_control": {
+    "depth": 34,
+    "full_sign": "negative",
+    "lambda": "100",
+    "residual_lt_minus_small": true,
+    "small_mass": "3",
+    "small_sign": "positive"
+  },
+  "blpte67_proved": false,
+  "complete_small_cube_asymptotic_replayed": false,
+  "duhamel_identity_exact": true,
+  "elementary_symmetric_collision_bound": {
+    "depth": 4,
+    "ordered_distinct_ge_collision_lower_bound": true,
+    "weights": 8
+  },
+  "lapbr67_as_stated": "REFUTED_BY_ANALYTIC_THEOREM",
+  "largest_prime_bellman_exact": true,
+  "mertens_asymptotics_replayed": false,
+  "proof_object_sha256": "d01eaca56c2277f7244c29b57ef2902d70b2ef157bad02d8afe01ca26dc4310d",
+  "rh_established": false,
+  "schema": "riemann.x97700.lapbr-large-prime.v1",
+  "verdict": "PASS_T97700_LAPBR_NO_GO_AND_TYPEII_REDUCTION_ALGEBRA"
+}

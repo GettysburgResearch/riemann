@@ -1,0 +1,53 @@
+name: T97700 publish typeset PDF
+
+on:
+  push:
+    branches:
+      - research/gpt56-pro/97700-lapbr-large-prime-typeii-hardening
+    paths:
+      - .github/workflows/t97700-publish-pdf.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Download and verify the frozen typeset PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          target='standalone/2026-08-18-lapbr-large-prime-typeii-hardening/lapbr-large-prime-typeii-hardening-97700.pdf'
+          mkdir -p "$(dirname "$target")"
+          curl --fail --location --retry 4 \
+            'https://drive.google.com/uc?export=download&id=14mej01r7fbLo2bQViGA3bkb7EU9cGUgn' \
+            --output "$target"
+          echo '4445a933cbf11dc37af3348fd2ee464dad3178f6f4afcb423aeb7422d76e1c4b  '"$target" | sha256sum -c -
+          rm -f standalone/2026-08-18-lapbr-large-prime-typeii-hardening/lapbr-large-prime-typeii-hardening-97700-repository.pdf
+
+      - name: Bind the PDF into the content ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          entry='4445a933cbf11dc37af3348fd2ee464dad3178f6f4afcb423aeb7422d76e1c4b  ./standalone/2026-08-18-lapbr-large-prime-typeii-hardening/lapbr-large-prime-typeii-hardening-97700.pdf'
+          grep -Fqx "$entry" T97700_CONTENT_SHA256SUMS || printf '%s\n' "$entry" >> T97700_CONTENT_SHA256SUMS
+
+      - name: Commit the binary artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- \
+            T97700_CONTENT_SHA256SUMS \
+            standalone/2026-08-18-lapbr-large-prime-typeii-hardening/lapbr-large-prime-typeii-hardening-97700.pdf \
+            standalone/2026-08-18-lapbr-large-prime-typeii-hardening/lapbr-large-prime-typeii-hardening-97700-repository.pdf
+          git diff --cached --quiet && exit 0
+          git commit -m 'publish frozen T97700 typeset PDF'
+          git push

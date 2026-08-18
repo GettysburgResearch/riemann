@@ -1,0 +1,333 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\RePart}{\operatorname{Re}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Large-prime parity boundary}
+\rhead{\thepage/\pageref{LastPage}}
+\setlength{\headheight}{14pt}
+\title{\bfseries The Large-Prime Parity Boundary\\[2mm]
+\large A No-Go for \texttt{LAPBR67} and an Exact Signed Type-II Bellman Frontier}
+\author{Agentic Polymath Project}
+\date{18 August 2026}
+\begin{document}
+\maketitle
+\begin{center}
+\fcolorbox{red!70!black}{white}{\parbox{0.91\textwidth}{\small
+\textbf{Status.} The adaptive small-prime cube is retained.  The proposed
+nonnegative large-prime residual is disproved.  The paper replaces it with one
+exact largest-prime Bellman identity and one open signed Type-II estimate.
+The Riemann Hypothesis is not proved.}}
+\end{center}
+\begin{abstract}
+A recent factor--67 parity proposal proves positivity of the source histories
+of length below an adaptive even depth and supported on primes
+$p\le (\log X)^{1/4}$.  It asks that the complementary histories be
+nonnegative.  We show that this residual theorem, called \texttt{LAPBR67}, is
+false.  A product-safe elementary symmetric-sum argument applies at the
+published depth $L=O(\log\log\log X)$: the final layer may be restricted to
+primes at most $X^{1/(2L)}$, while all preceding layers admit a full reciprocal-
+prime upper bound.  Mertens' theorem then makes the last odd layer dominate, so
+the complete depth current is
+negative, and the residual is more negative than the small-prime cube is
+positive.
+
+The repair is to resum every large-prime depth.  We prove positivity of the
+complete small-prime cube, assign every remaining history to its largest prime,
+and obtain an exact Bellman identity.  The terminal range $p>X/Z$ is
+$o(U_Z(X))$.  The only remaining quantity is a one-sided signed bilinear
+correlation between the largest prime and a M\"obius tail.  We formulate the
+minimal estimate \texttt{BLPTE67}; it implies the annular scalar inequality and
+therefore the Riemann Hypothesis through the exact reciprocal-zeta Mellin
+consumer.  \texttt{BLPTE67} remains open.
+\end{abstract}
+\tableofcontents
+
+\section{Genealogy and notation}
+Let $b(Y)$ be the complete $P_{61}$ annular $5{:}3$ scalar from the repaired
+finite theorem.  It is nonnegative and, once the fixed $P_{61}$ activation
+range has been passed,
+\begin{equation}\label{eq:base-asymp}
+ b(Y)=a_*\sqrt Y+c_*+O(Y^{-3/2}),
+ \qquad
+ a_*=12\prod_{p\le61}\left(1-\frac1p\right)>0.
+\end{equation}
+For squarefree rough histories define
+\begin{equation}\label{eq:Br}
+ B_r(X)=\sum_{\substack{P^-(m)\ge67\\\omega(m)=r}}
+ \frac1{\sqrt m}b(X/m),
+\end{equation}
+with zero extension below support.  The exact depth-$L$ current is
+\begin{equation}\label{eq:CL}
+ C_L(X)=\sum_{r=0}^{L-1}(-1)^rB_r(X).
+\end{equation}
+
+\section{Product-safe domination of the last layer}
+Put
+\[
+ \Lambda_X=\sum_{67\le p\le X}\frac1p=\log\log X+O(1).
+\]
+The no-go needs no uniform Sathe--Selberg theorem.  It follows from elementary
+symmetric sums after restricting only the final layer to a product-safe prime
+range.
+
+\begin{lemma}[Product-safe layer comparison]\label{lem:layers}
+Let $r=O(\log\log\log X)$, put $Y=X^{1/(2r)}$, and set
+\[
+ A_Y=\sum_{67\le p\le Y}\frac1p.
+\]
+Then
+\[
+ B_r(X)\ge c_0\sqrt X\frac{A_Y^r}{r!}(1-o(1)),
+\]
+whereas
+\[
+ \sum_{j<r}B_j(X)
+ \le 2C_0\sqrt X\frac{\Lambda_X^{r-1}}{(r-1)!}.
+\]
+If additionally $r\log r/\Lambda_X\to0$, then
+\[
+ \frac{B_r(X)}{\sum_{j<r}B_j(X)}\longrightarrow\infty.
+\]
+\end{lemma}
+\begin{proof}
+Equation~\eqref{eq:base-asymp} and the finite initial range give constants
+$c_0,C_0,Y_0>0$ with
+\[
+ b(u)\ge c_0\sqrt u\ (u\ge Y_0),\qquad
+ 0\le b(u)\le C_0\sqrt u\ (u\ge1).
+\]
+Every product of $r$ primes at most $Y$ is at most $\sqrt X$, so the first
+inequality may be used on the entire selected final layer.  Let $e_r(Y)$ be the
+elementary symmetric sum of the weights $1/p$, $67\le p\le Y$, and put
+$S_2=\sum_{p\ge67}p^{-2}$.  The ordered distinct-prime sum satisfies
+\[
+ r!e_r(Y)\ge A_Y^r-\binom r2S_2A_Y^{r-2};
+\]
+this is the union bound for ordered tuples with a repeated coordinate.  Since
+$r/A_Y\to0$, this proves the lower bound.
+
+For $j<r$, the global upper bound gives
+$B_j(X)\le C_0\sqrt X\Lambda_X^j/j!$.  Since $r/\Lambda_X\to0$, these terms
+increase throughout the relevant range and their sum is at most twice the last
+one.
+
+Finally Mertens' theorem yields
+\[
+ A_Y=\Lambda_X-\log(2r)+O(1).
+\]
+Consequently
+\[
+ \frac{A_Y}{r}\left(\frac{A_Y}{\Lambda_X}\right)^{r-1}\to\infty
+\]
+because $r\log r/\Lambda_X\to0$.
+\end{proof}
+
+\section{The published residual is negative}
+Set
+\[
+ Z=(\log X)^{1/4},\qquad z=\sum_{67\le p\le Z}\frac1p,
+\]
+and let $L$ be the least even integer with $L\ge8(z+1)$.  Then
+\[
+ L=O(\log\log\log X),\qquad L/\Lambda_X\to0.
+\]
+
+\begin{theorem}[No-go for \texttt{LAPBR67}]\label{thm:no-go}
+For all sufficiently large $X$,
+\[
+ C_L(X)<0.
+\]
+If $S_X$ is the positive small-prime cube of the predecessor and
+$\mathcal L_X=C_L(X)-S_X$ is its large-prime residual, then
+\[
+ \boxed{\mathcal L_X<-S_X<0.}
+\]
+Moreover $-\mathcal L_X/S_X\to\infty$.
+\end{theorem}
+\begin{proof}
+Apply Lemma~\ref{lem:layers} with $r=L-1$.  Here
+$r=O(\log\log\log X)$ and $r\log r/\Lambda_X\to0$.  The final term of
+\eqref{eq:CL} is negative because $L$ is even, and its magnitude exceeds the
+sum of every preceding positive layer.  Thus $C_L(X)<0$.  The residual
+inequality follows from $S_X>0$.  Moreover
+$S_X\ll\sqrt X e^z$, while the product-safe lower bound for $B_{L-1}$ has
+logarithm $(L-1)\log(\Lambda_X/(L-1))+O(L)$ after division by $\sqrt X$;
+this dominates $z$, so the ratio tends to infinity.
+\end{proof}
+
+\begin{firewall}
+The theorem does not refute the small-prime cube.  It refutes the stopping rule
+that asks all histories meeting a larger prime to form a nonnegative truncated
+current.
+\end{firewall}
+
+\section{The complete small-prime cube}
+Let $Q_Z=\prod_{67\le p\le Z}p$ and define
+\[
+ \mathcal B_Z(X)=\sum_{d\mid Q_Z}\frac{\mu(d)}{\sqrt d}b(X/d),
+ \qquad U_Z(X)=\mathcal B_Z(X)/\sqrt X.
+\]
+
+\begin{theorem}[Complete cube positivity]\label{thm:small-complete}
+For all sufficiently large $X$,
+\begin{align}
+ \mathcal B_Z(X)
+ ={}&a_*\sqrt X\prod_{67\le p\le Z}(1-p^{-1})\notag\\
+ &+c_*\prod_{67\le p\le Z}(1-p^{-1/2})+o(1)>0.
+\end{align}
+In particular $U_Z(X)\asymp1/\log Z$.
+\end{theorem}
+\begin{proof}
+The largest divisor of $Q_Z$ is $\exp((1+o(1))Z)=X^{o(1)}$, so the asymptotic
+\eqref{eq:base-asymp} is uniform over every divisor.  The main and constant
+terms factor exactly.  The remainder is bounded by
+\[
+ X^{-3/2}\sum_{d\mid Q_Z}d
+ =X^{-3/2}\prod_{67\le p\le Z}(1+p)=o(1).
+\]
+Mertens' theorem finishes the claim.
+\end{proof}
+
+\section{Largest-prime Bellman ownership}
+Adjoin active primes $Z<p_1<\cdots<p_k\le X/2$ in increasing order.  The exact
+normalized finite-prime recurrence is
+\[
+ U_i(Y)=U_{i-1}(Y)-p_i^{-1}U_{i-1}(Y/p_i),\qquad U_0=U_Z.
+\]
+
+\begin{theorem}[Largest-prime Bellman identity]\label{thm:bellman}
+The complete normalized scalar is
+\begin{equation}\label{eq:bellman}
+ U_{\rm full}(X)=U_Z(X)-
+ \sum_{Z<p\le X/2}\frac1pU_{<p}(X/p).
+\end{equation}
+Moreover
+\begin{equation}\label{eq:child-expansion}
+ U_{<p}(Y)=
+ \sum_{\substack{v\ \mathrm{squarefree}\\Z<P^-(v),\ P^+(v)<p}}
+ \frac{\mu(v)}vU_Z(Y/v).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Telescope the recurrence.  Expanding the previously adjoined primes in each
+child yields~\eqref{eq:child-expansion}.  Every nonempty subset occurs exactly
+once, in the summand indexed by its largest prime.
+\end{proof}
+
+The predecessor's truncated residual also has the exact Duhamel identity
+\[
+ P_{<L}(R)b-P_{<L}(S)b
+ =-\sum_{a+b\le L-2}(-1)^{a+b}S^a(R-S)R^b b,
+\]
+which displays its short remaining histories.  Theorem~\ref{thm:no-go} shows
+why they must be resummed rather than signed separately.
+
+\section{Type I and Type II}
+Split the Bellman budget in~\eqref{eq:bellman} at $p=X/Z$:
+\[
+ \mathfrak I_Z(X)=\sum_{X/Z<p\le X/2}\frac1pU_Z(X/p),
+\]
+\[
+ \mathfrak T_Z(X)=\sum_{Z<p\le X/Z}\frac1pU_{<p}(X/p).
+\]
+The Type-I equality is exact because $X/p<Z$, so no prime above $Z$ is active.
+
+\begin{proposition}[Terminal Type-I closure]\label{prop:typei}
+\[
+ |\mathfrak I_Z(X)|\ll\frac{(\log Z)^2}{\log X}=o(U_Z(X)).
+\]
+\end{proposition}
+\begin{proof}
+For $2\le y\le Z$, unsigned divisor mass gives
+$|U_Z(y)|\ll\log(2y)$.  The reciprocal-prime mass of
+$(X/Z,X/2]$ is $O(\log Z/\log X)$ by Mertens' theorem.
+\end{proof}
+
+The remaining term is the exact signed Type-II correlation
+\begin{equation}\label{eq:typeii}
+ \mathfrak T_Z(X)=
+ \sum_{Z<p\le X/Z}\frac1p
+ \sum_{\substack{v\ \mathrm{squarefree}\\Z<P^-(v),\ P^+(v)<p}}
+ \frac{\mu(v)}vU_Z(X/(pv)).
+\end{equation}
+No absolute values have been taken in~\eqref{eq:typeii}.
+
+\begin{definition}[\texttt{BLPTE67}]
+The balanced large-prime Type-II estimate is
+\[
+ \boxed{\mathfrak T_Z(X)\le U_Z(X)-\mathfrak I_Z(X)}
+\]
+at every sufficiently large admissible state.
+\end{definition}
+
+\section{Conditional completion}
+\begin{theorem}[Exact remaining theorem]\label{thm:conditional}
+\[
+ \texttt{BLPTE67}\Longrightarrow\RH.
+\]
+\end{theorem}
+\begin{proof}
+The Bellman identity and \texttt{BLPTE67} give nonnegativity at each state.
+Child endpoints are smaller, so finite induction starts from the directly
+checked base range.  At the root one obtains eventual nonnegativity of
+\[
+ \mathcal A_X=5[c_X(2)-c_{X/4}(2)]+3[c_X(3)-c_{X/4}(3)].
+\]
+Its Mellin transform is
+\[
+ (1-4^{-s})\left[\frac6{s^2}-
+ \frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)}\right],
+ \qquad z=s+\tfrac12.
+\]
+The elementary factors do not cancel a zeta zero in $\Re z>0$.  Landau's
+theorem excludes zeros to the right of the critical line, and the functional
+equation supplies the reflection.
+\end{proof}
+
+\section{Proof boundary}
+\begin{longtable}{p{0.42\textwidth}p{0.42\textwidth}}
+\toprule
+Statement & Status\\
+\midrule
+Adaptive small-prime cube & retained\\
+\texttt{LAPBR67} residual nonnegativity & false\\
+Product-safe last-layer domination & proved from symmetric sums and Mertens\\
+Complete small-prime cube & proved positive\\
+Largest-prime Bellman identity & exact\\
+Terminal Type I & closed\\
+Signed balanced Type II, \texttt{BLPTE67} & open / RH-bearing\\
+Riemann Hypothesis & unproved\\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion}
+The large prime does simplify the source, but not by making a shallow residual
+positive.  It supplies a unique owner, a strict endpoint reduction, a terminal
+Type-I range, and a canonical prime-versus-M\"obius Type-II form.  The original
+residual sign is false.  The exact remaining theorem is the one-sided estimate
+\texttt{BLPTE67}; proving it, without discarding the M\"obius signs, would finish
+this lane.
+\end{document}
