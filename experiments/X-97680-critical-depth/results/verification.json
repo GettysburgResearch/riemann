@@ -1,0 +1,33 @@
+{
+  "baseline": {
+    "LAPBR67": "REFUTED_ASYMPTOTICALLY",
+    "NCBI67": "OPEN",
+    "RH_established": false,
+    "cutoff239_closure": "REFUTED",
+    "paired_source_fixture": {
+      "current": "5543927/3063060",
+      "root": "272149/153153"
+    },
+    "source_faithfulness": "PASS",
+    "subcritical_even_depth": {
+      "large_prime_complement": "-65105",
+      "signed_current": "-65104"
+    }
+  },
+  "classification": "PASS_T97680_SOURCE_FAITHFUL_CRITICAL_DEPTH",
+  "hostile_mutations_rejected": [
+    "duplicate_owner",
+    "lose_raw_coefficient",
+    "erase_parity_swap",
+    "wrong_root_marginal",
+    "promote_local_current",
+    "make_even_last_layer_positive",
+    "make_depth_critical",
+    "erase_large_prime_no_go",
+    "promote_psd_trace",
+    "claim_ncbi",
+    "claim_rh"
+  ],
+  "proof_object_sha256": "f0388b297e7bdc4a126b7a2d3d44a0b882a5a62400880e302737df796b359200",
+  "scope": "exact finite source algebra and asymptotic-contract regression"
+}

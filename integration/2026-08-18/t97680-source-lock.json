@@ -1,0 +1,23 @@
+{
+  "base_branch": "research/gpt56-pro/97500-resolvent-transfer-source-repair",
+  "base_pr": 581,
+  "base_sha": "62aaa54ac49f0aa89fd58f14a539cc53089f884c",
+  "classification": {
+    "LAPBR67": "refuted_asymptotically",
+    "NCBI67_CPSL67": "open_rh_bearing",
+    "RH": "unproved",
+    "cutoff239_closure": "refuted",
+    "source_faithfulness": "proved_exact",
+    "subcritical_even_depth": "eventually_negative"
+  },
+  "head_branch": "research/gpt56-pro/97680-source-faithful-critical-depth-boundary",
+  "imports": {
+    "PR_578": "981bfef5fcfa3a39ccf4f50875cf8a6057650268",
+    "PR_581": "62aaa54ac49f0aa89fd58f14a539cc53089f884c",
+    "PR_582": "699f9f119a66823702e96fba95cc8b14b8251c60",
+    "PR_584": "e919c6afd1e95fffa505f7ba3f532cb12b8c410c",
+    "PR_587": "8a0f074c5b96600b461fdd6e23b47ee2162c4a70"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t97680.source-lock.v1"
+}
