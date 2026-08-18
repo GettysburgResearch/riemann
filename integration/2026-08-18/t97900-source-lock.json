@@ -1,0 +1,29 @@
+{
+  "schema": "riemann.t97900.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "base": {
+    "pr": 594,
+    "sha": "ef76157a516c520a0f829ea4ee346c62759743ed"
+  },
+  "inputs": {
+    "p61_bias_pr": 576,
+    "p61_bias_sha": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7",
+    "exact_bias_no_go_pr": 587,
+    "exact_bias_no_go_sha": "8a0f074c5b96600b461fdd6e23b47ee2162c4a70",
+    "largest_prime_bellman_pr": 590,
+    "largest_prime_bellman_sha": "223f11259b3e7134f78d6492795e6e94caca8be3",
+    "root_zero_hinge_pr": 594,
+    "root_zero_hinge_sha": "ef76157a516c520a0f829ea4ee346c62759743ed"
+  },
+  "status": {
+    "quadratic_log_complete_cube": "proved positive",
+    "top_history_completion": "proved exact",
+    "quasipolylog_high_owner_range": "closed asymptotically",
+    "qpcb67": "open / RH-bearing",
+    "constant_killing_filter": "proved exact",
+    "subpower_filtered_cube": "proved positive",
+    "filtered_interior": "closed asymptotically",
+    "fabp67": "open / RH-bearing",
+    "rh": "unproved"
+  }
+}
