@@ -1,0 +1,27 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "classification": "PASS_X_95600_Q4_SUBPOWER_EQUIVALENCE_AND_FILTER_EXHAUSTION",
+  "compact_bridge_checks": 2,
+  "critical_inverse_checks": 81,
+  "does_not_prove": [
+    "UOSACF",
+    "nonlocal compact-current domination",
+    "Riemann Hypothesis"
+  ],
+  "exponent_dictionary_checks": 20,
+  "generic_filter_inverse_checks": 315,
+  "haar_inverse_checks": 880,
+  "hostile_mutations_detected": 5,
+  "odd_mertens_identity_checks": 16384,
+  "proves": [
+    "exact odd-Mertens dyadic identity",
+    "finite scale-filter inversion algebra",
+    "fixed Haar inverse coefficient mass",
+    "exact top-band positive kernel firewall",
+    "source-blind diagonal data do not determine signed output",
+    "compact-source bridge polynomial and stable critical inverse",
+    "zero-free exponent dictionary"
+  ],
+  "source_blind_fixture_checks": 128,
+  "top_band_kernel_checks": 2873
+}

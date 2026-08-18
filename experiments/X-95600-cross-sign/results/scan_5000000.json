@@ -1,0 +1,23 @@
+{
+  "schema": "riemann.q4.95600.cross-sign-scan.v1",
+  "arithmetic_class": "FLOATING_DISCOVERY_ONLY",
+  "scan_limit": 5000000,
+  "positive_off_diagonal_endpoints": 74,
+  "last_positive_endpoint": 105,
+  "negative_for_every_scanned_endpoint_from": 106,
+  "largest_positive_cross": {"X": 92, "annular_sum": -1.86109439090999995, "diagonal": 1.56340638526285858, "cross": 1.90026594661380521},
+  "largest_absolute_annular_sum": {"X": 368, "annular_sum": 2.21957703350229796, "diagonal": 5.12113749132316887, "cross": -0.194615283672308875},
+  "samples": [
+    {"X": 92, "annular_sum": -1.86109439090999995, "diagonal": 1.56340638526285858, "cross": 1.90026594661380521},
+    {"X": 105, "annular_sum": -1.19651426424530793, "diagonal": 1.38884778119340591, "cross": 0.042798603349084488},
+    {"X": 106, "annular_sum": -1.1511192431956172, "diagonal": 1.37455533287168885, "cross": -0.0494798208164384107},
+    {"X": 256, "annular_sum": 1.90604619084528082, "diagonal": 4.85480523429805011, "cross": -1.2217931526622452},
+    {"X": 368, "annular_sum": 2.21957703350229796, "diagonal": 5.12113749132316887, "cross": -0.194615283672308875},
+    {"X": 1000, "annular_sum": 0.32127143583646417, "diagonal": 8.98877481557601854, "cross": -8.88555948009159557},
+    {"X": 10000, "annular_sum": -0.112086977605632063, "diagonal": 22.5595378562882516, "cross": -22.5469743657394872},
+    {"X": 100000, "annular_sum": -0.492648552890112501, "diagonal": 44.5929654588157405, "cross": -44.3502628621510198},
+    {"X": 1000000, "annular_sum": -1.2370455438058372, "diagonal": 73.4565717417656998, "cross": -71.9262900643158218},
+    {"X": 5000000, "annular_sum": 0.772374089874110381, "diagonal": 98.0403993806972665, "cross": -97.4438376459884097}
+  ],
+  "does_not_prove": ["eventual cross sign", "UOSACF", "Riemann Hypothesis"]
+}
