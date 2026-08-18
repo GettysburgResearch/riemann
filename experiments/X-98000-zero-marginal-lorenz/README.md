@@ -10,10 +10,14 @@ Expected:
 
 ```text
 PASS_T98000_ZERO_MARGINAL_LORENZ_COLLAPSE
-58d3191b80bd7f4763733423b5f94671f2626a19b2a81ce4547170e27e6ee7bc
+7b6042d0e6d1632ae35cce1018dd97316c51acb954f64981ae42f3af5deb4dd5
 ```
 
-The standard-library replay checks:
+The standard-library replay uses exact `Fraction` interval arithmetic. Square
+roots are enclosed by integer-square-root decimal rationals; logarithms are
+enclosed by a finite atanh series with an exact remainder bound.
+
+It checks:
 
 - the six finite cell derivative margins for the scalar-to-target ratio;
 - the analytic-tail constant at `Y=8`;
