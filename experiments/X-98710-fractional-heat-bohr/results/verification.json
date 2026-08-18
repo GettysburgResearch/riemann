@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "actual_vs_reflected_quadratic_gap": 8,
+    "bohr_energy_rate": "1/2",
+    "p2_fractional_coefficient": "-383/294912",
+    "proposed_uniform_rate": "1/4",
+    "sibuya_coefficients_positive_through_k": 64,
+    "tao_p2_tracefree_coefficient": "0",
+    "tao_state_difference_determinant": "-3/16",
+    "twisted_euler_dyadic_exponents": [
+      "1/384",
+      "1/384"
+    ],
+    "uniform_center_exponential_type": "1/2",
+    "uniform_rate_contradiction": true,
+    "weyl_centering_parity_displacement": -2
+  },
+  "frozen_base": {
+    "base_pr": 610,
+    "base_sha": "edf28c9ad14ccbf5b18b9ced45f3c2fc4ce8221d",
+    "head": "f28aa51a6d6740067202611d8ebda4be2ef0a1c9",
+    "pr": 613
+  },
+  "proof_object_sha256": "aa2325412d81ad4981435460f8f1dddc816d6678cc771217911719bf45df03f4",
+  "schema": "riemann.t98710.fractional_heat_bohr_hardening.v1",
+  "scope": {
+    "analytic_refutation_in_claim_file": true,
+    "bohr_kronecker_limit_machine_proved": false,
+    "fixed_center_plfhe_proved": false,
+    "rh_established": false,
+    "selberg_delange_asymptotic_machine_proved": false
+  },
+  "theta": "1/384",
+  "verdict": "PASS_T98710_FRACTIONAL_HEAT_BOHR_HARDENING_ALGEBRA"
+}
