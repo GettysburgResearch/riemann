@@ -1,0 +1,52 @@
+{
+  "chain": {
+    "exact_resolvent_conjugacy_cases": 144,
+    "nonlocal_chain_depths": 11,
+    "two_node_positive_current_separators": 16
+  },
+  "classification": "PASS_T97500_RAW_CONTRACTED_RESOLVENT_AND_TWO_CHANNEL_SOURCE_REPAIR",
+  "does_not_prove": [
+    "NCBI67 nonlocal Bellman inequality",
+    "CPSL67 or GPHT*",
+    "eventual scalar positivity",
+    "Riemann Hypothesis"
+  ],
+  "exposure": {
+    "critical_raw_child_fraction": "4/21",
+    "exposure_conservation_cases": 512,
+    "safe_budget_countermodel": {
+      "contracted_fraction": "1/10",
+      "local_lower_bound": "-5/672",
+      "raw_child_fraction": "1/4"
+    }
+  },
+  "frozen_base": {
+    "pr": 576,
+    "sha": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7"
+  },
+  "hostile_mutations_detected": [
+    "drop_raw_minus_contracted_leftover",
+    "erase_history_swap",
+    "finite_depth_transfer_truncation",
+    "local_one_channel_positive_current",
+    "promote_NCBI67_to_proved",
+    "replace_raw_debt_by_safe_child_budget"
+  ],
+  "paired_source": {
+    "one_channel_intertwiner_separators": 24,
+    "paired_source_exact_splits": 256,
+    "raw_coefficient_ownership_checks": 256
+  },
+  "proof_object_sha256": "5cd6ea67db8bb335c3d349917ff2b7d739fba83a99231efac27939ae5eb3e9b0",
+  "proves": [
+    "exact raw-to-contracted resolvent conjugacy",
+    "no universal local positive one-channel current when t<r",
+    "nonlocality at every rough-history depth",
+    "exact positive two-channel contracted source identity",
+    "raw child coefficient preservation",
+    "child-exposure invariance under coefficient splitting",
+    "minimality of two parity channels"
+  ],
+  "rh_established_by_replay": false,
+  "schema": "riemann.t97500.resolvent_transfer.v1"
+}
