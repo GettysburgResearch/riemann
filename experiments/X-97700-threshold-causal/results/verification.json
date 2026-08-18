@@ -1,0 +1,33 @@
+{
+  "asymptotic_barrier_fixtures": [
+    {"L": 82, "last_to_previous_lower_proxy": 59.235677450404836, "z": 10000},
+    {"L": 120, "last_to_previous_lower_proxy": 4198.945420143064, "z": 1000000},
+    {"L": 156, "last_to_previous_lower_proxy": 322577.7768878125, "z": 100000000}
+  ],
+  "classification": "PASS_T97700_THRESHOLD_FLEXIBLE_CAUSAL_DECISION",
+  "does_not_prove": ["critical-saddle Hall transport", "eventual native annular scalar positivity", "Riemann Hypothesis"],
+  "finite_directed": {
+    "certified": ["X184 native coefficient retained", "C2(32605)>0>C2(32606)", "C2(61841)<-21.3", "native_scalar(61841)>9.5"],
+    "classification": "PASS_T97700_DIRECTED_FINITE_STRESS_CASES",
+    "mpfr_version": "4.2.2",
+    "precision_bits": 256,
+    "records": [
+      {"P61_base": [10.693579648773829,10.69357964877383],"X":184,"depth2_current":[9.330431766103377,9.330431766103379],"native_scalar":[9.330431766103377,9.330431766103379]},
+      {"P61_base": [281.8471396739878,281.84713967398807],"X":32605,"depth2_current":[0.0001231300857286851,0.0001231300857561711],"native_scalar":[9.270641442287529,9.270641442287577]},
+      {"P61_base": [281.8513449441848,281.85134494418503],"X":32606,"depth2_current":[-0.0005503201105634053,-0.0005503201105358743],"native_scalar":[9.270626277814685,9.270626277814731]},
+      {"P61_base": [387.5765530513712,387.5765530513718],"X":61841,"depth2_current":[-21.33327590884739,-21.333275908847288],"native_scalar":[9.534657003030855,9.534657003030942]}
+    ],
+    "rh_established": false
+  },
+  "frozen_base_pr": 587,
+  "frozen_base_sha": "8a0f074c5b96600b461fdd6e23b47ee2162c4a70",
+  "native_root": {"coefficient_coordinates":5000,"first_owner_histories":16,"identity":"q*mu_P61*mu_rough=q*mu"},
+  "odd_history": {"active_atoms":239,"certified_statement":"E_T(71,13)-O_T(71,13)>17"},
+  "one_prime": {"alpha":"r^2","canonical_residual":"r-r^2","double_alpha_residual":"r-2r^2","native":"r","p":67},
+  "proof_object_sha256": "e5aa32da9163ca9f816bd1b66123000ddfddb89d6d6d3841b32facf46862875b",
+  "proved": ["atomwise first-owner coefficient identity", "exact residual absorption", "raw exposure conservation", "subcritical-depth asymptotic no-go (paper proof)", "high-least-prime positive sector (paper proof)"],
+  "refuted": ["LAPBR67 as stated", "universal local one-channel thinning", "subcritical threshold-depth closure"],
+  "resolvent": {"contracted":["1/9","1/25","1/49"],"f":["19/15","11/5","4","7"],"g":["68/45","59/25","29/7","7"],"raw":["1/3","1/5","1/7"],"two_node_current":"-2/9"},
+  "rh_established": false,
+  "schema": "riemann.t97700.v1"
+}
