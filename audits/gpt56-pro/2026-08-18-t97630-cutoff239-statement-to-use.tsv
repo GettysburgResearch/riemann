@@ -1,0 +1,5 @@
+route	producer	consumer	delta	witness	status
+PR565	bias x>=67	contraction	1/40 lower bound false	x=184	REFUTED
+PR566	reserve injection	Hall-complement domination	reserve and complement are disjoint	alpha=1/2 fixture	REFUTED AS IMPLICATION
+T97630	low child	root scalar	child recombined before observation	exact cancellation	PROVED ALGEBRA
+T97630	high child	parent positivity	needs atomwise source-complete identity	owner ledger	OPEN REVIEW TARGET

@@ -1,0 +1,18 @@
+{
+  "Astar_lower": "12*sqrt(x)-19",
+  "Astar_upper": "12*sqrt(x)-9",
+  "F184_approx": "10.6935796487738299508",
+  "M184_approx": "445.8576035426028363156",
+  "M184_minus_40F184_lower": "18.11",
+  "RH_established_by_replay": false,
+  "all_real_interpolation": "affine in log(x) on integer cells",
+  "classification": "PASS_T97630_CUTOFF239_RETAINED_DIRECTED_RESULT",
+  "failure_integer_range_contains": [
+    148,
+    238
+  ],
+  "finite_end": 2500000,
+  "precision_bits": 256,
+  "evidence_status": "quoted retained result; not reproduced by included lightweight C++",
+  "smallest_surviving_integer_cutoff": 239
+}

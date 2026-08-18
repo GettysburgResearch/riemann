@@ -1,0 +1,27 @@
+{
+  "baseline": {
+    "RH_established_by_replay": false,
+    "cutoff": 239,
+    "high_child_mass_threshold": "<1/8",
+    "low_child_recombination": true,
+    "mellin_finite_factors_zero_safe": true,
+    "reserve_current_implication_refuted": true,
+    "strict_margin": "1/960",
+    "x184_M_minus_40F_lower_decimal": "18.1144175916496"
+  },
+  "classification": "PASS_T97630_CUTOFF239_ANNULAR_PACKET",
+  "hostile_mutations_rejected": [
+    "erase_x184_witness",
+    "restore_cutoff67",
+    "change_cutoff240",
+    "drop_low_child_recombination",
+    "double_low_child",
+    "raise_high_child_mass",
+    "reverse_parent_identity",
+    "promote_reserve_to_current",
+    "cancel_mellin_numerator",
+    "claim_rh_replay"
+  ],
+  "proof_object_sha256": "d4c9c449fc9b0a6ec3cb9a3939531d0026437a1495edce546958654e8c528414",
+  "scope": "exact structural algebra and retained-result consistency"
+}
