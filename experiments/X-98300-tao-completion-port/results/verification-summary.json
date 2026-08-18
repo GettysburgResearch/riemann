@@ -1,0 +1,27 @@
+{
+  "schema": "riemann.x98300.tao-completion-port.summary.v1",
+  "verdict": "PASS_T98300_TAO_STIELTJES_COMPLETION_PORT",
+  "proof_object_sha256": "824fba0aed136007a26bb553aa1e0d18d22a9810417cad6c23ad0b9038bba0d1",
+  "tests": 13,
+  "tao_unit_schur_port": "exact for all tested prime semigroups and scales through 512",
+  "positive_stieltjes_source": {
+    "finite_min_derivative_lower": "0",
+    "active_min_derivative_lower": "0.139800328904379...",
+    "analytic_tail_start": 16,
+    "limit": 12
+  },
+  "finite_euler_separator": {
+    "odd_primes": [3,5,7,11,13],
+    "endpoint": 26,
+    "boundary_lower": "1.1306169339746402",
+    "local_semigroup_ports_psd": true,
+    "pointwise_lift_refuted": true
+  },
+  "integrated_completion_matrix": {
+    "psd": true,
+    "determinant": "1205936/1993347"
+  },
+  "fixed_prime_dickman_margin": "eventually negative for every fixed p",
+  "open_producer": "CSCBI: source-faithful cross-scale completion Bellman inequality",
+  "rh_established": false
+}
