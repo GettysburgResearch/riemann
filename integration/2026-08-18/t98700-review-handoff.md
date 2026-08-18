@@ -7,4 +7,6 @@ first review  L-98703 finite-cutoff Fock exhaustion and heat trace
 RH            unproved
 ```
 
-Reconstruct in the order prescribed by `M-98700`. The most important negative controls are the `N=26` Abel-lift overshoot, the trace-bearing Landau firewall, and the finite positive-filter failure.
+Reconstruct in the order prescribed by `M-98700`.  The most important negative
+controls are the `N=26` Abel-lift overshoot, the trace-bearing Landau firewall,
+and the finite positive-filter failure.

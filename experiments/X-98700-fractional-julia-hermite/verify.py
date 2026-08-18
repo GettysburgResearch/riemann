@@ -101,12 +101,14 @@ def main():
     Q={n:(gh[n]+bh[n])/2 for n in range(1,N+1)}
     S={n:(gh[n]-bh[n])/2 for n in range(1,N+1)}
     assert all(Q[n]>=0 and S[n]>=0 for n in range(1,N+1))
+    # B coefficients are the exact finite Euler tensor.
     b={}
     for n in range(1,N+1):
         e=0; m=n
         while m%2==0: m//=2; e+=1
         b2=[Fraction(1),Fraction(-5,2),Fraction(2),Fraction(-1,2)]
         b[n]=(b2[e] if e<len(b2) else 0)*mobius(m)
+    # 1-B = 2 S * (Q-S) = 2 S * B^(1/2)
     for n in range(1,N+1):
         lhs=(Fraction(1) if n==1 else 0)-b[n]
         rhs=2*conv(S,bh,n)
@@ -114,8 +116,11 @@ def main():
     tao=[]
     for P,x in [([3],26),([3,5],80),([3,5,7],160),([2,3,5],96),([3,5,7,11,13],26)]:
         A,C=check_tao(P,x); tao.append({'P':P,'x':x,'A':str(A),'C':str(C)})
+    # Heat and rate algebra.
+    assert Fraction(96,1)*Fraction(1,1000) < Fraction(1,10)
     delta=Fraction(1,5); theta=Fraction(1,10000)
     assert 96*theta < delta*delta/2
+    # Main-canceling positive-filter negative control at the first dyadic factor.
     filtered4=S[4]-2*S[2]
     assert filtered4<0
     payload={

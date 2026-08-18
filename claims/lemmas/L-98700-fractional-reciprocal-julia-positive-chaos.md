@@ -30,7 +30,7 @@ where `mathcal Q` is the generalized-prime-power alphabet and
 \lambda_\diamond(2^r)=\frac{2+2^{-r}}r.
 \]
 
-Every coefficient is nonnegative. For `0<theta<=1`, define
+Every coefficient is nonnegative.  For `0<theta<=1`, define
 
 \[
 Q_\theta(s)=\cosh(\theta L_\diamond(s)),
@@ -38,7 +38,9 @@ Q_\theta(s)=\cosh(\theta L_\diamond(s)),
 S_\theta(s)=\sinh(\theta L_\diamond(s)).
 \]
 
-Their Dirichlet coefficients are nonnegative, because the exponential of a Dirichlet series with nonnegative coefficients has nonnegative convolution coefficients and `cosh`/`sinh` retain the even/odd chaoses separately. Moreover
+Their Dirichlet coefficients are nonnegative, because the exponential of a
+Dirichlet series with nonnegative coefficients has nonnegative convolution
+coefficients and `cosh`/`sinh` retain the even/odd chaoses separately.  Moreover
 
 \[
 G_\diamond(s)^\theta=Q_\theta(s)+S_\theta(s),
@@ -58,7 +60,9 @@ At `theta=1/2`, putting `Q=Q_(1/2)`, `S=S_(1/2)`, one has the exact factorizatio
 \boxed{1-B_\diamond=2S(Q-S).}
 \]
 
-Thus the conclusion-producing reciprocal-Julia defect is a convolution of one positive odd-chaos source with one signed parity channel. No unsigned rough reservoir and no parity-blind terminal promotion is introduced.
+Thus the conclusion-producing reciprocal-Julia defect is a convolution of one
+positive odd-chaos source with one signed parity channel.  No unsigned rough
+reservoir and no parity-blind terminal promotion is introduced.
 
 The generalized-prime first chaos is
 
@@ -72,7 +76,7 @@ The higher-chaos remainder
 R_\diamond(s)=L_\diamond(s)-P_\diamond(s)
 \]
 
-converges absolutely in `Re s>1/2`. Hence
+converges absolutely in `Re s>1/2`.  Hence
 
 \[
 B_\diamond(s)^\theta
@@ -80,4 +84,6 @@ B_\diamond(s)^\theta
  \exp[-\theta R_\diamond(s)],
 \]
 
-where the second factor is holomorphic and zero-free in the full open critical half-plane. Every possible off-line singularity is therefore carried by the explicit first-chaos prime phase, not by the higher Euler chaos.
+where the second factor is holomorphic and zero-free in the full open critical
+half-plane.  Every possible off-line singularity is therefore carried by the
+explicit first-chaos prime phase, not by the higher Euler chaos.
