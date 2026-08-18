@@ -23,6 +23,11 @@ with explicit UTF-8 encoding and LF newlines, making its bytes stable across
 Windows and POSIX hosts. No definition, formula, theorem, proof status, or
 scientific conclusion was changed.
 
+The root `.gitattributes` contains exact-path `text eol=lf` rules for this
+route's eleven published files and for itself. This prevents
+`core.autocrlf=true` from changing ledger-target bytes in a fresh Windows
+checkout. No unrelated repository path is covered.
+
 ## Relationship to sibling Q4 successors
 
 - PR #595 proves one-sided subpower sufficiency and finite moment compression.

@@ -44,6 +44,9 @@ therefore publishes it as `95520–95521`; see the source lock and provenance
 note for the exact map and original hashes. The only additional scientific-file
 hardening is explicit UTF-8/LF retained-result output.
 
+Exact-path `.gitattributes` rules keep every route ledger target LF-stable in
+fresh Windows checkouts with `core.autocrlf=true`.
+
 PR #595's one-sided subpower/moment-compression result and PR #597's resonance
 analysis are related siblings, but neither contains or supersedes this
 zero-moment/filter-barrier result.
