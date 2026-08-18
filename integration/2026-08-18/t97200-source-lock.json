@@ -1,0 +1,18 @@
+{
+  "schema": "riemann.t97200.source-lock.v1",
+  "base": {
+    "pr": 570,
+    "head": "992404909d6c2940ae8ae849633fe5530ed79db0"
+  },
+  "compared": {
+    "pr564": {
+      "head": "c74fe9bd7fd284718f4dcef8328af07e553d9d90",
+      "published_math": "route-disposition observation only"
+    },
+    "pr557": "d11b08938c4db6a6192e96c564a7818cffc77100",
+    "pr561": "db9bdc63c855c6ddf664b763d748f8155a6a2c67"
+  },
+  "new_packet": "T97200",
+  "classification": "new hardening and finite-state separation; not lineage confirmation",
+  "rh_established": false
+}
