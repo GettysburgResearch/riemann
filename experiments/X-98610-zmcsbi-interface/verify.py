@@ -79,7 +79,7 @@ def main() -> int:
 
     result = {
         "schema": "riemann.x98610.zmcsbi-interface.v1",
-        "verdict": "PASS_X98610_ZMCSBI_INTERFACE_CORRECTION",
+        "verdict": "PASS_X98610_ZMCSCBI_INTERFACE_CORRECTION",
         "unconstrained_contraction_ratios": [str(q) for q in ratios],
         "tao_update": {
             "P": sorted(P), "p": p, "x": x,
