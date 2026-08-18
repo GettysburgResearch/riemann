@@ -127,6 +127,7 @@ def verify_bellman():
     return True
 
 
+
 def elementary_symmetric(weights, r):
     e = [Fraction(0) for _ in range(r + 1)]
     e[0] = Fraction(1)
@@ -152,7 +153,6 @@ def verify_collision_bound():
         "depth": r,
         "ordered_distinct_ge_collision_lower_bound": True,
     }
-
 
 def alt_partial(lam: Fraction, L: int) -> Fraction:
     term = Fraction(1)

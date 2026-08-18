@@ -1,0 +1,180 @@
+T-97701 / C4MBI67 CRITICAL CORE
+Exact reconstruction of BLPTE67 and the missing T-97701 publication
+Agentic Polymath Project - 18 August 2026
+
+STATUS
+The identities and equivalences in this manuscript are proved exactly. The
+one-sided inequality C4MBI67 is not proved. Consequently the Riemann Hypothesis
+remains unproved. This packet corrects a publication failure: a PR #590 comment
+announced T-97701 materials that were not actually present in GitHub or in the
+published T-97700 ZIP.
+
+1. FROZEN SCOPE
+The reconstruction starts from PR #590 at head
+4f1283c67f0d4a4b504badd4c4113ba227521162. It retains the T-97700 complete
+small-prime cube, largest-prime Bellman identity, and terminal Type-I closure.
+It adds the missing critical-core theorem, exact checker, manuscript, and fresh
+artifact namespace. The old ZIP with SHA-256 BF79073D...3FF640 is not reused.
+
+2. THE ANNULAR 5:3 SCALAR
+Let
+
+  R_X = 5 c_X(2) + 3 c_X(3),
+  A_X = R_X - R_(X/4),
+  H_Y(n) = min(log 4, log(Y/n))_+.
+
+The exact sparse scalar coefficients are
+
+  a_*(n) = 6 1_(n=1) - 6 mu(n)
+           + 9 1_(2|n) mu(n/2) - 3 1_(4|n) mu(n/4).
+
+Therefore
+
+  A_X = SUM_(n>=1) a_*(n) H_X(n) / sqrt(n).
+
+Define
+
+  kappa_X(n) = -6 H_X(n)
+               + (9/sqrt(2)) H_(X/2)(n)
+               - (3/2) H_(X/4)(n).
+
+Then the exact source identity is
+
+  A_X = 6 H_X(1) + C_X,
+  C_X = SUM_(n>=1) mu(n) kappa_X(n) / sqrt(n).                 (1)
+
+The factors 9/sqrt(2) and 3/2 are forced by the substitutions n=2m and n=4m.
+All sums are finite because the hinges vanish outside their endpoints.
+
+3. THE CRITICAL FOUR-BAND BOUNDARY
+Put
+
+  B_(1/2)(t) = SUM_(n<=t) mu(n)/sqrt(n).
+
+Finite Fubini gives, for every Y>0,
+
+  SUM_(n>=1) mu(n) H_Y(n)/sqrt(n)
+  = INT_(Y/4)^Y B_(1/2)(t) dt/t.                              (2)
+
+Substituting (2) into (1) and splitting the overlapping scale intervals yields
+
+  C_X = -(3/2) INT_(X/16)^(X/8) B_(1/2)(t) dt/t
+        +((9 sqrt(2)-3)/2) INT_(X/8)^(X/4) B_(1/2)(t) dt/t
+        +((9 sqrt(2)-12)/2) INT_(X/4)^(X/2) B_(1/2)(t) dt/t
+        -6 INT_(X/2)^X B_(1/2)(t) dt/t.                       (3)
+
+This is an exact identity for every real X>0; no asymptotic estimate enters.
+
+Define C4MBI67(X), the critical four-band Mobius boundary inequality, by
+
+  C_X >= -6 H_X(1).                                           (4)
+
+Equations (1) and (4) give the pointwise equivalence
+
+  C4MBI67(X)  <=>  A_X >= 0.                                  (5)
+
+For X>=4 the threshold in (4) is simply -6 log 4.
+
+4. BLPTE67 IS THE SAME ROOT SIGN
+Retain the exact T-97700 decomposition
+
+  U_full(X) = U_Z(X) - I_Z(X) - T_Z(X),                       (6)
+
+where U_Z is the complete small-prime cube, I_Z is the closed terminal Type-I
+range, and T_Z is the signed large-prime Type-II term. At the root,
+
+  U_full(X) = A_X / sqrt(X).                                  (7)
+
+BLPTE67(X) is the proposed inequality
+
+  T_Z(X) <= U_Z(X) - I_Z(X).                                  (8)
+
+Combining (5)-(8) proves the exact root equivalence
+
+  BLPTE67(X)
+  <=> U_full(X) >= 0
+  <=> A_X >= 0
+  <=> C4MBI67(X).                                              (9)
+
+Thus BLPTE67 is not a source-blind auxiliary estimate weaker than the producer.
+At root scope it is the producer sign in Bellman coordinates. The stronger
+state-wise formulation has additional quantifiers and is not silently claimed.
+
+5. EXACT LOGARITHMIC PRIME OWNERSHIP
+For every squarefree n>1,
+
+  mu(n) log n = - SUM_(p|n) mu(n/p) log p.                    (10)
+
+Multiplying (10) by kappa_X(n)/(sqrt(n) log n), summing, and writing n=pm gives
+
+  SUM_(n>1) mu(n) kappa_X(n)/sqrt(n)
+  = - SUM_(p<=X) (log p)/sqrt(p)
+      SUM_(m<=X/p, p not| m)
+      mu(m) kappa_X(pm)/(sqrt(m) log(pm)).                     (11)
+
+Each squarefree product n is spent exactly once across its prime owners through
+the nonnegative weights
+
+  log p / log n,   p|n,
+
+whose sum is one. There is no duplicated factorization and no unrestricted
+rough reservoir.
+
+If B_X denotes the double sum on the right of (11) without its leading minus,
+then
+
+  A_X = 6 H_X(1) + kappa_X(1) - B_X.                          (12)
+
+For X>=16,
+
+  6 H_X(1) + kappa_X(1)
+  = ((9 sqrt(2)-3)/2) log 4.                                  (13)
+
+Equations (11)-(13) give the exact signed prime-versus-Mobius formulation of the
+remaining one-sided inequality.
+
+6. WHY UNSIGNED TYPE-II INFORMATION IS INSUFFICIENT
+Take two atoms in the same declared block and owner class, with equal positive
+coefficient magnitudes and distinct kernel responses K1>K2>0. The sign vectors
+(+1,-1) and (-1,+1) have identical support, l1 norm, l2 norm, unsigned owner
+mass, and every source-blind large-sieve input. Their one-sided functionals are
+K1-K2>0 and -K1+K2<0. Therefore those unsigned data do not determine the sign of
+a nonconstant Type-II kernel.
+
+The four-band kernel kappa_X(pm)/log(pm) is nonconstant because its activation
+formula changes across the four bands. A valid proof of C4MBI67 must preserve an
+arithmetic covariance between the actual Mobius signs and that kernel. Taking
+rowwise absolute values before the pairing destroys the required information.
+This countermodel rejects a proof mechanism; it does not refute C4MBI67 itself.
+
+7. ANALYTIC CONSUMER AND EXACT BOUNDARY
+The inherited Mellin transform is
+
+  INT_1^infinity A_X X^(-s-1) dX
+  = (1-4^(-s)) [ 6/s^2
+      - 3(1-2^(-z))(2-2^(-z))/(s^2 zeta(z)) ],
+    z = s + 1/2.
+
+The finite numerator is zero-free in Re z>0. Hence eventual positivity of A_X
+would imply RH by Landau's theorem. The present packet proves the exact form and
+equivalences of the remaining producer, not its sign.
+
+THEOREM LEDGER
+  Four-band identity                              PROVED EXACT
+  Logarithmic prime ownership                     PROVED EXACT
+  BLPTE67(X) <=> C4MBI67(X) at root              PROVED EXACT
+  Source-blind unsigned Type-II implication       REFUTED
+  C4MBI67 sign                                    OPEN / RH-BEARING
+  Riemann Hypothesis                              UNPROVED
+
+REPLAY
+The checker reconstructs the sparse coefficients on 500 controls, verifies all
+four band coefficients, checks logarithmic ownership on 305 squarefree cases,
+checks 125 Bellman-equivalence fixtures, and runs eight mutation/status tests.
+Expected verdict:
+
+  PASS_T97701_BLPTE_C4MBI67_CRITICAL_CORE_ALGEBRA
+
+Proof-object SHA-256:
+
+  8c65f8e1a340510c153688196de0782938eb377277cc425808b53e5d931b1f6d
