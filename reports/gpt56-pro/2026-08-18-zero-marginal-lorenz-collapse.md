@@ -45,20 +45,20 @@ G_N(Y)=A_N(4\sqrt Y-3)-2\sqrt Y Q_*(Y).
 \]
 
 As a function of `sqrt(Y)`, `G_N` is strictly concave. The six finite right-cell
-endpoints through eight are directed positive. For the tail, elementary bounds
-on `sum m^(-1/2)` yield
+endpoints through eight have exact rational interval lower bounds. For the tail,
+elementary bounds on `sum m^(-1/2)` yield
 
 \[
 G_N(Y)\ge\sqrt Y[2c\log Y-K]+3d,
 \]
 
-and the directed constant
+and the exact rational-interval certificate gives
 
 ```text
-2c log 8-K > 0.6515026909363199
+2c log 8-K > 0.651502690936319940637848602125659...
 ```
 
-closes every `Y>=8`. Integrating the same bounds gives
+for every `Y>=8`. Integrating the same bounds gives
 
 \[
 Q_*(Y)=24\sqrt Y+O(\log Y),
@@ -118,9 +118,15 @@ T_O-T_{E,+}
 {3\over\pi^2}(4\log2+3\sqrt2-6)\sqrt X+o(\sqrt X).
 \]
 
-The constant in parentheses is approximately `1.0152294093` and is strictly
-positive. Hence the odd target eventually lies beyond every even atom carrying
-positive scalar.
+The exact rational interval replay certifies
+
+```text
+4 log 2 + 3 sqrt 2 - 6
+> 1.0152294093590663840739946584618005.
+```
+
+Hence the odd target eventually lies beyond every even atom carrying positive
+scalar.
 
 ## Eventual collapse
 
@@ -186,8 +192,11 @@ Expected:
 
 ```text
 PASS_T98000_ZERO_MARGINAL_LORENZ_COLLAPSE
-58d3191b80bd7f4763733423b5f94671f2626a19b2a81ce4547170e27e6ee7bc
+7b6042d0e6d1632ae35cce1018dd97316c51acb954f64981ae42f3af5deb4dd5
 ```
+
+The replay uses exact rational intervals: integer-square-root enclosures for
+square roots and an atanh series with an exact remainder bound for logarithms.
 
 ## Boundary
 
