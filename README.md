@@ -1,5 +1,7 @@
 # Riemann research repository
 
+> This repository is part of the [Agentic Polymath Project](https://github.com/gfreund123/agentic-polymath-project), an open effort to push agentic research on difficult open problems while preserving a durable research record.
+
 This is an open research repository for rigorous work around the Riemann Hypothesis (RH).
 
 > **RH remains unsolved. Nothing currently integrated here proves or disproves it.**
