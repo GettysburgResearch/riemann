@@ -1,0 +1,36 @@
+{
+  "analytic_theorems_replayed": false,
+  "exact_algebra": {
+    "boundary_omitted_factors_inactive": true,
+    "budget_partition_exact": true,
+    "constant_term_cancelled": true,
+    "high_primes": [11, 13, 17, 19],
+    "hostile_coefficient_mutation_rejected": true,
+    "largest_prime_bellman_exact": true,
+    "limit": 840,
+    "low_primes": [5, 7],
+    "nonempty_subset_owners": 15,
+    "scale_filter_commutes_with_euler": true,
+    "sqrt_main_retained_fraction": "1/2",
+    "top_completion_checks": 15,
+    "top_history_completion_exact": true,
+    "unique_subset_ownership": true
+  },
+  "fabp67_proved": false,
+  "lscb67_proved": false,
+  "parameter_diagnostics": {
+    "classification": "PARAMETER_HIERARCHY_DIAGNOSTIC_ONLY",
+    "diagnostic_loglog_X": 20.0,
+    "quadratic_log_cube_half_weight_below_sqrtX": true,
+    "quasipoly_boundary_ratio": "1/(loglog X)^2",
+    "rankin_eta_in_0_half": true,
+    "rankin_exponent_gt_K": true,
+    "subpower_log_Z_gt_log_L": true
+  },
+  "pnt_replayed": false,
+  "proof_object_sha256": "171f49bf4688d0d54ac53e00e4aaef8d916f7e625beab82ebb47137d8dd1b352",
+  "rh_established": false,
+  "schema": "riemann.x97900.log-cube-boundary.v1",
+  "upper_bound_sieve_replayed": false,
+  "verdict": "PASS_X_97900_LOG_CUBE_AND_BOUNDARY_ALGEBRA"
+}
