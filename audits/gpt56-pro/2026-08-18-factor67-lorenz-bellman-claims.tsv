@@ -1,0 +1,11 @@
+claim_id	short_statement	mathematical_type	verdict	rh_relationship	dependencies	surviving_scope	first_open_or_falsifier
+L-97700	Paired Lorenz dual slack and exact rough-prime recurrence	UNCONDITIONAL THEOREM	VERIFIED	ROUTE INFRASTRUCTURE	L-97601,L-97603	All finite source-faithful paired states	-
+L-97701	Parity diagonalization and odd-subset cushion	UNCONDITIONAL THEOREM	VERIFIED	CONDITIONAL IMPLICATION	L-97700	All finite rough-prime sets	LBP67 membership
+L-97702	Exact maps among NCBI67,CPSL67 and scalar source	UNCONDITIONAL THEOREM	VERIFIED	ROUTE MAP	L-97500--L-97502,L-97700	Finite nilpotent source DAGs	-
+L-97703	Future-product quotient profile and exact finite separators	UNCONDITIONAL THEOREM	VERIFIED	ROUTE INFRASTRUCTURE	L-97700,L-97701	Finite horizons	All-scale profile membership
+R-97700	Smaller Bellman states fail	REFUTATION	VERIFIED	NO-GO	L-97700	Scalar-only,one-sided,root-only,two-sided local states	-
+R-97701	NCBI67 and CPSL67 are not equivalent	REFUTATION	VERIFIED	NO-GO	L-97702	Abstract source-faithful finite states	Arithmetic-family implications remain open
+LBP67	Euler-minus positivity of base Lorenz slack	PROPOSED COMPLETE THEOREM	UNPROVEN / GAP	IMPLIES RH	L-97701	No diagnostic failure through horizon 256	Negative atom-ratio profile or all-scale proof
+CPSL67	Uniform completed-parity Lorenz feasibility	RH-BEARING PRODUCER	UNPROVEN / GAP	IMPLIES RH	L-97603,T-97600	Exact finite LP at each endpoint	Uniform arithmetic inequality
+NCBI67	Nonlocal current Bellman inequality	CONDITIONAL IMPLICATION	UNPROVEN / GAP	IMPLIES SCALAR SIGN	T-97500	Exact contracted source identity	c>=Tc on literal source
+T-97700	LBP67 implies CPSL67 and RH	CONDITIONAL IMPLICATION	VERIFIED CONDITIONALLY	RH	L-97701,T-97600	Exact composition	LBP67
