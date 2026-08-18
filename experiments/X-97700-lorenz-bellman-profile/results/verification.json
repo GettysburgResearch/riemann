@@ -1,0 +1,23 @@
+{
+  "lbp67_proved": false,
+  "ncbi_cpsl_non_equivalence": true,
+  "odd_history": {
+    "X": 61841,
+    "active_divisors": 239,
+    "gap_lower": "17.00508653821905259069845574626",
+    "history": [67],
+    "terminal": [71, 13]
+  },
+  "prime_recurrence": true,
+  "proof_object_sha256": "c604f54409e9c65641f6f31e065a815b18b41d557e96f81ea8d19e6e73977385",
+  "rh_established": false,
+  "schema": "riemann.t97700.exact-core.v1",
+  "smallest_two_sided_failure": {
+    "Dminus": -1,
+    "Dplus": 1,
+    "X": 1,
+    "lambda": -1
+  },
+  "universal_cushion": true,
+  "verdict": "PASS_T97700_EXACT_LORENZ_BELLMAN_CORE"
+}
