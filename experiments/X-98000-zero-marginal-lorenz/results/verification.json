@@ -1,0 +1,36 @@
+{
+  "certificate_class": "EXACT_RATIONAL_INTERVALS",
+  "cpsl67_proved": false,
+  "gpc67_proved": false,
+  "gtc67_proved": false,
+  "lorenz_fixture": {
+    "dual_at_zero": "11",
+    "envelope": "19",
+    "marginal_lambda": "0"
+  },
+  "one_switch_order": true,
+  "proof_object_sha256": "7b6042d0e6d1632ae35cce1018dd97316c51acb954f64981ae42f3af5deb4dd5",
+  "ratio_monotonicity": {
+    "analytic_tail_start": 8,
+    "finite_right_endpoint_lower_bounds": [
+      "26.7671477795893882625042084939748250238235911744893320399",
+      "36.9595326333178581320723901723172551374636699745140032335",
+      "39.6824397834422801792407537812939157623622062285762779805",
+      "49.8649466997090307531763767342053503454916193865384390501",
+      "59.9349176710852851238358938343132934689352735508719652633",
+      "69.8635057931759685578046934394735442629164180345151814009"
+    ],
+    "range": "[0,6)",
+    "strict_after": 2,
+    "tail_margin_lower": "0.6515026909363199406378486021256590815059121475077867935"
+  },
+  "rh_established": false,
+  "schema": "riemann.t98000.zero-marginal-lorenz.v2",
+  "target_mellin_identity": true,
+  "verdict": "PASS_T98000_ZERO_MARGINAL_LORENZ_COLLAPSE",
+  "zero_marginal_shell": {
+    "coefficient": "(3/pi^2)*(4log2+3sqrt2-6)",
+    "constant_lower": "1.0152294093590663840739946584618005080110161635718652360",
+    "eventually_positive": true
+  }
+}

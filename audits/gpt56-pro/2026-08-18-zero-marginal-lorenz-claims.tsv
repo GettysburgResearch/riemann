@@ -1,0 +1,10 @@
+claim_id	short_statement	mathematical_type	verdict	rh_relationship	first_open_or_falsifier
+L-98000	Q_star/T is ordered from 0 to 6	UNCONDITIONAL ANALYTIC THEOREM	PROVED	ROUTE INFRASTRUCTURE	-
+L-98001	Lorenz order is increasing source index and one switch	UNCONDITIONAL FINITE THEOREM	PROVED	ROUTE INFRASTRUCTURE	-
+L-98002	Odd target exceeds positive-scalar even target eventually	UNCONDITIONAL ASYMPTOTIC THEOREM	PROVED	ROUTE INFRASTRUCTURE	-
+L-98003	Eventual native target nonnegativity implies RH	CONDITIONAL ANALYTIC THEOREM	PROVED CONDITIONALLY	RH	GTC67
+T-98000	CPSL67 iff GTC67 and GPC67 eventually	UNCONDITIONAL REDUCTION	PROVED	ROUTE MAP	GTC67/GPC67
+GTC67	Native target capacity eventually nonnegative	RH-BEARING PRODUCER	OPEN	IMPLIES RH	negative target endpoint or proof
+GPC67	Native 5:3 scalar eventually nonnegative	RH-BEARING PRODUCER	OPEN	IMPLIES RH	RBLPTE67/BLPTE67
+CPSL67	Completed-parity scalar Lorenz feasibility	RH-BEARING PRODUCER	OPEN	IMPLIES RH	equivalent eventual zero-hinge pair
+RH	Riemann Hypothesis	OPEN PROBLEM	UNPROVEN	-	-
