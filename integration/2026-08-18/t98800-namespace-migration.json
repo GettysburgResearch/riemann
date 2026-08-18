@@ -1,0 +1,30 @@
+{
+  "schema": "riemann.t98800.namespace-migration.v1",
+  "original_packet": {
+    "filename": "riemann-t94020-score-free-hall-native-dual-reconstruction-v2.zip",
+    "sha256": "15a3984668b5475334485d3c1c29e57e28feb01d6f5bcb10fe7bdddbb90a3681",
+    "bytes": 63603,
+    "claim_namespace": "T/L/R/M/O/X-94020 through L-94025",
+    "intended_branch": "research/gpt56-pro/94020-score-free-hall-native-dual"
+  },
+  "collision": {
+    "pull_request": 521,
+    "branch": "research/gpt56-pro/94020-target-lorenz-live-marginal",
+    "head": "b4a60a54b1d730a73ab1eb6bb571485dd40438d0",
+    "reason": "The live-marginal route already owns the 94020 claim namespace for different mathematics."
+  },
+  "publication": {
+    "base_pull_request": 499,
+    "base_sha": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+    "branch": "research/gpt56-pro/98800-score-free-hall-native-dual",
+    "mapping": {
+      "94020": "98800",
+      "94021": "98801",
+      "94022": "98802",
+      "94023": "98803",
+      "94024": "98804",
+      "94025": "98805"
+    },
+    "scientific_status": "archival reconstruction; live common-parent/JNTLC and constant native-cost ledger remain open; RH unproved"
+  }
+}

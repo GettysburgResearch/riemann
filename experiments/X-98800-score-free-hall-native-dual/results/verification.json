@@ -1,0 +1,99 @@
+{
+  "all_column": {
+    "detail_fixture": {
+      "2": "3",
+      "3": "2",
+      "32": "7",
+      "8": "5"
+    },
+    "ordinary_fixture": {
+      "2": "41",
+      "3": "2",
+      "32": "7",
+      "8": "19"
+    },
+    "positive_radix_four_inverse": true,
+    "small_q_constant_check": true,
+    "terminal_margin": 581
+  },
+  "causal_fixture": {
+    "actual_child_mass_fixture": "264247/1656369",
+    "alphas": [
+      "1/81",
+      "8/1089",
+      "80/16731"
+    ],
+    "child_cancellation_exact": true,
+    "factor67_gate": "1/sqrt(67)<1/8, certified by 64<67",
+    "lambdas": [
+      "1/9",
+      "8/99",
+      "80/1287"
+    ],
+    "survivor": "320/429"
+  },
+  "classification": "PASS_SCORE_FREE_HALL_NATIVE_DUAL_CANDIDATE_ALGEBRA",
+  "frozen_base_pr499": "99d3983b57f82941131caa8d9c36e4947f1179a0",
+  "hall_fixture": {
+    "bonus_rows": [
+      "15/2",
+      "19/3"
+    ],
+    "exact_residual_plus_bonus": true,
+    "residual": [
+      "2",
+      "3"
+    ],
+    "signed_rows": [
+      "37/2",
+      "82/5"
+    ]
+  },
+  "heavy_campaigns_replayed": false,
+  "native_cost": {
+    "root_ledger": 60989,
+    "strictly_below": 61000,
+    "unit_mass_envelope": "487912/7"
+  },
+  "no_rh_input": {
+    "forbidden": [
+      "CPBD",
+      "GRH",
+      "J_Lambda-4sqrt bridge",
+      "RH",
+      "power-saving PNT",
+      "source-blind large sieve",
+      "square-root Mertens"
+    ],
+    "used": [
+      "Y4 dual",
+      "adjacent-cell comparison",
+      "causal identity",
+      "finite Hall",
+      "positive Markov kernel",
+      "radix-four inverse"
+    ]
+  },
+  "one_quantizer": {
+    "commutes_with_two_sort_sum": true,
+    "quantized_row": [
+      "5/2",
+      "13/2",
+      "8"
+    ]
+  },
+  "ownership": {
+    "bonus_recursive_export_rejected": true,
+    "double_spend_mutation_rejected": true,
+    "omission_before_quantizer": true
+  },
+  "proof_object_sha256": "c50d3767f3d47abd8d987594a4571c5a781e436c5f800bc9195f07d8af5a2a80",
+  "rh_established": false,
+  "schema": "riemann.x98800.score-free-hall-native-dual.v2",
+  "score_firewall": {
+    "bonus_has_declared_score": false,
+    "edge_score_decimal": "-0.467711274473074558851953644668300250621347146689963294803041773305556633244072994932558146",
+    "negative": true,
+    "x": 2
+  }
+}
