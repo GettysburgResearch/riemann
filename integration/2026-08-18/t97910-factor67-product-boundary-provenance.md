@@ -37,9 +37,10 @@ X-97900 -> X-97910
 
 Paths, internal references, equation tags, schema, verdict, retained result,
 and proof-object hash follow the new IDs. The verifier's retained JSON write is
-also pinned to UTF-8 with LF newlines so replay is byte-stable on Windows and
-POSIX. These are publication-only changes; the mathematical prose is otherwise
-unchanged.
+also pinned to UTF-8 with LF newlines, and narrowly scoped Git attributes pin
+the packet's retained text and checksum ledger to LF, so replay is byte-stable
+on Windows and POSIX. These are publication-only changes; the mathematical
+prose is otherwise unchanged.
 
 ## Relationship to adjacent routes
 
