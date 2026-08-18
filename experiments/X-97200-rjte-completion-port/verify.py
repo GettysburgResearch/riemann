@@ -72,6 +72,7 @@ def iqmul(q:Fraction,a:tuple[int,int])->tuple[int,int]:
 def imul(a,b,bits:int)->tuple[int,int]:
     S=1<<bits;v=[a[0]*b[0],a[0]*b[1],a[1]*b[0],a[1]*b[1]]
     return min(v)//S,(max(v)+S-1)//S
+
 def istr(a,bits:int)->list[str]:
     S=1<<bits
     return [str(Fraction(a[0],S)),str(Fraction(a[1],S))]
