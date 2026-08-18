@@ -1,0 +1,36 @@
+{
+  "RH_established": false,
+  "classification": "PASS_T98500_SIGNED_DICKMAN_VK_TRANSFER",
+  "critical_core_proved": false,
+  "dickman_values": {
+    "1": 1.0,
+    "2": 0.30685281694005445,
+    "3": 0.04860838460416002,
+    "4": 0.004910922360454143,
+    "5": 0.0003547221252670535,
+    "6": 1.9647647907653977e-05
+  },
+  "five_eighths_exponent_fixture": {
+    "C0": 100.0,
+    "T": 1000000000000.0,
+    "lhs": 104.8996986930792,
+    "ratio": 11233.252155032638,
+    "u": 26.239303262000707,
+    "vk_scale": 1178364.7664063063
+  },
+  "kappa_over_a": {
+    "B11": -0.2025692855203287,
+    "B13": 0.011176494268132942,
+    "B61": 1.3106440647515285
+  },
+  "multidimensional_stieltjes_theorem_proved_by_replay": false,
+  "proof_object_sha256": "2abf414b9b27f16b36b00a2592e6619c89196ac51fc5a4507f5e979dbf502ce9",
+  "signed_boundary_fixture": {
+    "L": 38110768034.309135,
+    "main": 0.004910922360454143,
+    "relative_correction": -0.015578651656442113,
+    "transfer": 0.004834416811688795,
+    "u": 4.0
+  },
+  "vk_pnt_proved_by_replay": false
+}
