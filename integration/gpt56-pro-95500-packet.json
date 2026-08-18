@@ -1,0 +1,19 @@
+{
+  "base_pr": 580,
+  "base_sha": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05",
+  "carry_imported": false,
+  "commit_message": "research: expose the critical reciprocal-zeta resonance inside SACF",
+  "intended_branch": "research/gpt56-pro/95500-q4-sacf-critical-resonance",
+  "main_results": [
+    "critical gcd Euler completion 1-u-v+uv=(1-u)(1-v)",
+    "exact dual-frequency reciprocal-zeta square",
+    "annular J0 zero-free on 0<Re z<1/2",
+    "fixed SACF power saving implies fixed zeta zero-free strip"
+  ],
+  "replay": "PASS_X_95500_Q4_SACF_CRITICAL_RESONANCE",
+  "route": "Q4 SACF critical resonance",
+  "schema": "riemann.gpt56-pro.95500.packet.v1",
+  "scientific_status": "SACF, FOCC, OCHD and RH remain unproved",
+  "stronger_classical_option": "Vinogradov-Korobov logarithmic exponent transfers by the same ten-band partial summation",
+  "unconditional_gain": "SACF << X log^2 X exp(-c sqrt(log X)) + polylog from classical Mertens bound"
+}
