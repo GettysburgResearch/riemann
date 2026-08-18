@@ -110,3 +110,47 @@ sha256sum -c T97701_CONTENT_SHA256SUMS
 The fresh deterministic archive, compiled manuscript, complete TeX source and
 checksum ledger are mirrored in the Riemann Research Packets Drive folder and
 are named with `t97701-c4mbi67-publication-recovery`, not the old T-97700 ZIP.
+
+## Final deterministic artifacts
+
+```text
+ZIP:
+riemann-t97701-c4mbi67-publication-recovery-final-20260818.zip
+Drive ID:
+1HhXg5k_FOEHGowkTv-NwJuFkMPJbVgT6
+
+PDF:
+t97701-c4mbi67-critical-core-final-20260818.pdf
+Drive ID:
+18kmp7fHLvGKLIKUXUCSk_dmbIDwI2KpP
+
+TeX:
+t97701-c4mbi67-critical-core-final-20260818.tex
+Drive ID:
+1FIDJBlVkFj3NGpb8c3VnzPgffXqn_FXi
+```
+
+The final ZIP/checksum values are frozen in the external outer-artifact ledger
+after the package is assembled. The exact identities are proved; C4MBI67 and RH
+remain open.
+
+## Final frozen checksums and readback targets
+
+```text
+ZIP:
+riemann-t97701-c4mbi67-publication-recovery-final-20260818.zip
+Drive:
+https://drive.google.com/file/d/1HhXg5k_FOEHGowkTv-NwJuFkMPJbVgT6/view?usp=drivesdk
+ZIP SHA-256:
+see T97701_FINAL_OUTER_ARTIFACT_SHA256SUMS.txt
+
+PDF SHA-256:
+0825f3949f4100c78d1723e2a5c81c6ba451ee65243801cca9d0ea598d6ad21d
+Drive:
+https://drive.google.com/file/d/18kmp7fHLvGKLIKUXUCSk_dmbIDwI2KpP/view?usp=drivesdk
+
+TeX SHA-256:
+aae5191bf9c07a1526d1570e8d722bfd9596555775b84bd6c0fe52d2687830ed
+Drive:
+https://drive.google.com/file/d/1FIDJBlVkFj3NGpb8c3VnzPgffXqn_FXi/view?usp=drivesdk
+```

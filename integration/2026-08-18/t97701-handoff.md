@@ -20,3 +20,17 @@ BLPTE67(X) <=> C4MBI67(X) <=> annular scalar A_X>=0.
 
 The equivalence, four-band identity and prime-Möbius ownership are proved.  The
 C4MBI67 sign and RH remain open.
+
+## Final artifact freeze
+
+```text
+ZIP:  riemann-t97701-c4mbi67-publication-recovery-final-20260818.zip
+PDF:  t97701-c4mbi67-critical-core-final-20260818.pdf
+PDF SHA: 0825f3949f4100c78d1723e2a5c81c6ba451ee65243801cca9d0ea598d6ad21d
+TeX:  t97701-c4mbi67-critical-core-final-20260818.tex
+TeX SHA: aae5191bf9c07a1526d1570e8d722bfd9596555775b84bd6c0fe52d2687830ed
+```
+
+The non-self-referential ZIP checksum is stored only in the external outer
+artifact ledger. The final Git tree must have no `.publish/` subtree, no
+temporary publication workflow, and no placeholder PDF.

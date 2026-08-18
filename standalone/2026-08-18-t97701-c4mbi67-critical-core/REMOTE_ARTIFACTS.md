@@ -1,18 +1,16 @@
-# Remote artifacts for T-97701 / C4MBI67 publication recovery
+# Final remote artifacts for T-97701 / C4MBI67 publication recovery
 
-The artifact IDs below are fresh and are not the old T-97700 Drive objects.
-The deterministic ZIP intentionally excludes the outer artifact checksum file
-to avoid a self-referential archive hash.
+These objects use fresh filenames and fresh Drive IDs. They are not the old
+T-97700 archive and not the earlier provisional T-97701 mirrors.
 
-| Artifact | Drive file ID | URL |
+| Artifact | Drive file ID | Final filename |
 |---|---|---|
-| Fresh T-97701 ZIP | `1KlzzQ78VcKTuYNcVc18Xewxrh552Au2x` | https://drive.google.com/file/d/1KlzzQ78VcKTuYNcVc18Xewxrh552Au2x/view?usp=drivesdk |
-| C4MBI67 PDF | `1dC1-zwh7YwoLJuu2-3H07o95jJO9QgI3` | https://drive.google.com/file/d/1dC1-zwh7YwoLJuu2-3H07o95jJO9QgI3/view?usp=drivesdk |
-| Complete TeX | `1IJ4qldWN__716vj8NSsfhOSkECUy6tbp` | https://drive.google.com/file/d/1IJ4qldWN__716vj8NSsfhOSkECUy6tbp/view?usp=drivesdk |
-| Content ledger | `129_atHkjguWoJaMScKkeDq3TSyvywZe9` | https://drive.google.com/file/d/129_atHkjguWoJaMScKkeDq3TSyvywZe9/view?usp=drivesdk |
-| Outer artifact ledger | `12_OFjLdZrVhdmLnSDzIDSC4fuIB4wVF7` | https://drive.google.com/file/d/12_OFjLdZrVhdmLnSDzIDSC4fuIB4wVF7/view?usp=drivesdk |
+| Final deterministic ZIP | `1HhXg5k_FOEHGowkTv-NwJuFkMPJbVgT6` | `riemann-t97701-c4mbi67-publication-recovery-final-20260818.zip` |
+| Canonical compact PDF | `18kmp7fHLvGKLIKUXUCSk_dmbIDwI2KpP` | `t97701-c4mbi67-critical-core-final-20260818.pdf` |
+| Complete TeX source | `1FIDJBlVkFj3NGpb8c3VnzPgffXqn_FXi` | `t97701-c4mbi67-critical-core-final-20260818.tex` |
+| Final content ledger | `1oKYCHiFNLGpfb9-kHnNqN6AK2SQownOh` | `T97701_FINAL_CONTENT_SHA256SUMS.txt` |
+| Final outer-artifact ledger | `1Sp4b4sWnXTLED2TP-ZozndibbF-eOnEb` | `T97701_FINAL_OUTER_ARTIFACT_SHA256SUMS.txt` |
 
-The final publication process replaces the provisional bytes at these same IDs,
-downloads each object back, and compares its SHA-256 and byte count with the
-local final artifact.  The resulting readback record is not treated as a
-mathematical proof object.
+The final verification procedure downloads each object after its last update
+and compares byte count and SHA-256 against the local final artifact. The
+C4MBI67 sign remains open and RH remains unproved.

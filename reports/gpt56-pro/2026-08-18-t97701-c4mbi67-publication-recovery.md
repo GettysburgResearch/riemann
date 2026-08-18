@@ -31,3 +31,12 @@ cannot decide a nonconstant one-sided kernel.
 
 The identities and equivalences are exact.  The C4MBI67 sign is not proved.
 Therefore RH remains unproved.
+
+## Final publication artifacts
+
+The final recovery archive is a fresh deterministic ZIP whose checksum is
+frozen only in the external outer-artifact ledger to avoid self-reference.
+The canonical compact PDF has exact repository bytes and
+has SHA-256 `0825f3949f4100c78d1723e2a5c81c6ba451ee65243801cca9d0ea598d6ad21d`.
+Both exact replays and the complete content ledger pass. The C4MBI67 sign is not
+promoted.
