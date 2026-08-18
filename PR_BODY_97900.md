@@ -75,7 +75,7 @@ The finite replay is diagnostic; the theorem is proved analytically.
 - SHA-256 ledger: https://drive.google.com/file/d/1c9QL9Dgy6PWbFs1XIUeP8sSAk8W-iJ99/view?usp=drivesdk
 
 ```text
-ZIP SHA-256: 12a9c476a4f044dcf3020a21259a57aae78fab34da21dafd9f99d860e8cabbab
+ZIP SHA-256: aff4fb41e3d8eb0d92720568b344acc6e12e6ab7a603a757f9e589ccf2007f34
 PDF SHA-256: 3218dbe14b8999c0773698ded4fe7e29d00236d3b2b0fd639e160b0f2c715b79
 TeX SHA-256: 1bce2faa3c990fe80cb8ec8552ac1b048ea2a3aaddc62cffdf31d11287d18a53
 ```
