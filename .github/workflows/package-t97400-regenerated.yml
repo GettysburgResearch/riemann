@@ -1,0 +1,121 @@
+name: Package T97400 regenerated artifact
+
+on:
+  push:
+    branches:
+      - ops/t97400-package-regeneration-20260818
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out packaging branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build and verify deterministic packet
+        shell: bash
+        env:
+          BASE_SHA: 339e3367660f40c74795802a6f8170b15e19b13a
+          RESEARCH_HEAD: 0f6ea6eae813c1d867ae50744cf5fd57e2720bb7
+        run: |
+          set -euo pipefail
+          ROOT="$RUNNER_TEMP/t97400-regenerated"
+          TREE="$ROOT/tree"
+          mkdir -p "$TREE"
+
+          while read -r digest path; do
+            path="${path#./}"
+            mkdir -p "$TREE/$(dirname "$path")"
+            cp -- "$path" "$TREE/$path"
+          done < T97400_CONTENT_SHA256SUMS
+          cp T97400_CONTENT_SHA256SUMS "$TREE/T97400_CONTENT_SHA256SUMS"
+
+          git diff --binary --full-index "$BASE_SHA" "$RESEARCH_HEAD" > "$ROOT/T97400-PR576-add-only.patch"
+          cp PR_BODY.md "$ROOT/PR_BODY.md"
+
+          cat > "$ROOT/APPLY_PATCH.sh" <<'EOF'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          REPO_PATH="${1:-.}"
+          BASE_SHA="${BASE_SHA:-339e3367660f40c74795802a6f8170b15e19b13a}"
+          DIR="$(cd "$(dirname "$0")" && pwd)"
+          cd "$REPO_PATH"
+          test "$(git rev-parse HEAD)" = "$BASE_SHA"
+          git diff --quiet
+          git diff --cached --quiet
+          git apply --index "$DIR/T97400-PR576-add-only.patch"
+          sha256sum -c T97400_CONTENT_SHA256SUMS
+          EOF
+          chmod +x "$ROOT/APPLY_PATCH.sh"
+
+          cat > "$ROOT/README.md" <<EOF
+          # Regenerated T-97400 deterministic packet
+
+          Source: gfreund123/riemann PR #576
+
+          Exact research head:
+          
+          \`$RESEARCH_HEAD\`
+
+          Exact base:
+
+          \`$BASE_SHA\`
+
+          The \`tree/\` directory contains the 28 add-only files published by PR #576.
+          \`T97400-PR576-add-only.patch\` reproduces the same change from the frozen base.
+
+          Scientific status retained from the packet: RH is unproved; the global source producer remains open.
+          EOF
+
+          python3 - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP']) / 't97400-regenerated'
+          tree = root / 'tree'
+          metadata = {
+              'repository': 'gfreund123/riemann',
+              'pr': 576,
+              'base_sha': '339e3367660f40c74795802a6f8170b15e19b13a',
+              'research_head_sha': '0f6ea6eae813c1d867ae50744cf5fd57e2720bb7',
+              'changed_file_count': len([p for p in tree.rglob('*') if p.is_file()]),
+              'scientific_status': 'research hardening; RH unproved',
+          }
+          (root / 'PACKAGE_METADATA.json').write_text(json.dumps(metadata, indent=2, sort_keys=True) + '\n')
+          entries = []
+          for p in sorted(root.rglob('*')):
+              if p.is_file() and p.name not in {'PACKAGE_SHA256SUMS'}:
+                  entries.append(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(root)}")
+          (root / 'PACKAGE_SHA256SUMS').write_text('\n'.join(entries) + '\n')
+          PY
+
+          (cd "$TREE" && sha256sum -c T97400_CONTENT_SHA256SUMS)
+          (cd "$ROOT" && sha256sum -c PACKAGE_SHA256SUMS)
+
+          ARCHIVE="$GITHUB_WORKSPACE/riemann-t97400-p61-bias-source-interface-hardening-regenerated.zip"
+          python3 - <<'PY'
+          import os, zipfile
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP']) / 't97400-regenerated'
+          archive = Path(os.environ['GITHUB_WORKSPACE']) / 'riemann-t97400-p61-bias-source-interface-hardening-regenerated.zip'
+          with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+              for p in sorted(root.rglob('*')):
+                  if p.is_file():
+                      zf.write(p, Path('riemann-t97400-p61-bias-source-interface-hardening-regenerated') / p.relative_to(root))
+          PY
+          sha256sum "$ARCHIVE" > "$ARCHIVE.sha256"
+          unzip -t "$ARCHIVE"
+
+      - name: Upload regenerated ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: riemann-t97400-regenerated
+          path: |
+            riemann-t97400-p61-bias-source-interface-hardening-regenerated.zip
+            riemann-t97400-p61-bias-source-interface-hardening-regenerated.zip.sha256
+          if-no-files-found: error
+          retention-days: 30
