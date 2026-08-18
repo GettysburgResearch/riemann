@@ -1,0 +1,38 @@
+{
+  "c_star_interval": [
+    "0.3085",
+    "0.3087"
+  ],
+  "expected_verdict": "PASS_T98070_NEGATIVE_MASS_EULER_HURWITZ_ALGEBRA",
+  "forbidden_claims": [
+    "rh_established=true",
+    "raw_prefix_eventually_positive"
+  ],
+  "mutations": [
+    {
+      "must_fail": true,
+      "name": "flip_reset_sign"
+    },
+    {
+      "must_fail": true,
+      "name": "negative_c_star"
+    },
+    {
+      "must_fail": true,
+      "name": "claim_rh"
+    },
+    {
+      "must_fail": true,
+      "name": "erase_open_gate"
+    }
+  ],
+  "namespace": "98070",
+  "required_open": [
+    "DPE67",
+    "VHL67",
+    "cross-kernel upper estimate",
+    "GPC67"
+  ],
+  "source_head": "f362acf56bbbbd183976b6377fbe883193886e1a",
+  "source_pr": 608
+}
