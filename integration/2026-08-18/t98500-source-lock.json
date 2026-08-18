@@ -1,0 +1,22 @@
+{
+  "base": {
+    "pr": 603,
+    "sha": "1dac3eeccb5a01183067c00722d92fbcf2df12c5"
+  },
+  "classifications": {
+    "RH": "unproved",
+    "critical_core": "open_rh_bearing",
+    "signed_dickman_transfer": "proved",
+    "vk_terminal_sector": "proved"
+  },
+  "cutoff_utc": "2026-08-18T11:14:03Z",
+  "inputs": {
+    "lorenz_pr591": "5c43060fd11e6a3f5d090ee4c74e4a48ca2eb111",
+    "p61_pr576": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7",
+    "threshold_pr593": "8ad37970c616141d06572d76bff68eb3c4e8738a",
+    "typeii_pr590": "223f11259b3e7134f78d6492795e6e94caca8be3"
+  },
+  "main_observed": "f789265569013ebff254b082c2e0428970bdaf57",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t98500.source-lock.v1"
+}
