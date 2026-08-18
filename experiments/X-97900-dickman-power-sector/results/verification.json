@@ -1,0 +1,57 @@
+{
+  "a": 1.5790482222032427,
+  "classification": "PASS_T97900_DICKMAN_POWER_SECTOR_LOCALIZATION",
+  "csht67_proved": false,
+  "dickman_positive_checked": true,
+  "exact_algebra": {
+    "p": 67,
+    "r_minus_2r2_restores_raw_coefficient": true,
+    "r_squared": "1/67",
+    "raw_exposure_conserved": true,
+    "scalar_transport_fixture": true,
+    "two_node_current_negative": true
+  },
+  "limit": 1000000,
+  "native_power_states_positive": true,
+  "power_sector_records": [
+    {
+      "dickman": 0.3068528188150539,
+      "harmonic_error": 0.0038992087923577223,
+      "native_normalized": 0.23251983537515852,
+      "native_positive": true,
+      "native_scalar": 367.16003267613473,
+      "rough_harmonic_sum": 0.3107520276074116,
+      "theta": 0.5,
+      "threshold": 1000,
+      "u": 2.0
+    },
+    {
+      "dickman": 0.13066668983262497,
+      "harmonic_error": 0.008878468101837067,
+      "native_normalized": 0.05255522374106937,
+      "native_positive": true,
+      "native_scalar": 82.98723261582924,
+      "rough_harmonic_sum": 0.13954515793446204,
+      "theta": 0.4,
+      "threshold": 252,
+      "u": 2.4985419542078056
+    },
+    {
+      "dickman": 0.048608387369387884,
+      "harmonic_error": 0.007411956258985303,
+      "native_normalized": 0.012856310565570557,
+      "native_positive": true,
+      "native_scalar": 20.300734342656952,
+      "rough_harmonic_sum": 0.05602034362837319,
+      "theta": 0.3333333333333333,
+      "threshold": 100,
+      "u": 2.9999999999999996
+    }
+  ],
+  "proof_object_sha256": "3364c1b018dfabb014f4d7aac52520b9e98a44c0d1c61bfced174ddeae84fecf",
+  "rblpte67_root_proved": false,
+  "rh_established": false,
+  "root_fixed_67_outside_fixed_power_contract": true,
+  "schema": "riemann.t97900.dickman-power-sector.v1",
+  "spcc67_proved": false
+}
