@@ -1,0 +1,53 @@
+{
+  "coefficient_checks": 120000,
+  "dual_extreme_ray_checks": [
+    "4/5",
+    "9/7",
+    "2"
+  ],
+  "fpcb23_proved": false,
+  "frozen_heads": {
+    "pr579": "9f56688236d33c515a92032c640888488c06ed6e",
+    "pr580": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05",
+    "pr589": "ff5156cf6aa469bb7a2155ff4aa7c094bd75b9b6"
+  },
+  "least_owner_checks": 120000,
+  "mutations_rejected": [
+    "claim_rh_by_replay_rejected",
+    "drop_least_owner_order_rejected",
+    "erase_real_activation_rejected",
+    "promote_5_3_scalar_to_two_rows_rejected",
+    "promote_lapbr67_rejected",
+    "promote_sacf_energy_to_sign_rejected",
+    "replace_one_sided_ratio_by_absolute_rejected",
+    "replace_q3sharp_4_by_plus2_rejected",
+    "shift_terminal_boundary_rejected",
+    "treat_fpcb23_as_proved_rejected"
+  ],
+  "negative_controls": {
+    "absolute_values_forbidden": true,
+    "lapbr67_refuted_by_frozen_pr589": true,
+    "safe_filter_gauge_not_a_source_estimate": true,
+    "scalar_positive_row_negative": true,
+    "square_sign_blind": true
+  },
+  "ok": true,
+  "proof_object_sha256": "22e8ded8c3806b9787f07679c5729f0026c25a62a38094166c88f3a359f54280",
+  "rh_established": false,
+  "rough_packet_checks": 10,
+  "schema": "riemann.x97800.growing-prime-bilinear-tail.v1",
+  "terminal_checks": 3080,
+  "threshold_constants": {
+    "row2_multiplier": 216,
+    "row3sharp_multiplier": 1152
+  },
+  "uniform_growing_cutoff_fixture": {
+    "X": "1e100",
+    "lower_bound": "5601950162494097931094802002608799678376119643688.545769167346755174212450880046442097194089472628900",
+    "max_prime_cutoff_checked": 227,
+    "strictly_positive": true,
+    "z_over_logX": "0.9858484739203816487680626459406935368082812031743231050798100877865127537041366586353406349982400688"
+  },
+  "uniform_theorem_proved_by_replay": false,
+  "verdict": "PASS_T97800_GROWING_PRIME_BILINEAR_TAIL_REDUCTION"
+}
