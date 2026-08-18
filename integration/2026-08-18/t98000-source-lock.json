@@ -1,0 +1,21 @@
+{
+  "schema": "riemann.t98000.zero-marginal-lorenz.v1",
+  "created_utc": "2026-08-18T06:05:00Z",
+  "frozen": {
+    "pr590": "4f1283c67f0d4a4b504badd4c4113ba227521162",
+    "pr591": "5c43060fd11e6a3f5d090ee4c74e4a48ca2eb111",
+    "pr594": "ef76157a516c520a0f829ea4ee346c62759743ed",
+    "pr596": "40bfd7e70521f4205e95d3960812a6cef6073c05"
+  },
+  "proof_object_sha256": "58d3191b80bd7f4763733423b5f94671f2626a19b2a81ce4547170e27e6ee7bc",
+  "status": {
+    "ordered_ratio": "PROVED",
+    "one_switch_lorenz": "PROVED",
+    "zero_marginal_shell": "PROVED ASYMPTOTIC",
+    "eventual_cpsl_collapse": "PROVED",
+    "GTC67": "OPEN",
+    "GPC67": "OPEN",
+    "CPSL67": "OPEN",
+    "RH": "UNPROVEN"
+  }
+}
