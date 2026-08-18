@@ -14,7 +14,13 @@ H_X=T_E(X)-T_O(X)
 \tag{L-98003.1}
 \]
 
-where `T(Y)=(4sqrt(Y)-3)1_(Y>=1)`. The sum is finite for every real `X`.
+where
+
+\[
+T(Y)=(4\sqrt Y-3)\mathbf 1_{Y\ge1}.
+\]
+
+The sum is finite for every real `X`.
 
 For `Re s>1/2`, absolute Fubini gives
 
