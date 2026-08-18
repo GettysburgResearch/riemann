@@ -1,0 +1,41 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/97800-growing-prime-bilinear-tail",
+    "pr": 592,
+    "sha": "05aae4135d21301a79b16abb2dda95535e0be77c"
+  },
+  "cpqr23_proved": false,
+  "created": "2026-08-18",
+  "forbidden_promotions": [
+    "finite replay proves CPQR23",
+    "scalar positivity implies two-row positivity",
+    "SACF energy implies one-sided sign",
+    "CPQR23 or FPCB23 treated as proved",
+    "RH treated as established"
+  ],
+  "fpcb23_proved": false,
+  "imports": [
+    {
+      "pr": 603,
+      "scope": "discrete Dickman discrepancy and near-critical corridor",
+      "sha": "1dac3eeccb5a01183067c00722d92fbcf2df12c5"
+    },
+    {
+      "pr": 582,
+      "scope": "future-prime quotient state comparison",
+      "sha": "699f9f119a66823702e96fba95cc8b14b8251c60"
+    },
+    {
+      "pr": 589,
+      "scope": "LAPBR67 refutation",
+      "sha": "ff5156cf6aa469bb7a2155ff4aa7c094bd75b9b6"
+    },
+    {
+      "pr": 580,
+      "scope": "SACF Type-II comparison",
+      "sha": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05"
+    }
+  ],
+  "rh_established": false,
+  "schema": "riemann.t98200.source-lock.v1"
+}

@@ -1,0 +1,62 @@
+{
+  "base_sha": "05aae4135d21301a79b16abb2dda95535e0be77c",
+  "convolution_checks": 30000,
+  "cpqr23_proved": false,
+  "fpcb23_proved": false,
+  "mutations_rejected": [
+    "claim_fpcb23_by_replay_rejected",
+    "claim_rh_by_replay_rejected",
+    "drop_child_quotient_rejected",
+    "erase_three_band_correction_rejected",
+    "promote_scalar_to_two_rows_rejected",
+    "promote_sacf_square_to_sign_rejected",
+    "promote_lapbr67_rejected",
+    "treat_cpqr23_as_proved_rejected"
+  ],
+  "negative_controls": {
+    "root_value_not_markov": true,
+    "scalar_positive_row_negative": true,
+    "square_phase_blind": true
+  },
+  "ok": true,
+  "proof_object_sha256": "fe81fa867efd37aa4f9000388bc341ccc1d3c6ea3494bc835a7ebbee75d28898",
+  "quotient_recurrence_checks": 50000,
+  "rh_established": false,
+  "schema": "riemann.x98200.remote-core.v1",
+  "transverse_samples": [
+    [
+      1,
+      0.0
+    ],
+    [
+      1.999999,
+      0.0
+    ],
+    [
+      2,
+      -2.1213203435596424
+    ],
+    [
+      2.999999,
+      -2.1213203435596424
+    ],
+    [
+      3,
+      1.3427812715781124
+    ],
+    [
+      3.999999,
+      1.3427812715781124
+    ],
+    [
+      4,
+      -0.15721872842188755
+    ],
+    [
+      17.25,
+      -0.15721872842188755
+    ]
+  ],
+  "uniform_corridor_proved_by_replay": false,
+  "verdict": "PASS_T98200_FPCB23_DICKMAN_QUOTIENT_REDUCTION"
+}
