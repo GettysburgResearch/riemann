@@ -1,0 +1,39 @@
+{
+  "classification": "PASS_FACTOR67_SOURCE_INTERFACE_FIREWALLS",
+  "pr565": {
+    "causal_child_coefficient": "0",
+    "formal_positive_test_r": "1/9",
+    "native_one_prime_child_coefficient": "-1/9",
+    "one_prime_claimed_recurrence": "7/5",
+    "one_prime_missing_term": "11/90",
+    "one_prime_native_euler_value": "23/18",
+    "same_channel_positive_restriction": [
+      "8/9",
+      "0"
+    ],
+    "swapped_non_source": [
+      "1",
+      "-1/9"
+    ]
+  },
+  "pr566": {
+    "claimed_child_payment": "1",
+    "hall_complement_scalar": "1/2",
+    "hall_prefix_counterexample": {
+      "demand_first_moment": "1",
+      "demand_mass": "1",
+      "demand_prefix": "1",
+      "supply_first_moment": "1",
+      "supply_mass": "1",
+      "supply_prefix": "1/2",
+      "threshold": "1"
+    },
+    "reserve_injection_exact": "1"
+  },
+  "repaired_bias_contraction": {
+    "convenient_lower_bound": "1/2730",
+    "exact_decimal_margin": "0.00053915345594186220340098443572443650638098986354501787330002785295332590060810810"
+  },
+  "rh_established": false,
+  "schema": "riemann.x97610.factor67-source-interface-firewalls.v2"
+}

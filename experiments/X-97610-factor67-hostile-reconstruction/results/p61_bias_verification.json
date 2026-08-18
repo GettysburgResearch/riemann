@@ -1,0 +1,16 @@
+{
+  "classification": "PASS_REPAIRED_DIRECTED_P61_BIAS",
+  "certificate_revision": "outward-rational-mesh-v2",
+  "mpfr_version": "4.2.2",
+  "precision_bits": 256,
+  "finite_end": 1000000,
+  "compact_C0_interval": [-13.721771741974681886, -13.72177174197468187],
+  "compact_error_coverage_upper": 3.2671829989400722391,
+  "old_40F_minus_M_min": {"N": 184, "lower": -18.114417591649674468, "upper": -18.114417591649602078},
+  "finite_42F_minus_M_min": {"N": 184, "lower": 3.2727417058979848816, "upper": 3.2727417058980594613},
+  "finite_M_minus_8F_min": {"N": 67, "lower": 135.51661277216024908, "upper": 135.5166127721602612},
+  "tail_42F_minus_M_min": {"left": "1000110", "right": "1001220", "lower": 119.8715641503455842},
+  "tail_M_minus_8F_min": {"left": "1000000", "right": "1000110", "lower": 40007.499398295202994},
+  "divisor_count": 262144,
+  "RH_established": false
+}

@@ -1,0 +1,23 @@
+{
+  "RH_established": false,
+  "causal_formal_child_coefficients": [
+    "0",
+    "0",
+    "0"
+  ],
+  "causal_parent_mass": "1",
+  "classification": "PASS_FACTOR67_SCALAR_AND_OPERATOR_ALGEBRA",
+  "operator_identity": "(I+T)^-1=(I-T)(I-T^2)^-1",
+  "operator_identity_exact": true,
+  "proof_object_sha256": "2d473bcfd65de943863cbbd5d6462ef30c765ad1633e62326ce22358907d63f8",
+  "qstar": {
+    "2": "15",
+    "3": "6",
+    "4": "3",
+    "5": "6"
+  },
+  "scalar_numerator": "-3*(1-2^-z)*(2-2^-z)",
+  "schema": "riemann.x97610.scalar-algebra.v1",
+  "source_faithfulness_proved_by_this_script": false,
+  "tail_qstar": "6"
+}
