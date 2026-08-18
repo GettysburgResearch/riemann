@@ -1,0 +1,107 @@
+{
+  "schema": "riemann.t97620.recovered-packet.v1",
+  "created": "2026-08-18",
+  "publication_base": {
+    "pr": 576,
+    "sha": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7"
+  },
+  "recovered_download_sha256": "d592df72f3bb47c3788cf3247faa491c5d091d5d753c5b49b3a7596a47efc24a",
+  "payload_file_count": 17,
+  "repository_file_count": 18,
+  "certificate_streams": 8,
+  "certificate_lines": 1167388,
+  "omitted_from_recovered_download": [
+    "verification.raw.json",
+    "verification.448.raw.json",
+    "build_and_replay.sh",
+    "src/mpfr_min.h"
+  ],
+  "files": [
+    {
+      "bytes": 2008,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/certificate_index.json",
+      "sha256": "cdabc0524a942f32ce1e52dcc6a5971b33dc0d3106923bf0fd0caa92a92662eb"
+    },
+    {
+      "bytes": 3938,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/base_p37.tsv.gz",
+      "sha256": "1ed1d256367174859fd47798c37e01060245c8191330f5ff15bef06ff99a0a72"
+    },
+    {
+      "bytes": 6494,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/base_p61.tsv.gz",
+      "sha256": "37d4c5f05d0fc0c97a379df29bb06dccdc0623953b0b8c7c03d40168cb461219"
+    },
+    {
+      "bytes": 3260636,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/compact_p37.tsv.gz",
+      "sha256": "070243bd2062be96fc64ef29fd4306e199f0f52448800b0ba2ab09e23d46c9a1"
+    },
+    {
+      "bytes": 864368,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/compact_p61.tsv.gz",
+      "sha256": "ef06e768eec5329a2c715b7b9b85c77d70a0cb6ee744a9264268908f09e9f505"
+    },
+    {
+      "bytes": 269626,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/phi_p37.tsv.gz",
+      "sha256": "61749bb318ef185dfdb472607e3a3ab35ce7768bc8d63f29e017bf2c5aac25a3"
+    },
+    {
+      "bytes": 17836150,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/phi_p61.tsv.gz",
+      "sha256": "e641a42086e5cc735573932b0914fa2a5a68d018e1ee4378a38365330cee47d3"
+    },
+    {
+      "bytes": 425546,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/tail_p37.tsv.gz",
+      "sha256": "631758f646ad1d646511681d3552358e02c7634adb9d2fcbb63d5c1193860cf8"
+    },
+    {
+      "bytes": 32974926,
+      "path": "experiments/X-97620-exact-annular-bias/certificates/full/tail_p61.tsv.gz",
+      "sha256": "9a9634995b78bab17c75df037d4f46d6c799a41eb045619f199e8c992e7b804e"
+    },
+    {
+      "bytes": 9363,
+      "path": "experiments/X-97620-exact-annular-bias/results/verification.json",
+      "sha256": "a1f4d402b01b7c2700861bb17d60c1aab9c6cf09c8179316c062ffd62160b473"
+    },
+    {
+      "bytes": 20610,
+      "path": "experiments/X-97620-exact-annular-bias/src/certify.cpp",
+      "sha256": "a96e9cda13c6bb125f94b8ff74345d3d1afd8e28c73a568a16d905c2c52481bc"
+    },
+    {
+      "bytes": 1665,
+      "path": "experiments/X-97620-exact-annular-bias/tests/test_verify.py",
+      "sha256": "03382423f272e2b7412fb1fdba45aacfc389b6251e3de031f3e88e5079d8aa8a"
+    },
+    {
+      "bytes": 3249,
+      "path": "experiments/X-97620-exact-annular-bias/verify_retained.py",
+      "sha256": "5c22bb27324dc428b4ec45e4ac8028b767e6690a890406076805571f5201ba73"
+    },
+    {
+      "bytes": 2553,
+      "path": "integration/2026-08-18/t97620-pr-body.md",
+      "sha256": "4137a967873b0d07b8034e34180ebfcab150dff01477d8432e9522249e01b6f1"
+    },
+    {
+      "bytes": 1054,
+      "path": "integration/2026-08-18/t97620-recovery-note.md",
+      "sha256": "63c58ab8cb04b486c02915ea1da1efe70e067e959f6132efbbb47719dbd01da0"
+    },
+    {
+      "bytes": 2392,
+      "path": "integration/2026-08-18/t97620-source-lock.json",
+      "sha256": "d2140eeb62c9844eabe1ca048c4cb71e5a9f398d265b7ee2a5072c80cec1bc32"
+    },
+    {
+      "bytes": 6850,
+      "path": "standalone/2026-08-18-exact-annular-bias-source-no-go/PROOF.md",
+      "sha256": "55b0e9f2d2e4efe8d2e375fbdf1c63d5842b1bceed1bff642f9cd8eba6d750dc"
+    }
+  ],
+  "rh_status": "unproved"
+}

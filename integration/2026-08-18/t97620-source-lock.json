@@ -1,0 +1,52 @@
+{
+  "schema": "riemann.t97620.source-lock.v1",
+  "created": "2026-08-18",
+  "publication_base": {
+    "pr": 576,
+    "branch": "research/gpt56-pro/97400-p61-bias-source-interface-hardening",
+    "sha": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7"
+  },
+  "recovered_download_sha256": "d592df72f3bb47c3788cf3247faa491c5d091d5d753c5b49b3a7596a47efc24a",
+  "base": {
+    "pr": 565,
+    "branch": "research/gpt56-pro/97100-parity-contractive-annular-recovery",
+    "sha": "339e3367660f40c74795802a6f8170b15e19b13a",
+    "tree": "212a5bbc174cda69aac16ad891200bb37ec18cda"
+  },
+  "frozen_paths": {
+    "claims/lemmas/L-97100-single-scalar-p61-bias-and-terminal-dilation.md": "478b691ed1d214f3e81708bb2e2432dd3bec97c1",
+    "claims/lemmas/L-97101-low-child-recombination-and-current-bias.md": "338507487e41e5c50ca655a2b424e35d6fec165e",
+    "claims/lemmas/L-97102-parity-contractive-rough-tree.md": "f26f72eb2c34310600e0fcdf39d8f6b9f4fd2a0a",
+    "claims/theorems/T-97100-parity-correct-annular-scalar-positivity.md": "7f142c0b101615a71c3f65bc830eb049f562c5e2",
+    "claims/theorems/T-97101-parity-contractive-annular-rh-candidate.md": "53399f947d9201f007239a9ad8684d60d1634720",
+    "standalone/2026-08-17-parity-contractive-annular-recovery/PROOF.md": "206e93afdef4bc08395c4bce01745b72ab30cbd6",
+    "experiments/X-97100-parity-contraction-recovery/verify.py": "5f8f79ebb88e5e401c7671c937ba2d1610cbbc87"
+  },
+  "compared": [
+    {
+      "pr": 559,
+      "sha": "88d97adef8a42c5baf2f52c2c259a4ef536bdfdd",
+      "path": "claims/lemmas/L-97000-single-scalar-positive-base-and-zero-safe-mellin.md",
+      "blob": "711148ce0a775a0c7efb86657730efcab310f612"
+    },
+    {
+      "pr": 561,
+      "sha": "db9bdc63c855c6ddf664b763d748f8155a6a2c67",
+      "path": "claims/refutations/R-96501-fixed-depth-parity-reset-current-block-is-eventually-negative.md",
+      "blob": "a15cde05c92a42d198d83e10d6a68248f10d75a3"
+    },
+    {
+      "pr": 556,
+      "sha": "a4feca0457d310c72054f274040f93b0503f658b",
+      "path": "standalone/2026-08-17-annular-factor67/PROOF.md",
+      "blob": "683b194b63e702a106f325ba9b31efdb6105bb19"
+    }
+  ],
+  "forbidden_promotions": [
+    "F/M >= 1/40",
+    "low-child packet recombination equals the native Möbius scalar",
+    "coefficient mass <1/8 implies source-complete l1 child-mass contraction",
+    "the scalar certificate establishes RH"
+  ],
+  "rh_established": false
+}
