@@ -1,0 +1,12 @@
+schema=riemann.p61-bias-diagnostic.v2
+N=12300000
+divisors_generated_safely=13026
+coefficient_updates=56964180
+max_abs_signed_coefficient=15
+max_unsigned_coefficient=1539
+minimum_42F_minus_M=3.272741705896351
+argmin_42F_minus_M=184
+minimum_M_minus_20F=24.949644970914505
+argmin_M_minus_20F=67
+continuum_reduction=diagnostic_integer_knots; margins are affine in log(x) between consecutive integer knots
+classification=diagnostic floating-point scan, not directed proof
