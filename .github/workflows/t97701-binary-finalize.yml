@@ -19,13 +19,15 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Reconstruct and verify the canonical PDF
+      - name: Download and verify the canonical PDF
         shell: bash
         run: |
           set -euo pipefail
           target='standalone/2026-08-18-t97701-c4mbi67-critical-core/t97701-c4mbi67-critical-core.pdf'
           tmp="${target}.tmp"
-          cat .publish/t97701-pdf.part-* | base64 --decode > "$tmp"
+          curl --fail --location --retry 4 \
+            'https://drive.google.com/uc?export=download&id=1dC1-zwh7YwoLJuu2-3H07o95jJO9QgI3' \
+            --output "$tmp"
           echo 'a0e35999df72586ccb615138aa6a55509f79b88633bf067afa64f0b8e6bd097d  '"$tmp" | sha256sum -c -
           test "$(wc -c < "$tmp")" = '14979'
           mv "$tmp" "$target"
