@@ -1,0 +1,341 @@
+\documentclass[11pt]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\Fcal}{\mathcal F}
+\newcommand{\Dcal}{\mathfrak D}
+\newcommand{\CSHT}{\mathrm{CSHT}_{67}}
+\newcommand{\RBLPTE}{\mathrm{RBLPTE}_{67}}
+\newcommand{\SPCC}{\mathrm{SPCC}_{67}}
+\title{Dickman Localization of the Factor--67 Critical Saddle:\\Power-Scale Positivity, Root Bellman Closure, and the Subpower Core}
+\author{Agentic Polymath Project}
+\date{August 18, 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The factor--67 annular route has an exact native rough expansion
+\[
+ \Fcal(Y,z)=\sum_{P^-(m)\ge z}\mu(m)m^{-1/2}b(Y/m),
+\]
+where $b$ is the complete finite-$P_{61}$ annular $5{:}3$ scalar.  Previous
+work proves the exact first-owner ledger, the compulsory $(R-A)F$ residual,
+and a no-go theorem for every subcritical count-depth stopping line.  We prove
+here that every state whose least allowed rough prime is a fixed positive power
+of its endpoint is unconditionally positive.
+
+More precisely, if $Y^\theta\le z\le Y$ and
+$u=\log Y/\log z$, then, uniformly for fixed $\theta>0$,
+\[
+ \Fcal(Y,z)=a\sqrt Y\,\rho(u)+o_\theta(\sqrt Y),
+\]
+where $a>0$ is the finite-$P_{61}$ square-root coefficient and $\rho$ is the
+Dickman function.  We derive $\rho$ directly as the alternating rough-product
+simplex and prove its positivity from the integral identity
+$u\rho(u)=\int_{u-1}^u\rho(v)\,dv$.  Consequently every fixed power-scale state
+satisfies the state-wise root Bellman inequality, and admits a one-dimensional
+one-use scalar transport.
+
+This does not prove the stronger target-preserving critical-saddle transport,
+and it does not apply at the root threshold $67$, where
+$\log67/\log Y\to0$.  It localizes every possible obstruction to the subpower
+least-prime, harmonic-saddle core.  The Riemann Hypothesis remains unproved.
+\end{abstract}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{\textbf{Status.} The power-scale theorem is
+unconditional.  Full $\CSHT$, root $\RBLPTE$, the subpower core, and RH remain
+open.}}
+\end{center}
+
+\tableofcontents
+
+\section{Frozen inputs and the exact question}
+
+Let $b(Y)=F_{61}(Y)$ be the complete grouped finite-$P_{61}$ annular $5{:}3$
+scalar.  The controlling finite theorem gives
+\begin{equation}\label{eq:base}
+ b(Y)=a\sqrt Y+c+O(Y^{-3/2}),
+ \qquad
+ a=12\prod_{p\le61}\left(1-{1\over p}\right)>0,
+\end{equation}
+and $b(Y)\ge0$ for every real $Y\ge1$.
+
+For a real least-prime threshold $z\ge67$, define the literal completed native
+state
+\begin{equation}\label{eq:state}
+ \Fcal(Y,z)=
+ \sum_{\substack{m\text{ squarefree}\\P^-(m)\ge z}}
+ {\mu(m)\over\sqrt m}b(Y/m),
+\end{equation}
+with zero extension below the support of $b$.  Every term in
+\eqref{eq:state} carries its native coefficient, product activation and
+cumulative parity.  No Euler product without the product boundary is inserted.
+
+The root state has $z=67$.  The present paper studies the terminal regime
+$z\ge Y^\theta$ for fixed $\theta>0$ and asks whether it can carry a negative
+obstruction.
+
+\section{The exact alternating simplex}
+
+For $u\ge0$, put $I_0(u)=1$ and
+\begin{equation}\label{eq:Ik}
+ I_k(u)={1\over k!}
+ \int_{\substack{s_1,\ldots,s_k\ge1\\s_1+\cdots+s_k\le u}}
+ {ds_1\cdots ds_k\over s_1\cdots s_k}
+ \qquad(k\ge1).
+\end{equation}
+The integral vanishes for $k>u$.  Define
+\begin{equation}\label{eq:D}
+ \Dcal(u)=\sum_{k=0}^{\lfloor u\rfloor}(-1)^kI_k(u).
+\end{equation}
+
+\begin{theorem}[Dickman simplex identity]\label{thm:dickman}
+The function $\Dcal$ is continuous, equals one on $[0,1]$, and satisfies
+\[
+ u\Dcal'(u)=-\Dcal(u-1)
+ \qquad(u>1)
+\]
+away from integer knots.  Moreover
+\begin{equation}\label{eq:dickman-integral}
+ \boxed{u\Dcal(u)=\int_{u-1}^{u}\Dcal(v)\,dv}
+ \qquad(u\ge1),
+\end{equation}
+and hence
+\begin{equation}\label{eq:dickman-positive}
+ \boxed{\Dcal(u)>0\quad\text{for every finite }u.}
+\end{equation}
+Thus $\Dcal$ is the Dickman function $\rho$.
+\end{theorem}
+
+\begin{proof}
+Differentiating $I_k$ through the moving simplex boundary and multiplying by
+$u=s_1+\cdots+s_k$, symmetry gives
+\[
+ uI_k'(u)=I_{k-1}(u-1).
+\]
+Alternating summation proves the delay equation.  The derivative of the two
+sides of \eqref{eq:dickman-integral} is the same, and they agree at $u=1$.
+Positivity follows interval by interval from the positive integral average in
+\eqref{eq:dickman-integral}.
+\end{proof}
+
+The theorem is source-relevant: $I_k(u)$ is the continuum limit of the total
+harmonic weight of squarefree $k$-prime products with every prime at least $z$
+and product at most $z^u$.
+
+\section{Uniform lower-order control}
+
+Fix $\theta\in(0,1)$.  Throughout this section
+\[
+ Y^\theta\le z\le Y,
+ \qquad
+ u={\log Y\over\log z}\in[1,1/\theta].
+\]
+Every active rough product has at most
+$K_\theta=\lfloor1/\theta\rfloor$ prime factors.
+
+For $k\ge1$, define
+\[
+ A_k(Y,z)=
+ \sum_{\substack{z\le p_1<\cdots<p_k\\p_1\cdots p_k\le Y}}
+ (p_1\cdots p_k)^{-1/2}.
+\]
+
+\begin{lemma}[Uniform half-weight bound]\label{lem:halfweight}
+For every fixed $\theta>0$ and $1\le k\le K_\theta$,
+\[
+ A_k(Y,z)\ll_\theta{\sqrt Y\over\log Y}
+\]
+uniformly in $Y^\theta\le z\le Y$.
+\end{lemma}
+
+\begin{proof}
+For $k=1$ this is partial summation from the prime number theorem.  For
+$k\ge2$, selecting one prime and dropping the ordering constraint gives
+\[
+ kA_k(Y,z)
+ \le\sum_{z\le p\le Y/z^{k-1}}p^{-1/2}A_{k-1}(Y/p,z).
+\]
+In this range $\log(Y/p)\ge(k-1)\theta\log Y$.  The induction hypothesis and
+Mertens' bound for $\sum1/p$ give the result.
+\end{proof}
+
+It follows that
+\begin{equation}\label{eq:lowerorder}
+ \sum_m m^{-1/2}\ll_\theta{\sqrt Y\over\log Y},
+ \qquad
+ \sum_m m\ll_\theta{Y^2\over\log Y},
+\end{equation}
+for the nonunit active rough products.  The second estimate follows from
+$m\le Y^{3/2}m^{-1/2}$.
+
+\section{Prime-harmonic convergence}
+
+Define the finite measure on $[1,1/\theta]$
+\[
+ \nu_{Y,z}=\sum_{z\le p\le Y}{1\over p}
+ \delta_{\log p/\log z}.
+\]
+Mertens' theorem gives, uniformly for
+$1\le\alpha\le\beta\le1/\theta$,
+\begin{equation}\label{eq:measure}
+ \nu_{Y,z}([\alpha,\beta])
+ =\log(\beta/\alpha)+o_\theta(1).
+\end{equation}
+Thus $\nu_{Y,z}$ converges weakly and uniformly to $ds/s$.  The total harmonic
+weight of repeated prime coordinates is
+\[
+ O\left(\sum_{p\ge z}p^{-2}\right)=o_\theta(1).
+\]
+Consequently, for each fixed $k$, the squarefree degree-$k$ harmonic sum with
+product at most $Y$ tends uniformly to $I_k(u)$.
+
+\section{Power-scale native positivity}
+
+\begin{theorem}[Uniform Dickman asymptotic]\label{thm:main}
+For every fixed $\theta\in(0,1)$, uniformly for $Y^\theta\le z\le Y$,
+\begin{equation}\label{eq:main}
+ \boxed{
+ \Fcal(Y,z)=a\sqrt Y\,\rho\!\left({\log Y\over\log z}\right)
+ +o_\theta(\sqrt Y).
+ }
+\end{equation}
+In particular, for all sufficiently large $Y$,
+\begin{equation}\label{eq:positive}
+ \boxed{
+ \Fcal(Y,z)\ge {a\over2}\rho(1/\theta)\sqrt Y>0
+ }
+\end{equation}
+uniformly in the same range.
+\end{theorem}
+
+\begin{proof}
+Use \eqref{eq:base} when $Y/m$ is beyond the fixed activation range.  The
+square-root term contributes
+\[
+ a\sqrt Y
+ \sum_{\substack{m\le Y\\m\text{ squarefree}\\P^-(m)\ge z}}{\mu(m)\over m}.
+\]
+The constant term, the compact boundary where $Y/m$ is bounded, and the
+$O((Y/m)^{-3/2})$ remainder are all
+$O_\theta(\sqrt Y/\log Y)$ by Lemma~\ref{lem:halfweight} and
+\eqref{eq:lowerorder}.
+
+Expanding the remaining harmonic sum by rough degree, using
+\eqref{eq:measure}, and discarding repeated coordinates at $o_\theta(1)$ cost
+gives exactly \eqref{eq:D}.  Theorem~\ref{thm:dickman} now yields
+\eqref{eq:main}.  Since $\rho$ decreases on compact positive intervals,
+$\rho(u)\ge\rho(1/\theta)>0$, proving \eqref{eq:positive}.
+\end{proof}
+
+\begin{corollary}[All fixed power thresholds are safe]\label{cor:alltheta}
+The earlier condition $\theta>e^{-1}$ is unnecessary.  For every fixed
+$\theta>0$, every state with least allowed rough prime at least $Y^\theta$ is
+eventually positive.
+\end{corollary}
+
+\section{Bellman and transport consequences}
+
+At any state, retain an exact largest-prime decomposition
+\[
+ U_{\rm full}=U_Z-\mathfrak I_Z-\mathfrak T_Z.
+\]
+The state-wise root Bellman inequality is
+\[
+ \mathfrak T_Z\le U_Z-\mathfrak I_Z.
+\]
+
+\begin{corollary}[Power-sector root Bellman closure]\label{cor:rblpte}
+For every fixed $\theta>0$, the state-wise root Bellman inequality holds for
+all sufficiently large states satisfying $z\ge Y^\theta$.
+\end{corollary}
+
+\begin{proof}
+The Bellman inequality is algebraically equivalent to $U_{\rm full}\ge0$.
+Apply Theorem~\ref{thm:main}.
+\end{proof}
+
+At scalar scope, write the completed source as nonnegative even scalar masses
+$e_i$ and odd scalar masses $o_j$.  Equation \eqref{eq:positive} gives
+$\sum e_i\ge\sum o_j$, so a greedy one-dimensional flow covers all odd scalar
+mass while using every even scalar mass at most once.
+
+\begin{firewall}[Scalar transport is not $\CSHT$]
+The preceding flow does not preserve target, atom ratios, row coordinates or
+activation germs.  Positive zero-hinge scalar slack does not imply target
+capacity.  Therefore the theorem closes the minimal scalar state, not the
+stronger all-coordinate Hall producer.
+\end{firewall}
+
+\section{The subpower critical core}
+
+Suppose a sequence of states $(Y_n,z_n)$ violates state-wise scalar positivity.
+If $\log z_n/\log Y_n$ were bounded below by one fixed positive $\theta$, the
+sequence would contradict Theorem~\ref{thm:main}.  Hence necessarily
+\begin{equation}\label{eq:subpower}
+ \boxed{{\log z_n\over\log Y_n}\longrightarrow0.}
+\end{equation}
+The prior subcritical-depth no-go independently shows that a successful
+stopping line cannot remain at depth
+$L\log L=o(\log\log Y)$.  Thus every possible obstruction lies simultaneously
+in the subpower least-prime regime and the rough harmonic saddle.
+
+\begin{definition}[Subpower critical core, $\SPCC$]
+$\SPCC$ is eventual nonnegativity of the literal native scalar on all state
+sequences satisfying \eqref{eq:subpower} and lying in the harmonic-saddle depth
+regime.
+\end{definition}
+
+The exact implication is
+\[
+ \SPCC\Longrightarrow\RBLPTE
+ \Longrightarrow\text{eventual annular }5{:}3\text{ positivity}
+ \Longrightarrow\mathrm{RH}.
+\]
+This paper does not prove $\SPCC$, root $\RBLPTE$, full $\CSHT$, or RH.  Its
+unconditional contribution is that no fixed power-scale terminal state can
+carry the obstruction.
+
+\section{Replay and scientific boundary}
+
+The deterministic replay checks exact residual and exposure identities,
+computes the Dickman delay equation numerically for diagnostics, and evaluates
+the literal native state at $Y=10^6$ for thresholds corresponding to
+$\theta=1/2,2/5,1/3$.  All three states are positive and their rough harmonic
+sums approach the Dickman values.  These computations are reconnaissance; the
+proof is the preceding analytic argument.
+
+Expected classification:
+\[
+ \texttt{PASS\_T97900\_DICKMAN\_POWER\_SECTOR\_LOCALIZATION}.
+\]
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Dickman simplex and positivity & proved exact\\
+Uniform fixed power-scale asymptotic & proved\\
+State-wise RBLPTE in power sectors & proved\\
+One-dimensional scalar transport & proved\\
+Full target-preserving $\CSHT$ & not proved\\
+Subpower core $\SPCC$ & open / RH-bearing\\
+Root $\RBLPTE$ & open / RH-bearing\\
+Riemann Hypothesis & unproved\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}
