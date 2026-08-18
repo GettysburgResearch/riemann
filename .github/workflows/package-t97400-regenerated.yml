@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - ops/t97400-package-regeneration-20260818
+  pull_request:
+    branches:
+      - research/gpt56-pro/97400-p61-bias-source-interface-hardening
 
 permissions:
   contents: read
@@ -59,7 +62,7 @@ jobs:
           Source: gfreund123/riemann PR #576
 
           Exact research head:
-          
+
           \`$RESEARCH_HEAD\`
 
           Exact base:
@@ -88,7 +91,7 @@ jobs:
           (root / 'PACKAGE_METADATA.json').write_text(json.dumps(metadata, indent=2, sort_keys=True) + '\n')
           entries = []
           for p in sorted(root.rglob('*')):
-              if p.is_file() and p.name not in {'PACKAGE_SHA256SUMS'}:
+              if p.is_file() and p.name != 'PACKAGE_SHA256SUMS':
                   entries.append(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(root)}")
           (root / 'PACKAGE_SHA256SUMS').write_text('\n'.join(entries) + '\n')
           PY
