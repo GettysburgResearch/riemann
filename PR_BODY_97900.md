@@ -69,10 +69,16 @@ The finite replay is diagnostic; the theorem is proved analytically.
 
 ## Deterministic artifacts
 
-- ZIP: https://drive.google.com/file/d/REPLACE_ZIP_ID/view?usp=drivesdk
-- PDF: https://drive.google.com/file/d/REPLACE_PDF_ID/view?usp=drivesdk
-- TeX: https://drive.google.com/file/d/REPLACE_TEX_ID/view?usp=drivesdk
-- SHA-256 ledger: https://drive.google.com/file/d/REPLACE_SHA_ID/view?usp=drivesdk
+- ZIP: https://drive.google.com/file/d/1GgPpTMjTzQ-5DuYOzHxNqhmgSFPvYAp7/view?usp=drivesdk
+- PDF: https://drive.google.com/file/d/1FtWPLOnkeGyPKcSWeh4mBd8hn34O1jq-/view?usp=drivesdk
+- TeX: https://drive.google.com/file/d/1Klm9v8Nhxu5VwPBYFsvCDGWfyd9TQ4HE/view?usp=drivesdk
+- SHA-256 ledger: https://drive.google.com/file/d/1c9QL9Dgy6PWbFs1XIUeP8sSAk8W-iJ99/view?usp=drivesdk
+
+```text
+ZIP SHA-256: 12a9c476a4f044dcf3020a21259a57aae78fab34da21dafd9f99d860e8cabbab
+PDF SHA-256: 3218dbe14b8999c0773698ded4fe7e29d00236d3b2b0fd639e160b0f2c715b79
+TeX SHA-256: 1bce2faa3c990fe80cb8ec8552ac1b048ea2a3aaddc62cffdf31d11287d18a53
+```
 
 ## Exact boundary
 
