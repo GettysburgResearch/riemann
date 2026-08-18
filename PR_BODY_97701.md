@@ -111,6 +111,7 @@ The fresh deterministic archive, compiled manuscript, complete TeX source and
 checksum ledger are mirrored in the Riemann Research Packets Drive folder and
 are named with `t97701-c4mbi67-publication-recovery`, not the old T-97700 ZIP.
 
+
 ## Final deterministic artifacts
 
 ```text
