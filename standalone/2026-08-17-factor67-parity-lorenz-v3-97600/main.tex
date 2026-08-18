@@ -1,0 +1,623 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,array,longtable,multirow}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{url}
+\hypersetup{colorlinks=true,linkcolor=blue!48!black,citecolor=blue!48!black,urlcolor=blue!60!black}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{firewall}[theorem]{Firewall}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\Tcal}{\mathcal T}
+\newcommand{\Scal}{\mathcal S}
+\newcommand{\Ecal}{\mathcal E}
+\newcommand{\Ocal}{\mathcal O}
+\newcommand{\CPSL}{\mathrm{CPSL}_{67}}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\title{Parity-Completed Factor--67 Coupling and the Exact Lorenz Frontier\\
+\large A hostile reconstruction of a two-row Mellin--Landau proposal for the Riemann Hypothesis}
+\author{Agentic Polymath Project}
+\date{August 17, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a standalone hostile reconstruction of a parity-resummed factor--67 proposal for the Riemann Hypothesis.  The reconstruction accepts every certified local object at its exact scope, but separates those objects from the global statements needed at composition time.  Three exact findings change the status of the proposed proof.  First, the unsigned causal identity with recursive coefficient $\alpha=r\lambda=r^2$ does not by itself conserve a native one-prime parity coefficient $r=p^{-1/2}$: after the recursive swap it accounts for $2r^2$, leaving a compulsory compensation source $r-2r^2$.  Second, the directed compact-plus-MPFR Target--Lorenz theorem is a canonical-orientation local theorem; the explicit history $(67)$ with terminal parameters $(71,13)$ reverses that orientation and has target deficit $17.0050865382\ldots$.  Third, checkerboard minors and Cauchy--Binet do not imply global target capacity, while exactness of the scalar $5Q_2+3Q_3$ does not lift to simultaneous positivity of rows two and three.
+
+We prove the complete finite owner and parity ledger, the one-prime conservation defect, a positive narrow causal theorem for the unsieved $5{:}3$ scalar, the exact completed-parity scalar Lorenz primal and dual, all real-endpoint knot statements, and the full downstream Mellin--Landau implication.  The remaining arithmetic theorem is a uniform finite Lorenz inequality, denoted $\CPSL$.  It is precisely the source-faithful global compensation statement hidden in the predecessor's ``reserve-preserving grouped Hall'' lemma.  If $\CPSL$ holds, then the scalar
+\[
+R_X=5c_X(2)+3c_X(3)
+\]
+is eventually nonnegative; its Mellin transform contains the zero-free finite numerator $-3(1-2^{-z})(2-2^{-z})$, and Landau's theorem implies RH.  We do not prove $\CPSL$.  Thus the manuscript supplies a complete exact reduction, a reproducible audit, and the first unsupported arrow, but not a proof of RH.
+\end{abstract}
+
+\noindent\textbf{Explicit status.}
+\[
+\boxed{\text{The Riemann Hypothesis remains unproved.}}
+\]
+
+\tableofcontents
+
+\section{Frozen genealogy, reconstruction rule, and result}
+
+The mathematical base is PR~\#566 at exact commit
+\[
+\texttt{2407b4ffe5024a2e3898922cf0b722d5cf69e496}.
+\]
+The two mandatory adversarial inputs are PR~\#574 at
+\[
+\texttt{74fba7f3e55fa9a53d1eb814e5067f5011ef5e86}
+\]
+and PR~\#575 at
+\[
+\texttt{265c481ebd02807ab7d9a95cb0cf905a22c1876f}.
+\]
+All three hashes are frozen.  Same-numbered repository claims are provenance only and are not counted as independent confirmation.
+
+The reconstruction rule is the following.  For each arrow we record what the preceding statement proves, what the next arrow needs, and whether the coordinates, orientation, source measure, quantifiers and normalization coincide.  A retained computation is accepted only at the contract checked by its code and proof object.  A local determinant sign is not silently promoted to a global Hall theorem, a scalar identity is not promoted to row positivity, and an unsigned source identity is not promoted to a parity-observed native identity.
+
+\begin{theorem}[Corrected main theorem]\label{thm:main}
+The completed-parity factor--67 route reduces exactly to the uniform scalar Lorenz inequality $\CPSL$ of Definition~\ref{def:cpsl}.  More precisely,
+\[
+\CPSL\Longrightarrow R_X\ge0\ \text{for all sufficiently large real }X
+\Longrightarrow \RH.
+\]
+The second implication is proved unconditionally in this paper.  The first implication is finite-dimensional at each $X$ and its primal and dual are explicit.  Uniform $\CPSL$ is not proved.
+\end{theorem}
+
+The theorem identifies where the zero-free-strip strength lives: it is not in the finite owner ledger, local MPFR terminal certificate, Cauchy--Binet propagation, or Mellin algebra.  It is in the all-endpoint global Lorenz inequality.
+
+\section{Notation}
+
+Let $\mu$ be the M\"obius function, and put
+\[
+P_{61}=\prod_{p\le61}p.
+\]
+For $u>0$ and an integer $m\ge1$ define the logarithmic hinge
+\[
+h_m(u)=\frac1{\sqrt m}\log\frac um\,\1_{u\ge m}.
+\]
+The project uses two kinds of parity.  Arithmetic parity is the sign $\mu(k)$ of a squarefree source index.  Channel parity is represented by an ordered positive pair $(E,O)$ and the swap
+\[
+\mathsf S(E,O)=(O,E).
+\]
+Signed observation is
+\[
+\Obs(E,O)=E-O.
+\]
+Thus $\Obs(\mathsf S^hP)=(-1)^h\Obs(P)$.
+
+For a finite family of positive atoms, target coordinates are denoted $t_i>0$ and scalar coordinates $r_i$.  These letters never denote a physical component row unless explicitly stated.
+
+\begin{longtable}{p{0.18\textwidth}p{0.72\textwidth}}
+\toprule
+Symbol & Meaning\\
+\midrule
+$Q_Y(j)$ & canonical logarithmic parabolic component row\\
+$c_X(j)$ & full native M\"obius row $\sum_k\mu(k)k^{-1/2}Q_{X/k}(j)$\\
+$Q_*(Y)$ & unsieved scalar packet $5Q_Y(2)+3Q_Y(3)$\\
+$R_X$ & native scalar $5c_X(2)+3c_X(3)$\\
+$r=p^{-1/2}$ & rough-prime scale coefficient\\
+$\lambda=r$ and $\alpha=r^2$ & one-prime specialization of the predecessor's causal weights\\
+$\delta_p=r-2r^2$ & missing native parity compensation in the $\alpha$ recursion\\
+$\Phi_X$ & completed-parity scalar Lorenz envelope\\
+$\CPSL$ & uniform all-endpoint scalar Lorenz feasibility\\
+\bottomrule
+\end{longtable}
+
+\section{Canonical rows and the unique positive scalar}
+
+For $j\ge2$ put
+\[
+A_j=\frac{j+1}{j-1},\qquad
+B_j=\frac{(j+1)(j-2)}{j(j-1)},\qquad
+C_j=\frac2{j(j-1)}.
+\]
+Define
+\begin{equation}\label{eq:Q}
+Q_Y(j)=A_jh_j(Y)-B_jh_{j+1}(Y)+C_j\sum_{m\ge j+2}h_m(Y).
+\end{equation}
+The sum is finite.  A hinge vanishes at its activation point, so $Q_Y(j)$ is continuous on $(0,\infty)$ and affine in $\log Y$ on every open activation cell.  The left and right limits at every integer knot equal the value at the knot.
+
+The full native row is
+\begin{equation}\label{eq:crow}
+c_X(j)=\sum_{k\ge1}\frac{\mu(k)}{\sqrt k}Q_{X/k}(j).
+\end{equation}
+For each real $X$ this is finite.  The same hinge argument proves continuity at every source-activation point $X=km$; no integer-only interpolation is needed.
+
+For rows two and three,
+\[
+Q_Y(2)=3h_2(Y)+\sum_{m\ge4}h_m(Y),
+\]
+\[
+Q_Y(3)=2h_3(Y)-\frac23h_4(Y)+\frac13\sum_{m\ge5}h_m(Y).
+\]
+
+\begin{lemma}[Positive $5{:}3$ dictionary]\label{lem:qstar}
+Put
+\[
+Q_*(Y)=5Q_Y(2)+3Q_Y(3).
+\]
+Then
+\[
+Q_*(Y)=\sum_{m\ge1}\frac{q_*(m)}{\sqrt m}\log(Y/m)_+,
+\]
+where
+\[
+q_*(1)=0,\quad q_*(2)=15,\quad q_*(3)=6,\quad q_*(4)=3,
+\quad q_*(m)=6\ (m\ge5).
+\]
+In particular every unsieved scalar atom is nonnegative.
+\end{lemma}
+\begin{proof}
+Substitute the two displayed row dictionaries.  At $m=2,3,4$ the coefficients are respectively $15,6,5-2=3$; from $m=5$ onward they are $5+1=6$.
+\end{proof}
+
+Define
+\begin{equation}\label{eq:R}
+R_X=5c_X(2)+3c_X(3)
+    =\sum_{k\ge1}\frac{\mu(k)}{\sqrt k}Q_*(X/k).
+\end{equation}
+Finite Dirichlet convolution gives
+\begin{equation}\label{eq:astar}
+a_*(n)=6\1_{n=1}-6\mu(n)
++9\1_{2\mid n}\mu(n/2)-3\1_{4\mid n}\mu(n/4)
+\end{equation}
+and
+\[
+R_X=\sum_{n\le X}\frac{a_*(n)}{\sqrt n}\log(X/n).
+\]
+
+\section{The completed owner and parity ledger}
+
+Every squarefree source index has a unique decomposition
+\begin{equation}\label{eq:factor}
+k=d p_1\cdots p_t,
+\qquad d\mid P_{61},
+\qquad67\le p_1<\cdots<p_t.
+\end{equation}
+The ordered tuple $h(k)=(p_1,\ldots,p_t)$ is the rough history.  Moving one rough prime from the source index to the history sends $(X,k)$ to $(X/p,k/p)$ and satisfies
+\begin{equation}\label{eq:activation}
+\frac{X/p}{k/p}=\frac Xk,
+\qquad
+p^{-1/2}(k/p)^{-1/2}=k^{-1/2}.
+\end{equation}
+It also swaps the parity channels once.  Therefore a source occurrence retains the exact activation $X/k$, coefficient magnitude $k^{-1/2}$, and sign
+\[
+\mu(d)(-1)^t=\mu(k).
+\]
+At fixed $X$, $t\le\lfloor\log X/\log67\rfloor$, so the completed history expansion is finite.  Grouping all $d\mid P_{61}$ colors acts diagonally on the two parity channels and commutes with $\mathsf S$; the $5{:}3$ scalar does not erase the accumulated character.
+
+This proves source provenance.  It does not make a swapped terminal packet positive.
+
+\section{The exact coefficient delta omitted by the parity-resummed source claim}
+
+The predecessor uses, for one rough prime,
+\[
+r=p^{-1/2},\qquad s=1-r,\qquad \lambda=r,
+\qquad\alpha=r\lambda=r^2.
+\]
+Its unsigned packet identity is
+\begin{equation}\label{eq:unsigned}
+P=sP+\lambda(P-rC)+\alpha C.
+\end{equation}
+Equation~\eqref{eq:unsigned} is correct as an unsigned linear identity.  The next step of the proof, however, needs the parity-observed native source.
+
+\begin{proposition}[One-prime conservation audit]\label{prop:delta}
+The native paired one-prime occurrence is $(P,rC)$, whose signed observation is $P-rC$.  If the causal current is represented positively and the $\alpha$ child is recursed in the swapped channel, then the current and recursive child account for odd coefficient $2r^2$, not $r$.  The exact missing compensation is
+\[
+\boxed{\delta_p=r-2r^2=r(1-2r)>0.}
+\]
+\end{proposition}
+\begin{proof}
+Represent the causal difference by the positive pair $(P,rC)$.  The current part is
+\[
+s(P,0)+\lambda(P,rC)=(P,\lambda rC)=(P,\alpha C).
+\]
+The swapped recursive child contributes another $(0,\alpha C)$.  Hence the total odd coefficient is $2\alpha=2r^2$.  Subtracting from the native coefficient $r$ gives the formula.  Since $p\ge67$, $r<1/2$.
+\end{proof}
+
+At $p=67$, the compensation is approximately $0.0923$, whereas $\alpha\approx0.0149$.  Thus it is not a negligible terminal correction.  A completed proof must specify its source atoms, target mass, scalar or row coordinates, barycenter, owner, and interaction with every other reserve.  The eleven-line statement called ``reserve-preserving grouped Hall'' in the predecessor does not do this.
+
+\section{A valid narrow positivity theorem}
+
+The preceding obstruction concerns the native parity ledger.  One local scalar fact does survive and is useful as a firewall against overstatement.
+
+\begin{lemma}[Unsieved one-prime scalar causal positivity]\label{lem:localcausal}
+For every prime $p\ge67$ and every $Y\ge p$,
+\[
+Q_*(Y)-p^{-1/2}Q_*(Y/p)\ge0.
+\]
+\end{lemma}
+\begin{proof}
+At source indices not divisible by $p$, the difference retains the positive coefficient $q_*(n)$.  At $n=pm$ the only nonzero coefficient changes are $6,-9,0,3$ for $m=1,2,3,4$.  With $y=Y/p$, their contribution times $\sqrt p$ is
+\[
+b(y)=6\log y-\frac9{\sqrt2}\log(y/2)_+
++\frac32\log(y/4)_+.
+\]
+It is $6\log y$ on $[1,2]$.  On $[2,4]$ it is affine in $\log y$ with negative slope and positive terminal value $(12-9/\sqrt2)\log2$.  On $[4,\infty)$ its slope is $15/2-9/\sqrt2>0$.  Thus $b\ge0$.
+\end{proof}
+
+This lemma neither survives arbitrary signed $P_{61}$ convolution nor supplies the missing compensation of Proposition~\ref{prop:delta}.  It is not a proof of the global producer.
+
+\section{What the directed terminal certificate actually proves}
+
+The terminal computer-assisted theorem is local.  For canonical even orientation, $p\ge67$, $1\le y<67$, and rows $2\le j\le66$, it studies the complete grouped $P_{61}$ terminal source.  A target-exact leftmost even submeasure is compared with odd demand.  The compact proof owns $py<166000$; the MPFR proof owns $py\ge166000$ and reports a strict determinant lower bound
+\[
+26.7858198871370094575061.
+\]
+The MPFR implementation uses 256-bit downward and upward rounding for primitive square roots and logarithms, integer event ordering, and outward interval arithmetic.  The retained campaign contains $51{,}118{,}080$ event records.  The splice point $py=166000$ belongs only to the tail.
+
+At its stated scope, the certificate proves canonical-orientation target and row margins for the complete grouped color family.  It does not prove any of the following:
+\begin{enumerate}[label=(\alph*)]
+\item that an odd-history leaf has the canonical orientation;
+\item that other histories globally compensate a reversed target deficit;
+\item that the compensation source in Proposition~\ref{prop:delta} has a Hall owner;
+\item that scalar exactness gives nonnegative rows;
+\item that local determinant signs imply global target-prefix capacity.
+\end{enumerate}
+These are composition questions, not numerical margins.
+
+\section{The binding odd-history witness}
+
+Take
+\[
+X=67\cdot71\cdot13=61841,
+\qquad h=(67),
+\qquad(p,y)=(71,13).
+\]
+For each active $d\mid P_{61}$ define
+\[
+t_d=d^{-1/2}\left[T(923/d)-71^{-1/2}T(13/d)\right],
+\qquad T(u)=(4\sqrt u-3)\1_{u\ge1}.
+\]
+There are $239$ active divisors.  Independent 80-digit reconstruction gives
+\[
+E_T=238.236769968802241851178078781701\ldots,
+\]
+\[
+O_T=221.231683430583189260479623028094\ldots,
+\]
+and hence
+\begin{equation}\label{eq:oddgap}
+\boxed{E_T-O_T=17.005086538219052590698455753606\ldots>17.}
+\end{equation}
+The incoming history has odd length.  Actual even capacity is therefore $O_T$ and actual odd demand is $E_T$.  Leafwise exact-target Hall is impossible.
+
+Other histories might pay the deficit.  Proving that they always do is exactly the global capacity theorem; it cannot be inferred from the local terminal certificate.
+
+\section{Why TP2 and scalar exactness do not repair the gap}
+
+\subsection{Cauchy--Binet transports minors, not capacity}
+
+Let $H$ be terminal-by-source owner incidence and let $K$ be terminal-by-feature.  The correct source-feature matrix is $M=H^{\mathsf T}K$.  Ordering sources by owner makes the relevant incidence minors nonnegative.  Cauchy--Binet then transports $2\times2$ determinant signs.
+
+This does not imply Hall.  The exact finite countermodel
+\[
+H=I_2,
+\qquad K=\begin{pmatrix}1&1\\2&4\end{pmatrix}
+\]
+has positive entries and positive determinant, but if row one is even supply and row two odd demand, target capacity is $1<2$.  No coefficient $0\le u\le1$ can match the target.  Thus checkerboard/TP2 is not global Lorenz dominance.
+
+\subsection{The scalar-to-row normalization error}
+
+Define
+\[
+\rho(Y)=\frac{Q_Y(3)}{Q_Y(2)}\qquad(Y>2).
+\]
+
+\begin{lemma}[Terminal row ratio]\label{lem:rho}
+The function $\rho$ is nondecreasing on $(2,\infty)$ and strictly increasing on $(3,\infty)$.
+\end{lemma}
+\begin{proof}
+For $2<Y\le3$, $Q_Y(3)=0$.  For $3<Y<4$, direct differentiation gives the sign $\log(3/2)>0$.  For $Y\ge4$ the infinite tails cancel:
+\[
+3Q_Y(3)-Q_Y(2)=3D(Y),
+\quad D(Y)=2h_3(Y)-h_4(Y)-h_2(Y)=A\log Y-B,
+\]
+where
+\[
+A=\frac2{\sqrt3}-\frac12-\frac1{\sqrt2}<0,
+\quad
+B=\frac{2\log3}{\sqrt3}-\left(1+\frac1{\sqrt2}\right)\log2>0.
+\]
+On a cell $N\le Y<N+1$, write $Q_Y(2)=S_N\log Y-T_N$ with $S_N,T_N>0$.  Then
+\[
+\rho'(Y)=\frac{BS_N-AT_N}{YQ_Y(2)^2}>0.
+\]
+Continuity at knots completes the proof.
+\end{proof}
+
+Row-two exactness is compatible with Lemma~\ref{lem:rho}.  Scalar exactness is not.
+
+\begin{proposition}[Exact scalar tradeoff]\label{prop:tradeoff}
+Let $Y_e\ge Y_o>2$, $q_i=Q_{Y_i}(2)$ and $\rho_i=\rho(Y_i)$.  If $u$ is chosen by $5{:}3$ scalar exactness
+\[
+uq_e(5+3\rho_e)=bq_o(5+3\rho_o),
+\]
+then
+\[
+\Delta_2=-\frac{3bq_o(\rho_e-\rho_o)}{5+3\rho_e}\le0,
+\]
+\[
+\Delta_3=\frac{5bq_o(\rho_e-\rho_o)}{5+3\rho_e}\ge0,
+\qquad5\Delta_2+3\Delta_3=0.
+\]
+For $Y_e>Y_o>3$, both inequalities are strict.
+\end{proposition}
+
+Hence a scalar coupling may be valid for the direct scalar Mellin consumer, but it cannot be promoted to the row-valued terminal theorem.  A proof must choose one state space and stay in it.
+
+\section{The exact completed-parity scalar Lorenz problem}
+
+We now formulate the strongest state space compatible with the direct scalar consumer.
+
+Fix real $X$.  Expand the literal squarefree source completely and retain cumulative parity.  Equivalently, index the even atoms by squarefree $k$ with $\mu(k)=1$ and the odd atoms by $\mu(k)=-1$.  Give an atom its positive coefficient $k^{-1/2}$, the project target
+\[
+t_X(k)=\frac1{\sqrt k}T(X/k),
+\]
+and scalar
+\[
+r_X(k)=\frac1{\sqrt k}Q_*(X/k)\ge0.
+\]
+The owner tree is a provenance partition of this finite set; it does not alter these coordinates.
+
+Let $a_i$ be the available even coefficient after any literal source restriction, and let $T_O,R_O$ be total odd target and scalar demand.  A scalar common-source coupling is a vector $u$ satisfying
+\begin{equation}\label{eq:lp}
+0\le u_i\le a_i,
+\qquad\sum_i t_i u_i=T_O,
+\qquad\sum_i r_i u_i\ge R_O.
+\end{equation}
+Residual even atoms are scalar-nonnegative, so \eqref{eq:lp} implies $R_X\ge0$.
+
+\begin{theorem}[Finite Lorenz primal and dual]\label{thm:lorenz}
+Define
+\[
+\Phi_X(T)=\max\left\{\sum_i r_i u_i:
+0\le u_i\le a_i,\ \sum_i t_i u_i=T\right\}.
+\]
+Then \eqref{eq:lp} is feasible if and only if
+\[
+T_O\le\sum_i a_it_i,
+\qquad R_O\le\Phi_X(T_O).
+\]
+If $\theta_i=r_i/t_i$ are arranged in decreasing order, $\Phi_X$ is the fractional-knapsack Lorenz curve and has at most one fractional atom.  Its exact dual is
+\begin{equation}\label{eq:dual}
+\boxed{
+\Phi_X(T)=\min_{\lambda\in\R}
+\left[\lambda T+\sum_i a_i(r_i-\lambda t_i)_+\right].}
+\end{equation}
+\end{theorem}
+\begin{proof}
+If two non-boundary coefficients satisfy $\theta_i>\theta_j$, transferring a small fixed amount of target from $j$ to $i$ increases the scalar objective.  Therefore every optimizer saturates larger ratios before smaller ratios.  This proves the primal formula.  Weak duality for \eqref{eq:dual} is immediate; equality holds at a threshold equal to the ratio of the fractional atom.
+\end{proof}
+
+\begin{definition}[Completed-parity scalar Lorenz theorem]\label{def:cpsl}
+$\CPSL$ is the assertion that the inequalities of Theorem~\ref{thm:lorenz} hold for the literal completed-parity factor--67 source at every sufficiently large real endpoint $X$, including all open activation cells and both one-sided knot limits.
+\end{definition}
+
+The one-dimensional dual makes the next research step fail-closed.  If $\CPSL$ is false at a finite endpoint, an optimizing $\lambda$ is an exact separating witness.  If it is true uniformly, it proves the scalar needed for Mellin--Landau.  The finite directed terminal theorem, TP2, and ratio monotonicity are useful ingredients but do not prove it.
+
+\section{The predecessor's $g\ge Tg$ claim in the correct state space}
+
+Let $T$ be a positive nilpotent operator on a finite ordered vector space.  The abstract identity
+\[
+F+TF=g
+\]
+and inequality $g\ge Tg$ imply
+\[
+F=(I-T^2)^{-1}(g-Tg)\ge0.
+\]
+This algebra is exact.
+
+The composition gap is prior to the algebra.  To apply it one must define:
+\begin{enumerate}[label=(\roman*)]
+\item the literal source atoms represented by each component of $g$;
+\item the child coefficients represented by $T$;
+\item the compensation atoms of Proposition~\ref{prop:delta};
+\item an atomwise conservation identity whose root signed observation is exactly $R_X$;
+\item a proof of $g-Tg\ge0$ in the same target-plus-scalar or row-valued state.
+\end{enumerate}
+The predecessor does not provide these definitions.  Its $g\ge Tg$ sentence is a restatement of the missing global coupling, not a consequence of the local Hall certificate.
+
+If the state is row-valued, Proposition~\ref{prop:tradeoff} is binding.  If the state is scalar-only, the row-valued MPFR theorem cannot be imported as though its coefficient vector were scalar-exact.  In scalar state, the correct theorem is $\CPSL$.
+
+\section{All real endpoints and activation sides}
+
+Every object in the direct source formulation is continuous in real $X$.  A new hinge at $X=km$ enters with coefficient zero.  On an open cell between consecutive activation points, every target and scalar coordinate is affine in $\log X$ plus square-root target terms, and the finite Lorenz LP varies continuously.  At a knot, the newly entered atom has zero scalar hinge and its target has the explicitly chosen one-sided convention.  Therefore a universal proof must state which side owns the target activation and verify both limiting LPs.  Sampling integer endpoints is insufficient.
+
+The retained terminal certificate does include one-sided local activation cells.  This does not supply the global source LP, but it removes an unrelated interpolation ambiguity at the local canonical leaf.
+
+\section{Complete Mellin transform and growth audit}
+
+We now prove the analytic consumer without repository shorthand.
+
+\begin{lemma}[Growth]\label{lem:growth}
+For $X\ge2$,
+\[
+|R_X|\le60\sqrt X(1+\log X).
+\]
+\end{lemma}
+\begin{proof}
+The function $t^{-1/2}\log(Y/t)$ decreases on $[1,Y]$, and integral comparison gives
+\[
+\sum_{m\le Y}\frac1{\sqrt m}\log(Y/m)\le4\sqrt Y.
+\]
+Since $0\le q_*(m)\le15$, $Q_*(Y)\le60\sqrt Y$.  Hence
+\[
+|R_X|\le60\sqrt X\sum_{k\le X}\frac1k
+\le60\sqrt X(1+\log X).
+\]
+\end{proof}
+
+Thus $R_X$ is locally integrable and has finite Mellin abscissa.  For $\sigma=\Re s>1/2$, absolute Fubini is justified.  Substituting $X=kY$ gives the essential factor
+\[
+k^{-s-1/2}.
+\]
+Also,
+\[
+\int_m^\infty\log(X/m)X^{-s-1}\,dX=\frac{m^{-s}}{s^2}.
+\]
+The Dirichlet series of $q_*$ is
+\[
+\sum_{m\ge1}\frac{q_*(m)}{m^z}
+=6\zeta(z)-6+9\,2^{-z}-3\,4^{-z},
+\qquad z=s+\tfrac12.
+\]
+Multiplying by $\sum\mu(k)k^{-z}=1/\zeta(z)$ yields
+\begin{theorem}[Exact scalar Mellin transform]\label{thm:mellin}
+Initially for $\Re s>1/2$,
+\begin{equation}\label{eq:mellin}
+\boxed{
+\int_1^\infty R_X X^{-s-1}\,dX
+=\frac6{s^2}
+-\frac{3(1-2^{-z})(2-2^{-z})}{s^2\zeta(z)},
+\quad z=s+\tfrac12.}
+\end{equation}
+The right side gives the meromorphic continuation to $\Re s>0$.
+\end{theorem}
+
+\section{Real-axis removability, pole survival, and Landau}
+
+For real $z>1$, $\zeta(z)>0$.  For $0<z<1$, the alternating eta series is positive and
+\[
+\eta(z)=(1-2^{1-z})\zeta(z),
+\]
+so $\zeta(z)<0$.  Hence zeta has no real zero in $(0,\infty)$.  At $z=1$, $1/\zeta(z)$ has a zero, so \eqref{eq:mellin} is removable.  Therefore the continuation is analytic at every real $s>0$.
+
+If $\rho$ is a nontrivial zero with $\Re\rho>1/2$, then
+\[
+|2^{-\rho}|=2^{-\Re\rho}<1.
+\]
+Thus $2^{-\rho}$ equals neither $1$ nor $2$.  The finite numerator in \eqref{eq:mellin} is nonzero.  A zero of arbitrary multiplicity $m$ therefore gives a pole of order $m$ at $s=\rho-1/2$.
+
+\begin{theorem}[Mellin--Landau implication]\label{thm:landau}
+If $R_X\ge0$ for all sufficiently large real $X$, then RH holds.
+\end{theorem}
+\begin{proof}
+Discard the finite initial interval; its Mellin transform is entire.  Put $f(t)=R_{e^t}$ on the remaining half-line.  By Lemma~\ref{lem:growth}, $f$ is locally integrable and of exponential order.  Its Laplace transform is \eqref{eq:mellin}.  Landau's theorem for nonnegative Laplace transforms \cite{widder,titchmarsh} says that a finite real abscissa of convergence is a singular point.  Since the continuation is analytic at every positive real $s$, the abscissa is at most zero.  The defining transform is therefore holomorphic throughout $\Re s>0$.  An off-line zero $\rho$ would create the nonremovable pole at $\rho-1/2$ found above, a contradiction.  The functional equation reflects zeros across $\Re z=1/2$, so every nontrivial zero lies on the critical line.
+\end{proof}
+
+Combining Theorems~\ref{thm:lorenz} and \ref{thm:landau} proves Theorem~\ref{thm:main}.
+
+\section{Independent executable reconstruction}
+
+The accompanying program uses exact rational arithmetic for the coefficient identities, causal weights, scalar tradeoff, Cauchy--Binet countermodel, Lorenz primal/dual fixtures, and Mellin numerator.  It uses directed Decimal intervals for the $239$-atom odd-history target witness and a separate floating diagnostic for finite scalar LP instances and the prefix state.  The latter is explicitly falsification, not proof.
+
+The mutation suite rejects:
+\begin{enumerate}[label=(\arabic*)]
+\item dropping cumulative history parity;
+\item replacing the native rough coefficient $r$ by $2r^2$;
+\item omitting the compensation $r-2r^2$;
+\item using $HK$ instead of $H^{\mathsf T}K$;
+\item inferring Hall from positive minors;
+\item claiming scalar exactness gives two nonnegative rows;
+\item treating the local terminal certificate as global capacity;
+\item checking only integer endpoints;
+\item omitting $k^{-s-1/2}$ in Mellin Fubini;
+\item promoting finite scans to $\CPSL$ or RH.
+\end{enumerate}
+
+\section{Response to the mandatory adversarial inputs}
+
+\begin{longtable}{p{0.12\textwidth}p{0.35\textwidth}p{0.40\textwidth}}
+\toprule
+Input & Finding & Disposition\\
+\midrule
+PR~\#574 & Correct feature product is $H^{\mathsf T}K$ and owner ordering matters. & Independently reproved; retained only for determinant propagation.\\
+PR~\#574 & Cauchy--Binet does not prove target capacity or global Lorenz dominance. & Accepted as binding; exact $2\times2$ countermodel included.\\
+PR~\#574 & Odd-history witness blocks leafwise Hall. & Independently recomputed with gap $17.0050865\ldots$.\\
+PR~\#575 & Completed parity owner ledger is finite and exact. & Independently reproved in Section 4.\\
+PR~\#575 & $Q_3/Q_2$ is monotone. & Independently reproved; used only for the row-two-exact edge.\\
+PR~\#575 & Scalar exactness does not lift to two rows. & Accepted as binding; exact formulas in Proposition~\ref{prop:tradeoff}.\\
+PR~\#575 & Scalar Hall is a finite Lorenz LP with one-dimensional dual. & Made the canonical producer frontier, Theorem~\ref{thm:lorenz}.\\
+PR~\#575 & Uniform $\CPSL$ is open. & Accepted as the first unsupported arrow and the theorem carrying zero-free strength.\\
+\bottomrule
+\end{longtable}
+
+\section{Conclusion and exact status}
+
+The manuscript resolves the deltas rather than the Riemann Hypothesis.  The finite owner ledger, parity character, local directed terminal certificate, ratio monotonicity, scalar dictionary, Mellin transform, noncancellation, and Landau consumer are mutually compatible at their actual scopes.  What fails is the transition from local certified leaves to one global source-faithful capacity statement.
+
+The first unsupported arrow is
+\[
+\boxed{
+\text{literal completed-parity source}
+\not\Longrightarrow_{\text{proved}}
+\text{uniform target-exact scalar-superordinate Lorenz coupling}.}
+\]
+In the predecessor this arrow was named ``reserve-preserving grouped Hall'' and written as $g\ge Tg$.  The missing $r-2r^2$ source, the odd-history target deficit, the Cauchy--Binet capacity gap, and the scalar-to-row tradeoff show why it cannot be accepted as bookkeeping.
+
+The strongest honest result is the exact criterion
+\[
+\boxed{\CPSL\Longrightarrow R_X\ge0\text{ eventually}\Longrightarrow\RH.}
+\]
+Uniform $\CPSL$ is open and RH-bearing.  No equivalent cancellation or benchmark estimate is assumed elsewhere.
+
+\appendix
+\section{Interface contract table}
+
+\begin{longtable}{p{0.18\textwidth}p{0.25\textwidth}p{0.25\textwidth}p{0.20\textwidth}}
+\toprule
+Interface & What is proved & What is needed & Verdict\\
+\midrule
+Canonical rows to real endpoints & continuous zero-entry hinges & all cells and knot sides & exact\\
+Owner ledger & unique factorization, coefficient and activation & one owner and parity & exact\\
+Unsigned causal identity to native source & $P=sP+\lambda(P-rC)+\alpha C$ & odd coefficient $r$ after swap & mismatch: $2r^2$\\
+Compensation to Hall & required $r-2r^2$ demand & disjoint owned global capacity & open\\
+Local AVLT to odd leaf & canonical orientation row margins & reversed/global compensation & fails leafwise\\
+TP2 to Hall & determinant signs & target capacity/Lorenz prefixes & false implication\\
+Scalar to rows & scalar equality & two nonnegative rows & false\\
+Global source to scalar Hall & finite Lorenz LP & uniform $\CPSL$ & open\\
+Scalar positivity to RH & exact Mellin and Landau & eventual $R_X\ge0$ & proved conditional\\
+\bottomrule
+\end{longtable}
+
+\section{Hostile-review checklist}
+
+Reject the route at the first occurrence of any of the following:
+\begin{enumerate}
+\item a source occurrence whose coefficient or activation changes under ownership transfer;
+\item an $\alpha$ child recursed without the $r-2r^2$ compensation source;
+\item a compensation atom with no unique owner;
+\item use of a canonical terminal coefficient vector after an odd history;
+\item use of determinant signs as total target capacity;
+\item scalar exactness promoted to row feasibility;
+\item score, port or barycenter coordinates silently erased from a scalar LP;
+\item integer samples substituted for real activation cells;
+\item a pointwise transcendental value represented as a directed interval;
+\item omission of the factor $k^{-s-1/2}$ in the Mellin substitution;
+\item a finite diagnostic represented as proof of $\CPSL$ or RH.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{titchmarsh}
+E. C. Titchmarsh, revised by D. R. Heath-Brown,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed., Oxford University Press, 1986.
+\bibitem{widder}
+D. V. Widder, \emph{The Laplace Transform}, Princeton University Press, 1941.
+\bibitem{hardy}
+G. H. Hardy, J. E. Littlewood, and G. P\'olya,
+\emph{Inequalities}, 2nd ed., Cambridge University Press, 1952.
+\bibitem{fousse}
+L. Fousse, G. Hanrot, V. Lef\`evre, P. P\'elissier, and P. Zimmermann,
+``MPFR: A Multiple-Precision Binary Floating-Point Library with Correct Rounding,''
+\emph{ACM Trans. Math. Software} 33 (2007), no. 2.
+\bibitem{apostol}
+T. M. Apostol, \emph{Introduction to Analytic Number Theory}, Springer, 1976.
+\end{thebibliography}
+
+\end{document}
