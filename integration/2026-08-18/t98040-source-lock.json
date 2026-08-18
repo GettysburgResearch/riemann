@@ -1,0 +1,36 @@
+{
+  "schema": "riemann.t98040.dickman-stieltjes-corridor.source-lock.v1",
+  "created_utc": "2026-08-18",
+  "base": {
+    "pr": 603,
+    "head_sha": "1dac3eeccb5a01183067c00722d92fbcf2df12c5"
+  },
+  "compared": {
+    "pr587": "8a0f074c5b96600b461fdd6e23b47ee2162c4a70",
+    "pr599": "8daa0a5d94de56c68a1ce710824b26cacc1a9bbc"
+  },
+  "publication_provenance": {
+    "pr603_review": 4960295595,
+    "original_packet": "riemann-dickman-stieltjes-corridor-2026-08-18.zip",
+    "original_packet_sha256": "aa24baf58c3c23e4a04d486e346584f88a90c9a947d4378e3cc4755be2371e3d",
+    "collision_branch_preserved": "research/gpt56-pro/98030-vk-dickman-spectral-transfer",
+    "encoding_repairs": {
+      "literal_tex_rm_restored": 2,
+      "markdown_hard_breaks_normalized": 16
+    }
+  },
+  "collision_safe_mapping": {
+    "T-98030": "T-98040",
+    "L-98030": "L-98040",
+    "L-98031": "L-98041",
+    "L-98032": "L-98042",
+    "M-98030": "M-98040",
+    "O-98030": "O-98040",
+    "X-98030": "X-98040"
+  },
+  "status": {
+    "mesoscopic_dickman_corridor": "PROPOSED_COMPLETE_INDEPENDENT_REVIEW_REQUIRED",
+    "GPC67": "OPEN",
+    "RH": "UNPROVEN"
+  }
+}
