@@ -1,0 +1,59 @@
+{
+  "bulk_power": {
+    "alpha_above_4": "-1/20",
+    "alpha_at_4": "0",
+    "alpha_below_4": "1/20"
+  },
+  "certificate_class": "EXACT_RATIONAL_ALGEBRA",
+  "gpc67_proved": false,
+  "l4pbr67_proved": false,
+  "plst67_proved": false,
+  "proof_object_sha256": "2d6dd568444df999dab2407007566745e93e6ecf6460ff58ae203ffe18e1a56c",
+  "rh_established": false,
+  "schema": "riemann.t98100.polylog-child-boundary.v1",
+  "slow_cutoff_subpower": true,
+  "synthetic_stieltjes": {
+    "X": 1000,
+    "Y": 20,
+    "activation": "500",
+    "cutoff": "50",
+    "identity": true,
+    "lhs": "2349008/1002001",
+    "products": [
+      [
+        1,
+        1
+      ],
+      [
+        7,
+        -1
+      ],
+      [
+        11,
+        -1
+      ],
+      [
+        13,
+        -1
+      ],
+      [
+        77,
+        1
+      ],
+      [
+        91,
+        1
+      ],
+      [
+        143,
+        1
+      ],
+      [
+        1001,
+        -1
+      ]
+    ],
+    "rhs": "2349008/1002001"
+  },
+  "verdict": "PASS_T98100_POLYLOG_CHILD_BOUNDARY"
+}
