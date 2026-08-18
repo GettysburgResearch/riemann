@@ -1,0 +1,24 @@
+{
+  "schema": "riemann.t97900.fixed-angle-bellman-no-go.lock.v1",
+  "created_utc": "2026-08-18T05:30:00Z",
+  "base": {
+    "pr": 591,
+    "commit": "5c43060fd11e6a3f5d090ee4c74e4a48ca2eb111",
+    "tree": "0caa9e42ac5ad9b290ac2f04af212a5c7e0a8b54"
+  },
+  "frozen_inputs": {
+    "pr581": "62aaa54ac49f0aa89fd58f14a539cc53089f884c",
+    "pr584": "e919c6afd1e95fffa505f7ba3f532cb12b8c410c",
+    "pr582": "699f9f119a66823702e96fba95cc8b14b8251c60",
+    "pr576": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7"
+  },
+  "claims": ["L-97900", "R-97900", "L-97901", "L-97902", "M-97900", "T-97900"],
+  "proof_object_sha256": "21de8b6bf98825f73a9a159fce0beebd25e591760f82684026a890ed8eda9d44",
+  "status": {
+    "fixed_angle_invariance": "REFUTED",
+    "scalar_positivity": "OPEN",
+    "cpsl67": "OPEN",
+    "ncbi67": "OPEN",
+    "rh": "UNPROVED"
+  }
+}
