@@ -1,0 +1,29 @@
+{
+  "abstract_theorem": "PROVED_EXACT",
+  "base_fixture": {
+    "functional_equalities": [
+      true,
+      true,
+      true
+    ],
+    "local_identity": true,
+    "nilpotent": true,
+    "passed": true,
+    "positive_resolved_row": true,
+    "resolved_row": [
+      "20159/3840",
+      "47723/3840",
+      "99629/3840"
+    ],
+    "row_identity": true
+  },
+  "mutations": {
+    "cycle_rejected": true,
+    "negative_current_rejected": true
+  },
+  "pr620_application": "PROPOSED_PENDING_LOCAL_RECONSTRUCTION",
+  "proof_object_sha256": "f7e34e146779d1df74fd28df1bd9cb941b2df21425536ee9e01d5f8343d025cd",
+  "rh_established": false,
+  "schema": "riemann.x99120.two-sort-row-resolvent.v1",
+  "verdict": "PASS_T99120_NILPOTENT_TWO_SORT_ROW_RESOLVENT"
+}
