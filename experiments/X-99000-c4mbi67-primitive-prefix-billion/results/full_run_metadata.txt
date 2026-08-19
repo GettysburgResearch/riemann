@@ -1,0 +1,14 @@
+T99000 FULL EXACT RUN METADATA
+
+command: c++ -O3 -std=c++20 -march=native src/scan_cprefix_exact.cpp -o /tmp/t99000_scan_exact
+command: /tmp/t99000_scan_exact 1000000000
+comparison: cmp rerun transcript retained transcript
+comparison_result: BYTE_IDENTICAL
+source_sha256: 95c36343fc523fdf1c58034873b9ce5c71d999e82d1132d12c89cf3417709c23
+retained_output_sha256: 47985ac0f13e986419e0f57bf9d626d8600491823d14c9a4cd1cb71ff931df6b
+verification_json_sha256: 5fdfa3b8a8faa0e7b103ec6a4c5d9f14a9c8c852e2dd6ad7a2dd80ccfd3422c6
+compiler: c++ (Debian 14.2.0-19) 14.2.0
+scale: 2^40
+peak_memory_kib: 3324264
+elapsed_wall: 0:25.03
+exit_status: 0

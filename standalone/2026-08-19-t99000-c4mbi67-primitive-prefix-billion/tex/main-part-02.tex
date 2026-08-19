@@ -1,0 +1,156 @@
+\section{The annular scalar and its primitive prefix}
+
+For $y>0$ write $\log y_+=\max(\log y,0)$ and define
+\[
+ R_X=\sum_{n\ge1}\frac{a(n)}{\sqrt n}\log(X/n)_+,
+ \qquad
+ \A_X=R_X-R_{X/4}.
+\]
+All sums are finite.  Also put
+\[
+ H_X(n)=\min\{\log4,\log(X/n)_+\}.
+\]
+Then directly
+\begin{equation}\label{eq:annular-discrete}
+ \A_X=\sum_{n\ge1}\frac{a(n)}{\sqrt n}H_X(n).
+\end{equation}
+
+\begin{definition}[Primitive prefix]
+For $t>0$ set
+\[
+ C(t)=\sum_{n\le t}\frac{a(n)}{\sqrt n},
+ \qquad C(t)=0\quad(0<t<1).
+\]
+\end{definition}
+
+\begin{theorem}[Exact primitive-prefix window]\label{thm:window}
+For every real $X>0$,
+\begin{equation}\label{eq:Rwindow}
+ R_X=\int_1^X C(t)\frac{dt}{t},
+ \qquad
+ \boxed{\A_X=\int_{X/4}^{X}C(t)\frac{dt}{t}}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For each $n$,
+\[
+ \log(X/n)_+=\int_1^X\1_{n\le t}\frac{dt}{t}.
+\]
+Only $n\le X$ occur, so finite Fubini gives the first identity.  Subtracting
+the same identity at $X/4$ gives the second, with the convention $C(t)=0$ for
+$t<1$.
+\end{proof}
+
+Let
+\[
+ B_{1/2}(t)=\sum_{n\le t}\frac{\mu(n)}{\sqrt n},
+ \qquad B_{1/2}(t)=0\quad(t<1).
+\]
+
+\begin{theorem}[Three-band primitive prefix]\label{thm:C-D}
+For every real $t>0$,
+\begin{equation}\label{eq:Ddef}
+ C(t)=6-\D(t),
+ \qquad
+ \D(t)=6B_{1/2}(t)-\frac9{\sqrt2}B_{1/2}(t/2)
+             +\frac32B_{1/2}(t/4).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Sum \eqref{eq:aexplicit} over $n\le t$ with weight $n^{-1/2}$.  The three
+shifted sums are
+\[
+ \sum_{2m\le t}\frac{\mu(m)}{\sqrt{2m}}
+ =\frac1{\sqrt2}B_{1/2}(t/2),\qquad
+ \sum_{4m\le t}\frac{\mu(m)}{\sqrt{4m}}
+ =\frac12B_{1/2}(t/4).
+\]
+The $6\delta_1$ term is $6$ for $t\ge1$ and both sides vanish appropriately
+below $1$.
+\end{proof}
+
+\begin{corollary}[A stronger pointwise producer]\label{cor:pointwise}
+If $C(t)\ge0$ for every sufficiently large $t$, and the finitely many earlier
+windows are checked separately, then $\A_X\ge0$ for every sufficiently large
+$X$.  In particular, global $C(t)\ge0$ implies global $\A_X\ge0$.
+\end{corollary}
+\begin{proof}
+Use the positive measure $dt/t$ in \eqref{eq:Rwindow}.
+\end{proof}
+
+\section{C4MBI67 and exact four-band form}
+
+Substitution of \eqref{eq:aexplicit} into \eqref{eq:annular-discrete} gives
+\begin{equation}\label{eq:kappa}
+ \A_X=6H_X(1)+\mathfrak C_X,
+\end{equation}
+where
+\[
+ \mathfrak C_X=\sum_{n\ge1}\frac{\mu(n)}{\sqrt n}\kappa_X(n),
+\qquad
+ \kappa_X(n)=-6H_X(n)+\frac9{\sqrt2}H_{X/2}(n)
+                         -\frac32H_{X/4}(n).
+\]
+Thus C4MBI67 is the inequality
+\begin{equation}\label{eq:c4mbi}
+ \mathfrak C_X\ge-6H_X(1),
+\end{equation}
+which is exactly $\A_X\ge0$.
+
+\begin{theorem}[Exact four-band boundary]\label{thm:fourband}
+For every $X>0$, with $B_{1/2}(t)=0$ below $1$,
+\begin{align}
+\mathfrak C_X={}&-\frac32\int_{X/16}^{X/8}B_{1/2}(t)\frac{dt}{t}
++\frac{9\sqrt2-3}{2}\int_{X/8}^{X/4}B_{1/2}(t)\frac{dt}{t}\notag\\
+&+\frac{9\sqrt2-12}{2}\int_{X/4}^{X/2}B_{1/2}(t)\frac{dt}{t}
+-6\int_{X/2}^{X}B_{1/2}(t)\frac{dt}{t}.\label{eq:fourband}
+\end{align}
+\end{theorem}
+\begin{proof}
+From Theorems \ref{thm:window} and \ref{thm:C-D},
+\[
+ \mathfrak C_X=-\int_{X/4}^{X}\D(t)\frac{dt}{t}.
+\]
+In the second and third terms of \eqref{eq:Ddef}, substitute $u=t/2$ and
+$u=t/4$.  Partition the resulting intervals at
+$X/8,X/4,X/2$ and collect coefficients.  They are respectively
+\[
+ -\frac32,\quad -\frac32+\frac9{\sqrt2},\quad
+ -6+\frac9{\sqrt2},\quad -6,
+\]
+which are exactly those in \eqref{eq:fourband}.
+\end{proof}
+
+\section{Exact logarithmic prime ownership}
+
+\begin{lemma}[Squarefree logarithmic ownership]\label{lem:owneratom}
+For every squarefree integer $n>1$,
+\begin{equation}\label{eq:owneratom}
+ \mu(n)= -\sum_{p\mid n}\mu(n/p)\frac{\log p}{\log n},
+\end{equation}
+where the sum is over the distinct prime divisors of $n$.
+\end{lemma}
+\begin{proof}
+Since $n$ is squarefree, $\mu(n/p)=-\mu(n)$ for every $p\mid n$, and
+\[
+ -\sum_{p\mid n}\mu(n/p)\frac{\log p}{\log n}
+ =\mu(n)\frac{\sum_{p\mid n}\log p}{\log n}=\mu(n).
+\]
+\end{proof}
+
+\begin{theorem}[Prime--Möbius owner decomposition]\label{thm:owner}
+For every finitely supported kernel $\kappa$,
+\begin{equation}\label{eq:owner}
+\sum_{n>1}\frac{\mu(n)}{\sqrt n}\kappa(n)
+=-\sum_p\frac{\log p}{\sqrt p}
+ \sum_{\substack{m\ge1\\p\nmid m}}
+ \frac{\mu(m)}{\sqrt m}\frac{\kappa(pm)}{\log(pm)}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Insert \eqref{eq:owneratom} in the left side, interchange two finite sums, and
+write $n=pm$.  The condition $p\nmid m$ is precisely squarefree ownership.
+The weights $\log p/\log n$ are nonnegative and sum to one for each source
+atom $n$.
+\end{proof}
+

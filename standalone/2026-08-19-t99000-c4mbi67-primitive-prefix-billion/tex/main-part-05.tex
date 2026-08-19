@@ -1,0 +1,112 @@
+\section{The complete conditional implication}
+
+\begin{theorem}[C4MBI67 implies RH]\label{thm:consumer}
+If $\A_X\ge0$ for all sufficiently large real $X$, then every nontrivial zero
+of $\zeta$ has real part $1/2$.
+\end{theorem}
+\begin{proof}
+Let $F(s)$ denote the Mellin transform in \eqref{eq:Mellin}.  Since
+$\A_X=O(\sqrt X)$, its abscissa of convergence is finite and at most $1/2$.
+After removing a compact interval, the density is nonnegative, so Theorem
+\ref{thm:Landau} says that the real abscissa $\sigma_c$ must be a singularity.
+
+Assume a zero $\rho$ has $\beta=\Re\rho>1/2$.  The noncancellation following
+Theorem \ref{thm:Mellin} gives a pole of $F$ at $s_0=\rho-1/2$; hence the
+integral cannot converge in a neighborhood of $s_0$, and
+$\sigma_c\ge\beta-1/2>0$.  Landau therefore forces a singularity at the
+positive real point $\sigma_c$.
+
+But the right side of \eqref{eq:Mellin} is analytic at every real $s>0$.
+For $s>1/2$ this follows from the Euler product; for $0<s<1/2$ it follows from
+the absence of real zeros on $1/2<z<1$; and at $s=1/2$ the pole of zeta makes
+$1/\zeta(z)$ vanish rather than blow up.  This is a contradiction.  Therefore
+no zero has real part greater than $1/2$.
+
+If a nontrivial zero had real part below $1/2$, the functional equation
+\eqref{eq:functional} would produce one above $1/2$.  Hence all nontrivial
+zeros lie on the critical line.
+\end{proof}
+
+\begin{corollary}
+Global primitive-prefix positivity $C(t)\ge0$ implies RH.
+\end{corollary}
+\begin{proof}
+Combine Corollary \ref{cor:pointwise} and Theorem \ref{thm:consumer}.
+\end{proof}
+
+In the project Bellman coordinates, if
+$U_{\rm full}=U_Z-I_Z-T_Z$ and BLPTE67 is
+$T_Z\le U_Z-I_Z$, then
+\[
+ \mathrm{BLPTE67}(X)\Longleftrightarrow U_{\rm full}(X)\ge0.
+\]
+At the root $U_{\rm full}(X)=\A_X/\sqrt X$, so this is exactly C4MBI67.  This
+last equivalence is algebra, not an additional analytic lemma.
+
+\section{Exact rational certificate through one billion}
+
+\subsection{The enclosure}
+Set $S=2^{40}$.  For each $n\le10^9$, define
+\[
+ q_n=\left\lfloor\frac{S}{\sqrt n}\right\rfloor.
+\]
+The checker verifies, using unsigned 128-bit integer multiplication,
+\begin{equation}\label{eq:qcert}
+ q_n^2n\le S^2<(q_n+1)^2n.
+\end{equation}
+Therefore
+\[
+ \frac{q_n}{S}\le\frac1{\sqrt n}<\frac{q_n+1}{S}.
+\]
+For $a(n)>0$ the lower contribution is $a(n)q_n/S$; for $a(n)<0$ it is
+$a(n)(q_n+1)/S$.  The opposite choices give an upper enclosure.  All cumulative
+bounds are exact signed 128-bit integers.
+
+\subsection{The Möbius sieve}
+The source uses a standard linear least-prime-factor recurrence.  If
+$\ell(n)$ is the least prime factor, then
+\[
+ \mu(np)=\begin{cases}0,&p=\ell(n),\\-\mu(n),&p<\ell(n),\end{cases}
+\]
+and each composite is generated exactly once by its least prime factor.  The
+array stores $\ell(n)$ in 16 bits.  A prime larger than $65534$ is represented
+by the sentinel $65535$.  This is exact on the certified range: every composite
+$n\le10^9$ has a prime factor at most
+$\sqrt n\le31623<65535$, while if $n$ itself is a larger prime, every
+$p$ with $np\le10^9$ is smaller than the sentinel.  Thus the linear-sieve
+comparison is unchanged.
+
+Overflow is also excluded a priori.  In \eqref{eq:qcert}, the largest temporary
+is below $2^{110}$, within unsigned 128-bit range.  A crude bound on a cumulative
+signed numerator is $15\cdot10^9\cdot2^{40}<2^{75}$, within signed 128-bit
+range.
+
+\begin{theorem}[Billion-endpoint finite theorem]\label{thm:billion}
+For every integer $2\le N\le10^9$,
+\begin{equation}\label{eq:minbound}
+ C(N)\ge\frac{1226685126915}{2^{40}}
+ =1.1156636236728445510379970073699951171875\ldots>0.
+\end{equation}
+The smallest lower enclosure occurs at $N=48433$, where
+\begin{equation}\label{eq:mininterval}
+ \frac{1226685126915}{2^{40}}
+ \le C(48433)\le
+ \frac{1226685458193}{2^{40}}.
+\end{equation}
+Consequently $C(t)\ge0$ for all real $1\le t<10^9+1$, and
+$\A_X\ge0$ for all real $1\le X<10^9+1$.
+\end{theorem}
+\begin{proof}
+The checker performs the exact recurrence in Lemma \ref{lem:aexplicit}, the
+sieve just proved correct, and the interval update following
+\eqref{eq:qcert}.  It compares the lower cumulative numerator after every
+integer endpoint.  The smallest exact integer is $1226685126915$, at $48433$.
+Because $C(t)$ is constant on each half-open interval $[N,N+1)$, the integer
+result is all-real.  The final assertion follows by integrating the
+nonnegative prefix in Theorem \ref{thm:window}.
+\end{proof}
+
+The retained run reports $759,908,859$ nonzero coefficient updates and uses no
+floating value in the verdict.  A floating center is printed only as a human
+readability diagnostic.
+

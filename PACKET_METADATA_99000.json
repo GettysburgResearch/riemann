@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-19",
+  "finite_theorem": {
+    "integer_scan_limit": 1000000000,
+    "minimum_endpoint": 48433,
+    "minimum_lower_numerator": 1226685126915,
+    "minimum_upper_numerator": 1226685458193,
+    "real_endpoint_range": "1 <= X < 1000000001",
+    "real_prefix_range": "1 <= t < 1000000001",
+    "scale_denominator": 1099511627776
+  },
+  "hashes": {
+    "canonical_pdf_sha256": "083f2a01aed5ca67b68a06f77f5bbc328c424615df2b4f5222305cc0e5819c8d",
+    "experiment_ledger_sha256": "5fc4ece6bad8e42259e08d2bffab8dd9fc21ee96d7a8c6b84e54179e375ea63d",
+    "full_replay_transcript_sha256": "1d895bbe5cbed8965dbf16b7bd9f054e7d99af6a7180e3f4fdbd60eae479d4fc",
+    "main_tex_wrapper_sha256": "92c69a90f3ae07c391aa5bf18ae1d44c7460612a54105a463f3571179a00bd2a",
+    "retained_billion_output_sha256": "47985ac0f13e986419e0f57bf9d626d8600491823d14c9a4cd1cb71ff931df6b",
+    "retained_monolithic_tex_sha256": "486a8400b1b31b54ff79de19ad0939d7df76944d87847fb550a860cc1cd4f875",
+    "scanner_cpp_sha256": "95c36343fc523fdf1c58034873b9ce5c71d999e82d1132d12c89cf3417709c23",
+    "tex_part_sha256": {
+      "main-part-01.tex": "5dbfc173f931dc71ac72af30891be38da12fd2529c4a7f497748c547922e69fb",
+      "main-part-02.tex": "ca7ac21c19edf8a080ca4d59c858eb273dd9c741b270fd38f7b2af400049c477",
+      "main-part-03.tex": "3aab99135dccc697a43c4db5d9f554796c66ce0a1c141e5b838e2f3b8de5f9af",
+      "main-part-04.tex": "9ba7c16f3578820e2fd0496afa0f802d8e4e15d31bf8da06656e81718a5346d1",
+      "main-part-05.tex": "a9979631516e4a7b76ba3d23c2e906b07016abca3c9e74ddd2b523c617ef6d4a",
+      "main-part-06.tex": "aefbf2e5aada4fe5e8058a41ef831d18bd81193fdd9c1f5b0e4df7f86606d9cc"
+    },
+    "verification_json_sha256": "5fdfa3b8a8faa0e7b103ec6a4c5d9f14a9c8c852e2dd6ad7a2dd80ccfd3422c6"
+  },
+  "intended_base": {
+    "branch": "research/gpt56-pro/97701-c4mbi67-publication-recovery",
+    "head_sha": "24212c02fab728bb6c419ed8f5a2429fdce07397",
+    "pull_request": 604
+  },
+  "packet_id": "T99000",
+  "proof_object_sha256": "4eb5e74c2dd4926ce4ca7f614f52432ef3ddad062687b6348a774b05793bb833",
+  "publication": {
+    "base_branch": "research/gpt56-pro/97701-c4mbi67-publication-recovery",
+    "base_head": "24212c02fab728bb6c419ed8f5a2429fdce07397",
+    "branch": "research/gpt56-pro/99000-c4mbi67-primitive-prefix-billion",
+    "fallback_contains": "exact repository core, retained monolithic TeX, rich LaTeX PDF, and fail-closed push tooling",
+    "fallback_extra": "original LaTeX-typeset PDF retained outside repository payload",
+    "omitted_from_repository": [
+      "derived MANUSCRIPT.txt (PDF and complete modular TeX are committed)",
+      "LaTeX auxiliary files",
+      "duplicate main.pdf"
+    ],
+    "repository": "gfreund123/riemann",
+    "repository_core_files": 40,
+    "repository_pdf_kind": "deterministic compressed core-font full-manuscript rendering",
+    "root_readme": "README_99000.md",
+    "standalone_directory": "standalone/2026-08-19-t99000-c4mbi67-primitive-prefix-billion"
+  },
+  "scientific_status": {
+    "C4MBI67_global": "unproved",
+    "Riemann_Hypothesis": "unproved",
+    "finite_pointwise_port_obstruction": "proved exact",
+    "global_primitive_prefix_sign": "open / RH-bearing",
+    "mellin_landau_functional_equation_consumer": "proved self-contained",
+    "primitive_prefix_identity": "proved exact",
+    "primitive_prefix_through_1e9": "proved exact rational",
+    "weighted_threshold_complex": "proved exact",
+    "windowed_bellman_recurrence": "proved exact"
+  },
+  "sizes": {
+    "canonical_pdf_bytes": 13679,
+    "full_replay_transcript_bytes": 1948,
+    "main_tex_wrapper_bytes": 382,
+    "retained_billion_output_bytes": 416,
+    "retained_monolithic_tex_bytes": 25623
+  },
+  "title": "C4MBI67 primitive-prefix and exact billion-endpoint theorem",
+  "verdict": "PASS_T99000_PRIMITIVE_PREFIX_BILLION_EXACT_REPLAY"
+}
