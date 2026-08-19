@@ -1,0 +1,31 @@
+{
+  "analytic_proofs_in_packet": [
+    "specialized Hankel/Selberg-Delange transfer",
+    "Gaussian saddle and energy asymptotic",
+    "Kronecker antipodal vertical-limit argument",
+    "positive-trace pole-centering no-go"
+  ],
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_PLUS_DECLARED_ANALYTIC_THEOREMS",
+  "classification": "PASS_X_99000_FRACTIONAL_HEAT_OBSTRUCTION",
+  "continuum_saddle_checks": 97,
+  "does_not_prove": [
+    "PCSCHE",
+    "Riemann Hypothesis"
+  ],
+  "hostile_mutations_detected": 5,
+  "liouville_twist_checks": 2048,
+  "local_euler_checks": 8,
+  "numerator_at_one": "3/8",
+  "parity_commutation_checks": 528,
+  "pole_centering_checks": 19,
+  "proves": [
+    "exact real-carrier coefficient 3/8",
+    "fractional rate separator for theta<1/192",
+    "bosonic number parity commutes with log energy",
+    "Liouville twist converts squarefree Mobius signs to positive signs",
+    "continuum pole-centering has critical heat saddle T/4",
+    "exact scalar pole-centering removes the order-one branch at s=1"
+  ],
+  "rate_checks": 4,
+  "weyl_fixture_checks": 3
+}
