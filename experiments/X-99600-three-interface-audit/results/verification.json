@@ -1,0 +1,59 @@
+{
+  "alpha_child_native_promotion_refuted": true,
+  "analytic_consumer_closed": true,
+  "compact_hall": {
+    "interval_bits": 40,
+    "margin_over_7_20_decimal": "0.009317660596810",
+    "minimum_endpoint": 67,
+    "minimum_lower_decimal": "0.359317660596810",
+    "minimum_lower_den": "2001883881882769632310667227697513255922204258363578985096989900858402356876334321422357083000767061688320",
+    "minimum_lower_num": "719312233224577449593482171234688469744454717613906779263274826948345146770060571312439291231721958809389",
+    "minimum_proved_unique": true,
+    "minimum_threshold": 13,
+    "minimum_upper_decimal": "0.359317660601486",
+    "minimum_upper_den": "50979769622878980506578749547883125280736289029241530250032006032492007138473672542867406337746141184",
+    "minimum_upper_num": "18317931558895582349540569396471769332291503799684574531462569094266342489158235577911332150878290765",
+    "thresholds_checked": 66
+  },
+  "compact_hall_closed": true,
+  "first_owner_euler_identity": {
+    "identity_exact": true,
+    "lambda_sum": "425/1001",
+    "native_monomials": 16,
+    "prime_count": 4,
+    "survival": "576/1001"
+  },
+  "future_completed_current_sign_proved": false,
+  "harnack_negative_mass_proved": false,
+  "native_coefficient_separator": {
+    "alpha_identity_shifted_coefficient": "0",
+    "missing_native_magnitude": "r-2*r^2>0 for p>=67",
+    "native_euler_shifted_coefficient": "-r",
+    "native_parity_magnitude": "r",
+    "parity_exported_magnitude": "2*r^2"
+  },
+  "proof_object_sha256": "244a399ac904a10d76c9b1e454ec71b67ee87314e9b7670a96a6fbe71f730dac",
+  "rh_established": false,
+  "rn_cocycle": {
+    "cocycle_fixture": {
+      "R_W_given_Y": "97/397",
+      "R_W_given_Z": "97/197",
+      "R_Z_given_Y": "197/397"
+    },
+    "raw_cutoff_fixture": {
+      "child_density": "1",
+      "exact_ratio": "1/5",
+      "parent_density": "5",
+      "raw_indicator_rejected": true
+    }
+  },
+  "rn_endpoint_interface_closed": true,
+  "schema": "riemann.x99600.three-interface-audit.v1",
+  "two_row_noncancellation": {
+    "P2_relation": "b=2a-1",
+    "exact": true,
+    "open_half_plane_exclusion": "|a|=2^{-Re z}<1",
+    "substituted_3P3": "-3(a-1)(a-2)"
+  },
+  "verdict": "PASS_T99600_THREE_INTERFACE_HOSTILE_AUDIT"
+}
