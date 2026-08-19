@@ -34,7 +34,6 @@ def divisors(n: int) -> list[int]:
 
 
 def main() -> None:
-    # Exact hazard telescope and random-key density control.
     rs = [F(1, 9), F(1, 11)]
     survivor = F(1)
     lambdas: list[F] = []
@@ -48,7 +47,6 @@ def main() -> None:
     alpha_sum = sum(alphas, F())
     assert alpha_sum == F(193, 9801) < F(1, 8)
 
-    # Positive endpoint increments and literal child restrictions.
     increments = [
         [F(3), F(4), F(5), F(6)],
         [F(2), F(3), F(4), F(5)],
@@ -68,7 +66,6 @@ def main() -> None:
         causal = [a + lam * (p - r * c) for a, p, c in zip(causal, parent, child)]
     assert current == causal and all(x >= 0 for x in current)
 
-    # Literal fractional Hall source partition.
     even_targets = [F(5), F(3)]
     odd_target = F(4)
     even_profiles = [[F(5, 4), F(3, 2)], [F(1), F(5, 4)]]
@@ -82,7 +79,15 @@ def main() -> None:
     assert bonus == [F(7, 4), F(7, 4)]
     assert reconstructed == signed
 
-    # Exact formal score normalization: mu*log = Lambda in the prime-log basis.
+    # Score-last finite identity: current plus weighted children is the parent.
+    weights = [F(2), F(3), F(5), F(7)]
+    parent_score = sum(w * x for w, x in zip(weights, parent))
+    resolved_score = sum(w * x for w, x in zip(weights, current))
+    for a, child in zip(alphas, children):
+        resolved_score += sum(w * a * x for w, x in zip(weights, child))
+    assert resolved_score == parent_score
+
+    # Formal exact normalization mu*log=Lambda in the prime-log basis.
     for k in range(2, 161):
         kexp = factor_exponents(k)
         lhs: dict[int, int] = {}
@@ -101,6 +106,7 @@ def main() -> None:
         "alpha_sum": "193/9801",
         "causal_current_equals_parent_residual": True,
         "classification": VERDICT,
+        "direct_integration_score_last_identity": True,
         "endpoint_nested_vector_source": True,
         "finite_tree_depth": 4,
         "frozen_local_inputs_replayed": False,
