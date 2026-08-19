@@ -1,0 +1,27 @@
+{
+  "analytic_proof_required": [
+    "Kronecker approximation",
+    "uniform Euler tails",
+    "Hurwitz transfer"
+  ],
+  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "base_pr": 623,
+  "base_sha": "712412e286cc309bbe9960ee839df158316df9e5",
+  "bernoulli_hazard_checks": 168,
+  "classification": "PASS_X_99130_HAZARD_BOHR_KREIN_ALGEBRA",
+  "does_not_prove": [
+    "PCSS",
+    "Riemann Hypothesis"
+  ],
+  "heat_floor_checks": 2048,
+  "hostile_mutations_detected": 4,
+  "positive_completion_checks": 512,
+  "proof_object_sha256": "6651084902e91f70f95178b426bac3da24cf342e301096ec01d60c2df3112ab5",
+  "rh_established": false,
+  "schema": "riemann.t99130.hazard-bohr-krein.v1",
+  "twist_lower_2": "75/64",
+  "twist_upper_6_5": "6877/7680",
+  "unique_transform_exponents": [
+    -1
+  ]
+}

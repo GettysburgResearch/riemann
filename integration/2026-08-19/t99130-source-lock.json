@@ -1,0 +1,28 @@
+{
+  "base": {
+    "branch": "review/gpt56-pro/99000-fractional-heat-obstruction",
+    "pr": 623,
+    "sha": "712412e286cc309bbe9960ee839df158316df9e5"
+  },
+  "created_utc": "2026-08-19T00:00:00Z",
+  "imports": [
+    {
+      "pr": 570,
+      "scope": "B_diamond and Lambda_diamond identities",
+      "sha": "992404909d6c2940ae8ae849633fe5530ed79db0"
+    },
+    {
+      "pr": 623,
+      "scope": "fractional heat obstruction and pole-centered signed source",
+      "sha": "712412e286cc309bbe9960ee839df158316df9e5"
+    }
+  ],
+  "intended_branch": "research/gpt56-pro/99130-hazard-bohr-krein",
+  "namespace_migration": {
+    "from_unpublished": "99100",
+    "reason": "99100 already occupied by unrelated live branches",
+    "to": "99130"
+  },
+  "schema": "riemann.t99130.source-lock.v1",
+  "scientific_status": "PCSS and RH unproved"
+}
