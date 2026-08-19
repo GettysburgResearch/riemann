@@ -1,0 +1,31 @@
+{
+  "schema": "riemann.t99270.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "base": {
+    "pull_request": 647,
+    "branch": "research/gpt56-pro/99250-scalar-sharp-harnack",
+    "head_sha": "306d1c66fe4e848efda0bd78b5475aeeed3d5563"
+  },
+  "reviewed_parallel_work": {
+    "sharp_kernel_pr": 642,
+    "calibration_coboundary_pr": 648
+  },
+  "normative_scalar_dependencies": [
+    "primitive beta coefficient",
+    "SHARP scalar T",
+    "explicit Mellin transform",
+    "one producer from L-99270",
+    "specialized Landau theorem",
+    "zeta functional equation"
+  ],
+  "nonnormative_cross_checks": [
+    "SHARP row kernel",
+    "compact Hall and random-key common parent",
+    "Volterra/calibration coboundary",
+    "fixed-row Mellin noncancellation"
+  ],
+  "status": {
+    "global_producer_proved": false,
+    "rh_established": false
+  }
+}

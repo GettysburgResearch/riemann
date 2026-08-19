@@ -1,0 +1,41 @@
+{
+  "base_pr": 647,
+  "base_sha": "306d1c66fe4e848efda0bd78b5475aeeed3d5563",
+  "branch": "review/gpt56-pro/99270-three-vulnerability-hardening",
+  "classification": "three-vulnerability hardening; global scalar producer open",
+  "created": "2026-08-20",
+  "fast_replay": {
+    "proof_object_sha256": "2c73659aecec49a110a9dd9ce060d1b9699add76a114e362781b8890aebde0d5",
+    "verdict": "PASS_T99270_THREE_VULNERABILITY_HARDENING"
+  },
+  "full_replay": {
+    "artifact_sha256": "9c150b79fc7298e0d9682d49cd90806c7d2dc99a89652a7d3d3928f4bf1f2596",
+    "byte_identical_independent_1e8_replay": true,
+    "proof_object_sha256": "4de591d37e6f10aba5bd24d9102adf14ed3d21810a9ba6e1544c7b1ccfc9b0e8",
+    "verdict": "PASS_T99270_THREE_VULNERABILITY_HARDENING"
+  },
+  "independent_scan": {
+    "compressed_transcript_sha256": "2ea18a00327ac9ed62e3630f49b5e637b8265f1e89fb50e10f29ff3299edd211",
+    "denominator": "1267650600228229401496703205376",
+    "lower_num": "1626923303441334483980962730376",
+    "minimum_cell": 200,
+    "minimum_side": "RIGHT_LIMIT",
+    "minimum_x": "201^-",
+    "range": "67<=x<100000001",
+    "raw_transcript_sha256": "82fdeeeceb25ead369574c927143f14065df5c3d202a973cc608cfd2d93f6e24",
+    "source_sha256": "13dcc46e3a9fc2f81b09339085d3b5a08cc58f84bbcbdcc917b62abee7e20049",
+    "upper_num": "1626923303449543135335825015140"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t99270.packet.v1",
+  "status": {
+    "independent_1e8_certificate_proved": true,
+    "positive_inverse_renewal_proved": true,
+    "rh_established": false,
+    "smoothed_global_tail_proved": false,
+    "specialized_landau_proved": true,
+    "subpower_negative_mass_proved": false,
+    "subpower_negative_mass_reduction_proved": true,
+    "zero_free_smoothing_reduction_proved": true
+  }
+}
