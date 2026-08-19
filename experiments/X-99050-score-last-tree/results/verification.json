@@ -1,0 +1,58 @@
+{
+  "arithmetic_tree_score_loss": 0,
+  "checks": [
+    {
+      "alphas": [
+        "1/81",
+        "2/225",
+        "4/605"
+      ],
+      "classification": "PASS_CAUSAL_COEFFICIENT_AND_FACTOR67_GATES",
+      "lambdas": [
+        "1/9",
+        "4/45",
+        "4/55"
+      ],
+      "sqrt67_discount_below_one_eighth": true,
+      "survival": "8/11"
+    },
+    {
+      "classification": "PASS_FINITE_CAUSAL_TREE_LITERAL_SCORE_ISOMETRY",
+      "double_hall_bonus_mutation_rejected": true,
+      "expanded_row": [
+        "160",
+        "123",
+        "90",
+        "51"
+      ],
+      "expanded_score": "1496",
+      "owner_nodes": 6
+    },
+    {
+      "classification": "PASS_ACTUAL_CHILD_SCALE_HAS_FINITE_DEPTH",
+      "fixed_point": "67/66",
+      "tested_endpoints": [
+        67,
+        1000,
+        1000000000000,
+        1000000000000000000000000000000
+      ]
+    },
+    {
+      "B": 10002,
+      "W": 10000,
+      "X0": 400160016,
+      "classification": "PASS_EXPLICIT_ROOT_ONLY_SCORE_COST",
+      "thinning_score_upper": 792,
+      "top_omission_score_upper": 60,
+      "total_score_loss_upper": 852
+    }
+  ],
+  "classification": "PASS_T99050_SCORE_LAST_ENTROPY_ISOMETRY",
+  "declared_score_used_in_final_tree": false,
+  "heavy_inherited_campaigns_replayed": false,
+  "proof_object_sha256": "8a700d799db8f5af71fbfe9fc50ac1dc695491721f3725a58429bff8153cef51",
+  "rh_established": false,
+  "root_owned_score_loss_upper": 852,
+  "schema": "riemann.t99050.score-last.v1"
+}
