@@ -26,12 +26,12 @@ This packet obtains three different outcomes.
 ### Interface 1 — compact Hall and endpoint nesting
 
 The complete compact Hall-prefix calculation is independently reconstructed
-with exact outward rational square-root intervals. Every threshold
-`1 <= t < 67` has margin above `7/20`; the unique worst state is
+with exact outward rational square-root intervals. Every physical threshold
+`1 <= t < 67` has margin above `7/20`; the unique boundary infimum is
 
 ```text
-t=13, x=67,
-0.359317660596810 < H_13(67) < 0.359317660601486.
+t=13, x=67^-,
+0.359317660596810 < H_13(67^-) < 0.359317660601486.
 ```
 
 The exact SHARP child density is not a raw support cutoff. It is
