@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "checks": 18486,
+      "classification": "PASS_CUMULATIVE_GAMMA_IDENTITIES"
+    },
+    {
+      "classification": "PASS_SHARP_ROW_KERNEL_POSITIVITY_GATES",
+      "minimum_cell": 80,
+      "minimum_probe": 0.0007145374467296545,
+      "minimum_row": 79
+    },
+    {
+      "classification": "PASS_EXACT_MELLIN_MULTIPLIER_CANCELLATION",
+      "rational_points": 6
+    },
+    {
+      "classification": "PASS_FINITE_MOBIUS_FUBINI_COEFFICIENTS",
+      "coefficient_checks": 58244
+    },
+    {
+      "classification": "PASS_SHARP_TARGET_IS_ESSENTIAL_FIREWALL",
+      "equality_prefix_t13_x67": -0.3023514222482677,
+      "sharp_prefix_t13_x67": 0.35931766059850023
+    }
+  ],
+  "classification": "PASS_T99240_SHARP_ROW_KERNEL_FRAME",
+  "frontier_chain_used": false,
+  "inherited_hall_profile_replayed": false,
+  "proof_object_sha256": "6754d6c8f7fc1883cbb5d3516b347449cef646223ff414178eb200af1f80a10f",
+  "rh_established": false,
+  "schema": "riemann.t99240.sharp-row-kernel.v1",
+  "score_endgame_used": false,
+  "volterra_two_anchor_gate_used": false
+}
