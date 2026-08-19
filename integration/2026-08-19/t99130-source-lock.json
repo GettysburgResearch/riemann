@@ -1,0 +1,31 @@
+{
+  "schema": "riemann.t99130.source-lock.v1",
+  "created": "2026-08-19",
+  "base": {
+    "pr": 611,
+    "branch": "research/gpt56-pro/98200-fpcb23-dickman-quotient",
+    "sha": "9d0b0521e5ace8c96df63a85a68f60a789b09923"
+  },
+  "imports": [
+    {
+      "pr": 624,
+      "scope": "primitive reciprocal-Julia carrier and billion-endpoint finite theorem",
+      "head_observed": "0fa032faedc0fa9a47a87c41a69c0db141b1dea2"
+    },
+    {
+      "pr": 621,
+      "scope": "logarithmic-owner martingale program",
+      "head_observed": "46afb6e15eef95c9268eff1791a7135b9783a2b2"
+    }
+  ],
+  "forbidden_promotions": [
+    "positive scalar implies two positive rows",
+    "signed K2 or K3 treated as a positive kernel",
+    "finite replay proves RJCE23",
+    "RJCE23 or FPCB23 treated as proved",
+    "RH treated as established"
+  ],
+  "rjce23_proved": false,
+  "fpcb23_proved": false,
+  "rh_established": false
+}
