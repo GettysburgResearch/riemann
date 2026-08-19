@@ -1,0 +1,16 @@
+{
+  "branch_count_independent_bound": true,
+  "hazard_parent_identity": true,
+  "mass_complement_debt_telescope": true,
+  "p61_weight_upper_decimal": "59.423461968782085",
+  "proof_object_sha256": "553024df67144d7027a7675c31238e8b090d4368c51acecf8701de682fb5ce4c",
+  "rh_established": false,
+  "schema": "riemann.x99100.discounted-score-debt.v2",
+  "terminal_ledger_lt_3600": true,
+  "terminal_ledger_upper_decimal": "3534.675221310727920",
+  "terminal_unit_debt_upper_lt": "2*(4*sqrt(67)-3)",
+  "typed_recursive_mass_lt_one_eighth": true,
+  "varying_depth_tree_checked": true,
+  "verdict": "PASS_T99100_DISCOUNTED_SCORE_DEBT_SUPERMARTINGALE",
+  "wrong_current_as_child_mutation_rejected": true
+}
