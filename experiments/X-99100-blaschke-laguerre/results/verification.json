@@ -1,0 +1,28 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_POLYNOMIAL_LAPLACE_ALGEBRA",
+  "base_pr": 623,
+  "base_sha": "712412e286cc309bbe9960ee839df158316df9e5",
+  "classification": "PASS_X_99100_BLASCHKE_LAGUERRE_SIGNED_HEAT",
+  "does_not_prove": [
+    "BLSH source-specific subexponential estimate",
+    "PCSCHE",
+    "Riemann Hypothesis"
+  ],
+  "filter_barrier_checks": 594,
+  "hostile_mutations_detected": 5,
+  "isometry_checks": 180,
+  "pole_factor_checks": 196,
+  "proof_object_sha256": "ebc41afe06907df230a552d2127f3b92233b8904bd39bee67f7ad2cc5f4e8011",
+  "proves": [
+    "critical Blaschke Volterra realization",
+    "unweighted Laguerre isometry",
+    "monotone-weight positive defect identity",
+    "iterated positive square-function telescope",
+    "off-line pole multiplier is nonzero and sublinear-order safe",
+    "inner-power filter-only saddle separation is impossible"
+  ],
+  "schema": "riemann.x99100.blaschke-laguerre.v1",
+  "source_lock_checks": 258,
+  "square_function_telescope_checks": 1080,
+  "weighted_defect_checks": 720
+}
