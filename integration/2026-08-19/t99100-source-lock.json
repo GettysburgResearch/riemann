@@ -1,0 +1,44 @@
+{
+  "date": "2026-08-19",
+  "finite_theorem": {
+    "integer_scan_limit": 2000000000,
+    "minimum_endpoint": 61848971,
+    "minimum_lower_num": 57262723035,
+    "minimum_upper_num": 57692032737,
+    "prime": 67,
+    "real_range": "1 <= t < 2000000001",
+    "scale": 1099511627776,
+    "segment_size": 100000000,
+    "segments": 20,
+    "strict_positive_range": "2 <= t < 2000000001"
+  },
+  "hashes": {
+    "combine_py": "ec8ba2eaee6596eb674c211e8021f55fd8e9afcd556c39f053cffde693948dd2",
+    "replay_sh": "bc44ae86c66cd1db1c348b5f8718f973c7c45c2737f1f6ded5d8dc632594f2f9",
+    "result_json": "b2e47590848a6b227108151a3520205d8161a8829e3c5d8e1a6db9c9bf9c3bd5",
+    "result_text": "34d0102066a4e92eb4e840aa08ce5558e1d2937cb846ae65a0a3f8b03951b247",
+    "scanner_cpp": "22ff10c4aa799e99cfb3faea439a3d5735895f4150cbc5587e308ae84cdab760",
+    "segment_bundle": "5bfd7692002795e395f1a16d55d68d6bc381cdffe659e1da263524d59b6000a8",
+    "verify_py": "fba71b23f8f9eab599cd3c5a3e6c8d1ec466cff6766fee8dcb965cfb1208f1e2"
+  },
+  "intended_base": {
+    "branch": "research/gpt56-pro/99000-c4mbi67-primitive-prefix-billion",
+    "head_sha": "0fa032faedc0fa9a47a87c41a69c0db141b1dea2",
+    "pull_request": 624,
+    "tree_sha": "3d80d92cec20ecac3b0f414dd2cbfd10e97e820f"
+  },
+  "packet_id": "T99100",
+  "proof_object_sha256": "e4534298fd460fdaef22065645a6abd25022f58a093580ca00321de29b8e17c4",
+  "publication_branch": "research/gpt56-pro/99100-c4mbi67-harnack67-renormalization",
+  "repository": "gfreund123/riemann",
+  "scientific_status": {
+    "Riemann_Hypothesis": "unproved",
+    "anchored_complex_identity": "proved exact",
+    "factor67_descent": "proved exact",
+    "global_C4MBI67": "unproved",
+    "global_harnack67": "open / RH-bearing",
+    "harnack67_through_2e9": "proved computer-assisted",
+    "local_square_factorization": "proved exact",
+    "primitive_prefix_through_2e9": "proved computer-assisted using T99000 base"
+  }
+}
