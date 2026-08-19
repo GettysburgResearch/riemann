@@ -1,0 +1,39 @@
+{
+  "base_pr": 641,
+  "base_sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb",
+  "compact_hall_replayed": false,
+  "coordinatewise_child_operator_rejected": true,
+  "endpoint_frame_replayed": false,
+  "generationwise_overcount_detected": true,
+  "jump_atom_fixture": "1",
+  "local_coboundary_identity": true,
+  "mutations_rejected": [
+    "accumulate_primitive_A_each_generation_rejected",
+    "claim_rh_by_replay_rejected",
+    "copy_hall_bonus_into_child_operator_rejected",
+    "drop_child_calibration_subtraction_rejected",
+    "promote_negative_oriented_child_rejected",
+    "terminalize_accumulated_parity_rejected",
+    "use_coordinatewise_child_operators_rejected",
+    "treat_knot_atoms_as_required_positive_rejected"
+  ],
+  "negative_atom_with_positive_tails": true,
+  "negative_oriented_child_control": "-1/67",
+  "nilpotence_depth": 4,
+  "odd_history_terminal_control": "-17",
+  "positive_resolvent": true,
+  "proof_object_sha256": "e1ba6eeb163d06f1c3af5bf14c9434e8cdad88108cddc8cf88ec7ee23a38d656",
+  "recursive_alpha_below_one_eighth": true,
+  "recursive_alpha_mass": "40537/1656369",
+  "recursive_hall_bonus_rejected": true,
+  "resolved_calibration_equals_root_potential": true,
+  "rh_established": false,
+  "schema": "riemann.x99420.calibration-coboundary.v1",
+  "tail_transposed_vector": [
+    "4",
+    "5"
+  ],
+  "verdict": "PASS_T99420_CALIBRATION_COBOUNDARY_CLOSURE_ALGEBRA",
+  "volterra_first_order_factorization": true,
+  "wrong_local_defect_rejected": true
+}
