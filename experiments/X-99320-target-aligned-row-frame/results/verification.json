@@ -1,0 +1,39 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "base_pr": 641,
+  "base_sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb",
+  "causal_target_checks": 1933,
+  "cell_increment_checks": 48034,
+  "classification": "PASS_X_99320_TARGET_ALIGNED_RANK_ONE_ROW_FRAME",
+  "coefficient_expansion_checks": 765,
+  "coefficient_telescope_checks": 48034,
+  "complete_cell_base_checks": 1022,
+  "dirichlet_split_checks": 522240,
+  "does_not_prove": [
+    "acceptance of the target source producer",
+    "Riemann Hypothesis"
+  ],
+  "first_cell_positivity_checks": 1022,
+  "hostile_mutations_detected": 5,
+  "large_row_leading_coefficient_checks": 899,
+  "mellin_kernel_checks": 4750,
+  "proof_object_sha256": "1a1f88f5184fd7a8542e08ba4b25b78c3e81b85fa5f1f5d7accd8992954df6c9",
+  "proves": [
+    "exact second-difference row expansion",
+    "exact G and SHARP target kernel factorizations",
+    "strict positivity certificates for kappa_j and eta_j",
+    "rank-one Hall cancellation algebra",
+    "pointwise causal target-current positivity",
+    "finite numerator coefficient split",
+    "large-row leading coefficient algebra"
+  ],
+  "rank_one_hall_checks": 784,
+  "requires_independent_reconstruction": [
+    "frozen compact target Hall inequalities",
+    "actual root target-source registry",
+    "bounded signed calibration ledger on the actual row",
+    "fixed-row Mellin-Landau analytic application"
+  ],
+  "rh_established": false,
+  "schema": "riemann.t99320.target-aligned-row-frame.v1"
+}
