@@ -1,0 +1,29 @@
+{
+  "base_head": "306d1c66fe4e848efda0bd78b5475aeeed3d5563",
+  "base_pr": 647,
+  "compared_prs": {
+    "598_native_source": "e20128ef4a59607446451f93f3f8daeebe665517",
+    "620_direct_integral": "493e12fcba3f9b98dda7c3595bff73b256e00ca4",
+    "642_sharp_kernel": "07aa0d4838458a1b2d3af9e5bc96616baa6b4767",
+    "645_clamped_volterra": "267058b22e7de5b8f97ba2da6c544e991fdb1d91",
+    "647_sharp_rn_harnack": "306d1c66fe4e848efda0bd78b5475aeeed3d5563",
+    "648_calibration_coboundary": "49be6640ae2714d1f907a6117c4a6d2aaa9f2f11"
+  },
+  "packet_id": "T99600",
+  "replay": {
+    "proof_object": "244a399ac904a10d76c9b1e454ec71b67ee87314e9b7670a96a6fbe71f730dac",
+    "verdict": "PASS_T99600_THREE_INTERFACE_HOSTILE_AUDIT"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t99600.source-lock.v1",
+  "status": {
+    "alpha_native_promotion_refuted": true,
+    "compact_hall_closed": true,
+    "fchd67_proved": false,
+    "first_owner_identity_closed": true,
+    "harnack_negative_mass_proved": false,
+    "rh_established": false,
+    "rn_cocycle_closed": true,
+    "two_row_consumer_closed": true
+  }
+}
