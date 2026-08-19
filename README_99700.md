@@ -14,13 +14,16 @@ Its new exact ingredients are:
   smoothing.
 
 The single open theorem is `TOCE67`, a source-root/boundary Carleson estimate.
-It implies subpower logarithmic negative mass and therefore RH.  `TOCE67` and
-RH are not proved here.
+It implies subpower logarithmic negative mass and therefore RH. `TOCE67` and RH
+are not proved here.
 
-Replay:
+Remote replay:
 
 ```bash
 python3 experiments/X-99700-canonical-spine/verify.py \
   --output experiments/X-99700-canonical-spine/results/verification.json
-sha256sum -c T99700_CONTENT_SHA256SUMS
+python3 -m unittest discover \
+  -s experiments/X-99700-canonical-spine/tests -v
 ```
+
+The deterministic fallback archive carries its own complete SHA-256 ledger.
