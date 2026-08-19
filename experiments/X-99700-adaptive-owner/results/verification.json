@@ -1,0 +1,53 @@
+{
+  "beta_g_convolution_checks": 10000,
+  "classification": "PASS_T99700_ADAPTIVE_LOG_OWNER_HIERARCHY",
+  "fixed_order_closure_proved": false,
+  "fixed_order_counterexamples": {
+    "1": {
+      "after": 0,
+      "before": 2,
+      "defect": -2,
+      "m": 2
+    },
+    "2": {
+      "after": 0,
+      "before": 12,
+      "defect": -12,
+      "m": 6
+    },
+    "3": {
+      "after": 0,
+      "before": 180,
+      "defect": -180,
+      "m": 30
+    },
+    "4": {
+      "after": 0,
+      "before": 5040,
+      "defect": -5040,
+      "m": 210
+    },
+    "5": {
+      "after": 0,
+      "before": 277200,
+      "defect": -277200,
+      "m": 2310
+    },
+    "6": {
+      "after": 0,
+      "before": 21621600,
+      "defect": -21621600,
+      "m": 30030
+    }
+  },
+  "generalized_lambda_checks": 3500,
+  "owner_eigenfunction_checks": 9999,
+  "phase_adaptive_carleson_proved": false,
+  "positive_completion_checks": 3500,
+  "positive_variance_witnesses": 3363,
+  "proof_object_sha256": "a83e49b28ba44fec4bdf51581f4a2158d6525d056d039ab116439d139b6b9cff",
+  "q_completion_checks": 1000,
+  "rh_established": false,
+  "schema": "riemann.t99700.adaptive-owner.v1",
+  "zero_dissipation_squarefree_checks": 6082
+}
