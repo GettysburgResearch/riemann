@@ -1,0 +1,29 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/99260-three-vulnerability-hardening",
+    "pr": 649,
+    "sha": "433fd3662f7b2e4ba384ce64f196380e88624090"
+  },
+  "created_utc": "2026-08-20T00:00:00Z",
+  "imports": [
+    {
+      "pr": 647,
+      "scope": "Radon-Nikodym child thinning and scalar SHARP Harnack",
+      "sha": "306d1c66fe4e848efda0bd78b5475aeeed3d5563"
+    },
+    {
+      "pr": 648,
+      "scope": "calibration coboundary, used only for the no-go comparison",
+      "sha": "49be6640ae2714d1f907a6117c4a6d2aaa9f2f11"
+    },
+    {
+      "pr": 649,
+      "scope": "three-vulnerability hardening and exact 5:3 witness",
+      "sha": "433fd3662f7b2e4ba384ce64f196380e88624090"
+    }
+  ],
+  "intended_branch": "review/gpt56-pro/99440-half-order-subsidy-audit",
+  "intended_commit": "review: quantify the causal-Euler half-order subsidy",
+  "schema": "riemann.t99440.source-lock.v1",
+  "scientific_status": "IHR67 and RH remain unproved"
+}

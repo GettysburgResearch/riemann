@@ -1,0 +1,29 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "base_pr": 649,
+  "base_sha": "433fd3662f7b2e4ba384ce64f196380e88624090",
+  "causal_euler_checks": 1020,
+  "classification": "PASS_X_99440_THREE_INTERFACE_QUANTITATIVE_AUDIT",
+  "does_not_prove": [
+    "IHR67",
+    "eventual 5:3 row positivity",
+    "Riemann Hypothesis"
+  ],
+  "five_three_witness_checks": 189,
+  "fixed_row_checks": 511,
+  "hostile_mutations_detected": 5,
+  "ihr67_proved": false,
+  "macroscopic_subsidy_checks": 5110,
+  "proof_object_sha256": "cb999dea59d976c7c90bb9831d5aa4c917f822e2b45d74c4db58c00fc627b8f5",
+  "proves": [
+    "RN child cocycle fixtures",
+    "exact causal/Euler coefficient mismatch",
+    "positive leading square-root subsidy coefficient",
+    "nonzero positive-real Mellin pole coefficient",
+    "exact 5:3 canonical coefficients",
+    "exact zero-free numerator polynomial factorization"
+  ],
+  "rh_established": false,
+  "rn_checks": 3,
+  "schema": "riemann.t99440.three-interface-audit.v1"
+}
