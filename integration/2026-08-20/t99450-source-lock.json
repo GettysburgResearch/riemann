@@ -1,0 +1,48 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/99420-calibration-coboundary-closure",
+    "pr": 648,
+    "sha": "49be6640ae2714d1f907a6117c4a6d2aaa9f2f11"
+  },
+  "created_utc": "2026-08-20T00:00:00Z",
+  "imports": [
+    {
+      "pr": 646,
+      "scope": "positive target-aligned component-row atom",
+      "sha": "289f774a304266ba396949995e2ccec0ce72a35c"
+    },
+    {
+      "pr": 647,
+      "scope": "Radon-Nikodym child source and raw-cutoff firewall",
+      "sha": "306d1c66fe4e848efda0bd78b5475aeeed3d5563"
+    },
+    {
+      "pr": 645,
+      "scope": "canonical double-clamping and vanishing knot/mode ledger",
+      "sha": "267058b22e7de5b8f97ba2da6c544e991fdb1d91"
+    },
+    {
+      "pr": 648,
+      "scope": "calibration coboundary and root boundedness",
+      "sha": "49be6640ae2714d1f907a6117c4a6d2aaa9f2f11"
+    },
+    {
+      "pr": 641,
+      "scope": "fixed-row Mellin, noncancellation, and Landau transfer",
+      "sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb"
+    }
+  ],
+  "intended_branch": "review/gpt56-pro/99450-three-interface-hardening",
+  "intended_commit": "review: harden RN ownership, compact Hall, and calibration",
+  "new_claims": [
+    "R-99450",
+    "L-99450",
+    "L-99451",
+    "L-99452",
+    "L-99453",
+    "T-99450",
+    "M-99450"
+  ],
+  "schema": "riemann.t99450.source-lock.v1",
+  "scientific_status": "Riemann Hypothesis remains unproved pending review"
+}
