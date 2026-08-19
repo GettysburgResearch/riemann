@@ -1,0 +1,28 @@
+{
+  "base_sha": "9d0b0521e5ace8c96df63a85a68f60a789b09923",
+  "coefficient_limit": 20000,
+  "exact_identity_checks": 260000,
+  "fpcb23_proved": false,
+  "mutations_rejected": [
+    "claim_rjce23_by_replay_rejected",
+    "claim_fpcb23_by_replay_rejected",
+    "claim_rh_by_replay_rejected",
+    "drop_positive_dyadic_inverse_rejected",
+    "erase_common_profile_rejected",
+    "promote_scalar_to_two_rows_rejected",
+    "treat_k2_as_positive_rejected",
+    "treat_k3_as_positive_rejected"
+  ],
+  "negative_controls": {
+    "k2_at_2": "-1/2",
+    "k3_at_3": "-5",
+    "sharp_scalar_positive_with_row2_negative": true
+  },
+  "ok": true,
+  "positive_inverse_checks": 64,
+  "proof_object_sha256": "31a86c9c8660025985c46f34646a6b970ba7f5fe4b446621007ad4cec5de5b35",
+  "rh_established": false,
+  "rjce23_proved": false,
+  "schema": "riemann.x99130.reciprocal-julia-single-profile.v1",
+  "verdict": "PASS_T99130_RECIPROCAL_JULIA_SINGLE_PROFILE_REDUCTION"
+}
