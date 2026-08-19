@@ -1,0 +1,30 @@
+{
+  "base_head": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb",
+  "base_pr": 641,
+  "branch": "research/gpt56-pro/99550-clamped-volterra-equality-interface",
+  "canonical_seed_source": {
+    "blob": "3b661fe5b847d29fd289b1ff744b54b0af94dfd6",
+    "claim": "L-91106"
+  },
+  "created_utc": "2026-08-19",
+  "direct_integral_head": "493e12fcba3f9b98dda7c3595bff73b256e00ca4",
+  "direct_integral_pr": 620,
+  "distributional_audit_head": "73ee57ccc684f4062769a6d1c0456b3ef6318db2",
+  "distributional_audit_pr": 638,
+  "packet_id": "T99550",
+  "replay": {
+    "proof_object": "9edac1c3b2400cd419c3db518786aad2c87ddedd1ea73288e9d6776e5e47dd3a",
+    "verdict": "PASS_T99550_CLAMPED_VOLTERRA_EQUALITY_INTERFACE"
+  },
+  "repository": "gfreund123/riemann",
+  "scope": {
+    "canonical_double_clamp": true,
+    "common_parent_reconstructed": false,
+    "compact_hall_replayed": false,
+    "hall_transformed_fibres_audited": false,
+    "homogeneous_modes_zero_for_canonical_frame": true,
+    "knot_atoms_zero": true,
+    "mpfr_terminal_replayed": false,
+    "rh_established": false
+  }
+}
