@@ -1,0 +1,52 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/99240-sharp-row-kernel-frame",
+    "head_sha": "07aa0d4838458a1b2d3af9e5bc96616baa6b4767",
+    "pull_request": 642,
+    "tree_sha": "a39b25051f1a7b9d8e5fe4ebac3dcd99a7e4497c"
+  },
+  "claim_ids": [
+    "L-99250",
+    "R-99250",
+    "L-99251",
+    "L-99252",
+    "O-99250",
+    "M-99250",
+    "T-99250"
+  ],
+  "core_idea": "Factor all rows through the exact SHARP scalar Psi, repair child ownership by an exact Radon-Nikodym density, and apply the factor-67 Harnack operator before any global row composition.",
+  "created": "2026-08-19",
+  "exact_remaining_line": "mathfrak H_67(x)>=0 for every real x>=100000001",
+  "finite_certificate": {
+    "cell": 200,
+    "denominator": "1267650600228229401496703205376",
+    "lower_decimal": "1.28341618987788997",
+    "lower_num": "1626923303441334483980962730376",
+    "producer_sha256": "4a74ba8d46b5f438987ff92a13ab26fb21c761ce5c282f01f553e1e44e64e352",
+    "range_end_exclusive": 100000001,
+    "range_start": 67,
+    "result_proof_object_sha256": "e837dd81d6f010bbdd9ed6ab00e6b9db2c236da62c8205cdc85399df3d825291",
+    "side": "RIGHT_LIMIT",
+    "transcript_sha256": "b9ffd45c377935399347de0d1261703c6dc22fcccee98d85b19233dc6c4a2230",
+    "upper_decimal": "1.28341618988436545",
+    "upper_num": "1626923303449543135335825015140",
+    "x": "201^-"
+  },
+  "proposed_branch": "research/gpt56-pro/99250-scalar-sharp-harnack",
+  "replay": {
+    "fast_classification": "PASS_T99250_SHARP_KERNEL_RN_AND_H67_REDUCTION",
+    "fast_proof_object_sha256": "26537573427226a6e1acce2054a4678c09c8586339a982746568935c4f804d60",
+    "full_proof_object_sha256": "552be8316b2db7427c8030d5ab65700f2c3c7c9aca7e1e0d17c1a5b9c941467a",
+    "full_scan_byte_identical": true
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.packet.t99250.v1",
+  "status": {
+    "compact_hall_base_replayed": true,
+    "global_tail_proved": false,
+    "harnack_below_1e8_plus_1_proved": true,
+    "kernel_rn_interface_proved": true,
+    "rh_established": false
+  },
+  "title": "Scalar SHARP factor-67 Harnack closure and Radon-Nikodym source repair"
+}

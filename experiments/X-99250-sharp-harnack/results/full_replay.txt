@@ -1,0 +1,73 @@
+{
+  "base_pr": 642,
+  "base_sha": "07aa0d4838458a1b2d3af9e5bc96616baa6b4767",
+  "checks": [
+    {
+      "classification": "PASS_COMPACT_SHARP_HALL_BASE_AND_WRONG_TARGET_FIREWALL",
+      "equality_control_upper": "-255568391685898147/845269355062099968",
+      "hall_endpoint": 67,
+      "hall_min_lower": "253100172697089681/704391129218416640",
+      "hall_min_upper": "1214880828946112479/3381077420248399872",
+      "hall_threshold": 13,
+      "terminal_cell": 1,
+      "terminal_min_lower": "1125899906842621/1125899906842624",
+      "terminal_min_upper": "281474976710657/281474976710656",
+      "terminal_side": "LEFT"
+    },
+    {
+      "classification": "PASS_EXACT_RADON_NIKODYM_CHILD_AND_PROFILE_MAP",
+      "profile_large": "5/13",
+      "profile_small": "1/5",
+      "random_key_width_t1": "11/416",
+      "random_key_width_t4": "1/80",
+      "ratio_t1": "5/13",
+      "ratio_t4": "1/5",
+      "raw_cutoff_negative_control": true
+    },
+    {
+      "classification": "PASS_67_LOCAL_SQUARE_COEFFICIENT_FORMULA",
+      "coefficient_counts": {
+        "-1": 59921,
+        "-2": 886,
+        "0": 78390,
+        "1": 59903,
+        "2": 900
+      },
+      "limit": 200000
+    },
+    {
+      "classification": "PASS_SHARP_AND_DILATION_MELLIN_SYMBOL_AUDIT",
+      "dilation_multiplier": "1-67^(-(s+1/2))",
+      "dilation_rational_points": 4,
+      "dilation_values": [
+        "4488/4489",
+        "300762/300763",
+        "20151120/20151121",
+        "1350125106/1350125107"
+      ],
+      "off_line_zero_cancellation": false,
+      "target_rational_points": 5
+    },
+    {
+      "classification": "PASS_RETAINED_1E8_RESULT_AND_INDEPENDENT_MINIMIZER_INTERVAL",
+      "min_lower_num": "1626923303441334483980962730376",
+      "min_upper_num": "1626923303449543135335825015140",
+      "minimum_cell": 200,
+      "minimum_side": "RIGHT_LIMIT",
+      "producer_sha256": "4a74ba8d46b5f438987ff92a13ab26fb21c761ce5c282f01f553e1e44e64e352",
+      "scale_squared": "1267650600228229401496703205376",
+      "transcript_sha256": "b9ffd45c377935399347de0d1261703c6dc22fcccee98d85b19233dc6c4a2230"
+    },
+    {
+      "classification": "PASS_BYTE_IDENTICAL_FULL_1E8_REPLAY"
+    }
+  ],
+  "classification": "PASS_T99250_SHARP_KERNEL_RN_AND_H67_REDUCTION",
+  "global_tail_proved": false,
+  "proof_boundary": "Exact algebraic/interface replay plus a retained directed all-real scan through 10^8. The inequality for x>=100000001 and RH remain unproved.",
+  "proof_object_sha256": "552be8316b2db7427c8030d5ab65700f2c3c7c9aca7e1e0d17c1a5b9c941467a",
+  "rh_established": false,
+  "schema": "riemann.t99250.sharp-harnack.v1"
+}
+PASS_T99250_SHARP_KERNEL_RN_AND_H67_REDUCTION
+552be8316b2db7427c8030d5ab65700f2c3c7c9aca7e1e0d17c1a5b9c941467a
