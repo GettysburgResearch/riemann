@@ -1,0 +1,22 @@
+{
+  "all_activation_knot_atoms_zero": true,
+  "derivative_clamp_at_one": true,
+  "green_reconstruction_exact": true,
+  "heavy_inherited_campaigns_replayed": false,
+  "inverse_density": "2*sqrt(y)-1",
+  "mutation_firewalls_pass": true,
+  "operator_density": "(2*x^2*f''-x*f'+f)/(2*sqrt(x))",
+  "phi_coefficients": [
+    4,
+    2,
+    -12,
+    12
+  ],
+  "physical_endpoint_packet_double_clamped": true,
+  "proof_object_sha256": "c1a44d3bf130a535ee4d389c1a524075c8d812ca37b5c7497916d154befff64c",
+  "rh_established": false,
+  "schema": "riemann.x99550.clamped-volterra.v1",
+  "value_clamp_at_one": true,
+  "verdict": "PASS_T99550_CLAMPED_VOLTERRA_EQUALITY_FRAME",
+  "volterra_nullspace_coefficients_zero": true
+}
