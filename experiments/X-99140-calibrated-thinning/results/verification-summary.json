@@ -1,0 +1,22 @@
+{
+  "schema": "riemann.x99140.calibrated-thinning.summary.v1",
+  "verdict": "PASS_T99140_SAFE_POINT_CALIBRATED_LOG_THINNING",
+  "proof_object_sha256": "3de6bd91818daa010986e006a7378d23fd3eb50fc958850711bca7a61c6a86ae",
+  "base_pr": 628,
+  "base_sha": "1c21389c7442f81b6bd99649e08177eebc667abc",
+  "constant_deficit_complete_candidate": "SELF_INCONSISTENT",
+  "required_calibration_scale": "LOGARITHMIC",
+  "thinning": {
+    "K": "floor(X/67)+1",
+    "n": "floor(sqrt(K))",
+    "L": "1+ceil(log_2 X)",
+    "tau": "n/(n+24L)"
+  },
+  "strict_column_gate": "tau*(1+23/sqrt(K))<1",
+  "score_loss": "<192*sqrt(67)*L",
+  "endpoint_strength": "O(log X)=o(log^2 X)",
+  "kappa_formula": "1/2(log(pi)+EulerGamma+pi/2+3log(2))",
+  "kappa_positive": true,
+  "local_pr620_inputs_replayed": false,
+  "rh_established": false
+}
