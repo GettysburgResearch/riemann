@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.t99100.score-debt-supermartingale.v1",
+  "created_utc": "2026-08-19",
+  "repository": "gfreund123/riemann",
+  "base": {
+    "pr": 620,
+    "branch": "research/gpt56-pro/99020-direct-integral-score-free-hall",
+    "head_sha": "493e12fcba3f9b98dda7c3595bff73b256e00ca4"
+  },
+  "audited_inputs": [
+    "L-99020",
+    "L-99021",
+    "L-99022",
+    "L-99023",
+    "L-99024",
+    "L-99025"
+  ],
+  "new_claims": [
+    "L-99100",
+    "R-99100",
+    "T-99100"
+  ],
+  "status": {
+    "all_depth_score_debt_composition": "PROVED_ON_TYPED_LOCAL_INPUTS",
+    "compact_hall": "NOT_REVIEWED_HERE",
+    "equality_endpoint_measure": "NOT_REVIEWED_HERE",
+    "all_column_feasibility": "NOT_REVIEWED_HERE",
+    "endpoint_consumer": "NOT_REVIEWED_HERE",
+    "rh": "UNPROVEN"
+  },
+  "proof_object_sha256": "553024df67144d7027a7675c31238e8b090d4368c51acecf8701de682fb5ce4c"
+}
