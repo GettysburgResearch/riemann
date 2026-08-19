@@ -1,0 +1,39 @@
+{
+  "new_files": {
+    "README_99030.md": "c6b09a367fa6ad25a3879e9c12adb81c70c6ebd9af4bf1b9aa2783b97a18844b",
+    "claims/lemmas/L-99030-exact-factor67-hall-root-mass-is-below-sixteen.md": "0f88f37848b0a1712d6f6a7383577791e0ee762830f05b2e54c5435407f96312",
+    "claims/lemmas/L-99031-survival-resolvent-bellman-score-principle.md": "dcceb48cb80a4d99bf9f83acb79aca85ebdc105fe31d7a762872325f80dfa9f2",
+    "claims/refutations/R-99030-fixed67-level-score-telescope-is-not-the-live-causal-proof.md": "c07512f9595fef3716c2b39201141c76ec4847930313ebf997a01590bc023ce7",
+    "claims/theorems/T-99030-survival-resolvent-hardening-of-t99020.md": "f963b295d7b596b3e38f89760b82d98d359aa38e7555d6f353a3edd7ab29210d",
+    "experiments/X-99030-survival-resolvent-bellman/README.md": "2e08f1f25bb323415d9dfe8633d30518c9fb84ff6c38eae7aa70896a0bebfe4d",
+    "experiments/X-99030-survival-resolvent-bellman/results/verification.json": "4423e7b2c7affdda6fa8609786a09bd02c182b0317dbcf3c53ec9e8ebb3b5c86",
+    "experiments/X-99030-survival-resolvent-bellman/tests/test_verify.py": "03d91c3beaa13e9d200d3ea33556a4ca2376f2858f966616adfa802441aea7dd",
+    "experiments/X-99030-survival-resolvent-bellman/verify.py": "dbf00a59dae5c0240ae3b18ffbb725173fe5607ad1bb1c641dcc5b91ebb30338",
+    "reports/gpt56-pro/2026-08-19-survival-resolvent-bellman-hardening.md": "90a81546666f369574d6533a51ba7a350c0dc63fb9be8694d768ed58a36e7f50",
+    "standalone/2026-08-19-survival-resolvent-bellman/CLAIM_STATUS.md": "58f9f5ff3832935edd760dbace81712bfba34b3352be53219c43282f8e115a77",
+    "standalone/2026-08-19-survival-resolvent-bellman/README.md": "f5969f6755525c1dd94fe861bd452ea6d246bbe2974adc6138eee6f13932bce2",
+    "standalone/2026-08-19-survival-resolvent-bellman/REVIEW_SPECIFICATION.md": "f9627137ea1ca0a43938252d0f592e90d138c04998fc161f168aec432ea0c09b"
+  },
+  "parent_blobs": {
+    "claims/lemmas/L-99020-compact-score-free-hall-two-sort.md": "6a8127429f5d35326087305969ce7e249de4f6a3",
+    "claims/lemmas/L-99021-residual-causal-row-and-actual-mass.md": "a769d1be0f806e4add0d70fef40dcd814eb07ac7",
+    "claims/lemmas/L-99022-direct-integration-and-exact-cubature.md": "af5323f2167aad709aafe33ec284acc31aa1567e",
+    "claims/lemmas/L-99023-all-column-no-collar-feasibility.md": "14dbb072dd3a7a71b6657f7ba5fcd4e7f2a966bd",
+    "claims/lemmas/L-99025-parabolic-benchmark-and-endpoint-consumer.md": "f6e84dc79c7ea34f03ade284b2779a7b42c3406a"
+  },
+  "parent_branch": "research/gpt56-pro/99020-direct-integral-score-free-hall",
+  "parent_pr": 620,
+  "parent_sha": "493e12fcba3f9b98dda7c3595bff73b256e00ca4",
+  "replay": {
+    "arithmetic_score_debt_upper": 32,
+    "classification": "PASS_T99030_SURVIVAL_RESOLVENT_BELLMAN_HARDENING",
+    "proof_object_sha256": "9227646d2e9edead559d5169651bbe159644b5c2880470d5707c9cb8ff90fd91",
+    "rh_established": false,
+    "root_mass_upper": 16,
+    "unit_tests": 7
+  },
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t99030.survival-resolvent-lock.v1",
+  "scientific_status": "proposed complete hardening of T-99020; hostile independent reconstruction required"
+}
