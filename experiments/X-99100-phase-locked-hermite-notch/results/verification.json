@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "absolute_rate": "99/10000",
+      "alpha_star": "2401/5000",
+      "delta": "1/100",
+      "left_saddle": "1/50",
+      "pole_rate": "1/10000",
+      "q": "49/100",
+      "required_phase_saving": "49/5000",
+      "right_saddle": "99/50"
+    },
+    {
+      "absolute_rate": "19/400",
+      "alpha_star": "81/200",
+      "delta": "1/20",
+      "left_saddle": "1/10",
+      "pole_rate": "1/400",
+      "q": "9/20",
+      "required_phase_saving": "9/200",
+      "right_saddle": "19/10"
+    },
+    {
+      "absolute_rate": "9/100",
+      "alpha_star": "8/25",
+      "delta": "1/10",
+      "left_saddle": "1/5",
+      "pole_rate": "1/100",
+      "q": "2/5",
+      "required_phase_saving": "2/25",
+      "right_saddle": "9/5"
+    },
+    {
+      "absolute_rate": "3/16",
+      "alpha_star": "1/8",
+      "delta": "1/4",
+      "left_saddle": "1/2",
+      "pole_rate": "1/16",
+      "q": "1/4",
+      "required_phase_saving": "1/8",
+      "right_saddle": "3/2"
+    },
+    {
+      "absolute_rate": "6/25",
+      "alpha_star": "1/50",
+      "delta": "2/5",
+      "left_saddle": "4/5",
+      "pole_rate": "4/25",
+      "q": "1/10",
+      "required_phase_saving": "2/25",
+      "right_saddle": "6/5"
+    },
+    {
+      "absolute_rate": "2499/10000",
+      "alpha_star": "1/5000",
+      "delta": "49/100",
+      "left_saddle": "49/50",
+      "pole_rate": "2401/10000",
+      "q": "1/100",
+      "required_phase_saving": "49/5000",
+      "right_saddle": "51/50"
+    }
+  ],
+  "identities": {
+    "absolute_amplitude_rate": "delta-delta^2",
+    "missing_phase_saving": "delta(1-2delta)",
+    "offline_zero_amplitude_rate": "delta^2",
+    "one_sided_annulus": "log n=2delta T+O(sqrt T)",
+    "optimal_alpha": "2(1/2-delta)^2"
+  },
+  "proof_object_sha256": "4bd8afec5c6774f755f2c04c4a958465dc540495efdc5f0b74f502797fd390e5",
+  "schema": "riemann.t99100.phase_locked_hermite_notch.v1",
+  "scope": {
+    "fractional_owner_martingale_proved_algebraically": true,
+    "magnitude_only_closure_refuted": true,
+    "notch_identity_proved": true,
+    "plhac99100_proved": false,
+    "rh_established": false,
+    "saddle_optimization_proved": true
+  },
+  "verdict": "PASS_T99100_PHASE_LOCKED_HERMITE_NOTCH_ALGEBRA"
+}
