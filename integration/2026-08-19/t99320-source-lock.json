@@ -1,0 +1,47 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/99240-holomorphic-defect-fixed-row",
+    "pr": 641,
+    "sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb"
+  },
+  "created_utc": "2026-08-19T00:00:00Z",
+  "inputs": [
+    {
+      "pr": 620,
+      "scope": "compact target Hall, causal coefficients, root endpoint registry",
+      "sha": "493e12fcba3f9b98dda7c3595bff73b256e00ca4"
+    },
+    {
+      "pr": 632,
+      "scope": "one common-parent random-key partition",
+      "sha": "3b19ccb6b910e20027d3df894c69f5e108b23de3"
+    },
+    {
+      "pr": 636,
+      "scope": "component-row fixed-row route and source labels",
+      "sha": "387f775f95d5e21e01c3fb39d91acc5b67f62b02"
+    },
+    {
+      "pr": 638,
+      "scope": "distributional boundary and rank-two Volterra audit",
+      "sha": "73ee57ccc684f4062769a6d1c0456b3ef6318db2"
+    },
+    {
+      "pr": 641,
+      "scope": "bounded fixed-row calibration and Mellin/Landau transfer",
+      "sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb"
+    }
+  ],
+  "intended_branch": "research/gpt56-pro/99320-target-aligned-row-frame",
+  "intended_commit": "research: diagonalize the common-parent row through the SHARP target",
+  "new_claims": [
+    "L-99320",
+    "L-99321",
+    "L-99322",
+    "R-99320",
+    "T-99320",
+    "M-99320"
+  ],
+  "schema": "riemann.t99320.source-lock.v1",
+  "scientific_status": "Riemann Hypothesis remains unproved pending review"
+}
