@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "alpha_native_firewall": {
+      "contracted_net_shift": "0",
+      "fixture_r": "1/9",
+      "missing_subsidy": "8/81",
+      "native_shift": "-1/9"
+    },
+    "beta_positive_inverse": 5000,
+    "critical_tilt_energy": {
+      "elementary_bound": 4.501933585729217,
+      "integrated_energy_upper_numeric": 1.192846076839727,
+      "limit": 200000,
+      "max_beta2_over_g": "2",
+      "nonzero_beta": 121609
+    },
+    "five_three_numerator": {
+      "factorization": "-3(2^-z-1)(2^-z-2)",
+      "open_strip_zero_free": true
+    },
+    "logarithmic_owner_formal": 6846,
+    "positive_euler_smoothing_local_factor": {
+      "coefficient_checks": 44,
+      "theta_fixtures": 4
+    },
+    "symmetric_native_homotopy": {
+      "formal_primes": 4,
+      "monomials": 16,
+      "survival": "32/77"
+    }
+  },
+  "classification": "PASS_T99700_CANONICAL_SCALAR_NATIVE_TILT_SPINE",
+  "open": {
+    "riemann_hypothesis": true,
+    "subpower_negative_mass": true,
+    "tilted_owner_carleson_embedding_TOCE67": true
+  },
+  "proof_object_sha256": "750c2e425604bda08e669d1dff1393dcbba9c4802012b14a5b988b6c45544ab0",
+  "proved": {
+    "absolute_subcritical_euler_smoothing_cancels_detector": true,
+    "critical_tilt_energy_loglog_bound": true,
+    "native_sequential_first_owner_identity": true,
+    "scalar_negative_mass_implies_rh": true,
+    "symmetric_euler_homotopy_identity": true,
+    "tilted_owner_flow_identity": true,
+    "tilted_positive_inverse_renewal": true
+  },
+  "rh_established": false,
+  "schema": "riemann.t99700.canonical-native-tilt.v1"
+}
