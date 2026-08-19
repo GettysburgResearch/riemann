@@ -1,0 +1,20 @@
+{
+  "binding_corrections": {
+    "pr552_frontier_chain_not_used": true,
+    "pr635_score_endgame_not_used": true,
+    "pr638_second_order_anchor_gate_bypassed": true
+  },
+  "base_pr": 636,
+  "base_sha": "387f775f95d5e21e01c3fb39d91acc5b67f62b02",
+  "proposed_branch": "research/gpt56-pro/99240-sharp-row-kernel-frame",
+  "replay": {
+    "classification": "PASS_T99240_SHARP_ROW_KERNEL_FRAME",
+    "proof_object_sha256": "6754d6c8f7fc1883cbb5d3516b347449cef646223ff414178eb200af1f80a10f",
+    "rh_established": false
+  },
+  "repository": "gfreund123/riemann",
+  "review_cutoff_utc": "2026-08-19T19:55:03Z",
+  "rh_established": false,
+  "schema": "riemann.t99240.source-lock.v1",
+  "status": "proposed complete anchor-free component-row candidate; hostile reconstruction required"
+}
