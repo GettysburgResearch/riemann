@@ -1,0 +1,36 @@
+{
+  "analytic_theorems_in_packet": [
+    "RH equivalence of subpower negative mass",
+    "prime-continuum Selberg balance",
+    "RH equivalence of the block squarefree-core L2 estimate"
+  ],
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_AND_FORMAL_PRIME_LOG",
+  "base_pr": 653,
+  "base_sha": "e928fd615d753882706bb88c51b717bd8d4a86ba",
+  "beta_anti_harmonic_checks": 4999,
+  "classification": "PASS_X_99700_OWNER_DEGENERACY_AND_CROSS_CORE",
+  "coefficient_table_checks": 10000,
+  "does_not_prove": [
+    "cross-core block L2 estimate",
+    "FCHD67",
+    "Riemann Hypothesis"
+  ],
+  "g_log_owner_checks": 4999,
+  "gram_expansion_checks": 216,
+  "hostile_mutations_detected": 5,
+  "inverse_convolution_checks": 5000,
+  "martingale_energy_checks": 4999,
+  "proof_object_sha256": "3f5755e9422232ae0ec3208babd2f815db855d370c0d57537d5ff4371bd937f9",
+  "proves": [
+    "exact owner martingale and quadratic-variation recursion",
+    "zero owner energy on the squarefree e=0 and e=1 bands",
+    "exact target Jordan-kernel Mellin identity",
+    "exact three-band 67-adic source table",
+    "exact cross-core Gram expansion algebra"
+  ],
+  "rh_established": false,
+  "schema": "riemann.x99700.owner-degeneracy-cross-core.v1",
+  "squarefree_degeneracy_checks": 6626,
+  "target_jordan_kernel_checks": 3619,
+  "three_band_checks": 5000
+}
