@@ -1,0 +1,59 @@
+{
+  "classification": "PASS_T99030_SURVIVAL_RESOLVENT_BELLMAN_HARDENING",
+  "core": {
+    "bellman_fixtures": [
+      {
+        "current": "-563/2700",
+        "discounted": "8777/66825",
+        "parent": "-20629/267300",
+        "pis": [
+          "11/27",
+          "44/135",
+          "4/15"
+        ]
+      },
+      {
+        "current": "-203/808",
+        "discounted": "258201/1679125",
+        "parent": "-1309267/13433000",
+        "pis": [
+          "57/101",
+          "44/101"
+        ]
+      },
+      {
+        "current": "0",
+        "discounted": "1/6",
+        "parent": "1/6",
+        "pis": [
+          "1"
+        ]
+      }
+    ],
+    "frozen_parent": {
+      "head": "493e12fcba3f9b98dda7c3595bff73b256e00ca4",
+      "pr": 620
+    },
+    "mutations": {
+      "current_score_superordination_required": true,
+      "hall_bonus_export_forbidden": true,
+      "survival_resolvent_required": true
+    },
+    "root_mass": {
+      "interval": {
+        "lower": "15.7134406686557167269450969040578439770772299360997303497068720024648555981489769364594302631425590899",
+        "upper": "15.7134406686557167269450969040578439770772299360997303497068720024648555981489769364594304467337565939"
+      },
+      "score_debt_upper": "31.4268813373114334538901938081156879541544598721994606994137440049297111962979538729188608934675131879",
+      "strict_debt_upper": 32,
+      "strict_upper": 16
+    },
+    "scientific_boundary": {
+      "arbitrary_rough_prime_paths_supported": true,
+      "fixed_67_level_telescope_required": false,
+      "rh_established_by_replay": false
+    }
+  },
+  "proof_object_sha256": "9227646d2e9edead559d5169651bbe159644b5c2880470d5707c9cb8ff90fd91",
+  "schema": "riemann.t99030.survival-resolvent-bellman.v1"
+}
