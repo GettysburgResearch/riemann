@@ -1,0 +1,32 @@
+{
+  "N": 100000000,
+  "all_real_semantics": "both endpoints of every [n,n+1) cell are outward-enclosed; the right endpoint is the pre-activation limit",
+  "classification": "PASS_X99250_SHARP_H67_DIRECTED_SCAN",
+  "minimum": {
+    "cell": 200,
+    "denominator": "1267650600228229401496703205376",
+    "lower_decimal": "1.28341618987788997",
+    "lower_num": "1626923303441334483980962730376",
+    "side": "RIGHT_LIMIT",
+    "upper_decimal": "1.28341618988436545",
+    "upper_num": "1626923303449543135335825015140",
+    "x": "201^-"
+  },
+  "nonzero_coefficients": 60806035,
+  "producer_sha256": "4a74ba8d46b5f438987ff92a13ab26fb21c761ce5c282f01f553e1e44e64e352",
+  "proof_boundary": "The exact directed certificate ends at x<100000001. No value at or above 100000001, no unbounded Harnack theorem, and no proof of RH is claimed.",
+  "proof_object_sha256": "e837dd81d6f010bbdd9ed6ab00e6b9db2c236da62c8205cdc85399df3d825291",
+  "range_end_exclusive": 100000001,
+  "range_start": 67,
+  "scale": 1125899906842624,
+  "scale_squared": "1267650600228229401496703205376",
+  "schema": "riemann.t99250.sharp-harnack.v1",
+  "status": {
+    "global_sharp_positivity_proved": false,
+    "global_tail_proved": false,
+    "harnack_through_1e8_proved": true,
+    "rh_established": false,
+    "terminal_sharp_base_proved": true
+  },
+  "transcript_sha256": "b9ffd45c377935399347de0d1261703c6dc22fcccee98d85b19233dc6c4a2230"
+}

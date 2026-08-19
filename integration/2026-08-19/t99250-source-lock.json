@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.t99250.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "base": {
+    "pull_request": 642,
+    "branch": "research/gpt56-pro/99240-sharp-row-kernel-frame",
+    "head_sha": "07aa0d4838458a1b2d3af9e5bc96616baa6b4767",
+    "tree_sha": "a39b25051f1a7b9d8e5fe4ebac3dcd99a7e4497c"
+  },
+  "frozen_inputs": {
+    "compact_hall_pr620_sha": "493e12fcba3f9b98dda7c3595bff73b256e00ca4",
+    "same_row_correction_pr635_sha": "b8d4772b5cab0655b3edf68864df6d925c76b5ba",
+    "volterra_audit_pr638_sha": "73ee57ccc684f4062769a6d1c0456b3ef6318db2",
+    "prior_harnack_pr630_sha": "bec6ec52ff94e0439fa6a4615c4641f7714d1d54"
+  },
+  "new_conclusion_target": "mathfrak H_67(x)>=0 for every x>=100000001",
+  "finite_certificate": {
+    "range": "1<=x<100000001",
+    "minimum_cell": 200,
+    "minimum_side": "RIGHT_LIMIT",
+    "minimum_x": "201^-",
+    "lower_num": "1626923303441334483980962730376",
+    "upper_num": "1626923303449543135335825015140",
+    "denominator": "1267650600228229401496703205376"
+  },
+  "status": {
+    "radon_nikodym_interface_proved": true,
+    "finite_harnack_certificate_proved": true,
+    "global_tail_proved": false,
+    "rh_established": false
+  }
+}
