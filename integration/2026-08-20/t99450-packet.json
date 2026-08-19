@@ -1,0 +1,15 @@
+{
+  "base_pr": 648,
+  "base_sha": "49be6640ae2714d1f907a6117c4a6d2aaa9f2f11",
+  "branch": "review/gpt56-pro/99450-three-interface-hardening",
+  "proof_object_sha256": "20b3a364d2c3c97906e3a8f4e9f68b4c73fcebea65ccf9dd50dfc86400a92a2e",
+  "remaining_acceptance_gate": "complete native root registry E=P+A with exact labels",
+  "repaired_interfaces": [
+    "raw-cutoff child source",
+    "unreplayed compact target Hall",
+    "generationwise calibration accumulation"
+  ],
+  "replay": "PASS_X_99450_RN_HALL_COBBOUNDARY_HARDENING",
+  "rh_established": false,
+  "schema": "riemann.t99450.packet.v1"
+}
