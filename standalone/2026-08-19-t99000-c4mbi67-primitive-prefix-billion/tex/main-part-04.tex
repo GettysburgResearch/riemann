@@ -1,0 +1,103 @@
+\section{A self-contained Landau theorem}
+
+\begin{theorem}[Landau singularity for an eventually nonnegative Laplace
+density]\label{thm:Landau}
+Let $f$ be locally integrable and of exponential order on $[0,\infty)$.  Suppose
+$f(t)\ge0$ for all sufficiently large $t$.  Let
+\[
+ F(s)=\int_0^\infty f(t)e^{-st}\,dt
+\]
+have finite abscissa of convergence $\sigma_c$.  Then $F$ cannot be analytic
+in a neighborhood of the real point $s=\sigma_c$.
+\end{theorem}
+\begin{proof}
+Subtract the compactly supported initial part of $f$; its Laplace transform is
+entire, so we may assume $f\ge0$ everywhere.  Suppose $F$ were analytic in a
+disc about $\sigma_c$.  Choose real $\sigma_1>\sigma_c$ inside that disc and
+$r>0$ so that $\sigma_1-r<\sigma_c$ and the Taylor series of $F$ at
+$\sigma_1$ converges at $\sigma_1-r$.  Differentiation under the absolutely
+convergent integral gives
+\[
+ (-1)^kF^{(k)}(\sigma_1)=\int_0^\infty t^ke^{-\sigma_1t}f(t)\,dt\ge0.
+\]
+Tonelli's theorem, applicable because every summand is nonnegative, yields
+\begin{align*}
+ F(\sigma_1-r)
+ &=\sum_{k\ge0}\frac{(-r)^k}{k!}F^{(k)}(\sigma_1)\\
+ &=\int_0^\infty e^{-\sigma_1t}f(t)
+       \sum_{k\ge0}\frac{(rt)^k}{k!}\,dt\\
+ &=\int_0^\infty e^{-(\sigma_1-r)t}f(t)\,dt<\infty.
+\end{align*}
+This contradicts the definition of $\sigma_c$.
+\end{proof}
+
+The Mellin version follows by $X=e^t$:
+\[
+ \int_1^\infty \A_X X^{-s-1}dX
+ =\int_0^\infty \A_{e^t}e^{-st}dt.
+\]
+
+\section{The zeta facts needed by the consumer}
+
+We include the standard analytic continuation and symmetry to make the
+consumer independent of an unlisted import.
+
+\begin{lemma}[Gaussian Fourier transform]
+For $t>0$, the Fourier transform of $x\mapsto e^{-\pi tx^2}$ is
+$\xi\mapsto t^{-1/2}e^{-\pi\xi^2/t}$.
+\end{lemma}
+\begin{proof}
+Scaling reduces to $t=1$.  If
+$I(\xi)=\int_{\mathbb R}e^{-\pi x^2}e^{-2\pi i x\xi}dx$, differentiation and
+integration by parts give $I'(\xi)=-2\pi\xi I(\xi)$.  Since
+$I(0)=1$ (the squared Gaussian integral in polar coordinates),
+$I(\xi)=e^{-\pi\xi^2}$.
+\end{proof}
+
+\begin{lemma}[Jacobi theta identity]\label{lem:theta}
+For $t>0$,
+\[
+ \theta(t):=\sum_{n\in\mathbb Z}e^{-\pi n^2t}
+ =t^{-1/2}\theta(1/t).
+\]
+\end{lemma}
+\begin{proof}
+Periodize the Gaussian: $P(x)=\sum_{n\in\mathbb Z}e^{-\pi t(x+n)^2}$.
+Uniform convergence with all derivatives permits its Fourier series.  The
+$m$th Fourier coefficient is the Gaussian Fourier transform at $m$, namely
+$t^{-1/2}e^{-\pi m^2/t}$.  Evaluating the Fourier series at $x=0$ gives the
+identity.
+\end{proof}
+
+For $\Re z>1$, termwise Mellin integration gives
+\begin{equation}\label{eq:LambdaIntegral}
+ \Lambda(z):=\pi^{-z/2}\Gamma(z/2)\zeta(z)
+ =\frac12\int_0^\infty(\theta(t)-1)t^{z/2-1}dt.
+\end{equation}
+Split at $1$, apply Lemma \ref{lem:theta} on $(0,1)$, and put $u=1/t$.  One
+obtains
+\begin{equation}\label{eq:LambdaContinue}
+\Lambda(z)=\frac1{z-1}-\frac1z+\frac12\int_1^\infty(\theta(t)-1)
+ \left(t^{z/2-1}+t^{(1-z)/2-1}\right)dt.
+\end{equation}
+The integral is entire because $\theta(t)-1$ decays exponentially.  Formula
+\eqref{eq:LambdaContinue} gives the meromorphic continuation and is unchanged
+by $z\mapsto1-z$.  Hence
+\begin{equation}\label{eq:functional}
+ \Lambda(z)=\Lambda(1-z).
+\end{equation}
+Since $\Gamma$ has no zeros, every zero in $0<\Re z<1$ is reflected to a zero
+at $1-z$.
+
+For real $z>1$, the absolutely convergent Euler product
+$\zeta(z)=\prod_p(1-p^{-z})^{-1}$ is positive and nonzero.  For
+$0<z<1$, the alternating series
+\[
+ \eta(z)=\sum_{n\ge1}(-1)^{n-1}n^{-z}
+ =\sum_{k\ge1}\bigl((2k-1)^{-z}-(2k)^{-z}\bigr)
+\]
+converges and is strictly positive.  The identity
+$\eta(z)=(1-2^{1-z})\zeta(z)$, first obtained for $z>1$ by separating even
+terms and then continued through \eqref{eq:LambdaContinue}, shows that
+$\zeta(z)<0$ on $(0,1)$.  Thus zeta has no positive real zero.
+

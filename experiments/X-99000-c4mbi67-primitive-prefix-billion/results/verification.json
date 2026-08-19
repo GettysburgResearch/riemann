@@ -1,0 +1,40 @@
+{
+  "dictionary_checks": 2000,
+  "fast_exact_scan": {
+    "N": 100000,
+    "final_lower_num": 9455550770700,
+    "final_upper_num": 9455551454658,
+    "min_lower_at": 48433,
+    "min_lower_num": 1226685126915,
+    "min_upper_at": 48433,
+    "min_upper_num": 1226685458193,
+    "nonzero": 75990
+  },
+  "finite_pointwise_port_counterexample": {
+    "lower_num": -150591072045175446,
+    "scale": 1152921504606846976,
+    "threshold": 26,
+    "upper_is_negative": true,
+    "upper_num": -150591072045175410
+  },
+  "proof_object_sha256": "4eb5e74c2dd4926ce4ca7f614f52432ef3ddad062687b6348a774b05793bb833",
+  "retained_full_scan": {
+    "K": "40",
+    "N": "1000000000",
+    "PASS": "YES",
+    "final_lower_num": "6792531895707",
+    "final_upper_num": "6799371075387",
+    "min_lower_at": "48433",
+    "min_lower_num": "1226685126915",
+    "min_upper_at": "48433",
+    "min_upper_num": "1226685458193",
+    "nonzero": "759908859",
+    "scale": "1099511627776"
+  },
+  "status": {
+    "c4mbi67_global_sign": false,
+    "primitive_prefix_through_1e9": true,
+    "rh_established": false
+  },
+  "verdict": "PASS_T99000_PRIMITIVE_PREFIX_BILLION_EXACT_REPLAY"
+}

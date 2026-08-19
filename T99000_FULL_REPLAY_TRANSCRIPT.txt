@@ -1,0 +1,52 @@
+T99000 FULL REPLAY TRANSCRIPT
+UTC_START 2026-08-18T23:03:40Z
+PASS_T99000_PRIMITIVE_PREFIX_BILLION_EXACT_REPLAY
+4eb5e74c2dd4926ce4ca7f614f52432ef3ddad062687b6348a774b05793bb833
+test_exact_minimum_through_100k (test_verify.TestT99000.test_exact_minimum_through_100k) ... ok
+test_finite_pointwise_port_is_negative (test_verify.TestT99000.test_finite_pointwise_port_is_negative) ... ok
+test_invsqrt_brackets (test_verify.TestT99000.test_invsqrt_brackets) ... ok
+test_retained_full_transcript (test_verify.TestT99000.test_retained_full_transcript) ... ok
+test_sparse_dictionary (test_verify.TestT99000.test_sparse_dictionary) ... ok
+test_status_fail_closed (test_verify.TestT99000.test_status_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.090s
+
+OK
+PASS_T99000_PYTHON_SYNTAX_CHECK
+README.md: OK
+build_full.sh: OK
+replay.sh: OK
+results/cprefix_exact_1e9.txt: OK
+results/full_run_metadata.txt: OK
+results/full_run_time.txt: OK
+results/verification.json: OK
+src/scan_cprefix_exact.cpp: OK
+tests/test_verify.py: OK
+verify.py: OK
+PASS_T99000_FULL_BILLION_REGENERATION
+PASS_T99000_FULL_REPLAY
+	Command being timed: "env FULL=1 PYTHONDONTWRITEBYTECODE=1 ./replay.sh"
+	User time (seconds): 25.89
+	System time (seconds): 7.55
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:32.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3131680
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 908019
+	Voluntary context switches: 74
+	Involuntary context switches: 381
+	Swaps: 0
+	File system inputs: 96
+	File system outputs: 160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+UTC_END 2026-08-18T23:04:12Z

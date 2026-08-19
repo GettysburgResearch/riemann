@@ -1,0 +1,55 @@
+\section{Hostile audit: what still has to be proved}
+
+\subsection{Why a PSD completion is not enough}
+A symmetric completion
+\[
+ \begin{pmatrix}\Gamma&A\\A&\Gamma\end{pmatrix}\succeq0
+\]
+proves $|A|\le\Gamma$, not $A\ge0$.  The matrix with $\Gamma=1$ and
+$A=-1/2$ is positive definite and has negative off-diagonal.  Hence an exact
+Tao/Schur magnitude port still needs an oriented cross-scale comparison.
+
+\subsection{Why the finite theorem is not an asymptotic tail}
+The barrier in \eqref{eq:Ddef} is the fixed number $6$.  Classical zero-free
+regions give cancellation estimates for $B_{1/2}(t)$ that are subexponential
+relative to $\sqrt t$, but those upper bounds still grow without bound and
+cannot be compared to $6$ for all large $t$.  Thus no standard PNT error term
+extends Theorem \ref{thm:billion} to infinity.
+
+\subsection{The exact remaining producer}
+Any one of the following would close the route:
+\begin{enumerate}[label=(\roman*)]
+\item $\A_X\ge0$ for every sufficiently large real $X$ (exact C4MBI67);
+\item the stronger $C(t)\ge0$ for every sufficiently large $t$ together with a
+finite initial check;
+\item an oriented Bellman invariant for \eqref{eq:Grec} that controls child
+overovershoot without replacing it by absolute mass;
+\item an equivalent one-sided signed Type--II estimate retaining the owner
+weights in Theorem \ref{thm:owner}.
+\end{enumerate}
+None is proved here.  Every prior lemma needed after such a producer has been
+reconstructed above.
+
+\section{Conclusion}
+The T--97701 route now has a single, sharply visible mathematical boundary.
+The arithmetic dictionary, primitive prefix, four-band transform, prime
+ownership, Bellman recurrence, Mellin numerator, Landau theorem, and zeta
+symmetry have all been proved in one document.  The exact finite theorem is
+extended to one billion endpoints with a rational certificate.  The remaining
+assertion is not a bookkeeping gap: it is the all-scale oriented sign
+$\A_X\ge0$.  Until that producer is proved, RH remains unproved.
+
+\appendix
+\section{Replay commands}
+From the packet root:
+\begin{lstlisting}
+cd experiments/X-99000-c4mbi67-primitive-prefix-billion
+python3 verify.py
+python3 -m unittest discover -s tests -v
+# Optional full regeneration (requires about 3.2 GB RAM):
+./build_full.sh 1000000000
+cd ../..
+sha256sum -c SHA256SUMS
+\end{lstlisting}
+
+\end{document}

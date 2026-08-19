@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\A}{\mathcal A}
+\newcommand{\D}{\mathcal D}
+\newcommand{\C}{\mathcal C}
+\newcommand{\Ree}{\operatorname{Re}}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\logp}{\log_+}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{T--99000: C4MBI67 primitive-prefix reconstruction}
+\rhead{\thepage}
+
+\lstset{basicstyle=\ttfamily\small,breaklines=true,frame=single,columns=fullflexible}
+
+\title{\textbf{Primitive-Prefix Reconstruction of the T--97701/C4MBI67 Route}\\
+\large A self-contained exact reduction, a billion-endpoint rational certificate,\\
+and the remaining all-scale closure theorem}
+\author{Agentic Polymath Project --- Riemann route}
+\date{19 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Scientific status.}  Every finite identity, the Mellin--Landau
+consumer, and the directed certificate through $10^9$ are proved below.
+The eventual all-scale sign of $\A_X$ is \emph{not} proved.  Consequently this
+manuscript is not a proof of the Riemann Hypothesis.  It reconstructs the
+entire conditional chain without hidden imports and isolates one exact
+producer.}}
+\end{center}
+
+\begin{abstract}
+The T--97701 packet reduces the factor--67 root Bellman inequality to the sign
+of an annular $5{:}3$ scalar.  We reconstruct that reduction from the source
+dictionary, rather than importing it.  The central new object is the primitive
+prefix
+\[
+ C(t)=6-\left(6B_{1/2}(t)-\frac9{\sqrt2}B_{1/2}(t/2)
+                    +\frac32B_{1/2}(t/4)\right),
+\]
+for which the desired scalar is the logarithmic window
+$\A_X=\int_{X/4}^{X}C(t)\,dt/t$.  We give three exact descriptions of $C$:
+a Möbius prefix, a generalized-prime inclusion--exclusion sum, and the
+expected Euler characteristic of a random weighted threshold complex.  These
+yield an exact windowed Bellman recurrence that displays the surviving
+correlated-overshoot obstruction.
+
+A linear least-prime-factor sieve combined with exact $2^{-40}$ rational
+brackets for every $1/\sqrt n$ proves $C(t)\ge0$ for every real
+$1\le t<10^9+1$.  The global lower enclosure is
+$1226685126915/2^{40}>1.11565$ and occurs at $t=48433$.  Finally, we prove from
+scratch the specialized Landau theorem and the zeta functional-equation facts
+needed to show that eventual nonnegativity of $\A_X$ implies RH.  The only
+unproved conclusion-producing statement is the eventual all-scale sign itself.
+\end{abstract}
+
+\tableofcontents
+
+\section{The exact theorem ledger}
+
+\begin{longtable}{@{}p{0.53\textwidth}p{0.39\textwidth}@{}}
+\toprule
+Statement & Status\\
+\midrule
+Source dictionary and Möbius inverse & proved exactly\\
+Primitive-prefix/window identity & proved exactly\\
+Four-band C4MBI67 identity & proved exactly\\
+Logarithmic prime ownership & proved exactly\\
+Weighted threshold-complex representation & proved exactly\\
+Windowed Bellman recurrence & proved exactly\\
+Mellin transform and off-line-zero noncancellation & proved exactly\\
+Specialized Landau theorem & proved below\\
+Theta-functional-equation symmetry & proved below\\
+$C(t)\ge0$ for $1\le t<10^9+1$ & exact rational certificate\\
+$\A_X\ge0$ for all sufficiently large $X$ & \textbf{open / RH-bearing}\\
+Riemann Hypothesis & \textbf{unproved}\\
+\bottomrule
+\end{longtable}
+
+\section{Arithmetic reconstruction from the source dictionary}
+
+\subsection{Möbius inversion}
+
+The Möbius function is defined by $\mu(1)=1$, by $\mu(n)=0$ if a prime square
+divides $n$, and by $\mu(p_1\cdots p_k)=(-1)^k$ for distinct primes.
+
+\begin{lemma}[Dirichlet inverse of the constant-one function]
+For every positive integer $n$,
+\[
+ \sum_{d\mid n}\mu(d)=\1_{n=1}.
+\]
+\end{lemma}
+\begin{proof}
+If $n=1$ the sum is $1$.  If $n>1$ has distinct prime divisors
+$p_1,\ldots,p_r$, only squarefree divisors contribute and the sum is
+\[
+ \sum_{S\subseteq\{1,\ldots,r\}}(-1)^{|S|}=(1-1)^r=0.
+\]
+\end{proof}
+
+Define the positive sharp source dictionary
+\begin{equation}\label{eq:qdict}
+q(1)=0,\qquad q(2)=15,\qquad q(4)=3,\qquad
+q(n)=6\quad(n\notin\{1,2,4\}).
+\end{equation}
+Let $a=q*\mu$ under Dirichlet convolution.
+
+\begin{lemma}[Explicit native coefficients]\label{lem:aexplicit}
+For every $n\ge1$,
+\begin{equation}\label{eq:aexplicit}
+ a(n)=6\1_{n=1}-6\mu(n)
+ +9\1_{2\mid n}\mu(n/2)
+ -3\1_{4\mid n}\mu(n/4).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write
+\[
+ q=6\mathbf 1-6\delta_1+9\delta_2-3\delta_4,
+\]
+where $\mathbf1(n)=1$ and $\delta_j(n)=\1_{n=j}$.  Convolution with $\mu$,
+using $\mathbf1*\mu=\delta_1$, gives
+\[
+ q*\mu=6\delta_1-6\mu+9(\delta_2*\mu)-3(\delta_4*\mu),
+\]
+and $(\delta_j*\mu)(n)=\1_{j\mid n}\mu(n/j)$.
+\end{proof}
+
+For later checking, if $n=2^e m$ with $m$ odd and squarefree, then except for
+$a(1)=0$,
+\begin{equation}\label{eq:aclass}
+ a(m)=-6\mu(m),\quad a(2m)=15\mu(m),\quad
+ a(4m)=-12\mu(m),\quad a(8m)=3\mu(m),
+\end{equation}
+and $a(2^e m)=0$ for $e\ge4$ or nonsquarefree $m$.
+

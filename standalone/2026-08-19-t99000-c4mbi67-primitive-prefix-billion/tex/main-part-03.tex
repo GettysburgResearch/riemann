@@ -1,0 +1,140 @@
+\section{A weighted threshold complex}
+
+The Dirichlet series of $a$ is especially rigid.  For $\Re z>1$,
+\begin{align}
+ Q(z)&=\sum_{n\ge1}\frac{q(n)}{n^z}
+ =6\zeta(z)-6+9\,2^{-z}-3\,4^{-z},\\
+ A(z)&=\sum_{n\ge1}\frac{a(n)}{n^z}
+ =\frac{Q(z)}{\zeta(z)}
+ =6-\frac{3(1-2^{-z})(2-2^{-z})}{\zeta(z)}.
+\end{align}
+Let $d$ be defined by $6\delta_1-a=d$; then $\D(t)=\sum_{n\le t}d(n)/\sqrt n$.
+Writing $z=s+1/2$ gives
+\begin{equation}\label{eq:Euler-generalized}
+ \frac16\sum_{n\ge1}\frac{d(n)}{n^{s+1/2}}
+ =(1-2^{-s-1/2})^2(1-2^{-s-3/2})
+  \prod_{p\,\mathrm{odd}}(1-p^{-s-1/2}).
+\end{equation}
+
+\begin{definition}[Generalized-prime labels]
+There are two labels $2_1,2_2$ of cost $2$ and activity $2^{-1/2}$, one label
+$2_3$ of cost $2$ and activity $2^{-3/2}$, and one label of cost $p$ and
+activity $p^{-1/2}$ for every odd prime $p$.
+For a finite labelled subset $S$, let $P(S)$ and $r(S)$ be the products of its
+costs and activities.
+\end{definition}
+
+\begin{theorem}[Weighted Euler characteristic]\label{thm:Eulerchar}
+For every $t\ge1$,
+\begin{align}
+ \frac{\D(t)}6&=\sum_{S:\,P(S)\le t}(-1)^{|S|}r(S),\label{eq:Z}\\
+ \frac{C(t)}6&=\sum_{\varnothing\ne S:\,P(S)\le t}
+                     (-1)^{|S|+1}r(S).\label{eq:F}
+\end{align}
+If each available label is independently retained with probability equal to
+its activity and $K_t[R]$ is the induced threshold complex, then
+\begin{equation}\label{eq:expectedchi}
+ \boxed{\frac{C(t)}6=\mathbb E\,\chi(K_t[R]).}
+\end{equation}
+\end{theorem}
+\begin{proof}
+For a fixed $t$, only finitely many labels can occur.  Expanding the finite
+product in \eqref{eq:Euler-generalized} gives \eqref{eq:Z} coefficient by
+coefficient; \eqref{eq:F} follows from $C=6-\D$.  Finally,
+\[
+ \mathbb E\chi(K_t[R])
+ =\sum_{\varnothing\ne S:\,P(S)\le t}(-1)^{|S|+1}\Pr(S\subseteq R),
+\]
+and independence gives $\Pr(S\subseteq R)=r(S)$.
+\end{proof}
+
+This reformulation is not a positivity proof: a threshold complex can have
+negative Euler characteristic.  It does, however, identify the exact
+orientation information absent from an unsigned energy estimate.
+
+\section{Exact windowed Bellman recurrence}
+
+For a finite label set $V$, set
+\[
+ Z_V(t)=\sum_{S\subseteq V,\,P(S)\le t}(-1)^{|S|}r(S),
+ \quad Z_V(t)=0\ (t<1),
+\]
+\[
+ F_V(t)=\1_{t\ge1}-Z_V(t),
+ \qquad G_V(X)=\int_{X/4}^{X}F_V(t)\frac{dt}{t}.
+\]
+
+\begin{theorem}[One-label Bellman update]\label{thm:Bellman}
+If a new label has cost $p$ and activity $r$, then
+\begin{equation}\label{eq:Zrec}
+ Z_{V\cup\{p\}}(t)=Z_V(t)-rZ_V(t/p),
+\end{equation}
+and
+\begin{equation}\label{eq:Grec}
+ \boxed{G_{V\cup\{p\}}(X)
+ =G_V(X)+r\bigl(H_X(p)-G_V(X/p)\bigr)}.
+\end{equation}
+For the complete generalized-prime set, $G(X)=\A_X/6$.
+\end{theorem}
+\begin{proof}
+Split subsets in \eqref{eq:Z} according to whether the new label is absent or
+present; the latter are $\{p\}\cup S$ with $P(S)\le t/p$, proving
+\eqref{eq:Zrec}.  Since
+$Z_V(y)=\1_{y\ge1}-F_V(y)$,
+\[
+ F_{V\cup\{p\}}(t)=F_V(t)+r\bigl(\1_{t/p\ge1}-F_V(t/p)\bigr).
+\]
+Integrate over $[X/4,X]$ and substitute $u=t/p$ in the last term.  The
+indicator integral is exactly $H_X(p)$.  The final assertion follows from
+Theorems \ref{thm:window} and \ref{thm:Eulerchar}.
+\end{proof}
+
+Equation \eqref{eq:Grec} is the sharp scalar obstruction.  If a child satisfies
+$G_V(X/p)>H_X(p)$, adjoining the label contributes negatively.  Any proof that
+replaces this correlated child by an unsigned reservoir loses the sign needed
+at the root.
+
+\section{The Mellin transform}
+
+\begin{lemma}[Elementary logarithmic Mellin integral]\label{lem:logMellin}
+For $n>0$ and $\Re s>0$,
+\[
+ \int_n^\infty \log(X/n)X^{-s-1}\,dX=\frac{n^{-s}}{s^2}.
+\]
+\end{lemma}
+\begin{proof}
+Put $X=ne^u$.  The integral becomes
+$n^{-s}\int_0^\infty ue^{-su}\,du$.  Integration by parts gives $1/s^2$.
+\end{proof}
+
+Because $a(n)=O(1)$, one has $\A_X=O(\sqrt X)$; hence its Mellin transform
+converges absolutely for $\Re s>1/2$.
+
+\begin{theorem}[Exact zero-safe transform]\label{thm:Mellin}
+For $\Re s>1/2$ and $z=s+1/2$,
+\begin{equation}\label{eq:Mellin}
+ \boxed{
+ \int_1^\infty\A_X X^{-s-1}\,dX
+ =\frac{1-4^{-s}}{s^2}
+  \left[6-\frac{3(1-2^{-z})(2-2^{-z})}{\zeta(z)}\right].}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Finite truncation followed by absolute convergence allows termwise use of
+Lemma \ref{lem:logMellin}:
+\[
+ \int_1^\infty R_X X^{-s-1}dX=\frac{A(z)}{s^2}.
+\]
+The substitution $X=4Y$ shows that the transform of $R_{X/4}$ is
+$4^{-s}A(z)/s^2$.  Insert the explicit $A(z)$ above.
+\end{proof}
+
+If $\rho$ is a zeta zero with $\Re\rho>1/2$, then at
+$s_0=\rho-1/2$ none of the factors
+\[
+1-4^{-s_0},\qquad1-2^{-\rho},\qquad2-2^{-\rho}
+\]
+vanishes: their possible zeros have real parts $0,0,-1$, respectively.
+Thus \eqref{eq:Mellin} has a nonremovable pole at $s_0$ of the same order as
+the zero of $\zeta$.
+
