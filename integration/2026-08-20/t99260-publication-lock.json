@@ -1,0 +1,17 @@
+{
+  "schema": "riemann.t99260.publication-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 649,
+  "branch": "research/gpt56-pro/99260-three-vulnerability-hardening",
+  "base_pr": 647,
+  "base_sha": "306d1c66fe4e848efda0bd78b5475aeeed3d5563",
+  "normative_parent_head": "a5d0f194a8c90198198a0000735d5d0b636983a1",
+  "replay": {
+    "classification": "PASS_T99260_THREE_VULNERABILITY_HARDENING",
+    "proof_object_sha256": "6f29344437968dc08367ca18fc3a92d2374170f5fb54ec45764f7cbc53061025",
+    "primitive_convolution_checks": 500,
+    "ihr67_proved": false,
+    "rh_established": false
+  },
+  "status": "unconditional hardening and corrected scalar frontier; RH unproved"
+}
