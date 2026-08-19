@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "activation_derivative": "0",
+    "activation_value": "0",
+    "canonical_terms": [
+      [
+        "4",
+        "0",
+        0
+      ],
+      [
+        "-4",
+        "1/2",
+        0
+      ],
+      [
+        "2",
+        "1/2",
+        1
+      ]
+    ],
+    "common_parent_reconstructed": false,
+    "compact_hall_replayed": false,
+    "homogeneous_clamp_determinant": "1/2",
+    "mpfr_terminal_replayed": false,
+    "mutations_rejected": 4,
+    "one_colour_integral_dictionary": {
+      "one": "4",
+      "r": "-4",
+      "r2": "0",
+      "r_log": "2"
+    },
+    "reverse_kernel_jump_multiplier": "1",
+    "rh_established": false,
+    "volterra_image": {
+      "u^-1/2*log^0": "2",
+      "u^0*log^0": "-1"
+    }
+  },
+  "proof_object": "9edac1c3b2400cd419c3db518786aad2c87ddedd1ea73288e9d6776e5e47dd3a",
+  "verdict": "PASS_T99550_CLAMPED_VOLTERRA_EQUALITY_INTERFACE"
+}
