@@ -1,0 +1,61 @@
+{
+  "schema": "riemann.implication-hypergraph.conjunctive-bridges.v2",
+  "namespace": "T101100",
+  "base": {
+    "pr": 692,
+    "sha": "50c4862c801b6388a30363c336d275270025eff4"
+  },
+  "external_inputs": {
+    "pr691": "e981fad21fdf15c69d6508c92f36ac9fa3eb7ddb",
+    "pr687": "e9c84904fabf16fd93d16e7aa75d0254ec2bcbf7",
+    "pr688": "24a2a748b8b36a70382c88843bb7779caac97e07",
+    "pr690": "36cabbe5843eaa417aac72643c1aad0c2041a31b"
+  },
+  "hyperedges": [
+    {
+      "id": "AND-HOMOTOPY-101100",
+      "premises": ["SCPE101100", "LARE101100"],
+      "conclusion": "ACAD100400",
+      "status": "composition_proved_premises_open",
+      "reason": "disjoint source ownership permits c=-1 on the short sector and c=0 on the long sector"
+    },
+    {
+      "id": "AND-REGIONAL-SCHUR-101105",
+      "premises": ["ROW_REGION_NU", "COLUMN_REGION_NU"],
+      "conclusion": "NEGATIVE_MASS_REGION_NU",
+      "status": "proved_exact",
+      "aggregation": "sum over a finite or subpower source partition"
+    },
+    {
+      "id": "AND-SPARSITY-ENERGY-101103",
+      "premises": ["BSP(F)", "DEP(F)"],
+      "conclusion": "SUBPOWER_NEGATIVE_MASS(F)",
+      "status": "proved_exact"
+    },
+    {
+      "id": "SHORT-CUBIC-CLOSURE",
+      "premises": ["DOUBLE_OWNER_ENDPOINT_CONVEXITY", "RATIO8_PRIME_BUDGET"],
+      "conclusion": "SHORT_INTERVAL_MATRIX_NONNEGATIVE",
+      "status": "proved_exact_pr691"
+    },
+    {
+      "id": "LANDAU-FINISH",
+      "premises": ["SUBPOWER_NEGATIVE_MASS(CONCLUSION_SCALAR)"],
+      "conclusion": "RH",
+      "status": "inherited_proved"
+    }
+  ],
+  "closed_regions": [
+    "root_singleton_adjacent",
+    "ratio8_short_intervals",
+    "smooth_sector",
+    "deep_homogeneous_carrier"
+  ],
+  "open_regions": [
+    "long_partial_activation_endpoint_collar",
+    "long_region_row_column_product_estimates",
+    "arithmetic_bad_set_sparsity",
+    "arithmetic_derivative_energy"
+  ],
+  "rh_established": false
+}
