@@ -1,56 +1,91 @@
-# L-100180 — Adaptive finite Euler squaring crosses the critical Bernstein owner wall
+# L-100180 — Finite Euler squaring crosses the critical owner wall on a corrected noncompact corridor
 
 Claim ID: `L-100180`  
-Status: **PROVED EXACT/UNCONDITIONAL BLOCK THEOREM**  
+Status: **PROVED FOR EACH FIXED CRITICAL ORDER AFTER INCLUDING THE INACTIVE TAIL**  
 Created: 2026-08-20  
 Depends on: `L-100000`, `L-100020`  
 RH status: **not assumed**
 
-Let `R_(m,m-1)` denote the final critical centered Bernstein remainder of `L-100000`, and let `A_Z` be the finite Euler-squaring operator of `L-100020`. On the completed source, every prime `p<=Z` is replaced by one label of cost `p^2` (with the inherited duplicated 67 label treated twice), while every prime `p>Z` remains a label of cost `p`.
+Let `R_(m,m-1)` be the final critical centered-Bernstein remainder of `L-100000`, with fixed integer `m>=3`, and let `A_Z` be the finite Euler-squaring operator.  Completed primes `p<=Z` become labels of cost `p^2`; primes above `Z` remain labels of cost `p`.
 
-At the critical Bernstein step the owner exponent is one. Hence the exact labelled adjacent-level proof is controlled by
+The critical kernel is noncompact.  Therefore the owner budget must include both active labels and the inactive continuation.  The corrected bound is
 
 \[
-\Sigma_{Z,X}^{\rm crit}
-=\sum_{\substack{p\le Z\\p^2\le X}}\frac1{p^2}
- +\mathbf1_{67^2\le X}\frac1{67^2}
- +\sum_{Z<p\le X}\frac1p.
+\boxed{
+\Sigma_{m,Z}(X)
+\le
+\sum_{\substack{p\le Z\\p^2\le X}}{1\over p^2}
++{\bf1}_{67^2\le X}{1\over67^2}
++
+\sum_{Z<p\le X}{1\over p}
++
+R_m(X,Z),
+}
+\tag{L-100180.1}
 \]
 
-Using the same elementary estimates as `L-100020`, if `log Z>=90` and
+where
+
+\[
+0\le R_m(X,Z)
+\ll_m
+\max(1,\sqrt X)
+\sum_{p>\max(X,Z)}p^{-3/2}.
+\tag{L-100180.2}
+\]
+
+## Proof of the inactive-tail scale
+
+For `t>=1`, the final critical Peano kernel `kappa_(m,m-1)(t)` is a polynomial of degree `m-2`.  After multiplication by the source weight `n^{-(m+1)/2}`, adjoining an inactive prime therefore costs at most
+
+\[
+O_m\!\left(\sqrt X\,p^{-3/2}\right)
+\]
+
+relative to the root level.  Summing over primes beyond `max(X,Z)` gives (L-100180.2).  Elementary prime partial summation yields
+
+\[
+R_m(X,Z)\ll_m {1\over\log(2\max(X,Z))}.
+\tag{L-100180.3}
+\]
+
+The earlier budget terminating at `p<=X` omitted this noncompact tail and is withdrawn.
+
+## Correct corridor
+
+Uniformly for
 
 \[
 1\le X\le Z^{10/9},
 \]
 
-then
+the completed-prime mass and the interval `Z<p<=X` have a limiting upper bound strictly below one.  Since (L-100180.3) tends to zero, for every fixed `m>=3` there exists `Z_0(m)` such that
 
 \[
-\Sigma_{Z,X}^{\rm crit}<\frac34<1.
+\Sigma_{m,Z}(X)<1
+\qquad
+(Z\ge Z_0(m),\ 1\le X\le Z^{10/9}).
+\tag{L-100180.4}
 \]
 
-Therefore the critical adjacent-level masses obey
+Adjacent-level double counting then gives
 
 \[
-kM_k(X)\le \Sigma_{Z,X}^{\rm crit}M_{k-1}(X),
+kM_k(X)\le\Sigma_{m,Z}(X)M_{k-1}(X),
 \]
 
-and in particular `M_(2j+1)<M_(2j)`. Pairing consecutive parity levels proves
+so every odd level is smaller than the preceding even level.  Hence
 
 \[
-\boxed{(A_ZR_{m,m-1})(X)>0}
-\]
+\boxed{
+(A_ZR_{m,m-1})(X)>0
+\qquad
+(Z\ge Z_0(m),\ 1\le X\le Z^{10/9}).
+}
+\tag{L-100180.5}
 
-for every integer `m>=3` throughout the full block `1<=X<=Z^(10/9)`.
+Every finite completion multiplier remains zero-free in the translated open half-plane, so no off-line reciprocal-zeta pole is cancelled.
 
-Thus finite Euler squaring does not merely create positivity for the original SHARP scalar. It also crosses the unique prime-harmonic obstruction at the **final critical Bernstein centering step** while preserving every off-line reciprocal-zeta pole, because `A_Z` is a finite zero-free multiplier in the translated open half-plane.
+## Boundary
 
-## Firewall
-
-This theorem does **not** desmooth the critical remainder. The inverse of a one-prime completion is
-
-\[
-(I+rS_p)^{-1}=\sum_{k\ge0}(-r)^kS_p^k,
-\]
-
-so no positive inversion is available. The remaining interface is therefore not positivity of the completed critical state, but a source-faithful transfer back to the original critical observable without introducing a signed inverse or an infinite Euler completion.
+The theorem is pointwise positivity of a **completed** fixed-order critical packet on a finite corridor.  It neither supplies a positive inverse nor turns an endpoint-dependent completion into one fixed Landau density.  The former universal threshold `log Z>=90` for all `m` was unsupported once the inactive tail is included and is replaced by the fixed-order threshold `Z_0(m)`.
