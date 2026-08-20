@@ -1,23 +1,23 @@
 # L-100613 — Every ratio-eight double-owner cubic interval is positive
 
 Claim ID: `L-100613`  
-Status: **PROVED UNCONDITIONAL ALL-SCALE INTERVAL THEOREM**  
+Status: **PROVED UNCONDITIONAL ALL-SCALE INTERVAL THEOREM — AUDITED FOR THE DUPLICATED 67 LABEL**  
 Created: 2026-08-20  
+Audited: 2026-08-21  
 Depends on: `L-100612`; the labelled-prime level-pairing method  
 RH status: **not assumed**
 
-Let `Psi` be the cubic critical kernel, and for endpoint primes `p<q` put
+Let `Psi` be the cubic critical kernel, and for endpoint labels with prime
+values `p<q` put
 
 \[
-K_{p,q}(y)
-=
-(I-U_p)(I-U_q)\Psi(y).
+K_{p,q}(y)=(I-U_p)(I-U_q)\Psi(y).
 \tag{L-100613.1}
 \]
 
 By `L-100612`, `K_(p,q)(y)>=0` for every `y>0`.
 
-## 1. A universal interior-prime Harnack bound
+## 1. A universal interior-label Harnack bound
 
 Write
 
@@ -45,8 +45,7 @@ g(u)=
 For every `c>=0` and every real `u`,
 
 \[
-\boxed{
-g(u-c)\le\frac43g(u).}
+\boxed{g(u-c)\le\frac43g(u).}
 \tag{L-100613.3}
 \]
 
@@ -81,21 +80,21 @@ e^{u/2}
 \tag{L-100613.4}
 \]
 
-Applying (L-100613.3) with `c=log ell` proves, for every `ell>=2`,
+Applying (L-100613.3) with `c=log ell` proves, for every labelled prime
+`ell>=2`,
 
 \[
 \boxed{
-\ell^{-1/2}K_{p,q}(y/\ell)
+ell^{-1/2}K_{p,q}(y/\ell)
 \le
-\frac4{3\ell}K_{p,q}(y).
-}
+\frac4{3\ell}K_{p,q}(y).}
 \tag{L-100613.5}
 \]
 
 This estimate is source-normalized: the factor `ell^(-1/2)` is the literal
-native Möbius activity of the interior prime.
+native Möbius activity of the interior label.
 
-## 2. Prime-harmonic mass in a ratio-eight interval
+## 2. Labelled prime-harmonic mass in a ratio-eight interval
 
 Assume
 
@@ -103,35 +102,52 @@ Assume
 67\le p<q\le8p.
 \]
 
-Every prime between `p` and `q` is congruent to `1` or `-1` modulo `6`. For a
-decreasing function, integral comparison on each arithmetic progression gives
+For distinct prime values, every prime at least five is congruent to `1` or
+`-1` modulo six. Monotone integral comparison on the two progressions gives
 
 \[
-\sum_{\substack{p<\ell<q\\\ell\ {m prime}}}\frac1\ell
+\sum_{p<\ell<q\atop \ell\ {m prime\ value}}\frac1\ell
 \le
 \frac2p+\frac13\log8.
 \tag{L-100613.6}
 \]
 
-Using `p>=67` and the elementary bound `log 2<7/10`,
+There is one additional labelled-prime possibility which the original
+statement omitted. The duplicate-67 source contains two distinct coordinates
+of prime value `67`. If the lower endpoint is the first copy, the second copy
+may lie in the ordered interior even though its prime value equals `p`. This
+adds at most `1/p` to the labelled reciprocal mass. Hence, uniformly over all
+ordered endpoint labels,
+
+\[
+\sum_{p<_{\rm label}\ell<_{\rm label}q}\frac1\ell
+\le
+\frac3p+\frac13\log8.
+\tag{L-100613.7}
+\]
+
+Using `p>=67` and `log2<7/10`,
 
 \[
 \frac43
-\sum_{p<\ell<q}\frac1\ell
+\sum_{p<_{\rm label}\ell<_{\rm label}q}\frac1\ell
 <
-\frac8{201}+\frac49\frac{21}{10}
+\frac4{67}+\frac49\frac{21}{10}
 =
-\frac{2934}{3015}
-<1.
-\tag{L-100613.7}
+\frac4{67}+\frac{14}{15}
+=
+\frac{998}{1005}<1.
+\tag{L-100613.8}
 \]
+
+Thus the strict contraction survives the duplicated label.
 
 ## 3. Complete interior Euler positivity
 
 Let the interior labelled primes be
 
 \[
-p<\ell_1<\cdots<\ell_m<q
+p<_{\rm label}\ell_1<_{\rm label}\cdots<_{\rm label}\ell_m<_{\rm label}q
 \]
 
 and define
@@ -140,11 +156,11 @@ and define
 \mathcal I_{p,q}(y)
 =
 \prod_{r=1}^{m}(I-\ell_r^{-1/2}U_{\ell_r})K_{p,q}(y).
-\tag{L-100613.8}
+\tag{L-100613.9}
 \]
 
 At fixed `y`, let `M_d(y)` be the total unsigned weight of Euler level `d` in
-(L-100613.8). Removing one selected interior label and using (L-100613.5)
+(L-100613.9). Removing one selected interior label and using (L-100613.5)
 gives
 
 \[
@@ -154,9 +170,9 @@ dM_d(y)
 \qquad
 \Sigma_{p,q}
 =
-\frac43\sum_{p<\ell<q}\frac1\ell
+\frac43\sum_{p<_{\rm label}\ell<_{\rm label}q}\frac1\ell
 <1.
-\tag{L-100613.9}
+\tag{L-100613.10}
 \]
 
 Hence
@@ -173,31 +189,30 @@ Pairing consecutive parity levels proves
 
 \[
 \boxed{
-\prod_{p<\ell<q}
+\prod_{p<_{\rm label}\ell<_{\rm label}q}
 (I-\ell^{-1/2}U_\ell)
 (I-U_p)(I-U_q)\Psi(y)
-\ge0
-}
-\tag{L-100613.10}
+\ge0}
+\tag{L-100613.11}
 \]
 
-for every `y>0`, every pair of actual primes `67<=p<q<=8p`, and the exact
-finite interior prime set. The inequality is strict whenever the endpoint
-kernel is nonzero.
+for every `y>0`, every ordered pair of actual endpoint labels whose prime
+values satisfy `67<=p<q<=8p`, and the exact finite interior label multiset. The
+inequality is strict whenever the endpoint kernel is nonzero.
 
-The repeated labelled `67` case has empty interior and is already covered by
-`L-100612`.
+When the two endpoints are the two copies of `67`, the interior is empty and
+`L-100612` applies directly.
 
 ## Matrix consequence
 
-The entire short-interval region of `T-100611` is now closed without a finite
-scan, a source-blind collapse, or an RH-scale estimate:
+The entire short-interval region of the audited implication matrix is closed:
 
 ```text
-empty/adjacent intervals          positive by L-100612;
-all endpoint ratios <=8           positive by L-100613;
-only endpoint ratios >8           remain in FOCR100610 / LOCR100610.
+empty/adjacent intervals                  positive by L-100612;
+all distinct-value endpoint ratios <=8    positive by this theorem;
+duplicated-67 orderings                    included by the audited label budget;
+only genuinely wider endpoint intervals   remain in the arithmetic frontier.
 ```
 
-Thus both Schur gates may be restricted to long prime intervals, where the
-source-faithful finite-squaring and positive-renewal tools of PR #691 apply.
+No finite scan, source-blind collapse, or RH-scale estimate enters this
+result.
