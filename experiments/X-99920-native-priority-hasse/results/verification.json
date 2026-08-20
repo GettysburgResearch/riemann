@@ -1,0 +1,73 @@
+{
+  "base": {
+    "head_sha": "7c044d232198265974dd8f4a530b98c6653dba55",
+    "normalization": "normalized zero-free box; activity a_p=1/p; two labelled 67 vertices",
+    "pr": 667
+  },
+  "checks": {
+    "activation_truncation_and_coarea": {
+      "X": 2500000,
+      "active_vertices": 26,
+      "coarea_equal": true,
+      "labels": [
+        67,
+        67,
+        71,
+        73,
+        79
+      ],
+      "negative_scalar_part": "0",
+      "surface_flux": "9298916547/2297565591250000",
+      "upward_edges": 15
+    },
+    "duplicate_67_native_source": {
+      "auxiliary_unweighted_coefficient": "-2",
+      "fibre_checks": 40,
+      "native_67_coefficient": "-2/67",
+      "normalization_firewall": true
+    },
+    "mutations": {
+      "duplicate_67_mutation_rejected": true,
+      "lambda_survival_mutation_rejected": true,
+      "nonmonotone_potential_mutation_rejected": true
+    },
+    "negative_control": {
+      "automatic_sign_refuted": true,
+      "sum_mu_over_n_through_13": "-2323/30030"
+    },
+    "poisson_tail_coarea": {
+      "exact": true,
+      "fixtures": 2,
+      "tau_checks": 6
+    },
+    "priority_hasse_conservation": {
+      "edges": 31,
+      "empty_even_residual": "1712430720/1838052473",
+      "labels": [
+        67,
+        67,
+        71,
+        73,
+        79
+      ],
+      "vertices": 32
+    }
+  },
+  "classification": "PASS_T99920_NATIVE_PRIORITY_HASSE_SURFACE_REDUCTION",
+  "open": {
+    "UPBF67_surface_flux_subpower_estimate": true,
+    "riemann_hypothesis": true
+  },
+  "proof_object_sha256": "e112c829971ba9f25cdddab7d71edce17aa75a1a87071a7289ef0bf7b83ee208",
+  "proved": {
+    "UPBF67_implies_RH": true,
+    "activation_truncated_physical_flow": true,
+    "arbitrary_mincut_bounded_by_upward_priority_flux": true,
+    "duplicate_67_native_aggregation": true,
+    "native_priority_hasse_flow": true,
+    "poisson_gram_tail_square_identity": true,
+    "product_boundary_stieltjes_coarea": true
+  },
+  "rh_established": false,
+  "schema": "riemann.t99920.native_priority_hasse_surface.v1"
+}
