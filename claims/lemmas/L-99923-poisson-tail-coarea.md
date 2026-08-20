@@ -16,7 +16,7 @@ put
 
 \[
 Q_\tau(c)
-:=\int_{\mathbb R}
+=\int_{\mathbb R}
 \left|\sum_nc_nn^{\tau-i\gamma}\right|^2
 P_\tau(\gamma)\,d\gamma.
 \]
