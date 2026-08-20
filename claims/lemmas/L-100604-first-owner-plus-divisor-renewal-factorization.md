@@ -1,67 +1,50 @@
-# L-100604 — First-owner decomposition plus divisor renewal factors all future structure positively
+# L-100604 — A first-owner future monomial is a dilation, not a divisor restriction
 
-Claim ID: `L-100604`
-Status: **PROVED EXACT FACTORIZATION; OWNER-SIGN ESTIMATE OPEN**
-Depends on: PR #652 `L-99601`; PR #671 `L-99961`
-RH status: **not assumed**
+Claim ID: `L-100604`  
+Status: **WITHDRAWN AS STATED; EXACT TYPE FIREWALL PROVED**  
+Depends on: PR #652 `L-99601`; PR #671 `L-99961`  
+RH status: **unproved**
 
-Consider the exact sequential first-owner identity
+The exact sequential first-owner identity is
 
 \[
 \prod_i(I-r_iU_i)f
-=s_kf+\sum_i\lambda_i(I-U_i)\prod_{h>i}(I-r_hU_h)f.
+=s_kf+\sum_i\lambda_i(I-U_i)
+\prod_{h>i}(I-r_hU_h)f.
+\tag{L-100604.1}
 \]
 
-Fix an owner index `i` and expand the future Euler product. Each future monomial corresponds to a divisor label `d` composed only of primes `p_h`, `h>i`. After applying any compact physical kernel, the contribution of the divisor-restricted source is exactly of the form covered by PR #671:
+Expanding the future product gives
 
 \[
-B_d(z)=\beta(d)B(z)G_d(z),
+\prod_{h>i}(I-r_hU_h)f
+=
+\sum_d \mu(d)d^{-1/2}U_df,
+\tag{L-100604.2}
 \]
-with every coefficient of `G_d` nonnegative.
 
-Therefore the future-completed owner current admits an exact expansion
+where `d` ranges over future-prime subset products.  Each `U_df` is a **dilation of the owner-frozen base packet**.
+
+PR #671 instead proves a positive factorization for the restriction
 
 \[
-\boxed{
+\sum_m\beta(dm)m^{-z},
+\tag{L-100604.3}
+\]
+
+which selects multiples of `d` in the already assembled native coefficient sequence.  Equations (L-100604.2) and (L-100604.3) are not the same operation.
+
+A minimal test is decisive: for `f=e_1`, the future monomial `U_de_1=e_d` is one labelled atom, while the divisor-restricted beta tail in (L-100604.3) has an infinite Euler-supported quotient sequence whenever `beta(d)!=0`.  No positive renewal identity turns one into the other.
+
+Consequently the former formulas
+
+\[
 \Delta_i^{\rm fut}f
-=\sum_d \beta(d)\,\mathcal P_{i,d}f,
-}
-\]
-where every operator `P_(i,d)` is a positive dilation renewal of one common owner-frozen base packet. The owner difference `(I-U_i)` remains outside this positive future transport.
-
-Equivalently, after the first-owner coefficient `lambda_i` is included,
-
-\[
-\boxed{
-\prod_i(I-r_iU_i)f
-=s_kf+\sum_i\lambda_i\sum_d\beta(d)
- (I-U_i)\mathcal P_{i,d}f.
-}
+=\sum_d\beta(d)\mathcal P_{i,d}f
 \]
 
-All future-prime combinatorics have been moved into positive operators. The only signs left are:
+and the claimed reduction `FCHD67 -> ODSB100604` are withdrawn.
 
-1. the explicit divisor coefficient `beta(d)`;
-2. the explicit owner difference `(I-U_i)`.
+## Surviving statement
 
-No unknown sign is hidden in the future completion.
-
-## Subpower transport
-
-For each fixed Mellin line `sigma>1/2`, PR #671 gives
-
-\[
-\|\mathcal P_{i,d}\|_{\sigma}\ll_{\sigma,\varepsilon}d^\varepsilon.
-\]
-
-Thus any subpower one-sided estimate for the owner/divisor coefficient packet survives the future renewal with only subpower loss.
-
-## Matrix consequence
-
-The original nonlocal gate `FCHD67` is strictly reduced to `ODSB100604`:
-
-> prove a subpower logarithmic one-sided bound for the explicit owner-difference/divisor-sign packet before positive renewal.
-
-This is a narrower gate than `FCHD67`: future-prime source structure is no longer part of the unknown estimate.
-
-The theorem does not claim `ODSB100604` proved.
+The coefficient-exact first-owner identity (L-100604.1) remains valid and retains the complete future Euler profile.  PR #671's divisor renewal may be inserted only after a separate source theorem produces a literal divisibility restriction.  It cannot be used merely because a future monomial has been labelled by the same integer `d`.
