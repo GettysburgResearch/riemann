@@ -1,0 +1,24 @@
+{
+  "base": {
+    "branch": "review/gpt56-pro/100130-wavelet-spectral-abscissa",
+    "pr": 675,
+    "sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740"
+  },
+  "branch": "research/gpt56-pro/100500-minimal-wavelet-mertens-frame",
+  "commit": "research: identify the minimal wavelet as a compact Mertens frame",
+  "created_utc": "2026-08-20T00:00:00Z",
+  "imports": [
+    {
+      "pr": 674,
+      "scope": "minimal annihilator, ratio-eight kernel, positive resolvents, Mellin multiplier",
+      "sha": "9962f7f712adc6b4ad72672ecfeace028ba79bdb"
+    },
+    {
+      "pr": 675,
+      "scope": "wavelet spectral abscissa and floor-kernel firewall",
+      "sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740"
+    }
+  ],
+  "rh_established": false,
+  "schema": "riemann.t100500.source-lock.v1"
+}

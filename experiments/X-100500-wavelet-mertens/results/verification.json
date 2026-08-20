@@ -1,0 +1,28 @@
+{
+  "abel_mertens_fixture_checks": 4,
+  "analytic_theorems_in_packet": [
+    "quantitative Littlewood exponent dictionary",
+    "MWOC100500 is equivalent to RH"
+  ],
+  "base_pr": 675,
+  "base_sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740",
+  "classification": "PASS_X_100500_MINIMAL_WAVELET_MERTENS_FRAME",
+  "critical_inverse_checks": 40,
+  "does_not_prove": [
+    "MWOC100500",
+    "Riemann Hypothesis"
+  ],
+  "endpoint_continuity_checks": 4,
+  "hostile_mutations_detected": 5,
+  "kernel_derivative_checks": 8,
+  "mwoc100500_proved": false,
+  "proof_object_sha256": "bf00cfa814a02f50af4632feab8b501f821de594f7efd407299b7a09a3e877d4",
+  "proves": [
+    "exact compact Abel-Mertens representation",
+    "piecewise derivative kernel authentication",
+    "critical square-root inverse cost",
+    "source-blind labelled-collapse firewall"
+  ],
+  "rh_established": false,
+  "schema": "riemann.x100500.wavelet-mertens-frame.v1"
+}
