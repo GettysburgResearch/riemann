@@ -58,6 +58,7 @@ def shifted_square_checks() -> int:
             rhs = (4 * t - 3) ** 2
             assert lhs == rhs
             checks += 1
+    # Atom-free endpoint leaves a genuinely negative collar fixture.
     x = Fraction(2)
     n = Fraction(3)
     root = math.sqrt(float(x / n))
@@ -102,6 +103,7 @@ def b_integral(activities: tuple[Fraction, ...], phases: tuple[Fraction, ...], i
         if h == i:
             continue
         z = phases[h]
+        # 1-a*t +/- a*(1-t)z = (1 +/- a z) + (-a -/+ a z)t
         const = 1 + sign * a * z
         linear = -a - sign * a * z
         poly = poly_mul(poly, [const, linear])
