@@ -1,0 +1,15 @@
+{
+  "base_branch": "research/gpt56-pro/99260-three-vulnerability-hardening",
+  "base_pr": 649,
+  "base_sha": "433fd3662f7b2e4ba384ce64f196380e88624090",
+  "proposed_branch": "research/gpt56-pro/99580-ihr67-stop-loss-attack",
+  "replay": {
+    "classification": "PASS_T99580_IHR67_STOP_LOSS_AND_OSCILLATION_ATTACK",
+    "ihr67_proved": false,
+    "proof_object_sha256": "af9be984c1650c346909324caa6231160c489f247f42c03780f9c49c9a1e0daa",
+    "rh_established": false
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t99580.source-lock.v1",
+  "status": "exact reduction/no-go; prime-log transport, IHR67, and RH remain open"
+}

@@ -1,0 +1,19 @@
+{
+  "classification": "PASS_T99580_IHR67_STOP_LOSS_AND_OSCILLATION_ATTACK",
+  "coefficient_checks": 1000,
+  "critical_shift_identity": true,
+  "duplicate67_checks": 1000,
+  "finite_scans_promoted_to_global_proof": false,
+  "ihr67_proved": false,
+  "noncancellation": {
+    "67_factor": "|67^-rho|<1 when Re(rho)>0",
+    "dyadic_factor_1": "2^-rho=1 forces Re(rho)=0",
+    "dyadic_factor_2": "2^-rho=2 forces Re(rho)=-1"
+  },
+  "plslc99580_proved": false,
+  "proof_object_sha256": "af9be984c1650c346909324caa6231160c489f247f42c03780f9c49c9a1e0daa",
+  "rh_established": false,
+  "schema": "riemann.t99580.ihr67-stop-loss.v1",
+  "six_equal_label_counterexample": true,
+  "toy_monotone_transport": true
+}
