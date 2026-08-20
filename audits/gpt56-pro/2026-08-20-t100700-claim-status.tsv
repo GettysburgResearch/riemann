@@ -1,0 +1,11 @@
+claim_id	semantic_role	short_statement	status	rh_relationship	dependencies	first_open_interface	notes
+L-100605	producer	exact least/greatest-owner coefficient partition	PROVED EXACT	ROUTE INFRASTRUCTURE	PR #691		Every nonempty Euler monomial occurs once.
+L-100700	producer/transport	two-sided convex Hilbert double-owner partition	PROVED EXACT	ROUTE INFRASTRUCTURE	L-100605		Nonnegative weights sum to one; removes cross-block interference.
+L-100701	local energy	exact Cauchy phase cost of one and two endpoint differences	PROVED EXACT	ROUTE INFRASTRUCTURE	L-100700		Uniform endpoint budget; not a cross-core estimate.
+L-100702	long normal form	interior squaring plus positive divisor renewal	PROVED EXACT REDUCTION	ROUTE INFRASTRUCTURE	L-100605; PR #671 L-99961	LRNM100704	No inverse; only explicit divisor signs survive.
+L-100703	short normal form	centered root-free growing moment double-owner form	PROVED EXACT REDUCTION	ROUTE INFRASTRUCTURE	L-100700; PRs #674-#675	SCME100704	Root and factorial tail removed.
+SCME100704	short estimate	short/diagonal logarithmic L2 energy is subpower	UNPROVEN / GAP	CONDITIONAL IMPLICATION	L-100703	SCME100704	Bounded endpoint-ratio distinct-core near collisions remain.
+LRNM100704	long estimate	long-interval logarithmic negative mass is subpower	UNPROVEN / GAP	CONDITIONAL IMPLICATION	L-100702	LRNM100704	Explicit divisor signs remain before positive renewal.
+L-100704	composition	SCME100704 plus LRNM100704 imply RH	PROVED EXACT IMPLICATION	PROPOSED COMPLETE THEOREM	SCME100704; LRNM100704; minimal-wavelet detector		Disjoint exhaustive source partition; short L2 converted by Cauchy-Schwarz.
+R-100700	firewall	one-sided owner estimates cannot be combined without a common refinement	PROVED EXACT METHOD FIREWALL	REFUTATION	L-100605		Prevents double spending or omission of Euler monomials.
+T-100700	conclusion packet	double-owner dual-terminal implication matrix	PROVED STRUCTURAL / PRODUCERS OPEN	CONDITIONAL IMPLICATION	L-100700--L-100704	SCME100704; LRNM100704	RH remains unproved.
