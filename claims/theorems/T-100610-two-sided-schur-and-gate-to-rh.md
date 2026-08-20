@@ -1,15 +1,15 @@
-# T-100610 — First-owner and largest-owner Schur estimates form an exact AND-gate to RH
+# T-100610 — First-owner and largest-owner energies form an exact AND-gate to RH
 
 Claim ID: `T-100610`  
-Status: **PROVED CONDITIONAL COMPOSITION; TWO COMPLEMENTARY LONG-COLLAR ESTIMATES OPEN**  
+Status: **PROVED CONDITIONAL COMPOSITION; TWO COMPLEMENTARY LONG-COLLAR ENERGIES OPEN**  
 Created: 2026-08-20  
-Depends on: `L-100610--L-100614`; PR #676 `L-100002`  
+Depends on: `L-100610--L-100615`; PR #676 `L-100002`  
 RH status: **unproved**
 
 This theorem gives a literal implication-matrix hyperedge: neither input is
 replaced by the other, and the conclusion follows only after both are present.
 
-## 1. Exact interval matrix
+## 1. Exact centered interval matrix
 
 Let
 
@@ -22,9 +22,6 @@ r_i=p_i^{-1/2},
 be the first `k` labels of the complete cubic Euler source: one labelled copy
 of every prime and one additional labelled copy of `67`. Equal labels occur
 only for the two copies of `67`; they remain distinct commuting coordinates.
-The finitely many labels below `67` may equivalently be frozen into the base
-colour of the rough-prime routes, but they are included here so that the limit
-is literally the full duplicate-67 cubic scalar.
 
 Let `Psi` be the cubic critical kernel and put
 
@@ -87,7 +84,7 @@ and the collar-only residual
 \tag{T-100610.6}
 \]
 
-Define the centered physical interval matrix
+Define
 
 \[
 \boxed{
@@ -119,84 +116,115 @@ Hence
 \boxed{
 (F_k(X))_-
 \le
-\left|a^*\widetilde A^{(k)}(X)b\right|.
+\sum_{i<j}
+|a_i|\,|\widetilde A_{ij}^{(k)}(X)|\,|b_j|.
 }
 \tag{T-100610.9}
 \]
 
-This carrier subtraction is binding: placing absolute values around the raw
+The carrier subtraction is binding: placing absolute values around the raw
 matrix would force the arithmetic estimates to pay a known positive
 `sqrt(X)` term.
 
-## 2. The two complementary Schur quantities
+## 2. The two complementary survival-weighted energies
 
-Define
+Define the first-owner row energy
 
 \[
-\widetilde{\mathcal R}_k(X)
+\boxed{
+\mathfrak R_k(X)
 =
-\sup_i\sum_{j>i}|\widetilde A_{ij}^{(k)}(X)|,
+\sum_i a_i^2
+\sum_{j>i}|\widetilde A_{ij}^{(k)}(X)|
+}
 \tag{T-100610.10}
 \]
 
-and
+and the largest-owner column energy
 
 \[
-\widetilde{\mathcal C}_k(X)
+\boxed{
+\mathfrak C_k(X)
 =
-\sup_j\sum_{i<j}|\widetilde A_{ij}^{(k)}(X)|.
+\sum_j b_j^2
+\sum_{i<j}|\widetilde A_{ij}^{(k)}(X)|.
+}
 \tag{T-100610.11}
 \]
 
-The row quantity is the greatest-owner refinement of one fixed sequential
-first-owner current. The column quantity is the least-owner refinement of one
-fixed largest-prime current.
+These are not source-blind row/column suprema. Their weights
 
-The two-sided Schur test and (T-100610.3) imply
+\[
+a_i^2=r_iL_i^2,
+\qquad
+b_j^2=r_jR_j^2
+\]
+
+are exactly the first-owner and reversed-owner Littlewood--Paley weights.
+
+Apply Cauchy--Schwarz to the set of pairs `(i,j)`, with measure
+`|widetilde A_(ij)|`:
+
+\[
+\begin{aligned}
+\left(
+ \sum_{i<j}|a_i||\widetilde A_{ij}||b_j|
+\right)^2
+&\le
+\left(
+ \sum_{i<j}|\widetilde A_{ij}|a_i^2
+\right)
+\left(
+ \sum_{i<j}|\widetilde A_{ij}|b_j^2
+\right)\\
+&=
+\mathfrak R_k(X)\mathfrak C_k(X).
+\end{aligned}
+\]
+
+Therefore
 
 \[
 \boxed{
 (F_k(X))_-
 \le
-\|\widetilde A^{(k)}(X)\|_{2\to2}
-\le
-\sqrt{
- \widetilde{\mathcal R}_k(X)
- \widetilde{\mathcal C}_k(X)
-}.
+\sqrt{\mathfrak R_k(X)\mathfrak C_k(X)}.
 }
 \tag{T-100610.12}
 \]
 
-`L-100612--L-100613` prove that every entry with an empty interior or endpoint
-ratio at most eight is already nonnegative. Such entries may be removed before
-forming the residual matrix. `L-100614` additionally shows that every fully
-active long entry has zero centered residual. Thus the Schur matrix contains
-only long partial-activation collars.
+This is the exact two-sided owner estimate. It avoids the unnecessary
+multiplicity and inactive-prime divergence of unweighted Schur suprema.
+
+`L-100612--L-100613` prove that every entry with empty interior or endpoint
+ratio at most eight is already nonnegative. `L-100615` enlarges that positive
+region asymptotically to `p_j<=p_i^A` for every `A<e^(3/4)`. Such entries may
+be removed before forming the residual matrix. `L-100614` additionally shows
+that every fully active remaining entry has zero centered residual. Thus
+`mathfrak R_k` and `mathfrak C_k` need contain only supercritical,
+partial-activation collars.
 
 ## 3. The AND-gate statements
 
-Define the uniform first-owner row condition
+Define
 
 \[
 \boxed{
 \mathrm{FOCR100610}(Y):
 \quad
-\sup_k\int_1^Y
-\widetilde{\mathcal R}_k(X)\frac{dX}{X}
+\sup_k\int_1^Y\mathfrak R_k(X)\frac{dX}{X}
 =Y^{o(1)}
 }
 \tag{T-100610.13}
 \]
 
-and the uniform largest-owner column condition
+and
 
 \[
 \boxed{
 \mathrm{LOCR100610}(Y):
 \quad
-\sup_k\int_1^Y
-\widetilde{\mathcal C}_k(X)\frac{dX}{X}
+\sup_k\int_1^Y\mathfrak C_k(X)\frac{dX}{X}
 =Y^{o(1)}.
 }
 \tag{T-100610.14}
@@ -208,10 +236,10 @@ Cauchy--Schwarz in `dX/X` gives
 \sup_k\int_1^Y(F_k(X))_-\frac{dX}{X}
 \le
 \left(
- \sup_k\int_1^Y\widetilde{\mathcal R}_k(X)\frac{dX}{X}
+ \sup_k\int_1^Y\mathfrak R_k(X)\frac{dX}{X}
 \right)^{1/2}
 \left(
- \sup_k\int_1^Y\widetilde{\mathcal C}_k(X)\frac{dX}{X}
+ \sup_k\int_1^Y\mathfrak C_k(X)\frac{dX}{X}
 \right)^{1/2}.
 \tag{T-100610.15}
 \]
@@ -230,7 +258,6 @@ therefore proves
 \int_1^Y(\mathcal C_3(X))_-\frac{dX}{X}=Y^{o(1)}.
 }
 \tag{T-100610.16}
-\]
 
 The centered-cubic Mellin--Landau theorem of PR #676 now yields
 
@@ -243,46 +270,46 @@ The centered-cubic Mellin--Landau theorem of PR #676 now yields
 \mathrm{RH}.
 }
 \tag{T-100610.17}
-\]
 
 This is a genuine conjunction, not a renamed one-statement criterion.
 
 ## 4. Why both sides are logically necessary for this mechanism
 
-A matrix with one nonzero column and `N` unit entries has row Schur bound one
-but operator norm `sqrt(N)`. Its transpose has column Schur bound one and the
-same unbounded norm. Therefore neither a row estimate nor a column estimate
-alone controls physical collapse. Their conjunction is exactly what removes
-the power-sized multiplicity exhibited by the source-blind collapse
-counterexamples.
+For a nonnegative matrix `K_(ij)`, the first factor in pairwise
+Cauchy--Schwarz controls multiplicity in the least-owner direction and the
+second controls multiplicity in the greatest-owner direction. A one-column
+matrix and its transpose show that either weighted side alone can remain
+bounded while the bilinear collapse grows like a square root after the endpoint
+vectors are rescaled to unit norm. Thus the conjunction is not cosmetic.
 
 ## 5. Relationship to the live routes
 
 ```text
 FOCR100610:
-  sequential first-owner / ODSB100604 row geometry;
+  sequential first-owner / ODSB100604 row geometry with its exact hazard
+  weights;
 
 LOCR100610:
-  largest-prime / HDRB100603 column geometry;
+  largest-prime / HDRB100603 column geometry with its reverse-hazard weights;
 
 remaining entries:
-  long partial-activation intervals after explicit positive carrier
+  supercritical partial-activation intervals after explicit positive carrier
   subtraction, with finite interior squaring and positive divisor renewal
   available before physical collapse.
 ```
 
 The theorem proves the complete compositional interface from those two
-arithmetic statements to RH. It does not assert either Schur estimate. Their
+arithmetic statements to RH. It does not assert either owner energy. Their
 region-by-region reduction is recorded in `T-100611`.
 
 ```text
-two-ended hazard identity                 PROVED EXACT
-two-ended Littlewood--Paley identity       PROVED EXACT
-critical endpoint convexity                PROVED EXACT
-ratio-eight interval positivity            PROVED EXACT
-positive carrier subtraction               PROVED EXACT
-two-sided collar Schur AND-gate             PROVED EXACT
-FOCR100610 long-collar row estimate         OPEN
-LOCR100610 long-collar column estimate      OPEN
-Riemann Hypothesis                          UNPROVED
+two-ended hazard identity                    PROVED EXACT
+two-ended Littlewood--Paley identity          PROVED EXACT
+critical endpoint convexity                   PROVED EXACT
+ratio-eight/power-width interval positivity   PROVED
+positive carrier subtraction                  PROVED EXACT
+survival-weighted two-owner AND-gate           PROVED EXACT
+FOCR100610 long-collar row energy              OPEN
+LOCR100610 long-collar column energy           OPEN
+Riemann Hypothesis                             UNPROVED
 ```
