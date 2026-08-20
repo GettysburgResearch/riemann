@@ -1,0 +1,23 @@
+{
+  "base_pr": 676,
+  "base_sha": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9",
+  "combined_archive_sha256": "812a63437a099c65ee1674a0ccd0aa983e6c9fabef7abdcb09ae66fdfbc25359",
+  "mapping": {
+    "AFCD100210": "AFCD100510",
+    "L-100210": "L-100510",
+    "L-100211": "L-100511",
+    "M-100210": "M-100510",
+    "R-100210": "R-100510",
+    "T-100210": "T-100510",
+    "X-100210": "X-100510"
+  },
+  "mathematical_change": false,
+  "original_proof_object_sha256": "18e2163cd0ccb5f5e8e8e6b13f03fd8d9d592820f0447519bd833150121b896c",
+  "original_route_archive_sha256": "db10377c5b1a818e4a12546049a2d63267854aee1fb5585a6d76f988a750b7c0",
+  "original_suite": "T100210/T100211",
+  "published_proof_object_sha256": "aae9366f0e80da0793d4239d3a28d3629f4ea8912528396655c7a78e8e2f81a0",
+  "published_suite": "T100510/T100511",
+  "reason": "The original T100210/T100211 namespace is occupied by independent live PRs #680 and #682.",
+  "replay_fixture_seed_preserved": 100210,
+  "schema": "riemann.namespace-migration.v1"
+}

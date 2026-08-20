@@ -1,0 +1,24 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/100000-centered-bernstein-critical-frontier",
+    "pr": 676,
+    "sha": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9"
+  },
+  "branch": "research/gpt56-pro/100510-complex-quadratic-critical-descent",
+  "commit": "research: extend quadratic positivity to a complex disk and isolate critical variation",
+  "created_utc": "2026-08-20T00:00:00Z",
+  "imports": [
+    {
+      "pr": 673,
+      "scope": "real shifted-quadratic positivity and activation-free descent",
+      "sha": "e932753906968a9e3037b44b95c5a2a711af1c41"
+    },
+    {
+      "pr": 676,
+      "scope": "centered Bernstein hierarchy, critical quadratic/cubic kernels and prime-harmonic wall",
+      "sha": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9"
+    }
+  ],
+  "rh_established": false,
+  "schema": "riemann.t100510.source-lock.v1"
+}

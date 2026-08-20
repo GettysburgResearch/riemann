@@ -1,0 +1,29 @@
+{
+  "afcd100510_proved": false,
+  "analytic_theorems_in_packet": [
+    "complex-disk all-scale positivity",
+    "AFCD100510 is equivalent to RH"
+  ],
+  "base_pr": 676,
+  "base_sha": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9",
+  "classification": "PASS_X_100510_COMPLEX_QUADRATIC_DESCENT",
+  "complex_disk_checks": 4,
+  "countermodel_checks": 46005,
+  "differential_chain_checks": 2000,
+  "does_not_prove": [
+    "AFCD100510",
+    "Riemann Hypothesis"
+  ],
+  "hostile_mutations_detected": 5,
+  "mixed_bernstein_checks": 294,
+  "prime_removal_checks": 1400,
+  "proof_object_sha256": "aae9366f0e80da0793d4239d3a28d3629f4ea8912528396655c7a78e8e2f81a0",
+  "proves": [
+    "exact complex-disk shifted quadratic positivity algebra",
+    "all mixed Bernstein carrier removal bounds",
+    "exact differential Harnack chain",
+    "smooth positivity-only countermodel with power-sized critical variation"
+  ],
+  "rh_established": false,
+  "schema": "riemann.x100510.complex-quadratic-descent.v1"
+}
