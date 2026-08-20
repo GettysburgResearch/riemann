@@ -1,0 +1,45 @@
+{
+  "base_pr": 697,
+  "base_sha": "e878c3717cd8124564e5400b2ec5db035e3a4088",
+  "carrier_free_joint_filter": true,
+  "cfbb102100_proved": false,
+  "classification": "PASS_T102100_CARRIER_FREE_STAIRCASE_MATRIX",
+  "common_positive_spline": {
+    "A_operator": "-(1/3)D(D-1/2)^2",
+    "G_operator": "(1/4)(2D-1)(2D+3)",
+    "Q_operator": "(1/6)(D-1/2)(2D^2+5D+9)",
+    "base_boxes": {"half_weight": 2, "support_ratio": 32, "zero_weight": 3}
+  },
+  "external_heads": {
+    "pr691": "1de27a2c29e15e2dd94154f174c57bde3909daf7",
+    "pr695": "5c3cb301134ee9c7ae13e6508fc60e7272cb1a3a",
+    "pr696": "f4016db548afceb31b150547cb6cd48b4cddb77d",
+    "pr698": "a10d6a40105142de2708632589c458d7534f556a"
+  },
+  "harnack_cone_separator": {
+    "certified_upper_lt": "-339/1000",
+    "fixture": [73, 277, 103, 199, 7519]
+  },
+  "mutations_rejected": [
+    "carrier_region_absolute_values_rejected",
+    "cfbb102100_assumed_rejected",
+    "global_harnack_cone_iteration_rejected",
+    "positive_renewal_type_mismatch_rejected",
+    "raw_aq_channels_called_carrier_free_rejected",
+    "rh_established_by_replay_rejected",
+    "staircase_boundary_replaced_by_bulk_absolute_sum_rejected",
+    "type_i_zero_moment_reused_on_balanced_vector_rejected"
+  ],
+  "power_width_exponent_improved": true,
+  "proof_object_sha256": "8e0ec9a43292d4253d0921789a1b65b7835fe318b8f41e7ee2750bb3544a6fc1",
+  "rh_established": false,
+  "schema": "riemann.x102100.carrier-free-staircase.v1",
+  "sharp_cubic_harnack": {
+    "bernstein_boxes": 6,
+    "minimum_positive_coefficient": "1/32768",
+    "width_exponent": "exp(16/17)"
+  },
+  "survival_weighted_coboundary": {"interval_pairs_checked": 15, "left_boundary_budget": "16111/23023"},
+  "vaughan_identity": {"coefficients_checked": 400, "cutoff": 9},
+  "vector_type_i_terms_integrable": true
+}
