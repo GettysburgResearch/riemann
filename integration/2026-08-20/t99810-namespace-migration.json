@@ -1,0 +1,28 @@
+{
+  "base_original": {
+    "pr": 656,
+    "sha": "db404ec00cf022f003ee2bbee66e0cf62ac45003"
+  },
+  "base_published": {
+    "pr": 659,
+    "sha": "83c17b32a99ac9e1aa5aec3168535550eb286636"
+  },
+  "mapping": {
+    "L-99800..L-99802": "L-99810..L-99812",
+    "M-99800": "M-99810",
+    "R-99800..R-99801": "R-99810..R-99811",
+    "T-99800": "T-99810",
+    "X-99800": "X-99810"
+  },
+  "mathematical_change": false,
+  "new_namespace": "99810",
+  "original_namespace": "99800",
+  "original_packet": {
+    "filename": "riemann-t99800-canonical-proof-spine-20260820-v3.zip",
+    "proof_object_sha256": "d5b612f8400d4c65a6ad371277a6108e6251cd1089d03c010e134e07de1b6fa7",
+    "sha256": "c20d7783e45217c898ea28c9840d84523842468aa5446c2d18fb111554b084da"
+  },
+  "republished_proof_object_sha256": "493f59ac4317bbc392a3294a42bc51d4cf9b3e2547b4f89accfd7770b02587ef",
+  "reason": "PR #659 already canonically owns the independent T99800 GPMOC suite",
+  "schema": "riemann.namespace-migration.v1"
+}
