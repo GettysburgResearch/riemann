@@ -1,0 +1,58 @@
+{
+  "afcd99970_proved": false,
+  "balanced_fixture": {
+    "X": 20,
+    "even_surface": "157/2100",
+    "identity": true,
+    "labels": [
+      2,
+      3,
+      5,
+      7
+    ],
+    "odd_surface": "17/150",
+    "scalar": "5/28",
+    "survival": "8/35"
+  },
+  "balanced_surface_proved": true,
+  "proof_object_sha256": "46a77ea83a85b007bd964d0f2912ddf094506854034e55ca0fbaf374e1420408",
+  "rh_established": false,
+  "shifted_carrier_fixtures": [
+    {
+      "Y": 36,
+      "c": "-1",
+      "identity": true,
+      "lhs": "4",
+      "q": 4,
+      "rhs": "4"
+    },
+    {
+      "Y": 144,
+      "c": "0",
+      "identity": true,
+      "lhs": "6",
+      "q": 9,
+      "rhs": "6"
+    },
+    {
+      "Y": 400,
+      "c": "1",
+      "identity": true,
+      "lhs": "6",
+      "q": 16,
+      "rhs": "6"
+    },
+    {
+      "Y": 900,
+      "c": "3",
+      "identity": true,
+      "lhs": "0",
+      "q": 25,
+      "rhs": "0"
+    }
+  ],
+  "shifted_quadratic_family_proved": true,
+  "upbf67_proved": false,
+  "upbf67_refuted": true,
+  "verdict": "PASS_T99970_UPBF_FIREWALL_AND_BALANCED_SURFACE"
+}
