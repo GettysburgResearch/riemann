@@ -1,0 +1,26 @@
+{
+  "base_pr": 698,
+  "base_sha": "a10d6a40105142de2708632589c458d7534f556a",
+  "checks": {
+    "critical_hankel_determinant": -10680,
+    "exponent_cancellations": 9,
+    "mixed_degree_ge_two_carriers": 286,
+    "supercritical_moments": 63,
+    "transport_collar": "1",
+    "transport_scalar": "3",
+    "transport_unmatched": "7/4"
+  },
+  "proof_object_sha256": "d80d71ffeb52876bc76fdc609dc4cc001524b2f3b6472b802cc3cc7b10498535",
+  "schema": "riemann.x101200.implication_hypermatrix.v2",
+  "scope": {
+    "amplitude_occupancy_hyperedge_proved": true,
+    "exceptional_cell_sparsity_proved": false,
+    "fixed_shell_amplitude_proved": true,
+    "moment_cone_separator_proved": true,
+    "rh_established": false,
+    "transport_collar_identity_proved": true,
+    "typed_cell_certificates_proved": false,
+    "typed_multi_producer_cover_implication_proved": true
+  },
+  "verdict": "PASS_T101200_AUDITED_CLOSURE_IMPLICATION_HYPERMATRIX"
+}

@@ -1,0 +1,24 @@
+{
+  "base_pr": 700,
+  "continuum_diagnostics": {
+    "1.5": {"minimum": 0.5945411074680373, "tail": 0.6671541706322378, "target_total": 0.6666666666666666},
+    "2.0": {"minimum": 0.3068489248815848, "tail": 0.5002857080266162, "target_total": 0.5},
+    "3.0": {"minimum": 0.0486664216387674, "tail": 0.3334805331254768, "target_total": 0.3333333333333333},
+    "5.0": {"minimum": 0.0003587087186928556, "tail": 0.2000641273924159, "target_total": 0.2}
+  },
+  "finite_subset_checks": {
+    "full_mass": "272328376320/293391909323",
+    "prefixes": ["1", "70/71", "32201077/33984931", "271727307156/293391909323", "3835610941/4132280413"]
+  },
+  "proof_object_sha256": "c72ed1fcb3897d809ec25d6c115b5c285bd01ab3f8833b0304e0eb11fbc521d2",
+  "schema": "riemann.x101220.truncated_dickman_intervals.v1",
+  "scope": {
+    "adverse_least_endpoint_subpower_proved": true,
+    "all_fixed_exponent_interval_theorem_proved": true,
+    "continuum_positivity_diagnostic": true,
+    "convolution_exponential_identity_checked": true,
+    "remaining_small_owner_packing_proved": false,
+    "rh_established": false
+  },
+  "verdict": "PASS_T101220_TRUNCATED_DICKMAN_INTERVAL_LOCALIZATION"
+}
