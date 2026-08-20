@@ -8,7 +8,8 @@ RH status: **unproved**
 
 The live implication matrix had isolated long mixed-activation cubic collars,
 but their physical entries still obscured the underlying arithmetic.  The
-lemmas `L-100720--L-100723` give a complete exact normal form.
+lemmas `L-100720--L-100724` give a complete exact normal form and enlarge the
+unconditionally positive matrix region.
 
 ## 1. Exact source packet
 
@@ -51,7 +52,57 @@ semigroup.
 Tao's elementary theorem gives a uniform bound for every such prefix, hence a
 uniform derivative bound independent of interval depth.
 
-## 3. Exact summable high derivative
+## 3. New positive interval theorem
+
+Let
+
+\[
+S_{p,q}=\sum_{p<\ell<q}\ell^{-1}.
+\]
+
+Euler-level double counting proves
+
+\[
+1-S_{p,q}\le A_{\mathcal P}(x)\le1
+\qquad(x\ge1)
+\]
+
+whenever `S_(p,q)<1`. Therefore
+
+\[
+\mathcal B_{p,q;\mathcal P}(x)
+\ge1-S_{p,q}-p^{-1/2}-q^{-1/2}.
+\]
+
+Consequently
+
+\[
+S_{p,q}+p^{-1/2}+q^{-1/2}<1
+\Longrightarrow
+H_{p,q;\mathcal P}(t)\ge0
+\quad(t\ge0).
+\]
+
+Mertens' theorem now gives the asymptotic pointwise region
+
+\[
+\boxed{
+q\le p^A,\quad A<e,\quad p\ge p_0(A)
+\Longrightarrow
+H_{p,q;\mathcal P}\ge0.
+}
+\]
+
+Thus only endpoint intervals satisfying
+
+\[
+\log q\ge(e-o(1))\log p
+\]
+
+can remain in the negative collar matrix.  This strictly enlarges the earlier
+`A<exp(3/4)` theorem.
+
+## 4. Exact summable high derivative
 
 The centered packet has the step-source third derivative
 
@@ -65,7 +116,7 @@ The centered packet has the step-source third derivative
 Its total variation is governed by the convergent prime `3/2` mass, and the
 joint min--max average of that variation is uniformly bounded.
 
-## 4. The exact AND gate
+## 5. The exact AND gate
 
 For one interval define the left and right Taylor certificates
 
@@ -97,7 +148,7 @@ terminal statements `LPCC100723` and `FPCC100723` satisfy
 }
 \]
 
-## 5. Relationship to existing routes
+## 6. Relationship to existing routes
 
 ```text
 LPCC100723:
@@ -118,13 +169,14 @@ unbalanced one-sided owner Schur sums;
 short/long absolute norms before carrier cancellation.
 ```
 
-## 6. Exact boundary
+## 7. Exact boundary
 
 ```text
 cubic hinge representation                    PROVED EXACT
 carrier/collar separation                     PROVED EXACT
 compensated reciprocal-prefix coarea           PROVED EXACT
 uniform semigroup-prefix derivative bound      PROVED
+positive endpoint intervals q<=p^A, A<e        PROVED ASYMPTOTICALLY
 summable third-variation source                PROVED EXACT
 finite-cutoff source exhaustion                PROVED
 left/right pointwise Taylor AND gate           PROVED EXACT
@@ -135,5 +187,5 @@ Riemann Hypothesis                             UNPROVEN
 ```
 
 The packet does not claim that bounded rough prefixes or bounded third
-variation prove either terminal estimate.  Their conjunction is the new,
-fully typed implication-matrix frontier.
+variation prove either terminal estimate.  Their conjunction on the remaining
+supercritical intervals is the new, fully typed implication-matrix frontier.
