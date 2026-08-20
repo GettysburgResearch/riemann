@@ -1,0 +1,33 @@
+{
+  "schema": "riemann.t99722.source-lock.v1",
+  "created_utc": "2026-08-20T00:00:00Z",
+  "repository": "gfreund123/riemann",
+  "base": {
+    "pr": 660,
+    "branch": "research/gpt56-pro/99720-first-owner-littlewood-paley-recovery",
+    "sha": "ca3c055307e6804ae904cb9105594dd3f2408ba3"
+  },
+  "binding_inputs": [
+    {
+      "pr": 658,
+      "sha": "3dd7eacdadc76822e25ee630a474580259dd64fb",
+      "scope": "zero-free SHARP box, trace cancellation, prime-exchange min-cut"
+    },
+    {
+      "pr": 659,
+      "sha": "83c17b32a99ac9e1aa5aec3168535550eb286636",
+      "scope": "compact ratio-eight filter, growing moments, Poisson off-diagonal frontier"
+    },
+    {
+      "pr": 660,
+      "sha": "ca3c055307e6804ae904cb9105594dd3f2408ba3",
+      "scope": "native first-owner and Littlewood-Paley identities"
+    }
+  ],
+  "scientific_status": {
+    "universal_branchwise_oce67": "refuted",
+    "compact_diagonal": "proved uniformly bounded",
+    "source_orbit_oce67": "open / RH-bearing",
+    "riemann_hypothesis": "unproved"
+  }
+}
