@@ -133,7 +133,7 @@ def main() -> None:
     text=json.dumps(result,indent=2,sort_keys=True)+"\n"
     if args.output:
         args.output.parent.mkdir(parents=True,exist_ok=True)
-        args.output.write_text(text,encoding="utf-8")
+        args.output.write_text(text,encoding="utf-8",newline="\n")
     print(result["classification"])
     print(result["proof_object_sha256"])
 
