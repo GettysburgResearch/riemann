@@ -1,0 +1,24 @@
+{
+  "base_pr": 670,
+  "base_sha": "f5d37a5f1880749dd33b103d98e2d85bac60ae28",
+  "checks": {
+    "duplicate_67_budget": "1/4489",
+    "one_label_contraction": 140,
+    "prime_square_bound": "95/196",
+    "rough_shell_bound": "109/450",
+    "sigma_bound": "143947973/197964900",
+    "sigma_margin_below_three_quarters": "2262851/98982450",
+    "sinh_upper": "29943381/36413440"
+  },
+  "proof_object_sha256": "7d97d59b63de112727a52f8b71a87568d761c8a0aed0581c4a9c8d6d25bf48dd",
+  "schema": "riemann.x100020.adaptive_euler_squaring.v1",
+  "scope": {
+    "finite_corridor_proved": true,
+    "finite_pole_preservation_proved": true,
+    "gfcp100020_proved": false,
+    "infinite_completion_detector_loss_proved": true,
+    "qpet100020_proved": false,
+    "rh_established": false
+  },
+  "verdict": "PASS_T100020_FINITE_EULER_SQUARING_CORRIDOR"
+}
