@@ -1,0 +1,45 @@
+{
+  "adaptive_squaring": {
+    "pr": 684,
+    "sha": "bbf4e2f8633700e4c8cd6cc11874eae3dacccaa8",
+    "status": "local producer; analytic transfer open"
+  },
+  "base_branch": "research/gpt56-pro/100300-two-route-endgame",
+  "base_pr": 685,
+  "base_sha": "4f69b7656f42dcb5ff250d13adc9f88e8d18f315",
+  "classification": "two-route terminal reduction; two arithmetic gates open",
+  "created": "2026-08-20",
+  "latest_integrator": {
+    "head_sha": "4f69b7656f42dcb5ff250d13adc9f88e8d18f315",
+    "pr": 685,
+    "route_A_gate": "CATD100300",
+    "route_B_gate": "BVD100310"
+  },
+  "recurrence_firewall": {
+    "correct_coefficient": -1,
+    "incorrect_mutation_coefficient": 3,
+    "scope": "standalone algebraic firewall; no live PR declared refuted"
+  },
+  "repository": "gfreund123/riemann",
+  "route_A": {
+    "name": "actual-prime quadratic-envelope activation",
+    "new_gate": "CDTG100320",
+    "status": "open"
+  },
+  "route_B": {
+    "name": "minimal ratio-eight ordinary-Mobius wavelet",
+    "new_gate": "PRBC100330",
+    "status": "open"
+  },
+  "schema": "riemann.t100340.two_route_terminal.v1",
+  "status": {
+    "activation_prefix_theorem": true,
+    "common_core_factorization": true,
+    "envelope_drift_identity": true,
+    "primitive_ratio_bilinear": false,
+    "rh_established": false,
+    "wavelet_ratio_kernel": true
+  },
+  "wavelet_sibling_pr": 675,
+  "wavelet_sibling_sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740"
+}
