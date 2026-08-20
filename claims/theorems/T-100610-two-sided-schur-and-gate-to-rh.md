@@ -14,13 +14,19 @@ replaced by the other, and the conclusion follows only after both are present.
 Let
 
 \[
-67\le p_1<\cdots<p_k,
+2\le p_1\le\cdots\le p_k,
 \qquad
 r_i=p_i^{-1/2},
 \]
 
-with the two labelled copies of `67` kept separate. Let `Psi` be the cubic
-critical kernel of `L-100612`, and put
+be the first `k` labels of the complete cubic Euler source: one labelled copy
+of every prime and one additional labelled copy of `67`. Equal labels occur
+only for the two copies of `67`; they remain distinct commuting coordinates.
+The finitely many labels below `67` may equivalently be frozen into the base
+colour of the rough-prime routes, but they are included here so that the limit
+is literally the full duplicate-67 cubic scalar.
+
+Let `Psi` be the cubic critical kernel of `L-100612`, and put
 
 \[
 F_k(X)=\prod_{i=1}^{k}(I-r_iU_i)\Psi(X).
@@ -167,8 +173,10 @@ Cauchy--Schwarz in `dX/X` gives
 \tag{T-100610.12}
 \]
 
-The duplicate-67 cubic source converges absolutely at every fixed endpoint.
-Passing through finite prime truncations by Fatou therefore proves
+The duplicate-67 cubic source converges absolutely at every fixed endpoint:
+for `n>X`, the kernel has size `O(X/n)`, so the tail is dominated by
+`X sum n^(-3/2)`. Passing through finite labelled-prime truncations by Fatou
+therefore proves
 
 \[
 \boxed{
