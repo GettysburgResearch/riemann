@@ -1,12 +1,12 @@
-# T-100600 — Implication-matrix hybrid frontier
+# T-100600 — Implication-matrix hybrid frontier after type audit
 
-Status: **PROVED COMPOSITIONAL REDUCTIONS; RH UNPROVEN**
+Status: **EXACT OWNER/COMPLETION DECOMPOSITIONS RETAINED; TWO RENEWAL ARROWS WITHDRAWN; RH UNPROVEN**
 
-This theorem records the strongest cross-branch implications established in the matrix pass.
+This theorem records the corrected cross-branch implications after hostile reconstruction of the operator types.
 
-## A. Largest-prime / cofactor-squaring / divisor-renewal chain
+## A. Largest-prime / cofactor-squaring chain — retained
 
-Using PR #688 `L-100410`, this branch `L-100600--L-100603`, and PR #671 `L-99961`:
+Using PR #688 `L-100410` and corrected `L-100600--L-100602`,
 
 \[
 \boxed{
@@ -16,54 +16,59 @@ Using PR #688 `L-100410`, this branch `L-100600--L-100603`, and PR #671 `L-99961
 \to
 \text{finite cofactor squaring before collapse}
 \to
-\text{fully squared cofactor core at }Z=\sqrt X
-\to
-\text{positive divisor renewals after explicit divisor sign}.
+\text{fully squared cofactor core at }Z=\sqrt X.
 }
 \]
 
-The original arbitrary-depth rough bilinear is reduced to `HDRB100603`, a signed owner/divisor bilinear whose post-sign transport is positive and has subpower Mellin mass.
+The cofactor shifts must be unrestricted multiplicative shifts; the native degree-one Euler polynomial, not an artificial squarefree truncation of the shift, enforces squarefree support before completion.
 
-## B. Sequential first-owner / divisor-renewal chain
+This chain is a forward completion.  It does not positively recover the original unsquared cofactor packet.
 
-Using PR #652 `L-99601` and PR #671 `L-99961`, `L-100604` proves
+## B. Divisor-renewal compositions — withdrawn
+
+The former `L-100603` and `L-100604` treated a dilation monomial `S_df` or `U_df` as though it were the divisor restriction
 
 \[
-\boxed{
-FCHD67
-\text{ future-profile complexity}
-\to
-ODSB100604
-\text{ explicit owner-difference/divisor-sign packet}.
-}
+\sum_m\beta(dm)m^{-z}.
 \]
 
-Every future-prime factor after the sign is exposed is a positive dilation renewal. Therefore future completion is no longer part of the unknown sign theorem.
+These are distinct operations.  PR #671's positive divisor renewal therefore does not desquare a finite completion and does not factor a first-owner future monomial merely from its integer label.
 
-## C. Detector reuse
+Accordingly:
 
-The following already-proved detectors may consume either hybrid if the corresponding terminal packet has subpower logarithmic negative mass:
+```text
+HDRB100603     withdrawn as an established reduction;
+ODSB100604     withdrawn as an established reduction;
+FCHD67         still retains its complete future Euler profile.
+```
 
-- PR #653 scalar negative-mass Mellin--Landau theorem;
-- PRs #674/#675/#689 compact minimal-wavelet/Mertens detector;
-- PR #652 two-row Mellin--Landau consumer where the source realization applies.
+## C. Double-owner localization — retained exactly
 
-The fact that some target estimates are RH-equivalent is **not** treated as a reason to discard them. An equivalence becomes useful when an independently proved hybrid producer maps into it.
+`L-100605` remains coefficient-exact:
 
-## D. Exact open terminal packets
+\[
+\mathcal D_{i,i}=-r_iU_i,
+\qquad
+\mathcal D_{i,j}=r_ir_jU_iU_j
+\prod_{i<h<j}(I-r_hU_h),\quad i<j.
+\]
 
-The matrix pass leaves two closely related explicit terminal objects:
+Every nonempty Euler monomial occurs once, classified by its least and greatest selected prime.  The exact coboundary and balanced-squaring successor is PR #695.
 
-1. `HDRB100603`: largest-prime owner `p` times an explicit divisor-sign packet with positive renewal;
-2. `ODSB100604`: first-owner difference `(I-U_p)` times an explicit divisor-sign packet with positive renewal.
+## D. Corrected detector interfaces
 
-The next integration target is to prove these are the same signed bilinear after the compact wavelet projection, or to construct a positive comparison between them. If so, the two independent producer lanes merge before the detector.
+The already-proved scalar and compact-wavelet detectors remain available once an independent source-faithful signed or negative-mass estimate is supplied.  No detector conclusion follows from the withdrawn dilation/restriction identifications.
 
-## Firewalls
+## Exact boundary
 
-- positive homotopy mixing cannot remove both atom and collar (`R-100600`);
-- finite Euler squaring is not positively invertible after scalar collapse;
-- future-prime positivity may not be substituted before the divisor sign is exposed;
-- RH-equivalent target statements are allowed as detector nodes but not counted as independent estimates.
-
-Riemann Hypothesis: **UNPROVEN**.
+```text
+semantic implication matrix                   RETAINED
+largest-prime ownership                       PROVED EXACT
+cofactor finite-squaring identity              PROVED EXACT, TYPE REPAIRED
+sqrt(X) cutoff geometry                       PROVED EXACT
+largest-prime + divisor-renewal desquaring     WITHDRAWN
+first-owner + divisor-renewal factorization    WITHDRAWN
+double-owner bi-triangular decomposition       PROVED EXACT
+balanced coboundary/homotopy successor         PR #695
+Riemann Hypothesis                             UNPROVEN
+```
