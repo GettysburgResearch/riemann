@@ -1,0 +1,7 @@
+claim_id	short_statement	mathematical_type	review_verdict	notes
+L-100710	short sector equals negative prime main plus smaller composite error	UNCONDITIONAL THEOREM	VERIFIED	uses PNT and elementary comparable-prime counting
+R-100710	SCME100704 is false	REFUTATION	VERIFIED	L2 mass is asymptotic to a positive constant times 2^L/L^2
+L-100711	long sector is eventually positive	UNCONDITIONAL THEOREM	VERIFIED	uses compact Abel-Mertens frame and classical zero-free-region Mertens bound
+LRNM100704	long-region negative mass is subpower	UNCONDITIONAL THEOREM	VERIFIED	negative part is eventually zero
+SCME100704	short-region L2 mass is subpower	CONDITIONAL IMPLICATION INPUT	FALSE	literal singleton-prime counterasymptotic
+RH	Riemann Hypothesis	TARGET	UNPROVEN	no conclusion from LRNM alone
