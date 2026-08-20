@@ -1,0 +1,23 @@
+{
+  "repository": "gfreund123/riemann",
+  "matrix_namespace": "SEM-IMPL-20260820",
+  "scientific_status": "RH_UNPROVEN",
+  "nodes": {
+    "DET_NEG_MASS": {"pr": 653, "head": "e928fd615d753882706bb88c51b717bd8d4a86ba", "role": "D"},
+    "DET_WAVELET": {"pr": 689, "head": "1751b5d63d981f1d39e0679a5997a7e32d2f1649", "role": "D"},
+    "PROD_FIRST_OWNER": {"pr": 652, "head": "24ab64551225f2dba9aa53a533eb9b0285c6e363", "role": "P"},
+    "PROD_LARGEST_PRIME": {"pr": 688, "head": "24a2a748b8b36a70382c88843bb7779caac97e07", "role": "P"},
+    "PROD_FINITE_SQUARE": {"pr": 677, "head": "d00c47155ca7440c3c07ff56b361d6aa3533da41", "role": "P"},
+    "TRANS_BERNSTEIN": {"pr": 676, "head": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9", "role": "T"},
+    "TRANS_ACTIVATION_FREE": {"pr": 673, "head": "e932753906968a9e3037b44b95c5a2a711af1c41", "role": "T"},
+    "TRANS_COMPACT_WAVELET": {"pr": 674, "head": "9962f7f712adc6b4ad72672ecfeace028ba79bdb", "role": "T"},
+    "POS_DIVISOR_RENEWAL": {"pr": 671, "head": "2889071e9ebdc412b94cf2cfe74f1fd5142b2857", "role": "T"},
+    "HYB_LP_SQUARE": {"branch": "research/gpt56-sol/100600-implication-matrix-hybrid-closure", "role": "P+T"}
+  },
+  "edge_policy": {
+    "theorem_edge": "must be backed by a committed proof object or exact derivation in this branch",
+    "equivalence_edge": "may be used as a target/detector but is not itself progress without an independent incoming edge",
+    "review_obligation": "tracked separately and never promoted to a theorem",
+    "refuted_edge": "retained as a firewall"
+  }
+}
