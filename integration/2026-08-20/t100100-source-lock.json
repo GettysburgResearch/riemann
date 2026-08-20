@@ -1,0 +1,40 @@
+{
+  "schema": "riemann.t100100.source-lock.v1",
+  "created": "2026-08-20",
+  "base": {
+    "pr": 677,
+    "branch": "research/gpt56-pro/100020-finite-euler-squaring",
+    "sha": "d00c47155ca7440c3c07ff56b361d6aa3533da41"
+  },
+  "frozen_inputs": [
+    {
+      "pr": 672,
+      "sha": "2a351548eb7960ff8ae99f193c10e278984c5657",
+      "role": "quadratic envelope and dual closure routes"
+    },
+    {
+      "pr": 676,
+      "sha": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9",
+      "role": "centered Bernstein hierarchy and cubic critical kernel"
+    },
+    {
+      "pr": 677,
+      "sha": "d00c47155ca7440c3c07ff56b361d6aa3533da41",
+      "role": "finite Euler squaring corridor"
+    }
+  ],
+  "new_claims": [
+    "L-100100",
+    "L-100101",
+    "L-100102",
+    "R-100100",
+    "T-100100",
+    "T-100101",
+    "T-100102"
+  ],
+  "status": {
+    "dce100100_proved": false,
+    "qpet100101_proved": false,
+    "rh_established": false
+  }
+}
