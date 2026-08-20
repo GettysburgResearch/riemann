@@ -1,18 +1,21 @@
-# T-102001 — Two ratio-four field energies jointly imply RH
+# T-102001 — Ratio-four factorization and the symmetric one-field energy gate
 
 Claim ID: `T-102001`
-Status: **PROVED CONDITIONAL AND-GATE; BOTH FIELD-ENERGY ESTIMATES OPEN**
+Status: **PROVED CONDITIONAL COMPOSITIONS; ONE LOCAL FIELD ENERGY OPEN**
 Created: 2026-08-21
-Depends on: PR #685 `L-100310--L-100312`; `L-102009`
+Audited: 2026-08-21
+Depends on: PR #685 `L-100310--L-100312`; `L-102009--L-102010`
 RH status: **unproved**
 
 For each endpoint `X`, put
 
 \[
-U_X=\lfloor X^{1/3}\rfloor
+U_X=\lfloor X^{1/3}\rfloor.
 \]
 
-and retain the two ratio-four fields of `L-102009`:
+## The exact two-field factorization
+
+Retain the two ratio-four fields of `L-102009`:
 
 \[
 F_{X,-}(Y)
@@ -24,7 +27,7 @@ F_{X,+}(Y)
 =\sum_{e>U_X}\frac{a_{U_X}(e)}{\sqrt e}A_+(Y/e).
 \]
 
-Define their endpoint-local logarithmic energies
+Define
 
 \[
 \mathcal E_-(X)
@@ -38,7 +41,7 @@ Define their endpoint-local logarithmic energies
 \tag{T-102001.2}
 \]
 
-The exact factorization `L-102009.13` and Cauchy--Schwarz give, pointwise,
+The exact factorization `L-102009.13` and Cauchy--Schwarz give
 
 \[
 \boxed{
@@ -48,93 +51,114 @@ The exact factorization `L-102009.13` and Cauchy--Schwarz give, pointwise,
 \tag{T-102001.3}
 \]
 
-## The two hypotheses
-
-Define the large-Möbius-tail energy condition
+Consequently the two block-energy conditions
 
 \[
-\boxed{
-\mathrm{LMTE102001}(L):
-\quad
-\int_{2^L}^{2^{L+1}}
-\mathcal E_-(X)\frac{dX}{X}
-=2^{o(L)}
-}
+\int_{2^L}^{2^{L+1}}\mathcal E_-(X)\frac{dX}{X}=2^{o(L)},
+\tag{LMTE102001}
+\]
+
+and
+
+\[
+\int_{2^L}^{2^{L+1}}\mathcal E_+(X)\frac{dX}{X}=2^{o(L)}
+\tag{DCTE102001}
+\]
+
+jointly imply `BVD100310`, and hence RH through `L-100310--L-100312`.
+
+## Symmetric half-divisor reduction
+
+`L-102010` goes further. Let the nonnegative multiplicative function `eta`
+satisfy
+
+\[
+\eta*\eta=\mathbf1
+\]
+
+and put
+
+\[
+h_U=(\mu\mathbf1_{>U})*\eta.
+\]
+
+Then the balanced Vaughan source is the exact square
+
+\[
+a_U*a_U*\mu=h_U*h_U.
+\]
+
+For the corresponding ratio-four minus field
+
+\[
+H_{U,-}(Y)=
+\sum_n\frac{h_U(n)}{\sqrt n}A_-(Y/n),
+\]
+
+define
+
+\[
+\mathcal H_U(X)
+=\int_U^{4X/U}|H_{U,-}(Y)|^2\frac{dY}{Y}.
 \tag{T-102001.4}
 \]
 
-and the divisor-completed-tail energy condition
+The exact Hardy relation between `A_+` and `A_-` has sharp `L2` norm three,
+and `L-102010` proves
 
 \[
 \boxed{
-\mathrm{DCTE102001}(L):
-\quad
-\int_{2^L}^{2^{L+1}}
-\mathcal E_+(X)\frac{dX}{X}
-=2^{o(L)}.
+|\mathcal B_U(X)|\le3\mathcal H_U(X).
 }
 \tag{T-102001.5}
 \]
 
-If both hold, Cauchy--Schwarz in the endpoint variable yields
-
-\[
-\begin{aligned}
-\int_{2^L}^{2^{L+1}}
-(\mathcal B_{U_X}(X))_-\frac{dX}{X}
-&\le
-\left(\int_{2^L}^{2^{L+1}}\mathcal E_-(X)\frac{dX}{X}\right)^{1/2}\\
-&\quad\times
-\left(\int_{2^L}^{2^{L+1}}\mathcal E_+(X)\frac{dX}{X}\right)^{1/2}\\
-&=2^{o(L)}.
-\end{aligned}
-\tag{T-102001.6}
-\]
-
-Summing logarithmic blocks gives the balanced Vaughan condition
-`BVD100310`. The Type-I term has finite logarithmic mass by
-`L-100310--L-100311`, and the fixed Mellin--Landau consumer of `L-100312`
-therefore gives
+Therefore the single block condition
 
 \[
 \boxed{
-\mathrm{LMTE102001}
-\ \wedge\ 
-\mathrm{DCTE102001}
-\Longrightarrow RH.
+\mathrm{HHFE102010}(L):
+\quad
+\int_{2^L}^{2^{L+1}}
+\mathcal H_{U_X}(X)\frac{dX}{X}=2^{o(L)}
 }
+\tag{T-102001.6}
+\]
+
+implies `BVD100310`, then RH.
+
+\[
+\boxed{\mathrm{HHFE102010}\Longrightarrow RH.}
 \tag{T-102001.7}
 \]
 
-## Why this is a genuine conjunction
+## Exact meaning
 
-The two statements are not alternate names for `BVD100310`:
+The initial implication-matrix goal asked for two different statements which
+work only together. `L-102009` constructs that conjunction exactly:
 
 ```text
-LMTE102001:
-  the literal large Möbius tail, observed through the compact zero-moment
-  dyadic step A_-;
-
-DCTE102001:
-  the divisor-completed coefficient a_U=b_U*1, observed through the
-  complementary compact kernel A_+.
+large Möbius tail through A_-
+  x
+positive divisor-completed tail through A_+
+  -> balanced Vaughan packet.
 ```
 
-Their multiplicative convolution is exactly the balanced Vaughan packet. The
-Cauchy product is taken before either field is physically collapsed into an
-unsigned coefficient diagonal.
+The positive half-divisor square root then reveals that these two sides are
+not independent conjectures: they are two Hardy-related observations of one
+source `h_U`. The strongest current frontier is therefore one explicit local
+field energy, not two undefined collar certificates.
 
-Neither energy estimate is proved here. In particular, source-blind diagonal
-bounds reproduce the known critical power loss. The contribution of this
-theorem is the exact construction of two different statements which together,
-and through a lossless same-occurrence product, imply the conclusion.
+No unconditional estimate for `HHFE102010` is proved here. Source-blind
+diagonal bounds still lose a power, and the field retains the signed
+half-order arithmetic required by the reciprocal-zeta detector.
 
 ```text
-ratio-four kernel factorization          PROVED EXACT
-source factorization b_U*a_U             PROVED EXACT
-same-occurrence field convolution         PROVED EXACT
-pointwise product certificate             PROVED EXACT
-LMTE102001                                OPEN / RH-BEARING
-DCTE102001                                OPEN / RH-BEARING
-Riemann Hypothesis                        UNPROVED
+ratio-four kernel factorization             PROVED EXACT
+balanced source factorization b_U*a_U       PROVED EXACT
+same-occurrence two-field Cauchy gate        PROVED EXACT
+positive half-divisor square root            PROVED EXACT
+sharp Hardy reduction to one field          PROVED EXACT
+HHFE102010                                   OPEN / RH-BEARING
+Riemann Hypothesis                           UNPROVED
 ```
