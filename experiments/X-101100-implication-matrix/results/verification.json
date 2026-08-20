@@ -1,0 +1,31 @@
+{
+  "bridge_checks": 9,
+  "matrix_absorption_checks": 81,
+  "matrix_absorption_proved": true,
+  "perron_fixtures": {
+    "critical_control": "det(I-M)=0",
+    "positive": [
+      {
+        "a": "3/4",
+        "b": "1/8",
+        "c": "1/2",
+        "d": "0",
+        "det": "3/16"
+      },
+      {
+        "a": "1/3",
+        "b": "1/4",
+        "c": "1/5",
+        "d": "1/6",
+        "det": "91/180"
+      }
+    ]
+  },
+  "proof_object_sha256": "a6fe491fe3861d5e9cfad7a1834f1831423f05d70f7f746e9844f5c712a27de4",
+  "quadratic_wavelet_bridge_proved": true,
+  "rh_established": false,
+  "riemann_hypothesis": "open",
+  "scalar_absorption_checks": 50,
+  "subcritical_arithmetic_matrix_proved": false,
+  "verdict": "PASS_T101100_JOINT_IMPLICATION_MATRIX"
+}
