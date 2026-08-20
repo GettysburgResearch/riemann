@@ -1,165 +1,168 @@
-# L-100703 — Symmetric balanced squaring homotopy and its positive critical boundary layer
+# L-100703 — Symmetric balanced squaring homotopy and a corrected positive boundary layer
 
 Claim ID: `L-100703`  
-Status: **PROVED EXACT HOMOTOPY + UNCONDITIONAL ENDPOINTWISE POSITIVITY LAYER**  
+Status: **PROVED EXACT HOMOTOPY + FIXED-ORDER POSITIVITY LAYER WITH INACTIVE TAIL**  
 Created: 2026-08-20  
-Depends on: `L-100701`; centered-Bernstein critical owner inequality  
+Depends on: `L-100701`; corrected `L-100180`  
 RH status: **not assumed**
 
-For a finite active prime set put
+Let `mathcal L` be the prime-label multiset containing one copy of every prime and a second independent copy of `67`.  For a label `ell` over the prime `p_ell`, put
 
 \[
-E_p=I-r_pU_p,
-\quad
-Q_p=I-r_p^2U_p^2,
-\quad
-R_p=r_pU_p(I-r_pU_p),
+r_\ell=p_\ell^{-1/2},
+\qquad
+E_\ell=I-r_\ell U_{p_\ell},
 \]
 
-and, for `0<=t<=1`, define
+\[
+Q_\ell=I-r_\ell^2U_{p_\ell^2},
+\qquad
+R_\ell=r_\ell U_{p_\ell}-r_\ell^2U_{p_\ell^2}.
+\]
+
+Then `E_ell=Q_ell-R_ell`.  For `0<=t<=1`, define
 
 \[
 \boxed{
-H_{p,t}:=Q_p-tR_p
-=I-tr_pU_p-(1-t)r_p^2U_p^2.
+H_{\ell,t}=Q_\ell-tR_\ell
+=I-tr_\ell U_{p_\ell}-(1-t)r_\ell^2U_{p_\ell^2}.
 }
 \tag{L-100703.1}
 \]
 
-Let
+For a finite label set `Lambda`, put
 
 \[
-H_t=\prod_pH_{p,t}.
+H_{\Lambda,t}=\prod_{\ell\in\Lambda}H_{\ell,t}.
 \]
 
-Then
-
-\[
-H_0=\prod_pQ_p,
-\qquad
-H_1=\prod_pE_p.
-\tag{L-100703.2}
-\]
-
-## 1. Symmetric homotopy identity
+## 1. Exact finite homotopy
 
 Finite differentiation gives
 
 \[
-{d\over dt}H_t
-=-\sum_pR_p\prod_{q\ne p}H_{q,t}.
+{d\over dt}H_{\Lambda,t}
+=-\sum_{\ell\in\Lambda}
+R_\ell\prod_{h\in\Lambda\setminus\{\ell\}}H_{h,t}.
 \]
 
-Therefore
+Hence
 
 \[
 \boxed{
-\prod_pE_p
+\prod_{\ell\in\Lambda}E_\ell
 =
-\prod_pQ_p
+\prod_{\ell\in\Lambda}Q_\ell
 -
 \int_0^1
-\sum_pR_p\prod_{q\ne p}H_{q,t}\,dt.
+\sum_{\ell\in\Lambda}R_\ell
+\prod_{h\ne\ell}H_{h,t}\,dt.
 }
+\tag{L-100703.2}
+\]
+
+The two labelled copies of `67` are separate factors throughout.  The previous notation `prod_p` plus an ad hoc extra budget term obscured this source typing.
+
+## 2. Correct object acted upon
+
+For fixed `m>=3`, define the positive unsieved critical carrier
+
+\[
+\mathcal K_m(X)
+=4^mX^{m/2}
+\kappa_{m,m-1}(X^{-1/2}).
 \tag{L-100703.3}
 \]
 
-This is the permutation-invariant counterpart of the ordered first-transition
-identity `L-100701.2`. It retains the completed and transition carriers inside
-one common parameterized source until their cancellation is taken.
-
-## 2. Literal labelled source
-
-For each prime, the local factor (L-100703.1) has three mutually exclusive
-states:
-
-```text
-absent                     coefficient +1;
-one ordinary p-label       coefficient -t r_p;
-one squared p^2-label      coefficient -(1-t) r_p^2.
-```
-
-Thus `H_t` is an exact labelled Euler source. A local state never contains both
-the ordinary and squared copy of the same prime.
-
-At the final centered-Bernstein critical kernel, removing an ordinary label
-costs at most `1/p`, while removing a squared label costs at most `1/p^2`.
-Hence the complete adjacent-level owner budget at endpoint `X` is
+Then the native final centered-Bernstein remainder is
 
 \[
-\boxed{
-\Sigma_t(X)
-\le
- t\sum_{p\le X}{1\over p}
- +(1-t)\sum_p{1\over p^2}
- +{1\over67^2},
-}
+R_{m,m-1}(X)
+=
+\left(\prod_{\ell\in\mathcal L}E_\ell\right)\mathcal K_m(X)
 \tag{L-100703.4}
 \]
 
-where the last term is the second labelled `67` occurrence.
+in the absolutely convergent source sense.  Define the interpolating physical state by
 
-## 3. Positive homotopy boundary layer
+\[
+R_{m,t}(X)
+=
+\left(\prod_{\ell\in\mathcal L}H_{\ell,t}\right)\mathcal K_m(X).
+\tag{L-100703.5}
+\]
+
+Thus `R_(m,1)=R_(m,m-1)` and `R_(m,0)` is its fully squared completion.  The former expression `(H_tR_(m,m-1))(X)` applied a second Euler family to an already native source and is withdrawn.
+
+## 3. Corrected owner budget
+
+The critical removal cost of an active ordinary label is at most `1/p`; a squared label costs at most `1/p^2`.  Because `mathcal K_m` is noncompact, ordinary labels with `p>X` contribute an inactive tail.  For fixed `m`,
+
+\[
+\Sigma_{m,t}(X)
+\le
+ t\sum_{\substack{\ell\in\mathcal L\\p_\ell\le X}}{1\over p_\ell}
+ +(1-t)\sum_{\ell\in\mathcal L}{1\over p_\ell^2}
+ +t\,R_m^{\rm inact}(X),
+\tag{L-100703.6}
+\]
+
+where
+
+\[
+R_m^{\rm inact}(X)
+\ll_m
+\sqrt X\sum_{p>X}p^{-3/2}
+\ll_m {1\over\log(2X)}.
+\tag{L-100703.7}
+\]
 
 Put
 
 \[
-H_X:=\sum_{p\le X}{1\over p},
+H_X^*=\sum_{\substack{\ell\in\mathcal L\\p_\ell\le X}}{1\over p_\ell},
 \qquad
- t_X:=\min\left(1,{1\over4H_X}\right).
+P_2^*=\sum_{\ell\in\mathcal L}{1\over p_\ell^2}
+< {95\over196}+{1\over4489},
 \]
 
-Using the elementary bound from PR #677,
+and choose
 
 \[
-\sum_p{1\over p^2}< {95\over196},
+t_{m,X}
+=
+\min\left(1,
+{1\over4(H_X^*+R_m^{\rm inact}(X))}
+\right).
+\tag{L-100703.8}
 \]
 
-one obtains, for `0<=t<=t_X`,
+For `0<=t<=t_(m,X)`,
 
 \[
-\Sigma_t(X)
-< {1\over4}+{95\over196}+{1\over4489}< {3\over4}<1.
-\tag{L-100703.5}
+\Sigma_{m,t}(X)
+< {1\over4}+{95\over196}+{1\over4489}<1.
 \]
 
-The ordinary adjacent-level double-counting therefore gives
-
-\[
-kM_k(t,X)\le\Sigma_t(X)M_{k-1}(t,X),
-\]
-
-and every odd level is smaller than the preceding even level. Consequently:
+Adjacent-level pairing therefore proves
 
 \[
 \boxed{
-(H_tR_{m,m-1})(X)>0
-\quad
-(0\le t\le t_X,\ m\ge3),
+R_{m,t}(X)>0
+\qquad
+(0\le t\le t_{m,X}).
 }
-\tag{L-100703.6}
+\tag{L-100703.9}
 \]
 
-where `R_(m,m-1)` is any final centered-Bernstein critical remainder in the
-canonical hierarchy.
+Since `H_X^*=log log X+O(1)`, the positive layer still has width comparable to `1/log log X` for each fixed `m`.
 
-Since `H_X=log log X+O(1)`, the proved positive layer has width
-`asymp1/log log X`.
+## 4. Exact boundary
 
-## 4. Correct remaining interval
-
-The original critical state is `t=1`. Equations (L-100703.3) and
-(L-100703.6) show that the open arithmetic is confined to the balanced
-homotopy interval
+The original critical state is `t=1`.  The remaining arithmetic is the balanced interval
 
 \[
- t_X<t\le1,
+t_{m,X}<t\le1,
 \]
 
-with the carrier cancellation of `L-100702` retained pointwise in the same
-`t`-integral.
-
-The missing statement is not positivity of the finite completion at `t=0` and
-not positive inversion. It is a one-sided physical bound for the balanced
-homotopy derivative after the explicitly positive boundary layer has been
-removed.
+with the completed-minus-transition cancellation retained.  This theorem does not prove positivity there and does not produce a fixed one-signed Landau density.
