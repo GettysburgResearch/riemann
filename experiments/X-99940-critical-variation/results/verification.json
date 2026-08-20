@@ -1,0 +1,16 @@
+{
+  "base_sha": "14692244bdaef90793a0c2a1a9bfd6e6b4bb1a2e",
+  "beta_coefficient_checks": 4000,
+  "classification": "exact algebraic/analytic replay; no heavy campaign",
+  "critical_variation_equivalent_to_rh": true,
+  "critical_variation_proved_unconditionally": false,
+  "derivative_checks": 5,
+  "descent_regression_checks": 5,
+  "ordinary_bv_countermodel_weighted_mass": 200,
+  "proof_object_sha256": "562adc3add28b425c75a4c3e050e61df9d2e0c78026321d999240b29d74cc39c",
+  "quadratic_positivity_proved_in_packet": true,
+  "rh_established_by_replay": false,
+  "s2_rational_gate": true,
+  "schema": "riemann.t99940.critical-variation.v1",
+  "verdict": "PASS_T99940_CRITICAL_VARIATION_DESCENT"
+}

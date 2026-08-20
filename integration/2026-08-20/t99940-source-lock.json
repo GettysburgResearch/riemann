@@ -1,0 +1,95 @@
+{
+  "base_branch": "research/gpt56-sol/99810-reversible-network-bellman",
+  "base_sha": "14692244bdaef90793a0c2a1a9bfd6e6b4bb1a2e",
+  "branch": "research/gpt56-pro/99940-critical-variation-descent-recovery",
+  "files": [
+    {
+      "bytes": 1893,
+      "path": "PR_BODY_99940.md",
+      "sha256": "69b0e3d81603d1da15b07fa33ca4ffff628f995b6349883584973de593781dbf"
+    },
+    {
+      "bytes": 1054,
+      "path": "README_99940.md",
+      "sha256": "e87c83187e56388610db154d960e3b9d7b17ebee195b055ff37edc783b48fea9"
+    },
+    {
+      "bytes": 1817,
+      "path": "claims/lemmas/L-99939-quadratic-sharp-transform-is-positive.md",
+      "sha256": "e4e891a8817a8e3ee3adc94eb0e709ecc976f8292197df684ee026182679ae93"
+    },
+    {
+      "bytes": 1409,
+      "path": "claims/lemmas/L-99940-distributional-critical-power-descent.md",
+      "sha256": "b9df8affc048fac589b9a3fee60c4ee08738e387e0accbe2ded2632767fa592f"
+    },
+    {
+      "bytes": 1225,
+      "path": "claims/lemmas/L-99941-positive-quadratic-normalization-has-bounded-variation.md",
+      "sha256": "1227999b0fbf994163380a8887259aeed4e5dc9380c3659d417f6252530fa11e"
+    },
+    {
+      "bytes": 724,
+      "path": "claims/lemmas/L-99942-critical-negative-mass-is-weighted-downward-variation.md",
+      "sha256": "36862f5019a26b148fb32a8676a3593b24f3e7320d5204a78c121a775005796b"
+    },
+    {
+      "bytes": 1397,
+      "path": "claims/lemmas/L-99943-mellin-landau-critical-variation-consumer.md",
+      "sha256": "64673f9c987ea0de1f0c3df2223d4444184457b5175ca1a07e73b9ef1ea2a72e"
+    },
+    {
+      "bytes": 1411,
+      "path": "claims/lemmas/L-99944-critical-variation-is-rh-equivalent.md",
+      "sha256": "bddd2dbde698527e37e3262b31941818b7a7d972f9f6dd6148d43b4c86a0952f"
+    },
+    {
+      "bytes": 723,
+      "path": "claims/refutations/R-99940-ordinary-bv-does-not-control-critical-variation.md",
+      "sha256": "5404e81a030849e190d9a603bf5deed66216c69957d19004f7709bad3a731717"
+    },
+    {
+      "bytes": 1505,
+      "path": "claims/theorems/T-99940-critical-variation-descent-and-frontier.md",
+      "sha256": "e10b42b7341968fe8a0827352514712c7a9b8acf18ccd98cb3ed0a28da9ab873"
+    },
+    {
+      "bytes": 366,
+      "path": "experiments/X-99940-critical-variation/README.md",
+      "sha256": "97f1ec6b8d6de31392c6dc198d7a2ea9d4808597fb6a833eaf129094401b4d52"
+    },
+    {
+      "bytes": 694,
+      "path": "experiments/X-99940-critical-variation/results/verification.json",
+      "sha256": "f3f96156d827e54349db972237f2c478a9f7cfd462e53a903075c9ffe0448f5e"
+    },
+    {
+      "bytes": 3762,
+      "path": "experiments/X-99940-critical-variation/verify.py",
+      "sha256": "9d584680bd169a116b1518f9c4d02024838019881c1f590e4ad1c18d569341aa"
+    },
+    {
+      "bytes": 1206,
+      "path": "reports/gpt56-pro/2026-08-20-critical-variation-descent-recovery.md",
+      "sha256": "cb890a1701d2e17d228f71398c11e5a4d69fb32bf9fa53bd8c7d49a7c43038ea"
+    },
+    {
+      "bytes": 593,
+      "path": "standalone/2026-08-20-critical-variation-descent/PROOF.md",
+      "sha256": "8946e8ce4710166d5c9d28229020fd987192082ab0c5204356983c42df96cb27"
+    },
+    {
+      "bytes": 993,
+      "path": "standalone/2026-08-20-critical-variation-descent/REVIEW_SPECIFICATION.md",
+      "sha256": "b2745f40b82ab1e16e58119fc8cc67e68d24ffa55635e52fa809d2665c8a8d81"
+    }
+  ],
+  "proof_object_sha256": "562adc3add28b425c75a4c3e050e61df9d2e0c78026321d999240b29d74cc39c",
+  "repository": "gfreund123/riemann",
+  "schema": "riemann.t99940.source-lock.v1",
+  "scientific_status": {
+    "critical_variation_equivalent_to_rh": true,
+    "critical_variation_proved_unconditionally": false,
+    "rh_established": false
+  }
+}
