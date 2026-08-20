@@ -1,0 +1,31 @@
+{
+  "schema": "riemann.t100720.audited_scope.v1",
+  "finite_algebra_result": {
+    "verdict": "PASS_T100720_CUBIC_HINGE_ROUGH_PREFIX_ALGEBRA",
+    "proof_object_sha256": "a05a9ed1c455a87115424ec8d4bfb0ec1fc8acc94ce0f36f012c4c35be88f0ba"
+  },
+  "initial_mathematical_freeze": {
+    "pr": 691,
+    "sha": "be9a4168fa0df971a2fc63176f07ce3beee6c3d4"
+  },
+  "audited_base": {
+    "pr": 695,
+    "sha": "7b61f6b1998aefa185d0e5beff18e5a456451299"
+  },
+  "later_analytic_results_not_replayed": [
+    "Tao semigroup reciprocal-Mobius prefix theorem",
+    "L-100724 exponent-e positive interval theorem",
+    "adaptive occurrence-time partition in L-100723"
+  ],
+  "withdrawn_old_gate_names": [
+    "LPCC100723",
+    "FPCC100723"
+  ],
+  "current_open_gates": [
+    "APCC100723",
+    "DPCC100723"
+  ],
+  "apcc100723_proved": false,
+  "dpcc100723_proved": false,
+  "rh_established": false
+}

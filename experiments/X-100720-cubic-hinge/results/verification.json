@@ -1,0 +1,24 @@
+{
+  "base_pr": 691,
+  "base_sha": "be9a4168fa0df971a2fc63176f07ce3beee6c3d4",
+  "checks": {
+    "hinge_and_carrier_samples": 5,
+    "regularity_countermodel_integral": "1/60",
+    "rough_prefix_derivative_samples": 6,
+    "third_variation_factorizations": 2,
+    "two_sided_taylor_samples": 4
+  },
+  "proof_object_sha256": "a05a9ed1c455a87115424ec8d4bfb0ec1fc8acc94ce0f36f012c4c35be88f0ba",
+  "schema": "riemann.t100720.cubic_hinge_rough_prefix.v1",
+  "scope": {
+    "fpcc100723_proved": false,
+    "hinge_identity_proved": true,
+    "lpcc100723_proved": false,
+    "rh_established": false,
+    "rough_prefix_coarea_proved": true,
+    "tao_prefix_bound_replayed": false,
+    "third_variation_factorization_proved": true,
+    "two_certificate_and_gate_proved": true
+  },
+  "verdict": "PASS_T100720_CUBIC_HINGE_ROUGH_PREFIX_ALGEBRA"
+}
