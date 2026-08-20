@@ -1,0 +1,46 @@
+{
+  "base_pr": 691,
+  "base_sha": "c85123d6c25b5b2ade89ab30a736f9b18844a489",
+  "checks": {
+    "double_owner_native_coefficients": 4,
+    "double_owner_weight_partitions": 4,
+    "endpoint_cauchy_phase_formulas": 4,
+    "interior_squaring_identities": 3,
+    "one_prime_convexity": 36,
+    "phase_values": [
+      {
+        "p": 2,
+        "q": 3,
+        "value": "7/3"
+      },
+      {
+        "p": 67,
+        "q": 71,
+        "value": "27456/4757"
+      },
+      {
+        "p": 67,
+        "q": 1009,
+        "value": "275088/67603"
+      },
+      {
+        "p": 101,
+        "q": 809,
+        "value": "343600/81709"
+      }
+    ],
+    "short_long_negative_part_gluing": 225
+  },
+  "proof_object_sha256": "450d1e1cf5b61c83d391811c03a9ba3595d778fd8bd2af5c94819de346f19058",
+  "schema": "riemann.t100700.double_owner_dual_terminal.v1",
+  "scope": {
+    "endpoint_phase_budget_proved": true,
+    "lrnm100704_proved": false,
+    "rh_established": false,
+    "scme100704_proved": false,
+    "short_long_gluing_proved": true,
+    "squaring_renewal_normal_form_proved": true,
+    "two_sided_decoupling_proved": true
+  },
+  "verdict": "PASS_T100700_DOUBLE_OWNER_DUAL_TERMINAL_ALGEBRA"
+}
