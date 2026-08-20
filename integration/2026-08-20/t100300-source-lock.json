@@ -1,0 +1,32 @@
+{
+  "base": {
+    "branch": "review/gpt56-pro/100210-hasse-wavelet-terminal-map",
+    "pr": 680,
+    "sha": "64e8e138dde15bfdb02d532041ace945c600c912"
+  },
+  "created": "2026-08-20",
+  "external_sources": [
+    {
+      "pr": 675,
+      "sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740"
+    },
+    {
+      "pr": 676,
+      "sha": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9"
+    },
+    {
+      "pr": 679,
+      "sha": "37c811473cad6058e5f057a9fc89b05dc5b0e4cb"
+    },
+    {
+      "pr": 681,
+      "sha": "295000fead70e87c17623cf0dcc2af838a60ed0c"
+    }
+  ],
+  "schema": "riemann.t100300.source-lock.v1",
+  "status": {
+    "bvd100310_proved": false,
+    "catd100300_proved": false,
+    "rh_established": false
+  }
+}
