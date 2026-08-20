@@ -1,9 +1,10 @@
 # L-102006 — Rankin control of the centered large-product collar tail
 
-Claim ID: `L-102006`  
-Status: **PROVED EXACT/UNCONDITIONAL WEIGHT BOUND; DOES NOT CLOSE THE SIGN**  
-Created: 2026-08-21  
-Depends on: `L-102005`; PR #691 `L-100615--L-100616`  
+Claim ID: `L-102006`
+Status: **PROVED EXACT WEIGHT BOUND; UNSIGNED CLOSURE REFUTED**
+Created: 2026-08-21
+Audited: 2026-08-21
+Depends on: `L-102004--L-102005`; PR #691 `L-100615--L-100616`
 RH status: **not assumed**
 
 Retain the centered collar expansion
@@ -12,52 +13,88 @@ Retain the centered collar expansion
 \widetilde H_{ij}(X)
 =
 \sum_{\substack{S\subseteq(i,j)\\m_S>X/(p_ip_j)}}
-(-1)^{|S|}m_S^{-1/2}\widetilde K_{ij}(X/m_S).
+(-1)^{|S|}m_S^{-1/2}\widetilde K_{ij}(X/m_S),
 \]
 
-For `0<theta<1/2`, Rankin's inequality on the forced threshold gives
+with `|widetilde K_(ij)|<=256` from `L-102004`.
+
+For `0<theta<1/2`, Rankin's inequality gives
 
 \[
-1_{m_S>X/(p_ip_j)}
+\mathbf1_{m_S>X/(p_ip_j)}
 \le
-\left({m_Sp_ip_j\over X}\right)^\theta.
+\left(\frac{m_Sp_ip_j}{X}\right)^\theta.
 \]
 
-Hence the unsigned coefficient tail satisfies
+Hence
 
 \[
 \boxed{
 \sum_{\substack{S\subseteq(i,j)\\m_S>X/(p_ip_j)}}m_S^{-1/2}
 \le
-\left({p_ip_j\over X}\right)^\theta
+\left(\frac{p_ip_j}{X}\right)^\theta
 \prod_{p_i<p<p_j}(1+p^{-1/2+\theta}).
 }
 \tag{L-102006.1}
 \]
 
-This formula is exact as a finite Euler-product bound. It exposes the limitation of source-blind Rankin control: because `1/2-theta<1`, the prime sum
+This is an exact finite Euler-product majorant. It cannot be conclusion-facing:
+`1/2-theta<1`, so the logarithm of the product contains the power-sized sum
 
 \[
-\sum_{p_i<p<p_j}p^{-1/2+\theta}
+\sum_{p_i<p<p_j}p^{-1/2+\theta}.
 \]
 
-is power-sized in the upper endpoint, so (L-102006.1) is not subcritical on supercritical long intervals.
+The explicit threshold of `L-102005` therefore does not become small after
+source-blind absolute values.
 
-Therefore the large-product threshold of `L-102005`, though genuine, cannot be closed by an unsigned Rankin argument. The finite-squaring step of PR #691 is essential: it must be applied before absolute values so selected small/intermediate primes pay `p^-1` rather than `p^-1/2`.
+## Source-side squared version
 
-## Squared Rankin version
+Suppose every interior prime `p<=Z` is completed before physical collapse, so
+its native factor is replaced by
 
-After source-side squaring of every interior prime `p<=Z`, the corresponding unsigned threshold bound becomes
+\[
+I-p^{-1}U_{p^2}.
+\]
+
+Applying Rankin to the resulting product labels gives
 
 \[
 \boxed{
-\left({p_ip_j\over X}\right)^\theta
+\left(\frac{p_ip_j}{X}\right)^\theta
 \prod_{\substack{p_i<p<p_j\\p\le Z}}(1+p^{-1+2\theta})
 \prod_{\substack{p_i<p<p_j\\p>Z}}(1+p^{-1/2+\theta}).
 }
 \tag{L-102006.2}
 \]
 
-If `Z>=sqrt(X/(p_ip_j))`, every subset made solely from unsquared primes above `Z` has product either `1` or exceeds the physical threshold after at most a bounded number of labels. This is the precise interface where a depth-one/depth-two argument can replace the divergent unsquared Euler product.
+For positive `theta`, even the squared product need not be subcritical over a
+long interval; the threshold gain and the Euler masses must be balanced before
+absolute values.
 
-No claim of subpower closure is made here. The theorem identifies why Rankin alone fails and what the finite squaring must accomplish on the same centered collar.
+Let
+
+\[
+T=\frac{X}{p_ip_j}.
+\]
+
+If `Z>=sqrt(T)`, then every product of **two** unsquared primes above `Z`
+strictly exceeds `T`:
+
+\[
+q_1,q_2>Z\quad\Longrightarrow\quad q_1q_2>Z^2\ge T.
+\tag{L-102006.3}
+\]
+
+Thus the correct unsquared-depth boundary is two, not three. A one-label
+unsquared product crosses the threshold only when that label itself exceeds
+`T`; squared-core factors can also push depth-zero or depth-one terms across
+the threshold.
+
+```text
+large-product localization            PROVED
+unsigned Rankin closure               REFUTED
+finite squaring improves small labels PROVED EXACT
+unsquared depth >=2 at Z=sqrt(T)       AUTOMATICALLY ABOVE THRESHOLD
+final signed recombination             OPEN
+```
