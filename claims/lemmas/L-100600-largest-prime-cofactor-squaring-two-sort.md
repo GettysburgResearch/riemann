@@ -1,7 +1,7 @@
 # L-100600 — Largest-prime ownership and finite cofactor squaring form one exact two-sort source
 
-Claim ID: `L-100600`
-Status: **PROVED EXACT SOURCE IDENTITY; CLOSURE ESTIMATE OPEN**
+Claim ID: `L-100600`  
+Status: **PROVED EXACT SOURCE IDENTITY; OPERATOR-TYPE REPAIRED**  
 RH status: **not assumed**
 
 Let `K_0` be the ratio-eight ordinary-Möbius wavelet kernel of PR #674, and write every squarefree nonunit source integer uniquely as
@@ -10,62 +10,79 @@ Let `K_0` be the ratio-eight ordinary-Möbius wavelet kernel of PR #674, and wri
 n=pm,\qquad p=P^+(n),\qquad P^+(m)<p.
 \]
 
-Then
+Then, for `X>8`,
 
 \[
 G_\mu(X)
 =-\sum_p p^{-1/2}
   \sum_{\substack{X/(8p)\le m\le X/p\\P^+(m)<p}}
-  \mu(m)m^{-1/2}K_0(X/(pm))
+  \mu(m)m^{-1/2}K_0(X/(pm)).
+\tag{L-100600.1}
 \]
-for `X>8`.
 
-Fix cutoffs `Y<Z`. Split the outer owner primes into `p<=Y` and `p>Y`, and on the rough part `p>Y` apply only to the cofactor coordinates the finite operator
+## 1. Correct cofactor shift space
+
+Fix an owner prime `p`.  For each prime `q<p`, let `V_q` be the unrestricted multiplicative shift on the cofactor exponent monoid,
 
 \[
-\mathscr C_Z^{(m)}=
-\prod_{\substack{q\le Z\\q<p}}(I+q^{-1/2}S_q^{(m)}),
+V_q e_m=e_{qm}.
 \]
-where `S_q^(m)` acts by `m -> qm` and is zero when `qm` violates squarefreeness or `P^+(qm)<p`.
 
-For each fixed owner `p`, the cofactor Möbius source is
+The shift is zero only when a later physical support condition excludes the resulting cofactor; it is **not** killed merely because `q` already divides `m`.  This distinction is essential: the completed source must contain the `q^2` state.
+
+The native squarefree cofactor source is nevertheless
 
 \[
-\prod_{q<p}(I-q^{-1/2}S_q^{(m)})\delta_1.
+\prod_{q<p}(I-q^{-1/2}V_q)e_1,
+\tag{L-100600.2}
 \]
-Hence, by commutation of the squarefree cofactor shifts,
+
+because every local native Euler factor has degree one.  Its support is squarefree automatically; squarefreeness is a property of the native polynomial, not a truncation rule imposed on `V_q`.
+
+For a cutoff `Z`, apply only on cofactor coordinates
+
+\[
+\mathscr C_{Z,p}^{(m)}
+=
+\prod_{\substack{q\le Z\\q<p}}(I+q^{-1/2}V_q).
+\tag{L-100600.3}
+\]
+
+Since the unrestricted shifts commute,
 
 \[
 \boxed{
-\mathscr C_Z^{(m)}
-\prod_{q<p}(I-q^{-1/2}S_q^{(m)})
+\mathscr C_{Z,p}^{(m)}
+\prod_{q<p}(I-q^{-1/2}V_q)
 =
-\prod_{\substack{q\le Z\\q<p}}(I-q^{-1}S_{q^2}^{(m)})
-\prod_{Z<q<p}(I-q^{-1/2}S_q^{(m)}).
+\prod_{\substack{q\le Z\\q<p}}(I-q^{-1}V_q^2)
+\prod_{Z<q<p}(I-q^{-1/2}V_q).
 }
+\tag{L-100600.4}
 \]
 
-Thus finite cofactor squaring is source-faithful before physical summation:
+Here `V_q^2=V_{q^2}`.  Thus finite cofactor squaring is source-faithful before physical summation:
 
 - the terminal largest-prime owner `p` is untouched and remains unique;
-- every cofactor prime `q<=Z` is replaced by one `q^2` label of activity `1/q`;
-- every cofactor prime `Z<q<p` remains an ordinary label of activity `q^-1/2`;
-- no source occurrence is duplicated;
-- no inverse operator is used in this identity.
+- every cofactor prime `q<=Z` is replaced by one `q^2` state;
+- every cofactor prime `Z<q<p` remains an ordinary state;
+- no inverse operator is used;
+- zero extension is applied only after the exact source polynomial is formed.
 
-This is exactly the interface absent when finite Euler squaring is applied after scalar collapse.
+The earlier wording that made `V_q` vanish on repeated `q`-divisibility was incompatible with (L-100600.4) and is withdrawn by this repair.
 
-## Consequence
+## 2. Conditional level estimate
 
-For any positive kernel on the cofactor source satisfying the same one-label scaling inequality as in PR #677, the completed cofactor level mass obeys an adjacent-level estimate with owner budget
+For a positive physical kernel satisfying the one-label scaling inequalities used in finite Euler squaring, the completed cofactor level masses admit the owner budget
 
 \[
 \Sigma_{p,Z}
-\le \sum_{q\le Z}q^{-2}+\sum_{Z<q<p}q^{-1}.
+\le \sum_{q\le Z}q^{-2}+\sum_{Z<q<p}q^{-1},
+\tag{L-100600.5}
 \]
 
-Therefore whenever this budget is `<1`, each fixed-owner completed cofactor packet has positive parity sum by the same adjacent-level pairing.
+with the sums restricted further by physical activation.  Whenever the relevant budget is below one, adjacent-level pairing signs that **completed** fixed-owner packet.
 
-## Boundary
+## 3. Exact boundary
 
-The identity does **not** by itself return the unsquared physical wavelet. The remaining theorem `HCFB100600` must exploit the common largest-prime owner before collapse to transfer positivity/negative-mass control from these completed cofactors to the original rough bilinear sum without a signed inverse.
+Equation (L-100600.4) is a forward completion identity.  It does not provide a positive map from the completed packet back to the original unsquared packet.  In particular, a completion shift is not the same object as a divisor restriction; that separate mismatch is recorded in the corrected `L-100603` and `L-100604`.
