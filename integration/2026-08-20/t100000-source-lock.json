@@ -1,0 +1,36 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/99980-dual-closure-assault",
+    "pr": 672,
+    "sha": "2a351548eb7960ff8ae99f193c10e278984c5657"
+  },
+  "binding_inputs": [
+    {
+      "pr": 663,
+      "scope": "global positivity of every SHARP boundary power m>=2 and labelled mass S_3/2<1",
+      "sha": "fa081e81044a81e76f48cb9878a659d749e98427"
+    },
+    {
+      "pr": 668,
+      "scope": "quadratic SHARP transform and critical-variation descent",
+      "sha": "15719b975115ecad1b23264c6a6303899b4c99dc"
+    },
+    {
+      "pr": 672,
+      "scope": "quadratic-envelope compatible integration base",
+      "sha": "2a351548eb7960ff8ae99f193c10e278984c5657"
+    }
+  ],
+  "created": "2026-08-20",
+  "forbidden_promotions": [
+    "finite scan to global sign",
+    "positive-definite kernel to linear Möbius positivity",
+    "critical remainder to proved",
+    "Riemann Hypothesis to established"
+  ],
+  "schema": "riemann.t100000.source-lock.v1",
+  "status": {
+    "critical_remainder_proved_nonnegative": false,
+    "rh_established": false
+  }
+}
