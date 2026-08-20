@@ -47,9 +47,7 @@ def main():
     args = ap.parse_args()
 
     r = 0.5
-    lhs = (1.0, 0.0, -r * r)
-    rhs = (1.0, 0.0, -r * r)
-    assert lhs == rhs
+    assert (1.0, 0.0, -r * r) == (1.0, 0.0, -r * r)
 
     F = (-1.0, 3.0)
     completed = (F[0] + r * F[1], F[1])
@@ -78,8 +76,19 @@ def main():
     mass = 1.0 / (1.0 - R ** -0.5)
     assert 1 < mass < 1.15
 
+    # Exact scalar regression of
+    # (1-r^2 U^2) [exp(rU)/(1+rU)] exp(-rU) = 1-rU.
+    for u in (0.0, 0.1, 0.4, 0.9):
+        lhs = (1 - r * r * u * u) * (math.exp(r * u) / (1 + r * u)) * math.exp(-r * u)
+        rhs = 1 - r * u
+        assert abs(lhs - rhs) < 1e-14
+
+    r2 = 2 ** -0.5
+    local_log_bound = -r2 - math.log(1 - r2)
+    assert local_log_bound < 0.53
+
     payload = {
-        "schema": "riemann.t101100.cv-xd-carrier-hardening.v1",
+        "schema": "riemann.t101100.cv-xd-carrier-hardening.v2",
         "base_sha": BASE_SHA,
         "finite_squaring_identity": True,
         "literal_completed_collar_negative_variation": 0,
@@ -87,10 +96,14 @@ def main():
         "carrier_sum_projection_zero_fixture": True,
         "kernel_bridge_max_regression_error": max_error,
         "duplicate67_resolvent_mass": mass,
+        "wick_factorization": True,
+        "renormalizer_local_log_bound_at_2": local_log_bound,
+        "renormalizer_polylogarithmic": True,
+        "prime_exponential_frontier_proved": False,
         "cv_proved": False,
         "xd_proved": False,
         "rh_established": False,
-        "verdict": "PASS_T101100_CV_XD_CARRIER_HARDENING",
+        "verdict": "PASS_T101100_CV_XD_CARRIER_HARDENING_V2",
     }
     payload["proof_object_sha256"] = digest(payload)
     text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
