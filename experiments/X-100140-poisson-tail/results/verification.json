@@ -1,0 +1,38 @@
+{
+  "adjacent_block_firewall_checks": 252,
+  "analytic_theorems_in_packet": [
+    "RH implies GPMOC99800 by Abel summation (retained overlap with PR 671)",
+    "GPMOC99800 is equivalent to RH (also represented by PR 671)",
+    "source-specific frozen-orbit OCE67 is equivalent to RH on PR 660 inputs"
+  ],
+  "arithmetic_class": "EXACT_INTEGER_AND_RATIONAL",
+  "classification": "PASS_X_100140_POISSON_TAIL_EQUIVALENCE",
+  "does_not_prove": [
+    "unconditional GPMOC99800",
+    "unconditional OCE67",
+    "Riemann Hypothesis"
+  ],
+  "filter_cost_checks": 32,
+  "gpmoc99800_proved": false,
+  "hockey_stick_checks": 8,
+  "hostile_mutations_detected": 5,
+  "oce67_proved": false,
+  "origin_base_pr": 659,
+  "origin_base_sha": "83c17b32a99ac9e1aa5aec3168535550eb286636",
+  "phase_defect_checks": 1140,
+  "poisson_tail_checks": 1140,
+  "proof_object_sha256": "df9a0aeb436620348a8c326ecdbc1e08792f2d895a09af06bc4f0d8c4217b5be",
+  "proves": [
+    "exact finite Cauchy-Poisson min-kernel identity",
+    "exact coefficient-tail square identity",
+    "exact signed Poisson square identity",
+    "exact nonnegative phase-defect decomposition",
+    "source-blind diagonal/free-energy firewall",
+    "growing-filter and inverse combinatorial costs are sublinear"
+  ],
+  "publication_base_pr": 671,
+  "publication_base_sha": "2889071e9ebdc412b94cf2cfe74f1fd5142b2857",
+  "rh_established": false,
+  "schema": "riemann.x100140.poisson-tail-equivalence.v1",
+  "signed_square_checks": 1140
+}
