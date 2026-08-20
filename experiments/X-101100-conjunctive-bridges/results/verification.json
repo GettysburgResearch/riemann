@@ -1,0 +1,27 @@
+{
+  "badset_energy_and_gate": true,
+  "base_pr": 692,
+  "base_sha": "50c4862c801b6388a30363c336d275270025eff4",
+  "classification": "PASS_T101100_CONJUNCTIVE_IMPLICATION_BRIDGES",
+  "external_pr_691_sha": "6b95f30df06f38372776f07e71bc2b7710fe68fe",
+  "lare101100_proved": false,
+  "largest_label_short_contraction": true,
+  "mutations_rejected": [
+    "global_focr_locr_required_rejected",
+    "global_positive_homotopy_mixing_substituted_rejected",
+    "lare101100_assumed_rejected",
+    "rh_established_by_replay_rejected",
+    "row_or_column_only_closure_rejected",
+    "scpe101100_assumed_rejected",
+    "short_scalar_contraction_called_invariant_cone_rejected",
+    "source_partition_after_observation_rejected"
+  ],
+  "proof_object_sha256": "f64e582edab2bc759ed439809ee0c6efb1d53c83ab5b1e4f655ea6f8d35080e9",
+  "regionwise_two_sided_schur_cover": true,
+  "rh_established": false,
+  "schema": "riemann.x101100.conjunctive-bridges.v2",
+  "scpe101100_proved": false,
+  "sectorwise_homotopy_gluing": true,
+  "short_long_conjunction_to_acad": true,
+  "short_prime_budget_lt_3_4": true
+}
