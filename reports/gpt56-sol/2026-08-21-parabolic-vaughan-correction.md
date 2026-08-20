@@ -1,4 +1,4 @@
-# Audited parabolic Vaughan continuation and two-field AND-gate
+# Audited parabolic Vaughan and ratio-four half-divisor frontier
 
 Date: 2026-08-21  
 Branch base: PR #691 head `be9a4168fa0df971a2fc63176f07ce3beee6c3d4`  
@@ -6,183 +6,175 @@ Scientific status: **RH unproved**
 
 ## Binding audit corrections
 
-The hostile reconstruction of the first PR #696 continuation found and
-corrected five defects.
+The first continuation contained five defects, now frozen in `R-102001`:
 
-1. The gcd coordinates require `mu^2(gab)=1`; the earlier display admitted
-   spurious nonsquarefree gcd terms.
-2. A same-occurrence Cauchy certificate requires
-   `collar_-^2 <= A B`, not `A+B`.
-3. The right-survival telescoping sign was reversed. For a fixed least owner,
-   greatest-owner mass beyond every fixed power is asymptotically full, not
-   suppressed.
-4. The auxiliary `512` amplitude bound used a false endpoint estimate. The
-   safe uncentered bound has leading constant `192` times the endpoint factors.
-   After exact carrier subtraction, however, the endpoint kernel is uniformly
-   bounded by `256`, with no `sqrt(X)` factor.
-5. At the adaptive cutoff `Z=sqrt(T)`, two unsquared labels already exceed the
-   threshold. The earlier depth-three boundary was off by one.
+1. the gcd reparameterization omitted the squarefree condition `mu^2(gab)=1`;
+2. a same-occurrence certificate displayed `A+B` where the Cauchy gate requires `AB`;
+3. the right-survival telescoping sign was reversed;
+4. the auxiliary endpoint bound `Delta_p Psi<=128 sqrt(X)` was false;
+5. the automatic unsquared threshold for `Z=sqrt(T)` occurs at depth two, not depth three.
 
-These dispositions are frozen in `R-102001`.
+For a fixed least owner, greatest-owner mass beyond every fixed power tends to
+the full least-owner mass. Joint survival prevents the divergent marginal norm
+of `R-100616`; it does not suppress wide owner intervals.
 
-## Exact results retained and sharpened
+## Exact results retained
 
 ### Positive cubic compactifier
 
-`L-102000` remains exact: the critical cubic has a nonnegative compact
-exponential B-spline compactification with a Mellin multiplier that preserves
-every open-strip reciprocal-zeta pole. Its half-order moment is positive, so
-it is not interchangeable with the signed zero-moment Vaughan kernel.
+`L-102000` constructs a nonnegative compact exponential B-spline from the
+critical cubic. Its support and Mellin noncancellation are exact. Its
+half-order moment is strictly positive, so `R-102000` forbids importing the
+zero-moment Type-I theorem from a different kernel.
 
-### Large-divisor Hankel and exact parabolic geometry
+### Large-divisor and single-wing coordinates
 
 `L-102001` proves
 
 \[
-\mathcal B_U(X)
-=\sum_{d,e>U}\frac{\mu(d)\mu(e)}{\sqrt{de}}
+\mathcal B_U(X)=
+\sum_{d,e>U}\frac{\mu(d)\mu(e)}{\sqrt{de}}
 \mathcal L_K(X/de).
 \]
 
-For `U=floor(X^(1/3))`, every active ordered pair satisfies exactly
+For `U=floor(X^(1/3))`, every active ordered outer pair is exactly parabolic.
+The audited gcd form keeps the coupled cutoff and `mu^2(gab)=1`.
 
-\[
-\max(d,e)<\min(d,e)^2.
-\]
-
-The corrected gcd coordinates are
+`L-102008` collapses the two apparent Möbius wings to one sign:
 
 \[
 \mathcal B_U(X)
-=\sum_{\substack{g,a,b\ge1\\\mu^2(gab)=1\\ga,gb>U}}
-\frac{\mu(a)\mu(b)}{g\sqrt{ab}}
-\mathcal L_K(X/(g^2ab)).
-\]
-
-### Two wings collapse to one Möbius owner
-
-`L-102008` defines the positive ordered balanced-divisor multiplicity
-
-\[
-N_V(m)=\sum_{a\mid m}\mathbf1_{a>V}\mathbf1_{m/a>V}
-\]
-
-and proves
-
-\[
-\mathcal B_U(X)
-=\sum_{\substack{g,m\ge1\\\mu^2(gm)=1}}
+=\sum_{\mu^2(gm)=1}
 \frac{\mu(m)}{g\sqrt m}N_{U/g}(m)
-\mathcal L_K(X/(g^2m)).
+\mathcal L_K(X/(g^2m)),
 \]
 
-If `m=pc` with `p=P^+(m)`, then
+where `N_V(m)>=0` is the balanced-divisor multiplicity. Unique largest-prime
+ownership leaves one cofactor sign times a positive oriented divisor count.
+
+### Centered collar correction
+
+After subtracting the exact `192 sqrt(X)` carrier, the endpoint kernel is
+uniformly bounded:
 
 \[
-\mu(m)N_V(m)
-=-2\mu(c)
-\sum_{a\mid c}\mathbf1_{a>V}\mathbf1_{c/a>V/p}.
+\|\Delta_{p_i}\Delta_{p_j}(\Psi-192\sqrt{\cdot})\|_\infty\le256.
 \]
 
-Thus the balanced terminal contains one sign-free square core, one unique
-largest prime, one remaining cofactor Möbius sign, and one positive oriented
-divisor multiplicity.
+The centered collar is supported exactly on subset products
 
-### Exact ratio-four two-field factorization
+\[
+m_S>X/(p_ip_j).
+\]
 
-`L-102009` constructs a positive ratio-four two-box spline `A` and the two
-kernels
+Unsigned Rankin still fails, and after squaring at `Z=sqrt(X/(p_ip_j))` the
+automatic unsquared tail starts at depth two. These facts localize but do not
+sign the collar.
+
+## Ratio-four factorization
+
+`L-102009` constructs a positive two-box spline `A` supported on `[1,4]` with
+
+\[
+\widehat A(s)=
+\frac{(1-2^{-s})(1-\sqrt2\,2^{-s})}{s(s-1/2)}.
+\]
+
+Put
 
 \[
 A_-=(D-1/2)A,
 \qquad
-A_+=(D+3/2)A,
+A_+=(D+3/2)A.
 \]
 
-with
+Then the signed ratio-16 Vaughan kernel factors exactly:
 
 \[
 K_1=A_-*_M A_+.
 \]
 
-At the source level, if
+With `b_U=mu 1_(n>U)` and `a_U=b_U*1`, the balanced source is
 
 \[
-b_U(n)=\mu(n)\mathbf1_{n>U},
-\]
-
-then
-
-\[
-a_U=b_U*\mathbf1,
-\qquad
 a_U*a_U*\mu=b_U*a_U.
 \]
 
-The balanced Vaughan packet therefore factors exactly as
+Hence the balanced remainder is the same-occurrence Mellin convolution of a
+large Möbius-tail field and a divisor-completed-tail field. This gives the
+literal two-field Cauchy gate of `T-102001`.
+
+## Positive half-divisor square root
+
+`L-102010` introduces the nonnegative multiplicative function
 
 \[
-\mathcal B_U(X)
-=\int_U^{X/U}F_{U,-}(Y)F_{U,+}(X/Y)\frac{dY}{Y}.
+\eta(p^k)=\binom{2k}{k}/4^k,
+\qquad \eta*\eta=\mathbf1.
 \]
 
-This gives the genuine same-occurrence product certificate
+For
 
 \[
-(\mathcal B_U(X))_-^2
-\le\mathcal E_{U,-}(X)\mathcal E_{U,+}(X).
+h_U=(\mu\mathbf1_{>U})*\eta,
 \]
 
-`T-102001` proves that subpower logarithmic block bounds for both field
-energies jointly imply `BVD100310` and hence RH. Both estimates remain open.
+one has
 
-## Exact replay
+\[
+a_U*a_U*\mu=h_U*h_U.
+\]
 
-```bash
-python3 experiments/X-102000-audited-factorizations/verify.py \
-  --output experiments/X-102000-audited-factorizations/results/verification.json
-```
+Thus the two source fields become identical. The exact Hardy relation between
+`A_+` and `A_-` has sharp `L2` norm three, giving
 
-Retained verdict:
+\[
+|\mathcal B_U(X)|
+\le3\int_U^{4X/U}|H_{U,-}(Y)|^2\frac{dY}{Y}.
+\]
+
+The conclusion-facing gate is now one explicit energy:
+
+\[
+\mathrm{HHFE102010}(L):
+\quad
+\int_{2^L}^{2^{L+1}}
+\int_{U_X}^{4X/U_X}|H_{U_X,-}(Y)|^2
+\frac{dY}{Y}\frac{dX}{X}=2^{o(L)}.
+\]
+
+`HHFE102010` implies the balanced Vaughan estimate and therefore RH. It is not
+proved unconditionally.
+
+## Replays
 
 ```text
 PASS_X_102000_AUDITED_FACTORIZATIONS
+PASS_X_102010_RATIOFOUR_HALF_DIVISOR_FACTORIZATION
 ```
 
-The replay performs 90,918 exact finite checks:
+The retained exact checks cover source convolution, gcd/single-wing collapse,
+unique-largest-prime recurrence, corrected survival telescoping, depth
+thresholds, the centered kernel bound, `eta*eta=1`, the symmetric half-completed
+source, the ratio-four piecewise kernel identities, and the sharp Hardy norm.
+They explicitly record `rh_established=false`.
+
+## Exact boundary
 
 ```text
-source factorizations             2,592
-largest-prime recurrences         7,104
-joint-survival identities            15
-depth-threshold checks           80,190
-centered-kernel checks            1,017
-```
-
-It records all conclusion-facing estimates and RH as unproved.
-
-## Current implication matrix
-
-```text
-large Möbius tail b_U
-  --A_- ratio-four observation-->  LMTE102001
-
-positive divisor completion a_U=b_U*1
-  --A_+ ratio-four observation-->  DCTE102001
-
-LMTE102001 AND DCTE102001
-  -> balanced Vaughan negative mass
-  -> zero-moment compact detector
-  -> RH.
-```
-
-This is a literal two-statement conjunction rather than a pair of aliases: the
-source factors and kernel factors are distinct, and their multiplicative
-convolution is exactly the original obstruction.
-
-```text
-LMTE102001                         OPEN / RH-BEARING
-DCTE102001                         OPEN / RH-BEARING
-SOW102008                          OPEN / RH-EQUIVALENT
-Riemann Hypothesis                 UNPROVED
+positive cubic B-spline compactifier             PROVED EXACT
+B-spline Type-I inheritance                      REFUTED
+large-divisor Hankel identity                    PROVED EXACT
+parabolic outer-pair geometry                    PROVED EXACT
+gcd core sign removal                            PROVED EXACT
+two wings -> one Möbius owner                     PROVED EXACT
+joint survival suppression of wide owners        REFUTED
+centered endpoint kernel bound 256                PROVED EXACT
+large-product threshold localization             PROVED EXACT
+unsigned Rankin closure                          REFUTED
+ratio-four kernel/source factorization            PROVED EXACT
+positive half-divisor square root                 PROVED EXACT
+two fields -> one Hardy-related field             PROVED EXACT
+HHFE102010                                        OPEN / RH-BEARING
+Riemann Hypothesis                                UNPROVED
 ```
