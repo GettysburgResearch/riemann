@@ -1,0 +1,43 @@
+{
+  "base_head": "2cc70798b453ce4e5059dcc25d8d3fb7c38e172e",
+  "base_pr": 693,
+  "kappa_0": "0.47570101897096639",
+  "proof_object_sha256": "08f7f2b290d9e667a0505cb55bee054086e8890b4d1d980d9377974a3624d758",
+  "samples": [
+    {
+      "G_long": 4.859261905412297,
+      "G_mu": -0.03061899378068345,
+      "G_short": -4.88988089919298,
+      "X": 20000,
+      "long_over_scale": 0.3402855203425618,
+      "short_over_scale": -0.34242971434441644
+    },
+    {
+      "G_long": 9.213244489103417,
+      "G_mu": -0.00708754072299118,
+      "G_short": -9.220332029826409,
+      "X": 80000,
+      "long_over_scale": 0.3677504012358268,
+      "short_over_scale": -0.3680333033066161
+    },
+    {
+      "G_long": 13.681789781156553,
+      "G_mu": 0.060658331119197766,
+      "G_short": -13.621131450037355,
+      "X": 200000,
+      "long_over_scale": 0.37342540940190394,
+      "short_over_scale": -0.37176982467986563
+    }
+  ],
+  "schema": "riemann.t100710.scme_lrnm_disposition.v1",
+  "scope": {
+    "finite_replay_is_not_the_asymptotic_proof": true,
+    "finite_sign_diagnostics_checked": true,
+    "lrnm100704_proved_analytically": true,
+    "rh_established": false,
+    "scme100704_refuted_analytically": true,
+    "short_prime_main_coefficient_checked": true,
+    "source_partition_checked": true
+  },
+  "verdict": "PASS_T100710_SCME_REFUTATION_AND_LRNM_DISPOSITION"
+}
