@@ -1,57 +1,44 @@
-# T-100102 — Either producer route closes the full RH chain
+# T-100102 — The original two-route closure disjunction is withdrawn
 
 Claim ID: `T-100102`  
-Status: **PROVED CONDITIONAL DISJUNCTION / BOTH PRODUCER GATES OPEN**  
+Status: **WITHDRAWN AFTER HOSTILE CONSISTENCY CHECK**  
 Created: 2026-08-20  
-Depends on: `T-100100--T-100101`  
+Corrected: 2026-08-20 by `T-100103`  
+Depends on: `T-100100--T-100103`; `R-100103`  
 RH status: **unproved**
 
-The two producer statements are:
-
-```text
-DCE100100:
-  the orbit-specific cubic future-prime Harnack ratio propagates the
-  arsinh-one terminal corridor through the finite low-prime block;
-
-QPET100101:
-  a finite completed cubic scalar exposes a hypothetical off-line pole before
-  the corresponding unconditional completion corridor ends.
-```
-
-The preceding theorems prove
+The original statement advertised
 
 \[
-\mathrm{DCE100100}\Longrightarrow\mathrm{RH}
+\mathrm{DCE100100}\lor\mathrm{QPET100101}
+\Longrightarrow RH.
 \]
 
-and
+The formal implication from either premise was true, but the resulting
+"two-route" interpretation was misleading.
 
-\[
-\mathrm{QPET100101}\Longrightarrow\mathrm{RH}.
-\]
+- `L-100103` proves that every DCE edge inequality is exactly nonnegativity of
+  the predecessor critical state. DCE remains open and conclusion-bearing.
+- `R-100103` proves that QPET asks for a liminf strictly below `A_k^*`, while
+  the unconditional completion corridor forces the liminf to be at least
+  `A_k^*`. QPET is false as stated.
 
-Therefore
+Thus there is no live disjunction of two independent producers. The corrected
+normative statement is
 
 \[
 \boxed{
-\mathrm{DCE100100}\ \lor\ \mathrm{QPET100101}
-\quad\Longrightarrow\quad
-\mathrm{RH}.
+\mathrm{DCE100100}\Longrightarrow RH,
 }
 \]
 
-The routes are logically distinct:
-
-- Route A keeps the original source and seeks a real-variable maximum
-  principle on its exact future-prime orbit.
-- Route B changes the source by a finite zero-free multiplier and seeks a
-  quantitative moving-cutoff sign-change theorem.
-
-Their common `1+sqrt(2)` corridor comes from the same Euler-level geometry, but
-neither open gate is presently known to imply the other.
+with DCE explicitly recognized as the target state sign rather than an
+upstream maximum-principle theorem. The finite-completion programme retains its
+unconditional corridor and pole-amplification theorems only.
 
 ```text
-DCE100100   open / RH-bearing
-QPET100101  open / RH-bearing
-RH          unproved
+DCE100100                       OPEN / CONCLUSION-BEARING
+QPET100101                      REFUTED
+original two-route disjunction  WITHDRAWN
+Riemann Hypothesis              UNPROVED
 ```
