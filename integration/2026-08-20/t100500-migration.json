@@ -1,0 +1,34 @@
+{
+  "schema": "riemann.t100500.namespace-migration.v1",
+  "created": "2026-08-20",
+  "reason": "The original T100200 namespace collided with unrelated live work, including PR #679 and sibling T100200 branches.",
+  "migration_kind": "identifier-and-path-only",
+  "original_combined_packet": {
+    "filename": "riemann-100200-100210-two-route-closure-20260820-v1.zip",
+    "bytes": 65153,
+    "sha256": "812a63437a099c65ee1674a0ccd0aa983e6c9fabef7abdcb09ae66fdfbc25359"
+  },
+  "identifier_map": {
+    "T100200": "T100500",
+    "L-100200": "L-100500",
+    "L-100201": "L-100501",
+    "M-100200": "M-100500",
+    "X-100200": "X-100500",
+    "MWOC100200": "MWOC100500",
+    "PASS_X_100200_MINIMAL_WAVELET_MERTENS_FRAME": "PASS_X_100500_MINIMAL_WAVELET_MERTENS_FRAME"
+  },
+  "preserved": {
+    "base_pr": 675,
+    "base_sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740",
+    "upstream_prs": [674, 675],
+    "upstream_shas": [
+      "9962f7f712adc6b4ad72672ecfeace028ba79bdb",
+      "7b28224ba1b072d4ccd5b93ad37c0a64e7939740"
+    ],
+    "verifier_fixture_seed": 100200,
+    "mathematical_formulas": "unchanged"
+  },
+  "overlap": "Retains PR #674's ratio-eight kernel and PR #675's spectral contract; adds the direct Abel-Mertens frame and critical inverse firewall.",
+  "new_branch": "research/gpt56-pro/100500-minimal-wavelet-mertens-frame",
+  "scientific_status": "MWOC100500 and the Riemann Hypothesis remain unproved"
+}
