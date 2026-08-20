@@ -1,71 +1,62 @@
-# L-100182 — The unsquared large-prime collar is depth one and remains positive
+# L-100182 — The activated large-prime collar is depth one; the signed positivity argument is withdrawn
 
 Claim ID: `L-100182`  
-Status: **PROVED EXACT DEPTH-ONE REDUCTION + POSITIVITY**  
+Status: **PROVED EXACT ACTIVATED-SECTOR GEOMETRY; GLOBAL POSITIVITY WITHDRAWN**  
 Created: 2026-08-20  
-Depends on: `L-100180`; critical Bernstein scaling inequality  
-RH status: **not assumed**
+Depends on: corrected `L-100180`  
+RH status: **unproved**
 
-Fix a physical endpoint `X` and choose
+Fix an endpoint `X` and choose
 
 \[
-Z=X^{9/10}
+Z\ge X^{9/10}.
 \]
 
-(or any `Z>=X^(9/10)`). After finite Euler squaring of all primes `p<=Z`, the final critical centered-Bernstein source has:
+After finite squaring of primes `p<=Z`, unsquared labels have primes `p>Z`.
 
-- squared small-prime labels, whose owner cost is `1/p^2`;
-- unsquared labels `p>Z`, whose critical owner cost is `1/p`.
+## 1. Exact activated-sector geometry
 
-## 1. Depth-one geometry
-
-If `p,q>Z`, then
+For a source state whose complete label product is at most `X`, two distinct unsquared labels cannot occur.  Indeed, if `p,q>Z`, then
 
 \[
 pq>Z^2\ge X^{9/5}>X.
 \]
 
-Hence no active source integer `n<=X` contains two unsquared large primes. The large-prime part of the critical Euler expansion is therefore exactly depth one: one positive squared-core parent minus a sum of one-large-prime children. There are no higher large-prime parity layers.
+Thus the portion of the completed source with label product `<=X` has at most one unsquared large prime.  In that **activated sector** the large-prime collar is depth one.
 
-## 2. One-prime child domination
+## 2. Noncompact-tail correction
 
-Let `K` denote the positive critical Bernstein kernel on the completed small-prime core. The sharp critical scaling inequality inherited from `L-100000` gives, for every active unsquared prime `p>Z`,
+The final critical Peano kernel is not compactly supported.  Source products greater than `X` still contribute through its positive continuation.  Such inactive states may contain more than one prime greater than `Z`; the preceding product argument does not remove them.
 
-\[
-\text{child}_p(X)\le {1\over p}\,\text{parent}(X).
-\]
-
-Summing all active large-prime children therefore gives
+Their aggregate belongs to the inactive tail `R_m(X,Z)` in corrected `L-100180` and is controlled there by the supercritical estimate
 
 \[
-\sum_{Z<p\le X}\text{child}_p(X)
-\le
-\left(\sum_{Z<p\le X}{1\over p}\right)\text{parent}(X).
+R_m(X,Z)
+\ll_m
+\sqrt X\sum_{p>\max(X,Z)}p^{-3/2}.
 \]
 
-Using the same elementary prime-counting/partial-summation estimate as `L-100020`, with `Z>=X^(9/10)`,
+The earlier assertion that the **entire** large-prime source was depth one is therefore withdrawn.
+
+## 3. Signed-core firewall
+
+Even within the activated sector, the squared small-prime core is a signed Euler packet.  A termwise kernel inequality for one large-prime child does not imply
 
 \[
-\sum_{Z<p\le X}{1\over p}<1.
+\text{child}_p\le p^{-1}\text{parent}
 \]
 
-Consequently
+after summing that signed core.  Such an implication would require a separate Harnack/order-preservation theorem for the squared-core observation.  No such theorem was proved here.
 
-\[
-\boxed{
-\text{parent}(X)-\sum_{Z<p\le X}\text{child}_p(X)>0.
-}
-\]
+Consequently the former parent-minus-children positivity proof is withdrawn.
 
-Thus the entire completed critical observable is positive at `X`, with the small-prime block controlled by `p^-2` owner mass and the unsquared large-prime collar controlled by a depth-one `p^-1` layer of total mass strictly below one.
-
-## 3. Meaning
-
-This removes the last many-prime parity obstruction from the adaptive critical completion. At every scale, choosing `Z>=X^(9/10)` yields pointwise positivity by an entirely finite source-faithful argument:
+## 4. Surviving conclusion
 
 ```text
-small primes <=Z: squared, strictly subcritical owner mass;
-large primes >Z: at most one active, depth-one child mass < parent.
+activated source products <=X: at most one unsquared p>Z   PROVED;
+inactive noncompact tail:                                  INCLUDED IN L-100180;
+signed squared-core parent/child domination:               OPEN;
+standalone positivity theorem from depth-one geometry:     WITHDRAWN.
 ```
 
-The theorem is local in `X`. It still does not by itself give eventual positivity of one fixed Mellin density, because the completion cutoff varies with the endpoint. That analytic/source-transfer interface remains separate and must not be hidden.
+The completed critical positivity corridor remains available only through the corrected all-level estimate of `L-100180`, which keeps the inactive tail and all signed levels in one adjacent-level ledger.
