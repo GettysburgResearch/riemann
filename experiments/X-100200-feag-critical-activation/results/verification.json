@@ -1,0 +1,28 @@
+{
+  "activation_jump_checks": 34,
+  "arithmetic_class": "EXACT_RATIONAL_AND_DIRECTED_RADICAL",
+  "base_pr": 672,
+  "base_sha": "2a351548eb7960ff8ae99f193c10e278984c5657",
+  "cell_classification_checks": 4,
+  "classification": "PASS_X_100200_FEAG_CRITICAL_ACTIVATION",
+  "counterexample_checks": 4,
+  "critical_point_checks": 6,
+  "direct_cell_formula_checks": 18,
+  "does_not_prove": [
+    "PATG100200 for the actual prime labels",
+    "FEAG99980",
+    "Riemann Hypothesis"
+  ],
+  "feag99980_proved": false,
+  "patg100200_proved": false,
+  "proof_object_sha256": "dca4c83548dfd85a08af92aa91edfab740fa19649b1b1ea70b3182067f06773d",
+  "proves": [
+    "exact three-moment cell formula",
+    "complete classification of cell minima",
+    "exact double-negative Turan gate",
+    "exact activation jump ledger",
+    "generic rational-shift counterexample"
+  ],
+  "rh_established": false,
+  "schema": "riemann.x100200.feag-critical-activation.v1"
+}
