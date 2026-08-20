@@ -24,7 +24,7 @@ absolute bound
 \le e^{\sigma_A}\Psi(X)
 \qquad(1\le X\le Z^A).
 }
-\tag{L-100104.1)
+\tag{L-100104.1}
 
 Assume temporarily that a zeta zero `rho=beta+i gamma`, `beta>1/2`, exists.
 On an amplified cutoff subsequence, `L-100102` gives
@@ -33,13 +33,13 @@ On an amplified cutoff subsequence, `L-100102` gives
 |\mathcal A_{Z,k}(\rho)|
 \ge
 \exp\!\left(c_\rho Z^{1-\beta}/\log Z\right).
-\tag{L-100104.2)
+\tag{L-100104.2}
 
 Consider any valid explicit-formula decomposition at a point in the corridor,
 
 \[
 \mathcal C_{3;Z,k}(X)=R_{Z,\rho}(X)+\mathcal E_{Z,\rho}(X),
-\tag{L-100104.3)
+\tag{L-100104.3}
 
 where `R_(Z,rho)` is the full residue contribution of the selected pole and
 `mathcal E_(Z,rho)` contains all other poles and contour terms. Whenever
@@ -52,7 +52,7 @@ inequality and (L-100104.1) force
 \ge
 |R_{Z,\rho}(X)|-e^{\sigma_A}\Psi(X).
 }
-\tag{L-100104.4)
+\tag{L-100104.4}
 
 In particular, if the selected residue is superpolynomial in `Z` while
 `X<=Z^A`, then the complementary spectral/contour contribution is of the same
