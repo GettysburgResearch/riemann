@@ -35,25 +35,8 @@ Use the survival factors
 \[
 L_i=\prod_{h<i}(1-r_h),
 \qquad
-R_i=\prod_{h>i}(1-r_h),
-\]
-
-and endpoint vectors
-
-\[
-a_i=\sqrt{r_i}L_i,
-\qquad
-b_j=\sqrt{r_j}R_j.
+R_i=\prod_{h>i}(1-r_h).
 \tag{T-100610.2}
-\]
-
-By `L-100611`,
-
-\[
-\|a\|_{\ell^2}\le1,
-\qquad
-\|b\|_{\ell^2}\le1.
-\tag{T-100610.3}
 \]
 
 For `i<j`, write
@@ -62,7 +45,7 @@ For `i<j`, write
 H_{ij}^{(k)}(X)
 =
 \Delta_i\Delta_jE_{i+1:j-1}\Psi(X).
-\tag{T-100610.4}
+\tag{T-100610.3}
 \]
 
 `L-100614` supplies the exact nonnegative carrier
@@ -74,29 +57,15 @@ M_{ij}^{(k)}(X)
 (1-p_i^{-1/2})(1-p_j^{-1/2})
 \prod_{i<h<j}(1-p_h^{-1})
 \ge0
-\tag{T-100610.5}
+\tag{T-100610.4}
 \]
 
 and the collar-only residual
 
 \[
 \widetilde H_{ij}^{(k)}=H_{ij}^{(k)}-M_{ij}^{(k)}.
-\tag{T-100610.6}
+\tag{T-100610.5}
 \]
-
-Define
-
-\[
-\boxed{
-\widetilde A_{ij}^{(k)}(X)
-=
-\sqrt{r_ir_j}\,\widetilde H_{ij}^{(k)}(X),
-\qquad i<j,
-}
-\tag{T-100610.7}
-\]
-
-and put `widetilde A_(ij)=0` for `i>=j`.
 
 The two-ended hazard identity, cubic endpoint positivity, and
 `M_(ij)>=0` give
@@ -106,8 +75,9 @@ F_k(X)
 =
 \text{nonnegative root/singleton/carrier terms}
 +
-\sum_{i<j}a_i\widetilde A_{ij}^{(k)}(X)b_j.
-\tag{T-100610.8}
+\sum_{i<j}
+ r_ir_jL_iR_j\widetilde H_{ij}^{(k)}(X).
+\tag{T-100610.6}
 \]
 
 Hence
@@ -117,16 +87,17 @@ Hence
 (F_k(X))_-
 \le
 \sum_{i<j}
-|a_i|\,|\widetilde A_{ij}^{(k)}(X)|\,|b_j|.
+ r_ir_jL_iR_j
+ |\widetilde H_{ij}^{(k)}(X)|.
 }
-\tag{T-100610.9}
+\tag{T-100610.7}
 \]
 
 The carrier subtraction is binding: placing absolute values around the raw
-matrix would force the arithmetic estimates to pay a known positive
+interval entries would force the arithmetic estimates to pay a known positive
 `sqrt(X)` term.
 
-## 2. The two complementary survival-weighted energies
+## 2. The two complementary hazard-weighted energies
 
 Define the first-owner row energy
 
@@ -134,10 +105,11 @@ Define the first-owner row energy
 \boxed{
 \mathfrak R_k(X)
 =
-\sum_i a_i^2
-\sum_{j>i}|\widetilde A_{ij}^{(k)}(X)|
+\sum_{i<j}
+ r_ir_jL_i^2
+ |\widetilde H_{ij}^{(k)}(X)|
 }
-\tag{T-100610.10}
+\tag{T-100610.8}
 \]
 
 and the largest-owner column energy
@@ -146,40 +118,42 @@ and the largest-owner column energy
 \boxed{
 \mathfrak C_k(X)
 =
-\sum_j b_j^2
-\sum_{i<j}|\widetilde A_{ij}^{(k)}(X)|.
+\sum_{i<j}
+ r_ir_jR_j^2
+ |\widetilde H_{ij}^{(k)}(X)|.
 }
-\tag{T-100610.11}
+\tag{T-100610.9}
 \]
 
-These are not source-blind row/column suprema. Their weights
+The weights
 
 \[
-a_i^2=r_iL_i^2,
+r_iL_i^2,
 \qquad
-b_j^2=r_jR_j^2
+r_jR_j^2
 \]
 
-are exactly the first-owner and reversed-owner Littlewood--Paley weights.
+are exactly the first-owner and reversed-owner Littlewood--Paley weights; the
+additional endpoint activity belongs to the opposite explicit owner.
 
-Apply Cauchy--Schwarz to the set of pairs `(i,j)`, with measure
-`|widetilde A_(ij)|`:
+Apply Cauchy--Schwarz to the set of pairs `(i,j)`:
 
 \[
 \begin{aligned}
+&\left(
+ \sum_{i<j}r_ir_jL_iR_j|\widetilde H_{ij}|
+\right)^2\\
+&\quad\le
 \left(
- \sum_{i<j}|a_i||\widetilde A_{ij}||b_j|
-\right)^2
-&\le
-\left(
- \sum_{i<j}|\widetilde A_{ij}|a_i^2
+ \sum_{i<j}r_ir_jL_i^2|\widetilde H_{ij}|
 \right)
 \left(
- \sum_{i<j}|\widetilde A_{ij}|b_j^2
+ \sum_{i<j}r_ir_jR_j^2|\widetilde H_{ij}|
 \right)\\
-&=
+&\quad=
 \mathfrak R_k(X)\mathfrak C_k(X).
 \end{aligned}
+\tag{T-100610.10}
 \]
 
 Therefore
@@ -190,7 +164,7 @@ Therefore
 \le
 \sqrt{\mathfrak R_k(X)\mathfrak C_k(X)}.
 }
-\tag{T-100610.12}
+\tag{T-100610.11}
 \]
 
 This is the exact two-sided owner estimate. It avoids the unnecessary
@@ -199,8 +173,8 @@ multiplicity and inactive-prime divergence of unweighted Schur suprema.
 `L-100612--L-100613` prove that every entry with empty interior or endpoint
 ratio at most eight is already nonnegative. `L-100615` enlarges that positive
 region asymptotically to `p_j<=p_i^A` for every `A<e^(3/4)`. Such entries may
-be removed before forming the residual matrix. `L-100614` additionally shows
-that every fully active remaining entry has zero centered residual. Thus
+be removed before forming the residual energies. `L-100614` additionally
+shows that every fully active remaining entry has zero centered residual. Thus
 `mathfrak R_k` and `mathfrak C_k` need contain only supercritical,
 partial-activation collars.
 
@@ -215,7 +189,7 @@ Define
 \sup_k\int_1^Y\mathfrak R_k(X)\frac{dX}{X}
 =Y^{o(1)}
 }
-\tag{T-100610.13}
+\tag{T-100610.12}
 \]
 
 and
@@ -227,8 +201,7 @@ and
 \sup_k\int_1^Y\mathfrak C_k(X)\frac{dX}{X}
 =Y^{o(1)}.
 }
-\tag{T-100610.14}
-\]
+\tag{T-100610.13}
 
 Cauchy--Schwarz in `dX/X` gives
 
@@ -241,7 +214,7 @@ Cauchy--Schwarz in `dX/X` gives
 \left(
  \sup_k\int_1^Y\mathfrak C_k(X)\frac{dX}{X}
 \right)^{1/2}.
-\tag{T-100610.15}
+\tag{T-100610.14}
 \]
 
 The duplicate-67 cubic source converges absolutely at every fixed endpoint:
@@ -257,7 +230,8 @@ therefore proves
 \Longrightarrow
 \int_1^Y(\mathcal C_3(X))_-\frac{dX}{X}=Y^{o(1)}.
 }
-\tag{T-100610.16}
+\tag{T-100610.15}
+\]
 
 The centered-cubic Mellin--Landau theorem of PR #676 now yields
 
@@ -269,28 +243,28 @@ The centered-cubic Mellin--Landau theorem of PR #676 now yields
 \Longrightarrow
 \mathrm{RH}.
 }
-\tag{T-100610.17}
+\tag{T-100610.16}
 
 This is a genuine conjunction, not a renamed one-statement criterion.
 
 ## 4. Why both sides are logically necessary for this mechanism
 
-For a nonnegative matrix `K_(ij)`, the first factor in pairwise
-Cauchy--Schwarz controls multiplicity in the least-owner direction and the
-second controls multiplicity in the greatest-owner direction. A one-column
-matrix and its transpose show that either weighted side alone can remain
-bounded while the bilinear collapse grows like a square root after the endpoint
-vectors are rescaled to unit norm. Thus the conjunction is not cosmetic.
+The first factor in (T-100610.10) controls multiplicity in the least-owner
+direction and the second controls multiplicity in the greatest-owner direction.
+One-column and one-row matrices show that either side alone can remain bounded
+while the bilinear collapse grows like a square root. Thus the conjunction is
+not cosmetic.
 
 ## 5. Relationship to the live routes
 
 ```text
 FOCR100610:
-  sequential first-owner / ODSB100604 row geometry with its exact hazard
+  sequential first-owner / ODSB100604 row geometry with exact forward-hazard
   weights;
 
 LOCR100610:
-  largest-prime / HDRB100603 column geometry with its reverse-hazard weights;
+  largest-prime / HDRB100603 column geometry with exact reverse-hazard
+  weights;
 
 remaining entries:
   supercritical partial-activation intervals after explicit positive carrier
@@ -308,7 +282,7 @@ two-ended Littlewood--Paley identity          PROVED EXACT
 critical endpoint convexity                   PROVED EXACT
 ratio-eight/power-width interval positivity   PROVED
 positive carrier subtraction                  PROVED EXACT
-survival-weighted two-owner AND-gate           PROVED EXACT
+hazard-weighted two-owner AND-gate             PROVED EXACT
 FOCR100610 long-collar row energy              OPEN
 LOCR100610 long-collar column energy           OPEN
 Riemann Hypothesis                             UNPROVED
