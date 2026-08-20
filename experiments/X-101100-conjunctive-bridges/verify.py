@@ -110,7 +110,7 @@ def run() -> dict:
         "classification": VERDICT,
         "base_pr": 692,
         "base_sha": "50c4862c801b6388a30363c336d275270025eff4",
-        "external_pr_691_sha": "6b95f30df06f38372776f07e71bc2b7710fe68fe",
+        "external_pr_691_sha": "e981fad21fdf15c69d6508c92f36ac9fa3eb7ddb",
         "sectorwise_homotopy_gluing": True,
         "short_prime_budget_lt_3_4": True,
         "largest_label_short_contraction": True,
