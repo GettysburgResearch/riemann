@@ -1,109 +1,129 @@
-# L-102004 — Sharp source-normalized amplitude envelope for one cubic double-owner collar
+# L-102004 — Exact bounded endpoint kernel after cubic carrier subtraction
 
-Claim ID: `L-102004`  
-Status: **PROVED EXACT POINTWISE ENVELOPE; SIGN CANCELLATION NOT USED**  
-Created: 2026-08-21  
-Depends on: PR #691 `L-100612--L-100616`  
+Claim ID: `L-102004`
+Status: **PROVED EXACT POINTWISE ENVELOPES**
+Created: 2026-08-21
+Audited: 2026-08-21
+Depends on: PR #691 `L-100612--L-100614`
 RH status: **not assumed**
 
 Let
 
 \[
-H_{ij}(X)=\Delta_i\Delta_jE_{i+1:j-1}\Psi(X),
-\qquad
-E_{i+1:j-1}=\prod_{i<h<j}(I-r_hU_h),
-\quad r_h=p_h^{-1/2},
-\]
-
-with
-
-\[
 \Psi(y)=64\begin{cases}
 3y-y^{3/2},&0<y\le1,\\
-3\sqrt y-1,&y\ge1.
+3\sqrt y-1,&y\ge1,
 \end{cases}
+\qquad
+P(y)=192\sqrt y,
 \]
 
-Then, for every `X>0`,
+and define the carrier-subtracted scalar kernel
+
+\[
+G(y)=\Psi(y)-P(y).
+\]
+
+For `0<y<=1`, writing `x=sqrt(y)` gives
+
+\[
+G(y)
+=-64\bigl(3x-3x^2+x^3\bigr)
+=-64\bigl[1-(1-x)^3\bigr],
+\]
+
+whereas `G(y)=-64` for `y>=1`. Hence
+
+\[
+\boxed{-64\le G(y)\le0\qquad(y>0).}
+\tag{L-102004.1}
+\]
+
+For endpoint primes `p_i<p_j`, put
+
+\[
+\widetilde K_{ij}
+=(I-U_{p_i})(I-U_{p_j})G.
+\]
+
+Then
+
+\[
+\boxed{\|\widetilde K_{ij}\|_{L^\infty(0,\infty)}\le256.}
+\tag{L-102004.2}
+\]
+
+This is the correct conclusion-scale envelope after subtracting the explicit
+positive `sqrt(X)` carrier. No factor `sqrt(X)` remains in the endpoint
+kernel.
+
+For the full centered interval residual
+
+\[
+\widetilde H_{ij}(X)
+=\prod_{i<h<j}(I-p_h^{-1/2}U_{p_h})
+\widetilde K_{ij}(X),
+\]
+
+absolute expansion gives
+
+\[
+\boxed{
+|\widetilde H_{ij}(X)|
+\le256\prod_{i<h<j}(1+p_h^{-1/2}).
+}
+\tag{L-102004.3}
+\]
+
+The product in (L-102004.3) is generally power-sized. Thus boundedness of the
+centered endpoint kernel does not license source-blind absolute collapse.
+After source-side squaring of a set `Q` of interior primes, the corresponding
+factors improve from `1+p^-1/2` to `1+p^-1` for `p in Q`.
+
+## Safe uncentered envelope
+
+For completeness, the original uncentered entry
+
+\[
+H_{ij}(X)
+=(I-U_{p_i})(I-U_{p_j})
+\prod_{i<h<j}(I-p_h^{-1/2}U_{p_h})\Psi(X)
+\]
+
+satisfies the exact safe bound
 
 \[
 \boxed{
 |H_{ij}(X)|
-\le 512\sqrt X\,
+\le
+192\sqrt X\,(1+p_i^{-1/2})(1+p_j^{-1/2})
 \prod_{i<h<j}(1+p_h^{-1}).
 }
-\tag{L-102004.1}
+\tag{L-102004.4}
 \]
 
-In particular, since
+Indeed `0<=Psi(y)<=192sqrt(y)`. Every selected interior prime contributes
+`p^-1/2` from the native coefficient and another `p^-1/2` from the shifted
+square-root envelope. The endpoint differences contribute the displayed
+factors.
+
+In particular, the universal coarser constant `768` is valid in front of
+`sqrt(X) prod(1+p^-1)`. The earlier displayed constant `512` relied on the
+false inequality
+
+\[
+\Delta_p\Psi(X)\le128\sqrt X;
+\]
+
+on the deep branch the leading coefficient approaches `192`, so that
+sharpening is withdrawn.
+
+The Mertens estimate
 
 \[
 \prod_{p_i<p<p_j}(1+p^{-1})
 \ll \frac{\log p_j}{\log p_i}
 \]
 
-by Mertens' theorem, every interval amplitude satisfies
-
-\[
-\boxed{
-|H_{ij}(X)|
-\ll \sqrt X\,
-\frac{\log p_j}{\log p_i}
-}
-\tag{L-102004.2}
-\]
-
-uniformly for actual prime endpoints outside a fixed finite range.
-
-## Proof
-
-For every `y>0`,
-
-\[
-0\le \Psi(y)\le192\sqrt y.
-\]
-
-Indeed, for `y>=1` this is immediate from `Psi(y)=192sqrt(y)-64`; for `0<y<=1`,
-
-\[
-Psi(y)=64(3y-y^{3/2})\le192y\le192\sqrt y.
-\]
-
-Thus for every scale product `m`,
-
-\[
-|U_m\Psi(X)|=\Psi(X/m)\le192\sqrt X\,m^{-1/2}.
-\]
-
-Expand the two endpoint differences and the finite interior Euler product absolutely. Each selected interior prime `p_h` contributes the native coefficient `p_h^{-1/2}` and the shifted kernel gains another factor `p_h^{-1/2}` from the square-root envelope, hence a factor `p_h^{-1}`. Each endpoint difference contributes at most the sum of its unshifted and shifted square-root envelopes, bounded by a factor two. Therefore
-
-\[
-|H_{ij}(X)|
-\le4\cdot192\sqrt X
-\prod_{i<h<j}(1+p_h^{-1}),
-\]
-
-and `768` is already valid. The displayed constant `512` can be obtained by using the exact endpoint difference bound
-
-\[
-0\le\Delta_p\Psi(X)\le128\sqrt X,
-\]
-
-on the two endpoint applications; any fixed absolute constant is sufficient for the sequel. To avoid reliance on the sharpened endpoint constant, one may replace `512` by `768` everywhere without changing any conclusion.
-
-The Mertens-product estimate follows from
-
-\[
-\log(1+p^{-1})=p^{-1}+O(p^{-2})
-\]
-
-and
-
-\[
-\sum_{p_i<p<p_j}p^{-1}
-=\log\frac{\log p_j}{\log p_i}+O(1).
-\]
-
-## Meaning
-
-The amplitude of one collar grows only by the prime-harmonic interval ratio, not exponentially in the number of interior labels. This is compatible with the source-normalized Harnack geometry but does not by itself close the joint hazard sum, because the physical factor `sqrt(X)` is conclusion-scale. A successful joint certificate must remove or cancel that carrier-scale factor before integration.
+may be applied to (L-102004.4), but not to the unsquared centered product
+(L-102004.3).
