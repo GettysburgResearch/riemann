@@ -1,60 +1,72 @@
-# L-100603 — Largest-prime ownership, finite cofactor squaring, and positive divisor renewal reduce the inverse interface to a signed divisor difference
+# L-100603 — Completion dilations are not divisor restrictions
 
-Claim ID: `L-100603`
-Status: **PROVED EXACT REDUCTION; TERMINAL ESTIMATE OPEN**
-Depends on: `L-100600`; `L-100601`; `L-100602`; PR #671 `L-99961`
-RH status: **not assumed**
+Claim ID: `L-100603`  
+Status: **WITHDRAWN AS STATED; EXACT TYPE FIREWALL PROVED**  
+Depends on: corrected `L-100600`; PR #671 `L-99961`  
+RH status: **unproved**
 
-The positive divisor-renewal theorem of PR #671 does not invert finite Euler squaring. Instead it gives the correct source-faithful way to compare unsquared and squared cofactor sectors.
+The former version of this file identified the finite-completion expansion with divisor-restricted native tails and then invoked PR #671's positive divisor renewal.  That identification is false.
 
-For a squarefree cofactor divisor `d` with nonzero native coefficient, PR #671 gives
+## 1. The two operations
 
-\[
-B_d(z)=\beta(d)B(z)G_d(z),
-\]
-with all coefficients of `G_d` nonnegative and, for every fixed `sigma>1/2`,
+For a finite completion set `P_Z`, the forward completion is
 
 \[
-G_d(\sigma)\ll_{\sigma,\varepsilon}d^\varepsilon.
+\mathscr C_Z f
+=
+\prod_{q\in P_Z}(I+q^{-1/2}S_q)f
+=
+\sum_{d\mid \prod_{q\in P_Z}q}
+ d^{-1/2}S_df.
+\tag{L-100603.1}
 \]
 
-Fix the largest-prime owner `p` and square cofactor primes `q<=sqrt(X)` before physical collapse as in `L-100600`. Expanding the finite completion produces a finite linear combination indexed by squarefree divisors `d` of the completed small-prime support. Each such `d` restricts the original cofactor source to `d|m`.
+Every term in (L-100603.1) is a **dilation** of the complete packet.
 
-Apply `L-99961` **to each divisor-restricted term before summing over the owner p**. Every restricted term becomes
+By contrast, PR #671 studies the divisor restriction
 
 \[
-\frac{\beta(d)}{\sqrt d}
-\sum_{r\ge1}\frac{g_d(r)}{\sqrt r}
- f_{p,\psi}\!\left(\frac{X}{dr}\right),
+B_d(z)=\sum_{m\ge1}\frac{\beta(dm)}{m^z}
+=eta(d)B(z)G_d(z),
+\tag{L-100603.2}
 \]
-where `f_(p,psi)` is the same owner-frozen base wavelet packet and `g_d(r)>=0`.
 
-Therefore the failure of positive desquaring is localized to the outer sign `beta(d)`: all dilation transport after the divisor restriction is positive. The exact comparison between the original and completed cofactor packets is a signed sum over divisor labels `d`, but each label carries only a **positive dilation renewal** of one common owner-frozen base packet.
+whose coefficients select source integers divisible by `d` and reindex the quotient.  Dilation and restriction are different functors.
 
-## Subpower transport cost
-
-At every fixed `sigma>1/2`, the positive renewal attached to a divisor label has total Mellin mass `d^epsilon`. Thus any estimate of the divisor-labelled signed coefficient packet that is subpower in `d` survives the renewal with only subpower loss.
-
-## Exact remaining terminal object
-
-The hybrid closure gate may therefore be written without an operator inverse:
-
-`HDRB100603` — a divisor-labelled signed bilinear estimate for
+A one-prime coefficient test already separates them.  For `q!=67`,
 
 \[
-\sum_p p^{-1/2}
-\sum_d \frac{\beta(d)}{\sqrt d}
-\mathcal R_{p,d}(X),
+S_qB(z)=q^{-z}B(z),
 \]
 
-where every `R_(p,d)` is a positive dilation renewal of the same fixed ratio-eight owner packet and satisfies subpower renewal mass.
+whereas
 
-This is strictly narrower than the original rough largest-prime form:
+\[
+B_q(z)=-B(z)(1-q^{-z})^{-1}.
+\]
 
-- `p` is unique;
-- the smooth sector is removed;
-- cofactor primes are squared before collapse;
-- all post-restriction dilation transport is positive;
-- the only surviving sign is the explicit native divisor coefficient `beta(d)`.
+Their coefficient at the first quotient/source state has opposite type and they cannot be interchanged by a positive scalar.
 
-A subpower logarithmic negative-mass bound for `HDRB100603` feeds the already-proved compact wavelet detector and yields RH. `HDRB100603` remains open.
+## 2. Consequence for finite squaring
+
+The exact forward identity of `L-100600` remains valid:
+
+\[
+(I+q^{-1/2}V_q)(I-q^{-1/2}V_q)=I-q^{-1}V_{q^2}.
+\]
+
+But expanding the completion does **not** create the hypotheses of (L-100603.2).  Therefore PR #671's positive renewal does not desquare the cofactor source, and the former packet `HDRB100603` is not an established reduction.
+
+The honest comparison is still
+
+\[
+\text{native packet}
+\xrightarrow{\text{positive finite completion}}
+\text{squared packet},
+\]
+
+with no positive inverse.  Any use of divisor renewal requires a genuine independently proved divisibility indicator `1_(d|n)` in the physical source ledger.
+
+## 3. Surviving result
+
+Largest-prime ownership, the corrected cofactor-squaring identity, the square-root cutoff geometry, and the double-owner decomposition remain exact.  The claimed three-way largest-prime/squaring/renewal implication is withdrawn.
