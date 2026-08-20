@@ -1,0 +1,30 @@
+{
+  "base_pr": 700,
+  "base_sha": "a2a94b68dfac8015d0cfdf9646ec8d638e43f6aa",
+  "checks": {
+    "breakpoints": [1, 2, 4, 8, 67, 134, 268, 536],
+    "deep_threshold_split": true,
+    "diagnostic_complete_block_counts": {
+      "15": 19780,
+      "16": 37526,
+      "17": 72247,
+      "18": 103803
+    },
+    "diagnostic_scan_limit": 1000000,
+    "maximum_cell_formula_error": "<1e-12",
+    "midpoint_sampling_reduction": true,
+    "random_cell_formula_checks": 500,
+    "unit_cell_oscillation_bound": "C_star/sqrt(N)"
+  },
+  "proof_object_sha256": "18ae188a574b0d5b80b72cf7a4a4448ebbb109529d6e35faefaa28a14ee5d795",
+  "schema": "riemann.x101210.fixed_shell_cell_state.v1",
+  "scope": {
+    "deep_excursion_gate_proved": true,
+    "exact_cell_formula_proved": true,
+    "exact_seven_band_table_proved": true,
+    "rh_established": false,
+    "sampled_deep_tail_estimate_proved": false,
+    "unit_cell_oscillation_proved": true
+  },
+  "verdict": "PASS_T101210_FIXED_SHELL_CELL_AND_DEEP_EXCURSION_REDUCTION"
+}
