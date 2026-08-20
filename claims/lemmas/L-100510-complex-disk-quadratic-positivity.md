@@ -1,32 +1,35 @@
-# L-100510 — The shifted quadratic source is positive on an exact complex disk
+# L-100510 — The active shifted quadratic source is positive on an exact complex disk
 
-Claim ID: `L-100510`
-Status: **PROVED EXACT ALL-SCALE THEOREM**
-Created: 2026-08-20
-Frozen parent: PR #676 at `9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9`
+Claim ID: `L-100510`  
+Status: **PROVED EXACT ALL-SCALE THEOREM; ACTIVATION TYPING REPAIRED**  
+Created: 2026-08-20  
+Frozen parent: PR #676 at `9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9`  
 RH status: **not assumed**
 
 Let
 
 \[
-\beta(n)=\mu(n)-\mathbf1_{67\mid n}\mu(n/67),
-\qquad
-T(y)=(4\sqrt y-3)\mathbf1_{y\ge1}.
+\beta(n)=\mu(n)-\mathbf1_{67\mid n}\mu(n/67).
 \]
 
-For \(z=c+id\), define
+For `z=c+id`, define the **active** shifted carrier
 
 \[
-Q_z(X)
-=
-\sum_{n\ge1}
-\frac{\beta(n)}{\sqrt n}
-|T(X/n)+z|^2.
+S_z(y)=(4\sqrt y-3+z)\mathbf1_{y\ge1}
 \tag{L-100510.1}
 \]
 
-Represent \(\beta\) by one labelled copy of each prime and one additional
-labelled copy of \(67\).  Put
+and
+
+\[
+Q_z(X)=
+\sum_{n\le X}{\beta(n)\over\sqrt n}|4\sqrt{X/n}-3+z|^2.
+\tag{L-100510.2}
+\]
+
+Equivalently, `Q_z=sum_n beta(n)n^-1/2 |S_z(X/n)|^2`.  The indicator applies to the entire shifted carrier.  The earlier notation `|T(X/n)+z|^2` placed `z` outside the activation indicator and would leave an infinite constant tail; that notation is withdrawn.
+
+Put
 
 \[
 C=16-8\sqrt2=8(2-\sqrt2).
@@ -35,109 +38,47 @@ C=16-8\sqrt2=8(2-\sqrt2).
 Assume
 
 \[
-\boxed{
-(3-c)^2+d^2
-\le
-C(3-c).
-}
-\tag{L-100510.2}
-\]
-
-Equivalently, \(z\) belongs to the closed disk with center
-
-\[
-c_0=4\sqrt2-5
-\]
-
-and radius
-
-\[
-R_0=8-4\sqrt2.
-\]
-
-Its real diameter is
-
-\[
-[\,8\sqrt2-13,\ 3\,],
-\]
-
-which strictly contains the real interval \([-1,3]\) from PR #673.
-
-## Prime-removal estimate
-
-For one labelled prime \(q\), let \(Y\ge q\), \(x=\sqrt Y\), and
-\(a=3-c\). Then
-
-\[
-\begin{aligned}
-&|4x-3+z|^2
--q|4x/\sqrt q-3+z|^2\\
-&\qquad=
-(\sqrt q-1)
-\left[
-8ax-(\sqrt q+1)(a^2+d^2)
-\right].
-\end{aligned}
+\boxed{(3-c)^2+d^2\le C(3-c).}
 \tag{L-100510.3}
 \]
 
-Since \(x\ge\sqrt q\) and
+This is the closed disk with center `4sqrt(2)-5`, radius `8-4sqrt(2)`, and real diameter `[8sqrt(2)-13,3]`.
 
-\[
-\frac{8\sqrt q}{\sqrt q+1}
-\ge
-\frac{8\sqrt2}{\sqrt2+1}
-=
-16-8\sqrt2=C,
-\]
+## Prime-removal estimate
 
-condition (L-100510.2) makes (L-100510.3) nonnegative. Therefore removing a
-label gives
-
-\[
-\frac{w_z(A)}{w_z(A\setminus\{q\})}
-\le
-q^{-3/2}.
-\tag{L-100510.4}
-\]
-
-The labelled mass bound is elementary.  Every prime \(p\ge5\) is congruent
-to \(1\) or \(-1\) modulo \(6\), so monotone integral comparison gives
+For one labelled prime `q`, removal is needed only when the selected child is active; then `Y>=q`.  Put `x=sqrt(Y)` and `a=3-c`.  Direct algebra gives
 
 \[
 \begin{aligned}
-\sum_p p^{-3/2}+67^{-3/2}
-\le{}&
-2^{-3/2}+3^{-3/2}+5^{-3/2}+7^{-3/2}\\
-&+\frac13\left(5^{-1/2}+7^{-1/2}\right)
-+67^{-3/2}\\
-<{}&0.967<1.
+&|4x-3+z|^2-q|4x/\sqrt q-3+z|^2\\
+&\qquad=(\sqrt q-1)
+\left[8ax-(\sqrt q+1)(a^2+d^2)\right].
 \end{aligned}
+\tag{L-100510.4}
+\]
+
+Since `x>=sqrt(q)` and
+
+\[
+{8\sqrt q\over\sqrt q+1}
+\ge16-8\sqrt2=C,
+\]
+
+condition (L-100510.3) makes (L-100510.4) nonnegative.  If the child is inactive its weight is zero and the removal inequality is immediate.  Hence removing a label costs at most `q^-3/2`.
+
+The elementary labelled-prime estimate
+
+\[
+\sum_p p^{-3/2}+67^{-3/2}<0.967<1
+\]
+
+then gives, by adjacent-level pairing,
+
+\[
+\boxed{Q_z(X)\ge0\qquad(X\ge1)}
 \tag{L-100510.5}
 \]
 
-For each Euler level \(M_k\), summing (L-100510.4) over the \(k\) possible
-parent edges gives
+throughout the disk (L-100510.3).
 
-\[
-kM_k
-\le
-\left(\sum_p p^{-3/2}+67^{-3/2}\right)M_{k-1}
-<
-M_{k-1}.
-\]
-
-Pairing levels \(M_0-M_1+M_2-M_3+\cdots\) therefore gives
-
-\[
-\boxed{
-Q_z(X)\ge0
-\qquad
-(X\ge1,\ z\text{ satisfying (L-100510.2)}).
-}
-\tag{L-100510.6}
-\]
-
-The theorem is Hermitian and genuinely stronger than real shifted positivity.
-It supplies a disk of complex test vectors, not merely a list of scalar
-inequalities.
+The theorem is Hermitian and coefficient-exact.  It supplies an active complex test-vector disk; it does not control the final critical variation by itself.
