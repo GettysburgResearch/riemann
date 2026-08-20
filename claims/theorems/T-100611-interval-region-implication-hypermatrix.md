@@ -1,9 +1,9 @@
 # T-100611 — Interval-region implication hypermatrix
 
 Claim ID: `T-100611`  
-Status: **PROVED DEPENDENCY/COMPOSITION THEOREM; TWO MARGINAL ESTIMATES OPEN**  
+Status: **PROVED DEPENDENCY/COMPOSITION THEOREM; LONG-INTERVAL MARGINAL ESTIMATES OPEN**  
 Created: 2026-08-20  
-Depends on: `L-100600--L-100612`; `T-100610`; PRs #652, #671, #674, #676, #688, #690  
+Depends on: `L-100600--L-100613`; `T-100610`; PRs #652, #671, #674, #676, #688, #690  
 RH status: **unproved**
 
 The implication graph is not a list of rival routes. It is a matrix whose rows
@@ -58,7 +58,39 @@ hazard/energy level.
 Root, singleton, and adjacent-owner regions are closed exactly by
 `L-100612`.
 
-### H3 — opposite marginal estimates combine
+### H3 — endpoint geometry and prime spacing combine
+
+`L-100613` proves the source-normalized interior Harnack estimate
+
+\[
+\ell^{-1/2}K_{p,q}(y/\ell)
+\le\frac4{3\ell}K_{p,q}(y),
+\qquad
+K_{p,q}=(I-U_p)(I-U_q)\Psi.
+\]
+
+For actual primes `67<=p<q<=8p`, the elementary two-residue-class estimate
+
+\[
+\sum_{p<\ell<q}\frac1\ell
+\le\frac2p+\frac13\log8
+\]
+
+makes the complete interior owner mass strictly below one. Adjacent-level
+pairing therefore gives
+
+\[
+\boxed{
+\text{all double-owner intervals with }q/p\le8
+\text{ are nonnegative at every scale}.
+}
+\tag{T-100611.4}
+\]
+
+This closes the entire short-interval matrix region, including arbitrarily
+many interior prime labels.
+
+### H4 — opposite marginal estimates combine
 
 \[
 \boxed{
@@ -69,7 +101,7 @@ Root, singleton, and adjacent-owner regions are closed exactly by
 \text{subpower cubic negative mass}
 \Longrightarrow RH.
 }
-\tag{T-100611.4}
+\tag{T-100611.5}
 \]
 
 The first implication is the two-sided Schur theorem `T-100610`; the second is
@@ -86,9 +118,9 @@ The nonempty interval entries are divided by endpoint geometry.
 | matrix region | exact structure | proved incoming tools | remaining local obligation |
 |---|---|---|---|
 | `j=i` and `j=i+1` | no interior Euler product | `L-100612` endpoint positivity | none |
-| short interval `p_j/p_i<=8` | one compact multiplicative shell | ratio-eight finite-band kernels; complex shifted-square positivity | row/column absolute Schur summation over actual prime cores |
+| short interval `p_j/p_i<=8` | arbitrary finite interior, prime harmonic mass `<1` | `L-100613` cubic Harnack + residue-class prime bound | none |
 | long interval `p_j/p_i>8` | finite interior prime interval | source-faithful interior Euler squaring `L-100600`; square-root cutoff `L-100601--L-100602` | oriented comparison before physical collapse |
-| divisor-exposed entries | one explicit native sign `beta(d)` | positive dilation renewal `L-99961`, with `d^epsilon` Mellin cost | Schur summation of the outer owner/divisor signs |
+| divisor-exposed long entries | one explicit native sign `beta(d)` | positive dilation renewal `L-99961`, with `d^epsilon` Mellin cost | Schur summation of the outer owner/divisor signs |
 | smooth/deep sectors | no critical cross-core interaction | PR #688 smooth removal; PR #683 deep-history absolute closure | none |
 
 Thus the previous global gates
@@ -102,15 +134,17 @@ regional projections of the same interval matrix (T-100611.1).
 
 ## Minimal paired frontier
 
-After all exact zero-interior, smooth, deep, and positive-renewal transports
-are removed, the conclusion-facing arithmetic frontier is the pair
+After all exact zero-interior, short-interval, smooth, deep, and
+positive-renewal transports are removed, the conclusion-facing arithmetic
+frontier is the pair restricted to **long endpoint intervals**:
 
 ```text
 FOCR100610:
-  subpower integrated row Schur mass of the residual interval matrix;
+  subpower integrated row Schur mass of the residual long-interval matrix;
 
 LOCR100610:
-  subpower integrated column Schur mass of the same residual matrix.
+  subpower integrated column Schur mass of the same residual long-interval
+  matrix.
 ```
 
 Their conjunction is sufficient by `T-100610`. This is strictly more
@@ -129,13 +163,14 @@ coefficient double-owner tensor                 PROVED EXACT
 positive two-ended hazard tensor                PROVED EXACT
 bi-parameter Littlewood--Paley identity         PROVED EXACT
 critical cubic endpoint positivity              PROVED EXACT
+all ratio-eight interval blocks                 PROVED POSITIVE
 two-sided Schur AND-gate to negative mass       PROVED EXACT
 semantic identification of old terminal gates  PROVED
-regional arithmetic estimates                   PARTIAL
-FOCR100610                                       OPEN
-LOCR100610                                       OPEN
+long-interval arithmetic estimates              PARTIAL
+FOCR100610 (long intervals only)                 OPEN
+LOCR100610 (long intervals only)                 OPEN
 Riemann Hypothesis                               UNPROVED
 ```
 
 This theorem is the integration result of the matrix pass. It does not promote
-an unproved row or column estimate to a proof of RH.
+an unproved long-interval row or column estimate to a proof of RH.
