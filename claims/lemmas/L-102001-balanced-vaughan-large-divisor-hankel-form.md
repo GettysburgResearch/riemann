@@ -3,6 +3,7 @@
 Claim ID: `L-102001`
 Status: **PROVED EXACT ARITHMETIC IDENTITY**
 Created: 2026-08-21
+Audited: 2026-08-21
 Depends on: PR #685 `L-100311`
 RH status: **not assumed**
 
@@ -10,7 +11,7 @@ Retain the exact Vaughan identity of `L-100311` with
 
 \[
 \mu_U(n)=\mu(n)\mathbf1_{n\le U},\qquad
-a_U=\varepsilon-\mu_U*\mathbf1,
+ a_U=\varepsilon-\mu_U*\mathbf1,
 \]
 
 and balanced remainder
@@ -23,7 +24,8 @@ K(X/(rsm)),
 \tag{L-102001.1}
 \]
 
-where `K` is any fixed compact kernel for which the sum is finite at each endpoint.
+where `K` is a fixed kernel supported in `[1,C]` for some finite `C>=1`.
+Every sum below is therefore finite at each endpoint.
 
 For every \(n>U\), the full Möbius divisor sum vanishes, so
 
@@ -32,7 +34,8 @@ For every \(n>U\), the full Möbius divisor sum vanishes, so
 \tag{L-102001.2}
 \]
 
-Insert (L-102001.2) twice into (L-102001.1), write \(r=du\), \(s=ev\), and interchange finite sums. Since
+Insert (L-102001.2) twice into (L-102001.1), write \(r=du\),
+\(s=ev\), and interchange finite sums. Since
 
 \[
 \sum_{uvm=t}\mu(m)=(\mathbf1*\mathbf1*\mu)(t)=1,
@@ -60,51 +63,88 @@ where
 
 No error term, smooth approximation, or unsigned majorization is used.
 
-## Parabolic localization
+## Exact parabolic localization
 
-Now specialize to the conclusion-facing choice \(U=\lfloor X^{1/3}\rfloor\). Compact support forces \(de\ll X\); for the ratio-16 kernel of `L-100310`, more precisely \(X/16\le de\,t\le X\) for every active summand.
-
-In the divisor-pair outer sum itself, if \(d\le e\) and \(de\le X\), then
+Specialize to the conclusion-facing choice
 
 \[
-e\le\frac Xd<d^2
+U=\lfloor X^{1/3}\rfloor.
+\]
+
+If one term in (L-102001.3) is nonzero, then one term in
+\(\mathcal L_K(X/(de))\) is nonzero. Since `supp K subset [1,C]`,
+
+\[
+1\le \frac{X}{det}\le C
+\]
+
+for some integer `t>=1`; in particular
+
+\[
+de\le X.
 \tag{L-102001.5}
 \]
 
-because \(d>U\ge X^{1/3}-1\), and the finite floor boundary may be absorbed into a fixed low-end exception. Thus asymptotically every active ordered pair lies in the divisor-parabolic region
+If \(d\le e\), then \(d>\lfloor X^{1/3}\rfloor\), hence
+\(d>X^{1/3}\), and therefore
 
 \[
-\boxed{\max(d,e)<\min(d,e)^2.}
+\boxed{
+e\le\frac Xd<d^2.
+}
 \tag{L-102001.6}
 \]
 
-This is the same exponent-two geometry that appears inside the stronger prime-interval positivity theorem `L-100615`.
+Thus every active ordered pair lies, exactly and with no finite-floor
+exception, in the divisor-parabolic region
 
-## GCD factorization
+\[
+\boxed{\max(d,e)<\min(d,e)^2.}
+\tag{L-102001.7}
+\]
+
+This is the same exponent-two geometry contained in the stronger actual-prime
+interval theorem `L-100615`. It is not by itself a lifting from composite
+divisors to prime-owner intervals.
+
+## Correct gcd reparameterization
 
 On nonzero Möbius support write
 
 \[
-d=ga,\qquad e=gb,\qquad(a,b)=1.
+d=ga,\qquad e=gb,\qquad g=(d,e),\qquad(a,b)=1.
 \]
 
-Squarefreeness implies \((g,a)=(g,b)=1\), and therefore
+Because `d` and `e` are squarefree, `g`, `a`, and `b` are pairwise coprime and
+squarefree. Equivalently,
+
+\[
+\mu^2(gab)=1.
+\]
+
+Then
 
 \[
 \boxed{\mu(ga)\mu(gb)=\mu(a)\mu(b).}
-\tag{L-102001.7}
+\tag{L-102001.8}
 \]
 
-Hence the common gcd core is sign-free and enters only through the square dilation \(g^2ab\):
+Consequently the exact gcd form is
 
 \[
 \boxed{
 \mathcal B_U(X)
-=\sum_{\substack{g,a,b\\(a,b)=1\\ga,gb>U}}
+=\sum_{\substack{g,a,b\ge1\\\mu^2(gab)=1\\ga>U,\ gb>U}}
 \frac{\mu(a)\mu(b)}{g\sqrt{ab}}
 \mathcal L_K\!\left(\frac{X}{g^2ab}\right).
 }
-\tag{L-102001.8}
+\tag{L-102001.9}
 \]
 
-This is an exact reparameterization, not a disjoint decomposition into independent `g` and `(a,b)` sums. The cutoff constraints remain coupled and must be preserved in any subsequent estimate.
+The squarefreeness condition in (L-102001.9) is load-bearing. Omitting it
+would introduce spurious terms such as a nonsquarefree `g` whose original
+Möbius coefficient is zero.
+
+This is an exact reparameterization, not a decomposition into independent
+`g` and `(a,b)` sums. The cutoff constraints and the physical kernel remain
+coupled.
