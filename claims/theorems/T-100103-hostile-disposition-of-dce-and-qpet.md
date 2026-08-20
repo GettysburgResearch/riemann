@@ -24,7 +24,7 @@ Therefore
 \mathrm{DCE}_{p,Y}
 \iff C_p(Y)\ge0.
 }
-\tag{T-100103.1)
+\tag{T-100103.1}
 
 The proposed low-prime maximum principle is exactly the collection of signs it
 was intended to produce. Moreover every fixed tail has the same
@@ -44,7 +44,7 @@ For every fixed `k>=2`, the proved corridor implies
 \liminf_{Z\to\infty}
 \frac{\log N_{Z,k}}{\log Z}\ge A_k^*.
 }
-\tag{T-100103.2)
+\tag{T-100103.2}
 
 The definition of `QPET100101` asks for the strict opposite inequality for one
 `k`. Hence
@@ -53,7 +53,7 @@ The definition of `QPET100101` asks for the strict opposite inequality for one
 \boxed{
 \mathrm{QPET100101}\text{ is false as stated}.
 }
-\tag{T-100103.3)
+\tag{T-100103.3}
 
 The residue-amplification theorem does not change this result. Inside the
 positive corridor, the Euler-level upper bound forces the other poles and
