@@ -70,7 +70,7 @@ It follows from the same one-sign Mellin--Landau theorem that
 C_p(Y)\ge0\text{ eventually for any one fixed tail }p
 \quad\Longrightarrow\quad RH.
 }
-\tag{L-100103.4)
+\tag{L-100103.4}
 
 Accordingly, the low-prime DCE family is conclusion-bearing at each fixed-tail
 interface. Kernel positivity and the terminal corridor do not prove it by
@@ -82,7 +82,7 @@ formal composition.
 future-prime recurrence                  proved exact
 DCE edge inequality                      identical to predecessor sign
 fixed finite tail preserves zeta poles   proved
-fixed-tail eventual sign -> RH            proved by frozen consumer
+fixed-tail eventual sign -> RH           proved by frozen consumer
 DCE100100                                open / conclusion-bearing
 Riemann Hypothesis                       unproved
 ```
