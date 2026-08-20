@@ -1,0 +1,14 @@
+{
+  "classification": "DIAGNOSTIC_ONLY",
+  "cutoff": 1000000,
+  "complete_blocks": {
+    "15": {"any_negative": 19780, "all_negative": 19777, "cells": 32768, "minimum": -0.07172727664689216},
+    "16": {"any_negative": 37526, "all_negative": 37523, "cells": 65536, "minimum": -0.07130151399482454},
+    "17": {"any_negative": 72247, "all_negative": 72244, "cells": 131072, "minimum": -0.08049519757974899},
+    "18": {"any_negative": 103803, "all_negative": 103799, "cells": 262144, "minimum": -0.04619111973066925}
+  },
+  "proves_asymptotic_sparsity": false,
+  "proves_sampled_deep_tail": false,
+  "proves_rh": false,
+  "purpose": "Demonstrate that shallow negativity may be dense and motivate the deep-excursion threshold."
+}
