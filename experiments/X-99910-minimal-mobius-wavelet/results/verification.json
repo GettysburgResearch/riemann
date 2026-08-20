@@ -1,0 +1,45 @@
+{
+  "base_pr": 665,
+  "base_sha": "a771772682a2c09c026348b176618c302c49c223",
+  "box_positive_resolvent": true,
+  "classification": "PASS_T99910_MINIMAL_MOBIUS_WAVELET",
+  "duplicate67_positive_resolvent": true,
+  "factor67_antisymmetry": true,
+  "mellin_zero_safe": true,
+  "minimal_degree": 3,
+  "minimal_polynomial": "(1-sqrt(2)z)(1-z)^2",
+  "minimal_support_ratio": 8,
+  "mutations_rejected": [
+    "degree_two_annihilator_rejected",
+    "duplicate67_resolvent_dropped_rejected",
+    "finite_negative_fixture_promoted_to_tail_rejected",
+    "mwoc99910_assumed_rejected",
+    "ordinary_mu_replaced_by_beta_rejected",
+    "pointwise_wavelet_positivity_rejected",
+    "rh_established_by_replay_rejected",
+    "seven_band_kernel_called_minimal_rejected"
+  ],
+  "mwoc99910_proved": false,
+  "negative_fixture_X": 4,
+  "negative_fixture_interval": [
+    "-1.4620",
+    "-1.4618"
+  ],
+  "ordinary_mobius_source": true,
+  "pointwise_positive": false,
+  "proof_object_sha256": "2196daa3e18202a0c20a5a3a596dd3975989bea035934db1d4bdf7ff842239fa",
+  "rh_established": false,
+  "schema": "riemann.x99910.minimal-mobius-wavelet.v1",
+  "subpower_negative_mass_proved": false,
+  "three_activation_bands": true,
+  "two_shell_support": [
+    [
+      1,
+      8
+    ],
+    [
+      67,
+      536
+    ]
+  ]
+}
