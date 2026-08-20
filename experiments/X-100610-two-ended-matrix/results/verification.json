@@ -1,0 +1,23 @@
+{
+  "base_pr": 691,
+  "classification": "PASS_T100610_TWO_ENDED_IMPLICATION_MATRIX",
+  "column_only_separator": {
+    "one_sided_bound": 1,
+    "operator_norm_squared": 100
+  },
+  "direct_tensor_marginal_checks": 400,
+  "focr100610_proved": false,
+  "hazard_identity_checks": 400,
+  "littlewood_paley_checks": 400,
+  "locr100610_proved": false,
+  "proof_object_sha256": "dd11e217b29501bd0917a21c5bb41b32e9cf585f9bc651ce8cfa64e640ca540b",
+  "rh_established": false,
+  "row_only_separator": {
+    "one_sided_bound": 1,
+    "operator_norm_squared": 100
+  },
+  "schema": "riemann.x100610.two_ended_matrix.v1",
+  "schur_bilinear_checks": 1000,
+  "survival_vector_checks": 800,
+  "two_sided_and_gate_proved": true
+}
