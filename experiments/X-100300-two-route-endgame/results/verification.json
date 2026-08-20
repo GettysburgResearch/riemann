@@ -1,0 +1,30 @@
+{
+  "base_pr": 680,
+  "base_sha": "64e8e138dde15bfdb02d532041ace945c600c912",
+  "bvd100310_proved": false,
+  "bvd100310_rh_equivalent": true,
+  "catd100300_proved": false,
+  "catd100300_rh_equivalent": true,
+  "cellwise_deficit_formula": true,
+  "classification": "PASS_T100300_TWO_ROUTE_ENDGAME",
+  "external_heads": {
+    "pr676": "9849df6a52bb4791ebf10cf0dd9f0c929d36bdd9",
+    "pr679": "37c811473cad6058e5f057a9fc89b05dc5b0e4cb",
+    "pr681": "295000fead70e87c17623cf0dcc2af838a60ed0c"
+  },
+  "extra_half_order_zero_moment": true,
+  "mutations_rejected": [
+    "a_u_square_called_positive_rejected",
+    "bvd100310_assumed_rejected",
+    "catd100300_assumed_rejected",
+    "pointwise_patg_substituted_for_negative_mass_rejected",
+    "rh_established_by_replay_rejected",
+    "supercritical_moments_interpolated_to_linear_rejected",
+    "zero_moment_reused_on_balanced_core_rejected"
+  ],
+  "proof_object_sha256": "bd96fc487dd877a9e24556570d4136d99ae818e7ed1d4d317c45e35a2c3e66c7",
+  "rh_established": false,
+  "schema": "riemann.x100300.two-route-endgame.v1",
+  "type_i_error_integrable": true,
+  "vaughan_identity_exact": true
+}
