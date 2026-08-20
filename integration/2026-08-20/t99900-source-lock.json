@@ -1,0 +1,15 @@
+{
+  "base_head": "3dd7eacdadc76822e25ee630a474580259dd64fb",
+  "base_pr": 658,
+  "branch": "research/gpt56-pro/99900-pxgc-cube-parity-hardening",
+  "files": 14,
+  "proof_object_sha256": "a57ee23ef3ffb83c571097eda4107cb5eed56201b265777b3ddb6d10c4498892",
+  "replay_verdict": "PASS_T99900_EXACT_CUBE_FLOW_AND_PARITY_BARRIER",
+  "schema": "riemann.t99900.source-lock.v1",
+  "status": {
+    "complete_cube_flow": "proved",
+    "epxgc99900": "open / RH-bearing",
+    "rh": "unproved",
+    "source_blind_pxgc": "refuted"
+  }
+}
