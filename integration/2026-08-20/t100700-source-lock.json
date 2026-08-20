@@ -1,0 +1,26 @@
+{
+  "schema": "riemann.t100700.source-lock.v1",
+  "created_utc": "2026-08-20T19:50:46Z",
+  "repository": "gfreund123/riemann",
+  "base": {
+    "pr": 691,
+    "sha": "c85123d6c25b5b2ade89ab30a736f9b18844a489"
+  },
+  "external_inputs": [
+    {"pr": 660, "scope": "L-99722 scalar convex first-owner inequality"},
+    {"pr": 671, "scope": "L-99961 positive divisor restriction renewal"},
+    {"pr": 674, "scope": "minimal ratio-eight ordinary-Mobius wavelet"},
+    {"pr": 682, "scope": "activation-zero centered moment definitions only"}
+  ],
+  "new_claims": [
+    "L-100700",
+    "L-100701",
+    "L-100702",
+    "L-100703",
+    "L-100704",
+    "R-100700",
+    "T-100700"
+  ],
+  "open_gates": ["SCME100704", "LRNM100704"],
+  "rh_established": false
+}
