@@ -1,6 +1,6 @@
 # L-100162 — Log-interval coarea reduces critical activation debt to three endpoint Euler weights
 
-Status: **PROVED EXACT KERNEL IDENTITY; CRITICAL HALF-ORDER ENDPOINT REMAINS**  
+Status: **PROVED EXACT KERNEL IDENTITY; SCOPE OF ENDPOINT TERMS REPAIRED**  
 Created: 2026-08-20  
 RH status: **unproved**
 
@@ -10,7 +10,7 @@ For the partial-activation correction in `L-100161`, write
 d(z)={(\sqrt z-1)^2\over z^{3/2}},\qquad z>1.
 \]
 
-Its logarithmic antiderivative is elementary:
+Its logarithmic antiderivative is
 
 \[
 \boxed{
@@ -30,14 +30,27 @@ Equivalently, for one source integer `n` and endpoint variable `x<n`, putting `z
 \tag{L-100162.2}
 \]
 
-Thus the logarithmic integral of the entire signed upper-ideal correction over any activation interval is an exact linear combination of three endpoint parity sums with Dirichlet exponents
+Thus the logarithmic integral of the entire signed upper-ideal correction over any activation interval is an exact linear combination of endpoint parity sums at Dirichlet exponents
 
 ```text
 1, 1/2, 3/2.
 ```
 
-The `1` and `3/2` pieces are supercritical / absolutely convergent after the duplicate-67 Euler factor is inserted. The middle `1/2` term is the unique critical residue. Therefore integrating the activation correction does not eliminate the half-order arithmetic; it localizes it to activation endpoints.
+## Correct analytic classification
 
-In particular, any proof of subpower logarithmic negative mass based solely on interval integration must still control a half-order endpoint prefix. No interior estimate at exponents `1` and `3/2` can by itself remove that term.
+The `3/2` term is absolutely convergent.  The exponent-`1` term is **not** absolutely convergent; for the duplicate-67 source it is controlled by the classical prime number theorem through
 
-This gives an exact coarea interpretation of the prime-harmonic wall: the continuum debt is supercritical away from activation, and the entire conclusion-producing obstruction is carried by the discrete half-order endpoint sequence.
+\[
+\sum_{n\le X}{\beta(n)\over n}\longrightarrow0,
+\qquad
+\sum_n{\beta(n)\over n^s}={1-67^{-s}\over\zeta(s)}.
+\]
+
+It carries no open-strip RH obstruction, but it may not be discarded as an absolutely convergent error.  The exponent-`1/2` endpoint is the unique RH-critical member of the three-term coarea identity.
+
+Therefore interval integration localizes the conclusion-producing obstruction to the half-order endpoint while leaving:
+
+- one PNT-controlled exponent-`1` boundary term;
+- one absolutely convergent exponent-`3/2` boundary term.
+
+No estimate for only the latter two can remove the half-order residue.
