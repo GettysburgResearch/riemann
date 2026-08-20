@@ -1,0 +1,25 @@
+{
+  "core": {
+    "checks": {
+      "largest_prime_squarefree_fixtures": 12159,
+      "negative_collar_fixture": "c=-1, X=2, n=3",
+      "phase_hasse_exact_fixtures": 4,
+      "shifted_square_rational_fixtures": 15
+    },
+    "classification": "PASS_T100400_TWO_SURVIVING_CLOSURE_ROUTES_RECOVERY",
+    "open": {
+      "LPMW100410": true,
+      "QACG100400": true,
+      "riemann_hypothesis": true
+    },
+    "proved": {
+      "largest_prime_ownership": true,
+      "no_free_atom_collar_removal": true,
+      "phase_hasse_retains_half_euler_root": true,
+      "shifted_square_activation_collar_homotopy": true
+    },
+    "rh_established": false,
+    "schema": "riemann.t100400.two-surviving-routes-recovery.v1"
+  },
+  "proof_object_sha256": "770089c2f3ff1b5d2fc7dabeeea079250beeb1951438f7e6e5cba7061812764b"
+}
