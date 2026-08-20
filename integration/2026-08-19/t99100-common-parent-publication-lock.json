@@ -1,0 +1,15 @@
+{
+  "schema": "riemann.t99100.publication-lock.v1",
+  "repository": "gfreund123/riemann",
+  "branch": "agent/gpt56-common-parent-random-key-20260819",
+  "base_sha": "bac504b2d227669d9d5310d96e6cf805f6376ff2",
+  "packet_commit": "18b90c67dc65bfb777a849a8bf0fc47d881d40f5",
+  "replay": {
+    "classification": "PASS_T99100_COMMON_PARENT_RANDOM_KEY_INTERFACE",
+    "proof_object_sha256": "3db1c0cd220559ece37538ebd17794f4532a05a00896ddfed58dd374ceae0ebb",
+    "tests": 7,
+    "native_application_established": false,
+    "rh_established": false
+  },
+  "status": "abstract common-parent and interface packet; native application remains open"
+}
