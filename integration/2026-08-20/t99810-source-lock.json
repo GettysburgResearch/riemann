@@ -1,0 +1,30 @@
+{
+  "base": {
+    "branch": "research/gpt56-pro/99800-canonical-scalar-spine-gpmoc",
+    "pr": 659,
+    "sha": "83c17b32a99ac9e1aa5aec3168535550eb286636"
+  },
+  "frozen_origin": {
+    "branch": "review/gpt56-pro/99700-owner-degeneracy-cross-core",
+    "pr": 656,
+    "sha": "db404ec00cf022f003ee2bbee66e0cf62ac45003"
+  },
+  "compared_prs": {
+    "615_euler_hurwitz": "eb129ebea953def33a92fb5e7355d4e79cb53171",
+    "652_native_coefficient_audit": "24ab64551225f2dba9aa53a533eb9b0285c6e363",
+    "653_scalar_negative_mass": "e928fd615d753882706bb88c51b717bd8d4a86ba",
+    "655_phase_adaptive_owner": "7946f2979a69392e5275be90f023dfb34009d4d9",
+    "656_cross_core_gate": "db404ec00cf022f003ee2bbee66e0cf62ac45003",
+    "659_gpmoc_successor": "83c17b32a99ac9e1aa5aec3168535550eb286636"
+  },
+  "intended_branch": "review/gpt56-pro/99810-canonical-proof-spine",
+  "new_results": [
+    "Euler-Hausdorff SHARP identity",
+    "positive-completion real-pole firewall",
+    "phase-owner Abelian spectral gap"
+  ],
+  "repository": "gfreund123/riemann",
+  "namespace_migration": "integration/2026-08-20/t99810-namespace-migration.json",
+  "schema": "riemann.t99810.source-lock.v1",
+  "scientific_status": "Riemann Hypothesis remains unproved"
+}
