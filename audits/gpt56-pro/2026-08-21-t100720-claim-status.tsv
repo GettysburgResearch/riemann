@@ -1,0 +1,12 @@
+claim_id	path	mathematical_type	verdict	dependencies	surviving_scope	notes
+L-100720	claims/lemmas/L-100720-cubic-hinge-and-compact-collar.md	UNCONDITIONAL THEOREM	VERIFIED	PR #676; audited double-owner source	finite and cutoff-limit cubic packet	exact hinge and carrier/collar split
+L-100721	claims/lemmas/L-100721-compensated-rough-prefix-coarea.md	UNCONDITIONAL THEOREM	VERIFIED	L-100720	finite interior prime interval	exact four-term reciprocal-prefix derivative
+L-100722	claims/lemmas/L-100722-tao-bound-third-variation-and-exhaustion.md	UNCONDITIONAL THEOREM	VERIFIED WITH FIXES	L-100720--21; Tao theorem	uniform finite intervals and exhaustion	finite replay does not replay published Tao theorem
+L-100723	claims/lemmas/L-100723-adaptive-two-sided-taylor-collar-gate.md	CONDITIONAL IMPLICATION	VERIFIED	L-100720--22; PR #695 joint min-max source	adaptive occurrence-time partition	APCC and DPCC remain open
+L-100724	claims/lemmas/L-100724-reciprocal-mass-positive-intervals-up-to-e.md	UNCONDITIONAL THEOREM	VERIFIED	L-100721; Mertens	q<=p^A for every fixed A<e and large p	pointwise positivity
+R-100720	claims/refutations/R-100720-uniform-regularity-does-not-close-critical-collar.md	REFUTATION	VERIFIED	L-100722	method firewall	regularity alone insufficient
+R-100721	claims/refutations/R-100721-unrestricted-left-taylor-certificate-is-power-sized.md	REFUTATION	VERIFIED	L-100723	method firewall	removes old LPCC formulation
+T-100720	claims/theorems/T-100720-audited-cubic-hinge-two-certificate-frontier.md	CONDITIONAL IMPLICATION	VERIFIED	L-100720--24; audited PR #695; centered cubic detector	APCC AND DPCC -> RH	RH unproved
+APCC100723	claims/lemmas/L-100723-adaptive-two-sided-taylor-collar-gate.md	RH-EQUIVALENT CRITERION	UNPROVEN / GAP	activation-side arithmetic	remaining supercritical collars	open
+DPCC100723	claims/lemmas/L-100723-adaptive-two-sided-taylor-collar-gate.md	RH-EQUIVALENT CRITERION	UNPROVEN / GAP	PR #695 balanced homotopy	remaining supercritical collars	open
+RH	-	PROPOSED COMPLETE THEOREM	UNPROVEN / GAP	APCC100723; DPCC100723	-	not established
