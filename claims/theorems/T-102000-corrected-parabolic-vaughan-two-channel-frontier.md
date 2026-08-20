@@ -1,16 +1,20 @@
-# T-102000 — Corrected parabolic Vaughan two-channel frontier
+# T-102000 — Audited parabolic Vaughan and single-wing owner frontier
 
 Claim ID: `T-102000`
-Status: **PROVED CONDITIONAL COMPOSITION; TERMINAL COMPOSITE-OWNER ESTIMATE OPEN**
+Status: **PROVED CONDITIONAL COMPOSITION; SINGLE-WING ESTIMATE OPEN**
 Created: 2026-08-21
-Depends on: PR #685 `L-100310--L-100312`; PR #691 `L-100615`; `L-102001`; `R-102000`
+Audited: 2026-08-21
+Depends on: PR #685 `L-100310--L-100312`; PR #691 `L-100615--L-100616`; `L-102001--L-102008`; `R-102000`
 RH status: **unproved**
 
-The previous attempted composition incorrectly fed the positive cubic B-spline into the Type-I theorem of `L-100310`. `R-102000` makes that route bindingly invalid. The corrected conclusion graph keeps two kernels separate.
+The positive cubic B-spline and the signed zero-moment Vaughan kernel solve
+different analytic tasks. `R-102000` makes the attempted interchange bindingly
+invalid.
 
-## Channel A — signed zero-moment conclusion kernel
+## Channel A: the conclusion-facing zero-moment kernel
 
-Use the ratio-16 signed kernel `K_1` of `L-100310`. Its continuous half-order moment vanishes and `L-100311` gives
+Use the ratio-16 signed kernel `K_1` of `L-100310`. Its half-order continuous
+moment vanishes, and `L-100311` gives
 
 \[
 \mathcal W_1(X)=\mathcal T_U(X)+\mathcal B_U(X),
@@ -23,76 +27,112 @@ with
 \int_2^\infty|\mathcal T_U(X)|\frac{dX}{X}<\infty.
 \]
 
-By `L-102001`, the balanced term is exactly
+The balanced term has the exact large-divisor form
 
 \[
-\mathcal B_U(X)=
-\sum_{d,e>U}\frac{\mu(d)\mu(e)}{\sqrt{de}}
+\mathcal B_U(X)
+=\sum_{d,e>U}\frac{\mu(d)\mu(e)}{\sqrt{de}}
 \mathcal L_{K_1}(X/de).
 \tag{T-102000.1}
 \]
 
-Thus the entire conclusion-facing obligation is a signed large-divisor Hankel estimate on the original zero-moment kernel.
-
-## Channel B — positive compact structural kernel
-
-Independently, `L-102000` supplies a nonnegative compact B-spline built from the centered cubic. It is not used to pay Type I. Its role is structural: it gives a positive compact probe on the same multiplicative endpoint geometry, with no off-line Mellin cancellation.
-
-Any use of this channel must explicitly retain or subtract its nonzero half-order main term.
-
-## Parabolic arithmetic input
-
-`L-100615` proves that every actual-prime double-owner interval with
+`L-102008` further collapses the two apparent Möbius wings to one:
 
 \[
-q\le p^A,\qquad A<e^{3/4},
+\boxed{
+\mathcal B_U(X)
+=\sum_{\substack{g,m\ge1\\\mu^2(gm)=1}}
+\frac{\mu(m)}{g\sqrt m}
+N_{U/g}(m)
+\mathcal L_{K_1}\!\left(\frac{X}{g^2m}\right).
+}
+\tag{T-102000.2}
 \]
 
-is positive for sufficiently large lower endpoint prime. The exact Vaughan outer pair satisfies the stronger geometric localization
+Here `N_V(m)>=0` is the ordered balanced-divisor multiplicity. If
+`m=pc` with the unique owner `p=P^+(m)`, then
 
 \[
-\max(d,e)<\min(d,e)^2
+\mu(m)N_V(m)
+=-2\mu(c)
+\sum_{a\mid c}
+\mathbf1_{a>V}\mathbf1_{c/a>V/p}.
+\tag{T-102000.3}
 \]
 
-on its active asymptotic support.
+Thus all signs except one literal cofactor Möbius sign have been removed.
 
-The missing step is therefore not a geometric exponent. It is the **composite-owner lifting** from prime intervals to the large-divisor Hankel pair while preserving the signs and the coupled cutoff constraints.
-
-Define `CPL102000` to be the following quantitative statement:
+Define `SOW102008` by
 
 \[
 \boxed{
 \int_2^Y
 \left(
-\sum_{d,e>U_X}
-\frac{\mu(d)\mu(e)}{\sqrt{de}}
-\mathcal L_{K_1}(X/de)
+\sum_{\substack{g,m\ge1\\\mu^2(gm)=1}}
+\frac{\mu(m)}{g\sqrt m}
+N_{U_X/g}(m)
+\mathcal L_{K_1}\!\left(\frac{X}{g^2m}\right)
 \right)_-
 \frac{dX}{X}
 =Y^{o(1)}.
 }
-\tag{CPL102000}
+\tag{SOW102008}
 \]
 
-This is exactly `BVD100310` rewritten through `L-102001`, so `CPL102000` is conclusion-bearing but not new by itself. The point of the matrix is to assign its internal regions to proved tools:
-
-```text
-common square gcd core g^2       sign-free by L-102001.7;
-coprime wing pair (a,b)          all signs explicit;
-prime endpoint subintervals      positive through A<e^(3/4) by L-100615;
-Type-I / complete-lattice part   already paid by L-100310--L-100311;
-remaining object                 composite-owner recombination before absolute values.
-```
-
-Consequently
+By the exact identities above, `SOW102008` is the balanced Vaughan condition
+`BVD100310` in a narrower source coordinate. Therefore
 
 \[
-\boxed{
-\mathrm{CPL102000}\Longrightarrow RH
-}
-\tag{T-102000.2}
+\boxed{\mathrm{SOW102008}\Longrightarrow RH.}
+\tag{T-102000.4}
 \]
 
-through `L-100312`.
+This implication is complete; `SOW102008` is not proved.
 
-The route is deliberately fail-closed: `SCGR` and `PCWD` are not promoted to separate theorems because the exact gcd reparameterization keeps `g,a,b` coupled. A future proof must provide one actual inequality on (T-102000.1), not independent estimates on fictitious disjoint pieces.
+## Channel B: the positive compact structural probe
+
+`L-102000` supplies a nonnegative compact B-spline built from the critical
+cubic. It retains every off-line reciprocal-zeta pole, but
+
+\[
+\widehat{\mathcal K}_{a,3}(1/2)>0.
+\]
+
+It is therefore a structural positivity/compactness probe only. Any attempt to
+insert it into Channel A must explicitly pay its half-order main term and its
+source normalization.
+
+## What the implication matrix now contributes
+
+For `U=floor(X^(1/3))`, every active outer divisor pair is exactly parabolic.
+The gcd core is sign-free, and the two wing signs collapse to `mu(m)`. Unique
+largest-prime ownership then leaves `mu(c)` times a positive oriented divisor
+count.
+
+The actual-prime interval theorem `L-100615` proves positivity through every
+width `q<=p^A`, `A<exp(3/4)`, but it does not automatically apply to the
+composite multiplicity in (T-102000.3). The remaining step is now precisely:
+
+```text
+construct a source-faithful positive-renewal or joint-collar estimate for
+one unique largest prime p, one cofactor sign mu(c), one sign-free square core
+g^2, and one positive balanced-divisor multiplicity.
+```
+
+The separate joint min--max collar machinery `L-100616/L-102002` remains a
+candidate vehicle. `L-102003` proves that survival weight alone does not remove
+supercritical widths, and `L-102004--L-102007` localize the carrier-subtracted
+collar without proving its signed tail.
+
+```text
+zero-moment Type-I channel                    CLOSED
+large-divisor Hankel identity                 PROVED EXACT
+exact parabolic geometry                      PROVED EXACT
+gcd square-core sign removal                  PROVED EXACT
+two Möbius wings -> one Möbius owner           PROVED EXACT
+unique-largest-prime multiplicity recurrence  PROVED EXACT
+positive B-spline Type-I shortcut             REFUTED
+joint survival suppresses wide intervals      REFUTED
+SOW102008                                      OPEN / RH-EQUIVALENT
+Riemann Hypothesis                             UNPROVED
+```
