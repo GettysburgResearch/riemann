@@ -1,0 +1,29 @@
+{
+  "base_pr": 656,
+  "base_sha": "db404ec00cf022f003ee2bbee66e0cf62ac45003",
+  "cauchy_poisson_owner_gap": true,
+  "classification": "PASS_T99800_CANONICAL_SCALAR_SPINE_AND_GPMOC_ALGEBRA",
+  "compact_zero_safe_filter": true,
+  "continuous_jordan_positive": true,
+  "continuous_jordan_real_carrier": true,
+  "continuous_jordan_threshold": "log(2)/log(67)",
+  "exceptional_67_square_checked": true,
+  "gpmoc99800_proved": false,
+  "growing_moment_costs_subpower": true,
+  "mutations_rejected": [
+    "alpha_child_promoted_to_native_rejected",
+    "compact_kernel_called_positive_rejected",
+    "continuous_jordan_carrier_omitted_rejected",
+    "diagonal_promoted_to_offdiagonal_rejected",
+    "exceptional_67_square_owner_omitted_rejected",
+    "finite_scan_promoted_to_global_rejected",
+    "gpmoc99800_assumed_rejected",
+    "pr_body_imported_as_theorem_rejected",
+    "rh_established_by_replay_rejected"
+  ],
+  "poisson_point_evaluation": true,
+  "proof_object_sha256": "4dae20ed5441e8a41b7e78af3483d878029e59cc1fca4e8258707eba85050e47",
+  "rh_established": false,
+  "schema": "riemann.x99800.canonical-scalar-spine.v1",
+  "subpower_negative_mass_proved": false
+}
