@@ -1,0 +1,35 @@
+{
+  "schema": "riemann.t100720.cubic_hinge_rough_prefix.lock.v1",
+  "repository": "gfreund123/riemann",
+  "initial_mathematical_freeze": {
+    "pr": 691,
+    "sha": "be9a4168fa0df971a2fc63176f07ce3beee6c3d4"
+  },
+  "audited_base": {
+    "pr": 695,
+    "branch": "research/gpt56-sol/100700-double-owner-coboundary-closure",
+    "sha": "7b61f6b1998aefa185d0e5beff18e5a456451299"
+  },
+  "external_primary_source": {
+    "author": "Terence Tao",
+    "title": "A remark on partial sums involving the Mobius function",
+    "arxiv": "0908.4323",
+    "journal": "Bull. Aust. Math. Soc. 81 (2010), 343-349",
+    "used_scope": "absolute semigroup reciprocal-Mobius prefix bound only"
+  },
+  "replay": {
+    "verdict": "PASS_T100720_CUBIC_HINGE_ROUGH_PREFIX_ALGEBRA",
+    "proof_object_sha256": "a05a9ed1c455a87115424ec8d4bfb0ec1fc8acc94ce0f36f012c4c35be88f0ba",
+    "replays_external_tao_theorem": false
+  },
+  "withdrawn_inputs_not_used": [
+    "PR #691 L-100603 as originally stated",
+    "PR #691 L-100604 as originally stated",
+    "positive divisor-restriction desquaring shortcut"
+  ],
+  "open_obligations": [
+    "APCC100723",
+    "DPCC100723"
+  ],
+  "rh_established": false
+}
