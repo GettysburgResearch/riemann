@@ -1,7 +1,7 @@
 # L-101101 — The only valid short/long XD projection is the carrier-preserving sum channel
 
 Claim ID: `L-101101`  
-Status: **PROVED EXACT LINEAR-ALGEBIC AND ASYMPTOTIC THEOREM**  
+Status: **PROVED EXACT LINEAR-ALGEBRAIC AND ASYMPTOTIC THEOREM**  
 Created: 2026-08-21  
 Frozen input: PR #694 at `e6d923c1069f5a481abdf0769ca6d870a8b5ae4b`  
 RH status: **not assumed**
