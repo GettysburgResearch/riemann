@@ -1,0 +1,26 @@
+{
+  "auxiliary_unweighted_collar_exponent": "0",
+  "base_pr": 664,
+  "base_sha": "14692244bdaef90793a0c2a1a9bfd6e6b4bb1a2e",
+  "classification": "PASS_T99900_NATIVE_BOX_HALF_ORDER_AND_HARDY_TAIL",
+  "gpmoc99800_proved": false,
+  "half_order_window_estimate_proved": false,
+  "mutations_rejected": [
+    "beta_replaced_by_mu_rejected",
+    "finite_fixture_promoted_to_global_rejected",
+    "half_order_three_band_omitted_rejected",
+    "hardy_identity_promoted_to_gpmoc_rejected",
+    "normalized_box_p_minus_half_rejected",
+    "psd_gram_promoted_to_sign_rejected",
+    "rh_established_by_replay_rejected",
+    "unweighted_window_promoted_to_native_rejected"
+  ],
+  "native_collar_exponent": "-1/2",
+  "native_normalized_prime_exponent": "-1",
+  "poisson_hardy_checks": 3,
+  "proof_object_sha256": "72dad4933ce448abc94c92254f2fe9117205371eb4f244d9f3900be3d3c8c083",
+  "rh_established": false,
+  "schema": "riemann.x99900.native-box-normalization.v1",
+  "window_dictionary_checks": 7,
+  "window_gram_checks": 2
+}
