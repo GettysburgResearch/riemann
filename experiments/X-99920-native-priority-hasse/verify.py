@@ -132,7 +132,7 @@ def check_activation_truncation(labels: Tuple[int, ...], X: int) -> dict:
         used_out[odd] += f
         used_in[even] += f
         assert f >= 0
-        if A.bit_count() % 2:
+        if A.bit_count() % 2:  # odd A -> even A union {i}; product increases.
             assert odd == A
             d = J * (phi[A] - phi[A | (1 << i)])
             assert d >= 0
@@ -149,6 +149,7 @@ def check_activation_truncation(labels: Tuple[int, ...], X: int) -> dict:
     negative_part = max(F(0), -scalar)
     assert negative_part <= residual
 
+    # Exact Stieltjes/coarea check for phi(t)=(X-t)_+/X.
     breakpoints = {0, X}
     for left, right, _ in edge_rows:
         if left < X:
@@ -159,7 +160,7 @@ def check_activation_truncation(labels: Tuple[int, ...], X: int) -> dict:
     for a, b in zip(points, points[1:]):
         if b <= a:
             continue
-        mid2 = a + b
+        mid2 = a + b  # represents 2*midpoint, avoids floats
         crossing = F(0)
         for left, right, J in edge_rows:
             if 2 * left <= mid2 < 2 * min(right, X):
@@ -198,7 +199,7 @@ def check_duplicate_67_native_source() -> dict:
             checks += 1
 
     native = F(-2, 67)
-    auxiliary_half_order = F(-2)
+    auxiliary_half_order = F(-2)  # coefficient after cancelling both sqrt factors
     assert native != auxiliary_half_order
     return {
         "fibre_checks": checks,
@@ -245,6 +246,7 @@ def check_mutations() -> dict:
     activities = tuple(F(1, p) for p in labels)
     k = len(labels)
 
+    # Mutation 1: omit survival in lambda_i. Conservation must fail.
     bad_out = [F(0) for _ in range(1 << k)]
     for i in range(k):
         suffix_mask = ((1 << k) - 1) ^ ((1 << (i + 1)) - 1)
@@ -259,8 +261,10 @@ def check_mutations() -> dict:
             sub = (sub - 1) & suffix_mask
     assert any(bad_out[m] != weight(m, activities) for m in range(1 << k) if m.bit_count() % 2)
 
+    # Mutation 2: collapse the two 67 labels into one. The native middle fibre changes.
     assert F(-1, 67) != F(-2, 67)
 
+    # Mutation 3: a nonmonotone potential can invalidate the truncated-flow capacity argument.
     phi_parent, phi_child = F(1, 3), F(2, 3)
     assert phi_parent < phi_child
 
