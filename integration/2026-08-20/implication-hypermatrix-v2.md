@@ -27,8 +27,11 @@ or a genuine conjunction.
 | `X-DO-HAZARD` | transport | positive two-ended survival/difference tensor | proved in `L-100610` |
 | `E-DO-LP` | energy | two-ended Littlewood--Paley/ANOVA identity | proved in `L-100611` |
 | `K-CUBIC-CVX` | kernel | positive one- and two-ended cubic differences | proved in `L-100612` |
-| `A-FO-ROW` | arithmetic | integrated first-owner row Schur estimate `FOCR100610` | open |
-| `A-LO-COL` | arithmetic | integrated largest-owner column Schur estimate `LOCR100610` | open |
+| `K-CUBIC-SHORT` | kernel/arithmetic | every actual-prime ratio-eight interval is positive | proved in `L-100613` |
+| `K-CUBIC-POWER` | kernel/arithmetic | every `q<=p^A`, `A<e^(3/4)`, interval is eventually positive | proved in `L-100615` |
+| `X-CARRIER-SHORT` | transport | explicit positive `sqrt(X)` carrier and collar-only residual | proved in `L-100614` |
+| `A-FO-ROW` | arithmetic | integrated survival-weighted first-owner collar energy `FOCR100610` | open |
+| `A-LO-COL` | arithmetic | integrated survival-weighted largest-owner collar energy `LOCR100610` | open |
 | `D-CUBIC-NM` | detector | cubic subpower negative mass implies RH | proved on PR #676 |
 | `D-WAVELET` | detector | minimal-wavelet/Mertens critical estimate implies RH | proved / RH-equivalent |
 
@@ -55,46 +58,77 @@ X-DO-HAZARD AND K-CUBIC-CVX
     -> possible negativity confined to nonempty interior prime intervals.
 ```
 
-### `AND-SCHUR`
+### `AND-PRIME-WIDTH`
+
+```text
+K-CUBIC-CVX AND prime-reciprocal interval mass
+    -> K-CUBIC-SHORT
+    -> K-CUBIC-POWER.
+```
+
+The cubic double-difference Harnack cost is `4/3`; Mertens supplies interval
+mass `log A`. Their conjunction proves positivity whenever
+`(4/3) log A<1`.
+
+### `AND-CENTERING`
+
+```text
+X-DO-HAZARD AND explicit cubic deep carrier
+    -> X-CARRIER-SHORT
+    -> Schur matrix contains only partial-activation collars.
+```
+
+The carrier is nonnegative entry by entry and must be removed before absolute
+matrix estimates. Raw row/column suprema are deliberately rejected as
+unnecessarily power-sized.
+
+### `AND-OWNER-ENERGY`
 
 ```text
 A-FO-ROW AND A-LO-COL
-    -> two-sided Schur bound for the interval matrix
+    -> pairwise Cauchy bound for the collar interval matrix
     -> subpower cubic negative mass
     -> D-CUBIC-NM
     -> RH.
 ```
 
-This is the principal new implication-matrix theorem `T-100610`. The one-row
-and one-column separators show that neither marginal estimate alone controls
-physical multiplicity.
+This is the principal new implication-matrix theorem `T-100610`. The inputs
+are survival-weighted row and column energies, not unweighted Schur suprema.
+The one-row and one-column separators show that neither marginal estimate alone
+controls physical multiplicity.
 
-## Regional incoming edges to the two arithmetic marginals
+## Regional incoming edges to the two arithmetic energies
 
 | interval region | row-side input | column-side input | exact status |
 |---|---|---|---|
 | empty interior | first-owner singleton | largest-owner singleton | closed by cubic convexity |
-| compact endpoint ratio | compact finite-band first-owner current | ratio-eight largest-prime packet | algebra closed; absolute Schur sum open |
-| long interior interval | interior finite Euler squaring | cofactor finite Euler squaring | source identities proved; oriented comparison open |
-| divisor-restricted interval | owner difference before renewal | largest owner before renewal | post-sign transport positive, `d^epsilon` cost proved |
+| `q/p<=8` | cubic Harnack | actual-prime residue-class count | closed unconditionally |
+| `q<=p^A`, `A<e^(3/4)` | cubic Harnack | Mertens prime-reciprocal interval mass | closed for large `p` |
+| fully active interval | exact cubic carrier | same carrier in reverse orientation | residual exactly zero |
+| supercritical partial interval | interior finite Euler squaring | cofactor finite Euler squaring | source identities proved; weighted owner energies open |
+| divisor-restricted collar | owner difference before renewal | largest owner before renewal | post-sign transport positive, `d^epsilon` cost proved |
 | smooth/deep region | finite first-owner base | smooth/deep largest-prime sector | negligible/closed |
 
 ## Numbering policy
 
-- Numeric IDs `100610--100612` are unique to this continuation.
+- Numeric IDs `100610--100615` are unique to this continuation.
 - Stable semantic keys above are the normative dependency handles.
 - RH-equivalent statements remain valid detector nodes.
 - A detector is never counted as producer progress without an independently
   proved incoming edge.
 - `FOCR100610` and `LOCR100610` are kept separate; neither may be silently
   renamed as the full scalar estimate.
+- The direct min/max source tensor and the positive survival/difference tensor
+  are distinct representations and must not be conflated.
 
 ## Scientific boundary
 
 ```text
-all algebraic AND-edges              proved
-row/column Schur composition         proved
-FOCR100610                            open
-LOCR100610                            open
-Riemann Hypothesis                    unproved
+all algebraic AND-edges                    proved
+short/power-width interval positivity      proved
+positive carrier subtraction               proved
+survival-weighted owner-energy composition proved
+FOCR100610                                  open
+LOCR100610                                  open
+Riemann Hypothesis                          unproved
 ```
