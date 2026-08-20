@@ -1,0 +1,237 @@
+{
+  "cutoff": "2026-08-20T19:41:23Z",
+  "hyperedges": [
+    {
+      "id": "E01",
+      "inputs": [
+        "IM-S01",
+        "IM-P01"
+      ],
+      "output": "IM-P02",
+      "status": "VERIFIED",
+      "type": "producer"
+    },
+    {
+      "id": "E02",
+      "inputs": [
+        "IM-P02",
+        "IM-M01",
+        "IM-D01"
+      ],
+      "output": "IM-RH",
+      "status": "CONDITIONAL",
+      "type": "closure"
+    },
+    {
+      "claim": "L-101000",
+      "id": "E03",
+      "inputs": [
+        "IM-M01"
+      ],
+      "output": "IM-M02",
+      "status": "VERIFIED",
+      "type": "translation"
+    },
+    {
+      "id": "E04",
+      "inputs": [
+        "IM-M02",
+        "IM-D01"
+      ],
+      "output": "IM-RH",
+      "status": "CONDITIONAL",
+      "type": "closure"
+    },
+    {
+      "id": "E05",
+      "inputs": [
+        "IM-P03",
+        "IM-P04",
+        "IM-M06"
+      ],
+      "output": "IM-M01",
+      "status": "CONDITIONAL",
+      "type": "source-cover"
+    },
+    {
+      "id": "E06",
+      "inputs": [
+        "IM-S02",
+        "IM-P05",
+        "IM-P06"
+      ],
+      "output": "IM-M04",
+      "status": "DECOMPOSITION",
+      "type": "source-cover"
+    },
+    {
+      "id": "E07",
+      "inputs": [
+        "IM-M04",
+        "IM-D02"
+      ],
+      "output": "IM-RH",
+      "status": "CONDITIONAL",
+      "type": "closure"
+    },
+    {
+      "id": "E08",
+      "inputs": [
+        "IM-S02",
+        "IM-P05",
+        "IM-P07",
+        "IM-P08"
+      ],
+      "output": "IM-M05",
+      "status": "DECOMPOSITION",
+      "type": "source-cover"
+    },
+    {
+      "id": "E09",
+      "inputs": [
+        "IM-M05",
+        "IM-D02"
+      ],
+      "output": "IM-RH",
+      "status": "CONDITIONAL",
+      "type": "closure"
+    },
+    {
+      "claim": "L-101001",
+      "id": "E10",
+      "inputs": [
+        "IM-M04"
+      ],
+      "output": "IM-M05",
+      "status": "VERIFIED",
+      "type": "equivalence"
+    },
+    {
+      "claim": "L-101001",
+      "id": "E11",
+      "inputs": [
+        "IM-M05"
+      ],
+      "output": "IM-M04",
+      "status": "VERIFIED",
+      "type": "equivalence"
+    },
+    {
+      "claim": "L-101002",
+      "id": "E12",
+      "inputs": [
+        "IM-P09"
+      ],
+      "output": "IM-M03",
+      "status": "EXACT_REALIZATION",
+      "type": "translation"
+    },
+    {
+      "id": "E13",
+      "inputs": [
+        "IM-M03",
+        "IM-D02"
+      ],
+      "output": "IM-RH",
+      "status": "CONDITIONAL",
+      "type": "closure"
+    },
+    {
+      "id": "E14",
+      "inputs": [
+        "IM-M03",
+        "IM-D03"
+      ],
+      "output": "IM-RH",
+      "status": "CONDITIONAL",
+      "type": "closure"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "IM-S01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-S02",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P02",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P03",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P04",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P05",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P06",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P07",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P08",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-P09",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-M01",
+      "status": "OPEN"
+    },
+    {
+      "id": "IM-M02",
+      "status": "OPEN"
+    },
+    {
+      "id": "IM-M03",
+      "status": "OPEN"
+    },
+    {
+      "id": "IM-M04",
+      "status": "OPEN"
+    },
+    {
+      "id": "IM-M05",
+      "status": "OPEN"
+    },
+    {
+      "id": "IM-M06",
+      "status": "OPEN"
+    },
+    {
+      "id": "IM-D01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-D02",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-D03",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "IM-RH",
+      "status": "UNPROVED"
+    }
+  ],
+  "schema": "riemann.implication-hypergraph.v1"
+}

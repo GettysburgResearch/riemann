@@ -1,0 +1,26 @@
+canonical_id	layer	short_name	pr	head_sha	path	original_id	status	role
+IM-S01	source	duplicate-67 beta source	653	e928fd615d753882706bb88c51b717bd8d4a86ba	claims/lemmas/L-99270-positive-inverse-renewal.md	beta	VERIFIED	source
+IM-S02	source	ordinary Mobius source	674	9962f7f712adc6b4ad72672ecfeace028ba79bdb	claims/theorems/T-99910-minimal-mobius-wavelet.md	mu	VERIFIED	source
+IM-P01	producer	shifted quadratic family	690	36cabbe5843eaa417aac72643c1aad0c2041a31b	claims/lemmas/L-100510-complex-disk-quadratic-positivity.md	L-100510	VERIFIED	producer
+IM-P02	producer	activation-free descent	690	36cabbe5843eaa417aac72643c1aad0c2041a31b	claims/lemmas/L-100511-mixed-bernstein-carriers-and-differential-chain.md	L-100511	VERIFIED	producer
+IM-P03	producer	finite Euler squaring	684	bbf4e2f8633700e4c8cd6cc11874eae3dacccaa8	claims/lemmas/L-100180-adaptive-squaring-crosses-critical-owner-wall.md	L-100180	VERIFIED	producer
+IM-P04	producer	depth-one large collar	684	bbf4e2f8633700e4c8cd6cc11874eae3dacccaa8	claims/lemmas/L-100182-large-prime-collar-is-depth-one-and-positive.md	L-100182	VERIFIED	producer
+IM-P05	producer	minimal ratio-eight wavelet	674	9962f7f712adc6b4ad72672ecfeace028ba79bdb	claims/theorems/T-99910-minimal-mobius-wavelet.md	T-99910	VERIFIED	producer
+IM-P06	producer	largest-prime ownership	688	24a2a748b8b36a70382c88843bb7779caac97e07	claims/lemmas/L-100410-minimal-wavelet-largest-prime-reduction.md	L-100410	VERIFIED	producer
+IM-P07	producer	extra zero moment	685	4f69b7656f42dcb5ff250d13adc9f88e8d18f315	claims/lemmas/L-100310-extra-half-order-notch-and-type-I-decay.md	L-100310	VERIFIED	producer
+IM-P08	producer	Vaughan decomposition	685	4f69b7656f42dcb5ff250d13adc9f88e8d18f315	claims/lemmas/L-100311-vaughan-decomposition-to-one-balanced-trilinear.md	L-100311	VERIFIED	producer
+IM-P09	producer	signed Hasse divergence	680	64e8e138dde15bfdb02d532041ace945c600c912	standalone/2026-08-20-hasse-wavelet-terminal-map/PROOF.md	T-100210	VERIFIED	producer
+IM-M01	middle	critical variation AFCD	690	36cabbe5843eaa417aac72643c1aad0c2041a31b	claims/theorems/T-100510-complex-quadratic-route-to-closure.md	AFCD100510	OPEN_RH_EQUIVALENT	middle
+IM-M02	middle	activation envelope ACAD	687	e9c84904fabf16fd93d16e7aa75d0254ec2bcbf7	claims/lemmas/L-100400-activation-zero-envelope-and-correct-cell-coarea.md	ACAD100400	OPEN_RH_BEARING	middle
+IM-M03	middle	minimal wavelet MWOC	689	1751b5d63d981f1d39e0679a5997a7e32d2f1649	claims/lemmas/L-100500-exact-abel-mertens-wavelet-frame.md	MWOC100500	OPEN_RH_EQUIVALENT	middle
+IM-M04	middle	rough largest-prime LPMW	688	24a2a748b8b36a70382c88843bb7779caac97e07	claims/theorems/T-100400-two-surviving-closure-routes.md	LPMW100410	OPEN_RH_BEARING	middle
+IM-M05	middle	balanced Vaughan BVD	685	4f69b7656f42dcb5ff250d13adc9f88e8d18f315	claims/lemmas/L-100312-balanced-vaughan-deficit-is-rh-equivalent.md	BVD100310	OPEN_RH_EQUIVALENT	middle
+IM-M06	middle	oriented large collar variation	684	bbf4e2f8633700e4c8cd6cc11874eae3dacccaa8	claims/methodology/M-100180-final-large-prime-bilinear-gate.md	M-100180	OPEN_RH_BEARING	middle
+IM-D01	detector	beta Mellin-Landau	653	e928fd615d753882706bb88c51b717bd8d4a86ba	claims/lemmas/L-99270-specialized-landau.md	Landau-beta	VERIFIED	detector
+IM-D02	detector	wavelet reciprocal-zeta Mellin	689	1751b5d63d981f1d39e0679a5997a7e32d2f1649	claims/lemmas/L-100500-exact-abel-mertens-wavelet-frame.md	L-100500	VERIFIED	detector
+IM-D03	detector	Littlewood Mertens dictionary	689	1751b5d63d981f1d39e0679a5997a7e32d2f1649	claims/lemmas/L-100500-exact-abel-mertens-wavelet-frame.md	Littlewood	VERIFIED	detector
+IM-N01	no-go	quadratic positivity alone	690	36cabbe5843eaa417aac72643c1aad0c2041a31b	claims/refutations/R-100510-quadratic-positivity-does-not-control-critical-variation.md	R-100510	FALSE_EDGE	firewall
+IM-N02	no-go	phase neutral zero is root removal	688	24a2a748b8b36a70382c88843bb7779caac97e07	claims/refutations/R-100401-neutral-phase-is-not-root-removal.md	R-100401	FALSE_EDGE	firewall
+IM-N03	no-go	root-free positive square excess	671	2889071e9ebdc412b94cf2cfe74f1fd5142b2857	claims/theorems/T-99960-dual-owner-packing-equivalence.md	T-99960	FALSE_EDGE	firewall
+IM-N04	no-go	positive priority flux subpower	673	e932753906968a9e3037b44b95c5a2a711af1c41	claims/refutations/R-99970-upbf-positive-priority-flux-is-power-sized.md	R-99970	FALSE_EDGE	firewall
+IM-RH	conclusion	Riemann Hypothesis	-	-	-	RH	UNPROVED	conclusion
