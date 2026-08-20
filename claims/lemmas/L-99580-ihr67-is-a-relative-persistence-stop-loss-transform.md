@@ -90,9 +90,10 @@ subset-product measure.
 
 ## 3. Relative quota-complex interpretation
 
-Select every label of `V^+` independently with its stated activity. For a
-selected finite label set `R`, let `K_L[R]` be the multiplicative quota complex
-of subsets with log-cost at most `L`, and define its Euler persistence by
+Select every label of `V^+` independently with its stated activity. For the
+selected, generally infinite label set `R`, let `K_L[R]` be its finite
+scale-`L` multiplicative quota complex of subsets with log-cost at most `L`,
+and define its Euler persistence by
 
 \[
 \operatorname{PE}_L(K[R])
