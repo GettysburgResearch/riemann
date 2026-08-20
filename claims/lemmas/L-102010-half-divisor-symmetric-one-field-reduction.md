@@ -3,6 +3,7 @@
 Claim ID: `L-102010`
 Status: **PROVED EXACT SYMMETRIZATION AND HARDY REDUCTION; FINAL ENERGY OPEN**
 Created: 2026-08-21
+Audited: 2026-08-21
 Depends on: `L-102009`
 RH status: **not assumed**
 
@@ -109,17 +110,25 @@ Then
 \tag{L-102010.9}
 \]
 
-Young's inequality gives
+On the Fourier line, `mathcal T` has multiplier
 
 \[
-\|\mathcal T\|_{L^2(du)\to L^2(du)}
-\le\int_0^\infty e^{-t/2}dt=2,
+\frac1{1/2-i\xi}.
 \]
 
-hence
+Therefore `I-2mathcal T` has multiplier
 
 \[
-\boxed{\|f-2\mathcal Tf\|_2\le5\|f\|_2.}
+\frac{-3/2-i\xi}{1/2-i\xi},
+\]
+
+whose modulus is at most `3`, with equality at `xi=0`. Plancherel gives the
+sharp full-line bound
+
+\[
+\boxed{
+\|f-2\mathcal Tf\|_{L^2(du)}\le3\|f\|_{L^2(du)}.
+}
 \tag{L-102010.10}
 \]
 
@@ -146,7 +155,7 @@ Applying (L-102010.10) to this finite field gives
 \[
 \boxed{
 \|H_{U,+}\|_{L^2(I_X,dY/Y)}
-\le5\|H_{U,-}\|_{L^2(I_X^+,dY/Y)}.
+\le3\|H_{U,-}\|_{L^2(I_X^+,dY/Y)}.
 }
 \tag{L-102010.11}
 \]
@@ -166,7 +175,7 @@ Cauchy--Schwarz in (L-102010.7), followed by (L-102010.11), yields
 \[
 \boxed{
 |\mathcal B_U(X)|
-\le5\mathcal H_U(X).
+\le3\mathcal H_U(X).
 }
 \tag{L-102010.13}
 \]
