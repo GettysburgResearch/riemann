@@ -1,0 +1,56 @@
+{
+  "publication_base": {
+    "branch": "research/gpt56-pro/99960-dual-owner-packing-equivalence",
+    "pr": 671,
+    "sha": "2889071e9ebdc412b94cf2cfe74f1fd5142b2857"
+  },
+  "origin_base": {
+    "branch": "research/gpt56-pro/99800-canonical-scalar-spine-gpmoc",
+    "pr": 659,
+    "sha": "83c17b32a99ac9e1aa5aec3168535550eb286636"
+  },
+  "created_utc": "2026-08-20T00:00:00Z",
+  "imports": [
+    {
+      "pr": 653,
+      "scope": "scalar SHARP Mellin-Landau and negative-mass consumer",
+      "sha": "e928fd615d753882706bb88c51b717bd8d4a86ba"
+    },
+    {
+      "pr": 656,
+      "scope": "compact filter, phase gap and growing moments",
+      "sha": "db404ec00cf022f003ee2bbee66e0cf62ac45003"
+    },
+    {
+      "pr": 659,
+      "scope": "canonical GPMOC and positive inverse",
+      "sha": "83c17b32a99ac9e1aa5aec3168535550eb286636"
+    },
+    {
+      "pr": 660,
+      "scope": "native first-owner LP energy and OCE contract",
+      "sha": "ca3c055307e6804ae904cb9105594dd3f2408ba3"
+    },
+    {
+      "pr": 666,
+      "scope": "positive Hardy-tail identity and diagonal/free-label firewall",
+      "sha": "7ae9e3e15b8bcb0a5f382db49f31ad385b02e24a"
+    },
+    {
+      "pr": 671,
+      "scope": "later RH-equivalence disposition; publication base",
+      "sha": "2889071e9ebdc412b94cf2cfe74f1fd5142b2857"
+    }
+  ],
+  "later_hardening": {
+    "pr": 660,
+    "scope": "current head refutes universal OCE and retains only the source-specific frontier",
+    "sha": "b3830a12e8823ca74d2a2f709581908c8a9e5402"
+  },
+  "intended_branch": "review/gpt56-pro/100140-poisson-phase-oce-supplement",
+  "intended_commit": "review: preserve signed Poisson phase and frozen OCE supplement (T100140)",
+  "namespace_migration": "T/L/M/R/X-99900..99902 -> 100140..100142",
+  "original_zip_sha256": "8b98241f6fd380c5fa3f5a7da820f29f60ad923fc64d300cd2fbb269301461ba",
+  "schema": "riemann.t100140.source-lock.v1",
+  "scientific_status": "Riemann Hypothesis remains unproved"
+}
