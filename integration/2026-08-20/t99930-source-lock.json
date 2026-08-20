@@ -1,0 +1,27 @@
+{
+  "schema": "riemann.t99930.source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "created": "2026-08-20",
+  "base": {
+    "pull_request": 664,
+    "branch": "research/gpt56-sol/99810-reversible-network-bellman",
+    "head_sha": "14692244bdaef90793a0c2a1a9bfd6e6b4bb1a2e"
+  },
+  "compared_live_frontiers": {
+    "canonical_scalar_gpmoc_pr": 659,
+    "first_owner_littlewood_paley_pr": 660,
+    "ihr67_stop_loss_pr": 661,
+    "abelian_phase_gap_pr": 662,
+    "supercritical_sharp_power_pr": 663,
+    "ratio67_window_pr": 664
+  },
+  "new_target": "C2(X)=16(1-67^(-3/2))/zeta(3/2)*X-G2(X)",
+  "status": {
+    "activation_zero_supercritical_positivity": true,
+    "subcritical_taylor_remainder_positivity": true,
+    "critical_kernel_and_mellin_reduction": true,
+    "critical_envelope_sign": false,
+    "critical_negative_mass_bound": false,
+    "rh_established": false
+  }
+}
