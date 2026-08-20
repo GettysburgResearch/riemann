@@ -1,0 +1,29 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "base_pr": 675,
+  "base_sha": "e21383e7522962182491f88301b3cbd375d6d6d0",
+  "classification": "PASS_X_100210_HASSE_WAVELET_TERMINAL_MAP",
+  "does_not_prove": [
+    "signed nonzero-phase physical packing",
+    "MWOC99910",
+    "Riemann Hypothesis"
+  ],
+  "euler_product_symbol_checks": 384,
+  "flow_balance_checks": 192,
+  "flow_divergence_checks": 192,
+  "minimal_wavelet_dictionary_checks": 128,
+  "mwoc99910_proved": false,
+  "positive_variation_firewall_checks": 5,
+  "proof_object_sha256": "570ecdde4e647056e8f1f5ce7a1510189829367ce1ee1dd982d0420e71539c1c",
+  "proves": [
+    "flow-independent Hasse divergence",
+    "closed finite Euler-product phase symbol",
+    "exact neutral-phase cancellation",
+    "native 1/p normalized minimal-wavelet dictionary",
+    "signed/positive-variation separation"
+  ],
+  "rh_established": false,
+  "schema": "riemann.x100210.hasse-wavelet-terminal-map.v1",
+  "sibling_pr": 672,
+  "sibling_sha": "2a351548eb7960ff8ae99f193c10e278984c5657"
+}
