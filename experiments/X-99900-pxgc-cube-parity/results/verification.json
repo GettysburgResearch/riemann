@@ -1,0 +1,46 @@
+{
+  "audits": [
+    {
+      "edges_used": 1,
+      "residual": "1/2",
+      "vertices": 2
+    },
+    {
+      "edges_used": 3,
+      "residual": "1/3",
+      "vertices": 4
+    },
+    {
+      "edges_used": 7,
+      "residual": "9/35",
+      "vertices": 8
+    },
+    {
+      "edges_used": 7,
+      "residual": "304920/318719",
+      "vertices": 8
+    },
+    {
+      "edges_used": 15,
+      "residual": "32/77",
+      "vertices": 16
+    }
+  ],
+  "layer_fixture": {
+    "collar_bound": "2/7",
+    "complete_residual": "5/21"
+  },
+  "native_two_label_67_residual": "304920/318719",
+  "proof_object_sha256": "a57ee23ef3ffb83c571097eda4107cb5eed56201b265777b3ddb6d10c4498892",
+  "schema": "riemann.t99900.pxgc_cube_parity.v1",
+  "scope": {
+    "activation_layer_reduction_proved": true,
+    "complete_cube_flow_proved": true,
+    "epxgc99900_proved": false,
+    "path_contract_corrected": true,
+    "pxgc99700_proved": false,
+    "rh_established": false,
+    "source_blind_cube_closure_refuted": true
+  },
+  "verdict": "PASS_T99900_EXACT_CUBE_FLOW_AND_PARITY_BARRIER"
+}
