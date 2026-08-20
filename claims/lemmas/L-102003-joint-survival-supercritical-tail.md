@@ -1,94 +1,124 @@
-# L-102003 — Joint min-max survival suppresses supercritical endpoint pairs
+# L-102003 — Exact finite joint-tail law and the supercritical-survival no-go
 
-Claim ID: `L-102003`  
-Status: **PROVED ASYMPTOTIC WEIGHT THEOREM; COLLAR AMPLITUDE STILL OPEN**  
-Created: 2026-08-21  
-Depends on: PR #691 `L-100615--L-100616`  
+Claim ID: `L-102003`
+Status: **PROVED EXACT FINITE-TRUNCATION IDENTITY; EARLIER SUPPRESSION CLAIM WITHDRAWN**
+Created: 2026-08-21
+Audited: 2026-08-21
+Depends on: PR #691 `L-100616`
 RH status: **not assumed**
 
-Let the ordered future prime labels be `p_i`, with native activities
+The joint least/greatest-owner law must be interpreted first on a finite label
+set. Let the ordered labels be `1,...,k`, put
 
 \[
-r_i=p_i^{-1/2},
+r_i=p_i^{-1/2},\qquad
+L_i=\prod_{h<i}(1-r_h),\qquad
+R_j^{(k)}=\prod_{j<h\le k}(1-r_h),
 \]
 
-and joint least/greatest-owner probability
+and
 
 \[
-\pi_{ij}=r_ir_jL_iR_j,
+\pi_{ij}^{(k)}=r_ir_jL_iR_j^{(k)}.
+\]
+
+For `j>=1`,
+
+\[
+R_{j-1}^{(k)}=(1-r_j)R_j^{(k)},
 \qquad
-L_i=\prod_{h<i}(1-r_h),
-\qquad
-R_j=\prod_{h>j}(1-r_h).
-\]
-
-Fix `A>1`. Consider the supercritical owner region
-
-\[
-\mathcal S_A=\{(i,j):i<j,\ p_j>p_i^A\}.
-\]
-
-Then the complete joint probability mass of this region is finite and, as the lower endpoint threshold `P` tends to infinity,
-
-\[
-\boxed{
-\sum_{\substack{i<j\\p_i\ge P\\p_j>p_i^A}}
-\pi_{ij}
-\longrightarrow0.
-}
+R_j^{(k)}-R_{j-1}^{(k)}=r_jR_j^{(k)}.
 \tag{L-102003.1}
 \]
 
-More quantitatively, the contribution with a fixed lower owner `i` obeys
+Therefore, for every `J>i`,
 
 \[
 \boxed{
-\sum_{j:\,p_j>p_i^A}\pi_{ij}
-\le r_iL_i\,R_{J(i)},
+\sum_{j=J}^{k}\pi_{ij}^{(k)}
+=r_iL_i\bigl(1-R_{J-1}^{(k)}\bigr).
 }
 \tag{L-102003.2}
 \]
 
-where `J(i)` is the first index with `p_(J(i))>p_i^A`. Indeed,
+The earlier version had the telescoping sign reversed. The right tail is not
+bounded by `r_i L_i R_J`.
+
+## Fixed least owner: supercritical widths retain full mass
+
+Fix `i` and any finite threshold index `J>i`, for example the first index with
 
 \[
-\sum_{j\ge J} r_jR_j
-\le \sum_{j\ge J}(R_{j-1}-R_j)
-=R_{J-1}
+p_J>p_i^A
 \]
 
-because
+for a fixed `A>1`. Since
 
 \[
-R_{j-1}=(1-r_j)R_j,
+\sum_{h\ge J}r_h=\sum_{h\ge J}p_h^{-1/2}=\infty,
+\]
+
+one has
+
+\[
+R_{J-1}^{(k)}\longrightarrow0
+\qquad(k\to\infty).
+\]
+
+Hence
+
+\[
+\boxed{
+\sum_{j=J}^{k}\pi_{ij}^{(k)}
+\longrightarrow r_iL_i.
+}
+\tag{L-102003.3}
+\]
+
+Thus, conditional on a fixed least owner `i`, asymptotically all of its
+finite-truncation pair mass has greatest owner beyond every fixed power of
+`p_i`. Joint survival prevents an artificial divergent marginal norm, but it
+does **not** suppress the supercritical-width region.
+
+## Large least owners do have small total mass
+
+The left survival telescopes in the opposite direction:
+
+\[
+L_{i+1}=(1-r_i)L_i,
 \qquad
-R_j-R_{j-1}=r_jR_j.
+L_i-L_{i+1}=r_iL_i.
 \]
 
-Thus the right tail is exactly telescoping at the joint-law level. Summing over `i` and using the analogous left telescoping bound
+Consequently, if `I` is the first index with `p_I>=P`,
 
 \[
-\sum_i r_iL_i\le1
+\boxed{
+\sum_{i=I}^{k}r_iL_i
+=L_I-L_{k+1}
+\le L_I,
+}
+\tag{L-102003.4}
 \]
 
-proves finiteness.
+and `L_I->0` as `P->infinity`. This only removes rows whose **least** owner is
+large. It gives no saving for the finitely many low least-owner rows, which
+carry essentially full mass into arbitrarily wide intervals by
+(L-102003.3).
 
-To obtain vanishing as `P->infinity`, note that
+## Infinite-source firewall
 
-\[
-R_{J(i)}=\prod_{p>p_i^A}(1-p^{-1/2})
-\]
+For the infinite Bernoulli family, every fixed right survival product is zero
+because `sum p^-1/2` diverges. Individual finite min--max atoms therefore lose
+their mass to a greatest owner escaping to infinity. One may not define an
+infinite pair law by simply inserting the zero infinite products and then
+infer a useful tail estimate.
 
-when the finite label truncation is sent to infinity. Since
-
-\[
-\sum_{p>x}p^{-1/2}=\infty,
-\]
-
-the infinite right survival equals zero for every fixed `i`. For a finite truncation `k`, the mass is a probability and monotone in `k`; passing to the infinite source gives zero mass to the event that a selected Bernoulli family has a finite least owner and a greatest owner exceeding every prescribed power of it.
-
-The useful finite-scale interpretation is instead conditional: after restricting to labels active at a physical endpoint `X`, the right survival beyond `p_i^A` is the probability that no active label larger than the candidate greatest owner is selected. The joint law therefore never pays the divergent sum of one-sided owner marginals.
-
-## Boundary
-
-This theorem controls only the **probability weight** of extreme owner pairs. It does not control the amplitude of the corresponding collar scalar `H_(ij)(X)`. A conclusion-facing estimate still requires a pointwise or mean-square collar certificate whose growth is compatible with the joint survival. No such amplitude theorem is claimed here.
+```text
+earlier right-tail suppression claim       FALSE
+finite joint min--max identity             PROVED EXACT
+large least-owner mass vanishes            PROVED
+fixed least-owner supercritical mass       ASYMPTOTICALLY FULL
+collar amplitude/sign estimate             STILL OPEN
+Riemann Hypothesis                         UNPROVED
+```
