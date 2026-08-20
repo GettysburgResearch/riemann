@@ -1,0 +1,10 @@
+{
+  "schema": "riemann.t100200.source-lock.v1",
+  "base": {"pr": 672, "sha": "2a351548eb7960ff8ae99f193c10e278984c5657"},
+  "external_sources": [
+    {"pr": 590, "sha": "d42817f4de15b97d37f760578d64d067a77be5c5", "scope": "L-97700--L-97701"},
+    {"pr": 668, "sha": "15719b975115ecad1b23264c6a6303899b4c99dc", "scope": "quadratic positivity and critical descent"}
+  ],
+  "open_gates": ["CEHC100200", "RAPC100210"],
+  "rh_established": false
+}
