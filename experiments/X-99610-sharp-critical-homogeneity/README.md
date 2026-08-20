@@ -1,0 +1,1 @@
+Run `python3 verify.py`. Expected: `PASS_T99610_SHARP_CRITICAL_HOMOGENEITY_HARDENING`. The checker authenticates exact finite convolution/owner algebra and rational phase-transition constants; it does not prove SOCE99610 or RH.
