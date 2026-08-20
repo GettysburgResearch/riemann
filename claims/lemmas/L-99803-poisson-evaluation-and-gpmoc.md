@@ -12,6 +12,10 @@ Write
 \[
 f_L(y)=\sum_n c_{L,y}(n),
 \qquad
+c_{L,y}(n)=
+\frac{\beta_{67}(n)}{\sqrt n}\,
+(\mathcal F_LT)(y/n),
+\qquad
 \tau_L=\frac1{\log(L+e)}.
 \]
 

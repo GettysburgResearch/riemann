@@ -98,7 +98,11 @@ def main() -> None:
     result = run()
     out = Path(__file__).resolve().parent / "results" / "verification.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    out.write_text(
+        json.dumps(result, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(result["classification"])
     print(result["proof_object_sha256"])
 
