@@ -1,0 +1,38 @@
+{
+  "schema": "riemann.t99900.source-lock.v1",
+  "created": "2026-08-20",
+  "base": {
+    "pr": 664,
+    "sha": "14692244bdaef90793a0c2a1a9bfd6e6b4bb1a2e",
+    "branch": "research/gpt56-sol/99810-reversible-network-bellman"
+  },
+  "binding_inputs": [
+    {
+      "pr": 658,
+      "sha": "3dd7eacdadc76822e25ee630a474580259dd64fb",
+      "scope": "exact normalized logarithmic-box source pairing"
+    },
+    {
+      "pr": 659,
+      "sha": "83c17b32a99ac9e1aa5aec3168535550eb286636",
+      "scope": "literal GPMOC coefficient packet"
+    },
+    {
+      "pr": 664,
+      "sha": "14692244bdaef90793a0c2a1a9bfd6e6b4bb1a2e",
+      "scope": "pair/collar results and unweighted-window statement under audit"
+    }
+  ],
+  "forbidden_promotions": [
+    "p^-1/2 normalized-box operator to native p^-1 source",
+    "unweighted Mertens window to native collar coefficient",
+    "PSD block kernel to one-sided sign",
+    "Hardy-tail identity to GPMOC proof",
+    "Riemann Hypothesis to established"
+  ],
+  "status": {
+    "gpmoc99800_proved": false,
+    "half_order_window_estimate_proved": false,
+    "rh_established": false
+  }
+}
