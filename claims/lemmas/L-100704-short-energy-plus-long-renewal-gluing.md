@@ -74,6 +74,7 @@ for `G_mu`. The minimal-wavelet Mellin--Landau theorem yields
 \Longrightarrow RH.
 }
 \tag{L-100704.4}
+\]
 
 ## Why the two statements are complementary
 
