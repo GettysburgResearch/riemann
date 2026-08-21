@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "abel_witnesses": {
+      "generic_X8_q4_n3": "-1",
+      "order2_X60_Q59_n11": "-13/16",
+      "order3_X520_Q520_n15": "-91/256",
+      "order4_X8000_Q8000_n23": "-1168054960769/4096"
+    },
+    "balanced_tree_carry_rows": 2016,
+    "balanced_tree_entropy_rows": 63,
+    "formal_selberg_carry_rows": 4750,
+    "mutation_tests": 4,
+    "nyman_carry_rows": 16065
+  },
+  "proof_boundary": "Exact finite floor, formal-log, tree, and Abel-counterexample algebra only; no atomized energy bound, ETSR recurrence, or RH claim is certified.",
+  "proof_object_sha256": "8689c4233cf0c13d5eeae4db6a54a5cf48f84a5615d157d2ab36593da37bdfeb",
+  "schema": "riemann.x29001.atomized-carry-selberg-kummer.v1",
+  "verdict": "EXACT_ATOMIZED_CARRY_SELBERG_KUMMER_AND_TREE_ALGEBRA_VERIFIED",
+  "verified": true
+}
