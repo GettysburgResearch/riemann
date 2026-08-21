@@ -1,0 +1,16 @@
+test_passes_nontrivial_interval_certificate (test_verify.WeightedSchurVerifierTests.test_passes_nontrivial_interval_certificate) ... ok
+test_rejects_false_odd_gap (test_verify.WeightedSchurVerifierTests.test_rejects_false_odd_gap) ... ok
+test_rejects_false_weighted_coercivity (test_verify.WeightedSchurVerifierTests.test_rejects_false_weighted_coercivity) ... ok
+test_rejects_incomplete_even_basis (test_verify.WeightedSchurVerifierTests.test_rejects_incomplete_even_basis) ... ok
+test_rejects_insufficient_lower_gram_floor (test_verify.WeightedSchurVerifierTests.test_rejects_insufficient_lower_gram_floor) ... ok
+test_rejects_non_even_projection (test_verify.WeightedSchurVerifierTests.test_rejects_non_even_projection) ... ok
+test_rejects_parity_breaking_midpoint (test_verify.WeightedSchurVerifierTests.test_rejects_parity_breaking_midpoint) ... ok
+test_rejects_understated_dual_residual (test_verify.WeightedSchurVerifierTests.test_rejects_understated_dual_residual) ... ok
+test_rejects_understated_operator_error_dual_budget (test_verify.WeightedSchurVerifierTests.test_rejects_understated_operator_error_dual_budget) ... ok
+test_rejects_understated_rayleigh_upper (test_verify.WeightedSchurVerifierTests.test_rejects_understated_rayleigh_upper) ... ok
+test_rejects_wrong_gram_order (test_verify.WeightedSchurVerifierTests.test_rejects_wrong_gram_order) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.005s
+
+OK

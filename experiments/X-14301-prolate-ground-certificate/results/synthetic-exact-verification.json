@@ -1,0 +1,65 @@
+{
+  "aligned_ground_distance_squared_upper": "1/50",
+  "candidate_norm_squared": "2",
+  "certificate_sha256": "926b64fac2cd4b5c8861ee4b122df37da40295da446348a31bdf84beb1d91e33",
+  "claim_ids": [
+    "L-14301",
+    "X-14301"
+  ],
+  "decimal_display_notice": "Decimal strings are truncated toward zero for human display only; all rigorous values are the exact fractions above.",
+  "dimension": 4,
+  "display_decimals_truncated_toward_zero": {
+    "aligned_ground_distance_squared_upper": "0.020000000000000000",
+    "effective_gap_even": "1.000000000000000000",
+    "effective_gap_odd": "2.000000000000000000",
+    "effective_residual_norm_upper": "0.100000000000000000",
+    "ground_eigenvalue_lower": "-0.010000000000000000",
+    "ground_eigenvalue_upper": "0.000000000000000000",
+    "operator_radius_upper": "0.000000000000000000",
+    "tan_ground_angle_upper": "0.100000000000000000"
+  },
+  "effective_gap_even": "1",
+  "effective_gap_odd": "2",
+  "effective_residual_norm_upper": "1/10",
+  "global_spectral_gap_lower": "1",
+  "ground_eigenvalue_interval": {
+    "lower": "-1/100",
+    "upper": "0"
+  },
+  "ldl_pivots": {
+    "even_complement": [
+      "2"
+    ],
+    "odd_sector": [
+      "2",
+      "4"
+    ]
+  },
+  "logical_scope": "Every symmetric parity-commuting exact matrix inside the supplied entry boxes has a unique global ground state in the even sector, with the reported eigenvalue and angle bounds. Any weighted projective result additionally assumes the supplied exact Gram and target-tail data. Matrix identity, exact parity, Gram identity, and target provenance are external gates.",
+  "matrix_operator_radius_upper": "0",
+  "midpoint_rayleigh_value": "0",
+  "midpoint_residual_norm_squared": "1/100",
+  "midpoint_residual_norm_upper": "1/10",
+  "parity_dimensions": {
+    "even": 2,
+    "odd": 2
+  },
+  "schema": "riemann.prolate-ground-certificate-result.v1",
+  "status": "PASS",
+  "tan_ground_angle_upper": "1/10",
+  "weighted_projective": {
+    "candidate_norm_upper": "3/2",
+    "complement_factor_ldl_pivots": [
+      "2"
+    ],
+    "even_complement_factor_upper": "2",
+    "gram_ldl_pivots": [
+      "2",
+      "2",
+      "3",
+      "3"
+    ],
+    "target_line_distance_upper": "31/100",
+    "target_tail_upper": "1/100"
+  }
+}
