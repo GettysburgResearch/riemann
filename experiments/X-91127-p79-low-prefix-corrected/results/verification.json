@@ -1,0 +1,9 @@
+{
+  "classification": "PASS_P79_LOW_PREFIX_CORRECTED_CELL_DERIVATIVE",
+  "directed_checks": 383472,
+  "minimum_score_directed_lower_decimal": 5.27,
+  "minimum_target_directed_lower_decimal": 4.31,
+  "score_margin_certified_above": "1",
+  "scope": "Exact Fraction interval replay over every P79 odd threshold below 4096, every child activation cell 1<=y<83 and every real p>=max(83,t/y). It certifies separate target and score Hall feasibility only.",
+  "target_margin_certified_above": "1"
+}
