@@ -1,0 +1,36 @@
+{
+  "activation": {
+    "X": 1000000000000,
+    "activation": "1000000000000/3",
+    "cell": [
+      333333333333,
+      333333333334
+    ],
+    "k": 3,
+    "lost_target": "0.096225044864733149197853386761814995542731817321830845346604853316179001023365714",
+    "q_upper": "0.16666666666697916666666677083333333345214843750000488281250010096231710148404341",
+    "target_upper": "0.57735026918731636343239374154553599250667828445406546537756816391626699107141631",
+    "test_s": "1999999999999/6"
+  },
+  "firewalls": {
+    "JNTLC": "OPEN",
+    "branchwise_positive_child": false,
+    "negative_q2_child": true,
+    "pr508_interval_certificate_used": false
+  },
+  "frozen_heads": {
+    "pr518": "3277b831b30f4783ed3b087df57e95b9f7dfd7b0",
+    "pr521": "b4a60a54b1d730a73ab1eb6bb571485dd40438d0"
+  },
+  "proof_object_sha256": "53a713f47f0db6ed47614c6399f62ff52e2a182431b8c1436cec6c614b4f7f90",
+  "registry": {
+    "finite_occurrences_536": 2473,
+    "k67_mu": -1,
+    "squarefree_atoms_536": 327,
+    "terminal_primes_871": 132,
+    "zero_boundaries_536": 4
+  },
+  "rh_proved": false,
+  "schema": "riemann.review.pr518-pr521.validator.v2",
+  "verdict": "PASS_PR518_PR521_VALIDATOR_V2"
+}
