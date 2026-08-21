@@ -1,0 +1,98 @@
+{
+  "coefficient_rows_0_to_4": [
+    [
+      "1/2",
+      "-1/2",
+      "-1/2"
+    ],
+    [
+      "3/4",
+      "-3/4",
+      "0",
+      "1/4"
+    ],
+    [
+      "15/8",
+      "-15/8",
+      "3/8",
+      "1/4",
+      "-1/8"
+    ],
+    [
+      "105/16",
+      "-105/16",
+      "15/8",
+      "5/16",
+      "-5/16",
+      "1/16"
+    ],
+    [
+      "945/32",
+      "-945/32",
+      "315/32",
+      "0",
+      "-15/16",
+      "9/32",
+      "-1/32"
+    ]
+  ],
+  "confluence_errors": [
+    0.004738405445224125,
+    0.0011884432157024951,
+    0.0002973518843273654,
+    7.435305374102655e-05
+  ],
+  "exact_coefficient_checks": 75,
+  "gates": {
+    "exact_coefficient_crosscheck": true,
+    "partial_fraction_identity": true,
+    "single_euler_polynomial": true,
+    "synthetic_terminal_isolation": true,
+    "three_point_confluence": true,
+    "zero_kernel_identity": true
+  },
+  "max_euler_weight_error": 3.053346674388655e-78,
+  "max_partial_fraction_error": 8.640384405262603e-79,
+  "max_zero_kernel_error": 1.0795210693868056e-77,
+  "scope": "Finite exact/high-precision synthetic algebra only; no Riemann-data sign and no RH claim.",
+  "status": "PASS_X_90904_SINGLE_SAFE_LINE",
+  "terminal_scaled_values": [
+    [
+      0,
+      2.2129037714664057
+    ],
+    [
+      2,
+      0.1756142884048268
+    ],
+    [
+      4,
+      -1.4062138072569406
+    ],
+    [
+      8,
+      -2.442028275328452
+    ],
+    [
+      12,
+      -2.0994274081798325
+    ],
+    [
+      20,
+      -1.8989762526496081
+    ],
+    [
+      32,
+      -1.935758208544665
+    ]
+  ],
+  "zero_kernel_values_0_to_6": [
+    1.8255396304351048,
+    3.3691618164676704,
+    8.231376845946492,
+    24.715779272794553,
+    87.00986239466071,
+    349.6394508710592,
+    1606.5655388324444
+  ]
+}
