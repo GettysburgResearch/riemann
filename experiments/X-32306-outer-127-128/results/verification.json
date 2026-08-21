@@ -1,0 +1,42 @@
+{
+  "classification": "DIRECTED_OUTER_127_128_SHARP_VERIFIED",
+  "continuum_tail_lower_gt_103_over_1000": true,
+  "digits": 14,
+  "finite_endpoint_max": 65535,
+  "finite_new_strip_rows_checked": 16777152,
+  "minimum_finite_certificate": {
+    "T": 65535,
+    "denominator": 895,
+    "j": 896,
+    "lower_numerator_scaled": "2763338442435708"
+  },
+  "new_cells_strictly_negative_gates": {
+    "100": true, "101": true, "102": true, "103": true, "104": true, "105": true, "106": true, "107": true,
+    "108": true, "109": true, "110": true, "111": true, "112": true, "113": true, "114": true, "115": true,
+    "116": true, "117": true, "118": true, "119": true, "120": true, "121": true, "122": true, "123": true,
+    "124": true, "125": true, "126": true, "127": true,
+    "64": true, "65": true, "66": true, "67": true, "68": true, "69": true, "70": true, "71": true,
+    "72": true, "73": true, "74": true, "75": true, "76": true, "77": true, "78": true, "79": true,
+    "80": true, "81": true, "82": true, "83": true, "84": true, "85": true, "86": true, "87": true,
+    "88": true, "89": true, "90": true, "91": true, "92": true, "93": true, "94": true, "95": true,
+    "96": true, "97": true, "98": true, "99": true
+  },
+  "new_local_lower_gt_minus_4K_over_25_gates": {
+    "100": true, "101": true, "102": true, "103": true, "104": true, "105": true, "106": true, "107": true,
+    "108": true, "109": true, "110": true, "111": true, "112": true, "113": true, "114": true, "115": true,
+    "116": true, "117": true, "118": true, "119": true, "120": true, "121": true, "122": true, "123": true,
+    "124": true, "125": true, "126": true, "127": true,
+    "64": true, "65": true, "66": true, "67": true, "68": true, "69": true, "70": true, "71": true,
+    "72": true, "73": true, "74": true, "75": true, "76": true, "77": true, "78": true, "79": true,
+    "80": true, "81": true, "82": true, "83": true, "84": true, "85": true, "86": true, "87": true,
+    "88": true, "89": true, "90": true, "91": true, "92": true, "93": true, "94": true, "95": true,
+    "96": true, "97": true, "98": true, "99": true
+  },
+  "proof_boundary": "finite new strip through T=65535; T>=65536 analytic via integral cell tail; RH not certified",
+  "schema": "X-32306-outer-one-hundred-twenty-seven-one-hundred-twenty-eighths-v1",
+  "sha256_without_digest": "af9a1a3076f7db5eeb430ed15ecda1ab27d3b4e1350f5902a1146e8843bf7a81",
+  "tail_at_T65536_gt_21_over_250": true,
+  "tail_error_upper_lt_1218": true,
+  "uniform_adverse_transition_margin_at_K64": "3/250",
+  "uniform_same_cell_margin": "K/125"
+}
