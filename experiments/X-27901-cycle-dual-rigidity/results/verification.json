@@ -1,0 +1,23 @@
+{
+  "classification": "EXACT_CYCLE_DUAL_RIGIDITY_MUTATIONS_VERIFIED",
+  "counts": {
+    "atomic_pairing_rows": 2013,
+    "balanced_split_rows": 131584,
+    "dyadic_defect_rows": 4096
+  },
+  "proof_object_sha256": "20575c92c63194adfb31a1beca9c45fdfc1456e92f76cd09b975cf71fcf05c49",
+  "scope": {
+    "certifies": [
+      "q=2 floor atom is capacity-feasible",
+      "its defect and dyadic curvature oscillate exactly",
+      "floor-atomic target pairing is nonpositive for rational controls"
+    ],
+    "does_not_certify": [
+      "global representation of every dual",
+      "DCD",
+      "Cycle Debt",
+      "WSTS",
+      "RH"
+    ]
+  }
+}
