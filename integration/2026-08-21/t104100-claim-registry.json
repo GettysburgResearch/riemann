@@ -1,0 +1,45 @@
+{
+  "schema": "riemann.t104100.claim-registry.v1",
+  "claims": [
+    {
+      "id": "M-104100",
+      "role": "methodology",
+      "status": "PROVED_EXACT_CLASSIFICATION"
+    },
+    {
+      "id": "L-104100",
+      "role": "lemma",
+      "status": "PROVED_EXACT"
+    },
+    {
+      "id": "L-104101",
+      "role": "lemma",
+      "status": "PROVED_EXACT"
+    },
+    {
+      "id": "R-104100",
+      "role": "refutation",
+      "status": "PROVED_EXACT"
+    },
+    {
+      "id": "T-104100",
+      "role": "conditional_closure",
+      "status": "PROVED_CONDITIONAL_IMPLICATION"
+    },
+    {
+      "id": "SORR104100",
+      "role": "terminal_arithmetic_input",
+      "status": "OPEN_RH_BEARING"
+    },
+    {
+      "id": "RFCP104100",
+      "role": "terminal_arithmetic_input",
+      "status": "OPEN_RH_BEARING"
+    },
+    {
+      "id": "RH",
+      "role": "conclusion",
+      "status": "UNPROVED"
+    }
+  ]
+}

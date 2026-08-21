@@ -1,0 +1,27 @@
+{
+  "base_pr": 704,
+  "base_sha": "66f755df4321a03874e0da3f61b033300173e364",
+  "classification": "PASS_T104100_ROOT_RETURN_ROOT_FREE_QUOTIENT",
+  "mutations_rejected": [
+    "excess_only_promoted_to_root_control_rejected",
+    "moving_completed_observable_promoted_to_fixed_detector_rejected",
+    "pairwise_positivity_promoted_to_all_prime_cone_rejected",
+    "psd_kernel_promoted_to_linear_sign_rejected",
+    "rh_equivalent_statement_promoted_to_proved_rejected",
+    "supercritical_positivity_promoted_to_critical_sign_rejected",
+    "theta_equal_one_called_strict_return_rejected"
+  ],
+  "pairwise_all_factor_countermodel": true,
+  "proof_object_sha256": "81cb88b2e59748ab0db920d5876c5585c543e0adae2e81bb4aae36c6d46bab57",
+  "psd_linear_sign_countermodel": true,
+  "rfcp104100_proved": false,
+  "rh_established": false,
+  "root_excess_absorption_checks": 10000,
+  "root_square_checks": 5,
+  "schema": "riemann.x104100.root-return-quotient.v1",
+  "sorr104100_proved": false,
+  "subpower_block_checks": 490,
+  "supercritical_countermodel_checks": 99,
+  "theta_one_firewall": true,
+  "two_key_absorption_proved": true
+}

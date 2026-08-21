@@ -1,0 +1,30 @@
+{
+  "schema": "riemann.t104100.source-lock.v1",
+  "created": "2026-08-21",
+  "publication_type": "reconstructed_recovery_and_current_audit",
+  "base": {
+    "pr": 704,
+    "branch": "recovery/gpt56-pro/101500-joint-compensated-matrix-20260821",
+    "sha": "66f755df4321a03874e0da3f61b033300173e364"
+  },
+  "inherited_joint_matrix": {
+    "pr": 697,
+    "branch": "recovery/gpt56-pro/101100-joint-implication-matrix-20260821",
+    "sha": "e878c3717cd8124564e5400b2ec5db035e3a4088"
+  },
+  "carrier_audit": {
+    "pr": 694,
+    "branch": "research/gpt56-pro/100710-scme-lrnm-disposition",
+    "sha": "e6d923c1069f5a481abdf0769ca6d870a8b5ae4b"
+  },
+  "origin_recovery": {
+    "previous_claimed_namespace": "T100100",
+    "previous_remote_publication_found": false,
+    "namespace_collision": "T100100 is already used by independent PR #686 genealogy",
+    "retained_local_archive_bytes": 22,
+    "retained_local_archive_was_empty_zip": true,
+    "byte_preserving_migration": false,
+    "action": "reconstruct mathematical core, re-audit against PRs #697/#704, publish as T104100"
+  },
+  "rh_established": false
+}
