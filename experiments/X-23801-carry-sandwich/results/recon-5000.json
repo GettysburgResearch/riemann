@@ -1,0 +1,103 @@
+{
+  "classification": "DOUBLE_PRECISION_DISCOVERY_ONLY",
+  "proof_boundary": "The run nominates diagonal greedy saturation and a logarithmic entropy deficit. It is not interval arithmetic and proves neither the Carry Obstacle theorem nor RH.",
+  "rows": [
+    {
+      "X": 50,
+      "deficit_over_log_X": 3.642368,
+      "entropy": 14.035234905151365,
+      "entropy_deficit_from_4sqrtX": 14.249036342310538,
+      "entropy_over_sqrt_X": 1.984881955395732,
+      "mass_minus_4sqrtX": -4.603978217867173,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.0030063552555832543,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 23.68029302959473
+    },
+    {
+      "X": 100,
+      "deficit_over_log_X": 3.5022412313066673,
+      "entropy": 23.871583097448312,
+      "entropy_deficit_from_4sqrtX": 16.128416902551688,
+      "entropy_over_sqrt_X": 2.387158309744831,
+      "mass_minus_4sqrtX": -4.023723529379339,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.0010307109784514778,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 35.97627647062066
+    },
+    {
+      "X": 200,
+      "deficit_over_log_X": 3.3919811877535944,
+      "entropy": 38.5967496608447,
+      "entropy_deficit_from_4sqrtX": 17.971792834079103,
+      "entropy_over_sqrt_X": 2.7292023416942865,
+      "mass_minus_4sqrtX": -3.2843726017814063,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.00035891885737663535,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 53.2841698931424
+    },
+    {
+      "X": 400,
+      "deficit_over_log_X": 3.3119345716290023,
+      "entropy": 60.15666143174357,
+      "entropy_deficit_from_4sqrtX": 19.843338568256428,
+      "entropy_over_sqrt_X": 3.0078330715871786,
+      "mass_minus_4sqrtX": -2.623826773113933,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.0001259429653191801,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 77.37617322688607
+    },
+    {
+      "X": 800,
+      "deficit_over_log_X": 3.2454230185260493,
+      "entropy": 91.44269221896494,
+      "entropy_deficit_from_4sqrtX": 21.694392770882672,
+      "entropy_over_sqrt_X": 3.2329873878992226,
+      "mass_minus_4sqrtX": -1.846962052967811,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.0000443603837562221,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 111.2901229368798
+    },
+    {
+      "X": 1200,
+      "deficit_over_log_X": 3.2132808079368003,
+      "entropy": 115.7816567823136,
+      "entropy_deficit_from_4sqrtX": 22.782407823196593,
+      "entropy_over_sqrt_X": 3.3423285355244805,
+      "mass_minus_4sqrtX": -1.3982175511281412,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.00002411651832021703,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 137.16584705438206
+    },
+    {
+      "X": 2000,
+      "deficit_over_log_X": 3.1788095166172674,
+      "entropy": 154.72361712671122,
+      "entropy_deficit_from_4sqrtX": 24.161821073271966,
+      "entropy_over_sqrt_X": 3.4597252561997696,
+      "mass_minus_4sqrtX": -0.8567782499229679,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.000011197129867216397,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 178.02865995006022
+    },
+    {
+      "X": 5000,
+      "deficit_over_log_X": 3.126105972646753,
+      "entropy": 256.21706396874646,
+      "entropy_deficit_from_4sqrtX": 26.62564850587256,
+      "entropy_over_sqrt_X": 3.623456467760161,
+      "mass_minus_4sqrtX": 0.13975613960678857,
+      "minimum_final_residual": 0.0,
+      "minimum_positive_coefficient": 0.000002830124968601743,
+      "off_diagonal_saturations": 0,
+      "signed_half_n_mass": 282.9824686142258
+    }
+  ],
+  "schema": "X-23801-recon-v1"
+}
