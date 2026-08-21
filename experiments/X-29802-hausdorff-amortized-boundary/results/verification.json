@@ -1,0 +1,10 @@
+{
+  "classification": "EXACT_HAUSDORFF_PASCAL_AMORTIZED_BUDGET_VERIFIED",
+  "cost_bound": "log((2k+1)/(2k)) < 1/(2k)",
+  "euler_partition_orders": 32,
+  "mutations_rejected": 1,
+  "paired_shifted_jet_rows": 24576,
+  "proof_boundary": "finite rational instances only; common-tail pairing, unmatched collar, full arithmetic destination map, Cycle Debt, and RH are not certified",
+  "result_sha256_without_digest": "23f5fd5b6b1e89d413489e6630b232412baac6ad3c56a7b291f2bbeafd1a26e2",
+  "schema": "X-29802-hausdorff-amortized-boundary-v1"
+}
