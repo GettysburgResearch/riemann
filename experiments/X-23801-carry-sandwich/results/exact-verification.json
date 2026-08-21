@@ -1,0 +1,51 @@
+{
+  "classification": "EXACT_ALGEBRA_PLUS_DECIMAL_RECONNAISSANCE",
+  "floor_formula_mismatches": [],
+  "legendre_carry": {
+    "limit": 36,
+    "mismatches": []
+  },
+  "mobius_adjoint": {
+    "limit": 80,
+    "mismatches": []
+  },
+  "proof_boundary": "Exact checks cover the carry floor identity, the average Legendre/carry identity, the Mobius adjoint identity, and finite greedy feasibility. Decimal reconnaissance is discovery-only and does not prove the Carry Sandwich theorem or RH.",
+  "proof_sha256": "44b2b584775278a14324650f7709a59b81a9aa4b61c1cab682135b587cfac8bd",
+  "reconnaissance": [
+    {
+      "X": 50,
+      "entropy": "14.0352349051513634576593422298472475113251702022296580337549",
+      "entropy_deficit_from_4sqrtX": "14.2490363423105375183744322543467140600682673053093034297787",
+      "entropy_over_sqrt_X": "1.98488195539573185164936675190443762648954680397069421005873",
+      "mass_minus_4sqrtX": "-4.6039782178671792000480514450675956364693166748595088174501",
+      "minimum_final_residual": "0",
+      "off_diagonal_saturations": 0,
+      "precision": 60,
+      "signed_half_n_mass": "23.6802930295947217759857230391263659349241208326794526460835"
+    },
+    {
+      "X": 100,
+      "entropy": "23.8715830974483303211755716399498084916498486852961374747886",
+      "entropy_deficit_from_4sqrtX": "16.1284169025516696788244283600501915083501513147038625252114",
+      "entropy_over_sqrt_X": "2.38715830974483303211755716399498084916498486852961374747886",
+      "mass_minus_4sqrtX": "-4.0237235293793106064649146389334490296224261142756845223313",
+      "minimum_final_residual": "0",
+      "off_diagonal_saturations": 0,
+      "precision": 60,
+      "signed_half_n_mass": "35.9762764706206893935350853610665509703775738857243154776687"
+    },
+    {
+      "X": 200,
+      "entropy": "38.5967496608446904459225373088129844420066338503664398644994",
+      "entropy_deficit_from_4sqrtX": "17.9717928340791115061450116595749387007802411647114830625678",
+      "entropy_over_sqrt_X": "2.72920234169428589013074461801422960348872757411388949834501",
+      "mass_minus_4sqrtX": "-3.2843726017814153931805974271465444994409762210815649586288",
+      "minimum_final_residual": "0",
+      "off_diagonal_saturations": 0,
+      "precision": 60,
+      "signed_half_n_mass": "53.2841698931423865588869515412413786433458987939963579684384"
+    }
+  ],
+  "schema": "X-23801-v1",
+  "verdict": "PASS_EXACT_INTERFACES_CARRY_SANDWICH_OPEN"
+}
