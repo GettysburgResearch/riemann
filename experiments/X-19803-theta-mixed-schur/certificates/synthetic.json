@@ -1,0 +1,11 @@
+{
+  "schema": "riemann.theta-mixed-schur.v1",
+  "probabilities": ["1/3", "2/3"],
+  "mode_coordinates": ["2", "5"],
+  "tail_matrix": [["1", "0"], ["0", "2"]],
+  "mixer": [["1/2"], ["1/3"]],
+  "trace_schur": [["3/5"]],
+  "expected_mu": "48",
+  "expected_scalar_channel": "40",
+  "expected_pair_channel": "8"
+}

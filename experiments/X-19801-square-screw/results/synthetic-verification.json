@@ -1,0 +1,42 @@
+{
+  "N": 2,
+  "cutoff": 4,
+  "elementary_term": "2",
+  "lerch_term": [
+    "1/10",
+    "1/8"
+  ],
+  "linear_term": [
+    "-1/2",
+    "-2/5"
+  ],
+  "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "prime_sum": [
+    "9/20",
+    "9/20"
+  ],
+  "prime_terms": [
+    {
+      "lower": "1/10",
+      "n": 2,
+      "upper": "1/10"
+    },
+    {
+      "lower": "3/20",
+      "n": 3,
+      "upper": "3/20"
+    },
+    {
+      "lower": "1/5",
+      "n": 4,
+      "upper": "1/5"
+    }
+  ],
+  "proof_object_sha256": "b611ca0b4c6b68e45a746ad021ad5a62defe45c18700a464abb12e30f4075b43",
+  "schema": "riemann.square-screw-level.v1",
+  "total": [
+    "23/20",
+    "51/40"
+  ],
+  "verdict": "CERTIFIED_NONNEGATIVE_SQUARE_LEVEL"
+}
