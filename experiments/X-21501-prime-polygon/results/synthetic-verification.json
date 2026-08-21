@@ -1,0 +1,38 @@
+{
+  "A_prefix": {
+    "lower": "10",
+    "upper": "10"
+  },
+  "B_prefix": {
+    "lower": "0",
+    "upper": "0"
+  },
+  "C0": {
+    "lower": "-4",
+    "upper": "-37/10"
+  },
+  "bindings": {},
+  "classification": "SYNTHETIC_MODEL",
+  "kappa": {
+    "lower": "-27/5",
+    "upper": "-5"
+  },
+  "log_r": {
+    "lower": "69/100",
+    "upper": "7/10"
+  },
+  "proof_boundary": "Exact rational interval contraction of T-21501.7 only. A RIEMANN_DIRECTED verdict additionally depends on the bound complete prime-power manifest, directed logarithm/square-root producer, and directed archimedean constants.",
+  "proof_object_sha256": "c79f62f378ef3494d917d44ab30ae7b2790bd3dffe70cf185af8d7c95148e086",
+  "schema": "riemann.x21501-prime-polygon-tangent-result.v1",
+  "series_interval": {
+    "lower": "3574009/2803507200",
+    "upper": "129113927/101276697600"
+  },
+  "series_terms": 3,
+  "trial_r": "2",
+  "verdict": "SYNTHETIC_POSITIVE_TANGENT_WITNESS",
+  "witness_interval": {
+    "lower": "9079928569/700876800",
+    "upper": "349027337159/25319174400"
+  }
+}
