@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "factor_five_base_pairing": {
+      "cases": 30
+    },
+    "factor_five_kummer_nonnegativity": {
+      "cases": 2505
+    },
+    "far_field_increment_product": {
+      "cases": 2940
+    },
+    "odd_average_carry": {
+      "cases": 160
+    },
+    "odd_mobius_prefix": {
+      "cases": 161
+    },
+    "odd_pointwise_carry": {
+      "cases": 13040
+    },
+    "pointwise_omega2_wavelet": {
+      "cases": 386270
+    },
+    "pointwise_sign_bands": {
+      "cases": 71610
+    },
+    "scaled_b2_box_profile": {
+      "cases": 386270
+    },
+    "transition_negative_examples": {
+      "count": 300
+    }
+  },
+  "schema": "X-26901-pointwise-dyadic-dipole-v1",
+  "scope": "exact finite algebra/regression only; does not prove finite transition contraction, DSS, or RH",
+  "sha256_without_digest": "b2ff53b948da65a81082fa9a14d7f990c227bb47a6bb592458655ccec7a03f95"
+}

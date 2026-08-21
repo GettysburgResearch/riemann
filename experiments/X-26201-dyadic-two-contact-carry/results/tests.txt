@@ -1,0 +1,47 @@
+Retained local replay
+=====================
+
+python3 verify.py
+  PASS
+  sha256_without_digest:
+  dd6f66f1e026178c1277f2fa634671d8868219e0303db505d9f0547df5eb0715
+
+python3 verify_bottom_charge.py
+  PASS_EXACT_DYADIC_BOTTOM_CHARGE_AND_FLOW_INVISIBILITY
+  sha256_without_digest:
+  395a7a89ea2267cfa5a3b805ead2646fa46a1761408f6ff048fed7b2e218757f
+
+python3 verify_digital_lift.py
+  PASS_EXACT_ODD_ROW_EVEN_COLUMN_CARRY_ISOMETRY
+  sha256_without_digest:
+  17e23d1e2ebc01cc7283d125c15c721d4743e69f906b17b715294f60b0e09b23
+
+python3 verify_factor_five.py
+  PASS
+  sha256_without_digest:
+  b2ff53b948da65a81082fa9a14d7f990c227bb47a6bb592458655ccec7a03f95
+
+python3 verify_schur_structure.py
+  PASS
+  sha256_without_digest:
+  fe8287748e6c2e7320ca24e8db827044d77511dc2a72e401afb91a90e11365f0
+
+python3 verify_positive_synthesis.py
+  PASS
+  sha256_without_digest:
+  11e5e76a49b49ab2f838d7a829936b4e46bed5482c0d0a717fb4161f6b99eeda
+
+pytest -q tests/test_verify.py
+  6 passed
+
+python3 recon.py
+  DISCOVERY_ONLY_POSITIVE_CARRY_INVERSE_THROUGH_5000
+  sha256_without_digest:
+  7a249c5a00cb1e5c6daa0434bcbdc40efef890f381f2ae1eb52091e8557f001e
+
+Scope
+-----
+The exact tests certify only the finite identities and structural arithmetic
+declared in X-26201. The reconnaissance is high-precision discovery, not an
+interval proof. No test proves physical normal-Gram transference, DSS, PBD,
+Carry Saturation, or RH.

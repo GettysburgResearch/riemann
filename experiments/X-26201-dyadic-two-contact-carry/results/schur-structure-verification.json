@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "central_slope_cells": {
+      "count": 9032
+    },
+    "exact_required_denominator": {
+      "value": 55566000
+    },
+    "maximum_wavelet_breaks": {
+      "count": 1
+    },
+    "minimum_scaled_run_ratio": {
+      "denominator": 229,
+      "numerator": 945
+    },
+    "reserve_denominator": {
+      "value": 60000000
+    },
+    "rows": {
+      "count": 113515,
+      "n_max": 520,
+      "n_min": 210
+    }
+  },
+  "schema": "X-26902-uniform-carry-schur-structure-v1",
+  "scope": "exact combinatorial structure for L-26902; no logarithmic interval evaluation, physical transference, DSS, or RH",
+  "sha256_without_digest": "fe8287748e6c2e7320ca24e8db827044d77511dc2a72e401afb91a90e11365f0"
+}

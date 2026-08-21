@@ -1,0 +1,34 @@
+component	frozen_source	status	review_note
+independent-frequency physical block	PR241@3a227e7595e1fe9e38956048297aa97531c80e4e	PROPOSED_COMPLETE	must retain t,s and every cross term
+fixed-q0=2 Mobius decoder	PR158@b4896de93983231d0efbf5ffb7899c7703bbe5ef	PROPOSED_COMPLETE	exact RH-bearing source retained
+dyadic coupled normal matrix	PR269:L-26204	PROPOSED_COMPLETE	rank one; no strict reserve by itself
+b2 pointwise two-contact carry	PR269:L-26201	PROPOSED_COMPLETE	exact source identity
+b2 Green two-charge identity	PR269:L-26203	PROPOSED_COMPLETE	Pi2=-3T(2)+T(3)
+omega2 source and bottom charge	PR268@b67f3ee4e5c20fdd23ad0923641d452c4a89da83	PROPOSED_COMPLETE	bottom sign remains open
+scaled omega2 carry wavelet	PR269:L-26901	PROPOSED_COMPLETE	pointwise before estimation
+factor-five far-tail sign	PR269:L-26901	PROPOSED_COMPLETE	negative rows only 2m<=n<5m
+uniform carry Schur reserve	PR269:L-26902	PROPOSED_COMPLETE	absolute reserve 1/60000000
+positive inverse coefficients	PR269:L-26903	PROPOSED_COMPLETE	a_omega=2v2+2^-v2
+positive generalized primes	PR269:L-26903	PROPOSED_COMPLETE	all coefficients nonnegative
+positive full wavelet synthesis	PR269:L-26903	PROPOSED_COMPLETE	all synthesis cross terms retained
+Selberg-carry moment tower	PR269:L-26904	PROPOSED_COMPLETE	zero/first/second moments exact
+unit-source boundary firewall	PR269:L-26904	PROPOSED_COMPLETE	m=1 absent from positive log moments
+atomized carry physical-window identity	PR269:R-26902	PROPOSED_COMPLETE	carry profile is exact H_theta output
+carry-window zeta factor	PR269:R-26902	PROPOSED_COMPLETE	Hhat_theta contains zeta(s)
+direct bulk physical-to-carry coercivity	PR269:R-26902	REFUTED	pure carry bank cancels every zeta pole
+compact omega carry window as RH output	PR269:R-26902	REFUTED	transform is zeta-free after cancellation
+parity-paired frame reserve	PR263@73e24368b62f32f31e10691ebbaf3764b544f2a3	PROPOSED_COMPLETE	sharp reserve 45/4 before carry cancellation
+positive finite Bezout reconstruction	PR263@73e24368b62f32f31e10691ebbaf3764b544f2a3	PROPOSED_COMPLETE	four dyadic delays
+finite parity-to-omega synthesis	PR263@73e24368b62f32f31e10691ebbaf3764b544f2a3	PROPOSED_COMPLETE	degree-six source map
+odd-core half-pole nullity	PR263@73e24368b62f32f31e10691ebbaf3764b544f2a3	PROPOSED_COMPLETE	cross terms mandatory
+digital Sobolev tail	PR236@a0d5a627bd2d4e799eddf7c795df77083a3618ff	PROPOSED_COMPLETE	tail O(log R/sqrt R)
+first-cell 2/3 Mertens decoder	PR229@2fc74c11b9929f694d8c13d060c9d55b99dc9621	PROPOSED_COMPLETE	mandatory RH firewall
+boundary/transverse source decomposition	BCF5TC	GAP_BLOCKED	exact I=P+B not yet emitted
+pole-audit table	BCF5TC	GAP_BLOCKED	required per channel
+transverse physical/carry map S	BCF5TC	GAP_BLOCKED	carry control only on pole-canceling sector
+boundary physical matrix	BCF5TC	GAP_BLOCKED	must be independent-frequency and pre-cancellation
+boundary Schur reserve	BCF5TC	GAP_BLOCKED	sole physical reserve theorem
+finite n<210 boundary table	BCF5TC	GAP_BLOCKED	required production object
+bottom-charge or boundary recurrence	BCF5TC	GAP_BLOCKED	must be explicit and lower scale
+conditional BCF5TC to RH	PR269:T-26903	PROPOSED_COMPLETE	valid only after all BCF5TC rows verify
+Riemann Hypothesis	-	UNPROVED	no unconditional claim
