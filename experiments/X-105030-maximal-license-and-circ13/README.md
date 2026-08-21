@@ -17,11 +17,14 @@ Verification for `T-105030`, `L-105031`, `L-105032`.
   structure; crossing law), `hp_check.py` (increment lemma constants),
   `extras.py`, `lattice.py` (complete `2^18`-cell frozen-block balance:
   `TB_s ≥ 1.676601032` on all of `[2, P₆₁]`).
-* `lane_boundary/` — `f1_regularity.py` (self-contained sieve to `10⁷`:
-  the moving-boundary pole cancellation; `F₁` bounded `2.47 → 3.33` as
-  `s → 1/2⁺`; pole coefficient decays to zero; `κ₁ = 0.7372232414`;
-  asserted). Additional lane scripts to be added on recovery of the
-  boundary lane's full computation set.
+* `lane_boundary/` — `f1_regularity.py` (CORRECTED; self-contained sieve
+  to `10⁶`): asserts the exact pole-coefficient cancellation (identical at
+  finite truncation), the divergent drift of `F₁` with the true
+  z-dependent `M_z` (`−4.34 → −7.74`, the surviving log germ), and the
+  truncation-free x-space law `Ψ₁ ≈ −4√x/log x` (`−4.38 / −4.55` at
+  `10⁴/10⁶`). The first deposit of this script asserted bounded `F₁`
+  values produced by an `M₁`-for-`M_z` substitution — wrong, caught by
+  the session's recovery pipeline; see `L-105032 §5`.
 
 Caveats: lane scripts deposited as executed (paths may reference the
 producing scratchpad); `f1_regularity.py` and `lane_circ13/constants.py`

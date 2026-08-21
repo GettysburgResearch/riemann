@@ -75,7 +75,9 @@ RH-sensitivity are mutually exclusive.**
 * Under the MOVING cut (`O-105010`) depth `\le 2` is exact, not a
   truncation: there is no discarded depth-`\ge 3` mass, no see-saw, and
   the analogue of the divergent `u` is the bounded `\log(1/\theta)` — the
-  `z = 1` catastrophe is priced out. The open object becomes a two-variable
+  `z = 1` catastrophe is priced **down** (`L-105032`, corrected: the pole
+  cancels exactly but a `\pm4\log` germ survives between the pieces; not
+  priced out). The open object becomes a two-variable
   Dickman/Hildebrand–Tenenbaum transform; this refutation contributes its
   negative boundary: any frozen-cut approximation of it reinstates the
   `\log^2` wall.

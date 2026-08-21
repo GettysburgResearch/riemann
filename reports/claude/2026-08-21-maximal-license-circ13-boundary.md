@@ -38,20 +38,26 @@ the quarantine lemma doing its work. Sharpened CIRC-13 reading: the
 mandatory escape carries `Θ(√X)` **mass** at only `Θ(log x)` **ledger
 cost** — breaking the license is mass-expensive, debt-cheap.
 
-**3. The moving boundary cancels the pole (`L-105032`).** First, a
-correction to my own architecture note: for `θ ≥ 1/3` the moving-cut
-admissibility is vacuous — the "moving-cut gate" IS the full gate; the
-architecture is a decomposition. Then the theorem: at `θ = 1/2` the
-one-large-prime piece's transform has **no pole at s = 1/2** — the two
-candidate poles cancel exactly and algebraically (`D₁(1) = −κ₁` by
-definition; `κ₁ = 0.7372…` PNT-convergent), verified decisively
-(`F₁: 2.47 → 3.33` bounded where the fixed cut blew up `3.5 → 4176`),
-with the ledger `4 = F₁(1/2) + F_sm(1/2) ≈ 3.37 + 0.63`. The fixed-cut
-death (`R-105024`) and this regularity theorem are two halves of one
-statement: **truncation installs the pole; the moving boundary is exactly
-the counterterm.** Separate-piece programs (smooth-number technology;
-the 102000 Type-II lane) face no structural artifact at the critical
-point.
+**3. The moving boundary cancels the pole — but not the log
+(`L-105032`, corrected in-session).** First, a correction to my own
+architecture note: for `θ ≥ 1/3` the moving-cut admissibility is vacuous —
+the "moving-cut gate" IS the full gate; the architecture is a
+decomposition. The theorem: at `θ = 1/2` the one-large-prime piece's
+transform has **no pole at s = 1/2** — the two candidate poles cancel
+exactly and algebraically (`D₁(1) = −κ₁`; `κ₁ = 0.7372…`
+PNT-convergent) — but a **logarithmic germ survives**: `F₁ =
+4log(s−1/2) + C₁`, `F_sm = −4log(s−1/2) + C₂`, `C₁+C₂ = 4`; in x-space
+`Ψ₁ ≈ −4√x/log x` against `Ψ_sm ≈ +4√x/log x` while the sum stays `≈ 2`.
+The fixed cut's `½log²` wall is **demoted to a single log — priced down,
+not out** — and boundary smoothing cannot remove the remainder (it lives
+in the pair-set term, not the boundary tails). Separate-piece estimation
+is therefore impossible; the 102000 Type-II piece must be handled *with*
+the smooth-block cancellation or after a pair-set reorganization.
+Process note, recorded openly: the first push of this claim asserted
+bounded pieces on the strength of a numeric that substituted `M₁` for
+`M_z`; the session's own recovery/adversarial pipeline caught the
+contradiction within the hour, and the corrected statement above is
+double-verified (`L-105032 §5`).
 
 ## The composite picture after today
 

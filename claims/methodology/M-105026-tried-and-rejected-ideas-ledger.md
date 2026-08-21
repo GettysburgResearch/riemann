@@ -72,6 +72,19 @@ consequence of the licensing, not a deposited extra-leaf run). The
 obstruction is license-level (anti-nested edges forbidden), not
 inventory-level.
 
+## N7. "The moving-cut pieces are individually regular at s = 1/2" (WRONG — own error, caught and corrected in-session)
+First pushed as L-105032's headline on the strength of a numeric that
+substituted the z-independent `M₁(p⁻)` for the required `M_z(p⁻)` (valid
+only exactly at `s = 1/2`), manufacturing spurious boundedness — despite
+the originating memo having flagged the exact hole. The session's own
+recovery/adversarial pipeline contradicted the numbers within the hour;
+independent re-verification with the true `M_z` confirmed the
+contradiction on every digit. Corrected statement (deposited): the pole
+cancels exactly, a `±4·log(s−1/2)` germ survives, pieces are
+`∓4√x/log x`-large individually. Lesson recorded: a "decisive numeric
+test" is only decisive if it evaluates the formula under test; and the
+flag-in-the-memo should have blocked the headline.
+
 Cross-references: the corpse-family instances of the budget theorem are
 ledgered in `R-105000 §2`; the adversarial-review finding→fix ledger for
 the 105000 packet is `reports/claude/2026-08-21-adversarial-review-response.md`.
