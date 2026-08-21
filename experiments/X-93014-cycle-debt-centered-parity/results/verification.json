@@ -1,0 +1,22 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_Q_SQRT2_WITH_FORMAL_RADICAL_SUPPORT",
+  "centered_fixture_checks": 48,
+  "centered_vertex_optimum_checks": 48,
+  "classification": "PASS_X_93014_CYCLE_DEBT_CENTERED_PARITY",
+  "does_not_prove": [
+    "the cofinal centered dyadic parity bound",
+    "polylogarithmic Cycle Debt",
+    "the Riemann Hypothesis"
+  ],
+  "dyadic_pairing_checks": 192,
+  "even_trace_gauge_checks": 192,
+  "formal_doubled_carry_checks": 44208,
+  "hostile_mutations_detected": 384,
+  "proves": [
+    "finite centered/asymmetric dual equivalence on exact fixtures",
+    "weighted variation identity",
+    "gauge-corrected dyadic source pairing",
+    "formal even-column capacity decomposition"
+  ],
+  "weighted_variation_checks": 48
+}

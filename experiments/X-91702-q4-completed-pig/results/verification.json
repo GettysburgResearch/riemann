@@ -1,0 +1,21 @@
+{
+  "arithmetic": "EXACT_RATIONAL_WITH_FORMAL_LOG4",
+  "does_not_prove": [
+    "von Koch estimate",
+    "analytic continuation or zero safety",
+    "polylogarithmic endpoint PIG",
+    "Riemann Hypothesis"
+  ],
+  "field_and_variance_identities": 3196,
+  "mellin_kernel_identities": 1224,
+  "proves": [
+    "finite mean-source identity",
+    "finite variance/coercivity identity",
+    "termwise Mellin kernel algebra",
+    "finite scale-four source transform algebra"
+  ],
+  "reflection_mutations_detected": 799,
+  "scale_four_dirichlet_identities": 294,
+  "scale_four_mutations_detected": 294,
+  "verdict": "PASS_X_91702_Q4_COMPLETED_ENDPOINT_PIG"
+}
