@@ -1,0 +1,22 @@
+{
+  "schema": "riemann.t103300.publication_packet.v1",
+  "created": "2026-08-21",
+  "canonical_namespace": "T103300",
+  "legacy_packet_namespace": "T102100",
+  "source_packet": {
+    "filename": "riemann-t102100-balanced-phase-gram-20260821.zip",
+    "sha256": "c443fcaa52594c45329646081523d0966d6f13a72a8cc727c49f4186bfba55d5"
+  },
+  "namespace_migration": "integration/2026-08-21/t103300-namespace-migration.json",
+  "intended_branch": "research/gpt56-pro/103300-balanced-phase-gram",
+  "intended_base_pr": 701,
+  "intended_base_sha": "b8fa864f257cce623b020ff94b09c5afcbcabdee",
+  "external_prs": {
+    "696": "f4016db548afceb31b150547cb6cd48b4cddb77d",
+    "699": "f23dd81748562dfa2a73f86aecfb9fcd3e2b32b9"
+  },
+  "replay": "PASS_T103300_BALANCED_PHASE_GRAM_ALGEBRA",
+  "proof_object_sha256": "69984e161a6aa953c5da7dba6c83ea2dc69806cb31f12b073ab2142c4561f414",
+  "bpoe103300_proved": false,
+  "rh_established": false
+}

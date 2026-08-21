@@ -1,0 +1,22 @@
+{
+  "schema": "riemann.t103300.source_lock.v1",
+  "created": "2026-08-21",
+  "namespace": {
+    "canonical": "T103300",
+    "legacy_packet": "T102100",
+    "migration": "integration/2026-08-21/t103300-namespace-migration.json"
+  },
+  "source_packet": {
+    "filename": "riemann-t102100-balanced-phase-gram-20260821.zip",
+    "sha256": "c443fcaa52594c45329646081523d0966d6f13a72a8cc727c49f4186bfba55d5"
+  },
+  "base": {
+    "pr": 701,
+    "head": "b8fa864f257cce623b020ff94b09c5afcbcabdee"
+  },
+  "external_inputs": [
+    {"pr": 696, "head": "f4016db548afceb31b150547cb6cd48b4cddb77d"},
+    {"pr": 699, "head": "f23dd81748562dfa2a73f86aecfb9fcd3e2b32b9"}
+  ],
+  "rh_established": false
+}

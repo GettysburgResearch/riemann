@@ -1,0 +1,36 @@
+{
+  "schema": "riemann.t103300.namespace_migration.v1",
+  "created": "2026-08-21",
+  "reason": "Avoid collision with the independently published T102100 carrier-free staircase family in PR #703.",
+  "source_packet": {
+    "filename": "riemann-t102100-balanced-phase-gram-20260821.zip",
+    "sha256": "c443fcaa52594c45329646081523d0966d6f13a72a8cc727c49f4186bfba55d5",
+    "legacy_replay": "PASS_T102100_BALANCED_PHASE_GRAM_ALGEBRA",
+    "legacy_proof_object_sha256": "e8c122f09e240f5ef9147622b5aac4e7300b9d7f2c058f084440c2c595aafd90"
+  },
+  "canonical_packet": {
+    "namespace": "T103300",
+    "replay": "PASS_T103300_BALANCED_PHASE_GRAM_ALGEBRA",
+    "proof_object_sha256": "69984e161a6aa953c5da7dba6c83ea2dc69806cb31f12b073ab2142c4561f414"
+  },
+  "claim_id_mapping": {
+    "L-102100": "L-103300",
+    "L-102101": "L-103301",
+    "L-102102": "L-103302",
+    "L-102103": "L-103303",
+    "L-102104": "L-103304",
+    "R-102100": "R-103300",
+    "T-102100": "T-103300"
+  },
+  "gate_mapping": {
+    "BPOE102100": "BPOE103300"
+  },
+  "preserved_external_identifiers": [
+    "HHFE102010",
+    "PR #696",
+    "PR #699",
+    "PR #701"
+  ],
+  "claim_statements_changed": false,
+  "verification_seed_renumbered": true
+}
