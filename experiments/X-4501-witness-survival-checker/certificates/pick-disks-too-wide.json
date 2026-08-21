@@ -1,0 +1,66 @@
+{
+  "claimed_midpoint": "-225/104",
+  "claimed_robust_upper": "82/65",
+  "claimed_uncertainty_increment": "137/40",
+  "kind": "pick-disks",
+  "points": [
+    {
+      "im": "0",
+      "re": "3/4"
+    },
+    {
+      "im": "1/2",
+      "re": "1"
+    }
+  ],
+  "samples": [
+    {
+      "center": {
+        "im": "0",
+        "re": "-1"
+      },
+      "channel_id": "F-0",
+      "coefficient_abs_upper": "7/5",
+      "radius": "1"
+    },
+    {
+      "center": {
+        "im": "0",
+        "re": "-1"
+      },
+      "channel_id": "F-1",
+      "coefficient_abs_upper": "5/16",
+      "radius": "1"
+    }
+  ],
+  "schema": "riemann.witness-survival.v1",
+  "uncertainty_manifest": {
+    "logical_gates": [
+      {
+        "evidence": "tests/test_verify.py",
+        "id": "synthetic-pick-criterion",
+        "state": "SYNTHETIC_CONTROL"
+      }
+    ],
+    "quantitative_channels": [
+      {
+        "id": "F-0",
+        "state": "ENCLOSED"
+      },
+      {
+        "id": "F-1",
+        "state": "ENCLOSED"
+      }
+    ]
+  },
+  "vector": [
+    {
+      "im": "0",
+      "re": "1"
+    },
+    {
+      "im": "1/4",
+      "re": "-1/2"
+    }
+  ]
+}

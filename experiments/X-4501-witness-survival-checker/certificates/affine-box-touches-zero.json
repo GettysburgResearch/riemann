@@ -1,0 +1,29 @@
+{
+  "claimed_robust_upper": "0",
+  "kind": "affine-box",
+  "nominal": "-1/5",
+  "schema": "riemann.witness-survival.v1",
+  "terms": [
+    {
+      "center": "0",
+      "channel_id": "evaluation-a",
+      "coefficient": "1",
+      "radius": "1/5"
+    }
+  ],
+  "uncertainty_manifest": {
+    "logical_gates": [
+      {
+        "evidence": "tests/test_verify.py",
+        "id": "synthetic-criterion",
+        "state": "SYNTHETIC_CONTROL"
+      }
+    ],
+    "quantitative_channels": [
+      {
+        "id": "evaluation-a",
+        "state": "ENCLOSED"
+      }
+    ]
+  }
+}

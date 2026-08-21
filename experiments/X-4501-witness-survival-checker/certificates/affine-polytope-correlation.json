@@ -1,0 +1,72 @@
+{
+  "A": [
+    [
+      "1",
+      "1"
+    ],
+    [
+      "-1",
+      "-1"
+    ],
+    [
+      "1",
+      "0"
+    ],
+    [
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ],
+    [
+      "0",
+      "-1"
+    ]
+  ],
+  "b": [
+    "0",
+    "0",
+    "1",
+    "1",
+    "1",
+    "1"
+  ],
+  "channel_id": "joint-correlated-model",
+  "claimed_robust_upper": "-1/10",
+  "dual": [
+    "1",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "feasible_point": [
+    "0",
+    "0"
+  ],
+  "kind": "affine-polytope-dual",
+  "nominal": "-1/10",
+  "objective": [
+    "1",
+    "1"
+  ],
+  "schema": "riemann.witness-survival.v1",
+  "uncertainty_manifest": {
+    "logical_gates": [
+      {
+        "evidence": "tests/test_verify.py",
+        "id": "synthetic-affine-score",
+        "state": "SYNTHETIC_CONTROL"
+      }
+    ],
+    "quantitative_channels": [
+      {
+        "id": "joint-correlated-model",
+        "state": "ENCLOSED"
+      }
+    ]
+  }
+}
