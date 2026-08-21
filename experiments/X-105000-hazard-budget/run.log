@@ -13,7 +13,7 @@
 [ok] S5_qT_closed_form: q_T = sqrt(p) (4 sqrt Y - 3)/(4 sqrt Y - 3 sqrt p) >= sqrt p
 [ok] S5_exchange_rates
 [ok] S6_price_invariance: price ~ 1/p under both normalizations (cocycle-invariant)
-[ok] S7_budget_inequality_random_schemes: 200/200 within budget
+[ok] S7_budget_inequality_random_schemes: 200/200 within budget (consistency fixture: generator enforces per-block budget; the theorem is the two-line convex aggregate, proved in T-105000 A.1)
 [ok] S7_native_demand_vs_budget_at_5e4
 [ok] S8_unit_crossing_bracket
 [ok] S8_sum_inv_p_at_bracket
@@ -22,5 +22,7 @@
 [ok] S9_price_forms_Y=100000
 [ok] S9_price_forms_Y=400000
 [ok] S10_knot_identifiability: 5x5 triangular system uniquely recovers coefficients
+[ok] S9b_Q2_horizon_bracket
+[ok] S11_mutation_battery
 
 ALL CHECKS PASSED

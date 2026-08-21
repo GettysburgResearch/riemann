@@ -16,8 +16,10 @@ adjudication of the third repair option of `R-99260`),
 
 Between 2026-08-17 and 2026-08-21 at least seven refutations executed
 hierarchical source constructions by the same one-prime coefficient
-mismatch: the generated child carries `2r^2` (gross) or `0` (net) where the
-native Möbius update requires `r = p^{-1/2}`
+mismatch: the generated child fails to carry the native Möbius coefficient
+`r = p^{-1/2}` — the recorded shapes vary (gross `2r^2`; net `0`; a
+depth-one current wrong by `rF(x/p)`; a contracted `t = \lambda r < r`) but
+the audit is one and the same
 (`R-97600`, `R-99600`/`R-99601`, `R-99440`, `R-99260`, `R-97610`, `R-97500`,
 `R-99800`). Each kill was per-construction. This packet replaces the serial
 autopsies by one invariant: a **budget identity** that every admissible
@@ -28,7 +30,7 @@ instances; the surviving demand is typed and its minimum size is computed.
 Everything here is mathematics about the *method class*, quantified over
 schemes. Nothing here bears on the truth of RH.
 
-## 1. Setting (repo objects, all previously proved)
+## 1. Setting (previously deposited repo objects; statuses annotated in `M-105000 §1`)
 
 `T(y) = (4\sqrt y - 3)\,\mathbf 1_{y\ge1}`; positive rows
 `Q_Y(j) = \int_1^Y T(Y/t)\,\kappa_j(t)\,dt/t` with `\kappa_j(t) > 0` for
@@ -52,14 +54,21 @@ disjoint and exhaustive per `L-99601 §2`), the node's positive packet into
 finitely many pieces, each typed:
 
 * **FREE** — nonnegative combinations of blocks whose nonnegativity is
-  supplied by the free positivity technology already proved in-repo:
+  supplied by the free positivity technology deposited in-repo:
   endpoint monotonicity (`L-99210.4`), RN thinning (`L-99250.4`), profile
   monotonicity (`L-99250.7/8`), compact-fibre Hall flows (`L-99020`,
-  moat `> 7/20`). Canonical shape: survival `\sigma P_Z` and generalized
-  currents `\lambda_b\,(1 - \sum_p c_{b,p} R_{Z/p\mid Z})\,dM_Z \ge 0`.
+  moat `> 7/20`; independently re-certified `L-99451`). Canonical shape:
+  survival `\sigma P_Z` and generalized currents
+  `\lambda_b\,(1 - \sum_A c_{b,A} R_{Z/A\mid Z})\,dM_Z \ge 0`, where `A`
+  ranges over finite sets of rough primes and `R_{Z/A|Z}` is the chained
+  thinning (`L-99600.9`) — composite couplings (e.g. `T-97700.8`'s two-prime
+  `R^2` with coefficient `(pq)^{-1/2}`) are included; only the singleton
+  couplings `c_{b,\{p\}} =: c_{b,p}` carry first-order slots, and composite
+  slots are even-order with native sign `+r_A` (sign-free), so A.1's
+  accounting below is unchanged by their presence.
 * **CHILD** — a recursed copy `\alpha_i P_{Z/p_i}` entering the observation
   with one parity swap (source-faithfulness: sign
-  `\mu(d)(-1)^{|h|} = \mu(k)`, `L-97400`, `L-96501.3`; omitting the swap is
+  `\mu(d)(-1)^{|h|} = \mu(k)`, `L-97400`, `L-96501.1`; omitting the swap is
   nonnative by `R-99600 §1`).
 * **DEFECT** — a signed remainder admissible for the consumer:
   `|A_Z(j)| \le B_j` uniformly and/or Mellin transform holomorphic in
@@ -80,21 +89,28 @@ reproduces the native marginal atomwise (`L-97400` standard; Lemma 0 of
 activation-knot structure, so (C) cannot be relaxed to "consumer-level
 agreement").
 
-Verified instances (`M-105000 §2`): the alpha-child schemes of PR #566,
+Verified instances (`M-105000 §1`, end): the alpha-child schemes of PR #566,
 T-99240, T-99450, PR #649 (via `L-96500.1`); the exact ledgers `L-97400`,
 `L-99601.7`, `L-100610`; the RN-corrected cylinder schemes (`L-99450 §1`).
 
-**Delivery accounting.** At the root node, define the **sign-paid first-order
-delivery** at rough prime `p`:
-`d_p := \sum_b \lambda_b c_{b,p}` — the `U_p`-coefficient carried inside FREE
-blocks, whose negativity is paid by the block's proved nonnegativity.
-First-order mass carried by CHILD pieces is **sign-unpaid**: it conserves the
-coefficient but contributes to the observation with a sign that the free
-technology does not prove; the consumer inequality then *requires* dominating
-it. DEFECT pieces are excluded from first-order delivery of the native scale
-by their own definition (bounded / holomorphic; `R-99440 §2–3`: the native
-first-order block `r_p(\cdot)Q_{Y/p}` is of order `\sqrt Y` with a
-positive-real Mellin pole at `s = 1/2`).
+**Delivery accounting (definitions).** At the root node, define the
+**sign-paid first-order delivery** at rough prime `p`:
+`d_p := \sum_b \lambda_b c_{b,p} + \sum \alpha` — the `U_p`-coefficient
+carried inside FREE blocks (internal couplings) **plus** reserve-injected
+dominated children (the `L-96651` architecture), in both cases mass whose
+negative observation is paid by a proved nonnegativity. First-order mass
+carried by other CHILD pieces is **sign-unpaid** by definition: it conserves
+the coefficient but contributes to the observation with a sign the free
+technology does not prove; the demand to dominate it is exactly the (B)/(C)
+gate content of §4. Within the axioms every first-order carrier observes
+negatively (currents by construction; children through one swap,
+`L-96501.1`), so conservation forces `d_p + u_p = r_p` with the unpaid part
+`u_p \ge 0`; in particular **`d_p \le r_p` for every `p` and the exposure of
+A.3 is nonnegative for all `Y`.** DEFECT pieces cannot carry native-scale
+first-order mass: that is a theorem, not a definition — the native block
+`r_p(\cdot)Q_{Y/p}` is of order `\sqrt Y` with a positive-real Mellin pole at
+`s = 1/2` (`R-99440 §2–3`), while a per-row-bounded defect has Mellin
+transform holomorphic in `\Re s > 0` by absolute convergence; see A.3.
 
 ## 3. Theorem A (hazard-budget inequality)
 
@@ -120,8 +136,33 @@ a child of size `\alpha` paid from a current's mass, the `L-96651`
 architecture — consumes the same budget: `\alpha\,Q_{Y/p}(j) \le
 \lambda(Q_Y(j) - \sum c\,Q(j))` adds the child's consumption to the same
 left-hand side. Hall two-sort blocks (`L-99020`) redistribute mass within
-compact fibres `x < 67` and carry no rough `U_p` coordinate, so they do not
-contribute to either side. ∎
+compact fibres `x < 67` and carry no rough `U_p` coordinate (a rough move
+inside a fibre is impossible: `x/k \ge 1` forces `k \le x < 67`), so they do
+not contribute to either side. ∎
+
+**Theorem A.1′ (T-form budget).** The same pointwise nonnegativity, evaluated
+at `t = 1` where `R_{Y/p\mid Y}(1) = T(Y/p)/T(Y)` (the maximum,
+`L-105001 §1`), gives per unit block `\sum_p c_{b,p}\,T(Y/p) \le T(Y)`; the
+reserve inequality holds at the measure level, so its `t = 1` evaluation adds
+dominated children to the same left side. Hence
+
+```
+sum_{67 <= p <= Y}  d_p * T(Y/p)   <=   T(Y),
+```
+
+and full sign-paid delivery also requires `Pi_T(Y) \le 1`. This makes the
+`T`-coordinate crossing a genuine — and, by `L-105001 §2`
+(`w_p^{Q(j)} \le w_p^T`), the **earliest** — horizon.
+
+**Remark (nonlinear free blocks buy nothing).** The free technology also
+certifies nonlinear pointwise-nonnegative densities, e.g. `(1 - cR_p)^2\,
+dM_Y`, whose formal `U_p`-coefficient `2c` exceeds the cap. Expanding, the
+excess rides on the residue `c^2R_p^2\,dM_Y = c^2R_p\,dM_{Y/p}` — a
+**reweighted rough lift**: not a node measure, hence not FREE-canonical, not
+CHILD (conservation standard `L-97400`: "the literal native marginal, not a
+reweighted rough lift"), and not DEFECT (it is of order `\sqrt Y` with the
+`s = 1/2`-type singularity by the same Landau argument as A.3). So nonlinear
+use of the free positivity produces only untypeable residue, no delivery.
 
 **Theorem A.2 (price and divergence).** Define the price of full native
 delivery in coordinate `G \in \{T, Q_\cdot(j)\}`:
@@ -131,27 +172,34 @@ Pi_G(Y) = sum_{67 <= p <= Y} r_p * G(Y/p)/G(Y).
 ```
 
 Then:
-(i) `Pi_G(Y) \le \sum_{67\le p\le Y} 1/p` for every admissible coordinate —
+(i) `Pi_G(Y) \le \sum_{67\le p\le Y} 1/p` for `G \in \{T,\ Q_\cdot(j)\}` —
 by `L-105001` (weight bound `w_p = \sqrt p\,G(Y/p)/G(Y) \le 1`, proved via
 the exact identity `\sqrt{Z/Y}\,T(Y) - T(Z) = 3(1 - \sqrt{Z/Y}) \ge 0` and
 profile monotonicity `Q_Z/Q_Y \le T_Z/T_Y`).
-(ii) `Pi_G(Y) \ge (1 - \tfrac{3}{4} Y^{-1/4}) \sum_{67 \le p \le \sqrt Y} 1/p
-\cdot \min_{p \le \sqrt Y} w_p`, and hence `Pi_G(Y) \to \infty`; by Mertens
+(ii) Lower bounds, per coordinate. For `G = T` and `p \le \sqrt Y`:
+`1 - w_p^T = 3(\sqrt p - 1)/(4\sqrt Y - 3)`, and
+`(3/4)Y^{-1/4}(4\sqrt Y - 3) - 3(Y^{1/4} - 1) = 3 - (9/4)Y^{-1/4} \ge 0`,
+so `w_p^T \ge 1 - (3/4)Y^{-1/4}`. For `G = Q_\cdot(j)`: by the two-sided
+`Q_Z(j) = 4C_j\sqrt Z + O_j(\log 2Z)` (`R-99440.4`), for `p \le \sqrt Y`
+one has `\sqrt p\,Q_{Y/p}(j) \ge 4C_j\sqrt Y - K_j\,Y^{1/4}\log 2Y`, hence
+`w_p^{Q(j)} \ge 1 - K_j'\,Y^{-1/4}\log Y \to 1`. In both coordinates
+`Pi_G(Y) \ge (1 - o(1))\sum_{67\le p\le\sqrt Y} 1/p \to \infty`; by Mertens
 both bounds are `\log\log Y + O(1)`.
 (iii) Full sign-paid delivery (`d_p = r_p` for all rough `p \le Y`) requires
-`Pi_G(Y) \le 1` in **every** coordinate `G` of the scheme's positivity cone.
-The practiced class demands nonnegativity in the full typed packet vector
-`\mathbf P_Y \in \mathbb R_+^D` (`L-99210.1`), and the causal identities hold
-"in every linear typed coordinate simultaneously" (`L-96500.1`'s own words),
-so the binding coordinate is the one with the largest weights; by
-`L-105001 §2` (profile monotonicity) that is `T`, and the unit budget is
-exhausted at `Y^* \in (578906,\ 584375)`:
-`Pi_T(578906) = 0.99972\ldots < 1 < 1.00052\ldots = Pi_T(584375)`
-(interval-guarded computation, `X-105000`). At the crossing,
-`\sum_{67\le p\le Y^*} 1/p = 1.133\ldots`. A scheme that deliberately weakens
-its cone to rows-only (nonnegativity demanded only in `Q(2), Q(3)`) has a
-later horizon — no numeric `Q`-crossing is claimed — but still a finite one,
-since `Pi_{Q(j)}(Y) \to \infty` by (i)–(ii).
+`Pi_{Q(j)}(Y) \le 1` (A.1) **and** `Pi_T(Y) \le 1` (A.1′). Since
+`w_p^{Q(j)} \le w_p^T` (`L-105001 §2`), the `T`-form binds first, and the
+unit budget is exhausted at `Y^* \in (578906,\ 584375)`:
+`Pi_T(578906) = 0.99972\ldots < 1 < 1.00052\ldots = Pi_T(584375)`, certified
+by interval arithmetic with `Pi_T` strictly increasing (each `w_p^T`
+increasing in `Y` by `L-105001 §1`, plus new positive terms), so the
+crossing in the bracket is unique (`X-105000` S8). At the crossing,
+`\sum_{67\le p\le Y^*} 1/p = 1.133\ldots`. The row-coordinate budgets cross
+later: `Pi_{Q(2)}` passes 1 between `Y = 5\cdot10^6` and `7\cdot10^6`
+(`X-105000` S9b, float evaluation with margins far above rounding error).
+The same pointwise nonnegativity also yields the budget in every
+typed packet coordinate simultaneously (the practiced class demands the
+vector cone `\mathbf P_Y \in \mathbb R_+^D`, `L-99210.1`; "an identity in
+every linear typed coordinate simultaneously", `L-96500.1`).
 
 **Theorem A.3 (exposure).** For every admissible scheme satisfying
 conservation (C), the sign-unpaid first-order mass ("exposure")
@@ -161,33 +209,51 @@ E(S; Y, j) = sum_{67 <= p <= Y} (r_p - d_p) * Q_{Y/p}(j)
            >= (Pi_{Q(j)}(Y) - 1)_+ * Q_Y(j)
 ```
 
-is eventually positive and of order `\sqrt Y \cdot (\log\log Y - O(1))`
-(macroscopic). As a nonnegative function of the root endpoint it fails both
-DEFECT typings: it is unbounded, and its Mellin transform
-`\int_1^\infty E(Y)\,Y^{-s-1}dY` has convergence abscissa `\ge 1/2`, so by
-Landau's theorem on nonnegative densities (the repo's own consumer engine,
-`L-99272`/`L-99602`) it has a **real singularity at some
-`\sigma_c \ge 1/2`** and is not holomorphic in `\Re s > 0`. The exposure
-**cannot be re-typed as DEFECT**. It is a genuine open positive-sign demand
-of at least this size.
+is nonnegative for **all** `Y` (since `d_p \le r_p` per prime, §2 delivery
+accounting), eventually of order `\sqrt Y\,(\log\log Y - O(1))`
+(macroscopic), and in fact sandwiched: `(Pi_{Q(j)} - 1)_+ Q_Y \le E \le
+Pi_{Q(j)}\,Q_Y`, so for any measurable realization its Mellin transform
+`\int_1^\infty E(Y)Y^{-s-1}dY` has convergence abscissa **exactly `1/2`**,
+and by Landau's theorem on nonnegative densities (the repo's consumer
+engine, `L-99272`/`L-99602`) a **real singularity at `s = 1/2`**. It fails
+both DEFECT typings, and no DEFECT aggregate can absorb it: a per-row
+uniformly bounded defect has Mellin transform holomorphic in `\Re s > 0` by
+absolute convergence, so every finite DEFECT aggregate (bounded and/or
+holomorphic pieces, signed allowed) has transform holomorphic in
+`\Re s > 0`, and `E` minus any such aggregate retains the `s = 1/2`
+singularity. The transform-singular bulk of the exposure is therefore
+CHILD-carried. It is a genuine open positive-sign demand of at least this
+size.
 
 *Proof.* Subtract Theorem A.1 from the conservation demand
 `\sum_p r_p Q_{Y/p}(j) = Pi_{Q(j)}(Y)\, Q_Y(j)`, valid for every root
-endpoint `Y` (the scheme may vary with `Y`; the bound is pointwise in `Y`).
-For the typing: `E \ge 0` and `E(Y) \ge c\sqrt Y` eventually force
-divergence of the transform at every real `s < 1/2`, so the abscissa of
-convergence is `\ge 1/2`; Landau's theorem places a singularity at the real
-point of the abscissa. When the scheme is endpoint-independent the exposure
-is the fixed sum `\sum_p (r_p - d_p)\,Q_{Y/p}(j)` and the singularity is the
-explicit positive-real pole of `R-99440.7` aggregated over primes with
-nonnegative weights. ∎
+endpoint `Y` (the scheme may vary with `Y`; the bound is pointwise in `Y`,
+and `E \ge 0` everywhere because every first-order carrier observes
+negatively within the axioms, §2). The upper sandwich is `d_p \ge 0`. For a
+measurable realization `Y \mapsto E(Y)` (any concrete scheme family; the
+endpoint-independent case is the fixed sum `\sum_p (r_p - d_p)Q_{Y/p}(j)`,
+where the singularity is the explicit positive-real pole of `R-99440.7`),
+`c\sqrt Y \le E(Y) \le C\sqrt Y \log\log Y` eventually forces the abscissa
+of convergence to equal `1/2`; Landau places the singularity at the real
+point `s = 1/2`. Boundedness `|A(Y)| \le B` gives `\int_1^\infty
+|A(Y)|Y^{-s-1}dY \le B/\Re s < \infty` for `\Re s > 0`, so bounded pieces
+are holomorphic there; subtracting finitely many holomorphic transforms
+cannot remove the singularity. ∎
 
-## 4. Theorem B (conservation trichotomy)
+## 4. Theorem B (proved dichotomy + exposure typing; the cell split is a typology)
 
-Within the axioms, every scheme satisfying (C) carries the Theorem A.3
-exposure, and the exposure resides in one of exactly three carrier types —
-the three ways the axioms permit first-order mass to avoid the FREE typing —
-each already named and statused in the repository:
+**Proved dichotomy.** Beyond the budget horizon, every admissible scheme
+either (a) fails conservation (C) — with per-prime deficit `r_p - d_p`
+realized as the recorded corpse defects — or (b) satisfies (C) and carries
+sign-unpaid CHILD exposure of at least the A.3 size, with a Mellin
+singularity at `s = 1/2` that no finite DEFECT aggregate absorbs. That much
+is theorem (A.1–A.3 plus the §2 sign inventory).
+
+**Typology (exhaustive over the executed corpus; cells need not be
+disjoint; no exhaustiveness over all conceivable schemes is claimed).** In
+every scheme family executed in this repository, branch (a) is cell (A)
+below, and branch (b)'s exposure is one of the two named demand classes (B),
+(C):
 
 * **(A) Exposure denied — contracted schemes.** The scheme has no carrier:
   it fails (C) with per-prime deficit `r_p - d_p` realized as the recorded
@@ -195,7 +261,7 @@ each already named and statused in the repository:
   native at `p = 67`), net `0` (`R-99600.2`), one-prime subsidy `r(1-r)`
   of size `\sqrt Y` with the `s = 1/2` pole (`R-99440.3–.7`). All executed.
   New sharpenings (verified in `X-105000`): the loss fraction `1 - 2r_p >
-  3/4` **iff `p > 64`** — 67 is the least rough prime above the threshold —
+  3/4` **iff `p > 64`** — 67 is the least prime above 64 —
   and the fraction increases to 1 in `p`: no choice of factor prime tunes the
   defect away; the defect is positive for every `p \ge 5`, and the total
   quadratic overshoot available from `p \in \{2,3\}` is the constant
@@ -219,7 +285,7 @@ each already named and statused in the repository:
   realization of the sign character (`L-97501 §4`). Leafwise, fixed-
   orientation, and every fixed-depth variant are executed at the
   `X = 61841` witness and the fixed-depth counterexamples
-  (`R-96650`/`R-96500` margin `> 17` canonical-only; `R-97301`; `R-97010`/
+  (`R-96650`/`R-97301` margin `> 17` canonical-only; `R-97010`/
   `R-96501`; scalar-lift trade `R-97300.2–.4`). The surviving demand is
   global compensation across histories/cores — `CPSL67` / `GPC67` / the
   block-`L^2` cross-core estimate — each open and RH-bearing, and where
@@ -227,14 +293,25 @@ each already named and statused in the repository:
   X^{o(1)}`, owner-degeneracy PROOF_PACKET §6; half-order window:
   `L-99823.4`).
 
-**Exits from the axioms** (each named; none free): signed masses (breaks P;
-no feasibility theory exists in-repo; one-channel signed carriage is blocked
-by `L-97501 §4`); per-step factors above the exchange rate (breaks the free
-cone; the `R-99440` macroscopic-subsidy class); non-`\sqrt{}` coordinates
-(breaks N; `L-99704`: absolutely-summable damping deletes the detector;
-`R-99820`/`R-99900`: the normalization cocycle moves coefficient and window
-together — the price is invariant, `L-105001(d)`); abandoning atomwise
-conservation (breaks C; blocked by knot identifiability, `M-105000` Lemma 0).
+**Exits from the axioms** (named; none known to be free): signed masses
+(breaks P; no feasibility theory exists in-repo; one-channel signed carriage
+is blocked by `L-97501 §4`); per-step factors above the exchange rate
+(breaks the free cone; the `R-99440` macroscopic-subsidy class);
+non-`\sqrt{}` coordinates (breaks N; `L-99704` tilt-spine: absolutely-
+summable damping deletes the detector; `R-99820`/`R-99900`: the
+normalization cocycle moves coefficient and window together — the price is
+invariant, `L-105001 §4`); abandoning atomwise conservation (breaks C;
+resisted by knot identifiability, `M-105000` Lemma 0, sketched and
+fixture-verified). Two practiced mechanisms sit at the class boundary and
+are covered as follows: composite multi-prime moves (`T-97700.8`'s two-prime
+`R^2`, coefficient `(pq)^{-1/2}`) add only nonnegative terms to A.1's left
+side and carry only even-order, sign-free slots, so they cannot substitute
+for first-order delivery; and single-prime native-coefficient edges proved
+by compact bias bounds (`L-97700`: `F_{61}(Y) - p^{-1/2}F_{61}(Y/p) \ge
+(1/42 - 1/(8\sqrt p))M_{61}(Y)`) are one-prime statements on the signed
+annular scalar whose simultaneous all-prime (depth-composed) version is, by
+that lemma's own scope note, open — it is the (C)-cell gate, not a budget
+escape.
 
 ## 5. Corollary (adjudication of `R-99260 §2`, repair option 3)
 
@@ -242,10 +319,10 @@ conservation (breaks C; blocked by knot identifiability, `M-105000` Lemma 0).
 positive representation of the actual Möbius marginal". By Theorems A and B:
 such a representation exists only together with an owned compensation source
 of first-order mass at least `(Pi_{Q(j)}(Y) - 1)\,Q_Y(j) \sim 4C_j\sqrt Y\,
-(\log\log Y - O(1))`, carrying the positive-real `s = 1/2` Mellin pole —
-i.e. option 3 collapses into option 1 (a genuine sign theorem of the
-FCHD67/IHR67 class). There is no third road. Full statement and proof:
-`R-105000`.
+(\log\log Y - O(1))`, carrying the `s = 1/2` Mellin singularity —
+i.e. option 3 collapses into option 1 (a genuine sign theorem with the size
+and Mellin type of the FCHD67/IHR67 class). There is no third road inside
+the axioms. Full statement and proof: `R-105000`.
 
 ## 6. What this theorem is and is not
 
@@ -269,9 +346,10 @@ FCHD67/IHR67 class). There is no third road. Full statement and proof:
 ```
 budget inequality (A.1)                     PROVED EXACT
 weight bound / price cap (L-105001)         PROVED EXACT
-price divergence (A.2)                      PROVED (Mertens + interval bracket)
+price divergence (A.2)                      PROVED (Mertens; T-horizon interval-certified)
 exposure lower bound + pole typing (A.3)    PROVED
-trichotomy typing (B)                       PROVED AT STATED SCOPE
+dichotomy + exposure typing (B)             PROVED
+(B)/(C) cell assignment                     TYPOLOGY (exhaustive over executed corpus)
 corpse reproduction                          VERIFIED (X-105000, S3-S4)
 adjudication of R-99260 option 3            PROVED (R-105000)
 Riemann Hypothesis                          UNPROVED / NOT ADDRESSED

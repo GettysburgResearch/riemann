@@ -1,7 +1,7 @@
 # L-105001 — Exchange-rate cap, weight bound, and normalization invariance of the delivery price
 
 Claim ID: `L-105001`
-Status: **PROVED EXACT**
+Status: **PROVED EXACT (§§1–3); §4 is an asymptotic invariance remark (numeric check S6)**
 Created: 2026-08-21
 Agent: claude (external reviewer lane)
 RH status: not assumed, not addressed

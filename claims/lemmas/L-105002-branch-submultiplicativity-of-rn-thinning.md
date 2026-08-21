@@ -20,7 +20,8 @@ primes `p, q` and every `t` in the common support,
 R_{Y/pq | Y/p}(t)   <=   R_{Y/q | Y}(t),
 ```
 
-with strict inequality wherever `t > $` the degenerate boundary. Proof: both
+with strict inequality for every `t` in the interior of the common support
+`1 \le t \le Y/(pq)` (equality only where both sides vanish). Proof: both
 sides are values of `z \mapsto T(z/q)/T(z)`, at `z = Y/(pt)` and `z = Y/t`
 respectively; this function is strictly increasing in `z` by the derivative
 computation of `L-105001 §1`, and `Y/(pt) < Y/t`. ∎
@@ -59,6 +60,7 @@ costs more than the unit budget once `\sum_{67\le p\le Y} 1/p > 1`
 ## 4. Scope
 
 Exact pointwise statements about the SHARP kernel family only. No claim is
-made about other kernels; for any kernel with `G(y) = a\sqrt y + b`,
-`b \ne 0`, the same derivative computation applies with `6(\sqrt p - 1)`
-replaced by `-2ab(\sqrt p - 1)/\ldots` sign analysis — not needed here.
+made about other kernels (for `G(y) = a\sqrt y + b` the same derivative
+computation applies with the numerator constant `-ab(\sqrt p - 1)` up to
+positive factors, so the direction flips with the sign of `ab` — not needed
+here and not asserted).

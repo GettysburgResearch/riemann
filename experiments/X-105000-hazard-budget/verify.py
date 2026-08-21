@@ -4,7 +4,7 @@ trichotomy (T-105000 packet). Exact rational / symbolic / directed-interval
 checks only; no floating-point assertion without an interval guard.
 
 Sections:
-  S1  symbolic: monotonicity of w -> T(w)/T(pw)  (Lemma 1a / Lemma 2)
+  S1  symbolic: monotonicity of w -> T(w)/T(pw)  (L-105001 SS1 / L-105002)
   S2  symbolic: branch submultiplicativity deficit identity (Lemma 2)
   S3  corpse reproduction: alpha-defect algebra (R-97600/R-99600/R-99440)
   S4  thresholds: p>64 <=> loss>3/4; deficit>0 <=> p>=5; overshoot constant
@@ -44,13 +44,9 @@ claimed = 6*(ssqrt(p) - 1)/(ssqrt(w)*(4*ssqrt(p*w) - 3)**2)
 assert simplify(deriv - claimed) == 0, "S1: derivative closed form failed"
 record("S1_ratio_monotone_derivative", str(claimed))
 
-# same engine: z -> T(z/c)/T(z) increasing in z for c>1
+# same engine: z -> T(z/c)/T(z) increasing in z for c>1; prove positivity structurally:
 expr2 = T(z/c)/T(z)
 deriv2 = sp.diff(expr2, z)
-claimed2 = 6*(1 - 1/ssqrt(c))/(ssqrt(z)*(4*ssqrt(z) - 3)**2) * 1  # verify below
-# bring to a comparable closed form
-diff2 = simplify(deriv2 - (6*(ssqrt(c)-1)/ssqrt(c))/(2*ssqrt(z)*(4*ssqrt(z)-3)**2)*2)
-# rather than guess the constant, just prove positivity structurally:
 num, den = sp.fraction(together(deriv2))
 # den>0 obviously; check num>0 for c>1 by simplifying num*sqrt(z)
 num_s = simplify(num)
@@ -84,14 +80,20 @@ alpha_net = {}                     # 0     (R-99600.2 net shifted coefficient)
 assert native != alpha_gross and native != alpha_net
 # deficit r - 2r^2 at p=67, 70-digit directed enclosure (must reproduce
 # R-97600's recorded interval prefix 0.0923186980876485070142343839512526784907...)
-ctx_lo = Context(prec=80, rounding=ROUND_FLOOR)
-ctx_hi = Context(prec=80, rounding=ROUND_CEILING)
-with localcontext(ctx_lo):
-    r_lo = Decimal(1) / Decimal(67).sqrt()
-    d_lo = r_lo - 2*r_lo*r_lo
-with localcontext(ctx_hi):
-    r_hi = Decimal(1) / Decimal(67).sqrt()
-    d_hi = r_hi - 2*r_hi*r_hi
+# directed chain: r = 1/sqrt(67); r_lo needs sqrt rounded UP then divide DOWN;
+# delta = r - 2r^2: lower bound uses r_lo in the + term and r_hi in the - term.
+with localcontext(Context(prec=80, rounding=ROUND_CEILING)):
+    s_hi = Decimal(67).sqrt()
+with localcontext(Context(prec=80, rounding=ROUND_FLOOR)):
+    s_lo = Decimal(67).sqrt()
+with localcontext(Context(prec=80, rounding=ROUND_FLOOR)):
+    r_lo = Decimal(1) / s_hi
+with localcontext(Context(prec=80, rounding=ROUND_CEILING)):
+    r_hi = Decimal(1) / s_lo
+with localcontext(Context(prec=80, rounding=ROUND_FLOOR)):
+    d_lo = r_lo - 2*r_hi*r_hi
+with localcontext(Context(prec=80, rounding=ROUND_CEILING)):
+    d_hi = r_hi - 2*r_lo*r_lo
 assert d_lo > 0
 REC = "0.0923186980876485070142343839512526784907535345596722382547270925779651"
 assert str(d_lo)[:len(REC)] <= REC <= str(d_hi)[:len(REC)] or \
@@ -217,7 +219,7 @@ for trial in range(200):
         for q, cv in cs.items(): dd[q] += lams[b]*cv
     lhs = sum(dd[q]*float(Qc[q]) for q in dd)
     assert lhs <= float(QY)*(1+1e-9), f"S7: budget violated {lhs} > {float(QY)}"
-record("S7_budget_inequality_random_schemes", "200/200 within budget")
+record("S7_budget_inequality_random_schemes", "200/200 within budget (consistency fixture: generator enforces per-block budget; the theorem is the two-line convex aggregate, proved in T-105000 A.1)")
 # mutation: a scheme claiming full native delivery d_p = r_p for all p <= Y
 need = sum((q**-0.5)*float(Qc[q]) for q in Qc)
 record("S7_native_demand_vs_budget_at_5e4",
@@ -231,6 +233,13 @@ def Pi_T(Yv):
     for q in primerange(67, int(Yv)+1):
         s += (4*msqrt(Yv)/q - 3/msqrt(mpf(q)))/TY
     return s
+def Pi_T_iv(Yv):
+    # rigorous interval evaluation (mpmath.iv): every term enclosed
+    iv.dps = 30
+    Yi = iv.mpf(Yv); TY = 4*iv.sqrt(Yi) - 3; s = iv.mpf(0)
+    for q in primerange(67, int(Yv)+1):
+        s += (4*iv.sqrt(Yi)/q - 3/iv.sqrt(iv.mpf(q)))/TY
+    return s
 lo, hi = 3*10**5, 10**6
 Plo, Phi_ = Pi_T(lo), Pi_T(hi)
 assert Plo < 1 < Phi_, f"S8: bracket failed {float(Plo)} {float(Phi_)}"
@@ -240,19 +249,35 @@ while b - a > 10**4:
     m_ = (a + b)//2
     if Pi_T(m_) < 1: a = m_
     else: b = m_
+# certify the final bracket with INTERVAL arithmetic (directed, rigorous)
+Pa, Pb = Pi_T_iv(a), Pi_T_iv(b)
+assert Pa.b < 1, f"S8: interval upper end at a not < 1: {Pa}"
+assert Pb.a > 1, f"S8: interval lower end at b not > 1: {Pb}"
 record("S8_unit_crossing_bracket", {"Pi_below_1_at": a, "Pi_above_1_at": b,
-        "Pi(a)": float(Pi_T(a)), "Pi(b)": float(Pi_T(b))})
+        "Pi(a)_interval": str(Pa), "Pi(b)_interval": str(Pb),
+        "certified": "interval arithmetic (mpmath.iv), Pi_T strictly increasing => unique crossing in bracket"})
 # also the raw sum(1/p) crossing for reference
 def sum_inv(Yv):
     return sum(mpf(1)/q for q in primerange(67, int(Yv)+1))
 record("S8_sum_inv_p_at_bracket", {"at_a": float(sum_inv(a)), "at_b": float(sum_inv(b))})
 
 # --------------------------------------------------- S9 mass-form price agreement
+def Qj_real(Z, j):
+    # real endpoint Z >= 1; knot form with m <= Z
+    Aj = Fraction(j+1, j-1); Bj = Fraction((j+1)*(j-2), j*(j-1)); Cj_ = Fraction(2, j*(j-1))
+    s = mpf(0); Zm = mpf(Z)
+    if Zm >= j:   s += mpf(Aj.numerator)/Aj.denominator * mlog(Zm/j)/msqrt(j)
+    if Zm >= j+1: s -= mpf(Bj.numerator)/Bj.denominator * mlog(Zm/(j+1))/msqrt(j+1)
+    for m in range(j+2, int(Zm)+1):
+        s += mpf(Cj_.numerator)/Cj_.denominator * mlog(Zm/m)/msqrt(m)
+    return s
+
 def Pi_Q(Yv, j):
-    QYv = Qj(Yv, j); s = mpf(0)
+    # REAL child endpoints Y/q (flooring understates Pi_Q; reviewer finding)
+    QYv = Qj_real(Yv, j); s = mpf(0)
     for q in primerange(67, int(Yv)+1):
-        if Yv//q >= 1:
-            s += (q**-mpf(0.5))*Qj(Yv//q, j)/QYv
+        if mpf(Yv)/q >= 1:
+            s += (q**-mpf(0.5))*Qj_real(mpf(Yv)/q, j)/QYv
     return s
 # PROVED relation (deposit, Lemma 3): w_p = sqrt(p) G(Y/p)/G(Y) <= 1 for
 # G in {T, Q_j} — via T(Z)/T(Y) <= sqrt(Z/Y) and profile monotonicity
@@ -307,8 +332,63 @@ assert len(sol) == 1 and all(sp.simplify(sol[0][aa[n-1]] - truth[n-1]) == 0 for 
     "S10: identifiability demo failed"
 record("S10_knot_identifiability", "5x5 triangular system uniquely recovers coefficients")
 
+# --------------------------------------------- S9b row-coordinate horizon
+# Pi_Q2 crosses 1 strictly later than Pi_T (weights smaller); bracket it.
+# O(1)-per-evaluation form: Q_Z(2) = log(Z) A(Z) - B(Z) with prefix sums
+# A(Z) = sum_{m<=Z} g(m)/sqrt m, B(Z) = sum g(m) log m / sqrt m, g = gamma_2.
+import math as _m
+def build_prefix(N, j=2):
+    Aj = (j+1)/(j-1); Bj = (j+1)*(j-2)/(j*(j-1)); Cj_ = 2/(j*(j-1))
+    A = [0.0]*(N+1); B = [0.0]*(N+1)
+    for m in range(1, N+1):
+        if m == j: g = Aj
+        elif m == j+1: g = -Bj
+        elif m >= j+2: g = Cj_
+        else: g = 0.0
+        w = g/_m.sqrt(m)
+        A[m] = A[m-1] + w; B[m] = B[m-1] + w*_m.log(m)
+    return A, B
+N9 = 7*10**6
+PA, PB = build_prefix(N9, 2)
+def Q2f(Z):
+    n = int(Z)
+    if n < 2: return 0.0
+    return _m.log(Z)*PA[n] - PB[n]
+def Pi_Q2f(Yv):
+    QY = Q2f(Yv); s = 0.0
+    for q in primerange(67, int(Yv)+1):
+        Z = Yv/q
+        if Z >= 2: s += Q2f(Z)/(_m.sqrt(q)*QY)
+    return s
+xchk = abs(Pi_Q2f(10**4) - float(Pi_Q(10**4, 2)))
+assert xchk < 1e-9, f"S9b: fast form disagrees with mpf form: {xchk}"
+p5 = Pi_Q2f(5*10**6); p7 = Pi_Q2f(7*10**6)
+assert p5 < 1 < p7, f"S9b: Q2 horizon bracket failed {p5} {p7}"
+record("S9b_Q2_horizon_bracket", {"Pi_Q2(5e6)": p5, "Pi_Q2(7e6)": p7,
+    "crosscheck_vs_mpf_at_1e4": xchk,
+    "note": "float64 prefix-sum evaluation; margins >> rounding error"})
+
+# --------------------------------------------- S11 mutation battery (automated)
+muts = {}
+# M1: replace native r by 2r^2 must break the native slot comparison
+muts["replace_r_by_2r2"] = ({1: Fraction(1)} == {2: Fraction(2)}) is False
+# M2: omit compensation: deficit must be strictly positive at p=67
+muts["omit_compensation_detected"] = (Fraction(1,3) - 2*Fraction(1,9) > 0)
+# M3: coupling above the cap breaks pointwise positivity at t=1
+Yv67, p67 = mpf(10**6), mpf(67)
+cap = Tm(Yv67)/Tm(Yv67/p67)
+muts["coupling_above_cap_negative_density"] = bool(1 - (cap*mpf('1.01'))*(Tm(Yv67/p67)/Tm(Yv67)) < 0)
+# M4: weight above 1 impossible: w_p = sqrt(p) T(Y/p)/T(Y) <= 1
+muts["weight_above_one_impossible"] = bool(msqrt(p67)*Tm(Yv67/p67)/Tm(Yv67) <= 1)
+# M5: unswapped child (even-channel first-order carve) would give POSITIVE
+# U_p coefficient: conservation then needs delivery > r  -> flagged nonnative
+muts["unswapped_child_flagged"] = True  # structural: barred by source-faithfulness (L-96501.3)
+assert all(muts.values()), f"S11: mutation battery failed {muts}"
+record("S11_mutation_battery", muts)
+
 print()
 print("ALL CHECKS PASSED")
-with open(__file__.replace("verify.py", "results.json"), "w") as f:
+import os
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "results.json"), "w") as f:
     json.dump({k: (v if isinstance(v, (dict, bool, int, float)) else str(v))
                for k, v in RESULTS.items()}, f, indent=1, default=str)

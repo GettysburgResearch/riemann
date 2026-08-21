@@ -4,8 +4,10 @@ Claim ID: `R-105000`
 Status: **PROVED CLASS-LEVEL NO-GO (METHOD SPACE) — NOT A STATEMENT ABOUT RH**
 Created: 2026-08-21
 Agent: claude (external reviewer lane)
-Frozen inputs: the axiom anchors listed in `M-105000 §1` (all previously
-proved in-repo); `T-105000`; `L-105001`; `L-105002`.
+Frozen inputs: the axiom anchors listed in `M-105000 §1` (previously
+deposited in-repo; per-anchor statuses annotated there — the load-bearing
+ones are PROVED-status or carry PROVED-status equivalents);
+`T-105000`; `L-105001`; `L-105002`.
 RH status: **unproved, not addressed**
 
 ## 1. Statement
@@ -54,9 +56,9 @@ actual Möbius marginal. `R-99440` closed (ii) for the subsidy. This claim
 closes the independence of (iii): any direct positive representation of the
 actual Möbius marginal in the admissible class must own a positive
 compensation source of at least the size in (3), carrying the `s = 1/2`
-pole — that is, an object of exactly the FCHD67/IHR67 sign-theorem type.
-**Option (iii) is not a third road; it is option (i) with its minimum
-quantitative burden computed.**
+singularity — an object with the size and Mellin type of the FCHD67/IHR67
+sign-theorem class. **Inside the axioms, option (iii) is not a third road;
+it is option (i) with its minimum quantitative burden computed.**
 
 ## 2. How the executed corpses instantiate this
 
@@ -64,13 +66,15 @@ quantitative burden computed.**
 |---|---|---|---|---|
 | `R-97600` (alpha resummation, PR #566) | gross `2r^2` | `r` | `r(1-2r)`, `>3/4` at `p=67` | coupling `c=r`, efficiency `2r` of the cap `\sqrt p` |
 | `R-99600` (contracted alpha child, T-99450 family) | net `0` | `-r` | `r` (net) | first-order terms engineered to cancel; delivery pushed to `r^2` child |
-| `R-99440` / `R-99260` (causal current, PR #649) | `r^2` | `r` | `r(1-r)` per prime, `\sqrt Y`-sized on the row | subsidy = the per-prime exposure, pole at `s=1/2` |
+| `R-99440` / `R-99260` (causal current, PR #647/#649) | `r^2` | `r` | `r(1-r)` per prime, `\sqrt Y`-sized on the row | subsidy = the per-prime exposure, pole at `s=1/2` |
 | `R-97610` (PR #565 swapped current) | wrong by `rF(x/p)` at depth one | — | — | sign-unpaid mass misdeclared as paid |
 | `R-97500` (one-channel safe child) | `t = \lambda r < r` | `r` | global-depth gap | embryonic form of the price: contracted `\ne` raw unless global |
 
-Every recorded number above is reproduced by `experiments/X-105000` (S3, S4)
-including the 70-digit enclosure of `\delta_{67} = r(1-2r) =
+The numerical entries of rows 1–3, plus the threshold and overshoot facts
+below, are reproduced by `experiments/X-105000` (S3, S4) — including the
+70-digit enclosure of `\delta_{67} = r(1-2r) =
 0.0923186980876485070142\ldots` matching `R-97600`'s deposited interval.
+Rows 4–5 are verbatim source quotations (no numeric replay).
 
 New quantitative facts (verified, S4): the loss fraction `1 - 2r_p > 3/4`
 iff `p > 64` (67 is the least rough prime past the threshold, and the
