@@ -1,0 +1,15 @@
+{
+  "coefficient_cases": 89373,
+  "fixed_output": {
+    "1": "1",
+    "2": "-5/2",
+    "4": "1"
+  },
+  "overlap_omission_mutations_rejected": 62,
+  "proof_object_sha256_without_digest": "c8b457f5f9e6b398826d7ae17e57340b1460bd444f578b6183184a1a56dcf970",
+  "remainder_monomials_checked": 175485,
+  "remainder_support": "N <= product < N^2",
+  "scales_checked": 62,
+  "scope": "Exact finite hyperbola coverage and support only. No physical remainder estimate, cofinal recurrence, or RH result.",
+  "verdict": "PASS_EXACT_CRITICAL_HYPERBOLA_BANK_SPLIT"
+}

@@ -1,0 +1,27 @@
+{
+  "bezout_degree": 7,
+  "proof_object_sha256_without_digest": "9a15a5483c6bdddd2ccf26de063942d70b5752dde1de60e3fa0fe904f10a0d48",
+  "reserve_minus_budget_Q_sqrt2": [
+    "-5285/36",
+    "320/3"
+  ],
+  "scope": "Exact local filter-bank algebra only. No physical-block contraction, cofinal estimate, or RH result.",
+  "source_polynomial_Q_sqrt2": [
+    ["1", "0"],
+    ["-3", "-2"],
+    ["4", "6"],
+    ["-6", "-4"],
+    ["4", "0"]
+  ],
+  "synthesis_polynomial_Q_sqrt2": [
+    ["1/2", "0"],
+    ["-11/3", "7/2"],
+    ["1", "1/6"],
+    ["14/3", "-3"]
+  ],
+  "synthesis_square_budget_Q_sqrt2": [
+    "2845/18",
+    "-320/3"
+  ],
+  "verdict": "PASS_EXACT_POSITIVE_BEZOUT_PARITY_RECONSTRUCTION"
+}

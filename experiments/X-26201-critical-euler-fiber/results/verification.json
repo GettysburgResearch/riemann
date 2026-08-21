@@ -1,0 +1,51 @@
+{
+  "filter_coefficients_Q_sqrt2": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "-2",
+      "-2"
+    ],
+    [
+      "2",
+      "4"
+    ],
+    [
+      "-4",
+      "0"
+    ]
+  ],
+  "finite_source_rows_checked": 512,
+  "fiber_rows_checked": 13,
+  "full_local_coefficients_Q_sqrt2": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "-3",
+      "-2"
+    ],
+    [
+      "4",
+      "6"
+    ],
+    [
+      "-6",
+      "-4"
+    ],
+    [
+      "4",
+      "0"
+    ]
+  ],
+  "generalized_prime_coefficients_checked": 64,
+  "inverse_coefficients_checked": 65,
+  "mutations": 3,
+  "odd_firewall_rows_checked": 256,
+  "proof_object_sha256_without_digest": "eae4763448cea4d19301e5f18eae6dbd5eb29c69a05d535ade49211ec6e3483e",
+  "scope": "Exact finite/filter/source algebra only. No reflected contraction, cofinal energy bound, or RH result.",
+  "verdict": "PASS_EXACT_CRITICAL_EULER_FIBER_ALGEBRA"
+}
