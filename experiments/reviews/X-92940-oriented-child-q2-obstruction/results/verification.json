@@ -1,0 +1,45 @@
+{
+  "frozen": {
+    "pr496": {
+      "commit": "96f8a6b3cc3d474217633e16d4caa490a0aae518",
+      "tree": "aa9933522d3e4dd0ee8287c6dcfcce2f03c015bc"
+    },
+    "pr500": {
+      "commit": "d73c1e7a1a482cac31581211a84db43cc34c824e",
+      "tree": "72421c74d9d5f92aa4c36e5ad571b29442aad42b"
+    },
+    "pr505": {
+      "commit": "1113fe6d55e955a8d9de7b43ceb24f5792870550",
+      "tree": "8f6ffe32961062e1c53e2bcba1415fa51d7ead6f"
+    },
+    "pr507": {
+      "commit": "dfaa70cd2eefcabbf6717e3da060792904c7f357",
+      "tree": "f8fdef949b85ebe0be5a1e745da33241b426731d"
+    }
+  },
+  "oriented_child_q2": {
+    "detail_actual_child_upper": -0.11975759271329574,
+    "detail_rough_67_lower": 0.11975759271329574,
+    "ordinary_actual_child_upper": -2.7594999788096697,
+    "ordinary_rough_67_lower": 2.7594999788096697,
+    "positive_branchwise_realization_possible": false,
+    "x": 10000000000000000
+  },
+  "proof_object_sha256": "ddd7c681300e6b4400c509811148998a18488e4511ba181a847e97c095296694",
+  "qualified_109_over_1200": {
+    "correction_upper": "2800576272675862505353999298560006479/1164003263915522800000000000000000000000",
+    "ideal_lower": "31048691/254522375",
+    "retained_named_lower": "109/1200",
+    "scope": "full P_61 rough-lift precomparison marginal at X=10^16 with the frozen downward allowances",
+    "unconditional_pr_refutation": false
+  },
+  "rh_proved": false,
+  "terminal_arithmetic": {
+    "children": "6039/8",
+    "root": "60989",
+    "status": "ARITHMETIC_ONLY_PRODUCER_BLOCKED",
+    "strict_bound": "61744",
+    "total": "493951/8"
+  },
+  "verdict": "PASS_EXACT_ORIENTED_CHILD_Q2_NEGATIVE_COORDINATE_OBSTRUCTION"
+}
