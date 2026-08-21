@@ -1,0 +1,41 @@
+{
+  "schema": "riemann.t104100.implication-matrix.v1",
+  "nodes": [
+    {"id": "FIXED_DETECTOR", "status": "INHERITED_VERIFIED"},
+    {"id": "ROOT_CONTAINING_SQUARE", "status": "INHERITED_OR_EXACT_IDENTITY"},
+    {"id": "SORR104100", "status": "OPEN"},
+    {"id": "RFCP104100", "status": "OPEN"},
+    {"id": "NEGATIVE_MASS", "status": "CONDITIONAL"},
+    {"id": "MELLIN_LANDAU", "status": "INHERITED_VERIFIED"},
+    {"id": "RH", "status": "UNPROVED"}
+  ],
+  "hyperedges": [
+    {
+      "id": "H104100-A",
+      "inputs": ["ROOT_CONTAINING_SQUARE", "SORR104100", "RFCP104100"],
+      "output": "NEGATIVE_MASS",
+      "status": "PROVED_CONDITIONAL",
+      "claim": "L-104101"
+    },
+    {
+      "id": "H104100-B",
+      "inputs": ["FIXED_DETECTOR", "NEGATIVE_MASS", "MELLIN_LANDAU"],
+      "output": "RH",
+      "status": "INHERITED_CONDITIONAL",
+      "claim": "T-104100"
+    }
+  ],
+  "forbidden_edges": [
+    "SUPERCRITICAL_POSITIVITY_TO_CRITICAL_SIGN",
+    "PSD_GRAM_TO_LINEAR_SIGN",
+    "EXCESS_ONLY_TO_ROOT_BOUND",
+    "PAIRWISE_POSITIVITY_TO_ALL_PRIME_CONE",
+    "THETA_EQUAL_ONE_TO_ABSORPTION",
+    "MOVING_COMPLETED_OBSERVABLE_TO_FIXED_MELLIN_CONSUMER"
+  ],
+  "relation_to_live_work": {
+    "pr_697": "T104100 is the scalar Schur/Perron quotient of the joint matrix",
+    "pr_704": "matched transfer may precede T104100 while preserving the fixed detector"
+  },
+  "rh_established": false
+}
