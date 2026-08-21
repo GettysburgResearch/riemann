@@ -67,4 +67,4 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
-# Synchronize event trigger for PR #708; payload bytes remain unchanged.
+# Write-enabled retrigger for PR #708 on 2026-08-21; payload bytes remain unchanged.
