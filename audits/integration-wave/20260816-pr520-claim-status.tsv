@@ -1,0 +1,14 @@
+route	pr	frozen_head	claim	mathematical_type	review_verdict	dependencies	surviving_scope	integration_action	notes
+shared centered cubic spine	#498	6cc0da2fa5711017e260ebdcea4ba8c22e453288	L-93250/T-93251	RH-EQUIVALENT CRITERION	IMPORTED / ONE SHARED DEPENDENCY	PR #498	centered criterion	count once	not corroborated by other descendants
+phase-lock dictionary	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	L-94050	UNCONDITIONAL THEOREM	VERIFIED	PR #379 normalization	Fourier signs; shifts; Q4 adjoint factor	retain	D_L=5I-2T_L-2T_-L
+fixed filtered criterion	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	T-94050	RH-EQUIVALENT CRITERION	VERIFIED WITH FIXES	PR #379 terminal theorem	fixed m and m(q)=o(q) terminal dominance	retain conditional status	inherited terminal theorem not re-proved
+prime saddle envelope	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	L-94051	UNCONDITIONAL THEOREM	VERIFIED WITH FIXES	Chebyshev; Hermite bounds	fixed/growing pointwise envelope	retain with constants	analytic not certified by finite replay
+fixed-order frontier	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	T-94051.1	UNCONDITIONAL THEOREM	VERIFIED WITH FIXES	L-94051	log-log-log improvement	retain	no fixed leading-constant gain
+explicit growing order	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	T-94051.2	UNCONDITIONAL THEOREM	VERIFIED WITH FIXES	L-94051	eta<16 sublinear correction	retain	m=o(q)
+global Delta envelope	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	T-94051.10	LEMMA	FALSE	none	global supremum may be infinite	replace with tail envelope	Delta(t)=1/|t-2| counterexample
+arbitrary sublinear Delta	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	T-94051.3	UNCONDITIONAL THEOREM	VERIFIED WITH FIX	L-94051	intended eventual positivity	rewrite with Delta-sharp tail envelope	qualify effectiveness
+filtered coefficient variance	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	L-94052	CONDITIONAL IMPLICATION	VERIFIED WITH FIXES	PR #390 input	fixed-order q+O_m(sqrt q)	retain conditional	cardinality not upper bound
+strip-majorant firewall	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	R-94054	REFUTATION	VERIFIED WITH FIXES	maximum modulus	scalar absolute filter cannot cross fixed constant	retain	does not refute signed arithmetic
+positive-annulus firewall	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	R-94055	REFUTATION	VERIFIED WITH FIXES	Q4 source dictionary	real pole/antisymmetry obstruction	retain	no general signed no-go
+finite replay	#520	41db5f783c751e66c786f18fa7fbd6d9bf229a8d	X-94050	DISCOVERY ONLY	EMPIRICAL ONLY	finite fixtures	translation and exponent regression	retain scope label	no analytic theorem
+Riemann Hypothesis	global		RH	OPEN PROBLEM	UNPROVEN	all above	no conclusion	do not promote	
