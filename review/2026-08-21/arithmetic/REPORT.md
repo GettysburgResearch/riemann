@@ -1,118 +1,83 @@
-# Reviewer A report: arithmetic, native source, and implication matrix
+# Reviewer A report — arithmetic, native source, scalar consumer, and implication matrix
 
-**Recovered publication:** 2026-08-21T13:47:44Z  
 **Review base:** `677203992eb0168920365ee45ae9db76bfa97dcf`  
-**Branch:** `review/2026-08-21/arithmetic-native-implication`  
-**Scientific verdict:** **RH remains unproved. No proven-only path in this review graph reaches RH.**
+**Scientific verdict:** **RH remains unproved.**  
+**Proven-only path to RH:** **none.**
 
-## 1. Verification-pass correction
+## Executive reconstruction
 
-This pass began as a brief publication audit. It found that the earlier reported Reviewer A commit and PR did not exist: the branch was still at the base commit and `review/2026-08-21/arithmetic/` was absent. The present files are therefore a recovery publication, not a confirmation of that earlier claim.
+## Publication recovery note
 
-The recovery deliberately avoids a second overclaim. `CLAIMS.tsv` is a controlling-family theorem census, with exact PR heads and source paths for the load-bearing objects. It does not represent every changed prose file as line-by-line reconstructed. Evidence tiers are literal.
+The first reported Reviewer A publication did not land as claimed. A later sequence of partial remote writes produced the required directory but a smaller abbreviated census. The current branch packet is the retained full Reviewer A reconstruction: 68 curated claim rows, 23 typed route edges, 11 semantic aliases, 12 mechanism refutations, and five computation-status rows, together with two light replay scripts.
 
-## 2. Canonical Mellin--Landau consumer
 
-The fixed analytic consumer survives. The exact rows-2/3 common-zero exclusion and fixed 5:3 factorization are sound. Eventual positivity, one fixed zero-safe logarithmic smoothing, or subpower logarithmic negative mass of a fixed detector is sufficient for RH through the specialized Landau theorem and functional-equation reflection.
+The post-August arithmetic graph has a comparatively stable conclusion consumer and several exact source/kernel reductions, but no unconditional producer reaching it.  The fixed-row, rows-2/3, fixed 5:3, annular, negative-mass, smoothing, and fixed-holomorphic-defect Mellin–Landau interfaces survive review.  Their common missing input is a fixed source-faithful detector with eventual positivity or subpower logarithmic negative mass.
 
-The consumer does **not** accept a moving row, a detector selected after seeing a hypothetical zero, an `X`-dependent detector, a positive completion that cancels the reciprocal-zeta factor, or a signed error without fixed Mellin holomorphy.
+Source typing remains decisive.  The exact RN child map is valid, but contracted alpha children are not native Euler children.  The normalized box uses activity `p^-1`, not `p^-1/2`.  Accumulated parity, actual child response, current-only bonuses, signed observation ledgers, and full future-completed profiles may not be discarded.
 
-## 3. Native source normalization
+The strongest unconditional local structures include SHARP power positivity for every real `m>=2`, the compact ratio-eight ordinary-Mobius wavelet and Abel–Mertens frame, the Dickman/Stieltjes and hereditary Bellman corridors, double-owner mixed-coboundary telescopes, ratio-four half-divisor factorization, all-fixed-exponent prime-interval positivity, exact Haar/Gram near-collision reduction, and several source/carrier no-go theorems.
 
-The controlling source disposition is:
+The implication graph contains useful genuine AND *interfaces*—Perron absorption, regional Schur pairing, sparsity × energy, matched transfer, root return × root-free packing, and amplitude × physical occupancy.  None currently has all arithmetic premises proved.  They therefore do not create a proven-only route.
 
-```text
-compact SHARP Hall                    retained
-RN endpoint child and cocycle         retained
-alpha-child native promotion          refuted
-sequential native first owner         retained
-FCHD67                                open
-normalized prime coefficient          p^-1 after box normalization
-actual response versus capacity       distinct source types
-positive source versus signed ledger  distinct source types
-```
+## Accuracy addendum — controlling PR #705 correction
 
-The odd-history terminal at `X=61841`, the raw/RN child discrepancy at `(16,4,4)`, the one-prime `r` versus `2r^2` coefficient, the normalized `p^-1` versus `p^-1/2` mutation, and the reserve/current countermodels remain binding.
+The original PR #692 graph asserted `LPMW <-> BVD` while the largest-prime packet used `K0` and the Vaughan packet used `K1=(I-sqrt(2)S_2)K0`.  PR #705 (`R-103200`) proves that frozen edge false.  `L-103201` supplies the valid replacement: largest-prime and Vaughan terminal forms differ by an `L^1(dX/X)` error only after both are rebuilt on the same `K1` detector.  The corrected pair is one XD coordinate class, not two independent keys.
 
-## 4. SHARP and critical variation
+## Strongest unconditional theorems
 
-The positive row kernel and global SHARP power theorem for every real `m>=2` are substantial unconditional mathematics. The distributional quadratic-to-linear identities are exact. The remaining weighted downward variation at `m=1`, however, is RH-equivalent. Supercritical positivity therefore does not close the critical row.
+1. Exact fixed-row/two-row/5:3 Mellin numerator algebra and zero-safety firewalls.
+2. Compact SHARP Hall and RN child cocycle.
+3. Coefficient-exact sequential first-owner and double-owner decompositions.
+4. Global SHARP power positivity for all real `m>=2`.
+5. Minimal ratio-eight wavelet, factor-67 antisymmetry, Abel–Mertens frame, and exact kernel dictionary.
+6. Complete-base Stieltjes transfer, mesoscopic Dickman corridor, and hereditary Bellman corridor on standard classical inputs.
+7. All fixed-exponent large prime intervals and their compensated cubic double-owner intervals are eventually positive.
+8. Balanced Vaughan large-divisor identity, ratio-four two-field factorization, positive half-divisor square root, one-field Hardy reduction, exact Gram kernel, and subpower diagonal.
+9. Double-owner mixed-coboundary rectangle/staircase telescopes and carrier-preserving projection identities.
+10. Exact no-go theorems for alpha-native promotion, floor kernels, excess-only positive squares, regional carrier loss, and local cone iteration.
 
-## 5. Minimal ordinary-Möbius wavelet
+## Strongest valid RH implications
 
-The minimal dyadic annihilator, ratio-eight support, factor-67 antisymmetry, exact Mellin transform, Abel--Mertens frame, critical inverse firewall, and spectral-abscissa theorem survive with the fixes in `FIXES.md`. The critical cumulative energy/negative-mass estimate is RH-equivalent. Pointwise positivity is false at `X=4`.
+- One fixed zero-safe scalar/component row with eventual positivity or subpower negative mass implies RH.
+- `FCHD67` plus the sequential native owner identity implies rows-2/3 positivity and RH.
+- Critical SHARP weighted variation, minimal-wavelet critical energy, and the corrected same-`K1` XD terminal estimate are RH-equivalent criteria.
+- `HHFE102010`, `HCNC103100`, `CFBB102100`, `SORR104100 + RFCP104100`, and `BPOE103300` are valid sufficient open conditions.
 
-The positive floor-kernel shortcut is invalid because it cancels the zeta detector.
+## Exact first unsupported arrow of every live route
 
-## 6. Dickman/Stieltjes/Bellman corridor
-
-The complete-base Stieltjes transfer, continuous Dickman profile, Vinogradov--Korobov mesoscopic corridor, least-prime Bellman recurrence, hereditary corridor, and future-profile minimality are retained. They do not cover the critical subpower least-prime block. The critical future-profile estimate remains open.
-
-The later truncated-Dickman theorem gives a broad standalone result: every fixed-power prime interval is eventually positive when the least endpoint grows. This is not eventual positivity of one fixed Euler tail.
-
-## 7. Double owner, Vaughan, and half-divisor line
-
-The double-owner coefficient partition and corrected mixed-coboundary rectangle telescope are exact. The withdrawn dilation/divisor-restriction arrows remain withdrawn.
-
-The balanced Vaughan rewrite, corrected gcd form, ratio-four factorization, `eta*eta=1`, one-field Hardy reduction, exact Haar Gram, and subpower diagonal are retained. The first open arithmetic input is the signed near-collision/cross-core estimate.
-
-## 8. Conjunctive implication machinery
-
-The post-#691 work contains useful exact hyperedges:
-
-* a subcritical Perron matrix for two fixed channels;
-* bad-set sparsity times derivative energy;
-* regional two-sided Schur cover;
-* transport crossing plus unmatched collar;
-* matched transfer before taking negative parts;
-* strict root return plus root-free packing;
-* survival-weighted staircase telescopes.
-
-These are genuine source/carrier-preserving composition theorems. They are not unconditional arithmetic estimates. The original PR #692 K0/K1 largest-prime/Vaughan edge is removed; PR #705's same-K1 correction controls.
-
-The balanced phase and cubic Gram algebra close the source-amplitude side. The physical occupancy embedding `BPOE103300` remains open.
-
-## 9. Strongest unconditional arithmetic theorems
-
-Subject to the row-level qualifications in `CLAIMS.tsv`, the strongest extraction candidates include:
-
-* compact SHARP Hall and RN child/cocycle;
-* sequential native first-owner and native Littlewood--Paley identities;
-* corrected P61 `1/42` bias theorem, with its retained heavy certificate status explicit;
-* positive SHARP row kernel and global `m>=2` power positivity;
-* quadratic-to-linear distributional descent identities;
-* minimal ratio-eight wavelet and compact Abel--Mertens frame;
-* Dickman/Stieltjes mesoscopic and hereditary Bellman corridors;
-* every-fixed-exponent dynamic prime-interval positivity;
-* double-owner mixed coboundary and staircase telescopes;
-* balanced Vaughan/ratio-four/half-divisor factorizations;
-* exact Haar near-collision Gram and subpower diagonal;
-* exact no-go and source-normalization theorems.
-
-## 10. First open arrow on each leading route
-
-| Route | First unsupported input |
+| Route | First unsupported arrow |
 |---|---|
-| Fixed scalar/Mellin | Eventual positivity or subpower negative mass of one fixed zero-safe native detector |
-| First-owner source | `FCHD67` for the complete future profile |
-| SHARP powers | Critical `m=1` weighted one-sided variation |
-| Minimal wavelet | Critical energy/negative-mass estimate, itself RH-equivalent |
-| Dickman/Bellman | Critical future-profile estimate beyond the hereditary corridor |
-| Vaughan/half-divisor | Signed ratio-four near-collision/cross-core estimate |
-| Joint Perron | Source-faithful subcritical arithmetic rows on the same carrier |
-| Regional Schur | Row and column bounds on each source-owned region |
-| Cubic collar | Both adaptive activation- and deep-side certificate masses |
-| Balanced phase/Gram | Physical occupancy embedding `BPOE103300` |
-| Root/excess | Strict source-owned root return and root-free packing |
+| Fixed scalar/Mellin | native fixed detector → eventual positivity/subpower negative mass |
+| Native first-owner | exact decomposition → `FCHD67` future-completed one-sided control |
+| SHARP powers | `m>=2` positivity → critical `m=1` weighted downward variation |
+| Dickman/Bellman | hereditary mesoscopic corridor → dynamic critical finite block |
+| Minimal wavelet | exact compact frame → critical cross-core negative-mass/energy estimate |
+| Vaughan/half-divisor | exact one-field Gram → signed off-diagonal near-collision `HCNC103100` |
+| CV/XD Perron | common carrier/source bridge → simultaneous subcritical native matrix rows |
+| Regional Schur | abstract regional theorem → native compatible row/column marginals |
+| Root/excess | positive square → strict source-owned root return and root-free packing |
+| Phase/cubic | source/phase Gram amplitude → physical occupancy `BPOE103300` |
 
-## 11. RH-equivalent statements not to advertise as independent progress
+## RH-equivalent statements not to advertise as independent progress
 
-The critical SHARP weighted-variation condition, minimal-wavelet critical energy/negative mass, same-kernel XD terminal estimate, and complete root-containing-square conditions that still control the native root are RH-equivalent or conclusion-bearing criteria. Their exact reformulations are valuable, but their unproved hypotheses are not evidence for RH by themselves.
+Critical weighted variation, minimal-wavelet cumulative energy, `MWOC`, corrected same-`K1` LPMW/BVD terminal negative mass, Hardy-tail and divisor-GCD owner-square criteria, and fixed-detector cross-core packing are conclusion-bearing reformulations.  Their structural coordinates are useful; proving the full stated estimate is already RH-scale.
 
-## 12. Heavy computations
+## Refuted mechanism classes
 
-No heavy campaign was rerun. The 10^8 SHARP scan, 10^9 C4MBI scan, 2*10^9 Harnack scan, and the historical 51,118,080-event sweep are listed separately in `COMPUTATIONS.tsv`. None is described as independently recomputed.
+Parity-blind terminal Hall, alpha-child native promotion, normalized `p^-1/2` source use, positive floor-kernel detection, excess-only positive-square closure, fixed shallow rough depth, source-blind desmoothing, regional norms before carrier recombination, short-sector absolute energy, and iterative local Harnack/native cones are refuted at their exact scopes.
 
-## 13. Canonical extraction recommendation
+## Canonical extraction recommendations
 
-Extract the consumer API, source-typing firewalls, SHARP/wavelet/Dickman standalone theorems, double-owner/Vaughan factorizations, and mechanism-level refutations. Do not extract FCHD67, critical variation, near-collision, Perron arithmetic rows, regional coercivity, or physical occupancy as proved.
+Extract the consumer API, source-typing firewalls, RN and owner identities, SHARP `m>=2` theorem, minimal wavelet/frame/spectral dictionary, Dickman/Bellman corridors, double-owner coboundary, Vaughan/half-divisor algebra, all-fixed-exponent interval theorem, abstract conjunctive inequalities, and mechanism refutations.  Do not extract any open producer as proved.
+
+## Unresolved cross-family interfaces
+
+- SHARP critical variation versus carrier-free wavelet dispersion after signed desmoothing.
+- Dickman positive corridor versus the small-least-owner critical block.
+- Half-divisor source amplitude versus physical near-collision occupancy.
+- Regional Schur/Perron abstractions versus literal native marginals on one source ledger.
+- Phase/cubic Gram positivity versus integer-product observation norm.
+
+## Heavy certificates retained but not rerun
+
+The `10^8`, `10^9`, `2×10^9`, Target–Lorenz event, and other broad scans were not rerun.  Their method/source/artifact statuses are separated in `COMPUTATIONS.tsv`; none is represented as independently recomputed.

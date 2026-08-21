@@ -1,43 +1,41 @@
 # Reviewer A integration handoff
 
-## Binding status
+RH remains unproved.  No proven-only path reaches RH in this review graph.
 
-* RH is unproved.
-* No verified-only arithmetic path reaches RH.
-* PR/SHA/path/internal-ID provenance controls every claim.
-* This is a recovered publication after the earlier reported push was found absent.
+## Promote to canonical main
 
-## Extract now
+- Mellin–Landau fixed-row, rows-2/3, 5:3, negative-mass, holomorphic-defect, and multiplier firewalls.
+- Native-source type system: accumulated parity, RN child/cocycle, p^-1 normalized activity, signed observation versus positive source, actual response versus capacity.
+- Sequential first-owner, largest-owner, native Littlewood–Paley, double-owner, mixed-coboundary, and staircase identities.
+- SHARP `m>=2` positivity and exact critical distribution identities, with the m=1 estimate explicitly open/RH-equivalent.
+- Minimal wavelet, Abel–Mertens frame, spectral-abscissa classification, and floor-kernel/inverse firewalls.
+- Dickman/Stieltjes and hereditary Bellman corridors.
+- Ratio-four Vaughan/half-divisor/Gram reductions and diagonal closure.
+- Abstract Perron, matched-transfer, regional-Schur, sparsity×energy, and root/excess inequalities as conditional APIs.
+- All reviewed refutations by mechanism.
 
-1. Fixed Mellin--Landau consumer: rows 2/3, 5:3 scalar, eventual positivity, negative mass, smoothing and defect firewalls.
-2. Native source typing: accumulated parity, RN child/cocycle, first-owner identity, normalized prime weights, actual response versus capacity, positive source versus signed observation.
-3. SHARP: row kernel, compact Hall, global `m>=2` theorem, and the critical `m=1` firewall.
-4. Minimal wavelet: construction, transform, Abel--Mertens frame, spectral dictionary, and floor-kernel no-go.
-5. Dickman/Bellman: Stieltjes transfer, mesoscopic/hereditary corridors, future-profile frontier, and fixed-exponent interval theorem.
-6. Double-owner/Vaughan: coefficient partition, mixed coboundary, ratio-four/half-divisor algebra, Haar Gram, diagonal closure and near-collision frontier.
-7. Conjunctive machinery: Perron, sparsity-energy, regional Schur, transport-collar, matched transfer, staircase and root-return theorems, all explicitly conditional on their arithmetic inputs.
-8. Refutations: every row in `REFUTATIONS.tsv`.
+## Do not promote as proved
 
-## Do not extract as proved
+`FCHD67`, critical SHARP variation, minimal-wavelet critical energy, corrected same-`K1` XD estimate, `HHFE102010`, `HCNC103100`, `CFBB102100`, regional native marginals, `SORR104100`, `RFCP104100`, and `BPOE103300`.
 
-* `FCHD67`;
-* critical `m=1` variation;
-* minimal-wavelet critical energy/negative mass;
-* `HCNC103100` or equivalent signed near-collision;
-* the source-faithful subcritical Perron matrix;
-* regional arithmetic coercivity;
-* `APCC100723` and `DPCC100723`;
-* `BPOE103300`;
-* strict root return or root-free packing.
+## Controlling supersession
 
-## Reconciliation with Reviewer B
+PR #705 controls the LPMW/BVD alias: the old PR #692 K0/K1 edge is false; only the same-`K1` equivalence is valid.  Reconciliation must carry this correction into the final graph.
 
-1. Compare the fixed-row `z=s+1/2` normalization and initial convergence half-plane.
-2. Confirm positive-real removability and the specialized Landau hypotheses.
-3. Confirm fixed-defect holomorphy and reject moving-row/moving-detector substitutions.
-4. Reconcile minimal-wavelet spectral abscissa with Q4/Hermite aliases.
-5. Treat PR #705, not the original PR #692 K0/K1 edge, as controlling.
+## Minimal open cut sets
 
-## Heavy certificate language
+- `CV`: critical one-sided variation on the literal fixed source.
+- `XD`: corrected same-kernel signed cross-core dispersion after carrier recombination.
+- `OCC`: physical observation/near-collision occupancy for the half-divisor/cubic source amplitude.
 
-Use four separate labels where applicable: mathematics reconstructed, method reviewed, artifact retained/hash verified, heavy campaign not rerun. Never collapse these into “independently recomputed.”
+## Minimal conjunctive open cut sets
+
+- `SCTV103210 + CPXD103200` with a source-faithful subcritical Perron matrix.
+- activation/collar certificate plus deep/coboundary certificate on one occurrence.
+- native regional row marginal plus compatible native regional column marginal.
+- strict root return plus root-free excess packing.
+- source/phase amplitude plus `BPOE103300` physical occupancy.
+
+## Heavy computation policy
+
+Retain exact hashes and method audits.  Label the campaigns `HEAVY CAMPAIGN NOT RE-RUN`; do not call them independently recomputed.

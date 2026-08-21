@@ -1,24 +1,23 @@
-# Reviewer A fixes and controlling corrections
+# Reviewer A — fixes and controlling corrections
 
-## Publication recovery
+RH remains unproved.  The following are statement-preserving local fixes or controlling nonlocal corrections used in the review.
 
-The verification pass found that the previously reported Reviewer A publication had not landed: the remote branch was still identical to the review base, the review directory was absent, and no Reviewer A PR existed. This recovered packet is the first actual publication. No prior nonexistent commit, PR, or row count is treated as evidence.
+## Verified with local fixes
 
-## Binding mathematical corrections
+- Separate the initial Mellin convergence half-plane from meromorphic continuation.
+- State finite-abscissa and nonzero-density hypotheses in the specialized Landau theorem.
+- Treat fixed subpower calibration as a signed observation with a holomorphic Mellin transform, never as positive source.
+- Preserve the normalized `p^-1` source after division by `sqrt(X)`; use `p^-1/2` only on the unnormalized kernel.
+- Keep endpoint conventions and imported classical Vinogradov–Korobov/Littlewood inputs explicit.
+- In the ratio-four one-field reduction, retain the finite support/truncation step before applying the full-line Hardy bound.
 
-1. **PR #692 K0/K1 edge.** The original `LPMW <-> BVD` edge compared different kernels. It is not retained. PR #705's same-`K1` theorem is the controlling corrected translation.
-2. **Moving-row quantifiers.** A statement that some row detects each hypothetical zero is not the same as one fixed detector. Canonical consumer statements explicitly fix the row or scalar before the hypothetical zero and proof horizon.
-3. **Holomorphic defects.** The analytic defect theorem is exact only for a fixed defect whose Mellin transform is holomorphic in `Re(s)>0`. An `X`-dependent completion or moving row does not receive this status automatically.
-4. **Normalized source.** The conclusion-facing normalized factor-67 box uses `p^{-1}`, not `p^{-1/2}`. The latter belongs to the unnormalized kernel.
-5. **Native source versus alpha children.** The RN child repairs endpoint ownership, not the missing coefficient. Alpha-child promotion remains refuted; the sequential first-owner identity is the replacement.
-6. **Actual response versus capacity.** Full reserve/capacity cannot replace actual source-owned response.
-7. **SHARP powers.** The global `m>=2` theorem is retained, but no descent to the critical `m=1` one-sided estimate is granted.
-8. **Minimal wavelet.** The spectral-abscissa theorem is retained with its standard Mellin-Hardy and reciprocal-zeta growth dependencies. Its critical estimate is RH-equivalent.
-9. **Vaughan gcd form.** The corrected squarefree condition `mu^2(gab)=1` is mandatory.
-10. **Carrier recombination.** Short/long, CV/XD, and regional packets must be recombined before norms when they share a power-sized carrier.
-11. **Root-containing squares.** Positive excess does not control the root; a strict source-owned return is a genuinely separate input.
-12. **Heavy certificates.** `RETAINED_HEAVY_CERTIFICATE` never means independently recomputed.
+## Binding, non-minor corrections
 
-## Minor fixes accepted
+- PR #652 refutes alpha-child native promotion: `r` is not `2r^2` and RN thinning repairs location, not coefficient.
+- PR #667 refutes `p^-1/2` as the normalized-box prime operator.
+- PR #695 withdraws dilation/divisor-restriction renewal substitutions and requires carrier-preserving mixed-coboundary recombination.
+- PR #694 refutes the short-sector energy because the singleton-prime carrier is power-sized.
+- PR #705 controls the implication graph: the old PR #692 `LPMW(K0) <-> BVD(K1)` edge is mistyped.  Only the corrected same-`K1` equivalence in `L-103201` is valid.
+- PR #707 leaves the physical occupancy embedding `BPOE103300` open.  Positive source/phase amplitude and Gram structure are not physical occupancy.
 
-`VERIFIED_WITH_FIXES` is used only for local domain, endpoint, notation, uniformity, or dependency clarifications that preserve source type, quantifiers, normalization, and implication direction. No source-sort change, moving-to-fixed detector change, or new theorem is classified as minor.
+No fix invents a missing arithmetic theorem.
