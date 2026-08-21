@@ -1,0 +1,22 @@
+{
+  "f2_at_zero": {
+    "denominator": 4,
+    "numerator": 19
+  },
+  "f3_at_zero": {
+    "denominator": 1,
+    "numerator": 6
+  },
+  "f4_at_zero": {
+    "denominator": 16,
+    "numerator": 109
+  },
+  "log_convexity_determinant": {
+    "denominator": 64,
+    "numerator": -233
+  },
+  "proof_object_sha256": "b51e3a48ca365119587af2896777ee59d5c875c049d0767487f3111163af4ce5",
+  "schema": "riemann.x9516-hankel-logconvexity.v1",
+  "scope": "Exact local obstruction to the claimed positive Bernstein/Hankel representation; does not disprove pointwise positivity of the carry profile or RH.",
+  "verdict": "REFUTE_L23603_BERNSTEIN_HANKEL_INFERENCE"
+}
