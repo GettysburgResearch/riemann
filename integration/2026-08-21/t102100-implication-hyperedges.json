@@ -1,0 +1,12 @@
+{
+  "schema": "riemann.implication-hypergraph.t102100.v1",
+  "hyperedges": [
+    {"id": "SURVIVAL-COBOUNDARY", "inputs": ["joint_minmax_hazard", "survival_factors"], "output": "oriented_staircase_boundary", "status": "PROVED"},
+    {"id": "POWER-WIDTH-POSITIVITY", "inputs": ["17_over_16_harnack", "prime_reciprocal_mass_below_16_over_17"], "output": "all_intervals_q_le_p_A_A_lt_exp_16_over_17_positive", "status": "PROVED"},
+    {"id": "CARRIER-FREE-BRIDGE", "inputs": ["PR697_joint_bridge", "common_safe_filter"], "output": "two_carrier_free_ratio32_channels", "status": "PROVED"},
+    {"id": "VECTOR-VAUGHAN", "inputs": ["carrier_free_channels", "exact_vaughan_identity"], "output": "one_balanced_two_coordinate_packet", "status": "PROVED"},
+    {"id": "PERRON-CLOSURE", "inputs": ["CFBB102100", "PR697_absorption", "Mellin_safe_filter"], "output": "RH", "status": "CONDITIONAL"}
+  ],
+  "open_cut": ["CFBB102100"],
+  "rh_established": false
+}
