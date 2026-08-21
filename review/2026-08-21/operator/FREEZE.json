@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "reviewer": "B",
+  "review_name": "operator-heat-q4",
+  "repository": "gfreund123/riemann",
+  "review_base_sha": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "review_base_tree_sha": "701d836331ce59c317f6c6ee8bcd26f2c8e872e9",
+  "review_branch": "review/2026-08-21/operator-heat-q4",
+  "generated_at_utc": "2026-08-21T12:31:56Z",
+  "scientific_status": "RH_UNPROVED",
+  "review_policy": {
+    "descendant_inheritance": false,
+    "proposal_branches_modified": false,
+    "heavy_computation_rerun": false,
+    "allowed_evidence": [
+      "line-by-line reconstruction",
+      "exact symbolic/Fraction replay",
+      "small independent fixtures",
+      "artifact and method audit",
+      "Git blob and SHA verification"
+    ]
+  },
+  "reviewed_pr_heads": [
+    {"pr": 365, "head_sha": "902a4cfeb36392c07878591e4a8381e3f4c7b2db"},
+    {"pr": 368, "head_sha": "023434958a4c115c4d1f7d93ea310716f8bd81ae"},
+    {"pr": 372, "head_sha": "9b9c2536d89b65cb999ec08e20fce3386383803a"},
+    {"pr": 373, "head_sha": "34fe2037ba33bc61fc1e6ce04c7e74ab7b13e794"},
+    {"pr": 379, "head_sha": "589f1c05ccaf248cf08c87fefa7d5ab6d2380708"},
+    {"pr": 384, "head_sha": "95ed673529fd4ed8ac9308f6ef43e11bda1954c1"},
+    {"pr": 385, "head_sha": "ea2d7c26c1fd3a58c3e31609cb2411ea0c0fd20a"},
+    {"pr": 387, "head_sha": "388ba7feb9927025d46a70963389ec45c9ead2ac"},
+    {"pr": 388, "head_sha": "ede3f2db2fe0c571964d2e603ba5d91ee463091a"},
+    {"pr": 389, "head_sha": "2eaebcd84e8e6bdbf5a1c85d6d4c8a28639a88fd"},
+    {"pr": 398, "head_sha": "043180519da90af2ea242a5055cbdad9ca40bc62"},
+    {"pr": 400, "head_sha": "7dc9fec9eb5fab4ee9340ddbc5a52e36a6ab617e"},
+    {"pr": 401, "head_sha": "82fe81e52d8c221c8649376d759aa8d0ee64c0c7"},
+    {"pr": 403, "head_sha": "885716b9cf97c7c4deea3b4590b99e5faf13bc1f"},
+    {"pr": 404, "head_sha": "ab71aa1fe0b1fd192011bbf40f032d2f42889ea0"},
+    {"pr": 408, "head_sha": "ea3948ea21d90b9c9824874c5051dcc76e216a5b"},
+    {"pr": 429, "head_sha": "56294bfcd2bdbce4c40b08f67cb996a39868f563"},
+    {"pr": 438, "head_sha": "bb7327d21c47410820cda2671f45dbe709a72eea"},
+    {"pr": 445, "head_sha": "c079c2ef21022be951027de1316aecf1168422c1"},
+    {"pr": 446, "head_sha": "880d14cb4bcbf542ec199137d60c58d9a8fd723d"},
+    {"pr": 460, "head_sha": "db9a767e312d9928f5ef827762dcb4ef95494af0"},
+    {"pr": 461, "head_sha": "ea633d416609565b3926f37c9302c93e1b818e2d"},
+    {"pr": 580, "head_sha": "812e7fcbaff2dd1c2c53c885def7b6c0d0e68a05"},
+    {"pr": 606, "head_sha": "327c0967c67e7efa08fcb62937ca1730f8c24069"},
+    {"pr": 613, "head_sha": "6809d8509f031f7f783ef20e2250ff2735e32924"},
+    {"pr": 617, "head_sha": "c3d12f4d236e2c9ff8f5a0f204bd6eb04946c521"},
+    {"pr": 618, "head_sha": "2dfa73325a6402418fc64b9e554c1b13dd2b9bf1"},
+    {"pr": 619, "head_sha": "0f91f43908493866c9fd5130d2a7bd4645b4a51f"},
+    {"pr": 621, "head_sha": "46afb6e15eef95c9268eff1791a7135b9783a2b2"},
+    {"pr": 622, "head_sha": "9d70d2b8bd932d1775600dd5e95f501324eae72b"},
+    {"pr": 623, "head_sha": "712412e286cc309bbe9960ee839df158316df9e5"},
+    {"pr": 641, "head_sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb"},
+    {"pr": 652, "head_sha": "24ab64551225f2dba9aa53a533eb9b0285c6e363"},
+    {"pr": 653, "head_sha": "e928fd615d753882706bb88c51b717bd8d4a86ba"},
+    {"pr": 671, "head_sha": "2889071e9ebdc412b94cf2cfe74f1fd5142b2857"},
+    {"pr": 674, "head_sha": "9962f7f712adc6b4ad72672ecfeace028ba79bdb"},
+    {"pr": 675, "head_sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740"},
+    {"pr": 689, "head_sha": "1751b5d63d981f1d39e0679a5997a7e32d2f1649"}
+  ],
+  "controlling_external_inputs": [
+    {
+      "semantic_id": "EXTERNAL.ZERO_VERIFICATION.PLATT_TRUDGIAN",
+      "use": "finite-height critical-line and simplicity input only; not rerun",
+      "status": "SOURCE_LOCK_AUDITED",
+      "review_note": "Canonical source lock must cite the correct journal record; the PR #446 verifier did not replay this input."
+    },
+    {
+      "semantic_id": "EXTERNAL.LANDAU.NONNEGATIVE_DIRICHLET_MELLIN",
+      "use": "specialized nonnegative Mellin singularity theorem",
+      "status": "ANALYTICALLY_RECONSTRUCTED"
+    }
+  ],
+  "front_door_note": "The exact review base contains research deposits later than the canonical August 11 scientific front door. This review freezes and classifies those deposits without granting integration status."
+}
