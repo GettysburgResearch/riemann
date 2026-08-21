@@ -6,17 +6,27 @@ on:
       - review/2026-08-21/operator-heat-q4
     paths:
       - .review-payload/reviewer-b/unpack.py
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
 
 permissions:
   contents: write
 
 jobs:
   unpack:
+    if: github.event_name == 'push' || github.event.pull_request.head.ref == 'review/2026-08-21/operator-heat-q4'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: review/2026-08-21/operator-heat-q4
+          persist-credentials: true
 
       - name: Unpack deterministic review payload
         run: python3 .review-payload/reviewer-b/unpack.py
@@ -53,7 +63,6 @@ jobs:
           ]
           with (root / 'CLAIMS.tsv').open(newline='', encoding='utf-8') as fh:
               rows = list(csv.DictReader(fh, delimiter='\t'))
-              assert fh.closed is False
           assert rows and list(rows[0]) == claim_columns
           assert len(rows) == 167
           assert len({row['semantic_id'] for row in rows}) == 167
@@ -84,4 +93,4 @@ jobs:
           git add -- review/2026-08-21/operator
           git diff --cached --quiet && exit 0
           git commit -m "review: add operator heat q4 registries and replay"
-          git push
+          git push origin HEAD:review/2026-08-21/operator-heat-q4
