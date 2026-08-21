@@ -53,7 +53,9 @@ z=rho/2 -(m/2)l_{rho/2}      +(m^2/8)l^2 - (m/2)(C+1)l      +(m^2/8)l^2 - (mC/2)
 
 (`A,B,E,C` analytic at the respective points; at `z=1`,
 `A = a_{67} = \lim[P_{67}(z) + \log(z-1)] = -2.029575488762\ldots`;
-residual of the full quadratic germ at `z=1` converges to `5.08773`.)
+residual of the full quadratic germ at `z=1` tends to
+`1 - a_{67} + a_{67}^2/2 - P_{67}(2)/2 = 5.08768\ldots` — measured
+`5.156 \to 5.090 \to 5.0877` at `z-1 = 10^{-2}, 10^{-4}, 10^{-6}`.)
 
 ## 4. No-cancellation lemma (the detector survives truncation — off the real axis)
 
@@ -64,7 +66,8 @@ cannot cancel; `|B_2| \to \infty` along `z \to \rho`, and the monodromy
 changes the germ by `2\pi i\,m^2\ell + \text{const} \ne 0`. The prefactors
 cannot rescue: `S(z)` and `(1-67^{-z})` vanish only on `\Re z = 0`; the
 kernel is finite and nonzero at `s = \rho - 1/2` (`\rho` non-real since
-`\zeta < 0` on real `(1/2,1)`, `L-99272 §2`). So every off-line zero
+`\zeta < 0` on real `(1/2,1)`, `L-99272 §2` @
+`review/gpt56-pro/99700-owner-degeneracy-cross-core`). So every off-line zero
 leaves a genuine `\log^2` branch point of the truncated transform at
 `s = \rho - 1/2`. (That this detector is *unreachable* behind the
 truncation's own real singularity at `s = 1/2` is exactly `R-105024`.)

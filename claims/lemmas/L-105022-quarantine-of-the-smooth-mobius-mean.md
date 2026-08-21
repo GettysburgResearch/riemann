@@ -47,10 +47,10 @@ exact rational prefix sums), deposited and replayable in
   Hall feasibility dies at `C^* = (45045|B_{13}|/4646)^2 = 87.3589\ldots`),
   and the universal Hoffman min-cut of the global two-leaf circulation at
   every odd-history witness (`O-105023`: deficit law
-  `(371342/1006005)\sqrt X - 3.2586\ldots`).
+  `(371342/1006005)\sqrt X - 3.25857`).
 * The minimizer is `t = 13` as a property of the **global smooth lattice**,
   not of any witness's terminal coordinate: it remains 13 for witnesses
-  with `y = 43` or `61` (`O-105023 §4`).
+  with `y = 43` or `61` (ladder data, `O-105023 §3.2`).
 
 ## 3. Scope
 

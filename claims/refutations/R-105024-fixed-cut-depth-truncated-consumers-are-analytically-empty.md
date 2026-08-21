@@ -42,7 +42,8 @@ replay `X-105020/lane_primezeta/`)
    with zeta zeros. The off-line branch points (at `s = \rho - 1/2`, all
    with `\Re < 1/2`, genuinely present by `L-105025`'s no-cancellation
    lemma) are never reached. **Positivity of `h^{(\le2)}` — verified
-   empirically on all of `[1,10^6]` (min `1.28`), and expected at
+   empirically on all of `[1,10^6]` (min `1.28` on `[2,10^6]`;
+   `h(1^+) = 1`), and expected at
    main-term level from the Mertens-type divergence `A^{(\le2)}(x) =
    (S(1)/2)(\log\log x)^2(1+o(1))` (Selberg–Delange-type; asserted here at
    heuristic-plus-numerics strength, and NOT needed for this refutation) —
@@ -60,7 +61,9 @@ singular series `\alpha(z)\ell^2 + \beta(z)\ell` with analytic
 `\alpha,\beta`, and matching it in `x`-space is a Selberg–Delange
 error-term problem whose unconditional control is the classical zero-free
 region — the truncation converts RH-hard cancellation into a PNT-strength
-error problem, gaining nothing. **Depth truncation at a fixed cut and
+error problem, gaining nothing. (This compensator paragraph is an argued
+reduction, not a proof; the proved per-`K` see-saw fully supports the
+headline no-go on its own.) **Depth truncation at a fixed cut and
 RH-sensitivity are mutually exclusive.**
 
 ## 4. What survives, and the Mellin-side echo of the budget theorem

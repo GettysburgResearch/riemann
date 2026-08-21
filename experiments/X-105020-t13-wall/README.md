@@ -5,13 +5,14 @@ Verification for `L-105021`, `L-105022`, `O-105023`, `R-105024`,
 
 ## Driver (run this first)
 
-`python3 verify_pivotal.py` → `ALL PIVOTAL CHECKS PASSED` (~1 min).
+`python3 verify_pivotal.py` → `ALL PIVOTAL CHECKS PASSED` (~2 s).
 Re-derives from scratch and asserts: the complete `2^{18}`-lattice
 quarantine enumeration (negative set = 19 points ≤ 61, min `−2323/30030`
 at 13); the cap crossings `C(7/20) = 67.4938767…`, `C* = (45045|B₁₃|/4646)²
 = 87.3589317…` with `H₁₃(67) > 7/20 > H₁₃(71)` and `H₁₃(87) > 0 > H₁₃(88)`;
 the circulation law constants `c₁ = 4(1/67 − A₁₃) = 371342/1006005` and
-`4|A₁₃| = 9292/30030`; the depth-split identity at `z = 1.5`; and the
+`4|A₁₃| = 9292/30030`; the depth-split identity's closed-form value at `z = 1.5` (the sieve side
+of the identity is re-derived in `lane_primezeta/`); and the
 `B₂` log²-blow-up at `z → 1⁺` (`1.808 / 19.602` at `10⁻² / 10⁻⁴`).
 
 ## Lane subdirectories (full computations, as produced)

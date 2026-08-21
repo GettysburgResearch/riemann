@@ -53,8 +53,10 @@ With `A_{13} = -2323/30030` exactly (`L-105022`) and
   **Theorem: for every prime cut `C \ge 71` the moat inequality fails at
   `(t,x) = (13, C-\epsilon)`; 67 is the largest prime cut for which the
   7/20 moat holds.**
-* **Killer ranking** (top five, strict interval-certified ordering, at
-  `s = 7/20` and `s = 0`): `t = 13` (67.494 / 87.359), `t = 31` (121.688 /
+* **Killer ranking** (top pair interval-certified; ranks 2–5 by
+  high-precision values with enormous gaps, independently recomputed in
+  hostile review; at `s = 7/20` and `s = 0`): `t = 13` (67.494 / 87.359),
+  `t = 31` (121.688 /
   154.407), `t = 19` (137.818 / 181.304), `t = 5` (191.479 / 271.017),
   `t = 30` (334.442 / 447.701). Complete odd-threshold crossing table for
   `t < 500` in `results/moat_out.txt`.
@@ -90,7 +92,9 @@ With `A_{13} = -2323/30030` exactly (`L-105022`) and
 2. **The moving-cut smooth block cannot keep the L-99020 Hall order.** Any
    `C = Y^\theta \to \infty` exits feasibility at `C^* = 87.36`. A
    moving-cut continuation must restructure the transport order — let the
-   fixed bad prefixes (`L-105022`'s 19-point set) draw on the large
+   fixed bad prefixes (`L-105022`'s 19-point set and, at grown support,
+   the rough negative prefixes that follow: first at `t = 114`, horizon
+   `525.1`, per `results/moat_out.txt`) draw on the large
    residual surplus `u_x(e)` at `e > 13`, i.e. a non-nested/circulation
    reformulation (priced in `O-105023`) — or renormalize the target with
    `x`. Keeping the system as-is bounds the compact block at cut 83

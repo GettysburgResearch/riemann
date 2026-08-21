@@ -24,7 +24,9 @@ price: `\Pi_{G_A}(Y) = \int_{u_0}^1 (1-u)^A\,du/u + o(1) \to \log\log Y -
 \log\log 67 - H_A` (harmonic numbers). Measured (full prime range,
 `Y=10^7`): `A = 0,1,2,3` → `1.3276, 0.5953, 0.3260, 0.1936`. Divergence
 persists for every fixed `A`; the crossing horizon grows exponentially in
-`A`. Removing the divergence needs `A` growing like a power of `\log Y`,
+`A`. (The four measured values were computed in-session and independently
+reproduced in hostile review; no deposited script — an eight-line
+`primerange` sum reproduces them.) Removing the divergence needs `A` growing like a power of `\log Y`,
 which breaks half-order growth and moves/destroys the detector (axiom N of
 `T-105000 §2`). No escape; a legitimate knob for pushing horizons beyond
 computational ranges.
@@ -63,10 +65,12 @@ generalizations identical. Survives: the repair direction — non-nested/
 circulation transport priced by `O-105023`, or `x`-dependent target
 renormalization.
 
-## N6. "Third leaf rescues the two-leaf circulation" (FAILED — computed)
+## N6. "Third leaf rescues the two-leaf circulation" (FAILED — structural)
 Adding histories `(71), (73), \ldots` to the circulation model only adds
-odd head demand into the same min-cut (`O-105023 §3.3`). The obstruction
-is license-level (anti-nested edges forbidden), not inventory-level.
+odd head demand into the same min-cut (`O-105023 §3.3`; a structural
+consequence of the licensing, not a deposited extra-leaf run). The
+obstruction is license-level (anti-nested edges forbidden), not
+inventory-level.
 
 Cross-references: the corpse-family instances of the budget theorem are
 ledgered in `R-105000 §2`; the adversarial-review finding→fix ledger for

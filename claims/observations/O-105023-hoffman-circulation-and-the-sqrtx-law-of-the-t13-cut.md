@@ -53,7 +53,7 @@ against brute-force max-flow at three truncations (exact agreement).
    \{A_1\}` against neighbourhood `\{R_1, R_6, R_{10}\}`, with violation
    `V^*(X) = (371342/1006005)\,\sqrt X - 3.25856984\ldots`, where
    `371342/1006005 = 4(1/67 - A_{13})` and the constant is
-   `3(B_{13} - 67^{-1/2})`. At the witness: `V^* = 88.535\ldots`, of which
+   `3(B_{13} - 67^{-1/2})`. At the witness: `V^* = 88.53498`, of which
    only `14.48` is the odd-history head — the rest is the root leaf's own
    `t = 13` excursion (`F_0(13) = -74.055`). The aggregate margin 17 of
    `R-96500` under-reports the per-threshold wall (worst reversed-leaf cut
@@ -65,9 +65,12 @@ against brute-force max-flow at three truncations (exact agreement).
    every computed slack to all displayed digits. Margins scale as
    `X^{1/2}` with constants built from the target pair `(4,3)` and the
    divisor class `d \le 13` — not from the 5:3 score constants.
-3. **Adding leaves does not help.** Every additional history adds more odd
-   head demand into the same cut. The obstruction is license-level: the
-   demands at `d \in \{5,7,13\}` would have to draw on even mass at
+3. **Adding leaves does not help** (structural consequence of the
+   licensing, not a deposited extra-leaf computation): every additional
+   history contributes only odd head demand into the same cut side — its
+   head enters as demand, and its even mass sits at indices `67d' > 13`
+   unreachable by the nested license. The obstruction is license-level:
+   the demands at `d \in \{5,7,13\}` would have to draw on even mass at
    `d > 13` — anti-nested edges the row license forbids.
 4. **Why 13 is universal**: `L-105022` — the global minimizer of the
    smooth Möbius mean over the whole `2^{18}` lattice, independent of the
