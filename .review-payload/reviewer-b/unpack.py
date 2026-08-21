@@ -66,3 +66,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+# Synchronize event trigger for PR #708; payload bytes remain unchanged.
