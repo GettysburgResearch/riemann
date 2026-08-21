@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "compact_floor_source_rows": 650,
+    "formal_selberg_rows": 64,
+    "generalized_lambda_rows": 64,
+    "mutations_rejected": 2,
+    "positive_defect_rows": 64,
+    "split_intertwiner_rows": 49710,
+    "weighted_annular_isometries": 10
+  },
+  "classification": "EXACT_ANNULAR_SPLIT_AND_SELBERG_DEFECT_VERIFIED",
+  "max_annulus": 10,
+  "max_n": 64,
+  "proof_boundary": "finite rational/formal algebra only; the annular reflected recurrence, bottom-charge sign, and RH are not proved",
+  "schema": "X-26802-annular-split-selberg-v1",
+  "sha256_without_digest": "b5b870a5fd4c9bc2bd06733b78ebe6be0150df4b7230e79f47d9c641fa7d7a8d"
+}

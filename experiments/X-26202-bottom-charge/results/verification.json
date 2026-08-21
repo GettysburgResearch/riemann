@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "compact_carry_rows": 79,
+    "filter_rows": 80,
+    "formal_target_coordinates": 39,
+    "mutations_rejected": 3
+  },
+  "classification": "EXACT_BOTTOM_TWO_CARRY_CHARGE_ALGEBRA_VERIFIED",
+  "compact_image": {
+    "row_2": "-5/6",
+    "row_3": "-1/2",
+    "rows_4_through_max": "0"
+  },
+  "formal_identity": "5*c_X(2)+3*c_X(3)=-6*sum_{q=2}^X omega_2(q)w_X(q)",
+  "formal_inverse_endpoint": 40,
+  "max_carry_row": 80,
+  "proof_boundary": "finite rational and formal algebra only; eventual bottom-charge nonnegativity, the Landau transfer, and RH are not certified",
+  "result_sha256_without_digest": "37ab4afbde40b155e5918f63456e64a9beaf544564f364fb7d883fba2789c612",
+  "schema": "X-26202-bottom-charge-v1"
+}
