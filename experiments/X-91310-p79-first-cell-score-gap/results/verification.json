@@ -1,0 +1,22 @@
+{
+  "classification": "PASS_P79_FIRST_CELL_SCORE_REFUTATION_AND_ENTROPY_REPAIR",
+  "first_cell": {
+    "A_P79_105": "6955816909665487849457015781/153221179397174900376146883530",
+    "A_P79_83": "-1401629533229069216211617003/107254825578022430263302818471",
+    "divisors_through_83": 51,
+    "entropy_n2_lower": "91276342059/50000000000",
+    "entropy_n2_lower_decimal": "1.825526841180000",
+    "score_minus_target_coefficient": "-223590076836035175208867029720/8902150522975861711854133933093",
+    "score_minus_target_sign": "negative",
+    "target_lower_decimal": "1.812042543134332",
+    "target_upper_decimal": "1.812042543134332",
+    "target_upper_lt": "1813/1000"
+  },
+  "global_prefix": {
+    "activation_states": 4194304,
+    "global_A_P79_max": "52541123207025505248824623351/292513160667333900718098595830",
+    "global_A_P79_max_activation": 221,
+    "global_A_P79_upper": "1/5"
+  },
+  "scope": "Exact Fraction enumeration of the first P79 splice cell and every P79 reciprocal-prefix activation; directed rational radical bounds for the residual target; and exact atanh lower bounds showing that the single n=2 physical-entropy atom exceeds that target. The replay does not prove the all-parameter physical-score recurrence or RH."
+}
