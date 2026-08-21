@@ -1,0 +1,402 @@
+{
+  "schema": "riemann.review-freeze.recovery.v2",
+  "repository": "gfreund123/riemann",
+  "reviewer": "A",
+  "review_family": "arithmetic-native-implication",
+  "review_base_sha": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "branch": "review/2026-08-21/arithmetic-native-implication",
+  "frozen_at_utc": "2026-08-21T13:47:44Z",
+  "publication_recovery": {
+    "reason": "A verification pass found that the previously reported Reviewer A commit and PR had not landed; this packet is the actual recovered publication.",
+    "previous_remote_branch_state": "identical to review base; expected review directory absent"
+  },
+  "head_policy": "Each source is identified by PR number, exact head SHA, path, and internal claim ID. Titles, ancestry, self-audits, and checker success do not grant verdict inheritance.",
+  "heavy_computation_policy": "No heavy campaign rerun. Large certificates are retained by exact source SHA and explicitly separated from light replays.",
+  "scope_note": "This recovery publishes the controlling-family claim census and exact route/refutation registries. It does not pretend that every changed prose file received line-by-line reconstruction; rows labelled METADATA_ONLY or NOT_REVIEWED retain that limitation.",
+  "pull_requests": [
+    {
+      "pr": 542,
+      "head_sha": "ca5fb69c15cda29b3b589660f9be44ea2f440677",
+      "title": "prime-sieved row direct Mellin-Landau candidate",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 545,
+      "head_sha": "88bd3547c6277b5788e52eedd9ada1c594f4f866",
+      "title": "two-row annular Mellin hardening",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 546,
+      "head_sha": "f920202ea15c577bf05fa58370bdc3d8313868cd",
+      "title": "phase-locked safe-line carrier and two-row consumer",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 547,
+      "head_sha": "d60f93b0e207a83a283fb229eb988aa4c404765d",
+      "title": "two-row annular consumer repair",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 561,
+      "head_sha": "db9bdc63c855c6ddf664b763d748f8155a6a2c67",
+      "title": "parity-covariant gluing and fixed-depth no-go",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 574,
+      "head_sha": "74fba7f3e55fa9a53d1eb814e5067f5011ef5e86",
+      "title": "checkerboard/Cauchy-Binet reconciliation",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 575,
+      "head_sha": "265c481ebd02807ab7d9a95cb0cf905a22c1876f",
+      "title": "completed-parity scalar-lift downgrade",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 576,
+      "head_sha": "0f6ea6eae813c1d867ae50744cf5fd57e2720bb7",
+      "title": "repaired P61 bias and source firewalls",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 586,
+      "head_sha": "70e74f38c1137bd987d1a706f7a9aa907f284e9a",
+      "title": "hostile reconstruction of factor-67 proposals",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 589,
+      "head_sha": "ff5156cf6aa469bb7a2155ff4aa7c094bd75b9b6",
+      "title": "future-prime Lorenz Bellman frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 590,
+      "head_sha": "4f1283c67f0d4a4b504badd4c4113ba227521162",
+      "title": "balanced large-prime Type-II frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 591,
+      "head_sha": "5c43060fd11e6a3f5d090ee4c74e4a48ca2eb111",
+      "title": "factor-67 Lorenz-Bellman profile",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 594,
+      "head_sha": "ef76157a516c520a0f829ea4ee346c62759743ed",
+      "title": "subcritical depth no-go and root frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 596,
+      "head_sha": "40bfd7e70521f4205e95d3960812a6cef6073c05",
+      "title": "fixed-angle Bellman no-go",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 598,
+      "head_sha": "e20128ef4a59607446451f93f3f8daeebe665517",
+      "title": "source-faithful parity tree",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 601,
+      "head_sha": "2095206c4759deac7edffbc0ecc9e30fcc453908",
+      "title": "zero-marginal Lorenz collapse",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 602,
+      "head_sha": "470b5ba529e76f79983e29ed9eebc80454088f0d",
+      "title": "Dickman power-sector localization",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 603,
+      "head_sha": "1dac3eeccb5a01183067c00722d92fbcf2df12c5",
+      "title": "quantitative Dickman corridor",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 604,
+      "head_sha": "24212c02fab728bb6c419ed8f5a2429fdce07397",
+      "title": "C4MBI67 critical-core recovery",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 607,
+      "head_sha": "a28f8e5b8c90e3aef30e97053ed42e9ddde9c665",
+      "title": "complete-base Stieltjes corridor",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 608,
+      "head_sha": "f362acf56bbbbd183976b6377fbe883193886e1a",
+      "title": "hereditary Bellman corridor",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 614,
+      "head_sha": "d5b94d7dd8e341dca73c2b5ff899a9adf2d1585f",
+      "title": "future-profile critical-saddle corridor",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 615,
+      "head_sha": "eb129ebea953def33a92fb5e7355d4e79cb53171",
+      "title": "negative-mass Euler-Hurwitz frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 624,
+      "head_sha": "0fa032faedc0fa9a47a87c41a69c0db141b1dea2",
+      "title": "C4MBI67 primitive-prefix billion theorem",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 630,
+      "head_sha": "bec6ec52ff94e0439fa6a4615c4641f7714d1d54",
+      "title": "factor-67 Harnack two-billion certificate",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 641,
+      "head_sha": "19cd3939a54ccea73b055b3952b5dd7ed638c4fb",
+      "title": "holomorphic-defect fixed-row route",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 642,
+      "head_sha": "07aa0d4838458a1b2d3af9e5bc96616baa6b4767",
+      "title": "SHARP row-kernel frame",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 647,
+      "head_sha": "306d1c66fe4e848efda0bd78b5475aeeed3d5563",
+      "title": "scalar SHARP Harnack reduction",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 649,
+      "head_sha": "433fd3662f7b2e4ba384ce64f196380e88624090",
+      "title": "RN/causal firewall and 5:3 witness",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 650,
+      "head_sha": "3f9e80f09fe1f595927ea7dce6fb49ac68c5c21b",
+      "title": "subpower defect and Landau transfer",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 651,
+      "head_sha": "2d05ca3937df7021d33f92dd947486f6b2b13382",
+      "title": "causal-Euler half-order subsidy audit",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 652,
+      "head_sha": "24ab64551225f2dba9aa53a533eb9b0285c6e363",
+      "title": "native-coefficient three-interface audit",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 653,
+      "head_sha": "e928fd615d753882706bb88c51b717bd8d4a86ba",
+      "title": "negative-mass scalar consumer hardening",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 655,
+      "head_sha": "7946f2979a69392e5275be90f023dfb34009d4d9",
+      "title": "owner hierarchy and fixed-order no-go",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 658,
+      "head_sha": "3dd7eacdadc76822e25ee630a474580259dd64fb",
+      "title": "owner-Green source orientation audit",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 660,
+      "head_sha": "b3830a12e8823ca74d2a2f709581908c8a9e5402",
+      "title": "native first-owner Littlewood-Paley",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 663,
+      "head_sha": "fa081e81044a81e76f48cb9878a659d749e98427",
+      "title": "SHARP power positivity",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 664,
+      "head_sha": "14692244bdaef90793a0c2a1a9bfd6e6b4bb1a2e",
+      "title": "ratio-67 Möbius-window frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 665,
+      "head_sha": "a771772682a2c09c026348b176618c302c49c223",
+      "title": "normalized-box audit",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 667,
+      "head_sha": "7c044d232198265974dd8f4a530b98c6653dba55",
+      "title": "native normalized-box source firewall",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 668,
+      "head_sha": "15719b975115ecad1b23264c6a6303899b4c99dc",
+      "title": "critical-variation descent",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 670,
+      "head_sha": "f5d37a5f1880749dd33b103d98e2d85bac60ae28",
+      "title": "Euler-cube parity barrier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 671,
+      "head_sha": "2889071e9ebdc412b94cf2cfe74f1fd5142b2857",
+      "title": "root-containing owner-square equivalence",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 674,
+      "head_sha": "9962f7f712adc6b4ad72672ecfeace028ba79bdb",
+      "title": "minimal ordinary-Möbius wavelet",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 675,
+      "head_sha": "7b28224ba1b072d4ccd5b93ad37c0a64e7939740",
+      "title": "wavelet spectral abscissa and floor-kernel firewall",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 680,
+      "head_sha": "64e8e138dde15bfdb02d532041ace945c600c912",
+      "title": "phase-Hasse wavelet map",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 689,
+      "head_sha": "1751b5d63d981f1d39e0679a5997a7e32d2f1649",
+      "title": "Abel-Mertens wavelet frame",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 691,
+      "head_sha": "1de27a2c29e15e2dd94154f174c57bde3909daf7",
+      "title": "audited double-owner implication matrix",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 692,
+      "head_sha": "50c4862c801b6388a30363c336d275270025eff4",
+      "title": "implication hypergraph",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 693,
+      "head_sha": "2cc70798b453ce4e5059dcc25d8d3fb7c38e172e",
+      "title": "double-owner dual terminal matrix",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 694,
+      "head_sha": "e6d923c1069f5a481abdf0769ca6d870a8b5ae4b",
+      "title": "short/long carrier disposition",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 695,
+      "head_sha": "5b549abb560e87718f1977d72bf6d3a18165af90",
+      "title": "audited double-owner coboundary",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 696,
+      "head_sha": "f4016db548afceb31b150547cb6cd48b4cddb77d",
+      "title": "Vaughan and ratio-four half-divisor frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 697,
+      "head_sha": "e878c3717cd8124564e5400b2ec5db035e3a4088",
+      "title": "joint quadratic-wavelet Perron matrix",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 698,
+      "head_sha": "a10d6a40105142de2708632589c458d7534f556a",
+      "title": "conjunctive bridges",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 699,
+      "head_sha": "f23dd81748562dfa2a73f86aecfb9fcd3e2b32b9",
+      "title": "carrier-preserving CV/XD hardening",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 700,
+      "head_sha": "18737409b6fa1c0a20096e5939a60cfc933d251c",
+      "title": "implication hypermatrix and interval localization",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 701,
+      "head_sha": "b8fa864f257cce623b020ff94b09c5afcbcabdee",
+      "title": "cubic hinge/coarea frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 702,
+      "head_sha": "89f995450977c3590aada0c1447a7e6af7fcd9ac",
+      "title": "fractional Hankel near-collision reduction",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 703,
+      "head_sha": "0a46dba5c74e573945e3612937606f6ca735a1d3",
+      "title": "carrier-free staircase/Perron frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 704,
+      "head_sha": "66f755df4321a03874e0da3f61b033300173e364",
+      "title": "matched-transfer implication matrix",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 705,
+      "head_sha": "027ea8bd5c879a190e9e22620c245a81f7b93b73",
+      "title": "same-kernel XD/CV correction",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 706,
+      "head_sha": "44828a27c63bfc57dce12d67e980db33f4d55c3a",
+      "title": "root-return/root-free quotient",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    },
+    {
+      "pr": 707,
+      "head_sha": "7bf3308d40ac8ed1ba50e404ff6e9c47526d89e4",
+      "title": "balanced phase/cubic Gram and occupancy frontier",
+      "scope": "ARITHMETIC_REVIEW_SCOPE"
+    }
+  ]
+}
