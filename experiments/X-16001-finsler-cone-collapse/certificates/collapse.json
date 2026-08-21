@@ -1,0 +1,153 @@
+{
+  "all_pass": true,
+  "arithmetic": "exact rational (fractions.Fraction); no floating point in any decision path",
+  "experiment": "X-16001",
+  "results": [
+    {
+      "detail": "inertia(B_p|p^perp) = (2, 0, 0), expected (2,0,0) for a positive target (positive target: True)",
+      "pass": true,
+      "proposition": "P1[minimal] B_p|p^perp positive definite"
+    },
+    {
+      "detail": "c = 1; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (2, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered",
+      "pass": true,
+      "proposition": "P3[minimal] explicit feasible rational c"
+    },
+    {
+      "detail": "Q = 0 is special (source beta = 0): True; A_p = 0: True; p even under index reversal: True; eta^T p = 1",
+      "pass": true,
+      "proposition": "P4a[minimal] every stated hypothesis of the finite gate holds"
+    },
+    {
+      "detail": "f(z) = 4/5 + 1/5 cos z; strict-positivity witness p_0 - 2*sum_{m>0} p_m = 3/5 > 0, so min_R f = 3/5 > 0. The zeros solve cos z = -4, i.e. z = pi +/- i*arccosh(4): all NONREAL.",
+      "pass": true,
+      "proposition": "P4b[minimal] the finite Fourier sum has NO real zero"
+    },
+    {
+      "detail": "P(s) coefficients (ascending) = ['-4/5', '0', '1']; degree 2; exact Sturm count of distinct real roots = 2",
+      "pass": true,
+      "proposition": "P4c[minimal] the interpolation polynomial IS real-rooted"
+    },
+    {
+      "detail": "p = ['3', '-3', '1']; n_+ = 2, n_- = 1; got (1, 1, 1), expected (1, 1, 1)",
+      "pass": true,
+      "proposition": "P2[case0] inertia(B_p) = (n_+ - 1, n_-, 1)"
+    },
+    {
+      "detail": "p = ['2', '-1', '-1', '1']; n_+ = 2, n_- = 2; got (1, 2, 1), expected (1, 2, 1)",
+      "pass": true,
+      "proposition": "P2[case1] inertia(B_p) = (n_+ - 1, n_-, 1)"
+    },
+    {
+      "detail": "p = ['4/9', '-2/9', '8/9', '-2/9', '1/9']; n_+ = 3, n_- = 2; got (2, 2, 1), expected (2, 2, 1)",
+      "pass": true,
+      "proposition": "P2[case2] inertia(B_p) = (n_+ - 1, n_-, 1)"
+    },
+    {
+      "detail": "p = ['-1', '-1', '3']; n_+ = 1, n_- = 2; got (0, 2, 1), expected (0, 2, 1)",
+      "pass": true,
+      "proposition": "P2[case3] inertia(B_p) = (n_+ - 1, n_-, 1)"
+    },
+    {
+      "detail": "n = 3, degree 2, distinct real roots 2, roots per node gap [1, 1] (each must be 1)",
+      "pass": true,
+      "proposition": "P5[inst0] positive target => interpolation polynomial real-rooted and interlacing"
+    },
+    {
+      "detail": "n = 3, degree 2, distinct real roots 2, roots per node gap [1, 1] (each must be 1)",
+      "pass": true,
+      "proposition": "P5[inst1] positive target => interpolation polynomial real-rooted and interlacing"
+    },
+    {
+      "detail": "n = 3, degree 2, distinct real roots 2, roots per node gap [1, 1] (each must be 1)",
+      "pass": true,
+      "proposition": "P5[inst2] positive target => interpolation polynomial real-rooted and interlacing"
+    },
+    {
+      "detail": "n = 5, degree 4, distinct real roots 4, roots per node gap [1, 1, 1, 1] (each must be 1)",
+      "pass": true,
+      "proposition": "P5[inst3] positive target => interpolation polynomial real-rooted and interlacing"
+    },
+    {
+      "detail": "n = 5, degree 4, distinct real roots 4, roots per node gap [1, 1, 1, 1] (each must be 1)",
+      "pass": true,
+      "proposition": "P5[inst4] positive target => interpolation polynomial real-rooted and interlacing"
+    },
+    {
+      "detail": "n = 7, degree 6, distinct real roots 6, roots per node gap [1, 1, 1, 1, 1, 1] (each must be 1)",
+      "pass": true,
+      "proposition": "P5[inst5] positive target => interpolation polynomial real-rooted and interlacing"
+    },
+    {
+      "detail": "n = 7, degree 6, distinct real roots 6, roots per node gap [1, 1, 1, 1, 1, 1] (each must be 1)",
+      "pass": true,
+      "proposition": "P5[inst6] positive target => interpolation polynomial real-rooted and interlacing"
+    },
+    {
+      "detail": "inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)",
+      "pass": true,
+      "proposition": "P1[beta=0] B_p|p^perp positive definite"
+    },
+    {
+      "detail": "c = 1; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered",
+      "pass": true,
+      "proposition": "P3[beta=0] explicit feasible rational c"
+    },
+    {
+      "detail": "inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)",
+      "pass": true,
+      "proposition": "P1[beta=lambda] B_p|p^perp positive definite"
+    },
+    {
+      "detail": "c = 2; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered",
+      "pass": true,
+      "proposition": "P3[beta=lambda] explicit feasible rational c"
+    },
+    {
+      "detail": "inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)",
+      "pass": true,
+      "proposition": "P1[beta=lambda^2] B_p|p^perp positive definite"
+    },
+    {
+      "detail": "c = 2; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered",
+      "pass": true,
+      "proposition": "P3[beta=lambda^2] explicit feasible rational c"
+    },
+    {
+      "detail": "inertia(B_p|p^perp) = (4, 0, 0), expected (4,0,0) for a positive target (positive target: True)",
+      "pass": true,
+      "proposition": "P1[beta=asymmetric] B_p|p^perp positive definite"
+    },
+    {
+      "detail": "c = 4; LDL^T pivots of U^T T_p(c) U all > 0 = True; inertia(T_p(c)) = (4, 0, 1); T_p(c) p = 0; T_p(c) is special with source recovered",
+      "pass": true,
+      "proposition": "P3[beta=asymmetric] explicit feasible rational c"
+    },
+    {
+      "detail": "deg h = 2; distinct real roots of h over R = 2; in (-1,1) = 0; criterion 'all zeros of f real' requires 2 in (-1,1) => VIOLATED; real fraction = 0/2",
+      "pass": true,
+      "proposition": "P7[M=2] certified real-root census of the sampled radical target (delta = 1/4)"
+    },
+    {
+      "detail": "deg h = 3; distinct real roots of h over R = 3; in (-1,1) = 0; criterion 'all zeros of f real' requires 3 in (-1,1) => VIOLATED; real fraction = 0/3",
+      "pass": true,
+      "proposition": "P7[M=3] certified real-root census of the sampled radical target (delta = 1/4)"
+    },
+    {
+      "detail": "deg h = 4; distinct real roots of h over R = 4; in (-1,1) = 0; criterion 'all zeros of f real' requires 4 in (-1,1) => VIOLATED; real fraction = 0/4",
+      "pass": true,
+      "proposition": "P7[M=4] certified real-root census of the sampled radical target (delta = 1/4)"
+    },
+    {
+      "detail": "deg h = 5; distinct real roots of h over R = 5; in (-1,1) = 0; criterion 'all zeros of f real' requires 5 in (-1,1) => VIOLATED; real fraction = 0/5",
+      "pass": true,
+      "proposition": "P7[M=5] certified real-root census of the sampled radical target (delta = 1/4)"
+    },
+    {
+      "detail": "deg h = 6; distinct real roots of h over R = 6; in (-1,1) = 0; criterion 'all zeros of f real' requires 6 in (-1,1) => VIOLATED; real fraction = 0/6",
+      "pass": true,
+      "proposition": "P7[M=6] certified real-root census of the sampled radical target (delta = 1/4)"
+    }
+  ],
+  "sha256": "2eacce19f8a82024619c7a157ec918d5a56af61286e3c92948f0d55045292576"
+}
