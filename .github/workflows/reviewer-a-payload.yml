@@ -1,25 +1,24 @@
-name: publish Reviewer A claims payload
+name: materialize Reviewer A scientific review
 
 on:
-  push:
-    branches:
-      - review/2026-08-21/arithmetic-native-implication
-    paths:
-      - '.review-payload/reviewer-a/**'
-      - '.github/workflows/reviewer-a-payload.yml'
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: [main]
 
 permissions:
   contents: write
 
 jobs:
-  unpack:
+  materialize:
+    if: github.event.pull_request.head.ref == 'review/2026-08-21/arithmetic-native-implication'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
-      - name: Reconstruct and verify CLAIMS.tsv
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Reconstruct and verify the complete Reviewer A claim census
         shell: bash
         run: |
           set -euo pipefail
@@ -29,7 +28,7 @@ jobs:
           echo '810f9f4715ed639e3e2770157721fe2709bdf6a31246d767b518abe8ba781cfe  review/2026-08-21/arithmetic/CLAIMS.tsv' | sha256sum -c -
           python3 review/2026-08-21/arithmetic/replay/verify_review_packet.py
           python3 review/2026-08-21/arithmetic/replay/verify_review.py
-      - name: Commit readable review packet and remove transport scaffolding
+      - name: Commit readable review artifacts and remove transport scaffolding
         shell: bash
         run: |
           set -euo pipefail
@@ -37,5 +36,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- review/2026-08-21/arithmetic/CLAIMS.tsv
           git rm -r -- .review-payload/reviewer-a .github/workflows/reviewer-a-payload.yml
-          git commit -m 'review: materialize full Reviewer A claim census'
-          git push origin HEAD:${{ github.ref_name }}
+          git commit -m 'review: materialize full Reviewer A scientific freeze'
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
