@@ -1,0 +1,31 @@
+{
+  "schema": "riemann.t104550.source_lock.v1",
+  "repository": "gfreund123/riemann",
+  "target_pr": 720,
+  "target_branch": "research/gpt56-pro/104510-hermite-biehler-last-defect",
+  "parent_head": "355f9ca3fcb4feaf939d2a8ea42b4ddc87364aad",
+  "dependencies": [
+    {
+      "path": "claims/lemmas/L-104500-exact-real-reverse-rolle-defect-conservation.md",
+      "scope": "exact orientation count"
+    },
+    {
+      "path": "claims/lemmas/L-104525-conrey-fixed-order-line-proportions.md",
+      "scope": "alpha_3 > 0.9873"
+    }
+  ],
+  "external_context": [
+    {
+      "source": "Csordas, Fourier transforms of positive definite kernels and the Riemann xi-function",
+      "arxiv": "1309.0055",
+      "scope": "associated-kernel framework; no imported sign theorem"
+    },
+    {
+      "source": "Planat and Sole, Second-Level Concavity of the Riemann Xi Kernel",
+      "arxiv": "2608.19160",
+      "scope": "possible future kernel-shape input; no imported implication to K_2 positive definiteness"
+    }
+  ],
+  "lag2xi104550_proved": false,
+  "rh_established": false
+}
