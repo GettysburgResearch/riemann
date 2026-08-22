@@ -1,0 +1,66 @@
+{
+  "schema": "riemann.t104500.source_lock.v1",
+  "repository": "gfreund123/riemann",
+  "base_pr": 714,
+  "base_branch": "programme/2026-08-22-xi-reverse-rolle-defect-cascade",
+  "base_sha": "d1a9fea34aa0620a5cb2da41061518638ab8b219",
+  "review_context": {
+    "actual_xi_pick_pr": 446,
+    "actual_xi_pick_head": "880d14cb4bcbf542ec199137d60c58d9a8fd723d",
+    "reviewer_b_pr": 708,
+    "reviewer_b_head": "eb1987502ef9043e782ac6ab1e19c47be9daef93",
+    "cross_review_pr": 710,
+    "cross_review_head": "e91d6aa25d2e8576e82d26170127941eec430f75"
+  },
+  "external_sources": [
+    {
+      "id": "KI2006",
+      "title": "The Riemann Xi-function under repeated differentiation",
+      "author": "Haseo Ki",
+      "journal": "Journal of Number Theory 120 (2006), 120-131",
+      "doi": "10.1016/j.jnt.2005.11.004",
+      "imported_scope": "local uniform convergence A_n Xi^(2n)(C_n z) -> cos z on compact subsets"
+    },
+    {
+      "id": "GUNNS_HUGHES2019",
+      "title": "The effect of repeated differentiation on L-functions",
+      "authors": "Jos Gunns; Christopher Hughes",
+      "journal": "Journal of Number Theory 194 (2019), 30-43",
+      "doi": "10.1016/j.jnt.2018.07.008",
+      "imported_scope": "Selberg-class cosine limit and explicit scaling; Theorem 3.1"
+    },
+    {
+      "id": "CONREY1983",
+      "title": "Zeros of derivatives of Riemann's xi-function on the critical line",
+      "author": "J. Brian Conrey",
+      "journal": "Journal of Number Theory 16 (1983), 49-74",
+      "doi": "10.1016/0022-314X(83)90031-8",
+      "imported_scope": "fixed-order line proportions tending to one as derivative order grows; no exact 99-percent table imported"
+    },
+    {
+      "id": "LEVINSON_MONTGOMERY1974",
+      "title": "Zeros of the derivatives of the Riemann zeta-function",
+      "authors": "Norman Levinson; Hugh Montgomery",
+      "journal": "Acta Mathematica 133 (1974), 49-65",
+      "doi": "10.1007/BF02392141",
+      "imported_scope": "historical derivative-zero programme only"
+    },
+    {
+      "id": "TYAGLOV2011",
+      "title": "On the number of real critical points of logarithmic derivatives and the Hawaii conjecture",
+      "author": "Mikhail Tyaglov",
+      "journal": "Journal d'Analyse Mathematique 114 (2011), 1-62",
+      "doi": "10.1007/s11854-011-0011-1",
+      "imported_scope": "literature context for real critical-point and nonreal-zero counts"
+    }
+  ],
+  "scope": {
+    "exact_real_transport": true,
+    "exact_complex_winding_transport": true,
+    "exact_riccati_dictionary": true,
+    "fixed_scaled_box_high_derivative_theorem": true,
+    "growing_box_uniformity": false,
+    "cumulative_xi_defect_transport": false,
+    "rh_established": false
+  }
+}
