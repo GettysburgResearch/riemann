@@ -36,12 +36,15 @@ strip. Only the CLOSED strip is claimed. QED.
 
 (Recorded failure: the alternative route via termwise Re-positivity of the
 paired Hadamard sum of `xi'/xi` on `Re s > 1/2` is FALSE as stated — explicit
-sign counterexample in the replay notes §6.4; it holds only for `Re s >= 1`.)
+sign counterexample in `experiments/X-105060-descent-ladder/laneB1_NOTES.md`
+§1, "Rejected variant (recorded)", indexed at its §6.5(i); it holds only for
+`Re s >= 1`.)
 
 ## 2. Conservation Lemma
 
-**Theorem 2.** For every `k` there are explicit constants (admissible
-`A_k = 70 + 6k`; `B_k, T_k` explicit but large — see honesty §5) with
+**Theorem 2.** For every `k` there are constants (log-coefficient
+`A_k = 70 + 6k` explicit and admissible; `B_k, T_k` finite and effectively
+computable but large — see honesty §5) with
 
 ```
 |N_{k+1}(T) - N_k(T)| <= A_k log T + B_k    for all T >= T_k.
@@ -104,11 +107,13 @@ by this argument; the distinct-zero ladder is the honest strengthening.
 ## 5. Honesty on constants
 
 `A_k = 70 + 6k` is explicit but lossy (observed truth ≤ 1 at `T <= 100`); the
-additive constants `B_k, T_k` inherit Sub-lemma A's abscissae
+additive constants `B_k, T_k` are finite and effectively computable (total
+argument variations on fixed compacta), not written in closed form; they
+inherit Sub-lemma A's abscissae
 `a_k ~ 2pi exp(16 C_k)`, `C_k ~ 2^{k+1}` — tower-large in `k`. Asymptotically
 harmless (Theorem 4 is a `T -> infinity` statement at each fixed `k`);
 finite-height use of Theorem 2 for `k >= 1` at small `T` is vacuous — the
-certified census (`X-105061`) covers low height instead. The Landau-lemma
+budgeted-mp census (`X-105061`) covers low height instead. The Landau-lemma
 constant is cited [MV Lemma 6.4]; any absolute constant works.
 
 ## 6. Corollary: the imported Zeta23 baseline rides the ladder
@@ -123,14 +128,24 @@ points on the critical line and `N` counted with multiplicity [statement text:
 `origin/research/gpt56-pro/import-anthropic-zeta23-and-extend`
 `c13b8836f6c7f4e36f17ab1c4ebe41e4cf072f2e`; exact constant
 `0.6725007036794117 = 3/2 - (1/sqrt2) cot(1/sqrt2)` per
-`verification-results/constants.json` (same commit) and closed form L-90227.1 @
+`research/external/anthropic-zeta23/verification-results/constants.json`
+(same commit; the field is named `simple_on_line` there — the on-line-DISTINCT
+statement at the same value is README §1) and closed form L-90227.1 @
 `origin/research/gpt56-pro/90102-liouville-bernstein-extremality`
 `1a60df88aadac731ec32e48a87b74537662114dd`].
 
-Dyadic-to-cumulative bridge: if `a_i/b_i >= c - eps` for all dyadic windows
-`i >= i_0` (`a_i, b_i >= 0`, `b_i` the window totals, `sum b_i -> infinity`),
-then `sum_{i<=I} a_i / sum_{i<=I} b_i >= c - eps - O(1/sum b) -> c - eps`. Hence
-`kappa~_0 = liminf_T D_0(T)/N_0(T) >= 0.67250...`, and by Theorem 4:
+Dyadic-to-cumulative bridge (T-anchored; repaired per hostile review — a
+grid-endpoint partial-sum argument does NOT reach the continuous-T liminf):
+the import's window bound holds for the CONTINUOUS family `(T, 2T]`: for every
+`eps > 0` there is `T_0 = T_0(eps)` with `D_0-count(T, 2T] >= (c - eps) *
+N_0-count(T, 2T]` for all `T >= T_0`, `c = 0.6725007...`. Fix `T` large and
+decompose `(T/2^J, T]` into the T-ANCHORED chain `(T/2^j, T/2^{j-1}]`,
+`j = 1..J`, choosing `J` so `T/2^J in [T_0, 2T_0)`; every window in the chain
+has left endpoint `>= T_0`, so the bound applies to each; ADDITIVITY of both
+counts over the disjoint windows gives
+`D_0(T) >= D_0-count(T/2^J, T] >= (c - eps)(N_0(T) - N_0(2T_0))`. Dividing by
+`N_0(T) -> infinity` and letting `T -> infinity`, then `eps -> 0`:
+`kappa~_0 = liminf_T D_0(T)/N_0(T) >= c`. By Theorem 4:
 
 ```
 FOR EVERY k >= 0:   liminf_T D_k(T)/N_k(T) >= 0.6725007036...
@@ -152,7 +167,7 @@ Real zeros by fine-grid sign changes + bisection; TOTAL zeros by winding of
 real = total = (29, 29, 29, 29) — all zeros in these rectangles real and
 simple; conservation `|N_{k+1} - N_k| <= 1` at `T = 50` (genuine edge
 breathing), `= 0` at `T = 100`; Rolle floor observed SHARP (9 = 10 - 1).
-Implementation validated against `mp.diff` to rel. 1e-39 and the functional
+Implementation validated against `mp.diff` to rel. ≤ 1.2e-39 and the functional
 equation. First real zeros: `Xi_1`: 15.5857 (+ t = 0), `Xi_2`: 4.7502,
 `Xi_3`: 8.2607. The deep census to `T = 500` is `X-105061`.
 

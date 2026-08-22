@@ -7,7 +7,7 @@ eps_budget = 10^-(dps-5), dps = 35. NOT interval arithmetic.
 import sys, os, json, time
 import mpmath as mp
 
-HOME_LANE = '/tmp/claude-0/-home-user-riemann/d379fac9-baa2-5637-b561-9823a1c28acc/scratchpad/GRAND/progB/laneB4'
+HOME_LANE = os.path.dirname(os.path.abspath(__file__))
 LANE = os.environ.get('LANE_DIR', HOME_LANE)
 sys.path.insert(0, HOME_LANE)
 from xi_eval import xi_block

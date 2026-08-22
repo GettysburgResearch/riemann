@@ -7,7 +7,7 @@ Run AFTER: refine_merge, cert3away, cascade, ledger, checks, assemble.
 import json, os, sys
 import mpmath as mp
 
-LANE = '/tmp/claude-0/-home-user-riemann/d379fac9-baa2-5637-b561-9823a1c28acc/scratchpad/GRAND/progB/laneB4'
+LANE = os.environ.get('LANE_DIR', os.path.dirname(os.path.abspath(__file__)))
 mp.mp.dps = 35
 sys.path.insert(0, LANE)
 from xi_eval import xi_block

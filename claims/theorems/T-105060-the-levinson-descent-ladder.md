@@ -4,20 +4,24 @@ Claim ID: `T-105060`
 Status: **CONDITIONAL THEOREM — assembly complete and stress-tested; consumes `L-105062` (PROVED), `L-105061` (dipole interface: partial-fraction + threshold PROVED, count cap OPEN), and one EXTERNAL-CLASSICAL input (Conrey 1983); RH NOT ADDRESSED**
 Created: 2026-08-22
 Agent: claude (external reviewer lane; Program B lanes B1/B3/B4 + orchestrator)
-Depends on: `L-105062` (strip + conservation + Rolle + monotone ladder, proved), `L-105061` ([I-DIPOLE] pinned interface with constant `A'`), EXTERNAL-CLASSICAL: J. B. Conrey, "Zeros of derivatives of Riemann's ξ-function on the critical line", J. Number Theory 16 (1983) 49–74 (`kappa_k -> 1` as `k -> infinity`; only this qualitative form consumed).
+Depends on: `L-105062` (strip + conservation + Rolle + monotone ladder, proved), `L-105061` ([I-DIPOLE] pinned interface with constant `A'`), EXTERNAL-CLASSICAL: J. B. Conrey, "Zeros of derivatives of Riemann's ξ-function on the critical line", J. Number Theory 16 (1983) 49–74 (`kappa_k -> 1` as `k -> infinity`; only this qualitative form consumed; coordinates transcribed, literature-unverified in-container — same discipline as the repo's Q-0014 flag on Speiser).
 Replay: `experiments/X-105060-descent-ladder/` (assembly stress tests) and `experiments/X-105061-xi-derivative-census/` (finite-height defect ledger).
 RH status: **unproved, not addressed**
 
 ## 1. Historical frame (what this theorem is)
 
-Levinson, late in life, believed a "converse to Rolle's theorem" should let
-on-line zero proportions descend the ξ-derivative ladder — from the
-almost-all-real zeros of high derivatives back to ζ itself — and no one has
-made the argument work. The forward direction is trivial (Ξ real on the line ⇒
-Rolle pushes real zeros UP the ladder); the converse is FALSE for generic
-functions (`x^2 + 1`), yet TRUE at the 100% level for ξ-like functions
-(Hellerstein–Williamson 1977; Bergweiler–Eremenko–Langley 2003: real entire
-`f` with `f, f''` real-rooted lies in Laguerre–Pólya), with Speiser's theorem
+Levinson, late in life, is reported to have believed a "converse to Rolle's
+theorem" should let on-line zero proportions descend the ξ-derivative ladder —
+from the almost-all-real zeros of high derivatives back to ζ itself — and no
+one has made the argument work (biographical attribution: folklore/secondary
+sources; not verified in-container). The forward direction is trivial (Ξ real
+on the line ⇒ Rolle pushes real zeros UP the ladder); the converse is FALSE
+for generic functions (`x^2 + 1`), yet TRUE at the 100% level for ξ-like
+rigidity classes: Hellerstein–Williamson 1977 (real entire `f` with
+`f, f', f''` all real-rooted lies in Laguerre–Pólya) and Wiman's conjecture —
+Sheil-Small 1989 (finite order) completed by Bergweiler–Eremenko–Langley 2003
+(`f, f''` real-rooted suffices) [attributions transcribed, literature-
+unverified in-container], with Speiser's theorem
 making rung one an exact RH-equivalence. What has never existed is the
 QUANTITATIVE deformation. This theorem supplies it: the descent works exactly,
 with the failure isolated into ONE geometric functional — the weighted
@@ -30,8 +34,9 @@ is proved) plus the (hard, honestly open) question of bounding `W_k`.
 Setting and counts as in `L-105062` §0. Gaps of `Xi_k` = bounded components of
 `R \ {real zeros}`; the gap list `𝒢_k(T)` = gaps meeting `(0, T]` (≤ M+1
 members, including the origin gap and the T-overhanging gap — both ordinary
-members; the T-overhanging gap can be as long as ~`T^{1/4}` and MUST be priced
-inside `W_k`, not absorbed into log-terms: recorded trap). Pair `(x_j, y_j)`
+members; no unconditional `O(log)`-type bound on the T-overhanging gap's
+length is available at every rung, so it MUST be priced inside `W_k`, not
+absorbed into log-terms: recorded trap). Pair `(x_j, y_j)`
 overhangs `G = (a,b)` iff `x_j - y_j < b` and `x_j + y_j > a`.
 
 ```
@@ -127,7 +132,7 @@ approximation + Gauss–Lucas + Hurwitz). QED.
   hold; pair-annihilation configs (F has pairs, F′ none, `N^r` jumps UP)
   priced exactly by `A'W`; a single pair overhanging SIX gaps charged once per
   gap with no loss. Worst observed `extra/weight = 2.0` (see L-105061 §4).
-- The certified census (`X-105061`, budgeted-mp, T0 = 500): all real-zero
+- The budgeted-mp census (`X-105061`, budgeted-mp, T0 = 500): all real-zero
   counts `R_k(500) = 269/269/270/269` for `k = 0..3`, defect ledger
   `X_0 = X_1 = X_2 = 0` — every gap of `Xi_k` contains EXACTLY one real zero
   of `Xi_{k+1}` (268/268/269 gaps): on `[0, 500]` the converse Rolle holds
@@ -143,9 +148,10 @@ approximation + Gauss–Lucas + Hurwitz). QED.
    converse-Rolle heuristic.
 2. **Not a new proportion for zeta**: (d) CONSUMES `kappa_{K+1}` lower bounds
    and would produce one for `kappa_0` only given `Sum w_k` control. The
-   imported Zeta23 baseline flows the OTHER way — UP the ladder,
-   unconditionally, via L-105062 Thm 4/§6 (`kappa~_k >= 0.67250...` for every
-   `k`); the descent prices the return trip. The two directions are
+   imported Zeta23 baseline flows the OTHER way — UP the ladder via L-105062
+   Thm 4/§6 (`kappa~_k >= 0.67250...` for every `k`, modulo the import row's
+   own status: upstream review pending — the ladder transfer itself, Thm 4, is
+   unconditional); the descent prices the return trip. The two directions are
    complementary, neither is circular.
 3. **Conditionality ledger**: (a)–(d) are conditional on [I-DIPOLE] (open
    count cap; threshold + partial-fraction layers PROVED in L-105061);
@@ -168,7 +174,7 @@ approximation + Gauss–Lucas + Hurwitz). QED.
 (F1) A gap with an extra `Xi_{k+1}`-zero but overhanging weight `< 1` (refutes
 the proved threshold — hence [I-PF] or the strip lemma). (F2) A per-gap
 `extra/weight > A' = 4` (refutes the pinned interface; assembly re-runs with
-any valid `A'`). (F3) A certified census window violating (a) at computable
+any valid `A'`). (F3) A budgeted-mp census window violating (a) at computable
 height given its interfaces. (F4) A proof that `Sum w_k < infinity` would make
 (d) a genuine new proportion theorem — that is the intended successor use, not
 a falsifier; a proof that `w_0 = infinity` would confine the ladder's content

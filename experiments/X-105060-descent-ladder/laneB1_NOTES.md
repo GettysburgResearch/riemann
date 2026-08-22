@@ -145,9 +145,9 @@ for j = k, k+1, T >= T_k^{(1)}, provided T is "good" (no zeros of Xi_k Xi_{k+1} 
 For good T' >= max(T_k^{(1)}, X_k):
   |N_{k+1}(T') - N_k(T')| = |Z_{k+1} - Z_k + nu_{k+1} - nu_k|
    <= (1/2pi)[ 2(pi + c_k^{near}) + c_k^{left} + (104 + 7k) log T' + (104 + 7(k+1)) log T' ] + |nu_{k+1} - nu_k|
-   <= (34 + 3k) log T' + B_k'.
+   <= (35 + 3k) log T' + B_k'.
 Transfer to arbitrary T >= T_k := T_k^{(1)} + 1 via §2.3's local counts (adds (14+k) + (15+k) per rung):
-  |N_{k+1}(T) - N_k(T)| <= (34+3k) log T + (29 + 2k) log T + B_k' + ... <= (70 + 6k) log T + B_k.
+  |N_{k+1}(T) - N_k(T)| <= (35+3k) log T + (29 + 2k) log T + B_k' + ... <= (70 + 6k) log T + B_k.
 All constants explicit modulo the c_k^{near}, c_k^{left}, nu_j, which are T-independent finite numbers defined above (absorbed in B_k). QED Theorem 2.
 
 Corollary 2.1 follows by telescoping and classical RvM (TZF Thm 9.4: N(T) = (T/2pi)log(T/2pi) - T/2pi + O(log T)). In particular N_k(T)/(T/2pi log T) -> 1 and N_k(T) >= (T/7) log T for T >= T_k' explicit.

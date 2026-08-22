@@ -205,12 +205,15 @@ certified, no failures); cascade 20 s; checks 53 s. Total ~45 min elapsed.
     gap; every insertion sign-certified). No LOUD events. No assertion
     failures anywhere in the production run.
 
-### File inventory (this dir)
-  sweep.jsonl (9510 rows), zeros.json + zeros_k{0..3}.json (refined brackets),
-  cert3.json (+ cert3_near_{0..3}.json), cascade.json, ledger.json, checks.json,
-  fixtures.json, results.json (orchestrator schema), results_assembled.json,
-  anchors.json, verify.py (replay; VERIFY: ALL PASS), finalize.py, census.py,
-  xi_eval.py, test_anchors.py, smoke/ (pilot [0,40]), logs: sweep.log,
-  refine_{0..3}.log, cert3near_{0..3}.log, checks.log.
+### File inventory (as DEPOSITED in this experiment dir)
+  sweep.jsonl.gz (9510 rows, gzipped), zeros.json (refined brackets, all k),
+  cert3.json (near-region monotonicity certificates), cascade.json,
+  ledger.json (every gap), checks.json, fixtures.json, results.json
+  (orchestrator schema), anchors.json, verify.py (self-contained fail-closed
+  replay from THIS dir; VERIFY: ALL PASS; LANE_DIR env overrides), census.py,
+  finalize.py, xi_eval.py, NOTES.md. (Lane-only working artifacts not
+  deposited: zeros_k{0..3}.json shards, cert3_near_{0..3}.json shards,
+  results_assembled.json, test_anchors.py, smoke/, per-stage logs — their
+  content is subsumed by the deposited aggregates, which verify.py re-checks.)
 
 RH is not addressed by any of this.
