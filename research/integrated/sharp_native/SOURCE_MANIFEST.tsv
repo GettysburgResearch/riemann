@@ -1,0 +1,10 @@
+semantic_id	source_pr	source_head_sha	source_path	source_claim_id	final_verdict	required_fix
+ARITH.SHARP.COMPACT_HALL_RN	652	24ab64551225f2dba9aa53a533eb9b0285c6e363	claims/lemmas/L-99600-exact-compact-sharp-hall-and-rn-cocycle.md	L-99600	VERIFIED	
+ARITH.SHARP.ALPHA_NATIVE_PROMOTION	652	24ab64551225f2dba9aa53a533eb9b0285c6e363	claims/refutations/R-99600-alpha-child-hazard-is-not-the-native-euler-source.md	R-99600	FALSE	Use sequential first-owner decomposition; RN thinning repairs location, not coefficient.
+ARITH.SHARP.SEQUENTIAL_FIRST_OWNER	652	24ab64551225f2dba9aa53a533eb9b0285c6e363	claims/lemmas/L-99601-sequential-first-owner-euler-hazard.md	L-99601	VERIFIED	
+OPEN.ARITH.FCHD67	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	FCHD67	OPEN_SUFFICIENT_FOR_RH	
+ARITH.SOURCE.TYPING_FIREWALLS	576	0f6ea6eae813c1d867ae50744cf5fd57e2720bb7	claims/refutations/R-97400-p61-source-interface-firewalls.md	R-97400	VERIFIED_WITH_FIXES	Include the odd-history fixture, PR #667 normalization, and live q=2 marginal separator.
+ARITH.SHARP.ROW_KERNEL	642	07aa0d4838458a1b2d3af9e5bc96616baa6b4767	claims/lemmas/L-99240-sharp-target-positive-row-kernel-factorization.md	L-99240	VERIFIED_WITH_FIXES	Keep atom positivity separate from native source promotion.
+ARITH.SHARP.POWER_M_GE_2	663	fa081e81044a81e76f48cb9878a659d749e98427	claims/lemmas/L-99613-every-sharp-boundary-power-at-least-two-is-globally-positive.md	L-99613	VERIFIED	
+ARITH.SHARP.CRITICAL_DESCENT_IDENTITIES	668	15719b975115ecad1b23264c6a6303899b4c99dc	claims/lemmas/L-99940-distributional-critical-power-descent.md|claims/lemmas/L-99942-critical-negative-mass-is-weighted-downward-variation.md	L-99940/L-99942	VERIFIED	
+OPEN.ARITH.CV	668	15719b975115ecad1b23264c6a6303899b4c99dc	claims/lemmas/L-99944-critical-variation-is-rh-equivalent.md	L-99944	OPEN_RH_EQUIVALENT	

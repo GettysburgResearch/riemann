@@ -1,0 +1,95 @@
+{
+  "direct_main_completion": {
+    "base_exclusive": "a88bed9711b1b2057fb258354924056c5ad8696b",
+    "commit_count": 85,
+    "head_inclusive": "677203992eb0168920365ee45ae9db76bfa97dcf",
+    "heavy_campaigns_rerun": false,
+    "packet_count": 11,
+    "targeted_review_rows": 0
+  },
+  "frozen_main": {
+    "sha": "677203992eb0168920365ee45ae9db76bfa97dcf",
+    "tree_sha": "701d836331ce59c317f6c6ee8bcd26f2c8e872e9"
+  },
+  "heavy_computation_policy": "No heavy campaign rerun. Mathematical status, method audit, artifact status, and replay status remain separate.",
+  "integration_readiness": "READY_WITH_EXPLICIT_EXCLUSIONS",
+  "late_research_policy": "All scientific work deposited after PR #707 is excluded and queued for the next review delta. Review PRs after #707 are used only as frozen review infrastructure.",
+  "registry_counts": {
+    "aliases": 19,
+    "claims": 139,
+    "computations": 22,
+    "conflicts": 18,
+    "edges": 36,
+    "families": 24,
+    "pr_dispositions": 333,
+    "refutations": 19,
+    "unresolved_conflicts": 7
+  },
+  "repository": "gfreund123/riemann",
+  "research_census_terminal_pr": 707,
+  "review_objects": [
+    {
+      "head": "eb1987502ef9043e782ac6ab1e19c47be9daef93",
+      "pr": 708,
+      "role": "primary_reviewer_b"
+    },
+    {
+      "head": "55fe0b6f23d9163e2b602608da84194ba243d7c4",
+      "pr": 709,
+      "role": "primary_reviewer_a"
+    },
+    {
+      "head": "e91d6aa25d2e8576e82d26170127941eec430f75",
+      "pr": 710,
+      "role": "reviewer_a_cross_review_of_b"
+    },
+    {
+      "head": "945a6eec3406cce8f6cd63eba6c69fb60676c41d",
+      "pr": 711,
+      "role": "reviewer_b_cross_review_of_a",
+      "science_content_head": "27784928fbcecff975bc947e13c3a30d3b630ce0"
+    },
+    {
+      "head": "a6aa936ba8bf538177e34af60db7e2f0a58f8dfd",
+      "pr": 712,
+      "role": "reviewer_c_final_coverage_genealogy_issue_archaeology"
+    },
+    {
+      "head": "dad61b954dd8404520631058d1ce717e7a910a3b",
+      "pr": 717,
+      "role": "reviewer_b_direct_main_delta"
+    },
+    {
+      "head": "06c8ea18ffe20c7efa01b0fdacb8ebea0a2b5b22",
+      "pr": 721,
+      "role": "final_reconciliation"
+    }
+  ],
+  "reviewed_only_path_to_rh": false,
+  "reviewer_c_completion": {
+    "heavy_campaigns_rerun": false,
+    "issues_classified": 171,
+    "only_sequence_gap": 417,
+    "pr_rows": 341,
+    "targeted_review_rows": 0,
+    "unresolved_exact_heads": 1
+  },
+  "reviewer_d": {
+    "head": "06c8ea18ffe20c7efa01b0fdacb8ebea0a2b5b22",
+    "pr": 721
+  },
+  "schema": "riemann.scientific-integration.2026-08-22.v1",
+  "scientific_status": "RH_UNPROVED",
+  "source_policy": "Canonical packets are reviewed residency manifests. Exact proof bodies remain at their source PR/head/path unless physically resident on frozen main.",
+  "verdict_counts": {
+    "CONDITIONAL_EXACT": 6,
+    "FALSE": 4,
+    "GAP_BLOCKED": 6,
+    "OPEN_RH_EQUIVALENT": 15,
+    "OPEN_SUFFICIENT_FOR_RH": 20,
+    "REFUTED_MECHANISM": 9,
+    "RETAINED_HEAVY_CERTIFICATE": 2,
+    "VERIFIED": 23,
+    "VERIFIED_WITH_FIXES": 54
+  }
+}

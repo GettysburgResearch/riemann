@@ -1,0 +1,19 @@
+semantic_id	source_pr	source_head_sha	source_path	source_claim_id	final_verdict	required_fix
+API.PERRON.ABSORPTION	697	e878c3717cd8124564e5400b2ec5db035e3a4088	claims/lemmas/L-101100-positive-completion-negative-mass-absorption.md	L-101100	VERIFIED	
+API.CONJUNCTIVE.SPARSITY_ENERGY	698	a10d6a40105142de2708632589c458d7534f556a	claims/lemmas/L-101103-bad-set-sparsity-times-derivative-energy.md	L-101103	VERIFIED_WITH_FIXES	Do not call subpower log-length an independent key; require power-saving or deep-excursion occupancy for genuine leverage.
+API.CONJUNCTIVE.REGIONAL_SCHUR	698	a10d6a40105142de2708632589c458d7534f556a	claims/lemmas/L-101105-regionwise-two-sided-schur-cover.md	L-101105	VERIFIED_WITH_FIXES	Require literal native row/column marginals and a compatible partition.
+API.CONJUNCTIVE.MATCHED_TRANSFER	704	66f755df4321a03874e0da3f61b033300173e364	claims/lemmas/L-101500-matched-transfer-negative-part.md	L-101500	VERIFIED	
+API.CONJUNCTIVE.ROOT_EXCESS	706	44828a27c63bfc57dce12d67e980db33f4d55c3a	claims/lemmas/L-104101-two-key-root-excess-absorption.md	L-104101	VERIFIED	
+REFUTATION.ROOT_EXCESS_ONLY	706	44828a27c63bfc57dce12d67e980db33f4d55c3a	claims/lemmas/L-104100-root-containing-square-firewall.md	L-104100	REFUTED_MECHANISM	
+ARITH.STAIRCASE.VECTOR_REDUCTION	703	0a46dba5c74e573945e3612937606f6ca735a1d3	claims/lemmas/L-102100-survival-weighted-mixed-coboundary-and-staircase-telescope.md|claims/lemmas/L-102103-carrier-free-filter-for-the-quadratic-wavelet-bridge.md|claims/lemmas/L-102105-vector-vaughan-reduction.md	L-102100/L-102103/L-102105	VERIFIED_WITH_FIXES	Use the identical source, cutoff, and zero-safe compact filter in both coordinates.
+OPEN.ARITH.CFBB	703	0a46dba5c74e573945e3612937606f6ca735a1d3	claims/theorems/T-102100-carrier-free-staircase-perron-frontier.md	CFBB102100	OPEN_SUFFICIENT_FOR_RH	
+ARITH.PHASE.CUBIC_AMPLITUDE	707	7bf3308d40ac8ed1ba50e404ff6e9c47526d89e4	claims/lemmas/L-103300-critical-carrier-normalized-balanced-homotopy.md|claims/lemmas/L-103303-centered-cubic-bspline-autocorrelation.md|claims/lemmas/L-103304-half-divisor-field-is-source-square-root.md	L-103300/L-103303/L-103304	VERIFIED	
+OPEN.ARITH.BPOE	707	7bf3308d40ac8ed1ba50e404ff6e9c47526d89e4	claims/theorems/T-103300-balanced-phase-amplitude-and-physical-occupancy-frontier.md	BPOE103300	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.REGIONAL_ROW	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.REGIONAL_ROW	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.REGIONAL_COLUMN	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.REGIONAL_COLUMN	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.QMT	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.QMT	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.AMT	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.AMT	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.SORR	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.SORR	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.RFCP	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.RFCP	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.PERRON_CV_ROW	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.PERRON_CV_ROW	OPEN_SUFFICIENT_FOR_RH	
+OPEN.CONJ.PERRON_XD_ROW	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.CONJ.PERRON_XD_ROW	OPEN_SUFFICIENT_FOR_RH	

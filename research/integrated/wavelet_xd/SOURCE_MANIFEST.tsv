@@ -1,0 +1,10 @@
+semantic_id	source_pr	source_head_sha	source_path	source_claim_id	final_verdict	required_fix
+ARITH.WAVELET.MINIMAL_RATIO8	674	9962f7f712adc6b4ad72672ecfeace028ba79bdb	standalone/2026-08-20-minimal-mobius-wavelet/PROOF.md	T-99910	VERIFIED_WITH_FIXES	Use semantic/path-qualified theorem locators and explicit endpoint conventions.
+ARITH.WAVELET.ABEL_MERTENS	689	1751b5d63d981f1d39e0679a5997a7e32d2f1649	claims/lemmas/L-100500-exact-abel-mertens-wavelet-frame.md	L-100500	VERIFIED_WITH_FIXES	State Mertens endpoint convention and kernel regularity.
+ARITH.WAVELET.SPECTRAL_ABSCISSA	675	7b28224ba1b072d4ccd5b93ad37c0a64e7939740	claims/lemmas/L-100131-wavelet-energy-abscissa-equals-rightmost-zero.md	L-100131	VERIFIED_WITH_FIXES	State abscissa as an infimum; supply vertical reciprocal-zeta growth, a.e. phase, multiplicity, and nonattainment details.
+REFUTATION.WAVELET.FLOOR_KERNEL	675	7b28224ba1b072d4ccd5b93ad37c0a64e7939740	claims/refutations/R-100130-positive-floor-kernel-cancels-the-zeta-detector.md	R-100130	REFUTED_MECHANISM	
+REFUTATION.WAVELET.CRITICAL_DESMOOTHING	689	1751b5d63d981f1d39e0679a5997a7e32d2f1649	claims/lemmas/L-100501-critical-dyadic-inverse-and-frame-firewall.md	L-100501	REFUTED_MECHANISM	
+ARITH.HASSE.WAVELET_REALIZATION	692	50c4862c801b6388a30363c336d275270025eff4	claims/lemmas/L-101002-phase-hasse-is-a-wavelet-realization-not-an-independent-detector.md	L-101002	VERIFIED_WITH_FIXES	Do not alias positive variation to the signed detector.
+ARITH.XD.OLD_K0_K1_EDGE	705	027ea8bd5c879a190e9e22620c245a81f7b93b73	claims/refutations/R-103200-k0-k1-hybrid-equivalence-is-mistyped.md	R-103200	FALSE	Replace by the same-K1 theorem.
+ARITH.XD.SAME_K1_TRANSLATION	705	027ea8bd5c879a190e9e22620c245a81f7b93b73	claims/lemmas/L-103201-correct-same-k1-largest-prime-vaughan-hybrid.md	L-103201	VERIFIED	
+OPEN.ARITH.XD	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	XD	OPEN_RH_EQUIVALENT	
