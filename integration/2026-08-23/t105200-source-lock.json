@@ -5,7 +5,8 @@
   "stacked_base": {
     "pr": 723,
     "branch": "codex/105100-residue-second-moment",
-    "sha": "51c5619ef3c4b793de756b1c359b39df2ac35466"
+    "fork_checkpoint_sha": "51c5619ef3c4b793de756b1c359b39df2ac35466",
+    "live_base_sha": "fd3ef43a6964e502f00ad906482eae5b3c544fba"
   },
   "canonical_main": {
     "sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
@@ -24,8 +25,8 @@
     },
     {
       "pr": 723,
-      "sha": "51c5619ef3c4b793de756b1c359b39df2ac35466",
-      "role": "finite second critical-residue ledger"
+      "sha": "fd3ef43a6964e502f00ad906482eae5b3c544fba",
+      "role": "finite second critical-residue ledger and exact entire-window second-residue flux"
     }
   ],
   "heavy_computation_rerun": false,
