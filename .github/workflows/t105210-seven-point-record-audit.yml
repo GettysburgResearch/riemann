@@ -1,0 +1,104 @@
+name: T105210 seven-point record audit
+
+on:
+  push:
+    branches:
+      - research/gpt56-pro/105200-xi-residue-rigidity
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  arb-record-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out current research branch
+        uses: actions/checkout@v4
+
+      - name: Check out pinned external verifier
+        uses: actions/checkout@v4
+        with:
+          repository: ainta/zeta-simple-zeros
+          ref: 040c5e899e658aed7b56a2a87f501798fe10761d
+          path: upstream
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install pinned arithmetic stack
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install python-flint==0.9.0
+          python -m pip install --no-deps -e upstream
+
+      - name: Verify upstream tests and original certificates
+        run: |
+          python -m unittest discover -s upstream/tests -v
+          zeta-zero-verify three --json | tee original-three.json
+          zeta-zero-verify seven --json --progress-every 1000000 | tee original-seven.json
+
+      - name: Install stronger 7-point parameters
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('upstream/src/zeta_simple_zeros/verify_seven.py')
+          text = path.read_text()
+          replacements = {
+              'TARGET_NUMERATOR = 19': 'TARGET_NUMERATOR = 49',
+              'TARGET_DENOMINATOR = 5_000': 'TARGET_DENOMINATOR = 200',
+              'PRESSURE_DENOMINATOR = 3_000': 'PRESSURE_DENOMINATOR = 25',
+              'PRESSURE_CUTOFF_CELLS = 45_600': 'PRESSURE_CUTOFF_CELLS = 24_500',
+          }
+          for old, new in replacements.items():
+              if text.count(old) != 1:
+                  raise SystemExit(f'expected one occurrence of {old!r}')
+              text = text.replace(old, new)
+          path.write_text(text)
+          PY
+
+      - name: Verify strengthened local inequality
+        run: |
+          python - <<'PY' | tee strengthened-seven.json
+          from zeta_simple_zeros.verify_seven import verify_seven
+          report = verify_seven(progress_every=1000000)
+          print(report.to_json())
+          if not report.verified:
+              raise SystemExit('strengthened certificate did not verify')
+          PY
+
+      - name: Verify global constant algebra
+        run: |
+          python - <<'PY' | tee global-constant.txt
+          import mpmath as mp
+          mp.mp.dps = 80
+          H0 = mp.mpf(3)/2 - mp.cot(1/mp.sqrt(2))/mp.sqrt(2)
+          pressure = mp.mpf(1)/25
+          local = mp.mpf(49)/200
+          block = 10
+          alpha = local * (block - 6) / block
+          beta = pressure * (block - 1) / block
+          bound = (H0 - beta) / (1 - alpha)
+          old = H0
+          assert local * (block - 6) < 1
+          assert bound > old
+          print(f'H0={mp.nstr(H0, 60)}')
+          print(f'alpha={mp.nstr(alpha, 60)}')
+          print(f'beta={mp.nstr(beta, 60)}')
+          print(f'new_bound={mp.nstr(bound, 60)}')
+          print(f'improvement={mp.nstr(bound-old, 60)}')
+          PY
+
+      - name: Upload audit logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: t105210-seven-point-record-audit
+          path: |
+            original-three.json
+            original-seven.json
+            strengthened-seven.json
+            global-constant.txt
+          if-no-files-found: error
