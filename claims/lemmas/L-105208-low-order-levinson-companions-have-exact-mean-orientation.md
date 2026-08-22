@@ -3,6 +3,7 @@
 Claim ID: `L-105208`  
 Status: **PROVED UNCONDITIONALLY**  
 Created: 2026-08-23  
+Audited: 2026-08-23  
 Depends on: the positive Xi Fourier kernel; `L-104512`; `L-105207`  
 RH status: **not assumed**
 
@@ -64,21 +65,15 @@ C_k(y)=2\pi\int_{\mathbb R}
 \tag{L-105208.2}
 \]
 
-The positive tilt gives
+Pairing `u` and `-u` gives
 
 \[
+\boxed{
 C_k(y)
 =4\pi\int_0^\infty
 u^{2k+1}\Phi(u)^2\sinh(2yu)\,du>0.
+}
 \tag{L-105208.3}
-\]
-
-Here and below the integration variable in the last display is `u`; explicitly,
-
-\[
-C_k(y)
-=4\pi\int_0^\infty
-u^{2k+1}\Phi(u)^2\sinh(2yu)\,du.
 \]
 
 Plancherel yields the exact formulas
@@ -109,7 +104,6 @@ Therefore
 =4\lambda C_k(y)>0.
 }
 \tag{L-105208.6}
-\]
 
 Equivalently,
 
@@ -121,7 +115,6 @@ Equivalently,
 u^{2k+1}\Phi(u)^2\sinh(2yu)\,du.
 }
 \tag{L-105208.7}
-\]
 
 Thus the actual Levinson orientation is correct in line-averaged `L2` at
 every derivative order and every positive distance from the critical line.
@@ -176,7 +169,6 @@ The optimal value is the ordinary correlation coefficient
 \in(0,1).
 }
 \tag{L-105208.11}
-\]
 
 At this parameter,
 
@@ -230,7 +222,6 @@ Hence
 =2\lambda\int_{\mathbb R}F_{k+1}(t)^2dt>0.
 }
 \tag{L-105208.14}
-\]
 
 Equivalently, by Plancherel,
 
@@ -241,7 +232,6 @@ Equivalently, by Plancherel,
 \int_0^\infty u^{2k+2}\Phi(u)^2du.
 }
 \tag{L-105208.15}
-\]
 
 Common-zero cases follow by a regular-level perturbation.  Formula
 (L-105208.14) says that clockwise phase events can occur only with a strictly
