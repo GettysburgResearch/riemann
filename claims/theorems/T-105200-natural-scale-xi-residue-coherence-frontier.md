@@ -1,14 +1,14 @@
-# T-105200 — Natural-scale Xi residue coherence and the cumulative defect frontier
+# T-105200 — Natural-scale Xi residue coherence and the corrected low-order boundary
 
 Claim ID: `T-105200`  
-Status: **MAJOR PROPOSED UNCONDITIONAL ADVANCE; FINAL LOW-ORDER BUDGET OPEN**  
+Status: **MAJOR PROPOSED UNCONDITIONAL HIGH-TAIL ADVANCE; LOW-ORDER LEVINSON GATE OPEN**  
 Created: 2026-08-23  
 Updated: 2026-08-23  
 Base: PR #723 live checkpoint `fd3ef43a6964e502f00ad906482eae5b3c544fba`  
-Depends on: `L-105200--L-105205`; PRs #716, #720, #723  
+Depends on: `L-105200--L-105208`; `R-105200--R-105201`; `T-105210`; PRs #716, #720, #723  
 RH status: **unproved**
 
-## 1. Unconditional high-derivative theorem
+## 1. Proposed unconditional high-derivative theorem
 
 For every fixed `C,H>0`, put
 
@@ -33,19 +33,16 @@ complete natural box. Consequently, for all sufficiently large `M`:
    \]
 4. the associated residue coherence is `1-o(1)`, uniformly over `m>=M`.
 
-Thus the open mean-value condition `RCMV104530` is not merely compatible with
-the Xi Fourier source: it holds with asymptotically optimal margin throughout
-the full high derivative tail.
-
-Equivalently, a rectangle of original height `T` is unconditionally cleared by
-all derivative orders
+Thus `RCMV104530` holds with asymptotically optimal margin throughout the
+complete high derivative tail. Equivalently, a rectangle of original height
+`T` is cleared by derivative orders of the natural size
 
 \[
-\boxed{m\ge K T^2\log(2+T)}
+\boxed{m\asymp T^2\log T.}
 \]
 
-for every fixed `K>0`, once `T` is sufficiently large (with the threshold
-depending on `K,H`).
+These analytic statements are proposed complete mathematics pending
+independent review; the exact replay does not machine-prove them.
 
 ## 2. Exact first and second contour fluxes
 
@@ -79,8 +76,7 @@ R_F(B_{2,F}-C_{2,F}-D_F)},
 where the two `C` terms are the nonreal critical corrections and `D_F` is the
 adjacent-derivative residue debt.
 
-For `F=Xi^(m)` in the natural high derivative tail, choose a regular vertical
-edge in one model cell. Then `L-105205` proves
+For `F=Xi^(m)` in the natural high derivative tail, `L-105205` proposes
 
 \[
 C_{1,F}=C_{2,F}=0,
@@ -97,111 +93,92 @@ B_{1,F}=-{R_F\over w_m^2}(1+o(1)),
 B_{2,F}={R_F\over w_m^4}(1+o(1)).
 }
 \tag{T-105200.2}
-
-Thus
-
-\[
-{B_{1,F}^2\over R_FB_{2,F}}=1-o(1).
 \]
 
-The high-tail residue theorem is therefore also an unconditional evaluation of
-the exact oriented window fluxes, not only a local-zero computation.
+Thus the high-tail residue theorem is also an asymptotic evaluation of the
+exact oriented window fluxes.
 
-## 3. Exact low-order descent ledger
+## 3. Binding correction to the cumulative budget
 
-Let `Omega_T` be a regular critical-strip rectangle in the Xi `t`-plane and
-choose
+The earlier version promoted
 
 \[
-r(T)=\left\lceil K T^2\log(2+T)\right\rceil
+\mathcal D_r
+=O_r
++2\sum_{j<r}R_j(1-\mathfrak C_j)
++\sum_{j<r}(B_j+W_j-1)
 \]
 
-large enough that `Xi^(r(T))` has no off-real zero in `Omega_T`. For
-`0<=j<r(T)`, let
-
-```text
-R_j(T)          real zeros of Xi^(j+1) on the real slice;
-C_j(T)          residue coherence of Xi^j at those zeros;
-B_j(T)          the two endpoint defects;
-W_j(T)          the exact boundary winding difference.
-```
-
-`L-105203` gives
+as the next low-order producer.  `R-105201` proves the exact identity
 
 \[
-O_{\Omega_T}(\Xi)
-\le
-2\sum_{j<r(T)}R_j(T)(1-\mathfrak C_j(T))
-+
-\sum_{j<r(T)}(B_j(T)+W_j(T)-1).
+\boxed{
+\mathcal D_r
+=O_0+2\sum_{j<r}
+\left[R_j(1-\mathfrak C_j)-E_j\right].
+}
 \tag{T-105200.3}
 \]
 
-The high derivative off-real term is absent. The right side contains no
-unspecified `O(1)` and no global percentage hypothesis.
+It is the desired off-real zero count plus nonnegative coherence slack.
+Therefore `CRDB105200<2` remains a correct sufficient condition, but the
+ledger itself does not estimate the actual low-order descent.  The natural
+high-tail theorem removes `O_r`; it does not control the fixed low-order
+horizontal argument.
 
-Define the **coherence-residue defect budget** `CRDB105200` by
+## 4. Corrected low-order frontier
 
-\[
-\boxed{
-2\sum_{j<r(T)}R_j(T)(1-\mathfrak C_j(T))
-+
-\sum_{j<r(T)}(B_j(T)+W_j(T)-1)
-<2
-}
-\tag{CRDB105200}
-\]
-
-for every sufficiently large regular `T`, with finite low-height verification
-handled separately.
-
-Since the off-real zero count is an even nonnegative integer,
+`L-105206` proves that all adjacent derivative-level horizontal arguments and
+top charges telescope to one endpoint quotient
 
 \[
-\boxed{
-\mathrm{CRDB105200}\Longrightarrow\mathrm{RH}.
-}
+{\xi+\lambda\xi'
+ \over
+ \xi^{(r)}+\lambda\xi^{(r+1)}}.
 \tag{T-105200.4}
 \]
 
-The implication is exact. `CRDB105200` remains open.
+Thus the boundary obstruction is one classical Levinson auxiliary numerator
+relative to one high derivative denominator.
 
-## 4. What remains after the new unconditional tail theorem
+The new unconditional fixed-order input is:
 
-The new work proves that both moment fluxes, the adjacent debt and residue
-coherence have the desired asymptotic throughout the complete derivative tail.
-Accordingly, the next analytic task is not another high-derivative percentage
-or a second global polynomial identity. It is one of the following equivalent
-low-order advances:
-
-1. localize and bound (T-105200.1) uniformly for the finite ladder
-   `j<r(T)`;
-2. prove directly that the weighted coherence loss
+1. `L-105207`: all Xi Laguerre defects form one all-order
+   exterior-square Fourier Gram
    \[
-   \sum_{j<r(T)}R_j(T)(1-\mathfrak C_j(T))
+   [\Lambda_{a_i+a_j}(t_j-t_i)]\succeq0;
    \]
-   is subunit;
-3. combine the first/second contour fluxes with the explicit
-   Hermite--Biehler/Levinson boundary transport so that their total budget is
-   below two.
+2. `L-105208`: every low-order companion has strict line-averaged
+   Hermite--Biehler dominance and an exact positive amplitude-weighted phase
+   sum rule.
+
+These theorems prove that the low-order source orientation is correct before
+height localization.  They do not control the continued argument at one fixed
+ordinate.
+
+The revised conclusion-facing theorem is `HLOC105210` of `T-105210`: upgrade
+the exact translation-invariant/averaged Fourier positivity to the same-height
+horizontal argument at the last defective level.  Together with exclusion of
+a positive-residue last event, the exact `L-104518--L-104521` last-defect
+transport would imply RH.
 
 ## 5. Exact boundary
 
 ```text
-natural-scale complex Gaussian saddle       PROPOSED COMPLETE
-half-infinite derivative-tail real-rooting  PROPOSED COMPLETE
-natural order T^2 log T high entry           PROPOSED COMPLETE
-critical residues = -w_m^-2(1+o(1))         PROPOSED COMPLETE
-high-tail residue coherence -> 1             PROPOSED COMPLETE
-exact first window flux                      PROVED EXACT
-high-tail second-residue debt lower order    PROPOSED COMPLETE
-high-tail two-flux coherence                  PROPOSED COMPLETE
-finite coherence-defect budget               PROVED EXACT
-Xi rectangle budget                          PROVED CONDITIONAL ON EXISTING FLUX IDENTITY
-CRDB105200                                    OPEN / RH-BEARING
-Riemann Hypothesis                            UNPROVED
+natural-scale complex Gaussian saddle          PROPOSED COMPLETE
+half-infinite derivative-tail real-rooting     PROPOSED COMPLETE
+natural order T^2 log T high entry              PROPOSED COMPLETE
+high-tail residue coherence -> 1                PROPOSED COMPLETE
+exact first and second window fluxes            PROVED EXACT
+high-tail two-flux asymptotics                  PROPOSED COMPLETE
+CRDB as independent low-order producer          REFUTED
+all derivative arguments -> one endpoint ratio PROVED EXACT
+all-order exterior-square Xi Gram               PROVED UNCONDITIONALLY
+mean low-order HB orientation                   PROVED UNCONDITIONALLY
+HLOC105210 fixed-height localization            OPEN / RH-BEARING
+last positive-residue exclusion                 OPEN / RH-BEARING
+Riemann Hypothesis                              UNPROVED
 ```
 
-This draft PR is intended to remain the dedicated continuation workspace for
-subsequent attacks on `CRDB105200`; later passes should update this branch
-rather than open a new proposal for each refinement.
+This draft remains the dedicated continuation workspace for the actual
+low-order Levinson attack.
