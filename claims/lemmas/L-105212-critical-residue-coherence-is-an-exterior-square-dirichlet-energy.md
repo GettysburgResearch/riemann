@@ -64,7 +64,7 @@ Put
 \[
 x_a=\omega_{a,0},
 \qquad
- y_j={\omega_{b,c_j}\over h_j^2}.
+y_j={\omega_{b,c_j}\over h_j^2}.
 \tag{L-105212.2}
 \]
 
@@ -184,7 +184,7 @@ R\operatorname{tr}K^{(b)}
 -\mathbf1^TK^{(b)}\mathbf1
 \right].
 }
-\tag{L-105212.9
+\tag{L-105212.9}
 
 The bracket is nonnegative because it is the complete pairwise Gram
 Dirichlet energy.
@@ -214,7 +214,7 @@ RM_2(1-\mathfrak C)
 =RM_2-M_1^2
 =\sum_{i<j}(\rho_i-\rho_j)^2.
 }
-\tag{L-105212.10
+\tag{L-105212.10}
 
 Combining with (L-105212.9),
 
@@ -228,7 +228,7 @@ R\operatorname{tr}K^{(b)}
 -\mathbf1^TK^{(b)}\mathbf1
 \right].
 }
-\tag{L-105212.11
+\tag{L-105212.11}
 
 This is a concrete same-height sufficient estimate for residue coherence.
 It may be optimized over every split `a+b=k`.
@@ -247,7 +247,7 @@ R\operatorname{tr}K^{(b)}
 \right]
 =o(RM_2)
 }
-\tag{ESDE105212
+\tag{ESDE105212}
 
 for one admissible split `a+b=k`, together with `M_1>0`.
 
