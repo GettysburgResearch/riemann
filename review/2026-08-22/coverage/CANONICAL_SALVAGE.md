@@ -87,3 +87,17 @@ before archival.
 
 Keep issue records only as method/genealogy or exact controlling corrections.
 Do not create theorem nodes from proposal-only issue prose.
+
+
+## Final pass-two additions
+
+Canonicalize the exact safe-Euler/First-Hermite criteria (#378/#379), the
+Fredholm fixed-degree firewall (#387), the safe-Jordan/Pick countermodel (#398),
+the centered-Q4 cubic review (#515), the native-gap normalization firewall
+(#541/#544), the two-row annular consumer (#545), the factor-67 hostile review
+(#586), the LAPBR/Type-II reductions (#589/#590), the zero-marginal Lorenz
+collapse (#601), the Dickman terminal-sector theorems (#602/#609), C4MBI root
+equivalence (#604), and UOSACF finite-filter exhaustion (#606).
+
+Archive paper/recovery wrappers and complete-proposal descendants after linking
+the controlling review. Preserve exact local identities first.

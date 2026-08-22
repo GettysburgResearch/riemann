@@ -15,7 +15,7 @@
       707
     ],
     "proposal_policy": "do not replay obsolete full proposal after an exact later counterexample; preserve independent local results",
-    "unknown_exact_head_policy": "blank_or_UNRESOLVED plus TARGETED_REVIEW_STILL_REQUIRED; never guess"
+    "unknown_exact_head_policy": "only sequence #417 may remain blank because no remote PR object exists; every actual PR has an exact 40-hex current head; never guess"
   },
   "cross_review_inputs_only": {
     "reviewer_a_cross_review_b": {
@@ -30,7 +30,7 @@
     }
   },
   "frozen_main": "677203992eb0168920365ee45ae9db76bfa97dcf",
-  "generated_utc": "2026-08-22T15:05:58Z",
+  "generated_utc": "2026-08-22T18:12:45Z",
   "heavy_computation_policy": "HEAVY_CAMPAIGN_NOT_RE_RUN",
   "intended_branch": "review/2026-08-22/coverage-genealogy-delta",
   "light_checks_performed": [
@@ -44,7 +44,11 @@
     "PR508/PR630 retained-result schema and hash-ledger checks",
     "current PR metadata read-back for PRs 399-499",
     "issue-body archaeology over 171 July/August issue records",
-    "pass-one census and pass-two backlog consistency checks"
+    "pass-one census and pass-two backlog consistency checks",
+    "current PR metadata read-back for every PASS2_BACKLOG row",
+    "exact-head/title reconciliation for 72 actual PR objects and one sequence gap",
+    "controlling-review/refutation placement for the heat/operator, native-source, Q4, factor-67, Dickman, Type-II and C4MBI blocks",
+    "final zero-targeted and zero-malformed-head validation"
   ],
   "pass_one": {
     "blank_heads_after": 72,
@@ -65,9 +69,25 @@
     "targeted_before": 149,
     "unresolved_exact_head_records_after_validation": 73
   },
+  "pass_two": {
+    "base_head": "899d5efc37025b84a03f231fd6006a2b7a97e6e3",
+    "base_pr": 712,
+    "blank_heads_after": 1,
+    "exact_heads_titles_pinned": 72,
+    "final_resolution_file": "PASS2_FINAL_REVIEW.tsv",
+    "heavy_campaigns_rerun": false,
+    "malformed_placeholder_heads_after": [],
+    "no_pr_object_sequence_numbers": [
+      417
+    ],
+    "rows_resolved": 73,
+    "scope": "all 73 PASS2_BACKLOG rows: 72 exact current PR heads/titles plus sequence #417 no-object record",
+    "targeted_after": 0,
+    "targeted_before": 67
+  },
   "prior_reviewer_c_publication": {
     "branch": "review/2026-08-22/coverage-genealogy-delta",
-    "head": "a520556ac7f30290a11e1fcba7b6f6a24269153e",
+    "head": "899d5efc37025b84a03f231fd6006a2b7a97e6e3",
     "pr": 712
   },
   "publication_status": {
@@ -91,6 +111,6 @@
   },
   "review_mode": "breadth_and_genealogy_additive_not_final_adjudication",
   "rh_status": "UNPROVED",
-  "schema": "riemann.coverage_genealogy_delta.freeze.v3",
+  "schema": "riemann.coverage_genealogy_delta.freeze.v4",
   "scientific_cutoff_utc": "2026-08-11T08:20:51Z"
 }

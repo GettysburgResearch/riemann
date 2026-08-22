@@ -1,14 +1,47 @@
-$ python3 validate_packet.py
+validate_packet.py
 {
   "census_rows": 341,
   "cross_review_candidates": 22,
   "errors": [],
   "post_cutoff_rows": 333,
   "status": "PASS",
-  "unresolved_heads": 73,
+  "unresolved_heads": 1,
   "warnings": []
 }
-$ python3 light_fraction_fixtures.py
+
+validate_pass1.py
+{
+  "census_rows": 341,
+  "final_packet_may_have_resolved_these_rows": true,
+  "heads_recovered": 100,
+  "heavy_campaigns_rerun": false,
+  "issues_classified": 171,
+  "no_remote_pr_objects": [
+    417
+  ],
+  "remaining_targeted_at_pass1": 67,
+  "rh_proved": false,
+  "status": "PASS_REVIEWER_C_PASS1"
+}
+
+validate_final.py
+{
+  "census_rows": 341,
+  "errors": [],
+  "exact_heads_recovered": 72,
+  "heavy_campaigns_rerun": false,
+  "no_remote_pr_objects": [
+    417
+  ],
+  "pass_two_rows": 73,
+  "remaining_blank_heads": 1,
+  "remaining_malformed_heads": 0,
+  "remaining_targeted": 0,
+  "rh_proved": false,
+  "status": "PASS_REVIEWER_C_FINAL"
+}
+
+light_fraction_fixtures.py
 {
   "checks": {
     "five_three_roots": "[Fraction(1, 1), Fraction(2, 1)]",
@@ -18,7 +51,8 @@ $ python3 light_fraction_fixtures.py
   "sha_repair_fixture": "e928fd615d753882706bb88c51b717bd8d4a86ba",
   "status": "PASS"
 }
-$ python3 cross_review_followup_fixtures.py
+
+cross_review_followup_fixtures.py
 {
   "candidate_groups": 22,
   "checks": 696,
@@ -26,18 +60,4 @@ $ python3 cross_review_followup_fixtures.py
   "rh_proved": false,
   "status": "PASS",
   "verdict": "PASS_REVIEWER_C_CROSS_REVIEW_FOLLOWUP_FIXTURES"
-}
-$ python3 validate_pass1.py
-{
-  "census_rows": 341,
-  "heads_recovered": 100,
-  "heavy_campaigns_rerun": false,
-  "issues_classified": 171,
-  "no_remote_pr_objects": [
-    417
-  ],
-  "remaining_blank_heads": 72,
-  "remaining_targeted": 67,
-  "rh_proved": false,
-  "status": "PASS_REVIEWER_C_PASS1"
 }

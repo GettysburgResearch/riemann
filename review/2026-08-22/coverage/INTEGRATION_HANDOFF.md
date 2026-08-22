@@ -1,5 +1,15 @@
 # Integration handoff to Reviewer D
 
+## Final controlling instruction
+
+This document contains historical pass-one publication instructions. For the
+completed packet, the **final controlling base** is PR #712 head
+`899d5efc37025b84a03f231fd6006a2b7a97e6e3`, and the final incremental patch
+must be applied only there. `PASS2_FINAL_REVIEW.tsv`,
+`FINAL_HEAD_RECONCILIATION.tsv`, `FINAL_REPORT.md`, and
+`replay/validate_final.py` control over earlier intermediate counts.
+
+
 ## Frozen inputs
 
 - Main: `677203992eb0168920365ee45ae9db76bfa97dcf`
@@ -36,8 +46,7 @@ This packet is additive. It does not replace A/B claim-level review and does not
 The original Reviewer C packet was subsequently published by a separate writer
 as draft PR #712 on branch
 `review/2026-08-22/coverage-genealogy-delta`, exact head
-`a520556ac7f30290a11e1fcba7b6f6a24269153e`. Its remote `SHA256SUMS` is
-was read back before pass-one generation. The incremental patch must be applied only to that exact head.
+`a520556ac7f30290a11e1fcba7b6f6a24269153e`. Its remote `SHA256SUMS` was read back before pass-one generation. The incremental patch must be applied only to that exact head.
 
 This pass-one update was **not pushed**, in accordance with the user's instruction. The accompanying patch is incremental against PR #712 head
 `a520556ac7f30290a11e1fcba7b6f6a24269153e`; the ZIP contains the complete
@@ -106,3 +115,25 @@ New consumption order:
 
 Pass one reduces targeted rows from 149 to 67 and blank heads from
 154 to 72. No heavy campaign was rerun. Do not merge and do not claim RH.
+
+
+## Reviewer C final pass
+
+The final incremental packet applies to PR #712 at exact head
+`899d5efc37025b84a03f231fd6006a2b7a97e6e3`. It resolves all 73 rows in the
+former `PASS2_BACKLOG.tsv`; 72 actual PR heads/titles are pinned and #417 is an
+explicit no-object sequence gap. `PASS2_FINAL_REVIEW.tsv`,
+`FINAL_HEAD_RECONCILIATION.tsv`, `FINAL_REPORT.md` and
+`FINAL_CLOSURE_MAP.md` are normative.
+
+Run:
+
+```bash
+python3 review/2026-08-22/coverage/replay/validate_packet.py
+python3 review/2026-08-22/coverage/replay/light_fraction_fixtures.py
+python3 review/2026-08-22/coverage/replay/cross_review_followup_fixtures.py
+python3 review/2026-08-22/coverage/replay/validate_pass1.py
+python3 review/2026-08-22/coverage/replay/validate_final.py
+```
+
+Do not merge this review PR as a proof claim. RH remains unproved.

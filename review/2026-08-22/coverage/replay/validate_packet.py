@@ -19,7 +19,9 @@ REQUIRED = [
     'PROVENANCE_DEFECTS.tsv','MISSING_COVERAGE.md','CANONICAL_SALVAGE.md','INTEGRATION_HANDOFF.md',
     'CROSS_REVIEW_FOLLOWUP.tsv','CROSS_REVIEW_FOLLOWUP.md',
     'PASS1_REPORT.md','PASS1_TARGETED_REVIEW.tsv','HEAD_RECONCILIATION.tsv',
-    'ISSUE_CENSUS.tsv','ISSUE_GENEALOGY.md','PASS2_BACKLOG.tsv'
+    'ISSUE_CENSUS.tsv','ISSUE_GENEALOGY.md','PASS2_BACKLOG.tsv',
+    'PASS2_FINAL_REVIEW.tsv','FINAL_HEAD_RECONCILIATION.tsv','FINAL_REPORT.md','FINAL_CLOSURE_MAP.md',
+    'FINAL_PUBLICATION_INSTRUCTIONS.md'
 ]
 PR_HEADER = ['pr','exact_head_sha','title','family','creation_or_update_scope','reviewer_a_coverage','reviewer_b_coverage','controlling_later_pr','controlling_review','strongest_surviving_result','first_broken_arrow','current_open_gate','lifecycle_recommendation','delta_action','notes']
 HIST_HEADER = ['proposal_pr','proposal_head','claimed_route','first_broken_arrow','controlling_evidence','surviving_claims','current_descendant','final_classification','lifecycle_recommendation']
@@ -53,9 +55,10 @@ if 708 in nums or 709 in nums: errors.append('review PR appeared as research cen
 for row in census:
     if row['delta_action'] not in VERDICTS: errors.append(f"PR {row['pr']} invalid delta_action {row['delta_action']}")
     sha=row['exact_head_sha']
-    if not re.fullmatch(r'[0-9a-f]{40}',sha or '') or sha.endswith('0'*32):
-        if row['delta_action']!='TARGETED_REVIEW_STILL_REQUIRED' and row['delta_action'] not in {'ADMINISTRATIVE_TEST','NO_NEW_MATHEMATICS'}:
-            errors.append(f"PR {row['pr']} unresolved head without fail-closed action")
+    if row['pr']=='417':
+        if sha or row['delta_action']!='NO_NEW_MATHEMATICS': errors.append('PR 417 sequence-gap record malformed')
+    elif not re.fullmatch(r'[0-9a-f]{40}',sha or '') or sha.endswith('0'*32):
+        errors.append(f"PR {row['pr']} unresolved or malformed exact head in final packet")
 with (HERE/'HISTORICAL_PROPOSALS.tsv').open(newline='',encoding='utf-8') as f:
     r=csv.DictReader(f,delimiter='\t')
     if r.fieldnames!=HIST_HEADER: errors.append('HISTORICAL_PROPOSALS header mismatch')
@@ -113,10 +116,20 @@ if any(x['theorem_reachability']!='EXCLUDE_UNLESS_EXACT_PR/CLAIM_OBJECT_EXISTS' 
 with (HERE/'PASS2_BACKLOG.tsv').open(newline='',encoding='utf-8') as f:
     pass2=list(csv.DictReader(f,delimiter='\t'))
 targeted={x['pr'] for x in census if x['delta_action']=='TARGETED_REVIEW_STILL_REQUIRED'}
-if not targeted.issubset({x['pr'] for x in pass2}):
-    errors.append('pass-two backlog does not contain every remaining targeted PR')
-if len(targeted)!=67:
-    errors.append(f'pass-one remaining targeted count={len(targeted)} expected 67')
+if targeted:
+    errors.append(f'final packet retains targeted rows: {sorted(targeted)}')
+with (HERE/'PASS2_FINAL_REVIEW.tsv').open(newline='',encoding='utf-8') as f:
+    final2=list(csv.DictReader(f,delimiter='\t'))
+with (HERE/'FINAL_HEAD_RECONCILIATION.tsv').open(newline='',encoding='utf-8') as f:
+    finalh=list(csv.DictReader(f,delimiter='\t'))
+if len(pass2)!=73 or len(final2)!=73 or len(finalh)!=73:
+    errors.append('pass-two/final-resolution row count mismatch')
+if {x['pr'] for x in pass2}!={x['pr'] for x in final2} or {x['pr'] for x in pass2}!={x['pr'] for x in finalh}:
+    errors.append('pass-two/final-resolution key mismatch')
+if [x['pr'] for x in finalh if x['status']=='NO_REMOTE_PR_OBJECT']!=['417']:
+    errors.append('final no-remote-object set mismatch')
+if sum(x['status']=='EXACT_CURRENT_HEAD_RECOVERED' for x in finalh)!=72:
+    errors.append('final recovered-head count mismatch')
 
 # Provenance file must retain malformed-SHA evidence rather than normalize it away.
 prov=(HERE/'PROVENANCE_DEFECTS.tsv').read_text(encoding='utf-8')

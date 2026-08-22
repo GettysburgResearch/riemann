@@ -4,7 +4,7 @@
 
 This is Reviewer C's additive breadth/genealogy packet. It does not adjudicate disagreements between Reviewer A and Reviewer B. The frozen inputs are main `677203992eb0168920365ee45ae9db76bfa97dcf`, Reviewer B `eb1987502ef9043e782ac6ab1e19c47be9daef93`, and Reviewer A `55fe0b6f23d9163e2b602608da84194ba243d7c4`. PRs #708 and #709 are review inputs only. The research census ends at PR #707. **RH remains unproved.**
 
-The machine census contains **341 rows**: every PR #375–#707, plus the older unintegrated dependencies/review records listed in `FREEZE.json`. Every row has a disposition. Exact-head provenance remains unresolved for **156 rows**; each such research row fails closed to `TARGETED_REVIEW_STILL_REQUIRED` rather than receiving a guessed SHA.
+The machine census contains **341 rows**: every PR #375–#707, plus the older unintegrated dependencies/review records listed in `FREEZE.json`. Every row has a disposition. The original breadth packet left exact-head provenance unresolved for 156 rows. Passes one and two now pin every actual PR object; only sequence #417 remains blank because GitHub has no PR object at that number.
 
 ## What A/B did not make explicit
 
@@ -112,3 +112,12 @@ Issue-only proposals are historical methodology, not theorem nodes. The remainin
 pass-two queue is exact in `PASS2_BACKLOG.tsv`.
 
 RH remains unproved.
+
+
+## Final pass-two completion
+
+`PASS2_FINAL_REVIEW.tsv` resolves every row of the former pass-two queue. The
+final `PR_CENSUS.tsv` contains no `TARGETED_REVIEW_STILL_REQUIRED` row and no
+malformed or placeholder SHA. Every actual PR has an exact current head; #417 is
+the sole explicit no-object sequence gap. The canonical surviving gates are in
+`FINAL_CLOSURE_MAP.md`. No heavy campaign was rerun and RH remains unproved.
