@@ -52,6 +52,7 @@ has no `z^-1` term at infinity because `m>=2`. Therefore
 \sum_{j=1}^m b_j=0.
 }
 \tag{L-105204.3}
+\]
 
 Consequently
 
@@ -60,6 +61,7 @@ Consequently
 \sum_j\rho_j(C)=\sum_j\rho_j(0)
 }
 \tag{L-105204.4}
+\]
 
 for every antiderivative constant. The constant can change the second residue
 moment, but cannot create the negative first-moment carrier used by reverse
@@ -82,6 +84,7 @@ The unique least-squares optimal antiderivative constant is
 C_*=-\frac{D_1}{D_0}.
 }
 \tag{L-105204.5}
+\]
 
 Indeed,
 
@@ -93,6 +96,7 @@ Indeed,
 +D_0(C-C_*)^2.
 }
 \tag{L-105204.6}
+\]
 
 Thus the entire constant dependence of the second residue moment is one
 rank-one orthogonal mode.
@@ -117,6 +121,7 @@ Then
 \mathfrak C(C)\le\mathfrak C(C_*),
 }
 \tag{L-105204.7}
+\]
 
 and exactly
 
@@ -129,6 +134,7 @@ and exactly
 \frac{mD_0}{A^2}(C-C_*)^2.
 }
 \tag{L-105204.8}
+\]
 
 This separates the residue-coherence problem into:
 
@@ -159,6 +165,7 @@ by pair cancellation. Therefore
 \[
 \boxed{C_*=0.}
 \tag{L-105204.9}
+\]
 
 The parity-normalized odd antiderivative already minimizes the second residue
 moment among all antiderivatives of `q`.
@@ -189,10 +196,10 @@ gives
 D_0
 =
 -\sum_{p''(d)=0}
-\frac1{p'(d)p'''(d)},
+\frac1{p'(d)p'''(d)}.
 }
-\tag{L-105204.10
-}
+\tag{L-105204.10}
+\]
 
 and
 
@@ -203,8 +210,8 @@ and
 -\sum_{p''(d)=0}
 \frac{p(d)}{p'(d)p'''(d)}.
 }
-\tag{L-105204.11
-}
+\tag{L-105204.11}
+\]
 
 There is no residue at infinity in these degree ranges. Thus the scalar
 projection coefficient `C_*` itself is a ratio of two explicit next-level
