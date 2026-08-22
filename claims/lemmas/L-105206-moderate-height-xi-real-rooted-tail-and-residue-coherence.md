@@ -1,4 +1,4 @@
-# L-105206 — Xi derivative-tail real-rooting and residue coherence at height `T^(3/2+o(1))`
+# L-105206 — Xi derivative-tail geometry with a `T^(3/2+o(1))` entry order
 
 Claim ID: `L-105206`  
 Status: **PROPOSED UNCONDITIONAL ANALYTIC THEOREM — INDEPENDENT REVIEW REQUIRED**  
@@ -48,7 +48,7 @@ for sufficiently large `T` and a suitable `K=K(H)`.
 
 ## 2. Rouché proof
 
-`L-105205` gives the relative approximation
+`L-105205` gives the relative approximations
 
 \[
 A_m(\pm z)
@@ -56,18 +56,19 @@ A_m(\pm z)
 \tag{L-105206.5}
 \]
 
-uniformly on a slightly larger box.  Therefore
+uniformly on a slightly larger box. Therefore
 
 \[
 \Xi^{(m)}(z)
 =i^mM_me^{-s_m^2z^2/2}
 \left[
- e^{iw_mz}+(-1)^me^{-iw_mz}
-ight](1+o(1))
+ e^{iw_mz}(1+o(1))
+ +(-1)^me^{-iw_mz}(1+o(1))
+ight],
 \tag{L-105206.6}
 \]
 
-in the usual relative two-term sense.
+where both relative errors are uniform.
 
 The Gaussian factor is nonzero. Around each sine/cosine model zero take a disk
 of radius `delta_M/w_m`, where `delta_M->0` but the relative saddle error is
@@ -80,7 +81,7 @@ Counting the model cells gives (L-105206.3).
 ## 3. Critical residues in a buffered box
 
 Fix `0<C_0<C_1=1` and apply the preceding proof with outer width `T_M` and
-inner width `C_0T_M`.  For `m>=M` and every real zero `c` of `Xi^(m+1)` in the
+inner width `C_0T_M`. For `m>=M` and every real zero `c` of `Xi^(m+1)` in the
 inner box, put
 
 \[
@@ -114,10 +115,9 @@ therefore gives
 
 \[
 \boxed{
-\rho_{m,c}=-w_m^{-2}(1+o(1))
+\rho_{m,c}=-w_m^{-2}(1+o(1)).
 }
 \tag{L-105206.10}
-\]
 
 uniformly over every critical point in the buffered box. In particular every
 such residue is negative.
@@ -138,7 +138,7 @@ Then
 
 \[
 \boxed{
-\mathfrak C_{m,M}=1-o(1)
+\mathfrak C_{m,M}=1-o(1).
 }
 \tag{L-105206.11}
 
@@ -152,7 +152,7 @@ A_{m,M}
 B_{m,M}
 ={2C_0T_M\over\pi w_m^3}(1+o(1)).
 }
-\tag{L-105206.12
+\tag{L-105206.12}
 
 Thus the residue-coherence premise `RCMV104530` is proved with asymptotically
 optimal margin on a box whose height is larger by a factor
@@ -171,7 +171,7 @@ order
 
 \[
 \boxed{r(T)=T^{3/2+o(1)},}
-\tag{L-105206.13
+\tag{L-105206.13}
 
 rather than `T^(2+o(1))`. The still-open budget now contains only the first
 `T^(3/2+o(1))` derivative levels.
