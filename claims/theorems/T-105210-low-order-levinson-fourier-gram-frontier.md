@@ -45,7 +45,6 @@ G_{k,\lambda}
 \arg {G_{0,\lambda}\over G_{r,\lambda}}.
 }
 \tag{T-105210.2}
-\]
 
 The top-boundary logarithmic derivatives telescope in the same way.  Thus the
 actual Levinson boundary difficulty is one continued endpoint quotient, not a
@@ -187,12 +186,37 @@ When the mean residue is negative,
 
 \[
 RM_2(1-\mathfrak C)
-=\sum_{i<j}(\rho_i-\rho_j)^2.
-\]
+=\sum_{i<j}(\rho_i-\rho_j)^2,
+\qquad
+E\le R(1-\mathfrak C).
+\tag{T-105210.10}
 
-Thus the formerly opaque residue-coherence loss is one explicit positive
-same-height near-collision Dirichlet energy.  `ESDE105212` asks for this energy
-to be `o(RM2)`; it remains open.
+The weaker target `ESDC105212` makes the Gram energy `o(RM2)` and yields only
+`mathfrak C=1-o(1)`.  That does **not** exclude a last wrong extremum when `R`
+grows.
+
+The conclusion-facing extinction target is the strict subunit inequality
+
+\[
+\boxed{
+\Lambda_{2a}(0)
+\left[
+R\operatorname{tr}K^{(b)}
+-\mathbf1^TK^{(b)}\mathbf1
+\right]
+<M_2.
+}
+\tag{ESDE105212}
+
+Together with the correct negative mean, it implies
+
+\[
+R(1-\mathfrak C)<1,
+\qquad E=0.
+\tag{T-105210.11}
+
+Thus the positive-residue alternative is reduced to one explicit
+curvature-normalized near-collision energy at the exact integrality scale.
 
 ## 6. The actual remaining theorems
 
@@ -204,23 +228,21 @@ line-averaged Fourier-compound positivity to a bound on the continued argument
 of V_(lambda_r) strong enough to exclude an inward unit.
 ```
 
-Define `ESDE105212` as the same-height exterior-square Dirichlet estimate which
-forces residue coherence and removes the positive-residue alternative.
-
 The exact last-defect theorem of `L-104518--L-104521` then gives
 
 \[
 \boxed{
+M_1>0
+\quad\wedge\quad
 \mathrm{ESDE105212}
 \quad\wedge\quad
 \mathrm{HLOC105210}
 \Longrightarrow\mathrm{RH}.
 }
-\tag{T-105210.10}
+\tag{T-105210.12}
 
-This implication also requires the mean residue to have the correct negative
-orientation at the last level, as stated in `L-105212`.  Neither open theorem
-is claimed proved globally.
+Neither open theorem nor the required fixed-level mean orientation is claimed
+proved globally.
 
 ## 7. Exact boundary
 
@@ -232,7 +254,7 @@ exact low-order zeta Levinson auxiliary            PROVED EXACT
 all-order Xi exterior-square Fourier Gram          PROVED UNCONDITIONALLY
 mean low-order Hermite-Biehler orientation          PROVED UNCONDITIONALLY
 critical residues -> positive Gram Dirichlet energy PROVED UNCONDITIONALLY
-ESDE105212 same-height residue dispersion           OPEN / RH-BEARING
+ESDE105212 subunit residue extinction               OPEN / RH-BEARING
 HLOC105210 fixed-height argument localization       OPEN / RH-BEARING
 Riemann Hypothesis                                  UNPROVED
 ```
