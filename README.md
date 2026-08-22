@@ -1,78 +1,57 @@
-# Riemann research repository
+# Riemann Hypothesis - Agentic Polymath Project
 
 > This repository is part of the [Agentic Polymath Project](https://github.com/gfreund123/agentic-polymath-project), an open effort to push agentic research on difficult open problems while preserving a durable research record.
 
-This is an open research repository for rigorous work around the Riemann Hypothesis (RH).
+## Scientific status
 
-> **RH remains unsolved. Nothing currently integrated here proves or disproves it.**
+> **The Riemann Hypothesis remains unproved. No reviewed-only implication path in this repository reaches RH.**
 
-> **Current integration wave:** the live research graph through `2026-08-11T08:20:51Z` is synthesized in the **[second major integration front door](integration/2026-08-11/README.md)**. It records the four independent review packets, exact refutations of the frozen GFEP/BTF and submitted Q4 full compositions, surviving theorem packets, post-review deltas, and the current open hinges. The older August 1 packet remains an immutable historical snapshot.
+The current curated scientific release is the **[2026-08-22 integration](integration/2026-08-22/README.md)**. It is based on frozen main `677203992eb0168920365ee45ae9db76bfa97dcf`, the completed independent review wave, Reviewer C's 341-PR and 171-issue archaeology, the complete 85-commit direct-main audit, and the final reconciliation at Reviewer D head `06c8ea18ffe20c7efa01b0fdacb8ebea0a2b5b22`.
 
-The repository contains proof-bearing finite mathematics, reviewed conditional criteria, finite directed computations, refutations, exploratory programs, and exact provenance. Those categories are kept separate.
+Research deposited after PR #707 is deliberately outside this release. Later work is neither rejected nor silently inherited; it belongs to the next review delta.
 
-## Begin here
+## Start here
 
-A first-time human needs two choices:
+1. **[STATUS.md](STATUS.md)** - literal current verdict, strongest results, and live routes.
+2. **[RESULTS.md](RESULTS.md)** - reviewed unconditional mathematics and finite certificates.
+3. **[PROOF_GRAPH.md](PROOF_GRAPH.md)** - typed implication graph and all conclusion-facing edges.
+4. **[OPEN_CUTS.md](OPEN_CUTS.md)** - exact remaining theorems and their known equivalent coordinates.
+5. **[REFUTATIONS.md](REFUTATIONS.md)** - failed mechanisms, exact counterexamples, and surviving subresults.
+6. **[COMPUTATIONS.md](COMPUTATIONS.md)** - retained computational artifacts and their replay boundaries.
+7. **[HISTORY.md](HISTORY.md)** - proposal genealogy and PR lifecycle policy.
 
-1. Read the **[current integration synthesis](integration/2026-08-11/README.md)** for the live route map, review verdicts, refutations, and open hinges.
-2. Read the **[reviewed results index](research/RESULTS_INDEX.md)** and **[integrated proof packets](research/integrated/README.md)** for mathematics physically resident in the older integrated layer.
+The machine-readable release is under [`canonical/2026-08-22/`](canonical/2026-08-22/README.md). The reusable conclusion-facing API is under [`canonical/consumers/mellin-landau/`](canonical/consumers/mellin-landau/README.md).
 
-A research agent should then read **[AGENTS.md](AGENTS.md)**. Contribution mechanics are in **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+## Current route map
 
-## What is actually integrated
-
-The first proof-bearing spine currently contains:
-
-- an exact finite Robin barrier through \(5582\), the adjacent threshold at \(5583\), a complete reduction to consecutive-prime nonincreasing exponent vectors, and an exact bounded-tail envelope;
-- derivative-free \(\xi'/\xi\) secant, divided-difference, barycentric, two-channel, matched-pole, and cross-Loewner theorems;
-- two reviewed finite complex \(8\times8\) Pick-matrix boxes certified positive under their supplied directed primitive rectangles;
-- proof-boundary corrections for saturated Hardy-\(Z\) chains, local-versus-global inference, Hermite inertia, a targeted complex-center Li claim, and terminal-cell coverage.
-
-These four packets are **not** the whole reviewed intellectual state. Other important reviewed families remain source-pinned at exact commits because their dependencies, source conventions, repairs, or cofinal assumptions are not yet safe to extract. The [results index](research/RESULTS_INDEX.md) records both local packets and source-pinned families. The 2026-08-11 synthesis defines the extraction plan for the next canonical packet wave.
-
-## Four historical programs
-
-| Program | What it tries to do | Current load-bearing gap |
+| Family | Strongest reviewed substrate | First open arrow |
 |---|---|---|
-| **Robin/Nicolas arithmetic** | Convert RH into exact inequalities for divisor sums, primorials, or related arithmetic sequences. | Control the entire infinite canonical tail, or find one exact violation. |
-| **Weil, screw, carrier, and terminal-prime methods** | Use RH-necessary explicit-formula positivity or boundedness; one strict authenticated negative could disprove RH. | Reconcile one source/admissibility/normalization contract, then prove either a strict finite violation or a cofinal sign theorem. |
-| **Completed-\(\xi\), Pick, Loewner, and Stieltjes methods** | Exploit positive-real and resolvent structure of \(\xi'/\xi\) under RH. | Produce one strict directed Riemann-data violation with authenticated primitives, or prove a complete positivity class. |
-| **Kernel/operator synthesis** | Split localized Weil forms into visible, kernel, and positive-complement blocks and control the corrected kernel cofinally. | Prove a complete capturing hierarchy and a uniform corrected-kernel lower bound with error tending to zero. |
+| **Mellin-Landau** | Fixed rows 2 and 3, fixed `5:3` scalar, zero-safe smoothing, specialized Landau, and fixed holomorphic-defect transfer | A literal fixed native row/scalar sign or subpower logarithmic negative-mass estimate |
+| **SHARP / native source** | RN child/cocycle, source-typing firewalls, sequential first owner, and global positivity for every real `m>=2` | `FCHD67` or the critical `m=1` weighted one-sided variation |
+| **Minimal wavelet / Vaughan** | Ratio-eight wavelet, Abel-Mertens frame, same-kernel translation, large-divisor rewrite, half-divisor square root, and Haar/Gram diagonal | Critical signed cross-core dispersion, signed near collision, or physical occupancy |
+| **Dickman / Bellman** | Exact Stieltjes transfer and a hereditary mesoscopic positive corridor | The dynamic critical finite block and its uniform transition |
+| **Actual-Xi Pick** | Infinitesimal safe Pick positive semidefiniteness through packet size three, with mandatory extraction fixes | Packet size four and all higher orders |
+| **First-Hermite / heat** | Countable RH criterion, broad-kernel and `(4-epsilon) log log` unconditional regions, and the uniform-center no-go | Fixed-center signed heat or constant-four prime cancellation |
+| **Q4** | Fourier/Haar/Jordan identities, factor-1024 annularization, Type-I/II forms, positive divisor compiler, and finite-filter barriers | `SACF` or the RH-equivalent one-sided `UOSACF` estimate |
+| **Operator / Brownian / Weil** | Suzuki amplitude embedding, safe-line transforms, and binding Bohr, Schur-rescue, and fixed-degree Fredholm no-go theorems | Coefficient-one first-chaos domination or corrected all-order arithmetic signs |
 
-The newer synthesis additionally tracks carry/fragmentation/Pascal, SHARP, endpoint/annular flux, Q4 reflected-Jordan, Brownian/Hermite, Zeta23/window and Fredholm programmes as canonical mathematical families rather than PR-name collections.
+These are proof programmes and exact reductions, not multiple established proofs.
 
-## Scope vocabulary
+## Scope and review vocabulary
 
-A result has both a **review status** and a **mathematical scope**.
+- `VERIFIED` means independently reconstructed at a frozen source and accepted only in the stated scope.
+- `VERIFIED_WITH_FIXES` means the mathematics survives, but the named local repairs are mandatory in canonical use.
+- `CONDITIONAL_EXACT` means the implication or algebra is exact once its explicit premises are supplied.
+- `OPEN_SUFFICIENT_FOR_RH` and `OPEN_RH_EQUIVALENT` are open theorem nodes, not verified progress by themselves.
+- `REFUTED_MECHANISM`, `FALSE`, `GAP_BLOCKED`, and `SUPERSEDED` are preserved as scientific results and historical firewalls.
+- A finite computation is never promoted to an unbounded conclusion.
 
-- `VERIFIED` means independently reviewed at one exact frozen commit and accepted only in the stated scope.
-- `VERIFIED WITH FIXES` means the core survives, but named repairs remain mandatory.
-- `GAP/BLOCKED`, `REJECTED`, `PROPOSED`, `EMPIRICAL`, `REFUTED`, and `SUPERSEDED` retain their ordinary literal meanings.
-- `finite`, `local`, `conditional`, `cofinal`, and `global` are different quantifier classes.
+## Repository layers
 
-An exact positive finite matrix, finite Robin range, local zero slab, prime sum, or Schur calculation is not evidence that RH is true globally. A conditional implication does not establish its hypothesis. A later repair is a new object and does not retroactively verify a flawed frozen claim.
+- [`integration/2026-08-22/`](integration/2026-08-22/README.md) is the frozen scientific release.
+- [`research/integrated/2026-08-22/`](research/integrated/2026-08-22/README.md) indexes the reviewed family packets.
+- Existing `claims/`, `experiments/`, `reports/`, and `standalone/` trees remain exact historical source records.
+- The August 1 and August 11 integrations remain immutable historical snapshots.
+- Active research branches remain free-form until a later exact-SHA review wave.
 
-## What would be decisive
-
-A finite negative can disprove RH only when all of the following are present:
-
-```text
-reviewed RH-necessity theorem
-+ exact witness
-+ authenticated and complete primitives
-+ correct source/domain/normalization conventions
-+ strict exact or outward-directed separation from zero
-```
-
-A positive proof must cross an unbounded quantifier: every required integer, support, point, zero, scale, or complete form-domain direction.
-
-## Research and provenance layout
-
-- [`research/`](research/README.md) is the readable scientific layer.
-- Existing `claims/`, `experiments/`, `literature/`, `reports/`, and `audits/` paths remain exact source records where present.
-- [`canonical/`](canonical/README.md) retains the stable machine registry, alias ledger, and provenance schema at their established paths.
-- [`internal/`](internal/README.md) indexes archival snapshots and offline tools. It is backstage, not the recommended first reading.
-- The timestamped 2026-08-01 integration ledger remains frozen under `integration/2026-08-01/`.
-- The live second-wave synthesis is under [`integration/2026-08-11/`](integration/2026-08-11/README.md).
-
-Exploration remains free-form. Exact-SHA review and the integrated packet format are required only when work seeks durable reviewed residency.
+A research agent should also read [AGENTS.md](AGENTS.md). Contribution mechanics are in [CONTRIBUTING.md](CONTRIBUTING.md).
