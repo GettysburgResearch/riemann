@@ -3,6 +3,7 @@
 Claim ID: `L-105211`  
 Status: **PROVED EXACT FACTORIZATION AND SAFE-LINE CARRIER AUDIT**  
 Created: 2026-08-23  
+Audited: 2026-08-23  
 Depends on: `L-105206`, `L-105209`  
 RH status: **not assumed**
 
@@ -122,28 +123,36 @@ the positive Xi Fourier saddle gives
 \tag{L-105211.8}
 \]
 
-On every fixed-width strip `1/2<=sigma<=A`,
+On every fixed-width strip `1/2<=sigma<=A`, the correct complex Stirling
+expansion is
 
 \[
+\boxed{
 h(\sigma+iT)
 ={1\over2}\log{T\over2\pi}
-+O_A(1/T)+iO_A(1/T),
++{i\pi\over4}
++O_A(1/T).
+}
 \tag{L-105211.9}
 \]
 
-and hence
+The constant imaginary carrier was omitted in an earlier draft.  Since
+`lambda_r=O(1/log T)`, it contributes only at the next order after inversion.
+More precisely,
 
 \[
 \boxed{
 \alpha_{\lambda_r}(\sigma+iT)
 ={c_T\over\log T}
-+O_A\!\left({1\over\log^2T}ight),
++O_A\!\left({1\over\log^2T}\right),
 }
 \tag{L-105211.10}
 \]
 
-where `c_T` stays in a fixed compact subinterval of `(0,infinity)`.  Thus the
-native coefficient has exactly the classical Levinson scale.
+where `c_T` is real, positive, and stays in a fixed compact subinterval of
+`(0,infinity)`; the imaginary part of `alpha_(lambda_r)` is
+`O_A(1/log^2 T)`.  Thus the native coefficient has exactly the classical
+Levinson scale.
 
 No parameter is chosen after locating a hypothetical zero; `lambda_r` is the
 moment-ratio parameter which cancels the reflected high-frequency carrier in
