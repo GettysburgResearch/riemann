@@ -1,0 +1,26 @@
+{
+  "audited_review": {
+    "aliases_blob_sha": "e3fef5beb711f70a095177845e9d239c4762092c",
+    "claims_blob_sha": "59642121df866b8dc726be65c626ebf464f29890",
+    "computations_blob_sha": "d5bf3efdff4a343aee726d9528f1af35e17fbd76",
+    "head_sha": "55fe0b6f23d9163e2b602608da84194ba243d7c4",
+    "pr": 709,
+    "route_edges_blob_sha": "7c6b1c30426dd7c19e6a349b3063d29bc0dc55cf"
+  },
+  "comparison_only": {
+    "head_sha": "eb1987502ef9043e782ac6ab1e19c47be9daef93",
+    "pr": 708
+  },
+  "heavy_computations_rerun": false,
+  "repository": "gfreund123/riemann",
+  "review_base_sha": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "review_branch": "review/2026-08-22/reviewer-b-cross-review-a",
+  "rules": [
+    "Preserve Reviewer A original verdict beside cross-verdict.",
+    "Do not modify PR #708 or #709.",
+    "Do not infer scientific validity from structural PASS.",
+    "Do not enumerate full repository; flag exact omission candidates for Reviewer C."
+  ],
+  "schema": "riemann.cross-review.reviewer-b-of-a.v1",
+  "scientific_status": "RH remains unproved"
+}
