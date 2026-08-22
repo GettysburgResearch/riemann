@@ -7,7 +7,7 @@
   "updated": "2026-08-23",
   "dedicated_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
   "dedicated_pr": 724,
-  "low_order_checkpoint_before_lock": "a0b54f04713262edd7c2f2011495b7cf52daf005",
+  "low_order_checkpoint_before_lock": "deba9571950ca30c9c769155ec9d98a42233a084",
   "stacked_base": {
     "pr": 723,
     "branch": "codex/105100-residue-second-moment",
@@ -42,17 +42,21 @@
     "L-105208": "exact low-order mean Hermite-Biehler orientation and phase sum rule",
     "L-105209": "proposed complete safe-ray one-sided terminal saddle",
     "L-105211": "exact completed-zeta Levinson auxiliary factorization",
-    "T-105210": "fixed-height localization frontier"
+    "L-105212": "critical-residue coherence and extinction as a curvature-normalized exterior-square Gram energy",
+    "T-105210": "fixed-height localization plus strict subunit residue-extinction frontier"
   },
   "replays": {
     "X-105200": "PASS_X_105200_NATURAL_SCALE_RESIDUE_COHERENCE",
-    "X-105210": "PASS_X_105210_LOW_ORDER_LEVINSON_GRAM"
+    "X-105210": "PASS_X_105210_LOW_ORDER_LEVINSON_GRAM",
+    "X-105212": "PASS_X_105212_CRITICAL_RESIDUE_GRAM"
   },
+  "exact_low_order_check_count": 285,
   "heavy_computation_rerun": false,
   "analytic_claims_machine_proved": false,
   "crdb105200_independent_producer": false,
   "safe_ray_l105209_independently_reviewed": false,
   "hloc105210_proved": false,
+  "esde105212_proved": false,
   "last_positive_residue_excluded": false,
   "rh_established": false
 }
