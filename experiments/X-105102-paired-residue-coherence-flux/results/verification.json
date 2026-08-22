@@ -1,0 +1,569 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "checks": {
+    "coherence_threshold_firewall": {
+      "coherence": "2/27",
+      "first_moment": "1/4",
+      "polynomial": "x^4-2x^2+2",
+      "positive_transfer_available": false,
+      "real_critical_count": 3,
+      "residues": [
+        "1/8",
+        "-1/2",
+        "1/8"
+      ],
+      "second_moment": "9/32"
+    },
+    "first_schwarz_and_parity": {
+      "even": {
+        "P(z)": "46/37+14/111i",
+        "P_is_odd": true,
+        "schwarz": true
+      },
+      "generic_real": {
+        "P(z)": "433/1230+331/1845i",
+        "P_is_odd": false,
+        "schwarz": true
+      },
+      "odd": {
+        "P(z)": "727/780+197/2340i",
+        "P_is_odd": true,
+        "schwarz": true
+      }
+    },
+    "integrated_paired_edge_formula": {
+      "both_first_sign_mutations_rejected": true,
+      "first_combined_a_over_pi_plus_b": [
+        "0",
+        "1/2"
+      ],
+      "first_residue": "1/2",
+      "first_right_integral": "1+pi/4",
+      "first_top_imaginary_integral": "1-pi/4",
+      "fixture": "p(z)=z^2+1, T=eta=1",
+      "frozen_second_sign_oracle_reused": true,
+      "second_residue": "1/4"
+    },
+    "nonreal_carrier_firewall": {
+      "common_root_candidate_residual": "3",
+      "corrected_first_moment": "0",
+      "critical_roots_simple_and_not_parent_roots": true,
+      "critical_y_discriminant": "-11",
+      "derivative_minimum": "11/20",
+      "derivative_square_completion": "5(y-3/10)^2+11/20",
+      "derived_vertex": "3/10",
+      "dropped_correction_false_carrier": "2/25",
+      "firewall_constants_derived_from_coefficients": true,
+      "firewall_verified": true,
+      "global_first_charge": "-2/25",
+      "nonreal_first_correction": "-2/25",
+      "polynomial": "x^5-x^3+x",
+      "real_critical_count": 0
+    },
+    "paired_local_ledgers": [
+      {
+        "boundary_reconstructed_coherence": null,
+        "certified_transfer_constant": null,
+        "coherence": null,
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "1/2",
+          "boundary_first_charge": "0",
+          "eta": "1",
+          "exterior_first_charge": "-2/3",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "0",
+          "first_split_verified": true,
+          "global_first_charge": "-2/3",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [],
+          "name": "real_cubic_narrow_window",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 0,
+          "root_v2_ledger": "-2/3"
+        },
+        "formal_coherence_excess": null,
+        "l104522_common_zero_free": true,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": true,
+        "name": "real_cubic_narrow_window",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "1/2",
+          "adjacent_derivative_debt": "-1/18",
+          "boundary_residue_sum": "-1/18",
+          "degree": 3,
+          "eta": "1",
+          "exterior_residue_sum": "5/18",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "2/9",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [],
+          "inside_second_critical_roots": [
+            "0"
+          ],
+          "local_split_verified": true,
+          "name": "real_cubic_narrow_window",
+          "nonreal_correction": "0",
+          "real_m2": "0",
+          "root_v2_v4_ledger": "2/9"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": "4/5",
+        "certified_transfer_constant": "3/5",
+        "coherence": "4/5",
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "3/2",
+          "boundary_first_charge": "-2/3",
+          "eta": "1",
+          "exterior_first_charge": "0",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "2/3",
+          "first_split_verified": true,
+          "global_first_charge": "-2/3",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [
+            "-1",
+            "1"
+          ],
+          "name": "real_cubic_full_window",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 2,
+          "root_v2_ledger": "-2/3"
+        },
+        "formal_coherence_excess": "3/5",
+        "l104522_common_zero_free": true,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": true,
+        "name": "real_cubic_full_window",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "3/2",
+          "adjacent_derivative_debt": "-1/18",
+          "boundary_residue_sum": "2/9",
+          "degree": 3,
+          "eta": "1",
+          "exterior_residue_sum": "0",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "2/9",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [
+            "-1",
+            "1"
+          ],
+          "inside_second_critical_roots": [
+            "0"
+          ],
+          "local_split_verified": true,
+          "name": "real_cubic_full_window",
+          "nonreal_correction": "0",
+          "real_m2": "5/18",
+          "root_v2_v4_ledger": "2/9"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": "1",
+        "certified_transfer_constant": "1",
+        "coherence": "1",
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "3",
+          "boundary_first_charge": "-49/90",
+          "eta": "1",
+          "exterior_first_charge": "-637/180",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "49/90",
+          "first_split_verified": true,
+          "global_first_charge": "-49/12",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [
+            "1"
+          ],
+          "name": "asymmetric_quartic_partial_window",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 1,
+          "root_v2_ledger": "-49/12"
+        },
+        "formal_coherence_excess": "1",
+        "l104522_common_zero_free": true,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": true,
+        "name": "asymmetric_quartic_partial_window",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "3",
+          "adjacent_derivative_debt": "-20987563/3110400",
+          "boundary_residue_sum": "-20065579/3110400",
+          "degree": 4,
+          "eta": "1",
+          "exterior_residue_sum": "8138393/1036800",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "5437/3888",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [
+            "1"
+          ],
+          "inside_second_critical_roots": [
+            "-2",
+            "8/3"
+          ],
+          "local_split_verified": true,
+          "name": "asymmetric_quartic_partial_window",
+          "nonreal_correction": "0",
+          "real_m2": "2401/8100",
+          "root_v2_v4_ledger": "5437/3888"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": null,
+        "certified_transfer_constant": null,
+        "coherence": null,
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "1",
+          "boundary_first_charge": "0",
+          "eta": "1/2",
+          "exterior_first_charge": "2/3",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "0",
+          "first_split_verified": true,
+          "global_first_charge": "2/3",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [],
+          "name": "complex_cubic_narrow_strip",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 0,
+          "root_v2_ledger": "2/3"
+        },
+        "formal_coherence_excess": null,
+        "l104522_common_zero_free": true,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": true,
+        "name": "complex_cubic_narrow_strip",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "1",
+          "adjacent_derivative_debt": "1/18",
+          "boundary_residue_sum": "1/18",
+          "degree": 3,
+          "eta": "1/2",
+          "exterior_residue_sum": "1/6",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "2/9",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [],
+          "inside_second_critical_roots": [
+            "0"
+          ],
+          "local_split_verified": true,
+          "name": "complex_cubic_narrow_strip",
+          "nonreal_correction": "0",
+          "real_m2": "0",
+          "root_v2_v4_ledger": "2/9"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": null,
+        "certified_transfer_constant": null,
+        "coherence": null,
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "1",
+          "boundary_first_charge": "2/3",
+          "eta": "2",
+          "exterior_first_charge": "0",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "0",
+          "first_split_verified": true,
+          "global_first_charge": "2/3",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [
+            "0-1i",
+            "0+1i"
+          ],
+          "name": "complex_cubic_wide_strip",
+          "nonreal_first_correction": "2/3",
+          "real_critical_count": 0,
+          "root_v2_ledger": "2/3"
+        },
+        "formal_coherence_excess": null,
+        "l104522_common_zero_free": true,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": true,
+        "name": "complex_cubic_wide_strip",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "1",
+          "adjacent_derivative_debt": "1/18",
+          "boundary_residue_sum": "2/9",
+          "degree": 3,
+          "eta": "2",
+          "exterior_residue_sum": "0",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "2/9",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [
+            "0-1i",
+            "0+1i"
+          ],
+          "inside_second_critical_roots": [
+            "0"
+          ],
+          "local_split_verified": true,
+          "name": "complex_cubic_wide_strip",
+          "nonreal_correction": "1/6",
+          "real_m2": "0",
+          "root_v2_v4_ledger": "2/9"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": "0",
+        "certified_transfer_constant": null,
+        "coherence": "0",
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "1",
+          "boundary_first_charge": "1/2",
+          "eta": "1",
+          "exterior_first_charge": "0",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "-1/2",
+          "first_split_verified": true,
+          "global_first_charge": "1/2",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [
+            "0"
+          ],
+          "name": "negative_carrier_positive_part_firewall",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 1,
+          "root_v2_ledger": "1/2"
+        },
+        "formal_coherence_excess": null,
+        "l104522_common_zero_free": true,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": true,
+        "name": "negative_carrier_positive_part_firewall",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "1",
+          "adjacent_derivative_debt": "0",
+          "boundary_residue_sum": "1/4",
+          "degree": 2,
+          "eta": "1",
+          "exterior_residue_sum": "0",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "1/4",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [
+            "0"
+          ],
+          "inside_second_critical_roots": [],
+          "local_split_verified": true,
+          "name": "negative_carrier_positive_part_firewall",
+          "nonreal_correction": "0",
+          "real_m2": "1/4",
+          "root_v2_v4_ledger": "1/4"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": "1",
+        "certified_transfer_constant": null,
+        "coherence": "1",
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "1",
+          "boundary_first_charge": "-1/2",
+          "eta": "1",
+          "exterior_first_charge": "0",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "1/2",
+          "first_split_verified": true,
+          "global_first_charge": "-1/2",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [
+            "0"
+          ],
+          "name": "endpoint_nonvanishing_firewall",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 1,
+          "root_v2_ledger": "-1/2"
+        },
+        "formal_coherence_excess": "1",
+        "l104522_common_zero_free": true,
+        "l104522_endpoint_nonvanishing": false,
+        "l104522_transfer_hypotheses_verified": false,
+        "name": "endpoint_nonvanishing_firewall",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "1",
+          "adjacent_derivative_debt": "0",
+          "boundary_residue_sum": "1/4",
+          "degree": 2,
+          "eta": "1",
+          "exterior_residue_sum": "0",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "1/4",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [
+            "0"
+          ],
+          "inside_second_critical_roots": [],
+          "local_split_verified": true,
+          "name": "endpoint_nonvanishing_firewall",
+          "nonreal_correction": "0",
+          "real_m2": "1/4",
+          "root_v2_v4_ledger": "1/4"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": "76832/133971",
+        "certified_transfer_constant": null,
+        "coherence": "76832/133971",
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "5",
+          "boundary_first_charge": "-49/12",
+          "eta": "1",
+          "exterior_first_charge": "0",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "49/12",
+          "first_split_verified": true,
+          "global_first_charge": "-49/12",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [
+            "-4",
+            "1",
+            "4"
+          ],
+          "name": "common_zero_transfer_firewall",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 3,
+          "root_v2_ledger": "-49/12"
+        },
+        "formal_coherence_excess": "19693/133971",
+        "l104522_common_zero_free": false,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": false,
+        "name": "common_zero_transfer_firewall",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "5",
+          "adjacent_derivative_debt": "-1201099/124416",
+          "boundary_residue_sum": "145/3888",
+          "degree": 4,
+          "eta": "1",
+          "exterior_residue_sum": "0",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "145/3888",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [
+            "-4",
+            "1",
+            "4"
+          ],
+          "inside_second_critical_roots": [
+            "-2",
+            "8/3"
+          ],
+          "local_split_verified": true,
+          "name": "common_zero_transfer_firewall",
+          "nonreal_correction": "0",
+          "real_m2": "44657/4608",
+          "root_v2_v4_ledger": "145/3888"
+        }
+      },
+      {
+        "boundary_reconstructed_coherence": null,
+        "certified_transfer_constant": null,
+        "coherence": null,
+        "displayed_quotient_verified": true,
+        "first": {
+          "T": "2",
+          "boundary_first_charge": "0",
+          "eta": "1",
+          "exterior_first_charge": "0",
+          "first_global_exterior_split_verified": true,
+          "first_moment": "0",
+          "first_split_verified": true,
+          "global_first_charge": "0",
+          "independent_v2_ledger_verified": true,
+          "inside_critical_roots": [
+            "1"
+          ],
+          "name": "common_p_pprime_removable",
+          "nonreal_first_correction": "0",
+          "real_critical_count": 1,
+          "root_v2_ledger": "0"
+        },
+        "formal_coherence_excess": null,
+        "l104522_common_zero_free": false,
+        "l104522_endpoint_nonvanishing": true,
+        "l104522_transfer_hypotheses_verified": false,
+        "name": "common_p_pprime_removable",
+        "paired_identity_verified": true,
+        "second": {
+          "T": "2",
+          "adjacent_derivative_debt": "0",
+          "boundary_residue_sum": "0",
+          "degree": 2,
+          "eta": "1",
+          "exterior_residue_sum": "0",
+          "global_exterior_split_verified": true,
+          "global_residue_sum": "0",
+          "independent_root_ledger_verified": true,
+          "inside_critical_roots": [
+            "1"
+          ],
+          "inside_second_critical_roots": [],
+          "local_split_verified": true,
+          "name": "common_p_pprime_removable",
+          "nonreal_correction": "0",
+          "real_m2": "0",
+          "root_v2_v4_ledger": "0"
+        }
+      }
+    ]
+  },
+  "classification": "PASS_T105102_PAIRED_RESIDUE_COHERENCE_FLUX",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105102.json": "70f4816f5f133f13a1eca31a1582b344df3e0800b848955747010b50f25f0569",
+    "claims/lemmas/L-105102-paired-residue-coherence-window-flux.md": "e96f6f62780e4d395867a9d7a7e67bef5db7484ece5e924c6ecdeaa9977f3855",
+    "claims/methodology/M-105102-paired-flux-review-contract.md": "906c358be77085dc6859b1a2a6972d116a3ae02584dcb514b3bd2e0d8eee6547",
+    "claims/refutations/R-105102-nonreal-first-residue-correction-is-load-bearing.md": "424d0810d91f95c10b8da1895272019479322e08093420e1e4da548f6105643b",
+    "claims/theorems/T-105102-boundary-coherence-frontier.md": "8e38150a53a6b30502f873a206f6450cbc250605d0e5ac192bbc42cf55ba96c7",
+    "experiments/X-105102-paired-residue-coherence-flux/tests/test_verify.py": "2a3ed48770787f481e2295125f3782a58b93a05bd5b692b3dc0aeee5cf69ca75",
+    "experiments/X-105102-paired-residue-coherence-flux/verify.py": "8ad9448597eeda46770088a4b00702db89e04c266e298d726e581cbff3ad9bc2"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "fd3ef43a6964e502f00ad906482eae5b3c544fba",
+    "proof_object_sha256": "3e54ec6406ae1c37ceb43049ec433a29f7e2b269b293d84d9663b3480774a196"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "cbf21d35cb125aed2d5d6ea85818375e5f1c978a9db0e0de3309a3b3807bd44e",
+  "schema": "riemann.t105102.paired-residue-coherence-flux.v1",
+  "scope": {
+    "admissible_height_strip_sequence_controlled": false,
+    "first_boundary_charge_estimated": false,
+    "fixed_window_first_identity_proof_supplied": true,
+    "multiple_zero_confluent_ledger_proved": false,
+    "nonreal_first_correction_estimated": false,
+    "paired_coherence_identity_proof_supplied": true,
+    "pointwise_thin_strip_corrections_eliminated": true,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "second_boundary_and_corrections_estimated": false,
+    "strict_coherence_margin_proved": false,
+    "xi_window_hypotheses_proved": false
+  },
+  "source": {
+    "checkpoint_base": "fd3ef43a6964e502f00ad906482eae5b3c544fba",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105102_PAIRED_RESIDUE_COHERENCE_FLUX"
+}
