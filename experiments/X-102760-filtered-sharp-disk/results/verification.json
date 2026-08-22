@@ -1,0 +1,51 @@
+{
+  "analytic_tail_upper": "0.982234774099900854433913982607422767778314093279720947554707962383186633942998710259337836",
+  "budget_rho": "0.942",
+  "carrier_disk": {
+    "minimum": "0E-88",
+    "witness": [
+      1,
+      2,
+      [
+        "boundary",
+        "1.125",
+        1
+      ]
+    ]
+  },
+  "carrier_ratio": {
+    "minimum": "0.0342712474619009760337744841939615713934375075389614635335947598146495692421407770077508",
+    "witness": [
+      1,
+      2,
+      [
+        "boundary",
+        "1.41421356237309504880168872420969807856967187537694807317667973799073247846210703885038753",
+        -1
+      ]
+    ]
+  },
+  "disk_center": "-1",
+  "disk_positivity_alone_closes_lorentz": false,
+  "disk_radius": "1/2",
+  "filtered_s_lemma_matrix": true,
+  "finite_disk_budget": {
+    "cells": 633,
+    "minimum_deficit": "0E-88",
+    "witness": [
+      1,
+      2,
+      [
+        "boundary",
+        "1.125",
+        1
+      ]
+    ]
+  },
+  "frs102760_proved": false,
+  "prime_mass_upper": "0.857234774099900854433913982607422767778314093279720947554707962383186633942998710259337836",
+  "proof_object_sha256": "ef680e0fcfc91e3f8a9b948ae4643a5c1bd55fc74c36c8115d6f517aa3241af9",
+  "rh_established": false,
+  "schema": "riemann.t102760.filtered-sharp-disk.v1",
+  "verdict": "PASS_T102760_FULL_FILTERED_SHARP_DISK"
+}
