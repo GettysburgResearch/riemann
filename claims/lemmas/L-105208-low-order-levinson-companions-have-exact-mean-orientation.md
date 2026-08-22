@@ -60,7 +60,7 @@ C_k(y)=2\pi\int_{\mathbb R}u^{2k+1}\varphi(u)^2e^{2yu}\,du.
 \tag{L-105208.2}
 \]
 
-Pairing `u` and `-u` gives
+Pairing positive and negative frequencies gives
 
 \[
 \boxed{
@@ -203,7 +203,6 @@ Equivalently,
 =8\pi\lambda\int_0^\infty u^{2k+2}\Phi(u)^2du.
 }
 \tag{L-105208.14}
-\]
 
 Common-zero cases follow by regular-level perturbation. Clockwise phase can
 occur only with a strictly larger compensating counterclockwise
