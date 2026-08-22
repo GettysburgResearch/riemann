@@ -1,3 +1,8 @@
+$ python3 -m py_compile validate_packet.py light_fraction_fixtures.py
+
+exit=0
+
+$ python3 validate_packet.py
 {
   "census_rows": 341,
   "errors": [],
@@ -6,6 +11,10 @@
   "unresolved_heads": 164,
   "warnings": []
 }
+
+exit=0
+
+$ python3 light_fraction_fixtures.py
 {
   "checks": {
     "five_three_roots": "[Fraction(1, 1), Fraction(2, 1)]",
@@ -15,3 +24,5 @@
   "sha_repair_fixture": "e928fd615d753882706bb88c51b717bd8d4a86ba",
   "status": "PASS"
 }
+
+exit=0

@@ -33,7 +33,20 @@ This packet is additive. It does not replace A/B claim-level review and does not
 
 ## Publication status
 
-The branch `review/2026-08-22/coverage-genealogy-delta` is being published from the exact frozen main parent. Draft-PR metadata is finalized in a follow-up publication commit after GitHub assigns the PR number. No research or other review branch is modified.
+The connected GitHub app exposed read operations but no branch, commit or pull-request creation operation in this session. Therefore no branch or PR is claimed. The accompanying patch applies only the requested `review/2026-08-22/coverage/` tree to frozen main.
+
+Suggested publication commands for an authorized writer:
+
+```bash
+git switch --detach 677203992eb0168920365ee45ae9db76bfa97dcf
+git switch -c review/2026-08-22/coverage-genealogy-delta
+git apply coverage-genealogy-delta.patch
+python3 review/2026-08-22/coverage/replay/validate_packet.py
+python3 review/2026-08-22/coverage/replay/light_fraction_fixtures.py
+git add review/2026-08-22/coverage
+git commit -m "review: add scientific coverage and genealogy delta"
+# Open a draft PR targeting frozen-main lineage; do not merge.
+```
 
 ## Acceptance check
 
