@@ -76,22 +76,16 @@ O_{K,T}\!\left(
 \tag{L-104519.3}
 \]
 
-More generally the estimate remains uniform for a moving `K=K(H)` whenever
-
-\[
-\frac{K(H)^2}{H\log^2H}\longrightarrow0.
-\tag{L-104519.4}
-\]
-
-Consequently
+Consequently, for each fixed finite `K`,
 
 \[
 \frac{\xi^{(k+1)}(s)}{\xi^{(k)}(s)}
 =
 a(s)
 +
-O_{K,T}\!\left(\frac1{H\log H}\right).
-\tag{L-104519.5}
+O_{K,T}\!\left(\frac1{H\log H}\right)
+\qquad(0\le k\le K).
+\tag{L-104519.4}
 \]
 
 Since `d/dz=i d/ds`,
@@ -102,12 +96,12 @@ Since `d/dz=i d/ds`,
 ia(s)
 +
 O_{K,T}\!\left(\frac1{H\log H}\right).
-\tag{L-104519.6}
+\tag{L-104519.5}
 \]
 
 ## 2. Companion nonvanishing and ratio cancellation
 
-Equation (L-104519.6) gives
+Equation (L-104519.5) gives
 
 \[
 E_k(z)
@@ -118,7 +112,7 @@ F_k(z)
 +
 O_{K,T}\!\left(\frac1{H\log H}\right)
 \right].
-\tag{L-104519.7}
+\tag{L-104519.6}
 \]
 
 The bracket is nonzero for all sufficiently large `H`, uniformly for
@@ -134,7 +128,7 @@ Furthermore,
 =
 O_{K,\lambda,T}\!\left(\frac1{H\log H}\right).
 }
-\tag{L-104519.8}
+\tag{L-104519.7}
 \]
 
 The common gamma carrier `ia(s)` cancels before the estimate is taken.
@@ -157,21 +151,18 @@ Let the lower side be oriented from `T-iH` to `-T-iH`.  Its charge satisfies
 \ll_{K,\lambda,T}
 \frac{T}{H\log H}.
 }
-\tag{L-104519.9}
+\tag{L-104519.8}
 \]
 
 Hence it tends to zero as `H->infinity`.
 
-For a finite derivative ladder `0<=k<=r(T)`, choose `H=H(T)` after the
-derivative order so that
+For every fixed real height `T` and every finite derivative ladder
+`0<=k<=K`, the constants in (L-104519.8) are finite.  Hence one may choose
+`H` after `(T,K)` so that the lower-side charge is smaller than any prescribed
+`epsilon>0`, simultaneously at every level of that finite ladder.
 
-\[
-\frac{r(T)^2T}{H(T)\log H(T)}\longrightarrow0.
-\tag{L-104519.10}
-\]
-
-Then the lower-side charge vanishes **simultaneously at every level of that
-finite ladder**.
+This is a diagonal exhaustion.  No unproved uniform estimate in a derivative
+order growing with `H` is asserted.
 
 ## 4. Consequence for the corrected last-defect theorem
 
@@ -182,7 +173,7 @@ Under the ordered exhaustion
 
 ```text
 first choose the finite derivative ladder and the real height T;
-then send H to infinity subject to (L-104519.10),
+then send H to infinity,
 ```
 
 the lower horizontal term vanishes.  The corrected exterior gate becomes a
@@ -193,7 +184,6 @@ genuine two-vertical-side limit:
 \mathrm{EFLUX104518}
 \quad\rightsquigarrow\quad
 \mathrm{VFLUX}_{\infty,104519}.
-}
 \]
 
 This does not prove that the limiting vertical flux is zero.  It proves that
