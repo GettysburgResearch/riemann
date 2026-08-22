@@ -18,7 +18,7 @@ w_m=\arg\max[m\log u+\log\Phi(u)],
 s_m^2=(-S_m''(w_m))^{-1}
 \]
 
-from `L-105200`.  Put
+from `L-105200`. Put
 
 \[
 \vartheta_M=(\log M)^{-1/12},
@@ -77,8 +77,13 @@ Put
 b_m=\sqrt{w_m/m}.
 \]
 
-The saddle estimates give `s_m asy b_m` and, uniformly on
-`|u-w_m|<=1`,
+The saddle estimates give
+
+\[
+s_m\asymp b_m
+\]
+
+and, uniformly on `|u-w_m|<=1`,
 
 \[
 S_m^{(3)}(u)=O(m/w_m),
@@ -98,7 +103,7 @@ S_m(w_m+s_mx)-S_m(w_m)
 \tag{L-105205.5}
 
 The same estimate holds after a complex displacement of size `o(1)` in the
-`u` plane.  This follows directly from the explicit series for `Phi`: the
+`u` plane. This follows directly from the explicit series for `Phi`: the
 `n=1` summand dominates uniformly with all four derivatives in a fixed complex
 neighbourhood of the real saddle, and therefore `Phi` has no zero there for
 large `m`.
@@ -117,11 +122,11 @@ At the endpoint (L-105205.1), monotonicity of `log m/m` gives
 \boxed{
 |\lambda|
 \ll
-\vartheta_M b_m^{-1/3}
+\vartheta_M b_m^{-1/3}.
 }
-\tag{L-105205.6)
+\tag{L-105205.6}
 
-uniformly for every `m>=M`.  The cubic standardized remainder at the shifted
+uniformly for every `m>=M`. The cubic standardized remainder at the shifted
 Gaussian saddle is therefore
 
 \[
@@ -157,7 +162,7 @@ F_m(x)=S_m(w_m+s_mx)-S_m(w_m).
 \tag{L-105205.9}
 
 The integrand before normalization is the entire function
-`u^m Phi(u)e^(izu)`.  Shift the `u` contour by
+`u^m Phi(u)e^(izu)`. Shift the `u` contour by
 
 \[
 s_m\lambda=i s_m^2z.
@@ -173,10 +178,10 @@ By (L-105205.6),
 
 The connector at zero is exponentially negligible because of the factor
 `u^m`; the connector at infinity vanishes by the double-exponential term
-`exp(-pi exp(2u))`.  The shifted contour remains in a strip where
+`exp(-pi exp(2u))`. The shifted contour remains in a strip where
 `Re exp(2u)>0`.
 
-Set `x=y+lambda`.  The quadratic terms complete the square:
+Set `x=y+lambda`. The quadratic terms complete the square:
 
 \[
 -{(y+\lambda)^2\over2}+\lambda(y+\lambda)
@@ -193,8 +198,8 @@ F_m(y+\lambda)+\lambda(y+\lambda)
 \tag{L-105205.12}
 \]
 
-uniformly.  On `|y|>R_m` but `|s_my|<=1/2`, strict complex saddle concavity
-gives `exp(-cR_m^2)` domination.  Outside the local saddle neighbourhood, the
+uniformly. On `|y|>R_m` but `|s_my|<=1/2`, strict complex saddle concavity
+gives `exp(-cR_m^2)` domination. Outside the local saddle neighbourhood, the
 left `u^m` loss and right double-exponential loss used in `L-105200` remain
 uniform under the displacement (L-105205.10).
 
@@ -205,7 +210,7 @@ Hence
 =e^{\lambda^2/2}\sqrt{2\pi}(1+o(1)),
 \]
 
-and the denominator is `sqrt(2pi)(1+o(1))`.  Since
+and the denominator is `sqrt(2pi)(1+o(1))`. Since
 `exp(lambda^2/2)` is nonzero, this proves the relative formula
 (L-105205.2).
 
@@ -235,7 +240,7 @@ M\ge K T^{3/2}(\log(2+T))^{9/8}
 }
 \tag{L-105205.14}
 
-for a sufficiently large constant `K=K(H)`.  More flexibly, choosing any
+for a sufficiently large constant `K=K(H)`. More flexibly, choosing any
 `vartheta_M->0` gives the entry order `T^(3/2+o(1))`.
 
 ## 7. Scope
