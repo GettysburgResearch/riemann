@@ -4,7 +4,7 @@
 
 This is Reviewer C's additive breadth/genealogy packet. It does not adjudicate disagreements between Reviewer A and Reviewer B. The frozen inputs are main `677203992eb0168920365ee45ae9db76bfa97dcf`, Reviewer B `eb1987502ef9043e782ac6ab1e19c47be9daef93`, and Reviewer A `55fe0b6f23d9163e2b602608da84194ba243d7c4`. PRs #708 and #709 are review inputs only. The research census ends at PR #707. **RH remains unproved.**
 
-The machine census contains **341 rows**: every PR #375–#707, plus the older unintegrated dependencies/review records listed in `FREEZE.json`. Every row has a disposition. Exact-head provenance remains unresolved for **164 rows**; each such research row fails closed to `TARGETED_REVIEW_STILL_REQUIRED` rather than receiving a guessed SHA.
+The machine census contains **341 rows**: every PR #375–#707, plus the older unintegrated dependencies/review records listed in `FREEZE.json`. Every row has a disposition. Exact-head provenance remains unresolved for **156 rows**; each such research row fails closed to `TARGETED_REVIEW_STILL_REQUIRED` rather than receiving a guessed SHA.
 
 ## What A/B did not make explicit
 
@@ -69,3 +69,21 @@ Rows with unresolved exact heads or frozen paths are not silently filled from st
 - `REPRESENTED_BY_BOTH`: 37
 - `RETAINED_HEAVY_CERTIFICATE`: 11
 - `TARGETED_REVIEW_STILL_REQUIRED`: 157
+
+## Cross-review follow-up resolution
+
+PRs #710 and #711 delegated 22 candidate groups to Reviewer C. The exact
+disposition is now recorded in `CROSS_REVIEW_FOLLOWUP.tsv` and
+`CROSS_REVIEW_FOLLOWUP.md`: ten newly extracted records, eight exact-head/path/
+broken-arrow or computation-ledger repairs, and four candidates already
+adequately represented.
+
+The principal previously missing assets were PR #383’s path-qualified
+Fourier/Haar/Jordan/fourteen-row theorems, PR #386’s Fourier–Goldbach normal
+form and `ell^2` no-go, the fixed 5:3 Mellin detector, PR #439’s exact causal
+packet budget, PR #472’s radial null gauge, PR #638’s distributional Volterra
+formula, and PR #521’s live-marginal finite Farkas reduction. PR #620’s exact
+first broken arrow and the PR #508/#630 heavy artifact records are now pinned.
+
+These additions do not reduce any terminal RH-bearing estimate to a proved
+theorem. RH remains unproved.

@@ -48,3 +48,23 @@ Keep only the terminal gates that are neither refuted nor already classified as 
 ## Do not canonicalize yet
 
 Do not canonicalize heavy artifacts lacking exact checker/result/hash paths, moving-head manifests, recovery packets without original bytes, source/result pairs where the result predates the checker, or formal/Lean builds with incomplete dependency locks. These are listed in `PROVENANCE_DEFECTS.tsv` and `DELTA_COMPUTATIONS.tsv`.
+
+## Cross-review additions to canonical salvage
+
+Add the following path-qualified packets to canonical extraction:
+
+- PR #383: `L-90411`; the Haar-specific `L-90416`; the periodized
+  Jordan-specific `L-90417`; corrected `L-90427` and `L-90430`. Bare numerical
+  IDs are insufficient because PR #383 contains duplicate identifiers.
+- PR #386: `L-90703` and `R-90703` as an exact normal form plus an
+  operator-class no-go.
+- PR #649: `L-99261` as the canonical fixed 5:3 detector, with a separate open
+  producer node.
+- PR #439 `L-91355`, PR #454 `L-91671`, PR #470 `L-91687`, PR #472
+  `L-19881`, PR #521 `L-94023`, and PR #638 `L-99230`.
+- PR #540 `L-95050/R-95050`, PR #597 `L-95500/L-95501/L-95502/L-95504`,
+  and PR #600 `L-95520/L-95521/R-95520`.
+
+Retain PR #635 `R-99161` as the binding same-row score firewall for PR #620.
+Retain PR #508’s 51M bytes only as nonproof computational support, and PR #630
+as a finite computer-assisted theorem with no infinite extrapolation.

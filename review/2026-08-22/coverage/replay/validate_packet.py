@@ -16,7 +16,8 @@ VERDICTS = {
 REQUIRED = [
     'FREEZE.json','PR_CENSUS.tsv','DELTA_CLAIMS.tsv','DELTA_REFUTATIONS.tsv',
     'DELTA_ALIASES.tsv','DELTA_COMPUTATIONS.tsv','HISTORICAL_PROPOSALS.tsv',
-    'PROVENANCE_DEFECTS.tsv','MISSING_COVERAGE.md','CANONICAL_SALVAGE.md','INTEGRATION_HANDOFF.md'
+    'PROVENANCE_DEFECTS.tsv','MISSING_COVERAGE.md','CANONICAL_SALVAGE.md','INTEGRATION_HANDOFF.md',
+    'CROSS_REVIEW_FOLLOWUP.tsv','CROSS_REVIEW_FOLLOWUP.md'
 ]
 PR_HEADER = ['pr','exact_head_sha','title','family','creation_or_update_scope','reviewer_a_coverage','reviewer_b_coverage','controlling_later_pr','controlling_review','strongest_surviving_result','first_broken_arrow','current_open_gate','lifecycle_recommendation','delta_action','notes']
 HIST_HEADER = ['proposal_pr','proposal_head','claimed_route','first_broken_arrow','controlling_evidence','surviving_claims','current_descendant','final_classification','lifecycle_recommendation']
@@ -26,6 +27,17 @@ for name in REQUIRED:
 freeze=json.loads((HERE/'FREEZE.json').read_text())
 if freeze.get('rh_status')!='UNPROVED': errors.append('RH status must be UNPROVED')
 if freeze['review_inputs_only']['reviewer_b']['pr']!=708 or freeze['review_inputs_only']['reviewer_a']['pr']!=709: errors.append('review inputs wrong')
+
+cross=freeze.get('cross_review_inputs_only',{})
+expected_cross={
+    'reviewer_a_cross_review_b':(710,'e91d6aa25d2e8576e82d26170127941eec430f75'),
+    'reviewer_b_cross_review_a':(711,'27784928fbcecff975bc947e13c3a30d3b630ce0'),
+}
+for key,(pr,sha) in expected_cross.items():
+    obj=cross.get(key,{})
+    if obj.get('pr')!=pr or obj.get('head')!=sha:
+        errors.append(f'cross-review freeze mismatch for {key}')
+
 for label,sha in [('main',freeze['frozen_main']),('A',freeze['review_inputs_only']['reviewer_a']['head']),('B',freeze['review_inputs_only']['reviewer_b']['head'])]:
     if not re.fullmatch(r'[0-9a-f]{40}',sha): errors.append(f'malformed frozen {label} SHA: {sha}')
 with (HERE/'PR_CENSUS.tsv').open(newline='',encoding='utf-8') as f:
@@ -58,9 +70,21 @@ for fn,col in [('DELTA_CLAIMS.tsv','verdict'),('DELTA_REFUTATIONS.tsv','verdict'
             if fn=='DELTA_COMPUTATIONS.tsv' and row['heavy_campaign_not_re_run']!='HEAVY_CAMPAIGN_NOT_RE_RUN': errors.append(f"{fn}: missing heavy flag for {key}")
         dups=[k for k,v in Counter(seen).items() if v>1]
         if dups: errors.append(f'{fn}: duplicate primary IDs {dups}')
+
+with (HERE/'CROSS_REVIEW_FOLLOWUP.tsv').open(newline='',encoding='utf-8') as f:
+    r=csv.DictReader(f,delimiter='\t')
+    expected_header=['handoff_pr','handoff_head','candidate_id','source_pr','source_head','source_claim','prior_packet_status','followup_disposition','canonical_record','notes']
+    if r.fieldnames!=expected_header: errors.append('CROSS_REVIEW_FOLLOWUP header mismatch')
+    cross_rows=list(r)
+if len(cross_rows)!=22: errors.append(f'cross-review candidate count={len(cross_rows)}')
+if len({x['candidate_id'] for x in cross_rows})!=22: errors.append('duplicate cross-review candidate ID')
+if {x['handoff_pr'] for x in cross_rows}!={'710','711'}: errors.append('cross-review handoff PR set mismatch')
+for row in cross_rows:
+    if not re.fullmatch(r'[0-9a-f]{40}',row['source_head']): errors.append(f"cross-review malformed source head {row['candidate_id']}")
+
 # Provenance file must retain malformed-SHA evidence rather than normalize it away.
 prov=(HERE/'PROVENANCE_DEFECTS.tsv').read_text(encoding='utf-8')
 if '928fd615d753882706bb88c51b717bd8d4a86ba' not in prov: errors.append('known A malformed SHA defect missing')
-result={'status':'PASS' if not errors else 'FAIL','errors':errors,'warnings':warnings,'census_rows':len(census),'post_cutoff_rows':sum(375<=n<=707 for n in nums),'unresolved_heads':sum(not re.fullmatch(r'[0-9a-f]{40}',x['exact_head_sha'] or '') or x['exact_head_sha'].endswith('0'*32) for x in census)}
+result={'status':'PASS' if not errors else 'FAIL','errors':errors,'warnings':warnings,'census_rows':len(census),'post_cutoff_rows':sum(375<=n<=707 for n in nums),'cross_review_candidates':len(cross_rows),'unresolved_heads':sum(not re.fullmatch(r'[0-9a-f]{40}',x['exact_head_sha'] or '') or x['exact_head_sha'].endswith('0'*32) for x in census)}
 print(json.dumps(result,indent=2,sort_keys=True))
 sys.exit(0 if not errors else 1)

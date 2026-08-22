@@ -33,19 +33,29 @@ This packet is additive. It does not replace A/B claim-level review and does not
 
 ## Publication status
 
-The connected GitHub app exposed read operations but no branch, commit or pull-request creation operation in this session. Therefore no branch or PR is claimed. The accompanying patch applies only the requested `review/2026-08-22/coverage/` tree to frozen main.
+The original Reviewer C packet was subsequently published by a separate writer
+as draft PR #712 on branch
+`review/2026-08-22/coverage-genealogy-delta`, exact head
+`2b35d2b159a4c7af045ffca9214aebe02a423da4`. Its remote `SHA256SUMS` is
+byte-identical to the pre-follow-up packet used as the base of this patch.
+
+This cross-review follow-up was **not pushed**, in accordance with the user's
+instruction. The accompanying patch is incremental against PR #712 head
+`2b35d2b159a4c7af045ffca9214aebe02a423da4`; the ZIP contains the complete
+replacement `review/2026-08-22/coverage/` tree.
 
 Suggested publication commands for an authorized writer:
 
 ```bash
-git switch --detach 677203992eb0168920365ee45ae9db76bfa97dcf
-git switch -c review/2026-08-22/coverage-genealogy-delta
-git apply coverage-genealogy-delta.patch
+git switch review/2026-08-22/coverage-genealogy-delta
+git reset --hard 2b35d2b159a4c7af045ffca9214aebe02a423da4
+git apply reviewer-c-cross-review-followup.patch
 python3 review/2026-08-22/coverage/replay/validate_packet.py
 python3 review/2026-08-22/coverage/replay/light_fraction_fixtures.py
+python3 review/2026-08-22/coverage/replay/cross_review_followup_fixtures.py
 git add review/2026-08-22/coverage
-git commit -m "review: add scientific coverage and genealogy delta"
-# Open a draft PR targeting frozen-main lineage; do not merge.
+git commit -m "review: reconcile cross-review omissions in Reviewer C packet"
+# Update draft PR #712; do not merge.
 ```
 
 ## Acceptance check
@@ -60,3 +70,22 @@ git commit -m "review: add scientific coverage and genealogy delta"
 - computation rows declare `HEAVY_CAMPAIGN_NOT_RE_RUN`;
 - RH status remains unproved;
 - duplicate IDs and malformed SHA fields are reported rather than normalized.
+
+## Cross-review follow-up inputs
+
+Reviewer D must additionally consume:
+
+- Reviewer A cross-review PR #710 at
+  `e91d6aa25d2e8576e82d26170127941eec430f75`;
+- Reviewer B cross-review PR #711 at
+  `27784928fbcecff975bc947e13c3a30d3b630ce0`;
+- `CROSS_REVIEW_FOLLOWUP.tsv` and `CROSS_REVIEW_FOLLOWUP.md`.
+
+The follow-up adds no new research census range and changes no A/B verdict by
+fiat. It path-pins omitted local theorems, sharpens PR #620’s first broken
+arrow, and supplies exact heavy-campaign records for PRs #508 and #630.
+
+For an existing Reviewer C branch at PR #712/head
+`2b35d2b159a4c7af045ffca9214aebe02a423da4`, apply the accompanying incremental
+patch, rerun all three light scripts, and commit only the
+`review/2026-08-22/coverage/` tree. Do not merge and do not claim RH.

@@ -17,8 +17,20 @@
     "proposal_policy": "do not replay obsolete full proposal after an exact later counterexample; preserve independent local results",
     "unknown_exact_head_policy": "blank_or_UNRESOLVED plus TARGETED_REVIEW_STILL_REQUIRED; never guess"
   },
+  "cross_review_inputs_only": {
+    "reviewer_a_cross_review_b": {
+      "head": "e91d6aa25d2e8576e82d26170127941eec430f75",
+      "pr": 710,
+      "role": "omission, graph, provenance and Q4 handoff"
+    },
+    "reviewer_b_cross_review_a": {
+      "head": "27784928fbcecff975bc947e13c3a30d3b630ce0",
+      "pr": 711,
+      "role": "arithmetic/source-interface omission and computation handoff"
+    }
+  },
   "frozen_main": "677203992eb0168920365ee45ae9db76bfa97dcf",
-  "generated_utc": "2026-08-21T22:29:39Z",
+  "generated_utc": "2026-08-22T03:10:15Z",
   "heavy_computation_policy": "HEAVY_CAMPAIGN_NOT_RE_RUN",
   "intended_branch": "review/2026-08-22/coverage-genealogy-delta",
   "light_checks_performed": [
@@ -26,14 +38,20 @@
     "TSV schema and verdict-vocabulary checks",
     "exact Fraction fixtures only",
     "cross-table source/result consistency checks",
-    "py_compile of replay scripts"
+    "py_compile of replay scripts",
+    "cross-review handoff exact-source read-back",
+    "PR383 path-qualified collision fixtures",
+    "PR508/PR630 retained-result schema and hash-ledger checks"
   ],
+  "prior_reviewer_c_publication": {
+    "branch": "review/2026-08-22/coverage-genealogy-delta",
+    "head": "2b35d2b159a4c7af045ffca9214aebe02a423da4",
+    "pr": 712
+  },
   "publication_status": {
-    "branch_created": false,
-    "draft_pr_created": false,
-    "github_connector": "READ_ONLY_IN_THIS_SESSION",
-    "local_packet_and_patch_created": true,
-    "reason": "No branch/commit/pull-request write action was exposed by the connected GitHub app."
+    "direct_push_attempted_for_followup": false,
+    "local_zip_and_incremental_patch_created": true,
+    "reason": "User explicitly requested local handoff artifacts only."
   },
   "repository": "gfreund123/riemann",
   "research_census_last_pr": 707,
@@ -51,6 +69,6 @@
   },
   "review_mode": "breadth_and_genealogy_additive_not_final_adjudication",
   "rh_status": "UNPROVED",
-  "schema": "riemann.coverage_genealogy_delta.freeze.v1",
+  "schema": "riemann.coverage_genealogy_delta.freeze.v2",
   "scientific_cutoff_utc": "2026-08-11T08:20:51Z"
 }
