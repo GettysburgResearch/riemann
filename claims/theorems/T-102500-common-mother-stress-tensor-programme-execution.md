@@ -63,21 +63,32 @@ On every carrier-recombined one-octave source shell,
 
 Thus the determinant and reserve-reuse interfaces are no longer open.
 
+`R-102501` is binding: a strict determinant is a compatibility/reserve theorem,
+not a source-free one-sided sign theorem.
+
 ## E. Arithmetic regions
 
-The source ledger and simultaneous channel functoriality are exact, but the
-conclusion-facing estimates are not all proved.
+The source ledger and simultaneous channel functoriality are exact.
+`L-102505` additionally proves that physical collapse of the entire finitely
+squared small-prime core costs only
 
-The remaining arithmetic statements are:
+\[
+O(\log^2 Z)
+\]
+
+in squared norm, simultaneously for the mother, CV and XD channels. Thus the
+small-prime OCC interface is closed unconditionally.
+
+The remaining arithmetic statements are now:
 
 ```text
 AR-SCALE102500:
-  subpower carrier-recombined scale energy/one-sided variation after the
-  finite-squaring, Dickman and activation ledgers;
+  subpower carrier-recombined scale/collar one-sided estimate after the
+  Dickman, activation and moving-transfer ledgers;
 
 AR-OCC102500:
-  subpower source-faithful physical occupancy for the residual balanced
-  same-K1/Vaughan packet, after exact carrier recombination.
+  subpower physical occupancy for the unique unsquared owner/collar in the
+  residual balanced same-K1/Vaughan packet.
 ```
 
 Finite certificates may settle only their declared finite ranges.
@@ -92,12 +103,12 @@ selected after a hypothetical zero.
 ## Conditional final composition
 
 The regional Perron/Schur APIs may now use the exact determinant reserve from
-this packet. If `AR-SCALE102500` and `AR-OCC102500` supply the two literal
-arithmetic rows with the source normalization in `L-102503`, then the strict
-determinant gives a subcritical two-channel recurrence, the fixed mother has
-subpower negative mass, and `L-102504` yields RH.
+this packet. If `AR-SCALE102500` and the narrowed `AR-OCC102500` supply the two
+literal arithmetic rows with the source normalization in `L-102503`, then the
+strict determinant gives a subcritical two-channel recurrence, the fixed
+mother has subpower negative mass, and `L-102504` yields RH.
 
-Neither arithmetic row is proved here.
+Neither remaining arithmetic row is proved here.
 
 ```text
 common mother and Bezout                PROVED EXACT
@@ -105,8 +116,9 @@ labelled covariant lift                 PROVED EXACT
 carrier quotient / one-use ledger       PROVED EXACT
 strict local determinant reserve        PROVED EXACT
 region functoriality                    PROVED EXACT
+squared-core physical collapse          PROVED POLYLOG
 fixed detector                          PROVED EXACT
 AR-SCALE102500                           OPEN / RH-BEARING
-AR-OCC102500                             OPEN / RH-BEARING
+owner/collar AR-OCC102500                OPEN / RH-BEARING
 Riemann Hypothesis                       UNPROVED
 ```
