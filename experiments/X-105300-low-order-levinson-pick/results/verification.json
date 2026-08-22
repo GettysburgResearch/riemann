@@ -1,0 +1,197 @@
+{
+  "LEXI105301_proved": false,
+  "LHRT105300_proved": false,
+  "anthropic_record_beaten": false,
+  "coherence_firewall": {
+    "all_critical_residues_negative": true,
+    "all_roots_real": true,
+    "polynomial": "x^3-3x+3/2",
+    "unweighted_coherence": "16/25"
+  },
+  "compression_fixture_checks": 13,
+  "content_sha256": {
+    "PACKET_METADATA_105300.json": "3a7e355fffd1ec11e6e01e4027131557e708f906f0fb3191557baeb1f9a0c3c5",
+    "claims/lemmas/L-105300-levinson-hermite-pick-trace-form.md": "0bf57b59cf11496b11936722ff12740f03f5a800f1210e24093f286732072a2a",
+    "claims/lemmas/L-105301-weighted-rank-trace-record-certificate.md": "1f0b1dd8fa2c67a675910b88b5d9867533defda8e30502d4eda98727dbc4424d",
+    "claims/lemmas/L-105302-anthropic-xiprime-record-bridge.md": "decdb2dad4dc09edb19946aef96e74d72027eeb6f6b425bf0aaf8f5a189f781e",
+    "claims/lemmas/L-105303-entire-window-hermite-pick-compression.md": "1fc6f6f4e6fb217d1d027dd013360e0c1c556ae44853b9a75cc54eaa0839089d",
+    "claims/methodology/M-105300-hostile-review-contract.md": "5357b1ef869dddb47188de817dd06a64db7e5911509a96871f8abd8f25b14c32",
+    "claims/refutations/R-105300-unweighted-residue-coherence-is-too-lossy.md": "2749b1ae820bf58fee6252b7b3593945d8e1dc9b0e93cd7d5a0ddcb32c02b5bb",
+    "claims/theorems/T-105300-low-order-levinson-pick-frontier.md": "ea54d4e916f925a34922f2471032026a180b4513305ba8a9927541c81c1d89b0",
+    "experiments/X-105300-low-order-levinson-pick/tests/test_verify.py": "0cc08ea43501a45aa82578ad61290c6ae733eea47c5deebc38e973638ca5b3e3",
+    "experiments/X-105300-low-order-levinson-pick/verify.py": "69788a0b5c6d3553766fe9b299ab720abe22050c4630a96600a1ead468dff11c"
+  },
+  "entire_window_compression_identity_proved_symbolically": true,
+  "entire_window_residue_fixture_checks": 2,
+  "finite_trace_form_proved": true,
+  "fixtures": [
+    {
+      "degree": 3,
+      "expected_real_roots": 3,
+      "frobenius_squared": "43/18",
+      "inertia": {
+        "negative": 0,
+        "positive": 3,
+        "zero": 0
+      },
+      "integer_real_root_lower": 3,
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "2/3",
+          "-1/2"
+        ],
+        [
+          "0",
+          "-1/2",
+          "2/3"
+        ]
+      ],
+      "name": "x^3-3x+3/2",
+      "q_mod_pprime": [
+        "1/3",
+        "-1/4"
+      ],
+      "rank_trace_positive_index_lower": "98/43",
+      "signature": 3,
+      "trace": "7/3"
+    },
+    {
+      "degree": 3,
+      "expected_real_roots": 1,
+      "frobenius_squared": "17/9",
+      "inertia": {
+        "negative": 1,
+        "positive": 2,
+        "zero": 0
+      },
+      "integer_real_root_lower": -1,
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-2/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2/3"
+        ]
+      ],
+      "name": "x^3+3x",
+      "q_mod_pprime": [
+        "-1/3"
+      ],
+      "rank_trace_positive_index_lower": "9/17",
+      "signature": 1,
+      "trace": "1"
+    },
+    {
+      "degree": 4,
+      "expected_real_roots": 0,
+      "frobenius_squared": "21/16",
+      "inertia": {
+        "negative": 2,
+        "positive": 2,
+        "zero": 0
+      },
+      "integer_real_root_lower": -2,
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/4",
+          "0",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "-1/4",
+          "0"
+        ],
+        [
+          "0",
+          "-1/4",
+          "0",
+          "-1/4"
+        ]
+      ],
+      "name": "x^4-2x^2+2",
+      "q_mod_pprime": [
+        "1/2",
+        "0",
+        "-5/8"
+      ],
+      "rank_trace_positive_index_lower": "3/7",
+      "signature": 0,
+      "trace": "3/4"
+    },
+    {
+      "degree": 3,
+      "expected_real_roots": 3,
+      "frobenius_squared": "83/18",
+      "inertia": {
+        "negative": 0,
+        "positive": 3,
+        "zero": 0
+      },
+      "integer_real_root_lower": 3,
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "4/3",
+          "1/6"
+        ],
+        [
+          "0",
+          "1/6",
+          "4/3"
+        ]
+      ],
+      "name": "weighted x^3-3x+3/2",
+      "q_mod_pprime": [
+        "2/3",
+        "1/12"
+      ],
+      "rank_trace_positive_index_lower": "242/83",
+      "signature": 3,
+      "trace": "11/3"
+    }
+  ],
+  "noncoprime_weight_firewall_checked": true,
+  "polynomial_preconditioning_proved": true,
+  "proof_object_sha256": "d6c084f4bc027a54b2aaf9afd2da2d8398d9c7ad12a033082ebacccd48c20faf",
+  "rank_trace_certificate_proved": true,
+  "record_bridge": {
+    "anthropic_xiprime_quartic_proportion": "5429/6250",
+    "anthropic_zeta_record_decimal": "269/400",
+    "clean_nine_tenths_result": "10858/15625",
+    "equivalent_variance_ratio_threshold": "9807/77057",
+    "required_good_or_coherence_fraction": "77057/86864"
+  },
+  "rh_established": false,
+  "sign_resolvent_identity_proved": true,
+  "verdict": "PASS_T105300_LOW_ORDER_LEVINSON_PICK",
+  "weighted_congruence_checked": true
+}
