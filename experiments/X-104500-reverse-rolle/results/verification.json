@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "factor_two_counterexample": true,
+    "global_polynomial_conservation": 25,
+    "interval_edge_and_boundary_identities": 310,
+    "riccati_residue_identities": 25
+  },
+  "proof_object_sha256": "f855b1b266df57938d94694c624449bb895f853b7931dc8c45bff5235d533c27",
+  "schema": "riemann.t104500.xi_riccati_rolle.v1",
+  "scope": {
+    "complex_winding_transport_proved_analytically": true,
+    "fixed_scaled_box_high_derivative_real_rootedness_proved_from_ki_gunns_hughes": true,
+    "growing_original_height_box_uniformity_proved": false,
+    "real_reverse_rolle_conservation_proved": true,
+    "rh_established": false,
+    "riccati_pick_dictionary_proved": true,
+    "xi_downward_defect_transport_proved": false
+  },
+  "verdict": "PASS_T104500_XI_RICCATI_ROLLE_EXACT_ALGEBRA"
+}
