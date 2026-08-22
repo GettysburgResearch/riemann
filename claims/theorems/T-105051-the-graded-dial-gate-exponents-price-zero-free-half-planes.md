@@ -24,6 +24,11 @@ annulus (X/U, 4X/U] the truncated field of the Hardy argument and the untruncate
 field of L-102010.12 differ, with no pointwise domination. The rigorous chain is
 |B_U(X)| <= 3 Ht_U(X) (proof in Step 0 below). Ht is therefore the corrected gate
 object; every statement below uses it (and (II), (III) hold for both objects).
+This makes the reviewers' recorded required fix ("Keep support truncation before
+full-line Hardy", ARITH.VAUGHAN.HALF_DIVISOR row 43 @ 55fe0b6f; Reviewer B
+VERDICT_DELTA line 24) precise; it is a STATEMENT-PRECISION REPAIR, not a
+refutation of L-102010, whose Hardy relation is correct for the truncated field
+— and not an observed failure: numerically |B| <= 3 min(H, Ht) at all samples.
 
 For theta in (0,1) define the graded gate
 
@@ -82,7 +87,7 @@ C_T := int_2^inf |T_{U_X}| dX/X < infinity (L-100310.4, L-100311.6).
 
 Step 1 (gate -> graded negative mass). All bounds pointwise in X at the frozen
 value U = U_X (no Mellin transform of the moving-cut object is ever taken):
-(W_1)_-(X) <= |T_{U_X}(X)| + 3 H_{U_X}(X) for X > 64. Summing GATE_theta over
+(W_1)_-(X) <= |T_{U_X}(X)| + 3 Ht_{U_X}(X) for X > 64. Summing GATE_theta over
 blocks L_0 <= L <= log2 Y and absorbing finitely many small blocks:
 
     M_-(Y) := int_1^Y (W_1)_- dx/x  <=  C_2(theta) Y^theta,
@@ -140,14 +145,18 @@ H_U(X) << U^{2delta-1}(X/U) X^{eps} = X^{(1+2delta)/3+eps} at U = X^{1/3}. QED.
 - Inherited links and their review state: L-102010/T-102001.5 is
   ARITH.VAUGHAN.HALF_DIVISOR = VERIFIED_WITH_FIXES (fix "keep support truncation
   before full-line Hardy" — incorporated verbatim in Step 0; Reviewer B cross-review
-  AGREE, "Hardy norm 3 survives"); L-102009 VERIFIED; L-100310 rowed VERIFIED in the
-  2026-08-20 implication-matrix node aliases (PR 685); L-100311 is a PROVED EXACT
+  AGREE, "Hardy norm 3 survive."); L-102009 VERIFIED; L-100310 rowed VERIFIED in
+  `integration/implication-matrix/2026-08-20-node-aliases.tsv` (row IM-P07) @
+  `origin/review/gpt56-pro/101100-conjunctive-bridges` — a research-integration
+  artifact, NOT a review-wave ledger row (PR 685 has no row in the 2026-08-21
+  arithmetic CLAIMS.tsv; see T-105050 §4.3); L-100311 is a PROVED EXACT
   deposit re-derived here; the specialized Landau pattern (L-99272,
   VERIFIED_WITH_FIXES) is replaced by the self-contained Lemma A. All identity-level
   inheritances re-verified by exact rational arithmetic and numerics (verify.py:
   eta*eta = 1 and a*a*mu = h*h = b*b*1 exactly to n = 400; Vaughan identity exact;
   W_1 = T_U + B_U to 3e-14 at X = 2000; field factorization of B_U to 2e-4;
-  |B_U| <= 3H_U; Type-I decay constant ~ 13.5, stable over Y in [10, 5000];
+  |B_U| <= 3H_U; Type-I scaled residual bounded by ~13.5 in magnitude
+  (sign-oscillating below Y = 10^3, settling at 13.49 for Y >= 10^3);
   hat K_1 numeric Mellin matches the formula; hat K_1(1/2) = 0 to 5e-9).
 - What is NEW: Lemma A; theorem (I) with f(theta) = theta; (II); (III) with
   g(delta) = 1/3 + 2delta/3; sandwich (IV); the dead-band/payoff analysis; the

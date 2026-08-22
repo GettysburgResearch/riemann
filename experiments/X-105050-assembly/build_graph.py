@@ -105,9 +105,9 @@ N("L-102010", "claim", "VERIFIED_WITH_FIXES",
   "Half-divisor symmetric one-field reduction: with eta multiplicative, sum_k eta(p^k) z^k = (1-z)^{-1/2}, eta*eta=1, h_U=b_U*eta gives a_U*a_U*mu = h_U*h_U (L-102010.4); Hardy relation reduces the two fields to one: |B_U(X)| <= const * H_U(X), H_U(X)=int_U^{4X/U} |H_{U,-}(Y)|^2 dY/Y.",
   C("PR696", "L-102010", "claims/lemmas/L-102010-half-divisor-symmetric-one-field-reduction.md"),
   required_fixes=["Keep support truncation before full-line Hardy (ARITH.VAUGHAN.HALF_DIVISOR fix)"],
-  notes="File text carries constant 5 via Young; the audited version (T-102001.6, endorsed in row 43 conclusion and Reviewer B VERDICT_DELTA line 24) has sharp Hardy norm 3: |B_U(X)| <= 3 H_U(X). Defines gate HHFE102010.")
+  notes="At the pinned PR-696 head f4016db5 the file carries the SHARP Hardy constant 3 (T-102001.5, endorsed in row 43 conclusion and Reviewer B VERDICT_DELTA line 24 'Hardy norm 3 survive.'); the older copy at 89f99545 (103100 branch) carries 5 via Young. Transfer read with the truncated-field energy Ht per T-105051 Step 0 / T-105050 section 4.11. Defines gate HHFE102010.")
 N("T-102001", "claim", "CONDITIONAL_EXACT",
-  "Ratio-four two-field AND gate + sharp single-field constant: T-102001.6 gives |B_U(X)| <= 3 H_U(X); the two-energy AND gates LMTE102001 and DCTE102001 jointly imply BVD100310 and hence RH; superseded as interface by the single-field HHFE102010.",
+  "Ratio-four two-field AND gate + sharp single-field constant: T-102001.5 gives |B_U(X)| <= 3 Ht_U(X) (truncated-field energy, per the T-105051 Step 0 repair of the annulus step); the two-energy AND gates LMTE102001 and DCTE102001 jointly imply BVD100310 and hence RH; superseded as interface by the single-field HHFE102010.",
   C("PR696", "T-102001", "claims/theorems/T-102001-ratiofour-two-field-and-gate.md"),
   notes="HONEST STATUS: no separate CLAIMS.tsv row; the sharp constant 3 is audited inside ARITH.VAUGHAN.HALF_DIVISOR (row 43 conclusion 'reduce to one with Hardy norm 3') and Reviewer B VERDICT_DELTA line 24.")
 
@@ -177,11 +177,11 @@ N("L-100311", "claim", "DEPOSITED_UNREVIEWED",
 N("L-100312", "claim", "DEPOSITED_UNREVIEWED",
   "The balanced Vaughan deficit is an exact RH-equivalent terminal gate (proved conditional conclusion + converse), at U_X=floor(X^{1/3}).",
   C("PR685", "L-100312", "claims/lemmas/L-100312-balanced-vaughan-deficit-is-rh-equivalent.md"),
-  notes="No Reviewer A CLAIMS.tsv row; Mellin-Landau consumer half of BVD100310, used by T-102001.6/L-102010.14 to give HHFE102010 => RH.")
+  notes="No Reviewer A CLAIMS.tsv row; Mellin-Landau consumer half of BVD100310, used by T-102001.7/L-102010.14 to give HHFE102010 => RH.")
 
 # ---------------- gate hypothesis nodes ----------------
 N("HYP.HHFE102010", "hypothesis", "OPEN_SUFFICIENT_FOR_RH",
-  "GATE HHFE102010: with h_U=(mu 1_{n>U})*eta (eta multiplicative, sum_k eta(p^k)z^k=(1-z)^{-1/2}), A_-(y)=1 on (1,2), -sqrt(2) on (2,4), 0 else, H_{U,-}(Y)=sum_n h_U(n) n^{-1/2} A_-(Y/n), H_U(X)=int_U^{4X/U}|H_{U,-}(Y)|^2 dY/Y, U_X=floor(X^{1/3}): int_{2^L}^{2^{L+1}} H_{U_X}(X) dX/X = 2^{o(L)} as L -> infinity.",
+  "GATE HHFE102010: with h_U=(mu 1_{n>U})*eta (eta multiplicative, sum_k eta(p^k)z^k=(1-z)^{-1/2}), A_-(y)=1 on (1,2), -sqrt(2) on (2,4), 0 else, and the TRUNCATED-field energy Ht_U(X)=int_U^{4X/U}|sum_{U<n<=X/U} h_U(n) n^{-1/2} A_-(Y/n)|^2 dY/Y, U_X=floor(X^{1/3}): int_{2^L}^{2^{L+1}} Ht_{U_X}(X) dX/X = 2^{o(L)} as L -> infinity. [Read with Ht per T-105051 Step 0 / T-105050 section 4.11: the deposited untruncated form's transfer inequality has an unjustified annulus step; the proved transfer is |B_U| <= 3 Ht_U, and the L-103102 equivalence with HCNC103100 holds for the truncated object.]",
   C("PR696", "HHFE102010", "claims/lemmas/L-102010-half-divisor-symmetric-one-field-reduction.md"),
   notes="Interface node ARITH.VAUGHAN.HHFE of Reviewer A's graph (hypothesis string only — no CLAIMS.tsv row of its own; G-DANGLE repair: declared here as a typed node). Listed among 'valid sufficient open conditions' (REPORT.md @ 55fe0b6f). Equivalent to HCNC103100 after the proved diagonal (L-103101 + L-103102).")
 N("HYP.HCNC103100", "hypothesis", "OPEN_SUFFICIENT_FOR_RH",
@@ -269,7 +269,7 @@ E("E-HHFE-TO-NC", ["L-103100", "L-103101", "L-103102", "HYP.HHFE102010"], "HYP.H
   src_reva(15, [C("PR702", "L-103102 (O_+<=H)", "claims/lemmas/L-103102-fractional-nyman-and-near-collision-equivalence.md")]),
   notes="Reverse direction of the same equivalence (edge type EQUIVALENCE_AFTER_DIAGONAL asserts both): O_+ <= H since H >= 0 and D >= 0.")
 E("E-HHFE-RH", ["HYP.HHFE102010"], "RH", "CONDITIONAL_IMPLICATION",
-  src_reva(16, [C("PR696", "T-102001.6 (|B_U(X)|<=3H_U(X)) + L-102010.14", "claims/theorems/T-102001-ratiofour-two-field-and-gate.md"),
+  src_reva(16, [C("PR696", "T-102001.5 (|B_U(X)| <= 3 Ht_U(X), truncated-field energy per T-105051 Step 0) + L-102010.14", "claims/theorems/T-102001-ratiofour-two-field-and-gate.md"),
                 C("PR685", "L-100310..L-100312 (BVD100310 Type-I + Mellin-Landau consumer)", "claims/lemmas/L-100312-balanced-vaughan-deficit-is-rh-equivalent.md")]),
   notes="Reviewer A EDGE.HHFE.RH (OPEN_SUFFICIENT_FOR_RH, first_missing_input HHFE102010), exact arity 1 preserved. CAVEAT carried honestly: the mechanism lemmas L-100310..L-100312 (PR 685 @ 4f69b765...) have no Reviewer A CLAIMS.tsv rows; the implication is registered as a route edge and endorsed in REPORT.md ('HHFE102010 ... valid sufficient open conditions').")
 E("E-STAIRCASE-CFBB", ["L-102100", "L-102103", "L-102105", "HYP.CFBB102100"], "RH", "HYPEREDGE",

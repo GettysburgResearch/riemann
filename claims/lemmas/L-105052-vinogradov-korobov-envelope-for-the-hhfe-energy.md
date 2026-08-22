@@ -14,15 +14,22 @@ Notation of L-102010/L-103102: `U = floor(X^{1/3})`, `N = floor(X/U)`,
 energy `H(X) = (1/2pi) int w(gamma) |P_{U,N}(1/2+i gamma)|^2 dgamma` (L-103102.1).
 
 **(L-105052.0)** [standard input; VK/Walfisz strength; cited, not re-proved —
-EXTERNAL-CLASSICAL] For every `K >= 1` there is `c = c(K) > 0` with, uniformly
-for `|gamma| <= exp(K (log x)^{3/5})`,
+EXTERNAL-CLASSICAL: Walfisz-type twisted Möbius bound from the
+Vinogradov–Korobov zero-free region; see Walfisz, *Weylsche
+Exponentialsummen in der neueren Zahlentheorie*, and Iwaniec–Kowalski,
+*Analytic Number Theory*, Ch. 8] For every `K >= 1` there is `c = c(K) > 0`
+with, uniformly for `|gamma| <= exp(K (log x)^{3/5})`,
 
 ```
-sum_{n<=x} mu(n) n^{-i gamma} << x exp(-c (log x)^{3/5} (loglog x)^{-1/5}).
+sum_{n<=x} mu(n) n^{-i gamma} << x exp(-c (log x)^{3/5} (loglog x)^{-1/3}).
 ```
 
 [Perron for `1/zeta(s+i gamma)`, contour shift into the Vinogradov–Korobov
-zero-free region, `1/zeta << log^{2/3+eps}` there, `T = exp(K'(log x)^{3/5})`.]
+zero-free region, `1/zeta << log^{2/3+eps}` there, `T = exp(K'(log x)^{3/5})`.
+NOTE the `(loglog)^{-1/3}` exponent: in the extreme regime `|gamma|` near
+`exp(K(log x)^{3/5})` used below, the forced contour height gives VK width
+`~ (log x)^{-2/5}(loglog x)^{-1/3}`; the sharper Walfisz `(loglog)^{-1/5}` is
+NOT claimed there (hostile-review correction).]
 
 **(L-105052.1)** [exact bilinear shape; elementary] Since every divisor `d > U`
 of `n <= N` has cofactor `e = n/d < N/U`,
@@ -37,7 +44,7 @@ rough Möbius factor of length in `(U, N]` (Type-II range).
 **(L-105052.2)** [THE BOUND] Unconditionally,
 
 ```
-H(X) << X^{2/3} exp(-c (log X)^{3/5} (loglog X)^{-1/5}),
+H(X) << X^{2/3} exp(-c (log X)^{3/5} (loglog X)^{-1/3}),
 ```
 
 hence `E(L) = int_{2^L}^{2^{L+1}} H dX/X << 2^{(2/3)L} exp(-c' L^{3/5 - o(1)})`.
@@ -55,7 +62,8 @@ Total weight `int_R w = 2pi * 3 log 2` is finite, so this range contributes
 mean value on dyadic blocks `|gamma| ~ T`:
 `int_{|gamma|~T} |P(1/2+igamma)|^2 << T sum h_U^2(n)/n + sum h_U(n)^2
 << T (log N)^{O(1)} + N (log N)^{O(1)}`; the weighted sum over `T = 2^j >= Gamma_0`
-is `<< (log N)^{O(1)}/Gamma_0 + N (log N)^{O(1)}/Gamma_0^2 << N exp(-2(log N)^{3/5})`.
+is `<< (log N)^{O(1)}/Gamma_0 + N (log N)^{O(1)}/Gamma_0^2
+<< N exp(-(2-o(1))(log N)^{3/5})` (the polylog absorbed into the `o(1)`).
 Combine with `log N = (2/3) log X`. QED.
 
 Remark: this saves `exp((log X)^{3/5-o(1)})` over the trivial `alpha = 2/3`

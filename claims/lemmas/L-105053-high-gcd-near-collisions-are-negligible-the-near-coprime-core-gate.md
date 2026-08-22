@@ -83,7 +83,9 @@ BVD100310). QED (2).
 ## Sharpness and firewalls
 
 - (1) is sharp in `P`: numerically the absolute-value version of `O^{hi}(P)`
-  equals `(0.30..0.44) * P` across `X = 1e4..4e6` (replay results.json).
+  equals `(0.23..0.44) * P` across `X = 1e4..1e6` and all sampled
+  `P in {2,...,64}` (replay results.json; the extended `X = 2e6/4e6` rows
+  carry no `O^{hi}` fields).
 - The complement genuinely carries the trivial mass: the prime–prime
   subfamily (`q = 1`, skeleton = the pair itself; `h_U(p) = -1` exactly for
   every prime `p in (U, N]`) already gives absolute mass `~ c_R N/log^2 N`,

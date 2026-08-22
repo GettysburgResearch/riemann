@@ -13,11 +13,13 @@ RH status: **unproved, not addressed.**
 
 `assembly_graph.json` is the canonical machine graph of the transport
 program's route lattice to RH, built to the union of Reviewer B's
-fail-closed graph contract (CROSS_REVIEW_REPORT.md + GRAPH_DEFECTS.tsv,
+fail-closed graph contract (`review/2026-08-22/cross-b-of-a/CROSS_REVIEW_REPORT.md`
++ `review/2026-08-22/cross-b-of-a/GRAPH_DEFECTS.tsv`,
 `origin/review/2026-08-22/reviewer-b-cross-review-a` @
 `945a6eec3406cce8f6cd63eba6c69fb60676c41d`) and Reviewer C's
-path-qualified provenance mandate (INTEGRATION_HANDOFF.md +
-PROVENANCE_DEFECTS.tsv, `origin/review/2026-08-22/coverage-genealogy-delta`
+path-qualified provenance mandate (`review/2026-08-22/coverage/INTEGRATION_HANDOFF.md`
++ `review/2026-08-22/coverage/PROVENANCE_DEFECTS.tsv`,
+`origin/review/2026-08-22/coverage-genealogy-delta`
 @ `a520556ac7f30290a11e1fcba7b6f6a24269153e`). `validator.py` is its
 deterministic, stdlib-only, fail-closed checker. This file is the contract
 a future integrator must honor to EXTEND either.
@@ -71,9 +73,17 @@ source_coordinates, trust_mode, notes?}`.
   - An `EQUIVALENCE_AFTER_DIAGONAL` equivalence is stored as its TWO
     directed instances, each with its own mechanism premises — never as
     an undirected edge.
-- `trust_mode in {strict, deposited}`: `strict` = every mechanism claim
-  has a review-wave ledger row; `deposited` = at least one mechanism is
-  deposit-only. Strict-mode results are the citable ones.
+- `trust_mode in {strict, deposited}`: `strict` = the EDGE ITSELF is
+  reviewer-registered (a ROUTE_EDGES row at the frozen review SHA), with
+  any mechanism-lemma ledger-row gaps recorded as provenance defects on
+  the edge (never silently promoted — e.g. `E-HHFE-RH` is registered as
+  ROUTE_EDGES line 16 while its mechanism lemmas L-100310..312 lack
+  CLAIMS.tsv rows, a gap carried in the edge notes and
+  `provenance_defects`); `deposited` = the edge registration itself is
+  deposit-only (e.g. T-102110). Strict-mode results are the citable
+  ones, WITH the recorded mechanism-gap defects disclosed alongside.
+  (Amended per hostile review: the prior wording "every mechanism claim
+  has a review-wave ledger row" contradicted the E-HHFE-RH instance.)
 - `source_coordinates`: array of four-field coordinates pinning the
   reviewer registration (ROUTE_EDGES line) AND the mathematical source.
 - Refuted historical edges (e.g. EDGE.NATIVE.ALPHA_PROMOTION) are NOT

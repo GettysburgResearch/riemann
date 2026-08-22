@@ -55,9 +55,12 @@ classwise positivity or invariant-cone arguments cannot close the gate.
 
 **(O-105054.4)** [heuristic layer; LABELED HEURISTIC — data, no claim]
 Numerically (`X in [1e4, 4e6]`, exact objects, Gram identity replayed to
-≤ 2.1e-14): `O_signed` stays in `[-2.87, -2.12]` with NO growth over 2.6
+≤ 2.1e-14): `O_signed` stays in `[-2.88, -2.11]` with NO growth over 2.6
 decades while `O_abs` grows to 4844 at `X = 4e6` (cancellation factor
-`5.9e-4`); `H(X)` oscillates in `[0.52, 1.01]`. Together with the dial lane's
+`5.9e-4`); `H(X)` oscillates in `[0.51, 1.01]`. The extended `X = 2e6/4e6`
+rows were produced by re-running `hhfe_energy.py` with the `Xs` list
+extended (noted in ANALYSIS.md; the staged script's default list ends at
+`1e6`). Together with the dial lane's
 block-exponent scan (`T-105051` scope: fitted exponents 0.021/0.042 vs trivial
 0.667 over `L = 8..26`), the gate `HHFE102010` is TRUE-shaped at moderate `X`.
 Data only; certifies nothing beyond the sampled range.

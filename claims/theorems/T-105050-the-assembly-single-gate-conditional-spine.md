@@ -49,14 +49,17 @@ every singleton `{gate}` is a solution (validator result (iii)).
 > `eta` is `zeta(z)^{1/2}`). Let `b_U(n) = mu(n) 1_{n>U}`,
 > `h_U = b_U * eta`, `A_-(y) = 1` on `(1,2)`, `-sqrt(2)` on `(2,4)`, `0`
 > else, `H_{U,-}(Y) = sum_n h_U(n) n^{-1/2} A_-(Y/n)`,
-> `H_U(X) = int_U^{4X/U} |H_{U,-}(Y)|^2 dY/Y`, and `U_X = floor(X^{1/3})`.
-> Then the gate asserts:
+> `Ht_U(X) = int_U^{4X/U} |sum_{U<n<=X/U} h_U(n) n^{-1/2} A_-(Y/n)|^2 dY/Y`
+> (the TRUNCATED-field energy — read with `Ht` per §4.11 and `T-105051`
+> Step 0; the deposited untruncated `H_U` form's transfer inequality has
+> an unjustified annulus step), and `U_X = floor(X^{1/3})`. Then the
+> gate asserts:
 >
-> `int_{2^L}^{2^{L+1}} H_{U_X}(X) dX/X = 2^{o(L)}` as `L -> infinity`.
+> `int_{2^L}^{2^{L+1}} Ht_{U_X}(X) dX/X = 2^{o(L)}` as `L -> infinity`.
 >
-> **If HHFE102010 holds, then RH holds** (sharp transfer
-> `|B_U(X)| <= 3 H_U(X)`, T-102001.6, then the Type-I + Mellin–Landau
-> consumer BVD100310).
+> **If HHFE102010 (read with Ht) holds, then RH holds** (sharp transfer
+> `|B_U(X)| <= 3 Ht_U(X)`, T-102001.5 as repaired in `T-105051` Step 0,
+> then the Type-I + Mellin–Landau consumer BVD100310).
 
 Equivalent form after the proved subpower diagonal (`L-103101`,
 `L-103102`): `HHFE102010 <=> HCNC103100`, where
@@ -162,8 +165,8 @@ All `ROUTE_EDGES` citations are
    `D = N^{o(1)}`, `L-103101`/`L-103102`), PR 702 @
    `89f995450977c3590aada0c1447a7e6af7fcd9ac`.
 7. **E-HHFE-RH** `[HHFE102010] -> RH`. Source: ROUTE_EDGES line 16
-   (`EDGE.HHFE.RH`, OPEN_SUFFICIENT_FOR_RH) + mechanism T-102001.6
-   (`|B_U(X)| <= 3 H_U(X)`) @
+   (`EDGE.HHFE.RH`, OPEN_SUFFICIENT_FOR_RH) + mechanism T-102001.5
+   (`|B_U(X)| <= 3 Ht_U(X)`, truncated-field energy per §4.11) @
    `claims/theorems/T-102001-ratiofour-two-field-and-gate.md`, PR 696 @
    `f4016db5...db77d`, + BVD100310 consumer `L-100310..L-100312` @
    `claims/lemmas/L-10031{0,1,2}-*.md`, PR 685 @
@@ -222,7 +225,9 @@ theorem over the cited edges; nothing more).
 6. **T-102001 has no separate ledger row**; the sharp constant 3 is
    endorsed inside ARITH.VAUGHAN.HALF_DIVISOR (row 43: "the two fields
    reduce to one with Hardy norm 3") and Reviewer B VERDICT_DELTA line 24
-   ("Hardy norm 3 survives"). The L-102010 file text carries constant 5.
+   ("Hardy norm 3 survive."). At the pinned PR-696 head `f4016db5` the
+   L-102010 file carries the sharp constant 3; the older copy at
+   `89f99545` (103100 branch) carries constant 5 via Young.
 7. **105xxx context nodes** (T-105000, O-105010, L-105031, L-105032,
    T-105040 @ `claude/riemann-proof-review-8nz34i` tip
    `e81eaca5c93e833fd465dd3917f9dce03e57fc04`) are deposited-unreviewed,
@@ -280,7 +285,7 @@ theorem over the cited edges; nothing more).
   frozen SHA (per FREEZE.json identity keys) removes the corresponding
   edge; single-gate sufficiency must then be recomputed — in particular a
   refutation of L-103101 (subpower diagonal) severs the
-  HHFE <=> HCNC equivalence, and a refutation of T-102001.6/BVD100310
+  HHFE <=> HCNC equivalence, and a refutation of T-102001.5/BVD100310
   severs E-HHFE-RH, demoting HHFE from the spine.
 - A proof that some gate is FALSE (e.g. `liminf` of the dyadic-block
   energy grows like a power of `2^L`) kills that gate's edges but no

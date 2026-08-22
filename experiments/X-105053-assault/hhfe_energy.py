@@ -11,7 +11,7 @@ Outputs results.json with, per X:
   O_hi(P) for P in Plist (signed + abs), prime-prime class (signed + abs),
 plus kernel constants (hatA_-(1/2), int R e^{v/2}, int |R| e^{v/2}, w1).
 """
-import json, math, sys
+import json, math, os, sys
 import numpy as np
 
 H2 = math.log(2.0)
@@ -180,7 +180,12 @@ def kernel_constants():
             "w1_min_on_[1,2]": w1, "R0": 3 * H2}
 
 def main():
+    # results_ext.json was produced by extending this list with 2e6, 4e6
+    # (set HHFE_EXT=1 to reproduce; O^hi fields are computed only for the
+    # default list — the ext rows carry the O/D/H aggregates alone).
     Xs = [10**4, 2 * 10**4, 4 * 10**4, 10**5, 2 * 10**5, 4 * 10**5, 10**6]
+    if os.environ.get("HHFE_EXT"):
+        Xs += [2 * 10**6, 4 * 10**6]
     Plist = [2, 4, 8, 16, 32, 64]
     Nmax = 0
     setups = []

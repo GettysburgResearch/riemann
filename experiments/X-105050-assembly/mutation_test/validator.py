@@ -188,15 +188,27 @@ def closure(assumed, mode):
 
 results = {}
 
+# Fail-closed check helper: NEVER a bare assert (bare asserts vanish under
+# `python3 -O`, turning the validator fail-open — hostile-review finding).
+# Every failed check is recorded and forces a FAIL verdict + exit 1, with
+# verdict.json ALWAYS written.
+check_errors = []
+def req(cond, msg):
+    if not cond:
+        check_errors.append(msg)
+
 # (i) proved-only reachability: no hypothesis assumed; must not reach RH, and
 # must not establish any hypothesis node, in BOTH trust modes.
+_po_reaches_rh = False
 for mode in ("strict", "deposited"):
     cl = closure(set(), mode)
     results.setdefault("proved_only", {})[mode] = sorted(cl)
-    assert "RH" not in cl, "proved-only reachability reached RH (%s mode) — REJECT" % mode
+    if "RH" in cl:
+        _po_reaches_rh = True
+    req("RH" not in cl, "proved-only reachability reached RH (%s mode) — REJECT" % mode)
     leaked = [h for h in HYPS if h in cl]
-    assert not leaked, "hypotheses established from nothing: %s" % leaked
-results["proved_only_reaches_RH"] = False
+    req(not leaked, "hypotheses established from nothing: %s" % leaked)
+results["proved_only_reaches_RH"] = _po_reaches_rh  # computed, never hardcoded
 
 # (ii) conditional reachability: each gate alone
 cond = {}
@@ -204,8 +216,8 @@ for h in HYPS:
     cond[h] = {m: ("RH" in closure({h}, m)) for m in ("strict", "deposited")}
 results["conditional_rh"] = cond
 suff_strict = sorted([h for h in HYPS if cond[h]["strict"]])
-assert set(GATES) <= set(suff_strict), \
-    "some declared gate does not suffice alone (strict): %s" % (set(GATES) - set(suff_strict))
+req(set(GATES) <= set(suff_strict),
+    "some declared gate does not suffice alone (strict): %s" % (set(GATES) - set(suff_strict)))
 results["gates_each_sufficient_strict"] = suff_strict
 
 # (iii) minimal open cut (strict mode)
@@ -216,7 +228,7 @@ for k in range(1, len(HYPS) + 1):
     if sols:
         mincut = {"cardinality": k, "solutions": sols}; break
 results["minimal_open_cut"] = mincut
-assert mincut and mincut["cardinality"] == 1, "minimal open cut is not a single gate"
+req(bool(mincut) and mincut["cardinality"] == 1, "minimal open cut is not a single gate")
 
 # (iv) gate partial order (g => h iff h in closure({g}))
 def porder(mode):
@@ -254,32 +266,40 @@ def hasse(rel):
 
 results["hasse"] = {m: hasse(order[m]) for m in ("strict", "deposited")}
 
-# sanity assertions on the expected lattice
+# sanity checks on the expected lattice (fail-closed via req, not assert)
 oS = order["strict"]; oD = order["deposited"]
-assert "HYP.HHFE102010" in oS["HYP.BPOE103300"], "BPOE => HHFE missing (strict)"
-assert "HYP.HCNC103100" in oS["HYP.HHFE102010"] and "HYP.HHFE102010" in oS["HYP.HCNC103100"], \
-    "HHFE <=> HCNC equivalence missing (strict)"
-assert "HYP.ROWS23" in oS["HYP.FCHD67"], "FCHD67 => ROWS23 missing (strict)"
-assert "HYP.CFBB102100" in oD["HYP.HCNC103100"], "HCNC => CFBB missing (deposited)"
-assert "HYP.CFBB102100" not in oS["HYP.HCNC103100"], \
-    "HCNC => CFBB must NOT be reviewer-backed (T-102110 unrowed) — honesty check"
+req("HYP.HHFE102010" in oS["HYP.BPOE103300"], "BPOE => HHFE missing (strict)")
+req("HYP.HCNC103100" in oS["HYP.HHFE102010"] and "HYP.HHFE102010" in oS["HYP.HCNC103100"],
+    "HHFE <=> HCNC equivalence missing (strict)")
+req("HYP.ROWS23" in oS["HYP.FCHD67"], "FCHD67 => ROWS23 missing (strict)")
+req("HYP.CFBB102100" in oD["HYP.HCNC103100"], "HCNC => CFBB missing (deposited)")
+req("HYP.CFBB102100" not in oS["HYP.HCNC103100"],
+    "HCNC => CFBB must NOT be reviewer-backed (T-102110 unrowed) — honesty check")
 
+FAILED = bool(check_errors) or bool(errors)
 verdict = {
-    "verdict": "PASS",
-    "rh_status": "UNPROVED — proved-only reachability does not reach RH in either trust mode",
+    "verdict": "FAIL" if FAILED else "PASS",
+    "rh_status": ("VALIDATION FAILED — see errors/check_errors" if FAILED else
+                  "UNPROVED — proved-only reachability does not reach RH in either trust mode"),
     "counts": {"nodes": len(nodes), "edges": len(edges), "aliases": len(aliases),
                "hypotheses": len(HYPS), "coordinates_checked": len(new_record)},
     "offline": OFFLINE,
-    "errors": errors, "warnings": warnings,
+    "errors": errors, "check_errors": check_errors, "warnings": warnings,
     "results": results,
 }
 with open(os.path.join(D, "verdict.json"), "w") as f:
     json.dump(verdict, f, indent=1)
 
+if FAILED:
+    for m in check_errors:
+        print("CHECK-FAIL | %s" % m)
+    print("FAIL | verdict.json written with verdict=FAIL")
+    sys.exit(1)
+
 # ---------- REPORT.md ----------
 L = []
 L.append("# Assembly-graph validator report (Lane A1)\n")
-L.append("Verdict: **PASS** (all structural, provenance and reachability asserts green; %s mode)\n" %
+L.append("Verdict: **PASS** (all structural, provenance and reachability checks green — fail-closed `req` checks, immune to `python3 -O`; %s mode)\n" %
          ("offline" if OFFLINE else "online git verification"))
 L.append("RH status: **UNPROVED**. Proved-only reachability (open/conditional/equivalent/refuted/"
          "unreviewed material excluded) does NOT reach RH in either trust mode — matching Reviewer B's "

@@ -81,7 +81,7 @@ contract. This deposit:
 - Fitted block exponents of the gate energy over `L = 8..26`: 0.021
   (untruncated) / 0.042 (truncated) — versus converse floor 0.333 and
   trivial 0.667. LABELED HEURISTIC.
-- `O_signed in [-2.87, -2.12]` over 2.6 decades while `O_abs` reaches 4844:
+- `O_signed in [-2.88, -2.11]` over 2.6 decades while `O_abs` reaches 4844:
   cancellation factor 5.9e-4 at X = 4e6.
 - `w_1 = 0.3804` on `[1,2]`; `c_R = 1.9682`; second moment −0.3364.
 

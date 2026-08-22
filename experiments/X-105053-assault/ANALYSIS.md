@@ -122,7 +122,7 @@ is blind to the mu-structure of the coefficients.
 
 ### L-A4.4 (twisted Mobius input; standard). There are c > 0, C such that
 uniformly for x >= 3 and |gamma| <= exp((log x)^{3/5}),
-  M(x, gamma) := sum_{n<=x} mu(n) n^{-i gamma} << x exp(-c (log x)^{3/5} (loglog x)^{-1/5}).
+  M(x, gamma) := sum_{n<=x} mu(n) n^{-i gamma} << x exp(-c (log x)^{3/5} (loglog x)^{-1/3}).
 Standard proof (sketch; Walfisz-strength, as for M(x)): Perron for
 1/zeta(s + i gamma) at sigma_0 = 1 + 1/log x, truncation T; shift to
 sigma_1 = 1 - c_1 (log(T + |gamma| + 3))^{-2/3} (loglog)^{-1/3}, inside the
@@ -133,9 +133,9 @@ x exp(-c (log x)^{3/5 - o(1)}). [Cited as standard: Walfisz; Iwaniec–Kowalski
 Ch. 8 exercise-level extension of Thm 8.29 replay. Not re-proved from scratch.]
 
 ### T-A4.5 (unconditional VK bound for the gate energy). Unconditionally
-  H_{U_X, N_X}(X) << X^{2/3} exp(-c (log X)^{3/5} (loglog X)^{-1/5}),
+  H_{U_X, N_X}(X) << X^{2/3} exp(-c (log X)^{3/5} (loglog X)^{-1/3}),
 hence
-  E(L) << 2^{(2/3)L} exp(-c' L^{3/5} (log L)^{-1/5}),  c' > 0 absolute.
+  E(L) << 2^{(2/3)L} exp(-c' L^{3/5} (log L)^{-1/3}),  c' > 0 absolute.
 This SAVES an exp((log)^{3/5-o(1)}) factor over the trivial alpha = 2/3
 bound but is NOT a power saving.
 
@@ -191,7 +191,7 @@ bookkeeping.
 
 ### O-A4.6 (the wall lemma — what full power saving would mean). w(gamma) >=
 w_1 > 0 on gamma in [1,2] (explicit: w has zeros only at gamma in
-(2pi/log2) Z on the imaginary axis; on [1,2] its minimum is positive,
+(2pi/log2) Z \\ {0} on the imaginary axis (w(0) = ((sqrt2-1) log 2)^2 != 0); on [1,2] its minimum is positive,
 numerically w_1 = min_{[1,2]} w > 0, computed in code). Hence for any
 delta > 0, a bound E(L) << 2^{(2/3-delta)L} would give, for most X ~ 2^L,
   int_1^2 |P_{U,N}(1/2+igamma)|^2 dgamma << X^{2/3-delta} = N^{1-(3/2)delta+o(1)},
@@ -295,7 +295,7 @@ Findings (labels: [P] = proved-consistent check, [H] = heuristic data):
     HHFE102010 TRUE-shaped in this range; empirical H compatible with
     2^{o(L)}, indeed with O(polylog) or even O(1). NOT a proof.
 (d) [P] O_hi(P) (high-gcd family): signed values all in [-1.5, 0.8] for
-    P <= 64 at every X; absolute version O_hi_abs(P)/P = 0.30..0.44
+    P <= 64 at every X; absolute version O_hi_abs(P)/P = 0.23..0.44 (0.30..0.44 at P=2; measured to X=1e6 only)
     (X=1e6: P=8: 2.54, P=16: 4.79, P=32: 10.13, P=64: 22.00) — LINEAR in P,
     exactly the proved L-A4.7 envelope P*polylog; the bound is sharp in P.
 (e) [H] Core: O_core(8) signed = -2.28 .. -2.75 (bounded), abs ~ 2105 at

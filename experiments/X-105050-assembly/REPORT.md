@@ -1,6 +1,6 @@
 # Assembly-graph validator report (Lane A1)
 
-Verdict: **PASS** (all structural, provenance and reachability asserts green; online git verification mode)
+Verdict: **PASS** (all structural, provenance and reachability checks green — fail-closed `req` checks, immune to `python3 -O`; online git verification mode)
 
 RH status: **UNPROVED**. Proved-only reachability (open/conditional/equivalent/refuted/unreviewed material excluded) does NOT reach RH in either trust mode — matching Reviewer B's strict cross-review parser sanity result (@ 945a6eec).
 
