@@ -3,6 +3,7 @@
 Claim ID: `L-105212`  
 Status: **PROVED UNCONDITIONALLY**  
 Created: 2026-08-23  
+Audited: 2026-08-23  
 Depends on: `L-104522`; `L-105207`  
 RH status: **not assumed**
 
@@ -220,9 +221,9 @@ Combining with (L-105212.9),
 
 \[
 \boxed{
-1-\mathfrak C
+R(1-\mathfrak C)
 \le
-{\Lambda_{2a}(0)\over RM_2}
+{\Lambda_{2a}(0)\over M_2}
 \left[
 R\operatorname{tr}K^{(b)}
 -\mathbf1^TK^{(b)}\mathbf1
@@ -230,13 +231,20 @@ R\operatorname{tr}K^{(b)}
 }
 \tag{L-105212.11}
 
-This is a concrete same-height sufficient estimate for residue coherence.
-It may be optimized over every split `a+b=k`.
+This is the scale relevant to wrong-extremum **integrality**.  By `L-104522`,
 
-## 5. New low-order target
+\[
+E\le R(1-\mathfrak C).
+\tag{L-105212.12}
+\]
 
-Define `ESDE105212` to be the statement that, at the required fixed low
-Xi derivative levels and regular height windows,
+Therefore a bound merely proving `mathfrak C=1-o(1)` is insufficient when
+`R->infinity`; one needs the right side of (L-105212.11) to be strictly below
+one in order to force `E=0`.
+
+## 5. Two distinct quantitative targets
+
+The weaker coherence target is
 
 \[
 \boxed{
@@ -245,25 +253,44 @@ Xi derivative levels and regular height windows,
 R\operatorname{tr}K^{(b)}
 -\mathbf1^TK^{(b)}\mathbf1
 \right]
-=o(RM_2)
+=o(RM_2).
 }
-\tag{ESDE105212}
+\tag{ESDC105212}
 
-for one admissible split `a+b=k`, together with `M_1>0`.
-
-Then
+It implies
 
 \[
-\mathrm{ESDE105212}
-\Longrightarrow
 \mathfrak C=1-o(1),
 \]
 
-and the residue-coherence component of the low-order reverse-Rolle descent is
-closed at that level.
+but not the absence of a last wrong extremum.
 
-Unlike the original opaque moment statement, `ESDE105212` is one explicit
-positive near-collision energy built from:
+The conclusion-facing **extinction** target is
+
+\[
+\boxed{
+\Lambda_{2a}(0)
+\left[
+R\operatorname{tr}K^{(b)}
+-\mathbf1^TK^{(b)}\mathbf1
+\right]
+<M_2.
+}
+\tag{ESDE105212}
+
+Together with `M_1>0`, (L-105212.11)--(L-105212.12) give
+
+\[
+R(1-\mathfrak C)<1,
+\qquad
+E=0.
+\tag{L-105212.13}
+
+Thus `ESDE105212` is a literal sufficient theorem for excluding the
+positive-residue last event at that derivative level.
+
+Unlike the original opaque moment statement, both targets are explicit
+positive near-collision energies built from:
 
 ```text
 actual real critical-point separations c_j-c_i;
@@ -274,7 +301,12 @@ and one fixed source norm Lambda_(2a)(0).
 
 ## 6. Scope
 
-The theorem does not prove `ESDE105212`.  Curvature weights can be large and
-critical points can cluster.  Source-blind estimates of the diagonal recover
-a power loss.  The advance is the exact positive Gram coordinate in which the
-remaining same-height residue-dispersion theorem must be proved.
+Neither `ESDC105212` nor `ESDE105212` is proved.  Curvature weights can be
+large and critical points can cluster.  Source-blind estimates of the diagonal
+recover a power loss.  Moreover the complete pairwise Gram distance can be
+much larger than its rank-one residue projection, so `ESDE105212` may be a
+strong sufficient condition rather than the optimal formulation.
+
+The unconditional advance is the exact positive Gram coordinate and the
+correct subunit threshold.  No asymptotic coherence statement is promoted to
+last-defect extinction without the additional factor `R`.
