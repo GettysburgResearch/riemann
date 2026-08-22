@@ -96,6 +96,7 @@ Then, uniformly in the whole band and over every such zero,
 =-\alpha_m\bigl(1+O_\eta(\delta_N)\bigr).
 }
 \tag{L-105203.8}
+\]
 
 ### Proof
 
@@ -151,8 +152,8 @@ so
 \boxed{
 \alpha_m=w_m^{-2}(1+o_\eta(1)).
 }
-\tag{L-105203.11
-}
+\tag{L-105203.11}
+\]
 
 ## 2. First and second residue moments
 
@@ -181,6 +182,7 @@ Equation (L-105203.8) gives
 \bigl(1+O_\eta(\delta_N)\bigr),
 }
 \tag{L-105203.12}
+\]
 
 and
 
@@ -191,6 +193,7 @@ and
 \bigl(1+O_\eta(\delta_N)\bigr).
 }
 \tag{L-105203.13}
+\]
 
 In particular all critical residues in the band are negative for sufficiently
 large `N`; every real critical point is Rolle-generating.
@@ -206,6 +209,7 @@ The residue coherence of `L-104523` satisfies
 =1-O_\eta(\delta_N).
 }
 \tag{L-105203.14}
+\]
 
 A completely explicit lower bound follows whenever
 
@@ -219,6 +223,7 @@ A completely explicit lower bound follows whenever
 \ge\left(\frac{1-\delta}{1+\delta}\right)^2.
 }
 \tag{L-105203.15}
+\]
 
 Thus `RCMV104530` holds unconditionally throughout the high derivative band,
 with the transfer constant
@@ -228,6 +233,7 @@ with the transfer constant
 2\mathfrak C_m(T_N)-1=1-O_\eta(\delta_N).
 }
 \tag{L-105203.16}
+\]
 
 ## 4. Meaning and scope
 
