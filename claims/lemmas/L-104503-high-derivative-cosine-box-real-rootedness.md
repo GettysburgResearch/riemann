@@ -62,12 +62,25 @@ G_n^{(j)}(z)
 
 uniformly on compact subsets, simultaneously for `0<=j<=J`.
 
-Applying the same Rouche argument gives:
+Let `Omega` now be a bounded conjugation-symmetric Jordan domain whose boundary
+contains no zero of any of the finitely many functions
+
+\[
+\cos^{(j)}z,
+\qquad 0\le j\le J.
+\]
+
+Applying the fixed-box Rouche argument separately and simultaneously to these
+`J+1` compact convergences gives
 
 \[
 \boxed{
-\text{For every fixed scaled box and fixed finite derivative depth, all
-sufficiently high Xi derivatives have only simple real zeros in that box.}
+\begin{aligned}
+&\text{for every fixed scaled box satisfying the displayed boundary condition}\
+&\text{and every fixed finite derivative depth }J,\text{ all sufficiently high}\
+&\text{Xi derivatives }\Xi^{(2n+j)},\ 0\le j\le J,\text{ have only simple real}\
+&\text{zeros in }C_n\Omega.
+\end{aligned}
 }
 \tag{L-104503.2}
 \]
