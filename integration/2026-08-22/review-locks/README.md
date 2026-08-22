@@ -1,0 +1,16 @@
+# Frozen review locks
+
+The integration consumes these exact objects and no moving branches:
+
+| Role | PR | Exact head | Scope |
+|---|---:|---|---|
+| main |  | `677203992eb0168920365ee45ae9db76bfa97dcf` | frozen integration base |
+| reviewer_b | 708 | `eb1987502ef9043e782ac6ab1e19c47be9daef93` | primary operator/Xi/heat/Q4 review |
+| reviewer_a | 709 | `55fe0b6f23d9163e2b602608da84194ba243d7c4` | primary arithmetic/native-source review |
+| cross_a_of_b | 710 | `e91d6aa25d2e8576e82d26170127941eec430f75` | cross-review of Reviewer B |
+| cross_b_of_a | 711 | `945a6eec3406cce8f6cd63eba6c69fb60676c41d` | cross-review of Reviewer A; science content head 27784928fbcecff975bc947e13c3a30d3b630ce0 |
+| coverage_c | 712 | `a6aa936ba8bf538177e34af60db7e2f0a58f8dfd` | 341-PR census, 171 issues, targeted review completed |
+| direct_main_b | 717 | `dad61b954dd8404520631058d1ce717e7a910a3b` | 85 direct-main commits classified |
+| reconciliation_d | 721 | `06c8ea18ffe20c7efa01b0fdacb8ebea0a2b5b22` | final reconciled registry |
+
+Reviewer D is the normative reconciliation. Earlier reviews remain preserved as independent evidence and are not overwritten by the final verdict columns.
