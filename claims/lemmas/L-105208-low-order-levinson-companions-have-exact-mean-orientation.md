@@ -92,7 +92,6 @@ Plancherel yields the exact formulas
 =A_k(y)-2\lambda C_k(y)+\lambda^2B_k(y).
 }
 \tag{L-105208.5}
-\]
 
 Therefore
 
@@ -158,7 +157,6 @@ It is maximized at
 =\sqrt{A_k(y)/B_k(y)}.
 }
 \tag{L-105208.10}
-\]
 
 The optimal value is the ordinary correlation coefficient
 
@@ -180,7 +178,6 @@ At this parameter,
  1+\mathfrak H_{k,y}^{\rm opt}}.
 }
 \tag{L-105208.12}
-\]
 
 So the low-order companion has one exact source-determined best first-order
 Levinson scale.  This is not selected after a hypothetical zero.
