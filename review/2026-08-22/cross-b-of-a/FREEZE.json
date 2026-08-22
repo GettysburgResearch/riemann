@@ -1,26 +1,65 @@
 {
+  "allowed_checks": [
+    "exact Fraction and symbolic identities",
+    "source SHA/path/claim provenance inspection",
+    "py_compile",
+    "small hostile fixtures",
+    "packet and graph method inspection"
+  ],
   "audited_review": {
-    "aliases_blob_sha": "e3fef5beb711f70a095177845e9d239c4762092c",
-    "claims_blob_sha": "59642121df866b8dc726be65c626ebf464f29890",
-    "computations_blob_sha": "d5bf3efdff4a343aee726d9528f1af35e17fbd76",
+    "branch": "review/2026-08-21/arithmetic-native-implication",
+    "claim_rows": 68,
     "head_sha": "55fe0b6f23d9163e2b602608da84194ba243d7c4",
+    "paths": [
+      "review/2026-08-21/arithmetic/CLAIMS.tsv",
+      "review/2026-08-21/arithmetic/ROUTE_EDGES.tsv",
+      "review/2026-08-21/arithmetic/ALIASES.tsv",
+      "review/2026-08-21/arithmetic/REFUTATIONS.tsv",
+      "review/2026-08-21/arithmetic/COMPUTATIONS.tsv",
+      "review/2026-08-21/arithmetic/FIXES.md",
+      "review/2026-08-21/arithmetic/REPORT.md",
+      "review/2026-08-21/arithmetic/INTEGRATION_HANDOFF.md",
+      "review/2026-08-21/arithmetic/replay/"
+    ],
     "pr": 709,
-    "route_edges_blob_sha": "7c6b1c30426dd7c19e6a349b3063d29bc0dc55cf"
+    "route_edges": 23
   },
-  "comparison_only": {
+  "cross_review_branch": "review/2026-08-22/reviewer-b-cross-review-a",
+  "frozen_main_sha": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "heavy_computations_rerun": false,
+  "not_claimed": [
+    "complete repository coverage",
+    "new RH closure research",
+    "independent replay of billion-scale or 10^8 scans",
+    "independent replay of Target-Lorenz campaigns",
+    "major formal build"
+  ],
+  "output_prefix": "review/2026-08-22/cross-b-of-a",
+  "overlap_comparison_only": {
     "head_sha": "eb1987502ef9043e782ac6ab1e19c47be9daef93",
     "pr": 708
   },
-  "heavy_computations_rerun": false,
+  "relationship_to_parallel_reviews": {
+    "reviewer_a_cross_review_of_b": "parallel, not awaited",
+    "reviewer_c": "owns exhaustive coverage/genealogy/computation-delta census",
+    "reviewer_d": "future reconciliation"
+  },
   "repository": "gfreund123/riemann",
-  "review_base_sha": "677203992eb0168920365ee45ae9db76bfa97dcf",
-  "review_branch": "review/2026-08-22/reviewer-b-cross-review-a",
-  "rules": [
-    "Preserve Reviewer A original verdict beside cross-verdict.",
-    "Do not modify PR #708 or #709.",
-    "Do not infer scientific validity from structural PASS.",
-    "Do not enumerate full repository; flag exact omission candidates for Reviewer C."
-  ],
-  "schema": "riemann.cross-review.reviewer-b-of-a.v1",
-  "scientific_status": "RH remains unproved"
+  "review_date": "2026-08-22",
+  "review_identity": "Reviewer B independent cross-review of Reviewer A",
+  "scientific_status": "RH_UNPROVED",
+  "verdict_vocabulary": [
+    "AGREE_VERIFIED",
+    "AGREE_VERIFIED_WITH_FIXES",
+    "STRENGTHEN_TO_VERIFIED",
+    "WEAKEN_TO_VERIFIED_WITH_FIXES",
+    "WEAKEN_TO_CONDITIONAL",
+    "WEAKEN_TO_GAP",
+    "OVERTURN_FALSE",
+    "AGREE_OPEN_SUFFICIENT",
+    "AGREE_OPEN_RH_EQUIVALENT",
+    "AGREE_REFUTED",
+    "MISSED_CLAIM_CANDIDATE",
+    "INTEGRATOR_DECISION_REQUIRED"
+  ]
 }
