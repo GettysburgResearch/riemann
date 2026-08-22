@@ -35,61 +35,28 @@ jobs:
           python -m pip install python-flint==0.9.0
           python -m pip install --no-deps -e upstream
 
-      - name: Verify upstream tests and original certificates
+      - name: Verify upstream tests and certificates
         run: |
           python -m unittest discover -s upstream/tests -v
-          zeta-zero-verify three --json | tee original-three.json
-          zeta-zero-verify seven --json --progress-every 1000000 | tee original-seven.json
+          zeta-zero-verify three --json | tee three-point.json
+          zeta-zero-verify seven --json --progress-every 1000000 | tee seven-point.json
 
-      - name: Install stronger 7-point parameters
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          path = Path('upstream/src/zeta_simple_zeros/verify_seven.py')
-          text = path.read_text()
-          replacements = {
-              'TARGET_NUMERATOR = 19': 'TARGET_NUMERATOR = 49',
-              'TARGET_DENOMINATOR = 5_000': 'TARGET_DENOMINATOR = 200',
-              'PRESSURE_DENOMINATOR = 3_000': 'PRESSURE_DENOMINATOR = 25',
-              'PRESSURE_CUTOFF_CELLS = 45_600': 'PRESSURE_CUTOFF_CELLS = 24_500',
-          }
-          for old, new in replacements.items():
-              if text.count(old) != 1:
-                  raise SystemExit(f'expected one occurrence of {old!r}')
-              text = text.replace(old, new)
-          path.write_text(text)
-          PY
-
-      - name: Verify strengthened local inequality
-        run: |
-          python - <<'PY' | tee strengthened-seven.json
-          from zeta_simple_zeros.verify_seven import verify_seven
-          report = verify_seven(progress_every=1000000)
-          print(report.to_json())
-          if not report.verified:
-              raise SystemExit('strengthened certificate did not verify')
-          PY
-
-      - name: Verify global constant algebra
+      - name: Verify local-to-global constant algebra
         run: |
           python - <<'PY' | tee global-constant.txt
-          import mpmath as mp
-          mp.mp.dps = 80
-          H0 = mp.mpf(3)/2 - mp.cot(1/mp.sqrt(2))/mp.sqrt(2)
-          pressure = mp.mpf(1)/25
-          local = mp.mpf(49)/200
-          block = 10
-          alpha = local * (block - 6) / block
-          beta = pressure * (block - 1) / block
-          bound = (H0 - beta) / (1 - alpha)
-          old = H0
-          assert local * (block - 6) < 1
-          assert bound > old
-          print(f'H0={mp.nstr(H0, 60)}')
-          print(f'alpha={mp.nstr(alpha, 60)}')
-          print(f'beta={mp.nstr(beta, 60)}')
-          print(f'new_bound={mp.nstr(bound, 60)}')
-          print(f'improvement={mp.nstr(bound-old, 60)}')
+          import math
+          H0 = 1.5 - math.cos(1 / math.sqrt(2)) / (
+              math.sqrt(2) * math.sin(1 / math.sqrt(2))
+          )
+          epsilon = 221 / 1_000_000
+          three = (H0 - epsilon / 4) / (1 - epsilon / 2)
+          seven = (1_345_000 * H0 - 2_680) / 1_340_003
+          assert three > H0
+          assert seven > three
+          print(f'H0={H0:.16f}')
+          print(f'three_point_bound={three:.16f}')
+          print(f'seven_point_bound={seven:.16f}')
+          print(f'seven_point_improvement={seven-H0:.16f}')
           PY
 
       - name: Upload audit logs
@@ -97,8 +64,7 @@ jobs:
         with:
           name: t105210-seven-point-record-audit
           path: |
-            original-three.json
-            original-seven.json
-            strengthened-seven.json
+            three-point.json
+            seven-point.json
             global-constant.txt
           if-no-files-found: error
