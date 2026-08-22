@@ -1,0 +1,5 @@
+semantic_id	source_pr	source_head_sha	source_path	source_claim_id	final_verdict	required_fix
+DIRECTMAIN.MELLIN.L96000	MAIN	677203992eb0168920365ee45ae9db76bfa97dcf	claims/lemmas/L-96000-fixed-row-mellin-transform-of-the-full-mobius-spline.md	L-96000	VERIFIED_WITH_FIXES	Separate convergence, continuation, and producer positivity.
+DIRECTMAIN.MELLIN.L96001	MAIN	677203992eb0168920365ee45ae9db76bfa97dcf	claims/lemmas/L-96001-the-row-kernels-cannot-cancel-an-open-strip-zero.md	L-96001	VERIFIED_WITH_FIXES	State the all-row producer quantifier; prefer fixed rows 2,3 or fixed 5:3 canonically.
+OPEN.DIRECTMAIN.MELLIN.ALL_ROWS	MAIN	677203992eb0168920365ee45ae9db76bfa97dcf	claims/theorems/T-96000-prime-sieved-row-positivity-directly-implies-rh.md	T-96000 producer premise	OPEN_SUFFICIENT_FOR_RH	Do not infer this from PR #537 FRONTIER-CHAIN.
+DIRECTMAIN.MELLIN.T96000	MAIN	677203992eb0168920365ee45ae9db76bfa97dcf	claims/theorems/T-96000-prime-sieved-row-positivity-directly-implies-rh.md	T-96000	GAP_BLOCKED	Extract L-96000/L-96001 only.

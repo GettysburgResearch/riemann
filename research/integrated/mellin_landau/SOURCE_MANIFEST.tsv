@@ -1,0 +1,13 @@
+semantic_id	source_pr	source_head_sha	source_path	source_claim_id	final_verdict	required_fix
+CONSUMER.MELLIN.FIXED_ROW	652	24ab64551225f2dba9aa53a533eb9b0285c6e363	claims/lemmas/L-99602-exact-two-row-mellin-landau-consumer.md	L-99602	VERIFIED_WITH_FIXES	State z=s+1/2, finite abscissa, positive-real removability, and multiplicity.
+CONSUMER.MELLIN.TWO_ROW	652	24ab64551225f2dba9aa53a533eb9b0285c6e363	claims/lemmas/L-99602-exact-two-row-mellin-landau-consumer.md	L-99602	VERIFIED	
+CONSUMER.MELLIN.FIVE_THREE	649	433fd3662f7b2e4ba384ce64f196380e88624090	claims/lemmas/L-99261-five-three-row-zero-free-mellin-witness.md	L-99261	VERIFIED	
+CONSUMER.MELLIN.ANNULAR_ROWS23	547	d60f93b0e207a83a283fb229eb988aa4c404765d	claims/lemmas/L-96010-fixed-annular-row-reciprocal-zeta-mellin-transform.md|claims/lemmas/L-96011-exact-two-row-open-strip-noncancellation.md	L-96010/L-96011	VERIFIED_WITH_FIXES	Use the corrected P_Lambda normalization and split the two source files.
+CONSUMER.MELLIN.ZERO_SAFE_BOX	653	e928fd615d753882706bb88c51b717bd8d4a86ba	claims/lemmas/L-99270-zero-free-smoothing-and-negative-mass.md	L-99270	VERIFIED	
+CONSUMER.MELLIN.SPECIALIZED_LANDAU	653	e928fd615d753882706bb88c51b717bd8d4a86ba	claims/lemmas/L-99272-specialized-landau-and-scalar-firewall.md	L-99272	VERIFIED_WITH_FIXES	State local integrability, nonzero density, finite abscissa, and functional-equation reflection.
+CONSUMER.MELLIN.HOLOMORPHIC_DEFECT	650	3f9e80f09fe1f595927ea7dce6fb49ac68c5c21b	claims/lemmas/L-99282-holomorphic-perturbation-landau-transfer.md	L-99282	VERIFIED_WITH_FIXES	Keep source, row, and signed defect fixed; do not relabel the defect as positive source.
+API.MELLIN.SUBPOWER_NEGATIVE_MASS	653	e928fd615d753882706bb88c51b717bd8d4a86ba	claims/lemmas/L-99270-zero-free-smoothing-and-negative-mass.md|claims/lemmas/L-99272-specialized-landau-and-scalar-firewall.md	L-99270/L-99272	VERIFIED_WITH_FIXES	Represent the arithmetic estimate as a separate open premise.
+CONSUMER.MELLIN.MOVING_ROW_SELECTION	641	19cd3939a54ccea73b055b3952b5dd7ed638c4fb	claims/lemmas/L-99242-positive-surrogate-preserves-reciprocal-zeta-poles.md	L-99242/T-99240	GAP_BLOCKED	Replace with fixed rows 2,3 or the fixed 5:3 scalar.
+OPEN.ARITH.ROWS23_NATIVE	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.ARITH.ROWS23_NATIVE	OPEN_SUFFICIENT_FOR_RH	
+OPEN.ARITH.FIVE_THREE_NEGATIVE_MASS	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.ARITH.FIVE_THREE_NEGATIVE_MASS	OPEN_SUFFICIENT_FOR_RH	
+OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS	0	0000000000000000000000000000000000000000	review/2026-08-22/reconciliation/OPEN_CUTS.md	OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS	OPEN_SUFFICIENT_FOR_RH	

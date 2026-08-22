@@ -1,0 +1,7 @@
+semantic_id	source_pr	source_head_sha	source_path	source_claim_id	final_verdict	required_fix
+ARITH.OWNER.DOUBLE_OWNER_COBBOUNDARY	695	5b549abb560e87718f1977d72bf6d3a18165af90	claims/lemmas/L-100700-double-owner-mixed-coboundary-and-rectangle-telescope.md	L-100700	VERIFIED	
+ARITH.CVXD.CARRIER_PRESERVATION	699	f23dd81748562dfa2a73f86aecfb9fcd3e2b32b9	claims/lemmas/L-101101-carrier-preserving-short-long-projection.md|claims/lemmas/L-101102-exact-sharp-to-minimal-wavelet-derivative-bridge.md	L-101101/L-101102	VERIFIED	
+ARITH.VAUGHAN.LARGE_DIVISOR	696	f4016db548afceb31b150547cb6cd48b4cddb77d	claims/lemmas/L-102001-balanced-vaughan-large-divisor-hankel-form.md	L-102001	VERIFIED	
+ARITH.VAUGHAN.HALF_DIVISOR	696	f4016db548afceb31b150547cb6cd48b4cddb77d	claims/lemmas/L-102009-ratiofour-two-field-factorization-of-balanced-vaughan.md|claims/lemmas/L-102010-half-divisor-symmetric-one-field-reduction.md	L-102009/L-102010	VERIFIED_WITH_FIXES	Use product AB in the Cauchy gate and truncate before applying the full-line Hardy inequality.
+ARITH.VAUGHAN.HAAR_GRAM_DIAGONAL	702	89f995450977c3590aada0c1447a7e6af7fcd9ac	claims/lemmas/L-103100-exact-half-completed-haar-gram.md|claims/lemmas/L-103101-diagonal-is-unconditionally-subpower.md	L-103100/L-103101	VERIFIED	
+OPEN.ARITH.HCNC	702	89f995450977c3590aada0c1447a7e6af7fcd9ac	claims/lemmas/L-103102-fractional-nyman-and-near-collision-equivalence.md	HCNC103100	OPEN_SUFFICIENT_FOR_RH	
