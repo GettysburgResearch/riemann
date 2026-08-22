@@ -1,65 +1,142 @@
-# M-105200 — Hostile review contract for the natural-scale Xi residue programme
+# M-105200 — Hostile review contract for the Xi natural-endpoint and low-order Levinson programme
 
 Claim ID: `M-105200`  
 Status: **REVIEW PROTOCOL**  
 Created: 2026-08-23  
+Updated: 2026-08-23  
 RH status: **unproved**
 
-Review the packet in the following order:
+## Review order
 
-1. `L-105200`: complex Gaussian saddle law;
-2. `L-105201`: natural-height Rouché theorem;
-3. `L-105202`: critical-residue asymptotics;
-4. `L-105203`: exact coherence-defect budget;
-5. `R-105200`: quantifier and boundary firewalls;
-6. exact finite replay;
-7. `T-105200`: conclusion graph and remaining gate.
+1. `R-105201`: verify the exact scope correction to `CRDB105200`;
+2. `L-105206`: verify the endpoint quotient and top-boundary telescopes;
+3. `L-105207`: verify the exterior-square Fourier Gram signs and conventions;
+4. `L-105208`: verify the linewise norm and phase sum identities;
+5. `L-105211`: verify the completed-zeta/Levinson factorization;
+6. exact `X-105210` replay and retained result;
+7. `L-105200--L-105205`: natural-scale high-tail analysis;
+8. `L-105209`: complete safe-ray two-tilt saddle;
+9. `T-105200/T-105210`: conclusion graph and remaining gates.
 
-## Mandatory analytic checks
+## Binding logical audit
+
+The reviewer must independently reconstruct
+
+\[
+\mathcal D_r
+=O_0+2\sum_{j<r}
+\left[R_j(1-\mathfrak C_j)-E_j\right].
+\]
+
+Reject any wording which counts `CRDB105200` itself as an independent
+low-order estimate.  It is a sufficient zero-count ledger, not a producer.
+
+The boundary telescope must use one fixed `lambda` across the finite ladder.
+If different derivative-level parameters are inserted, the exact quotient
+cancellation is lost and every transition factor must be restored.
+
+## Exterior-square Gram checks
+
+Reject `L-105207` unless the reviewer verifies:
+
+- the Hilbert-space inner-product convention;
+- the factors `(-1)^a` in the exterior vectors;
+- the identity
+  \[
+  <omega_(a,t),omega_(b,s)>=Lambda_(a+b)(s-t);
+  \]
+- Hermitian symmetry for mixed derivative indices and translations;
+- the Fourier formula, including the factor `pi` and the coordinate
+  `-u(xi-u)` which makes the Hankel sequence a positive moment sequence;
+- that positive definiteness does **not** imply pointwise positivity away from
+  the origin.
+
+The central positivity interval must be derived from the spectral second
+moment and not treated as a global Laguerre theorem.
+
+## Mean-orientation checks
+
+For `L-105208`, verify directly from the two-sided Xi Fourier kernel that on
+`z=x-iy`
+
+```text
+E     has multiplier (iu)^k(1+lambda u)e^(yu);
+E#    has multiplier (iu)^k(1-lambda u)e^(yu).
+```
+
+The exact norm difference must be
+
+\[
+4\lambda C_k(y)>0.
+\]
+
+The optimal parameter and reflected/forward norm ratio must follow by ordinary
+one-variable optimization.  Reject any promotion from line-averaged dominance
+to pointwise Hermite--Biehler dominance.
+
+The phase sum rule must retain the amplitude weight `|E|^2`; deleting it is a
+false localization.
+
+## Natural-scale high-tail checks
 
 Reject `L-105200` unless the proof supplies:
 
 - one uniform dominant saddle for the positive Xi kernel;
 - curvature and third/fourth derivative estimates on the standardized scale;
 - exponentially negligible tails after bounded complex exponential tilting;
-- relative, not merely additive, control of the one-sided Fourier transform on
-  the full natural box;
-- derivative control obtained on a strictly larger complex parameter disk.
+- relative, not merely additive, control of the one-sided Fourier transform;
+- derivative control from a strictly larger complex parameter disk.
 
-Reject `L-105201` unless:
+Reject `L-105201/L-105202` upon any hidden exchange of fixed derivative order
+and growing height, missing buffer, or replacement of an actual critical point
+by a model point without `C^2` control.
 
-- the Gaussian multiplier is retained and shown nonzero;
-- Rouché is applied cellwise with a uniform complement lower bound;
-- the common box is uniform over every `m>=M`;
-- reality follows from conjugation plus multiplicity one, not from a numerical
-  scan.
+## Complete safe-ray checks
 
-Reject `L-105202` upon any:
+`L-105209` is the most vulnerable new analytic claim.  Reject it unless all of
+the following are proved uniformly for `y>=0`:
 
-- replacement of a zero of `Xi^(m+1)` by a model critical point without a
-  `C^2` localization argument;
-- use of the same real-box boundary for the approximation and residue sum
-  without an explicit buffer;
-- hidden exchange of the limits `m->infinity` and height `T->infinity`;
-- claim that the global PR #723 second-moment ledger directly localizes in
-  height.
+1. a unique positive tilted saddle and a variance bound no worse than the
+   untilted variance;
+2. a non-cancelling lower bound for `P_(r,y)(T)` under `T sigma_r ->0`;
+3. exact use of the cancellation
+   \[
+   \int u^rPhi(u)(1-u/mu_r)du=0;
+   \]
+4. a three-region proof that the reflected term and its first derivative are
+   uniformly negligible;
+5. a narrow-sector bound for `G_r/G_(r+1)`, not merely nonvanishing of `E_r`;
+6. no use of the fixed-order Stirling/Bell-polynomial estimate with a
+   derivative order growing like `T^2 log T`.
 
-## Mandatory logical checks
+The smallest failure invalidating the complete safe-ray theorem is failure of
+the uniform reflected-to-positive ratio (L-105209.15).
 
-- `mathfrak C` controls wrong extrema only through
-  `E<=R(1-mathfrak C)`.
-- The Xi rectangle ledger must retain every `B_j+W_j-1` term.
-- A fixed transfer constant `c<1` may not be iterated through
-  `O(T^2 log T)` steps as though it were lossless.
-- High-tail coherence is not fixed-order coherence.
-- Finite polynomial identities are not entire-function limit theorems.
+## Levinson factorization checks
+
+For `L-105211`, verify
+
+\[
+xi+lambda xi'
+=H(1+lambda h)
+\left[zeta+{lambda\over1+lambda h}zeta'\right].
+\]
+
+The safe-line nonvanishing of `1+lambda h` must be uniform on the stated
+horizontal ray and use a correct digamma/Stirling estimate.  The factorization
+must not be described as a bound for the argument of the zeta auxiliary.
 
 ## Replay boundary
 
-The exact replay authenticates only rational polynomial fixtures, Sturm root
-counts, the Gaussian-model residue formula, and transfer algebra. It does not
-authenticate the Xi saddle analysis or RH.
+`X-105200` and `X-105210` authenticate only finite rational/Gaussian-rational
+algebra.  They do not machine-prove:
 
-The smallest failure invalidating the new analytic advance is failure of the
-uniform complex Gaussian limit (L-105200.4) at fixed standardized frequency.
-The smallest conclusion-facing open statement is `CRDB105200`.
+- the Xi Fourier integral or its analytic limit passages;
+- `L-105200--L-105202`;
+- `L-105205` or `L-105209`;
+- fixed-height localization `HLOC105210`;
+- the last positive-residue exclusion;
+- RH.
+
+The smallest conclusion-facing open statement is `HLOC105210`, together with
+the separate last positive-residue exclusion of PR #720.
