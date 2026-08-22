@@ -1,0 +1,9 @@
+claim_id	short_statement	mathematical_type	status	rh_relationship	first_open_interface	notes
+R-104500	unit-cost Laguerre-defect reverse Rolle is false	REFUTATION	VERIFIED	none		quartic and 2+cos counterexamples
+L-104500	exact adjacent-edge and factor-two real conservation	UNCONDITIONAL THEOREM	VERIFIED	route infrastructure		generic/simple hypotheses explicit
+L-104501	exact off-real zero transport with boundary winding	UNCONDITIONAL THEOREM	VERIFIED	route infrastructure		one common conjugation-symmetric domain
+L-104502	Riccati/Pick/Laguerre derivative dictionary	UNCONDITIONAL THEOREM	VERIFIED	route infrastructure		order-three safe-line Pick is not automatically imported
+L-104503	fixed-scaled-box high Xi derivatives have simple real zeros	UNCONDITIONAL THEOREM	VERIFIED	route infrastructure	growing-box uniformity	from Ki/Gunns-Hughes compact cosine limit
+GBOX104500	cosine approximation on expanding scaled rectangles	CONDITIONAL IMPLICATION	UNPROVEN / GAP	sufficient with RPCH	quantitative saddle uniformity	must be Rouche-safe on all cells
+RPCH104500	cumulative Riccati-Pick edge/winding charge below two	CONDITIONAL IMPLICATION	UNPROVEN / GAP	RH-bearing	all-order source-locked transport	integer-valued local defect
+T-104500	GBOX and RPCH imply RH	PROPOSED COMPLETE THEOREM	VERIFIED CONDITIONAL	sufficient for RH	GBOX104500 + RPCH104500	RH unproved
