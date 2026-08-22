@@ -258,11 +258,13 @@ def inertia(a: list[list[F]]) -> tuple[int, int, int]:
         if j != 1:
             swap_rows_cols(a, 1, j)
         b = a[0][1]
+        # Diagonals are zero in this branch, so the 2x2 pivot has inertia (1,1).
         pos += 1
         neg += 1
         if n == 2:
             a = []
             continue
+        # Inverse of [[0,b],[b,0]] is [[0,1/b],[1/b,0]].
         rest = zero_matrix(n - 2)
         for r in range(2, n):
             for s in range(2, n):
@@ -270,6 +272,8 @@ def inertia(a: list[list[F]]) -> tuple[int, int, int]:
                 rest[r - 2][s - 2] = a[r][s] - correction
         a = rest
     return pos, neg, zero
+
+
 
 
 def evaluate_polynomial(a: list[F], x: F) -> F:
@@ -289,7 +293,6 @@ def residue_moment_matrix(p: list[F], critical_roots: list[F]) -> list[list[F]]:
             for j in range(m):
                 out[i][j] -= rho * c ** (i + j)
     return out
-
 
 def principal_submatrix(a: list[list[F]], indices: tuple[int, ...]) -> list[list[F]]:
     return [[a[i][j] for j in indices] for i in indices]
@@ -313,7 +316,6 @@ def weight_multiplication_matrix(p: list[F], weight: list[F]) -> list[list[F]]:
     modulus = scale(dp, 1 / dp[-1])
     xmat = multiplication_x(modulus)
     return evaluate_matrix_polynomial(mod_poly(weight, modulus), xmat)
-
 
 def content_hashes() -> dict[str, str]:
     out: dict[str, str] = {}
@@ -355,6 +357,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
+    # Coefficients are ascending.
     all_real = fixture(
         "x^3-3x+3/2",
         [F(3, 2), F(-3), F(0), F(1)],
@@ -378,6 +381,7 @@ def main() -> None:
     )
     require(weighted["inertia"] == all_real["inertia"], "polynomial congruence changed inertia")
 
+    # Verify the actual quotient-algebra congruence B_w = W^T B W.
     p_all_real = [F(3, 2), F(-3), F(0), F(1)]
     h0, _ = trace_form(p_all_real)
     h1, _ = trace_form(p_all_real, [F(2), F(1)])
@@ -385,11 +389,16 @@ def main() -> None:
     wmat = weight_multiplication_matrix(p_all_real, [F(2), F(1)])
     require(matmul(transpose(wmat), matmul(b0, wmat)) == b1, "weighted trace form is not an exact congruence")
 
+    # Direct fixed-window contour residues reproduce the same critical moment
+    # matrix on rational-root fixtures.
     require(residue_moment_matrix(p_all_real, [F(-1), F(1)]) == b0, "entire-window residue moment matrix mismatch")
     quartic_p = [F(2), F(0), F(-2), F(0), F(1)]
     quartic_h, _ = trace_form(quartic_p)
     require(residue_moment_matrix(quartic_p, [F(-1), F(0), F(1)]) == critical_block(quartic_h), "quartic residue moment matrix mismatch")
 
+    # Every source-blind compression gives a safe lower bound for the full
+    # reverse-Rolle signature. Check every principal compression in three
+    # hostile root configurations.
     compression_checks = 0
     for payload_fixture, pcoeffs in (
         (all_real, p_all_real),
@@ -407,14 +416,18 @@ def main() -> None:
                 require(lower <= expected, f"compression overclaims for {payload_fixture['name']} at {indices}")
                 compression_checks += 1
 
+    # A weight sharing a critical factor is not a valid preconditioner: it
+    # creates a null direction. This protects the coprimality hypothesis.
     singular_weight_h, _ = trace_form(p_all_real, [F(-1), F(1)])
     require(inertia(singular_weight_h)[2] > 0, "non-coprime weight failed to create the expected degeneracy")
 
-    rho_minus = F(-7, 12)
-    rho_plus = F(-1, 12)
+    # Exact all-real coherence counterexample.
+    rho_minus = F(-7, 12)  # -(C+2)/6 at C=3/2
+    rho_plus = F(-1, 12)   # (C-2)/6 at C=3/2
     coherence = (-(rho_minus + rho_plus)) ** 2 / (F(2) * (rho_minus**2 + rho_plus**2))
     require(coherence == F(16, 25), "coherence counterexample mutated")
 
+    # Exact record bridge constants.
     p1 = F(86864, 100000)
     alpha = F(67250, 100000)
     threshold = (F(1) + alpha / p1) / 2
