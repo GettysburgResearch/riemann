@@ -3,6 +3,7 @@
 Claim ID: `L-105205`  
 Status: **PROPOSED COMPLETE UNCONDITIONAL ANALYTIC THEOREM — INDEPENDENT REVIEW REQUIRED**  
 Created: 2026-08-23  
+Audited: 2026-08-23  
 Depends on: `L-105200--L-105204`; PR #723 `L-105101`  
 RH status: **not assumed**
 
@@ -39,10 +40,11 @@ C_0\sqrt{M/\log M}
 \]
 
 and separated by `c/w_m` from the model zeros of both the first and second
-derivatives. The Gaussian approximation and Rouché localization then give the
-same separation from the actual zeros after reducing `c` once. The horizontal
-edges at `Im z=+-eta` contain no derivative zero because every zero in the
-larger box is real.
+derivatives. Such a point exists because the two model zero sets interlace on
+spacing `pi/(2w_m)`. The Gaussian approximation and Rouché localization give
+the same separation from the actual zeros after reducing `c` once. The
+horizontal edges at `Im z=+-eta` contain no derivative zero because every zero
+in the larger box is real.
 
 Let
 
@@ -100,23 +102,28 @@ Consider the Gaussian trigonometric model
 \[
 f(x)=e^{-v x^2/2}\chi(wx),
 \qquad v=s_m^2,
-]
-
-where `chi` is sine or cosine. Write
-
-\[
-r={\chi'(wx)\over\chi(wx)}.
 \]
 
-At a real zero of `f''`, the exact equation is
+where `chi` is sine or cosine. At a noncentral zero of `f''`, write
+
+\[
+r={\chi'(wx)\over\chi(wx)},
+\]
+
+where `chi'` denotes differentiation in its argument. The exact equation is
 
 \[
 -v-w^2+v^2x^2-2vwxr=0.
 \tag{L-105205.5}
 \]
 
-On the natural box, `vx^2=O(1)` and `v/w^2=o(1)`. Equation (L-105205.5)
-therefore implies
+On the natural box, `vx^2=O(1)` and `v/w^2=o(1)`. Since
+
+\[
+1+r^2={1\over|\chi(wx)|^2}
+\]
+
+for both sine and cosine, (L-105205.5) implies
 
 \[
 |\chi(wx)|\ll {\sqrt v\over w},
@@ -127,9 +134,21 @@ therefore implies
 \tag{L-105205.6}
 \]
 
+For the odd model, the central zero `x=0` of `f''` also has `f(0)=0`; its debt
+residue is zero and may be omitted from (L-105205.6).
+
 The order-three approximation `L-105200.10` transfers these estimates to
-`F_m` at every actual zero of `F_m''`, with an additional relative error
-`delta_M=o(1)`. Consequently each debt residue satisfies
+`F_m` at every actual zero of `F_m''`. Let `delta_M=o(1)` denote the uniform
+normalized `C^3` error. Then
+
+\[
+|F_m(d)|
+\ll
+\left(\delta_M+{\sqrt v\over w}\right)e^{-vd^2/2},
+\]
+
+while `|F_m'(d)|` and `|F_m'''(d)|` retain lower bounds of order
+`w e^(-vd^2/2)` and `w^3e^(-vd^2/2)`. Consequently each debt residue satisfies
 
 \[
 \left|
@@ -144,7 +163,7 @@ There are `O(R_m)` such zeros. Hence
 
 \[
 \boxed{
-D_m=o\!left({R_m\over w_m^4}\right)
+D_m=o\!\left({R_m\over w_m^4}\right)
 }
 \tag{L-105205.8}
 \]
@@ -181,6 +200,7 @@ B_{2,m}
 ={R_m\over w_m^4}(1+o(1)).
 }
 \tag{L-105205.9}
+\]
 
 uniformly for `m>=M`.
 
@@ -194,6 +214,7 @@ Combining (L-105205.3) and (L-105205.9),
 =1-o(1).
 }
 \tag{L-105205.10}
+\]
 
 Thus the asymptotically optimal residue coherence can be read directly from
 the two oriented rectangle fluxes. The nonreal squared-residue correction is
