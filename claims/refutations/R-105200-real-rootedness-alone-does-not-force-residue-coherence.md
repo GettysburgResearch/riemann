@@ -35,6 +35,7 @@ Hence every residue is negative and
 =\left(\sum_z\frac1{(c-z)^2}\right)^{-1}>0.
 }
 \tag{R-105200.2}
+\]
 
 Let `c_R` be the critical point in `(2,R)`. Put `c_R=lambda_R R`. Its critical
 equation is
@@ -54,6 +55,7 @@ so
 \[
 \boxed{\lambda_R\longrightarrow\frac34.}
 \tag{R-105200.3}
+\]
 
 Using (R-105200.2),
 
@@ -63,6 +65,7 @@ Using (R-105200.2),
 =\frac{3}{64}R^2(1+o(1)).
 }
 \tag{R-105200.4}
+\]
 
 The two remaining critical points converge to the two critical points of
 `x(x-1)(x-2)`, and their residue magnitudes remain bounded. Thus, with the
@@ -85,8 +88,8 @@ The residue coherence is consequently
 \frac{(-\sum_j\rho_j)^2}{3\sum_j\rho_j^2}
 \longrightarrow\frac13.
 }
-\tag{R-105200.5
-}
+\tag{R-105200.5}
+\]
 
 Therefore a polynomial may be completely real-rooted, with every critical
 point Rolle-generating, while the two-moment coherence remains below the
