@@ -1,0 +1,27 @@
+{
+  "schema": "riemann-source-lock-v1",
+  "repository": "gfreund123/riemann",
+  "main_head_at_start": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "base_head_at_branch_creation": "2766ae43de19934a7fcf0cebeb4d1114813b73d7",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "namespace": "105300",
+  "parent_programmes": [
+    "PR #716 original-height Xi high-derivative entry",
+    "PR #720 reverse-Rolle residue coherence and first moment",
+    "PR #723 critical-residue second moment",
+    "T-105200 natural-scale Xi residue programme"
+  ],
+  "exact_replay": {
+    "verdict": "PASS_X_105300_CRITICAL_RESIDUE_QUOTIENT_ALGEBRA",
+    "proof_object": "3a61bc251360b0d165f30b405c3b6d2ec68bdccc1e133e69f9807ad188f7536c",
+    "analytic_saddle_replayed": false
+  },
+  "review_required": [
+    "L-105301 contour deformation and uniform tails",
+    "L-105302 cubic-phase Rouche complement",
+    "entire-function localization of finite quotient moments"
+  ],
+  "crdb105200_proved": false,
+  "rh_established": false
+}
