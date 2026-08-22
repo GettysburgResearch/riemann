@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "antiderivative_interval": [
+      "-2/3",
+      "2/3"
+    ],
+    "growing_box_products": [
+      0.3808374892492403,
+      0.34323285688728006,
+      0.31881477030842464
+    ],
+    "laguerre_positive_cubic_discriminant": -76,
+    "phase_identity_fixtures": 3,
+    "quartic_wrong_extrema": 2
+  },
+  "proof_object_sha256": "9a2cd3958fc3c31a439150a313dc0f4952f7eff8b5d05b0b9ceffd7a05a35b7e",
+  "schema": "riemann.t104510.hermite_biehler_last_defect.v1",
+  "scope": {
+    "antiderivative_interval_proved": true,
+    "hermite_biehler_index_proved_analytically": true,
+    "phase_identity_proved": true,
+    "pres104515_proved": false,
+    "rh_established": false,
+    "rpch_independent_producer": false,
+    "strip_invariance_proved_analytically": true,
+    "vflux104515_proved": false
+  },
+  "verdict": "PASS_T104510_HERMITE_BIEHLER_LAST_DEFECT_ALGEBRA"
+}
