@@ -1,0 +1,61 @@
+{
+  "analytic_gaussian_saddle_replayed": false,
+  "classification": "PASS_T105200_NATURAL_WINDOW_RESIDUE_RIGIDITY",
+  "coherence_fixtures": [
+    {
+      "coherence": "1",
+      "values": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "coherence": "15000/15001",
+      "values": [
+        "99/100",
+        "1",
+        "101/100"
+      ]
+    },
+    {
+      "coherence": "845/852",
+      "values": [
+        "7/8",
+        "9/8",
+        "1",
+        "17/16"
+      ]
+    }
+  ],
+  "exact_model_residue_rows": 66,
+  "integration_constant_firewall": {
+    "C=0": [
+      "-1/3",
+      "-1/3"
+    ],
+    "C=1": [
+      "1/6",
+      "-5/6"
+    ]
+  },
+  "mutations_rejected": [
+    "zero_count_called_residue_coherence",
+    "adjacent_derivative_orders_omitted",
+    "natural_window_replaced_by_little_o_window",
+    "moment_ratio_replaced_by_untyped_frequency_fit",
+    "high_band_result_called_fixed_order_descent",
+    "rh_established_by_light_replay"
+  ],
+  "natural_window_surrogate_drift": [
+    0.03228260579816178,
+    0.008754006326077602,
+    0.0024615948781459645,
+    0.0007078676629450146
+  ],
+  "proof_object_sha256": "3433b71b7b1823233a98f5c257eb308b7ee7afc63d6e8a360fc6b54b161f28bc",
+  "rcmv_high_band_proved_by_replay": false,
+  "rh_established": false,
+  "schema": "riemann.x105200.xi-residue-rigidity.v1",
+  "xi_numerics_run": false
+}

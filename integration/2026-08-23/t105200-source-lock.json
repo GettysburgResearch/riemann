@@ -1,0 +1,27 @@
+{
+  "schema": "riemann.t105200.source-lock.v1",
+  "created": "2026-08-23",
+  "base_pr": 723,
+  "base_branch": "codex/105100-residue-second-moment",
+  "base_sha": "fd3ef43a6964e502f00ad906482eae5b3c544fba",
+  "integrated_main_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "external_dependencies": {
+    "pr716": "a1d2387c4a1416c3f220a16fae849e6eab620545",
+    "pr720": "10bba584c01277e880aaa21e1fea09f396ca7246"
+  },
+  "claims": [
+    "L-105200",
+    "L-105201",
+    "R-105200",
+    "T-105200"
+  ],
+  "analytic_gaussian_saddle_replayed": false,
+  "heavy_computation_run": false,
+  "rh_established": false,
+  "base_claims": [
+    "L-105100",
+    "L-105101",
+    "T-105100",
+    "T-105101"
+  ]
+}
