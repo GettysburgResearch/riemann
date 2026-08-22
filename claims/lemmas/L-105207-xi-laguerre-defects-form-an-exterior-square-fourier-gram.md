@@ -3,6 +3,7 @@
 Claim ID: `L-105207`  
 Status: **PROVED UNCONDITIONALLY**  
 Created: 2026-08-23  
+Audited: 2026-08-23  
 Depends on: the classical positive Fourier kernel of Xi  
 RH status: **not assumed**
 
@@ -24,8 +25,7 @@ Put
 
 \[
 F_m(t)=\Xi^{(m)}(t)
-=
-\int_{\mathbb R}(iu)^m\varphi(u)e^{itu}\,du
+=\int_{\mathbb R}(iu)^m\varphi(u)e^{itu}\,du
 \tag{L-105207.2}
 \]
 
@@ -50,7 +50,8 @@ Let
 \mathcal H=L^2(\mathbb R,\varphi(u)du)
 \]
 
-and, for an integer `a>=0` and real `t`, define
+with inner product linear in the first argument, and, for an integer `a>=0`
+and real `t`, define
 
 \[
 v_{a,t}(u)=u^a e^{-itu}.
@@ -121,7 +122,6 @@ Every two-by-two principal minor of (L-105207.6) gives
 \Lambda_{2a}(0)\Lambda_{2b}(0).
 }
 \tag{L-105207.7}
-\]
 
 More generally, for arbitrary compactly supported test functions `g_a`,
 
@@ -134,7 +134,6 @@ More generally, for arbitrary compactly supported test functions `g_a`,
 \ge0.
 }
 \tag{L-105207.8}
-\]
 
 Taking all `g_a` to be scalar multiples of one function proves that every
 autocorrelation-windowed Hankel matrix
@@ -157,7 +156,6 @@ is positive semidefinite.  In particular, the triangular/Fejer window gives
 \qquad(T>0).
 }
 \tag{L-105207.9}
-\]
 
 Thus every derivative order participates in one unconditional averaged
 Laguerre/Pick hierarchy.
@@ -185,16 +183,29 @@ direct convolution gives
 \tag{L-105207.10}
 \]
 
-For fixed `xi`, this is the signed moment sequence of the positive measure
+For fixed `xi`, define the real coordinate
+
+\[
+X_\xi(u)=-u(\xi-u)
+\]
+
+and the positive measure
 
 \[
 d\mu_\xi(u)
 =
 \pi(2u-\xi)^2
-\varphi(u)\varphi(\xi-u)\,du
+\varphi(u)\varphi(\xi-u)\,du.
 \]
 
-under the real coordinate `X=u(xi-u)`.  Hence every Fourier-side Hankel matrix
+Then
+
+\[
+\widehat\Lambda_m(\xi)
+=\int X_\xi(u)^m\,d\mu_\xi(u).
+\]
+
+Hence every Fourier-side Hankel matrix
 
 \[
 \boxed{
@@ -204,7 +215,6 @@ under the real coordinate `X=u(xi-u)`.  Hence every Fourier-side Hankel matrix
 \succeq0.
 }
 \tag{L-105207.11}
-\]
 
 The diagonal terms satisfy
 
@@ -222,7 +232,6 @@ and the first nontrivial Schur inequality is
 \widehat\Lambda_{2a+2}(\xi).
 }
 \tag{L-105207.12}
-\]
 
 This controls every odd derivative defect by its two adjacent even defects
 before physical localization.
@@ -254,7 +263,6 @@ spectral measure has second moment
 >0.
 }
 \tag{L-105207.14}
-\]
 
 Using `cos x >= 1-x^2/2` in the Bochner representation,
 
@@ -266,7 +274,6 @@ Using `cos x >= 1-x^2/2` in the Bochner representation,
 \left(1-{\Delta_m t^2\over2}\right).
 }
 \tag{L-105207.15}
-\]
 
 Therefore
 
@@ -277,7 +284,6 @@ Therefore
 \Lambda_m(t)>0.
 }
 \tag{L-105207.16}
-\]
 
 At a zero of `F_(m+1)`, a wrong extremum would have `Lambda_m<0`.
 Consequently every even Xi derivative has an explicit unconditional central
