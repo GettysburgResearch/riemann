@@ -1,0 +1,23 @@
+{
+  "schema": "riemann.t102770.centered-radial-source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "predecessor_head": "8039764bba6a5fb63f3f1a39e410ad6fa28b3c60",
+  "dependencies": {
+    "pr715_common_mother": "99cc94c48bafd9b96141f7cef9f1e7aa83012747",
+    "pr718_completion_defect": "41a087387812e89ce800c59f43582799fee24782",
+    "t102760_full_filtered_disk": "8039764bba6a5fb63f3f1a39e410ad6fa28b3c60"
+  },
+  "proof_object_sha256": "81b0dd0137345439b21b7dcc6fc62fbe8f62ec33ec2bf71132607c8f21df1562",
+  "proved": [
+    "exact common carrier cX",
+    "ratio-eight support after centering",
+    "sublinear radial source gauge",
+    "endpoint homotopy compression",
+    "four-octave source localization",
+    "one-octave contraction below 0.689"
+  ],
+  "open_gate": "OERSC102770",
+  "rh_established": false
+}
