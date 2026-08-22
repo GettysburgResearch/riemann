@@ -56,19 +56,25 @@ The minimal wavelet theorem (#674), spectral-abscissa theorem (#675) and Abel–
 
 Rows with unresolved exact heads or frozen paths are not silently filled from stale PR prose. They are explicitly searchable in `PR_CENSUS.tsv` by `TARGETED_REVIEW_STILL_REQUIRED`, and corresponding provenance defects appear in `PROVENANCE_DEFECTS.tsv`. This is a provenance incompleteness, not a claim that the mathematics is false.
 
-## Status counts
+## Status counts after pass one
 
 - `ADMINISTRATIVE_TEST`: 7
-- `CONTROLLED_BY_LATER_REFUTATION`: 18
-- `CONTROLLED_BY_LATER_REVIEW`: 59
+- `CONTROLLED_BY_LATER_REFUTATION`: 14
+- `CONTROLLED_BY_LATER_REVIEW`: 69
+- `DELTA_CONDITIONAL`: 23
+- `DELTA_OPEN_RH_EQUIVALENT`: 3
+- `DELTA_OPEN_SUFFICIENT`: 1
+- `DELTA_VERIFIED`: 3
+- `DELTA_VERIFIED_WITH_FIXES`: 33
 - `DUPLICATE_RECOVERY`: 1
-- `HISTORICAL_FULL_PROPOSAL`: 2
-- `NO_NEW_MATHEMATICS`: 4
+- `HISTORICAL_FULL_PROPOSAL`: 19
+- `NO_NEW_MATHEMATICS`: 5
+- `PARTIALLY_REPRESENTED`: 1
 - `REPRESENTED_BY_A`: 39
-- `REPRESENTED_BY_B`: 6
+- `REPRESENTED_BY_B`: 7
 - `REPRESENTED_BY_BOTH`: 37
-- `RETAINED_HEAVY_CERTIFICATE`: 11
-- `TARGETED_REVIEW_STILL_REQUIRED`: 157
+- `RETAINED_HEAVY_CERTIFICATE`: 12
+- `TARGETED_REVIEW_STILL_REQUIRED`: 67
 
 ## Cross-review follow-up resolution
 
@@ -87,3 +93,22 @@ first broken arrow and the PR #508/#630 heavy artifact records are now pinned.
 
 These additions do not reduce any terminal RH-bearing estimate to a proved
 theorem. RH remains unproved.
+
+
+## Pass-one head, genealogy and issue resolution
+
+Pass one audited PRs #399–#499, pinned 100 exact current heads/titles, classified
+sequence #417 as having no remote PR object, and reduced
+`TARGETED_REVIEW_STILL_REQUIRED` from 149 to 67. Blank exact-head
+fields fell from 154 to 72.
+
+The newly resolved block includes the Suzuki/Clark/source-to-model genealogy and
+the dense factor-54/native-row succession. Historical wrappers are now controlled
+by named reviews/refutations; local row, entropy, Farkas, Y4, delay, Clark and
+source-factorization results are preserved separately.
+
+`ISSUE_CENSUS.tsv` and `ISSUE_GENEALOGY.md` classify 171 issue objects.
+Issue-only proposals are historical methodology, not theorem nodes. The remaining
+pass-two queue is exact in `PASS2_BACKLOG.tsv`.
+
+RH remains unproved.

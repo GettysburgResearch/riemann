@@ -17,7 +17,9 @@ REQUIRED = [
     'FREEZE.json','PR_CENSUS.tsv','DELTA_CLAIMS.tsv','DELTA_REFUTATIONS.tsv',
     'DELTA_ALIASES.tsv','DELTA_COMPUTATIONS.tsv','HISTORICAL_PROPOSALS.tsv',
     'PROVENANCE_DEFECTS.tsv','MISSING_COVERAGE.md','CANONICAL_SALVAGE.md','INTEGRATION_HANDOFF.md',
-    'CROSS_REVIEW_FOLLOWUP.tsv','CROSS_REVIEW_FOLLOWUP.md'
+    'CROSS_REVIEW_FOLLOWUP.tsv','CROSS_REVIEW_FOLLOWUP.md',
+    'PASS1_REPORT.md','PASS1_TARGETED_REVIEW.tsv','HEAD_RECONCILIATION.tsv',
+    'ISSUE_CENSUS.tsv','ISSUE_GENEALOGY.md','PASS2_BACKLOG.tsv'
 ]
 PR_HEADER = ['pr','exact_head_sha','title','family','creation_or_update_scope','reviewer_a_coverage','reviewer_b_coverage','controlling_later_pr','controlling_review','strongest_surviving_result','first_broken_arrow','current_open_gate','lifecycle_recommendation','delta_action','notes']
 HIST_HEADER = ['proposal_pr','proposal_head','claimed_route','first_broken_arrow','controlling_evidence','surviving_claims','current_descendant','final_classification','lifecycle_recommendation']
@@ -81,6 +83,40 @@ if len({x['candidate_id'] for x in cross_rows})!=22: errors.append('duplicate cr
 if {x['handoff_pr'] for x in cross_rows}!={'710','711'}: errors.append('cross-review handoff PR set mismatch')
 for row in cross_rows:
     if not re.fullmatch(r'[0-9a-f]{40}',row['source_head']): errors.append(f"cross-review malformed source head {row['candidate_id']}")
+
+
+# Pass-one exact-head and issue archaeology checks.
+with (HERE/'HEAD_RECONCILIATION.tsv').open(newline='',encoding='utf-8') as f:
+    hr=list(csv.DictReader(f,delimiter='\t'))
+if len(hr)!=101 or {int(x['pr']) for x in hr}!=set(range(399,500)):
+    errors.append('HEAD_RECONCILIATION must cover PRs 399-499 exactly once')
+if sum(x['status']=='EXACT_CURRENT_HEAD_RECOVERED' for x in hr)!=100:
+    errors.append('pass-one recovered-head count mismatch')
+if [x['pr'] for x in hr if x['status']=='NO_REMOTE_PR_OBJECT']!=['417']:
+    errors.append('pass-one no-PR-object record mismatch')
+for x in hr:
+    if x['status']=='EXACT_CURRENT_HEAD_RECOVERED' and not re.fullmatch(r'[0-9a-f]{40}',x['reconciled_head']):
+        errors.append(f"pass-one malformed reconciled head PR {x['pr']}")
+
+with (HERE/'PASS1_TARGETED_REVIEW.tsv').open(newline='',encoding='utf-8') as f:
+    p1=list(csv.DictReader(f,delimiter='\t'))
+if len(p1)!=101 or {int(x['pr']) for x in p1}!=set(range(399,500)):
+    errors.append('PASS1_TARGETED_REVIEW must cover PRs 399-499 exactly once')
+
+with (HERE/'ISSUE_CENSUS.tsv').open(newline='',encoding='utf-8') as f:
+    issue_rows=list(csv.DictReader(f,delimiter='\t'))
+if len(issue_rows)!=171 or len({x['issue'] for x in issue_rows})!=171:
+    errors.append(f'issue census count/uniqueness mismatch: {len(issue_rows)}')
+if any(x['theorem_reachability']!='EXCLUDE_UNLESS_EXACT_PR/CLAIM_OBJECT_EXISTS' for x in issue_rows):
+    errors.append('issue theorem-reachability firewall missing')
+
+with (HERE/'PASS2_BACKLOG.tsv').open(newline='',encoding='utf-8') as f:
+    pass2=list(csv.DictReader(f,delimiter='\t'))
+targeted={x['pr'] for x in census if x['delta_action']=='TARGETED_REVIEW_STILL_REQUIRED'}
+if not targeted.issubset({x['pr'] for x in pass2}):
+    errors.append('pass-two backlog does not contain every remaining targeted PR')
+if len(targeted)!=67:
+    errors.append(f'pass-one remaining targeted count={len(targeted)} expected 67')
 
 # Provenance file must retain malformed-SHA evidence rather than normalize it away.
 prov=(HERE/'PROVENANCE_DEFECTS.tsv').read_text(encoding='utf-8')

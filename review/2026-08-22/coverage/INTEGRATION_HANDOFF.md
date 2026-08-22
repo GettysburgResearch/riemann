@@ -36,25 +36,25 @@ This packet is additive. It does not replace A/B claim-level review and does not
 The original Reviewer C packet was subsequently published by a separate writer
 as draft PR #712 on branch
 `review/2026-08-22/coverage-genealogy-delta`, exact head
-`2b35d2b159a4c7af045ffca9214aebe02a423da4`. Its remote `SHA256SUMS` is
-byte-identical to the pre-follow-up packet used as the base of this patch.
+`a520556ac7f30290a11e1fcba7b6f6a24269153e`. Its remote `SHA256SUMS` is
+was read back before pass-one generation. The incremental patch must be applied only to that exact head.
 
-This cross-review follow-up was **not pushed**, in accordance with the user's
-instruction. The accompanying patch is incremental against PR #712 head
-`2b35d2b159a4c7af045ffca9214aebe02a423da4`; the ZIP contains the complete
+This pass-one update was **not pushed**, in accordance with the user's instruction. The accompanying patch is incremental against PR #712 head
+`a520556ac7f30290a11e1fcba7b6f6a24269153e`; the ZIP contains the complete
 replacement `review/2026-08-22/coverage/` tree.
 
 Suggested publication commands for an authorized writer:
 
 ```bash
 git switch review/2026-08-22/coverage-genealogy-delta
-git reset --hard 2b35d2b159a4c7af045ffca9214aebe02a423da4
-git apply reviewer-c-cross-review-followup.patch
+git reset --hard a520556ac7f30290a11e1fcba7b6f6a24269153e
+git apply reviewer-c-pass1-incremental.patch
 python3 review/2026-08-22/coverage/replay/validate_packet.py
 python3 review/2026-08-22/coverage/replay/light_fraction_fixtures.py
 python3 review/2026-08-22/coverage/replay/cross_review_followup_fixtures.py
+python3 review/2026-08-22/coverage/replay/validate_pass1.py
 git add review/2026-08-22/coverage
-git commit -m "review: reconcile cross-review omissions in Reviewer C packet"
+git commit -m "review: resolve Reviewer C pass-one heads, genealogy, and issue archaeology"
 # Update draft PR #712; do not merge.
 ```
 
@@ -86,6 +86,23 @@ fiat. It path-pins omitted local theorems, sharpens PR #620’s first broken
 arrow, and supplies exact heavy-campaign records for PRs #508 and #630.
 
 For an existing Reviewer C branch at PR #712/head
-`2b35d2b159a4c7af045ffca9214aebe02a423da4`, apply the accompanying incremental
-patch, rerun all three light scripts, and commit only the
+`a520556ac7f30290a11e1fcba7b6f6a24269153e`, apply the accompanying incremental
+patch, rerun all four light scripts, and commit only the
 `review/2026-08-22/coverage/` tree. Do not merge and do not claim RH.
+
+
+## Reviewer C pass-one update
+
+Apply this packet incrementally to PR #712 at exact head
+`a520556ac7f30290a11e1fcba7b6f6a24269153e`.
+
+New consumption order:
+
+1. load `HEAD_RECONCILIATION.tsv`;
+2. apply `PASS1_TARGETED_REVIEW.tsv` to PRs #399–#499;
+3. import only material/control rows from `ISSUE_CENSUS.tsv`;
+4. use `PASS2_BACKLOG.tsv` as the bounded next Reviewer C queue;
+5. run the updated validator.
+
+Pass one reduces targeted rows from 149 to 67 and blank heads from
+154 to 72. No heavy campaign was rerun. Do not merge and do not claim RH.

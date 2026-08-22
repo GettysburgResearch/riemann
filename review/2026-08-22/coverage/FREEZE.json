@@ -30,7 +30,7 @@
     }
   },
   "frozen_main": "677203992eb0168920365ee45ae9db76bfa97dcf",
-  "generated_utc": "2026-08-22T03:10:15Z",
+  "generated_utc": "2026-08-22T15:05:58Z",
   "heavy_computation_policy": "HEAVY_CAMPAIGN_NOT_RE_RUN",
   "intended_branch": "review/2026-08-22/coverage-genealogy-delta",
   "light_checks_performed": [
@@ -41,11 +41,33 @@
     "py_compile of replay scripts",
     "cross-review handoff exact-source read-back",
     "PR383 path-qualified collision fixtures",
-    "PR508/PR630 retained-result schema and hash-ledger checks"
+    "PR508/PR630 retained-result schema and hash-ledger checks",
+    "current PR metadata read-back for PRs 399-499",
+    "issue-body archaeology over 171 July/August issue records",
+    "pass-one census and pass-two backlog consistency checks"
   ],
+  "pass_one": {
+    "blank_heads_after": 72,
+    "blank_heads_before": 154,
+    "exact_heads_titles_pinned": 100,
+    "heavy_campaigns_rerun": false,
+    "issues_classified": 171,
+    "malformed_placeholder_heads": [
+      590
+    ],
+    "next_pass_file": "PASS2_BACKLOG.tsv",
+    "no_pr_object_sequence_numbers": [
+      417
+    ],
+    "pr_rows_audited": 101,
+    "scope": "PRs 399-499 exact-head/title recovery, targeted genealogy, and 171-issue archaeology",
+    "targeted_after": 67,
+    "targeted_before": 149,
+    "unresolved_exact_head_records_after_validation": 73
+  },
   "prior_reviewer_c_publication": {
     "branch": "review/2026-08-22/coverage-genealogy-delta",
-    "head": "2b35d2b159a4c7af045ffca9214aebe02a423da4",
+    "head": "a520556ac7f30290a11e1fcba7b6f6a24269153e",
     "pr": 712
   },
   "publication_status": {
@@ -69,6 +91,6 @@
   },
   "review_mode": "breadth_and_genealogy_additive_not_final_adjudication",
   "rh_status": "UNPROVED",
-  "schema": "riemann.coverage_genealogy_delta.freeze.v2",
+  "schema": "riemann.coverage_genealogy_delta.freeze.v3",
   "scientific_cutoff_utc": "2026-08-11T08:20:51Z"
 }

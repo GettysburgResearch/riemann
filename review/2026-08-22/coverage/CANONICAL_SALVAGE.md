@@ -68,3 +68,22 @@ Add the following path-qualified packets to canonical extraction:
 Retain PR #635 `R-99161` as the binding same-row score firewall for PR #620.
 Retain PR #508’s 51M bytes only as nonproof computational support, and PR #630
 as a finite computer-assisted theorem with no infinite extrapolation.
+
+
+## Pass-one additions
+
+Canonicalize the following additional packets independently of their failed wrappers:
+
+- PR #429's corrected delay/core/colligation and critical Pick-kernel localization packet;
+- the Clark-entropy/moving-node chain #421/#422/#425/#426, with one canonical open source-to-model node;
+- P61 inherited-row and literal-entropy packets #432/#437;
+- the post-Hall joint-cone and atomwise Farkas reductions #458/#454;
+- the causal profile/Target-Lorenz reduction #467, while retaining #516 as the directed-computation control;
+- Q4 OPB/scale-four transfer #474, prime-block coherence #483, Volterra common parent #495 and centered cubic criterion #498.
+
+Archive the wrappers controlled by #405/#431/#436, #450/#456/#457/#463,
+#478/#480/#482/#484 and #490–#492. Preserve their independent local theorems
+before archival.
+
+Keep issue records only as method/genealogy or exact controlling corrections.
+Do not create theorem nodes from proposal-only issue prose.
