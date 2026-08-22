@@ -1,0 +1,24 @@
+{
+  "schema": "riemann.t102730.source-lock.v1",
+  "base_pr": 719,
+  "programme_base_pr": 715,
+  "programme_base_sha": "99cc94c48bafd9b96141f7cef9f1e7aa83012747",
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "dependencies": {
+    "pr690": "98140e291f1285e886d576291812961db9691c86",
+    "pr697": "e878c3717cd8124564e5400b2ec5db035e3a4088",
+    "pr715": "99cc94c48bafd9b96141f7cef9f1e7aa83012747",
+    "pr718": "41a087387812e89ce800c59f43582799fee24782"
+  },
+  "proof_object_sha256": "47cf97d40a823d10580f57f609287186a413d73d192eef76ae2f125cc8f7147a",
+  "proved": [
+    "completion homotopy monotonicity on the full shifted-quadratic disk",
+    "positive tangent current on the full disk",
+    "one-slack S-lemma matrix",
+    "fixed five-to-one projection",
+    "compact activation/current boundary identity",
+    "signed-filter cone counterexample"
+  ],
+  "open_gate": "FLC102730",
+  "rh_established": false
+}
