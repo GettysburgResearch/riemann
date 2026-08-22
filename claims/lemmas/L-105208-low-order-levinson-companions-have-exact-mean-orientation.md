@@ -66,7 +66,7 @@ Pairing positive and negative frequencies gives
 \boxed{
 C_k(y)
 =4\pi\int_0^\infty
-u^{2k+1}\Phi(u)^2\sinh(2yu)\,du>0.
+x^{2k+1}\Phi(x)^2\sinh(2yx)\,dx>0.
 }
 \tag{L-105208.3}
 \]
