@@ -1,0 +1,18 @@
+{
+  "interpolation_checks": 4,
+  "lagrange_coefficients": [
+    136,
+    120,
+    -255
+  ],
+  "oer102780_proved": false,
+  "outer_ray": -8,
+  "primal_transform_checks": 3,
+  "proof_object_sha256": "68d9cec692e079330e1d91ff9c36d4e53690af2ca41765c75fbca4a75ccbc64e",
+  "radial_cost_sharp": true,
+  "rh_established": false,
+  "schema": "riemann.t102780.outer-ray-radial-duality.v1",
+  "sharp_countermodel_target": -16,
+  "verdict": "PASS_T102780_OUTER_RAY_RADIAL_DUALITY",
+  "weak_duality_checks": 9
+}
