@@ -1,0 +1,58 @@
+name: Publish Reviewer B cross-review of Reviewer A
+
+on:
+  push:
+    branches:
+      - review/2026-08-22/reviewer-b-cross-review-a
+    paths:
+      - .github/workflows/reviewer-b-cross-a-publish.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/2026-08-22/reviewer-b-cross-review-a
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Restore complete review packet
+        run: |
+          python3 - <<'PY'
+          import base64
+          from pathlib import Path
+          src = Path('.review-payload/cross-b-of-a/packet.b64')
+          Path('/tmp/cross-review-packet.zip').write_bytes(base64.b64decode(src.read_text(encoding='utf-8')))
+          PY
+          rm -rf review/2026-08-22/cross-b-of-a
+          unzip -q /tmp/cross-review-packet.zip -d .
+
+      - name: Validate generated packet
+        run: |
+          python3 review/2026-08-22/cross-b-of-a/replay/run_all.py
+          rm -rf review/2026-08-22/cross-b-of-a/replay/__pycache__
+          cd review/2026-08-22/cross-b-of-a/replay
+          sha256sum -c SHA256SUMS
+          cd ..
+          sha256sum -c CROSS_REVIEW_CONTENT_SHA256SUMS
+
+      - name: Remove publication transport
+        run: |
+          rm -rf .review-payload/cross-b-of-a
+          rm -f .github/workflows/reviewer-b-cross-a-publish.yml
+          rm -rf review/2026-08-22/cross-b-of-a/replay/__pycache__
+
+      - name: Commit review artifacts
+        run: |
+          git config user.name "Reviewer B"
+          git config user.email "reviewer-b@users.noreply.github.com"
+          git add -- review/2026-08-22/cross-b-of-a
+          git rm -r --ignore-unmatch .review-payload/cross-b-of-a
+          git rm --ignore-unmatch .github/workflows/reviewer-b-cross-a-publish.yml
+          git diff --cached --quiet && exit 0
+          git commit -m "review: publish Reviewer B cross-review of Reviewer A"
+          git push origin HEAD:review/2026-08-22/reviewer-b-cross-review-a
