@@ -73,6 +73,14 @@ u^{2k+1}\Phi(u)^2\sinh(2yu)\,du>0.
 \tag{L-105208.3}
 \]
 
+Here and below the integration variable in the last display is `u`; explicitly,
+
+\[
+C_k(y)
+=4\pi\int_0^\infty
+u^{2k+1}\Phi(u)^2\sinh(2yu)\,du.
+\]
+
 Plancherel yields the exact formulas
 
 \[
@@ -122,12 +130,16 @@ In the `s`-plane, (L-105208.6) is exactly
 
 \[
 \int_{\mathbb R}
-|\xi^{(k)}+\lambda\xi^{(k+1)}|^2
-\left({1\over2}+y+it\right)dt
+\left|
+\left(\xi^{(k)}+\lambda\xi^{(k+1)}\right)
+\left({1\over2}+y+it\right)
+\right|^2dt
 >
 \int_{\mathbb R}
-|\xi^{(k)}-\lambda\xi^{(k+1)}|^2
-\left({1\over2}+y+it\right)dt.
+\left|
+\left(\xi^{(k)}-\lambda\xi^{(k+1)}\right)
+\left({1\over2}+y+it\right)
+\right|^2dt.
 \tag{L-105208.8}
 \]
 
