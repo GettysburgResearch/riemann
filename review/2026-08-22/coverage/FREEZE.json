@@ -1,0 +1,58 @@
+{
+  "census_policy": {
+    "older_dependencies_included": [
+      337,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374
+    ],
+    "post_cutoff_range": [
+      375,
+      707
+    ],
+    "proposal_policy": "do not replay obsolete full proposal after an exact later counterexample; preserve independent local results",
+    "unknown_exact_head_policy": "blank_or_UNRESOLVED plus TARGETED_REVIEW_STILL_REQUIRED; never guess"
+  },
+  "frozen_main": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "generated_utc": "2026-08-21T22:29:39Z",
+  "heavy_computation_policy": "HEAVY_CAMPAIGN_NOT_RE_RUN",
+  "intended_branch": "review/2026-08-22/coverage-genealogy-delta",
+  "light_checks_performed": [
+    "SHA syntax and frozen-reference checks",
+    "TSV schema and verdict-vocabulary checks",
+    "exact Fraction fixtures only",
+    "cross-table source/result consistency checks",
+    "py_compile of replay scripts"
+  ],
+  "publication_status": {
+    "branch": "review/2026-08-22/coverage-genealogy-delta",
+    "branch_created": true,
+    "draft_pr": "PENDING",
+    "draft_pr_created": false,
+    "github_connector": "WRITE_ENABLED_ON_RETRY",
+    "local_packet_and_patch_created": true,
+    "reason": "Initial publication commit is being written from the frozen main SHA; PR metadata will be finalized after GitHub assigns the number."
+  },
+  "repository": "gfreund123/riemann",
+  "research_census_last_pr": 707,
+  "review_inputs_only": {
+    "reviewer_a": {
+      "head": "55fe0b6f23d9163e2b602608da84194ba243d7c4",
+      "pr": 709,
+      "role": "arithmetic/native-source primary review"
+    },
+    "reviewer_b": {
+      "head": "eb1987502ef9043e782ac6ab1e19c47be9daef93",
+      "pr": 708,
+      "role": "operator/Q4/heat primary review"
+    }
+  },
+  "review_mode": "breadth_and_genealogy_additive_not_final_adjudication",
+  "rh_status": "UNPROVED",
+  "schema": "riemann.coverage_genealogy_delta.freeze.v1",
+  "scientific_cutoff_utc": "2026-08-11T08:20:51Z"
+}
