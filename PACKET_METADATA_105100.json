@@ -1,0 +1,44 @@
+{
+  "schema": "riemann.t105100.packet.v1",
+  "created": "2026-08-23",
+  "repository": "gfreund123/riemann",
+  "branch": "codex/105100-residue-second-moment",
+  "base_sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "base_tree": "35bd1a022c6b264f5af8f6f23d7926979fb9682d",
+  "post_freeze_context": {
+    "pull_request": 720,
+    "head_sha": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "status": "OPEN_DRAFT_UNREVIEWED",
+    "files": {
+      "claims/theorems/T-104530-residue-coherence-proportion-cascade.md": "2dfa4f0cb2b7a593e5d87ae5809dc0d70cfb5bf4",
+      "claims/lemmas/L-104522-residue-coherence-proportion-transfer.md": "57bdc84873904817f962c548ba24f3aaf9c6047e",
+      "claims/lemmas/L-104523-residue-moments-phase-bias-and-extrema-interface.md": "b29e0227cc75db905585e38764b69db5545ceaf6",
+      "claims/lemmas/L-104524-global-critical-residue-sum-and-centred-root-variance.md": "70d1a33e6bd8903f93208d3f49ff4e4ac832f6f9"
+    }
+  },
+  "classification": "proposed exact finite-polynomial second-residue reduction",
+  "claims": [
+    "L-105100",
+    "T-105100",
+    "R-105100",
+    "M-105100"
+  ],
+  "arithmetic_class": "EXACT_RATIONAL",
+  "heavy_computation_run": false,
+  "proved_or_supplied_for_review": [
+    "finite polynomial second critical-residue balance",
+    "real/nonreal/second-level-debt decomposition",
+    "exact root-ledger-only firewall",
+    "standard-library exact-rational replay"
+  ],
+  "open": [
+    "independent exact-SHA review",
+    "height localization with exterior and boundary terms",
+    "canonical-product exhaustion",
+    "off-real squared-residue correction",
+    "second-derivative cross-residue debt",
+    "RCMV104530",
+    "Riemann Hypothesis"
+  ],
+  "rh_established": false
+}
