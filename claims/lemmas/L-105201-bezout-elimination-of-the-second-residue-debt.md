@@ -93,7 +93,7 @@ so
 
 \[
 \operatorname{Res}_{z=d}\frac{A_p(z)}{p''(z)}
-=rac{p(d)^2}{p'(d)p'''(d)}
+=\frac{p(d)^2}{p'(d)p'''(d)}
 =\tau_d.
 \tag{L-105201.6}
 \]
@@ -115,6 +115,7 @@ applies and gives
 \mathfrak B_{a,T}[\widetilde Q_p].
 }
 \tag{L-105201.7}
+\]
 
 This is the debt-free replacement for (L-105200.8).
 
@@ -129,6 +130,7 @@ The equivalent subtraction formula is
 \mathfrak B_{a,T}\!\left[\frac{A_p}{p''}\right],
 }
 \tag{L-105201.8}
+\]
 
 where the second boundary functional equals
 
@@ -169,8 +171,8 @@ residue mass, and positive second residue moment. Consequently
 \mathfrak B_{a,T}[\widetilde Q_p]
 }.
 }
-\tag{L-105201.9
-}
+\tag{L-105201.9}
+\]
 
 If `p` has only simple real roots, every `rho_c<0`, and (L-105201.9) is the
 literal smooth residue coherence with no correction term of any kind.
