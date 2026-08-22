@@ -3,6 +3,7 @@
 Claim ID: `L-105200`  
 Status: **PROPOSED COMPLETE UNCONDITIONAL ANALYTIC THEOREM — INDEPENDENT REVIEW REQUIRED**  
 Created: 2026-08-23  
+Updated: 2026-08-23  
 Depends on: PR #716 `L-104504`; PR #720 `L-104516--L-104517`  
 RH status: **not assumed**
 
@@ -188,8 +189,9 @@ the reciprocal standard deviation, rather than only the
 ## 4. Derivative form
 
 Uniform convergence in (L-105200.4) holds on every slightly larger compact
-`lambda` disk. Cauchy's formula therefore gives convergence of all fixed
-`lambda` derivatives. For `r=0,1,2`, uniformly in the same natural box,
+`lambda` disk. Cauchy's formula therefore gives convergence of every fixed
+number of `lambda` derivatives. In particular, for `r=0,1,2,3`, uniformly in
+the same natural box,
 
 \[
 \boxed{
@@ -203,8 +205,9 @@ A_m^{(r)}(z)
 \tag{L-105200.10}
 \]
 
-The same statement holds at `-z`. This derivative control is the input needed
-to compute critical-value/curvature residues, not merely zero locations.
+The same statement holds at `-z`. Orders `0,1,2` control zeros and critical
+residues; order `3` controls the adjacent-derivative residue debt in the exact
+window flux of PR #723.
 
 ## 5. Scope
 
@@ -212,5 +215,5 @@ This theorem proves a Gaussian local limit for the actual positive Xi Fourier
 measure, uniformly over the complete derivative tail `m>=M`. It does not
 control any fixed low derivative as `M->infinity`, and it does not itself
 exclude a zeta zero. Its conclusion-facing uses are the natural-height
-real-rootedness theorem `L-105201` and the residue-coherence theorem
-`L-105202`.
+real-rootedness theorem `L-105201`, the residue-coherence theorem `L-105202`,
+and the window-flux evaluation `L-105205`.
