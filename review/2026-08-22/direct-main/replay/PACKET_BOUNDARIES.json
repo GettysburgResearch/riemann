@@ -1,0 +1,109 @@
+{
+  "base_exclusive": "a88bed9711b1b2057fb258354924056c5ad8696b",
+  "classification_method": "The direct-main history is linear over the audited range. Each packet is a contiguous half-open/closed segment recorded by first_commit, last_commit, commit_count and cumulative_end_index. Cumulative compare counts were checked at every boundary.",
+  "commit_count": 85,
+  "head_inclusive": "677203992eb0168920365ee45ae9db76bfa97dcf",
+  "packets": [
+    {
+      "classification": "documentation/test/integration metadata",
+      "commit_count": 7,
+      "cumulative_end_index": 7,
+      "family": "Brownian reviewed-state synchronization",
+      "first_commit": "de605b718682b588dfad6736235347923f194dab",
+      "last_commit": "b812a249d463772dc66e94d252449ed1529c5923",
+      "packet_id": "DM-001"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 9,
+      "cumulative_end_index": 16,
+      "family": "Cauchy/Jordan positive-source and scattering foundation",
+      "first_commit": "4996719fc2d804f3ae2416930f25045880c60557",
+      "last_commit": "5350f8a81702e4cd6ff9f7b0cd59c6a523dfcffe",
+      "packet_id": "DM-002A"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 10,
+      "cumulative_end_index": 26,
+      "family": "Cauchy normalized recurrence, heat band, Hardy factor and prime semigroup",
+      "first_commit": "a7db1ffcd74211aa949606b22ca77d9fe4e0a42b",
+      "last_commit": "3fed211942d51d2c01a19bf89aa502ed10a4b811",
+      "packet_id": "DM-002B"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 1,
+      "cumulative_end_index": 27,
+      "family": "Cauchy-Jordan Hardy intertwiner proposal wrapper",
+      "first_commit": "b837c12199dd407116f604ce6c938039d1a76da4",
+      "last_commit": "b837c12199dd407116f604ce6c938039d1a76da4",
+      "packet_id": "DM-002C"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 5,
+      "cumulative_end_index": 32,
+      "family": "P79 finite low-prefix Hall and target-flow factor-54 proposal",
+      "first_commit": "1aa5878d42cedf8a7bda0a8200582595bd51ee90",
+      "last_commit": "af2bec38df64bc18086de0c93d256149c07d86ac",
+      "packet_id": "DM-003A"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 16,
+      "cumulative_end_index": 48,
+      "family": "Corrected-cell and direct-Euler P79 factor-54 proposal",
+      "first_commit": "a1c243935e18b78af5959ed7e714b06764fdc9d5",
+      "last_commit": "d688cc7cb73eea9e50f10352a50516ab2c4f4625",
+      "packet_id": "DM-003B"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 5,
+      "cumulative_end_index": 53,
+      "family": "Causal nonduplicating packet budget",
+      "first_commit": "4e203a42ec4dae6590d15f8c92a56d28c0ae2a5a",
+      "last_commit": "9c7538559d7f56c2914b39aed5a1fb3fbf7ce131",
+      "packet_id": "DM-003C"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 11,
+      "cumulative_end_index": 64,
+      "family": "T-96000 direct fixed-row Mellin-Landau packet",
+      "first_commit": "29e093940e9fdc7b96c103da40a729b23aa7e549",
+      "last_commit": "994bd4bedcc8b61cebabaf005cc69225fc3fe459",
+      "packet_id": "DM-004"
+    },
+    {
+      "classification": "duplicate/recovery",
+      "commit_count": 2,
+      "cumulative_end_index": 66,
+      "family": "Publication probes and duplicate recovery stubs",
+      "first_commit": "203e7cd3d35ff41556ccc37e5544355b057dd1b2",
+      "last_commit": "f789265569013ebff254b082c2e0428970bdaf57",
+      "packet_id": "DM-005"
+    },
+    {
+      "classification": "documentation/test/integration metadata",
+      "commit_count": 1,
+      "cumulative_end_index": 67,
+      "family": "Agentic Polymath README branding",
+      "first_commit": "bac504b2d227669d9d5310d96e6cf805f6376ff2",
+      "last_commit": "bac504b2d227669d9d5310d96e6cf805f6376ff2",
+      "packet_id": "DM-006"
+    },
+    {
+      "classification": "substantive theorem packet",
+      "commit_count": 18,
+      "cumulative_end_index": 85,
+      "family": "T-99930 critical Taylor renormalization packet",
+      "first_commit": "7472f585892e2aebf11e9749131f2e490e55743b",
+      "last_commit": "677203992eb0168920365ee45ae9db76bfa97dcf",
+      "packet_id": "DM-007"
+    }
+  ],
+  "repository": "gfreund123/riemann",
+  "targeted_review_required_count": 0
+}
