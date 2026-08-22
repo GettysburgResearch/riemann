@@ -1,0 +1,84 @@
+{
+  "algebra": {
+    "coefficients": [
+      3,
+      -7,
+      5,
+      -1
+    ],
+    "factorization": "3-7y+5y^2-y^3=(1-y)^2(3-y)",
+    "sum_3powj_coefficients": 0,
+    "sum_coefficients": 0,
+    "sum_j_coefficients": 0
+  },
+  "classification": "PASS_3751_ANNULAR_ENDPOINT_REGRESSION",
+  "constants": {
+    "absolute_zero_bound": "0.739359779693407065242951194539947759467375217055818496401342",
+    "margin_upper_bound": "-1.48313780435906261124950890811156525660349210887860109091847",
+    "moat_constant": "-2.22249758405246967649246010265151301607086732593441958731981",
+    "zero_square_mass_logxi_second": "0.0462099862308379415776844496587467349667103360659886560250839",
+    "zeta_half": "-1.46035450880958681288949915251529801246722933101258149054289"
+  },
+  "finite": {
+    "annulus_factor": 729,
+    "direct_reconstruction": [
+      {
+        "X": 729,
+        "abs_error": 2.886579864025407e-15,
+        "direct": -1.3302554743085102,
+        "prefix": -1.3302554743085073
+      },
+      {
+        "X": 7290,
+        "abs_error": 1.021405182655144e-14,
+        "direct": -2.0790237658695827,
+        "prefix": -2.0790237658695725
+      },
+      {
+        "X": 72900,
+        "abs_error": 6.092903959142859e-13,
+        "direct": -2.1093198522914325,
+        "prefix": -2.109319852290823
+      },
+      {
+        "X": 199017,
+        "abs_error": 6.665779039849439e-12,
+        "direct": -2.8176255274612753,
+        "prefix": -2.8176255274546094
+      },
+      {
+        "X": 729000,
+        "abs_error": 2.3597124254590705e-10,
+        "direct": -2.308862817377145,
+        "prefix": -2.3088628171411736
+      },
+      {
+        "X": 3645000,
+        "abs_error": 1.2628789560766842e-08,
+        "direct": -2.3246821543483993,
+        "prefix": -2.3246821417196097
+      },
+      {
+        "X": 4999482,
+        "abs_error": 1.589138953317803e-08,
+        "direct": -2.485866717355049,
+        "prefix": -2.4858667332464386
+      }
+    ],
+    "last": {
+      "X": 4999482,
+      "value": -2.4858667332464386
+    },
+    "max_X": 5000000,
+    "maximum": {
+      "X": 729,
+      "value": -1.3302554743085073
+    },
+    "minimum": {
+      "X": 199017,
+      "value": -2.8176255274546094
+    },
+    "tested_multiples": 6858
+  },
+  "scope": "The algebraic moment identities are exact. The constant computation and finite scan authenticate the written theorem and reconnaissance; the RH contour shift and Landau converse are not proved by the scan."
+}

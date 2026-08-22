@@ -1,0 +1,85 @@
+{
+  "classification": "PASS_RADIX3_QUARTIC_ANNULAR_REGRESSION",
+  "constants": {
+    "margin_upper_bound": "-0.0387845365131775459607827324377269055151766025463505060828156",
+    "moat": "-0.234834490744348906336795042578026321732606783836149281370006",
+    "scaled_margin_upper_bound": "-0.116353609539532637882348197313180716545529807639051518248447",
+    "zero_bound_sqrt18": "0.19604995423117136037601231014029941621743018128979877528719"
+  },
+  "exact_sup_certificate": {
+    "claim": "max_|y|=1 |P_3(y)|^2 <= 18",
+    "global_minimum_certificate": "1183566530771777/7036886020193280",
+    "subintervals": [
+      {
+        "interval": [
+          "-1",
+          "-1/2"
+        ],
+        "minimum_bernstein_lower_bound": "218605536847297/1759221505048320"
+      },
+      {
+        "interval": [
+          "-1/2",
+          "0"
+        ],
+        "minimum_bernstein_lower_bound": "107255143806140347/112590176323092480"
+      },
+      {
+        "interval": [
+          "0",
+          "1/2"
+        ],
+        "minimum_bernstein_lower_bound": "3763917193989763/3518443010096640"
+      },
+      {
+        "interval": [
+          "1/2",
+          "1"
+        ],
+        "minimum_bernstein_lower_bound": "1183566530771777/7036886020193280"
+      }
+    ]
+  },
+  "finite": {
+    "annulus_factor": 81,
+    "first_nonnegative_endpoints": [
+      81,
+      162,
+      243,
+      324,
+      405,
+      486,
+      567,
+      648,
+      729,
+      891,
+      972,
+      1053,
+      1134,
+      1215,
+      1296,
+      1377,
+      1458,
+      1539,
+      1620,
+      1701
+    ],
+    "last": {
+      "X": 4999968,
+      "value": -0.2435548082131836
+    },
+    "last_nonnegative_endpoint": 6399,
+    "max_X": 5000000,
+    "maximum": {
+      "X": 324,
+      "value": 0.16302362266404175
+    },
+    "minimum": {
+      "X": 353241,
+      "value": -0.39551419698044843
+    },
+    "nonnegative_count": 46,
+    "tested_multiples": 61728
+  },
+  "scope": "The Bernstein certificate is exact over Q(sqrt(3)); the finite endpoint scan is reconnaissance only."
+}

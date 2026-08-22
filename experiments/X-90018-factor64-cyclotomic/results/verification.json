@@ -1,0 +1,33 @@
+{
+  "classification": "PASS_FACTOR64_CYCLOTOMIC_ANNULAR_CERTIFICATE",
+  "constants": {
+    "margin_upper_bound": "<-0.009",
+    "moat": "<-0.194",
+    "scaled_margin_upper_bound": "<-0.012",
+    "zero_bound": "<0.185"
+  },
+  "exact_norm_certificate": {
+    "all_bernstein_lower_endpoints_positive": true,
+    "claim": "max_|y|=1 |P_64(y)|^2 < 16",
+    "subdivisions": 1024
+  },
+  "moments": {
+    "factorization": "(1-y)^2(1-y/sqrt(2))(1+y)(1+y+y^2)",
+    "roots": [
+      "1 (double)",
+      "sqrt(2)",
+      "-1",
+      "exp(2pi i/3)",
+      "exp(-2pi i/3)"
+    ],
+    "sum_coefficients": [
+      0,
+      0
+    ],
+    "sum_j_coefficients": [
+      0,
+      0
+    ]
+  },
+  "scope": "The moment and Bernstein checks are exact over Q(sqrt(2)) with a rational radical enclosure. The contour shift, Landau converse, and unconditional annular sign are mathematical statements outside this checker."
+}

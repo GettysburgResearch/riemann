@@ -1,0 +1,24 @@
+{
+  "branch_counts": {
+    "critical": 4,
+    "left": 657,
+    "right": 1337
+  },
+  "classification": "PASS_GLOBAL_PRIME_POWER_MOAT_FINITE_BASE",
+  "initial_value": {
+    "expression": "M(2)=-4sqrt(2)",
+    "lower": -5.656854249492381,
+    "upper": -5.656854249492381
+  },
+  "intervals": [
+    2,
+    2000
+  ],
+  "least_negative_interval": {
+    "N": 2,
+    "branch": "left",
+    "exact_reference": "-2sqrt(2)",
+    "upper_bound": -2.82842712474619
+  },
+  "scope": "Directed finite base only. The analytic X>=2000 tail is L-90012."
+}
