@@ -3,21 +3,31 @@
 Claim ID: `L-105202`  
 Status: **PROPOSED COMPLETE UNCONDITIONAL ANALYTIC THEOREM — INDEPENDENT REVIEW REQUIRED**  
 Created: 2026-08-23  
+Audited: 2026-08-23  
 Depends on: `L-105200--L-105201`; PR #720 `L-104522--L-104523`  
 RH status: **not assumed**
 
-## 1. Residues in the common natural box
+## 1. Residues in a buffered natural box
 
-Fix `C,H>1`. Put
+Fix constants
 
 \[
-T_M=C\sqrt{M\over\log M}
+0<C_0<C_1,
+\qquad H>1.
 \]
 
-and let `m>=M`. At every simple real zero `c` of `Xi^(m+1)` satisfying
+Put
 
 \[
-|c|\le T_M-1,
+T_{a,M}=C_a\sqrt{M\over\log M}
+\qquad(a=0,1).
+\]
+
+Use `L-105200` on the larger box with real half-width `T_(1,M)`. Let `m>=M`.
+At every simple real zero `c` of `Xi^(m+1)` satisfying
+
+\[
+|c|\le T_{0,M},
 \]
 
 define
@@ -38,9 +48,13 @@ Then, uniformly over all such `m,c`,
 \tag{L-105202.2}
 \]
 
-In particular, every residue in the box is negative for sufficiently large
-`M`. Thus every critical point there is a Rolle-generating extremum, and no
-wrong extremum occurs in the high derivative tail.
+In particular, every residue in the inner box is negative for sufficiently
+large `M`. Thus every critical point there is a Rolle-generating extremum, and
+no wrong extremum occurs in the natural high derivative tail.
+
+The fixed gap `C_1-C_0` supplies a buffer of order `sqrt(M/log M)`, far larger
+than the `1/w_m` cell size. No fixed-width shrinkage and no assertion about an
+`O(1)` number of boundary cells is used.
 
 ## 2. Exact Gaussian-model residue
 
@@ -81,7 +95,7 @@ Therefore the model residue is exactly
 \tag{L-105202.3}
 \]
 
-On the natural box, `|x|<=T_M` and `s_mT_M=O_C(1)`. Hence
+On the inner natural box, `|x|<=T_(0,M)` and `s_mT_(0,M)=O_(C_0)(1)`. Hence
 
 \[
 {s_m^2+s_m^4x^2\over w_m^2}=o(1)
@@ -91,10 +105,11 @@ uniformly for `m>=M`, so (L-105202.3) is `-w_m^(-2)(1+o(1))`.
 
 ## 3. Passage from the model to Xi
 
-The derivative version `L-105200.10` gives `C^2` convergence to the Gaussian
-trigonometric model after normalization, uniformly on a slightly larger
-rectangle. The cellwise Rouché proof in `L-105201` also localizes every zero of
-`Xi^(m+1)` within `o(1/w_m)` of one model critical point.
+The derivative version `L-105200.10`, applied on the larger `C_1` box, gives
+`C^2` convergence to the Gaussian trigonometric model throughout a
+neighbourhood of the closed inner box. The cellwise Rouché proof also
+localizes every zero of `Xi^(m+1)` in the inner box within `o(1/w_m)` of one
+model critical point.
 
 At those points, the model value is bounded away from zero after division by
 the Gaussian factor, and its second derivative has magnitude
@@ -108,7 +123,7 @@ Let
 
 \[
 \mathcal C_{m,M}
-=\{c\in[-T_M+1,T_M-1]:\Xi^{(m+1)}(c)=0\},
+=\{c\in[-T_{0,M},T_{0,M}]:\Xi^{(m+1)}(c)=0\},
 \]
 
 and put
@@ -184,7 +199,8 @@ through the finitely many low derivative levels required at a given height.
 
 ## 6. Scope
 
-The sums exclude an `O(w_m)`-independent number of boundary cells by shrinking
-the real interval by one. This has no effect on the displayed asymptotics.
-The theorem does not assert residue coherence for a fixed `m` as the height
-tends to infinity, and therefore does not prove RH.
+The theorem concerns critical points in a fixed fraction of the larger natural
+box used for the analytic approximation. It makes no claim that omitted
+boundary cells are `O(1)`; their number is itself of the natural zero-count
+scale. The theorem does not assert residue coherence for a fixed `m` as the
+height tends to infinity, and therefore does not prove RH.
