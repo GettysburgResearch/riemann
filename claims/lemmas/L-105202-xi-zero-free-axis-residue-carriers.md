@@ -113,6 +113,7 @@ and
 =\frac18\mathscr D_TR_k.
 }
 \tag{L-105202.11}
+\]
 
 Thus the natural localized count, first-moment carrier and uncorrected
 second-moment carrier all live on the zero-free real axis `sigma=T+1/2`.
@@ -141,6 +142,7 @@ T\Lambda'(T)=\frac12+O(T^{-1}),
 \qquad
 T^j\Lambda^{(j)}(T)=O_j(1)\quad(j>=2).
 \tag{L-105202.13}
+\]
 
 For each fixed derivative order, the complete Bell-polynomial formula for
 `xi^(j)/xi` implies
@@ -172,6 +174,7 @@ and
 R_k(T)=\Lambda(T)^{-3}
 \left(1+O_k\!\left(\frac1{T\Lambda(T)^2}\right)\right).
 \tag{L-105202.17}
+\]
 
 These formulas also prove that all denominators above are nonzero for
 sufficiently large `T`.
@@ -187,6 +190,7 @@ Applying `mathscr D_T` and using (L-105202.13),
 \left(1+O_k(\Lambda(T)^{-1})\right),
 }
 \tag{L-105202.18}
+\]
 
 \[
 \boxed{
@@ -195,6 +199,7 @@ Applying `mathscr D_T` and using (L-105202.13),
 \left(1+O_k(\Lambda(T)^{-1})\right),
 }
 \tag{L-105202.19}
+\]
 
 and
 
@@ -205,6 +210,7 @@ and
 \left(1+O_k(\Lambda(T)^{-1})\right).
 }
 \tag{L-105202.20}
+\]
 
 Hence the three zero-free-axis boundary carriers are eventually positive and
 have the scales
@@ -216,6 +222,7 @@ have the scales
 =\frac{3T\Lambda(T)}8(1+o(1)),
 }
 \tag{L-105202.21}
+\]
 
 \[
 \boxed{
@@ -224,6 +231,7 @@ have the scales
 =\frac{3T}{8\Lambda(T)}(1+o(1)),
 }
 \tag{L-105202.22}
+\]
 
 \[
 \boxed{
@@ -231,8 +239,8 @@ have the scales
 :=\frac18\mathscr D_TR_k
 =\frac{3T}{8\Lambda(T)^3}(1+o(1)).
 }
-\tag{L-105202.23
-}
+\tag{L-105202.23}
+\]
 
 Their normalized coherence is asymptotically one:
 
@@ -247,6 +255,7 @@ Their normalized coherence is asymptotically one:
 =1+O_k(\Lambda(T)^{-1}).
 }
 \tag{L-105202.24}
+\]
 
 The constant in `mathcal N_k^bdry` is the natural one: the localizer has
 
