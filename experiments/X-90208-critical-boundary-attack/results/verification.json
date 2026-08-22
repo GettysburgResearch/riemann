@@ -1,0 +1,28 @@
+{
+  "all_scale_renewals": {
+    "canonical_max_error": 3.552713678800501e-14,
+    "canonical_min_forcing": 0.0,
+    "critical_star_max_error": 7.105427357601002e-15,
+    "critical_star_min_forcing": 0.0
+  },
+  "critical_filter_minimax": {
+    "exact_weighted_identities": 100,
+    "minimax_bound_checks": 100,
+    "minimax_numerator": "(2)+(-4)*sqrt(2)",
+    "random_critical_neutral_filters": 100
+  },
+  "critical_star_reward": {
+    "reward_rows_checked": 255,
+    "tail_numerator": "(2)+(-4)*sqrt(2)",
+    "tail_sweep_exact_sources": 30
+  },
+  "positive_reward_critical_defect": {
+    "N_3_direct_value": 0.10875780454435358,
+    "j_max": 10000,
+    "minimum_B_j_half": 0.014708333187840594,
+    "minimum_at_j": 10000,
+    "minimum_integral_lower_N_ge_4": 0.004017169930912612
+  },
+  "scope": "Finite algebra and numerical mutation checks only; the proofs of L-90215/L-90220/L-90221 are analytic. No RH or final sign claim.",
+  "verdict": "PASS_X_90208_CRITICAL_BOUNDARY_ATTACK"
+}

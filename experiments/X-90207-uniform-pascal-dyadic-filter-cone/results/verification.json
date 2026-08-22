@@ -1,0 +1,41 @@
+{
+  "cone_statement": {
+    "A_j": "2 sum_(l<j) 2^l S_l",
+    "S_j": "sum_(l<=j) q_l",
+    "conditions": "A_j>=0 and A_j-(2^j-1)S_j>=0, plus tail A_(J+1)>=0"
+  },
+  "factor64_no_go": {
+    "A3_approx": -2.0710678118654755,
+    "A3_exact": "5-5*sqrt(2)",
+    "d15_approx": -0.009862227675549881,
+    "d15_exact": "(1-sqrt(2))/42",
+    "tail_A_approx": 16.154328932550712
+  },
+  "rational_cases": {
+    "canonical": {
+      "cone_feasible": true,
+      "min_direct_drift": 0.0,
+      "q": ["1", "-3/2", "1/2"],
+      "tail_A": 0.0
+    },
+    "haar": {
+      "cone_feasible": true,
+      "min_direct_drift": 0.00020614306328592042,
+      "q": ["1", "-1"],
+      "tail_A": 2.0
+    },
+    "higher_feasible": {
+      "cone_feasible": true,
+      "min_direct_drift": 0.00012368583797155226,
+      "q": ["1", "-7/5", "1/2", "-1/10"],
+      "tail_A": 1.2
+    },
+    "mutation_above_canonical": {
+      "cone_feasible": false,
+      "min_direct_drift": -0.0033333333333333335,
+      "q": ["1", "-151/100", "51/100"],
+      "tail_A": -0.04
+    }
+  },
+  "verdict": "PASS_X_90207_UNIFORM_PASCAL_DYADIC_FILTER_CONE"
+}

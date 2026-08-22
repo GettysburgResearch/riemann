@@ -1,0 +1,135 @@
+{
+  "actual_gfep_hierarchy": {
+    "cases": [
+      {
+        "K": 24,
+        "X": 120,
+        "all_descendants_nonnegative": true,
+        "lambda_value": "0.93733710798612",
+        "min_nonempty_B": "0.039687045082381",
+        "n": 5,
+        "p": 5
+      },
+      {
+        "K": 25,
+        "X": 180,
+        "all_descendants_nonnegative": true,
+        "lambda_value": "1.2315099361334",
+        "min_nonempty_B": "0.0",
+        "n": 7,
+        "p": 9
+      },
+      {
+        "K": 30,
+        "X": 300,
+        "all_descendants_nonnegative": true,
+        "lambda_value": "0.77503012589601",
+        "min_nonempty_B": "0.0",
+        "n": 10,
+        "p": 10
+      },
+      {
+        "K": 30,
+        "X": 360,
+        "all_descendants_nonnegative": true,
+        "lambda_value": "0.87883601595601",
+        "min_nonempty_B": "0.0",
+        "n": 12,
+        "p": 17
+      }
+    ],
+    "exhaustive_min_checks": 4,
+    "max_renewal_error": "7.2445433e-71",
+    "max_scale_error": "1.9016926e-70",
+    "max_semigroup_error": "5.4334074e-71",
+    "mixed_derivative_checks": 70,
+    "scale_checks": 109
+  },
+  "boolean_fraction": {
+    "expansion_checks": 1024,
+    "kmax": 30,
+    "minimum_bits": 592,
+    "minimum_value": "-1520007715/309281544",
+    "prime_vertices": 1024,
+    "primitive_checks": 19,
+    "semigroup_mutation_detected": true
+  },
+  "large_reconnaissance": [
+    {
+      "K": 100,
+      "X": 2000,
+      "deep_checks_after_band": 4,
+      "described_prime_vertex_exponent": 25,
+      "lambda_value": 0.6369602150600044,
+      "minimum_label": 97,
+      "minimum_nonempty_B": 0.02766162730632893,
+      "n": 20,
+      "negative_nonempty_B": 0,
+      "p": 20
+    },
+    {
+      "K": 120,
+      "X": 3000,
+      "deep_checks_after_band": 5,
+      "described_prime_vertex_exponent": 30,
+      "lambda_value": 0.5151807913342702,
+      "minimum_label": 119,
+      "minimum_nonempty_B": 0.015342323791438744,
+      "n": 25,
+      "negative_nonempty_B": 0,
+      "p": 25
+    },
+    {
+      "K": 266,
+      "X": 4000,
+      "deep_checks_after_band": 12,
+      "described_prime_vertex_exponent": 56,
+      "lambda_value": 0.8000499293202377,
+      "minimum_label": 266,
+      "minimum_nonempty_B": 0.004755303510669398,
+      "n": 15,
+      "negative_nonempty_B": 0,
+      "p": 15
+    },
+    {
+      "K": 500,
+      "X": 10000,
+      "deep_checks_after_band": 24,
+      "described_prime_vertex_exponent": 95,
+      "lambda_value": 0.8243716797592895,
+      "minimum_label": 499,
+      "minimum_nonempty_B": 0.0008016030725445715,
+      "n": 20,
+      "negative_nonempty_B": 0,
+      "p": 20
+    }
+  ],
+  "local_von_mangoldt": {
+    "interior_cases": 2550,
+    "max_formula_error": "5.7956346e-70",
+    "minimum_domination_gap": "0.0",
+    "vertex_cases": 996
+  },
+  "ramp": {
+    "cases": [
+      {
+        "X": 30,
+        "active_minimizers": 1,
+        "active_primes": 6,
+        "lambda_ramp": "9.01481588961196",
+        "vertices": 64
+      },
+      {
+        "X": 60,
+        "active_minimizers": 1,
+        "active_primes": 10,
+        "lambda_ramp": "16.2351792089084",
+        "vertices": 1024
+      }
+    ],
+    "exhaustive_vertices": 1088,
+    "max_divisor_switch_error": "3.4773808e-69",
+    "minimum_coercivity_slack": "-2.0375278e-71"
+  },
+  "verdict": "PASS_X_90201_LIOUVILLE_BERNSTEIN_RIGIDITY"
+}
