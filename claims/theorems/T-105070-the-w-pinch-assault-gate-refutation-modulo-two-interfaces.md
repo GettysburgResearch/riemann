@@ -7,6 +7,17 @@ slots [P1-LOC-WELD] and [P2-FAR] — [P1-LOC-WELD] has its model theorem proved 
 and its coefficient computed and nonvanishing (lane P3, w4); [P2-FAR] is OPEN (the
 honest wall). RH never assumed, never claimed; NO step of Tier A or Tier B uses RH or
 any zero-free half-plane.**
+STATUS UPDATE 2026-08-23 (same day, interface-assault wave): **[P1-LOC-WELD] is
+DISCHARGED** by `L-105072` — with a FINDING: the literal derivative clause of §2's
+statement is FALSE for the genuine Z_loc (half-power `kappa (s-s_0)^{1/2}`,
+`|kappa| = 0.0140799 != 0`); the weld closes unconditionally under the amended bound
+`|R_loc'| <= M_loc(1 + |s-s_0|^{-1/2})` (r_0 = 1/2, M_loc = 640), and the P2.7(6)
+consumption survives at cost `log(1/h) -> log^2(1/h)`, still `o(1/h)`, with c_0' and
+all downstream constants unchanged. **[P2-FAR] is REDUCED** by `L-105071` to the
+single fixed-frequency amplitude inequality (FAR-WIN). NET STANDING: the theorem's
+conclusion (i)-(iii) now rests on exactly ONE open statement — (FAR-WIN) — plus the
+amended-interface reading of §2 recorded here. RH status unchanged: unproved, not
+addressed.
 Created: 2026-08-23. Agent: claude, lane P3.
 Depends on: `T-105059` (.5 exact tent reduction, .6 program, .7 bootstrap audit),
 `L-105058` (.1, .5), `T-105051` (I, III, Step 0), `L-105052`, `O-105054` @
@@ -83,7 +94,20 @@ CONDITIONAL on exactly the named residue(s) below — nothing else.
 ## 2. The interface slots (precisely delimited)
 
 **[P1-LOC-WELD]** — status: MODEL PROVED + COEFFICIENT PROVED; weld residue small and
-bounded-height-classical. Statement to weld: there exist `r_0 in (0,1]`, `M_loc` with
+bounded-height-classical.
+UPDATE 2026-08-23 (`L-105072`): **DISCHARGED, with the statement below AMENDED.** The
+literal conjunction `|R_loc| + |R_loc'| <= M_loc` is DISPROVED for the genuine Z_loc
+(R_loc carries the half-power `kappa (s-s_0)^{1/2}`, `|kappa| = 0.0140799`, so R_loc'
+blows up like `|s-s_0|^{-1/2}` at the pinch corner — no r_0, M_loc evade it). What IS
+proved, unconditionally from bounded-height inputs (max zero-height consumed 17.33):
+the expansion with `omega = +1` pinned and c_B confirmed in modulus AND phase (1.03e-6,
+genuine deformed-contour numerics); `|R_loc| <= 5.71`;
+`|R_loc'| <= 640 (1 + |s-s_0|^{-1/2})` on Omega^+(r_0 = 1/2); and the consumption
+repair: P2.4(c)/P2.7(6) accept the amended bound at cost `log^2(1/h)` in the error,
+still `o(1/h)` — main term and c_0' unchanged. Read this slot's statement with the
+amended derivative bound; so read, it is CLOSED.
+Statement to weld (ORIGINAL WORDING, kept for the record — the derivative clause is
+the amended one per the UPDATE above): there exist `r_0 in (0,1]`, `M_loc` with
 
     Z_loc(s) = c_B (s - s_0)^{-1/2} + R_loc(s),  |R_loc| + |R_loc'| <= M_loc on Omega^+,
 
