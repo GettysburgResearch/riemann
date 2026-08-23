@@ -1,0 +1,35 @@
+{
+  "arithmetic": "EXACT_RATIONAL",
+  "classification": "PASS_T105231_WEIGHTED_DEBRANGES_FOURIER_INTERTWINER",
+  "entire_xi_moment_finiteness_proved": false,
+  "fixtures": {
+    "firewall": {
+      "aligned_centered_energy": "0",
+      "orthogonal_centered_energy": "6"
+    },
+    "nonuniform": {
+      "A": "13/12",
+      "B": "9/4",
+      "N": "23/12",
+      "defect": "113/36",
+      "fourier_pair_energy": "421/72"
+    },
+    "spectral_equality": {
+      "defect": "6",
+      "spectral_bound": "6"
+    }
+  },
+  "proof_object_sha256": "c94f91870107598a458e00e4e40107c2da7ffce9745db43e4895279593f533d0",
+  "rh_established": false,
+  "schema": "riemann.x105231.weighted_compound.v1",
+  "verified": {
+    "centered_gram_trace_identity": true,
+    "diagonal_trace_firewall": true,
+    "explicit_fourier_projection": true,
+    "nine_twenty_five_integrality_sanity": true,
+    "pair_bundle_cauchy_bound": true,
+    "spectral_equality_fixture": true,
+    "weighted_variance_identity": true
+  },
+  "wseg105231_proved": false
+}
