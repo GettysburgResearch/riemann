@@ -1,0 +1,1 @@
+Exact-rational checks for zero velocity, a confluent critical block, reflection covariance, the finite Dirichlet resolvent, and a power-saving tail fixture. The Xi trace/HS estimate is not machine-proved.
