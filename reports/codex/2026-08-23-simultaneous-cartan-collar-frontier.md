@@ -210,9 +210,12 @@ good rectangle, but it supplies no analytic disk certificate.
 
 ## 5. The missing Cartan import
 
-The current tree does not authenticate the Xi specialization.  A usable
-next theorem must fix the completed-Xi normalization and derivative index,
-then provide on expanded rectangles:
+L-105114 now closes the normalized finite analytic interface with explicit
+equal-zero-disk constants.  It also shows that the raw quotient route needs
+exceptional disks only for \(F'\) and \(F''\), whereas a log-derivative
+route additionally needs \(F\ne0\).  The current tree still does not
+authenticate the Xi specialization.  A usable cofinal theorem must use
+\(\Xi_t(z)=\xi(1/2+iz)\), fix the derivative index, and provide:
 
 1. explicit upper growth data for \(F=\Xi^{(k-1)}\);
 2. simultaneous lower bounds \(a_1,a_2\) for \(F',F''\) outside a stated
@@ -230,8 +233,10 @@ then provide on expanded rectangles:
 Generic order-one growth or a qualitative statement that the exceptional
 radius is finite is not enough.  It can yield exponentially large losses
 with no comparison to selector conditioning or the residue-moment scale.
-The smallest defensible next claim is therefore a source-pinned,
-quantitative exceptional-disk certificate for the three fixed functions at
-one declared finite window, followed by a separate cofinal absorption
-theorem.  Until then, the projection lemma is a routing result, not an Xi
-collar estimate.
+The finite certificate is now L-105114.  Its generic fixed-width,
+order-one-growth specialization can still cost
+\(\exp(O_k(R(\log R)^2))\) before selector conditioning.  The smallest
+defensible next claim is therefore a cofinal Xi anchor/growth certificate
+followed by a separate selector-absorption theorem.  Until then, the
+projection and minimum-modulus lemmas are finite routing results, not an Xi
+cofinal collar estimate.
