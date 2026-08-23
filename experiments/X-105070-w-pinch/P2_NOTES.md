@@ -1,4 +1,13 @@
 # LANE P2: continuation (w1) + hypothesis-side transfer (w3)
+
+REPLAY RUN ORDER (hostile-review finding F1): all P2_num*.py import the deposited
+`sieve_common.py` (same directory). Run `P2_num1.py` first (standalone sanity), then
+`P2_num3.py` — it WRITES `xg.npy`/`Vg.npy` (~8MB each, regenerated, deliberately not
+committed) — then `P2_num4.py`/`P2_num5.py`, which read those arrays. `P2_num2.py`
+is standalone (needs only sieve_common). Expected checkpoints: num2 identity residual
+~7e-17; num3 Plancherel ratio 1.000000, window masses 0.0146/0.0061; num5 kernel
+agreement ~1e-12.
+
 PLAN (10 lines):
 1. Read T-105059 (tent reduction, W-pinch pin), L-105058.5/.4, E1 NOTES.
 2. Pin the EXACT single-variable object: W_u, its Dirichlet-series form, diagonal N=N(u) issue (trap ii).

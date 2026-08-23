@@ -76,10 +76,15 @@ rigorously known by classical verified computation (all zeros with `|Im| <= 60` 
 line and simple — the same input class L-105058.5 step (4) and P2.6 consume; not RH).
 If simplicity were ever to be dropped, the expansion changes type (a higher-order pole
 pinches the cut — the singularity gets STRONGER, not weaker, but the coefficient formula
-above no longer applies); the L-105058.5-style Schwarz fallback constant is
-`2 max_{|w-rho_1|=1/2} |zeta| = 0.98384` (240-point circle scan, laneP3/cpinch.py),
-under which the window LOWER bound survives with `|zeta'(rho_1)|` replaced by 0.98385,
-i.e. `|c_B| >= 0.03856`. This fallback is a remark: simplicity is verified.
+above no longer applies). CAUTION on the fallback (hostile-review finding F5): the
+L-105058.5-style Schwarz constant `2 max_{|w-rho_1|=1/2} |zeta| = 0.98384` (240-point
+circle scan, laneP3/cpinch.py) bounds `|F| = 1/(|s||zeta|)` POINTWISE in L-105058.5's
+setting; here the zero factor sits inside a cut INTEGRAL, and a pointwise `|1/zeta|`
+lower bound does not by itself lower-bound `|Z_loc|` (phase cancellation is possible).
+The correct fallback shape in this setting is P1's (I2) multiplicity variant, not the
+pointwise constant; the derived number `|c_B| >= 0.03856` is therefore ILLUSTRATIVE
+ONLY. Nothing load-bearing: simplicity of rho_1 is verified, so the main-line formula
+stands and no fallback is consumed anywhere.
 
 **Falsifier.** An exact identity forcing `k(1/2) = 0` or a corrected kernel with a zero
 at beta = 1/2 (would break the program; P4's blind measurement of the constant at 1.0
@@ -88,3 +93,19 @@ at beta = 1/2 (would break the program; P4's blind measurement of the constant a
 Consistency triangle (independent): P2's calibration 0.047832 (rounded); P4's blind
 pinch-constant measurement 0.2489 +- 0.0033 vs 0.247167 and c0'-candidate 0.000971;
 this lane's 20-digit evaluation. All agree.
+
+Precision provenance (hostile-review finding F6): "20-digit" is interval-grade
+(rational-sandwich) ONLY for the kernel value k(1/2), which has a closed form; the
+zeta inputs `gamma_1`, `|zeta'(rho_1)|` are precision-doubled mpmath evaluations
+cross-checked against published values, not certified enclosures. The CERTIFIED
+statement of record is the lower bound `|c_B| >= 0.047828`, valid given
+`|zeta'(rho_1)| <= 0.79317` and `|z*| <= 7.07179`.
+
+Bridge identity (added post-review; the triangle closes ANALYTICALLY, not just
+numerically): `sqrt(2/(3 pi)) |c_B| = C_chain/(|rho_1 - 1| |zeta'(rho_1)|)` reduces
+to the exact identity `|rho_1 - 1| = 2|z*|`, i.e. `sqrt(1/4 + gamma^2) =
+2 sqrt(1/16 + gamma^2/4)` — true for EVERY gamma. Hence `c_0' = C_chain^2 c_0`
+exactly (0.061091 x 0.0158924 = 9.709e-4), and the kernel argument at the pinch
+equals 1/2 for every zero (gamma-independent) — which is exactly why P4's blind
+chain constant is gamma-independent and the two-zero test is structurally
+consistent.

@@ -33,6 +33,12 @@ brute-force h_U sieve at u=50,101,200,316: agreement to 1e-14). Files: stage1_bi
     beta_V (UNWEIGHTED tent field sqrt(u)Lambda/u):  0.519 +/- 0.040  <- HALF-POLE (ln u)^{-1/2}: WALL CONFIRMED
     beta_W (sqrt(log N)-WEIGHTED):                   0.008 +/- 0.037  <- FULL POLE (const amp): RESTORED
     beta_m (control sqrt(u)m(u)):                   -0.041 +/- 0.033  <- const, control passes
+    [Error-bar provenance (F9): the +/- values are ordinary least-squares standard
+    errors of the fitted slope in log(amp) vs log(ln u), computed over the sliding
+    log-window fit points (stage2 pipeline); they capture fit scatter only, NOT the
+    systematic (ln u)^{-eps} drift caveat recorded at the end of this file. The
+    tighter bars quoted in VERDICT.json (e.g. beta_W 0.008 +/- 0.028) come from the
+    same estimator on the pooled full-window fit; both are statistical.]
 (B) TRACKING: corr(sqrt(u)W_u, sqrt(u)m(u)) = -0.9645, regression slope = -0.2466.
     PREDICTED chain constant: 2*c_tent*sqrt2/sqrt(pi), c_tent = 1-(2/ln2)(1-1/sqrt2) = 0.15466
     => 0.2468. MEASURED |slope| 0.2466. Match to 1e-3. (Sign negative = the known unfixed

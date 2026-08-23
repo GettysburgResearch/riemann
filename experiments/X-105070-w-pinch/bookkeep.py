@@ -1,8 +1,10 @@
-import json, math
+import json, math, os
 # (A) grid sanity on lane S data: U=floor(X^{1/3}), N=floor(X/U); floor-cell size
-rows = json.load(open('/home/user/riemann/experiments/X-105057-sign-hunt/out_big.json'))['rows']
+SIGN_HUNT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'X-105057-sign-hunt')
+rows = json.load(open(os.path.join(SIGN_HUNT, 'out_big.json')))['rows']
 try:
-    rows += json.load(open('/home/user/riemann/experiments/X-105057-sign-hunt/out_uscan.json'))['rows']
+    d = json.load(open(os.path.join(SIGN_HUNT, 'out_uscan.json')))
+    rows += d if isinstance(d, list) else d['rows']  # out_uscan.json is a bare list (F7 fix)
 except Exception as e: print("uscan skip:", e)
 ok=0; bad=[]
 maxdev=0

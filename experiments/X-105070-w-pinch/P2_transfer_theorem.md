@@ -39,7 +39,9 @@ using `du/u = (1/3)dX/X`, `u^2 = X^{2/3}`, `Lambda^2 = V^2 X^{1/3}/log N_X`. Sub
 `Y = T^3` turns `(1/log T) int_1^T` into `(1/log Y) int_1^Y` with the factor 3 cancelling.
 (b) io-octaves: as in L-105058.5 Cor 2 — if only finitely many octaves were heavy,
 `int_1^{2^J} V^2 dX/X <= C + (c_0'-eps) J ln2` for all J, contradicting the limsup. Then
-`min_oct X^{1/3}/log N_X >= 2^{L/3}/((2/3)(L+1) ln2)` since `log N_X <= (2/3) log(2X)`. QED.
+`min_oct X^{1/3}/log N_X >= 2^{L/3}/((2/3)(L+2) ln2)` since `log N_X <= (2/3) log(2X)
+< (2/3)(L+2) ln2` on the octave (X < 2^{L+1}; the (L+1) form fails near octave tops —
+see BOOKKEEPING.md Lemma 2(b) correction; difference 1 + O(1/L), absorbed downstream). QED.
 
 ## P2.2 Lemma (smoothing bridge; the floor corrections are L2(dX/X)-summable)
 
@@ -217,10 +219,12 @@ In particular `J(h) < infinity` for every `h > 0`.
 Hence `G*(s)` is an ABSOLUTELY convergent integral for `Re s > 0`, so analytic there (Morera +
 dominated convergence); the same argument gives analyticity of `B_0` on `Re s > 0` (the
 unweighted object obeys `Q_{V_0}(Y) <= (3/2) A' loglog Y (1+o(1))` by partial summation of (1)
-against `(3/2)/log X`, hence its own J-finiteness). By the identity theorem, the P2.3/P2.5
-formulas, valid on `Re s > 1/6`, continue to `Re s > 0`: under the reductio, `G*`, `B_0`,
-`Z_far = B_0 - H_0 - Z_loc` are all analytic on `Omega^+`; every pointwise identity among them
-persists.
+against `(3/2)/log X`, hence its own J-finiteness). By the identity theorem, the FUNCTIONS
+defined by the P2.3/P2.5 representations on `Re s > 1/6` continue analytically to `Re s > 0`
+(the series/contour representations themselves diverge below Re s = 1/6 — the c-band
+collapses there; only function-level persistence is used, and that is all the proof needs):
+under the reductio, `G*`, `B_0`, `Z_far := B_0 - H_0 - Z_loc` are all analytic on `Omega^+`;
+every pointwise identity among the continued functions persists.
 (4) Plancherel. `phi_h(x) := V*(e^x) e^{-hx} 1_{x >= log 64}` lies in `L^1(R)` (by (3) with
 `sigma = h`) AND `L^2(R)` (`= J(h)`); its Fourier transform is EXACTLY `t -> G*(h+it)`
 (absolutely convergent integral — no a.e. caveat needed), and Plancherel for `L^1 ∩ L^2` gives
@@ -232,7 +236,8 @@ persists.
 `[s, s+inf)` because each piece is analytic there with the stated bounds ([P1-LOC], [P2-FAR],
 head bounds; for `Re s' >= 1/4` all pieces are absolutely-convergent-bounded). By P2.4(b),
 `D_half[c_B (.-s_0)^{-1/2}] = (c_B/sqrt(pi)) (s-s_0)^{-1}`; by P2.4(c) the other three images
-are bounded by `M := (2/sqrt(pi))(M_head + M_loc + M_far)`. Hence on the window line `s = h+it`,
+are bounded by `M := (3/sqrt(pi))(M_head + M_loc + M_far)` (P2.4(c)'s constant is 3/sqrt(pi);
+M is symbolic here, nothing downstream depends on its value). Hence on the window line `s = h+it`,
 `|t - gamma_1/3| <= r_0`:
 
     |G*(h+it)| >= sqrt(2/(3 pi)) |c_B| / |h + i(t - gamma_1/3)|  -  sqrt(2/3) M .

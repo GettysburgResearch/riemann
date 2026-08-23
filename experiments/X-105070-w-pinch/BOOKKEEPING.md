@@ -62,18 +62,24 @@ Then for every `eps in (0, c_0')`:
 
 (b) [octave consumption] For each heavy octave L (with 2^L >= 64):
     `E(L) >= 2 ln2 int_oct Lambda^2 dX/X = 2 ln2 int_oct V^2 (X^{1/3}/log N_X) dX/X
-           >= 3 (c_0'-eps) ln2 * 2^{L/3}/(L+1)`,
+           >= 3 (c_0'-eps) ln2 * 2^{L/3}/(L+2)`,
     using T-105059.5 (exact, unconditional) and, pointwise on the octave,
     `X^{1/3} >= 2^{L/3}` and `log N_X <= log(X^{2/3} * X^{1/3}/U) <= (2/3) log(2X)
-    <= (2/3)(L+1) ln 2 * (1 + O(1/L))` — concretely `log N_X <= (2/3) ln 2 * (L+1)`
-    for `2^L >= 64` since `N_X <= X/U <= X^{2/3} * (1 + O(X^{-1/3})) <= (2X)^{2/3}`.
-    So:  **E(L) >= 3 ln2 (c_0'-eps) 2^{L/3}/(L+1) for infinitely many L.**
+    < (2/3) ln 2 * (L+2)` since `N_X <= X/U <= (2X)^{2/3}` and `X < 2^{L+1}` on the
+    octave. [CORRECTION, hostile review 2026-08-23: the previously claimed concrete
+    form `log N_X <= (2/3) ln 2 * (L+1)` for `2^L >= 64` is FALSE near octave tops —
+    e.g. L=8, X=511 (U=7, N=73): ln 73 = 4.290 > (2/3)(9) ln 2 = 4.159; 85 violations
+    found for L in 6..39. The `(L+2)` form above is what the argument proves. The
+    `(L+1)` denominator is recoverable for large L by absorbing the factor
+    `(L+2)/(L+1) = 1 + O(1/L)` into eps; all asymptotics, and the refutation of
+    GATE_theta for every theta < 1/3, are untouched.]
+    So:  **E(L) >= 3 ln2 (c_0'-eps) 2^{L/3}/(L+2) for infinitely many L.**
 
 (c) [u-block form, as T-105059.5(ii) states it] If instead the io input is given in
     u-octaves — infinitely many j with `int_{2^j}^{2^{j+1}} u W_u^2 du/u >= c` — then by
     Lemma 1 the triple of X-octaves {3j, 3j+1, 3j+2} carries `int V^2 dX/X >= 3c`, so at
     least one of the three has `int_oct V^2 >= c`, and (b) gives
-    `E(L) >= 3 c * 2^{L/3}/(L+1)` for some `L in {3j, 3j+1, 3j+2}`. io j gives io L
+    `E(L) >= 3 c * 2^{L/3}/(L+2)` for some `L in {3j, 3j+1, 3j+2}`. io j gives io L
     (each u-octave's triple is disjoint from every other's). This is T-105059.5(ii)'s
     "each u-octave maps onto 3 X-octaves" claim, now with the pigeonhole and the
     constants written. Note (a)+(b) is the cleaner route and is what T-105070 uses;
@@ -113,7 +119,7 @@ accounting closes with no sliver. Lane S grid checks in laneP3/bookkeep.py as ab
 The measure bookkeeping between the W-pinch lemma's u-normalized limsup and the
 gate's X-octave energy is an EXACT identity (Lemma 1) plus a pigeonhole with explicit
 constants (Lemma 2): W-pinch with constant c_0' implies
-`E(L) >= 3 ln2 (c_0'-eps) 2^{L/3}/(L+1)` for infinitely many L, unconditionally,
+`E(L) >= 3 ln2 (c_0'-eps) 2^{L/3}/(L+2)` for infinitely many L, unconditionally,
 with no RH and no unproved input beyond the W-pinch lemma itself. T-105059.5(ii)'s
 "closes trivially" is VERIFIED (and the trivially is earned: the exactness is a
 consequence of defining W_u on continuous u with X = u^3 — Definition 1, now pinned).

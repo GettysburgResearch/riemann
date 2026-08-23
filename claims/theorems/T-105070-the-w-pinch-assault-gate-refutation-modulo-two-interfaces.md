@@ -45,13 +45,17 @@ zero constants lost; cube corners and floors audited, numerically verified).
     [lane P2 Theorem P2.7 for the architecture; lane P3 CPINCH.md for the coefficient,
     computed to 20 digits, nonvanishing with rigorous rational enclosures].
 
-(ii) `E(L) >= 3 ln2 (c_0' - eps) 2^{L/3}/(L+1)` for infinitely many L, for every
+(ii) `E(L) >= 3 ln2 (c_0' - eps) 2^{L/3}/(L+2)` for infinitely many L, for every
     eps > 0 [lane P3 BOOKKEEPING Lemma 2 + T-105059.5, the latter exact and
-    unconditional].
+    unconditional; the denominator is (L+2), not (L+1) — the concrete (L+1)
+    bound fails near octave tops (hostile-review finding F2, correction recorded
+    in BOOKKEEPING.md); for large L the forms differ by 1 + O(1/L), absorbed
+    into eps, so (iii) is unaffected].
 
 (iii) `Theta_gate >= 1/3`: GATE_theta is FALSE for every theta < 1/3, and in particular
     **GATE_{o(1)} — HHFE102010 in the corrected Ht reading (T-105051 Step 0) — is
-    FALSE unconditionally** [quantifier check in Section 3].
+    FALSE unconditionally (given the Section 2 interfaces)** [quantifier check in
+    Section 3].
 
 (iv) With T-105051(III) (zeta nonzero on `Re > 1/2 + delta` => GATE_theta for
     theta > 1/3 + (2/3)delta; at delta = 0 this is RH => Theta_gate <= 1/3):
@@ -119,8 +123,8 @@ RH. CONFIRMED as cited.
 both interfaces are RH-free, so (iii) is a DIRECT refutation, strictly stronger than
 T-105059.7's already-valid reductio form. CONFIRMED.
 (iii) Quantifiers: GATE_theta is an ALL-large-L statement (`for all L >= L_0`,
-T-105051); statement (ii) produces io L with `E(L) >= c 2^{L/3}/(L+1)`, and for any
-theta < 1/3, C: `c 2^{L/3}/(L+1) > C 2^{theta L}` for all large L — so io violation
+T-105051); statement (ii) produces io L with `E(L) >= c 2^{L/3}/(L+2)`, and for any
+theta < 1/3, C: `c 2^{L/3}/(L+2) > C 2^{theta L}` for all large L — so io violation
 negates GATE_theta. CONFIRMED. (iv) The E_N-phase-conspiracy failure mode flagged by
 lane P is moot in this route: the tent reduction T-105059.5 is exact, no remainder
 extraction occurs. CONFIRMED.
