@@ -1,0 +1,124 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_ATOMIC_MOMENT_GRAM",
+  "checks": 159,
+  "counts": {
+    "bounded_order_firewall_checks": 17,
+    "polynomial_exterior_checks": 12,
+    "positive_hamburger_checks": 85,
+    "symmetric_stieltjes_checks": 45
+  },
+  "crvh105330_proved_for_xi": false,
+  "fixtures": {
+    "bounded_order_firewall": {
+      "L1_det": "1/4",
+      "L2_det": "1/8",
+      "L3_det": "-1/16",
+      "function": "z/4*(1/(1+z)-1+1/(1-z))",
+      "moments": [
+        "1/4",
+        "0",
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "packet": [
+        "-1/2",
+        "1/4",
+        "1/2"
+      ],
+      "packet_2x2_determinants": [
+        "1/6",
+        "46/81",
+        "11/4050"
+      ],
+      "packet_3x3_determinant": "-16/2025",
+      "witness": "1-t^2",
+      "witness_value": "-1/4"
+    },
+    "polynomial_exterior": {
+      "beta": [
+        "3/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ],
+      "exterior_residue": "-1/16 at each of +-1",
+      "nu": [
+        {
+          "s": "0",
+          "weight": "1/4"
+        },
+        {
+          "s": "1",
+          "weight": "1/8"
+        }
+      ],
+      "polynomial": "x^4-2x^2+1/2"
+    },
+    "positive_hamburger": {
+      "leading_determinants": [
+        "151/105",
+        "135/49",
+        "15625/2572",
+        "0",
+        "0"
+      ],
+      "nodes": [
+        "-2",
+        "0",
+        "3"
+      ],
+      "packet_determinant": "1161811750/1545852277",
+      "weights": [
+        "1/5",
+        "2/3",
+        "4/7"
+      ]
+    },
+    "symmetric_stieltjes": {
+      "even_determinants": [
+        "92/105",
+        "81/700",
+        "81/44800"
+      ],
+      "odd_determinants": [
+        "72/287",
+        "1/168",
+        "0"
+      ],
+      "s_nodes": [
+        "0",
+        "1/4",
+        "4"
+      ],
+      "safe_axis": [
+        {
+          "Hiy_over_iy": "25885/27521",
+          "y": "1/5"
+        },
+        {
+          "Hiy_over_iy": "111/144",
+          "y": "1/2"
+        },
+        {
+          "Hiy_over_iy": "27268/44135",
+          "y": "3/4"
+        }
+      ],
+      "weights": [
+        "1/3",
+        "2/5",
+        "1/7"
+      ]
+    }
+  },
+  "infinite_hamburger_theorem_machine_proved": false,
+  "moving_saddle_proved": false,
+  "oash105350_proved_for_xi": false,
+  "proof_object": "50c6c26c11155fd3c35d49830f5ff6f8b32b0f0b6294bf73f04ea7aeeec9aee4",
+  "rh_established": false,
+  "verdict": "PASS_X_105350_ONE_ANCHOR_LOEWNER_HAMBURGER"
+}
