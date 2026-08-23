@@ -10,8 +10,8 @@ if grep -RInP --include='*.lean' '\b(sorry|admit)\b' "${TARGETS[@]}"; then
   exit 1
 fi
 
-if grep -RInP --include='*.lean' '^\s*axiom\b' "${TARGETS[@]}"; then
-  echo 'trusted formal target declares a custom axiom' >&2
+if grep -RInP --include='*.lean' '^\s*(axiom|opaque)\b' "${TARGETS[@]}"; then
+  echo 'trusted formal target declares a custom axiom/opaque constant' >&2
   exit 1
 fi
 
