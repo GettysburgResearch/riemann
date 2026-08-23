@@ -1,0 +1,55 @@
+{
+ "lane": "P4",
+ "verdict": "RESTORED",
+ "summary": "sqrt(log N) weight restores the full pole; lemma statement as pinned in T-105059.6 is numerically correct; no repair needed",
+ "beta_unweighted_V": {
+  "value": 0.519,
+  "jackknife_se": 0.027,
+  "range_over_configs": [
+   0.51,
+   0.62
+  ],
+  "prediction_half_pole": 0.5
+ },
+ "beta_weighted_W": {
+  "value": 0.008,
+  "jackknife_se": 0.028,
+  "range_over_configs": [
+   0.006,
+   0.117
+  ],
+  "control_subtracted": "beta_W-beta_m ~ 0.02-0.03",
+  "prediction_full_pole": 0.0
+ },
+ "pinch_constant": {
+  "measured": 0.2489,
+  "sd": 0.0033,
+  "predicted_chain": 0.247167,
+  "formula": "2*(1-(2/ln2)(1-1/sqrt2))*sqrt2/sqrt(pi)"
+ },
+ "two_zero_test": {
+  "gamma1": {
+   "pred": 0.02203,
+   "meas": 0.02174
+  },
+  "gamma2": {
+   "pred": 0.01034,
+   "meas": 0.01058
+  }
+ },
+ "phase_lock_rad": {
+  "mean_absdphi": 3.129,
+  "sd": 0.011,
+  "note": "= pi, known global sign"
+ },
+ "mass_W_at_T1e4": 0.00134,
+ "mass_m_at_T1e4": 0.16611,
+ "c0_prime_candidate": 0.000971,
+ "u_range": [
+  20,
+  12649
+ ],
+ "NMAX": 160000000,
+ "grid_points": 307,
+ "hscan_pointwise": "non-diagnostic at reachable T (needs u~e^{1/h}); ln-dual amplitude test used instead; pipeline validated on synthetics (0.502/-0.009/-0.009)"
+}
