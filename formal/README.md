@@ -17,16 +17,26 @@ The bootstrap establishes infrastructure and trusted statement plumbing. It does
 
 ## Build
 
+From the repository root:
+
 ```bash
+python3 formal/scripts/generate_registry.py
+python3 formal/scripts/validate_registry.py
+python3 formal/scripts/verify_source_locks.py
+python3 formal/scripts/validate_blueprint.py
+
 cd formal
+lake update
 lake exe cache get
 lake build
 lake build Solution.RH
-python3 scripts/validate_registry.py
-python3 scripts/verify_source_locks.py
-bash scripts/check_no_sorry.sh
-bash scripts/check_axioms.sh
+cd ..
+
+bash formal/scripts/check_no_sorry.sh
+bash formal/scripts/check_axioms.sh
 ```
+
+`formal/registry/FORMALIZATION_MAP.tsv` is a deterministic generated report and is intentionally not committed. Reviewers edit only their sparse owned delta files; a later formal release reconciliation snapshots the joined registry.
 
 ## Layers
 
@@ -36,7 +46,7 @@ bash scripts/check_axioms.sh
 - `RiemannFormal/Arithmetic/` and `MellinLandau/`: arithmetic and fixed-detector work owned by Reviewer B.
 - `RiemannFormal/Operator/` and `Refutations/`: operator algebra and formal firewalls owned by Reviewer C.
 - `comparator/`: trusted Mathlib-only statements and sorry-free solution modules.
-- `registry/`: the exact semantic-ID/formal-status map.
+- `registry/`: the exact semantic-ID/formal-status join and sparse reviewer deltas.
 - `Experimental/`: incomplete work excluded from trusted default targets.
 
 ## Source policy
