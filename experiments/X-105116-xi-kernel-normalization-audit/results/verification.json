@@ -1,0 +1,70 @@
+{
+  "audit_sha256": "4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8",
+  "checks": {
+    "anchor_phase_ledger": {
+      "a_minus_i_is_common_for_every_fixed_triple": true,
+      "all_fixed_derivatives_nonzero": true,
+      "anchor": "a=-i*y with y>0",
+      "even_pair": "2*u^m*Phi_std(u)*cosh(y*u)>0",
+      "odd_pair": "2*u^m*Phi_std(u)*sinh(y*u)>0",
+      "phase_removed_quantity": "i^(-m)*Xi_t^(m)(-i*y)"
+    },
+    "gamma_constant_ledger": {
+      "corrected_bound": "|Xi_t^(m)(z)|<=4*pi^2*m!*zeta(3/2)*pi^(-q/2)*Gamma(q/2)",
+      "final_pi_squared_coefficient": "4",
+      "gamma_substitution_multiplier": "1/2",
+      "l104531_orbit_leading_pi_squared_coefficient": "2",
+      "moment_bound": "u^m<=m!*exp(u)",
+      "n_sum": "sum n^(4-q)<=zeta(3/2)",
+      "q": "Y+11/2",
+      "q_offset": "11/2",
+      "standard_kernel_multiplier": "2",
+      "two_sided_symmetry_multiplier": "2",
+      "zeta_exponent_at_Y_zero": "3/2"
+    },
+    "normalization_ledger": {
+      "Fourier(Phi)/Xi": "1/2",
+      "l104528_unscaled_display_needs_factor_two_repair": true,
+      "l104531_operator": "Phi=(1/4)*(D^2-1/4)*A",
+      "phi_prefactor_on_spectral_multiplier": "1/4",
+      "spectral_identity": "s=1/2+it gives s(s-1)=-(t^2+1/4)",
+      "standard_kernel_multiplier_over_Phi": "2",
+      "standard_xi": "xi(s)=(1/2)*s*(s-1)*Lambda(s)",
+      "xi_prefactor_on_spectral_multiplier": "1/2"
+    },
+    "source_lock": {
+      "l104513": {
+        "blob": "147f13997e1bb16c547994021dd26f7693f8a566",
+        "commit": "49f04d3459d1276e6958cffb0a55680b0a4ca70e",
+        "origin_multiplicity_term_omitted": true
+      },
+      "l104528": {
+        "blob": "187a2f43372241641e5b92a8300d4452f6a26d79",
+        "commit": "6ee43255d64a27b76de7e1d0fc230a4c7767969e",
+        "unscaled_fourier_display_is_compatible_with_standard_xi": false
+      },
+      "l104531": {
+        "blob": "7235207cb1bab2d540598dbe1c9cf076afd960a0",
+        "commit": "efe3ef6aed66a68a47bbfe1d3678210a249ad725",
+        "theta_orbit_source_locked": true
+      },
+      "pr": 720,
+      "pr_base": "research/gpt56-pro/104500-xi-riccati-pick-cascade",
+      "pr_head": "beb9d8a4e10fb8c8deb74bb0505a32fe55cddd14"
+    }
+  },
+  "classification": "PASS_X105116_XI_KERNEL_NORMALIZATION_AUDIT",
+  "heavy_computation_run": false,
+  "schema": "riemann.x105116.xi-kernel-normalization-audit.v1",
+  "scope": {
+    "actual_xi_manifests_authenticated": false,
+    "anchor_phase_bookkeeping_verified": true,
+    "gamma_constant_bookkeeping_verified": true,
+    "normalization_algebra_verified": true,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "unmerged_source_blobs_imported": false,
+    "xi_growth_claim_frozen_as_proof_object": false
+  },
+  "verdict": "PASS_X105116_XI_KERNEL_NORMALIZATION_AUDIT"
+}

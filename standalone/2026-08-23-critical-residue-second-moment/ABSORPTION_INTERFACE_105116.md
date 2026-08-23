@@ -21,3 +21,8 @@ cosh/sinh moments at (-iy).  Recheck the Fourier normalization and import
 the PR #720 source blobs before marking those inputs closed.  In particular,
 the standard Xi kernel is twice L-104531's (Phi), so the safe H.9 constant
 is (4\pi^2m!\), not (2\pi^2m!\).
+
+Replay `experiments/X-105116-xi-kernel-normalization-audit` before importing
+that bridge.  Its canonical digest is
+`4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8`;
+the audit is deliberately fail-closed about source import and theorem status.

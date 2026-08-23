@@ -267,6 +267,20 @@ unmerged PR #720.  The next programme should import the exact source blobs,
 repair the L-104528/L-104531 factor-two mismatch, freeze this corollary, and
 then update the T-105114 Xi-input flags.
 
+### Normalization regression audit
+
+`experiments/X-105116-xi-kernel-normalization-audit` records the exact
+source locks and the four factors in (H.9): the L-104531 orbit coefficient
+(2), the standard-kernel repair (2), two-sided pairing (2), and the gamma
+substitution (1/2).  Their product is (4), while the same ledger fixes
+(q=Y+11/2), the (\zeta(3/2)) threshold, and both anchor parities.  Its
+canonical digest is
+`4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8`;
+10 focused tests pass normally and under optimized Python.  This is an
+exploratory bookkeeping audit only: its result explicitly says that no
+unmerged source blob has been imported and that (H.9)--(H.11) have not been
+frozen as a proof object.
+
 The smallest defensible next theorem is therefore to import L-104531 with
 the standard-kernel factor two and freeze (H.9)--(H.11), or import and
 repair L-104513 for the anchor half.  Manifests/selectors and (H.4) remain

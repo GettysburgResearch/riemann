@@ -44,3 +44,12 @@ and positive cosh/sinh pairing gives
 (i^{-m}\Xi_t^{(m)}(-iy)>0).  This would close the common anchor and
 fixed-order (O_m(Y\log Y)) growth inputs once the unmerged source blobs
 and corrected corollary are frozen on the branch.
+
+The lightweight regression ledger in
+`experiments/X-105116-xi-kernel-normalization-audit` locks the corrected
+factor (4), (q=|\Im z|+11/2), the (\zeta(3/2)) threshold, source provenance,
+and both anchor parities.  It passes 10/10 focused tests in normal and
+optimized Python with digest
+`4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8`.
+It imports no source claim and leaves the Xi-growth, RCMV104530, and RH
+flags explicitly open.
