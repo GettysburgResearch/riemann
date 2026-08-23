@@ -1,0 +1,69 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_ATOMIC_MOMENT_TRANSPORT",
+  "checks": 43,
+  "counts": {
+    "nested_function_transport_checks": 4,
+    "nested_moment_transport_checks": 8,
+    "stieltjes_gram_checks": 28,
+    "terminal_slope_firewall_checks": 3
+  },
+  "crvh105330_proved_for_xi": false,
+  "fixtures": {
+    "nested_transport": {
+      "crossed_critical_pairs": [
+        {
+          "c": "2",
+          "rho": "-3/8",
+          "s": "1/4",
+          "weight": "3/16"
+        },
+        {
+          "c": "3",
+          "rho": "-1/2",
+          "s": "1/9",
+          "weight": "1/9"
+        }
+      ],
+      "inner_beta_0_to_7": [
+        "3953/5040",
+        "3301/36288",
+        "21709/1306368",
+        "163381/47029248",
+        "1342429/1693052928",
+        "11569861/60949905408",
+        "102080749/2194196594688",
+        "910534741/78991077408768"
+      ],
+      "outer_atoms": [
+        {
+          "s": "0",
+          "weight": "1/5"
+        },
+        {
+          "s": "1/9",
+          "weight": "2/7"
+        }
+      ]
+    },
+    "terminal_slope_firewall": {
+      "L2": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "L2_determinant": "-1",
+      "function": "z-z^3",
+      "terminal_slope": "1"
+    }
+  },
+  "moving_saddle_proved": false,
+  "oash105350_proved_for_xi": false,
+  "rh_established": false,
+  "tair105360_proved_for_xi": false,
+  "verdict": "PASS_X_105360_TERMINAL_STIELTJES_TRANSPORT"
+}
