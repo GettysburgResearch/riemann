@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "riemann": {
+    "repository": "gfreund123/riemann",
+    "scientific_commit": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+    "scientific_tree": "35bd1a022c6b264f5af8f6f23d7926979fb9682d",
+    "canonical_claims_path": "canonical/2026-08-22/claims.tsv",
+    "canonical_claims_blob": "6a4157460bf0044c6e110a2713f7dfb62bcb6c28",
+    "canonical_claim_count": 139,
+    "research_terminal_pr": 707
+  },
+  "lean": {
+    "toolchain": "leanprover/lean4:v4.33.0-rc2"
+  },
+  "mathlib": {
+    "repository": "leanprover-community/mathlib4",
+    "commit": "51e6992efd06126df61a496bebf8f49482a4e129"
+  },
+  "zeta23": {
+    "repository": "anthropics/zeta-23-lean",
+    "previously_audited_commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "selected_commit": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e",
+    "ahead_by": 9,
+    "theorem_bearing_Zeta23_directory_changed": false,
+    "comparison_scope": "Only README/AUDIT/comparator/formalization metadata changed."
+  },
+  "formal_conjectures": {
+    "repository": "google-deepmind/formal-conjectures",
+    "reference_commit": "488aade228ec37880b8fec178c173c07d279bb53",
+    "proof_dependency": false
+  }
+}

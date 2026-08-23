@@ -1,0 +1,32 @@
+name = "RiemannFormal"
+version = "0.1.0"
+defaultTargets = ["RiemannFormal"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "51e6992efd06126df61a496bebf8f49482a4e129"
+
+[[require]]
+name = "Zeta23"
+git = "https://github.com/anthropics/zeta-23-lean"
+rev = "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e"
+
+[[lean_lib]]
+name = "RiemannFormal"
+
+[[lean_lib]]
+name = "ChallengeDeps"
+srcDir = "comparator"
+
+[[lean_lib]]
+name = "Challenge"
+srcDir = "comparator"
+
+[[lean_lib]]
+name = "Solution"
+srcDir = "comparator"
