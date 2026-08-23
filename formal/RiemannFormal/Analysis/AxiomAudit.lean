@@ -1,0 +1,14 @@
+import RiemannFormal.Analysis.MellinAPI
+import RiemannFormal.Analysis.SingularityTransfer
+import RiemannFormal.Analysis.LandauConsumer
+import RiemannFormal.Analysis.Reflection
+
+#print axioms RiemannFormal.Analysis.mellin_dilation
+#print axioms RiemannFormal.Analysis.hasMellin_linearCombination_two
+#print axioms RiemannFormal.Analysis.mellin_analyticAt_of_power_bounds
+#print axioms RiemannFormal.Analysis.fixed_mellin_singularity_transfer
+#print axioms RiemannFormal.Analysis.reciprocalZeta_order_of_zeta_order
+#print axioms RiemannFormal.Analysis.nonnegative_landau_boundary
+#print axioms RiemannFormal.Analysis.subpower_negative_mass_holomorphic
+#print axioms RiemannFormal.Analysis.subpower_negative_mass_singularity_transfer
+#print axioms RiemannFormal.Analysis.functionalEquationReflection_closes_RH
