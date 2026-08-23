@@ -130,7 +130,8 @@ Assume `N,M>=2`. Substitution of (L-105324.6) into (L-105324.3) gives
 {NS_2-S_1^2\over N^2(N-1)}.
 \end{aligned}
 }
-\tag{L-105324.7)
+\tag{L-105324.7}
+\]
 
 This is the exact height-localized replacement for the global derivative
 invariance of `L-105323`. Every failure of local temperature conservation is
@@ -161,7 +162,8 @@ Equation (L-105324.7) simplifies to
 -
 {S_2\over N(N-1)}.
 }
-\tag{L-105324.8)
+\tag{L-105324.8}
+\]
 
 Thus the local derivative-temperature defect in a symmetric Xi rectangle is a
 two-input object:
@@ -196,13 +198,12 @@ in uncentered coordinates. Inserting these values into (L-105324.7) gives
 
 \[
 \boxed{
-\mathcal T_\Omega(p')=\mathcal T_\Omega(p),
+\mathcal T_\Omega(p')=\mathcal T_\Omega(p).
 }
 \]
 
-recovering `L-105323` as the zero-leakage global case.
-
-For centered or parity-symmetric `p`, this reduces to
+This recovers `L-105323` as the zero-leakage global case. For centered or
+parity-symmetric `p`, the fluxes reduce to
 
 \[
 \Delta_1=0,
@@ -250,7 +251,8 @@ M_{1,F}(\Omega)
 \left[\mathcal T_\Omega(F)+\mathcal E_\Omega(F)\right]
 +C_{1,F}(\Omega).
 }
-\tag{L-105324.11)
+\tag{L-105324.11}
+\]
 
 This separates the first-moment input into:
 
