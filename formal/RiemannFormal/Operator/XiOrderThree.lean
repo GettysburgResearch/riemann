@@ -131,26 +131,43 @@ theorem actualXiOrderedDistinctPickOrderThree_of_inputs
       ht12 ht13 ht23 hrecip hcomp
   exact three_node_pick_psd_of_principal_minors hp1 hminor12 hdet
 
-/-- Honest conditional actual-Xi PSD theorem for one ordered packet through
-size three.  Repeated-node reduction is named explicitly instead of being
-smuggled through a strict determinant argument. -/
+/-- Honest conditional actual-Xi PSD theorem for one packet of size three.
+Repeated-node reduction is a functional hypothesis.  On the distinct-node
+branch Lean derives PSD from the exact determinant factorization and the two
+scalar curvature signs. -/
 theorem actualXiPickOrderThreeConditional
     {HighZeroVerified CorrectedSourceLock GroupedC2Convergence
       OrbitConventionLocked MultiplicityResidualRetained
-      ReciprocalSquareTailControlled RepeatedNodeReduction : Prop}
-    (_external : XiOrderThreeExternalInputs HighZeroVerified CorrectedSourceLock
+      ReciprocalSquareTailControlled : Prop}
+    (external : XiOrderThreeExternalInputs HighZeroVerified CorrectedSourceLock
       GroupedC2Convergence OrbitConventionLocked MultiplicityResidualRetained
       ReciprocalSquareTailControlled)
-    (_repeated : RepeatedNodeReduction)
-    (P : ThreeNodePickData)
-    (hone1 : 0 ≤ P.p1) (hone2 : 0 ≤ P.p2) (hone3 : 0 ≤ P.p3)
-    (hpair12 : IsPSD2 P.p1 (pickEntry P.x1 P.p1 P.x2 P.p2) P.p2)
-    (hpair13 : IsPSD2 P.p1 (pickEntry P.x1 P.p1 P.x3 P.p3) P.p3)
-    (hpair23 : IsPSD2 P.p2 (pickEntry P.x2 P.p2 P.x3 P.p3) P.p3)
-    (htriple : IsPSD3 P.p1 (pickEntry P.x1 P.p1 P.x2 P.p2)
-      (pickEntry P.x1 P.p1 P.x3 P.p3) P.p2
-      (pickEntry P.x2 P.p2 P.x3 P.p3) P.p3) :
-    PickPSDThroughThree P := by
-  exact ⟨hone1, hone2, hone3, hpair12, hpair13, hpair23, htriple⟩
+    {x1 x2 x3 p1 p2 p3 : ℝ}
+    (hx1 : 0 < x1) (hx2 : 0 < x2) (hx3 : 0 < x3)
+    (hp1 : 0 < p1) (hp2 : 0 < p2) (hp3 : 0 < p3)
+    (hrepeated :
+      (x1 ^ 2 = x2 ^ 2 ∨ x1 ^ 2 = x3 ^ 2 ∨ x2 ^ 2 = x3 ^ 2) →
+        IsPSD3 p1 (pickEntry x1 p1 x2 p2) (pickEntry x1 p1 x3 p3)
+          p2 (pickEntry x2 p2 x3 p3) p3)
+    (hminor12 : x1 ^ 2 ≠ x2 ^ 2 → 0 < pickDet2 x1 p1 x2 p2)
+    (hrecip :
+      x1 ^ 2 ≠ x2 ^ 2 → x1 ^ 2 ≠ x3 ^ 2 → x2 ^ 2 ≠ x3 ^ 2 →
+        secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
+          (1 / p1) (1 / p2) (1 / p3) ≤ 0)
+    (hcomp :
+      x1 ^ 2 ≠ x2 ^ 2 → x1 ^ 2 ≠ x3 ^ 2 → x2 ^ 2 ≠ x3 ^ 2 →
+        secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
+          (x1 ^ 2 * p1) (x2 ^ 2 * p2) (x3 ^ 2 * p3) ≤ 0) :
+    IsPSD3 p1 (pickEntry x1 p1 x2 p2) (pickEntry x1 p1 x3 p3)
+      p2 (pickEntry x2 p2 x3 p3) p3 := by
+  by_cases h12 : x1 ^ 2 = x2 ^ 2
+  · exact hrepeated (Or.inl h12)
+  by_cases h13 : x1 ^ 2 = x3 ^ 2
+  · exact hrepeated (Or.inr (Or.inl h13))
+  by_cases h23 : x2 ^ 2 = x3 ^ 2
+  · exact hrepeated (Or.inr (Or.inr h23))
+  exact actualXiOrderedDistinctPickOrderThree_of_inputs external
+    hx1 hx2 hx3 hp1 hp2 hp3 h12 h13 h23 (hminor12 h12)
+      (hrecip h12 h13 h23) (hcomp h12 h13 h23)
 
 end RiemannFormal.Operator
