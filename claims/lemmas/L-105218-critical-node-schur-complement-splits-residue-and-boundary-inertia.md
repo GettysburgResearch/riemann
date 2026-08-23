@@ -42,6 +42,7 @@ and define the feature matrix
 Q_{\alpha i}
 ={F'(x_\alpha)\over x_\alpha-c_i}.
 \tag{L-105218.2}
+\]
 
 Let
 
@@ -68,8 +69,7 @@ features interpolate diagonally, `L-105214.5` gives
 -QDH&R-QDQ^T
 \end{pmatrix}.
 }
-\tag{L-105218.3
-}
+\tag{L-105218.3}
 
 No approximation is used.
 
@@ -90,8 +90,7 @@ Its Schur complement in (L-105218.3) is
 -(-QDH)(-HDH)^{-1}(-HDQ^T)
 =R.
 }
-\tag{L-105218.4
-}
+\tag{L-105218.4}
 
 Equivalently, one explicit block-triangular congruence sends
 
@@ -101,8 +100,7 @@ Equivalently, one explicit block-triangular congruence sends
 \sim
 (-HDH)\oplus R.
 }
-\tag{L-105218.5
-}
+\tag{L-105218.5}
 
 Thus the boundary and residue defects are not merely separately visible; they
 are exact complementary inertia summands.
@@ -119,8 +117,7 @@ Sylvester's law of inertia gives
 +
 \operatorname{ind}_-(R).
 }
-\tag{L-105218.6
-}
+\tag{L-105218.6}
 
 Similarly,
 
