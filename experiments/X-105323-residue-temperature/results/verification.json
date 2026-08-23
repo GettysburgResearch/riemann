@@ -1,0 +1,29 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "chains": [
+    [
+      {"degree": 3, "first_mass": "2", "temperature": "3"}
+    ],
+    [
+      {"degree": 4, "first_mass": "45/16", "temperature": "15/4"},
+      {"degree": 3, "first_mass": "5/2", "temperature": "15/4"}
+    ],
+    [
+      {"degree": 5, "first_mass": "126/25", "temperature": "63/10"},
+      {"degree": 4, "first_mass": "189/40", "temperature": "63/10"},
+      {"degree": 3, "first_mass": "21/5", "temperature": "63/10"}
+    ],
+    [
+      {"degree": 6, "first_mass": "43/6", "temperature": "43/5"},
+      {"degree": 5, "first_mass": "172/25", "temperature": "43/5"},
+      {"degree": 4, "first_mass": "129/20", "temperature": "43/5"},
+      {"degree": 3, "first_mass": "86/15", "temperature": "43/5"}
+    ]
+  ],
+  "checks": 20,
+  "low_order_variance_budget_proved": false,
+  "proof_object": "de47366ec7a4145b645cd864ca855fef228f7fb8b328d26602fba4c516a935e0",
+  "rh_established": false,
+  "verdict": "PASS_X_105323_RESIDUE_TEMPERATURE",
+  "xi_canonical_product_passage_replayed": false
+}
