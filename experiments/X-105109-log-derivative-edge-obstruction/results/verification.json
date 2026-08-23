@@ -1,0 +1,331 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_WITH_ALGEBRAIC_ROOT_CERTIFICATES",
+  "checks": {
+    "boundary_obstruction": {
+      "exterior_F_prime_root_squared": [
+        "101/100",
+        "201/200"
+      ],
+      "exterior_collar_width_squared": [
+        "1/100",
+        "1/200"
+      ],
+      "first_full_weighted_contour_integral": "1",
+      "first_quotient_at_one": [
+        "101",
+        "201"
+      ],
+      "first_quotient_sequence": "n+1",
+      "lower_bound_positive_remainder": "n^3+8*n^2+11*n+3",
+      "optimal_selector_weighted_boundary_suprema_diverge": true,
+      "oriented_contour_integral_divergence_claimed": false,
+      "phase_sensitive_edge_cancellation_remains_open": true,
+      "sample_parameters": [
+        "101/100",
+        "201/200"
+      ],
+      "second_absolute_lower_bound": "n/3",
+      "second_full_weighted_contour_integral": "1",
+      "second_quotient_at_one": [
+        "-1030301/20098",
+        "-8120601/80198"
+      ],
+      "second_quotient_sequence": "-(n+1)^3/(2*n^2+n-2)",
+      "sequence": "s_n=1+1/n",
+      "unweighted_boundary_suprema_diverge": true
+    },
+    "derivative_polynomials": {
+      "A_coefficients_in_z": [
+        "1",
+        "0",
+        "-199/101",
+        "0",
+        "-200/101",
+        "0",
+        "10000/10201"
+      ],
+      "A_equals_L_squared_plus_L_prime": true,
+      "A_equals_P_of_z_squared_over_s_squared": true,
+      "L_coefficients_in_z": [
+        "0",
+        "1",
+        "0",
+        "-100/101"
+      ],
+      "P_at_s_in_s": [
+        "0",
+        "0",
+        "-2"
+      ],
+      "P_coefficients_in_x": [
+        "10201/10000",
+        "-20099/10000",
+        "-101/50",
+        "1"
+      ],
+      "P_minus_one_in_s": [
+        "-1",
+        "1"
+      ],
+      "P_one_in_s": [
+        "1",
+        "-5",
+        "2"
+      ],
+      "P_zero_in_s": [
+        "0",
+        "0",
+        "1"
+      ],
+      "discriminant_factor": "s^3*(8*s^2+9*s+108)",
+      "discriminant_in_s": [
+        "0",
+        "0",
+        "0",
+        "108",
+        "9",
+        "8"
+      ],
+      "parameter_probe": "101/100"
+    },
+    "event_manifests": {
+      "A_at_outer_F_prime_zeros": "-2",
+      "A_at_zero": "1",
+      "F_prime_zeros": [
+        "0",
+        "-sqrt(s)",
+        "sqrt(s)"
+      ],
+      "F_properties": [
+        "real",
+        "even",
+        "entire",
+        "zero-free",
+        "order_four"
+      ],
+      "P_root_order": "gamma<-1<0<alpha<1<s<beta",
+      "all_interior_events_simple": true,
+      "allowed_parameter_range": "1<s<(5+sqrt(17))/4",
+      "boundary_poles_for_strict_parameter_range": false,
+      "common_F_prime_F_second_events": false,
+      "endpoints_included": false,
+      "first_disk_manifest": [
+        {
+          "order": 1,
+          "point": "0",
+          "role": "target"
+        }
+      ],
+      "second_disk_manifest": [
+        {
+          "order": 1,
+          "point": "-sqrt(alpha)",
+          "role": "nontarget"
+        },
+        {
+          "order": 1,
+          "point": "0",
+          "role": "target"
+        },
+        {
+          "order": 1,
+          "point": "sqrt(alpha)",
+          "role": "nontarget"
+        }
+      ],
+      "second_nontarget_locations_fixed_in_s": false
+    },
+    "finite_jet_gauge": {
+      "P_at_boundary": "8/27",
+      "Q1_prime_at_boundary": "8/27",
+      "Q2_prime_at_boundary": "0",
+      "Q2_second_at_boundary": "16/27",
+      "boundary_point": "1",
+      "complete_derivative_manifest_preserved": false,
+      "epsilon": "1/5",
+      "epsilon_zero_collapses_denominator": true,
+      "initial_A": "7/4",
+      "initial_L": "5/3",
+      "nodes_and_depths": [
+        {
+          "depth": 2,
+          "point": "0"
+        },
+        {
+          "depth": 3,
+          "point": "1/3"
+        }
+      ],
+      "specified_interior_jets_preserved": true,
+      "t1": "-45/8",
+      "t2": "-189/64",
+      "transformed_A_second_gauge": "7/20",
+      "transformed_L_first_gauge": "1/3",
+      "transformed_L_second_gauge": "5/3",
+      "zeros_preserved_by_zero_free_exponential": true
+    },
+    "local_target_residues": {
+      "first_laurent_terms_at_zero": [
+        "z^-1",
+        "100/101*z"
+      ],
+      "first_target_principal_coefficient": "1",
+      "first_target_residue": "1",
+      "s": "101/100",
+      "second_laurent_terms_at_zero": [
+        "z^-1",
+        "299/101*z"
+      ],
+      "second_target_principal_coefficient": "1",
+      "second_target_residue": "1"
+    },
+    "margin_ledger": {
+      "boundary_samples_L_A": [
+        [
+          "1",
+          "10"
+        ],
+        [
+          "10",
+          "1"
+        ]
+      ],
+      "constant_boundary_modulus_gives_exact_weighted_supremum": true,
+      "first_quotient_formula": "1/L",
+      "first_quotient_norm": "1",
+      "m1": "1",
+      "m12": "10",
+      "m12_equals_m1_times_m2": false,
+      "m2": "1",
+      "second_quotient_formula": "1/(L*A)",
+      "second_quotient_norm": "1/10",
+      "selector_norms": [
+        "2",
+        "3"
+      ],
+      "weighted_first_supremum": "2",
+      "weighted_second_supremum": "3/10"
+    },
+    "mutation_firewalls": {
+      "absolute_edge_divergence_implies_oriented_integral_divergence": false,
+      "bounded_selector_norms_control_absolute_edges": false,
+      "constant_modulus_selector_attenuates_bad_supremum_edge": false,
+      "explicit_family_is_Xi": false,
+      "finite_interior_jets_determine_boundary_margins": false,
+      "gauge_preserves_complete_derivative_manifest": false,
+      "interior_manifest_authenticates_exterior_collar": false,
+      "m12_equals_m1_times_m2": false,
+      "parameter_endpoints_included": false,
+      "rh_established": false,
+      "second_nontarget_locations_fixed_in_s": false,
+      "second_quotient_is_inverse_A_only": false,
+      "second_quotient_is_inverse_L_squared_plus_A": false,
+      "upper_log_derivative_bounds_supply_required_lower_margin": false
+    },
+    "optimal_selectors": {
+      "P_one_factorization": "(x+1)*(x^2-3*x+1)",
+      "alpha_limit": "(3-sqrt(5))/2",
+      "first_selector": "1",
+      "first_selector_norm": "1",
+      "floating_point_arithmetic_used": false,
+      "second_beta_zero": "-alpha",
+      "second_nontargets_cancelled": true,
+      "second_selector": "(alpha-z^2)/(alpha*(1-alpha*z^2))",
+      "second_selector_at_zero": "1",
+      "second_selector_boundary_modulus": "1/alpha",
+      "second_selector_norm": "1/alpha",
+      "second_selector_norm_limit": "(3+sqrt(5))/2",
+      "second_target_value": "-1/alpha",
+      "selector_norms_bounded_as_s_decreases_to_one": true
+    },
+    "rational_checkpoint": {
+      "alpha_interval": [
+        "3/8",
+        "2/5"
+      ],
+      "first_boundary_quotient_at_one": "101",
+      "floating_point_root_finding_used": false,
+      "negative_root_interval": [
+        "-2",
+        "-1"
+      ],
+      "positive_root_interval": [
+        "101/100",
+        "3"
+      ],
+      "s": "101/100",
+      "second_boundary_quotient_at_one": "-1030301/20098",
+      "sign_points": [
+        "-2",
+        "-1",
+        "3/8",
+        "2/5",
+        "1",
+        "3"
+      ],
+      "sign_values": [
+        "-110401/10000",
+        "1/100",
+        "11219/320000",
+        "-2153/50000",
+        "-10049/5000",
+        "4763/1250"
+      ],
+      "tau_two_interval": [
+        "5/2",
+        "8/3"
+      ]
+    }
+  },
+  "classification": "PASS_T105109_LOG_DERIVATIVE_EDGE_OBSTRUCTION",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105109.json": "81439be7ce51755f8d854c73d0d261911feaf9b9e8da69b77d9e76ccc85ca2dd",
+    "claims/lemmas/L-105109-log-derivative-edge-margins.md": "4e069a0201ae3b14c34c63cd938c2216fa8e546b8405bf933a45109eed5f3661",
+    "claims/methodology/M-105109-quotient-edge-review-contract.md": "482a9fd1de5cc556f49fa7a7f4e21028f11aa0d520e674a7290d5d6db3e6e319",
+    "claims/refutations/R-105109-bounded-selector-norm-does-not-control-quotient-edge.md": "97c69de059ffd9fd187e01e1cee92d80ec060de05c9a1e4a993c46121c7b88c3",
+    "claims/theorems/T-105109-quotient-edge-frontier.md": "ce7bbceec0b2f82255b02ac7e52e41081b02431b427c3313ab81dc6f25aafedc",
+    "experiments/X-105109-log-derivative-edge-obstruction/tests/test_verify.py": "29e0825f32e496993eab4d18b98996e50ac9bdb713b7277c584d988683feec82",
+    "experiments/X-105109-log-derivative-edge-obstruction/verify.py": "56229ee1e88193bc3078f291baeeafb71bebe9ee4ad6dadd574a2c2d337ce6cb"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "e223f98823bdb7b11736a05993ac12b75d5263b3",
+    "path": "experiments/X-105108-green-gram-selector-conditioning",
+    "proof_object_sha256": "6c2484c4e63612b238f1ec6044c9b8778b725899d4be643d7e80b6a6dc345cdb"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "54829e77cb2aa90192aabdd61f86ff045a04ba3549f82c75384bc9a4e08f2890",
+  "schema": "riemann.t105109.log-derivative-edge-obstruction.v1",
+  "scope": {
+    "bounded_selector_edge_obstruction_verified": true,
+    "bounded_selector_norms_control_absolute_edges": false,
+    "cofinal_weighted_edge_decay_proved": false,
+    "constant_modulus_weighted_sup_equalities_verified": true,
+    "explicit_family_event_topology_verified": true,
+    "explicit_family_is_Xi": false,
+    "finite_interior_jets_determine_boundary_margins": false,
+    "finite_jet_gauge_boundary_collapse_verified": true,
+    "fixed_target_principal_coefficients_verified": true,
+    "gauge_preserves_complete_derivative_manifest": false,
+    "interior_manifest_authenticates_exterior_collar": false,
+    "log_derivative_denominator_ledger_verified": true,
+    "oriented_contour_integral_divergence_proved": false,
+    "phase_sensitive_oriented_edge_cancellation_refuted": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "second_nontarget_locations_fixed_in_s": false,
+    "strict_xi_jet_coherence_margin_proved": false,
+    "xi_actual_pole_manifest_constructed": false,
+    "xi_exterior_collar_certified": false,
+    "xi_green_gram_bounds_proved_cofinally": false,
+    "xi_log_derivative_lower_margins_proved": false,
+    "xi_oriented_edge_cancellation_proved": false
+  },
+  "source": {
+    "checkpoint_base": "e223f98823bdb7b11736a05993ac12b75d5263b3",
+    "post_freeze_context_head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "post_freeze_context_pr": 720
+  },
+  "verdict": "PASS_T105109_LOG_DERIVATIVE_EDGE_OBSTRUCTION"
+}
