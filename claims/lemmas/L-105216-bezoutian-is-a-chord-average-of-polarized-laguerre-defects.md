@@ -88,8 +88,7 @@ Plancherel gives, for every real `d`,
 =4\pi\int_{\mathbb R}
  u^{2k+2}\varphi(u)^2\cos(2du)\,du.
 }
-\tag{L-105216.3
-}
+\tag{L-105216.3}
 
 Consequently, for a chord of length `h`,
 
@@ -100,11 +99,10 @@ Consequently, for a chord of length `h`,
 \mathscr B_F(m+h/2,m-h/2)\,dm\\
 &\qquad=4\pi\int_{\mathbb R}
  u^{2k+2}\varphi(u)^2
-{\sin(hu)\over hu}\,du,
+{\sin(hu)\over hu}\,du.
 \end{aligned}
 }
-\tag{L-105216.4
-}
+\tag{L-105216.4}
 
 with the continuous value one at `hu=0`.
 
@@ -133,8 +131,7 @@ Equation (L-105216.4) gives
 \mathscr B_F(m+h/2,m-h/2)\,dm
 \ge4\pi\left(A_k-{h^2\over6}B_k\right).
 }
-\tag{L-105216.5
-}
+\tag{L-105216.5}
 
 Therefore
 
@@ -145,8 +142,7 @@ Therefore
 \int_{\mathbb R}
 \mathscr B_F(m+h/2,m-h/2)\,dm>0.
 }
-\tag{L-105216.6
-}
+\tag{L-105216.6}
 
 This is a genuine fixed-low-order theorem. It proves that short-chord
 Bezoutian negativity cannot dominate after translation averaging.
