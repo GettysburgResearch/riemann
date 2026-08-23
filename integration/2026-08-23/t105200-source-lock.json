@@ -1,0 +1,62 @@
+{
+  "claim_namespaces": [
+    "T105200",
+    "T105210"
+  ],
+  "created": "2026-08-23",
+  "updated": "2026-08-23",
+  "dedicated_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "dedicated_pr": 724,
+  "low_order_checkpoint_before_lock": "deba9571950ca30c9c769155ec9d98a42233a084",
+  "stacked_base": {
+    "pr": 723,
+    "branch": "codex/105100-residue-second-moment",
+    "fork_checkpoint_sha": "51c5619ef3c4b793de756b1c359b39df2ac35466",
+    "live_base_sha": "fd3ef43a6964e502f00ad906482eae5b3c544fba"
+  },
+  "canonical_main": {
+    "sha": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+    "release_pr": 722
+  },
+  "frozen_dependencies": [
+    {
+      "pr": 716,
+      "sha": "a1d2387c4a1416c3f220a16fae849e6eab620545",
+      "role": "exact reverse-Rolle conservation and original-height high-derivative entry"
+    },
+    {
+      "pr": 720,
+      "sha": "10bba584c01277e880aaa21e1fea09f396ca7246",
+      "role": "Hermite-Biehler last-defect transport, horizontal argument, Fourier companions and residue coherence"
+    },
+    {
+      "pr": 723,
+      "sha": "fd3ef43a6964e502f00ad906482eae5b3c544fba",
+      "role": "finite second critical-residue ledger and exact entire-window second-residue flux"
+    }
+  ],
+  "low_order_claims": {
+    "R-105201": "CRDB is the unknown off-real count plus nonnegative coherence slack",
+    "L-105206": "derivative-ladder Levinson argument and top-boundary telescope",
+    "L-105207": "all-order exterior-square Xi Fourier Gram",
+    "L-105208": "exact low-order mean Hermite-Biehler orientation and phase sum rule",
+    "L-105209": "proposed complete safe-ray one-sided terminal saddle",
+    "L-105211": "exact completed-zeta Levinson auxiliary factorization",
+    "L-105212": "critical-residue coherence and extinction as a curvature-normalized exterior-square Gram energy",
+    "T-105210": "fixed-height localization plus strict subunit residue-extinction frontier"
+  },
+  "replays": {
+    "X-105200": "PASS_X_105200_NATURAL_SCALE_RESIDUE_COHERENCE",
+    "X-105210": "PASS_X_105210_LOW_ORDER_LEVINSON_GRAM",
+    "X-105212": "PASS_X_105212_CRITICAL_RESIDUE_GRAM"
+  },
+  "exact_low_order_check_count": 285,
+  "heavy_computation_rerun": false,
+  "analytic_claims_machine_proved": false,
+  "crdb105200_independent_producer": false,
+  "safe_ray_l105209_independently_reviewed": false,
+  "hloc105210_proved": false,
+  "esde105212_proved": false,
+  "last_positive_residue_excluded": false,
+  "rh_established": false
+}
