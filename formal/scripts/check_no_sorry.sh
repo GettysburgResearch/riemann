@@ -3,10 +3,16 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$ROOT/formal"
 
-if grep -RInE --include='*.lean' '\b(sorry|admit)\b' \
-  RiemannFormal comparator/Solution comparator/ChallengeDeps; then
+TARGETS=(RiemannFormal comparator/Solution comparator/ChallengeDeps)
+
+if grep -RInP --include='*.lean' '\b(sorry|admit)\b' "${TARGETS[@]}"; then
   echo 'trusted formal target contains sorry/admit' >&2
   exit 1
 fi
 
-echo PASS_FORMAL_NO_SORRY
+if grep -RInP --include='*.lean' '^\s*axiom\b' "${TARGETS[@]}"; then
+  echo 'trusted formal target declares a custom axiom' >&2
+  exit 1
+fi
+
+echo PASS_FORMAL_NO_SORRY_OR_CUSTOM_AXIOM
