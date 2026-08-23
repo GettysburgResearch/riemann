@@ -4,3 +4,4 @@ import RiemannFormal.Analysis.SingularityTransfer
 import RiemannFormal.Analysis.LandauConsumer
 import RiemannFormal.Analysis.Reflection
 import RiemannFormal.Analysis.AxiomAudit
+import RiemannFormal.Analysis.ComparatorSmoke
