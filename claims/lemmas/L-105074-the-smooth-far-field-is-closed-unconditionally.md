@@ -1,11 +1,20 @@
-# L-105074 — The smooth far field is CLOSED unconditionally: Prop G's two hypotheses are eliminated, and (FAR-WIN) reduces to the corner field alone
+# L-105074 — The smooth far field is CLOSED for pinch clusters m <= 2, modulo the named lemma [CLUSTER-3] otherwise: Prop G's two hypotheses are replaced by strictly weaker inputs, and (FAR-WIN) reduces to the corner field (+ [CLUSTER-3])
+
+(Filename retained from the first deposit; the original title's "unconditionally" was
+DEMOTED by the deposit hostile review — finding J1, see Status and §1.)
 
 Claim ID: `L-105074`
-Status: **PROVED at proposition level (Theorem A2: the Gevrey-mollified smooth far
-field is bounded on Omega^+ with derivative singularities only at far pinches,
-L^2-harmless; window h-mass -> 0 along an explicit H_good with 0 in its closure) —
-NO zero hypotheses, NO reductio input, no RH; mechanical uniformity sweeps flagged
-in A2.md §7 remain to be ground through (deposit review priority) — RH NOT ADDRESSED**
+Status: **PROVED at proposition level FOR PINCH CLUSTERS m_j <= 2 (Theorem A2: the
+Gevrey-mollified smooth far field is bounded on Omega^+ with derivative singularities
+only at far pinches, L^2-harmless; window h-mass -> 0 along an explicit H_good with 0
+in its closure — H_good construction repaired per review J2, fixed-pair/tail split) —
+the m_j >= 3 case is a SUBSTANTIVE hole (review J1: an adversarial configuration
+consistent with every licensed input breaks the exclusion-width arithmetic; killing it
+needs zero-density exponent <= 1/2 near sigma = 3/4, unknown, or cluster repulsion)
+and holds MODULO the named lemma [CLUSTER-3] (strictly weaker than Prop G's
+anti-conspiracy — it constrains only m >= 3 clusters — but an input of that flavor);
+NO reductio input, no RH; remaining §7 uniformity sweeps assessed by the review as
+genuinely mechanical EXCEPT the one now named [CLUSTER-3] — RH NOT ADDRESSED**
 Created: 2026-08-23
 Agent: claude (external reviewer lane; final-pass lane A2)
 Depends on: `L-105071` ((FAR-WIN), Prop G as the conditional predecessor — its
@@ -20,9 +29,12 @@ RH status: **unproved, not addressed**
 
 ## 1. Statement
 
-**Theorem A2** (A2.md §4). With a Gevrey-2 corner mollifier at width delta, the
+**Theorem A2** (A2.md §4; scope per review J1 — UNCONDITIONAL for pinch clusters
+`m_j <= 2`, modulo `[CLUSTER-3]` for `m_j >= 3`, where
+`[CLUSTER-3]`: no pinch-capable pair with cluster multiplicity `m_j >= 3` has pinch
+defect `< kappa_j^{1/(2 m_j)}`). With a Gevrey-2 corner mollifier at width delta, the
 smooth far field `Z_far^{sm}` (horizontal-ray continuation of the `|Im z| >= 40`
-contour piece) satisfies, unconditionally:
+contour piece) satisfies:
 (a) `|Z_far^{sm}| <= M_sm` on `Omega^+ ∩ {h <= 1/6}` — bounded even AT simple far
     pinches;
 (b) `|dZ_far^{sm}/ds| <= M'_sm + Sigma_j kappa_j (1 + |3(s - s'_j)|^{1/2 - m_j})`,
@@ -36,7 +48,13 @@ contour piece) satisfies, unconditionally:
 **Corollary** (§5.1): the corner residual (C-b) with `eps_1 < 1` implies P2.7
 Remark (iii) with the SAME eps_1 — the smooth part consumes ZERO budget
 (Peter–Paul). Both consumer texts (P2.7 and FAR.md Theorem 3) accept the H_good
-sequence amendment (§5.3, checked line-by-line against both).
+sequence amendment (§5.3, checked line-by-line against both); so does the wave's
+new primary consumer `L-105073` A1.7 (review J4: A1.3 holds for all small h and the
+contradiction needs only a sequence h_k -> 0). COMPOSED THRESHOLD (review J3, units
+pinned): A1.7's widening in (C-b)'s D_half-window units is `eps_1 < sqrt(3pi/2) =
+2.171` — NOT `sqrt(3pi) = 3.070`, which is the x-side (FAR-WIN) unit; the two
+differ by sqrt(2). Composing this lemma with A1.7: the corner residual (C-b) with
+any `eps_1 < 2.171` suffices for the refutation chain (modulo [CLUSTER-3]).
 
 ## 2. The two load-bearing discoveries
 
@@ -62,7 +80,9 @@ sequence amendment (§5.3, checked line-by-line against both).
 pinch-capable pair is Ingham-counted. Below height 60 pinching is IMPOSSIBLE
 (all pairs have beta + beta' = 1, defect >= 1/2, Re s' = -1/6): the verified data
 kills the low regime, density+Gevrey the high one — handoff exactly at height 60.
-Numerics: pairs_num.py (60 zeros to height 163.03): 139 candidate pairs with
+Numerics (review J7 — the 60–163 range is NUMERICS-ONLY; the licensed input
+remains height 60, and the classification leans only on "none below 60"):
+pairs_num.py (60 zeros to height 163.03): 139 candidate pairs with
 gap in gamma_1 ± 3, ALL with beta + beta' = 1 — none can pinch; gevrey_num.py:
 measured Gevrey-2 decay c = 1.48–2 at delta = 1/4; crossover T_x ~ 1e3–1e4; the
 band [60, T_x] dominates the constants (1e9–1e80, machine-verified FINITE —
@@ -70,14 +90,16 @@ only finiteness is load-bearing: bounded pieces have window h-mass O(h) -> 0).
 
 ## 4. Honest residual
 
-- **(FAR-WIN) reduces to the CORNER field alone**, with two pinned amendments
-  (§5.2): the corner owns pinch share `c_B^c = c_B - c_B^{sm}` (computable,
-  verified-height inputs only; numerically ~8% window share), and corner-F1 is
-  UNCONDITIONAL via Hall–Tenenbaum Delta^2 moments.
-- §7's mechanical uniformity sweeps (contour-piece uniformity in s across the
-  window; the mollifier-constant chain) are flagged, not hidden — the deposit
-  hostile review must grind through them; any failure there demotes the theorem
-  to "modulo one named uniformity lemma", not to dead.
+- **(FAR-WIN) reduces to the CORNER field plus [CLUSTER-3]**, with two pinned
+  amendments (§5.2): the corner owns pinch share `c_B^c = c_B - c_B^{sm}`
+  (computable, verified-height inputs only; numerically ~8% window share), and
+  corner-F1 is UNCONDITIONAL via Hall–Tenenbaum Delta^2 moments.
+- The §4 trigger fired exactly as designed: the deposit hostile review ground
+  through the flagged sweeps, found one that hid mathematics (the m >= 3
+  exclusion-width arithmetic), and the theorem is demoted to "modulo one named
+  cluster lemma" — [CLUSTER-3] — not to dead. The remaining sweeps were assessed
+  genuinely mechanical. The H_good construction is repaired (J2, fixed-pair/tail
+  split, written out in A2.md's REVIEW CORRECTIONS block).
 - FAILURES.md: pointwise form (a) of the OLD [P2-FAR] is false-as-stated if
   pinches exist (hence the H_good formulation); residue routes dead; smallness
   unachievable; all-h uniformity dead for clusters; straight-line contour dead.

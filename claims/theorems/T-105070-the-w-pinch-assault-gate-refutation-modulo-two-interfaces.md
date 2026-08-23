@@ -157,11 +157,21 @@ than the pinch itself; retained constant `(1-beta)^2 c_0'`, measured beta =
 interface by norm methods (counter-model saturating every proved norm fact;
 residual gap exactly 4.00x, irreducible below 1 at this altitude) — the interface
 is now NECESSARY, a theorem, not a gap. (3) `L-105074` CLOSES the smooth far field
-unconditionally (the far-pinch branch point is a zeta ZERO, cancelling the contour
-pole; Ingham density + Gevrey decay; no |zeta'| floor, no anti-conspiracy):
-(FAR-WIN) reduces to the CORNER field alone (~8% measured window share), along the
-H_good sequence both consumers accept. Mechanical uniformity sweeps flagged in
-L-105074 §4 are the standing caveat.
+FOR PINCH CLUSTERS m <= 2, and MODULO the named lemma [CLUSTER-3] otherwise
+(hostile-review demotion J1: the m >= 3 exclusion-width arithmetic hid a substantive
+hole; [CLUSTER-3] is strictly weaker than the old anti-conspiracy but is an input of
+that flavor). The mechanism stands: the far-pinch branch point is a zeta ZERO,
+cancelling the contour pole; Ingham density + Gevrey decay; no |zeta'| floor.
+(FAR-WIN) reduces to the CORNER field (~8% measured window share) PLUS [CLUSTER-3],
+along the H_good sequence all three consumers accept (incl. A1.7 — sequences
+suffice). COMPOSED THRESHOLD (review J3, units pinned): in the corner residual's
+(C-b) D_half-window units, A1.7's widening is `eps_1 < sqrt(3pi/2) = 2.171` (the
+`sqrt(3pi) = 3.070` figure in move (1) is the x-side (FAR-WIN) unit; they differ by
+sqrt(2) — do not compose the 3.070 figure with (C-b)). NET STANDING after this
+wave (supersedes the earlier "exactly ONE open statement" line): the refutation
+rests on the CORNER residual (C-b) with budget `eps_1 < 2.171`, PLUS the named
+lemma [CLUSTER-3], under the amended §2 reading — and by A1.6 some such interface
+is NECESSARY at the norm altitude. RH: unproved, not addressed.
 
 ## 3. Bootstrap and quantifier audit (T-105059.7 RECHECKED)
 

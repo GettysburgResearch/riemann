@@ -33,7 +33,7 @@ by EXACTLY `3pi/2 = 4.7124` — and composed with L-105071, (FAR-WIN) with any
 pinch-subtracted field carries strictly less gamma_1/3-coherent weighted mass than the
 pinch itself."** Unconditional dichotomy display: `A >= c_0' (1 - f-bar/|c_B|)_+^2`.
 Measured margin under the new threshold: beta = 0.081–0.115 (~9x in amplitude,
-75–150x in mass); worst-case retained constant 0.783 c_0' vs the old chain's 0.563 c_0'.
+75–154x in mass); worst-case retained constant 0.783 c_0' vs the old chain's 0.562 c_0'.
 
 **Theorem A1.4 (forced cancellation).** Under R(eps) the far field's coherent
 amplitude alpha_h against the arctan pole profile satisfies
@@ -43,9 +43,12 @@ scale.
 
 **Theorem A1.6 (the obstruction).** The one-parameter family `psi^theta = theta·(pinch)`,
 `theta in [-sqrt(1-eps/c_0'), sqrt(1-eps/c_0')]`, satisfies EVERY proved norm fact of
-the program (Q-budget with `A = theta^2 c_0'`, Plancherel, conjugate symmetry, the
-genuine pole expansion, sharp F1 — equality machine-checked at extremal theta — and
-F2–F5), while its far mass sweeps `[p^2(1-sqrt(1-eps/c_0'))^2, C(eps)]` with
+the program (SCOPE, review J5: "norm fact" means EXACTLY the enumerated list —
+Q-budget with `A = theta^2 c_0'`, Plancherel, conjugate symmetry, the genuine pole
+expansion, sharp F1 — equality machine-checked at extremal theta — and F2–F5; the
+boundary is defined in FAILURES F-A1-5: arithmetic double-Dirichlet structure,
+positivity, and cross-line rigidity are NOT norm facts, and A1.6 says nothing against
+closures consuming them), while its far mass sweeps `[p^2(1-sqrt(1-eps/c_0'))^2, C(eps)]` with
 `C(eps) = p^2 (1+sqrt(1-eps/c_0'))^2 <= 4p^2`. Hence NO interface-free refutation
 exists at this altitude, for ANY eps: the ceiling-vs-threshold gap is exactly **4.00x
 (down from 27.5x) and provably irreducible below 1 by norm-inequality methods** (it

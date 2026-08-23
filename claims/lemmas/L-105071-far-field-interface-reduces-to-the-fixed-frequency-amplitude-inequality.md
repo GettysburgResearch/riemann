@@ -120,9 +120,14 @@ content is exactly (FAR-WIN).
 ## 4.5 UPDATE 2026-08-23 (final-pass wave)
 
 `L-105073` (A1.7) weakens the threshold this lemma feeds by `3pi/2` (any
-`eps_1 < sqrt(3pi)` suffices) and proves the interface cannot be removed by norm
-methods (A1.6). `L-105074` closes the SMOOTH part of (FAR-WIN) unconditionally:
-the residual is the CORNER field alone, with corner-F1 unconditional
+`eps_1 < sqrt(3pi)` in THIS lemma's x-side units — review J3: the corner
+residual's (C-b) D_half-window unit is `sqrt(3pi/2) = 2.171`, differing by
+sqrt(2)) and proves the interface cannot be removed by norm methods (A1.6).
+This lemma's reduction is eps_1-agnostic (eps_1 enters Theorem §3 only as the
+RHS constant, so consuming it up to the widened thresholds is licensed).
+`L-105074` closes the SMOOTH part of (FAR-WIN) for pinch clusters m <= 2 and
+modulo the named lemma [CLUSTER-3] otherwise (hostile-review demotion J1): the
+residual is the CORNER field plus [CLUSTER-3], with corner-F1 unconditional
 (Hall–Tenenbaum) and the H_good sequence amendment accepted by this lemma's
 Theorem (§3 consumes limits along any h-sequence -> 0; checked in L-105074 §5.3).
 
