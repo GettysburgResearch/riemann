@@ -39,7 +39,10 @@ selection to the disk-safe parameter set costs at most
 {(\Delta_T-2S)(\Delta_\eta-2S)}.
 \]
 
-No Xi Cartan theorem is claimed.  The missing input is a source-pinned
-finite certificate producing simultaneous derivative lower bounds and a
-total-radius budget strong enough to absorb edge length and the actual
-selector costs.  Generic order-one growth is not such a certificate.
+No cofinal Xi Cartan theorem is claimed.  L-105114 now supplies the
+source-audited normalized finite certificate, including its equal-disk
+total-radius budget and the smaller raw \(F',F''\) exceptional union.  The
+missing inputs are authenticated off-center Xi derivative anchors, cofinal
+growth loads, complete actual-pole manifests, and bounds strong enough to
+absorb reciprocal margins, edge length, safe-set loss, and actual selector
+cost.  Generic order-one growth alone does not close that gate.
