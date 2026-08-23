@@ -117,6 +117,15 @@ content is exactly (FAR-WIN).
   `beta + beta' > 3/2`, plus a weak `|zeta'(rho)|` floor) — far weaker than RH,
   still unproved (FAILURES F-4).
 
+## 4.5 UPDATE 2026-08-23 (final-pass wave)
+
+`L-105073` (A1.7) weakens the threshold this lemma feeds by `3pi/2` (any
+`eps_1 < sqrt(3pi)` suffices) and proves the interface cannot be removed by norm
+methods (A1.6). `L-105074` closes the SMOOTH part of (FAR-WIN) unconditionally:
+the residual is the CORNER field alone, with corner-F1 unconditional
+(Hall–Tenenbaum) and the H_good sequence amendment accepted by this lemma's
+Theorem (§3 consumes limits along any h-sequence -> 0; checked in L-105074 §5.3).
+
 ## 5. Falsifiers
 
 A truncation at which the measured (FAR-WIN) ratio exceeds 0.1061 and grows (would

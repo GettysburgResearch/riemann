@@ -80,6 +80,16 @@ N_k^c(T) <= N_{k+1}^c(T) + A' * W_k(T) + A_k log T + (B_k + 1).
 
 VACUOUS when the right side diverges — the content is confined to the
 (unproved) case `Sum w_k < infinity`, which is the open successor problem.
+UPDATE 2026-08-23 (`L-105075`): the hypothesis is DISCHARGED explicitly —
+`Sum_k w_k <= 1.4457` with the Zeta23 import (3.3158 import-free), via
+L-105064's compression + Conrey's 1983 rate `alpha_m = 1 + O(m^{-2})` (pinned
+with citation). CAUTION per the same deposit: the END-TO-END pricing loop is
+still honest-vacuous (Theorem Q2: 4.5692, 13.95x above the trivial baseline)
+and `L-105075` Q3/Q4 PROVE the rung-0 blocker irreducible for pointwise
+compression and the A'_k-weighted tail harmonically divergent — the named
+exits are distributional pricing (average-omega) or T-105065's [H3].
+Separately, `L-105076` (Jensen window cap) shrinks the count-cap residual:
+this theorem's conditionality is now confined to (R-J) ∪ (R-C2).
 
 **(e) [RH-SIDE CONSISTENCY].** Under RH every `Xi_k` is Laguerre–Pólya
 (Hadamard: `Xi` even order-1 with all-real zeros is an LP form; Laguerre's

@@ -148,6 +148,20 @@ reductio's own budget caps the residual gap at a constant factor 27.5 (F5), and
 independent numerics measure the ratio an order of magnitude inside the requirement
 (implied eps_1 = 0.25–0.35). (FAR-WIN) itself remains OPEN — the wall is now one
 scalar inequality about one frequency.
+UPDATE 2026-08-23 (final-pass wave, `L-105073`/`L-105074`): THREE further moves.
+(1) `L-105073` A1.7 SHARPENS the reduction: the interface threshold weakens by
+exactly `3pi/2 = 4.712` — (FAR-WIN) with any `eps_1 < sqrt(3pi) = 3.070` now
+suffices, i.e. the far field need only carry LESS gamma_1/3-coherent weighted mass
+than the pinch itself; retained constant `(1-beta)^2 c_0'`, measured beta =
+0.081–0.115. (2) `L-105073` A1.6 PROVES the refutation cannot be freed of its
+interface by norm methods (counter-model saturating every proved norm fact;
+residual gap exactly 4.00x, irreducible below 1 at this altitude) — the interface
+is now NECESSARY, a theorem, not a gap. (3) `L-105074` CLOSES the smooth far field
+unconditionally (the far-pinch branch point is a zeta ZERO, cancelling the contour
+pole; Ingham density + Gevrey decay; no |zeta'| floor, no anti-conspiracy):
+(FAR-WIN) reduces to the CORNER field alone (~8% measured window share), along the
+H_good sequence both consumers accept. Mechanical uniformity sweeps flagged in
+L-105074 §4 are the standing caveat.
 
 ## 3. Bootstrap and quantifier audit (T-105059.7 RECHECKED)
 

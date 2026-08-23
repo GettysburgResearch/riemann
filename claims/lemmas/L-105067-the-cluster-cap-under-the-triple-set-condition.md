@@ -191,6 +191,12 @@ always — the cap is comfortably TRUE where the method cannot prove it.
 
 R-C1 shrinks to:
 (R-C1') clusters K with T_K ≠ ∅ (given (L2)(L4)(L6); otherwise also R-C2).
+UPDATE 2026-08-23 (`L-105076`): the "genuinely different input" arrived — the
+Jensen window cap (complex-center cone lemma at height 8L) bounds T-nonempty
+clusters at `5.813` per distinct pair with NO triple-set condition, eliminating
+the log(g/y_min) obstruction; R-C1' shrinks to R-J (stopping-recursion
+failures, empty on all 104 adversarial T-nonempty clusters tested, including
+this note's §3b certified families — 13/13).
 This is now an explicit, decidable, per-cluster geometric condition, with certified
 minimal examples (§3b) and a proved method-obstruction (§3a): no pointwise-sign
 argument at levels 0/2/4 can remove it. Escalating to levels 6+ requires new

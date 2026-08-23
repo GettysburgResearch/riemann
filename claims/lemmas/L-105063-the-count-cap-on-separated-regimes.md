@@ -94,6 +94,13 @@ structural.
   residual shrinks to **R-C1′ = clusters with T_K ≠ ∅**, and `L-105067`
   Prop T-3 PROVES the 0-2-4 pointwise method cannot cross that frontier
   (sin-perturbation counterexample) — structurally new input required.
+  UPDATE 2026-08-23 (later, final-pass wave): the structurally new input
+  arrived — `L-105076` (Jensen window cap, complex-center cone lemma) crosses
+  the T-nonempty frontier with NO triple-set condition: `<= 5.813` per distinct
+  pair + 2.850 per swallowed real zero, under window admissibility + (DOM);
+  the log(g/y_min) obstruction is eliminated; 104/104 adversarial T-nonempty
+  clusters certified. The residual shrinks further to **R-J ⊊ R-C1′**
+  (stopping-recursion failures, empty on every tested configuration) ∪ R-C2.
 - **(R-C2) Supercritical shallow mass**: `W_sh ≥ 1` outside LEMMA_B's ladder
   conditions (its remainders (R1)/(R2)), possibly mixed with deep pairs.
 
