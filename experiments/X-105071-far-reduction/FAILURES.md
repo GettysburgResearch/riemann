@@ -34,5 +34,20 @@ F-6. Bookkeeping slip caught during F1's write-up: the naive triangle bound on
 int_WIN |Ztil_far|^2 re-imports the pole's pi/h (the pole is INSIDE B_0); the log-budget form
 only holds with the pole subtracted on the x-side before squaring. Fixed in FAR.md Sec 2
 (F1's honest restatement); recorded because the first draft asserted the false form.
+ANNOTATION (hostile review, finding G3): this entry misdiagnosed its own failure. The
+subtracted term is the HALF-order pole, whose WIN mass is 2|c_B|^2 log(r_0/h) — a benign
+log, NOT pi/h (pi/h is correct only for the full-order pole after D_half, F5's use, which
+stands); the first-draft triangle route was essentially sound. The real first-draft F1
+defect was different: its full-LINE display int_R |Ztil_far|^2 <= C log(1/h) has LHS
+= +infinity (untruncated half-pole tail ~ |c_B|^2/|tau|, finding G2). Both the phantom
+fix and the actual error are now corrected in FAR.md Sec 2. A ledger that misdiagnoses
+its own failure gets an annotation, not a deletion.
+F-8 (from the packet's hostile review; recorded per ledger discipline). Three invalid
+steps in the first deposited proof of the reduction theorem, all repaired in place:
+(G1) e^{-hx} moved through the convolution via a false compact-support premise (hat-w in
+C_c^infty, = 1 on an interval, forces w NON-compactly supported) — repaired by restating
+(FAR-WIN) with the damping inside the convolution, plus the two-regime placement-
+equivalence remark; (G2) as above; (G5) sqrt(x) commuted on L2(R) where it is undefined
+for x < 0 — repaired with the global multiplier m(x) = sqrt(max(x,1)).
 F-7. far_num3 checkpoint misalignment: x = 1e4, 3e4 checkpoints silently skipped (block size
 5e4); only 1e5, 3e5 reported. Cosmetic, two points suffice for the local-exponent fit; noted.

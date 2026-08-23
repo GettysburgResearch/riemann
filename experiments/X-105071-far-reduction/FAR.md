@@ -14,15 +14,24 @@ MODIFIED SPLIT (record): absorb R_loc into the far remainder. Define
 (so Ztil_far = Z_far + R_loc; by [P1-LOC] |R_loc|+|R_loc'| <= M_loc, so every bound below
 transfers between Z_far and Ztil_far at cost M_loc, harmless). x-side under R:
     psitil(x) := psi_0(x) - h_0(x) - 2 Re[ c_B pi^{-1/2} x^{-1/2} e^{i gamma_1 x/3} ] (x>=1 branch),
-    Ztil_far(h+it) = FT[psitil e^{-hx}](t) + (conjugate-pole cross term, O(1) on WIN).
+    Ztil_far(h+it) = FT[psitil e^{-hx}](t) + (conjugate-pole cross term + untruncated-pole
+    tail, O(1) on any bounded window, in particular on WIN — but NOT integrable over the
+    full line; see F1's G2 note).
 
 ## 1. Statement lattice
 
 (a) STRONG FORM: |Z_far| + |Z_far'| <= M_far on Omega^+.                             [OPEN]
 (b) L2-WINDOW FORM (P2.7 Rem iii): limsup_h h int_WIN |D_half[Z_far](h+it)|^2 dt
     <= eps_1^2 |c_P|^2, eps_1 < 1.                                                   [OPEN]
-(F1) Log-budget bound (PROVED, under R): int_WIN |Ztil_far(h+it)|^2 dt <= C_F1 log(1/h).
-(F2) D_half Minkowski lift (PROVED, under R): ||D_half[Ztil_far](h+i.)||_{L2(WIN)}^2
+(F1) Log-budget bound (PROVED, under R; x-side form — review finding G2: the FULL-line
+     integral of Ztil_far itself DIVERGES, since the subtracted untruncated half-pole has
+     line density |c_B|^2 (h^2+tau^2)^{-1/2} ~ |c_B|^2/|tau|, non-integrable; the correct
+     global object is the x-side one, and every windowed use is equivalent at O(1)):
+         int_R |FT[psitil e^{-hx}](t)|^2 dt = 2 pi ||psitil_h||_{L2}^2
+             <= C_F1 (A' + |c_B|^2) log(1/h),
+     and on any bounded window W: ||Ztil_far(h+i.)||_{L2(W)} <= ||FT[psitil_h]||_{L2(W)} + O(1).
+(F2) D_half Minkowski lift (PROVED, under R; consumes F1 in its windowed form only):
+     ||D_half[Ztil_far](h+i.)||_{L2(WIN)}^2
      <= C_F2 log(1/h)/h.   [= form (b) up to ONE factor log(1/h): R2's "one log short", exact]
 (F3) Multiplier identity (PROVED, unconditional): on the Laplace class of P2.4(a),
      D_half = FT o (mult by sqrt(x)) o FT^{-1}; i.e. D_half[B_0](h+it) = FT[sqrt(x) psi_h](t).
@@ -30,40 +39,51 @@ transfers between Z_far and Ztil_far at cost M_loc, harmless). x-side under R:
      commute up to a bounded operator: ||[P_w, sqrt(x)]||_{L2->L2} <= (1/2) int |v w(v)| dv.
 (F5) Self-consistency bound (PROVED, under R; VACUOUS for closure — see 4.3):
      limsup_h h int_WIN |D_half[Ztil_far]|^2 dt <= (sqrt(3 pi A'/2) + |c_B|)^2 <= 5.83 |c_B|^2.
-(FAR-WIN) THE RESIDUAL INEQUALITY (open; (FAR-WIN) => (b), Theorem 3 below):
-     for some fixed C-infty window w with hat-w = 1 on WIN, supp hat-w in the doubled window,
-     and some eps_1 < 1:
-         limsup_{h->0+} 2 pi h int_1^inf x |(w * psitil)(x)|^2 e^{-2hx} dx
-             <= (eps_1^2/2) |c_P|^2 = (eps_1^2/2)(2/(3 pi)) |c_B|^2 .
-     Interpretation: (w*psitil)(x) is the sliding gamma_1/3-frequency amplitude of the
-     PINCH-SUBTRACTED unweighted field. The pinch itself has amplitude
+(FAR-WIN) THE RESIDUAL INEQUALITY (open; (FAR-WIN) => (b), Theorem 3 below). Stated UNDER R
+     (the reduction needs it only there; under R the convolution converges absolutely via the
+     loglog Q-budget — unconditionally psi_0 may grow like e^{x/6} pointwise against a
+     sub-exponential window tail, review finding G6). For some fixed C-infty window w with
+     hat-w REAL, 0 <= hat-w <= 1, hat-w = 1 on WIN, supp hat-w in the doubled window
+     (Theorem 3's proof uses THIS w as its projector, so these conditions are part of the
+     hypothesis — G6), and some eps_1 < 1, with the Abel damping INSIDE the convolution
+     (placement per review finding G1 — this is the form the proof consumes):
+         limsup_{h->0+} 2 pi h int_R x_+ |(w * (psitil e^{-h.}))(x)|^2 dx
+             <= (eps_1^2/2) |c_P|^2 = (eps_1^2/2)(2/(3 pi)) |c_B|^2 ,   x_+ := max(x, 1).
+     Interpretation: (w * psitil_h)(x) is the sliding gamma_1/3-frequency amplitude of the
+     PINCH-SUBTRACTED damped field. The pinch itself has amplitude
      |c_B| (pi x)^{-1/2}, whose weighted mass 2 pi h int x |.|^2 e^{-2hx} dx = |c_B|^2.
      So (FAR-WIN) says: the residual amplitude carries < (eps_1^2/2)(2/(3pi)) ~ 0.106 eps_1^2
-     of the pinch's own weighted window mass. Numerics (Sec 5): measured ratio ~ 0.03-0.05.
+     of the pinch's own weighted window mass. Numerics (Sec 5): measured ratio ~ 0.007-0.013
+     (weight-outside placement on the truncated field; the placement difference is the
+     D-term of Sec 3's Remark, o(1) under R and negligible at the measured truncation).
 
 ## 2. Proofs of F1-F4
 
-F1. Under R, P2.7(3) gives Q_{V_0}(Y) <= (3/2)A' loglog Y (1+o(1)), hence
-J_0(h) = 2h int Q_0(Y) Y^{-2h} dY/Y <= (3/2)A'(log(1/2h) + O(1)) (substitute L = log Y:
-2h int_0^inf log L e^{-2hL} dL = log(1/2h) - gamma_E + o(1)). Plancherel (P2.7(4) applied to
-psi_h in L1 cap L2): int_R |B_0(h+it)|^2 dt = 2 pi J_0(h) <= 3 pi A' log(1/h)(1+o(1)).
-On WIN: int_WIN |Ztil_far|^2 <= 3[ int_WIN |B_0|^2 + int_WIN |H_0|^2 + |c_B|^2 int_WIN dt/(h^2+tau^2) ]
-<= 3[ 3 pi A' log(1/h) + 2 r_0 M_head^2 + pi |c_B|^2/h ]. CORRECTION: the pole term is pi/h,
-NOT log — so as stated F1 needs the pole kept subtracted BEFORE squaring; redo cleanly:
-int_WIN |Ztil_far|^2 <= 2 int_WIN |B_0 - c_B(.-s_0)^{-1/2}|^2 + 2 int_WIN |H_0|^2. The first
-term: |B_0 - pole|^2 <= 2|B_0|^2 + 2|pole|^2 gives the pole's pi/h back — the log-budget
-form survives only for the WEIGHTED object (F5), not here. HONEST RESTATEMENT OF F1:
-    int_WIN |Ztil_far(h+it)|^2 dt <= 6 pi A' log(1/h) (1+o(1)) + 2 pi |c_B|^2/h-POLE-CANCELLED:
-under R the pole DOES sit inside B_0 (that is the mechanism), and Ztil_far = B_0 - H_0 - pole
-subtracts it exactly; no triangle-inequality proof can see the cancellation, but the IDENTITY
-int_WIN |Ztil_far|^2 = int_WIN |B_0 - H_0 - pole|^2 is what F2 consumes via Minkowski on the
-DIFFERENCE field: psitil = psi_0 - h_0 - pinch-x-side, and Plancherel for psitil e^{-hx}:
-    int_R |Ztil_far(h+it)|^2 dt = 2 pi int |psitil(x)|^2 e^{-2hx} dx + O(1)
-with int_1^inf |pinch-x-side|^2 e^{-2hx} dx = (|c_B|^2/pi) log(1/h)(1+o(1)) + O(1) and
-cross terms <= 2 sqrt(J_0 * that) <= C sqrt(A') |c_B| log(1/h). Hence the correct F1:
-    int_R |Ztil_far(h+it)|^2 dt <= C_F1 (A' + |c_B|^2) log(1/h),  C_F1 absolute.   [PROVED under R]
-(The pole subtraction is performed on the x-side, where it is exact termwise; only L2 norms
-of the three pieces and Cauchy-Schwarz are used. No pointwise zeta input.)
+F1 (x-side form; rewritten per review findings G2/G3/G4). Under R, P2.7(3) gives
+Q_{V_0}(Y) <= (3/2)A' loglog Y (1+o(1)), hence by Abel summation
+J_0(h) := ||psi_0 e^{-hx}||_{L2}^2 = 2h int Q_0(Y) Y^{-2h} dY/Y <= (3/2)A'(log(1/2h) + O(1))
+(substitute L = log Y: 2h int_0^inf log L e^{-2hL} dL = log(1/2h) - gamma_E + o(1)).
+The x-side pinch term: int_1^inf |2 Re[c_B pi^{-1/2} x^{-1/2} e^{i gamma_1 x/3}]|^2 e^{-2hx} dx
+= (2|c_B|^2/pi) log(1/h)(1+o(1)) + O(1) (the mean of the square is 2|c_B|^2/(pi x); the
+oscillating cross-frequency part is O(1) — constant corrected per G4, previously |c_B|^2/pi).
+The head h_0 contributes O(1). Triangle inequality in L2(dx) on psitil_h = psi_h - h_{0,h}
+- pinch_h, then Plancherel (psitil_h in L1 cap L2 under R, same licence as P2.7(4)):
+    int_R |FT[psitil e^{-hx}](t)|^2 dt = 2 pi ||psitil_h||_{L2}^2
+        <= C_F1 (A' + |c_B|^2) log(1/h),  C_F1 absolute.            [PROVED under R]
+G2 NOTE (why the x-side form is the only correct global statement): the line integral
+int_R |Ztil_far(h+it)|^2 dt is +INFINITY — Ztil_far subtracts the UNTRUNCATED half-pole
+c_B(s-s_0)^{-1/2}, whose line density |c_B|^2 (h^2+tau^2)^{-1/2} ~ |c_B|^2/|tau| is not
+integrable at tau -> +-inf. On any BOUNDED window W the two objects differ by O(1)
+(the pole-transform tail + conjugate term, Sec 0), so every windowed use (F2, Theorem 3)
+is unaffected: ||Ztil_far(h+i.)||_{L2(W)} <= ||FT[psitil_h]||_{L2(W)} + O(1).
+G3 NOTE (correcting this file's own first-round "CORRECTION" narrative): the earlier claim
+that the naive triangle bound "re-imports the pole's pi/h" was itself a miscomputation —
+the subtracted term is the HALF-order pole, and |c_B (s-s_0)^{-1/2}|^2 integrated over WIN
+is 2|c_B|^2 log(r_0/h), a benign log, NOT pi/h (pi/h is correct only for the full-order
+pole after D_half, as used in F5 — that use stands). The first-draft triangle route was
+essentially sound; the x-side form above is kept because it is the correct GLOBAL statement
+(G2), not because of the pi/h phantom. FAILURES F-6 is annotated accordingly.
+(Only L2 norms of the three pieces and Cauchy-Schwarz are used. No pointwise zeta input.)
 
 F2. D_half[f](s) = -(1/(2 sqrt pi)) int_0^inf (f(s+del) - f(s)) del^{-3/2} d del acts along
 horizontal rays; t is a spectator. Minkowski's integral inequality in L2(WIN, dt):
@@ -91,38 +111,83 @@ pi^{-1/2} (s-s_0)^{-1} restated) give D_half[Ztil_far](h+it) = FT[sqrt(x) psitil
 x-side weighted-mass statement — the door for arithmetic methods, and the exact content of
 P2.8(c) R2's "multiplier sqrt(x)".]
 
-F4. P_w f := FT^{-1}[hat-w FT f] has kernel w(x-y), w Schwartz (scale 1/r_0 in x).
-[P_w, sqrt(x)] has kernel w(x-y)(sqrt y - sqrt x); |sqrt x - sqrt y| <= |x-y|/(sqrt x + sqrt y)
-<= |x-y|/2 on x,y >= 1. Schur test with the symmetric kernel |w(v)| |v|/2:
-||[P_w, sqrt(x)]|| <= (1/2) int_R |v w(v)| dv =: C_w < inf, uniformly in h. QED.
+F4 (G5-corrected: global multiplier). P_w f := FT^{-1}[hat-w FT f] has kernel w(x-y), w
+Schwartz (scale 1/r_0 in x). Since P_w outputs live on ALL of R while sqrt(x) is undefined
+for x < 0 and not (1/2)-Lipschitz on (0,1), define the GLOBAL multiplier
+    m(x) := sqrt(max(x, 1))
+— equal to sqrt(x) on [1, inf) = supp psitil, and globally (1/2)-Lipschitz on R:
+|m(x) - m(y)| <= |x-y|/(m(x)+m(y)) <= |x-y|/2. [P_w, m] has kernel w(x-y)(m(y) - m(x));
+Schur test with the symmetric kernel |w(v)||v|/2:
+||[P_w, m]||_{L2(R)->L2(R)} <= (1/2) int_R |v w(v)| dv =: C_w < inf, uniformly in h (the
+operator does not depend on h). QED. All Sec 3 uses go through m; the x < 1 region's
+weight cost is handled there.
 
 ## 3. THEOREM (the reduction): (FAR-WIN) => [P2-FAR] in form (b)
 
-Claim. Assume (FAR-WIN) with constant eps_1 < 1 (and [P1-LOC] for the R_loc bookkeeping).
-Then under R, limsup_h h int_WIN |D_half[Z_far](h+it)|^2 dt <= eps_1'^2 |c_P|^2 with
-eps_1' = eps_1 + o_{r_0}(1) < 1 for r_0 small — i.e. P2.7 Remark (iii)'s hypothesis holds and
-P2.7 concludes with c_0' -> (1-eps_1')^2 c_0'.
+Claim. Assume (FAR-WIN) with constant eps_1 < 1, for the window w it names (and [P1-LOC]
+for the R_loc bookkeeping). Then under R,
+limsup_h h int_WIN |D_half[Z_far](h+it)|^2 dt <= (eps_1^2/2) |c_P|^2 — i.e. P2.7 Remark
+(iii)'s hypothesis holds with eps_1' = eps_1/sqrt(2) EXACTLY (review finding G7: r_0 is
+fixed by w; every error term below vanishes as h -> 0 at fixed r_0, so no ill-defined
+o_{r_0}(1) appears — the constant is exact, and stronger than the first draft claimed),
+and P2.7 concludes with c_0' -> (1 - eps_1/sqrt(2))^2 c_0'.
 
-Proof. By F3, D_half[Ztil_far](h+i.) = FT[sqrt(x) psitil_h] + O(1) on WIN (conjugate window
-separation 2 gamma_1/3, kernel decay of the explicit pole terms). Insert the window:
-hat-w = 1 on WIN, so on WIN, FT[sqrt(x) psitil_h] = FT[P_w sqrt(x) psitil_h] + FT[(1-P_w)...]
-where the second term restricted to WIN is 0 in L2(WIN)-pairing sense... more carefully:
-int_WIN |FT[sqrt x psitil_h]|^2 dt <= int_R hat-w2(t)^2 |FT[sqrt x psitil_h]|^2 dt
-= 2 pi || P_{w2}[ sqrt x psitil_h ] ||_{L2(dx)}^2   (hat-w2 = 1 on WIN, 0 <= hat-w2 <= 1).
-Commute (F4): P_{w2}[sqrt x psitil_h] = sqrt x P_{w2}[psitil_h] + [P_{w2}, sqrt x] psitil_h;
-|| [P_{w2}, sqrt x] psitil_h ||_2 <= C_w ||psitil_h||_2 <= C_w sqrt(C_F1 log(1/h)) (F1).
-Hence h int_WIN |D_half Ztil_far|^2 dt <= (1+eta) 2 pi h ||sqrt x P_{w2} psitil_h||_2^2
-+ C(eta) h [ C_w^2 C_F1 log(1/h) + O(1) ] for any eta > 0; the bracket times h -> 0.
-Finally P_{w2} psitil_h = (w2 * (psitil e^{-h.})) and e^{-hx} moves through the convolution up
-to a factor e^{h/r_0-scale} = 1+o(1) on the kernel support (|v| <~ 1/r_0, h -> 0):
-2 pi h ||sqrt x (w2*psitil) e^{-hx}||^2 (1+o(1)) <= (eps_1^2/2)|c_P|^2 (1+o(1)) by (FAR-WIN)
-— wait, (FAR-WIN) as displayed is exactly 2 pi h int x |(w2*psitil)(x)|^2 e^{-2hx} dx <=
-(eps_1^2/2)|c_P|^2 in the limsup. Adding the O(1)-terms' vanishing h-contributions and the
-R_loc transfer (|D_half R_loc| <= 3 M_loc/sqrt pi by P2.4(c), window measure 2 r_0, times h -> 0):
-limsup h int_WIN |D_half[Z_far]|^2 <= (1+eta)(eps_1^2/2)|c_P|^2 * 2 [the factor 2 from
-|a+b|^2 <= 2|a|^2+2|b|^2 folding the conjugate-pinch cross term, absorbed since the display
-already carries the 1/2]. Choose eta with (1+eta) eps_1^2 < 1. QED (constants tracked to
-absolute factors; the 1/2 in (FAR-WIN)'s display is the safety factor that pays the folding).
+Proof (rewritten per review findings G1/G5/G7/G8; the proof uses (FAR-WIN)'s OWN window w
+as the projector — this is why w's conditions sit in the hypothesis).
+Step 1 (F3 + window insertion). By F3 and Sec 0's bounded-window comparison,
+D_half[Ztil_far](h+i.) = FT[sqrt(x) psitil_h] + O(1) on WIN (conjugate window separation
+2 gamma_1/3; explicit pole terms). Since psitil_h is supported in [1, inf), sqrt(x) psitil_h
+= m(x) psitil_h with m(x) = sqrt(max(x,1)) (F4's global multiplier — G5). With hat-w real,
+0 <= hat-w <= 1, hat-w = 1 on WIN:
+    int_WIN |FT[m psitil_h]|^2 dt <= int_R hat-w(t)^2 |FT[m psitil_h]|^2 dt
+        = 2 pi || P_w[ m psitil_h ] ||_{L2(R)}^2 .
+Step 2 (commute — F4 + F1). P_w[m psitil_h] = m P_w[psitil_h] + [P_w, m] psitil_h, and
+|| [P_w, m] psitil_h ||_2 <= C_w ||psitil_h||_2 <= C_w sqrt(C_F1' log(1/h)) (F1, x-side).
+For any eta > 0: h ||P_w[m psitil_h]||^2 <= (1+eta) h ||m P_w psitil_h||^2
++ C(eta) h C_w^2 C_F1' log(1/h), and the second term -> 0 as h -> 0.
+Step 3 (consume (FAR-WIN) — no weight-migration step needed: G1). P_w psitil_h =
+w * (psitil e^{-h.}) EXACTLY, which is (FAR-WIN)'s object with the damping inside the
+convolution — the placement (FAR-WIN) now states. And |m(x)|^2 = max(x,1) = x_+, so
+    2 pi h ||m P_w psitil_h||_{L2(R)}^2 = 2 pi h int_R x_+ |(w * (psitil e^{-h.}))(x)|^2 dx,
+whose limsup is <= (eps_1^2/2)|c_P|^2 by (FAR-WIN) verbatim. (The old proof moved e^{-hx}
+through the convolution via a false compact-support premise — w is Schwartz but NOT
+compactly supported; see the Remark below for the two-regime argument relating the two
+placements, kept for the numerics comparison. The official chain needs no such step.)
+Step 4 (reassemble — G8 accounting, clean). D_half[Z_far] = D_half[Ztil_far] - D_half[R_loc],
+and D_half[Ztil_far] = FT[m psitil_h] + (Step-1 additive terms) on WIN. Every non-main piece
+VANISHES in windowed h-mass: |D_half R_loc| <= 3 M_loc/sqrt(pi) pointwise (P2.4(c) with
+[P1-LOC]) gives h (2 r_0)(3 M_loc/sqrt(pi))^2 -> 0; the Step-1 O(1) terms (conjugate pole,
+pole tail, head) give h * O(1) * 2 r_0 -> 0. Peter-Paul fold, once:
+|main + vanishing|^2 <= (1+eta)|main|^2 + (1+1/eta)|vanishing|^2, and the second term's
+h-mass -> 0 for every fixed eta. With Steps 1-3:
+    limsup_h h int_WIN |D_half[Z_far]|^2 dt <= (1+eta)^2 (eps_1^2/2)|c_P|^2   for all eta > 0
+        => limsup <= (eps_1^2/2)|c_P|^2 = eps_1'^2 |c_P|^2 with eps_1' = eps_1/sqrt(2).
+No factor 2 is ever owed (G8 — the previous text paid the display's 1/2 into a fold that the
+Peter-Paul weighting makes free; the conjugate-pinch cross term it worried about is already
+inside the vanishing budget). The conclusion is therefore STRONGER than claimed: (FAR-WIN)
+with eps_1 < 1 delivers P2.7 Rem (iii) with eps_1' = eps_1/sqrt(2) <= 0.708 < 1, and
+c_0' -> (1 - eps_1/sqrt(2))^2 c_0'. QED.
+
+Remark (placement of the damping; the G1 two-regime argument, kept for Sec 5's numerics).
+The first draft stated (FAR-WIN) with the weight outside the convolution and moved e^{-hx}
+inside via a false kernel-support premise (hat-w in C_c^infty with hat-w = 1 on an interval
+forces w to be non-compactly supported — an analytic hat identically 1 on an interval would
+be constant). Under R the two placements nevertheless differ by o(1) in the weighted mass:
+with D(x) := (w * psitil)(x) e^{-hx} - (w * (psitil e^{-h.}))(x)
+= int w(v) psitil(x-v) e^{-hx} (e^{hv} - 1) dv, split by v-regimes —
+(i) v > 0: psitil(x-v) e^{-hx} e^{hv} = psitil_h(x-v) exactly, so the integrand is
+w(v) psitil_h(x-v)(1 - e^{-hv}) with |1 - e^{-hv}| <= min(1, hv): kernel |w(v)| min(1,hv)
+in L1 with mass O(h int |v w|), against the shifted weighted norm
+h int (y+v)_+ |psitil_h(y)|^2 dy <= W_h + v h C_F1' log(1/h), W_h = O(1) under R (F5's
+x-side bound) — total O(h log(1/h)) -> 0.
+(ii) v < 0: |e^{hv} - 1| = 1 - e^{hv} <= min(1, h|v|); for |v| <= h^{-1/2} the kernel mass
+is O(h^{1/2}) against e^{h|v|} <= e^{h^{1/2}} = O(1) times ||psitil_h||; for |v| > h^{-1/2}
+use |e^{hv} - 1| <= 1, the under-R unit-block budget ||psitil||_{L2[T,T+1]}^2 <= C log(2+T)
+(from Q_{V_0} <= (3/2)A' loglog Y plus the explicit pinch/head blocks), and w's Schwartz
+decay: contribution O(h^N) for every N. Total: the placement difference is o(1) in the
+h-weighted mass under R — so Sec 5's weight-outside measurements bear on the official
+damped-inside (FAR-WIN) up to a vanishing correction. [Argument supplied by the hostile
+review of this packet; recorded verbatim-in-substance.]
 
 Remark (sharpness of the reduction). The reduction consumes ONLY: F1 (reductio Plancherel
 budget), F3-F4 (exact operator identities), and (FAR-WIN). No zeta values off bounded height
@@ -205,7 +270,12 @@ background; the pinch window is where it is depleted. h-scaling of the share at 
 0.0825 (h=.04) -> 0.0795 (.02) -> 0.0781 (.01): decreasing slowly, consistent with flat corner
 vs growing pinch, truncation-limited.
 
-5.2 (FAR-WIN) measured directly (far_num2). Frequency-localized amplitude a(x) of the
+5.2 (FAR-WIN) measured directly (far_num2). CAVEATS (G9): far_num2's bump window is a
+smooth proxy, not identically 1 on WIN (admitted; conservative in the fitted-pinch
+denominator, which uses the CLIPPED fit |c_fit| < |c_B|/sqrt(pi) — overstating the ratio);
+the weight sits outside the convolution (see Sec 3's Remark for the o(1) placement
+equivalence under R); and the |c_n| <= 2 Delta(n) check of 5.3 runs at delta = 0.25 only.
+Frequency-localized amplitude a(x) of the
 UNWEIGHTED field psi_0 (smooth bump window, half-widths r0 = 0.15/0.30/0.50 — a proxy for the
 plateau window of Sec 3, same object up to fixed constants), complex pinch fit
 a ~ c x^{-1/2} e^{i gamma_1 x/3} on x in [5, 11.5]:
@@ -233,10 +303,11 @@ exactly as Sec 4.2 concludes.
 
 ## 6. VERDICT
 [P2-FAR]: NOT CLOSED — reduced to: (FAR-WIN), the fixed-frequency scale-averaged amplitude
-inequality  limsup_{h->0} 2 pi h int x |(w * psitil)(x)|^2 e^{-2hx} dx <= (eps_1^2/2)|c_P|^2,
-eps_1 < 1, for the pinch-subtracted unweighted field psitil — with the reduction
-(FAR-WIN) => [P2-FAR](b) PROVED here (Sec 3) from F1-F4, all unconditional-under-R, no zeta
-data off bounded height. Literature anchors for the residual: Hooley 1979 (Delta-function),
+inequality  limsup_{h->0} 2 pi h int x_+ |(w * (psitil e^{-h.}))(x)|^2 dx <= (eps_1^2/2)|c_P|^2,
+eps_1 < 1, for the pinch-subtracted damped field (damping inside the convolution — Sec 1's
+G1-corrected placement) — with the reduction (FAR-WIN) => [P2-FAR](b) PROVED here (Sec 3,
+delivering eps_1' = eps_1/sqrt(2)) from F1-F4, all unconditional-under-R, no zeta data off
+bounded height. Literature anchors for the residual: Hooley 1979 (Delta-function),
 Hall-Tenenbaum "Divisors" (Delta^2 moments) bound the coefficients; Montgomery-Vaughan mean
 values do NOT apply (fixed-length t-window); the cancellation needed is Selberg-Delange /
 Hankel type at fixed height gamma_1/2 with the Mobius factor — precisely the (P-ii) error of

@@ -22,22 +22,29 @@ Define the pinch-subtracted field
 
     psitil(x) := psi_0(x) - h_0(x) - 2 Re[ c_B pi^{-1/2} x^{-1/2} e^{i gamma_1 x/3} ].
 
-**(FAR-WIN)** (the residual inequality, OPEN): for a fixed smooth window `w` with
-`hat-w = 1` on `|t - gamma_1/3| <= r_0`, support in the doubled window, and some
-`eps_1 < 1`:
+**(FAR-WIN)** (the residual inequality, OPEN; stated UNDER the reductio R — there the
+convolution converges absolutely via the loglog Q-budget): for a fixed smooth window `w`
+with `hat-w` REAL, `0 <= hat-w <= 1`, `hat-w = 1` on `|t - gamma_1/3| <= r_0`, support in
+the doubled window (the reduction proof uses this `w` as its projector, so these
+conditions are part of the hypothesis), some `eps_1 < 1`, and the Abel damping INSIDE
+the convolution (`x_+ := max(x,1)`):
 
-    limsup_{h->0+} 2 pi h int_1^inf x |(w * psitil)(x)|^2 e^{-2hx} dx
+    limsup_{h->0+} 2 pi h int_R x_+ |(w * (psitil e^{-h.}))(x)|^2 dx
         <= (eps_1^2/2)(2/(3pi)) |c_B|^2 .
 
 **Reduction Theorem (PROVED).** (FAR-WIN) with constant `eps_1 < 1` implies, under R,
-[P2-FAR] in its L2-window form (b) with `eps_1' = eps_1 + o_{r_0}(1) < 1` — i.e.
-P2.7 Remark (iii)'s hypothesis holds and T-105070's conclusion follows with
-`c_0' -> (1 - eps_1')^2 c_0'`.
+[P2-FAR] in its L2-window form (b) with `eps_1' = eps_1/sqrt(2) <= 0.708 < 1` EXACTLY
+(no `o_{r_0}` loss; the display's 1/2 is a genuine safety margin) — i.e. P2.7 Remark
+(iii)'s hypothesis holds and T-105070's conclusion follows with
+`c_0' -> (1 - eps_1/sqrt(2))^2 c_0'`.
 
 Proved ingredients (FAR.md §§1–3):
 
-- **F1** (line-L² log budget, under R): with the pole subtracted on the x-side
-  (exact, termwise), `int_R |Ztil_far(h+it)|^2 dt <= C_F1 (A' + |c_B|^2) log(1/h)`.
+- **F1** (log budget, under R; x-side form — the full-line integral of `Ztil_far`
+  itself diverges, since the subtracted untruncated half-pole has line density
+  `~ |c_B|^2/|tau|`; hostile-review finding G2):
+  `int_R |FT[psitil e^{-hx}](t)|^2 dt = 2 pi ||psitil_h||^2 <= C_F1 (A' + |c_B|^2) log(1/h)`,
+  and on any bounded window the two objects agree up to O(1).
 - **F2** (Minkowski lift): pointwise routes give
   `||D_half[Ztil_far]||^2_{L2(WIN)} <= C_F2 log(1/h)/h` — R2's "one log short",
   exactly quantified.
@@ -59,9 +66,14 @@ field at the SINGLE frequency `gamma_1/3`, finitely checkable at any truncation.
 ## 2. Proof
 
 Full proofs in `experiments/X-105071-far-reduction/FAR.md` §§2–3 (F1–F4 and the
-reduction theorem; the F1 first-draft triangle-inequality slip that re-imported the
-pole's pi/h is recorded as FAILURES F-6 and corrected in place — the pole must be
-subtracted on the x-side before squaring). R2_VERDICT.md proves R2 is structurally
+reduction theorem). The packet's own hostile review found three invalid steps in the
+first deposited proof — a false compact-support premise in the damping-migration step
+(G1), the divergent full-line F1 display (G2), and the sqrt(x)-multiplier applied
+outside its domain (G5) — all repaired in place (FAR.md §§1–3; the repairs use only
+budgets already in the packet, and the reviewer's own reconstruction confirmed the
+theorem's statement), together with a misdiagnosed entry in the failure ledger (G3:
+the "pi/h re-import" was a phantom — the half-order pole's window mass is a benign
+log). FAILURES.md F-6/F-8 record all of this. R2_VERDICT.md proves R2 is structurally
 blocked as an independent closer: the negation hypothesis is frequency-blind; the
 multiplier repair (F3/F4) is the correct FORM of the missing step, and its closing
 content is exactly (FAR-WIN).
@@ -75,7 +87,10 @@ content is exactly (FAR-WIN).
 - (FAR-WIN) measured directly: residual/pinch weighted-mass ratio 0.0065–0.0133
   across r_0 = 0.15/0.30/0.50, stable in h; requirement for `eps_1 < 1` is < 0.1061.
   Implied `eps_1 = 0.25–0.35` — an order of magnitude inside, ~700x below the F5
-  self-consistency ceiling.
+  self-consistency ceiling. (Caveats, G9: the numeric bump window is a proxy — not
+  identically 1 on the window — and its denominator uses the clipped fitted pinch,
+  both conservative; the weight sits outside the convolution, related to the official
+  damped-inside placement by the o(1) equivalence of FAR.md §3's Remark.)
 - Delta^2 budget: `sum Delta(n)^2/x = 9.67` (x = 3e5, local exponent 0.90);
   corner coefficients obey `|c_n| <= 2 Delta(n)` (0 violations), corner
   `sum c_n^2/x` LINEAR in the corner width delta and ~1000x below the Delta^2
