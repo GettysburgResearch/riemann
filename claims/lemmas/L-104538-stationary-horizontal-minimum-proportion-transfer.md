@@ -35,7 +35,8 @@ where
 =-\Xi''(c)\Xi''''(c).
 \]
 
-Thus the following are equivalent at every regular critical point:
+Thus the following are equivalent at every nondegenerate regular critical
+point:
 
 ```text
 c is Rolle-generating for Xi'';
@@ -86,7 +87,7 @@ q = 1       -> alpha_2 >= alpha_3 > 0.9873.
 The `alpha_3` premise is load bearing.  No independent lower bound for
 `alpha_2` is used in (L-104538.4--5).
 
-## 2. Finite-shift form
+## 2. Finite-shift form and order of limits
 
 For `h>0`, let `Q_h(T)` count the regular real zeros `c` of `Xi'''` satisfying
 
@@ -95,24 +96,50 @@ For `h>0`, let `Q_h(T)` count the regular real zeros `c` of `Xi'''` satisfying
 \tag{L-104538.6}
 \]
 
-If there is a sequence `h_j downarrow 0` for which
+For each **fixed regular `T`**, the critical set in `(-T,T)` is finite.  If no
+point in that set is horizontally degenerate, (L-104538.2) implies
 
 \[
-\liminf_j\liminf_{T\to\infty}{Q_{h_j}(T)\over R_3(T)}\ge q
+\boxed{
+Q_H(T)=\lim_{h\downarrow0}Q_h(T).
+}
 \tag{L-104538.7}
 \]
 
-and the density of horizontally degenerate critical points
+Consequently the fail-closed finite-shift hypothesis is
 
 \[
-\mathcal L_2(c)=0
+\boxed{
+\liminf_{T\to\infty}
+\left[
+ \liminf_{h\downarrow0}{Q_h(T)\over R_3(T)}
+\right]
+\ge q,
+}
+\tag{L-104538.8}
 \]
 
-is zero, then (L-104538.3) follows and hence so does (L-104538.4).
+with the density of degenerate points `L_2(c)=0` equal to zero.  Then
+(L-104538.3), and hence (L-104538.4), follows.
 
-This gives a conclusion-facing theorem involving actual horizontal shifts of
-`xi''`, rather than a formal derivative sign.  Such shifts are accessible to
-Levinson--Conrey mollified mean-value methods.
+The order of limits in (L-104538.8) is essential.  Interchanging the limits
+would require a uniform Taylor-remainder theorem over all critical points up to
+height `T`; pointwise analyticity at each fixed critical point is not enough.
+
+A simultaneous choice `h=h(T)` is also sufficient if one proves both:
+
+```text
+uniform remainder:
+  max over regular Xi''' zeros |c|<T of
+  |delta_(h(T))(c)-L_2(c)/Xi''(c)^2| -> 0;
+
+small-curvature sparsity:
+  for every epsilon->0, the density of points with
+  |L_2(c)|/Xi''(c)^2 <= epsilon tends to zero.
+```
+
+This is the precise interface for a Levinson--Conrey finite-horizontal-shift
+mean-value calculation.
 
 ## 3. Correct target
 
