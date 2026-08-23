@@ -89,7 +89,9 @@ and `L-105075` Q3/Q4 PROVE the rung-0 blocker irreducible for pointwise
 compression and the A'_k-weighted tail harmonically divergent — the named
 exits are distributional pricing (average-omega) or T-105065's [H3].
 Separately, `L-105076` (Jensen window cap) shrinks the count-cap residual:
-this theorem's conditionality is now confined to (R-J) ∪ (R-C2).
+this theorem's conditionality is now confined to (R-J at the pinned cap
+constant C = 16) ∪ (R-C2) — R-J is well-defined only relative to a pinned C
+(review correction K2); see L-105076 §3 for the exact qualifier.
 
 **(e) [RH-SIDE CONSISTENCY].** Under RH every `Xi_k` is Laguerre–Pólya
 (Hadamard: `Xi` even order-1 with all-real zeros is an LP form; Laguerre's

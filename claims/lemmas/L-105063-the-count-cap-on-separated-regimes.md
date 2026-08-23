@@ -100,7 +100,8 @@ structural.
   pair + 2.850 per swallowed real zero, under window admissibility + (DOM);
   the log(g/y_min) obstruction is eliminated; 104/104 adversarial T-nonempty
   clusters certified. The residual shrinks further to **R-J ⊊ R-C1′**
-  (stopping-recursion failures, empty on every tested configuration) ∪ R-C2.
+  (stopping-recursion failures, defined relative to the pinned cap constant
+  C = 16 per L-105076 §3; empty on every tested configuration) ∪ R-C2.
 - **(R-C2) Supercritical shallow mass**: `W_sh ≥ 1` outside LEMMA_B's ladder
   conditions (its remainders (R1)/(R2)), possibly mixed with deep pairs.
 

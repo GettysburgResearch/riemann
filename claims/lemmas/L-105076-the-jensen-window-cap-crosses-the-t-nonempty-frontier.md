@@ -59,7 +59,9 @@ always; at m = 13 the bound is 82.1 vs T-1's 16m - 10 = 198.
 clusters certified, 0 violations** (971 T-empty also clean); bound/M_K min 1.66,
 median 6.65, max 49.97.
 Constants replayed: 5.81288, 2.84991, 0.83845, theta_bg = 0.0070027,
-cone cos = 0.96724667.
+cone cos = 0.96724667. (Review K7: last-digit drift across files — all values
+round safely UP to the quoted 5.813 / 2.850 / 0.839; theta_bg's drift is in
+the safe direction.)
 
 ## 3. Honest residual
 
@@ -71,9 +73,16 @@ cone cos = 0.96724667.
   uniform-field annulus race is won 5.5x at H = 8 for non-increasing density,
   unproved for superpolynomially growing fields).
 - **R-C2** (supercritical shallow mass): untouched.
-- Consequence for `T-105060`: the count cap is now proved on separated regimes
-  (L-105063), T-EMPTY clusters (L-105067), AND all clusters admitting stopped
-  windows (this lemma); conditionality confined to (R-J) ∪ (R-C2).
+- Consequence for `T-105060` (with the qualifier B2.md §5 carries — review
+  correction K2): the count cap is now proved on separated regimes (L-105063),
+  T-EMPTY clusters (L-105067), AND clusters admitting stopped windows WHOSE
+  certified bound satisfies `5.813 p_S + 2.850 nu_S + 0.839 <= C·W(G)` with the
+  cap constant PINNED at `C = 16` (matching L-105067's cap scale; on the 104
+  tested adversarial clusters the ratio bound/M_K had median 6.65, max 49.97 —
+  the max exceeding 16 means some tested windows certify only at larger C, so
+  R-J is defined RELATIVE to C = 16 and is nonempty-in-principle at that
+  pinning even where the recursion stops). Conditionality confined to
+  (R-J at C = 16) ∪ (R-C2).
 - Refuted routes on record: real-center Jensen (both logs isolated — refuted),
   per-y-scale Whitney telescoping (degenerate), pole-centered Jensen (log returns
   via pair separations), H = 4 cone (loses the annulus race), unconditional

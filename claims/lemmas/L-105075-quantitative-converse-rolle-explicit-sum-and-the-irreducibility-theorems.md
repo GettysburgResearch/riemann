@@ -49,12 +49,20 @@ proportion floor `kappa_0 >= c_0` — has rung-0 coefficient
 `theta_0 = A' C_omega/(2 c_0)`. The deposited sharpness certificates FORCE
 `C_omega >= 3` (L-105064 §2 sup-3 family) and `A' >= 16/15` (L-105063 §3 extremal,
 40 dps), so `theta_0 >= 8/5 > 1` for EVERY admissible constant assignment: the
-fixed-point restructure has negative left coefficient always. Stronger: even
-deleting rung 0 entirely, the k = 1 term alone is
-`(16/15)(3/(2·0.8137))(0.1863) = 0.3663 > 0.3275` — the method cannot beat the
-trivial baseline at ANY constants consistent with the deposits (it would need
-alpha_1 > 0.8301, not in the literature). The exits are distributional:
-average-omega statistics or T-105065's [H3] repulsion — named, not claimed.
+fixed-point restructure has negative left coefficient always. Stronger: at any
+truncation `K >= 1`, even deleting rung 0 entirely, the k = 1 term alone is
+`(16/15)(3/(2·0.8137))(0.1863) = 0.3663 > 0.3275` [review correction K1: at
+K = 0 with rung 0 deleted the output would be `(1 - c_1) = 0.1863 < 0.3275`,
+but that fantasy route is not available — the deposited K = 0 chain goes
+through theta_0 and yields >= 0.9655, so "cannot beat trivial" holds at every
+K]; the method cannot beat the trivial baseline at ANY constants consistent
+with the deposits (it would need alpha_1 > 0.8301, not in the literature).
+SCOPE (review K4): "the method" = pricing schemes built on the DEPOSITED
+omega/W functionals; the product A'·C_omega is rescale-invariant, so
+rescaling cannot evade 8/5 — but structurally different weight functionals or
+Xi_k-specific pricing lie outside the proved class. The exits are
+distributional: average-omega statistics or T-105065's [H3] repulsion —
+named, not claimed.
 
 **Theorem Q4 (tail obstruction).** With `A'_k = max(6,2k)` and the m^{-2} rate the
 master majorant's k-th term is ~3C/k — harmonic divergence; convergence of the
@@ -87,5 +95,7 @@ R = 269/269/270/269 — D_res = 0 and W_k = 0 for T <= 500).
 An error in the Conrey transcription (check against conrey_I_full.txt /
 conrey_II_full.txt and the cited PDFs); a pricing scheme of the stated type with
 theta_0 < 1 (would contradict Q3 — check its C_omega against the sup-3 family and
-its A' against the 16/15 extremal first); convergence of Sum k·(1 - alpha_k) under
-the printed rate (contradicts Q4's harmonic bound).
+its A' against the 16/15 extremal first); a published rate `1 - alpha_k <= C/k^rho`
+with `rho > 2` (would defeat Q4's obstruction and make the A'_k-weighted chain
+convergent — review correction K3: mere convergence of some related sum
+contradicts nothing; Q4 bounds a majorant).
