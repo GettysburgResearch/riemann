@@ -1,0 +1,10 @@
+import RiemannFormal.Arithmetic.FixedRows
+import RiemannFormal.Arithmetic.SourceIdentities
+import RiemannFormal.MellinLandau.FixedDetectorAssembly
+
+#print axioms RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero
+#print axioms RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero
+#print axioms RiemannFormal.Arithmetic.SourceIdentities.firstOwner_eq_nativeEuler
+#print axioms RiemannFormal.Arithmetic.SourceIdentities.r_vs_two_r_sq_witness
+#print axioms RiemannFormal.Arithmetic.SourceIdentities.rn_raw_cutoff_witness
+#print axioms RiemannFormal.MellinLandau.fixed_native_subpower_negative_mass_implies_RH
