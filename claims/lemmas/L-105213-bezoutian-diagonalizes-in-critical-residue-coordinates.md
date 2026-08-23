@@ -27,7 +27,6 @@ Define the symmetric Bezoutian kernel
 ={p(x)p'(y)-p'(x)p(y)\over x-y},
 }
 \tag{L-105213.2}
-\]
 
 with its diagonal value defined by continuity:
 
@@ -81,7 +80,6 @@ For distinct critical points,
 \qquad(i\ne j),
 }
 \tag{L-105213.6}
-\]
 
 while
 
@@ -92,7 +90,6 @@ while
 =-p(c_j)p''(c_j).
 }
 \tag{L-105213.7}
-\]
 
 Thus the restriction of the Bezoutian to the critical-point packet is already
 diagonal. A positive residue is literally one negative diagonal pivot; no
@@ -160,8 +157,7 @@ On real nodes,
  \over2\pi i(x-y)}
 ={\lambda\over\pi}\mathscr B_p(x,y).
 }
-\tag{L-105213.11
-}
+\tag{L-105213.11}
 
 Hence the de Branges/Hermite–Biehler kernel has exactly
 `N_nr(p)/2` negative squares, agreeing with the lower-half-plane zero count in
