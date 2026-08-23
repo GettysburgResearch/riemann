@@ -22,6 +22,7 @@ Zeta23: `cec57f919ccf34e5fa5372b4ba332f7c848bbb6e`
 - Reciprocal-zeta meromorphic-order API.
 - Functional-equation reflection closes RH once full admissible-zero reflection and right-half-plane exclusion are supplied.
 - Mathlib-only comparator solution `Comparator.MellinAPI.fixedMellinConsumerSolution`.
+- The default `RiemannFormal` target imports `Analysis.ComparatorSmoke`, so an ordinary `lake build` also elaborates the owned `MellinAPI` comparator solution and prints its axioms.
 
 ## Theorem proved conditionally
 
