@@ -33,16 +33,17 @@ DELTA_FIELDS = {
     "notes",
 }
 
+# Only RH has an exact proposition in the trusted bootstrap.  OpenCut constructors
+# are intentionally metadata identifiers, not formal statements of the open
+# mathematical propositions.  A/B/C must add the exact propositions through
+# their sparse deltas before those rows may become STATED.
 BOOTSTRAP = {
-    "RH": ("STATED", "RiemannFormal.RH", "RiemannFormal.Statement.RH", "open mathematics"),
-    "OPEN.ARITH.ROWS23_NATIVE": ("STATED", "RiemannFormal.OpenCut.rows23Native", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
-    "OPEN.ARITH.FIVE_THREE_NEGATIVE_MASS": ("STATED", "RiemannFormal.OpenCut.fiveThreeNegativeMass", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
-    "OPEN.ARITH.FIXED_DETECTOR_NEGATIVE_MASS": ("STATED", "RiemannFormal.OpenCut.fixedDetectorNegativeMass", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
-    "OPEN.ARITH.CV": ("STATED", "RiemannFormal.OpenCut.criticalVariation", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
-    "OPEN.ARITH.XD": ("STATED", "RiemannFormal.OpenCut.crossCoreDispersion", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
-    "OPEN.ARITH.HCNC": ("STATED", "RiemannFormal.OpenCut.halfDivisorNearCollision", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
-    "OPEN.ARITH.BPOE": ("STATED", "RiemannFormal.OpenCut.physicalOccupancy", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
-    "OPEN.OPERATOR.XI.PICK_ORDER4_PLUS": ("STATED", "RiemannFormal.OpenCut.xiPickOrderFour", "RiemannFormal.Statement.OpenCuts", "open mathematics"),
+    "RH": (
+        "STATED",
+        "RiemannFormal.RH",
+        "RiemannFormal.Statement.RH",
+        "proof of RH",
+    ),
 }
 
 
@@ -66,7 +67,7 @@ def main() -> None:
         seen.add(sid)
         ordered_ids.append(sid)
         status, decl, module, blocked = BOOTSTRAP.get(
-            sid, ("UNSTATED", "", "", "proof formalization")
+            sid, ("UNSTATED", "", "", "statement/proof formalization")
         )
         joined[sid] = {
             "semantic_id": sid,
