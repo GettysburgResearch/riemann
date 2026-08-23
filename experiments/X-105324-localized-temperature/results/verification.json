@@ -1,0 +1,35 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "checks": 20,
+  "entire_window_bound_proved": false,
+  "fixtures": [
+    {
+      "carrier_leakage": "0",
+      "delta": ["-1", "1", "-13"],
+      "roots": [-4, -1, 2],
+      "temperature": "3"
+    },
+    {
+      "carrier_leakage": "0",
+      "delta": ["-1", "1/2", "-91/4"],
+      "roots": [-5, -2, 1, 4],
+      "temperature": "15/4"
+    },
+    {
+      "carrier_leakage": "0",
+      "delta": ["-1", "0", "-252/5"],
+      "roots": [-7, -3, 0, 2, 8],
+      "temperature": "63/10"
+    },
+    {
+      "carrier_leakage": "0",
+      "delta": ["-1", "-1", "-87"],
+      "roots": [-9, -4, -1, 3, 6, 11],
+      "temperature": "43/5"
+    }
+  ],
+  "proof_object": "1df05430d5bb879d42e941a9fa7ee31a55c3bc752102a471c6f34e938ca2e4b0",
+  "rh_established": false,
+  "verdict": "PASS_X_105324_LOCALIZED_TEMPERATURE_FLUX",
+  "xi_winding_budget_proved": false
+}
