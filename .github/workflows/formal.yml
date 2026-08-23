@@ -1,0 +1,64 @@
+name: formal
+
+on:
+  push:
+    paths:
+      - 'formal/**'
+      - 'FORMALIZATION.md'
+      - '.github/workflows/formal.yml'
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'formal/**'
+      - 'FORMALIZATION.md'
+      - '.github/workflows/formal.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Lean toolchain manager
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Generate and validate the formalization registry
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 formal/scripts/generate_registry.py
+          python3 formal/scripts/validate_registry.py
+          python3 formal/scripts/verify_source_locks.py
+          python3 formal/scripts/validate_blueprint.py
+
+      - name: Resolve the exact pinned Lake dependency graph
+        working-directory: formal
+        run: lake update
+
+      - name: Fetch Mathlib cache
+        working-directory: formal
+        run: lake exe cache get
+
+      - name: Build trusted formal library and comparator smoke modules
+        working-directory: formal
+        run: |
+          lake build
+          lake build Challenge.RH Solution.RH
+
+      - name: Reject sorry/admit and project axioms in trusted targets
+        run: bash formal/scripts/check_no_sorry.sh
+
+      - name: Audit axioms
+        run: bash formal/scripts/check_axioms.sh
