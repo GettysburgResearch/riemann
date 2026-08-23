@@ -5,6 +5,16 @@ namespace RiemannFormal.Arithmetic.SourceIdentities
 
 open RiemannFormal.Arithmetic
 
+/-- Accumulated parity is multiplicative under concatenation of labelled histories. -/
+theorem paritySign_add (m n : ℕ) :
+    paritySign (m + n) = paritySign m * paritySign n := by
+  simp [paritySign, pow_add]
+
+/-- Two labelled copies of one prime produce the exact `(1,-2,1)` fibre. -/
+theorem duplicate_label_fiber (r : ℚ) :
+    (1 - r) ^ 2 = 1 - 2 * r + r ^ 2 := by
+  ring
+
 /-- The native finite Euler product in a commuting coefficient algebra. -/
 def nativeEuler {R : Type*} [CommRing R] : List (R × R) → R
   | [] => 1
@@ -98,6 +108,11 @@ def capacityWitness : ChildCapacity ℚ :=
 theorem response_capacity_coefficients_differ :
     responseWitness.coefficient 1 ≠ capacityWitness.coefficient 1 := by
   norm_num [responseWitness, capacityWitness, singletonAF]
+
+/-- Squared activity and unsquared amplitude are distinct throughout the nontrivial range. -/
+theorem normalized_activity_ne_amplitude {r : ℚ} (hr0 : 0 < r) (hr1 : r < 1) :
+    r ^ 2 ≠ r := by
+  nlinarith
 
 /-- Exact square-prime normalization witness: `p⁻¹` is not `p⁻¹/²`. -/
 theorem normalized_p_inv_ne_p_inv_sqrt_witness :

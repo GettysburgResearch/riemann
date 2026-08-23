@@ -1,5 +1,7 @@
 import RiemannFormal.Arithmetic.FixedRows
+import RiemannFormal.Arithmetic.HalfDivisor
 import RiemannFormal.Arithmetic.SourceIdentities
+import RiemannFormal.Arithmetic.Wavelet
 import RiemannFormal.MellinLandau.FixedDetectorAssembly
 
 #print axioms RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero
@@ -7,4 +9,8 @@ import RiemannFormal.MellinLandau.FixedDetectorAssembly
 #print axioms RiemannFormal.Arithmetic.SourceIdentities.firstOwner_eq_nativeEuler
 #print axioms RiemannFormal.Arithmetic.SourceIdentities.r_vs_two_r_sq_witness
 #print axioms RiemannFormal.Arithmetic.SourceIdentities.rn_raw_cutoff_witness
+#print axioms RiemannFormal.Arithmetic.HalfDivisor.eta_mul_eta
+#print axioms RiemannFormal.Arithmetic.HalfDivisor.oneFieldReduction
+#print axioms RiemannFormal.Arithmetic.Wavelet.threeTap_minimal
+#print axioms RiemannFormal.Arithmetic.Wavelet.finite_abel_mertens
 #print axioms RiemannFormal.MellinLandau.fixed_native_subpower_negative_mass_implies_RH
