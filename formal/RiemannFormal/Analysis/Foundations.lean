@@ -9,6 +9,6 @@ abbrev Detector := ℝ → ℝ
 No analytic property is asserted by this structure. -/
 structure FixedDetector where
   semanticId : String
-  function : Detector
+  value : Detector
 
 end RiemannFormal.Analysis
