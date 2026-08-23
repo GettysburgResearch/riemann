@@ -1,0 +1,61 @@
+{
+  "created": "2026-08-23",
+  "fixed_order_pr_720_head": "0e27e486adfb0a44c73bedebe26d678d4ce09a1c",
+  "heavy_computation_rerun": false,
+  "parent_pr_724_head": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "programme_branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "programme_pr": 729,
+  "programme_preimage_head": "4c3c3b8b0c7b70e7596b3345b1ac1ce37a464fac",
+  "related_pr_726_head": "b4c3ecff7a8616498348a67d9977b3f56db47e33",
+  "replay": {
+    "arithmetic_class": "EXACT_RATIONAL",
+    "checks": 222,
+    "proof_object": "93f59673fad499278a27b6a93f801d96156907759642bf6b8fc9fb0626a66c5e",
+    "verdict": "PASS_X_105330_DUAL_VANDERMONDE_CONTOUR_HIERARCHIES"
+  },
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "t105330-source-lock-v1",
+  "sources": [
+    {
+      "blob": "86772e577ab7653a27e87edc7fa1dbf6c90e0ff0",
+      "path": "claims/lemmas/L-105300-critical-residue-quotient-algebra-and-resultant.md",
+      "ref": "4c3c3b8b0c7b70e7596b3345b1ac1ce37a464fac"
+    },
+    {
+      "blob": "84d44214495c977b36189a9907f209eda10692db",
+      "path": "claims/lemmas/L-105320-root-compression-pinching-and-krylov-spectral-flow.md",
+      "ref": "4c3c3b8b0c7b70e7596b3345b1ac1ce37a464fac"
+    },
+    {
+      "blob": "85d711f1a686613e4ffff50ea1b336cb7a110092",
+      "path": "claims/lemmas/L-105323-residue-temperature-invariance-and-variance-normal-form.md",
+      "ref": "4c3c3b8b0c7b70e7596b3345b1ac1ce37a464fac"
+    },
+    {
+      "blob": "c7576257d8938a9984f69ac9e1f20d4b3eed2acf",
+      "path": "claims/lemmas/L-105207-xi-laguerre-defects-form-an-exterior-square-fourier-gram.md",
+      "ref": "452978883b0009f002cfec426dfd5eb10041a15c"
+    },
+    {
+      "blob": "609d2f4497a3fd140b5281721b6820eba212c327",
+      "path": "claims/lemmas/L-105214-entire-window-bezoutian-cauchy-remainder-decomposition.md",
+      "ref": "452978883b0009f002cfec426dfd5eb10041a15c"
+    },
+    {
+      "blob": "00d065f41206f461e16105fda3043b8ff3c70761",
+      "path": "claims/lemmas/L-105218-critical-node-schur-complement-splits-residue-and-boundary-inertia.md",
+      "ref": "452978883b0009f002cfec426dfd5eb10041a15c"
+    },
+    {
+      "blob": "4a2d6d09e8e3c670a450c0e80c5f8bbc3160b48a",
+      "path": "claims/lemmas/L-105300-levinson-hermite-pick-trace-form.md",
+      "ref": "b4c3ecff7a8616498348a67d9977b3f56db47e33"
+    },
+    {
+      "blob": "b8523ca76afdff7d3fadc07e700956a3ff23ea9c",
+      "path": "claims/lemmas/L-105303-entire-window-hermite-pick-compression.md",
+      "ref": "b4c3ecff7a8616498348a67d9977b3f56db47e33"
+    }
+  ]
+}

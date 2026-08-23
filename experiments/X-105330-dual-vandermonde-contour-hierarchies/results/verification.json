@@ -1,0 +1,94 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL",
+  "boundary_hierarchy_proved_for_xi": false,
+  "brp105220_proved": false,
+  "counts": {
+    "andreief_partition_checks": 39,
+    "cardinal_sign_witness_checks": 44,
+    "cauchy_vandermonde_checks": 34,
+    "generalized_pencil_checks": 19,
+    "quartic_wedge_two_firewall_checks": 5,
+    "resultant_evaluation_checks": 15,
+    "vandermonde_factorization_checks": 66
+  },
+  "critical_hierarchy_proved_for_xi": false,
+  "fixtures": [
+    {
+      "leading_minors": [
+        "14/5",
+        "3216/25",
+        "893824/125",
+        "67622912/625"
+      ],
+      "name": "five-real-root-coherence-firewall",
+      "pencil": [
+        "1056608/102515625",
+        "5402504/20503125",
+        "866084/455625",
+        "14/5",
+        "1"
+      ],
+      "residues": [
+        "-106/135",
+        "-4/45",
+        "-2/25",
+        "-1246/675"
+      ]
+    },
+    {
+      "leading_minors": [
+        "1/4",
+        "1/8",
+        "-1/16"
+      ],
+      "name": "quartic-wedge-two-separator",
+      "pencil": [
+        "-1/64",
+        "-1/16",
+        "1/4",
+        "1"
+      ],
+      "residues": [
+        "-1/4",
+        "1/4",
+        "-1/4"
+      ]
+    },
+    {
+      "leading_minors": [
+        "2/3",
+        "7/36"
+      ],
+      "name": "good-cubic",
+      "pencil": [
+        "7/144",
+        "2/3",
+        "1"
+      ],
+      "residues": [
+        "-7/12",
+        "-1/12"
+      ]
+    },
+    {
+      "leading_minors": [
+        "2/3",
+        "-4/3"
+      ],
+      "name": "bad-cubic",
+      "pencil": [
+        "-1/3",
+        "2/3",
+        "1"
+      ],
+      "residues": [
+        "-1",
+        "1/3"
+      ]
+    }
+  ],
+  "pres105220_proved": false,
+  "proof_object": "93f59673fad499278a27b6a93f801d96156907759642bf6b8fc9fb0626a66c5e",
+  "rh_established": false,
+  "verdict": "PASS_X_105330_DUAL_VANDERMONDE_CONTOUR_HIERARCHIES"
+}
