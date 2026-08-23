@@ -83,3 +83,18 @@ core is one finite-geometry lemma plus one density functional. The two
 programs share no repo-internal inputs (both consume classical zero-free-region
 facts) — a deliberate portfolio split. Nothing
 in either addresses RH.
+
+## 5. Addendum (2026-08-23): the count cap closes on the separated regimes
+
+The third, decomposed attempt on the count cap succeeded where two monolithic
+attempts had died: `L-105063` proves `extra(G) ≤ 6·W(G)` for every gap in the
+regimes {no overhang; isolated site; deep pairs with disjoint (2+√3)-fattened
+intervals + subcritical shallow mass; all-shallow ladder}, by level-2
+confinement to the deep sites plus a per-site convex-comparison/concavity-split
+argument with exact constants (κ = (11+5√5)/64, κ₆ = 1). The extremal
+in-regime configuration realizes extra/W = 16/15 (so the linear-in-W cap is
+the correct shape; any valid constant ≥ 16/15, conjectured sharp value 2,
+proved 6). `T-105060`'s conditionality is now confined to two precisely-
+described residual regimes — deep clusters and supercritical shallow mass —
+both numerically tame (never more than 2 extra zeros per deep site in 600
+residual scans). RH remains unproved and unaddressed.

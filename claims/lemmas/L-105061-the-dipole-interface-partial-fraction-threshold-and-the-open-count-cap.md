@@ -1,7 +1,7 @@
 # L-105061 — The dipole interface: partial-fraction layer and threshold PROVED; the per-gap count cap OPEN
 
 Claim ID: `L-105061`
-Status: **INTERFACE — sub-lemmas [I-PF] and [THRESHOLD] PROVED here; the COUNT CAP is OPEN (pinned statement below; empirical sharp constant 2, pinned A′ = 4 held in every experiment) — RH NOT ADDRESSED**
+Status: **INTERFACE — sub-lemmas [I-PF] and [THRESHOLD] PROVED here; the COUNT CAP is now PROVED with A′ = 6 on the separated/subcritical regimes (`L-105063`, deposited 2026-08-23) and remains OPEN only on the residual regimes (R-C1) deep clusters and (R-C2) supercritical shallow mass (`L-105063` §4) — RH NOT ADDRESSED**
 Created: 2026-08-22
 Agent: claude (external reviewer lane; Program B — orchestrator + lane B3; two dedicated proof lanes on the count cap died mid-derivation, incident recorded in §5)
 Depends on: `L-105062` §1 (square-variable genus-0 Hadamard product).
@@ -29,6 +29,14 @@ n'(G) := #{real zeros of Xi_{k+1} in G, with multiplicity}
 Any absolute constant, and any per-(pair,gap) weight shape dominating this one
 (e.g. fattened overhang intervals), is accepted verbatim by the downstream
 assembly `T-105060` (its summation layer is weight-shape-agnostic).
+
+UPDATE (2026-08-23): `L-105063` proves this cap with `A' = 6` for every gap
+in the regimes C-0 (no overhang), C-1 (isolated site), C-2 (deep pairs with
+disjoint `R4`-fattened intervals + subcritical shallow mass), and C-3
+(all-shallow ladder). The pinned statement remains open ONLY on `L-105063`
+§4's residual regimes (R-C1) and (R-C2); `T-105060`'s conditionality is
+correspondingly confined. Empirical sharp constant across all scans: 2;
+extremal in-regime ratio `extra/W = 16/15` proves any valid `A' ≥ 16/15`.
 
 ## 2. [I-PF] Partial-fraction layer — PROVED
 
