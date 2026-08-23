@@ -1,0 +1,29 @@
+{
+  "base": {
+    "pr": 730,
+    "sha": "9aaf39898c95a1aa4af0b8aaf3a6fb56046e1b0f"
+  },
+  "created": "2026-08-23",
+  "forbidden_promotions": [
+    "moving Green order to fixed detector",
+    "PSD Gram sign to subpower size",
+    "diagonal to off-diagonal",
+    "F1ATO105405 to proved",
+    "RH to established"
+  ],
+  "inputs": [
+    {
+      "pr": 719,
+      "scope": "full filtered disk, centered rays, source energy and near-collision reductions",
+      "sha": "847e7feeac864bda4e3df38329d1a70c59aa4814"
+    }
+  ],
+  "schema": "riemann.t105410.source-lock.v1",
+  "status": {
+    "adelic_gram_reduction_proved": true,
+    "f1ato105405_proved": false,
+    "orthogonal_primitive_split_proved": true,
+    "positive_box_spline_proved": true,
+    "rh_established": false
+  }
+}
