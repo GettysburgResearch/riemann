@@ -1,0 +1,97 @@
+name: formal
+
+on:
+  push:
+    paths:
+      - 'formal/**'
+      - 'FORMALIZATION.md'
+      - '.github/workflows/formal.yml'
+  pull_request:
+    paths:
+      - 'formal/**'
+      - 'FORMALIZATION.md'
+      - '.github/workflows/formal.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Expand bootstrap payload when present
+        shell: bash
+        run: |
+          set -euo pipefail
+          payload=formal/bootstrap/formal-bootstrap.tar.gz.b64
+          if [[ -f "$payload" ]]; then
+            base64 --decode "$payload" | tar -xzf - -C .
+            rm -f "$payload"
+          fi
+
+      - name: Install Lean toolchain manager
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Generate formalization registry
+        run: python3 formal/scripts/generate_registry.py
+
+      - name: Resolve exact Lake dependency lock
+        working-directory: formal
+        run: lake update
+
+      - name: Commit generated locks on the bootstrap branch
+        if: >-
+          github.event_name == 'push' &&
+          github.ref == 'refs/heads/formal/000-bootstrap' &&
+          github.actor != 'github-actions[bot]'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A FORMALIZATION.md formal
+          if ! git diff --cached --quiet; then
+            git commit -m 'formal: generate dependency and claim locks'
+            git push origin HEAD
+          fi
+
+      - name: Verify generated files are committed
+        if: >-
+          github.event_name == 'pull_request' ||
+          github.actor == 'github-actions[bot]'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- formal/lake-manifest.json formal/registry/FORMALIZATION_MAP.tsv
+
+      - name: Fetch Mathlib cache
+        working-directory: formal
+        run: lake exe cache get
+
+      - name: Build trusted formal library and comparator smoke solution
+        working-directory: formal
+        run: |
+          lake build
+          lake build Solution.RH
+
+      - name: Validate formal registry and source locks
+        run: |
+          python3 formal/scripts/validate_registry.py
+          python3 formal/scripts/verify_source_locks.py
+          python3 formal/scripts/validate_blueprint.py
+
+      - name: Reject sorry/admit in trusted targets
+        run: bash formal/scripts/check_no_sorry.sh
+
+      - name: Audit axioms
+        run: bash formal/scripts/check_axioms.sh
