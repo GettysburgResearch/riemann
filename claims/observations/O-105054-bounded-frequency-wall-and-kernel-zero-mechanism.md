@@ -53,7 +53,15 @@ while the total `O` stays `~ -2.3`). LESSON (echoes `L-105032`'s
 classes are individually power-sized; only the cross-class total is small;
 classwise positivity or invariant-cone arguments cannot close the gate.
 
-**(O-105054.4)** [heuristic layer; LABELED HEURISTIC — data, no claim]
+**(O-105054.4)** [heuristic layer; LABELED HEURISTIC — data, no claim.
+UPDATE 2026-08-23: the deep sign hunt (`O-105057`, exact evaluations to
+`X = 1.2e12`) shows the bounded-negativity pattern below is a TRANSIENT of
+the range `X <= 4e6`: `O(X)` develops genuine positive values from
+`X ≈ 2.15e10` (up to `+9.5`), precisely where the branch mass of
+`L-105058` reaches order one. The gate itself remains unfalsified —
+positive-part octave integrals stay `O(1)` against `D ≈ 4.8` at every
+sampled octave. The paragraph below is retained as the honest record of
+what this range showed.]
 Numerically (`X in [1e4, 4e6]`, exact objects, Gram identity replayed to
 ≤ 2.1e-14): `O_signed` stays in `[-2.88, -2.11]` with NO growth over 2.6
 decades while `O_abs` grows to 4844 at `X = 4e6` (cancellation factor
