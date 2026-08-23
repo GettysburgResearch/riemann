@@ -48,8 +48,19 @@ and corrected corollary are frozen on the branch.
 The lightweight regression ledger in
 `experiments/X-105116-xi-kernel-normalization-audit` locks the corrected
 factor (4), (q=|\Im z|+11/2), the (\zeta(3/2)) threshold, source provenance,
-and both anchor parities.  It passes 10/10 focused tests in normal and
+and both anchor parities.  It passes 11/11 focused tests in normal and
 optimized Python with digest
-`4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8`.
+`38a85d503250264cb8ca16583e1f5c813c8879ec03874d3556cf6a141ad61a67`.
 It imports no source claim and leaves the Xi-growth, RCMV104530, and RH
 flags explicitly open.
+
+The audit also finds that PR #716 L-104504 uses the same half-normalized
+kernel, so downstream PR #724 needs the same canonical replacement
+(\Phi_{\rm std}=2\Phi_0).  Its normalized saddle/zero/PSD/orientation results
+are scale-invariant, but raw Xi amplitudes require a factor (2) and its exact
+Laguerre-defect and squared-norm identities require a factor (4).  This is a
+normalization repair requirement, not a refutation of those invariant signs.
+The same inherited linear-amplitude repair reaches PRs #725/#726/#728, while
+their normalized residue/coherence conclusions remain unchanged.  PR #728's
+gamma-based axis anchor is unaffected and complementary, but it supplies no
+complex-disk growth envelope; none of the downstream packets imports H.9.

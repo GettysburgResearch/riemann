@@ -44,6 +44,31 @@ def source_lock() -> dict[str, object]:
             "blob": "7235207cb1bab2d540598dbe1c9cf076afd960a0",
             "theta_orbit_source_locked": True,
         },
+        "upstream_pr716": {
+            "pr": 716,
+            "head": "a1d2387c4a1416c3f220a16fae849e6eab620545",
+            "l104504": {
+                "commit": "3776c61ff9b679bb8a933b1122f631cd83f88d85",
+                "blob": "2f98606a8028497051e60300b20cff5c0e7301ef",
+            },
+        },
+        "downstream_pr724": {
+            "pr": 724,
+            "head": "82ba4bdb824868dcf26d5d2f2d38b1e2af2d8631",
+            "base": "codex/105100-residue-second-moment",
+            "l105200": {
+                "commit": "b03b4e66274d6fa014c13ed3c22cbdb11270845e",
+                "blob": "c544394bd5e9c3f54624059ec58e7b24a4e36b1a",
+            },
+            "l105207": {
+                "commit": "8ddb2a0fedadc4be7d7aa7796a4756659de3f3b8",
+                "blob": "c7576257d8938a9984f69ac9e1f20d4b3eed2acf",
+            },
+            "l105208": {
+                "commit": "82ba4bdb824868dcf26d5d2f2d38b1e2af2d8631",
+                "blob": "6551bb638816224d851ef8059f31ea4561db82af",
+            },
+        },
     }
     oids = [
         row["pr_head"],
@@ -53,6 +78,16 @@ def source_lock() -> dict[str, object]:
         row["l104528"]["blob"],
         row["l104531"]["commit"],
         row["l104531"]["blob"],
+        row["upstream_pr716"]["head"],
+        row["upstream_pr716"]["l104504"]["commit"],
+        row["upstream_pr716"]["l104504"]["blob"],
+        row["downstream_pr724"]["head"],
+        row["downstream_pr724"]["l105200"]["commit"],
+        row["downstream_pr724"]["l105200"]["blob"],
+        row["downstream_pr724"]["l105207"]["commit"],
+        row["downstream_pr724"]["l105207"]["blob"],
+        row["downstream_pr724"]["l105208"]["commit"],
+        row["downstream_pr724"]["l105208"]["blob"],
     ]
     require(
         all(
@@ -82,6 +117,9 @@ def normalization_ledger() -> dict[str, object]:
         "Fourier(Phi)/Xi": render(phi_to_xi),
         "standard_kernel_multiplier_over_Phi": render(standard_kernel_multiplier),
         "l104528_unscaled_display_needs_factor_two_repair": True,
+        "l104504_kernel_equals_l104531_kernel": True,
+        "l104504_unscaled_display_needs_factor_two_repair": True,
+        "standard_kernel_name": "Phi_std=2*Phi_0",
     }
 
 
@@ -129,6 +167,45 @@ def anchor_phase_ledger() -> dict[str, object]:
     }
 
 
+def downstream_scale_ledger() -> dict[str, object]:
+    linear_scale = F(2)
+    quadratic_scale = linear_scale**2
+    require(quadratic_scale == 4, "quadratic Xi scale is not four")
+    return {
+        "target": "PR724 at 82ba4bdb824868dcf26d5d2f2d38b1e2af2d8631",
+        "raw_kernel": "Phi_0 from L-104504/L-104531",
+        "standard_kernel": "Phi_std=2*Phi_0",
+        "xi_derivative_scale_over_raw_transform": render(linear_scale),
+        "laguerre_defect_scale_over_raw_gram": render(quadratic_scale),
+        "line_l2_norm_squared_scale_over_raw_formula": render(quadratic_scale),
+        "l105200_scale_invariant": [
+            "tilted_probability_measure",
+            "saddle_location_and_curvature",
+            "normalized_gaussian_limit",
+            "zero_geometry",
+        ],
+        "l105207_scale_invariant": [
+            "positive_semidefiniteness",
+            "Schur_inequalities",
+            "sign_region",
+            "normalized_curvature_ratios",
+        ],
+        "l105208_scale_invariant": [
+            "line_norm_inequality",
+            "optimal_lambda",
+            "normalized_orientation",
+            "phase_sign_and_mean_positivity",
+        ],
+        "exact_raw_equalities_requiring_repair": [
+            "L105200 opening Xi Fourier amplitude",
+            "L105207 exterior-square and Fourier-density identities",
+            "L105207 central defect constant",
+            "L105208 Plancherel norm identities",
+        ],
+        "pr724_exact_normalization_ready": False,
+    }
+
+
 def scope() -> dict[str, bool]:
     return {
         "normalization_algebra_verified": True,
@@ -137,6 +214,7 @@ def scope() -> dict[str, bool]:
         "unmerged_source_blobs_imported": False,
         "xi_growth_claim_frozen_as_proof_object": False,
         "actual_xi_manifests_authenticated": False,
+        "downstream_pr724_fully_reviewed": False,
         "rcmv104530_proved": False,
         "rh_established": False,
     }
@@ -144,13 +222,14 @@ def scope() -> dict[str, bool]:
 
 def build_payload() -> dict[str, object]:
     payload: dict[str, object] = {
-        "schema": "riemann.x105116.xi-kernel-normalization-audit.v1",
+        "schema": "riemann.x105116.xi-kernel-normalization-audit.v2",
         "classification": VERDICT,
         "checks": {
             "source_lock": source_lock(),
             "normalization_ledger": normalization_ledger(),
             "gamma_constant_ledger": gamma_constant_ledger(),
             "anchor_phase_ledger": anchor_phase_ledger(),
+            "downstream_scale_ledger": downstream_scale_ledger(),
         },
         "scope": scope(),
         "heavy_computation_run": False,

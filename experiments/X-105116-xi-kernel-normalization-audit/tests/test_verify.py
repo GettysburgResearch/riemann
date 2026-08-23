@@ -17,7 +17,7 @@ V = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = V
 SPEC.loader.exec_module(V)
 
-EXPECTED_AUDIT_SHA256 = "4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8"
+EXPECTED_AUDIT_SHA256 = "38a85d503250264cb8ca16583e1f5c813c8879ec03874d3556cf6a141ad61a67"
 EXPECTED_OBJECTS = {
     "l104513": (
         "49f04d3459d1276e6958cffb0a55680b0a4ca70e",
@@ -43,6 +43,12 @@ class TestXiKernelNormalizationAudit(unittest.TestCase):
         self.assertEqual(len(row["pr_head"]), 40)
         for claim, (commit, blob) in EXPECTED_OBJECTS.items():
             self.assertEqual((row[claim]["commit"], row[claim]["blob"]), (commit, blob))
+        self.assertEqual(row["upstream_pr716"]["head"], "a1d2387c4a1416c3f220a16fae849e6eab620545")
+        self.assertEqual(
+            (row["upstream_pr716"]["l104504"]["commit"], row["upstream_pr716"]["l104504"]["blob"]),
+            ("3776c61ff9b679bb8a933b1122f631cd83f88d85", "2f98606a8028497051e60300b20cff5c0e7301ef"),
+        )
+        self.assertEqual(row["downstream_pr724"]["head"], "82ba4bdb824868dcf26d5d2f2d38b1e2af2d8631")
         self.assertTrue(row["l104531"]["theta_orbit_source_locked"])
 
     def test_source_defects_are_explicit(self) -> None:
@@ -54,6 +60,7 @@ class TestXiKernelNormalizationAudit(unittest.TestCase):
         row = V.normalization_ledger()
         self.assertEqual(row["Fourier(Phi)/Xi"], "1/2")
         self.assertEqual(row["standard_kernel_multiplier_over_Phi"], "2")
+        self.assertTrue(row["l104504_unscaled_display_needs_factor_two_repair"])
 
     def test_l104528_display_requires_repair(self) -> None:
         self.assertTrue(V.normalization_ledger()["l104528_unscaled_display_needs_factor_two_repair"])
@@ -79,11 +86,19 @@ class TestXiKernelNormalizationAudit(unittest.TestCase):
         self.assertIn("sinh", row["odd_pair"])
         self.assertTrue(row["all_fixed_derivatives_nonzero"])
 
+    def test_downstream_scale_impact_is_fail_closed(self) -> None:
+        row = V.downstream_scale_ledger()
+        self.assertEqual(row["xi_derivative_scale_over_raw_transform"], "2")
+        self.assertEqual(row["laguerre_defect_scale_over_raw_gram"], "4")
+        self.assertEqual(row["line_l2_norm_squared_scale_over_raw_formula"], "4")
+        self.assertFalse(row["pr724_exact_normalization_ready"])
+
     def test_scope_is_fail_closed(self) -> None:
         row = V.scope()
         self.assertTrue(row["normalization_algebra_verified"])
         self.assertFalse(row["unmerged_source_blobs_imported"])
         self.assertFalse(row["xi_growth_claim_frozen_as_proof_object"])
+        self.assertFalse(row["downstream_pr724_fully_reviewed"])
         self.assertFalse(row["rh_established"])
 
     def test_committed_result_matches_producer(self) -> None:

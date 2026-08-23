@@ -24,5 +24,8 @@ is (4\pi^2m!\), not (2\pi^2m!\).
 
 Replay `experiments/X-105116-xi-kernel-normalization-audit` before importing
 that bridge.  Its canonical digest is
-`4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8`;
+`38a85d503250264cb8ca16583e1f5c813c8879ec03874d3556cf6a141ad61a67`;
 the audit is deliberately fail-closed about source import and theorem status.
+The same audit records the downstream PR #724 scale repair: normalized
+conclusions survive, while raw Xi amplitudes and quadratic identities need
+factors (2) and (4), respectively.

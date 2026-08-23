@@ -269,17 +269,56 @@ then update the T-105114 Xi-input flags.
 
 ### Normalization regression audit
 
-`experiments/X-105116-xi-kernel-normalization-audit` records the exact
-source locks and the four factors in (H.9): the L-104531 orbit coefficient
+`experiments/X-105116-xi-kernel-normalization-audit` records the exact source
+locks for PRs #716, #720, and #724 and the four factors in (H.9): the
+L-104531 orbit coefficient
 (2), the standard-kernel repair (2), two-sided pairing (2), and the gamma
 substitution (1/2).  Their product is (4), while the same ledger fixes
 (q=Y+11/2), the (\zeta(3/2)) threshold, and both anchor parities.  Its
 canonical digest is
-`4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8`;
-10 focused tests pass normally and under optimized Python.  This is an
+`38a85d503250264cb8ca16583e1f5c813c8879ec03874d3556cf6a141ad61a67`;
+11 focused tests pass normally and under optimized Python.  This is an
 exploratory bookkeeping audit only: its result explicitly says that no
 unmerged source blob has been imported and that (H.9)--(H.11) have not been
 frozen as a proof object.
+
+### Downstream scale impact
+
+The same explicit kernel occurs already in PR #716 L-104504.  Under the
+declared standard convention (\Xi_t(z)=\xi(1/2+iz)), call it (\Phi_0).  Then
+
+\[
+2\int_0^\infty\Phi_0(u)\cos(zu)\,du=\Xi_t(z)/2,
+\qquad \Phi_{\rm std}=2\Phi_0.
+\]
+
+Consequently downstream PR #724's normalized tilted measures, saddle laws,
+zero geometry, positive-semidefinite conclusions, Schur inequalities,
+normalized curvature ratios, optimal Levinson parameter, and orientation
+signs are unchanged by the repair.  Its raw exact equalities are not:
+Xi-derivative amplitudes written using (\Phi_0) need a factor (2), while
+Laguerre defects and squared line norms need a factor (4).  In particular,
+with the raw moments (M_{0,m}), the standard-Xi central defect is
+
+\[
+\Lambda_m(0)=16M_{0,m}M_{0,m+2},
+\]
+
+not (4M_{0,m}M_{0,m+2}).  Equivalently, every displayed formula keeps its
+shape after the one-line canonical replacement (\Phi_{\rm std}=2\Phi_0).
+This is an exact-normalization repair requirement for PR #724, not a
+refutation of its scale-invariant saddle, sign, or coherence conclusions.
+
+A read-only propagation audit finds the same inherited linear-amplitude
+repair in PRs #725, #726, and #728 through L-104504/L-104516.  Their
+normalized measures, moment and residue ratios, coherence/debt ratios, and
+zero statements are scale-invariant.  PR #728 L-105202 is instead derived
+from the standard completed-xi gamma formula and is unaffected; it supplies
+eventual common nonzero fixed-order anchors on the positive real (s)-axis,
+but no complex-disk growth envelope.  None of these packets imports (H.9).
+Thus the clean integration order is: freeze (\Phi_{\rm std}=2\Phi_0) and
+refresh the inherited source locks, then independently freeze (H.9)--(H.11)
+for the Cartan anchor-growth contract.
 
 The smallest defensible next theorem is therefore to import L-104531 with
 the standard-kernel factor two and freeze (H.9)--(H.11), or import and
