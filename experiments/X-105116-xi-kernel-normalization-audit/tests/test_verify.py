@@ -17,13 +17,32 @@ V = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = V
 SPEC.loader.exec_module(V)
 
+EXPECTED_AUDIT_SHA256 = "4efde5c2dadf2c52b9b7200c062fbef31e0e1ff451804f5b18d864026fcd2cc8"
+EXPECTED_OBJECTS = {
+    "l104513": (
+        "49f04d3459d1276e6958cffb0a55680b0a4ca70e",
+        "147f13997e1bb16c547994021dd26f7693f8a566",
+    ),
+    "l104528": (
+        "6ee43255d64a27b76de7e1d0fc230a4c7767969e",
+        "187a2f43372241641e5b92a8300d4452f6a26d79",
+    ),
+    "l104531": (
+        "efe3ef6aed66a68a47bbfe1d3678210a249ad725",
+        "7235207cb1bab2d540598dbe1c9cf076afd960a0",
+    ),
+}
+
 
 class TestXiKernelNormalizationAudit(unittest.TestCase):
     def test_source_locks_are_exact(self) -> None:
         row = V.source_lock()
         self.assertEqual(row["pr"], 720)
         self.assertEqual(row["pr_head"], "beb9d8a4e10fb8c8deb74bb0505a32fe55cddd14")
+        self.assertEqual(row["pr_base"], "research/gpt56-pro/104500-xi-riccati-pick-cascade")
         self.assertEqual(len(row["pr_head"]), 40)
+        for claim, (commit, blob) in EXPECTED_OBJECTS.items():
+            self.assertEqual((row[claim]["commit"], row[claim]["blob"]), (commit, blob))
         self.assertTrue(row["l104531"]["theta_orbit_source_locked"])
 
     def test_source_defects_are_explicit(self) -> None:
@@ -71,6 +90,7 @@ class TestXiKernelNormalizationAudit(unittest.TestCase):
         artifact = json.loads((ROOT / "results" / "verification.json").read_text(encoding="utf-8"))
         self.assertEqual(artifact, V.build_payload())
         self.assertEqual(artifact["classification"], artifact["verdict"])
+        self.assertEqual(artifact["audit_sha256"], EXPECTED_AUDIT_SHA256)
         self.assertFalse(artifact["heavy_computation_run"])
 
 
