@@ -1,0 +1,39 @@
+{
+  "packet": "T-105320",
+  "repository": "gfreund123/riemann",
+  "target_pr": 726,
+  "target_branch": "research/gpt56-pro/105200-xi-summable-residue-coherence",
+  "parent_commit": "b4c3ecff7a8616498348a67d9977b3f56db47e33",
+  "stack_base": {
+    "pull_request": 723,
+    "head_at_publication": "c1a7ad2fe8d0d1a779b3852df74efae3d0109ce5"
+  },
+  "external_primary_source": {
+    "repository": "anthropics/zeta-23-lean",
+    "commit": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e",
+    "files": [
+      "Zeta23/XiPrime/Defs.lean",
+      "Zeta23/XiPrime/Coeff/LSeries.lean",
+      "Zeta23/XiPrime/Coeff/Reexpansion.lean",
+      "Zeta23/XiPrime/Transfer/Inputs.lean",
+      "Zeta23/XiPrime/ExplicitFormula/Main.lean",
+      "Zeta23/XiPrime/Final.lean"
+    ],
+    "used_interfaces": [
+      "definition of C(N;L)",
+      "finite convolution identity",
+      "parameter re-expansion with H1/H2/H3 bounds",
+      "entrywise xi-prime explicit formula architecture",
+      "simple/distinct xi-prime constants",
+      "published zeta proportion comparator"
+    ]
+  },
+  "arithmetic_inputs": [
+    "prime number theorem in Stieltjes form",
+    "Montgomery-Vaughan mean-value theorem"
+  ],
+  "heavy_computation_run": false,
+  "wxfer105320_proved": false,
+  "new_zero_proportion_established": false,
+  "rh_established": false
+}
