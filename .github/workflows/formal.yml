@@ -7,10 +7,12 @@ on:
       - 'FORMALIZATION.md'
       - '.github/workflows/formal.yml'
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
     paths:
       - 'formal/**'
       - 'FORMALIZATION.md'
       - '.github/workflows/formal.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -49,13 +51,13 @@ jobs:
         working-directory: formal
         run: lake exe cache get
 
-      - name: Build trusted formal library and comparator smoke solution
+      - name: Build trusted formal library and comparator smoke modules
         working-directory: formal
         run: |
           lake build
-          lake build Solution.RH
+          lake build Challenge.RH Solution.RH
 
-      - name: Reject sorry/admit in trusted targets
+      - name: Reject sorry/admit and project axioms in trusted targets
         run: bash formal/scripts/check_no_sorry.sh
 
       - name: Audit axioms
