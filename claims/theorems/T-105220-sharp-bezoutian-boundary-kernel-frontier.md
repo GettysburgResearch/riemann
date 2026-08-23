@@ -43,8 +43,7 @@ For a real polynomial, `L-105213` proves
 {p'(y)\over y-c}.
 \end{aligned}
 }
-\tag{T-105220.2
-}
+\tag{T-105220.2}
 
 The congruence coefficients are
 
