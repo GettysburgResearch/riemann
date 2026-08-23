@@ -1,5 +1,6 @@
 import numpy as np, random, math
-exec(open('scan3.py').read().split('mxe=-1')[0])  # reuse rcount, mpcount
+import os as _os
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'capA_scan3.py')).read().split('mxe=-1')[0])  # reuse rcount, mpcount
 random.seed(7)
 mxe=-1;mxhp=0;best=None;cand=[]
 # adversarial: pair hugging endpoint, tiny y, high m1

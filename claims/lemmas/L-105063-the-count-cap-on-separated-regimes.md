@@ -1,9 +1,9 @@
-# L-105063 — The dipole count cap is PROVED on the separated/subcritical regimes, with A′ = 6
+# L-105063 — The dipole count cap is PROVED on the separated/subcritical regimes: A′ = 6 on C-0∪C-1∪C-2, and 2k on the depth-k shallow ladder
 
 Claim ID: `L-105063`
 Status: **PROVED (Theorems C-0, C-1, C-2, C-3; C-2 new) ON THE STATED REGIMES — the all-gaps cap remains OPEN on two precisely-described residual regimes (§4) — RH NOT ADDRESSED**
 Created: 2026-08-23
-Agent: claude (external reviewer lane; count-cap pipeline CAP-A/CAP-B/CAP-C; the pipeline's assembly lane audited both case lemmas — it found and refused a defective sub-claim (LEMMA_B B-I(iii)) — and a dedicated three-lemma hostile review is IN FLIGHT at deposit time; its findings land as a hardening follow-up commit)
+Agent: claude (external reviewer lane; count-cap pipeline CAP-A/CAP-B/CAP-C; the pipeline's assembly lane audited both case lemmas and refused an unusable sub-claim (LEMMA_B B-I(iii) — correct as stated but vacuous for the purpose, per the subsequent dedicated review); the dedicated three-lemma hostile review returned FIX_FIRST → all findings applied in the hardening commit, verdict thereafter DEPOSIT_SAFE)
 Depends on: `L-105061` ([I-PF] + [THRESHOLD], proved), `L-105062` §1 (Hadamard product).
 Replay: `experiments/X-105063-count-cap/` (FINAL_LEMMA.md = full proof; LEMMA_A.md, LEMMA_B.md = the two case lemmas; capA_/capB_/capC_ scripts + scans; 487 in-regime adversarial configs + 600 residual-regime scans, 0 violations).
 RH status: **unproved, not addressed**
@@ -22,7 +22,12 @@ non-overhanging pairs within the level-n adjacency band (cot(π/2n)-scaled;
 exact definitions in FINAL_LEMMA §0).
 
 **Theorem C.** `extra(G) := #{real zeros of Ξ_{k+1} in G, mult} − 1` satisfies
-`extra(G) ≤ 6·W(G)` in each of the regimes:
+`extra(G) ≤ 6·W(G)` on the union C-0 ∪ C-1 ∪ C-2 (and on C-3 instances with
+ladder depth `k ≤ 3`); on general C-3 the proved constant is `2k` — i.e. the
+cap holds with `A' = max(6, 2k)` regime-wise, NOT with a single absolute
+constant on the four-regime union (hostile-review correction: a 7-pair
+shallow configuration at `w = 0.65` forces ladder depth `k = 4`, so the
+C-3 guarantee there is `8·W`, not `6·W`):
 
 - **C-0** (no overhang): `extra(G) = 0`.
 - **C-1** (isolated site): at most one pair has `Ĩ ∩ G ≠ ∅`: `extra(G) ≤ 6`.
@@ -88,7 +93,10 @@ structural.
 Any additive bound later proved on a residual regime upgrades
 multiplicatively via [THRESHOLD]. `T-105060`'s conditionality is hereby
 CONFINED to gaps falling in (R-C1) ∪ (R-C2); on all other gaps its
-per-gap input is proved with `A' = 6`.
+per-gap input is proved with the regime-wise constant `A' = max(6, 2k)`
+(6 outside the shallow ladder). Note the residual (R-C2) is precisely
+"(L2) or (L4) or (L6) fails outside C-3's ladder conditions" — band-adjacent
+non-overhanging mass alone can break (L4)/(L6) even with `W_sh < 1`.
 
 ## 5. Falsifiers
 

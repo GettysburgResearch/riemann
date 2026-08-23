@@ -140,7 +140,12 @@ the left and right pieces of `J` with `(2 - sqrt3) y < |s| < y`).
 
 Total: `Z_mult(g'', J) <= 0 + 2 + 2 = 4`.
 
-**Step 4 (assembly).** By Step 2 applied twice on `J` (finiteness from Step 1):
+**Step 4 (assembly).** By Step 2 applied twice on `J`. (Finiteness patch,
+hostile review: Step 1 establishes finiteness for `g` and `g''` but Step 2
+is also applied to `g'`; `g'` too has finitely many zeros in `J`, since
+`Z_mult(g'', J) <= 4` is sign-based and unconditional (Step 3), so
+infinitely many zeros of `g'` would produce, by Rolle, infinitely many
+zeros of `g''` — contradiction.) Then:
 
 ```
 Z_mult(h', G) = Z_mult(g, J)            [Lemma 3.2]

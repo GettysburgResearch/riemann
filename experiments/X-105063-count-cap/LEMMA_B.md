@@ -125,8 +125,9 @@ THEOREM B-II. Assume (SC). Fix k >= 1, n = 2k+2. If
     κ V_1 + G_4 * ( M_L^(4) + M_R^(4) )  <  1,   κ = (11+5√5)/64 —          (B.8)
 then h^(2k+1) < 0 everywhere on G, and consequently
     Z_mult(h', G) <= 2k,   extra(G) <= 2k,
-and every real zero of F' in G has multiplicity <= 2k (every zero of h has
-multiplicity <= 2k+1).
+and every real zero of F' in G has multiplicity <= 2k+1 (= its multiplicity
+as a zero of h, since F != 0 on G; hostile-review correction — the earlier
+"mu - 1" step was wrong: ord(h) = ord(F'/F) = ord(F') on G).
 
 Proof. By (B.1), h^(2k+1) = -(2k+1)! Re S_n, so it suffices that
 Re S_n > 0 on G. Fix t. By Lemma B.2(a) the real zeros contribute at least
@@ -146,8 +147,9 @@ Z_mult(f, I) <= 1 + Z_mult(f', I) (valid for real-analytic f with locally
 finitely many zeros; zeros of h cannot accumulate at a or b since
 h -> ±∞ there) applied 2k times gives Z_mult(h', G) <= 2k and
 Z_mult(h, G) <= 2k+1, i.e. extra <= 2k; a single zero of h of multiplicity
-μ satisfies μ <= Z_mult(h, G) <= 2k+1, and as a zero of F' in G its
-multiplicity is μ - 1 <= 2k. QED.
+μ satisfies μ <= Z_mult(h, G) <= 2k+1, and its multiplicity as a zero of F'
+in G is the SAME μ <= 2k+1 (F != 0 on G, so ord(F') = ord(h);
+hostile-review correction of the earlier "μ - 1" claim). QED.
 
 COROLLARY B-III (explicit caps). Assume (SC).
 (a) [spread cooperation] If no non-overhanging pair is band-adjacent at
@@ -158,13 +160,17 @@ w_j <= 1/2 and V_1 <= Sum m_j w_j^2 < 2.885 gives extra <= 2 — this covers
 the diffuse-cooperation bulk (m pairs of equal weight w = W/m: V_1 = W^2/m,
 so extra <= 2 whenever m > W^2/2.885).
 (b) [strictly shallow, isolated] If w_max := max_ov w_j < 1 and all
-M^(n)-loads vanish up to level n* = 2k*+2 with k* = 1 + ceil(log_+ V_1 /
-log(1/w_max)), then, since V_k <= w_max^{k-1} V_1,
-    extra(G) <= 2 + 2 ceil( log_+ V_1 / log(1/w_max) ).
-(c) [linear-in-W form; safety net] Under (b)'s hypotheses, since V_1 <= W:
-    extra(G) <= 4 + (2/log(1/w_max)) log_+ W  <=  A W + A''
-with A = 2/log(1/w_max), A'' = 4; by [THRESHOLD] (L-105061 §3) this upgrades
-to the multiplicative cap extra(G) <= (4 + 2/log(1/w_max)) * W(G). The
+M^(n)-loads vanish up to level n* = 2k*+2 with k* = 2 + floor(log_+ V_1 /
+log(1/w_max)) (the +2/floor form guards the boundary case where
+log_+ V_1 / log(1/w_max) is an exact integer or V_1 = 1, in which
+w_max^{k-1} V_1 = 1 exactly and strict (B.7) would fail — hostile-review
+correction), then, since V_k <= w_max^{k-1} V_1 < 1 for k >= k*,
+    extra(G) <= 4 + 2 floor( log_+ V_1 / log(1/w_max) ).
+(c) [linear-in-W form; safety net] Under (b)'s hypotheses, since V_1 <= W
+(and inheriting (b)'s corrected +2/floor form):
+    extra(G) <= 6 + (2/log(1/w_max)) log_+ W  <=  A W + A''
+with A = 2/log(1/w_max), A'' = 6; by [THRESHOLD] (L-105061 §3) this upgrades
+to the multiplicative cap extra(G) <= (6 + 2/log(1/w_max)) * W(G). The
 dependence on W is in fact only LOGARITHMIC.
 
 ## 7. What remains open (precise remainder), and interfaces

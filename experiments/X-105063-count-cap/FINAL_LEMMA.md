@@ -142,7 +142,11 @@ zero is the unique zero, of multiplicity exactly 2). Total
 
 **Step 4 (Rolle with multiplicity).** h' is real-analytic on G with finitely many
 zeros (h' -> -infty at both endpoints — double poles — so it is zero-free near
-∂G; interior accumulation would force h' ≡ 0). The inequality
+∂G; interior accumulation would force h' ≡ 0). Finiteness for (h')' on J_j
+(needed for the second application; hostile-review patch): Z_mult((h')'', J_j)
+<= 4 is sign-based and unconditional (Step 3), so infinitely many zeros of
+(h')' would give, via Rolle, infinitely many zeros of (h')'' — contradiction.
+The inequality
 Z_mult(psi, J) <= Z_mult(psi', J) + 1 (LEMMA A Step 2) applied twice on J_j:
   Z_mult(h', J_j) <= Z_mult((h')'', J_j) + 2 <= 6.
 
@@ -206,7 +210,10 @@ Jensen/disk route stalls on the unabsorbed log(g/y_min) normalization term (the
 per-pair weight is 1, but the log factor is unbounded). Numerically clusters show
 extra = 2 per pair — no cooperation — so the obstruction looks technical.
 
-(R-C2) SUPERCRITICAL SHALLOW MASS: W_sh >= 1 failing LEMMA B's ladder conditions —
+(R-C2) SUPERCRITICAL/OBSTRUCTED SHALLOW MASS: (L2) or (L4) or (L6) fails
+outside C-3's ladder conditions (note: band-adjacent non-overhanging mass
+alone can break (L4)/(L6) even with W_sh < 1 — M^(4) of order 30 suffices;
+hostile-review tightening of the earlier "W_sh >= 1" headline) —
 precisely LEMMA B's remainders (R1) (near-critical concentration: >= 1/kappa of
 quartic weight V_1 carried by pairs with w_j near 1) and (R2) (band-adjacent
 non-ov mass beyond the G_n budgets) — now also in the presence of deep pairs.
@@ -218,5 +225,8 @@ extra > 6 D_ov (check confinement first, then per-interval counts, exact
 arithmetic); a deep cluster with extra > 2 * (pair mult sum) would refute the
 conjectured sharp constant and sharpen the residual's difficulty.
 
--- Lane CAP-C, 2026-08-22. Files: NOTES.md, constants.py, constants2.py, scanC.py,
-scanD.py, probe.py, probe2.py, replay.py in this directory.
+-- Lane CAP-C, 2026-08-22. Files AS DEPOSITED in this directory (capC_ prefix):
+capC_NOTES.md, capC_constants.py, capC_constants2.py, capC_scanC.py,
+capC_scanD.py, capC_probe2.py, capC_replay.py (exec references repaired to the
+prefixed names per hostile review; there is no probe.py — probe2.py is the
+40-dps attribution checker).

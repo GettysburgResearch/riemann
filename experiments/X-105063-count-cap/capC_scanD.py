@@ -1,6 +1,7 @@
 # Residual-boundary scans: (i) deep clusters (Sep violated); (ii) supercritical shallow + deep.
 import numpy as np, math, random
-exec(open('scanC.py').read().split("random.seed(7)")[0])  # reuse builders
+import os as _os
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'capC_scanC.py')).read().split("random.seed(7)")[0])  # reuse builders
 random.seed(11)
 print("== (i) deep clusters: k pairs crammed within one R4-fattened neighborhood ==")
 maxratio=0; rec=None

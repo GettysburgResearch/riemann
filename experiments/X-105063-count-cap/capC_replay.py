@@ -1,6 +1,7 @@
 import numpy as np, math, random
 ns = {}
-exec(open('scanC.py').read(), ns)   # reruns scan, seed fixed
+import os as _os
+exec(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'capC_scanC.py')).read(), ns)   # reruns scan, seed fixed
 g,reals,pairs,q,ex,nzp,per = ns['best']
 print("CONFIG g=%s reals=%s" % (g,reals))
 for p in pairs: print("  pair", p)

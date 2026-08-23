@@ -1,7 +1,7 @@
 # T-105060 — The Levinson descent ladder: off-line mass at rung 0 is priced by summed close-pair weight along the ξ-derivative chain
 
 Claim ID: `T-105060`
-Status: **CONDITIONAL THEOREM — assembly complete and stress-tested; consumes `L-105062` (PROVED), `L-105061` (dipole interface: partial-fraction + threshold PROVED; count cap PROVED with A′ = 6 on the `L-105063` regimes, OPEN only on its residual regimes R-C1/R-C2), and one EXTERNAL-CLASSICAL input (Conrey 1983); RH NOT ADDRESSED**
+Status: **CONDITIONAL THEOREM — assembly complete and stress-tested; consumes `L-105062` (PROVED), `L-105061` (dipole interface: partial-fraction + threshold PROVED; count cap PROVED on the `L-105063` regimes — A′ = 6 on C-0∪C-1∪C-2, 2k on the depth-k shallow ladder — OPEN only on its residual regimes R-C1/R-C2), and one EXTERNAL-CLASSICAL input (Conrey 1983); RH NOT ADDRESSED**
 Created: 2026-08-22
 Agent: claude (external reviewer lane; Program B lanes B1/B3/B4 + orchestrator)
 Depends on: `L-105062` (strip + conservation + Rolle + monotone ladder, proved), `L-105061` ([I-DIPOLE] pinned interface with constant `A'`), EXTERNAL-CLASSICAL: J. B. Conrey, "Zeros of derivatives of Riemann's ξ-function on the critical line", J. Number Theory 16 (1983) 49–74 (`kappa_k -> 1` as `k -> infinity`; only this qualitative form consumed; coordinates transcribed, literature-unverified in-container — same discipline as the repo's Q-0014 flag on Speiser).
@@ -155,8 +155,11 @@ approximation + Gauss–Lucas + Hurwitz). QED.
    complementary, neither is circular.
 3. **Conditionality ledger**: (a)–(d) are conditional on [I-DIPOLE] —
    whose threshold + partial-fraction layers are PROVED in L-105061, and
-   whose count cap is PROVED with `A' = 6` on the `L-105063` regimes
-   (C-0/C-1/C-2/C-3); the residual conditionality is confined to gaps in
+   whose count cap is PROVED on the `L-105063` regimes with the regime-wise
+   constant `A' = max(6, 2k)` (6 on C-0∪C-1∪C-2; `2k` on the depth-k
+   shallow ladder C-3, `k` unbounded — hostile-review correction: no single
+   absolute constant is proved on the four-regime union); the residual
+   conditionality is confined to gaps in
    `L-105063` §4's regimes (R-C1) deep clusters and (R-C2) supercritical
    shallow mass. L-105062 is proved; [EXTERNAL: Conrey] is classical,
    consumed qualitatively. (e) and the census are unconditional.

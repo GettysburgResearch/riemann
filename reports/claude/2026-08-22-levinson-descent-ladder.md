@@ -89,7 +89,9 @@ in either addresses RH.
 The third, decomposed attempt on the count cap succeeded where two monolithic
 attempts had died: `L-105063` proves `extra(G) ≤ 6·W(G)` for every gap in the
 regimes {no overhang; isolated site; deep pairs with disjoint (2+√3)-fattened
-intervals + subcritical shallow mass; all-shallow ladder}, by level-2
+intervals + subcritical shallow mass}, and `≤ 2k·W(G)` on the depth-k
+all-shallow ladder (k unbounded — the union carries the regime-wise constant
+max(6, 2k), not a single absolute one), by level-2
 confinement to the deep sites plus a per-site convex-comparison/concavity-split
 argument with exact constants (κ = (11+5√5)/64, κ₆ = 1). The extremal
 in-regime configuration realizes extra/W = 16/15 (so the linear-in-W cap is
