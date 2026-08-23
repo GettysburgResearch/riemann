@@ -111,6 +111,15 @@ Delta-second-moments (numerics: the corner field carries 77% of raw mean square 
 only 3.5% of window mass — spectrally flat at the pinch frequency, as [P2-FAR]
 asserts); (R2) reductio-side L2-log inheritance through D_half (one log short by
 pointwise routes; L2-based refinement open).
+UPDATE 2026-08-23 (`L-105071`): the interface is REDUCED — (FAR-WIN), a single
+fixed-frequency scale-averaged amplitude inequality for the pinch-subtracted
+unweighted field, implies [P2-FAR] in form (b) (reduction theorem PROVED from four
+operator lemmas F1–F4, unconditional-under-reductio); `1/zeta` at unbounded heights
+is ELIMINATED from the interface. Both R1 and R2 terminate at (FAR-WIN); the
+reductio's own budget caps the residual gap at a constant factor 27.5 (F5), and
+independent numerics measure the ratio an order of magnitude inside the requirement
+(implied eps_1 = 0.25–0.35). (FAR-WIN) itself remains OPEN — the wall is now one
+scalar inequality about one frequency.
 
 ## 3. Bootstrap and quantifier audit (T-105059.7 RECHECKED)
 
