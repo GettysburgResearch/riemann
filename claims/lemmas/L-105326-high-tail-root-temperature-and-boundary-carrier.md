@@ -168,7 +168,8 @@ Since `N_m/(N_m-1)=1+o(1)`, equations
 {12-\pi^2\over6\pi}
 {X\over w_m}(1+o(1)).
 }
-\tag{L-105326.9
+\tag{L-105326.9}
+\]
 
 The constant is strictly positive because `pi^2<12`.
 
@@ -204,7 +205,8 @@ The universal high-tail calibration is
 \mathcal M_{1,m}
 \sim {12\over\pi^2}\mathcal T_m.
 }
-\tag{L-105326.10
+\tag{L-105326.10}
+\]
 
 This factor should replace the complete-polynomial factor one in any
 height-localized asymptotic model.
