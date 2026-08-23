@@ -23,7 +23,7 @@ A = {5/24 < Re s <= 1/4, |Im s - gamma_1/3| <= 1}), the segment |Im z - Im z_b| 
 deformed left across the branch point z_b(s) = 1/4 - (3/2)s into B_out ∪ H ∪ B_back, where
 H is the Hankel hug of the leftward cut L(s) (length 2r = 1/4, cap radius delta -> 0).
 Swept-region audit (D1, independently recomputed in AUDIT A1): the slit rectangle
-[Re z_b - 1/2, 1/16] x [Im z_b - 2, Im z_b + 2] contains NO singularity of Psi other than
+[Re z_b - 1/4, 1/16] x [Im z_b - 2, Im z_b + 2] contains NO singularity of Psi other than
 the wrapped cut — kernel k is entire (beta = 0 removable), z = 0 is outside the band,
 z_p(rho_1) = z_b + eps stays strictly right (Re eps = 3 Re s > 0), z_p(rho_2) below,
 z_p(bar rho_1) at height ~ +21, trivial poles at Re >= 2.75, partner branch points at
@@ -121,3 +121,9 @@ EXACT form includes |R_loc'| <= M_loc on all of Omega^+, and that clause is prov
 for the genuine Z_loc — a sharper, amended interface is what closes.
 
 [P1-LOC-WELD]: NOT CLOSED — residue restated: the literal SS2 bound |R_loc| + |R_loc'| <= M_loc fails at the pinch corner because R_loc' = (kappa/2)(s-s_0)^{-1/2} + O(1) with |kappa| = 0.0140799 != 0 (triple-verified), and the weld instead closes unconditionally under the amended interface r_0 = 1/2, M_loc = 640, |R_loc| <= 5.71, |R_loc'| <= M_loc(1+|s-s_0|^{-1/2}) (literal form holding on |s-s_0| >= 1/24 with 637.5), whose P2.7 consumption via the log^2(1/h) repair leaves the main term and every downstream constant unchanged.
+
+HEADLINE ALIGNMENT (review H5): this verdict line answers the ORIGINAL brief ("close
+SS2's literal statement" — that literal statement is disproved, hence NOT CLOSED as
+posed). The deposit-level framing is L-105072's: the slot is DISCHARGED / CLOSED under
+the amended reading, which is what T-105070's UPDATE records. The three headlines are
+the same mathematics viewed against different reference statements.

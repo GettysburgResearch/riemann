@@ -11,8 +11,12 @@ c_P := sqrt(2/(3pi)) c_B; target constant of P2.7 Rem (iii): eps^2 (2/(3pi))|c_B
 
 MODIFIED SPLIT (record): absorb R_loc into the far remainder. Define
     Ztil_far(s) := B_0(s) - H_0(s) - c_B (s-s_0)^{-1/2}
-(so Ztil_far = Z_far + R_loc; by [P1-LOC] |R_loc|+|R_loc'| <= M_loc, so every bound below
-transfers between Z_far and Ztil_far at cost M_loc, harmless). x-side under R:
+(so Ztil_far = Z_far + R_loc; by the AMENDED [P1-LOC] interface of L-105072 —
+|R_loc| <= M_loc and |R_loc'| <= M_loc(1+|s-s_0|^{-1/2}); the literal conjunction
+|R_loc|+|R_loc'| <= M_loc originally cited here is DISPROVED by L-105072(d), and
+every use below survives the amendment: sup-norm uses consume |R_loc| <= M_loc
+unchanged, and the one D_half use (Sec 3 Step 4) consumes L-105072(e)'s
+|D_half R_loc| <= C M_loc(1+log(1/h)) — see the repair note there). x-side under R:
     psitil(x) := psi_0(x) - h_0(x) - 2 Re[ c_B pi^{-1/2} x^{-1/2} e^{i gamma_1 x/3} ] (x>=1 branch),
     Ztil_far(h+it) = FT[psitil e^{-hx}](t) + (conjugate-pole cross term + untruncated-pole
     tail, O(1) on any bounded window, in particular on WIN — but NOT integrable over the
@@ -124,8 +128,8 @@ weight cost is handled there.
 
 ## 3. THEOREM (the reduction): (FAR-WIN) => [P2-FAR] in form (b)
 
-Claim. Assume (FAR-WIN) with constant eps_1 < 1, for the window w it names (and [P1-LOC]
-for the R_loc bookkeeping). Then under R,
+Claim. Assume (FAR-WIN) with constant eps_1 < 1, for the window w it names (and the
+AMENDED [P1-LOC] interface, L-105072(c)+(e), for the R_loc bookkeeping). Then under R,
 limsup_h h int_WIN |D_half[Z_far](h+it)|^2 dt <= (eps_1^2/2) |c_P|^2 — i.e. P2.7 Remark
 (iii)'s hypothesis holds with eps_1' = eps_1/sqrt(2) EXACTLY (review finding G7: r_0 is
 fixed by w; every error term below vanishes as h -> 0 at fixed r_0, so no ill-defined
@@ -153,10 +157,14 @@ whose limsup is <= (eps_1^2/2)|c_P|^2 by (FAR-WIN) verbatim. (The old proof move
 through the convolution via a false compact-support premise — w is Schwartz but NOT
 compactly supported; see the Remark below for the two-regime argument relating the two
 placements, kept for the numerics comparison. The official chain needs no such step.)
-Step 4 (reassemble — G8 accounting, clean). D_half[Z_far] = D_half[Ztil_far] - D_half[R_loc],
-and D_half[Ztil_far] = FT[m psitil_h] + (Step-1 additive terms) on WIN. Every non-main piece
-VANISHES in windowed h-mass: |D_half R_loc| <= 3 M_loc/sqrt(pi) pointwise (P2.4(c) with
-[P1-LOC]) gives h (2 r_0)(3 M_loc/sqrt(pi))^2 -> 0; the Step-1 O(1) terms (conjugate pole,
+Step 4 (reassemble — G8 accounting, clean; R_loc input repaired per L-105072/H2).
+D_half[Z_far] = D_half[Ztil_far] - D_half[R_loc], and D_half[Ztil_far] = FT[m psitil_h]
++ (Step-1 additive terms) on WIN. Every non-main piece VANISHES in windowed h-mass:
+for R_loc, the literal [P1-LOC] pointwise bound originally cited here (3 M_loc/sqrt(pi)
+via P2.4(c)) is void — L-105072(d) disproves its hypothesis; substitute L-105072(e)'s
+PROVED image bound |D_half R_loc(h+it)| <= C M_loc (1 + log(1/h)), whose windowed
+h-mass h (2 r_0) C^2 M_loc^2 (1 + log(1/h))^2 -> 0 still vanishes — eps_1' = eps_1/sqrt(2)
+and every constant below unchanged. The Step-1 O(1) terms (conjugate pole,
 pole tail, head) give h * O(1) * 2 r_0 -> 0. Peter-Paul fold, once:
 |main + vanishing|^2 <= (1+eta)|main|^2 + (1+1/eta)|vanishing|^2, and the second term's
 h-mass -> 0 for every fixed eta. With Steps 1-3:

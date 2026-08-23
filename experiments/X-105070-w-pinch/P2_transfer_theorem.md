@@ -237,7 +237,12 @@ every pointwise identity among the continued functions persists.
 head bounds; for `Re s' >= 1/4` all pieces are absolutely-convergent-bounded). By P2.4(b),
 `D_half[c_B (.-s_0)^{-1/2}] = (c_B/sqrt(pi)) (s-s_0)^{-1}`; by P2.4(c) the other three images
 are bounded by `M := (3/sqrt(pi))(M_head + M_loc + M_far)` (P2.4(c)'s constant is 3/sqrt(pi);
-M is symbolic here, nothing downstream depends on its value). Hence on the window line `s = h+it`,
+M is symbolic here, nothing downstream depends on its value). [UPDATE per L-105072: under
+the AMENDED [P1-LOC] interface no h-independent bound exists for the R_loc image — its
+proved bound is |D_half R_loc| <= C M_loc(1 + log(1/h)) (L-105072(e)), so read M here as
+M(h) = O(log(1/h)); it enters step (6) linearly in the cross term, giving error
+O(M_loc |c_B| log^2(1/h)) — still o(1/h) after multiplying by 2h; main term and c_0'
+unchanged.] Hence on the window line `s = h+it`,
 `|t - gamma_1/3| <= r_0`:
 
     |G*(h+it)| >= sqrt(2/(3 pi)) |c_B| / |h + i(t - gamma_1/3)|  -  sqrt(2/3) M .

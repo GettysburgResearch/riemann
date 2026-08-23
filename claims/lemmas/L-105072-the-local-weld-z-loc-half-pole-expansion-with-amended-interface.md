@@ -21,8 +21,11 @@ RH status: **unproved, not addressed**
 
 ## 1. Statement
 
-Setting of T-105070 §2 ([P1-LOC-WELD]) and P2.5/P2.6: `s_0 = i gamma_1/3`,
-`Omega^+` = the window `|Im s - gamma_1/3| <= r_0`, `Re s in (0, h_0]`;
+Setting of T-105070 §2 ([P1-LOC-WELD]) and P2.5/P2.6: `s_0 = i gamma_1/3`, and
+(P2.6's definition VERBATIM — hostile-review correction H1; the D_half consumption
+in (e) integrates along the full ray, so the bounds are needed, and proved, on the
+UNBOUNDED strip): `Omega(r_0) := {0 < Re s <= 1/4, |Im s - gamma_1/3| <= r_0}`,
+`Omega^+ := Omega ∪ {Re s > 1/4, |Im s - gamma_1/3| <= r_0}`;
 `z_b(s) = 1/4 - (3/2)s`; `eps = 3(s - s_0)`.
 
 **(a) The weld formula (PROVED).** With `b(v) = ((v-1)zeta(v))^{1/2}` (principal
@@ -34,7 +37,11 @@ branch, `b(1) = 1`), `Z_1(w) = zeta(rho_1 + w)/w` (`Z_1(0) = zeta'(rho_1)`):
 obtained from P2.5's vertical contour (anchor line Re z = 1/16, anchor band
 `5/24 < Re s <= 1/4`) by an explicit homotopy crossing NO singularities (every
 residue contribution is zero; connecting arcs -> 0 at rate 1/T; deformation identity
-machine-arbitered to 4.3e-28, hug-vs-collapsed formula to 1.9e-21). Singularity
+machine-arbitered to 4.3e-28, hug-vs-collapsed formula to 1.9e-21 — caveat H6: the
+arbiter evaluates both sides with the same b-factorized branch, so the match of that
+branch to P2.5's parent-series branch rests on DEFORM D0.b(ii)'s continuation
+argument; the deposit review closed this loop independently, factorized branch vs
+Euler-product `zeta^{1/2}(a+z)` agreeing to 4e-41 at 5 points). Singularity
 inventory on the swept strip `|Im z| <= 40` is complete (audit A1, independently
 recomputed): the kernel k is ENTIRE (beta-denominator zeros removable), one z = 0
 pole, 14 verified-zero poles (all heights <= 48.6 <= 60), partner branch points on

@@ -16,8 +16,10 @@ consumption survives at cost `log(1/h) -> log^2(1/h)`, still `o(1/h)`, with c_0'
 all downstream constants unchanged. **[P2-FAR] is REDUCED** by `L-105071` to the
 single fixed-frequency amplitude inequality (FAR-WIN). NET STANDING: the theorem's
 conclusion (i)-(iii) now rests on exactly ONE open statement — (FAR-WIN) — plus the
-amended-interface reading of §2 recorded here. RH status unchanged: unproved, not
-addressed.
+amended-interface reading of §2 recorded here; under the (FAR-WIN) route the constant
+in (i) is `c_0' -> (1 - eps_1/sqrt(2))^2 c_0'` (L-105071's conclusion — the EXACT
+c_0' = 9.7089e-4 would need strong-form [P2-FAR], which was reduced away, not
+discharged; review finding H3). RH status unchanged: unproved, not addressed.
 Created: 2026-08-23. Agent: claude, lane P3.
 Depends on: `T-105059` (.5 exact tent reduction, .6 program, .7 bootstrap audit),
 `L-105058` (.1, .5), `T-105051` (I, III, Step 0), `L-105052`, `O-105054` @

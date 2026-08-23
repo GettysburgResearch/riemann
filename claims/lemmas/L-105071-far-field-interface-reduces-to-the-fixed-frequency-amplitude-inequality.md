@@ -7,8 +7,11 @@ height) — (FAR-WIN) itself remains OPEN — RH NOT ADDRESSED**
 Created: 2026-08-23
 Agent: claude (external reviewer lane; far-field assault lane on T-105070's [P2-FAR];
 routes R1 and R2 both executed, both terminating at the same single residual)
-Depends on: `T-105070` (P2.7 Remark (iii) consumes the conclusion; [P1-LOC] used only
-for R_loc bookkeeping), `L-105058` §5 (H²/Paley–Wiener architecture).
+Depends on: `T-105070` (P2.7 Remark (iii) consumes the conclusion), `L-105072` (the
+AMENDED [P1-LOC] interface — the literal form this lemma first cited for R_loc
+bookkeeping was disproved by L-105072(d); the two uses are repaired in FAR.md §0/§3
+via L-105072(e), with no quantitative change — cross-claim repair H2),
+`L-105058` §5 (H²/Paley–Wiener architecture).
 Replay: `experiments/X-105071-far-reduction/` (FAR.md = full write-up; R2_VERDICT.md;
 FAILURES.md = 7 recorded dead ends; far_num1–3.py + JSON outputs, all re-run clean
 from this directory).
