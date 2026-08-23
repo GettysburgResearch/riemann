@@ -1,0 +1,38 @@
+{
+  "arithmetic": "EXACT_GAUSSIAN_RATIONAL",
+  "classification": "PASS_T105230_DEBRANGES_MOMENT_GRAM_FIXTURES",
+  "dbae105230_proved": false,
+  "entire_xi_exhaustion_proved": false,
+  "finite_debranges_integral_machine_proved": false,
+  "fixtures": [
+    {
+      "A": "6/25",
+      "B": "2/25",
+      "C": 0,
+      "N": "18/25",
+      "defect": "0"
+    },
+    {
+      "A": "6/25",
+      "B": "1/10",
+      "C": 1,
+      "N": "18/25",
+      "defect": "9/625"
+    }
+  ],
+  "proof_object_sha256": "0a3389202583fcf02540d8457fe8dc7c15a9baf43d96f6f3f47d7347e071890e",
+  "rh_established": false,
+  "schema": "riemann.x105230.debranges_gram.v1",
+  "verified": {
+    "safe_pole_residues": [
+      "-3",
+      "6",
+      "-3"
+    ],
+    "safe_weight_at_pm1": "9/25",
+    "sampling_cross_first_moment": true,
+    "sampling_norm_count": true,
+    "sampling_norm_second_moment": true,
+    "wedge_defect_identity": true
+  }
+}

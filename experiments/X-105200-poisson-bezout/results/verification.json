@@ -1,0 +1,73 @@
+{
+  "arithmetic": "EXACT_RATIONAL_AND_GAUSSIAN_RATIONAL",
+  "classification": "PASS_T105200_POISSON_BEZOUT_RESIDUE_LOCALIZATION",
+  "entire_bezout_interpolation_proved": false,
+  "fixture_count": 3,
+  "fixtures": [
+    {
+      "bezout_interpolant_degree": 2,
+      "coherence": "9374608193707008/9929444617873183",
+      "corrected_numerator_degree": 7,
+      "count": "19072256/18609625",
+      "cross_residue_debt": "-13340279/193599882",
+      "first_moment": "-97587968/279144375",
+      "parameters": {
+        "antiderivative_constant": 3,
+        "inner_root": 1,
+        "outer_root": 7,
+        "p_double_prime_root": 5,
+        "scale": 2
+      },
+      "second_moment": "932955427781/7386160162500",
+      "uncorrected_second_boundary": "23448912582499/408483129712500"
+    },
+    {
+      "bezout_interpolant_degree": 2,
+      "coherence": "45440615186229603308774400/45662052259349087571853789",
+      "corrected_numerator_degree": 7,
+      "count": "1214637201/161355136322",
+      "cross_residue_debt": "-1243565641141/798645280720000",
+      "first_moment": "-57354853086/403387840805",
+      "parameters": {
+        "antiderivative_constant": -4,
+        "inner_root": 7,
+        "outer_root": 17,
+        "p_double_prime_root": 13,
+        "scale": 3
+      },
+      "second_moment": "246648731511714470829/91398003418233680000",
+      "uncorrected_second_boundary": "3834902676216942838/1421879613722300225"
+    },
+    {
+      "bezout_interpolant_degree": 2,
+      "coherence": "2045927830044672/5021380683304375",
+      "corrected_numerator_degree": 7,
+      "count": "412890625/222569282",
+      "cross_residue_debt": "-654301873/203212800",
+      "first_moment": "-278256250/333853923",
+      "parameters": {
+        "antiderivative_constant": -11,
+        "inner_root": 1,
+        "outer_root": 7,
+        "p_double_prime_root": 5,
+        "scale": 5
+      },
+      "second_moment": "63950339828125/69582964598784",
+      "uncorrected_second_boundary": "-17725601983/7704321300"
+    }
+  ],
+  "nonreal_xi_correction_proved": false,
+  "proof_object_sha256": "a5f87aa15c1848a4a366ee53c39d8806e17447a42efd45ac4b23b52fb53244eb",
+  "rh_established": false,
+  "schema": "riemann.x105200.poisson_bezout.v1",
+  "verified_identities": {
+    "bezout_debt_elimination": true,
+    "bezout_interpolation": true,
+    "common_localizer_count": true,
+    "common_localizer_first_moment": true,
+    "debt_is_load_bearing": true,
+    "monochromatic_coherence_lower_bound": true,
+    "smooth_coherence_bound": true,
+    "uncorrected_second_moment_plus_debt": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "analytic_safe_line_asymptotics_replayed": false,
+  "arithmetic": "EXACT_RATIONAL_AND_FORMAL_POLYNOMIAL",
+  "classification": "PASS_T105220_MULTIPOLE_POISSON_SAFE_LINE_ALGEBRA",
+  "entire_bezout_interpolation_proved": false,
+  "fixtures": {
+    "actual_coherence": "29268100/29286937",
+    "quartic": "x^4-5x^2+2",
+    "raw_coherence": "5508549101/4099842893",
+    "weighted_debt": "-25281/1882100"
+  },
+  "nonreal_correction_proved": false,
+  "proof_object_sha256": "a8514d568de7f21b615a921233aab95fb60cefd48670de7c2b66c092baa07903",
+  "rh_established": false,
+  "schema": "riemann.x105220.multipole_poisson.v1",
+  "verified": {
+    "boundary_mass": "3/5",
+    "formal_first_order_cancellation": true,
+    "formal_second_order_defect": "4*(D*Q2-Q^2)",
+    "positive_kernel_partial_fraction": true,
+    "quartic_debt_firewall": true,
+    "theta_growth_exponent": "-3/2",
+    "unit_core_weight_floor": "9/25"
+  }
+}

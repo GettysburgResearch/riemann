@@ -1,0 +1,37 @@
+{
+  "base_head_before_checkpoint": "d6deaeb1a9e44b9c0e96a78790a37f91b50fc37a",
+  "branch": "research/gpt56-pro/105200-xi-residue-geometry",
+  "created": "2026-08-23",
+  "heavy_computation_run": false,
+  "inputs": [
+    {
+      "claim": "L-105224",
+      "pr": 728,
+      "role": "de Branges moment wedge"
+    },
+    {
+      "claim": "L-105207",
+      "pr": 724,
+      "role": "all-order exterior-square Fourier Gram"
+    },
+    {
+      "claim": "L-105212",
+      "pr": 724,
+      "role": "critical-residue Fourier projection"
+    },
+    {
+      "claim": "T-105200",
+      "pr": 726,
+      "role": "summable high-derivative tail"
+    }
+  ],
+  "new_claims": [
+    "L-105225",
+    "L-105226",
+    "R-105221",
+    "T-105231"
+  ],
+  "repository": "gfreund123/riemann",
+  "rh_established": false,
+  "schema": "riemann.t105231.source_lock.v1"
+}
