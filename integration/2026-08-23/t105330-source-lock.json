@@ -1,0 +1,34 @@
+{
+  "packet": "T-105330",
+  "repository": "gfreund123/riemann",
+  "target_pr": 726,
+  "target_branch": "research/gpt56-pro/105200-xi-summable-residue-coherence",
+  "parent_commit": "7aa0fdf097c6d6131ac8b9c81a767b12e7143d07",
+  "stack_base": {
+    "pull_request": 723,
+    "head_at_publication": "c1a7ad2fe8d0d1a779b3852df74efae3d0109ce5"
+  },
+  "external_primary_source": {
+    "repository": "anthropics/zeta-23-lean",
+    "commit": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e",
+    "files": [
+      "Zeta23/XiPrime/Defs.lean",
+      "Zeta23/XiPrime/Coeff/LSeries.lean",
+      "Zeta23/XiPrime/Coeff/Reexpansion.lean",
+      "Zeta23/XiPrime/Transfer/Inputs.lean",
+      "Zeta23/XiPrime/ExplicitFormula/Main.lean"
+    ],
+    "used_interfaces": [
+      "C(N;L) coefficient definition",
+      "frozen convolution identity",
+      "fixed-radius parameter re-expansion",
+      "H1/H2/H3 derivative norms",
+      "entrywise explicit-formula architecture"
+    ]
+  },
+  "arithmetic_class": "exact contour and finite-Dirichlet algebra plus abstract Cauchy transfer",
+  "heavy_computation_run": false,
+  "suef105330_proved": false,
+  "new_zero_proportion_established": false,
+  "rh_established": false
+}
