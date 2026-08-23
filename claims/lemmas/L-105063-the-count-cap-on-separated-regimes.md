@@ -87,6 +87,13 @@ structural.
   `Z_mult(h', cluster) ≤ C·(cluster multiplicity)`; obstruction: overlapping
   dipole profiles destroy the fixed-sign concavity partition, and the
   Jensen/disk route stalls on an unabsorbable `log(g/y_min)` term.
+  UPDATE 2026-08-23: `L-105067` (Theorem T-1) removes the separation
+  hypothesis entirely under the decidable triple-set condition (T-EMPTY):
+  cluster cap `16 m_K − 10`, hence `extra(G) ≤ 16 W(G)` with NO deep–deep
+  separation; (Sep) ⟹ (T-EMPTY), so the regime strictly contains C-2. The
+  residual shrinks to **R-C1′ = clusters with T_K ≠ ∅**, and `L-105067`
+  Prop T-3 PROVES the 0-2-4 pointwise method cannot cross that frontier
+  (sin-perturbation counterexample) — structurally new input required.
 - **(R-C2) Supercritical shallow mass**: `W_sh ≥ 1` outside LEMMA_B's ladder
   conditions (its remainders (R1)/(R2)), possibly mixed with deep pairs.
 

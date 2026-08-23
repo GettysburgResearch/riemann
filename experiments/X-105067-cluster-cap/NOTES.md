@@ -27,7 +27,7 @@ On each V: Phi''''<=0 (else V∩{Phi''''>0} ⊆ T nonempty) => (h')'''' = Phi'''
 On omega\∪V: (h')'' = Phi''-Q'' < 0. So Z_mult((h')'',omega) <= 2 #V(omega), finite =>
 (Rolle contradiction) (h')' and h' have finitely many zeros on omega; Rolle-with-mult twice:
  Z_mult(h',omega) <= Z_mult((h')'',omega) + 2.
-Total: Z_mult(h',G) <= Sum_omega [2#V(omega)+2] <= 2(6m-1) + 2(2m) = 16m - 2.
+Total: Z_mult(h',G) <= Sum_omega [2#V(omega)+2] <= 2(6m-1) + 2(2m) = 16m - 2.  [SUPERSEDED skeleton: the deposited final count is 16m-10 via the sharpened component bounds (2m-1, 6m-4); this line is the earlier draft arithmetic, kept for the record.]
 extra(G) <= Z_mult(h',G) <= 16m - 2 <= 16 W(G)  [each deep pair: weight m_j >= 1 => m <= W].
 If m=0: h' = -Q < 0 under (L2) alone: extra = 0.
 KEY PROP: (Sep) => (T-EMPTY). Pf: t outside all Itilde_j: all f_j<=0 => Phi<=0. t in Itilde_j:

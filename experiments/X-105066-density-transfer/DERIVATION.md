@@ -163,7 +163,13 @@ salvage — see D6.)
 
 ## D5. Weight localization: high pairs carry o(N_0) of W_k
 
-**Lemma D5.0 (Rolle gap-doubling).** Let `u < u'` be consecutive distinct real
+**Lemma D5.0 (Rolle gap-doubling).** [Hostile-review completion: the doubling
+clause below omits the degenerate case where the produced zero of the
+derivative coincides with a single midpoint zero; it closes in three lines
+via closedness of the real zero set — if the candidate interval contained no
+other zero, the midpoint zero would be isolated at distance exactly half the
+gap on both sides, and the Rolle argument re-run on either half-interval
+produces a distinct zero, contradiction.] Let `u < u'` be consecutive distinct real
 zeros of `Xi_{k+1}`. Then the open interval `(u, u')` contains at most one
 distinct real zero of `Xi_k`. Consequently, if every interval of length `L`
 inside `[A - 3L, B + 3L]` contains a real zero of `Xi_k`, then every interval
@@ -288,7 +294,9 @@ density (through Theorem D3), (vi) Hardy–Littlewood 1921 gaps (through D5).
 Then for every `K' <= K - 1`... precisely: for every `K` as in PR,
 ```
 1 - kappa_0 <= (1 - kappa_{K+1}) + (6 + 2K) * C(theta) * (C_1 + C_2) * eps * (K + 1),
-      C(theta) := 1 + 2^theta / (1 - 2^{theta - 1}).
+      C(theta) := 2 * (1 + 2^theta / (1 - 2^{theta - 1}))
+      [hostile-review fix: the factor 2 the proof requires was missing from
+      this display; T-105065 §2(a) already carries the correct form].
 ```
 If moreover PR(theta, eps; K(eps), eta) holds for EVERY eps > 0 with
 `K(eps) -> infinity` chosen so that `1 - kappa_{K(eps)+1} <= eps` (possible by

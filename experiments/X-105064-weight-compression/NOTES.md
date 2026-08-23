@@ -156,8 +156,8 @@ IF theta := 3A'/(2 c_0) < 1:  kappa_0 >= 1 - (1-kappa_1)/(1-theta)
 CONSTANTS LEDGER (honest): need A' < 2c_0/3.
   c_0 = 0.6725 (modulo import): need A' < 0.4483.
   c_0 = 0.4149 (Pratt-Robles-Zaharescu class., unverified): need A' < 0.2766.
-Proved regime constant A' = 6: theta = 13.4 (c=0.6725) — FAILS by ~30x.
-Conjectured sharp A' = 2: theta = 4.46 — FAILS by ~10x.
+Proved regime constant A' = 6: theta = 13.4 (c=0.6725) — FAILS by ~13.4x (the earlier "~30x" figure was the Levinson c = 0.34 value; hostile-review consistency fix).
+Conjectured sharp A' = 2: theta = 4.46 — FAILS by ~4.5x (at c = 0.6725; hostile-review consistency fix).
 Even a hypothetical A' = 1 with C_omega = 3 and NO 1/c loss (i.e. b_T ~ T):
 theta = 3/2 — STILL FAILS. Conclusion: the ABSOLUTE compression constant 3
 cannot close the two-rung loop for ANY plausible A'; C_omega = 3 is sharp

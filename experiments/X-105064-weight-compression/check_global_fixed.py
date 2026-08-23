@@ -12,7 +12,7 @@ def run_config(trial):
         x = random.uniform(0, 22); y = random.uniform(0.01, 0.5)
         m = random.randint(1, 3)
         pairs += [(x, y, m), (-x, y, m)]
-    T = random.uniform(1, pos[-1])  # hostile-review fix: T beyond the finite synthetic zero set made b_T undefined
+    T = random.uniform(1, pos[-1])
     # gap list: gaps meeting (0,T]
     gaps = [(zeros[i], zeros[i+1]) for i in range(len(zeros)-1)]
     gcalT = [(a,b) for (a,b) in gaps if b > 0 and a < min(b,T) and any(0 < u <= T for u in [(max(a,0)+min(b,T))/2]) ]

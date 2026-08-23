@@ -140,12 +140,20 @@ approximation + Gauss–Lucas + Hurwitz). QED.
 
 ## 6. Honest scope
 
-1. **RH is not addressed.** Nothing bounds any `w_k`; trivial estimates give
-   only `W_k(T) = O(N_k^c(T) log T)`, which does not even make `w_k` finite a
-   priori. If `Sum w_k = infinity`, (d) is vacuous. Bounding even a single
-   `w_k` unconditionally is the open successor problem; the theorem's value is
-   the exact isolation and linear pricing of the defect in Levinson's
-   converse-Rolle heuristic.
+1. **RH is not addressed.** UPDATE 2026-08-23: the successor wave sharpened
+   this item substantially. `L-105064` (weight compression: every pair
+   carries total gap-weight < 3) proves **`w_k <= (3/2c)(1 - kappa_k) <
+   infinity` for every rung** — finiteness, previously unknown — modulo one
+   positive real-zero-proportion input per rung (EXTERNAL-CLASSICAL Levinson/
+   Conrey, or the Z23 import row at every rung via L-105062 §6), and
+   `w_k -> 0`. `L-105066` further proves every `w_k` is carried entirely by
+   NEAR-REAL pairs (`y -> 0`; high pairs contribute `o(N_0)` given the
+   Hardy–Littlewood gap input), and gives the rung-density theorem
+   `N_k(eta, T) << T^{1-eta/4} polylog`. What remains genuinely open: the
+   two-rung/master feeds are self-referential (coefficient > 1 —
+   `L-105064` W7/W8, honest ledger), so (d) still yields no new `kappa_0`;
+   the open successor target is now precisely the NEAR-LINE pair statistic
+   (`T-105065` states the repulsion-conditional version).
 2. **Not a new proportion for zeta**: (d) CONSUMES `kappa_{K+1}` lower bounds
    and would produce one for `kappa_0` only given `Sum w_k` control. The
    imported Zeta23 baseline flows the OTHER way — UP the ladder via L-105062
