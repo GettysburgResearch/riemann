@@ -89,9 +89,20 @@ proofs — recorded per failure-ledger discipline.
 
 ## 4. The frontier after this wave
 
-Program A: close E1 (branch dominance under RH) — the highest-stakes open
-step in the program: it would resolve the repo's highest-priority open
-interface NEGATIVELY at the subpower level and crown the graded band
-`theta ∈ [1/3, 1/2)` as the real object. Program B: the near-line pair
-statistic (everything else about `w_k` is now proved or localized);
-R-C1′; and the quantitative Conrey rate. RH is unproved and unaddressed.
+Program A — UPDATED at deposit close (`T-105059`): the E1 closure lane
+returned E1 NOT closed but TRANSFORMED. The planned matching route is
+refuted (a finding); in its place the exact, unconditional
+**Cauchy–Schwarz tent reduction** `E(L) >= 2 ln 2 · int_oct Lambda(X)^2
+dX/X` dissolves the extraction errors entirely, `I_w = 2 pi (3 ln 2 - 2)`
+in closed form, E1b closes under RH at strength `N^eps`, and the entire
+program now rests on ONE named open analytic lemma — the **W-pinch
+lemma** (the half-divisor structure softens every zeta-zero pole to a
+half-pole; the deterministic `sqrt(log N)` tent weight is designed to
+restore the full pole; work items w1–w4 named). If it closes, the gate
+refutation `GATE_{o(1)} FALSE` becomes UNCONDITIONAL — RH drops out of
+the argument. Quantitative confirmation: over all 212 deep-scan sample
+points, corr(branch prediction, measured O) = 0.9975 with the predicted
+slope-2 signature; every positive-O window is a predicted heavy window;
+lane S's onset sits exactly at the model zero-crossing. Program B: the
+near-line pair statistic; R-C1′; the quantitative Conrey rate. RH is
+unproved and unaddressed.

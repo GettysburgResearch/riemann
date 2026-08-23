@@ -225,8 +225,11 @@ two-sided oscillation as the lemma demands.
 Assembling (.1)+(.2)+(.4)+(.5): the w-weighted energy of the branch term is
 
     (1/2pi) int w |b_N|^2 dgamma = (2/pi^2) I_w * m(U)^2 N / log N,
-    I_w := int_R w(gamma)/(1+4 gamma^2) dgamma = 0.499146...
-    (hostile-review correction of the earlier 0.49906 trapezoid value),
+    I_w := int_R w(gamma)/(1+4 gamma^2) dgamma = 2 pi (3 ln 2 - 2)
+         = 0.4991459274...
+    (CLOSED FORM, proved in T-105059.2 by the independent Y-side edge
+    derivation, quadrature-confirmed to 7e-9; supersedes the earlier
+    0.49906 trapezoid value and the 0.499146 numeric correction),
 
 i.e. `(2/pi^2) I_w * (U m(U)^2) * X^{1/3} / log N` at the gate coupling. By
 (.5) Corollary 2, `U m(U)^2` has dyadic-block log-integral `>= (c_0-eps) log 2`
