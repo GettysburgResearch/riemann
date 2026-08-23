@@ -1,0 +1,30 @@
+{
+  "schema": "riemann.t102820.double-owner-source-lock.v1",
+  "repository": "gfreund123/riemann",
+  "pull_request": 719,
+  "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+  "predecessor_head_sha": "a608c99ef525d0855fec46ea3f58d46d0eb50d84",
+  "controlling_claim": "T-102820",
+  "controlling_path": "claims/theorems/T-102820-double-owner-wick-frontier.md",
+  "supporting_claims": [
+    "L-102746",
+    "L-102747",
+    "L-102748",
+    "L-102749",
+    "R-102728"
+  ],
+  "replay_path": "experiments/X-102820-double-owner-wick/results/verification.json",
+  "proof_object_sha256": "9b460f281fd4be4cc3c187c6d4b6ec620eca8b1e5e66b5041d238136d3287b2e",
+  "exact_results": [
+    "second-order Duhamel identity",
+    "canonical equal unordered-pair ownership",
+    "prime-square pair diagonal is polylogarithmic",
+    "free unordered-pair energy is polylogarithmic",
+    "same-occurrence pair-owner collapse is logarithmic-squared",
+    "same-product factor-pair collapse is subpower"
+  ],
+  "open_gate": "DPWNC102749",
+  "open_gate_statement": "subpower logarithmic negative mass for the distinct-product, different-unordered-pair physical restriction of the carrier-recombined Wick current",
+  "rh_established": false,
+  "status": "major unconditional owner reduction; physical cross-pair restriction open"
+}
