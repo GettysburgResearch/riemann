@@ -1,5 +1,5 @@
 import Mathlib.Analysis.MellinTransform
-import RiemannFormal.Upstream.Zeta23Bridge
+import RiemannFormal.Upstream
 
 namespace RiemannFormal.Analysis
 
