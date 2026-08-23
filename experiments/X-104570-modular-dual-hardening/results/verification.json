@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "fixed_cutoff_laguerre_lead": "-784/121",
+    "jet_matching_orders": 6,
+    "likelihood_ratio_derivative_negative": "-54/5",
+    "local_moment_radius_fixture_squared": "115/4",
+    "modular_polynomial_derivatives": true,
+    "origin_psd_counterexample_determinant": "-1/4"
+  },
+  "proof_object_sha256": "2befe327a32692d337899c7d1cade1069cc68ea029cb0371650f50c42f4f5fa6",
+  "schema": "riemann.t104570.modular_dual_hardening.v1",
+  "scope": {
+    "adaptive_cofinal_margins_proved": false,
+    "alpha2_from_alpha3_proved": false,
+    "central_symbolic_positivity_interval_proved": true,
+    "complete_modular_scalar_identity_proved": true,
+    "fixed_orbit_cutoff_cofinality_refuted": true,
+    "jet_renormalized_adaptive_cutoff_proved": true,
+    "rh_established": false,
+    "scalar_global_positive_definiteness_proved": false,
+    "strong_finite_matrix_psd_refuted": true
+  },
+  "verdict": "PASS_T104570_MODULAR_DUAL_ROUTE_HARDENING"
+}
