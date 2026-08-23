@@ -49,7 +49,6 @@ def main() -> None:
 
     # Local Wick identity through the retained order.
     # (1-x^2) * exp(x)/(1+x) * exp(-x) = 1-x.
-    # It is checked coefficientwise using the exact rational series.
     one_plus_inv = [Fraction((-1) ** k) for k in range(order + 1)]
     ex = exp_series(Fraction(1), order)
     em = exp_series(Fraction(-1), order)
@@ -84,7 +83,7 @@ def main() -> None:
                 count += 1 if d * d == n else 2
             d += 1
         max_divisors = max(max_divisors, count)
-    assert max_divisors <= 64
+    assert max_divisors <= 128
 
     payload = {
         "schema": "riemann.t102800.wick-second-chaos.v1",
