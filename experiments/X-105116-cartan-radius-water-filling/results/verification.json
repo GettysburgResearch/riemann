@@ -1,0 +1,176 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_CONVEX_OPTIMIZATION_AND_SYMBOLIC_LOG_IDENTITY",
+  "checks": {
+    "capped_fixture": {
+      "allocated_radius": [
+        "1",
+        "4"
+      ],
+      "budget": "5",
+      "epsilon": [
+        "1",
+        "4/9"
+      ],
+      "first_index_capped": true,
+      "multiplier": "1/4",
+      "penalty_identity": "10log(2)+log(9/2)",
+      "u": [
+        "10",
+        "1"
+      ],
+      "v": [
+        "1",
+        "9"
+      ]
+    },
+    "cartan_specialization_fixture": {
+      "A": [
+        "2",
+        "3"
+      ],
+      "beta": [
+        "1",
+        "2"
+      ],
+      "budget": "2",
+      "epsilon": [
+        "1/7",
+        "1/7"
+      ],
+      "growth_load_cancels_from_u_over_v": true,
+      "inverse_growth_allocation_is_optimal": false,
+      "multiplier": "7/4",
+      "r_2": "4",
+      "u=A/beta": [
+        "2",
+        "3/2"
+      ],
+      "v=r_2*A/beta": [
+        "8",
+        "6"
+      ]
+    },
+    "forbidden_control_characters": [],
+    "formula_ledger": {
+      "capped_solution": "epsilon_j=min(1,u_j/(lambda*v_j))",
+      "epsilon_independent_spatial_terms_optimized": false,
+      "fractional_budget": "R_delta=(1-delta)*min(Delta_T,Delta_eta)/2",
+      "interior_solution": "epsilon_j=u_j*R/(v_j*sum(u))",
+      "nominal_radius": "S_nom=sum_j v_j*epsilon_j",
+      "objective": "Phi=sum_j u_j*log(2/epsilon_j)",
+      "objective_weights_must_be_declared": true,
+      "safe_set_bound": "kappa<=delta^(-2)"
+    },
+    "fractional_slack_fixture": {
+      "Delta_T": "10",
+      "Delta_eta": "12",
+      "asymmetric_relaxed_kappa": "15",
+      "closed_nominal_budget": "4",
+      "delta": "1/5",
+      "delta_inverse_square": "25",
+      "strict_gate": true,
+      "symmetric_bound_is_attained_by_maximal_disjoint_projections": true,
+      "twice_budget": "8"
+    },
+    "interior_fixture": {
+      "allocated_radius": [
+        "1/3",
+        "2/3",
+        "1"
+      ],
+      "budget": "2",
+      "encoded_log_product": "972000",
+      "epsilon": [
+        "1/6",
+        "2/9",
+        "1/5"
+      ],
+      "log_arguments": [
+        "12",
+        "9",
+        "10"
+      ],
+      "multiplier": "3",
+      "penalty_identity": "log(12)+2log(9)+3log(10)=log(972000)",
+      "total_u": "6",
+      "u": [
+        "1",
+        "2",
+        "3"
+      ],
+      "unique_interior_optimizer": true,
+      "v": [
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    "metadata_ledger": {
+      "checkpoint_base": "ccc2244b65a2e75a60b5f46fecba35ad016ce4fe",
+      "dependency_commit": "ccc2244b65a2e75a60b5f46fecba35ad016ce4fe",
+      "dependency_digest": "b9e9d4c77045189e1c807b056f5b2e257d22a1bdf45e5fc824a652e710ac7aaf",
+      "heavy_computation_run": false,
+      "rh_established": false
+    },
+    "mutation_firewalls": {
+      "active_strict_budget_has_minimizer": false,
+      "complete_actual_xi_manifests_authenticated": false,
+      "epsilon_cap_can_be_removed": false,
+      "equal_epsilon_is_universal": false,
+      "inverse_growth_allocation_is_optimal": false,
+      "nominal_radius_equals_exact_projection_load": false,
+      "objective_scalarization_is_canonical_for_all_carriers": false,
+      "optimized_loss_is_absorbable_for_xi": false,
+      "rcmv104530_proved": false,
+      "rh_established": false,
+      "signed_xi_moment_closed": false,
+      "strict_xi_jet_coherence_proved": false
+    },
+    "strict_budget_refutation": {
+      "closed_budget_optimum_is_open_budget_infimum": true,
+      "fractional_slack_restores_strict_geometry": true,
+      "minimizer_exists": false,
+      "objective_coordinatewise_decreasing": true,
+      "open_constraint": "sum(v_j*epsilon_j)<R",
+      "regime": "0<R<=sum(v_j)"
+    }
+  },
+  "classification": "PASS_T105116_CARTAN_RADIUS_WATER_FILLING",
+  "content_hash_mode": "LF_NORMALIZED_TEXT",
+  "content_sha256": {
+    "PACKET_METADATA_105116.json": "c073da598a9f3bece4d40166781f9078c29dc881fb28e36ff3c806818ed92d3f",
+    "claims/lemmas/L-105116-capped-cartan-radius-water-filling.md": "3fc5977dbae1a62c2e98e13ec10a2bf33b3bab052c14cc755df818848f3aae03",
+    "claims/methodology/M-105116-cartan-budget-review-contract.md": "3cdd0b0ab31bcc8ac7a5da96caf474d9e940c7b81c099d118124ca175930fb4d",
+    "claims/refutations/R-105116-active-strict-budget-has-no-minimizer.md": "429a2b3dc5a94df9a0d1a6fad724d5b479879967ffcdd7888a8710939296d758",
+    "claims/theorems/T-105116-cartan-budget-optimization-frontier.md": "b0fe4dea9a2b37ca858659a1b23c03c517b4c0fb1a66fac90352e4f17bcd5bf3",
+    "experiments/X-105116-cartan-radius-water-filling/tests/test_verify.py": "f906db06603421c3f47a65a6f1e773039d89e0504e3e2255ea5e772295e49683",
+    "experiments/X-105116-cartan-radius-water-filling/verify.py": "babaf42e3ec1b7723bf4b291a4fe7694895169292bb492e69c7e7d16e5c6cab8"
+  },
+  "dependency_checkpoint": {
+    "artifact_matches_live_producer": true,
+    "commit": "ccc2244b65a2e75a60b5f46fecba35ad016ce4fe",
+    "path": "experiments/X-105115-common-safe-rectangle",
+    "proof_object_sha256": "b9e9d4c77045189e1c807b056f5b2e257d22a1bdf45e5fc824a652e710ac7aaf"
+  },
+  "heavy_computation_run": false,
+  "proof_object_sha256": "62faec5d43fb845ba3e27fdd7c41167a33fba0c6724298e496fecc9c0482f92e",
+  "schema": "riemann.t105116.cartan-radius-water-filling.v1",
+  "scope": {
+    "capped_finite_optimizer_verified": true,
+    "cartan_common_radius_specialization_verified": true,
+    "cofinal_xi_growth_authenticated": false,
+    "complete_actual_xi_manifests_authenticated": false,
+    "fractional_slack_safe_shell_verified": true,
+    "interior_closed_form_verified": true,
+    "optimized_selector_absorption_proved": false,
+    "rcmv104530_proved": false,
+    "rh_established": false,
+    "strict_open_budget_nonattainment_verified": true,
+    "strict_xi_jet_coherence_proved": false,
+    "xi_scalarization_weights_authenticated": false
+  },
+  "source": {
+    "checkpoint_base": "ccc2244b65a2e75a60b5f46fecba35ad016ce4fe"
+  },
+  "verdict": "PASS_T105116_CARTAN_RADIUS_WATER_FILLING"
+}
