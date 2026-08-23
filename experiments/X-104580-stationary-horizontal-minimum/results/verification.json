@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "horizontal_curvature_factor": 2,
+    "imaginary_stationary_counterexample": "-1/2",
+    "real_axis_variance_determinant": "9/2",
+    "transfer_examples": {
+      "q_1": "9873/10000",
+      "q_3_over_4": "9873/20000",
+      "q_9_over_10": "9873/12500"
+    }
+  },
+  "proof_object_sha256": "ae633641b5399aedad7ad97738cf411f10fe9ebf471f70dac1f321a8194f147c",
+  "schema": "riemann.t104580.stationary_horizontal_minimum.v1",
+  "scope": {
+    "alpha2_from_alpha3_proved": false,
+    "ampreg104580_proved": false,
+    "amplitude_to_count_algebra_proved_exact": true,
+    "critical_value_weighted_reverse_rolle_proved": true,
+    "csamp104580_proved": false,
+    "partition_variance_identity_proved_exact": true,
+    "rh_established": false,
+    "shmin104580_proved": false,
+    "stationary_horizontal_transfer_proved_exact": true,
+    "weighted_horizontal_defect_proved_exact": true
+  },
+  "verdict": "PASS_T104580_STATIONARY_HORIZONTAL_MINIMUM_ALGEBRA"
+}
