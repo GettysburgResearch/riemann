@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-OUT="$(mktemp)"
-trap 'rm -f "$OUT"' EXIT
+FORMAL="$ROOT/formal"
+cd "$FORMAL"
 
-cd "$ROOT/formal"
-{
-  lake env lean RiemannFormal/AxiomAudit.lean
-  lake env lean comparator/PrintAxioms/RH.lean
-} 2>&1 | tee "$OUT"
+TMP="$(mktemp)"
+trap 'rm -f "$TMP"' EXIT
 
-python3 "$ROOT/formal/scripts/audit_axiom_output.py" "$OUT"
-echo PASS_FORMAL_AXIOM_AUDIT
+SOURCES=(RiemannFormal/AxiomAudit.lean)
+lake env lean RiemannFormal/AxiomAudit.lean >"$TMP"
+
+# Compile and audit every comparator print module.  This automatically includes
+# future A/B topics without requiring a shared hard-coded declaration list.
+while IFS= read -r file; do
+  SOURCES+=("$file")
+  lake env lean "$file" >>"$TMP"
+done < <(find comparator/PrintAxioms -maxdepth 1 -type f -name '*.lean' | sort)
+
+python3 scripts/audit_axiom_output.py "$TMP" "${SOURCES[@]}"

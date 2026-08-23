@@ -1,0 +1,3 @@
+import Solution.XiPickOrderThreeConditional
+
+#print axioms XiPickOrderThreeConditional_psd

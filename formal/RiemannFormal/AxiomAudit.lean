@@ -1,7 +1,31 @@
 import RiemannFormal
 
+-- Bootstrap declarations.
 #print axioms RiemannFormal.rh_iff_mathlib
 #print axioms RiemannFormal.Upstream.projectRH_is_mathlib
 #print axioms RiemannFormal.Upstream.zeta23_bridge_preserves_RH
 #print axioms RiemannFormal.Release20260822.researchCutoff_eq
 #print axioms RiemannFormal.Release20260822.semanticClaimCount_eq
+
+-- Reviewer C exact finite algebra.
+#print axioms RiemannFormal.Operator.actualXiPickOrderTwo_of_monotonicity
+#print axioms RiemannFormal.Operator.three_node_pick_determinant_identity
+#print axioms RiemannFormal.Operator.actualXiCompanionCurvature_of_grouped_inputs
+#print axioms RiemannFormal.Operator.secondDivDiff_add_nonpositive
+#print axioms RiemannFormal.Operator.Jet2.reciprocalConcavity_add
+#print axioms RiemannFormal.Operator.Jet2.oneOrbitAbsorption
+#print axioms RiemannFormal.Operator.Jet2.offLineOrbit_defect_formula
+#print axioms RiemannFormal.Operator.criticalReserveAllocation_of_inputs
+#print axioms RiemannFormal.Operator.actualXiReciprocalConcavity_of_grouped_inputs
+#print axioms RiemannFormal.Operator.actualXiPickOrderThreeConditional
+#print axioms RiemannFormal.Operator.actualXiOrderedDistinctPickOrderThree_of_inputs
+#print axioms RiemannFormal.Operator.q4ZeroBareDet_identity
+
+-- Reviewer C exact refutations and finite fixtures.
+#print axioms RiemannFormal.Refutations.positiveSchurCannotRescue
+#print axioms RiemannFormal.Refutations.coefficientBudgetDoesNotImplyOperatorContraction
+#print axioms RiemannFormal.Refutations.smallNegativeInertiaDoesNotControlCurrent
+#print axioms RiemannFormal.Refutations.hyperbolicPoleBlockNotTwoPositiveSquares
+#print axioms RiemannFormal.Refutations.positiveExcessDoesNotControlSquareRoot
+#print axioms RiemannFormal.Refutations.scalarDiagonalDoesNotDeterminePolarizedGram
+#print axioms RiemannFormal.Refutations.parityChangesUnderDisplacement
