@@ -4,6 +4,7 @@ Claim ID: `L-106040`
 Programme aliases: `LFAM1.COMPOSITE_KUMMER_FRAME`, `STRESS.MULTI_OWNER_LOCAL_OCCUPANCY`, `LFAM2.PRODUCT_KUMMER_MODEL`  
 Status: **PROVED EXACT HILBERT-VALUED TENSOR THEOREM**  
 Created: 2026-08-24  
+Audited: 2026-08-24  
 Depends on: `L-106020`, `L-106024`, `L-106027`; `R-106040`  
 Programme issues: #743, #736, #737  
 RH status: **not assumed**
@@ -11,11 +12,16 @@ RH status: **not assumed**
 Let
 
 \[
-q=\prod_{j=1}^k p_j
+q=\prod_{j=1}^k p_j,
+\qquad (q,67)=1,
 \]
 
-be odd and squarefree. Let `H` be a complex Hilbert space. For every local
-quadratic-class vector
+be odd and squarefree. The exclusion of `67` keeps the auxiliary/composite
+conductor disjoint from the literal marked-prime source. Sectors containing a
+physical `67` label remain in their explicit finite local ledger and are not
+silently absorbed into `q`.
+
+Let `H` be a complex Hilbert space. For every local quadratic-class vector
 
 \[
 \sigma=(\sigma_{p_j})_{j=1}^k\in\{+1,-1\}^k,
@@ -182,9 +188,10 @@ Therefore the full-source operator
 \tag{L-106040.9}
 \]
 
-restores the native Möbius source coefficientwise. With the marked-67 factor
-retained exactly as in `L-106000`, the completed principal member is again the
-native marked common-mother detector.
+restores the native Möbius source coefficientwise. The literal marked-67
+filter is then applied exactly as in `L-106000`; it is not one of the conductor
+completion factors. The completed principal member is again the native marked
+common-mother detector.
 
 The completion must precede carrier, Wick, owner and Vaughan residual
 selection, as required by `R-106001`.
@@ -198,8 +205,9 @@ For a squarefree polynomial conductor
 \]
 
 the same theorem is the tensor product of the local Kummer--Fourier transforms
-on the residue fields `A/mathfrak p_j`. The local class vector and all
-principal/quadratic roots remain explicit. No geometric RH is used.
+on the residue fields `A/mathfrak p_j`. Any distinguished marked irreducible is
+kept outside the conductor exactly as `67` is above. The local class vector and
+all principal/quadratic roots remain explicit. No geometric RH is used.
 
 ## Scope
 
