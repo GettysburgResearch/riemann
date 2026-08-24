@@ -1,4 +1,4 @@
-# L-105629 — Every source-owned finite section inherits the Xi phase contraction
+# L-105629 — Every source-owned finite section inherits the base-Xi phase contraction
 
 Claim ID: `L-105629`  
 Status: **PROVED EXACT FINITE-COMPRESSION THEOREM**  
@@ -89,12 +89,12 @@ nested source Gram section
 
 introduce no adverse phase-collision term by themselves.
 
-## 3. Xi specialization
+## 3. Base-Xi specialization
 
-At the extremal base, `L-105628` proves
+At the extremal base `beta_0`, `L-105628` proves
 
 \[
-V_{r,\beta}^*M_{r_h}V_{r,\beta}
+V_{0,\beta}^*M_{r_h}V_{0,\beta}
 \preceq M_{r_h}.
 \]
 
@@ -102,15 +102,15 @@ For every finite source-owned embedding `W_T`,
 
 \[
 \boxed{
-W_T^*V_{r,\beta}^*M_{r_h}V_{r,\beta}W_T
+W_T^*V_{0,\beta}^*M_{r_h}V_{0,\beta}W_T
 \preceq
 W_T^*M_{r_h}W_T.
 }
 \tag{L-105629.6}
 \]
 
-After whitening by the exact finite current Gram, the actual all-pass/Turan
-source has operator norm at most one.
+After whitening by the exact finite current Gram, the actual base-Xi
+all-pass/Turan source has operator norm at most one.
 
 This removes the following items from the intrinsic phase ledger whenever the
 frame is constructed in the source metric:
@@ -131,23 +131,24 @@ statement is now exactly a bank-identification/index theorem:
 ```text
 BANKID105629
 
-Represent the actual cofinal Xi zero-count observation space as a source-owned
-finite section W_T up to a controlled finite codimension and one telescoping
-endpoint charge.
+Represent the actual cofinal base-Xi zero-count observation space as a
+source-owned finite section W_T up to a controlled finite codimension and one
+telescoping endpoint charge.
 ```
 
 If `BANKID105629` is exact, (L-105629.6) gives the finite phase contraction
 without further analytic estimates. If it is approximate, the two scalar
-Frobenius/trace defects of sibling `ROBUSTFRAME106310` are precisely the
+Frobenius/trace defects of sibling `ROBUSTFRAME106400` are precisely the
 failure of the physical bank to be this source-owned section.
 
 Thus the pointwise and proportion programmes now share one final geometric
-question: identification of the physical zero-count bank with the canonical
-current source bank.
+question: identification of the base physical zero-count bank with the
+canonical current source bank.
 
 ## 5. Scope
 
 The theorem does not prove `BANKID105629`. Multiplication by an arbitrary
 physical cutoff **before** source normalization is not asserted to be
-source-owned. Endpoint winding and denominator-zero codimension are not removed.
-RH remains unproved.
+source-owned. Endpoint winding and denominator-zero codimension are not
+removed. Higher derivative rungs require separate source profiles. RH remains
+unproved.
