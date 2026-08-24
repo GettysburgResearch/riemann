@@ -1,0 +1,60 @@
+name: formal-c-cross-a
+
+on:
+  push:
+    branches:
+      - formal/review/2026-08-24/c-cross-a
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/formal-c-cross-a.yml'
+      - 'formal/review/2026-08-24/c-cross-a/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit-reviewer-a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out frozen Reviewer A head
+        uses: actions/checkout@v4
+        with:
+          ref: 92f70a3b49b9295b5efb88491107670065b03317
+          fetch-depth: 0
+
+      - name: Verify exact target head
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "92f70a3b49b9295b5efb88491107670065b03317"
+
+      - name: Install Lean toolchain manager
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch pinned caches and build all trusted targets
+        working-directory: formal
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake exe cache get
+          lake build
+          lake build Challenge.MellinAPI Solution.MellinAPI
+
+      - name: Run registry, lock, blueprint, sorry and axiom audits
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 formal/scripts/generate_registry.py
+          python3 formal/scripts/validate_registry.py
+          python3 formal/scripts/verify_source_locks.py
+          python3 formal/scripts/validate_blueprint.py
+          bash formal/scripts/check_no_sorry.sh
+          bash formal/scripts/check_axioms.sh
