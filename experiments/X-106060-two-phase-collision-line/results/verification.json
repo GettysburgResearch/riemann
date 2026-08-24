@@ -1,0 +1,36 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_FINITE_FIELD_KERNEL",
+  "checks": {
+    "coherent_phase_sum": 1440,
+    "equality_fixture": 6,
+    "one_phase_dimension_barrier": 6,
+    "one_phase_identity": 1440,
+    "phase_map_multiplicity": 606,
+    "sharp_two_phase_contraction": 1440,
+    "two_phase_energy_identity": 1440
+  },
+  "open": {
+    "crop106060": true,
+    "hbcqdsp102888": true,
+    "hclm106001": true,
+    "riemann_hypothesis": true
+  },
+  "prime_fields": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17
+  ],
+  "proof_object_sha256": "9bf57d9245f9a445a77b77d973255a183a65b425e940ccca206e1657158cd1de",
+  "proved": {
+    "coherent_phase_recovery": true,
+    "one_phase_dimension_barrier": true,
+    "phase_pair_multiplicity": true,
+    "sharp_two_phase_contraction": true,
+    "two_phase_energy_identity": true
+  },
+  "total_checks": 6378,
+  "verdict": "PASS_X_106060_TWO_PHASE_COLLISION_LINE_FRAME"
+}
