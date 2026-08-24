@@ -84,7 +84,7 @@ P_r(x)=\sum_{n\ge0}a_nx^n,
 The reciprocal normalized phase is
 
 \[
-{hA_r'(h)\over A_r(h)}
+E_r(h):={hA_r'(h)\over A_r(h)}
 =2{xP_r'(x)\over P_r(x)}.
 \tag{L-105445.6}
 
@@ -110,15 +110,29 @@ and
 }
 \tag{L-105445.7}
 
-The variance is strict because the Xi kernel has infinitely many positive
-moments. Therefore `h A_r'/A_r` is strictly increasing. Its reciprocal
+Since `d log x/d log h=2`,
 
 \[
-{A_r(h)\over hA_r'(h)}
-={1\over h}\Im m_r(ih)
+{dE_r\over d\log h}=4\operatorname{Var}_x(N).
+\tag{L-105445.8}
+
+Now
+
+\[
+{1\over h}\Im m_r(ih)={1\over E_r(h)}.
 \]
 
-is strictly decreasing, proving (L-105445.1) in even parity.
+Using `mathcal C=(h^2/2)d_h(Im m/h)`, one gets the exact margin
+
+\[
+\boxed{
+\mathcal C_{r,0}(0,h)
+=-{2h\operatorname{Var}_x(N)\over E_r(h)^2}<0.
+}
+\tag{L-105445.9}
+
+The variance is strict because the Xi kernel supplies infinitely many positive
+power-series coefficients.
 
 ## 3. Odd derivative orders
 
@@ -140,7 +154,7 @@ and
 
 \[
 \Im m_r(ih)={S_r(h)\over S_r'(h)}.
-\tag{L-105445.8}
+\tag{L-105445.10}
 
 Now
 
@@ -150,34 +164,46 @@ S_r(h)=hQ_r(h^2),
 Q_r(x)=\sum_{n\ge0}b_nx^n,
 \qquad
 b_n={M_{r+2n+1}\over(2n+1)!}>0.
-\tag{L-105445.9}
+\tag{L-105445.11}
 
-Hence
+Put
 
 \[
-{hS_r'(h)\over S_r(h)}
+E_r(h):={hS_r'(h)\over S_r(h)}
 =1+2{xQ_r'(x)\over Q_r(x)}.
-\tag{L-105445.10}
+\tag{L-105445.12}
 
-With the analogous probability weights `b_nx^n/Q_r(x)`, logarithmic
-differentiation gives
+With the probability weights `b_nx^n/Q_r(x)`, logarithmic differentiation
+gives
 
 \[
 \boxed{
 {x\,d\over dx}
 {xQ_r'(x)\over Q_r(x)}
-=\operatorname{Var}_x(N)>0.
+=\operatorname{Var}_x(N)>0,
 }
-\tag{L-105445.11}
+\tag{L-105445.13}
 
-Therefore `h S_r'/S_r` is strictly increasing and
+and again
 
 \[
-{S_r(h)\over hS_r'(h)}
-={1\over h}\Im m_r(ih)
+{dE_r\over d\log h}=4\operatorname{Var}_x(N).
+\tag{L-105445.14}
+
+Since
+
+\[
+{1\over h}\Im m_r(ih)={1\over E_r(h)},
 \]
 
-is strictly decreasing. This proves odd parity.
+one obtains the same exact formula
+
+\[
+\boxed{
+\mathcal C_{r,0}(0,h)
+=-{2h\operatorname{Var}_x(N)\over E_r(h)^2}<0.
+}
+\tag{L-105445.15}
 
 ## 4. Two-height consequence
 
@@ -194,9 +220,22 @@ The minimal field is
 \mathcal Q_r(0,h)
 ={4h\over3}[v_r(2h)-v_r(h)].
 }
-\tag{L-105445.12}
+\tag{L-105445.16}
 
-Strict decrease of `v_r` proves (L-105445.3).
+Strict decrease of `v_r` proves (L-105445.3). Integrating the exact variance
+margin gives
+
+\[
+\boxed{
+\mathcal Q_r(0,h)
+=-{16h\over3}
+\int_h^{2h}
+{\operatorname{Var}_{s}(N)
+ \over sE_r(s)^2}\,ds<0,
+}
+\tag{L-105445.17}
+
+where the variance law is the corresponding even or odd power-series tilt.
 
 ## 5. Interpretation
 
@@ -207,12 +246,11 @@ The source-owned anchor is stronger than the previously known sign
 \]
 
 It pays the complete differential and dyadic Pick-curvature conditions at all
-scales. Therefore any first microscope failure must occur away from the anchor
-`a=0`.
+scales with a literal variance reserve. Therefore any first microscope failure
+must occur away from the anchor `a=0`.
 
-The proof is a pure positive-source argument: the derivative of the
-power-series elasticity is exactly a variance of the Fourier-moment index.
-No saddle approximation, critical-point information or RH input is used.
+The proof is a pure positive-source argument. No saddle approximation,
+critical-point information or RH input is used.
 
 ## 6. Scope
 
