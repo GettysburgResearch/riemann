@@ -1,0 +1,264 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "COEFFICIENT_DISPERSION",
+  "failure_modes": [
+    {
+      "code": "DISCRIMINANT_SIGN_AS_ROOT_NUMBER",
+      "description": "The sign of d alone omits the factor (d/11).",
+      "hostile_control": "Independent tests pair positive and negative d with both residue classes modulo 11."
+    },
+    {
+      "code": "OVERLAPPING_CONDUCTORS",
+      "description": "When 11 divides d, chi_d(-11)=0 and the coprime sign formula does not apply.",
+      "hostile_control": "The family enumerator and root-number adapter reject every such d."
+    },
+    {
+      "code": "SIGN_AS_CENTRAL_DATA",
+      "description": "A functional-equation sign is not a computed central order or zero record.",
+      "hostile_control": "Central data remain UNKNOWN, zero data are NOT_USED, and the result contains neither."
+    },
+    {
+      "code": "FINITE_AS_ASYMPTOTIC",
+      "description": "Four finite covariance tables do not prove a limiting orthogonality law.",
+      "hostile_control": "The Gram-contrast RMS and sqrt(N_total)-scaled RMS are display-only; no fit, convergence rate, or finite-to-limit claim is emitted."
+    },
+    {
+      "code": "IMPORTED_MODEL_AS_CERTIFICATE",
+      "description": "The compact LMFDB metadata do not independently certify the base object.",
+      "hostile_control": "The evaluation remains DISCOVERY_ONLY while downstream finite arithmetic is labeled exact conditional on imports."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/core/twist_root_number_covariance.py",
+      "correction": "Applies the sourced sign formula only after fundamental-discriminant and conductor-coprimality checks.",
+      "family": "EC11A2_ROOT_NUMBER_SPLIT",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/core/twist_character_covariance.py",
+      "correction": "Reuses the unmodified exact finite summarizer separately inside each root-number cohort.",
+      "family": "EXACT_TWIST_CHARACTER_COVARIANCE",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/core/local_euler.py",
+      "correction": "Point-counts the declared good-prime traces from the imported Weierstrass model.",
+      "family": "EC11A2_LOCAL_TRACES",
+      "status": "REQUIRED_AVAILABLE"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "Coprime quadratic-twist sign predicate, exhaustive two-sign partition, and exact within-cohort Gram/covariance and cross-cohort Gram-contrast identities."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 2,
+    "kernel_convention": "CUSTOM",
+    "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
+    "normalization_requirements": [
+      "Use Conrey's unitary weight-2 completion with center 1/2 and twist level 11*d^2.",
+      "Restrict to fundamental d coprime to 11 and set epsilon_d=sign(d)*(d/11).",
+      "Keep ROOT_NUMBER_PLUS and ROOT_NUMBER_MINUS as separate uniform finite measures.",
+      "Omit p=11 and reuse the exact rational/multiquadratic covariance summarizer at the 13 good primes p<=43.",
+      "Derive Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r) only from aligned raw Gram entries for the 78 pairs p<r."
+    ],
+    "slug": "GL2.TWIST_ROOT_NUMBER.COVARIANCE",
+    "version": 1
+  },
+  "identity_sha256": "4ddb65db6974ba3b3975d291ba46f184c723a72991bb3df04994419363221cfc",
+  "invariances": [
+    {
+      "code": "ROOT_PARTITION_EXHAUSTIVE",
+      "statement": "On the coprime domain, sign(d)*(d/11) is exactly +1 or -1, so the sign cohorts are disjoint and exhaustive.",
+      "status": "CONDITIONAL"
+    },
+    {
+      "code": "GRAM_POSITIVITY",
+      "statement": "Each cohort raw matrix is an exact finite Gram matrix.",
+      "status": "PROVED"
+    },
+    {
+      "code": "CENTERED_COVARIANCE_POSITIVITY",
+      "statement": "Each cohort centered matrix is an exact centered-scatter covariance.",
+      "status": "PROVED"
+    },
+    {
+      "code": "RADICAL_MOMENT_EXPANSION",
+      "statement": "Each cohort moment has exact rational and squarefree-radical coordinates reconstructible from the emitted aligned sufficient statistics.",
+      "status": "PROVED"
+    },
+    {
+      "code": "ROOT_COHORT_GRAM_CONTRAST",
+      "statement": "Each Delta_X entry, maximum absolute contrast, and 78-pair mean square is an exact rational derived from the two aligned emitted Gram matrices.",
+      "status": "PROVED"
+    }
+  ],
+  "kernel_convention": "CUSTOM",
+  "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "lfunction_spec_bindings",
+      "requirement": "Use Conrey's unitary weight-2 completion with center 1/2 and twist level 11*d^2."
+    },
+    {
+      "comparison_role": "IDENTITY",
+      "field": "result.artifact.theorem_import.formula",
+      "requirement": "Restrict to fundamental d coprime to 11 and set epsilon_d=sign(d)*(d/11)."
+    },
+    {
+      "comparison_role": "COVARIANCE",
+      "field": "result.artifact.summaries.partition",
+      "requirement": "Keep ROOT_NUMBER_PLUS and ROOT_NUMBER_MINUS as separate uniform finite measures."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "result.artifact.summaries.unitary_prime_sum",
+      "requirement": "Omit p=11 and reuse the exact rational/multiquadratic covariance summarizer at the 13 good primes p<=43."
+    },
+    {
+      "comparison_role": "COVARIANCE",
+      "field": "result.artifact.root_cohort_gram_contrast",
+      "requirement": "Derive Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r) only from aligned raw Gram entries for the 78 pairs p<r."
+    }
+  ],
+  "notes": "This detector conditions the existing finite character covariance on a sourced root-number predicate and derives its Gram contrast without another scan; it does not consume or infer ranks, central orders, or zeros.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "MIXED"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": "research/l-families/atlas/detectors/raw-schemas/twist-root-number-covariance-result.schema.json",
+    "representations": [
+      "HASHED_ARTIFACT"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "element_minimum": 2,
+        "frozen_value": [
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "nonempty": true,
+        "strictly_increasing": true,
+        "unique": true
+      },
+      "domain": "frozen nested positive bounds",
+      "name": "discriminant_bounds",
+      "required": true,
+      "value_type": "INTEGER_LIST"
+    },
+    {
+      "constraints": {
+        "frozen_value": 43,
+        "minimum": 2
+      },
+      "domain": "frozen value 43",
+      "name": "prime_bound",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "frozen_value": 11,
+        "minimum": 1
+      },
+      "domain": "frozen value 11",
+      "name": "base_conductor",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "ROOT_NUMBER_PLUS_MINUS"
+        ]
+      },
+      "domain": "ROOT_NUMBER_PLUS_MINUS",
+      "name": "partition_policy",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "build_result",
+    "path": "research/l-families/atlas/core/twist_root_number_covariance.py",
+    "source_sha256": "b8a0fbcf87d42038c9c06dc810279f112b88882151f88129d51d5a5d28da15c7",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "LOCAL_EULER_FACTORS",
+      "name": "local_euler_factors",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "FAMILY_PARAMETER",
+      "name": "family_parameter",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "ROOT_NUMBER",
+      "name": "root_number",
+      "required": true
+    },
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "root_number_theorem",
+      "required": true
+    }
+  ],
+  "revision": 2,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Fundamental discriminants coprime to 11 through 2048 and good primes through 43, conditional on the imported twist-sign theorem and base metadata; no rank, zero, or asymptotic conclusion.",
+  "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.H4ddb65db6974ba3b3975d291ba46f184",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "Quadratic elliptic-curve twist root number for coprime conductor ideals.",
+      "semantic_id": "ROHRLICH-1996-PROP10-COROLLARY",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "Primitive newform twist level, unitary completion, and sign w_f*chi_d(-N).",
+      "semantic_id": "CONREY-EQ19",
+      "status": "VERIFIED"
+    }
+  ],
+  "title": "Exact finite 11.a2 covariance split by quadratic-twist root number"
+}

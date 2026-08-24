@@ -98,6 +98,21 @@
     "coverageClass": {
       "enum": ["COMPLETE", "FINITE_COMPLETE", "WINDOW_COMPLETE", "SAMPLED", "PARTIAL", "UNKNOWN", "NOT_APPLICABLE"]
     },
+    "inputType": {
+      "enum": [
+        "LFUNCTION_SPEC",
+        "ZERO_DATA",
+        "LOCAL_EULER_FACTORS",
+        "RECIPROCAL_COEFFICIENTS",
+        "LOG_DERIVATIVE_VALUES",
+        "ROOT_NUMBER",
+        "CENTRAL_ORDER",
+        "KERNEL_MATRIX",
+        "FAMILY_PARAMETER",
+        "SYNTHETIC_MATRIX",
+        "RAW_ARTIFACT"
+      ]
+    },
     "assertionStatus": {
       "enum": ["PROVED_NATIVE", "IMPORTED_THEOREM", "CONDITIONAL", "NUMERICAL_ONLY", "UNKNOWN"]
     },

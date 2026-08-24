@@ -1,0 +1,225 @@
+{
+  "closed_formula_target": {
+    "all_three_frozen_fields_match": true,
+    "evidence": "complete squarefree-Moebius proof and exact Q[q] certificate; q=3,5,7 enumerations are regression controls, not proof inputs",
+    "mean_K": "-(q-1)^2+(q+1)/q^3",
+    "normalized_mean_K": "-(1-1/q)^2+(q+1)/q^5",
+    "not_a_theorem": false,
+    "proof": {
+      "certificate": "research/l-families/atlas/function_field/genus2_moment_identity.py",
+      "certificate_sha256_lf_normalized": "1914804dae2b98eb96cc86560cac0e05773e532efd7db638bbfcaeb73bf2dc5e",
+      "note": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+      "note_sha256_lf_normalized": "41f6e51246a6cc2f3695a78017a189f0fa93b9dd6a9d3efde1529754cedba4d5",
+      "operation_cap": 10000,
+      "scan_regression_controls": {
+        "3": {
+          "member_count": true,
+          "sum_K": true,
+          "sum_a_squared": true,
+          "sum_b_squared": true
+        },
+        "5": {
+          "member_count": true,
+          "sum_K": true,
+          "sum_a_squared": true,
+          "sum_b_squared": true
+        },
+        "7": {
+          "member_count": true,
+          "sum_K": true,
+          "sum_a_squared": true,
+          "sum_b_squared": true
+        }
+      },
+      "symbolic_operations": 1761
+    },
+    "scope": "every odd prime power q",
+    "smallest_gap": "formal proof-assistant translation or frozen-head review before integration; no mathematical gap is known in the stated identity",
+    "status": "PROVED_IN_DRAFT_RESEARCH_NOTE"
+  },
+  "definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2.",
+  "detector_semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.Hd5a74f949ea78260f28175c55b4fd782",
+  "families": [
+    {
+      "candidate_count": 243,
+      "formula_matches_at_this_q": {
+        "mean_K": true,
+        "mean_a_squared": true,
+        "mean_b_squared": true,
+        "normalized_mean_K": true
+      },
+      "member_count": 162,
+      "moments": {
+        "K": {
+          "mean": [
+            -104,
+            27
+          ],
+          "sum": -624
+        },
+        "a_squared": {
+          "mean": [
+            64,
+            27
+          ],
+          "sum": 384
+        },
+        "b_squared": {
+          "mean": [
+            296,
+            27
+          ],
+          "sum": 1776
+        },
+        "normalized_K": {
+          "mean": [
+            -104,
+            243
+          ],
+          "sum": [
+            -208,
+            3
+          ]
+        }
+      },
+      "q": 3,
+      "sign_counts": {
+        "negative": 102,
+        "positive": 48,
+        "zero": 12
+      },
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
+    },
+    {
+      "candidate_count": 3125,
+      "formula_matches_at_this_q": {
+        "mean_K": true,
+        "mean_a_squared": true,
+        "mean_b_squared": true,
+        "normalized_mean_K": true
+      },
+      "member_count": 2500,
+      "moments": {
+        "K": {
+          "mean": [
+            -1994,
+            125
+          ],
+          "sum": -39880
+        },
+        "a_squared": {
+          "mean": [
+            528,
+            125
+          ],
+          "sum": 10560
+        },
+        "b_squared": {
+          "mean": [
+            4634,
+            125
+          ],
+          "sum": 92680
+        },
+        "normalized_K": {
+          "mean": [
+            -1994,
+            3125
+          ],
+          "sum": [
+            -7976,
+            5
+          ]
+        }
+      },
+      "q": 5,
+      "sign_counts": {
+        "negative": 1650,
+        "positive": 800,
+        "zero": 50
+      },
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572"
+    },
+    {
+      "candidate_count": 16807,
+      "formula_matches_at_this_q": {
+        "mean_K": true,
+        "mean_a_squared": true,
+        "mean_b_squared": true,
+        "normalized_mean_K": true
+      },
+      "member_count": 14406,
+      "moments": {
+        "K": {
+          "mean": [
+            -12340,
+            343
+          ],
+          "sum": -518280
+        },
+        "a_squared": {
+          "mean": [
+            2112,
+            343
+          ],
+          "sum": 88704
+        },
+        "b_squared": {
+          "mean": [
+            27124,
+            343
+          ],
+          "sum": 1139208
+        },
+        "normalized_K": {
+          "mean": [
+            -12340,
+            16807
+          ],
+          "sum": [
+            -74040,
+            7
+          ]
+        }
+      },
+      "q": 7,
+      "sign_counts": {
+        "negative": 9702,
+        "positive": 4368,
+        "zero": 336
+      },
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F7.QUADRATIC.QUINTIC_GENUS2_FAMILY.H066f50ec5ddb13c0ab7107ae1b68fb8b"
+    }
+  ],
+  "finite_result_status": "RIGOROUS_CERTIFIED",
+  "firewalls": [
+    "The all-q formula is proved by the separately bound DRAFT proof note and certificate, not inferred from three scans.",
+    "Only the first-moment limit is proved; higher moments and USp(4) equidistribution remain proposed and are not theorems here.",
+    "The toy coefficient minor is not Pick/Loewner, XD, or HCNC.",
+    "No result transfers from these function fields to number-field L-functions."
+  ],
+  "resource_controls": {
+    "candidate_cap": 20000,
+    "candidate_cap_scope": "PER_FIELD_Q_SCAN",
+    "larger_q_policy": "refuse q>7 and any q outside the frozen set",
+    "maximum_wall_seconds": "8.0",
+    "q_values": [
+      3,
+      5,
+      7
+    ]
+  },
+  "schema": "riemann.atlas.raw.function_field_genus2_q_scan.v1",
+  "source_fixture": {
+    "canonical_sha256": "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10",
+    "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+    "payload_sha256": "0ca599b52e243101bc8ba8e851ee3db39b6ba3bfb2ce2f4fe2349d7543fbb90c"
+  },
+  "usp4_limit_target": {
+    "not_a_theorem": false,
+    "proof": "immediate from -(1-1/q)^2+(q+1)/q^5",
+    "scope_boundary": "this proves the first-moment limit only; it does not prove higher-moment equidistribution or evaluate additional fields",
+    "statement": "the exact normalized family mean tends to -1 as q tends to infinity through odd prime powers",
+    "status": "PROVED_FROM_EXACT_FORMULA"
+  }
+}

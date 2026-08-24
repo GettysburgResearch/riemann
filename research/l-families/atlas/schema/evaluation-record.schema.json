@@ -68,7 +68,7 @@
         "required": ["name", "input_type", "coverage_class", "sources"],
         "properties": {
           "name": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
-          "input_type": {"enum": ["LFUNCTION_SPEC", "ZERO_DATA", "LOCAL_EULER_FACTORS", "RECIPROCAL_COEFFICIENTS", "LOG_DERIVATIVE_VALUES", "ROOT_NUMBER", "CENTRAL_ORDER", "KERNEL_MATRIX", "FAMILY_PARAMETER", "SYNTHETIC_MATRIX"]},
+          "input_type": {"$ref": "common.schema.json#/$defs/inputType"},
           "coverage_class": {"$ref": "common.schema.json#/$defs/coverageClass"},
           "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
         }

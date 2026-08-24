@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/function-field-genus2-q-scan-result.schema.json",
+  "title": "Compact exact q=3,5,7 genus-two toy-minor moment result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "definition", "detector_semantic_id", "source_fixture",
+    "finite_result_status", "families", "resource_controls", "closed_formula_target",
+    "usp4_limit_target", "firewalls"
+  ],
+  "properties": {
+    "schema": {"const": "riemann.atlas.raw.function_field_genus2_q_scan.v1"},
+    "definition": {"type": "string", "minLength": 1},
+    "detector_semantic_id": {"type": "string", "pattern": "^ATLAS\\.DETECTOR\\."},
+    "source_fixture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "canonical_sha256", "payload_sha256"],
+      "properties": {
+        "path": {"const": "research/l-families/atlas/function_field/genus2_q_scan.json"},
+        "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "finite_result_status": {"const": "RIGOROUS_CERTIFIED"},
+    "families": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {"allOf": [{"$ref": "#/$defs/family"}], "properties": {"q": {"const": 3}}},
+        {"allOf": [{"$ref": "#/$defs/family"}], "properties": {"q": {"const": 5}}},
+        {"allOf": [{"$ref": "#/$defs/family"}], "properties": {"q": {"const": 7}}}
+      ],
+      "items": {"$ref": "#/$defs/family"}
+    },
+    "resource_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["q_values", "candidate_cap", "candidate_cap_scope", "maximum_wall_seconds", "larger_q_policy"],
+      "properties": {
+        "q_values": {
+          "const": [3, 5, 7]
+        },
+        "candidate_cap": {"const": 20000},
+        "candidate_cap_scope": {"const": "PER_FIELD_Q_SCAN"},
+        "maximum_wall_seconds": {"const": "8.0"},
+        "larger_q_policy": {"type": "string", "minLength": 1}
+      }
+    },
+    "closed_formula_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status", "not_a_theorem", "scope", "mean_K", "normalized_mean_K",
+        "all_three_frozen_fields_match", "proof", "evidence", "smallest_gap"
+      ],
+      "properties": {
+        "status": {"const": "PROVED_IN_DRAFT_RESEARCH_NOTE"},
+        "not_a_theorem": {"const": false},
+        "scope": {"const": "every odd prime power q"},
+        "mean_K": {"type": "string", "minLength": 1},
+        "normalized_mean_K": {"type": "string", "minLength": 1},
+        "all_three_frozen_fields_match": {"const": true},
+        "proof": {"$ref": "#/$defs/proof_certificate"},
+        "evidence": {"type": "string", "minLength": 1},
+        "smallest_gap": {"type": "string", "minLength": 1}
+      }
+    },
+    "usp4_limit_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "not_a_theorem", "statement", "proof", "scope_boundary"],
+      "properties": {
+        "status": {"const": "PROVED_FROM_EXACT_FORMULA"},
+        "not_a_theorem": {"const": false},
+        "statement": {"type": "string", "minLength": 1},
+        "proof": {"type": "string", "minLength": 1},
+        "scope_boundary": {"type": "string", "minLength": 1}
+      }
+    },
+    "firewalls": {
+      "type": "array", "minItems": 3,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "proof_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "note", "note_sha256_lf_normalized", "certificate",
+        "certificate_sha256_lf_normalized", "symbolic_operations", "operation_cap",
+        "scan_regression_controls"
+      ],
+      "properties": {
+        "note": {"const": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md"},
+        "note_sha256_lf_normalized": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "certificate": {"const": "research/l-families/atlas/function_field/genus2_moment_identity.py"},
+        "certificate_sha256_lf_normalized": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "symbolic_operations": {"type": "integer", "minimum": 1, "maximum": 10000},
+        "operation_cap": {"const": 10000},
+        "scan_regression_controls": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["3", "5", "7"],
+          "properties": {
+            "3": {"$ref": "#/$defs/regression_control"},
+            "5": {"$ref": "#/$defs/regression_control"},
+            "7": {"$ref": "#/$defs/regression_control"}
+          }
+        }
+      }
+    },
+    "regression_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["member_count", "sum_a_squared", "sum_b_squared", "sum_K"],
+      "properties": {
+        "member_count": {"const": true},
+        "sum_a_squared": {"const": true},
+        "sum_b_squared": {"const": true},
+        "sum_K": {"const": true}
+      }
+    },
+    "fraction_pair": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "prefixItems": [
+        {"type": "integer"},
+        {"type": "integer", "minimum": 1}
+      ],
+      "items": {"type": "integer"}
+    },
+    "integer_moment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sum", "mean"],
+      "properties": {
+        "sum": {"type": "integer"},
+        "mean": {"$ref": "#/$defs/fraction_pair"}
+      }
+    },
+    "normalized_moment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sum", "mean"],
+      "properties": {
+        "sum": {"$ref": "#/$defs/fraction_pair"},
+        "mean": {"$ref": "#/$defs/fraction_pair"}
+      }
+    },
+    "family": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "q", "spec_semantic_id", "candidate_count", "member_count", "moments",
+        "sign_counts", "formula_matches_at_this_q"
+      ],
+      "properties": {
+        "q": {"enum": [3, 5, 7]},
+        "spec_semantic_id": {"type": "string", "pattern": "^ATLAS\\.LFUNC\\."},
+        "candidate_count": {"type": "integer", "minimum": 1},
+        "member_count": {"type": "integer", "minimum": 1},
+        "moments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["a_squared", "b_squared", "K", "normalized_K"],
+          "properties": {
+            "a_squared": {"$ref": "#/$defs/integer_moment"},
+            "b_squared": {"$ref": "#/$defs/integer_moment"},
+            "K": {"$ref": "#/$defs/integer_moment"},
+            "normalized_K": {"$ref": "#/$defs/normalized_moment"}
+          }
+        },
+        "sign_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["negative", "zero", "positive"],
+          "properties": {
+            "negative": {"type": "integer", "minimum": 0},
+            "zero": {"type": "integer", "minimum": 0},
+            "positive": {"type": "integer", "minimum": 0}
+          }
+        },
+        "formula_matches_at_this_q": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mean_a_squared", "mean_b_squared", "mean_K", "normalized_mean_K"],
+          "properties": {
+            "mean_a_squared": {"const": true},
+            "mean_b_squared": {"const": true},
+            "mean_K": {"const": true},
+            "normalized_mean_K": {"const": true}
+          }
+        }
+      }
+    }
+  }
+}

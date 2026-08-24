@@ -1,4 +1,4 @@
-# Three theorem nominations from the Phase-0 atlas
+# Four theorem nominations from the L-function detector atlas
 
 All statements below are **proposed targets**, not results. They are written to
 make the missing arithmetic input explicit and to prevent a finite experiment
@@ -50,8 +50,11 @@ deterministic sign on the `USp(2g)` character image; if it does not, the Haar
 model may refute rather than support density-one positivity.
 
 Why this target: the exhaustive `q=5,g=1` result proves that purity plus mean
-cancellation cannot perform individualization. The missing input must control
-fluctuation or exceptional members, plausibly through monodromy/sheaf estimates.
+cancellation cannot perform individualization. The exhaustive `q=3,g=2` result
+shows that exact purity and the palindromic functional equation still allow all
+three signs for a parity-even toy minor. The missing input must therefore
+control the actual kernel's fluctuation or exceptional members, plausibly
+through monodromy/sheaf estimates.
 
 Number-field handoff: formulate the corresponding trace/exponential-sum bound
 for the same coefficient kernel over integers; do not transfer the conclusion
@@ -126,7 +129,7 @@ with a power-saving or otherwise summable off-diagonal error:
 \frac1{|D_\varepsilon(X)|}\sum_{d\in D_\varepsilon(X)}W_d(P)^2
 =\sum_{p\le P}w_p(P)^2\frac{a_p(f)^2}{p}
 \delta_{\varepsilon,X}(p)
-+O_f(E(X,P)),
++O_{f,w}(E(X,P)),
 \]
 
 where bad primes, the fundamental-discriminant condition, and the root-number
@@ -140,6 +143,84 @@ survive degree two. This moment uses the correct unitary GL(2) coefficient and
 asks quadratic-character orthogonality to supply the family law. The analogous
 function-field theorem should be attacked first by exact character sums and
 monodromy, providing a formula—not a transfer claim—for the number-field target.
+
+The exact conductor-coprime precursor now computes the complete raw Gram and
+centered covariance matrices for the fixed `11.a2` prime packet at
+`X=256,512,1024,2048`, both pooled and in the sourced root-number cohorts
+`epsilon_d=sign(d)*(d/11)`. The root-sign counts at the largest window are
+568/574. Its pooled weighted radical correction to `E(W_d^2)` is nonmonotone,
+and the root-cohort second-moment difference also changes sign across the four
+windows. The off-diagonal root-cohort Gram-contrast RMS decreases from
+`0.108858` to `0.039862`, but `sqrt(N)` times that RMS stays of order one and
+the maximizing pair moves. This is why the target asks for a weighted, uniform
+estimate rather than extrapolating an unweighted finite RMS or fitted rate.
+
+## Target D — genus-two higher moments and effective USp(4) equidistribution
+
+Nomination: `FF-GENUS2-TOY-MINOR-HIGHER-MOMENTS`
+Programmes: #737 and #741.
+
+For odd prime powers `q`, let `H_5(q)` be the uniform family of monic
+squarefree quintics and write
+
+\[
+P_D(u)=1+a_Du+b_Du^2+qa_Du^3+q^2u^4,
+\qquad
+\frac1{P_D(u)}=\sum_{n\ge0}B_D(n)u^n.
+\]
+
+The exact algebraic lemma
+
+\[
+B_D(1)B_D(3)-B_D(2)^2=qa_D^2-b_D^2
+\]
+
+and the following first-moment formula are now proved in the bound DRAFT
+research note:
+
+\[
+\frac1{|H_5(q)|}\sum_{D\in H_5(q)}
+\frac{qa_D^2-b_D^2}{q^2}
+=-\left(1-\frac1q\right)^2+\frac{q+1}{q^5}
+\longrightarrow-1.
+\]
+
+The remaining target begins at moment two. Put
+
+\[
+F(U)=(\operatorname{Tr}U)^2-e_2(U)^2,
+\qquad U\in USp(4).
+\]
+
+For each fixed `m>=2`, prove an effective formula
+
+\[
+\frac1{|H_5(q)|}\sum_{D\in H_5(q)}
+\left(\frac{qa_D^2-b_D^2}{q^2}\right)^m
+=\int_{USp(4)}F(U)^m\,dU+E_m(q),
+\qquad E_m(q)\longrightarrow0,
+\]
+
+uniformly for `m` in any range needed by the chosen detector. Ideally expose
+the conductor and representation dependence in an explicit square-root-scale
+or better error, or derive exact rational functions in `q` for the first few
+fixed moments. The normalization uses `P_D(t/sqrt(q))=det(I-tU)`, so
+`a_D/sqrt(q)=-Tr(U)` and `b_D/q=e_2(U)`. Since
+`Lambda^2 Std` is `1 + V_(omega_2)`, character orthogonality gives the proved
+first Haar mean `-1`. Exact `C_2` Weyl constant terms give the next five targets
+
+```text
+m=2,3,4,5,6: 3, -11, 56, -374, 3117.
+```
+
+Why this target: the first moment no longer needs nomination. Its exact
+squarefree-sieve proof shows that low moments can expose structure more sharply
+than a three-field fit. The higher moments now test whether the full
+hyperelliptic family approaches the compact-group law, not merely whether one
+average has the right limit. A proof should decompose `F^m` into `USp(4)`
+characters or evaluate the corresponding finite-field correlations, with an
+effective error. This target remains about a toy coefficient minor; it does
+not rename that minor as `XD`, `HCNC`, or a Pick/Loewner theorem.
 
 ## Falsification and promotion rules
 

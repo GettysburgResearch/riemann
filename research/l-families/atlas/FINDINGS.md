@@ -109,7 +109,209 @@ This does **not** refute canonical `XD`, `HCNC`, or physical occupancy. `C_D` is
 an explicitly labeled toy lag-one probe. A genuine port must derive its degree
 kernel from the same reciprocal-L source and preserve the relevant carrier.
 
-## 4. Exact covariance: central zeros are rank-one atoms with a convention sign
+## 4. Exact genus-two theorem: the first toy-minor mean for all odd prime powers
+
+For each odd prime power `q`, let `H_5(q)` be all monic squarefree quintics over
+`F_q[T]`. For `C_D:y^2=D(x)`, write
+
+\[
+P_D(u)=1+a_Du+b_Du^2+qa_Du^3+q^2u^4,
+\qquad K_D=qa_D^2-b_D^2.
+\]
+
+The guarded computation exhausts `H_5(q)` only for `q=3,5,7`. It uses exact
+`F_q` and `F_{q^2}` character sums, not numerical roots or per-member Euler
+enumeration. The smallest field also retains the independent point-count,
+purity, reciprocal-coefficient, and involution checks from the first pilot.
+
+| `q` | members | `K_D<0 / =0 / >0` | exact mean `K_D/q^2` |
+|---:|---:|---:|---:|
+| 3 | 162 | `102 / 12 / 48` | `-104/243` |
+| 5 | 2,500 | `1650 / 50 / 800` | `-1994/3125` |
+| 7 | 14,406 | `9702 / 336 / 4368` | `-12340/16807` |
+
+Those three rows suggested a formula, but they are no longer its evidence of
+proof. The separate DRAFT note
+[`GENUS2_MOMENT_IDENTITY.md`](function_field/GENUS2_MOMENT_IDENTITY.md) gives a
+complete squarefree-Moebius calculation, and a bounded exact `Q[q]` certificate
+checks its nine quartic factorization rows and polynomial algebra in 1,761
+operations. Independently of the three scans, it proves for every odd prime
+power
+
+\[
+\begin{aligned}
+\mathbb E(a_D^2)
+ &=q-1+\frac{q^2+q-2}{q^3},\\
+\mathbb E(b_D^2)
+ &=2q^2-3q+2+\frac{q^2-3q-1}{q^3},\\
+\mathbb E(K_D)
+ &=-(q-1)^2+\frac{q+1}{q^3}.
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\mathbb E(K_D/q^2)
+=-\left(1-\frac1q\right)^2+\frac{q+1}{q^5}
+\longrightarrow -1.
+\]
+
+The exact reciprocal identity
+
+\[
+B_D(1)B_D(3)-B_D(2)^2=qa_D^2-b_D^2
+\]
+
+turns this into an all-odd-prime-power first-moment theorem for the normalized toy Hankel
+minor. The proof handles the even primitive quartic-character correction and
+the `q=3` edge explicitly. The frozen scans are regression controls only.
+
+The compact-group calculation is exact as well. For `U in USp(4)`, put
+
+\[
+F(U)=(\operatorname{Tr}U)^2-e_2(U)^2.
+\]
+
+Exact Laurent-character algebra gives
+
+\[
+F=-(1+\chi_{\omega_2}+\chi_{2\omega_2}),
+\qquad -20\le F\le\frac43,
+\]
+
+and the normalized `C_2` Weyl constant term gives its first six Haar moments
+
+```text
+-1, 3, -11, 56, -374, 3117.
+```
+
+The same exact triangular conversion gives centered moments
+`0,2,-4,27,-178,1533` and cumulants `-1,2,-4,15,-98,803`; in particular the
+limiting variance target is exactly 2 and the law is strongly non-Gaussian.
+
+The exact finite fractions are retained in the fixture; their display values
+show how slowly the higher tails appear:
+
+| moment | Haar `USp(4)` | `q=3` | `q=5` | `q=7` |
+|---:|---:|---:|---:|---:|
+| 1 | `-1` | `-0.427984` | `-0.638080` | `-0.734218` |
+| 2 | `3` | `1.101052` | `1.683251` | `1.998001` |
+| 3 | `-11` | `-2.095209` | `-4.167283` | `-5.592910` |
+| 4 | `56` | `5.176492` | `12.974911` | `19.477453` |
+| 5 | `-374` | `-12.337390` | `-42.659645` | `-75.358513` |
+| 6 | `3117` | `30.726756` | `150.912978` | `321.292681` |
+
+For all 18 frozen comparisons, the finite moment has the Haar sign and smaller
+absolute magnitude, and its absolute gap decreases from `q=3` to 5 to 7. This
+is a compact clue about missing extreme-tail mass, not a one-sided theorem or a
+rate fit; the sixth moment at `q=7` is still only about one tenth of its Haar
+target. It argues for character decomposition or effective equidistribution,
+not a materially larger brute-force scan.
+
+Thus the proved finite-family first-moment limit equals the exact Haar mean
+`-1`. This does not prove convergence of moments two through six, full
+`USp(4)` equidistribution, a memberwise sign, or any number-field statement.
+The statistic remains a toy reciprocal-coefficient minor, not Pick/Loewner,
+`XD`, or `HCNC`.
+
+At `q=3`, the involution `D(T) -> -D(-T)` also sends `P_D(u)` to `P_D(-u)`.
+It forces the parity-odd probe `B_D(1)B_D(2)` to have mean zero; enumeration
+gives the exact `54/54/54` negative/zero/positive split. The theorem above is
+parity-even, so its negative mean is not that tautological cancellation.
+
+## 5. Exact twist precursor: root conditioning and covariance are distinct inputs
+
+Fix the imported `11.a2` model and the conductor-coprime, root-number-
+unconditioned family of fundamental discriminants
+`1<|d|<=X`, `gcd(d,11)=1`. At the 13 good primes through 43, the pilot stores
+the complete exact matrices
+
+\[
+G_X=V^{\mathsf T}V/N,
+\qquad
+\operatorname{Cov}_X=V^{\mathsf T}(NI-\mathbf1\mathbf1^{\mathsf T})V/N^2,
+\qquad V_{d,p}=\chi_d(p).
+\]
+
+Both are positive semidefinite by these identities. Their diagonals are not
+silently replaced by one: `G_X(p,p)` is the exact proportion with `p` not
+dividing `d`, compared against `p/(p+1)`. For the pooled `ALL` partitions:
+
+| `X` | members | max absolute local-density error | max absolute raw off-diagonal | mean square of raw off-diagonals |
+|---:|---:|---:|---:|---:|
+| 256 | 141 | `83/4512` at 31 | `20/141` at `(7,43)` | `3592/775359` |
+| 512 | 285 | `13/1710` at 17 | `11/95` at `(17,41)` | `13993/6335550` |
+| 1024 | 570 | `4/665` at 41 | `7/95` at `(13,37)` | `10669/12671100` |
+| 2048 | 1142 | `29/17130` at 29 | `51/1142` at `(13,43)` | `4532/12715599` |
+
+The table is exact finite data, not a fitted decay exponent. The off-diagonal
+mean square decreases across these four bounds, but neither the maximizing pair
+nor individual correlations are monotone.
+
+For
+
+\[
+W_d=\sum_{p\le43,\ p\ne11}\frac{a_p\chi_d(p)}{\sqrt p},
+\]
+
+the mean, second moment, and centered variance are retained as exact
+multiquadratic coordinates. The limiting diagonal comparator for this fixed
+prime packet would be
+
+\[
+\sum_p\frac{a_p^2}{p+1}=\frac{467501}{60192}
+\approx7.766829479.
+\]
+
+At `X=2048`, the exact finite-density diagonal has display value
+`7.762203643`, while the full exact-radical second moment has display value
+`7.913589466`. The weighted off-diagonal correction changes sign between
+`X=1024` and `X=2048`; decreasing unweighted RMS therefore does not by itself
+control the detector weight.
+
+The missing root-number partition was then sourced and implemented. For a
+fundamental discriminant coprime to 11, the imported twist formula and base
+sign of `11.a2` give
+
+\[
+\varepsilon_d=\varepsilon(11.a2)\chi_d(-11)
+=\operatorname{sign}(d)\left(\frac d{11}\right).
+\]
+
+This is not the sign of `d`. The two exact cohorts are disjoint and exhaustive:
+
+| `X` | root `+` | root `-` | display `E_+(W^2)` | display `E_-(W^2)` |
+|---:|---:|---:|---:|---:|
+| 256 | 65 | 76 | `7.106138779` | `6.946078817` |
+| 512 | 140 | 145 | `6.361660919` | `7.843036974` |
+| 1024 | 281 | 289 | `7.142742673` | `8.082996301` |
+| 2048 | 568 | 574 | `8.062818685` | `7.765920135` |
+
+There is no stable finite sign effect in these four second moments. To measure
+whether the two local-character laws are separating, set
+
+\[
+\Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r),\qquad p<r.
+\]
+
+The exact off-diagonal contrast summaries derived from the stored matrices are:
+
+| `X` | `max |Delta_X|` | pair | exact mean square over 78 pairs | RMS display |
+|---:|---:|---:|---:|---:|
+| 256 | `83/247` | `(37,41)` | `22556369/1903480800` | `0.108858` |
+| 512 | `156/1015` | `(29,41)` | `398459/91837200` | `0.065869` |
+| 1024 | `9594/81209` | `(7,31)` | `815350219/257201165559` | `0.056304` |
+| 2048 | `3713/40754` | `(5,31)` | `3293698081/2072788867968` | `0.039862` |
+
+Both displays decrease on the frozen windows, while the maximizing pair moves.
+Moreover `sqrt(N)` times the RMS stays of order one on these four rows, which
+is compatible with sampling-scale fluctuation but is not a fitted rate or a
+theorem. The next missing arithmetic input is a root-conditioned, weighted,
+uniform off-diagonal estimate as the prime window grows; central ranks and
+zeros were not computed.
+
+## 6. Exact covariance: central zeros are rank-one atoms with a convention sign
 
 Write the centered completed function as
 
@@ -160,7 +362,7 @@ factor is `(5/4)^2=25/16`. The imported rank-stress rows therefore give:
 The arithmetic metadata is discovery-only; the algebra conditional on those
 integers is exact.
 
-## 5. Exact hostile control: deflation is not positivity
+## 7. Exact hostile control: deflation is not positivity
 
 The synthetic quartic background remains indefinite after the full central
 atom is removed. In the declared three-node control, the deflated Loewner
@@ -169,18 +371,24 @@ negative directions despite determinant `+36`. Therefore central deflation is
 bookkeeping that removes legitimate rank contamination; it is not a positivity
 theorem for the remaining L-function geometry.
 
-## 6. What appears genuinely transferable
+## 8. What appears genuinely transferable
 
 The experiments suggest a narrow hierarchy:
 
 1. **Transferable exactly:** Euler reciprocal algebra, unitary local scaling,
    central-order factorization, rank-one atoms, and the parity/full norm identity.
-2. **Family-dependent:** local coefficient moments, monodromy averages, rank
+2. **Exactly solvable in this family:** the genus-two first toy-minor mean. Its
+   squarefree-sieve proof works for every odd prime power, whereas the higher
+   moments still require new character correlations or equidistribution.
+3. **Family-dependent:** local coefficient moments, monodromy averages, rank
    distributions, and low-zero statistics.
-3. **Not implied by purity alone in this pilot:** a common memberwise sign for
-   the particular toy coefficient `H_D(1)H_D(2)`. A genuine source-derived
+4. **Not implied by purity alone in these pilots:** a common memberwise sign for
+   either toy coefficient probe at genus one or two. A genuine source-derived
    kernel could still have deterministic positivity and must be checked on its
    own Frobenius-character image.
+5. **Not supplied by small raw correlations:** the weighted off-diagonal bound
+   needed for a growing reciprocal-prime detector. Its local density, root-
+   number conditioning, and weight geometry are separate arithmetic inputs.
 
 That hierarchy is more useful than another broad plot: it tells a later proof
 attempt precisely which steps are algebra and which require arithmetic geometry,

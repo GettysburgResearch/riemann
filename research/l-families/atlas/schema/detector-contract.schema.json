@@ -46,7 +46,7 @@
         "required": ["name", "input_type", "required", "coverage_requirement"],
         "properties": {
           "name": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
-          "input_type": {"enum": ["LFUNCTION_SPEC", "LOCAL_EULER_FACTORS", "RECIPROCAL_COEFFICIENTS", "ZERO_DATA", "CENTRAL_ORDER", "ROOT_NUMBER", "RAW_ARTIFACT", "SYNTHETIC_MATRIX"]},
+          "input_type": {"$ref": "common.schema.json#/$defs/inputType"},
           "required": {"type": "boolean"},
           "coverage_requirement": {"$ref": "common.schema.json#/$defs/coverageClass"}
         }

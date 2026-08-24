@@ -1,0 +1,187 @@
+{
+  "analytic_properties": {
+    "analytic_continuation": "PROVED_NATIVE",
+    "euler_product": "PROVED_NATIVE",
+    "functional_equation": "PROVED_NATIVE",
+    "source_ref": "research/l-families/atlas/function_field/genus2_f3_quintics.json"
+  },
+  "assumptions": [],
+  "base_field": {
+    "characteristic": 3,
+    "constant_field_order": 3,
+    "label": "F_3(T)",
+    "variable": "T"
+  },
+  "central_data": {
+    "assertion": "UNKNOWN",
+    "notes": "No central vanishing order is computed or inferred by the finite coefficient pilot.",
+    "parity_forced": false,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_ref": "NONE",
+    "value": null
+  },
+  "classification": {
+    "automorphic_class": "GL1",
+    "degree": 1,
+    "domain": "FUNCTION_FIELD",
+    "family_id": "FF3.QUADRATIC.QUINTIC.GENUS2",
+    "motivic_weight": 0,
+    "object_type": "FUNCTION_FIELD_DIRICHLET_L",
+    "self_duality": "SELF_DUAL",
+    "symmetry_type": "SYMPLECTIC"
+  },
+  "completed_normalization": {
+    "analytic_variable": "u=3^(-s)",
+    "conductor_factor": "degree(D)=5; P_D has polynomial degree 4",
+    "critical_center": "|u|=3^(-1/2)",
+    "exact_formula": "P_D(u)=L(u,chi_D)=sum_{f monic}chi_D(f)u^deg(f)=product_j(1-alpha_j*u)",
+    "gamma_factors": [
+      {
+        "kind": "FUNCTION_FIELD_NONE",
+        "multiplicity": 1,
+        "scale": "1",
+        "shift": "0"
+      }
+    ],
+    "normalization_id": "FF.QUADRATIC.ODD_CONDUCTOR.POLYNOMIAL_U",
+    "notes": "The GL(1) quadratic-character L-polynomial is the degree-four genus-two zeta numerator; H_D(n)=3^(-n/2)B_D(n)."
+  },
+  "conductor": {
+    "degree": 5,
+    "kind": "DEGREE_ONLY",
+    "norm_decimal": "243",
+    "status": "PROVED_NATIVE",
+    "value": "monic squarefree quintic D in F_3[T]"
+  },
+  "data_sources": [
+    {
+      "coverage": "Complete deterministic enumeration of all 243 monic candidates and 162 squarefree members.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "raw genus2_pilot.py bytes",
+          "hash_mode": "RAW_BYTES",
+          "value": "0025238e058ce20140f2ec6899a65e1c122caaa7c61a37e1df1934b6115fa90b"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.GENUS2.PILOT.V1",
+      "locator": "research/l-families/atlas/function_field/genus2_pilot.py",
+      "notes": "Exact F_3/F_9 point counts and integer pair-trace purity certificates.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "exact_generator",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    },
+    {
+      "coverage": "Polynomial arithmetic, quadratic symbols, Moebius values, and reciprocal recurrence.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "raw pilot.py bytes",
+          "hash_mode": "RAW_BYTES",
+          "value": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.POLYNOMIAL.PILOT.V1",
+      "locator": "research/l-families/atlas/function_field/pilot.py",
+      "notes": "Python standard-library exact integer and rational arithmetic only.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "exact_arithmetic_library",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    },
+    {
+      "coverage": "All 162 monic squarefree quintic conductors, compact histograms, and sign witnesses.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "canonical JSON exact genus-two fixture",
+          "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+          "value": "aa5bcd4a432de265ae8477b17d03515e7b9c39028dd955d483174dd860256005"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.F3.QUINTIC.GENUS2.EXACT.V1",
+      "locator": "research/l-families/atlas/function_field/genus2_f3_quintics.json",
+      "notes": "The wrapper regenerates the complete fixture before constructing atlas records.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "finite_family_result",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    }
+  ],
+  "euler_product": {
+    "bad_factor_policy": "If P divides D then chi_D(P)=0, so the local reciprocal factor is 1.",
+    "coverage": "All 162 conductors and every monic f required through degree 4; direct Moebius coefficients are checked against formal inversion.",
+    "good_factor_formula": "P_D(u)=product_P(1-chi_D(P)u^deg(P))^(-1)",
+    "reciprocal_coefficient_definition": "B_D(n)=sum_deg(f)=n mu(f)chi_D(f)",
+    "rigor_level": "RIGOROUS_CERTIFIED",
+    "source_refs": [
+      "GENERATED:F3:T:MONIC_SQUAREFREE_QUINTICS:GENUS2",
+      "research/l-families/atlas/function_field/genus2_f3_quintics.json"
+    ]
+  },
+  "functional_equation": {
+    "exact_formula": "P_D(u)=9*u^4*P_D(1/(3*u)) for every frozen family member.",
+    "root_number": "+1",
+    "root_number_status": "PROVED_NATIVE",
+    "source_ref": "research/l-families/atlas/function_field/genus2_f3_quintics.json"
+  },
+  "identity_kernel": {
+    "base_field_label": "F_3(T)",
+    "construction": "Finite family D -> L(u,chi_D) for every monic squarefree quintic D in F_3[T], equivalently the genus-two numerator of y^2=D(x)",
+    "slug": "FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY",
+    "source_identifiers": [
+      "GENERATED:F3:T:MONIC_SQUAREFREE_QUINTICS:GENUS2"
+    ],
+    "twist_parameters": [],
+    "version": 1
+  },
+  "identity_sha256": "64fa184deff37bfade32dede39110cb6bf115c65f6a7d6710ed7eabd6bb2d878",
+  "notes": "This dedicated family spec binds the actual F_3 quintic subjects. The finite exact purity coverage does not include, imply, or use the proposed q-to-infinity USp(4) target.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "L_FUNCTION_SPEC",
+  "revision": 1,
+  "schema_version": "riemann.atlas.l_function_spec.v1",
+  "scope_boundary": "Phase-0 metadata and declared finite adapters only; no zero-set or global conclusion is inherited.",
+  "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "source_identifiers": [
+    "GENERATED:F3:T:MONIC_SQUAREFREE_QUINTICS:GENUS2"
+  ],
+  "supersedes": [],
+  "title": "All monic squarefree quintic quadratic characters over F_3[T]",
+  "zero_data": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "coverage_class": "COMPLETE",
+    "precision": "exact palindromy plus integer pair-trace discriminant and endpoint inequalities; no numerical root approximation",
+    "rigor_level": "RIGOROUS_CERTIFIED",
+    "source_refs": [
+      "research/l-families/atlas/function_field/genus2_f3_quintics.json"
+    ],
+    "usage": "REQUIRED",
+    "window": "all four reciprocal roots for every one of the 162 family members"
+  }
+}

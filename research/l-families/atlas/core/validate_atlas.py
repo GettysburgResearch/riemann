@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import re
-from datetime import datetime
 from fractions import Fraction
 from pathlib import Path
 from typing import Any
@@ -13,6 +12,38 @@ from atlas_core import ATLAS_ROOT, canonical_bytes, read_json, sha256_hex
 
 class AtlasValidationError(Exception):
     pass
+
+
+RFC3339_DATE_TIME = re.compile(
+    r"(?P<year>[0-9]{4})-(?P<month>[0-9]{2})-(?P<day>[0-9]{2})"
+    r"[Tt](?P<hour>[0-9]{2}):(?P<minute>[0-9]{2}):(?P<second>[0-9]{2})"
+    r"(?:\.[0-9]+)?(?:[Zz]|[+-](?P<offset_hour>[0-9]{2}):(?P<offset_minute>[0-9]{2}))"
+)
+
+
+def is_rfc3339_date_time(value: str) -> bool:
+    match = RFC3339_DATE_TIME.fullmatch(value)
+    if match is None:
+        return False
+    components = {
+        key: int(component)
+        for key, component in match.groupdict().items()
+        if component is not None
+    }
+    year = components["year"]
+    month = components["month"]
+    day = components["day"]
+    if not 1 <= month <= 12:
+        return False
+    leap = year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+    month_lengths = (31, 29 if leap else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+    if not 1 <= day <= month_lengths[month - 1]:
+        return False
+    if components["hour"] > 23 or components["minute"] > 59 or components["second"] > 60:
+        return False
+    if components.get("offset_hour", 0) > 23 or components.get("offset_minute", 0) > 59:
+        return False
+    return True
 
 
 class SchemaStore:
@@ -108,22 +139,42 @@ def validate_instance(
             encoded = [canonical_bytes(item) for item in value]
             if len(encoded) != len(set(encoded)):
                 errors.append(f"{location}: items are not unique")
+        prefix_schemas = schema.get("prefixItems", [])
+        prefix_count = len(prefix_schemas) if isinstance(prefix_schemas, list) else 0
+        if prefix_count:
+            for index, child_schema in enumerate(prefix_schemas[: len(value)]):
+                if isinstance(child_schema, dict):
+                    errors.extend(
+                        validate_instance(
+                            value[index],
+                            child_schema,
+                            schema_path,
+                            store,
+                            f"{location}[{index}]",
+                        )
+                    )
         item_schema = schema.get("items")
         if isinstance(item_schema, dict):
-            for index, child in enumerate(value):
-                errors.extend(validate_instance(child, item_schema, schema_path, store, f"{location}[{index}]"))
+            for index, child in enumerate(value[prefix_count:], start=prefix_count):
+                errors.extend(
+                    validate_instance(
+                        child,
+                        item_schema,
+                        schema_path,
+                        store,
+                        f"{location}[{index}]",
+                    )
+                )
+        elif item_schema is False and len(value) > prefix_count:
+            errors.append(f"{location}: items are not allowed after prefixItems")
     if isinstance(value, str):
         if len(value) < schema.get("minLength", 0):
             errors.append(f"{location}: string is too short")
         if "pattern" in schema and re.search(schema["pattern"], value) is None:
             errors.append(f"{location}: string does not match {schema['pattern']!r}")
         if schema.get("format") == "date-time":
-            try:
-                parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-                if parsed.tzinfo is None or parsed.utcoffset() is None:
-                    errors.append(f"{location}: date-time lacks a UTC offset {value!r}")
-            except ValueError:
-                errors.append(f"{location}: invalid date-time {value!r}")
+            if not is_rfc3339_date_time(value):
+                errors.append(f"{location}: invalid RFC 3339 date-time {value!r}")
     if isinstance(value, (int, float)) and not isinstance(value, bool):
         if "minimum" in schema and value < schema["minimum"]:
             errors.append(f"{location}: value is below minimum {schema['minimum']}")

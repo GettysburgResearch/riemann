@@ -63,9 +63,9 @@ class ContractTests(unittest.TestCase):
 
     def test_full_atlas_validates(self) -> None:
         counts = validate_atlas(ATLAS_ROOT)
-        self.assertEqual(counts["specs"], 6)
-        self.assertEqual(counts["detectors"], 6)
-        self.assertEqual(counts["evaluations"], 10)
+        self.assertEqual(counts["specs"], 10)
+        self.assertEqual(counts["detectors"], 11)
+        self.assertEqual(counts["evaluations"], 15)
 
     def test_unexpected_schema_property_fails(self) -> None:
         mutated = copy.deepcopy(self.spec)
@@ -268,15 +268,82 @@ class SchemaSubsetTests(unittest.TestCase):
         errors = validate_instance([1, 2], {"type": "array", "maxItems": 1}, schema_path, SchemaStore())
         self.assertTrue(any("too many items" in error for error in errors))
 
-    def test_naive_datetime_is_rejected(self) -> None:
+    def test_prefix_items_are_heterogeneous_and_items_apply_only_after_prefix(self) -> None:
         schema_path = ATLAS_ROOT / "schema" / "common.schema.json"
-        errors = validate_instance(
-            "2026-08-24T12:00:00",
-            {"type": "string", "format": "date-time"},
-            schema_path,
-            SchemaStore(),
+        schema = {
+            "type": "array",
+            "prefixItems": [{"type": "integer"}, {"type": "string"}],
+            "items": {"type": "boolean"},
+        }
+        self.assertEqual(
+            validate_instance([7, "seven", True], schema, schema_path, SchemaStore()),
+            [],
         )
-        self.assertTrue(any("lacks a UTC offset" in error for error in errors))
+        self.assertTrue(
+            validate_instance([7, 7, True], schema, schema_path, SchemaStore())
+        )
+        self.assertTrue(
+            validate_instance([7, "seven", 7], schema, schema_path, SchemaStore())
+        )
+
+    def test_false_items_rejects_values_after_prefix(self) -> None:
+        schema_path = ATLAS_ROOT / "schema" / "common.schema.json"
+        schema = {
+            "type": "array",
+            "prefixItems": [{"type": "integer"}],
+            "items": False,
+        }
+        self.assertEqual(validate_instance([7], schema, schema_path, SchemaStore()), [])
+        self.assertTrue(validate_instance([7, 8], schema, schema_path, SchemaStore()))
+
+    def test_rfc3339_datetime_profile(self) -> None:
+        schema_path = ATLAS_ROOT / "schema" / "common.schema.json"
+        schema = {"type": "string", "format": "date-time"}
+        invalid = (
+            "2026-08-24T12:00:00",
+            "2026-W34-1T12:00:00+00:00",
+            "2026-08-24 12:00:00+00:00",
+            "2026-08-24T12:00+00:00",
+            "2026-08-24T12:00:00+0000",
+            "2026-08-24T12:00:00,5Z",
+            "2026-08-24T12:00:00+00:60",
+            "2026-08-24T12:00:00+12:99",
+            "2026-02-29T12:00:00Z",
+            "2026-08-24T24:00:00Z",
+        )
+        for value in invalid:
+            with self.subTest(value=value):
+                self.assertTrue(validate_instance(value, schema, schema_path, SchemaStore()))
+        valid = (
+            "2026-08-24T12:00:00Z",
+            "2026-08-24T12:00:00.125+03:00",
+            "2026-08-24t12:00:00z",
+            "1990-12-31T23:59:60Z",
+            "0000-02-29T12:00:00Z",
+        )
+        for value in valid:
+            with self.subTest(value=value):
+                self.assertEqual(validate_instance(value, schema, schema_path, SchemaStore()), [])
+
+    def test_input_type_vocabulary_is_shared_and_strict(self) -> None:
+        common_path = ATLAS_ROOT / "schema" / "common.schema.json"
+        input_schema = SchemaStore().load(common_path)["$defs"]["inputType"]
+        self.assertEqual(
+            validate_instance("RAW_ARTIFACT", input_schema, common_path, SchemaStore()),
+            [],
+        )
+        self.assertTrue(
+            validate_instance("BOGUS_INPUT", input_schema, common_path, SchemaStore())
+        )
+        for filename, path in (
+            ("detector-contract.schema.json", ("properties", "required_inputs", "items", "properties", "input_type")),
+            ("evaluation-record.schema.json", ("properties", "input_fulfillments", "items", "properties", "input_type")),
+        ):
+            schema = SchemaStore().load(ATLAS_ROOT / "schema" / filename)
+            node = schema
+            for key in path:
+                node = node[key]
+            self.assertEqual(node, {"$ref": "common.schema.json#/$defs/inputType"})
 
 
 if __name__ == "__main__":

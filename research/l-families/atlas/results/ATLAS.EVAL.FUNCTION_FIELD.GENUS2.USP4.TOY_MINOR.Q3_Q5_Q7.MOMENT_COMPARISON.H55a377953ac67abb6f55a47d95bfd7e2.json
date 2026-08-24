@@ -1,0 +1,467 @@
+{
+  "character_identity": {
+    "dimensions_at_identity": {
+      "2*omega_2": 14,
+      "F": -20,
+      "omega_2": 5,
+      "standard": 4
+    },
+    "formula": "F=-(1+chi_{omega_2}+chi_{2*omega_2})",
+    "haar_mean_consequence": -1,
+    "status": "PROVED_EXACT_LAURENT_IDENTITY"
+  },
+  "convergence_target": {
+    "atlas_status": "PROPOSED",
+    "evidence_scope": "three exact fields q=3,5,7 and moment orders 1 through 6",
+    "not_a_theorem": true,
+    "smallest_gap": "Prove the relevant hyperelliptic-family equidistribution; for each fixed order, F(U)^m is continuous and bounded on compact USp(4).",
+    "statement": "For each fixed moment order, the finite K/q^2 moment tends to the USp(4) Haar moment as q tends to infinity.",
+    "status": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
+  },
+  "definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2.",
+  "detector_semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H091db0c7a64078c29f7f9ebe16defb83",
+  "exact_result_status": "RIGOROUS_CERTIFIED",
+  "finite_comparisons": [
+    {
+      "member_count": 162,
+      "moments": [
+        {
+          "finite_exact": {
+            "denominator": 243,
+            "numerator": -104,
+            "text": "-104/243"
+          },
+          "finite_minus_haar": {
+            "denominator": 243,
+            "numerator": 139,
+            "text": "139/243"
+          },
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": {
+            "denominator": 2187,
+            "numerator": 2408,
+            "text": "2408/2187"
+          },
+          "finite_minus_haar": {
+            "denominator": 2187,
+            "numerator": -4153,
+            "text": "-4153/2187"
+          },
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": {
+            "denominator": 19683,
+            "numerator": -41240,
+            "text": "-41240/19683"
+          },
+          "finite_minus_haar": {
+            "denominator": 19683,
+            "numerator": 175273,
+            "text": "175273/19683"
+          },
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": {
+            "denominator": 177147,
+            "numerator": 917000,
+            "text": "917000/177147"
+          },
+          "finite_minus_haar": {
+            "denominator": 177147,
+            "numerator": -9003232,
+            "text": "-9003232/177147"
+          },
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": {
+            "denominator": 1594323,
+            "numerator": -19669784,
+            "text": "-19669784/1594323"
+          },
+          "finite_minus_haar": {
+            "denominator": 1594323,
+            "numerator": 576607018,
+            "text": "576607018/1594323"
+          },
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": {
+            "denominator": 14348907,
+            "numerator": 440895368,
+            "text": "440895368/14348907"
+          },
+          "finite_minus_haar": {
+            "denominator": 14348907,
+            "numerator": -44284647751,
+            "text": "-44284647751/14348907"
+          },
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 3,
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
+    },
+    {
+      "member_count": 2500,
+      "moments": [
+        {
+          "finite_exact": {
+            "denominator": 3125,
+            "numerator": -1994,
+            "text": "-1994/3125"
+          },
+          "finite_minus_haar": {
+            "denominator": 3125,
+            "numerator": 1131,
+            "text": "1131/3125"
+          },
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": {
+            "denominator": 78125,
+            "numerator": 131504,
+            "text": "131504/78125"
+          },
+          "finite_minus_haar": {
+            "denominator": 78125,
+            "numerator": -102871,
+            "text": "-102871/78125"
+          },
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": {
+            "denominator": 1953125,
+            "numerator": -8139224,
+            "text": "-8139224/1953125"
+          },
+          "finite_minus_haar": {
+            "denominator": 1953125,
+            "numerator": 13345151,
+            "text": "13345151/1953125"
+          },
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": {
+            "denominator": 48828125,
+            "numerator": 633540584,
+            "text": "633540584/48828125"
+          },
+          "finite_minus_haar": {
+            "denominator": 48828125,
+            "numerator": -2100834416,
+            "text": "-2100834416/48828125"
+          },
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": {
+            "denominator": 1220703125,
+            "numerator": -52074761624,
+            "text": "-52074761624/1220703125"
+          },
+          "finite_minus_haar": {
+            "denominator": 1220703125,
+            "numerator": 404468207126,
+            "text": "404468207126/1220703125"
+          },
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": {
+            "denominator": 30517578125,
+            "numerator": 4605498593864,
+            "text": "4605498593864/30517578125"
+          },
+          "finite_minus_haar": {
+            "denominator": 30517578125,
+            "numerator": -90517792421761,
+            "text": "-90517792421761/30517578125"
+          },
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 5,
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572"
+    },
+    {
+      "member_count": 14406,
+      "moments": [
+        {
+          "finite_exact": {
+            "denominator": 16807,
+            "numerator": -12340,
+            "text": "-12340/16807"
+          },
+          "finite_minus_haar": {
+            "denominator": 16807,
+            "numerator": 4467,
+            "text": "4467/16807"
+          },
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": {
+            "denominator": 823543,
+            "numerator": 1645440,
+            "text": "1645440/823543"
+          },
+          "finite_minus_haar": {
+            "denominator": 823543,
+            "numerator": -825189,
+            "text": "-825189/823543"
+          },
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": {
+            "denominator": 40353607,
+            "numerator": -225694096,
+            "text": "-225694096/40353607"
+          },
+          "finite_minus_haar": {
+            "denominator": 40353607,
+            "numerator": 218195581,
+            "text": "218195581/40353607"
+          },
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": {
+            "denominator": 1977326743,
+            "numerator": 38513289072,
+            "text": "38513289072/1977326743"
+          },
+          "finite_minus_haar": {
+            "denominator": 1977326743,
+            "numerator": -72217008536,
+            "text": "-72217008536/1977326743"
+          },
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": {
+            "denominator": 96889010407,
+            "numerator": -7301411797840,
+            "text": "-7301411797840/96889010407"
+          },
+          "finite_minus_haar": {
+            "denominator": 96889010407,
+            "numerator": 28935078094378,
+            "text": "28935078094378/96889010407"
+          },
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": {
+            "denominator": 4747561509943,
+            "numerator": 1525356764826480,
+            "text": "1525356764826480/4747561509943"
+          },
+          "finite_minus_haar": {
+            "denominator": 4747561509943,
+            "numerator": -13272792461665851,
+            "text": "-13272792461665851/4747561509943"
+          },
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 7,
+      "spec_semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F7.QUADRATIC.QUINTIC_GENUS2_FAMILY.H066f50ec5ddb13c0ab7107ae1b68fb8b"
+    }
+  ],
+  "firewalls": [
+    "RIGOROUS_CERTIFIED covers the exact Laurent, Weyl, and finite-histogram arithmetic only; convergence is proposed and not a theorem.",
+    "The statistic is a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC.",
+    "No conclusion transfers from these function-field families to number-field L-functions.",
+    "The finite comparison covers only q=3,5,7 and moment orders 1 through 6."
+  ],
+  "range_certificate": {
+    "formula": "F=(X+Y)^2-(2+X*Y)^2=(X-Y)^2-4-X^2*Y^2",
+    "maximum": {
+      "denominator": 3,
+      "numerator": 4,
+      "text": "4/3"
+    },
+    "maximum_witnesses": [
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        },
+        "Y": {
+          "denominator": 3,
+          "numerator": -2,
+          "text": "-2/3"
+        }
+      },
+      {
+        "X": {
+          "denominator": 3,
+          "numerator": -2,
+          "text": "-2/3"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        }
+      },
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        },
+        "Y": {
+          "denominator": 3,
+          "numerator": 2,
+          "text": "2/3"
+        }
+      },
+      {
+        "X": {
+          "denominator": 3,
+          "numerator": 2,
+          "text": "2/3"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        }
+      }
+    ],
+    "minimum": {
+      "denominator": 1,
+      "numerator": -20,
+      "text": "-20"
+    },
+    "minimum_witnesses": [
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": -2,
+          "text": "-2"
+        }
+      },
+      {
+        "X": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        },
+        "Y": {
+          "denominator": 1,
+          "numerator": 2,
+          "text": "2"
+        }
+      }
+    ],
+    "proof": "The lower bound follows from (X-Y)^2>=0 and X^2Y^2<=16. For the upper bound, fix Y: the quadratic in X is convex when |Y|<=1, so an endpoint gives -3Y^2+4|Y|<=4/3; when |Y|>1, checking the feasible vertex and endpoints gives the same bound.",
+    "status": "PROVED_EXACT_ELEMENTARY_OPTIMIZATION",
+    "trace_coordinates": "X=2*cos(theta_1), Y=2*cos(theta_2), each in [-2,2]"
+  },
+  "schema": "riemann.atlas.raw.function_field_usp4_toy_minor_moments.v1",
+  "source_locks": {
+    "comparator_fixture": {
+      "canonical_sha256": "6c13984a151b6ab7b65ecd56f3a43d14577d8ccf50ff49e045c5244043296c54",
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json",
+      "payload_sha256": "fa16e3ec818db1d60f5eb873adc297ff82af57796efc9d9bb6294dd1b9c98c3b"
+    },
+    "comparator_source": {
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
+      "raw_sha256": "aba6da478a4f1e69db94dcbe31339023ffcab349558758076a5908a1912d0135"
+    },
+    "q_scan_fixture": {
+      "canonical_sha256": "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10",
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+      "payload_sha256": "0ca599b52e243101bc8ba8e851ee3db39b6ba3bfb2ce2f4fe2349d7543fbb90c"
+    },
+    "q_scan_source": {
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+      "raw_sha256": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255"
+    }
+  },
+  "weyl_certificate": {
+    "arithmetic": "exact integer Laurent-polynomial convolution",
+    "density_constant_term": 8,
+    "formula": "integral f = CT(f*product_{alpha>0}(1-X^alpha)(1-X^-alpha))/8",
+    "haar_centered_moments_orders_1_through_6": [
+      0,
+      2,
+      -4,
+      27,
+      -178,
+      1533
+    ],
+    "haar_cumulants_orders_1_through_6": [
+      -1,
+      2,
+      -4,
+      15,
+      -98,
+      803
+    ],
+    "haar_moments_orders_1_through_6": [
+      -1,
+      3,
+      -11,
+      56,
+      -374,
+      3117
+    ],
+    "maximum_moment": 6,
+    "positive_roots_as_exponent_pairs": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "root_system": "C2"
+  }
+}

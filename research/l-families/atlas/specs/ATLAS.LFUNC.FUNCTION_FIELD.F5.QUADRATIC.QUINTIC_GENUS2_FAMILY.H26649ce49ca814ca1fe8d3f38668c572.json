@@ -1,0 +1,191 @@
+{
+  "analytic_properties": {
+    "analytic_continuation": "IMPORTED_THEOREM",
+    "euler_product": "IMPORTED_THEOREM",
+    "functional_equation": "IMPORTED_THEOREM",
+    "source_ref": "CLASSICAL_FUNCTION_FIELD_CURVE_ZETA_THEORY"
+  },
+  "assumptions": [
+    {
+      "code": "CLASSICAL_FUNCTION_FIELD_CURVE_ZETA_THEORY",
+      "statement": "The degree-four numerator and palindromic functional equation are imported classical theory.",
+      "status": "IMPORTED"
+    }
+  ],
+  "base_field": {
+    "characteristic": 5,
+    "constant_field_order": 5,
+    "label": "F_5(T)",
+    "variable": "T"
+  },
+  "central_data": {
+    "assertion": "UNKNOWN",
+    "notes": "No central vanishing order is computed or inferred by this coefficient scan.",
+    "parity_forced": false,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_ref": "NONE",
+    "value": null
+  },
+  "classification": {
+    "automorphic_class": "GL1",
+    "degree": 1,
+    "domain": "FUNCTION_FIELD",
+    "family_id": "FF5.QUADRATIC.QUINTIC.GENUS2",
+    "motivic_weight": 0,
+    "object_type": "FUNCTION_FIELD_DIRICHLET_L",
+    "self_duality": "SELF_DUAL",
+    "symmetry_type": "SYMPLECTIC"
+  },
+  "completed_normalization": {
+    "analytic_variable": "u=5^(-s)",
+    "conductor_factor": "degree(D)=5; P_D has polynomial degree 4",
+    "critical_center": "|u|=5^(-1/2)",
+    "exact_formula": "P_D(u)=L(u,chi_D)=sum_(f monic)chi_D(f)u^deg(f)=product_j(1-alpha_j*u)",
+    "gamma_factors": [
+      {
+        "kind": "FUNCTION_FIELD_NONE",
+        "multiplicity": 1,
+        "scale": "1",
+        "shift": "0"
+      }
+    ],
+    "normalization_id": "FF.QUADRATIC.ODD_CONDUCTOR.POLYNOMIAL_U",
+    "notes": "The registered experiment uses only exact finite character-sum coefficients a_D,b_D; it imports no zero coordinates."
+  },
+  "conductor": {
+    "degree": 5,
+    "kind": "DEGREE_ONLY",
+    "norm_decimal": "3125",
+    "status": "PROVED_NATIVE",
+    "value": "monic squarefree quintic D in F_5[T]"
+  },
+  "data_sources": [
+    {
+      "coverage": "Frozen exact q=3,5,7 coefficient scan with a 20,000-candidate per-field cap and <=8-second global guard.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "raw genus2_q_scan.py bytes",
+          "hash_mode": "RAW_BYTES",
+          "value": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.GENUS2.Q_SCAN.V1",
+      "locator": "research/l-families/atlas/function_field/genus2_q_scan.py",
+      "notes": "No numerical roots, floating point, or family-wide Euler enumeration.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "exact_generator",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    },
+    {
+      "coverage": "Polynomial display and six sample Euler-coefficient cross-checks.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "raw pilot.py bytes",
+          "hash_mode": "RAW_BYTES",
+          "value": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.POLYNOMIAL.PILOT.V1",
+      "locator": "research/l-families/atlas/function_field/pilot.py",
+      "notes": "The exhaustive family path uses precomputed finite-field character tables.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "exact_arithmetic_library",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    },
+    {
+      "coverage": "All 2500 q=5 members, exact moments, sign counts, full K histogram, and witnesses.",
+      "hashes": [
+        {
+          "algorithm": "sha256",
+          "binds": "canonical JSON q-scan fixture",
+          "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+          "value": "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10"
+        }
+      ],
+      "identifier": "FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.EXACT_SCAN.V1",
+      "locator": "research/l-families/atlas/function_field/genus2_q_scan.json",
+      "notes": "The atlas wrapper replays the complete fixture before writing records.",
+      "retention": "CHECKED_IN",
+      "rigor_level": "RIGOROUS_CERTIFIED",
+      "role": "finite_family_result",
+      "source_kind": "GENERATED_EXACT",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    }
+  ],
+  "euler_product": {
+    "bad_factor_policy": "If P divides D then chi_D(P)=0, so the local reciprocal factor is 1.",
+    "coverage": "The exact q-scan covers all 2500 monic squarefree quintics, using point-character sums rather than per-member Euler enumeration.",
+    "good_factor_formula": "P_D(u)=product_P(1-chi_D(P)u^deg(P))^(-1)",
+    "reciprocal_coefficient_definition": "B_D(n)=sum_deg(f)=n mu(f)chi_D(f)",
+    "rigor_level": "RIGOROUS_CERTIFIED",
+    "source_refs": [
+      "GENERATED:F5:T:MONIC_SQUAREFREE_QUINTICS:GENUS2",
+      "research/l-families/atlas/function_field/genus2_q_scan.json"
+    ]
+  },
+  "functional_equation": {
+    "exact_formula": "P_D(u)=25*u^4*P_D(1/(5*u)).",
+    "root_number": "+1",
+    "root_number_status": "IMPORTED_THEOREM",
+    "source_ref": "CLASSICAL_FUNCTION_FIELD_CURVE_ZETA_THEORY"
+  },
+  "identity_kernel": {
+    "base_field_label": "F_5(T)",
+    "construction": "Finite family D -> L(u,chi_D) for every monic squarefree quintic D in F_5[T], equivalently the genus-two numerator of y^2=D(x)",
+    "slug": "FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY",
+    "source_identifiers": [
+      "GENERATED:F5:T:MONIC_SQUAREFREE_QUINTICS:GENUS2"
+    ],
+    "twist_parameters": [],
+    "version": 1
+  },
+  "identity_sha256": "26649ce49ca814ca1fe8d3f38668c5723c227c848a278c00842f478af7afc91a",
+  "notes": "The finite a_D,b_D,K_D totals are exact native computations. Root-location claims are not inputs to this scan. A separately bound DRAFT proof note and exact Q[q] certificate establish the registered first-moment formulas for every odd prime power.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "L_FUNCTION_SPEC",
+  "revision": 1,
+  "schema_version": "riemann.atlas.l_function_spec.v1",
+  "scope_boundary": "Phase-0 metadata and declared finite adapters only; no zero-set or global conclusion is inherited.",
+  "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "source_identifiers": [
+    "GENERATED:F5:T:MONIC_SQUAREFREE_QUINTICS:GENUS2"
+  ],
+  "supersedes": [],
+  "title": "All monic squarefree quintic quadratic characters over F_5[T]",
+  "zero_data": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "coverage_class": "NOT_APPLICABLE",
+    "precision": null,
+    "rigor_level": "DISCOVERY_ONLY",
+    "source_refs": [],
+    "usage": "NOT_USED",
+    "window": null
+  }
+}

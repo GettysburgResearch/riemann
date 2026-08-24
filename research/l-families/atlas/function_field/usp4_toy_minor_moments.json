@@ -1,0 +1,406 @@
+{
+  "character_identity": {
+    "dimensions_at_identity": {
+      "2*omega_2": 14,
+      "F": -20,
+      "omega_2": 5,
+      "standard": 4
+    },
+    "formula": "F=-(1+chi_{omega_2}+chi_{2*omega_2})",
+    "haar_mean_consequence": -1,
+    "status": "PROVED_EXACT_LAURENT_IDENTITY"
+  },
+  "definition": "For U in USp(4), F(U)=(Tr U)^2-e_2(U)^2; compare its exact Haar moments with the exact finite moments of K/q^2=(q*a_1^2-a_2^2)/q^2.",
+  "finite_comparisons": [
+    {
+      "member_count": 162,
+      "moments": [
+        {
+          "finite_exact": [
+            -104,
+            243
+          ],
+          "finite_minus_haar": [
+            139,
+            243
+          ],
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": [
+            2408,
+            2187
+          ],
+          "finite_minus_haar": [
+            -4153,
+            2187
+          ],
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": [
+            -41240,
+            19683
+          ],
+          "finite_minus_haar": [
+            175273,
+            19683
+          ],
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": [
+            917000,
+            177147
+          ],
+          "finite_minus_haar": [
+            -9003232,
+            177147
+          ],
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": [
+            -19669784,
+            1594323
+          ],
+          "finite_minus_haar": [
+            576607018,
+            1594323
+          ],
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": [
+            440895368,
+            14348907
+          ],
+          "finite_minus_haar": [
+            -44284647751,
+            14348907
+          ],
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 3
+    },
+    {
+      "member_count": 2500,
+      "moments": [
+        {
+          "finite_exact": [
+            -1994,
+            3125
+          ],
+          "finite_minus_haar": [
+            1131,
+            3125
+          ],
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": [
+            131504,
+            78125
+          ],
+          "finite_minus_haar": [
+            -102871,
+            78125
+          ],
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": [
+            -8139224,
+            1953125
+          ],
+          "finite_minus_haar": [
+            13345151,
+            1953125
+          ],
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": [
+            633540584,
+            48828125
+          ],
+          "finite_minus_haar": [
+            -2100834416,
+            48828125
+          ],
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": [
+            -52074761624,
+            1220703125
+          ],
+          "finite_minus_haar": [
+            404468207126,
+            1220703125
+          ],
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": [
+            4605498593864,
+            30517578125
+          ],
+          "finite_minus_haar": [
+            -90517792421761,
+            30517578125
+          ],
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 5
+    },
+    {
+      "member_count": 14406,
+      "moments": [
+        {
+          "finite_exact": [
+            -12340,
+            16807
+          ],
+          "finite_minus_haar": [
+            4467,
+            16807
+          ],
+          "order": 1,
+          "usp4_haar_exact": -1
+        },
+        {
+          "finite_exact": [
+            1645440,
+            823543
+          ],
+          "finite_minus_haar": [
+            -825189,
+            823543
+          ],
+          "order": 2,
+          "usp4_haar_exact": 3
+        },
+        {
+          "finite_exact": [
+            -225694096,
+            40353607
+          ],
+          "finite_minus_haar": [
+            218195581,
+            40353607
+          ],
+          "order": 3,
+          "usp4_haar_exact": -11
+        },
+        {
+          "finite_exact": [
+            38513289072,
+            1977326743
+          ],
+          "finite_minus_haar": [
+            -72217008536,
+            1977326743
+          ],
+          "order": 4,
+          "usp4_haar_exact": 56
+        },
+        {
+          "finite_exact": [
+            -7301411797840,
+            96889010407
+          ],
+          "finite_minus_haar": [
+            28935078094378,
+            96889010407
+          ],
+          "order": 5,
+          "usp4_haar_exact": -374
+        },
+        {
+          "finite_exact": [
+            1525356764826480,
+            4747561509943
+          ],
+          "finite_minus_haar": [
+            -13272792461665851,
+            4747561509943
+          ],
+          "order": 6,
+          "usp4_haar_exact": 3117
+        }
+      ],
+      "q": 7
+    }
+  ],
+  "finite_source": {
+    "canonical_sha256": "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10",
+    "coverage": "all monic squarefree quintics over F_q for q=3,5,7",
+    "path": "research/l-families/atlas/function_field/genus2_q_scan.json"
+  },
+  "firewall": "The Weyl constant terms and the three finite histogram moments are separately exact. Their convergence is conjectural. F is a toy reciprocal-coefficient statistic, not an analytic Pick/Loewner, XD, or HCNC kernel.",
+  "limit_target": {
+    "evidence_scope": "three exact fields q=3,5,7 and moment orders 1 through 6",
+    "not_a_theorem": true,
+    "smallest_gap": "invoke a relevant hyperelliptic-family equidistribution theorem for this compact continuous class function, or evaluate the character correlations directly",
+    "statement": "For each fixed moment order, the finite K/q^2 moment tends to the USp(4) Haar moment as q tends to infinity.",
+    "status": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
+  },
+  "payload_sha256": "fa16e3ec818db1d60f5eb873adc297ff82af57796efc9d9bb6294dd1b9c98c3b",
+  "producer": {
+    "input_provenance": "content-bound exact q-scan histogram fixture",
+    "runtime_contract": "Python 3.11+ standard library; exact integer/rational arithmetic",
+    "source": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
+    "source_sha256_lf_normalized": "aba6da478a4f1e69db94dcbe31339023ffcab349558758076a5908a1912d0135"
+  },
+  "range_certificate": {
+    "formula": "F=(X+Y)^2-(2+X*Y)^2=(X-Y)^2-4-X^2*Y^2",
+    "maximum": [
+      4,
+      3
+    ],
+    "maximum_witnesses": [
+      {
+        "X": [
+          2,
+          1
+        ],
+        "Y": [
+          -2,
+          3
+        ]
+      },
+      {
+        "X": [
+          -2,
+          3
+        ],
+        "Y": [
+          2,
+          1
+        ]
+      },
+      {
+        "X": [
+          -2,
+          1
+        ],
+        "Y": [
+          2,
+          3
+        ]
+      },
+      {
+        "X": [
+          2,
+          3
+        ],
+        "Y": [
+          -2,
+          1
+        ]
+      }
+    ],
+    "minimum": [
+      -20,
+      1
+    ],
+    "minimum_witnesses": [
+      {
+        "X": [
+          -2,
+          1
+        ],
+        "Y": [
+          -2,
+          1
+        ]
+      },
+      {
+        "X": [
+          2,
+          1
+        ],
+        "Y": [
+          2,
+          1
+        ]
+      }
+    ],
+    "proof": "The lower bound follows from (X-Y)^2>=0 and X^2Y^2<=16. For the upper bound, fix Y: the quadratic in X is convex when |Y|<=1, so an endpoint gives -3Y^2+4|Y|<=4/3; when |Y|>1, checking the feasible vertex and endpoints gives the same bound.",
+    "status": "PROVED_EXACT_ELEMENTARY_OPTIMIZATION",
+    "trace_coordinates": "X=2*cos(theta_1), Y=2*cos(theta_2), each in [-2,2]"
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.MOMENTS.V1",
+  "resource_contract": {
+    "external_dependencies": false,
+    "maximum_moment": 6,
+    "numerical_integration": false,
+    "random_sampling": false
+  },
+  "rigor_level": "RIGOROUS_CERTIFIED_WEYL_CONSTANT_TERM",
+  "schema": "riemann.function_field.usp4_toy_minor_moments.v1",
+  "weyl_certificate": {
+    "arithmetic": "exact integer Laurent-polynomial convolution",
+    "density_constant_term": 8,
+    "formula": "integral f = CT(f*product_{alpha>0}(1-X^alpha)(1-X^-alpha))/8",
+    "haar_centered_moments_orders_1_through_6": [
+      0,
+      2,
+      -4,
+      27,
+      -178,
+      1533
+    ],
+    "haar_cumulants_orders_1_through_6": [
+      -1,
+      2,
+      -4,
+      15,
+      -98,
+      803
+    ],
+    "haar_moments_orders_1_through_6": [
+      -1,
+      3,
+      -11,
+      56,
+      -374,
+      3117
+    ],
+    "maximum_moment": 6,
+    "positive_roots_as_exponent_pairs": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "root_system": "C2"
+  }
+}

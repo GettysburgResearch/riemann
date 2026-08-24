@@ -1,0 +1,793 @@
+{
+  "closed_formula_target": {
+    "evidence": "complete squarefree-Moebius proof and exact Q[q] certificate; q=3,5,7 enumerations are regression controls, not proof inputs",
+    "mean_K": "-(q-1)^2+(q+1)/q^3",
+    "mean_a_squared": "q-1+(q^2+q-2)/q^3",
+    "mean_b_squared": "2*q^2-3*q+2+(q^2-3*q-1)/q^3",
+    "normalized_mean_K": "-(1-1/q)^2+(q+1)/q^5",
+    "not_a_theorem": false,
+    "proof": {
+      "certificate": "research/l-families/atlas/function_field/genus2_moment_identity.py",
+      "certificate_sha256_lf_normalized": "1914804dae2b98eb96cc86560cac0e05773e532efd7db638bbfcaeb73bf2dc5e",
+      "note": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+      "note_sha256_lf_normalized": "41f6e51246a6cc2f3695a78017a189f0fa93b9dd6a9d3efde1529754cedba4d5",
+      "operation_cap": 10000,
+      "scan_regression_controls": {
+        "3": {
+          "member_count": true,
+          "sum_K": true,
+          "sum_a_squared": true,
+          "sum_b_squared": true
+        },
+        "5": {
+          "member_count": true,
+          "sum_K": true,
+          "sum_a_squared": true,
+          "sum_b_squared": true
+        },
+        "7": {
+          "member_count": true,
+          "sum_K": true,
+          "sum_a_squared": true,
+          "sum_b_squared": true
+        }
+      },
+      "symbolic_operations": 1761
+    },
+    "scope": "every odd prime power q",
+    "smallest_gap": "formal proof-assistant translation or frozen-head review before integration; no mathematical gap is known in the stated identity",
+    "status": "PROVED_IN_DRAFT_RESEARCH_NOTE"
+  },
+  "families": [
+    {
+      "K_histogram": {
+        "-1": 30,
+        "-13": 6,
+        "-16": 6,
+        "-22": 12,
+        "-24": 6,
+        "-4": 24,
+        "-6": 12,
+        "-9": 6,
+        "0": 12,
+        "2": 24,
+        "3": 6,
+        "8": 18
+      },
+      "candidate_count": 243,
+      "expected_squarefree_count": 162,
+      "formula_comparison": {
+        "mean_K": {
+          "actual": [
+            -104,
+            27
+          ],
+          "candidate": [
+            -104,
+            27
+          ],
+          "matches": true
+        },
+        "mean_a_squared": {
+          "actual": [
+            64,
+            27
+          ],
+          "candidate": [
+            64,
+            27
+          ],
+          "matches": true
+        },
+        "mean_b_squared": {
+          "actual": [
+            296,
+            27
+          ],
+          "candidate": [
+            296,
+            27
+          ],
+          "matches": true
+        },
+        "normalized_mean_K": {
+          "actual": [
+            -104,
+            243
+          ],
+          "candidate": [
+            -104,
+            243
+          ],
+          "matches": true
+        }
+      },
+      "member_count": 162,
+      "moments": {
+        "K": {
+          "mean": [
+            -104,
+            27
+          ],
+          "sum": -624
+        },
+        "a_squared": {
+          "mean": [
+            64,
+            27
+          ],
+          "sum": 384
+        },
+        "b_squared": {
+          "mean": [
+            296,
+            27
+          ],
+          "sum": 1776
+        },
+        "normalized_K": {
+          "mean": [
+            -104,
+            243
+          ],
+          "sum": [
+            -208,
+            3
+          ]
+        }
+      },
+      "nonsquare_for_Fq2": 2,
+      "q": 3,
+      "sign_counts": {
+        "negative": 102,
+        "positive": 48,
+        "zero": 12
+      },
+      "witnesses": {
+        "negative": {
+          "K": -4,
+          "N1": 4,
+          "N2": 6,
+          "a": 0,
+          "b": -2,
+          "conductor": "T^5 + 2*T",
+          "conductor_coefficients_low_to_high": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            -4,
+            9
+          ]
+        },
+        "positive": {
+          "K": 3,
+          "N1": 5,
+          "N2": 9,
+          "a": 1,
+          "b": 0,
+          "conductor": "T^5 + 2*T^2 + 1",
+          "conductor_coefficients_low_to_high": [
+            1,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            1,
+            3
+          ]
+        },
+        "zero": {
+          "K": 0,
+          "N1": 4,
+          "N2": 10,
+          "a": 0,
+          "b": 0,
+          "conductor": "T^5 + 1",
+          "conductor_coefficients_low_to_high": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "K_histogram": {
+        "-100": 30,
+        "-11": 160,
+        "-116": 10,
+        "-16": 280,
+        "-19": 120,
+        "-20": 120,
+        "-31": 40,
+        "-36": 110,
+        "-4": 340,
+        "-44": 120,
+        "-55": 40,
+        "-59": 100,
+        "-64": 40,
+        "-71": 20,
+        "-76": 80,
+        "-80": 40,
+        "0": 50,
+        "1": 80,
+        "16": 200,
+        "20": 80,
+        "29": 60,
+        "4": 200,
+        "5": 160,
+        "9": 20
+      },
+      "candidate_count": 3125,
+      "expected_squarefree_count": 2500,
+      "formula_comparison": {
+        "mean_K": {
+          "actual": [
+            -1994,
+            125
+          ],
+          "candidate": [
+            -1994,
+            125
+          ],
+          "matches": true
+        },
+        "mean_a_squared": {
+          "actual": [
+            528,
+            125
+          ],
+          "candidate": [
+            528,
+            125
+          ],
+          "matches": true
+        },
+        "mean_b_squared": {
+          "actual": [
+            4634,
+            125
+          ],
+          "candidate": [
+            4634,
+            125
+          ],
+          "matches": true
+        },
+        "normalized_mean_K": {
+          "actual": [
+            -1994,
+            3125
+          ],
+          "candidate": [
+            -1994,
+            3125
+          ],
+          "matches": true
+        }
+      },
+      "member_count": 2500,
+      "moments": {
+        "K": {
+          "mean": [
+            -1994,
+            125
+          ],
+          "sum": -39880
+        },
+        "a_squared": {
+          "mean": [
+            528,
+            125
+          ],
+          "sum": 10560
+        },
+        "b_squared": {
+          "mean": [
+            4634,
+            125
+          ],
+          "sum": 92680
+        },
+        "normalized_K": {
+          "mean": [
+            -1994,
+            3125
+          ],
+          "sum": [
+            -7976,
+            5
+          ]
+        }
+      },
+      "nonsquare_for_Fq2": 2,
+      "q": 5,
+      "sign_counts": {
+        "negative": 1650,
+        "positive": 800,
+        "zero": 50
+      },
+      "witnesses": {
+        "negative": {
+          "K": -20,
+          "N1": 7,
+          "N2": 35,
+          "a": 1,
+          "b": 5,
+          "conductor": "T^5 + 2*T^2 + 1",
+          "conductor_coefficients_low_to_high": [
+            1,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            -4,
+            5
+          ]
+        },
+        "positive": {
+          "K": 5,
+          "N1": 7,
+          "N2": 25,
+          "a": 1,
+          "b": 0,
+          "conductor": "T^5 + 2*T^2 + 2*T",
+          "conductor_coefficients_low_to_high": [
+            0,
+            2,
+            2,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            1,
+            5
+          ]
+        },
+        "zero": {
+          "K": 0,
+          "N1": 6,
+          "N2": 26,
+          "a": 0,
+          "b": 0,
+          "conductor": "T^5 + 2*T",
+          "conductor_coefficients_low_to_high": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "K_histogram": {
+        "-1": 84,
+        "-100": 378,
+        "-106": 168,
+        "-114": 210,
+        "-116": 168,
+        "-133": 336,
+        "-137": 126,
+        "-144": 294,
+        "-148": 84,
+        "-149": 126,
+        "-16": 126,
+        "-162": 210,
+        "-168": 84,
+        "-18": 504,
+        "-186": 42,
+        "-196": 42,
+        "-2": 504,
+        "-21": 168,
+        "-212": 42,
+        "-232": 84,
+        "-233": 42,
+        "-282": 42,
+        "-29": 840,
+        "-32": 168,
+        "-36": 672,
+        "-37": 336,
+        "-4": 504,
+        "-42": 336,
+        "-50": 168,
+        "-57": 210,
+        "-58": 168,
+        "-64": 168,
+        "-72": 378,
+        "-74": 168,
+        "-8": 756,
+        "-81": 252,
+        "-84": 252,
+        "-9": 210,
+        "-93": 252,
+        "0": 336,
+        "12": 588,
+        "14": 252,
+        "24": 882,
+        "27": 504,
+        "28": 168,
+        "3": 924,
+        "38": 126,
+        "47": 84,
+        "48": 168,
+        "54": 126,
+        "59": 42,
+        "6": 336,
+        "7": 168
+      },
+      "candidate_count": 16807,
+      "expected_squarefree_count": 14406,
+      "formula_comparison": {
+        "mean_K": {
+          "actual": [
+            -12340,
+            343
+          ],
+          "candidate": [
+            -12340,
+            343
+          ],
+          "matches": true
+        },
+        "mean_a_squared": {
+          "actual": [
+            2112,
+            343
+          ],
+          "candidate": [
+            2112,
+            343
+          ],
+          "matches": true
+        },
+        "mean_b_squared": {
+          "actual": [
+            27124,
+            343
+          ],
+          "candidate": [
+            27124,
+            343
+          ],
+          "matches": true
+        },
+        "normalized_mean_K": {
+          "actual": [
+            -12340,
+            16807
+          ],
+          "candidate": [
+            -12340,
+            16807
+          ],
+          "matches": true
+        }
+      },
+      "member_count": 14406,
+      "moments": {
+        "K": {
+          "mean": [
+            -12340,
+            343
+          ],
+          "sum": -518280
+        },
+        "a_squared": {
+          "mean": [
+            2112,
+            343
+          ],
+          "sum": 88704
+        },
+        "b_squared": {
+          "mean": [
+            27124,
+            343
+          ],
+          "sum": 1139208
+        },
+        "normalized_K": {
+          "mean": [
+            -12340,
+            16807
+          ],
+          "sum": [
+            -74040,
+            7
+          ]
+        }
+      },
+      "nonsquare_for_Fq2": 3,
+      "q": 7,
+      "sign_counts": {
+        "negative": 9702,
+        "positive": 4368,
+        "zero": 336
+      },
+      "witnesses": {
+        "negative": {
+          "K": -196,
+          "N1": 8,
+          "N2": 78,
+          "a": 0,
+          "b": 14,
+          "conductor": "T^5 + 2*T",
+          "conductor_coefficients_low_to_high": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            -4,
+            1
+          ]
+        },
+        "positive": {
+          "K": 28,
+          "N1": 10,
+          "N2": 46,
+          "a": 2,
+          "b": 0,
+          "conductor": "T^5 + 2*T + 1",
+          "conductor_coefficients_low_to_high": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            4,
+            7
+          ]
+        },
+        "zero": {
+          "K": 0,
+          "N1": 8,
+          "N2": 50,
+          "a": 0,
+          "b": 0,
+          "conductor": "T^5 + 1",
+          "conductor_coefficients_low_to_high": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "normalized_K": [
+            0,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "firewall": "All frozen family totals are exact finite results. The all-odd-prime-power mean formula and its first-moment limit are proved by the separately source-locked research note and exact certificate, not inferred from three scans. Higher-moment USp(4) convergence remains proposed. The toy coefficient minor is not an analytic Pick/Loewner, XD, or HCNC kernel.",
+  "method": {
+    "coefficient_reconstruction": "a=sum_Fq chi(D(x)); b=(sum_Fq2 chi_2(D(x))+a^2)/2; K=q*a^2-b^2",
+    "excluded_algorithms": [
+      "numerical root finding",
+      "per-member Euler coefficient enumeration",
+      "floating-point arithmetic"
+    ],
+    "extension_model": "F_q[theta]/(theta^2-nu) for the recorded smallest nonsquare nu",
+    "family_algorithm": "squarefree gcd plus precomputed exact character and power tables"
+  },
+  "payload_sha256": "0ca599b52e243101bc8ba8e851ee3db39b6ba3bfb2ce2f4fe2349d7543fbb90c",
+  "producer": {
+    "input_provenance": "complete deterministic generation, no external data",
+    "runtime_contract": "Python 3.11+ standard library; exact integer/rational arithmetic",
+    "shared_arithmetic_sha256_lf_normalized": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258",
+    "shared_arithmetic_source": "research/l-families/atlas/function_field/pilot.py",
+    "source": "research/l-families/atlas/function_field/genus2_q_scan.py",
+    "source_sha256_lf_normalized": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255"
+  },
+  "q3_existing_fixture_control": {
+    "comparisons": {
+      "K_histogram": true,
+      "mean_K": true,
+      "member_count": true,
+      "normalized_mean_K": true,
+      "sign_counts": true
+    },
+    "fixture": "research/l-families/atlas/function_field/genus2_f3_quintics.json",
+    "fixture_canonical_sha256": "aa5bcd4a432de265ae8477b17d03515e7b9c39028dd955d483174dd860256005"
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.EXACT_SCAN.V1",
+  "resource_contract": {
+    "candidate_cap": 20000,
+    "candidate_cap_scope": "PER_FIELD_Q_SCAN",
+    "clock": "time.monotonic",
+    "frozen_q_values": [
+      3,
+      5,
+      7
+    ],
+    "guard_interval_candidates": 256,
+    "larger_q_policy": "refuse q>7 and any q outside the frozen set",
+    "maximum_wall_seconds": 8.0,
+    "runtime_not_in_identity": true
+  },
+  "rigor_level": "RIGOROUS_CERTIFIED",
+  "sample_euler_cross_checks": {
+    "3": [
+      {
+        "character_sum_coefficients": [
+          0,
+          2
+        ],
+        "conductor_coefficients_low_to_high": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "direct_L_coefficients_low_to_high": [
+          1,
+          0,
+          2,
+          0,
+          9
+        ],
+        "matches": true
+      },
+      {
+        "character_sum_coefficients": [
+          -1,
+          2
+        ],
+        "conductor_coefficients_low_to_high": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "direct_L_coefficients_low_to_high": [
+          1,
+          -1,
+          2,
+          -3,
+          9
+        ],
+        "matches": true
+      }
+    ],
+    "5": [
+      {
+        "character_sum_coefficients": [
+          0,
+          10
+        ],
+        "conductor_coefficients_low_to_high": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "direct_L_coefficients_low_to_high": [
+          1,
+          0,
+          10,
+          0,
+          25
+        ],
+        "matches": true
+      },
+      {
+        "character_sum_coefficients": [
+          -1,
+          0
+        ],
+        "conductor_coefficients_low_to_high": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "direct_L_coefficients_low_to_high": [
+          1,
+          -1,
+          0,
+          -5,
+          25
+        ],
+        "matches": true
+      }
+    ],
+    "7": [
+      {
+        "character_sum_coefficients": [
+          0,
+          14
+        ],
+        "conductor_coefficients_low_to_high": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "direct_L_coefficients_low_to_high": [
+          1,
+          0,
+          14,
+          0,
+          49
+        ],
+        "matches": true
+      },
+      {
+        "character_sum_coefficients": [
+          -4,
+          10
+        ],
+        "conductor_coefficients_low_to_high": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "direct_L_coefficients_low_to_high": [
+          1,
+          -4,
+          10,
+          -28,
+          49
+        ],
+        "matches": true
+      }
+    ]
+  },
+  "schema": "riemann.function_field.genus2_q_scan.v1",
+  "scope": "exhaustive monic squarefree quintics over F_q for exactly q=3,5,7",
+  "usp4_limit_target": {
+    "not_a_theorem": false,
+    "proof": "immediate from -(1-1/q)^2+(q+1)/q^5",
+    "scope_boundary": "this proves the first-moment limit only; it does not prove higher-moment equidistribution or evaluate additional fields",
+    "statement": "the exact normalized family mean tends to -1 as q tends to infinity through odd prime powers",
+    "status": "PROVED_FROM_EXACT_FORMULA"
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/function-field-usp4-toy-minor-moments-result.schema.json",
+  "title": "Exact USp(4) genus-two toy-minor moment comparison result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "definition",
+    "detector_semantic_id",
+    "exact_result_status",
+    "source_locks",
+    "character_identity",
+    "range_certificate",
+    "weyl_certificate",
+    "finite_comparisons",
+    "convergence_target",
+    "firewalls"
+  ],
+  "properties": {
+    "schema": {"const": "riemann.atlas.raw.function_field_usp4_toy_minor_moments.v1"},
+    "definition": {"type": "string", "minLength": 1},
+    "detector_semantic_id": {"type": "string", "pattern": "^ATLAS\\.DETECTOR\\."},
+    "exact_result_status": {"const": "RIGOROUS_CERTIFIED"},
+    "source_locks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "comparator_source",
+        "comparator_fixture",
+        "q_scan_source",
+        "q_scan_fixture"
+      ],
+      "properties": {
+        "comparator_source": {
+          "allOf": [
+            {"$ref": "#/$defs/source_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py"}}}
+          ]
+        },
+        "comparator_fixture": {
+          "allOf": [
+            {"$ref": "#/$defs/fixture_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json"}}}
+          ]
+        },
+        "q_scan_source": {
+          "allOf": [
+            {"$ref": "#/$defs/source_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/genus2_q_scan.py"}}}
+          ]
+        },
+        "q_scan_fixture": {
+          "allOf": [
+            {"$ref": "#/$defs/fixture_lock"},
+            {"properties": {"path": {"const": "research/l-families/atlas/function_field/genus2_q_scan.json"}}}
+          ]
+        }
+      }
+    },
+    "character_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "formula", "dimensions_at_identity", "haar_mean_consequence"],
+      "properties": {
+        "status": {"const": "PROVED_EXACT_LAURENT_IDENTITY"},
+        "formula": {"const": "F=-(1+chi_{omega_2}+chi_{2*omega_2})"},
+        "dimensions_at_identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["standard", "omega_2", "2*omega_2", "F"],
+          "properties": {
+            "standard": {"const": 4},
+            "omega_2": {"const": 5},
+            "2*omega_2": {"const": 14},
+            "F": {"const": -20}
+          }
+        },
+        "haar_mean_consequence": {"const": -1}
+      }
+    },
+    "range_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "trace_coordinates",
+        "formula",
+        "minimum",
+        "minimum_witnesses",
+        "maximum",
+        "maximum_witnesses",
+        "proof"
+      ],
+      "properties": {
+        "status": {"const": "PROVED_EXACT_ELEMENTARY_OPTIMIZATION"},
+        "trace_coordinates": {"const": "X=2*cos(theta_1), Y=2*cos(theta_2), each in [-2,2]"},
+        "formula": {"const": "F=(X+Y)^2-(2+X*Y)^2=(X-Y)^2-4-X^2*Y^2"},
+        "minimum": {
+          "const": {"numerator": -20, "denominator": 1, "text": "-20"}
+        },
+        "minimum_witnesses": {
+          "const": [
+            {
+              "X": {"numerator": -2, "denominator": 1, "text": "-2"},
+              "Y": {"numerator": -2, "denominator": 1, "text": "-2"}
+            },
+            {
+              "X": {"numerator": 2, "denominator": 1, "text": "2"},
+              "Y": {"numerator": 2, "denominator": 1, "text": "2"}
+            }
+          ]
+        },
+        "maximum": {
+          "const": {"numerator": 4, "denominator": 3, "text": "4/3"}
+        },
+        "maximum_witnesses": {
+          "const": [
+            {
+              "X": {"numerator": 2, "denominator": 1, "text": "2"},
+              "Y": {"numerator": -2, "denominator": 3, "text": "-2/3"}
+            },
+            {
+              "X": {"numerator": -2, "denominator": 3, "text": "-2/3"},
+              "Y": {"numerator": 2, "denominator": 1, "text": "2"}
+            },
+            {
+              "X": {"numerator": -2, "denominator": 1, "text": "-2"},
+              "Y": {"numerator": 2, "denominator": 3, "text": "2/3"}
+            },
+            {
+              "X": {"numerator": 2, "denominator": 3, "text": "2/3"},
+              "Y": {"numerator": -2, "denominator": 1, "text": "-2"}
+            }
+          ]
+        },
+        "proof": {"type": "string", "minLength": 1}
+      }
+    },
+    "weyl_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "root_system",
+        "positive_roots_as_exponent_pairs",
+        "density_constant_term",
+        "formula",
+        "maximum_moment",
+        "haar_moments_orders_1_through_6",
+        "haar_centered_moments_orders_1_through_6",
+        "haar_cumulants_orders_1_through_6",
+        "arithmetic"
+      ],
+      "properties": {
+        "root_system": {"const": "C2"},
+        "positive_roots_as_exponent_pairs": {
+          "const": [[2, 0], [0, 2], [1, 1], [1, -1]]
+        },
+        "density_constant_term": {"const": 8},
+        "formula": {"const": "integral f = CT(f*product_{alpha>0}(1-X^alpha)(1-X^-alpha))/8"},
+        "maximum_moment": {"const": 6},
+        "haar_moments_orders_1_through_6": {"const": [-1, 3, -11, 56, -374, 3117]},
+        "haar_centered_moments_orders_1_through_6": {"const": [0, 2, -4, 27, -178, 1533]},
+        "haar_cumulants_orders_1_through_6": {"const": [-1, 2, -4, 15, -98, 803]},
+        "arithmetic": {"const": "exact integer Laurent-polynomial convolution"}
+      }
+    },
+    "finite_comparisons": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/finite_comparison"}
+    },
+    "convergence_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "atlas_status",
+        "not_a_theorem",
+        "statement",
+        "evidence_scope",
+        "smallest_gap"
+      ],
+      "properties": {
+        "status": {"const": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"},
+        "atlas_status": {"const": "PROPOSED"},
+        "not_a_theorem": {"const": true},
+        "statement": {"type": "string", "minLength": 1},
+        "evidence_scope": {"const": "three exact fields q=3,5,7 and moment orders 1 through 6"},
+        "smallest_gap": {"type": "string", "minLength": 1}
+      }
+    },
+    "firewalls": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "source_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "raw_sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "raw_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "fixture_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "canonical_sha256", "payload_sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "fraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["numerator", "denominator", "text"],
+      "properties": {
+        "numerator": {"type": "integer"},
+        "denominator": {"type": "integer", "minimum": 1},
+        "text": {"type": "string", "minLength": 1}
+      }
+    },
+    "moment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["order", "finite_exact", "usp4_haar_exact", "finite_minus_haar"],
+      "properties": {
+        "order": {"type": "integer", "minimum": 1},
+        "finite_exact": {"$ref": "#/$defs/fraction"},
+        "usp4_haar_exact": {"type": "integer"},
+        "finite_minus_haar": {"$ref": "#/$defs/fraction"}
+      },
+      "allOf": [
+        {"if": {"properties": {"order": {"const": 1}}}, "then": {"properties": {"usp4_haar_exact": {"const": -1}}}},
+        {"if": {"properties": {"order": {"const": 2}}}, "then": {"properties": {"usp4_haar_exact": {"const": 3}}}},
+        {"if": {"properties": {"order": {"const": 3}}}, "then": {"properties": {"usp4_haar_exact": {"const": -11}}}},
+        {"if": {"properties": {"order": {"const": 4}}}, "then": {"properties": {"usp4_haar_exact": {"const": 56}}}},
+        {"if": {"properties": {"order": {"const": 5}}}, "then": {"properties": {"usp4_haar_exact": {"const": -374}}}},
+        {"if": {"properties": {"order": {"const": 6}}}, "then": {"properties": {"usp4_haar_exact": {"const": 3117}}}}
+      ]
+    },
+    "finite_comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["q", "spec_semantic_id", "member_count", "moments"],
+      "properties": {
+        "q": {"enum": [3, 5, 7]},
+        "spec_semantic_id": {"type": "string", "pattern": "^ATLAS\\.LFUNC\\."},
+        "member_count": {"type": "integer", "minimum": 1},
+        "moments": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/moment"}
+        }
+      },
+      "allOf": [
+        {"if": {"properties": {"q": {"const": 3}}}, "then": {"properties": {"member_count": {"const": 162}}}},
+        {"if": {"properties": {"q": {"const": 5}}}, "then": {"properties": {"member_count": {"const": 2500}}}},
+        {"if": {"properties": {"q": {"const": 7}}}, "then": {"properties": {"member_count": {"const": 14406}}}}
+      ]
+    }
+  }
+}

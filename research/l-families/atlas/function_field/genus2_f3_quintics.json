@@ -1,0 +1,322 @@
+{
+  "asymptotic_target": {
+    "finite_evidence": "the exhaustive q=3 mean is -104/243; its sign agrees but one field is not asymptotic evidence",
+    "heuristic": "q^-2*(q*a_1^2-a_2^2) corresponds to (Tr U)^2-e_2(U)^2",
+    "statement": "for the corresponding degree-5 family as odd q tends to infinity, the normalized toy-minor mean should approach the USp(4) Haar prediction -1",
+    "status": "CONJECTURAL_TARGET_NOT_A_THEOREM"
+  },
+  "curve_convention": {
+    "model": "C_D: y^2=D(x)",
+    "point_at_infinity": "exactly one rational point over every finite extension",
+    "point_count_formula": "N_m=q^m+1+sum_{x in F_(q^m)} chi_m(D(x))",
+    "projective_completion": "odd-degree hyperelliptic model"
+  },
+  "detector": {
+    "definition": "H_D(n)=q^(-n/2)B_n for 1/P_D(u)=sum B_nu^n; det[[H1,H2],[H2,H3]]",
+    "exact_identity": "q^2*det=q*a_1^2-a_2^2 for P=1+a_1*u+a_2*u^2+q*a_1*u^3+q^2*u^4",
+    "failure_mode": "purity and the functional equation alone do not force a memberwise sign",
+    "id": "FUNCTION_FIELD.NORMALIZED_RECIPROCAL.HANKEL_MINOR_2X2.TOY",
+    "parity": "even under D(T) -> -D(-T), unlike B_1*B_2"
+  },
+  "exact_checks": {
+    "L_times_reciprocal_is_one_through_checked_degree_for_every_member": true,
+    "coefficient_Hankel_closed_form_for_every_member": true,
+    "direct_Moebius_coefficients_equal_formal_inverse_for_every_member": true,
+    "integer_purity_certificate_for_every_member": true,
+    "palindromic_functional_equation_for_every_member": true,
+    "point_counts_reconstruct_character_L_polynomial_for_every_member": true,
+    "twist_involution_coefficient_parity_for_every_member": true
+  },
+  "family": {
+    "candidate_count": 243,
+    "conductor_degree": 5,
+    "expected_squarefree_count": 162,
+    "member_count": 162,
+    "reciprocal_degree_checked_through": 4
+  },
+  "family_statistics": {
+    "L_a1_a2_histogram": {
+      "-1,-1": 3,
+      "-1,-2": 3,
+      "-1,0": 3,
+      "-1,1": 6,
+      "-1,2": 12,
+      "-1,3": 6,
+      "-1,4": 3,
+      "-1,5": 3,
+      "-2,2": 9,
+      "-2,4": 6,
+      "-2,6": 3,
+      "-3,5": 3,
+      "-3,6": 3,
+      "-3,7": 3,
+      "0,-2": 9,
+      "0,0": 12,
+      "0,2": 3,
+      "0,4": 6,
+      "1,-1": 3,
+      "1,-2": 3,
+      "1,0": 3,
+      "1,1": 6,
+      "1,2": 12,
+      "1,3": 6,
+      "1,4": 3,
+      "1,5": 3,
+      "2,2": 9,
+      "2,4": 6,
+      "2,6": 3,
+      "3,5": 3,
+      "3,6": 3,
+      "3,7": 3
+    },
+    "L_a1_histogram": {
+      "-1": 39,
+      "-2": 18,
+      "-3": 9,
+      "0": 30,
+      "1": 39,
+      "2": 18,
+      "3": 9
+    },
+    "N1_histogram": {
+      "1": 9,
+      "2": 18,
+      "3": 39,
+      "4": 30,
+      "5": 39,
+      "6": 18,
+      "7": 9
+    },
+    "N2_histogram": {
+      "10": 30,
+      "11": 18,
+      "13": 30,
+      "14": 15,
+      "15": 18,
+      "17": 6,
+      "18": 12,
+      "19": 6,
+      "5": 6,
+      "6": 9,
+      "7": 6,
+      "9": 6
+    },
+    "negative_member_count": 102,
+    "normalized_toy_minor_mean": [
+      -104,
+      243
+    ],
+    "parity_odd_B1_B2_mean": [
+      0,
+      1
+    ],
+    "parity_odd_B1_B2_sign_counts": {
+      "negative": 54,
+      "positive": 54,
+      "zero": 54
+    },
+    "positive_member_count": 48,
+    "toy_minor_numerator_histogram": {
+      "-1": 30,
+      "-13": 6,
+      "-16": 6,
+      "-22": 12,
+      "-24": 6,
+      "-4": 24,
+      "-6": 12,
+      "-9": 6,
+      "0": 12,
+      "2": 24,
+      "3": 6,
+      "8": 18
+    },
+    "toy_minor_numerator_mean": [
+      -104,
+      27
+    ],
+    "twist_involution_fixed_member_count": 4,
+    "zero_member_count": 12
+  },
+  "field": {
+    "model": "F_3[T]",
+    "q": 3,
+    "quadratic_extension_for_point_counts": "F_9=F_3[theta]/(theta^2+1)"
+  },
+  "firewall": "This is a toy reciprocal-coefficient Hankel minor, not the atlas analytic Pick/Loewner kernel and not canonical XD or HCNC. Mixed signs prove only that exact purity plus the genus-two functional equation do not determine this toy minor's memberwise sign. The USp(4) limit is recorded solely as a target, not as a theorem or a consequence of this run.",
+  "object_metadata": {
+    "L_degree": 4,
+    "analytic_rank": "not computed or inferred",
+    "conductor": "all monic squarefree degree-5 D in F_3[T]",
+    "family": "quadratic function-field L-functions / genus-two hyperelliptic numerators",
+    "functional_equation": "P_D(u)=9*u^4*P_D(1/(3*u))",
+    "normalization": "P_D(u)=product_j(1-alpha_j*u), with |alpha_j|=sqrt(3)",
+    "object_type": "self-dual quadratic character",
+    "zero_data_provenance": "no imported zeros and no numerical root finder; exact integer certificates only"
+  },
+  "payload_sha256": "bd60d9407bfeb8919b38579e02c8b80785bd7da727adc003d0aaf9407e9a71f5",
+  "producer": {
+    "input_provenance": "complete deterministic generation, no external data",
+    "runtime_contract": "Python 3.11+ standard library; exact integer/rational arithmetic",
+    "source": "research/l-families/atlas/function_field/genus2_pilot.py",
+    "source_sha256_lf_normalized": "0025238e058ce20140f2ec6899a65e1c122caaa7c61a37e1df1934b6115fa90b"
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.F3.QUINTIC.GENUS2.EXACT.V1",
+  "rigor_level": "RIGOROUS_CERTIFIED",
+  "schema": "riemann.function_field.genus2_exact_pilot.v1",
+  "scope": "exhaustive finite family of all monic squarefree quintics over F_3",
+  "witnesses": {
+    "negative": {
+      "L_coefficients_low_to_high": [
+        1,
+        0,
+        -2,
+        0,
+        9
+      ],
+      "conductor": "T^5 + 2*T",
+      "conductor_coefficients_low_to_high": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "frobenius_trace": 0,
+      "normalized_toy_coefficient_hankel_minor": [
+        -4,
+        9
+      ],
+      "point_counts": {
+        "F_3": 4,
+        "F_9": 6,
+        "point_at_infinity_added": 1
+      },
+      "purity_certificate": {
+        "L_zeros_have_modulus_q_to_minus_one_half": true,
+        "endpoint_base_nonnegative": true,
+        "endpoint_square_inequality": true,
+        "pair_trace_center_inside_interval": true,
+        "pair_trace_discriminant": 32,
+        "pair_trace_polynomial_low_to_high": [
+          -8,
+          0,
+          1
+        ],
+        "pair_traces_are_real": true,
+        "palindromic_functional_equation": true,
+        "reciprocal_roots_have_modulus_sqrt_q": true
+      },
+      "reciprocal_coefficients_B0_to_B4": [
+        1,
+        0,
+        2,
+        0,
+        -5
+      ],
+      "toy_coefficient_hankel_minor_numerator": -4
+    },
+    "positive": {
+      "L_coefficients_low_to_high": [
+        1,
+        1,
+        0,
+        3,
+        9
+      ],
+      "conductor": "T^5 + 2*T^2 + 1",
+      "conductor_coefficients_low_to_high": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "frobenius_trace": -1,
+      "normalized_toy_coefficient_hankel_minor": [
+        1,
+        3
+      ],
+      "point_counts": {
+        "F_3": 5,
+        "F_9": 9,
+        "point_at_infinity_added": 1
+      },
+      "purity_certificate": {
+        "L_zeros_have_modulus_q_to_minus_one_half": true,
+        "endpoint_base_nonnegative": true,
+        "endpoint_square_inequality": true,
+        "pair_trace_center_inside_interval": true,
+        "pair_trace_discriminant": 25,
+        "pair_trace_polynomial_low_to_high": [
+          -6,
+          1,
+          1
+        ],
+        "pair_traces_are_real": true,
+        "palindromic_functional_equation": true,
+        "reciprocal_roots_have_modulus_sqrt_q": true
+      },
+      "reciprocal_coefficients_B0_to_B4": [
+        1,
+        -1,
+        1,
+        -4,
+        -2
+      ],
+      "toy_coefficient_hankel_minor_numerator": 3
+    },
+    "zero": {
+      "L_coefficients_low_to_high": [
+        1,
+        0,
+        0,
+        0,
+        9
+      ],
+      "conductor": "T^5 + 1",
+      "conductor_coefficients_low_to_high": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "frobenius_trace": 0,
+      "normalized_toy_coefficient_hankel_minor": [
+        0,
+        1
+      ],
+      "point_counts": {
+        "F_3": 4,
+        "F_9": 10,
+        "point_at_infinity_added": 1
+      },
+      "purity_certificate": {
+        "L_zeros_have_modulus_q_to_minus_one_half": true,
+        "endpoint_base_nonnegative": true,
+        "endpoint_square_inequality": true,
+        "pair_trace_center_inside_interval": true,
+        "pair_trace_discriminant": 24,
+        "pair_trace_polynomial_low_to_high": [
+          -6,
+          0,
+          1
+        ],
+        "pair_traces_are_real": true,
+        "palindromic_functional_equation": true,
+        "reciprocal_roots_have_modulus_sqrt_q": true
+      },
+      "reciprocal_coefficients_B0_to_B4": [
+        1,
+        0,
+        0,
+        0,
+        -9
+      ],
+      "toy_coefficient_hankel_minor_numerator": 0
+    }
+  }
+}

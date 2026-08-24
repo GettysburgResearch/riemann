@@ -1,0 +1,230 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "COEFFICIENT_DISPERSION",
+  "failure_modes": [
+    {
+      "code": "TOY_KERNEL_CONFLATION",
+      "description": "A reciprocal-coefficient Hankel matrix is mistaken for an analytic Pick/Loewner, XD, or HCNC kernel.",
+      "hostile_control": "The contract and result carry an explicit four-way firewall."
+    },
+    {
+      "code": "PURITY_TO_SIGN",
+      "description": "Exact reciprocal-root modulus is incorrectly promoted to a memberwise coefficient-minor sign.",
+      "hostile_control": "The exhaustive artifact contains 102 negative, 12 zero, and 48 positive members."
+    },
+    {
+      "code": "FINITE_TO_ASYMPTOTIC",
+      "description": "The q=3 mean is treated as a proof of the proposed USp(4) limit.",
+      "hostile_control": "The raw status is CONJECTURAL_TARGET_NOT_A_THEOREM and the atlas record has no theorem claim ID."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/function_field/genus2_pilot.py",
+      "correction": "Use the exact odd-degree infinity convention, F_9 point-count check, and degree-four reciprocal recurrence.",
+      "family": "F3_QUADRATIC_QUINTIC_GENUS2",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "No transfer from this finite function-field coefficient minor is supplied.",
+      "family": "NUMBER_FIELD",
+      "status": "UNSUPPORTED"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "Degree-four reciprocal recurrence, q*a_1^2-a_2^2 identity, and exact pair-trace interval certificate."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 1,
+    "kernel_convention": "COEFFICIENT_DISPERSION",
+    "mathematical_definition": "For P_D(u)=1+a_1u+a_2u^2+q*a_1u^3+q^2u^4 and 1/P_D(u)=sum_(n>=0) B_D(n)u^n, put H_D(n)=q^(-n/2)B_D(n) and evaluate the toy reciprocal-coefficient minor det([[H_D(1),H_D(2)],[H_D(2),H_D(3)]]); equivalently q^2*det=q*a_1^2-a_2^2.",
+    "normalization_requirements": [
+      "Use q=3 and polynomial degree as the native reciprocal-coefficient scale.",
+      "Normalize H_D(n)=3^(-n/2)B_D(n) exactly; the 2x2 determinant has common scale 3^(-2).",
+      "Count exactly one point at infinity for the odd-degree model y^2=D(x).",
+      "Treat the matrix only as a toy coefficient Hankel minor, never as the analytic Pick/Loewner kernel, XD, or HCNC."
+    ],
+    "slug": "FUNCTION_FIELD.GENUS2.NORMALIZED_RECIPROCAL.HANKEL_MINOR_TOY",
+    "version": 1
+  },
+  "identity_sha256": "b14ce20507c889883858197a62f1a227b3a1ce4216919096080d59c3a6502459",
+  "invariances": [
+    {
+      "code": "RECIPROCAL_IDENTITY",
+      "statement": "Direct Moebius sums equal the formal inverse through degree four for every frozen member.",
+      "status": "PROVED"
+    },
+    {
+      "code": "GENUS2_MINOR_IDENTITY",
+      "statement": "B_1*B_3-B_2^2=q*a_1^2-a_2^2 follows exactly from the palindromic degree-four polynomial.",
+      "status": "PROVED"
+    },
+    {
+      "code": "TWIST_PARITY",
+      "statement": "D(T)->-D(-T) changes B_n by (-1)^n and leaves the toy minor invariant.",
+      "status": "PROVED"
+    },
+    {
+      "code": "PURITY_FORCES_MEMBERWISE_SIGN",
+      "statement": "Exact reciprocal-root purity forces a fixed memberwise sign for this toy minor.",
+      "status": "FALSE"
+    }
+  ],
+  "kernel_convention": "COEFFICIENT_DISPERSION",
+  "mathematical_definition": "For P_D(u)=1+a_1u+a_2u^2+q*a_1u^3+q^2u^4 and 1/P_D(u)=sum_(n>=0) B_D(n)u^n, put H_D(n)=q^(-n/2)B_D(n) and evaluate the toy reciprocal-coefficient minor det([[H_D(1),H_D(2)],[H_D(2),H_D(3)]]); equivalently q^2*det=q*a_1^2-a_2^2.",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "configuration.q",
+      "requirement": "Use q=3 and polynomial degree as the native reciprocal-coefficient scale."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "configuration.statistic",
+      "requirement": "Normalize H_D(n)=3^(-n/2)B_D(n) exactly; the 2x2 determinant has common scale 3^(-2)."
+    },
+    {
+      "comparison_role": "IDENTITY",
+      "field": "configuration.infinity_convention",
+      "requirement": "Count exactly one point at infinity for the odd-degree model y^2=D(x)."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "detector_kind",
+      "requirement": "Treat the matrix only as a toy coefficient Hankel minor, never as the analytic Pick/Loewner kernel, XD, or HCNC."
+    }
+  ],
+  "notes": "The exact finite counterexamples concern only a declared toy coefficient minor. The proposed USp(4) mean is intentionally outside the proved invariances.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "CERTIFIED_INTEGER_COVERAGE"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": "research/l-families/atlas/detectors/raw-schemas/function-field-genus2-result.schema.json",
+    "representations": [
+      "HASHED_ARTIFACT"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "frozen_value": 3,
+        "minimum": 3,
+        "odd": true
+      },
+      "domain": "odd prime; frozen value 3",
+      "name": "q",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "frozen_value": 5,
+        "minimum": 1,
+        "odd": true
+      },
+      "domain": "positive odd integer; frozen value 5",
+      "name": "conductor_degree",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "frozen_value": 4,
+        "minimum": 3
+      },
+      "domain": "integer at least 3; frozen value 4",
+      "name": "reciprocal_degree",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "NORMALIZED_B1_B3_MINUS_B2_SQUARED"
+        ]
+      },
+      "domain": "NORMALIZED_B1_B3_MINUS_B2_SQUARED",
+      "name": "statistic",
+      "required": true,
+      "value_type": "ENUM"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "ONE_ODD_DEGREE_POINT"
+        ]
+      },
+      "domain": "ONE_ODD_DEGREE_POINT",
+      "name": "infinity_convention",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "reciprocal_hankel_numerator",
+    "path": "research/l-families/atlas/function_field/genus2_pilot.py",
+    "source_sha256": "0025238e058ce20140f2ec6899a65e1c122caaa7c61a37e1df1934b6115fa90b",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RECIPROCAL_COEFFICIENTS",
+      "name": "reciprocal_coefficients",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "exact_family_fixture",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Exact finite coefficient arithmetic only for all 162 monic squarefree quintics over F_3; no analytic Pick/Loewner, XD, HCNC, number-field, or asymptotic conclusion.",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.NORMALIZED_RECIPROCAL.HANKEL_MINOR_TOY.Hb14ce20507c889883858197a62f1a227",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "The finite sign audit uses an internal integer certificate rather than importing a root-modulus theorem.",
+      "semantic_id": "NONE",
+      "status": "NONE"
+    },
+    {
+      "scope": "Possible q-to-infinity mean -1; recorded only as a target and not used by the evaluation.",
+      "semantic_id": "PROPOSED.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR_MEAN",
+      "status": "PROPOSED"
+    }
+  ],
+  "title": "Exact genus-two reciprocal-coefficient Hankel-minor toy probe"
+}

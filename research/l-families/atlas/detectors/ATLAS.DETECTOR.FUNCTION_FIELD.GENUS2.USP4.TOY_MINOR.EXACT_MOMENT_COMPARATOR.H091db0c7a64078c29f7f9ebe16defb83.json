@@ -1,0 +1,253 @@
+{
+  "central_zero_policy": "NOT_APPLICABLE",
+  "detector_kind": "COEFFICIENT_DISPERSION",
+  "failure_modes": [
+    {
+      "code": "WEYL_NORMALIZATION_LOSS",
+      "description": "The C2 constant term is used without division by the Weyl order 8.",
+      "hostile_control": "The replay requires density constant term 8 and the frozen exact six moments."
+    },
+    {
+      "code": "FINITE_TO_LIMIT_PROMOTION",
+      "description": "Three finite fields are promoted to a q-to-infinity theorem.",
+      "hostile_control": "The raw result requires a conjectural status and not_a_theorem=true."
+    },
+    {
+      "code": "TOY_KERNEL_CONFLATION",
+      "description": "The coefficient statistic is identified with Pick/Loewner, XD, or HCNC.",
+      "hostile_control": "Detector, result, and evaluation retain the analytic-kernel firewall."
+    },
+    {
+      "code": "NUMBER_FIELD_TRANSFER",
+      "description": "The function-field comparison is transferred to number-field L-functions.",
+      "hostile_control": "The number-field adapter is explicitly unsupported."
+    }
+  ],
+  "family_adapters": [
+    {
+      "adapter_path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
+      "correction": "Use the exact C2 Weyl constant-term formula; no random matrices or numerical integration.",
+      "family": "USP4_HAAR_CLASS_FUNCTION",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+      "correction": "Use complete exact histograms and normalize K_D by q^2 before taking powers.",
+      "family": "F3_F5_F7_QUADRATIC_QUINTIC_GENUS2",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": null,
+      "correction": "No number-field transfer is supplied.",
+      "family": "NUMBER_FIELD",
+      "status": "UNSUPPORTED"
+    }
+  ],
+  "formalization_refs": [
+    {
+      "path": null,
+      "state": "DEFINITION_READY",
+      "target": "C2 Weyl constant term and USp(4) Laurent-character identity."
+    }
+  ],
+  "identity_kernel": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "contract_revision": 1,
+    "kernel_convention": "COEFFICIENT_DISPERSION",
+    "mathematical_definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2.",
+    "normalization_requirements": [
+      "Use the USp(4) torus eigenvalues x,x^-1,y,y^-1 and exactly the C2 positive roots (2,0),(0,2),(1,1),(1,-1).",
+      "Normalize Haar integration by CT(product_(alpha>0)(1-X^alpha)(1-X^-alpha))=8.",
+      "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7.",
+      "Keep exact Laurent and finite-histogram arithmetic separate from the proposed q-to-infinity convergence statement.",
+      "Treat F as a toy reciprocal-coefficient statistic, not Pick/Loewner, XD, or HCNC."
+    ],
+    "slug": "FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR",
+    "version": 1
+  },
+  "identity_sha256": "091db0c7a64078c29f7f9ebe16defb83561c31559007a849a845f093f24eb685",
+  "invariances": [
+    {
+      "code": "USP4_CHARACTER_IDENTITY",
+      "statement": "F=-(1+chi_{omega_2}+chi_{2*omega_2}) as an exact Laurent polynomial.",
+      "status": "PROVED"
+    },
+    {
+      "code": "C2_WEYL_NORMALIZATION",
+      "statement": "The chosen C2 Weyl density has constant term and Weyl order 8.",
+      "status": "PROVED"
+    },
+    {
+      "code": "USP4_EXACT_RANGE",
+      "statement": "In trace coordinates X,Y in [-2,2], F has exact range [-20,4/3].",
+      "status": "PROVED"
+    },
+    {
+      "code": "FINITE_HISTOGRAM_RECONSTRUCTION",
+      "statement": "Every stored finite moment is reconstructed exactly from the complete K histogram.",
+      "status": "PROVED"
+    },
+    {
+      "code": "FIXED_MOMENT_CONVERGENCE",
+      "statement": "For each fixed order, finite K_D/q^2 moments converge to USp(4) Haar moments.",
+      "status": "EXPECTED"
+    }
+  ],
+  "kernel_convention": "COEFFICIENT_DISPERSION",
+  "mathematical_definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2.",
+  "normalization_requirements": [
+    {
+      "comparison_role": "IDENTITY",
+      "field": "configuration.torus_convention",
+      "requirement": "Use the USp(4) torus eigenvalues x,x^-1,y,y^-1 and exactly the C2 positive roots (2,0),(0,2),(1,1),(1,-1)."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "configuration.weyl_order",
+      "requirement": "Normalize Haar integration by CT(product_(alpha>0)(1-X^alpha)(1-X^-alpha))=8."
+    },
+    {
+      "comparison_role": "SCALING",
+      "field": "configuration.maximum_moment",
+      "requirement": "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "result.convergence_target",
+      "requirement": "Keep exact Laurent and finite-histogram arithmetic separate from the proposed q-to-infinity convergence statement."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "detector_kind",
+      "requirement": "Treat F as a toy reciprocal-coefficient statistic, not Pick/Loewner, XD, or HCNC."
+    }
+  ],
+  "notes": "Certified claims are the exact identity, constant terms, six Haar moments, and finite histogram moments. The limiting comparison remains proposed.",
+  "output_contract": {
+    "arithmetic_classes": [
+      "EXACT_RATIONAL"
+    ],
+    "global_claim_allowed": false,
+    "raw_schema_path": "research/l-families/atlas/detectors/raw-schemas/function-field-usp4-toy-minor-moments-result.schema.json",
+    "representations": [
+      "HASHED_ARTIFACT"
+    ]
+  },
+  "parameters": [
+    {
+      "constraints": {
+        "frozen_value": "x,x^-1,y,y^-1"
+      },
+      "domain": "x,x^-1,y,y^-1",
+      "name": "torus_convention",
+      "required": true,
+      "value_type": "STRING"
+    },
+    {
+      "constraints": {
+        "frozen_value": 8,
+        "maximum": 8,
+        "minimum": 8
+      },
+      "domain": "C2 Weyl-group order 8",
+      "name": "weyl_order",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "element_minimum": 3,
+        "frozen_value": [
+          3,
+          5,
+          7
+        ],
+        "nonempty": true,
+        "odd": true,
+        "strictly_increasing": true,
+        "unique": true
+      },
+      "domain": "exactly 3,5,7",
+      "name": "q_values",
+      "required": true,
+      "value_type": "INTEGER_LIST"
+    },
+    {
+      "constraints": {
+        "frozen_value": 6,
+        "maximum": 6,
+        "minimum": 1
+      },
+      "domain": "orders 1 through 6",
+      "name": "maximum_moment",
+      "required": true,
+      "value_type": "INTEGER"
+    },
+    {
+      "constraints": {
+        "enum_values": [
+          "USP4_TOY_MINOR_F"
+        ]
+      },
+      "domain": "USP4_TOY_MINOR_F",
+      "name": "statistic",
+      "required": true,
+      "value_type": "ENUM"
+    }
+  ],
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 737,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/737"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "DETECTOR_CONTRACT",
+  "reference_implementation": {
+    "entry_point": "build_fixture",
+    "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
+    "source_sha256": "aba6da478a4f1e69db94dcbe31339023ffcab349558758076a5908a1912d0135",
+    "version": "1"
+  },
+  "required_inputs": [
+    {
+      "coverage_requirement": "COMPLETE",
+      "input_type": "LFUNCTION_SPEC",
+      "name": "lfunction_spec",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "exact_usp4_certificate",
+      "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "finite_family_histograms",
+      "required": true
+    }
+  ],
+  "revision": 1,
+  "schema_version": "riemann.atlas.detector_contract.v1",
+  "scope_boundary": "Exact character, Weyl constant-term, and q=3,5,7 histogram calculations through moment six only. Convergence is proposed, with no analytic-kernel conclusion or number-field transfer.",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H091db0c7a64078c29f7f9ebe16defb83",
+  "supersedes": [],
+  "theorem_links": [
+    {
+      "scope": "The exact q=3,5,7 comparisons do not prove equidistribution or convergence.",
+      "semantic_id": "PROPOSED.FUNCTION_FIELD.GENUS2.USP4.FIXED_MOMENT_LIMIT",
+      "status": "PROPOSED"
+    }
+  ],
+  "title": "Exact USp(4) genus-two toy-minor moment comparator"
+}
