@@ -1,7 +1,7 @@
-# T-105630 — Xi log-concavity pays the complete safe-region current–phase contraction
+# T-105630 — Xi log-concavity pays the current–phase contraction down to the adjacent derivative height
 
 Claim ID: `T-105630`  
-Status: **MAJOR UNCONDITIONAL SOURCE/SAFE-REGION ADVANCE; DESCENT AND POINTWISE IDENTIFICATION OPEN**  
+Status: **MAJOR UNCONDITIONAL SOURCE/ONE-RUNG ADVANCE; ZERO-HEIGHT DESCENT AND POINTWISE IDENTIFICATION OPEN**  
 Created: 2026-08-25  
 Depends on: `T-105620`; `L-105624--L-105632`; `R-105620`; `R-105630`  
 RH status: **unproved**
@@ -92,15 +92,22 @@ r_{b,h}={h\over b+h}R_{b+h}.}
 Hence it is also nonincreasing. The distinction between total height `b+h`
 and physical scale `h` is load bearing.
 
-## 4. Safe-height derivative phases are inner and causal
+## 4. The actual phase contracts down to beta_1
+
+Let
+
+\[
+\beta_j=\sup\{\Im z:\Xi^{(j)}(z)=0\},
+\qquad \beta_1\le\beta_0.
+\]
 
 If
 
 \[
-H\ge\beta_1,
+H>\beta_1,
 \]
 
-where `beta_1` is the highest imaginary part of a zero of `Xi'`, then
+then
 
 \[
 U_H(x)
@@ -119,13 +126,8 @@ V_H^*M_rV_H\preceq M_r.
 \tag{T-105630.6}
 \]
 
-In particular, for every safe base
-
-\[
-b\ge\beta_0
-\]
-
-and every `h>0`, `H=b+h` lies above `beta_1`, so
+For **every base `b>=beta_1`** and every `h>0`, the total height
+`H=b+h` exceeds `beta_1`. Hence
 
 \[
 \boxed{
@@ -136,8 +138,9 @@ V_H^*M_{r_{b,h}}V_H
 \]
 
 This is an unconditional contraction of the actual base-Xi current/Turan
-source by the actual Xi-prime all-pass throughout the complete zero-free safe
-region.
+source by the actual Xi-prime all-pass down to the adjacent derivative's
+extremal height. The entire source-energy interval `[beta_1,beta_0]` is paid
+without assuming that the Xi numerator is zero-free there.
 
 ## 5. The source-owned finite bank and signed tail are canonical
 
@@ -170,9 +173,9 @@ Moreover, for every source projection `P`, innerness gives
 \]
 
 Thus the positive part of the signed Paley--Wiener complement is identically
-zero in the safe region. Absolute model-space coverage is unnecessary there.
-A positive signed tail can first appear only when an anti-inner denominator
-factor enters during descent.
+zero whenever the total height exceeds `beta_1`. Absolute model-space coverage
+is unnecessary there. A positive signed tail can first appear only when an
+anti-inner Xi-prime denominator factor enters below that threshold.
 
 Finite model-space trace formulas are exact after finite/source regularization.
 The continuum multiplication weight is not trace class; no difference of two
@@ -204,15 +207,15 @@ sign. Hence causal energy does not itself imply the differential microscope.
 
 ## 7. Exact remaining gates
 
-The safe-region theorem does not descend itself below the unknown `beta_0`.
-At a lower base, small total heights can encounter zeros of `Xi'`, destroying
-the inner/causal geometry; even before that happens, an energy contraction is
+The source-energy descent is now complete to `beta_1`, not merely to
+`beta_0`. Below `beta_1`, small total heights can encounter zeros of `Xi'`,
+destroying the inner/causal geometry. Independently, an energy contraction is
 not automatically the pointwise differential-microscope inequality.
 
 ```text
 SAFEDESC105628
-  continue the source/phase control below beta_0 without a denominator pole
-  or positive zero-height charge;
+  continue below beta_1 without an anti-inner Xi-prime factor, denominator
+  pole, or positive zero-height charge;
 
 POINTID105630
   promote the source-owned weighted contraction to the physical pointwise
@@ -239,21 +242,21 @@ current = all-order exterior-square hierarchy          PROVED EXACT
 actual Turan = first current chaos                      PROVED EXACT
 standard Xi kernel strict log-concavity                 PROVED / REVIEW
 current-normalized source profile monotonicity          PROVED / REVIEW
-safe-height Xi-prime all-pass innerness                 PROVED / REVIEW
-safe-region causal weighted contraction                PROVED / REVIEW
+Xi-prime all-pass innerness for H>beta_1                PROVED / REVIEW
+source-energy phase descent to b=beta_1                 PROVED / REVIEW
 source-owned model-space bank                           PROVED EXACT
-safe-region positive signed complement                  EXCLUDED
+positive signed complement above beta_1                 EXCLUDED
 raw negative shell-energy naturality                    REFUTED
 causal energy -> pointwise sign shortcut                REFUTED
 POINTID105630 physical point evaluation                 OPEN / RH-BEARING
-SAFEDESC105628 descent below beta_0                     OPEN / RH-BEARING
+SAFEDESC105628 descent below beta_1                     OPEN / RH-BEARING
 ENDIDX105630 finite endpoint/index ledger               OPEN
 Riemann Hypothesis                                      UNPROVEN
 ```
 
 ## 9. Scope
 
-This theorem gives a substantial unconditional safe-region structure but does
-not prove RH. Log-concavity is only a second-order source property; causal
-weighted energy is not pointwise positivity; and an inner all-pass exists only
-above its denominator zeros. Those distinctions are binding.
+This theorem gives a genuine one-rung source-energy descent but does not prove
+RH. Log-concavity is only a second-order source property; causal weighted
+energy is not pointwise positivity; and the inner all-pass can fail when the
+total height crosses a zero of `Xi'`. Those distinctions are binding.
