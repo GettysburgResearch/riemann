@@ -113,6 +113,7 @@ def run() -> dict:
     checks = {
         "one_modulus_exact_identity": 0,
         "one_modulus_principal_contraction": 0,
+        "local_occupancy_sharpness": 0,
         "tensor_exact_identity": 0,
         "tensor_principal_contraction": 0,
         "quadratic_root_fibre": 0,
@@ -132,6 +133,26 @@ def run() -> dict:
             checks["one_modulus_exact_identity"] += 1
             assert Fraction(lhs, 1) >= Fraction(p + 1, p - 1) * norm2(principal)
             checks["one_modulus_principal_contraction"] += 1
+
+        # Equality fixtures: every sign-pair sum is the same nonzero vector.
+        # These attain the exact local observation norm (p-1)/(p+1).
+        for _ in range(20):
+            w = (rng.randint(-5, 5), rng.randint(-5, 5))
+            if w == (0, 0):
+                w = (1, 0)
+            coeff = {c: (0, 0) for c in range(1, p)}
+            seen = set()
+            for c in range(1, p):
+                if c in seen:
+                    continue
+                d = (-c) % p
+                seen.add(c)
+                seen.add(d)
+                coeff[c] = w
+            energy, principal, pairs = paired_formula(p, coeff)
+            assert all(pair == w for pair in pairs)
+            assert Fraction(energy, norm2(principal)) == Fraction(p + 1, p - 1)
+            checks["local_occupancy_sharpness"] += 1
 
         # Character exponents k modulo p-1 square by k -> 2k. The image is
         # exactly the even-character subgroup and every image has two roots;
@@ -191,6 +212,7 @@ def run() -> dict:
             "tensor_square_phase_identity": True,
             "principal_quadratic_root_fibre": True,
             "sharp_fixed_owner_bound_algebra": True,
+            "sharp_local_occupancy_operator_norm": True,
         },
         "open": {
             "coherent_short_core_owner_conductor_moment": True,
