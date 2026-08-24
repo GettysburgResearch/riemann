@@ -296,7 +296,7 @@ phase collapse.
 For
 
 \[
-m_r={\Xi^{(r)}\over\Xi^{(r+1)}
+m_r={\Xi^{(r)}\over\Xi^{(r+1)}}
 \]
 
 and the maximal zero height `beta_r`, `L-105442` makes
