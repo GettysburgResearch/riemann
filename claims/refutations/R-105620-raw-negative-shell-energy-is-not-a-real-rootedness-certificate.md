@@ -136,7 +136,7 @@ M_{p_N}(h_1,h_2)=0,
 \sum_{k<N}\mathcal E_-(\mathcal U_k)
 ={19\over9}>2.
 }
-\tag{R-105620.7]
+\tag{R-105620.7}
 \]
 
 ## 3. What the raw gate loses
