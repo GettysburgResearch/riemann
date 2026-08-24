@@ -1,0 +1,108 @@
+name: T-105560 independent simple-zero record audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/gpt56-pro/105200-xi-summable-residue-coherence
+    paths:
+      - .github/workflows/t105560-simple-zero-record-audit.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify-seven-point-certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out Riemann packet
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pinned verifier dependency
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'python-flint>=0.6,<1'
+          python - <<'PY'
+          import flint, platform
+          print('python', platform.python_version())
+          print('python-flint', getattr(flint, '__version__', 'unknown'))
+          PY
+
+      - name: Fetch exact external certificate source
+        run: |
+          git clone https://github.com/ainta/zeta-simple-zeros.git external-zeta-simple-zeros
+          cd external-zeta-simple-zeros
+          git checkout --detach 040c5e899e658aed7b56a2a87f501798fe10761d
+          test "$(git rev-parse HEAD)" = 040c5e899e658aed7b56a2a87f501798fe10761d
+          python -m pip install -e .
+
+      - name: Reconstruct both interval certificates
+        run: |
+          mkdir -p audit-output
+          cd external-zeta-simple-zeros
+          zeta-zero-verify three --json | tee ../audit-output/three.json
+          zeta-zero-verify seven --json --progress-every 1000000 | tee ../audit-output/seven.json
+
+      - name: Fail-closed comparison with the frozen certificate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          def load_last_json(path):
+              text = Path(path).read_text()
+              starts = [i for i,c in enumerate(text) if c == '{']
+              for i in reversed(starts):
+                  try:
+                      return json.loads(text[i:])
+                  except json.JSONDecodeError:
+                      pass
+              raise SystemExit(f'no JSON object in {path}')
+
+          three = load_last_json('audit-output/three.json')
+          seven = load_last_json('audit-output/seven.json')
+          assert three['verified'] is True
+          assert seven['verified'] is True
+          assert seven['certificate'] == 'seven-point'
+          assert seven['target'] == 'F6 >= 19/5000'
+          assert seven['grid'] == 4000
+          assert seven['precision_bits'] == 128
+          assert seven['kernel_table_sha256'] == 'a9992300d2bf71665aa2b6bd2727e798624cd297103bb200c7f0ca2baea55a2c'
+          assert seven['nodes'] == 707901
+          assert seven['pruned'] == 354315
+          assert seven['splits'] == 353586
+          assert seven['maximum_depth'] == 37
+          assert seven['initial_boxes'] == 729
+          details = seven['details']
+          assert details['interval_pruned'] == 257493
+          assert details['pressure_pruned'] == 3087
+          assert details['tangent_pruned'] == 93735
+          assert details['second_derivative_table_sha256'] == '7913c5511a572c32dd573cd53123d8cf3ddf73d3ec63b1aa823faae2ae83570a'
+          assert details['surviving_gap_components_cells'] == '[3809,4778];[7221,9363];[10572,44827]'
+          assert details['surviving_gap_components_count'] == 3
+          Path('audit-output/VERDICT.txt').write_text(
+              'PASS_T105560_INDEPENDENT_SEVEN_POINT_ARB_REPLAY\n'
+              'external_commit=040c5e899e658aed7b56a2a87f501798fe10761d\n'
+              'target=F6 >= 19/5000\n'
+              'nodes=707901\n'
+          )
+          print(Path('audit-output/VERDICT.txt').read_text())
+          PY
+
+      - name: Freeze artifact checksums
+        run: |
+          sha256sum audit-output/* | tee audit-output/SHA256SUMS
+
+      - name: Upload replay evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: t105560-independent-seven-point-replay
+          path: audit-output/
+          if-no-files-found: error
+          retention-days: 90
