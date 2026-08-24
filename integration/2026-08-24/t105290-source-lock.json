@@ -1,5 +1,5 @@
 {
-  "schema": "riemann.t105290.source-lock.v1",
+  "schema": "riemann.t105290.source-lock.v2",
   "created_utc": "2026-08-24",
   "repository": "gfreund123/riemann",
   "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
@@ -28,6 +28,7 @@
       "head": "b72d82e8d31791712196081d8d8a7c9c1fc14cb8",
       "claims": [
         "L-106020",
+        "L-106021",
         "L-106024",
         "L-106027",
         "T-106030"
@@ -46,13 +47,15 @@
   },
   "replay": {
     "classification": "PASS_T105290_ALLPASS_HANKEL_OWNER_CONDUCTOR",
-    "proof_object_sha256": "4319e3d89d5022a65e3d9869c35e987aab8077ba2c881774fd9c75fe9e029a1a"
+    "proof_object_sha256": "365cb91ba2af9276377fd0b2dc69c796c20dca51e478459132f3aced12582747"
   },
   "status": {
     "matrix_allpass_hankel_identity_proved": true,
     "finite_alpha_bridge_proved": true,
     "square_phase_hankel_contraction_proved": true,
-    "five_rung_source_bound_proved": true,
+    "five_rung_unphased_source_bound_proved": true,
+    "global_phase_family_diagonal_bound_proved": false,
+    "phase_family_excess_retained_in_hoch105290": true,
     "hoch105290_proved": false,
     "ninety_percent_established": false,
     "density_one_established": false,
