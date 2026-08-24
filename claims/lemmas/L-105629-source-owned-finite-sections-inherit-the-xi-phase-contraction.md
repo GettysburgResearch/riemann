@@ -1,4 +1,4 @@
-# L-105629 — Every source-owned finite section inherits the base-Xi phase contraction
+# L-105629 — Every source-owned finite section inherits the safe-region base-Xi contraction
 
 Claim ID: `L-105629`  
 Status: **PROVED EXACT FINITE-COMPRESSION THEOREM**  
@@ -89,28 +89,36 @@ nested source Gram section
 
 introduce no adverse phase-collision term by themselves.
 
-## 3. Base-Xi specialization
+## 3. Safe-region base-Xi specialization
 
-At the extremal base `beta_0`, `L-105628` proves
+Fix
 
 \[
-V_{0,\beta}^*M_{r_h}V_{0,\beta}
-\preceq M_{r_h}.
+b\ge\beta_0,
+\qquad h>0,
+\qquad H=b+h.
+\]
+
+`L-105628` proves
+
+\[
+V_H^*M_{r_{b,h}}V_H
+\preceq M_{r_{b,h}}.
 \]
 
 For every finite source-owned embedding `W_T`,
 
 \[
 \boxed{
-W_T^*V_{0,\beta}^*M_{r_h}V_{0,\beta}W_T
+W_T^*V_H^*M_{r_{b,h}}V_HW_T
 \preceq
-W_T^*M_{r_h}W_T.
+W_T^*M_{r_{b,h}}W_T.
 }
 \tag{L-105629.6}
 \]
 
 After whitening by the exact finite current Gram, the actual base-Xi
-all-pass/Turan source has operator norm at most one.
+all-pass/Turan source has operator norm at most one throughout the safe region.
 
 This removes the following items from the intrinsic phase ledger whenever the
 frame is constructed in the source metric:
@@ -123,10 +131,10 @@ source Gram whitening;
 projection of the causal all-pass.
 ```
 
-## 4. The one remaining finite interface
+## 4. The remaining finite and descent interfaces
 
-A physical zero-count/companion frame need not be source-owned. The missing
-statement is now exactly a bank-identification/index theorem:
+A physical zero-count/companion frame need not be source-owned. The finite
+interface is:
 
 ```text
 BANKID105629
@@ -136,19 +144,23 @@ source-owned finite section W_T up to a controlled finite codimension and one
 telescoping endpoint charge.
 ```
 
-If `BANKID105629` is exact, (L-105629.6) gives the finite phase contraction
-without further analytic estimates. If it is approximate, the two scalar
-Frobenius/trace defects of sibling `ROBUSTFRAME106400` are precisely the
+If `BANKID105629` is exact, (L-105629.6) gives the finite safe-region phase
+contraction without further source estimates. If it is approximate, the scalar
+Frobenius/trace defects of sibling `ROBUSTFRAME106400` measure precisely the
 failure of the physical bank to be this source-owned section.
 
-Thus the pointwise and proportion programmes now share one final geometric
-question: identification of the base physical zero-count bank with the
-canonical current source bank.
+Even an exact bank identification does not descend below `beta_0`; that is the
+separate `SAFEDESC105628` obstruction. Thus the pointwise RH route needs both:
+
+```text
+finite bank/index identification;
+continuation of the safe contraction through the first descending base.
+```
 
 ## 5. Scope
 
-The theorem does not prove `BANKID105629`. Multiplication by an arbitrary
-physical cutoff **before** source normalization is not asserted to be
-source-owned. Endpoint winding and denominator-zero codimension are not
+The theorem does not prove `BANKID105629` or `SAFEDESC105628`. Multiplication
+by an arbitrary physical cutoff **before** source normalization is not asserted
+to be source-owned. Endpoint winding and denominator-zero codimension are not
 removed. Higher derivative rungs require separate source profiles. RH remains
 unproved.
