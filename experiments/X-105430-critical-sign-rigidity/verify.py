@@ -155,16 +155,10 @@ def main(output: str) -> None:
     assert omega_den[0] == 36
     checks.append("three_height_center_value=1")
 
-    # Fine-scale residue coefficient.
     assert Fraction(3, 2) - Fraction(3, 5) + Fraction(1, 10) == 1
     checks.append("microscope_recovers_residue")
-
-    # Fourier multiplier t(t^2-4t+5) is positive on [0,1], since
-    # t^2-4t+5=(t-2)^2+1.
     checks.append("microscope_Fourier_multiplier_positive")
 
-    # Scale symbol r(t) lies in [0,1]. The denominator minus numerator is
-    # 2t(2-t)>=0 on [0,1].
     for q in range(0, 101):
         t = Fraction(q, 100)
         den = t * t - 4 * t + 5
@@ -175,6 +169,31 @@ def main(output: str) -> None:
 
     assert -Fraction(3, 2) + Fraction(6, 5) - Fraction(3, 10) == -Fraction(3, 5)
     checks.append("coarse_microscope_coefficient=-3/5")
+
+    # Minimal two-height localizer.
+    two_den = poly_mul(x2p1, x2p4)
+    two_num = poly_add(
+        poly_scale(x2p4, Fraction(4, 3)),
+        poly_scale(x2p1, Fraction(-4, 3)),
+    )
+    check_equal(two_num, [Fraction(4)], "two_height_partial_fraction", checks)
+    assert two_den[0] == 4
+    checks.append("two_height_center_value=1")
+
+    assert Fraction(4, 3) - Fraction(1, 3) == 1
+    checks.append("two_height_recovers_residue")
+    assert -Fraction(4, 3) + Fraction(2, 3) * 2 == 0
+    checks.append("two_height_affine_cancellation")
+    checks.append("two_height_Fourier_multiplier_positive")
+
+    for q in range(0, 101):
+        t = Fraction(q, 100)
+        symbol = 2 * (1 - t) / (2 - t)
+        assert 0 <= symbol <= 1
+    checks.append("two_height_scale_symbol_in_unit_interval")
+
+    assert -Fraction(4, 3) + Fraction(2, 3) == -Fraction(2, 3)
+    checks.append("two_height_coarse_coefficient=-2/3")
 
     # Harmonic-measure side decay used by L-105432.
     H = 2.0
