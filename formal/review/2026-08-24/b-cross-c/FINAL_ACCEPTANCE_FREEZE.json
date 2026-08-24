@@ -1,0 +1,32 @@
+{
+  "schema": "formal-final-acceptance-addendum-v1",
+  "repository": "gfreund123/riemann",
+  "bootstrap_base": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f",
+  "primary_pr": 735,
+  "primary_branch": "formal/030-xi-operator-qa",
+  "primary_original_reviewed_head": "4863c31dd497ffe69ea400fe29275decf4cb5d29",
+  "primary_repaired_head": "b20ee9b3678e5d8fa32b04b156bc02cec782a97b",
+  "primary_repair_commit_count": 1,
+  "binding_cross_review_pr": 749,
+  "binding_cross_review_branch": "formal/review/2026-08-24/b-cross-c",
+  "binding_cross_review_original_head": "9da1e250b647575418290407c6e30054322bb581",
+  "lean_available": false,
+  "lake_available": false,
+  "workflow_runs_found_for_repaired_head": 0,
+  "build_status": "BUILD_NOT_EXECUTED",
+  "static_source_review_completed": true,
+  "normalized_external_statement_sha256": "2eb547a373c49f56fa4da97284534bc06ee9a71548121a2b15d337cb79832c73",
+  "external_artifact_hash_scope": "normalized local citation/theorem record, not external publication bytes",
+  "disposition_counts": {
+    "RESOLVED": 8,
+    "RESOLVED_BY_HONEST_DOWNGRADE": 2,
+    "PARTIALLY_RESOLVED_WITH_EXCLUSION": 3,
+    "UNRESOLVED_BLOCKER": 1
+  },
+  "overall_verdict": "NOT_READY_FOR_RECONCILIATION",
+  "blocking_reason": "The complete exact-head Lean build, comparator builds, registry/source/blueprint validation, no-sorry scan, and parsed axiom audit were not executed.",
+  "primary_branch_modified_by_addendum": false,
+  "cross_review_only": true,
+  "merged": false,
+  "rh_proved": false
+}
