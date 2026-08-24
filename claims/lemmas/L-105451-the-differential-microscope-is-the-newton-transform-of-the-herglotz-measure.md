@@ -127,8 +127,7 @@ At every fixed `a`, put `q=h^2`. Equation (L-105451.7) gives, for every
 {d\mu(t)\over((a-t)^2+q)^{n+2}}
 \ge0.
 }
-\tag{L-105451.9
-}
+\tag{L-105451.9}
 
 The scale profile of the good microscope is therefore a Stieltjes-completely
 monotone function. The one inequality `C<=0` sits inside an infinite source
@@ -159,8 +158,7 @@ turns (L-105451.5) into
 (1+h|\xi|)e^{-h|\xi|}
 \widehat\mu(\xi).
 }
-\tag{L-105451.11
-}
+\tag{L-105451.11}
 
 Hence the multiplier isolated independently in `L-105444` is exactly the
 Fourier slice of the six-dimensional Newton kernel. The scale-flow, Hardy
