@@ -79,8 +79,7 @@ multiplicities. The Herglotz representation gives, for every `y>0`,
 \ge
 \sum_{a_j\in Z_r^{\rm top}}
  n_j{y\over a_j^2+y^2}.}
-\tag{L-105447.4
-}
+\tag{L-105447.4}
 
 The inequality is monotone over finite subsets and therefore remains valid
 when the top-edge set is infinite.
@@ -98,8 +97,7 @@ At `w=iy`, (L-105447.2) and `L-105418` give
 \[
 \boxed{
 g_\beta(iy)={i\over U_r(\beta_r+y)}.}
-\tag{L-105447.5
-}
+\tag{L-105447.5}
 
 Combining (L-105447.4)--(L-105447.5),
 
@@ -110,8 +108,7 @@ Combining (L-105447.4)--(L-105447.5),
 \le
 {1\over U_r(\beta_r+y)}.
 }
-\tag{L-105447.6
-}
+\tag{L-105447.6}
 
 This is an exact source-owned Poisson packing inequality for every zero on the
 highest horizontal zero line.
@@ -166,10 +163,9 @@ For `0<y_0<y_1`, integrate (L-105447.6). Monotone convergence gives
 \le
 \log {\mathcal A_r(\beta_r+y_1)
            \over
-           \mathcal A_r(\beta_r+y_0)},
+           \mathcal A_r(\beta_r+y_0)}.
 }
-\tag{L-105447.9
-}
+\tag{L-105447.9}
 
 where `mathcal A_r=A_r` in even parity and `mathcal A_r=S_r` in odd parity.
 Equivalently,
@@ -183,8 +179,7 @@ Equivalently,
  \over
  \mathcal A_r(\beta_r+y_0)}.
 }
-\tag{L-105447.10
-}
+\tag{L-105447.10}
 
 This is the boundary-zero analogue of source-critical capacity: the complete
 top edge consumes a positive Fourier-owned budget.
@@ -208,8 +203,7 @@ N_r^{\rm top}(T)
 \le
 {2T\over U_r(\beta_r+T)}.
 }
-\tag{L-105447.11
-}
+\tag{L-105447.11}
 
 The explicit first-orbit Laplace saddle gives
 
