@@ -8,10 +8,10 @@ RH status: **not assumed**
 
 ## 1. Standard positive summands
 
-For `u>=0`, use
+For `u>=0`, use the standard normalization
 
 \[
-\Phi(u)=4\sum_{n\ge1}\phi_n(u),
+\Phi(u)=2\sum_{n\ge1}\phi_n(u),
 \]
 
 \[
@@ -23,6 +23,15 @@ For `u>=0`, use
 \right)e^{-\pi n^2e^{2u}}.
 \tag{L-105626.1}
 \]
+
+Thus the displayed term of `Phi` is
+
+\[
+\left(4\pi^2n^4e^{9u/2}-6\pi n^2e^{5u/2}\right)
+ e^{-\pi n^2e^{2u}}.
+\]
+
+Any overall positive normalization would leave the argument unchanged.
 
 Put
 
@@ -194,14 +203,18 @@ The first term satisfies
 c_3=5184e^{-24}<{1\over10^6},
 \]
 
-because `e^24=(e^3)^8>20^8`. Moreover
+because `e^24=(e^3)^8>20^8`. The rational prefactor in
+`c_(n+1)/c_n` is decreasing for `n>=3` and at `n=3` equals `100/9`.
+Moreover the exponential ratio is at most `e^-21<20^-7`. Therefore
 
 \[
-{c_{n+1}\over c_n}<10^{-8}
-\qquad(n\ge3),
+{c_{n+1}\over c_n}
+< {100\over9\,20^7}<10^{-8}
+\qquad(n\ge3).
+\tag{L-105626.13}
 \]
 
-by the explicit ratio and `e^21>(e^3)^7>20^7`. Hence
+Hence
 
 \[
 \sum_{n\ge3}c_n<{1\over10^6}(1-10^{-8})^{-1}
@@ -212,7 +225,7 @@ A deliberately looser rational summary is therefore
 
 \[
 \boxed{S<{19\over1000}.}
-\tag{L-105626.13}
+\tag{L-105626.14}
 \]
 
 Using `pi<22/7`,
@@ -225,7 +238,7 @@ Using `pi<22/7`,
 <
 {9\over2}{22\over7}{19\over1000}
 ={1881\over7000}<1.
-\tag{L-105626.14}
+\tag{L-105626.15}
 \]
 
 Multiplying by `4x` gives
@@ -235,10 +248,10 @@ Multiplying by `4x` gives
 \sum_{n\ge2}n^4q_n^2e^{-xq_n}
 <4x
 \le-b_1.
-\tag{L-105626.15}
+\tag{L-105626.16}
 \]
 
-Equations (L-105626.11) and (L-105626.15) prove (L-105626.8).
+Equations (L-105626.11) and (L-105626.16) prove (L-105626.8).
 
 ## 4. Conclusion
 
@@ -249,11 +262,11 @@ Substitution in the exact mixture identity yields
 (\log\Phi)''(u)<0
 \qquad(u\ge0).
 }
-\tag{L-105626.16}
+\tag{L-105626.17}
 \]
 
-The even extension is therefore strictly log-concave on each open half-line,
-with the expected symmetric derivative at the origin.
+The even extension is therefore strictly log-concave on the real line, with
+its symmetric derivative at the origin.
 
 This proof uses neither interval arithmetic nor the recent external preprints
 claiming the same source property. It uses only the standard theta formula,
@@ -271,7 +284,7 @@ Combining with `L-105624` gives unconditionally for the standard Xi source
 \text{ is nonincreasing on }[0,\infty)
 \qquad(h>0).
 }
-\tag{L-105626.17}
+\tag{L-105626.18}
 \]
 
 Thus the `LC` source hypothesis in `L-105625` is paid for Xi. The remaining
