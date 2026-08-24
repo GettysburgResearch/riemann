@@ -3,6 +3,7 @@
 Claim ID: `T-106410`  
 Status: **UNCONDITIONAL SOURCE CONTRACTION + CONDITIONAL ONE-ADAPTER THEOREM**  
 Created: 2026-08-24  
+Strengthened: 2026-08-24  
 Depends on: `L-105260`, `L-106400--L-106412`; comparison with PR #726 `L-105542`  
 RH status: **unproved**
 
@@ -27,9 +28,9 @@ Hilbert--Schmidt cost at most
 \[
 \boxed{
 \mathfrak r_*
-=\frac{6348928}{1568239201}
-=0.0040484436\ldots
-<\frac1{200}
+=\frac{2547232}{1568239201}
+=0.0016242624\ldots
+<\frac1{600}.
 }
 \tag{T-106410.2}
 
@@ -94,11 +95,11 @@ and \(d_T/N(T)\ge999/1000-o(1)\) gives the sharper conditional bound
 -\frac1{1000}
 -2\mathfrak r_*\frac{999}{1000}
 -o(1)
-=0.9493112096\ldots-o(1).
+=0.9541547236\ldots-o(1).
 }
 \tag{T-106410.4}
 
-In particular, using only \(\mathfrak r_*<1/200\),
+In particular, using only \(\mathfrak r_*<1/600\),
 
 \[
 \boxed{
@@ -106,8 +107,8 @@ In particular, using only \(\mathfrak r_*<1/200\),
 \Longrightarrow
 \liminf_{T\to\infty}
 \frac{N_0(T,2T)}{N(T,2T)}
->\frac{94741}{100000}
-=0.94741.
+>\frac{95407}{100000}
+=0.95407.
 }
 \tag{T-106410.5}
 
@@ -139,10 +140,10 @@ statement.
 ```text
 same-sign Xi half-source contraction          PROVED EXACT
 reflected Xi channel contraction              PROVED EXACT
-complete four-channel cost < 1/200            PROVED EXACT
+complete four-channel cost < 1/600            PROVED EXACT
 negative-trace quantile absorption            PROVED EXACT
 ENDPOINTBANK106410                            OPEN / RECORD-BEARING
-conditional line fraction > 94.741%           PROVED IMPLICATION
+conditional line fraction > 95.407%           PROVED IMPLICATION
 ninety percent for zeta                       UNPROVED
 density one                                   UNPROVED
 Riemann Hypothesis                            UNPROVED
