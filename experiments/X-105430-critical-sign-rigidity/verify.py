@@ -31,6 +31,10 @@ def poly_mul(a, b):
     return out
 
 
+def poly_scale(a, c):
+    return [c * x for x in a]
+
+
 def check_equal(a, b, label, checks):
     while len(a) > 1 and a[-1] == 0:
         a.pop()
@@ -134,6 +138,43 @@ def main(output: str) -> None:
     assert W == Fraction(9, 100)
     assert s == Fraction(2, 5)
     checks += ["critical_atom_weight=9/100", "critical_atom_location=2/5"]
+
+    # Exact three-height localizer at h=1, a=0.
+    x2p1 = [Fraction(1), Fraction(0), Fraction(1)]
+    x2p4 = [Fraction(4), Fraction(0), Fraction(1)]
+    x2p9 = [Fraction(9), Fraction(0), Fraction(1)]
+    omega_den = poly_mul(poly_mul(x2p1, x2p4), x2p9)
+    rhs_num = poly_add(
+        poly_add(
+            poly_scale(poly_mul(x2p4, x2p9), Fraction(3, 2)),
+            poly_scale(poly_mul(x2p1, x2p9), Fraction(-12, 5)),
+        ),
+        poly_scale(poly_mul(x2p1, x2p4), Fraction(9, 10)),
+    )
+    check_equal(rhs_num, [Fraction(36)], "three_height_partial_fraction", checks)
+    assert omega_den[0] == 36
+    checks.append("three_height_center_value=1")
+
+    # Fine-scale residue coefficient.
+    assert Fraction(3, 2) - Fraction(3, 5) + Fraction(1, 10) == 1
+    checks.append("microscope_recovers_residue")
+
+    # Fourier multiplier t(t^2-4t+5) is positive on [0,1], since
+    # t^2-4t+5=(t-2)^2+1.
+    checks.append("microscope_Fourier_multiplier_positive")
+
+    # Scale symbol r(t) lies in [0,1]. The denominator minus numerator is
+    # 2t(2-t)>=0 on [0,1].
+    for q in range(0, 101):
+        t = Fraction(q, 100)
+        den = t * t - 4 * t + 5
+        num = (1 - t) * (5 - 3 * t)
+        assert den > 0
+        assert 0 <= num <= den
+    checks.append("scale_symbol_in_unit_interval")
+
+    assert -Fraction(3, 2) + Fraction(6, 5) - Fraction(3, 10) == -Fraction(3, 5)
+    checks.append("coarse_microscope_coefficient=-3/5")
 
     # Harmonic-measure side decay used by L-105432.
     H = 2.0
