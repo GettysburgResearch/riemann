@@ -1,4 +1,4 @@
-# Small-shift endpoint bank: an exact \(0.5\%\) source budget
+# Small-shift endpoint bank: an exact \(1/600\) source budget
 
 ## Purpose
 
@@ -15,10 +15,11 @@ Truncate the positive Xi Fourier half-source to \([0,L]\) and choose
 lambda L = 1/200.
 ```
 
-The two same-sign Hankel channels have squared relative constant
+After symmetric pairing, the two same-sign Hankel channels have squared
+relative constant
 
 ```text
-64/39601 < 1/600.
+16/39601 < 1/2400.
 ```
 
 The two reflected Toeplitz orientations have squared relative constant
@@ -30,9 +31,9 @@ The two reflected Toeplitz orientations have squared relative constant
 Paying all four channels gives
 
 ```text
-6348928/1568239201
- = 0.0040484436...
- < 1/200.
+2547232/1568239201
+ = 0.0016242624...
+ < 1/600.
 ```
 
 This is an exact source inequality, not a frozen Möbius model estimate.
@@ -46,10 +47,10 @@ frame costs at most two after \(o(d)\) deletion.  The exact two-rung descent the
 gives the safe conditional lower bound
 
 ```text
-N0/N > 94741/100000 = 0.94741.
+N0/N > 95407/100000 = 0.95407.
 ```
 
-The sharper retained arithmetic is approximately `0.949311209632`.
+The sharper retained arithmetic is approximately `0.954154723685`.
 
 ## Exact open interface
 
@@ -63,3 +64,6 @@ ENDPOINTBANK106410:
 The source contraction, numerator sign, companion index and inverse-frame
 quantile are no longer open.  `ENDPOINTBANK106410` remains unproved, so neither
 ninety percent nor RH is claimed.
+
+A positive-Fourier countermodel is retained in `R-106410`: source positivity
+and the small channel ratio alone cannot supply the endpoint bank.
