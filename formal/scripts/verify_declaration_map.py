@@ -2,33 +2,60 @@
 from __future__ import annotations
 
 import csv
-import re
+import subprocess
+import tempfile
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 FORMAL = ROOT / "formal"
 DELTA = FORMAL / "registry" / "deltas" / "C.tsv"
-DECL_RE_TEMPLATE = r"\b(?:theorem|lemma|def|structure|inductive|abbrev)\s+{name}\b"
+API = FORMAL / "registry" / "deltas" / "C_API.tsv"
+CANONICAL = ROOT / "canonical" / "2026-08-22" / "claims.tsv"
 
 PROVED = {"PROVED", "UPSTREAM_PROVED", "REFUTED_FORMALIZED"}
 CONDITIONAL = {"PROVED_CONDITIONAL"}
 BLOCKED = {"BLOCKED_LIBRARY", "BLOCKED_MATHEMATICS"}
+ALLOWED = PROVED | CONDITIONAL | BLOCKED
 
 
-def module_path(module: str) -> Path:
-    return FORMAL / (module.replace(".", "/") + ".lean")
+def read(path: Path) -> list[dict[str, str]]:
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
 
 
-def declaration_exists(path: Path, declaration: str) -> bool:
-    leaf = declaration.rsplit(".", 1)[-1]
-    pattern = re.compile(DECL_RE_TEMPLATE.format(name=re.escape(leaf)))
-    return bool(pattern.search(path.read_text(encoding="utf-8")))
+def run_lean_checks(declarations: list[str]) -> str:
+    lines = ["import RiemannFormal", ""]
+    for declaration in declarations:
+        lines.append(f"#check {declaration}")
+        lines.append(f"#print {declaration}")
+    with tempfile.NamedTemporaryFile(
+        mode="w", suffix=".lean", dir=FORMAL, encoding="utf-8", delete=False
+    ) as handle:
+        handle.write("\n".join(lines) + "\n")
+        source = Path(handle.name)
+    try:
+        completed = subprocess.run(
+            ["lake", "env", "lean", source.name],
+            cwd=FORMAL,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            check=False,
+        )
+        if completed.returncode != 0:
+            raise SystemExit(
+                "Lean declaration environment audit failed:\n" + completed.stdout
+            )
+        return completed.stdout
+    finally:
+        source.unlink(missing_ok=True)
 
 
 def main() -> None:
-    with DELTA.open(newline="", encoding="utf-8") as handle:
-        rows = list(csv.DictReader(handle, delimiter="\t"))
+    canonical_ids = {row["semantic_id"] for row in read(CANONICAL)}
+    rows = read(DELTA)
+    api_rows = read(API)
     if not rows:
         raise SystemExit("Reviewer C declaration delta is empty")
 
@@ -36,52 +63,72 @@ def main() -> None:
     duplicates = [key for key, count in Counter(semantic_ids).items() if count > 1]
     if duplicates:
         raise SystemExit(f"duplicate Reviewer C semantic IDs: {duplicates}")
+    unknown = sorted(set(semantic_ids) - canonical_ids)
+    if unknown:
+        raise SystemExit(f"C.tsv contains noncanonical semantic IDs: {unknown}")
 
+    declarations: list[str] = []
     counts: Counter[str] = Counter()
     for line_no, row in enumerate(rows, start=2):
-        semantic_id = row["semantic_id"].strip()
+        sid = row["semantic_id"].strip()
         declaration = row["lean_declaration"].strip()
         module = row["lean_module"].strip()
         status = row["formal_status"].strip()
         blocked_on = row["blocked_on"].strip()
         notes = row["notes"].strip()
-
-        if not semantic_id or not declaration or not module or not status:
+        if not sid or not declaration or not module or not status or not notes:
             raise SystemExit(f"C.tsv:{line_no}: missing required field")
-        path = module_path(module)
-        if not path.is_file():
-            raise SystemExit(f"C.tsv:{line_no}: module path does not exist: {path}")
-        if not declaration_exists(path, declaration):
-            raise SystemExit(
-                f"C.tsv:{line_no}: declaration {declaration} not found in {path}"
-            )
-
+        if status not in ALLOWED:
+            raise SystemExit(f"C.tsv:{line_no}: unsupported status {status}")
         if status in CONDITIONAL:
-            if not blocked_on:
+            if not blocked_on or "EXPLICIT_HYPOTHESES" not in notes:
                 raise SystemExit(
-                    f"C.tsv:{line_no}: conditional theorem lacks blocked_on inputs"
+                    f"C.tsv:{line_no}: conditional declaration lacks exact blockers/marker"
                 )
-            if "EXPLICIT_HYPOTHESES" not in notes:
-                raise SystemExit(
-                    f"C.tsv:{line_no}: conditional theorem lacks explicit-hypothesis marker"
-                )
-        elif status in PROVED:
-            if blocked_on:
-                raise SystemExit(
-                    f"C.tsv:{line_no}: proved declaration still has blocked_on={blocked_on!r}"
-                )
-        elif status in BLOCKED:
-            if not blocked_on:
-                raise SystemExit(
-                    f"C.tsv:{line_no}: blocked declaration lacks a named blocker"
-                )
-        else:
-            raise SystemExit(f"C.tsv:{line_no}: unsupported Reviewer C status {status}")
-
+        elif status in PROVED and blocked_on:
+            raise SystemExit(
+                f"C.tsv:{line_no}: proved declaration still has blocker {blocked_on!r}"
+            )
+        elif status in BLOCKED and not blocked_on:
+            raise SystemExit(f"C.tsv:{line_no}: blocked declaration lacks blocker")
+        deps = [x.strip() for x in row["formal_dependency_ids"].split(";") if x.strip()]
+        bad_deps = sorted(set(deps) - canonical_ids)
+        if bad_deps:
+            raise SystemExit(f"C.tsv:{line_no}: unknown dependency IDs {bad_deps}")
+        declarations.append(declaration)
         counts[status] += 1
 
+    api_ids = [row["formal_api_id"].strip() for row in api_rows]
+    api_dups = [key for key, count in Counter(api_ids).items() if count > 1]
+    if api_dups:
+        raise SystemExit(f"duplicate C API IDs: {api_dups}")
+    for line_no, row in enumerate(api_rows, start=2):
+        if not row["formal_api_id"].startswith("FORMAL.API.OPERATOR."):
+            raise SystemExit(f"C_API.tsv:{line_no}: invalid API ID")
+        if row["formal_status"] not in {"PROVED", "PROVED_CONDITIONAL"}:
+            raise SystemExit(f"C_API.tsv:{line_no}: invalid API status")
+        if row["source_semantic_id"] not in canonical_ids:
+            raise SystemExit(f"C_API.tsv:{line_no}: unknown source semantic ID")
+        declarations.append(row["lean_declaration"].strip())
+
+    declarations = list(dict.fromkeys(declarations))
+    output = run_lean_checks(declarations)
+    for declaration in declarations:
+        if declaration not in output:
+            raise SystemExit(
+                f"Lean output did not contain fully qualified declaration {declaration}"
+            )
+
+    generated = FORMAL / "reports" / "generated"
+    generated.mkdir(parents=True, exist_ok=True)
+    (generated / "C_DECLARATION_TYPES.txt").write_text(output, encoding="utf-8")
+
     rendered = " ".join(f"{key}={counts[key]}" for key in sorted(counts))
-    print(f"PASS_REVIEWER_C_DECLARATION_MAP rows={len(rows)} {rendered}")
+    print(
+        "PASS_REVIEWER_C_DECLARATION_ENVIRONMENT "
+        f"canonical_rows={len(rows)} api_rows={len(api_rows)} "
+        f"declarations={len(declarations)} {rendered}"
+    )
 
 
 if __name__ == "__main__":

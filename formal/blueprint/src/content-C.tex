@@ -1,57 +1,96 @@
-\section{Finite operator algebra and formal firewalls}
+\section{Finite operator algebra, exact reserve interfaces, and firewalls}
 
-Reviewer C formalizes the stable finite-dimensional operator layer at the
-bootstrap source lock.  The central registered declaration is
-\texttt{OPERATOR.XI.PICK\_ORDER3}; its Lean theorem is deliberately classified
-\emph{proved conditional}.  The corrected published high-zero verification,
-the source lock, grouped local $C^2$ convergence, the orbit convention, the
-multiplicity residual, the reciprocal-square tail budget, and repeated-node
-reduction all occur as explicit hypotheses.  Compilation of the theorem does
-not convert any of those hypotheses into a proved analytic input.
+Reviewer C preserves the kernel-checked finite operator layer and repairs the
+actual--Xi wrapper after independent cross-review.  The Riemann Hypothesis
+remains unproved.
 
-\subsection{Pick determinants}
+\subsection{Exact finite Pick algebra}
 
-For $F(x)=x p(x^2)$, the finite Pick entry is
+For $F(x)=x p(x^2)$, put
 \[
   H_{ij}=\frac{x_i p_i+x_j p_j}{x_i+x_j}.
 \]
-The two-point determinant and the reviewed three-node factorization are proved
-by exact field algebra.  The three-node determinant is the product of the
-second divided differences of $1/p$ and $tp$, multiplied by the positive
-Vandermonde prefactor.  The Lean declarations are
+The exact two-point determinant identity and the three-node factorization into
+the reciprocal and companion second divided differences are formalized by
 \lean{RiemannFormal.Operator.two_point_pick_identity} and
 \lean{RiemannFormal.Operator.three_node_pick_determinant_identity}.
+Semantic ID: \texttt{OPERATOR.XI.PICK\_ORDER3.DETERMINANT}.
 
-The finite quadratic-form layer distinguishes positive semidefiniteness from
-positive definiteness.  An exact LDL congruence proves that a positive first
-pivot, a positive leading two-by-two minor, and a nonnegative determinant imply
-PSD.  Strict determinant positivity is required for PD.  A zero-matrix fixture
-proves that PSD cannot be silently strengthened to PD.
+The LDL layer keeps PSD and PD separate.  A nonnegative three-node determinant
+produces PSD under the strict leading pivots; PD requires a strict determinant.
+Duplicate-row congruences for the $12$, $13$, and $23$ repetition patterns are
+proved separately.
 
-\subsection{Reciprocal concavity}
+\subsection{Concrete external and actual--Xi data}
 
-For a second-order jet $f$, put
+The conditional headline uses the explicit normalization
 \[
-  \mathcal E(f)=f f''-2(f')^2.
+ \xi(s)=\tfrac12s(s-1)\Lambda(s),\qquad
+ \Xi(z)=\xi(\tfrac12+z),\qquad
+ p(x)=\operatorname{Re}\frac{\Xi'(x)}{x\Xi(x)}.
 \]
-The cross term for a positive sum has an exact square certificate, yielding
-finite positive-sum closure.  The off-line orbit defect, the zero-curvature
-critical orbit, one-orbit reserve absorption, finite reserve allocation, and a
-finite reciprocal-square tail budget are formalized separately.  The grouped
-actual-Xi conclusion remains conditional on the named analytic inputs.
+The external verified-height proposition states the exact height
+$3{,}000{,}175{,}332{,}800$ and the precise critical-line conclusion.  Its
+bibliographic/artifact lock and normalized statement SHA-256 are independent of
+the local repository claim SHA.
+
+The grouped actual--Xi interface includes injective reflected and critical
+representative enumerations, analytic-order multiplicities, locally uniform
+convergence of the value and first two derivatives on $t>1/4$, one selected
+low critical reserve, and the residual $(m_0-1)R_0$.  A separate exact
+paid-prefix interface records the unspent reserve, paid off-line blocks, all
+other critical blocks, and convergence of those nonnegative finite curvatures
+to the actual--Xi jet.
+
+\subsection{Source-specific reciprocal curvature}
+
+For one reflected off-line orbit, the formalization proves the exact defect and
+cross-curvature formulas, including
+\[
+ \epsilon=\frac{2m\kappa}{1-\kappa},
+ \qquad \epsilon\le \frac{9m}{b^2}
+\]
+from the concrete conditions $0<a<1/2$, $b>H_*$ and
+$\gamma_0\le H_*/2$; the caller supplies no payment inequality.  The declarations are
+\lean{RiemannFormal.Operator.reflectedOffLine_cross_curvature_exact} and
+\lean{RiemannFormal.Operator.reflectedOffLineOrbit_absorbed_reviewed}.
+Semantic ID: \texttt{OPERATOR.XI.RECIPROCAL\_CONCAVITY.ONE\_ORBIT}.
+
+The global finite-prefix allocation has nonnegative shares and tails, pays every
+listed orbit, consumes total reserve at most one, and retains a nonnegative
+leftover with an exact one-use identity.  The reciprocal-square tail and its
+numerical budget remain explicit theorem inputs.
+\notready
+\lean{RiemannFormal.Operator.buildLockedActualXiReserveAllocation}
+Semantic ID: \texttt{OPERATOR.XI.CRITICAL\_RESERVE\_BUDGET}.
+
+\subsection{Actual--Xi order three}
+
+The repaired headline
+\lean{RiemannFormal.Operator.actualXiPickOrderThreeConditional}
+uses the concrete publication theorem, source lock, grouped $C^2$ expansion,
+multiplicity residual, one-use reserve allocation, source-faithful paid-prefix
+$C^2$ convergence, and exact scalar curvature bridges.  Repeated positive nodes are not assumed positive semidefinite: equal
+squares imply equal nodes and duplicate rows/columns reduce to the order-two
+actual--Xi theorem.
+
+\notready
+The formal verdict is \texttt{PROVED\_CONDITIONAL}.  The conclusion records PSD for every positive packet of sizes one, two, and
+three.  It does not assert distinct-node positive
+definiteness, order four, or RH.
+Semantic ID: \texttt{OPERATOR.XI.PICK\_ORDER3}.
 
 \subsection{Operator no-go theorems}
 
-The trusted refutation modules kernel-check minimal counterexamples showing:
+The trusted refutation modules retain exact finite witnesses proving that:
 \begin{itemize}
 \item a positive Schur complement cannot repair an existing negative direction;
-\item an $\ell^2$ coefficient budget does not imply coherent operator contraction;
-\item small negative inertia does not bound a positive current;
-\item the hyperbolic pole block is not a sum of two positive squares;
+\item an $\ell^2$ coefficient budget does not imply coherent contraction;
+\item small negative inertia does not control positive current;
+\item the hyperbolic pole block is not two positive squares;
 \item positive excess does not orient an arbitrary square root;
-\item a scalar diagonal does not determine the full polarized Gram matrix.
+\item a scalar diagonal does not determine a polarized Gram matrix.
 \end{itemize}
-The heat module contains only a finite displacement/parity fixture.  It does
-not claim the full Bohr--Weyl uniform-center theorem.  The Q4 module contains
-only finite Hermite, filter, and determinant identities; SACF, UOSACF,
-fixed-center heat, and the constant-four frontier remain unproved.
+
+The heat displacement result remains a finite parity fixture only.  SACF,
+UOSACF, fixed-center heat, the constant-four frontier, and RH remain unproved.

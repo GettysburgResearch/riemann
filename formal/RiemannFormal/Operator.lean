@@ -1,6 +1,9 @@
 import RiemannFormal.Operator.Foundations
 import RiemannFormal.Operator.FiniteMatrix
 import RiemannFormal.Operator.PickAlgebra
+import RiemannFormal.Operator.RepeatedNodes
 import RiemannFormal.Operator.ReciprocalConcavity
+import RiemannFormal.Operator.XiExternalInputs
+import RiemannFormal.Operator.XiSourceSpecific
 import RiemannFormal.Operator.XiOrderThree
 import RiemannFormal.Operator.HeatQ4Finite

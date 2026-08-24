@@ -7,19 +7,29 @@ import RiemannFormal
 #print axioms RiemannFormal.Release20260822.researchCutoff_eq
 #print axioms RiemannFormal.Release20260822.semanticClaimCount_eq
 
--- Reviewer C exact finite algebra.
-#print axioms RiemannFormal.Operator.actualXiPickOrderTwo_of_monotonicity
+-- Reviewer C accepted finite algebra.
 #print axioms RiemannFormal.Operator.three_node_pick_determinant_identity
-#print axioms RiemannFormal.Operator.actualXiCompanionCurvature_of_grouped_inputs
-#print axioms RiemannFormal.Operator.secondDivDiff_add_nonpositive
 #print axioms RiemannFormal.Operator.Jet2.reciprocalConcavity_add
-#print axioms RiemannFormal.Operator.Jet2.oneOrbitAbsorption
-#print axioms RiemannFormal.Operator.Jet2.offLineOrbit_defect_formula
-#print axioms RiemannFormal.Operator.criticalReserveAllocation_of_inputs
-#print axioms RiemannFormal.Operator.actualXiReciprocalConcavity_of_grouped_inputs
+#print axioms RiemannFormal.Operator.repeated12_pick_psd
+#print axioms RiemannFormal.Operator.repeated13_pick_psd
+#print axioms RiemannFormal.Operator.repeated23_pick_psd
+
+-- Reviewer C source-specific repaired layer.
+#print axioms RiemannFormal.Operator.plattTrudgian_source_lock_exact
+#print axioms RiemannFormal.Operator.criticalMultiplicityResidual_exact
+#print axioms RiemannFormal.Operator.reflectedOffLine_cross_curvature_exact
+#print axioms RiemannFormal.Operator.orbitGap_ge_two_thirds_b_sq
+#print axioms RiemannFormal.Operator.orbitKappa_le_nine_quarter_b_sq
+#print axioms RiemannFormal.Operator.reflectedOffLineOrbit_absorbed_reviewed
+#print axioms RiemannFormal.Operator.buildActualXiReserveAllocation
+#print axioms RiemannFormal.Operator.actualXiPickOrderTwo_of_inputs
+#print axioms RiemannFormal.Operator.locallyUniformSequence_tendsto_at
+#print axioms RiemannFormal.Operator.regroupedActualXi_energy_tendsto
+#print axioms RiemannFormal.Operator.nonnegative_of_absolute_convergence
+#print axioms RiemannFormal.Operator.actualXiReciprocalConcavity_of_inputs
+#print axioms RiemannFormal.Operator.actualXiCompanionCurvature_of_inputs
+#print axioms RiemannFormal.Operator.actualXiLowOrderLoewner_of_inputs
 #print axioms RiemannFormal.Operator.actualXiPickOrderThreeConditional
-#print axioms RiemannFormal.Operator.actualXiOrderedDistinctPickOrderThree_of_inputs
-#print axioms RiemannFormal.Operator.q4ZeroBareDet_identity
 
 -- Reviewer C exact refutations and finite fixtures.
 #print axioms RiemannFormal.Refutations.positiveSchurCannotRescue

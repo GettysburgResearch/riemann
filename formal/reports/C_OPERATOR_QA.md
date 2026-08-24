@@ -1,102 +1,177 @@
-# Formalization Reviewer C: operator and QA report
+# Formalization Reviewer C: repaired Xi/operator QA report
 
-## Freeze
+## Freeze and status
 
-- Repository: `gfreund123/riemann`
-- Bootstrap merge: `573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f`
-- Branch: `formal/030-xi-operator-qa`
-- Research cutoff: PR #707
-- RH status: **UNPROVED**
+```text
+repository:       gfreund123/riemann
+bootstrap merge:  573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f
+primary PR:       #735
+repair branch:    formal/030-xi-operator-qa
+binding review:   PR #749 @ 9da1e250b647575418290407c6e30054322bb581
+research cutoff:  PR #707
+RH:               UNPROVED
+```
 
-No post-#707 theorem is imported.  The reviewed actual-Xi order-three theorem is
-represented as `PROVED_CONDITIONAL`, not as an unconditional formal proof.
+No workflow file, Reviewer A theorem, Reviewer B theorem, or A/B registry delta
+is modified by this repair.
 
-## Owned formal modules
+## Preserved exact finite algebra
 
-- `RiemannFormal.Operator.FiniteMatrix`
-- `RiemannFormal.Operator.PickAlgebra`
-- `RiemannFormal.Operator.ReciprocalConcavity`
-- `RiemannFormal.Operator.XiOrderThree`
-- `RiemannFormal.Operator.HeatQ4Finite`
-- `RiemannFormal.Refutations.MatrixFirewalls`
-- `RiemannFormal.Refutations.HeatQ4Firewalls`
+The accepted finite layer is retained:
 
-The machine-readable declaration-by-declaration report is
-[`C_OPERATOR_QA.tsv`](C_OPERATOR_QA.tsv).  It separately records statement
-existence, unconditional proof, conditional proof, source locking, comparator
-coverage, and axiom audit status.
+- exact two-point Pick determinant identity;
+- exact three-node determinant and reciprocal/companion divided-difference
+  factorization;
+- exact two- and three-dimensional LDL/congruence identities;
+- PSD versus PD separation and a PSD-not-PD fixture;
+- finite positive-sum reciprocal-concavity algebra;
+- finite Hermite and Q4 identities;
+- the six minimal finite operator firewalls.
 
-## Exact finite algebra
+The repair changes the source-specific wrappers and QA evidence, not these
+accepted algebraic statements.
 
-The formal library proves:
+## Concrete actual-Xi and external inputs
 
-1. the two-point Pick determinant identity;
-2. the three-node `A*B` determinant decomposition;
-3. the reciprocal and companion second-divided-difference factorization;
-4. exact two- and three-dimensional LDL congruence identities;
-5. PSD and PD principal-minor implications without a PSD-to-PD upgrade;
-6. finite positive-sum reciprocal concavity with an exact square certificate;
-7. the off-line orbit defect formula and zero-curvature critical orbit;
-8. one-orbit absorption, finite reserve allocation, and a finite reciprocal-square budget;
-9. finite Hermite recurrences, Q4 filter identities, and the zero-bare Q4 determinant formula.
+The repaired comparator dependency module defines the actual completed function
+explicitly:
 
-## Conditional actual-Xi boundary
+```text
+riemannXi(s)   = (1/2) s (s-1) completedRiemannZeta(s)
+centeredXi(z)  = riemannXi(1/2+z)
+actualXiNodeP(x) = Re(centeredXi'(x)/(x centeredXi(x)))
+```
 
-The following inputs remain explicit propositions or theorem hypotheses:
+The old arbitrary proposition labels are removed. The replacement declarations
+state:
 
-- corrected published high-zero verification;
-- corrected bibliographic/source lock;
-- grouped local `C^2` convergence through two derivatives;
-- one representative per reflected orbit;
-- retention of the `(m0-1)R0` multiplicity residual;
-- reciprocal-square zero-tail control;
-- repeated-node reduction and packet ordering/congruence.
+- the exact height `3000175332800`;
+- the exact critical-line conclusion imported from the external publication;
+- title, authors, journal, DOI, arXiv identifier, artifact identifier, and a
+  normalized theorem/citation SHA-256 independent of the local claim blob;
+- one injective reflected off-line representative convention, its reflected partner,
+  and analytic-order multiplicity equalities on both sides;
+- the grouped actual-Xi zero expansion;
+- locally uniform convergence of values and derivatives zero, one and two on
+  `t>1/4`, both for the raw grouped expansion and the exact paid-prefix
+  regrouping;
+- the selected critical reserve and exact `(m0-1)R0` residual;
+- the reciprocal-square finite-prefix tail inequality and numerical budget;
+- exact source-faithful paid prefixes formed from unspent reserve, the
+  `(m0-1)R0` residual, paid off-line blocks and all other critical blocks;
+- nonnegative shares, every orbit paid, total use at most one, one-use identity,
+  and nonnegative leftover.
 
-`actualXiOrderedDistinctPickOrderThree_of_inputs` proves the nontrivial exact
-ordered-distinct PSD implication from those inputs and the two scalar curvature
-signs.  `actualXiPickOrderThreeConditional` packages the complete size-at-most-
-three PSD conclusion while keeping repeated-node and analytic hypotheses visible.
-Distinct-node positive definiteness is not stated.
+Simplicity is not an input to the repaired headline and no simplicity proposition is installed by the external source lock.
 
-## Formalized firewalls
+The external machine lock is
+`formal/registry/deltas/C_EXTERNAL_SOURCE_LOCKS.tsv`; it is separate from the
+canonical scientific claim source SHA.
 
-Kernel-checkable exact witnesses establish:
+## Source-specific reserve algebra
 
-- `positiveSchurCannotRescue`;
-- `coefficientBudgetDoesNotImplyOperatorContraction`;
-- `smallNegativeInertiaDoesNotControlCurrent`;
-- `hyperbolicPoleBlockNotTwoPositiveSquares`;
-- `positiveExcessDoesNotControlSquareRoot`;
-- `scalarDiagonalDoesNotDeterminePolarizedGram`.
+`RiemannFormal.Operator.XiSourceSpecific` now contains:
 
-The finite `parityChangesUnderDisplacement` theorem is intentionally classified
-`BLOCKED_MATHEMATICS` for the full heat semantic ID.  It is a regression fixture,
-not a formal proof of the analytic Bohr/vertical-limit no-go.
+- the exact off-line defect formula;
+- the exact transformed cross-curvature formula with
+  `Q_kappa(s)` and complete denominator/domain hypotheses;
+- `epsilon = 2 m kappa/(1-kappa)`;
+- the exact payment inequality;
+- derivation of `c-r >= (2/3)b^2`, `kappa <= 9/(4b^2)`, `kappa<1/2`, and
+  `epsilon <= 9m/b^2` from the concrete orbit/reserve hypotheses;
+- multiplicity-aware reflected-orbit data;
+- construction of a source-locked finite-prefix one-use reserve allocation from exact tail
+  and numerical-budget inputs.
 
-## Comparator topics
+The complete global analytic tail and grouped convergence remain explicit
+hypotheses. The local algebra is not mislabeled as proving those inputs.
 
-Trusted challenge/solution pairs are added for:
+## Repeated-node repair
 
-- `XiPickThreeNode`;
-- `OperatorPositiveSchurRescue`;
-- `XiPickOrderThreeConditional`.
+No theorem accepts a premise that directly returns `IsPSD3` on a repeated-node
+branch. Values are evaluations of the one function `actualXiNodeP`.
 
-The conditional challenge exposes every external proposition in its statement.
-The trusted `ChallengeDeps` side imports Mathlib only; the sorry-free solution
-side imports the formal library.
+For positive nodes, equality of squared nodes implies equality of nodes. Equal
+nodes therefore have equal function values and duplicate rows/columns. Exact
+congruence identities reduce duplicate `12`, `13`, and `23` packets to the
+actual-Xi order-two PSD theorem.
 
-## Fail-closed QA
+The full headline records one-node nonnegativity, all two-node principal
+packets, and the complete three-node packet for every positive triple, and
+concludes PSD only.
+It contains no distinct-node PD or order-four statement.
 
-- `check_no_sorry.sh` rejects `sorry`, `admit`, custom `axiom`/`opaque`, and
-  unresolved tactic suggestions in trusted modules; it also compiles every
-  Reviewer C comparator challenge and solution.
-- `check_axioms.sh` discovers every `#print axioms` declaration dynamically and
-  permits only `propext`, `Classical.choice`, and `Quot.sound`.
-- `verify_declaration_map.py` checks declaration existence and prevents a
-  conditional row from being labeled `PROVED` without an explicit blocker.
-- `check_statement_sources.py` joins `C.tsv`, the canonical claim registry, and
-  `C_OPERATOR_QA.tsv`, requiring exact source SHA/path equality and consistent
-  proof/conditional/source/comparator/axiom flags.
+## Semantic split
 
-No heavy computation, external high-zero verification, broad Q4 scan, or full
-Lean build was rerun outside formal CI.
+`formal/registry/deltas/C.tsv` now maps source-specific canonical IDs only to
+source-specific declarations. Generic finite lemmas are recorded separately in
+`C_API.tsv` under `FORMAL.API.OPERATOR.*` identifiers and are not used as
+surrogates for stronger actual-Xi claims.
+
+The following canonical declarations are `PROVED_CONDITIONAL` because their
+precise external, convergence or source-bridge hypotheses remain explicit:
+
+- actual-Xi order two;
+- actual-Xi companion curvature;
+- complete critical reserve budget;
+- actual-Xi reciprocal concavity;
+- full actual-Xi PSD through sizes one, two and three;
+- the stated low-order Loewner interface.
+
+## Comparator fidelity
+
+`XiPickOrderThreeConditional` now uses one shared Mathlib-only
+`ChallengeStatement`. The formal library proves that exact proposition; the
+Challenge states that exact proposition with one placeholder; the Solution is
+sorry-free and reuses the library theorem. The statement includes concrete
+external structures, the exact reserve statement, the source-faithful paid-prefix
+C2 limit, repeated nodes, PSD only, and
+no order-four conclusion.
+
+`verify_comparator_fidelity.py` compiles Challenge and Solution separately and
+checks equal normalized theorem signatures. For the headline it additionally
+type-checks both against the exact shared `ChallengeStatement`.
+
+## Generated QA evidence
+
+The repair removes manually trusted evidence booleans.
+
+- `verify_declaration_map.py` imports the built Lean environment and executes
+  fully qualified `#check` and `#print` commands for every C canonical and API
+  declaration.
+- `check_statement_sources.py` derives canonical source fidelity, external lock
+  fidelity, formal-status consistency and comparator/source evidence from the
+  registries and exact Lean source-lock object.
+- `check_external_input_usage.py` builds the source dependency closure of the
+  headline, rejects the former arbitrary labels and wholesale repeated-node
+  premise, and requires every concrete bridge/reserve/repeated-node dependency.
+- `check_axioms.sh` generates its audit declaration set from `C.tsv` and
+  `C_API.tsv`, then parses every output against the standard Lean axiom allowlist.
+- `check_no_sorry.sh` enforces the Challenge-only placeholder boundary and runs
+  the declaration, source, comparator and dependency audits.
+
+Generated Lean evidence is written under `formal/reports/generated/` by the exact-head
+suite rather than asserted in the committed TSV.  The committed
+`C_REPAIR_STATIC_REPLAY.json` records nine exact `Fraction` regression fixtures
+for the cross-curvature, defect/payment, duplicate-row identities, and the
+recomputed external-statement hash; it is diagnostic and does not replace Lean.
+
+## Validation boundary
+
+The complete runnable suite is:
+
+```bash
+bash formal/scripts/run_c_repair_validation.sh
+```
+
+This publication environment does not contain Lean/Lake and therefore does not
+claim that the repaired head compiled here. A separate laptop Codex will run the
+suite. Until that exact-head run passes, build status is
+`PENDING_INDEPENDENT_EXACT_HEAD_BUILD`.
+
+## Literal conclusion
+
+```text
+formal RH proof: NONE
+Riemann Hypothesis: UNPROVED
+```
