@@ -6,7 +6,9 @@ Created: 2026-08-24
 Depends on: `L-102831`; `L-102834`  
 RH status: **not assumed**
 
-Work in the hard sector of distinct physical owner primes. Let
+Work in the hard sector of distinct physical owner primes, after the joint
+occurrence of the two labelled `67` copies has been placed in the closed
+repeated-prime diagonal. Let
 
 \[
 N=pq\,a^2,
@@ -27,7 +29,13 @@ owner parity agrees, one has
 \ell\nmid M.
 \tag{L-102835.1}
 
-For `e_ell(x)=exp(2 pi i x/ell)`, the prime Ramanujan identity gives
+For
+
+\[
+e_\ell(x)=\exp(2\pi i x/\ell),
+\]
+
+the prime Ramanujan identity gives
 
 \[
 \sum_{h=0}^{\ell-1}e_\ell(h(N-M))=0.
@@ -55,7 +63,7 @@ If `A_ell` denotes the field on the side divisible by `ell` and
 =-\sum_{h=1}^{\ell-1}
 \langle A_\ell,B_{\ell,h}\rangle.
 }
-\tag{L-102835.3
+\tag{L-102835.3}
 
 The identity is coefficient-exact, keeps all owner and source-region labels,
 and commutes with the fixed ratio-eight outer observation.
@@ -64,4 +72,5 @@ and commutes with the fixed ratio-eight outer observation.
 
 Equation (L-102835.3) is an exact dispersion normal form. It does not bound the
 nonzero phase packet. `L-102836` supplies the uniform square-core phase energy
-for each fixed non-`ell` squareclass; cross-owner summation remains arithmetic.
+for each fixed non-`ell` squareclass; coherent cross-owner summation remains
+arithmetic.
