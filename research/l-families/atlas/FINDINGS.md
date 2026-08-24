@@ -364,7 +364,7 @@ F=-(1+\chi_{\omega_2}+\chi_{2\omega_2}),
 
 and the character on the right is an honest 20-dimensional representation
 `G=1+chi_omega2+chi_2omega2` containing the trivial representation. Therefore,
-for every integer `m>=0`, not just for the six computed orders,
+for every integer `m>=0`, not merely for the twelve computed orders,
 
 \[
 \int_{USp(4)}F(U)^m\,dU
