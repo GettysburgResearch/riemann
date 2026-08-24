@@ -146,7 +146,7 @@ For any nonnegative scalar weight `w(xi)` and any measurable vector field
  \,d\xi
 \ge0.
 }
-\tag{L-105622.7]
+\tag{L-105622.7}
 \]
 
 Thus every diagonal truncation, dyadic decomposition and source-owned unitary
