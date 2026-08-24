@@ -468,6 +468,12 @@ move near the Haar endpoint `4/3`, but their negative edges remain far from
 far-negative Frobenius classes rather than treating the discrepancy as
 uniform smoothing across the support.
 
+The minimum is one affine orbit in each frozen field: sizes `6,10,42`, with
+stabilizer orders `1,2,1`. This makes a stack-weighted analysis of the extreme
+automorphism strata a plausible route to the high-moment tail; an unweighted
+orbit-representative average would erase exactly the multiplicities that
+matter most.
+
 The bounded shifted-grid Weyl quadrature additionally nominates
 
 \[

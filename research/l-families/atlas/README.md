@@ -34,7 +34,7 @@ most 1,142 discriminants and 13 primes. The all-q genus-two certificate uses
 2,925 operations in `Q[q]`, while the separate second-moment roadmap enumerates
 only 20+54 symbolic signatures; neither enumerates additional fields. The
 reciprocal filter evaluates five objects, four endpoints, and every coefficient
-through 256. All 215 tests pass both normally and under optimized Python; the
+through 256. All 216 tests pass both normally and under optimized Python; the
 offline validator checks 64 artifact bindings across 15 evaluations. No broad
 zero or conductor sweep was run.
 

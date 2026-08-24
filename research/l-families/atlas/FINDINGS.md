@@ -566,6 +566,13 @@ most negative `q=7` value is only about `-5.76`, far from the Haar edge `-20`.
 Thus the high even-moment deficit is specifically consistent with an absent
 far-negative tail, not merely with coarse histogram resolution.
 
+That finite negative edge is exceptionally concentrated. At `q=3,5,7` its
+coefficient pairs `(a_D,b_D)` may be taken as `(-2,6)`, `(-4,14)`, and
+`(-7,25)`, giving `K_D=-24,-116,-282`. In each field every minimum member is
+one affine orbit, of sizes `6,10,42`; the stabilizer orders are `1,2,1`.
+Consequently the most moment-sensitive tail is controlled by a single weighted
+geometric stratum in each frozen family, not by a diffuse population.
+
 A separate deterministic Weyl quadrature asks the corresponding sign-law
 question. Four phase shifts on periodic grids through `512 x 512` (1,376,256
 cells in total, with a five-second guard) give a final phase mean

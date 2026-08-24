@@ -212,6 +212,31 @@ class FrozenOrbitTests(unittest.TestCase):
                 conductor,
             )
 
+    def test_most_negative_tail_is_one_exact_affine_orbit(self) -> None:
+        q_scan_fixture = json.loads(subject.Q_SCAN_FIXTURE.read_text(encoding="utf-8"))
+        families = {row["q"]: row for row in q_scan_fixture["families"]}
+        controls = {
+            3: ((0, 1, 1, 1, 1, 1), (-2, 6), -24, 6, 1),
+            5: ((0, 1, 0, 1, 0, 1), (-4, 14), -116, 10, 2),
+            7: ((3, 0, 3, 6, 4, 1), (-7, 25), -282, 42, 1),
+        }
+        for q, (conductor, coefficients, minimum_k, orbit_size, stabilizer) in controls.items():
+            tables = q_scan.build_field_tables(q)
+            self.assertEqual(
+                q_scan.coefficients_from_character_sums(conductor, tables),
+                coefficients,
+            )
+            self.assertEqual(q * coefficients[0] ** 2 - coefficients[1] ** 2, minimum_k)
+            orbit = {
+                subject.affine_transform(conductor, q, *element)
+                for element in subject.affine_elements(q)
+            }
+            self.assertEqual(len(orbit), orbit_size)
+            self.assertEqual(q * (q - 1) // len(orbit), stabilizer)
+            histogram = families[q]["K_histogram"]
+            self.assertEqual(min(map(int, histogram)), minimum_k)
+            self.assertEqual(histogram[str(minimum_k)], orbit_size)
+
     def test_q_scan_moments_histograms_and_signs_are_replayed(self) -> None:
         self.assertTrue(
             all(
