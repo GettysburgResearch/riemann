@@ -273,6 +273,15 @@ reciprocity may create a `chi_q(-1)` branch, while surviving coefficient
 averages may be genuine Frobenius-trace terms. A polynomial or two-branch fit
 must therefore be proved rather than inferred from `q=3,5,7`.
 
+The exact radical-degree census further localizes the work. The generic
+degree-six part of `M22` has only three signatures, with leading mixture
+`(1,2,1)/4`; the generic degree-eight part of `B4` has only five, with leading
+mixture `(1,4,6,4,1)/16`. Every collision or even-exponent stratum has lower
+type-count degree. A practical first lemma should therefore aggregate these
+eight generic conductor types before estimating them individually, then prove
+the cancellation of the next collision layers needed for the conjectural
+`O(q^{-2})` high-weight average.
+
 There is an equivalent, especially compact representation-theoretic target.
 Put
 

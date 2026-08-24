@@ -6,6 +6,7 @@ import hashlib
 import json
 import sys
 import unittest
+from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
@@ -66,6 +67,79 @@ class GenusTwoSecondMomentReductionTests(unittest.TestCase):
                         value = value * q + coefficient
                     self.assertEqual(value, expected)
                     self.assertGreaterEqual(expected, 0)
+
+    def test_radical_degree_census_and_generic_leading_mixtures(self) -> None:
+        expected_polynomials = {
+            "M22": {
+                0: [0, 4, -9, 6],
+                2: [0, -34, 77, -60, 17],
+                4: [0, 60, -139, 118, -47, 8],
+                6: [0, -30, 71, -64, 30, -8, 1],
+            },
+            "B4": {
+                0: [0, -16, 42, -42, 17],
+                2: [0, 248, -624, 598, -278, 56],
+                4: [0, -760, 1954, -1946, 999, -286, 39],
+                6: [0, 840, -2216, 2306, -1280, 432, -92, 10],
+                8: [0, -312, 844, -916, 542, -202, 53, -10, 1],
+            },
+        }
+        expected_signature_counts = {
+            "M22": {0: 4, 2: 8, 4: 5, 6: 3},
+            "B4": {0: 9, 2: 16, 4: 17, 6: 7, 8: 5},
+        }
+        expected_generic_leading_mixtures = {
+            "M22": [Fraction(1, 4), Fraction(1, 2), Fraction(1, 4)],
+            "B4": [
+                Fraction(1, 16),
+                Fraction(1, 4),
+                Fraction(3, 8),
+                Fraction(1, 4),
+                Fraction(1, 16),
+            ],
+        }
+        for name, block in self.fixture["signature_blocks"].items():
+            totals: dict[int, list[Fraction]] = defaultdict(list)
+            counts: dict[int, int] = defaultdict(int)
+            for row in block["signatures"]:
+                degree = row["odd_radical"]["degree"]
+                counts[degree] += 1
+                coefficients = [
+                    Fraction(*pair) * row["tuple_weight"]
+                    for pair in row["type_count"]["coefficients_low_to_high"]
+                ]
+                if len(totals[degree]) < len(coefficients):
+                    totals[degree].extend(
+                        [Fraction(0)] * (len(coefficients) - len(totals[degree]))
+                    )
+                for index, coefficient in enumerate(coefficients):
+                    totals[degree][index] += coefficient
+            integer_totals = {}
+            for degree, coefficients in totals.items():
+                self.assertTrue(
+                    all(coefficient.denominator == 1 for coefficient in coefficients)
+                )
+                integer_totals[degree] = [
+                    coefficient.numerator for coefficient in coefficients
+                ]
+            self.assertEqual(integer_totals, expected_polynomials[name])
+            self.assertEqual(dict(counts), expected_signature_counts[name])
+
+            top_degree = 6 if name == "M22" else 8
+            leading_mixture = []
+            for row in block["signatures"]:
+                if row["odd_radical"]["degree"] != top_degree:
+                    continue
+                coefficients = [
+                    Fraction(*pair)
+                    for pair in row["type_count"]["coefficients_low_to_high"]
+                ]
+                self.assertEqual(len(coefficients) - 1, top_degree)
+                leading_mixture.append(coefficients[-1] * row["tuple_weight"])
+            self.assertEqual(
+                leading_mixture, expected_generic_leading_mixtures[name]
+            )
+            self.assertEqual(sum(leading_mixture), 1)
 
     def test_master_reduction_and_frozen_histogram_checks(self) -> None:
         self.assertEqual(

@@ -223,6 +223,23 @@ degree-eight marked character correlations rather than another fit to three
 fields. The newly proved `a_D^2b_D` moment is a distinct quartic correlation
 and is used below to resolve two more representation channels.
 
+The 74-signature roadmap has a useful exact conductor census. Grouping by the
+degree of the odd radical gives
+
+| block | radical-degree signature counts |
+|---|---|
+| `M22` | `0:4, 2:8, 4:5, 6:3` |
+| `B4` | `0:9, 2:16, 4:17, 6:7, 8:5` |
+
+Only three `M22` signatures have generic radical degree six. Their weighted
+leading coefficients are `1/4, 1/2, 1/4`. Only five `B4` signatures have
+generic radical degree eight, with leading coefficients
+`1/16, 1/4, 3/8, 1/4, 1/16`. Each list sums to one; all lower-radical strata
+have smaller polynomial degree. Thus the leading tuple space is a binomial
+mixture of just three and five collision-free conductor types, respectively.
+This is exact combinatorics, not a character-sum estimate, but it sharply
+localizes where a leading asymptotic proof must begin.
+
 The new first moment of `b_D` has a useful representation-theoretic payoff.
 For the normalized Frobenius class, exact `C_2` character identities give
 
