@@ -1,0 +1,67 @@
+{
+  "bank_induced_partial_index_zero": true,
+  "bankreal105530_proved": true,
+  "bezout_polynomial": {
+    "B": {
+      "0": "1",
+      "1": "1/2"
+    },
+    "W0": {
+      "0": "1",
+      "1": "-1/2",
+      "2": "-1/4"
+    },
+    "W1": {
+      "1": "1/2"
+    },
+    "determinant": "1"
+  },
+  "content_sha256": {
+    "PACKET_METADATA_105540.json": "0c14782c8219caed105efc9221474ad9d88f76d0e0bc2f5d8cf5d6de18785495",
+    "PR_BODY_105540_ADDENDUM.md": "1680935bede884db7b1823a6f46fef0e1d0e4bec7d85731853756f46104b12e9",
+    "README_105540.md": "c390096df52837c40668b8e61ae71d48c7c9b2fa0a7db1e66f2a2f74e72571e4",
+    "claims/lemmas/L-105540-unimodular-bezout-bank.md": "dde2aabdfed0a754c6e09a13e5218a5d7c45b3a7508e941be61b2ccddf7acdf3",
+    "claims/lemmas/L-105541-two-boundary-hardy-bank.md": "197e18b359d88b36ed4182153967426bb6d0b793fcb178654b2bf75f8cad0b95",
+    "claims/lemmas/L-105542-horizontal-xi-bank-transfer.md": "42af010569c51674a492497e81d3389b2a400fd1d70fdeb39567655d41488939",
+    "claims/methodology/M-105540-hostile-review-contract.md": "85e355bf0c52220e79f912f05513f9089d840629481516318f501fe600066b8e",
+    "claims/refutations/R-105540-unimodular-bank-is-not-a-free-carrier.md": "3e3780f832fe69a06c13d2f321ca0f98e276e8647fb99ec4d0a67383379427d1",
+    "claims/theorems/T-105540-single-flux-ninety-percent-frontier.md": "350e090ab123bdd559fdc1f76ef0da58514b344b826c959215c113b90ca94c57",
+    "experiments/X-105540-unimodular-bank/README.md": "75a42304bce5645d230286c02c0bbad21d2a72634d07425952475a0f663d59ce",
+    "experiments/X-105540-unimodular-bank/replay.sh": "f4bf3a78408ab1bee601b9cbbd68d2b6032b96ac02e101b351b9502c3c5dac97",
+    "experiments/X-105540-unimodular-bank/tests/test_verify.py": "b8ae9ade80b7c59e4a82b4237c81ffe613b755f6e2b26a4a6967f3bc3f7ee857",
+    "experiments/X-105540-unimodular-bank/verify.py": "3610c3114f0da52d91f8b56ab62a011c52aee0e6d3bbc2af0ff5aa35c22fe804",
+    "integration/2026-08-24/t105540-source-lock.json": "b6cd2210e346c9cb3acd5bb28fdd160a066265c2d8e3e95eac39f88063e8ef7e",
+    "reports/gpt56-pro/2026-08-24-unimodular-bank-realization.md": "b776a49de2d649011399aa71df9ea514329a92950cf377c587bf0ea192a5ee0e",
+    "standalone/2026-08-24-unimodular-bank-realization/PROOF.md": "8cc2e806e8a69c560f4be99cd6f60ad505deddfb628630f66f297883bc4c461f"
+  },
+  "matrixlerc105541_proved": false,
+  "ninety_percent_established": false,
+  "ninety_percent_threshold": {
+    "asymptotic_bank_anchor": "1-o(1)",
+    "line_fraction_boundary": "9/10",
+    "negative_trace_cut": "1/20-o(1)",
+    "positive_index_fraction": "19/20-o(1)"
+  },
+  "operator_regression": {
+    "exact_identities": 3000,
+    "matrix_cases": 1000,
+    "maximum_dimension": 10,
+    "seed": 105540
+  },
+  "pinned_analytic_transfer_machine_proved": false,
+  "proof_object_sha256": "bacf07a2e2fea80bc6d081a8c49f8fd457e4d83faa17579d448eff70c279bae6",
+  "public_record_beaten": false,
+  "rh_established": false,
+  "two_boundary_source": {
+    "cancelled_total_degrees": [
+      1,
+      2
+    ],
+    "common_denominator_terms": 7,
+    "first_nonzero_bidegrees": {
+      "0,3": "1/8",
+      "3,0": "1/8"
+    }
+  },
+  "verdict": "PASS_T105540_UNIMODULAR_BANK_REALIZATION"
+}
