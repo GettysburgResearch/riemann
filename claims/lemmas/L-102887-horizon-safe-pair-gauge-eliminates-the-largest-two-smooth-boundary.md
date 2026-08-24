@@ -91,10 +91,9 @@ Thus the largest-two stopped monoid `N_<q` and its smooth-boundary current are o
 
 \[
 \boxed{
-\mathbb N^{(p,q)}=\{a\ge1:(a,pq)=1\},
+\mathbb N^{(p,q)}=\{a\ge1:(a,pq)=1\}.
 }
-\tag{L-102887.3
-\]
+\tag{L-102887.3}
 
 with only two fixed Euler factors removed.
 
