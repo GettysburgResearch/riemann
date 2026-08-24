@@ -34,6 +34,8 @@ DETECTOR_SLUG = "FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR"
 EVALUATION_SLUG = "FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.Q3_Q5_Q7.MOMENT_COMPARISON"
 EXACT_STATUS = "RIGOROUS_CERTIFIED"
 CONVERGENCE_STATUS = "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
+FROZEN_PATTERN_STATUS = "EXACT_FOR_Q_3_5_7_ONLY"
+SIGN_MAJORANT_STATUS = "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND"
 HAAR_MOMENTS = (-1, 3, -11, 56, -374, 3117)
 HAAR_CENTERED_MOMENTS = (0, 2, -4, 27, -178, 1533)
 HAAR_CUMULANTS = (-1, 2, -4, 15, -98, 803)
@@ -43,7 +45,8 @@ DETECTOR_DEFINITION = (
     "identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], "
     "evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, "
     "and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, "
-    "where K_D=q*a_D^2-b_D^2."
+    "where K_D=q*a_D^2-b_D^2. Use those six moments and an exact degree-six "
+    "polynomial majorant to certify a lower bound for the negative-sign probability."
 )
 
 
@@ -185,6 +188,92 @@ def load_and_replay_fixtures(root: Path) -> tuple[dict[str, Any], dict[str, Any]
                 exact - HAAR_MOMENTS[order - 1]
             ):
                 raise ValueError(f"q={q} moment gap mismatch at order {order}")
+    frozen_pattern = comparator.get("frozen_moment_pattern", {})
+    if frozen_pattern.get("status") != FROZEN_PATTERN_STATUS:
+        raise ValueError("frozen directional moment pattern lost its finite-only status")
+    if frozen_pattern.get("not_a_theorem_beyond_frozen_fields") is not True:
+        raise ValueError("frozen directional moment pattern lost its theorem firewall")
+    if frozen_pattern.get("q_values") != list(Q_VALUES):
+        raise ValueError("frozen directional moment pattern q-values drifted")
+    if [row.get("order") for row in frozen_pattern.get("per_order", [])] != list(
+        range(1, 7)
+    ):
+        raise ValueError("frozen directional moment pattern orders drifted")
+    if not all(
+        all(value is True for key, value in row.items() if key != "order")
+        for row in frozen_pattern["per_order"]
+    ):
+        raise ValueError("frozen directional moment pattern contains a failed exact check")
+
+    sign_certificate = comparator.get("negative_sign_moment_certificate", {})
+    if sign_certificate.get("status") != SIGN_MAJORANT_STATUS:
+        raise ValueError("negative-sign moment certificate lost its exact status")
+    majorant = sign_certificate.get("majorant", {})
+    coefficients = tuple(
+        _fraction(pair, f"sign majorant coefficient {index}")
+        for index, pair in enumerate(majorant.get("coefficients_low_to_high", []))
+    )
+    if coefficients != comparator_module.SIGN_MAJORANT_COEFFICIENTS:
+        raise ValueError("negative-sign majorant coefficients drifted")
+    square = comparator_module.convolve_rational(coefficients, coefficients)
+    stored_square = [
+        _fraction(pair, f"sign majorant square coefficient {index}")
+        for index, pair in enumerate(majorant.get("square_coefficients_low_to_high", []))
+    ]
+    if stored_square != square:
+        raise ValueError("negative-sign majorant square coefficients drifted")
+    if majorant.get("quadratic_endpoint_values_on_0_to_4_over_3") != [
+        [5405, 1],
+        [51445, 9],
+    ]:
+        raise ValueError("negative-sign majorant positivity certificate drifted")
+    haar_sign = sign_certificate.get("haar", {})
+    if _fraction(
+        haar_sign.get("moment_majorant_nonnegative_upper_bound", []),
+        "Haar nonnegative sign upper bound",
+    ) != Fraction(7663, 12023):
+        raise ValueError("Haar nonnegative sign upper bound drifted")
+    if _fraction(
+        haar_sign.get("negative_probability_lower_bound", []),
+        "Haar negative sign lower bound",
+    ) != Fraction(4360, 12023):
+        raise ValueError("Haar negative sign lower bound drifted")
+    finite_sign_rows = sign_certificate.get("finite_q_bounds", [])
+    if [row.get("q") for row in finite_sign_rows] != list(Q_VALUES):
+        raise ValueError("finite negative-sign moment rows drifted")
+    for row in finite_sign_rows:
+        q = int(row["q"])
+        moments = [
+            _fraction(entry["finite_exact"], f"q={q} sign moment")
+            for entry in comparisons[q]["moments"]
+        ]
+        expected_upper = comparator_module.polynomial_moment(square, moments)
+        stored_upper = _fraction(
+            row["moment_majorant_nonnegative_upper_bound"],
+            f"q={q} nonnegative sign upper bound",
+        )
+        stored_lower = _fraction(
+            row["negative_probability_lower_bound"],
+            f"q={q} negative sign lower bound",
+        )
+        observed = Fraction(
+            int(q_families[q]["sign_counts"]["negative"]),
+            int(q_families[q]["member_count"]),
+        )
+        if (
+            stored_upper != expected_upper
+            or stored_lower != 1 - expected_upper
+            or _fraction(row["observed_negative_fraction"], f"q={q} observed sign")
+            != observed
+            or row.get("verified_bound_holds") is not True
+            or not stored_lower <= observed
+        ):
+            raise ValueError(f"q={q} negative-sign moment certificate mismatch")
+    conditional = sign_certificate.get("conditional_consequence", {})
+    if conditional.get("status") != "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE":
+        raise ValueError("negative-sign liminf consequence lost its conditional status")
+    if conditional.get("not_an_equidistribution_proof") is not True:
+        raise ValueError("negative-sign conditional consequence lost its theorem firewall")
     return comparator, q_scan
 
 
@@ -211,6 +300,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7.",
         "Keep exact Laurent and finite-histogram arithmetic separate from the proposed q-to-infinity convergence statement.",
         "Treat F as a toy reciprocal-coefficient statistic, not Pick/Loewner, XD, or HCNC.",
+        "Use R(x)^2 only as an exact nonnegative-event majorant on [-20,4/3], and keep its liminf consequence conditional on six-moment convergence.",
     ]
     identity_kernel = {
         "version": 1,
@@ -332,6 +422,11 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "requirement": normalization[4],
                 "comparison_role": "FIREWALL",
             },
+            {
+                "field": "result.negative_sign_moment_certificate",
+                "requirement": normalization[5],
+                "comparison_role": "FIREWALL",
+            },
         ],
         "invariances": [
             {
@@ -352,6 +447,22 @@ def build_detector(root: Path) -> dict[str, Any]:
             {
                 "code": "FINITE_HISTOGRAM_RECONSTRUCTION",
                 "statement": "Every stored finite moment is reconstructed exactly from the complete K histogram.",
+                "status": "PROVED",
+            },
+            {
+                "code": "FROZEN_DIRECTIONAL_MOMENT_PATTERN",
+                "statement": (
+                    "At q=3,5,7 and orders 1 through 6, finite moments have the Haar sign, "
+                    "smaller increasing magnitude, and strictly decreasing absolute gap."
+                ),
+                "status": "PROVED",
+            },
+            {
+                "code": "DEGREE_SIX_SIGN_MAJORANT",
+                "statement": (
+                    "The exact cubic R gives 1_{F>=0}<=R(F)^2 and therefore "
+                    "Pr_Haar(F<0)>=4360/12023 from moments through order six."
+                ),
                 "status": "PROVED",
             },
             {
@@ -385,7 +496,15 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "semantic_id": "PROPOSED.FUNCTION_FIELD.GENUS2.USP4.FIXED_MOMENT_LIMIT",
                 "status": "PROPOSED",
                 "scope": "The exact q=3,5,7 comparisons do not prove equidistribution or convergence.",
-            }
+            },
+            {
+                "semantic_id": "CONDITIONAL.FUNCTION_FIELD.GENUS2.NEGATIVE_SIGN.LIMINF",
+                "status": "CONDITIONAL_EXACT",
+                "scope": (
+                    "Convergence of the first six raw moments implies "
+                    "liminf Pr(K_D/q^2<0)>=4360/12023."
+                ),
+            },
         ],
         "failure_modes": [
             {
@@ -397,6 +516,14 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "code": "FINITE_TO_LIMIT_PROMOTION",
                 "description": "Three finite fields are promoted to a q-to-infinity theorem.",
                 "hostile_control": "The raw result requires a conjectural status and not_a_theorem=true.",
+            },
+            {
+                "code": "SIGN_BOUND_AS_EXACT_PROBABILITY",
+                "description": "The polynomial lower bound is reported as the exact Haar sign probability.",
+                "hostile_control": (
+                    "The raw certificate labels 4360/12023 as a lower bound and keeps the "
+                    "q-to-infinity consequence conditional."
+                ),
             },
             {
                 "code": "TOY_KERNEL_CONFLATION",
@@ -429,8 +556,9 @@ def build_detector(root: Path) -> dict[str, Any]:
             }
         ],
         "notes": (
-            "Certified claims are the exact identity, constant terms, six Haar moments, and finite "
-            "histogram moments. The limiting comparison remains proposed."
+            "Certified claims are the exact identity, constant terms, six Haar moments, finite "
+            "histogram moments, and the degree-six sign lower bound. The limiting moment "
+            "comparison remains proposed."
         ),
     }
 
@@ -442,6 +570,64 @@ def _fraction_record(pair: Sequence[int]) -> dict[str, int | str]:
 
 def _witness_record(witness: Mapping[str, Sequence[int]]) -> dict[str, Any]:
     return {"X": _fraction_record(witness["X"]), "Y": _fraction_record(witness["Y"])}
+
+
+def _sign_moment_certificate_record(source: Mapping[str, Any]) -> dict[str, Any]:
+    majorant = source["majorant"]
+    return {
+        "status": source["status"],
+        "event": source["event"],
+        "support": {
+            "minimum": _fraction_record(source["support"]["minimum"]),
+            "maximum": _fraction_record(source["support"]["maximum"]),
+        },
+        "majorant": {
+            "polynomial": majorant["polynomial"],
+            "coefficients_low_to_high": [
+                _fraction_record(pair) for pair in majorant["coefficients_low_to_high"]
+            ],
+            "square_coefficients_low_to_high": [
+                _fraction_record(pair)
+                for pair in majorant["square_coefficients_low_to_high"]
+            ],
+            "pointwise_statement": majorant["pointwise_statement"],
+            "positive_interval_factorization": majorant[
+                "positive_interval_factorization"
+            ],
+            "quadratic_endpoint_values_on_0_to_4_over_3": [
+                _fraction_record(pair)
+                for pair in majorant["quadratic_endpoint_values_on_0_to_4_over_3"]
+            ],
+            "proof": majorant["proof"],
+            "construction": majorant["construction"],
+        },
+        "haar": {
+            "moment_majorant_nonnegative_upper_bound": _fraction_record(
+                source["haar"]["moment_majorant_nonnegative_upper_bound"]
+            ),
+            "negative_probability_lower_bound": _fraction_record(
+                source["haar"]["negative_probability_lower_bound"]
+            ),
+        },
+        "finite_q_bounds": [
+            {
+                "q": int(row["q"]),
+                "moment_majorant_nonnegative_upper_bound": _fraction_record(
+                    row["moment_majorant_nonnegative_upper_bound"]
+                ),
+                "negative_probability_lower_bound": _fraction_record(
+                    row["negative_probability_lower_bound"]
+                ),
+                "observed_negative_fraction": _fraction_record(
+                    row["observed_negative_fraction"]
+                ),
+                "verified_bound_holds": row["verified_bound_holds"],
+            }
+            for row in source["finite_q_bounds"]
+        ],
+        "conditional_consequence": dict(source["conditional_consequence"]),
+        "scope": source["scope"],
+    }
 
 
 def build_raw_result(
@@ -538,7 +724,11 @@ def build_raw_result(
             ],
             "arithmetic": comparator["weyl_certificate"]["arithmetic"],
         },
+        "negative_sign_moment_certificate": _sign_moment_certificate_record(
+            comparator["negative_sign_moment_certificate"]
+        ),
         "finite_comparisons": comparisons,
+        "frozen_moment_pattern": comparator["frozen_moment_pattern"],
         "convergence_target": {
             "status": CONVERGENCE_STATUS,
             "atlas_status": "PROPOSED",
@@ -552,6 +742,8 @@ def build_raw_result(
         },
         "firewalls": [
             "RIGOROUS_CERTIFIED covers the exact Laurent, Weyl, and finite-histogram arithmetic only; convergence is proposed and not a theorem.",
+            "The directional finite-moment pattern is exact only for q=3,5,7 and does not assert monotonicity or a rate at another field.",
+            "The degree-six polynomial gives a lower bound for the negative-sign probability, not its exact Haar value; its liminf consequence is conditional on six-moment convergence.",
             "The statistic is a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC.",
             "No conclusion transfers from these function-field families to number-field L-functions.",
             "The finite comparison covers only q=3,5,7 and moment orders 1 through 6.",
@@ -705,8 +897,10 @@ def make_evaluation(
             "artifact": result_binding,
             "summary": (
                 "F has exact USp(4) range [-20,4/3] and Haar moments -1, 3, -11, 56, "
-                "-374, 3117; exact finite comparisons at q=3,5,7 are registered without "
-                "asserting convergence."
+                "-374, 3117. A degree-six moment majorant proves "
+                "Pr_Haar(F<0)>=4360/12023. All six frozen moment gaps shrink directionally "
+                "from q=3 to 5 to 7, without asserting monotonicity beyond those fields "
+                "or convergence."
             ),
         },
         "result_hashes": [
@@ -720,8 +914,10 @@ def make_evaluation(
             "status": "EXACT_FINITE",
             "statement": (
                 "The character identity, range certificate, Weyl normalization, six Haar moments, "
-                "and three finite histogram moment sequences are exact. Their proposed "
-                "q-to-infinity relation is not proved."
+                "three finite histogram moment sequences, and the six frozen directional gap "
+                "checks are exact. The six-moment negative-sign lower bound is also exact; its "
+                "liminf consequence and the proposed q-to-infinity moment relation are conditional "
+                "and unproved, respectively."
             ),
             "smallest_gap": (
                 "Prove the relevant hyperelliptic-family equidistribution; bounded continuity of "
@@ -734,6 +930,13 @@ def make_evaluation(
             {
                 "code": "EXACT_NOT_CONVERGENCE",
                 "statement": "Certified exact arithmetic does not certify the proposed fixed-moment limit.",
+            },
+            {
+                "code": "SIGN_BOUND_NOT_SIGN_PROBABILITY",
+                "statement": (
+                    "The certified value 4360/12023 is a Haar lower bound, not the exact "
+                    "negative-sign probability; the finite-family liminf remains conditional."
+                ),
             },
             {
                 "code": "TOY_NOT_ANALYTIC_KERNEL",
@@ -749,8 +952,9 @@ def make_evaluation(
             },
         ],
         "notes": (
-            "RIGOROUS_CERTIFIED applies to exact Laurent, Weyl, and finite histogram arithmetic. "
-            "The raw result separately marks convergence CONJECTURAL and PROPOSED, not a theorem."
+            "RIGOROUS_CERTIFIED applies to exact Laurent, Weyl, finite histogram, and polynomial-"
+            "majorant arithmetic. The raw result separately marks moment convergence CONJECTURAL "
+            "and PROPOSED, and the negative-sign liminf as conditional."
         ),
     }
     return evaluation, raw_result

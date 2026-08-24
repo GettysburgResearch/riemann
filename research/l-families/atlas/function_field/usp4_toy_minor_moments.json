@@ -248,11 +248,65 @@
     }
   ],
   "finite_source": {
-    "canonical_sha256": "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10",
+    "canonical_sha256": "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4",
     "coverage": "all monic squarefree quintics over F_q for q=3,5,7",
     "path": "research/l-families/atlas/function_field/genus2_q_scan.json"
   },
   "firewall": "The Weyl constant terms and the three finite histogram moments are separately exact. Their convergence is conjectural. F is a toy reciprocal-coefficient statistic, not an analytic Pick/Loewner, XD, or HCNC kernel.",
+  "frozen_moment_pattern": {
+    "interpretation": "For moment orders 1 through 6 at q=3,5,7 only, the finite moment has the Haar sign, smaller absolute value, increasing absolute magnitude, and decreasing absolute gap as q increases. No monotonicity or rate is asserted for another q.",
+    "not_a_theorem_beyond_frozen_fields": true,
+    "per_order": [
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 1,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 2,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 3,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 4,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 5,
+        "same_nonzero_sign_as_haar": true
+      },
+      {
+        "absolute_gap_strictly_decreases_with_q": true,
+        "absolute_value_below_haar": true,
+        "absolute_value_strictly_increases_with_q": true,
+        "order": 6,
+        "same_nonzero_sign_as_haar": true
+      }
+    ],
+    "q_values": [
+      3,
+      5,
+      7
+    ],
+    "status": "EXACT_FOR_Q_3_5_7_ONLY"
+  },
   "limit_target": {
     "evidence_scope": "three exact fields q=3,5,7 and moment orders 1 through 6",
     "not_a_theorem": true,
@@ -260,12 +314,159 @@
     "statement": "For each fixed moment order, the finite K/q^2 moment tends to the USp(4) Haar moment as q tends to infinity.",
     "status": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
   },
-  "payload_sha256": "fa16e3ec818db1d60f5eb873adc297ff82af57796efc9d9bb6294dd1b9c98c3b",
+  "negative_sign_moment_certificate": {
+    "conditional_consequence": {
+      "assumption": "The first six raw moments of the normalized finite-family statistic converge to the six stored USp(4) Haar moments.",
+      "not_an_equidistribution_proof": true,
+      "reason": "The expectation of the fixed degree-six majorant then converges to 7663/12023; no boundary-mass or weak-convergence argument is needed.",
+      "statement": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 4360/12023.",
+      "status": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"
+    },
+    "event": "F<0",
+    "finite_q_bounds": [
+      {
+        "moment_majorant_nonnegative_upper_bound": [
+          1757785450112411,
+          2074170795235803
+        ],
+        "negative_probability_lower_bound": [
+          316385345123392,
+          2074170795235803
+        ],
+        "observed_negative_fraction": [
+          17,
+          27
+        ],
+        "q": 3,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": [
+          3362134983925181081,
+          4411393096923828125
+        ],
+        "negative_probability_lower_bound": [
+          1049258112998647044,
+          4411393096923828125
+        ],
+        "observed_negative_fraction": [
+          33,
+          50
+        ],
+        "q": 5,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": [
+          498077924985842372191,
+          686272022845319295847
+        ],
+        "negative_probability_lower_bound": [
+          188194097859476923656,
+          686272022845319295847
+        ],
+        "observed_negative_fraction": [
+          33,
+          49
+        ],
+        "q": 7,
+        "verified_bound_holds": true
+      }
+    ],
+    "haar": {
+      "moment_majorant_nonnegative_upper_bound": [
+        7663,
+        12023
+      ],
+      "negative_probability_lower_bound": [
+        4360,
+        12023
+      ]
+    },
+    "majorant": {
+      "coefficients_low_to_high": [
+        [
+          1,
+          1
+        ],
+        [
+          5405,
+          12023
+        ],
+        [
+          24,
+          1093
+        ],
+        [
+          -23,
+          12023
+        ]
+      ],
+      "construction": "The coefficients solve the exact normal equations minimizing E[R(F)^2] among Haar cubics with R(0)=1; only the displayed pointwise inequality is used for the probability bound.",
+      "pointwise_statement": "1_{x>=0} <= R(x)^2 on [-20,4/3]",
+      "polynomial": "R(x)=1+(5405*x+264*x^2-23*x^3)/12023",
+      "positive_interval_factorization": "R(x)-1=x*(5405+264*x-23*x^2)/12023",
+      "proof": "The quadratic 5405+264*x-23*x^2 is concave, so its minimum on [0,4/3] occurs at an endpoint; both stored endpoint values are positive. Thus R(x)>=1 for x>=0, while R(x)^2>=0 handles x<0.",
+      "quadratic_endpoint_values_on_0_to_4_over_3": [
+        [
+          5405,
+          1
+        ],
+        [
+          51445,
+          9
+        ]
+      ],
+      "square_coefficients_low_to_high": [
+        [
+          1,
+          1
+        ],
+        [
+          10810,
+          12023
+        ],
+        [
+          35562169,
+          144552529
+        ],
+        [
+          209162,
+          13141139
+        ],
+        [
+          -178934,
+          144552529
+        ],
+        [
+          -1104,
+          13141139
+        ],
+        [
+          529,
+          144552529
+        ]
+      ]
+    },
+    "scope": "This is an exact lower bound, not an evaluation of the Haar sign probability. The q=3,5,7 rows are exact frozen checks; the liminf statement is conditional.",
+    "status": "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND",
+    "support": {
+      "maximum": [
+        4,
+        3
+      ],
+      "minimum": [
+        -20,
+        1
+      ]
+    }
+  },
+  "payload_sha256": "b5b18aec27b76719c12acbae0c291d131765a6f4576aca931a65d59775145c77",
   "producer": {
     "input_provenance": "content-bound exact q-scan histogram fixture",
     "runtime_contract": "Python 3.11+ standard library; exact integer/rational arithmetic",
     "source": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
-    "source_sha256_lf_normalized": "aba6da478a4f1e69db94dcbe31339023ffcab349558758076a5908a1912d0135"
+    "source_sha256_lf_normalized": "d8fdbc133eee1fad79dc54ee5715720487df41d52559d88d25aa64584d06f707"
   },
   "range_certificate": {
     "formula": "F=(X+Y)^2-(2+X*Y)^2=(X-Y)^2-4-X^2*Y^2",

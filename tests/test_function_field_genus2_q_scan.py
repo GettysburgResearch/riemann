@@ -152,6 +152,24 @@ class FrozenScanTests(unittest.TestCase):
                 all(entry["matches"] for entry in family["formula_comparison"].values())
             )
 
+    def test_negative_sign_density_corollary_is_exact_and_scope_limited(self) -> None:
+        corollary = self.fixture["negative_proportion_corollary"]
+        self.assertEqual(
+            corollary["status"], "PROVED_FROM_EXACT_MEAN_AND_USP4_RANGE"
+        )
+        self.assertEqual(corollary["scope"], "every odd prime power q")
+        self.assertEqual(corollary["range_lower_bound"], -20)
+        self.assertEqual(
+            corollary["certified_moment_bridge"],
+            "-sum_D K_D=q*(q-1)*P(q)",
+        )
+        self.assertEqual(
+            corollary["frozen_lower_bound_regressions"],
+            {"3": [26, 1215], "5": [997, 31250], "7": [617, 16807]},
+        )
+        self.assertEqual(corollary["liminf_lower_bound"], [1, 20])
+        self.assertIn("does not determine the sign law", corollary["scope_boundary"])
+
     def test_family_algorithm_has_no_runtime_or_numeric_root_payload(self) -> None:
         encoded = json.dumps(self.fixture, sort_keys=True).lower()
         self.assertNotIn("runtime_seconds", encoded)

@@ -461,6 +461,9 @@ def build_fixture(
     q3_fixture = json.loads(Q3_FIXTURE.read_text(encoding="utf-8"))
     q3_control = _check_q3_fixture(scans[0].payload, q3_fixture)
     moment_certificate = moment_identity.build_certificate()
+    sign_density_certificate = moment_identity.build_sign_density_certificate(
+        moment_certificate
+    )
     proof_controls: dict[str, object] = {}
     for scan in scans:
         q = int(scan.payload["q"])
@@ -551,6 +554,41 @@ def build_fixture(
                 "no mathematical gap is known in the stated identity"
             ),
         },
+        "negative_proportion_corollary": {
+            "status": "PROVED_FROM_EXACT_MEAN_AND_USP4_RANGE",
+            "scope": "every odd prime power q",
+            "statistic": "Z_D=(q*a_D^2-b_D^2)/q^2",
+            "range_lower_bound": sign_density_certificate.range_lower_bound,
+            "mean_deficit": "A(q)=(1-1/q)^2-(q+1)/q^5=P(q)/q^5",
+            "mean_deficit_numerator": "P(q)=q^5-2*q^4+q^3-q-1",
+            "certified_moment_bridge": "-sum_D K_D=q*(q-1)*P(q)",
+            "mean_deficit_numerator_coefficients_low_to_high": [
+                int(coefficient)
+                for coefficient in sign_density_certificate.mean_deficit_numerator.coefficients
+            ],
+            "shifted_positivity_identity": (
+                "P(t+3)=t^5+13*t^4+67*t^3+171*t^2+215*t+104 for t=q-3>=0"
+            ),
+            "shifted_positive_coefficients_low_to_high": [
+                int(coefficient)
+                for coefficient in sign_density_certificate.shifted_positive_polynomial.coefficients
+            ],
+            "negative_proportion_lower_bound": (
+                "rho_-(q)>=P(q)/(20*q^5)"
+            ),
+            "frozen_lower_bound_regressions": {
+                str(q): _fraction_pair(sign_density_certificate.lower_bound_at(q))
+                for q in FROZEN_Q_VALUES
+            },
+            "liminf_lower_bound": [1, sign_density_certificate.proportion_denominator],
+            "memberwise_consequence": (
+                "for every odd prime power q, at least one family member has negative Z_D"
+            ),
+            "scope_boundary": (
+                "This is a lower density floor only; it does not determine the sign law, prove "
+                "equidistribution, or identify the toy minor with an analytic detector."
+            ),
+        },
         "usp4_limit_target": {
             "status": MEAN_LIMIT_STATUS,
             "not_a_theorem": False,
@@ -565,7 +603,8 @@ def build_fixture(
             "All frozen family totals are exact finite results. The all-odd-prime-power mean formula and its "
             "first-moment limit are proved by the separately source-locked research note and exact "
             "certificate, not inferred from three scans. Higher-moment USp(4) convergence remains "
-            "proposed. The toy coefficient minor is not an analytic Pick/Loewner, XD, or HCNC kernel."
+            "proposed. The negative-sign density floor uses only the exact mean and exact lower "
+            "range bound. The toy coefficient minor is not an analytic Pick/Loewner, XD, or HCNC kernel."
         ),
     }
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")

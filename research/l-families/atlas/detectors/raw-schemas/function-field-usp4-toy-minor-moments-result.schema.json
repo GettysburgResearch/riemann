@@ -13,7 +13,9 @@
     "character_identity",
     "range_certificate",
     "weyl_certificate",
+    "negative_sign_moment_certificate",
     "finite_comparisons",
+    "frozen_moment_pattern",
     "convergence_target",
     "firewalls"
   ],
@@ -165,12 +167,208 @@
         "arithmetic": {"const": "exact integer Laurent-polynomial convolution"}
       }
     },
+    "negative_sign_moment_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "event",
+        "support",
+        "majorant",
+        "haar",
+        "finite_q_bounds",
+        "conditional_consequence",
+        "scope"
+      ],
+      "properties": {
+        "status": {"const": "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND"},
+        "event": {"const": "F<0"},
+        "support": {
+          "const": {
+            "minimum": {"numerator": -20, "denominator": 1, "text": "-20"},
+            "maximum": {"numerator": 4, "denominator": 3, "text": "4/3"}
+          }
+        },
+        "majorant": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "polynomial",
+            "coefficients_low_to_high",
+            "square_coefficients_low_to_high",
+            "pointwise_statement",
+            "positive_interval_factorization",
+            "quadratic_endpoint_values_on_0_to_4_over_3",
+            "proof",
+            "construction"
+          ],
+          "properties": {
+            "polynomial": {"const": "R(x)=1+(5405*x+264*x^2-23*x^3)/12023"},
+            "coefficients_low_to_high": {
+              "const": [
+                {"numerator": 1, "denominator": 1, "text": "1"},
+                {"numerator": 5405, "denominator": 12023, "text": "5405/12023"},
+                {"numerator": 24, "denominator": 1093, "text": "24/1093"},
+                {"numerator": -23, "denominator": 12023, "text": "-23/12023"}
+              ]
+            },
+            "square_coefficients_low_to_high": {
+              "const": [
+                {"numerator": 1, "denominator": 1, "text": "1"},
+                {"numerator": 10810, "denominator": 12023, "text": "10810/12023"},
+                {"numerator": 35562169, "denominator": 144552529, "text": "35562169/144552529"},
+                {"numerator": 209162, "denominator": 13141139, "text": "209162/13141139"},
+                {"numerator": -178934, "denominator": 144552529, "text": "-178934/144552529"},
+                {"numerator": -1104, "denominator": 13141139, "text": "-1104/13141139"},
+                {"numerator": 529, "denominator": 144552529, "text": "529/144552529"}
+              ]
+            },
+            "pointwise_statement": {"const": "1_{x>=0} <= R(x)^2 on [-20,4/3]"},
+            "positive_interval_factorization": {
+              "const": "R(x)-1=x*(5405+264*x-23*x^2)/12023"
+            },
+            "quadratic_endpoint_values_on_0_to_4_over_3": {
+              "const": [
+                {"numerator": 5405, "denominator": 1, "text": "5405"},
+                {"numerator": 51445, "denominator": 9, "text": "51445/9"}
+              ]
+            },
+            "proof": {"type": "string", "minLength": 1},
+            "construction": {"type": "string", "minLength": 1}
+          }
+        },
+        "haar": {
+          "const": {
+            "moment_majorant_nonnegative_upper_bound": {
+              "numerator": 7663,
+              "denominator": 12023,
+              "text": "7663/12023"
+            },
+            "negative_probability_lower_bound": {
+              "numerator": 4360,
+              "denominator": 12023,
+              "text": "4360/12023"
+            }
+          }
+        },
+        "finite_q_bounds": {
+          "const": [
+            {
+              "q": 3,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 1757785450112411,
+                "denominator": 2074170795235803,
+                "text": "1757785450112411/2074170795235803"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 316385345123392,
+                "denominator": 2074170795235803,
+                "text": "316385345123392/2074170795235803"
+              },
+              "observed_negative_fraction": {
+                "numerator": 17,
+                "denominator": 27,
+                "text": "17/27"
+              },
+              "verified_bound_holds": true
+            },
+            {
+              "q": 5,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 3362134983925181081,
+                "denominator": 4411393096923828125,
+                "text": "3362134983925181081/4411393096923828125"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 1049258112998647044,
+                "denominator": 4411393096923828125,
+                "text": "1049258112998647044/4411393096923828125"
+              },
+              "observed_negative_fraction": {
+                "numerator": 33,
+                "denominator": 50,
+                "text": "33/50"
+              },
+              "verified_bound_holds": true
+            },
+            {
+              "q": 7,
+              "moment_majorant_nonnegative_upper_bound": {
+                "numerator": 498077924985842372191,
+                "denominator": 686272022845319295847,
+                "text": "498077924985842372191/686272022845319295847"
+              },
+              "negative_probability_lower_bound": {
+                "numerator": 188194097859476923656,
+                "denominator": 686272022845319295847,
+                "text": "188194097859476923656/686272022845319295847"
+              },
+              "observed_negative_fraction": {
+                "numerator": 33,
+                "denominator": 49,
+                "text": "33/49"
+              },
+              "verified_bound_holds": true
+            }
+          ]
+        },
+        "conditional_consequence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "not_an_equidistribution_proof", "assumption", "statement", "reason"],
+          "properties": {
+            "status": {"const": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"},
+            "not_an_equidistribution_proof": {"const": true},
+            "assumption": {"type": "string", "minLength": 1},
+            "statement": {"const": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 4360/12023."},
+            "reason": {"type": "string", "minLength": 1}
+          }
+        },
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
     "finite_comparisons": {
       "type": "array",
       "minItems": 3,
       "maxItems": 3,
-      "uniqueItems": true,
-      "items": {"$ref": "#/$defs/finite_comparison"}
+      "prefixItems": [
+        {
+          "allOf": [{"$ref": "#/$defs/finite_comparison"}],
+          "properties": {"q": {"const": 3}}
+        },
+        {
+          "allOf": [{"$ref": "#/$defs/finite_comparison"}],
+          "properties": {"q": {"const": 5}}
+        },
+        {
+          "allOf": [{"$ref": "#/$defs/finite_comparison"}],
+          "properties": {"q": {"const": 7}}
+        }
+      ],
+      "items": false
+    },
+    "frozen_moment_pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status", "not_a_theorem_beyond_frozen_fields", "q_values", "per_order", "interpretation"
+      ],
+      "properties": {
+        "status": {"const": "EXACT_FOR_Q_3_5_7_ONLY"},
+        "not_a_theorem_beyond_frozen_fields": {"const": true},
+        "q_values": {"const": [3, 5, 7]},
+        "per_order": {
+          "const": [
+            {"order": 1, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 2, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 3, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 4, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 5, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true},
+            {"order": 6, "same_nonzero_sign_as_haar": true, "absolute_value_below_haar": true, "absolute_value_strictly_increases_with_q": true, "absolute_gap_strictly_decreases_with_q": true}
+          ]
+        },
+        "interpretation": {"type": "string", "minLength": 1}
+      }
     },
     "convergence_target": {
       "type": "object",
@@ -194,8 +392,8 @@
     },
     "firewalls": {
       "type": "array",
-      "minItems": 4,
-      "maxItems": 4,
+      "minItems": 6,
+      "maxItems": 6,
       "items": {"type": "string", "minLength": 1},
       "uniqueItems": true
     }
@@ -235,7 +433,7 @@
       "additionalProperties": false,
       "required": ["order", "finite_exact", "usp4_haar_exact", "finite_minus_haar"],
       "properties": {
-        "order": {"type": "integer", "minimum": 1},
+        "order": {"enum": [1, 2, 3, 4, 5, 6]},
         "finite_exact": {"$ref": "#/$defs/fraction"},
         "usp4_haar_exact": {"type": "integer"},
         "finite_minus_haar": {"$ref": "#/$defs/fraction"}
@@ -261,8 +459,15 @@
           "type": "array",
           "minItems": 6,
           "maxItems": 6,
-          "uniqueItems": true,
-          "items": {"$ref": "#/$defs/moment"}
+          "prefixItems": [
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 1}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 2}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 3}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 4}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 5}}},
+            {"allOf": [{"$ref": "#/$defs/moment"}], "properties": {"order": {"const": 6}}}
+          ],
+          "items": false
         }
       },
       "allOf": [

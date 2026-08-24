@@ -25,6 +25,12 @@ EXISTING_F3_SPEC_SLUG = "FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY"
 Q_SCAN_SOURCE = "research/l-families/atlas/function_field/genus2_q_scan.py"
 POLYNOMIAL_SOURCE = "research/l-families/atlas/function_field/pilot.py"
 Q_SCAN_FIXTURE = "research/l-families/atlas/function_field/genus2_q_scan.json"
+AFFINE_ORBIT_SOURCE = (
+    "research/l-families/atlas/function_field/genus2_affine_orbits.py"
+)
+AFFINE_ORBIT_FIXTURE = (
+    "research/l-families/atlas/function_field/genus2_affine_orbits.json"
+)
 MOMENT_IDENTITY_NOTE = (
     "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md"
 )
@@ -39,6 +45,8 @@ DETECTOR_SLUG = "FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS"
 EVALUATION_SLUG = "FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.TOY_MINOR.MOMENT_SCAN"
 FORMULA_STATUS = "PROVED_IN_DRAFT_RESEARCH_NOTE"
 MEAN_LIMIT_STATUS = "PROVED_FROM_EXACT_FORMULA"
+SIGN_DENSITY_STATUS = "PROVED_FROM_EXACT_MEAN_AND_USP4_RANGE"
+AFFINE_ORBIT_STATUS = "PROVED_EXACTLY_AND_EXHAUSTIVELY_REPLAYED_ON_FROZEN_FIELDS"
 DETECTOR_DEFINITION = (
     "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct "
     "P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) "
@@ -65,6 +73,22 @@ def _load_q_scan_module(repo_root: Path) -> ModuleType:
     return module
 
 
+def _load_affine_orbit_module(repo_root: Path) -> ModuleType:
+    path = repo_root / AFFINE_ORBIT_SOURCE
+    function_field_dir = str(path.parent)
+    if function_field_dir not in sys.path:
+        sys.path.insert(0, function_field_dir)
+    module_spec = importlib.util.spec_from_file_location(
+        "_riemann_atlas_genus2_affine_orbits", path
+    )
+    if module_spec is None or module_spec.loader is None:
+        raise RuntimeError(f"cannot load exact affine-orbit module: {path}")
+    module = importlib.util.module_from_spec(module_spec)
+    sys.modules[module_spec.name] = module
+    module_spec.loader.exec_module(module)
+    return module
+
+
 def load_and_replay_fixture(root: Path) -> dict[str, Any]:
     repo_root = root.parents[2]
     fixture = read_json(repo_root / Q_SCAN_FIXTURE)
@@ -84,12 +108,76 @@ def load_and_replay_fixture(root: Path) -> dict[str, Any]:
         raise ValueError("first-moment limit lost its proof-backed status")
     if fixture["usp4_limit_target"].get("not_a_theorem") is not False:
         raise ValueError("first-moment limit is not marked as proved from the formula")
+    sign_density = fixture.get("negative_proportion_corollary", {})
+    if sign_density.get("status") != SIGN_DENSITY_STATUS:
+        raise ValueError("negative-sign density corollary lost its proof-backed status")
+    if sign_density.get("scope") != "every odd prime power q":
+        raise ValueError("negative-sign density corollary scope drifted")
+    if sign_density.get("range_lower_bound") != -20:
+        raise ValueError("negative-sign density corollary lost the exact USp(4) range bound")
+    if sign_density.get("liminf_lower_bound") != [1, 20]:
+        raise ValueError("negative-sign density liminf lower bound drifted")
     if fixture["resource_contract"]["candidate_cap"] != 20_000:
         raise ValueError("q-scan candidate cap drifted")
     if fixture["resource_contract"].get("candidate_cap_scope") != "PER_FIELD_Q_SCAN":
         raise ValueError("q-scan candidate cap is not explicitly per-field")
     if fixture["resource_contract"]["maximum_wall_seconds"] > 8.0:
         raise ValueError("q-scan wall guard exceeds eight seconds")
+    return fixture
+
+
+def load_and_replay_affine_fixture(root: Path) -> dict[str, Any]:
+    repo_root = root.parents[2]
+    fixture = read_json(repo_root / AFFINE_ORBIT_FIXTURE)
+    claimed_payload_sha256 = fixture.get("payload_sha256")
+    payload = dict(fixture)
+    payload.pop("payload_sha256", None)
+    if claimed_payload_sha256 != sha256_hex(payload):
+        raise ValueError("affine-orbit fixture payload hash mismatch")
+    regenerated = _load_affine_orbit_module(repo_root).build_fixture()
+    if regenerated != fixture:
+        raise ValueError("affine-orbit fixture differs from its <=8-second exact replay")
+    if fixture.get("exact_proof", {}).get("status") != AFFINE_ORBIT_STATUS:
+        raise ValueError("affine coefficient law lost its exact proof status")
+    transformation_law = fixture.get("action", {}).get("transformation_law", {})
+    if transformation_law != {
+        "a_D": "a_{D^{alpha,beta}}=chi_q(alpha)*a_D",
+        "b_D": "b_{D^{alpha,beta}}=b_D",
+        "K_D": "K_{D^{alpha,beta}}=K_D for K_D=q*a_D^2-b_D^2",
+    }:
+        raise ValueError("affine coefficient transformation law drifted")
+    resource = fixture.get("resource_contract", {})
+    if resource.get("frozen_q_values") != [3, 5, 7]:
+        raise ValueError("affine-orbit fixture field scope drifted")
+    if resource.get("candidate_cap") != 20_000:
+        raise ValueError("affine-orbit candidate cap drifted")
+    if resource.get("candidate_cap_scope") != "PER_FIELD":
+        raise ValueError("affine-orbit candidate cap is not explicitly per-field")
+    if resource.get("maximum_global_wall_seconds", 9.0) > 8.0:
+        raise ValueError("affine-orbit wall guard exceeds eight seconds")
+    expected = {
+        3: (162, 6, 972, 29),
+        5: (2500, 20, 50_000, 132),
+        7: (14_406, 42, 605_052, 349),
+    }
+    families = fixture.get("families", [])
+    if [family.get("q") for family in families] != [3, 5, 7]:
+        raise ValueError("affine-orbit family ordering drifted")
+    for family in families:
+        q = int(family["q"])
+        observed = (
+            family.get("member_count"),
+            family.get("group", {}).get("order"),
+            family.get("action_checks", {}).get("member_action_pairs_checked"),
+            family.get("orbit_partition", {}).get("orbit_count"),
+        )
+        if observed != expected[q]:
+            raise ValueError(f"q={q} affine-orbit coverage summary drifted")
+    regression_controls = fixture.get("q_scan_regression_controls", {})
+    if set(regression_controls) != {"3", "5", "7"} or not all(
+        all(checks.values()) for checks in regression_controls.values()
+    ):
+        raise ValueError("affine-orbit q-scan regression controls failed")
     return fixture
 
 
@@ -288,6 +376,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "Use K_D=q*a_D^2-b_D^2 and normalize only by q^2 after the exact integer K_D is formed.",
         "Use a 20,000-candidate cap per field and a global monotonic wall guard no larger than eight seconds.",
         "Freeze candidate_cap_scope=PER_FIELD_Q_SCAN; the cap is not a combined-replay total.",
+        "Under D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), require a' = chi(alpha)a, b' = b, and K' = K.",
         "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC.",
     ]
     identity_kernel = {
@@ -297,7 +386,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "kernel_convention": "COEFFICIENT_DISPERSION",
         "central_zero_policy": "NOT_APPLICABLE",
         "normalization_requirements": normalization,
-        "contract_revision": 1,
+        "contract_revision": 2,
     }
     semantic_id, identity_sha256 = semantic_identity("DETECTOR", DETECTOR_SLUG, identity_kernel)
     return {
@@ -307,13 +396,15 @@ def build_detector(root: Path) -> dict[str, Any]:
         "identity_sha256": identity_sha256,
         "identity_kernel": identity_kernel,
         "title": "Exact genus-two toy-minor finite-family moment scan",
-        "revision": 1,
+        "revision": 2,
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(737), programme_ref(741)],
         "scope_boundary": (
             "Exhaustive histograms only for q=3,5,7, plus proof-backed first-moment identities for "
-            "every odd prime power; no higher-moment equidistribution, zero statement, analytic-"
-            "kernel conclusion, or number-field transfer."
+            "every odd prime power and the consequent negative-sign density floor. The exact "
+            "affine action law is replayed with complete orbit partitions only at q=3,5,7; no "
+            "full sign law, asymptotic orbit law, higher-moment equidistribution, zero statement, "
+            "analytic-kernel conclusion, or number-field transfer."
         ),
         "supersedes": [],
         "detector_kind": "COEFFICIENT_DISPERSION",
@@ -338,6 +429,12 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "input_type": "RAW_ARTIFACT",
                 "required": True,
                 "coverage_requirement": "COMPLETE",
+            },
+            {
+                "name": "affine_orbit_certificate",
+                "input_type": "RAW_ARTIFACT",
+                "required": True,
+                "coverage_requirement": "FINITE_COMPLETE",
             },
         ],
         "parameters": [
@@ -413,8 +510,13 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "comparison_role": "FIREWALL",
             },
             {
-                "field": "detector_kind",
+                "field": "result.artifact.affine_orbit_certificate",
                 "requirement": normalization[4],
+                "comparison_role": "IDENTITY",
+            },
+            {
+                "field": "detector_kind",
+                "requirement": normalization[5],
                 "comparison_role": "FIREWALL",
             },
         ],
@@ -434,6 +536,22 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "statement": "The displayed mean formulas hold for every odd prime power q.",
                 "status": "PROVED",
             },
+            {
+                "code": "NEGATIVE_SIGN_DENSITY_FLOOR",
+                "statement": (
+                    "The exact mean and F(U)>=-20 imply rho_-(q)>=P(q)/(20*q^5) "
+                    "for every odd prime power q, with liminf at least 1/20."
+                ),
+                "status": "PROVED",
+            },
+            {
+                "code": "AFFINE_TOY_MINOR_INVARIANCE",
+                "statement": (
+                    "For D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), exact change of "
+                    "variables gives a'=chi(alpha)a, b'=b, and K'=K."
+                ),
+                "status": "PROVED",
+            },
         ],
         "family_adapters": [
             {
@@ -441,6 +559,15 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "status": "REQUIRED_AVAILABLE",
                 "adapter_path": Q_SCAN_SOURCE,
                 "correction": "Use each field's exact F_(q^2) model and normalize K only after integer aggregation.",
+            },
+            {
+                "family": "F3_F5_F7_QUINTIC_AFFINE_ORBITS",
+                "status": "REQUIRED_AVAILABLE",
+                "adapter_path": AFFINE_ORBIT_SOURCE,
+                "correction": (
+                    "Use the monic right action of AGL(1,F_q), exhaust every member-action "
+                    "pair, and retain exact orbit-stabilizer and sign summaries."
+                ),
             },
             {
                 "family": "NUMBER_FIELD",
@@ -466,6 +593,14 @@ def build_detector(root: Path) -> dict[str, Any]:
                     "this is not a higher-moment equidistribution theorem."
                 ),
             },
+            {
+                "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.NEGATIVE_SIGN_DENSITY",
+                "status": "VERIFIED",
+                "scope": (
+                    "For every odd prime power, the exact first moment and exact lower range bound "
+                    "give rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20; this is not a sign law."
+                ),
+            },
         ],
         "failure_modes": [
             {
@@ -485,6 +620,22 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "code": "RESOURCE_SCOPE_DRIFT",
                 "description": "A larger field silently expands the O(q^7) scan.",
                 "hostile_control": "The implementation refuses q outside 3,5,7, caps each field at 20,000 candidates, and enforces a global <=8-second replay deadline.",
+            },
+            {
+                "code": "DENSITY_FLOOR_MISTAKEN_FOR_SIGN_LAW",
+                "description": "The lower bound on negative members is presented as a limiting sign distribution.",
+                "hostile_control": (
+                    "Every record states only the one-sided floor derived from the exact mean and "
+                    "range, and explicitly withholds a sign law or equidistribution claim."
+                ),
+            },
+            {
+                "code": "FINITE_AFFINE_ORBITS_MISTAKEN_FOR_LIMIT_LAW",
+                "description": "The q=3,5,7 orbit or stabilizer tables are extrapolated in q.",
+                "hostile_control": (
+                    "The affine packet hard-refuses every other q, retains its own global "
+                    "<=8-second guard, and makes no asymptotic orbit claim."
+                ),
             },
         ],
         "output_contract": {
@@ -514,13 +665,43 @@ def build_detector(root: Path) -> dict[str, Any]:
         "notes": (
             "The q=3,5,7 histograms are finite exact computations. The separately bound DRAFT "
             "proof establishes the displayed first-moment formulas and their normalized limit for "
-            "every odd prime power; higher moments and equidistribution remain proposed."
+            "every odd prime power; the separately replayed affine packet proves the exact action "
+            "law and finite orbit partitions only at q=3,5,7. Higher moments and "
+            "equidistribution remain proposed."
         ),
+    }
+
+
+def _compact_affine_family(family: dict[str, Any]) -> dict[str, Any]:
+    partition = family["orbit_partition"]
+    sign_summaries = family["sign_summaries"]
+    return {
+        "q": family["q"],
+        "member_count": family["member_count"],
+        "group_order": family["group"]["order"],
+        "member_action_pairs_checked": family["action_checks"][
+            "member_action_pairs_checked"
+        ],
+        "orbit_count": partition["orbit_count"],
+        "orbit_size_histogram": partition["orbit_size_histogram"],
+        "stabilizer_order_histogram": partition["stabilizer_order_histogram"],
+        "free_orbit_count": partition["free_orbit_count"],
+        "nontrivial_stabilizer_orbit_count": partition[
+            "nontrivial_stabilizer_orbit_count"
+        ],
+        "sign_summaries": {
+            sign: {
+                "member_count": sign_summaries[sign]["member_count"],
+                "orbit_count": sign_summaries[sign]["orbit_count"],
+            }
+            for sign in ("negative", "zero", "positive")
+        },
     }
 
 
 def build_raw_result(
     fixture: dict[str, Any],
+    affine_fixture: dict[str, Any],
     specs: Sequence[dict[str, Any]],
     detector: dict[str, Any],
 ) -> dict[str, Any]:
@@ -583,9 +764,57 @@ def build_raw_result(
             "proof": fixture["usp4_limit_target"]["proof"],
             "scope_boundary": fixture["usp4_limit_target"]["scope_boundary"],
         },
+        "negative_proportion_corollary": fixture["negative_proportion_corollary"],
+        "affine_orbit_certificate": {
+            "status": AFFINE_ORBIT_STATUS,
+            "scope": affine_fixture["scope"],
+            "source_fixture": {
+                "path": AFFINE_ORBIT_FIXTURE,
+                "canonical_sha256": sha256_hex(affine_fixture),
+                "payload_sha256": affine_fixture["payload_sha256"],
+            },
+            "action": {
+                "definition": affine_fixture["action"]["definition"],
+                "convention": affine_fixture["action"]["convention"],
+                "a_D_law": affine_fixture["action"]["transformation_law"]["a_D"],
+                "b_D_law": affine_fixture["action"]["transformation_law"]["b_D"],
+                "K_D_law": affine_fixture["action"]["transformation_law"]["K_D"],
+            },
+            "resource_controls": {
+                "q_values": affine_fixture["resource_contract"]["frozen_q_values"],
+                "candidate_cap": affine_fixture["resource_contract"]["candidate_cap"],
+                "candidate_cap_scope": affine_fixture["resource_contract"][
+                    "candidate_cap_scope"
+                ],
+                "maximum_global_wall_seconds": str(
+                    affine_fixture["resource_contract"]["maximum_global_wall_seconds"]
+                ),
+                "larger_q_policy": affine_fixture["resource_contract"][
+                    "larger_q_policy"
+                ],
+            },
+            "total_member_action_pairs_checked": sum(
+                int(family["action_checks"]["member_action_pairs_checked"])
+                for family in affine_fixture["families"]
+            ),
+            "families": [
+                _compact_affine_family(family) for family in affine_fixture["families"]
+            ],
+            "q_scan_regressions_all_match": all(
+                all(checks.values())
+                for checks in affine_fixture["q_scan_regression_controls"].values()
+            ),
+            "firewall": (
+                "The action law and orbit partitions are exact finite statements for q=3,5,7 "
+                "only; they are not an asymptotic orbit law, equidistribution theorem, analytic "
+                "kernel statement, or number-field transfer."
+            ),
+        },
         "firewalls": [
             "The all-q formula is proved by the separately bound DRAFT proof note and certificate, not inferred from three scans.",
             "Only the first-moment limit is proved; higher moments and USp(4) equidistribution remain proposed and are not theorems here.",
+            "The negative-sign result is a one-sided density floor, not a sign law or equidistribution theorem.",
+            "The affine action law is exact, but its q=3,5,7 orbit and stabilizer tables are finite only and not an asymptotic law.",
             "The toy coefficient minor is not Pick/Loewner, XD, or HCNC.",
             "No result transfers from these function fields to number-field L-functions.",
         ],
@@ -598,6 +827,7 @@ def make_evaluation(
     specs: Sequence[dict[str, Any]],
     detector: dict[str, Any],
     fixture: dict[str, Any],
+    affine_fixture: dict[str, Any],
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     repo_root = root.parents[2]
     qscan_adapter = artifact_binding(
@@ -606,8 +836,23 @@ def make_evaluation(
     polynomial_adapter = artifact_binding(
         root, POLYNOMIAL_SOURCE, "sample_euler_crosscheck_adapter", "FINITE_COMPLETE", None, "RAW_BYTES"
     )
+    affine_adapter = artifact_binding(
+        root,
+        AFFINE_ORBIT_SOURCE,
+        "exact_affine_orbit_adapter",
+        "FINITE_COMPLETE",
+        None,
+        "RAW_BYTES",
+    )
     fixture_binding = artifact_binding(
         root, Q_SCAN_FIXTURE, "exhaustive_three_family_scan", "FINITE_COMPLETE", None
+    )
+    affine_fixture_binding = artifact_binding(
+        root,
+        AFFINE_ORBIT_FIXTURE,
+        "exact_affine_orbit_certificate",
+        "FINITE_COMPLETE",
+        None,
     )
     proof_note_binding = artifact_binding(
         root, MOMENT_IDENTITY_NOTE, "all_q_moment_identity_proof", "COMPLETE", None, "RAW_BYTES"
@@ -650,6 +895,12 @@ def make_evaluation(
             "coverage_class": "COMPLETE",
             "sources": [MOMENT_IDENTITY_NOTE, MOMENT_IDENTITY_CERTIFICATE],
         },
+        {
+            "name": "affine_orbit_certificate",
+            "input_type": "RAW_ARTIFACT",
+            "coverage_class": "FINITE_COMPLETE",
+            "sources": [AFFINE_ORBIT_FIXTURE, AFFINE_ORBIT_SOURCE],
+        },
     ]
     implementation_relative = "research/l-families/atlas/core/wrap_genus2_q_scan.py"
     implementation_sha256 = raw_sha256(repo_root / implementation_relative)
@@ -658,10 +909,11 @@ def make_evaluation(
         "slug": EVALUATION_SLUG,
         "lfunction_spec_bindings": spec_bindings,
         "detector_contract_binding": detector_binding,
-        "adapter_bindings": [qscan_adapter, polynomial_adapter],
+        "adapter_bindings": [qscan_adapter, polynomial_adapter, affine_adapter],
         "configuration_sha256": sha256_hex(values),
         "input_sha256s": [
             fixture_binding["sha256"],
+            affine_fixture_binding["sha256"],
             proof_note_binding["sha256"],
             proof_certificate_binding["sha256"],
         ],
@@ -671,7 +923,7 @@ def make_evaluation(
         "seed": None,
     }
     semantic_id, identity_sha256 = semantic_identity("EVAL", EVALUATION_SLUG, identity_kernel)
-    raw_result = build_raw_result(fixture, specs, detector)
+    raw_result = build_raw_result(fixture, affine_fixture, specs, detector)
     result_relative = f"research/l-families/atlas/results/{semantic_id}.json"
     result_binding = {
         "role": "detector_result",
@@ -681,7 +933,10 @@ def make_evaluation(
         "coverage_class": "FINITE_COMPLETE",
         "media_type": "application/json",
         "schema_path": RAW_RESULT_SCHEMA,
-        "notes": "Compact exact totals; the source-bound q-scan fixture retains full histograms and witnesses.",
+        "notes": (
+            "Compact exact totals and affine summaries; the source-bound q-scan and affine "
+            "fixtures retain full histograms, witnesses, orbit digests, and replay controls."
+        ),
     }
     evaluation = {
         "schema_version": "riemann.atlas.evaluation_record.v1",
@@ -690,13 +945,15 @@ def make_evaluation(
         "identity_sha256": identity_sha256,
         "identity_kernel": identity_kernel,
         "title": "Exact q=3,5,7 genus-two toy-minor finite-family moment scan",
-        "revision": 1,
+        "revision": 2,
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(737), programme_ref(741)],
         "scope_boundary": (
             "Complete finite scans only at q=3,5,7; the bound proof establishes the named first-"
-            "moment identities for every odd prime power, but no higher-moment equidistribution, "
-            "zero statement, analytic-kernel result, or number-field transfer."
+            "moment identities and consequent negative-sign density floor for every odd prime "
+            "power, while the affine action and orbit partitions are exact only on the three "
+            "frozen fields. There is no full sign law, asymptotic orbit law, higher-moment "
+            "equidistribution, zero statement, analytic-kernel result, or number-field transfer."
         ),
         "supersedes": [],
         "subject": {
@@ -705,10 +962,15 @@ def make_evaluation(
         },
         "lfunction_spec_bindings": spec_bindings,
         "detector_contract_binding": detector_binding,
-        "adapter_bindings": [qscan_adapter, polynomial_adapter],
+        "adapter_bindings": [qscan_adapter, polynomial_adapter, affine_adapter],
         "configuration": {"values": values, "canonical_sha256": sha256_hex(values)},
         "evaluation_scope": "FAMILY_MOMENT",
-        "input_bindings": [fixture_binding, proof_note_binding, proof_certificate_binding],
+        "input_bindings": [
+            fixture_binding,
+            affine_fixture_binding,
+            proof_note_binding,
+            proof_certificate_binding,
+        ],
         "input_fulfillments": input_fulfillments,
         "arithmetic": {
             "class": "CERTIFIED_INTEGER_COVERAGE",
@@ -718,10 +980,15 @@ def make_evaluation(
         },
         "coverage": {
             "class": "FINITE_COMPLETE",
-            "statement": "All 162, 2500, and 14406 family members at q=3,5,7 respectively.",
+            "statement": (
+                "All 162, 2500, and 14406 family members at q=3,5,7 respectively, "
+                "including every one of the 656024 member-affine-action pairs and each complete "
+                "orbit partition."
+            ),
             "omissions": [
                 "q outside 3,5,7",
                 "finite histograms outside q=3,5,7",
+                "affine orbit and stabilizer tables outside q=3,5,7",
                 "higher-moment formulas and equidistribution",
                 "zero ordinates and analytic kernels",
                 "number-field transfer",
@@ -744,7 +1011,9 @@ def make_evaluation(
             "summary": (
                 "Exact normalized K means are -104/243, -1994/3125, and -12340/16807 "
                 "for q=3,5,7. A separately bound proof gives E[K]=-(q-1)^2+(q+1)/q^3 "
-                "for every odd prime power and hence E[K/q^2] tends to -1."
+                "for every odd prime power and hence E[K/q^2] tends to -1. Combined with the exact "
+                "lower range -20, this proves rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20. "
+                "The exact AGL(1,q) orbit counts are 29, 132, and 349."
             ),
         },
         "result_hashes": [
@@ -759,7 +1028,10 @@ def make_evaluation(
             "statement": (
                 "The three declared finite families have the exact registered moment totals and sign "
                 "counts. Independently of those scans, the bound squarefree-Moebius proof and Q[q] "
-                "certificate establish the displayed first-moment identities for every odd prime power."
+                "certificate establish the displayed first-moment identities for every odd prime "
+                "power and, with the exact USp(4) range, the stated negative-sign density floor."
+                " The separately replayed affine certificate proves a'=chi(alpha)a, b'=b, K'=K "
+                "and the complete finite q=3,5,7 orbit-stabilizer summaries."
             ),
             "smallest_gap": (
                 "Translate the proof into a proof assistant or obtain frozen-head review; for the "
@@ -781,12 +1053,30 @@ def make_evaluation(
                 "statement": "The proved first-moment limit is not a higher-moment or USp(4) equidistribution theorem.",
             },
             {
+                "code": "DENSITY_FLOOR_NOT_SIGN_LAW",
+                "statement": (
+                    "The proved lower bound on the proportion with K_D<0 neither determines a "
+                    "limiting sign distribution nor proves equidistribution."
+                ),
+            },
+            {
                 "code": "TOY_NOT_ANALYTIC_KERNEL",
                 "statement": "K_D is a toy coefficient minor, not Pick/Loewner, XD, or HCNC.",
             },
             {
                 "code": "RESOURCE_CAP_FIXED",
-                "statement": "The replay refuses q>7, caps each field at 20,000 candidates, and enforces a global monotonic <=8-second deadline.",
+                "statement": (
+                    "Both exact replays refuse q>7 and cap each field at 20,000 candidates; the "
+                    "q-scan and affine computation each retain their own global monotonic "
+                    "<=8-second deadline."
+                ),
+            },
+            {
+                "code": "AFFINE_FINITE_NOT_ASYMPTOTIC",
+                "statement": (
+                    "The exact affine law is algebraic, while the recorded orbit and stabilizer "
+                    "counts are finite q=3,5,7 data and do not establish a limiting law."
+                ),
             },
             {
                 "code": "NO_NUMBER_FIELD_TRANSFER",
@@ -796,7 +1086,9 @@ def make_evaluation(
         "notes": (
             "RIGOROUS_CERTIFIED covers the three exhaustive scans and exact certificate. The DRAFT "
             "research note proves the formula and first-moment limit; all higher-moment and "
-            "equidistribution claims remain open."
+            "equidistribution claims remain open. The negative-sign corollary is only the exact "
+            "one-sided floor stated above. The affine source and fixture are independently "
+            "content-bound and replayed under their own <=8-second wall guard."
         ),
     }
     return evaluation, raw_result
@@ -808,12 +1100,15 @@ def run(
     root = root.resolve()
     config = read_json(root / "config" / "pilot.json")
     fixture = load_and_replay_fixture(root)
+    affine_fixture = load_and_replay_affine_fixture(root)
     families_by_q = {int(family["q"]): family for family in fixture["families"]}
     f3_spec = load_existing_f3_spec(root)
     new_specs = [build_family_spec(root, config, families_by_q[q]) for q in (5, 7)]
     specs = [f3_spec, *new_specs]
     detector = build_detector(root)
-    evaluation, raw_result = make_evaluation(root, config, specs, detector, fixture)
+    evaluation, raw_result = make_evaluation(
+        root, config, specs, detector, fixture, affine_fixture
+    )
     return specs, new_specs, detector, evaluation, raw_result
 
 

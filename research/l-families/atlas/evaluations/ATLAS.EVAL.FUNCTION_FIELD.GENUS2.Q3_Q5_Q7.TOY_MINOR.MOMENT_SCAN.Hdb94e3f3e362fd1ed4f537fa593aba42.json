@@ -8,7 +8,7 @@
       "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
       "role": "exact_multi_q_adapter",
       "schema_path": null,
-      "sha256": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255"
+      "sha256": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10"
     },
     {
       "coverage_class": "FINITE_COMPLETE",
@@ -19,6 +19,16 @@
       "role": "sample_euler_crosscheck_adapter",
       "schema_path": null,
       "sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
+      "role": "exact_affine_orbit_adapter",
+      "schema_path": null,
+      "sha256": "9521f778d240d8ab375f9c09796ab8acd740fc453cf3b033581b2ba15af865ab"
     }
   ],
   "arithmetic": {
@@ -49,15 +59,16 @@
     "omissions": [
       "q outside 3,5,7",
       "finite histograms outside q=3,5,7",
+      "affine orbit and stabilizer tables outside q=3,5,7",
       "higher-moment formulas and equidistribution",
       "zero ordinates and analytic kernels",
       "number-field transfer"
     ],
-    "statement": "All 162, 2500, and 14406 family members at q=3,5,7 respectively."
+    "statement": "All 162, 2500, and 14406 family members at q=3,5,7 respectively, including every one of the 656024 member-affine-action pairs and each complete orbit partition."
   },
   "detector_contract_binding": {
-    "record_sha256": "5343378db814e1708b186f70c9920df8553997f25e08453b19ba64f4a72b51fa",
-    "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.Hd5a74f949ea78260f28175c55b4fd782"
+    "record_sha256": "7e8b5bec10dc01bc6a948fbb209140a7554b2918db8871248d5f0fa07bfdf327",
+    "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.H8231bec28057f06b8e4da4a23093caa7"
   },
   "evaluation_scope": "FAMILY_MOMENT",
   "firewalls": [
@@ -70,12 +81,20 @@
       "statement": "The proved first-moment limit is not a higher-moment or USp(4) equidistribution theorem."
     },
     {
+      "code": "DENSITY_FLOOR_NOT_SIGN_LAW",
+      "statement": "The proved lower bound on the proportion with K_D<0 neither determines a limiting sign distribution nor proves equidistribution."
+    },
+    {
       "code": "TOY_NOT_ANALYTIC_KERNEL",
       "statement": "K_D is a toy coefficient minor, not Pick/Loewner, XD, or HCNC."
     },
     {
       "code": "RESOURCE_CAP_FIXED",
-      "statement": "The replay refuses q>7, caps each field at 20,000 candidates, and enforces a global monotonic <=8-second deadline."
+      "statement": "Both exact replays refuse q>7 and cap each field at 20,000 candidates; the q-scan and affine computation each retain their own global monotonic <=8-second deadline."
+    },
+    {
+      "code": "AFFINE_FINITE_NOT_ASYMPTOTIC",
+      "statement": "The exact affine law is algebraic, while the recorded orbit and stabilizer counts are finite q=3,5,7 data and do not establish a limiting law."
     },
     {
       "code": "NO_NUMBER_FIELD_TRANSFER",
@@ -92,7 +111,7 @@
         "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
         "role": "exact_multi_q_adapter",
         "schema_path": null,
-        "sha256": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255"
+        "sha256": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10"
       },
       {
         "coverage_class": "FINITE_COMPLETE",
@@ -103,20 +122,31 @@
         "role": "sample_euler_crosscheck_adapter",
         "schema_path": null,
         "sha256": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+      },
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
+        "role": "exact_affine_orbit_adapter",
+        "schema_path": null,
+        "sha256": "9521f778d240d8ab375f9c09796ab8acd740fc453cf3b033581b2ba15af865ab"
       }
     ],
     "configuration_sha256": "b8c70a88d3952d270eafe452610fc4e16e94b2a7520ab3b5dae4b1147f536696",
     "detector_contract_binding": {
-      "record_sha256": "5343378db814e1708b186f70c9920df8553997f25e08453b19ba64f4a72b51fa",
-      "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.Hd5a74f949ea78260f28175c55b4fd782"
+      "record_sha256": "7e8b5bec10dc01bc6a948fbb209140a7554b2918db8871248d5f0fa07bfdf327",
+      "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.H8231bec28057f06b8e4da4a23093caa7"
     },
     "implementation_commit": "PENDING",
-    "implementation_sha256": "0e46a23ed5109c000989201b5818a5c0b9973dd6722123561703391b5359dc58",
-    "input_fulfillments_sha256": "62ed10df7e1a457811b5866327983994a6d0857871c3ddf7c12b88a140270e83",
+    "implementation_sha256": "64c4ecdfa0d617ea0806290f2c4375dde393ea4b9b455b93a0d3efb7908a6a42",
+    "input_fulfillments_sha256": "0063867fc5b6ef5e7a0c647c970014e9df50322a568a2c064eaf099048cbb612",
     "input_sha256s": [
-      "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10",
-      "41f6e51246a6cc2f3695a78017a189f0fa93b9dd6a9d3efde1529754cedba4d5",
-      "1914804dae2b98eb96cc86560cac0e05773e532efd7db638bbfcaeb73bf2dc5e"
+      "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4",
+      "1499ca711b4b26bb0b679be16a9ac3cc622f3d32c8c81cc7ced820e8edfd4969",
+      "d76a0add6725ea94fe5016889f4d6e82a09ab143c7240b7af5815bbdfb342655",
+      "6a7550d740fef3dceb2f3e0cf3731bfa1f67d800b9b4019564e37b7f41fac4fc"
     ],
     "lfunction_spec_bindings": [
       {
@@ -124,11 +154,11 @@
         "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
       },
       {
-        "record_sha256": "aac738be5b6a95a6b40531e42547c8dd935dab886aea6e928bbf3e10a9cb0179",
+        "record_sha256": "2b940279459e20deda87408fe1c8996839ceebfd7a6d550a13f263a6ce86df42",
         "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572"
       },
       {
-        "record_sha256": "74bcfe510536a6b0123a4974a8373bfceb6d9e4336396901dbedbcf05d001dbd",
+        "record_sha256": "d691323cdc5b2c480640a34948534c4cbe729131d090b6b71f02337a9632222a",
         "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F7.QUADRATIC.QUINTIC_GENUS2_FAMILY.H066f50ec5ddb13c0ab7107ae1b68fb8b"
       }
     ],
@@ -136,7 +166,7 @@
     "slug": "FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.TOY_MINOR.MOMENT_SCAN",
     "version": 1
   },
-  "identity_sha256": "b3c39a4249d65a97ed835bfe39cd8f5f4ae67a5f18b52d34181c31ce615a8139",
+  "identity_sha256": "db94e3f3e362fd1ed4f537fa593aba42c16ed7fcf5e543a059e8740b239457f2",
   "input_bindings": [
     {
       "coverage_class": "FINITE_COMPLETE",
@@ -146,7 +176,17 @@
       "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
       "role": "exhaustive_three_family_scan",
       "schema_path": null,
-      "sha256": "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10"
+      "sha256": "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4"
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/function_field/genus2_affine_orbits.json",
+      "role": "exact_affine_orbit_certificate",
+      "schema_path": null,
+      "sha256": "1499ca711b4b26bb0b679be16a9ac3cc622f3d32c8c81cc7ced820e8edfd4969"
     },
     {
       "coverage_class": "COMPLETE",
@@ -156,7 +196,7 @@
       "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
       "role": "all_q_moment_identity_proof",
       "schema_path": null,
-      "sha256": "41f6e51246a6cc2f3695a78017a189f0fa93b9dd6a9d3efde1529754cedba4d5"
+      "sha256": "d76a0add6725ea94fe5016889f4d6e82a09ab143c7240b7af5815bbdfb342655"
     },
     {
       "coverage_class": "COMPLETE",
@@ -166,7 +206,7 @@
       "path": "research/l-families/atlas/function_field/genus2_moment_identity.py",
       "role": "exact_q_polynomial_certificate",
       "schema_path": null,
-      "sha256": "1914804dae2b98eb96cc86560cac0e05773e532efd7db638bbfcaeb73bf2dc5e"
+      "sha256": "6a7550d740fef3dceb2f3e0cf3731bfa1f67d800b9b4019564e37b7f41fac4fc"
     }
   ],
   "input_fulfillments": [
@@ -198,11 +238,20 @@
         "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
         "research/l-families/atlas/function_field/genus2_moment_identity.py"
       ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "affine_orbit_certificate",
+      "sources": [
+        "research/l-families/atlas/function_field/genus2_affine_orbits.json",
+        "research/l-families/atlas/function_field/genus2_affine_orbits.py"
+      ]
     }
   ],
   "interpretation": {
     "smallest_gap": "Translate the proof into a proof assistant or obtain frozen-head review; for the wider programme, prove higher-moment/equidistribution statements.",
-    "statement": "The three declared finite families have the exact registered moment totals and sign counts. Independently of those scans, the bound squarefree-Moebius proof and Q[q] certificate establish the displayed first-moment identities for every odd prime power.",
+    "statement": "The three declared finite families have the exact registered moment totals and sign counts. Independently of those scans, the bound squarefree-Moebius proof and Q[q] certificate establish the displayed first-moment identities for every odd prime power and, with the exact USp(4) range, the stated negative-sign density floor. The separately replayed affine certificate proves a'=chi(alpha)a, b'=b, K'=K and the complete finite q=3,5,7 orbit-stabilizer summaries.",
     "status": "EXACT_FINITE",
     "theorem_claim_id": null
   },
@@ -212,15 +261,15 @@
       "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
     },
     {
-      "record_sha256": "aac738be5b6a95a6b40531e42547c8dd935dab886aea6e928bbf3e10a9cb0179",
+      "record_sha256": "2b940279459e20deda87408fe1c8996839ceebfd7a6d550a13f263a6ce86df42",
       "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572"
     },
     {
-      "record_sha256": "74bcfe510536a6b0123a4974a8373bfceb6d9e4336396901dbedbcf05d001dbd",
+      "record_sha256": "d691323cdc5b2c480640a34948534c4cbe729131d090b6b71f02337a9632222a",
       "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F7.QUADRATIC.QUINTIC_GENUS2_FAMILY.H066f50ec5ddb13c0ab7107ae1b68fb8b"
     }
   ],
-  "notes": "RIGOROUS_CERTIFIED covers the three exhaustive scans and exact certificate. The DRAFT research note proves the formula and first-moment limit; all higher-moment and equidistribution claims remain open.",
+  "notes": "RIGOROUS_CERTIFIED covers the three exhaustive scans and exact certificate. The DRAFT research note proves the formula and first-moment limit; all higher-moment and equidistribution claims remain open. The negative-sign corollary is only the exact one-sided floor stated above. The affine source and fixture are independently content-bound and replayed under their own <=8-second wall guard.",
   "programme_refs": [
     {
       "kind": "GITHUB_ISSUE",
@@ -242,36 +291,36 @@
       "coverage_class": "FINITE_COMPLETE",
       "hash_mode": "CANONICAL_JSON_UTF8_NFC",
       "media_type": "application/json",
-      "notes": "Compact exact totals; the source-bound q-scan fixture retains full histograms and witnesses.",
-      "path": "research/l-families/atlas/results/ATLAS.EVAL.FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.TOY_MINOR.MOMENT_SCAN.Hb3c39a4249d65a97ed835bfe39cd8f5f.json",
+      "notes": "Compact exact totals and affine summaries; the source-bound q-scan and affine fixtures retain full histograms, witnesses, orbit digests, and replay controls.",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.TOY_MINOR.MOMENT_SCAN.Hdb94e3f3e362fd1ed4f537fa593aba42.json",
       "role": "detector_result",
       "schema_path": "research/l-families/atlas/detectors/raw-schemas/function-field-genus2-q-scan-result.schema.json",
-      "sha256": "431d92400ff27ce3572fbcb5bd743acda1694844f2eaac4cc6b2e7b48ce37235"
+      "sha256": "3b03cc8de25461b939532c1bb37dabea60223c50aadb8d0adb7ef586f13644c7"
     },
     "predicate_outcome": "NOT_APPLICABLE",
     "representation": "HASHED_ARTIFACT",
-    "summary": "Exact normalized K means are -104/243, -1994/3125, and -12340/16807 for q=3,5,7. A separately bound proof gives E[K]=-(q-1)^2+(q+1)/q^3 for every odd prime power and hence E[K/q^2] tends to -1."
+    "summary": "Exact normalized K means are -104/243, -1994/3125, and -12340/16807 for q=3,5,7. A separately bound proof gives E[K]=-(q-1)^2+(q+1)/q^3 for every odd prime power and hence E[K/q^2] tends to -1. Combined with the exact lower range -20, this proves rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20. The exact AGL(1,q) orbit counts are 29, 132, and 349."
   },
   "result_hashes": [
     {
       "algorithm": "sha256",
       "binds": "canonical JSON compact genus-two q-scan result",
       "hash_mode": "CANONICAL_JSON_UTF8_NFC",
-      "value": "431d92400ff27ce3572fbcb5bd743acda1694844f2eaac4cc6b2e7b48ce37235"
+      "value": "3b03cc8de25461b939532c1bb37dabea60223c50aadb8d0adb7ef586f13644c7"
     }
   ],
-  "revision": 1,
+  "revision": 2,
   "rigor_level": "RIGOROUS_CERTIFIED",
   "run": {
     "code_commit": "PENDING",
     "command": "python research/l-families/atlas/core/wrap_genus2_q_scan.py --check",
     "implementation_path": "research/l-families/atlas/core/wrap_genus2_q_scan.py",
-    "implementation_sha256": "0e46a23ed5109c000989201b5818a5c0b9973dd6722123561703391b5359dc58",
+    "implementation_sha256": "64c4ecdfa0d617ea0806290f2c4375dde393ea4b9b455b93a0d3efb7908a6a42",
     "timestamp_utc": "2026-08-24T15:00:00Z"
   },
   "schema_version": "riemann.atlas.evaluation_record.v1",
-  "scope_boundary": "Complete finite scans only at q=3,5,7; the bound proof establishes the named first-moment identities for every odd prime power, but no higher-moment equidistribution, zero statement, analytic-kernel result, or number-field transfer.",
-  "semantic_id": "ATLAS.EVAL.FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.TOY_MINOR.MOMENT_SCAN.Hb3c39a4249d65a97ed835bfe39cd8f5f",
+  "scope_boundary": "Complete finite scans only at q=3,5,7; the bound proof establishes the named first-moment identities and consequent negative-sign density floor for every odd prime power, while the affine action and orbit partitions are exact only on the three frozen fields. There is no full sign law, asymptotic orbit law, higher-moment equidistribution, zero statement, analytic-kernel result, or number-field transfer.",
+  "semantic_id": "ATLAS.EVAL.FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.TOY_MINOR.MOMENT_SCAN.Hdb94e3f3e362fd1ed4f537fa593aba42",
   "software": [
     {
       "name": "CPython",

@@ -16,6 +16,16 @@
       "code": "RESOURCE_SCOPE_DRIFT",
       "description": "A larger field silently expands the O(q^7) scan.",
       "hostile_control": "The implementation refuses q outside 3,5,7, caps each field at 20,000 candidates, and enforces a global <=8-second replay deadline."
+    },
+    {
+      "code": "DENSITY_FLOOR_MISTAKEN_FOR_SIGN_LAW",
+      "description": "The lower bound on negative members is presented as a limiting sign distribution.",
+      "hostile_control": "Every record states only the one-sided floor derived from the exact mean and range, and explicitly withholds a sign law or equidistribution claim."
+    },
+    {
+      "code": "FINITE_AFFINE_ORBITS_MISTAKEN_FOR_LIMIT_LAW",
+      "description": "The q=3,5,7 orbit or stabilizer tables are extrapolated in q.",
+      "hostile_control": "The affine packet hard-refuses every other q, retains its own global <=8-second guard, and makes no asymptotic orbit claim."
     }
   ],
   "family_adapters": [
@@ -23,6 +33,12 @@
       "adapter_path": "research/l-families/atlas/function_field/genus2_q_scan.py",
       "correction": "Use each field's exact F_(q^2) model and normalize K only after integer aggregation.",
       "family": "F3_F5_F7_QUADRATIC_QUINTIC_GENUS2",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
+      "correction": "Use the monic right action of AGL(1,F_q), exhaust every member-action pair, and retain exact orbit-stabilizer and sign summaries.",
+      "family": "F3_F5_F7_QUINTIC_AFFINE_ORBITS",
       "status": "REQUIRED_AVAILABLE"
     },
     {
@@ -46,7 +62,7 @@
   ],
   "identity_kernel": {
     "central_zero_policy": "NOT_APPLICABLE",
-    "contract_revision": 1,
+    "contract_revision": 2,
     "kernel_convention": "COEFFICIENT_DISPERSION",
     "mathematical_definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2.",
     "normalization_requirements": [
@@ -54,12 +70,13 @@
       "Use K_D=q*a_D^2-b_D^2 and normalize only by q^2 after the exact integer K_D is formed.",
       "Use a 20,000-candidate cap per field and a global monotonic wall guard no larger than eight seconds.",
       "Freeze candidate_cap_scope=PER_FIELD_Q_SCAN; the cap is not a combined-replay total.",
+      "Under D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), require a' = chi(alpha)a, b' = b, and K' = K.",
       "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC."
     ],
     "slug": "FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS",
     "version": 1
   },
-  "identity_sha256": "d5a74f949ea78260f28175c55b4fd782e1227298a88b03f3b58780aca9aebae8",
+  "identity_sha256": "8231bec28057f06b8e4da4a23093caa729330ae7bbf201c6c0cbdd1d995879cc",
   "invariances": [
     {
       "code": "GENUS2_MINOR_IDENTITY",
@@ -74,6 +91,16 @@
     {
       "code": "CROSS_Q_CLOSED_FORM",
       "statement": "The displayed mean formulas hold for every odd prime power q.",
+      "status": "PROVED"
+    },
+    {
+      "code": "NEGATIVE_SIGN_DENSITY_FLOOR",
+      "statement": "The exact mean and F(U)>=-20 imply rho_-(q)>=P(q)/(20*q^5) for every odd prime power q, with liminf at least 1/20.",
+      "status": "PROVED"
+    },
+    {
+      "code": "AFFINE_TOY_MINOR_INVARIANCE",
+      "statement": "For D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), exact change of variables gives a'=chi(alpha)a, b'=b, and K'=K.",
       "status": "PROVED"
     }
   ],
@@ -101,12 +128,17 @@
       "requirement": "Freeze candidate_cap_scope=PER_FIELD_Q_SCAN; the cap is not a combined-replay total."
     },
     {
+      "comparison_role": "IDENTITY",
+      "field": "result.artifact.affine_orbit_certificate",
+      "requirement": "Under D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), require a' = chi(alpha)a, b' = b, and K' = K."
+    },
+    {
       "comparison_role": "FIREWALL",
       "field": "detector_kind",
       "requirement": "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC."
     }
   ],
-  "notes": "The q=3,5,7 histograms are finite exact computations. The separately bound DRAFT proof establishes the displayed first-moment formulas and their normalized limit for every odd prime power; higher moments and equidistribution remain proposed.",
+  "notes": "The q=3,5,7 histograms are finite exact computations. The separately bound DRAFT proof establishes the displayed first-moment formulas and their normalized limit for every odd prime power; the separately replayed affine packet proves the exact action law and finite orbit partitions only at q=3,5,7. Higher moments and equidistribution remain proposed.",
   "output_contract": {
     "arithmetic_classes": [
       "CERTIFIED_INTEGER_COVERAGE"
@@ -208,7 +240,7 @@
   "reference_implementation": {
     "entry_point": "build_fixture",
     "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
-    "source_sha256": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255",
+    "source_sha256": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10",
     "version": "1"
   },
   "required_inputs": [
@@ -229,12 +261,18 @@
       "input_type": "RAW_ARTIFACT",
       "name": "moment_identity_proof",
       "required": true
+    },
+    {
+      "coverage_requirement": "FINITE_COMPLETE",
+      "input_type": "RAW_ARTIFACT",
+      "name": "affine_orbit_certificate",
+      "required": true
     }
   ],
-  "revision": 1,
+  "revision": 2,
   "schema_version": "riemann.atlas.detector_contract.v1",
-  "scope_boundary": "Exhaustive histograms only for q=3,5,7, plus proof-backed first-moment identities for every odd prime power; no higher-moment equidistribution, zero statement, analytic-kernel conclusion, or number-field transfer.",
-  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.Hd5a74f949ea78260f28175c55b4fd782",
+  "scope_boundary": "Exhaustive histograms only for q=3,5,7, plus proof-backed first-moment identities for every odd prime power and the consequent negative-sign density floor. The exact affine action law is replayed with complete orbit partitions only at q=3,5,7; no full sign law, asymptotic orbit law, higher-moment equidistribution, zero statement, analytic-kernel conclusion, or number-field transfer.",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.H8231bec28057f06b8e4da4a23093caa7",
   "supersedes": [],
   "theorem_links": [
     {
@@ -245,6 +283,11 @@
     {
       "scope": "The normalized first moment tends to -1 immediately from the exact formula; this is not a higher-moment equidistribution theorem.",
       "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR_FIRST_MOMENT",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "For every odd prime power, the exact first moment and exact lower range bound give rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20; this is not a sign law.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.NEGATIVE_SIGN_DENSITY",
       "status": "VERIFIED"
     }
   ],

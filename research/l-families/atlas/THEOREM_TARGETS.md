@@ -152,8 +152,12 @@ centered covariance matrices for the fixed `11.a2` prime packet at
 and the root-cohort second-moment difference also changes sign across the four
 windows. The off-diagonal root-cohort Gram-contrast RMS decreases from
 `0.108858` to `0.039862`, but `sqrt(N)` times that RMS stays of order one and
-the maximizing pair moves. This is why the target asks for a weighted, uniform
-estimate rather than extrapolating an unweighted finite RMS or fitted rate.
+the maximizing pair moves. The separate 13-prime character-mean contrast has
+RMS `0.129637,0.097490,0.068315,0.044893`, while its `sqrt(N)`-scaled values
+remain between `1.517080` and `1.645824`; the local-density contrast is smaller
+and also nonmonotone after scaling. This is why the target asks for weighted,
+uniform off-diagonal and marginal estimates rather than extrapolating an
+unweighted finite RMS or fitted rate.
 
 ## Target D — genus-two higher moments and effective USp(4) equidistribution
 
@@ -185,12 +189,37 @@ research note:
 \longrightarrow-1.
 \]
 
+Combining this identity with the exact compact-group range
+`-20<=F<=4/3` also proves, for
+`P(q)=q^5-2q^4+q^3-q-1`,
+
+\[
+\rho_-(q):=\frac{|\{D:qa_D^2-b_D^2<0\}|}{|H_5(q)|}
+\ge\frac{P(q)}{20q^5},
+\qquad \liminf\rho_-(q)\ge\frac1{20}.
+\]
+
+Thus negative-member existence and a uniform asymptotic density floor no longer
+need nomination. The bound is one-sided and does not determine the sign law.
+
 The remaining target begins at moment two. Put
 
 \[
 F(U)=(\operatorname{Tr}U)^2-e_2(U)^2,
 \qquad U\in USp(4).
 \]
+
+The exact affine action
+
+\[
+D(T)\longmapsto \alpha^{-5}D(\alpha T+\beta)
+\]
+
+fixes `K_D` and partitions the frozen `q=3,5,7` families into 29, 132, and
+349 weighted orbits. A proof may exploit this quotient, but it must retain
+orbit-size weights and separate automorphism strata; in characteristic five,
+`T^5-T` is fixed by the entire affine group. Burnside or stack-weighted trace
+formulas are therefore more faithful than an unweighted representative sum.
 
 For each fixed `m>=2`, prove an effective formula
 
@@ -212,6 +241,47 @@ first Haar mean `-1`. Exact `C_2` Weyl constant terms give the next five targets
 ```text
 m=2,3,4,5,6: 3, -11, 56, -374, 3117.
 ```
+
+There is now a finite-moment payoff strictly between the unconditional
+`1/20` floor and full sign equidistribution. For
+
+\[
+R(x)=1+\frac{5405x+264x^2-23x^3}{12023},
+\]
+
+the exact support bound gives `1_{x>=0}<=R(x)^2`, and the six Haar moments give
+
+\[
+\mathbb E_{\mathrm{Haar}}R(F)^2=\frac{7663}{12023},
+\qquad
+\mu_{\mathrm{Haar}}(F<0)\ge\frac{4360}{12023}.
+\]
+
+Consequently, proving convergence for moments `m=2,...,6` already yields the
+conditional conclusion
+
+\[
+\liminf_{q\to\infty}\rho_-(q)\ge\frac{4360}{12023}\approx0.362638,
+\]
+
+without needing full weak convergence or control of mass near `F=0`. This is a
+certified lower bound, not the exact Haar sign probability. It makes the six
+fixed-moment formulas a useful standalone theorem target even if an effective
+sign-law rate remains out of reach.
+
+The bounded shifted-grid Weyl quadrature additionally nominates
+
+\[
+\mu_{\mathrm{Haar}}\{U:F(U)<0\}\approx0.738,
+\]
+
+while the exact finite proportions at `q=3,5,7` are respectively
+`17/27, 33/50, 33/49`. The boundary `F=0` is the zero set of a nonzero
+polynomial in the two trace coordinates and therefore has Haar measure zero.
+Consequently weak convergence to Haar already implies convergence of the sign
+proportions; an effective rate for this discontinuous indicator needs
+quantitative boundary control. The displayed probability is numerical, not a
+certified interval or a premise of the target.
 
 Why this target: the first moment no longer needs nomination. Its exact
 squarefree-sieve proof shows that low moments can expose structure more sharply

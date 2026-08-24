@@ -11,6 +11,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 from fractions import Fraction
+from math import comb
 
 
 HARD_DEGREE_LIMIT = 12
@@ -193,6 +194,72 @@ class MomentCertificate:
             "mean_b_squared": Fraction(sum_b_squared, members),
             "mean_K": Fraction(sum_k, members),
         }
+
+
+@dataclass(frozen=True)
+class SignDensityCertificate:
+    """Exact algebra behind the negative-sign proportion corollary."""
+
+    mean_deficit_numerator: Polynomial
+    shifted_positive_polynomial: Polynomial
+    range_lower_bound: int
+    proportion_denominator: int
+
+    def lower_bound_at(self, q: int) -> Fraction:
+        """Specialize formally at odd q; family semantics require a prime power."""
+
+        if q < 3 or q % 2 == 0:
+            raise ValueError(
+                "formal density-bound specialization requires an odd q >= 3; "
+                "family semantics require an odd prime power"
+            )
+        numerator = self.mean_deficit_numerator.evaluate(q)
+        if numerator.denominator != 1 or numerator <= 0:
+            raise ArithmeticError("negative-sign density numerator is not a positive integer")
+        return numerator / (self.proportion_denominator * q**5)
+
+
+def _translate(value: Polynomial, shift: int) -> Polynomial:
+    """Return value(q+shift), exactly and within the fixed degree limit."""
+
+    coefficients = [Fraction(0)] * (value.degree + 1)
+    for degree, coefficient in enumerate(value.coefficients):
+        for power in range(degree + 1):
+            coefficients[power] += (
+                coefficient * comb(degree, power) * Fraction(shift ** (degree - power))
+            )
+    return Polynomial(tuple(coefficients))
+
+
+def build_sign_density_certificate(
+    moment_certificate: MomentCertificate | None = None,
+) -> SignDensityCertificate:
+    """Certify P(q)>0 for q>=3 and the resulting 1/20 density floor."""
+
+    if moment_certificate is None:
+        moment_certificate = build_certificate()
+    numerator = polynomial(-1, -1, 0, 1, -2, 1)
+    shifted = polynomial(104, 215, 171, 67, 13, 1)
+    bridge_algebra = ExactAlgebra(operation_limit=100)
+    moment_deficit_total = bridge_algebra.negate(moment_certificate.sum_k)
+    density_deficit_total = bridge_algebra.multiply(
+        polynomial(0, -1, 1), numerator
+    )
+    if moment_deficit_total != density_deficit_total:
+        raise ArithmeticError(
+            "density numerator is not tied to the certified identity "
+            "-sum_D K_D=q*(q-1)*P(q)"
+        )
+    if _translate(shifted, -3) != numerator:
+        raise ArithmeticError("shifted positivity identity failed")
+    if any(coefficient <= 0 for coefficient in shifted.coefficients):
+        raise ArithmeticError("shifted positivity polynomial lost a positive coefficient")
+    return SignDensityCertificate(
+        mean_deficit_numerator=numerator,
+        shifted_positive_polynomial=shifted,
+        range_lower_bound=-20,
+        proportion_denominator=20,
+    )
 
 
 def _coefficient_of_product(
@@ -511,9 +578,11 @@ def build_certificate(
 
 def main() -> int:
     certificate = build_certificate()
+    sign_density = build_sign_density_certificate(certificate)
     print(
         "OK: nine-row exact genus-two moment identity; "
-        f"{certificate.operations_used}/{HARD_OPERATION_LIMIT} symbolic operations"
+        f"{certificate.operations_used}/{HARD_OPERATION_LIMIT} symbolic operations; "
+        f"negative-sign liminf >= 1/{sign_density.proportion_denominator}"
     )
     return 0
 

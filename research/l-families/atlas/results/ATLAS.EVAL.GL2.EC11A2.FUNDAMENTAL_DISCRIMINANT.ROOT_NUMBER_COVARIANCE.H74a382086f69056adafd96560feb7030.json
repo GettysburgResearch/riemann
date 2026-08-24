@@ -46,7 +46,7 @@
       "total": 1142
     }
   ],
-  "definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
+  "definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, the exact cross-cohort character-mean and local-density marginal contrasts, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
   "exact_coordinate_formulas": {
     "centered_variance": "Var(W)=sum_i a_i^2 H_ii/(N^2 p_i) + sum_{i<j} (2 a_i a_j H_ij/(N^2 p_i p_j)) sqrt(p_i p_j).",
     "marginal_counts": "positive_i=(R_ii+s_i)/2, negative_i=(R_ii-s_i)/2, zero_i=N-R_ii; mean chi_i=s_i/N, local density_i=R_ii/N, asymptotic comparator_i=p_i/(p_i+1), and density error_i=R_ii/N-p_i/(p_i+1).",
@@ -60,6 +60,7 @@
     "moment_coordinates": "Distinct squarefree radicands are exact multiquadratic basis coordinates; decimal displays use the positive real embedding.",
     "raw_gram": "Within each cohort G=V^T V/N for V[d,p]=chi_d(p), hence G is positive semidefinite.",
     "root_cohort_gram_contrast": "For every aligned p<r, Delta_X(p,r) is the exact Fraction difference of the two emitted raw Gram entries; its maximum and 78-pair mean square use no new scan.",
+    "root_cohort_marginal_contrast": "For each aligned prime, both mean and raw-Gram-diagonal cohort differences are exact Fractions derived from emitted sufficient statistics; their 13-prime mean squares require no new scan.",
     "root_number_partition": "Conditional on the imported sign theorem and base metadata, epsilon_d is exactly +1 or -1 and the two emitted cohorts are disjoint and exhaustive."
   },
   "family": {
@@ -200,6 +201,1072 @@
         },
         "rms_decimal_display_only": "0.039862",
         "sqrt_total_count_times_rms_decimal_display_only": "1.347092",
+        "total_discriminant_count": 1142
+      }
+    ]
+  },
+  "root_cohort_marginal_contrast": {
+    "definitions": {
+      "character_mean": "s_{X,+}(p)/N_{X,+}-s_{X,-}(p)/N_{X,-}",
+      "local_density": "G_{X,+}(p,p)-G_{X,-}(p,p)"
+    },
+    "firewall": "The marginal RMS displays and sqrt(N_total)-scaled displays summarize four exact finite rows only; they are not fitted rates, asymptotic laws, or theorems.",
+    "prime_count": 13,
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "source": "derived only from emitted aligned character_sums and raw Gram diagonals; no family enumeration or new prime scan",
+    "summaries": [
+      {
+        "bound": 256,
+        "character_mean": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 494,
+              "numerator": 129,
+              "text": "129/494"
+            },
+            "prime": 43,
+            "signed_value": {
+              "denominator": 494,
+              "numerator": 129,
+              "text": "129/494"
+            }
+          },
+          "mean_square": {
+            "denominator": 158623400,
+            "numerator": 2665799,
+            "text": "2665799/158623400"
+          },
+          "rms_decimal_display_only": "0.129637",
+          "sqrt_total_count_times_rms_decimal_display_only": "1.539358",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -293,
+                "text": "-293/4940"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 1235,
+                "numerator": -122,
+                "text": "-122/1235"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -423,
+                "text": "-423/4940"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 988,
+                "numerator": -89,
+                "text": "-89/988"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 65,
+                "numerator": -6,
+                "text": "-6/65"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 2470,
+                "numerator": 591,
+                "text": "591/2470"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -163,
+                "text": "-163/4940"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": 813,
+                "text": "813/4940"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 2470,
+                "numerator": -369,
+                "text": "-369/2470"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -293,
+                "text": "-293/4940"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 1235,
+                "numerator": 46,
+                "text": "46/1235"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 2470,
+                "numerator": -49,
+                "text": "-49/2470"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 494,
+                "numerator": 129,
+                "text": "129/494"
+              }
+            }
+          ]
+        },
+        "local_density": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 4940,
+              "numerator": 367,
+              "text": "367/4940"
+            },
+            "prime": 5,
+            "signed_value": {
+              "denominator": 4940,
+              "numerator": 367,
+              "text": "367/4940"
+            }
+          },
+          "mean_square": {
+            "denominator": 158623400,
+            "numerator": 265861,
+            "text": "265861/158623400"
+          },
+          "rms_decimal_display_only": "0.040940",
+          "sqrt_total_count_times_rms_decimal_display_only": "0.486131",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -47,
+                "text": "-47/4940"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 2470,
+                "numerator": 183,
+                "text": "183/2470"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": 367,
+                "text": "367/4940"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -23,
+                "text": "-23/4940"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 494,
+                "numerator": 1,
+                "text": "1/494"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 2470,
+                "numerator": 43,
+                "text": "43/2470"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": 21,
+                "text": "21/4940"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -109,
+                "text": "-109/4940"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 1235,
+                "numerator": 8,
+                "text": "8/1235"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 4940,
+                "numerator": -109,
+                "text": "-109/4940"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 65,
+                "numerator": -4,
+                "text": "-4/65"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 19,
+                "numerator": 1,
+                "text": "1/19"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 19,
+                "numerator": 1,
+                "text": "1/19"
+              }
+            }
+          ]
+        },
+        "total_discriminant_count": 141
+      },
+      {
+        "bound": 512,
+        "character_mean": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 580,
+              "numerator": 97,
+              "text": "97/580"
+            },
+            "prime": 43,
+            "signed_value": {
+              "denominator": 580,
+              "numerator": 97,
+              "text": "97/580"
+            }
+          },
+          "mean_square": {
+            "denominator": 42857360,
+            "numerator": 407331,
+            "text": "407331/42857360"
+          },
+          "rms_decimal_display_only": "0.097490",
+          "sqrt_total_count_times_rms_decimal_display_only": "1.645824",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": -36,
+                "text": "-36/1015"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": -199,
+                "text": "-199/4060"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 2030,
+                "numerator": -129,
+                "text": "-129/2030"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 2030,
+                "numerator": -229,
+                "text": "-229/2030"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": -631,
+                "text": "-631/4060"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": 92,
+                "text": "92/1015"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": -51,
+                "text": "-51/1015"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 812,
+                "numerator": 131,
+                "text": "131/812"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": 281,
+                "text": "281/4060"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": -64,
+                "text": "-64/1015"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 812,
+                "numerator": -45,
+                "text": "-45/812"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": -199,
+                "text": "-199/4060"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 580,
+                "numerator": 97,
+                "text": "97/580"
+              }
+            }
+          ]
+        },
+        "local_density": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 1015,
+              "numerator": 37,
+              "text": "37/1015"
+            },
+            "prime": 5,
+            "signed_value": {
+              "denominator": 1015,
+              "numerator": 37,
+              "text": "37/1015"
+            }
+          },
+          "mean_square": {
+            "denominator": 30612400,
+            "numerator": 8409,
+            "text": "8409/30612400"
+          },
+          "rms_decimal_display_only": "0.016574",
+          "sqrt_total_count_times_rms_decimal_display_only": "0.279799",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": -26,
+                "text": "-26/1015"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 580,
+                "numerator": 3,
+                "text": "3/580"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": 37,
+                "text": "37/1015"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": -26,
+                "text": "-26/1015"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": -39,
+                "text": "-39/4060"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 2030,
+                "numerator": -33,
+                "text": "-33/2030"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 1015,
+                "numerator": -2,
+                "text": "-2/1015"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 580,
+                "numerator": -1,
+                "text": "-1/580"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": 23,
+                "text": "23/4060"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 2030,
+                "numerator": -31,
+                "text": "-31/2030"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": -33,
+                "text": "-33/4060"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 4060,
+                "numerator": 53,
+                "text": "53/4060"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 812,
+                "numerator": 5,
+                "text": "5/812"
+              }
+            }
+          ]
+        },
+        "total_discriminant_count": 285
+      },
+      {
+        "bound": 1024,
+        "character_mean": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 81209,
+              "numerator": 9714,
+              "text": "9714/81209"
+            },
+            "prime": 13,
+            "signed_value": {
+              "denominator": 81209,
+              "numerator": -9714,
+              "text": "-9714/81209"
+            }
+          },
+          "mean_square": {
+            "denominator": 85733721853,
+            "numerator": 400113670,
+            "text": "400113670/85733721853"
+          },
+          "rms_decimal_display_only": "0.068315",
+          "sqrt_total_count_times_rms_decimal_display_only": "1.630997",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 281,
+                "numerator": -7,
+                "text": "-7/281"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -2007,
+                "text": "-2007/81209"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -2272,
+                "text": "-2272/81209"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -5162,
+                "text": "-5162/81209"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -9714,
+                "text": "-9714/81209"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -1132,
+                "text": "-1132/81209"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -7426,
+                "text": "-7426/81209"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": 16,
+                "text": "16/81209"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -6294,
+                "text": "-6294/81209"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -8205,
+                "text": "-8205/81209"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -7081,
+                "text": "-7081/81209"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -1437,
+                "text": "-1437/81209"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 4777,
+                "numerator": 417,
+                "text": "417/4777"
+              }
+            }
+          ]
+        },
+        "local_density": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 4777,
+              "numerator": 128,
+              "text": "128/4777"
+            },
+            "prime": 23,
+            "signed_value": {
+              "denominator": 4777,
+              "numerator": 128,
+              "text": "128/4777"
+            }
+          },
+          "mean_square": {
+            "denominator": 85733721853,
+            "numerator": 15654922,
+            "text": "15654922/85733721853"
+          },
+          "rms_decimal_display_only": "0.013513",
+          "sqrt_total_count_times_rms_decimal_display_only": "0.322617",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -1049,
+                "text": "-1049/81209"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": 283,
+                "text": "283/81209"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -384,
+                "text": "-384/81209"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -1990,
+                "text": "-1990/81209"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -730,
+                "text": "-730/81209"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -706,
+                "text": "-706/81209"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -1830,
+                "text": "-1830/81209"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 4777,
+                "numerator": 128,
+                "text": "128/4777"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -650,
+                "text": "-650/81209"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": 779,
+                "text": "779/81209"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": 217,
+                "text": "217/81209"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": -353,
+                "text": "-353/81209"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 81209,
+                "numerator": 225,
+                "text": "225/81209"
+              }
+            }
+          ]
+        },
+        "total_discriminant_count": 570
+      },
+      {
+        "bound": 2048,
+        "character_mean": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 163016,
+              "numerator": 14843,
+              "text": "14843/163016"
+            },
+            "prime": 37,
+            "signed_value": {
+              "denominator": 163016,
+              "numerator": -14843,
+              "text": "-14843/163016"
+            }
+          },
+          "mean_square": {
+            "denominator": 172732405664,
+            "numerator": 348116455,
+            "text": "348116455/172732405664"
+          },
+          "rms_decimal_display_only": "0.044893",
+          "sqrt_total_count_times_rms_decimal_display_only": "1.517080",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -1719,
+                "text": "-1719/163016"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 81508,
+                "numerator": -1145,
+                "text": "-1145/81508"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -3151,
+                "text": "-3151/163016"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -3719,
+                "text": "-3719/163016"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -6849,
+                "text": "-6849/163016"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 40754,
+                "numerator": -1571,
+                "text": "-1571/40754"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 81508,
+                "numerator": -3855,
+                "text": "-3855/81508"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 81508,
+                "numerator": -1423,
+                "text": "-1423/81508"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 2911,
+                "numerator": -153,
+                "text": "-153/2911"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -5417,
+                "text": "-5417/163016"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -14843,
+                "text": "-14843/163016"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 20377,
+                "numerator": -1537,
+                "text": "-1537/20377"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 11644,
+                "numerator": -429,
+                "text": "-429/11644"
+              }
+            }
+          ]
+        },
+        "local_density": {
+          "maximum_absolute": {
+            "absolute_value": {
+              "denominator": 81508,
+              "numerator": 1677,
+              "text": "1677/81508"
+            },
+            "prime": 23,
+            "signed_value": {
+              "denominator": 81508,
+              "numerator": 1677,
+              "text": "1677/81508"
+            }
+          },
+          "mean_square": {
+            "denominator": 13287108128,
+            "numerator": 1809069,
+            "text": "1809069/13287108128"
+          },
+          "rms_decimal_display_only": "0.011668",
+          "sqrt_total_count_times_rms_decimal_display_only": "0.394317",
+          "values": [
+            {
+              "prime": 2,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -2857,
+                "text": "-2857/163016"
+              }
+            },
+            {
+              "prime": 3,
+              "signed_value": {
+                "denominator": 1148,
+                "numerator": 1,
+                "text": "1/1148"
+              }
+            },
+            {
+              "prime": 5,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -1143,
+                "text": "-1143/163016"
+              }
+            },
+            {
+              "prime": 7,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -2781,
+                "text": "-2781/163016"
+              }
+            },
+            {
+              "prime": 13,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": -1265,
+                "text": "-1265/163016"
+              }
+            },
+            {
+              "prime": 17,
+              "signed_value": {
+                "denominator": 81508,
+                "numerator": -619,
+                "text": "-619/81508"
+              }
+            },
+            {
+              "prime": 19,
+              "signed_value": {
+                "denominator": 81508,
+                "numerator": -471,
+                "text": "-471/81508"
+              }
+            },
+            {
+              "prime": 23,
+              "signed_value": {
+                "denominator": 81508,
+                "numerator": 1677,
+                "text": "1677/81508"
+              }
+            },
+            {
+              "prime": 29,
+              "signed_value": {
+                "denominator": 81508,
+                "numerator": -601,
+                "text": "-601/81508"
+              }
+            },
+            {
+              "prime": 31,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": 1943,
+                "text": "1943/163016"
+              }
+            },
+            {
+              "prime": 37,
+              "signed_value": {
+                "denominator": 163016,
+                "numerator": 2239,
+                "text": "2239/163016"
+              }
+            },
+            {
+              "prime": 41,
+              "signed_value": {
+                "denominator": 40754,
+                "numerator": -367,
+                "text": "-367/40754"
+              }
+            },
+            {
+              "prime": 43,
+              "signed_value": {
+                "denominator": 40754,
+                "numerator": -367,
+                "text": "-367/40754"
+              }
+            }
+          ]
+        },
         "total_discriminant_count": 1142
       }
     ]

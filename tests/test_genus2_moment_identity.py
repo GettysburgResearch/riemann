@@ -242,5 +242,48 @@ class ResourceFirewallTests(unittest.TestCase):
         self.assertNotIn("genus2_q_scan", source)
 
 
+class SignDensityCorollaryTests(unittest.TestCase):
+    def test_shifted_polynomial_and_exact_frozen_bounds(self) -> None:
+        moment_certificate = identity.build_certificate()
+        certificate = identity.build_sign_density_certificate(moment_certificate)
+        self.assertEqual(
+            certificate.mean_deficit_numerator.coefficients,
+            tuple(map(Fraction, (-1, -1, 0, 1, -2, 1))),
+        )
+        self.assertEqual(
+            certificate.shifted_positive_polynomial.coefficients,
+            tuple(map(Fraction, (104, 215, 171, 67, 13, 1))),
+        )
+        self.assertEqual(certificate.range_lower_bound, -20)
+        self.assertEqual(certificate.proportion_denominator, 20)
+        self.assertEqual(certificate.lower_bound_at(3), Fraction(26, 1215))
+        self.assertEqual(certificate.lower_bound_at(5), Fraction(997, 31250))
+        self.assertEqual(certificate.lower_bound_at(7), Fraction(617, 16807))
+        q_times_q_minus_one = identity.polynomial(0, -1, 1)
+        algebra = identity.ExactAlgebra(operation_limit=100)
+        self.assertEqual(
+            algebra.negate(moment_certificate.sum_k),
+            algebra.multiply(q_times_q_minus_one, certificate.mean_deficit_numerator),
+        )
+
+    def test_scope_and_positivity_guards(self) -> None:
+        certificate = identity.build_sign_density_certificate()
+        for q in (3, 5, 7, 9, 11, 13):
+            with self.subTest(q=q):
+                self.assertGreater(certificate.lower_bound_at(q), 0)
+                self.assertLess(certificate.lower_bound_at(q), Fraction(1, 20))
+        for q in (0, 2, 4):
+            with self.subTest(q=q):
+                with self.assertRaisesRegex(ValueError, "odd q"):
+                    certificate.lower_bound_at(q)
+
+    def test_composite_odd_input_is_only_a_formal_polynomial_specialization(self) -> None:
+        certificate = identity.build_sign_density_certificate()
+        q = 15
+        numerator = q**5 - 2 * q**4 + q**3 - q - 1
+        self.assertEqual(certificate.lower_bound_at(q), Fraction(numerator, 20 * q**5))
+        self.assertIn("family semantics require a prime power", certificate.lower_bound_at.__doc__)
+
+
 if __name__ == "__main__":
     unittest.main()

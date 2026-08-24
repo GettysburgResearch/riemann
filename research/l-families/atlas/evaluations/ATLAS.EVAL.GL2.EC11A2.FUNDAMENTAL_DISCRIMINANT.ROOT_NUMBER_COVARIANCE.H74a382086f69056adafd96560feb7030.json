@@ -8,7 +8,7 @@
       "path": "research/l-families/atlas/core/twist_root_number_covariance.py",
       "role": "root_number_family_adapter",
       "schema_path": null,
-      "sha256": "b8a0fbcf87d42038c9c06dc810279f112b88882151f88129d51d5a5d28da15c7"
+      "sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b"
     },
     {
       "coverage_class": "FINITE_COMPLETE",
@@ -34,7 +34,7 @@
   "arithmetic": {
     "class": "MIXED",
     "directed": false,
-    "rounding_contract": "Cohort membership, counts, correlations, and the sufficient statistics for exact radical coefficients are exact conditional on imported theorem/base data; decimal moment fields are display-only binary64 conversions, while Gram-contrast square-root displays are rounded by exact integer comparisons from rational mean squares.",
+    "rounding_contract": "Cohort membership, counts, correlations, and the sufficient statistics for exact radical coefficients are exact conditional on imported theorem/base data; decimal moment fields are display-only binary64 conversions, while Gram and marginal contrast square-root displays are rounded by exact integer comparisons from rational mean squares.",
     "serialization_contract": "Aligned integer vectors, common-denominator matrices, reconstruction formulas, and reduced rational triples in canonical UTF-8 NFC JSON."
   },
   "assumptions": [
@@ -78,8 +78,8 @@
     "statement": "Every fundamental discriminant 1<|d|<=2048 coprime to 11, nested at four bounds, in exactly one root-number cohort, and every good prime p<=43."
   },
   "detector_contract_binding": {
-    "record_sha256": "290be37bb9218990e73454f74950e89dd40ef2f7cfa5014b2c1520f61972c6aa",
-    "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.H4ddb65db6974ba3b3975d291ba46f184"
+    "record_sha256": "38d8061a93b5c104fcf7232ac1af38071f88c990dd80382b5df1098e8a7f75a4",
+    "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.Hd5404747052a8d3d426b5d7f10551d28"
   },
   "evaluation_scope": "FAMILY_MOMENT",
   "firewalls": [
@@ -114,7 +114,7 @@
         "path": "research/l-families/atlas/core/twist_root_number_covariance.py",
         "role": "root_number_family_adapter",
         "schema_path": null,
-        "sha256": "b8a0fbcf87d42038c9c06dc810279f112b88882151f88129d51d5a5d28da15c7"
+        "sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b"
       },
       {
         "coverage_class": "FINITE_COMPLETE",
@@ -139,11 +139,11 @@
     ],
     "configuration_sha256": "f2bb237d709d2003513aae77472312e68d514a05aaab09cca7b468e83d851196",
     "detector_contract_binding": {
-      "record_sha256": "290be37bb9218990e73454f74950e89dd40ef2f7cfa5014b2c1520f61972c6aa",
-      "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.H4ddb65db6974ba3b3975d291ba46f184"
+      "record_sha256": "38d8061a93b5c104fcf7232ac1af38071f88c990dd80382b5df1098e8a7f75a4",
+      "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.Hd5404747052a8d3d426b5d7f10551d28"
     },
     "implementation_commit": "PENDING",
-    "implementation_sha256": "b8a0fbcf87d42038c9c06dc810279f112b88882151f88129d51d5a5d28da15c7",
+    "implementation_sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b",
     "input_fulfillments_sha256": "28444c49182412ba5487fc4deadf6aaccc0d91b1ea2511bb212330b616e899bc",
     "input_sha256s": [
       "641ee1e4b45695769b5b0594d4f0d977da957e042c93ccefebfa76e4102ad9bf",
@@ -159,7 +159,7 @@
     "slug": "GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE",
     "version": 1
   },
-  "identity_sha256": "b6ec934014c1a3e51c84760572808be0d333d7e071de131a93d14741a1d041d0",
+  "identity_sha256": "74a382086f69056adafd96560feb7030d8aab43d7091115778da884a59f3df34",
   "input_bindings": [
     {
       "coverage_class": "COMPLETE",
@@ -229,7 +229,7 @@
   ],
   "interpretation": {
     "smallest_gap": "Independently archive/certify the base 11.a2 metadata and prove any desired uniform root-number-conditioned covariance estimate; neither is supplied here.",
-    "statement": "Conditional on the imported coprime twist-sign theorem and 11.a2 base metadata, all emitted cohort membership, character counts, covariance entries, and sufficient statistics reconstructing the rational/radical coordinates are exact on the declared finite domain; the cross-cohort Gram maxima and mean squares are exact derived Fractions.",
+    "statement": "Conditional on the imported coprime twist-sign theorem and 11.a2 base metadata, all emitted cohort membership, character counts, covariance entries, and sufficient statistics reconstructing the rational/radical coordinates are exact on the declared finite domain; the cross-cohort Gram and marginal maxima and mean squares are exact derived Fractions.",
     "status": "EXACT_FINITE",
     "theorem_claim_id": null
   },
@@ -239,7 +239,7 @@
       "semantic_id": "ATLAS.LFUNC.GL2.EC11A2.QUADRATIC_TWISTS.CONDUCTOR_COPRIME.H8b93930bf96db7a104103fad5da0a3ae"
     }
   ],
-  "notes": "The source manifest, curve manifest, dedicated family spec, new sign adapter, shared covariance summarizer, and local trace adapter are all content-bound; the Gram contrast is derived only from already-emitted aligned sufficient statistics.",
+  "notes": "The source manifest, curve manifest, dedicated family spec, new sign adapter, shared covariance summarizer, and local trace adapter are all content-bound; the Gram and marginal contrasts are derived only from already-emitted aligned sufficient statistics.",
   "programme_refs": [
     {
       "kind": "GITHUB_ISSUE",
@@ -262,35 +262,35 @@
       "hash_mode": "CANONICAL_JSON_UTF8_NFC",
       "media_type": "application/json",
       "notes": "Exact integer sufficient statistics reconstruct the rational/radical moments conditional on the imported root-number theorem and base metadata; decimal fields are display-only.",
-      "path": "research/l-families/atlas/results/ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE.Hb6ec934014c1a3e51c84760572808be0.json",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE.H74a382086f69056adafd96560feb7030.json",
       "role": "detector_result",
       "schema_path": "research/l-families/atlas/detectors/raw-schemas/twist-root-number-covariance-result.schema.json",
-      "sha256": "e66f95035eadbc497225369bd3a2c1c645abf71ef5543efedb5907b991a8ffc3"
+      "sha256": "cfcfdf2d8079110d8ad9a6d8025f41f9ec49b4700139fa2a25a4f4d8bf4240c4"
     },
     "predicate_outcome": "NOT_APPLICABLE",
     "representation": "HASHED_ARTIFACT",
-    "summary": "Exact within-sign character Gram/covariance, cross-sign raw-Gram contrasts, and unitary-prime-sum moment coordinates at four bounds (X=256: + 65, - 76; X=512: + 140, - 145; X=1024: + 281, - 289; X=2048: + 568, - 574)."
+    "summary": "Exact within-sign character Gram/covariance, cross-sign raw-Gram and marginal contrasts, and unitary-prime-sum moment coordinates at four bounds (X=256: + 65, - 76; X=512: + 140, - 145; X=1024: + 281, - 289; X=2048: + 568, - 574)."
   },
   "result_hashes": [
     {
       "algorithm": "sha256",
       "binds": "canonical JSON twist root-number covariance result",
       "hash_mode": "CANONICAL_JSON_UTF8_NFC",
-      "value": "e66f95035eadbc497225369bd3a2c1c645abf71ef5543efedb5907b991a8ffc3"
+      "value": "cfcfdf2d8079110d8ad9a6d8025f41f9ec49b4700139fa2a25a4f4d8bf4240c4"
     }
   ],
-  "revision": 2,
+  "revision": 3,
   "rigor_level": "DISCOVERY_ONLY",
   "run": {
     "code_commit": "PENDING",
     "command": "python research/l-families/atlas/core/twist_root_number_covariance.py --check",
     "implementation_path": "research/l-families/atlas/core/twist_root_number_covariance.py",
-    "implementation_sha256": "b8a0fbcf87d42038c9c06dc810279f112b88882151f88129d51d5a5d28da15c7",
+    "implementation_sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b",
     "timestamp_utc": "2026-08-24T15:00:00Z"
   },
   "schema_version": "riemann.atlas.evaluation_record.v1",
   "scope_boundary": "Every declared conductor-coprime fundamental discriminant through 2048 and every good prime through 43, split only by the sourced root-number formula; no rank, zero, or asymptotic conclusion.",
-  "semantic_id": "ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE.Hb6ec934014c1a3e51c84760572808be0",
+  "semantic_id": "ATLAS.EVAL.GL2.EC11A2.FUNDAMENTAL_DISCRIMINANT.ROOT_NUMBER_COVARIANCE.H74a382086f69056adafd96560feb7030",
   "software": [
     {
       "name": "CPython",

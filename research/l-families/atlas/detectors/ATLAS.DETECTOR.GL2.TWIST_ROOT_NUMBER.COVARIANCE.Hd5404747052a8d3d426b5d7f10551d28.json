@@ -20,7 +20,7 @@
     {
       "code": "FINITE_AS_ASYMPTOTIC",
       "description": "Four finite covariance tables do not prove a limiting orthogonality law.",
-      "hostile_control": "The Gram-contrast RMS and sqrt(N_total)-scaled RMS are display-only; no fit, convergence rate, or finite-to-limit claim is emitted."
+      "hostile_control": "The Gram and marginal contrast RMS and sqrt(N_total)-scaled RMS values are display-only; no fit, convergence rate, or finite-to-limit claim is emitted."
     },
     {
       "code": "IMPORTED_MODEL_AS_CERTIFICATE",
@@ -52,25 +52,26 @@
     {
       "path": null,
       "state": "DEFINITION_READY",
-      "target": "Coprime quadratic-twist sign predicate, exhaustive two-sign partition, and exact within-cohort Gram/covariance and cross-cohort Gram-contrast identities."
+      "target": "Coprime quadratic-twist sign predicate, exhaustive two-sign partition, and exact within-cohort Gram/covariance, cross-cohort Gram-contrast, and marginal-contrast identities."
     }
   ],
   "identity_kernel": {
     "central_zero_policy": "NOT_APPLICABLE",
-    "contract_revision": 2,
+    "contract_revision": 3,
     "kernel_convention": "CUSTOM",
-    "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
+    "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, the exact cross-cohort character-mean and local-density marginal contrasts, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
     "normalization_requirements": [
       "Use Conrey's unitary weight-2 completion with center 1/2 and twist level 11*d^2.",
       "Restrict to fundamental d coprime to 11 and set epsilon_d=sign(d)*(d/11).",
       "Keep ROOT_NUMBER_PLUS and ROOT_NUMBER_MINUS as separate uniform finite measures.",
       "Omit p=11 and reuse the exact rational/multiquadratic covariance summarizer at the 13 good primes p<=43.",
-      "Derive Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r) only from aligned raw Gram entries for the 78 pairs p<r."
+      "Derive Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r) only from aligned raw Gram entries for the 78 pairs p<r.",
+      "Derive the 13 character-mean and local-density contrasts only from aligned character sums and raw Gram diagonals."
     ],
     "slug": "GL2.TWIST_ROOT_NUMBER.COVARIANCE",
     "version": 1
   },
-  "identity_sha256": "4ddb65db6974ba3b3975d291ba46f184c723a72991bb3df04994419363221cfc",
+  "identity_sha256": "d5404747052a8d3d426b5d7f10551d28cd92dcc24ba3dbd80349c9de1bf25fdf",
   "invariances": [
     {
       "code": "ROOT_PARTITION_EXHAUSTIVE",
@@ -96,10 +97,15 @@
       "code": "ROOT_COHORT_GRAM_CONTRAST",
       "statement": "Each Delta_X entry, maximum absolute contrast, and 78-pair mean square is an exact rational derived from the two aligned emitted Gram matrices.",
       "status": "PROVED"
+    },
+    {
+      "code": "ROOT_COHORT_MARGINAL_CONTRAST",
+      "statement": "Every character-mean and local-density contrast, maximum, and 13-prime mean square is an exact rational derived from aligned emitted sufficient statistics.",
+      "status": "PROVED"
     }
   ],
   "kernel_convention": "CUSTOM",
-  "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
+  "mathematical_definition": "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast Delta_X=G_{X,+}-G_{X,-}, the exact cross-cohort character-mean and local-density marginal contrasts, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime sum at the 13 good primes p<=43.",
   "normalization_requirements": [
     {
       "comparison_role": "IDENTITY",
@@ -125,9 +131,14 @@
       "comparison_role": "COVARIANCE",
       "field": "result.artifact.root_cohort_gram_contrast",
       "requirement": "Derive Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r) only from aligned raw Gram entries for the 78 pairs p<r."
+    },
+    {
+      "comparison_role": "COVARIANCE",
+      "field": "result.artifact.root_cohort_marginal_contrast",
+      "requirement": "Derive the 13 character-mean and local-density contrasts only from aligned character sums and raw Gram diagonals."
     }
   ],
-  "notes": "This detector conditions the existing finite character covariance on a sourced root-number predicate and derives its Gram contrast without another scan; it does not consume or infer ranks, central orders, or zeros.",
+  "notes": "This detector conditions the existing finite character covariance on a sourced root-number predicate and derives its Gram and marginal contrasts without another scan; it does not consume or infer ranks, central orders, or zeros.",
   "output_contract": {
     "arithmetic_classes": [
       "MIXED"
@@ -208,7 +219,7 @@
   "reference_implementation": {
     "entry_point": "build_result",
     "path": "research/l-families/atlas/core/twist_root_number_covariance.py",
-    "source_sha256": "b8a0fbcf87d42038c9c06dc810279f112b88882151f88129d51d5a5d28da15c7",
+    "source_sha256": "05f4bb1f3840b13c7ccb0590deabdf068873fa2b4f163330b879d23716a3320b",
     "version": "1"
   },
   "required_inputs": [
@@ -243,10 +254,10 @@
       "required": true
     }
   ],
-  "revision": 2,
+  "revision": 3,
   "schema_version": "riemann.atlas.detector_contract.v1",
   "scope_boundary": "Fundamental discriminants coprime to 11 through 2048 and good primes through 43, conditional on the imported twist-sign theorem and base metadata; no rank, zero, or asymptotic conclusion.",
-  "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.H4ddb65db6974ba3b3975d291ba46f184",
+  "semantic_id": "ATLAS.DETECTOR.GL2.TWIST_ROOT_NUMBER.COVARIANCE.Hd5404747052a8d3d426b5d7f10551d28",
   "supersedes": [],
   "theorem_links": [
     {

@@ -24,7 +24,11 @@ sys.path.insert(0, str(CORE))
 import twist_character_covariance as shared  # noqa: E402
 import twist_root_number_covariance as subject  # noqa: E402
 from atlas_core import read_json, semantic_identity, sha256_hex  # noqa: E402
-from validate_atlas import SchemaStore, validate_instance  # noqa: E402
+from validate_atlas import (  # noqa: E402
+    SchemaStore,
+    validate_instance,
+    validate_raw_result_semantics,
+)
 
 
 Q = Fraction
@@ -73,6 +77,24 @@ EXPECTED_GRAM_CONTRASTS = {
         "mean_square": Q(3293698081, 2072788867968),
         "rms": "0.039862",
         "scaled_rms": "1.347092",
+    },
+}
+EXPECTED_MARGINAL_CONTRASTS = {
+    256: {
+        "character_mean": (43, Q(129, 494), Q(2665799, 158623400), "0.129637", "1.539358"),
+        "local_density": (5, Q(367, 4940), Q(265861, 158623400), "0.040940", "0.486131"),
+    },
+    512: {
+        "character_mean": (43, Q(97, 580), Q(407331, 42857360), "0.097490", "1.645824"),
+        "local_density": (5, Q(37, 1015), Q(8409, 30612400), "0.016574", "0.279799"),
+    },
+    1024: {
+        "character_mean": (13, Q(-9714, 81209), Q(400113670, 85733721853), "0.068315", "1.630997"),
+        "local_density": (23, Q(128, 4777), Q(15654922, 85733721853), "0.013513", "0.322617"),
+    },
+    2048: {
+        "character_mean": (37, Q(-14843, 163016), Q(348116455, 172732405664), "0.044893", "1.517080"),
+        "local_density": (23, Q(1677, 81508), Q(1809069, 13287108128), "0.011668", "0.394317"),
     },
 }
 
@@ -382,6 +404,73 @@ class IndependentCovarianceReplayTests(RootNumberFixture):
                 expected["scaled_rms"],
             )
 
+    def test_exact_root_cohort_marginal_contrasts_replay_from_aligned_stats(self) -> None:
+        certificate = self.result["root_cohort_marginal_contrast"]
+        self.assertEqual(certificate["prime_count"], 13)
+        self.assertEqual(tuple(certificate["primes"]), PRIMES)
+        self.assertIn("no family enumeration", certificate["source"])
+        self.assertIn("not fitted rates", certificate["firewall"])
+        rows = {row["bound"]: row for row in certificate["summaries"]}
+        self.assertEqual([row["bound"] for row in certificate["summaries"]], list(subject.BOUNDS))
+        self.assertEqual(set(rows), set(EXPECTED_MARGINAL_CONTRASTS))
+        for bound, expected_channels in EXPECTED_MARGINAL_CONTRASTS.items():
+            plus = self.summary_by_key[(bound, "ROOT_NUMBER_PLUS")]
+            minus = self.summary_by_key[(bound, "ROOT_NUMBER_MINUS")]
+            plus_count = plus["discriminant_count"]
+            minus_count = minus["discriminant_count"]
+            total_count = plus_count + minus_count
+            plus_raw = plus["correlation_matrices"]["raw_gram"]
+            minus_raw = minus["correlation_matrices"]["raw_gram"]
+            exact_channels = {
+                "character_mean": [
+                    Q(plus["character_sums"][index], plus_count)
+                    - Q(minus["character_sums"][index], minus_count)
+                    for index in range(len(PRIMES))
+                ],
+                "local_density": [
+                    Q(plus_raw["numerators"][index][index], plus_count)
+                    - Q(minus_raw["numerators"][index][index], minus_count)
+                    for index in range(len(PRIMES))
+                ],
+            }
+            row = rows[bound]
+            self.assertEqual(row["total_discriminant_count"], total_count)
+            for channel, expected in expected_channels.items():
+                prime, signed, mean_square, rms, scaled_rms = expected
+                exact_values = exact_channels[channel]
+                maximum_index = max(
+                    range(len(PRIMES)), key=lambda index: abs(exact_values[index])
+                )
+                replayed_mean_square = sum(
+                    (value**2 for value in exact_values), Q()
+                ) / len(PRIMES)
+                self.assertEqual(PRIMES[maximum_index], prime)
+                self.assertEqual(exact_values[maximum_index], signed)
+                self.assertEqual(replayed_mean_square, mean_square)
+
+                emitted = row[channel]
+                self.assertEqual(
+                    [entry["prime"] for entry in emitted["values"]], list(PRIMES)
+                )
+                self.assertEqual(
+                    [fraction_value(entry["signed_value"]) for entry in emitted["values"]],
+                    exact_values,
+                )
+                maximum = emitted["maximum_absolute"]
+                self.assertEqual(maximum["prime"], prime)
+                self.assertEqual(fraction_value(maximum["signed_value"]), signed)
+                self.assertEqual(fraction_value(maximum["absolute_value"]), abs(signed))
+                self.assertEqual(fraction_value(emitted["mean_square"]), mean_square)
+                self.assertEqual(emitted["rms_decimal_display_only"], rms)
+                self.assertEqual(
+                    emitted["sqrt_total_count_times_rms_decimal_display_only"],
+                    scaled_rms,
+                )
+                self.assertEqual(subject._sqrt_decimal_display(mean_square), rms)
+                self.assertEqual(
+                    subject._sqrt_decimal_display(total_count * mean_square), scaled_rms
+                )
+
     def test_exact_square_root_display_hostile_controls(self) -> None:
         self.assertEqual(subject._sqrt_decimal_display(Q()), "0.000000")
         self.assertEqual(subject._sqrt_decimal_display(Q(1, 4)), "0.500000")
@@ -505,6 +594,68 @@ class ProvenanceAndSchemaTests(RootNumberFixture):
         self.assertTrue(
             any("expected const" in error for error in validate_instance(mutated, schema, schema_path, store))
         )
+        mutated = copy.deepcopy(self.result)
+        mutated["root_cohort_marginal_contrast"]["summaries"][0]["character_mean"][
+            "mean_square"
+        ]["numerator"] += 1
+        self.assertTrue(
+            any("expected const" in error for error in validate_instance(mutated, schema, schema_path, store))
+        )
+
+        hostile_packets = []
+        reversed_bounds = copy.deepcopy(self.result)
+        reversed_bounds["root_cohort_marginal_contrast"]["summaries"].reverse()
+        hostile_packets.append(reversed_bounds)
+
+        duplicate_bound = copy.deepcopy(self.result)
+        duplicate_bound["root_cohort_marginal_contrast"]["summaries"][1] = copy.deepcopy(
+            duplicate_bound["root_cohort_marginal_contrast"]["summaries"][0]
+        )
+        hostile_packets.append(duplicate_bound)
+
+        reversed_primes = copy.deepcopy(self.result)
+        reversed_primes["root_cohort_marginal_contrast"]["summaries"][0][
+            "character_mean"
+        ]["values"].reverse()
+        hostile_packets.append(reversed_primes)
+
+        duplicate_prime = copy.deepcopy(self.result)
+        values = duplicate_prime["root_cohort_marginal_contrast"]["summaries"][0][
+            "local_density"
+        ]["values"]
+        values[1] = copy.deepcopy(values[0])
+        hostile_packets.append(duplicate_prime)
+
+        for hostile in hostile_packets:
+            with self.subTest(hostile=hostile):
+                self.assertTrue(validate_instance(hostile, schema, schema_path, store))
+
+        inconsistent_value = copy.deepcopy(self.result)
+        inconsistent_value["root_cohort_marginal_contrast"]["summaries"][0][
+            "character_mean"
+        ]["values"][0]["signed_value"] = {
+            "numerator": -147,
+            "denominator": 2470,
+            "text": "-147/2470",
+        }
+        semantic_errors = validate_raw_result_semantics(inconsistent_value)
+        self.assertTrue(
+            any("inconsistent with cohort statistics" in error for error in semantic_errors)
+        )
+
+        inconsistent_denominator = copy.deepcopy(self.result)
+        inconsistent_denominator["summaries"][0]["correlation_matrices"]["raw_gram"][
+            "denominator"
+        ] += 1
+        semantic_errors = validate_raw_result_semantics(inconsistent_denominator)
+        self.assertTrue(
+            any("raw-Gram denominator differs" in error for error in semantic_errors)
+        )
+
+        malformed_gram = copy.deepcopy(self.result)
+        malformed_gram["summaries"][0]["correlation_matrices"]["raw_gram"] = "bad"
+        semantic_errors = validate_raw_result_semantics(malformed_gram)
+        self.assertTrue(any("malformed raw-Gram packet" in error for error in semantic_errors))
 
     def test_spec_and_evaluation_bind_every_load_bearing_input(self) -> None:
         self.assertEqual(self.spec["record_state"], "DRAFT")
@@ -524,6 +675,9 @@ class ProvenanceAndSchemaTests(RootNumberFixture):
         invariances = {entry["code"]: entry for entry in self.detector["invariances"]}
         self.assertEqual(
             invariances["ROOT_COHORT_GRAM_CONTRAST"]["status"], "PROVED"
+        )
+        self.assertEqual(
+            invariances["ROOT_COHORT_MARGINAL_CONTRAST"]["status"], "PROVED"
         )
         self.assertIn(
             "do not establish",

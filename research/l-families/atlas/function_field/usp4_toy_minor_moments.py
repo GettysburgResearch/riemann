@@ -7,8 +7,10 @@ If the normalized reciprocal roots are the eigenvalues of U in USp(4), then
 
 is the q-to-infinity model for (q*a_1^2-a_2^2)/q^2.  This module evaluates
 the first six Haar moments by the C_2 Weyl constant-term formula and compares
-them with the exact q=3,5,7 histograms.  It uses only small integer Laurent
-polynomials; there is no random-matrix simulation or numerical integration.
+them with the exact q=3,5,7 histograms.  A cubic-square majorant also turns
+those six moments into an exact negative-sign probability lower bound.  It
+uses only small integer Laurent polynomials; there is no random-matrix
+simulation or numerical integration.
 """
 
 from __future__ import annotations
@@ -29,8 +31,16 @@ Q_SCAN_FIXTURE = HERE / "genus2_q_scan.json"
 FROZEN_MAX_MOMENT = 6
 HAAR_STATUS = "RIGOROUS_CERTIFIED_WEYL_CONSTANT_TERM"
 COMPARISON_STATUS = "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
+FROZEN_PATTERN_STATUS = "EXACT_FOR_Q_3_5_7_ONLY"
 HAAR_RANGE_MINIMUM = Fraction(-20, 1)
 HAAR_RANGE_MAXIMUM = Fraction(4, 3)
+SIGN_MAJORANT_STATUS = "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND"
+SIGN_MAJORANT_COEFFICIENTS = (
+    Fraction(1, 1),
+    Fraction(5405, 12023),
+    Fraction(264, 12023),
+    Fraction(-23, 12023),
+)
 
 
 def _clean(poly: Mapping[Exponent, int]) -> Laurent:
@@ -202,8 +212,151 @@ def cumulants(raw_moments: Sequence[int]) -> list[int]:
     return values[1:]
 
 
+def convolve_rational(
+    left: Sequence[Fraction], right: Sequence[Fraction]
+) -> list[Fraction]:
+    """Multiply two ordinary polynomials with exact rational coefficients."""
+
+    if not left or not right:
+        return []
+    result = [Fraction(0) for _ in range(len(left) + len(right) - 1)]
+    for left_index, left_value in enumerate(left):
+        for right_index, right_value in enumerate(right):
+            result[left_index + right_index] += left_value * right_value
+    return result
+
+
+def polynomial_moment(
+    coefficients: Sequence[Fraction], raw_moments: Sequence[int | Fraction]
+) -> Fraction:
+    """Evaluate E[P(F)] exactly from P's coefficients and raw moments of F."""
+
+    if len(raw_moments) < len(coefficients) - 1:
+        raise ValueError("insufficient raw moments for polynomial expectation")
+    moments = [Fraction(1), *(Fraction(value) for value in raw_moments)]
+    return sum(
+        (coefficient * moments[order] for order, coefficient in enumerate(coefficients)),
+        Fraction(0),
+    )
+
+
 def _fraction_pair(value: Fraction) -> list[int]:
     return [value.numerator, value.denominator]
+
+
+def negative_sign_moment_certificate(
+    haar: Sequence[int],
+    comparisons: Sequence[Mapping[str, object]],
+    families: Sequence[Mapping[str, object]],
+) -> dict[str, object]:
+    """Build a six-moment lower bound for the negative-sign probability.
+
+    On the exact support [-20,4/3], the chosen cubic R satisfies R(x)>=1 for
+    x>=0.  Hence 1_{x>=0} <= R(x)^2, and the expectation of this degree-six
+    majorant is determined by the first six raw moments alone.
+    """
+
+    if len(haar) != 6:
+        raise ValueError("negative-sign certificate requires exactly six Haar moments")
+    comparisons_by_q = {int(item["q"]): item for item in comparisons}
+    families_by_q = {int(item["q"]): item for item in families}
+    if set(comparisons_by_q) != {3, 5, 7} or set(families_by_q) != {3, 5, 7}:
+        raise ValueError("negative-sign certificate requires q=3,5,7")
+
+    square = convolve_rational(SIGN_MAJORANT_COEFFICIENTS, SIGN_MAJORANT_COEFFICIENTS)
+    haar_nonnegative_upper = polynomial_moment(square, haar)
+    haar_negative_lower = 1 - haar_nonnegative_upper
+    if haar_nonnegative_upper != Fraction(7663, 12023):
+        raise ArithmeticError("unexpected Haar sign-majorant expectation")
+
+    finite_bounds: list[dict[str, object]] = []
+    for q in (3, 5, 7):
+        comparison = comparisons_by_q[q]
+        family = families_by_q[q]
+        finite_raw = [
+            Fraction(*moment["finite_exact"]) for moment in comparison["moments"]
+        ]
+        nonnegative_upper = polynomial_moment(square, finite_raw)
+        negative_lower = 1 - nonnegative_upper
+        sign_counts = family["sign_counts"]
+        observed_negative = Fraction(
+            int(sign_counts["negative"]), int(family["member_count"])
+        )
+        if not Fraction(0) < negative_lower <= observed_negative:
+            raise ArithmeticError(f"q={q} finite negative-sign bound failed")
+        finite_bounds.append(
+            {
+                "q": q,
+                "moment_majorant_nonnegative_upper_bound": _fraction_pair(
+                    nonnegative_upper
+                ),
+                "negative_probability_lower_bound": _fraction_pair(negative_lower),
+                "observed_negative_fraction": _fraction_pair(observed_negative),
+                "verified_bound_holds": True,
+            }
+        )
+
+    return {
+        "status": SIGN_MAJORANT_STATUS,
+        "event": "F<0",
+        "support": {
+            "minimum": _fraction_pair(HAAR_RANGE_MINIMUM),
+            "maximum": _fraction_pair(HAAR_RANGE_MAXIMUM),
+        },
+        "majorant": {
+            "polynomial": "R(x)=1+(5405*x+264*x^2-23*x^3)/12023",
+            "coefficients_low_to_high": [
+                _fraction_pair(value) for value in SIGN_MAJORANT_COEFFICIENTS
+            ],
+            "square_coefficients_low_to_high": [
+                _fraction_pair(value) for value in square
+            ],
+            "pointwise_statement": "1_{x>=0} <= R(x)^2 on [-20,4/3]",
+            "positive_interval_factorization": (
+                "R(x)-1=x*(5405+264*x-23*x^2)/12023"
+            ),
+            "quadratic_endpoint_values_on_0_to_4_over_3": [
+                _fraction_pair(Fraction(5405)),
+                _fraction_pair(Fraction(51445, 9)),
+            ],
+            "proof": (
+                "The quadratic 5405+264*x-23*x^2 is concave, so its minimum on "
+                "[0,4/3] occurs at an endpoint; both stored endpoint values are positive. "
+                "Thus R(x)>=1 for x>=0, while R(x)^2>=0 handles x<0."
+            ),
+            "construction": (
+                "The coefficients solve the exact normal equations minimizing E[R(F)^2] "
+                "among Haar cubics with R(0)=1; only the displayed pointwise inequality is "
+                "used for the probability bound."
+            ),
+        },
+        "haar": {
+            "moment_majorant_nonnegative_upper_bound": _fraction_pair(
+                haar_nonnegative_upper
+            ),
+            "negative_probability_lower_bound": _fraction_pair(haar_negative_lower),
+        },
+        "finite_q_bounds": finite_bounds,
+        "conditional_consequence": {
+            "status": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE",
+            "not_an_equidistribution_proof": True,
+            "assumption": (
+                "The first six raw moments of the normalized finite-family statistic "
+                "converge to the six stored USp(4) Haar moments."
+            ),
+            "statement": (
+                "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 4360/12023."
+            ),
+            "reason": (
+                "The expectation of the fixed degree-six majorant then converges to "
+                "7663/12023; no boundary-mass or weak-convergence argument is needed."
+            ),
+        },
+        "scope": (
+            "This is an exact lower bound, not an evaluation of the Haar sign probability. "
+            "The q=3,5,7 rows are exact frozen checks; the liminf statement is conditional."
+        ),
+    }
 
 
 def finite_moments(family: Mapping[str, object], max_moment: int) -> list[Fraction]:
@@ -219,6 +372,49 @@ def finite_moments(family: Mapping[str, object], max_moment: int) -> list[Fracti
         )
         for moment in range(1, max_moment + 1)
     ]
+
+
+def frozen_moment_pattern(
+    comparisons: Sequence[Mapping[str, object]], haar: Sequence[int]
+) -> dict[str, object]:
+    """Certify directional facts about the three frozen finite comparisons only."""
+
+    q_values = [int(comparison["q"]) for comparison in comparisons]
+    if q_values != [3, 5, 7]:
+        raise ValueError("frozen moment pattern requires q=3,5,7 in order")
+    per_order: list[dict[str, object]] = []
+    for order, target in enumerate(haar, start=1):
+        values = [
+            Fraction(*comparison["moments"][order - 1]["finite_exact"])
+            for comparison in comparisons
+        ]
+        gaps = [abs(value - target) for value in values]
+        same_sign = all((value > 0) == (target > 0) and value != 0 for value in values)
+        below = all(abs(value) < abs(target) for value in values)
+        increasing = all(abs(left) < abs(right) for left, right in zip(values, values[1:]))
+        decreasing_gap = all(left > right for left, right in zip(gaps, gaps[1:]))
+        if not (same_sign and below and increasing and decreasing_gap):
+            raise ArithmeticError(f"frozen directional moment pattern failed at order {order}")
+        per_order.append(
+            {
+                "order": order,
+                "same_nonzero_sign_as_haar": same_sign,
+                "absolute_value_below_haar": below,
+                "absolute_value_strictly_increases_with_q": increasing,
+                "absolute_gap_strictly_decreases_with_q": decreasing_gap,
+            }
+        )
+    return {
+        "status": FROZEN_PATTERN_STATUS,
+        "not_a_theorem_beyond_frozen_fields": True,
+        "q_values": q_values,
+        "per_order": per_order,
+        "interpretation": (
+            "For moment orders 1 through 6 at q=3,5,7 only, the finite moment has the "
+            "Haar sign, smaller absolute value, increasing absolute magnitude, and decreasing "
+            "absolute gap as q increases. No monotonicity or rate is asserted for another q."
+        ),
+    }
 
 
 def _canonical_sha256(value: object) -> str:
@@ -324,6 +520,10 @@ def build_fixture(q_scan_fixture: Path = Q_SCAN_FIXTURE) -> dict[str, object]:
             "coverage": "all monic squarefree quintics over F_q for q=3,5,7",
         },
         "finite_comparisons": comparisons,
+        "negative_sign_moment_certificate": negative_sign_moment_certificate(
+            haar, comparisons, q_scan["families"]
+        ),
+        "frozen_moment_pattern": frozen_moment_pattern(comparisons, haar),
         "limit_target": {
             "status": COMPARISON_STATUS,
             "not_a_theorem": True,

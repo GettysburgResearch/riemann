@@ -53,8 +53,9 @@ DEFINITION = (
     "For fundamental discriminants d with 1<|d|<=X and gcd(d,11)=1, partition by the imported "
     "theorem epsilon_d=sign(d)*(d/11), then evaluate in each sign cohort the exact finite raw Gram "
     "matrix and centered covariance of chi_d(p), their exact off-diagonal Gram contrast "
-    "Delta_X=G_{X,+}-G_{X,-}, and the exact rational/multiquadratic coordinates of the 11.a2 "
-    "unitary prime sum at the 13 good primes p<=43."
+    "Delta_X=G_{X,+}-G_{X,-}, the exact cross-cohort character-mean and local-density marginal "
+    "contrasts, and the exact rational/multiquadratic coordinates of the 11.a2 unitary prime "
+    "sum at the 13 good primes p<=43."
 )
 
 EXPECTED_COUNTS = {
@@ -92,6 +93,73 @@ EXPECTED_GRAM_CONTRASTS = {
         "mean_square": Fraction(3293698081, 2072788867968),
         "rms_display": "0.039862",
         "sqrt_total_count_times_rms_display": "1.347092",
+    },
+}
+
+EXPECTED_MARGINAL_CONTRASTS = {
+    256: {
+        "character_mean": {
+            "prime": 43,
+            "signed_value": Fraction(129, 494),
+            "mean_square": Fraction(2665799, 158623400),
+            "rms_display": "0.129637",
+            "sqrt_total_count_times_rms_display": "1.539358",
+        },
+        "local_density": {
+            "prime": 5,
+            "signed_value": Fraction(367, 4940),
+            "mean_square": Fraction(265861, 158623400),
+            "rms_display": "0.040940",
+            "sqrt_total_count_times_rms_display": "0.486131",
+        },
+    },
+    512: {
+        "character_mean": {
+            "prime": 43,
+            "signed_value": Fraction(97, 580),
+            "mean_square": Fraction(407331, 42857360),
+            "rms_display": "0.097490",
+            "sqrt_total_count_times_rms_display": "1.645824",
+        },
+        "local_density": {
+            "prime": 5,
+            "signed_value": Fraction(37, 1015),
+            "mean_square": Fraction(8409, 30612400),
+            "rms_display": "0.016574",
+            "sqrt_total_count_times_rms_display": "0.279799",
+        },
+    },
+    1024: {
+        "character_mean": {
+            "prime": 13,
+            "signed_value": Fraction(-9714, 81209),
+            "mean_square": Fraction(400113670, 85733721853),
+            "rms_display": "0.068315",
+            "sqrt_total_count_times_rms_display": "1.630997",
+        },
+        "local_density": {
+            "prime": 23,
+            "signed_value": Fraction(128, 4777),
+            "mean_square": Fraction(15654922, 85733721853),
+            "rms_display": "0.013513",
+            "sqrt_total_count_times_rms_display": "0.322617",
+        },
+    },
+    2048: {
+        "character_mean": {
+            "prime": 37,
+            "signed_value": Fraction(-14843, 163016),
+            "mean_square": Fraction(348116455, 172732405664),
+            "rms_display": "0.044893",
+            "sqrt_total_count_times_rms_display": "1.517080",
+        },
+        "local_density": {
+            "prime": 23,
+            "signed_value": Fraction(1677, 81508),
+            "mean_square": Fraction(1809069, 13287108128),
+            "rms_display": "0.011668",
+            "sqrt_total_count_times_rms_display": "0.394317",
+        },
     },
 }
 
@@ -292,6 +360,138 @@ def build_root_cohort_gram_contrast(
     }
 
 
+def _marginal_channel_record(
+    *,
+    bound: int,
+    channel: str,
+    values: list[tuple[int, Fraction]],
+    total_count: int,
+) -> dict[str, Any]:
+    if len(values) != 13:
+        raise ValueError(f"{channel} at X={bound} must contain exactly 13 prime contrasts")
+    maximum = max(values, key=lambda entry: abs(entry[1]))
+    mean_square = sum((value**2 for _, value in values), Fraction()) / len(values)
+    rms_display = _sqrt_decimal_display(mean_square)
+    scaled_rms_display = _sqrt_decimal_display(total_count * mean_square)
+    expected = EXPECTED_MARGINAL_CONTRASTS[bound][channel]
+    observed_invariant = {
+        "prime": maximum[0],
+        "signed_value": maximum[1],
+        "mean_square": mean_square,
+        "rms_display": rms_display,
+        "sqrt_total_count_times_rms_display": scaled_rms_display,
+    }
+    if observed_invariant != expected:
+        raise ArithmeticError(
+            f"root-cohort {channel} marginal contrast drifted at X={bound}: "
+            f"{observed_invariant}"
+        )
+    return {
+        "values": [
+            {
+                "prime": prime,
+                "signed_value": fraction_json(value.numerator, value.denominator),
+            }
+            for prime, value in values
+        ],
+        "maximum_absolute": {
+            "prime": maximum[0],
+            "signed_value": fraction_json(maximum[1].numerator, maximum[1].denominator),
+            "absolute_value": fraction_json(
+                abs(maximum[1]).numerator, abs(maximum[1]).denominator
+            ),
+        },
+        "mean_square": fraction_json(mean_square.numerator, mean_square.denominator),
+        "rms_decimal_display_only": rms_display,
+        "sqrt_total_count_times_rms_decimal_display_only": scaled_rms_display,
+    }
+
+
+def build_root_cohort_marginal_contrast(
+    summaries: list[dict[str, Any]],
+    primes: list[int],
+) -> dict[str, Any]:
+    """Derive exact mean and local-density contrasts from emitted sufficient stats."""
+
+    if len(primes) != 13:
+        raise ValueError(f"expected 13 aligned good primes, found {len(primes)}")
+    by_key: dict[tuple[int, str], dict[str, Any]] = {}
+    for summary in summaries:
+        key = (int(summary["bound"]), str(summary["partition"]))
+        if key in by_key:
+            raise ValueError(f"duplicate root-cohort summary {key}")
+        by_key[key] = summary
+    expected_keys = {(bound, partition) for bound in BOUNDS for partition in PARTITIONS}
+    if set(by_key) != expected_keys:
+        raise ValueError("root-cohort summaries are not aligned at every frozen bound")
+
+    rows: list[dict[str, Any]] = []
+    for bound in BOUNDS:
+        plus = by_key[(bound, "ROOT_NUMBER_PLUS")]
+        minus = by_key[(bound, "ROOT_NUMBER_MINUS")]
+        plus_count = int(plus["discriminant_count"])
+        minus_count = int(minus["discriminant_count"])
+        total_count = plus_count + minus_count
+        plus_gram = plus["correlation_matrices"]["raw_gram"]
+        minus_gram = minus["correlation_matrices"]["raw_gram"]
+        if plus_gram["denominator"] != plus_count or minus_gram["denominator"] != minus_count:
+            raise ValueError(f"raw Gram denominator does not match cohort count at X={bound}")
+        if len(plus["character_sums"]) != 13 or len(minus["character_sums"]) != 13:
+            raise ValueError(f"character-sum vector is not aligned at X={bound}")
+
+        character_mean_values = [
+            (
+                prime,
+                Fraction(plus["character_sums"][index], plus_count)
+                - Fraction(minus["character_sums"][index], minus_count),
+            )
+            for index, prime in enumerate(primes)
+        ]
+        local_density_values = [
+            (
+                prime,
+                Fraction(plus_gram["numerators"][index][index], plus_count)
+                - Fraction(minus_gram["numerators"][index][index], minus_count),
+            )
+            for index, prime in enumerate(primes)
+        ]
+        rows.append(
+            {
+                "bound": bound,
+                "total_discriminant_count": total_count,
+                "character_mean": _marginal_channel_record(
+                    bound=bound,
+                    channel="character_mean",
+                    values=character_mean_values,
+                    total_count=total_count,
+                ),
+                "local_density": _marginal_channel_record(
+                    bound=bound,
+                    channel="local_density",
+                    values=local_density_values,
+                    total_count=total_count,
+                ),
+            }
+        )
+    return {
+        "definitions": {
+            "character_mean": "s_{X,+}(p)/N_{X,+}-s_{X,-}(p)/N_{X,-}",
+            "local_density": "G_{X,+}(p,p)-G_{X,-}(p,p)",
+        },
+        "source": (
+            "derived only from emitted aligned character_sums and raw Gram diagonals; no family "
+            "enumeration or new prime scan"
+        ),
+        "prime_count": 13,
+        "primes": primes,
+        "summaries": rows,
+        "firewall": (
+            "The marginal RMS displays and sqrt(N_total)-scaled displays summarize four exact "
+            "finite rows only; they are not fitted rates, asymptotic laws, or theorems."
+        ),
+    }
+
+
 def build_result(
     curve_manifest: dict[str, Any],
     root_number_source: dict[str, Any],
@@ -322,6 +522,7 @@ def build_result(
         for bound in BOUNDS
     ]
     gram_contrast = build_root_cohort_gram_contrast(summaries, primes)
+    marginal_contrast = build_root_cohort_marginal_contrast(summaries, primes)
     return {
         "schema": "riemann.atlas.raw.twist_root_number_covariance.v1",
         "definition": DEFINITION,
@@ -368,6 +569,11 @@ def build_result(
                 "For every aligned p<r, Delta_X(p,r) is the exact Fraction difference of the "
                 "two emitted raw Gram entries; its maximum and 78-pair mean square use no new scan."
             ),
+            "root_cohort_marginal_contrast": (
+                "For each aligned prime, both mean and raw-Gram-diagonal cohort differences are "
+                "exact Fractions derived from emitted sufficient statistics; their 13-prime mean "
+                "squares require no new scan."
+            ),
             "moment_coordinates": (
                 "Distinct squarefree radicands are exact multiquadratic basis coordinates; decimal "
                 "displays use the positive real embedding."
@@ -376,6 +582,7 @@ def build_result(
         "exact_coordinate_formulas": COORDINATE_FORMULAS,
         "cohort_counts": cohort_counts,
         "root_cohort_gram_contrast": gram_contrast,
+        "root_cohort_marginal_contrast": marginal_contrast,
         "prime_bound": PRIME_BOUND,
         "primes": primes,
         "traces": [traces[prime] for prime in primes],
@@ -645,6 +852,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "Keep ROOT_NUMBER_PLUS and ROOT_NUMBER_MINUS as separate uniform finite measures.",
         "Omit p=11 and reuse the exact rational/multiquadratic covariance summarizer at the 13 good primes p<=43.",
         "Derive Delta_X(p,r)=G_{X,+}(p,r)-G_{X,-}(p,r) only from aligned raw Gram entries for the 78 pairs p<r.",
+        "Derive the 13 character-mean and local-density contrasts only from aligned character sums and raw Gram diagonals.",
     ]
     identity_kernel = {
         "version": 1,
@@ -653,7 +861,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "kernel_convention": "CUSTOM",
         "central_zero_policy": "NOT_APPLICABLE",
         "normalization_requirements": normalization,
-        "contract_revision": 2,
+        "contract_revision": 3,
     }
     semantic_id, identity_sha256 = semantic_identity(
         "DETECTOR", DETECTOR_SLUG, identity_kernel
@@ -665,7 +873,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "identity_sha256": identity_sha256,
         "identity_kernel": identity_kernel,
         "title": "Exact finite 11.a2 covariance split by quadratic-twist root number",
-        "revision": 2,
+        "revision": 3,
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(738), programme_ref(741)],
         "scope_boundary": (
@@ -772,6 +980,11 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "requirement": normalization[4],
                 "comparison_role": "COVARIANCE",
             },
+            {
+                "field": "result.artifact.root_cohort_marginal_contrast",
+                "requirement": normalization[5],
+                "comparison_role": "COVARIANCE",
+            },
         ],
         "invariances": [
             {
@@ -805,6 +1018,14 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "statement": (
                     "Each Delta_X entry, maximum absolute contrast, and 78-pair mean square is an "
                     "exact rational derived from the two aligned emitted Gram matrices."
+                ),
+                "status": "PROVED",
+            },
+            {
+                "code": "ROOT_COHORT_MARGINAL_CONTRAST",
+                "statement": (
+                    "Every character-mean and local-density contrast, maximum, and 13-prime mean "
+                    "square is an exact rational derived from aligned emitted sufficient statistics."
                 ),
                 "status": "PROVED",
             },
@@ -861,8 +1082,8 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "code": "FINITE_AS_ASYMPTOTIC",
                 "description": "Four finite covariance tables do not prove a limiting orthogonality law.",
                 "hostile_control": (
-                    "The Gram-contrast RMS and sqrt(N_total)-scaled RMS are display-only; no fit, "
-                    "convergence rate, or finite-to-limit claim is emitted."
+                    "The Gram and marginal contrast RMS and sqrt(N_total)-scaled RMS values are "
+                    "display-only; no fit, convergence rate, or finite-to-limit claim is emitted."
                 ),
             },
             {
@@ -888,15 +1109,16 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "state": "DEFINITION_READY",
                 "target": (
                     "Coprime quadratic-twist sign predicate, exhaustive two-sign partition, and "
-                    "exact within-cohort Gram/covariance and cross-cohort Gram-contrast identities."
+                    "exact within-cohort Gram/covariance, cross-cohort Gram-contrast, and marginal-"
+                    "contrast identities."
                 ),
                 "path": None,
             }
         ],
         "notes": (
             "This detector conditions the existing finite character covariance on a sourced root-number "
-            "predicate and derives its Gram contrast without another scan; it does not consume or "
-            "infer ranks, central orders, or zeros."
+            "predicate and derives its Gram and marginal contrasts without another scan; it does not "
+            "consume or infer ranks, central orders, or zeros."
         ),
     }
 
@@ -1040,7 +1262,7 @@ def build_evaluation(
         "identity_sha256": identity_sha256,
         "identity_kernel": identity_kernel,
         "title": "Exact finite 11.a2 character covariance in the two quadratic-twist root-number cohorts",
-        "revision": 2,
+        "revision": 3,
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(738), programme_ref(741)],
         "scope_boundary": (
@@ -1069,8 +1291,9 @@ def build_evaluation(
             "rounding_contract": (
                 "Cohort membership, counts, correlations, and the sufficient statistics for exact "
                 "radical coefficients are exact conditional on imported theorem/base data; decimal "
-                "moment fields are display-only binary64 conversions, while Gram-contrast square-root "
-                "displays are rounded by exact integer comparisons from rational mean squares."
+                "moment fields are display-only binary64 conversions, while Gram and marginal "
+                "contrast square-root displays are rounded by exact integer comparisons from "
+                "rational mean squares."
             ),
             "serialization_contract": (
                 "Aligned integer vectors, common-denominator matrices, reconstruction formulas, "
@@ -1108,8 +1331,8 @@ def build_evaluation(
             "predicate_outcome": "NOT_APPLICABLE",
             "artifact": result_binding,
             "summary": (
-                "Exact within-sign character Gram/covariance, cross-sign raw-Gram contrasts, and "
-                f"unitary-prime-sum moment coordinates at four bounds ({count_text})."
+                "Exact within-sign character Gram/covariance, cross-sign raw-Gram and marginal "
+                f"contrasts, and unitary-prime-sum moment coordinates at four bounds ({count_text})."
             ),
         },
         "result_hashes": [
@@ -1125,8 +1348,8 @@ def build_evaluation(
                 "Conditional on the imported coprime twist-sign theorem and 11.a2 base metadata, "
                 "all emitted cohort membership, character counts, covariance entries, and "
                 "sufficient statistics reconstructing the rational/radical coordinates are exact "
-                "on the declared finite domain; the cross-cohort Gram maxima and mean squares are "
-                "exact derived Fractions."
+                "on the declared finite domain; the cross-cohort Gram and marginal maxima and mean "
+                "squares are exact derived Fractions."
             ),
             "smallest_gap": (
                 "Independently archive/certify the base 11.a2 metadata and prove any desired "
@@ -1162,8 +1385,8 @@ def build_evaluation(
         ],
         "notes": (
             "The source manifest, curve manifest, dedicated family spec, new sign adapter, shared "
-            "covariance summarizer, and local trace adapter are all content-bound; the Gram contrast "
-            "is derived only from already-emitted aligned sufficient statistics."
+            "covariance summarizer, and local trace adapter are all content-bound; the Gram and "
+            "marginal contrasts are derived only from already-emitted aligned sufficient statistics."
         ),
     }
 

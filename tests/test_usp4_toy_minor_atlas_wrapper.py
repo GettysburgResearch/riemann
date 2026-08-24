@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import sys
 import unittest
 from fractions import Fraction
@@ -129,6 +130,55 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
                 )
                 self.assertEqual(actual["usp4_haar_exact"], source["usp4_haar_exact"])
 
+    def test_frozen_directional_pattern_is_bound_and_not_extrapolated(self) -> None:
+        pattern = self.result["frozen_moment_pattern"]
+        self.assertEqual(pattern, self.comparator["frozen_moment_pattern"])
+        self.assertEqual(pattern["status"], wrapper.FROZEN_PATTERN_STATUS)
+        self.assertTrue(pattern["not_a_theorem_beyond_frozen_fields"])
+        self.assertEqual([row["order"] for row in pattern["per_order"]], list(range(1, 7)))
+        self.assertTrue(
+            all(
+                all(value is True for key, value in row.items() if key != "order")
+                for row in pattern["per_order"]
+            )
+        )
+
+    def test_degree_six_negative_sign_bound_is_exact_and_conditional(self) -> None:
+        certificate = self.result["negative_sign_moment_certificate"]
+        self.assertEqual(certificate["status"], wrapper.SIGN_MAJORANT_STATUS)
+        haar = certificate["haar"]
+        self.assertEqual(
+            Fraction(
+                haar["moment_majorant_nonnegative_upper_bound"]["numerator"],
+                haar["moment_majorant_nonnegative_upper_bound"]["denominator"],
+            ),
+            Fraction(7663, 12023),
+        )
+        self.assertEqual(
+            Fraction(
+                haar["negative_probability_lower_bound"]["numerator"],
+                haar["negative_probability_lower_bound"]["denominator"],
+            ),
+            Fraction(4360, 12023),
+        )
+        self.assertEqual(
+            [row["q"] for row in certificate["finite_q_bounds"]], [3, 5, 7]
+        )
+        for row in certificate["finite_q_bounds"]:
+            lower = row["negative_probability_lower_bound"]
+            observed = row["observed_negative_fraction"]
+            self.assertLessEqual(
+                Fraction(lower["numerator"], lower["denominator"]),
+                Fraction(observed["numerator"], observed["denominator"]),
+            )
+            self.assertTrue(row["verified_bound_holds"])
+        conditional = certificate["conditional_consequence"]
+        self.assertEqual(
+            conditional["status"], "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"
+        )
+        self.assertTrue(conditional["not_an_equidistribution_proof"])
+        self.assertIn("lower bound", certificate["scope"])
+
     def test_exact_arithmetic_is_firewalled_from_convergence(self) -> None:
         self.assertEqual(self.evaluation["rigor_level"], "RIGOROUS_CERTIFIED")
         target = self.result["convergence_target"]
@@ -143,7 +193,14 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
                 self.detector["scope_boundary"],
             ]
         ).lower()
-        for phrase in ("not a theorem", "pick/loewner", "xd", "hcnc", "number-field"):
+        for phrase in (
+            "not a theorem",
+            "another field",
+            "pick/loewner",
+            "xd",
+            "hcnc",
+            "number-field",
+        ):
             self.assertIn(phrase, text)
 
     def test_strict_raw_result_schema_holds(self) -> None:
@@ -155,6 +212,51 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
             SchemaStore(),
         )
         self.assertEqual(errors, [])
+
+    def test_strict_schema_rejects_q_and_moment_order_drift(self) -> None:
+        schema_path = ROOT / wrapper.RAW_RESULT_SCHEMA
+        schema = read_json(schema_path)
+        hostile_cases = []
+
+        duplicate_q = copy.deepcopy(self.result)
+        duplicate_q["finite_comparisons"][1]["q"] = 3
+        duplicate_q["finite_comparisons"][1]["member_count"] = 162
+        hostile_cases.append(duplicate_q)
+
+        reversed_q = copy.deepcopy(self.result)
+        reversed_q["finite_comparisons"].reverse()
+        hostile_cases.append(reversed_q)
+
+        duplicate_order = copy.deepcopy(self.result)
+        duplicate_order["finite_comparisons"][0]["moments"][1]["order"] = 1
+        duplicate_order["finite_comparisons"][0]["moments"][1]["usp4_haar_exact"] = -1
+        hostile_cases.append(duplicate_order)
+
+        out_of_range_order = copy.deepcopy(self.result)
+        out_of_range_order["finite_comparisons"][0]["moments"][0]["order"] = 7
+        hostile_cases.append(out_of_range_order)
+
+        altered_majorant = copy.deepcopy(self.result)
+        altered_majorant["negative_sign_moment_certificate"]["majorant"][
+            "coefficients_low_to_high"
+        ][1]["numerator"] += 1
+        hostile_cases.append(altered_majorant)
+
+        altered_haar_bound = copy.deepcopy(self.result)
+        altered_haar_bound["negative_sign_moment_certificate"]["haar"][
+            "negative_probability_lower_bound"
+        ]["numerator"] += 1
+        hostile_cases.append(altered_haar_bound)
+
+        reversed_sign_rows = copy.deepcopy(self.result)
+        reversed_sign_rows["negative_sign_moment_certificate"]["finite_q_bounds"].reverse()
+        hostile_cases.append(reversed_sign_rows)
+
+        for hostile in hostile_cases:
+            with self.subTest(hostile=hostile):
+                self.assertTrue(
+                    validate_instance(hostile, schema, schema_path, SchemaStore())
+                )
 
     def test_written_artifacts_equal_dynamic_builder_output(self) -> None:
         detector_path = ATLAS_ROOT / "detectors" / f"{self.detector['semantic_id']}.json"

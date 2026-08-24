@@ -187,6 +187,165 @@ def validate_instance(
     return errors
 
 
+def _fraction_record_value(
+    value: Any,
+    location: str,
+    errors: list[str],
+) -> Fraction | None:
+    """Decode one canonical fraction object for semantic raw-result checks."""
+
+    if not isinstance(value, dict):
+        errors.append(f"{location}: fraction record is not an object")
+        return None
+    numerator = value.get("numerator")
+    denominator = value.get("denominator")
+    if (
+        not isinstance(numerator, int)
+        or isinstance(numerator, bool)
+        or not isinstance(denominator, int)
+        or isinstance(denominator, bool)
+        or denominator <= 0
+    ):
+        errors.append(f"{location}: invalid fraction numerator or denominator")
+        return None
+    decoded = Fraction(numerator, denominator)
+    canonical_text = (
+        str(decoded.numerator)
+        if decoded.denominator == 1
+        else f"{decoded.numerator}/{decoded.denominator}"
+    )
+    if value.get("text") != canonical_text:
+        errors.append(f"{location}: fraction text is not canonical")
+    if numerator != decoded.numerator or denominator != decoded.denominator:
+        errors.append(f"{location}: fraction is not reduced")
+    return decoded
+
+
+def validate_raw_result_semantics(value: Any) -> list[str]:
+    """Check exact cross-field identities that JSON Schema cannot express."""
+
+    if not isinstance(value, dict):
+        return []
+    if value.get("schema") != "riemann.atlas.raw.twist_root_number_covariance.v1":
+        return []
+    errors: list[str] = []
+    primes = value.get("primes")
+    summaries = value.get("summaries")
+    certificate = value.get("root_cohort_marginal_contrast")
+    if not isinstance(primes, list) or not isinstance(summaries, list) or not isinstance(certificate, dict):
+        return ["$: root-cohort marginal semantic inputs are missing"]
+    by_key: dict[tuple[int, str], dict[str, Any]] = {}
+    for summary in summaries:
+        if not isinstance(summary, dict):
+            errors.append("$.summaries: non-object summary")
+            continue
+        key = (summary.get("bound"), summary.get("partition"))
+        if not isinstance(key[0], int) or not isinstance(key[1], str) or key in by_key:
+            errors.append(f"$.summaries: invalid or duplicate cohort key {key!r}")
+            continue
+        by_key[key] = summary
+    certificate_rows = certificate.get("summaries")
+    if not isinstance(certificate_rows, list):
+        return errors + ["$.root_cohort_marginal_contrast.summaries: missing array"]
+    for row_index, row in enumerate(certificate_rows):
+        row_location = f"$.root_cohort_marginal_contrast.summaries[{row_index}]"
+        if not isinstance(row, dict) or not isinstance(row.get("bound"), int):
+            errors.append(f"{row_location}: invalid bound row")
+            continue
+        bound = row["bound"]
+        plus = by_key.get((bound, "ROOT_NUMBER_PLUS"))
+        minus = by_key.get((bound, "ROOT_NUMBER_MINUS"))
+        if plus is None or minus is None:
+            errors.append(f"{row_location}: missing aligned plus/minus cohorts")
+            continue
+        plus_count = plus.get("discriminant_count")
+        minus_count = minus.get("discriminant_count")
+        if not isinstance(plus_count, int) or not isinstance(minus_count, int):
+            errors.append(f"{row_location}: invalid cohort counts")
+            continue
+        if row.get("total_discriminant_count") != plus_count + minus_count:
+            errors.append(f"{row_location}: total cohort count is inconsistent")
+        plus_sums = plus.get("character_sums")
+        minus_sums = minus.get("character_sums")
+        plus_correlations = plus.get("correlation_matrices")
+        minus_correlations = minus.get("correlation_matrices")
+        if not isinstance(plus_correlations, dict) or not isinstance(minus_correlations, dict):
+            errors.append(f"{row_location}: malformed correlation-matrix packet")
+            continue
+        plus_gram = plus_correlations.get("raw_gram")
+        minus_gram = minus_correlations.get("raw_gram")
+        if not isinstance(plus_gram, dict) or not isinstance(minus_gram, dict):
+            errors.append(f"{row_location}: malformed raw-Gram packet")
+            continue
+        if plus_gram.get("denominator") != plus_count:
+            errors.append(f"{row_location}: plus raw-Gram denominator differs from cohort count")
+        if minus_gram.get("denominator") != minus_count:
+            errors.append(f"{row_location}: minus raw-Gram denominator differs from cohort count")
+        plus_diagonal = plus_gram.get("numerators")
+        minus_diagonal = minus_gram.get("numerators")
+        try:
+            expected_channels = {
+                "character_mean": [
+                    Fraction(plus_sums[index], plus_count)
+                    - Fraction(minus_sums[index], minus_count)
+                    for index in range(len(primes))
+                ],
+                "local_density": [
+                    Fraction(plus_diagonal[index][index], plus_count)
+                    - Fraction(minus_diagonal[index][index], minus_count)
+                    for index in range(len(primes))
+                ],
+            }
+        except (IndexError, KeyError, TypeError, ZeroDivisionError):
+            errors.append(f"{row_location}: malformed sufficient statistics")
+            continue
+        for channel_name, expected_values in expected_channels.items():
+            channel_location = f"{row_location}.{channel_name}"
+            channel = row.get(channel_name)
+            if not isinstance(channel, dict) or not isinstance(channel.get("values"), list):
+                errors.append(f"{channel_location}: missing channel values")
+                continue
+            entries = channel["values"]
+            if len(entries) != len(primes):
+                errors.append(f"{channel_location}.values: wrong prime count")
+                continue
+            emitted_values: list[Fraction] = []
+            for index, (prime, expected) in enumerate(zip(primes, expected_values, strict=True)):
+                entry = entries[index]
+                entry_location = f"{channel_location}.values[{index}]"
+                if not isinstance(entry, dict) or entry.get("prime") != prime:
+                    errors.append(f"{entry_location}: prime is not aligned")
+                    continue
+                decoded = _fraction_record_value(entry.get("signed_value"), f"{entry_location}.signed_value", errors)
+                if decoded is None:
+                    continue
+                emitted_values.append(decoded)
+                if decoded != expected:
+                    errors.append(f"{entry_location}: value is inconsistent with cohort statistics")
+            if len(emitted_values) != len(primes):
+                continue
+            expected_mean_square = sum((item * item for item in expected_values), Fraction()) / len(primes)
+            emitted_mean_square = _fraction_record_value(
+                channel.get("mean_square"), f"{channel_location}.mean_square", errors
+            )
+            if emitted_mean_square != expected_mean_square:
+                errors.append(f"{channel_location}: mean square is inconsistent")
+            maximum_index = max(range(len(primes)), key=lambda index: abs(expected_values[index]))
+            maximum = channel.get("maximum_absolute")
+            if not isinstance(maximum, dict) or maximum.get("prime") != primes[maximum_index]:
+                errors.append(f"{channel_location}.maximum_absolute: prime is inconsistent")
+                continue
+            signed = _fraction_record_value(
+                maximum.get("signed_value"), f"{channel_location}.maximum_absolute.signed_value", errors
+            )
+            absolute = _fraction_record_value(
+                maximum.get("absolute_value"), f"{channel_location}.maximum_absolute.absolute_value", errors
+            )
+            if signed != expected_values[maximum_index] or absolute != abs(expected_values[maximum_index]):
+                errors.append(f"{channel_location}.maximum_absolute: value is inconsistent")
+    return errors
+
+
 def record_files(root: Path) -> list[tuple[Path, Path]]:
     schema_root = root / "schema"
     pairs: list[tuple[Path, Path]] = []
@@ -586,7 +745,15 @@ def validate_atlas(root: Path = ATLAS_ROOT) -> dict[str, int]:
                 if result_binding.get("schema_path"):
                     raw_path = safe_repo_path(repo_root, result_binding["path"])
                     raw_schema_path = safe_repo_path(repo_root, result_binding["schema_path"])
-                    raw_errors = validate_instance(read_json(raw_path), store.load(raw_schema_path), raw_schema_path, store)
+                    raw_result = read_json(raw_path)
+                    raw_errors = validate_instance(
+                        raw_result,
+                        store.load(raw_schema_path),
+                        raw_schema_path,
+                        store,
+                    )
+                    if not raw_errors:
+                        raw_errors.extend(validate_raw_result_semantics(raw_result))
                     errors.extend(f"{record['semantic_id']} raw result: {item}" for item in raw_errors)
             except AtlasValidationError as exc:
                 errors.append(f"{record['semantic_id']}: {exc}")

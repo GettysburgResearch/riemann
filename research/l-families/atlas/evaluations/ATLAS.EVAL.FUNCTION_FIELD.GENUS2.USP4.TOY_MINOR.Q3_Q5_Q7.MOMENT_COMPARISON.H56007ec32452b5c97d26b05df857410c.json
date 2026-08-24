@@ -8,7 +8,7 @@
       "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
       "role": "exact_usp4_laurent_adapter",
       "schema_path": null,
-      "sha256": "aba6da478a4f1e69db94dcbe31339023ffcab349558758076a5908a1912d0135"
+      "sha256": "d8fdbc133eee1fad79dc54ee5715720487df41d52559d88d25aa64584d06f707"
     },
     {
       "coverage_class": "FINITE_COMPLETE",
@@ -18,7 +18,7 @@
       "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
       "role": "exact_genus2_histogram_adapter",
       "schema_path": null,
-      "sha256": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255"
+      "sha256": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10"
     }
   ],
   "arithmetic": {
@@ -54,14 +54,18 @@
     "statement": "All Haar moment orders 1 through 6 and all 162, 2500, and 14406 finite-family members at q=3,5,7 respectively."
   },
   "detector_contract_binding": {
-    "record_sha256": "9208c072cd1b3af31d1e91faa9156005ad8f924756a9186145980272444f51be",
-    "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H091db0c7a64078c29f7f9ebe16defb83"
+    "record_sha256": "aee13f2297485637a9928eac774f7ffbab87a0144ecf43bba67799e25f00f856",
+    "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H252d7b67043b4ce3403ba7b27d755d28"
   },
   "evaluation_scope": "FAMILY_MOMENT",
   "firewalls": [
     {
       "code": "EXACT_NOT_CONVERGENCE",
       "statement": "Certified exact arithmetic does not certify the proposed fixed-moment limit."
+    },
+    {
+      "code": "SIGN_BOUND_NOT_SIGN_PROBABILITY",
+      "statement": "The certified value 4360/12023 is a Haar lower bound, not the exact negative-sign probability; the finite-family liminf remains conditional."
     },
     {
       "code": "TOY_NOT_ANALYTIC_KERNEL",
@@ -86,7 +90,7 @@
         "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
         "role": "exact_usp4_laurent_adapter",
         "schema_path": null,
-        "sha256": "aba6da478a4f1e69db94dcbe31339023ffcab349558758076a5908a1912d0135"
+        "sha256": "d8fdbc133eee1fad79dc54ee5715720487df41d52559d88d25aa64584d06f707"
       },
       {
         "coverage_class": "FINITE_COMPLETE",
@@ -96,20 +100,20 @@
         "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
         "role": "exact_genus2_histogram_adapter",
         "schema_path": null,
-        "sha256": "e18fe10ed81b608b527bf659d0566e544121621d21fc1e37843fd19c375b8255"
+        "sha256": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10"
       }
     ],
     "configuration_sha256": "ca66f1d47e321c9e94e9c9035098d16bd4abdb80d9625ad70bf8c88ed41b630e",
     "detector_contract_binding": {
-      "record_sha256": "9208c072cd1b3af31d1e91faa9156005ad8f924756a9186145980272444f51be",
-      "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H091db0c7a64078c29f7f9ebe16defb83"
+      "record_sha256": "aee13f2297485637a9928eac774f7ffbab87a0144ecf43bba67799e25f00f856",
+      "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H252d7b67043b4ce3403ba7b27d755d28"
     },
     "implementation_commit": "PENDING",
-    "implementation_sha256": "08066f6aa3abb68483588161fcf6d989d01fecf24eb02e4255d77539798396d4",
+    "implementation_sha256": "3a5f6f2626cebfaefba9133da53d3b64100e43aa772e6af03fcfac8d4bdc2b08",
     "input_fulfillments_sha256": "975a774a67f981e0d68bed117a0d713fae7fd171a4b97547d5c18071ac3330a9",
     "input_sha256s": [
-      "6c13984a151b6ab7b65ecd56f3a43d14577d8ccf50ff49e045c5244043296c54",
-      "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10"
+      "caa56fa56f4e642b4d34dfc1fb69e2eacdc0bddf952d0a71b38da707d8ba5da8",
+      "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4"
     ],
     "lfunction_spec_bindings": [
       {
@@ -117,11 +121,11 @@
         "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
       },
       {
-        "record_sha256": "aac738be5b6a95a6b40531e42547c8dd935dab886aea6e928bbf3e10a9cb0179",
+        "record_sha256": "2b940279459e20deda87408fe1c8996839ceebfd7a6d550a13f263a6ce86df42",
         "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572"
       },
       {
-        "record_sha256": "74bcfe510536a6b0123a4974a8373bfceb6d9e4336396901dbedbcf05d001dbd",
+        "record_sha256": "d691323cdc5b2c480640a34948534c4cbe729131d090b6b71f02337a9632222a",
         "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F7.QUADRATIC.QUINTIC_GENUS2_FAMILY.H066f50ec5ddb13c0ab7107ae1b68fb8b"
       }
     ],
@@ -129,7 +133,7 @@
     "slug": "FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.Q3_Q5_Q7.MOMENT_COMPARISON",
     "version": 1
   },
-  "identity_sha256": "55a377953ac67abb6f55a47d95bfd7e2d1bc1147b6313be58d552a288348c3d2",
+  "identity_sha256": "56007ec32452b5c97d26b05df857410cbb2d068b602c668c54c44663ae6636be",
   "input_bindings": [
     {
       "coverage_class": "FINITE_COMPLETE",
@@ -139,7 +143,7 @@
       "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json",
       "role": "exact_usp4_moment_certificate",
       "schema_path": null,
-      "sha256": "6c13984a151b6ab7b65ecd56f3a43d14577d8ccf50ff49e045c5244043296c54"
+      "sha256": "caa56fa56f4e642b4d34dfc1fb69e2eacdc0bddf952d0a71b38da707d8ba5da8"
     },
     {
       "coverage_class": "FINITE_COMPLETE",
@@ -149,7 +153,7 @@
       "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
       "role": "complete_q3_q5_q7_histograms",
       "schema_path": null,
-      "sha256": "4e2d109ecb3e1bef179149b313dec6a38247948529630adb663845fde3640b10"
+      "sha256": "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4"
     }
   ],
   "input_fulfillments": [
@@ -184,7 +188,7 @@
   ],
   "interpretation": {
     "smallest_gap": "Prove the relevant hyperelliptic-family equidistribution; bounded continuity of each fixed power F(U)^m then gives moment convergence.",
-    "statement": "The character identity, range certificate, Weyl normalization, six Haar moments, and three finite histogram moment sequences are exact. Their proposed q-to-infinity relation is not proved.",
+    "statement": "The character identity, range certificate, Weyl normalization, six Haar moments, three finite histogram moment sequences, and the six frozen directional gap checks are exact. The six-moment negative-sign lower bound is also exact; its liminf consequence and the proposed q-to-infinity moment relation are conditional and unproved, respectively.",
     "status": "EXACT_FINITE",
     "theorem_claim_id": null
   },
@@ -194,15 +198,15 @@
       "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F3.QUADRATIC.QUINTIC_GENUS2_FAMILY.H64fa184deff37bfade32dede39110cb6"
     },
     {
-      "record_sha256": "aac738be5b6a95a6b40531e42547c8dd935dab886aea6e928bbf3e10a9cb0179",
+      "record_sha256": "2b940279459e20deda87408fe1c8996839ceebfd7a6d550a13f263a6ce86df42",
       "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F5.QUADRATIC.QUINTIC_GENUS2_FAMILY.H26649ce49ca814ca1fe8d3f38668c572"
     },
     {
-      "record_sha256": "74bcfe510536a6b0123a4974a8373bfceb6d9e4336396901dbedbcf05d001dbd",
+      "record_sha256": "d691323cdc5b2c480640a34948534c4cbe729131d090b6b71f02337a9632222a",
       "semantic_id": "ATLAS.LFUNC.FUNCTION_FIELD.F7.QUADRATIC.QUINTIC_GENUS2_FAMILY.H066f50ec5ddb13c0ab7107ae1b68fb8b"
     }
   ],
-  "notes": "RIGOROUS_CERTIFIED applies to exact Laurent, Weyl, and finite histogram arithmetic. The raw result separately marks convergence CONJECTURAL and PROPOSED, not a theorem.",
+  "notes": "RIGOROUS_CERTIFIED applies to exact Laurent, Weyl, finite histogram, and polynomial-majorant arithmetic. The raw result separately marks moment convergence CONJECTURAL and PROPOSED, and the negative-sign liminf as conditional.",
   "programme_refs": [
     {
       "kind": "GITHUB_ISSUE",
@@ -225,21 +229,21 @@
       "hash_mode": "CANONICAL_JSON_UTF8_NFC",
       "media_type": "application/json",
       "notes": "Compact exact certificate; both source implementations and both full fixtures are separately bound.",
-      "path": "research/l-families/atlas/results/ATLAS.EVAL.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.Q3_Q5_Q7.MOMENT_COMPARISON.H55a377953ac67abb6f55a47d95bfd7e2.json",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.Q3_Q5_Q7.MOMENT_COMPARISON.H56007ec32452b5c97d26b05df857410c.json",
       "role": "detector_result",
       "schema_path": "research/l-families/atlas/detectors/raw-schemas/function-field-usp4-toy-minor-moments-result.schema.json",
-      "sha256": "e3c55f235f9a9a7af754e26e6c3e0cf3d1c105afef22790d9a004c8650daeed3"
+      "sha256": "5e076d369e34f973d4a452c50b62db40837ad8e4fafe8322aecde3ac77bb8818"
     },
     "predicate_outcome": "NOT_APPLICABLE",
     "representation": "HASHED_ARTIFACT",
-    "summary": "F has exact USp(4) range [-20,4/3] and Haar moments -1, 3, -11, 56, -374, 3117; exact finite comparisons at q=3,5,7 are registered without asserting convergence."
+    "summary": "F has exact USp(4) range [-20,4/3] and Haar moments -1, 3, -11, 56, -374, 3117. A degree-six moment majorant proves Pr_Haar(F<0)>=4360/12023. All six frozen moment gaps shrink directionally from q=3 to 5 to 7, without asserting monotonicity beyond those fields or convergence."
   },
   "result_hashes": [
     {
       "algorithm": "sha256",
       "binds": "canonical JSON exact USp(4) toy-minor comparison result",
       "hash_mode": "CANONICAL_JSON_UTF8_NFC",
-      "value": "e3c55f235f9a9a7af754e26e6c3e0cf3d1c105afef22790d9a004c8650daeed3"
+      "value": "5e076d369e34f973d4a452c50b62db40837ad8e4fafe8322aecde3ac77bb8818"
     }
   ],
   "revision": 1,
@@ -248,12 +252,12 @@
     "code_commit": "PENDING",
     "command": "python research/l-families/atlas/core/wrap_usp4_toy_minor_moments.py --check",
     "implementation_path": "research/l-families/atlas/core/wrap_usp4_toy_minor_moments.py",
-    "implementation_sha256": "08066f6aa3abb68483588161fcf6d989d01fecf24eb02e4255d77539798396d4",
+    "implementation_sha256": "3a5f6f2626cebfaefba9133da53d3b64100e43aa772e6af03fcfac8d4bdc2b08",
     "timestamp_utc": "2026-08-24T15:00:00Z"
   },
   "schema_version": "riemann.atlas.evaluation_record.v1",
   "scope_boundary": "Exact moment orders one through six for Haar USp(4) and the complete q=3,5,7 quintic families only; no convergence theorem or transfer beyond this scope.",
-  "semantic_id": "ATLAS.EVAL.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.Q3_Q5_Q7.MOMENT_COMPARISON.H55a377953ac67abb6f55a47d95bfd7e2",
+  "semantic_id": "ATLAS.EVAL.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.Q3_Q5_Q7.MOMENT_COMPARISON.H56007ec32452b5c97d26b05df857410c",
   "software": [
     {
       "name": "CPython",

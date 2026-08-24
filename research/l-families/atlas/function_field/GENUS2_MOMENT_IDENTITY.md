@@ -10,8 +10,10 @@ Scope: every odd prime power \(q\); all monic squarefree quintics over
 Exact dependencies: polynomial quadratic reciprocity, polynomial Moebius
 inversion, and the standard exact form of the \(L\)-polynomial of a primitive
 even quadratic character of conductor degree two or four. The latter is
-recalled below through the zeta function of \(Y^2=r(T)\); no zero bound or
-equidistribution theorem is used.
+recalled below through the zeta function of \(Y^2=r(T)\). The moment identity
+uses no zero bound or equidistribution theorem. Its negative-sign density
+corollary additionally uses the classical Weil purity/root-modulus theorem for
+the genus-two numerator, equivalently its normalized \(USp(4)\) realization.
 
 What was actually run: the standard-library certificate
 `genus2_moment_identity.py` checks the finite algebra in \(\mathbf Q[q]\).
@@ -487,6 +489,79 @@ definition of \(K_D\), equations (7) and (17) give
 \]
 
 which completes the proof.
+
+## Corollary: an unconditional negative-sign density floor
+
+Set \(Z_D=K_D/q^2\). By the classical purity theorem for this genus-two curve,
+the normalized Frobenius eigenvalues form a matrix \(U_D\in USp(4)\). Writing
+
+\[
+ P_D(u)=1+a_Du+b_Du^2+qa_Du^3+q^2u^4
+       =\det(I-\sqrt q\,uU_D)
+\]
+
+gives \(a_D/\sqrt q=-\operatorname{Tr}U_D\) and
+\(b_D/q=e_2(U_D)\). If \(X=2\cos\theta_1\) and
+\(Y=2\cos\theta_2\), then
+
+\[
+ Z_D=(\operatorname{Tr}U_D)^2-e_2(U_D)^2
+ =(X-Y)^2-4-X^2Y^2\ge -20,
+\tag{18}
+\]
+
+because \(X,Y\in[-2,2]\). Write
+
+\[
+ A(q)=\left(1-\frac1q\right)^2-\frac{q+1}{q^5}
+ =\frac{P(q)}{q^5},
+\quad
+ P(q)=q^5-2q^4+q^3-q-1.
+\]
+
+For \(q\ge3\), put \(t=q-3\ge0\). The exact identity
+
+\[
+ P(t+3)=t^5+13t^4+67t^3+171t^2+215t+104
+\tag{19}
+\]
+
+shows that \(A(q)>0\). The moment theorem says
+\(\mathbb E[Z_D]=-A(q)\), so the toy minor cannot be nonnegative for every
+member of any \(\mathcal H_5(q)\).
+
+More quantitatively, let
+
+\[
+ \rho_-(q)=\frac{\#\{D\in\mathcal H_5(q):Z_D<0\}}
+ {|\mathcal H_5(q)|}.
+\]
+
+On the negative set (18) gives \(Z_D\ge-20\), while on its complement
+\(Z_D\ge0\). Hence
+
+\[
+ -A(q)=\mathbb E[Z_D]\ge-20\rho_-(q),
+\]
+
+and therefore
+
+\[
+ \boxed{\rho_-(q)\ge
+ \frac{q^5-2q^4+q^3-q-1}{20q^5}}.
+\tag{20}
+\]
+
+In particular,
+
+\[
+ \liminf_{\substack{q\to\infty\\q\text{ odd prime power}}}\rho_-(q)
+ \ge\frac1{20}.
+\]
+
+This is only a one-sided density floor. It does not determine the limiting sign
+distribution, prove equidistribution, or turn the toy minor into a canonical
+Pick/Loewner, `XD`, or `HCNC` detector.
 
 ## Scope firewall and replay
 

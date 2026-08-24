@@ -130,6 +130,40 @@ purity, reciprocal-coefficient, and involution checks from the first pilot.
 | 5 | 2,500 | `1650 / 50 / 800` | `-1994/3125` |
 | 7 | 14,406 | `9702 / 336 / 4368` | `-12340/16807` |
 
+These member rows have an exact geometric compression. For
+`alpha in F_q^*` and `beta in F_q`, set
+
+\[
+D^{\alpha,\beta}(T)=\alpha^{-5}D(\alpha T+\beta).
+\]
+
+This is a right action of `AGL(1,F_q)` on monic squarefree quintics. The base
+change of variables and the fact that every base-field scalar is a square in
+`F_{q^2}` give
+
+\[
+a_{D^{\alpha,\beta}}=\chi_q(\alpha)a_D,
+\qquad b_{D^{\alpha,\beta}}=b_D,
+\qquad K_{D^{\alpha,\beta}}=K_D.
+\]
+
+Thus every sign and moment contribution is orbit-invariant. Exhaustively
+checking all 656,024 member-action pairs gives:
+
+| `q` | group order | affine orbits | orbit-size histogram | stabilizer-order histogram | negative / zero / positive orbits |
+|---:|---:|---:|---|---|---:|
+| 3 | 6 | 29 | `3:4, 6:25` | `1:25, 2:4` | `19 / 2 / 8` |
+| 5 | 20 | 132 | `1:1, 4:1, 5:3, 10:6, 20:121` | `1:121, 2:6, 4:3, 5:1, 20:1` | `86 / 4 / 42` |
+| 7 | 42 | 349 | `21:12, 42:337` | `1:337, 2:12` | `237 / 8 / 104` |
+
+Most orbits are free. The characteristic-five exception
+`D(T)=T^5-T` is fixed by all 20 affine elements and has `K_D=-100`; this is a
+concrete warning that a uniform average over orbit representatives is not the
+family average. Orbit-size weighting recovers every member moment, histogram,
+and sign count exactly. The quotient should nevertheless be useful in a
+higher-moment proof: it isolates automorphism strata and can cut a symmetry-
+aware computation from 17,068 members to 510 weighted representatives.
+
 Those three rows suggested a formula, but they are no longer its evidence of
 proof. The separate DRAFT note
 [`GENUS2_MOMENT_IDENTITY.md`](function_field/GENUS2_MOMENT_IDENTITY.md) gives a
@@ -180,7 +214,38 @@ F=-(1+\chi_{\omega_2}+\chi_{2\omega_2}),
 \qquad -20\le F\le\frac43,
 \]
 
-and the normalized `C_2` Weyl constant term gives its first six Haar moments
+The range makes the negative first moment quantitatively useful without any
+equidistribution input. Put `Z_D=K_D/q^2`, let `rho_-(q)` be the proportion of
+the family with `Z_D<0`, and write
+
+\[
+A(q)=\left(1-\frac1q\right)^2-\frac{q+1}{q^5}
+=\frac{P(q)}{q^5},
+\qquad P(q)=q^5-2q^4+q^3-q-1.
+\]
+
+Because `Z_D>=-20` and the nonnegative members contribute at least zero,
+`-A(q)=E(Z_D)>=-20 rho_-(q)`. Moreover
+
+\[
+P(t+3)=t^5+13t^4+67t^3+171t^2+215t+104>0
+\qquad(t\ge0).
+\]
+
+Consequently, for every odd prime power,
+
+\[
+\boxed{\rho_-(q)\ge\frac{P(q)}{20q^5}},
+\qquad \liminf_{q\to\infty}\rho_-(q)\ge\frac1{20}.
+\]
+
+In particular every such family contains a negative member. The frozen lower
+bounds are `26/1215`, `997/31250`, and `617/16807` at `q=3,5,7`; they are
+deliberately conservative compared with the enumerated proportions. This is a
+one-sided density floor, not a limiting sign law, equidistribution result, or
+claim that any member has a canonical analytic-detector sign.
+
+The normalized `C_2` Weyl constant term then gives its first six Haar moments
 
 ```text
 -1, 3, -11, 56, -374, 3117.
@@ -189,6 +254,38 @@ and the normalized `C_2` Weyl constant term gives its first six Haar moments
 The same exact triangular conversion gives centered moments
 `0,2,-4,27,-178,1533` and cumulants `-1,2,-4,15,-98,803`; in particular the
 limiting variance target is exactly 2 and the law is strongly non-Gaussian.
+
+Those six raw moments already imply a rigorous Haar sign bound. Define
+
+\[
+R(x)=1+\frac{5405x+264x^2-23x^3}{12023}.
+\]
+
+On `0<=x<=4/3`,
+
+\[
+R(x)-1=\frac{x(5405+264x-23x^2)}{12023}\ge0,
+\]
+
+because the concave quadratic has positive endpoint values `5405` and
+`51445/9`. Hence `1_{x>=0}<=R(x)^2` on the full support `[-20,4/3]`. Exact
+substitution of the six Haar moments gives
+
+\[
+\mathbb E_{\mathrm{Haar}}R(F)^2=\frac{7663}{12023},
+\qquad
+\boxed{\mu_{\mathrm{Haar}}(F<0)\ge\frac{4360}{12023}}
+\approx0.362638.
+\]
+
+This is a certified lower bound, not the exact sign probability. Applying the
+same degree-six certificate to the frozen finite moments gives exact lower
+bounds approximately `0.152536, 0.237852, 0.274227` at `q=3,5,7`, all below
+the observed `17/27, 33/50, 33/49`. More importantly, convergence of only the
+first six finite moments would already imply
+`liminf rho_-(q)>=4360/12023`. That conditional implication needs neither full
+weak convergence nor boundary-mass control; it is a concrete payoff from
+proving Targets `m=2,...,6`.
 
 The exact finite fractions are retained in the fixture; their display values
 show how slowly the higher tails appear:
@@ -208,6 +305,29 @@ is a compact clue about missing extreme-tail mass, not a one-sided theorem or a
 rate fit; the sixth moment at `q=7` is still only about one tenth of its Haar
 target. It argues for character decomposition or effective equidistribution,
 not a materially larger brute-force scan.
+
+A separate deterministic Weyl quadrature asks the corresponding sign-law
+question. Four phase shifts on periodic grids through `512 x 512` (1,376,256
+cells in total, with a five-second guard) give a final phase mean
+`0.737849043834` for the Haar mass of `F<0`; the four estimates at the finest
+grid have spread `0.000070698736`. The exact finite negative proportions are
+
+```text
+q=3: 17/27,     q=5: 33/50,     q=7: 33/49,
+```
+
+and increase toward the display estimate. The quadrature reproduces the exact
+Haar density constant and first two moments as internal controls, but it is not
+directed interval arithmetic. Thus `mu_Haar(F<0) approximately 0.738` is a
+numerical nomination for a future sign-distribution theorem, not a certified
+probability, convergence claim, or rate.
+
+One part of that future implication is already elementary: `F=0` is the zero
+set of a nonzero polynomial in the two trace coordinates, hence has Haar
+measure zero. Thus any independently proved weak convergence of the family
+class measures to Haar would force convergence of the negative proportions.
+Obtaining an effective sign rate would still require quantitative control near
+that boundary.
 
 Thus the proved finite-family first-moment limit equals the exact Haar mean
 `-1`. This does not prove convergence of moments two through six, full
@@ -307,9 +427,31 @@ The exact off-diagonal contrast summaries derived from the stored matrices are:
 Both displays decrease on the frozen windows, while the maximizing pair moves.
 Moreover `sqrt(N)` times the RMS stays of order one on these four rows, which
 is compatible with sampling-scale fluctuation but is not a fitted rate or a
-theorem. The next missing arithmetic input is a root-conditioned, weighted,
-uniform off-diagonal estimate as the prime window grows; central ranks and
-zeros were not computed.
+theorem.
+
+The same stored sufficient statistics also separate the two marginal channels
+that the off-diagonal table omits:
+
+\[
+m_X(p)=\frac{s_{X,+}(p)}{N_{X,+}}-\frac{s_{X,-}(p)}{N_{X,-}},
+\qquad
+d_X(p)=G_{X,+}(p,p)-G_{X,-}(p,p).
+\]
+
+| `X` | largest signed `m_X(p)` | RMS over 13 primes | `sqrt(N)` RMS | largest signed `d_X(p)` | RMS over 13 primes | `sqrt(N)` RMS |
+|---:|---:|---:|---:|---:|---:|---:|
+| 256 | `129/494` at 43 | `0.129637` | `1.539358` | `367/4940` at 5 | `0.040940` | `0.486131` |
+| 512 | `97/580` at 43 | `0.097490` | `1.645824` | `37/1015` at 5 | `0.016574` | `0.279799` |
+| 1024 | `-9714/81209` at 13 | `0.068315` | `1.630997` | `128/4777` at 23 | `0.013513` | `0.322617` |
+| 2048 | `-14843/163016` at 37 | `0.044893` | `1.517080` | `1677/81508` at 23 | `0.011668` | `0.394317` |
+
+The exact character-mean contrast has a strikingly stable `sqrt(N)`-scaled RMS
+on these four windows, whereas the density channel is smaller. This is a
+finite sampling-scale clue only: the maximizing prime moves, signs change, and
+four fixed packets cannot supply a rate or asymptotic law. The next missing
+arithmetic input is a root-conditioned, weighted, uniform off-diagonal and
+marginal estimate as the prime window grows; central ranks and zeros were not
+computed.
 
 ## 6. Exact covariance: central zeros are rank-one atoms with a convention sign
 
@@ -377,9 +519,11 @@ The experiments suggest a narrow hierarchy:
 
 1. **Transferable exactly:** Euler reciprocal algebra, unitary local scaling,
    central-order factorization, rank-one atoms, and the parity/full norm identity.
-2. **Exactly solvable in this family:** the genus-two first toy-minor mean. Its
-   squarefree-sieve proof works for every odd prime power, whereas the higher
-   moments still require new character correlations or equidistribution.
+2. **Exactly solvable in this family:** the genus-two first toy-minor mean and
+   its consequent negative-sign density floor, together with the affine
+   transformation law of the toy minor. The squarefree-sieve proof works for
+   every odd prime power, whereas the full sign law and higher moments still
+   require new character correlations or equidistribution.
 3. **Family-dependent:** local coefficient moments, monodromy averages, rank
    distributions, and low-zero statistics.
 4. **Not implied by purity alone in these pilots:** a common memberwise sign for

@@ -55,6 +55,29 @@ class LaurentCertificateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "max_moment"):
             usp4.haar_moments(7)
 
+    def test_exact_degree_six_sign_majorant(self) -> None:
+        coefficients = list(usp4.SIGN_MAJORANT_COEFFICIENTS)
+        square = usp4.convolve_rational(coefficients, coefficients)
+        self.assertEqual(len(square), 7)
+        self.assertEqual(
+            usp4.polynomial_moment(square, [-1, 3, -11, 56, -374, 3117]),
+            Fraction(7663, 12023),
+        )
+        # The concave quadratic controlling R(x)-1 is positive at both
+        # endpoints of the only interval where a nonnegative indicator matters.
+        quadratic = lambda x: 5405 + 264 * x - 23 * x * x
+        self.assertEqual(quadratic(Fraction(0)), 5405)
+        self.assertEqual(quadratic(Fraction(4, 3)), Fraction(51445, 9))
+        self.assertLess(-23, 0)
+        for power in range(1, 4):
+            moments = [1, -1, 3, -11, 56, -374, 3117]
+            self.assertEqual(
+                sum(coefficients[index] * moments[index + power] for index in range(4)),
+                0,
+            )
+        with self.assertRaisesRegex(ValueError, "insufficient raw moments"):
+            usp4.polynomial_moment(square, [-1, 3])
+
 
 class FixtureTests(unittest.TestCase):
     @classmethod
@@ -87,6 +110,54 @@ class FixtureTests(unittest.TestCase):
             histogram = {int(key): value for key, value in families[q]["K_histogram"].items()}
             self.assertGreaterEqual(Fraction(min(histogram), q * q), usp4.HAAR_RANGE_MINIMUM)
             self.assertLessEqual(Fraction(max(histogram), q * q), usp4.HAAR_RANGE_MAXIMUM)
+
+    def test_frozen_directional_pattern_is_exact_but_finite_only(self) -> None:
+        pattern = self.fixture["frozen_moment_pattern"]
+        self.assertEqual(pattern["status"], usp4.FROZEN_PATTERN_STATUS)
+        self.assertTrue(pattern["not_a_theorem_beyond_frozen_fields"])
+        self.assertEqual(pattern["q_values"], [3, 5, 7])
+        self.assertEqual([row["order"] for row in pattern["per_order"]], list(range(1, 7)))
+        for row in pattern["per_order"]:
+            self.assertTrue(
+                all(value is True for key, value in row.items() if key != "order")
+            )
+
+    def test_negative_sign_moment_certificate_is_exact(self) -> None:
+        certificate = self.fixture["negative_sign_moment_certificate"]
+        self.assertEqual(certificate["status"], usp4.SIGN_MAJORANT_STATUS)
+        self.assertEqual(
+            Fraction(*certificate["haar"]["moment_majorant_nonnegative_upper_bound"]),
+            Fraction(7663, 12023),
+        )
+        self.assertEqual(
+            Fraction(*certificate["haar"]["negative_probability_lower_bound"]),
+            Fraction(4360, 12023),
+        )
+        expected = {
+            3: (
+                Fraction(316385345123392, 2074170795235803),
+                Fraction(17, 27),
+            ),
+            5: (
+                Fraction(1049258112998647044, 4411393096923828125),
+                Fraction(33, 50),
+            ),
+            7: (
+                Fraction(188194097859476923656, 686272022845319295847),
+                Fraction(33, 49),
+            ),
+        }
+        for row in certificate["finite_q_bounds"]:
+            lower, observed = expected[row["q"]]
+            self.assertEqual(Fraction(*row["negative_probability_lower_bound"]), lower)
+            self.assertEqual(Fraction(*row["observed_negative_fraction"]), observed)
+            self.assertLessEqual(lower, observed)
+            self.assertTrue(row["verified_bound_holds"])
+        conditional = certificate["conditional_consequence"]
+        self.assertEqual(
+            conditional["status"], "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"
+        )
+        self.assertTrue(conditional["not_an_equidistribution_proof"])
 
     def test_rigorous_parts_are_separate_from_limit_target(self) -> None:
         self.assertEqual(self.fixture["rigor_level"], usp4.HAAR_STATUS)

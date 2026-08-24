@@ -7,7 +7,8 @@
   "required": [
     "schema", "definition", "detector_semantic_id", "source_fixture",
     "finite_result_status", "families", "resource_controls", "closed_formula_target",
-    "usp4_limit_target", "firewalls"
+    "usp4_limit_target", "negative_proportion_corollary", "affine_orbit_certificate",
+    "firewalls"
   ],
   "properties": {
     "schema": {"const": "riemann.atlas.raw.function_field_genus2_q_scan.v1"},
@@ -80,12 +81,192 @@
         "scope_boundary": {"type": "string", "minLength": 1}
       }
     },
+    "negative_proportion_corollary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status", "scope", "statistic", "range_lower_bound", "mean_deficit",
+        "mean_deficit_numerator", "certified_moment_bridge",
+        "mean_deficit_numerator_coefficients_low_to_high",
+        "shifted_positivity_identity", "shifted_positive_coefficients_low_to_high",
+        "negative_proportion_lower_bound", "frozen_lower_bound_regressions",
+        "liminf_lower_bound", "memberwise_consequence", "scope_boundary"
+      ],
+      "properties": {
+        "status": {"const": "PROVED_FROM_EXACT_MEAN_AND_USP4_RANGE"},
+        "scope": {"const": "every odd prime power q"},
+        "statistic": {"const": "Z_D=(q*a_D^2-b_D^2)/q^2"},
+        "range_lower_bound": {"const": -20},
+        "mean_deficit": {"const": "A(q)=(1-1/q)^2-(q+1)/q^5=P(q)/q^5"},
+        "mean_deficit_numerator": {"const": "P(q)=q^5-2*q^4+q^3-q-1"},
+        "certified_moment_bridge": {"const": "-sum_D K_D=q*(q-1)*P(q)"},
+        "mean_deficit_numerator_coefficients_low_to_high": {
+          "const": [-1, -1, 0, 1, -2, 1]
+        },
+        "shifted_positivity_identity": {
+          "const": "P(t+3)=t^5+13*t^4+67*t^3+171*t^2+215*t+104 for t=q-3>=0"
+        },
+        "shifted_positive_coefficients_low_to_high": {
+          "const": [104, 215, 171, 67, 13, 1]
+        },
+        "negative_proportion_lower_bound": {"const": "rho_-(q)>=P(q)/(20*q^5)"},
+        "frozen_lower_bound_regressions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["3", "5", "7"],
+          "properties": {
+            "3": {"const": [26, 1215]},
+            "5": {"const": [997, 31250]},
+            "7": {"const": [617, 16807]}
+          }
+        },
+        "liminf_lower_bound": {"const": [1, 20]},
+        "memberwise_consequence": {
+          "const": "for every odd prime power q, at least one family member has negative Z_D"
+        },
+        "scope_boundary": {"type": "string", "minLength": 1}
+      }
+    },
+    "affine_orbit_certificate": {"$ref": "#/$defs/affine_orbit_certificate"},
     "firewalls": {
-      "type": "array", "minItems": 3,
+      "type": "array", "minItems": 4,
       "items": {"type": "string", "minLength": 1}
     }
   },
   "$defs": {
+    "affine_orbit_certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status", "scope", "source_fixture", "action", "resource_controls",
+        "total_member_action_pairs_checked", "families",
+        "q_scan_regressions_all_match", "firewall"
+      ],
+      "properties": {
+        "status": {
+          "const": "PROVED_EXACTLY_AND_EXHAUSTIVELY_REPLAYED_ON_FROZEN_FIELDS"
+        },
+        "scope": {
+          "const": "all monic squarefree quintics over F_q for exactly q=3,5,7"
+        },
+        "source_fixture": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "canonical_sha256", "payload_sha256"],
+          "properties": {
+            "path": {
+              "const": "research/l-families/atlas/function_field/genus2_affine_orbits.json"
+            },
+            "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          }
+        },
+        "action": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["definition", "convention", "a_D_law", "b_D_law", "K_D_law"],
+          "properties": {
+            "definition": {
+              "const": "D^{alpha,beta}(T)=alpha^(-5)*D(alpha*T+beta)"
+            },
+            "convention": {"const": "right action"},
+            "a_D_law": {
+              "const": "a_{D^{alpha,beta}}=chi_q(alpha)*a_D"
+            },
+            "b_D_law": {"const": "b_{D^{alpha,beta}}=b_D"},
+            "K_D_law": {
+              "const": "K_{D^{alpha,beta}}=K_D for K_D=q*a_D^2-b_D^2"
+            }
+          }
+        },
+        "resource_controls": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "q_values", "candidate_cap", "candidate_cap_scope",
+            "maximum_global_wall_seconds", "larger_q_policy"
+          ],
+          "properties": {
+            "q_values": {"const": [3, 5, 7]},
+            "candidate_cap": {"const": 20000},
+            "candidate_cap_scope": {"const": "PER_FIELD"},
+            "maximum_global_wall_seconds": {"const": "8.0"},
+            "larger_q_policy": {"const": "refuse every q outside 3,5,7"}
+          }
+        },
+        "total_member_action_pairs_checked": {"const": 656024},
+        "families": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "prefixItems": [
+            {
+              "const": {
+                "q": 3,
+                "member_count": 162,
+                "group_order": 6,
+                "member_action_pairs_checked": 972,
+                "orbit_count": 29,
+                "orbit_size_histogram": {"3": 4, "6": 25},
+                "stabilizer_order_histogram": {"1": 25, "2": 4},
+                "free_orbit_count": 25,
+                "nontrivial_stabilizer_orbit_count": 4,
+                "sign_summaries": {
+                  "negative": {"member_count": 102, "orbit_count": 19},
+                  "zero": {"member_count": 12, "orbit_count": 2},
+                  "positive": {"member_count": 48, "orbit_count": 8}
+                }
+              }
+            },
+            {
+              "const": {
+                "q": 5,
+                "member_count": 2500,
+                "group_order": 20,
+                "member_action_pairs_checked": 50000,
+                "orbit_count": 132,
+                "orbit_size_histogram": {
+                  "1": 1, "4": 1, "5": 3, "10": 6, "20": 121
+                },
+                "stabilizer_order_histogram": {
+                  "1": 121, "2": 6, "4": 3, "5": 1, "20": 1
+                },
+                "free_orbit_count": 121,
+                "nontrivial_stabilizer_orbit_count": 11,
+                "sign_summaries": {
+                  "negative": {"member_count": 1650, "orbit_count": 86},
+                  "zero": {"member_count": 50, "orbit_count": 4},
+                  "positive": {"member_count": 800, "orbit_count": 42}
+                }
+              }
+            },
+            {
+              "const": {
+                "q": 7,
+                "member_count": 14406,
+                "group_order": 42,
+                "member_action_pairs_checked": 605052,
+                "orbit_count": 349,
+                "orbit_size_histogram": {"21": 12, "42": 337},
+                "stabilizer_order_histogram": {"1": 337, "2": 12},
+                "free_orbit_count": 337,
+                "nontrivial_stabilizer_orbit_count": 12,
+                "sign_summaries": {
+                  "negative": {"member_count": 9702, "orbit_count": 237},
+                  "zero": {"member_count": 336, "orbit_count": 8},
+                  "positive": {"member_count": 4368, "orbit_count": 104}
+                }
+              }
+            }
+          ],
+          "items": false
+        },
+        "q_scan_regressions_all_match": {"const": true},
+        "firewall": {
+          "const": "The action law and orbit partitions are exact finite statements for q=3,5,7 only; they are not an asymptotic orbit law, equidistribution theorem, analytic kernel statement, or number-field transfer."
+        }
+      }
+    },
     "proof_certificate": {
       "type": "object",
       "additionalProperties": false,
