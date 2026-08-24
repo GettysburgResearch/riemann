@@ -1,0 +1,153 @@
+# L-105629 — Every source-owned finite section inherits the Xi phase contraction
+
+Claim ID: `L-105629`  
+Status: **PROVED EXACT FINITE-COMPRESSION THEOREM**  
+Created: 2026-08-25  
+Depends on: `L-105628`  
+RH status: **not assumed**
+
+## 1. Abstract compression
+
+Let `H` be a Hilbert space and suppose
+
+\[
+V^*RV\preceq R
+\tag{L-105629.1}
+\]
+
+for a bounded positive operator `R` and an isometry `V`.
+
+Let
+
+\[
+W:\mathbb C^d\to H
+\]
+
+be any isometry. Compressing (L-105629.1) gives
+
+\[
+\boxed{
+W^*V^*RVW\preceq W^*RW.
+}
+\tag{L-105629.2}
+\]
+
+No commutation between `W`, `V` and `R` is required.
+
+More generally, if `W` is merely injective, put
+
+\[
+G=W^*RW.
+\]
+
+On the support of `G`, the normalized finite operator
+
+\[
+\boxed{
+K_G
+=G^{-1/2}W^*V^*RVWG^{-1/2}
+}
+\tag{L-105629.3}
+\]
+
+satisfies
+
+\[
+\boxed{0\preceq K_G\preceq I.}
+\tag{L-105629.4}
+\]
+
+Thus exact source normalization is automatically contractive on every finite
+source-owned frame.
+
+## 2. Tapers and nested sections
+
+Let `P` be any orthogonal projection in `H`. Taking `W` to be an isometric
+coordinate map onto `P H` gives
+
+\[
+\boxed{
+PV^*RVP\preceq PRP
+\quad\text{on }PH.
+}
+\tag{L-105629.5}
+\]
+
+If `A` is any bounded observation operator, apply (L-105629.2) to the polar
+isometry in `R^(1/2)A`. Equivalently, every frame formed **after** the positive
+source metric is installed inherits the contraction.
+
+Consequently:
+
+```text
+finite frequency cutoff;
+dyadic source partition;
+source-owned smooth taper;
+finite-dimensional source basis;
+nested source Gram section
+```
+
+introduce no adverse phase-collision term by themselves.
+
+## 3. Xi specialization
+
+At the extremal base, `L-105628` proves
+
+\[
+V_{r,\beta}^*M_{r_h}V_{r,\beta}
+\preceq M_{r_h}.
+\]
+
+For every finite source-owned embedding `W_T`,
+
+\[
+\boxed{
+W_T^*V_{r,\beta}^*M_{r_h}V_{r,\beta}W_T
+\preceq
+W_T^*M_{r_h}W_T.
+}
+\tag{L-105629.6}
+\]
+
+After whitening by the exact finite current Gram, the actual all-pass/Turan
+source has operator norm at most one.
+
+This removes the following items from the intrinsic phase ledger whenever the
+frame is constructed in the source metric:
+
+```text
+finite source cutoff;
+source taper;
+finite source basis;
+source Gram whitening;
+projection of the causal all-pass.
+```
+
+## 4. The one remaining finite interface
+
+A physical zero-count/companion frame need not be source-owned. The missing
+statement is now exactly a bank-identification/index theorem:
+
+```text
+BANKID105629
+
+Represent the actual cofinal Xi zero-count observation space as a source-owned
+finite section W_T up to a controlled finite codimension and one telescoping
+endpoint charge.
+```
+
+If `BANKID105629` is exact, (L-105629.6) gives the finite phase contraction
+without further analytic estimates. If it is approximate, the two scalar
+Frobenius/trace defects of sibling `ROBUSTFRAME106310` are precisely the
+failure of the physical bank to be this source-owned section.
+
+Thus the pointwise and proportion programmes now share one final geometric
+question: identification of the physical zero-count bank with the canonical
+current source bank.
+
+## 5. Scope
+
+The theorem does not prove `BANKID105629`. Multiplication by an arbitrary
+physical cutoff **before** source normalization is not asserted to be
+source-owned. Endpoint winding and denominator-zero codimension are not removed.
+RH remains unproved.
