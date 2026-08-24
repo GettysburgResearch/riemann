@@ -1,0 +1,1298 @@
+{
+  "b_cubed_signature_roadmap": {
+    "exact_operations_used": 3341,
+    "generic_degree_six_rows": [
+      {
+        "S5_p1_coefficient": "21-q^2",
+        "S5_p2_coefficient": "q-6",
+        "leading_mixture_weight": [
+          1,
+          8
+        ],
+        "linear_prime_count": 6,
+        "quadratic_prime_count": 0,
+        "signature": "L[1,1,1,1,1,1].Q[-]"
+      },
+      {
+        "S5_p1_coefficient": "11-q^2",
+        "S5_p2_coefficient": "q-4",
+        "leading_mixture_weight": [
+          3,
+          8
+        ],
+        "linear_prime_count": 4,
+        "quadratic_prime_count": 1,
+        "signature": "L[1,1,1,1].Q[1]"
+      },
+      {
+        "S5_p1_coefficient": "5-q^2",
+        "S5_p2_coefficient": "q-2",
+        "leading_mixture_weight": [
+          3,
+          8
+        ],
+        "linear_prime_count": 2,
+        "quadratic_prime_count": 2,
+        "signature": "L[1,1].Q[1,1]"
+      },
+      {
+        "S5_p1_coefficient": "3-q^2",
+        "S5_p2_coefficient": "q-0",
+        "leading_mixture_weight": [
+          1,
+          8
+        ],
+        "linear_prime_count": 0,
+        "quadratic_prime_count": 3,
+        "signature": "L[-].Q[1,1,1]"
+      }
+    ],
+    "generic_mixture": "(1,3,3,1)/8",
+    "primitive_normalization": "For degree-six r, L_r=(1-u)(1+p1*u+p2*u^2+q*p1*u^3+q^2*u^4); S5 has p1 coefficient -q^2+binom(l+1,2)+k and p2 coefficient q-l",
+    "radical_degree_signature_counts": {
+      "0": 4,
+      "2": 10,
+      "4": 5,
+      "6": 4
+    },
+    "radical_degree_tuple_polynomials_low_to_high": {
+      "0": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "2": [
+        [
+          0,
+          1
+        ],
+        [
+          -16,
+          1
+        ],
+        [
+          40,
+          1
+        ],
+        [
+          -36,
+          1
+        ],
+        [
+          12,
+          1
+        ]
+      ],
+      "4": [
+        [
+          0,
+          1
+        ],
+        [
+          30,
+          1
+        ],
+        [
+          -70,
+          1
+        ],
+        [
+          63,
+          1
+        ],
+        [
+          -29,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "6": [
+        [
+          0,
+          1
+        ],
+        [
+          -16,
+          1
+        ],
+        [
+          36,
+          1
+        ],
+        [
+          -32,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "signature_count": 23,
+    "signature_count_derivation": "11+5+4+3=23",
+    "signature_level_cancellation_result": "FAILED: all four generic conductor types retain nonzero p1 and p2 coefficients; an averaged primitive-trace identity is genuinely required",
+    "signatures": [
+      {
+        "radical_degree": 0,
+        "signature": "L[6].Q[-]",
+        "tuple_weight": 1,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[5,1].Q[-]",
+        "tuple_weight": 3,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "radical_degree": 0,
+        "signature": "L[4,2].Q[-]",
+        "tuple_weight": 6,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[4,1,1].Q[-]",
+        "tuple_weight": 9,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            -3,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[3,3].Q[-]",
+        "tuple_weight": 7,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[3,2,1].Q[-]",
+        "tuple_weight": 15,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "radical_degree": 4,
+        "signature": "L[3,1,1,1].Q[-]",
+        "tuple_weight": 24,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      },
+      {
+        "radical_degree": 0,
+        "signature": "L[2,2,2].Q[-]",
+        "tuple_weight": 21,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[2,2,1,1].Q[-]",
+        "tuple_weight": 33,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -3,
+            2
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            -3,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "radical_degree": 4,
+        "signature": "L[2,1,1,1,1].Q[-]",
+        "tuple_weight": 54,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            -25,
+            12
+          ],
+          [
+            35,
+            24
+          ],
+          [
+            -5,
+            12
+          ],
+          [
+            1,
+            24
+          ]
+        ]
+      },
+      {
+        "radical_degree": 6,
+        "signature": "L[1,1,1,1,1,1].Q[-]",
+        "tuple_weight": 90,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            6
+          ],
+          [
+            137,
+            360
+          ],
+          [
+            -5,
+            16
+          ],
+          [
+            17,
+            144
+          ],
+          [
+            -1,
+            48
+          ],
+          [
+            1,
+            720
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[4].Q[1]",
+        "tuple_weight": 3,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "radical_degree": 4,
+        "signature": "L[3,1].Q[1]",
+        "tuple_weight": 6,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[2,2].Q[1]",
+        "tuple_weight": 9,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "radical_degree": 4,
+        "signature": "L[2,1,1].Q[1]",
+        "tuple_weight": 12,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "radical_degree": 6,
+        "signature": "L[1,1,1,1].Q[1]",
+        "tuple_weight": 18,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            -17,
+            48
+          ],
+          [
+            17,
+            48
+          ],
+          [
+            -7,
+            48
+          ],
+          [
+            1,
+            48
+          ]
+        ]
+      },
+      {
+        "radical_degree": 0,
+        "signature": "L[2].Q[2]",
+        "tuple_weight": 3,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "radical_degree": 4,
+        "signature": "L[2].Q[1,1]",
+        "tuple_weight": 6,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            -1,
+            8
+          ],
+          [
+            -1,
+            4
+          ],
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[1,1].Q[2]",
+        "tuple_weight": 3,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "radical_degree": 6,
+        "signature": "L[1,1].Q[1,1]",
+        "tuple_weight": 6,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            8
+          ],
+          [
+            3,
+            16
+          ],
+          [
+            1,
+            16
+          ],
+          [
+            -3,
+            16
+          ],
+          [
+            1,
+            16
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[-].Q[3]",
+        "tuple_weight": 1,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "radical_degree": 2,
+        "signature": "L[-].Q[2,1]",
+        "tuple_weight": 3,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            -1,
+            4
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "radical_degree": 6,
+        "signature": "L[-].Q[1,1,1]",
+        "tuple_weight": 6,
+        "type_count_coefficients_low_to_high": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            6
+          ],
+          [
+            1,
+            24
+          ],
+          [
+            11,
+            48
+          ],
+          [
+            -1,
+            16
+          ],
+          [
+            -1,
+            16
+          ],
+          [
+            1,
+            48
+          ]
+        ]
+      }
+    ],
+    "status": "EXACT_SIGNATURE_ROADMAP_PRIMITIVE_AVERAGES_UNRESOLVED",
+    "weighted_tuple_count_formula": "q^6"
+  },
+  "character_certificate": {
+    "channels": {
+      "chi_(0,3)": {
+        "dimension": 30,
+        "highest_weight_e_basis": [
+          3,
+          3
+        ],
+        "invariant_polynomial_terms": [
+          {
+            "coefficient": -1,
+            "exterior_square_power": 1,
+            "trace_power": 0
+          },
+          {
+            "coefficient": -1,
+            "exterior_square_power": 2,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 3,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 3,
+            "exterior_square_power": 0,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -2,
+            "exterior_square_power": 1,
+            "trace_power": 2
+          }
+        ],
+        "laurent_support_size": 25,
+        "status": "EXACT_C2_CHARACTER_IDENTITY"
+      },
+      "chi_(0,4)": {
+        "dimension": 55,
+        "highest_weight_e_basis": [
+          4,
+          4
+        ],
+        "invariant_polynomial_terms": [
+          {
+            "coefficient": 1,
+            "exterior_square_power": 0,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 1,
+            "trace_power": 0
+          },
+          {
+            "coefficient": -2,
+            "exterior_square_power": 2,
+            "trace_power": 0
+          },
+          {
+            "coefficient": -1,
+            "exterior_square_power": 3,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 4,
+            "trace_power": 0
+          },
+          {
+            "coefficient": -4,
+            "exterior_square_power": 0,
+            "trace_power": 2
+          },
+          {
+            "coefficient": 6,
+            "exterior_square_power": 1,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -3,
+            "exterior_square_power": 2,
+            "trace_power": 2
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 0,
+            "trace_power": 4
+          }
+        ],
+        "laurent_support_size": 41,
+        "status": "EXACT_C2_CHARACTER_IDENTITY"
+      },
+      "chi_(2,2)": {
+        "dimension": 81,
+        "highest_weight_e_basis": [
+          4,
+          2
+        ],
+        "invariant_polynomial_terms": [
+          {
+            "coefficient": -1,
+            "exterior_square_power": 0,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 1,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 2,
+            "trace_power": 0
+          },
+          {
+            "coefficient": -1,
+            "exterior_square_power": 3,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 2,
+            "exterior_square_power": 0,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -1,
+            "exterior_square_power": 1,
+            "trace_power": 2
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 2,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -1,
+            "exterior_square_power": 0,
+            "trace_power": 4
+          }
+        ],
+        "laurent_support_size": 37,
+        "status": "EXACT_C2_CHARACTER_IDENTITY"
+      }
+    },
+    "factorization": "chi_(2,2)=((1-e)^2-t^2)*(t^2-e-1), where t=Tr(U), e=e_2(U)",
+    "method": "Kostant C2 characters compared coefficientwise as Laurent polynomials",
+    "resource_counts": {
+      "character_weight_candidates": 211,
+      "kostant_weyl_summands": 1688,
+      "laurent_pair_products": 2936,
+      "residual_term_updates": 852
+    },
+    "triangular_basis": {
+      "R22": {
+        "character_combination": {
+          "chi_(0,3)": 1,
+          "chi_(2,2)": 1
+        },
+        "dimension_checksum": 111,
+        "invariant_polynomial_terms": [
+          {
+            "coefficient": -1,
+            "exterior_square_power": 0,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 5,
+            "exterior_square_power": 0,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -3,
+            "exterior_square_power": 1,
+            "trace_power": 2
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 2,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -1,
+            "exterior_square_power": 0,
+            "trace_power": 4
+          }
+        ],
+        "status": "EXACT_POINTWISE_IDENTITY"
+      },
+      "R3": {
+        "character_combination": {
+          "chi_(0,3)": 1
+        },
+        "dimension_checksum": 30,
+        "invariant_polynomial_terms": [
+          {
+            "coefficient": -1,
+            "exterior_square_power": 1,
+            "trace_power": 0
+          },
+          {
+            "coefficient": -1,
+            "exterior_square_power": 2,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 3,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 3,
+            "exterior_square_power": 0,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -2,
+            "exterior_square_power": 1,
+            "trace_power": 2
+          }
+        ],
+        "status": "EXACT_POINTWISE_IDENTITY"
+      },
+      "R4": {
+        "character_combination": {
+          "chi_(0,3)": 4,
+          "chi_(0,4)": 1,
+          "chi_(2,2)": 3
+        },
+        "dimension_checksum": 418,
+        "invariant_polynomial_terms": [
+          {
+            "coefficient": -2,
+            "exterior_square_power": 0,
+            "trace_power": 0
+          },
+          {
+            "coefficient": -3,
+            "exterior_square_power": 2,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 1,
+            "exterior_square_power": 4,
+            "trace_power": 0
+          },
+          {
+            "coefficient": 14,
+            "exterior_square_power": 0,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -5,
+            "exterior_square_power": 1,
+            "trace_power": 2
+          },
+          {
+            "coefficient": -2,
+            "exterior_square_power": 0,
+            "trace_power": 4
+          }
+        ],
+        "status": "EXACT_POINTWISE_IDENTITY"
+      }
+    }
+  },
+  "definition": "For t=Tr(U), e=e_2(U), a_D/sqrt(q)=-t, b_D/q=e, split H=chi_(0,4)+chi_(2,2)+2*chi_(0,3) into raw-moment-aligned packets.",
+  "failed_attempt_ledger": [
+    {
+      "attempt": "Cancel degree-six primitive coefficients signature by signature in b_D^3",
+      "evidence": "The four generic rows have p1 coefficients 21-q^2, 11-q^2, 5-q^2, 3-q^2 and p2 coefficients q-6, q-4, q-2, q.",
+      "result": "FAILED_EXACTLY"
+    },
+    {
+      "attempt": "Infer an eta_q=chi_q(-1) branch from q=3,5,7",
+      "evidence": "Only q=5 lies in the eta_q=+1 branch; no branch formula is fitted.",
+      "result": "UNDERDETERMINED"
+    },
+    {
+      "attempt": "Promote sparse rational functions from three fields",
+      "evidence": "Primitive p1,p2 averages can carry genuine Frobenius traces; three specializations cannot exclude them.",
+      "result": "REJECTED_AS_PROOF"
+    }
+  ],
+  "finite_aggregate_controls": [
+    {
+      "H_mean": [
+        536,
+        2187
+      ],
+      "all_internal_bridges_match": true,
+      "channel_means": {
+        "chi_(0,3)": [
+          74,
+          729
+        ],
+        "chi_(0,4)": [
+          -19,
+          2187
+        ],
+        "chi_(2,2)": [
+          37,
+          729
+        ]
+      },
+      "frozen_new_raw_sums": {
+        "a_squared_b_squared": 8352,
+        "b_cubed": 8256,
+        "b_fourth": 45552
+      },
+      "member_count": 162,
+      "q": 3,
+      "raw_candidate_means": {
+        "a_squared_b_squared": [
+          464,
+          9
+        ],
+        "b_cubed": [
+          1376,
+          27
+        ],
+        "b_fourth": [
+          7592,
+          27
+        ]
+      },
+      "second_moment": [
+        2408,
+        2187
+      ]
+    },
+    {
+      "H_mean": [
+        7154,
+        78125
+      ],
+      "all_internal_bridges_match": true,
+      "channel_means": {
+        "chi_(0,3)": [
+          614,
+          15625
+        ],
+        "chi_(0,4)": [
+          -51,
+          78125
+        ],
+        "chi_(2,2)": [
+          213,
+          15625
+        ]
+      },
+      "frozen_new_raw_sums": {
+        "a_squared_b_squared": 857040,
+        "b_cubed": 788080,
+        "b_fourth": 8278480
+      },
+      "member_count": 2500,
+      "q": 5,
+      "raw_candidate_means": {
+        "a_squared_b_squared": [
+          42852,
+          125
+        ],
+        "b_cubed": [
+          39404,
+          125
+        ],
+        "b_fourth": [
+          413924,
+          125
+        ]
+      },
+      "second_moment": [
+        131504,
+        78125
+      ]
+    },
+    {
+      "H_mean": [
+        37652,
+        823543
+      ],
+      "all_internal_bridges_match": true,
+      "channel_means": {
+        "chi_(0,3)": [
+          2386,
+          117649
+        ],
+        "chi_(0,4)": [
+          -99,
+          823543
+        ],
+        "chi_(2,2)": [
+          621,
+          117649
+        ]
+      },
+      "frozen_new_raw_sums": {
+        "a_squared_b_squared": 16117248,
+        "b_cubed": 14205744,
+        "b_fourth": 221057088
+      },
+      "member_count": 14406,
+      "q": 7,
+      "raw_candidate_means": {
+        "a_squared_b_squared": [
+          383744,
+          343
+        ],
+        "b_cubed": [
+          338232,
+          343
+        ],
+        "b_fourth": [
+          5263264,
+          343
+        ]
+      },
+      "second_moment": [
+        1645440,
+        823543
+      ]
+    }
+  ],
+  "firewalls": [
+    "The triangular character identities are exact; the sparse all-q formulas are not proved.",
+    "The q=3,5,7 aggregate rows are regression controls, not interpolation data for a theorem.",
+    "The three separate high raw sums are frozen one-time controls without an independently replayable provenance artifact.",
+    "The B3 signature packet proves that generic primitive coefficients survive; it does not average them.",
+    "No eta_q branch is proved or excluded by the three frozen fields.",
+    "No effective equidistribution, number-field transfer, RH, or GRH conclusion is asserted."
+  ],
+  "next_exact_lemmas": [
+    {
+      "name": "B3-PRIMITIVE-TRACE-AVERAGE",
+      "target": "Evaluate the p1,p2 and deletion-character averages across the 23 B3 signatures; this decides mean(chi_(0,3))."
+    },
+    {
+      "name": "M22-TRIANGULAR-TRACE-AVERAGE",
+      "target": "Evaluate the 20 M22 signatures in the R22 combination; this decides mean(chi_(0,3)+chi_(2,2))."
+    },
+    {
+      "name": "B4-TRIANGULAR-TRACE-AVERAGE",
+      "target": "Evaluate the 54 B4 signatures in R4; this decides the remaining chi_(0,4) channel after R3 and R22."
+    }
+  ],
+  "payload_sha256": "5120113af195b9d344dcc055d331e67069a56f1fe10124031e2a4c4d639636a9",
+  "resource_contract": {
+    "actual_B3_signatures": 23,
+    "exact_signature_operations_used": 3341,
+    "external_computer_algebra": "NONE",
+    "field_enumeration": "FORBIDDEN_AND_NOT_IMPORTED",
+    "frozen_q_values": [
+      3,
+      5,
+      7
+    ],
+    "maximum_B3_signatures": 23,
+    "maximum_exact_signature_operations": 12000,
+    "maximum_signature_wall_seconds": 2.0,
+    "numeric_approximation": "NONE"
+  },
+  "schema": "riemann.function_field.genus2_high_weight_channel_probe.v1",
+  "scope": "exact C2 and factor-signature algebra for every odd q; finite aggregate controls only at q=3,5,7; no field enumeration in this generator",
+  "source_locks": {
+    "C2_character_generator": {
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py",
+      "sha256_lf_normalized": "2f5187421d0add48806c6710ff520a0e8281805457eeebe570d1e8ef5475820b"
+    },
+    "probe_generator": {
+      "path": "research/l-families/atlas/function_field/genus2_high_weight_channel_probe.py",
+      "sha256_lf_normalized": "a958f36e18e559464d42f5827e01f15e273d706cd105c20a218c71544e2619c1"
+    },
+    "q_scan_fixture": {
+      "canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+      "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5"
+    },
+    "second_moment_fixture": {
+      "canonical_sha256": "8f3249879a579cdb45bc5ea5bacb4c8b6a9e86550ef13926f108caba4b63fc28",
+      "path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.json",
+      "payload_sha256": "55c5c9ef04a65ca46044ac1d76c76f33afc02b51c2d38a8ca196b99498ee16ec"
+    },
+    "second_moment_generator": {
+      "path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.py",
+      "sha256_lf_normalized": "917633222c0e990b22292e57288d3505a4efeb9248babefd905b2d2aafc9cd1a"
+    }
+  },
+  "sparse_all_q_candidate": {
+    "affine_quotient_trace_normalization": {
+      "candidate_T_(0,3)": "q^4-2*q-1",
+      "candidate_T_(0,4)": "-(2*q^2+1)",
+      "candidate_T_(2,2)": "2*q^3-q^2-2*q-2",
+      "exact_measure_identity": "For an affine-invariant weight-w character, define T_lambda(q)=q^(w/2)/(q*(q-1))*sum_(D in H_5(q)) chi_lambda(D).",
+      "geometric_handoff": "The quotient [H_5/AGL_1] is the branch-configuration model with infinity marked.  Identifying its normalized character sum with a precise marked-Weierstrass local-system trace, including the central hyperelliptic involution convention, is a proposed cohomological route and is not certified here."
+    },
+    "channel_means": {
+      "chi_(0,3)": "(q^4-2*q-1)/q^6",
+      "chi_(0,4)": "-(2*q^2+1)/q^7",
+      "chi_(2,2)": "(2*q^3-q^2-2*q-2)/q^6"
+    },
+    "implied_H_mean": "2/q^2+2/q^3-1/q^4-8/q^5-4/q^6-1/q^7",
+    "implied_H_rescaled_limit": 2,
+    "implied_raw_means": {
+      "a_D^2*b_D^2": "(q+1)*(5*q^5-19*q^4+29*q^3-5*q^2-21*q-3)/q^3",
+      "b_D^3": "(4*q^6-9*q^5+7*q^4+8*q^3-12*q^2-9*q-1)/q^3",
+      "b_D^4": "(10*q^7-29*q^6+21*q^5+44*q^4-47*q^3-56*q^2-10*q-1)/q^3"
+    },
+    "implied_second_moment": "3-8/q+6/q^2+8/q^3-9/q^4-19/q^5-4/q^6-1/q^7",
+    "relation_to_previous_9_over_4_nomination": "If proved, this structured channelwise candidate would replace the three-field 9/4 nomination by 2; neither constant is currently a theorem.",
+    "status": "CONJECTURE_MATCHING_ONLY_Q3_Q5_Q7_NOT_INTERPOLATION_THEOREM"
+  },
+  "status": "DRAFT_EXACT_TRIANGULAR_REDUCTION_WITH_UNPROVED_SPARSE_CANDIDATE",
+  "triangular_raw_moment_bridge": {
+    "R22": {
+      "character": "chi_(0,3)+chi_(2,2)",
+      "identity": "R22=e^2*t^2-3*e*t^2-t^4+5*t^2-1",
+      "only_new_raw_moment": "a_D^2*b_D^2"
+    },
+    "R3": {
+      "character": "chi_(0,3)",
+      "identity": "R3=e^3-e^2-2*e*t^2-e+3*t^2",
+      "only_new_raw_moment": "b_D^3"
+    },
+    "R4": {
+      "character": "chi_(0,4)+3*chi_(2,2)+4*chi_(0,3)",
+      "identity": "R4=e^4-5*e*t^2-2*t^4+14*t^2-3*e^2-2",
+      "only_new_raw_moment": "b_D^4"
+    },
+    "interpretation": "This is an invertible triangular organization of the three missing raw moments; it does not evaluate any of their family averages.",
+    "status": "EXACT_POINTWISE_FOR_EVERY_FAMILY_MEMBER"
+  }
+}

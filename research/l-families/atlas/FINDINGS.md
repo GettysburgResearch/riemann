@@ -177,6 +177,44 @@ and sign count exactly. The quotient should nevertheless be useful in a
 higher-moment proof: it isolates automorphism strata and can cut a symmetry-
 aware computation from 17,068 members to 510 weighted representatives.
 
+The family measure can now be stated without ambiguity. Orbit-stabilizer gives
+
+\[
+\sum_{[D]}\frac1{|\operatorname{Stab}(D)|}=q^3,
+\]
+
+so uniform equations are exactly the stabilizer-weighted measure on this
+marked affine quotient, not the uniform measure on coarse representatives.
+Burnside's lemma gives the all-odd-`q` coarse count
+
+\[
+N_q=q^3+q-1+2\mathbf1_{4\mid q-1}
++4\mathbf1_{5\mid q-1}+\mathbf1_{\operatorname{char}F_q=5}.
+\]
+
+The exact coarse-versus-affine-stack total-variation distances at `q=3,5,7`
+are `50/783`, `77/1500`, and `2022/119707`. At `q=5`, the orbit fixed by the
+entire affine group has coarse weight `1/132` but marked-stack weight `1/2500`,
+an amplification by `625/33`. This explains a finite-family bias mechanism;
+it is not the full unpointed curve stack.
+
+The same fixed-locus argument extends to every odd hyperelliptic degree
+`n=2g+1`. The marked affine-stack cardinality is `q^(2g-1)`, while the exact
+coarse orbit count is, with `p=char(F_q)` and `S_m(q)` the number of monic
+squarefree degree-`m` polynomials,
+
+\[
+q^{2g-1}+
+\sum_{\substack{d\mid q-1,\ d\ge2\\ n\bmod d\in\{0,1\}}}
+\varphi(d)\frac{q^{\lfloor n/d\rfloor}-(-1)^{\lfloor n/d\rfloor}}{q+1}
++\mathbf1_{p\mid n}\frac{S_{n/p}(q)}q.
+\]
+
+Its universal leading correction comes from affine involutions and equals
+`(q^g-(-1)^g)/(q+1)`. At fixed genus, the orbit-count excess relative to the
+stack mass is therefore `q^(-g)` to leading order. This is a presentation
+census, not a hyperelliptic moduli count or a Frobenius law.
+
 Those three rows suggested a formula, but they are no longer its evidence of
 proof. The separate DRAFT note
 [`GENUS2_MOMENT_IDENTITY.md`](function_field/GENUS2_MOMENT_IDENTITY.md) gives a
@@ -308,28 +346,43 @@ five-channel profile gives
 
 Consequently the second-moment limit is equivalent to the single honest
 high-weight assertion `mean(H)->0`; no cancellation among unknown virtual
-low-weight terms remains. At `q=3,5,7`, the exact frozen means of `H` are
-`536/2187`, `7154/78125`, and `37652/823543`. They are checksums, not a fitted
-rate. After multiplication by `q^2`, they become
-`536/243 = 2.205761...`, `7154/3125 = 2.289280`, and
-`37652/16807 = 2.240257...`, clustered near `9/4`. This nominates
-`mean(H)=O(q^{-2})`, and more speculatively `q^2 mean(H)->9/4`, as a focused
-next conjecture. Three fields cannot distinguish that constant from a nearby
-limit or a lower-order oscillation.
+low-weight terms remains. A new exact change of basis makes the three missing
+raw moments triangular:
 
-There is already a reason to retain the roadmap's possible
-`eta_q=chi_q(-1)` branch. The exact deviations of those three rescalings from
-`9/4` are
+```text
+R3  = chi_(0,3)                         <-> b_D^3
+R22 = chi_(0,3)+chi_(2,2)              <-> a_D^2 b_D^2
+R4  = chi_(0,4)+3chi_(2,2)+4chi_(0,3)  <-> b_D^4.
+```
+
+All other terms in these packets already have proved family means. A bounded
+cubic-moment audit finds 23 factor signatures, including four generic
+degree-six types with mixture `(1,3,3,1)/8`. Their primitive `p_1,p_2`
+coefficients do not cancel signaturewise, proving that the next step is a
+genuine trace average rather than polynomial bookkeeping.
+
+At `q=3,5,7`, the exact channel means match the sparse continuation
 
 \[
--\frac{43}{972},\qquad \frac{491}{12500},\qquad
--\frac{655}{67228},
+\langle\chi_{0,3}\rangle_q\stackrel{?}{=}\frac{q^4-2q-1}{q^6},\quad
+\langle\chi_{2,2}\rangle_q\stackrel{?}{=}
+\frac{2q^3-q^2-2q-2}{q^6},\quad
+\langle\chi_{0,4}\rangle_q\stackrel{?}{=}-\frac{2q^2+1}{q^7}.
 \]
 
-whose signs agree with `eta_q=-1,+1,-1` at `q=3,5,7`. With only one
-`eta_q=+1` field this is a warning, not evidence for a quasipolynomial term.
-It makes an analytic reciprocity calculation more informative than extending
-the brute-force scan.
+If true, these give
+
+\[
+\langle H\rangle_q\stackrel{?}{=}
+\frac2{q^2}+\frac2{q^3}-\frac1{q^4}-\frac8{q^5}
+-\frac4{q^6}-\frac1{q^7},
+\qquad q^2\langle H\rangle_q\to2.
+\]
+
+The formula is a structured three-field conjecture, not a theorem. It
+supersedes `9/4` as the preferred sparse target but does not falsify anything:
+the earlier `9/4` value was only a visual cluster of the same three points.
+Only `q=5` samples `chi_q(-1)=+1`, so a reciprocity branch remains unresolved.
 
 Therefore
 
@@ -375,6 +428,42 @@ for every integer `m>=0`, not merely for the twelve computed orders,
 
 Thus every Haar moment is an integer with strict alternating sign. This is a
 compact-group theorem only; it supplies no finite-family convergence.
+
+The sign mechanism is now known to be much broader than genus two. For every
+`g>=1`, reciprocity and dual Jacobi--Trudi give
+
+\[
+e_{g-1}e_{g+1}-e_g^2=-s_{(2^g)}.
+\]
+
+Thus weak alternating Haar signs for the reciprocal-centre minor are forced
+by Schur negativity in every symplectic rank. Even the literal fixed-depth
+probe `e_1^2-e_2^2` is minus an honest character for every `g>=2`, so its
+strict alternating moments are not genus-two-specific either.
+
+A balanced virtual direction removes that background. On `USp(4)`, put
+
+\[
+B=2e_1^2-e_2^2=\chi_{2\omega_1}-\chi_{2\omega_2}.
+\]
+
+Every odd Haar moment of `B` is zero and
+
+\[
+\operatorname{Haar}(B^{2r})=
+\frac1{r+1}\binom{2r}{r}^2.
+\]
+
+Indeed its exact law is the product of independent arcsine and Wigner
+semicircle variables on `[-2,2]`; hence its Haar sign is exactly balanced.
+In the quintic family, however,
+
+\[
+\langle B_D\rangle_q=q^{-1}+q^{-3}-q^{-4}+q^{-5}>0.
+\]
+
+This exact arithmetic bias against a zero compact-group baseline is a sharper
+family diagnostic than rediscovering the representation-forced sign of `F`.
 
 The range makes the negative first moment quantitatively useful without any
 equidistribution input. Put `Z_D=K_D/q^2`, let `rho_-(q)` be the proportion of
@@ -591,6 +680,23 @@ minimum therefore lies exactly on the repeated-angle diagonal, consistent
 with its extra involution, while the other two are nearby but not on it. A
 tail proof should expect a special non-regular repeated-angle stratum rather
 than a condition uniform over regular Frobenius classes.
+
+The exact tail geometry is more heterogeneous than that first description
+suggested. The minimum Frobenius polynomials are split nonisotypic at `q=3`,
+repeated isotypic at `q=5`, and irreducible over `Q` (hence `F_7`-simple) at
+`q=7`, where the real trace field is `Q(sqrt(5))`. At `q=7`, the realized
+repeated-angle rung contributes only `2.39209%` of the twelfth absolute moment,
+whereas the simple minimum contributes `73.40684%`. Repeated-angle strata must
+be separated, but they cannot be the whole tail model.
+
+There is also an exact realization gap. The deepest integral reciprocal
+quartics allowed by the `USp(4)` coefficient region have `K=-117,-356,-821`
+at `q=3,5,7`, yet none occurs in the marked quintic supports. The missing tail
+is therefore not explained by coefficient integrality alone; Jacobian and
+marked-family realization become the next geometric input. For the `q=5`
+minimum, the non-affine inversion `x->1/x` gives two explicit elliptic quotient
+maps, confirming both its splitting and the fact that affine stabilizers are
+not full unmarked automorphism groups.
 
 A separate deterministic Weyl quadrature asks the corresponding sign-law
 question. Four phase shifts on periodic grids through `512 x 512` (1,376,256

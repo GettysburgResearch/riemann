@@ -334,20 +334,39 @@ The corresponding exact means of `H` are
 \]
 
 Their `q^2` rescalings are `536/243`, `7154/3125`, and `37652/16807`, all
-near `9/4`. The cleanest sharpened target is therefore first to prove
-`mean(H)=O(q^{-2})`; a secondary conjecture is
+of order one. The cleanest theorem target remains
+`mean(H)=O(q^{-2})`. A new exact triangularization isolates the three missing
+raw moments:
+
+```text
+R3  = chi_(0,3)                         <-> b_D^3
+R22 = chi_(0,3)+chi_(2,2)              <-> a_D^2 b_D^2
+R4  = chi_(0,4)+3chi_(2,2)+4chi_(0,3)  <-> b_D^4.
+```
+
+A bounded generator finds 23 cubic signatures and proves that their primitive
+coefficient terms do not cancel type by type. The next lemma must therefore
+evaluate genuine marked trace averages. The current sparse conjecture is
 
 \[
-q^2\langle H\rangle_q\longrightarrow\frac94.
+\langle\chi_{0,3}\rangle_q\stackrel{?}{=}\frac{q^4-2q-1}{q^6},\quad
+\langle\chi_{2,2}\rangle_q\stackrel{?}{=}
+\frac{2q^3-q^2-2q-2}{q^6},\quad
+\langle\chi_{0,4}\rangle_q\stackrel{?}{=}-\frac{2q^2+1}{q^7}.
 \]
 
-The constant is a three-field nomination, not an interpolation theorem. A
-cohomological calculation should decide whether `9/4` is genuine, replaced by
-a congruence-dependent main term, or merely a small-field coincidence.
-Indeed, the exact deviations of `q^2 mean(H)` from `9/4` have signs
-`-,+,-`, matching `chi_q(-1)` on the three frozen fields. There is only one
-sample in the positive branch, so the target should allow an
-`eta_q=chi_q(-1)` lower-order term until reciprocity rules it out.
+It matches only `q=3,5,7`. If proved, it gives
+
+\[
+\langle H\rangle_q=
+2q^{-2}+2q^{-3}-q^{-4}-8q^{-5}-4q^{-6}-q^{-7}
+\]
+
+and hence `q^2 mean(H)->2`. This replaces the earlier visual `9/4` cluster as
+the preferred structured conjecture; neither constant has evidence beyond the
+same three fields. There is only one sample with `chi_q(-1)=+1`, so the target
+must still allow a reciprocity-dependent lower term until the trace calculation
+rules it out.
 
 The exact affine action
 
@@ -363,6 +382,21 @@ formulas are therefore more faithful than an unweighted representative sum.
 The same action with a nonsquare scaling proves every joint moment odd in
 `a_D` vanishes exactly; a correlation calculation may discard those strata
 before doing any character-sum work.
+
+The weighting itself is now exact for every odd `q`:
+
+\[
+\sum_{[D]}|\operatorname{Stab}(D)|^{-1}=q^3,qquad
+N_q=q^3+q-1+2\mathbf1_{4\mid q-1}+4\mathbf1_{5\mid q-1}
++\mathbf1_{\operatorname{char}F_q=5}.
+\]
+
+The first identity is the uniform equation/marked-stack measure; `N_q` is the
+coarse presentation count. A geometric proof must identify which of these is
+the measure on its chosen local-system stack rather than using “one curve, one
+vote” implicitly. The general degree-`2g+1` affine Burnside formula shows that
+the relative orbit-count excess begins at `q^{-g}`, universally from affine
+involutions.
 
 For each fixed `m>=2`, prove an effective formula
 
@@ -392,6 +426,33 @@ Haar moment, at every order, is a nonzero integer with sign `(-1)^m`; the six
 displayed values are the first tensor-invariant multiplicities. This exact
 all-order sign theorem concerns the compact group and does not imply the
 corresponding finite-family limits.
+
+It also no longer distinguishes genus two: dual Jacobi--Trudi gives
+`e_(g-1)e_(g+1)-e_g^2=-s_(2^g)` in every rank, and the fixed-depth
+`e_1^2-e_2^2` is minus an honest character for every `g>=2`. A sharper
+arithmetic subtarget is therefore the balanced virtual control
+
+\[
+B=2e_1^2-e_2^2=\chi_{2\omega_1}-\chi_{2\omega_2}.
+\]
+
+Its odd Haar moments vanish, its even moments are
+
+\[
+\operatorname{Haar}(B^{2r})=\frac1{r+1}\binom{2r}{r}^2,
+\]
+
+and its exact Haar law is the product of independent arcsine and semicircle
+variables on `[-2,2]`. In particular its Haar sign is exactly `1/2`--`1/2`.
+The finite quintic family already has the exact nonzero mean
+
+\[
+\langle B_D\rangle_q=q^{-1}+q^{-3}-q^{-4}+q^{-5}.
+\]
+
+The next clean arithmetic lemma is an exact formula or a power-saving bound
+for `mean(B_D^3)`. Unlike the original alternating sign, any odd bias here is
+not preinstalled by the compact group.
 
 There is now a finite-moment payoff strictly between the unconditional
 `1/20` floor and full sign equidistribution. For
@@ -469,10 +530,8 @@ far-negative Frobenius classes rather than treating the discrepancy as
 uniform smoothing across the support.
 
 The minimum is one affine orbit in each frozen field: sizes `6,10,42`, with
-stabilizer orders `1,2,1`. This makes a stack-weighted analysis of the extreme
-automorphism strata a plausible route to the high-moment tail; an unweighted
-orbit-representative average would erase exactly the multiplicities that
-matter most.
+stabilizer orders `1,2,1`. An unweighted orbit-representative average would
+erase exactly the multiplicities that matter most.
 
 Quantitatively, each single minimum orbit contributes more than half of the
 frozen twelfth moment (`58.3993%`, `61.9548%`, `73.4068%`). A useful tail lemma
@@ -480,10 +539,20 @@ should therefore separate the extreme orbit/automorphism strata before
 applying generic monodromy estimates to the bulk.
 
 The symplectic trace discriminant `(x_1-x_2)^2` on the three minimum orbits is
-exactly `4/3,0,5/7`. In particular the characteristic-five orbit lies on the
-repeated-angle diagonal and has the extra involution already seen in its
-stabilizer. The tail lemma should isolate this non-regular repeated-angle locus
-before invoking estimates valid only on the regular semisimple bulk.
+exactly `4/3,0,5/7`. Their Frobenius types are nevertheless split nonisotypic,
+repeated isotypic, and `F_7`-simple with real trace field `Q(sqrt(5))`.
+Moreover the realized repeated-angle atom at `q=7` supplies only `2.39209%` of
+the twelfth absolute moment, versus `73.40684%` from the simple minimum. A tail
+lemma must isolate the nonregular collision wall before using regular
+semisimple estimates, but it must also control simple off-wall classes rather
+than treating automorphisms or repeated angles as the entire tail.
+
+The deepest admissible integral coefficient pairs in the `USp(4)` region have
+`K=-117,-356,-821` at `q=3,5,7`, and none is realized in the marked quintic
+supports. This nominates a separate realization theorem near
+`Delta=Gamma=0`: classify which split nonisotypic, split isotypic, and simple
+real-quadratic Weil classes contain Jacobians with a rational marked
+Weierstrass point.
 
 The bounded shifted-grid Weyl quadrature additionally nominates
 

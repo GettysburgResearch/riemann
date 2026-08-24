@@ -10,8 +10,10 @@ coefficient filter through `n<=256`; and conductor-coprime quadratic-character
 covariance packets for `11.a2`, both pooled and split by the sourced twist root
 number. An exact `USp(4)` comparator and proof-backed all-odd-prime-power
 coefficient moments, negative-sign density floor, second-moment proof roadmap,
-and twelve-moment polynomial sign bound accompany the genus-two scans. Every
-atlas record is `DRAFT`. RH
+and twelve-moment polynomial sign bound accompany the genus-two scans. Exact
+affine-family measures, an all-genus odd-degree Burnside formula, a cross-rank
+symplectic reclassification, and a bounded tail-geometry packet are also
+included. Every atlas record is `DRAFT`. RH
 and GRH remain open.
 
 Exact sources or dependencies: classical completed GL(1) normalizations; the
@@ -33,15 +35,19 @@ pooled plus root-number-split character covariance summaries formed from at
 most 1,142 discriminants and 13 primes. The all-q genus-two certificate uses
 2,925 operations in `Q[q]`, while the separate second-moment roadmap enumerates
 only 20+54 symbolic signatures; neither enumerates additional fields. The
-reciprocal filter evaluates five objects, four endpoints, and every coefficient
-through 256. All 216 tests pass both normally and under optimized Python; the
+new high-weight packet adds 23 cubic signatures, while the all-genus affine
+packet evaluates closed divisor sums through genus eight and enumerates no
+field. The reciprocal filter evaluates five objects, four endpoints, and every
+coefficient through 256. All 257 tests pass both normally and under optimized Python; the
 offline validator checks 64 artifact bindings across 15 evaluations. No broad
 zero or conductor sweep was run.
 
 Smallest remaining gaps: derive one true source-faithful function-field analogue
-of `XD` or `HCNC`; prove higher genus-two moments or effective `USp(4)`
-equidistribution; and prove a root-number-conditioned weighted off-diagonal
-estimate uniform in a growing prime window.
+of `XD` or `HCNC`; evaluate the three triangular high-weight trace packets (or
+first prove the balanced control's third family moment); classify which
+near-edge Weil classes are realized by marked genus-two Jacobians; and prove a
+root-number-conditioned weighted off-diagonal estimate uniform in a growing
+prime window.
 
 ## What this release contains
 
@@ -77,6 +83,10 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 | function field, genus 1 | exhaustive exact `F_5[T]` arithmetic | all 100 cubic members pass reciprocal/root-radius checks; toy sign split is `40/20/40`, mean zero | toy `H_D(1)H_D(2)`, not canonical `XD`/`HCNC` |
 | function field, genus 2 | exhaustive exact `F_q/F_{q^2}` arithmetic at `q=3,5,7`; exact all-q proof certificate; exhaustive affine action | normalized means are `-104/243`, `-1994/3125`, `-12340/16807`; all-q mean tends to `-1`, `liminf rho_->=1/20`, five low-weight character means are exact, and the second-moment gap reduces to `chi_(0,4)+chi_(2,2)+2chi_(0,3)` | orbit averages require stabilizer weights; the remaining high-weight decay and full sign law are conjectural; toy coefficient minor |
 | exact `USp(4)` comparator | bounded Laurent-polynomial/Weyl arithmetic plus guarded shifted-grid quadrature | `F=(Tr U)^2-e_2(U)^2=-(1+chi_omega2+chi_2omega2)`, range `[-20,4/3]`, exact Haar moments through order 12; a degree-twelve majorant proves `P(F<0)>=0.480701...`; display-only `P(F<0)≈0.738` | the rational value is a lower bound, not the exact probability or a claimed optimal moment bound; finite-field higher-moment/sign-law convergence remains proposed |
+| affine hyperelliptic presentation measures | exact Burnside fixed-locus divisor sums, no field enumeration | marked affine-stack mass is `q^(2g-1)` in every genus; the universal leading coarse-orbit correction is `(q^g-(-1)^g)/(q+1)` | marked odd-degree equations, not the full unpointed hyperelliptic moduli stack |
+| cross-rank coefficient minors | exact `USp(2g)` character algebra and bounded Weyl constant terms | the original alternating sign is all-rank Schur negativity; `B=2e_1^2-e_2^2` has symmetric arcsine-times-semicircle Haar law but exact finite mean `q^-1+q^-3-q^-4+q^-5` | no finite-family convergence; odd `B` moments remain arithmetic targets |
+| genus-two tail geometry | exact reciprocal-quartic identities plus frozen support/orbit reconstruction | minima at `q=3,5,7` are split nonisotypic, repeated isotypic, and simple; repeated angles do not explain the dominant `q=7` tail | three fields only; coefficient admissibility is not Jacobian realization |
+| high-weight channel probe | exact `C_2` triangularization and 23 bounded cubic signatures | isolates `b^3`, `a^2b^2`, `b^4`; records a sparse candidate implying `q^2 mean(H)->2` | candidate matches only three fields; primitive trace averages are unresolved |
 | conductor-coprime twist precursor | exact pooled and sourced root-number-split character Gram/covariance matrices, marginal contrasts, and multiquadratic moments | through `X=2048`, local densities approach explicit comparators; root-sign Gram and character-mean contrast RMS shrink on the four frozen windows but their scaled/weighted corrections do not give a rate | no central ranks, fitted rate, growing-prime theorem, or twist-family limit |
 | GL(2) deflation | exact `Fraction` matrices | central atom is rank one; Loewner sign is negative, Pick-sum sign positive; full deflation need not restore positivity | synthetic controls, no arithmetic L-values |
 | rank stress | exact algebra on imported discrete metadata | rank 0 and minimal rank 1 give zero parity/full gap; rank 2 gives `25/4` at nodes `(1,2)` | three selected curves, not a twist family |
@@ -110,8 +120,13 @@ python research/l-families/atlas/function_field/genus2_q_scan.py --check researc
 python research/l-families/atlas/function_field/genus2_moment_identity.py
 python research/l-families/atlas/function_field/genus2_affine_orbits.py --check research/l-families/atlas/function_field/genus2_affine_orbits.json
 python research/l-families/atlas/function_field/genus2_second_moment_reduction.py --check research/l-families/atlas/function_field/genus2_second_moment_reduction.json
+python research/l-families/atlas/function_field/genus2_family_measures.py --check research/l-families/atlas/function_field/genus2_family_measures.json
+python research/l-families/atlas/function_field/hyperelliptic_affine_burnside.py --check research/l-families/atlas/function_field/hyperelliptic_affine_burnside.json
+python research/l-families/atlas/function_field/genus2_high_weight_channel_probe.py --check research/l-families/atlas/function_field/genus2_high_weight_channel_probe.json
+python research/l-families/atlas/function_field/genus2_tail_geometry.py --check research/l-families/atlas/function_field/genus2_tail_geometry.json
 python research/l-families/atlas/function_field/usp4_toy_minor_moments.py --check research/l-families/atlas/function_field/usp4_toy_minor_moments.json
 python research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py --check
+python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
 python research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.py --check research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.json
 python research/l-families/atlas/function_field/usp4_sign_probability.py --check research/l-families/atlas/function_field/usp4_sign_probability.json
 python research/l-families/atlas/gl2/verify.py --check research/l-families/atlas/gl2/results.json

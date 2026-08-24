@@ -1,0 +1,516 @@
+{
+  "all_rank_identity": {
+    "consequence": "For every m>=0, (-1)^m*Haar(H_g^m) is the nonnegative integer dimension of invariants in S_(2^g)(V)^tensor_m.",
+    "proof": "Dual Jacobi--Trudi gives s_(2^g)=e_g^2-e_(g-1)e_(g+1); symplectic reciprocity gives e_(g+1)=e_(g-1).",
+    "statement": "H_g=-s_(2^g) for every g>=1",
+    "strictness": "Every positive even moment is strict because S_(2^g)(V) is a nonzero self-dual USp(2g) representation; odd moments may vanish."
+  },
+  "definition": {
+    "e_k": "character of Exterior^k of the USp(2g) standard representation",
+    "minor": "H_g=e_(g-1)*e_(g+1)-e_g^2=e_(g-1)^2-e_g^2",
+    "reciprocity": "e_(2g-k)=e_k on USp(2g)"
+  },
+  "dependency_locks": {
+    "finite_family_mean_checker": {
+      "path": "genus2_moment_identity.py",
+      "sha256_lf_normalized": "c9c9ca527623b3d589d79175f56e605f07b5dbad3f09a46c4a978ef54ed216a4"
+    },
+    "finite_family_mean_proof": {
+      "path": "GENUS2_MOMENT_IDENTITY.md",
+      "sha256_lf_normalized": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277"
+    }
+  },
+  "detector_design_interpretation": {
+    "control": "The sign-reversed Toeplitz/Newton minor e_g^2-e_(g-1)e_(g+1)=s_(2^g) is an honest-character positive control.",
+    "genus_two_exception": "At g=2 the restricted Schur character contains the trivial representation, forcing strict alternating signs at every moment; this strictness does not persist at g=1 or g=3 at the first moment.",
+    "result": "The alternating weak Haar-moment sign is built into Schur positivity of the reciprocal-centre minor, not evidence peculiar to genus two or to arithmetic families."
+  },
+  "fixed_depth_two_probe": {
+    "all_rank_g_at_least_2_identity": "-F_g=e_2^2-e_1^2=s_(2,2)+e_1*(e_3-e_1), where e_3-e_1 is the primitive third-exterior character; at g=2 the second term is zero",
+    "definition": "F_g=e_1^2-e_2^2",
+    "rank_audits": [
+      {
+        "group": "USp(2)",
+        "honest_character_decomposition": [
+          {
+            "dimension": 3,
+            "highest_weight_fundamental_basis": [
+              2
+            ],
+            "multiplicity": 1,
+            "notation": "2*omega_1"
+          }
+        ],
+        "honest_character_moments_1_through_4": [
+          0,
+          1,
+          1,
+          3
+        ],
+        "honest_orientation": "e_1^2-e_2^2",
+        "original_probe_moments_1_through_4": [
+          0,
+          1,
+          1,
+          3
+        ],
+        "rank": 1
+      },
+      {
+        "group": "USp(4)",
+        "honest_character_decomposition": [
+          {
+            "dimension": 1,
+            "highest_weight_fundamental_basis": [
+              0,
+              0
+            ],
+            "multiplicity": 1,
+            "notation": "trivial"
+          },
+          {
+            "dimension": 5,
+            "highest_weight_fundamental_basis": [
+              0,
+              1
+            ],
+            "multiplicity": 1,
+            "notation": "1*omega_2"
+          },
+          {
+            "dimension": 14,
+            "highest_weight_fundamental_basis": [
+              0,
+              2
+            ],
+            "multiplicity": 1,
+            "notation": "2*omega_2"
+          }
+        ],
+        "honest_character_moments_1_through_4": [
+          1,
+          3,
+          11,
+          56
+        ],
+        "honest_orientation": "e_2^2-e_1^2",
+        "original_probe_moments_1_through_4": [
+          -1,
+          3,
+          -11,
+          56
+        ],
+        "rank": 2
+      },
+      {
+        "group": "USp(6)",
+        "honest_character_decomposition": [
+          {
+            "dimension": 1,
+            "highest_weight_fundamental_basis": [
+              0,
+              0,
+              0
+            ],
+            "multiplicity": 1,
+            "notation": "trivial"
+          },
+          {
+            "dimension": 14,
+            "highest_weight_fundamental_basis": [
+              0,
+              1,
+              0
+            ],
+            "multiplicity": 2,
+            "notation": "1*omega_2"
+          },
+          {
+            "dimension": 70,
+            "highest_weight_fundamental_basis": [
+              1,
+              0,
+              1
+            ],
+            "multiplicity": 1,
+            "notation": "1*omega_1+1*omega_3"
+          },
+          {
+            "dimension": 90,
+            "highest_weight_fundamental_basis": [
+              0,
+              2,
+              0
+            ],
+            "multiplicity": 1,
+            "notation": "2*omega_2"
+          }
+        ],
+        "honest_character_moments_1_through_4": [
+          1,
+          7,
+          87,
+          2051
+        ],
+        "honest_orientation": "e_2^2-e_1^2",
+        "original_probe_moments_1_through_4": [
+          -1,
+          7,
+          -87,
+          2051
+        ],
+        "rank": 3
+      }
+    ],
+    "rank_one_counterexample": "At g=1, F_1=e_1^2-1=s_(2) is positive honest rather than negative honest.",
+    "strict_sign_consequence": "For every g>=2 and m>=0, (-1)^m*Haar(F_g^m) is a positive integer: the honest character -F_g contains one trivial summand.",
+    "trivial_multiplicity_proof": "e_1=chi_omega1 has Haar norm squared 1, while e_2=1+chi_omega2 has Haar norm squared 2; hence Haar(e_2^2-e_1^2)=1."
+  },
+  "producer": {
+    "arithmetic": "Python standard-library exact integer and rational arithmetic",
+    "checker": "tests/test_usp_coefficient_minor_rank_scan.py",
+    "checker_sha256_lf_normalized": "683fe72e086148333a6e7ecacf04fc8cbaf07741904c964eea023cfff35acab5",
+    "note": "USP_COEFFICIENT_MINOR_RANK_SCAN.md",
+    "note_sha256_lf_normalized": "61d0ada6824f7aee8f23187a6ff523fe6cd4c5598c65ef96582f8db12c8d1379",
+    "script": "usp_coefficient_minor_rank_scan.py",
+    "source_sha256_lf_normalized": "2480d71306a799add48038692d691f7f79ac3c9917db69a3852a0a823c7ff167"
+  },
+  "rank_audits": [
+    {
+      "alternating_weak_sign_verified": true,
+      "even_moments_strictly_positive": true,
+      "group": "USp(2)",
+      "hankel_minor_haar_moments_1_through_4": [
+        0,
+        1,
+        -1,
+        3
+      ],
+      "invariant_multiplicities_in_powers_1_through_4": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "laurent_support_size": 3,
+      "rank": 1,
+      "rectangle_partition": [
+        2
+      ],
+      "restricted_character_decomposition": [
+        {
+          "dimension": 3,
+          "highest_weight_e_basis": [
+            2
+          ],
+          "highest_weight_fundamental_basis": [
+            2
+          ],
+          "multiplicity": 1,
+          "notation": "2*omega_1"
+        }
+      ],
+      "schur_dimension": 3,
+      "trivial_multiplicity_in_schur_character": 0
+    },
+    {
+      "alternating_weak_sign_verified": true,
+      "even_moments_strictly_positive": true,
+      "group": "USp(4)",
+      "hankel_minor_haar_moments_1_through_4": [
+        -1,
+        3,
+        -11,
+        56
+      ],
+      "invariant_multiplicities_in_powers_1_through_4": [
+        1,
+        3,
+        11,
+        56
+      ],
+      "laurent_support_size": 13,
+      "rank": 2,
+      "rectangle_partition": [
+        2,
+        2
+      ],
+      "restricted_character_decomposition": [
+        {
+          "dimension": 1,
+          "highest_weight_e_basis": [
+            0,
+            0
+          ],
+          "highest_weight_fundamental_basis": [
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "notation": "trivial"
+        },
+        {
+          "dimension": 5,
+          "highest_weight_e_basis": [
+            1,
+            1
+          ],
+          "highest_weight_fundamental_basis": [
+            0,
+            1
+          ],
+          "multiplicity": 1,
+          "notation": "1*omega_2"
+        },
+        {
+          "dimension": 14,
+          "highest_weight_e_basis": [
+            2,
+            2
+          ],
+          "highest_weight_fundamental_basis": [
+            0,
+            2
+          ],
+          "multiplicity": 1,
+          "notation": "2*omega_2"
+        }
+      ],
+      "schur_dimension": 20,
+      "trivial_multiplicity_in_schur_character": 1
+    },
+    {
+      "alternating_weak_sign_verified": true,
+      "even_moments_strictly_positive": true,
+      "group": "USp(6)",
+      "hankel_minor_haar_moments_1_through_4": [
+        0,
+        3,
+        -15,
+        377
+      ],
+      "invariant_multiplicities_in_powers_1_through_4": [
+        0,
+        3,
+        15,
+        377
+      ],
+      "laurent_support_size": 63,
+      "rank": 3,
+      "rectangle_partition": [
+        2,
+        2,
+        2
+      ],
+      "restricted_character_decomposition": [
+        {
+          "dimension": 21,
+          "highest_weight_e_basis": [
+            2,
+            0,
+            0
+          ],
+          "highest_weight_fundamental_basis": [
+            2,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "notation": "2*omega_1"
+        },
+        {
+          "dimension": 70,
+          "highest_weight_e_basis": [
+            2,
+            1,
+            1
+          ],
+          "highest_weight_fundamental_basis": [
+            1,
+            0,
+            1
+          ],
+          "multiplicity": 1,
+          "notation": "1*omega_1+1*omega_3"
+        },
+        {
+          "dimension": 84,
+          "highest_weight_e_basis": [
+            2,
+            2,
+            2
+          ],
+          "highest_weight_fundamental_basis": [
+            0,
+            0,
+            2
+          ],
+          "multiplicity": 1,
+          "notation": "2*omega_3"
+        }
+      ],
+      "schur_dimension": 175,
+      "trivial_multiplicity_in_schur_character": 0
+    }
+  ],
+  "resource_contract": {
+    "external_dependencies": false,
+    "finite_field_enumeration": false,
+    "hard_caps": {
+      "character_weight_candidates": 5000,
+      "constant_term_lookups": 50000,
+      "decomposition_updates": 100000,
+      "kostant_weyl_summands": 100000,
+      "laurent_pair_products": 2000000,
+      "partition_states": 250000
+    },
+    "maximum_abs_exponent": 12,
+    "maximum_balanced_virtual_check_moment": 6,
+    "maximum_laurent_support": 20000,
+    "maximum_rank_audit_moment": 4,
+    "maximum_wall_seconds": 12.0,
+    "numerical_integration": false,
+    "observed_counts": {
+      "character_weight_candidates": 618,
+      "constant_term_lookups": 8083,
+      "decomposition_updates": 667,
+      "kostant_weyl_summands": 26034,
+      "laurent_pair_products": 176204,
+      "partition_states": 3676
+    },
+    "random_sampling": false,
+    "ranks": [
+      1,
+      2,
+      3
+    ]
+  },
+  "schema": "riemann.function_field.usp_coefficient_minor_rank_scan.v1",
+  "scope": "Compact-group representation theorem plus exact rank-1/2/3 audit only. No finite-family convergence, canonical L-function detector claim, or RH implication.",
+  "status": "PROVED_EXACT_LOW_RANK_AUDIT_PLUS_ALL_RANK_SCHUR_IDENTITY",
+  "usp4_balanced_virtual_probe": {
+    "all_odd_moments": 0,
+    "character_identity": "B=chi_(2*omega1)-chi_(2*omega2)",
+    "compact_law_factorization": {
+      "arcsine_density": "1/(pi*sqrt(4-x^2)) on (-2,2)",
+      "moment_match": "E[A^(2r)]=binomial(2r,r), E[S^(2r)]=binomial(2r,r)/(r+1), and every odd moment vanishes.",
+      "proof": "The product law and Haar pushforward have identical moments at every order and compact support [-4,4], so polynomial density determines the measures. Both factors are continuous symmetric laws, giving zero atom at zero and equal sign probabilities.",
+      "semicircle_density": "sqrt(4-x^2)/(2*pi) on (-2,2)",
+      "sign_probabilities": {
+        "negative": [
+          1,
+          2
+        ],
+        "positive": [
+          1,
+          2
+        ],
+        "zero": [
+          0,
+          1
+        ]
+      },
+      "statement": "B has the same law as A*S for independent A and S, where A has the arcsine law on [-2,2] and S has the Wigner semicircle law on [-2,2].",
+      "status": "PROVED_BY_COMPACT_MOMENT_DETERMINACY",
+      "support": [
+        -4,
+        4
+      ]
+    },
+    "definition": "B=2*e_1^2-e_2^2",
+    "detector_use": "This centered virtual line removes the built-in odd Haar bias and is a sharper control for testing arithmetic-family odd-moment deviations.",
+    "even_moment_formula": "Haar(B^(2r))=binomial(2r,r)^2/(r+1) for every r>=0",
+    "finite_genus_two_family_bridge": {
+      "dependency": "GENUS2_MOMENT_IDENTITY.md and its exact Q[q] checker",
+      "derivation": "B=chi_(2,0)-chi_(0,2), using the proved means mean(chi_(2,0))=q^-3-q^-4 and mean(chi_(0,2))=-q^-1-q^-5.",
+      "family": "all monic squarefree quintics over F_q, q an odd prime power",
+      "formula": "mean(B_D)=1/q+1/q^3-1/q^4+1/q^5",
+      "frozen_specializations": [
+        {
+          "exact_mean": [
+            88,
+            243
+          ],
+          "q": 3
+        },
+        {
+          "exact_mean": [
+            646,
+            3125
+          ],
+          "q": 5
+        },
+        {
+          "exact_mean": [
+            2444,
+            16807
+          ],
+          "q": 7
+        }
+      ],
+      "interpretation": "Haar(B)=0 but the exact finite-family mean is positive with leading size q^-1; this is a directly isolated arithmetic bias.",
+      "normalization": "B_D=2*a_D^2/q-b_D^2/q^2",
+      "status": "EXACT_CONSEQUENCE_OF_EXISTING_ALL_Q_CHARACTER_MEANS"
+    },
+    "frozen_moments_1_through_6": [
+      0,
+      2,
+      0,
+      12,
+      0,
+      100
+    ],
+    "proof": "Odd powers have each exponent congruent to 2 mod 4, while the C2 Weyl density has zero coefficient at (+-2,+-2). For power 2r, only density exponents (0,0),(+-4,0),(0,+-4) contribute; their coefficients 8,-2,-2 reduce the constant term to C(2r,r)^2/(r+1).",
+    "torus_factorization": "B=-(x_1^2+x_1^-2)*(x_2^2+x_2^-2)",
+    "weyl_density_relevant_coefficients": [
+      {
+        "coefficient": -2,
+        "exponent": [
+          -4,
+          0
+        ]
+      },
+      {
+        "coefficient": -2,
+        "exponent": [
+          0,
+          -4
+        ]
+      },
+      {
+        "coefficient": 8,
+        "exponent": [
+          0,
+          0
+        ]
+      },
+      {
+        "coefficient": -2,
+        "exponent": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -2,
+        "exponent": [
+          4,
+          0
+        ]
+      }
+    ]
+  },
+  "usp4_integer_pencil": {
+    "definition": "Q_(alpha,beta)=alpha*e_1^2-beta*e_2^2",
+    "honest_negative_cone": "For nonnegative integers alpha,beta, -Q_(alpha,beta) is an honest character exactly when alpha<=beta.",
+    "interpretation": "The original alpha=beta=1 probe is the boundary ray where the chi_2omega1 constituent cancels; a whole cone therefore has the same representation-forced alternating moment sign.",
+    "irreducible_expansion_of_minus_Q": "(2*beta-alpha)*(1+chi_omega2)+(beta-alpha)*chi_2omega1+beta*chi_2omega2"
+  },
+  "verification": {
+    "acceptance_rule": "--check requires exact JSON equality, including source, checker, note, and finite-family dependency hashes.",
+    "all_rank_proof": "The note gives the two-by-two dual Jacobi--Trudi derivations; the all-rank quantifier is not inferred from the three checked ranks.",
+    "balanced_all_order_check": "The checker independently rebuilds the sparse C2 density without the producer convolution and verifies the closed moment formula through order 40; the note proves the symbolic all-order reduction.",
+    "haar_check": "A separate Weyl-density constant-term path checks every frozen moment.",
+    "low_rank_character_check": "Kostant multiplicities, Weyl dimensions, Weyl invariance, and exact Laurent reconstruction are all enforced for C1, C2, and C3."
+  }
+}
