@@ -1,0 +1,49 @@
+{
+  "schema": "riemann.t106430.source-lock.v1",
+  "created_utc": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
+  "integrated_base": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "audited_predecessor": {
+    "pull_request": 731,
+    "head": "fb8e356eefeafdbaa30fd52c7d5762d285fc3383",
+    "claims": [
+      "L-106413",
+      "L-106415",
+      "L-106416",
+      "T-106420"
+    ],
+    "proof_object_sha256": "e6e6e0d9f91e131bbd83a58853b40c451e6dae05bad7fac2dca9fa73af7cd5b7"
+  },
+  "remote_commits": [
+    "85ff03eadc535708ab95d976180b5f53ff8c0d4a",
+    "2ba74d35a06b2ceeab91b5ebe235c8bdc1226f36",
+    "402f9fa397eebfddf2dfbe4699780e07b2dac62f",
+    "39f87e87ad4f020005a777af7a2b128953731843",
+    "a9816e3aba12d73b433f08f01663a379d25e9fce",
+    "169d982eae6e66a325f1ac97af6e72420fd7f98e",
+    "f654ee20e987a8715703dc8e14633c3212fe988f"
+  ],
+  "claims": [
+    "L-106430",
+    "L-106431",
+    "R-106430",
+    "T-106430"
+  ],
+  "replay": {
+    "classification": "PASS_T106430_SIGNED_PALEY_WIENER_TAIL_REDUCTION",
+    "proof_object_sha256": "59df225df61e5f4deaa74903220a564983df936190e98ed661f67d84e57471f4"
+  },
+  "status": {
+    "confluent_laguerre_coverage_formula_proved": true,
+    "absolute_small_shift_coverage_shortcut_refuted": true,
+    "signed_hankel_complement_identity_proved": true,
+    "visible_source_budget": "1/600",
+    "signed_tail_ninety_threshold": "851/15000",
+    "pwsamp106420_proved": false,
+    "signedtail106430_proved": false,
+    "ninety_percent_established": false,
+    "density_one_established": false,
+    "rh_established": false
+  }
+}
