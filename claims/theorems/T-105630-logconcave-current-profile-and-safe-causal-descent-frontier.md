@@ -1,9 +1,9 @@
 # T-105630 — Xi log-concavity pays the complete safe-region current–phase contraction
 
 Claim ID: `T-105630`  
-Status: **MAJOR UNCONDITIONAL SOURCE/SAFE-REGION ADVANCE; DESCENT BELOW THE EXTREMAL HEIGHT OPEN**  
+Status: **MAJOR UNCONDITIONAL SOURCE/SAFE-REGION ADVANCE; DESCENT AND POINTWISE IDENTIFICATION OPEN**  
 Created: 2026-08-25  
-Depends on: `T-105620`; `L-105624--L-105630`; `R-105620`  
+Depends on: `T-105620`; `L-105624--L-105632`; `R-105620`; `R-105630`  
 RH status: **unproved**
 
 ## 1. The actual current is the all-order exterior-square source
@@ -139,7 +139,7 @@ This is an unconditional contraction of the actual base-Xi current/Turan
 source by the actual Xi-prime all-pass throughout the complete zero-free safe
 region.
 
-## 5. The source-owned finite bank is canonical
+## 5. The source-owned finite bank and signed tail are canonical
 
 For an inner all-pass `U`, the Hankel operator `H_(bar U)` is a partial
 isometry whose initial space is exactly
@@ -154,39 +154,53 @@ For finite Blaschke `U`,
 \dim K_U=\deg U.
 \]
 
-Every source-owned finite section of this model bank inherits
-(T-105630.7) exactly after current-Gram whitening. Therefore finite source
-cutoffs, source tapers, source bases and source Gram normalization do not
-create a new phase-collision debt.
+Every source-owned finite section inherits (T-105630.7) exactly after current-
+Gram whitening. Finite source cutoffs, source tapers, source bases and source
+Gram normalization therefore create no new phase-collision debt.
 
-The physical finite-rectangle count still requires its argument-principle
-endpoint and common-zero ledger; model-space degree is not silently identified
-with a parent Xi rectangle count.
-
-## 6. The raw shell-energy gate is overstrong
-
-For the completely real-rooted family
+Moreover, for every source projection `P`, innerness gives
 
 \[
-p_N(z)=z^N
+\boxed{
+\Delta_P(U)
+=-\|H_{\overline U}P^\perp\|_{\mathcal S_2}^2
+\le0.
+}
+\tag{T-105630.8}
 \]
 
-and heights `h_2=2h_1`, every positive-height shell is empty on every rung, but
-each adjacent shell all-pass has
+Thus the positive part of the signed Paley--Wiener complement is identically
+zero in the safe region. Absolute model-space coverage is unnecessary there.
+A positive signed tail can first appear only when an anti-inner denominator
+factor enters during descent.
+
+Finite model-space trace formulas are exact after finite/source regularization.
+The continuum multiplication weight is not trace class; no difference of two
+infinite traces is silently taken. The cofinal endpoint carrier remains in the
+argument-principle ledger.
+
+## 6. Two binding firewalls
+
+### Raw shell energy
+
+For `p_N(z)=z^N` and `h_2=2h_1`, every positive-height shell is empty on every
+rung, but each adjacent shell all-pass has
 
 \[
 \mathcal E_+=\mathcal E_-={1\over9}.
 \]
 
-Across nineteen rungs,
+Across nineteen rungs the raw negative energy is `19/9>2` although the signed
+winding is zero. `HSHE105602<2` is therefore a valid but overstrong sufficient
+condition; the balanced positive Hardy compensation must be retained.
 
-\[
-\sum\mathcal E_-={19\over9}>2
-\]
+### Pointwise evaluation
 
-although the signed winding is zero. Thus `HSHE105602<2` remains a valid
-sufficient condition but is not a natural real-rootedness invariant. The
-balanced positive Hardy compensation must be retained.
+`R-105630` gives a two-frequency decreasing source profile and a perfectly
+inner unilateral shift for which the full weighted contraction holds but the
+corresponding off-diagonal physical trigonometric evaluation has the wrong
+sign. Hence causal energy does not itself imply the differential microscope.
+`POINTID105630` is a genuine Xi-specific interface.
 
 ## 7. Exact remaining gates
 
@@ -195,20 +209,18 @@ At a lower base, small total heights can encounter zeros of `Xi'`, destroying
 the inner/causal geometry; even before that happens, an energy contraction is
 not automatically the pointwise differential-microscope inequality.
 
-The remaining conclusion-facing gates are:
-
 ```text
 SAFEDESC105628
   continue the source/phase control below beta_0 without a denominator pole
   or positive zero-height charge;
 
-ENDIDX105630
-  for integrated/proportion routes, identify cofinal finite model-space degree
-  with the precise Xi zero-count index and one endpoint ledger;
-
 POINTID105630
   promote the source-owned weighted contraction to the physical pointwise
-  differential microscope, retaining the two-trace evaluation map.
+  differential microscope, retaining the actual two-trace evaluation;
+
+ENDIDX105630
+  for integrated/proportion routes, identify cofinal model-space degree with
+  the precise Xi zero-count index and one endpoint/common-zero ledger.
 ```
 
 Any proof of `POINTID105630 AND SAFEDESC105628` yields
@@ -230,7 +242,9 @@ current-normalized source profile monotonicity          PROVED / REVIEW
 safe-height Xi-prime all-pass innerness                 PROVED / REVIEW
 safe-region causal weighted contraction                PROVED / REVIEW
 source-owned model-space bank                           PROVED EXACT
+safe-region positive signed complement                  EXCLUDED
 raw negative shell-energy naturality                    REFUTED
+causal energy -> pointwise sign shortcut                REFUTED
 POINTID105630 physical point evaluation                 OPEN / RH-BEARING
 SAFEDESC105628 descent below beta_0                     OPEN / RH-BEARING
 ENDIDX105630 finite endpoint/index ledger               OPEN
