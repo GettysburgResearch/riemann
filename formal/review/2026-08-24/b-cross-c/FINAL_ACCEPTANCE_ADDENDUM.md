@@ -86,7 +86,7 @@ Residual exclusion: these mechanisms have not been executed at the repaired head
 
 ### Trust boundary
 
-**PARTIALLY_RESOLVED_WITH_EXCLUSION.** Exact repaired-diff inspection finds no added `axiom`, `opaque`, `unsafe`, or `admit` declaration. The only intended `sorry` is the single statement-only placeholder in the Challenge; the corresponding ChallengeDeps and Solution sources are sorry-free by inspection. A kernel-level axiom conclusion is withheld because `check_no_sorry.sh` and `check_axioms.sh` were not executed.
+**PARTIALLY_RESOLVED_WITH_EXCLUSION.** Exact repaired-diff inspection finds no added `axiom`, `opaque`, `unsafe`, or `admit` declaration. Exactly three intended `sorry` placeholders remain, one in each of the three Challenge files; all corresponding ChallengeDeps and Solution sources are sorry-free by inspection. A kernel-level axiom conclusion is withheld because `check_no_sorry.sh` and `check_axioms.sh` were not executed.
 
 ### Remote publication
 
