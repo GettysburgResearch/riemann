@@ -77,8 +77,7 @@ one obtains
 {(1-t)(5-3t)\over t^2-4t+5}
 \widehat P(\xi,h).
 }
-\tag{L-105437.2
-}
+\tag{L-105437.2}
 
 Equivalently,
 
