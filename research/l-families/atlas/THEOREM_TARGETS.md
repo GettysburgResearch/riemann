@@ -257,17 +257,34 @@ the exact support bound gives `1_{x>=0}<=R(x)^2`, and the six Haar moments give
 \mu_{\mathrm{Haar}}(F<0)\ge\frac{4360}{12023}.
 \]
 
-Consequently, proving convergence for moments `m=2,...,6` already yields the
-conditional conclusion
+An exact support-adapted majorant improves that baseline. With
+`t=(3x+28)/32`, set
 
 \[
-\liminf_{q\to\infty}\rho_-(q)\ge\frac{4360}{12023}\approx0.362638,
+p(t)=\frac{(t+1)(20t-13)^2(40t-7)^2(2927-2792t)}{14407470}.
+\]
+
+Its factorization proves `p>=0` on `[-1,1]`; the identity
+`p(t)-1=(t-7/8)(1-t)Q(t)` and five positive Bernstein coefficients for `Q`
+prove `p>=1` on `[7/8,1]`. Exact moment substitution gives
+
+\[
+\mathbb E_{\mathrm{Haar}}p\!\left(\frac{3F+28}{32}\right)
+=\frac{3879608783}{6358302720}.
+\]
+
+Consequently, proving convergence for moments `m=2,...,6` already yields the
+stronger conditional conclusion
+
+\[
+\liminf_{q\to\infty}\rho_-(q)
+\ge\frac{2478693937}{6358302720}\approx0.389836,
 \]
 
 without needing full weak convergence or control of mass near `F=0`. This is a
-certified lower bound, not the exact Haar sign probability. It makes the six
-fixed-moment formulas a useful standalone theorem target even if an effective
-sign-law rate remains out of reach.
+certified lower bound, not the exact Haar sign probability or a claimed optimal
+degree-six bound. It makes the six fixed-moment formulas a useful standalone
+theorem target even if an effective sign-law rate remains out of reach.
 
 The bounded shifted-grid Weyl quadrature additionally nominates
 

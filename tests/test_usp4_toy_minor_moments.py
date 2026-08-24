@@ -78,6 +78,38 @@ class LaurentCertificateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "insufficient raw moments"):
             usp4.polynomial_moment(square, [-1, 3])
 
+    def test_support_adapted_degree_six_majorant(self) -> None:
+        certificate = usp4.support_adapted_sign_majorant()
+        self.assertEqual(
+            certificate["polynomial_x"],
+            [
+                Fraction(1),
+                Fraction(124079, 203280),
+                Fraction(-10433053, 68302080),
+                Fraction(-5367181, 31223808),
+                Fraction(-3716745, 97140736),
+                Fraction(-177075, 55508992),
+                Fraction(-130875, 1554251776),
+            ],
+        )
+        self.assertTrue(all(value > 0 for value in certificate["quotient_bernstein"]))
+        self.assertEqual(
+            usp4.polynomial_moment(
+                certificate["polynomial_x"], [-1, 3, -11, 56, -374, 3117]
+            ),
+            Fraction(3879608783, 6358302720),
+        )
+        # Exercise the exact polynomial utilities used by the positivity identity.
+        self.assertEqual(
+            usp4.affine_compose_rational([Fraction(1), Fraction(2)], 3, 4),
+            [Fraction(7), Fraction(8)],
+        )
+        self.assertEqual(
+            usp4.bernstein_to_power([Fraction(2), Fraction(3)]),
+            [Fraction(2), Fraction(1)],
+        )
+        self.assertEqual(usp4.convolve_rational([], [Fraction(1)]), [])
+
 
 class FixtureTests(unittest.TestCase):
     @classmethod
@@ -153,11 +185,32 @@ class FixtureTests(unittest.TestCase):
             self.assertEqual(Fraction(*row["observed_negative_fraction"]), observed)
             self.assertLessEqual(lower, observed)
             self.assertTrue(row["verified_bound_holds"])
+        stronger = certificate["support_adapted_majorant"]
+        self.assertEqual(
+            Fraction(*stronger["haar"]["negative_probability_lower_bound"]),
+            Fraction(2478693937, 6358302720),
+        )
+        stronger_expected = {
+            3: Fraction(1071212088449257, 4646211289251840),
+            5: Fraction(129483448209727019, 426888000000000000),
+            7: Fraction(1344203232409695421121, 4150634573530209042432),
+        }
+        for row in stronger["finite_q_bounds"]:
+            self.assertEqual(
+                Fraction(*row["negative_probability_lower_bound"]),
+                stronger_expected[row["q"]],
+            )
+            self.assertGreater(
+                Fraction(*row["negative_probability_lower_bound"]),
+                expected[row["q"]][0],
+            )
+        self.assertTrue(stronger["strictly_improves_cubic_square_bound"])
         conditional = certificate["conditional_consequence"]
         self.assertEqual(
             conditional["status"], "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"
         )
         self.assertTrue(conditional["not_an_equidistribution_proof"])
+        self.assertIn("2478693937/6358302720", conditional["statement"])
 
     def test_rigorous_parts_are_separate_from_limit_target(self) -> None:
         self.assertEqual(self.fixture["rigor_level"], usp4.HAAR_STATUS)

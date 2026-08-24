@@ -15,7 +15,7 @@
     {
       "code": "SIGN_BOUND_AS_EXACT_PROBABILITY",
       "description": "The polynomial lower bound is reported as the exact Haar sign probability.",
-      "hostile_control": "The raw certificate labels 4360/12023 as a lower bound and keeps the q-to-infinity consequence conditional."
+      "hostile_control": "The raw certificate labels both polynomial values as lower bounds, makes no optimality claim, and keeps the q-to-infinity consequence conditional."
     },
     {
       "code": "TOY_KERNEL_CONFLATION",
@@ -66,12 +66,12 @@
       "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7.",
       "Keep exact Laurent and finite-histogram arithmetic separate from the proposed q-to-infinity convergence statement.",
       "Treat F as a toy reciprocal-coefficient statistic, not Pick/Loewner, XD, or HCNC.",
-      "Use R(x)^2 only as an exact nonnegative-event majorant on [-20,4/3], and keep its liminf consequence conditional on six-moment convergence."
+      "Use only exactly certified degree-six nonnegative-event majorants on [-20,4/3], and keep their liminf consequence conditional on six-moment convergence."
     ],
     "slug": "FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR",
     "version": 1
   },
-  "identity_sha256": "252d7b67043b4ce3403ba7b27d755d28d74b151d24c4c36c783bdacedaede7a5",
+  "identity_sha256": "eed5882fae71cfe825735bf2a9c3856a57eb9fe18afc5629a9fce77e5f13fff8",
   "invariances": [
     {
       "code": "USP4_CHARACTER_IDENTITY",
@@ -100,7 +100,7 @@
     },
     {
       "code": "DEGREE_SIX_SIGN_MAJORANT",
-      "statement": "The exact cubic R gives 1_{F>=0}<=R(F)^2 and therefore Pr_Haar(F<0)>=4360/12023 from moments through order six.",
+      "statement": "Exact degree-six majorants give 1_{F>=0}<=p(F) and therefore the support-adapted bound Pr_Haar(F<0)>=2478693937/6358302720.",
       "status": "PROVED"
     },
     {
@@ -140,7 +140,7 @@
     {
       "comparison_role": "FIREWALL",
       "field": "result.negative_sign_moment_certificate",
-      "requirement": "Use R(x)^2 only as an exact nonnegative-event majorant on [-20,4/3], and keep its liminf consequence conditional on six-moment convergence."
+      "requirement": "Use only exactly certified degree-six nonnegative-event majorants on [-20,4/3], and keep their liminf consequence conditional on six-moment convergence."
     }
   ],
   "notes": "Certified claims are the exact identity, constant terms, six Haar moments, finite histogram moments, and the degree-six sign lower bound. The limiting moment comparison remains proposed.",
@@ -235,7 +235,7 @@
   "reference_implementation": {
     "entry_point": "build_fixture",
     "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
-    "source_sha256": "d8fdbc133eee1fad79dc54ee5715720487df41d52559d88d25aa64584d06f707",
+    "source_sha256": "533f0938006223bb67fc76b9d2011347fc3cc617be69ca7bf0440d79b2660f89",
     "version": "1"
   },
   "required_inputs": [
@@ -261,7 +261,7 @@
   "revision": 1,
   "schema_version": "riemann.atlas.detector_contract.v1",
   "scope_boundary": "Exact character, Weyl constant-term, and q=3,5,7 histogram calculations through moment six only. Convergence is proposed, with no analytic-kernel conclusion or number-field transfer.",
-  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H252d7b67043b4ce3403ba7b27d755d28",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.Heed5882fae71cfe825735bf2a9c3856a",
   "supersedes": [],
   "theorem_links": [
     {
@@ -270,7 +270,7 @@
       "status": "PROPOSED"
     },
     {
-      "scope": "Convergence of the first six raw moments implies liminf Pr(K_D/q^2<0)>=4360/12023.",
+      "scope": "Convergence of the first six raw moments implies liminf Pr(K_D/q^2<0)>=2478693937/6358302720.",
       "semantic_id": "CONDITIONAL.FUNCTION_FIELD.GENUS2.NEGATIVE_SIGN.LIMINF",
       "status": "CONDITIONAL_EXACT"
     }

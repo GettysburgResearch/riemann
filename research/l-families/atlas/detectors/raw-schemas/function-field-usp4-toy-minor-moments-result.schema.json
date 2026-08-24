@@ -177,6 +177,7 @@
         "majorant",
         "haar",
         "finite_q_bounds",
+        "support_adapted_majorant",
         "conditional_consequence",
         "scope"
       ],
@@ -312,6 +313,139 @@
             }
           ]
         },
+        "support_adapted_majorant": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coordinate",
+            "polynomial_factorization",
+            "coefficients_in_x_low_to_high",
+            "pointwise_statement",
+            "nonnegative_support_proof",
+            "positive_interval_factorization",
+            "positive_interval_bernstein_coordinate",
+            "positive_interval_quotient_bernstein_coefficients_degree_4",
+            "positive_interval_proof",
+            "haar",
+            "finite_q_bounds",
+            "strictly_improves_cubic_square_bound",
+            "construction_scope"
+          ],
+          "properties": {
+            "coordinate": {
+              "const": "t=(3*x+28)/32 maps x in [-20,4/3] to t in [-1,1], with x>=0 equivalent to t>=7/8"
+            },
+            "polynomial_factorization": {
+              "const": "p(t)=(t+1)*(20*t-13)^2*(40*t-7)^2*(2927-2792*t)/14407470"
+            },
+            "coefficients_in_x_low_to_high": {
+              "const": [
+                {"numerator": 1, "denominator": 1, "text": "1"},
+                {"numerator": 124079, "denominator": 203280, "text": "124079/203280"},
+                {"numerator": -10433053, "denominator": 68302080, "text": "-10433053/68302080"},
+                {"numerator": -5367181, "denominator": 31223808, "text": "-5367181/31223808"},
+                {"numerator": -3716745, "denominator": 97140736, "text": "-3716745/97140736"},
+                {"numerator": -177075, "denominator": 55508992, "text": "-177075/55508992"},
+                {"numerator": -130875, "denominator": 1554251776, "text": "-130875/1554251776"}
+              ]
+            },
+            "pointwise_statement": {
+              "const": "1_{x>=0} <= p((3*x+28)/32) on [-20,4/3]"
+            },
+            "nonnegative_support_proof": {"type": "string", "minLength": 1},
+            "positive_interval_factorization": {
+              "const": "p(t)-1=(t-7/8)*(1-t)*Q(t)"
+            },
+            "positive_interval_bernstein_coordinate": {"const": "z=8*t-7 in [0,1]"},
+            "positive_interval_quotient_bernstein_coefficients_degree_4": {
+              "const": [
+                {"numerator": 1985264, "denominator": 38115, "text": "1985264/38115"},
+                {"numerator": 145906487, "denominator": 2401245, "text": "145906487/2401245"},
+                {"numerator": 3063511081, "denominator": 43222410, "text": "3063511081/43222410"},
+                {"numerator": 198471997, "denominator": 2401245, "text": "198471997/2401245"},
+                {"numerator": 1001492, "denominator": 10395, "text": "1001492/10395"}
+              ]
+            },
+            "positive_interval_proof": {"type": "string", "minLength": 1},
+            "haar": {
+              "const": {
+                "moment_majorant_nonnegative_upper_bound": {
+                  "numerator": 3879608783,
+                  "denominator": 6358302720,
+                  "text": "3879608783/6358302720"
+                },
+                "negative_probability_lower_bound": {
+                  "numerator": 2478693937,
+                  "denominator": 6358302720,
+                  "text": "2478693937/6358302720"
+                }
+              }
+            },
+            "finite_q_bounds": {
+              "const": [
+                {
+                  "q": 3,
+                  "moment_majorant_nonnegative_upper_bound": {
+                    "numerator": 3574999200802583,
+                    "denominator": 4646211289251840,
+                    "text": "3574999200802583/4646211289251840"
+                  },
+                  "negative_probability_lower_bound": {
+                    "numerator": 1071212088449257,
+                    "denominator": 4646211289251840,
+                    "text": "1071212088449257/4646211289251840"
+                  },
+                  "observed_negative_fraction": {
+                    "numerator": 17,
+                    "denominator": 27,
+                    "text": "17/27"
+                  },
+                  "verified_bound_holds": true
+                },
+                {
+                  "q": 5,
+                  "moment_majorant_nonnegative_upper_bound": {
+                    "numerator": 297404551790272981,
+                    "denominator": 426888000000000000,
+                    "text": "297404551790272981/426888000000000000"
+                  },
+                  "negative_probability_lower_bound": {
+                    "numerator": 129483448209727019,
+                    "denominator": 426888000000000000,
+                    "text": "129483448209727019/426888000000000000"
+                  },
+                  "observed_negative_fraction": {
+                    "numerator": 33,
+                    "denominator": 50,
+                    "text": "33/50"
+                  },
+                  "verified_bound_holds": true
+                },
+                {
+                  "q": 7,
+                  "moment_majorant_nonnegative_upper_bound": {
+                    "numerator": 2806431341120513621311,
+                    "denominator": 4150634573530209042432,
+                    "text": "2806431341120513621311/4150634573530209042432"
+                  },
+                  "negative_probability_lower_bound": {
+                    "numerator": 1344203232409695421121,
+                    "denominator": 4150634573530209042432,
+                    "text": "1344203232409695421121/4150634573530209042432"
+                  },
+                  "observed_negative_fraction": {
+                    "numerator": 33,
+                    "denominator": 49,
+                    "text": "33/49"
+                  },
+                  "verified_bound_holds": true
+                }
+              ]
+            },
+            "strictly_improves_cubic_square_bound": {"const": true},
+            "construction_scope": {"type": "string", "minLength": 1}
+          }
+        },
         "conditional_consequence": {
           "type": "object",
           "additionalProperties": false,
@@ -320,7 +454,7 @@
             "status": {"const": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"},
             "not_an_equidistribution_proof": {"const": true},
             "assumption": {"type": "string", "minLength": 1},
-            "statement": {"const": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 4360/12023."},
+            "statement": {"const": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 2478693937/6358302720."},
             "reason": {"type": "string", "minLength": 1}
           }
         },

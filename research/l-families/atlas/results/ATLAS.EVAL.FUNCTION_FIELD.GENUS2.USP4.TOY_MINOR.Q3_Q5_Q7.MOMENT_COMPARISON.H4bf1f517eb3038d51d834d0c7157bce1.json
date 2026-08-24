@@ -19,7 +19,7 @@
     "status": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
   },
   "definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use those six moments and an exact degree-six polynomial majorant to certify a lower bound for the negative-sign probability.",
-  "detector_semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.H252d7b67043b4ce3403ba7b27d755d28",
+  "detector_semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.Heed5882fae71cfe825735bf2a9c3856a",
   "exact_result_status": "RIGOROUS_CERTIFIED",
   "finite_comparisons": [
     {
@@ -362,8 +362,8 @@
     "conditional_consequence": {
       "assumption": "The first six raw moments of the normalized finite-family statistic converge to the six stored USp(4) Haar moments.",
       "not_an_equidistribution_proof": true,
-      "reason": "The expectation of the fixed degree-six majorant then converges to 7663/12023; no boundary-mass or weak-convergence argument is needed.",
-      "statement": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 4360/12023.",
+      "reason": "The expectation of the stronger support-adapted degree-six majorant then converges to 3879608783/6358302720; no boundary-mass or weak-convergence argument is needed.",
+      "statement": "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 2478693937/6358302720.",
       "status": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"
     },
     "event": "F<0",
@@ -516,7 +516,7 @@
         }
       ]
     },
-    "scope": "This is an exact lower bound, not an evaluation of the Haar sign probability. The q=3,5,7 rows are exact frozen checks; the liminf statement is conditional.",
+    "scope": "These are exact lower bounds, not an evaluation of the Haar sign probability. The cubic-square construction is retained as a simple baseline; the rational support-adapted polynomial is stronger but is not claimed optimal. The q=3,5,7 rows are exact frozen checks; the liminf statement is conditional.",
     "status": "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND",
     "support": {
       "maximum": {
@@ -529,6 +529,152 @@
         "numerator": -20,
         "text": "-20"
       }
+    },
+    "support_adapted_majorant": {
+      "coefficients_in_x_low_to_high": [
+        {
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1"
+        },
+        {
+          "denominator": 203280,
+          "numerator": 124079,
+          "text": "124079/203280"
+        },
+        {
+          "denominator": 68302080,
+          "numerator": -10433053,
+          "text": "-10433053/68302080"
+        },
+        {
+          "denominator": 31223808,
+          "numerator": -5367181,
+          "text": "-5367181/31223808"
+        },
+        {
+          "denominator": 97140736,
+          "numerator": -3716745,
+          "text": "-3716745/97140736"
+        },
+        {
+          "denominator": 55508992,
+          "numerator": -177075,
+          "text": "-177075/55508992"
+        },
+        {
+          "denominator": 1554251776,
+          "numerator": -130875,
+          "text": "-130875/1554251776"
+        }
+      ],
+      "construction_scope": "This rational support-adapted certificate is not claimed optimal among all degree-six polynomial majorants.",
+      "coordinate": "t=(3*x+28)/32 maps x in [-20,4/3] to t in [-1,1], with x>=0 equivalent to t>=7/8",
+      "finite_q_bounds": [
+        {
+          "moment_majorant_nonnegative_upper_bound": {
+            "denominator": 4646211289251840,
+            "numerator": 3574999200802583,
+            "text": "3574999200802583/4646211289251840"
+          },
+          "negative_probability_lower_bound": {
+            "denominator": 4646211289251840,
+            "numerator": 1071212088449257,
+            "text": "1071212088449257/4646211289251840"
+          },
+          "observed_negative_fraction": {
+            "denominator": 27,
+            "numerator": 17,
+            "text": "17/27"
+          },
+          "q": 3,
+          "verified_bound_holds": true
+        },
+        {
+          "moment_majorant_nonnegative_upper_bound": {
+            "denominator": 426888000000000000,
+            "numerator": 297404551790272981,
+            "text": "297404551790272981/426888000000000000"
+          },
+          "negative_probability_lower_bound": {
+            "denominator": 426888000000000000,
+            "numerator": 129483448209727019,
+            "text": "129483448209727019/426888000000000000"
+          },
+          "observed_negative_fraction": {
+            "denominator": 50,
+            "numerator": 33,
+            "text": "33/50"
+          },
+          "q": 5,
+          "verified_bound_holds": true
+        },
+        {
+          "moment_majorant_nonnegative_upper_bound": {
+            "denominator": 4150634573530209042432,
+            "numerator": 2806431341120513621311,
+            "text": "2806431341120513621311/4150634573530209042432"
+          },
+          "negative_probability_lower_bound": {
+            "denominator": 4150634573530209042432,
+            "numerator": 1344203232409695421121,
+            "text": "1344203232409695421121/4150634573530209042432"
+          },
+          "observed_negative_fraction": {
+            "denominator": 49,
+            "numerator": 33,
+            "text": "33/49"
+          },
+          "q": 7,
+          "verified_bound_holds": true
+        }
+      ],
+      "haar": {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 6358302720,
+          "numerator": 3879608783,
+          "text": "3879608783/6358302720"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 6358302720,
+          "numerator": 2478693937,
+          "text": "2478693937/6358302720"
+        }
+      },
+      "nonnegative_support_proof": "On t in [-1,1], t+1>=0, the two middle factors are squares, and 2927-2792*t>=135, so p(t)>=0.",
+      "pointwise_statement": "1_{x>=0} <= p((3*x+28)/32) on [-20,4/3]",
+      "polynomial_factorization": "p(t)=(t+1)*(20*t-13)^2*(40*t-7)^2*(2927-2792*t)/14407470",
+      "positive_interval_bernstein_coordinate": "z=8*t-7 in [0,1]",
+      "positive_interval_factorization": "p(t)-1=(t-7/8)*(1-t)*Q(t)",
+      "positive_interval_proof": "Every stored Bernstein coefficient of Q is positive, hence Q(t)>0 on [7/8,1]; both remaining factors are nonnegative there.",
+      "positive_interval_quotient_bernstein_coefficients_degree_4": [
+        {
+          "denominator": 38115,
+          "numerator": 1985264,
+          "text": "1985264/38115"
+        },
+        {
+          "denominator": 2401245,
+          "numerator": 145906487,
+          "text": "145906487/2401245"
+        },
+        {
+          "denominator": 43222410,
+          "numerator": 3063511081,
+          "text": "3063511081/43222410"
+        },
+        {
+          "denominator": 2401245,
+          "numerator": 198471997,
+          "text": "198471997/2401245"
+        },
+        {
+          "denominator": 10395,
+          "numerator": 1001492,
+          "text": "1001492/10395"
+        }
+      ],
+      "strictly_improves_cubic_square_bound": true
     }
   },
   "range_certificate": {
@@ -626,13 +772,13 @@
   "schema": "riemann.atlas.raw.function_field_usp4_toy_minor_moments.v1",
   "source_locks": {
     "comparator_fixture": {
-      "canonical_sha256": "caa56fa56f4e642b4d34dfc1fb69e2eacdc0bddf952d0a71b38da707d8ba5da8",
+      "canonical_sha256": "7a7a926a1faac9ebe2864fb51e9e502e6085ea5775659cb112852b8733c0662b",
       "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json",
-      "payload_sha256": "b5b18aec27b76719c12acbae0c291d131765a6f4576aca931a65d59775145c77"
+      "payload_sha256": "ccefc870ce7aa2f58a14f1d8f5aacba91cd84df44412af127b5ee6d1a1629830"
     },
     "comparator_source": {
       "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
-      "raw_sha256": "d8fdbc133eee1fad79dc54ee5715720487df41d52559d88d25aa64584d06f707"
+      "raw_sha256": "533f0938006223bb67fc76b9d2011347fc3cc617be69ca7bf0440d79b2660f89"
     },
     "q_scan_fixture": {
       "canonical_sha256": "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4",

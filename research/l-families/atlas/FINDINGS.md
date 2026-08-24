@@ -278,14 +278,42 @@ substitution of the six Haar moments gives
 \approx0.362638.
 \]
 
-This is a certified lower bound, not the exact sign probability. Applying the
-same degree-six certificate to the frozen finite moments gives exact lower
-bounds approximately `0.152536, 0.237852, 0.274227` at `q=3,5,7`, all below
-the observed `17/27, 33/50, 33/49`. More importantly, convergence of only the
-first six finite moments would already imply
-`liminf rho_-(q)>=4360/12023`. That conditional implication needs neither full
-weak convergence nor boundary-mass control; it is a concrete payoff from
-proving Targets `m=2,...,6`.
+This simple cubic-square construction is certified but not strongest. A
+support-adapted rational polynomial sharpens it. Set `t=(3x+28)/32` and
+
+\[
+p(t)=\frac{(t+1)(20t-13)^2(40t-7)^2(2927-2792t)}{14407470}.
+\]
+
+The support `x in [-20,4/3]` becomes `t in [-1,1]`, and `x>=0` becomes
+`t>=7/8`. The displayed factorization makes `p>=0` on the full interval.
+Moreover `p(7/8)=p(1)=1`, and exact division gives
+
+\[
+p(t)-1=(t-7/8)(1-t)Q(t).
+\]
+
+In the coordinate `z=8t-7`, all five degree-four Bernstein coefficients of
+`Q` are positive. Thus `1_{x>=0}<=p((3x+28)/32)` exactly. The Haar expectation
+is
+
+\[
+\mathbb E_{\mathrm{Haar}}p\!\left(\frac{3F+28}{32}\right)
+=\frac{3879608783}{6358302720},
+\qquad
+\boxed{\mu_{\mathrm{Haar}}(F<0)
+\ge\frac{2478693937}{6358302720}}
+\approx0.389836.
+\]
+
+The corresponding frozen lower bounds are approximately
+`0.230556, 0.303319, 0.323855` at `q=3,5,7`, all below the observed
+`17/27, 33/50, 33/49` and all strictly stronger than the cubic-square bounds.
+No optimality among degree-six majorants is claimed. More importantly,
+convergence of only the first six finite moments would already imply
+`liminf rho_-(q)>=2478693937/6358302720`. That conditional implication needs
+neither full weak convergence nor boundary-mass control; it is a concrete
+payoff from proving Targets `m=2,...,6`.
 
 The exact finite fractions are retained in the fixture; their display values
 show how slowly the higher tails appear:

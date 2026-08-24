@@ -269,11 +269,84 @@ def load_and_replay_fixtures(root: Path) -> tuple[dict[str, Any], dict[str, Any]
             or not stored_lower <= observed
         ):
             raise ValueError(f"q={q} negative-sign moment certificate mismatch")
+
+    support_majorant = sign_certificate.get("support_adapted_majorant", {})
+    generated_support = comparator_module.support_adapted_sign_majorant()
+    stored_support_coefficients = [
+        _fraction(pair, f"support-majorant coefficient {index}")
+        for index, pair in enumerate(
+            support_majorant.get("coefficients_in_x_low_to_high", [])
+        )
+    ]
+    if stored_support_coefficients != generated_support["polynomial_x"]:
+        raise ValueError("support-adapted majorant coefficients drifted")
+    stored_bernstein = [
+        _fraction(pair, f"support-majorant Bernstein coefficient {index}")
+        for index, pair in enumerate(
+            support_majorant.get(
+                "positive_interval_quotient_bernstein_coefficients_degree_4", []
+            )
+        )
+    ]
+    if stored_bernstein != generated_support["quotient_bernstein"] or not all(
+        coefficient > 0 for coefficient in stored_bernstein
+    ):
+        raise ValueError("support-adapted majorant Bernstein certificate drifted")
+    support_haar = support_majorant.get("haar", {})
+    if _fraction(
+        support_haar.get("moment_majorant_nonnegative_upper_bound", []),
+        "support-adapted Haar nonnegative upper bound",
+    ) != Fraction(3879608783, 6358302720):
+        raise ValueError("support-adapted Haar nonnegative upper bound drifted")
+    if _fraction(
+        support_haar.get("negative_probability_lower_bound", []),
+        "support-adapted Haar negative lower bound",
+    ) != Fraction(2478693937, 6358302720):
+        raise ValueError("support-adapted Haar negative lower bound drifted")
+    support_rows = support_majorant.get("finite_q_bounds", [])
+    if [row.get("q") for row in support_rows] != list(Q_VALUES):
+        raise ValueError("support-adapted finite sign rows drifted")
+    for row, baseline_row in zip(support_rows, finite_sign_rows, strict=True):
+        q = int(row["q"])
+        moments = [
+            _fraction(entry["finite_exact"], f"q={q} support sign moment")
+            for entry in comparisons[q]["moments"]
+        ]
+        expected_upper = comparator_module.polynomial_moment(
+            generated_support["polynomial_x"], moments
+        )
+        stored_upper = _fraction(
+            row["moment_majorant_nonnegative_upper_bound"],
+            f"q={q} support nonnegative upper bound",
+        )
+        stored_lower = _fraction(
+            row["negative_probability_lower_bound"],
+            f"q={q} support negative lower bound",
+        )
+        observed = _fraction(
+            row["observed_negative_fraction"], f"q={q} support observed sign"
+        )
+        if (
+            stored_upper != expected_upper
+            or stored_lower != 1 - expected_upper
+            or stored_lower
+            <= _fraction(
+                baseline_row["negative_probability_lower_bound"],
+                f"q={q} baseline negative lower bound",
+            )
+            or stored_lower > observed
+            or row.get("verified_bound_holds") is not True
+        ):
+            raise ValueError(f"q={q} support-adapted sign certificate mismatch")
+    if support_majorant.get("strictly_improves_cubic_square_bound") is not True:
+        raise ValueError("support-adapted majorant lost its strict-improvement check")
     conditional = sign_certificate.get("conditional_consequence", {})
     if conditional.get("status") != "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE":
         raise ValueError("negative-sign liminf consequence lost its conditional status")
     if conditional.get("not_an_equidistribution_proof") is not True:
         raise ValueError("negative-sign conditional consequence lost its theorem firewall")
+    if "2478693937/6358302720" not in conditional.get("statement", ""):
+        raise ValueError("negative-sign conditional consequence uses the wrong exact bound")
     return comparator, q_scan
 
 
@@ -300,7 +373,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7.",
         "Keep exact Laurent and finite-histogram arithmetic separate from the proposed q-to-infinity convergence statement.",
         "Treat F as a toy reciprocal-coefficient statistic, not Pick/Loewner, XD, or HCNC.",
-        "Use R(x)^2 only as an exact nonnegative-event majorant on [-20,4/3], and keep its liminf consequence conditional on six-moment convergence.",
+        "Use only exactly certified degree-six nonnegative-event majorants on [-20,4/3], and keep their liminf consequence conditional on six-moment convergence.",
     ]
     identity_kernel = {
         "version": 1,
@@ -460,8 +533,8 @@ def build_detector(root: Path) -> dict[str, Any]:
             {
                 "code": "DEGREE_SIX_SIGN_MAJORANT",
                 "statement": (
-                    "The exact cubic R gives 1_{F>=0}<=R(F)^2 and therefore "
-                    "Pr_Haar(F<0)>=4360/12023 from moments through order six."
+                    "Exact degree-six majorants give 1_{F>=0}<=p(F) and therefore the "
+                    "support-adapted bound Pr_Haar(F<0)>=2478693937/6358302720."
                 ),
                 "status": "PROVED",
             },
@@ -502,7 +575,7 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "status": "CONDITIONAL_EXACT",
                 "scope": (
                     "Convergence of the first six raw moments implies "
-                    "liminf Pr(K_D/q^2<0)>=4360/12023."
+                    "liminf Pr(K_D/q^2<0)>=2478693937/6358302720."
                 ),
             },
         ],
@@ -521,8 +594,8 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "code": "SIGN_BOUND_AS_EXACT_PROBABILITY",
                 "description": "The polynomial lower bound is reported as the exact Haar sign probability.",
                 "hostile_control": (
-                    "The raw certificate labels 4360/12023 as a lower bound and keeps the "
-                    "q-to-infinity consequence conditional."
+                    "The raw certificate labels both polynomial values as lower bounds, makes "
+                    "no optimality claim, and keeps the q-to-infinity consequence conditional."
                 ),
             },
             {
@@ -574,6 +647,7 @@ def _witness_record(witness: Mapping[str, Sequence[int]]) -> dict[str, Any]:
 
 def _sign_moment_certificate_record(source: Mapping[str, Any]) -> dict[str, Any]:
     majorant = source["majorant"]
+    support_majorant = source["support_adapted_majorant"]
     return {
         "status": source["status"],
         "event": source["event"],
@@ -625,6 +699,61 @@ def _sign_moment_certificate_record(source: Mapping[str, Any]) -> dict[str, Any]
             }
             for row in source["finite_q_bounds"]
         ],
+        "support_adapted_majorant": {
+            "coordinate": support_majorant["coordinate"],
+            "polynomial_factorization": support_majorant["polynomial_factorization"],
+            "coefficients_in_x_low_to_high": [
+                _fraction_record(pair)
+                for pair in support_majorant["coefficients_in_x_low_to_high"]
+            ],
+            "pointwise_statement": support_majorant["pointwise_statement"],
+            "nonnegative_support_proof": support_majorant[
+                "nonnegative_support_proof"
+            ],
+            "positive_interval_factorization": support_majorant[
+                "positive_interval_factorization"
+            ],
+            "positive_interval_bernstein_coordinate": support_majorant[
+                "positive_interval_bernstein_coordinate"
+            ],
+            "positive_interval_quotient_bernstein_coefficients_degree_4": [
+                _fraction_record(pair)
+                for pair in support_majorant[
+                    "positive_interval_quotient_bernstein_coefficients_degree_4"
+                ]
+            ],
+            "positive_interval_proof": support_majorant["positive_interval_proof"],
+            "haar": {
+                "moment_majorant_nonnegative_upper_bound": _fraction_record(
+                    support_majorant["haar"][
+                        "moment_majorant_nonnegative_upper_bound"
+                    ]
+                ),
+                "negative_probability_lower_bound": _fraction_record(
+                    support_majorant["haar"]["negative_probability_lower_bound"]
+                ),
+            },
+            "finite_q_bounds": [
+                {
+                    "q": int(row["q"]),
+                    "moment_majorant_nonnegative_upper_bound": _fraction_record(
+                        row["moment_majorant_nonnegative_upper_bound"]
+                    ),
+                    "negative_probability_lower_bound": _fraction_record(
+                        row["negative_probability_lower_bound"]
+                    ),
+                    "observed_negative_fraction": _fraction_record(
+                        row["observed_negative_fraction"]
+                    ),
+                    "verified_bound_holds": row["verified_bound_holds"],
+                }
+                for row in support_majorant["finite_q_bounds"]
+            ],
+            "strictly_improves_cubic_square_bound": support_majorant[
+                "strictly_improves_cubic_square_bound"
+            ],
+            "construction_scope": support_majorant["construction_scope"],
+        },
         "conditional_consequence": dict(source["conditional_consequence"]),
         "scope": source["scope"],
     }
@@ -898,7 +1027,7 @@ def make_evaluation(
             "summary": (
                 "F has exact USp(4) range [-20,4/3] and Haar moments -1, 3, -11, 56, "
                 "-374, 3117. A degree-six moment majorant proves "
-                "Pr_Haar(F<0)>=4360/12023. All six frozen moment gaps shrink directionally "
+                "Pr_Haar(F<0)>=2478693937/6358302720. All six frozen moment gaps shrink directionally "
                 "from q=3 to 5 to 7, without asserting monotonicity beyond those fields "
                 "or convergence."
             ),
@@ -934,8 +1063,9 @@ def make_evaluation(
             {
                 "code": "SIGN_BOUND_NOT_SIGN_PROBABILITY",
                 "statement": (
-                    "The certified value 4360/12023 is a Haar lower bound, not the exact "
-                    "negative-sign probability; the finite-family liminf remains conditional."
+                    "The support-adapted value 2478693937/6358302720 is a Haar lower bound, "
+                    "not the exact negative-sign probability or a claimed optimal moment bound; "
+                    "the finite-family liminf remains conditional."
                 ),
             },
             {

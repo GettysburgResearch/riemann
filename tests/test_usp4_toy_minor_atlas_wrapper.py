@@ -172,11 +172,36 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
                 Fraction(observed["numerator"], observed["denominator"]),
             )
             self.assertTrue(row["verified_bound_holds"])
+        stronger = certificate["support_adapted_majorant"]
+        strong_haar = stronger["haar"]["negative_probability_lower_bound"]
+        self.assertEqual(
+            Fraction(strong_haar["numerator"], strong_haar["denominator"]),
+            Fraction(2478693937, 6358302720),
+        )
+        self.assertTrue(stronger["strictly_improves_cubic_square_bound"])
+        self.assertTrue(
+            all(
+                row["numerator"] > 0
+                for row in stronger[
+                    "positive_interval_quotient_bernstein_coefficients_degree_4"
+                ]
+            )
+        )
+        for stronger_row, baseline_row in zip(
+            stronger["finite_q_bounds"], certificate["finite_q_bounds"], strict=True
+        ):
+            strong_lower = stronger_row["negative_probability_lower_bound"]
+            baseline_lower = baseline_row["negative_probability_lower_bound"]
+            self.assertGreater(
+                Fraction(strong_lower["numerator"], strong_lower["denominator"]),
+                Fraction(baseline_lower["numerator"], baseline_lower["denominator"]),
+            )
         conditional = certificate["conditional_consequence"]
         self.assertEqual(
             conditional["status"], "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE"
         )
         self.assertTrue(conditional["not_an_equidistribution_proof"])
+        self.assertIn("2478693937/6358302720", conditional["statement"])
         self.assertIn("lower bound", certificate["scope"])
 
     def test_exact_arithmetic_is_firewalled_from_convergence(self) -> None:
@@ -251,6 +276,26 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
         reversed_sign_rows = copy.deepcopy(self.result)
         reversed_sign_rows["negative_sign_moment_certificate"]["finite_q_bounds"].reverse()
         hostile_cases.append(reversed_sign_rows)
+
+        altered_support_coefficient = copy.deepcopy(self.result)
+        altered_support_coefficient["negative_sign_moment_certificate"][
+            "support_adapted_majorant"
+        ]["coefficients_in_x_low_to_high"][1]["numerator"] += 1
+        hostile_cases.append(altered_support_coefficient)
+
+        altered_bernstein = copy.deepcopy(self.result)
+        altered_bernstein["negative_sign_moment_certificate"][
+            "support_adapted_majorant"
+        ]["positive_interval_quotient_bernstein_coefficients_degree_4"][0][
+            "numerator"
+        ] += 1
+        hostile_cases.append(altered_bernstein)
+
+        reversed_support_rows = copy.deepcopy(self.result)
+        reversed_support_rows["negative_sign_moment_certificate"][
+            "support_adapted_majorant"
+        ]["finite_q_bounds"].reverse()
+        hostile_cases.append(reversed_support_rows)
 
         for hostile in hostile_cases:
             with self.subTest(hostile=hostile):

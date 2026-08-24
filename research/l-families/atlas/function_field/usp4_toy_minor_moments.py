@@ -41,6 +41,13 @@ SIGN_MAJORANT_COEFFICIENTS = (
     Fraction(264, 12023),
     Fraction(-23, 12023),
 )
+SUPPORT_MAJORANT_BERNSTEIN_COEFFICIENTS = (
+    Fraction(1985264, 38115),
+    Fraction(145906487, 2401245),
+    Fraction(3063511081, 43222410),
+    Fraction(198471997, 2401245),
+    Fraction(1001492, 10395),
+)
 
 
 def _clean(poly: Mapping[Exponent, int]) -> Laurent:
@@ -226,6 +233,104 @@ def convolve_rational(
     return result
 
 
+def add_rational_polynomials(
+    left: Sequence[Fraction], right: Sequence[Fraction]
+) -> list[Fraction]:
+    """Add ordinary exact polynomials and remove trailing zero coefficients."""
+
+    result = [Fraction(0) for _ in range(max(len(left), len(right)))]
+    for index, value in enumerate(left):
+        result[index] += value
+    for index, value in enumerate(right):
+        result[index] += value
+    while result and result[-1] == 0:
+        result.pop()
+    return result
+
+
+def scale_rational_polynomial(
+    coefficients: Sequence[Fraction], scalar: Fraction
+) -> list[Fraction]:
+    return [scalar * coefficient for coefficient in coefficients]
+
+
+def affine_compose_rational(
+    coefficients: Sequence[Fraction], offset: Fraction, slope: Fraction
+) -> list[Fraction]:
+    """Return P(offset+slope*x) for an ordinary exact polynomial P."""
+
+    result: list[Fraction] = []
+    affine_power = [Fraction(1)]
+    for coefficient in coefficients:
+        result = add_rational_polynomials(
+            result, scale_rational_polynomial(affine_power, coefficient)
+        )
+        affine_power = convolve_rational(affine_power, [offset, slope])
+    return result
+
+
+def bernstein_to_power(coefficients: Sequence[Fraction]) -> list[Fraction]:
+    """Convert degree-n Bernstein coefficients on [0,1] to power coefficients."""
+
+    if not coefficients:
+        return []
+    degree = len(coefficients) - 1
+    result: list[Fraction] = []
+    for index, coefficient in enumerate(coefficients):
+        basis = convolve_rational(
+            [Fraction(0)] * index + [Fraction(1)],
+            [
+                Fraction(comb(degree - index, power)) * (-1) ** power
+                for power in range(degree - index + 1)
+            ],
+        )
+        result = add_rational_polynomials(
+            result,
+            scale_rational_polynomial(basis, coefficient * comb(degree, index)),
+        )
+    return result
+
+
+def support_adapted_sign_majorant() -> dict[str, list[Fraction]]:
+    """Construct and exactly verify a support-adapted degree-six majorant."""
+
+    polynomial_t = [Fraction(1)]
+    for factor in (
+        [Fraction(1), Fraction(1)],
+        convolve_rational([Fraction(-13), Fraction(20)], [Fraction(-13), Fraction(20)]),
+        convolve_rational([Fraction(-7), Fraction(40)], [Fraction(-7), Fraction(40)]),
+        [Fraction(2927), Fraction(-2792)],
+    ):
+        polynomial_t = convolve_rational(polynomial_t, factor)
+    polynomial_t = scale_rational_polynomial(polynomial_t, Fraction(1, 14407470))
+    polynomial_x = affine_compose_rational(
+        polynomial_t, Fraction(7, 8), Fraction(3, 32)
+    )
+
+    quotient_z = bernstein_to_power(SUPPORT_MAJORANT_BERNSTEIN_COEFFICIENTS)
+    quotient_t = affine_compose_rational(quotient_z, Fraction(-7), Fraction(8))
+    interval_factor = convolve_rational(
+        [Fraction(-7, 8), Fraction(1)], [Fraction(1), Fraction(-1)]
+    )
+    reconstructed = add_rational_polynomials(
+        [Fraction(1)], convolve_rational(interval_factor, quotient_t)
+    )
+    if reconstructed != polynomial_t:
+        raise ArithmeticError("support-adapted sign-majorant identity failed")
+    if sum(polynomial_t[index] * Fraction(7, 8) ** index for index in range(7)) != 1:
+        raise ArithmeticError("support majorant does not equal one at t=7/8")
+    if sum(polynomial_t) != 1:
+        raise ArithmeticError("support majorant does not equal one at t=1")
+    if not all(coefficient > 0 for coefficient in SUPPORT_MAJORANT_BERNSTEIN_COEFFICIENTS):
+        raise ArithmeticError("support-majorant Bernstein positivity failed")
+    return {
+        "polynomial_t": polynomial_t,
+        "polynomial_x": polynomial_x,
+        "quotient_t": quotient_t,
+        "quotient_bernstein": list(SUPPORT_MAJORANT_BERNSTEIN_COEFFICIENTS),
+    }
+
+
 def polynomial_moment(
     coefficients: Sequence[Fraction], raw_moments: Sequence[int | Fraction]
 ) -> Fraction:
@@ -269,7 +374,14 @@ def negative_sign_moment_certificate(
     if haar_nonnegative_upper != Fraction(7663, 12023):
         raise ArithmeticError("unexpected Haar sign-majorant expectation")
 
+    support_majorant = support_adapted_sign_majorant()
+    support_haar_upper = polynomial_moment(support_majorant["polynomial_x"], haar)
+    support_haar_lower = 1 - support_haar_upper
+    if support_haar_upper != Fraction(3879608783, 6358302720):
+        raise ArithmeticError("unexpected support-adapted Haar majorant expectation")
+
     finite_bounds: list[dict[str, object]] = []
+    support_finite_bounds: list[dict[str, object]] = []
     for q in (3, 5, 7):
         comparison = comparisons_by_q[q]
         family = families_by_q[q]
@@ -291,6 +403,25 @@ def negative_sign_moment_certificate(
                     nonnegative_upper
                 ),
                 "negative_probability_lower_bound": _fraction_pair(negative_lower),
+                "observed_negative_fraction": _fraction_pair(observed_negative),
+                "verified_bound_holds": True,
+            }
+        )
+        support_nonnegative_upper = polynomial_moment(
+            support_majorant["polynomial_x"], finite_raw
+        )
+        support_negative_lower = 1 - support_nonnegative_upper
+        if not negative_lower < support_negative_lower <= observed_negative:
+            raise ArithmeticError(f"q={q} support-adapted negative-sign bound failed")
+        support_finite_bounds.append(
+            {
+                "q": q,
+                "moment_majorant_nonnegative_upper_bound": _fraction_pair(
+                    support_nonnegative_upper
+                ),
+                "negative_probability_lower_bound": _fraction_pair(
+                    support_negative_lower
+                ),
                 "observed_negative_fraction": _fraction_pair(observed_negative),
                 "verified_bound_holds": True,
             }
@@ -337,6 +468,51 @@ def negative_sign_moment_certificate(
             "negative_probability_lower_bound": _fraction_pair(haar_negative_lower),
         },
         "finite_q_bounds": finite_bounds,
+        "support_adapted_majorant": {
+            "coordinate": (
+                "t=(3*x+28)/32 maps x in [-20,4/3] to t in [-1,1], with "
+                "x>=0 equivalent to t>=7/8"
+            ),
+            "polynomial_factorization": (
+                "p(t)=(t+1)*(20*t-13)^2*(40*t-7)^2*(2927-2792*t)/14407470"
+            ),
+            "coefficients_in_x_low_to_high": [
+                _fraction_pair(value) for value in support_majorant["polynomial_x"]
+            ],
+            "pointwise_statement": (
+                "1_{x>=0} <= p((3*x+28)/32) on [-20,4/3]"
+            ),
+            "nonnegative_support_proof": (
+                "On t in [-1,1], t+1>=0, the two middle factors are squares, "
+                "and 2927-2792*t>=135, so p(t)>=0."
+            ),
+            "positive_interval_factorization": (
+                "p(t)-1=(t-7/8)*(1-t)*Q(t)"
+            ),
+            "positive_interval_bernstein_coordinate": "z=8*t-7 in [0,1]",
+            "positive_interval_quotient_bernstein_coefficients_degree_4": [
+                _fraction_pair(value)
+                for value in support_majorant["quotient_bernstein"]
+            ],
+            "positive_interval_proof": (
+                "Every stored Bernstein coefficient of Q is positive, hence Q(t)>0 "
+                "on [7/8,1]; both remaining factors are nonnegative there."
+            ),
+            "haar": {
+                "moment_majorant_nonnegative_upper_bound": _fraction_pair(
+                    support_haar_upper
+                ),
+                "negative_probability_lower_bound": _fraction_pair(
+                    support_haar_lower
+                ),
+            },
+            "finite_q_bounds": support_finite_bounds,
+            "strictly_improves_cubic_square_bound": True,
+            "construction_scope": (
+                "This rational support-adapted certificate is not claimed optimal among all "
+                "degree-six polynomial majorants."
+            ),
+        },
         "conditional_consequence": {
             "status": "CONDITIONAL_ON_FIRST_SIX_MOMENT_CONVERGENCE",
             "not_an_equidistribution_proof": True,
@@ -345,16 +521,20 @@ def negative_sign_moment_certificate(
                 "converge to the six stored USp(4) Haar moments."
             ),
             "statement": (
-                "Under that assumption, liminf_q Pr(K_D/q^2<0) >= 4360/12023."
+                "Under that assumption, liminf_q Pr(K_D/q^2<0) >= "
+                "2478693937/6358302720."
             ),
             "reason": (
-                "The expectation of the fixed degree-six majorant then converges to "
-                "7663/12023; no boundary-mass or weak-convergence argument is needed."
+                "The expectation of the stronger support-adapted degree-six majorant then "
+                "converges to 3879608783/6358302720; no boundary-mass or "
+                "weak-convergence argument is needed."
             ),
         },
         "scope": (
-            "This is an exact lower bound, not an evaluation of the Haar sign probability. "
-            "The q=3,5,7 rows are exact frozen checks; the liminf statement is conditional."
+            "These are exact lower bounds, not an evaluation of the Haar sign probability. "
+            "The cubic-square construction is retained as a simple baseline; the rational "
+            "support-adapted polynomial is stronger but is not claimed optimal. The q=3,5,7 "
+            "rows are exact frozen checks; the liminf statement is conditional."
         ),
     }
 
