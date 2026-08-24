@@ -4,6 +4,7 @@ Claim ID: `L-106073`
 Programme aliases: `LFAM1.HBC_L2_CLOSURE`, `STRESS.CROP_COMPOSITION`, `LFAM2.BLOCK_FAMILY_ASSEMBLY`  
 Status: **PROVED COMPOSITION FROM BLOCK OCCUPANCY TO THE NATIVE RESIDUAL**  
 Created: 2026-08-25  
+Updated: 2026-08-25  
 Depends on: `L-106001`, `L-106004`, `L-106060`, `L-106070--L-106072`; parent `L-102883`, `L-102888`  
 Programme issues: #743, #736, #737  
 RH status: **not assumed**
@@ -40,32 +41,43 @@ R_{\mathcal B,A;\chi_0}(X)
 \tag{L-106073.2}
 \]
 
-Therefore the positive complete family norm contains the native piece:
+Therefore the positive complete family norm contains the native piece.  On a
+dyadic horizon \(I_X=[X,2X]\), put
 
 \[
-\boxed{
-\|R_{\mathcal B,A}(X)\|^2
-\le
+\mathfrak M_{\mathcal B,A}(I_X)
+=
+\int_{I_X}
 \sum_{\chi\ ({\rm mod}\ \ell)}
-\|R_{\mathcal B,A;\chi}(X)\|^2.
-}
+\|R_{\mathcal B,A;\chi}(t)\|^2
+\frac{dt}{t}.
 \tag{L-106073.3}
 \]
 
-This is a literal principal-character inclusion, not an amplifier lower bound.
+Then
+
+\[
+\boxed{
+\int_{I_X}\|R_{\mathcal B,A}(t)\|^2\frac{dt}{t}
+\le
+\mathfrak M_{\mathcal B,A}(I_X).
+}
+\tag{L-106073.4}
+\]
+
+This is literal principal-character inclusion, not an amplifier lower bound.
 No ramified completion is invoked after residual selection; unramifiedness was
-proved coefficientwise before (L-106073.3).
+proved coefficientwise before (L-106073.4).
 
-## 2. Exact character expansion
+## 2. Exact CROP adapter on the coloured block
 
-Complete character orthogonality expands the right side of (L-106073.3) into
-physical pairs
+Complete character orthogonality expands (L-106073.3) into physical pairs
 
 \[
 P c^2\equiv Qd^2\pmod\ell.
 \]
 
-The expansion has exactly the following source-owned parts:
+The source-owned expansion has exactly:
 
 ```text
 equal physical products;
@@ -84,73 +96,73 @@ physical observation, that theorem gives
 
 \[
 \boxed{
-\|S_{\mathfrak a}(X)\|^2
+\|S_{\mathfrak a}(t)\|^2
 \le
-(\ell-1)D_{\mathfrak a}(X)
+(\ell-1)D_{\mathfrak a}(t)
 <
-\ell D_{\mathfrak a}(X).
+\ell D_{\mathfrak a}(t).
 }
-\tag{L-106073.4}
+\tag{L-106073.5}
 \]
 
 No one-phase estimate or phase-cardinality Cauchy is used.  All inherited
 external owner phases and internal discrepancy phases commute with the
 character and two-phase transforms.
 
-The exact family decomposition in `T-106060` therefore yields
+The exact implication proved in `T-106060.2--T-106060.4`, now applied to this
+single unramified block-colour family with its frozen modulus, is
 
 \[
 \boxed{
-\sum_{\chi\ ({\rm mod}\ \ell)}
-\|R_{\mathcal B,A;\chi}(X)\|^2
+\mathfrak M_{\mathcal B,A}(I_X)
 \ll
 X^{o(1)}
 +
-C
+X^{o(1)}
+\int_{I_X}
 \sum_{\mathfrak a\subset(\mathcal B,A)}
-\ell D_{\mathfrak a}(X),
-}
-\tag{L-106073.5}
-\]
-
-where \(C\) is an absolute finite-sector constant.  Equation
-(L-106073.5) is precisely the conclusion-facing use for which
-`CROP106060` was defined.
-
-By `L-106072.6`, the second term is \(X^{o(1)}\).  Combining
-(L-106073.3)--(L-106073.5) gives
-
-\[
-\boxed{
-\|R_{\mathcal B,A}(X)\|^2=X^{o(1)}
+\ell D_{\mathfrak a}(t)
+\frac{dt}{t}.
 }
 \tag{L-106073.6}
 \]
 
-uniformly on the dyadic horizon, with the same statement after logarithmic
-integration.
+This is the conclusion-facing normalization for which `CROP106060` was
+defined; it is not a new pointwise inequality for individual signed Gram
+entries.
+
+By `L-106072.6`, the integral in (L-106073.6) is \(X^{o(1)}\).  Combining
+(L-106073.4) and (L-106073.6) gives
+
+\[
+\boxed{
+\int_{I_X}\|R_{\mathcal B,A}(t)\|^2\frac{dt}{t}
+=X^{o(1)}.
+}
+\tag{L-106073.7}
+\]
 
 ## 3. Recombination of all blocks
 
 The number of block-colour pieces is \(X^{o(1)}\).  Cauchy in the finite
-linear partition gives
+linear partition gives pointwise
 
 \[
-\|R_{\rm HBC}(X)\|^2
+\|R_{\rm HBC}(t)\|^2
 \le
 X^{o(1)}
 \sum_{\mathcal B,A}
-\|R_{\mathcal B,A}(X)\|^2.
+\|R_{\mathcal B,A}(t)\|^2.
 \]
 
-Hence, on every dyadic horizon \([X,2X]\),
+Integrating and using (L-106073.7) proves
 
 \[
 \boxed{
 \int_X^{2X}|R_{\rm HBC}(t)|^2\frac{dt}{t}
 =X^{o(1)}.
 }
-\tag{L-106073.7}
+\tag{L-106073.8}
 \]
 
 All-chaos carrier cancellation is retained inside each summand before this
@@ -171,7 +183,7 @@ For the scalar fixed observation, logarithmic Cauchy--Schwarz gives
 \right)^{1/2}.
 \]
 
-Using (L-106073.7) and summing the \(O(\log Y)\) dyadic horizons proves
+Using (L-106073.8) and summing the \(O(\log Y)\) dyadic horizons proves
 
 \[
 \boxed{
@@ -179,7 +191,7 @@ Using (L-106073.7) and summing the \(O(\log Y)\) dyadic horizons proves
 \frac{dt}{t}
 =Y^{o(1)}.
 }
-\tag{L-106073.8}
+\tag{L-106073.9}
 \]
 
 Thus
@@ -188,7 +200,8 @@ Thus
 \boxed{\mathrm{HBCQDSP}_{102888}}
 \]
 
-is proved by the scale-matched family construction.
+is proved by the scale-matched family construction, subject to the exact CROP
+adapter already claimed in `T-106060`.
 
 ## Exact boundary
 
@@ -199,6 +212,7 @@ character collision classification            INHERITED PROVED EXACT
 equal products                                INHERITED PROVED SUBPOWER
 two-phase line contraction                     INHERITED PROVED SHARP
 weighted root occupancy                        PROVED SUBPOWER
+CROP-to-family adapter                         INHERITED FROM T-106060
 native HBC logarithmic L2                      PROVED SUBPOWER
 HBCQDSP102888 negative mass                    PROVED SUBPOWER
 ```
