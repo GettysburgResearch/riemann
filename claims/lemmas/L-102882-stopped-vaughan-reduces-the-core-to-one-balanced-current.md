@@ -1,96 +1,86 @@
-# L-102882 — The stopped Vaughan source reduces to one balanced current
+# L-102882 — The stopped Vaughan source has one closed Type-I sign and two coherent owner packets
 
 Claim ID: `L-102882`  
-Status: **PROVED EXACT CONJUNCTIVE REDUCTION**  
+Status: **PROVED EXACT SOURCE DECOMPOSITION; COHERENT SUM OPEN**  
 Created: 2026-08-24  
-Depends on: `L-102868--L-102881`; `L-102733`  
-RH status: **not assumed**
+Corrected: 2026-08-24  
+Depends on: `L-102868--L-102881`  
+RH status: **unproved**
 
-For each second owner prime `q`, let `E_q(Y)` denote the endpoint,
-carrier-recombined conclusion cost of the literal stopped square-core source at
-scale `Y`.  The cost may be taken to be the centered radial gauge or the
-logarithmic negative-mass envelope after all already-frozen source/gauge
-recombinations.
-
-Let `B_q(Y)` denote the same cost restricted to the exact balanced Type-II
-source `mathcal B_(p,q)` of `L-102868.1`.
-
-## 1. One-step inequality
-
-The coefficient-exact stopped Vaughan decomposition, the favorable Type-I
-square of `L-102880`, and subadditivity give
+For each second owner prime `q`, the literal stopped square-core source has the
+coefficient-exact decomposition
 
 \[
 \boxed{
-E_q(Y)
-\le
-B_q(Y)
-+C_RY^{-1/6}
-+C(\log(2Y))^2
-\sum_{\ell\ge q}{1\over\ell}
-E_\ell(Y/\ell^2).
+\mathcal C_{p,q}
+=\mathcal T_{p,q}^{\rm full}
++\mathcal T_{p,q}^{\rm bdry}
++\mathcal B_{p,q}.
 }
 \tag{L-102882.1}
 
-Only support-active primes occur.  The last term is the literal smooth-boundary
-source, not a source-mass proxy.
+The three terms have the following exact status.
 
-## 2. Ordered-prime solution
+## 1. Unrestricted Type-I part
 
-Assume the balanced row is uniformly subpower:
-
-\[
-\boxed{
-B_q(Y)\ll_\varepsilon Y^\varepsilon
-\quad\text{for every }q.
-}
-\tag{L-102882.2}
-
-Iterate (L-102882.1).  Every boundary history has nondecreasing prime labels,
-so `L-102881.4` bounds the complete path mass by
+`L-102880` proves
 
 \[
-\prod_{\ell\ge q}(1-\ell^{-1-2\varepsilon})^{-1}
-\le\zeta(1+2\varepsilon).
+\mathcal T_{p,q}^{\rm full}(Y)
+=c_+M_{U,q}^2+O_R(Y^{-1/6}),
+\qquad c_+>0.
 \]
 
-The finitely many prefix logarithms may be absorbed by replacing `epsilon` by
-`epsilon/2`.  Consequently
+Hence its adverse part is power-saving and is closed in every one-sided
+conclusion ledger.
+
+## 2. Smooth-boundary packet
+
+`L-102881` proves that, for every fixed squareclass and every fixed nonzero
+owner phase,
 
 \[
-\boxed{
-E_q(Y)\ll_\varepsilon Y^\varepsilon
-\quad\text{for every }q.
-}
-\tag{L-102882.3
+|\mathcal T_{p,q}^{\rm bdry}(Y)|
+\ll_R(\log(2Y))^2\log\log(3Y).
 \]
 
-## 3. Exact new gate
+This closes its local coefficient/energy cost.  It does **not** allow the
+boundary fields to be summed source-blindly over all owner squareclasses.
+
+## 3. Balanced Type-II packet
+
+The exact balanced source is `L-102868.3`; it retains the stopped monoids,
+Vaughan coefficients, adaptive nonzero owner phases and all six core
+variables.
+
+## Exact final coherent statement
 
 Define
 
 ```text
-BCQDSP102882:
-  uniformly in the second owner q, the carrier-recombined stopped balanced
-  Type-II current of L-102868.3 has subpower logarithmic negative/radial cost
-  after the exact adaptive nonzero owner phases.
+SVQDSP102882:
+  after exact carrier, source-region, gauge, shared-owner and owner/core-overlap
+  recombination, the coherent owner-squareclass sum of
+
+    T_bdry + B_bal
+
+  has subpower logarithmic negative mass in the fixed ratio-eight outer
+  observation, uniformly in the stopping prime q.
 ```
 
 Then
 
 \[
 \boxed{
-\mathrm{BCQDSP}_{102882}
+\mathrm{SVQDSP}_{102882}
 \Longrightarrow
 \mathrm{BQSP}_{102870}
 \Longrightarrow
 \mathrm{RH}.
 }
-\tag{L-102882.4}
+\tag{L-102882.2}
 
-The first implication uses no unstopped lattice and no independent smooth-
-boundary hypothesis.  The unrestricted Type-I adverse part and every ordered
-boundary history are already closed by `L-102880--L-102881`.
-
-Thus the coherent squareclass frontier can be attacked entirely in the literal
-balanced Vaughan coordinates.
+The unrestricted Type-I sign is no longer part of the open theorem.  The
+smooth boundary and balanced Type-II rows share one coherent owner/phase
+summation; neither is silently discarded, and no recursive boundary closure is
+claimed without that common arithmetic estimate.
