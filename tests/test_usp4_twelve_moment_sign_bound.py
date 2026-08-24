@@ -106,6 +106,15 @@ class FixtureTests(unittest.TestCase):
             for family in q_scan["families"]
         }
         self.assertEqual(list(by_q), [3, 5, 7])
+        expected_supports = {
+            3: (Fraction(-8, 3), Fraction(8, 9)),
+            5: (Fraction(-116, 25), Fraction(29, 25)),
+            7: (Fraction(-282, 49), Fraction(59, 49)),
+        }
+        for family in q_scan["families"]:
+            q = int(family["q"])
+            values = [Fraction(int(value), q**2) for value in family["K_histogram"]]
+            self.assertEqual((min(values), max(values)), expected_supports[q])
         for order, haar_moment in enumerate(haar):
             values = [by_q[q][order] for q in (3, 5, 7)]
             self.assertTrue(

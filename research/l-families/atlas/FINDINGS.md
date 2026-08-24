@@ -555,6 +555,17 @@ how much extreme-tail mass is still absent at these small fields. This argues
 for character decomposition or effective equidistribution, not a materially
 larger brute-force scan.
 
+The exact histogram supports make the missing tail asymmetric:
+
+```text
+q=3: [-8/3, 8/9],  q=5: [-116/25, 29/25],  q=7: [-282/49, 59/49].
+```
+
+The positive endpoint is already moving toward the Haar edge `4/3`, while the
+most negative `q=7` value is only about `-5.76`, far from the Haar edge `-20`.
+Thus the high even-moment deficit is specifically consistent with an absent
+far-negative tail, not merely with coarse histogram resolution.
+
 A separate deterministic Weyl quadrature asks the corresponding sign-law
 question. Four phase shifts on periodic grids through `512 x 512` (1,376,256
 cells in total, with a five-second guard) give a final phase mean
@@ -571,6 +582,18 @@ directed interval arithmetic. Thus `mu_Haar(F<0) approximately 0.738` is a
 numerical nomination for a future sign-distribution theorem, not a certified
 probability, convergence claim, or rate.
 
+At the displayed phase mean, the square-root-scaled gaps
+
+```text
+sqrt(q) * (mu_Haar-rho_-(q)): 0.187442, 0.174076, 0.170333
+```
+
+are notably steadier than the unscaled or `q`-scaled gaps. This nominates an
+effective `q^{-1/2}` sign-law rate, with a possible one-sided leading constant
+near `0.17`. It is deliberately not fitted into the atlas result: the Haar
+value is not a certified interval, there are only three finite fields, and an
+indicator rate additionally requires quantitative control near `F=0`.
+
 One part of that future implication is already elementary: `F=0` is the zero
 set of a nonzero polynomial in the two trace coordinates, hence has Haar
 measure zero. Thus any independently proved weak convergence of the family
@@ -579,7 +602,7 @@ Obtaining an effective sign rate would still require quantitative control near
 that boundary.
 
 Thus the proved finite-family first-moment limit equals the exact Haar mean
-`-1`. This does not prove convergence of moments two through six, full
+`-1`. This does not prove convergence of moments two through twelve, full
 `USp(4)` equidistribution, a memberwise sign, or any number-field statement.
 The statistic remains a toy reciprocal-coefficient minor, not Pick/Loewner,
 `XD`, or `HCNC`.

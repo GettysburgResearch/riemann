@@ -461,6 +461,13 @@ degree-six predecessor is claimed optimal. This creates two useful stopping
 points for a proof: moments through six already give a substantial density
 theorem, while moments through twelve give a materially stronger one.
 
+The finite histogram supports at `q=3,5,7` are exactly
+`[-8/3,8/9]`, `[-116/25,29/25]`, and `[-282/49,59/49]`. Their positive edges
+move near the Haar endpoint `4/3`, but their negative edges remain far from
+`-20`. Any effective high-moment argument must therefore control the rare
+far-negative Frobenius classes rather than treating the discrepancy as
+uniform smoothing across the support.
+
 The bounded shifted-grid Weyl quadrature additionally nominates
 
 \[
@@ -474,6 +481,19 @@ Consequently weak convergence to Haar already implies convergence of the sign
 proportions; an effective rate for this discontinuous indicator needs
 quantitative boundary control. The displayed probability is numerical, not a
 certified interval or a premise of the target.
+
+Using only that display value, the three quantities
+`sqrt(q)*(mu_Haar-rho_-(q))` are `0.187442, 0.174076, 0.170333`. Their tight
+clustering nominates the concrete effective target
+
+\[
+\rho_-(q)=\mu_{\mathrm{Haar}}(F<0)+O(q^{-1/2}).
+\]
+
+A secondary numerical possibility is a one-sided leading correction of size
+about `0.17/sqrt(q)`. The bound, not that constant, is the responsible theorem
+target: three fields and a non-rigorous quadrature value cannot determine an
+asymptotic coefficient.
 
 Why this target: the first moment no longer needs nomination. Its exact
 squarefree-sieve proof shows that low moments can expose structure more sharply
