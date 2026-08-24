@@ -3,6 +3,7 @@
 Claim ID: `L-105322`  
 Status: **PROVED FOR THE FROZEN STATIONARY MODEL**  
 Created: 2026-08-23  
+Normalization repaired: 2026-08-24 by `L-105520`  
 Depends on: `L-105321`; Montgomery--Vaughan mean value  
 RH status: **not assumed**
 
@@ -11,9 +12,15 @@ RH status: **not assumed**
 Let `a_L(n)` be as in `L-105321` and put
 
 \[
-f_L(t)=1+2\Re\sum_{n\le e^L}{a_L(n)\over n^{it}}.
+\boxed{
+f_L(t)=1+2\Re\sum_{n\le e^L}
+a_L(n)n^{-1/2-it}.
+}
 \tag{L-105322.1}
 \]
+
+The factor \(n^{-1/2}\) is load-bearing.  An earlier display omitted it while
+retaining the `/n` diagonal energy below; `L-105520` records the correction.
 
 For a long interval `I=[T,2T]` with `e^L=T^theta`, fixed `theta<1`, the
 Montgomery--Vaughan mean-value theorem gives
@@ -38,6 +45,9 @@ The factor two is the Hermitian forward/backward symmetrization. By
 1+{7\over160}={167\over160}.
 \tag{L-105322.4}
 \]
+
+At a physical cutoff `e^(alpha L)`, the right side is governed by the scaled
+constant `D_1(alpha)` of `L-105520`, not silently by the `alpha=1` value.
 
 ## 2. Compression inequality
 
@@ -96,6 +106,7 @@ then
 ={1568160\over1703567}
 =0.920515\ldots .}
 \tag{L-105322.6}
+\]
 
 Combining this with the multiplicity nuisance density `821/10000` from
 `L-105311` gives the conditional line proportion
@@ -106,6 +117,7 @@ Combining this with the multiplicity nuisance density `821/10000` from
 ={5765136493\over8517835000}
 =0.676831\ldots .}
 \tag{L-105322.7}
+\]
 
 This exceeds the conservative upper decimal `0.672501` for the published
 Montgomery--Taylor constant.
@@ -115,4 +127,5 @@ Montgomery--Taylor constant.
 `K_(L,J)` is the frozen stationary prime-side model. The theorem does not say
 that the actual Xi contour compression is a one-percent perturbation. That
 entry-dependent, boundary and canonical-product comparison is exactly
-`WXFER105320`.
+`WXFER105320`.  The corrected display also does not solve the Hardy-strip
+polarization interface isolated by `R-105520`.

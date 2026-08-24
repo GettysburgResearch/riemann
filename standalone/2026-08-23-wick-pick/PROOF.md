@@ -87,13 +87,19 @@ The first three terms and a geometric tail yield
 <{7\over320}.
 \]
 
-The two-sided symbol
+The correctly normalized two-sided symbol is
 
 \[
-f_L(t)=1+2\Re\sum_{n\le e^L}a_L(n)n^{-it}
+\boxed{
+f_L(t)=1+2\Re\sum_{n\le e^L}
+a_L(n)n^{-1/2-it}.
+}
 \]
 
-has mean `1+o(1)` and mean square below `167/160+o(1)` by the
+An earlier version omitted `n^-1/2` while retaining `/n` in the energy; that
+display is corrected by `L-105520`.
+
+The symbol has mean `1+o(1)` and mean square below `167/160+o(1)` by the
 Montgomery--Vaughan mean-value theorem. Any constant-diagonal finite
 compression therefore has normalized effective rank at least `160/167`.
 After one-percent trace/HS transfer this becomes
@@ -112,4 +118,5 @@ With the T-105310 nuisance index `821/10000`, exact reverse Rolle gives
 \]
 
 The remaining theorem is the actual-Xi transfer `WXFER105320`. The model
-calculation does not itself prove a new zero proportion or RH.
+calculation does not itself prove a new zero proportion or RH.  At a physical
+cutoff `e^(alpha L)`, the scaled energy law of `L-105520` must be used.
