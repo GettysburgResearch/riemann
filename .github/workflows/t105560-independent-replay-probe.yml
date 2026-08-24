@@ -1,0 +1,97 @@
+name: T-105560 independent seven-point certificate replay probe
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/t105560-independent-replay-probe.yml
+      - .github/t105560-audit-trigger
+  push:
+    branches:
+      - ci/t105560-arb-replay-main-probe
+    paths:
+      - .github/workflows/t105560-independent-replay-probe.yml
+      - .github/t105560-audit-trigger
+
+permissions:
+  contents: read
+
+jobs:
+  independent-seven-point-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install python-flint
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'python-flint>=0.6,<1'
+      - name: Check out and install exact verifier
+        run: |
+          git clone https://github.com/ainta/zeta-simple-zeros.git external
+          cd external
+          git checkout --detach 040c5e899e658aed7b56a2a87f501798fe10761d
+          test "$(git rev-parse HEAD)" = 040c5e899e658aed7b56a2a87f501798fe10761d
+          python -m pip install -e .
+      - name: Replay exact certificates
+        run: |
+          mkdir audit-output
+          cd external
+          zeta-zero-verify three --json | tee ../audit-output/three.json
+          zeta-zero-verify seven --json --progress-every 1000000 | tee ../audit-output/seven.json
+      - name: Fail-closed result audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          def load(path):
+              text = Path(path).read_text()
+              for i in range(len(text)-1, -1, -1):
+                  if text[i] == '{':
+                      try:
+                          return json.loads(text[i:])
+                      except json.JSONDecodeError:
+                          pass
+              raise SystemExit(f'no JSON object in {path}')
+
+          three = load('audit-output/three.json')
+          seven = load('audit-output/seven.json')
+          assert three['verified'] is True
+          assert seven['verified'] is True
+          assert seven['certificate'] == 'seven-point'
+          assert seven['target'] == 'F6 >= 19/5000'
+          assert seven['grid'] == 4000
+          assert seven['precision_bits'] == 128
+          assert seven['kernel_table_sha256'] == 'a9992300d2bf71665aa2b6bd2727e798624cd297103bb200c7f0ca2baea55a2c'
+          assert seven['initial_boxes'] == 729
+          assert seven['nodes'] == 707901
+          assert seven['pruned'] == 354315
+          assert seven['splits'] == 353586
+          assert seven['maximum_depth'] == 37
+          d = seven['details']
+          assert d['interval_pruned'] == 257493
+          assert d['pressure_pruned'] == 3087
+          assert d['tangent_pruned'] == 93735
+          assert d['second_derivative_table_sha256'] == '7913c5511a572c32dd573cd53123d8cf3ddf73d3ec63b1aa823faae2ae83570a'
+          assert d['surviving_gap_components_cells'] == '[3809,4778];[7221,9363];[10572,44827]'
+          assert d['surviving_gap_components_count'] == 3
+          Path('audit-output/VERDICT.txt').write_text(
+              'PASS_T105560_INDEPENDENT_SEVEN_POINT_ARB_REPLAY\n'
+              'external_commit=040c5e899e658aed7b56a2a87f501798fe10761d\n'
+              'target=F6 >= 19/5000\n'
+              'nodes=707901\n'
+          )
+          print(Path('audit-output/VERDICT.txt').read_text())
+          PY
+      - name: Freeze checksums
+        run: sha256sum audit-output/* | tee audit-output/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: t105560-independent-seven-point-replay
+          path: audit-output/
+          if-no-files-found: error
+          retention-days: 90
