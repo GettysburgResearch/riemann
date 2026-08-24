@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Exact replay for T-105290.
 
-This checks the finite rational algebra only. It does not evaluate Xi, prove
-HOCH105290, prove ninety percent, density one, or RH.
+This checks the finite rational algebra only. It does not evaluate Xi, prove a
+global phase-family diagonal bound, prove HOCH105290, prove ninety percent,
+density one, or RH.
 """
 
 from __future__ import annotations
@@ -129,10 +130,14 @@ def main() -> None:
     assert bound == Fraction(702881150201, 52176522785587200)
     assert two_orientation < Fraction(1, 18500)
 
-    five_rung_source = Fraction(5, 18500)
-    assert five_rung_source == Fraction(1, 3700)
+    five_rung_unphased_source = Fraction(5, 18500)
+    assert five_rung_unphased_source == Fraction(1, 3700)
 
-    remaining = Fraction(997, 1000) - Fraction(9, 10) - five_rung_source
+    remaining = (
+        Fraction(997, 1000)
+        - Fraction(9, 10)
+        - five_rung_unphased_source
+    )
     assert remaining == Fraction(3579, 37000)
 
     check_matrix_degree_fixture()
@@ -140,7 +145,7 @@ def main() -> None:
     check_finite_alpha_bridge()
 
     payload = {
-        "schema": "riemann.x105290.hankel-owner-conductor.v1",
+        "schema": "riemann.x105290.hankel-owner-conductor.v2",
         "classification": "PASS_T105290_ALLPASS_HANKEL_OWNER_CONDUCTOR",
         "degree_five_q": {
             "6": "21/512",
@@ -156,13 +161,15 @@ def main() -> None:
             f"{two_orientation.numerator}/{two_orientation.denominator}"
         ),
         "two_orientation_below": "1/18500",
-        "five_rung_source_below": "1/3700",
+        "five_rung_unphased_source_below": "1/3700",
         "conrey_alpha5_lower": "997/1000",
-        "ninety_margin_after_source": "3579/37000",
+        "ninety_margin_after_unphased_source": "3579/37000",
         "matrix_degree_fixture_checked": True,
         "hankel_hs_identity_checked": True,
         "square_phase_hilbert_contraction_checked": True,
         "finite_alpha_bridge_checked": True,
+        "phase_family_excess_retained_in_hoch105290": True,
+        "global_phase_family_diagonal_bound_proved": False,
         "hoch105290_proved": False,
         "ninety_percent_established": False,
         "density_one_established": False,
