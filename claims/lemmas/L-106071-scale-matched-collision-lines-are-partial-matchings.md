@@ -2,9 +2,10 @@
 
 Claim ID: `L-106071`  
 Programme aliases: `LFAM1.INJECTIVE_COLLISION_LINES`, `STRESS.ROOT_RESIDUE_MATCHING`, `LFAM2.ARTIN_SCHREIER_BLOCK_MATCHING`  
-Status: **PROVED EXACT HILBERT-OCCUPANCY THEOREM**  
+Status: **PROVED EXACT CORE-MATCHING THEOREM; QUARTIC SHADOW NON-CONCLUSION-FACING**  
 Created: 2026-08-25  
-Depends on: `L-106001`, `L-106060`, `L-106070`; parent `L-102883--L-102886`  
+Corrected: 2026-08-25  
+Depends on: `L-106001`, `L-106060`, `L-106070`; parent `L-102883--L-102886`; `R-106071`  
 Programme issues: #743, #736, #737  
 RH status: **not assumed**
 
@@ -82,7 +83,8 @@ minus line is empty because
 0<c+d<16B<\ell.
 \]
 
-Hence the equal-owner diagonal is isolated without a residue multiplicity.
+Hence the equal-owner diagonal is isolated without a repeated-core residue
+multiplicity.
 
 ## 3. Representation aggregation
 
@@ -116,55 +118,76 @@ X^{o(1)}
 
 No different physical products have been identified in (L-106071.5).
 
-## 4. Root-residue occupancy has product-energy cost
+## 4. Valid quartic matched-pair shadow
 
-For a surviving line, let \(W_{P,Q,\pm;d}\) be its root-residue vector after
-the inherited bounded phase, carrier and observation maps.  Before the final
-bounded observation it is a rank-one tensor of the matched core aggregates;
-there is an absolute kernel constant \(C_K\) such that
+For one fixed owner pair and line, form the rank-one tensor
 
 \[
-\|W_{P,Q,\pm;d}\|^2
-\le
-C_K
-\|Z_{P,c(d)}\|^2
-\|Z_{Q,d}\|^2.
+W_{P,Q,\pm;d}
+=
+Z_{P,c(d)}\otimes\overline{Z_{Q,d}}.
 \tag{L-106071.7}
 \]
 
-Define
+Then
 
 \[
-D_{P,Q,\pm}
+\|W_{P,Q,\pm;d}\|^2
 =
-\sum_{d:\,(c(d),d)\in\mathcal L_{P,Q,\pm}}
-\|W_{P,Q,\pm;d}\|^2.
+\|Z_{P,c(d)}\|^2\|Z_{Q,d}\|^2.
 \]
 
 Because the line is a partial matching,
 
 \[
 \boxed{
-D_{P,Q,\pm}
+\sum_d\|W_{P,Q,\pm;d}\|^2
 \le
-C_K
 \left(\sum_c\|Z_{P,c}\|^2\right)
 \left(\sum_d\|Z_{Q,d}\|^2\right).
 }
 \tag{L-106071.8}
 \]
 
-This is the missing local occupancy estimate in `T-106060`: no coherent sum
-over several physical cores remains inside one root residue.
+Equation (L-106071.8) is a correct quartic Hilbert--Schmidt estimate for the
+matched owner-pair tensor.  It is useful as a mutation check and for genuinely
+quartic observables.
 
-Common-square extraction only inserts the favorable factor \(g^{-2}\), and
-internal discrepancy phases are unitary.  Hence (L-106071.8) is uniform over
-the equal-core, one-sided and two-sided packets when they remain recombined in
-the complete source ledger.
+It is **not** the quadratic occupancy required by the character family.  The
+exact family quantity is instead
+
+\[
+\sum_{r\ne0}
+\left\|
+\sum_{Pc^2\equiv r}Z_{P,c}
+\right\|^2,
+\]
+
+as proved in `L-106074`.  `R-106071` gives a scaling counterexample to replacing
+that quadratic Gram by the quartic left side of (L-106071.8).
+
+## 5. What the matching theorem actually removes
+
+The theorem removes:
+
+```text
+multiple lifts of one core residue in a dyadic block;
+multiple partners for one fixed core inside one fixed owner-pair line;
+overlap of the plus and minus square-root lines;
+representation multiplicity beyond the divisor-function ledger.
+```
+
+It does not remove:
+
+```text
+many different owner packets occupying the same residue cell;
+quadratic coherence among those owner packets;
+the global physical observation norm BPOE103300.
+```
 
 ## Scope
 
-The theorem proves exact injectivity and reduces root-residue occupancy to the
-product of two aggregated diagonal energies.  It does not yet show that the
-factor \(\ell\) required by principal leverage is harmless.  That quantitative
-payment is the content of `L-106072`.
+The exact core matching and representation statements remain proved.  The
+original claim that (L-106071.8) was the missing conclusion-facing occupancy
+estimate is withdrawn.  The corrected quadratic normal form is `L-106074`, and
+the current frontier is `T-106071`.
