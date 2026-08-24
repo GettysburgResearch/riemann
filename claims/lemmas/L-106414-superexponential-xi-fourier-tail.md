@@ -45,7 +45,7 @@ one has, uniformly for \(|\operatorname{Im}z|\le H\),
 \left|\Xi^{(j)}(z)-\Xi_L^{(j)}(z)\right|
 \le C_{j,H}\exp(-c_{j,H}e^{2L}).
 }
-\tag{L-106414.2
+\tag{L-106414.2}
 
 For \(L_T=\log T\), this becomes
 
@@ -55,7 +55,7 @@ For \(L_T=\log T\), this becomes
 \left|\Xi^{(j)}(z)-\Xi_{L_T}^{(j)}(z)\right|
 \ll_{A,j,H}T^{-A}
 }
-\tag{L-106414.3
+\tag{L-106414.3}
 
 for every fixed \(A>0\), once \(T\) is sufficiently large.
 
@@ -72,7 +72,7 @@ D_\Xi-D_{\Xi_L},\quad
 \mathcal T_\Xi-\mathcal T_{\Xi_L}
 =O_A(T^{-A})
 }
-\tag{L-106414.4
+\tag{L-106414.4}
 
 uniformly on that strip when \(L=\log T\).
 
