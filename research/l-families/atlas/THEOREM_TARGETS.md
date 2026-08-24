@@ -416,7 +416,7 @@ before doing any character-sum work.
 The weighting itself is now exact for every odd `q`:
 
 \[
-\sum_{[D]}|\operatorname{Stab}(D)|^{-1}=q^3,qquad
+\sum_{[D]}|\operatorname{Stab}(D)|^{-1}=q^3,\qquad
 N_q=q^3+q-1+2\mathbf1_{4\mid q-1}+4\mathbf1_{5\mid q-1}
 +\mathbf1_{\operatorname{char}F_q=5}.
 \]
@@ -716,18 +716,101 @@ should classify the integral points on the scaled curve subject to the Hasse
 bound and determine exactly which arise from elliptic traces. It must treat
 the three nodal fibers separately.
 
-The next cross-family test is equally concrete. Intersect the normalized
-genus-two `USp(4)` coefficient lattice with this rank-one curve, then split the
-intersection into genuine elliptic `Sym^3` parameters and compact-image false
-positives. The complete `q=3,5,7` coefficient histograms make this a bounded
-source-locked transform; an all-odd-`q` classification would turn it into a
-functorial-recognition lemma rather than another finite fit.
+The bounded cross-family test is now complete. Among 251 frozen genus-two
+coefficient atoms, exactly 7 lie on the curve: 4 independently
+source-witnessed shapes carrying 53 members and 3 `(0,0)` ghost atoms carrying
+398 members. The exact odd-prime candidate lemma leaves only `t=0` for
+`p>=5`, and \(t=0,\pm3\) for `p=3`. The next theorem target is the corresponding
+classification for every odd prime power, including the valuation conditions
+for `q|t^3`, the three nodal fibers, and a proof of which candidate shapes can
+occur in the marked genus-two family. It must keep coefficient-shape
+intersection separate from equality of differently weighted local factors.
 
 On the statistical side, prove effective versions of the exact stack laws for
 geometrically linked elliptic subfamilies. The thin compact targets
 `E(x^4)=4`, `E(y^3)=5`, and `E(x^2y^2)=7` already differ from generic `USp(4)`
 at `3,4,5`; the first `Theta_12` multiplicities identify which lower-order
 cohomological terms a proof must preserve.
+
+### Symmetric-fourth recognition target: arithmetic on the principal `SO(3)` slice
+
+The elliptic symmetric-fourth factor occupies
+
+\[
+d^2+yd-y^2-y^3=0,
+\qquad y=w^2+w-1,\quad d=wy,\quad w=t^2/q-2.
+\]
+
+The node `(0,0)` has no rational arithmetic preimage because it would force
+`w^2+w-1=0`. The first remaining recognition problem is therefore not node
+incidence but a classification of rational and integral points on the smooth
+arithmetic image, together with the minimum coefficient data needed to
+recover `t^2`. In particular, trace alone can alias distinct elliptic traces,
+whereas the second coefficient can resolve at least the first explicit
+aliases. A useful theorem should decide this recovery problem uniformly in
+odd `q`, then compare the resulting thin `SO(3)` family with the primitive
+genus-two `SO(5)` factor without identifying their monodromy or motives.
+
+### Symmetric-power alias target: lift scalar recovery to full local factors
+
+The scalar problem now has a sharp answer for every odd `q`:
+
+\[
+\begin{array}{c|c}
+m\bmod6 & \text{integral recovery from }\operatorname{Tr}(\operatorname{Sym}^m)\\
+\hline
+1,3 & t\text{ exactly}\\
+2 & t\text{ up to sign}\\
+4,5,0 & \text{uniform recovery fails.}
+\end{array}
+\]
+
+The first next target is to determine the minimum initial coefficient vector
+of the degree-`m+1` local factor that recovers the base trace, uniformly in
+`m` and odd prime powers. It must account separately for the expected
+even-degree twist quotient and the exceptional odd `m=5 mod 6` sign pair
+whose complete local factors coincide over the characteristic-three
+construction.
+
+The second target starts with the exact `m=5` scalar collision curve
+
+\[
+z^2=x^4+5x^3y+9x^2y^2+5xy^3+y^4.
+\]
+
+Classify its integral points subject to `q=(z+2(x^2+xy+y^2))/3` being an odd
+prime power and both traces satisfying Hasse, then import a realization
+theorem only as a separate step. The point `q=31,(x,y)=(-7,3)` proves that
+the collision geometry is not confined to the characteristic-three
+cyclotomic construction, but by itself carries no curve-realization or
+density conclusion.
+
+### Plethysm-ladder target: propagate coefficient maps beyond `Sym^3`
+
+The first nontrivial square now closes exactly:
+
+\[
+ \bigwedge^2\operatorname{Sym}^3V
+ =(\det V)^3\oplus(\operatorname{Sym}^4V\otimes\det V),
+ \qquad R_{q^3}(T)=P_{\operatorname{Sym}^4}(qT),
+\]
+
+and its normalized curve map satisfies
+`F_4(y-1,x^2-y)=-F_3(x,y)`. The next target is the full odd ladder
+
+\[
+ \bigwedge^2\operatorname{Sym}^mV
+ \simeq
+ \bigoplus_{\substack{1\le i\le m\\i\ {m odd}}}
+ \operatorname{Sym}^{2m-2i}V\otimes(\det V)^i.
+\]
+
+For `m=5` and then general odd `m`, derive the normalized coefficient maps of
+each primitive summand, their discriminant and singular loci, and their
+pullbacks to the existing locked coefficient supports. The theorem must
+separate representation-theoretic identities from arithmetic realization:
+matching a transformed local polynomial or coefficient point does not by
+itself identify motives, compatible systems, or global Euler products.
 
 ### Adjacent higher-variety target: distinguish tensor lifts inside `SO(8)`
 
@@ -849,8 +932,18 @@ and transverse rank-drop pullback
 (A=0,b=2q)\ \cup\ (a=0,b=2q-A^2).
 \]
 
-The bounded census counts those branches exactly but does not explain their
-arithmetic mechanism. A useful next theorem should compute their all-`q`
+The coefficient mechanism is now exact:
+
+\[
+q^2(h+2v+2)=(A^2+b-2q)^2+(Aa)^2.
+\]
+
+Thus real/integer rank drop is precisely the displayed union, both branches
+lie in the integral `+q` split locus, and the converse is explicitly false.
+Scheme-theoretically the pullback `(Aa,R^2)` doubles the transverse direction;
+only its reduced arithmetic support is being called split. The bounded census
+counts all incidences exactly but does not explain their arithmetic geometry.
+A useful next theorem should compute their all-`q`
 model/stack masses, their first character moments, and their intersection,
 then determine—using explicitly imported arithmetic geometry—which strata
 correspond to extra endomorphisms, supersingularity, or accidental trace-zero

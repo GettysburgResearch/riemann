@@ -242,6 +242,187 @@ The frozen `q=3,5,7,11,13` rows transform only 55 source atoms representing
 nodal packaging, lattice lemma, and finite-family defects are project-specific
 calculations without a literature-priority claim.
 
+### The elliptic symmetric fourth is a principal `SO(3)` curve inside `SO(5)`
+
+For `L_E(T)=1-tT+qT^2`, put
+
+\[
+C=t^4-3qt^2+q^2,
+\qquad D=q(t^2-2q)C.
+\]
+
+The exact degree-five factor is
+
+\[
+1-CT+DT^2-q^2DT^3+q^6CT^4-q^{10}T^5.
+\]
+
+After `z=q^2T`, write its normalized coefficients as
+`y=C/q^2` and `d=D/q^4`. If `w=t^2/q-2`, then
+
+\[
+y=w^2+w-1,
+\qquad d=wy,
+\qquad \boxed{d^2+yd-y^2-y^3=0}.
+\]
+
+This rational curve is the principal `SO(3)` slice in the rank-two ambient
+`SO(5)` coefficient plane. Its unique node `(0,0)` has normalization
+preimages solving `w^2+w-1=0`; because `w=t^2/q-2` is rational, no rational
+arithmetic input reaches the node. The thin compact trace moments begin
+
+```text
+Sym^4(SU(2)): 1,0,1,1,5,16,65,260,1085
+SO(5):        1,0,1,0,3, 1,15, 15, 105.
+```
+
+Thus the first separation is cubic. Exact odd-prime-power stack formulas
+retain the first `Theta_12` terms, and the five frozen fields are complete
+pushforwards of only 55 locked trace atoms. The symmetric-fourth transfer is
+classical; the curve, family pushforward, and moment comparison are the
+project-specific content.
+
+### Symmetric-power scalar traces have a sharp mod-six recovery law
+
+Let
+
+\[
+\tau_m(t;q)=E_m(t,q),\qquad E_0=1,\quad E_1=t,\quad
+E_m=tE_{m-1}-qE_{m-2}.
+\]
+
+For every odd integer `q`, the following is exact on the whole integer line,
+without a Hasse restriction:
+
+\[
+\begin{aligned}
+m\equiv1,3\pmod6 &: \quad E_m(x,q)=E_m(y,q)\iff x=y,\\
+m\equiv2\pmod6 &: \quad E_m(x,q)=E_m(y,q)\iff x=\pm y.
+\end{aligned}
+\]
+
+The proof divides the Dickson-polynomial difference by `x-y` in odd degree
+and by `x^2-y^2` in even degree. A finite recurrence modulo two forces every
+putative nontrivial collision in these residue classes into `x=2X,y=2Y`.
+After that substitution, the constant term of the quotient has uniquely
+least 2-adic valuation; Legendre's factorial formula and binary popcounts put
+at least one extra factor of two in every higher term.
+
+The other three residue classes are sharply different. For
+
+\[
+q=3^{2k+1},\qquad t=3^{k+1},\qquad t^2=3q,
+\]
+
+one has
+
+\[
+E_m(0,q)=E_m(t,q)\qquad(m\equiv4,5,0\pmod6).
+\]
+
+These are Hasse-admissible lattice points. At `q=3`, the locked elliptic
+family actually contains traces `0,+3,-3`, so every complementary residue
+class has a source-witnessed family collision. This remains a scalar theorem:
+the full local factors separate the constructed zero/nonzero pair. For odd
+`m=5 mod 6`, however, the special `+t,-t` eigenvalue multisets are themselves
+equal; even-degree sign equality is the expected twist quotient.
+
+There are non-cyclotomic-looking aliases as well:
+
+\[
+E_5(-7,31)=E_5(3,31)=5544.
+\]
+
+Eliminating `q` from the `m=5` collision quotient gives the genus-one model
+
+\[
+z^2=x^4+5x^3y+9x^2y^2+5xy^3+y^4,
+\]
+
+whose dehomogenized quartic has discriminant `189`. The packet does not
+classify its integral points or import a trace-realization theorem. The
+mod-six theorem, full-factor diagnostics, and `m<=18` pushforwards use 55
+locked trace atoms and no new field enumeration; related Dickson permutation
+literature is cited without a priority claim.
+
+### The symmetric-cube curve barely meets the frozen genus-two lattice
+
+Clearing the symmetric-cube equation at a genus-two coefficient pair gives
+
+\[
+G_q(a,b)=-qa^4+qa^2b+q^2a^2+b^3-2qb^2=0.
+\]
+
+Away from the nodal divisor, its putative elliptic trace is recovered exactly
+as
+
+\[
+t=\frac{a(q-b)}{a^2-b}.
+\]
+
+For an integer parameter the resulting `(a,b)` is integral exactly when
+`q` divides `t^3`. Hence for an odd prime `p`, Hasse leaves only `t=0` for
+`p>=5`, and \(t=0,\pm3\) for `p=3`. In the complete locked `q=3,5,7`
+histograms, only 7 of 251 coefficient atoms lie on the compact curve:
+
+```text
+all members       17,068
+curve-hit members    451
+source-witnessed       53
+(0,0) nodal ghosts    398.
+```
+
+At `q=3` the genus-two family realizes the two \(t=\pm3\) shapes but omits the
+possible `t=0` shape `(0,6)`; at `q=5,7` it realizes `(0,2q)`. These are
+coefficient-shape intersections across different weights, not identities of
+motives or local factors.
+
+### Primitive exterior square of the symmetric cube is the twisted symmetric fourth
+
+For every two-dimensional characteristic-zero representation `V`, classical
+Clebsch--Gordan algebra gives
+
+\[
+ \boxed{\bigwedge^2\operatorname{Sym}^3V
+ \simeq(\det V)^3\oplus
+       (\operatorname{Sym}^4V\otimes\det V).}
+\]
+
+If `L_E(T)=1-tT+qT^2`, removing the determinant line from the exterior square
+of its symmetric-cube factor therefore leaves exactly
+
+\[
+ \boxed{R_{q^3}(T)=P_{\operatorname{Sym}^4E}(qT)}.
+\]
+
+This is not merely a character comparison: the packet verifies all six
+coefficients over `Z[t,q]` and independently reconstructs the root multiset.
+On normalized coefficient curves the same operation is the polynomial map
+
+\[
+ (x,y)\longmapsto(s,k)=(y-1,x^2-y),
+\]
+
+for which
+
+\[
+ F_4(y-1,x^2-y)=-F_3(x,y)
+\]
+
+identically over `Z[x,y]`. Thus every symmetric-cube curve point maps to the
+symmetric-fourth slice algebraically, not just on the frozen data. The two
+side nodes `(±1,1)` collapse to the symmetric-fourth node `(0,0)`, while the
+central ghost `(0,0)` maps to the smooth point `(-1,0)`; smoothness does not
+restore arithmetic origin.
+
+Transforming the 251 locked signed genus-two atoms reproduces exactly the
+same 7 hits and 451 members as the independent symmetric-cube intersection.
+After sign compression there are two images in each of `q=3,5,7`, with
+`18,55,378` members respectively. The plethysm is classical. The exact
+coefficient diagram and locked incidence comparison are the project-specific
+record, and they do not identify the source motives, families, monodromy
+groups, or Euler products.
+
 ## 4. Exact genus-two theorem: the first toy-minor mean for all odd prime powers
 
 For each odd prime power `q`, let `H_5(q)` be all monic squarefree quintics over
@@ -1143,6 +1324,50 @@ respectively. The locked product-model rank-drop counts at `q=3,5,7` are
 `66,5000,72324`. These are coefficient and polynomial facts; no
 Honda--Tate/Tate, Jacobian splitting, singular-variety, or extra-endomorphism
 claim is imported.
+
+### Tensor rank drop is a strict sublocus of integral splitting
+
+The preceding rank condition and the integral `+q` factor predicate are tied
+by the exact master identity
+
+\[
+\boxed{q^2(h+2v+2)=(A^2+b-2q)^2+(Aa)^2}.
+\]
+
+Consequently, over the real or integer product law, tensor rank drop occurs
+exactly on
+
+\[
+(A=0,\ b=2q)\ \cup\ (a=0,\ b=2q-A^2).
+\]
+
+Both branches lie in the integral split locus:
+
+\[
+(1+qT^2)(1+aT+qT^2),
+\qquad
+(1+AT+qT^2)(1-AT+qT^2).
+\]
+
+The reduced support is not the whole scheme. With `R=A^2+b-2q`, the exact
+pullback is
+
+\[
+(Aa,R^2)=(A,R^2)\cap(a,R^2),
+\]
+
+so each branch is doubled transversely in the `R` direction. This is not an
+asserted nilpotent endoscopic moduli scheme. The frozen product-model table is
+
+| `q` | all pairs | integral split | rank drop | split but not rank drop |
+|---:|---:|---:|---:|---:|
+| 3 | 2,916 | 486 | 66 | 420 |
+| 5 | 250,000 | 70,500 | 5,000 | 65,500 |
+| 7 | 4,235,364 | 1,049,580 | 72,324 | 977,256 |
+
+Thus rank drop always implies this precise integral splitting, while the
+converse fails overwhelmingly. The statement remains at coefficient and
+formal-factor level; it imports no isogeny or polarization theorem.
 
 ### Integral `+q` factorization is invisible to the current scalar controls
 

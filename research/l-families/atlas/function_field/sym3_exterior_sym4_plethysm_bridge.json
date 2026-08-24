@@ -1,0 +1,592 @@
+{
+  "artifact_integrity": {
+    "note": {
+      "balanced_LaTeX_environments": [
+        "aligned",
+        "array",
+        "aligned"
+      ],
+      "display_math_pair_count": 22,
+      "forbidden_C0_control_count": 0,
+      "inline_math_lines_have_even_dollar_counts": true,
+      "known_escape_loss_patterns_absent": true,
+      "utf8_decoding": "strict_pass"
+    }
+  },
+  "frozen_genus2_incidence": {
+    "aggregate_audit_totals": {
+      "common_hit_member_count": 451,
+      "common_hit_signed_atom_count": 7,
+      "pooling_warning": "cross-q sums are audit totals, not one probability space",
+      "sign_compressed_hit_count": 6,
+      "source_member_count": 17068,
+      "source_signed_atom_count": 251
+    },
+    "all_251_atoms_satisfy_F4_equals_minus_F3": true,
+    "all_atom_transform_transcript_format": [
+      "q",
+      "a_D",
+      "b_D",
+      "member_count",
+      "s_numerator",
+      "s_denominator",
+      "k_numerator",
+      "k_denominator",
+      "F3_numerator",
+      "F3_denominator",
+      "F4_numerator",
+      "F4_denominator",
+      "common_hit_bit"
+    ],
+    "all_atom_transform_transcript_sha256": "e46355d6f33a28ac5ea26f134e92ce5fdfe43df54b11a0924683d46c10d9f7a8",
+    "coordinate_transform": {
+      "k": "x^2-y",
+      "s": "y-1",
+      "x_squared": "a_D^2/q",
+      "y": "b_D/q"
+    },
+    "families": [
+      {
+        "Sym3_curve_hit_signed_atom_count": 3,
+        "Sym4_pullback_hit_signed_atom_count": 3,
+        "common_hit_member_count": 18,
+        "hit_sets_exactly_identical": true,
+        "q": 3,
+        "sign_compressed_hit_count": 2,
+        "sign_compressed_hits": [
+          {
+            "arithmetic_ghost_preserved": true,
+            "member_count": 12,
+            "primitive_k": [
+              0,
+              1
+            ],
+            "primitive_s": [
+              -1,
+              1
+            ],
+            "signed_preimage_atoms": [
+              [
+                0,
+                0,
+                12
+              ]
+            ],
+            "source_classifications": [
+              "compact_curve_ghost_node_(0,0)"
+            ]
+          },
+          {
+            "arithmetic_ghost_preserved": false,
+            "member_count": 6,
+            "primitive_k": [
+              1,
+              1
+            ],
+            "primitive_s": [
+              1,
+              1
+            ],
+            "signed_preimage_atoms": [
+              [
+                -3,
+                6,
+                3
+              ],
+              [
+                3,
+                6,
+                3
+              ]
+            ],
+            "source_classifications": [
+              "source_witnessed_arithmetic_sym3_coefficient_shape"
+            ]
+          }
+        ],
+        "signed_hit_atoms": [
+          {
+            "a_D": -3,
+            "b_D": 6,
+            "member_count": 3,
+            "primitive_k": [
+              1,
+              1
+            ],
+            "primitive_s": [
+              1,
+              1
+            ],
+            "source_classification": "source_witnessed_arithmetic_sym3_coefficient_shape"
+          },
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "member_count": 12,
+            "primitive_k": [
+              0,
+              1
+            ],
+            "primitive_s": [
+              -1,
+              1
+            ],
+            "source_classification": "compact_curve_ghost_node_(0,0)"
+          },
+          {
+            "a_D": 3,
+            "b_D": 6,
+            "member_count": 3,
+            "primitive_k": [
+              1,
+              1
+            ],
+            "primitive_s": [
+              1,
+              1
+            ],
+            "source_classification": "source_witnessed_arithmetic_sym3_coefficient_shape"
+          }
+        ],
+        "source_member_count": 162,
+        "source_signed_atom_count": 32,
+        "transformed_atom_transcript_sha256": "efb9ab038207360de27ed3b18b7258bb668e8f70da1df009cfaecf501cf131dc"
+      },
+      {
+        "Sym3_curve_hit_signed_atom_count": 2,
+        "Sym4_pullback_hit_signed_atom_count": 2,
+        "common_hit_member_count": 55,
+        "hit_sets_exactly_identical": true,
+        "q": 5,
+        "sign_compressed_hit_count": 2,
+        "sign_compressed_hits": [
+          {
+            "arithmetic_ghost_preserved": true,
+            "member_count": 50,
+            "primitive_k": [
+              0,
+              1
+            ],
+            "primitive_s": [
+              -1,
+              1
+            ],
+            "signed_preimage_atoms": [
+              [
+                0,
+                0,
+                50
+              ]
+            ],
+            "source_classifications": [
+              "compact_curve_ghost_node_(0,0)"
+            ]
+          },
+          {
+            "arithmetic_ghost_preserved": false,
+            "member_count": 5,
+            "primitive_k": [
+              -2,
+              1
+            ],
+            "primitive_s": [
+              1,
+              1
+            ],
+            "signed_preimage_atoms": [
+              [
+                0,
+                10,
+                5
+              ]
+            ],
+            "source_classifications": [
+              "source_witnessed_arithmetic_sym3_coefficient_shape"
+            ]
+          }
+        ],
+        "signed_hit_atoms": [
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "member_count": 50,
+            "primitive_k": [
+              0,
+              1
+            ],
+            "primitive_s": [
+              -1,
+              1
+            ],
+            "source_classification": "compact_curve_ghost_node_(0,0)"
+          },
+          {
+            "a_D": 0,
+            "b_D": 10,
+            "member_count": 5,
+            "primitive_k": [
+              -2,
+              1
+            ],
+            "primitive_s": [
+              1,
+              1
+            ],
+            "source_classification": "source_witnessed_arithmetic_sym3_coefficient_shape"
+          }
+        ],
+        "source_member_count": 2500,
+        "source_signed_atom_count": 81,
+        "transformed_atom_transcript_sha256": "d04cdd891ffcaafd977e9c8bf623e6ab31c5327d7f715eff93a18206618c2057"
+      },
+      {
+        "Sym3_curve_hit_signed_atom_count": 2,
+        "Sym4_pullback_hit_signed_atom_count": 2,
+        "common_hit_member_count": 378,
+        "hit_sets_exactly_identical": true,
+        "q": 7,
+        "sign_compressed_hit_count": 2,
+        "sign_compressed_hits": [
+          {
+            "arithmetic_ghost_preserved": true,
+            "member_count": 336,
+            "primitive_k": [
+              0,
+              1
+            ],
+            "primitive_s": [
+              -1,
+              1
+            ],
+            "signed_preimage_atoms": [
+              [
+                0,
+                0,
+                336
+              ]
+            ],
+            "source_classifications": [
+              "compact_curve_ghost_node_(0,0)"
+            ]
+          },
+          {
+            "arithmetic_ghost_preserved": false,
+            "member_count": 42,
+            "primitive_k": [
+              -2,
+              1
+            ],
+            "primitive_s": [
+              1,
+              1
+            ],
+            "signed_preimage_atoms": [
+              [
+                0,
+                14,
+                42
+              ]
+            ],
+            "source_classifications": [
+              "source_witnessed_arithmetic_sym3_coefficient_shape"
+            ]
+          }
+        ],
+        "signed_hit_atoms": [
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "member_count": 336,
+            "primitive_k": [
+              0,
+              1
+            ],
+            "primitive_s": [
+              -1,
+              1
+            ],
+            "source_classification": "compact_curve_ghost_node_(0,0)"
+          },
+          {
+            "a_D": 0,
+            "b_D": 14,
+            "member_count": 42,
+            "primitive_k": [
+              -2,
+              1
+            ],
+            "primitive_s": [
+              1,
+              1
+            ],
+            "source_classification": "source_witnessed_arithmetic_sym3_coefficient_shape"
+          }
+        ],
+        "source_member_count": 14406,
+        "source_signed_atom_count": 138,
+        "transformed_atom_transcript_sha256": "0e35adedc0cbcb7b172543d5518f4a4ab4ed415e69a61b8ddbf4c01fd2036e74"
+      }
+    ],
+    "source_semantics": "deterministic transform of pre-enumerated signed (a_D,b_D) atoms; no new curve or field enumeration"
+  },
+  "literature_and_priority_boundary": {
+    "analytic_claim": "none; no RH, GRH, zero-free-region, or global functoriality consequence",
+    "automorphy_dependency": "classical context only; no automorphy theorem is reproved or needed for the finite coefficient identities",
+    "classical_automorphy": [
+      {
+        "authors": "Henry H. Kim and Freydoon Shahidi",
+        "result": "GL2 symmetric-cube transfer",
+        "url": "https://arxiv.org/abs/math/0409607"
+      },
+      {
+        "author": "Henry H. Kim",
+        "result": "GL2 symmetric-fourth transfer",
+        "url": "https://doi.org/10.1090/S0894-0347-02-00410-1"
+      }
+    ],
+    "classical_plethysm": "the rank-two representation decomposition is classical Clebsch-Gordan/plethysm and is not claimed as new",
+    "priority_claim": "none; no claim of literature priority for the diagram or packaging",
+    "project_specific_contribution": "the commutative coefficient diagram and the frozen 251-atom incidence equality"
+  },
+  "local_factor_commutative_diagram": {
+    "Sym3_quartic": {
+      "Q": "q^3",
+      "a3": "-t^3+2*q*t",
+      "b3": "q*(t^4-3*q*t^2+2*q^2)",
+      "shape": "1+a3*T+b3*T^2+Q*a3*T^3+Q^2*T^4"
+    },
+    "Sym4_factor": "P_Sym4(U)=1-CU+DU^2-q^2DU^3+q^6CU^4-q^10U^5",
+    "Sym4_invariants": {
+      "C": "t^4-3*q*t^2+q^2",
+      "D": "q*(t^2-2*q)*C"
+    },
+    "base_factor": "L_E(T)=1-t*T+q*T^2",
+    "bridge_witnesses": [
+      "b3=q*(C+q^2)",
+      "a3^2-b3=(t^2-2*q)*C=D/q"
+    ],
+    "common_coefficients_T0_through_T5": [
+      "1",
+      "-q*C",
+      "q^2*D",
+      "-q^5*D",
+      "q^10*C",
+      "-q^15"
+    ],
+    "exact_identity": "R_Q(T)=P_Sym4(q*T)",
+    "generic_primitive_exterior_polynomial": "R_Q(T)=1+(Q-b)T+Q(a^2-b)T^2-Q^2(a^2-b)T^3+Q^3(b-Q)T^4-Q^5T^5",
+    "symbolic_certificate": {
+      "R_Q_minus_P_Sym4_at_qT_residual_term_counts_T0_through_T5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "coefficient_ring": "Z[t,q]",
+      "coefficients_compared": 6,
+      "intermediate_residual_term_counts": {
+        "a3_squared_minus_b3_minus_t_squared_minus_2q_times_C": 0,
+        "b3_minus_q_times_C_plus_q_squared": 0
+      }
+    }
+  },
+  "next_family_target": {
+    "classical_representation_formula": "wedge^2 Sym^m(V)=direct_sum over odd i=1,3,...,m of Sym^(2m-2i)(V) tensor (det V)^i",
+    "name": "general_odd_symmetric_power_exterior_square_plethysm_ladder",
+    "proposed_project_task": "derive the normalized coefficient maps and source-locked incidence pullbacks for successive odd m without fresh enumeration",
+    "status": "nominated, not executed here"
+  },
+  "normalized_coefficient_diagram": {
+    "Sym3_curve": "F3(x,y)=-x^4+x^2*y+x^2+y^3-2*y^2",
+    "Sym4_curve": "F4(s,k)=k^2+s*k-s^2-s^3",
+    "collapsed_Sym4_node": {
+      "arithmetic_trace_exclusion": "w=t^2/q-2 is rational, but the two node parameters have discriminant 5",
+      "normalization_preimage_equation": "w^2+w-1=0",
+      "point": [
+        0,
+        0
+      ]
+    },
+    "node_map": [
+      {
+        "Sym3_node": [
+          -1,
+          1
+        ],
+        "Sym3_parameter_equation": "t0^2+t0-1=0",
+        "Sym4_image": [
+          0,
+          0
+        ]
+      },
+      {
+        "Sym3_node": [
+          1,
+          1
+        ],
+        "Sym3_parameter_equation": "t0^2-t0-1=0",
+        "Sym4_image": [
+          0,
+          0
+        ]
+      },
+      {
+        "F4_gradient_at_image": [
+          -1,
+          -1
+        ],
+        "Sym3_node": [
+          0,
+          0
+        ],
+        "Sym3_parameter_equation": "t0^2=2",
+        "Sym4_image": [
+          -1,
+          0
+        ],
+        "Sym4_parameter_w": 0,
+        "image_is_smooth": true,
+        "odd_q_arithmetic_status": "ghost remains: integral t would require t^2=2q, impossible for odd q"
+      }
+    ],
+    "normalization_parameter_bridge": "w=t0^2-2",
+    "primitive_map": "(s,k)=(y-1,x^2-y)",
+    "symbolic_certificate": {
+      "coefficient_ring": "Z[x,y]",
+      "identity": "F4(y-1,x^2-y)=-F3(x,y)",
+      "residual_term_count": 0,
+      "substitution": {
+        "k": "x^2-y",
+        "s": "y-1"
+      }
+    }
+  },
+  "payload_sha256": "39fec8978353a7174948cdbd29194016f20266f8ed01d4f558a4f181f115a084",
+  "producer": {
+    "note": "research/l-families/atlas/function_field/SYM3_EXTERIOR_SYM4_PLETHYSM_BRIDGE.md",
+    "note_sha256_lf_normalized": "5eeacc74df9ee7b9f52d0818b0e367eb882a5b15fb95e049310ad7c71eb54f02",
+    "script": "research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py",
+    "script_sha256_lf_normalized": "313f7bfa74f14bb9806a0473385523fa04a8b0be29338f4b9c1060f3c80a1c6f",
+    "test": "tests/test_sym3_exterior_sym4_plethysm_bridge.py",
+    "test_sha256_lf_normalized": "980ced9dac99555600d4f5b47ea26b52d192d9f1fc61dc9d9daa6eb1455f491a"
+  },
+  "rank_two_representation_identity": {
+    "Schur_functor_form": "S_(3,3)(V) direct_sum S_(5,1)(V)",
+    "assumptions": "V is two-dimensional over a characteristic-zero field",
+    "dimension": 6,
+    "identity": "wedge^2 Sym^3(V) = (det V)^3 direct_sum (Sym^4(V) tensor det V)",
+    "left_and_right_diagonal_torus_weight_multiset": [
+      [
+        5,
+        1,
+        1
+      ],
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        3,
+        3,
+        2
+      ],
+      [
+        2,
+        4,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ]
+    ],
+    "why_character_equality_suffices": "finite-dimensional rational GL2 representations are semisimple in characteristic zero"
+  },
+  "raw_fixture_id": "sym3-exterior-sym4-plethysm-bridge-exact-v1",
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "counts": {
+        "locked_signed_atom_transforms": 251,
+        "note_integrity_scan": 1,
+        "plethysm_weight_terms": 6,
+        "symbolic_curve_identity": 1,
+        "symbolic_local_factor_coefficients": 6
+      },
+      "total_accounted_work_units": 265
+    },
+    "exclusive_accounted_work_unit_cap": 512,
+    "field_or_curve_enumerations": 0,
+    "floating_point_results": 0,
+    "random_samples": 0,
+    "source_atom_cap_inclusive": 251,
+    "source_member_cap_inclusive": 17068,
+    "source_signed_atoms_transformed": 251,
+    "unit_definition": "declared high-level atom visits, torus weights, and symbolic coefficient comparisons; not literal arithmetic instructions or wall time"
+  },
+  "rigor_level": "integer/rational/sparse-polynomial exact; no floats, samples, interpolation, or new enumeration",
+  "schema": "riemann.function_field.sym3_exterior_sym4_plethysm_bridge.v1",
+  "scope_firewall": {
+    "exact": [
+      "characteristic-zero representation identity",
+      "formal local-factor and normalized-curve identities",
+      "deterministic transform of the four locked packet payloads"
+    ],
+    "imported": [
+      "the completed Sym3, Sym4, primitive-exterior, and genus2-intersection packet payloads at the recorded hashes",
+      "classical symmetric-cube and symmetric-fourth automorphy only as context"
+    ],
+    "nonclaims": [
+      "no new finite-field or curve enumeration",
+      "no arithmetic realization inferred from coefficient-curve membership",
+      "no common Tate sub-local-system inferred from a pointwise middle root",
+      "no family, motive, monodromy, Euler-product, priority, RH, or GRH claim"
+    ]
+  },
+  "source_packet_locks": {
+    "elliptic_sym3_packet": {
+      "canonical_payload_recomputed": true,
+      "file_sha256_lf_normalized": "2b8b7f206c4e4c24f4e1ac65d093ab976dd6483dceb6ea52f44e76a7004bb033",
+      "lock_scope": "the packet JSON payload; its embedded producer/note/test locks remain transitively frozen",
+      "path": "research/l-families/atlas/function_field/elliptic_symmetric_cube_family.json",
+      "payload_sha256": "7e30dd220b9c9e3a3873ffe8b168ad53af4899de1dd21a2d69e2498abc6ee5b9",
+      "schema": "riemann.function_field.elliptic_symmetric_cube_family.v1"
+    },
+    "elliptic_sym4_packet": {
+      "canonical_payload_recomputed": true,
+      "file_sha256_lf_normalized": "fa26b5b34ac4b3effeeb3083981f7699a36a66997a0b5d3093604721e8122e7d",
+      "lock_scope": "the packet JSON payload; its embedded producer/note/test locks remain transitively frozen",
+      "path": "research/l-families/atlas/function_field/elliptic_symmetric_fourth_so5_slice.json",
+      "payload_sha256": "7cbf4e02e64fba82be120f3ad83d3448e86e6e93e0f05d180eae14c9f3a8320f",
+      "schema": "riemann.function_field.elliptic_symmetric_fourth_so5_slice.v1"
+    },
+    "genus2_sym3_intersection_packet": {
+      "canonical_payload_recomputed": true,
+      "file_sha256_lf_normalized": "6f10812a0a7473054f04820657ae8b679eaf5b4286566a049ef2fc3b4d04458c",
+      "lock_scope": "the packet JSON payload; its embedded producer/note/test locks remain transitively frozen",
+      "path": "research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.json",
+      "payload_sha256": "5d19dfeaa8aa2a142dd0c24f0f71d774e7f2d004e981e9fa5a30ac144c3d17e8",
+      "schema": "riemann.function_field.genus2_sym3_coefficient_intersection.v1"
+    },
+    "primitive_exterior_packet": {
+      "canonical_payload_recomputed": true,
+      "file_sha256_lf_normalized": "2e39dd0f24dc38b1c03165d047f10858ac205edc780fbc8bff225717c507a976",
+      "lock_scope": "the packet JSON payload; its embedded producer/note/test locks remain transitively frozen",
+      "path": "research/l-families/atlas/function_field/genus2_primitive_exterior_square.json",
+      "payload_sha256": "235991e9e36a55ec8352a7c18fc2e0722546267daf51a17642ff767c3387ab1c",
+      "schema": "riemann.function_field.genus2_primitive_exterior_square.v1"
+    }
+  },
+  "status": "exact characteristic-zero plethysm, exact coefficient algebra, and source-locked finite incidence transform",
+  "weight_and_Tate_twist_firewall": {
+    "arithmetic_ghost": "curve membership survives the map, so the Sym3 central ghost becomes a smooth Sym4-curve false positive rather than an arithmetic realization",
+    "load_bearing_rescaling": "the surviving factor is P_Sym4(q*T), not P_Sym4(T); q is the determinant/Tate twist",
+    "normalized_shapes_only": "the genus-two incidence compares coefficient shapes after normalization and does not identify weights, motives, local systems, families, or global L-functions",
+    "removed_line": "the direct summand (det V)^3 contributes the canonical factor 1-q^3*T removed in R_Q",
+    "retained_middle_root": "Sym^4(V) tensor det(V) still has a pointwise q^3 eigenvalue, but irreducibility of Sym^4 gives no second common Tate line",
+    "weights": "Sym^3 H^1 has weight 3; its exterior square and Sym^4 H^1 tensor det(H^1) have weight 6"
+  }
+}

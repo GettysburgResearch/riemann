@@ -34,6 +34,22 @@ source/note/JSON/test packets:
   coefficient curve inside `USp(4)`, proves odd-`q` integral-trace injectivity,
   and separates compact membership from arithmetic recognition using an
   explicit nodal false positive;
+- `ELLIPTIC_SYMMETRIC_FOURTH_SO5_SLICE.md` constructs the degree-five
+  `Sym^4 H^1` factor, identifies its rational nodal principal-`SO(3)` curve
+  inside `SO(5)`, proves that the node has no rational arithmetic preimage,
+  and separates its cubic trace moment from the generic `SO(5)` law;
+- `ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md` proves the exact mod-six
+  dichotomy for recovering an integral elliptic trace from the scalar
+  `Sym^m` trace, gives sharp source-witnessed complementary collisions, and
+  separates scalar aliases from full-local-factor aliases;
+- `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
+  curve with the complete locked genus-two coefficient support, classifies
+  the odd-prime arithmetic candidates, and separates 53 witnessed members
+  from 398 compact-curve ghosts;
+- `SYM3_EXTERIOR_SYM4_PLETHYSM_BRIDGE.md` proves that the primitive exterior
+  square of the elliptic symmetric cube is the determinant-twisted symmetric
+  fourth, makes the normalized coefficient diagram commute identically, and
+  reproduces the seven locked genus-two curve hits by an independent path;
 - `GENUS2_MOMENT_IDENTITY.md` proves the current all-`q` coefficient moments;
 - `FAMILY_MEASURES.md` separates uniform models, affine-stack weights, and
   uniform coarse orbits;
@@ -63,6 +79,10 @@ source/note/JSON/test packets:
   pinch-point normal form, determines its full reduced singular plane and
   transverse rank-drop line, and pulls both trace-zero branches back to exact
   square restrictions and formal genus-two factorizations;
+- `TENSOR_ENDOSCOPIC_RANK_DROP_BRIDGE.md` proves the exact sum-of-squares
+  identity relating that transverse rank drop to the integral `+q` split
+  locus, distinguishes reduced containment from the doubled scheme pullback,
+  and freezes the complete rank/split incidence tables;
 - `GENUS2_ENDOSCOPIC_SPLIT_LOCUS.md` classifies the integral `+q`
   elliptic-form quadratic-factor locus in the complete frozen coefficient
   histograms, proves that `B`, `F`, and even the complete balanced echo fail to
@@ -93,6 +113,10 @@ python research/l-families/atlas/function_field/hyperelliptic_affine_burnside.py
 python research/l-families/atlas/function_field/genus1_cubic_family_laws.py \
   --check research/l-families/atlas/function_field/genus1_cubic_family_laws.json
 python research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py --check
+python research/l-families/atlas/function_field/elliptic_symmetric_fourth_so5_slice.py --check
+python research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py --check
+python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
+python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
 python research/l-families/atlas/function_field/balanced_control_family_scan.py \
   --check research/l-families/atlas/function_field/balanced_control_family_scan.json
@@ -105,6 +129,7 @@ python research/l-families/atlas/function_field/product_variety_tensor_family.py
   --check research/l-families/atlas/function_field/product_variety_tensor_family.json
 python research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.py \
   --check research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.json
+python research/l-families/atlas/function_field/tensor_endoscopic_rank_drop_bridge.py --check
 python research/l-families/atlas/function_field/genus2_endoscopic_split_locus.py --check
 python research/l-families/atlas/function_field/genus2_primitive_exterior_square.py \
   --check research/l-families/atlas/function_field/genus2_primitive_exterior_square.json
@@ -115,6 +140,10 @@ python -m pytest -q \
   tests/test_hyperelliptic_affine_burnside.py \
   tests/test_genus1_cubic_family_laws.py \
   tests/test_elliptic_symmetric_cube_family.py \
+  tests/test_elliptic_symmetric_fourth_so5_slice.py \
+  tests/test_elliptic_symmetric_power_trace_aliasing.py \
+  tests/test_genus2_sym3_coefficient_intersection.py \
+  tests/test_sym3_exterior_sym4_plethysm_bridge.py \
   tests/test_usp_coefficient_minor_rank_scan.py \
   tests/test_balanced_control_family_scan.py \
   tests/test_frobenius_power_echoes.py \
@@ -122,6 +151,7 @@ python -m pytest -q \
   tests/test_genus2_high_weight_channel_probe.py \
   tests/test_product_variety_tensor_family.py \
   tests/test_tensor_trace_zero_singular_strata.py \
+  tests/test_tensor_endoscopic_rank_drop_bridge.py \
   tests/test_genus2_endoscopic_split_locus.py \
   tests/test_genus2_primitive_exterior_square.py \
   tests/test_virtual_character_null_directions.py
@@ -129,15 +159,20 @@ python -m pytest -q \
 
 Each packet declares its own resource contract. The Burnside, measure,
 cross-rank, tail, high-weight, power-echo, elliptic-symmetric-cube,
-product-tensor, tensor-singular, integral-factor-locus,
+elliptic-symmetric-fourth, symmetric-power-aliasing,
+symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm, product-tensor,
+tensor-singular, tensor-endoscopic-bridge, integral-factor-locus,
 primitive-exterior-square, and virtual-null
 packets enumerate no new finite field or family member. The echo packet
 transforms its source-locked `q=3,5,7` histogram; the product packet convolves
 only the locked genus-one and genus-two histograms for those same fields; its
-singular follow-up transforms the same 2,471 histogram atom pairs; the
-integral-factor and exterior-square packets transform the 251 locked
-genus-two coefficient atoms; the symmetric-cube packet transforms 55 locked
-genus-one trace atoms and performs guarded compact-group algebra; and the
+singular follow-up and rank-drop bridge transform the same 2,471 histogram
+atom pairs; the symmetric-cube intersection, integral-factor, and
+exterior-square packets transform the 251 locked genus-two coefficient atoms;
+the symmetric-cube, symmetric-fourth, and trace-aliasing packets transform 55
+locked genus-one trace atoms and perform guarded exact algebra; the plethysm
+bridge performs sparse polynomial algebra and replays the same 251 locked
+genus-two atoms below its exclusive 512-unit ledger cap; and the
 virtual-null packet performs exact compact-group algebra only. The
 balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
@@ -200,6 +235,15 @@ rank-drop line `h+2v+2=0`. Its two product-parameter branches have the formal
 factorizations recorded in the packet, but no Honda--Tate/Tate theorem,
 Jacobian splitting, isogeny, or extra-endomorphism conclusion is imported.
 
+The tensor/endoscopic bridge sharpens only the coefficient-level incidence.
+Over the real or integer product law,
+`q^2*(h+2v+2)=(A^2+b-2q)^2+(Aa)^2`, so rank drop lies on two integral
+`+q` factor branches. The scheme pullback `(Aa,R^2)` doubles the transverse
+`R` direction and is not contained as a nilpotent scheme in an asserted
+endoscopic moduli locus. Rank drop implies this precise integral
+factorization; the converse mostly fails, and no isogeny, polarization, or
+geometric splitting theorem is imported.
+
 The integral-factor packet classifies only factorizations
 `(1-rT+qT^2)(1-sT+qT^2)` with integral `r,s`. Its complement is not called
 “nonsplit over Z”: at `q=5`, `1-10T^2+25T^4=(1-5T^2)^2` is the explicit
@@ -215,6 +259,42 @@ origin: the nodal point `(x,y)=(0,0)` lies on that curve but would require
 `t^2=2q`, impossible for an odd-`q` integral elliptic trace. The mod-four lemma
 proves only that no real trace fiber contains two arithmetic lattice points;
 it does not say the lattice misses every real folded fiber.
+
+The symmetric-fourth packet likewise uses a classical functorial
+representation rather than claiming a new lift. Its normalized coefficient
+curve is the principal `SO(3)` slice inside `SO(5)`, not a generic `SO(5)`
+family. The middle `q^2` eigenvalue is pointwise and does not force a common
+Tate subsystem. The curve's node would require the rational parameter
+`a^2/q-2` to satisfy `w^2+w-1=0`, so no rational arithmetic input reaches it.
+The symbolic moment laws hold for every odd prime power; automatic numerical
+evaluation of `Theta_12(q)` retains the upstream explicit characteristic cap,
+with a separate exact supplied-trace API beyond it.
+
+The symmetric-power alias theorem concerns the single scalar
+`Tr(Sym^m Frob)`, not the entire degree-`m+1` local factor. For odd `q`, that
+scalar recovers the integral base trace exactly when `m=1,3 mod 6`, and up to
+the unavoidable sign when `m=2 mod 6`. The complementary construction is
+Hasse-admissible for `q=3^(odd)` and source-witnessed at `q=3`; it is not a
+general trace-realization theorem. Higher coefficients split the constructed
+zero/nonzero aliases, although the special nonzero sign pair at
+`m=5 mod 6` can retain the same full factor. The binary quartic attached to
+`m=5` is a Diophantine target, not a classification or priority claim.
+
+The symmetric-cube/genus-two intersection compares normalized coefficient
+shapes of different weights; it is not an identity of local factors. Its
+all-`q` algebraic curve and odd-prime candidate classification are separate
+from the exhaustive `q=3,5,7` census. “Source-witnessed” means that an
+elliptic trace with the required parameter occurs in the independent locked
+genus-one family, not that the genus-two member is an elliptic symmetric-cube
+motive. The three `(0,0)` atoms are compact-image false positives.
+
+The Sym3-exterior/Sym4 bridge is a formal identity in characteristic-zero
+representation algebra. The determinant twist and removal of the canonical
+line are essential, and the pointwise middle eigenvalue is not a second
+common Tate subrepresentation. Its commuting coefficient diagram and equal
+finite hit set do not identify genus-two factors with elliptic symmetric-cube
+motives, nor do they identify monodromy groups, measures, compatible systems,
+or Euler products.
 
 The primitive exterior square removes the canonical polarization line from
 `exterior^2 H^1`. Its remaining ambient `SO(5)` standard factor has a

@@ -1,0 +1,1686 @@
+{
+  "all_q_stack_laws": {
+    "Haar_limits_visible_in_selected_laws": {
+      "mean_d_squared": 2,
+      "mean_y_cubed": 1,
+      "mean_y_squared": 1
+    },
+    "Theta_12_convention": "the locked prime-power Frobenius trace on the one-dimensional S_12(SL(2,Z)); for q=p it is Ramanujan tau(p)",
+    "coordinate_character_decompositions": {
+      "d": {
+        "2": 1,
+        "6": 1
+      },
+      "d_squared": {
+        "0": 2,
+        "10": 1,
+        "12": 1,
+        "2": 2,
+        "4": 4,
+        "6": 3,
+        "8": 3
+      },
+      "y": {
+        "4": 1
+      },
+      "y_cubed": {
+        "0": 1,
+        "10": 2,
+        "12": 1,
+        "2": 3,
+        "4": 5,
+        "6": 4,
+        "8": 3
+      },
+      "y_squared": {
+        "0": 1,
+        "2": 1,
+        "4": 1,
+        "6": 1,
+        "8": 1
+      },
+      "y_times_d": {
+        "10": 1,
+        "2": 2,
+        "4": 2,
+        "6": 2,
+        "8": 1
+      }
+    },
+    "locked_input": "E[chi_m]=-(1+Theta_(m+2)(q))/q^(m/2+1) for positive even m, E[chi_0]=1",
+    "numeric_evaluator_contract": {
+      "automatic_characteristic_cap_inclusive": 1000,
+      "automatic_function": "bounded_exact_coordinate_laws(q)",
+      "beyond_cap_function": "exact_coordinate_laws_with_theta12(q, theta12)",
+      "q_1009_boundary": "bounded_exact_coordinate_laws(1009) refuses explicitly; the symbolic formulas remain valid, and exact numeric instantiation requires supplied Theta_12(1009)",
+      "reason": "the locked automatic Ramanujan-tau helper is intentionally bounded; this is a producer limit, not a theorem limit",
+      "supplied_trace_type_contract": "theta12 must be a built-in integer; booleans and every non-integer are rejected without coercion"
+    },
+    "symbolic_formulas": {
+      "mean_d": "-q^-2-q^-4",
+      "mean_d_squared": "2-2*q^-2-4*q^-3-3*q^-4-3*q^-5-(1+Theta_12(q))*q^-6-q^-7",
+      "mean_y": "-q^-3",
+      "mean_y_cubed": "1-3*q^-2-5*q^-3-4*q^-4-3*q^-5-2*(1+Theta_12(q))*q^-6-q^-7",
+      "mean_y_squared": "1-q^-2-q^-3-q^-4-q^-5",
+      "mean_y_times_d": "-2*q^-2-2*q^-3-2*q^-4-q^-5-(1+Theta_12(q))*q^-6"
+    },
+    "symbolic_theorem_scope": "every odd prime power q under uniform marked models / normalized elliptic-stack measure"
+  },
+  "compact_group_comparison": {
+    "SO5_standard_trace_moments": [
+      1,
+      0,
+      1,
+      0,
+      3,
+      1,
+      15,
+      15,
+      105
+    ],
+    "SU2_Sym4_trace_moments": [
+      1,
+      0,
+      1,
+      1,
+      5,
+      16,
+      65,
+      260,
+      1085
+    ],
+    "derivations": {
+      "SO5": "B2 Weyl constant term for 1+x+x^-1+y+y^-1 divided by Weyl-group order 8",
+      "SU2": "Clebsch--Gordan multiplicity of V_0 in V_4 tensor power n"
+    },
+    "first_separation": {
+      "SO5_standard": 0,
+      "SU2_Sym4": 1,
+      "order": 3,
+      "reason": "the principal SO(3) slice has a cubic invariant in Sym^4, whereas the SO(5) standard representation has none"
+    },
+    "orders_0_through_8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "frozen_histogram_pushforwards": [
+    {
+      "bounded_numeric_theorem_regression": {
+        "mean_d": [
+          -10,
+          81
+        ],
+        "mean_d_squared": [
+          2696,
+          2187
+        ],
+        "mean_y": [
+          -1,
+          27
+        ],
+        "mean_y_cubed": [
+          -601,
+          2187
+        ],
+        "mean_y_squared": [
+          203,
+          243
+        ],
+        "mean_y_times_d": [
+          -490,
+          729
+        ]
+      },
+      "complete_rank_one_pushforward": {
+        "atoms": [
+          {
+            "a_squared": 0,
+            "d": [
+              -2,
+              1
+            ],
+            "local_coefficients": [
+              1,
+              -9,
+              -162,
+              1458,
+              6561,
+              -59049
+            ],
+            "member_count": 4,
+            "pointwise_central_quotient": [
+              1,
+              0,
+              -162,
+              0,
+              6561
+            ],
+            "source_traces": [
+              0
+            ],
+            "w": [
+              -2,
+              1
+            ],
+            "y": [
+              1,
+              1
+            ]
+          },
+          {
+            "a_squared": 1,
+            "d": [
+              -5,
+              27
+            ],
+            "local_coefficients": [
+              1,
+              -1,
+              -15,
+              135,
+              729,
+              -59049
+            ],
+            "member_count": 6,
+            "pointwise_central_quotient": [
+              1,
+              8,
+              57,
+              648,
+              6561
+            ],
+            "source_traces": [
+              -1,
+              1
+            ],
+            "w": [
+              -5,
+              3
+            ],
+            "y": [
+              1,
+              9
+            ]
+          },
+          {
+            "a_squared": 4,
+            "d": [
+              22,
+              27
+            ],
+            "local_coefficients": [
+              1,
+              11,
+              66,
+              -594,
+              -8019,
+              -59049
+            ],
+            "member_count": 6,
+            "pointwise_central_quotient": [
+              1,
+              20,
+              246,
+              1620,
+              6561
+            ],
+            "source_traces": [
+              -2,
+              2
+            ],
+            "w": [
+              -2,
+              3
+            ],
+            "y": [
+              -11,
+              9
+            ]
+          },
+          {
+            "a_squared": 9,
+            "d": [
+              1,
+              1
+            ],
+            "local_coefficients": [
+              1,
+              -9,
+              81,
+              -729,
+              6561,
+              -59049
+            ],
+            "member_count": 2,
+            "pointwise_central_quotient": [
+              1,
+              0,
+              81,
+              0,
+              6561
+            ],
+            "source_traces": [
+              -3,
+              3
+            ],
+            "w": [
+              1,
+              1
+            ],
+            "y": [
+              1,
+              1
+            ]
+          }
+        ],
+        "support_size": 4
+      },
+      "member_count": 18,
+      "negative_control_wrong_weight_factor": {
+        "P_at_T_equals_1_over_q": [
+          -128,
+          1
+        ],
+        "nonzero": true,
+        "witness_trace": 0,
+        "wrong_candidate": "1-q*T"
+      },
+      "q": 3,
+      "selected_exact_coordinate_laws": {
+        "mean_d": [
+          -10,
+          81
+        ],
+        "mean_d_squared": [
+          2696,
+          2187
+        ],
+        "mean_y": [
+          -1,
+          27
+        ],
+        "mean_y_cubed": [
+          -601,
+          2187
+        ],
+        "mean_y_squared": [
+          203,
+          243
+        ],
+        "mean_y_times_d": [
+          -490,
+          729
+        ]
+      },
+      "source_histogram_sha256": "764f51f4cc413bf8e54022420c553f821480d823279e170397f246c4be3c3bde",
+      "source_trace_atom_count": 7
+    },
+    {
+      "bounded_numeric_theorem_regression": {
+        "mean_d": [
+          -26,
+          625
+        ],
+        "mean_d_squared": [
+          122894,
+          78125
+        ],
+        "mean_y": [
+          -1,
+          125
+        ],
+        "mean_y_cubed": [
+          16739,
+          78125
+        ],
+        "mean_y_squared": [
+          2969,
+          3125
+        ],
+        "mean_y_times_d": [
+          -6386,
+          15625
+        ]
+      },
+      "complete_rank_one_pushforward": {
+        "atoms": [
+          {
+            "a_squared": 0,
+            "d": [
+              -2,
+              1
+            ],
+            "local_coefficients": [
+              1,
+              -25,
+              -1250,
+              31250,
+              390625,
+              -9765625
+            ],
+            "member_count": 20,
+            "pointwise_central_quotient": [
+              1,
+              0,
+              -1250,
+              0,
+              390625
+            ],
+            "source_traces": [
+              0
+            ],
+            "w": [
+              -2,
+              1
+            ],
+            "y": [
+              1,
+              1
+            ]
+          },
+          {
+            "a_squared": 1,
+            "d": [
+              -99,
+              125
+            ],
+            "local_coefficients": [
+              1,
+              -11,
+              -495,
+              12375,
+              171875,
+              -9765625
+            ],
+            "member_count": 20,
+            "pointwise_central_quotient": [
+              1,
+              14,
+              -145,
+              8750,
+              390625
+            ],
+            "source_traces": [
+              -1,
+              1
+            ],
+            "w": [
+              -9,
+              5
+            ],
+            "y": [
+              11,
+              25
+            ]
+          },
+          {
+            "a_squared": 4,
+            "d": [
+              114,
+              125
+            ],
+            "local_coefficients": [
+              1,
+              19,
+              570,
+              -14250,
+              -296875,
+              -9765625
+            ],
+            "member_count": 30,
+            "pointwise_central_quotient": [
+              1,
+              44,
+              1670,
+              27500,
+              390625
+            ],
+            "source_traces": [
+              -2,
+              2
+            ],
+            "w": [
+              -6,
+              5
+            ],
+            "y": [
+              -19,
+              25
+            ]
+          },
+          {
+            "a_squared": 9,
+            "d": [
+              29,
+              125
+            ],
+            "local_coefficients": [
+              1,
+              29,
+              145,
+              -3625,
+              -453125,
+              -9765625
+            ],
+            "member_count": 20,
+            "pointwise_central_quotient": [
+              1,
+              54,
+              1495,
+              33750,
+              390625
+            ],
+            "source_traces": [
+              -3,
+              3
+            ],
+            "w": [
+              -1,
+              5
+            ],
+            "y": [
+              -29,
+              25
+            ]
+          },
+          {
+            "a_squared": 16,
+            "d": [
+              246,
+              125
+            ],
+            "local_coefficients": [
+              1,
+              -41,
+              1230,
+              -30750,
+              640625,
+              -9765625
+            ],
+            "member_count": 10,
+            "pointwise_central_quotient": [
+              1,
+              -16,
+              830,
+              -10000,
+              390625
+            ],
+            "source_traces": [
+              -4,
+              4
+            ],
+            "w": [
+              6,
+              5
+            ],
+            "y": [
+              41,
+              25
+            ]
+          }
+        ],
+        "support_size": 5
+      },
+      "member_count": 100,
+      "negative_control_wrong_weight_factor": {
+        "P_at_T_equals_1_over_q": [
+          -2304,
+          1
+        ],
+        "nonzero": true,
+        "witness_trace": 0,
+        "wrong_candidate": "1-q*T"
+      },
+      "q": 5,
+      "selected_exact_coordinate_laws": {
+        "mean_d": [
+          -26,
+          625
+        ],
+        "mean_d_squared": [
+          122894,
+          78125
+        ],
+        "mean_y": [
+          -1,
+          125
+        ],
+        "mean_y_cubed": [
+          16739,
+          78125
+        ],
+        "mean_y_squared": [
+          2969,
+          3125
+        ],
+        "mean_y_times_d": [
+          -6386,
+          15625
+        ]
+      },
+      "source_histogram_sha256": "2daacc2ffd6f75fcb9557d41b45463552f4701d99df9858a44788da2e5ccc107",
+      "source_trace_atom_count": 9
+    },
+    {
+      "bounded_numeric_theorem_regression": {
+        "mean_d": [
+          -50,
+          2401
+        ],
+        "mean_d_squared": [
+          1719892,
+          823543
+        ],
+        "mean_y": [
+          -1,
+          343
+        ],
+        "mean_y_cubed": [
+          993999,
+          823543
+        ],
+        "mean_y_squared": [
+          16407,
+          16807
+        ],
+        "mean_y_times_d": [
+          11150,
+          117649
+        ]
+      },
+      "complete_rank_one_pushforward": {
+        "atoms": [
+          {
+            "a_squared": 0,
+            "d": [
+              -2,
+              1
+            ],
+            "local_coefficients": [
+              1,
+              -49,
+              -4802,
+              235298,
+              5764801,
+              -282475249
+            ],
+            "member_count": 42,
+            "pointwise_central_quotient": [
+              1,
+              0,
+              -4802,
+              0,
+              5764801
+            ],
+            "source_traces": [
+              0
+            ],
+            "w": [
+              -2,
+              1
+            ],
+            "y": [
+              1,
+              1
+            ]
+          },
+          {
+            "a_squared": 1,
+            "d": [
+              -377,
+              343
+            ],
+            "local_coefficients": [
+              1,
+              -29,
+              -2639,
+              129311,
+              3411821,
+              -282475249
+            ],
+            "member_count": 56,
+            "pointwise_central_quotient": [
+              1,
+              20,
+              -1659,
+              48020,
+              5764801
+            ],
+            "source_traces": [
+              -1,
+              1
+            ],
+            "w": [
+              -13,
+              7
+            ],
+            "y": [
+              29,
+              49
+            ]
+          },
+          {
+            "a_squared": 4,
+            "d": [
+              190,
+              343
+            ],
+            "local_coefficients": [
+              1,
+              19,
+              1330,
+              -65170,
+              -2235331,
+              -282475249
+            ],
+            "member_count": 84,
+            "pointwise_central_quotient": [
+              1,
+              68,
+              4662,
+              163268,
+              5764801
+            ],
+            "source_traces": [
+              -2,
+              2
+            ],
+            "w": [
+              -10,
+              7
+            ],
+            "y": [
+              -19,
+              49
+            ]
+          },
+          {
+            "a_squared": 9,
+            "d": [
+              295,
+              343
+            ],
+            "local_coefficients": [
+              1,
+              59,
+              2065,
+              -101185,
+              -6941291,
+              -282475249
+            ],
+            "member_count": 42,
+            "pointwise_central_quotient": [
+              1,
+              108,
+              7357,
+              259308,
+              5764801
+            ],
+            "source_traces": [
+              -3,
+              3
+            ],
+            "w": [
+              -5,
+              7
+            ],
+            "y": [
+              -59,
+              49
+            ]
+          },
+          {
+            "a_squared": 16,
+            "d": [
+              -62,
+              343
+            ],
+            "local_coefficients": [
+              1,
+              31,
+              -434,
+              21266,
+              -3647119,
+              -282475249
+            ],
+            "member_count": 56,
+            "pointwise_central_quotient": [
+              1,
+              80,
+              3486,
+              192080,
+              5764801
+            ],
+            "source_traces": [
+              -4,
+              4
+            ],
+            "w": [
+              2,
+              7
+            ],
+            "y": [
+              -31,
+              49
+            ]
+          },
+          {
+            "a_squared": 25,
+            "d": [
+              1639,
+              343
+            ],
+            "local_coefficients": [
+              1,
+              -149,
+              11473,
+              -562177,
+              17529701,
+              -282475249
+            ],
+            "member_count": 14,
+            "pointwise_central_quotient": [
+              1,
+              -100,
+              6573,
+              -240100,
+              5764801
+            ],
+            "source_traces": [
+              -5,
+              5
+            ],
+            "w": [
+              11,
+              7
+            ],
+            "y": [
+              149,
+              49
+            ]
+          }
+        ],
+        "support_size": 6
+      },
+      "member_count": 294,
+      "negative_control_wrong_weight_factor": {
+        "P_at_T_equals_1_over_q": [
+          -13824,
+          1
+        ],
+        "nonzero": true,
+        "witness_trace": 0,
+        "wrong_candidate": "1-q*T"
+      },
+      "q": 7,
+      "selected_exact_coordinate_laws": {
+        "mean_d": [
+          -50,
+          2401
+        ],
+        "mean_d_squared": [
+          1719892,
+          823543
+        ],
+        "mean_y": [
+          -1,
+          343
+        ],
+        "mean_y_cubed": [
+          993999,
+          823543
+        ],
+        "mean_y_squared": [
+          16407,
+          16807
+        ],
+        "mean_y_times_d": [
+          11150,
+          117649
+        ]
+      },
+      "source_histogram_sha256": "1e73537d1ecb3168705ffa7f71cf0f7b86356bdc92d46463188d460179aa2643",
+      "source_trace_atom_count": 11
+    },
+    {
+      "bounded_numeric_theorem_regression": {
+        "mean_d": [
+          -122,
+          14641
+        ],
+        "mean_d_squared": [
+          32708576,
+          19487171
+        ],
+        "mean_y": [
+          -1,
+          1331
+        ],
+        "mean_y_cubed": [
+          7163639,
+          19487171
+        ],
+        "mean_y_squared": [
+          159587,
+          161051
+        ],
+        "mean_y_times_d": [
+          -566810,
+          1771561
+        ]
+      },
+      "complete_rank_one_pushforward": {
+        "atoms": [
+          {
+            "a_squared": 0,
+            "d": [
+              -2,
+              1
+            ],
+            "local_coefficients": [
+              1,
+              -121,
+              -29282,
+              3543122,
+              214358881,
+              -25937424601
+            ],
+            "member_count": 220,
+            "pointwise_central_quotient": [
+              1,
+              0,
+              -29282,
+              0,
+              214358881
+            ],
+            "source_traces": [
+              0
+            ],
+            "w": [
+              -2,
+              1
+            ],
+            "y": [
+              1,
+              1
+            ]
+          },
+          {
+            "a_squared": 1,
+            "d": [
+              -1869,
+              1331
+            ],
+            "local_coefficients": [
+              1,
+              -89,
+              -20559,
+              2487639,
+              157668929,
+              -25937424601
+            ],
+            "member_count": 110,
+            "pointwise_central_quotient": [
+              1,
+              32,
+              -16687,
+              468512,
+              214358881
+            ],
+            "source_traces": [
+              -1,
+              1
+            ],
+            "w": [
+              -21,
+              11
+            ],
+            "y": [
+              89,
+              121
+            ]
+          },
+          {
+            "a_squared": 4,
+            "d": [
+              -90,
+              1331
+            ],
+            "local_coefficients": [
+              1,
+              -5,
+              -990,
+              119790,
+              8857805,
+              -25937424601
+            ],
+            "member_count": 220,
+            "pointwise_central_quotient": [
+              1,
+              116,
+              13046,
+              1698356,
+              214358881
+            ],
+            "source_traces": [
+              -2,
+              2
+            ],
+            "w": [
+              -18,
+              11
+            ],
+            "y": [
+              5,
+              121
+            ]
+          },
+          {
+            "a_squared": 9,
+            "d": [
+              1235,
+              1331
+            ],
+            "local_coefficients": [
+              1,
+              95,
+              13585,
+              -1643785,
+              -168298295,
+              -25937424601
+            ],
+            "member_count": 220,
+            "pointwise_central_quotient": [
+              1,
+              216,
+              39721,
+              3162456,
+              214358881
+            ],
+            "source_traces": [
+              -3,
+              3
+            ],
+            "w": [
+              -13,
+              11
+            ],
+            "y": [
+              -95,
+              121
+            ]
+          },
+          {
+            "a_squared": 16,
+            "d": [
+              906,
+              1331
+            ],
+            "local_coefficients": [
+              1,
+              151,
+              9966,
+              -1205886,
+              -267505711,
+              -25937424601
+            ],
+            "member_count": 220,
+            "pointwise_central_quotient": [
+              1,
+              272,
+              42878,
+              3982352,
+              214358881
+            ],
+            "source_traces": [
+              -4,
+              4
+            ],
+            "w": [
+              -6,
+              11
+            ],
+            "y": [
+              -151,
+              121
+            ]
+          },
+          {
+            "a_squared": 25,
+            "d": [
+              -237,
+              1331
+            ],
+            "local_coefficients": [
+              1,
+              79,
+              -2607,
+              315447,
+              -139953319,
+              -25937424601
+            ],
+            "member_count": 110,
+            "pointwise_central_quotient": [
+              1,
+              200,
+              21593,
+              2928200,
+              214358881
+            ],
+            "source_traces": [
+              -5,
+              5
+            ],
+            "w": [
+              3,
+              11
+            ],
+            "y": [
+              -79,
+              121
+            ]
+          },
+          {
+            "a_squared": 36,
+            "d": [
+              3206,
+              1331
+            ],
+            "local_coefficients": [
+              1,
+              -229,
+              35266,
+              -4267186,
+              405687469,
+              -25937424601
+            ],
+            "member_count": 110,
+            "pointwise_central_quotient": [
+              1,
+              -108,
+              22198,
+              -1581228,
+              214358881
+            ],
+            "source_traces": [
+              -6,
+              6
+            ],
+            "w": [
+              14,
+              11
+            ],
+            "y": [
+              229,
+              121
+            ]
+          }
+        ],
+        "support_size": 7
+      },
+      "member_count": 1210,
+      "negative_control_wrong_weight_factor": {
+        "P_at_T_equals_1_over_q": [
+          -144000,
+          1
+        ],
+        "nonzero": true,
+        "witness_trace": 0,
+        "wrong_candidate": "1-q*T"
+      },
+      "q": 11,
+      "selected_exact_coordinate_laws": {
+        "mean_d": [
+          -122,
+          14641
+        ],
+        "mean_d_squared": [
+          32708576,
+          19487171
+        ],
+        "mean_y": [
+          -1,
+          1331
+        ],
+        "mean_y_cubed": [
+          7163639,
+          19487171
+        ],
+        "mean_y_squared": [
+          159587,
+          161051
+        ],
+        "mean_y_times_d": [
+          -566810,
+          1771561
+        ]
+      },
+      "source_histogram_sha256": "3f07b5491c165a155ee7abb3e4f11e6a3d015465e47d622429213aebaf13872d",
+      "source_trace_atom_count": 13
+    },
+    {
+      "bounded_numeric_theorem_regression": {
+        "mean_d": [
+          -170,
+          28561
+        ],
+        "mean_d_squared": [
+          132143686,
+          62748517
+        ],
+        "mean_y": [
+          -1,
+          2197
+        ],
+        "mean_y_cubed": [
+          76503699,
+          62748517
+        ],
+        "mean_y_squared": [
+          368913,
+          371293
+        ],
+        "mean_y_times_d": [
+          515870,
+          4826809
+        ]
+      },
+      "complete_rank_one_pushforward": {
+        "atoms": [
+          {
+            "a_squared": 0,
+            "d": [
+              -2,
+              1
+            ],
+            "local_coefficients": [
+              1,
+              -169,
+              -57122,
+              9653618,
+              815730721,
+              -137858491849
+            ],
+            "member_count": 156,
+            "pointwise_central_quotient": [
+              1,
+              0,
+              -57122,
+              0,
+              815730721
+            ],
+            "source_traces": [
+              0
+            ],
+            "w": [
+              -2,
+              1
+            ],
+            "y": [
+              1,
+              1
+            ]
+          },
+          {
+            "a_squared": 1,
+            "d": [
+              -3275,
+              2197
+            ],
+            "local_coefficients": [
+              1,
+              -131,
+              -42575,
+              7195175,
+              632311979,
+              -137858491849
+            ],
+            "member_count": 312,
+            "pointwise_central_quotient": [
+              1,
+              38,
+              -36153,
+              1085318,
+              815730721
+            ],
+            "source_traces": [
+              -1,
+              1
+            ],
+            "w": [
+              -25,
+              13
+            ],
+            "y": [
+              131,
+              169
+            ]
+          },
+          {
+            "a_squared": 4,
+            "d": [
+              -638,
+              2197
+            ],
+            "local_coefficients": [
+              1,
+              -29,
+              -8294,
+              1401686,
+              139977461,
+              -137858491849
+            ],
+            "member_count": 520,
+            "pointwise_central_quotient": [
+              1,
+              140,
+              15366,
+              3998540,
+              815730721
+            ],
+            "source_traces": [
+              -2,
+              2
+            ],
+            "w": [
+              -22,
+              13
+            ],
+            "y": [
+              29,
+              169
+            ]
+          },
+          {
+            "a_squared": 9,
+            "d": [
+              1717,
+              2197
+            ],
+            "local_coefficients": [
+              1,
+              101,
+              22321,
+              -3772249,
+              -487507709,
+              -137858491849
+            ],
+            "member_count": 156,
+            "pointwise_central_quotient": [
+              1,
+              270,
+              67951,
+              7711470,
+              815730721
+            ],
+            "source_traces": [
+              -3,
+              3
+            ],
+            "w": [
+              -17,
+              13
+            ],
+            "y": [
+              -101,
+              169
+            ]
+          },
+          {
+            "a_squared": 16,
+            "d": [
+              1990,
+              2197
+            ],
+            "local_coefficients": [
+              1,
+              199,
+              25870,
+              -4372030,
+              -960534991,
+              -137858491849
+            ],
+            "member_count": 390,
+            "pointwise_central_quotient": [
+              1,
+              368,
+              88062,
+              10510448,
+              815730721
+            ],
+            "source_traces": [
+              -4,
+              4
+            ],
+            "w": [
+              -10,
+              13
+            ],
+            "y": [
+              -199,
+              169
+            ]
+          },
+          {
+            "a_squared": 25,
+            "d": [
+              181,
+              2197
+            ],
+            "local_coefficients": [
+              1,
+              181,
+              2353,
+              -397657,
+              -873652429,
+              -137858491849
+            ],
+            "member_count": 208,
+            "pointwise_central_quotient": [
+              1,
+              350,
+              61503,
+              9996350,
+              815730721
+            ],
+            "source_traces": [
+              -5,
+              5
+            ],
+            "w": [
+              -1,
+              13
+            ],
+            "y": [
+              -181,
+              169
+            ]
+          },
+          {
+            "a_squared": 36,
+            "d": [
+              610,
+              2197
+            ],
+            "local_coefficients": [
+              1,
+              -61,
+              7930,
+              -1340170,
+              294435349,
+              -137858491849
+            ],
+            "member_count": 234,
+            "pointwise_central_quotient": [
+              1,
+              108,
+              26182,
+              3084588,
+              815730721
+            ],
+            "source_traces": [
+              -6,
+              6
+            ],
+            "w": [
+              10,
+              13
+            ],
+            "y": [
+              61,
+              169
+            ]
+          },
+          {
+            "a_squared": 49,
+            "d": [
+              15157,
+              2197
+            ],
+            "local_coefficients": [
+              1,
+              -659,
+              197041,
+              -33299929,
+              3180867131,
+              -137858491849
+            ],
+            "member_count": 52,
+            "pointwise_central_quotient": [
+              1,
+              -490,
+              114231,
+              -13994890,
+              815730721
+            ],
+            "source_traces": [
+              -7,
+              7
+            ],
+            "w": [
+              23,
+              13
+            ],
+            "y": [
+              659,
+              169
+            ]
+          }
+        ],
+        "support_size": 8
+      },
+      "member_count": 2028,
+      "negative_control_wrong_weight_factor": {
+        "P_at_T_equals_1_over_q": [
+          -338688,
+          1
+        ],
+        "nonzero": true,
+        "witness_trace": 0,
+        "wrong_candidate": "1-q*T"
+      },
+      "q": 13,
+      "selected_exact_coordinate_laws": {
+        "mean_d": [
+          -170,
+          28561
+        ],
+        "mean_d_squared": [
+          132143686,
+          62748517
+        ],
+        "mean_y": [
+          -1,
+          2197
+        ],
+        "mean_y_cubed": [
+          76503699,
+          62748517
+        ],
+        "mean_y_squared": [
+          368913,
+          371293
+        ],
+        "mean_y_times_d": [
+          515870,
+          4826809
+        ]
+      },
+      "source_histogram_sha256": "002404dbbdda029e2d78da478696fe7373944851d7dc82ed1b195d0516bad1d0",
+      "source_trace_atom_count": 15
+    }
+  ],
+  "genus2_primitive_exterior_comparator": {
+    "central_eigenvalue_parallel": "the genus-two primitive factor has already removed its canonical polarization line, so its remaining pointwise unit eigenvalue does not prove another common line; Sym4 has no pre-existing common line, and its pointwise q^2 eigenvalue does not prove any common line",
+    "elliptic_Sym4_coordinates": "u=y=chi_4 and v=d=chi_2+chi_6",
+    "genus2_coordinates": "primitive exterior square uses u=s=b/q-1 and v=k=(a^2-b)/q",
+    "group_map_contrast": "genus two uses Sp4/{+I,-I}->SO5 through primitive exterior square; elliptic Sym^4 uses the principal SU2/{+I,-I}=SO3 subgroup representation",
+    "locked_comparator_payload_sha256": "235991e9e36a55ec8352a7c18fc2e0722546267daf51a17642ff767c3387ab1c",
+    "not_an_identification": "matching reciprocal coefficient shape and ambient target do not make the two families, measures, monodromy groups, or global L-functions equal",
+    "rank_contrast": "the ambient genus-two SO(5) torus has two conjugacy parameters; elliptic Sym^4 lies on d^2+y*d-y^2-y^3=0 and has one",
+    "shared_universal_shape": "both normalized factors have 1-u*z+v*z^2-v*z^3+u*z^4-z^5"
+  },
+  "input_family": {
+    "frozen_q_values": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "marked_models": "monic squarefree cubics D over F_q, with E_D: y^2=D(x)",
+    "new_field_or_curve_enumeration": false,
+    "source_measure": "uniform marked models, equivalently the normalized elliptic stack measure for trace observables",
+    "source_trace": "a=q+1-#E_D(F_q), P_E(T)=1-a*T+q*T^2"
+  },
+  "literature_boundary": {
+    "classical_context": "the degree-five symmetric-fourth transfer from GL(2) to GL(5) is classical; this packet does not claim discovery of the local factor, its functional-equation shape, or automorphy",
+    "genus2_comparator_primary_reference": "Daniel File, On the degree five L-function for GSp(4), arXiv:1201.2783, https://arxiv.org/abs/1201.2783",
+    "primary_reference": "Henry H. Kim, Functoriality for the exterior square of GL(4) and the symmetric fourth of GL(2), J. Amer. Math. Soc. 16 (2003), 139-183, DOI 10.1090/S0894-0347-02-00410-1, https://doi.org/10.1090/S0894-0347-02-00410-1",
+    "project_specific_contribution": "the exact thin-curve elimination, locked marked-cubic pushforwards, symbolic all-q character defects with bounded exact instantiations, and explicit SU2-Sym4 versus SO5 Haar separation"
+  },
+  "local_polynomial_theorem": {
+    "eigenvalues": [
+      "alpha^4",
+      "q*alpha^2",
+      "q^2",
+      "q*beta^2",
+      "beta^4"
+    ],
+    "expanded": "1-C*T+D*T^2-q^2*D*T^3+q^6*C*T^4-q^10*T^5, C=a^4-3*q*a^2+q^2, D=q*(a^2-2*q)*((a^2-2*q)^2+q*(a^2-2*q)-q^2)",
+    "functional_equation_shape": "c_3=-q^2*c_2, c_4=-q^6*c_1, c_5=-q^10",
+    "independent_derivations": [
+      "pair alpha^4 with beta^4 and q*alpha^2 with q*beta^2, then include q^2",
+      "Newton recurrence from p_n=alpha^(4n)+q^n*(alpha^(2n)+beta^(2n))+q^(2n)+beta^(4n)"
+    ],
+    "paired_factorization": "(1-q^2*T)*(1-(a^4-4*q*a^2+2*q^2)*T+q^4*T^2)*(1-q*(a^2-2*q)*T+q^4*T^2)",
+    "pointwise_middle_factor": "1-q^2*T",
+    "weight_and_degree": "Sym^4 H^1 has weight 4 and dimension 5"
+  },
+  "next_targets": [
+    {
+      "known": "the cubic moment separates SU2-Sym4 from ambient SO5 at the first possible odd order",
+      "name": "thin_slice_detector",
+      "open": "quantify how fast finite family moments expose principal-A1 or other proper-subgroup slices inside larger L-function atlases"
+    },
+    {
+      "known": "the node has two Qbar normalization preimages, but no arithmetic input hits it: rational w=a^2/q-2 cannot solve w^2+w-1=0 because its discriminant is 5",
+      "name": "rank_one_curve_singular_point_exclusion",
+      "open": "quantify how closely arithmetic coefficient points approach the node and whether near-node behavior correlates with special endomorphisms"
+    },
+    {
+      "known": "every local Sym4 polynomial has the exact factor 1-q^2*T",
+      "name": "quartic_quotient_globalization",
+      "open": "decide in which special subfamilies the pointwise quotient globalizes to an independent compatible rank-four system"
+    }
+  ],
+  "payload_sha256": "7cbf4e02e64fba82be120f3ad83d3448e86e6e93e0f05d180eae14c9f3a8320f",
+  "pointwise_q_squared_eigenline_without_forced_common_line": {
+    "actual_family_level": "the geometric and arithmetic monodromy of the marked-cubic family are not proved here; a smaller subgroup or special locus could add invariant subsystems",
+    "ambient_representation_level": "Sym^4 of the standard SL2 representation is irreducible, so ambient representation theory supplies no invariant vector or forced common Tate line",
+    "individual_finite_field_fiber_level": "for semisimple Frobenius with eigenlines alpha,beta, the middle monomial alpha^2*beta^2=q^2 spans a genuine Frobenius-stable line in that procyclic fiber",
+    "pointwise_quotient_status": "division by 1-q^2*T is exact at every fiber; assembling the quartics into a common rank-four local system, motive, or automorphic family is not asserted",
+    "why_the_axis_varies": "the middle weight line is defined only after choosing the Frobenius torus/eigenlines and is not preserved by the full ambient SL2 action"
+  },
+  "producer_and_source_locks": {
+    "locks": {
+      "genus1_fixture": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+        "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+        "sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227"
+      },
+      "genus1_source": {
+        "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.py",
+        "sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_SYMMETRIC_FOURTH_SO5_SLICE.md",
+        "sha256_lf_normalized": "a15405238cfc1b07859e11e0cde8fd76f4752a7da86bfc54e8f344e0aa12b04a"
+      },
+      "primitive_exterior_fixture": {
+        "path": "research/l-families/atlas/function_field/genus2_primitive_exterior_square.json",
+        "payload_sha256": "235991e9e36a55ec8352a7c18fc2e0722546267daf51a17642ff767c3387ab1c",
+        "sha256_lf_normalized": "2e39dd0f24dc38b1c03165d047f10858ac205edc780fbc8bff225717c507a976"
+      },
+      "primitive_exterior_note": {
+        "path": "research/l-families/atlas/function_field/GENUS2_PRIMITIVE_EXTERIOR_SQUARE.md",
+        "sha256_lf_normalized": "033cf1e6342248e037e7c375e17f47071fb5ffdfd40c649be124271055f77f32"
+      },
+      "primitive_exterior_source": {
+        "path": "research/l-families/atlas/function_field/genus2_primitive_exterior_square.py",
+        "sha256_lf_normalized": "d86c58fc8a1752f43402009f1abc467a58064418a723d2fd5cf6bf8fae32e5f4"
+      },
+      "primitive_exterior_test": {
+        "path": "tests/test_genus2_primitive_exterior_square.py",
+        "sha256_lf_normalized": "0190f49dd1f1f6b78ab9d73b9d11bb44861a50068e451e4719c2337c08789293"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_symmetric_fourth_so5_slice.py",
+        "sha256_lf_normalized": "01b8bc02861b4e3acf1f53d4ae56e7f561260db88275ce782403196d31022ec7"
+      },
+      "test": {
+        "path": "tests/test_elliptic_symmetric_fourth_so5_slice.py",
+        "sha256_lf_normalized": "d2248d64cef3ee949930dbc2d2dddf7217f609abc799687d445a3c6692523950"
+      }
+    },
+    "no_field_or_curve_enumeration": true
+  },
+  "rank_one_SO5_slice": {
+    "arithmetic_node_exclusion": "an arithmetic input has rational r=a^2/q and w=r-2, but w^2+w-1 has discriminant 5 and no rational root; therefore no elliptic trace input hits (y,d)=(0,0)",
+    "compact_subgroup": "Sym^4: SU(2)->SO(5) kills {-I,+I}, factors through an irreducible SO(3), and is the principal A1 slice inside B2 at the representation level",
+    "coordinates": "r=a^2/q; y=r^2-3*r+1=chi_4; d=(r-2)*y=chi_2+chi_6",
+    "eliminated_curve": "d^2+y*d-y^2-y^3=0",
+    "geometry": "the reduced plane curve is rational; its normalization parameter is w, and (y,d)=(0,0) has the two Qbar preimages w^2+w-1=0",
+    "normalization_parameter": "w=r-2 gives y=w^2+w-1 and d=w*y",
+    "normalized_form": "P(z/q^2)=1-y*z+d*z^2-d*z^3+y*z^4-z^5",
+    "rank_warning": "rank one refers to the one torus/conjugacy parameter, not to the rank of the five-dimensional local system"
+  },
+  "raw_fixture_id": "elliptic-sym4-so5-rank-one-q3-q5-q7-q11-q13-v1",
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "finite_coordinate_moment_atom_products": 180,
+      "locked_histogram_atom_visits": 55,
+      "newton_coefficient_checks": 275,
+      "total_accounted_work_units": 2815,
+      "weyl_constant_term_pairs": 489,
+      "weyl_laurent_term_products": 1816
+    },
+    "automatic_theta12_characteristic_cap_inclusive": 1000,
+    "exclusive_accounted_work_unit_cap": 5000,
+    "field_or_curve_enumerations": 0,
+    "floating_point_results": 0,
+    "locked_histogram_rows_read": 5,
+    "maximum_compact_moment_order": 8,
+    "maximum_polynomial_degree": 5,
+    "random_samples": 0,
+    "unit_definition": "declared histogram visits, Newton coefficient checks, finite moment atom products, and Laurent term-pair visits; not literal machine instructions or a wall-clock complexity claim"
+  },
+  "rigor_level": {
+    "automatic_numeric_stack_laws": "EXACT_ONLY_WHEN_CHARACTERISTIC_AT_MOST_1000; LARGER_CHARACTERISTICS_REQUIRE_SUPPLIED_THETA_12",
+    "compact_group_moments": "EXACT_CLEBSCH_GORDAN_AND_B2_WEYL_CONSTANT_TERMS",
+    "finite_pushforwards": "EXACT_FOR_Q_3_5_7_11_13_FROM_COMPLETE_LOCKED_HISTOGRAMS",
+    "local_polynomial": "PROVED_POINTWISE_BY_PAIRED_ROOTS_AND_NEWTON_RECURRENCE",
+    "monodromy_automorphy_and_global_analytic_claims": "NOT_INFERRED",
+    "rank_one_curve": "EXACT_ELIMINATION_IDENTITY",
+    "symbolic_all_q_stack_laws": "PROVED_FOR_EVERY_ODD_PRIME_POWER_FROM_LOCKED_CHARACTER_THEOREM"
+  },
+  "schema": "riemann.function_field.elliptic_symmetric_fourth_so5_slice.v1",
+  "scope_firewall": {
+    "no_analytic_or_RH_claim": "local identities and compact moments imply no new analytic continuation, functional equation, zero-free region, RH, or GRH theorem",
+    "no_family_identification": "the elliptic Sym^4 slice is compared with, not identified with, the genus-two primitive exterior-square family",
+    "no_finite_to_asymptotic_fit": "five exact finite pushforwards check the theorem but are not fitted to an empirical convergence rate",
+    "no_measure_substitution": "uniform marked cubics / normalized stack weights are not relabeled as uniform coarse elliptic classes",
+    "no_monodromy_upgrade": "compact representation targets and Haar comparators do not prove the actual arithmetic or geometric monodromy group",
+    "no_pointwise_to_global_line": "a q^2 eigenline for each Frobenius element does not provide a common rank-one sub-local-system across the family",
+    "no_symbolic_to_numeric_cap_confusion": "the character identities hold symbolically for every odd prime power, while the bundled automatic Theta_12 evaluator is explicitly limited to characteristic at most 1000"
+  },
+  "status": "EXACT_ALL_Q_LOCAL_ALGEBRA_SYMBOLIC_STACK_LAWS_AND_BOUNDED_NUMERIC_PUSHFORWARD"
+}

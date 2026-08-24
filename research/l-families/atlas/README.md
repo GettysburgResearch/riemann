@@ -16,11 +16,14 @@ affine-family measures, an all-degree affine Burnside generating series, an
 all-odd-`q` elliptic-stack moment theorem, a cross-rank symplectic
 reclassification, an independently enumerated balanced-control scan,
 Frobenius-power echo laws, a bounded tail-geometry packet, an exact elliptic
-symmetric-cube pushforward, a product-variety tensor family, its singular
-trace-zero strata, a primitive exterior-square `SO(5)` family, an integral
-factor-locus census, and an exact `USp(4)` virtual-character null-direction
-packet are also included. Every atlas record is `DRAFT`. RH and GRH remain
-open.
+symmetric-cube pushforward, its exact intersection with the locked genus-two
+coefficient lattice, an elliptic symmetric-fourth `SO(3)` slice, a sharp
+symmetric-power trace-alias theorem, a product-variety tensor family, its
+singular trace-zero strata and endoscopic rank-drop bridge, a primitive
+exterior-square `SO(5)` family, an integral factor-locus census, a
+Sym3-exterior/Sym4 plethysm bridge, and an exact `USp(4)` virtual-character
+null-direction packet are also included. Every atlas record is `DRAFT`. RH
+and GRH remain open.
 
 Exact sources or dependencies: classical completed GL(1) normalizations; the
 displayed finite-field definitions; the standard level-one modular-stack
@@ -51,8 +54,8 @@ sums through genus eight without enumerating another field. The power-echo
 packet applies exact Newton recurrences through `r=8` to the locked
 `q=3,5,7` histograms and independently checks the `C_2` Haar frequencies; it
 does not enumerate another family. The reciprocal filter evaluates five
-objects, four endpoints, and every coefficient through 256. The two new
-packets add nine tests each; all 306 tests pass both normally and under
+objects, four endpoints, and every coefficient through 256. The five frontier
+packets add 43 focused tests; all 386 tests pass both normally and under
 optimized Python; the
 offline validator checks 64 artifact bindings across 15 evaluations. No broad
 zero or conductor sweep was run.
@@ -97,11 +100,16 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 | classical reciprocal filter | exact integer coefficients and `Q(sqrt(2))` signs | the four-shell filter has mixed signs across objects/endpoints; no common finite sign survives | classical coefficients; unitary map explicit; four endpoints are not an abscissa or zero theorem |
 | function field, genus 1 | exact cubic arithmetic at `q=3,5,7,11,13`; all-odd-`q` elliptic-stack trace formula and Burnside laws | every marked-model character and raw trace moment is explicit; full affine branch and elliptic coarse quotients are distinct; the first automorphic correction is at raw moment 10; the original `q=5` toy sign split is `40/20/40` | all-weight theorem uses the stated standard modular-trace input; five fields are frozen regressions, not its proof; toy `H_D(1)H_D(2)` is not canonical `XD`/`HCNC` |
 | elliptic symmetric cube | exact `Sym^3 H^1` local factor; rational nodal coefficient curve; all-odd-`q` model/stack laws through base degree 12; 55-atom locked pushforward | `Sym^3(SU(2))` is a rank-one subimage of `USp(4)`; trace fourth moment is `4` versus generic `3`; `t -> t^3-2qt` is injective on integer traces for odd `q`; the coefficient curve has three real nodes | the lift is classical; curve membership does not certify arithmetic origin—`(0,0)` is an odd-`q` false positive; project-specific calculations have no literature-priority claim |
+| elliptic symmetric fourth | exact `Sym^4 H^1` degree-five factor, rational normalized coefficient curve, odd-prime-power moment laws, and 55-atom locked pushforward | the principal `SO(3)` slice in `SO(5)` has equation `d^2+yd-y^2-y^3=0`; its node has no rational arithmetic preimage; thin trace moments first differ from generic `SO(5)` at order three | the transfer is classical; a pointwise middle eigenvalue is not a common Tate subsystem; coefficient-curve membership is not arithmetic recognition |
+| symmetric-power trace aliasing | exact Dickson recurrence, parity-factor proof, and locked pushforwards through `m=18` | for every odd `q`, the scalar `Sym^m` trace recovers an integral base trace for `m=1,3 mod 6` and its sign-orbit for `m=2 mod 6`; the other classes have Hasse-admissible, source-witnessed collisions | a scalar trace is not a full local factor; the `m=5` quartic is a Diophantine target, not an integral-point classification or realization theorem |
+| Sym3/genus-two coefficient intersection | exact scaled curve, rational inverse off the nodal divisor, odd-prime candidate lemma, and complete transform of 251 locked atoms | exactly 7 atoms/451 members hit the curve; only 4 shapes/53 members are independently elliptic-trace witnessed, while 3 atoms/398 members are central ghosts | the factors have different weights; equal normalized coefficient shapes do not identify motives, families, or local factors |
 | function field, genus 2 | exhaustive exact `F_q/F_{q^2}` arithmetic at `q=3,5,7`; exact all-q proof certificate; exhaustive affine action | normalized means are `-104/243`, `-1994/3125`, `-12340/16807`; all-q mean tends to `-1`, `liminf rho_->=1/20`, five low-weight character means are exact, and the second-moment gap reduces to `chi_(0,4)+chi_(2,2)+2chi_(0,3)` | orbit averages require stabilizer weights; the remaining high-weight decay and full sign law are conjectural; toy coefficient minor |
 | product-variety tensor family | exact primitive degree-eight, weight-two `H^1(E)⊗H^1(C)` factor; all-`q` finite means from locked marginals; exact frozen `q=3,5,7` histogram convolution | compact image `(USp(2)×USp(4))/diag center` lies in `SO(8)`; `u^2h-u^4+2u^2v+u^2-2uw-w^2=0`; product-Haar trace `m4=6` versus generic `SO(8)` value `3`, and `(mean(h),mean(uw))=(1,1)` versus `(0,0)` | `A=-t_E` bridges the stored trace convention; frozen laws use ordered factor-pair model/curve-stack measure, not uniform coarse product varieties; no generic-`SO(8)` or convergence claim |
 | tensor trace-zero singular strata | exact sparse-polynomial geometry plus a 2,471-atom-pair locked census | the ambient containing hypersurface has `F=(h+2v+2)u^2-u^4-(u+w)^2`; reduced singular plane `u=w=0`; rank drop on `h+2v+2=0`; reduced pullback branches `A=0,b=2q` and `a=0,b=2q-A^2` | equality with the full coefficient image is not asserted; a singular containing hypersurface is not a singular curve/variety; formal `P_C` factorizations import no isogeny or endomorphism theorem |
+| tensor endoscopic rank-drop bridge | exact sum-of-squares identity, primary decomposition, and complete split/rank incidence census over the locked product atoms | `q^2(h+2v+2)=(A^2+b-2q)^2+(Aa)^2`; real/integer rank drop lies on two integral `+q` split branches, but most split atoms do not rank-drop | the doubled scheme pullback is not an asserted endoscopic moduli scheme; coefficient factorization imports no isogeny, polarization, or geometric splitting theorem |
 | genus-two integral `+q` factor locus | exact discriminant/parity transform of all 251 frozen signed coefficient atoms | split fractions `1/6,141/500,85/343`; `B`, `F`, and the complete balanced echo each have cross-boundary collisions; cyclotomic spectra occur on both sides | complement may still factor over `Z`; no Honda--Tate, polarization, all-`q` density, or geometric-simplicity claim; q=7 split-orbit total remains exactly nonidentifiable in `86..88` |
 | primitive genus-two exterior square | exact degree-five `SO(5)` factor, exact all-`q` character Gram formulas, and frozen trace pushforwards | after the canonical polarization line is removed, every local factor has a second `(1-qT)` divisor and hence a genuine fiberwise Frobenius-stable line; `SO(5)` trace moments through six are `1,0,1,0,3,1,15`; frozen fifth moments have the opposite sign | ambient `SO(5)` forces no second common line, but actual family monodromy is unproved and endoscopic loci can gain one; cross-family/cross-prime quartic compatibility is not established; three negative fifth moments imply no asymptotic law |
+| Sym3 exterior/Sym4 plethysm bridge | exact characteristic-zero weight decomposition, six-coefficient local-factor identity, normalized curve map, and a 251-atom locked incidence transform | `wedge^2 Sym^3 V=(det V)^3 + (Sym^4 V tensor det V)` and the primitive factor is exactly `P_Sym4(qT)`; the Sym3 curve pulls back identically to the Sym4 curve | this is classical representation algebra plus a project-specific coefficient diagram; it does not identify the genus-two factors, motives, monodromy, or Euler products |
 | exact `USp(4)` comparator | bounded Laurent-polynomial/Weyl arithmetic plus guarded shifted-grid quadrature | `F=(Tr U)^2-e_2(U)^2=-(1+chi_omega2+chi_2omega2)`, range `[-20,4/3]`, exact Haar moments through order 12; a degree-twelve majorant proves `P(F<0)>=0.480701...`; display-only `P(F<0)≈0.738` | the rational value is a lower bound, not the exact probability or a claimed optimal moment bound; finite-field higher-moment/sign-law convergence remains proposed |
 | affine hyperelliptic presentation measures | exact Burnside fixed-locus divisor sums and a rational all-degree generating series, no field enumeration | marked affine-stack mass is `q^(2g-1)` in every genus; the universal leading coarse-orbit correction is `(q^g-(-1)^g)/(q+1)`; multiplicative resonances occur in degrees `0,1 mod d` for `d|q-1`, additive resonances in degrees divisible by `char(F_q)` | marked odd-degree equations, not the full unpointed hyperelliptic moduli stack; even degrees are covered by the series but define a different presentation problem |
 | cross-rank coefficient minors | exact `USp(2g)` character algebra and bounded Weyl constant terms | the original alternating sign is all-rank Schur negativity; `B=2e_1^2-e_2^2` has symmetric arcsine-times-semicircle Haar law but exact finite mean `q^-1+q^-3-q^-4+q^-5` | no finite-family convergence; odd `B` moments remain arithmetic targets |
@@ -147,12 +155,17 @@ python research/l-families/atlas/function_field/genus2_family_measures.py --chec
 python research/l-families/atlas/function_field/hyperelliptic_affine_burnside.py --check research/l-families/atlas/function_field/hyperelliptic_affine_burnside.json
 python research/l-families/atlas/function_field/genus1_cubic_family_laws.py --check research/l-families/atlas/function_field/genus1_cubic_family_laws.json
 python research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py --check
+python research/l-families/atlas/function_field/elliptic_symmetric_fourth_so5_slice.py --check
+python research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py --check
+python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
+python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/balanced_control_family_scan.py --check research/l-families/atlas/function_field/balanced_control_family_scan.json
 python research/l-families/atlas/function_field/frobenius_power_echoes.py --check
 python research/l-families/atlas/function_field/genus2_high_weight_channel_probe.py --check research/l-families/atlas/function_field/genus2_high_weight_channel_probe.json
 python research/l-families/atlas/function_field/genus2_tail_geometry.py --check research/l-families/atlas/function_field/genus2_tail_geometry.json
 python research/l-families/atlas/function_field/product_variety_tensor_family.py --check research/l-families/atlas/function_field/product_variety_tensor_family.json
 python research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.py --check research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.json
+python research/l-families/atlas/function_field/tensor_endoscopic_rank_drop_bridge.py --check
 python research/l-families/atlas/function_field/genus2_endoscopic_split_locus.py --check
 python research/l-families/atlas/function_field/genus2_primitive_exterior_square.py --check research/l-families/atlas/function_field/genus2_primitive_exterior_square.json
 python research/l-families/atlas/function_field/virtual_character_null_directions.py --check
@@ -220,6 +233,20 @@ rigor/scope confusions.
   does not reprove its classical automorphy. Its curve is a compact-image
   obstruction, not a local or global arithmetic recognition theorem; the
   `(0,0)` node is an explicit odd-`q` false positive.
+- The symmetric-fourth packet studies the classical transfer's principal
+  `SO(3)` coefficient slice, not a generic `SO(5)` family. Its nodal curve,
+  moment comparison, and finite pushforward do not supply an arithmetic
+  recognition theorem or a common Tate subsystem.
+- The symmetric-power alias theorem classifies only one scalar trace. Its
+  complementary collisions do not normally identify complete local factors,
+  and its `m=5` collision curve is left as a guarded Diophantine target.
+- The Sym3/genus-two intersection is between normalized coefficient shapes of
+  different weights. Source-witnessing an elliptic trace does not make a
+  genus-two member a symmetric-cube motive, and the central hits remain
+  arithmetic ghosts.
+- The Sym3-exterior/Sym4 bridge is classical plethysm plus an exact
+  coefficient diagram. Equality of its formal transformed factors does not
+  identify source motives, families, monodromy groups, or Euler products.
 - The primitive exterior-square packet removes the canonical polarization
   line. Each finite-field fiber has a genuine second Frobenius-stable
   `q`-eigenline, while ambient `SO(5)` supplies no forced common line. The
