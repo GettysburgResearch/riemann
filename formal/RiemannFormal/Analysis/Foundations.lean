@@ -1,5 +1,6 @@
 import RiemannFormal.Upstream
 import Mathlib.Analysis.MellinTransform
+import Mathlib.Tactic
 
 open Complex Set
 
@@ -45,5 +46,10 @@ theorem detector_eq_positivePart_sub_negativePart (f : Detector) (x : ℝ) :
   · simp [positivePart, negativePart, h]
   · have h' : f x ≤ 0 := le_of_not_ge h
     simp [positivePart, negativePart, h, h']
+
+/-- Equivalent additive form of the pointwise Jordan decomposition. -/
+theorem positivePart_eq_add_negativePart (f : Detector) (x : ℝ) :
+    positivePart f x = f x + negativePart f x := by
+  linarith [detector_eq_positivePart_sub_negativePart f x]
 
 end RiemannFormal.Analysis

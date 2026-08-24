@@ -40,8 +40,15 @@ theorem fixed_mellin_singularity_transfer
   exact fixed_holomorphic_defect_transfer hdefect
     (nonvanishing_multiplier_preserves_nonremovable hmultiplier hmultiplier_ne hmain)
 
-/-- Reciprocal meromorphic order, specialized to ζ. This is the formal multiplicity API for
-reciprocal-zeta poles. -/
+/-- Any function of strictly negative meromorphic order is nonremovable. -/
+theorem nonremovable_of_meromorphicOrderAt_neg
+    {f : ℂ → ℂ} {s₀ : ℂ}
+    (horder : meromorphicOrderAt f s₀ < 0) :
+    NonremovableAt f s₀ := by
+  intro hanalytic
+  exact (not_lt_of_ge hanalytic.meromorphicOrderAt_nonneg) horder
+
+/-- Reciprocal meromorphic order, specialized to ζ. -/
 theorem reciprocalZeta_meromorphicOrderAt (ρ : ℂ) :
     meromorphicOrderAt (riemannZeta⁻¹) ρ = -meromorphicOrderAt riemannZeta ρ :=
   meromorphicOrderAt_inv
@@ -51,5 +58,13 @@ theorem reciprocalZeta_order_of_zeta_order {ρ : ℂ} {m : ℤ}
     (horder : meromorphicOrderAt riemannZeta ρ = (m : WithTop ℤ)) :
     meromorphicOrderAt (riemannZeta⁻¹) ρ = -(m : WithTop ℤ) := by
   rw [reciprocalZeta_meromorphicOrderAt, horder]
+
+/-- Zeta23's exact zero multiplicity becomes the reciprocal pole order at an open-strip zero. -/
+theorem reciprocalZeta_order_of_projectZero
+    {ρ : ℂ} (hρ : RiemannFormal.Upstream.ProjectNontrivialZero ρ) :
+    meromorphicOrderAt (riemannZeta⁻¹) ρ =
+      -((RiemannFormal.Upstream.ProjectZeroMultiplicity ρ : ℤ) : WithTop ℤ) := by
+  rw [reciprocalZeta_meromorphicOrderAt,
+    RiemannFormal.Upstream.projectRiemannZeta_meromorphicOrderAt_eq_zeroMultiplicity hρ]
 
 end RiemannFormal.Analysis

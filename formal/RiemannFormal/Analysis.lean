@@ -3,5 +3,6 @@ import RiemannFormal.Analysis.MellinAPI
 import RiemannFormal.Analysis.SingularityTransfer
 import RiemannFormal.Analysis.LandauConsumer
 import RiemannFormal.Analysis.Reflection
+import RiemannFormal.Analysis.FixedDetectorConsumer
 import RiemannFormal.Analysis.AxiomAudit
 import RiemannFormal.Analysis.ComparatorSmoke

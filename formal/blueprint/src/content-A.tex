@@ -1,42 +1,93 @@
-\section{Reviewer A: upstream and Mellin analysis}
+% Formalization Reviewer A: analytic and Mellin infrastructure.
 
-\begin{definition}[Fixed holomorphic defect transfer]
-\label{def:analysis-holomorphic-defect}
-\lean{RiemannFormal.Analysis.fixed_holomorphic_defect_transfer}
-A fixed analytic correction cannot remove a nonremovable singularity.
-Semantic ID: \texttt{CONSUMER.MELLIN.HOLOMORPHIC\_DEFECT}.
-\end{definition}
+\section{Upstream and analytic bridges}
 
-\begin{theorem}[Nonvanishing multiplier preservation]
-\label{thm:analysis-multiplier}
-\lean{RiemannFormal.Analysis.nonvanishing_multiplier_preserves_nonremovable}
-A nonvanishing analytic multiplier preserves a nonremovable singularity.
-The source-specific logarithmic-box multiplier remains an explicit adapter obligation.
+\begin{theorem}[Canonical RH bridge]
+\label{thm:A-rh-bridge}
+\lean{RiemannFormal.Upstream.projectRH_is_mathlib}
+The project conclusion is definitionally Mathlib's
+\texttt{RiemannHypothesis}.  Zeta23 compatibility is retained by
+\lean{RiemannFormal.Upstream.zeta23_bridge_preserves_RH}.
 \end{theorem}
 
-\begin{theorem}[Specialized Mellin--Landau boundary]
-\label{thm:analysis-landau-boundary}
-\notready
+\begin{theorem}[Zeta order and multiplicity bridge]
+\label{thm:A-zero-multiplicity}
+\lean{RiemannFormal.Upstream.projectRiemannZeta_meromorphicOrderAt_eq_zeroMultiplicity}
+At each Zeta23 open-strip zero, Mathlib's meromorphic order of
+\(\zeta\) is exactly Zeta23's finite \texttt{zeroMult}, embedded in
+\(\mathbb Z\cup\{\infty\}\).  Reciprocal order is
+\lean{RiemannFormal.Analysis.reciprocalZeta_order_of_projectZero}.
+\end{theorem}
+
+\section{Exact Mellin conventions}
+
+\begin{definition}[Reviewed tail Mellin transform]
+\label{def:A-tail-mellin}
+\lean{RiemannFormal.Analysis.tailMellin}
+The conclusion-facing transform is defined directly as
+\[
+  \mathcal M_{\geq 1}f(s)
+  =\int_{[1,\infty)} f(x)x^{-s-1}\,dx.
+\]
+It is separate from Mathlib's standard Mellin transform on
+\((0,\infty)\).
+\end{definition}
+
+\begin{theorem}[Fixed logarithmic box]
+\label{thm:A-log-box}
+\lean{RiemannFormal.Analysis.logBoxMultiplier_nonzero}
+For one fixed \(A>1\),
+\[
+  K_A(s)=\frac{1-A^{-s}}{s}
+\]
+is analytic and nonzero throughout \(\Re s>0\).
+Semantic ID: \texttt{CONSUMER.MELLIN.ZERO\_SAFE\_BOX}.
+The arithmetic positivity estimate for a smoothed detector remains a
+separate producer obligation.
+\end{theorem}
+
+\begin{theorem}[Fixed holomorphic-defect transfer]
+\label{thm:A-defect-transfer}
+\lean{RiemannFormal.Analysis.fixed_mellin_singularity_transfer}
+A fixed nonvanishing analytic multiplier and a fixed holomorphic defect
+cannot remove a nonremovable singularity.
+Semantic ID: \texttt{CONSUMER.MELLIN.HOLOMORPHIC\_DEFECT}.
+\end{theorem}
+
+\begin{theorem}[Exact tail-Landau interface]
+\label{thm:A-tail-landau}
 \lean{RiemannFormal.Analysis.nonnegative_landau_boundary}
-The sorry-free theorem is conditional on the explicit proposition
-\texttt{MellinLandauBoundarySingularity}; the exact analytic theorem is absent from the pinned
-upstream libraries.
+\notready
+The proposition
+\lean{RiemannFormal.Analysis.MellinLandauBoundarySingularity}
+states the missing library theorem using the same tail transform,
+local integrability, eventual nonnegativity, nonzero density, a finite
+boundary abscissa, initial convergence and the exact continuation
+identity.
 Semantic ID: \texttt{CONSUMER.MELLIN.SPECIALIZED\_LANDAU}.
 \end{theorem}
 
-\begin{theorem}[Subpower negative-mass correction]
-\label{thm:analysis-subpower-negative-mass}
+\begin{theorem}[Exact subpower negative-mass interface]
+\label{thm:A-negative-mass}
+\lean{RiemannFormal.Analysis.subpower_negative_mass_holomorphic}
 \notready
-\lean{RiemannFormal.Analysis.subpower_negative_mass_singularity_transfer}
-\uses{def:analysis-holomorphic-defect}
-The singularity transfer is proved. Holomorphy of the negative-part transform is isolated as the
-explicit missing proposition \texttt{SubpowerNegativeMassHolomorphy}.
+The hypothesis controls
+\(\int_{[1,X]}f_-(x)\,dx/x\), includes an initial absolute-convergence
+half-plane, and concludes holomorphy of the same negative-part tail
+transform on \(\Re s>0\).
 Semantic ID: \texttt{API.MELLIN.SUBPOWER\_NEGATIVE\_MASS}.
 \end{theorem}
 
-\begin{theorem}[Functional-equation reflection closure]
-\label{thm:analysis-reflection}
-\lean{RiemannFormal.Analysis.functionalEquationReflection_closes_RH}
-Right-side exclusion closes Mathlib's RH statement once reflection is known to preserve the full
-RH-admissible zero convention, including all exceptional points.
+\begin{theorem}[Honest conditional fixed-detector consumer]
+\label{thm:A-fixed-detector-consumer}
+\lean{RiemannFormal.Analysis.fixedDetector_negativeMass_implies_RH}
+\uses{thm:A-zero-multiplicity,thm:A-defect-transfer,thm:A-tail-landau,thm:A-negative-mass}
+\notready
+A fixed source/tail identity, fixed reciprocal-zeta continuation,
+zero-safe numerator and multiplier, fixed holomorphic defect, exact
+shifted pole order, exact Landau and negative-mass propositions,
+positive-tail continuation, zero localization and functional-equation
+reflection imply Mathlib's RH proposition.  Every unresolved premise
+is an explicit theorem argument; no premise already returns RH.
+Formal status: \texttt{PROVED\_CONDITIONAL}.
 \end{theorem}

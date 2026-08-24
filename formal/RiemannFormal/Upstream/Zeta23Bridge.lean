@@ -4,10 +4,15 @@ import Zeta23.Statement.SeamClosed
 import Zeta23.ZetaReflect
 import Zeta23.WeilEF.Main
 import Zeta23.RvM.Statement
+import Mathlib.Tactic
 
 open Complex
 
 namespace RiemannFormal.Upstream
+
+/-- Compatibility declaration retained for the trusted bootstrap axiom audit. The project and
+Zeta23 both use Mathlib's canonical RH proposition; no new hypothesis is introduced. -/
+theorem zeta23_bridge_preserves_RH : RiemannFormal.RH ↔ RiemannHypothesis := Iff.rfl
 
 /-- The project reuses Zeta23's exact open-strip zero convention. -/
 abbrev ProjectNontrivialZero : ℂ → Prop := Zeta23.IsNontrivialZero
@@ -25,6 +30,41 @@ abbrev ProjectReflectedZero : ℂ → ℂ := Zeta23.reflect
 theorem projectZeroMultiplicity_def (ρ : ℂ) :
     ProjectZeroMultiplicity ρ = (analyticOrderAt riemannZeta ρ).toNat :=
   rfl
+
+/-- At every point other than `1`, analytic and meromorphic zeta order agree under the canonical
+`ENat → WithTop ℤ` map. -/
+theorem projectRiemannZeta_meromorphicOrderAt_eq_analyticOrderAt
+    {ρ : ℂ} (hρ1 : ρ ≠ 1) :
+    meromorphicOrderAt riemannZeta ρ =
+      (analyticOrderAt riemannZeta ρ).map (fun n : ℕ => (n : ℤ)) := by
+  simpa using
+    ((differentiableAt_riemannZeta hρ1).analyticAt.meromorphicOrderAt_eq)
+
+/-- At a Zeta23 open-strip zero, the meromorphic order is exactly the finite natural
+`zeroMult`, embedded in `WithTop ℤ`. -/
+theorem projectRiemannZeta_meromorphicOrderAt_eq_zeroMultiplicity
+    {ρ : ℂ} (hρ : ProjectNontrivialZero ρ) :
+    meromorphicOrderAt riemannZeta ρ =
+      ((ProjectZeroMultiplicity ρ : ℤ) : WithTop ℤ) := by
+  have hρ1 : ρ ≠ 1 := hρ.not_trivial.2
+  rw [projectRiemannZeta_meromorphicOrderAt_eq_analyticOrderAt hρ1]
+  have hfinite : analyticOrderAt riemannZeta ρ ≠ ⊤ := by
+    intro htop
+    have hzero : ProjectZeroMultiplicity ρ = 0 := by
+      change (analyticOrderAt riemannZeta ρ).toNat = 0
+      rw [htop]
+      simp
+    have hone : 1 ≤ ProjectZeroMultiplicity ρ :=
+      Zeta23.zetaSeam.one_le_mult ρ hρ
+    rw [hzero] at hone
+    omega
+  obtain ⟨m, hm⟩ := ENat.ne_top_iff_exists.mp hfinite
+  have hmult : ProjectZeroMultiplicity ρ = m := by
+    change (analyticOrderAt riemannZeta ρ).toNat = m
+    rw [← hm]
+    simp
+  rw [← hm]
+  simp [hmult]
 
 /-- Reconstruction from the centered coordinate. -/
 theorem projectCenteredZero_reconstruct (ρ : ℂ) :
