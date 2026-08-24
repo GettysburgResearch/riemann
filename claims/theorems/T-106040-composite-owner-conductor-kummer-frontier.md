@@ -4,13 +4,15 @@ Claim ID: `T-106040`
 Programme aliases: `LFAM1.COMPOSITE_OWNER_CONDUCTOR_MOMENT`, `LFAM2.PRODUCT_KUMMER_HANDOFF`, `STRESS.MULTI_OWNER_ASSEMBLY`  
 Status: **EXACT COMPOSITE-FAMILY REDUCTION; ASSEMBLY OPEN**  
 Created: 2026-08-24  
+Audited: 2026-08-24  
 Depends on: `L-106040`; `R-106040`; `T-106020`, `T-106030`; PR #719 `HBCQDSP102888`  
 Programme issues: #743, #736, #737  
 RH status: **unproved**
 
 The square-phase family can be formed simultaneously at any source-selected
-squarefree product of opposite owner primes. The correct frame is the tensor
-frame of `L-106040`, not the withdrawn scalar formula in `R-106040`.
+squarefree product of opposite owner primes disjoint from the marked prime
+`67`. The correct frame is the tensor frame of `L-106040`, not the withdrawn
+scalar formula in `R-106040`.
 
 ## 1. Source-selected composite conductor
 
@@ -25,9 +27,9 @@ M=rs\,b^2,
 choose nonempty source-owned sets
 
 \[
-S_N\subseteq\{r,s\},
+S_N\subseteq\{r,s\}\setminus\{67\},
 \qquad
-S_M\subseteq\{p,q\}.
+S_M\subseteq\{p,q\}\setminus\{67\}.
 \]
 
 Put
@@ -37,6 +39,9 @@ Q_N=\prod_{\rho\in S_N}\rho,
 \qquad
 Q_M=\prod_{\pi\in S_M}\pi.
 \]
+
+If a clean occurrence contains the physical prime `67`, its marked local
+sector is retained separately and is not promoted to a conductor factor.
 
 These conductors are fixed by the physical occurrence before any hypothetical
 zero, character, phase, norm or regional estimate is introduced.
@@ -95,7 +100,8 @@ CCSOCM106040:
   the surviving short-core packets has subpower logarithmic energy when
   written in the complete tensor locally-even character bases attached to the
   selected composite opposite-owner conductors, with every local quadratic-
-  class vector retained until after the sector frame is applied.
+  class vector retained until after the sector frame is applied and every
+  marked-67 local sector retained outside the conductor.
 ```
 
 The ledger must include:
@@ -108,13 +114,14 @@ physical owner coefficients;
 finite shell projections;
 source-selected conductor subsets;
 quadratic-class vectors;
+marked-67 local sectors;
 all collisions between distinct owner packets.
 ```
 
 The theorem permits a deterministic selector among the finitely many nonempty
 conductor subsets. It does not permit selecting a conductor after seeing a
-hypothetical zero or reusing owner weights already spent by a parent packing
-theorem.
+hypothetical zero, using `67` as an undeclared completion prime, or reusing
+owner weights already spent by a parent packing theorem.
 
 ## 4. Conclusion chain
 
@@ -140,10 +147,11 @@ another exact coordinate system for the same physical current. Therefore
 ## 5. Function-field target
 
 Define `FFCCSOCM106040` to be the corresponding coherent moment for squarefree
-polynomial owner conductors. A useful proof must retain the product Kummer
-sheaf, all local Artin--Schreier phases, the complete quadratic-root fibre,
-resonant strata, conductor growth and the distinction between memberwise and
-family-averaged cancellation.
+polynomial owner conductors, with any distinguished marked irreducible kept
+outside the conductor. A useful proof must retain the product Kummer sheaf,
+all local Artin--Schreier phases, the complete quadratic-root fibre, resonant
+strata, conductor growth and the distinction between memberwise and family-
+averaged cancellation.
 
 Its purpose is to identify a number-field hybrid character or relative-trace
 estimate. Function-field RH alone does not imply (T-106040.2).
@@ -155,6 +163,7 @@ composite principal Euler completion          PROVED EXACT
 tensor local Kummer frame                     PROVED EXACT
 quadratic-class sector decomposition          PROVED EXACT
 sector principal leverage                     PROVED EXACT
+marked-67 conductor collision                  EXCLUDED / EXPLICIT LEDGER
 scalar phi(q)/q leverage formula               REFUTED
 CCSOCM106040 composite coherent assembly       OPEN / RH-BEARING
 FFCCSOCM106040 geometric product moment        OPEN / EXPLORATORY
