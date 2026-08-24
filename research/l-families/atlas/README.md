@@ -2,30 +2,36 @@
 
 Status: **exact finite exploration, exact synthetic algebra, and source-qualified discovery data**.
 
-Scope: one small GL(1)/GL(2) local-Euler corpus; the complete family of 100
-monic squarefree cubics over `F_5[T]`; the complete genus-two quintic families
-over `F_3[T]`, `F_5[T]`, and `F_7[T]` (162, 2,500, and 14,406 members); exact
+Scope: one small GL(1)/GL(2) local-Euler corpus; complete monic squarefree
+cubic regressions over `F_q[T]` for `q=3,5,7,11,13`, including the original
+100-member `F_5[T]` pilot; the complete genus-two quintic families over
+`F_3[T]`, `F_5[T]`, and `F_7[T]` (162, 2,500, and 14,406 members); exact
 rational central-deflation controls; one five-object classical reciprocal-
 coefficient filter through `n<=256`; and conductor-coprime quadratic-character
 covariance packets for `11.a2`, both pooled and split by the sourced twist root
 number. An exact `USp(4)` comparator and proof-backed all-odd-prime-power
 coefficient moments, negative-sign density floor, second-moment proof roadmap,
 and twelve-moment polynomial sign bound accompany the genus-two scans. Exact
-affine-family measures, an all-genus odd-degree Burnside formula, a cross-rank
-symplectic reclassification, and a bounded tail-geometry packet are also
-included. Every atlas record is `DRAFT`. RH
-and GRH remain open.
+affine-family measures, an all-degree affine Burnside generating series, an
+all-odd-`q` elliptic-stack moment theorem, a cross-rank symplectic
+reclassification, an independently enumerated balanced-control scan,
+Frobenius-power echo laws, and a bounded tail-geometry packet are also
+included. Every atlas record is `DRAFT`. RH and GRH remain open.
 
 Exact sources or dependencies: classical completed GL(1) normalizations; the
-displayed finite-field definitions; LMFDB object identifiers and dynamic
+displayed finite-field definitions; the standard level-one modular-stack
+trace identity used by the genus-one all-weight theorem; LMFDB object
+identifiers and dynamic
 metadata for three elliptic-curve discovery rows; Rohrlich's and Conrey's
 quadratic-twist sign formulas; the function-field even-character coefficient
 identity cited in the genus-two proof; CPython 3.12.10 standard library; and the
 exact repository packets named inside detector contracts.
 
 What was actually run: five finite local-Euler evaluations through `p<=43`;
-all four complete function-field families above; exact `F_q/F_{q^2}` character
-reconstruction for the three genus-two packets; twelve exact `USp(4)` Haar
+4,023 candidate cubics across `q=3,5,7,11,13`; all three complete genus-two
+families above; exact `F_q/F_{q^2}` character reconstruction for the three
+genus-two packets, including an independent 20,175-candidate balanced-control
+replay with raw-sum provenance; twelve exact `USp(4)` Haar
 moments and degree-six and degree-twelve sign majorants by bounded
 Laurent-polynomial arithmetic; a deterministic
 1,376,256-cell sign-probability quadrature; 656,024 exact genus-two
@@ -35,19 +41,23 @@ pooled plus root-number-split character covariance summaries formed from at
 most 1,142 discriminants and 13 primes. The all-q genus-two certificate uses
 2,925 operations in `Q[q]`, while the separate second-moment roadmap enumerates
 only 20+54 symbolic signatures; neither enumerates additional fields. The
-new high-weight packet adds 23 cubic signatures, while the all-genus affine
-packet evaluates closed divisor sums through genus eight and enumerates no
-field. The reciprocal filter evaluates five objects, four endpoints, and every
-coefficient through 256. All 257 tests pass both normally and under optimized Python; the
+new high-weight packet adds 23 cubic signatures, while the affine Burnside
+packet evaluates a rational all-degree generating series and closed divisor
+sums through genus eight without enumerating another field. The power-echo
+packet applies exact Newton recurrences through `r=8` to the locked
+`q=3,5,7` histograms and independently checks the `C_2` Haar frequencies; it
+does not enumerate another family. The reciprocal filter evaluates five
+objects, four endpoints, and every coefficient through 256. All 288 tests pass
+both normally and under optimized Python; the
 offline validator checks 64 artifact bindings across 15 evaluations. No broad
 zero or conductor sweep was run.
 
 Smallest remaining gaps: derive one true source-faithful function-field analogue
-of `XD` or `HCNC`; evaluate the three triangular high-weight trace packets (or
-first prove the balanced control's third family moment); classify which
-near-edge Weil classes are realized by marked genus-two Jacobians; and prove a
-root-number-conditioned weighted off-diagonal estimate uniform in a growing
-prime window.
+of `XD` or `HCNC`; evaluate the single virtual weight-six channel `R_6` left by
+the balanced control's exact third-moment reduction; prove or refute the
+quarantined all-`q` second-power echo candidate; classify which near-edge Weil
+classes are realized by marked genus-two Jacobians; and prove a root-number-
+conditioned weighted off-diagonal estimate uniform in a growing prime window.
 
 ## What this release contains
 
@@ -80,11 +90,13 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 |---|---|---|---|
 | normalized local Euler moments | exact integer point counts and rational even moments | GL(1) rows have `M2=M4=1`; three GL(2) rows already refute unit-magnitude prime coefficients | tiny prime window; curve metadata is discovery-only |
 | classical reciprocal filter | exact integer coefficients and `Q(sqrt(2))` signs | the four-shell filter has mixed signs across objects/endpoints; no common finite sign survives | classical coefficients; unitary map explicit; four endpoints are not an abscissa or zero theorem |
-| function field, genus 1 | exhaustive exact `F_5[T]` arithmetic | all 100 cubic members pass reciprocal/root-radius checks; toy sign split is `40/20/40`, mean zero | toy `H_D(1)H_D(2)`, not canonical `XD`/`HCNC` |
+| function field, genus 1 | exact cubic arithmetic at `q=3,5,7,11,13`; all-odd-`q` elliptic-stack trace formula and Burnside laws | every marked-model character and raw trace moment is explicit; full affine branch and elliptic coarse quotients are distinct; the first automorphic correction is at raw moment 10; the original `q=5` toy sign split is `40/20/40` | all-weight theorem uses the stated standard modular-trace input; five fields are frozen regressions, not its proof; toy `H_D(1)H_D(2)` is not canonical `XD`/`HCNC` |
 | function field, genus 2 | exhaustive exact `F_q/F_{q^2}` arithmetic at `q=3,5,7`; exact all-q proof certificate; exhaustive affine action | normalized means are `-104/243`, `-1994/3125`, `-12340/16807`; all-q mean tends to `-1`, `liminf rho_->=1/20`, five low-weight character means are exact, and the second-moment gap reduces to `chi_(0,4)+chi_(2,2)+2chi_(0,3)` | orbit averages require stabilizer weights; the remaining high-weight decay and full sign law are conjectural; toy coefficient minor |
 | exact `USp(4)` comparator | bounded Laurent-polynomial/Weyl arithmetic plus guarded shifted-grid quadrature | `F=(Tr U)^2-e_2(U)^2=-(1+chi_omega2+chi_2omega2)`, range `[-20,4/3]`, exact Haar moments through order 12; a degree-twelve majorant proves `P(F<0)>=0.480701...`; display-only `P(F<0)≈0.738` | the rational value is a lower bound, not the exact probability or a claimed optimal moment bound; finite-field higher-moment/sign-law convergence remains proposed |
-| affine hyperelliptic presentation measures | exact Burnside fixed-locus divisor sums, no field enumeration | marked affine-stack mass is `q^(2g-1)` in every genus; the universal leading coarse-orbit correction is `(q^g-(-1)^g)/(q+1)` | marked odd-degree equations, not the full unpointed hyperelliptic moduli stack |
+| affine hyperelliptic presentation measures | exact Burnside fixed-locus divisor sums and a rational all-degree generating series, no field enumeration | marked affine-stack mass is `q^(2g-1)` in every genus; the universal leading coarse-orbit correction is `(q^g-(-1)^g)/(q+1)`; multiplicative resonances occur in degrees `0,1 mod d` for `d|q-1`, additive resonances in degrees divisible by `char(F_q)` | marked odd-degree equations, not the full unpointed hyperelliptic moduli stack; even degrees are covered by the series but define a different presentation problem |
 | cross-rank coefficient minors | exact `USp(2g)` character algebra and bounded Weyl constant terms | the original alternating sign is all-rank Schur negativity; `B=2e_1^2-e_2^2` has symmetric arcsine-times-semicircle Haar law but exact finite mean `q^-1+q^-3-q^-4+q^-5` | no finite-family convergence; odd `B` moments remain arithmetic targets |
+| balanced genus-two control | independent exhaustive `q=3,5,7` coefficient scan with a source-locked member ledger | six exact frozen moments, signs, supports, affine orbits, and raw sums; the all-`q` mean is proved; `B^3=6B-2chi_(0,3)+R_6` reduces the first unresolved odd moment to one explicit virtual weight-six average | only the mean is all-`q`; raw sums and `mean(R_6)` are frozen three-field facts, not interpolated formulas |
+| Frobenius-power echoes | exact Newton/Cayley--Hamilton transforms of the locked `q=3,5,7` histograms and independent `C_2` constant terms | the entire sequence is determined by `(B_1,B_2)`; distinct Haar frequencies are orthogonal, while mixed cubic moments resonate exactly when `r+s=t`; periodic frozen strata are recurrence-certified | orthogonality is not independence; the displayed all-`q` formula for `mean(B_2)` is a quarantined three-field conjecture; no endomorphism classification follows |
 | genus-two tail geometry | exact reciprocal-quartic identities plus frozen support/orbit reconstruction | minima at `q=3,5,7` are split nonisotypic, repeated isotypic, and simple; repeated angles do not explain the dominant `q=7` tail | three fields only; coefficient admissibility is not Jacobian realization |
 | high-weight channel probe | exact `C_2` triangularization and 23 bounded cubic signatures | isolates `b^3`, `a^2b^2`, `b^4`; records a sparse candidate implying `q^2 mean(H)->2` | candidate matches only three fields; primitive trace averages are unresolved |
 | conductor-coprime twist precursor | exact pooled and sourced root-number-split character Gram/covariance matrices, marginal contrasts, and multiquadratic moments | through `X=2048`, local densities approach explicit comparators; root-sign Gram and character-mean contrast RMS shrink on the four frozen windows but their scaled/weighted corrections do not give a rate | no central ranks, fitted rate, growing-prime theorem, or twist-family limit |
@@ -122,6 +134,9 @@ python research/l-families/atlas/function_field/genus2_affine_orbits.py --check 
 python research/l-families/atlas/function_field/genus2_second_moment_reduction.py --check research/l-families/atlas/function_field/genus2_second_moment_reduction.json
 python research/l-families/atlas/function_field/genus2_family_measures.py --check research/l-families/atlas/function_field/genus2_family_measures.json
 python research/l-families/atlas/function_field/hyperelliptic_affine_burnside.py --check research/l-families/atlas/function_field/hyperelliptic_affine_burnside.json
+python research/l-families/atlas/function_field/genus1_cubic_family_laws.py --check research/l-families/atlas/function_field/genus1_cubic_family_laws.json
+python research/l-families/atlas/function_field/balanced_control_family_scan.py --check research/l-families/atlas/function_field/balanced_control_family_scan.json
+python research/l-families/atlas/function_field/frobenius_power_echoes.py --check
 python research/l-families/atlas/function_field/genus2_high_weight_channel_probe.py --check research/l-families/atlas/function_field/genus2_high_weight_channel_probe.json
 python research/l-families/atlas/function_field/genus2_tail_geometry.py --check research/l-families/atlas/function_field/genus2_tail_geometry.json
 python research/l-families/atlas/function_field/usp4_toy_minor_moments.py --check research/l-families/atlas/function_field/usp4_toy_minor_moments.json
@@ -163,6 +178,15 @@ rigor/scope confusions.
 - Three exact fields are not evidence for higher-moment equidistribution. The
   all-q first-moment identity is instead bound to a separate proof and exact
   polynomial certificate.
+- The genus-one all-weight formulas use the explicitly stated standard
+  modular-stack trace identity; the five frozen prime fields check the formulas
+  but do not prove them. Signed trace descends to the elliptic quotient, not to
+  the full affine branch quotient.
+- The balanced scan independently locks its `q=3,5,7` raw sums and exact
+  `R_6` reduction, but supplies no all-`q` formula for `mean(R_6)`.
+- Frobenius-power echoes collapse pointwise to `(B_1,B_2)`. Their exact Haar
+  frequency orthogonality is not independence, and the proposed all-`q`
+  `mean(B_2)` formula remains explicitly conjectural.
 - The proved negative-member proportion is a one-sided density floor, not a
   limiting sign law or a canonical detector conclusion.
 - The degree-six and degree-twelve `USp(4)` certificates give rigorous Haar

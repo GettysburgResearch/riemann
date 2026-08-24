@@ -12,6 +12,8 @@
     "nonzero_constant_squarefree_count": "A_m=(q-1)*(q^m-(-1)^m)/(q+1), m>=1",
     "universal_involution_correction": "(q^g-(-1)^g)/(q+1)",
     "fixed_genus_asymptotic": "N_(g,q)=q^(2g-1)+(q^g-(-1)^g)/(q+1)+O_g(q^(floor((2g+1)/3)-1)); relative excess is q^(-g)+lower order",
+    "all_degree_orbit_generating_function": "O_q(u)=[S_q(u)+q*sum_{d|q-1,d>=2}phi(d)*(1+u)*A_q(u^d)+(q-1)*S_q(u^p)]/[q*(q-1)], where S_q(u)=(1-q*u^2)/(1-q*u) and A_q(u)=S_q(u)/(1+u)",
+    "automorphism_resonance_interpretation": "scaling corrections occupy degree classes 0,1 modulo d for d|q-1; translation corrections occupy multiples of p=char(F_q)",
     "invariant_average": "uniform equations equal stabilizer-weighted averaging on the declared affine quotient"
   },
   "proof_skeleton": {
@@ -21,11 +23,11 @@
   },
   "producer": {
     "script": "hyperelliptic_affine_burnside.py",
-    "source_sha256_lf_normalized": "adf3e4262db4f7b37ad5f7592979f9b4a642c0f360827a48c2ad028bcdd2b347",
+    "source_sha256_lf_normalized": "71bc64365fb1552dabbd9889d1401d4c2ceb8adf0496d94d3fd5febccd549899",
     "note": "HYPERELLIPTIC_AFFINE_BURNSIDE.md",
-    "note_sha256_lf_normalized": "693cde3db906d0b1d78a01c5e29aca12ecb0bc445af5d8cf172431ebdebc05f6",
+    "note_sha256_lf_normalized": "b4c583b109552835ecab1dd3fbaba4328eeb29acdf1d78b5c8cce1cf90051dc9",
     "test": "tests/test_hyperelliptic_affine_burnside.py",
-    "test_sha256_lf_normalized": "9c9c3fe85b4c02a1b0f056707e5ff149aa95ce5975533ff7ab6fa27d36296f78"
+    "test_sha256_lf_normalized": "7e1d0b952076f9a4de6614d32f3342dcb5b59e11ffa7e5ebf70a1cf66c1e5315"
   },
   "resource_contract": {
     "field_enumeration": "FORBIDDEN_AND_NOT_USED",
@@ -34,6 +36,10 @@
     "maximum_genus": 32,
     "maximum_divisor_inspections": 20000,
     "observed_divisor_inspections": 192,
+    "maximum_series_degree": 65,
+    "fixture_series_degree": 17,
+    "maximum_series_term_inspections": 20000,
+    "observed_series_term_inspections": 432,
     "fixture_q_values": [
       3,
       5,
@@ -50,6 +56,190 @@
     "5": 132,
     "7": 349
   },
+  "all_degree_orbit_series": [
+    {
+      "q": 3,
+      "characteristic": 3,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        5,
+        11,
+        29,
+        90,
+        250,
+        749,
+        2213,
+        6622,
+        19744,
+        59249,
+        177329,
+        531988,
+        1594924,
+        4784609,
+        14350547
+      ],
+      "term_inspections": 18
+    },
+    {
+      "q": 5,
+      "characteristic": 5,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        6,
+        31,
+        132,
+        646,
+        3146,
+        15737,
+        78237,
+        391150,
+        1953646,
+        9768271,
+        48830771,
+        244153646,
+        1220716166,
+        6103580937,
+        30517643437
+      ],
+      "term_inspections": 36
+    },
+    {
+      "q": 7,
+      "characteristic": 7,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        10,
+        57,
+        349,
+        2458,
+        16865,
+        117949,
+        823929,
+        5766988,
+        40355708,
+        282490567,
+        1977342061,
+        13841390150,
+        96889117552,
+        678223797651,
+        4747562230543
+      ],
+      "term_inspections": 54
+    },
+    {
+      "q": 9,
+      "characteristic": 3,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        11,
+        91,
+        739,
+        6642,
+        59122,
+        532117,
+        4783717,
+        43052626,
+        387426394,
+        3486838339,
+        31381112899,
+        282430014778,
+        2541866312458,
+        22876796760977,
+        205891136400665
+      ],
+      "term_inspections": 54
+    },
+    {
+      "q": 11,
+      "characteristic": 11,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        12,
+        131,
+        1345,
+        14756,
+        161162,
+        1772781,
+        19488391,
+        214372346,
+        2357961157,
+        25937572231,
+        285311818241,
+        3138430000652,
+        34522713768306,
+        379749851446925,
+        4177248187278891
+      ],
+      "term_inspections": 54
+    },
+    {
+      "q": 13,
+      "characteristic": 13,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        16,
+        185,
+        2211,
+        28744,
+        371476,
+        4828873,
+        62750895,
+        815757556,
+        10604525894,
+        137858841043,
+        1792160743232,
+        23298089604518,
+        302875111127332,
+        3937376444022891,
+        51185893072361317
+      ],
+      "term_inspections": 90
+    },
+    {
+      "q": 25,
+      "characteristic": 5,
+      "maximum_degree": 17,
+      "coefficients_degree_0_up": [
+        1,
+        1,
+        2,
+        28,
+        653,
+        15652,
+        391276,
+        9766276,
+        244155701,
+        6103531903,
+        152588267452,
+        3814697641226,
+        95367441061951,
+        2384185800436951,
+        59604645010141226,
+        1490116119620268028,
+        37252902990488686995,
+        931322574621347310793
+      ],
+      "term_inspections": 126
+    }
+  ],
   "rows": [
     {
       "q": 3,
@@ -2940,5 +3130,5 @@
     }
   ],
   "firewall": "This counts affine presentations retaining the rational branch point at infinity, not unpointed hyperelliptic curves or the full moduli stack. It proves no Frobenius equidistribution, L-function moment, number-field transfer, RH, or GRH.",
-  "payload_sha256": "711b6f8c98fe832994aaa15a4ec9e7746d276cc4875e53136323f9b1be5e06b7"
+  "payload_sha256": "1c3578064dadca0c3914b180773ee1fffb707161451e14d8de333ce57abe5b61"
 }

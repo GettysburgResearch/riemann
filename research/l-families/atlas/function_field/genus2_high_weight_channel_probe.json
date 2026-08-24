@@ -1073,6 +1073,7 @@
         "b_cubed": 8256,
         "b_fourth": 45552
       },
+      "member_coefficient_ledger_sha256": "e38543c4526e6b330f012274398a258f2d021ddae18442d2f0094d42ec229790",
       "member_count": 162,
       "q": 3,
       "raw_candidate_means": {
@@ -1089,6 +1090,7 @@
           27
         ]
       },
+      "raw_sum_provenance": "independent exhaustive balanced-control enumeration",
       "second_moment": [
         2408,
         2187
@@ -1119,6 +1121,7 @@
         "b_cubed": 788080,
         "b_fourth": 8278480
       },
+      "member_coefficient_ledger_sha256": "69fe496e1cca2090ca62bf7622ff34c3ab3aef1b9268dfb41c4df94d380a9d0a",
       "member_count": 2500,
       "q": 5,
       "raw_candidate_means": {
@@ -1135,6 +1138,7 @@
           125
         ]
       },
+      "raw_sum_provenance": "independent exhaustive balanced-control enumeration",
       "second_moment": [
         131504,
         78125
@@ -1165,6 +1169,7 @@
         "b_cubed": 14205744,
         "b_fourth": 221057088
       },
+      "member_coefficient_ledger_sha256": "c1d4ca30f45341de53af20ab4e4ca3f9bff79542146f1ac2230169eec9669655",
       "member_count": 14406,
       "q": 7,
       "raw_candidate_means": {
@@ -1181,6 +1186,7 @@
           343
         ]
       },
+      "raw_sum_provenance": "independent exhaustive balanced-control enumeration",
       "second_moment": [
         1645440,
         823543
@@ -1190,7 +1196,7 @@
   "firewalls": [
     "The triangular character identities are exact; the sparse all-q formulas are not proved.",
     "The q=3,5,7 aggregate rows are regression controls, not interpolation data for a theorem.",
-    "The three separate high raw sums are frozen one-time controls without an independently replayable provenance artifact.",
+    "The three separate high raw sums come from the independently replayable, content-hash-locked balanced-control enumeration.",
     "The B3 signature packet proves that generic primitive coefficients survive; it does not average them.",
     "No eta_q branch is proved or excluded by the three frozen fields.",
     "No effective equidistribution, number-field transfer, RH, or GRH conclusion is asserted."
@@ -1209,7 +1215,7 @@
       "target": "Evaluate the 54 B4 signatures in R4; this decides the remaining chi_(0,4) channel after R3 and R22."
     }
   ],
-  "payload_sha256": "5120113af195b9d344dcc055d331e67069a56f1fe10124031e2a4c4d639636a9",
+  "payload_sha256": "90820eded366af5c430df6712bb51f6ad7882faf7bd27c4665c411052c1dca0e",
   "resource_contract": {
     "actual_B3_signatures": 23,
     "exact_signature_operations_used": 3341,
@@ -1232,9 +1238,14 @@
       "path": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py",
       "sha256_lf_normalized": "2f5187421d0add48806c6710ff520a0e8281805457eeebe570d1e8ef5475820b"
     },
+    "balanced_control_fixture": {
+      "canonical_sha256": "2356b1dc9624db99021f63098055d1689d14279647c60b62701c3b6cdb2d15ea",
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c"
+    },
     "probe_generator": {
       "path": "research/l-families/atlas/function_field/genus2_high_weight_channel_probe.py",
-      "sha256_lf_normalized": "a958f36e18e559464d42f5827e01f15e273d706cd105c20a218c71544e2619c1"
+      "sha256_lf_normalized": "a487f57a69de8e688b61c33ac3f8bc95c4009a91e188d0fd1c8a35bdf2c92610"
     },
     "q_scan_fixture": {
       "canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",

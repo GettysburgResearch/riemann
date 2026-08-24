@@ -1,4 +1,4 @@
-"""Independent small checks for the odd-degree affine Burnside theorem."""
+"""Independent small checks for the affine Burnside formulas."""
 
 from __future__ import annotations
 
@@ -120,6 +120,30 @@ class HyperellipticAffineBurnsideTests(unittest.TestCase):
             self.assertEqual(row["affine_stack_cardinality"], q**3)
             self.assertEqual(row["coarse_orbit_count"], orbit_count)
             self.assertEqual(row["universal_involution_correction"], q - 1)
+
+    def test_all_degree_rational_series_coefficients(self) -> None:
+        for q in (3, 5, 7, 9):
+            series = subject.affine_orbit_series(q, 9)
+            coefficients = series["coefficients_degree_0_up"]
+            self.assertEqual(coefficients[0:2], [1, 1])
+            for genus in range(1, 5):
+                degree = 2 * genus + 1
+                self.assertEqual(
+                    coefficients[degree],
+                    subject.burnside_census(q, genus)["coarse_orbit_count"],
+                )
+        for q, maximum_degree in ((3, 5), (5, 3)):
+            coefficients = subject.affine_orbit_series(q, maximum_degree)[
+                "coefficients_degree_0_up"
+            ]
+            for degree in range(maximum_degree + 1):
+                with self.subTest(q=q, degree=degree):
+                    self.assertEqual(
+                        coefficients[degree],
+                        direct_prime_field_orbit_count(q, degree),
+                    )
+        with self.assertRaisesRegex(ValueError, "maximum_degree"):
+            subject.affine_orbit_series(3, subject.MAX_SERIES_DEGREE + 1)
 
     def test_involution_is_the_leading_fixed_genus_correction(self) -> None:
         for genus in range(1, 9):

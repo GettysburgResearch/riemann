@@ -127,13 +127,12 @@ The frozen aggregate sums at the three already explored fields are
 | 5 | 788,080 | 857,040 | 8,278,480 |
 | 7 | 14,205,744 | 16,117,248 | 221,057,088 |
 
-These are exact one-time controls from the bounded family calculation, but
-the three separate high raw sums do not have their own independently
-checked-in provenance artifact.  The replay locks their values and checks
-their algebraic bridges to the older `K` histogram/second-moment fixture; it
-does not independently reproduce `b^3`, `a^2b^2`, and `b^4` from member data.
-They should therefore be read as internally checked finite controls, not as a
-self-contained enumeration certificate.
+These are now supplied by the independently replayable bounded enumeration in
+`balanced_control_family_scan.py`.  That producer reconstructs every member's
+`(a_D,b_D)` pair, hashes the complete coefficient ledger, and source-locks its
+tests and arithmetic dependencies.  This packet reads the resulting fixture,
+refuses any sentinel or channel mismatch, and does not enumerate a field.
+The provenance dependency is one-way from that scan to this analysis.
 
 Substitution into the exact character polynomials gives
 
@@ -320,8 +319,8 @@ moments do not by themselves prove the coefficient formulas above.
 - The 23-signature census and noncancellation statement are exact.
 - The three sparse rational functions are conjectures matching only
   `q=3,5,7`.
-- The three separate high raw sums are frozen controls without an independently
-  replayable provenance artifact.
+- The three separate high raw sums are frozen controls from an independently
+  replayable, content-hash-locked enumeration artifact.
 - Only `q=5` samples the `chi_q(-1)=+1` branch, so no reciprocity branch is
   fitted or excluded.
 - No field beyond the frozen three is enumerated by the replay.

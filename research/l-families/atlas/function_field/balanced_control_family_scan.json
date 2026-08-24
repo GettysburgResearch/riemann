@@ -1,0 +1,6563 @@
+{
+  "conjectures_and_nonclaims": {
+    "observed_only": "The first six frozen family moments move toward the symmetric Haar targets in several visible coordinates, but three fields do not establish convergence, monotonicity, a rate, or an all-q law.",
+    "orbit_and_tail": "Affine-orbit and endpoint concentrations are exact for the frozen polynomial presentation, not moduli-space or limiting laws.",
+    "status": "NO_NEW_ALL_Q_FORMULA_CLAIMED",
+    "third_moment": "The three frozen values of mean(R6) are recorded evidence only; they are not interpolated into a conjectural rational function."
+  },
+  "definition": {
+    "balanced_control": "B_D=2*a_D^2/q-b_D^2/q^2=J_D/q^2",
+    "coefficient_normalization": "L_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4",
+    "family": "all monic squarefree quintics D in F_q[T]",
+    "integer_numerator": "J_D=2*q*a_D^2-b_D^2"
+  },
+  "firewall": "Only the displayed mean formula and compact-group law carry all-q/all-order quantifiers, and they come from separately locked proofs. Joint laws, signs, moments, raw sums, affine orbits, and tail concentrations are exhaustive frozen facts only for q=3,5,7. The third-moment character reduction is pointwise, but the remaining mean(R6) has no proved all-q evaluation. Nothing here proves USp(4) equidistribution or has an RH consequence.",
+  "frozen_enumeration_facts": {
+    "coverage": "every one of q^5 monic quintic candidates is tested for squarefreeness in each frozen field",
+    "families": [
+      {
+        "affine_orbit_analysis": {
+          "B_D_invariant_on_every_orbit": true,
+          "action": "D(T)|_(alpha,beta)=alpha^-5*D(alpha*T+beta)",
+          "group_order": 6,
+          "orbit_count": 29,
+          "orbit_size_histogram": {
+            "3": 4,
+            "6": 25
+          },
+          "weighting_warning": "member-uniform and orbit-uniform laws are distinct when stabilizers are nontrivial"
+        },
+        "balanced_support": {
+          "J_histogram": {
+            "-10": 6,
+            "-12": 6,
+            "-16": 6,
+            "-19": 6,
+            "-3": 12,
+            "-4": 12,
+            "0": 12,
+            "18": 6,
+            "2": 30,
+            "20": 18,
+            "29": 6,
+            "5": 24,
+            "6": 6,
+            "8": 12
+          },
+          "atoms": [
+            {
+              "B_D": [
+                -19,
+                9
+              ],
+              "B_numerator_J": -19,
+              "affine_orbit_count": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -16,
+                9
+              ],
+              "B_numerator_J": -16,
+              "affine_orbit_count": 2,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                3
+              ],
+              "B_numerator_J": -12,
+              "affine_orbit_count": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -10,
+                9
+              ],
+              "B_numerator_J": -10,
+              "affine_orbit_count": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                9
+              ],
+              "B_numerator_J": -4,
+              "affine_orbit_count": 3,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -1,
+                3
+              ],
+              "B_numerator_J": -3,
+              "affine_orbit_count": 2,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                0,
+                1
+              ],
+              "B_numerator_J": 0,
+              "affine_orbit_count": 2,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                9
+              ],
+              "B_numerator_J": 2,
+              "affine_orbit_count": 5,
+              "member_count": 30,
+              "member_fraction": [
+                5,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                9
+              ],
+              "B_numerator_J": 5,
+              "affine_orbit_count": 4,
+              "member_count": 24,
+              "member_fraction": [
+                4,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                3
+              ],
+              "B_numerator_J": 6,
+              "affine_orbit_count": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                9
+              ],
+              "B_numerator_J": 8,
+              "affine_orbit_count": 2,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                1
+              ],
+              "B_numerator_J": 18,
+              "affine_orbit_count": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                9
+              ],
+              "B_numerator_J": 20,
+              "affine_orbit_count": 3,
+              "member_count": 18,
+              "member_fraction": [
+                1,
+                9
+              ]
+            },
+            {
+              "B_D": [
+                29,
+                9
+              ],
+              "B_numerator_J": 29,
+              "affine_orbit_count": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            }
+          ],
+          "contained_in_exact_haar_support_minus4_to4": true,
+          "maximum": [
+            29,
+            9
+          ],
+          "minimum": [
+            -19,
+            9
+          ],
+          "support_size": 14
+        },
+        "candidate_count": 243,
+        "derived_high_weight_channel_means": {
+          "chi_(0,3)": [
+            74,
+            729
+          ],
+          "chi_(0,4)": [
+            -19,
+            2187
+          ],
+          "chi_(2,2)": [
+            37,
+            729
+          ]
+        },
+        "expected_squarefree_count": 162,
+        "joint_a_D_b_D_law": {
+          "atoms": [
+            {
+              "B_D": [
+                29,
+                9
+              ],
+              "B_numerator_J": 29,
+              "a_D": -3,
+              "b_D": 5,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                1
+              ],
+              "B_numerator_J": 18,
+              "a_D": -3,
+              "b_D": 6,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                9
+              ],
+              "B_numerator_J": 5,
+              "a_D": -3,
+              "b_D": 7,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                9
+              ],
+              "B_numerator_J": 20,
+              "a_D": -2,
+              "b_D": 2,
+              "member_count": 9,
+              "member_fraction": [
+                1,
+                18
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                9
+              ],
+              "B_numerator_J": 8,
+              "a_D": -2,
+              "b_D": 4,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                3
+              ],
+              "B_numerator_J": -12,
+              "a_D": -2,
+              "b_D": 6,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                9
+              ],
+              "B_numerator_J": 2,
+              "a_D": -1,
+              "b_D": -2,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                9
+              ],
+              "B_numerator_J": 5,
+              "a_D": -1,
+              "b_D": -1,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                3
+              ],
+              "B_numerator_J": 6,
+              "a_D": -1,
+              "b_D": 0,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                9
+              ],
+              "B_numerator_J": 5,
+              "a_D": -1,
+              "b_D": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                9
+              ],
+              "B_numerator_J": 2,
+              "a_D": -1,
+              "b_D": 2,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -1,
+                3
+              ],
+              "B_numerator_J": -3,
+              "a_D": -1,
+              "b_D": 3,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -10,
+                9
+              ],
+              "B_numerator_J": -10,
+              "a_D": -1,
+              "b_D": 4,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                -19,
+                9
+              ],
+              "B_numerator_J": -19,
+              "a_D": -1,
+              "b_D": 5,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                9
+              ],
+              "B_numerator_J": -4,
+              "a_D": 0,
+              "b_D": -2,
+              "member_count": 9,
+              "member_fraction": [
+                1,
+                18
+              ]
+            },
+            {
+              "B_D": [
+                0,
+                1
+              ],
+              "B_numerator_J": 0,
+              "a_D": 0,
+              "b_D": 0,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                9
+              ],
+              "B_numerator_J": -4,
+              "a_D": 0,
+              "b_D": 2,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                -16,
+                9
+              ],
+              "B_numerator_J": -16,
+              "a_D": 0,
+              "b_D": 4,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                9
+              ],
+              "B_numerator_J": 2,
+              "a_D": 1,
+              "b_D": -2,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                9
+              ],
+              "B_numerator_J": 5,
+              "a_D": 1,
+              "b_D": -1,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                3
+              ],
+              "B_numerator_J": 6,
+              "a_D": 1,
+              "b_D": 0,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                9
+              ],
+              "B_numerator_J": 5,
+              "a_D": 1,
+              "b_D": 1,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                9
+              ],
+              "B_numerator_J": 2,
+              "a_D": 1,
+              "b_D": 2,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -1,
+                3
+              ],
+              "B_numerator_J": -3,
+              "a_D": 1,
+              "b_D": 3,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -10,
+                9
+              ],
+              "B_numerator_J": -10,
+              "a_D": 1,
+              "b_D": 4,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                -19,
+                9
+              ],
+              "B_numerator_J": -19,
+              "a_D": 1,
+              "b_D": 5,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                9
+              ],
+              "B_numerator_J": 20,
+              "a_D": 2,
+              "b_D": 2,
+              "member_count": 9,
+              "member_fraction": [
+                1,
+                18
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                9
+              ],
+              "B_numerator_J": 8,
+              "a_D": 2,
+              "b_D": 4,
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                3
+              ],
+              "B_numerator_J": -12,
+              "a_D": 2,
+              "b_D": 6,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                29,
+                9
+              ],
+              "B_numerator_J": 29,
+              "a_D": 3,
+              "b_D": 5,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                1
+              ],
+              "B_numerator_J": 18,
+              "a_D": 3,
+              "b_D": 6,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                9
+              ],
+              "B_numerator_J": 5,
+              "a_D": 3,
+              "b_D": 7,
+              "member_count": 3,
+              "member_fraction": [
+                1,
+                54
+              ]
+            }
+          ],
+          "support_size": 32
+        },
+        "member_coefficient_ledger_sha256": "e38543c4526e6b330f012274398a258f2d021ddae18442d2f0094d42ec229790",
+        "member_count": 162,
+        "moments_1_through_6": [
+          {
+            "family_mean_B_D_to_order": [
+              88,
+              243
+            ],
+            "family_minus_haar": [
+              88,
+              243
+            ],
+            "haar_moment": 0,
+            "order": 1,
+            "sum_of_J_D_to_order": 528
+          },
+          {
+            "family_mean_B_D_to_order": [
+              3560,
+              2187
+            ],
+            "family_minus_haar": [
+              -814,
+              2187
+            ],
+            "haar_moment": 2,
+            "order": 2,
+            "sum_of_J_D_to_order": 21360
+          },
+          {
+            "family_mean_B_D_to_order": [
+              42136,
+              19683
+            ],
+            "family_minus_haar": [
+              42136,
+              19683
+            ],
+            "haar_moment": 0,
+            "order": 3,
+            "sum_of_J_D_to_order": 252816
+          },
+          {
+            "family_mean_B_D_to_order": [
+              1531592,
+              177147
+            ],
+            "family_minus_haar": [
+              -594172,
+              177147
+            ],
+            "haar_moment": 12,
+            "order": 4,
+            "sum_of_J_D_to_order": 9189552
+          },
+          {
+            "family_mean_B_D_to_order": [
+              28210648,
+              1594323
+            ],
+            "family_minus_haar": [
+              28210648,
+              1594323
+            ],
+            "haar_moment": 0,
+            "order": 5,
+            "sum_of_J_D_to_order": 169263888
+          },
+          {
+            "family_mean_B_D_to_order": [
+              889288040,
+              14348907
+            ],
+            "family_minus_haar": [
+              -545602660,
+              14348907
+            ],
+            "haar_moment": 100,
+            "order": 6,
+            "sum_of_J_D_to_order": 5335728240
+          }
+        ],
+        "q": 3,
+        "sign_law": {
+          "comparisons": {
+            "negative": {
+              "affine_orbit_count": 10,
+              "member_count": 48,
+              "member_fraction": [
+                8,
+                27
+              ],
+              "member_minus_haar": [
+                -11,
+                54
+              ],
+              "uniform_affine_orbit_fraction": [
+                10,
+                29
+              ]
+            },
+            "positive": {
+              "affine_orbit_count": 17,
+              "member_count": 102,
+              "member_fraction": [
+                17,
+                27
+              ],
+              "member_minus_haar": [
+                7,
+                54
+              ],
+              "uniform_affine_orbit_fraction": [
+                17,
+                29
+              ]
+            },
+            "zero": {
+              "affine_orbit_count": 2,
+              "member_count": 12,
+              "member_fraction": [
+                2,
+                27
+              ],
+              "member_minus_haar": [
+                2,
+                27
+              ],
+              "uniform_affine_orbit_fraction": [
+                2,
+                29
+              ]
+            }
+          },
+          "haar_target": {
+            "negative": [
+              1,
+              2
+            ],
+            "positive": [
+              1,
+              2
+            ],
+            "zero": [
+              0,
+              1
+            ]
+          }
+        },
+        "sign_witnesses": {
+          "negative": {
+            "B_D": [
+              -4,
+              9
+            ],
+            "B_numerator_J": -4,
+            "a_D": 0,
+            "b_D": 2,
+            "conductor_coefficients_low_to_high": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "positive": {
+            "B_D": [
+              2,
+              9
+            ],
+            "B_numerator_J": 2,
+            "a_D": -1,
+            "b_D": 2,
+            "conductor_coefficients_low_to_high": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          "zero": {
+            "B_D": [
+              0,
+              1
+            ],
+            "B_numerator_J": 0,
+            "a_D": 0,
+            "b_D": 0,
+            "conductor_coefficients_low_to_high": [
+              0,
+              2,
+              1,
+              1,
+              2,
+              1
+            ]
+          }
+        },
+        "source_locked_raw_aggregate_controls": {
+          "a_squared_b_squared": {
+            "mean": [
+              464,
+              9
+            ],
+            "sum": 8352
+          },
+          "b_cubed": {
+            "mean": [
+              1376,
+              27
+            ],
+            "sum": 8256
+          },
+          "b_fourth": {
+            "mean": [
+              7592,
+              27
+            ],
+            "sum": 45552
+          }
+        },
+        "tail_concentration": {
+          "absolute_extreme_J_values": [
+            29
+          ],
+          "absolute_extreme_atoms": [
+            {
+              "B_D": [
+                29,
+                9
+              ],
+              "B_numerator_J": 29,
+              "affine_orbit_count": 1,
+              "affine_orbits": [
+                {
+                  "b_D": 5,
+                  "orbit_size": 6,
+                  "representative_a_D": 3,
+                  "representative_coefficients_low_to_high": [
+                    1,
+                    0,
+                    1,
+                    2,
+                    2,
+                    1
+                  ],
+                  "stabilizer_order": 1
+                }
+              ],
+              "member_count": 6,
+              "member_fraction": [
+                1,
+                27
+              ]
+            }
+          ],
+          "absolute_extreme_share_of_absolute_moments": {
+            "2": [
+              841,
+              3560
+            ],
+            "4": [
+              707281,
+              1531592
+            ],
+            "6": [
+              594823321,
+              889288040
+            ]
+          },
+          "lower_endpoint": {
+            "B_D": [
+              -19,
+              9
+            ],
+            "B_numerator_J": -19,
+            "affine_orbit_count": 1,
+            "affine_orbits": [
+              {
+                "b_D": 5,
+                "orbit_size": 6,
+                "representative_a_D": 1,
+                "representative_coefficients_low_to_high": [
+                  1,
+                  1,
+                  0,
+                  0,
+                  2,
+                  1
+                ],
+                "stabilizer_order": 1
+              }
+            ],
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ]
+          },
+          "scope": "exact concentration in the frozen member law only; no limiting tail theorem or orbit-equidistribution claim",
+          "two_endpoint_share_of_absolute_moments": {
+            "2": [
+              601,
+              1780
+            ],
+            "4": [
+              418801,
+              765796
+            ],
+            "6": [
+              320934601,
+              444644020
+            ]
+          },
+          "upper_endpoint": {
+            "B_D": [
+              29,
+              9
+            ],
+            "B_numerator_J": 29,
+            "affine_orbit_count": 1,
+            "affine_orbits": [
+              {
+                "b_D": 5,
+                "orbit_size": 6,
+                "representative_a_D": 3,
+                "representative_coefficients_low_to_high": [
+                  1,
+                  0,
+                  1,
+                  2,
+                  2,
+                  1
+                ],
+                "stabilizer_order": 1
+              }
+            ],
+            "member_count": 6,
+            "member_fraction": [
+              1,
+              27
+            ]
+          }
+        },
+        "third_moment_raw_sums": {
+          "a_fourth_b_squared": 61632,
+          "a_sixth": 15504,
+          "a_squared_b_fourth": 284688,
+          "b_sixth": 1564176
+        },
+        "third_moment_reduction_frozen_evaluation": {
+          "identity_checked": true,
+          "known_6_mean_B_D_contribution": [
+            176,
+            81
+          ],
+          "mean_B_D_cubed": [
+            42136,
+            19683
+          ],
+          "mean_chi_(0,3)": [
+            74,
+            729
+          ],
+          "remaining_mean_R6": [
+            3364,
+            19683
+          ]
+        }
+      },
+      {
+        "affine_orbit_analysis": {
+          "B_D_invariant_on_every_orbit": true,
+          "action": "D(T)|_(alpha,beta)=alpha^-5*D(alpha*T+beta)",
+          "group_order": 20,
+          "orbit_count": 132,
+          "orbit_size_histogram": {
+            "1": 1,
+            "10": 6,
+            "20": 121,
+            "4": 1,
+            "5": 3
+          },
+          "weighting_warning": "member-uniform and orbit-uniform laws are distinct when stabilizers are nontrivial"
+        },
+        "balanced_support": {
+          "J_histogram": {
+            "-10": 40,
+            "-100": 6,
+            "-15": 60,
+            "-16": 120,
+            "-24": 40,
+            "-26": 40,
+            "-31": 40,
+            "-36": 100,
+            "-39": 60,
+            "-4": 140,
+            "-54": 100,
+            "-6": 160,
+            "-60": 40,
+            "-71": 40,
+            "0": 50,
+            "1": 120,
+            "10": 160,
+            "16": 40,
+            "24": 80,
+            "25": 24,
+            "26": 120,
+            "36": 180,
+            "4": 160,
+            "40": 40,
+            "41": 80,
+            "54": 40,
+            "6": 80,
+            "60": 60,
+            "65": 40,
+            "74": 60,
+            "81": 20,
+            "9": 140,
+            "96": 20
+          },
+          "atoms": [
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -100,
+              "affine_orbit_count": 2,
+              "member_count": 6,
+              "member_fraction": [
+                3,
+                1250
+              ]
+            },
+            {
+              "B_D": [
+                -71,
+                25
+              ],
+              "B_numerator_J": -71,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -12,
+                5
+              ],
+              "B_numerator_J": -60,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -54,
+                25
+              ],
+              "B_numerator_J": -54,
+              "affine_orbit_count": 5,
+              "member_count": 100,
+              "member_fraction": [
+                1,
+                25
+              ]
+            },
+            {
+              "B_D": [
+                -39,
+                25
+              ],
+              "B_numerator_J": -39,
+              "affine_orbit_count": 3,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                25
+              ],
+              "B_numerator_J": -36,
+              "affine_orbit_count": 6,
+              "member_count": 100,
+              "member_fraction": [
+                1,
+                25
+              ]
+            },
+            {
+              "B_D": [
+                -31,
+                25
+              ],
+              "B_numerator_J": -31,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -26,
+                25
+              ],
+              "B_numerator_J": -26,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -24,
+                25
+              ],
+              "B_numerator_J": -24,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -16,
+                25
+              ],
+              "B_numerator_J": -16,
+              "affine_orbit_count": 6,
+              "member_count": 120,
+              "member_fraction": [
+                6,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -3,
+                5
+              ],
+              "B_numerator_J": -15,
+              "affine_orbit_count": 3,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                5
+              ],
+              "B_numerator_J": -10,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -6,
+                25
+              ],
+              "B_numerator_J": -6,
+              "affine_orbit_count": 8,
+              "member_count": 160,
+              "member_fraction": [
+                8,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                25
+              ],
+              "B_numerator_J": -4,
+              "affine_orbit_count": 7,
+              "member_count": 140,
+              "member_fraction": [
+                7,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                0,
+                1
+              ],
+              "B_numerator_J": 0,
+              "affine_orbit_count": 4,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                25
+              ],
+              "B_numerator_J": 1,
+              "affine_orbit_count": 6,
+              "member_count": 120,
+              "member_fraction": [
+                6,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                4,
+                25
+              ],
+              "B_numerator_J": 4,
+              "affine_orbit_count": 8,
+              "member_count": 160,
+              "member_fraction": [
+                8,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                6,
+                25
+              ],
+              "B_numerator_J": 6,
+              "affine_orbit_count": 4,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                9,
+                25
+              ],
+              "B_numerator_J": 9,
+              "affine_orbit_count": 7,
+              "member_count": 140,
+              "member_fraction": [
+                7,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                5
+              ],
+              "B_numerator_J": 10,
+              "affine_orbit_count": 8,
+              "member_count": 160,
+              "member_fraction": [
+                8,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                16,
+                25
+              ],
+              "B_numerator_J": 16,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                24,
+                25
+              ],
+              "B_numerator_J": 24,
+              "affine_orbit_count": 4,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                1
+              ],
+              "B_numerator_J": 25,
+              "affine_orbit_count": 2,
+              "member_count": 24,
+              "member_fraction": [
+                6,
+                625
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                25
+              ],
+              "B_numerator_J": 26,
+              "affine_orbit_count": 6,
+              "member_count": 120,
+              "member_fraction": [
+                6,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                36,
+                25
+              ],
+              "B_numerator_J": 36,
+              "affine_orbit_count": 10,
+              "member_count": 180,
+              "member_fraction": [
+                9,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                5
+              ],
+              "B_numerator_J": 40,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                41,
+                25
+              ],
+              "B_numerator_J": 41,
+              "affine_orbit_count": 4,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                54,
+                25
+              ],
+              "B_numerator_J": 54,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                12,
+                5
+              ],
+              "B_numerator_J": 60,
+              "affine_orbit_count": 3,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                5
+              ],
+              "B_numerator_J": 65,
+              "affine_orbit_count": 2,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                74,
+                25
+              ],
+              "B_numerator_J": 74,
+              "affine_orbit_count": 3,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                81,
+                25
+              ],
+              "B_numerator_J": 81,
+              "affine_orbit_count": 1,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                96,
+                25
+              ],
+              "B_numerator_J": 96,
+              "affine_orbit_count": 2,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            }
+          ],
+          "contained_in_exact_haar_support_minus4_to4": true,
+          "maximum": [
+            96,
+            25
+          ],
+          "minimum": [
+            -4,
+            1
+          ],
+          "support_size": 33
+        },
+        "candidate_count": 3125,
+        "derived_high_weight_channel_means": {
+          "chi_(0,3)": [
+            614,
+            15625
+          ],
+          "chi_(0,4)": [
+            -51,
+            78125
+          ],
+          "chi_(2,2)": [
+            213,
+            15625
+          ]
+        },
+        "expected_squarefree_count": 2500,
+        "joint_a_D_b_D_law": {
+          "atoms": [
+            {
+              "B_D": [
+                81,
+                25
+              ],
+              "B_numerator_J": 81,
+              "a_D": -5,
+              "b_D": 13,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                54,
+                25
+              ],
+              "B_numerator_J": 54,
+              "a_D": -5,
+              "b_D": 14,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                1
+              ],
+              "B_numerator_J": 25,
+              "a_D": -5,
+              "b_D": 15,
+              "member_count": 12,
+              "member_fraction": [
+                3,
+                625
+              ]
+            },
+            {
+              "B_D": [
+                96,
+                25
+              ],
+              "B_numerator_J": 96,
+              "a_D": -4,
+              "b_D": 8,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                12,
+                5
+              ],
+              "B_numerator_J": 60,
+              "a_D": -4,
+              "b_D": 10,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                16,
+                25
+              ],
+              "B_numerator_J": 16,
+              "a_D": -4,
+              "b_D": 12,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                25
+              ],
+              "B_numerator_J": -36,
+              "a_D": -4,
+              "b_D": 14,
+              "member_count": 5,
+              "member_fraction": [
+                1,
+                500
+              ]
+            },
+            {
+              "B_D": [
+                74,
+                25
+              ],
+              "B_numerator_J": 74,
+              "a_D": -3,
+              "b_D": 4,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                5
+              ],
+              "B_numerator_J": 65,
+              "a_D": -3,
+              "b_D": 5,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                54,
+                25
+              ],
+              "B_numerator_J": 54,
+              "a_D": -3,
+              "b_D": 6,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                41,
+                25
+              ],
+              "B_numerator_J": 41,
+              "a_D": -3,
+              "b_D": 7,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                25
+              ],
+              "B_numerator_J": 26,
+              "a_D": -3,
+              "b_D": 8,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                9,
+                25
+              ],
+              "B_numerator_J": 9,
+              "a_D": -3,
+              "b_D": 9,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                5
+              ],
+              "B_numerator_J": -10,
+              "a_D": -3,
+              "b_D": 10,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -31,
+                25
+              ],
+              "B_numerator_J": -31,
+              "a_D": -3,
+              "b_D": 11,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                5
+              ],
+              "B_numerator_J": 40,
+              "a_D": -2,
+              "b_D": 0,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                36,
+                25
+              ],
+              "B_numerator_J": 36,
+              "a_D": -2,
+              "b_D": 2,
+              "member_count": 90,
+              "member_fraction": [
+                9,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                24,
+                25
+              ],
+              "B_numerator_J": 24,
+              "a_D": -2,
+              "b_D": 4,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                4,
+                25
+              ],
+              "B_numerator_J": 4,
+              "a_D": -2,
+              "b_D": 6,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -24,
+                25
+              ],
+              "B_numerator_J": -24,
+              "a_D": -2,
+              "b_D": 8,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -12,
+                5
+              ],
+              "B_numerator_J": -60,
+              "a_D": -2,
+              "b_D": 10,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -3,
+                5
+              ],
+              "B_numerator_J": -15,
+              "a_D": -1,
+              "b_D": -5,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                -6,
+                25
+              ],
+              "B_numerator_J": -6,
+              "a_D": -1,
+              "b_D": -4,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                25
+              ],
+              "B_numerator_J": 1,
+              "a_D": -1,
+              "b_D": -3,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                6,
+                25
+              ],
+              "B_numerator_J": 6,
+              "a_D": -1,
+              "b_D": -2,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                9,
+                25
+              ],
+              "B_numerator_J": 9,
+              "a_D": -1,
+              "b_D": -1,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                5
+              ],
+              "B_numerator_J": 10,
+              "a_D": -1,
+              "b_D": 0,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                9,
+                25
+              ],
+              "B_numerator_J": 9,
+              "a_D": -1,
+              "b_D": 1,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                6,
+                25
+              ],
+              "B_numerator_J": 6,
+              "a_D": -1,
+              "b_D": 2,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                25
+              ],
+              "B_numerator_J": 1,
+              "a_D": -1,
+              "b_D": 3,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                -6,
+                25
+              ],
+              "B_numerator_J": -6,
+              "a_D": -1,
+              "b_D": 4,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                -3,
+                5
+              ],
+              "B_numerator_J": -15,
+              "a_D": -1,
+              "b_D": 5,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -26,
+                25
+              ],
+              "B_numerator_J": -26,
+              "a_D": -1,
+              "b_D": 6,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -39,
+                25
+              ],
+              "B_numerator_J": -39,
+              "a_D": -1,
+              "b_D": 7,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                -54,
+                25
+              ],
+              "B_numerator_J": -54,
+              "a_D": -1,
+              "b_D": 8,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                -71,
+                25
+              ],
+              "B_numerator_J": -71,
+              "a_D": -1,
+              "b_D": 9,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -100,
+              "a_D": 0,
+              "b_D": -10,
+              "member_count": 1,
+              "member_fraction": [
+                1,
+                2500
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                25
+              ],
+              "B_numerator_J": -36,
+              "a_D": 0,
+              "b_D": -6,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                -16,
+                25
+              ],
+              "B_numerator_J": -16,
+              "a_D": 0,
+              "b_D": -4,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                25
+              ],
+              "B_numerator_J": -4,
+              "a_D": 0,
+              "b_D": -2,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                0,
+                1
+              ],
+              "B_numerator_J": 0,
+              "a_D": 0,
+              "b_D": 0,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                25
+              ],
+              "B_numerator_J": -4,
+              "a_D": 0,
+              "b_D": 2,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -16,
+                25
+              ],
+              "B_numerator_J": -16,
+              "a_D": 0,
+              "b_D": 4,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                25
+              ],
+              "B_numerator_J": -36,
+              "a_D": 0,
+              "b_D": 6,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -100,
+              "a_D": 0,
+              "b_D": 10,
+              "member_count": 5,
+              "member_fraction": [
+                1,
+                500
+              ]
+            },
+            {
+              "B_D": [
+                -3,
+                5
+              ],
+              "B_numerator_J": -15,
+              "a_D": 1,
+              "b_D": -5,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                -6,
+                25
+              ],
+              "B_numerator_J": -6,
+              "a_D": 1,
+              "b_D": -4,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                25
+              ],
+              "B_numerator_J": 1,
+              "a_D": 1,
+              "b_D": -3,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                6,
+                25
+              ],
+              "B_numerator_J": 6,
+              "a_D": 1,
+              "b_D": -2,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                9,
+                25
+              ],
+              "B_numerator_J": 9,
+              "a_D": 1,
+              "b_D": -1,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                5
+              ],
+              "B_numerator_J": 10,
+              "a_D": 1,
+              "b_D": 0,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                9,
+                25
+              ],
+              "B_numerator_J": 9,
+              "a_D": 1,
+              "b_D": 1,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                6,
+                25
+              ],
+              "B_numerator_J": 6,
+              "a_D": 1,
+              "b_D": 2,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                25
+              ],
+              "B_numerator_J": 1,
+              "a_D": 1,
+              "b_D": 3,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                -6,
+                25
+              ],
+              "B_numerator_J": -6,
+              "a_D": 1,
+              "b_D": 4,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                -3,
+                5
+              ],
+              "B_numerator_J": -15,
+              "a_D": 1,
+              "b_D": 5,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -26,
+                25
+              ],
+              "B_numerator_J": -26,
+              "a_D": 1,
+              "b_D": 6,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -39,
+                25
+              ],
+              "B_numerator_J": -39,
+              "a_D": 1,
+              "b_D": 7,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                -54,
+                25
+              ],
+              "B_numerator_J": -54,
+              "a_D": 1,
+              "b_D": 8,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ]
+            },
+            {
+              "B_D": [
+                -71,
+                25
+              ],
+              "B_numerator_J": -71,
+              "a_D": 1,
+              "b_D": 9,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                5
+              ],
+              "B_numerator_J": 40,
+              "a_D": 2,
+              "b_D": 0,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                36,
+                25
+              ],
+              "B_numerator_J": 36,
+              "a_D": 2,
+              "b_D": 2,
+              "member_count": 90,
+              "member_fraction": [
+                9,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                24,
+                25
+              ],
+              "B_numerator_J": 24,
+              "a_D": 2,
+              "b_D": 4,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                4,
+                25
+              ],
+              "B_numerator_J": 4,
+              "a_D": 2,
+              "b_D": 6,
+              "member_count": 80,
+              "member_fraction": [
+                4,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -24,
+                25
+              ],
+              "B_numerator_J": -24,
+              "a_D": 2,
+              "b_D": 8,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -12,
+                5
+              ],
+              "B_numerator_J": -60,
+              "a_D": 2,
+              "b_D": 10,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                74,
+                25
+              ],
+              "B_numerator_J": 74,
+              "a_D": 3,
+              "b_D": 4,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                5
+              ],
+              "B_numerator_J": 65,
+              "a_D": 3,
+              "b_D": 5,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                54,
+                25
+              ],
+              "B_numerator_J": 54,
+              "a_D": 3,
+              "b_D": 6,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                41,
+                25
+              ],
+              "B_numerator_J": 41,
+              "a_D": 3,
+              "b_D": 7,
+              "member_count": 40,
+              "member_fraction": [
+                2,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                25
+              ],
+              "B_numerator_J": 26,
+              "a_D": 3,
+              "b_D": 8,
+              "member_count": 60,
+              "member_fraction": [
+                3,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                9,
+                25
+              ],
+              "B_numerator_J": 9,
+              "a_D": 3,
+              "b_D": 9,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                5
+              ],
+              "B_numerator_J": -10,
+              "a_D": 3,
+              "b_D": 10,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -31,
+                25
+              ],
+              "B_numerator_J": -31,
+              "a_D": 3,
+              "b_D": 11,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                96,
+                25
+              ],
+              "B_numerator_J": 96,
+              "a_D": 4,
+              "b_D": 8,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                12,
+                5
+              ],
+              "B_numerator_J": 60,
+              "a_D": 4,
+              "b_D": 10,
+              "member_count": 30,
+              "member_fraction": [
+                3,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                16,
+                25
+              ],
+              "B_numerator_J": 16,
+              "a_D": 4,
+              "b_D": 12,
+              "member_count": 20,
+              "member_fraction": [
+                1,
+                125
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                25
+              ],
+              "B_numerator_J": -36,
+              "a_D": 4,
+              "b_D": 14,
+              "member_count": 5,
+              "member_fraction": [
+                1,
+                500
+              ]
+            },
+            {
+              "B_D": [
+                81,
+                25
+              ],
+              "B_numerator_J": 81,
+              "a_D": 5,
+              "b_D": 13,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                54,
+                25
+              ],
+              "B_numerator_J": 54,
+              "a_D": 5,
+              "b_D": 14,
+              "member_count": 10,
+              "member_fraction": [
+                1,
+                250
+              ]
+            },
+            {
+              "B_D": [
+                1,
+                1
+              ],
+              "B_numerator_J": 25,
+              "a_D": 5,
+              "b_D": 15,
+              "member_count": 12,
+              "member_fraction": [
+                3,
+                625
+              ]
+            }
+          ],
+          "support_size": 81
+        },
+        "member_coefficient_ledger_sha256": "69fe496e1cca2090ca62bf7622ff34c3ab3aef1b9268dfb41c4df94d380a9d0a",
+        "member_count": 2500,
+        "moments_1_through_6": [
+          {
+            "family_mean_B_D_to_order": [
+              646,
+              3125
+            ],
+            "family_minus_haar": [
+              646,
+              3125
+            ],
+            "haar_moment": 0,
+            "order": 1,
+            "sum_of_J_D_to_order": 12920
+          },
+          {
+            "family_mean_B_D_to_order": [
+              141284,
+              78125
+            ],
+            "family_minus_haar": [
+              -14966,
+              78125
+            ],
+            "haar_moment": 2,
+            "order": 2,
+            "sum_of_J_D_to_order": 2825680
+          },
+          {
+            "family_mean_B_D_to_order": [
+              2362156,
+              1953125
+            ],
+            "family_minus_haar": [
+              2362156,
+              1953125
+            ],
+            "haar_moment": 0,
+            "order": 3,
+            "sum_of_J_D_to_order": 47243120
+          },
+          {
+            "family_mean_B_D_to_order": [
+              514468844,
+              48828125
+            ],
+            "family_minus_haar": [
+              -71468656,
+              48828125
+            ],
+            "haar_moment": 12,
+            "order": 4,
+            "sum_of_J_D_to_order": 10289376880
+          },
+          {
+            "family_mean_B_D_to_order": [
+              14061597676,
+              1220703125
+            ],
+            "family_minus_haar": [
+              14061597676,
+              1220703125
+            ],
+            "haar_moment": 0,
+            "order": 5,
+            "sum_of_J_D_to_order": 281231953520
+          },
+          {
+            "family_mean_B_D_to_order": [
+              2745781777004,
+              30517578125
+            ],
+            "family_minus_haar": [
+              -305976035496,
+              30517578125
+            ],
+            "haar_moment": 100,
+            "order": 6,
+            "sum_of_J_D_to_order": 54915635540080
+          }
+        ],
+        "q": 5,
+        "sign_law": {
+          "comparisons": {
+            "negative": {
+              "affine_orbit_count": 52,
+              "member_count": 986,
+              "member_fraction": [
+                493,
+                1250
+              ],
+              "member_minus_haar": [
+                -66,
+                625
+              ],
+              "uniform_affine_orbit_fraction": [
+                13,
+                33
+              ]
+            },
+            "positive": {
+              "affine_orbit_count": 76,
+              "member_count": 1464,
+              "member_fraction": [
+                366,
+                625
+              ],
+              "member_minus_haar": [
+                107,
+                1250
+              ],
+              "uniform_affine_orbit_fraction": [
+                19,
+                33
+              ]
+            },
+            "zero": {
+              "affine_orbit_count": 4,
+              "member_count": 50,
+              "member_fraction": [
+                1,
+                50
+              ],
+              "member_minus_haar": [
+                1,
+                50
+              ],
+              "uniform_affine_orbit_fraction": [
+                1,
+                33
+              ]
+            }
+          },
+          "haar_target": {
+            "negative": [
+              1,
+              2
+            ],
+            "positive": [
+              1,
+              2
+            ],
+            "zero": [
+              0,
+              1
+            ]
+          }
+        },
+        "sign_witnesses": {
+          "negative": {
+            "B_D": [
+              -4,
+              1
+            ],
+            "B_numerator_J": -100,
+            "a_D": 0,
+            "b_D": 10,
+            "conductor_coefficients_low_to_high": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "positive": {
+            "B_D": [
+              2,
+              5
+            ],
+            "B_numerator_J": 10,
+            "a_D": -1,
+            "b_D": 0,
+            "conductor_coefficients_low_to_high": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          "zero": {
+            "B_D": [
+              0,
+              1
+            ],
+            "B_numerator_J": 0,
+            "a_D": 0,
+            "b_D": 0,
+            "conductor_coefficients_low_to_high": [
+              0,
+              2,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        "source_locked_raw_aggregate_controls": {
+          "a_squared_b_squared": {
+            "mean": [
+              42852,
+              125
+            ],
+            "sum": 857040
+          },
+          "b_cubed": {
+            "mean": [
+              39404,
+              125
+            ],
+            "sum": 788080
+          },
+          "b_fourth": {
+            "mean": [
+              413924,
+              125
+            ],
+            "sum": 8278480
+          }
+        },
+        "tail_concentration": {
+          "absolute_extreme_J_values": [
+            -100
+          ],
+          "absolute_extreme_atoms": [
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -100,
+              "affine_orbit_count": 2,
+              "affine_orbits": [
+                {
+                  "b_D": 10,
+                  "orbit_size": 5,
+                  "representative_a_D": 0,
+                  "representative_coefficients_low_to_high": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "stabilizer_order": 4
+                },
+                {
+                  "b_D": -10,
+                  "orbit_size": 1,
+                  "representative_a_D": 0,
+                  "representative_coefficients_low_to_high": [
+                    0,
+                    4,
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "stabilizer_order": 20
+                }
+              ],
+              "member_count": 6,
+              "member_fraction": [
+                3,
+                1250
+              ]
+            }
+          ],
+          "absolute_extreme_share_of_absolute_moments": {
+            "2": [
+              750,
+              35321
+            ],
+            "4": [
+              7500000,
+              128617211
+            ],
+            "6": [
+              75000000000,
+              686445444251
+            ]
+          },
+          "lower_endpoint": {
+            "B_D": [
+              -4,
+              1
+            ],
+            "B_numerator_J": -100,
+            "affine_orbit_count": 2,
+            "affine_orbits": [
+              {
+                "b_D": 10,
+                "orbit_size": 5,
+                "representative_a_D": 0,
+                "representative_coefficients_low_to_high": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "stabilizer_order": 4
+              },
+              {
+                "b_D": -10,
+                "orbit_size": 1,
+                "representative_a_D": 0,
+                "representative_coefficients_low_to_high": [
+                  0,
+                  4,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "stabilizer_order": 20
+              }
+            ],
+            "member_count": 6,
+            "member_fraction": [
+              3,
+              1250
+            ]
+          },
+          "scope": "exact concentration in the frozen member law only; no limiting tail theorem or orbit-equidistribution claim",
+          "two_endpoint_share_of_absolute_moments": {
+            "2": [
+              3054,
+              35321
+            ],
+            "4": [
+              28733664,
+              128617211
+            ],
+            "6": [
+              270689447424,
+              686445444251
+            ]
+          },
+          "upper_endpoint": {
+            "B_D": [
+              96,
+              25
+            ],
+            "B_numerator_J": 96,
+            "affine_orbit_count": 2,
+            "affine_orbits": [
+              {
+                "b_D": 8,
+                "orbit_size": 10,
+                "representative_a_D": 4,
+                "representative_coefficients_low_to_high": [
+                  0,
+                  2,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                "stabilizer_order": 2
+              },
+              {
+                "b_D": 8,
+                "orbit_size": 10,
+                "representative_a_D": 4,
+                "representative_coefficients_low_to_high": [
+                  0,
+                  3,
+                  0,
+                  2,
+                  0,
+                  1
+                ],
+                "stabilizer_order": 2
+              }
+            ],
+            "member_count": 20,
+            "member_fraction": [
+              1,
+              125
+            ]
+          }
+        },
+        "third_moment_raw_sums": {
+          "a_fourth_b_squared": 14030160,
+          "a_sixth": 1874160,
+          "a_squared_b_fourth": 115128240,
+          "b_sixth": 1071716080
+        },
+        "third_moment_reduction_frozen_evaluation": {
+          "identity_checked": true,
+          "known_6_mean_B_D_contribution": [
+            3876,
+            3125
+          ],
+          "mean_B_D_cubed": [
+            2362156,
+            1953125
+          ],
+          "mean_chi_(0,3)": [
+            614,
+            15625
+          ],
+          "remaining_mean_R6": [
+            93156,
+            1953125
+          ]
+        }
+      },
+      {
+        "affine_orbit_analysis": {
+          "B_D_invariant_on_every_orbit": true,
+          "action": "D(T)|_(alpha,beta)=alpha^-5*D(alpha*T+beta)",
+          "group_order": 42,
+          "orbit_count": 349,
+          "orbit_size_histogram": {
+            "21": 12,
+            "42": 337
+          },
+          "weighting_warning": "member-uniform and orbit-uniform laws are distinct when stabilizers are nontrivial"
+        },
+        "balanced_support": {
+          "J_histogram": {
+            "-100": 420,
+            "-107": 84,
+            "-11": 336,
+            "-130": 126,
+            "-140": 84,
+            "-144": 126,
+            "-155": 126,
+            "-16": 126,
+            "-18": 168,
+            "-196": 42,
+            "-2": 210,
+            "-22": 840,
+            "-32": 168,
+            "-35": 336,
+            "-36": 504,
+            "-4": 504,
+            "-43": 168,
+            "-44": 336,
+            "-50": 210,
+            "-64": 168,
+            "-67": 168,
+            "-70": 336,
+            "-8": 168,
+            "-86": 252,
+            "-88": 168,
+            "-99": 84,
+            "0": 336,
+            "10": 924,
+            "101": 126,
+            "104": 84,
+            "110": 126,
+            "117": 126,
+            "122": 42,
+            "124": 336,
+            "125": 168,
+            "13": 294,
+            "14": 168,
+            "154": 168,
+            "160": 168,
+            "180": 42,
+            "181": 42,
+            "20": 840,
+            "26": 462,
+            "28": 252,
+            "40": 252,
+            "45": 210,
+            "5": 672,
+            "52": 882,
+            "56": 168,
+            "61": 168,
+            "62": 84,
+            "77": 252,
+            "80": 168,
+            "90": 504,
+            "94": 84
+          },
+          "atoms": [
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -196,
+              "affine_orbit_count": 2,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -155,
+                49
+              ],
+              "B_numerator_J": -155,
+              "affine_orbit_count": 3,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -144,
+                49
+              ],
+              "B_numerator_J": -144,
+              "affine_orbit_count": 4,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -20,
+                7
+              ],
+              "B_numerator_J": -140,
+              "affine_orbit_count": 2,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -130,
+                49
+              ],
+              "B_numerator_J": -130,
+              "affine_orbit_count": 3,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -107,
+                49
+              ],
+              "B_numerator_J": -107,
+              "affine_orbit_count": 2,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -100,
+                49
+              ],
+              "B_numerator_J": -100,
+              "affine_orbit_count": 11,
+              "member_count": 420,
+              "member_fraction": [
+                10,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -99,
+                49
+              ],
+              "B_numerator_J": -99,
+              "affine_orbit_count": 2,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -88,
+                49
+              ],
+              "B_numerator_J": -88,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -86,
+                49
+              ],
+              "B_numerator_J": -86,
+              "affine_orbit_count": 6,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -10,
+                7
+              ],
+              "B_numerator_J": -70,
+              "affine_orbit_count": 8,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -67,
+                49
+              ],
+              "B_numerator_J": -67,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -64,
+                49
+              ],
+              "B_numerator_J": -64,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -50,
+                49
+              ],
+              "B_numerator_J": -50,
+              "affine_orbit_count": 5,
+              "member_count": 210,
+              "member_fraction": [
+                5,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -44,
+                49
+              ],
+              "B_numerator_J": -44,
+              "affine_orbit_count": 8,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -43,
+                49
+              ],
+              "B_numerator_J": -43,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                49
+              ],
+              "B_numerator_J": -36,
+              "affine_orbit_count": 13,
+              "member_count": 504,
+              "member_fraction": [
+                12,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -5,
+                7
+              ],
+              "B_numerator_J": -35,
+              "affine_orbit_count": 8,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -32,
+                49
+              ],
+              "B_numerator_J": -32,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -22,
+                49
+              ],
+              "B_numerator_J": -22,
+              "affine_orbit_count": 20,
+              "member_count": 840,
+              "member_fraction": [
+                20,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -18,
+                49
+              ],
+              "B_numerator_J": -18,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -16,
+                49
+              ],
+              "B_numerator_J": -16,
+              "affine_orbit_count": 4,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -11,
+                49
+              ],
+              "B_numerator_J": -11,
+              "affine_orbit_count": 8,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -8,
+                49
+              ],
+              "B_numerator_J": -8,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                49
+              ],
+              "B_numerator_J": -4,
+              "affine_orbit_count": 13,
+              "member_count": 504,
+              "member_fraction": [
+                12,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                49
+              ],
+              "B_numerator_J": -2,
+              "affine_orbit_count": 5,
+              "member_count": 210,
+              "member_fraction": [
+                5,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                0,
+                1
+              ],
+              "B_numerator_J": 0,
+              "affine_orbit_count": 8,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                49
+              ],
+              "B_numerator_J": 5,
+              "affine_orbit_count": 16,
+              "member_count": 672,
+              "member_fraction": [
+                16,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                10,
+                49
+              ],
+              "B_numerator_J": 10,
+              "affine_orbit_count": 22,
+              "member_count": 924,
+              "member_fraction": [
+                22,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                49
+              ],
+              "B_numerator_J": 13,
+              "affine_orbit_count": 7,
+              "member_count": 294,
+              "member_fraction": [
+                1,
+                49
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                7
+              ],
+              "B_numerator_J": 14,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                49
+              ],
+              "B_numerator_J": 20,
+              "affine_orbit_count": 20,
+              "member_count": 840,
+              "member_fraction": [
+                20,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                49
+              ],
+              "B_numerator_J": 26,
+              "affine_orbit_count": 11,
+              "member_count": 462,
+              "member_fraction": [
+                11,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                4,
+                7
+              ],
+              "B_numerator_J": 28,
+              "affine_orbit_count": 6,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                40,
+                49
+              ],
+              "B_numerator_J": 40,
+              "affine_orbit_count": 6,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                45,
+                49
+              ],
+              "B_numerator_J": 45,
+              "affine_orbit_count": 5,
+              "member_count": 210,
+              "member_fraction": [
+                5,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                52,
+                49
+              ],
+              "B_numerator_J": 52,
+              "affine_orbit_count": 21,
+              "member_count": 882,
+              "member_fraction": [
+                3,
+                49
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                7
+              ],
+              "B_numerator_J": 56,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                61,
+                49
+              ],
+              "B_numerator_J": 61,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                62,
+                49
+              ],
+              "B_numerator_J": 62,
+              "affine_orbit_count": 2,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                11,
+                7
+              ],
+              "B_numerator_J": 77,
+              "affine_orbit_count": 6,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                80,
+                49
+              ],
+              "B_numerator_J": 80,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                90,
+                49
+              ],
+              "B_numerator_J": 90,
+              "affine_orbit_count": 12,
+              "member_count": 504,
+              "member_fraction": [
+                12,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                94,
+                49
+              ],
+              "B_numerator_J": 94,
+              "affine_orbit_count": 2,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                101,
+                49
+              ],
+              "B_numerator_J": 101,
+              "affine_orbit_count": 3,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                104,
+                49
+              ],
+              "B_numerator_J": 104,
+              "affine_orbit_count": 2,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                110,
+                49
+              ],
+              "B_numerator_J": 110,
+              "affine_orbit_count": 3,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                117,
+                49
+              ],
+              "B_numerator_J": 117,
+              "affine_orbit_count": 3,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                122,
+                49
+              ],
+              "B_numerator_J": 122,
+              "affine_orbit_count": 1,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                124,
+                49
+              ],
+              "B_numerator_J": 124,
+              "affine_orbit_count": 8,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                125,
+                49
+              ],
+              "B_numerator_J": 125,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                22,
+                7
+              ],
+              "B_numerator_J": 154,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                160,
+                49
+              ],
+              "B_numerator_J": 160,
+              "affine_orbit_count": 4,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                180,
+                49
+              ],
+              "B_numerator_J": 180,
+              "affine_orbit_count": 1,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                181,
+                49
+              ],
+              "B_numerator_J": 181,
+              "affine_orbit_count": 1,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            }
+          ],
+          "contained_in_exact_haar_support_minus4_to4": true,
+          "maximum": [
+            181,
+            49
+          ],
+          "minimum": [
+            -4,
+            1
+          ],
+          "support_size": 55
+        },
+        "candidate_count": 16807,
+        "derived_high_weight_channel_means": {
+          "chi_(0,3)": [
+            2386,
+            117649
+          ],
+          "chi_(0,4)": [
+            -99,
+            823543
+          ],
+          "chi_(2,2)": [
+            621,
+            117649
+          ]
+        },
+        "expected_squarefree_count": 14406,
+        "joint_a_D_b_D_law": {
+          "atoms": [
+            {
+              "B_D": [
+                110,
+                49
+              ],
+              "B_numerator_J": 110,
+              "a_D": -7,
+              "b_D": 24,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                61,
+                49
+              ],
+              "B_numerator_J": 61,
+              "a_D": -7,
+              "b_D": 25,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                180,
+                49
+              ],
+              "B_numerator_J": 180,
+              "a_D": -6,
+              "b_D": 18,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                104,
+                49
+              ],
+              "B_numerator_J": 104,
+              "a_D": -6,
+              "b_D": 20,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                49
+              ],
+              "B_numerator_J": 20,
+              "a_D": -6,
+              "b_D": 22,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                181,
+                49
+              ],
+              "B_numerator_J": 181,
+              "a_D": -5,
+              "b_D": 13,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                22,
+                7
+              ],
+              "B_numerator_J": 154,
+              "a_D": -5,
+              "b_D": 14,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                125,
+                49
+              ],
+              "B_numerator_J": 125,
+              "a_D": -5,
+              "b_D": 15,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                94,
+                49
+              ],
+              "B_numerator_J": 94,
+              "a_D": -5,
+              "b_D": 16,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                61,
+                49
+              ],
+              "B_numerator_J": 61,
+              "a_D": -5,
+              "b_D": 17,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                49
+              ],
+              "B_numerator_J": 26,
+              "a_D": -5,
+              "b_D": 18,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -11,
+                49
+              ],
+              "B_numerator_J": -11,
+              "a_D": -5,
+              "b_D": 19,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                160,
+                49
+              ],
+              "B_numerator_J": 160,
+              "a_D": -4,
+              "b_D": 8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                124,
+                49
+              ],
+              "B_numerator_J": 124,
+              "a_D": -4,
+              "b_D": 10,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                80,
+                49
+              ],
+              "B_numerator_J": 80,
+              "a_D": -4,
+              "b_D": 12,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                4,
+                7
+              ],
+              "B_numerator_J": 28,
+              "a_D": -4,
+              "b_D": 14,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -32,
+                49
+              ],
+              "B_numerator_J": -32,
+              "a_D": -4,
+              "b_D": 16,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -100,
+                49
+              ],
+              "B_numerator_J": -100,
+              "a_D": -4,
+              "b_D": 18,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                122,
+                49
+              ],
+              "B_numerator_J": 122,
+              "a_D": -3,
+              "b_D": 2,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                117,
+                49
+              ],
+              "B_numerator_J": 117,
+              "a_D": -3,
+              "b_D": 3,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                110,
+                49
+              ],
+              "B_numerator_J": 110,
+              "a_D": -3,
+              "b_D": 4,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                101,
+                49
+              ],
+              "B_numerator_J": 101,
+              "a_D": -3,
+              "b_D": 5,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                90,
+                49
+              ],
+              "B_numerator_J": 90,
+              "a_D": -3,
+              "b_D": 6,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                11,
+                7
+              ],
+              "B_numerator_J": 77,
+              "a_D": -3,
+              "b_D": 7,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                62,
+                49
+              ],
+              "B_numerator_J": 62,
+              "a_D": -3,
+              "b_D": 8,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                45,
+                49
+              ],
+              "B_numerator_J": 45,
+              "a_D": -3,
+              "b_D": 9,
+              "member_count": 105,
+              "member_fraction": [
+                5,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                49
+              ],
+              "B_numerator_J": 26,
+              "a_D": -3,
+              "b_D": 10,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                49
+              ],
+              "B_numerator_J": 5,
+              "a_D": -3,
+              "b_D": 11,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -18,
+                49
+              ],
+              "B_numerator_J": -18,
+              "a_D": -3,
+              "b_D": 12,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -43,
+                49
+              ],
+              "B_numerator_J": -43,
+              "a_D": -3,
+              "b_D": 13,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -10,
+                7
+              ],
+              "B_numerator_J": -70,
+              "a_D": -3,
+              "b_D": 14,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -99,
+                49
+              ],
+              "B_numerator_J": -99,
+              "a_D": -3,
+              "b_D": 15,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                52,
+                49
+              ],
+              "B_numerator_J": 52,
+              "a_D": -2,
+              "b_D": -2,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                7
+              ],
+              "B_numerator_J": 56,
+              "a_D": -2,
+              "b_D": 0,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                52,
+                49
+              ],
+              "B_numerator_J": 52,
+              "a_D": -2,
+              "b_D": 2,
+              "member_count": 273,
+              "member_fraction": [
+                13,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                40,
+                49
+              ],
+              "B_numerator_J": 40,
+              "a_D": -2,
+              "b_D": 4,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                49
+              ],
+              "B_numerator_J": 20,
+              "a_D": -2,
+              "b_D": 6,
+              "member_count": 378,
+              "member_fraction": [
+                9,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -8,
+                49
+              ],
+              "B_numerator_J": -8,
+              "a_D": -2,
+              "b_D": 8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -44,
+                49
+              ],
+              "B_numerator_J": -44,
+              "a_D": -2,
+              "b_D": 10,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -88,
+                49
+              ],
+              "B_numerator_J": -88,
+              "a_D": -2,
+              "b_D": 12,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -20,
+                7
+              ],
+              "B_numerator_J": -140,
+              "a_D": -2,
+              "b_D": 14,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -50,
+                49
+              ],
+              "B_numerator_J": -50,
+              "a_D": -1,
+              "b_D": -8,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -5,
+                7
+              ],
+              "B_numerator_J": -35,
+              "a_D": -1,
+              "b_D": -7,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -22,
+                49
+              ],
+              "B_numerator_J": -22,
+              "a_D": -1,
+              "b_D": -6,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -11,
+                49
+              ],
+              "B_numerator_J": -11,
+              "a_D": -1,
+              "b_D": -5,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                49
+              ],
+              "B_numerator_J": -2,
+              "a_D": -1,
+              "b_D": -4,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                49
+              ],
+              "B_numerator_J": 5,
+              "a_D": -1,
+              "b_D": -3,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                10,
+                49
+              ],
+              "B_numerator_J": 10,
+              "a_D": -1,
+              "b_D": -2,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                49
+              ],
+              "B_numerator_J": 13,
+              "a_D": -1,
+              "b_D": -1,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                7
+              ],
+              "B_numerator_J": 14,
+              "a_D": -1,
+              "b_D": 0,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                49
+              ],
+              "B_numerator_J": 13,
+              "a_D": -1,
+              "b_D": 1,
+              "member_count": 105,
+              "member_fraction": [
+                5,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                10,
+                49
+              ],
+              "B_numerator_J": 10,
+              "a_D": -1,
+              "b_D": 2,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                49
+              ],
+              "B_numerator_J": 5,
+              "a_D": -1,
+              "b_D": 3,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                49
+              ],
+              "B_numerator_J": -2,
+              "a_D": -1,
+              "b_D": 4,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -11,
+                49
+              ],
+              "B_numerator_J": -11,
+              "a_D": -1,
+              "b_D": 5,
+              "member_count": 105,
+              "member_fraction": [
+                5,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -22,
+                49
+              ],
+              "B_numerator_J": -22,
+              "a_D": -1,
+              "b_D": 6,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -5,
+                7
+              ],
+              "B_numerator_J": -35,
+              "a_D": -1,
+              "b_D": 7,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -50,
+                49
+              ],
+              "B_numerator_J": -50,
+              "a_D": -1,
+              "b_D": 8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -67,
+                49
+              ],
+              "B_numerator_J": -67,
+              "a_D": -1,
+              "b_D": 9,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -86,
+                49
+              ],
+              "B_numerator_J": -86,
+              "a_D": -1,
+              "b_D": 10,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -107,
+                49
+              ],
+              "B_numerator_J": -107,
+              "a_D": -1,
+              "b_D": 11,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -130,
+                49
+              ],
+              "B_numerator_J": -130,
+              "a_D": -1,
+              "b_D": 12,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -155,
+                49
+              ],
+              "B_numerator_J": -155,
+              "a_D": -1,
+              "b_D": 13,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -100,
+                49
+              ],
+              "B_numerator_J": -100,
+              "a_D": 0,
+              "b_D": -10,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -64,
+                49
+              ],
+              "B_numerator_J": -64,
+              "a_D": 0,
+              "b_D": -8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                49
+              ],
+              "B_numerator_J": -36,
+              "a_D": 0,
+              "b_D": -6,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -16,
+                49
+              ],
+              "B_numerator_J": -16,
+              "a_D": 0,
+              "b_D": -4,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                49
+              ],
+              "B_numerator_J": -4,
+              "a_D": 0,
+              "b_D": -2,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                0,
+                1
+              ],
+              "B_numerator_J": 0,
+              "a_D": 0,
+              "b_D": 0,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                49
+              ],
+              "B_numerator_J": -4,
+              "a_D": 0,
+              "b_D": 2,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -36,
+                49
+              ],
+              "B_numerator_J": -36,
+              "a_D": 0,
+              "b_D": 6,
+              "member_count": 420,
+              "member_fraction": [
+                10,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -64,
+                49
+              ],
+              "B_numerator_J": -64,
+              "a_D": 0,
+              "b_D": 8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -100,
+                49
+              ],
+              "B_numerator_J": -100,
+              "a_D": 0,
+              "b_D": 10,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -144,
+                49
+              ],
+              "B_numerator_J": -144,
+              "a_D": 0,
+              "b_D": 12,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -196,
+              "a_D": 0,
+              "b_D": 14,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -50,
+                49
+              ],
+              "B_numerator_J": -50,
+              "a_D": 1,
+              "b_D": -8,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -5,
+                7
+              ],
+              "B_numerator_J": -35,
+              "a_D": 1,
+              "b_D": -7,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -22,
+                49
+              ],
+              "B_numerator_J": -22,
+              "a_D": 1,
+              "b_D": -6,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -11,
+                49
+              ],
+              "B_numerator_J": -11,
+              "a_D": 1,
+              "b_D": -5,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                49
+              ],
+              "B_numerator_J": -2,
+              "a_D": 1,
+              "b_D": -4,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                49
+              ],
+              "B_numerator_J": 5,
+              "a_D": 1,
+              "b_D": -3,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                10,
+                49
+              ],
+              "B_numerator_J": 10,
+              "a_D": 1,
+              "b_D": -2,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                49
+              ],
+              "B_numerator_J": 13,
+              "a_D": 1,
+              "b_D": -1,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                2,
+                7
+              ],
+              "B_numerator_J": 14,
+              "a_D": 1,
+              "b_D": 0,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                13,
+                49
+              ],
+              "B_numerator_J": 13,
+              "a_D": 1,
+              "b_D": 1,
+              "member_count": 105,
+              "member_fraction": [
+                5,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                10,
+                49
+              ],
+              "B_numerator_J": 10,
+              "a_D": 1,
+              "b_D": 2,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                49
+              ],
+              "B_numerator_J": 5,
+              "a_D": 1,
+              "b_D": 3,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -2,
+                49
+              ],
+              "B_numerator_J": -2,
+              "a_D": 1,
+              "b_D": 4,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -11,
+                49
+              ],
+              "B_numerator_J": -11,
+              "a_D": 1,
+              "b_D": 5,
+              "member_count": 105,
+              "member_fraction": [
+                5,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -22,
+                49
+              ],
+              "B_numerator_J": -22,
+              "a_D": 1,
+              "b_D": 6,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -5,
+                7
+              ],
+              "B_numerator_J": -35,
+              "a_D": 1,
+              "b_D": 7,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -50,
+                49
+              ],
+              "B_numerator_J": -50,
+              "a_D": 1,
+              "b_D": 8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -67,
+                49
+              ],
+              "B_numerator_J": -67,
+              "a_D": 1,
+              "b_D": 9,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -86,
+                49
+              ],
+              "B_numerator_J": -86,
+              "a_D": 1,
+              "b_D": 10,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -107,
+                49
+              ],
+              "B_numerator_J": -107,
+              "a_D": 1,
+              "b_D": 11,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -130,
+                49
+              ],
+              "B_numerator_J": -130,
+              "a_D": 1,
+              "b_D": 12,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -155,
+                49
+              ],
+              "B_numerator_J": -155,
+              "a_D": 1,
+              "b_D": 13,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                52,
+                49
+              ],
+              "B_numerator_J": 52,
+              "a_D": 2,
+              "b_D": -2,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                8,
+                7
+              ],
+              "B_numerator_J": 56,
+              "a_D": 2,
+              "b_D": 0,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                52,
+                49
+              ],
+              "B_numerator_J": 52,
+              "a_D": 2,
+              "b_D": 2,
+              "member_count": 273,
+              "member_fraction": [
+                13,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                40,
+                49
+              ],
+              "B_numerator_J": 40,
+              "a_D": 2,
+              "b_D": 4,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                49
+              ],
+              "B_numerator_J": 20,
+              "a_D": 2,
+              "b_D": 6,
+              "member_count": 378,
+              "member_fraction": [
+                9,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -8,
+                49
+              ],
+              "B_numerator_J": -8,
+              "a_D": 2,
+              "b_D": 8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -44,
+                49
+              ],
+              "B_numerator_J": -44,
+              "a_D": 2,
+              "b_D": 10,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -88,
+                49
+              ],
+              "B_numerator_J": -88,
+              "a_D": 2,
+              "b_D": 12,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -20,
+                7
+              ],
+              "B_numerator_J": -140,
+              "a_D": 2,
+              "b_D": 14,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                122,
+                49
+              ],
+              "B_numerator_J": 122,
+              "a_D": 3,
+              "b_D": 2,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                117,
+                49
+              ],
+              "B_numerator_J": 117,
+              "a_D": 3,
+              "b_D": 3,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                110,
+                49
+              ],
+              "B_numerator_J": 110,
+              "a_D": 3,
+              "b_D": 4,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                101,
+                49
+              ],
+              "B_numerator_J": 101,
+              "a_D": 3,
+              "b_D": 5,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                90,
+                49
+              ],
+              "B_numerator_J": 90,
+              "a_D": 3,
+              "b_D": 6,
+              "member_count": 252,
+              "member_fraction": [
+                6,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                11,
+                7
+              ],
+              "B_numerator_J": 77,
+              "a_D": 3,
+              "b_D": 7,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                62,
+                49
+              ],
+              "B_numerator_J": 62,
+              "a_D": 3,
+              "b_D": 8,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                45,
+                49
+              ],
+              "B_numerator_J": 45,
+              "a_D": 3,
+              "b_D": 9,
+              "member_count": 105,
+              "member_fraction": [
+                5,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                49
+              ],
+              "B_numerator_J": 26,
+              "a_D": 3,
+              "b_D": 10,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                5,
+                49
+              ],
+              "B_numerator_J": 5,
+              "a_D": 3,
+              "b_D": 11,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -18,
+                49
+              ],
+              "B_numerator_J": -18,
+              "a_D": 3,
+              "b_D": 12,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -43,
+                49
+              ],
+              "B_numerator_J": -43,
+              "a_D": 3,
+              "b_D": 13,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -10,
+                7
+              ],
+              "B_numerator_J": -70,
+              "a_D": 3,
+              "b_D": 14,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -99,
+                49
+              ],
+              "B_numerator_J": -99,
+              "a_D": 3,
+              "b_D": 15,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                160,
+                49
+              ],
+              "B_numerator_J": 160,
+              "a_D": 4,
+              "b_D": 8,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                124,
+                49
+              ],
+              "B_numerator_J": 124,
+              "a_D": 4,
+              "b_D": 10,
+              "member_count": 168,
+              "member_fraction": [
+                4,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                80,
+                49
+              ],
+              "B_numerator_J": 80,
+              "a_D": 4,
+              "b_D": 12,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                4,
+                7
+              ],
+              "B_numerator_J": 28,
+              "a_D": 4,
+              "b_D": 14,
+              "member_count": 126,
+              "member_fraction": [
+                3,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -32,
+                49
+              ],
+              "B_numerator_J": -32,
+              "a_D": 4,
+              "b_D": 16,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                -100,
+                49
+              ],
+              "B_numerator_J": -100,
+              "a_D": 4,
+              "b_D": 18,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                181,
+                49
+              ],
+              "B_numerator_J": 181,
+              "a_D": 5,
+              "b_D": 13,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                22,
+                7
+              ],
+              "B_numerator_J": 154,
+              "a_D": 5,
+              "b_D": 14,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                125,
+                49
+              ],
+              "B_numerator_J": 125,
+              "a_D": 5,
+              "b_D": 15,
+              "member_count": 84,
+              "member_fraction": [
+                2,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                94,
+                49
+              ],
+              "B_numerator_J": 94,
+              "a_D": 5,
+              "b_D": 16,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                61,
+                49
+              ],
+              "B_numerator_J": 61,
+              "a_D": 5,
+              "b_D": 17,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                26,
+                49
+              ],
+              "B_numerator_J": 26,
+              "a_D": 5,
+              "b_D": 18,
+              "member_count": 63,
+              "member_fraction": [
+                3,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                -11,
+                49
+              ],
+              "B_numerator_J": -11,
+              "a_D": 5,
+              "b_D": 19,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                180,
+                49
+              ],
+              "B_numerator_J": 180,
+              "a_D": 6,
+              "b_D": 18,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                104,
+                49
+              ],
+              "B_numerator_J": 104,
+              "a_D": 6,
+              "b_D": 20,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                20,
+                49
+              ],
+              "B_numerator_J": 20,
+              "a_D": 6,
+              "b_D": 22,
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            },
+            {
+              "B_D": [
+                110,
+                49
+              ],
+              "B_numerator_J": 110,
+              "a_D": 7,
+              "b_D": 24,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            },
+            {
+              "B_D": [
+                61,
+                49
+              ],
+              "B_numerator_J": 61,
+              "a_D": 7,
+              "b_D": 25,
+              "member_count": 21,
+              "member_fraction": [
+                1,
+                686
+              ]
+            }
+          ],
+          "support_size": 138
+        },
+        "member_coefficient_ledger_sha256": "c1d4ca30f45341de53af20ab4e4ca3f9bff79542146f1ac2230169eec9669655",
+        "member_count": 14406,
+        "moments_1_through_6": [
+          {
+            "family_mean_B_D_to_order": [
+              2444,
+              16807
+            ],
+            "family_minus_haar": [
+              2444,
+              16807
+            ],
+            "haar_moment": 0,
+            "order": 1,
+            "sum_of_J_D_to_order": 102648
+          },
+          {
+            "family_mean_B_D_to_order": [
+              1536800,
+              823543
+            ],
+            "family_minus_haar": [
+              -110286,
+              823543
+            ],
+            "haar_moment": 2,
+            "order": 2,
+            "sum_of_J_D_to_order": 64545600
+          },
+          {
+            "family_mean_B_D_to_order": [
+              34798640,
+              40353607
+            ],
+            "family_minus_haar": [
+              34798640,
+              40353607
+            ],
+            "haar_moment": 0,
+            "order": 3,
+            "sum_of_J_D_to_order": 1461542880
+          },
+          {
+            "family_mean_B_D_to_order": [
+              21877044944,
+              1977326743
+            ],
+            "family_minus_haar": [
+              -1850875972,
+              1977326743
+            ],
+            "haar_moment": 12,
+            "order": 4,
+            "sum_of_J_D_to_order": 918835887648
+          },
+          {
+            "family_mean_B_D_to_order": [
+              648054364784,
+              96889010407
+            ],
+            "family_minus_haar": [
+              648054364784,
+              96889010407
+            ],
+            "haar_moment": 0,
+            "order": 5,
+            "sum_of_J_D_to_order": 27218283320928
+          },
+          {
+            "family_mean_B_D_to_order": [
+              442530198951440,
+              4747561509943
+            ],
+            "family_minus_haar": [
+              -32225952042860,
+              4747561509943
+            ],
+            "haar_moment": 100,
+            "order": 6,
+            "sum_of_J_D_to_order": 18586268355960480
+          }
+        ],
+        "q": 7,
+        "sign_law": {
+          "comparisons": {
+            "negative": {
+              "affine_orbit_count": 155,
+              "member_count": 6258,
+              "member_fraction": [
+                149,
+                343
+              ],
+              "member_minus_haar": [
+                -45,
+                686
+              ],
+              "uniform_affine_orbit_fraction": [
+                155,
+                349
+              ]
+            },
+            "positive": {
+              "affine_orbit_count": 186,
+              "member_count": 7812,
+              "member_fraction": [
+                186,
+                343
+              ],
+              "member_minus_haar": [
+                29,
+                686
+              ],
+              "uniform_affine_orbit_fraction": [
+                186,
+                349
+              ]
+            },
+            "zero": {
+              "affine_orbit_count": 8,
+              "member_count": 336,
+              "member_fraction": [
+                8,
+                343
+              ],
+              "member_minus_haar": [
+                8,
+                343
+              ],
+              "uniform_affine_orbit_fraction": [
+                8,
+                349
+              ]
+            }
+          },
+          "haar_target": {
+            "negative": [
+              1,
+              2
+            ],
+            "positive": [
+              1,
+              2
+            ],
+            "zero": [
+              0,
+              1
+            ]
+          }
+        },
+        "sign_witnesses": {
+          "negative": {
+            "B_D": [
+              -4,
+              1
+            ],
+            "B_numerator_J": -196,
+            "a_D": 0,
+            "b_D": 14,
+            "conductor_coefficients_low_to_high": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "positive": {
+            "B_D": [
+              124,
+              49
+            ],
+            "B_numerator_J": 124,
+            "a_D": -4,
+            "b_D": 10,
+            "conductor_coefficients_low_to_high": [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ]
+          },
+          "zero": {
+            "B_D": [
+              0,
+              1
+            ],
+            "B_numerator_J": 0,
+            "a_D": 0,
+            "b_D": 0,
+            "conductor_coefficients_low_to_high": [
+              0,
+              3,
+              0,
+              1,
+              3,
+              1
+            ]
+          }
+        },
+        "source_locked_raw_aggregate_controls": {
+          "a_squared_b_squared": {
+            "mean": [
+              383744,
+              343
+            ],
+            "sum": 16117248
+          },
+          "b_cubed": {
+            "mean": [
+              338232,
+              343
+            ],
+            "sum": 14205744
+          },
+          "b_fourth": {
+            "mean": [
+              5263264,
+              343
+            ],
+            "sum": 221057088
+          }
+        },
+        "tail_concentration": {
+          "absolute_extreme_J_values": [
+            -196
+          ],
+          "absolute_extreme_atoms": [
+            {
+              "B_D": [
+                -4,
+                1
+              ],
+              "B_numerator_J": -196,
+              "affine_orbit_count": 2,
+              "affine_orbits": [
+                {
+                  "b_D": 14,
+                  "orbit_size": 21,
+                  "representative_a_D": 0,
+                  "representative_coefficients_low_to_high": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "stabilizer_order": 2
+                },
+                {
+                  "b_D": 14,
+                  "orbit_size": 21,
+                  "representative_a_D": 0,
+                  "representative_coefficients_low_to_high": [
+                    0,
+                    1,
+                    3,
+                    5,
+                    3,
+                    1
+                  ],
+                  "stabilizer_order": 2
+                }
+              ],
+              "member_count": 42,
+              "member_fraction": [
+                1,
+                343
+              ]
+            }
+          ],
+          "absolute_extreme_share_of_absolute_moments": {
+            "2": [
+              2401,
+              96050
+            ],
+            "4": [
+              92236816,
+              1367315309
+            ],
+            "6": [
+              3543369523456,
+              27658137434465
+            ]
+          },
+          "lower_endpoint": {
+            "B_D": [
+              -4,
+              1
+            ],
+            "B_numerator_J": -196,
+            "affine_orbit_count": 2,
+            "affine_orbits": [
+              {
+                "b_D": 14,
+                "orbit_size": 21,
+                "representative_a_D": 0,
+                "representative_coefficients_low_to_high": [
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "stabilizer_order": 2
+              },
+              {
+                "b_D": 14,
+                "orbit_size": 21,
+                "representative_a_D": 0,
+                "representative_coefficients_low_to_high": [
+                  0,
+                  1,
+                  3,
+                  5,
+                  3,
+                  1
+                ],
+                "stabilizer_order": 2
+              }
+            ],
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ]
+          },
+          "scope": "exact concentration in the frozen member law only; no limiting tail theorem or orbit-equidistribution claim",
+          "two_endpoint_share_of_absolute_moments": {
+            "2": [
+              71177,
+              1536800
+            ],
+            "4": [
+              2549072177,
+              21877044944
+            ],
+            "6": [
+              91855740702377,
+              442530198951440
+            ]
+          },
+          "upper_endpoint": {
+            "B_D": [
+              181,
+              49
+            ],
+            "B_numerator_J": 181,
+            "affine_orbit_count": 1,
+            "affine_orbits": [
+              {
+                "b_D": 13,
+                "orbit_size": 42,
+                "representative_a_D": 5,
+                "representative_coefficients_low_to_high": [
+                  1,
+                  1,
+                  4,
+                  2,
+                  0,
+                  1
+                ],
+                "stabilizer_order": 1
+              }
+            ],
+            "member_count": 42,
+            "member_fraction": [
+              1,
+              343
+            ]
+          }
+        },
+        "third_moment_raw_sums": {
+          "a_fourth_b_squared": 421829184,
+          "a_sixth": 38281824,
+          "a_squared_b_fourth": 5002509792,
+          "b_sixth": 65653633248
+        },
+        "third_moment_reduction_frozen_evaluation": {
+          "identity_checked": true,
+          "known_6_mean_B_D_contribution": [
+            14664,
+            16807
+          ],
+          "mean_B_D_cubed": [
+            34798640,
+            40353607
+          ],
+          "mean_chi_(0,3)": [
+            2386,
+            117649
+          ],
+          "remaining_mean_R6": [
+            1227172,
+            40353607
+          ]
+        }
+      }
+    ],
+    "q_values": [
+      3,
+      5,
+      7
+    ],
+    "regression_controls_against_locked_exact_sources": {
+      "3": {
+        "member_count_matches_q_scan": true,
+        "orbit_count_matches_affine_fixture": true,
+        "orbit_size_histogram_matches_affine_fixture": true,
+        "sum_a_fourth_matches_q_scan": true,
+        "sum_a_squared_b_matches_q_scan": true,
+        "sum_a_squared_matches_q_scan": true,
+        "sum_b_matches_q_scan": true,
+        "sum_b_squared_matches_q_scan": true
+      },
+      "5": {
+        "member_count_matches_q_scan": true,
+        "orbit_count_matches_affine_fixture": true,
+        "orbit_size_histogram_matches_affine_fixture": true,
+        "sum_a_fourth_matches_q_scan": true,
+        "sum_a_squared_b_matches_q_scan": true,
+        "sum_a_squared_matches_q_scan": true,
+        "sum_b_matches_q_scan": true,
+        "sum_b_squared_matches_q_scan": true
+      },
+      "7": {
+        "member_count_matches_q_scan": true,
+        "orbit_count_matches_affine_fixture": true,
+        "orbit_size_histogram_matches_affine_fixture": true,
+        "sum_a_fourth_matches_q_scan": true,
+        "sum_a_squared_b_matches_q_scan": true,
+        "sum_a_squared_matches_q_scan": true,
+        "sum_b_matches_q_scan": true,
+        "sum_b_squared_matches_q_scan": true
+      }
+    },
+    "status": "EXHAUSTIVE_ONLY_FOR_Q_3_5_7"
+  },
+  "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+  "producer_and_source_locks": {
+    "dependency_direction": "this independent enumeration does not read or hash the earlier high-weight packet; downstream analyses may source-lock this fixture",
+    "input_provenance": "complete deterministic generation; no external data",
+    "locks": {
+      "affine_action": {
+        "path": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
+        "sha256_lf_normalized": "32e440750b2832ec4cc84473187b4b1aa6396eda87c64f5ac845b2a96dc88f08"
+      },
+      "all_q_mean_certificate": {
+        "path": "research/l-families/atlas/function_field/genus2_moment_identity.py",
+        "sha256_lf_normalized": "c9c9ca527623b3d589d79175f56e605f07b5dbad3f09a46c4a978ef54ed216a4"
+      },
+      "all_q_mean_note": {
+        "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+        "sha256_lf_normalized": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277"
+      },
+      "coefficient_arithmetic": {
+        "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
+        "sha256_lf_normalized": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
+      },
+      "haar_and_character_note": {
+        "path": "research/l-families/atlas/function_field/USP_COEFFICIENT_MINOR_RANK_SCAN.md",
+        "sha256_lf_normalized": "61d0ada6824f7aee8f23187a6ff523fe6cd4c5598c65ef96582f8db12c8d1379"
+      },
+      "haar_and_character_source": {
+        "path": "research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py",
+        "sha256_lf_normalized": "2480d71306a799add48038692d691f7f79ac3c9917db69a3852a0a823c7ff167"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/BALANCED_CONTROL_FAMILY_SCAN.md",
+        "sha256_lf_normalized": "50e1f7958a3175c132d82672658d0baf98fedf6620bb0de6c4d0c830c8806ffc"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.py",
+        "sha256_lf_normalized": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b"
+      },
+      "test": {
+        "path": "tests/test_balanced_control_family_scan.py",
+        "sha256_lf_normalized": "119e50a206dac87197d51ec016c11a0e0f73ffbc9ee6f3d7c72cbb7ed5760ef8"
+      }
+    },
+    "runtime": "Python 3.11+ standard library; exact integer/Fraction arithmetic"
+  },
+  "proved_all_q_and_haar_facts": {
+    "finite_family_mean": {
+      "derivation": "B=chi_(2,0)-chi_(0,2), with the locked all-q means mean(chi_(2,0))=q^-3-q^-4 and mean(chi_(0,2))=-q^-1-q^-5",
+      "formula": "mean(B_D)=q^-1+q^-3-q^-4+q^-5",
+      "not_inferred_from_frozen_fields": true,
+      "proof_dependencies": [
+        "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+        "research/l-families/atlas/function_field/genus2_moment_identity.py"
+      ],
+      "status": "PROVED_FOR_EVERY_ODD_PRIME_POWER_Q"
+    },
+    "usp4_haar_law": {
+      "character_identity": "B=chi_(2,0)-chi_(0,2)",
+      "even_moment_formula": "Haar(B^(2r))=binomial(2r,r)^2/(r+1)",
+      "law": "B has the law of A*S for independent arcsine A and Wigner-semicircle S, both supported on [-2,2]",
+      "moments_1_through_6": [
+        0,
+        2,
+        0,
+        12,
+        0,
+        100
+      ],
+      "odd_moments": 0,
+      "proof_dependencies": [
+        "research/l-families/atlas/function_field/USP_COEFFICIENT_MINOR_RANK_SCAN.md",
+        "research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py"
+      ],
+      "sign_probabilities": {
+        "negative": [
+          1,
+          2
+        ],
+        "positive": [
+          1,
+          2
+        ],
+        "zero": [
+          0,
+          1
+        ]
+      },
+      "status": "PROVED_EXACT_COMPACT_GROUP_LAW",
+      "support": [
+        -4,
+        4
+      ],
+      "torus_factorization": "B=-(x_1^2+x_1^-2)*(x_2^2+x_2^-2)"
+    }
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.BALANCED_CONTROL.Q3_Q5_Q7.V1",
+  "resource_contract": {
+    "candidate_cap_per_field": 20000,
+    "candidate_counts_per_field": {
+      "3": 243,
+      "5": 3125,
+      "7": 16807
+    },
+    "candidate_guard_interval": 256,
+    "clock": "time.monotonic",
+    "floating_point_in_results": false,
+    "frozen_q_values": [
+      3,
+      5,
+      7
+    ],
+    "larger_field_policy": "REFUSE_EVERY_Q_OUTSIDE_3_5_7",
+    "maximum_candidate_count_in_any_field": 16807,
+    "maximum_wall_seconds_for_full_build": 15.0,
+    "numerical_root_finding": false,
+    "random_sampling": false
+  },
+  "schema": "riemann.function_field.balanced_control_family_scan.v1",
+  "status": "EXACT_FROZEN_SCAN_PLUS_LOCKED_ALL_Q_AND_HAAR_THEOREMS",
+  "third_moment_reduction": {
+    "character_decomposition": [
+      {
+        "coefficient": 6,
+        "highest_weight_fundamental_basis": [
+          2,
+          0
+        ],
+        "notation": "chi_(2,0)"
+      },
+      {
+        "coefficient": -6,
+        "highest_weight_fundamental_basis": [
+          0,
+          2
+        ],
+        "notation": "chi_(0,2)"
+      },
+      {
+        "coefficient": -2,
+        "highest_weight_fundamental_basis": [
+          0,
+          3
+        ],
+        "notation": "chi_(0,3)"
+      },
+      {
+        "coefficient": 2,
+        "highest_weight_fundamental_basis": [
+          2,
+          3
+        ],
+        "notation": "chi_(2,3)"
+      },
+      {
+        "coefficient": 3,
+        "highest_weight_fundamental_basis": [
+          6,
+          0
+        ],
+        "notation": "chi_(6,0)"
+      },
+      {
+        "coefficient": -3,
+        "highest_weight_fundamental_basis": [
+          4,
+          2
+        ],
+        "notation": "chi_(4,2)"
+      },
+      {
+        "coefficient": 1,
+        "highest_weight_fundamental_basis": [
+          2,
+          4
+        ],
+        "notation": "chi_(2,4)"
+      },
+      {
+        "coefficient": -1,
+        "highest_weight_fundamental_basis": [
+          0,
+          6
+        ],
+        "notation": "chi_(0,6)"
+      }
+    ],
+    "character_identity": "B^3=6*chi_(2,0)-6*chi_(0,2)-2*chi_(0,3)+2*chi_(2,3)+3*chi_(6,0)-3*chi_(4,2)+chi_(2,4)-chi_(0,6)",
+    "chi_(0,3)_coefficient_identity": "chi_(0,3)=e^3-e^2-2*e*t^2-e+3*t^2, t=a_D/sqrt(q), e=b_D/q",
+    "exact_character_engine_operations": {
+      "character_weight_candidates": 896,
+      "constant_term_lookups": 16,
+      "decomposition_updates": 401,
+      "kostant_weyl_summands": 7168,
+      "laurent_pair_products": 148,
+      "partition_states": 1789
+    },
+    "first_unresolved_family_odd_moment": 3,
+    "frozen_mean_R6_values": {
+      "3": [
+        3364,
+        19683
+      ],
+      "5": [
+        93156,
+        1953125
+      ],
+      "7": [
+        1227172,
+        40353607
+      ]
+    },
+    "haar_check": {
+      "third_moment": 0,
+      "trivial_character_coefficient": 0
+    },
+    "mean_reduction": "mean(B_D^3)=6*(q^-1+q^-3-q^-4+q^-5)-2*mean(chi_(0,3))+mean(R6)",
+    "raw_coefficient_identity": "B_D^3=8*a_D^6/q^3-12*a_D^4*b_D^2/q^4+6*a_D^2*b_D^4/q^5-b_D^6/q^6",
+    "reduced_identity": "B^3=6*B-2*chi_(0,3)+R6, where R6=2*chi_(2,3)+3*chi_(6,0)-3*chi_(4,2)+chi_(2,4)-chi_(0,6)",
+    "remaining_all_q_burden": "evaluate the single explicit weight-six virtual average mean(R6); the three frozen values below do not determine it for general q",
+    "status": "EXACT_POINTWISE_REDUCTION_ALL_Q_AVERAGE_UNRESOLVED",
+    "why_first": "Every odd Haar moment is zero, while the finite-family first moment is proved for every odd prime power q; no all-q third-moment formula is proved in the locked sources."
+  }
+}

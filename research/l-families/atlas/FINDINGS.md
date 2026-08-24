@@ -109,6 +109,77 @@ This does **not** refute canonical `XD`, `HCNC`, or physical occupancy. `C_D` is
 an explicitly labeled toy lag-one probe. A genuine port must derive its degree
 kernel from the same reciprocal-L source and preserve the relevant carrier.
 
+### Genus-one control: every moment exposes the modular contribution
+
+The cubic pilot sits inside an exact all-odd-prime-power benchmark. With
+
+\[
+E_D:y^2=D(x),\qquad a_D=q+1-\#E_D(\mathbb F_q),
+\qquad L_D(T)=1-a_DT+qT^2,
+\]
+
+uniform monic squarefree cubic models are exactly the normalized elliptic-stack
+measure:
+
+\[
+\sum_{[E]/\mathbb F_q}\frac1{|\operatorname{Aut}_{\mathbb F_q}(E)|}=q,
+\qquad
+\mathbb E_D f(E_D)=\frac1q
+\sum_{[E]}\frac{f(E)}{|\operatorname{Aut}_{\mathbb F_q}(E)|}.
+\]
+
+If `P_m(a,q)` is the `Sym^m H^1` trace and `Theta_k(q)` is the Frobenius-power
+Hecke trace on level-one cusp forms, the standard modular-stack trace formula
+gives
+
+\[
+\sum_{[E]}\frac{P_m(a_E,q)}{|\operatorname{Aut}(E)|}
+=\begin{cases}
+q,&m=0,\\
+0,&m\text{ odd},\\
+-1-\Theta_{m+2}(q),&m>0\text{ even}.
+\end{cases}
+\]
+
+Consequently every raw even moment has the exact form
+
+\[
+W_{2n}(q)=C_nq^{n+1}
+-\sum_{j=1}^n c_{n,j}q^{n-j}\bigl(1+\Theta_{2j+2}(q)\bigr),
+\qquad
+c_{n,j}=\binom{2n}{n-j}-\binom{2n}{n-j-1}.
+\]
+
+The Catalan leading term is the `USp(2)` Haar moment. Since the level-one cusp
+spaces below weight 12 vanish, the first genuinely automorphic correction is
+`-Theta_12(q)` in `W_10`; for a prime field it is `-tau(q)`, while for a prime
+power it is the Frobenius-power correction
+`Theta_12(p^r)=Tr(T_(p^r))-p^11 Tr(T_(p^(r-2)))`, not generally `tau(p^r)`.
+This makes genus one a useful control for higher-genus searches: boundary terms
+appear before cuspidal cohomology, and the latter first becomes visible only in
+a sufficiently high moment.
+
+There is also a quotient firewall. The full affine branch action contains a
+nonsquare multiplier and identifies quadratic twists, so signed trace does not
+descend to that quotient. The square-affine quotient gives elliptic
+`F_q`-isomorphism classes, where it does. Their exact coarse counts are
+
+\[
+N_{\rm branch}=q+1+2\mathbf1_{3\mid q-1}
++\mathbf1_{\operatorname{char}\mathbb F_q=3},
+\]
+
+\[
+N_{\rm ell}=2q+2\mathbf1_{4\mid q-1}
++4\mathbf1_{6\mid q-1}
++2\mathbf1_{\operatorname{char}\mathbb F_q=3}.
+\]
+
+The formulas, both orbit partitions, and moments through order 12 are frozen
+independently at `q=3,5,7,11,13`. This is a synthesis of classical
+Eichler--Shimura/Birch--Ihara structure with explicit family and quotient
+bookkeeping, not a claim that the modular trace theorem itself is new.
+
 ## 4. Exact genus-two theorem: the first toy-minor mean for all odd prime powers
 
 For each odd prime power `q`, let `H_5(q)` be all monic squarefree quintics over
@@ -214,6 +285,29 @@ Its universal leading correction comes from affine involutions and equals
 `(q^g-(-1)^g)/(q+1)`. At fixed genus, the orbit-count excess relative to the
 stack mass is therefore `q^(-g)` to leading order. This is a presentation
 census, not a hyperelliptic moduli count or a Frobenius law.
+
+Before extracting an odd degree, the same fixed-locus classification gives one
+rational series for every degree. With
+
+\[
+S_q(u)=\frac{1-qu^2}{1-qu},\qquad A_q(u)=\frac{S_q(u)}{1+u},
+\]
+
+and `O_(q,n)` the number of affine orbits of monic squarefree degree-`n`
+polynomials,
+
+\[
+\sum_{n\ge0}O_{q,n}u^n=
+\frac{S_q(u)+q\sum_{\substack{d\mid q-1\\d\ge2}}
+\varphi(d)(1+u)A_q(u^d)+(q-1)S_q(u^p)}{q(q-1)}.
+\]
+
+This exposes an exact automorphism-resonance spectrum: an order-`d`
+multiplicative symmetry appears only in degrees `0,1 mod d`, while additive
+translation symmetry appears only in degrees divisible by
+`p=char(F_q)`. The all-genus odd-degree theorem is coefficient extraction from
+this series; the even-degree terms are presentation counts, not an assertion
+that the marked even- and odd-degree moduli problems coincide.
 
 Those three rows suggested a formula, but they are no longer its evidence of
 proof. The separate DRAFT note
@@ -464,6 +558,86 @@ In the quintic family, however,
 
 This exact arithmetic bias against a zero compact-group baseline is a sharper
 family diagnostic than rediscovering the representation-forced sign of `F`.
+
+An independent bounded scan now freezes the complete joint `(a_D,b_D)` law at
+`q=3,5,7`, rather than retaining only detector totals. It visits all 20,175
+monic candidates under a 20,000-per-field cap and finds respectively 32, 81,
+and 138 joint atoms. The exact `(B_D<0,=0,>0)` member counts are
+
+\[
+(48,12,102),\qquad(986,50,1464),\qquad(6258,336,7812).
+\]
+
+These finite rows are not a monotonicity or equidistribution theorem. Their
+main proof value is provenance: the same member ledger independently locks
+`sum b_D^3`, `sum a_D^2b_D^2`, and `sum b_D^4`, so the high-weight channel
+packet now consumes source data rather than its own former regression
+constants.
+
+Exact `C_2` algebra reduces the first unresolved balanced odd moment to one
+explicit virtual weight-six average:
+
+\[
+B^3=6B-2\chi_{0,3}+R_6,
+\qquad
+R_6=2\chi_{2,3}+3\chi_{6,0}-3\chi_{4,2}
++\chi_{2,4}-\chi_{0,6}.
+\]
+
+Thus
+
+\[
+\langle B_D^3\rangle_q=
+6(q^{-1}+q^{-3}-q^{-4}+q^{-5})
+-2\langle\chi_{0,3}\rangle_q+\langle R_6\rangle_q.
+\]
+
+The cubic coefficient lock evaluates `chi_(0,3)` in each frozen field; the
+smallest honest all-field task is now `mean(R_6)`, not a four-term raw
+coefficient expansion. No all-`q` formula for that last average is asserted.
+
+Frobenius powering reveals a second exact structure. If `B_r` is the same
+balanced control formed from the roots raised to the `r`-th power, then the
+*entire infinite echo sequence* is determined pointwise by `(B_1,B_2)`. Put
+
+\[
+p=-B_1,\qquad h=(B_1^2+B_2)/2,\qquad B_0=-4.
+\]
+
+Then
+
+\[
+B_r=pB_{r-1}-hB_{r-2}+pB_{r-3}-B_{r-4}\qquad(r\ge4),
+\]
+
+with an explicit cubic formula for `B_3`. Hence higher powers amplify
+resonances but add no independent pointwise detector coordinate. Under Haar,
+distinct echoes are pairwise orthogonal, yet for `1<=r<s<t` their first
+nonlinear coupling is the exact additive-frequency law
+
+\[
+\langle B_rB_sB_t\rangle=
+\begin{cases}
+-2,&r+s=t,\ r=1,\\
+-4,&r+s=t,\ r\ge2,\\
+0,&r+s\ne t.
+\end{cases}
+\]
+
+This is a proved Fourier/Weyl-support resonance, not a numerical fit. The
+frozen coefficient laws also show that even the infinite echo loses
+information: after quotienting the automatic trace-sign symmetry, it has
+1, 5, and 7 collision classes at `q=3,5,7`. Several recurrence-certified
+periodic strata have cyclotomic normalized spectra, making them concrete
+supersingularity or extra-endomorphism candidates, but not classifications.
+Finally, the three fields suggest
+
+\[
+\langle B_2\rangle_q\stackrel{?}{=}
+-\frac{(q-1)(q^5+q^2-q+1)}{q^7};
+\]
+
+this last display remains explicitly quarantined as a three-field conjecture.
 
 The range makes the negative first moment quantitatively useful without any
 equidistribution input. Put `Z_D=K_D/q^2`, let `rho_-(q)` be the proportion of
@@ -922,19 +1096,30 @@ theorem for the remaining L-function geometry.
 The experiments suggest a narrow hierarchy:
 
 1. **Transferable exactly:** Euler reciprocal algebra, unitary local scaling,
-   central-order factorization, rank-one atoms, and the parity/full norm identity.
+   central-order factorization, rank-one atoms, the parity/full norm identity,
+   and the fact that Frobenius-power traces obey finite recurrences. For the
+   balanced genus-two echo, that recurrence collapses the complete power
+   sequence to two coordinates.
 2. **Exactly solvable in this family:** the genus-two first toy-minor mean and
    its consequent negative-sign density floor, together with the affine
    transformation law of the toy minor. The squarefree-sieve proof works for
    every odd prime power, whereas the full sign law and higher moments still
    require new character correlations or equidistribution.
-3. **Family-dependent:** local coefficient moments, monodromy averages, rank
+3. **A reusable control family:** the genus-one cubic family has an all-moment
+   modular-stack formula. Its Catalan terms, boundary correction, and first
+   cuspidal contribution at moment ten provide a concrete model of how compact
+   monodromy and automorphic cohomology coexist in one exact family law.
+4. **Measure-dependent even before arithmetic:** marked equations, coarse
+   branch orbits, and isomorphism classes are different ensembles. The rational
+   all-degree Burnside series predicts their affine automorphism resonances, but
+   it does not choose the geometric measure for a new local system.
+5. **Family-dependent:** local coefficient moments, monodromy averages, rank
    distributions, and low-zero statistics.
-4. **Not implied by purity alone in these pilots:** a common memberwise sign for
+6. **Not implied by purity alone in these pilots:** a common memberwise sign for
    either toy coefficient probe at genus one or two. A genuine source-derived
    kernel could still have deterministic positivity and must be checked on its
    own Frobenius-character image.
-5. **Not supplied by small raw correlations:** the weighted off-diagonal bound
+7. **Not supplied by small raw correlations:** the weighted off-diagonal bound
    needed for a growing reciprocal-prime detector. Its local density, root-
    number conditioning, and weight geometry are separate arithmetic inputs.
 

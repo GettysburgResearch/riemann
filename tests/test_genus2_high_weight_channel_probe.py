@@ -139,6 +139,11 @@ class GenusTwoHighWeightChannelProbeTests(unittest.TestCase):
                 expected[q],
             )
             self.assertTrue(row["all_internal_bridges_match"])
+            self.assertEqual(
+                row["raw_sum_provenance"],
+                "independent exhaustive balanced-control enumeration",
+            )
+            self.assertEqual(len(row["member_coefficient_ledger_sha256"]), 64)
         candidate = self.fixture["sparse_all_q_candidate"]
         self.assertEqual(
             candidate["status"],
@@ -180,6 +185,13 @@ class GenusTwoHighWeightChannelProbeTests(unittest.TestCase):
         payload = dict(stored)
         claimed = payload.pop("payload_sha256")
         self.assertEqual(subject._canonical_sha256(payload), claimed)
+        self.assertIn("balanced_control_fixture", stored["source_locks"])
+        self.assertEqual(
+            stored["source_locks"]["balanced_control_fixture"]["payload_sha256"],
+            json.loads(subject.BALANCED_FIXTURE.read_text(encoding="utf-8"))[
+                "payload_sha256"
+            ],
+        )
         for source in stored["source_locks"].values():
             if "sha256_lf_normalized" not in source:
                 continue

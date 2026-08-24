@@ -159,6 +159,36 @@ and also nonmonotone after scaling. This is why the target asks for weighted,
 uniform off-diagonal and marginal estimates rather than extrapolating an
 unweighted finite RMS or fitted rate.
 
+## Exact control adjacent to Target D — genus-one modular moment tower
+
+This is a benchmark, not a new conjectural target. For monic squarefree cubics
+`D` over any odd `F_q`, uniform models are the normalized elliptic-stack
+measure. If `P_m(a,q)` is the `Sym^m H^1` trace, the standard level-one modular
+trace formula gives
+
+\[
+\sum_{[E]/\mathbb F_q}\frac{P_m(a_E,q)}{|\operatorname{Aut}(E)|}
+=q\ (m=0),\quad 0\ (m\text{ odd}),\quad
+-1-\Theta_{m+2}(q)\ (m>0\text{ even}).
+\]
+
+After the elementary `SU(2)` tensor decomposition, every even raw moment is
+
+\[
+W_{2n}(q)=C_nq^{n+1}
+-\sum_{j=1}^n
+\left(\binom{2n}{n-j}-\binom{2n}{n-j-1}\right)
+q^{n-j}\bigl(1+\Theta_{2j+2}(q)\bigr).
+\]
+
+The first cuspidal term is `-Theta_12(q)` in the tenth moment. This is the
+model to imitate in higher genus: identify the compact-group multiplicity,
+the boundary term, and the automorphic/cohomological trace separately, rather
+than fitting a rational function to small fields. It also supplies a quotient
+warning. The full affine branch quotient identifies quadratic twists and does
+not carry a signed trace; the square-affine quotient is the elliptic
+isomorphism quotient and does.
+
 ## Target D — genus-two higher moments and effective USp(4) equidistribution
 
 Nomination: `FF-GENUS2-TOY-MINOR-HIGHER-MOMENTS`
@@ -398,6 +428,22 @@ vote” implicitly. The general degree-`2g+1` affine Burnside formula shows that
 the relative orbit-count excess begins at `q^{-g}`, universally from affine
 involutions.
 
+The stronger all-degree record should guide any change of presentation. With
+`S_q(u)=(1-qu^2)/(1-qu)` and `A_q(u)=S_q(u)/(1+u)`, the exact coarse-orbit
+series is
+
+\[
+\sum_{n\ge0}O_{q,n}u^n=
+\frac{S_q(u)+q\sum_{\substack{d\mid q-1\\d\ge2}}
+\varphi(d)(1+u)A_q(u^d)+(q-1)S_q(u^p)}{q(q-1)}.
+\]
+
+Thus a proposed trace formula should expect separate automorphism strata in
+degree classes `0,1 mod d` for multiplicative order `d`, and in degrees
+divisible by `p` for translations. These resonances count presentations only;
+their correlation with `R_6`, `H`, or another Frobenius statistic remains an
+arithmetic-geometric target.
+
 For each fixed `m>=2`, prove an effective formula
 
 \[
@@ -450,9 +496,54 @@ The finite quintic family already has the exact nonzero mean
 \langle B_D\rangle_q=q^{-1}+q^{-3}-q^{-4}+q^{-5}.
 \]
 
-The next clean arithmetic lemma is an exact formula or a power-saving bound
-for `mean(B_D^3)`. Unlike the original alternating sign, any odd bias here is
-not preinstalled by the compact group.
+The independently enumerated `q=3,5,7` member ledger now source-locks the
+complete joint coefficient law and the raw sums needed by the high-weight
+packet. Exact `C_2` reduction gives
+
+\[
+B^3=6B-2\chi_{0,3}+R_6,
+\qquad
+R_6=2\chi_{2,3}+3\chi_{6,0}-3\chi_{4,2}
++\chi_{2,4}-\chi_{0,6}.
+\]
+
+Therefore the next clean arithmetic lemma is the explicit formula or a
+power-saving bound for `mean(R_6)` in
+
+\[
+\langle B_D^3\rangle_q=
+6(q^{-1}+q^{-3}-q^{-4}+q^{-5})
+-2\langle\chi_{0,3}\rangle_q+\langle R_6\rangle_q.
+\]
+
+The `chi_(0,3)` term is independently recoverable from the source-locked
+`sum b_D^3`. Unlike the original alternating sign, any odd bias here is not
+preinstalled by the compact group. The frozen values of `mean(R_6)` at three
+fields are regression controls, not an all-`q` formula.
+
+There is a separate low-dimensional powered target. For the balanced controls
+`B_r` formed from `r`-th Frobenius powers, every `r>=3` is already determined
+pointwise by `(B_1,B_2)` through an order-four recurrence. Higher echoes are
+therefore resonance amplifiers, not new detector coordinates. Their exact Haar
+law has pairwise orthogonality and the distinct mixed-cubic resonance
+
+\[
+\langle B_rB_sB_t\rangle=
+-2\ \text{if }r+s=t,r=1;\qquad
+-4\ \text{if }r+s=t,r\ge2;\qquad 0\ \text{otherwise}.
+\]
+
+The three frozen fields suggest, but do not prove,
+
+\[
+\langle B_2\rangle_q\stackrel{?}{=}
+-\frac{(q-1)(q^5+q^2-q+1)}{q^7}.
+\]
+
+This is a useful secondary target because Newton identities reduce it to one
+explicit fourth-degree coefficient-moment calculation. It must be proved by a
+family trace calculation or refuted with a non-heavy method; further brute
+force on this machine is not the proposed route.
 
 There is now a finite-moment payoff strictly between the unconditional
 `1/20` floor and full sign equidistribution. For

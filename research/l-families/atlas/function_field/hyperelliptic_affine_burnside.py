@@ -1,12 +1,13 @@
-"""Exact Burnside census for odd-degree hyperelliptic affine models.
+"""Exact Burnside census for squarefree affine models.
 
 For n=2g+1 and odd prime-power q, this module counts AGL(1,F_q)-orbits
 of monic squarefree degree-n polynomials under
 
     D(T) -> alpha^(-n) D(alpha*T+beta).
 
-It evaluates a closed divisor sum only.  It never enumerates a field, a
-polynomial family, a curve, or an orbit.
+It also emits the rational orbit-count generating series across every
+polynomial degree.  It evaluates closed divisor sums only and never enumerates
+a field, polynomial family, curve, or orbit.
 """
 
 from __future__ import annotations
@@ -24,9 +25,12 @@ NOTE = HERE / "HYPERELLIPTIC_AFFINE_BURNSIDE.md"
 TEST = HERE.parents[3] / "tests" / "test_hyperelliptic_affine_burnside.py"
 DEFAULT_Q_VALUES = (3, 5, 7, 9, 11, 13, 25)
 DEFAULT_MAX_GENUS = 8
+DEFAULT_MAX_SERIES_DEGREE = 17
 MAX_GENUS = 32
 MAX_Q = 1_000_000
 MAX_DIVISOR_INSPECTIONS = 20_000
+MAX_SERIES_DEGREE = 65
+MAX_SERIES_TERM_INSPECTIONS = 20_000
 
 
 def _canonical_sha256(value: object) -> str:
@@ -124,6 +128,45 @@ def scaling_fixed_count(q: int, degree: int, order: int) -> int:
         return 0
     quotient_degree = degree // order
     return squarefree_nonzero_constant_count(q, quotient_degree)
+
+
+def affine_orbit_series(q: int, maximum_degree: int) -> dict[str, object]:
+    """Return coefficients of the exact all-degree rational orbit series."""
+
+    characteristic = prime_characteristic(q)
+    if not 0 <= maximum_degree <= MAX_SERIES_DEGREE:
+        raise ValueError(
+            f"maximum_degree must lie in [0,{MAX_SERIES_DEGREE}]"
+        )
+    group_order = q * (q - 1)
+    nontrivial_orders = [d for d in divisors(q - 1) if d >= 2]
+    inspections = (maximum_degree + 1) * len(nontrivial_orders)
+    if inspections > MAX_SERIES_TERM_INSPECTIONS:
+        raise RuntimeError("orbit-series term-inspection cap exceeded")
+
+    coefficients: list[int] = []
+    for degree in range(maximum_degree + 1):
+        numerator = squarefree_monic_count(q, degree)
+        numerator += q * sum(
+            euler_phi(order) * scaling_fixed_count(q, degree, order)
+            for order in nontrivial_orders
+        )
+        if degree % characteristic == 0:
+            numerator += (q - 1) * squarefree_monic_count(
+                q, degree // characteristic
+            )
+        if numerator % group_order:
+            raise ArithmeticError(
+                f"degree-{degree} orbit-series coefficient is not integral"
+            )
+        coefficients.append(numerator // group_order)
+    return {
+        "q": q,
+        "characteristic": characteristic,
+        "maximum_degree": maximum_degree,
+        "coefficients_degree_0_up": coefficients,
+        "term_inspections": inspections,
+    }
 
 
 def burnside_census(q: int, genus: int) -> dict[str, object]:
@@ -249,11 +292,16 @@ def build_fixture(
     *,
     q_values: tuple[int, ...] = DEFAULT_Q_VALUES,
     maximum_genus: int = DEFAULT_MAX_GENUS,
+    maximum_series_degree: int = DEFAULT_MAX_SERIES_DEGREE,
 ) -> dict[str, object]:
     if not 1 <= maximum_genus <= MAX_GENUS:
         raise ValueError(f"maximum_genus must lie in [1,{MAX_GENUS}]")
     if not q_values:
         raise ValueError("at least one q value is required")
+    if not 0 <= maximum_series_degree <= MAX_SERIES_DEGREE:
+        raise ValueError(
+            f"maximum_series_degree must lie in [0,{MAX_SERIES_DEGREE}]"
+        )
     rows = [
         burnside_census(q, genus)
         for q in q_values
@@ -264,6 +312,22 @@ def build_fixture(
     )
     if total_inspections > MAX_DIVISOR_INSPECTIONS:
         raise RuntimeError("fixture divisor-inspection cap exceeded")
+    series = [affine_orbit_series(q, maximum_series_degree) for q in q_values]
+    total_series_inspections = sum(int(row["term_inspections"]) for row in series)
+    if total_series_inspections > MAX_SERIES_TERM_INSPECTIONS:
+        raise RuntimeError("fixture orbit-series inspection cap exceeded")
+    rows_by_q_genus = {
+        (int(row["q"]), int(row["genus"])): row for row in rows
+    }
+    for series_row in series:
+        q = int(series_row["q"])
+        coefficients = series_row["coefficients_degree_0_up"]
+        for genus in range(1, maximum_genus + 1):
+            degree = 2 * genus + 1
+            if degree > maximum_series_degree:
+                continue
+            if coefficients[degree] != rows_by_q_genus[(q, genus)]["coarse_orbit_count"]:
+                raise ArithmeticError("all-degree series lost an odd-degree census")
 
     genus_two_regression = {
         str(q): burnside_census(q, 2)["coarse_orbit_count"] for q in (3, 5, 7)
@@ -295,6 +359,16 @@ def build_fixture(
             "fixed_genus_asymptotic": (
                 "N_(g,q)=q^(2g-1)+(q^g-(-1)^g)/(q+1)+"
                 "O_g(q^(floor((2g+1)/3)-1)); relative excess is q^(-g)+lower order"
+            ),
+            "all_degree_orbit_generating_function": (
+                "O_q(u)=[S_q(u)+q*sum_{d|q-1,d>=2}phi(d)*(1+u)*A_q(u^d)"
+                "+(q-1)*S_q(u^p)]/[q*(q-1)], where "
+                "S_q(u)=(1-q*u^2)/(1-q*u) and "
+                "A_q(u)=S_q(u)/(1+u)"
+            ),
+            "automorphism_resonance_interpretation": (
+                "scaling corrections occupy degree classes 0,1 modulo d for d|q-1; "
+                "translation corrections occupy multiples of p=char(F_q)"
             ),
             "invariant_average": (
                 "uniform equations equal stabilizer-weighted averaging on the declared affine quotient"
@@ -330,10 +404,15 @@ def build_fixture(
             "maximum_genus": MAX_GENUS,
             "maximum_divisor_inspections": MAX_DIVISOR_INSPECTIONS,
             "observed_divisor_inspections": total_inspections,
+            "maximum_series_degree": MAX_SERIES_DEGREE,
+            "fixture_series_degree": maximum_series_degree,
+            "maximum_series_term_inspections": MAX_SERIES_TERM_INSPECTIONS,
+            "observed_series_term_inspections": total_series_inspections,
             "fixture_q_values": list(q_values),
             "fixture_maximum_genus": maximum_genus,
         },
         "genus_two_regression": genus_two_regression,
+        "all_degree_orbit_series": series,
         "rows": rows,
         "firewall": (
             "This counts affine presentations retaining the rational branch point at infinity, "

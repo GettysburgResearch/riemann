@@ -1,0 +1,1392 @@
+{
+  "schema": "riemann.function_field.genus1_cubic_family_laws.v1",
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS1.MONIC_CUBIC.ALL_Q_LAWS.V1",
+  "status": "EXACT_ALL_ODD_Q_THEOREMS_WITH_TINY_PRIME_FIELD_REGRESSION",
+  "rigor_level": "PROVED_REDUCTIONS_PLUS_STATED_EICHLER_SHIMURA_INPUT",
+  "normalization": {
+    "family": "H_3(q)={monic squarefree cubic D over F_q}",
+    "curve": "E_D:y^2=D(x), with the rational point at infinity",
+    "trace": "a_D=q+1-#E_D(F_q)=-sum_x quadratic_character(D(x))",
+    "l_polynomial": "L_D(T)=1-a_D*T+q*T^2",
+    "model_count": "q^2*(q-1)"
+  },
+  "all_q_moment_theorem": {
+    "scope": "every odd prime power q and every integer n>=0",
+    "odd_trace_and_character_moments": 0,
+    "symmetric_character_stack_sum": {
+      "m=0": "q",
+      "odd_m": "0",
+      "positive_even_m": "-1-Theta_(m+2)(q)",
+      "Theta_definition": "for q=p^r, Tr(T_(p^r)|S_k)-p^(k-1)*Tr(T_(p^(r-2))|S_k), with the second term zero for r<2"
+    },
+    "raw_even_moment": "W_(2n)=C_n*q^(n+1)-sum_(j=1)^n c_(n,j)*q^(n-j)*(1+Theta_(2j+2)(q)), c_(n,j)=binom(2n,n-j)-binom(2n,n-j-1)",
+    "model_sum": "sum_D a_D^(2n)=q*(q-1)*W_(2n)",
+    "model_average": "E_model[a_D^(2n)]=W_(2n)/q",
+    "normalized_character_mean": "E_model[U_(2j)(a_D/(2*sqrt(q)))]=-(1+Theta_(2j+2)(q))/q^(j+1)",
+    "usp2_comparison": "USp(2) Haar has even normalized trace moments C_n and all nontrivial irreducible-character means zero",
+    "symbolic_rows_through_degree_12": [
+      {
+        "half_degree": 0,
+        "moment_degree": 0,
+        "usp2_catalan": 1,
+        "character_terms": []
+      },
+      {
+        "half_degree": 1,
+        "moment_degree": 2,
+        "usp2_catalan": 1,
+        "character_terms": [
+          {
+            "character_index": 1,
+            "symmetric_power": 2,
+            "modular_weight": 4,
+            "coefficient": 1,
+            "q_power": 0,
+            "cusp_dimension": 0
+          }
+        ]
+      },
+      {
+        "half_degree": 2,
+        "moment_degree": 4,
+        "usp2_catalan": 2,
+        "character_terms": [
+          {
+            "character_index": 1,
+            "symmetric_power": 2,
+            "modular_weight": 4,
+            "coefficient": 3,
+            "q_power": 1,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 2,
+            "symmetric_power": 4,
+            "modular_weight": 6,
+            "coefficient": 1,
+            "q_power": 0,
+            "cusp_dimension": 0
+          }
+        ]
+      },
+      {
+        "half_degree": 3,
+        "moment_degree": 6,
+        "usp2_catalan": 5,
+        "character_terms": [
+          {
+            "character_index": 1,
+            "symmetric_power": 2,
+            "modular_weight": 4,
+            "coefficient": 9,
+            "q_power": 2,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 2,
+            "symmetric_power": 4,
+            "modular_weight": 6,
+            "coefficient": 5,
+            "q_power": 1,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 3,
+            "symmetric_power": 6,
+            "modular_weight": 8,
+            "coefficient": 1,
+            "q_power": 0,
+            "cusp_dimension": 0
+          }
+        ]
+      },
+      {
+        "half_degree": 4,
+        "moment_degree": 8,
+        "usp2_catalan": 14,
+        "character_terms": [
+          {
+            "character_index": 1,
+            "symmetric_power": 2,
+            "modular_weight": 4,
+            "coefficient": 28,
+            "q_power": 3,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 2,
+            "symmetric_power": 4,
+            "modular_weight": 6,
+            "coefficient": 20,
+            "q_power": 2,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 3,
+            "symmetric_power": 6,
+            "modular_weight": 8,
+            "coefficient": 7,
+            "q_power": 1,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 4,
+            "symmetric_power": 8,
+            "modular_weight": 10,
+            "coefficient": 1,
+            "q_power": 0,
+            "cusp_dimension": 0
+          }
+        ]
+      },
+      {
+        "half_degree": 5,
+        "moment_degree": 10,
+        "usp2_catalan": 42,
+        "character_terms": [
+          {
+            "character_index": 1,
+            "symmetric_power": 2,
+            "modular_weight": 4,
+            "coefficient": 90,
+            "q_power": 4,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 2,
+            "symmetric_power": 4,
+            "modular_weight": 6,
+            "coefficient": 75,
+            "q_power": 3,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 3,
+            "symmetric_power": 6,
+            "modular_weight": 8,
+            "coefficient": 35,
+            "q_power": 2,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 4,
+            "symmetric_power": 8,
+            "modular_weight": 10,
+            "coefficient": 9,
+            "q_power": 1,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 5,
+            "symmetric_power": 10,
+            "modular_weight": 12,
+            "coefficient": 1,
+            "q_power": 0,
+            "cusp_dimension": 1
+          }
+        ]
+      },
+      {
+        "half_degree": 6,
+        "moment_degree": 12,
+        "usp2_catalan": 132,
+        "character_terms": [
+          {
+            "character_index": 1,
+            "symmetric_power": 2,
+            "modular_weight": 4,
+            "coefficient": 297,
+            "q_power": 5,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 2,
+            "symmetric_power": 4,
+            "modular_weight": 6,
+            "coefficient": 275,
+            "q_power": 4,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 3,
+            "symmetric_power": 6,
+            "modular_weight": 8,
+            "coefficient": 154,
+            "q_power": 3,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 4,
+            "symmetric_power": 8,
+            "modular_weight": 10,
+            "coefficient": 54,
+            "q_power": 2,
+            "cusp_dimension": 0
+          },
+          {
+            "character_index": 5,
+            "symmetric_power": 10,
+            "modular_weight": 12,
+            "coefficient": 11,
+            "q_power": 1,
+            "cusp_dimension": 1
+          },
+          {
+            "character_index": 6,
+            "symmetric_power": 12,
+            "modular_weight": 14,
+            "coefficient": 1,
+            "q_power": 0,
+            "cusp_dimension": 0
+          }
+        ]
+      }
+    ],
+    "explicit_stack_sums": {
+      "W_0": "q",
+      "W_2": "q^2-1",
+      "W_4": "2*q^3-3*q-1",
+      "W_6": "5*q^4-9*q^2-5*q-1",
+      "W_8": "14*q^5-28*q^3-20*q^2-7*q-1",
+      "W_10": "42*q^6-90*q^4-75*q^3-35*q^2-9*q-1-Theta_12(q)",
+      "W_12": "132*q^7-297*q^5-275*q^4-154*q^3-54*q^2-11*q-1-11*q*Theta_12(q)"
+    }
+  },
+  "quotient_laws": {
+    "full_affine_branch_action": "D(T)->alpha^(-3)D(alpha*T+beta)",
+    "trace_action": "a_(g.D)=quadratic_character(alpha)*a_D",
+    "branch_stack_cardinality": "q",
+    "branch_coarse_orbits": "q+1+2*1_(3 divides q-1)+1_(characteristic 3)",
+    "square_affine_action": "D(T)->u^(-6)D(u^2*T+beta); effective multipliers are squares",
+    "actual_elliptic_stack_cardinality": "sum_[E]1/|Aut_q(E)|=q; the ineffective kernel is {+1,-1}",
+    "elliptic_coarse_isomorphism_classes": "2*q+2*1_(4 divides q-1)+4*1_(6 divides q-1)+2*1_(characteristic 3)",
+    "coarse_even_moment_sum": "2*W_(2n) plus the stated j=1728, j=0, and characteristic-3 Burnside corrections; see proof note and producer function",
+    "positive_even_branch_vs_elliptic_coarse_sum": "branch=elliptic/2",
+    "rows": [
+      {
+        "q": 3,
+        "characteristic": 3,
+        "extension_degree": 1,
+        "model_count": 18,
+        "full_affine_group_order": 6,
+        "square_affine_effective_group_order": 3,
+        "branch_affine_stack_cardinality": 3,
+        "branch_affine_coarse_orbit_count": 5,
+        "branch_affine_coarse_excess": 2,
+        "branch_coarse_vs_stack_total_variation_upper_bound": [
+          2,
+          3
+        ],
+        "effective_elliptic_stack_cardinality": 6,
+        "actual_elliptic_stack_cardinality": 3,
+        "elliptic_isomorphism_class_count": 8,
+        "elliptic_coarse_excess_over_effective_stack": 2,
+        "elliptic_coarse_vs_model_stack_total_variation_upper_bound": [
+          1,
+          3
+        ],
+        "exception_indicators": {
+          "order_2_in_full_affine": true,
+          "order_3_in_full_affine": false,
+          "translation_in_characteristic_3": true,
+          "order_2_in_square_affine": false,
+          "order_3_in_square_affine": false
+        }
+      },
+      {
+        "q": 5,
+        "characteristic": 5,
+        "extension_degree": 1,
+        "model_count": 100,
+        "full_affine_group_order": 20,
+        "square_affine_effective_group_order": 10,
+        "branch_affine_stack_cardinality": 5,
+        "branch_affine_coarse_orbit_count": 6,
+        "branch_affine_coarse_excess": 1,
+        "branch_coarse_vs_stack_total_variation_upper_bound": [
+          1,
+          5
+        ],
+        "effective_elliptic_stack_cardinality": 10,
+        "actual_elliptic_stack_cardinality": 5,
+        "elliptic_isomorphism_class_count": 12,
+        "elliptic_coarse_excess_over_effective_stack": 2,
+        "elliptic_coarse_vs_model_stack_total_variation_upper_bound": [
+          1,
+          5
+        ],
+        "exception_indicators": {
+          "order_2_in_full_affine": true,
+          "order_3_in_full_affine": false,
+          "translation_in_characteristic_3": false,
+          "order_2_in_square_affine": true,
+          "order_3_in_square_affine": false
+        }
+      },
+      {
+        "q": 7,
+        "characteristic": 7,
+        "extension_degree": 1,
+        "model_count": 294,
+        "full_affine_group_order": 42,
+        "square_affine_effective_group_order": 21,
+        "branch_affine_stack_cardinality": 7,
+        "branch_affine_coarse_orbit_count": 10,
+        "branch_affine_coarse_excess": 3,
+        "branch_coarse_vs_stack_total_variation_upper_bound": [
+          3,
+          7
+        ],
+        "effective_elliptic_stack_cardinality": 14,
+        "actual_elliptic_stack_cardinality": 7,
+        "elliptic_isomorphism_class_count": 18,
+        "elliptic_coarse_excess_over_effective_stack": 4,
+        "elliptic_coarse_vs_model_stack_total_variation_upper_bound": [
+          2,
+          7
+        ],
+        "exception_indicators": {
+          "order_2_in_full_affine": true,
+          "order_3_in_full_affine": true,
+          "translation_in_characteristic_3": false,
+          "order_2_in_square_affine": false,
+          "order_3_in_square_affine": true
+        }
+      },
+      {
+        "q": 11,
+        "characteristic": 11,
+        "extension_degree": 1,
+        "model_count": 1210,
+        "full_affine_group_order": 110,
+        "square_affine_effective_group_order": 55,
+        "branch_affine_stack_cardinality": 11,
+        "branch_affine_coarse_orbit_count": 12,
+        "branch_affine_coarse_excess": 1,
+        "branch_coarse_vs_stack_total_variation_upper_bound": [
+          1,
+          11
+        ],
+        "effective_elliptic_stack_cardinality": 22,
+        "actual_elliptic_stack_cardinality": 11,
+        "elliptic_isomorphism_class_count": 22,
+        "elliptic_coarse_excess_over_effective_stack": 0,
+        "elliptic_coarse_vs_model_stack_total_variation_upper_bound": [
+          0,
+          1
+        ],
+        "exception_indicators": {
+          "order_2_in_full_affine": true,
+          "order_3_in_full_affine": false,
+          "translation_in_characteristic_3": false,
+          "order_2_in_square_affine": false,
+          "order_3_in_square_affine": false
+        }
+      },
+      {
+        "q": 13,
+        "characteristic": 13,
+        "extension_degree": 1,
+        "model_count": 2028,
+        "full_affine_group_order": 156,
+        "square_affine_effective_group_order": 78,
+        "branch_affine_stack_cardinality": 13,
+        "branch_affine_coarse_orbit_count": 16,
+        "branch_affine_coarse_excess": 3,
+        "branch_coarse_vs_stack_total_variation_upper_bound": [
+          3,
+          13
+        ],
+        "effective_elliptic_stack_cardinality": 26,
+        "actual_elliptic_stack_cardinality": 13,
+        "elliptic_isomorphism_class_count": 32,
+        "elliptic_coarse_excess_over_effective_stack": 6,
+        "elliptic_coarse_vs_model_stack_total_variation_upper_bound": [
+          3,
+          13
+        ],
+        "exception_indicators": {
+          "order_2_in_full_affine": true,
+          "order_3_in_full_affine": true,
+          "translation_in_characteristic_3": false,
+          "order_2_in_square_affine": true,
+          "order_3_in_square_affine": true
+        }
+      }
+    ]
+  },
+  "prime_power_convention_regression": {
+    "Theta_12(9)": -290790,
+    "tau(9)_is_not_used": -113643,
+    "W_10(9)": 21963230,
+    "W_12(9)": 640681550
+  },
+  "finite_regressions": [
+    {
+      "q": 3,
+      "candidate_cubics_inspected": 27,
+      "squarefree_model_count": 18,
+      "model_trace_histogram": {
+        "-3": 1,
+        "-2": 3,
+        "-1": 3,
+        "0": 4,
+        "1": 3,
+        "2": 3,
+        "3": 1
+      },
+      "model_moment_sums_degrees_0_through_12": {
+        "0": 18,
+        "1": 0,
+        "2": 48,
+        "3": 0,
+        "4": 264,
+        "5": 0,
+        "6": 1848,
+        "7": 0,
+        "8": 14664,
+        "9": 0,
+        "10": 124248,
+        "11": 0,
+        "12": 1087464
+      },
+      "stack_and_coarse_even_moments": [
+        {
+          "degree": 0,
+          "elliptic_stack_weighted_sum": 3,
+          "uniform_model_average": [
+            1,
+            1
+          ],
+          "normalized_usp2_scale_average": [
+            1,
+            1
+          ],
+          "uniform_elliptic_coarse_sum": 8,
+          "uniform_branch_coarse_sum": 5
+        },
+        {
+          "degree": 2,
+          "elliptic_stack_weighted_sum": 8,
+          "uniform_model_average": [
+            8,
+            3
+          ],
+          "normalized_usp2_scale_average": [
+            8,
+            9
+          ],
+          "uniform_elliptic_coarse_sum": 28,
+          "uniform_branch_coarse_sum": 14
+        },
+        {
+          "degree": 4,
+          "elliptic_stack_weighted_sum": 44,
+          "uniform_model_average": [
+            44,
+            3
+          ],
+          "normalized_usp2_scale_average": [
+            44,
+            27
+          ],
+          "uniform_elliptic_coarse_sum": 196,
+          "uniform_branch_coarse_sum": 98
+        },
+        {
+          "degree": 6,
+          "elliptic_stack_weighted_sum": 308,
+          "uniform_model_average": [
+            308,
+            3
+          ],
+          "normalized_usp2_scale_average": [
+            308,
+            81
+          ],
+          "uniform_elliptic_coarse_sum": 1588,
+          "uniform_branch_coarse_sum": 794
+        },
+        {
+          "degree": 8,
+          "elliptic_stack_weighted_sum": 2444,
+          "uniform_model_average": [
+            2444,
+            3
+          ],
+          "normalized_usp2_scale_average": [
+            2444,
+            243
+          ],
+          "uniform_elliptic_coarse_sum": 13636,
+          "uniform_branch_coarse_sum": 6818
+        },
+        {
+          "degree": 10,
+          "elliptic_stack_weighted_sum": 20708,
+          "uniform_model_average": [
+            20708,
+            3
+          ],
+          "normalized_usp2_scale_average": [
+            20708,
+            729
+          ],
+          "uniform_elliptic_coarse_sum": 120148,
+          "uniform_branch_coarse_sum": 60074
+        },
+        {
+          "degree": 12,
+          "elliptic_stack_weighted_sum": 181244,
+          "uniform_model_average": [
+            181244,
+            3
+          ],
+          "normalized_usp2_scale_average": [
+            181244,
+            2187
+          ],
+          "uniform_elliptic_coarse_sum": 1071076,
+          "uniform_branch_coarse_sum": 535538
+        }
+      ],
+      "elliptic_square_affine_orbits": {
+        "orbit_count": 8,
+        "trace_histogram": {
+          "-3": 1,
+          "-2": 1,
+          "-1": 1,
+          "0": 2,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 5,
+          "3": 3
+        },
+        "even_moment_sums": {
+          "2": 28,
+          "4": 196,
+          "6": 1588,
+          "8": 13636,
+          "10": 120148,
+          "12": 1071076
+        },
+        "affine_transform_evaluations": 24
+      },
+      "full_affine_branch_orbits": {
+        "orbit_count": 5,
+        "trace_histogram": {
+          "0": 2,
+          "1": 1,
+          "2": 1,
+          "3": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 2,
+          "2": 1,
+          "3": 1,
+          "6": 1
+        },
+        "even_moment_sums": {
+          "2": 14,
+          "4": 98,
+          "6": 794,
+          "8": 6818,
+          "10": 60074,
+          "12": 535538
+        },
+        "affine_transform_evaluations": 30
+      }
+    },
+    {
+      "q": 5,
+      "candidate_cubics_inspected": 125,
+      "squarefree_model_count": 100,
+      "model_trace_histogram": {
+        "-4": 5,
+        "-3": 10,
+        "-2": 15,
+        "-1": 10,
+        "0": 20,
+        "1": 10,
+        "2": 15,
+        "3": 10,
+        "4": 5
+      },
+      "model_moment_sums_degrees_0_through_12": {
+        "0": 100,
+        "1": 0,
+        "2": 480,
+        "3": 0,
+        "4": 4680,
+        "5": 0,
+        "6": 57480,
+        "7": 0,
+        "8": 794280,
+        "9": 0,
+        "10": 11697480,
+        "11": 0,
+        "12": 178523880
+      },
+      "stack_and_coarse_even_moments": [
+        {
+          "degree": 0,
+          "elliptic_stack_weighted_sum": 5,
+          "uniform_model_average": [
+            1,
+            1
+          ],
+          "normalized_usp2_scale_average": [
+            1,
+            1
+          ],
+          "uniform_elliptic_coarse_sum": 12,
+          "uniform_branch_coarse_sum": 6
+        },
+        {
+          "degree": 2,
+          "elliptic_stack_weighted_sum": 24,
+          "uniform_model_average": [
+            24,
+            5
+          ],
+          "normalized_usp2_scale_average": [
+            24,
+            25
+          ],
+          "uniform_elliptic_coarse_sum": 68,
+          "uniform_branch_coarse_sum": 34
+        },
+        {
+          "degree": 4,
+          "elliptic_stack_weighted_sum": 234,
+          "uniform_model_average": [
+            234,
+            5
+          ],
+          "normalized_usp2_scale_average": [
+            234,
+            125
+          ],
+          "uniform_elliptic_coarse_sum": 740,
+          "uniform_branch_coarse_sum": 370
+        },
+        {
+          "degree": 6,
+          "elliptic_stack_weighted_sum": 2874,
+          "uniform_model_average": [
+            2874,
+            5
+          ],
+          "normalized_usp2_scale_average": [
+            2874,
+            625
+          ],
+          "uniform_elliptic_coarse_sum": 9908,
+          "uniform_branch_coarse_sum": 4954
+        },
+        {
+          "degree": 8,
+          "elliptic_stack_weighted_sum": 39714,
+          "uniform_model_average": [
+            39714,
+            5
+          ],
+          "normalized_usp2_scale_average": [
+            39714,
+            3125
+          ],
+          "uniform_elliptic_coarse_sum": 145220,
+          "uniform_branch_coarse_sum": 72610
+        },
+        {
+          "degree": 10,
+          "elliptic_stack_weighted_sum": 584874,
+          "uniform_model_average": [
+            584874,
+            5
+          ],
+          "normalized_usp2_scale_average": [
+            584874,
+            15625
+          ],
+          "uniform_elliptic_coarse_sum": 2219348,
+          "uniform_branch_coarse_sum": 1109674
+        },
+        {
+          "degree": 12,
+          "elliptic_stack_weighted_sum": 8926194,
+          "uniform_model_average": [
+            8926194,
+            5
+          ],
+          "normalized_usp2_scale_average": [
+            8926194,
+            78125
+          ],
+          "uniform_elliptic_coarse_sum": 34633700,
+          "uniform_branch_coarse_sum": 17316850
+        }
+      ],
+      "elliptic_square_affine_orbits": {
+        "orbit_count": 12,
+        "trace_histogram": {
+          "-4": 1,
+          "-3": 1,
+          "-2": 2,
+          "-1": 1,
+          "0": 2,
+          "1": 1,
+          "2": 2,
+          "3": 1,
+          "4": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 8,
+          "2": 4
+        },
+        "even_moment_sums": {
+          "2": 68,
+          "4": 740,
+          "6": 9908,
+          "8": 145220,
+          "10": 2219348,
+          "12": 34633700
+        },
+        "affine_transform_evaluations": 120
+      },
+      "full_affine_branch_orbits": {
+        "orbit_count": 6,
+        "trace_histogram": {
+          "0": 1,
+          "1": 1,
+          "2": 2,
+          "3": 1,
+          "4": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 4,
+          "2": 2
+        },
+        "even_moment_sums": {
+          "2": 34,
+          "4": 370,
+          "6": 4954,
+          "8": 72610,
+          "10": 1109674,
+          "12": 17316850
+        },
+        "affine_transform_evaluations": 120
+      }
+    },
+    {
+      "q": 7,
+      "candidate_cubics_inspected": 343,
+      "squarefree_model_count": 294,
+      "model_trace_histogram": {
+        "-5": 7,
+        "-4": 28,
+        "-3": 21,
+        "-2": 42,
+        "-1": 28,
+        "0": 42,
+        "1": 28,
+        "2": 42,
+        "3": 21,
+        "4": 28,
+        "5": 7
+      },
+      "model_moment_sums_degrees_0_through_12": {
+        "0": 294,
+        "1": 0,
+        "2": 2016,
+        "3": 0,
+        "4": 27888,
+        "5": 0,
+        "6": 484176,
+        "7": 0,
+        "8": 9435888,
+        "9": 0,
+        "10": 198005136,
+        "11": 0,
+        "12": 4380157488
+      },
+      "stack_and_coarse_even_moments": [
+        {
+          "degree": 0,
+          "elliptic_stack_weighted_sum": 7,
+          "uniform_model_average": [
+            1,
+            1
+          ],
+          "normalized_usp2_scale_average": [
+            1,
+            1
+          ],
+          "uniform_elliptic_coarse_sum": 18,
+          "uniform_branch_coarse_sum": 10
+        },
+        {
+          "degree": 2,
+          "elliptic_stack_weighted_sum": 48,
+          "uniform_model_average": [
+            48,
+            7
+          ],
+          "normalized_usp2_scale_average": [
+            48,
+            49
+          ],
+          "uniform_elliptic_coarse_sum": 152,
+          "uniform_branch_coarse_sum": 76
+        },
+        {
+          "degree": 4,
+          "elliptic_stack_weighted_sum": 664,
+          "uniform_model_average": [
+            664,
+            7
+          ],
+          "normalized_usp2_scale_average": [
+            664,
+            343
+          ],
+          "uniform_elliptic_coarse_sum": 2504,
+          "uniform_branch_coarse_sum": 1252
+        },
+        {
+          "degree": 6,
+          "elliptic_stack_weighted_sum": 11528,
+          "uniform_model_average": [
+            11528,
+            7
+          ],
+          "normalized_usp2_scale_average": [
+            11528,
+            2401
+          ],
+          "uniform_elliptic_coarse_sum": 49352,
+          "uniform_branch_coarse_sum": 24676
+        },
+        {
+          "degree": 8,
+          "elliptic_stack_weighted_sum": 224664,
+          "uniform_model_average": [
+            224664,
+            7
+          ],
+          "normalized_usp2_scale_average": [
+            224664,
+            16807
+          ],
+          "uniform_elliptic_coarse_sum": 1057544,
+          "uniform_branch_coarse_sum": 528772
+        },
+        {
+          "degree": 10,
+          "elliptic_stack_weighted_sum": 4714408,
+          "uniform_model_average": [
+            4714408,
+            7
+          ],
+          "normalized_usp2_scale_average": [
+            4714408,
+            117649
+          ],
+          "uniform_elliptic_coarse_sum": 23847752,
+          "uniform_branch_coarse_sum": 11923876
+        },
+        {
+          "degree": 12,
+          "elliptic_stack_weighted_sum": 104289464,
+          "uniform_model_average": [
+            104289464,
+            7
+          ],
+          "normalized_usp2_scale_average": [
+            104289464,
+            823543
+          ],
+          "uniform_elliptic_coarse_sum": 556469384,
+          "uniform_branch_coarse_sum": 278234692
+        }
+      ],
+      "elliptic_square_affine_orbits": {
+        "orbit_count": 18,
+        "trace_histogram": {
+          "-5": 1,
+          "-4": 2,
+          "-3": 1,
+          "-2": 2,
+          "-1": 2,
+          "0": 2,
+          "1": 2,
+          "2": 2,
+          "3": 1,
+          "4": 2,
+          "5": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 12,
+          "3": 6
+        },
+        "even_moment_sums": {
+          "2": 152,
+          "4": 2504,
+          "6": 49352,
+          "8": 1057544,
+          "10": 23847752,
+          "12": 556469384
+        },
+        "affine_transform_evaluations": 378
+      },
+      "full_affine_branch_orbits": {
+        "orbit_count": 10,
+        "trace_histogram": {
+          "0": 2,
+          "1": 2,
+          "2": 2,
+          "3": 1,
+          "4": 2,
+          "5": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 5,
+          "2": 2,
+          "3": 3
+        },
+        "even_moment_sums": {
+          "2": 76,
+          "4": 1252,
+          "6": 24676,
+          "8": 528772,
+          "10": 11923876,
+          "12": 278234692
+        },
+        "affine_transform_evaluations": 420
+      }
+    },
+    {
+      "q": 11,
+      "candidate_cubics_inspected": 1331,
+      "squarefree_model_count": 1210,
+      "model_trace_histogram": {
+        "-6": 55,
+        "-5": 55,
+        "-4": 110,
+        "-3": 110,
+        "-2": 110,
+        "-1": 55,
+        "0": 220,
+        "1": 55,
+        "2": 110,
+        "3": 110,
+        "4": 110,
+        "5": 55,
+        "6": 55
+      },
+      "model_moment_sums_degrees_0_through_12": {
+        "0": 1210,
+        "1": 0,
+        "2": 13200,
+        "3": 0,
+        "4": 289080,
+        "5": 0,
+        "6": 7926600,
+        "7": 0,
+        "8": 243644280,
+        "9": 0,
+        "10": 7969401000,
+        "11": 0,
+        "12": 270110331480
+      },
+      "stack_and_coarse_even_moments": [
+        {
+          "degree": 0,
+          "elliptic_stack_weighted_sum": 11,
+          "uniform_model_average": [
+            1,
+            1
+          ],
+          "normalized_usp2_scale_average": [
+            1,
+            1
+          ],
+          "uniform_elliptic_coarse_sum": 22,
+          "uniform_branch_coarse_sum": 12
+        },
+        {
+          "degree": 2,
+          "elliptic_stack_weighted_sum": 120,
+          "uniform_model_average": [
+            120,
+            11
+          ],
+          "normalized_usp2_scale_average": [
+            120,
+            121
+          ],
+          "uniform_elliptic_coarse_sum": 240,
+          "uniform_branch_coarse_sum": 120
+        },
+        {
+          "degree": 4,
+          "elliptic_stack_weighted_sum": 2628,
+          "uniform_model_average": [
+            2628,
+            11
+          ],
+          "normalized_usp2_scale_average": [
+            2628,
+            1331
+          ],
+          "uniform_elliptic_coarse_sum": 5256,
+          "uniform_branch_coarse_sum": 2628
+        },
+        {
+          "degree": 6,
+          "elliptic_stack_weighted_sum": 72060,
+          "uniform_model_average": [
+            72060,
+            11
+          ],
+          "normalized_usp2_scale_average": [
+            72060,
+            14641
+          ],
+          "uniform_elliptic_coarse_sum": 144120,
+          "uniform_branch_coarse_sum": 72060
+        },
+        {
+          "degree": 8,
+          "elliptic_stack_weighted_sum": 2214948,
+          "uniform_model_average": [
+            2214948,
+            11
+          ],
+          "normalized_usp2_scale_average": [
+            2214948,
+            161051
+          ],
+          "uniform_elliptic_coarse_sum": 4429896,
+          "uniform_branch_coarse_sum": 2214948
+        },
+        {
+          "degree": 10,
+          "elliptic_stack_weighted_sum": 72449100,
+          "uniform_model_average": [
+            72449100,
+            11
+          ],
+          "normalized_usp2_scale_average": [
+            72449100,
+            1771561
+          ],
+          "uniform_elliptic_coarse_sum": 144898200,
+          "uniform_branch_coarse_sum": 72449100
+        },
+        {
+          "degree": 12,
+          "elliptic_stack_weighted_sum": 2455548468,
+          "uniform_model_average": [
+            2455548468,
+            11
+          ],
+          "normalized_usp2_scale_average": [
+            2455548468,
+            19487171
+          ],
+          "uniform_elliptic_coarse_sum": 4911096936,
+          "uniform_branch_coarse_sum": 2455548468
+        }
+      ],
+      "elliptic_square_affine_orbits": {
+        "orbit_count": 22,
+        "trace_histogram": {
+          "-6": 1,
+          "-5": 1,
+          "-4": 2,
+          "-3": 2,
+          "-2": 2,
+          "-1": 1,
+          "0": 4,
+          "1": 1,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 1,
+          "6": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 22
+        },
+        "even_moment_sums": {
+          "2": 240,
+          "4": 5256,
+          "6": 144120,
+          "8": 4429896,
+          "10": 144898200,
+          "12": 4911096936
+        },
+        "affine_transform_evaluations": 1210
+      },
+      "full_affine_branch_orbits": {
+        "orbit_count": 12,
+        "trace_histogram": {
+          "0": 3,
+          "1": 1,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 1,
+          "6": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 10,
+          "2": 2
+        },
+        "even_moment_sums": {
+          "2": 120,
+          "4": 2628,
+          "6": 72060,
+          "8": 2214948,
+          "10": 72449100,
+          "12": 2455548468
+        },
+        "affine_transform_evaluations": 1320
+      }
+    },
+    {
+      "q": 13,
+      "candidate_cubics_inspected": 2197,
+      "squarefree_model_count": 2028,
+      "model_trace_histogram": {
+        "-7": 26,
+        "-6": 117,
+        "-5": 104,
+        "-4": 195,
+        "-3": 78,
+        "-2": 260,
+        "-1": 156,
+        "0": 156,
+        "1": 156,
+        "2": 260,
+        "3": 78,
+        "4": 195,
+        "5": 104,
+        "6": 117,
+        "7": 26
+      },
+      "model_moment_sums_degrees_0_through_12": {
+        "0": 2028,
+        "1": 0,
+        "2": 26208,
+        "3": 0,
+        "4": 679224,
+        "5": 0,
+        "6": 22030008,
+        "7": 0,
+        "8": 800765784,
+        "9": 0,
+        "10": 31287737208,
+        "11": 0,
+        "12": 1286523400344
+      },
+      "stack_and_coarse_even_moments": [
+        {
+          "degree": 0,
+          "elliptic_stack_weighted_sum": 13,
+          "uniform_model_average": [
+            1,
+            1
+          ],
+          "normalized_usp2_scale_average": [
+            1,
+            1
+          ],
+          "uniform_elliptic_coarse_sum": 32,
+          "uniform_branch_coarse_sum": 16
+        },
+        {
+          "degree": 2,
+          "elliptic_stack_weighted_sum": 168,
+          "uniform_model_average": [
+            168,
+            13
+          ],
+          "normalized_usp2_scale_average": [
+            168,
+            169
+          ],
+          "uniform_elliptic_coarse_sum": 492,
+          "uniform_branch_coarse_sum": 246
+        },
+        {
+          "degree": 4,
+          "elliptic_stack_weighted_sum": 4354,
+          "uniform_model_average": [
+            4354,
+            13
+          ],
+          "normalized_usp2_scale_average": [
+            4354,
+            2197
+          ],
+          "uniform_elliptic_coarse_sum": 14316,
+          "uniform_branch_coarse_sum": 7158
+        },
+        {
+          "degree": 6,
+          "elliptic_stack_weighted_sum": 141218,
+          "uniform_model_average": [
+            141218,
+            13
+          ],
+          "normalized_usp2_scale_average": [
+            141218,
+            28561
+          ],
+          "uniform_elliptic_coarse_sum": 510972,
+          "uniform_branch_coarse_sum": 255486
+        },
+        {
+          "degree": 8,
+          "elliptic_stack_weighted_sum": 5133114,
+          "uniform_model_average": [
+            5133114,
+            13
+          ],
+          "normalized_usp2_scale_average": [
+            5133114,
+            371293
+          ],
+          "uniform_elliptic_coarse_sum": 20218956,
+          "uniform_branch_coarse_sum": 10109478
+        },
+        {
+          "degree": 10,
+          "elliptic_stack_weighted_sum": 200562418,
+          "uniform_model_average": [
+            200562418,
+            13
+          ],
+          "normalized_usp2_scale_average": [
+            200562418,
+            4826809
+          ],
+          "uniform_elliptic_coarse_sum": 852295452,
+          "uniform_branch_coarse_sum": 426147726
+        },
+        {
+          "degree": 12,
+          "elliptic_stack_weighted_sum": 8246944874,
+          "uniform_model_average": [
+            8246944874,
+            13
+          ],
+          "normalized_usp2_scale_average": [
+            8246944874,
+            62748517
+          ],
+          "uniform_elliptic_coarse_sum": 37468025196,
+          "uniform_branch_coarse_sum": 18734012598
+        }
+      ],
+      "elliptic_square_affine_orbits": {
+        "orbit_count": 32,
+        "trace_histogram": {
+          "-7": 1,
+          "-6": 2,
+          "-5": 2,
+          "-4": 3,
+          "-3": 1,
+          "-2": 4,
+          "-1": 2,
+          "0": 2,
+          "1": 2,
+          "2": 4,
+          "3": 1,
+          "4": 3,
+          "5": 2,
+          "6": 2,
+          "7": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 22,
+          "2": 4,
+          "3": 6
+        },
+        "even_moment_sums": {
+          "2": 492,
+          "4": 14316,
+          "6": 510972,
+          "8": 20218956,
+          "10": 852295452,
+          "12": 37468025196
+        },
+        "affine_transform_evaluations": 2496
+      },
+      "full_affine_branch_orbits": {
+        "orbit_count": 16,
+        "trace_histogram": {
+          "0": 1,
+          "1": 2,
+          "2": 4,
+          "3": 1,
+          "4": 3,
+          "5": 2,
+          "6": 2,
+          "7": 1
+        },
+        "stabilizer_order_histogram": {
+          "1": 11,
+          "2": 2,
+          "3": 3
+        },
+        "even_moment_sums": {
+          "2": 246,
+          "4": 7158,
+          "6": 255486,
+          "8": 10109478,
+          "10": 426147726,
+          "12": 18734012598
+        },
+        "affine_transform_evaluations": 2496
+      }
+    }
+  ],
+  "producer": {
+    "script": "genus1_cubic_family_laws.py",
+    "source_sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79",
+    "note": "GENUS1_CUBIC_FAMILY_LAWS.md",
+    "note_sha256_lf_normalized": "aad40573c6378c919ee6659bcd1c4b89a8981621c61feb0dcde9911d127c6b9f",
+    "test": "tests/test_genus1_cubic_family_laws.py",
+    "test_sha256_lf_normalized": "b5099131b1fbefc5c83db0161c7d3b0dff39088231fdb04ebb197219c3c20498"
+  },
+  "resource_contract": {
+    "arithmetic": "exact integers and fractions",
+    "enumerated_fields": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "candidate_cubics_inspected": 4023,
+    "candidate_cubic_cap": 20000,
+    "affine_transform_evaluations": 8614,
+    "interpolation_or_curve_database": "not used"
+  },
+  "scope_firewall": {
+    "full_affine_branch_orbits_are_not_elliptic_isomorphism_classes": true,
+    "signed_trace_does_not_descend_to_full_affine_branch_orbits": true,
+    "square_affine_coarse_orbits_are_elliptic_isomorphism_classes": true,
+    "uniform_models_equal_normalized_elliptic_stack_measure": true,
+    "uniform_coarse_classes_are_a_different_measure": true,
+    "finite_regression_is_not_the_proof_of_the_all_q_formulas": true,
+    "no_number_field_transfer_or_rh_grh_conclusion": true
+  },
+  "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df"
+}

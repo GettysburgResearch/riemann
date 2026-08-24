@@ -6,8 +6,8 @@ This packet does not enumerate a finite field.  It performs four exact tasks:
 * verify Laurent-polynomial formulas for chi_(0,3), chi_(2,2), chi_(0,4);
 * triangularize those characters against b^3, a^2*b^2, and b^4;
 * enumerate the 23 factor signatures in the new b^3 roadmap; and
-* replay frozen q=3,5,7 aggregate controls while keeping their sparse all-q
-  continuation explicitly conjectural.
+* replay independently source-locked q=3,5,7 aggregate controls while keeping
+  their sparse all-q continuation explicitly conjectural.
 
 The finite controls do not prove any formula outside q=3,5,7.  In particular,
 this is not an all-q second-moment certificate.
@@ -33,6 +33,7 @@ HERE = Path(__file__).resolve().parent
 FIXTURE = HERE / "genus2_high_weight_channel_probe.json"
 SECOND_MOMENT_FIXTURE = HERE / "genus2_second_moment_reduction.json"
 Q_SCAN_FIXTURE = HERE / "genus2_q_scan.json"
+BALANCED_FIXTURE = HERE / "balanced_control_family_scan.json"
 
 FROZEN_Q_VALUES = (3, 5, 7)
 MAX_SIGNATURES = 23
@@ -116,11 +117,9 @@ TRIANGULAR_CHARACTER_COMBINATIONS = {
     "R4": {"chi_(0,3)": 4, "chi_(2,2)": 3, "chi_(0,4)": 1},
 }
 
-# These exact aggregate sums came from the already frozen q=3,5,7 family
-# calculation.  This packet only replays them; it deliberately does not run a
-# fourth field or use them as interpolation evidence for a theorem.  Unlike the
-# lower moments and K-histograms, these three separate raw sums do not have an
-# independently checked-in provenance artifact; they are recorded controls.
+# Hard sentinels for the exact aggregate sums independently enumerated and
+# source-locked by balanced_control_family_scan.py.  This packet reads that
+# fixture and refuses a mismatch; it does not enumerate a field itself.
 FROZEN_RAW_SUMS = {
     3: {"b_cubed": 8_256, "a_squared_b_squared": 8_352, "b_fourth": 45_552},
     5: {
@@ -472,29 +471,61 @@ def _candidate_raw_means(q: int) -> dict[str, Fraction]:
 
 
 def _finite_control_rows(
-    q_scan: Mapping[str, object], second: Mapping[str, object]
+    q_scan: Mapping[str, object],
+    second: Mapping[str, object],
+    balanced: Mapping[str, object],
 ) -> list[dict[str, object]]:
     families = q_scan.get("families")
     finite_checks = second.get("finite_histogram_checks")
-    if not isinstance(families, list) or not isinstance(finite_checks, list):
+    balanced_block = balanced.get("frozen_enumeration_facts")
+    balanced_families = (
+        balanced_block.get("families")
+        if isinstance(balanced_block, dict)
+        else None
+    )
+    if (
+        not isinstance(families, list)
+        or not isinstance(finite_checks, list)
+        or not isinstance(balanced_families, list)
+    ):
         raise TypeError("bound finite fixtures lost family/check arrays")
     by_q = {int(row["q"]): row for row in families}
     second_by_q = {int(row["q"]): row for row in finite_checks}
-    if tuple(sorted(by_q)) != FROZEN_Q_VALUES or tuple(sorted(second_by_q)) != FROZEN_Q_VALUES:
+    balanced_by_q = {int(row["q"]): row for row in balanced_families}
+    if (
+        tuple(sorted(by_q)) != FROZEN_Q_VALUES
+        or tuple(sorted(second_by_q)) != FROZEN_Q_VALUES
+        or tuple(sorted(balanced_by_q)) != FROZEN_Q_VALUES
+    ):
         raise ValueError("bound fixtures lost q=3,5,7 coverage")
 
     rows: list[dict[str, object]] = []
     for q in FROZEN_Q_VALUES:
         family = by_q[q]
         check = second_by_q[q]
+        balanced_family = balanced_by_q[q]
         member_count = int(family["member_count"])
         if member_count != q**4 * (q - 1):
             raise ArithmeticError(f"q={q} member count drifted")
+        if int(balanced_family["member_count"]) != member_count:
+            raise ArithmeticError(f"q={q} balanced-source member count drifted")
         known = _known_raw_sums(family)
-        new = FROZEN_RAW_SUMS[q]
+        raw_controls = balanced_family.get("source_locked_raw_aggregate_controls")
+        if not isinstance(raw_controls, dict):
+            raise TypeError(f"q={q} balanced raw controls are malformed")
+        new = {
+            name: int(raw_controls[name]["sum"])
+            for name in ("b_cubed", "a_squared_b_squared", "b_fourth")
+        }
+        if new != FROZEN_RAW_SUMS[q]:
+            raise ArithmeticError(f"q={q} source-locked raw sentinels drifted")
         means = _channel_values_from_raw_sums(q, member_count, known, new)
         if means != EXPECTED_CHANNEL_MEANS[q]:
             raise ArithmeticError(f"q={q} high-weight channel controls drifted")
+        if {
+            name: _fraction_pair(value) for name, value in means.items()
+        } != balanced_family.get("derived_high_weight_channel_means"):
+            raise ArithmeticError(f"q={q} balanced-source channel bridge drifted")
         candidates = _candidate_channel_means(q)
         if means != candidates:
             raise ArithmeticError(f"q={q} sparse channel candidate lost finite agreement")
@@ -525,6 +556,12 @@ def _finite_control_rows(
                 "q": q,
                 "member_count": member_count,
                 "frozen_new_raw_sums": dict(new),
+                "raw_sum_provenance": (
+                    "independent exhaustive balanced-control enumeration"
+                ),
+                "member_coefficient_ledger_sha256": balanced_family[
+                    "member_coefficient_ledger_sha256"
+                ],
                 "channel_means": {
                     name: _fraction_pair(value) for name, value in means.items()
                 },
@@ -668,7 +705,9 @@ def _b3_signature_certificate() -> dict[str, object]:
 
 
 def _source_locks(
-    q_scan: Mapping[str, object], second: Mapping[str, object]
+    q_scan: Mapping[str, object],
+    second: Mapping[str, object],
+    balanced: Mapping[str, object],
 ) -> dict[str, object]:
     return {
         "q_scan_fixture": {
@@ -683,6 +722,14 @@ def _source_locks(
             ),
             "canonical_sha256": _canonical_sha256(second),
             "payload_sha256": second["payload_sha256"],
+        },
+        "balanced_control_fixture": {
+            "path": (
+                "research/l-families/atlas/function_field/"
+                "balanced_control_family_scan.json"
+            ),
+            "canonical_sha256": _canonical_sha256(balanced),
+            "payload_sha256": balanced["payload_sha256"],
         },
         "second_moment_generator": {
             "path": (
@@ -713,9 +760,10 @@ def _source_locks(
 def build_fixture() -> dict[str, object]:
     q_scan = _load_locked_fixture(Q_SCAN_FIXTURE)
     second = _load_locked_fixture(SECOND_MOMENT_FIXTURE)
+    balanced = _load_locked_fixture(BALANCED_FIXTURE)
     character_certificate = _character_certificate()
     b3_signatures = _b3_signature_certificate()
-    finite_rows = _finite_control_rows(q_scan, second)
+    finite_rows = _finite_control_rows(q_scan, second, balanced)
 
     payload: dict[str, object] = {
         "schema": "riemann.function_field.genus2_high_weight_channel_probe.v1",
@@ -728,7 +776,7 @@ def build_fixture() -> dict[str, object]:
             "For t=Tr(U), e=e_2(U), a_D/sqrt(q)=-t, b_D/q=e, split "
             "H=chi_(0,4)+chi_(2,2)+2*chi_(0,3) into raw-moment-aligned packets."
         ),
-        "source_locks": _source_locks(q_scan, second),
+        "source_locks": _source_locks(q_scan, second, balanced),
         "character_certificate": character_certificate,
         "triangular_raw_moment_bridge": {
             "status": "EXACT_POINTWISE_FOR_EVERY_FAMILY_MEMBER",
@@ -864,7 +912,7 @@ def build_fixture() -> dict[str, object]:
         "firewalls": [
             "The triangular character identities are exact; the sparse all-q formulas are not proved.",
             "The q=3,5,7 aggregate rows are regression controls, not interpolation data for a theorem.",
-            "The three separate high raw sums are frozen one-time controls without an independently replayable provenance artifact.",
+            "The three separate high raw sums come from the independently replayable, content-hash-locked balanced-control enumeration.",
             "The B3 signature packet proves that generic primitive coefficients survive; it does not average them.",
             "No eta_q branch is proved or excluded by the three frozen fields.",
             "No effective equidistribution, number-field transfer, RH, or GRH conclusion is asserted.",

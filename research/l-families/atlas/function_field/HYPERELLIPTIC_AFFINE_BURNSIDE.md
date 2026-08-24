@@ -73,6 +73,41 @@ N_{g,q}=q^{2g-1}
 Every displayed summand is an integer. This is a closed formula for every odd
 prime power and every genus; it is not a fit to the frozen fields.
 
+## One rational series across every degree
+
+The fixed-locus classification can be assembled before selecting an odd
+degree. Let
+
+\[
+S_q(u)=\sum_{m\ge0}S_m(q)u^m=\frac{1-qu^2}{1-qu},
+\qquad
+A_q(u)=\frac{S_q(u)}{1+u}.
+\]
+
+If `O_(q,n)` is the number of affine orbits of monic squarefree degree-`n`
+polynomials under the degree-normalized action, then
+
+\[
+\boxed{
+\sum_{n\ge0}O_{q,n}u^n=
+\frac{
+S_q(u)+q\displaystyle\sum_{\substack{d\mid q-1\\d\ge2}}
+\varphi(d)(1+u)A_q(u^d)+(q-1)S_q(u^p)
+}{q(q-1)}.}
+\]
+
+Indeed, an order-`d` scaling contributes `A_m(q)` in degrees `md` and
+`md+1`, while a nonidentity translation contributes `S_m(q)` in degree `pm`.
+The series is rational and exposes an exact automorphism-resonance spectrum:
+
+- multiplicative resonances lie in degree classes `0,1 mod d` for divisors
+  `d|q-1`;
+- additive resonances lie in degrees divisible by `p=char(F_q)`.
+
+The odd-degree theorem is the coefficient extraction `n=2g+1`. This series
+also covers even-degree affine presentations, but no claim is made that the
+even- and odd-degree presentations define the same marked moduli problem.
+
 ## Fixed-locus proof
 
 Take a nonidentity affine element with multiplier `alpha!=1`, of order `d`.
