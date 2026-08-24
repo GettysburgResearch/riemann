@@ -29,7 +29,7 @@ v_k(s)=(1,s,\ldots,s^{k-1})^T.
 \tag{L-105411.2}
 \]
 
-The harmless half-integer shift affects only the relative `O_k(J^-1)` error.
+The harmless integer/half-integer endpoint shift affects only the relative `O_k(J^-1)` error.
 
 ## 2. Entrywise asymptotic
 
@@ -94,15 +94,19 @@ The error is entrywise and hence operator-norm bounded for fixed `k`.
 
 ## 3. Exact positivity and determinant
 
-The matrix is a Gram matrix:
+Put
+
+\[
+w_k(x)=(1,x^2,\ldots,x^{2(k-1)})^T.
+\]
+
+Then the limiting matrix is the weighted Gram matrix
 
 \[
 \boxed{
 \mathsf H_k^{(a)}
 =
-\int_0^1
-(x^{2(i+a)})_{i=0}^{k-1}
-(x^{2j})_{j=0}^{k-1\,T}\,dx.
+\int_0^1 x^{2a}w_k(x)w_k(x)^T\,dx.
 }
 \tag{L-105411.7}
 \]
