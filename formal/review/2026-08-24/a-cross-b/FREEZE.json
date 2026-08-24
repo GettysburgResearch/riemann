@@ -1,0 +1,88 @@
+{
+  "actual_head_at_review_start": "770c61e9d0ace520be2333f348d0bf239e0120ad",
+  "actual_head_moved_after_supplied": true,
+  "bootstrap_base": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f",
+  "build_attempt": {
+    "build_verdict": "BUILD_FAILURE",
+    "exact_tree_ci_probe": {
+      "cleanup": "PR closed; temporary branch force-reset to bootstrap base",
+      "closed_utc": "2026-08-24T06:52:11Z",
+      "combined_statuses_observed": 0,
+      "elapsed_seconds_open_to_close": 163,
+      "exact_target_parent": "770c61e9d0ace520be2333f348d0bf239e0120ad",
+      "inert_changed_path": "formal/review/2026-08-24/a-cross-b-ci-probe/TRIGGER.md",
+      "opened_utc": "2026-08-24T06:49:28Z",
+      "ready_event_utc": "2026-08-24T06:50:28Z",
+      "temporary_branch": "formal/review/2026-08-24/a-cross-b-ci-probe",
+      "temporary_pr": 745,
+      "trigger_commit": "56244466351cffa5653780f9ad58070986e1910d",
+      "trigger_commit_utc": "2026-08-24T06:51:22Z",
+      "workflow_runs_observed": 0
+    },
+    "failure_scope": "execution infrastructure; not a mathematical refutation",
+    "independent_lean_build_completed": false,
+    "local_git_clone": {
+      "exit": 128,
+      "output": "Could not resolve host: github.com",
+      "seconds": 0.01
+    },
+    "local_lake_lookup": {
+      "exit": 127,
+      "output": "lake not installed",
+      "seconds": 0.0
+    },
+    "local_lean_lookup": {
+      "exit": 127,
+      "output": "lean not installed",
+      "seconds": 0.0
+    }
+  },
+  "changed_files": [
+    "formal/RiemannFormal/Arithmetic.lean",
+    "formal/RiemannFormal/Arithmetic/AxiomAudit.lean",
+    "formal/RiemannFormal/Arithmetic/ComparatorSmoke.lean",
+    "formal/RiemannFormal/Arithmetic/FixedRows.lean",
+    "formal/RiemannFormal/Arithmetic/Foundations.lean",
+    "formal/RiemannFormal/Arithmetic/HalfDivisor.lean",
+    "formal/RiemannFormal/Arithmetic/SourceIdentities.lean",
+    "formal/RiemannFormal/Arithmetic/Wavelet.lean",
+    "formal/RiemannFormal/MellinLandau.lean",
+    "formal/RiemannFormal/MellinLandau/Contract.lean",
+    "formal/RiemannFormal/MellinLandau/FixedDetectorAssembly.lean",
+    "formal/blueprint/src/content-B.tex",
+    "formal/comparator/Challenge/ArithmeticRows23.lean",
+    "formal/comparator/Challenge/FixedDetectorFiveThree.lean",
+    "formal/comparator/ChallengeDeps/ArithmeticRows23.lean",
+    "formal/comparator/ChallengeDeps/FixedDetectorFiveThree.lean",
+    "formal/comparator/PrintAxioms/ArithmeticFixedRows.lean",
+    "formal/comparator/Solution/ArithmeticRows23.lean",
+    "formal/comparator/Solution/FixedDetectorFiveThree.lean",
+    "formal/registry/deltas/B.tsv"
+  ],
+  "frozen_utc": "2026-08-24T07:04:10Z",
+  "repository": "gfreund123/riemann",
+  "review_object": "Formalization Reviewer B PR #733",
+  "reviewer": "Formalization Reviewer A",
+  "rh_proved": false,
+  "schema": "formal-cross-review-freeze-v1",
+  "supplied_observed_head": "6e6fb8b120069eaed2cc7f7cf966bb082c54eb4d",
+  "target_branch": "formal/020-arithmetic-mellin",
+  "target_commit_chain_after_base": [
+    "67371a3d988c1829989445f13246312a71b54bf8",
+    "6e6fb8b120069eaed2cc7f7cf966bb082c54eb4d",
+    "fb2076d024e012723e91394847190991258228fd",
+    "770c61e9d0ace520be2333f348d0bf239e0120ad"
+  ],
+  "target_mutated": false,
+  "target_pr": 733,
+  "target_pr_additions": 894,
+  "target_pr_changed_files": 20,
+  "target_pr_deletions": 4,
+  "target_pr_state_at_freeze": "open draft",
+  "target_tree_sha": "9d86d86981af2d16bd26c56dcb5b31f04182a505",
+  "toolchain": {
+    "lean": "leanprover/lean4:v4.33.0-rc2",
+    "mathlib": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "zeta23": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e"
+  }
+}
