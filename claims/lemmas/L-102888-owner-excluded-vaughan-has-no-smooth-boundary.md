@@ -48,7 +48,7 @@ Then, outside the fixed terminal range,
 \boxed{
 \mathcal C^K_{p,q}
 =\mathcal T^{K,(p,q)}_U
-+\mathcal B^{K,(p,q)}_U,
++\mathcal B^{K,(p,q)}_U.
 }
 \tag{L-102888.2}
 
@@ -71,8 +71,7 @@ and
 {a_U^{(p,q)}(r)a_U^{(p,q)}(s)\mu(m)\over rsm}
 K_L\!\left({Y\over r^2s^2m^2}\right).
 }
-\tag{L-102888.4
-\]
+\tag{L-102888.4}
 
 As before,
 
@@ -95,10 +94,9 @@ Inclusion--exclusion of the two owner primes gives the exact operator identity
 \[
 \boxed{
 \mathscr L_K^{(p,q)}
-=(I-p^{-1}S_{p^2})(I-q^{-1}S_{q^2})\mathscr L_K,
+=(I-p^{-1}S_{p^2})(I-q^{-1}S_{q^2})\mathscr L_K.
 }
-\tag{L-102888.5
-\]
+\tag{L-102888.5}
 
 where
 
@@ -119,17 +117,15 @@ and similarly for `q` and `pq`.  Hence, uniformly in both owners,
 \boxed{
 \mathscr L_K^{(p,q)}(Z)=O_K(Z^{-1/2}).
 }
-\tag{L-102888.6
-\]
+\tag{L-102888.6}
 
 Consequently
 
 \[
 \boxed{
-\mathcal T^{K,(p,q)}_U(Y)=O_K(Y^{-1/6})
+\mathcal T^{K,(p,q)}_U(Y)=O_K(Y^{-1/6}).
 }
-\tag{L-102888.7
-\]
+\tag{L-102888.7}
 
 uniformly throughout the dyadic block.
 
