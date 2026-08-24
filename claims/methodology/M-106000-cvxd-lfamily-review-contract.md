@@ -4,7 +4,7 @@ Claim ID: `M-106000`
 Status: **BINDING REVIEW PROTOCOL**  
 Created: 2026-08-24  
 Updated: 2026-08-24  
-Applies to: `L-106000--L-106004`, `L-106020--L-106024`, `R-106000--R-106001`, `R-106020`, `T-106000--T-106001`, `T-106020`  
+Applies to: `L-106000--L-106004`, `L-106020--L-106027`, `R-106000--R-106001`, `R-106020`, `T-106000--T-106001`, `T-106020`, `T-106030`  
 RH status: **unproved**
 
 ## 1. Required reconstruction order
@@ -16,22 +16,29 @@ A reviewer should reconstruct:
    `L(s,chi_0)=zeta(s)(1-ell^(-s))`;
 3. coefficientwise ramified completion of the **full** Möbius source;
 4. the marked-67 literal factor `chi(67)`;
-5. the order firewall `R-106001`;
+5. the source-order firewall `R-106001`;
 6. full carrier recombination before Wick/owner/Vaughan projection;
 7. the dyadic-frozen cutoff and horizon-safe pair gauge of PR #719;
 8. exact recovery of `HBCQDSP102888` by the principal completed member;
 9. complete character orthogonality and the two collision lines;
 10. the square-phase kernel `p 1_(c^2=d^2)-1`;
 11. sign-pair compression to the operator `p I-J`;
-12. the Gauss--Mellin decomposition over even characters `eta=chi^2`;
-13. the principal/quadratic two-root fibre;
-14. tensorization across selected owner moduli;
-15. the fixed-owner bound retaining all literal owner weights;
-16. the owner-excluded reciprocal `L(2s,eta)` Euler product;
-17. the exact local occupancy norm `(p-1)/(p+1)` and its equality case;
-18. the distinction between one-packet occupancy and global `BPOE103300`;
-19. the exact point where coherent assembly `SOCM106020` enters;
-20. the Kummer--Artin--Schreier function-field handoff.
+12. the correctly conjugated Gauss inversion in `L-106020.3`;
+13. the even-character decomposition `eta=chi^2`;
+14. the principal/quadratic two-root fibre;
+15. tensorization across selected owner moduli;
+16. the fixed-owner bound retaining every literal owner weight;
+17. the owner-excluded reciprocal `L(2s,eta)` Euler product;
+18. the exact local occupancy norm `(p-1)/(p+1)` and equality cases;
+19. the distinction between one-packet occupancy and global `BPOE103300`;
+20. the owner quadratic-class split `sigma=kappa_rho(P)`;
+21. the fixed-cutoff identity
+    `B=(1-M_U Z)^2/Z=Z^(-1)-2M_U+M_U^2 Z`;
+22. the load-bearing physical shell projection;
+23. the finite-shell Mellin--Plancherel normalization at `1+2it`;
+24. cancellation of the principal simple pole by `kappa_hat(0)=0`;
+25. the exact definitions of `PCM106030` and `NEM106030`;
+26. the Kummer--Artin--Schreier function-field handoff.
 
 ## 2. Mandatory mutations
 
@@ -46,19 +53,25 @@ apply an absolute value before the two-scale completion and carrier are recombin
 differentiate a dynamic Vaughan cutoff channelwise;
 retain the largest-two smooth-boundary row after using the horizon-safe pair gauge;
 rerun owner selection separately on the two ramified completion terms;
+use the wrong conjugation in the Gauss inversion;
 include only quadratic characters and claim square-core oscillation;
 discard the quadratic square root and still claim control of the native core;
 count the quadratic root as an independent core-oscillating channel;
 treat congruence density 1/ell as cancellation;
 pay a phase-cardinality factor after the exact square-phase contraction is available;
-claim local squareclass occupancy makes distinct owner packets orthogonal;
+aggregate both owner quadratic classes before applying the local contraction;
+claim local squareclass occupancy makes different owner packets orthogonal;
 rename L-106024 as a proof of global BPOE103300;
+replace the projected balanced polynomial by the untruncated analytic ratio;
+drop the eta=1 principal moment after estimating nonprincipal characters;
+claim a source-blind large sieve closes owner pairs in the same quadratic class;
 reuse owner weights already spent by a coherent long-core packing theorem;
 choose an auxiliary modulus, owner selector, or amplifier after introducing a hypothetical zero;
 infer a number-field theorem from function-field RH or purity alone;
 silently drop terms ramified at the family modulus;
 promote complete finite-field Gauss sums to an incomplete Vaughan estimate;
-claim that either exact replay proves SOCM106020, BPOE103300, HBCQDSP102888, or RH.
+claim that any replay proves PCM106030, NEM106030, SOCM106020, BPOE103300,
+HBCQDSP102888, or RH.
 ```
 
 ## 3. Source locks
@@ -87,7 +100,13 @@ PR #707
 claims/theorems/T-103300-balanced-phase-amplitude-and-physical-occupancy-frontier.md
 ```
 
-The three programme coordination objects are:
+The exact packet lock is
+
+```text
+integration/2026-08-24/t106020-owner-conductor-source-lock.json
+```
+
+The three programme objects are:
 
 ```text
 #743  critical scale-phase/common-mother/CV-XD programme;
@@ -95,54 +114,53 @@ The three programme coordination objects are:
 #737  function-field mirror.
 ```
 
-The branch is intentionally stacked on PR #719. Later movement of that PR must
-be reconciled explicitly rather than silently inherited.
+Later movement of PR #719 must be reconciled explicitly rather than silently
+inherited.
 
 ## 4. Replay boundaries
 
-`X-106000` verifies only:
+`X-106000` checks the auxiliary completed-family and collision-line algebra.
 
-- full-source principal coefficient restoration;
-- marked-67 restoration;
-- cyclic character orthogonality;
-- rational second-moment identities;
-- prime-field squareclass collision lines;
-- quadratic core blindness;
-- nonquadratic core visibility;
-- finite-field Gauss-norm counting;
-- finite-field collision geometry for `F_9` and `F_25`;
-- the elementary auxiliary-family dimension barrier.
+`X-106020` checks:
 
-`X-106020` verifies only:
-
-- the Hilbert-valued nonzero square-phase identity;
-- sign-pair compression to `p I-J`;
-- the sharp factor `(p-1)/(p+1)`;
-- equality configurations for the local occupancy operator norm;
+- the Hilbert-valued square-phase identity;
+- sign-pair compression to `pI-J`;
+- the sharp factor `(p-1)/(p+1)` and equality configurations;
 - two-modulus tensorization;
 - the principal/quadratic two-root fibre;
-- strict algebraic improvement over phase-cardinality Cauchy.
+- strict improvement over phase-cardinality Cauchy.
 
-Neither replay evaluates zeta, a Dirichlet `L`-function, a function-field
-Frobenius matrix, the incomplete owner-conductor assembly, `BPOE103300`,
-`HBCQDSP102888`, or RH.
+`X-106030` checks:
+
+- owner-excluded twisted Möbius inversion;
+- the balanced Vaughan mollifier-defect identity;
+- the owner quadratic-class partition;
+- principal/quadratic root coherence inside one class;
+- finite Gaussian-integer cyclic Plancherel algebra.
+
+No replay evaluates zeta, a Dirichlet `L`-function, a function-field Frobenius
+matrix, either analytic moment, the coherent physical assembly, or RH.
 
 ## 5. Acceptance classification
 
 A correct review should classify the packet no more strongly than:
 
 ```text
-full-source/Mellin/family algebra              proved exact;
-correct residual-order functor                 proved exact;
-square-phase Gauss--Mellin transform           proved exact;
-all-owner-weight fixed-packet estimate         proved;
-owner-conductor even reciprocal-L family       proved exact;
-local source-paid principal leverage           proved exact;
-local squareclass physical occupancy           proved sharp;
-Kummer--Fourier finite-field mechanism         proved exact;
-coherent short-core owner-packet assembly       open;
-global BPOE103300                              open;
-function-field global trace assembly           open;
-composition to RH                              conditional;
-RH                                             unproved.
+full-source/Mellin/family algebra                    proved exact;
+correct residual-order functor                       proved exact;
+square-phase Gauss--Mellin transform                 proved exact;
+all-owner-weight fixed-packet estimate               proved;
+owner-conductor even reciprocal-L family             proved exact;
+local source-paid principal leverage                 proved exact;
+local squareclass physical occupancy                 proved sharp;
+owner quadratic-class split                          proved exact;
+balanced source = projected mollifier defect / L    proved exact;
+finite-shell Mellin--Plancherel                       proved exact;
+PCM106030 principal moment                           open;
+NEM106030 nonprincipal family moment                 open;
+coherent short-core owner-packet assembly             open;
+global BPOE103300                                    open;
+function-field global trace assembly                 open;
+composition to RH                                    conditional;
+RH                                                   unproved.
 ```
