@@ -121,7 +121,7 @@ Thus (L-106410.5) gives
 \left(\frac{8c}{1-c}\right)^2
 \|H_{\overline{A_L}}\|_{\mathcal S_2}^2.
 }
-\tag{L-106410.6
+\tag{L-106410.6}
 
 At the explicit shift
 
@@ -139,7 +139,7 @@ one has
  <\frac1{600}
  <\frac1{200}.
 }
-\tag{L-106410.7
+\tag{L-106410.7}
 
 The companion winding is independent of \(\lambda>0\), so this small shift does
 not weaken the exact zero-count index.
