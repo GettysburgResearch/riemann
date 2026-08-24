@@ -1,0 +1,56 @@
+{
+  "acceptance": {
+    "build_status": "BUILD_NOT_EXECUTED",
+    "combined_statuses_observed_on_repaired_head": 0,
+    "disposition_counts": {
+      "PARTIALLY_RESOLVED_WITH_EXCLUSION": 4,
+      "RESOLVED": 15,
+      "RESOLVED_BY_HONEST_DOWNGRADE": 9,
+      "UNRESOLVED_BLOCKER": 2
+    },
+    "final_verdict": "NOT_READY_FOR_RECONCILIATION",
+    "finding_rows": 30,
+    "lake_available": false,
+    "lean_available": false,
+    "no_merge": true,
+    "rh_proved": false,
+    "static_repair_diff_forbidden_additions": {
+      "admit": 0,
+      "custom_axiom": 0,
+      "opaque": 0,
+      "sorry": 0,
+      "unsafe": 0
+    },
+    "unresolved_blockers": [
+      "No exact-head build/comparator/registry/blueprint/no-sorry/axiom suite was executed or retained.",
+      "The authoritative check_axioms.sh does not directly invoke Reviewer B's Arithmetic/AxiomAudit.lean or comparator/PrintAxioms/ArithmeticFixedRows.lean."
+    ],
+    "workflow_runs_observed_on_repaired_head": 0
+  },
+  "bootstrap_base": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f",
+  "cross_review": {
+    "branch": "formal/review/2026-08-24/a-cross-b",
+    "original_review_verdict": "NOT_INTEGRATION_READY",
+    "parent_head_before_addendum": "81d201849514224d0a5899ac6b61dc66a71b8d1e",
+    "pr": 750
+  },
+  "primary": {
+    "ahead_by": 2,
+    "branch": "formal/020-arithmetic-mellin",
+    "changed_files": 21,
+    "draft": true,
+    "mergeable": true,
+    "modified_by_acceptance_review": false,
+    "originally_reviewed_head": "770c61e9d0ace520be2333f348d0bf239e0120ad",
+    "pr": 733,
+    "repair_commits": [
+      "9bb802ebd97a00e01ef14789417f4c2a53031af3",
+      "072b4dbd0e4e407728a59110eb4f7214e23f8f8d"
+    ],
+    "repaired_head": "072b4dbd0e4e407728a59110eb4f7214e23f8f8d",
+    "repaired_tree": "1c32466dd7928a24e0115268a6a330216f26ed3b",
+    "state": "open"
+  },
+  "repository": "gfreund123/riemann",
+  "schema": "formal-a-cross-b-final-acceptance-v1"
+}
