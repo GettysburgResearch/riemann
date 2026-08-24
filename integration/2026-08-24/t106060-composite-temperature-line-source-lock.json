@@ -1,0 +1,120 @@
+{
+  "schema": "riemann.t106060.composite-temperature-line-source-lock.v1",
+  "created": "2026-08-24",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "pre_lock_head": "c357585303c739610d7eb491e4b59701c663044a",
+  "programme_issues": [743, 736, 737],
+  "parent": {
+    "pr": 719,
+    "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+    "head": "ae61d988568fdc3e7d790a42b5c340c29a6ea3e5",
+    "load_bearing_files": [
+      {
+        "path": "claims/lemmas/L-102898-complementary-temperatures-form-a-flat-source-connection.md",
+        "blob_sha": "fe46d4ae5786185f427ccbf18fcd73b317daec7c"
+      },
+      {
+        "path": "claims/lemmas/L-102899-the-midpoint-is-the-unique-energy-minimizing-carrier-balanced-gauge.md",
+        "blob_sha": "f3ec7f0ada9a398db0b5682f2450b047933c873f"
+      },
+      {
+        "path": "claims/lemmas/L-102900-the-temperature-tangent-is-the-native-prime-current-after-positive-inversion.md",
+        "blob_sha": "8ed024e219a3c556c13ad28c09c2b8346f5e605a"
+      },
+      {
+        "path": "claims/theorems/T-102920-complementary-temperature-gauge-unifies-the-live-frontiers.md",
+        "blob_sha": "d0720b35df6074b95ebf83b5475e051f1b0f3011"
+      },
+      {
+        "path": "claims/lemmas/L-102888-owner-excluded-vaughan-has-no-smooth-boundary.md",
+        "blob_sha": "80864f4f83db85daad4e94a68ed0457077d3b9b6"
+      }
+    ]
+  },
+  "new_claims": [
+    {
+      "path": "claims/refutations/R-106040-composite-conductor-leverage-is-tensor-local.md",
+      "blob_sha": "0eed4938ca28247b712608af56f9f902ec403562"
+    },
+    {
+      "path": "claims/lemmas/L-106040-squarefree-composite-kummer-tensor-frame.md",
+      "blob_sha": "828d0fcde62c4029c448f33c0130fdb039700d31"
+    },
+    {
+      "path": "claims/theorems/T-106040-composite-owner-conductor-kummer-frontier.md",
+      "blob_sha": "bd87d14b28d851d40db696a53cf00055070ea02c"
+    },
+    {
+      "path": "claims/lemmas/L-106050-character-square-complementary-temperature-flatness.md",
+      "blob_sha": "a19f51bd5a07fd0772ef19568e14907ac62f9e5c"
+    },
+    {
+      "path": "claims/lemmas/L-106051-quadratic-root-fibres-are-temperature-kummer-charts.md",
+      "blob_sha": "820ed8416c66eef63a49706b796342f58fd57707"
+    },
+    {
+      "path": "claims/refutations/R-106050-nonprincipal-temperature-inverse-is-not-positive.md",
+      "blob_sha": "aad769fb175ab83bbbb6e4a295d2cea30ae65e9e"
+    },
+    {
+      "path": "claims/lemmas/L-106052-temperature-tangent-splits-into-kummer-prime-current-charts.md",
+      "blob_sha": "830c7f3fbd11e9d6a6bbce867ffcdffae41f3750"
+    },
+    {
+      "path": "claims/theorems/T-106050-temperature-kummer-fibre-unification.md",
+      "blob_sha": "5f248cacae8e7223b7fe34daae2e459bb3aa9353"
+    },
+    {
+      "path": "claims/lemmas/L-106060-two-phase-collision-line-frame.md",
+      "blob_sha": "e9bb2a1b0f927b0bc17ef91943a2acc5e71eb124"
+    },
+    {
+      "path": "claims/theorems/T-106060-two-phase-root-residue-occupancy-frontier.md",
+      "blob_sha": "3ffc4b2db243a989ad41f6b542c916a024446d5e"
+    }
+  ],
+  "proof_objects": [
+    {
+      "path": "experiments/X-106040-composite-kummer-tensor/results/verification.json",
+      "blob_sha": "610c07711be3b2361c3b3ffbbac3f41737c14ba6",
+      "checks": 4015,
+      "sha256": "5c5dfbf952abdb3f790bbea95ea9a036c7d45b74caee5e9d38292e4717ab95cb"
+    },
+    {
+      "path": "experiments/X-106050-temperature-kummer-fibre/results/verification.json",
+      "blob_sha": "78f862d925ed98167d4616dff39ba5c6e019b172",
+      "checks": 852,
+      "sha256": "c82c642f9b91805471219edad01a58a5c34d9fceaa8d2e7cf56f7211926857bb"
+    },
+    {
+      "path": "experiments/X-106052-temperature-tangent-kummer-charts/results/verification.json",
+      "blob_sha": "fea31b4a6c4bd682322417c5ce0394356d86ce0c",
+      "checks": 36912,
+      "sha256": "04ae5cfd6495a62bf899618f0ccdae99041f1467c717fb7a974974e533df50e2"
+    },
+    {
+      "path": "experiments/X-106060-two-phase-collision-line/results/verification.json",
+      "blob_sha": "0cd297e7dcf1276f5058e95a8bb094a3097c439b",
+      "checks": 6378,
+      "sha256": "9bf57d9245f9a445a77b77d973255a183a65b425e940ccca206e1657158cd1de"
+    }
+  ],
+  "retained_total_exact_checks": 469839,
+  "proved": {
+    "composite_tensor_frame": true,
+    "scalar_composite_leverage_formula_rejected": true,
+    "twisted_temperature_flatness": true,
+    "quadratic_root_chart_identification": true,
+    "nonprincipal_positive_inverse_rejected": true,
+    "temperature_tangent_chart_split": true,
+    "two_phase_collision_line_contraction": true
+  },
+  "open": {
+    "ccsocm106040": true,
+    "tkca106050": true,
+    "crop106060": true,
+    "hbcqdsp102888": true,
+    "riemann_hypothesis": true
+  },
+  "rh_established": false
+}
