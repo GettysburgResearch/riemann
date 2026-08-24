@@ -765,12 +765,19 @@ m\bmod6 & \text{integral recovery from }\operatorname{Tr}(\operatorname{Sym}^m)\
 \end{array}
 \]
 
-The first next target is to determine the minimum initial coefficient vector
-of the degree-`m+1` local factor that recovers the base trace, uniformly in
-`m` and odd prime powers. It must account separately for the expected
-even-degree twist quotient and the exceptional odd `m=5 mod 6` sign pair
-whose complete local factors coincide over the characteristic-three
-construction.
+The minimum initial coefficient problem is now solved completely for `m=5`,
+over `Q` and every fixed `q!=0`: `(E_5,c_2)` leaves only the sign fibers
+`t^2=q,3q`, while `(E_5,c_2,c_3)` removes the first and is equivalent to
+equality of the full reciprocal factor. The positive-rank general collision
+curve is therefore invisible only to the first scalar coefficient, not to
+the first two.
+
+The next target is the uniform `m` theorem. Determine the least initial
+coefficient prefix that recovers the base trace for every `m`, and classify
+the cyclotomic torus points at which the complete `Sym^m` spectrum is
+invariant under the central sign. This must account separately for the
+even-degree twist quotient and for odd-degree root-of-unity exceptions rather
+than extrapolating only from `m=5`.
 
 The `m=5` collision curve is now understood at the rational level:
 
@@ -819,12 +826,16 @@ and its normalized curve map satisfies
  \operatorname{Sym}^{2m-2i}V\otimes(\det V)^i.
 \]
 
-For `m=5` and then general odd `m`, derive the normalized coefficient maps of
-each primitive summand, their discriminant and singular loci, and their
-pullbacks to the existing locked coefficient supports. The theorem must
-separate representation-theoretic identities from arithmetic realization:
-matching a transformed local polynomial or coefficient point does not by
-itself identify motives, compatible systems, or global Euler products.
+For `m=5`, the first two rungs now give
+`c_2=qE_8+q^3E_4+q^5` and
+`-c_3=q^3E_9+q^5E_5+q^6E_3`, with all 15 and 20 weights checked directly.
+The next step is to derive the full normalized coefficient maps of the
+primitive summands for general odd `m`, their discriminant and singular loci,
+and their pullbacks to the existing locked coefficient supports. The theorem
+must separate representation-theoretic identities from arithmetic
+realization: matching a transformed local polynomial or coefficient point
+does not by itself identify motives, compatible systems, or global Euler
+products.
 
 ### Elliptic-pair target: detect geometry inside the `SO(4)` product law
 
@@ -846,12 +857,19 @@ splits into two mechanisms:
 \]
 
 The independent product law is now exact, including all-odd-prime-power low
-moments and locked fold/endpoint masses. The next arithmetic target is to
-replace independent draws by geometrically linked elliptic pairs: isogenous
-curves, quadratic twists, shared covers, or fibers in one surface. Compute the
-first failure of product moment factorization and decide which part is
-explained by the fold `p=r`, by a Hasse endpoint, or by a genuinely global
-correspondence.
+moments and locked fold/endpoint masses. Its intersection with the elliptic
+`Sym^3` curve is also exact: four signed doubling graphs, no integral points
+at nonsquare odd prime powers, and `16p^floor(k/2)-4` Hasse points at
+`q=p^(2k)`. Waterhouse collapses simultaneous elliptic realization to the
+repeated-root endpoint, unit, and zero-endpoint strata; the remaining square-
+field points are explicit arithmetic ghosts.
+
+The next arithmetic target is therefore to replace independent draws by
+geometrically linked elliptic pairs: isogenous curves, quadratic twists,
+shared covers, or fibers in one surface. Compute the first failure of product
+moment factorization and determine whether any family can enforce one signed
+doubling graph coherently across primes. A one-place spectral dilation or
+Waterhouse existence result is not such a correspondence.
 
 Trace moments alone are provably lossy here: standard `SO(4)` and
 `Sym^3(SU(2))` agree through order four and first split at order six

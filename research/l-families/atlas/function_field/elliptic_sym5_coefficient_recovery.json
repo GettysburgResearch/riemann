@@ -1,0 +1,509 @@
+{
+  "coefficient_formulas": {
+    "c1": "-E5(t,q)",
+    "c2": "q*(q-t^2)*(3*q-t^2)*(q^2-3*q*t^2+t^4)",
+    "c3": "-q^3*t*(2*q-t^2)*(3*q-t^2)*(q^2-3*q*t^2+t^4)",
+    "self_reciprocal_coefficients": "[1,c1,c2,c3,q^5*c2,q^10*c1,q^15]"
+  },
+  "difference_factorization": {
+    "E5_difference": "E5(x,q)-E5(y,q)=(x-y)*Q",
+    "H": "x^2+x*y+y^2",
+    "K": "x^4+x^3*y+x^2*y^2+x*y^3+y^4",
+    "Q": "K-4*q*H+3*q^2",
+    "R": "-13*q^3+16*q^2*(x^2+y^2)-7*q*(x^4+x^2*y^2+y^4)+(x^6+x^4*y^2+x^2*y^4+y^6)",
+    "c2_difference": "c2(x,q)-c2(y,q)=q*(x^2-y^2)*R"
+  },
+  "exact_recovery_theorem_over_Q": {
+    "full_factor_equal_iff": "x=y, or x=-y and x^2=3*q",
+    "minimum_depth_witnesses": [
+      {
+        "meaning": "E5 alone aliases; c2 is the first separator",
+        "q": 31,
+        "x": -7,
+        "y": 3
+      },
+      {
+        "meaning": "E5 and c2 alias; c3 is the first separator",
+        "q": 9,
+        "x": -3,
+        "y": 3
+      },
+      {
+        "meaning": "the complete degree-six factors alias",
+        "q": 3,
+        "x": -3,
+        "y": 3
+      }
+    ],
+    "non_diagonal_sign_cases": {
+      "x2_eq_3q": "E5=c2=c3=0 and the complete factors agree",
+      "x2_eq_q": "E5 and c2 agree; c3 changes sign and is nonzero"
+    },
+    "pair_E5_c2_equal_iff": "x=y, or x=-y and x^2=q, or x=-y and x^2=3*q",
+    "triple_E5_c2_c3_equal_iff": "x=y, or x=-y and x^2=3*q",
+    "triple_equals_full_reason": "fixed-q self-reciprocity determines T^4,T^5,T^6 from c2,c1,1",
+    "zero_cases": {
+      "exactly_one_of_x_y_zero": "cannot have both E5 and c2 equal when q is nonzero",
+      "x=y=0": "diagonal"
+    }
+  },
+  "locked_collision_replay": {
+    "c1_c2_survivors": [
+      {
+        "outcome": "full_factor_alias",
+        "q": 3,
+        "x": -3,
+        "y": 3
+      },
+      {
+        "outcome": "T3",
+        "q": 9,
+        "x": -3,
+        "y": 3
+      },
+      {
+        "outcome": "T3",
+        "q": 25,
+        "x": -5,
+        "y": 5
+      },
+      {
+        "outcome": "full_factor_alias",
+        "q": 27,
+        "x": -9,
+        "y": 9
+      },
+      {
+        "outcome": "T3",
+        "q": 49,
+        "x": -7,
+        "y": 7
+      },
+      {
+        "outcome": "T3",
+        "q": 81,
+        "x": -9,
+        "y": 9
+      },
+      {
+        "outcome": "T3",
+        "q": 121,
+        "x": -11,
+        "y": 11
+      },
+      {
+        "outcome": "T3",
+        "q": 169,
+        "x": -13,
+        "y": 13
+      },
+      {
+        "outcome": "full_factor_alias",
+        "q": 243,
+        "x": -27,
+        "y": 27
+      },
+      {
+        "outcome": "T3",
+        "q": 289,
+        "x": -17,
+        "y": 17
+      },
+      {
+        "outcome": "T3",
+        "q": 361,
+        "x": -19,
+        "y": 19
+      },
+      {
+        "outcome": "T3",
+        "q": 529,
+        "x": -23,
+        "y": 23
+      },
+      {
+        "outcome": "T3",
+        "q": 625,
+        "x": -25,
+        "y": 25
+      },
+      {
+        "outcome": "T3",
+        "q": 729,
+        "x": -27,
+        "y": 27
+      },
+      {
+        "outcome": "T3",
+        "q": 841,
+        "x": -29,
+        "y": 29
+      },
+      {
+        "outcome": "T3",
+        "q": 961,
+        "x": -31,
+        "y": 31
+      },
+      {
+        "outcome": "T3",
+        "q": 1369,
+        "x": -37,
+        "y": 37
+      },
+      {
+        "outcome": "T3",
+        "q": 1681,
+        "x": -41,
+        "y": 41
+      },
+      {
+        "outcome": "T3",
+        "q": 1849,
+        "x": -43,
+        "y": 43
+      }
+    ],
+    "class_by_separation": [
+      {
+        "collision_class": "general",
+        "count": 4,
+        "outcome": "T2"
+      },
+      {
+        "collision_class": "sign_pair",
+        "count": 16,
+        "outcome": "T3"
+      },
+      {
+        "collision_class": "sign_pair",
+        "count": 3,
+        "outcome": "full_factor_alias"
+      },
+      {
+        "collision_class": "zero_nonzero",
+        "count": 38,
+        "outcome": "T2"
+      }
+    ],
+    "full_factor_aliases": [
+      {
+        "q": 3,
+        "x": -3,
+        "y": 3
+      },
+      {
+        "q": 27,
+        "x": -9,
+        "y": 9
+      },
+      {
+        "q": 243,
+        "x": -27,
+        "y": 27
+      }
+    ],
+    "new_curve_field_or_trace_range_enumerations": 0,
+    "row_projection_sha256": "d55a97f2eb42fa771701f0555aea034ac028a51b3c671ce49901abe2bb76054b",
+    "rows_replayed": 61,
+    "separation_counts": {
+      "T2": 42,
+      "T3": 16,
+      "full_factor_alias": 3
+    }
+  },
+  "normalization": {
+    "E5": "t^5-4*q*t^3+3*q^2*t=t*(t^2-q)*(t^2-3*q)",
+    "E_m": "sum(alpha^(m-j)*beta^j,j=0..m)",
+    "base_factor": "1-t*T+q*T^2=(1-alpha*T)*(1-beta*T)",
+    "domain": "x,y,q in Q with q nonzero",
+    "root_relations": "alpha+beta=t; alpha*beta=q",
+    "sym5_factor": "det(1-Sym^5(Frob)*T), degree 6"
+  },
+  "payload_sha256": "f7b1a484d2a8b3cc0b997dbf0f15a69893f279a32bc550b71f28b21a5a9d7467",
+  "plethystic_certificate": {
+    "lambda2_sym5": {
+      "decomposition": "(Sym^8 V tensor det V) + (Sym^4 V tensor (det V)^3) + (det V)^5",
+      "dimension": 15,
+      "expanded_terms": [
+        {
+          "coefficient": 1,
+          "q_power": 1,
+          "t_power": 8
+        },
+        {
+          "coefficient": -7,
+          "q_power": 2,
+          "t_power": 6
+        },
+        {
+          "coefficient": 16,
+          "q_power": 3,
+          "t_power": 4
+        },
+        {
+          "coefficient": -13,
+          "q_power": 4,
+          "t_power": 2
+        },
+        {
+          "coefficient": 3,
+          "q_power": 5,
+          "t_power": 0
+        }
+      ],
+      "trace_identity": "c2=q*E8+q^3*E4+q^5",
+      "weight_multiset": [
+        {
+          "alpha_power": 1,
+          "beta_power": 9,
+          "multiplicity": 1
+        },
+        {
+          "alpha_power": 2,
+          "beta_power": 8,
+          "multiplicity": 1
+        },
+        {
+          "alpha_power": 3,
+          "beta_power": 7,
+          "multiplicity": 2
+        },
+        {
+          "alpha_power": 4,
+          "beta_power": 6,
+          "multiplicity": 2
+        },
+        {
+          "alpha_power": 5,
+          "beta_power": 5,
+          "multiplicity": 3
+        },
+        {
+          "alpha_power": 6,
+          "beta_power": 4,
+          "multiplicity": 2
+        },
+        {
+          "alpha_power": 7,
+          "beta_power": 3,
+          "multiplicity": 2
+        },
+        {
+          "alpha_power": 8,
+          "beta_power": 2,
+          "multiplicity": 1
+        },
+        {
+          "alpha_power": 9,
+          "beta_power": 1,
+          "multiplicity": 1
+        }
+      ]
+    },
+    "lambda3_sym5": {
+      "decomposition": "(Sym^9 V tensor (det V)^3) + (Sym^5 V tensor (det V)^5) + (Sym^3 V tensor (det V)^6)",
+      "dimension": 20,
+      "expanded_negative_c3_terms": [
+        {
+          "coefficient": 1,
+          "q_power": 3,
+          "t_power": 9
+        },
+        {
+          "coefficient": -8,
+          "q_power": 4,
+          "t_power": 7
+        },
+        {
+          "coefficient": 22,
+          "q_power": 5,
+          "t_power": 5
+        },
+        {
+          "coefficient": -23,
+          "q_power": 6,
+          "t_power": 3
+        },
+        {
+          "coefficient": 6,
+          "q_power": 7,
+          "t_power": 1
+        }
+      ],
+      "trace_identity": "-c3=q^3*E9+q^5*E5+q^6*E3",
+      "weight_multiset": [
+        {
+          "alpha_power": 3,
+          "beta_power": 12,
+          "multiplicity": 1
+        },
+        {
+          "alpha_power": 4,
+          "beta_power": 11,
+          "multiplicity": 1
+        },
+        {
+          "alpha_power": 5,
+          "beta_power": 10,
+          "multiplicity": 2
+        },
+        {
+          "alpha_power": 6,
+          "beta_power": 9,
+          "multiplicity": 3
+        },
+        {
+          "alpha_power": 7,
+          "beta_power": 8,
+          "multiplicity": 3
+        },
+        {
+          "alpha_power": 8,
+          "beta_power": 7,
+          "multiplicity": 3
+        },
+        {
+          "alpha_power": 9,
+          "beta_power": 6,
+          "multiplicity": 3
+        },
+        {
+          "alpha_power": 10,
+          "beta_power": 5,
+          "multiplicity": 2
+        },
+        {
+          "alpha_power": 11,
+          "beta_power": 4,
+          "multiplicity": 1
+        },
+        {
+          "alpha_power": 12,
+          "beta_power": 3,
+          "multiplicity": 1
+        }
+      ]
+    }
+  },
+  "producer": {
+    "note": "research/l-families/atlas/function_field/ELLIPTIC_SYM5_COEFFICIENT_RECOVERY.md",
+    "note_sha256_lf_normalized": "b010c707915c4ddb297a7001072f60aea906ef451139660dfdb5a946a3a993bd",
+    "script": "research/l-families/atlas/function_field/elliptic_sym5_coefficient_recovery.py",
+    "script_sha256_lf_normalized": "53856b8c41ac5d10b0f3e4932e058e8fc806a611932af50a5d738f941998e0f6",
+    "test": "tests/test_elliptic_sym5_coefficient_recovery.py",
+    "test_sha256_lf_normalized": "55bab07c242889eaeacbdfc19dbb52f4dcc2ee3a9fc200eab2297a2c76bb66d8"
+  },
+  "resource_contract": {
+    "accounted_work_ledger": {
+      "euclidean_norm_identity_checked": 1,
+      "locked_collision_rows_replayed": 61,
+      "locked_source_payloads_loaded": 1,
+      "plethystic_polynomial_specializations_checked": 3,
+      "resultant_factors_multiplied": 5,
+      "sylvester_determinant_permutations": 120,
+      "wedge2_weight_pairs": 15,
+      "wedge3_weight_triples": 20
+    },
+    "accounted_work_unit_cap_exclusive": 25000,
+    "accounted_work_units": 226,
+    "new_curve_field_or_trace_range_enumerations": 0,
+    "source_collision_rows_replayed": 61,
+    "symbolic_engine_dependency": false
+  },
+  "resultant_certificate": {
+    "conclusion": "the resultant has no nonzero rational projective zero",
+    "dropped_scalar_or_variable_factors": [],
+    "euclidean_reduction": {
+      "S": "x^2+y^2",
+      "a_coefficients_x4_to_y4": [
+        -40,
+        -185,
+        -264,
+        -185,
+        -40
+      ],
+      "b_coefficients_x6_to_y6": [
+        13,
+        56,
+        69,
+        60,
+        69,
+        56,
+        13
+      ],
+      "identity": "9R=(-39q+48S-52H)Q+a*q+b",
+      "norm_identity": "9*Res_q(Q,R)=K*a^2+4*H*a*b+3*b^2"
+    },
+    "exact_resultant_coefficient_vector_x12_to_y12": [
+      3,
+      12,
+      -37,
+      -235,
+      -228,
+      467,
+      1016,
+      467,
+      -228,
+      -235,
+      -37,
+      12,
+      3
+    ],
+    "factor_multiplicities": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "factorization": [
+      "x^2-3*y^2",
+      "3*x^2-y^2",
+      "x^2+3*x*y+y^2",
+      "x^3-3*x^2*y-4*x*y^2-y^3",
+      "x^3+4*x^2*y+3*x*y^2-y^3"
+    ],
+    "projective_point_at_y_zero": "every factor forces x=0",
+    "rational_projective_obstructions": [
+      {
+        "affine_obstruction": "r^2=3; 3 is not a rational square",
+        "factor": "x^2-3*y^2"
+      },
+      {
+        "affine_obstruction": "(1/r)^2=3; 3 is not a rational square",
+        "factor": "3*x^2-y^2"
+      },
+      {
+        "affine_obstruction": "r^2+3r+1 has nonsquare discriminant 5",
+        "factor": "x^2+3*x*y+y^2"
+      },
+      {
+        "affine_obstruction": "monic rational-root candidates +/-1 give -7 and -1",
+        "factor": "x^3-3*x^2*y-4*x*y^2-y^3"
+      },
+      {
+        "affine_obstruction": "monic rational-root candidates +/-1 give 7 and -1",
+        "factor": "x^3+4*x^2*y+3*x*y^2-y^3"
+      }
+    ],
+    "sylvester_matrix_size": 5
+  },
+  "schema": "riemann.function_field.elliptic_sym5_coefficient_recovery.v1",
+  "scope_firewall": {
+    "finite_replay_is_not_evidence_for_the_all_Q_proof": "the proof is the exact difference/resultant argument; the replay is regression evidence",
+    "no_RH_or_zero_distribution_consequence_claimed": true,
+    "no_automorphy_or_modularity_claim": true,
+    "no_curve_or_isogeny_class_realization_claim": true,
+    "no_external_literature_priority_claim": true,
+    "no_global_compatible_family_or_euler_product_constructed": true,
+    "theorem_is_local_and_algebraic_over_Q": true
+  },
+  "source_lock": {
+    "file_sha256_lf_normalized": "66635391ee4d69382eaf6d11fd78a77c90cffc8919ccbede9d0f568915cdf167",
+    "path": "research/l-families/atlas/function_field/elliptic_sym5_collision_diophantine_pilot.json",
+    "payload_sha256": "13bf7f95949b0905843c6f453008359fe8b05b65157fdb8c2eaf48e7af542ca5",
+    "schema": "riemann.function_field.elliptic_sym5_collision_diophantine_pilot.v1",
+    "use": "replay exactly the 61 frozen scalar-collision rows; no finite field, curve, or trace-range enumeration"
+  }
+}

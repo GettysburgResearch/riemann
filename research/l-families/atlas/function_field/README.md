@@ -43,6 +43,10 @@ source/note/JSON/test packets:
   `SO(4)` coefficient region, separates the coefficient-map fold from the
   full quartic repeated-root divisor, and locks the all-`q` low moments and
   five finite product laws;
+- `ELLIPTIC_SO4_SYM3_SPECTRAL_INTERSECTION.md` factors the symmetric-cube
+  curve inside that `SO(4)` region into four signed Frobenius-doubling graphs,
+  proves that nonsquare odd prime powers have no integral hits, and classifies
+  both the square-`q` Hasse lattice and its Waterhouse-realized sublocus;
 - `ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md` proves the exact mod-six
   dichotomy for recovering an integral elliptic trace from the scalar
   `Sym^m` trace, gives sharp source-witnessed complementary collisions, and
@@ -52,6 +56,10 @@ source/note/JSON/test packets:
   zero-fiber and weighted-scaling laws, identifies a positive-rank elliptic
   collision curve, and certifies three locally realized prime-field examples
   while keeping integral and global realization questions open;
+- `ELLIPTIC_SYM5_COEFFICIENT_RECOVERY.md` proves over `Q` that the first two
+  `Sym^5` coefficients resolve every non-sign scalar collision, the third
+  removes the `t^2=q` sign fiber, and only `t^2=3q` remains invisible to the
+  complete local factor; it also gives the exterior-power plethystic reason;
 - `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
   curve with the complete locked genus-two coefficient support, classifies
   the odd-prime arithmetic candidates, and separates 53 witnessed members
@@ -125,8 +133,10 @@ python research/l-families/atlas/function_field/genus1_cubic_family_laws.py \
 python research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py --check
 python research/l-families/atlas/function_field/elliptic_symmetric_fourth_so5_slice.py --check
 python research/l-families/atlas/function_field/elliptic_pair_rankin_so4_family.py --check
+python research/l-families/atlas/function_field/elliptic_so4_sym3_spectral_intersection.py --check
 python research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py --check
 python research/l-families/atlas/function_field/elliptic_sym5_collision_diophantine_pilot.py --check
+python research/l-families/atlas/function_field/elliptic_sym5_coefficient_recovery.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
@@ -154,8 +164,10 @@ python -m pytest -q \
   tests/test_elliptic_symmetric_cube_family.py \
   tests/test_elliptic_symmetric_fourth_so5_slice.py \
   tests/test_elliptic_pair_rankin_so4_family.py \
+  tests/test_elliptic_so4_sym3_spectral_intersection.py \
   tests/test_elliptic_symmetric_power_trace_aliasing.py \
   tests/test_elliptic_sym5_collision_diophantine_pilot.py \
+  tests/test_elliptic_sym5_coefficient_recovery.py \
   tests/test_genus2_sym3_coefficient_intersection.py \
   tests/test_sym3_exterior_sym4_plethysm_bridge.py \
   tests/test_usp_coefficient_minor_rank_scan.py \
@@ -173,9 +185,9 @@ python -m pytest -q \
 
 Each packet declares its own resource contract. The Burnside, measure,
 cross-rank, tail, high-weight, power-echo, elliptic-symmetric-cube,
-elliptic-symmetric-fourth, elliptic-pair-tensor, symmetric-power-aliasing,
-Sym5-collision, symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm,
-product-tensor,
+elliptic-symmetric-fourth, elliptic-pair-tensor, SO4/Sym3-intersection,
+symmetric-power-aliasing, Sym5-collision, Sym5-coefficient-recovery,
+symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm, product-tensor,
 tensor-singular, tensor-endoscopic-bridge, integral-factor-locus,
 primitive-exterior-square, and virtual-null
 packets enumerate no new finite field or family member. The echo packet
@@ -199,6 +211,12 @@ additions and no curve or field enumeration, and accounts for 16,966 units
 below its exclusive 500,000-unit cap. Its frozen census stops at odd prime
 powers `q<=2000`, and its large prime is checked by the recorded
 Lucas/Pocklington certificate rather than a blind extension of that census.
+The SO4/Sym3 packet transforms the same 645 locked atom pairs, checks only
+610 tiny synthetic Hasse-lattice points at `q=9,25`, and accounts for
+3,334 units below its exclusive 4,000-unit cap. The Sym5 recovery packet
+performs a 120-term literal Sylvester determinant, bounded exterior-power
+weight checks, and 61 source-row replays for 226 units below its exclusive
+25,000-unit cap. Neither follow-up enumerates a field, curve, or model.
 The balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
 visits 4,023 cubic candidates at `q=3,5,7,11,13`. The producers retain their
@@ -320,6 +338,15 @@ isogeny, a correspondence, or a shared global automorphic representation.
 Five exact finite product laws and compact Haar moments prove neither full
 arithmetic monodromy nor equidistribution.
 
+The SO4/Sym3 intersection is a compact spectral identity on four signed
+torus-doubling graphs, not a representation homomorphism. Its raw tensor and
+`Sym^3` factors agree only after the displayed weight-changing variable
+dilation when `q` is square. Waterhouse supplies separate local elliptic
+isogeny classes on the repeated-root endpoint, unit, and zero-endpoint
+strata; it supplies no shared curve, isogeny, cover, compatible system, or
+global Euler product. Integral Hasse graph points outside those strata are
+explicit arithmetic ghosts, not unclassified elliptic correspondences.
+
 The Sym5 collision pilot studies the single scalar
 `E_5(t,q)=Tr(Sym^5 Frob)`, not the complete degree-six local factor. Its 61
 collisions at 21 odd prime powers are complete only within `q<=2000`; most
@@ -336,6 +363,14 @@ the traces `+/-sqrt(q)` require `p != 1 mod 3`, and trace zero requires
 elliptic isogeny classes only; they do not form a compatible family or Euler
 product. No literature priority, automorphy, analytic continuation,
 zero-free-region, RH, or GRH claim is made.
+
+The Sym5 coefficient-recovery theorem is algebraic over `Q` at fixed
+nonzero `q`; it does not require or provide elliptic-trace realization. Its
+literal resultant proves that `(E_5,c_2)` has only the two stated sign fibers,
+and reciprocity makes `(E_5,c_2,c_3)` equivalent to full-factor equality.
+The exterior-power decompositions explain these coefficients locally but do
+not assert a new functorial lift, automorphy theorem, compatible family, or
+literature priority.
 
 The symmetric-cube/genus-two intersection compares normalized coefficient
 shapes of different weights; it is not an identity of local factors. Its

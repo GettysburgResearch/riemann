@@ -546,6 +546,135 @@ family, not an elliptic-family construction. Similarly, the algebraic square-
 `q` zero fibers require separate Waterhouse congruence conditions for
 arithmetic realization.
 
+### The first three `Sym^5` coefficients give a complete recovery tower
+
+The positive-rank collision curve concerns only the scalar character
+`E_5`.  The next packet proves over `Q`, for every fixed `q!=0`, that
+
+\[
+ (E_5,c_2)(x)=(E_5,c_2)(y)
+\]
+
+holds exactly on the diagonal or on the two sign strata
+
+\[
+ y=-x,\qquad x^2=q\ \hbox{or}\ x^2=3q.
+\]
+
+Adding `c_3` removes the first sign stratum.  Because the factor is
+reciprocal,
+
+\[
+ (E_5,c_2,c_3)(x)=(E_5,c_2,c_3)(y)
+ \iff P_{\operatorname{Sym}^5,x}=P_{\operatorname{Sym}^5,y},
+\]
+
+and this occurs only for `x=y` or `y=-x,x^2=3q`.
+
+For `x^2\ne y^2`, equality of the first two coefficients would force a
+common `q`-root of the scalar quotient `Q` and the second-coefficient
+quotient `R`.  Their literal `5 x 5` Sylvester determinant is
+
+\[
+\begin{aligned}
+\operatorname{Res}_q(Q,R)
+={}&(x^2-3y^2)(3x^2-y^2)(x^2+3xy+y^2)\\
+&\cdot(x^3-3x^2y-4xy^2-y^3)\\
+&\cdot(x^3+4x^2y+3xy^2-y^3).
+\end{aligned}
+\]
+
+The quadratic factors would require `sqrt(3)` or `sqrt(5)`, while the
+two monic cubics have no rational root by the rational-root theorem.
+Consequently the resultant has no nonzero rational projective zero.
+
+There is also a representation-theoretic explanation for the resolving
+coefficients:
+
+\[
+\begin{aligned}
+\bigwedge^2\operatorname{Sym}^5V
+&\simeq(\operatorname{Sym}^8V\otimes\det V)
+\oplus(\operatorname{Sym}^4V\otimes\det^3V)\oplus\det^5V,\\
+\bigwedge^3\operatorname{Sym}^5V
+&\simeq(\operatorname{Sym}^9V\otimes\det^3V)
+\oplus(\operatorname{Sym}^5V\otimes\det^5V)
+\oplus(\operatorname{Sym}^3V\otimes\det^6V).
+\end{aligned}
+\]
+
+Thus `c_2=qE_8+q^3E_4+q^5`, and
+`-c_3=q^3E_9+q^5E_5+q^6E_3`.  Replaying the 61 frozen scalar collisions
+gives 42 first separations at `T^2`, 16 at `T^3`, and exactly three
+complete-factor aliases.  The all-rational theorem is proved independently
+of that replay and makes no realization or global-family claim.
+
+### The `Sym^3` curve inside `SO(4)` is a doubling locus
+
+Pulling the symmetric-cube equation back through the elliptic-pair tensor
+coordinates gives the unexpected complete factorization
+
+\[
+\begin{aligned}
+F_3(uv,u^2+v^2-2)
+={}&(u-v^2+2)(u+v^2-2)\\
+&\cdot(u^2-v-2)(u^2+v-2).
+\end{aligned}
+\]
+
+The four components are the signed Chebyshev graphs
+`u=+/-(v^2-2)` and `v=+/-(u^2-2)`.  On them the tensor spectrum is
+`{w^3,w,w^-1,w^-3}`, so after the necessary weight dilation it equals a
+symmetric-cube local spectrum.  This is a maximal-torus identity, not a
+representation homomorphism.
+
+In integral source coordinates the pullback is
+
+\[
+ q^4F_3=
+ [qA^2-(B^2-2q)^2][(A^2-2q)^2-qB^2].
+\]
+
+If `q=p^e` with `e` odd, a vanishing factor equates an odd and an
+even `p`-adic valuation.  Hence no integral pair lies on the intersection,
+even without a Hasse bound.  This explains the zero hits among all 645 locked
+atom pairs at `q=3,5,7,11,13`.
+
+For `q=p^(2k)`, put `M=p^floor(k/2)`.  The four graphs have
+`16M+4` parameter incidences and exactly
+
+\[
+ \boxed{16M-4}
+\]
+
+distinct integral Hasse points.  Waterhouse's theorem reduces the pairs for
+which both input traces are elliptically realized to the normalized endpoint
+pairs `(+/-2,+/-2)`, the unit pairs `(+/-1,+/-1)` when
+`p!=1 mod 3`, and the mixed pairs `(+/-2,0),(0,+/-2)` when
+`p!=1 mod 4`.  All of them lie on the quartic repeated-root divisor.
+At `q=p^4`, the Hasse point `(A,B)=(1-2p^2,p)` is an explicit
+ghost: the first trace is ordinary-realized, while the second is not a
+Waterhouse trace.
+
+Along any doubling graph, with parameter `t`, the discriminant mechanisms
+become
+
+\[
+ D=(t^2-1)^2(t^2-4)^2,\qquad
+ E=t^2(t^2-4)^2,
+\]
+
+so
+
+\[
+ \operatorname{Disc}=t^4(t^2-1)^2(t^2-4)^6.
+\]
+
+This types the realized unit points as fold-only, the zero-endpoint points as
+endpoint-only, and the Hasse endpoints as their intersection.  Waterhouse
+provides separate local isogeny classes, not a linked pair of curves or a
+compatible global family.
+
 ## 4. Exact genus-two theorem: the first toy-minor mean for all odd prime powers
 
 For each odd prime power `q`, let `H_5(q)` be all monic squarefree quintics over

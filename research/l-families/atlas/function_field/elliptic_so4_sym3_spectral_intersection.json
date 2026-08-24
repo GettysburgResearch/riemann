@@ -1,0 +1,2337 @@
+{
+  "all_square_prime_power_count_examples": [
+    {
+      "M=p^floor(k/2)": 1,
+      "distinct_integral_hasse_lattice_points": 12,
+      "four_graph_branch_incidences": 20,
+      "integral_parameters_per_oriented_signed_graph": 5,
+      "k": 1,
+      "k_equals_2_explicit_ghost_A_B": null,
+      "p": 3,
+      "pairwise_overlap_description": "the only integral (equivalently rational) overlaps are four endpoint pairs and four unit pairs, each incident to exactly two graphs; additional irrational real graph intersections do not affect the lattice count",
+      "q": 9,
+      "waterhouse_realized_distinct_points": 12,
+      "waterhouse_realized_strata": {
+        "endpoint_endpoint": 4,
+        "endpoint_zero": 4,
+        "unit_unit": 4
+      }
+    },
+    {
+      "M=p^floor(k/2)": 1,
+      "distinct_integral_hasse_lattice_points": 12,
+      "four_graph_branch_incidences": 20,
+      "integral_parameters_per_oriented_signed_graph": 5,
+      "k": 1,
+      "k_equals_2_explicit_ghost_A_B": null,
+      "p": 5,
+      "pairwise_overlap_description": "the only integral (equivalently rational) overlaps are four endpoint pairs and four unit pairs, each incident to exactly two graphs; additional irrational real graph intersections do not affect the lattice count",
+      "q": 25,
+      "waterhouse_realized_distinct_points": 8,
+      "waterhouse_realized_strata": {
+        "endpoint_endpoint": 4,
+        "endpoint_zero": 0,
+        "unit_unit": 4
+      }
+    },
+    {
+      "M=p^floor(k/2)": 3,
+      "distinct_integral_hasse_lattice_points": 44,
+      "four_graph_branch_incidences": 52,
+      "integral_parameters_per_oriented_signed_graph": 13,
+      "k": 2,
+      "k_equals_2_explicit_ghost_A_B": [
+        -17,
+        3
+      ],
+      "p": 3,
+      "pairwise_overlap_description": "the only integral (equivalently rational) overlaps are four endpoint pairs and four unit pairs, each incident to exactly two graphs; additional irrational real graph intersections do not affect the lattice count",
+      "q": 81,
+      "waterhouse_realized_distinct_points": 12,
+      "waterhouse_realized_strata": {
+        "endpoint_endpoint": 4,
+        "endpoint_zero": 4,
+        "unit_unit": 4
+      }
+    },
+    {
+      "M=p^floor(k/2)": 5,
+      "distinct_integral_hasse_lattice_points": 76,
+      "four_graph_branch_incidences": 84,
+      "integral_parameters_per_oriented_signed_graph": 21,
+      "k": 2,
+      "k_equals_2_explicit_ghost_A_B": [
+        -49,
+        5
+      ],
+      "p": 5,
+      "pairwise_overlap_description": "the only integral (equivalently rational) overlaps are four endpoint pairs and four unit pairs, each incident to exactly two graphs; additional irrational real graph intersections do not affect the lattice count",
+      "q": 625,
+      "waterhouse_realized_distinct_points": 8,
+      "waterhouse_realized_strata": {
+        "endpoint_endpoint": 4,
+        "endpoint_zero": 0,
+        "unit_unit": 4
+      }
+    }
+  ],
+  "conventions": {
+    "sign_bridge": "on u=epsilon*(v^2-2), c=epsilon*B and a=-epsilon*B; on v=epsilon*(u^2-2), c=epsilon*A and a=-epsilon*A",
+    "sym3_normalization": "t=c/sqrt(q), T=Z/q^(3/2), x=t^3-2*t, y=t^4-3*t^2+2",
+    "sym3_source_input": "1+a*T+q*T^2=1-c*T+q*T^2, where c=-a is geometric trace",
+    "tensor_inputs": "P_A(T)=1+A*T+q*T^2 and P_B(T)=1+B*T+q*T^2",
+    "tensor_normalization": "u=A/sqrt(q), v=B/sqrt(q), T=Z/q",
+    "tensor_normalized_factor": "1-x*Z+y*Z^2-x*Z^3+Z^4 with x=u*v and y=u^2+v^2-2",
+    "weight_and_dilation": "the tensor factor has weight 2 and Sym3 has weight 3; at q=s^2 graph points P_tensor(s*T)=P_Sym3,c(T), equivalently the two factors agree after T=Z/q and T=Z/q^(3/2)"
+  },
+  "discriminant_restriction_theorem": {
+    "SO4_fold_discriminant": "D=(y+2)^2-4*x^2=(t^2-1)^2*(t^2-4)^2",
+    "SO4_hasse_endpoint_factor": "E=x^2-4*(y-2)=t^2*(t^2-4)^2",
+    "direct_check": "the full formula is independently checked with the 7-by-7 Sylvester resultant at every synthetic square-q intersection point and every incident graph parameter",
+    "full_quartic_root_discriminant": "Disc_Z=D*E^2=t^4*(t^2-1)^2*(t^2-4)^6",
+    "parameter": "on each graph choose normalized Sym3 geometric trace t=epsilon*v or epsilon*u",
+    "unnormalized_square_q_form": "for c=s*t, D=(c^2-q)^2*(c^2-4q)^2/q^4, E=c^2*(c^2-4q)^2/q^3, Disc=c^4*(c^2-q)^2*(c^2-4q)^6/q^10",
+    "wall_classification": {
+      "coefficient_map_fold": "t^2 in {1,4}",
+      "fold_endpoint_intersection": "t^2=4",
+      "full_repeated_root_locus": "t=0 or t^2 in {1,4}",
+      "hasse_endpoint_wall": "t=0 or t^2=4"
+    }
+  },
+  "exact_compact_intersection_theorem": {
+    "coefficient_proof_of_dilation": "S_c=c^3-2q*c=s*A*B and D_c=c^4-3q*c^2+2q^2=q*(A^2+B^2-2q); the reciprocal coefficients then match automatically",
+    "doubling_interpretation": "t^2-2 is the SU(2) trace of the squared torus element; each orientation has an ordinary and central-sign-twisted branch",
+    "exact_square_q_dilation_identity": "if q=s^2, then P_tensor(s*T)=P_Sym3,c(T), with c=epsilon*B on u=epsilon*(v^2-2) and c=epsilon*A on the swapped graph",
+    "factorization": "F3=(u-v^2+2)*(u+v^2-2)*(u^2-v-2)*(u^2+v-2)",
+    "graphs": [
+      "u=+(v^2-2)",
+      "u=-(v^2-2)",
+      "v=+(u^2-2)",
+      "v=-(u^2-2)"
+    ],
+    "homomorphism_firewall": "this is an identity on one-dimensional maximal-torus spectral loci; the squaring relation does not define a claimed SU(2)->SU(2)xSU(2) representation homomorphism",
+    "spectral_identity": "on a graph the SO4 tensor torus weights {z*w,z/w,w/z,1/(z*w)} become {r^3,r,r^(-1),r^(-3)} after z=+/-w^2 (or the swapped relation)",
+    "substitution": "x=u*v, y=u^2+v^2-2",
+    "sym3_curve": "F3(x,y)=-x^4+x^2*y+x^2+y^3-2*y^2"
+  },
+  "integral_odd_prime_power_theorem": {
+    "all_q_lattice_counts": "each oriented signed graph has 4M+1 parameters; four graphs have 16M+4 incidences; exactly four endpoint and four unit pairs are double incidences, so the union has 16M-4 points",
+    "cleared_equation": "q^4*F3=[q*A^2-(B^2-2q)^2]*[(A^2-2q)^2-q*B^2]",
+    "conclusion": "for nonsquare odd prime-power q there are no integral A,B on the compact spectral intersection, even before Hasse bounds",
+    "converse_scope": "Waterhouse classifies existence of separate local elliptic isogeny classes with the two traces; it does not construct a relation between curves or a compatible global family",
+    "divisibility_note": "on the first orientation integrality requires s|B^2, and on the second s|A^2",
+    "nonsquare_case": "if q=p^e with odd e, either zero factor equates an odd p-adic valuation e+2v_p(nonzero trace) with an even valuation; the zero-trace fallback would require a square to equal 2q and is impossible for odd p",
+    "parameterization": "for q=p^(2k), put M=p^floor(k/2); on s*A=epsilon*(B^2-2q), B=p^ceil(k/2)*m with |m|<=2M and A=epsilon*(p^(k mod 2)*m^2-2p^k), and swap A,B for the other orientation",
+    "square_case": "if q=s^2, the locus is exactly s*A=+/- (B^2-2q) or s*B=+/- (A^2-2q)",
+    "universal_ghost": "at q=p^4, (A,B)=(1-2p^2,p) is an integral Hasse graph point; A is ordinary-realized while B is p-divisible and outside Waterhouse's special traces, so the pair is not simultaneously realized",
+    "waterhouse_realized_strata": {
+      "counts_by_odd_prime_residue": "4,8,8,12 for p congruent to 1,5,7,11 modulo 12; p=3 gives 12",
+      "endpoint_endpoint": "(A/s,B/s) in {+/-2}x{+/-2}: 4 points, always realized",
+      "endpoint_zero": "(+/-2,0) and (0,+/-2): 4 points iff p is not 1 modulo 4",
+      "p_equals_3_boundary": "Waterhouse case (3) includes p=3; at q=3^(odd), case (4) cannot rescue an intersection because the nonsquare valuation theorem rules out every integral pair",
+      "unit_unit": "(A/s,B/s) in {+/-1}x{+/-1}: 4 points iff p is not 1 modulo 3"
+    }
+  },
+  "literature_boundary": {
+    "not_imported": "no curve-pair correspondence, representation homomorphism, automorphic transfer, cross-prime compatibility, or literature-priority claim",
+    "primary_reference": "William C. Waterhouse, Abelian varieties over finite fields, Annales scientifiques de l'Ecole Normale Superieure 2 (1969), Theorem 4.1, https://numdam.org/articles/10.24033/asens.1183/",
+    "use": "only the existence/nonexistence classification of individual elliptic Frobenius traces over F_q, specifically cases (2), (3), and (5)(ii)"
+  },
+  "locked_nonsquare_histogram_replay": {
+    "aggregate": {
+      "intersection_atom_hit_count": 0,
+      "intersection_represented_mass": 0,
+      "ordered_atom_pairs_checked": 645,
+      "q_values": [
+        3,
+        5,
+        7,
+        11,
+        13
+      ]
+    },
+    "families": [
+      {
+        "intersection_atom_hit_count": 0,
+        "intersection_atom_hits": [],
+        "intersection_represented_mass": 0,
+        "ordered_atom_pairs_checked": 49,
+        "ordered_model_pairs_represented": 324,
+        "prime_p": 3,
+        "prime_power_exponent": 1,
+        "q": 3,
+        "reason_for_zero": "q=p^e has odd e; either square equation would equate an odd p-adic valuation with an even one",
+        "source_trace_atom_count": 7
+      },
+      {
+        "intersection_atom_hit_count": 0,
+        "intersection_atom_hits": [],
+        "intersection_represented_mass": 0,
+        "ordered_atom_pairs_checked": 81,
+        "ordered_model_pairs_represented": 10000,
+        "prime_p": 5,
+        "prime_power_exponent": 1,
+        "q": 5,
+        "reason_for_zero": "q=p^e has odd e; either square equation would equate an odd p-adic valuation with an even one",
+        "source_trace_atom_count": 9
+      },
+      {
+        "intersection_atom_hit_count": 0,
+        "intersection_atom_hits": [],
+        "intersection_represented_mass": 0,
+        "ordered_atom_pairs_checked": 121,
+        "ordered_model_pairs_represented": 86436,
+        "prime_p": 7,
+        "prime_power_exponent": 1,
+        "q": 7,
+        "reason_for_zero": "q=p^e has odd e; either square equation would equate an odd p-adic valuation with an even one",
+        "source_trace_atom_count": 11
+      },
+      {
+        "intersection_atom_hit_count": 0,
+        "intersection_atom_hits": [],
+        "intersection_represented_mass": 0,
+        "ordered_atom_pairs_checked": 169,
+        "ordered_model_pairs_represented": 1464100,
+        "prime_p": 11,
+        "prime_power_exponent": 1,
+        "q": 11,
+        "reason_for_zero": "q=p^e has odd e; either square equation would equate an odd p-adic valuation with an even one",
+        "source_trace_atom_count": 13
+      },
+      {
+        "intersection_atom_hit_count": 0,
+        "intersection_atom_hits": [],
+        "intersection_represented_mass": 0,
+        "ordered_atom_pairs_checked": 225,
+        "ordered_model_pairs_represented": 4112784,
+        "prime_p": 13,
+        "prime_power_exponent": 1,
+        "q": 13,
+        "reason_for_zero": "q=p^e has odd e; either square equation would equate an odd p-adic valuation with an even one",
+        "source_trace_atom_count": 15
+      }
+    ]
+  },
+  "locked_sym3_factor_convention_audit": {
+    "aggregate_raw_factor_atoms_checked": 55,
+    "families": [
+      {
+        "q": 3,
+        "raw_factor_atoms_checked": 7
+      },
+      {
+        "q": 5,
+        "raw_factor_atoms_checked": 9
+      },
+      {
+        "q": 7,
+        "raw_factor_atoms_checked": 11
+      },
+      {
+        "q": 11,
+        "raw_factor_atoms_checked": 13
+      },
+      {
+        "q": 13,
+        "raw_factor_atoms_checked": 15
+      }
+    ]
+  },
+  "next_targets": [
+    {
+      "known": "at one place the normalized Frobenius angles satisfy a doubling or sign-twisted doubling relation",
+      "name": "cross_prime_doubling_correspondence",
+      "open": "decide whether any geometric family enforces one orientation coherently across primes and what global functorial object, if any, results"
+    },
+    {
+      "known": "the restricted discriminant has special parameters t=0,+/-1,+/-2",
+      "name": "intersection_multiplicity_and_singularities",
+      "open": "compute scheme-theoretic graph intersections and relate multiplicities to compact centralizers and endoscopic degeneration"
+    }
+  ],
+  "payload_sha256": "c2657dceb8784e5581092cfd07500f7f39680ce4685516f0ce03e02c195b230c",
+  "producer_and_source_locks": {
+    "input_method": "two internally authenticated JSON artifacts plus LF-normalized fixture and producer file locks",
+    "locks": {
+      "so4_fixture": {
+        "path": "research/l-families/atlas/function_field/elliptic_pair_rankin_so4_family.json",
+        "payload_sha256": "3634ab438de17596fa7a616130a318b85b579178b6d87f017523dae25c53e028",
+        "schema": "riemann.function_field.elliptic_pair_rankin_so4_family.v2",
+        "sha256_lf_normalized": "6f10140f9ebcde3a85feadd3498c43214617cb62305cb8c610308c229d175a38"
+      },
+      "so4_producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_pair_rankin_so4_family.py",
+        "sha256_lf_normalized": "2f3b0bab10135a626d0a05cde2a2fa75aa07e9bc62276411c1d0874bc2078545"
+      },
+      "sym3_fixture": {
+        "path": "research/l-families/atlas/function_field/elliptic_symmetric_cube_family.json",
+        "payload_sha256": "7e30dd220b9c9e3a3873ffe8b168ad53af4899de1dd21a2d69e2498abc6ee5b9",
+        "schema": "riemann.function_field.elliptic_symmetric_cube_family.v1",
+        "sha256_lf_normalized": "2b8b7f206c4e4c24f4e1ac65d093ab976dd6483dceb6ea52f44e76a7004bb033"
+      },
+      "sym3_producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py",
+        "sha256_lf_normalized": "1a99107771a804f39c6d3b26b0b1e67ad385500ce6776f2e14cfe6bf7b810d26"
+      }
+    }
+  },
+  "raw_fixture_id": "elliptic-so4-sym3-spectral-intersection-v1",
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "direct_scaled_factorization_checks": 645,
+      "direct_tensor_polynomial_normalization_checks": 645,
+      "locked_source_histogram_atom_pairs": 645,
+      "locked_sym3_raw_factor_checks": 55,
+      "nonsquare_valuation_obstruction_checks": 645,
+      "symbolic_zero_residual_certificates": 25,
+      "synthetic_direct_spectral_and_resultant_checks": 40,
+      "synthetic_square_hasse_lattice_points": 610,
+      "synthetic_waterhouse_stratum_checks": 24,
+      "total_accounted_work_units": 3334
+    },
+    "actual_locked_source_histogram_atom_pairs": 645,
+    "atom_pair_cap_inclusive": 645,
+    "exclusive_accounted_work_unit_cap": 4000,
+    "field_curve_or_model_enumerations": 0,
+    "floating_point_results": 0,
+    "maximum_polynomial_degree": 24,
+    "random_samples": 0,
+    "unit_definition": "declared histogram pairs, Hasse-lattice points, and high-level exact identity checks; not CPU instructions"
+  },
+  "rigor_level": {
+    "compact_intersection": "PROVED_BY_EXACT_BIVARIATE_FACTORIZATION_AND_FOUR_GRAPH_PARAMETERIZATIONS",
+    "discriminant_restrictions": "PROVED_SYMBOLICALLY_AND_CHECKED_BY_DIRECT_SYLVESTER_RESULTANTS",
+    "locked_finite_replay": "EXACT_FOR_ALL_645_SOURCE_HISTOGRAM_ATOM_PAIRS",
+    "nonsquare_prime_power_obstruction": "PROVED_FOR_ALL_ODD_PRIME_POWERS_BY_PARITY_OF_P_ADIC_VALUATIONS",
+    "representation_homomorphism_global_correspondence_and_novelty": "NOT_INFERRED",
+    "square_q_lattice_counts": "PROVED_FOR_EVERY_Q_POW_2K_BY_AN_EXPLICIT_INTEGRAL_PARAMETERIZATION_AND_GRAPH_OVERLAP_COUNT",
+    "square_q_realizability": "CLASSIFIED_FROM_WATERHOUSE_THEOREM_4_1_INTO_THREE_REPEATED_ROOT_STRATA"
+  },
+  "schema": "riemann.function_field.elliptic_so4_sym3_spectral_intersection.v1",
+  "scope_firewall": {
+    "no_RH_or_GRH_claim": "compact spectral intersections and finite-field local factors imply no zero-free region, RH, or GRH theorem",
+    "no_local_to_global_correspondence": "a coefficient coincidence at one q does not construct isogenies, motives, automorphic transfers, compatible systems, or a global Euler product",
+    "no_measure_or_asymptotic_claim": "zero hits in five locked nonsquare-prime rows follow from an all-q arithmetic obstruction, not a fitted probability or convergence law",
+    "no_novelty_priority_claim": "the exact packaging is recorded for later comparison; no literature-priority claim is made",
+    "no_realizability_to_correspondence_upgrade": "Waterhouse gives separate local isogeny classes for the classified traces; it does not link the two tensor inputs to the Sym3 source by a curve-level or global correspondence",
+    "no_representation_homomorphism": "a torus-angle doubling graph and equality of normalized spectra do not supply an SU(2) representation homomorphism into the two tensor factors",
+    "no_unscaled_raw_factor_identity": "there is an exact P_tensor(s*T)=P_Sym3,c(T) identity at square-q graph points, but different motivic weights prevent identifying P_tensor(T) and P_Sym3,c(T) in the same unscaled variable"
+  },
+  "status": "EXACT_COMPACT_INTERSECTION_NONSQUARE_OBSTRUCTION_SQUARE_LATTICE_COUNTS_AND_WATERHOUSE_STRATA",
+  "symbolic_certificates": {
+    "all_residuals_are_zero": true,
+    "residual_count": 25,
+    "residuals": {
+      "global_curve_factorization_residual": [],
+      "u_from_v_epsilon_+1_curve_residual": [],
+      "u_from_v_epsilon_+1_endpoint_factor_residual": [],
+      "u_from_v_epsilon_+1_fold_discriminant_residual": [],
+      "u_from_v_epsilon_+1_full_discriminant_residual": [],
+      "u_from_v_epsilon_+1_sym3_second_coefficient_residual": [],
+      "u_from_v_epsilon_+1_sym3_trace_residual": [],
+      "u_from_v_epsilon_-1_curve_residual": [],
+      "u_from_v_epsilon_-1_endpoint_factor_residual": [],
+      "u_from_v_epsilon_-1_fold_discriminant_residual": [],
+      "u_from_v_epsilon_-1_full_discriminant_residual": [],
+      "u_from_v_epsilon_-1_sym3_second_coefficient_residual": [],
+      "u_from_v_epsilon_-1_sym3_trace_residual": [],
+      "v_from_u_epsilon_+1_curve_residual": [],
+      "v_from_u_epsilon_+1_endpoint_factor_residual": [],
+      "v_from_u_epsilon_+1_fold_discriminant_residual": [],
+      "v_from_u_epsilon_+1_full_discriminant_residual": [],
+      "v_from_u_epsilon_+1_sym3_second_coefficient_residual": [],
+      "v_from_u_epsilon_+1_sym3_trace_residual": [],
+      "v_from_u_epsilon_-1_curve_residual": [],
+      "v_from_u_epsilon_-1_endpoint_factor_residual": [],
+      "v_from_u_epsilon_-1_fold_discriminant_residual": [],
+      "v_from_u_epsilon_-1_full_discriminant_residual": [],
+      "v_from_u_epsilon_-1_sym3_second_coefficient_residual": [],
+      "v_from_u_epsilon_-1_sym3_trace_residual": []
+    }
+  },
+  "synthetic_square_q_hasse_lattice_replay": {
+    "families": [
+      {
+        "all_q_count_theorem_specialization": {
+          "M=p^floor(k/2)": 1,
+          "distinct_integral_hasse_lattice_points": 12,
+          "four_graph_branch_incidences": 20,
+          "integral_parameters_per_oriented_signed_graph": 5,
+          "k": 1,
+          "k_equals_2_explicit_ghost_A_B": null,
+          "p": 3,
+          "pairwise_overlap_description": "the only integral (equivalently rational) overlaps are four endpoint pairs and four unit pairs, each incident to exactly two graphs; additional irrational real graph intersections do not affect the lattice count",
+          "q": 9,
+          "waterhouse_realized_distinct_points": 12,
+          "waterhouse_realized_strata": {
+            "endpoint_endpoint": 4,
+            "endpoint_zero": 4,
+            "unit_unit": 4
+          }
+        },
+        "graph_branch_incidence_count": 20,
+        "hasse_lattice_points_checked": 169,
+        "intersection_lattice_point_count": 12,
+        "intersection_lattice_points": [
+          {
+            "A": -6,
+            "B": -6,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 6,
+                "sym3_source_base_coefficient_a": -6
+              },
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 6,
+                "sym3_source_base_coefficient_a": -6
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          },
+          {
+            "A": -6,
+            "B": 0,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                2,
+                0
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": -6,
+            "B": 6,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -6,
+                "sym3_source_base_coefficient_a": 6
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -6,
+                "sym3_source_base_coefficient_a": 6
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              -4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          },
+          {
+            "A": -3,
+            "B": -3,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -3,
+                "sym3_source_base_coefficient_a": 3
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -3,
+                "sym3_source_base_coefficient_a": 3
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": -3,
+            "B": 3,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 3,
+                "sym3_source_base_coefficient_a": -3
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 3,
+                "sym3_source_base_coefficient_a": -3
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              -1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": 0,
+            "B": -6,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                0,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": 0,
+            "B": 6,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                0,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": 3,
+            "B": -3,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 3,
+                "sym3_source_base_coefficient_a": -3
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 3,
+                "sym3_source_base_coefficient_a": -3
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              -1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": 3,
+            "B": 3,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -3,
+                "sym3_source_base_coefficient_a": 3
+              },
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -3,
+                "sym3_source_base_coefficient_a": 3
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": 6,
+            "B": -6,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -6,
+                "sym3_source_base_coefficient_a": 6
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -6,
+                "sym3_source_base_coefficient_a": 6
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              -4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          },
+          {
+            "A": 6,
+            "B": 0,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                2,
+                0
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": 6,
+            "B": 6,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 6,
+                "sym3_source_base_coefficient_a": -6
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 6,
+                "sym3_source_base_coefficient_a": -6
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          }
+        ],
+        "intersection_stratum_counts": {
+          "endpoint_endpoint": 4,
+          "endpoint_zero": 4,
+          "unit_unit": 4
+        },
+        "q": 9,
+        "realizability_status": "CLASSIFIED_TRACE_BY_TRACE_FROM_WATERHOUSE_THEOREM_4_1; separate local isogeny classes only",
+        "sqrt_q": 3,
+        "waterhouse_realized_intersection_point_count": 12
+      },
+      {
+        "all_q_count_theorem_specialization": {
+          "M=p^floor(k/2)": 1,
+          "distinct_integral_hasse_lattice_points": 12,
+          "four_graph_branch_incidences": 20,
+          "integral_parameters_per_oriented_signed_graph": 5,
+          "k": 1,
+          "k_equals_2_explicit_ghost_A_B": null,
+          "p": 5,
+          "pairwise_overlap_description": "the only integral (equivalently rational) overlaps are four endpoint pairs and four unit pairs, each incident to exactly two graphs; additional irrational real graph intersections do not affect the lattice count",
+          "q": 25,
+          "waterhouse_realized_distinct_points": 8,
+          "waterhouse_realized_strata": {
+            "endpoint_endpoint": 4,
+            "endpoint_zero": 0,
+            "unit_unit": 4
+          }
+        },
+        "graph_branch_incidence_count": 20,
+        "hasse_lattice_points_checked": 441,
+        "intersection_lattice_point_count": 12,
+        "intersection_lattice_points": [
+          {
+            "A": -10,
+            "B": -10,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 10,
+                "sym3_source_base_coefficient_a": -10
+              },
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 10,
+                "sym3_source_base_coefficient_a": -10
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          },
+          {
+            "A": -10,
+            "B": 0,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": false,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                2,
+                0
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": -10,
+            "B": 10,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -10,
+                "sym3_source_base_coefficient_a": 10
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -10,
+                "sym3_source_base_coefficient_a": 10
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              -4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          },
+          {
+            "A": -5,
+            "B": -5,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -5,
+                "sym3_source_base_coefficient_a": 5
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -5,
+                "sym3_source_base_coefficient_a": 5
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": -5,
+            "B": 5,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 5,
+                "sym3_source_base_coefficient_a": -5
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 5,
+                "sym3_source_base_coefficient_a": -5
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              -1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": 0,
+            "B": -10,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": false,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                0,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": 0,
+            "B": 10,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": false,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                0,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": 5,
+            "B": -5,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 5,
+                "sym3_source_base_coefficient_a": -5
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 5,
+                "sym3_source_base_coefficient_a": -5
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              -1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": 5,
+            "B": 5,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -5,
+                "sym3_source_base_coefficient_a": 5
+              },
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -1,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -5,
+                "sym3_source_base_coefficient_a": 5
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              9,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "p is not congruent to 1 modulo 3",
+              "normalized_absolute_pair": [
+                1,
+                1
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "unit_unit",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (3) for traces +/-sqrt(q)"
+              ]
+            },
+            "x": [
+              1,
+              1
+            ],
+            "y": [
+              0,
+              1
+            ]
+          },
+          {
+            "A": 10,
+            "B": -10,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": -10,
+                "sym3_source_base_coefficient_a": 10
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  -2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": -10,
+                "sym3_source_base_coefficient_a": 10
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              -4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          },
+          {
+            "A": 10,
+            "B": 0,
+            "branches": [
+              {
+                "epsilon": -1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  0,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 0,
+                "sym3_source_base_coefficient_a": 0
+              }
+            ],
+            "coefficient_map_fold_D": [
+              16,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": false,
+              "congruence_condition": "p is not congruent to 1 modulo 4",
+              "normalized_absolute_pair": [
+                2,
+                0
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_zero",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for +/-2*sqrt(q)",
+                "Theorem 4.1 case (5)(ii) for trace 0"
+              ]
+            },
+            "x": [
+              0,
+              1
+            ],
+            "y": [
+              2,
+              1
+            ]
+          },
+          {
+            "A": 10,
+            "B": 10,
+            "branches": [
+              {
+                "epsilon": 1,
+                "normalized_graph": "u=epsilon*(v^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "u_from_v",
+                "sym3_geometric_trace_c": 10,
+                "sym3_source_base_coefficient_a": -10
+              },
+              {
+                "epsilon": 1,
+                "normalized_graph": "v=epsilon*(u^2-2)",
+                "normalized_sym3_parameter_t": [
+                  2,
+                  1
+                ],
+                "orientation": "v_from_u",
+                "sym3_geometric_trace_c": 10,
+                "sym3_source_base_coefficient_a": -10
+              }
+            ],
+            "coefficient_map_fold_D": [
+              0,
+              1
+            ],
+            "full_quartic_root_discriminant": [
+              0,
+              1
+            ],
+            "hasse_endpoint_factor_E": [
+              0,
+              1
+            ],
+            "normalized_polynomial_Z0_through_Z4": [
+              [
+                1,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "waterhouse_classification": {
+              "both_tensor_input_traces_realized": true,
+              "congruence_condition": "none",
+              "normalized_absolute_pair": [
+                2,
+                2
+              ],
+              "on_integral_compact_intersection": true,
+              "stratum": "endpoint_endpoint",
+              "waterhouse_cases": [
+                "Theorem 4.1 case (2) for traces +/-2*sqrt(q)"
+              ]
+            },
+            "x": [
+              4,
+              1
+            ],
+            "y": [
+              6,
+              1
+            ]
+          }
+        ],
+        "intersection_stratum_counts": {
+          "endpoint_endpoint": 4,
+          "endpoint_zero": 4,
+          "unit_unit": 4
+        },
+        "q": 25,
+        "realizability_status": "CLASSIFIED_TRACE_BY_TRACE_FROM_WATERHOUSE_THEOREM_4_1; separate local isogeny classes only",
+        "sqrt_q": 5,
+        "waterhouse_realized_intersection_point_count": 8
+      }
+    ],
+    "purpose": "nonvacuous exact checks of all four branches, sign bridges, raw dilation identities, discriminant restrictions, lattice counts, and Waterhouse strata",
+    "realizability_boundary": "Waterhouse classifies trace realization by separate elliptic isogeny classes; it supplies no shared curve, correspondence, or global compatible system"
+  }
+}
