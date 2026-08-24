@@ -179,8 +179,7 @@ The linear term cancels, giving
 \mathcal Q_r(a,h)
 =-{2\over3}h^3m_r'''(a)+O(h^5).
 }
-\tag{L-105438.13
-}
+\tag{L-105438.13}
 
 For a Pick ratio, `m'''(a)>=0`, consistently giving the desired sign.
 
