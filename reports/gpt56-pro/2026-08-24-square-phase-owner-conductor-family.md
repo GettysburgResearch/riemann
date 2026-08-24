@@ -45,8 +45,11 @@ The multiplicative transform is a family of even Dirichlet characters
 `eta=chi^2`. When the conductor is a literal opposite owner prime, the native
 untwisted core has coefficient `(p+1)/(p-1)>1` inside the positive family
 moment. Principal leverage is therefore source-paid at this local interface.
-The remaining open problem is coherent summation over different owner packets,
-not local extraction of the principal member.
+
+The same identity proves that the **local physical observation operator** from
+one squareclass phase packet to its unphased field has sharp norm squared
+`(p-1)/(p+1)`. Local occupancy is closed. The remaining open problem is the
+coherent assembly of different owner packets after physical identification.
 
 ## 1. Moving-parent synchronization
 
@@ -191,7 +194,46 @@ Gauss weight produces the coefficient `(rho+1)/(rho-1)`. Deleting the
 quadratic root deletes most of the local principal leverage; calling it an
 independent core-oscillating channel is equally false.
 
-## 6. Function-field mechanism
+## 6. Local physical occupancy is exactly closed
+
+Let the source/phase norm be
+
+\[
+\|v\|_{\rm ph}^2=\sum_{h\ne0}\|F_h\|^2
+\]
+
+and let the local physical observation map the phase packet to
+
+\[
+F_0=\sum_n v_n.
+\]
+
+In sign-pair coordinates the phase Gram is `pI-J`. For fixed physical sum, its
+energy is minimized when every sign-pair sum is equal. Therefore
+
+\[
+\boxed{
+\|\mathscr O_{p,u}^{\rm sq}\|^2={p-1\over p+1}.
+}
+\]
+
+This value is attained, so the theorem is sharp. For several selected phases,
+the squared norm is the product of these factors.
+
+The reviewed `BPOE103300` also includes collisions between **different**
+source-owned occurrences after physical collapse. Thus the new theorem closes
+one squareclass at a time, but does not prove global BPOE.
+
+The occupancy factorization is now
+
+```text
+source/phase amplitude                    CLOSED
+ -> local squareclass observation         SHARP CONTRACTION, CLOSED
+ -> coherent owner-packet assembly        OPEN
+ -> physical shell.
+```
+
+## 7. Function-field mechanism
 
 Over `F_Q`, the same identity is exact and does not use geometric RH. The local
 sheaf-theoretic object is the Fourier transform of the square map
@@ -204,18 +246,18 @@ with Kummer multiplicative sheaves and an Artin--Schreier additive phase.
 
 The sharpened geometric target is not generic purity. It is to control the
 incomplete degree-restricted and Möbius/Vaughan-weighted Kummer--Artin--Schreier
-traces coherently as owner irreducibles vary, including the principal/quadratic
-root fibre and all resonant strata.
+traces and their assembly as owner irreducibles vary, including the
+principal/quadratic root fibre and all resonant strata.
 
-## 7. New frontier
+## 8. New frontier
 
 Define
 
 ```text
 SOCM106020:
-  the source-weighted coherent moment of the surviving short-core
-  horizon-safe balanced packets, expressed in the complete even
-  owner-conductor character basis, is subpower.
+  after the sharp local occupancy contraction, the source-weighted coherent
+  assembly of the surviving short-core horizon-safe owner packets, expressed
+  in the complete even owner-conductor character basis, is subpower.
 ```
 
 Then
@@ -230,18 +272,18 @@ SOCM106020
 The corresponding function-field discovery target is `FFSOCM106023`.
 Neither target is proved.
 
-## 8. Exact replay
+## 9. Exact replay
 
 ```text
 PASS_X_106020_SQUARE_PHASE_OWNER_CONDUCTOR_FAMILY
-exact_checks=6306
-proof_object_sha256=5bc623c12b447cde059c5a2ff77abde3cdce1b5634e1a6d11836f14f1472eac9
+exact_checks=6426
+proof_object_sha256=63f7cbba47dea60cf308b26e46162b4dc23f54798f7ce408424bf7f1058f4872
 ```
 
 The checker uses exact integer and rational arithmetic for Hilbert-valued
-fixtures. It authenticates the finite Fourier identities and the fixed-owner
-algebra only. It does not evaluate any `L`-function, prove the coherent moment,
-or prove RH.
+fixtures. It authenticates the finite Fourier identities, fixed-owner algebra,
+character-square fibres and sharp local occupancy equality cases. It does not
+evaluate any `L`-function, prove the coherent assembly, or prove RH.
 
 ## Boundary
 
@@ -253,10 +295,12 @@ phase-cardinality removal                            PROVED EXACT
 all-owner-weight fixed-packet estimate               PROVED
 owner-conductor even reciprocal-L family             PROVED EXACT
 local source-paid principal leverage                 PROVED EXACT
+local squareclass physical occupancy                 PROVED SHARP
 Kummer--Fourier finite-field mechanism               PROVED EXACT
 long-core coherent phase packing                     INHERITED PROVED
-SOCM106020                                           OPEN / RH-BEARING
-FFSOCM106023                                         OPEN / EXPLORATORY
+SOCM106020 coherent owner-packet assembly             OPEN / RH-BEARING
+FFSOCM106023 geometric trace assembly                 OPEN / EXPLORATORY
+BPOE103300 global physical occupancy                 OPEN / RH-BEARING
 HBCQDSP102888                                        OPEN / RH-BEARING
 Riemann Hypothesis                                   UNPROVED
 ```
