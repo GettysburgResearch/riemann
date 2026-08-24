@@ -51,11 +51,11 @@ E(Y;P)
 D(Y;P)
 +C\sum_{p\in P}{1\over p}
 E(Y/p;P_{<p})
-+Y^{o(1)},
++Y^{o(1)}.
 }
-\tag{L-102837.3
+\tag{L-102837.3}
 
-where `C` is an absolute gauge-transfer constant and the last term contains
+Here `C` is an absolute gauge-transfer constant and the last term contains
 only the already-closed squared, repeated-label, same-product and finite
 regions.
 
@@ -72,7 +72,7 @@ weight is bounded by
 =
 \prod_{p\in P}\left(1+{C\over p}\right)
 \ll_C (\log(2Y))^C.
-\tag{L-102837.4
+\tag{L-102837.4}
 
 Therefore
 
@@ -82,7 +82,7 @@ D(Y)=Y^{o(1)}
 \Longrightarrow
 E(Y)=Y^{o(1)}.
 }
-\tag{L-102837.5
+\tag{L-102837.5}
 
 Shared-owner sectors require no independent conclusion-bearing estimate. They
 are absorbed by a source-faithful decreasing-prime renewal.
