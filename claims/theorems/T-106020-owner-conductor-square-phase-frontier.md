@@ -2,10 +2,11 @@
 
 Claim ID: `T-106020`  
 Programme aliases: `LFAM1.OWNER_CONDUCTOR_MOMENT`, `LFAM2.KUMMER_TRACE_HANDOFF`, `STRESS.SHORT_CORE_FAMILY_FRONTIER`  
-Status: **MAJOR EXACT THREE-PROGRAM REDUCTION; COHERENT MOMENT OPEN**  
+Status: **MAJOR EXACT THREE-PROGRAM REDUCTION; COHERENT ASSEMBLY OPEN**  
 Created: 2026-08-24  
+Updated: 2026-08-24  
 Base: PR #719 at `c2e82cfdd254a478731f005b3d83b49d3e1e33ea`  
-Depends on: `L-106020--L-106023`; `R-106020`; PR #719 `L-102883`, `L-102886--L-102888`  
+Depends on: `L-106020--L-106024`; `R-106020`; PR #719 `L-102883`, `L-102886--L-102888`; reviewed `BPOE103300`  
 Programme issues: #743, #736, #737  
 RH status: **unproved**
 
@@ -101,7 +102,40 @@ The principal/quadratic square-root fibre supplies the coefficient
 leverage**. The separate auxiliary-amplifier premise `PLEV106001` is not needed
 on this route.
 
-## 4. Inherited closed sector
+## 4. Local physical occupancy is closed sharply
+
+Let `mathscr O_(rho,u)^sq` map the source-owned nonzero square-phase packet to
+its unphased physical field. `L-106024` proves the exact operator norm
+
+\[
+\boxed{
+\|\mathscr O_{\rho,u}^{\rm sq}\|^2
+={\rho-1\over\rho+1}<1.
+}
+\tag{T-106020.4}
+\]
+
+For several selected owner phases the local observation tensor has norm squared
+
+\[
+\prod_j{\rho_j-1\over\rho_j+1}<1.
+\]
+
+Thus the local physical-occupancy step inside each clean squareclass packet is
+no longer open. The reviewed global occupancy theorem `BPOE103300` also sums
+different occurrences and owner packets after physical identification. That
+assembly is not supplied by the local contraction.
+
+The surviving operator factorization is
+
+```text
+source/phase amplitude                     INHERITED CLOSED
+ -> one squareclass physical observation   SHARP CONTRACTION, PROVED
+ -> coherent owner-packet assembly         OPEN
+ -> physical shell.
+```
+
+## 5. Inherited closed sector
 
 The abstract coherent phase-packing theorem `L-102883` applies to every
 deterministic clean owner pair. With the literal owner weights retained, it
@@ -118,17 +152,18 @@ Thus the open owner-conductor moment may be restricted to the balanced blocks
 not covered by that theorem, including the genuinely short-core and
 owner-allocation coupling.
 
-## 5. Exact remaining theorem
+## 6. Exact remaining theorem
 
 Define
 
 ```text
 SOCM106020:
   after carrier recombination, Wick quotient, horizon-safe pair allocation,
-  overlap renewals and dyadic-frozen owner-excluded Vaughan decomposition,
-  the coherent source-weighted moment of the surviving short-core packets,
-  written in the even owner-conductor Dirichlet-character basis of
-  T-106020.3, has subpower logarithmic energy/negative mass.
+  overlap renewals, dyadic-frozen owner-excluded Vaughan decomposition and the
+  sharp local occupancy contraction, the coherent source-weighted assembly of
+  the surviving short-core owner packets, written in the complete even
+  owner-conductor Dirichlet-character basis of T-106020.3, has subpower
+  logarithmic energy/negative mass.
 ```
 
 The moment must retain in one ledger:
@@ -139,7 +174,8 @@ all nonprincipal even L(2s,eta) channels;
 the exact Gauss weights;
 the smaller-opposite-owner choice or a declared coherent selector;
 the literal owner coefficients;
-all physical distinct-product restrictions.
+all physical distinct-product restrictions;
+the collisions between different owner packets after physical observation.
 ```
 
 A bound only for nonquadratic characters does not prove `SOCM106020`, because
@@ -157,12 +193,12 @@ Then
 \Longrightarrow
 \mathrm{RH}.
 }
-\tag{T-106020.4}
+\tag{T-106020.5}
 \]
 
 `SOCM106020` remains open.
 
-## 6. Function-field handoff
+## 7. Function-field handoff
 
 Over `F_q[T]`, the same local family is the Kummer--Fourier transform of the
 square map, with exact principal embedding `L-106023.3`. Define
@@ -170,15 +206,15 @@ square map, with exact principal embedding `L-106023.3`. Define
 ```text
 FFSOCM106023:
   control the incomplete owner-excluded Möbius/Vaughan Kummer--Artin--Schreier
-  traces coherently over owner irreducibles, with explicit resonant strata and
-  memberwise-versus-average scope.
+  traces and their assembly across owner irreducibles, with explicit resonant
+  strata and memberwise-versus-average scope.
 ```
 
 A useful proof should export the corresponding number-field hybrid
 character/exponential-sum theorem. Function-field RH alone is not the missing
 input.
 
-## 7. Exact boundary
+## 8. Exact boundary
 
 ```text
 horizon-safe pair / no smooth boundary          INHERITED PROVED
@@ -187,10 +223,12 @@ phase-cardinality removal                       PROVED EXACT
 all-owner-weight fixed-packet bound              PROVED
 owner-conductor even L-family                    PROVED EXACT
 local principal leverage                         PROVED EXACT
+local squareclass physical occupancy             PROVED SHARP
 long-core coherent packing                       INHERITED PROVED
 quadratic-root independence                      REFUTED
-SOCM106020 coherent short-core moment             OPEN / RH-BEARING
-FFSOCM106023 geometric trace moment               OPEN / EXPLORATORY
+SOCM106020 coherent short-core assembly           OPEN / RH-BEARING
+FFSOCM106023 geometric trace assembly             OPEN / EXPLORATORY
+BPOE103300 global occupancy                       OPEN / RH-BEARING
 HBCQDSP102888                                    OPEN / RH-BEARING
 Riemann Hypothesis                               UNPROVED
 ```
