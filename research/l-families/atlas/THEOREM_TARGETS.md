@@ -202,12 +202,139 @@ Combining this identity with the exact compact-group range
 Thus negative-member existence and a uniform asymptotic density floor no longer
 need nomination. The bound is one-sided and does not determine the sign law.
 
-The remaining target begins at moment two. Put
+The remaining target begins at moment two. One of its three coefficient pieces
+is now exact: reweighting the linear-only rows of the proved quartic table gives
+
+\[
+\sum_Da_D^4
+=q(q-1)(q+1)(3q^4-10q^3+15q^2-3q-11),
+\]
+
+so
+
+\[
+\mathbb E[(a_D/\sqrt q)^4]
+=3-\frac7q+\frac5{q^2}+\frac{12}{q^3}
+-\frac{14}{q^4}-\frac{11}{q^5}\longrightarrow3.
+\]
+
+A separate three-row degree-two calculation now also proves
+
+\[
+\mathbb E[b_D]=q-1+\frac{q^2-1}{q^3}.
+\]
+
+A seven-type quartic reweighting further proves
+
+\[
+\mathbb E[a_D^2b_D]
+=\frac{(q+1)(q^2-2q+3)(2q^2-2q-1)}{q^3}.
+\]
+
+Together with the proved `a_D^2` and `b_D^2` formulas, this isolates the exact
+low-weight character means
+
+\[
+\langle\chi_{0,1}\rangle_q=-q^{-1}+q^{-2}-q^{-4},\qquad
+\langle\chi_{2,0}\rangle_q=q^{-3}-q^{-4},\qquad
+\langle\chi_{0,2}\rangle_q=-q^{-1}-q^{-5},
+\]
+
+\[
+\langle\chi_{2,1}\rangle_q=2q^{-3}-q^{-4}-2q^{-5},\qquad
+\langle\chi_{4,0}\rangle_q=-3q^{-5}.
+\]
+
+A higher-moment proof should preserve this unequal decay: treating all
+nontrivial characters as a single generic `O(q^{-1})` error discards the exact
+`q^{-3}` suppression in the `chi_(2,0)` and `chi_(2,1)` channels and the
+`q^{-5}` suppression in `chi_(4,0)`.
+
+Writing
+
+\[
+A_4=\sum_Da_D^4,\qquad
+M_{22}=\sum_Da_D^2b_D^2,\qquad B_4=\sum_Db_D^4,
+\]
+
+the exact reduction is
+
+\[
+\sum_DK_D^2=q^2A_4-2qM_{22}+B_4.
+\]
+
+The remaining arithmetic is finite but not elementary bookkeeping: the same
+squarefree sieve reduces it to 20 degree-six signatures for `M_22` and 54
+degree-eight signatures for `B_4`. Their new inputs are six marked
+quadratic-character coefficient families (`p_1` in conductor degree four;
+`p_1,p_2` in degree six; and `p_1,p_2,p_3` in degree eight), sometimes with
+deletion-character factors. Principal and collision strata are polynomial;
+reciprocity may create a `chi_q(-1)` branch, while surviving coefficient
+averages may be genuine Frobenius-trace terms. A polynomial or two-branch fit
+must therefore be proved rather than inferred from `q=3,5,7`.
+
+There is an equivalent, especially compact representation-theoretic target.
+Put
 
 \[
 F(U)=(\operatorname{Tr}U)^2-e_2(U)^2,
 \qquad U\in USp(4).
 \]
+
+For `chi_(a,b)` denoting highest weight `a*omega_1+b*omega_2`, exact `C_2`
+decomposition gives
+
+\[
+\begin{aligned}
+F^2={}&3+4\chi_{0,1}+2\chi_{2,0}+4\chi_{0,2}+2\chi_{2,1}
++\chi_{4,0}+2\chi_{0,3}+\chi_{2,2}+\chi_{0,4},\\
+(\operatorname{Tr}U)^4={}&3+5\chi_{0,1}+6\chi_{2,0}+2\chi_{0,2}
++3\chi_{2,1}+\chi_{4,0}.
+\end{aligned}
+\]
+
+Since the normalized trace fourth moment is exact, the entire second-moment
+limit first reduces to the displayed virtual character. The new exact
+`a_D^2b_D` formula resolves its last two low-weight channels. Writing
+
+\[
+H=\chi_{0,4}+\chi_{2,2}+2\chi_{0,3},
+\]
+
+the complementary low-weight part has the exact average
+
+\[
+-q^{-1}-q^{-2}-6q^{-3}+6q^{-4}.
+\]
+
+Therefore the target is now the honest high-weight assertion
+`mean(H)->0`, equivalent to the desired second-moment limit. The frozen exact
+values provide regression controls only:
+
+\[
+\mathbb E[(K_D/q^2)^2]
+=\frac{2408}{3^7},\quad\frac{131504}{5^7},\quad
+\frac{1645440}{7^7}.
+\]
+
+The corresponding exact means of `H` are
+
+\[
+\frac{536}{2187},\qquad\frac{7154}{78125},\qquad
+\frac{37652}{823543}.
+\]
+
+Their `q^2` rescalings are `536/243`, `7154/3125`, and `37652/16807`, all
+near `9/4`. The cleanest sharpened target is therefore first to prove
+`mean(H)=O(q^{-2})`; a secondary conjecture is
+
+\[
+q^2\langle H\rangle_q\longrightarrow\frac94.
+\]
+
+The constant is a three-field nomination, not an interpolation theorem. A
+cohomological calculation should decide whether `9/4` is genuine, replaced by
+a congruence-dependent main term, or merely a small-field coincidence.
 
 The exact affine action
 
@@ -220,6 +347,9 @@ fixes `K_D` and partitions the frozen `q=3,5,7` families into 29, 132, and
 orbit-size weights and separate automorphism strata; in characteristic five,
 `T^5-T` is fixed by the entire affine group. Burnside or stack-weighted trace
 formulas are therefore more faithful than an unweighted representative sum.
+The same action with a nonsquare scaling proves every joint moment odd in
+`a_D` vanishes exactly; a correlation calculation may discard those strata
+before doing any character-sum work.
 
 For each fixed `m>=2`, prove an effective formula
 
@@ -241,6 +371,14 @@ first Haar mean `-1`. Exact `C_2` Weyl constant terms give the next five targets
 ```text
 m=2,3,4,5,6: 3, -11, 56, -374, 3117.
 ```
+
+More structurally,
+`F=-(1+chi_(0,1)+chi_(0,2))` is minus the character of an honest
+20-dimensional representation containing the trivial summand. Hence every
+Haar moment, at every order, is a nonzero integer with sign `(-1)^m`; the six
+displayed values are the first tensor-invariant multiplicities. This exact
+all-order sign theorem concerns the compact group and does not imply the
+corresponding finite-family limits.
 
 There is now a finite-moment payoff strictly between the unconditional
 `1/20` floor and full sign equidistribution. For
@@ -285,6 +423,30 @@ without needing full weak convergence or control of mass near `F=0`. This is a
 certified lower bound, not the exact Haar sign probability or a claimed optimal
 degree-six bound. It makes the six fixed-moment formulas a useful standalone
 theorem target even if an effective sign-law rate remains out of reach.
+
+There is now a stronger twelve-moment rung. Exact `C_2` constant terms give
+
+```text
+m=7,...,12: -30321, 327688, -3815668, 46998100, -605231862, 8084025096.
+```
+
+A separately replayed factorized degree-twelve majorant, certified by a
+positive quadratic square-completion remainder and ten positive rational
+Bernstein coefficients, proves
+
+\[
+\mu_{\mathrm{Haar}}(F<0)\ge
+\frac{153081644970674178368978470022738347661743507912075314789490808683}
+{318454738700269877013669525120657835305950388794994707229994647552}
+\approx0.480701.
+\]
+
+Thus formulas through `m=12` would upgrade the conditional finite-family
+liminf from `0.389836` to `0.480701`. The polynomial was discovered
+numerically but is accepted by exact rational algebra; neither it nor the
+degree-six predecessor is claimed optimal. This creates two useful stopping
+points for a proof: moments through six already give a substantial density
+theorem, while moments through twelve give a materially stronger one.
 
 The bounded shifted-grid Weyl quadrature additionally nominates
 

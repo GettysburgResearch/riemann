@@ -1,38 +1,60 @@
 {
   "closed_formula_target": {
     "evidence": "complete squarefree-Moebius proof and exact Q[q] certificate; q=3,5,7 enumerations are regression controls, not proof inputs",
+    "low_weight_character_profile": {
+      "mean_chi_(0,1)": "-1/q+1/q^2-1/q^4",
+      "mean_chi_(0,2)": "-1/q-1/q^5",
+      "mean_chi_(2,0)": "1/q^3-1/q^4",
+      "mean_chi_(2,1)": "2/q^3-1/q^4-2/q^5",
+      "mean_chi_(4,0)": "-3/q^5",
+      "normalization": "b_D/q=1+chi_(0,1); a_D^2/q=1+chi_(0,1)+chi_(2,0); b_D^2/q^2=2+2*chi_(0,1)+chi_(2,0)+chi_(0,2); a_D^2*b_D/q^2=2+3*chi_(0,1)+3*chi_(2,0)+chi_(0,2)+chi_(2,1); a_D^4/q^2=3+5*chi_(0,1)+6*chi_(2,0)+2*chi_(0,2)+3*chi_(2,1)+chi_(4,0)",
+      "scope": "every odd prime power q",
+      "status": "PROVED_FROM_EXACT_COEFFICIENT_MOMENTS"
+    },
     "mean_K": "-(q-1)^2+(q+1)/q^3",
+    "mean_a_fourth": "3*q^2-7*q+5+12/q-14/q^2-11/q^3",
     "mean_a_squared": "q-1+(q^2+q-2)/q^3",
+    "mean_a_squared_b": "(q+1)*(q^2-2*q+3)*(2*q^2-2*q-1)/q^3",
+    "mean_b": "q-1+(q^2-1)/q^3",
     "mean_b_squared": "2*q^2-3*q+2+(q^2-3*q-1)/q^3",
     "normalized_mean_K": "-(1-1/q)^2+(q+1)/q^5",
     "not_a_theorem": false,
     "proof": {
       "certificate": "research/l-families/atlas/function_field/genus2_moment_identity.py",
-      "certificate_sha256_lf_normalized": "6a7550d740fef3dceb2f3e0cf3731bfa1f67d800b9b4019564e37b7f41fac4fc",
+      "certificate_sha256_lf_normalized": "c9c9ca527623b3d589d79175f56e605f07b5dbad3f09a46c4a978ef54ed216a4",
       "note": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
-      "note_sha256_lf_normalized": "d76a0add6725ea94fe5016889f4d6e82a09ab143c7240b7af5815bbdfb342655",
+      "note_sha256_lf_normalized": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277",
       "operation_cap": 10000,
       "scan_regression_controls": {
         "3": {
           "member_count": true,
           "sum_K": true,
+          "sum_a_fourth": true,
           "sum_a_squared": true,
+          "sum_a_squared_b": true,
+          "sum_b": true,
           "sum_b_squared": true
         },
         "5": {
           "member_count": true,
           "sum_K": true,
+          "sum_a_fourth": true,
           "sum_a_squared": true,
+          "sum_a_squared_b": true,
+          "sum_b": true,
           "sum_b_squared": true
         },
         "7": {
           "member_count": true,
           "sum_K": true,
+          "sum_a_fourth": true,
           "sum_a_squared": true,
+          "sum_a_squared_b": true,
+          "sum_b": true,
           "sum_b_squared": true
         }
       },
-      "symbolic_operations": 1761
+      "symbolic_operations": 2925
     },
     "scope": "every odd prime power q",
     "smallest_gap": "formal proof-assistant translation or frozen-head review before integration; no mathematical gap is known in the stated identity",
@@ -68,6 +90,17 @@
           ],
           "matches": true
         },
+        "mean_a_fourth": {
+          "actual": [
+            352,
+            27
+          ],
+          "candidate": [
+            352,
+            27
+          ],
+          "matches": true
+        },
         "mean_a_squared": {
           "actual": [
             64,
@@ -75,6 +108,28 @@
           ],
           "candidate": [
             64,
+            27
+          ],
+          "matches": true
+        },
+        "mean_a_squared_b": {
+          "actual": [
+            88,
+            9
+          ],
+          "candidate": [
+            88,
+            9
+          ],
+          "matches": true
+        },
+        "mean_b": {
+          "actual": [
+            62,
+            27
+          ],
+          "candidate": [
+            62,
             27
           ],
           "matches": true
@@ -102,6 +157,28 @@
           "matches": true
         }
       },
+      "low_weight_character_means": {
+        "chi_(0,1)": [
+          -19,
+          81
+        ],
+        "chi_(0,2)": [
+          -82,
+          243
+        ],
+        "chi_(2,0)": [
+          2,
+          81
+        ],
+        "chi_(2,1)": [
+          13,
+          243
+        ],
+        "chi_(4,0)": [
+          -1,
+          81
+        ]
+      },
       "member_count": 162,
       "moments": {
         "K": {
@@ -111,12 +188,33 @@
           ],
           "sum": -624
         },
+        "a_fourth": {
+          "mean": [
+            352,
+            27
+          ],
+          "sum": 2112
+        },
         "a_squared": {
           "mean": [
             64,
             27
           ],
           "sum": 384
+        },
+        "a_squared_b": {
+          "mean": [
+            88,
+            9
+          ],
+          "sum": 1584
+        },
+        "b": {
+          "mean": [
+            62,
+            27
+          ],
+          "sum": 372
         },
         "b_squared": {
           "mean": [
@@ -247,6 +345,17 @@
           ],
           "matches": true
         },
+        "mean_a_fourth": {
+          "actual": [
+            5844,
+            125
+          ],
+          "candidate": [
+            5844,
+            125
+          ],
+          "matches": true
+        },
         "mean_a_squared": {
           "actual": [
             528,
@@ -254,6 +363,28 @@
           ],
           "candidate": [
             528,
+            125
+          ],
+          "matches": true
+        },
+        "mean_a_squared_b": {
+          "actual": [
+            4212,
+            125
+          ],
+          "candidate": [
+            4212,
+            125
+          ],
+          "matches": true
+        },
+        "mean_b": {
+          "actual": [
+            524,
+            125
+          ],
+          "candidate": [
+            524,
             125
           ],
           "matches": true
@@ -281,6 +412,28 @@
           "matches": true
         }
       },
+      "low_weight_character_means": {
+        "chi_(0,1)": [
+          -101,
+          625
+        ],
+        "chi_(0,2)": [
+          -626,
+          3125
+        ],
+        "chi_(2,0)": [
+          4,
+          625
+        ],
+        "chi_(2,1)": [
+          43,
+          3125
+        ],
+        "chi_(4,0)": [
+          -3,
+          3125
+        ]
+      },
       "member_count": 2500,
       "moments": {
         "K": {
@@ -290,12 +443,33 @@
           ],
           "sum": -39880
         },
+        "a_fourth": {
+          "mean": [
+            5844,
+            125
+          ],
+          "sum": 116880
+        },
         "a_squared": {
           "mean": [
             528,
             125
           ],
           "sum": 10560
+        },
+        "a_squared_b": {
+          "mean": [
+            4212,
+            125
+          ],
+          "sum": 84240
+        },
+        "b": {
+          "mean": [
+            524,
+            125
+          ],
+          "sum": 10480
         },
         "b_squared": {
           "mean": [
@@ -455,6 +629,17 @@
           ],
           "matches": true
         },
+        "mean_a_fourth": {
+          "actual": [
+            35808,
+            343
+          ],
+          "candidate": [
+            35808,
+            343
+          ],
+          "matches": true
+        },
         "mean_a_squared": {
           "actual": [
             2112,
@@ -462,6 +647,28 @@
           ],
           "candidate": [
             2112,
+            343
+          ],
+          "matches": true
+        },
+        "mean_a_squared_b": {
+          "actual": [
+            25232,
+            343
+          ],
+          "candidate": [
+            25232,
+            343
+          ],
+          "matches": true
+        },
+        "mean_b": {
+          "actual": [
+            2106,
+            343
+          ],
+          "candidate": [
+            2106,
             343
           ],
           "matches": true
@@ -489,6 +696,28 @@
           "matches": true
         }
       },
+      "low_weight_character_means": {
+        "chi_(0,1)": [
+          -295,
+          2401
+        ],
+        "chi_(0,2)": [
+          -2402,
+          16807
+        ],
+        "chi_(2,0)": [
+          6,
+          2401
+        ],
+        "chi_(2,1)": [
+          89,
+          16807
+        ],
+        "chi_(4,0)": [
+          -3,
+          16807
+        ]
+      },
       "member_count": 14406,
       "moments": {
         "K": {
@@ -498,12 +727,33 @@
           ],
           "sum": -518280
         },
+        "a_fourth": {
+          "mean": [
+            35808,
+            343
+          ],
+          "sum": 1503936
+        },
         "a_squared": {
           "mean": [
             2112,
             343
           ],
           "sum": 88704
+        },
+        "a_squared_b": {
+          "mean": [
+            25232,
+            343
+          ],
+          "sum": 1059744
+        },
+        "b": {
+          "mean": [
+            2106,
+            343
+          ],
+          "sum": 88452
         },
         "b_squared": {
           "mean": [
@@ -652,14 +902,14 @@
     "statistic": "Z_D=(q*a_D^2-b_D^2)/q^2",
     "status": "PROVED_FROM_EXACT_MEAN_AND_USP4_RANGE"
   },
-  "payload_sha256": "3ecbafdafeb78f421f179c6045e1ed8ea02be2251d2282f42e14aaf06bd8a3b4",
+  "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5",
   "producer": {
     "input_provenance": "complete deterministic generation, no external data",
     "runtime_contract": "Python 3.11+ standard library; exact integer/rational arithmetic",
     "shared_arithmetic_sha256_lf_normalized": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258",
     "shared_arithmetic_source": "research/l-families/atlas/function_field/pilot.py",
     "source": "research/l-families/atlas/function_field/genus2_q_scan.py",
-    "source_sha256_lf_normalized": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10"
+    "source_sha256_lf_normalized": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
   },
   "q3_existing_fixture_control": {
     "comparisons": {

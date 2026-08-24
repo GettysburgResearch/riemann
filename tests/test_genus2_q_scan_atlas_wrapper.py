@@ -77,6 +77,8 @@ class GenusTwoQScanAtlasTests(unittest.TestCase):
                 wrapper.AFFINE_ORBIT_FIXTURE,
                 wrapper.MOMENT_IDENTITY_NOTE,
                 wrapper.MOMENT_IDENTITY_CERTIFICATE,
+                wrapper.SECOND_MOMENT_REDUCTION_FIXTURE,
+                wrapper.SECOND_MOMENT_REDUCTION_SOURCE,
             },
         )
         q_scan_binding = next(
@@ -116,20 +118,78 @@ class GenusTwoQScanAtlasTests(unittest.TestCase):
             if binding["path"] == wrapper.MOMENT_IDENTITY_NOTE
         )
         self.assertEqual(note_binding["media_type"], "text/markdown")
+        second_moment_bindings = {
+            binding["path"]: binding
+            for binding in self.evaluation["input_bindings"]
+            if binding["path"]
+            in {
+                wrapper.SECOND_MOMENT_REDUCTION_FIXTURE,
+                wrapper.SECOND_MOMENT_REDUCTION_SOURCE,
+            }
+        }
+        self.assertEqual(
+            second_moment_bindings[wrapper.SECOND_MOMENT_REDUCTION_FIXTURE][
+                "hash_mode"
+            ],
+            "CANONICAL_JSON_UTF8_NFC",
+        )
+        self.assertEqual(
+            second_moment_bindings[wrapper.SECOND_MOMENT_REDUCTION_SOURCE][
+                "hash_mode"
+            ],
+            "RAW_BYTES",
+        )
+        self.assertTrue(
+            all(
+                binding["coverage_class"] == "PARTIAL"
+                for binding in second_moment_bindings.values()
+            )
+        )
+        self.assertEqual(
+            self.result["second_moment_reduction"]["source_fixture"][
+                "canonical_sha256"
+            ],
+            second_moment_bindings[wrapper.SECOND_MOMENT_REDUCTION_FIXTURE][
+                "sha256"
+            ],
+        )
+        second_moment_fulfillment = next(
+            fulfillment
+            for fulfillment in self.evaluation["input_fulfillments"]
+            if fulfillment["name"] == "second_moment_reduction_roadmap"
+        )
+        self.assertEqual(second_moment_fulfillment["coverage_class"], "PARTIAL")
+        self.assertEqual(
+            second_moment_fulfillment["sources"],
+            [
+                wrapper.SECOND_MOMENT_REDUCTION_FIXTURE,
+                wrapper.SECOND_MOMENT_REDUCTION_SOURCE,
+            ],
+        )
         self.assertEqual(self.evaluation["rigor_level"], "RIGOROUS_CERTIFIED")
 
     def test_compact_result_has_exact_finite_values_and_proof_backed_targets(self) -> None:
         by_q = {family["q"]: family for family in self.result["families"]}
         expected = {
-            3: (162, [-104, 243], {"negative": 102, "zero": 12, "positive": 48}),
-            5: (2500, [-1994, 3125], {"negative": 1650, "zero": 50, "positive": 800}),
-            7: (14406, [-12340, 16807], {"negative": 9702, "zero": 336, "positive": 4368}),
+            3: (162, 2112, 1584, 372, [-104, 243], {"negative": 102, "zero": 12, "positive": 48}),
+            5: (2500, 116880, 84240, 10480, [-1994, 3125], {"negative": 1650, "zero": 50, "positive": 800}),
+            7: (14406, 1503936, 1059744, 88452, [-12340, 16807], {"negative": 9702, "zero": 336, "positive": 4368}),
         }
-        for q, (members, normalized_mean, signs) in expected.items():
+        for q, (members, sum_a_fourth, sum_a_squared_b, sum_b, normalized_mean, signs) in expected.items():
             self.assertEqual(by_q[q]["member_count"], members)
+            self.assertEqual(by_q[q]["moments"]["a_fourth"]["sum"], sum_a_fourth)
+            self.assertEqual(by_q[q]["moments"]["a_squared_b"]["sum"], sum_a_squared_b)
+            self.assertEqual(by_q[q]["moments"]["b"]["sum"], sum_b)
             self.assertEqual(by_q[q]["moments"]["normalized_K"]["mean"], normalized_mean)
             self.assertEqual(by_q[q]["sign_counts"], signs)
             self.assertTrue(all(by_q[q]["formula_matches_at_this_q"].values()))
+        expected_character_means = {
+            3: {"chi_(0,1)": [-19, 81], "chi_(2,0)": [2, 81], "chi_(0,2)": [-82, 243], "chi_(2,1)": [13, 243], "chi_(4,0)": [-1, 81]},
+            5: {"chi_(0,1)": [-101, 625], "chi_(2,0)": [4, 625], "chi_(0,2)": [-626, 3125], "chi_(2,1)": [43, 3125], "chi_(4,0)": [-3, 3125]},
+            7: {"chi_(0,1)": [-295, 2401], "chi_(2,0)": [6, 2401], "chi_(0,2)": [-2402, 16807], "chi_(2,1)": [89, 16807], "chi_(4,0)": [-3, 16807]},
+        }
+        for q, profile in expected_character_means.items():
+            self.assertEqual(by_q[q]["low_weight_character_means"], profile)
         self.assertEqual(self.result["finite_result_status"], "RIGOROUS_CERTIFIED")
         self.assertEqual(
             self.result["resource_controls"]["candidate_cap_scope"],
@@ -141,8 +201,27 @@ class GenusTwoQScanAtlasTests(unittest.TestCase):
             self.result["closed_formula_target"]["scope"], "every odd prime power q"
         )
         self.assertEqual(
-            self.result["closed_formula_target"]["proof"]["symbolic_operations"], 1761
+            self.result["closed_formula_target"]["proof"]["symbolic_operations"], 2925
         )
+        self.assertEqual(
+            self.result["closed_formula_target"]["mean_a_fourth"],
+            "3*q^2-7*q+5+12/q-14/q^2-11/q^3",
+        )
+        self.assertEqual(
+            self.result["closed_formula_target"]["mean_b"],
+            "q-1+(q^2-1)/q^3",
+        )
+        self.assertEqual(
+            self.result["closed_formula_target"]["mean_a_squared_b"],
+            "(q+1)*(q^2-2*q+3)*(2*q^2-2*q-1)/q^3",
+        )
+        profile = self.result["closed_formula_target"]["low_weight_character_profile"]
+        self.assertEqual(profile["status"], "PROVED_FROM_EXACT_COEFFICIENT_MOMENTS")
+        self.assertEqual(profile["mean_chi_(0,1)"], "-1/q+1/q^2-1/q^4")
+        self.assertEqual(profile["mean_chi_(2,0)"], "1/q^3-1/q^4")
+        self.assertEqual(profile["mean_chi_(0,2)"], "-1/q-1/q^5")
+        self.assertEqual(profile["mean_chi_(2,1)"], "2/q^3-1/q^4-2/q^5")
+        self.assertEqual(profile["mean_chi_(4,0)"], "-3/q^5")
         self.assertEqual(
             self.result["usp4_limit_target"]["status"], wrapper.MEAN_LIMIT_STATUS
         )
@@ -156,6 +235,110 @@ class GenusTwoQScanAtlasTests(unittest.TestCase):
             {"3": [26, 1215], "5": [997, 31250], "7": [617, 16807]},
         )
         self.assertIsNone(self.evaluation["interpretation"]["theorem_claim_id"])
+
+    def test_second_moment_reduction_is_exact_compact_partial_and_source_locked(
+        self,
+    ) -> None:
+        reduction = self.result["second_moment_reduction"]
+        self.assertEqual(reduction["status"], wrapper.SECOND_MOMENT_REDUCTION_STATUS)
+        self.assertEqual(
+            reduction["master_reduction"]["formula"],
+            "sum_D K_D^2=q^2*A4(q)-2*q*M22(q)+B4(q)",
+        )
+        self.assertEqual(
+            reduction["master_reduction"]["unresolved_block"],
+            "B4(q)-2*q*M22(q)",
+        )
+        self.assertEqual(
+            reduction["master_reduction"]["proven_A4"]["status"],
+            "PROVED_BY_REWEIGHTING_THE_BOUND_QUARTIC_TABLE",
+        )
+        self.assertEqual(
+            reduction["signature_inventory"],
+            {
+                "M22": {
+                    "signature_count": 20,
+                    "signature_count_derivation": "11+5+4=20",
+                    "weighted_tuple_count_formula": "q^6",
+                    "maximum_tuple_weight": 180,
+                },
+                "B4": {
+                    "signature_count": 54,
+                    "signature_count_derivation": "22+11+10+6+5=54",
+                    "weighted_tuple_count_formula": "q^8",
+                    "maximum_tuple_weight": 2520,
+                },
+                "total_signature_count": 74,
+            },
+        )
+        primitive = reduction["primitive_character_reduction"]
+        self.assertEqual(primitive["marked_family_count"], 6)
+        self.assertEqual(
+            primitive["new_marked_primitive_coefficients"],
+            {
+                "degree_4": ["p1(r)"],
+                "degree_6": ["p1(r)", "p2(r)"],
+                "degree_8": ["p1(r)", "p2(r)", "p3(r)"],
+            },
+        )
+        character = reduction["character_reduction"]
+        self.assertEqual(
+            character["mixed_trace_middle"]["formula"],
+            "(Tr U)^2*e_2(U)=2*chi_00+3*chi_01+3*chi_20+chi_02+chi_21",
+        )
+        self.assertEqual(
+            character["mixed_trace_middle"]["dimension_checksum"], 96
+        )
+        self.assertEqual(
+            character["single_virtual_character_obstruction"]["status"],
+            "EXACT_REDUCTION_UNRESOLVED_FOR_GENERAL_Q",
+        )
+        refined = character["refined_honest_high_weight_obstruction"]
+        self.assertEqual(refined["status"], "EXACT_REDUCTION_USING_PROVED_LOW_WEIGHT_MEANS")
+        self.assertEqual(refined["formula"], "H=chi_04+chi_22+2*chi_03")
+        self.assertEqual(refined["dimension_checksum"], 196)
+        self.assertEqual(
+            [row["highest_weight_a_b"] for row in refined["decomposition"]],
+            [[0, 3], [2, 2], [0, 4]],
+        )
+        expected_checks = {
+            3: (14_448, -4_560, [-16, 27], [536, 2187]),
+            5: (2_630_080, -291_920, [-174, 625], [7_154, 78_125]),
+            7: (69_108_480, -4_584_384, [-428, 2401], [37_652, 823_543]),
+        }
+        self.assertEqual(
+            [row["q"] for row in reduction["finite_histogram_checks"]],
+            [3, 5, 7],
+        )
+        for row in reduction["finite_histogram_checks"]:
+            self.assertEqual(
+                (
+                    row["sum_K_squared"],
+                    row["unresolved_B4_minus_2qM22"],
+                    row["exact_low_weight_character_correction"],
+                    row["normalized_honest_high_weight_packet"],
+                ),
+                expected_checks[row["q"]],
+            )
+        resource = reduction["resource_contract"]
+        self.assertEqual(resource["actual_signatures"], 74)
+        self.assertLessEqual(resource["exact_operations_used"], 50_000)
+        self.assertEqual(resource["field_enumeration"], "FORBIDDEN_AND_NOT_IMPORTED")
+        self.assertEqual(
+            reduction["source_locks"]["q_scan"]["canonical_sha256"],
+            self.result["source_fixture"]["canonical_sha256"],
+        )
+        required = {entry["name"]: entry for entry in self.detector["required_inputs"]}
+        self.assertEqual(
+            required["second_moment_reduction_roadmap"]["coverage_requirement"],
+            "PARTIAL",
+        )
+        theorem = next(
+            link
+            for link in self.detector["theorem_links"]
+            if link["semantic_id"].endswith("SECOND_MOMENT_REDUCTION")
+        )
+        self.assertEqual(theorem["status"], "OPEN")
 
     def test_affine_orbit_certificate_is_exact_compact_and_source_bound(self) -> None:
         certificate = self.result["affine_orbit_certificate"]
@@ -283,6 +466,52 @@ class GenusTwoQScanAtlasTests(unittest.TestCase):
         false_affine_law = copy.deepcopy(self.result)
         false_affine_law["affine_orbit_certificate"]["action"]["b_D_law"] = "b'=chi*b"
         hostile_cases.append(false_affine_law)
+
+        false_second_moment_status = copy.deepcopy(self.result)
+        false_second_moment_status["second_moment_reduction"]["status"] = (
+            "PROVED_ALL_Q_SECOND_MOMENT_FORMULA"
+        )
+        hostile_cases.append(false_second_moment_status)
+
+        missing_unresolved_block = copy.deepcopy(self.result)
+        del missing_unresolved_block["second_moment_reduction"]["master_reduction"][
+            "unresolved_block"
+        ]
+        hostile_cases.append(missing_unresolved_block)
+
+        false_signature_count = copy.deepcopy(self.result)
+        false_signature_count["second_moment_reduction"]["signature_inventory"][
+            "M22"
+        ]["signature_count"] = 19
+        hostile_cases.append(false_signature_count)
+
+        reversed_residual_q = copy.deepcopy(self.result)
+        reversed_residual_q["second_moment_reduction"][
+            "finite_histogram_checks"
+        ].reverse()
+        hostile_cases.append(reversed_residual_q)
+
+        false_high_weight_upgrade = copy.deepcopy(self.result)
+        false_high_weight_upgrade["second_moment_reduction"]["character_reduction"][
+            "refined_honest_high_weight_obstruction"
+        ]["status"] = "PROVED_ZERO_AVERAGE"
+        hostile_cases.append(false_high_weight_upgrade)
+
+        enabled_field_enumeration = copy.deepcopy(self.result)
+        enabled_field_enumeration["second_moment_reduction"]["resource_contract"][
+            "field_enumeration"
+        ] = "ENABLED"
+        hostile_cases.append(enabled_field_enumeration)
+
+        wrong_reduction_source = copy.deepcopy(self.result)
+        wrong_reduction_source["second_moment_reduction"]["source_fixture"][
+            "path"
+        ] = "unbound.json"
+        hostile_cases.append(wrong_reduction_source)
+
+        unexpected_reduction_field = copy.deepcopy(self.result)
+        unexpected_reduction_field["second_moment_reduction"]["proved"] = True
+        hostile_cases.append(unexpected_reduction_field)
 
         for hostile in hostile_cases:
             with self.subTest(hostile=hostile):

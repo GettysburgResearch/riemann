@@ -50,6 +50,21 @@ Then \(\#\mathcal H_5=q^5-q^4=q^4(q-1)\), and
 \]
 
 \[
+ \boxed{\mathbb E_{\mathcal H_5}[a_D^4]
+ =3q^2-7q+5+\frac{12}{q}-\frac{14}{q^2}-\frac{11}{q^3}},
+\]
+
+\[
+ \boxed{\mathbb E_{\mathcal H_5}[a_D^2b_D]
+ =\frac{(q+1)(q^2-2q+3)(2q^2-2q-1)}{q^3}},
+\]
+
+\[
+ \boxed{\mathbb E_{\mathcal H_5}[b_D]
+ =q-1+\frac{q^2-1}{q^3}},
+\]
+
+\[
  \boxed{\mathbb E_{\mathcal H_5}[b_D^2]
  =2q^2-3q+2+\frac{q^2-3q-1}{q^3}},
 \]
@@ -206,6 +221,74 @@ into \(L^2\), \(LM\) with \(L\ne M\), and irreducible \(Q\), gives
 This also proves directly that the displayed definition of \(b_D\) is an
 integer.
 
+## The \(b_D\) first moment: three quadratic rows
+
+For a monic quadratic \(f\), put
+
+\[
+ C_n(f)=\sum_{B\in\mathcal M_n}\left(\frac Bf\right),
+\]
+
+and let \(\ell(f)\) and \(k(f)\) count the distinct linear and irreducible-
+quadratic primes in its support. Applying polynomial Moebius inversion to
+\(D=A^2B\), exactly as in the quartic calculation below, gives
+
+\[
+ \begin{aligned}
+ S_5(f)&:=\sum_{D\in\mathcal H_5}\left(\frac Df\right)\\
+ &=C_5(f)-(q-\ell(f))C_3(f)\\
+ &\quad+\left(\binom{\ell(f)+1}{2}+k(f)-q\ell(f)\right)C_1(f).
+ \end{aligned}
+\tag{4a}
+\]
+
+There are only three quadratic factorization types. For \(f=L^2\), the
+character is principal away from \(L\), so
+
+\[
+ L_f(u)=\frac{1-u}{1-qu},\qquad
+ C_n(f)=q^{n-1}(q-1)\quad(n\geq1).
+\]
+
+For both \(f=LM\), with \(L\ne M\), and irreducible \(f=Q\), the character
+is primitive, nontrivial, even, and of conductor degree two. Thus (2) gives
+\(C_1(f)=-1\) and \(C_3(f)=C_5(f)=0\). Substitution in (4a) reconstructs
+every row:
+
+| Type of \(f\) | Number of \(f\) | \((\ell,k)\) | \(C_1(f)\) | \(C_3(f)\) | \(C_5(f)\) | \(S_5(f)\) | Total contribution |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| \(L^2\) | \(q\) | \((1,0)\) | \(q-1\) | \(q^2(q-1)\) | \(q^4(q-1)\) | \(A\) | \(qA\) |
+| \(LM\) | \(\binom q2\) | \((2,0)\) | \(-1\) | \(0\) | \(0\) | \(2q-3\) | \(\binom q2(2q-3)\) |
+| \(Q\) | \(I=q(q-1)/2\) | \((0,1)\) | \(-1\) | \(0\) | \(0\) | \(-1\) | \(-I\) |
+
+Here
+
+\[
+ A=q^5-2q^4+2q^3-2q^2+2q-1.
+\]
+
+Summing the three contributions and factoring yields
+
+\[
+ \begin{aligned}
+ \sum_{D\in\mathcal H_5}b_D
+ &=qA+\binom q2(2q-3)-\frac{q(q-1)}2\\
+ &=q(q-1)(q^4-q^3+q^2-1).
+ \end{aligned}
+\tag{4b}
+\]
+
+Division by \(q^4(q-1)\) proves
+
+\[
+ \mathbb E_{\mathcal H_5}[b_D]
+ =q-1+\frac{q^2-1}{q^3}.
+\tag{4c}
+\]
+
+As exact certificate specializations, not inputs to the proof, (4b) gives
+\(\sum_D b_D=372,10480,88452\) at \(q=3,5,7\), respectively.
+
 ## The \(a_D^2\) moment
 
 The untwisted squarefree Euler product first gives the family size:
@@ -258,6 +341,109 @@ The factor \((1-q u^2)/(1-u^2)^2\) in (6) is
 \]
 
 Dividing (7) by \(q^4(q-1)\) proves the first claimed mean.
+
+## The \(a_D^4\) moment by ordered-linear reweighting
+
+No new character-sum type is needed for the fourth moment. Expanding
+
+\[
+a_D^4=\sum_{L_1,L_2,L_3,L_4\in\mathcal M_1}
+\left(\frac{D}{L_1L_2L_3L_4}\right)
+\tag{7a}
+\]
+
+again produces a monic quartic \(h\), but now its weight is the number of
+ordered linear quadruples with product \(h\). Only the five linear-only rows
+of the nine-row table below occur:
+
+| Type of \(h\) | Number of \(h\) | ordered-linear weight |
+|---|---:|---:|
+| \(L^4\) | \(q\) | 1 |
+| \(L^3M\) | \(q(q-1)\) | 4 |
+| \(L^2M^2\) | \(\binom q2\) | 6 |
+| \(LMN^2\) | \(\binom q2(q-2)\) | 12 |
+| \(LMNR\) | \(\binom q4\) | 24 |
+
+The squarefree-sieve value \(S(h)\) depends only on \(h\), not on which
+factorization led to it. Therefore the already proved quartic rows may be
+reused with these five weights. Their principal \(C_5\) contribution and
+Moebius correction are respectively
+
+\[
+T_0^{(4)}=-3q^4+8q^5-8q^6+3q^7,
+\]
+
+\[
+\Delta^{(4)}=11q+3q^2-26q^3+10q^4+4q^5-2q^6.
+\]
+
+The exact symbolic certificate reconstructs both polynomials from the rows,
+not by interpolation. Adding and factoring gives
+
+\[
+\sum_{D\in\mathcal H_5}a_D^4
+=q(q-1)(q+1)(3q^4-10q^3+15q^2-3q-11).
+\tag{7b}
+\]
+
+After division by \(q^4(q-1)\), this is the displayed formula for
+\(\mathbb E[a_D^4]\). In particular
+\(\mathbb E[(a_D/\sqrt q)^4]\to3\), the exact fourth-moment target for the
+normalized trace statistic. This settles one of the three algebraic pieces in
+\(K_D^2=q^2a_D^4-2qa_D^2b_D^2+b_D^4\); the mixed and \(b_D^4\) terms still
+require conductor-degree-six and conductor-degree-eight correlations.
+
+## The mixed (a_D^2b_D) moment by quartic reweighting
+
+The same table also evaluates one mixed moment without a new character sum:
+
+\[
+a_D^2b_D=
+\sum_{L_1,L_2\in\mathcal M_1}\sum_{f\in\mathcal M_2}
+\left(\frac{D}{L_1L_2f}\right).
+\tag{7c}
+\]
+
+Here the tuple weight counts two ordered linear slots and one monic-quadratic
+slot. The seven occurring quartic types and weights are
+
+| Type of (h) | (L^4) | (L^2M^2) | (L^3M) | (QL^2) | (LMN^2) | (QLM) | (LMNR) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| tuple weight | 1 | 4 | 3 | 1 | 7 | 2 | 12 |
+
+The purely quadratic types (Q^2) and (Q_1Q_2) cannot contain the two
+linear slots and have weight zero. Reweighting the proved row values gives
+
+\[
+T_0^{(2,1)}=-2q^4+5q^5-5q^6+2q^7,
+\]
+
+and
+
+\[
+\Delta^{(2,1)}=3q+4q^2-12q^3+4q^4+2q^5-q^6.
+\]
+
+Their sum factors as
+
+\[
+\boxed{
+\sum_{D\in\mathcal H_5}a_D^2b_D
+=q(q-1)(q+1)(q^2-2q+3)(2q^2-2q-1)}.
+\tag{7d}
+\]
+
+Therefore
+
+\[
+\boxed{
+\mathbb E[a_D^2b_D]
+=\frac{(q+1)(q^2-2q+3)(2q^2-2q-1)}{q^3}}.
+\]
+
+The exact totals at (q=3,5,7) are (1584,84240,1059744). As with the
+fourth trace moment, these specializations are regression controls and not
+inputs to the symbolic proof.
 
 ## Squarefree sieve for the \(b_D^2\) moment
 

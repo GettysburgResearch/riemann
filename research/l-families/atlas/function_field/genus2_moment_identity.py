@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Tiny exact symbolic certificate for the squarefree-quintic moment identities.
+"""Tiny exact symbolic certificate for squarefree-quintic moment identities.
 
 This module does not enumerate finite fields or polynomial families.  It works
-in ``Q[q]`` with degree at most twelve, encodes the nine possible factorization
-types of a product of two monic quadratics, and checks the identities proved in
-``GENUS2_MOMENT_IDENTITY.md``.
+in ``Q[q]`` with degree at most twelve, encodes the three quadratic types for
+the first moment of ``b_D`` and the nine factorization types of a product of
+two monic quadratics, and reweights the five linear-only quartic types for the
+exact fourth moment of the trace coefficient.  It checks the identities proved
+in ``GENUS2_MOMENT_IDENTITY.md``.
 """
 
 from __future__ import annotations
@@ -17,6 +19,7 @@ from math import comb
 HARD_DEGREE_LIMIT = 12
 HARD_OPERATION_LIMIT = 10_000
 HARD_ROW_LIMIT = 9
+HARD_QUADRATIC_ROW_LIMIT = 3
 HARD_SERIES_LIMIT = 5
 
 
@@ -157,12 +160,41 @@ class QuarticType:
 
 
 @dataclass(frozen=True)
+class QuadraticType:
+    """One factorization type for the monic quadratic f in sum_D b_D.
+
+    Unlike ``QuarticType.c1_total``, all three character coefficients here
+    are per polynomial ``f``.  ``sieve_value`` reconstructs
+    ``sum_{D in H_5} (D/f)`` and ``contribution`` multiplies it by the number
+    of polynomials of this type.
+    """
+
+    label: str
+    count: Polynomial
+    linear_support: int
+    quadratic_support: int
+    c1_each: Polynomial
+    c3_each: Polynomial
+    c5_each: Polynomial
+    sieve_value: Polynomial = Polynomial((Fraction(0),))
+    contribution: Polynomial = Polynomial((Fraction(0),))
+
+
+@dataclass(frozen=True)
 class MomentCertificate:
     rows: tuple[QuarticType, ...]
+    quadratic_rows: tuple[QuadraticType, ...]
     squarefree_count: Polynomial
     a_diagonal_coefficient: Polynomial
     a_off_diagonal_coefficient: Polynomial
     sum_a_squared: Polynomial
+    a_fourth_t0: Polynomial
+    a_fourth_delta: Polynomial
+    sum_a_fourth: Polynomial
+    a_squared_b_t0: Polynomial
+    a_squared_b_delta: Polynomial
+    sum_a_squared_b: Polynomial
+    sum_b: Polynomial
     t0: Polynomial
     delta: Polynomial
     sum_b_squared: Polynomial
@@ -183,14 +215,23 @@ class MomentCertificate:
 
         members = exact_integer(self.squarefree_count)
         sum_a_squared = exact_integer(self.sum_a_squared)
+        sum_a_fourth = exact_integer(self.sum_a_fourth)
+        sum_a_squared_b = exact_integer(self.sum_a_squared_b)
+        sum_b = exact_integer(self.sum_b)
         sum_b_squared = exact_integer(self.sum_b_squared)
         sum_k = exact_integer(self.sum_k)
         return {
             "member_count": members,
             "sum_a_squared": sum_a_squared,
+            "sum_a_fourth": sum_a_fourth,
+            "sum_a_squared_b": sum_a_squared_b,
+            "sum_b": sum_b,
             "sum_b_squared": sum_b_squared,
             "sum_K": sum_k,
             "mean_a_squared": Fraction(sum_a_squared, members),
+            "mean_a_fourth": Fraction(sum_a_fourth, members),
+            "mean_a_squared_b": Fraction(sum_a_squared_b, members),
+            "mean_b": Fraction(sum_b, members),
             "mean_b_squared": Fraction(sum_b_squared, members),
             "mean_K": Fraction(sum_k, members),
         }
@@ -329,6 +370,111 @@ def _row_correction(
     return algebra.scale(algebra.add(first, second), row.weight)
 
 
+def _quadratic_sieve_value(
+    algebra: ExactAlgebra, q: Polynomial, row: QuadraticType
+) -> Polynomial:
+    """Return C5-(q-l)C3+(binom(l+1,2)+k-ql)C1 for one f."""
+
+    q_minus_l = algebra.subtract(q, polynomial(row.linear_support))
+    c3_correction = algebra.negate(
+        algebra.multiply(q_minus_l, row.c3_each)
+    )
+    moebius_degree_two = algebra.subtract(
+        polynomial(
+            row.linear_support * (row.linear_support + 1) // 2
+            + row.quadratic_support
+        ),
+        algebra.scale(q, row.linear_support),
+    )
+    c1_correction = algebra.multiply(moebius_degree_two, row.c1_each)
+    return algebra.sum((row.c5_each, c3_correction, c1_correction))
+
+
+def _a_fourth_from_quartic_rows(
+    algebra: ExactAlgebra, q: Polynomial, rows: tuple[QuarticType, ...]
+) -> tuple[Polynomial, Polynomial, Polynomial]:
+    """Reuse the linear-only quartic rows for sum_D a_D^4.
+
+    The original row weight counts ordered factorizations h=f*g by monic
+    quadratics.  For a_D^4, the relevant weight instead counts ordered
+    quadruples of monic linears with the displayed multiplicity pattern.
+    """
+
+    ordered_linear_weights = {
+        "L^4": 1,
+        "L^3 M": 4,
+        "L^2 M^2": 6,
+        "L M N^2": 12,
+        "L M N R": 24,
+    }
+    selected = tuple(row for row in rows if row.label in ordered_linear_weights)
+    if {row.label for row in selected} != set(ordered_linear_weights):
+        raise ArithmeticError("a^4 certificate lost a linear quartic factorization type")
+    principal = algebra.sum(
+        tuple(
+            algebra.scale(
+                algebra.multiply(row.count, row.c5_each),
+                ordered_linear_weights[row.label],
+            )
+            for row in selected
+        )
+    )
+    correction = algebra.sum(
+        tuple(
+            _row_correction(
+                algebra,
+                q,
+                replace(row, weight=ordered_linear_weights[row.label]),
+            )
+            for row in selected
+        )
+    )
+    return principal, correction, algebra.add(principal, correction)
+
+
+def _a_squared_b_from_quartic_rows(
+    algebra: ExactAlgebra, q: Polynomial, rows: tuple[QuarticType, ...]
+) -> tuple[Polynomial, Polynomial, Polynomial]:
+    """Reuse the quartic rows for sum_D a_D^2*b_D.
+
+    The weight counts two ordered linear slots and one monic-quadratic slot.
+    The two purely quadratic quartic types cannot occur.
+    """
+
+    tuple_weights = {
+        "L^4": 1,
+        "L^2 M^2": 4,
+        "L^3 M": 3,
+        "Q L^2": 1,
+        "L M N^2": 7,
+        "Q L M": 2,
+        "L M N R": 12,
+    }
+    selected = tuple(row for row in rows if row.label in tuple_weights)
+    if {row.label for row in selected} != set(tuple_weights):
+        raise ArithmeticError("a^2*b certificate lost a quartic factorization type")
+    principal = algebra.sum(
+        tuple(
+            algebra.scale(
+                algebra.multiply(row.count, row.c5_each),
+                tuple_weights[row.label],
+            )
+            for row in selected
+        )
+    )
+    correction = algebra.sum(
+        tuple(
+            _row_correction(
+                algebra,
+                q,
+                replace(row, weight=tuple_weights[row.label]),
+            )
+            for row in selected
+        )
+    )
+    return principal, correction, algebra.add(principal, correction)
+
+
 def build_certificate(
     *, operation_limit: int = HARD_OPERATION_LIMIT
 ) -> MomentCertificate:
@@ -359,6 +505,53 @@ def build_certificate(
     )
 
     zero = polynomial(0)
+    quadratic_rows = (
+        QuadraticType(
+            "L^2",
+            q,
+            1,
+            0,
+            q_minus_1,
+            algebra.product(q2, q_minus_1),
+            algebra.product(q4, q_minus_1),
+        ),
+        QuadraticType(
+            "L M",
+            choose_q_2,
+            2,
+            0,
+            polynomial(-1),
+            zero,
+            zero,
+        ),
+        QuadraticType(
+            "Q",
+            irreducible_quadratics,
+            0,
+            1,
+            polynomial(-1),
+            zero,
+            zero,
+        ),
+    )
+    if len(quadratic_rows) != HARD_QUADRATIC_ROW_LIMIT:
+        raise ResourceLimitError(
+            "b first-moment certificate must have exactly "
+            f"{HARD_QUADRATIC_ROW_LIMIT} rows"
+        )
+    quadratic_rows = tuple(
+        replace(row, sieve_value=_quadratic_sieve_value(algebra, q, row))
+        for row in quadratic_rows
+    )
+    quadratic_rows = tuple(
+        replace(
+            row,
+            contribution=algebra.multiply(row.count, row.sieve_value),
+        )
+        for row in quadratic_rows
+    )
+    sum_b = algebra.sum(tuple(row.contribution for row in quadratic_rows))
+
     rows = (
         QuarticType(
             "L^4",
@@ -478,6 +671,12 @@ def build_certificate(
     )
     delta = algebra.sum(tuple(row.correction for row in rows))
     sum_b_squared = algebra.add(t0, delta)
+    a_fourth_t0, a_fourth_delta, sum_a_fourth = _a_fourth_from_quartic_rows(
+        algebra, q, rows
+    )
+    a_squared_b_t0, a_squared_b_delta, sum_a_squared_b = (
+        _a_squared_b_from_quartic_rows(algebra, q, rows)
+    )
 
     diagonal, off_diagonal = _a2_euler_product_coefficients(algebra, q)
     sum_a_squared = algebra.add(
@@ -528,6 +727,17 @@ def build_certificate(
             algebra.add(algebra.add(q2, q), polynomial(-2)),
         ),
     )
+    expected_a_fourth_t0 = polynomial(0, 0, 0, 0, -3, 8, -8, 3)
+    expected_a_fourth_delta = polynomial(0, 11, 3, -26, 10, 4, -2)
+    expected_sum_a_fourth = polynomial(0, 11, 3, -26, 7, 12, -10, 3)
+    expected_a_squared_b_t0 = polynomial(0, 0, 0, 0, -2, 5, -5, 2)
+    expected_a_squared_b_delta = polynomial(0, 3, 4, -12, 4, 2, -1)
+    expected_sum_a_squared_b = polynomial(0, 3, 4, -12, 2, 7, -6, 2)
+    expected_sum_b = algebra.product(
+        q,
+        q_minus_1,
+        algebra.sum((q4, algebra.negate(q3), q2, polynomial(-1))),
+    )
     expected_sum_b_squared = algebra.add(
         algebra.product(
             q4,
@@ -553,6 +763,37 @@ def build_certificate(
         "diagonal Euler coefficient": (diagonal, expected_diagonal),
         "off-diagonal Euler coefficient": (off_diagonal, expected_off_diagonal),
         "a^2 total": (sum_a_squared, expected_sum_a_squared),
+        "a^4 principal total": (a_fourth_t0, expected_a_fourth_t0),
+        "a^4 correction total": (a_fourth_delta, expected_a_fourth_delta),
+        "a^4 total": (sum_a_fourth, expected_sum_a_fourth),
+        "a^2*b principal total": (a_squared_b_t0, expected_a_squared_b_t0),
+        "a^2*b correction total": (a_squared_b_delta, expected_a_squared_b_delta),
+        "a^2*b total": (sum_a_squared_b, expected_sum_a_squared_b),
+        "b first-moment L^2 sieve": (
+            quadratic_rows[0].sieve_value,
+            expected_diagonal,
+        ),
+        "b first-moment L M sieve": (
+            quadratic_rows[1].sieve_value,
+            expected_off_diagonal,
+        ),
+        "b first-moment Q sieve": (
+            quadratic_rows[2].sieve_value,
+            polynomial(-1),
+        ),
+        "b first-moment L^2 contribution": (
+            quadratic_rows[0].contribution,
+            algebra.multiply(q, expected_diagonal),
+        ),
+        "b first-moment L M contribution": (
+            quadratic_rows[1].contribution,
+            algebra.multiply(choose_q_2, expected_off_diagonal),
+        ),
+        "b first-moment Q contribution": (
+            quadratic_rows[2].contribution,
+            algebra.negate(irreducible_quadratics),
+        ),
+        "b first-moment total": (sum_b, expected_sum_b),
         "T0": (t0, expected_t0),
         "Delta": (delta, expected_delta),
         "b^2 total": (sum_b_squared, expected_sum_b_squared),
@@ -564,10 +805,18 @@ def build_certificate(
 
     return MomentCertificate(
         rows=rows,
+        quadratic_rows=quadratic_rows,
         squarefree_count=squarefree_count,
         a_diagonal_coefficient=diagonal,
         a_off_diagonal_coefficient=off_diagonal,
         sum_a_squared=sum_a_squared,
+        a_fourth_t0=a_fourth_t0,
+        a_fourth_delta=a_fourth_delta,
+        sum_a_fourth=sum_a_fourth,
+        a_squared_b_t0=a_squared_b_t0,
+        a_squared_b_delta=a_squared_b_delta,
+        sum_a_squared_b=sum_a_squared_b,
+        sum_b=sum_b,
         t0=t0,
         delta=delta,
         sum_b_squared=sum_b_squared,
@@ -580,7 +829,7 @@ def main() -> int:
     certificate = build_certificate()
     sign_density = build_sign_density_certificate(certificate)
     print(
-        "OK: nine-row exact genus-two moment identity; "
+        "OK: exact genus-two moment identities, including E[b], E[a^4], and E[a^2*b]; "
         f"{certificate.operations_used}/{HARD_OPERATION_LIMIT} symbolic operations; "
         f"negative-sign liminf >= 1/{sign_density.proportion_denominator}"
     )

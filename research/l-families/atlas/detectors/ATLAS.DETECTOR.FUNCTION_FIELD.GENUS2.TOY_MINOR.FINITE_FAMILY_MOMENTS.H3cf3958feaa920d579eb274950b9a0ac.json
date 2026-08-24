@@ -26,6 +26,11 @@
       "code": "FINITE_AFFINE_ORBITS_MISTAKEN_FOR_LIMIT_LAW",
       "description": "The q=3,5,7 orbit or stabilizer tables are extrapolated in q.",
       "hostile_control": "The affine packet hard-refuses every other q, retains its own global <=8-second guard, and makes no asymptotic orbit claim."
+    },
+    {
+      "code": "ROADMAP_MISTAKEN_FOR_SECOND_MOMENT_FORMULA",
+      "description": "The exact signature census or three residual checks are presented as an all-q formula for E[K_D^2] or as an equidistribution theorem.",
+      "hostile_control": "The source, fixture, result, and evaluation all keep PARTIAL roadmap status and name the six primitive-coefficient families and the honest high-weight packet that remain unevaluated for general q."
     }
   ],
   "family_adapters": [
@@ -42,6 +47,12 @@
       "status": "REQUIRED_AVAILABLE"
     },
     {
+      "adapter_path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.py",
+      "correction": "Enumerate exactly 20 M22 and 54 B4 signatures without field enumeration; retain the six primitive-coefficient families and refined honest high-weight packet as explicit unresolved burdens.",
+      "family": "GENUS2_SECOND_MOMENT_SYMBOLIC_REDUCTION",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
       "adapter_path": null,
       "correction": "No transfer from finite-field coefficient moments is supplied.",
       "family": "NUMBER_FIELD",
@@ -52,31 +63,37 @@
     {
       "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
       "state": "PARTIAL",
-      "target": "Complete prose proof of the three genus-two first-moment identities."
+      "target": "Complete prose proof of the registered genus-two coefficient-moment identities."
     },
     {
       "path": "research/l-families/atlas/function_field/genus2_moment_identity.py",
       "state": "PARTIAL",
       "target": "Bounded exact Q[q] certificate for every polynomial identity in the proof."
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.py",
+      "state": "PARTIAL",
+      "target": "Bounded exact 20+54 signature and C2 character reduction for the open second toy moment."
     }
   ],
   "identity_kernel": {
     "central_zero_policy": "NOT_APPLICABLE",
-    "contract_revision": 2,
+    "contract_revision": 3,
     "kernel_convention": "COEFFICIENT_DISPERSION",
-    "mathematical_definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2.",
+    "mathematical_definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2 together with the exact first moment of b_D, the mixed moment a_D^2*b_D, and second/fourth moments of the trace coefficient a_D; attach the exact bounded K_D^2 reduction without asserting an all-q second-moment formula.",
     "normalization_requirements": [
       "Use exactly q_values=[3,5,7] and all monic squarefree quintics in each field.",
       "Use K_D=q*a_D^2-b_D^2 and normalize only by q^2 after the exact integer K_D is formed.",
       "Use a 20,000-candidate cap per field and a global monotonic wall guard no larger than eight seconds.",
       "Freeze candidate_cap_scope=PER_FIELD_Q_SCAN; the cap is not a combined-replay total.",
       "Under D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), require a' = chi(alpha)a, b' = b, and K' = K.",
+      "Keep the exact K_D^2 signature packet at PARTIAL proof-roadmap status: A4 is proved, while M22 and B4 remain unevaluated.",
       "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC."
     ],
     "slug": "FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS",
     "version": 1
   },
-  "identity_sha256": "8231bec28057f06b8e4da4a23093caa729330ae7bbf201c6c0cbdd1d995879cc",
+  "identity_sha256": "3cf3958feaa920d579eb274950b9a0ac1377df55c70310b424ca419644b45614",
   "invariances": [
     {
       "code": "GENUS2_MINOR_IDENTITY",
@@ -90,7 +107,7 @@
     },
     {
       "code": "CROSS_Q_CLOSED_FORM",
-      "statement": "The displayed mean formulas hold for every odd prime power q.",
+      "statement": "The displayed a_D^2, a_D^4, a_D^2*b_D, b_D, b_D^2, and K_D mean formulas hold for every odd prime power q.",
       "status": "PROVED"
     },
     {
@@ -105,7 +122,7 @@
     }
   ],
   "kernel_convention": "COEFFICIENT_DISPERSION",
-  "mathematical_definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2.",
+  "mathematical_definition": "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record the exact finite-family moments of K_D and K_D/q^2 together with the exact first moment of b_D, the mixed moment a_D^2*b_D, and second/fourth moments of the trace coefficient a_D; attach the exact bounded K_D^2 reduction without asserting an all-q second-moment formula.",
   "normalization_requirements": [
     {
       "comparison_role": "IDENTITY",
@@ -134,11 +151,16 @@
     },
     {
       "comparison_role": "FIREWALL",
+      "field": "result.artifact.second_moment_reduction",
+      "requirement": "Keep the exact K_D^2 signature packet at PARTIAL proof-roadmap status: A4 is proved, while M22 and B4 remain unevaluated."
+    },
+    {
+      "comparison_role": "FIREWALL",
       "field": "detector_kind",
       "requirement": "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC."
     }
   ],
-  "notes": "The q=3,5,7 histograms are finite exact computations. The separately bound DRAFT proof establishes the displayed first-moment formulas and their normalized limit for every odd prime power; the separately replayed affine packet proves the exact action law and finite orbit partitions only at q=3,5,7. Higher moments and equidistribution remain proposed.",
+  "notes": "The q=3,5,7 histograms are finite exact computations. The separately bound DRAFT proof establishes the displayed a_D^2, a_D^4, a_D^2*b_D, b_D, b_D^2, and K_D formulas, including the normalized toy-minor first-moment limit, for every odd prime power; the separately replayed affine packet proves the exact action law and finite orbit partitions only at q=3,5,7. The mixed a_D^2*b_D^2 and b_D^4 moments needed for K_D^2, and equidistribution, remain open; the separately replayed PARTIAL roadmap reduces them to six primitive-coefficient families and the honest high-weight packet chi_04+chi_22+2*chi_03 without evaluating either for general q.",
   "output_contract": {
     "arithmetic_classes": [
       "CERTIFIED_INTEGER_COVERAGE"
@@ -240,7 +262,7 @@
   "reference_implementation": {
     "entry_point": "build_fixture",
     "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
-    "source_sha256": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10",
+    "source_sha256": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935",
     "version": "1"
   },
   "required_inputs": [
@@ -267,12 +289,18 @@
       "input_type": "RAW_ARTIFACT",
       "name": "affine_orbit_certificate",
       "required": true
+    },
+    {
+      "coverage_requirement": "PARTIAL",
+      "input_type": "RAW_ARTIFACT",
+      "name": "second_moment_reduction_roadmap",
+      "required": true
     }
   ],
-  "revision": 2,
+  "revision": 3,
   "schema_version": "riemann.atlas.detector_contract.v1",
-  "scope_boundary": "Exhaustive histograms only for q=3,5,7, plus proof-backed first-moment identities for every odd prime power and the consequent negative-sign density floor. The exact affine action law is replayed with complete orbit partitions only at q=3,5,7; no full sign law, asymptotic orbit law, higher-moment equidistribution, zero statement, analytic-kernel conclusion, or number-field transfer.",
-  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.H8231bec28057f06b8e4da4a23093caa7",
+  "scope_boundary": "Exhaustive histograms only for q=3,5,7, plus proof-backed b_D and toy-minor first moments, second/fourth trace moments, and the mixed a_D^2*b_D moment for every odd prime power, with the consequent negative-sign density floor. The exact affine action law is replayed with complete orbit partitions only at q=3,5,7; no full sign law, asymptotic orbit law, or all-q second-moment formula follows from the separately replayed PARTIAL reduction roadmap. There is no higher-moment equidistribution, zero statement, analytic-kernel conclusion, or number-field transfer.",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.TOY_MINOR.FINITE_FAMILY_MOMENTS.H3cf3958feaa920d579eb274950b9a0ac",
   "supersedes": [],
   "theorem_links": [
     {
@@ -286,9 +314,34 @@
       "status": "VERIFIED"
     },
     {
+      "scope": "Ordered-linear reweighting of the proved quartic character table gives E[a_D^4]=3q^2-7q+5+12/q-14/q^2-11/q^3 for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TRACE.FOURTH_MOMENT",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "The three degree-two factorization types give E[b_D]=q-1+(q^2-1)/q^3 for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.MIDDLE_COEFFICIENT.MEAN",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "Quartic-row reweighting gives the displayed exact E[a_D^2*b_D] formula for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TRACE_SQUARED_MIDDLE.MEAN",
+      "status": "VERIFIED"
+    },
+    {
+      "scope": "The proved a_D^2, b_D, b_D^2, a_D^2*b_D, and a_D^4 formulas isolate five exact low-weight character means through chi_(4,0).",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.LOW_WEIGHT_CHARACTER_PROFILE",
+      "status": "VERIFIED"
+    },
+    {
       "scope": "For every odd prime power, the exact first moment and exact lower range bound give rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20; this is not a sign law.",
       "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.NEGATIVE_SIGN_DENSITY",
       "status": "VERIFIED"
+    },
+    {
+      "scope": "The exact master identity, 20+54 signature census, six primitive-coefficient families, and refined honest high-weight USp(4) obstruction are replayed. M22 and B4 are not evaluated for every odd prime power.",
+      "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.SECOND_MOMENT_REDUCTION",
+      "status": "OPEN"
     }
   ],
   "title": "Exact genus-two toy-minor finite-family moment scan"

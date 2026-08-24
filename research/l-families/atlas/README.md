@@ -8,9 +8,10 @@ over `F_3[T]`, `F_5[T]`, and `F_7[T]` (162, 2,500, and 14,406 members); exact
 rational central-deflation controls; one five-object classical reciprocal-
 coefficient filter through `n<=256`; and conductor-coprime quadratic-character
 covariance packets for `11.a2`, both pooled and split by the sourced twist root
-number. An exact `USp(4)` comparator and a proof-backed all-odd-prime-power
-first-moment identity, negative-sign density floor, and six-moment polynomial
-sign bound accompany the genus-two scans. Every atlas record is `DRAFT`. RH
+number. An exact `USp(4)` comparator and proof-backed all-odd-prime-power
+coefficient moments, negative-sign density floor, second-moment proof roadmap,
+and twelve-moment polynomial sign bound accompany the genus-two scans. Every
+atlas record is `DRAFT`. RH
 and GRH remain open.
 
 Exact sources or dependencies: classical completed GL(1) normalizations; the
@@ -22,17 +23,19 @@ exact repository packets named inside detector contracts.
 
 What was actually run: five finite local-Euler evaluations through `p<=43`;
 all four complete function-field families above; exact `F_q/F_{q^2}` character
-reconstruction for the three genus-two packets; six exact `USp(4)` Haar moments
-and a degree-six sign majorant by bounded Laurent-polynomial arithmetic; a deterministic
+reconstruction for the three genus-two packets; twelve exact `USp(4)` Haar
+moments and degree-six and degree-twelve sign majorants by bounded
+Laurent-polynomial arithmetic; a deterministic
 1,376,256-cell sign-probability quadrature; 656,024 exact genus-two
 member-affine-action checks; five synthetic GL(2)
 controls under two kernel conventions; one three-curve rank correction; and
 pooled plus root-number-split character covariance summaries formed from at
 most 1,142 discriminants and 13 primes. The all-q genus-two certificate uses
-1,761 operations in `Q[q]` and does not enumerate additional fields. The
+2,925 operations in `Q[q]`, while the separate second-moment roadmap enumerates
+only 20+54 symbolic signatures; neither enumerates additional fields. The
 reciprocal filter evaluates five objects, four endpoints, and every coefficient
-through 256. All 160 tests pass both normally and under optimized Python; the
-offline validator checks 56 artifact bindings across 15 evaluations. No broad
+through 256. All 213 tests pass both normally and under optimized Python; the
+offline validator checks 64 artifact bindings across 15 evaluations. No broad
 zero or conductor sweep was run.
 
 Smallest remaining gaps: derive one true source-faithful function-field analogue
@@ -72,8 +75,8 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 | normalized local Euler moments | exact integer point counts and rational even moments | GL(1) rows have `M2=M4=1`; three GL(2) rows already refute unit-magnitude prime coefficients | tiny prime window; curve metadata is discovery-only |
 | classical reciprocal filter | exact integer coefficients and `Q(sqrt(2))` signs | the four-shell filter has mixed signs across objects/endpoints; no common finite sign survives | classical coefficients; unitary map explicit; four endpoints are not an abscissa or zero theorem |
 | function field, genus 1 | exhaustive exact `F_5[T]` arithmetic | all 100 cubic members pass reciprocal/root-radius checks; toy sign split is `40/20/40`, mean zero | toy `H_D(1)H_D(2)`, not canonical `XD`/`HCNC` |
-| function field, genus 2 | exhaustive exact `F_q/F_{q^2}` arithmetic at `q=3,5,7`; exact all-q proof certificate; exhaustive affine action | normalized means are `-104/243`, `-1994/3125`, `-12340/16807`; all-q mean tends to `-1` and `liminf rho_->=1/20`; `K_D` is constant on 29, 132, 349 affine orbits | orbit averages require stabilizer weights; exact first moment and one-sided sign floor only; toy coefficient minor |
-| exact `USp(4)` comparator | bounded Laurent-polynomial/Weyl arithmetic plus guarded shifted-grid quadrature | `F=(Tr U)^2-e_2(U)^2=-(1+chi_omega2+chi_2omega2)`, range `[-20,4/3]`, first six Haar moments `-1,3,-11,56,-374,3117`; a support-adapted degree-six majorant proves `P(F<0)>=2478693937/6358302720`; display-only `P(F<0)≈0.738` | the rational value is a lower bound, not the exact probability or a claimed optimal moment bound; finite-field higher-moment/sign-law convergence remains proposed |
+| function field, genus 2 | exhaustive exact `F_q/F_{q^2}` arithmetic at `q=3,5,7`; exact all-q proof certificate; exhaustive affine action | normalized means are `-104/243`, `-1994/3125`, `-12340/16807`; all-q mean tends to `-1`, `liminf rho_->=1/20`, five low-weight character means are exact, and the second-moment gap reduces to `chi_(0,4)+chi_(2,2)+2chi_(0,3)` | orbit averages require stabilizer weights; the remaining high-weight decay and full sign law are conjectural; toy coefficient minor |
+| exact `USp(4)` comparator | bounded Laurent-polynomial/Weyl arithmetic plus guarded shifted-grid quadrature | `F=(Tr U)^2-e_2(U)^2=-(1+chi_omega2+chi_2omega2)`, range `[-20,4/3]`, exact Haar moments through order 12; a degree-twelve majorant proves `P(F<0)>=0.480701...`; display-only `P(F<0)≈0.738` | the rational value is a lower bound, not the exact probability or a claimed optimal moment bound; finite-field higher-moment/sign-law convergence remains proposed |
 | conductor-coprime twist precursor | exact pooled and sourced root-number-split character Gram/covariance matrices, marginal contrasts, and multiquadratic moments | through `X=2048`, local densities approach explicit comparators; root-sign Gram and character-mean contrast RMS shrink on the four frozen windows but their scaled/weighted corrections do not give a rate | no central ranks, fitted rate, growing-prime theorem, or twist-family limit |
 | GL(2) deflation | exact `Fraction` matrices | central atom is rank one; Loewner sign is negative, Pick-sum sign positive; full deflation need not restore positivity | synthetic controls, no arithmetic L-values |
 | rank stress | exact algebra on imported discrete metadata | rank 0 and minimal rank 1 give zero parity/full gap; rank 2 gives `25/4` at nodes `(1,2)` | three selected curves, not a twist family |
@@ -106,7 +109,10 @@ python research/l-families/atlas/function_field/genus2_pilot.py --check research
 python research/l-families/atlas/function_field/genus2_q_scan.py --check research/l-families/atlas/function_field/genus2_q_scan.json
 python research/l-families/atlas/function_field/genus2_moment_identity.py
 python research/l-families/atlas/function_field/genus2_affine_orbits.py --check research/l-families/atlas/function_field/genus2_affine_orbits.json
+python research/l-families/atlas/function_field/genus2_second_moment_reduction.py --check research/l-families/atlas/function_field/genus2_second_moment_reduction.json
 python research/l-families/atlas/function_field/usp4_toy_minor_moments.py --check research/l-families/atlas/function_field/usp4_toy_minor_moments.json
+python research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py --check
+python research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.py --check research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.json
 python research/l-families/atlas/function_field/usp4_sign_probability.py --check research/l-families/atlas/function_field/usp4_sign_probability.json
 python research/l-families/atlas/gl2/verify.py --check research/l-families/atlas/gl2/results.json
 python research/l-families/atlas/core/wrap_specialist_pilots.py
@@ -144,9 +150,9 @@ rigor/scope confusions.
   polynomial certificate.
 - The proved negative-member proportion is a one-sided density floor, not a
   limiting sign law or a canonical detector conclusion.
-- The degree-six USp(4) certificate gives a rigorous Haar lower bound, not the
-  exact sign probability; its finite-family liminf consequence assumes
-  convergence of the first six moments.
+- The degree-six and degree-twelve `USp(4)` certificates give rigorous Haar
+  lower bounds, not the exact sign probability; their finite-family liminf
+  consequences assume convergence of the first six or twelve moments.
 - A forced central zero is legitimate critical-line geometry, not an off-line
   witness.
 - Parity deflation and full-rank deflation use different information.

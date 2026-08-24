@@ -5,7 +5,7 @@
     {
       "code": "WEYL_NORMALIZATION_LOSS",
       "description": "The C2 constant term is used without division by the Weyl order 8.",
-      "hostile_control": "The replay requires density constant term 8 and the frozen exact six moments."
+      "hostile_control": "The replay requires density constant term 8 and the frozen exact twelve moments."
     },
     {
       "code": "FINITE_TO_LIMIT_PROMOTION",
@@ -15,7 +15,7 @@
     {
       "code": "SIGN_BOUND_AS_EXACT_PROBABILITY",
       "description": "The polynomial lower bound is reported as the exact Haar sign probability.",
-      "hostile_control": "The raw certificate labels both polynomial values as lower bounds, makes no optimality claim, and keeps the q-to-infinity consequence conditional."
+      "hostile_control": "The raw certificates label polynomial values as lower bounds, make no optimality claim, and keep q-to-infinity consequences conditional."
     },
     {
       "code": "TOY_KERNEL_CONFLATION",
@@ -36,6 +36,18 @@
       "status": "REQUIRED_AVAILABLE"
     },
     {
+      "adapter_path": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py",
+      "correction": "Use exact integer Kostant multiplicities, dominance subtraction, and the independently checked Weyl dimension formula.",
+      "family": "USP4_C2_CHARACTER_RING",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
+      "adapter_path": "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.py",
+      "correction": "Replay twelve exact C2 moments, rational factorization, and Bernstein positivity under the explicit small operation cap.",
+      "family": "USP4_DEGREE_TWELVE_SIGN_MAJORANT",
+      "status": "REQUIRED_AVAILABLE"
+    },
+    {
       "adapter_path": "research/l-families/atlas/function_field/genus2_q_scan.py",
       "correction": "Use complete exact histograms and normalize K_D by q^2 before taking powers.",
       "family": "F3_F5_F7_QUADRATIC_QUINTIC_GENUS2",
@@ -52,26 +64,28 @@
     {
       "path": null,
       "state": "DEFINITION_READY",
-      "target": "C2 Weyl constant term and USp(4) Laurent-character identity."
+      "target": "C2 Weyl constant term, USp(4) Laurent-character identity, and the power-one-through-six irreducible decompositions and degree-twelve sign majorant."
     }
   ],
   "identity_kernel": {
     "central_zero_policy": "NOT_APPLICABLE",
     "contract_revision": 1,
     "kernel_convention": "COEFFICIENT_DISPERSION",
-    "mathematical_definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use those six moments and an exact degree-six polynomial majorant to certify a lower bound for the negative-sign probability.",
+    "mathematical_definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], decompose F^m for m=1,...,6 into irreducible C_2 characters, evaluate the first twelve Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use exact degree-six and degree-twelve polynomial majorants to certify successively stronger lower bounds for the negative-sign probability.",
     "normalization_requirements": [
       "Use the USp(4) torus eigenvalues x,x^-1,y,y^-1 and exactly the C2 positive roots (2,0),(0,2),(1,1),(1,-1).",
       "Normalize Haar integration by CT(product_(alpha>0)(1-X^alpha)(1-X^-alpha))=8.",
-      "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7.",
+      "Compare F(U) only with K_D/q^2; freeze Haar and sign-majorant moments 1 through 12, explicit finite comparison rows 1 through 6, and q values 3,5,7.",
       "Keep exact Laurent and finite-histogram arithmetic separate from the proposed q-to-infinity convergence statement.",
       "Treat F as a toy reciprocal-coefficient statistic, not Pick/Loewner, XD, or HCNC.",
-      "Use only exactly certified degree-six nonnegative-event majorants on [-20,4/3], and keep their liminf consequence conditional on six-moment convergence."
+      "Use only exactly certified nonnegative-event majorants on [-20,4/3], and keep every finite-family liminf consequence conditional on the required moment convergence.",
+      "For F^m through m=6, use exact C2 Kostant characters and retain the full irreducible decomposition fixture as a content-bound input.",
+      "For the degree-twelve sign majorant, replay exact factorization and Bernstein positivity, bind the full fixture, and make no optimality claim."
     ],
     "slug": "FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR",
     "version": 1
   },
-  "identity_sha256": "eed5882fae71cfe825735bf2a9c3856a57eb9fe18afc5629a9fce77e5f13fff8",
+  "identity_sha256": "c2dcb9b107d8aa3d5bc5dc2761a7e4f6645745a0ee538dc4e739f40ec259b26e",
   "invariances": [
     {
       "code": "USP4_CHARACTER_IDENTITY",
@@ -81,6 +95,11 @@
     {
       "code": "C2_WEYL_NORMALIZATION",
       "statement": "The chosen C2 Weyl density has constant term and Weyl order 8.",
+      "status": "PROVED"
+    },
+    {
+      "code": "C2_IRREDUCIBLE_POWER_DECOMPOSITION",
+      "statement": "For m=1,...,6, F^m has an exact irreducible C2-character decomposition with sign-adjusted nonnegative tensor multiplicities, dimension sum 20^m, and trivial coefficient equal to the Haar moment.",
       "status": "PROVED"
     },
     {
@@ -104,13 +123,18 @@
       "status": "PROVED"
     },
     {
+      "code": "DEGREE_TWELVE_SIGN_MAJORANT",
+      "statement": "An exact degree-twelve majorant gives 1_{F>=0}<=P(F) and Pr_Haar(F<0)>=153081644970674178368978470022738347661743507912075314789490808683/318454738700269877013669525120657835305950388794994707229994647552, strictly improving the stored degree-six moment bound.",
+      "status": "PROVED"
+    },
+    {
       "code": "FIXED_MOMENT_CONVERGENCE",
       "statement": "For each fixed order, finite K_D/q^2 moments converge to USp(4) Haar moments.",
       "status": "EXPECTED"
     }
   ],
   "kernel_convention": "COEFFICIENT_DISPERSION",
-  "mathematical_definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use those six moments and an exact degree-six polynomial majorant to certify a lower bound for the negative-sign probability.",
+  "mathematical_definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], decompose F^m for m=1,...,6 into irreducible C_2 characters, evaluate the first twelve Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use exact degree-six and degree-twelve polynomial majorants to certify successively stronger lower bounds for the negative-sign probability.",
   "normalization_requirements": [
     {
       "comparison_role": "IDENTITY",
@@ -125,7 +149,7 @@
     {
       "comparison_role": "SCALING",
       "field": "configuration.maximum_moment",
-      "requirement": "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7."
+      "requirement": "Compare F(U) only with K_D/q^2; freeze Haar and sign-majorant moments 1 through 12, explicit finite comparison rows 1 through 6, and q values 3,5,7."
     },
     {
       "comparison_role": "FIREWALL",
@@ -140,10 +164,20 @@
     {
       "comparison_role": "FIREWALL",
       "field": "result.negative_sign_moment_certificate",
-      "requirement": "Use only exactly certified degree-six nonnegative-event majorants on [-20,4/3], and keep their liminf consequence conditional on six-moment convergence."
+      "requirement": "Use only exactly certified nonnegative-event majorants on [-20,4/3], and keep every finite-family liminf consequence conditional on the required moment convergence."
+    },
+    {
+      "comparison_role": "IDENTITY",
+      "field": "result.character_decomposition_certificate",
+      "requirement": "For F^m through m=6, use exact C2 Kostant characters and retain the full irreducible decomposition fixture as a content-bound input."
+    },
+    {
+      "comparison_role": "FIREWALL",
+      "field": "result.twelve_moment_sign_certificate",
+      "requirement": "For the degree-twelve sign majorant, replay exact factorization and Bernstein positivity, bind the full fixture, and make no optimality claim."
     }
   ],
-  "notes": "Certified claims are the exact identity, constant terms, six Haar moments, finite histogram moments, and the degree-six sign lower bound. The limiting moment comparison remains proposed.",
+  "notes": "Certified claims are the exact identity, irreducible decompositions through power six, constant terms, twelve Haar moments, finite histogram bounds, and exact degree-six and degree-twelve sign lower bounds. The limiting moment comparison remains proposed, and no majorant optimality is claimed.",
   "output_contract": {
     "arithmetic_classes": [
       "EXACT_RATIONAL"
@@ -195,11 +229,11 @@
     },
     {
       "constraints": {
-        "frozen_value": 6,
-        "maximum": 6,
+        "frozen_value": 12,
+        "maximum": 12,
         "minimum": 1
       },
-      "domain": "orders 1 through 6",
+      "domain": "orders 1 through 12",
       "name": "maximum_moment",
       "required": true,
       "value_type": "INTEGER"
@@ -260,8 +294,8 @@
   ],
   "revision": 1,
   "schema_version": "riemann.atlas.detector_contract.v1",
-  "scope_boundary": "Exact character, Weyl constant-term, and q=3,5,7 histogram calculations through moment six only. Convergence is proposed, with no analytic-kernel conclusion or number-field transfer.",
-  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.Heed5882fae71cfe825735bf2a9c3856a",
+  "scope_boundary": "Exact character identity, irreducible decompositions through power six, Weyl constant terms through moment twelve, and q=3,5,7 histogram calculations only. Convergence is proposed, with no optimality, analytic-kernel, or number-field claim.",
+  "semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.Hc2dcb9b107d8aa3d5bc5dc2761a7e4f6",
   "supersedes": [],
   "theorem_links": [
     {
@@ -272,6 +306,11 @@
     {
       "scope": "Convergence of the first six raw moments implies liminf Pr(K_D/q^2<0)>=2478693937/6358302720.",
       "semantic_id": "CONDITIONAL.FUNCTION_FIELD.GENUS2.NEGATIVE_SIGN.LIMINF",
+      "status": "CONDITIONAL_EXACT"
+    },
+    {
+      "scope": "Convergence of the first twelve raw moments implies liminf Pr(K_D/q^2<0)>=153081644970674178368978470022738347661743507912075314789490808683/318454738700269877013669525120657835305950388794994707229994647552.",
+      "semantic_id": "CONDITIONAL.FUNCTION_FIELD.GENUS2.NEGATIVE_SIGN.TWELVE_MOMENT_LIMINF",
       "status": "CONDITIONAL_EXACT"
     }
   ],

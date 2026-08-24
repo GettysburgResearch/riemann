@@ -1,0 +1,2274 @@
+{
+  "all_power_corollary": {
+    "integrality": true,
+    "proof": "G=1+chi_(0,1)+chi_(0,2) is the character of an honest self-dual representation containing the trivial summand; tensor-product multiplicities are nonnegative integers and the all-trivial tensor supplies at least one invariant.",
+    "scope": "compact-group Haar moments only; no finite-family convergence",
+    "statement": "For every integer m>=0, Haar(F^m)=(-1)^m times the multiplicity of the trivial representation in G^tensor_m.",
+    "strict_sign_rule": "(-1)^m*Haar(F^m)>0 for every m>=0"
+  },
+  "character_identity": {
+    "F": "-(1+chi_(0*omega1+1*omega2)+chi_(0*omega1+2*omega2))",
+    "F_equals_minus_G": true,
+    "G": "1+chi_(0*omega1+1*omega2)+chi_(0*omega1+2*omega2)",
+    "G_dimension": 20,
+    "constituent_dimensions": [
+      1,
+      5,
+      14
+    ],
+    "defining_formula": "F=(Tr U)^2-e_2(U)^2",
+    "laurent_identity_verified_exactly": true
+  },
+  "group": {
+    "dimension_formula": "dim(a*omega1+b*omega2)=(a+1)(b+1)(a+b+2)(a+2b+3)/6",
+    "highest_weight_convention": "a*omega1+b*omega2 corresponds to e-basis coordinates (lambda1,lambda2)=(a+b,b)",
+    "name": "USp(4)",
+    "positive_roots_e_basis": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "root_system": "C2",
+    "weyl_order": 8,
+    "weyl_vector_e_basis": [
+      2,
+      1
+    ]
+  },
+  "method": {
+    "arithmetic": "integers only",
+    "character_generation": "Kostant multiplicity formula for C2",
+    "decomposition": "exact dominant-weight triangular subtraction",
+    "trivial_check": "independent C2 Weyl constant-term formula"
+  },
+  "powers": [
+    {
+      "decomposition": [
+        {
+          "coefficient_in_F_power": -1,
+          "dimension": 1,
+          "dimension_contribution_to_G_power": 1,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              0,
+              0
+            ],
+            "notation": "0*omega1+0*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 1
+        },
+        {
+          "coefficient_in_F_power": -1,
+          "dimension": 5,
+          "dimension_contribution_to_G_power": 5,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              1,
+              1
+            ],
+            "notation": "0*omega1+1*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 1
+        },
+        {
+          "coefficient_in_F_power": -1,
+          "dimension": 14,
+          "dimension_contribution_to_G_power": 14,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              2
+            ],
+            "notation": "0*omega1+2*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 1
+        }
+      ],
+      "dimension_sum_from_decomposition": 20,
+      "global_sign_from_F_equals_minus_G": -1,
+      "independent_weyl_constant_term_haar_moment": -1,
+      "irreducible_count": 3,
+      "laurent_support_size": 13,
+      "power": 1,
+      "reconstruction_exact": true,
+      "tensor_dimension": 20,
+      "trivial_coefficient_in_F_power": -1,
+      "trivial_tensor_multiplicity_in_G_power": 1
+    },
+    {
+      "decomposition": [
+        {
+          "coefficient_in_F_power": 3,
+          "dimension": 1,
+          "dimension_contribution_to_G_power": 3,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              0,
+              0
+            ],
+            "notation": "0*omega1+0*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 3
+        },
+        {
+          "coefficient_in_F_power": 4,
+          "dimension": 5,
+          "dimension_contribution_to_G_power": 20,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              1,
+              1
+            ],
+            "notation": "0*omega1+1*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 4
+        },
+        {
+          "coefficient_in_F_power": 2,
+          "dimension": 10,
+          "dimension_contribution_to_G_power": 20,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              0
+            ],
+            "notation": "2*omega1+0*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 2
+        },
+        {
+          "coefficient_in_F_power": 4,
+          "dimension": 14,
+          "dimension_contribution_to_G_power": 56,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              2
+            ],
+            "notation": "0*omega1+2*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 4
+        },
+        {
+          "coefficient_in_F_power": 2,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 70,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              1
+            ],
+            "notation": "2*omega1+1*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 2
+        },
+        {
+          "coefficient_in_F_power": 2,
+          "dimension": 30,
+          "dimension_contribution_to_G_power": 60,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              3
+            ],
+            "notation": "0*omega1+3*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 2
+        },
+        {
+          "coefficient_in_F_power": 1,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 35,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              0
+            ],
+            "notation": "4*omega1+0*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 1
+        },
+        {
+          "coefficient_in_F_power": 1,
+          "dimension": 81,
+          "dimension_contribution_to_G_power": 81,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              2
+            ],
+            "notation": "2*omega1+2*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 1
+        },
+        {
+          "coefficient_in_F_power": 1,
+          "dimension": 55,
+          "dimension_contribution_to_G_power": 55,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              4
+            ],
+            "notation": "0*omega1+4*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 1
+        }
+      ],
+      "dimension_sum_from_decomposition": 400,
+      "global_sign_from_F_equals_minus_G": 1,
+      "independent_weyl_constant_term_haar_moment": 3,
+      "irreducible_count": 9,
+      "laurent_support_size": 41,
+      "power": 2,
+      "reconstruction_exact": true,
+      "tensor_dimension": 400,
+      "trivial_coefficient_in_F_power": 3,
+      "trivial_tensor_multiplicity_in_G_power": 3
+    },
+    {
+      "decomposition": [
+        {
+          "coefficient_in_F_power": -11,
+          "dimension": 1,
+          "dimension_contribution_to_G_power": 11,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              0,
+              0
+            ],
+            "notation": "0*omega1+0*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 11
+        },
+        {
+          "coefficient_in_F_power": -21,
+          "dimension": 5,
+          "dimension_contribution_to_G_power": 105,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              1,
+              1
+            ],
+            "notation": "0*omega1+1*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 21
+        },
+        {
+          "coefficient_in_F_power": -19,
+          "dimension": 10,
+          "dimension_contribution_to_G_power": 190,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              0
+            ],
+            "notation": "2*omega1+0*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 19
+        },
+        {
+          "coefficient_in_F_power": -24,
+          "dimension": 14,
+          "dimension_contribution_to_G_power": 336,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              2
+            ],
+            "notation": "0*omega1+2*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 24
+        },
+        {
+          "coefficient_in_F_power": -26,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 910,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              1
+            ],
+            "notation": "2*omega1+1*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 26
+        },
+        {
+          "coefficient_in_F_power": -16,
+          "dimension": 30,
+          "dimension_contribution_to_G_power": 480,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              3
+            ],
+            "notation": "0*omega1+3*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 16
+        },
+        {
+          "coefficient_in_F_power": -12,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 420,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              0
+            ],
+            "notation": "4*omega1+0*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 12
+        },
+        {
+          "coefficient_in_F_power": -18,
+          "dimension": 81,
+          "dimension_contribution_to_G_power": 1458,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              2
+            ],
+            "notation": "2*omega1+2*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 18
+        },
+        {
+          "coefficient_in_F_power": -9,
+          "dimension": 55,
+          "dimension_contribution_to_G_power": 495,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              4
+            ],
+            "notation": "0*omega1+4*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 9
+        },
+        {
+          "coefficient_in_F_power": -8,
+          "dimension": 105,
+          "dimension_contribution_to_G_power": 840,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              1
+            ],
+            "notation": "4*omega1+1*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 8
+        },
+        {
+          "coefficient_in_F_power": -7,
+          "dimension": 154,
+          "dimension_contribution_to_G_power": 1078,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              3
+            ],
+            "notation": "2*omega1+3*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 7
+        },
+        {
+          "coefficient_in_F_power": -3,
+          "dimension": 91,
+          "dimension_contribution_to_G_power": 273,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              5
+            ],
+            "notation": "0*omega1+5*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 3
+        },
+        {
+          "coefficient_in_F_power": -1,
+          "dimension": 84,
+          "dimension_contribution_to_G_power": 84,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              0
+            ],
+            "notation": "6*omega1+0*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 1
+        },
+        {
+          "coefficient_in_F_power": -3,
+          "dimension": 220,
+          "dimension_contribution_to_G_power": 660,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              2
+            ],
+            "notation": "4*omega1+2*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 3
+        },
+        {
+          "coefficient_in_F_power": -2,
+          "dimension": 260,
+          "dimension_contribution_to_G_power": 520,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              4
+            ],
+            "notation": "2*omega1+4*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 2
+        },
+        {
+          "coefficient_in_F_power": -1,
+          "dimension": 140,
+          "dimension_contribution_to_G_power": 140,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              6
+            ],
+            "notation": "0*omega1+6*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 1
+        }
+      ],
+      "dimension_sum_from_decomposition": 8000,
+      "global_sign_from_F_equals_minus_G": -1,
+      "independent_weyl_constant_term_haar_moment": -11,
+      "irreducible_count": 16,
+      "laurent_support_size": 85,
+      "power": 3,
+      "reconstruction_exact": true,
+      "tensor_dimension": 8000,
+      "trivial_coefficient_in_F_power": -11,
+      "trivial_tensor_multiplicity_in_G_power": 11
+    },
+    {
+      "decomposition": [
+        {
+          "coefficient_in_F_power": 56,
+          "dimension": 1,
+          "dimension_contribution_to_G_power": 56,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              0,
+              0
+            ],
+            "notation": "0*omega1+0*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 56
+        },
+        {
+          "coefficient_in_F_power": 138,
+          "dimension": 5,
+          "dimension_contribution_to_G_power": 690,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              1,
+              1
+            ],
+            "notation": "0*omega1+1*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 138
+        },
+        {
+          "coefficient_in_F_power": 172,
+          "dimension": 10,
+          "dimension_contribution_to_G_power": 1720,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              0
+            ],
+            "notation": "2*omega1+0*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 172
+        },
+        {
+          "coefficient_in_F_power": 180,
+          "dimension": 14,
+          "dimension_contribution_to_G_power": 2520,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              2
+            ],
+            "notation": "0*omega1+2*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 180
+        },
+        {
+          "coefficient_in_F_power": 278,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 9730,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              1
+            ],
+            "notation": "2*omega1+1*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 278
+        },
+        {
+          "coefficient_in_F_power": 148,
+          "dimension": 30,
+          "dimension_contribution_to_G_power": 4440,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              3
+            ],
+            "notation": "0*omega1+3*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 148
+        },
+        {
+          "coefficient_in_F_power": 149,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 5215,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              0
+            ],
+            "notation": "4*omega1+0*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 149
+        },
+        {
+          "coefficient_in_F_power": 240,
+          "dimension": 81,
+          "dimension_contribution_to_G_power": 19440,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              2
+            ],
+            "notation": "2*omega1+2*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 240
+        },
+        {
+          "coefficient_in_F_power": 92,
+          "dimension": 55,
+          "dimension_contribution_to_G_power": 5060,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              4
+            ],
+            "notation": "0*omega1+4*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 92
+        },
+        {
+          "coefficient_in_F_power": 149,
+          "dimension": 105,
+          "dimension_contribution_to_G_power": 15645,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              1
+            ],
+            "notation": "4*omega1+1*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 149
+        },
+        {
+          "coefficient_in_F_power": 136,
+          "dimension": 154,
+          "dimension_contribution_to_G_power": 20944,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              3
+            ],
+            "notation": "2*omega1+3*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 136
+        },
+        {
+          "coefficient_in_F_power": 41,
+          "dimension": 91,
+          "dimension_contribution_to_G_power": 3731,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              5
+            ],
+            "notation": "0*omega1+5*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 41
+        },
+        {
+          "coefficient_in_F_power": 40,
+          "dimension": 84,
+          "dimension_contribution_to_G_power": 3360,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              0
+            ],
+            "notation": "6*omega1+0*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 40
+        },
+        {
+          "coefficient_in_F_power": 84,
+          "dimension": 220,
+          "dimension_contribution_to_G_power": 18480,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              2
+            ],
+            "notation": "4*omega1+2*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 84
+        },
+        {
+          "coefficient_in_F_power": 56,
+          "dimension": 260,
+          "dimension_contribution_to_G_power": 14560,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              4
+            ],
+            "notation": "2*omega1+4*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 56
+        },
+        {
+          "coefficient_in_F_power": 16,
+          "dimension": 140,
+          "dimension_contribution_to_G_power": 2240,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              6
+            ],
+            "notation": "0*omega1+6*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 16
+        },
+        {
+          "coefficient_in_F_power": 23,
+          "dimension": 231,
+          "dimension_contribution_to_G_power": 5313,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              1
+            ],
+            "notation": "6*omega1+1*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 23
+        },
+        {
+          "coefficient_in_F_power": 28,
+          "dimension": 390,
+          "dimension_contribution_to_G_power": 10920,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              3
+            ],
+            "notation": "4*omega1+3*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 28
+        },
+        {
+          "coefficient_in_F_power": 15,
+          "dimension": 405,
+          "dimension_contribution_to_G_power": 6075,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              5
+            ],
+            "notation": "2*omega1+5*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 15
+        },
+        {
+          "coefficient_in_F_power": 4,
+          "dimension": 204,
+          "dimension_contribution_to_G_power": 816,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              7
+            ],
+            "notation": "0*omega1+7*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 7
+          },
+          "tensor_multiplicity_in_G_power": 4
+        },
+        {
+          "coefficient_in_F_power": 3,
+          "dimension": 165,
+          "dimension_contribution_to_G_power": 495,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              0
+            ],
+            "notation": "8*omega1+0*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 3
+        },
+        {
+          "coefficient_in_F_power": 6,
+          "dimension": 455,
+          "dimension_contribution_to_G_power": 2730,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              2
+            ],
+            "notation": "6*omega1+2*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 6
+        },
+        {
+          "coefficient_in_F_power": 6,
+          "dimension": 625,
+          "dimension_contribution_to_G_power": 3750,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              4
+            ],
+            "notation": "4*omega1+4*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 6
+        },
+        {
+          "coefficient_in_F_power": 3,
+          "dimension": 595,
+          "dimension_contribution_to_G_power": 1785,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              6
+            ],
+            "notation": "2*omega1+6*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 3
+        },
+        {
+          "coefficient_in_F_power": 1,
+          "dimension": 285,
+          "dimension_contribution_to_G_power": 285,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              8
+            ],
+            "notation": "0*omega1+8*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 8
+          },
+          "tensor_multiplicity_in_G_power": 1
+        }
+      ],
+      "dimension_sum_from_decomposition": 160000,
+      "global_sign_from_F_equals_minus_G": 1,
+      "independent_weyl_constant_term_haar_moment": 56,
+      "irreducible_count": 25,
+      "laurent_support_size": 145,
+      "power": 4,
+      "reconstruction_exact": true,
+      "tensor_dimension": 160000,
+      "trivial_coefficient_in_F_power": 56,
+      "trivial_tensor_multiplicity_in_G_power": 56
+    },
+    {
+      "decomposition": [
+        {
+          "coefficient_in_F_power": -374,
+          "dimension": 1,
+          "dimension_contribution_to_G_power": 374,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              0,
+              0
+            ],
+            "notation": "0*omega1+0*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 374
+        },
+        {
+          "coefficient_in_F_power": -1110,
+          "dimension": 5,
+          "dimension_contribution_to_G_power": 5550,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              1,
+              1
+            ],
+            "notation": "0*omega1+1*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 1110
+        },
+        {
+          "coefficient_in_F_power": -1630,
+          "dimension": 10,
+          "dimension_contribution_to_G_power": 16300,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              0
+            ],
+            "notation": "2*omega1+0*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 1630
+        },
+        {
+          "coefficient_in_F_power": -1633,
+          "dimension": 14,
+          "dimension_contribution_to_G_power": 22862,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              2
+            ],
+            "notation": "0*omega1+2*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 1633
+        },
+        {
+          "coefficient_in_F_power": -2985,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 104475,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              1
+            ],
+            "notation": "2*omega1+1*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 2985
+        },
+        {
+          "coefficient_in_F_power": -1550,
+          "dimension": 30,
+          "dimension_contribution_to_G_power": 46500,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              3
+            ],
+            "notation": "0*omega1+3*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 1550
+        },
+        {
+          "coefficient_in_F_power": -1805,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 63175,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              0
+            ],
+            "notation": "4*omega1+0*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 1805
+        },
+        {
+          "coefficient_in_F_power": -3007,
+          "dimension": 81,
+          "dimension_contribution_to_G_power": 243567,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              2
+            ],
+            "notation": "2*omega1+2*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 3007
+        },
+        {
+          "coefficient_in_F_power": -1085,
+          "dimension": 55,
+          "dimension_contribution_to_G_power": 59675,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              4
+            ],
+            "notation": "0*omega1+4*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 1085
+        },
+        {
+          "coefficient_in_F_power": -2235,
+          "dimension": 105,
+          "dimension_contribution_to_G_power": 234675,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              1
+            ],
+            "notation": "4*omega1+1*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 2235
+        },
+        {
+          "coefficient_in_F_power": -2078,
+          "dimension": 154,
+          "dimension_contribution_to_G_power": 320012,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              3
+            ],
+            "notation": "2*omega1+3*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 2078
+        },
+        {
+          "coefficient_in_F_power": -577,
+          "dimension": 91,
+          "dimension_contribution_to_G_power": 52507,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              5
+            ],
+            "notation": "0*omega1+5*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 577
+        },
+        {
+          "coefficient_in_F_power": -794,
+          "dimension": 84,
+          "dimension_contribution_to_G_power": 66696,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              0
+            ],
+            "notation": "6*omega1+0*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 794
+        },
+        {
+          "coefficient_in_F_power": -1600,
+          "dimension": 220,
+          "dimension_contribution_to_G_power": 352000,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              2
+            ],
+            "notation": "4*omega1+2*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 1600
+        },
+        {
+          "coefficient_in_F_power": -1070,
+          "dimension": 260,
+          "dimension_contribution_to_G_power": 278200,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              4
+            ],
+            "notation": "2*omega1+4*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 1070
+        },
+        {
+          "coefficient_in_F_power": -250,
+          "dimension": 140,
+          "dimension_contribution_to_G_power": 35000,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              6
+            ],
+            "notation": "0*omega1+6*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 250
+        },
+        {
+          "coefficient_in_F_power": -671,
+          "dimension": 231,
+          "dimension_contribution_to_G_power": 155001,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              1
+            ],
+            "notation": "6*omega1+1*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 671
+        },
+        {
+          "coefficient_in_F_power": -780,
+          "dimension": 390,
+          "dimension_contribution_to_G_power": 304200,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              3
+            ],
+            "notation": "4*omega1+3*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 780
+        },
+        {
+          "coefficient_in_F_power": -415,
+          "dimension": 405,
+          "dimension_contribution_to_G_power": 168075,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              5
+            ],
+            "notation": "2*omega1+5*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 415
+        },
+        {
+          "coefficient_in_F_power": -84,
+          "dimension": 204,
+          "dimension_contribution_to_G_power": 17136,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              7
+            ],
+            "notation": "0*omega1+7*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 7
+          },
+          "tensor_multiplicity_in_G_power": 84
+        },
+        {
+          "coefficient_in_F_power": -145,
+          "dimension": 165,
+          "dimension_contribution_to_G_power": 23925,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              0
+            ],
+            "notation": "8*omega1+0*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 145
+        },
+        {
+          "coefficient_in_F_power": -315,
+          "dimension": 455,
+          "dimension_contribution_to_G_power": 143325,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              2
+            ],
+            "notation": "6*omega1+2*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 315
+        },
+        {
+          "coefficient_in_F_power": -275,
+          "dimension": 625,
+          "dimension_contribution_to_G_power": 171875,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              4
+            ],
+            "notation": "4*omega1+4*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 275
+        },
+        {
+          "coefficient_in_F_power": -125,
+          "dimension": 595,
+          "dimension_contribution_to_G_power": 74375,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              6
+            ],
+            "notation": "2*omega1+6*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 125
+        },
+        {
+          "coefficient_in_F_power": -25,
+          "dimension": 285,
+          "dimension_contribution_to_G_power": 7125,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              8
+            ],
+            "notation": "0*omega1+8*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 8
+          },
+          "tensor_multiplicity_in_G_power": 25
+        },
+        {
+          "coefficient_in_F_power": -69,
+          "dimension": 429,
+          "dimension_contribution_to_G_power": 29601,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              1
+            ],
+            "notation": "8*omega1+1*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 69
+        },
+        {
+          "coefficient_in_F_power": -90,
+          "dimension": 770,
+          "dimension_contribution_to_G_power": 69300,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              3
+            ],
+            "notation": "6*omega1+3*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 90
+        },
+        {
+          "coefficient_in_F_power": -65,
+          "dimension": 935,
+          "dimension_contribution_to_G_power": 60775,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              5
+            ],
+            "notation": "4*omega1+5*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 65
+        },
+        {
+          "coefficient_in_F_power": -26,
+          "dimension": 836,
+          "dimension_contribution_to_G_power": 21736,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              7
+            ],
+            "notation": "2*omega1+7*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 7
+          },
+          "tensor_multiplicity_in_G_power": 26
+        },
+        {
+          "coefficient_in_F_power": -5,
+          "dimension": 385,
+          "dimension_contribution_to_G_power": 1925,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              9
+            ],
+            "notation": "0*omega1+9*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 9
+          },
+          "tensor_multiplicity_in_G_power": 5
+        },
+        {
+          "coefficient_in_F_power": -6,
+          "dimension": 286,
+          "dimension_contribution_to_G_power": 1716,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              0
+            ],
+            "notation": "10*omega1+0*omega2",
+            "omega1_coefficient": 10,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 6
+        },
+        {
+          "coefficient_in_F_power": -15,
+          "dimension": 810,
+          "dimension_contribution_to_G_power": 12150,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              2
+            ],
+            "notation": "8*omega1+2*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 15
+        },
+        {
+          "coefficient_in_F_power": -15,
+          "dimension": 1190,
+          "dimension_contribution_to_G_power": 17850,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              4
+            ],
+            "notation": "6*omega1+4*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 15
+        },
+        {
+          "coefficient_in_F_power": -10,
+          "dimension": 1330,
+          "dimension_contribution_to_G_power": 13300,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              6
+            ],
+            "notation": "4*omega1+6*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 10
+        },
+        {
+          "coefficient_in_F_power": -4,
+          "dimension": 1134,
+          "dimension_contribution_to_G_power": 4536,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              8
+            ],
+            "notation": "2*omega1+8*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 8
+          },
+          "tensor_multiplicity_in_G_power": 4
+        },
+        {
+          "coefficient_in_F_power": -1,
+          "dimension": 506,
+          "dimension_contribution_to_G_power": 506,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              10
+            ],
+            "notation": "0*omega1+10*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 10
+          },
+          "tensor_multiplicity_in_G_power": 1
+        }
+      ],
+      "dimension_sum_from_decomposition": 3200000,
+      "global_sign_from_F_equals_minus_G": -1,
+      "independent_weyl_constant_term_haar_moment": -374,
+      "irreducible_count": 36,
+      "laurent_support_size": 221,
+      "power": 5,
+      "reconstruction_exact": true,
+      "tensor_dimension": 3200000,
+      "trivial_coefficient_in_F_power": -374,
+      "trivial_tensor_multiplicity_in_G_power": 374
+    },
+    {
+      "decomposition": [
+        {
+          "coefficient_in_F_power": 3117,
+          "dimension": 1,
+          "dimension_contribution_to_G_power": 3117,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              0,
+              0
+            ],
+            "notation": "0*omega1+0*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 3117
+        },
+        {
+          "coefficient_in_F_power": 10392,
+          "dimension": 5,
+          "dimension_contribution_to_G_power": 51960,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              1,
+              1
+            ],
+            "notation": "0*omega1+1*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 10392
+        },
+        {
+          "coefficient_in_F_power": 16610,
+          "dimension": 10,
+          "dimension_contribution_to_G_power": 166100,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              0
+            ],
+            "notation": "2*omega1+0*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 16610
+        },
+        {
+          "coefficient_in_F_power": 16812,
+          "dimension": 14,
+          "dimension_contribution_to_G_power": 235368,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              2,
+              2
+            ],
+            "notation": "0*omega1+2*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 16812
+        },
+        {
+          "coefficient_in_F_power": 33430,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 1170050,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              1
+            ],
+            "notation": "2*omega1+1*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 33430
+        },
+        {
+          "coefficient_in_F_power": 17810,
+          "dimension": 30,
+          "dimension_contribution_to_G_power": 534300,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              3,
+              3
+            ],
+            "notation": "0*omega1+3*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 17810
+        },
+        {
+          "coefficient_in_F_power": 22095,
+          "dimension": 35,
+          "dimension_contribution_to_G_power": 773325,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              0
+            ],
+            "notation": "4*omega1+0*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 22095
+        },
+        {
+          "coefficient_in_F_power": 37791,
+          "dimension": 81,
+          "dimension_contribution_to_G_power": 3061071,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              2
+            ],
+            "notation": "2*omega1+2*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 37791
+        },
+        {
+          "coefficient_in_F_power": 13935,
+          "dimension": 55,
+          "dimension_contribution_to_G_power": 766425,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              4,
+              4
+            ],
+            "notation": "0*omega1+4*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 13935
+        },
+        {
+          "coefficient_in_F_power": 31416,
+          "dimension": 105,
+          "dimension_contribution_to_G_power": 3298680,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              1
+            ],
+            "notation": "4*omega1+1*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 31416
+        },
+        {
+          "coefficient_in_F_power": 29964,
+          "dimension": 154,
+          "dimension_contribution_to_G_power": 4614456,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              3
+            ],
+            "notation": "2*omega1+3*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 29964
+        },
+        {
+          "coefficient_in_F_power": 8466,
+          "dimension": 91,
+          "dimension_contribution_to_G_power": 770406,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              5,
+              5
+            ],
+            "notation": "0*omega1+5*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 8466
+        },
+        {
+          "coefficient_in_F_power": 13116,
+          "dimension": 84,
+          "dimension_contribution_to_G_power": 1101744,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              0
+            ],
+            "notation": "6*omega1+0*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 13116
+        },
+        {
+          "coefficient_in_F_power": 26424,
+          "dimension": 220,
+          "dimension_contribution_to_G_power": 5813280,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              2
+            ],
+            "notation": "4*omega1+2*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 26424
+        },
+        {
+          "coefficient_in_F_power": 18060,
+          "dimension": 260,
+          "dimension_contribution_to_G_power": 4695600,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              4
+            ],
+            "notation": "2*omega1+4*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 18060
+        },
+        {
+          "coefficient_in_F_power": 4156,
+          "dimension": 140,
+          "dimension_contribution_to_G_power": 581840,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              6,
+              6
+            ],
+            "notation": "0*omega1+6*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 4156
+        },
+        {
+          "coefficient_in_F_power": 13644,
+          "dimension": 231,
+          "dimension_contribution_to_G_power": 3151764,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              1
+            ],
+            "notation": "6*omega1+1*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 13644
+        },
+        {
+          "coefficient_in_F_power": 15840,
+          "dimension": 390,
+          "dimension_contribution_to_G_power": 6177600,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              3
+            ],
+            "notation": "4*omega1+3*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 15840
+        },
+        {
+          "coefficient_in_F_power": 8550,
+          "dimension": 405,
+          "dimension_contribution_to_G_power": 3462750,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              5
+            ],
+            "notation": "2*omega1+5*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 8550
+        },
+        {
+          "coefficient_in_F_power": 1656,
+          "dimension": 204,
+          "dimension_contribution_to_G_power": 337824,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              7,
+              7
+            ],
+            "notation": "0*omega1+7*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 7
+          },
+          "tensor_multiplicity_in_G_power": 1656
+        },
+        {
+          "coefficient_in_F_power": 3845,
+          "dimension": 165,
+          "dimension_contribution_to_G_power": 634425,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              0
+            ],
+            "notation": "8*omega1+0*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 3845
+        },
+        {
+          "coefficient_in_F_power": 8400,
+          "dimension": 455,
+          "dimension_contribution_to_G_power": 3822000,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              2
+            ],
+            "notation": "6*omega1+2*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 8400
+        },
+        {
+          "coefficient_in_F_power": 7200,
+          "dimension": 625,
+          "dimension_contribution_to_G_power": 4500000,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              4
+            ],
+            "notation": "4*omega1+4*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 7200
+        },
+        {
+          "coefficient_in_F_power": 3245,
+          "dimension": 595,
+          "dimension_contribution_to_G_power": 1930775,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              6
+            ],
+            "notation": "2*omega1+6*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 3245
+        },
+        {
+          "coefficient_in_F_power": 555,
+          "dimension": 285,
+          "dimension_contribution_to_G_power": 158175,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              8,
+              8
+            ],
+            "notation": "0*omega1+8*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 8
+          },
+          "tensor_multiplicity_in_G_power": 555
+        },
+        {
+          "coefficient_in_F_power": 2779,
+          "dimension": 429,
+          "dimension_contribution_to_G_power": 1192191,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              1
+            ],
+            "notation": "8*omega1+1*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 2779
+        },
+        {
+          "coefficient_in_F_power": 3600,
+          "dimension": 770,
+          "dimension_contribution_to_G_power": 2772000,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              3
+            ],
+            "notation": "6*omega1+3*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 3600
+        },
+        {
+          "coefficient_in_F_power": 2505,
+          "dimension": 935,
+          "dimension_contribution_to_G_power": 2342175,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              5
+            ],
+            "notation": "4*omega1+5*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 2505
+        },
+        {
+          "coefficient_in_F_power": 976,
+          "dimension": 836,
+          "dimension_contribution_to_G_power": 815936,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              7
+            ],
+            "notation": "2*omega1+7*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 7
+          },
+          "tensor_multiplicity_in_G_power": 976
+        },
+        {
+          "coefficient_in_F_power": 150,
+          "dimension": 385,
+          "dimension_contribution_to_G_power": 57750,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              9,
+              9
+            ],
+            "notation": "0*omega1+9*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 9
+          },
+          "tensor_multiplicity_in_G_power": 150
+        },
+        {
+          "coefficient_in_F_power": 486,
+          "dimension": 286,
+          "dimension_contribution_to_G_power": 138996,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              0
+            ],
+            "notation": "10*omega1+0*omega2",
+            "omega1_coefficient": 10,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 486
+        },
+        {
+          "coefficient_in_F_power": 1134,
+          "dimension": 810,
+          "dimension_contribution_to_G_power": 918540,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              2
+            ],
+            "notation": "8*omega1+2*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 1134
+        },
+        {
+          "coefficient_in_F_power": 1110,
+          "dimension": 1190,
+          "dimension_contribution_to_G_power": 1320900,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              4
+            ],
+            "notation": "6*omega1+4*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 1110
+        },
+        {
+          "coefficient_in_F_power": 666,
+          "dimension": 1330,
+          "dimension_contribution_to_G_power": 885780,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              6
+            ],
+            "notation": "4*omega1+6*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 666
+        },
+        {
+          "coefficient_in_F_power": 234,
+          "dimension": 1134,
+          "dimension_contribution_to_G_power": 265356,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              8
+            ],
+            "notation": "2*omega1+8*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 8
+          },
+          "tensor_multiplicity_in_G_power": 234
+        },
+        {
+          "coefficient_in_F_power": 36,
+          "dimension": 506,
+          "dimension_contribution_to_G_power": 18216,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              10,
+              10
+            ],
+            "notation": "0*omega1+10*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 10
+          },
+          "tensor_multiplicity_in_G_power": 36
+        },
+        {
+          "coefficient_in_F_power": 201,
+          "dimension": 715,
+          "dimension_contribution_to_G_power": 143715,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              11,
+              1
+            ],
+            "notation": "10*omega1+1*omega2",
+            "omega1_coefficient": 10,
+            "omega2_coefficient": 1
+          },
+          "tensor_multiplicity_in_G_power": 201
+        },
+        {
+          "coefficient_in_F_power": 284,
+          "dimension": 1326,
+          "dimension_contribution_to_G_power": 376584,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              11,
+              3
+            ],
+            "notation": "8*omega1+3*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 3
+          },
+          "tensor_multiplicity_in_G_power": 284
+        },
+        {
+          "coefficient_in_F_power": 231,
+          "dimension": 1729,
+          "dimension_contribution_to_G_power": 399399,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              11,
+              5
+            ],
+            "notation": "6*omega1+5*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 5
+          },
+          "tensor_multiplicity_in_G_power": 231
+        },
+        {
+          "coefficient_in_F_power": 124,
+          "dimension": 1820,
+          "dimension_contribution_to_G_power": 225680,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              11,
+              7
+            ],
+            "notation": "4*omega1+7*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 7
+          },
+          "tensor_multiplicity_in_G_power": 124
+        },
+        {
+          "coefficient_in_F_power": 40,
+          "dimension": 1495,
+          "dimension_contribution_to_G_power": 59800,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              11,
+              9
+            ],
+            "notation": "2*omega1+9*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 9
+          },
+          "tensor_multiplicity_in_G_power": 40
+        },
+        {
+          "coefficient_in_F_power": 6,
+          "dimension": 650,
+          "dimension_contribution_to_G_power": 3900,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              11,
+              11
+            ],
+            "notation": "0*omega1+11*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 11
+          },
+          "tensor_multiplicity_in_G_power": 6
+        },
+        {
+          "coefficient_in_F_power": 15,
+          "dimension": 455,
+          "dimension_contribution_to_G_power": 6825,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              12,
+              0
+            ],
+            "notation": "12*omega1+0*omega2",
+            "omega1_coefficient": 12,
+            "omega2_coefficient": 0
+          },
+          "tensor_multiplicity_in_G_power": 15
+        },
+        {
+          "coefficient_in_F_power": 36,
+          "dimension": 1309,
+          "dimension_contribution_to_G_power": 47124,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              12,
+              2
+            ],
+            "notation": "10*omega1+2*omega2",
+            "omega1_coefficient": 10,
+            "omega2_coefficient": 2
+          },
+          "tensor_multiplicity_in_G_power": 36
+        },
+        {
+          "coefficient_in_F_power": 40,
+          "dimension": 1995,
+          "dimension_contribution_to_G_power": 79800,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              12,
+              4
+            ],
+            "notation": "8*omega1+4*omega2",
+            "omega1_coefficient": 8,
+            "omega2_coefficient": 4
+          },
+          "tensor_multiplicity_in_G_power": 40
+        },
+        {
+          "coefficient_in_F_power": 29,
+          "dimension": 2401,
+          "dimension_contribution_to_G_power": 69629,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              12,
+              6
+            ],
+            "notation": "6*omega1+6*omega2",
+            "omega1_coefficient": 6,
+            "omega2_coefficient": 6
+          },
+          "tensor_multiplicity_in_G_power": 29
+        },
+        {
+          "coefficient_in_F_power": 15,
+          "dimension": 2415,
+          "dimension_contribution_to_G_power": 36225,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              12,
+              8
+            ],
+            "notation": "4*omega1+8*omega2",
+            "omega1_coefficient": 4,
+            "omega2_coefficient": 8
+          },
+          "tensor_multiplicity_in_G_power": 15
+        },
+        {
+          "coefficient_in_F_power": 5,
+          "dimension": 1925,
+          "dimension_contribution_to_G_power": 9625,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              12,
+              10
+            ],
+            "notation": "2*omega1+10*omega2",
+            "omega1_coefficient": 2,
+            "omega2_coefficient": 10
+          },
+          "tensor_multiplicity_in_G_power": 5
+        },
+        {
+          "coefficient_in_F_power": 1,
+          "dimension": 819,
+          "dimension_contribution_to_G_power": 819,
+          "highest_weight": {
+            "e_basis_coordinates": [
+              12,
+              12
+            ],
+            "notation": "0*omega1+12*omega2",
+            "omega1_coefficient": 0,
+            "omega2_coefficient": 12
+          },
+          "tensor_multiplicity_in_G_power": 1
+        }
+      ],
+      "dimension_sum_from_decomposition": 64000000,
+      "global_sign_from_F_equals_minus_G": 1,
+      "independent_weyl_constant_term_haar_moment": 3117,
+      "irreducible_count": 49,
+      "laurent_support_size": 313,
+      "power": 6,
+      "reconstruction_exact": true,
+      "tensor_dimension": 64000000,
+      "trivial_coefficient_in_F_power": 3117,
+      "trivial_tensor_multiplicity_in_G_power": 3117
+    }
+  ],
+  "producer": {
+    "language": "Python stdlib exact integer Laurent arithmetic",
+    "script": "usp4_toy_minor_character_decomposition.py",
+    "source_sha256_lf_normalized": "2f5187421d0add48806c6710ff520a0e8281805457eeebe570d1e8ef5475820b"
+  },
+  "resource_contract": {
+    "external_cas": false,
+    "maximum_highest_e_coordinate": 12,
+    "maximum_power": 6,
+    "maximum_wall_seconds": 5.0,
+    "numerical_integration": false,
+    "observed_operations": {
+      "character_weight_candidates": 15785,
+      "kostant_weyl_summands": 126280,
+      "laurent_pair_products": 33721,
+      "residual_term_updates": 25379
+    },
+    "operation_caps": {
+      "character_weight_candidates": 25000,
+      "kostant_weyl_summands": 200000,
+      "laurent_pair_products": 150000,
+      "residual_term_updates": 50000
+    },
+    "random_sampling": false
+  },
+  "schema_version": "usp4-toy-minor-character-decomposition-v1",
+  "scope_firewall": {
+    "this_does_not_prove": [
+      "finite genus-two family moment convergence",
+      "USp(4) equidistribution for the scanned polynomial family",
+      "a rate of convergence in q",
+      "any number-field L-function statement"
+    ],
+    "this_proves": "the exact compact-group character decompositions and Haar moments listed here"
+  },
+  "status": "PROVED_EXACT_C2_CHARACTER_DECOMPOSITION",
+  "verification": {
+    "all_F_power_coefficients_have_uniform_sign_minus_one_to_m": true,
+    "all_dimension_sums_equal_20_to_m": true,
+    "all_generated_characters_are_weyl_invariant": true,
+    "all_kostant_character_dimensions_match_weyl_formula": true,
+    "all_power_reconstructions_exact": true,
+    "all_tensor_multiplicities_positive": true,
+    "all_trivial_multiplicities_match_independent_haar_constant_terms": true,
+    "frozen_haar_moments": [
+      -1,
+      3,
+      -11,
+      56,
+      -374,
+      3117
+    ],
+    "signed_trivial_multiplicities": [
+      -1,
+      3,
+      -11,
+      56,
+      -374,
+      3117
+    ]
+  }
+}

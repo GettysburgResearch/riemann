@@ -8,10 +8,10 @@
     "schema", "definition", "detector_semantic_id", "source_fixture",
     "finite_result_status", "families", "resource_controls", "closed_formula_target",
     "usp4_limit_target", "negative_proportion_corollary", "affine_orbit_certificate",
-    "firewalls"
+    "second_moment_reduction", "firewalls"
   ],
   "properties": {
-    "schema": {"const": "riemann.atlas.raw.function_field_genus2_q_scan.v1"},
+    "schema": {"const": "riemann.atlas.raw.function_field_genus2_q_scan.v2"},
     "definition": {"type": "string", "minLength": 1},
     "detector_semantic_id": {"type": "string", "pattern": "^ATLAS\\.DETECTOR\\."},
     "source_fixture": {
@@ -54,15 +54,20 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "status", "not_a_theorem", "scope", "mean_K", "normalized_mean_K",
+        "status", "not_a_theorem", "scope", "mean_a_fourth", "mean_a_squared_b", "mean_b", "mean_K", "normalized_mean_K",
+        "low_weight_character_profile",
         "all_three_frozen_fields_match", "proof", "evidence", "smallest_gap"
       ],
       "properties": {
         "status": {"const": "PROVED_IN_DRAFT_RESEARCH_NOTE"},
         "not_a_theorem": {"const": false},
         "scope": {"const": "every odd prime power q"},
+        "mean_a_fourth": {"const": "3*q^2-7*q+5+12/q-14/q^2-11/q^3"},
+        "mean_a_squared_b": {"const": "(q+1)*(q^2-2*q+3)*(2*q^2-2*q-1)/q^3"},
+        "mean_b": {"const": "q-1+(q^2-1)/q^3"},
         "mean_K": {"type": "string", "minLength": 1},
         "normalized_mean_K": {"type": "string", "minLength": 1},
+        "low_weight_character_profile": {"$ref": "#/$defs/low_weight_character_profile"},
         "all_three_frozen_fields_match": {"const": true},
         "proof": {"$ref": "#/$defs/proof_certificate"},
         "evidence": {"type": "string", "minLength": 1},
@@ -128,12 +133,405 @@
       }
     },
     "affine_orbit_certificate": {"$ref": "#/$defs/affine_orbit_certificate"},
+    "second_moment_reduction": {"$ref": "#/$defs/second_moment_reduction"},
     "firewalls": {
       "type": "array", "minItems": 4,
       "items": {"type": "string", "minLength": 1}
     }
   },
   "$defs": {
+    "second_moment_reduction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status", "scope", "source_fixture", "source_locks", "master_reduction",
+        "signature_inventory", "primitive_character_reduction", "character_reduction",
+        "finite_histogram_checks", "candidate_shape_firewall", "resource_contract",
+        "firewalls"
+      ],
+      "properties": {
+        "status": {
+          "const": "DRAFT_EXACT_PROOF_ROADMAP_NOT_SECOND_MOMENT_FORMULA"
+        },
+        "scope": {
+          "const": "symbolic reduction for monic squarefree quintics over every odd prime power q; histogram checks only at q=3,5,7"
+        },
+        "source_fixture": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "canonical_sha256", "payload_sha256"],
+          "properties": {
+            "path": {
+              "const": "research/l-families/atlas/function_field/genus2_second_moment_reduction.json"
+            },
+            "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          }
+        },
+        "source_locks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "q_scan", "coefficient_moment_proof_note",
+            "exact_polynomial_certificate", "roadmap_generator"
+          ],
+          "properties": {
+            "q_scan": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "canonical_sha256", "payload_sha256"],
+              "properties": {
+                "path": {
+                  "const": "research/l-families/atlas/function_field/genus2_q_scan.json"
+                },
+                "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+                "payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+              }
+            },
+            "coefficient_moment_proof_note": {
+              "$ref": "#/$defs/second_moment_note_lock"
+            },
+            "exact_polynomial_certificate": {
+              "$ref": "#/$defs/second_moment_certificate_lock"
+            },
+            "roadmap_generator": {
+              "$ref": "#/$defs/second_moment_generator_lock"
+            }
+          }
+        },
+        "master_reduction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "definitions", "formula", "proven_A4", "sieve_scope",
+            "squarefree_sieve", "unresolved_block"
+          ],
+          "properties": {
+            "definitions": {
+              "const": {
+                "A4": "sum_D a_D^4",
+                "B4": "sum_D b_D^4",
+                "M22": "sum_D a_D^2*b_D^2"
+              }
+            },
+            "formula": {
+              "const": "sum_D K_D^2=q^2*A4(q)-2*q*M22(q)+B4(q)"
+            },
+            "proven_A4": {
+              "const": {
+                "mean": "3*q^2-7*q+5+12/q-14/q^2-11/q^3",
+                "status": "PROVED_BY_REWEIGHTING_THE_BOUND_QUARTIC_TABLE",
+                "total": "q*(q-1)*(q+1)*(3*q^4-10*q^3+15*q^2-3*q-11)"
+              }
+            },
+            "sieve_scope": {
+              "const": "all h supported on monic linear and irreducible-quadratic primes; only Moebius degrees 0,1,2 occur because deg D=5"
+            },
+            "squarefree_sieve": {
+              "const": "S5(h)=C5(h)-(q-l)C3(h)+(binom(l+1,2)+k-q*l)C1(h)"
+            },
+            "unresolved_block": {"const": "B4(q)-2*q*M22(q)"}
+          }
+        },
+        "signature_inventory": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["M22", "B4", "total_signature_count"],
+          "properties": {
+            "M22": {
+              "const": {
+                "signature_count": 20,
+                "signature_count_derivation": "11+5+4=20",
+                "weighted_tuple_count_formula": "q^6",
+                "maximum_tuple_weight": 180
+              }
+            },
+            "B4": {
+              "const": {
+                "signature_count": 54,
+                "signature_count_derivation": "22+11+10+6+5=54",
+                "weighted_tuple_count_formula": "q^8",
+                "maximum_tuple_weight": 2520
+              }
+            },
+            "total_signature_count": {"const": 74}
+          }
+        },
+        "primitive_character_reduction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "deletion_formula", "new_marked_primitive_coefficients",
+            "marked_family_count", "coefficient_as_character_sum", "remaining_lemma"
+          ],
+          "properties": {
+            "deletion_formula": {
+              "const": "C_n(h)=[u^n]L_r(u)*product_(P in E)(1-(P/r)*u^deg(P))"
+            },
+            "new_marked_primitive_coefficients": {
+              "const": {
+                "degree_4": ["p1(r)"],
+                "degree_6": ["p1(r)", "p2(r)"],
+                "degree_8": ["p1(r)", "p2(r)", "p3(r)"]
+              }
+            },
+            "marked_family_count": {"const": 6},
+            "coefficient_as_character_sum": {
+              "const": "p_m(r)=sum_(j=0)^m sum_(F monic,deg F=j) (F/r)"
+            },
+            "remaining_lemma": {
+              "const": "Evaluate the six marked primitive-coefficient families, including their deletion-character products, across the frozen 20+54 signatures."
+            }
+          }
+        },
+        "character_reduction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "weight_convention", "mixed_trace_middle", "statistic_identity", "statistic_squared",
+            "trace_fourth", "single_virtual_character_obstruction",
+            "refined_honest_high_weight_obstruction"
+          ],
+          "properties": {
+            "weight_convention": {"const": "highest_weight=a*omega_1+b*omega_2"},
+            "mixed_trace_middle": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "arithmetic_normalization", "decomposition", "dimension_checksum", "formula"
+              ],
+              "properties": {
+                "arithmetic_normalization": {
+                  "const": "a_D^2*b_D/q^2=(Tr U)^2*e_2(U)"
+                },
+                "decomposition": {
+                  "const": [
+                    {"dimension": 1, "highest_weight_a_b": [0, 0], "multiplicity": 2},
+                    {"dimension": 5, "highest_weight_a_b": [0, 1], "multiplicity": 3},
+                    {"dimension": 10, "highest_weight_a_b": [2, 0], "multiplicity": 3},
+                    {"dimension": 14, "highest_weight_a_b": [0, 2], "multiplicity": 1},
+                    {"dimension": 35, "highest_weight_a_b": [2, 1], "multiplicity": 1}
+                  ]
+                },
+                "dimension_checksum": {"const": 96},
+                "formula": {
+                  "const": "(Tr U)^2*e_2(U)=2*chi_00+3*chi_01+3*chi_20+chi_02+chi_21"
+                }
+              }
+            },
+            "statistic_identity": {
+              "const": {
+                "formula": "F=(Tr U)^2-e_2(U)^2=-(chi_00+chi_01+chi_02)",
+                "F_at_identity": -20
+              }
+            },
+            "statistic_squared": {
+              "const": {
+                "formula": "F^2=3*chi_00+4*chi_01+2*chi_20+4*chi_02+2*chi_21+chi_40+2*chi_03+chi_22+chi_04",
+                "dimension_checksum": 400,
+                "haar_second_moment_target": 3
+              }
+            },
+            "trace_fourth": {
+              "const": {
+                "formula": "(Tr U)^4=3*chi_00+5*chi_01+6*chi_20+2*chi_02+3*chi_21+chi_40",
+                "dimension_checksum": 256
+              }
+            },
+            "single_virtual_character_obstruction": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "decomposition", "dimension_checksum", "formula", "proof_burden", "status"
+              ],
+              "properties": {
+                "decomposition": {
+                  "const": [
+                    {"dimension": 5, "highest_weight_a_b": [0, 1], "multiplicity": -1},
+                    {"dimension": 10, "highest_weight_a_b": [2, 0], "multiplicity": -4},
+                    {"dimension": 14, "highest_weight_a_b": [0, 2], "multiplicity": 2},
+                    {"dimension": 35, "highest_weight_a_b": [2, 1], "multiplicity": -1},
+                    {"dimension": 30, "highest_weight_a_b": [0, 3], "multiplicity": 2},
+                    {"dimension": 81, "highest_weight_a_b": [2, 2], "multiplicity": 1},
+                    {"dimension": 55, "highest_weight_a_b": [0, 4], "multiplicity": 1}
+                  ]
+                },
+                "dimension_checksum": {"const": 144},
+                "formula": {
+                  "const": "F^2-(Tr U)^4=chi_04+chi_22+2*chi_03-chi_21+2*chi_02-4*chi_20-chi_01"
+                },
+                "proof_burden": {
+                  "const": "Evaluate this one virtual-character average over H_5(q); the exact trace-fourth average is already supplied by the bound moment proof."
+                },
+                "status": {
+                  "const": "EXACT_REDUCTION_UNRESOLVED_FOR_GENERAL_Q"
+                }
+              }
+            },
+            "refined_honest_high_weight_obstruction": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "decomposition", "dimension_checksum", "exact_low_weight_average",
+                "formula", "limit_equivalence", "proof_burden", "status", "virtual_split"
+              ],
+              "properties": {
+                "decomposition": {
+                  "const": [
+                    {"dimension": 30, "highest_weight_a_b": [0, 3], "multiplicity": 2},
+                    {"dimension": 81, "highest_weight_a_b": [2, 2], "multiplicity": 1},
+                    {"dimension": 55, "highest_weight_a_b": [0, 4], "multiplicity": 1}
+                  ]
+                },
+                "dimension_checksum": {"const": 196},
+                "exact_low_weight_average": {
+                  "const": "mean(L)=-1/q-1/q^2-6/q^3+6/q^4"
+                },
+                "formula": {"const": "H=chi_04+chi_22+2*chi_03"},
+                "limit_equivalence": {
+                  "const": "Because the exact trace-fourth mean tends to 3 and mean(L) tends to 0, mean(F^2) tends to 3 if and only if mean(H) tends to 0."
+                },
+                "proof_burden": {
+                  "const": "Only the honest high-weight packet chi_04+chi_22+2*chi_03 remains; all five lower-weight channels are supplied by exact coefficient moments."
+                },
+                "status": {
+                  "const": "EXACT_REDUCTION_USING_PROVED_LOW_WEIGHT_MEANS"
+                },
+                "virtual_split": {
+                  "const": "F^2-(Tr U)^4=H+L, L=-chi_21+2*chi_02-4*chi_20-chi_01"
+                }
+              }
+            }
+          }
+        },
+        "finite_histogram_checks": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "prefixItems": [
+            {
+              "const": {
+                "histogram_bin_count": 12,
+                "exact_low_weight_character_correction": [-16, 27],
+                "member_count": 162,
+                "normalized_honest_high_weight_packet": [536, 2187],
+                "normalized_second_moment_Z": [2408, 2187],
+                "normalized_virtual_character_obstruction": [-760, 2187],
+                "q": 3,
+                "q_squared_sum_a_fourth": 19008,
+                "sum_K_squared": 14448,
+                "sum_a_fourth": 2112,
+                "unresolved_B4_minus_2qM22": -4560,
+                "unresolved_residual_over_q_qminus_1": [-760, 1]
+              }
+            },
+            {
+              "const": {
+                "histogram_bin_count": 24,
+                "exact_low_weight_character_correction": [-174, 625],
+                "member_count": 2500,
+                "normalized_honest_high_weight_packet": [7154, 78125],
+                "normalized_second_moment_Z": [131504, 78125],
+                "normalized_virtual_character_obstruction": [-14596, 78125],
+                "q": 5,
+                "q_squared_sum_a_fourth": 2922000,
+                "sum_K_squared": 2630080,
+                "sum_a_fourth": 116880,
+                "unresolved_B4_minus_2qM22": -291920,
+                "unresolved_residual_over_q_qminus_1": [-14596, 1]
+              }
+            },
+            {
+              "const": {
+                "histogram_bin_count": 53,
+                "exact_low_weight_character_correction": [-428, 2401],
+                "member_count": 14406,
+                "normalized_honest_high_weight_packet": [37652, 823543],
+                "normalized_second_moment_Z": [1645440, 823543],
+                "normalized_virtual_character_obstruction": [-109152, 823543],
+                "q": 7,
+                "q_squared_sum_a_fourth": 73692864,
+                "sum_K_squared": 69108480,
+                "sum_a_fourth": 1503936,
+                "unresolved_B4_minus_2qM22": -4584384,
+                "unresolved_residual_over_q_qminus_1": [-109152, 1]
+              }
+            }
+          ],
+          "items": false
+        },
+        "candidate_shape_firewall": {
+          "const": {
+            "elementary_expectation": "Principal, collision, and type-count terms are polynomial in q; linear-linear reciprocity can introduce eta_q=chi_q(-1).",
+            "three_field_limitation": "q=3,7 have eta_q=-1 and q=5 is the only eta_q=+1 sample; the three checks cannot identify an all-q formula or a prime-power law.",
+            "unproved_possibility": "Surviving p_i averages may be genuine Frobenius-trace terms, so neither a polynomial nor an eta_q two-branch quasipolynomial is asserted."
+          }
+        },
+        "resource_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "maximum_signatures", "actual_signatures", "maximum_partition_degree",
+            "maximum_exact_operations", "exact_operations_used", "maximum_wall_seconds",
+            "clock", "field_enumeration", "histogram_bins_read"
+          ],
+          "properties": {
+            "maximum_signatures": {"const": 74},
+            "actual_signatures": {"const": 74},
+            "maximum_partition_degree": {"const": 8},
+            "maximum_exact_operations": {"const": 50000},
+            "exact_operations_used": {"type": "integer", "minimum": 1, "maximum": 50000},
+            "maximum_wall_seconds": {"const": "2.0"},
+            "clock": {"const": "time.monotonic"},
+            "field_enumeration": {"const": "FORBIDDEN_AND_NOT_IMPORTED"},
+            "histogram_bins_read": {"const": 89}
+          }
+        },
+        "firewalls": {
+          "const": [
+            "This packet is an exact proof roadmap, not an all-q second-moment formula.",
+            "The 20+54 signature enumeration is combinatorial and performs no finite-field or family enumeration.",
+            "The q=3,5,7 histogram identities are checksums and are not interpolation data for a theorem.",
+            "The exact USp(4) character decomposition does not prove finite-family equidistribution or convergence.",
+            "The mixed a_D^2*b_D^2 and b_D^4 character correlations remain unevaluated.",
+            "No polynomial, quasipolynomial, rate, sign law, number-field transfer, RH, or GRH conclusion is asserted."
+          ]
+        }
+      }
+    },
+    "second_moment_note_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256_lf_normalized"],
+      "properties": {
+        "path": {
+          "const": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md"
+        },
+        "sha256_lf_normalized": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "second_moment_certificate_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256_lf_normalized"],
+      "properties": {
+        "path": {
+          "const": "research/l-families/atlas/function_field/genus2_moment_identity.py"
+        },
+        "sha256_lf_normalized": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "second_moment_generator_lock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256_lf_normalized"],
+      "properties": {
+        "path": {
+          "const": "research/l-families/atlas/function_field/genus2_second_moment_reduction.py"
+        },
+        "sha256_lf_normalized": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
     "affine_orbit_certificate": {
       "type": "object",
       "additionalProperties": false,
@@ -294,13 +692,35 @@
         }
       }
     },
+    "low_weight_character_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "normalization", "mean_chi_(0,1)", "mean_chi_(2,0)", "mean_chi_(0,2)",
+        "mean_chi_(2,1)", "mean_chi_(4,0)",
+        "status", "scope"
+      ],
+      "properties": {
+        "normalization": {"type": "string", "minLength": 1},
+        "mean_chi_(0,1)": {"const": "-1/q+1/q^2-1/q^4"},
+        "mean_chi_(2,0)": {"const": "1/q^3-1/q^4"},
+        "mean_chi_(0,2)": {"const": "-1/q-1/q^5"},
+        "mean_chi_(2,1)": {"const": "2/q^3-1/q^4-2/q^5"},
+        "mean_chi_(4,0)": {"const": "-3/q^5"},
+        "status": {"const": "PROVED_FROM_EXACT_COEFFICIENT_MOMENTS"},
+        "scope": {"const": "every odd prime power q"}
+      }
+    },
     "regression_control": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["member_count", "sum_a_squared", "sum_b_squared", "sum_K"],
+      "required": ["member_count", "sum_a_squared", "sum_a_fourth", "sum_a_squared_b", "sum_b", "sum_b_squared", "sum_K"],
       "properties": {
         "member_count": {"const": true},
         "sum_a_squared": {"const": true},
+        "sum_a_fourth": {"const": true},
+        "sum_a_squared_b": {"const": true},
+        "sum_b": {"const": true},
         "sum_b_squared": {"const": true},
         "sum_K": {"const": true}
       }
@@ -336,6 +756,7 @@
       "additionalProperties": false,
       "required": [
         "q", "spec_semantic_id", "candidate_count", "member_count", "moments",
+        "low_weight_character_means",
         "sign_counts", "formula_matches_at_this_q"
       ],
       "properties": {
@@ -346,12 +767,27 @@
         "moments": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["a_squared", "b_squared", "K", "normalized_K"],
+          "required": ["a_squared", "a_fourth", "a_squared_b", "b", "b_squared", "K", "normalized_K"],
           "properties": {
             "a_squared": {"$ref": "#/$defs/integer_moment"},
+            "a_fourth": {"$ref": "#/$defs/integer_moment"},
+            "a_squared_b": {"$ref": "#/$defs/integer_moment"},
+            "b": {"$ref": "#/$defs/integer_moment"},
             "b_squared": {"$ref": "#/$defs/integer_moment"},
             "K": {"$ref": "#/$defs/integer_moment"},
             "normalized_K": {"$ref": "#/$defs/normalized_moment"}
+          }
+        },
+        "low_weight_character_means": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["chi_(0,1)", "chi_(2,0)", "chi_(0,2)", "chi_(2,1)", "chi_(4,0)"],
+          "properties": {
+            "chi_(0,1)": {"$ref": "#/$defs/fraction_pair"},
+            "chi_(2,0)": {"$ref": "#/$defs/fraction_pair"},
+            "chi_(0,2)": {"$ref": "#/$defs/fraction_pair"},
+            "chi_(2,1)": {"$ref": "#/$defs/fraction_pair"},
+            "chi_(4,0)": {"$ref": "#/$defs/fraction_pair"}
           }
         },
         "sign_counts": {
@@ -367,9 +803,12 @@
         "formula_matches_at_this_q": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["mean_a_squared", "mean_b_squared", "mean_K", "normalized_mean_K"],
+          "required": ["mean_a_squared", "mean_a_fourth", "mean_a_squared_b", "mean_b", "mean_b_squared", "mean_K", "normalized_mean_K"],
           "properties": {
             "mean_a_squared": {"const": true},
+            "mean_a_fourth": {"const": true},
+            "mean_a_squared_b": {"const": true},
+            "mean_b": {"const": true},
             "mean_b_squared": {"const": true},
             "mean_K": {"const": true},
             "normalized_mean_K": {"const": true}

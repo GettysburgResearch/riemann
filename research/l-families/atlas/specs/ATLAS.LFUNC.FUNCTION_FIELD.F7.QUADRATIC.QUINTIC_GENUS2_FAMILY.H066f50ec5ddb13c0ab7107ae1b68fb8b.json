@@ -67,7 +67,7 @@
           "algorithm": "sha256",
           "binds": "raw genus2_q_scan.py bytes",
           "hash_mode": "RAW_BYTES",
-          "value": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10"
+          "value": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
         }
       ],
       "identifier": "FUNCTION_FIELD.GENUS2.Q_SCAN.V1",
@@ -105,7 +105,7 @@
           "algorithm": "sha256",
           "binds": "canonical JSON q-scan fixture",
           "hash_mode": "CANONICAL_JSON_UTF8_NFC",
-          "value": "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4"
+          "value": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632"
         }
       ],
       "identifier": "FUNCTION_FIELD.GENUS2.Q3_Q5_Q7.EXACT_SCAN.V1",
@@ -146,7 +146,7 @@
     "version": 1
   },
   "identity_sha256": "066f50ec5ddb13c0ab7107ae1b68fb8b8dee7384303333ef4b67175f20f83989",
-  "notes": "The finite a_D,b_D,K_D totals are exact native computations. Root-location claims are not inputs to this scan. A separately bound DRAFT proof note and exact Q[q] certificate establish the registered first-moment formulas for every odd prime power.",
+  "notes": "The finite a_D,b_D,K_D totals are exact native computations. Root-location claims are not inputs to this scan. A separately bound DRAFT proof note and exact Q[q] certificate establish the registered b_D first moment, second/fourth trace moments, the mixed a_D^2*b_D moment, and toy-minor first moment for every odd prime power.",
   "programme_refs": [
     {
       "kind": "GITHUB_ISSUE",

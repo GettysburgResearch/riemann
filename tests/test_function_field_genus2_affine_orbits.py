@@ -257,6 +257,16 @@ class FrozenOrbitTests(unittest.TestCase):
         self.assertIn("numerical root finding", encoded)
         self.assertIn("per-member euler coefficient enumeration", encoded)
 
+    def test_all_odd_trace_cancellation_corollary_is_explicit(self) -> None:
+        corollary = self.fixture["odd_trace_cancellation_corollary"]
+        self.assertEqual(
+            corollary["status"], "PROVED_FOR_EVERY_ODD_PRIME_POWER"
+        )
+        self.assertIn("a_D^(2r+1)", corollary["statement"])
+        self.assertIn("(a,b)->(-a,b)", corollary["special_cases"][1])
+        self.assertIn("nonsquare alpha", corollary["proof"])
+        self.assertIn("no equidistribution rate", corollary["scope_boundary"])
+
     def test_checked_in_fixture_is_exact_generator_output(self) -> None:
         stored = json.loads(subject.FIXTURE.read_text(encoding="utf-8"))
         self.assertEqual(stored, self.fixture)

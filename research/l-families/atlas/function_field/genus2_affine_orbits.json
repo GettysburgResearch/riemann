@@ -567,16 +567,26 @@
     ],
     "family_arithmetic": "reuse genus2_q_scan exact squarefree gcd, F_q/F_(q^2) character tables, and a_D,b_D reconstruction"
   },
-  "payload_sha256": "d228a9d3f0eb3b21869d980810db94de648f6e3e46408cb33239f4cc70f260e0",
+  "odd_trace_cancellation_corollary": {
+    "proof": "Choose a nonsquare alpha in F_q^* and beta=0. The affine action permutes the family, sends a_D to -a_D, and fixes both a_D^2 and b_D.",
+    "scope_boundary": "This is an exact finite-family symmetry statement; it supplies no equidistribution rate or number-field transfer.",
+    "special_cases": [
+      "every odd moment of a_D is exactly zero",
+      "the joint distribution of (a_D,b_D) is invariant under (a,b)->(-a,b)"
+    ],
+    "statement": "For every r>=0 and every function Phi, the uniform family sum of a_D^(2r+1)*Phi(a_D^2,b_D) is zero whenever the sum is defined.",
+    "status": "PROVED_FOR_EVERY_ODD_PRIME_POWER"
+  },
+  "payload_sha256": "9f55481e43e096d7495d1c2966634e24b69ea15b986d5777af79efe9627a98d1",
   "producer": {
     "input_provenance": "complete deterministic generation, no external data",
     "runtime_contract": "Python 3.11+ standard library; exact integer arithmetic",
     "shared_q_scan_fixture": "research/l-families/atlas/function_field/genus2_q_scan.json",
-    "shared_q_scan_fixture_canonical_sha256": "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4",
+    "shared_q_scan_fixture_canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
     "shared_q_scan_source": "research/l-families/atlas/function_field/genus2_q_scan.py",
-    "shared_q_scan_source_sha256_lf_normalized": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10",
+    "shared_q_scan_source_sha256_lf_normalized": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935",
     "source": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
-    "source_sha256_lf_normalized": "9521f778d240d8ab375f9c09796ab8acd740fc453cf3b033581b2ba15af865ab"
+    "source_sha256_lf_normalized": "32e440750b2832ec4cc84473187b4b1aa6396eda87c64f5ac845b2a96dc88f08"
   },
   "q_scan_regression_controls": {
     "3": {

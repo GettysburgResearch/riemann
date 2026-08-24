@@ -68,6 +68,9 @@ class FrozenScanTests(unittest.TestCase):
             3: {
                 "members": 162,
                 "a2_sum": 384,
+                "a4_sum": 2112,
+                "a2b_sum": 1584,
+                "b_sum": 372,
                 "b2_sum": 1776,
                 "K_sum": -624,
                 "K_mean": [-104, 27],
@@ -77,6 +80,9 @@ class FrozenScanTests(unittest.TestCase):
             5: {
                 "members": 2500,
                 "a2_sum": 10560,
+                "a4_sum": 116880,
+                "a2b_sum": 84240,
+                "b_sum": 10480,
                 "b2_sum": 92680,
                 "K_sum": -39880,
                 "K_mean": [-1994, 125],
@@ -86,6 +92,9 @@ class FrozenScanTests(unittest.TestCase):
             7: {
                 "members": 14406,
                 "a2_sum": 88704,
+                "a4_sum": 1503936,
+                "a2b_sum": 1059744,
+                "b_sum": 88452,
                 "b2_sum": 1139208,
                 "K_sum": -518280,
                 "K_mean": [-12340, 343],
@@ -99,6 +108,11 @@ class FrozenScanTests(unittest.TestCase):
             self.assertEqual(family["member_count"], control["members"])
             self.assertEqual(family["member_count"], q**5 - q**4)
             self.assertEqual(family["moments"]["a_squared"]["sum"], control["a2_sum"])
+            self.assertEqual(family["moments"]["a_fourth"]["sum"], control["a4_sum"])
+            self.assertEqual(
+                family["moments"]["a_squared_b"]["sum"], control["a2b_sum"]
+            )
+            self.assertEqual(family["moments"]["b"]["sum"], control["b_sum"])
             self.assertEqual(family["moments"]["b_squared"]["sum"], control["b2_sum"])
             self.assertEqual(family["moments"]["K"]["sum"], control["K_sum"])
             self.assertEqual(family["moments"]["K"]["mean"], control["K_mean"])
@@ -107,6 +121,13 @@ class FrozenScanTests(unittest.TestCase):
             )
             self.assertEqual(family["sign_counts"], control["signs"])
             self.assertEqual(sum(family["K_histogram"].values()), control["members"])
+            self.assertEqual(
+                {
+                    name: Fraction(*value)
+                    for name, value in family["low_weight_character_means"].items()
+                },
+                scan.candidate_low_weight_character_means(q),
+            )
 
     def test_witnesses_cover_all_signs_and_are_exact(self) -> None:
         for q, family in self.by_q.items():
@@ -141,6 +162,13 @@ class FrozenScanTests(unittest.TestCase):
             self.fixture["usp4_limit_target"]["status"], scan.MEAN_LIMIT_STATUS
         )
         self.assertFalse(self.fixture["usp4_limit_target"]["not_a_theorem"])
+        profile = self.fixture["closed_formula_target"]["low_weight_character_profile"]
+        self.assertEqual(profile["status"], "PROVED_FROM_EXACT_COEFFICIENT_MOMENTS")
+        self.assertEqual(profile["mean_chi_(0,1)"], "-1/q+1/q^2-1/q^4")
+        self.assertEqual(profile["mean_chi_(2,0)"], "1/q^3-1/q^4")
+        self.assertEqual(profile["mean_chi_(0,2)"], "-1/q-1/q^5")
+        self.assertEqual(profile["mean_chi_(2,1)"], "2/q^3-1/q^4-2/q^5")
+        self.assertEqual(profile["mean_chi_(4,0)"], "-3/q^5")
         proof = self.fixture["closed_formula_target"]["proof"]
         self.assertEqual(proof["symbolic_operations"], scan.moment_identity.build_certificate().operations_used)
         self.assertLess(proof["symbolic_operations"], proof["operation_cap"])
@@ -150,6 +178,19 @@ class FrozenScanTests(unittest.TestCase):
         for family in self.fixture["families"]:
             self.assertTrue(
                 all(entry["matches"] for entry in family["formula_comparison"].values())
+            )
+            q = family["q"]
+            self.assertEqual(
+                Fraction(*family["moments"]["a_fourth"]["mean"]),
+                scan.candidate_mean_a_fourth(q),
+            )
+            self.assertEqual(
+                Fraction(*family["moments"]["a_squared_b"]["mean"]),
+                scan.candidate_mean_a_squared_b(q),
+            )
+            self.assertEqual(
+                Fraction(*family["moments"]["b"]["mean"]),
+                scan.candidate_mean_b(q),
             )
 
     def test_negative_sign_density_corollary_is_exact_and_scope_limited(self) -> None:

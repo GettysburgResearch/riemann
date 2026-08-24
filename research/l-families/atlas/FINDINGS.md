@@ -147,6 +147,19 @@ a_{D^{\alpha,\beta}}=\chi_q(\alpha)a_D,
 \qquad K_{D^{\alpha,\beta}}=K_D.
 \]
 
+Choosing `beta=0` and a nonsquare `alpha` gives a sign-reversing symmetry of
+the uniform multiset of coefficients. Hence, for
+every odd prime power and every `r>=0`,
+
+\[
+\sum_D a_D^{2r+1}\Phi(a_D^2,b_D)=0
+\]
+
+for every function `Phi`. In particular every odd trace moment vanishes
+exactly, and the joint coefficient distribution is invariant under
+`(a,b)->(-a,b)`. This is an all-field symmetry lemma, not evidence for the
+even moments or equidistribution.
+
 Thus every sign and moment contribution is orbit-invariant. Exhaustively
 checking all 656,024 member-action pairs gives:
 
@@ -168,20 +181,123 @@ Those three rows suggested a formula, but they are no longer its evidence of
 proof. The separate DRAFT note
 [`GENUS2_MOMENT_IDENTITY.md`](function_field/GENUS2_MOMENT_IDENTITY.md) gives a
 complete squarefree-Moebius calculation, and a bounded exact `Q[q]` certificate
-checks its nine quartic factorization rows and polynomial algebra in 1,761
-operations. Independently of the three scans, it proves for every odd prime
-power
+checks its degree-two, quartic-factorization, and mixed quartic-reweight tables
+and polynomial algebra in 2,925 operations. Independently of the three scans,
+it proves for every odd prime power
 
 \[
 \begin{aligned}
 \mathbb E(a_D^2)
  &=q-1+\frac{q^2+q-2}{q^3},\\
+\mathbb E(a_D^4)
+ &=3q^2-7q+5+\frac{12}{q}-\frac{14}{q^2}-\frac{11}{q^3},\\
+\mathbb E(a_D^2b_D)
+ &=\frac{(q+1)(q^2-2q+3)(2q^2-2q-1)}{q^3},\\
+\mathbb E(b_D)
+ &=q-1+\frac{q^2-1}{q^3},\\
 \mathbb E(b_D^2)
  &=2q^2-3q+2+\frac{q^2-3q-1}{q^3},\\
 \mathbb E(K_D)
  &=-(q-1)^2+\frac{q+1}{q^3}.
 \end{aligned}
 \]
+
+The fourth trace moment comes from an exact reweighting of the five
+linear-only rows in the same quartic factorization table. Equivalently,
+
+\[
+\sum_{D\in\mathcal H_5}a_D^4
+=q(q-1)(q+1)(3q^4-10q^3+15q^2-3q-11).
+\]
+
+It follows independently of the scans that
+`E[(a_D/sqrt(q))^4] -> 3`, the `USp(4)` trace target. This settles the
+`q^2 a_D^4` part of
+
+\[
+\sum_DK_D^2=q^2\sum_Da_D^4-2q\sum_Da_D^2b_D^2+\sum_Db_D^4.
+\]
+
+The `a_D^2b_D^2` and `b_D^4` parts remain open; they require degree-six and
+degree-eight marked character correlations rather than another fit to three
+fields. The newly proved `a_D^2b_D` moment is a distinct quartic correlation
+and is used below to resolve two more representation channels.
+
+The new first moment of `b_D` has a useful representation-theoretic payoff.
+For the normalized Frobenius class, exact `C_2` character identities give
+
+\[
+\frac{b_D}{q}=1+\chi_{0,1},\qquad
+\frac{a_D^2}{q}=1+\chi_{0,1}+\chi_{2,0},
+\]
+
+and
+
+\[
+\frac{b_D^2}{q^2}=2+2\chi_{0,1}+\chi_{2,0}+\chi_{0,2}.
+\]
+
+The two additional exact decompositions are
+
+\[
+\frac{a_D^2b_D}{q^2}=2+3\chi_{0,1}+3\chi_{2,0}+\chi_{0,2}+\chi_{2,1},
+\]
+
+and
+
+\[
+\frac{a_D^4}{q^2}=3+5\chi_{0,1}+6\chi_{2,0}+2\chi_{0,2}
++3\chi_{2,1}+\chi_{4,0}.
+\]
+
+Solving these five equations using the proved coefficient moments isolates an
+exact low-weight family profile for every odd prime power:
+
+\[
+\left\langle\chi_{0,1}\right\rangle_q
+=-\frac1q+\frac1{q^2}-\frac1{q^4},\qquad
+\left\langle\chi_{2,0}\right\rangle_q
+=\frac1{q^3}-\frac1{q^4},\qquad
+\left\langle\chi_{0,2}\right\rangle_q
+=-\frac1q-\frac1{q^5},
+\]
+
+\[
+\left\langle\chi_{2,1}\right\rangle_q
+=\frac2{q^3}-\frac1{q^4}-\frac2{q^5},\qquad
+\left\langle\chi_{4,0}\right\rangle_q=-\frac3{q^5}.
+\]
+
+Thus the two low `omega_2` channels have a leading `q^{-1}` bias, the
+`2*omega_1` and `(2,1)` channels are suppressed to `q^{-3}`, and the `(4,0)`
+channel first appears at `q^{-5}`. All five tend to zero as Haar orthogonality
+predicts. This exact anisotropy resolves every nontrivial channel in the trace
+fourth power and is stronger information than the combined toy-minor mean.
+
+It also sharpens the second-moment target. If
+
+\[
+H=\chi_{0,4}+\chi_{2,2}+2\chi_{0,3},
+\]
+
+then the virtual obstruction splits as `F^2-(Tr U)^4=H+L`, where the proved
+five-channel profile gives
+
+\[
+\langle L\rangle_q
+=-\frac1q-\frac1{q^2}-\frac6{q^3}+\frac6{q^4}.
+\]
+
+Consequently the second-moment limit is equivalent to the single honest
+high-weight assertion `mean(H)->0`; no cancellation among unknown virtual
+low-weight terms remains. At `q=3,5,7`, the exact frozen means of `H` are
+`536/2187`, `7154/78125`, and `37652/823543`. They are checksums, not a fitted
+rate. After multiplication by `q^2`, they become
+`536/243 = 2.205761...`, `7154/3125 = 2.289280`, and
+`37652/16807 = 2.240257...`, clustered near `9/4`. This nominates
+`mean(H)=O(q^{-2})`, and more speculatively `q^2 mean(H)->9/4`, as a focused
+next conjecture. Three fields cannot distinguish that constant from a nearby
+limit or a lower-order oscillation.
 
 Therefore
 
@@ -214,6 +330,20 @@ F=-(1+\chi_{\omega_2}+\chi_{2\omega_2}),
 \qquad -20\le F\le\frac43,
 \]
 
+and the character on the right is an honest 20-dimensional representation
+`G=1+chi_omega2+chi_2omega2` containing the trivial representation. Therefore,
+for every integer `m>=0`, not just for the six computed orders,
+
+\[
+\int_{USp(4)}F(U)^m\,dU
+=(-1)^m\dim\!\left((G^{\otimes m})^{USp(4)}\right),
+\qquad
+(-1)^m\int F^m>0.
+\]
+
+Thus every Haar moment is an integer with strict alternating sign. This is a
+compact-group theorem only; it supplies no finite-family convergence.
+
 The range makes the negative first moment quantitatively useful without any
 equidistribution input. Put `Z_D=K_D/q^2`, let `rho_-(q)` be the proportion of
 the family with `Z_D<0`, and write
@@ -245,7 +375,10 @@ deliberately conservative compared with the enumerated proportions. This is a
 one-sided density floor, not a limiting sign law, equidistribution result, or
 claim that any member has a canonical analytic-detector sign.
 
-The normalized `C_2` Weyl constant term then gives its first six Haar moments
+Exact Kostant-character decomposition gives 3, 9, 16, 25, 36, and 49
+irreducible constituents (counted by distinct highest weights) in `G^m` for
+`m=1,...,6`. Its trivial multiplicities, independently checked by the
+normalized `C_2` Weyl constant term, give the first six signed Haar moments
 
 ```text
 -1, 3, -11, 56, -374, 3117.
@@ -314,6 +447,54 @@ convergence of only the first six finite moments would already imply
 `liminf rho_-(q)>=2478693937/6358302720`. That conditional implication needs
 neither full weak convergence nor boundary-mass control; it is a concrete
 payoff from proving Targets `m=2,...,6`.
+
+A second bounded constant-term replay extends the exact Haar sequence through
+order twelve:
+
+```text
+-30321, 327688, -3815668, 46998100, -605231862, 8084025096
+```
+
+for orders `7,...,12`. It uses 238,743 capped Laurent pair-products and no
+sampling or numerical integration. Those moments certify a stronger
+degree-twelve majorant. In the same coordinate `t=(3x+28)/32`, it has the
+factorization
+
+\[
+p(t)=C\prod_{r\in R}(t-r)^2(t^2+At+B),
+\]
+
+where
+
+\[
+R=\left\{-\frac35,-\frac{43}{200},\frac{11}{60},
+\frac{67}{125},\frac{35}{48}\right\}.
+\]
+
+The exact rational `A,B,C` are frozen in the certificate. There, `C>0` and
+`B-A^2/4>0` prove global nonnegativity. The contacts
+`p(7/8)=p(241/250)=1`, `p'(241/250)=0`, and ten positive exact Bernstein
+coefficients for
+
+\[
+\frac{p(t)-1}{(t-7/8)(t-241/250)^2}
+\]
+
+on `[7/8,1]` prove the pointwise majorant. Exact moment substitution gives
+
+\[
+\mu_{\mathrm{Haar}}(F<0)\ge
+\frac{153081644970674178368978470022738347661743507912075314789490808683}
+{318454738700269877013669525120657835305950388794994707229994647552}
+\approx0.480701.
+\]
+
+The same polynomial gives valid frozen lower bounds approximately
+`0.314646, 0.397992, 0.407579` at `q=3,5,7`. The candidate was discovered by
+floating optimization, but acceptance uses only the exact factorization,
+Bernstein certificate, and rational moments. No degree-twelve optimality is
+claimed. Conditionally, convergence of the first twelve finite moments would
+give the displayed `0.480701` liminf floor without full equidistribution.
 
 The exact finite fractions are retained in the fixture; their display values
 show how slowly the higher tails appear:

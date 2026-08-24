@@ -200,6 +200,26 @@ def candidate_mean_a_squared(q: int) -> Fraction:
     return Fraction(q - 1, 1) + Fraction(q * q + q - 2, q**3)
 
 
+def candidate_mean_a_fourth(q: int) -> Fraction:
+    return (
+        Fraction(3 * q * q - 7 * q + 5, 1)
+        + Fraction(12, q)
+        - Fraction(14, q * q)
+        - Fraction(11, q**3)
+    )
+
+
+def candidate_mean_a_squared_b(q: int) -> Fraction:
+    return Fraction(
+        (q + 1) * (q * q - 2 * q + 3) * (2 * q * q - 2 * q - 1),
+        q**3,
+    )
+
+
+def candidate_mean_b(q: int) -> Fraction:
+    return Fraction(q - 1) + Fraction(q * q - 1, q**3)
+
+
 def candidate_mean_b_squared(q: int) -> Fraction:
     return Fraction(2 * q * q - 3 * q + 2, 1) + Fraction(q * q - 3 * q - 1, q**3)
 
@@ -210,6 +230,18 @@ def candidate_mean_k(q: int) -> Fraction:
 
 def candidate_normalized_mean_k(q: int) -> Fraction:
     return candidate_mean_k(q) / (q * q)
+
+
+def candidate_low_weight_character_means(q: int) -> dict[str, Fraction]:
+    """Exact family means for five nontrivial C2 characters."""
+
+    return {
+        "chi_(0,1)": -Fraction(1, q) + Fraction(1, q**2) - Fraction(1, q**4),
+        "chi_(2,0)": Fraction(q - 1, q**4),
+        "chi_(0,2)": -Fraction(1, q) - Fraction(1, q**5),
+        "chi_(2,1)": Fraction(2, q**3) - Fraction(1, q**4) - Fraction(2, q**5),
+        "chi_(4,0)": -Fraction(3, q**5),
+    }
 
 
 def _guard(
@@ -254,6 +286,9 @@ def scan_q(
     _guard(clock=clock, deadline=local_deadline, q=q, candidates_seen=0)
     member_count = 0
     sum_a_squared = 0
+    sum_a_fourth = 0
+    sum_a_squared_b = 0
+    sum_b = 0
     sum_b_squared = 0
     sum_k = 0
     histogram: Counter[int] = Counter()
@@ -282,6 +317,9 @@ def scan_q(
         k = q * a * a - b * b
         member_count += 1
         sum_a_squared += a * a
+        sum_a_fourth += a**4
+        sum_a_squared_b += a * a * b
+        sum_b += b
         sum_b_squared += b * b
         sum_k += k
         histogram[k] += 1
@@ -319,18 +357,48 @@ def scan_q(
         raise ArithmeticError(f"q={q} scan did not produce all three sign witnesses")
 
     mean_a_squared = Fraction(sum_a_squared, member_count)
+    mean_a_fourth = Fraction(sum_a_fourth, member_count)
+    mean_a_squared_b = Fraction(sum_a_squared_b, member_count)
+    mean_b = Fraction(sum_b, member_count)
     mean_b_squared = Fraction(sum_b_squared, member_count)
     mean_k = Fraction(sum_k, member_count)
     normalized_sum_k = Fraction(sum_k, q * q)
     normalized_mean_k = mean_k / (q * q)
+    chi_0_1 = mean_b / q - 1
+    chi_2_0 = mean_a_squared / q - 1 - chi_0_1
+    chi_0_2 = mean_b_squared / (q * q) - 2 - 2 * chi_0_1 - chi_2_0
+    chi_2_1 = mean_a_squared_b / (q * q) - 2 - 3 * chi_0_1 - chi_0_2 - 3 * chi_2_0
+    chi_4_0 = (
+        mean_a_fourth / (q * q)
+        - 3
+        - 5 * chi_0_1
+        - 6 * chi_2_0
+        - 2 * chi_0_2
+        - 3 * chi_2_1
+    )
+    low_weight_character_means = {
+        "chi_(0,1)": chi_0_1,
+        "chi_(2,0)": chi_2_0,
+        "chi_(0,2)": chi_0_2,
+        "chi_(2,1)": chi_2_1,
+        "chi_(4,0)": chi_4_0,
+    }
+    if low_weight_character_means != candidate_low_weight_character_means(q):
+        raise ArithmeticError(f"q={q} low-weight character profile drifted")
     candidate_values = {
         "mean_a_squared": candidate_mean_a_squared(q),
+        "mean_a_fourth": candidate_mean_a_fourth(q),
+        "mean_a_squared_b": candidate_mean_a_squared_b(q),
+        "mean_b": candidate_mean_b(q),
         "mean_b_squared": candidate_mean_b_squared(q),
         "mean_K": candidate_mean_k(q),
         "normalized_mean_K": candidate_normalized_mean_k(q),
     }
     actual_values = {
         "mean_a_squared": mean_a_squared,
+        "mean_a_fourth": mean_a_fourth,
+        "mean_a_squared_b": mean_a_squared_b,
+        "mean_b": mean_b,
         "mean_b_squared": mean_b_squared,
         "mean_K": mean_k,
         "normalized_mean_K": normalized_mean_k,
@@ -358,6 +426,18 @@ def scan_q(
                     "sum": sum_a_squared,
                     "mean": _fraction_pair(mean_a_squared),
                 },
+                "a_fourth": {
+                    "sum": sum_a_fourth,
+                    "mean": _fraction_pair(mean_a_fourth),
+                },
+                "a_squared_b": {
+                    "sum": sum_a_squared_b,
+                    "mean": _fraction_pair(mean_a_squared_b),
+                },
+                "b": {
+                    "sum": sum_b,
+                    "mean": _fraction_pair(mean_b),
+                },
                 "b_squared": {
                     "sum": sum_b_squared,
                     "mean": _fraction_pair(mean_b_squared),
@@ -369,6 +449,10 @@ def scan_q(
                 },
             },
             "sign_counts": sign_counts,
+            "low_weight_character_means": {
+                name: _fraction_pair(value)
+                for name, value in low_weight_character_means.items()
+            },
             "K_histogram": {
                 str(key): histogram[key] for key in sorted(histogram)
             },
@@ -472,6 +556,11 @@ def build_fixture(
         checks = {
             "member_count": certified["member_count"] == scan.payload["member_count"],
             "sum_a_squared": certified["sum_a_squared"] == moments["a_squared"]["sum"],
+            "sum_a_fourth": certified["sum_a_fourth"] == moments["a_fourth"]["sum"],
+            "sum_a_squared_b": (
+                certified["sum_a_squared_b"] == moments["a_squared_b"]["sum"]
+            ),
+            "sum_b": certified["sum_b"] == moments["b"]["sum"],
             "sum_b_squared": certified["sum_b_squared"] == moments["b_squared"]["sum"],
             "sum_K": certified["sum_K"] == moments["K"]["sum"],
         }
@@ -529,9 +618,27 @@ def build_fixture(
             "not_a_theorem": False,
             "scope": "every odd prime power q",
             "mean_a_squared": "q-1+(q^2+q-2)/q^3",
+            "mean_a_fourth": "3*q^2-7*q+5+12/q-14/q^2-11/q^3",
+            "mean_a_squared_b": "(q+1)*(q^2-2*q+3)*(2*q^2-2*q-1)/q^3",
+            "mean_b": "q-1+(q^2-1)/q^3",
             "mean_b_squared": "2*q^2-3*q+2+(q^2-3*q-1)/q^3",
             "mean_K": "-(q-1)^2+(q+1)/q^3",
             "normalized_mean_K": "-(1-1/q)^2+(q+1)/q^5",
+            "low_weight_character_profile": {
+                "normalization": (
+                    "b_D/q=1+chi_(0,1); a_D^2/q=1+chi_(0,1)+chi_(2,0); "
+                    "b_D^2/q^2=2+2*chi_(0,1)+chi_(2,0)+chi_(0,2); "
+                    "a_D^2*b_D/q^2=2+3*chi_(0,1)+3*chi_(2,0)+chi_(0,2)+chi_(2,1); "
+                    "a_D^4/q^2=3+5*chi_(0,1)+6*chi_(2,0)+2*chi_(0,2)+3*chi_(2,1)+chi_(4,0)"
+                ),
+                "mean_chi_(0,1)": "-1/q+1/q^2-1/q^4",
+                "mean_chi_(2,0)": "1/q^3-1/q^4",
+                "mean_chi_(0,2)": "-1/q-1/q^5",
+                "mean_chi_(2,1)": "2/q^3-1/q^4-2/q^5",
+                "mean_chi_(4,0)": "-3/q^5",
+                "status": "PROVED_FROM_EXACT_COEFFICIENT_MOMENTS",
+                "scope": "every odd prime power q",
+            },
             "proof": {
                 "note": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
                 "note_sha256_lf_normalized": hashlib.sha256(

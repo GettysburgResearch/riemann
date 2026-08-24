@@ -30,6 +30,8 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
             cls.result,
             cls.comparator,
             cls.q_scan,
+            cls.character_decomposition,
+            cls.twelve_moment,
         ) = wrapper.run(ATLAS_ROOT)
         cls.specs_by_q = {
             int(spec["base_field"]["constant_field_order"]): spec for spec in cls.specs
@@ -51,11 +53,27 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
             self.assertTrue(record["semantic_id"].endswith(record["identity_sha256"][:32]))
             self.assertEqual([ref["number"] for ref in record["programme_refs"]], [737, 741])
 
-    def test_binds_and_replays_both_sources_and_both_fixtures(self) -> None:
+    def test_binds_and_replays_all_four_sources_and_fixtures(self) -> None:
         adapter_paths = {binding["path"] for binding in self.evaluation["adapter_bindings"]}
         input_paths = {binding["path"] for binding in self.evaluation["input_bindings"]}
-        self.assertEqual(adapter_paths, {wrapper.COMPARATOR_SOURCE, wrapper.Q_SCAN_SOURCE})
-        self.assertEqual(input_paths, {wrapper.COMPARATOR_FIXTURE, wrapper.Q_SCAN_FIXTURE})
+        self.assertEqual(
+            adapter_paths,
+            {
+                wrapper.COMPARATOR_SOURCE,
+                wrapper.CHARACTER_DECOMPOSITION_SOURCE,
+                wrapper.TWELVE_MOMENT_SOURCE,
+                wrapper.Q_SCAN_SOURCE,
+            },
+        )
+        self.assertEqual(
+            input_paths,
+            {
+                wrapper.COMPARATOR_FIXTURE,
+                wrapper.CHARACTER_DECOMPOSITION_FIXTURE,
+                wrapper.TWELVE_MOMENT_FIXTURE,
+                wrapper.Q_SCAN_FIXTURE,
+            },
+        )
 
         locks = self.result["source_locks"]
         self.assertEqual(
@@ -67,11 +85,47 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
             raw_sha256(ROOT / wrapper.Q_SCAN_SOURCE),
         )
         self.assertEqual(
+            locks["character_decomposition_source"]["raw_sha256"],
+            raw_sha256(ROOT / wrapper.CHARACTER_DECOMPOSITION_SOURCE),
+        )
+        self.assertEqual(
+            locks["twelve_moment_source"]["raw_sha256"],
+            raw_sha256(ROOT / wrapper.TWELVE_MOMENT_SOURCE),
+        )
+        self.assertEqual(
             locks["comparator_fixture"]["canonical_sha256"],
             sha256_hex(self.comparator),
         )
         self.assertEqual(
             locks["q_scan_fixture"]["canonical_sha256"], sha256_hex(self.q_scan)
+        )
+        self.assertEqual(
+            locks["character_decomposition_fixture"]["canonical_sha256"],
+            sha256_hex(self.character_decomposition),
+        )
+        self.assertEqual(
+            locks["character_decomposition_fixture"][
+                "producer_source_sha256_lf_normalized"
+            ],
+            self.character_decomposition["producer"][
+                "source_sha256_lf_normalized"
+            ],
+        )
+        self.assertEqual(
+            locks["twelve_moment_fixture"]["canonical_sha256"],
+            sha256_hex(self.twelve_moment),
+        )
+        self.assertEqual(
+            locks["twelve_moment_fixture"]["payload_sha256"],
+            self.twelve_moment["payload_sha256"],
+        )
+        self.assertEqual(
+            self.twelve_moment["producer"]["finite_histogram_source"],
+            {
+                "path": wrapper.Q_SCAN_FIXTURE,
+                "canonical_sha256": sha256_hex(self.q_scan),
+                "payload_sha256": self.q_scan["payload_sha256"],
+            },
         )
         self.assertEqual(
             self.comparator["finite_source"]["canonical_sha256"], sha256_hex(self.q_scan)
@@ -107,6 +161,115 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
             weyl["haar_cumulants_orders_1_through_6"],
             list(wrapper.HAAR_CUMULANTS),
         )
+
+    def test_exact_character_decomposition_certificate_is_compact_and_bound(self) -> None:
+        certificate = self.result["character_decomposition_certificate"]
+        self.assertEqual(certificate["status"], wrapper.CHARACTER_DECOMPOSITION_STATUS)
+        self.assertEqual(certificate["maximum_power"], 6)
+        self.assertEqual(
+            [row["irreducible_count"] for row in certificate["powers"]],
+            list(wrapper.CHARACTER_IRREDUCIBLE_COUNTS),
+        )
+        self.assertEqual(
+            [row["tensor_dimension"] for row in certificate["powers"]],
+            list(wrapper.TENSOR_DIMENSIONS),
+        )
+        self.assertEqual(
+            [row["trivial_coefficient_in_F_power"] for row in certificate["powers"]],
+            list(wrapper.HAAR_MOMENTS),
+        )
+        for row in certificate["powers"]:
+            self.assertEqual(
+                row["trivial_coefficient_in_F_power"],
+                row["independent_weyl_constant_term_haar_moment"],
+            )
+            self.assertTrue(row["all_sign_adjusted_tensor_multiplicities_positive"])
+            self.assertTrue(row["dimension_reconstruction_exact"])
+            self.assertTrue(row["laurent_reconstruction_exact"])
+        self.assertEqual(
+            certificate["all_power_corollary"]["strict_sign_rule"],
+            "(-1)^m*Haar(F^m)>0 for every m>=0",
+        )
+        self.assertTrue(certificate["all_power_corollary"]["integrality"])
+        self.assertIn(
+            "no finite-family convergence",
+            certificate["all_power_corollary"]["scope"],
+        )
+        self.assertTrue(all(certificate["verification"].values()))
+        self.assertLess(
+            len(__import__("json").dumps(certificate)),
+            6000,
+        )
+
+    def test_exact_twelve_moment_sign_certificate_improves_degree_six(self) -> None:
+        certificate = self.result["twelve_moment_sign_certificate"]
+        self.assertEqual(certificate["status"], wrapper.TWELVE_MOMENT_STATUS)
+        self.assertEqual(certificate["maximum_moment"], 12)
+        self.assertEqual(
+            certificate["haar_moments_orders_1_through_12"],
+            list(wrapper.HAAR_MOMENTS_12),
+        )
+        majorant = certificate["majorant"]
+        self.assertEqual(majorant["degree"], 12)
+        self.assertEqual(majorant["positive_side_bernstein_coefficient_count"], 10)
+        self.assertTrue(
+            majorant["all_positive_side_bernstein_coefficients_strictly_positive"]
+        )
+        self.assertTrue(majorant["exact_factorization_and_positivity_replayed"])
+        haar = certificate["haar_bound"]
+        lower = Fraction(
+            haar["negative_probability_lower_bound"]["numerator"],
+            haar["negative_probability_lower_bound"]["denominator"],
+        )
+        self.assertEqual(
+            lower,
+            Fraction(
+                153081644970674178368978470022738347661743507912075314789490808683,
+                318454738700269877013669525120657835305950388794994707229994647552,
+            ),
+        )
+        self.assertGreater(lower, Fraction(2478693937, 6358302720))
+        improvement = Fraction(
+            haar["strict_improvement"]["numerator"],
+            haar["strict_improvement"]["denominator"],
+        )
+        self.assertGreater(improvement, 0)
+        self.assertTrue(haar["strictly_improves_support_adapted_degree_six_bound"])
+        self.assertEqual([row["q"] for row in certificate["finite_q_bounds"]], [3, 5, 7])
+        degree_six_rows = {
+            row["q"]: row
+            for row in self.result["negative_sign_moment_certificate"][
+                "support_adapted_majorant"
+            ]["finite_q_bounds"]
+        }
+        for row in certificate["finite_q_bounds"]:
+            bound = row["negative_probability_lower_bound"]
+            observed = row["observed_negative_fraction"]
+            baseline = degree_six_rows[row["q"]]["negative_probability_lower_bound"]
+            self.assertGreater(
+                Fraction(bound["numerator"], bound["denominator"]),
+                Fraction(baseline["numerator"], baseline["denominator"]),
+            )
+            self.assertLessEqual(
+                Fraction(bound["numerator"], bound["denominator"]),
+                Fraction(observed["numerator"], observed["denominator"]),
+            )
+            self.assertTrue(row["verified_bound_holds"])
+        resource = certificate["resource_contract"]
+        self.assertEqual(resource["actual_laurent_pair_products"], 238743)
+        self.assertLessEqual(
+            resource["actual_laurent_pair_products"],
+            resource["maximum_laurent_pair_products"],
+        )
+        self.assertFalse(resource["random_sampling"])
+        self.assertFalse(resource["numerical_integration"])
+        self.assertFalse(resource["field_enumeration"])
+        scope = certificate["scope"]
+        self.assertTrue(scope["not_an_optimality_claim"])
+        self.assertTrue(scope["not_an_equidistribution_theorem"])
+        self.assertTrue(scope["not_a_number_field_transfer"])
+        self.assertIn("exact rational algebra", scope["discovery_firewall"])
+        self.assertLess(len(__import__("json").dumps(certificate)), 6000)
 
     def test_all_finite_moments_remain_exactly_histogram_normalized(self) -> None:
         source_by_q = {int(item["q"]): item for item in self.comparator["finite_comparisons"]}
@@ -296,6 +459,58 @@ class USp4ToyMinorAtlasTests(unittest.TestCase):
             "support_adapted_majorant"
         ]["finite_q_bounds"].reverse()
         hostile_cases.append(reversed_support_rows)
+
+        altered_character_count = copy.deepcopy(self.result)
+        altered_character_count["character_decomposition_certificate"]["powers"][5][
+            "irreducible_count"
+        ] = 48
+        hostile_cases.append(altered_character_count)
+
+        reversed_character_powers = copy.deepcopy(self.result)
+        reversed_character_powers["character_decomposition_certificate"]["powers"].reverse()
+        hostile_cases.append(reversed_character_powers)
+
+        weakened_all_power_sign = copy.deepcopy(self.result)
+        weakened_all_power_sign["character_decomposition_certificate"][
+            "all_power_corollary"
+        ]["strict_sign_rule"] = "unknown"
+        hostile_cases.append(weakened_all_power_sign)
+
+        altered_character_fixture_path = copy.deepcopy(self.result)
+        altered_character_fixture_path["source_locks"][
+            "character_decomposition_fixture"
+        ]["path"] = "wrong-character-fixture.json"
+        hostile_cases.append(altered_character_fixture_path)
+
+        altered_twelve_moment = copy.deepcopy(self.result)
+        altered_twelve_moment["twelve_moment_sign_certificate"][
+            "haar_moments_orders_1_through_12"
+        ][11] += 1
+        hostile_cases.append(altered_twelve_moment)
+
+        altered_twelve_bound = copy.deepcopy(self.result)
+        altered_twelve_bound["twelve_moment_sign_certificate"]["haar_bound"][
+            "negative_probability_lower_bound"
+        ]["numerator"] += 1
+        hostile_cases.append(altered_twelve_bound)
+
+        reversed_twelve_rows = copy.deepcopy(self.result)
+        reversed_twelve_rows["twelve_moment_sign_certificate"][
+            "finite_q_bounds"
+        ].reverse()
+        hostile_cases.append(reversed_twelve_rows)
+
+        removed_optimality_firewall = copy.deepcopy(self.result)
+        removed_optimality_firewall["twelve_moment_sign_certificate"]["scope"][
+            "not_an_optimality_claim"
+        ] = False
+        hostile_cases.append(removed_optimality_firewall)
+
+        altered_twelve_fixture_path = copy.deepcopy(self.result)
+        altered_twelve_fixture_path["source_locks"]["twelve_moment_fixture"][
+            "path"
+        ] = "wrong-twelve-moment-fixture.json"
+        hostile_cases.append(altered_twelve_fixture_path)
 
         for hostile in hostile_cases:
             with self.subTest(hostile=hostile):

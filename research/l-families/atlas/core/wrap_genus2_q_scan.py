@@ -37,6 +37,12 @@ MOMENT_IDENTITY_NOTE = (
 MOMENT_IDENTITY_CERTIFICATE = (
     "research/l-families/atlas/function_field/genus2_moment_identity.py"
 )
+SECOND_MOMENT_REDUCTION_SOURCE = (
+    "research/l-families/atlas/function_field/genus2_second_moment_reduction.py"
+)
+SECOND_MOMENT_REDUCTION_FIXTURE = (
+    "research/l-families/atlas/function_field/genus2_second_moment_reduction.json"
+)
 RAW_RESULT_SCHEMA = (
     "research/l-families/atlas/detectors/raw-schemas/"
     "function-field-genus2-q-scan-result.schema.json"
@@ -47,11 +53,17 @@ FORMULA_STATUS = "PROVED_IN_DRAFT_RESEARCH_NOTE"
 MEAN_LIMIT_STATUS = "PROVED_FROM_EXACT_FORMULA"
 SIGN_DENSITY_STATUS = "PROVED_FROM_EXACT_MEAN_AND_USP4_RANGE"
 AFFINE_ORBIT_STATUS = "PROVED_EXACTLY_AND_EXHAUSTIVELY_REPLAYED_ON_FROZEN_FIELDS"
+SECOND_MOMENT_REDUCTION_STATUS = (
+    "DRAFT_EXACT_PROOF_ROADMAP_NOT_SECOND_MOMENT_FORMULA"
+)
 DETECTOR_DEFINITION = (
     "For each monic squarefree quintic D over F_q, q in {3,5,7}, reconstruct "
     "P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4 from exact F_q and F_(q^2) "
     "character sums, set K_D=q*a_D^2-b_D^2=B_D(1)B_D(3)-B_D(2)^2, and record "
-    "the exact finite-family moments of K_D and K_D/q^2."
+    "the exact finite-family moments of K_D and K_D/q^2 together with the exact "
+    "first moment of b_D, the mixed moment a_D^2*b_D, and second/fourth moments "
+    "of the trace coefficient a_D; attach the exact bounded K_D^2 reduction "
+    "without asserting an all-q second-moment formula."
 )
 
 
@@ -89,6 +101,22 @@ def _load_affine_orbit_module(repo_root: Path) -> ModuleType:
     return module
 
 
+def _load_second_moment_reduction_module(repo_root: Path) -> ModuleType:
+    path = repo_root / SECOND_MOMENT_REDUCTION_SOURCE
+    function_field_dir = str(path.parent)
+    if function_field_dir not in sys.path:
+        sys.path.insert(0, function_field_dir)
+    module_spec = importlib.util.spec_from_file_location(
+        "_riemann_atlas_genus2_second_moment_reduction", path
+    )
+    if module_spec is None or module_spec.loader is None:
+        raise RuntimeError(f"cannot load second-moment reduction module: {path}")
+    module = importlib.util.module_from_spec(module_spec)
+    sys.modules[module_spec.name] = module
+    module_spec.loader.exec_module(module)
+    return module
+
+
 def load_and_replay_fixture(root: Path) -> dict[str, Any]:
     repo_root = root.parents[2]
     fixture = read_json(repo_root / Q_SCAN_FIXTURE)
@@ -104,6 +132,35 @@ def load_and_replay_fixture(root: Path) -> dict[str, Any]:
         raise ValueError("closed formula lost its proof-backed status")
     if fixture["closed_formula_target"].get("not_a_theorem") is not False:
         raise ValueError("closed formula is not marked as a theorem in the DRAFT note")
+    if fixture["closed_formula_target"].get("mean_a_fourth") != (
+        "3*q^2-7*q+5+12/q-14/q^2-11/q^3"
+    ):
+        raise ValueError("trace fourth-moment formula drifted")
+    if fixture["closed_formula_target"].get("mean_b") != "q-1+(q^2-1)/q^3":
+        raise ValueError("middle-coefficient first-moment formula drifted")
+    if fixture["closed_formula_target"].get("mean_a_squared_b") != (
+        "(q+1)*(q^2-2*q+3)*(2*q^2-2*q-1)/q^3"
+    ):
+        raise ValueError("mixed a-squared-b moment formula drifted")
+    character_profile = fixture["closed_formula_target"].get(
+        "low_weight_character_profile", {}
+    )
+    if character_profile.get("status") != "PROVED_FROM_EXACT_COEFFICIENT_MOMENTS":
+        raise ValueError("low-weight character profile lost its proof-backed status")
+    if [
+        character_profile.get("mean_chi_(0,1)"),
+        character_profile.get("mean_chi_(2,0)"),
+        character_profile.get("mean_chi_(0,2)"),
+        character_profile.get("mean_chi_(2,1)"),
+        character_profile.get("mean_chi_(4,0)"),
+    ] != [
+        "-1/q+1/q^2-1/q^4",
+        "1/q^3-1/q^4",
+        "-1/q-1/q^5",
+        "2/q^3-1/q^4-2/q^5",
+        "-3/q^5",
+    ]:
+        raise ValueError("low-weight character profile drifted")
     if fixture["usp4_limit_target"]["status"] != MEAN_LIMIT_STATUS:
         raise ValueError("first-moment limit lost its proof-backed status")
     if fixture["usp4_limit_target"].get("not_a_theorem") is not False:
@@ -178,6 +235,190 @@ def load_and_replay_affine_fixture(root: Path) -> dict[str, Any]:
         all(checks.values()) for checks in regression_controls.values()
     ):
         raise ValueError("affine-orbit q-scan regression controls failed")
+    return fixture
+
+
+def load_and_replay_second_moment_fixture(
+    root: Path, q_scan_fixture: dict[str, Any]
+) -> dict[str, Any]:
+    """Replay and validate the bounded roadmap without upgrading its status."""
+
+    repo_root = root.parents[2]
+    fixture = read_json(repo_root / SECOND_MOMENT_REDUCTION_FIXTURE)
+    claimed_payload_sha256 = fixture.get("payload_sha256")
+    payload = dict(fixture)
+    payload.pop("payload_sha256", None)
+    if claimed_payload_sha256 != sha256_hex(payload):
+        raise ValueError("second-moment reduction fixture payload hash mismatch")
+    regenerated = _load_second_moment_reduction_module(repo_root).build_fixture()
+    if regenerated != fixture:
+        raise ValueError(
+            "second-moment reduction fixture differs from its <=2-second exact replay"
+        )
+    if fixture.get("status") != SECOND_MOMENT_REDUCTION_STATUS:
+        raise ValueError("second-moment reduction was falsely upgraded to a formula")
+    if fixture.get("scope") != (
+        "symbolic reduction for monic squarefree quintics over every odd prime "
+        "power q; histogram checks only at q=3,5,7"
+    ):
+        raise ValueError("second-moment reduction scope drifted")
+
+    source_locks = fixture.get("source_locks", {})
+    if set(source_locks) != {
+        "q_scan",
+        "coefficient_moment_proof_note",
+        "exact_polynomial_certificate",
+        "roadmap_generator",
+    }:
+        raise ValueError("second-moment reduction source-lock inventory drifted")
+    expected_q_lock = {
+        "path": Q_SCAN_FIXTURE,
+        "canonical_sha256": sha256_hex(q_scan_fixture),
+        "payload_sha256": q_scan_fixture["payload_sha256"],
+    }
+    if source_locks.get("q_scan") != expected_q_lock:
+        raise ValueError("second-moment reduction lost its exact q-scan lock")
+    expected_locked_paths = {
+        "coefficient_moment_proof_note": MOMENT_IDENTITY_NOTE,
+        "exact_polynomial_certificate": MOMENT_IDENTITY_CERTIFICATE,
+        "roadmap_generator": SECOND_MOMENT_REDUCTION_SOURCE,
+    }
+    for name, path in expected_locked_paths.items():
+        lock = source_locks.get(name, {})
+        if lock.get("path") != path or not isinstance(
+            lock.get("sha256_lf_normalized"), str
+        ) or len(lock["sha256_lf_normalized"]) != 64:
+            raise ValueError(f"second-moment reduction {name} lock drifted")
+
+    master = fixture.get("master_reduction", {})
+    if master.get("formula") != "sum_D K_D^2=q^2*A4(q)-2*q*M22(q)+B4(q)":
+        raise ValueError("second-moment master reduction drifted")
+    if master.get("unresolved_block") != "B4(q)-2*q*M22(q)":
+        raise ValueError("second-moment unresolved block drifted")
+    if master.get("proven_A4") != {
+        "total": "q*(q-1)*(q+1)*(3*q^4-10*q^3+15*q^2-3*q-11)",
+        "mean": "3*q^2-7*q+5+12/q-14/q^2-11/q^3",
+        "status": "PROVED_BY_REWEIGHTING_THE_BOUND_QUARTIC_TABLE",
+    }:
+        raise ValueError("second-moment reduction lost its proved A4 input")
+
+    expected_signature_blocks = {
+        "M22": (20, "11+5+4=20", "q^6", 180),
+        "B4": (54, "22+11+10+6+5=54", "q^8", 2520),
+    }
+    signature_blocks = fixture.get("signature_blocks", {})
+    if set(signature_blocks) != set(expected_signature_blocks):
+        raise ValueError("second-moment signature-block inventory drifted")
+    for name, expected in expected_signature_blocks.items():
+        block = signature_blocks[name]
+        observed = (
+            block.get("signature_count"),
+            block.get("signature_count_derivation"),
+            block.get("weighted_tuple_count_formula"),
+            block.get("maximum_tuple_weight"),
+        )
+        if observed != expected:
+            raise ValueError(f"second-moment {name} signature census drifted")
+
+    primitive = fixture.get("primitive_character_reduction", {})
+    if primitive.get("new_marked_primitive_coefficients") != {
+        "degree_4": ["p1(r)"],
+        "degree_6": ["p1(r)", "p2(r)"],
+        "degree_8": ["p1(r)", "p2(r)", "p3(r)"],
+    }:
+        raise ValueError("six primitive-coefficient families drifted")
+    character = fixture.get("character_certificate", {})
+    mixed_trace_middle = character.get("mixed_trace_middle", {})
+    obstruction = character.get("single_virtual_character_obstruction", {})
+    refined_obstruction = character.get(
+        "refined_honest_high_weight_obstruction", {}
+    )
+    if (
+        mixed_trace_middle.get("formula")
+        != "(Tr U)^2*e_2(U)=2*chi_00+3*chi_01+3*chi_20+chi_02+chi_21"
+        or mixed_trace_middle.get("arithmetic_normalization")
+        != "a_D^2*b_D/q^2=(Tr U)^2*e_2(U)"
+        or mixed_trace_middle.get("dimension_checksum") != 96
+        or character.get("statistic_identity", {}).get("F_at_identity") != -20
+        or character.get("statistic_squared", {}).get("haar_second_moment_target")
+        != 3
+        or obstruction.get("status")
+        != "EXACT_REDUCTION_UNRESOLVED_FOR_GENERAL_Q"
+        or obstruction.get("formula")
+        != "F^2-(Tr U)^4=chi_04+chi_22+2*chi_03-chi_21+2*chi_02-4*chi_20-chi_01"
+        or obstruction.get("dimension_checksum") != 144
+        or refined_obstruction.get("status")
+        != "EXACT_REDUCTION_USING_PROVED_LOW_WEIGHT_MEANS"
+        or refined_obstruction.get("formula") != "H=chi_04+chi_22+2*chi_03"
+        or refined_obstruction.get("dimension_checksum") != 196
+        or refined_obstruction.get("exact_low_weight_average")
+        != "mean(L)=-1/q-1/q^2-6/q^3+6/q^4"
+    ):
+        raise ValueError("second-moment virtual-character obstruction drifted")
+
+    expected_checks = {
+        3: (
+            162,
+            12,
+            14_448,
+            2_112,
+            -4_560,
+            [-760, 2187],
+            [-16, 27],
+            [536, 2187],
+        ),
+        5: (
+            2_500,
+            24,
+            2_630_080,
+            116_880,
+            -291_920,
+            [-14_596, 78_125],
+            [-174, 625],
+            [7_154, 78_125],
+        ),
+        7: (
+            14_406,
+            53,
+            69_108_480,
+            1_503_936,
+            -4_584_384,
+            [-109_152, 823_543],
+            [-428, 2401],
+            [37_652, 823_543],
+        ),
+    }
+    checks = fixture.get("finite_histogram_checks", [])
+    if [row.get("q") for row in checks] != [3, 5, 7]:
+        raise ValueError("second-moment histogram-check ordering drifted")
+    for row in checks:
+        q = int(row["q"])
+        observed = (
+            row.get("member_count"),
+            row.get("histogram_bin_count"),
+            row.get("sum_K_squared"),
+            row.get("sum_a_fourth"),
+            row.get("unresolved_B4_minus_2qM22"),
+            row.get("normalized_virtual_character_obstruction"),
+            row.get("exact_low_weight_character_correction"),
+            row.get("normalized_honest_high_weight_packet"),
+        )
+        if observed != expected_checks[q]:
+            raise ValueError(f"q={q} second-moment residual checksum drifted")
+
+    resource = fixture.get("resource_contract", {})
+    if (
+        resource.get("maximum_signatures") != 74
+        or resource.get("actual_signatures") != 74
+        or resource.get("maximum_partition_degree") != 8
+        or resource.get("maximum_exact_operations") != 50_000
+        or not 0 < resource.get("exact_operations_used", 0) <= 50_000
+        or resource.get("maximum_wall_seconds", 3.0) > 2.0
+        or resource.get("clock") != "time.monotonic"
+        or resource.get("field_enumeration") != "FORBIDDEN_AND_NOT_IMPORTED"
+        or resource.get("histogram_bins_read") != 89
+    ):
+        raise ValueError("second-moment resource contract drifted")
     return fixture
 
 
@@ -365,7 +606,8 @@ def build_family_spec(
         notes=(
             "The finite a_D,b_D,K_D totals are exact native computations. Root-location claims are "
             "not inputs to this scan. A separately bound DRAFT proof note and exact Q[q] "
-            "certificate establish the registered first-moment formulas for every odd prime power."
+            "certificate establish the registered b_D first moment, second/fourth trace "
+            "moments, the mixed a_D^2*b_D moment, and toy-minor first moment for every odd prime power."
         ),
     )
 
@@ -377,6 +619,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "Use a 20,000-candidate cap per field and a global monotonic wall guard no larger than eight seconds.",
         "Freeze candidate_cap_scope=PER_FIELD_Q_SCAN; the cap is not a combined-replay total.",
         "Under D^{alpha,beta}(T)=alpha^(-5)D(alpha*T+beta), require a' = chi(alpha)a, b' = b, and K' = K.",
+        "Keep the exact K_D^2 signature packet at PARTIAL proof-roadmap status: A4 is proved, while M22 and B4 remain unevaluated.",
         "Treat K_D only as a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC.",
     ]
     identity_kernel = {
@@ -386,7 +629,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "kernel_convention": "COEFFICIENT_DISPERSION",
         "central_zero_policy": "NOT_APPLICABLE",
         "normalization_requirements": normalization,
-        "contract_revision": 2,
+        "contract_revision": 3,
     }
     semantic_id, identity_sha256 = semantic_identity("DETECTOR", DETECTOR_SLUG, identity_kernel)
     return {
@@ -396,15 +639,18 @@ def build_detector(root: Path) -> dict[str, Any]:
         "identity_sha256": identity_sha256,
         "identity_kernel": identity_kernel,
         "title": "Exact genus-two toy-minor finite-family moment scan",
-        "revision": 2,
+        "revision": 3,
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(737), programme_ref(741)],
         "scope_boundary": (
-            "Exhaustive histograms only for q=3,5,7, plus proof-backed first-moment identities for "
-            "every odd prime power and the consequent negative-sign density floor. The exact "
+            "Exhaustive histograms only for q=3,5,7, plus proof-backed b_D and toy-minor first "
+            "moments, second/fourth trace moments, and the mixed a_D^2*b_D moment for every odd "
+            "prime power, with the consequent "
+            "negative-sign density floor. The exact "
             "affine action law is replayed with complete orbit partitions only at q=3,5,7; no "
-            "full sign law, asymptotic orbit law, higher-moment equidistribution, zero statement, "
-            "analytic-kernel conclusion, or number-field transfer."
+            "full sign law, asymptotic orbit law, or all-q second-moment formula follows from "
+            "the separately replayed PARTIAL reduction roadmap. There is no higher-moment "
+            "equidistribution, zero statement, analytic-kernel conclusion, or number-field transfer."
         ),
         "supersedes": [],
         "detector_kind": "COEFFICIENT_DISPERSION",
@@ -435,6 +681,12 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "input_type": "RAW_ARTIFACT",
                 "required": True,
                 "coverage_requirement": "FINITE_COMPLETE",
+            },
+            {
+                "name": "second_moment_reduction_roadmap",
+                "input_type": "RAW_ARTIFACT",
+                "required": True,
+                "coverage_requirement": "PARTIAL",
             },
         ],
         "parameters": [
@@ -515,8 +767,13 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "comparison_role": "IDENTITY",
             },
             {
-                "field": "detector_kind",
+                "field": "result.artifact.second_moment_reduction",
                 "requirement": normalization[5],
+                "comparison_role": "FIREWALL",
+            },
+            {
+                "field": "detector_kind",
+                "requirement": normalization[6],
                 "comparison_role": "FIREWALL",
             },
         ],
@@ -533,7 +790,10 @@ def build_detector(root: Path) -> dict[str, Any]:
             },
             {
                 "code": "CROSS_Q_CLOSED_FORM",
-                "statement": "The displayed mean formulas hold for every odd prime power q.",
+                "statement": (
+                    "The displayed a_D^2, a_D^4, a_D^2*b_D, b_D, b_D^2, and K_D mean formulas hold for "
+                    "every odd prime power q."
+                ),
                 "status": "PROVED",
             },
             {
@@ -570,6 +830,16 @@ def build_detector(root: Path) -> dict[str, Any]:
                 ),
             },
             {
+                "family": "GENUS2_SECOND_MOMENT_SYMBOLIC_REDUCTION",
+                "status": "REQUIRED_AVAILABLE",
+                "adapter_path": SECOND_MOMENT_REDUCTION_SOURCE,
+                "correction": (
+                    "Enumerate exactly 20 M22 and 54 B4 signatures without field enumeration; "
+                    "retain the six primitive-coefficient families and refined honest high-"
+                    "weight packet as explicit unresolved burdens."
+                ),
+            },
+            {
                 "family": "NUMBER_FIELD",
                 "status": "UNSUPPORTED",
                 "adapter_path": None,
@@ -594,11 +864,52 @@ def build_detector(root: Path) -> dict[str, Any]:
                 ),
             },
             {
+                "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TRACE.FOURTH_MOMENT",
+                "status": "VERIFIED",
+                "scope": (
+                    "Ordered-linear reweighting of the proved quartic character table gives "
+                    "E[a_D^4]=3q^2-7q+5+12/q-14/q^2-11/q^3 for every odd prime power."
+                ),
+            },
+            {
+                "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.MIDDLE_COEFFICIENT.MEAN",
+                "status": "VERIFIED",
+                "scope": (
+                    "The three degree-two factorization types give "
+                    "E[b_D]=q-1+(q^2-1)/q^3 for every odd prime power."
+                ),
+            },
+            {
+                "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TRACE_SQUARED_MIDDLE.MEAN",
+                "status": "VERIFIED",
+                "scope": (
+                    "Quartic-row reweighting gives the displayed exact E[a_D^2*b_D] "
+                    "formula for every odd prime power."
+                ),
+            },
+            {
+                "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.LOW_WEIGHT_CHARACTER_PROFILE",
+                "status": "VERIFIED",
+                "scope": (
+                    "The proved a_D^2, b_D, b_D^2, a_D^2*b_D, and a_D^4 formulas "
+                    "isolate five exact low-weight character means through chi_(4,0)."
+                ),
+            },
+            {
                 "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.NEGATIVE_SIGN_DENSITY",
                 "status": "VERIFIED",
                 "scope": (
                     "For every odd prime power, the exact first moment and exact lower range bound "
                     "give rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20; this is not a sign law."
+                ),
+            },
+            {
+                "semantic_id": "DRAFT.FUNCTION_FIELD.GENUS2.TOY_MINOR.SECOND_MOMENT_REDUCTION",
+                "status": "OPEN",
+                "scope": (
+                    "The exact master identity, 20+54 signature census, six primitive-"
+                    "coefficient families, and refined honest high-weight USp(4) obstruction are "
+                    "replayed. M22 and B4 are not evaluated for every odd prime power."
                 ),
             },
         ],
@@ -637,6 +948,18 @@ def build_detector(root: Path) -> dict[str, Any]:
                     "<=8-second guard, and makes no asymptotic orbit claim."
                 ),
             },
+            {
+                "code": "ROADMAP_MISTAKEN_FOR_SECOND_MOMENT_FORMULA",
+                "description": (
+                    "The exact signature census or three residual checks are presented as an "
+                    "all-q formula for E[K_D^2] or as an equidistribution theorem."
+                ),
+                "hostile_control": (
+                    "The source, fixture, result, and evaluation all keep PARTIAL roadmap "
+                    "status and name the six primitive-coefficient families and the honest "
+                    "high-weight packet that remain unevaluated for general q."
+                ),
+            },
         ],
         "output_contract": {
             "representations": ["HASHED_ARTIFACT"],
@@ -653,7 +976,7 @@ def build_detector(root: Path) -> dict[str, Any]:
         "formalization_refs": [
             {
                 "state": "PARTIAL",
-                "target": "Complete prose proof of the three genus-two first-moment identities.",
+                "target": "Complete prose proof of the registered genus-two coefficient-moment identities.",
                 "path": MOMENT_IDENTITY_NOTE,
             },
             {
@@ -661,13 +984,25 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "target": "Bounded exact Q[q] certificate for every polynomial identity in the proof.",
                 "path": MOMENT_IDENTITY_CERTIFICATE,
             },
+            {
+                "state": "PARTIAL",
+                "target": (
+                    "Bounded exact 20+54 signature and C2 character reduction for the open "
+                    "second toy moment."
+                ),
+                "path": SECOND_MOMENT_REDUCTION_SOURCE,
+            },
         ],
         "notes": (
             "The q=3,5,7 histograms are finite exact computations. The separately bound DRAFT "
-            "proof establishes the displayed first-moment formulas and their normalized limit for "
+            "proof establishes the displayed a_D^2, a_D^4, a_D^2*b_D, b_D, b_D^2, and K_D formulas, including "
+            "the normalized toy-minor first-moment limit, for "
             "every odd prime power; the separately replayed affine packet proves the exact action "
-            "law and finite orbit partitions only at q=3,5,7. Higher moments and "
-            "equidistribution remain proposed."
+            "law and finite orbit partitions only at q=3,5,7. The mixed a_D^2*b_D^2 and b_D^4 "
+            "moments needed for K_D^2, and equidistribution, remain open; the separately "
+            "replayed PARTIAL roadmap reduces them to six primitive-coefficient families and "
+            "the honest high-weight packet chi_04+chi_22+2*chi_03 without evaluating either "
+            "for general q."
         ),
     }
 
@@ -699,9 +1034,101 @@ def _compact_affine_family(family: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _compact_second_moment_reduction(fixture: dict[str, Any]) -> dict[str, Any]:
+    signature_blocks = fixture["signature_blocks"]
+    primitive = fixture["primitive_character_reduction"]
+    character = fixture["character_certificate"]
+    resource = fixture["resource_contract"]
+    return {
+        "status": fixture["status"],
+        "scope": fixture["scope"],
+        "source_fixture": {
+            "path": SECOND_MOMENT_REDUCTION_FIXTURE,
+            "canonical_sha256": sha256_hex(fixture),
+            "payload_sha256": fixture["payload_sha256"],
+        },
+        "source_locks": fixture["source_locks"],
+        "master_reduction": fixture["master_reduction"],
+        "signature_inventory": {
+            name: {
+                "signature_count": signature_blocks[name]["signature_count"],
+                "signature_count_derivation": signature_blocks[name][
+                    "signature_count_derivation"
+                ],
+                "weighted_tuple_count_formula": signature_blocks[name][
+                    "weighted_tuple_count_formula"
+                ],
+                "maximum_tuple_weight": signature_blocks[name][
+                    "maximum_tuple_weight"
+                ],
+            }
+            for name in ("M22", "B4")
+        }
+        | {"total_signature_count": 74},
+        "primitive_character_reduction": {
+            "deletion_formula": primitive["deletion_formula"],
+            "new_marked_primitive_coefficients": primitive[
+                "new_marked_primitive_coefficients"
+            ],
+            "marked_family_count": sum(
+                len(values)
+                for values in primitive["new_marked_primitive_coefficients"].values()
+            ),
+            "coefficient_as_character_sum": primitive[
+                "coefficient_as_character_sum"
+            ],
+            "remaining_lemma": primitive["remaining_lemma"],
+        },
+        "character_reduction": {
+            "weight_convention": character["weight_convention"],
+            "mixed_trace_middle": character["mixed_trace_middle"],
+            "statistic_identity": {
+                "formula": character["statistic_identity"]["formula"],
+                "F_at_identity": character["statistic_identity"]["F_at_identity"],
+            },
+            "statistic_squared": {
+                "formula": character["statistic_squared"]["formula"],
+                "dimension_checksum": character["statistic_squared"][
+                    "dimension_checksum"
+                ],
+                "haar_second_moment_target": character["statistic_squared"][
+                    "haar_second_moment_target"
+                ],
+            },
+            "trace_fourth": {
+                "formula": character["trace_fourth"]["formula"],
+                "dimension_checksum": character["trace_fourth"][
+                    "dimension_checksum"
+                ],
+            },
+            "single_virtual_character_obstruction": character[
+                "single_virtual_character_obstruction"
+            ],
+            "refined_honest_high_weight_obstruction": character[
+                "refined_honest_high_weight_obstruction"
+            ],
+        },
+        "finite_histogram_checks": fixture["finite_histogram_checks"],
+        "candidate_shape_firewall": fixture["candidate_shape_firewall"],
+        "resource_contract": {
+            "maximum_signatures": resource["maximum_signatures"],
+            "actual_signatures": resource["actual_signatures"],
+            "maximum_partition_degree": resource["maximum_partition_degree"],
+            "maximum_exact_operations": resource["maximum_exact_operations"],
+            "exact_operations_used": resource["exact_operations_used"],
+            "maximum_wall_seconds": str(resource["maximum_wall_seconds"]),
+            "clock": resource["clock"],
+            "field_enumeration": resource["field_enumeration"],
+            "histogram_bins_read": resource["histogram_bins_read"],
+        },
+        "firewalls": fixture["firewalls"],
+    }
+
+
 def build_raw_result(
     fixture: dict[str, Any],
     affine_fixture: dict[str, Any],
+    second_moment_fixture: dict[str, Any],
     specs: Sequence[dict[str, Any]],
     detector: dict[str, Any],
 ) -> dict[str, Any]:
@@ -717,6 +1144,7 @@ def build_raw_result(
                 "candidate_count": family["candidate_count"],
                 "member_count": family["member_count"],
                 "moments": family["moments"],
+                "low_weight_character_means": family["low_weight_character_means"],
                 "sign_counts": family["sign_counts"],
                 "formula_matches_at_this_q": {
                     key: bool(value["matches"]) for key, value in comparisons.items()
@@ -724,7 +1152,7 @@ def build_raw_result(
             }
         )
     return {
-        "schema": "riemann.atlas.raw.function_field_genus2_q_scan.v1",
+        "schema": "riemann.atlas.raw.function_field_genus2_q_scan.v2",
         "definition": DETECTOR_DEFINITION,
         "detector_semantic_id": detector["semantic_id"],
         "source_fixture": {
@@ -747,8 +1175,14 @@ def build_raw_result(
             "status": FORMULA_STATUS,
             "not_a_theorem": False,
             "scope": fixture["closed_formula_target"]["scope"],
+            "mean_a_fourth": fixture["closed_formula_target"]["mean_a_fourth"],
+            "mean_a_squared_b": fixture["closed_formula_target"]["mean_a_squared_b"],
+            "mean_b": fixture["closed_formula_target"]["mean_b"],
             "mean_K": fixture["closed_formula_target"]["mean_K"],
             "normalized_mean_K": fixture["closed_formula_target"]["normalized_mean_K"],
+            "low_weight_character_profile": fixture["closed_formula_target"][
+                "low_weight_character_profile"
+            ],
             "all_three_frozen_fields_match": all(
                 all(entry["matches"] for entry in family["formula_comparison"].values())
                 for family in fixture["families"]
@@ -810,11 +1244,16 @@ def build_raw_result(
                 "kernel statement, or number-field transfer."
             ),
         },
+        "second_moment_reduction": _compact_second_moment_reduction(
+            second_moment_fixture
+        ),
         "firewalls": [
             "The all-q formula is proved by the separately bound DRAFT proof note and certificate, not inferred from three scans.",
-            "Only the first-moment limit is proved; higher moments and USp(4) equidistribution remain proposed and are not theorems here.",
+            "The trace fourth moment is proved, but the mixed and b_D fourth moments needed for K_D^2 and USp(4) equidistribution are not theorems here.",
             "The negative-sign result is a one-sided density floor, not a sign law or equidistribution theorem.",
             "The affine action law is exact, but its q=3,5,7 orbit and stabilizer tables are finite only and not an asymptotic law.",
+            "The exact second-moment packet is a proof roadmap and reduction, not an all-q K_D^2 formula or theorem.",
+            "Its q=3,5,7 K_D^2 residuals are checksums, not interpolation data; six marked primitive-coefficient families and the honest high-weight packet chi_04+chi_22+2*chi_03 remain unevaluated for general q.",
             "The toy coefficient minor is not Pick/Loewner, XD, or HCNC.",
             "No result transfers from these function fields to number-field L-functions.",
         ],
@@ -828,6 +1267,7 @@ def make_evaluation(
     detector: dict[str, Any],
     fixture: dict[str, Any],
     affine_fixture: dict[str, Any],
+    second_moment_fixture: dict[str, Any],
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     repo_root = root.parents[2]
     qscan_adapter = artifact_binding(
@@ -866,6 +1306,21 @@ def make_evaluation(
         None,
         "RAW_BYTES",
     )
+    second_moment_fixture_binding = artifact_binding(
+        root,
+        SECOND_MOMENT_REDUCTION_FIXTURE,
+        "second_moment_reduction_roadmap",
+        "PARTIAL",
+        None,
+    )
+    second_moment_source_binding = artifact_binding(
+        root,
+        SECOND_MOMENT_REDUCTION_SOURCE,
+        "second_moment_reduction_generator",
+        "PARTIAL",
+        None,
+        "RAW_BYTES",
+    )
     spec_bindings = [content_binding(spec) for spec in sorted(specs, key=lambda item: item["semantic_id"])]
     detector_binding = content_binding(detector)
     values = {
@@ -901,6 +1356,15 @@ def make_evaluation(
             "coverage_class": "FINITE_COMPLETE",
             "sources": [AFFINE_ORBIT_FIXTURE, AFFINE_ORBIT_SOURCE],
         },
+        {
+            "name": "second_moment_reduction_roadmap",
+            "input_type": "RAW_ARTIFACT",
+            "coverage_class": "PARTIAL",
+            "sources": [
+                SECOND_MOMENT_REDUCTION_FIXTURE,
+                SECOND_MOMENT_REDUCTION_SOURCE,
+            ],
+        },
     ]
     implementation_relative = "research/l-families/atlas/core/wrap_genus2_q_scan.py"
     implementation_sha256 = raw_sha256(repo_root / implementation_relative)
@@ -916,6 +1380,8 @@ def make_evaluation(
             affine_fixture_binding["sha256"],
             proof_note_binding["sha256"],
             proof_certificate_binding["sha256"],
+            second_moment_fixture_binding["sha256"],
+            second_moment_source_binding["sha256"],
         ],
         "input_fulfillments_sha256": sha256_hex(input_fulfillments),
         "implementation_commit": config["code_commit"],
@@ -923,7 +1389,9 @@ def make_evaluation(
         "seed": None,
     }
     semantic_id, identity_sha256 = semantic_identity("EVAL", EVALUATION_SLUG, identity_kernel)
-    raw_result = build_raw_result(fixture, affine_fixture, specs, detector)
+    raw_result = build_raw_result(
+        fixture, affine_fixture, second_moment_fixture, specs, detector
+    )
     result_relative = f"research/l-families/atlas/results/{semantic_id}.json"
     result_binding = {
         "role": "detector_result",
@@ -934,8 +1402,9 @@ def make_evaluation(
         "media_type": "application/json",
         "schema_path": RAW_RESULT_SCHEMA,
         "notes": (
-            "Compact exact totals and affine summaries; the source-bound q-scan and affine "
-            "fixtures retain full histograms, witnesses, orbit digests, and replay controls."
+            "Compact exact totals, affine summaries, and a PARTIAL second-moment reduction; "
+            "the source-bound fixtures retain full histograms, witnesses, orbit digests, all "
+            "74 signatures, character decompositions, and replay controls."
         ),
     }
     evaluation = {
@@ -945,15 +1414,17 @@ def make_evaluation(
         "identity_sha256": identity_sha256,
         "identity_kernel": identity_kernel,
         "title": "Exact q=3,5,7 genus-two toy-minor finite-family moment scan",
-        "revision": 2,
+        "revision": 3,
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(737), programme_ref(741)],
         "scope_boundary": (
             "Complete finite scans only at q=3,5,7; the bound proof establishes the named first-"
             "moment identities and consequent negative-sign density floor for every odd prime "
             "power, while the affine action and orbit partitions are exact only on the three "
-            "frozen fields. There is no full sign law, asymptotic orbit law, higher-moment "
-            "equidistribution, zero statement, analytic-kernel result, or number-field transfer."
+            "frozen fields. The PARTIAL second-moment packet proves an exact reduction but not "
+            "the unresolved M22 or B4 averages. There is no full sign law, asymptotic orbit law, "
+            "higher-moment equidistribution, zero statement, analytic-kernel result, or number-"
+            "field transfer."
         ),
         "supersedes": [],
         "subject": {
@@ -970,6 +1441,8 @@ def make_evaluation(
             affine_fixture_binding,
             proof_note_binding,
             proof_certificate_binding,
+            second_moment_fixture_binding,
+            second_moment_source_binding,
         ],
         "input_fulfillments": input_fulfillments,
         "arithmetic": {
@@ -989,7 +1462,9 @@ def make_evaluation(
                 "q outside 3,5,7",
                 "finite histograms outside q=3,5,7",
                 "affine orbit and stabilizer tables outside q=3,5,7",
-                "higher-moment formulas and equidistribution",
+                "mixed a_D^2*b_D^2 and b_D^4 formulas needed for K_D^2",
+                "evaluation of the six marked primitive-coefficient families and the honest high-weight packet chi_04+chi_22+2*chi_03",
+                "full higher-moment equidistribution",
                 "zero ordinates and analytic kernels",
                 "number-field transfer",
             ],
@@ -1011,9 +1486,13 @@ def make_evaluation(
             "summary": (
                 "Exact normalized K means are -104/243, -1994/3125, and -12340/16807 "
                 "for q=3,5,7. A separately bound proof gives E[K]=-(q-1)^2+(q+1)/q^3 "
-                "for every odd prime power and hence E[K/q^2] tends to -1. Combined with the exact "
+                "and E[a^4]=3q^2-7q+5+12/q-14/q^2-11/q^3 for every odd prime power; "
+                "hence E[K/q^2] tends to -1 and E[(a/sqrt(q))^4] tends to 3. Combined with the exact "
                 "lower range -20, this proves rho_-(q)>=P(q)/(20*q^5) and liminf rho_-(q)>=1/20. "
                 "The exact AGL(1,q) orbit counts are 29, 132, and 349."
+                " The bound PARTIAL roadmap reduces the open K_D^2 formula to 20 M22 and 54 B4 "
+                "signatures, six primitive-coefficient families, and one explicit high-weight "
+                "packet chi_04+chi_22+2*chi_03 after exact low-weight subtraction."
             ),
         },
         "result_hashes": [
@@ -1028,14 +1507,18 @@ def make_evaluation(
             "statement": (
                 "The three declared finite families have the exact registered moment totals and sign "
                 "counts. Independently of those scans, the bound squarefree-Moebius proof and Q[q] "
-                "certificate establish the displayed first-moment identities for every odd prime "
+                "certificate establish the displayed a_D^2, a_D^4, a_D^2*b_D, b_D, b_D^2, and K_D identities for every odd prime "
                 "power and, with the exact USp(4) range, the stated negative-sign density floor."
                 " The separately replayed affine certificate proves a'=chi(alpha)a, b'=b, K'=K "
-                "and the complete finite q=3,5,7 orbit-stabilizer summaries."
+                "and the complete finite q=3,5,7 orbit-stabilizer summaries. The separately "
+                "replayed second-moment source proves only the exact master/signature/character "
+                "reduction; it does not evaluate the all-q second moment."
             ),
             "smallest_gap": (
                 "Translate the proof into a proof assistant or obtain frozen-head review; for the "
-                "wider programme, prove higher-moment/equidistribution statements."
+                "wider programme, evaluate the six marked primitive-coefficient families and "
+                "the honest high-weight packet chi_04+chi_22+2*chi_03, then prove the mixed and b_D "
+                "fourth moments and equidistribution."
             ),
             "theorem_claim_id": None,
         },
@@ -1050,7 +1533,10 @@ def make_evaluation(
             },
             {
                 "code": "FIRST_MOMENT_NOT_EQUIDISTRIBUTION",
-                "statement": "The proved first-moment limit is not a higher-moment or USp(4) equidistribution theorem.",
+                "statement": (
+                    "The proved toy-minor first moment and trace fourth moment do not provide "
+                    "the mixed/b_D fourth moments, K_D^2, or USp(4) equidistribution."
+                ),
             },
             {
                 "code": "DENSITY_FLOOR_NOT_SIGN_LAW",
@@ -1079,16 +1565,27 @@ def make_evaluation(
                 ),
             },
             {
+                "code": "SECOND_MOMENT_REDUCTION_NOT_FORMULA",
+                "statement": (
+                    "The exact 20+54 signature census, q=3,5,7 residual checks, and C2 character "
+                    "decomposition are a PARTIAL proof roadmap, not an all-q K_D^2 formula, "
+                    "interpolation argument, or equidistribution theorem."
+                ),
+            },
+            {
                 "code": "NO_NUMBER_FIELD_TRANSFER",
                 "statement": "No finite function-field moment conclusion transfers to number-field L-functions.",
             },
         ],
         "notes": (
             "RIGOROUS_CERTIFIED covers the three exhaustive scans and exact certificate. The DRAFT "
-            "research note proves the formula and first-moment limit; all higher-moment and "
-            "equidistribution claims remain open. The negative-sign corollary is only the exact "
+            "research note proves the trace second/fourth, a_D^2*b_D, b_D first/second, and toy-minor "
+            "first-moment limit; the remaining mixed/b_D fourth moments and equidistribution "
+            "claims remain open. The negative-sign corollary is only the exact "
             "one-sided floor stated above. The affine source and fixture are independently "
-            "content-bound and replayed under their own <=8-second wall guard."
+            "content-bound and replayed under their own <=8-second wall guard. The second-moment "
+            "source and fixture are independently content-bound and replayed under a <=2-second, "
+            "50,000-operation contract with field enumeration forbidden."
         ),
     }
     return evaluation, raw_result
@@ -1101,13 +1598,20 @@ def run(
     config = read_json(root / "config" / "pilot.json")
     fixture = load_and_replay_fixture(root)
     affine_fixture = load_and_replay_affine_fixture(root)
+    second_moment_fixture = load_and_replay_second_moment_fixture(root, fixture)
     families_by_q = {int(family["q"]): family for family in fixture["families"]}
     f3_spec = load_existing_f3_spec(root)
     new_specs = [build_family_spec(root, config, families_by_q[q]) for q in (5, 7)]
     specs = [f3_spec, *new_specs]
     detector = build_detector(root)
     evaluation, raw_result = make_evaluation(
-        root, config, specs, detector, fixture, affine_fixture
+        root,
+        config,
+        specs,
+        detector,
+        fixture,
+        affine_fixture,
+        second_moment_fixture,
     )
     return specs, new_specs, detector, evaluation, raw_result
 

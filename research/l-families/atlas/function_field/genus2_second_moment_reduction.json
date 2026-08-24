@@ -1,0 +1,5280 @@
+{
+  "candidate_shape_firewall": {
+    "elementary_expectation": "Principal, collision, and type-count terms are polynomial in q; linear-linear reciprocity can introduce eta_q=chi_q(-1).",
+    "three_field_limitation": "q=3,7 have eta_q=-1 and q=5 is the only eta_q=+1 sample; the three checks cannot identify an all-q formula or a prime-power law.",
+    "unproved_possibility": "Surviving p_i averages may be genuine Frobenius-trace terms, so neither a polynomial nor an eta_q two-branch quasipolynomial is asserted."
+  },
+  "character_certificate": {
+    "method": "coefficientwise C2 Weyl-alternant identity G*A_rho=sum multiplicity*A_(lambda+rho)",
+    "mixed_trace_middle": {
+      "arithmetic_normalization": "a_D^2*b_D/q^2=(Tr U)^2*e_2(U)",
+      "decomposition": [
+        {
+          "dimension": 1,
+          "highest_weight_a_b": [
+            0,
+            0
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 5,
+          "highest_weight_a_b": [
+            0,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "dimension": 10,
+          "highest_weight_a_b": [
+            2,
+            0
+          ],
+          "multiplicity": 3
+        },
+        {
+          "dimension": 14,
+          "highest_weight_a_b": [
+            0,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "dimension": 35,
+          "highest_weight_a_b": [
+            2,
+            1
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "dimension_checksum": 96,
+      "formula": "(Tr U)^2*e_2(U)=2*chi_00+3*chi_01+3*chi_20+chi_02+chi_21"
+    },
+    "refined_honest_high_weight_obstruction": {
+      "decomposition": [
+        {
+          "dimension": 30,
+          "highest_weight_a_b": [
+            0,
+            3
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 81,
+          "highest_weight_a_b": [
+            2,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "dimension": 55,
+          "highest_weight_a_b": [
+            0,
+            4
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "dimension_checksum": 196,
+      "exact_low_weight_average": "mean(L)=-1/q-1/q^2-6/q^3+6/q^4",
+      "formula": "H=chi_04+chi_22+2*chi_03",
+      "limit_equivalence": "Because the exact trace-fourth mean tends to 3 and mean(L) tends to 0, mean(F^2) tends to 3 if and only if mean(H) tends to 0.",
+      "proof_burden": "Only the honest high-weight packet chi_04+chi_22+2*chi_03 remains; all five lower-weight channels are supplied by exact coefficient moments.",
+      "status": "EXACT_REDUCTION_USING_PROVED_LOW_WEIGHT_MEANS",
+      "virtual_split": "F^2-(Tr U)^4=H+L, L=-chi_21+2*chi_02-4*chi_20-chi_01"
+    },
+    "single_virtual_character_obstruction": {
+      "decomposition": [
+        {
+          "dimension": 5,
+          "highest_weight_a_b": [
+            0,
+            1
+          ],
+          "multiplicity": -1
+        },
+        {
+          "dimension": 10,
+          "highest_weight_a_b": [
+            2,
+            0
+          ],
+          "multiplicity": -4
+        },
+        {
+          "dimension": 14,
+          "highest_weight_a_b": [
+            0,
+            2
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 35,
+          "highest_weight_a_b": [
+            2,
+            1
+          ],
+          "multiplicity": -1
+        },
+        {
+          "dimension": 30,
+          "highest_weight_a_b": [
+            0,
+            3
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 81,
+          "highest_weight_a_b": [
+            2,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "dimension": 55,
+          "highest_weight_a_b": [
+            0,
+            4
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "dimension_checksum": 144,
+      "formula": "F^2-(Tr U)^4=chi_04+chi_22+2*chi_03-chi_21+2*chi_02-4*chi_20-chi_01",
+      "proof_burden": "Evaluate this one virtual-character average over H_5(q); the exact trace-fourth average is already supplied by the bound moment proof.",
+      "status": "EXACT_REDUCTION_UNRESOLVED_FOR_GENERAL_Q"
+    },
+    "statistic_identity": {
+      "F_at_identity": -20,
+      "decomposition": [
+        {
+          "dimension": 1,
+          "highest_weight_a_b": [
+            0,
+            0
+          ],
+          "multiplicity": -1
+        },
+        {
+          "dimension": 5,
+          "highest_weight_a_b": [
+            0,
+            1
+          ],
+          "multiplicity": -1
+        },
+        {
+          "dimension": 14,
+          "highest_weight_a_b": [
+            0,
+            2
+          ],
+          "multiplicity": -1
+        }
+      ],
+      "formula": "F=(Tr U)^2-e_2(U)^2=-(chi_00+chi_01+chi_02)"
+    },
+    "statistic_squared": {
+      "decomposition": [
+        {
+          "dimension": 1,
+          "highest_weight_a_b": [
+            0,
+            0
+          ],
+          "multiplicity": 3
+        },
+        {
+          "dimension": 5,
+          "highest_weight_a_b": [
+            0,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "dimension": 10,
+          "highest_weight_a_b": [
+            2,
+            0
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 14,
+          "highest_weight_a_b": [
+            0,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "dimension": 35,
+          "highest_weight_a_b": [
+            2,
+            1
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 35,
+          "highest_weight_a_b": [
+            4,
+            0
+          ],
+          "multiplicity": 1
+        },
+        {
+          "dimension": 30,
+          "highest_weight_a_b": [
+            0,
+            3
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 81,
+          "highest_weight_a_b": [
+            2,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "dimension": 55,
+          "highest_weight_a_b": [
+            0,
+            4
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "dimension_checksum": 400,
+      "formula": "F^2=3*chi_00+4*chi_01+2*chi_20+4*chi_02+2*chi_21+chi_40+2*chi_03+chi_22+chi_04",
+      "haar_second_moment_target": 3
+    },
+    "trace_fourth": {
+      "decomposition": [
+        {
+          "dimension": 1,
+          "highest_weight_a_b": [
+            0,
+            0
+          ],
+          "multiplicity": 3
+        },
+        {
+          "dimension": 5,
+          "highest_weight_a_b": [
+            0,
+            1
+          ],
+          "multiplicity": 5
+        },
+        {
+          "dimension": 10,
+          "highest_weight_a_b": [
+            2,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "dimension": 14,
+          "highest_weight_a_b": [
+            0,
+            2
+          ],
+          "multiplicity": 2
+        },
+        {
+          "dimension": 35,
+          "highest_weight_a_b": [
+            2,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "dimension": 35,
+          "highest_weight_a_b": [
+            4,
+            0
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "dimension_checksum": 256,
+      "formula": "(Tr U)^4=3*chi_00+5*chi_01+6*chi_20+2*chi_02+3*chi_21+chi_40"
+    },
+    "weight_convention": "highest_weight=a*omega_1+b*omega_2"
+  },
+  "definition": "For K_D=q*a_D^2-b_D^2 and Z_D=K_D/q^2, reduce sum_D K_D^2 to exact factor-signature character correlations without enumerating a field.",
+  "finite_histogram_checks": [
+    {
+      "exact_low_weight_character_correction": [
+        -16,
+        27
+      ],
+      "histogram_bin_count": 12,
+      "member_count": 162,
+      "normalized_honest_high_weight_packet": [
+        536,
+        2187
+      ],
+      "normalized_second_moment_Z": [
+        2408,
+        2187
+      ],
+      "normalized_virtual_character_obstruction": [
+        -760,
+        2187
+      ],
+      "q": 3,
+      "q_squared_sum_a_fourth": 19008,
+      "sum_K_squared": 14448,
+      "sum_a_fourth": 2112,
+      "unresolved_B4_minus_2qM22": -4560,
+      "unresolved_residual_over_q_qminus_1": [
+        -760,
+        1
+      ]
+    },
+    {
+      "exact_low_weight_character_correction": [
+        -174,
+        625
+      ],
+      "histogram_bin_count": 24,
+      "member_count": 2500,
+      "normalized_honest_high_weight_packet": [
+        7154,
+        78125
+      ],
+      "normalized_second_moment_Z": [
+        131504,
+        78125
+      ],
+      "normalized_virtual_character_obstruction": [
+        -14596,
+        78125
+      ],
+      "q": 5,
+      "q_squared_sum_a_fourth": 2922000,
+      "sum_K_squared": 2630080,
+      "sum_a_fourth": 116880,
+      "unresolved_B4_minus_2qM22": -291920,
+      "unresolved_residual_over_q_qminus_1": [
+        -14596,
+        1
+      ]
+    },
+    {
+      "exact_low_weight_character_correction": [
+        -428,
+        2401
+      ],
+      "histogram_bin_count": 53,
+      "member_count": 14406,
+      "normalized_honest_high_weight_packet": [
+        37652,
+        823543
+      ],
+      "normalized_second_moment_Z": [
+        1645440,
+        823543
+      ],
+      "normalized_virtual_character_obstruction": [
+        -109152,
+        823543
+      ],
+      "q": 7,
+      "q_squared_sum_a_fourth": 73692864,
+      "sum_K_squared": 69108480,
+      "sum_a_fourth": 1503936,
+      "unresolved_B4_minus_2qM22": -4584384,
+      "unresolved_residual_over_q_qminus_1": [
+        -109152,
+        1
+      ]
+    }
+  ],
+  "firewalls": [
+    "This packet is an exact proof roadmap, not an all-q second-moment formula.",
+    "The 20+54 signature enumeration is combinatorial and performs no finite-field or family enumeration.",
+    "The q=3,5,7 histogram identities are checksums and are not interpolation data for a theorem.",
+    "The exact USp(4) character decomposition does not prove finite-family equidistribution or convergence.",
+    "The mixed a_D^2*b_D^2 and b_D^4 character correlations remain unevaluated.",
+    "No polynomial, quasipolynomial, rate, sign law, number-field transfer, RH, or GRH conclusion is asserted."
+  ],
+  "master_reduction": {
+    "definitions": {
+      "A4": "sum_D a_D^4",
+      "B4": "sum_D b_D^4",
+      "M22": "sum_D a_D^2*b_D^2"
+    },
+    "formula": "sum_D K_D^2=q^2*A4(q)-2*q*M22(q)+B4(q)",
+    "proven_A4": {
+      "mean": "3*q^2-7*q+5+12/q-14/q^2-11/q^3",
+      "status": "PROVED_BY_REWEIGHTING_THE_BOUND_QUARTIC_TABLE",
+      "total": "q*(q-1)*(q+1)*(3*q^4-10*q^3+15*q^2-3*q-11)"
+    },
+    "sieve_scope": "all h supported on monic linear and irreducible-quadratic primes; only Moebius degrees 0,1,2 occur because deg D=5",
+    "squarefree_sieve": "S5(h)=C5(h)-(q-l)C3(h)+(binom(l+1,2)+k-q*l)C1(h)",
+    "unresolved_block": "B4(q)-2*q*M22(q)"
+  },
+  "payload_sha256": "55c5c9ef04a65ca46044ac1d76c76f33afc02b51c2d38a8ca196b99498ee16ec",
+  "primitive_character_reduction": {
+    "coefficient_as_character_sum": "p_m(r)=sum_(j=0)^m sum_(F monic,deg F=j) (F/r)",
+    "deletion_formula": "C_n(h)=[u^n]L_r(u)*product_(P in E)(1-(P/r)*u^deg(P))",
+    "even_support": "E(h)=primes having positive even exponent in h",
+    "new_marked_primitive_coefficients": {
+      "degree_4": [
+        "p1(r)"
+      ],
+      "degree_6": [
+        "p1(r)",
+        "p2(r)"
+      ],
+      "degree_8": [
+        "p1(r)",
+        "p2(r)",
+        "p3(r)"
+      ]
+    },
+    "odd_radical": "r(h)=product of primes having odd exponent in h",
+    "remaining_lemma": "Evaluate the six marked primitive-coefficient families, including their deletion-character products, across the frozen 20+54 signatures."
+  },
+  "resource_contract": {
+    "actual_signatures": 74,
+    "clock": "time.monotonic",
+    "exact_operations_used": 29461,
+    "field_enumeration": "FORBIDDEN_AND_NOT_IMPORTED",
+    "histogram_bins_read": 89,
+    "maximum_exact_operations": 50000,
+    "maximum_partition_degree": 8,
+    "maximum_signatures": 74,
+    "maximum_wall_seconds": 2.0
+  },
+  "schema": "riemann.function_field.genus2_second_moment_reduction.v1",
+  "scope": "symbolic reduction for monic squarefree quintics over every odd prime power q; histogram checks only at q=3,5,7",
+  "signature_blocks": {
+    "B4": {
+      "block": "B4",
+      "maximum_tuple_weight": 2520,
+      "signature_count": 54,
+      "signature_count_derivation": "22+11+10+6+5=54",
+      "signatures": [
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            8
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[8].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 1,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "8": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 5,
+              "7": 7
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            7,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[7,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 4,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "7": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 20,
+              "7": 42
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            6,
+            2
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[6,2].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 10,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1,
+              "6": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 20,
+              "7": 42
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            6,
+            1,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[6,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 16,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "6": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 30,
+              "7": 105
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            5,
+            3
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[5,3].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 16,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "3": 1,
+              "5": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 20,
+              "7": 42
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            5,
+            2,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[5,2,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 36,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_3/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "2": 1,
+              "5": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 60,
+              "7": 210
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            5,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[5,1,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 60,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                11,
+                6
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                6
+              ]
+            ],
+            "formula": "(q)_4/6 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 3,
+              "5": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 20,
+              "7": 140
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            4,
+            4
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[4,4].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 19,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "4": 2
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 10,
+              "7": 21
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            4,
+            3,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[4,3,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 52,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_3/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "3": 1,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 60,
+              "7": 210
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 3,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            4,
+            2,
+            2
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[4,2,2].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 72,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 2,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 30,
+              "7": 105
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            4,
+            2,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[4,2,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 120,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                11,
+                2
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_4/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "2": 1,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 60,
+              "7": 420
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            4,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 5,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[4,1,1,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 204,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                -25,
+                12
+              ],
+              [
+                35,
+                24
+              ],
+              [
+                -5,
+                12
+              ],
+              [
+                1,
+                24
+              ]
+            ],
+            "formula": "(q)_5/24 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 4,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 5,
+              "7": 105
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            3,
+            3,
+            2
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,3,2].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 88,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1,
+              "3": 2
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 30,
+              "7": 105
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            3,
+            3,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,3,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 148,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                11,
+                4
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_4/4 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "3": 2
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 30,
+              "7": 210
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            3,
+            2,
+            2,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,2,2,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 204,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                11,
+                2
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_4/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "2": 2,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 60,
+              "7": 420
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 5,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,2,1,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 348,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                -25,
+                3
+              ],
+              [
+                35,
+                6
+              ],
+              [
+                -5,
+                3
+              ],
+              [
+                1,
+                6
+              ]
+            ],
+            "formula": "(q)_5/6 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 3,
+              "2": 1,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 20,
+              "7": 420
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 6,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 6,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,1,1,1,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 600,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                137,
+                60
+              ],
+              [
+                -15,
+                8
+              ],
+              [
+                17,
+                24
+              ],
+              [
+                -1,
+                8
+              ],
+              [
+                1,
+                120
+              ]
+            ],
+            "formula": "(q)_6/120 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 5,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 0,
+              "7": 42
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[2,2,2,2].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 282,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                11,
+                24
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                1,
+                24
+              ]
+            ],
+            "formula": "(q)_4/24 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 4
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 5,
+              "7": 35
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 3,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "linear_support": 5,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[2,2,2,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 480,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                -25,
+                6
+              ],
+              [
+                35,
+                12
+              ],
+              [
+                -5,
+                6
+              ],
+              [
+                1,
+                12
+              ]
+            ],
+            "formula": "(q)_5/12 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "2": 3
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 10,
+              "7": 210
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 6,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[2,2,1,1,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 828,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -5,
+                2
+              ],
+              [
+                137,
+                24
+              ],
+              [
+                -75,
+                16
+              ],
+              [
+                85,
+                48
+              ],
+              [
+                -5,
+                16
+              ],
+              [
+                1,
+                48
+              ]
+            ],
+            "formula": "(q)_6/48 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 4,
+              "2": 2
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 0,
+              "7": 105
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 7,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 6,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[2,1,1,1,1,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 1440,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                -49,
+                20
+              ],
+              [
+                203,
+                90
+              ],
+              [
+                -49,
+                48
+              ],
+              [
+                35,
+                144
+              ],
+              [
+                -7,
+                240
+              ],
+              [
+                1,
+                720
+              ]
+            ],
+            "formula": "(q)_7/720 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 6,
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 0,
+              "7": 7
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 8,
+          "linear_exponents": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 8,
+          "odd_radical": {
+            "degree": 8,
+            "linear_prime_count": 8,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[1,1,1,1,1,1,1,1].Q[-]",
+          "total_degree": 8,
+          "tuple_weight": 2520,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                8
+              ],
+              [
+                363,
+                1120
+              ],
+              [
+                -469,
+                1440
+              ],
+              [
+                967,
+                5760
+              ],
+              [
+                -7,
+                144
+              ],
+              [
+                23,
+                2880
+              ],
+              [
+                -1,
+                1440
+              ],
+              [
+                1,
+                40320
+              ]
+            ],
+            "formula": "(q)_8/40320 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 8
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 0,
+              "7": 0
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            6
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[6].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 4,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "6": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 50,
+              "7": 147
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            5,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[5,1].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 12,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "5": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 18,
+              "5": 200,
+              "7": 882
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            4,
+            2
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[4,2].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 18,
+              "5": 200,
+              "7": 882
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            4,
+            1,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[4,1,1].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 36,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 300,
+              "7": 2205
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            3,
+            3
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[3,3].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 28,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "3": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 100,
+              "7": 441
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            3,
+            2,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[3,2,1].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 60,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                -2,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_3/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "2": 1,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 18,
+              "5": 600,
+              "7": 4410
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[3,1,1,1].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 96,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                -17,
+                12
+              ],
+              [
+                17,
+                12
+              ],
+              [
+                -7,
+                12
+              ],
+              [
+                1,
+                12
+              ]
+            ],
+            "formula": "(q)_4/6 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 3,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 0,
+              "5": 200,
+              "7": 2940
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 3,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            2,
+            2,
+            2
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[2,2,2].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 84,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                6
+              ],
+              [
+                5,
+                12
+              ],
+              [
+                -1,
+                3
+              ],
+              [
+                1,
+                12
+              ]
+            ],
+            "formula": "(q)_3/6 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 3
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 3,
+              "5": 100,
+              "7": 735
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            2,
+            2,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[2,2,1,1].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 132,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                -17,
+                8
+              ],
+              [
+                17,
+                8
+              ],
+              [
+                -7,
+                8
+              ],
+              [
+                1,
+                8
+              ]
+            ],
+            "formula": "(q)_4/4 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "2": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 0,
+              "5": 300,
+              "7": 4410
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 5,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[2,1,1,1,1].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 216,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                37,
+                24
+              ],
+              [
+                -85,
+                48
+              ],
+              [
+                15,
+                16
+              ],
+              [
+                -11,
+                48
+              ],
+              [
+                1,
+                48
+              ]
+            ],
+            "formula": "(q)_5/24 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 4,
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 0,
+              "5": 50,
+              "7": 2205
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 6,
+          "odd_radical": {
+            "degree": 8,
+            "linear_prime_count": 6,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[1,1,1,1,1,1].Q[1]",
+          "total_degree": 8,
+          "tuple_weight": 360,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                -197,
+                720
+              ],
+              [
+                499,
+                1440
+              ],
+              [
+                -31,
+                144
+              ],
+              [
+                5,
+                72
+              ],
+              [
+                -1,
+                90
+              ],
+              [
+                1,
+                1440
+              ]
+            ],
+            "formula": "(q)_6/720 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 6
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 0,
+              "5": 0,
+              "7": 147
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            4
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 1,
+          "signature": "L[4].Q[2]",
+          "total_degree": 8,
+          "tuple_weight": 6,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "2": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 50,
+              "7": 147
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            4
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 2,
+          "signature": "L[4].Q[1,1]",
+          "total_degree": 8,
+          "tuple_weight": 12,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                8
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                1,
+                8
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 2
+            },
+            "specializations": {
+              "3": 9,
+              "5": 225,
+              "7": 1470
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            3,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 1,
+          "signature": "L[3,1].Q[2]",
+          "total_degree": 8,
+          "tuple_weight": 12,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "2": 1
+            },
+            "specializations": {
+              "3": 18,
+              "5": 200,
+              "7": 882
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            3,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 2,
+          "signature": "L[3,1].Q[1,1]",
+          "total_degree": 8,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                3,
+                8
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                -3,
+                8
+              ],
+              [
+                1,
+                8
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 2
+            },
+            "specializations": {
+              "3": 18,
+              "5": 900,
+              "7": 8820
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            2,
+            2
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 1,
+          "signature": "L[2,2].Q[2]",
+          "total_degree": 8,
+          "tuple_weight": 18,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "2": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 100,
+              "7": 441
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            2,
+            2
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 2,
+          "signature": "L[2,2].Q[1,1]",
+          "total_degree": 8,
+          "tuple_weight": 36,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                8
+              ],
+              [
+                3,
+                16
+              ],
+              [
+                1,
+                16
+              ],
+              [
+                -3,
+                16
+              ],
+              [
+                1,
+                16
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 2
+            },
+            "specializations": {
+              "3": 9,
+              "5": 450,
+              "7": 4410
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            2,
+            1,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 1,
+          "signature": "L[2,1,1].Q[2]",
+          "total_degree": 8,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "2": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 300,
+              "7": 2205
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            2,
+            1,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 2,
+          "signature": "L[2,1,1].Q[1,1]",
+          "total_degree": 8,
+          "tuple_weight": 48,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                16
+              ],
+              [
+                7,
+                16
+              ],
+              [
+                -5,
+                16
+              ],
+              [
+                1,
+                16
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 2
+            },
+            "specializations": {
+              "3": 9,
+              "5": 1350,
+              "7": 22050
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 1,
+          "signature": "L[1,1,1,1].Q[2]",
+          "total_degree": 8,
+          "tuple_weight": 36,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                -17,
+                48
+              ],
+              [
+                17,
+                48
+              ],
+              [
+                -7,
+                48
+              ],
+              [
+                1,
+                48
+              ]
+            ],
+            "formula": "(q)_4/24 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 4
+            },
+            "quadratic_exponent_multiplicities": {
+              "2": 1
+            },
+            "specializations": {
+              "3": 0,
+              "5": 50,
+              "7": 735
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 8,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 2,
+          "signature": "L[1,1,1,1].Q[1,1]",
+          "total_degree": 8,
+          "tuple_weight": 72,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                16
+              ],
+              [
+                7,
+                48
+              ],
+              [
+                -11,
+                192
+              ],
+              [
+                -5,
+                48
+              ],
+              [
+                11,
+                96
+              ],
+              [
+                -1,
+                24
+              ],
+              [
+                1,
+                192
+              ]
+            ],
+            "formula": "(q)_4/24 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 4
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 2
+            },
+            "specializations": {
+              "3": 0,
+              "5": 225,
+              "7": 7350
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            2
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            3
+          ],
+          "quadratic_prime_occurrences": 3,
+          "quadratic_support": 1,
+          "signature": "L[2].Q[3]",
+          "total_degree": 8,
+          "tuple_weight": 4,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "3": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 50,
+              "7": 147
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            2
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            2,
+            1
+          ],
+          "quadratic_prime_occurrences": 3,
+          "quadratic_support": 2,
+          "signature": "L[2].Q[2,1]",
+          "total_degree": 8,
+          "tuple_weight": 12,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_2/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1,
+              "2": 1
+            },
+            "specializations": {
+              "3": 18,
+              "5": 450,
+              "7": 2940
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            2
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 3
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 3,
+          "quadratic_support": 3,
+          "signature": "L[2].Q[1,1,1]",
+          "total_degree": 8,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                6
+              ],
+              [
+                1,
+                24
+              ],
+              [
+                11,
+                48
+              ],
+              [
+                -1,
+                16
+              ],
+              [
+                -1,
+                16
+              ],
+              [
+                1,
+                48
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_3/6, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 3
+            },
+            "specializations": {
+              "3": 3,
+              "5": 600,
+              "7": 9310
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            1,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            3
+          ],
+          "quadratic_prime_occurrences": 3,
+          "quadratic_support": 1,
+          "signature": "L[1,1].Q[3]",
+          "total_degree": 8,
+          "tuple_weight": 4,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "3": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 100,
+              "7": 441
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            1,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            2,
+            1
+          ],
+          "quadratic_prime_occurrences": 3,
+          "quadratic_support": 2,
+          "signature": "L[1,1].Q[2,1]",
+          "total_degree": 8,
+          "tuple_weight": 12,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                3,
+                8
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                -3,
+                8
+              ],
+              [
+                1,
+                8
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_2/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1,
+              "2": 1
+            },
+            "specializations": {
+              "3": 18,
+              "5": 900,
+              "7": 8820
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            1,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 8,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 3
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 3,
+          "quadratic_support": 3,
+          "signature": "L[1,1].Q[1,1,1]",
+          "total_degree": 8,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                -5,
+                48
+              ],
+              [
+                -3,
+                32
+              ],
+              [
+                7,
+                48
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                24
+              ],
+              [
+                1,
+                96
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_3/6, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 3
+            },
+            "specializations": {
+              "3": 3,
+              "5": 1200,
+              "7": 27930
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 0,
+          "linear_exponents": [],
+          "linear_support": 0,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            4
+          ],
+          "quadratic_prime_occurrences": 4,
+          "quadratic_support": 1,
+          "signature": "L[-].Q[4]",
+          "total_degree": 8,
+          "tuple_weight": 1,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_0/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {},
+            "quadratic_exponent_multiplicities": {
+              "4": 1
+            },
+            "specializations": {
+              "3": 3,
+              "5": 10,
+              "7": 21
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 0,
+          "linear_exponents": [],
+          "linear_support": 0,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            3,
+            1
+          ],
+          "quadratic_prime_occurrences": 4,
+          "quadratic_support": 2,
+          "signature": "L[-].Q[3,1]",
+          "total_degree": 8,
+          "tuple_weight": 4,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_0/1 * (I)_2/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {},
+            "quadratic_exponent_multiplicities": {
+              "1": 1,
+              "3": 1
+            },
+            "specializations": {
+              "3": 6,
+              "5": 90,
+              "7": 420
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 2
+          },
+          "linear_degree": 0,
+          "linear_exponents": [],
+          "linear_support": 0,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2,
+            2
+          ],
+          "quadratic_prime_occurrences": 4,
+          "quadratic_support": 2,
+          "signature": "L[-].Q[2,2]",
+          "total_degree": 8,
+          "tuple_weight": 6,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                8
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                1,
+                8
+              ]
+            ],
+            "formula": "(q)_0/1 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {},
+            "quadratic_exponent_multiplicities": {
+              "2": 2
+            },
+            "specializations": {
+              "3": 3,
+              "5": 45,
+              "7": 210
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 0,
+          "linear_exponents": [],
+          "linear_support": 0,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            2,
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 4,
+          "quadratic_support": 3,
+          "signature": "L[-].Q[2,1,1]",
+          "total_degree": 8,
+          "tuple_weight": 12,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                11,
+                16
+              ],
+              [
+                -3,
+                16
+              ],
+              [
+                -3,
+                16
+              ],
+              [
+                1,
+                16
+              ]
+            ],
+            "formula": "(q)_0/1 * (I)_3/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {},
+            "quadratic_exponent_multiplicities": {
+              "1": 2,
+              "2": 1
+            },
+            "specializations": {
+              "3": 3,
+              "5": 360,
+              "7": 3990
+            }
+          }
+        },
+        {
+          "block": "B4",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 0,
+          "linear_exponents": [],
+          "linear_support": 0,
+          "odd_radical": {
+            "degree": 8,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 4
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 4,
+          "quadratic_support": 4,
+          "signature": "L[-].Q[1,1,1,1]",
+          "total_degree": 8,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                -1,
+                96
+              ],
+              [
+                -19,
+                96
+              ],
+              [
+                3,
+                128
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                -1,
+                64
+              ],
+              [
+                -1,
+                96
+              ],
+              [
+                1,
+                384
+              ]
+            ],
+            "formula": "(q)_0/1 * (I)_4/24, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {},
+            "quadratic_exponent_multiplicities": {
+              "1": 4
+            },
+            "specializations": {
+              "3": 0,
+              "5": 210,
+              "7": 5985
+            }
+          }
+        }
+      ],
+      "slot_generating_function": "(sum_{i<=j}x_i*x_j+sum_s y_s)^4",
+      "weighted_tuple_count_coefficients_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "weighted_tuple_count_formula": "q^8"
+    },
+    "M22": {
+      "block": "M22",
+      "maximum_tuple_weight": 180,
+      "signature_count": 20,
+      "signature_count_derivation": "11+5+4=20",
+      "signatures": [
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            6
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[6].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 1,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "6": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 5,
+              "7": 7
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            5,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[5,1].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 4,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "5": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 20,
+              "7": 42
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            4,
+            2
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[4,2].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 8,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 20,
+              "7": 42
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            4,
+            1,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[4,1,1].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 14,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 30,
+              "7": 105
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            3,
+            3
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,3].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 10,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "3": 2
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 3,
+              "5": 10,
+              "7": 21
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            3,
+            2,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,2,1].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "formula": "(q)_3/1 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "2": 1,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 6,
+              "5": 60,
+              "7": 210
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[3,1,1,1].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 42,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                11,
+                6
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                6
+              ]
+            ],
+            "formula": "(q)_4/6 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 3,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 20,
+              "7": 140
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 3,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            2,
+            2,
+            2
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[2,2,2].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 33,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                6
+              ]
+            ],
+            "formula": "(q)_3/6 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 3
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 1,
+              "5": 10,
+              "7": 35
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            2,
+            2,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[2,2,1,1].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 58,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                11,
+                4
+              ],
+              [
+                -3,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_4/4 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "2": 2
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 30,
+              "7": 210
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 5,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[2,1,1,1,1].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 102,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                -25,
+                12
+              ],
+              [
+                35,
+                24
+              ],
+              [
+                -5,
+                12
+              ],
+              [
+                1,
+                24
+              ]
+            ],
+            "formula": "(q)_5/24 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 4,
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 5,
+              "7": 105
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 6,
+          "linear_exponents": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 6,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 6,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [],
+          "quadratic_prime_occurrences": 0,
+          "quadratic_support": 0,
+          "signature": "L[1,1,1,1,1,1].Q[-]",
+          "total_degree": 6,
+          "tuple_weight": 180,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                6
+              ],
+              [
+                137,
+                360
+              ],
+              [
+                -5,
+                16
+              ],
+              [
+                17,
+                144
+              ],
+              [
+                -1,
+                48
+              ],
+              [
+                1,
+                720
+              ]
+            ],
+            "formula": "(q)_6/720 * (I)_0/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 6
+            },
+            "quadratic_exponent_multiplicities": {},
+            "specializations": {
+              "3": 0,
+              "5": 0,
+              "7": 7
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            4
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[4].Q[1]",
+          "total_degree": 6,
+          "tuple_weight": 2,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "4": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 50,
+              "7": 147
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            3,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[3,1].Q[1]",
+          "total_degree": 6,
+          "tuple_weight": 6,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_2/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 1,
+              "3": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 18,
+              "5": 200,
+              "7": 882
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            2,
+            2
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[2,2].Q[1]",
+          "total_degree": 6,
+          "tuple_weight": 8,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 100,
+              "7": 441
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            2,
+            1,
+            1
+          ],
+          "linear_support": 3,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[2,1,1].Q[1]",
+          "total_degree": 6,
+          "tuple_weight": 14,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_3/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2,
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 300,
+              "7": 2205
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 4,
+          "linear_exponents": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "linear_support": 4,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 4,
+            "quadratic_prime_count": 1
+          },
+          "quadratic_prime_exponents": [
+            1
+          ],
+          "quadratic_prime_occurrences": 1,
+          "quadratic_support": 1,
+          "signature": "L[1,1,1,1].Q[1]",
+          "total_degree": 6,
+          "tuple_weight": 24,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                -17,
+                48
+              ],
+              [
+                17,
+                48
+              ],
+              [
+                -7,
+                48
+              ],
+              [
+                1,
+                48
+              ]
+            ],
+            "formula": "(q)_4/24 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 4
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 1
+            },
+            "specializations": {
+              "3": 0,
+              "5": 50,
+              "7": 735
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            2
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 0,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 1,
+          "signature": "L[2].Q[2]",
+          "total_degree": 6,
+          "tuple_weight": 1,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "2": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 50,
+              "7": 147
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 1,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            2
+          ],
+          "linear_support": 1,
+          "odd_radical": {
+            "degree": 4,
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 2,
+          "signature": "L[2].Q[1,1]",
+          "total_degree": 6,
+          "tuple_weight": 2,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                8
+              ],
+              [
+                -1,
+                4
+              ],
+              [
+                1,
+                8
+              ]
+            ],
+            "formula": "(q)_1/1 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "2": 1
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 2
+            },
+            "specializations": {
+              "3": 9,
+              "5": 225,
+              "7": 1470
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 1
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            1,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 2,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 0
+          },
+          "quadratic_prime_exponents": [
+            2
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 1,
+          "signature": "L[1,1].Q[2]",
+          "total_degree": 6,
+          "tuple_weight": 2,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_1/1, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "2": 1
+            },
+            "specializations": {
+              "3": 9,
+              "5": 100,
+              "7": 441
+            }
+          }
+        },
+        {
+          "block": "M22",
+          "even_exponent_support": {
+            "linear_prime_count": 0,
+            "quadratic_prime_count": 0
+          },
+          "linear_degree": 2,
+          "linear_exponents": [
+            1,
+            1
+          ],
+          "linear_support": 2,
+          "odd_radical": {
+            "degree": 6,
+            "linear_prime_count": 2,
+            "quadratic_prime_count": 2
+          },
+          "quadratic_prime_exponents": [
+            1,
+            1
+          ],
+          "quadratic_prime_occurrences": 2,
+          "quadratic_support": 2,
+          "signature": "L[1,1].Q[1,1]",
+          "total_degree": 6,
+          "tuple_weight": 4,
+          "type_count": {
+            "coefficients_low_to_high": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                8
+              ],
+              [
+                3,
+                16
+              ],
+              [
+                1,
+                16
+              ],
+              [
+                -3,
+                16
+              ],
+              [
+                1,
+                16
+              ]
+            ],
+            "formula": "(q)_2/2 * (I)_2/2, I=q*(q-1)/2",
+            "linear_exponent_multiplicities": {
+              "1": 2
+            },
+            "quadratic_exponent_multiplicities": {
+              "1": 2
+            },
+            "specializations": {
+              "3": 9,
+              "5": 450,
+              "7": 4410
+            }
+          }
+        }
+      ],
+      "slot_generating_function": "(sum_i x_i)^2*(sum_{i<=j}x_i*x_j+sum_s y_s)^2",
+      "weighted_tuple_count_coefficients_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "weighted_tuple_count_formula": "q^6"
+    }
+  },
+  "source_locks": {
+    "coefficient_moment_proof_note": {
+      "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+      "sha256_lf_normalized": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277"
+    },
+    "exact_polynomial_certificate": {
+      "path": "research/l-families/atlas/function_field/genus2_moment_identity.py",
+      "sha256_lf_normalized": "c9c9ca527623b3d589d79175f56e605f07b5dbad3f09a46c4a978ef54ed216a4"
+    },
+    "q_scan": {
+      "canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+      "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5"
+    },
+    "roadmap_generator": {
+      "path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.py",
+      "sha256_lf_normalized": "917633222c0e990b22292e57288d3505a4efeb9248babefd905b2d2aafc9cd1a"
+    }
+  },
+  "status": "DRAFT_EXACT_PROOF_ROADMAP_NOT_SECOND_MOMENT_FORMULA"
+}

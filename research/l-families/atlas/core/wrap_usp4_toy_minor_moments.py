@@ -24,6 +24,20 @@ SPEC_SLUGS = {
 }
 COMPARATOR_SOURCE = "research/l-families/atlas/function_field/usp4_toy_minor_moments.py"
 COMPARATOR_FIXTURE = "research/l-families/atlas/function_field/usp4_toy_minor_moments.json"
+CHARACTER_DECOMPOSITION_SOURCE = (
+    "research/l-families/atlas/function_field/"
+    "usp4_toy_minor_character_decomposition.py"
+)
+CHARACTER_DECOMPOSITION_FIXTURE = (
+    "research/l-families/atlas/function_field/"
+    "usp4_toy_minor_character_decomposition.json"
+)
+TWELVE_MOMENT_SOURCE = (
+    "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.py"
+)
+TWELVE_MOMENT_FIXTURE = (
+    "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.json"
+)
 Q_SCAN_SOURCE = "research/l-families/atlas/function_field/genus2_q_scan.py"
 Q_SCAN_FIXTURE = "research/l-families/atlas/function_field/genus2_q_scan.json"
 RAW_RESULT_SCHEMA = (
@@ -36,17 +50,36 @@ EXACT_STATUS = "RIGOROUS_CERTIFIED"
 CONVERGENCE_STATUS = "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
 FROZEN_PATTERN_STATUS = "EXACT_FOR_Q_3_5_7_ONLY"
 SIGN_MAJORANT_STATUS = "PROVED_EXACT_DEGREE_SIX_MOMENT_BOUND"
+CHARACTER_DECOMPOSITION_STATUS = "PROVED_EXACT_C2_CHARACTER_DECOMPOSITION"
+TWELVE_MOMENT_STATUS = "RIGOROUS_EXACT_FINITE_MOMENT_MAJORANT"
 HAAR_MOMENTS = (-1, 3, -11, 56, -374, 3117)
+HAAR_MOMENTS_12 = (
+    -1,
+    3,
+    -11,
+    56,
+    -374,
+    3117,
+    -30321,
+    327688,
+    -3815668,
+    46998100,
+    -605231862,
+    8084025096,
+)
 HAAR_CENTERED_MOMENTS = (0, 2, -4, 27, -178, 1533)
 HAAR_CUMULANTS = (-1, 2, -4, 15, -98, 803)
+CHARACTER_IRREDUCIBLE_COUNTS = (3, 9, 16, 25, 36, 49)
+TENSOR_DIMENSIONS = tuple(20**order for order in range(1, 7))
 POSITIVE_ROOTS = ((2, 0), (0, 2), (1, 1), (1, -1))
 DETECTOR_DEFINITION = (
     "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character "
     "identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], "
-    "evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, "
+    "decompose F^m for m=1,...,6 into irreducible C_2 characters, evaluate the first twelve "
+    "Haar moments by the normalized C_2 Weyl constant-term formula, "
     "and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, "
-    "where K_D=q*a_D^2-b_D^2. Use those six moments and an exact degree-six "
-    "polynomial majorant to certify a lower bound for the negative-sign probability."
+    "where K_D=q*a_D^2-b_D^2. Use exact degree-six and degree-twelve polynomial "
+    "majorants to certify successively stronger lower bounds for the negative-sign probability."
 )
 
 
@@ -85,7 +118,9 @@ def _fraction(pair: Sequence[int], label: str) -> Fraction:
     return value
 
 
-def load_and_replay_fixtures(root: Path) -> tuple[dict[str, Any], dict[str, Any]]:
+def load_and_replay_fixtures(
+    root: Path,
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], dict[str, Any]]:
     repo_root = root.parents[2]
     q_scan = read_json(repo_root / Q_SCAN_FIXTURE)
     _verify_payload_hash(q_scan, "q-scan fixture")
@@ -347,7 +382,282 @@ def load_and_replay_fixtures(root: Path) -> tuple[dict[str, Any], dict[str, Any]
         raise ValueError("negative-sign conditional consequence lost its theorem firewall")
     if "2478693937/6358302720" not in conditional.get("statement", ""):
         raise ValueError("negative-sign conditional consequence uses the wrong exact bound")
-    return comparator, q_scan
+    character_decomposition = read_json(repo_root / CHARACTER_DECOMPOSITION_FIXTURE)
+    character_module = _load_module(
+        repo_root,
+        CHARACTER_DECOMPOSITION_SOURCE,
+        "_riemann_atlas_usp4_toy_minor_character_decomposition",
+    )
+    if character_module.build_fixture() != character_decomposition:
+        raise ValueError(
+            "USp(4) character-decomposition fixture differs from its exact guarded replay"
+        )
+    producer = character_decomposition.get("producer", {})
+    character_text = (
+        (repo_root / CHARACTER_DECOMPOSITION_SOURCE)
+        .read_text(encoding="utf-8")
+        .replace("\r\n", "\n")
+    )
+    if producer.get("script") != Path(CHARACTER_DECOMPOSITION_SOURCE).name or producer.get(
+        "source_sha256_lf_normalized"
+    ) != hashlib.sha256(character_text.encode("utf-8")).hexdigest():
+        raise ValueError("USp(4) character-decomposition producer source lock mismatch")
+    if character_decomposition.get("status") != CHARACTER_DECOMPOSITION_STATUS:
+        raise ValueError("USp(4) character decomposition lost its exact status")
+    group = character_decomposition.get("group", {})
+    if group.get("root_system") != "C2" or group.get("weyl_order") != 8:
+        raise ValueError("USp(4) character decomposition uses the wrong C2 convention")
+    if group.get("highest_weight_convention") != (
+        "a*omega1+b*omega2 corresponds to e-basis coordinates "
+        "(lambda1,lambda2)=(a+b,b)"
+    ):
+        raise ValueError("USp(4) highest-weight convention drifted")
+    character_identity = character_decomposition.get("character_identity", {})
+    if (
+        character_identity.get("defining_formula") != "F=(Tr U)^2-e_2(U)^2"
+        or character_identity.get("F_equals_minus_G") is not True
+        or character_identity.get("laurent_identity_verified_exactly") is not True
+        or character_identity.get("G_dimension") != 20
+        or character_identity.get("constituent_dimensions") != [1, 5, 14]
+    ):
+        raise ValueError("USp(4) character-decomposition identity drifted")
+    powers = character_decomposition.get("powers", [])
+    if [row.get("power") for row in powers] != list(range(1, 7)):
+        raise ValueError("USp(4) character-decomposition powers drifted")
+    for order, row in enumerate(powers, start=1):
+        sign = -1 if order % 2 else 1
+        decomposition = row.get("decomposition", [])
+        if (
+            row.get("global_sign_from_F_equals_minus_G") != sign
+            or row.get("irreducible_count") != CHARACTER_IRREDUCIBLE_COUNTS[order - 1]
+            or len(decomposition) != CHARACTER_IRREDUCIBLE_COUNTS[order - 1]
+            or row.get("tensor_dimension") != TENSOR_DIMENSIONS[order - 1]
+            or row.get("dimension_sum_from_decomposition") != TENSOR_DIMENSIONS[order - 1]
+            or row.get("trivial_coefficient_in_F_power") != HAAR_MOMENTS[order - 1]
+            or row.get("independent_weyl_constant_term_haar_moment")
+            != HAAR_MOMENTS[order - 1]
+            or row.get("reconstruction_exact") is not True
+        ):
+            raise ValueError(f"USp(4) character-decomposition summary drifted at m={order}")
+        for entry in decomposition:
+            highest = entry.get("highest_weight", {})
+            a = highest.get("omega1_coefficient")
+            b = highest.get("omega2_coefficient")
+            multiplicity = entry.get("tensor_multiplicity_in_G_power")
+            if (
+                isinstance(a, bool)
+                or not isinstance(a, int)
+                or isinstance(b, bool)
+                or not isinstance(b, int)
+                or isinstance(multiplicity, bool)
+                or not isinstance(multiplicity, int)
+                or a < 0
+                or b < 0
+                or multiplicity <= 0
+                or highest.get("notation") != f"{a}*omega1+{b}*omega2"
+                or highest.get("e_basis_coordinates") != [a + b, b]
+                or entry.get("coefficient_in_F_power") != sign * multiplicity
+                or entry.get("dimension") != character_module.weyl_dimension(a, b)
+                or entry.get("dimension_contribution_to_G_power")
+                != multiplicity * entry["dimension"]
+            ):
+                raise ValueError(
+                    f"USp(4) irreducible-character record drifted at m={order}"
+                )
+    verification = character_decomposition.get("verification", {})
+    if not all(
+        verification.get(key) is True
+        for key in (
+            "all_kostant_character_dimensions_match_weyl_formula",
+            "all_generated_characters_are_weyl_invariant",
+            "all_power_reconstructions_exact",
+            "all_tensor_multiplicities_positive",
+            "all_F_power_coefficients_have_uniform_sign_minus_one_to_m",
+            "all_dimension_sums_equal_20_to_m",
+            "all_trivial_multiplicities_match_independent_haar_constant_terms",
+        )
+    ):
+        raise ValueError("USp(4) character-decomposition verification failed")
+    if verification.get("signed_trivial_multiplicities") != list(HAAR_MOMENTS):
+        raise ValueError("USp(4) signed trivial multiplicities drifted")
+    all_power = character_decomposition.get("all_power_corollary", {})
+    if (
+        all_power.get("integrality") is not True
+        or all_power.get("strict_sign_rule")
+        != "(-1)^m*Haar(F^m)>0 for every m>=0"
+        or all_power.get("scope")
+        != "compact-group Haar moments only; no finite-family convergence"
+    ):
+        raise ValueError("USp(4) all-power Haar-moment corollary drifted")
+    resource = character_decomposition.get("resource_contract", {})
+    if (
+        resource.get("maximum_power") != 6
+        or resource.get("random_sampling") is not False
+        or resource.get("numerical_integration") is not False
+        or resource.get("external_cas") is not False
+    ):
+        raise ValueError("USp(4) character-decomposition resource contract drifted")
+    operation_caps = resource.get("operation_caps", {})
+    observed_operations = resource.get("observed_operations", {})
+    if set(operation_caps) != set(observed_operations) or any(
+        not isinstance(observed_operations[name], int)
+        or observed_operations[name] < 0
+        or observed_operations[name] > operation_caps[name]
+        for name in operation_caps
+    ):
+        raise ValueError("USp(4) character-decomposition operation guard failed")
+
+    twelve_moment = read_json(repo_root / TWELVE_MOMENT_FIXTURE)
+    _verify_payload_hash(twelve_moment, "USp(4) twelve-moment fixture")
+    twelve_module = _load_module(
+        repo_root,
+        TWELVE_MOMENT_SOURCE,
+        "_riemann_atlas_usp4_twelve_moment_sign_bound",
+    )
+    if twelve_module.build_fixture() != twelve_moment:
+        raise ValueError("USp(4) twelve-moment fixture differs from its exact replay")
+    twelve_producer = twelve_moment.get("producer", {})
+    twelve_text = (
+        (repo_root / TWELVE_MOMENT_SOURCE)
+        .read_text(encoding="utf-8")
+        .replace("\r\n", "\n")
+    )
+    finite_histogram_source = twelve_producer.get("finite_histogram_source", {})
+    if (
+        twelve_producer.get("source") != TWELVE_MOMENT_SOURCE
+        or twelve_producer.get("source_sha256_lf_normalized")
+        != hashlib.sha256(twelve_text.encode("utf-8")).hexdigest()
+        or finite_histogram_source.get("path") != Q_SCAN_FIXTURE
+        or finite_histogram_source.get("canonical_sha256") != sha256_hex(q_scan)
+        or finite_histogram_source.get("payload_sha256")
+        != q_scan.get("payload_sha256")
+    ):
+        raise ValueError("USp(4) twelve-moment producer source lock mismatch")
+    if (
+        twelve_moment.get("status") != TWELVE_MOMENT_STATUS
+        or twelve_moment.get("event") != "F>=0"
+        or twelve_moment.get("statistic") != "F=(Tr U)^2-e_2(U)^2"
+    ):
+        raise ValueError("USp(4) twelve-moment status or statistic drifted")
+    twelve_scope = twelve_moment.get("scope", {})
+    if (
+        twelve_scope.get("not_an_optimality_claim") is not True
+        or twelve_scope.get("not_an_equidistribution_theorem") is not True
+        or twelve_scope.get("not_a_number_field_transfer") is not True
+        or "exact rational algebra" not in twelve_scope.get("discovery_firewall", "")
+    ):
+        raise ValueError("USp(4) twelve-moment theorem firewall drifted")
+    twelve_weyl = twelve_moment.get("weyl_constant_term", {})
+    if (
+        twelve_weyl.get("root_system") != "C2"
+        or twelve_weyl.get("density_constant_term") != 8
+        or twelve_weyl.get("positive_roots_as_exponent_pairs")
+        != [list(root) for root in POSITIVE_ROOTS]
+        or twelve_weyl.get("raw_moments_orders_1_through_12")
+        != list(HAAR_MOMENTS_12)
+    ):
+        raise ValueError("USp(4) twelve-moment Weyl certificate drifted")
+    t_moments = twelve_weyl.get("t_moments_orders_0_through_12", [])
+    if len(t_moments) != 13 or any(
+        _fraction(pair, f"t-moment {order}")
+        != twelve_module.t_moments(HAAR_MOMENTS_12)[order]
+        for order, pair in enumerate(t_moments)
+    ):
+        raise ValueError("USp(4) transformed twelve-moment sequence drifted")
+    twelve_majorant = twelve_moment.get("majorant", {})
+    if (
+        twelve_majorant.get("degree") != 12
+        or twelve_majorant.get("definition") != "P(x)=p((3*x+28)/32)"
+        or twelve_majorant.get("pointwise_statement")
+        != "P(x)>=0 on [-20,0], and P(x)>=1 on [0,4/3]."
+        or len(twelve_majorant.get("polynomial_x_coefficients_low_to_high", []))
+        != 13
+    ):
+        raise ValueError("USp(4) degree-twelve majorant definition drifted")
+    bernstein = [
+        _fraction(pair, f"degree-twelve Bernstein coefficient {index}")
+        for index, pair in enumerate(
+            twelve_majorant.get(
+                "positive_side_quotient_bernstein_coefficients_degree_9", []
+            )
+        )
+    ]
+    if len(bernstein) != 10 or not all(coefficient > 0 for coefficient in bernstein):
+        raise ValueError("USp(4) degree-twelve Bernstein positivity proof failed")
+    twelve_bound = twelve_moment.get("haar_bound", {})
+    expected_upper = twelve_module.EXPECTED_UPPER
+    degree_six_upper = twelve_module.SUPPORT_DEGREE_SIX_UPPER
+    if (
+        _fraction(
+            twelve_bound.get("moment_majorant_nonnegative_upper_bound", []),
+            "degree-twelve Haar nonnegative upper bound",
+        )
+        != expected_upper
+        or _fraction(
+            twelve_bound.get("negative_probability_lower_bound", []),
+            "degree-twelve Haar negative lower bound",
+        )
+        != 1 - expected_upper
+        or _fraction(
+            twelve_bound.get("support_adapted_degree_six_upper_bound", []),
+            "degree-six comparison upper bound",
+        )
+        != degree_six_upper
+        or _fraction(
+            twelve_bound.get("strict_improvement", []),
+            "degree-twelve strict improvement",
+        )
+        != degree_six_upper - expected_upper
+        or not expected_upper < degree_six_upper
+    ):
+        raise ValueError("USp(4) degree-twelve Haar sign bound drifted")
+    twelve_rows = twelve_moment.get("finite_q_bounds", [])
+    if [row.get("q") for row in twelve_rows] != list(Q_VALUES):
+        raise ValueError("USp(4) twelve-moment finite rows drifted")
+    q_families_by_q = {int(family["q"]): family for family in q_scan["families"]}
+    polynomial_x = twelve_module.majorant_certificate()["polynomial_x"]
+    for row in twelve_rows:
+        q = int(row["q"])
+        raw = twelve_module.finite_raw_moments(q_families_by_q[q])
+        expected_finite_upper = twelve_module.polynomial_moment(polynomial_x, raw)
+        observed_negative = Fraction(
+            int(q_families_by_q[q]["sign_counts"]["negative"]),
+            int(q_families_by_q[q]["member_count"]),
+        )
+        if (
+            _fraction(
+                row.get("moment_majorant_nonnegative_upper_bound", []),
+                f"q={q} twelve-moment upper bound",
+            )
+            != expected_finite_upper
+            or _fraction(
+                row.get("negative_probability_lower_bound", []),
+                f"q={q} twelve-moment lower bound",
+            )
+            != 1 - expected_finite_upper
+            or _fraction(
+                row.get("observed_negative_fraction", []),
+                f"q={q} twelve-moment observed sign",
+            )
+            != observed_negative
+            or row.get("verified_bound_holds") is not True
+            or 1 - expected_finite_upper > observed_negative
+        ):
+            raise ValueError(f"q={q} twelve-moment finite sign bound drifted")
+    twelve_resource = twelve_moment.get("resource_contract", {})
+    if (
+        twelve_resource.get("maximum_moment") != 12
+        or twelve_resource.get("actual_laurent_pair_products") != 238743
+        or twelve_resource.get("maximum_laurent_pair_products") != 300000
+        or twelve_resource.get("actual_laurent_pair_products")
+        > twelve_resource.get("maximum_laurent_pair_products")
+        or twelve_resource.get("random_sampling") is not False
+        or twelve_resource.get("numerical_integration") is not False
+        or twelve_resource.get("field_enumeration") is not False
+        or twelve_resource.get("external_dependencies") is not False
+    ):
+        raise ValueError("USp(4) twelve-moment resource contract drifted")
+    return comparator, q_scan, character_decomposition, twelve_moment
 
 
 def load_family_specs(root: Path) -> list[dict[str, Any]]:
@@ -370,10 +680,12 @@ def build_detector(root: Path) -> dict[str, Any]:
     normalization = [
         "Use the USp(4) torus eigenvalues x,x^-1,y,y^-1 and exactly the C2 positive roots (2,0),(0,2),(1,1),(1,-1).",
         "Normalize Haar integration by CT(product_(alpha>0)(1-X^alpha)(1-X^-alpha))=8.",
-        "Compare F(U) only with K_D/q^2 and freeze moment orders 1 through 6 and q values 3,5,7.",
+        "Compare F(U) only with K_D/q^2; freeze Haar and sign-majorant moments 1 through 12, explicit finite comparison rows 1 through 6, and q values 3,5,7.",
         "Keep exact Laurent and finite-histogram arithmetic separate from the proposed q-to-infinity convergence statement.",
         "Treat F as a toy reciprocal-coefficient statistic, not Pick/Loewner, XD, or HCNC.",
-        "Use only exactly certified degree-six nonnegative-event majorants on [-20,4/3], and keep their liminf consequence conditional on six-moment convergence.",
+        "Use only exactly certified nonnegative-event majorants on [-20,4/3], and keep every finite-family liminf consequence conditional on the required moment convergence.",
+        "For F^m through m=6, use exact C2 Kostant characters and retain the full irreducible decomposition fixture as a content-bound input.",
+        "For the degree-twelve sign majorant, replay exact factorization and Bernstein positivity, bind the full fixture, and make no optimality claim.",
     ]
     identity_kernel = {
         "version": 1,
@@ -396,9 +708,9 @@ def build_detector(root: Path) -> dict[str, Any]:
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(737), programme_ref(741)],
         "scope_boundary": (
-            "Exact character, Weyl constant-term, and q=3,5,7 histogram calculations through "
-            "moment six only. Convergence is proposed, with no analytic-kernel conclusion or "
-            "number-field transfer."
+            "Exact character identity, irreducible decompositions through power six, Weyl "
+            "constant terms through moment twelve, and q=3,5,7 histogram calculations only. "
+            "Convergence is proposed, with no optimality, analytic-kernel, or number-field claim."
         ),
         "supersedes": [],
         "detector_kind": "COEFFICIENT_DISPERSION",
@@ -458,8 +770,8 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "name": "maximum_moment",
                 "value_type": "INTEGER",
                 "required": True,
-                "domain": "orders 1 through 6",
-                "constraints": {"minimum": 1, "maximum": 6, "frozen_value": 6},
+                "domain": "orders 1 through 12",
+                "constraints": {"minimum": 1, "maximum": 12, "frozen_value": 12},
             },
             {
                 "name": "statistic",
@@ -500,6 +812,16 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "requirement": normalization[5],
                 "comparison_role": "FIREWALL",
             },
+            {
+                "field": "result.character_decomposition_certificate",
+                "requirement": normalization[6],
+                "comparison_role": "IDENTITY",
+            },
+            {
+                "field": "result.twelve_moment_sign_certificate",
+                "requirement": normalization[7],
+                "comparison_role": "FIREWALL",
+            },
         ],
         "invariances": [
             {
@@ -510,6 +832,15 @@ def build_detector(root: Path) -> dict[str, Any]:
             {
                 "code": "C2_WEYL_NORMALIZATION",
                 "statement": "The chosen C2 Weyl density has constant term and Weyl order 8.",
+                "status": "PROVED",
+            },
+            {
+                "code": "C2_IRREDUCIBLE_POWER_DECOMPOSITION",
+                "statement": (
+                    "For m=1,...,6, F^m has an exact irreducible C2-character "
+                    "decomposition with sign-adjusted nonnegative tensor multiplicities, "
+                    "dimension sum 20^m, and trivial coefficient equal to the Haar moment."
+                ),
                 "status": "PROVED",
             },
             {
@@ -539,6 +870,16 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "status": "PROVED",
             },
             {
+                "code": "DEGREE_TWELVE_SIGN_MAJORANT",
+                "statement": (
+                    "An exact degree-twelve majorant gives 1_{F>=0}<=P(F) and "
+                    "Pr_Haar(F<0)>=153081644970674178368978470022738347661743507912075314789490808683/"
+                    "318454738700269877013669525120657835305950388794994707229994647552, "
+                    "strictly improving the stored degree-six moment bound."
+                ),
+                "status": "PROVED",
+            },
+            {
                 "code": "FIXED_MOMENT_CONVERGENCE",
                 "statement": "For each fixed order, finite K_D/q^2 moments converge to USp(4) Haar moments.",
                 "status": "EXPECTED",
@@ -550,6 +891,24 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "status": "REQUIRED_AVAILABLE",
                 "adapter_path": COMPARATOR_SOURCE,
                 "correction": "Use the exact C2 Weyl constant-term formula; no random matrices or numerical integration.",
+            },
+            {
+                "family": "USP4_C2_CHARACTER_RING",
+                "status": "REQUIRED_AVAILABLE",
+                "adapter_path": CHARACTER_DECOMPOSITION_SOURCE,
+                "correction": (
+                    "Use exact integer Kostant multiplicities, dominance subtraction, and "
+                    "the independently checked Weyl dimension formula."
+                ),
+            },
+            {
+                "family": "USP4_DEGREE_TWELVE_SIGN_MAJORANT",
+                "status": "REQUIRED_AVAILABLE",
+                "adapter_path": TWELVE_MOMENT_SOURCE,
+                "correction": (
+                    "Replay twelve exact C2 moments, rational factorization, and Bernstein "
+                    "positivity under the explicit small operation cap."
+                ),
             },
             {
                 "family": "F3_F5_F7_QUADRATIC_QUINTIC_GENUS2",
@@ -578,12 +937,24 @@ def build_detector(root: Path) -> dict[str, Any]:
                     "liminf Pr(K_D/q^2<0)>=2478693937/6358302720."
                 ),
             },
+            {
+                "semantic_id": (
+                    "CONDITIONAL.FUNCTION_FIELD.GENUS2.NEGATIVE_SIGN."
+                    "TWELVE_MOMENT_LIMINF"
+                ),
+                "status": "CONDITIONAL_EXACT",
+                "scope": (
+                    "Convergence of the first twelve raw moments implies liminf "
+                    "Pr(K_D/q^2<0)>=153081644970674178368978470022738347661743507912075314789490808683/"
+                    "318454738700269877013669525120657835305950388794994707229994647552."
+                ),
+            },
         ],
         "failure_modes": [
             {
                 "code": "WEYL_NORMALIZATION_LOSS",
                 "description": "The C2 constant term is used without division by the Weyl order 8.",
-                "hostile_control": "The replay requires density constant term 8 and the frozen exact six moments.",
+                "hostile_control": "The replay requires density constant term 8 and the frozen exact twelve moments.",
             },
             {
                 "code": "FINITE_TO_LIMIT_PROMOTION",
@@ -594,8 +965,8 @@ def build_detector(root: Path) -> dict[str, Any]:
                 "code": "SIGN_BOUND_AS_EXACT_PROBABILITY",
                 "description": "The polynomial lower bound is reported as the exact Haar sign probability.",
                 "hostile_control": (
-                    "The raw certificate labels both polynomial values as lower bounds, makes "
-                    "no optimality claim, and keeps the q-to-infinity consequence conditional."
+                    "The raw certificates label polynomial values as lower bounds, make no "
+                    "optimality claim, and keep q-to-infinity consequences conditional."
                 ),
             },
             {
@@ -624,14 +995,19 @@ def build_detector(root: Path) -> dict[str, Any]:
         "formalization_refs": [
             {
                 "state": "DEFINITION_READY",
-                "target": "C2 Weyl constant term and USp(4) Laurent-character identity.",
+                "target": (
+                    "C2 Weyl constant term, USp(4) Laurent-character identity, and the "
+                    "power-one-through-six irreducible decompositions and degree-twelve "
+                    "sign majorant."
+                ),
                 "path": None,
             }
         ],
         "notes": (
-            "Certified claims are the exact identity, constant terms, six Haar moments, finite "
-            "histogram moments, and the degree-six sign lower bound. The limiting moment "
-            "comparison remains proposed."
+            "Certified claims are the exact identity, irreducible decompositions through power "
+            "six, constant terms, twelve Haar moments, finite histogram bounds, and exact "
+            "degree-six and degree-twelve sign lower bounds. The limiting moment comparison "
+            "remains proposed, and no majorant optimality is claimed."
         ),
     }
 
@@ -759,12 +1135,150 @@ def _sign_moment_certificate_record(source: Mapping[str, Any]) -> dict[str, Any]
     }
 
 
+def _character_decomposition_certificate_record(
+    source: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Keep proof-critical character data compact; bind the full fixture separately."""
+
+    return {
+        "status": source["status"],
+        "highest_weight_convention": source["group"]["highest_weight_convention"],
+        "defining_identity": source["character_identity"]["defining_formula"],
+        "irreducible_identity": source["character_identity"]["F"],
+        "maximum_power": source["resource_contract"]["maximum_power"],
+        "powers": [
+            {
+                "power": int(row["power"]),
+                "irreducible_count": int(row["irreducible_count"]),
+                "tensor_dimension": int(row["tensor_dimension"]),
+                "trivial_coefficient_in_F_power": int(
+                    row["trivial_coefficient_in_F_power"]
+                ),
+                "independent_weyl_constant_term_haar_moment": int(
+                    row["independent_weyl_constant_term_haar_moment"]
+                ),
+                "all_sign_adjusted_tensor_multiplicities_positive": all(
+                    entry["tensor_multiplicity_in_G_power"] > 0
+                    and entry["coefficient_in_F_power"]
+                    == row["global_sign_from_F_equals_minus_G"]
+                    * entry["tensor_multiplicity_in_G_power"]
+                    for entry in row["decomposition"]
+                ),
+                "dimension_reconstruction_exact": (
+                    row["dimension_sum_from_decomposition"]
+                    == row["tensor_dimension"]
+                ),
+                "laurent_reconstruction_exact": row["reconstruction_exact"],
+            }
+            for row in source["powers"]
+        ],
+        "all_power_corollary": dict(source["all_power_corollary"]),
+        "verification": {
+            key: source["verification"][key]
+            for key in (
+                "all_kostant_character_dimensions_match_weyl_formula",
+                "all_generated_characters_are_weyl_invariant",
+                "all_power_reconstructions_exact",
+                "all_tensor_multiplicities_positive",
+                "all_F_power_coefficients_have_uniform_sign_minus_one_to_m",
+                "all_dimension_sums_equal_20_to_m",
+                "all_trivial_multiplicities_match_independent_haar_constant_terms",
+            )
+        },
+        "scope": source["scope_firewall"]["this_proves"],
+        "does_not_prove": list(source["scope_firewall"]["this_does_not_prove"]),
+    }
+
+
+def _twelve_moment_certificate_record(source: Mapping[str, Any]) -> dict[str, Any]:
+    majorant = source["majorant"]
+    haar_bound = source["haar_bound"]
+    resource = source["resource_contract"]
+    return {
+        "status": source["status"],
+        "event": source["event"],
+        "maximum_moment": resource["maximum_moment"],
+        "haar_moments_orders_1_through_12": source["weyl_constant_term"][
+            "raw_moments_orders_1_through_12"
+        ],
+        "majorant": {
+            "degree": majorant["degree"],
+            "definition": majorant["definition"],
+            "pointwise_statement": majorant["pointwise_statement"],
+            "nonnegative_side_proof": majorant["nonnegative_side_proof"],
+            "positive_side_factorization": majorant["positive_side_factorization"],
+            "positive_side_bernstein_coordinate": majorant[
+                "positive_side_bernstein_coordinate"
+            ],
+            "positive_side_bernstein_coefficient_count": len(
+                majorant[
+                    "positive_side_quotient_bernstein_coefficients_degree_9"
+                ]
+            ),
+            "all_positive_side_bernstein_coefficients_strictly_positive": all(
+                _fraction(pair, "compact degree-twelve Bernstein coefficient") > 0
+                for pair in majorant[
+                    "positive_side_quotient_bernstein_coefficients_degree_9"
+                ]
+            ),
+            "exact_factorization_and_positivity_replayed": True,
+        },
+        "haar_bound": {
+            "moment_majorant_nonnegative_upper_bound": _fraction_record(
+                haar_bound["moment_majorant_nonnegative_upper_bound"]
+            ),
+            "negative_probability_lower_bound": _fraction_record(
+                haar_bound["negative_probability_lower_bound"]
+            ),
+            "support_adapted_degree_six_upper_bound": _fraction_record(
+                haar_bound["support_adapted_degree_six_upper_bound"]
+            ),
+            "strict_improvement": _fraction_record(
+                haar_bound["strict_improvement"]
+            ),
+            "strictly_improves_support_adapted_degree_six_bound": True,
+        },
+        "finite_q_bounds": [
+            {
+                "q": int(row["q"]),
+                "moment_majorant_nonnegative_upper_bound": _fraction_record(
+                    row["moment_majorant_nonnegative_upper_bound"]
+                ),
+                "negative_probability_lower_bound": _fraction_record(
+                    row["negative_probability_lower_bound"]
+                ),
+                "observed_negative_fraction": _fraction_record(
+                    row["observed_negative_fraction"]
+                ),
+                "verified_bound_holds": row["verified_bound_holds"],
+            }
+            for row in source["finite_q_bounds"]
+        ],
+        "resource_contract": {
+            "maximum_laurent_pair_products": resource[
+                "maximum_laurent_pair_products"
+            ],
+            "actual_laurent_pair_products": resource[
+                "actual_laurent_pair_products"
+            ],
+            "maximum_wall_seconds": resource["maximum_wall_seconds"],
+            "random_sampling": resource["random_sampling"],
+            "numerical_integration": resource["numerical_integration"],
+            "field_enumeration": resource["field_enumeration"],
+            "external_dependencies": resource["external_dependencies"],
+        },
+        "scope": dict(source["scope"]),
+    }
+
+
 def build_raw_result(
     root: Path,
     specs: Sequence[dict[str, Any]],
     detector: dict[str, Any],
     comparator: dict[str, Any],
     q_scan: dict[str, Any],
+    character_decomposition: dict[str, Any],
+    twelve_moment: dict[str, Any],
 ) -> dict[str, Any]:
     repo_root = root.parents[2]
     specs_by_q = {int(spec["base_field"]["constant_field_order"]): spec for spec in specs}
@@ -801,6 +1315,26 @@ def build_raw_result(
                 "path": COMPARATOR_FIXTURE,
                 "canonical_sha256": sha256_hex(comparator),
                 "payload_sha256": comparator["payload_sha256"],
+            },
+            "character_decomposition_source": {
+                "path": CHARACTER_DECOMPOSITION_SOURCE,
+                "raw_sha256": raw_sha256(repo_root / CHARACTER_DECOMPOSITION_SOURCE),
+            },
+            "character_decomposition_fixture": {
+                "path": CHARACTER_DECOMPOSITION_FIXTURE,
+                "canonical_sha256": sha256_hex(character_decomposition),
+                "producer_source_sha256_lf_normalized": character_decomposition[
+                    "producer"
+                ]["source_sha256_lf_normalized"],
+            },
+            "twelve_moment_source": {
+                "path": TWELVE_MOMENT_SOURCE,
+                "raw_sha256": raw_sha256(repo_root / TWELVE_MOMENT_SOURCE),
+            },
+            "twelve_moment_fixture": {
+                "path": TWELVE_MOMENT_FIXTURE,
+                "canonical_sha256": sha256_hex(twelve_moment),
+                "payload_sha256": twelve_moment["payload_sha256"],
             },
             "q_scan_source": {
                 "path": Q_SCAN_SOURCE,
@@ -853,6 +1387,12 @@ def build_raw_result(
             ],
             "arithmetic": comparator["weyl_certificate"]["arithmetic"],
         },
+        "character_decomposition_certificate": (
+            _character_decomposition_certificate_record(character_decomposition)
+        ),
+        "twelve_moment_sign_certificate": _twelve_moment_certificate_record(
+            twelve_moment
+        ),
         "negative_sign_moment_certificate": _sign_moment_certificate_record(
             comparator["negative_sign_moment_certificate"]
         ),
@@ -871,8 +1411,10 @@ def build_raw_result(
         },
         "firewalls": [
             "RIGOROUS_CERTIFIED covers the exact Laurent, Weyl, and finite-histogram arithmetic only; convergence is proposed and not a theorem.",
+            "The all-power alternating Haar-moment sign theorem is a compact-group character statement and does not imply finite-family moment convergence.",
             "The directional finite-moment pattern is exact only for q=3,5,7 and does not assert monotonicity or a rate at another field.",
             "The degree-six polynomial gives a lower bound for the negative-sign probability, not its exact Haar value; its liminf consequence is conditional on six-moment convergence.",
+            "The degree-twelve polynomial gives a strictly stronger exact lower bound, not the exact probability or an optimality claim; numerical discovery is excluded from acceptance, and any finite-family liminf requires twelve-moment convergence.",
             "The statistic is a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC.",
             "No conclusion transfers from these function-field families to number-field L-functions.",
             "The finite comparison covers only q=3,5,7 and moment orders 1 through 6.",
@@ -887,16 +1429,48 @@ def make_evaluation(
     detector: dict[str, Any],
     comparator: dict[str, Any],
     q_scan: dict[str, Any],
+    character_decomposition: dict[str, Any],
+    twelve_moment: dict[str, Any],
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     repo_root = root.parents[2]
     comparator_adapter = artifact_binding(
         root, COMPARATOR_SOURCE, "exact_usp4_laurent_adapter", "FINITE_COMPLETE", None, "RAW_BYTES"
+    )
+    character_adapter = artifact_binding(
+        root,
+        CHARACTER_DECOMPOSITION_SOURCE,
+        "exact_usp4_character_ring_adapter",
+        "FINITE_COMPLETE",
+        None,
+        "RAW_BYTES",
+    )
+    twelve_moment_adapter = artifact_binding(
+        root,
+        TWELVE_MOMENT_SOURCE,
+        "exact_usp4_twelve_moment_sign_adapter",
+        "FINITE_COMPLETE",
+        None,
+        "RAW_BYTES",
     )
     qscan_adapter = artifact_binding(
         root, Q_SCAN_SOURCE, "exact_genus2_histogram_adapter", "FINITE_COMPLETE", None, "RAW_BYTES"
     )
     comparator_input = artifact_binding(
         root, COMPARATOR_FIXTURE, "exact_usp4_moment_certificate", "FINITE_COMPLETE", None
+    )
+    character_input = artifact_binding(
+        root,
+        CHARACTER_DECOMPOSITION_FIXTURE,
+        "exact_usp4_character_decomposition_certificate",
+        "FINITE_COMPLETE",
+        None,
+    )
+    twelve_moment_input = artifact_binding(
+        root,
+        TWELVE_MOMENT_FIXTURE,
+        "exact_usp4_twelve_moment_sign_certificate",
+        "FINITE_COMPLETE",
+        None,
     )
     qscan_input = artifact_binding(
         root, Q_SCAN_FIXTURE, "complete_q3_q5_q7_histograms", "FINITE_COMPLETE", None
@@ -905,7 +1479,7 @@ def make_evaluation(
     detector_binding = content_binding(detector)
     values = {
         "q_values": list(Q_VALUES),
-        "maximum_moment": 6,
+        "maximum_moment": 12,
         "statistic": "USP4_TOY_MINOR_F",
         "torus_convention": "x,x^-1,y,y^-1",
         "weyl_order": 8,
@@ -921,7 +1495,14 @@ def make_evaluation(
             "name": "exact_usp4_certificate",
             "input_type": "RAW_ARTIFACT",
             "coverage_class": "FINITE_COMPLETE",
-            "sources": [COMPARATOR_SOURCE, COMPARATOR_FIXTURE],
+            "sources": [
+                COMPARATOR_SOURCE,
+                COMPARATOR_FIXTURE,
+                CHARACTER_DECOMPOSITION_SOURCE,
+                CHARACTER_DECOMPOSITION_FIXTURE,
+                TWELVE_MOMENT_SOURCE,
+                TWELVE_MOMENT_FIXTURE,
+            ],
         },
         {
             "name": "finite_family_histograms",
@@ -932,8 +1513,13 @@ def make_evaluation(
     ]
     implementation_relative = "research/l-families/atlas/core/wrap_usp4_toy_minor_moments.py"
     implementation_sha256 = raw_sha256(repo_root / implementation_relative)
-    adapters = [comparator_adapter, qscan_adapter]
-    inputs = [comparator_input, qscan_input]
+    adapters = [
+        comparator_adapter,
+        character_adapter,
+        twelve_moment_adapter,
+        qscan_adapter,
+    ]
+    inputs = [comparator_input, character_input, twelve_moment_input, qscan_input]
     identity_kernel = {
         "version": 1,
         "slug": EVALUATION_SLUG,
@@ -948,7 +1534,15 @@ def make_evaluation(
         "seed": None,
     }
     semantic_id, identity_sha256 = semantic_identity("EVAL", EVALUATION_SLUG, identity_kernel)
-    raw_result = build_raw_result(root, specs, detector, comparator, q_scan)
+    raw_result = build_raw_result(
+        root,
+        specs,
+        detector,
+        comparator,
+        q_scan,
+        character_decomposition,
+        twelve_moment,
+    )
     result_relative = f"research/l-families/atlas/results/{semantic_id}.json"
     result_binding = {
         "role": "detector_result",
@@ -958,7 +1552,10 @@ def make_evaluation(
         "coverage_class": "FINITE_COMPLETE",
         "media_type": "application/json",
         "schema_path": RAW_RESULT_SCHEMA,
-        "notes": "Compact exact certificate; both source implementations and both full fixtures are separately bound.",
+        "notes": (
+            "Compact exact certificate; the four source implementations and four full "
+            "fixtures are separately content-bound."
+        ),
     }
     evaluation = {
         "schema_version": "riemann.atlas.evaluation_record.v1",
@@ -971,8 +1568,9 @@ def make_evaluation(
         "record_state": "DRAFT",
         "programme_refs": [programme_ref(737), programme_ref(741)],
         "scope_boundary": (
-            "Exact moment orders one through six for Haar USp(4) and the complete q=3,5,7 "
-            "quintic families only; no convergence theorem or transfer beyond this scope."
+            "Exact irreducible character decompositions through power six, Haar moments and "
+            "sign-majorant arithmetic through moment twelve, plus the complete q=3,5,7 "
+            "quintic families only; no optimality, convergence, or transfer claim."
         ),
         "supersedes": [],
         "subject": {
@@ -998,11 +1596,12 @@ def make_evaluation(
         "coverage": {
             "class": "FINITE_COMPLETE",
             "statement": (
-                "All Haar moment orders 1 through 6 and all 162, 2500, and 14406 finite-family "
-                "members at q=3,5,7 respectively."
+                "All irreducible C2-character decompositions through power 6, all Haar moments "
+                "and sign-majorant arithmetic through moment 12, and all 162, 2500, and 14406 "
+                "finite-family members at q=3,5,7 respectively."
             ),
             "omissions": [
-                "moment orders above 6",
+                "explicit irreducible decompositions above power 6 and moments above order 12",
                 "q outside 3,5,7",
                 "proof of fixed-moment convergence",
                 "analytic zero kernels and number-field transfer",
@@ -1025,9 +1624,13 @@ def make_evaluation(
             "predicate_outcome": "NOT_APPLICABLE",
             "artifact": result_binding,
             "summary": (
-                "F has exact USp(4) range [-20,4/3] and Haar moments -1, 3, -11, 56, "
-                "-374, 3117. A degree-six moment majorant proves "
-                "Pr_Haar(F<0)>=2478693937/6358302720. All six frozen moment gaps shrink directionally "
+                "The exact decompositions of F^m have 3, 9, 16, 25, 36, and 49 irreducible "
+                "terms for m=1,...,6; their signed trivial multiplicities give Haar moments "
+                "-1, 3, -11, 56, -374, 3117. F has exact USp(4) range [-20,4/3], and a "
+                "degree-twelve moment majorant proves Pr_Haar(F<0)>="
+                "153081644970674178368978470022738347661743507912075314789490808683/"
+                "318454738700269877013669525120657835305950388794994707229994647552, "
+                "strictly improving the degree-six bound. All six frozen moment gaps shrink directionally "
                 "from q=3 to 5 to 7, without asserting monotonicity beyond those fields "
                 "or convergence."
             ),
@@ -1042,11 +1645,15 @@ def make_evaluation(
         "interpretation": {
             "status": "EXACT_FINITE",
             "statement": (
-                "The character identity, range certificate, Weyl normalization, six Haar moments, "
-                "three finite histogram moment sequences, and the six frozen directional gap "
-                "checks are exact. The six-moment negative-sign lower bound is also exact; its "
-                "liminf consequence and the proposed q-to-infinity moment relation are conditional "
-                "and unproved, respectively."
+                "The character identity, six irreducible power decompositions, range certificate, "
+                "Weyl normalization and twelve Haar moments, three finite histogram moment "
+                "sequences through order six, and six frozen directional gap checks are exact. "
+                "The character packet also "
+                "proves the alternating strict sign and integrality of every compact-group Haar "
+                "moment. The six- and twelve-moment negative-sign lower bounds are exact; their "
+                "finite-family liminf consequences and the proposed q-to-infinity moment relation "
+                "remain conditional and unproved, respectively. The degree-twelve majorant is "
+                "not claimed optimal."
             ),
             "smallest_gap": (
                 "Prove the relevant hyperelliptic-family equidistribution; bounded continuity of "
@@ -1061,11 +1668,25 @@ def make_evaluation(
                 "statement": "Certified exact arithmetic does not certify the proposed fixed-moment limit.",
             },
             {
+                "code": "CHARACTER_RING_NOT_FINITE_FAMILY",
+                "statement": (
+                    "The all-power alternating sign theorem concerns compact-group Haar "
+                    "moments only and does not establish finite-family convergence."
+                ),
+            },
+            {
                 "code": "SIGN_BOUND_NOT_SIGN_PROBABILITY",
                 "statement": (
-                    "The support-adapted value 2478693937/6358302720 is a Haar lower bound, "
-                    "not the exact negative-sign probability or a claimed optimal moment bound; "
-                    "the finite-family liminf remains conditional."
+                    "The degree-six and degree-twelve values are Haar lower bounds, not the "
+                    "exact negative-sign probability or claimed optimal moment bounds; each "
+                    "finite-family liminf remains conditional."
+                ),
+            },
+            {
+                "code": "DEGREE_TWELVE_DISCOVERY_FIREWALL",
+                "statement": (
+                    "Numerical optimization only nominated the rational factor pattern; atlas "
+                    "acceptance replays exact rational factorization and Bernstein positivity."
                 ),
             },
             {
@@ -1074,7 +1695,10 @@ def make_evaluation(
             },
             {
                 "code": "FINITE_Q_SCOPE",
-                "statement": "The finite evidence contains exactly q=3,5,7 and moment orders 1 through 6.",
+                "statement": (
+                    "The finite evidence contains exactly q=3,5,7, explicit comparison rows "
+                    "through order 6, and sign-majorant arithmetic through order 12."
+                ),
             },
             {
                 "code": "NO_NUMBER_FIELD_TRANSFER",
@@ -1082,9 +1706,10 @@ def make_evaluation(
             },
         ],
         "notes": (
-            "RIGOROUS_CERTIFIED applies to exact Laurent, Weyl, finite histogram, and polynomial-"
-            "majorant arithmetic. The raw result separately marks moment convergence CONJECTURAL "
-            "and PROPOSED, and the negative-sign liminf as conditional."
+            "RIGOROUS_CERTIFIED applies to exact Laurent, C2 character-ring, twelve-moment Weyl, "
+            "finite histogram, and polynomial-majorant arithmetic. The raw result separately marks "
+            "moment convergence CONJECTURAL and PROPOSED, and the negative-sign liminf as "
+            "conditional."
         ),
     }
     return evaluation, raw_result
@@ -1099,16 +1724,36 @@ def run(
     dict[str, Any],
     dict[str, Any],
     dict[str, Any],
+    dict[str, Any],
+    dict[str, Any],
 ]:
     root = root.resolve()
     config = read_json(root / "config" / "pilot.json")
-    comparator, q_scan = load_and_replay_fixtures(root)
+    comparator, q_scan, character_decomposition, twelve_moment = (
+        load_and_replay_fixtures(root)
+    )
     specs = load_family_specs(root)
     detector = build_detector(root)
     evaluation, raw_result = make_evaluation(
-        root, config, specs, detector, comparator, q_scan
+        root,
+        config,
+        specs,
+        detector,
+        comparator,
+        q_scan,
+        character_decomposition,
+        twelve_moment,
     )
-    return specs, detector, evaluation, raw_result, comparator, q_scan
+    return (
+        specs,
+        detector,
+        evaluation,
+        raw_result,
+        comparator,
+        q_scan,
+        character_decomposition,
+        twelve_moment,
+    )
 
 
 def _records_with_slug(directory: Path, slug: str) -> list[Path]:
@@ -1157,7 +1802,7 @@ def main() -> None:
     parser.add_argument("--check", action="store_true", help="replay and compare without writing")
     args = parser.parse_args()
     root = args.root.resolve()
-    specs, detector, evaluation, raw_result, _, _ = run(root)
+    specs, detector, evaluation, raw_result, _, _, _, _ = run(root)
     detector_path = root / "detectors" / f"{detector['semantic_id']}.json"
     evaluation_path = root / "evaluations" / f"{evaluation['semantic_id']}.json"
     result_path = root.parents[2] / evaluation["result"]["artifact"]["path"]

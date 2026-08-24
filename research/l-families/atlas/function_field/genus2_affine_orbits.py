@@ -552,6 +552,25 @@ def build_fixture(
                 "assert an equidistribution law or any analytic-detector consequence."
             ),
         },
+        "odd_trace_cancellation_corollary": {
+            "status": "PROVED_FOR_EVERY_ODD_PRIME_POWER",
+            "statement": (
+                "For every r>=0 and every function Phi, the uniform family sum "
+                "of a_D^(2r+1)*Phi(a_D^2,b_D) is zero whenever the sum is defined."
+            ),
+            "special_cases": [
+                "every odd moment of a_D is exactly zero",
+                "the joint distribution of (a_D,b_D) is invariant under (a,b)->(-a,b)",
+            ],
+            "proof": (
+                "Choose a nonsquare alpha in F_q^* and beta=0. The affine action "
+                "permutes the family, sends a_D to -a_D, and fixes both a_D^2 and b_D."
+            ),
+            "scope_boundary": (
+                "This is an exact finite-family symmetry statement; it supplies no "
+                "equidistribution rate or number-field transfer."
+            ),
+        },
         "method": {
             "family_arithmetic": (
                 "reuse genus2_q_scan exact squarefree gcd, F_q/F_(q^2) character tables, "

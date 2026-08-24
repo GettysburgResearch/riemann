@@ -1,4 +1,96 @@
 {
+  "character_decomposition_certificate": {
+    "all_power_corollary": {
+      "integrality": true,
+      "proof": "G=1+chi_(0,1)+chi_(0,2) is the character of an honest self-dual representation containing the trivial summand; tensor-product multiplicities are nonnegative integers and the all-trivial tensor supplies at least one invariant.",
+      "scope": "compact-group Haar moments only; no finite-family convergence",
+      "statement": "For every integer m>=0, Haar(F^m)=(-1)^m times the multiplicity of the trivial representation in G^tensor_m.",
+      "strict_sign_rule": "(-1)^m*Haar(F^m)>0 for every m>=0"
+    },
+    "defining_identity": "F=(Tr U)^2-e_2(U)^2",
+    "does_not_prove": [
+      "finite genus-two family moment convergence",
+      "USp(4) equidistribution for the scanned polynomial family",
+      "a rate of convergence in q",
+      "any number-field L-function statement"
+    ],
+    "highest_weight_convention": "a*omega1+b*omega2 corresponds to e-basis coordinates (lambda1,lambda2)=(a+b,b)",
+    "irreducible_identity": "-(1+chi_(0*omega1+1*omega2)+chi_(0*omega1+2*omega2))",
+    "maximum_power": 6,
+    "powers": [
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": -1,
+        "irreducible_count": 3,
+        "laurent_reconstruction_exact": true,
+        "power": 1,
+        "tensor_dimension": 20,
+        "trivial_coefficient_in_F_power": -1
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": 3,
+        "irreducible_count": 9,
+        "laurent_reconstruction_exact": true,
+        "power": 2,
+        "tensor_dimension": 400,
+        "trivial_coefficient_in_F_power": 3
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": -11,
+        "irreducible_count": 16,
+        "laurent_reconstruction_exact": true,
+        "power": 3,
+        "tensor_dimension": 8000,
+        "trivial_coefficient_in_F_power": -11
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": 56,
+        "irreducible_count": 25,
+        "laurent_reconstruction_exact": true,
+        "power": 4,
+        "tensor_dimension": 160000,
+        "trivial_coefficient_in_F_power": 56
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": -374,
+        "irreducible_count": 36,
+        "laurent_reconstruction_exact": true,
+        "power": 5,
+        "tensor_dimension": 3200000,
+        "trivial_coefficient_in_F_power": -374
+      },
+      {
+        "all_sign_adjusted_tensor_multiplicities_positive": true,
+        "dimension_reconstruction_exact": true,
+        "independent_weyl_constant_term_haar_moment": 3117,
+        "irreducible_count": 49,
+        "laurent_reconstruction_exact": true,
+        "power": 6,
+        "tensor_dimension": 64000000,
+        "trivial_coefficient_in_F_power": 3117
+      }
+    ],
+    "scope": "the exact compact-group character decompositions and Haar moments listed here",
+    "status": "PROVED_EXACT_C2_CHARACTER_DECOMPOSITION",
+    "verification": {
+      "all_F_power_coefficients_have_uniform_sign_minus_one_to_m": true,
+      "all_dimension_sums_equal_20_to_m": true,
+      "all_generated_characters_are_weyl_invariant": true,
+      "all_kostant_character_dimensions_match_weyl_formula": true,
+      "all_power_reconstructions_exact": true,
+      "all_tensor_multiplicities_positive": true,
+      "all_trivial_multiplicities_match_independent_haar_constant_terms": true
+    }
+  },
   "character_identity": {
     "dimensions_at_identity": {
       "2*omega_2": 14,
@@ -18,8 +110,8 @@
     "statement": "For each fixed moment order, the finite K/q^2 moment tends to the USp(4) Haar moment as q tends to infinity.",
     "status": "CONJECTURAL_USP4_LIMIT_NOT_A_THEOREM"
   },
-  "definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], evaluate the first six Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use those six moments and an exact degree-six polynomial majorant to certify a lower bound for the negative-sign probability.",
-  "detector_semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.Heed5882fae71cfe825735bf2a9c3856a",
+  "definition": "For U in USp(4), set F(U)=(Tr U)^2-e_2(U)^2. Prove the exact Laurent-character identity F=-(1+chi_{omega_2}+chi_{2*omega_2}), certify the exact range [-20,4/3], decompose F^m for m=1,...,6 into irreducible C_2 characters, evaluate the first twelve Haar moments by the normalized C_2 Weyl constant-term formula, and compare them exactly with the complete q=3,5,7 histogram moments of K_D/q^2, where K_D=q*a_D^2-b_D^2. Use exact degree-six and degree-twelve polynomial majorants to certify successively stronger lower bounds for the negative-sign probability.",
+  "detector_semantic_id": "ATLAS.DETECTOR.FUNCTION_FIELD.GENUS2.USP4.TOY_MINOR.EXACT_MOMENT_COMPARATOR.Hc2dcb9b107d8aa3d5bc5dc2761a7e4f6",
   "exact_result_status": "RIGOROUS_CERTIFIED",
   "finite_comparisons": [
     {
@@ -298,8 +390,10 @@
   ],
   "firewalls": [
     "RIGOROUS_CERTIFIED covers the exact Laurent, Weyl, and finite-histogram arithmetic only; convergence is proposed and not a theorem.",
+    "The all-power alternating Haar-moment sign theorem is a compact-group character statement and does not imply finite-family moment convergence.",
     "The directional finite-moment pattern is exact only for q=3,5,7 and does not assert monotonicity or a rate at another field.",
     "The degree-six polynomial gives a lower bound for the negative-sign probability, not its exact Haar value; its liminf consequence is conditional on six-moment convergence.",
+    "The degree-twelve polynomial gives a strictly stronger exact lower bound, not the exact probability or an optimality claim; numerical discovery is excluded from acceptance, and any finite-family liminf requires twelve-moment convergence.",
     "The statistic is a toy reciprocal-coefficient minor, not Pick/Loewner, XD, or HCNC.",
     "No conclusion transfers from these function-field families to number-field L-functions.",
     "The finite comparison covers only q=3,5,7 and moment orders 1 through 6."
@@ -771,24 +865,170 @@
   },
   "schema": "riemann.atlas.raw.function_field_usp4_toy_minor_moments.v1",
   "source_locks": {
+    "character_decomposition_fixture": {
+      "canonical_sha256": "fdc92b8a3bdd3e89df1a14b4cfb66be417b5dabe5f0ccd6958e1e48258dc58af",
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.json",
+      "producer_source_sha256_lf_normalized": "2f5187421d0add48806c6710ff520a0e8281805457eeebe570d1e8ef5475820b"
+    },
+    "character_decomposition_source": {
+      "path": "research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py",
+      "raw_sha256": "2f5187421d0add48806c6710ff520a0e8281805457eeebe570d1e8ef5475820b"
+    },
     "comparator_fixture": {
-      "canonical_sha256": "7a7a926a1faac9ebe2864fb51e9e502e6085ea5775659cb112852b8733c0662b",
+      "canonical_sha256": "0a668053e6dfeee2887016996ea93023fbf16773932c444e749301f586098495",
       "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.json",
-      "payload_sha256": "ccefc870ce7aa2f58a14f1d8f5aacba91cd84df44412af127b5ee6d1a1629830"
+      "payload_sha256": "843a2fe286e52bcf83f971c624454c8a2e8c69e8c894b79c898728ff74e35e6f"
     },
     "comparator_source": {
       "path": "research/l-families/atlas/function_field/usp4_toy_minor_moments.py",
       "raw_sha256": "533f0938006223bb67fc76b9d2011347fc3cc617be69ca7bf0440d79b2660f89"
     },
     "q_scan_fixture": {
-      "canonical_sha256": "da300955c40c4c64dfbdc0776107373949c622cabda0d1b0c4e6e176046bdbd4",
+      "canonical_sha256": "5190f667e341fb0ffc4affe41920be9edb53c1cfd1a663a28b30c5374e4bf632",
       "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
-      "payload_sha256": "3ecbafdafeb78f421f179c6045e1ed8ea02be2251d2282f42e14aaf06bd8a3b4"
+      "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5"
     },
     "q_scan_source": {
       "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
-      "raw_sha256": "adde82cf2dddd20ba6436161bb1d077e586a442d01bf5a83c53703436b13db10"
+      "raw_sha256": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
+    },
+    "twelve_moment_fixture": {
+      "canonical_sha256": "f7ac9670cacc6ea9abf69cd1f9ce6935f404ac278c7fad2a5546f21b62fa016d",
+      "path": "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.json",
+      "payload_sha256": "a49959c36cb7f6287e2f740d92778114cc81cdf0cf6101ecd1e203456e15774e"
+    },
+    "twelve_moment_source": {
+      "path": "research/l-families/atlas/function_field/usp4_twelve_moment_sign_bound.py",
+      "raw_sha256": "e191b47104a8ef318d56c378999b3d9b467062dca95c6a7815bcdbaf8709af49"
     }
+  },
+  "twelve_moment_sign_certificate": {
+    "event": "F>=0",
+    "finite_q_bounds": [
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 37608867731024471935560343577699449033962129015911284934447907886596096,
+          "numerator": 25775402379863804286755901016393787628512946087002958086158162118977769,
+          "text": "25775402379863804286755901016393787628512946087002958086158162118977769/37608867731024471935560343577699449033962129015911284934447907886596096"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 37608867731024471935560343577699449033962129015911284934447907886596096,
+          "numerator": 11833465351160667648804442561305661405449182928908326848289745767618327,
+          "text": "11833465351160667648804442561305661405449182928908326848289745767618327/37608867731024471935560343577699449033962129015911284934447907886596096"
+        },
+        "observed_negative_fraction": {
+          "denominator": 27,
+          "numerator": 17,
+          "text": "17/27"
+        },
+        "q": 3,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 31099095576198230177116164562564241729096717655761201877929164800000000000,
+          "numerator": 18721910657251664640732665969500665113318984444309243589388042011446280239,
+          "text": "18721910657251664640732665969500665113318984444309243589388042011446280239/31099095576198230177116164562564241729096717655761201877929164800000000000"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 31099095576198230177116164562564241729096717655761201877929164800000000000,
+          "numerator": 12377184918946565536383498593063576615777733211451958288541122788553719761,
+          "text": "12377184918946565536383498593063576615777733211451958288541122788553719761/31099095576198230177116164562564241729096717655761201877929164800000000000"
+        },
+        "observed_negative_fraction": {
+          "denominator": 50,
+          "numerator": 33,
+          "text": "33/50"
+        },
+        "q": 5,
+        "verified_bound_holds": true
+      },
+      {
+        "moment_majorant_nonnegative_upper_bound": {
+          "denominator": 62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208,
+          "numerator": 37191747621933680382287324939947204552899438052010386148205302580614437380433495393506103,
+          "text": "37191747621933680382287324939947204552899438052010386148205302580614437380433495393506103/62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208"
+        },
+        "negative_probability_lower_bound": {
+          "denominator": 62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208,
+          "numerator": 25587491935636593157052492854257060764779777540259553675759084834244411189562181596540105,
+          "text": "25587491935636593157052492854257060764779777540259553675759084834244411189562181596540105/62779239557570273539339817794204265317679215592269939823964387414858848569995676990046208"
+        },
+        "observed_negative_fraction": {
+          "denominator": 49,
+          "numerator": 33,
+          "text": "33/49"
+        },
+        "q": 7,
+        "verified_bound_holds": true
+      }
+    ],
+    "haar_bound": {
+      "moment_majorant_nonnegative_upper_bound": {
+        "denominator": 318454738700269877013669525120657835305950388794994707229994647552,
+        "numerator": 165373093729595698644691055097919487644206880882919392440503838869,
+        "text": "165373093729595698644691055097919487644206880882919392440503838869/318454738700269877013669525120657835305950388794994707229994647552"
+      },
+      "negative_probability_lower_bound": {
+        "denominator": 318454738700269877013669525120657835305950388794994707229994647552,
+        "numerator": 153081644970674178368978470022738347661743507912075314789490808683,
+        "text": "153081644970674178368978470022738347661743507912075314789490808683/318454738700269877013669525120657835305950388794994707229994647552"
+      },
+      "strict_improvement": {
+        "denominator": 17515010628514843235751823881636180941827271383724708897649705615360,
+        "numerator": 1591512542290665885075183371275920634034566533880115933864168256509,
+        "text": "1591512542290665885075183371275920634034566533880115933864168256509/17515010628514843235751823881636180941827271383724708897649705615360"
+      },
+      "strictly_improves_support_adapted_degree_six_bound": true,
+      "support_adapted_degree_six_upper_bound": {
+        "denominator": 6358302720,
+        "numerator": 3879608783,
+        "text": "3879608783/6358302720"
+      }
+    },
+    "haar_moments_orders_1_through_12": [
+      -1,
+      3,
+      -11,
+      56,
+      -374,
+      3117,
+      -30321,
+      327688,
+      -3815668,
+      46998100,
+      -605231862,
+      8084025096
+    ],
+    "majorant": {
+      "all_positive_side_bernstein_coefficients_strictly_positive": true,
+      "definition": "P(x)=p((3*x+28)/32)",
+      "degree": 12,
+      "exact_factorization_and_positivity_replayed": true,
+      "nonnegative_side_proof": "p(t)=C*product(t-r)^2*((t+A/2)^2+B-A^2/4), with C and the stored floor positive.",
+      "pointwise_statement": "P(x)>=0 on [-20,0], and P(x)>=1 on [0,4/3].",
+      "positive_side_bernstein_coefficient_count": 10,
+      "positive_side_bernstein_coordinate": "t=7/8+z/8, z in [0,1]",
+      "positive_side_factorization": "p(t)-1=(t-7/8)*(t-241/250)^2*Q(t)"
+    },
+    "maximum_moment": 12,
+    "resource_contract": {
+      "actual_laurent_pair_products": 238743,
+      "external_dependencies": false,
+      "field_enumeration": false,
+      "maximum_laurent_pair_products": 300000,
+      "maximum_wall_seconds": 3.0,
+      "numerical_integration": false,
+      "random_sampling": false
+    },
+    "scope": {
+      "discovery_firewall": "Numerical linear programming nominated the rational factor pattern; acceptance replays only exact rational algebra.",
+      "haar_statement": "Pr_Haar(F>=0) is at most the stored rational expectation.",
+      "not_a_number_field_transfer": true,
+      "not_an_equidistribution_theorem": true,
+      "not_an_optimality_claim": true
+    },
+    "status": "RIGOROUS_EXACT_FINITE_MOMENT_MAJORANT"
   },
   "weyl_certificate": {
     "arithmetic": "exact integer Laurent-polynomial convolution",
