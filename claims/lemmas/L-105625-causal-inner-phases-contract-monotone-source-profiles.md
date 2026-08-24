@@ -156,7 +156,7 @@ isometry `V_h`. Then
 \boxed{
 V_h^*M_{r_h}V_h\preceq M_{r_h}.
 }
-\tag{L-105625.7]
+\tag{L-105625.7}
 \]
 
 Thus the all-pass phase cannot amplify the canonical current-normalized Turan
@@ -171,12 +171,14 @@ IN:  the physical derivative all-pass is represented by the corresponding
      causal inner multiplier on the exact one-sided source space.
 ```
 
-## 6. Xi scope
+## 6. Xi consumption boundary
 
-At an extremal zero-height base, zero-freeness of the derivative above that
-base gives the formal inner-function geometry. What remains is to authenticate
-all boundary/common-zero conventions and the exact two-trace source map.
+`L-105626` proves `LC` for the standard base-Xi Fourier kernel without
+consuming an external log-concavity claim. `L-105627`, specialized to the base
+rung, proves `IN` for the extremal Xi-prime all-pass. Their exact conclusion is
+recorded in `L-105628`.
 
-Most importantly, this file does not install Xi-kernel log-concavity. That
-source theorem is external to the present packet and must survive independent
-review. Without `LC` and `IN`, neither `MCTPHYS105610` nor RH is claimed.
+The abstract theorem does not extend that conclusion to arbitrary derivative
+rungs whose full-line Fourier sources are no longer the same nonnegative even
+kernel. Nor does it identify finite zero-count banks or endpoint charges. RH
+remains unproved.
