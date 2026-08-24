@@ -76,9 +76,7 @@ fluctuation term:
 \bigotimes_p
 (M_p\otimes M_p-D_p\otimes D_p).
 }
-\tag{L-102904.3
-}
-\]
+\tag{L-102904.3}
 
 ## 2. Every variance coordinate is subcritical
 
