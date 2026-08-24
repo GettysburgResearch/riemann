@@ -47,7 +47,16 @@ source/note/JSON/test packets:
   repeated, and simple Frobenius geometries; and
 - `GENUS2_HIGH_WEIGHT_CHANNEL_PROBE.md` triangularizes the three unresolved
   raw moments and records a sparse all-`q` conjecture without promoting it to
-  a theorem.
+  a theorem;
+- `PRODUCT_VARIETY_TENSOR_FAMILY.md` treats the primitive degree-eight,
+  weight-two `H^1(E)⊗H^1(C)` factor, proves its rank-three coefficient
+  hypersurface and product-Haar fingerprints, derives exact all-`q` finite
+  mean corrections from locked marginals, and freezes only the `q=3,5,7`
+  histogram convolutions; and
+- `VIRTUAL_CHARACTER_NULL_DIRECTIONS.md` solves the coefficient-square null
+  lattice modulo `e_1e_3=e_1^2`, runs the bounded noncentral panels, and
+  upgrades their survivors using an independently reconstructed full `C_2`
+  Weyl density.
 
 ## Replay
 
@@ -72,6 +81,9 @@ python research/l-families/atlas/function_field/genus2_tail_geometry.py \
   --check research/l-families/atlas/function_field/genus2_tail_geometry.json
 python research/l-families/atlas/function_field/genus2_high_weight_channel_probe.py \
   --check research/l-families/atlas/function_field/genus2_high_weight_channel_probe.json
+python research/l-families/atlas/function_field/product_variety_tensor_family.py \
+  --check research/l-families/atlas/function_field/product_variety_tensor_family.json
+python research/l-families/atlas/function_field/virtual_character_null_directions.py --check
 
 python -m pytest -q \
   tests/test_genus2_family_measures.py \
@@ -81,13 +93,18 @@ python -m pytest -q \
   tests/test_balanced_control_family_scan.py \
   tests/test_frobenius_power_echoes.py \
   tests/test_genus2_tail_geometry.py \
-  tests/test_genus2_high_weight_channel_probe.py
+  tests/test_genus2_high_weight_channel_probe.py \
+  tests/test_product_variety_tensor_family.py \
+  tests/test_virtual_character_null_directions.py
 ```
 
 Each packet declares its own resource contract. The Burnside, measure,
-cross-rank, tail, high-weight, and power-echo packets enumerate no new finite
-field or family member; the echo packet transforms the source-locked
-`q=3,5,7` histogram. The balanced-control scan independently visits all
+cross-rank, tail, high-weight, power-echo, product-tensor, and virtual-null
+packets enumerate no new finite field or family member. The echo packet
+transforms its source-locked `q=3,5,7` histogram; the product packet convolves
+only the locked genus-one and genus-two histograms for those same fields; and
+the virtual-null packet performs exact compact-group algebra only. The
+balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
 visits 4,023 cubic candidates at `q=3,5,7,11,13`. The producers retain their
 explicit per-field candidate and exact-operation caps. No frozen genus-two
@@ -127,3 +144,25 @@ additive-frequency resonance condition are exact, but orthogonality is not
 independence. The proposed all-`q` formula for `mean(B_2)` remains a
 quarantined three-field conjecture, and periodic echoes do not prove extra
 endomorphisms.
+
+The product-variety packet keeps only the primitive weight-two factor
+`H^1(E)⊗H^1(C)`, of degree eight; the two Tate lines in the full
+`H^2(E×C)` are separate. Its normalized compact image is
+`(USp(2)×USp(4))/diag center` inside `SO(8)`, and every member satisfies
+`u^2h-u^4+2u^2v+u^2-2uw-w^2=0`. Exactly at Haar level, its trace fourth
+moment is `6` rather than generic-`SO(8)` value `3`, while `mean(h)=mean(uw)=1`
+rather than `0`. The bridge to the locked cubic fixture is `A=-t_E`. The
+all-`q` finite mean corrections use locked marginal theorems; only the
+`q=3,5,7` histogram convolutions are frozen. Their law is the ordered
+factor-pair model measure, equivalently the product stabilizer-weighted
+curve-stack measure, not uniform measure on coarse product varieties. None of
+this asserts equidistribution or generic `SO(8)` monodromy.
+
+For virtual-character null directions, quotienting the coefficient-square
+lattice by `e_1e_3=e_1^2` leaves the single primitive direction
+`B=2e_1^2-e_2^2`. The declared bounded panels isolate `B` among noncentral
+directions, but this is deliberately local: globally `B` generates the exact
+infinite module `B Z[u^2+v^2,u^2v^2]`, alongside the independently symmetric
+center-odd sector. The replay reconstructs the complete `C_2` Weyl density
+independently and checks its full support. These are compact-group statements;
+the packet makes no arithmetic-family claim.

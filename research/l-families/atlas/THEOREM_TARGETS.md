@@ -545,6 +545,34 @@ explicit fourth-degree coefficient-moment calculation. It must be proved by a
 family trace calculation or refuted with a non-heavy method; further brute
 force on this machine is not the proposed route.
 
+The representation-theoretic search space is now better typed. In the raw
+coefficient-square span `(e_1^2,e_2^2,e_1e_3)`, the entire integer null lattice
+is
+
+\[
+\mathbb Z(2,-1,0)+\mathbb Z(-1,0,1),
+\]
+
+and the second generator is only the reciprocity relation
+`e_1e_3-e_1^2=0`. Thus `B` is the unique primitive direction in that quotient
+and the only noncentral survivor in three declared low-weight boxes. This
+justifies prioritizing its arithmetic odd moments.
+
+It does **not** justify a global uniqueness claim. Exact residue support proves
+that
+
+\[
+B\,\mathbb Z[u^2+v^2,u^2v^2],
+\qquad u=x_1^2+x_1^{-2},\quad v=x_2^2+x_2^{-2},
+\]
+
+is an infinite module of symmetric virtual-character laws, and the center-odd
+graded sector supplies another mechanism. A later detector search should
+therefore quotient tautological relations and central parity first, then ask
+for arithmetic bias on a finite set of primitive residue-module generators.
+Blindly enlarging a coefficient box would mostly rediscover these exact
+compact-group symmetries.
+
 There is now a finite-moment payoff strictly between the unconditional
 `1/20` floor and full sign equidistribution. For
 
@@ -671,6 +699,51 @@ A secondary numerical possibility is a one-sided leading correction of size
 about `0.17/sqrt(q)`. The bound, not that constant, is the responsible theorem
 target: three fields and a non-rigorous quadrature value cannot determine an
 asymptotic coefficient.
+
+### Adjacent higher-variety target: distinguish tensor lifts inside `SO(8)`
+
+For independent genus-one and genus-two factors, the primitive weight-two
+local system
+
+\[
+H^1(E)\otimes H^1(C)
+\]
+
+has compact tensor image `(USp(2) x USp(4))/diag(-I,-I)` in `SO(8)`. If
+`u,v,w,h` are its first four normalized coefficients, every member obeys the
+proved hypersurface equation
+
+\[
+\boxed{u^2h-u^4+2u^2v+u^2-2uw-w^2=0.}
+\]
+
+The first compact-group trace fingerprint is
+
+\[
+\mathbb E_{\rm product}(\operatorname{Tr}^4)=6,
+\qquad
+\mathbb E_{SO(8)}(\operatorname{Tr}^4)=3,
+\]
+
+and the same representation degree gives
+`(E(h),E(uw))=(1,1)` on the product image versus `(0,0)` on generic `SO(8)`.
+The independent marked-model family already has exact all-`q` first
+corrections for `v`, `h`, and `uw` from the locked marginal theorems.
+
+This creates three precise next steps that require no undirected large scan:
+
+1. prove all-`q` variances and covariance for `h-1` and `uw-1`, then identify
+   their first automorphic character channels;
+2. test the hypersurface defect on an independently sourced orthogonal family
+   as a certificate against hidden tensor-lift monodromy; and
+3. replace the independent Cartesian family by geometrically linked pairs
+   `(E,C)` sharing a cover, isogeny, or correspondence, and measure the first
+   failure of marginal moment factorization.
+
+The sign bridge `A=-t_E` from the genus-one trace fixture is source-locked, and
+the declared measure is the product of ordered marked-model/curve-stack laws.
+No uniform coarse product-variety law or generic `SO(8)` equidistribution is
+being inferred.
 
 Why this target: the first moment no longer needs nomination. Its exact
 squarefree-sieve proof shows that low moments can expose structure more sharply

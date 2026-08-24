@@ -639,6 +639,48 @@ Finally, the three fields suggest
 
 this last display remains explicitly quarantined as a three-field conjecture.
 
+The balanced direction is locally canonical, but not globally unique. Since
+`e_3=e_1` on `USp(4)` and
+
+\[
+\operatorname{Haar}(e_1^2,e_2^2,e_1e_3)=(1,2,1),
+\]
+
+the complete integer first-moment-null lattice in the raw coefficient-square
+span is
+
+\[
+\mathbb Z(2,-1,0)+\mathbb Z(-1,0,1).
+\]
+
+The second generator is the zero class-function relation
+`e_1e_3-e_1^2`; after quotienting it, the unique primitive line is exactly
+`B=2e_1^2-e_2^2`. Three exhaustive low-weight coefficient boxes independently
+leave only `B` among center-even/noncentral directions. This makes the choice
+of `B` structural inside the declared span rather than an aesthetic fit.
+
+The global representation ring is richer. With
+
+\[
+u=x_1^2+x_1^{-2},\qquad v=x_2^2+x_2^{-2},\qquad B=-uv,
+\]
+
+every element of
+
+\[
+\boxed{B\,\mathbb Z[u^2+v^2,u^2v^2]}
+\]
+
+has support in the residue class `(2,2) mod 4`, while the complete `C_2` Weyl
+density has no support there. All its odd Haar moments therefore vanish, so
+each such virtual character has a symmetric compactly supported law. This is
+an infinite certified null module, not a claim to exhaust every symmetric
+virtual character. Separately, every combination of irreducibles with odd
+first fundamental-weight coordinate is symmetric under the central involution
+`U->-U`. The bounded search thus distinguishes three facts that should not be
+conflated: uniqueness in the coefficient-square quotient, isolation in small
+center-even boxes, and non-uniqueness in the full representation ring.
+
 The range makes the negative first moment quantitatively useful without any
 equidistribution input. Put `Z_D=K_D/q^2`, let `rho_-(q)` be the proportion of
 the family with `Z_D<0`, and write
@@ -918,6 +960,75 @@ It forces the parity-odd probe `B_D(1)B_D(2)` to have mean zero; enumeration
 gives the exact `54/54/54` negative/zero/positive split. The theorem above is
 parity-even, so its negative mean is not that tautological cancellation.
 
+### A higher-variety family: the tensor shadow inside `SO(8)`
+
+The genus-one and genus-two packets combine without another field scan into a
+genuinely different weight-two family. For an ordered pair `(E,C)`, retain the
+primitive Kunneth factor
+
+\[
+H^1(E)\otimes H^1(C)\subset H^2(E\times C).
+\]
+
+The omitted complement consists of two Tate lines. Tensoring the two
+alternating pairings gives a symmetric form, so the normalized compact image
+is
+
+\[
+\frac{USp(2)\times USp(4)}{\{(I,I),(-I,-I)\}}longrightarrow SO(8).
+\]
+
+It has rank three inside rank-four `SO(8)`. This missing rank has a pointwise
+coefficient certificate. Write the degree-eight factor as
+
+\[
+Q(T)=1+c_1T+c_2T^2+c_3T^3+c_4T^4
++q^2c_3T^5+q^4c_2T^6+q^6c_1T^7+q^8T^8
+\]
+
+and normalize
+`u=c_1/q`, `v=c_2/q^2`, `w=c_3/q^3`, `h=c_4/q^4`. Every member satisfies
+
+\[
+\boxed{u^2h-u^4+2u^2v+u^2-2uw-w^2=0.}
+\]
+
+No division by `u` enters, so the trace-zero stratum is included and forces
+`w=0`. The producer derives the degree-eight polynomial twice, from explicit
+coefficients and from the identity
+`p_n(E\otimes C)=p_n(E)p_n(C)`. It also locks the sign bridge from the
+genus-one geometric trace `t_E` to the polynomial coefficient `A=-t_E`; this
+prevents an aggregate twist symmetry from hiding mislabeled member witnesses.
+
+The first trace-moment fingerprint is already order four:
+
+\[
+\operatorname{Haar}_{USp(2)\times USp(4)}(\operatorname{Tr}^4)=2\cdot3=6,
+\qquad
+\operatorname{Haar}_{SO(8)}(\operatorname{Tr}^4)=3.
+\]
+
+At the same representation degree, the product image has
+`E(h)=E(uw)=1`, whereas generic `SO(8)` gives `0,0`. The finite ordered-model
+family inherits exact all-odd-`q` corrections from the locked marginal
+theorems:
+
+\[
+\begin{aligned}
+\mathbb E(v)&=-\frac{(q-1)(q^3-q^2+q+1)}{q^6},\\
+\mathbb E(h)&=\frac{q^6-2q^5+q^4-2q^2-2q+2}{q^6},\\
+\mathbb E(uw)&=\frac{(q-1)(q+1)^2(q^4-4q^3+5q^2-q-5)}{q^7}.
+\end{aligned}
+\]
+
+The complete frozen `q=3,5,7` laws are exact convolutions of only 2,471
+source histogram-atom pairs; they enumerate no field, curve, or product
+surface. Their measure is the product of the two marked-model/curve-stack laws
+on ordered factors, not uniform coarse product-variety isomorphism classes.
+The hypersurface proves that this particular tensor construction cannot have a
+generic `SO(8)` coefficient law; it does not prove equidistribution even in the
+smaller product group, nor does it transfer to a number-field family.
+
 ## 5. Exact twist precursor: root conditioning and covariance are distinct inputs
 
 Fix the imported `11.a2` model and the conductor-coprime, root-number-
@@ -1113,13 +1224,22 @@ The experiments suggest a narrow hierarchy:
    branch orbits, and isomorphism classes are different ensembles. The rational
    all-degree Burnside series predicts their affine automorphism resonances, but
    it does not choose the geometric measure for a new local system.
-5. **Family-dependent:** local coefficient moments, monodromy averages, rank
+5. **Monodromy is finer than functional-equation type:** the tensor product
+   `H^1(E) tensor H^1(C)` is orthogonal of degree eight, yet lies on an exact
+   rank-three coefficient hypersurface and separates from generic `SO(8)` at
+   the fourth trace moment. Orthogonal symmetry alone does not identify the
+   family.
+6. **Null directions are representation-ring objects:** `B` is primitive and
+   unique in the coefficient-square quotient but generates an infinite exact
+   residue-null module globally. A finite low-weight search can establish local
+   isolation without establishing global uniqueness.
+7. **Family-dependent:** local coefficient moments, monodromy averages, rank
    distributions, and low-zero statistics.
-6. **Not implied by purity alone in these pilots:** a common memberwise sign for
+8. **Not implied by purity alone in these pilots:** a common memberwise sign for
    either toy coefficient probe at genus one or two. A genuine source-derived
    kernel could still have deterministic positivity and must be checked on its
    own Frobenius-character image.
-7. **Not supplied by small raw correlations:** the weighted off-diagonal bound
+9. **Not supplied by small raw correlations:** the weighted off-diagonal bound
    needed for a growing reciprocal-prime detector. Its local density, root-
    number conditioning, and weight geometry are separate arithmetic inputs.
 
