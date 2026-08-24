@@ -29,13 +29,13 @@ Every discarded eigenvalue contributes more than \(1-a\) to
 \operatorname{rank}(I-P_a)
 \le\frac{\varepsilon}{1-a}d.
 }
-\tag{L-106412.2
+\tag{L-106412.2}
 
 On the retained subspace,
 
 \[
 P_a\widetilde G^{-1}P_a\preceq a^{-1}P_a.
-\tag{L-106412.3
+\tag{L-106412.3}
 
 Therefore, for every \(\widetilde Q\succeq0\),
 
@@ -46,9 +46,9 @@ Therefore, for every \(\widetilde Q\succeq0\),
       \widetilde G^{-1/2}P_a\bigr)
 \le a^{-1}\operatorname{tr}\widetilde Q.
 }
-\tag{L-106412.4
+\tag{L-106412.4}
 
-In particular, if \(arepsilon=o(1)\), then with \(a=1/2\) the frame loses
+In particular, if \(\varepsilon=o(1)\), then with \(a=1/2\) the frame loses
 only \(o(d)\) dimensions and inversion costs at most two.  Thus a normalized
 negative-trace comparison \(o(d)\) is sufficient for the endpoint frame; a
 Frobenius-square or operator-norm comparison is not necessary.
