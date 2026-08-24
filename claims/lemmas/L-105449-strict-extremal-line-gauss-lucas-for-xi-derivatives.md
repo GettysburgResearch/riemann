@@ -125,47 +125,52 @@ multiplicity reduced by one.
 In particular, if every zero of `Xi^(r)` on an attained extremal line is
 simple, then `Xi^(r+1)` has no zero on that line.
 
-## 5. Isolated-height consequence
+## 5. Exact line extinction, not a quantitative height gap
 
-Assume additionally that the extremal line is isolated in the parent height
-spectrum: there is `delta>0` such that every zero not on `Im z=beta` satisfies
-
-\[
-\Im z\le\beta-\delta.
-\]
-
-If the maximal multiplicity of a top-edge zero is `M`, repeated application of
-(L-105449.6) gives
+Suppose the multiplicities of all top-edge zeros are bounded by `M`. Repeated
+differentiation and (L-105449.6) give the exact line statement
 
 \[
 \boxed{
-\beta(F^{(M)})\le\beta-\delta.
+F^{(M)}(z)\ne0
+\qquad\text{whenever }\Im z=\beta.
 }
-\tag{L-105449.7
-}
+\tag{L-105449.7}
 
-For a simple isolated top edge, one derivative step already lowers the maximal
-height by a positive amount.
+This does **not** imply a bound of the form
 
-## 6. What remains in the nonisolated case
+\[
+\beta(F^{(M)})\le\beta-\delta
+\]
+
+for a parent height gap `delta`. New derivative zeros can lie strictly below
+but arbitrarily close to the parent extremal line, and an unbounded sequence
+of such zeros can retain the same supremal height without attaining it.
+
+Thus even a simple isolated top zero disappears from the exact line after one
+derivative, but a quantitative drop of the global height supremum requires an
+additional compactness or no-escape theorem.
+
+## 6. What remains in the nonattained case
 
 If the supremal height is approached by zeros with real parts tending to
 infinity, the derivative may have the same supremum even though it has no zero
 on the extremal line. This is exactly the spatial-escape alternative of
 `T-105446`.
 
-Thus the attained/isolated part of converse Rolle is rigid:
+The attained-boundary content is therefore rigid but deliberately limited:
 
 ```text
 new noncommon top critical point      IMPOSSIBLE;
 multiple top zero                     loses one multiplicity per derivative;
-simple isolated top zero              disappears after one derivative;
-unattained or nonisolated supremum     remains the genuine escape mechanism.
+simple top zero                       disappears from the exact line;
+strict supremal-height descent        REQUIRES NO-ESCAPE INPUT;
+unattained or spatially escaping top  REMAINS THE GENUINE MECHANISM.
 ```
 
 ## 7. Scope
 
-The theorem does not bound how close lower zero heights may approach `beta`,
+The theorem does not bound how close derivative zeros may lie below `beta`,
 and it does not exclude unbounded top-edge multiplicity. It removes new
-critical-point creation on an attained extremal line; it does not prove that
-the extremal-height supremum strictly decreases without an isolation input.
+critical-point creation on an attained extremal line; it does not prove strict
+height descent or RH.
