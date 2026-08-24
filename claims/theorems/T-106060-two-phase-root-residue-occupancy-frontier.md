@@ -1,25 +1,13 @@
-# T-106060 — Two-phase collision lines reduce to one root-residue occupancy
+# T-106060 — Two-phase collision lines reduce to quadratic root-residue occupancy
 
 Claim ID: `T-106060`  
 Programme aliases: `LFAM1.ROOT_RESIDUE_OCCUPANCY`, `LFAM2.ARTIN_SCHREIER_OCCUPANCY`, `STRESS.TWO_PHASE_LINE_FRONTIER`  
-Status: **EXACT REDUCTION; SUPERSEDED AS THE LIVE FRONTIER BY `T-106070`**  
+Status: **EXACT CONJUNCTIVE PHASE REDUCTION; QUADRATIC OCCUPANCY OPEN**  
 Created: 2026-08-24  
-Updated: 2026-08-25  
-Depends on: `L-106001`, `L-106060`; `R-106060`; `T-106001`  
+Corrected: 2026-08-25  
+Depends on: `L-106001`, `L-106060`; `R-106060--R-106071`; `T-106001`; `L-106074`  
 Programme issues: #743, #736, #737  
-RH status: **see the unvalidated full proof proposal `T-106070`**
-
-## Supersession notice
-
-The reduction and two-phase inequalities below remain exact.  Its original
-version required a predeclared subpower modulus and left `CROP106060` open.
-`L-106070--L-106073` instead use a linear block/colour partition and a
-scale-matched modulus \(16B<\ell<256B\).  The retained block energy pays the
-full factor \(\ell\), producing the proposed closure in `T-106070`.
-
-This file is retained as the exact interface which identifies the root-residue
-quantity.  The current conclusion-facing claim is `T-106070`, and its hostile
-review contract is `M-106070`.
+RH status: **unproved**
 
 The auxiliary completed-family route reduces every surviving clean owner ratio
 to one of two lines
@@ -29,141 +17,147 @@ c=\pm\tau d\pmod\ell.
 \]
 
 One inherited linear phase is insufficient: `R-106060` exhibits an exact
-`ell-1` loss. Two source-exact phases together give the sharp contraction of
+`ell-1` loss.  Two source-exact phases together give the sharp contraction of
 `L-106060`.
 
 ## 1. Exact line packet
 
-For every dyadic block, marked local sector, auxiliary modulus `ell`, owner-
-ratio root `tau`, line sign and deterministic source region, aggregate the
-literal residual coefficients with the same root residue `d mod ell` into a
-Hilbert vector
+For a fixed source-owned line packet, aggregate the **original linear source
+amplitudes** with the same root residue into Hilbert vectors
 
 \[
-w_{\mathfrak a,d}(X).
+w_{\mathfrak a,d}(X),
 \]
 
-The index `mathfrak a` retains every owner, cutoff, gauge, shell and completion
-label not represented by `d`.
-
-Put
+and put
 
 \[
-S_{\mathfrak a}(X)
-=
-\sum_{d\ne0}w_{\mathfrak a,d}(X)
-\]
-
-and
-
-\[
-D_{\mathfrak a}(X)
-=
+S_{\mathfrak a}(X)=\sum_{d\ne0}w_{\mathfrak a,d}(X),
+\qquad
+D_{\mathfrak a}(X)=
 \sum_{d\ne0}\|w_{\mathfrak a,d}(X)\|^2.
 \tag{T-106060.1}
 \]
 
-After inserting the two nonzero phases on `c` and `d`, the original coherent
-line sum is recovered exactly. The two-phase frame gives
+Both \(\|S_{\mathfrak a}\|^2\) and \(D_{\mathfrak a}\) are quadratic in the
+linear source amplitudes.
+
+After inserting the two nonzero phases on the same source occurrence,
+`L-106060` gives
 
 \[
+\boxed{
 \|S_{\mathfrak a}(X)\|^2
 \le
 (\ell-1)D_{\mathfrak a}(X),
+}
 \tag{T-106060.2}
 \]
 
-and, more structurally,
+and the sharper phase-energy identity
 
 \[
+\boxed{
 \|S_{\mathfrak a}\|^2
 \le
 \frac{\ell-1}{\ell^2-\ell-1}
 \sum_{\alpha,\beta\ne0}
-\|F_{\mathfrak a;\alpha,\beta}\|^2.
+\|F_{\mathfrak a;\alpha,
+\beta}\|^2.
+}
 \tag{T-106060.3}
 \]
 
-The first inequality displays the exact remaining obstruction: coherent
-aggregation inside one root residue.
+The phases are genuinely conjunctive and may not be placed on separate source
+marginals.
 
-## 2. Historical root-residue occupancy theorem
+## 2. Binding homogeneity firewall
 
-The original formulation used a predeclared auxiliary-modulus schedule
-satisfying
+A rank-one matched owner-pair tensor
 
 \[
-\ell=X^{o(1)}
+Z_{P,c(d)}\otimes\overline{Z_{Q,d}}
 \]
 
-on logarithmic blocks and defined
+is already quadratic in the source, so the sum of its squared norms is
+quartic.  It is not the \(D_{\mathfrak a}\) in (T-106060.1).
+
+`R-106071` proves that replacing the quadratic root-residue occupancy by that
+quartic tensor quantity is impossible.  The first `T-106070` proposal is
+retracted for exactly this reason.
+
+## 3. Correct scale-matched realization
+
+`L-106070--L-106071` add two valid facts:
 
 ```text
-CROP106060:
-  after the full-source completion and exact HBC residual functor, the
-  extraction-normalized, source-weighted logarithmic integral of
-
-      sum_mathfrak_a ell * D_(mathfrak a)(X)
-
-  over all surviving distinct-product collision-line sectors is Y^o(1).
+a disjoint linear block/colour partition has an unramified principal modulus;
+for every fixed owner pair, each collision line is a partial matching of cores.
 ```
 
-The direct-sum Hilbert index `mathfrak a` is chosen before physical observation,
-so no line is duplicated. The already-closed equal-product and parent long-
-core rows are excluded.
-
-By (T-106060.2), `CROP106060` controls the complete collision-line energy of
-the auxiliary family. Hence the exact historical implication is
+`L-106074` then identifies the complete quadratic block occupancy directly as
 
 \[
 \boxed{
-\mathrm{CROP}_{106060}
-\Longrightarrow
-\mathrm{HCLM}_{106001}
+\mathcal Q_{\mathcal B,A}(X)
+=
+\sum_{r\ne0}
+\left\|
+\sum_{Pc^2\equiv r\;({\rm mod}\ \ell)}
+Z_{P,c}(X)
+\right\|^2.
+}
+\tag{T-106060.4}
+\]
+
+This formula retains the coherent sum over all owners in one residue cell.  Its
+diagonal and every subpower owner-crowding cell are closed by
+`L-106074--L-106075`.  High-crowding owner cells remain open.
+
+## 4. Correct occupancy theorem
+
+The historical name `CROP106060` should now be read only in its quadratic
+normalization.  The current precise version is `HQORO106071`:
+
+```text
+on the disjoint scale-matched block/colour partition, the logarithmic,
+source-weighted sum of ell * Q_(B,A) over the remaining power-crowded owner
+residue cells is Y^(o(1)).
+```
+
+Then
+
+\[
+\boxed{
+\mathrm{HQORO}_{106071}
 \Longrightarrow
 \mathrm{HBCQDSP}_{102888}
 \Longrightarrow
 \mathrm{RH}.
 }
-\tag{T-106060.4}
+\tag{T-106060.5}
 
-`L-106072` proves the required weighted occupancy in the scale-matched,
-block-coloured form, and `L-106073` composes it directly into the native HBC
-residual.
+The premise remains open.
 
-## 3. Why this is a genuine conjunction
+## 5. Function-field consequence
 
-The two phase statements are individually insufficient:
-
-```text
-phase on c alone: exact dimension loss ell-1;
-phase on d alone: exact dimension loss ell-1.
-```
-
-Only their same-occurrence product gives the order-`1/ell` contraction in
-(T-106060.3). The phases may not be proved on separate source marginals and
-multiplied after physical collapse.
-
-## 4. Function-field consequence
-
-For an irreducible conductor of degree `r`, the residue field has size
-`Q=q^r`. On core degree shells below `r`, reduction is injective and the exact
-same two-phase frame applies to arbitrary Möbius/Vaughan/Kummer weights.
-
-Define `FFCROP106060` as the coherent owner-irreducible assembly of the
-resulting root-residue energies. A geometric proof should identify whether
-this occupancy is controlled by monodromy, a relative trace formula, or a
-Deligne estimate after the constant/resonant strata are removed.
+For an irreducible conductor of degree \(r\), the residue field has size
+\(Q=q^r\).  On core degree shells below \(r\), reduction is injective and the
+same two-phase frame applies.  The remaining geometric object is still the
+quadratic coherent sum of distinct owner-irreducible packets in one residue
+cell, not its quartic Hilbert--Schmidt shadow.
 
 ## Exact boundary
 
 ```text
-one-phase collision-line control             REFUTED
-exact two-phase line energy                   PROVED EXACT
-sharp two-phase contraction                   PROVED EXACT
-line sum -> root-residue occupancy            PROVED EXACT
-historical small-modulus CROP formulation      SUPERSEDED
-scale-matched weighted occupancy               CLAIMED PROVED IN L-106072
-native HBC composition                         CLAIMED PROVED IN L-106073
-full conclusion                                SEE T-106070 / M-106070
+one-phase collision-line control                 REFUTED
+exact two-phase line energy                       PROVED EXACT
+sharp two-phase contraction                       PROVED EXACT
+linear block/colour unramified palette             PROVED EXACT
+fixed-owner-pair core matching                     PROVED EXACT
+quartic substitute for quadratic occupancy         REFUTED
+quadratic residue Gram normal form                 PROVED EXACT
+low owner-crowding cells                           PROVED
+HQORO106071 high-crowding owner assembly            OPEN / RH-BEARING
+Riemann Hypothesis                                 UNPROVED
 ```
