@@ -69,16 +69,16 @@ Including the external owner coefficient gives, for one squareclass `P=pq`,
 \ll {Y^{o(1)}\over pq}.
 \tag{L-102883.2}
 
-The harmless bound `Y^(-1/2+o(1))<=Y^o(1)` and
+Since
 
 \[
 \sum_{p>q}{1\over pq}
-\ll(\log\log(3X))^2
+\ll(\log\log(3X))^2,
 \]
 
-show that the complete **free labelled** balanced packet over all owner
-squareclasses has subpower energy.  The second labelled `67` changes only an
-absolute constant.
+the complete **free labelled** balanced packet over all owner squareclasses has
+subpower energy.  The second labelled copy of `67` changes only an absolute
+constant.
 
 ## 2. Equal-product multiplicity
 
@@ -90,16 +90,15 @@ N=pq(uvm)^2.
 
 The owner pair `{p,q}` is the squarefree kernel and is unique.  For fixed core
 product `c=uvm`, the number of triples `(u,v,m)` is at most `d_3(c)`, and the
-number of dyadic block labels is `O((log X)^3)`.  Hence the complete
+number of dyadic block labels is `O((\log X)^3)`.  Hence the complete
 representation multiplicity of one physical integer is
 
 \[
 \boxed{X^{o(1)}.}
-\tag{L-102883.3
-\]
+\tag{L-102883.3}
 
-Cauchy at one physical product therefore converts the free energy in
-(L-102883.1) to the equal-product physical energy with only subpower loss.
+Cauchy at one physical product converts the free energy in (L-102883.1) to the
+equal-product physical energy with only subpower loss.
 
 ## 3. Boundary packet
 
@@ -120,5 +119,5 @@ local smooth-boundary coefficient cost.
 ```
 
 It does not control correlations between **different physical products from
-different owner squareclasses**.  That remaining operator is isolated after a
-source-exact gcd/phase decomposition in `L-102884--L-102886`.
+different owner squareclasses**.  Those correlations remain inside the
+source-exact gcd/phase decomposition of `L-102884--L-102886`.
