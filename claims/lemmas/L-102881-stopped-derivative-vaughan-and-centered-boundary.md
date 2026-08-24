@@ -1,8 +1,9 @@
 # L-102881 — Exact stopped derivative Vaughan decomposition
 
 Claim ID: `L-102881`  
-Status: **PROVED EXACT SOURCE DECOMPOSITION; TWO CENTERED ROWS RETAINED**  
+Status: **PROVED EXACT POINTWISE SOURCE DECOMPOSITION; MOVING-CUTOFF TRANSFER RETAINED**  
 Created: 2026-08-24  
+Corrected: 2026-08-24  
 Depends on: `L-102869`; `L-102880`  
 RH status: **unproved**
 
@@ -31,7 +32,7 @@ define the derivative-core scalar
 \tag{L-102881.1}
 \]
 
-Because the finite-Euler Vaughan identity is coefficientwise,
+Because the finite-Euler Vaughan identity is coefficientwise, at every fixed `Y` and its corresponding `U`,
 
 \[
 \boxed{
@@ -114,22 +115,62 @@ K_L\!\left({Y\over d^2e^2\ell^2k^2}\right),
 
 with only support-active `ell`.  It has one new largest prime and is compatible with the exact greatest-owner and decreasing-prime renewal coordinates.  It is not absorbed by (L-102881.5).
 
-## 3. Differential and phase functoriality
+## 3. Moving Vaughan cutoff transfer
 
-Since `K_L=DR_L`,
+The identity (L-102881.2) is pointwise in `Y`.  It must not be differentiated as though
+
+\[
+U=\lfloor Y^{1/6}\rfloor
+\]
+
+were fixed.
+
+Let `T_R(Y;U)` and `B_R(Y;U)` denote the original `R_L` channels with an externally fixed cutoff.  At a jump `U-1 -> U`, put
+
+\[
+\Delta_U T_R(Y)=T_R(Y;U)-T_R(Y;U-1).
+\]
+
+The two exact Vaughan decompositions of the same core give
 
 \[
 \boxed{
-\mathcal C^K_{p,q}=D\mathcal C_{p,q},
-\quad
-\mathcal T^K_{p,q}=D\mathcal T_{p,q},
-\quad
-\mathcal B^K_{p,q}=D\mathcal B_{p,q}
+\Delta_U B_R(Y)=-\Delta_U T_R(Y).
 }
 \tag{L-102881.7}
-\]
 
-as logarithmic distributions.  The stopped identity commutes coefficientwise with every nonzero owner phase, every adaptive phase choice, the Euler/half-divisor/Wick gauges, source regions and the fixed one-octave observation.
+Therefore, distributionally along the dynamic cutoff,
+
+\[
+\boxed{
+D[T_R(Y;U(Y))]
+=T_K(Y;U(Y))
++\sum_{U\ge1}\Delta_U T_R(U^6)\,\delta_{\log U^6},
+}
+\tag{L-102881.8}
+
+and
+
+\[
+\boxed{
+D[B_R(Y;U(Y))]
+=B_K(Y;U(Y))
+-\sum_{U\ge1}\Delta_U T_R(U^6)\,\delta_{\log U^6}.
+}
+\tag{L-102881.9}
+
+The transfer atoms cancel exactly in the sum, so
+
+\[
+\boxed{
+\mathcal C^K_{p,q}=D\mathcal C_{p,q}
+=\mathcal T^K_{p,q}+\mathcal B^K_{p,q}.
+}
+\tag{L-102881.10}
+
+The historical separate identities `D T_R=T_K` and `D B_R=B_K` are false without (L-102881.8)--(L-102881.9).
+
+The pointwise stopped identity and the **combined** derivative current commute with every nonzero owner phase, every adaptive phase choice, the Euler/half-divisor/Wick gauges, source regions and the fixed one-octave observation.
 
 ## Exact retained rows
 
@@ -140,14 +181,19 @@ KSCB102881:
 
 KBCQDSP102881:
   subpower logarithmic negative mass of the coherent stopped balanced current
-  in (L-102881.4), after exact owner-phase recombination.
+  in (L-102881.4), after exact owner-phase recombination;
+
+KUV102881:
+  the one-use moving-cutoff transfer atoms in (L-102881.8)--(L-102881.9),
+  retained jointly so they cancel before any nonlinear estimate.
 ```
 
-Together with (L-102881.5), either an exact source-cover estimate for these two rows or a single joint estimate implies the derivative detector criterion of `L-102880`.
+Together with (L-102881.5), an exact source-cover estimate for the first two rows, with `KUV102881` recombined before negative parts are taken, implies the derivative detector criterion of `L-102880`.
 
 ```text
 unrestricted derivative Type-I           PROVED POWER-SMALL
-stopped derivative source typing          PROVED EXACT
+stopped derivative pointwise typing       PROVED EXACT
+moving cutoff transfer                    PROVED EXACT / CANCELED JOINTLY
 derivative smooth boundary                OPEN / RH-BEARING
 stopped balanced Type-II                  OPEN / RH-BEARING
 Riemann Hypothesis                        UNPROVED
