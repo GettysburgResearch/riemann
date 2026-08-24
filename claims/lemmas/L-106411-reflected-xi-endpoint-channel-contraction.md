@@ -3,6 +3,7 @@
 Claim ID: `L-106411`  
 Status: **PROVED EXACT FOR THE TRUNCATED TWO-BOUNDARY XI SOURCE**  
 Created: 2026-08-24  
+Strengthened: 2026-08-24  
 Depends on: `L-105260`, `L-106410`  
 RH status: **not assumed**
 
@@ -92,10 +93,10 @@ At \(c=1/200\),
 
 ## 2. Complete two-boundary budget
 
-`L-106410` gives the squared same-sign ratio
+The strengthened `L-106410` gives the squared same-sign ratio
 
 \[
-\left(\frac8{199}\right)^2=\frac{64}{39601}<\frac1{600}.
+\left(\frac4{199}\right)^2=\frac{16}{39601}<\frac1{2400}.
 \]
 
 Paying both same-sign orientations and both reflected orientations
@@ -103,15 +104,16 @@ conservatively gives
 
 \[
 \boxed{
-2\frac{64}{39601}
+2\frac{16}{39601}
 +2\frac{640000}{1568239201}
-=\frac{6348928}{1568239201}
-<\frac1{200}.
+=\frac{2547232}{1568239201}
+=0.0016242624\ldots
+<\frac1{600}.
 }
 \tag{L-106411.7}
 
 Thus, at the source-normalized finite-section Hilbert--Schmidt level, the
-complete endpoint-Turán four-channel packet consumes less than one half of one
+complete endpoint-Turán four-channel packet consumes less than one sixth of one
 percent of the corresponding positive endpoint-denominator bank.
 
 ## 3. Scope
