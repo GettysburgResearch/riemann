@@ -28,11 +28,11 @@ coefficient
 \frac{1}{\sqrt P}
 \frac{a_U(u)a_U(v)\mu(m)}{uvm},
 \qquad
-u\sim U,\ v\sim V,\ m\sim M.
+u\in[U,2U),\quad v\in[V,2V),\quad m\in[M,2M).
 \]
 
-(The first variable is denoted \(u\); the displayed `nu` is only the ordinary
-letter \(u\).)
+Here the first range is the ordinary variable \(u\in[U,2U)\); equivalently one
+may read the display as \(u\asymp U\), \(v\asymp V\), \(m\asymp M\).
 
 Using
 
