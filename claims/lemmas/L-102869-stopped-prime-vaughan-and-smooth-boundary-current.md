@@ -93,11 +93,11 @@ Above a fixed terminal range, the `2 mu_(U,q)` term misses the support and
 \[
 \boxed{
 \mathcal C_{p,q}(Y)
-=\mathcal T_{p,q}(Y)+\mathcal B_{p,q}(Y),
+=\mathcal T_{p,q}(Y)+\mathcal B_{p,q}(Y).
 }
 \tag{L-102869.2}
 
-where
+Here
 
 \[
 \mathcal T_{p,q}(Y)
@@ -126,7 +126,7 @@ r,s>Y^{1/6},
 \qquad rsm\asymp\sqrt Y.
 \]
 
-## 3. Closed lattice plus exact smooth boundary
+## 3. Closed unrestricted lattice plus exact smooth boundary
 
 For each `d,e`, split the stopped lattice in (L-102869.3) by
 `R-102866.3`. This gives
@@ -135,18 +135,17 @@ For each `d,e`, split the stopped lattice in (L-102869.3) by
 \boxed{
 \mathcal T_{p,q}
 =\mathcal T_{p,q}^{\rm full}
-+\mathcal T_{p,q}^{\rm bdry},
++\mathcal T_{p,q}^{\rm bdry}.
 }
-\tag{L-102869.5
+\tag{L-102869.5}
 
-with
+At fixed squareclass,
 
 \[
-\mathcal T_{p,q}^{\rm full}(Y)
-=O_R(Y^{-1/6})
+\mathcal T_{p,q}^{\rm full}(Y)=O_R(Y^{-1/6})
 \]
 
-at fixed squareclass, by `L-102866`, and
+by `L-102866`, while
 
 \[
 \boxed{
@@ -162,7 +161,7 @@ R_L\!\left(
 \frac{Y}{d^2e^2\ell^2k^2}
 \right),
 \end{aligned}}
-\tag{L-102869.6
+\tag{L-102869.6}
 
 where only support-active primes `ell` occur.
 
@@ -182,6 +181,7 @@ BCQDSP102880:
   the coherent balanced Type-II current (L-102869.4) after owner phases.
 ```
 
-The unrestricted lattice part is closed, but neither retained row is promoted
-to a theorem here. Any use of the integrated Dickman corridor must respect its
-published moving-parameter and dynamic-finite-block scope.
+The unrestricted lattice coordinate is closed at fixed squareclass, but
+neither retained row is promoted to a theorem here. Any use of the integrated
+Dickman corridor must respect its published moving-parameter and
+dynamic-finite-block scope.
