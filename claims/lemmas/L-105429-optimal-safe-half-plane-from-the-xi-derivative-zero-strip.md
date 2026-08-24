@@ -57,12 +57,11 @@ zeros under `tau -> -tau` gives
 \boxed{
 F_r(z)=Cz^\varepsilon
 \prod_{\tau\in\mathcal Z_r^+}
-\left(1-{z^2\over\tau^2}\right),
+\left(1-{z^2\over\tau^2}\right).
 }
-\tag{L-105429.2
-}
+\tag{L-105429.2}
 
-where one representative is chosen from each nonzero `+-` pair and
+Here one representative is chosen from each nonzero `+-` pair and
 
 \[
 \sum_{\tau\in\mathcal Z_r^+}|\tau|^{-2}<\infty.
