@@ -1,0 +1,33 @@
+{
+  "claim_namespace": "105600",
+  "created_at": "2026-08-24",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "pr_number": 729,
+  "source_head_before_t105600": "f22ee0aa99d10961e0ac92c85b1fdc91e4cd0e75",
+  "base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "base_sha": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "external_sibling_interfaces": {
+    "allpass_half_derivative": {
+      "pr": 731,
+      "claim": "L-105281"
+    },
+    "one_sided_hardy_phase_gap": {
+      "claim": "L-105422"
+    },
+    "frozen_reciprocal_source": {
+      "claim": "L-105420"
+    }
+  },
+  "replay": {
+    "verdict": "PASS_X_105600_PHASE_BARYCENTER_ANTIPOISSON_SHELL",
+    "checks": 2187,
+    "proof_object": "6127ff8f37d767ca34b32a271ae44c10a469d5783a0c31a5f078453ade71b9df"
+  },
+  "open_gates": [
+    "DMPXFER105603",
+    "HSHE105602",
+    "Xi spatial-escape exclusion"
+  ],
+  "rh_established": false
+}
