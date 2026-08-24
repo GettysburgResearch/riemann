@@ -61,7 +61,7 @@ model space is represented by
 =G^{-1/2}AA^*G^{-1/2},
 \qquad 0\preceq\mathcal C_{U,\mathcal S}\preceq I_m.
 }
-\tag{L-106415.3
+\tag{L-106415.3}
 
 The exact missed dimension is
 
@@ -70,7 +70,7 @@ The exact missed dimension is
 \dim\bigl(K_{B_-}\cap\mathcal S^\perp\bigr)
 =\dim\ker\mathcal C_{U,\mathcal S}.
 }
-\tag{L-106415.4
+\tag{L-106415.4}
 
 More generally, for \(0<a<1\), the number of model-space directions whose
 source energy is below \(a\) is the number of eigenvalues of
@@ -97,7 +97,7 @@ Reproducing gives
 A_{j\ell}
 =\frac{s_\ell(b_j)}{\|k_{b_j}\|}.
 }
-\tag{L-106415.5
+\tag{L-106415.5}
 
 Thus the endpoint-bank coverage problem is an explicit sampling theorem at the
 bad companion zeros.  No contour norm or unspecified partial-index remainder
@@ -112,7 +112,7 @@ K_B(z,w)
 =\int_0^B e^{iuz}e^{-iu\overline w}\,du
 =\frac{1-e^{iB(z-\overline w)}}{-i(z-\overline w)}.
 }
-\tag{L-106415.6
+\tag{L-106415.6}
 
 Hence both \(G\) and \(A\) are explicit finite exponential/Cauchy matrices once
 the source frame and companion divisor are declared.
