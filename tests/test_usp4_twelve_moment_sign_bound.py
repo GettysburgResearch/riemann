@@ -96,6 +96,26 @@ class FixtureTests(unittest.TestCase):
         self.assertTrue(scope["not_a_number_field_transfer"])
         self.assertFalse(self.fixture["resource_contract"]["field_enumeration"])
 
+    def test_all_twelve_finite_moments_have_haar_sign_and_order_with_q(self) -> None:
+        q_scan = json.loads(
+            (FUNCTION_FIELD / "genus2_q_scan.json").read_text(encoding="utf-8")
+        )
+        haar, _ = subject.haar_moments()
+        by_q = {
+            int(family["q"]): subject.finite_raw_moments(family)
+            for family in q_scan["families"]
+        }
+        self.assertEqual(list(by_q), [3, 5, 7])
+        for order, haar_moment in enumerate(haar):
+            values = [by_q[q][order] for q in (3, 5, 7)]
+            self.assertTrue(
+                all(value * haar_moment > 0 for value in values),
+                msg=f"moment {order + 1} lost its Haar sign",
+            )
+            absolute_values = [abs(value) for value in values]
+            self.assertEqual(absolute_values, sorted(absolute_values))
+            self.assertTrue(all(value < abs(haar_moment) for value in absolute_values))
+
     def test_checked_in_fixture_and_source_lock(self) -> None:
         stored = json.loads(subject.FROZEN_FIXTURE.read_text(encoding="utf-8"))
         self.assertEqual(stored, self.fixture)

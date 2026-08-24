@@ -237,8 +237,9 @@ generic radical degree eight, with leading coefficients
 `1/16, 1/4, 3/8, 1/4, 1/16`. Each list sums to one; all lower-radical strata
 have smaller polynomial degree. Thus the leading tuple space is a binomial
 mixture of just three and five collision-free conductor types, respectively.
-This is exact combinatorics, not a character-sum estimate, but it sharply
-localizes where a leading asymptotic proof must begin.
+The binomial weights reflect the asymptotic half-split/half-irreducible choice
+for each monic quadratic slot. This is exact combinatorics, not a character-sum
+estimate, but it sharply localizes where a leading asymptotic proof must begin.
 
 The new first moment of `b_D` has a useful representation-theoretic payoff.
 For the normalized Frobenius class, exact `C_2` character identities give
@@ -315,6 +316,20 @@ rate. After multiplication by `q^2`, they become
 `mean(H)=O(q^{-2})`, and more speculatively `q^2 mean(H)->9/4`, as a focused
 next conjecture. Three fields cannot distinguish that constant from a nearby
 limit or a lower-order oscillation.
+
+There is already a reason to retain the roadmap's possible
+`eta_q=chi_q(-1)` branch. The exact deviations of those three rescalings from
+`9/4` are
+
+\[
+-\frac{43}{972},\qquad \frac{491}{12500},\qquad
+-\frac{655}{67228},
+\]
+
+whose signs agree with `eta_q=-1,+1,-1` at `q=3,5,7`. With only one
+`eta_q=+1` field this is a warning, not evidence for a quasipolynomial term.
+It makes an analytic reciprocity calculation more informative than extending
+the brute-force scan.
 
 Therefore
 
@@ -524,13 +539,21 @@ show how slowly the higher tails appear:
 | 4 | `56` | `5.176492` | `12.974911` | `19.477453` |
 | 5 | `-374` | `-12.337390` | `-42.659645` | `-75.358513` |
 | 6 | `3117` | `30.726756` | `150.912978` | `321.292681` |
+| 7 | `-30321` | `-76.703368` | `-560.428796` | `-1470.300970` |
+| 8 | `327688` | `193.618022` | `2171.257750` | `7100.403220` |
+| 9 | `-3815668` | `-490.965821` | `-8696.808820` | `-35670.979300` |
+| 10 | `46998100` | `1250.939590` | `35783.433400` | `184513.460000` |
+| 11 | `-605231862` | `-3198.093800` | `-150404.219000` | `-975465.486000` |
+| 12 | `8084025096` | `8200.750030` | `642985.199000` | `5243311.720000` |
 
-For all 18 frozen comparisons, the finite moment has the Haar sign and smaller
+For all 36 frozen comparisons, the finite moment has the Haar sign and smaller
 absolute magnitude, and its absolute gap decreases from `q=3` to 5 to 7. This
 is a compact clue about missing extreme-tail mass, not a one-sided theorem or a
-rate fit; the sixth moment at `q=7` is still only about one tenth of its Haar
-target. It argues for character decomposition or effective equidistribution,
-not a materially larger brute-force scan.
+rate fit. The sixth moment at `q=7` is about one tenth of its Haar target, while
+the twelfth is only `0.0006486` of its target: increasing moment order exposes
+how much extreme-tail mass is still absent at these small fields. This argues
+for character decomposition or effective equidistribution, not a materially
+larger brute-force scan.
 
 A separate deterministic Weyl quadrature asks the corresponding sign-law
 question. Four phase shifts on periodic grids through `512 x 512` (1,376,256

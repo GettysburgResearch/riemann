@@ -344,6 +344,10 @@ q^2\langle H\rangle_q\longrightarrow\frac94.
 The constant is a three-field nomination, not an interpolation theorem. A
 cohomological calculation should decide whether `9/4` is genuine, replaced by
 a congruence-dependent main term, or merely a small-field coincidence.
+Indeed, the exact deviations of `q^2 mean(H)` from `9/4` have signs
+`-,+,-`, matching `chi_q(-1)` on the three frozen fields. There is only one
+sample in the positive branch, so the target should allow an
+`eta_q=chi_q(-1)` lower-order term until reciprocity rules it out.
 
 The exact affine action
 
