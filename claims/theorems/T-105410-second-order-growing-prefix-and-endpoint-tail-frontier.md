@@ -1,7 +1,7 @@
 # T-105410 — Second-order Xi centering sharply enlarges the unconditional capacity prefix
 
 Claim ID: `T-105410`  
-Status: **MAJOR UNCONDITIONAL HIGH-DERIVATIVE ADVANCE; LOW-ORDER DESCENT OPEN**  
+Status: **MAJOR UNCONDITIONAL HIGH-DERIVATIVE ADVANCE; FIXED-WIDTH AND LOW-ORDER DESCENT OPEN**  
 Created: 2026-08-24  
 Depends on: `T-105390`, `L-105410--L-105412`  
 RH status: **unproved**
@@ -73,11 +73,12 @@ J_r=o(\sqrt{\mathcal R_r}),
 \tag{T-105410.5}
 \]
 
-Then, for both parities and all sufficiently high `r`,
+Fix one rescaled transverse height `H>0`. Then, for both parities and all sufficiently high `r`,
 
 1. every critical point in the first `J_r` positive cells is real and simple;
 2. every corresponding residue is negative;
-3. there is no additional critical point in the controlled strip; and
+3. there is no additional critical point in the rescaled strip
+   `|Re y|<=C J_r`, `|Im y|<=H`; and
 4. for `a=0,1`,
 
 \[
@@ -113,31 +114,36 @@ k=3: gamma < 1/11.
 
 The previous sufficient exponents were `1/10`, `1/22`, and `1/46`.
 
-## 4. Finite-height terminal consequence
+## 4. Physical-coordinate interpretation and firewall
 
-A physical Xi window of height `T` contains `J` high-derivative critical cells with
+The rescaling is `y=omega_r z`. Therefore a controlled rescaled strip
 
 \[
-J\asymp\omega_rT.
+|\Re y|\le Y_r,
+\qquad
+|\Im y|\le H
 \]
 
-Therefore, at every fixed packet order `k`, the complete sharp residue and boundary-capacity gates are unconditionally valid in that high-derivative window once
+corresponds to
+
+\[
+|\Re z|\le {Y_r\over\omega_r},
+\qquad
+|\Im z|\le {H\over\omega_r}.
+\tag{T-105410.8}
+\]
+
+For a prescribed real-axis extent `T`, one may take `Y_r=omega_r T`. The order-`k` real-critical cells and source-capacity inequality then hold when
 
 \[
 \boxed{
 {(\omega_rT)^{4k-1}\over r\omega_r}
 \longrightarrow0.
 }
-\tag{T-105410.8}
+\tag{T-105410.9}
 \]
 
-For example, any choice
-
-\[
-r(T)\ge T^{\,4k-1+\varepsilon}
-\]
-
-with a sufficiently large logarithmic factor is admissible. This supplies a much earlier fixed-packet terminal derivative for the reverse-Rolle programme. It does not descend that terminal positivity to derivative order zero.
+For example `r(T)>=T^(4k-1+epsilon)` pays the real-axis extent after logarithms. But the physical transverse width in this real-saddle theorem is `H/omega_r`, which shrinks. It is **not** the fixed-width complex terminal box required by the full reverse-Rolle endpoint. The moving-complex-saddle programme or another fixed-width theorem remains necessary for that interface.
 
 ## 5. Complete-tail endpoint collapse
 
@@ -160,7 +166,7 @@ The scalar pivot and complete sharp sign remain open.
 
 ## 6. What has been removed
 
-The following are no longer needed for the unconditional growing-prefix theorem:
+The following are no longer needed for the unconditional **rescaled-strip growing-prefix theorem**:
 
 ```text
 the moving complex saddle;
@@ -169,6 +175,8 @@ one common remote-moment rate at all moment orders;
 atom-by-atom matching outside the controlled prefix.
 ```
 
+They have not been removed from the fixed-physical-width or low-order descent problems.
+
 ## 7. Exact frontier
 
 ```text
@@ -176,7 +184,8 @@ second-order centered real-saddle approximation       PROVED / REVIEW REQUIRED
 universal beta-tail scaling                           PROVED EXACT
 sharp tail eigenvalue exponent 4k+2a-3               PROVED EXACT
 growing prefix gamma<1/(4k-1)                        PROVED / REVIEW REQUIRED
-fixed-height high-derivative packet endpoint          PROVED / REVIEW REQUIRED
+fixed rescaled-height capacity endpoint               PROVED / REVIEW REQUIRED
+fixed physical transverse-width endpoint              OPEN
 complete remote moments from CRVH + zeroth pivot      PROVED CONDITIONAL
 CRVH105330 complete critical sign                     OPEN / SHARP
 ZCAP105412 scalar endpoint mass                       OPEN / BOUNDARY SCALAR
