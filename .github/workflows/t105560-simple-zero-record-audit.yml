@@ -5,13 +5,16 @@ on:
   push:
     branches:
       - research/gpt56-pro/105200-xi-summable-residue-coherence
+      - ci/t105560-independent-record-audit-probe
     paths:
       - .github/workflows/t105560-simple-zero-record-audit.yml
+      - .github/t105560-audit-trigger
   pull_request:
     branches:
       - research/gpt56-pro/105200-xi-summable-residue-coherence
     paths:
       - .github/t105560-audit-trigger
+      - .github/workflows/t105560-simple-zero-record-audit.yml
 
 permissions:
   contents: read
