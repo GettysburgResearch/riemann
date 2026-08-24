@@ -1,7 +1,7 @@
-# L-105628 — The infinite-line base-Xi phase collision contracts throughout the zero-free safe region
+# L-105628 — The infinite-line base-Xi phase collision contracts down to the Xi-prime extremal height
 
 Claim ID: `L-105628`  
-Status: **PROVED UNCONDITIONAL BASE-RUNG SAFE-REGION SOURCE-ENERGY THEOREM; DESCENT BELOW THE EXTREMAL HEIGHT OPEN**  
+Status: **PROVED UNCONDITIONAL ONE-RUNG SOURCE-ENERGY DESCENT; PHASE DESCENT BELOW BETA_1 OPEN**  
 Created: 2026-08-25  
 Depends on: `L-105620--L-105627`  
 RH status: **not assumed**
@@ -12,15 +12,15 @@ This theorem is stated at the base Xi rung, where the Fourier source is the
 literal positive even kernel `Phi`. Put
 
 \[
-\beta_0=\sup\{\Im z:\Xi(z)=0\}.
+\beta_j=\sup\{\Im z:\Xi^{(j)}(z)=0\},
+\qquad
+\beta_1\le\beta_0.
 \]
 
-Fix a safe base and microscope scale
+Fix a base and microscope scale
 
 \[
-b\ge\beta_0,
-\qquad h>0,
-\qquad H=b+h.
+\boxed{b\ge\beta_1,\qquad h>0,\qquad H=b+h.}
 \tag{L-105628.1}
 \]
 
@@ -59,7 +59,7 @@ on `L^2(0,infinity)`.
 The restriction to the base Xi rung is load bearing. Odd Xi derivatives do not
 have the same nonnegative even full-line Fourier source.
 
-## 2. Both hypotheses are paid in the safe region
+## 2. Both hypotheses are paid down to beta_1
 
 Put
 
@@ -84,8 +84,8 @@ Since
 
 the actual microscope profile `r_(b,h)` is also nonincreasing.
 
-Because `H>b>=beta_0>=beta_1`, `L-105627` proves that `U_H` is inner. Hence
-`V_H` is a causal isometry. Applying `L-105625` gives
+Because `H=b+h>beta_1`, `L-105627` proves that `U_H` is inner. Hence `V_H` is
+a causal isometry. Applying `L-105625` gives
 
 \[
 \boxed{
@@ -97,8 +97,12 @@ M_{r_{b,h}}.
 \]
 
 Thus the actual Xi-prime all-pass cannot amplify the canonical
-current-normalized base-Xi Turan source anywhere in the complete zero-free safe
-region `b>=beta_0`.
+current-normalized base-Xi Turan source for **every base `b>=beta_1`**. The
+source-weighted phase control descends one full derivative rung below the
+parent extremal height `beta_0` whenever `beta_1<beta_0`.
+
+No zero-freeness of the Xi numerator above `b` is used. The only innerness
+threshold is the zero height of the denominator `Xi'`.
 
 ## 3. Exact energy form
 
@@ -139,43 +143,45 @@ carrier or surrogate numerator.
 ## 4. What this closes—and what it does not
 
 The following infinite-line rows are proved at the conclusion-facing base Xi
-rung **above its unknown extremal height**:
+rung down to the adjacent derivative height:
 
 ```text
 standard Xi source log-concavity                    PROVED
 actual current/Turan profile monotonicity            PROVED
-safe-height Xi-prime all-pass innerness              PROVED
+Xi-prime all-pass innerness for H>beta_1             PROVED
 causal weighted contraction                         PROVED
-safe-region infinite-line phase collision           PROVED
+base phase-energy descent to b=beta_1               PROVED
 ```
 
-This is not yet the desired base descent. If `b<beta_0`, then for small `h` the
-total height `H=b+h` may cross zeros of `Xi'`; the all-pass may cease to be
-inner and the zero-height variational obstruction is active. That is exactly
-the RH-bearing region.
+This is not yet the desired zero-height descent. If `b<beta_1`, then for small
+`h` the total height `H=b+h` can cross zeros of `Xi'`; the all-pass acquires an
+anti-inner factor and the denominator-pole obstruction is active.
+
+The result is also an energy theorem, not the pointwise differential-
+microscope inequality. `R-105630` keeps that separation binding.
 
 ## 5. Reduced descent gate
 
 Define
 
 ```text
-SAFEDESC105628 — continuation of the safe contraction below beta_0
+SAFEDESC105628 — continuation below the adjacent derivative height
 
-Show that the source-owned contraction (L-105628.5), together with its
-finite-window index ledger, extends from every b>=beta_0 to all b>=0 without a
-denominator pole or positive zero-height charge.
+Show that the source-owned contraction and its physical pointwise/index
+consumer extend from every b>=beta_1 to all b>=0 without an anti-inner
+Xi-prime factor, denominator pole, or positive zero-height charge.
 ```
 
-Equivalently, identify a mechanism which prevents the inner/causal property or
-its weighted contraction from failing at the first descending base. By the
-zero-height variational theorem, `SAFEDESC105628` implies RH.
+The former interval `[beta_1,beta_0]` is therefore removed from the source-
+energy descent problem. By the zero-height variational theorem, a pointwise
+realization of `SAFEDESC105628` together with `POINTID105630` implies RH.
 
 A finite-window implementation must additionally retain the exact upper/lower
 trace gauges, common-zero confluent factors and one telescoping endpoint charge.
 
 ## 6. Scope
 
-The theorem proves the source/phase sign only in the zero-free safe region. It
-does not analytically continue an operator inequality through a denominator
-zero and does not prove `SAFEDESC105628`, `MCTPHYS105610`, the finite shell
-theorem or RH.
+The theorem proves a one-rung source-energy descent, not RH. It does not
+analytically continue an inner factor through a zero of `Xi'`, does not prove
+the pointwise microscope sign, and does not prove the finite endpoint/index
+ledger.
