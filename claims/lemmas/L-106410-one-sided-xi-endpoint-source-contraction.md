@@ -3,6 +3,7 @@
 Claim ID: `L-106410`  
 Status: **PROVED EXACT FOR THE TRUNCATED POSITIVE XI HALF-SOURCE**  
 Created: 2026-08-24  
+Strengthened: 2026-08-24  
 Depends on: `L-106400`, `L-106401`; the positive Xi Fourier kernel  
 RH status: **not assumed**
 
@@ -49,7 +50,8 @@ For \(0\le\xi\le2L\), write \(v=\xi-u\) and integrate only where
 }
 \tag{L-106410.1}
 
-and, using the endpoint identity of `L-106400`,
+and, using the endpoint identity of `L-106400` and symmetrizing under
+\(u\leftrightarrow v\),
 
 \[
 \boxed{
@@ -63,41 +65,39 @@ and, using the endpoint identity of `L-106400`,
 The factors in (L-106410.1) are nonnegative because
 \(\lambda u\le c<1\).
 
-## 2. Uniform relative bound
+## 2. Sharp symmetric relative bound
 
-Let
+The domain and the weight \(\Phi(u)\Phi(v)\) are symmetric.  Therefore
 
 \[
-I_0(\xi)=\int\Phi(u)\Phi(v)\,du.
+\widehat A_L(\xi)
+=\frac12\int
+\Bigl[(1-\lambda u)v^2(1+\lambda v)
+ +(1-\lambda v)u^2(1+\lambda u)\Bigr]
+\Phi(u)\Phi(v)\,du.
 \]
 
-Since \(|u-v|\le u+v=\xi\),
+Each coefficient product is at least \(1-c\), so
 
 \[
-\widehat R_L(\xi)\le\lambda\xi^3I_0(\xi).
+\widehat A_L(\xi)
+\ge\frac{1-c}{2}
+\int(u^2+v^2)\Phi(u)\Phi(v)\,du.
 \tag{L-106410.3}
 
-On the other hand, \(1-\lambda u\ge1-c\) and \(1+\lambda v\ge1\), so
+Since \((u-v)^2\le u^2+v^2\) and \(\lambda\xi\le2c\),
 
 \[
-\widehat A_L(\xi)\ge(1-c)\int v^2\Phi(u)\Phi(v)\,du.
-\]
-
-The integration domain and weight are symmetric under \(u\leftrightarrow v\).
-Therefore
-
-\[
-\int v^2\Phi(u)\Phi(v)\,du
- =\frac12\int(u^2+v^2)\Phi(u)\Phi(v)\,du
- \ge\frac{\xi^2}{4}I_0(\xi).
+\widehat R_L(\xi)
+\le2c\int(u^2+v^2)\Phi(u)\Phi(v)\,du.
 \tag{L-106410.4}
 
-Combining (L-106410.3)--(L-106410.4), and using \(\xi\le2L\), gives
+Combining (L-106410.3)--(L-106410.4) gives
 
 \[
 \boxed{
 0\le\widehat R_L(\xi)
-\le\frac{8c}{1-c}\widehat A_L(\xi)
+\le\frac{4c}{1-c}\widehat A_L(\xi)
 \qquad(0\le\xi\le2L).
 }
 \tag{L-106410.5}
@@ -118,7 +118,7 @@ Thus (L-106410.5) gives
 \boxed{
 \|H_{\overline{R_L}}\|_{\mathcal S_2}^2
 \le
-\left(\frac{8c}{1-c}\right)^2
+\left(\frac{4c}{1-c}\right)^2
 \|H_{\overline{A_L}}\|_{\mathcal S_2}^2.
 }
 \tag{L-106410.6}
@@ -133,11 +133,10 @@ one has
 
 \[
 \boxed{
-\left(\frac{8c}{1-c}\right)^2
- =\left(\frac8{199}\right)^2
- =\frac{64}{39601}
- <\frac1{600}
- <\frac1{200}.
+\left(\frac{4c}{1-c}\right)^2
+ =\left(\frac4{199}\right)^2
+ =\frac{16}{39601}
+ <\frac1{2400}.
 }
 \tag{L-106410.7}
 
