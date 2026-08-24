@@ -2,11 +2,24 @@
 
 Claim ID: `T-106060`  
 Programme aliases: `LFAM1.ROOT_RESIDUE_OCCUPANCY`, `LFAM2.ARTIN_SCHREIER_OCCUPANCY`, `STRESS.TWO_PHASE_LINE_FRONTIER`  
-Status: **EXACT CONJUNCTIVE PHASE REDUCTION; OCCUPANCY OPEN**  
+Status: **EXACT REDUCTION; SUPERSEDED AS THE LIVE FRONTIER BY `T-106070`**  
 Created: 2026-08-24  
+Updated: 2026-08-25  
 Depends on: `L-106001`, `L-106060`; `R-106060`; `T-106001`  
 Programme issues: #743, #736, #737  
-RH status: **unproved**
+RH status: **see the unvalidated full proof proposal `T-106070`**
+
+## Supersession notice
+
+The reduction and two-phase inequalities below remain exact.  Its original
+version required a predeclared subpower modulus and left `CROP106060` open.
+`L-106070--L-106073` instead use a linear block/colour partition and a
+scale-matched modulus \(16B<\ell<256B\).  The retained block energy pays the
+full factor \(\ell\), producing the proposed closure in `T-106070`.
+
+This file is retained as the exact interface which identifies the root-residue
+quantity.  The current conclusion-facing claim is `T-106070`, and its hostile
+review contract is `M-106070`.
 
 The auxiliary completed-family route reduces every surviving clean owner ratio
 to one of two lines
@@ -74,15 +87,16 @@ and, more structurally,
 The first inequality displays the exact remaining obstruction: coherent
 aggregation inside one root residue.
 
-## 2. Root-residue occupancy theorem
+## 2. Historical root-residue occupancy theorem
 
-Use a predeclared auxiliary-modulus schedule satisfying
+The original formulation used a predeclared auxiliary-modulus schedule
+satisfying
 
 \[
 \ell=X^{o(1)}
 \]
 
-on logarithmic blocks. Define
+on logarithmic blocks and defined
 
 ```text
 CROP106060:
@@ -99,7 +113,7 @@ so no line is duplicated. The already-closed equal-product and parent long-
 core rows are excluded.
 
 By (T-106060.2), `CROP106060` controls the complete collision-line energy of
-the auxiliary family. Hence
+the auxiliary family. Hence the exact historical implication is
 
 \[
 \boxed{
@@ -113,7 +127,9 @@ the auxiliary family. Hence
 }
 \tag{T-106060.4}
 
-`CROP106060` remains open.
+`L-106072` proves the required weighted occupancy in the scale-matched,
+block-coloured form, and `L-106073` composes it directly into the native HBC
+residual.
 
 ## 3. Why this is a genuine conjunction
 
@@ -146,8 +162,8 @@ one-phase collision-line control             REFUTED
 exact two-phase line energy                   PROVED EXACT
 sharp two-phase contraction                   PROVED EXACT
 line sum -> root-residue occupancy            PROVED EXACT
-CROP106060 root-residue occupancy              OPEN / RH-BEARING
-FFCROP106060 geometric occupancy               OPEN / EXPLORATORY
-HCLM106001 / HBCQDSP102888                     OPEN / RH-BEARING
-Riemann Hypothesis                             UNPROVED
+historical small-modulus CROP formulation      SUPERSEDED
+scale-matched weighted occupancy               CLAIMED PROVED IN L-106072
+native HBC composition                         CLAIMED PROVED IN L-106073
+full conclusion                                SEE T-106070 / M-106070
 ```
