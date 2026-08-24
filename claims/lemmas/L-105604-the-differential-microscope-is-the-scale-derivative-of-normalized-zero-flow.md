@@ -1,7 +1,7 @@
 # L-105604 — The differential microscope is the scale derivative of normalized shifted-zero flow
 
 Claim ID: `L-105604`  
-Status: **PROVED EXACT ORIENTED-PHASE IDENTITY**  
+Status: **PROVED EXACT INFINITESIMAL ORIENTED-PHASE IDENTITY**  
 Created: 2026-08-24  
 Depends on: `L-105340`, `L-105416`, `L-105444`, `L-105602`  
 RH status: **not assumed**
@@ -39,6 +39,10 @@ On the real axis define the height-`h` all-pass boundary value
 For real `alpha`, reality of `F` gives `|Theta_(alpha,h)(x)|=1` whenever the
 denominator is nonzero.
 
+The companion depends on `h` through `alpha/h`. This dependence is deliberate
+and load bearing below. It also means that finite nonzero-`alpha` quotients at
+two heights are not shell maps of one common entire function.
+
 ## 2. Exact phase velocity
 
 Differentiate at `alpha=0`. Since
@@ -64,8 +68,8 @@ and `m(x-ih)=overline(m(x+ih))`, one obtains
 \tag{L-105604.3}
 \]
 
-The factor `1/h` in (L-105604.1) is load bearing: it removes the affine
-Herglotz carrier and makes the phase velocity dimensionless.
+The factor `1/h` in (L-105604.1) makes the phase velocity dimensionless and
+turns an affine Herglotz carrier into an `h`-independent phase velocity.
 
 ## 3. Differential microscope identity
 
@@ -111,7 +115,7 @@ Equivalently,
 \]
 
 Thus the differential microscope is literally the scale derivative of one
-normalized shifted-zero phase flow.
+normalized infinitesimal shifted-zero phase flow.
 
 ## 4. Integrated scale ledger
 
@@ -141,7 +145,7 @@ Therefore
 This is the oriented-zero-flow version of the monotonicity of
 `Im m(x+ih)/h` in `L-105444`.
 
-## 5. Relation to shell winding
+## 5. Infinitesimal relation to shell winding
 
 Let
 
@@ -165,11 +169,25 @@ Then
 \tag{L-105604.8}
 \]
 
-The all-pass shell of `L-105602` is therefore the finite deformation of the
-same phase flow whose infinitesimal scale derivative is the microscope.
-Pointwise phase variance and integrated shell winding are not merely fed by the
-same coefficients; they are two derivatives of the same two-parameter
-circle-valued family.
+At `alpha=0`, the companion is the common entire function `F'`, independent of
+`h`, so
+
+\[
+\mathcal A_{0;h_1,h_2}
+={F'(x+ih_2)F'(x-ih_1)
+ \over
+ F'(x-ih_2)F'(x+ih_1)}
+\]
+
+is exactly the height-shell all-pass map of `L-105602` for `F'`.
+
+For `alpha!=0`, however, `E_(alpha,h)` varies with height. Therefore
+(L-105604.8) is an **infinitesimal tangent identity at alpha zero**, not a
+claim that the finite deformed quotient counts one shell. This firewall is
+essential.
+
+The legitimate conclusion is that pointwise phase variance and shell winding
+meet at the first variation of the same circle-valued shell construction.
 
 ## 6. Zero-motion calibration
 
@@ -212,4 +230,5 @@ source/error transfer.
 No monotonicity estimate is proved here. The identity does not replace the
 `H^(1/2)` shell gate: a phase velocity can be nonmonotone through narrow slips
 whose topological cost is visible only after integrating in the spatial
-variable. RH remains unproved.
+variable. The finite deformed family at `alpha!=0` is not assigned a shell
+count. RH remains unproved.
