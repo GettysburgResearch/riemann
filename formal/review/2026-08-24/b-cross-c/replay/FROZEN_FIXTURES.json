@@ -1,0 +1,52 @@
+{
+  "target_head": "4863c31dd497ffe69ea400fe29275decf4cb5d29",
+  "files": {
+    "formal/RiemannFormal/Operator/XiOrderThree.lean": {
+      "blob_sha": "fa67d1780ce463da5afdda92c5d4cfbac8553edb",
+      "external_input_fields": [
+        "HighZeroVerified",
+        "CorrectedSourceLock",
+        "GroupedC2Convergence",
+        "OrbitConventionLocked",
+        "MultiplicityResidualRetained",
+        "ReciprocalSquareTailControlled"
+      ],
+      "external_fields_are_prop_parameters": true,
+      "headline_has_hrepeated_returning_IsPSD3": true,
+      "headline_uses_duplicate12_psd3": false,
+      "headline_uses_duplicate23_psd3": false,
+      "ordered_distinct_has_hrecip": true,
+      "ordered_distinct_has_hcomp": true
+    },
+    "formal/comparator/Challenge/XiPickOrderThreeConditional.lean": {
+      "blob_sha": "377e792a152377937062b4c5c585a232e90b4ace",
+      "covers_ordered_distinct": true,
+      "covers_repeated_nodes": false,
+      "sorry_count": 1
+    },
+    "formal/registry/deltas/C.tsv": {
+      "blob_sha": "d80ae4f0a3bf1eb74197015c38d186e844fbfa90",
+      "pick_order3_comparator_checked_report": true,
+      "one_orbit_status": "PROVED"
+    },
+    "formal/RiemannFormal/Operator/ReciprocalConcavity.lean": {
+      "blob_sha": "933490957d8acb5ea3f713165eaa09e888f038e7",
+      "oneOrbitAbsorption_assumes_payment_inequality": true,
+      "contains_explicit_kappa_cross_formula": false,
+      "contains_epsilon_2m_kappa_over_1_minus_kappa": false,
+      "contains_9m_over_b_squared_bound": false,
+      "finiteReserveAllocation_requires_nonnegative_shares": false
+    },
+    "formal/scripts/check_statement_sources.py": {
+      "blob_sha": "2cb142424641fb8ec94d20d0720fcc08bb526231",
+      "derives_comparator_checked": false,
+      "derives_axiom_audited": false,
+      "derives_external_source_lock": false
+    },
+    "formal/scripts/verify_declaration_map.py": {
+      "blob_sha": "3d28fca8da5700f57b760bd1a924ba99c34015ee",
+      "uses_leaf_regex": true,
+      "checks_full_declaration_type": false
+    }
+  }
+}

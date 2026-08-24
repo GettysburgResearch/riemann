@@ -1,0 +1,28 @@
+{
+  "repository": "gfreund123/riemann",
+  "bootstrap_base_sha": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f",
+  "target_pr": 735,
+  "target_branch": "formal/030-xi-operator-qa",
+  "target_head_observed_in_prompt": "4863c31dd497ffe69ea400fe29275decf4cb5d29",
+  "target_head_frozen_by_remote_readback": "4863c31dd497ffe69ea400fe29275decf4cb5d29",
+  "target_pr_state_at_freeze": "open",
+  "target_pr_draft_at_freeze": true,
+  "target_pr_mergeable_at_freeze": true,
+  "target_commits": 2,
+  "target_changed_files": 34,
+  "frozen_at_utc": "2026-08-24T07:06:41.024939+00:00",
+  "review_branch": "formal/review/2026-08-24/b-cross-c",
+  "temporary_ci_probe": {
+    "branch": "formal/review/2026-08-24/b-cross-c-ci-target",
+    "target_parent_sha": "4863c31dd497ffe69ea400fe29275decf4cb5d29",
+    "trigger_commit_sha": "f1550521311e2802b8e3cfc304962ae27d45c938",
+    "pr_number": 748,
+    "purpose": "execute the existing formal workflow without mutating PR #735",
+    "workflow_runs_observed_initially": 0
+  },
+  "scientific_boundary": {
+    "research_cutoff": "PR #707",
+    "post_707_formalized": false,
+    "riemann_hypothesis_proved": false
+  }
+}

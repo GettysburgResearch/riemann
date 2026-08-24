@@ -1,0 +1,9 @@
+firewall_id	intended_implication_refuted	witness	exact_replay	cross_verdict	scope
+FW-01	positive Schur rescue	b<0, c>0; correction b-z^2/c	b-z^2/c <= b < 0	FORMALLY_VERIFIED	Exactly refutes rescue by subtracting a positive Schur term; does not deny other source-specific constructions.
+FW-02	coefficient energy versus contraction	a=b=3/5	a^2+b^2=18/25<=1; (a+b)^2=36/25>1	FORMALLY_VERIFIED	Exact coherent-sum counterexample.
+FW-03	negative inertia versus current	I=M+1; diag(I^2,1)	matrix is PSD and I>M	FORMALLY_VERIFIED_WITH_FIXES	The witness is exact; theorem name uses inertia informally.
+FW-04	hyperbolic cross block	[[0,1],[1,0]], vector (1,-1)	quadratic value -2	FORMALLY_VERIFIED	Rules out representation by two real positive squares.
+FW-05	positive excess versus root orientation	root=-1, excess=1	excess>=0 and root^2+excess>=0 but root<0	FORMALLY_VERIFIED	Exactly blocks orientation from excess alone.
+FW-06	diagonal versus polarized Gram	diag=(1,1), offdiag 0 versus 2	first PSD; second has value -2 on (1,-1)	FORMALLY_VERIFIED	Exactly blocks reconstruction from diagonal data.
+FW-07	finite parity displacement	parityForm(1,0)=1; parityForm(1,2)=-3	sign changes	FORMALLY_VERIFIED_WITH_FIXES	Finite regression only; full uniform-center heat no-go remains unformalized.
+FW-08	finite Q4 sign fixture	coefficients (1,-2,1), packet (0,1,0)	energy 6; output -2	FORMALLY_VERIFIED_WITH_FIXES	Finite sign fixture only; does not establish any global Q4 criterion.
