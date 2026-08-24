@@ -67,13 +67,13 @@ u^r\Phi(u)\cosh(yu)\,du
  \over
  \displaystyle\int_0^\infty
 u^{r+1}\Phi(u)\sinh(yu)\,du}
-\in i(0,\infty),
+\in i(0,\infty).
 }
 \tag{L-105418.3}
 \]
 
-where the integration variable in the displayed numerator and denominator is
-`u` (that is, the powers are `u^r` and `u^(r+1)`).
+Here the displayed powers are the literal integration-variable powers `u^r`
+and `u^(r+1)`.
 
 ## 3. Odd derivative orders
 
@@ -100,12 +100,12 @@ u^r\Phi(u)\sinh(yu)\,du
  \over
  \displaystyle\int_0^\infty
 u^{r+1}\Phi(u)\cosh(yu)\,du}
-\in i(0,\infty),
+\in i(0,\infty).
 }
 \tag{L-105418.4}
 \]
 
-again with literal powers `u^r` and `u^(r+1)`. Both integrals are strictly
+Again the powers are `u^r` and `u^(r+1)`, and both integrals are strictly
 positive.
 
 ## 4. Exact phase orientation
