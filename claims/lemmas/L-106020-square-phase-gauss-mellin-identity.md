@@ -4,6 +4,7 @@ Claim ID: `L-106020`
 Programme aliases: `LFAM1.SQUARE_PHASE_GAUSS_MELLIN`, `LFAM2.KUMMER_FOURIER_LOCAL_MODEL`, `STRESS.SHARP_PHASE_EMBEDDING`  
 Status: **PROVED EXACT HILBERT-VALUED IDENTITY**  
 Created: 2026-08-24  
+Corrected: 2026-08-24  
 Depends on: finite additive and multiplicative character orthogonality  
 Programme issues: #743, #736, #737  
 RH status: **not assumed**
@@ -42,31 +43,39 @@ Let `chi` range over all multiplicative characters of `F_p^*` and let
 \tau(\chi)=\sum_{x\in\mathbf F_p^*}\chi(x)e_p(x).
 \]
 
-Multiplicative Fourier inversion applied to the pushforward under
+For `y != 0`, multiplicative Fourier inversion is
 
 \[
-n\longmapsto u n^2
+e_p(y)={1\over p-1}
+\sum_\chi\tau(\overline\chi)\chi(y).
 \]
 
-gives
+Applying this to `y=h u n^2` gives the correctly conjugated transform
 
 \[
+\boxed{
 F_h={1\over p-1}
 \sum_\chi
-\tau(\chi)\overline{\chi(h u)}M_{\chi^2}
+\tau(\overline\chi)\chi(h u)M_{\chi^2}
+}
 \qquad(h\ne0).
 \tag{L-106020.3}
 \]
 
-Therefore multiplicative orthogonality in `h` yields
+Equivalently, after replacing `chi` by `overline chi`, one may write
+`tau(chi) overline{chi(hu)} M_(overline{chi}^2)`. Mixing those two conventions
+would be incorrect; the present formula fixes the convention.
+
+Multiplicative orthogonality in `h` yields
 
 \[
 \sum_{h=1}^{p-1}\|F_h\|^2
 ={1\over p-1}
-\sum_\chi |\tau(\chi)|^2\|M_{\chi^2}\|^2.
+\sum_\chi |\tau(\chi)|^2\|M_{\chi^2}\|^2,
 \tag{L-106020.4}
 \]
 
+where the character index has been renamed after taking absolute squares.
 The principal Gauss sum is `-1`, while every nonprincipal Gauss sum has squared
 modulus `p`.
 
