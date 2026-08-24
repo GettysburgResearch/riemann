@@ -1,0 +1,68 @@
+{
+  "content_sha256": {
+    "PACKET_METADATA_105500.json": "fd21d4568c52b2926028e450fed9fba2146b2a545dad9c4057e475a3da860457",
+    "PR_BODY_105500_ADDENDUM.md": "9c050ea15f9d2a44e69abdd379a66a1131a6b4cd40dc81c3adb1ee3d44aa2c03",
+    "README_105500.md": "f30011b640e8169b3a96dee80d2b2e3a220608ffdfb9a7dada17211f55319c1a",
+    "claims/lemmas/L-105500-confluent-cauchy-index-full-signature.md": "28173a2565e12548d8fdc8b69d9dc2167308800bffacd3a974edb7b21294fa94",
+    "claims/lemmas/L-105501-second-chaos-wick-density.md": "670cb5ce333f2e12d6498d734a3870550d5792b5ab4c65da4f5e5b9dd26a5f5d",
+    "claims/lemmas/L-105502-second-chaos-wick-rank-reserve.md": "71f986fbc5178cf6f1a599b69a61a8984ce70007e43f0d1f8b2930aeb8275ec5",
+    "claims/methodology/M-105500-hostile-review-contract.md": "5cde5c383364f06836b574ffd88f2f1c770e4b5c9af74c6b928ac2636c4d9ecf",
+    "claims/refutations/R-105500-positive-index-nuisance-ceiling.md": "2b795bfbba33fa9073c7ce4f8c146a751ed489f553161bbafba3e37af23af9dd",
+    "claims/theorems/T-105500-ninety-percent-wick-pick-frontier.md": "26355bd20213f9f95a86321ec4d7071e29f0095b8a083e3228beda10d044d89a",
+    "experiments/X-105500-ninety-percent-wick/README.md": "65e4dd50092c1c42bb25438b93c7157ddd03d745b3e1f76075a40f6c479cf195",
+    "experiments/X-105500-ninety-percent-wick/replay.sh": "485a360851f7c3bd5f0ac03eb2081405966b0081aa40ae7c50f54977861f15e6",
+    "experiments/X-105500-ninety-percent-wick/tests/test_verify.py": "5d2cdc5642cbc3dd7a37cd8f587128f54f5f2501c010c1d4af8b8b0328871a5d",
+    "experiments/X-105500-ninety-percent-wick/verify.py": "376961916487ce20e1c028801f6bb0025194994f09d580fc7c676d92f029647c",
+    "reports/gpt56-pro/2026-08-24-ninety-percent-wick-pick.md": "6c39299ab9484be45742af41755942b8279292df15edffa47a99fbb863cbf81f",
+    "standalone/2026-08-24-ninety-percent-wick-pick/PROOF.md": "efe7ebd34d7dbdfbc9ce6c67ea324350656e926353b3921c787b6cbc43e74ee0"
+  },
+  "energy_bound": {
+    "m3": "1/1080",
+    "m4": "1/26880",
+    "m5": "1/756000",
+    "m_ge_6_tail": "13/8316000",
+    "rational_upper": "9181/9504000",
+    "target_upper": "1/1000"
+  },
+  "finite_full_signature_machine_regression": true,
+  "full_signature_regression": {
+    "seeded_random_sturm_cases": 4000,
+    "structured_multiplicity_nonreal_cases": 4925,
+    "total_exact_cases": 8925
+  },
+  "montgomery_vaughan_transfer_machine_proved": false,
+  "ninety_percent_bridge": {
+    "conditional_line_decimal": "0.917740834378689",
+    "conditional_line_fraction": "1563433/1703567",
+    "exact_margin_over_ninety_percent": "302227/17035670",
+    "model_effective_rank_lower": "500/501",
+    "old_positive_index_ceiling": "4179/5000",
+    "old_required_eta_for_ninety_percent": "10321/10000",
+    "one_percent_eta_lower": "1633500/1703567"
+  },
+  "ninety_percent_established": false,
+  "pnt_limit_machine_proved": false,
+  "proof_object_sha256": "20b396c0ab67e84b10408fb534f7643899cb69b4c777ef94e343e72f48e4e7a3",
+  "rh_established": false,
+  "verdict": "PASS_T105500_SECOND_CHAOS_NINETY_PERCENT_FRONTIER",
+  "w2xfer105500_proved": false,
+  "wick2_algebra": {
+    "degree_one_cancelled": true,
+    "degree_two_cancelled": true,
+    "first_coefficients": [
+      "1",
+      "0",
+      "0",
+      "1/3",
+      "1/4",
+      "1/5",
+      "2/9",
+      "19/84",
+      "107/480",
+      "361/1620",
+      "703/3150",
+      "24743/110880"
+    ],
+    "maximum_degree": 30
+  }
+}
