@@ -1,0 +1,94 @@
+{
+  "companion_half_plane": {
+    "complex_root_count_machine_status": "diagnostic corroboration; proof is argument-principle theorem",
+    "fixtures": 241,
+    "minimum_imaginary_margin": "0.0137983812533"
+  },
+  "content_sha256": {
+    "PACKET_METADATA_105550.json": "b37924f1407efad3d7d87f684f43637aa62b259f953c208f1e3be408dfce153d",
+    "PR_BODY_105550_ADDENDUM.md": "89e076e805c8e96b0dd9c58eae1eb630e65b37baf220f6222d5413f5fcc92d9a",
+    "README_105550.md": "11b7f8d2c91e739bae1c1b7308131acb646c0b0e02da26b05da2346f0a5020a5",
+    "claims/lemmas/L-105550-reduced-companion-half-plane-count.md": "20ee0683069e961755e4feab742218550c0da28a6cb325fb63a6339baedb2cb8",
+    "claims/lemmas/L-105551-cayley-toeplitz-degree.md": "cb67cd03a5a098c1981c916ae8e24c7eecc5d5467bb49b3768ec32ae45fb88c8",
+    "claims/lemmas/L-105552-separated-blaschke-rank-energy.md": "09c8afc961e26491ad2d982e90c5e46c4dc1405fb66f2685f00b1a354491f780",
+    "claims/methodology/M-105550-hostile-review-contract.md": "9c27025fd367462c8fbbe2b79f28d58ae4ed181336e653409e37fe428b28a52e",
+    "claims/refutations/R-105550-near-cancelling-dipoles-defeat-norm-count.md": "96a356ed0fe9936bad003160c9b47d8ef4fd56f63171a0a0f0189f079d30af98",
+    "claims/theorems/T-105550-topological-companion-index-frontier.md": "77f5d1beaa7d7c687b0f257165486c0b30c133a074a2f23fb720b621121c3f42",
+    "experiments/X-105550-companion-index/README.md": "e42b35dd5e71f26e9d7889197b8800283c1fa0be688e6ea37205d5d2d0b495ac",
+    "experiments/X-105550-companion-index/replay.sh": "5b475f4e42d08cdee87359a3dc2d38f173c4ef79ecad7b76d5c13286cff3e0ac",
+    "experiments/X-105550-companion-index/tests/test_verify.py": "a177627db5caa4918ba3dea1c82477170a5755445ff775657a9b08446301d223",
+    "experiments/X-105550-companion-index/verify.py": "927fb93692d941da01fdf3799c4d46b94d6c4ba0c4e716a31e5b233d7a802556",
+    "integration/2026-08-24/t105550-source-lock.json": "160d53466f8c4fc9341605e9806cbfad20152afa640d080d519da4bbadf823a9",
+    "reports/gpt56-pro/2026-08-24-companion-index-frontier.md": "b65c849e98d98746ec69e2536e7a9019fcb7fc4b8a272e37266812f8203f46fb",
+    "standalone/2026-08-24-companion-index/PROOF.md": "ad0168e9a0725d6123c92c021852711bc8cde7085013b6f273b3f41fe3d0c3e2"
+  },
+  "cpindex105550_proved": false,
+  "finite_argument_principle_machine_proved": false,
+  "near_cancelling_dipole": {
+    "arbitrarily_small_norm_with_rank_one": true,
+    "fixtures": [
+      {
+        "a": "1/5",
+        "b": "21/100",
+        "hs2": "25/229441",
+        "rank": 1
+      },
+      {
+        "a": "1/5",
+        "b": "1/2",
+        "hs2": "1/9",
+        "rank": 1
+      },
+      {
+        "a": "0",
+        "b": "1/2",
+        "hs2": "1/4",
+        "rank": 1
+      },
+      {
+        "a": "999/2000",
+        "b": "1/2",
+        "hs2": "4/9006001",
+        "rank": 1
+      }
+    ]
+  },
+  "ninety_percent_established": false,
+  "ninety_percent_threshold": {
+    "bad_companion_cut_for_ninety_percent": "N_minus/D<1/20",
+    "distinct_real_fraction_identity": "R/D=1-2 N_minus/D",
+    "endpoint_ledger": "O(1) on regular dyadic windows"
+  },
+  "phase_algebra": {
+    "exact_phase_derivative_checks": 600
+  },
+  "proof_object_sha256": "5f7715e186b4acd553b6c87033c860cdd5cf087c1ccdf531874e28926efd3085",
+  "public_record_beaten": false,
+  "rh_established": false,
+  "separated_rank_energy": {
+    "fixtures": [
+      {
+        "K_upper": "100",
+        "epsilon": "2/5",
+        "hs2": "246/121",
+        "kappa_lower": "1/1000",
+        "m": 3
+      },
+      {
+        "K_upper": "100",
+        "epsilon": "17/95",
+        "hs2": "11764302390289/5756736462400",
+        "kappa_lower": "1/1000",
+        "m": 4
+      },
+      {
+        "K_upper": "100",
+        "epsilon": "1/8",
+        "hs2": "298772409/99520576",
+        "kappa_lower": "1/1000",
+        "m": 4
+      }
+    ]
+  },
+  "verdict": "PASS_T105550_COMPANION_PARTIAL_INDEX"
+}
