@@ -73,7 +73,7 @@ Therefore
 0\le r_\times(u,v)
 \le\frac{4c}{(1-c)^2}a_\times(u,v).
 }
-\tag{L-106411.5
+\tag{L-106411.5}
 
 The sign of the reflected Turán density is fixed on each orientation
 \(u-v>0\) or \(u-v<0\).  Integration along the corresponding difference line
@@ -88,7 +88,7 @@ At \(c=1/200\),
  =\frac{640000}{1568239201}
  <\frac1{2400}.
 }
-\tag{L-106411.6
+\tag{L-106411.6}
 
 ## 2. Complete two-boundary budget
 
@@ -108,7 +108,7 @@ conservatively gives
 =\frac{6348928}{1568239201}
 <\frac1{200}.
 }
-\tag{L-106411.7
+\tag{L-106411.7}
 
 Thus, at the source-normalized finite-section Hilbert--Schmidt level, the
 complete endpoint-Turán four-channel packet consumes less than one half of one
