@@ -7,6 +7,11 @@ on:
       - research/gpt56-pro/105200-xi-summable-residue-coherence
     paths:
       - .github/workflows/t105560-simple-zero-record-audit.yml
+  pull_request:
+    branches:
+      - research/gpt56-pro/105200-xi-summable-residue-coherence
+    paths:
+      - .github/t105560-audit-trigger
 
 permissions:
   contents: read
