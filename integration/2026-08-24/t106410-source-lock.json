@@ -1,5 +1,5 @@
 {
-  "schema": "riemann.t106410.source-lock.v1",
+  "schema": "riemann.t106410.source-lock.v2",
   "created_utc": "2026-08-24",
   "repository": "gfreund123/riemann",
   "branch": "research/gpt56-pro/105210-simple-zero-record-and-descent",
@@ -25,18 +25,20 @@
     "L-106410",
     "L-106411",
     "L-106412",
-    "T-106410"
+    "T-106410",
+    "R-106410"
   ],
   "replay": {
     "classification": "PASS_T106410_SMALL_SHIFT_ENDPOINT_BANK_ALGEBRA",
-    "proof_object_sha256": "7533aa45baf5d8ceced971065e194f4451434eb91e51d02505ea70ce66766900",
+    "proof_object_sha256": "c7a50628e298f7932f64690c376fee71392d4f29e324c09471370648501f2c82",
     "rational_grid_checks": 29282
   },
   "status": {
     "same_sign_source_contraction_proved": true,
     "reflected_source_contraction_proved": true,
-    "complete_four_channel_cost_below_one_over_200": true,
+    "complete_four_channel_cost_below_one_over_600": true,
     "negative_trace_quantile_absorption_proved": true,
+    "positive_fourier_source_alone_sufficient": false,
     "endpointbank106410_proved": false,
     "ninety_percent_established": false,
     "density_one_established": false,
