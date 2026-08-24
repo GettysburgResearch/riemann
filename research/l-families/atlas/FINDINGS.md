@@ -180,6 +180,68 @@ independently at `q=3,5,7,11,13`. This is a synthesis of classical
 Eichler--Shimura/Birch--Ihara structure with explicit family and quotient
 bookkeeping, not a claim that the modular trace theorem itself is new.
 
+### The elliptic symmetric cube is a nodal rank-one family inside `USp(4)`
+
+For `P_E(T)=1+AT+qT^2`, the genuine symmetric-cube representation has the
+exact factor
+
+\[
+1+(A^3-2qA)T+q(A^4-3qA^2+2q^2)T^2
++q^3(A^3-2qA)T^3+q^6T^4.
+\]
+
+With normalized base trace `t_0=-A/sqrt(q)`, its first two normalized
+coefficients are
+
+\[
+x=t_0^3-2t_0,
+\qquad y=t_0^4-3t_0^2+2,
+\]
+
+and eliminate to the exact curve
+
+\[
+-x^4+x^2y+x^2+y^3-2y^2=0.
+\]
+
+The normalization is generically recovered by
+`t_0=x(y-1)/(x^2-y)`. The curve has exactly three real ordinary nodes
+`(-1,1),(0,0),(1,1)` and no cusps. Thus the functorial compact image is
+rank one inside the rank-two `USp(4)` coefficient region. Its first trace
+separation is already
+
+\[
+E_{\operatorname{Sym}^3(SU(2))}(x^4)=4,
+\qquad E_{USp(4)}(x^4)=3.
+\]
+
+The folds interact unexpectedly with arithmetic. For odd `q`,
+
+\[
+(t_1^3-2qt_1)-(t_2^3-2qt_2)
+=(t_1-t_2)(t_1^2+t_1t_2+t_2^2-2q),
+\]
+
+and the quadratic factor cannot vanish modulo four. Hence the symmetric-cube
+trace is injective on integral traces: no real trace fiber contains two
+arithmetic lattice points. This does not mean the lattice misses every folded
+fiber. Indeed `(x,y)=(0,0)` is on the coefficient curve, but its two
+normalization preimages require `t^2=2q`, impossible for odd `q`; it is an
+explicit arithmetic false positive to curve-only recognition.
+
+The locked genus-one theorem gives exact all-odd-`q` laws, for example
+
+\[
+E(y)=1-q^{-3},
+\qquad E(x^2)=1-q^{-2}-q^{-3}-q^{-4},
+\]
+
+and exposes the first `Theta_12(q)` terms in selected degree-12 observables.
+The frozen `q=3,5,7,11,13` rows transform only 55 source atoms representing
+3,650 models. The symmetric-cube lift and local factor are classical; the
+nodal packaging, lattice lemma, and finite-family defects are project-specific
+calculations without a literature-priority claim.
+
 ## 4. Exact genus-two theorem: the first toy-minor mean for all odd prime powers
 
 For each odd prime power `q`, let `H_5(q)` be all monic squarefree quintics over
@@ -1029,6 +1091,158 @@ The hypersurface proves that this particular tensor construction cannot have a
 generic `SO(8)` coefficient law; it does not prove equidistribution even in the
 smaller product group, nor does it transfer to a number-field family.
 
+### The containing tensor hypersurface has a pinch-point singular family
+
+The ambient hypersurface containing the coefficient image admits the exact
+adapted form
+
+\[
+ F=(h+2v+2)u^2-u^4-(u+w)^2.
+\]
+
+Over characteristic different from two its full reduced affine singular locus
+is the plane `u=w=0`. The transverse binary quadratic has determinant
+`-(h+2v+2)`, so its rank drops along the line `h+2v+2=0`. With
+`lambda=h+2v+2-u^2` and `r=u+w`, the total germ is
+`r^2=u^2 lambda`, a pinch point times the free `v`-line; a fixed-`(v,h)` slice
+on the rank-drop line is an `A_3` plane-curve singularity over `C`, not an
+intrinsic classification of a source variety.
+
+The product-parameter pullback is unexpectedly rigid:
+
+\[
+ h+2v+2=(x+z-2)^2+xy,
+ \quad x=A^2/q,\ y=a^2/q,\ z=b/q.
+\]
+
+Set-theoretically, the reduced singular preimage is the union `A=0` or `a=0`.
+Put `R=A^2+b-2q`. After clearing powers of the invertible normalization `q`,
+the scheme pullbacks are `I_sing=(Aa)` and `I_rank=(Aa,R^2)`, with
+`rad(I_rank)=(Aa,R)`. Its two reduced rank-drop branches are
+
+\[
+ A=0,\ b=2q,
+ \qquad
+ a=0,\ b=2q-A^2,
+\]
+
+and both map to `h=-2v-2`, `-4<=v<=0`. They carry the exact formal
+factorizations
+
+\[
+ P_C=(1+qT^2)(1+aT+qT^2),
+\]
+
+and
+
+\[
+ P_C=(1+AT+qT^2)(1-AT+qT^2),
+\]
+
+respectively. The locked product-model rank-drop counts at `q=3,5,7` are
+`66,5000,72324`. These are coefficient and polynomial facts; no
+Honda--Tate/Tate, Jacobian splitting, singular-variety, or extra-endomorphism
+claim is imported.
+
+### Integral `+q` factorization is invisible to the current scalar controls
+
+For
+
+\[
+ P(T)=1+aT+bT^2+qaT^3+q^2T^4,
+ \qquad \Delta=a^2-4b+8q,
+\]
+
+an integral factorization
+
+\[
+ P(T)=(1-rT+qT^2)(1-sT+qT^2)
+\]
+
+exists exactly when `Delta=d^2>=0` and `d` has the parity of `a`; then
+`r=(-a-d)/2`, `s=(-a+d)/2`. The complete frozen member fractions are
+`1/6`, `141/500`, and `85/343` at `q=3,5,7`, with repeated-factor member
+counts `0,15,84`.
+
+The complement is deliberately not called “nonsplit over `Z`”: the `q=5`
+row `(a,b)=(0,-10)` satisfies
+`P(T)=(1-5T^2)^2` but has no factorization with both constant terms `+q`.
+Likewise, a detector fiber is called mixed only when it crosses this precise
+boundary. The exact `(fibers, mixed, members in mixed)` triples are
+
+```text
+q=3: B (14,1,12), F (12,1,24), complete echo (17,1,12)
+q=5: B (33,3,246), F (24,6,700), complete echo (39,1,6)
+q=7: B (55,5,2898), F (53,5,2856), complete echo (67,2,924).
+```
+
+Thus even the infinite balanced echo, already determined by `(B_1,B_2)`,
+cannot recover the factor locus. Exact power-to-identity certificates for
+normalized cyclotomic spectra occur on both sides as well. Affine split-orbit
+totals are forced to `5` and `38` at `q=3,5`, while every retained global
+orbit-size and state-total constraint still permits `86,87,88` at `q=7`.
+This is an information-loss result, not an endoscopic-density theorem.
+
+### Primitive exterior square: a moving local eigenline and orientation anomaly
+
+The six-dimensional `exterior^2 H^1(C)` has a canonical polarization Tate
+line. Removing it gives the primitive degree-five, weight-two factor
+
+\[
+\begin{aligned}
+R(T)={}&1+(q-b)T+q(a^2-b)T^2-q^2(a^2-b)T^3\\
+      &+q^3(b-q)T^4-q^5T^5,
+\end{aligned}
+\]
+
+the standard representation of `USp(4)/{+-I}=SO(5)`. This is an ambient
+representation statement, not a proof of full family monodromy. Character
+labels below use the `C2` convention: `C2 (0,1)` corresponds to the `B2 (1,0)`
+standard five, and `C2 (2,0)` to the `B2 (0,2)` adjoint ten. In normalized
+coordinates
+
+\[
+ R(z/q)=1-sz+kz^2-kz^3+sz^4-z^5,
+ \quad s=b/q-1=\chi_{0,1},\quad k=(a^2-b)/q=\chi_{2,0}.
+\]
+
+It therefore remembers exactly `(a^2,b)` and forgets only the sign of `a`.
+Every odd special orthogonal matrix has eigenvalue one, so after removal of
+the polarization line every member still satisfies
+
+\[
+ R(T)=(1-qT)
+ [1+(2q-b)T+q(a^2-2b+2q)T^2+q^2(2q-b)T^3+q^4T^4].
+\]
+
+On each finite-field fiber the second eigenspace is an actual
+Frobenius-stable `Q_l(-1)` line. Its axis moves with Frobenius, so the ambient
+irreducible `SO(5)` representation forces no line common to all elements. The
+actual family monodromy is not proved full and can specialize: on an
+endoscopic splitting the anti-diagonal of the two elliptic Tate lines remains
+inside the primitive factor. What is formal is assembling the varying
+quartics into a compatible family or cross-prime system. This compatibility
+gap nominates a concrete compensation problem for the extracted good factors.
+
+Exact locked all-`q` formulas give, among other entries,
+
+\[
+ E(s^2)=1-q^{-1}+q^{-3}-q^{-4}-q^{-5},
+ \qquad
+ E(sk)=-q^{-1}+q^{-2}+3q^{-3}-3q^{-4}-2q^{-5}.
+\]
+
+The exact `SO(5)` trace moments through six are
+`1,0,1,0,3,1,15`; the fifth moment `1` is the orientation/volume-tensor
+invariant and would vanish for `O(5)`. Yet the frozen fifth moments are
+
+\[
+-8059/6561,\quad -541001/390625,\quad -5982775/5764801.
+\]
+
+Their opposite sign is a sharp high-weight anomaly to explain, not an
+all-`q` formula or evidence against eventual `SO(5)` equidistribution.
+
 ## 5. Exact twist precursor: root conditioning and covariance are distinct inputs
 
 Fix the imported `11.a2` model and the conductor-coprime, root-number-
@@ -1229,17 +1443,27 @@ The experiments suggest a narrow hierarchy:
    rank-three coefficient hypersurface and separates from generic `SO(8)` at
    the fourth trace moment. Orthogonal symmetry alone does not identify the
    family.
-6. **Null directions are representation-ring objects:** `B` is primitive and
+6. **A universal memberwise factor need not be a forced common summand:** each
+   finite-field primitive exterior-square fiber has a genuine `q`-eigenline,
+   while the ambient irreducible `SO(5)` representation supplies no common
+   axis. Actual family monodromy and endoscopic specialization must be studied
+   separately; Euler-factor extraction and compatible motivic decomposition
+   are logically different operations.
+7. **Singular coefficient geometry is not singular source geometry:** the
+   tensor hypersurface has a pinch-point singular family whose pullback lands
+   on exact factorization branches, but neither fact makes a source curve or
+   product variety singular or proves extra endomorphisms.
+8. **Null directions are representation-ring objects:** `B` is primitive and
    unique in the coefficient-square quotient but generates an infinite exact
    residue-null module globally. A finite low-weight search can establish local
    isolation without establishing global uniqueness.
-7. **Family-dependent:** local coefficient moments, monodromy averages, rank
+9. **Family-dependent:** local coefficient moments, monodromy averages, rank
    distributions, and low-zero statistics.
-8. **Not implied by purity alone in these pilots:** a common memberwise sign for
+10. **Not implied by purity alone in these pilots:** a common memberwise sign for
    either toy coefficient probe at genus one or two. A genuine source-derived
    kernel could still have deterministic positivity and must be checked on its
    own Frobenius-character image.
-9. **Not supplied by small raw correlations:** the weighted off-diagonal bound
+11. **Not supplied by small raw correlations:** the weighted off-diagonal bound
    needed for a growing reciprocal-prime detector. Its local density, root-
    number conditioning, and weight geometry are separate arithmetic inputs.
 

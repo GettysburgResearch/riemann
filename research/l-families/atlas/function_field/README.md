@@ -6,8 +6,9 @@ programmes #737 and #741.
 
 Scope: odd finite fields, elementary polynomial arithmetic, frozen exhaustive
 genus-two families through `q=7`, a genus-one cubic regression through `q=13`,
-closed symbolic divisor sums, and exact `USp(2g)` character calculations.
-Nothing here implies RH or GRH over the integers.
+its symmetric-cube functorial pushforward, closed symbolic divisor sums, and
+exact `USp(2g)` character calculations. Nothing here implies RH or GRH over
+the integers.
 
 ## Files
 
@@ -28,6 +29,11 @@ source/note/JSON/test packets:
   elliptic-stack, and coarse even-moment formulas from the stated standard
   modular-trace input, distinguishes the full affine branch quotient from the
   elliptic quotient, and freezes `q=3,5,7,11,13` as regressions;
+- `ELLIPTIC_SYMMETRIC_CUBE_FAMILY.md` pushes that locked genus-one family
+  through the genuine `Sym^3 H^1` representation, derives its nodal rank-one
+  coefficient curve inside `USp(4)`, proves odd-`q` integral-trace injectivity,
+  and separates compact membership from arithmetic recognition using an
+  explicit nodal false positive;
 - `GENUS2_MOMENT_IDENTITY.md` proves the current all-`q` coefficient moments;
 - `FAMILY_MEASURES.md` separates uniform models, affine-stack weights, and
   uniform coarse orbits;
@@ -53,6 +59,19 @@ source/note/JSON/test packets:
   hypersurface and product-Haar fingerprints, derives exact all-`q` finite
   mean corrections from locked marginals, and freezes only the `q=3,5,7`
   histogram convolutions; and
+- `TENSOR_TRACE_ZERO_SINGULAR_STRATA.md` puts that hypersurface into the
+  pinch-point normal form, determines its full reduced singular plane and
+  transverse rank-drop line, and pulls both trace-zero branches back to exact
+  square restrictions and formal genus-two factorizations;
+- `GENUS2_ENDOSCOPIC_SPLIT_LOCUS.md` classifies the integral `+q`
+  elliptic-form quadratic-factor locus in the complete frozen coefficient
+  histograms, proves that `B`, `F`, and even the complete balanced echo fail to
+  identify it, and keeps realization and polarization claims firewalled;
+- `GENUS2_PRIMITIVE_EXTERIOR_SQUARE.md` constructs the primitive degree-five
+  `SO(5)` factor of `exterior^2 H^1`, separates the canonical ambient
+  polarization line from the genuine fiberwise but not forced-common second
+  eigenline, derives exact character Gram defects, and records the frozen
+  fifth-moment orientation anomaly; and
 - `VIRTUAL_CHARACTER_NULL_DIRECTIONS.md` solves the coefficient-square null
   lattice modulo `e_1e_3=e_1^2`, runs the bounded noncentral panels, and
   upgrades their survivors using an independently reconstructed full `C_2`
@@ -73,6 +92,7 @@ python research/l-families/atlas/function_field/hyperelliptic_affine_burnside.py
   --check research/l-families/atlas/function_field/hyperelliptic_affine_burnside.json
 python research/l-families/atlas/function_field/genus1_cubic_family_laws.py \
   --check research/l-families/atlas/function_field/genus1_cubic_family_laws.json
+python research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py --check
 python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
 python research/l-families/atlas/function_field/balanced_control_family_scan.py \
   --check research/l-families/atlas/function_field/balanced_control_family_scan.json
@@ -83,31 +103,46 @@ python research/l-families/atlas/function_field/genus2_high_weight_channel_probe
   --check research/l-families/atlas/function_field/genus2_high_weight_channel_probe.json
 python research/l-families/atlas/function_field/product_variety_tensor_family.py \
   --check research/l-families/atlas/function_field/product_variety_tensor_family.json
+python research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.py \
+  --check research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.json
+python research/l-families/atlas/function_field/genus2_endoscopic_split_locus.py --check
+python research/l-families/atlas/function_field/genus2_primitive_exterior_square.py \
+  --check research/l-families/atlas/function_field/genus2_primitive_exterior_square.json
 python research/l-families/atlas/function_field/virtual_character_null_directions.py --check
 
 python -m pytest -q \
   tests/test_genus2_family_measures.py \
   tests/test_hyperelliptic_affine_burnside.py \
   tests/test_genus1_cubic_family_laws.py \
+  tests/test_elliptic_symmetric_cube_family.py \
   tests/test_usp_coefficient_minor_rank_scan.py \
   tests/test_balanced_control_family_scan.py \
   tests/test_frobenius_power_echoes.py \
   tests/test_genus2_tail_geometry.py \
   tests/test_genus2_high_weight_channel_probe.py \
   tests/test_product_variety_tensor_family.py \
+  tests/test_tensor_trace_zero_singular_strata.py \
+  tests/test_genus2_endoscopic_split_locus.py \
+  tests/test_genus2_primitive_exterior_square.py \
   tests/test_virtual_character_null_directions.py
 ```
 
 Each packet declares its own resource contract. The Burnside, measure,
-cross-rank, tail, high-weight, power-echo, product-tensor, and virtual-null
+cross-rank, tail, high-weight, power-echo, elliptic-symmetric-cube,
+product-tensor, tensor-singular, integral-factor-locus,
+primitive-exterior-square, and virtual-null
 packets enumerate no new finite field or family member. The echo packet
 transforms its source-locked `q=3,5,7` histogram; the product packet convolves
-only the locked genus-one and genus-two histograms for those same fields; and
-the virtual-null packet performs exact compact-group algebra only. The
+only the locked genus-one and genus-two histograms for those same fields; its
+singular follow-up transforms the same 2,471 histogram atom pairs; the
+integral-factor and exterior-square packets transform the 251 locked
+genus-two coefficient atoms; the symmetric-cube packet transforms 55 locked
+genus-one trace atoms and performs guarded compact-group algebra; and the
+virtual-null packet performs exact compact-group algebra only. The
 balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
 visits 4,023 cubic candidates at `q=3,5,7,11,13`. The producers retain their
-explicit per-field candidate and exact-operation caps. No frozen genus-two
+explicit per-field candidate and declared-work-unit caps. No frozen genus-two
 field exceeds `q=7`; the separate genus-one regression stops at `q=13`.
 
 ## Scientific boundary
@@ -157,6 +192,39 @@ all-`q` finite mean corrections use locked marginal theorems; only the
 factor-pair model measure, equivalently the product stabilizer-weighted
 curve-stack measure, not uniform measure on coarse product varieties. None of
 this asserts equidistribution or generic `SO(8)` monodromy.
+
+The singular-strata follow-up studies the containing coefficient hypersurface,
+not singularities of `E`, `C`, or `E x C`. In adapted coordinates it is the
+pinch-point family `r^2=u^2*lambda`, with reduced singular plane `u=w=0` and
+rank-drop line `h+2v+2=0`. Its two product-parameter branches have the formal
+factorizations recorded in the packet, but no Honda--Tate/Tate theorem,
+Jacobian splitting, isogeny, or extra-endomorphism conclusion is imported.
+
+The integral-factor packet classifies only factorizations
+`(1-rT+qT^2)(1-sT+qT^2)` with integral `r,s`. Its complement is not called
+“nonsplit over Z”: at `q=5`, `1-10T^2+25T^4=(1-5T^2)^2` is the explicit
+counterexample. Mixed detector fibers cross this precise `+q` elliptic-form
+boundary; repeated-versus-distinct collisions within the split locus are
+reported separately. Polynomial factorization alone is not a polarization,
+curve-product, or geometric-simplicity theorem.
+
+The elliptic symmetric cube is a genuine `l`-adic representation and its
+global functorial lift is classical. The packet claims neither as new. Its
+coefficient equation detects the compact `Sym^3(SU(2))` image, not arithmetic
+origin: the nodal point `(x,y)=(0,0)` lies on that curve but would require
+`t^2=2q`, impossible for an odd-`q` integral elliptic trace. The mod-four lemma
+proves only that no real trace fiber contains two arithmetic lattice points;
+it does not say the lattice misses every real folded fiber.
+
+The primitive exterior square removes the canonical polarization line from
+`exterior^2 H^1`. Its remaining ambient `SO(5)` standard factor has a
+`(1-qT)` divisor at every good Frobenius element. On each finite-field fiber
+that eigenspace is a genuine Frobenius-stable line, but ambient representation
+theory forces no second common line. The actual family monodromy is unproved,
+and endoscopic loci can acquire one. The formal step is assembling the varying
+quartics into a compatible family or cross-prime system. The negative frozen
+fifth moments are three-field facts, not evidence against an eventual `SO(5)`
+limit.
 
 For virtual-character null directions, quotienting the coefficient-square
 lattice by `e_1e_3=e_1^2` leaves the single primitive direction

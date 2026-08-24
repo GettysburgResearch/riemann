@@ -15,10 +15,12 @@ and twelve-moment polynomial sign bound accompany the genus-two scans. Exact
 affine-family measures, an all-degree affine Burnside generating series, an
 all-odd-`q` elliptic-stack moment theorem, a cross-rank symplectic
 reclassification, an independently enumerated balanced-control scan,
-Frobenius-power echo laws, a bounded tail-geometry packet, an exact
-product-variety tensor family, and an exact `USp(4)` virtual-character
-null-direction packet are also included. Every atlas record is `DRAFT`. RH
-and GRH remain open.
+Frobenius-power echo laws, a bounded tail-geometry packet, an exact elliptic
+symmetric-cube pushforward, a product-variety tensor family, its singular
+trace-zero strata, a primitive exterior-square `SO(5)` family, an integral
+factor-locus census, and an exact `USp(4)` virtual-character null-direction
+packet are also included. Every atlas record is `DRAFT`. RH and GRH remain
+open.
 
 Exact sources or dependencies: classical completed GL(1) normalizations; the
 displayed finite-field definitions; the standard level-one modular-stack
@@ -94,8 +96,12 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 | normalized local Euler moments | exact integer point counts and rational even moments | GL(1) rows have `M2=M4=1`; three GL(2) rows already refute unit-magnitude prime coefficients | tiny prime window; curve metadata is discovery-only |
 | classical reciprocal filter | exact integer coefficients and `Q(sqrt(2))` signs | the four-shell filter has mixed signs across objects/endpoints; no common finite sign survives | classical coefficients; unitary map explicit; four endpoints are not an abscissa or zero theorem |
 | function field, genus 1 | exact cubic arithmetic at `q=3,5,7,11,13`; all-odd-`q` elliptic-stack trace formula and Burnside laws | every marked-model character and raw trace moment is explicit; full affine branch and elliptic coarse quotients are distinct; the first automorphic correction is at raw moment 10; the original `q=5` toy sign split is `40/20/40` | all-weight theorem uses the stated standard modular-trace input; five fields are frozen regressions, not its proof; toy `H_D(1)H_D(2)` is not canonical `XD`/`HCNC` |
+| elliptic symmetric cube | exact `Sym^3 H^1` local factor; rational nodal coefficient curve; all-odd-`q` model/stack laws through base degree 12; 55-atom locked pushforward | `Sym^3(SU(2))` is a rank-one subimage of `USp(4)`; trace fourth moment is `4` versus generic `3`; `t -> t^3-2qt` is injective on integer traces for odd `q`; the coefficient curve has three real nodes | the lift is classical; curve membership does not certify arithmetic origin—`(0,0)` is an odd-`q` false positive; project-specific calculations have no literature-priority claim |
 | function field, genus 2 | exhaustive exact `F_q/F_{q^2}` arithmetic at `q=3,5,7`; exact all-q proof certificate; exhaustive affine action | normalized means are `-104/243`, `-1994/3125`, `-12340/16807`; all-q mean tends to `-1`, `liminf rho_->=1/20`, five low-weight character means are exact, and the second-moment gap reduces to `chi_(0,4)+chi_(2,2)+2chi_(0,3)` | orbit averages require stabilizer weights; the remaining high-weight decay and full sign law are conjectural; toy coefficient minor |
 | product-variety tensor family | exact primitive degree-eight, weight-two `H^1(E)⊗H^1(C)` factor; all-`q` finite means from locked marginals; exact frozen `q=3,5,7` histogram convolution | compact image `(USp(2)×USp(4))/diag center` lies in `SO(8)`; `u^2h-u^4+2u^2v+u^2-2uw-w^2=0`; product-Haar trace `m4=6` versus generic `SO(8)` value `3`, and `(mean(h),mean(uw))=(1,1)` versus `(0,0)` | `A=-t_E` bridges the stored trace convention; frozen laws use ordered factor-pair model/curve-stack measure, not uniform coarse product varieties; no generic-`SO(8)` or convergence claim |
+| tensor trace-zero singular strata | exact sparse-polynomial geometry plus a 2,471-atom-pair locked census | the ambient containing hypersurface has `F=(h+2v+2)u^2-u^4-(u+w)^2`; reduced singular plane `u=w=0`; rank drop on `h+2v+2=0`; reduced pullback branches `A=0,b=2q` and `a=0,b=2q-A^2` | equality with the full coefficient image is not asserted; a singular containing hypersurface is not a singular curve/variety; formal `P_C` factorizations import no isogeny or endomorphism theorem |
+| genus-two integral `+q` factor locus | exact discriminant/parity transform of all 251 frozen signed coefficient atoms | split fractions `1/6,141/500,85/343`; `B`, `F`, and the complete balanced echo each have cross-boundary collisions; cyclotomic spectra occur on both sides | complement may still factor over `Z`; no Honda--Tate, polarization, all-`q` density, or geometric-simplicity claim; q=7 split-orbit total remains exactly nonidentifiable in `86..88` |
+| primitive genus-two exterior square | exact degree-five `SO(5)` factor, exact all-`q` character Gram formulas, and frozen trace pushforwards | after the canonical polarization line is removed, every local factor has a second `(1-qT)` divisor and hence a genuine fiberwise Frobenius-stable line; `SO(5)` trace moments through six are `1,0,1,0,3,1,15`; frozen fifth moments have the opposite sign | ambient `SO(5)` forces no second common line, but actual family monodromy is unproved and endoscopic loci can gain one; cross-family/cross-prime quartic compatibility is not established; three negative fifth moments imply no asymptotic law |
 | exact `USp(4)` comparator | bounded Laurent-polynomial/Weyl arithmetic plus guarded shifted-grid quadrature | `F=(Tr U)^2-e_2(U)^2=-(1+chi_omega2+chi_2omega2)`, range `[-20,4/3]`, exact Haar moments through order 12; a degree-twelve majorant proves `P(F<0)>=0.480701...`; display-only `P(F<0)≈0.738` | the rational value is a lower bound, not the exact probability or a claimed optimal moment bound; finite-field higher-moment/sign-law convergence remains proposed |
 | affine hyperelliptic presentation measures | exact Burnside fixed-locus divisor sums and a rational all-degree generating series, no field enumeration | marked affine-stack mass is `q^(2g-1)` in every genus; the universal leading coarse-orbit correction is `(q^g-(-1)^g)/(q+1)`; multiplicative resonances occur in degrees `0,1 mod d` for `d|q-1`, additive resonances in degrees divisible by `char(F_q)` | marked odd-degree equations, not the full unpointed hyperelliptic moduli stack; even degrees are covered by the series but define a different presentation problem |
 | cross-rank coefficient minors | exact `USp(2g)` character algebra and bounded Weyl constant terms | the original alternating sign is all-rank Schur negativity; `B=2e_1^2-e_2^2` has symmetric arcsine-times-semicircle Haar law but exact finite mean `q^-1+q^-3-q^-4+q^-5` | no finite-family convergence; odd `B` moments remain arithmetic targets |
@@ -140,11 +146,15 @@ python research/l-families/atlas/function_field/genus2_second_moment_reduction.p
 python research/l-families/atlas/function_field/genus2_family_measures.py --check research/l-families/atlas/function_field/genus2_family_measures.json
 python research/l-families/atlas/function_field/hyperelliptic_affine_burnside.py --check research/l-families/atlas/function_field/hyperelliptic_affine_burnside.json
 python research/l-families/atlas/function_field/genus1_cubic_family_laws.py --check research/l-families/atlas/function_field/genus1_cubic_family_laws.json
+python research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py --check
 python research/l-families/atlas/function_field/balanced_control_family_scan.py --check research/l-families/atlas/function_field/balanced_control_family_scan.json
 python research/l-families/atlas/function_field/frobenius_power_echoes.py --check
 python research/l-families/atlas/function_field/genus2_high_weight_channel_probe.py --check research/l-families/atlas/function_field/genus2_high_weight_channel_probe.json
 python research/l-families/atlas/function_field/genus2_tail_geometry.py --check research/l-families/atlas/function_field/genus2_tail_geometry.json
 python research/l-families/atlas/function_field/product_variety_tensor_family.py --check research/l-families/atlas/function_field/product_variety_tensor_family.json
+python research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.py --check research/l-families/atlas/function_field/tensor_trace_zero_singular_strata.json
+python research/l-families/atlas/function_field/genus2_endoscopic_split_locus.py --check
+python research/l-families/atlas/function_field/genus2_primitive_exterior_square.py --check research/l-families/atlas/function_field/genus2_primitive_exterior_square.json
 python research/l-families/atlas/function_field/virtual_character_null_directions.py --check
 python research/l-families/atlas/function_field/usp4_toy_minor_moments.py --check research/l-families/atlas/function_field/usp4_toy_minor_moments.json
 python research/l-families/atlas/function_field/usp4_toy_minor_character_decomposition.py --check
@@ -198,6 +208,23 @@ rigor/scope confusions.
   convention. Its all-`q` finite mean corrections come from locked marginal
   theorems, while its `q=3,5,7` laws are frozen histogram convolutions under
   ordered factor-pair model/curve-stack measure, not uniform coarse measure.
+- The tensor singular-strata packet studies the containing coefficient
+  hypersurface. Its pinch point, singular plane, rank-drop line, and branch
+  factorizations do not make a source curve or product variety singular and do
+  not import an isogeny or endomorphism theorem.
+- The integral-factor packet classifies only integral factors with constant
+  term `+q`; its complement can still factor over `Z`. Cross-boundary detector
+  collisions, cyclotomic certificates, and the `q=7` orbit interval carry no
+  all-`q`, polarization, or geometric-simplicity conclusion.
+- The symmetric-cube packet studies a genuine functorial representation but
+  does not reprove its classical automorphy. Its curve is a compact-image
+  obstruction, not a local or global arithmetic recognition theorem; the
+  `(0,0)` node is an explicit odd-`q` false positive.
+- The primitive exterior-square packet removes the canonical polarization
+  line. Each finite-field fiber has a genuine second Frobenius-stable
+  `q`-eigenline, while ambient `SO(5)` supplies no forced common line. The
+  actual family monodromy is unproved, endoscopic loci can gain a second Tate
+  line, and the varying quartics are not asserted to form a compatible motive.
 - The virtual-character panels isolate `B` only inside their declared bounded
   boxes. The infinite module `B Z[u^2+v^2,u^2v^2]`, the separate center-odd
   sector, and the full-density replay are exact compact-group statements, not

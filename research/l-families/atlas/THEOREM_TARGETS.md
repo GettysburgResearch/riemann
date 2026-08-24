@@ -700,6 +700,35 @@ about `0.17/sqrt(q)`. The bound, not that constant, is the responsible theorem
 target: three fields and a non-rigorous quadrature value cannot determine an
 asymptotic coefficient.
 
+### Symmetric-cube recognition target: separate compact image from arithmetic origin
+
+The elliptic symmetric-cube packet supplies a necessary compact coefficient
+identity
+
+\[
+F(x,y)=-x^4+x^2y+x^2+y^3-2y^2=0
+\]
+
+and a generic inverse `t_0=x(y-1)/(x^2-y)`. This is not sufficient for
+arithmetic origin over `F_q`: the node `(0,0)` would require `t^2=2q`, which
+has no integral solution for odd `q`. A useful local recognition theorem
+should classify the integral points on the scaled curve subject to the Hasse
+bound and determine exactly which arise from elliptic traces. It must treat
+the three nodal fibers separately.
+
+The next cross-family test is equally concrete. Intersect the normalized
+genus-two `USp(4)` coefficient lattice with this rank-one curve, then split the
+intersection into genuine elliptic `Sym^3` parameters and compact-image false
+positives. The complete `q=3,5,7` coefficient histograms make this a bounded
+source-locked transform; an all-odd-`q` classification would turn it into a
+functorial-recognition lemma rather than another finite fit.
+
+On the statistical side, prove effective versions of the exact stack laws for
+geometrically linked elliptic subfamilies. The thin compact targets
+`E(x^4)=4`, `E(y^3)=5`, and `E(x^2y^2)=7` already differ from generic `USp(4)`
+at `3,4,5`; the first `Theta_12` multiplicities identify which lower-order
+cohomological terms a proof must preserve.
+
 ### Adjacent higher-variety target: distinguish tensor lifts inside `SO(8)`
 
 For independent genus-one and genus-two factors, the primitive weight-two
@@ -744,6 +773,90 @@ The sign bridge `A=-t_E` from the genus-one trace fixture is source-locked, and
 the declared measure is the product of ordered marked-model/curve-stack laws.
 No uniform coarse product-variety law or generic `SO(8)` equidistribution is
 being inferred.
+
+### Exterior-square target: compensate a universal moving local eigenline
+
+For the primitive five-dimensional factor
+
+\[
+R(T)=1+(q-b)T+q(a^2-b)T^2-q^2(a^2-b)T^3+q^3(b-q)T^4-q^5T^5,
+\]
+
+every good local polynomial has the exact divisor `(1-qT)`. On an individual
+finite-field fiber this is a genuine Frobenius-stable line. The ambient
+`SO(5)` standard representation has no common invariant vector, but the actual
+family monodromy is unproved and may be smaller; an endoscopic splitting
+visibly contributes an anti-diagonal second Tate line to the primitive factor.
+The first theorem target is therefore to determine the family-wide and
+cross-prime status of
+
+\[
+Q_{\rm local}(T)=R(T)/(1-qT).
+\]
+
+One should prove one of the following sharply separated outcomes:
+
+1. the quartics form an independently natural compatible or automorphic
+   system, with the required bad-factor and analytic data; or
+2. they do not, and the formal zeta factor extracted from good Euler factors
+   is globally compensated by an explicit zero or failure of compatibility.
+
+The adjacent finite-family target is the orientation moment. With
+`s=b/q-1`, exact `SO(5)` Haar measure gives
+
+\[
+E_{SO(5)}(s^5)=1,
+\]
+
+whereas all three frozen family means are negative. Evaluate `E_q(s^5)` for
+all odd `q`, or obtain a power-saving comparison with the `SO(5)` target, and
+identify the cohomological channel carrying the volume-tensor invariant. The
+three signs alone are not an asymptotic conjecture.
+
+### Integral-factor target: count the `+q` elliptic-form locus for all `q`
+
+The exact finite predicate is
+
+\[
+\Delta=a^2-4b+8q=d^2,\qquad d\equiv a\pmod2,
+\]
+
+equivalently
+`P(T)=(1-rT+qT^2)(1-sT+qT^2)` with integral `r,s`. Determine its
+member-weighted and stack-weighted multiplicities in the monic squarefree
+quintic family for every odd prime power, separating repeated from distinct
+factors. The frozen fractions `1/6,141/500,85/343` are census values only and
+must not be interpolated.
+
+A second stage may import Honda--Tate/Tate and polarization theorems explicitly
+to ask which polynomial rows give product isogeny classes and which principal
+polarizations occur on Jacobians. The complement of the displayed predicate
+must not be renamed “irreducible over `Z`,” and ground-field failure must not be
+renamed geometric simplicity.
+
+### Tensor-singular target: explain arithmetic incidence with the pinch line
+
+The containing tensor coefficient hypersurface has normal form
+
+\[
+r^2=u^2\lambda,\qquad r=u+w,\quad
+\lambda=h+2v+2-u^2,
+\]
+
+and transverse rank-drop pullback
+
+\[
+(A=0,b=2q)\ \cup\ (a=0,b=2q-A^2).
+\]
+
+The bounded census counts those branches exactly but does not explain their
+arithmetic mechanism. A useful next theorem should compute their all-`q`
+model/stack masses, their first character moments, and their intersection,
+then determine—using explicitly imported arithmetic geometry—which strata
+correspond to extra endomorphisms, supersingularity, or accidental trace-zero
+without conflating the singularity of a containing coefficient hypersurface
+with a singular source variety—or asserting that this hypersurface equals the
+full coefficient image.
 
 Why this target: the first moment no longer needs nomination. Its exact
 squarefree-sieve proof shows that low moments can expose structure more sharply
