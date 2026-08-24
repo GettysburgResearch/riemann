@@ -1,0 +1,30 @@
+{
+  "arithmetic_class": "EXACT_RATIONAL_CYCLIC_GROUP_RING",
+  "checks": {
+    "character_square_common_completion": 40,
+    "midpoint_unique_energy_minimizer": 41,
+    "nonprincipal_inverse_not_positive": 1,
+    "physical_squareclass_owner_projector": 4,
+    "quadratic_root_hadamard_projector": 360,
+    "tensor_root_sector_count": 126,
+    "twisted_flat_factorization": 280
+  },
+  "open": {
+    "gmbc102893": true,
+    "hbcqdsp102888": true,
+    "riemann_hypothesis": true,
+    "tkca106050": true
+  },
+  "proof_object_sha256": "c82c642f9b91805471219edad01a58a5c34d9fceaa8d2e7cf56f7211926857bb",
+  "proved": {
+    "character_square_common_completion": true,
+    "midpoint_family_energy_minimizer": true,
+    "nonprincipal_inverse_positivity_rejected": true,
+    "owner_squareclass_projector": true,
+    "quadratic_root_hadamard_charts": true,
+    "tensor_quadratic_root_count": true,
+    "twisted_complementary_temperature_flatness": true
+  },
+  "total_checks": 852,
+  "verdict": "PASS_X_106050_TEMPERATURE_KUMMER_FIBRE"
+}
