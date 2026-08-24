@@ -1,12 +1,14 @@
-# L-102884 — Balanced-core gcd extraction closes the large-common-core sector
+# L-102884 — Exact balanced-core gcd extraction and relative large-gcd gain
 
 Claim ID: `L-102884`  
-Status: **PROVED EXACT GCD DECOMPOSITION AND POWER-SAVING SECTOR**  
+Status: **PROVED EXACT GCD/SOURCE REDUCTION; COPRIME CROSS ESTIMATE OPEN**  
 Created: 2026-08-24  
+Corrected: 2026-08-24  
 Depends on: `L-102868`; `L-102883`  
 RH status: **not assumed**
 
-Consider two distinct physical products in stopped balanced blocks,
+Consider two distinct physical products in stopped balanced or smooth-boundary
+blocks,
 
 \[
 N=P c^2,
@@ -14,16 +16,7 @@ N=P c^2,
 M=Q d^2,
 \]
 
-where
-
-\[
-P=pq,
-\quad Q=rs,
-\quad c=uvm,
-\quad d=u'v'm'.
-\]
-
-Put
+where `P` and `Q` are the external semiprime owner squareclasses. Put
 
 \[
 g=(c,d),
@@ -48,7 +41,7 @@ v_N=g^{-1}U_{g^2}v_{Pc_1^2},
 v_M=g^{-1}U_{g^2}v_{Qd_1^2}.
 \]
 
-Translation invariance therefore gives
+Translation invariance gives
 
 \[
 \boxed{
@@ -58,64 +51,53 @@ Translation invariance therefore gives
 }
 \tag{L-102884.1}
 
-The identity commutes with owner phases, the fixed outer observation and every
+The identity commutes with every owner phase, fixed outer observation and
 Euler/half-divisor/Wick gauge.
 
-## 2. Large-gcd sector
+## 2. Relative large-gcd gain
 
-The number of Vaughan representations of one core product is `Y^o(1)` by
-`L-102883`.  Hence, for every `G>=2`, the complete free/equal-product energy of
-terms with `g>=G` is bounded by
-
-\[
-\sum_{g\ge G}{\tau(g)^{O(1)}\over g^2}
-\,Y^{o(1)}
-\ll G^{-1+o(1)}Y^{o(1)}.
-\]
-
-Thus
+Let `C_copr(Y;P,Q)` denote any positively homogeneous, subadditive cost for the
+reduced coprime cross packet.  Representation multiplicities are `Y^o(1)` by
+`L-102883`.  Therefore the contribution of common cores `g>=G` satisfies
 
 \[
 \boxed{
-\text{the sector }g\ge Y_0^\eta
-\text{ has power-saving cost for every fixed }\eta>0,
+C_{g\ge G}(Y)
+\ll Y^{o(1)}
+\sum_{g\ge G}{\tau(g)^{O(1)}\over g^2}
+C_{\rm copr}(Y/g^2).
 }
-\tag{L-102884.2
-\]
+\tag{L-102884.2}
 
-where `Y_0` is the smaller of the two local core scales.
-
-## 3. Core-identical terms are automatically large-gcd
-
-In a nonempty stopped balanced block,
+In particular, a uniform subpower estimate for the reduced coprime packet
+implies a subpower estimate for every large-gcd sector, since
 
 \[
-c\asymp\sqrt{Y_P},
-\qquad
-d\asymp\sqrt{Y_Q}.
-\]
+\sum_{g\ge1}{\tau(g)^{O(1)}\over g^{2+2\varepsilon}}<\infty.
+\tag{L-102884.3}
 
-If the reduced cores satisfy `c_1=d_1=1`, then `c=d=g`.  On a fixed
-ratio-eight physical shell the two local scales are comparable up to an
-absolute factor. Consequently
+The factor `g^-2` is an exact relative gain; it is not, by itself, a proof of
+the coherent physical restriction.
 
-\[
-g\gg Y_0^{1/2}.
-\]
+## 3. Core-identical residual
 
-Hence the core-identical sector belongs to (L-102884.2), for example with
-`eta=1/4`.
+If `c_1=d_1=1`, then `c=d=g`.  This term has no internal core-discrepancy
+phase.  It is retained as the pure-owner coprime base packet inside the final
+coherent theorem.  Equation (L-102884.2) transports its estimate through every
+common square core.
+
+If `c_1d_1>1`, the reduced coprime packet has an internal discrepancy prime and
+therefore acquires the additional nonzero phase of `L-102885`.
 
 ## Exact scope
 
-After removing the large-gcd sector with `G=Y_0^(1/4)`, every remaining cross
-term has
+After this theorem every cross term has been reduced coefficient-exactly to one
+of two coprime packets:
 
 ```text
-g<Y_0^(1/4);
-(c_1,d_1)=1;
-c_1 d_1>1.
+pure-owner residual:       c_1=d_1=1;
+core-discrepancy residual:  (c_1,d_1)=1 and c_1d_1>1.
 ```
 
-It therefore has at least one internal core-discrepancy prime, supplying the
-additional nonzero phase in `L-102885`.
+Common-core size is no longer an independent arithmetic gate.  Both coprime
+base packets remain inside the coherent owner theorem `T-102890`.
