@@ -1,0 +1,16 @@
+check	evidence	verdict	required_action
+Custom axiom declarations	No axiom declaration appears in the 20-file PR diff.	FORMALLY_VERIFIED	Retain.
+Opaque gate constants	No opaque declaration appears; open propositions are ordinary def : Prop.	FORMALLY_VERIFIED	Retain explicit theorem arguments.
+Unsafe declarations	No unsafe declaration appears in the PR diff.	FORMALLY_VERIFIED	Retain.
+Landau open premise installation	MellinLandauBoundarySingularity is not a global instance or assumed constant; consumers accept hLandau explicitly.	FORMALLY_VERIFIED_WITH_FIXES	Repair the proposition's measure/support/quantifiers.
+Negative-mass open premise installation	SubpowerNegativeMassHolomorphy is an explicit Prop argument.	FORMALLY_VERIFIED_WITH_FIXES	Repair the proposition's support and transform.
+Challenge/Solution isolation	Solution.MellinAPI imports ChallengeDeps.MellinAPI, not Challenge.MellinAPI.	FORMALLY_VERIFIED	Retain.
+Challenge sorry isolation	The single sorry is confined to the statement-only Challenge module.	FORMALLY_VERIFIED	Build/audit it explicitly.
+Post-#707 scientific scope	Changed files contain upstream bridges and canonical reviewed claims only.	FORMALLY_VERIFIED	Retain research cutoff.
+Dependency pins	Mathlib and Zeta23 revisions remain the bootstrap-pinned commits.	FORMALLY_VERIFIED	Retain.
+Scientific source locks	SHA strings are present in SourceLocks.lean, but not path/blob-validated by verify_source_locks.py/SOURCE_LOCKS.json.	SOURCE_LOCK_DEFECT	Machine-lock exact path and declaration at each source SHA.
+Axiom print declarations	Analysis/AxiomAudit.lean contains A prints.	FORMALLY_VERIFIED_WITH_FIXES	Integrate it into check_axioms.sh and expected output parsing.
+Canonical axiom audit execution	check_axioms.sh still runs only top-level AxiomAudit and RH comparator print module.	INCOMPLETE_PUBLICATION	Dynamically include all PrintAxioms modules and A audit.
+Trusted top-level build	Top-level AxiomAudit references removed zeta23_bridge_preserves_RH.	BUILD_FAILURE	Restore declaration or update all trusted references and parser expectations.
+Target CI evidence	No workflow run or combined status exists at target head 92f70a3b.	INCOMPLETE_PUBLICATION	Run exact-head full build after fixes.
+Open premise hiddenness	No open theorem is hidden as an axiom, but no final theorem exposes the complete conjunction because the final consumer is absent.	FORMALLY_VERIFIED_WITH_FIXES	Add final PROVED_CONDITIONAL theorem.
