@@ -1,0 +1,54 @@
+{
+  "bankreal105530_proved": false,
+  "content_sha256": {
+    "PACKET_METADATA_105530.json": "a5fcbe3d816f2b3639d34fe32126badd31a4de116fff5dfcdcd169e8f5747128",
+    "PR_BODY_105530_ADDENDUM.md": "25205f6db049beb63e2ffaeeb48e1afbbc81561ac6be371967a7c996e7e5b61a",
+    "README_105530.md": "e74022c35900b7d37f07d68b0793cef42d1ef64d0b3e66f6b5e0a993f896c635",
+    "claims/lemmas/L-105530-minimal-hermitian-wick-bank.md": "90bf105733631a7e08e4bc1748116431003a36c988e3ae85a637410a7818d9d0",
+    "claims/lemmas/L-105531-matrix-companion-lorentz-flux.md": "b1afbeafba35d592b0db1556900c3218ad91627aa94e3b9b2a4108cfc6ae655b",
+    "claims/methodology/M-105530-hostile-review-contract.md": "cfa9d7025c48b9c6c98055f7451e816a5435e3cbead7764b80a3acb4af1248a0",
+    "claims/refutations/R-105530-scalar-hermitian-second-chaos-no-go.md": "3d745c87d0d4604fb9504ae0dcf1eb650fcad4fb298839f520bb074224831fef",
+    "claims/refutations/R-105531-closed-contour-calibration-no-free-anchor.md": "5824930b8b2f1bf4302ee8b4d7bfc834be0b1a80afaa637615b98ed8e13de8ad",
+    "claims/theorems/T-105530-hermitian-bank-companion-ninety-frontier.md": "16b0113450cdfc067069b958ba1ae0ee68822e53cbc5f6664dac7ff3d7014301",
+    "experiments/X-105530-hermitian-bank/README.md": "e67b4bb820e64c7d463d3f173c4e654616f34c02ec160a32672a6856b2b9de07",
+    "experiments/X-105530-hermitian-bank/tests/test_verify.py": "c3f46aa3509aa6d3078d8ca30093de982b8064a96f8e1602937ce55f74c7946e",
+    "experiments/X-105530-hermitian-bank/verify.py": "3e9c9154e553431757662b0f20d0b34f4aa35fbab3db5d7056024febe8caf08a",
+    "integration/2026-08-24/t105530-source-lock.json": "763ea1ae5af897d645ce01ec8be9e770c36bc669ed01d771e57d8122b90c421c",
+    "reports/gpt56-pro/2026-08-24-hermitian-bank-companion-frontier.md": "cf4d9038f5165a047175d2eead084c03cd4346f6a866b0f6ed452272d2eae23b",
+    "standalone/2026-08-24-hermitian-bank-companion-frontier/PROOF.md": "1999f916c55270d5dfbb1e5fc726a585e7ca8e703b59d9c01e56aca7ca25bc86"
+  },
+  "matrix_companion_flux": {
+    "delta": "5/7",
+    "lambda": "2/3",
+    "matrix_entry_checks": 9,
+    "real_axis_lorentz_checks": 5,
+    "real_residue_checks": 3
+  },
+  "matrixlerc105531_proved": false,
+  "ninety_percent_established": false,
+  "ninety_percent_threshold": {
+    "bank_anchor": "9139/9216",
+    "line_fraction_boundary": "9/10",
+    "negative_trace_cut": "9139/184320",
+    "positive_index_fraction": "19/20"
+  },
+  "proof_object_sha256": "bbacaee778c0597f41d8012308dbd443aff6b419de28a112201789c9a9637536",
+  "public_record_beaten": false,
+  "rh_established": false,
+  "scalar_no_go": {
+    "forced_linear_coefficient": "-1/2",
+    "unavoidable_z_zbar_coefficient": "-1/4"
+  },
+  "stripneg105520_proved": false,
+  "two_channel_bank": {
+    "degree_three_coefficients": {
+      "0,3": "1/8",
+      "3,0": "1/8"
+    },
+    "epsilon_at_one_quarter": "77/9216",
+    "linear_and_quadratic_coefficients_zero": true,
+    "lower_at_one_quarter": "9139/9216",
+    "upper_at_one_quarter": "9293/9216"
+  },
+  "verdict": "PASS_T105530_HERMITIAN_BANK_MATRIX_FLUX"
+}

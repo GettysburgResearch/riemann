@@ -1,0 +1,43 @@
+{
+  "anthropic_formal": {
+    "blob": "a36b073fd6b04b568aac377026eafcce129946d1",
+    "commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "path": "Zeta23/ThmD/Mult.lean",
+    "repo": "m0at/zeta-23-lean",
+    "theorem": "Zeta23.ThmD.thmD₀_simple_mult"
+  },
+  "created": "2026-08-24",
+  "independent_second_replay": {
+    "complete": false,
+    "reason": "GitHub App commits did not expose an observable workflow run",
+    "temporary_prs": [
+      753,
+      754
+    ]
+  },
+  "ninety_percent_established": false,
+  "packet": "T-105560",
+  "rh_established": false,
+  "riemann_parent": "0b090173d1e0a048bf75f5218412feb99cd25c39",
+  "seven_gap_certificate": {
+    "certificate_blob": "02f939f071c7fdbcb21b8991e170ef7fc301b19c",
+    "certificate_path": "certificates/seven-point.txt",
+    "commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+    "constants_blob": "bed07c558ad5282835f63849b403942ea5b56718",
+    "constants_path": "src/zeta_simple_zeros/constants.py",
+    "kernel_blob": "dda7a856bd7c5f9cd79d7647a3e40820386c7780",
+    "kernel_path": "src/zeta_simple_zeros/kernel.py",
+    "kernel_table_sha256": "a9992300d2bf71665aa2b6bd2727e798624cd297103bb200c7f0ca2baea55a2c",
+    "nodes": 707901,
+    "precision_bits": 128,
+    "proof_blob": "13384911b7b9953239cd1262a5c73c64c6167c18",
+    "proof_path": "docs/proof.md",
+    "repo": "ainta/zeta-simple-zeros",
+    "rounding_blob": "1ea233e6387735659cc1aa51507d77a9efb0563c",
+    "rounding_path": "src/zeta_simple_zeros/rounding.py",
+    "second_derivative_table_sha256": "7913c5511a572c32dd573cd53123d8cf3ddf73d3ec63b1aa823faae2ae83570a",
+    "target": "F6 >= 19/5000",
+    "verifier_blob": "ed0bf0a6703238ad390745135d8d7d6f594c1e5e",
+    "verifier_path": "src/zeta_simple_zeros/verify_seven.py"
+  }
+}

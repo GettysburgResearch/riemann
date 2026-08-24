@@ -1,0 +1,36 @@
+{
+  "packet": "T-105310",
+  "repository": "gfreund123/riemann",
+  "target_pr": 726,
+  "target_branch": "research/gpt56-pro/105200-xi-summable-residue-coherence",
+  "pre_pass_head": "a1988fd1f7a56821dcafde94705c1a979813ab9b",
+  "stack_base": {
+    "pull_request": 723,
+    "head": "0c1aedcafe7c6fe384695eee64435cc87b792aea"
+  },
+  "sibling_context": {
+    "pull_request": 728,
+    "head": "7e55cba9a9e9f7a9d1b130e842f38c4cc45a6533",
+    "used_interfaces": [
+      "common Poisson localization",
+      "finite Bezout debt elimination",
+      "zero-free-axis boundary carriers",
+      "antiderivative offset projection"
+    ]
+  },
+  "external_primary_source": {
+    "repository": "anthropics/zeta-23-lean",
+    "commit": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e",
+    "files": [
+      "Zeta23/XiPrime/Final.lean",
+      "comparator/Challenge/Multiplicity.lean"
+    ],
+    "imported_constants": {
+      "xi_prime_simple_on_line": "0.86864 = 5429/6250",
+      "xi_prime_distinct": "0.93432 = 11679/12500",
+      "zeta_montgomery_taylor_simple_on_line": "0.672500703679... < 0.672501"
+    }
+  },
+  "heavy_computation_run": false,
+  "rh_established": false
+}

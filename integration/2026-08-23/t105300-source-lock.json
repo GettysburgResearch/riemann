@@ -1,0 +1,32 @@
+{
+  "schema": "riemann.t105300.source-lock.v1",
+  "integrated_main": "852d8aa05c701ea7818ce8a50543e68987fef5cc",
+  "persistent_pr": 726,
+  "persistent_branch": "research/gpt56-pro/105200-xi-summable-residue-coherence",
+  "parent_head": "2590148a0b7b8d553c00a8578dbf8d3467616cbb",
+  "xi_boundary_programme": {
+    "pr": 723,
+    "latest_observed_head": "0c1aedcafe7c6fe384695eee64435cc87b792aea",
+    "paired_flux_claim": "claims/lemmas/L-105102-paired-residue-coherence-window-flux.md"
+  },
+  "xi_reverse_rolle_context": {
+    "pr": 720,
+    "head": "10bba584c01277e880aaa21e1fea09f396ca7246",
+    "claims": ["L-104522", "L-104524", "T-104530"]
+  },
+  "anthropic_record_source": {
+    "repository": "anthropics/zeta-23-lean",
+    "commit": "cec57f919ccf34e5fa5372b4ba332f7c848bbb6e",
+    "files": [
+      "Zeta23/ThmD/Final.lean",
+      "Zeta23/XiPrime/Final.lean",
+      "README.md"
+    ],
+    "constants": {
+      "zeta_on_line": "0.67250",
+      "xi_prime_simple_on_line_quartic": "0.86864"
+    }
+  },
+  "heavy_computation_run": false,
+  "rh_established": false
+}

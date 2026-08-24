@@ -1,0 +1,59 @@
+{
+  "analytic_pnt_limit_machine_proved": false,
+  "coefficient_bridge": {
+    "coefficient_derivative_checks": 537,
+    "log_convolution_checks": 456,
+    "nmax": 180
+  },
+  "content_sha256": {
+    "claims/lemmas/L-105320-wick-coefficient-bridge.md": "0d262e4eacb577da34b7de2c75abbb4a32381d4b9209e25afa930280673a8a54",
+    "claims/lemmas/L-105321-wick-diagonal-density.md": "1fc4744b620d0b88817a9184f4bef5aed7784fc8322057ea028f5c373ec1e1bb",
+    "claims/lemmas/L-105322-wick-toeplitz-rank-reserve.md": "fbd062218d6fc96987f71000af043d7543092d3a364db546fc2250b8471349d2",
+    "claims/lemmas/L-105323-differentiated-reexpansion-transfer.md": "7db45ee1f09a45cd1f29812b02aee59ab91435d8edf0c0502061ac7cf85b621c",
+    "claims/methodology/M-105320-hostile-review-contract.md": "76e924ecd63603f055f572687d4f1df99300aa4f9a776f08ee9cbb0f68a6e665",
+    "claims/refutations/R-105320-raw-cauchy-model-misses-prime-chaos.md": "5b0a614a0ed72369cc704c1f0c85ef3feeaa2139221fa851dbe01419ee0213d2",
+    "claims/theorems/T-105320-wick-pick-transfer-frontier.md": "58a234021343568e18cb1ad29b8a8c69eb8c6517f2253049c2b9a6280b607e1a",
+    "experiments/X-105320-wick-pick/tests/test_verify.py": "c5710c40c5ebe07ee7fb874e2db6840ea1fc9699779915b1bf9ab707f7ea1bfb",
+    "experiments/X-105320-wick-pick/verify.py": "1fc6c4da9004cdeba32269e4ef11f744c80c4035fb3588aa6b09f4a811de5d29"
+  },
+  "diagonal_bound": {
+    "m2": "1/48",
+    "m3": "1/1080",
+    "m4": "3/35840",
+    "pnt_limit_machine_proved": false,
+    "rational_upper": "444053/20321280",
+    "tail_bound": "11/1270080",
+    "target_upper": "7/320"
+  },
+  "montgomery_vaughan_transfer_machine_proved": false,
+  "new_zero_proportion_established": false,
+  "proof_object_sha256": "36206eea8554b321a173d421b573300716acef88a60c2daf64018bf959083f3a",
+  "raw_first_chaos": {
+    "one_percent_raw_comparison_refuted": true,
+    "prime_simplex_integral": "1/2"
+  },
+  "record_bridge": {
+    "conditional_line_output": "5765136493/8517835000",
+    "model_effective_rank_lower": "160/167",
+    "published_upper_decimal_import": "672501/1000000",
+    "robust_effective_rank_lower": "1568160/1703567",
+    "two_sided_energy_upper": "7/160"
+  },
+  "rh_established": false,
+  "verdict": "PASS_T105320_WICK_PICK_FIRST_CHAOS_CANCELLATION",
+  "wick_algebra": {
+    "coefficients": [
+      "1",
+      "0",
+      "1/2",
+      "1/3",
+      "3/8",
+      "11/30",
+      "53/144",
+      "103/280",
+      "2119/5760"
+    ],
+    "maximum_degree": 23
+  },
+  "wxfer105320_proved": false
+}

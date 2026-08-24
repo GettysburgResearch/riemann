@@ -1,0 +1,95 @@
+{
+  "cauchy_power_model_limit_machine_proved": false,
+  "confluent_budget": {
+    "aggregate_checks": 63099,
+    "distinct_constant": "11679/12500",
+    "nonreal_pair_checks": 100,
+    "nuisance_density": "821/10000",
+    "real_block_checks": 99,
+    "simple_constant": "5429/6250"
+  },
+  "content_sha256": {
+    "claims/lemmas/L-105310-critical-residue-pick-kernel.md": "0ec18984748549f9ba531b773ba3e04049e735fed15dec4b40a6a83763f68ca1",
+    "claims/lemmas/L-105311-multiplicity-inertia-budget.md": "23db8be6b2e9cdd4a511cc5f0eea887e58cd744888534359cb80b04cda957a8c",
+    "claims/lemmas/L-105312-qjet-gamma-model.md": "9ab6dc79aa771770b3ac723727cdc66281db9258d48b710bbcb18552e9e28da7",
+    "claims/methodology/M-105310-hostile-review-contract.md": "2cad2371db61a7f5d79d6b5a0468b40cee134f590b44486b34e045d4ee28fe41",
+    "claims/refutations/R-105310-scalar-boundary-is-not-density-certificate.md": "108c4c492b86239a47af10e1fa4e345d4b832625206ec680e0ef27601260ce13",
+    "claims/theorems/T-105310-low-order-pick-rank-trace-frontier.md": "3c55c5eab7e328b3031f7abad6f7292daf0dd62b4fca4272c09ba2768eee068b",
+    "experiments/X-105310-low-order-pick-rank-trace/tests/test_verify.py": "0cc663c0450924513544ec5ebb02bf5156d59cb6ebc81aa0d24588a3cc05ba11",
+    "experiments/X-105310-low-order-pick-rank-trace/verify.py": "1fee6fe0ae25e3b5d717ff9bf445337badf310ee63d1c830cdd7ba8729560cb1"
+  },
+  "imported_anthropic_theorems_machine_reproved": false,
+  "lprt105310_proved": false,
+  "model_and_record": {
+    "gamma_effective_rank_lower": "49/51",
+    "multiplicity_counted_line_target": "3369/5000",
+    "published_mt_decimal_upper_import": "672501/1000000",
+    "record_eta_target": "919/1000",
+    "robust_effective_rank_lower": "160083/173417",
+    "robust_line_target": "591369643/867085000",
+    "toeplitz_q": "1/50"
+  },
+  "new_zero_proportion_established": false,
+  "pick_kernel": {
+    "checks": 9,
+    "degree": 5,
+    "nonreal_pair_determinant": "-18769/144000",
+    "nonreal_residue": "(53/400)+(403/1200)i",
+    "real_residues": [
+      "(-124/225)+(0)i",
+      "(37/360)+(0)i"
+    ]
+  },
+  "proof_object_sha256": "040da9e121b81be390e547ca8079b2402ab86e754ccc4bec1469911270ebd063",
+  "rank_trace": {
+    "fixtures": [
+      {
+        "eigenvalues": [
+          "3",
+          "2",
+          "-4",
+          "0"
+        ],
+        "hs_squared": "29",
+        "positive_index": 2,
+        "trace_positive": "1"
+      },
+      {
+        "eigenvalues": [
+          "1/3",
+          "1/7",
+          "1/11",
+          "-9"
+        ],
+        "hs_squared": "4329700/53361",
+        "positive_index": 3,
+        "trace_positive": "0"
+      },
+      {
+        "eigenvalues": [
+          "-1",
+          "-2",
+          "-3"
+        ],
+        "hs_squared": "14",
+        "positive_index": 0,
+        "trace_positive": "0"
+      },
+      {
+        "eigenvalues": [
+          "5",
+          "0",
+          "0",
+          "-1",
+          "-1"
+        ],
+        "hs_squared": "27",
+        "positive_index": 1,
+        "trace_positive": "3"
+      }
+    ]
+  },
+  "rh_established": false,
+  "simple_parent_upgrade_proved": false,
+  "verdict": "PASS_T105310_LOW_ORDER_PICK_RANK_TRACE"
+}

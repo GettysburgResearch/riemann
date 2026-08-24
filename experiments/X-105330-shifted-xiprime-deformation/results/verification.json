@@ -1,0 +1,144 @@
+{
+  "analytic_error_transfer": {
+    "analytic_majorant_checks": 120,
+    "firewall": [
+      {
+        "N": 2,
+        "derivative": "2",
+        "real_interval_sup": "1/2"
+      },
+      {
+        "N": 5,
+        "derivative": "5",
+        "real_interval_sup": "1/5"
+      },
+      {
+        "N": 10,
+        "derivative": "10",
+        "real_interval_sup": "1/10"
+      },
+      {
+        "N": 100,
+        "derivative": "100",
+        "real_interval_sup": "1/100"
+      },
+      {
+        "N": 1000,
+        "derivative": "1000",
+        "real_interval_sup": "1/1000"
+      }
+    ],
+    "minimum_gap": "6331/13608"
+  },
+  "coefficient_shift": {
+    "checks": 18,
+    "rows": [
+      {
+        "A": "1/3",
+        "B": "2/7",
+        "L": "5/2",
+        "dalpha": "72/1183"
+      },
+      {
+        "A": "1/3",
+        "B": "5/9",
+        "L": "5/2",
+        "dalpha": "20/169"
+      },
+      {
+        "A": "2/5",
+        "B": "2/7",
+        "L": "5/2",
+        "dalpha": "200/3087"
+      },
+      {
+        "A": "2/5",
+        "B": "5/9",
+        "L": "5/2",
+        "dalpha": "500/3969"
+      },
+      {
+        "A": "7/10",
+        "B": "2/7",
+        "L": "5/2",
+        "dalpha": "50/567"
+      },
+      {
+        "A": "7/10",
+        "B": "5/9",
+        "L": "5/2",
+        "dalpha": "125/729"
+      }
+    ]
+  },
+  "content_sha256": {
+    "claims/lemmas/L-105330-shifted-critical-zero-deformation.md": "1269a19b17ec3f194d0bd5e6683197496f7b7e1c46b508b1e91948a15b445f71",
+    "claims/lemmas/L-105331-shifted-safe-line-coefficient-identity.md": "a9cb5a6bfcbafb80da1cf5d401ed147ace3dfb5657cd94d6ede51a6702a58828",
+    "claims/lemmas/L-105332-uniform-analytic-error-differentiation.md": "9ecb61984df40b16f830f57725eaffbb9cf6509e7b61d9b0fd2daf486c481913",
+    "claims/methodology/M-105330-hostile-review-contract.md": "47c3de9832db1f59c6dfa1a4c443be197edfd46f361e8a7b2517c9348dfc3852",
+    "claims/refutations/R-105330-pointwise-error-cannot-be-differentiated.md": "322abd9fa32a9bbb1b3e302927f22632997c39604ee74921522e3d46f1059598",
+    "claims/theorems/T-105330-shifted-xiprime-pick-transfer-frontier.md": "2cbc4117ee321ae5a17c2ee09ef88504442c6c6b4bfbdb46dd987df34585b539",
+    "experiments/X-105330-shifted-xiprime-deformation/tests/test_verify.py": "b9cbf489dddedfdd303247e3fb78383e8e514cbcd5d29d735963e34f034bda95",
+    "experiments/X-105330-shifted-xiprime-deformation/verify.py": "1d6550622cbb4d07d75fc2d44b0bc8d922dfa2f68d68977c1a08589a82ab62ba"
+  },
+  "deformation": {
+    "critical_residues": [
+      "-7/12",
+      "-1/12"
+    ],
+    "critical_roots": [
+      "-1",
+      "1"
+    ],
+    "parameter_derivative": "-79/189",
+    "primitive_checks": [
+      {
+        "derivative": "-2/3",
+        "power": 0
+      },
+      {
+        "derivative": "1/2",
+        "power": 1
+      },
+      {
+        "derivative": "-2/3",
+        "power": 2
+      },
+      {
+        "derivative": "1/2",
+        "power": 3
+      },
+      {
+        "derivative": "-2/3",
+        "power": 4
+      },
+      {
+        "derivative": "1/2",
+        "power": 5
+      },
+      {
+        "derivative": "-2/3",
+        "power": 6
+      },
+      {
+        "derivative": "1/2",
+        "power": 7
+      }
+    ],
+    "shifted_log_derivative": "21/26"
+  },
+  "new_zero_proportion_established": false,
+  "proof_object_sha256": "581c439bc7e9658a2894122d927d0bc5387d6beb9e1c53bac6d8fd52b8fe7bee",
+  "reflection_pair": {
+    "checks": 3,
+    "values": [
+      "-22/21",
+      "-73/45",
+      "21/40"
+    ]
+  },
+  "rh_established": false,
+  "shifted_xiprime_explicit_formula_machine_proved": false,
+  "suef105330_proved": false,
+  "verdict": "PASS_T105330_SHIFTED_XIPRIME_DEFORMATION"
+}

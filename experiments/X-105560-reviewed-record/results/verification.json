@@ -1,0 +1,57 @@
+{
+  "analytic_three_point": {
+    "epsilon_positive_analytically": true,
+    "strict_improvement_without_certificate": true,
+    "sum_free_algebra_checks": 2527
+  },
+  "content_sha256": {
+    "PACKET_METADATA_105560.json": "eb594517235966c6af5d4fccf15bbe836f8f6cfd510105900ea2b0ae2f3d8543",
+    "PR_BODY_105560_ADDENDUM.md": "ff7f6a5bb712666d2a97644406a59a2677b30dc2a1956cdd8476fe2ec0767c05",
+    "README_105560.md": "f795a1464930c582bb7371301a144b2d318286aef52b5f09e5d7107701a197de",
+    "claims/lemmas/L-105560-defect-retaining-multiplicity-bridge.md": "7d3200f655ac4e2e583e8f20f588f350a9e786e5b8731d25820c1d2e4778ae7a",
+    "claims/lemmas/L-105561-analytic-three-point-strict-improvement.md": "735ce78051af26986fd17758fec6e6b7f2db533e5563956e94b306a4622c0702",
+    "claims/lemmas/L-105562-seven-gap-pressure-global-average.md": "b977bc04781312c45040a6474995976257d4d325ce0d5b588326deff1fbddf60",
+    "claims/methodology/M-105560-hostile-review-contract.md": "3ae62956b254489395074e6ae3d0da4cba86b2bc1a793c4e5c1788eee08fa1ba",
+    "claims/refutations/R-105560-theoremd-normalization-firewall.md": "b9087703cc6bde9664c4c436d1095a0ef8fd4f65a2b15a638d6f3ef703f7f77d",
+    "claims/theorems/T-105560-reviewed-simple-zero-record.md": "970c249584234bed54b0316ed6f015209b609de4a0c48ba853a912661badea46",
+    "experiments/X-105560-reviewed-record/README.md": "6ec65cc9e75ff19e4fcd4eff6e577c51a84f973b770c9b1ec662c26a8f20cb79",
+    "experiments/X-105560-reviewed-record/replay.sh": "c6a897a3c0bdf2f5c071bd183a0206461e17a591e869f8555c88008bc05e3653",
+    "experiments/X-105560-reviewed-record/tests/test_verify.py": "4bd6202df48676ab013cd9349acd211439d189bdf3fe36091b247f66ca00a8b8",
+    "experiments/X-105560-reviewed-record/verify.py": "37ee02345fa83e5c251a1f2477cfdbbf1c6224d6cd438ca9acfe6922833bff5f",
+    "integration/2026-08-24/t105560-source-lock.json": "469cd634fb3310545ddcc2cde52138bcbbfa908d5a2cb1228120e847f8ab4182",
+    "reports/gpt56-pro/2026-08-24-reviewed-simple-zero-record.md": "79b61730e15e51f509639430af8467fdc07b3111569be59995de91e1a72e88a6",
+    "standalone/2026-08-24-reviewed-simple-zero-record/PROOF.md": "56c5b1b20ac6e2b6ddbcddfc340411e5b885da1c27532c41720601c62307a2ad"
+  },
+  "independent_second_replay": {
+    "completed": false,
+    "reason": "no observable workflow run from GitHub App commits"
+  },
+  "multiplicity_bridge": {
+    "defect_retained": true,
+    "positive_index_budget": "(N-S)/2",
+    "scalar_minimization_checks": 1601
+  },
+  "ninety_percent_established": false,
+  "proof_object_sha256": "9feb4f7f928e0aef9fc82c0ecf844632c5ce00dd98d611a74554029dc99560e6",
+  "rh_established": false,
+  "seven_gap": {
+    "explicit_lower_bound_decimal": "0.673008527927557",
+    "explicit_lower_bound_gt_673_over_1000": true,
+    "external_commit": "040c5e899e658aed7b56a2a87f501798fe10761d",
+    "gap_coefficient": "1/500",
+    "nodes": 707901,
+    "offsets": 269,
+    "pressure_coefficient": "4997/1345000",
+    "span_coefficient": "268/134500"
+  },
+  "source_lock": {
+    "anthropic_blob": "a36b073fd6b04b568aac377026eafcce129946d1",
+    "anthropic_commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510",
+    "anthropic_path": "Zeta23/ThmD/Mult.lean",
+    "certificate_blob": "02f939f071c7fdbcb21b8991e170ef7fc301b19c",
+    "kernel_blob": "dda7a856bd7c5f9cd79d7647a3e40820386c7780",
+    "rounding_blob": "1ea233e6387735659cc1aa51507d77a9efb0563c",
+    "verifier_blob": "ed0bf0a6703238ad390745135d8d7d6f594c1e5e"
+  },
+  "verdict": "PASS_T105560_REVIEWED_SIMPLE_ZERO_RECORD"
+}
