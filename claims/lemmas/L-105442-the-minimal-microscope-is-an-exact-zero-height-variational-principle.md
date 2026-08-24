@@ -124,8 +124,7 @@ u_a(2^nh)>0.
 Iterating (L-105442.5) gives
 
 \[
-\boxed{
-u_a(h)\ge2^{-n}u_a(2^nh)>0.}
+\boxed{u_a(h)\ge2^{-n}u_a(2^nh)>0.}
 \tag{L-105442.6}
 
 Thus `m_r` is Pick throughout `Im z>b`. In particular it cannot vanish there.
@@ -192,14 +191,13 @@ in the local disk,
 \[
 \boxed{
 \mathcal Q_{r,b}(a_0,h)
-={2\over3}\delta+O(h^2+\delta^2)>0
+={2\over3}\delta+O(h^2+\delta^2)>0.
 }
-\tag{L-105442.9
-}
+\tag{L-105442.9}
 
-on a suitable subcone such as `h comparable to delta`. Thus a nonreal zero is
-not merely excluded abstractly by the Pick property: it creates a positive
-minimal-microscope contact immediately below its height.
+This holds on a suitable subcone such as `h` comparable to `delta`. Thus a
+nonreal zero is not merely excluded abstractly by the Pick property: it
+creates a positive minimal-microscope contact immediately below its height.
 
 A nonreal zero of `F_r'` instead appears as a pole in one sampled ratio. These
 are the two first-obstruction types of `T-105441`.
