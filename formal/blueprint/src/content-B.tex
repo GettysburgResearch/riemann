@@ -1,1 +1,95 @@
-% Reviewer B owns this file after bootstrap merge.
+% Reviewer B arithmetic and fixed-detector formalization.
+
+\section{Arithmetic and fixed-detector substrate}
+
+\begin{theorem}[Exact common-zero exclusion for rows 2 and 3]
+\label{thm:B-rows23-exact}
+\lean{RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero}
+For \(a=2^{-z}\) with \(\lVert a\rVert<1\), the reviewed row-two and
+scaled row-three numerator polynomials cannot vanish simultaneously.
+The proof is exact complex algebra and eliminates the second variable.
+Semantic ID: \texttt{CONSUMER.MELLIN.TWO\_ROW}.
+\end{theorem}
+
+\begin{theorem}[Exact fixed \(5{:}3\) noncancellation]
+\label{thm:B-five-three-exact}
+\lean{RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero}
+The fixed scalar numerator factors as
+\[
+ -3(a-1)(a-2),
+\]
+and is nonzero on \(\lVert a\rVert<1\).
+Semantic ID: \texttt{CONSUMER.MELLIN.FIVE\_THREE}.
+\end{theorem}
+
+\begin{theorem}[Sequential first-owner identity]
+\label{thm:B-first-owner}
+\lean{RiemannFormal.Arithmetic.SourceIdentities.firstOwner_eq_nativeEuler}
+The finite sequential first-owner expansion equals the native Euler
+product in every commutative coefficient ring. No sign estimate is
+inferred.
+Semantic ID: \texttt{ARITH.SHARP.SEQUENTIAL\_FIRST\_OWNER}.
+\end{theorem}
+
+\begin{theorem}[Formalized native-source promotion refutation]
+\label{thm:B-alpha-refutation}
+\lean{RiemannFormal.Arithmetic.SourceIdentities.r_vs_two_r_sq_witness}
+The contracted two-child magnitude \(2r^2\) is not the native
+one-prime magnitude \(r\); the trusted module also proves the strict
+separator throughout \(0<r<1/2\).
+Semantic ID: \texttt{ARITH.SHARP.ALPHA\_NATIVE\_PROMOTION}.
+\end{theorem}
+
+\begin{theorem}[Source-typing firewalls]
+\label{thm:B-source-firewalls}
+\lean{RiemannFormal.Arithmetic.SourceIdentities.response_capacity_coefficients_differ}
+Native source, auxiliary positive source, signed observation, child
+response, and child capacity are distinct indexed types. Exact finite
+witnesses additionally separate response from capacity and
+\(p^{-1}\) activity from \(p^{-1/2}\) amplitude.
+Semantic ID: \texttt{ARITH.SOURCE.TYPING\_FIREWALLS}.
+\end{theorem}
+
+\begin{theorem}[Half-divisor Dirichlet square]
+\label{thm:B-half-divisor}
+\lean{RiemannFormal.Arithmetic.HalfDivisor.eta_mul_eta}
+For
+\[
+ \eta(p^k)=\binom{2k}{k}/4^k,
+\]
+the Mathlib Dirichlet convolution satisfies
+\(\eta*\eta=\zeta\), where the arithmetic function \(\zeta\) is the
+constant-one coefficient function on positive natural numbers.
+The finite one-field source identity is
+\lean{RiemannFormal.Arithmetic.HalfDivisor.oneFieldReduction}.
+\notready
+The ratio-four kernel and Hardy localization portions of the canonical
+packet remain unformalized.
+Semantic ID: \texttt{ARITH.VAUGHAN.HALF\_DIVISOR}.
+\end{theorem}
+
+\begin{theorem}[Finite compact-wavelet algebra]
+\label{thm:B-wavelet-finite}
+\lean{RiemannFormal.Arithmetic.Wavelet.threeTap_minimal}
+The trusted finite layer proves generic four-tap factorization,
+three-tap minimality, ratio-eight scale span, factor-67 antisymmetry,
+finite shifts, and the Abel summation identity
+\lean{RiemannFormal.Arithmetic.Wavelet.finite_abel_mertens}.
+\notready
+The exact piecewise \(\sqrt{2}\)-normalized kernel realization and the
+wavelet-specific Mertens frame assembly remain open in the formal
+registry.
+Semantic IDs: \texttt{ARITH.WAVELET.MINIMAL\_RATIO8} and
+\texttt{ARITH.WAVELET.ABEL\_MERTENS}.
+\end{theorem}
+
+\begin{theorem}[Conditional fixed-native consumer assembly]
+\label{thm:B-fixed-native-consumer}
+\lean{RiemannFormal.MellinLandau.fixed_native_subpower_negative_mass_implies_RH}
+\uses{thm:B-five-three-exact}
+A fixed native source identity, Reviewer A's analytic consumer, and
+the subpower negative-mass hypothesis imply the canonical RH
+proposition. Every unresolved premise is an explicit theorem
+parameter; no analytic Landau proof is duplicated here.
+Semantic ID: \texttt{API.MELLIN.SUBPOWER\_NEGATIVE\_MASS}.
+\end{theorem}
