@@ -11,7 +11,7 @@ RH status: **unproved**
 For the Xi derivative ratio
 
 \[
-m_r={\Xi^{(r)}\over\Xi^{(r+1)}
+m_r={\Xi^{(r)}\over\Xi^{(r+1)}}
 \]
 
 the conclusion-facing differential field is
@@ -142,7 +142,7 @@ The downward-shift kernel is
 \quad
 s={a-t\over y}.
 }
-\tag{T-105600.9]
+\tag{T-105600.9}
 \]
 
 Its integral is always `-pi/2`, but it has a positive remote tail. Every
@@ -167,8 +167,8 @@ this theorem without an explicit infinite-tail estimate.
 
 ## 4. Height-shell all-pass alternative
 
-For a real polynomial or regular finite entire-function rectangle, define the
-height-shell all-pass map
+For a real polynomial, or on the horizontal edges of a regular finite entire-
+function rectangle, define
 
 \[
 \mathcal S_{F;h_1,h_2}(x)
@@ -179,9 +179,12 @@ height-shell all-pass map
 \tag{T-105600.11}
 \]
 
-Its winding is minus the number of zeros in the horizontal shell. For the
-derivative ladder, adjacent shell quotients telescope. If the terminal rung is
-shell-free, then the base shell count is bounded by
+For a polynomial compactified on the full real line, its winding is exactly
+minus the number of zeros in the horizontal shell. In a finite entire-function
+rectangle, the same identity contains the explicit vertical-side correction
+of `L-105602`. For the derivative ladder, all intermediate horizontal and
+vertical charges telescope. If the terminal rung is shell-free, then the base
+shell count is bounded by
 
 \[
 \boxed{
