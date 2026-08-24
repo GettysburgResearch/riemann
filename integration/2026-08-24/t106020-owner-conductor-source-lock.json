@@ -1,0 +1,117 @@
+{
+  "analytic_claims_machine_proved": false,
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "canonical_main": {
+    "sha": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f"
+  },
+  "claim_namespace": "T106020",
+  "created": "2026-08-24",
+  "programme_issues": [
+    {
+      "issue": 743,
+      "role": "CV/XD common mother and physical restriction"
+    },
+    {
+      "issue": 736,
+      "role": "Dirichlet-character family completion"
+    },
+    {
+      "issue": 737,
+      "role": "function-field mirror"
+    }
+  ],
+  "stacked_parent": {
+    "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+    "pr": 719,
+    "role": "horizon-safe owner-excluded balanced frontier HBCQDSP102888",
+    "sha": "c2e82cfdd254a478731f005b3d83b49d3e1e33ea",
+    "load_bearing_files": [
+      {
+        "path": "claims/lemmas/L-102883-coherent-centered-double-phase-energy.md",
+        "blob_sha": "c2fb229f90b8326b7631c45569246f2ef7061c89"
+      },
+      {
+        "path": "claims/lemmas/L-102886-dyadic-frozen-vaughan-cutoff-removes-transfer-atoms.md",
+        "blob_sha": "26abf63b6a69c449f89313b151931b2dc71a42ad"
+      },
+      {
+        "path": "claims/lemmas/L-102887-horizon-safe-pair-gauge-eliminates-the-largest-two-smooth-boundary.md",
+        "blob_sha": "383aa27fee269645e45c26c12fbd4a97a6b337a8"
+      },
+      {
+        "path": "claims/lemmas/L-102888-owner-excluded-vaughan-has-no-smooth-boundary.md",
+        "blob_sha": "80864f4f83db85daad4e94a68ed0457077d3b9b6"
+      },
+      {
+        "path": "claims/refutations/R-102869-differentiating-the-dynamic-vaughan-cutoff-omits-transfer-atoms.md",
+        "blob_sha": "db9285088f8a37c6214137439f7652113e4cf2c2"
+      }
+    ]
+  },
+  "new_claims": [
+    {
+      "path": "claims/refutations/R-106001-post-residual-ramified-completion-is-not-source-exact.md",
+      "blob_sha": "1f256d94dcff97dd80b9bd6ab5427d8910d1b6b4"
+    },
+    {
+      "path": "claims/lemmas/L-106004-full-source-completion-to-hbc-residual-functor.md",
+      "blob_sha": "a44245fdfc95acc14dabade5b95da3860b1f1a9d"
+    },
+    {
+      "path": "claims/theorems/T-106001-horizon-safe-residual-family-synchronization.md",
+      "blob_sha": "0bd960fd8d8946434740385310537fc3d30c55b9"
+    },
+    {
+      "path": "claims/lemmas/L-106020-square-phase-gauss-mellin-identity.md",
+      "blob_sha": "dffea80b5cd7790779397fda1430d30260e79876"
+    },
+    {
+      "path": "claims/lemmas/L-106021-sharp-square-phase-owner-bound.md",
+      "blob_sha": "7b62052f13860b4af48748cb6b2b5199399c3b23"
+    },
+    {
+      "path": "claims/lemmas/L-106022-owner-conductor-even-L-family.md",
+      "blob_sha": "af4d092478bcfd06d2092ba0a79345302b28d056"
+    },
+    {
+      "path": "claims/lemmas/L-106023-function-field-kummer-fourier-square-phase.md",
+      "blob_sha": "c2419a9c34ae5f7ea84e265f09eaecbf0a0766de"
+    },
+    {
+      "path": "claims/theorems/T-106020-owner-conductor-square-phase-frontier.md",
+      "blob_sha": "442a99dfb871450a8c0f1956cded3071b8665c95"
+    }
+  ],
+  "proof_objects": [
+    {
+      "path": "experiments/X-106000-cvxd-lfamily/results/verification.json",
+      "exact_checks": 376476,
+      "sha256": "a23b1c5a739a5634593df8c6ec750a857dd8690e79c31fc8b195f0859c2786d1",
+      "verdict": "PASS_X_106000_CVXD_LFAMILY_SQUARECLASS_MOMENTS"
+    },
+    {
+      "path": "experiments/X-106020-square-phase-owner-conductor/results/verification.json",
+      "blob_sha": "07d06f2145dd6465a32db1eb23a6729a6698b023",
+      "exact_checks": 6306,
+      "sha256": "5bc623c12b447cde059c5a2ff77abde3cdce1b5634e1a6d11836f14f1472eac9",
+      "verdict": "PASS_X_106020_SQUARE_PHASE_OWNER_CONDUCTOR_FAMILY"
+    }
+  ],
+  "proved": {
+    "full_source_completion_order": true,
+    "horizon_safe_residual_adapter": true,
+    "square_phase_gauss_mellin_identity": true,
+    "phase_cardinality_removal": true,
+    "all_owner_weight_fixed_packet_bound": true,
+    "owner_conductor_even_l_family": true,
+    "local_source_paid_principal_leverage": true,
+    "finite_field_kummer_fourier_mechanism": true
+  },
+  "open": {
+    "socm106020": true,
+    "ffsocm106023": true,
+    "hbcqdsp102888": true,
+    "riemann_hypothesis": true
+  },
+  "rh_established": false
+}
