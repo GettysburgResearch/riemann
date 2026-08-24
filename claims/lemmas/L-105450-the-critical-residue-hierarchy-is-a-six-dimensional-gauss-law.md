@@ -155,12 +155,11 @@ be a nonreal critical pole of `m`. The axisymmetric lift samples
 \[
 \boxed{
 \{(a,y)\in\mathbb R\times\mathbb R^5:
- a=\alpha,\ |y|=\eta\},
+ a=\alpha,\ |y|=\eta\}.
 }
-\tag{L-105450.7
-}
+\tag{L-105450.7}
 
-an off-axis four-sphere rather than an axis point.
+It is an off-axis four-sphere rather than an axis point.
 
 Its real lifted distribution is not a nonnegative point measure on the axis;
 it is precisely the geometric form of the nonreal conjugate correction in the
