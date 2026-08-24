@@ -573,6 +573,12 @@ one affine orbit, of sizes `6,10,42`; the stabilizer orders are `1,2,1`.
 Consequently the most moment-sensitive tail is controlled by a single weighted
 geometric stratum in each frozen family, not by a diffuse population.
 
+The concentration becomes dominant at order twelve: those single minimum
+orbits supply respectively `58.3993%`, `61.9548%`, and `73.4068%` of the full
+even twelfth moment. Thus a high-moment proof cannot safely average away rare
+automorphism strata; at the current fields, one orbit already carries most of
+the statistic.
+
 A separate deterministic Weyl quadrature asks the corresponding sign-law
 question. Four phase shifts on periodic grids through `512 x 512` (1,376,256
 cells in total, with a five-second guard) give a final phase mean

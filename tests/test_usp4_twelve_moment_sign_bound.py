@@ -111,10 +111,32 @@ class FixtureTests(unittest.TestCase):
             5: (Fraction(-116, 25), Fraction(29, 25)),
             7: (Fraction(-282, 49), Fraction(59, 49)),
         }
+        minimum_twelfth_moment_shares = []
         for family in q_scan["families"]:
             q = int(family["q"])
-            values = [Fraction(int(value), q**2) for value in family["K_histogram"]]
+            histogram = {
+                int(value): int(count)
+                for value, count in family["K_histogram"].items()
+            }
+            values = [Fraction(value, q**2) for value in histogram]
             self.assertEqual((min(values), max(values)), expected_supports[q])
+            minimum = min(histogram)
+            absolute_twelfth_total = sum(
+                count * abs(value) ** 12 for value, count in histogram.items()
+            )
+            minimum_twelfth_moment_shares.append(
+                Fraction(
+                    histogram[minimum] * abs(minimum) ** 12,
+                    absolute_twelfth_total,
+                )
+            )
+        self.assertEqual(
+            minimum_twelfth_moment_shares,
+            sorted(minimum_twelfth_moment_shares),
+        )
+        self.assertTrue(
+            all(share > Fraction(1, 2) for share in minimum_twelfth_moment_shares)
+        )
         for order, haar_moment in enumerate(haar):
             values = [by_q[q][order] for q in (3, 5, 7)]
             self.assertTrue(

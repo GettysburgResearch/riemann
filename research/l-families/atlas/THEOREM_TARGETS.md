@@ -474,6 +474,11 @@ automorphism strata a plausible route to the high-moment tail; an unweighted
 orbit-representative average would erase exactly the multiplicities that
 matter most.
 
+Quantitatively, each single minimum orbit contributes more than half of the
+frozen twelfth moment (`58.3993%`, `61.9548%`, `73.4068%`). A useful tail lemma
+should therefore separate the extreme orbit/automorphism strata before
+applying generic monodromy estimates to the bulk.
+
 The bounded shifted-grid Weyl quadrature additionally nominates
 
 \[
