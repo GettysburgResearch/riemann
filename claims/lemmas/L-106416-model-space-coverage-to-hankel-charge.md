@@ -71,8 +71,9 @@ then every eigenvalue below \(a\) pays at least \(1-a\), and hence
 
 \[
 \boxed{
-r_a\le\frac{\varepsilon}{1-a}\dim\mathcal I.}
-\tag{L-106416.2
+r_a\le\frac{\varepsilon}{1-a}\dim\mathcal I.
+}
+\tag{L-106416.2}
 
 At \(a=1/2\),
 
@@ -82,7 +83,7 @@ At \(a=1/2\),
 \le2\varepsilon\dim\mathcal I
  +2\|HP\|_{\mathcal S_2}^2.
 }
-\tag{L-106416.3
+\tag{L-106416.3}
 
 Thus an \(o(1)\) one-sided sampling deficit and a fixed source-energy estimate
 control the complete topological Hankel charge.
