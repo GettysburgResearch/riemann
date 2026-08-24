@@ -133,10 +133,17 @@ def run() -> dict:
             assert Fraction(lhs, 1) >= Fraction(p + 1, p - 1) * norm2(principal)
             checks["one_modulus_principal_contraction"] += 1
 
-        # The character square map has kernel {principal, quadratic} and
-        # image the even-character subgroup.
-        assert (p - 1) // 2 * 2 == p - 1
-        checks["quadratic_root_fibre"] += p - 1
+        # Character exponents k modulo p-1 square by k -> 2k. The image is
+        # exactly the even-character subgroup and every image has two roots;
+        # the roots of the principal image are principal and quadratic.
+        order = p - 1
+        fibres: Dict[int, List[int]] = {}
+        for k in range(order):
+            fibres.setdefault((2 * k) % order, []).append(k)
+        assert set(fibres) == set(range(0, order, 2))
+        assert all(len(roots) == 2 for roots in fibres.values())
+        assert fibres[0] == [0, order // 2]
+        checks["quadratic_root_fibre"] += sum(len(roots) for roots in fibres.values())
 
     for p, q in [(5, 7), (5, 11), (7, 11), (7, 13)]:
         for _ in range(40):
