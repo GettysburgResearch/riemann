@@ -1,6 +1,6 @@
 {
-  "schema": "riemann.source_lock.t105620.v2",
-  "claim_namespace": "105620-105631",
+  "schema": "riemann.source_lock.t105620.v3",
+  "claim_namespace": "105620-105632",
   "created_at": "2026-08-25",
   "repository": "gfreund123/riemann",
   "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
@@ -15,7 +15,7 @@
     "height_shell_winding": "L-105602",
     "one_sided_phase_gap": "L-105422",
     "allpass_hankel_charge": "L-105290",
-    "sibling_model_sampling": "L-106415--L-106431"
+    "sibling_model_sampling_and_signed_tail": "L-106415--L-106431"
   },
   "new_claims": [
     "L-105620",
@@ -30,7 +30,9 @@
     "L-105629",
     "L-105630",
     "L-105631",
+    "L-105632",
     "R-105620",
+    "R-105630",
     "T-105620",
     "T-105630",
     "M-105620"
@@ -56,7 +58,9 @@
     "safe-region causal weighted contraction",
     "source-owned finite compressions inherit contraction",
     "inner allpass model space is the canonical Hankel bank",
-    "raw negative shell energy below two is not a necessary invariant"
+    "inner phases have nonpositive signed complement under every source projection",
+    "raw negative shell energy below two is not a necessary invariant",
+    "causal weighted energy alone does not imply pointwise physical sign"
   ],
   "open_gates": [
     "POINTID105630",
@@ -67,5 +71,6 @@
   "mctphys105610_proved": false,
   "hshe105602_proved": false,
   "descent_below_beta0_proved": false,
+  "pointwise_physical_sign_proved": false,
   "rh_established": false
 }
