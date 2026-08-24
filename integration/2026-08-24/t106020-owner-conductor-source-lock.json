@@ -4,7 +4,10 @@
   "canonical_main": {
     "sha": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f"
   },
-  "claim_namespace": "T106020",
+  "claim_namespaces": [
+    "T106020",
+    "T106030"
+  ],
   "created": "2026-08-24",
   "programme_issues": [
     {
@@ -48,6 +51,13 @@
       }
     ]
   },
+  "reviewed_global_occupancy_comparison": {
+    "claim": "BPOE103300",
+    "pr": 707,
+    "sha": "7bf3308d40ac8ed1ba50e404ff6e9c47526d89e4",
+    "path": "claims/theorems/T-103300-balanced-phase-amplitude-and-physical-occupancy-frontier.md",
+    "blob_sha": "08a377a9204d95c547d1455a65c0dde1ae2bc21d"
+  },
   "new_claims": [
     {
       "path": "claims/refutations/R-106001-post-residual-ramified-completion-is-not-source-exact.md",
@@ -78,8 +88,28 @@
       "blob_sha": "c2419a9c34ae5f7ea84e265f09eaecbf0a0766de"
     },
     {
+      "path": "claims/lemmas/L-106024-local-squareclass-physical-occupancy-is-a-strict-contraction.md",
+      "blob_sha": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061"
+    },
+    {
       "path": "claims/theorems/T-106020-owner-conductor-square-phase-frontier.md",
-      "blob_sha": "442a99dfb871450a8c0f1956cded3071b8665c95"
+      "blob_sha": "ca192877a37e9a9aaab2ab5f2a15f8cf6ca5be86"
+    },
+    {
+      "path": "claims/lemmas/L-106025-balanced-vaughan-is-a-mollified-reciprocal-l-defect.md",
+      "blob_sha": "0ca6177c780a2fdfd070c1fe02d7930c0e5ab6a5"
+    },
+    {
+      "path": "claims/lemmas/L-106026-mellin-plancherel-normal-form-for-owner-conductor-moment.md",
+      "blob_sha": "388c7e166a0e6e534d7e908685f71a16de246575"
+    },
+    {
+      "path": "claims/lemmas/L-106027-owner-quadratic-class-partition-preserves-local-leverage.md",
+      "blob_sha": "91d76282af0fa44d6af7a42fbfe862efc5129579"
+    },
+    {
+      "path": "claims/theorems/T-106030-explicit-mollified-owner-conductor-moment-frontier.md",
+      "blob_sha": "5139c15f44d6eb13bf4e2a12c8b33cf5818bc6b5"
     }
   ],
   "proof_objects": [
@@ -91,10 +121,17 @@
     },
     {
       "path": "experiments/X-106020-square-phase-owner-conductor/results/verification.json",
-      "blob_sha": "07d06f2145dd6465a32db1eb23a6729a6698b023",
-      "exact_checks": 6306,
-      "sha256": "5bc623c12b447cde059c5a2ff77abde3cdce1b5634e1a6d11836f14f1472eac9",
+      "blob_sha": "977cb41b1375d24fc29018697ac504f1b3aca995",
+      "exact_checks": 6426,
+      "sha256": "63f7cbba47dea60cf308b26e46162b4dc23f54798f7ce408424bf7f1058f4872",
       "verdict": "PASS_X_106020_SQUARE_PHASE_OWNER_CONDUCTOR_FAMILY"
+    },
+    {
+      "path": "experiments/X-106030-mollified-owner-conductor-moment/results/verification.json",
+      "blob_sha": "babc3f1e3c065f18f0c8a2c3d8ebc8d0c4efbce1",
+      "exact_checks": 38780,
+      "sha256": "48c20069952efd0ec21e3b23a38c0b78af07e3b010e0dbb346e32014e898398b",
+      "verdict": "PASS_X_106030_MOLLIFIED_OWNER_CONDUCTOR_NORMAL_FORM"
     }
   ],
   "proved": {
@@ -105,11 +142,18 @@
     "all_owner_weight_fixed_packet_bound": true,
     "owner_conductor_even_l_family": true,
     "local_source_paid_principal_leverage": true,
+    "local_squareclass_physical_occupancy": true,
+    "owner_quadratic_class_partition": true,
+    "balanced_vaughan_mollifier_defect_identity": true,
+    "finite_shell_mellin_plancherel_normal_form": true,
     "finite_field_kummer_fourier_mechanism": true
   },
   "open": {
+    "pcm106030": true,
+    "nem106030": true,
     "socm106020": true,
     "ffsocm106023": true,
+    "bpoe103300": true,
     "hbcqdsp102888": true,
     "riemann_hypothesis": true
   },
