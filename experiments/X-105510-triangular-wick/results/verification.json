@@ -1,0 +1,46 @@
+{
+  "coefficients": {
+    "q0": "1",
+    "q1": "0",
+    "q2": "0",
+    "q3": "1/8",
+    "q_m_ge_4": "9/64"
+  },
+  "content_sha256": {
+    "PACKET_METADATA_105510.json": "8ba5804818b62e45334cb67c4b808bcb8d09c0ffb91c1d3d99c8ae4377505095",
+    "PR_BODY_105510_ADDENDUM.md": "b7238fc000d0e3729bca17949f3929b4e3488cfbd5b816107b9b0e35f30adc66",
+    "README_105510.md": "44f8686d999458a512e3c6bc00196d863e51595087d38ee0cf8aee04970b18b6",
+    "claims/lemmas/L-105510-triangular-polynomial-wick-congruence.md": "716a9a496563d8cf6e1b618dde271a26b75a0f4ccd6942c98b748d14d6e60e61",
+    "claims/lemmas/L-105511-polynomial-wick-density-reserve.md": "6e0f0a51ee64fd46d820c94b07f11a65b1cca1c2d7307df9fc16bedf2c6d59fd",
+    "claims/methodology/M-105510-hostile-review-contract.md": "882711917de7d0ca23d8b66ba6f6a8ab6b667a38df60b03b666e177f61089461",
+    "claims/refutations/R-105510-pointwise-polynomial-is-not-a-unit.md": "6253eaaa2cf537d7de3bb59da4294c3cc4ba0d35103de5a8b7d9cf15c12269d2",
+    "claims/theorems/T-105510-boundary-tame-ninety-two-percent-frontier.md": "6e56d60398d17183e79c8be442cb707bfc0859fea56d26a95195fc854712313e",
+    "experiments/X-105510-triangular-wick/README.md": "dcb7030c5dc2a0243540421426feda0b0e512ff945d9563bc849482c3e6a84d2",
+    "experiments/X-105510-triangular-wick/replay.sh": "153870fa4ef3db8d36e3165e4034dbdf7fd6a6f3e36851540cf3ad9fe52e9627",
+    "experiments/X-105510-triangular-wick/tests/test_verify.py": "ce327abaea0bc371bd1aa1d8e4210c497043d6ef094df43975c6a7bbf5c1e560",
+    "experiments/X-105510-triangular-wick/verify.py": "217bcb9eaeb01da2bbdae1353549647f67c54c7f8c2b0bb75bebabc8e8ff9129",
+    "reports/gpt56-pro/2026-08-24-triangular-wick-frontier.md": "b6200e30f112affbc3f68a6b1d25b0367817c8fea2c140d3c2f8a05cc436bc53"
+  },
+  "energy_and_record": {
+    "conditional_line_decimal": "0.921027451061429",
+    "conditional_line_fraction": "3654811/3968189",
+    "energy_target": "1/7000",
+    "eta_lower_under_99_101": "3811500/3968189",
+    "margin_over_ninety_percent": "834409/39681890",
+    "margin_over_ninety_two_percent": "101928/99204725",
+    "model_reserve_lower": "3500/3501",
+    "one_sided_energy_upper": "1669/11698176"
+  },
+  "finite_source_congruence_machine_verified": true,
+  "ninety_percent_established": false,
+  "pnt_limit_machine_proved": false,
+  "proof_object_sha256": "aa12b4b3815728a153b3f0b26a541515a74861a63e890f4451018ccbf68ac7ff",
+  "record_beaten": false,
+  "rh_established": false,
+  "triangular_identity": {
+    "exact_nilpotent_matrix_cases": 1000,
+    "maximum_dimension": 10
+  },
+  "triwxfer105510_proved": false,
+  "verdict": "PASS_T105510_TRIANGULAR_WICK_FRONTIER"
+}
