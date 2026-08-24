@@ -589,7 +589,7 @@ two real symplectic trace coordinates, then
 On the three minimum orbits this equals `4/3, 0, 5/7`. The characteristic-five
 minimum therefore lies exactly on the repeated-angle diagonal, consistent
 with its extra involution, while the other two are nearby but not on it. A
-tail proof should expect a special near-diagonal/endoscopic stratum rather
+tail proof should expect a special non-regular repeated-angle stratum rather
 than a condition uniform over regular Frobenius classes.
 
 A separate deterministic Weyl quadrature asks the corresponding sign-law
