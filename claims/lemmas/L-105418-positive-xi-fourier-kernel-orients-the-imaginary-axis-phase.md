@@ -61,19 +61,13 @@ Therefore
 \[
 \boxed{
  m_r(iy)
-=i
-{\displaystyle\int_0^\infty
-u^r\Phi(u)\cosh(yu)\,du
+=i\,{\displaystyle\int_0^\infty u^r\Phi(u)\cosh(yu)\,du
  \over
- \displaystyle\int_0^\infty
-u^{r+1}\Phi(u)\sinh(yu)\,du}
+ \displaystyle\int_0^\infty u^{r+1}\Phi(u)\sinh(yu)\,du}
 \in i(0,\infty).
 }
 \tag{L-105418.3}
 \]
-
-Here the displayed powers are the literal integration-variable powers `u^r`
-and `u^(r+1)`.
 
 ## 3. Odd derivative orders
 
@@ -94,19 +88,15 @@ Thus
 \[
 \boxed{
  m_r(iy)
-=i
-{\displaystyle\int_0^\infty
-u^r\Phi(u)\sinh(yu)\,du
+=i\,{\displaystyle\int_0^\infty u^r\Phi(u)\sinh(yu)\,du
  \over
- \displaystyle\int_0^\infty
-u^{r+1}\Phi(u)\cosh(yu)\,du}
+ \displaystyle\int_0^\infty u^{r+1}\Phi(u)\cosh(yu)\,du}
 \in i(0,\infty).
 }
 \tag{L-105418.4}
 \]
 
-Again the powers are `u^r` and `u^(r+1)`, and both integrals are strictly
-positive.
+Both integrals are strictly positive.
 
 ## 4. Exact phase orientation
 
