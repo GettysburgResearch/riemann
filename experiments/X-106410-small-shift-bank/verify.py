@@ -34,8 +34,8 @@ def verify_grid() -> int:
             assert r_cross * (1 - c) ** 2 <= 4 * c * a_cross
             checks += 1
 
-            # Same-sign source at xi=u+v.  The pointwise proof after
-            # integration uses |u-v|<=u+v and the symmetric second moment.
+            # Same-sign source at xi=u+v.  Symmetric pairing gives the
+            # sharpened factor 4c/(1-c).
             xi = u + v
             r_same = c * xi * (u - v) ** 2
             a_same_pair = (
@@ -43,7 +43,6 @@ def verify_grid() -> int:
                 + (1 - c * v) * u * u * (1 + c * u)
             ) / 2
             assert a_same_pair >= 0
-            # Symmetrized pairwise form of the integrated inequality.
             assert r_same * (1 - c) <= 4 * c * a_same_pair
             checks += 1
     return checks
@@ -52,12 +51,12 @@ def verify_grid() -> int:
 def payload() -> dict[str, object]:
     checks = verify_grid()
 
-    same_square = Fraction(64, 39601)
+    same_square = Fraction(16, 39601)
     cross_square = Fraction(640000, 1568239201)
     four_channel = 2 * same_square + 2 * cross_square
     assert 39601**2 == 1568239201
-    assert four_channel == Fraction(6348928, 1568239201)
-    assert four_channel < Fraction(1, 200)
+    assert four_channel == Fraction(2547232, 1568239201)
+    assert four_channel < Fraction(1, 600)
 
     fixed_order = Fraction(599, 625)
     bandwidth_loss = Fraction(1, 1000)
@@ -66,20 +65,24 @@ def payload() -> dict[str, object]:
         - bandwidth_loss
         - 2 * four_channel * Fraction(999, 1000)
     )
-    safe_conclusion = fixed_order - bandwidth_loss - Fraction(999, 100000)
-    assert safe_conclusion == Fraction(94741, 100000)
+    safe_conclusion = (
+        fixed_order
+        - bandwidth_loss
+        - 2 * Fraction(1, 600) * Fraction(999, 1000)
+    )
+    assert safe_conclusion == Fraction(95407, 100000)
     assert sharp_conclusion > safe_conclusion
 
     result: dict[str, object] = {
-        "schema": "riemann.x106410.small-shift-bank.v1",
+        "schema": "riemann.x106410.small-shift-bank.v2",
         "classification": "PASS_T106410_SMALL_SHIFT_ENDPOINT_BANK_ALGEBRA",
         "rational_grid_checks": checks,
-        "same_sign_squared_constant": "64/39601",
+        "same_sign_squared_constant": "16/39601",
         "reflected_squared_constant": "640000/1568239201",
-        "four_channel_constant": "6348928/1568239201",
-        "four_channel_below_one_over_200": True,
-        "safe_conditional_fraction": "94741/100000",
-        "safe_conditional_decimal": "0.94741",
+        "four_channel_constant": "2547232/1568239201",
+        "four_channel_below_one_over_600": True,
+        "safe_conditional_fraction": "95407/100000",
+        "safe_conditional_decimal": "0.95407",
         "sharp_conditional_decimal": f"{float(sharp_conclusion):.12f}",
         "endpointbank106410_proved": False,
         "ninety_percent_established": False,
