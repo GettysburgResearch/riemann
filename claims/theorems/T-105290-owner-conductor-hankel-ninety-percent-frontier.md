@@ -3,6 +3,7 @@
 Claim ID: `T-105290`  
 Status: **EXACT UNCONDITIONAL REDUCTION; COHERENT HANKEL ESTIMATE OPEN**  
 Created: 2026-08-24  
+Corrected: 2026-08-24  
 Depends on: `L-105280--L-105293`; PR #726 finite-α folding/bank realization; PR #751 square-phase owner-conductor family  
 RH status: **unproved**
 
@@ -86,7 +87,7 @@ known. Define the exact remainder
 \tag{T-105290.4}
 \]
 
-The diagonal and positive coherent cross ledger are
+The phase-family diagonal and positive coherent cross ledger are
 
 \[
 \mathfrak D_T=\sum_i\|\mathcal H_{i,T}\|_{\mathcal S_2}^2,
@@ -103,16 +104,43 @@ The diagonal and positive coherent cross ledger are
 \tag{T-105290.6}
 \]
 
+Let \(\mathfrak S_T\) denote the complete five-rung **unphased frozen Wick
+source energy**. By `L-105293`,
+
+\[
+\boxed{
+\mathfrak S_T
+ \le\left(\frac1{3700}+o(1)\right)N(T,2T).
+}
+\tag{T-105290.7}
+\]
+
+The exact phase-family diagonal excess is
+
+\[
+\boxed{
+\mathfrak P_T=(\mathfrak D_T-\mathfrak S_T)_+.
+}
+\tag{T-105290.8}
+\]
+
+Thus \(\mathfrak D_T\le\mathfrak S_T+\mathfrak P_T\). The local contraction
+of `L-105292` removes phase-cardinality loss packetwise, but does **not** by
+itself prove \(\mathfrak P_T=o(N)\); the owner-character family energy remains
+in the ledger.
+
 For every \(\varepsilon>0\), put
 
 \[
 \boxed{
+\begin{aligned}
 \mathfrak A_T(\varepsilon)
- =\varepsilon\mathfrak D_T
- +(1+\varepsilon)\mathfrak C_T^+
- +(1+\varepsilon^{-1})\|\mathcal R_T\|_{\mathcal S_2}^2.
+={}&\varepsilon\mathfrak S_T
+ +(1+\varepsilon)(\mathfrak P_T+\mathfrak C_T^+)\\
+&+(1+\varepsilon^{-1})\|\mathcal R_T\|_{\mathcal S_2}^2.
+\end{aligned}
 }
-\tag{T-105290.7}
+\tag{T-105290.9}
 \]
 
 The Hilbert inequality
@@ -122,14 +150,16 @@ The Hilbert inequality
  +(1+\varepsilon^{-1})\|y\|^2
 \]
 
-and deletion only of negative cross terms give the exact bound
+and deletion only of negative cross terms give
 
 \[
-\boxed{
+\begin{aligned}
 \mathfrak H_5(T)
- \le\mathfrak D_T+\mathfrak A_T(\varepsilon).
-}
-\tag{T-105290.8}
+&\le(1+\varepsilon)(\mathfrak D_T+\mathfrak C_T^+)
+ +(1+\varepsilon^{-1})\|\mathcal R_T\|_{\mathcal S_2}^2\\
+&\le\boxed{\mathfrak S_T+\mathfrak A_T(\varepsilon).}
+\end{aligned}
+\tag{T-105290.10}
 \]
 
 No orthogonality between distinct physical owner packets is assumed.
@@ -141,28 +171,21 @@ space of Hankel operators. It removes every local phase-cardinality factor and
 retains the principal/quadratic root fibre, the two owner quadratic sectors and
 all even-character channels.
 
-`L-105293` gives, on the complete five-rung frozen source,
+`L-105293` pays the unphased five-rung source energy (T-105290.7). Therefore
+the remaining allowance above a ninety-percent target is
 
 \[
 \boxed{
-\mathfrak D_T
- \le\left(\frac1{3700}+o(1)\right)N(T,2T).
-}
-\tag{T-105290.9}
-\]
-
-Thus the actual source has paid all but
-
-\[
-\boxed{
-\frac{97}{1000}-\frac1{3700}
+\frac{997}{1000}-\frac9{10}-\frac1{3700}
  =\frac{3579}{37000}
- =0.0967297297\ldots
+ =0.0967297297\ldots .
 }
-\tag{T-105290.10}
+\tag{T-105290.11}
 \]
 
-of the available ninety-percent defect budget.
+The owner-character diagonal excess, coherent cross terms and actual-Xi
+transfer are **not** included in the paid \(1/3700\); all three occur in
+\(\mathfrak A_T\).
 
 ## 4. Single fixed-constant frontier
 
@@ -176,10 +199,11 @@ Define
 \frac{\mathfrak A_T(\varepsilon_T)}{N(T,2T)}
 <\frac{3579}{37000}.
 }
-\tag{T-105290.11}
+\tag{T-105290.12}
 \]
 
-Then (T-105290.8)--(T-105290.10) imply (T-105290.3), and hence
+Then (T-105290.7), (T-105290.10) and (T-105290.11) imply
+(T-105290.3), and hence
 
 \[
 \boxed{
@@ -187,7 +211,7 @@ Then (T-105290.8)--(T-105290.10) imply (T-105290.3), and hence
 \Longrightarrow
 \liminf_{T\to\infty}\frac{N_0(T,2T)}{N(T,2T)}>0.9.
 }
-\tag{T-105290.12}
+\tag{T-105290.13}
 \]
 
 `HOCH105290` is a fixed constant estimate, not an RH-strength subpower
@@ -196,11 +220,15 @@ estimate. The subpower principal and nonprincipal owner-conductor moments
 
 ## 5. Exact content of the open term
 
-The three terms in (T-105290.7) have distinct ownership:
+The four terms in (T-105290.9) have distinct ownership:
 
 ```text
-epsilon * diagonal:
-  harmless optimization payment;
+epsilon * unphased frozen source:
+  harmless Hilbert-inequality payment;
+
+phase-family diagonal excess:
+  the exact cost of resolving the unphased source into its complete
+  owner-conductor square-phase/even-character family;
 
 positive cross-owner Hankel Gram:
   coherent physical assembly across different owner packets/conductors;
@@ -211,8 +239,16 @@ actual-source remainder:
   by the frozen owner-conductor packets.
 ```
 
-The firewall `R-105290` prohibits replacing the coherent term by packetwise
+The firewall `R-105290` prohibits replacing the last three terms by packetwise
 local contraction.
+
+## Hostile correction
+
+An earlier version of this checkpoint identified \(\mathfrak D_T\) itself
+with the \(1/3700\) frozen source bound. That was too strong: `L-105293` proves
+the unphased frozen energy, while the complete phase-family diagonal is an
+additional positive owner-conductor moment. Equations (T-105290.8)--
+(T-105290.12) are the controlling corrected formulation.
 
 ## Boundary
 
@@ -220,7 +256,8 @@ local contraction.
 matrix all-pass winding/Hankel payment             PROVED EXACT
 finite-alpha oriented-ratio identification         PROVED EXACT
 local square-phase contraction in Hankel space     PROVED EXACT
-five-rung frozen source cost < 1/3700              PROVED EXACT
+unphased five-rung frozen cost < 1/3700             PROVED EXACT
+phase-family diagonal excess                       OPEN / EXPLICIT
 fixed remaining allowance 3579/37000               PROVED EXACT
 HOCH105290 coherent/transfer estimate               OPEN / RECORD-BEARING
 ninety percent for zeta                            UNPROVED
