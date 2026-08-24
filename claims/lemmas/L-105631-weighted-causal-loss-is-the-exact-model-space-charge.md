@@ -1,7 +1,7 @@
-# L-105631 — Weighted causal loss is the exact model-space topological charge
+# L-105631 — Weighted causal loss is the exact model-space charge at trace-class/finite scope
 
 Claim ID: `L-105631`  
-Status: **PROVED EXACT TRACE/MODEL-SPACE THEOREM**  
+Status: **PROVED EXACT TRACE/MODEL-SPACE THEOREM; CONTINUUM TRACE REQUIRES REGULARIZATION**  
 Created: 2026-08-25  
 Depends on: `L-105625`; `L-105630`; `L-106430`  
 RH status: **not assumed**
@@ -21,8 +21,8 @@ VV^*=I-P_{K_U}.
 \tag{L-105631.1}
 \]
 
-Let `R>=0` be trace class. More generally, it is enough that all displayed
-products are trace class. Cyclicity gives
+Let `R>=0` be trace class. More generally, it is enough that the two terms in
+the first trace difference are trace class and cyclicity is justified. Then
 
 \[
 \begin{aligned}
@@ -42,9 +42,15 @@ Therefore
 \tag{L-105631.2}
 \]
 
-When `R=M_r` for a decreasing profile, `L-105625` makes the left side
-nonnegative. Equation (L-105631.2) identifies its exact topological consumer:
-the weighted source mass of the all-pass model space.
+At finite-dimensional source scope the same identity holds with every operator
+compressed before taking the trace. Equation (L-105631.2) identifies the exact
+topological consumer: the weighted source mass of the all-pass model space.
+
+A bounded multiplication operator `M_r` on the continuum space
+`L^2(0,infinity)` is generally **not** trace class. One may not apply
+(L-105631.2) to it by subtracting two infinite traces. The continuum Xi use
+must pass through a declared finite/source trace-class regularization and keep
+its limiting endpoint carrier.
 
 ## 2. One simple Blaschke factor
 
@@ -68,7 +74,8 @@ Under Paley--Wiener, the one-dimensional model space has the normalized vector
 \tag{L-105631.3}
 \]
 
-Hence for a diagonal source weight `r`,
+For any bounded nonnegative diagonal source weight `r`, the **finite-rank
+model-space compression** is trace class and
 
 \[
 \boxed{
@@ -86,7 +93,8 @@ to high source frequencies. There is no unspecified conditioning constant.
 
 If `r` is nonincreasing, the right side is nondecreasing in `y`: an exponential
 random variable with rate `2y` moves stochastically toward zero as `y`
-increases. Thus every factor of depth at least `eta` costs at least
+increases. Thus every simple factor of depth at least `eta` has compressed
+charge at least
 
 \[
 \boxed{
@@ -114,7 +122,7 @@ r(\xi)
 \tag{L-105631.6}
 \]
 
-Thus collisions and multiplicity are explicit positive weighted charges.
+Thus collisions and multiplicity are explicit positive finite-rank charges.
 
 ## 4. Arbitrary finite inner phase
 
@@ -123,52 +131,49 @@ For a finite Blaschke product `U` of degree `d`, choose any orthonormal basis
 
 \[
 \boxed{
-\operatorname{tr}(R-V^*RV)
+\operatorname{tr}(P_{K_U}M_rP_{K_U})
 =
-\sum_{j=1}^d\langle Re_j,e_j\rangle.
+\sum_{j=1}^d\langle M_re_j,e_j\rangle.
 }
 \tag{L-105631.7}
 \]
 
-At `R=I`, this reduces to
+Whenever a trace-class regularization `R_T` of `M_r` is declared and
+(L-105631.2) applies,
 
 \[
-\operatorname{tr}(I-V^*V)=0
+\operatorname{tr}(R_T-V^*R_TV)
+=
+\operatorname{tr}(P_{K_U}R_TP_{K_U}).
 \]
 
-on the domain and
-
-\[
-\operatorname{tr}(I-VV^*)=d
-\]
-
-on the range side. The distinction is essential: the weighted contraction
-loss in (L-105631.2) is obtained through cyclicity and the range defect
-`P_(K_U)`, not by replacing the isometry defect `I-V^*V`, which is zero.
+At `R=I`, the domain defect `I-V^*V` is zero while the range defect
+`I-VV^*=P_(K_U)` has trace `d`. Since `I` is not trace class on the infinite
+Hardy space, this is a firewall against extending (L-105631.2) by formal
+subtraction.
 
 ## 5. Xi interpretation
 
-For the safe-height Xi-prime phase `U_H` and the actual monotone profile
-`r_(b,h)`, the exact loss in `L-105628` is the current-weighted mass of
-`K_(U_H)`.
-
+For the safe-height Xi-prime phase `U_H` and the monotone profile `r_(b,h)`,
+`L-105628` gives a form-level contraction. Every declared finite model-space
+section has the explicit positive charges (L-105631.4)--(L-105631.7).
 Consequently:
 
 ```text
 critical zeros a fixed distance below the shifted boundary
-  carry a fixed positive source charge;
+  carry a fixed positive compressed source charge;
 
 only zeros whose shifted depth tends to zero
   can become asymptotically charge-free.
 ```
 
-This matches, in exact model-space coordinates, the Jensen-disk and
-zero-height/spatial-escape frontiers elsewhere in the repository.
+Passing from these finite charges to a global trace requires exactly the
+cofinal endpoint/index regularization `ENDIDX105630`. No continuum trace
+identity is claimed before that step.
 
 ## 6. Scope
 
 A lower bound on the charge of each simple factor does not automatically add
-over a nonorthogonal zero list; the invariant object is the complete model-
-space trace. Nor does the safe-height charge prevent a zero from reaching the
-boundary during base descent. The theorem identifies and localizes the charge;
-it does not prove `SAFEDESC105628` or RH.
+over a nonorthogonal zero list; the invariant finite object is the complete
+model-space trace. The theorem identifies and localizes finite charges but does
+not prove the cofinal trace limit, `SAFEDESC105628`, or RH.
