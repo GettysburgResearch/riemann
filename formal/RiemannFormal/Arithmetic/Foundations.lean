@@ -84,7 +84,6 @@ structure PrimeLabel where
   prime : ℕ
   isPrime : prime.Prime
   copy : ℕ
-  deriving DecidableEq, Repr
 
 /-- Dilation by an integer scale. This is finite arithmetic data, not a Dirichlet-series operation. -/
 def dilation {R : Type*} [Zero R] (q : ℕ) (f : ArithmeticFunction R) :
