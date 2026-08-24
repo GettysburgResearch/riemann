@@ -31,14 +31,14 @@ Thus the phase-cardinality removal on PR #751 is not merely compatible with
 the all-pass route: it applies to the exact topological norm which pays
 converse-Rolle loss.
 
-Using Conrey's fifth-derivative proportion and a new degree-five physical Wick
+Using Conrey's fifth-derivative proportion and a degree-five physical Wick
 calculation gives
 
 ```text
-five-rung frozen source cost < 1/3700;
+unphased five-rung frozen source cost < 1/3700;
 complete defect reserve above 90% = 97/1000;
-remaining coherent/transfer allowance = 3579/37000
-                                      = 0.0967297297...
+remaining phase-family/coherent/transfer allowance = 3579/37000
+                                                    = 0.0967297297...
 ```
 
 The remaining statement `HOCH105290` is therefore a fixed `9.67%` estimate,
@@ -119,10 +119,12 @@ finite Gauss/character change versus winding;
 source-paid local principal leverage.
 ```
 
-It does not close coherent physical collisions between different owner
-packets. `R-105290` records minimal exact counterexamples to such a promotion.
+It does **not** show that the sum of all phase-family diagonal energies is no
+larger than the unphased frozen energy. Nor does it close coherent physical
+collisions between different owner packets. `R-105290` records exact
+counterexamples to both promotions.
 
-## 4. Improved source budget
+## 4. Improved unphased source budget
 
 For
 
@@ -149,34 +151,42 @@ D_5(2)
  < 1/74000.
 ```
 
-Both analytic orientations cost less than `1/18500` per derivative rung. Five
-rungs cost less than `1/3700`.
+Both analytic orientations of the **unphased frozen source** cost less than
+`1/18500` per derivative rung. Five rungs cost less than `1/3700`.
 
 The retained Conrey input is `alpha_5>0.9970`. Exact reverse Rolle therefore
-leaves the source-owned coherent remainder the allowance
+leaves every additional phase-family and transfer term the allowance
 
 ```text
 997/1000 - 9/10 - 1/3700 = 3579/37000.
 ```
 
-## 5. Exact coherent remainder
+## 5. Corrected coherent ledger
 
 Let `H_i` be the prescribed source-owned owner-conductor Hankel packets and let
 `R` be the literal difference between their sum and the actual five-rung Xi
 Hankel operator. Define
 
 ```text
+S = unphased five-rung frozen source energy,
 D = sum_i ||H_i||^2,
-C+ = 2 sum_(i<j) (Re tr(H_i^* H_j))_+,
+P = (D-S)_+,
+C+ = 2 sum_(i<j) (Re tr(H_i^* H_j))_+.
+```
 
+For every `eps>0`, put
+
+```text
 A(eps)
- = eps D +(1+eps) C+ +(1+1/eps)||R||^2.
+ = eps S
+   +(1+eps)(P+C+)
+   +(1+1/eps)||R||^2.
 ```
 
 Then, exactly,
 
 ```text
-H_actual <= D + A(eps).
+H_actual <= S + A(eps).
 ```
 
 `HOCH105290` asks for some source-predeclared `eps_T` with
@@ -188,6 +198,7 @@ limsup A(eps_T)/N < 3579/37000.
 This one positive ledger retains:
 
 ```text
+phase-family diagonal excess;
 cross-owner and cross-conductor coherence;
 the two quadratic owner sectors;
 finite-alpha archimedean freezing;
@@ -197,7 +208,16 @@ near-real Blaschke slips.
 
 If it holds, more than ninety percent of zeta zeros are on the critical line.
 
-## 6. Relation to the attached factor-67 manuscript
+## 6. Hostile correction
+
+The first T-105290 deposit identified `D` itself with the `1/3700` frozen
+source bound. That was too strong. The degree-five computation proves `S`, the
+unphased frozen energy. Resolving it into the complete square-phase/even-
+character family introduces a positive diagonal excess `P` which must be
+estimated together with coherent assembly. The corrected theorem retains `P`
+inside `HOCH105290` and makes no global phase-family diagonal claim.
+
+## 7. Relation to the attached factor-67 manuscript
 
 The finite factor-67 paired-source manuscript is not imported as a proved
 premise. Its own status notice identifies the finite stopping line and terminal
@@ -210,12 +230,13 @@ Its exact two-row Mellin algebra and noncancellation remain useful in the
 arithmetic programme, but they do not discharge the all-pass Hankel estimate
 or establish RH.
 
-## 7. Next attack
+## 8. Next attack
 
 The next source theorem should target the H^(1/2)-weighted version of PR #751's
 explicit owner-conductor moment:
 
 ```text
+phase-family diagonal excess;
 principal/quadratic-root channel;
 nonprincipal even-character channel;
 positive cross-owner Gram;
@@ -223,7 +244,7 @@ actual-source finite-alpha remainder.
 ```
 
 For RH, PR #751 asks for subpower bounds. For the present objective it is enough
-to prove the combined normalized moment is below `3579/37000`. This is a much
+to prove the combined normalized ledger is below `3579/37000`. This is a much
 weaker quantitative target and is now the preferred unconditional ninety
 percent assault.
 
@@ -234,7 +255,8 @@ matrix winding/Hankel identity                  PROVED
 finite-alpha oriented ratio                     PROVED
 unit divisor Poisson current                     PROVED
 square-phase contraction in Hankel space        PROVED
-five-rung source cost < 1/3700                  PROVED
+unphased five-rung source cost < 1/3700         PROVED
+phase-family diagonal excess                    OPEN / EXPLICIT
 remaining fixed allowance 3579/37000            PROVED
 HOCH105290                                      OPEN / RECORD-BEARING
 90% / density one / RH                          UNPROVED
