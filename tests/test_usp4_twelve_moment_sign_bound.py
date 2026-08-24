@@ -132,6 +132,17 @@ class FixtureTests(unittest.TestCase):
             )
         self.assertEqual(
             minimum_twelfth_moment_shares,
+            [
+                Fraction(4565043429507072, 7816952346147025),
+                Fraction(371001690114457905135616, 598826630780182957326013),
+                Fraction(
+                    585471222280559325572506368,
+                    797570369691811117670825621,
+                ),
+            ],
+        )
+        self.assertEqual(
+            minimum_twelfth_moment_shares,
             sorted(minimum_twelfth_moment_shares),
         )
         self.assertTrue(
