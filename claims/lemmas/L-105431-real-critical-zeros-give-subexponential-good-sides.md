@@ -104,10 +104,11 @@ For fixed `r`, there is a constant `C_r` such that
 \]
 
 One self-contained proof uses Jensen's formula in a fixed-radius disk centered
-at a safe point `X-iA_r`. The disk contains the unit neighbourhood of `X` on
-the real axis. Its maximum is bounded by the fixed-strip version of
-(L-105431.3), while its center value has the safe-line lower bound
-(L-105431.4). The common factor `exp(-pi X/4)` cancels, leaving `O_r(log X)`.
+at a positive safe point `X+iA_r`, with `A_r>=H_r`. Choose the fixed radius so
+that the disk contains the unit neighbourhood of `X` on the real axis. Its
+maximum is bounded by the fixed-strip version of (L-105431.3), while its center
+value has the safe-line lower bound (L-105431.4). The common factor
+`exp(-pi X/4)` cancels, leaving `O_r(log X)`.
 
 The same argument in translated fixed-radius disks gives, for every integer
 `j>=0`,
@@ -171,6 +172,9 @@ Equivalently, summing over all nonzero real zeros, for `0<=y<=H`,
 \end{aligned}
 \tag{L-105431.9}
 \]
+
+The factor `1/2` is the conversion from absolute distances to squared
+distances; the sum already runs over both signs of every nonzero zero.
 
 The right side is smallest at `y=0`. Therefore
 
