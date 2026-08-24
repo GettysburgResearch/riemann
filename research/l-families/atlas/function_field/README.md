@@ -38,10 +38,20 @@ source/note/JSON/test packets:
   `Sym^4 H^1` factor, identifies its rational nodal principal-`SO(3)` curve
   inside `SO(5)`, proves that the node has no rational arithmetic preimage,
   and separates its cubic trace moment from the generic `SO(5)` law;
+- `ELLIPTIC_PAIR_RANKIN_SO4_FAMILY.md` constructs the degree-four tensor
+  factor of two independent elliptic traces, proves its exact semialgebraic
+  `SO(4)` coefficient region, separates the coefficient-map fold from the
+  full quartic repeated-root divisor, and locks the all-`q` low moments and
+  five finite product laws;
 - `ELLIPTIC_SYMMETRIC_POWER_TRACE_ALIASING.md` proves the exact mod-six
   dichotomy for recovering an integral elliptic trace from the scalar
   `Sym^m` trace, gives sharp source-witnessed complementary collisions, and
   separates scalar aliases from full-local-factor aliases;
+- `ELLIPTIC_SYM5_COLLISION_DIOPHANTINE_PILOT.md` turns the scalar `Sym^5`
+  collision equation into a discriminant-first trace-pair sieve, proves its
+  zero-fiber and weighted-scaling laws, identifies a positive-rank elliptic
+  collision curve, and certifies three locally realized prime-field examples
+  while keeping integral and global realization questions open;
 - `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
   curve with the complete locked genus-two coefficient support, classifies
   the odd-prime arithmetic candidates, and separates 53 witnessed members
@@ -114,7 +124,9 @@ python research/l-families/atlas/function_field/genus1_cubic_family_laws.py \
   --check research/l-families/atlas/function_field/genus1_cubic_family_laws.json
 python research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py --check
 python research/l-families/atlas/function_field/elliptic_symmetric_fourth_so5_slice.py --check
+python research/l-families/atlas/function_field/elliptic_pair_rankin_so4_family.py --check
 python research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py --check
+python research/l-families/atlas/function_field/elliptic_sym5_collision_diophantine_pilot.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
@@ -141,7 +153,9 @@ python -m pytest -q \
   tests/test_genus1_cubic_family_laws.py \
   tests/test_elliptic_symmetric_cube_family.py \
   tests/test_elliptic_symmetric_fourth_so5_slice.py \
+  tests/test_elliptic_pair_rankin_so4_family.py \
   tests/test_elliptic_symmetric_power_trace_aliasing.py \
+  tests/test_elliptic_sym5_collision_diophantine_pilot.py \
   tests/test_genus2_sym3_coefficient_intersection.py \
   tests/test_sym3_exterior_sym4_plethysm_bridge.py \
   tests/test_usp_coefficient_minor_rank_scan.py \
@@ -159,8 +173,9 @@ python -m pytest -q \
 
 Each packet declares its own resource contract. The Burnside, measure,
 cross-rank, tail, high-weight, power-echo, elliptic-symmetric-cube,
-elliptic-symmetric-fourth, symmetric-power-aliasing,
-symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm, product-tensor,
+elliptic-symmetric-fourth, elliptic-pair-tensor, symmetric-power-aliasing,
+Sym5-collision, symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm,
+product-tensor,
 tensor-singular, tensor-endoscopic-bridge, integral-factor-locus,
 primitive-exterior-square, and virtual-null
 packets enumerate no new finite field or family member. The echo packet
@@ -174,7 +189,17 @@ locked genus-one trace atoms and perform guarded exact algebra; the plethysm
 bridge performs sparse polynomial algebra and replays the same 251 locked
 genus-two atoms below its exclusive 512-unit ledger cap; and the
 virtual-null packet performs exact compact-group algebra only. The
-balanced-control scan independently visits all
+elliptic-pair packet visits 645 ordered pairs of the 55 locked genus-one
+trace atoms, performs no field or curve enumeration, and accounts for 2,661
+high-level exact checks below its exclusive 4,000-unit cap; its represented
+5,673,644 marked-model pairs remain compressed histogram weights. The
+Sym5-collision packet performs a discriminant sieve over 15,931 unordered
+Hasse trace pairs, tests 590 signed `q` branches, uses six exact elliptic-group
+additions and no curve or field enumeration, and accounts for 16,966 units
+below its exclusive 500,000-unit cap. Its frozen census stops at odd prime
+powers `q<=2000`, and its large prime is checked by the recorded
+Lucas/Pocklington certificate rather than a blind extension of that census.
+The balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
 visits 4,023 cubic candidates at `q=3,5,7,11,13`. The producers retain their
 explicit per-field candidate and declared-work-unit caps. No frozen genus-two
@@ -279,6 +304,38 @@ general trace-realization theorem. Higher coefficients split the constructed
 zero/nonzero aliases, although the special nonzero sign pair at
 `m=5 mod 6` can retain the same full factor. The binary quartic attached to
 `m=5` is a Diophantine target, not a classification or priority claim.
+
+The elliptic-pair Rankin/SO4 packet uses the ordered product of two independent
+locked marked-model measures, equivalently the product elliptic-stack trace
+law, not uniform coarse elliptic classes and not a geometrically linked pair
+family. Its compact coefficient region is the image of the classical
+`(SU(2) x SU(2))/diag center` tensor representation; neither that
+representation nor global `GL(2) x GL(2)` Rankin--Selberg theory is claimed as
+new. The reconstruction fold is
+`D=(p-r)^2`, whereas the exhaustive reciprocal-quartic root discriminant is
+`D E^2=(p-r)^2(p-4)^2(r-4)^2`; the endpoint component is absent from the five
+locked nonsquare-prime rows but remains part of the all-prime-power theorem.
+The local conditions `A=B` and `A=-B` do not prove isomorphism, twisting,
+isogeny, a correspondence, or a shared global automorphic representation.
+Five exact finite product laws and compact Haar moments prove neither full
+arithmetic monodromy nor equidistribution.
+
+The Sym5 collision pilot studies the single scalar
+`E_5(t,q)=Tr(Sym^5 Frob)`, not the complete degree-six local factor. Its 61
+collisions at 21 odd prime powers are complete only within `q<=2000`; most
+split at the next coefficient, while only the `t^2=3q` sign fiber can retain
+the complete factor. Positive rank of `Y^2=X^3-6X+5` supplies infinitely many
+rational collision-quartic points, not an integral-point classification,
+infinitely many primitive prime or prime-power bases, or even Hasse-integral
+data at every multiple. Weighted scaling gives exact Hasse-lattice scalar
+identities, but for the three prime bases its nonzero levels over
+`p^(2k+1)`, `k>=1`, fail Waterhouse's elliptic-trace realization cases.
+Likewise, the algebraic square-`q` zero fiber is not automatically realized:
+the traces `+/-sqrt(q)` require `p != 1 mod 3`, and trace zero requires
+`p != 1 mod 4`. The three certified prime bases provide separate local
+elliptic isogeny classes only; they do not form a compatible family or Euler
+product. No literature priority, automorphy, analytic continuation,
+zero-free-region, RH, or GRH claim is made.
 
 The symmetric-cube/genus-two intersection compares normalized coefficient
 shapes of different weights; it is not an identity of local factors. Its

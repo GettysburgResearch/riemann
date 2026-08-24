@@ -423,6 +423,129 @@ coefficient diagram and locked incidence comparison are the project-specific
 record, and they do not identify the source motives, families, monodromy
 groups, or Euler products.
 
+### Elliptic-pair tensor products fill the `SO(4)` coefficient region
+
+For two elliptic-form factors
+
+\[
+ P_A(T)=1+AT+qT^2,\qquad P_B(T)=1+BT+qT^2,
+\]
+
+the exact tensor factor is
+
+\[
+ 1-ABT+q(A^2+B^2-2q)T^2-q^2ABT^3+q^4T^4.
+\]
+
+The locked genus-one convention is `A=-t_1,B=-t_2`. After `Z=qT`, put
+
+\[
+ x={AB\over q}=uv,\qquad
+ y={A^2+B^2-2q\over q}=u^2+v^2-2.
+\]
+
+This is the standard compact image
+`(SU(2) x SU(2))/diag center = SO(4)`. If `p=u^2,r=v^2`, its exact
+semialgebraic coefficient region is characterized by
+
+\[
+ D=(y+2)^2-4x^2\ge0,
+ \qquad {y+2\mathbin\pm\sqrt D\over2}\in[0,4].
+\]
+
+There are two distinct discriminants. The reconstruction fold is
+`D=(p-r)^2`, hence `A=±B`. The complete reciprocal-quartic root
+discriminant is instead
+
+\[
+ \operatorname{Disc}_Z(P)=D E^2,
+ \qquad E=x^2-4(y-2)=(p-4)(r-4),
+\]
+
+so Hasse endpoints `p=4` or `r=4` contribute additional repeated-root
+walls. Fold, endpoint, intersection, and exhaustive repeated-root masses are
+typed separately in the packet.
+
+The compact trace moments are `Catalan_n^2` in even degree. This creates a
+useful detector alias:
+
+```text
+orders 0..6:  SO(4)          1,0,1,0,4,0,25
+              Sym^3(SU(2))   1,0,1,0,4,0,34
+              generic USp(4) 1,0,1,0,3,0,14.
+```
+
+Thus trace moments through four do not distinguish the first two images;
+degree six does. Coefficient support distinguishes them more directly:
+`SO(4)` fills the two-dimensional region, while `Sym^3(SU(2))` occupies its
+nodal curve. Exact all-odd-prime-power finite corrections follow from the
+genus-one second and fourth moments. The frozen replay uses only 645 ordered
+pairs of 55 locked histogram atoms and no new curve or field enumeration.
+
+### The `Sym^5` scalar-collision curve has positive rank
+
+The fifth symmetric-power scalar trace factors as
+
+\[
+ E_5(t,q)=t^5-4qt^3+3q^2t=t(t^2-q)(t^2-3q).
+\]
+
+For distinct traces its collision quotient is
+
+\[
+ K-4qH+3q^2=0,
+\]
+
+where `H=x^2+xy+y^2` and
+`K=x^4+x^3y+x^2y^2+xy^3+y^4`. Solving for `q` introduces the binary quartic
+
+\[
+ z^2=x^4+5x^3y+9x^2y^2+5xy^3+y^4.
+\]
+
+An exact birational transformation identifies its smooth projective model
+with
+
+\[
+ \mathcal E:\quad Y^2=X^3-6X+5.
+\]
+
+The point `Q=(-2,3)` is nontorsion: `2Q=(5,-10)`, and Lutz--Nagell rules
+out torsion because `100` does not divide `189`. Hence the collision quartic
+has infinitely many rational points. This does not classify its integral,
+Hasse, or prime-power points.
+
+A discriminant-first census of every Hasse-admissible integer pair over odd
+prime powers `q<=2000` examines only 15,931 unordered pairs. It finds 61
+collisions: 38 zero/nonzero, 19 sign, and 4 general. The general pairs are
+the two sign-orbits at
+
+\[
+ q=31:\{-7,3\},\qquad q=1021:\{-40,19\}.
+\]
+
+Exact elliptic addition explains these as `2Q` and `3Q`. Continuing through
+`7Q` produces a third prime
+
+\[
+ q=363804984411209881,
+ \qquad \{-290364080,756187719\},
+\]
+
+whose primality is locked by a complete `q-1` Lucas certificate. Waterhouse
+Theorem 4.1 realizes both traces at each of the three prime bases by ordinary
+elliptic isogeny classes, and the second local-factor coefficient separates
+the complete `Sym^5` factors.
+
+Weighted homogeneity sends a base collision to
+`(p^k x,p^k y,p^(2k+1))`, giving an infinite formal prime-power tower.
+For these three bases `p>3`, however, every `k>=1` scaled trace is nonzero
+and divisible by `p`; Waterhouse's classification therefore rules it out as
+an elliptic trace. The tower is an exact Hasse-lattice/scalar-polynomial
+family, not an elliptic-family construction. Similarly, the algebraic square-
+`q` zero fibers require separate Waterhouse congruence conditions for
+arithmetic realization.
+
 ## 4. Exact genus-two theorem: the first toy-minor mean for all odd prime powers
 
 For each odd prime power `q`, let `H_5(q)` be all monic squarefree quintics over

@@ -21,7 +21,9 @@ coefficient lattice, an elliptic symmetric-fourth `SO(3)` slice, a sharp
 symmetric-power trace-alias theorem, a product-variety tensor family, its
 singular trace-zero strata and endoscopic rank-drop bridge, a primitive
 exterior-square `SO(5)` family, an integral factor-locus census, a
-Sym3-exterior/Sym4 plethysm bridge, and an exact `USp(4)` virtual-character
+Sym3-exterior/Sym4 plethysm bridge, an elliptic-pair Rankin--Selberg / tensor
+`SO(4)` coefficient-region packet, a positive-rank elliptic `Sym^5`
+scalar-collision Diophantine pilot, and an exact `USp(4)` virtual-character
 null-direction packet are also included. Every atlas record is `DRAFT`. RH
 and GRH remain open.
 
@@ -32,7 +34,10 @@ identifiers and dynamic
 metadata for three elliptic-curve discovery rows; Rohrlich's and Conrey's
 quadratic-twist sign formulas; the function-field even-character coefficient
 identity cited in the genus-two proof; CPython 3.12.10 standard library; and the
-exact repository packets named inside detector contracts.
+exact repository packets named inside detector contracts. Ramakrishnan's
+classical `GL(2) x GL(2)` automorphic tensor product, Lutz--Nagell, and
+Waterhouse's finite-field isogeny-classification theorem are cited only as
+boundaries for the two newest local packets.
 
 What was actually run: five finite local-Euler evaluations through `p<=43`;
 4,023 candidate cubics across `q=3,5,7,11,13`; all three complete genus-two
@@ -54,18 +59,30 @@ sums through genus eight without enumerating another field. The power-echo
 packet applies exact Newton recurrences through `r=8` to the locked
 `q=3,5,7` histograms and independently checks the `C_2` Haar frequencies; it
 does not enumerate another family. The reciprocal filter evaluates five
-objects, four endpoints, and every coefficient through 256. The five frontier
-packets add 43 focused tests; all 386 tests pass both normally and under
-optimized Python; the
-offline validator checks 64 artifact bindings across 15 evaluations. No broad
-zero or conductor sweep was run.
+objects, four endpoints, and every coefficient through 256. The elliptic-pair
+packet transforms 645 locked histogram-atom pairs and accounts for 2,661 work
+units under an exclusive cap of 4,000. The `Sym^5` pilot sieves 15,931
+unordered Hasse trace pairs through `q<=2000`, accounts for 16,966 work
+units under an exclusive cap of 500,000, and uses only six elliptic-curve group
+additions after the bounded sieve. Neither packet enumerates a finite field, a
+curve, or a model. The five previously integrated frontier packets add 43
+focused tests, and all 386 tests passed both normally and under optimized
+Python at that checkpoint. The two additional packets supply 24 focused tests
+(14 plus 10); all 410 intended repository tests pass both normally and under
+optimized Python at this integration checkpoint. The offline validator checks
+64 artifact bindings across 15 evaluations. No broad zero, conductor, curve,
+field, or factor search was run.
 
 Smallest remaining gaps: derive one true source-faithful function-field analogue
 of `XD` or `HCNC`; evaluate the single virtual weight-six channel `R_6` left by
 the balanced control's exact third-moment reduction; prove or refute the
 quarantined all-`q` second-power echo candidate; classify which near-edge Weil
-classes are realized by marked genus-two Jacobians; and prove a root-number-
-conditioned weighted off-diagonal estimate uniform in a growing prime window.
+classes are realized by marked genus-two Jacobians; replace independent
+elliptic pairs by geometrically linked pairs and test which deformations of
+the product law detect a correspondence; perform an exact descent /
+`S`-integral analysis on the `Sym^5` collision curve while keeping
+prime-power conditions separate; and prove a root-number-conditioned weighted
+off-diagonal estimate uniform in a growing prime window.
 
 ## What this release contains
 
@@ -102,6 +119,8 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 | elliptic symmetric cube | exact `Sym^3 H^1` local factor; rational nodal coefficient curve; all-odd-`q` model/stack laws through base degree 12; 55-atom locked pushforward | `Sym^3(SU(2))` is a rank-one subimage of `USp(4)`; trace fourth moment is `4` versus generic `3`; `t -> t^3-2qt` is injective on integer traces for odd `q`; the coefficient curve has three real nodes | the lift is classical; curve membership does not certify arithmetic origin—`(0,0)` is an odd-`q` false positive; project-specific calculations have no literature-priority claim |
 | elliptic symmetric fourth | exact `Sym^4 H^1` degree-five factor, rational normalized coefficient curve, odd-prime-power moment laws, and 55-atom locked pushforward | the principal `SO(3)` slice in `SO(5)` has equation `d^2+yd-y^2-y^3=0`; its node has no rational arithmetic preimage; thin trace moments first differ from generic `SO(5)` at order three | the transfer is classical; a pointwise middle eigenvalue is not a common Tate subsystem; coefficient-curve membership is not arithmetic recognition |
 | symmetric-power trace aliasing | exact Dickson recurrence, parity-factor proof, and locked pushforwards through `m=18` | for every odd `q`, the scalar `Sym^m` trace recovers an integral base trace for `m=1,3 mod 6` and its sign-orbit for `m=2 mod 6`; the other classes have Hasse-admissible, source-witnessed collisions | a scalar trace is not a full local factor; the `m=5` quartic is a Diophantine target, not an integral-point classification or realization theorem |
+| elliptic `Sym^5` collision geometry | exact collision factorization and full-factor coefficients; a discriminant-first census of all Hasse-admissible integer pairs over odd prime powers `q<=2000`; exact elliptic-curve maps and primality certificate | the non-diagonal collision quartic `z^2=x^4+5x^3y+9x^2y^2+5xy^3+y^4` is birational to `Y^2=X^3-6X+5` and has a certified nontorsion point; the census has 61 scalar collisions at 21 bases, only 4 general pairs, and prime-field examples at `31`, `1021`, and `363804984411209881` | only 3 of 61 scalar collisions have equal degree-six factors; positive rank gives rational points, not an integral/prime-power classification; Waterhouse realizes the three prime-base trace pairs but rules out their higher odd-degree scaled towers; no compatible global family, Euler product, or external priority claim |
+| elliptic-pair Rankin--Selberg / tensor `SO(4)` | exact degree-four tensor polynomial, semialgebraic compact coefficient image, all-odd-prime-power low moments, and frozen independent-product pushforwards | normalized coefficients satisfy `x=uv`, `y=u^2+v^2-2`; the reconstruction fold is `D=(p-r)^2`, whereas the full root discriminant is `D(p-4)^2(r-4)^2`; `SO(4)` and `Sym^3(SU(2))` trace moments alias through order 4 and split at order 6 (`25` versus `34`) | the finite law is the ordered product of independent marked-model / elliptic-stack marginals, not a linked-curve or coarse-pair measure; a fold is not the full repeated-root locus; local equal/opposite traces imply no twist, isogeny, correspondence, automorphy, or global L-function identity |
 | Sym3/genus-two coefficient intersection | exact scaled curve, rational inverse off the nodal divisor, odd-prime candidate lemma, and complete transform of 251 locked atoms | exactly 7 atoms/451 members hit the curve; only 4 shapes/53 members are independently elliptic-trace witnessed, while 3 atoms/398 members are central ghosts | the factors have different weights; equal normalized coefficient shapes do not identify motives, families, or local factors |
 | function field, genus 2 | exhaustive exact `F_q/F_{q^2}` arithmetic at `q=3,5,7`; exact all-q proof certificate; exhaustive affine action | normalized means are `-104/243`, `-1994/3125`, `-12340/16807`; all-q mean tends to `-1`, `liminf rho_->=1/20`, five low-weight character means are exact, and the second-moment gap reduces to `chi_(0,4)+chi_(2,2)+2chi_(0,3)` | orbit averages require stabilizer weights; the remaining high-weight decay and full sign law are conjectural; toy coefficient minor |
 | product-variety tensor family | exact primitive degree-eight, weight-two `H^1(E)⊗H^1(C)` factor; all-`q` finite means from locked marginals; exact frozen `q=3,5,7` histogram convolution | compact image `(USp(2)×USp(4))/diag center` lies in `SO(8)`; `u^2h-u^4+2u^2v+u^2-2uw-w^2=0`; product-Haar trace `m4=6` versus generic `SO(8)` value `3`, and `(mean(h),mean(uw))=(1,1)` versus `(0,0)` | `A=-t_E` bridges the stored trace convention; frozen laws use ordered factor-pair model/curve-stack measure, not uniform coarse product varieties; no generic-`SO(8)` or convergence claim |
@@ -157,6 +176,8 @@ python research/l-families/atlas/function_field/genus1_cubic_family_laws.py --ch
 python research/l-families/atlas/function_field/elliptic_symmetric_cube_family.py --check
 python research/l-families/atlas/function_field/elliptic_symmetric_fourth_so5_slice.py --check
 python research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py --check
+python -B research/l-families/atlas/function_field/elliptic_sym5_collision_diophantine_pilot.py --check
+python -B research/l-families/atlas/function_field/elliptic_pair_rankin_so4_family.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/balanced_control_family_scan.py --check research/l-families/atlas/function_field/balanced_control_family_scan.json
@@ -185,6 +206,13 @@ python research/l-families/atlas/core/wrap_usp4_toy_minor_moments.py --check
 python research/l-families/atlas/core/validate_atlas.py
 python -m unittest discover -s tests -p "test_*.py"
 ```
+
+The two newest producers refuse work at their declared caps and record complete
+high-level work ledgers in their JSON artifacts. For their optimized replay,
+insert `-O` after `python -B`; their focused test modules are
+`tests.test_elliptic_pair_rankin_so4_family` and
+`tests.test_elliptic_sym5_collision_diophantine_pilot`. Neither replay
+constructs curves or finite fields.
 
 The offline validator uses only the standard library. It rejects duplicate JSON
 keys, non-finite numbers, Unicode-normalization drift, unknown fields, stale
@@ -240,6 +268,20 @@ rigor/scope confusions.
 - The symmetric-power alias theorem classifies only one scalar trace. Its
   complementary collisions do not normally identify complete local factors,
   and its `m=5` collision curve is left as a guarded Diophantine target.
+- The `Sym^5` pilot advances that target only to an exact positive-rank
+  rational collision curve and a bounded Hasse-lattice census. Only three
+  scalar collisions in the census have equal full degree-six factors.
+  Waterhouse realizes the displayed primitive prime-base trace pairs as local
+  elliptic isogeny classes, but excludes their nonzero higher odd-degree scaled
+  traces; neither rational points nor weighted scaling supplies infinitely many
+  primitive prime bases, a compatible family, or an Euler product.
+- The elliptic-pair tensor packet uses independent ordered marginals. Its
+  `SO(4)` coefficient region, exact finite corrections, and compact Haar
+  moment comparison do not prove finite-family equidistribution, actual
+  monodromy, or the existence of geometrically linked curves. The reconstruction
+  fold `D=(p-r)^2` is not the full quartic root discriminant, and a
+  one-prime coincidence `A=+/-B` gives no twist, isogeny, or global
+  correspondence.
 - The Sym3/genus-two intersection is between normalized coefficient shapes of
   different weights. Source-witnessing an elliptic trace does not make a
   genus-two member a symmetric-cube motive, and the central hits remain

@@ -772,18 +772,32 @@ even-degree twist quotient and the exceptional odd `m=5 mod 6` sign pair
 whose complete local factors coincide over the characteristic-three
 construction.
 
-The second target starts with the exact `m=5` scalar collision curve
+The `m=5` collision curve is now understood at the rational level:
 
 \[
 z^2=x^4+5x^3y+9x^2y^2+5xy^3+y^4.
 \]
 
-Classify its integral points subject to `q=(z+2(x^2+xy+y^2))/3` being an odd
-prime power and both traces satisfying Hasse, then import a realization
-theorem only as a separate step. The point `q=31,(x,y)=(-7,3)` proves that
-the collision geometry is not confined to the characteristic-three
-cyclotomic construction, but by itself carries no curve-realization or
-density conclusion.
+It is birational to
+
+\[
+\mathcal E:\quad Y^2=X^3-6X+5,
+\]
+
+and the explicit point `Q=(-2,3)` is nontorsion. Multiples `2Q`, `3Q`,
+and `7Q` produce three rigorously certified prime-field collisions; a
+complete Hasse-lattice census through `q=2000` finds no other primitive
+general orbit in that range. Waterhouse realizes the three base-prime trace
+pairs by ordinary elliptic curves, but rules out their nontrivially scaled
+odd-exponent towers as elliptic traces.
+
+The next theorem target is therefore an `S`-integral/descent analysis of the
+rational maps from `\mathcal E` to `(x,y,z,q)`. Determine the Mordell--Weil
+group, classify primitive integral collision rays, and isolate the terms for
+which `q` is a prime power. Infinitude of rational points is already proved;
+infinitude of integral points, primitive prime values, or globally compatible
+elliptic families is not. The prime-power condition and Waterhouse
+realizability must remain separate filters.
 
 ### Plethysm-ladder target: propagate coefficient maps beyond `Sym^3`
 
@@ -801,7 +815,7 @@ and its normalized curve map satisfies
 \[
  \bigwedge^2\operatorname{Sym}^mV
  \simeq
- \bigoplus_{\substack{1\le i\le m\\i\ {m odd}}}
+ \bigoplus_{\substack{1\le i\le m\\ i\text{ odd}}}
  \operatorname{Sym}^{2m-2i}V\otimes(\det V)^i.
 \]
 
@@ -811,6 +825,40 @@ pullbacks to the existing locked coefficient supports. The theorem must
 separate representation-theoretic identities from arithmetic realization:
 matching a transformed local polynomial or coefficient point does not by
 itself identify motives, compatible systems, or global Euler products.
+
+### Elliptic-pair target: detect geometry inside the `SO(4)` product law
+
+For independent elliptic-form factors, the normalized tensor coefficients are
+
+\[
+x=uv,\qquad y=u^2+v^2-2.
+\]
+
+The exact compact image is the two-dimensional `SO(4)` region obtained by
+reconstructing `p=u^2,r=v^2\in[0,4]`. Its reciprocal-quartic discriminant
+splits into two mechanisms:
+
+\[
+\operatorname{Disc}_Z(P)
+=\bigl((y+2)^2-4x^2\bigr)
+ \bigl(x^2-4(y-2)\bigr)^2
+=(p-r)^2(p-4)^2(r-4)^2.
+\]
+
+The independent product law is now exact, including all-odd-prime-power low
+moments and locked fold/endpoint masses. The next arithmetic target is to
+replace independent draws by geometrically linked elliptic pairs: isogenous
+curves, quadratic twists, shared covers, or fibers in one surface. Compute the
+first failure of product moment factorization and decide which part is
+explained by the fold `p=r`, by a Hasse endpoint, or by a genuinely global
+correspondence.
+
+Trace moments alone are provably lossy here: standard `SO(4)` and
+`Sym^3(SU(2))` agree through order four and first split at order six
+(`25` versus `34`). A useful recognition theorem should combine the
+two-dimensional coefficient region, at least the sixth trace moment, and
+cross-prime compatibility. It must not infer an isogeny or twist from
+`A=\pm B` at one field.
 
 ### Adjacent higher-variety target: distinguish tensor lifts inside `SO(8)`
 
