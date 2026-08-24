@@ -1,0 +1,1 @@
+Exact-head CI trigger for cross-review. The Lean source tree below `formal/RiemannFormal`, comparator files, registry, blueprint, dependency pins, and scripts are byte-identical to PR #733 head 770c61e9d0ace520be2333f348d0bf239e0120ad.
