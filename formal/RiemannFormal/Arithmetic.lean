@@ -5,4 +5,3 @@ import RiemannFormal.Arithmetic.HalfDivisor
 import RiemannFormal.Arithmetic.Wavelet
 import RiemannFormal.MellinLandau
 import RiemannFormal.Arithmetic.AxiomAudit
-import RiemannFormal.Arithmetic.ComparatorSmoke

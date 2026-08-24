@@ -4,11 +4,19 @@ import RiemannFormal.Arithmetic.Foundations
 
 namespace RiemannFormal.Arithmetic.Wavelet
 
-/-- The four-tap compact filter with polynomial `(1 - αD)(1 - D)^2`. -/
+/-!
+# Generic finite tap helpers
+
+This module contains finite algebra used by the reviewed wavelet packet.  It
+does **not** claim the full canonical ratio-eight kernel, factor-67 piecewise
+copy, compact Abel--Mertens frame, or quantitative same-K1 translation.
+-/
+
+/-- Generic four-tap filter with polynomial `(1 - αD)(1 - D)^2`. -/
 def fourTapValues {R : Type*} [Ring R] (α x0 x1 x2 x3 : R) : R :=
   x0 - (α + 2) * x1 + (2 * α + 1) * x2 - α * x3
 
-/-- The same filter applied to a sequence at one dyadic location. -/
+/-- The same generic filter applied to a sequence at one index. -/
 def fourTap {R : Type*} [Ring R] (α : R) (f : ℕ → R) (n : ℕ) : R :=
   fourTapValues α (f n) (f (n + 1)) (f (n + 2)) (f (n + 3))
 
@@ -38,7 +46,9 @@ theorem fourTapValues_geometric_zero {R : Type*} [CommRing R]
   rw [fourTapValues_geometric, h]
   ring
 
-/-- No three-tap filter can annihilate constants, affine data, and a distinct geometric mode. -/
+/-- No three-tap filter can annihilate constants, affine data, and a distinct
+geometric mode.  This is generic minimality, not yet the complete canonical
+wavelet theorem. -/
 theorem threeTap_minimal (q c0 c1 c2 : ℂ) (hq : q ≠ 1)
     (hconst : c0 + c1 + c2 = 0)
     (haff : c1 + 2 * c2 = 0)
@@ -67,11 +77,14 @@ theorem threeTap_minimal (q c0 c1 c2 : ℂ) (hq : q ≠ 1)
   · simpa [hc2] using hc1
   · exact hc2
 
-/-- The support exponents `0,1,2,3` span the exact ratio eight. -/
-theorem ratioEight_support : 2 ^ (3 : ℕ) = 8 := by norm_num
+/-- The four sampled dyadic indices span three doublings.  This is only an
+index-span helper; it is not the canonical piecewise support theorem. -/
+theorem dyadic_four_tap_index_span : 2 ^ (3 : ℕ) = 8 := by norm_num
 
-/-- Abstract factor-67 antisymmetry after the two polynomial nuisance modes are removed. -/
-theorem factor67_antisymmetry {R : Type*} [CommRing R]
+/-- Generic sign flip after affine nuisance terms are removed.  The theorem is
+not named as the reviewed factor-67 kernel identity because no factor 67 or
+piecewise endpoint convention occurs in its statement. -/
+theorem affine_nuisance_sign_flip {R : Type*} [CommRing R]
     (α f0 f1 f2 f3 c d : R) :
     fourTapValues α
         (-f0 + c)
@@ -82,39 +95,41 @@ theorem factor67_antisymmetry {R : Type*} [CommRing R]
   simp [fourTapValues]
   ring
 
-/-- Forward dyadic shift. -/
+/-- Forward index shift. -/
 def shift {R : Type*} (k : ℕ) (f : ℕ → R) : ℕ → R := fun n => f (n + k)
 
 /-- First finite difference. -/
 def difference {R : Type*} [Sub R] (f : ℕ → R) : ℕ → R :=
   fun n => f n - f (n + 1)
 
-/-- The `1 - αD` factor. -/
+/-- The generic `1 - αD` factor. -/
 def alphaDifference {R : Type*} [Ring R] (α : R) (f : ℕ → R) : ℕ → R :=
   fun n => f n - α * f (n + 1)
 
-/-- Exact operator factorization of the compact wavelet. -/
+/-- Exact operator factorization of the generic four-tap helper. -/
 theorem fourTap_eq_factored {R : Type*} [CommRing R]
     (α : R) (f : ℕ → R) (n : ℕ) :
     fourTap α f n = alphaDifference α (difference (difference f)) n := by
   simp [fourTap, fourTapValues, alphaDifference, difference]
   ring
 
-/-- Dilation/translation is performed with the same finite kernel. -/
+/-- Finite shift identity for the same kernel. -/
 theorem fourTap_shift {R : Type*} [Ring R]
     (α : R) (f : ℕ → R) (k n : ℕ) :
     fourTap α (shift k f) n = fourTap α f (n + k) := by
   simp [fourTap, shift, add_assoc, add_left_comm, add_comm]
 
-/-- Finite Abel summation, kept entirely at the algebraic finite-sum level. -/
-theorem finite_abel_mertens (f g : ℕ → ℚ) (n : ℕ) :
+/-- Generic finite summation by parts.  The canonical compact Abel--Mertens
+wavelet frame additionally requires the exact wavelet kernel and endpoint
+conventions and is not asserted here. -/
+theorem finite_sum_by_parts (f g : ℕ → ℚ) (n : ℕ) :
     (∑ i ∈ Finset.range n, f i * g i) =
       f (n - 1) * (∑ i ∈ Finset.range n, g i) -
         ∑ i ∈ Finset.range (n - 1),
           (f (i + 1) - f i) * (∑ j ∈ Finset.range (i + 1), g j) := by
   simpa [smul_eq_mul] using (Finset.sum_range_by_parts f g n)
 
-/-- Kernel tags prevent the historical K0/K1 detector mutation. -/
+/-- Kernel tags make direct K0/K1 substitution ill-typed. -/
 inductive KernelId where
   | K0
   | K1
@@ -123,14 +138,17 @@ inductive KernelId where
 structure KernelDetector (kernel : KernelId) where
   coefficient : ℕ → ℚ
 
+/-- Type-level K0/K1 firewall.  This is not the analytic counterexample proving
+the historical cross-kernel equivalence false. -/
 @[simp]
 theorem K0_ne_K1 : KernelId.K0 ≠ KernelId.K1 := by decide
 
-/-- A same-K1 translation is definitionally source preserving. -/
-def sameK1Translation (d : KernelDetector .K1) : KernelDetector .K1 := d
+/-- Identity on one already-fixed K1 detector.  This is only a type-preservation
+helper, not the reviewed largest-prime/Vaughan `L¹(dX/X)` translation. -/
+def sameKernelIdentity (d : KernelDetector .K1) : KernelDetector .K1 := d
 
 @[simp]
-theorem sameK1Translation_coefficient (d : KernelDetector .K1) :
-    (sameK1Translation d).coefficient = d.coefficient := rfl
+theorem sameKernelIdentity_coefficient (d : KernelDetector .K1) :
+    (sameKernelIdentity d).coefficient = d.coefficient := rfl
 
 end RiemannFormal.Arithmetic.Wavelet

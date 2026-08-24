@@ -182,8 +182,13 @@ theorem eta_mul_eta : eta * eta = (ArithmeticFunction.zeta : ArithmeticFunction 
     _ = (ArithmeticFunction.zeta : ArithmeticFunction ℚ) (p ^ k) := by
       simp [ArithmeticFunction.zeta_apply_ne (pow_ne_zero _ hp.ne_zero)]
 
-/-- Finite source identity underlying the two-field to one-field reduction. -/
-theorem oneFieldReduction (b : ArithmeticFunction ℚ) :
+/-- Generic arithmetic-function convolution identity following from
+`eta * eta = zeta` and Möbius inversion.
+
+This is not the complete reviewed ratio-four one-field packet: no `b_U/h_U`
+field, Hardy norm-three estimate, endpoint localization, or signed
+near-collision theorem is asserted here. -/
+theorem genericOneFieldConvolution (b : ArithmeticFunction ℚ) :
     (b * eta) * (b * eta) * (ArithmeticFunction.moebius : ArithmeticFunction ℚ) = b * b := by
   calc
     (b * eta) * (b * eta) * (ArithmeticFunction.moebius : ArithmeticFunction ℚ) =
