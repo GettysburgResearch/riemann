@@ -1,0 +1,49 @@
+{
+  "created": "2026-08-24",
+  "execution_pr": 751,
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "parent_pr": 719,
+  "previous_audited_parent_head": "c2e82cfdd254a478731f005b3d83b49d3e1e33ea",
+  "current_observed_parent_head": "cd4333d0a09f3eb57e240548ebdecaa56f5c6583",
+  "consumed_coordinate": "horizon-safe owner-excluded balanced current HBCQDSP102888",
+  "consumed_files_unchanged": [
+    {
+      "path": "claims/lemmas/L-102883-coherent-centered-double-phase-energy.md",
+      "blob_sha": "c2fb229f90b8326b7631c45569246f2ef7061c89"
+    },
+    {
+      "path": "claims/lemmas/L-102886-dyadic-frozen-vaughan-cutoff-removes-transfer-atoms.md",
+      "blob_sha": "26abf63b6a69c449f89313b151931b2dc71a42ad"
+    },
+    {
+      "path": "claims/lemmas/L-102887-horizon-safe-pair-gauge-eliminates-the-largest-two-smooth-boundary.md",
+      "blob_sha": "383aa27fee269645e45c26c12fbd4a97a6b337a8"
+    },
+    {
+      "path": "claims/lemmas/L-102888-owner-excluded-vaughan-has-no-smooth-boundary.md",
+      "blob_sha": "80864f4f83db85daad4e94a68ed0457077d3b9b6"
+    },
+    {
+      "path": "claims/refutations/R-102869-differentiating-the-dynamic-vaughan-cutoff-omits-transfer-atoms.md",
+      "blob_sha": "db9285088f8a37c6214137439f7652113e4cf2c2"
+    }
+  ],
+  "new_parallel_parent_routes": [
+    {
+      "claim": "SGIC102890",
+      "path": "claims/theorems/T-102890-stopped-vaughan-gcd-phase-frontier.md",
+      "blob_sha": "10627356e8f0a01009eee804bdbed3a7eb51d24a",
+      "consumed_by_pr751": false,
+      "reason": "alternative stopped-largest-two coordinate"
+    },
+    {
+      "claim": "GMBC102893",
+      "path": "claims/theorems/T-102900-partial-completion-phase-transition-and-midpoint-square-frontier.md",
+      "blob_sha": "a09dc6615b88708e646305d381a6c90ebea32964",
+      "consumed_by_pr751": false,
+      "reason": "parallel geometric-midpoint square route"
+    }
+  ],
+  "scientific_effect": "none on the exact T106020/T106030 dependency; PR751 remains a separate family analysis of the unchanged horizon-safe source coordinate",
+  "rh_established": false
+}
