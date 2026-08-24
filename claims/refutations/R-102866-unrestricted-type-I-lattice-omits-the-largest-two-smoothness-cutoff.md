@@ -3,7 +3,8 @@
 Claim ID: `R-102866`  
 Status: **EXACT SOURCE-TYPING REFUTATION OF L-102867 AS SUBMITTED**  
 Created: 2026-08-24  
-Depends on: `L-102831`, `L-102866--L-102868`  
+Corrected: 2026-08-24  
+Depends on: `L-102831`, corrected `L-102866`, `L-102869`  
 RH status: **unproved**
 
 The largest-two squareclass packet is not
@@ -32,17 +33,19 @@ Consequently, after applying the Vaughan identity, the Type-I lattice is
 }
 \tag{R-102866.2}
 
-not the unrestricted sum used in `L-102867.4`.
+not the unrestricted sum used in the first version of `L-102867`.
 
-The zero continuous moment of `L-102866` proves
+Corrected `L-102866` proves
 
 \[
-\sum_{m\ge1}\frac1mR_L(Z/m^2)=O(Z^{-1/2}),
+\sum_{m\ge1}\frac1mR_L(Z/m^2)
+=4(1-\sqrt2)(\log2)^2+O_R(Z^{-1/2}),
 \]
 
-but it does not prove the same estimate after the `q`-smooth stopping rule.
-The missing terms are not a finite endpoint error: they are a moving
-largest-prime boundary.
+so the unrestricted Type-I coordinate has a favorable nonnegative square main
+after the leading minus sign. That does not determine the stopped lattice.
+The missing terms are a moving largest-prime boundary, not a fixed endpoint
+error.
 
 ## Exact Buchstab boundary
 
@@ -64,22 +67,20 @@ largest-prime disintegration gives
 }
 \tag{R-102866.3}
 
-with only terms meeting the support of `R_L` retained. The second term is the
-literal smooth-boundary/owner-transfer current.
+with only support-active terms retained. The second term is the literal
+smooth-boundary/owner-transfer current.
 
-Thus the unrestricted zero-moment lattice is one closed coordinate, but the
-stopped smooth boundary must be retained. It may be treated through the
-Dickman--Stieltjes/Bellman corridor only at that corridor's proved uniform
-scope; the dynamic critical finite block is still open in the integrated
-front door.
+It may be treated through Dickman--Stieltjes/Bellman coordinates only at their
+proved uniform scope; the integrated front door explicitly leaves the dynamic
+critical finite block open.
 
 ## Disposition
 
 ```text
-L-102866 zero unrestricted lattice moment      VERIFIED
-L-102867 unrestricted square-core composition  FALSE AT SOURCE-TYPING LAYER
-L-102868 claims depending on global Type-I closure SUPERSEDED IN THAT SCOPE
+L-102866 exact unrestricted lattice asymptotic    VERIFIED / NONZERO MAIN
+L-102867 literal largest-two composition           SUPERSEDED
+L-102868 conclusions using unrestricted Type-I     SUPERSEDED IN THAT SCOPE
+L-102869 stopped-prime decomposition                VERIFIED EXACT
 ```
 
-The corrected source decomposition is deposited in `L-102869`. No conclusion
-about RH follows from the unrestricted lattice estimate alone.
+No conclusion about RH follows from the unrestricted lattice estimate alone.
