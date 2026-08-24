@@ -1,7 +1,9 @@
-# X-106070 — Scale-matched root-residue occupancy replay
+# X-106070 — Scale-matched palette, core-matching, and quartic-payment replay
 
-This replay authenticates the finite algebra used by
-`L-106070--L-106073` and `T-106070`.
+This replay authenticates the finite algebra retained from
+`L-106070--L-106072`.  The first `L-106073/T-106070` closure proposal has been
+retracted by `R-106071`; this replay never checked the failed
+quartic-to-quadratic adapter.
 
 Run from the repository root:
 
@@ -20,32 +22,52 @@ sha256=67e946c4710d492cae450d7a2581f72e81ab7d8b72c11f5871ad24121212748b
 
 ## Checked exactly
 
-The standard-library replay checks:
-
 - four deterministic Bertrand-interval prime candidates and retention of three
   primes different from `67`;
 - the linear owner-pattern partition and existence of one colour-safe modulus;
 - coefficientwise unramifiedness of every fixture `P*c^2` in its block;
-- injectivity and two-sided uniqueness of scale-matched collision lines;
+- injectivity and two-sided uniqueness of fixed-owner collision lines;
 - disjointness of the plus and minus quadratic-root lines;
 - representation aggregation by finite-dimensional Cauchy;
-- the product-energy bound for root-residue occupancy;
-- the exact inequality `ell/B^2 <= 256/B` in the owner budget;
-- harmonic control of distinct owner products;
+- the **quartic** matched-pair product-energy bound;
+- the inequality `ell/B^2 <= 256/B` for that quartic owner-pair budget;
+- harmonic owner bookkeeping;
 - Cauchy across a finite linear source partition;
 - the compact-support implication `X/512 < P*B^2 <= X`.
+
+## Binding correction
+
+The replay field historically named
+
+```text
+root_residue_occupancy_has_product_energy_bound
+```
+
+means only
+
+\[
+\sum_{P,Q,d}\|Z_{P,c(d)}\|^2\|Z_{Q,d}\|^2,
+\]
+
+a quartic Hilbert--Schmidt shadow.  It does not mean the quadratic character
+occupancy
+
+\[
+\sum_r\left\|\sum_{Pc^2\equiv r}Z_{P,c}\right\|^2.
+\]
+
+`X-106071` is the exact rejection certificate for confusing these objects.
 
 ## Not checked
 
 The replay does **not** prove:
 
-- Bertrand's postulate;
-- the divisor-square estimate for stopped-Vaughan coefficients;
-- the uniform `X^(o(1))` representation bound;
+- the quadratic owner-residue estimate `HQORO106071`;
+- `BPOE103300`;
+- the divisor-square estimate or its uniform source composition;
 - any analytic Dirichlet-`L` or zeta estimate;
 - the fixed Mellin consumer;
 - the Riemann Hypothesis.
 
-Those are mathematical inputs or consequences cited in the proof packet.  The
-replay is an exact finite mutation detector, not an independent proof of the
-extraordinary conclusion.
+It remains a valid finite mutation detector for the palette, matching and
+quartic-payment mathematics that survived the audit.
