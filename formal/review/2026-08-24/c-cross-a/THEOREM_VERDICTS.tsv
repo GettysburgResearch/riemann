@@ -1,0 +1,23 @@
+id	declaration_or_statement	source_scope	formal_result	verdict	explicit_hypotheses_or_blocker	review_note
+T01	RiemannFormal.Upstream.projectRH_is_mathlib	Mathlib RH bridge	Iff.rfl	FORMALLY_VERIFIED		Exact proposition.
+T02	projectRiemannZeta_analyticAt / completed-zeta adapters	Mathlib zeta normalizations	Local adapters	ADAPTER_VERIFIED	s!=1; completed Lambda also s!=0	Exceptional points correct.
+T03	projectZeroMultiplicity_def	Zeta23 zeroMult	rfl to analyticOrderAt.toNat	ADAPTER_VERIFIED		Correct convention.
+T04	projectCenteredZero_reconstruct	Zeta23 gammaOf	Exact field identity	FORMALLY_VERIFIED	I!=0	Correct sign.
+T05	projectReflectedZero_mem / multiplicity	Zeta23 reflection seam	Direct upstream proofs	ADAPTER_VERIFIED	open-strip nontrivial zero	Correct local scope.
+T06	mellin_dilation	Mathlib standard Mellin	Exact equality	FORMALLY_VERIFIED	a>0	Correct for standard Mellin.
+T07	hasMellin_linearCombination_two	Mathlib standard Mellin	Exact two-term result	FORMALLY_VERIFIED_WITH_FIXES	both summands convergent	Not yet a finite Finset API.
+T08	compact_power_kernel_hasMellin	Mathlib Ioc power kernel	Exact transform	FORMALLY_VERIFIED	0<Re(s)+Re(a)	Not the L-99270 box multiplier.
+T09	mellin_analyticAt_of_power_bounds	Mathlib Mellin differentiability	Exact adapter	FORMALLY_VERIFIED	local integrability; top/bottom Big-O; strip inequalities	No continuation/convergence conflation.
+T10	fixed_holomorphic_defect_transfer	L-99282 generic analytic core	Exact local theorem	FORMALLY_VERIFIED	defect analytic; main nonremovable	Fixed-function scope.
+T11	nonvanishing_multiplier_preserves_nonremovable	L-99270 generic multiplier core	Exact local theorem	FORMALLY_VERIFIED	multiplier analytic and nonzero at pole	Source multiplier remains open.
+T12	fixed_mellin_singularity_transfer	Generic composition	Exact local theorem	FORMALLY_VERIFIED	fixed defect, fixed multiplier, identity, main singularity	Does not by itself prove any zeta pole.
+T13	reciprocalZeta_order_of_zeta_order	Reciprocal-zeta order	Exact conditional order identity	FORMALLY_VERIFIED_WITH_FIXES	meromorphic zeta order supplied	Analytic multiplicity-to-meromorphic-order adapter missing.
+T14	MellinLandauBoundarySingularity	Intended L-99272 abstraction	Prop definition	STATEMENT_TOO_STRONG	Proof remains explicit, but positivity is only on x>=1 while standard Mellin lower abscissa is governed by x->0	False at written generality; replace with exact tail transform.
+T15	nonnegative_landau_boundary	Wrapper around T14	Application of explicit proof argument	PROVED_CONDITIONAL	hLandau plus NonnegativeMellinData	Kernel-clean conditional wrapper, but its premise is the wrong theorem.
+T16	SubpowerNegativeMassHolomorphy	Intended L-99270 abstraction	Prop definition	STATEMENT_TOO_STRONG	Mass only on [1,X]; full Mellin behavior on (0,1) uncontrolled	False at written generality.
+T17	subpower_negative_mass_holomorphic	Wrapper around T16	Application of explicit proof argument	PROVED_CONDITIONAL	hSubpower, local integrability, mass bound	Conditional on wrong/overbroad proposition.
+T18	subpower_negative_mass_singularity_transfer	Generic defect transfer	Exact local theorem	FORMALLY_VERIFIED	negative-part transform analytic at s0; main nonremovable	Does not formalize the negative-mass holomorphy itself.
+T19	functionalEquationReflection_closes_RH	Reflection closure	Exact conditional implication	PROVED_CONDITIONAL	ReflectsRHAdmissibleZeros; NoAdmissibleZeroRightOfCriticalLine	Right-zero exclusion is not derived from Mellin APIs.
+T20	Strongest honest conditional Mellin consumer	Heavy-pass required composition	No declaration found	INCOMPLETE_PUBLICATION	Landau, negative mass, detector Mellin identity, noncancellation, reflection	Missing conclusion-facing theorem.
+T21	Comparator.MellinAPI.fixedMellinConsumerSolution	Generic multiplier+defect comparator	Source proof appears sorry-free and Challenge-independent	FORMALLY_VERIFIED_WITH_FIXES	build not completed	Comparator is narrower than final consumer.
+T22	RiemannFormal.Upstream.zeta23_bridge_preserves_RH	Bootstrap compatibility declaration	Removed in PR #734 but still #print-ed by trusted top-level audit	BUILD_FAILURE		Default build cannot elaborate the audit module as written.
