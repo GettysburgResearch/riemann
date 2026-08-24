@@ -1,0 +1,27 @@
+{
+  "arithmetic_class": "EXACT_INTEGER_RATIONAL_GAUSSIAN_CYCLIC",
+  "checks": {
+    "cyclic_plancherel": 1000,
+    "owner_excluded_inverse": 6000,
+    "owner_quadratic_class": 1360,
+    "root_fibre_coherence": 420,
+    "vaughan_defect_identity": 30000
+  },
+  "open": {
+    "hbcqdsp102888": true,
+    "nem106030": true,
+    "pcm106030": true,
+    "riemann_hypothesis": true,
+    "socm106020": true
+  },
+  "proof_object_sha256": "48c20069952efd0ec21e3b23a38c0b78af07e3b010e0dbb346e32014e898398b",
+  "proved": {
+    "balanced_vaughan_mollifier_defect_identity": true,
+    "finite_cyclic_plancherel": true,
+    "owner_excluded_mobius_inverse": true,
+    "owner_quadratic_class_partition": true,
+    "principal_quadratic_root_coherence": true
+  },
+  "total_checks": 38780,
+  "verdict": "PASS_X_106030_MOLLIFIED_OWNER_CONDUCTOR_NORMAL_FORM"
+}
