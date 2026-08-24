@@ -1,0 +1,41 @@
+{
+  "schema": "riemann.source_lock.t105620.v1",
+  "claim_namespace": "105620",
+  "created_at": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "pr_number": 729,
+  "source_head_before_t105620": "e1aa453f2945b621c0f31b420e70d921ad93e467",
+  "base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "base_sha": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "interfaces": {
+    "actual_turan_source": "L-105613 / sibling L-106401",
+    "two_boundary_polarization": "L-105260",
+    "phase_barycenter": "L-105600",
+    "height_shell_winding": "L-105602",
+    "one_sided_phase_gap": "L-105422",
+    "allpass_hankel_charge": "L-105290"
+  },
+  "new_claims": [
+    "L-105620",
+    "L-105621",
+    "L-105622",
+    "L-105623",
+    "R-105620",
+    "T-105620"
+  ],
+  "replay": {
+    "verdict": "PASS_X_105620_CURRENT_TURAN_HIERARCHY",
+    "checks": 200,
+    "proof_object": "62195a8b977b7ddb34607fcd0cbd7d19f9d06161151148104d593a9e7b7e319c"
+  },
+  "open_gates": [
+    "APCX105620",
+    "BSHE105620",
+    "PCC105623",
+    "fixed-width moving-saddle hostile review"
+  ],
+  "mctphys105610_proved": false,
+  "hshe105602_proved": false,
+  "rh_established": false
+}
