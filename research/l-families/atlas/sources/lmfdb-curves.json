@@ -1,0 +1,45 @@
+{
+  "retrieval_note": "The compact manifest records selected fields and response locks; it is not a raw database mirror. bad_local_trace was independently obtained by exact point count on the displayed semistable reduction model.",
+  "source": "LMFDB",
+  "records": [
+    {
+      "ainvs": [0, -1, 1, -10, -20],
+      "analytic_rank": 0,
+      "api_response_sha256": "e0824c28a68ff026be9f4de19cba39811cb8874527a1893b04c6e0afda80927b",
+      "api_response_timestamp": "2026-08-24T14:48:23.287985Z",
+      "api_url": "https://www.lmfdb.org/api/ec_curvedata/?lmfdb_label=11.a2&_format=json",
+      "bad_local_trace": 1,
+      "bad_primes": [11],
+      "conductor": 11,
+      "curve_label": "11.a2",
+      "lfunction_url": "https://www.lmfdb.org/L/EllipticCurve/Q/11/a/",
+      "root_number": "+1"
+    },
+    {
+      "ainvs": [0, 0, 1, -1, 0],
+      "analytic_rank": 1,
+      "api_response_sha256": "2181633704e792c705268fdf559a510fba94154176549a2c47f80c201a54d7a9",
+      "api_response_timestamp": "2026-08-24T14:48:23.661278Z",
+      "api_url": "https://www.lmfdb.org/api/ec_curvedata/?lmfdb_label=37.a1&_format=json",
+      "bad_local_trace": -1,
+      "bad_primes": [37],
+      "conductor": 37,
+      "curve_label": "37.a1",
+      "lfunction_url": "https://www.lmfdb.org/L/EllipticCurve/Q/37/a/",
+      "root_number": "-1"
+    },
+    {
+      "ainvs": [0, 1, 1, -2, 0],
+      "analytic_rank": 2,
+      "api_response_sha256": "5b20fffa06d51950b2d0a900a954fdddc585bdba1b6bbf7cf06813229a50e550",
+      "api_response_timestamp": "2026-08-24T14:48:23.950032Z",
+      "api_url": "https://www.lmfdb.org/api/ec_curvedata/?lmfdb_label=389.a1&_format=json",
+      "bad_local_trace": 1,
+      "bad_primes": [389],
+      "conductor": 389,
+      "curve_label": "389.a1",
+      "lfunction_url": "https://www.lmfdb.org/L/EllipticCurve/Q/389/a/",
+      "root_number": "+1"
+    }
+  ]
+}

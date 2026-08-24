@@ -1,0 +1,136 @@
+{
+  "analytic_properties": {
+    "analytic_continuation": "IMPORTED_THEOREM",
+    "euler_product": "IMPORTED_THEOREM",
+    "functional_equation": "IMPORTED_THEOREM",
+    "source_ref": "DLMF:25.2"
+  },
+  "assumptions": [
+    {
+      "code": "CLASSICAL_ZETA_THEORY",
+      "statement": "The classical analytic continuation and functional equation are imported.",
+      "status": "IMPORTED"
+    }
+  ],
+  "base_field": {
+    "characteristic": 0,
+    "label": "Q"
+  },
+  "central_data": {
+    "assertion": "EXACT",
+    "notes": "This does not assert anything about noncentral zeros.",
+    "parity_forced": false,
+    "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+    "source_ref": "DLMF:25.2",
+    "value": 0
+  },
+  "classification": {
+    "automorphic_class": "GL1",
+    "degree": 1,
+    "domain": "NUMBER_FIELD",
+    "family_id": "GL1.ZETA",
+    "motivic_weight": 0,
+    "object_type": "RIEMANN_ZETA",
+    "self_duality": "SELF_DUAL",
+    "symmetry_type": "UNKNOWN"
+  },
+  "completed_normalization": {
+    "analytic_variable": "s",
+    "conductor_factor": "1",
+    "critical_center": "1/2",
+    "exact_formula": "Lambda(s)=pi^(-s/2) Gamma(s/2) zeta(s)",
+    "gamma_factors": [
+      {
+        "kind": "GAMMA_R",
+        "multiplicity": 1,
+        "scale": "pi^(-s/2)",
+        "shift": "0"
+      }
+    ],
+    "normalization_id": "ZETA.UNITARY.STANDARD",
+    "notes": "The pole-removing xi prefactor is not used by the local-Euler detector."
+  },
+  "conductor": {
+    "kind": "INTEGER",
+    "norm_decimal": "1",
+    "status": "IMPORTED_THEOREM",
+    "value": "1"
+  },
+  "data_sources": [
+    {
+      "coverage": "Definition, Euler product, and classical functional equation only.",
+      "hashes": [],
+      "identifier": "DLMF:25.2",
+      "locator": "https://dlmf.nist.gov/25.2",
+      "notes": "Stable section identifier; no external page bytes are claimed as checked-in.",
+      "retention": "DURABLE_EXTERNAL",
+      "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+      "role": "analytic_normalization",
+      "source_kind": "PUBLICATION",
+      "version_or_retrieved_utc": "2026-08-24T15:00:00Z"
+    }
+  ],
+  "euler_product": {
+    "bad_factor_policy": "There are no finite bad primes.",
+    "coverage": "All rational primes admitted by the finite prime_bound.",
+    "good_factor_formula": "L_p(s)^(-1)=1-p^(-s)",
+    "reciprocal_coefficient_definition": "mu_zeta(p)=-1",
+    "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+    "source_refs": [
+      "DLMF:25.2"
+    ]
+  },
+  "functional_equation": {
+    "exact_formula": "Lambda(s)=Lambda(1-s)",
+    "root_number": "+1",
+    "root_number_status": "IMPORTED_THEOREM",
+    "source_ref": "DLMF:25.2"
+  },
+  "identity_kernel": {
+    "base_field_label": "Q",
+    "construction": "Riemann zeta function over Q",
+    "slug": "ZETA.RIEMANN",
+    "source_identifiers": [
+      "DLMF:25.2"
+    ],
+    "twist_parameters": [],
+    "version": 1
+  },
+  "identity_sha256": "06d569f76e2b9259e540987deed9aa2bb6cefe4ee3b639f5673109c9c8f2ca87",
+  "notes": "Reference GL(1) row. RH is neither assumed nor tested.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "L_FUNCTION_SPEC",
+  "revision": 1,
+  "schema_version": "riemann.atlas.l_function_spec.v1",
+  "scope_boundary": "Phase-0 metadata and declared finite adapters only; no zero-set or global conclusion is inherited.",
+  "semantic_id": "ATLAS.LFUNC.ZETA.RIEMANN.H06d569f76e2b9259e540987deed9aa2b",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "source_identifiers": [
+    "DLMF:25.2"
+  ],
+  "supersedes": [],
+  "title": "Riemann zeta reference object",
+  "zero_data": {
+    "central_zero_policy": "NOT_APPLICABLE",
+    "coverage_class": "NOT_APPLICABLE",
+    "precision": null,
+    "rigor_level": "RIGOROUS_GIVEN_IMPORTED_THEOREM",
+    "source_refs": [],
+    "usage": "NOT_USED",
+    "window": null
+  }
+}

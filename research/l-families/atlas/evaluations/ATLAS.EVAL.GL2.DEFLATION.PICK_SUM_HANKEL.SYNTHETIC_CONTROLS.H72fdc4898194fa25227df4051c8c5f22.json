@@ -1,0 +1,203 @@
+{
+  "adapter_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "RAW_BYTES",
+      "media_type": "text/x-python",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/gl2/deflation.py",
+      "role": "exact_matrix_adapter",
+      "schema_path": null,
+      "sha256": "3f1036449edd6055a799f0af1bc291ec693252b9855727312b4b08023a655d29"
+    }
+  ],
+  "arithmetic": {
+    "class": "SYNTHETIC_CONTROL",
+    "directed": false,
+    "rounding_contract": "Every scalar is Fraction; floats are rejected.",
+    "serialization_contract": "Exact rational strings in canonical JSON artifacts."
+  },
+  "assumptions": [
+    {
+      "code": "SYNTHETIC_ONLY",
+      "statement": "The background log derivative is polynomial and is not asserted to come from an L-function.",
+      "status": "NOT_APPLICABLE"
+    }
+  ],
+  "central_zero_policy_applied": "PARAMETERIZED",
+  "configuration": {
+    "canonical_sha256": "fe0fca9a44dd00e2c85513c0dae27fdaadd0cf4276ad846da2093082947c73ff",
+    "values": {
+      "deflation_bundle": "RAW_PARITY_FULL",
+      "fixture": "SYNTHETIC_CONTROLS_V1"
+    }
+  },
+  "coverage": {
+    "class": "FINITE_COMPLETE",
+    "omissions": [
+      "arithmetic GL(2) objects",
+      "certified logarithmic-derivative values",
+      "twist-family averages"
+    ],
+    "statement": "All four positive/hostile controls and the fail-closed parity mismatch in the checked-in fixture."
+  },
+  "detector_contract_binding": {
+    "record_sha256": "a271e54dafa6c85bc43a8030d923b9446ccaac1645a6b5624a9c48042b5fdb7f",
+    "semantic_id": "ATLAS.DETECTOR.GL2.DEFLATION.PICK_SUM_HANKEL.H1b4606ccacf35380aec6e46c59cb0bae"
+  },
+  "evaluation_scope": "SYNTHETIC_CONTROL",
+  "firewalls": [
+    {
+      "code": "NO_ARITHMETIC_DATA",
+      "statement": "The fixture contains no LMFDB object, L-value, or zero ordinate."
+    },
+    {
+      "code": "CONVENTION_EXPLICIT",
+      "statement": "Loewner difference and Pick sum/Hankel use separate detector IDs."
+    },
+    {
+      "code": "DEFLATION_NOT_POSITIVITY",
+      "statement": "The hostile background remains indefinite after full deflation."
+    }
+  ],
+  "identity_kernel": {
+    "adapter_bindings": [
+      {
+        "coverage_class": "FINITE_COMPLETE",
+        "hash_mode": "RAW_BYTES",
+        "media_type": "text/x-python",
+        "notes": "Content checked by the offline atlas validator.",
+        "path": "research/l-families/atlas/gl2/deflation.py",
+        "role": "exact_matrix_adapter",
+        "schema_path": null,
+        "sha256": "3f1036449edd6055a799f0af1bc291ec693252b9855727312b4b08023a655d29"
+      }
+    ],
+    "configuration_sha256": "fe0fca9a44dd00e2c85513c0dae27fdaadd0cf4276ad846da2093082947c73ff",
+    "detector_contract_binding": {
+      "record_sha256": "a271e54dafa6c85bc43a8030d923b9446ccaac1645a6b5624a9c48042b5fdb7f",
+      "semantic_id": "ATLAS.DETECTOR.GL2.DEFLATION.PICK_SUM_HANKEL.H1b4606ccacf35380aec6e46c59cb0bae"
+    },
+    "implementation_commit": "PENDING",
+    "implementation_sha256": "73690f7db1c90ec44be779e3ea7add06374bc0d92d2a19c12e86fa6d647913ed",
+    "input_fulfillments_sha256": "708b13f6cad2b790077bc46038e03c4e6fd4dcc08cc942e3f89c9e860eae0909",
+    "input_sha256s": [
+      "4bac312f343379ad35b1985f6ff117795a806f06bdb94a7f6cbc79b82bb31680"
+    ],
+    "lfunction_spec_bindings": [],
+    "seed": null,
+    "slug": "GL2.DEFLATION.PICK_SUM_HANKEL.SYNTHETIC_CONTROLS",
+    "version": 1
+  },
+  "identity_sha256": "72fdc4898194fa25227df4051c8c5f22221442922e4bc28dc27761a8fdf8c92a",
+  "input_bindings": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/gl2/fixtures/synthetic_controls.json",
+      "role": "synthetic_control_input",
+      "schema_path": null,
+      "sha256": "4bac312f343379ad35b1985f6ff117795a806f06bdb94a7f6cbc79b82bb31680"
+    }
+  ],
+  "input_fulfillments": [
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "SYNTHETIC_MATRIX",
+      "name": "synthetic_matrix",
+      "sources": [
+        "research/l-families/atlas/gl2/fixtures/synthetic_controls.json"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "ROOT_NUMBER",
+      "name": "root_number",
+      "sources": [
+        "research/l-families/atlas/gl2/fixtures/synthetic_controls.json"
+      ]
+    },
+    {
+      "coverage_class": "FINITE_COMPLETE",
+      "input_type": "CENTRAL_ORDER",
+      "name": "central_order",
+      "sources": [
+        "research/l-families/atlas/gl2/fixtures/synthetic_controls.json"
+      ]
+    }
+  ],
+  "interpretation": {
+    "smallest_gap": "Bind one genuine twist family and certify deflated logarithmic-derivative values before arithmetic evaluation.",
+    "statement": "Deflation is exact rank-one bookkeeping; it neither has a convention-free sign nor implies positivity of the deflated background.",
+    "status": "SYNTHETIC_CONTROL",
+    "theorem_claim_id": null
+  },
+  "lfunction_spec_bindings": [],
+  "notes": "Exact synthetic algebra can validate an adapter but cannot establish GRH for a twist.",
+  "programme_refs": [
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 738,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/738"
+    },
+    {
+      "kind": "GITHUB_ISSUE",
+      "number": 741,
+      "repository": "gfreund123/riemann",
+      "url": "https://github.com/gfreund123/riemann/issues/741"
+    }
+  ],
+  "record_state": "DRAFT",
+  "record_type": "EVALUATION_RECORD",
+  "result": {
+    "artifact": {
+      "coverage_class": "FINITE_COMPLETE",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "media_type": "application/json",
+      "notes": "Content checked by the offline atlas validator.",
+      "path": "research/l-families/atlas/results/ATLAS.EVAL.GL2.DEFLATION.PICK_SUM_HANKEL.SYNTHETIC_CONTROLS.H72fdc4898194fa25227df4051c8c5f22.json",
+      "role": "detector_result",
+      "schema_path": null,
+      "sha256": "5f92771a7deeec25ebe314014087c34c724414dac9b08a3fa5dba848c1ca9cd2"
+    },
+    "predicate_outcome": "SATISFIED",
+    "representation": "HASHED_ARTIFACT",
+    "summary": "Central atom, parity/full deflation, determinant, inertia, norm, and hostile-background controls all pass exactly."
+  },
+  "result_hashes": [
+    {
+      "algorithm": "sha256",
+      "binds": "canonical JSON convention-filtered GL(2) result",
+      "hash_mode": "CANONICAL_JSON_UTF8_NFC",
+      "value": "5f92771a7deeec25ebe314014087c34c724414dac9b08a3fa5dba848c1ca9cd2"
+    }
+  ],
+  "revision": 1,
+  "rigor_level": "RIGOROUS_CERTIFIED",
+  "run": {
+    "code_commit": "PENDING",
+    "command": "python research/l-families/atlas/gl2/verify.py --check research/l-families/atlas/gl2/results.json",
+    "implementation_path": "research/l-families/atlas/gl2/verify.py",
+    "implementation_sha256": "73690f7db1c90ec44be779e3ea7add06374bc0d92d2a19c12e86fa6d647913ed",
+    "timestamp_utc": "2026-08-24T15:00:00Z"
+  },
+  "schema_version": "riemann.atlas.evaluation_record.v1",
+  "scope_boundary": "Five synthetic controls over rational nodes; no arithmetic L-function data.",
+  "semantic_id": "ATLAS.EVAL.GL2.DEFLATION.PICK_SUM_HANKEL.SYNTHETIC_CONTROLS.H72fdc4898194fa25227df4051c8c5f22",
+  "software": [
+    {
+      "name": "CPython",
+      "role": "exact integer point counts and rational moment aggregation",
+      "version": "3.12.10"
+    }
+  ],
+  "subject": {
+    "description": "Centered entire-function logarithmic-derivative matrix controls",
+    "kind": "SYNTHETIC_CONTROL"
+  },
+  "supersedes": [],
+  "title": "Exact synthetic controls for GL(2) central-zero deflation: Pick sum/Hankel convention"
+}

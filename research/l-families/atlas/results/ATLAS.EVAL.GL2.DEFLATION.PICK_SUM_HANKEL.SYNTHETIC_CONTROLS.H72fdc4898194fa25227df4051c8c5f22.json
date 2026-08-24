@@ -1,0 +1,182 @@
+{
+  "controls": [
+    {
+      "central_order": 1,
+      "convention": "pick_sum",
+      "id": "minimal-odd-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "result": {
+        "atom_sign": 1,
+        "central_atom_rank": 1,
+        "excess_order": 0,
+        "forced_order": 1,
+        "fully_deflated": {
+          "determinant": "0",
+          "inertia": {
+            "negative": 0,
+            "positive": 1,
+            "zero": 1
+          },
+          "rank": 1
+        },
+        "parity_deflated": {
+          "determinant": "0",
+          "inertia": {
+            "negative": 0,
+            "positive": 1,
+            "zero": 1
+          },
+          "rank": 1
+        },
+        "parity_minus_full_frobenius_squared": "0",
+        "raw": {
+          "determinant": "1/4",
+          "inertia": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "rank": 2
+        },
+        "raw_minus_full_frobenius_squared": "25/16"
+      },
+      "root_number": -1
+    },
+    {
+      "central_order": 3,
+      "convention": "pick_sum",
+      "id": "excess-odd-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "result": {
+        "atom_sign": 1,
+        "central_atom_rank": 1,
+        "excess_order": 2,
+        "forced_order": 1,
+        "fully_deflated": {
+          "determinant": "0",
+          "inertia": {
+            "negative": 0,
+            "positive": 1,
+            "zero": 1
+          },
+          "rank": 1
+        },
+        "parity_deflated": {
+          "determinant": "1/2",
+          "inertia": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "rank": 2
+        },
+        "parity_minus_full_frobenius_squared": "25/4",
+        "raw": {
+          "determinant": "3/4",
+          "inertia": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "rank": 2
+        },
+        "raw_minus_full_frobenius_squared": "225/16"
+      },
+      "root_number": -1
+    },
+    {
+      "central_order": 2,
+      "convention": "pick_sum",
+      "id": "unforced-even-quadratic",
+      "label": "SYNTHETIC_CONTROL",
+      "result": {
+        "atom_sign": 1,
+        "central_atom_rank": 1,
+        "excess_order": 2,
+        "forced_order": 0,
+        "fully_deflated": {
+          "determinant": "0",
+          "inertia": {
+            "negative": 0,
+            "positive": 1,
+            "zero": 1
+          },
+          "rank": 1
+        },
+        "parity_deflated": {
+          "determinant": "1/2",
+          "inertia": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "rank": 2
+        },
+        "parity_minus_full_frobenius_squared": "25/4",
+        "raw": {
+          "determinant": "1/2",
+          "inertia": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "rank": 2
+        },
+        "raw_minus_full_frobenius_squared": "25/4"
+      },
+      "root_number": 1
+    },
+    {
+      "central_order": 1,
+      "convention": "pick_sum",
+      "id": "indefinite-quartic-background",
+      "label": "SYNTHETIC_HOSTILE_CONTROL",
+      "result": {
+        "atom_sign": 1,
+        "central_atom_rank": 1,
+        "excess_order": 0,
+        "forced_order": 1,
+        "fully_deflated": {
+          "determinant": "36",
+          "inertia": {
+            "negative": 2,
+            "positive": 1,
+            "zero": 0
+          },
+          "rank": 3
+        },
+        "parity_deflated": {
+          "determinant": "36",
+          "inertia": {
+            "negative": 2,
+            "positive": 1,
+            "zero": 0
+          },
+          "rank": 3
+        },
+        "parity_minus_full_frobenius_squared": "0",
+        "raw": {
+          "determinant": "189/8",
+          "inertia": {
+            "negative": 2,
+            "positive": 1,
+            "zero": 0
+          },
+          "rank": 3
+        },
+        "raw_minus_full_frobenius_squared": "441/256"
+      },
+      "root_number": -1
+    },
+    {
+      "error": "central-order parity is incompatible with the root number",
+      "id": "parity-mismatch-rejected",
+      "label": "SYNTHETIC_NEGATIVE_CONTROL",
+      "result": "EXPECTED_ERROR_CONFIRMED"
+    }
+  ],
+  "convention": "pick_sum",
+  "result": "PASS",
+  "schema": "riemann.gl2.deflation.filtered_result.v1",
+  "status": "EXACT_RATIONAL_SYNTHETIC_CONTROL_ONLY"
+}

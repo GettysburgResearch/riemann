@@ -1,0 +1,315 @@
+{
+  "character": "chi_D(f)=(D/f) on monic f",
+  "detector": {
+    "cross_probe": "C_D=H_D(1)H_D(2), a toy lag-one probe only",
+    "definition": "H_D(n)=q^(-n/2) sum_deg(f)=n mu(f)chi_D(f)",
+    "failure_mode": "family cancellation and root purity do not imply a memberwise sign",
+    "id": "FUNCTION_FIELD.NORMALIZED_RECIPROCAL_COEFFICIENT.TOY",
+    "invariance": "critical Frobenius scaling; native coordinate is polynomial degree"
+  },
+  "exact_checks": {
+    "L_times_reciprocal_is_one_through_checked_degree_for_every_member": true,
+    "direct_Moebius_coefficients_equal_formal_inverse_for_every_member": true,
+    "genus_one_root_modulus_certificates_for_every_member": true
+  },
+  "family": {
+    "conductor_degree": 3,
+    "member_count": 100,
+    "reciprocal_degree_checked_through": 3
+  },
+  "family_statistics": {
+    "B1_times_B2_histogram": {
+      "-12": 10,
+      "-2": 15,
+      "-4": 10,
+      "-44": 5,
+      "0": 20,
+      "12": 10,
+      "2": 15,
+      "4": 10,
+      "44": 5
+    },
+    "L_linear_coefficient_histogram": {
+      "-1": 10,
+      "-2": 15,
+      "-3": 10,
+      "-4": 5,
+      "0": 20,
+      "1": 10,
+      "2": 15,
+      "3": 10,
+      "4": 5
+    },
+    "mean_B1_times_B2": [
+      0,
+      1
+    ],
+    "negative_member_count": 40,
+    "positive_member_count": 40,
+    "zero_member_count": 20
+  },
+  "field": {
+    "model": "F_5[T]",
+    "q": 5,
+    "quadratic_basis": "Q(sqrt(5))"
+  },
+  "firewall": "B1*B2 is an explicitly declared toy cross-degree statistic, not canonical XD or HCNC; its mixed memberwise signs show only that purity/root modulus does not determine this sign.",
+  "object_metadata": {
+    "L_degree": 2,
+    "analytic_rank": "not computed or inferred",
+    "conductor": "all monic squarefree degree-3 D in F_5[T]",
+    "family": "quadratic function-field L-functions / genus-one hyperelliptic numerators",
+    "gamma_factors": "not present in the finite numerator normalization",
+    "normalization": "L_D(u)=sum_monic chi_D(f)u^deg(f)=product_j(1-alpha_j*u)",
+    "object_type": "self-dual quadratic character",
+    "root_number": "not used by this pilot",
+    "zero_data_provenance": "no imported zeros; modulus certified from exact quadratic coefficients"
+  },
+  "payload_sha256": "75f6145aafc014c64da34d68ec9741b4f0529397d73541a96b6776fd9dc195bd",
+  "producer": {
+    "input_provenance": "complete deterministic generation, no external data",
+    "runtime_contract": "Python 3.11+ standard library; exact integer/rational arithmetic",
+    "source": "research/l-families/atlas/function_field/pilot.py",
+    "source_sha256_lf_normalized": "c9b4873daa50e96859c2c079dc031ebcdb5193bd495656e7049bfc6836a93258"
+  },
+  "raw_fixture_id": "FUNCTION_FIELD.F5.CUBIC.EXACT.V1",
+  "rigor_level": "RIGOROUS_CERTIFIED",
+  "schema": "riemann.function_field.exact_pilot.v1",
+  "scope": "exhaustive finite family of monic squarefree cubic conductors",
+  "witnesses": {
+    "negative": {
+      "L_coefficients_low_to_high": [
+        1,
+        -2,
+        5
+      ],
+      "conductor": "T^3 + 2*T^2 + 4*T",
+      "conductor_coefficients_low_to_high": [
+        0,
+        4,
+        2,
+        1
+      ],
+      "normalized_Bn_in_Q_sqrt_q": [
+        {
+          "rational": [
+            1,
+            1
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        },
+        {
+          "rational": [
+            0,
+            1
+          ],
+          "sqrt_q": [
+            2,
+            5
+          ]
+        },
+        {
+          "rational": [
+            -1,
+            5
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        },
+        {
+          "rational": [
+            0,
+            1
+          ],
+          "sqrt_q": [
+            -12,
+            25
+          ]
+        }
+      ],
+      "normalized_signed_lag_one": {
+        "rational": [
+          0,
+          1
+        ],
+        "sqrt_q": [
+          -2,
+          25
+        ]
+      },
+      "reciprocal_coefficients_B0_to_Bn": [
+        1,
+        2,
+        -1,
+        -12
+      ],
+      "root_modulus_certificate": {
+        "discriminant": -16,
+        "discriminant_nonpositive": true,
+        "quadratic_lead_is_q": true
+      },
+      "signed_lag_one_numerator_B1_B2": -2
+    },
+    "positive": {
+      "L_coefficients_low_to_high": [
+        1,
+        -4,
+        5
+      ],
+      "conductor": "T^3 + 2*T",
+      "conductor_coefficients_low_to_high": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "normalized_Bn_in_Q_sqrt_q": [
+        {
+          "rational": [
+            1,
+            1
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        },
+        {
+          "rational": [
+            0,
+            1
+          ],
+          "sqrt_q": [
+            4,
+            5
+          ]
+        },
+        {
+          "rational": [
+            11,
+            5
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        },
+        {
+          "rational": [
+            0,
+            1
+          ],
+          "sqrt_q": [
+            24,
+            25
+          ]
+        }
+      ],
+      "normalized_signed_lag_one": {
+        "rational": [
+          0,
+          1
+        ],
+        "sqrt_q": [
+          44,
+          25
+        ]
+      },
+      "reciprocal_coefficients_B0_to_Bn": [
+        1,
+        4,
+        11,
+        24
+      ],
+      "root_modulus_certificate": {
+        "discriminant": -4,
+        "discriminant_nonpositive": true,
+        "quadratic_lead_is_q": true
+      },
+      "signed_lag_one_numerator_B1_B2": 44
+    },
+    "zero": {
+      "L_coefficients_low_to_high": [
+        1,
+        0,
+        5
+      ],
+      "conductor": "T^3 + 1",
+      "conductor_coefficients_low_to_high": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "normalized_Bn_in_Q_sqrt_q": [
+        {
+          "rational": [
+            1,
+            1
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        },
+        {
+          "rational": [
+            0,
+            1
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        },
+        {
+          "rational": [
+            -1,
+            1
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        },
+        {
+          "rational": [
+            0,
+            1
+          ],
+          "sqrt_q": [
+            0,
+            1
+          ]
+        }
+      ],
+      "normalized_signed_lag_one": {
+        "rational": [
+          0,
+          1
+        ],
+        "sqrt_q": [
+          0,
+          1
+        ]
+      },
+      "reciprocal_coefficients_B0_to_Bn": [
+        1,
+        0,
+        -5,
+        0
+      ],
+      "root_modulus_certificate": {
+        "discriminant": -20,
+        "discriminant_nonpositive": true,
+        "quadratic_lead_is_q": true
+      },
+      "signed_lag_one_numerator_B1_B2": 0
+    }
+  }
+}

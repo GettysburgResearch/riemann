@@ -1,0 +1,390 @@
+{
+  "definition": "For the classical-variable reciprocal coefficients mu_L^cl(n), let M_L^cl(Y)=sum_{1<=n<=Y} mu_L^cl(n) with inclusive integer endpoints and S_2 M(X)=M(floor(X/2)); evaluate W_L^cl(X)=(I-sqrt(2)S_2)(I-S_2)^2 M_L^cl(X).",
+  "filter_controls": {
+    "P_of_1": {
+      "rational": 0,
+      "sqrt2": 0
+    },
+    "P_of_inverse_sqrt2": {
+      "rational": 0,
+      "sqrt2": 0
+    },
+    "P_prime_of_1": {
+      "rational": 0,
+      "sqrt2": 0
+    },
+    "controls_pass": true,
+    "expanded_coefficients": [
+      {
+        "rational": 1,
+        "sqrt2": 0
+      },
+      {
+        "rational": -2,
+        "sqrt2": -1
+      },
+      {
+        "rational": 1,
+        "sqrt2": 2
+      },
+      {
+        "rational": 0,
+        "sqrt2": -1
+      }
+    ],
+    "factorization": "(I-sqrt(2)S_2)(I-S_2)^2"
+  },
+  "schema": "riemann.atlas.raw.reciprocal_wavelet.v1",
+  "subjects": [
+    {
+      "classical_to_unitary_map": "mu_unitary(n)=mu_classical(n)",
+      "coefficient_bound": 256,
+      "identity_slug": "ZETA.RIEMANN",
+      "nonzero_coefficient_count": 157,
+      "reciprocal_coefficient_convention": "CLASSICAL_EULER_VARIABLE",
+      "rows": [
+        {
+          "X": 32,
+          "field_norm": 8,
+          "partial_sums_X_X2_X4_X8": [
+            -4,
+            -1,
+            -2,
+            -1
+          ],
+          "real_sign": -1,
+          "wavelet_qsqrt2": {
+            "rational": -4,
+            "sqrt2": -2
+          }
+        },
+        {
+          "X": 64,
+          "field_norm": 4,
+          "partial_sums_X_X2_X4_X8": [
+            -1,
+            -4,
+            -1,
+            -2
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 6,
+            "sqrt2": 4
+          }
+        },
+        {
+          "X": 128,
+          "field_norm": -56,
+          "partial_sums_X_X2_X4_X8": [
+            -2,
+            -1,
+            -4,
+            -1
+          ],
+          "real_sign": -1,
+          "wavelet_qsqrt2": {
+            "rational": -4,
+            "sqrt2": -6
+          }
+        },
+        {
+          "X": 256,
+          "field_norm": -28,
+          "partial_sums_X_X2_X4_X8": [
+            -1,
+            -2,
+            -1,
+            -4
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 2,
+            "sqrt2": 4
+          }
+        }
+      ],
+      "semantic_id": "ATLAS.LFUNC.ZETA.RIEMANN.H06d569f76e2b9259e540987deed9aa2b"
+    },
+    {
+      "classical_to_unitary_map": "mu_unitary(n)=mu_classical(n)",
+      "coefficient_bound": 256,
+      "identity_slug": "DIRICHLET.QUADRATIC.MOD5",
+      "nonzero_coefficient_count": 130,
+      "reciprocal_coefficient_convention": "CLASSICAL_EULER_VARIABLE",
+      "rows": [
+        {
+          "X": 32,
+          "field_norm": -1,
+          "partial_sums_X_X2_X4_X8": [
+            6,
+            6,
+            5,
+            3
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": -1,
+            "sqrt2": 1
+          }
+        },
+        {
+          "X": 64,
+          "field_norm": -1,
+          "partial_sums_X_X2_X4_X8": [
+            7,
+            6,
+            6,
+            5
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 1,
+            "sqrt2": 1
+          }
+        },
+        {
+          "X": 128,
+          "field_norm": 7,
+          "partial_sums_X_X2_X4_X8": [
+            11,
+            7,
+            6,
+            6
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 3,
+            "sqrt2": -1
+          }
+        },
+        {
+          "X": 256,
+          "field_norm": 31,
+          "partial_sums_X_X2_X4_X8": [
+            8,
+            11,
+            7,
+            6
+          ],
+          "real_sign": -1,
+          "wavelet_qsqrt2": {
+            "rational": -7,
+            "sqrt2": -3
+          }
+        }
+      ],
+      "semantic_id": "ATLAS.LFUNC.DIRICHLET.QUADRATIC.MOD5.H0f25a0b178fb88f6a857ac01c677a979"
+    },
+    {
+      "classical_to_unitary_map": "mu_unitary(n)=mu_classical(n)/sqrt(n)",
+      "coefficient_bound": 256,
+      "identity_slug": "EC.11.R0",
+      "nonzero_coefficient_count": 192,
+      "reciprocal_coefficient_convention": "CLASSICAL_EULER_VARIABLE",
+      "rows": [
+        {
+          "X": 32,
+          "field_norm": -4,
+          "partial_sums_X_X2_X4_X8": [
+            9,
+            10,
+            9,
+            6
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": -2,
+            "sqrt2": 2
+          }
+        },
+        {
+          "X": 64,
+          "field_norm": -7,
+          "partial_sums_X_X2_X4_X8": [
+            7,
+            9,
+            10,
+            9
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": -1,
+            "sqrt2": 2
+          }
+        },
+        {
+          "X": 128,
+          "field_norm": 959,
+          "partial_sums_X_X2_X4_X8": [
+            -26,
+            7,
+            9,
+            10
+          ],
+          "real_sign": -1,
+          "wavelet_qsqrt2": {
+            "rational": -31,
+            "sqrt2": 1
+          }
+        },
+        {
+          "X": 256,
+          "field_norm": -1873,
+          "partial_sums_X_X2_X4_X8": [
+            -52,
+            -26,
+            7,
+            9
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 7,
+            "sqrt2": 31
+          }
+        }
+      ],
+      "semantic_id": "ATLAS.LFUNC.EC.11.R0.H640f9f7ea45725183495b7b2525cf21c"
+    },
+    {
+      "classical_to_unitary_map": "mu_unitary(n)=mu_classical(n)/sqrt(n)",
+      "coefficient_bound": 256,
+      "identity_slug": "EC.37.R1",
+      "nonzero_coefficient_count": 188,
+      "reciprocal_coefficient_convention": "CLASSICAL_EULER_VARIABLE",
+      "rows": [
+        {
+          "X": 32,
+          "field_norm": -526,
+          "partial_sums_X_X2_X4_X8": [
+            87,
+            45,
+            17,
+            8
+          ],
+          "real_sign": -1,
+          "wavelet_qsqrt2": {
+            "rational": 14,
+            "sqrt2": -19
+          }
+        },
+        {
+          "X": 64,
+          "field_norm": 3577,
+          "partial_sums_X_X2_X4_X8": [
+            192,
+            87,
+            45,
+            17
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 63,
+            "sqrt2": -14
+          }
+        },
+        {
+          "X": 128,
+          "field_norm": 6946,
+          "partial_sums_X_X2_X4_X8": [
+            419,
+            192,
+            87,
+            45
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 122,
+            "sqrt2": -63
+          }
+        },
+        {
+          "X": 256,
+          "field_norm": 37313,
+          "partial_sums_X_X2_X4_X8": [
+            905,
+            419,
+            192,
+            87
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 259,
+            "sqrt2": -122
+          }
+        }
+      ],
+      "semantic_id": "ATLAS.LFUNC.EC.37.R1.H1d738e01ce5a9f22134cbd1c27969b32"
+    },
+    {
+      "classical_to_unitary_map": "mu_unitary(n)=mu_classical(n)/sqrt(n)",
+      "coefficient_bound": 256,
+      "identity_slug": "EC.389.R2",
+      "nonzero_coefficient_count": 212,
+      "reciprocal_coefficient_convention": "CLASSICAL_EULER_VARIABLE",
+      "rows": [
+        {
+          "X": 32,
+          "field_norm": 4,
+          "partial_sums_X_X2_X4_X8": [
+            125,
+            55,
+            19,
+            7
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 34,
+            "sqrt2": -24
+          }
+        },
+        {
+          "X": 64,
+          "field_norm": 6152,
+          "partial_sums_X_X2_X4_X8": [
+            287,
+            125,
+            55,
+            19
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 92,
+            "sqrt2": -34
+          }
+        },
+        {
+          "X": 128,
+          "field_norm": 73673,
+          "partial_sums_X_X2_X4_X8": [
+            750,
+            287,
+            125,
+            55
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 301,
+            "sqrt2": -92
+          }
+        },
+        {
+          "X": 256,
+          "field_norm": 154039,
+          "partial_sums_X_X2_X4_X8": [
+            1792,
+            750,
+            287,
+            125
+          ],
+          "real_sign": 1,
+          "wavelet_qsqrt2": {
+            "rational": 579,
+            "sqrt2": -301
+          }
+        }
+      ],
+      "semantic_id": "ATLAS.LFUNC.EC.389.R2.Hc38b7d1ec7c189163b3fa8f43a27a57c"
+    }
+  ]
+}

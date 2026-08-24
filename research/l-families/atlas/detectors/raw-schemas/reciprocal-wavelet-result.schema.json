@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gfreund123/riemann/research/l-families/atlas/detectors/raw-schemas/reciprocal-wavelet-result.schema.json",
+  "title": "Raw exact classical reciprocal-wavelet result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "definition", "filter_controls", "subjects"],
+  "properties": {
+    "schema": {"const": "riemann.atlas.raw.reciprocal_wavelet.v1"},
+    "definition": {"type": "string", "minLength": 1},
+    "filter_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["factorization", "expanded_coefficients", "P_of_1", "P_prime_of_1", "P_of_inverse_sqrt2", "controls_pass"],
+      "properties": {
+        "factorization": {"const": "(I-sqrt(2)S_2)(I-S_2)^2"},
+        "expanded_coefficients": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/qSqrt2"}},
+        "P_of_1": {"$ref": "#/$defs/qSqrt2"},
+        "P_prime_of_1": {"$ref": "#/$defs/qSqrt2"},
+        "P_of_inverse_sqrt2": {"$ref": "#/$defs/qSqrt2"},
+        "controls_pass": {"const": true}
+      }
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["semantic_id", "identity_slug", "reciprocal_coefficient_convention", "classical_to_unitary_map", "nonzero_coefficient_count", "coefficient_bound", "rows"],
+        "properties": {
+          "semantic_id": {"type": "string", "pattern": "^ATLAS\\.LFUNC\\."},
+          "identity_slug": {"type": "string", "pattern": "^[A-Z0-9_.-]+$"},
+          "reciprocal_coefficient_convention": {"const": "CLASSICAL_EULER_VARIABLE"},
+          "classical_to_unitary_map": {"enum": ["mu_unitary(n)=mu_classical(n)", "mu_unitary(n)=mu_classical(n)/sqrt(n)"]},
+          "nonzero_coefficient_count": {"type": "integer", "minimum": 0},
+          "coefficient_bound": {"const": 256},
+          "rows": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["X", "partial_sums_X_X2_X4_X8", "wavelet_qsqrt2", "field_norm", "real_sign"],
+              "properties": {
+                "X": {"type": "integer", "minimum": 8},
+                "partial_sums_X_X2_X4_X8": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "integer"}},
+                "wavelet_qsqrt2": {"$ref": "#/$defs/qSqrt2"},
+                "field_norm": {"type": "integer"},
+                "real_sign": {"enum": [-1, 0, 1]}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "qSqrt2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rational", "sqrt2"],
+      "properties": {
+        "rational": {"type": "integer"},
+        "sqrt2": {"type": "integer"}
+      }
+    }
+  }
+}
