@@ -82,7 +82,7 @@ The endpoint set is countable and has zero `dY/Y` measure.  Therefore, provided 
 =\sum_j\int_{I_j\cap[1,Y]}
 (\mathcal T^K_{p,q;j}+\mathcal B^K_{p,q;j})_-{dt\over t}.
 }
-\tag{L-102886.4
+\tag{L-102886.4}
 \]
 
 No cutoff-transfer reserve appears in this conclusion-facing identity.
