@@ -1,6 +1,6 @@
 {
   "arithmetic_class": "EXACT_RATIONAL_PLUS_FLOATING_HARMONIC_SANITY",
-  "checks": 17,
+  "checks": 23,
   "checks_list": [
     "firewall_Fcrit=3/4",
     "firewall_Fppcrit=4",
@@ -12,6 +12,12 @@
     "polynomial_source_mass_split",
     "critical_atom_weight=9/100",
     "critical_atom_location=2/5",
+    "three_height_partial_fraction",
+    "three_height_center_value=1",
+    "microscope_recovers_residue",
+    "microscope_Fourier_multiplier_positive",
+    "scale_symbol_in_unit_interval",
+    "coarse_microscope_coefficient=-3/5",
     "harmonic_measure_decay_X=2",
     "harmonic_measure_decay_X=4",
     "harmonic_measure_decay_X=8",
@@ -23,7 +29,7 @@
   "critical_sign_proved_for_xi": false,
   "finite_strip_analytic_theorem_replayed": false,
   "moving_saddle_replayed": false,
-  "proof_object": "b2924d153ad3b49690f7329228d2445893bbfb7437e7cd77bc320e6ac9b69cb4",
+  "proof_object": "7a806d3972d352cc7287436ebf2d82b85314bebf6bfc3fea1c44a24d035c1e2a",
   "rh_established": false,
   "verdict": "PASS_X_105430_CRITICAL_SIGN_RIGIDITY"
 }
