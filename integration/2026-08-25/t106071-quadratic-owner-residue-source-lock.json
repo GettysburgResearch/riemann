@@ -1,0 +1,128 @@
+{
+  "schema": "riemann.t106071.quadratic-owner-residue-source-lock.v1",
+  "created": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "pre_lock_head": "01240249376a7081a94de1f51ef09656a98ed4cc",
+  "programme_issues": [743, 736, 737],
+  "continuation_base": {
+    "pr": 751,
+    "head": "74916ff37b98574e17e6f979453879c472f8b596"
+  },
+  "moving_parent": {
+    "pr": 719,
+    "branch": "research/gpt56-pro/102700-half-divisor-defect-factorization",
+    "head": "60285de21fafdd1b3c185ddd19b57191a41c08dd",
+    "merged_into_execution_branch_by": "45e41f8ec19bd2ec2e37e595686b2e7e605f7d47",
+    "audit_from": "ae61d988568fdc3e7d790a42b5c340c29a6ea3e5",
+    "audit_result": "seven commits ahead; only primewise-gauge files added; no HBC or detector input modified",
+    "added_files": [
+      "claims/lemmas/L-102901-primewise-complementary-temperatures-form-an-infinite-dimensional-flat-gauge.md",
+      "claims/lemmas/L-102902-primewise-midpoint-is-the-unique-local-energy-and-carrier-minimizer.md",
+      "claims/lemmas/L-102903-sparse-endpoint-gauge-gives-unique-critical-prime-placement.md",
+      "claims/lemmas/L-102904-endpoint-color-walsh-expansion-has-only-squared-activity-off-the-midpoint.md",
+      "claims/refutations/R-102873-primewise-flat-gauge-does-not-remove-the-critical-mean-product.md",
+      "claims/theorems/T-102930-primewise-flat-gauge-and-sparse-endpoint-owner-normal-form.md"
+    ]
+  },
+  "retained_scale_matched_claims": [
+    {
+      "path": "claims/refutations/R-106070-pair-adaptive-moduli-and-weakened-energy-do-not-prove-crop.md",
+      "blob_sha": "b96205cbae1a8ddee7125b584f16cb0ae1a5072f"
+    },
+    {
+      "path": "claims/lemmas/L-106070-blockwise-prime-palette-is-source-exact.md",
+      "blob_sha": "6495353b6b420f4e3a0c216aa6ed657c35df48db"
+    },
+    {
+      "path": "claims/lemmas/L-106071-scale-matched-collision-lines-are-partial-matchings.md",
+      "blob_sha": "a01544ef42dd9d67e1a731922a3d809adfebb745"
+    },
+    {
+      "path": "claims/lemmas/L-106072-block-energy-pays-the-scale-matched-conductor.md",
+      "blob_sha": "71201684caac9464ca7cd2f733722bfc70fbbba6"
+    }
+  ],
+  "retraction_and_correction_claims": [
+    {
+      "path": "claims/refutations/R-106071-quartic-pair-occupancy-cannot-bound-the-quadratic-character-moment.md",
+      "blob_sha": "06223cc1fa78de6fc8095a0619889390ec02f7d0"
+    },
+    {
+      "path": "claims/lemmas/L-106073-scale-matched-family-closes-the-hbc-residual.md",
+      "blob_sha": "47cb9adde882319588e5126a8ad47bb34749e873",
+      "status": "retracted"
+    },
+    {
+      "path": "claims/theorems/T-106070-scale-matched-root-occupancy-closes-the-live-frontier.md",
+      "blob_sha": "d2857ea089841c6a0161b5642339014614df9548",
+      "status": "retracted"
+    },
+    {
+      "path": "claims/methodology/M-106070-scale-matched-crop-hostile-review-contract.md",
+      "blob_sha": "22e4edebc255fd60ce80f0fed34911dd622d4cdf",
+      "status": "hostile self-audit rejected closure"
+    },
+    {
+      "path": "claims/theorems/T-106060-two-phase-root-residue-occupancy-frontier.md",
+      "blob_sha": "da0accc18b001ef1104410f3bf7d57f9d24009fe",
+      "status": "quadratic occupancy open"
+    },
+    {
+      "path": "claims/lemmas/L-106074-exact-quadratic-owner-residue-normal-form.md",
+      "blob_sha": "97c15a77892e8874705b3b6bdfd5fabd586808df"
+    },
+    {
+      "path": "claims/lemmas/L-106075-low-owner-crowding-residue-cells-are-closed.md",
+      "blob_sha": "bff382f070d1eb45dc542c9b79a93fc21b400c26"
+    },
+    {
+      "path": "claims/theorems/T-106071-quadratic-owner-residue-occupancy-frontier.md",
+      "blob_sha": "29ae141e68c8efc36323e8527dba7e39b4d8c2b0"
+    }
+  ],
+  "proof_objects": [
+    {
+      "path": "experiments/X-106070-scale-matched-root-occupancy/results/verification.json",
+      "blob_sha": "d49c84be1ccbc8ed0ed93d580bf7d396d6d36163",
+      "checks": 166834,
+      "sha256": "67e946c4710d492cae450d7a2581f72e81ab7d8b72c11f5871ad24121212748b",
+      "scope": "palette, unramifiedness, fixed-owner core matching, representation Cauchy, quartic payment"
+    },
+    {
+      "path": "experiments/X-106071-quadratic-vs-quartic-firewall/results/verification.json",
+      "blob_sha": "74ae0ba04a69f0a65bf8059417dbc6062ab32a40",
+      "checks": 7472,
+      "sha256": "145e8e6e7fa3cc38c75fef3083ede2a6dfdb7feba6f441222e0605921315d9a7",
+      "scope": "quadratic residue Gram, homogeneity counterexample, root count, low-crowding Cauchy"
+    }
+  ],
+  "report": {
+    "path": "reports/gpt56-pro/2026-08-25-scale-matched-root-occupancy-closure.md",
+    "blob_sha": "b9c80b4a2a6f34a203566d8cd2bffcae3d3a3814",
+    "status": "attempted closure retracted and corrected"
+  },
+  "retained_total_exact_checks": 644145,
+  "proved": {
+    "linear_scale_matched_palette": true,
+    "coefficientwise_unramified_principal_recovery": true,
+    "fixed_owner_pair_core_matching": true,
+    "diagonal_conductor_payment": true,
+    "quartic_pair_tensor_payment": true,
+    "quadratic_owner_residue_normal_form": true,
+    "low_owner_crowding_cells": true,
+    "quartic_to_quadratic_adapter_refuted": true
+  },
+  "retracted": {
+    "l106073_hbc_closure": true,
+    "t106070_full_rh_proposal": true
+  },
+  "open": {
+    "hqoro106071_high_owner_crowding": true,
+    "bpoe103300": true,
+    "hbcqdsp102888": true,
+    "riemann_hypothesis": true
+  },
+  "full_proof_proposed_then_retracted": true,
+  "rh_established": false,
+  "canonical_acceptance": false
+}
