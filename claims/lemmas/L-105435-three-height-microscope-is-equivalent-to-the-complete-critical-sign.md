@@ -133,15 +133,9 @@ three-height phase field.
 ## 4. The signed-measure form under the critical sign
 
 Assume every critical point is real and every residue is nonpositive. By
-`L-105432--L-105433`,
-
-\[
-m(z)=\text{central Pick atom}+
-\sum_c{\rho_c\over z-c}
-\]
-
-in the symmetric Herglotz sense, with no affine endpoint term after the parity
-regularization. Applying (L-105435.3) term by term gives
+`L-105432--L-105433`, `m` has its complete symmetric critical-pole expansion,
+with the even central atom included exactly once and with no affine endpoint
+term after parity regularization. Applying (L-105435.3) term by term gives
 
 \[
 \boxed{
@@ -150,9 +144,7 @@ regularization. Applying (L-105435.3) term by term gives
 \sum_{F'(c)=0}\rho_c\Omega_{a,h}(c)
 \le0.
 }
-\tag{L-105435.8
-}
-\]
+\tag{L-105435.8}
 
 The paired series is locally uniform and the sixth-order decay makes the
 localized sum absolutely convergent.
@@ -177,8 +169,7 @@ two-parameter inequality
 \mathcal P_r(a,h)\le0
 \qquad(a\in\mathbb R,\ h>0).
 }
-\tag{L-105435.9
-}
+\tag{L-105435.9}
 
 ## 6. Oriented shifted-zero interpretation
 
