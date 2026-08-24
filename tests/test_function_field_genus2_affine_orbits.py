@@ -216,17 +216,22 @@ class FrozenOrbitTests(unittest.TestCase):
         q_scan_fixture = json.loads(subject.Q_SCAN_FIXTURE.read_text(encoding="utf-8"))
         families = {row["q"]: row for row in q_scan_fixture["families"]}
         controls = {
-            3: ((0, 1, 1, 1, 1, 1), (-2, 6), -24, 6, 1),
-            5: ((0, 1, 0, 1, 0, 1), (-4, 14), -116, 10, 2),
-            7: ((3, 0, 3, 6, 4, 1), (-7, 25), -282, 42, 1),
+            3: ((0, 1, 1, 1, 1, 1), (-2, 6), -24, 6, 1, (4, 3)),
+            5: ((0, 1, 0, 1, 0, 1), (-4, 14), -116, 10, 2, (0, 5)),
+            7: ((3, 0, 3, 6, 4, 1), (-7, 25), -282, 42, 1, (5, 7)),
         }
-        for q, (conductor, coefficients, minimum_k, orbit_size, stabilizer) in controls.items():
+        for q, control in controls.items():
+            conductor, coefficients, minimum_k, orbit_size, stabilizer, discriminant = control
             tables = q_scan.build_field_tables(q)
             self.assertEqual(
                 q_scan.coefficients_from_character_sums(conductor, tables),
                 coefficients,
             )
             self.assertEqual(q * coefficients[0] ** 2 - coefficients[1] ** 2, minimum_k)
+            self.assertEqual(
+                (coefficients[0] ** 2 - 4 * coefficients[1] + 8 * q, q),
+                discriminant,
+            )
             orbit = {
                 subject.affine_transform(conductor, q, *element)
                 for element in subject.affine_elements(q)

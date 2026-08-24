@@ -479,6 +479,12 @@ frozen twelfth moment (`58.3993%`, `61.9548%`, `73.4068%`). A useful tail lemma
 should therefore separate the extreme orbit/automorphism strata before
 applying generic monodromy estimates to the bulk.
 
+The symplectic trace discriminant `(x_1-x_2)^2` on the three minimum orbits is
+exactly `4/3,0,5/7`. In particular the characteristic-five orbit lies on the
+repeated-angle diagonal and has the extra involution already seen in its
+stabilizer. The tail lemma should isolate this near-diagonal/endoscopic locus
+before invoking estimates valid only on the regular semisimple bulk.
+
 The bounded shifted-grid Weyl quadrature additionally nominates
 
 \[

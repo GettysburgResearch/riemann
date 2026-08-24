@@ -579,6 +579,19 @@ even twelfth moment. Thus a high-moment proof cannot safely average away rare
 automorphism strata; at the current fields, one orbit already carries most of
 the statistic.
 
+There is also a geometric marker on these edge orbits. If `x_1,x_2` are the
+two real symplectic trace coordinates, then
+
+\[
+(x_1-x_2)^2=\frac{a_D^2-4b_D+8q}{q}.
+\]
+
+On the three minimum orbits this equals `4/3, 0, 5/7`. The characteristic-five
+minimum therefore lies exactly on the repeated-angle diagonal, consistent
+with its extra involution, while the other two are nearby but not on it. A
+tail proof should expect a special near-diagonal/endoscopic stratum rather
+than a condition uniform over regular Frobenius classes.
+
 A separate deterministic Weyl quadrature asks the corresponding sign-law
 question. Four phase shifts on periodic grids through `512 x 512` (1,376,256
 cells in total, with a five-second guard) give a final phase mean
