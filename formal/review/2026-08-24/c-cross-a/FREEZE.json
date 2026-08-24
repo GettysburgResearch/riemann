@@ -7,11 +7,22 @@
   "target_branch": "formal/010-upstream-analysis",
   "target_head": "92f70a3b49b9295b5efb88491107670065b03317",
   "target_head_frozen_utc": "2026-08-24T06:43:00Z",
+  "target_pr_state_at_freeze": "open",
+  "target_pr_draft_at_freeze": true,
+  "target_pr_mergeable_at_freeze": true,
+  "target_changed_files": 20,
   "review_branch": "formal/review/2026-08-24/c-cross-a",
   "review_pr": 747,
   "research_cutoff_pr": 707,
+  "review_scope": "additive cross-review only; PR #734 unchanged",
+  "requested_build_execution": {
+    "exact_head_workflow_deposited": true,
+    "workflow_path": ".github/workflows/formal-c-cross-a.yml",
+    "observable_run": false,
+    "static_compile_blocker_found": "RiemannFormal/AxiomAudit.lean references removed RiemannFormal.Upstream.zeta23_bridge_preserves_RH"
+  },
+  "final_verdict": "NOT_INTEGRATION_READY",
   "rh_proved": false,
-  "build_audit": "PENDING_EXACT_HEAD_WORKFLOW",
   "no_target_modification": true,
   "no_merge": true
 }
