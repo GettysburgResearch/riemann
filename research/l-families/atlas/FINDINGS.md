@@ -1055,6 +1055,36 @@ odd `r` the union is empty.  This phase diagram concerns raw Hasse-lattice
 visibility, not realized curve triples or a full-intersection density beyond
 the locked low rungs.
 
+### High symmetric powers have a cubic-tail weak limit
+
+The growing compact moments do not mean that the trace escapes in probability.
+If `Theta` has Haar `SU(2)` angle density and `U` is an independent uniform
+phase, then
+
+\[
+ \chi_n(\Theta)\Longrightarrow
+ W={\sin U\over\sin\Theta},
+ \qquad
+ \Pr(|W|>x)\sim{16\over9\pi^2}x^{-3}.
+\]
+
+The limit has variance one but finite absolute moments only below order three.
+For `k>=2`, a separate endpoint scaling proves
+
+\[
+ \mathbb E\chi_n^{2k}
+ \sim {4\over\pi}(n+1)^{2k-3}
+ \int_0^\infty{\sin^{2k}x\over x^{2k-2}}\,dx,
+\]
+
+explaining the exact polynomial degree `2k-3` in the moment packet.  For the
+ladder, the principal law tends to `W`, while the product law tends to `ZW`
+with an independent fundamental `SU(2)` trace `Z`.  Their absolute-tail
+constants are respectively `16/(9pi^2)` and `1024/(135pi^3)`, so the weak
+limits remain distinguishable even though both have mean zero and variance
+one.  This is compact Haar asymptotics, not a growing-r arithmetic
+equidistribution theorem.
+
 ### The `Sym^3` curve inside `SO(4)` is a doubling locus
 
 Pulling the symmetric-cube equation back through the elliptic-pair tensor

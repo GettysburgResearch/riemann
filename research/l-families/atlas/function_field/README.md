@@ -92,6 +92,10 @@ source/note/JSON/test packets:
   arithmetic counts of both universal graph loci for every `r`, including
   square bases, the nonsquare odd-prime parity split, central-sign duplicates,
   and the exact Chebyshev-period overlap;
+- `ELLIPTIC_SYMMETRIC_POWER_HIGH_RANK_HAAR_LIMIT.md` proves the oscillatory
+  high-symmetric-power weak limit, its exact cubic tail, the endpoint
+  boundary-layer growth of all higher even moments, and the distinct product
+  versus principal limiting tail constants;
 - `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
   curve with the complete locked genus-two coefficient support, classifies
   the odd-prime arithmetic candidates, and separates 53 witnessed members

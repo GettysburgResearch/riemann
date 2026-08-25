@@ -988,6 +988,27 @@ by
 
 The principal `Sym^(2r+1)` representation is symplectic for every `r`.
 
+The high-rank compact limit is now also explicit.  With `Theta` Haar in the
+`SU(2)` angle and `U` an independent uniform phase,
+
+\[
+ \chi_n(\Theta)\Longrightarrow W={\sin U\over\sin\Theta},
+ \qquad
+ \Pr(|W|>x)\sim{16\over9\pi^2}x^{-3}.
+\]
+
+The product and principal ladder limits are `ZW` and `W`, where `Z` is an
+independent fundamental trace.  Since `E|Z|^3=64/(15pi)`, their absolute-tail
+constants differ by that factor.  Both limits have variance one but no finite
+third absolute moment.  A separate endpoint scaling, not weak convergence
+alone, gives `B_k(n)~L_k(n+1)^(2k-3)` for `k>=2` and explains the exact moment
+degree.
+
+This opens a two-limit arithmetic target: prove fixed-r equidistribution with
+error uniform enough to let `r` grow, and compare bounded test functions or
+truncated tails rather than non-uniformly-integrable raw moments.  No such
+uniform arithmetic statement follows from the compact theorem.
+
 The two graph loci also have a uniform arithmetic count.  At `q=p^(2k)`,
 their integral Hasse-lattice union has
 
