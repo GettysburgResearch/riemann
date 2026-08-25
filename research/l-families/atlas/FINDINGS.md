@@ -999,6 +999,62 @@ positive-dimensional gcd and no off-graph point in 24,346 raw triples or
 support polynomials are recorded in `THEOREM_TARGETS.md`.  This is negative
 evidence only: isolated noncyclotomic rational points have not been excluded.
 
+### The graph ladder has an arithmetic visibility phase diagram
+
+The exact count also predicts which universal locus a finite experiment is
+likely to see.  For square `q=p^(2k)`, the separate graph sizes are
+
+\[
+ |G_{1,r}|=8p^{\lfloor k/(r+1)\rfloor}+1+\mathbf1_{r\ {\rm odd}},
+ \qquad
+ |G_{2,r}|=8p^{\lfloor k/2\rfloor}+2.
+\]
+
+At `r=1` they are exactly equal and their union is
+`16p^floor(k/2)-4`.  For every fixed `r>=2`, however,
+
+\[
+ {|G_{1,r}|\over|G_{2,r}|}
+ =\Theta_p\!\left(q^{-(r-1)/(4(r+1))}\right),
+\]
+
+so the second, `(1,2)`, graph asymptotically hides the first.  Uniformly over
+all `r>=2`, the worst crossover is `r=2` and the relative correction is
+`O_p(p^(-k/6))`.  Among the full ordered integer Hasse cube of
+`(4p^k+1)^3` trace triples, the graph union has density
+`Theta_p(q^(-5/4))`.  Floors matter: after multiplying by `q^(5/4)`, the
+two `k`-parity limits are `1/8` and `1/(8sqrt(p))` for `r>=2`, doubled at
+`r=1`.
+
+At fixed square base, the high-r behavior saturates rather than converges.
+Once `r>=k`, the first-graph exponent is zero and the union is exactly
+six-periodic in `r`.  With `b=p^floor(k/2)`, its values for
+`r mod 6=0,1,2,3,4,5` are
+
+\[
+ 8b+3,\quad8b+4,\quad8b+7,\quad8b+4,\quad8b+3,\quad8b+8.
+\]
+
+Nonsquare bases reverse the visibility.  For odd `p`, odd extension degree
+`e`, and even `r`, put
+
+\[
+ \ell=\left\lfloor{e-r-1\over2(r+1)}\right\rfloor.
+\]
+
+Then the surviving first graph has exactly
+
+\[
+ 4\left\lfloor2p^{\ell+1/2}\right\rfloor+1
+ =\Theta_{p,r}\!\left(q^{1/(2(r+1))}\right)
+\]
+
+points; the count is constant for `r+1` consecutive admissible odd extension
+degrees before jumping by roughly `p`.  The second graph is absent, and for
+odd `r` the union is empty.  This phase diagram concerns raw Hasse-lattice
+visibility, not realized curve triples or a full-intersection density beyond
+the locked low rungs.
+
 ### The `Sym^3` curve inside `SO(4)` is a doubling locus
 
 Pulling the symmetric-cube equation back through the elliptic-pair tensor

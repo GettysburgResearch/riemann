@@ -1008,6 +1008,43 @@ points.  At nonsquare odd `q=p^e`, odd `r` is empty, while even `r` has
 first-graph points.  This is a theorem about the two sufficient loci only;
 outside the locked low rungs it is not a converse for the full intersection.
 
+There is a useful exact visibility corollary for experimental design.  On
+square bases, the first and second graph sizes are
+
+\[
+ 8p^{\lfloor k/(r+1)\rfloor}+1+\mathbf1_{r\ {\rm odd}}
+ \quad\hbox{and}\quad
+ 8p^{\lfloor k/2\rfloor}+2.
+\]
+
+They are equal at `r=1`.  For fixed `p` and every `r>=2`, the second graph
+dominates, with ratio of first to second
+
+\[
+ \Theta_p\!\left(q^{-(r-1)/(4(r+1))}\right).
+\]
+
+The union therefore has `Theta_p(q^(1/4))` points but density only
+`Theta_p(q^(-5/4))` inside the ordered Hasse trace cube.  The leading
+constant oscillates with the parity of `k`; there is no floor-free limit.
+At fixed `k`, once `r>=k` the count becomes exactly six-periodic rather than
+converging, with offsets `3,4,7,4,3,8` from `8p^floor(k/2)`.
+
+For nonsquare odd `q=p^e` and even `r`, the exact simplification
+
+\[
+ \ell=\left\lfloor{e-r-1\over2(r+1)}\right\rfloor,
+ \qquad
+ N_r^{\rm ns}=4\left\lfloor2p^{\ell+1/2}\right\rfloor+1
+\]
+
+exhibits a staircase of order `q^(1/(2(r+1)))`; graph two disappears, and
+odd `r` is empty.  Future searches should therefore stratify by square class,
+`r` parity, and graph identity instead of uniformly scanning a trace cube.
+Failure to observe the thin first graph at square bases is predicted sampling
+bias, not evidence of nonexistence.  These are lattice statements only, and
+the nonsquare corollary retains the odd-prime boundary.
+
 A deliberately capped `r=4` scout makes the next algebraic target sharper.
 For the typed comparison
 

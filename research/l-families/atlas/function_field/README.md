@@ -507,6 +507,11 @@ triples are not thereby realized by three linked elliptic curves. The
 nonsquare theorem is restricted to odd `p`, whereas `p=2` has genuine
 Dickson-zero exceptions. Public enumerators fail closed above 4,096 candidate
 `C` values; the closed formulas do not enumerate the Hasse interval.
+The exact asymptotics also warn against uniform trace-cube sampling: on square
+bases graph two dominates for every fixed `r>=2`, while nonsquare arithmetic
+removes graph two, retains only a staircase-thin graph one for even `r`, and
+removes both for odd `r`. These are visibility statements for raw trace
+lattices, not frequencies of realized curves.
 
 The symmetric-cube/genus-two intersection compares normalized coefficient
 shapes of different weights; it is not an identity of local factors. Its
