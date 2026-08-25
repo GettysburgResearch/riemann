@@ -1,0 +1,240 @@
+{
+  "arbitrary_point_distinction": {
+    "fibre_count": "#C(F_q)=q+1-a_1(C)",
+    "odd_cross_trace": "sum_[C] a_1(C)*Tr(F_q|V_(4,2),C)/|Aut_q(C)|=0",
+    "odd_cross_trace_reason": "the central hyperelliptic mu_2-inertia acts nontrivially because a_1 has odd central weight and V_(4,2) has even central weight; equivalently, weighted twist descent cancels",
+    "stack": "M_(2,1)",
+    "status": "EXACT_CONSEQUENCE_OF_UNMARKED_TRACE_AND_CENTRAL_PARITY_NOT_THE_MARKED_WEIERSTRASS_TRACE",
+    "trace": "A_42(q)=q^4+q^3"
+  },
+  "bounded_alternative_route": {
+    "next_step": "decompose r_1*Tr(V_(4,2)) into u_g coordinates, isolate every degree-six or degree-seven term not already computed, including the genuinely new degree-seven general terms, supply genus-zero and genus-one bases, and apply Theorem 4.12",
+    "route": "Bergstrom u_g specialization",
+    "status": "OUTLINED_NOT_EXECUTED"
+  },
+  "branch_local_theorem": {
+    "B3_dependency_payload_sha256": "e8001e46712db6d991286f5ea02eca62d0a58a43b20eaad146d30ca539e952dd",
+    "M22_signature_count": 20,
+    "M22_total": "sum_D a_D^2*b_D^2=q*(q-1)*(q+1)*(5*q^5-19*q^4+29*q^3-5*q^2-21*q-3)",
+    "R22_mean": "(q^4+2*q^3-q^2-4*q-3)/q^6",
+    "chi_(0,3)_mean": "(q^4-2*q-1)/q^6",
+    "chi_(2,2)_mean": "(2*q^3-q^2-2*q-2)/q^6",
+    "marked_stack_trace": "T_(2,2)(q)=2*q^3-q^2-2*q-2",
+    "status": "PROVED_EXACT_ALL_ODD_PRIME_POWERS"
+  },
+  "character_alias": {
+    "central_character": 1,
+    "fundamental_weight": [
+      2,
+      2
+    ],
+    "highest_weight_e_basis": [
+      4,
+      2
+    ],
+    "literature_local_system": "V_(4,2)",
+    "local_system_weight": 6,
+    "project_character": "chi_(2,2)",
+    "project_coordinate_system": "C2 fundamental-weight coordinates",
+    "status": "PROVED_BY_MARKED_STACK_ADAPTER"
+  },
+  "established_import": {
+    "characteristic": "odd",
+    "definition": "U_42(q)=sum_[C in M_2(F_q)] Tr(F_q|V_(4,2),C)/|Aut_q(C)|",
+    "erratum_boundary": "the 2025 author erratum corrects Example 7.10 but does not list Theorem 11.6 as altered",
+    "formula": "U_42(q)=q^3",
+    "source": "Bergstrom, Section 2 geometric-Frobenius convention, Section 11.1 polynomial trace bridge, and Theorem 11.6, e_c(M_2,V_(4,2))=L^3",
+    "status": "IMPORTED_PRIMARY_LITERATURE_THEOREM_NOT_REPROVED_HERE"
+  },
+  "exact_specializations": [
+    {
+      "arbitrary_point_trace_A_42": 108,
+      "marked_Weierstrass_trace_T_(2,2)": 37,
+      "mixed_ramification_trace_M_42": 71,
+      "q": 3,
+      "status": "EXACT_SPECIALIZATION_NOT_AN_ALL_Q_PROOF_INPUT",
+      "unmarked_trace_U_42": 27
+    },
+    {
+      "arbitrary_point_trace_A_42": 750,
+      "marked_Weierstrass_trace_T_(2,2)": 213,
+      "mixed_ramification_trace_M_42": 537,
+      "q": 5,
+      "status": "EXACT_SPECIALIZATION_NOT_AN_ALL_Q_PROOF_INPUT",
+      "unmarked_trace_U_42": 125
+    },
+    {
+      "arbitrary_point_trace_A_42": 2744,
+      "marked_Weierstrass_trace_T_(2,2)": 621,
+      "mixed_ramification_trace_M_42": 2123,
+      "q": 7,
+      "status": "EXACT_SPECIALIZATION_NOT_AN_ALL_Q_PROOF_INPUT",
+      "unmarked_trace_U_42": 343
+    }
+  ],
+  "firewalls": [
+    "M_(2,1) with an arbitrary marked point is not M_2(w^1).",
+    "The published U_42=q^3 theorem is unmarked and does not itself evaluate T_(2,2).",
+    "Lemma 12.8 and Remark 12.9 are coordinate equivalences, not an evaluation of M_42.",
+    "The q=3,5,7 rows are exact specializations; the all-q proof is not interpolation.",
+    "The corrected A_2[2] example row is not an all-q M_2(w^1) theorem.",
+    "The Section 9 A_2(w^1) numerical Euler check is not an all-q M_2(w^1) Frobenius theorem.",
+    "The internal proof makes no claim of external novelty or prior-literature absence beyond the audited sources.",
+    "No cohomological decomposition, modular-form identification, number-field transfer, RH, or GRH conclusion is asserted."
+  ],
+  "forgetful_fibre_identity": {
+    "after_unmarked_import": "T_(2,2)(q)=q^3*(q+1)-M_42(q)",
+    "exact_identity": "T_(2,2)(q)=(q+1)*U_42(q)-M_42(q)",
+    "mixed_trace_definition": "M_42(q)=sum_[C in M_2(F_q)] r_1(C)*Tr(F_q|V_(4,2),C)/|Aut_q(C)|",
+    "proof": "groupoid cardinality of the forgetful fibre M_2(w^1)->M_2; automorphism weights are retained",
+    "r_1_definition": "Bergstrom r_1(C) counts rational base points with unramified hyperelliptic fibre",
+    "rational_Weierstrass_count": "R_1(C)=q+1-r_1(C)",
+    "status": "PROVED_EXACTLY"
+  },
+  "literature_verdict": {
+    "bergstrom_2009": "prints the unmarked V_(4,2) class and exact mixed-coordinate language; Lemma 12.8/Remark 12.9 require all u_g values, while Section 7.3 explicitly lacks all degree-six u_g values",
+    "erratum_2025": "prints the corrected A_2[2], V_(4,2) row; the row is ambient and not an all-q M_2(w^1) theorem",
+    "level_two_2008": "defines M_2(w^1) and exact finite trace machinery, but the fields are bounded, later identifications are conjectural, and Section 9 concerns ambient A_2(w^1)",
+    "novelty": "no novelty claim; later literature needs expert review",
+    "published_marked_formula": "NOT_FOUND_IN_AUDITED_SOURCES_AND_NOT_CLAIMED",
+    "published_mixed_formula": "NOT_FOUND_IN_AUDITED_SOURCES_AND_NOT_CLAIMED",
+    "published_unmarked_formula": "FOUND: U_42(q)=q^3"
+  },
+  "mixed_trace_consequence": {
+    "coefficient_vectors_in_increasing_q_power": {
+      "arbitrary_point_A_42": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "marked_T_(2,2)": [
+        -2,
+        -2,
+        -1,
+        2
+      ],
+      "mixed_M_42": [
+        2,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "unmarked_U_42": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "exact_equivalence": "T_(2,2)(q)=2*q^3-q^2-2*q-2 iff M_42(q)=q^4-q^3+q^2+2*q+2",
+    "name": "CHI22-MIXED-RAMIFICATION-TRACE",
+    "proof": "the M22/B3 packets prove T_(2,2); the exact forgetful-fibre identity and published U_42=q^3 then prove M_42",
+    "proved_marked_trace": "T_(2,2)(q)=2*q^3-q^2-2*q-2",
+    "status": "PROVED_ON_BRANCH_AS_EXACT_CONSEQUENCE",
+    "target": "M_42(q)=q^4-q^3+q^2+2*q+2"
+  },
+  "payload_sha256": "70a2b05dcc220d523c37dc340aba47571eb0786fe115bba54834d71bbfc7ef47",
+  "primary_literature": [
+    {
+      "authors": "Jonas Bergstrom",
+      "claim_boundary": "proves the unmarked V_(4,2) trace and supplies mixed ramification coordinates, but does not print or evaluate the marked V_(4,2) trace",
+      "eprint_source_sha256": "7a8c0cf50edb6de61694412e5b70e46f279587655582804d2011228a0f09973d",
+      "key": "bergstrom_pointed_hyperelliptic",
+      "locators": [
+        "Section 2, geometric Frobenius and arbitrary-point groupoid count (arXiv PDF pp. 3-4)",
+        "Section 7.3, incomplete degree-six u_g inventory (arXiv PDF p. 17)",
+        "Section 11.1 (arXiv PDF p. 26) and Theorem 11.6 (arXiv PDF p. 29), e_c(M_2,V_(4,2))=L^3",
+        "Definition 12.1 (arXiv PDF p. 29), Lemma 12.8 (pp. 30-31), and Remark 12.9 (p. 31)"
+      ],
+      "pdf_sha256": "12457527533aa0898375b5085c29cd0dec88e77ef4612a8810baac01ba92d5cd",
+      "title": "Equivariant counts of points of the moduli spaces of pointed hyperelliptic curves",
+      "url": "https://arxiv.org/abs/math/0611813",
+      "version": "arXiv v2, 30 November 2011"
+    },
+    {
+      "authors": "Jonas Bergstrom, Carel Faber, Gerard van der Geer",
+      "claim_boundary": "right marked-Weierstrass geometry and finite point-count machinery, but no printed all-q M_2(w^1), V_(4,2) theorem",
+      "eprint_source_sha256": "5780b581522ec17d4dfacc202b277f92e9b464fc54ef5f60dcc8ef56b660e5f0",
+      "key": "bergstrom_faber_vandergeer_level_two",
+      "locators": [
+        "Sections 2-3, definitions of M_2(w^n), A_2(w^n), and V_(l,m) (arXiv PDF pp. 2-3)",
+        "Section 5, finite-field computation for odd q<=37 (arXiv PDF pp. 6-8)",
+        "Section 9, numerical A_2(w^1) dimension checks (arXiv PDF p. 12)",
+        "Section 10, conjectural A_2[2], V_(4,2) example row (arXiv PDF p. 12)"
+      ],
+      "pdf_sha256": "f6294c69e2cafe16b4b0dc1ba1692a46813ba6e467e546aa548442d1a4f2a19e",
+      "title": "Siegel modular forms of genus 2 and level 2: cohomological computations and conjectures",
+      "url": "https://arxiv.org/abs/0803.0917",
+      "version": "arXiv v2, 20 April 2008"
+    },
+    {
+      "authors": "Jonas Bergstrom",
+      "claim_boundary": "prints the corrected ambient A_2[2], V_(4,2) row; that row is not an M_2(w^1) all-q theorem, and Theorem 11.6 is not listed as altered",
+      "key": "bergstrom_2025_author_erratum",
+      "locators": [
+        "p. 1: corrected A_2[2] example table, including the V_(4,2) row",
+        "p. 2: corrected Example 7.10 in the pointed-hyperelliptic paper"
+      ],
+      "pdf_sha256": "b064eef272d63a2a9b604647d25a346b825f48cba430399c14b144d477af16a3",
+      "title": "Erratum",
+      "url": "https://www.su.se/download/18.1f09f4df19a7bbe0dfd6a83e/1764771423396/Erratum.pdf",
+      "version": "2 December 2025"
+    }
+  ],
+  "provenance": {
+    "literature_authentication": "URLs, locators, and downloaded hashes were manually audited; the local checker performs no network replay",
+    "resource_contract": {
+      "arithmetic": "integers only",
+      "check_q_values": [
+        3,
+        5,
+        7
+      ],
+      "curves_enumerated": 0,
+      "exact_operation_cap": 1024,
+      "exact_operations_used": 133,
+      "finite_fields_enumerated": 0,
+      "maximum_source_bytes_each": 150000,
+      "random_samples": 0
+    },
+    "source_hashes_lf_sha256": {
+      "note": "78b53ac708d63eeedf00f08e3f805f0e5309050f716696be7e549562f5918a8c",
+      "producer": "59794c617903c507737f99be892f74119871c10eedea1dafdc51ac2a2ab93ac7",
+      "test": "841c074d358281590a1bf88651b33c3dd4db232138e50d8fff846d7ccdd7194c"
+    },
+    "source_locks": {
+      "genus2_b3_primitive_trace_average.json": {
+        "commit": "65eb68fe150998451799059aca80dce550a75b87",
+        "lf_sha256": "5ecc6006014a159a4030218977c89f58c63334461a568b7a67d36130bae1c50b",
+        "payload_sha256": "e8001e46712db6d991286f5ea02eca62d0a58a43b20eaad146d30ca539e952dd",
+        "schema": "riemann.function_field.genus2_b3_primitive_trace_average.v1"
+      },
+      "genus2_m22_triangular_trace_average.json": {
+        "commit": "65f4c7dc0c7340b561d0fb278cda75f1fb7944cd",
+        "lf_sha256": "a93f288ddce023005989cc0a7ed543d859697e68fa378a24ae7619af35fc9633",
+        "payload_sha256": "4d147295e3d2b7bc4b62eb8ba113c946f528606d82dd28d1a1ec002e2f93d60c",
+        "schema": "riemann.function_field.genus2_m22_triangular_trace_average.v1"
+      },
+      "genus2_marked_weierstrass_stack_adapter.json": {
+        "commit": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
+        "lf_sha256": "fe8f23f6379a70ea150a8e4f1b87054553536fde3bd23e6c1d21e252baf3b26c",
+        "payload_sha256": "7b091cc158c7ff378774dcbaef5802c469c3d377384034bced1caf4fe92b3601",
+        "schema": "riemann.function_field.genus2_marked_weierstrass_stack_adapter.v1"
+      }
+    }
+  },
+  "schema": "riemann.function_field.genus2_chi22_stack_trace_reconciliation.v1",
+  "scope": {
+    "arbitrary_point_moduli_problem": "M_(2,1), one arbitrary rational point",
+    "base_fields": "all finite fields F_q of odd characteristic",
+    "external_database_query": false,
+    "finite_field_or_curve_enumeration": false,
+    "marked_moduli_problem": "M_2(w^1), one rational Weierstrass point",
+    "rh_or_grh_claim": false,
+    "unmarked_moduli_problem": "M_2"
+  },
+  "status": "PROVED_ON_BRANCH_EXACT_M22_AND_MARKED_STACK_TRACE_PUBLISHED_MARKED_TABLE_IMPORT_NOT_FOUND"
+}
