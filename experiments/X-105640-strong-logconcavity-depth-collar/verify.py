@@ -100,6 +100,18 @@ for index, depths in enumerate(depth_sets):
         check(trace_sum <= depth_majorant,
               f"layer:{index}:bound:{total_height}")
 
+# Exact critical-height Maxwell-sandwich constants.
+kappa = Q(20476, 2345)
+check_eq(Q(1, 4) / kappa, Q(2345, 81904),
+         "maxwell:critical-exponent")
+critical_factor = Q(1) - Q(1, 4) / kappa
+check_eq(critical_factor, Q(79559, 81904),
+         "maxwell:critical-factor")
+check(critical_factor > Q(97, 100),
+      "maxwell:factor-over-97-percent")
+check_eq(critical_factor - Q(97, 100), Q(2803, 2047600),
+         "maxwell:97-percent-margin")
+
 payload = {
     "checks": checks,
     "count": len(checks),
@@ -113,6 +125,8 @@ result = {
     "checks": len(checks),
     "finite_blaschke_trace_ledger_replayed": True,
     "finite_layer_cake_ledger_replayed": True,
+    "height_owner_physical_transfer_proved": False,
+    "maxwell_constant_ledger_replayed": True,
     "model_space_functional_analysis_replayed": False,
     "proof_object": proof_object,
     "rh_established": False,
