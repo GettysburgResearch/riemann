@@ -1,31 +1,32 @@
-# T-106150 — Same-half-source analytic-square and reflection-signature frontier
+# T-106150 — Corrected same-half-source Wick square and reflection-signature frontier
 
 Claim ID: `T-106150`  
-Programme aliases: `LFAM1.SAME_HALF_SOURCE_FRONTIER`, `LFAM2.ANALYTIC_SQUARE_FAMILY`, `STRESS.REFLECTION_EVEN_ODD_CONJUNCTION`  
-Status: **EXACT SOURCE COMPRESSION AND IMPLICATION MATRIX; ONE-SIDED ESTIMATES OPEN**  
+Programme aliases: `LFAM1.SAME_HALF_SOURCE_FRONTIER`, `LFAM2.WICK_ANALYTIC_SQUARE_FAMILY`, `STRESS.REFLECTION_EVEN_ODD_CONJUNCTION`  
+Status: **CORRECTED EXACT WICK SOURCE COMPRESSION AND IMPLICATION MATRIX; ONE-SIDED ESTIMATES OPEN**  
 Created: 2026-08-25  
-Depends on: `L-106133--L-106134`; parent `L-102955--L-102963`, `T-102990`; repaired family frontier `T-106140`  
+Corrected: 2026-08-25  
+Depends on: `L-106133--L-106134`; binding `R-106150`; parent `L-102955--L-102963`, `T-102990`; repaired family frontiers `T-106130`, `T-106140`  
 Programme issues: #743, #736, #737  
 RH status: **unproved**
 
 The canonical coprime two-sided Boolean incidence current of `T-102990` has
-an exact one-field source normal form. This removes the separate owner-pair and
-core-factor coordinates from the algebraic frontier; the remaining sign is an
-analytic self-convolution/reflection-signature problem for one owner–core
-half-field.
+an exact one-half-source normal form. The exact square is a Boolean/Wick square,
+not an ordinary source square. Ordinary Mellin self-convolution supplies a
+reflection-signature coordinate after its shared-label contractions are moved
+to the parent’s already-closed repeated/higher-prime-power ledger.
 
-## 1. Exact derivative current
+## 1. Exact Wick derivative current
 
 Let
 
 \[
-\mathcal J_U(X)
-=\int_0^1(1-\theta)
-(F_{U,\theta}*_M F_{U,\theta})(X)\,d\theta
+\mathcal J_U^{\diamond}(X)
+=
+\int_0^1(1-\theta)
+(F_{U,\theta}\diamond_MF_{U,\theta})(X)\,d\theta
 \]
 
-be the same-half-source field of `L-106134`. Define the fixed differential
-operator
+be the Wick--Mellin field of `L-106134`, and define
 
 \[
 \boxed{
@@ -35,15 +36,16 @@ operator
 \tag{T-106150.1}
 \]
 
-After exact Boolean Type-I removal, canonical equal-pair allocation, repeated
-label and squared-activity removal, common-core extraction, and restoration of
-the equal-core and one-sided sectors already closed by `L-102955`, the live
-derivative observation has the form
+After exact Boolean Type-I removal, canonical equal-pair allocation,
+repeated-label and squared-activity removal, common-core extraction, and
+restoration of the equal-core and one-sided sectors already closed by
+`L-102955`, the live derivative observation is
 
 \[
 \boxed{
 H_K^{\rm live}
-=\mathcal D_{\rm out}\mathcal J_U
+=
+\mathcal D_{\rm out}\mathcal J_U^{\diamond}
 +H_{\rm closed},
 }
 \tag{T-106150.2}
@@ -57,38 +59,95 @@ with
 \]
 
 Every carrier, endpoint-colour, marked-67, shell and incidence label remains
-inside the half-field before the self-convolution. Equation (T-106150.2) is a
-source identity, not a source-blind replacement of the physical Gram.
-
-## 2. Direct same-field gate
+inside the half-source before the Wick projection.
 
 Define
 
 ```text
-SFSC106150:
-  on every dyadic horizon, after the complete source recombination in
-  L-106133--L-106134,
+WKSFSC106150:
+  on every dyadic horizon,
 
-      integral (D_out J_U)_- dX/X = Y^o(1).
+      integral (D_out J_U^diamond)_- dX/X = Y^o(1).
 ```
 
-Then (T-106150.2)--(T-106150.3), parent `T-102990`, and the frozen derivative
-Mellin consumer give
+Then
 
 \[
 \boxed{
-\mathrm{SFSC}_{106150}
+\mathrm{WKSFSC}_{106150}
 \Longrightarrow
 \mathrm{BCI}_{102990}
 \Longrightarrow
 \mathrm{RH}.
 }
 \tag{T-106150.4}
+
+`WKSFSC106150` remains open.
+
+## 2. Ordinary self-convolution modulo closed contractions
+
+Put
+
+\[
+\mathcal J_U(X)
+=
+\int_0^1(1-\theta)
+(F_{U,\theta}*_MF_{U,\theta})(X)\,d\theta.
+\tag{T-106150.5}
 \]
 
-`SFSC106150` remains open and RH-bearing. It is not claimed to be easier merely
-because it has one field; its advantage is that every algebraic source factor
-is now explicit and repeated only once.
+`R-106150` gives
+
+\[
+\mathcal J_U
+=
+\mathcal J_U^{\diamond}+\mathcal C_U,
+\]
+
+where every atom of `mathcal C_U` has a repeated label of exponent at least
+`2`. The parent `T-102990` ledger closes the fixed differential observation of
+these repeated/higher-prime-power fields. Hence
+
+\[
+\boxed{
+H_K^{\rm live}
+=
+\mathcal D_{\rm out}\mathcal J_U
++\widetilde H_{\rm closed},
+}
+\tag{T-106150.6}
+\]
+
+with
+
+\[
+\int_1^Y|\widetilde H_{\rm closed}(X)|\frac{dX}{X}=Y^{o(1)}.
+\tag{T-106150.7}
+\]
+
+Define the ordinary sufficient gate
+
+```text
+SFSC106150:
+  integral (D_out J_U)_- dX/X = Y^o(1).
+```
+
+Then
+
+\[
+\boxed{
+\mathrm{SFSC}_{106150}
+\Longrightarrow
+\mathrm{WKSFSC}_{106150}
+\Longrightarrow
+\mathrm{BCI}_{102990}
+\Longrightarrow
+\mathrm{RH}.
+}
+\tag{T-106150.8}
+
+The first implication uses only the absolute subpower contraction ledger.
+`SFSC106150` is open.
 
 ## 3. Reflection-even and reflection-odd conjunction
 
@@ -103,23 +162,25 @@ In logarithmic coordinate `x=log X`, define
 &=\int_0^1(1-\theta)
 \|O_xf_{U,\theta}\|_2^2\,d\theta,
 \end{aligned}
-\tag{T-106150.5}
+\tag{T-106150.9}
 \]
 
-where `E_x=(I+R_x)/2` and `O_x=(I-R_x)/2`. By `L-106134.14`,
+where `E_x=(I+R_x)/2`, `O_x=(I-R_x)/2`, and
+`R_xf(u)=f(x-u)`. By the ordinary reflection identity,
 
 \[
 \boxed{
 \mathcal J_U(e^x)
-=\mathcal E_U(x)-\mathcal O_U(x),
+=
+\mathcal E_U(x)-\mathcal O_U(x),
 \qquad
 \mathcal E_U,\mathcal O_U\ge0.
 }
-\tag{T-106150.6}
+\tag{T-106150.10}
 \]
 
-Let the same symbol `D_out` denote the corresponding constant-coefficient
-operator in `x`. The elementary inequality
+Let `mathcal D_out` also denote its constant-coefficient logarithmic form. The
+inequality
 
 \[
 (A-B)_-\le A_-+B_+
@@ -135,10 +196,10 @@ gives
 +
 (\mathcal D_{\rm out}\mathcal O_U)_+.
 }
-\tag{T-106150.7}
+\tag{T-106150.11}
 \]
 
-Define two separate source-specific statements:
+Define
 
 ```text
 REFEV106150:
@@ -160,46 +221,51 @@ Neither statement alone controls the principal current. Together,
 \Longrightarrow
 \mathrm{RH}.
 }
-\tag{T-106150.8}
+\tag{T-106150.12}
 
-This is a genuine implication-matrix conjunction: the even reflection reserve
-and odd reflection defect are different nonnegative source measurements of one
-half-field.
+Both premises remain open.
 
-## 4. L-family coordinate of the half-source
+## 4. Normal-ordered L-family coordinate
 
-For every multiplicative character `chi`, twist each physical atom
-`n=p a^2` in `mathfrak G_(U,theta)` by `chi(n)` and call the resulting field
-`F_(U,theta,chi)`. Multiplicativity and `L-106133.12` give the exact analytic
-square
+For every multiplicative character `chi`, twist each physical half-source atom
+`n=p a^2` by `chi(n)` and write the resulting field as
+`F_(U,theta,chi)`. Multiplicativity and `L-106133` give the exact
+normal-ordered analytic square
 
 \[
 \boxed{
-\widehat{\mathcal J_{U,\chi}}(s)
-=\int_0^1(1-\theta)
-\widehat F_{U,\theta,\chi}(s)^2\,d\theta.
+\widehat{\mathcal J_{U,\chi}^{\diamond}}(s)
+=
+\int_0^1(1-\theta)
+:\!\widehat F_{U,\theta,\chi}(s)^2\!:_B
+\,d\theta.
 }
-\tag{T-106150.9}
+\tag{T-106150.13}
 \]
 
-Thus the family programme may study a new family of **one-owner half-source
-L-defects**, rather than begin with four independent owner/core variables.
-The principal member is the native Boolean current. Nonprincipal members
-retain the full physical character
+There is no complex conjugation. The Boolean normal ordering removes pairs
+sharing prime labels. Replacing (T-106150.13) by an uncentered positive modulus
+square reintroduces both:
 
-\[
-\chi(p a^2)=\chi(p)\chi(a)^2.
-\]
+```text
+shared-label contraction fields;
+the conductor-dimensional atomic trace corrected by R-106131.
+```
 
-The square in (T-106150.9) has no conjugation. Replacing it by a positive
-second moment reintroduces the atomic conductor dimension corrected in
-`R-106131`. The Wick-centered additive/Kummer conjunction `T-106140` is the
-source-faithful way to use positive character information without that error.
+The source-faithful positive/signed family coordinates remain:
 
-Over function fields, the corresponding object is one Kummer-twisted
-owner–half-core sheaf followed by an analytic square and the fixed differential
-kernel. A geometric proof must still retain the cutoff-difference row of
-`L-106132` and classify constant constituents before applying Deligne bounds.
+```text
+CBKM106130:
+  connected physical-squareclass Kummer--Möbius current;
+
+WCADD106140 AND WCKUM106140:
+  Wick-centered additive and nonprincipal Kummer traces.
+```
+
+Over function fields, the correct object is a normal-ordered one-owner
+half-core Kummer sheaf, or the connected two-coordinate trace of `T-106130`,
+with constant constituents and shared-label contractions removed before a
+family absolute value.
 
 ## 5. Exact diagonal and residual obstacle
 
@@ -209,8 +275,8 @@ The half-source map
 (p,a)\longmapsto pa^2
 \]
 
-is injective, and `L-106133.13` proves a subpower source diagonal. Therefore the
-same-field frontier contains no:
+is injective, and `L-106133` gives a subpower source diagonal. Therefore the
+corrected same-field frontier contains no:
 
 ```text
 equal-product representation multiplicity;
@@ -219,25 +285,27 @@ complete-character atomic trace;
 core-only versus physical-squareclass ambiguity.
 ```
 
-What remains is the signed physical near-collision/reflection-odd component of
-one half-field. It is the same arithmetic obstruction seen in the reviewed
-half-divisor `HCNC` route, now attached coefficient-exactly to the canonical
-Boolean/Hodge source.
+The ordinary completion adds only the explicitly typed closed contraction
+ledger. What remains is the signed physical near-collision/reflection-odd
+component of one half-field.
 
 ## Current boundary
 
 ```text
-canonical equal-pair source = Beta half-source square     PROVED EXACT
-one-owner half-source physical map injective              PROVED EXACT
-half-source source diagonal                               PROVED SUBPOWER
-common-mother differential self-convolution               PROVED EXACT
-derivative outer same-field formula                       PROVED EXACT
-reflection even/odd signature                             PROVED EXACT
+canonical equal-pair source = Beta Boolean half-source square  PROVED EXACT
+one-owner half-source physical map injective                    PROVED EXACT
+half-source source diagonal                                    PROVED SUBPOWER
+ordinary = Wick + repeated-label contractions                  PROVED EXACT
+contraction observation                                        INHERITED CLOSED
+common-mother differential Wick self-convolution               PROVED EXACT
+ordinary reflection signature modulo closed contractions       PROVED EXACT
 
-SFSC106150                                                 OPEN / RH-BEARING
-REFEV106150                                                OPEN
-REFOD106150                                                OPEN
-WCADD106140 / WCKUM106140                                 OPEN / RH-BEARING
-BCI102990                                                  OPEN / RH-BEARING
-Riemann Hypothesis                                        UNPROVEN
+WKSFSC106150                                                    OPEN / RH-BEARING
+SFSC106150                                                      OPEN / RH-BEARING
+REFEV106150                                                     OPEN
+REFOD106150                                                     OPEN
+CBKM106130                                                      OPEN / RH-BEARING
+WCADD106140 / WCKUM106140                                      OPEN / RH-BEARING
+BCI102990                                                       OPEN / RH-BEARING
+Riemann Hypothesis                                             UNPROVEN
 ```

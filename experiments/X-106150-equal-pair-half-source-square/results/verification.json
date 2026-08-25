@@ -1,20 +1,25 @@
 {
-  "exact_checks": 24146,
-  "proof_object_sha256": "4890064413d40fb6a9a1fe2bb1523b8271e217fca166c6d4883f1acf4f42a3b6",
+  "exact_checks": 47263,
+  "proof_object_sha256": "d0cec21f67433559415ee8a62af24db4829606b87b10ed5f5933a406d8004390",
   "proved_exact": {
     "boolean_half_source_square": true,
-    "canonical_equal_pair_beta_square": true,
-    "common_mother_differential_self_convolution": true,
+    "canonical_equal_pair_beta_wick_square": true,
+    "common_mother_differential_wick_self_convolution": true,
     "cv_xd_outer_derivative_multiplier_images": true,
+    "ordinary_equals_wick_plus_overlap_contractions": true,
     "owner_exclusion_functoriality": true,
+    "same_label_terms_are_excluded_from_wick_square": true,
     "stable_xd_to_derivative_outer_relation": true
   },
   "status": {
     "BCI102990": "open",
+    "CBKM106130": "open",
+    "REFEV106150": "open",
+    "REFOD106150": "open",
     "SFSC106150": "open",
-    "WCADD106140": "open",
-    "WCKUM106140": "open",
+    "WKSFSC106150": "open",
+    "overlap_contraction_closure": "inherited_from_parent_closed_repeated_label_ledger",
     "riemann_hypothesis": "unproved"
   },
-  "verdict": "PASS_X_106150_EQUAL_PAIR_HALF_SOURCE_SQUARE"
+  "verdict": "PASS_X_106150_WICK_EQUAL_PAIR_HALF_SOURCE_SQUARE"
 }

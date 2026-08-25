@@ -1,56 +1,80 @@
-# Review specification — T-106150 same-half-source square
+# Review specification — corrected T-106150 Wick half-source square
 
 Review in this order:
 
-1. Verify the Boolean half-source identity `b_U=f_U star f_U` from `L-106132`.
-2. In `L-106133`, reconstruct the coefficient of one full labelled support
-   `S` and one unordered owner pair `{p,q}`. Check
+1. Verify `L-106133` in the Boolean algebra:
    \[
-   2\int_0^1(1-\theta)\theta^{|S|-2}d\theta
-   =\binom{|S|}{2}^{-1}.
+   b_U=f_U\star f_U,
+   \qquad
+   \mathfrak B_U^{\rm eq}
+   =\int_0^1(1-\theta)
+      \mathfrak G_{U,\theta}^{\star2}d\theta.
    \]
-3. Verify that Boolean restriction away from owner labels commutes with the
-   half-source and the depth dilation.
-4. Check that `(p,a)->p a^2` is injective and that the stated source diagonal
-   is subpower. Do not confuse this with the physical near-collision Gram.
-5. Reconstruct the kernel identity
+2. Reconstruct the canonical pair coefficient
    \[
-   \Phi_*=2(D-1/2)A*_M A.
+   2\int_0^1(1-\theta)\theta^{k-2}d\theta
+   =\binom{k}{2}^{-1}.
    \]
-6. Verify the convolution derivative rule
+3. Read `R-106150` before using any scalar self-convolution. Test the
+   one-label fixture
    \[
-   D(f*_M g)=(Df)*_Mg=f*_M(Dg)
+   x_p\star x_p=0,
+   \qquad x_p^2\ne0.
    \]
-   and therefore the factor `2D-1` in `L-106134.7`.
-7. Reconstruct the CV, XD, outer and derivative-outer differential images,
-   especially
+4. Derive the exact Wick--Mellin field `J_U^diamond` by imposing disjoint
+   prime-label supports.
+5. Verify
    \[
-   \frac12D(D-1)(5D+3/2)(2D-1)\mathcal J_U.
+   J_U=J_U^\diamond+C_U
    \]
-8. Verify the reflection-signature formula and the elementary conjunction
-   inequality in `T-106150.7`.
-9. Check that character twisting produces an analytic square with no
-   conjugation. Reject any replacement by a positive norm square unless the
-   Wick-centered correction `R-106131 / T-106140` is retained.
-10. Decide whether `SFSC106150`, `REFEV106150`, or `REFOD106150` follows from an
-    existing source-specific variation or half-divisor theorem.
+   and classify every contraction label as owner/owner, owner/core, or
+   core/core, with exponent `2`, `3`, or `4`.
+6. Check that the parent `T-102990` closed ledger genuinely applies to the
+   fixed differential observation of those contraction fields.
+7. Verify
+   \[
+   \Phi_*=2(D-1/2)A*_MA
+   \]
+   and
+   \[
+   \mathcal O_{\Phi_*}[B_U^{eq}]
+   =(2D-1)J_U^\diamond.
+   \]
+8. Confirm the factor `2D-1`. Do not use the false product-rule formula
+   `D(f*g)=Df*g+f*Dg` for convolution.
+9. Reconstruct the derivative/outer multiplier
+   \[
+   \frac12D(D-1)(5D+3/2)(2D-1).
+   \]
+10. Verify that the reflection signature belongs to the **ordinary**
+    convolution and enters the live source only modulo the closed contraction
+    field.
+11. For characters, verify the normal-ordered analytic square
+    \[
+    \int(1-\theta):\!\widehat F_\chi^2\!:_B d\theta.
+    \]
+12. Decide whether any existing theorem proves `WKSFSC106150`,
+    `SFSC106150`, `REFEV106150`, or `REFOD106150`.
 
 Mandatory firewalls:
 
 ```text
-Do not replace a convolution square by an autocorrelation square.
-Do not use D(f*g)=Df*g+f*Dg; that inserts a false factor two.
-Do not declare the source diagonal to control physical near-collisions.
-Do not discard owner, core, incidence, marked-67 or carrier labels.
-Do not claim the exact replay proves any one-sided estimate or RH.
+Do not identify Boolean star with ordinary source multiplication.
+Do not omit shared-label contractions.
+Do not call the Wick square an autocorrelation or modulus square.
+Do not infer physical near-collision control from the source diagonal.
+Do not take conductor-fibre absolute values before connected/Wick centering.
+Do not claim the exact replay proves a one-sided estimate or RH.
 ```
 
 Current status:
 
 ```text
-equal-pair Beta half-source square             exact;
-common-mother differential self-convolution    exact;
-reflection signature                           exact;
-SFSC / REFEV / REFOD                           open;
-BCI102990 / RH                                 open.
+Boolean/Beta equal-pair source square       exact;
+ordinary = Wick + contractions              exact;
+contractions                                inherited closed after observation;
+common-mother Wick differential image       exact;
+reflection model modulo contractions        exact sufficient coordinate;
+WKSFSC / SFSC / REFEV / REFOD               open;
+BCI102990 / RH                              open.
 ```

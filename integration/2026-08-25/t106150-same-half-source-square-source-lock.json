@@ -1,49 +1,59 @@
 {
-  "schema": "riemann.t106150.same-half-source-square-source-lock.v1",
+  "schema": "riemann.t106150.same-half-source-wick-square-source-lock.v2",
   "created": "2026-08-25",
+  "corrected": "2026-08-25",
   "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
-  "packet_commit": "076c5c509848628efc8e2a849d668d4fe16a7aae",
-  "concurrent_parent_commit": "a6f9aaec42edae356a197d228d60de545ad63019",
+  "pre_correction_head": "21ebfe7749748f77db27ab495f5dad2daec0f80f",
   "parent_pr": 719,
   "parent_scientific_head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
   "parent_frontier": "T-102990 / BCI102990",
   "programme_issues": [743, 736, 737],
+  "binding_correction": "R-106150",
   "related_repairs": [
     "R-106131 / T-106140 Wick-centered additive-Kummer repair",
     "T-106130 / CBKM106130 connected bilateral Kummer-Mobius frontier"
   ],
   "files": {
     "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md": "b988b14eb982504a799158eed4c76e7f033c96f0",
-    "claims/lemmas/L-106134-common-mother-is-a-differential-self-convolution.md": "6b7e4f7e003633dbe7741dd1780fd774b3298edf",
-    "claims/theorems/T-106150-same-half-source-analytic-square-frontier.md": "6012762215fb5726c6f7fd792ff824cd6d31fd1d",
-    "reports/gpt56-pro/2026-08-25-same-half-source-square-continuation.md": "fbd5f8ac8c2ed08e532a37c8c578faa3d4643c4f",
-    "standalone/2026-08-25-same-half-source-square/REVIEW_SPECIFICATION.md": "8879bfbbfe0e82f81f71e2a70c31504d0f29b331",
-    "experiments/X-106150-equal-pair-half-source-square/verify.py": "0fb60d479e7ee5dc4522abb4eb551e50b1d53237",
-    "experiments/X-106150-equal-pair-half-source-square/results/verification.json": "4941a7f952d44321ebb43040f7d7558933537f79"
+    "claims/refutations/R-106150-boolean-source-square-is-wick-not-ordinary-mellin-convolution.md": "65352ffb46e0556c912c2494413c2a8b17b9a74f",
+    "claims/lemmas/L-106134-common-mother-is-a-differential-self-convolution.md": "cf40354ff8810a2d4bea9459cf142c300ba36237",
+    "claims/theorems/T-106150-same-half-source-analytic-square-frontier.md": "4f0b8b465b0396bfce07f4ead8f840157e34e8b5",
+    "reports/gpt56-pro/2026-08-25-same-half-source-square-continuation.md": "c8c93b4353f85af3bbf12020ef6a1f0d3a915eb2",
+    "standalone/2026-08-25-same-half-source-square/REVIEW_SPECIFICATION.md": "826b14e743cd17de896798c29c4a5aa4ca381655",
+    "experiments/X-106150-equal-pair-half-source-square/README.md": "b53bfdf5d62e07c1d222329bc61532c267902cc2",
+    "experiments/X-106150-equal-pair-half-source-square/verify.py": "1ba86a1ca63db72aa1543b35f921ec19cf7ff080",
+    "experiments/X-106150-equal-pair-half-source-square/results/verification.json": "81c456eb73a5e388807ffb8844f3ddd06d8669b2"
   },
-  "proved_exact": {
+  "retained_exact": {
     "boolean_half_source_square": true,
-    "canonical_equal_pair_beta_square": true,
+    "canonical_equal_pair_beta_wick_square": true,
     "owner_exclusion_functoriality": true,
     "one_owner_half_source_map_is_injective": true,
     "half_source_source_diagonal_is_subpower": true,
-    "common_mother_differential_self_convolution": true,
-    "cv_xd_outer_derivative_multiplier_images": true,
-    "reflection_even_odd_signature": true,
-    "character_twists_form_analytic_squares": true
+    "ordinary_equals_wick_plus_overlap_contractions": true,
+    "overlap_contractions_are_repeated_or_higher_prime_power": true,
+    "common_mother_differential_wick_self_convolution": true,
+    "ordinary_reflection_model_modulo_closed_contractions": true,
+    "character_twists_form_normal_ordered_analytic_squares": true
   },
+  "retracted_or_corrected": [
+    "unqualified identification of Boolean star with ordinary source multiplication",
+    "first exact ordinary self-convolution equations in L-106134",
+    "first unqualified analytic-square statement in T-106150"
+  ],
   "replay": {
-    "verdict": "PASS_X_106150_EQUAL_PAIR_HALF_SOURCE_SQUARE",
-    "exact_checks": 24146,
-    "proof_object_sha256": "4890064413d40fb6a9a1fe2bb1523b8271e217fca166c6d4883f1acf4f42a3b6"
+    "verdict": "PASS_X_106150_WICK_EQUAL_PAIR_HALF_SOURCE_SQUARE",
+    "exact_checks": 47263,
+    "proof_object_sha256": "d0cec21f67433559415ee8a62af24db4829606b87b10ed5f5933a406d8004390"
   },
   "open": {
+    "WKSFSC106150": "open_rh_bearing",
     "SFSC106150": "open_rh_bearing",
     "REFEV106150": "open",
     "REFOD106150": "open",
+    "CBKM106130": "open_rh_bearing",
     "WCADD106140": "open_rh_bearing",
     "WCKUM106140": "open_rh_bearing",
-    "CBKM106130": "open_rh_bearing",
     "BCI102990": "open_rh_bearing",
     "riemann_hypothesis": "unproved"
   },

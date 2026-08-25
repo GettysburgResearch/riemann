@@ -1,126 +1,152 @@
-# Same-half-source square continuation
+# Corrected same-half-source Wick-square continuation
 
 Date: 2026-08-25  
 Execution PR: #751  
 Programmes: #743, #736, #737  
 Parent frontier: `T-102990 / BCI102990`  
-Status: **exact source compression; final one-sided estimates open**
+Status: **exact Wick source compression; ordinary reflection form valid modulo inherited closed contractions; final estimates open**
 
-## Main result
+## Self-audit correction
 
-The canonical equal-pair Boolean balanced source has the exact form
+The canonical equal-pair Boolean identity
 
 \[
 \mathfrak B_U^{\rm eq}
 =
 \int_0^1(1-\theta)
-\mathfrak G_{U,\theta}^{\star2}
-\,d\theta,
+\mathfrak G_{U,\theta}\star
+\mathfrak G_{U,\theta}\,d\theta
 \]
 
-where `mathfrak G_(U,theta)` is one combined source containing:
+is exact. The first continuation incorrectly identified the Boolean product
+`star` with ordinary source multiplication when passing to Mellin
+self-convolution.
 
-```text
-one unsquared owner prime;
-one Boolean half-core;
-the exact depth weight theta^|core|.
-```
-
-The Beta coefficient
+Ordinary multiplication also includes pairs of half-source atoms sharing a
+prime label. A one-label fixture already gives
 
 \[
-2\int_0^1(1-\theta)\theta^{k-2}d\theta
-=\binom{k}{2}^{-1}
+x_p\star x_p=0,
+\qquad
+x_p^2=p^{-1}U_{p^2}\ne0.
 \]
 
-is exactly the canonical equal-pair Duhamel share.
+The binding correction is `R-106150`.
 
-One half-source atom has the unique physical form
+## Exact repaired field
+
+Define the Wick--Mellin convolution by retaining only pairs with disjoint
+prime-label supports. Then
 
 \[
-n=p a^2,
+\mathcal J_U^{\diamond}
+=
+\int_0^1(1-\theta)
+(F_{U,\theta}\diamond_MF_{U,\theta})\,d\theta
 \]
 
-so the map `(p,a)->n` is injective and its source diagonal is subpower.
+and
 
-## Common-mother compression
+\[
+\mathcal O_{\Phi_*}[\mathfrak B_U^{\rm eq}]
+=(2D-1)\mathcal J_U^{\diamond}.
+\]
+
+The live derivative/outer field is
+
+\[
+\frac12D(D-1)(5D+3/2)(2D-1)
+\mathcal J_U^{\diamond}.
+\]
+
+## Ordinary completion and contractions
 
 Let
 
 \[
-F_{U,\theta}=\mathcal O_A[\mathfrak G_{U,\theta}],
-\qquad
 \mathcal J_U
 =
 \int_0^1(1-\theta)
-(F_{U,\theta}*_M F_{U,\theta})d\theta.
+(F_{U,\theta}*_MF_{U,\theta})\,d\theta.
 \]
 
-Using
+Then exactly
 
 \[
-\Phi_*=2(D-1/2)A*_M A,
+\mathcal J_U
+=
+\mathcal J_U^{\diamond}+\mathcal C_U,
 \]
 
-one obtains
+where every term of `mathcal C_U` has a shared prime label. Such a label has
+physical exponent `2`, `3`, or `4` according as it is owner/owner,
+owner/core, or core/core. These are the repeated-label and
+higher-prime-power source fields recorded as closed in the parent
+`T-102990` ledger.
 
-\[
-\mathcal O_{\Phi_*}[\mathfrak B_U^{\rm eq}]
-=(2D-1)\mathcal J_U.
-\]
+Therefore the ordinary reflection-signature model remains valid after the
+fixed differential image, but only modulo this explicit closed contraction
+field.
 
-The live derivative/outer observation is
-
-\[
-\frac12D(D-1)(5D+3/2)(2D-1)\mathcal J_U.
-\]
-
-The factor is `2D-1`, not `D-1`: a derivative of a convolution equals the
-derivative on either factor, not the sum of derivatives on both factors.
-
-## Reflection signature
-
-For the real principal half-field,
-
-\[
-(F*_MF)(e^x)
-=\|E_xf\|_2^2-\|O_xf\|_2^2.
-\]
-
-Thus the final sign is a reflection-even reserve minus a reflection-odd defect
-of one field. The exact sufficient conjunction is
+## Correct gates
 
 ```text
+WKSFSC106150:
+  negative mass of the exact differential Wick square is subpower;
+
+SFSC106150:
+  negative mass of the ordinary differential self-convolution is subpower;
+
 REFEV106150:
-  negative differential variation of the even energy is subpower;
+  negative differential variation of ordinary reflection-even energy is
+  subpower;
 
 REFOD106150:
-  positive differential variation of the odd energy is subpower.
+  positive differential variation of ordinary reflection-odd energy is
+  subpower.
 ```
 
-Together they imply `SFSC106150`, then `BCI102990`, then RH. All remain open.
+The exact implications are
 
-## L-family meaning
+```text
+SFSC106150 -> WKSFSC106150 -> BCI102990 -> RH;
 
-Every character twist also has an analytic-square form
+REFEV106150
+AND REFOD106150
+ -> SFSC106150
+ -> RH.
+```
+
+All gates remain open.
+
+## Normal-ordered family meaning
+
+For a character twist, the exact Boolean source has the normal-ordered analytic
+square
 
 \[
-\widehat{\mathcal J_{U,\chi}}(s)
+\widehat{\mathcal J_{U,\chi}^{\diamond}}(s)
 =
 \int_0^1(1-\theta)
-\widehat F_{U,\theta,\chi}(s)^2d\theta.
+:\!\widehat F_{U,\theta,\chi}(s)^2\!:_B\,d\theta.
 \]
 
-The square is not a modulus square. A positive second moment must use the
-Wick-centered repair of `T-106140`; otherwise the conductor-dimensional atomic
-trace reappears.
+There is no complex conjugation. The Boolean normal ordering removes shared
+prime labels. Replacing it by an uncentered modulus square recreates the
+contraction field and the character-family atomic multiplicity corrected by
+`R-106131`.
+
+The complementary family routes remain `CBKM106130` and the
+`WCADD106140 / WCKUM106140` conjunction.
 
 ## Replay
 
 ```text
-PASS_X_106150_EQUAL_PAIR_HALF_SOURCE_SQUARE
-exact_checks=24146
-proof_object_sha256=4890064413d40fb6a9a1fe2bb1523b8271e217fca166c6d4883f1acf4f42a3b6
+PASS_X_106150_WICK_EQUAL_PAIR_HALF_SOURCE_SQUARE
+exact_checks=47263
+proof_object_sha256=d0cec21f67433559415ee8a62af24db4829606b87b10ed5f5933a406d8004390
 ```
 
-RH remains unproved.
+The replay checks the ordinary/Wick distinction and contraction decomposition
+in addition to the retained Boolean/Beta and differential multiplier
+identities. It proves none of the one-sided gates or RH.
