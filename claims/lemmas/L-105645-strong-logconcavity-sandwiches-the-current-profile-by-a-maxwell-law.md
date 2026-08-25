@@ -215,7 +215,7 @@ e^{-H^2/\kappa_0}
 \le
 \operatorname{tr}_{K_B}M_{e^{-H\xi}}.
 }
-\tag{L-105645.14]
+\tag{L-105645.14}
 
 For one zero at depth `y`,
 
@@ -227,7 +227,7 @@ e^{-H^2/\kappa_0}{2y\over H+2y}
 \le
 {2y\over H+2y}.
 }
-\tag{L-105645.15]
+\tag{L-105645.15}
 
 At `H<=1/2`, the lower constant may be replaced by `97/100`.
 
