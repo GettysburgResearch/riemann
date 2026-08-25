@@ -1,0 +1,140 @@
+✔ [283/303] Built RiemannFormal.Upstream.SourceLocks (13s)
+✖ [3819/3916] Running ChallengeDeps.MellinAPI
+error: no such file or directory (error code: 4294963238)
+  file: C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\comparator\ChallengeDeps\MellinAPI.lean
+✖ [3820/3916] Running Solution.MellinAPI
+error: no such file or directory (error code: 4294963238)
+  file: C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\comparator\Solution\MellinAPI.lean
+✔ [3823/3916] Built RiemannFormal.Refutations (2.4s)
+✔ [3824/3916] Built Zeta23.Prelude.InstancePriorities (107s)
+✔ [3825/3916] Built Zeta23.FromPNTPlus.Tactic.AdditiveCombination (108s)
+✖ [3826/3916] Building ChallengeDeps.MellinAPI (100s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\comparator\ChallengeDeps\MellinAPI.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean\ChallengeDeps\MellinAPI.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean\ChallengeDeps\MellinAPI.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\ir\ChallengeDeps\MellinAPI.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\ir\ChallengeDeps\MellinAPI.setup.json --json
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:49: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:9:15: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:10:15: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:13:17: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:14:16: Unknown identifier `ℂ`
+error: Lean exited with code 1
+✔ [3829/3916] Built Zeta23.FromPNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Basic (116s)
+✔ [3830/3916] Built Zeta23.Tail.Basic (117s)
+✔ [3831/3916] Built Zeta23.FromPNTPlus.Auxiliary (116s)
+✔ [3832/3916] Built Zeta23.FromPNTPlus.Rectangle (117s)
+✖ [3833/3916] Building Zeta23.Tail.Grid (23s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\Zeta23\Tail\Grid.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\Tail\Grid.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\Tail\Grid.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\Tail\Grid.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\Tail\Grid.setup.json --json
+info: stderr:
+libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
+error: Lean exited with code 3221226505
+✔ [3834/3916] Built Zeta23.FromPNTPlus.EulerMaclaurin (148s)
+✔ [3835/3916] Built Zeta23.LinAlg.PosIndex (166s)
+✔ [3836/3916] Built Zeta23.Defs (166s)
+✔ [3837/3916] Built RiemannFormal.Statement.RH (180s)
+✔ [3838/3916] Built Zeta23.RvM.BacklundDefs (63s)
+✔ [3839/3916] Built Zeta23.FromPNTPlus.ZetaConj (170s)
+⚠ [3840/3916] Built Zeta23.FromPNTPlus.StrongPNTPrefix (78s)
+warning: Zeta23/FromPNTPlus/StrongPNTPrefix.lean:61:71: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Zeta23/FromPNTPlus/StrongPNTPrefix.lean:202:9: `Set.setOf_subset_setOf` has been deprecated: Use `Set.ofPred_subset_ofPred` instead
+warning: Zeta23/FromPNTPlus/StrongPNTPrefix.lean:343:10: `Set.notMem_setOf_iff` has been deprecated: Use `Set.notMem_ofPred_iff` instead
+warning: Zeta23/FromPNTPlus/StrongPNTPrefix.lean:368:48: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Zeta23/FromPNTPlus/StrongPNTPrefix.lean:390:10: `Set.notMem_setOf_iff` has been deprecated: Use `Set.notMem_ofPred_iff` instead
+warning: Zeta23/FromPNTPlus/StrongPNTPrefix.lean:432:48: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+✔ [3841/3916] Built Zeta23.FromPNTPlus.Sobolev (192s)
+✔ [3842/3916] Built Zeta23.Tail.Count (79s)
+✔ [3843/3916] Built Zeta23.FromPNTPlus.ResidueCalcOnRectangles (91s)
+✔ [3844/3916] Built Zeta23.LinAlg.HermitianPosPart (49s)
+✔ [3845/3916] Built Zeta23.Defs.Counting (54s)
+✔ [3846/3916] Built Zeta23.Hypotheses (56s)
+✔ [3847/3916] Built Zeta23.Poisson.PaperFT (56s)
+✔ [3848/3916] Built RiemannFormal.Statement.ScientificStatus (52s)
+✔ [3849/3916] Built Zeta23.GammaFacts (64s)
+✔ [3850/3916] Built Zeta23.ExplicitFormula (64s)
+✔ [3851/3916] Built Zeta23.LinAlg.VonNeumann (64s)
+✔ [3852/3916] Built Zeta23.FromPNTPlus.Fourier (38s)
+✖ [3853/3916] Building Zeta23.FromPNTPlus.ZetaBounds (8.2s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\Zeta23\FromPNTPlus\ZetaBounds.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\FromPNTPlus\ZetaBounds.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\FromPNTPlus\ZetaBounds.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\FromPNTPlus\ZetaBounds.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\FromPNTPlus\ZetaBounds.setup.json --json
+error: Zeta23/FromPNTPlus/ZetaBounds.lean:15:0: failed to read file 'C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean\Mathlib\MeasureTheory\Function\SimpleFuncDenseLp.olean.private'
+error: Lean exited with code 1
+✖ [3855/3916] Building Zeta23.ExplicitFormula.Bridge (9.9s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\Zeta23\ExplicitFormula\Bridge.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\ExplicitFormula\Bridge.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\ExplicitFormula\Bridge.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\ExplicitFormula\Bridge.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\ExplicitFormula\Bridge.setup.json --json
+info: stderr:
+libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
+error: Lean exited with code 3221226505
+✔ [3856/3916] Built Zeta23.Analytic.RectangleLogDeriv (31s)
+✖ [3857/3916] Building RiemannFormal.Upstream.MathlibBridge (71s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\RiemannFormal\Upstream\MathlibBridge.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean\RiemannFormal\Upstream\MathlibBridge.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean\RiemannFormal\Upstream\MathlibBridge.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\ir\RiemannFormal\Upstream\MathlibBridge.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\ir\RiemannFormal\Upstream\MathlibBridge.setup.json --json
+error: RiemannFormal/Upstream/MathlibBridge.lean:13:7: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'riemannZeta', which is 'noncomputable'
+error: RiemannFormal/Upstream/MathlibBridge.lean:16:7: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'completedRiemannZeta', which is 'noncomputable'
+error: RiemannFormal/Upstream/MathlibBridge.lean:19:7: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'completedRiemannZeta₀', which is 'noncomputable'
+error: RiemannFormal/Upstream/MathlibBridge.lean:24:36: Invalid field `analyticAt`: The environment does not contain `Exists.analyticAt`, so it is not possible to project the field `analyticAt` from an expression
+  differentiableAt_riemannZeta hs
+of type
+  ∃ f', HasFDerivAt riemannZeta f' s
+error: RiemannFormal/Upstream/MathlibBridge.lean:29:41: Invalid field `analyticAt`: The environment does not contain `Exists.analyticAt`, so it is not possible to project the field `analyticAt` from an expression
+  differentiableAt_completedZeta h0 h1
+of type
+  ∃ f', HasFDerivAt completedRiemannZeta f' s
+error: RiemannFormal/Upstream/MathlibBridge.lean:34:36: Invalid field `analyticAt`: The environment does not contain `Exists.analyticAt`, so it is not possible to project the field `analyticAt` from an expression
+  differentiable_completedZeta₀ s
+of type
+  ∃ f', HasFDerivAt completedRiemannZeta₀ f' s
+error: Lean exited with code 1
+✔ [3858/3916] Built Zeta23.LinAlg.Sylvester (27s)
+⚠ [3859/3916] Built Zeta23.RvM.Halving (25s)
+warning: Zeta23/RvM/Halving.lean:52:55: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Zeta23/RvM/Halving.lean:62:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: Zeta23/RvM/Halving.lean:70:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+✔ [3860/3916] Built RiemannFormal.Statement.OpenCuts (23s)
+⚠ [3861/3916] Built Zeta23.Statement (26s)
+warning: Zeta23/Statement.lean:148:30: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+✖ [3863/3916] Building Zeta23.Statement.Seam (8.9s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\Zeta23\Statement\Seam.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\Statement\Seam.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean\Zeta23\Statement\Seam.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\Statement\Seam.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\ir\Zeta23\Statement\Seam.setup.json --json
+error: Zeta23/Statement/Seam.lean:16:0: failed to read file 'C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean\Mathlib\Algebra\Order\Field\Basic.olean.private'
+error: Lean exited with code 1
+✔ [3864/3916] Built Zeta23.LinAlg.RankTrace (33s)
+✔ [3865/3916] Built Zeta23.GammaFacts.Series (36s)
+✔ [3866/3916] Built Zeta23.Tail.RankOne (25s)
+✔ [3867/3916] Built Zeta23.LinAlg.Weyl (26s)
+✔ [3868/3916] Built Zeta23.LinAlg.Inertia (27s)
+✔ [3869/3916] Built RiemannFormal.Arithmetic.Foundations (30s)
+✔ [3870/3916] Built RiemannFormal.Operator.Foundations (30s)
+✔ [3871/3916] Built RiemannFormal.Release.Release20260822 (30s)
+✔ [3872/3916] Built Zeta23.WeilEF.XiLogDeriv (31s)
+⚠ [3873/3916] Built Zeta23.ZetaReflect (32s)
+warning: Zeta23/ZetaReflect.lean:91:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+✔ [3885/3916] Built Zeta23.LinAlg (17s)
+✔ [3886/3916] Built Zeta23.WeilEF.GammaRBracket (24s)
+✔ [3887/3916] Built Zeta23.Analytic.Stirling (25s)
+✔ [3888/3916] Built RiemannFormal.Operator (17s)
+✔ [3889/3916] Built Zeta23.Assembly.Inputs (16s)
+ℹ [3893/3916] Built Zeta23.GammaFacts.Mu (24s)
+info: Zeta23/GammaFacts/Mu.lean:137:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ℹ [3894/3916] Built Zeta23.GammaFacts.StirlingVert (21s)
+info: Zeta23/GammaFacts/StirlingVert.lean:452:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Some required targets logged failures:
+- ChallengeDeps.MellinAPI
+- Solution.MellinAPI
+- ChallengeDeps.MellinAPI
+- Zeta23.Tail.Grid
+- Zeta23.FromPNTPlus.ZetaBounds
+- Zeta23.ExplicitFormula.Bridge
+- RiemannFormal.Upstream.MathlibBridge
+- Zeta23.Statement.Seam
+error: build failed

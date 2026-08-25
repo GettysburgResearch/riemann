@@ -1,0 +1,7 @@
+LIBRARY=ChallengeDeps	LOCAL_DECLARED=True	ZETA23_DECLARED=True
+LIBRARY=Challenge	LOCAL_DECLARED=True	ZETA23_DECLARED=True
+LIBRARY=Solution	LOCAL_DECLARED=True	ZETA23_DECLARED=True
+TOPIC=ArithmeticRows23	LOCAL_CHALLENGEDEPS_FILE=True	ZETA23_CHALLENGEDEPS_FILE=False
+TOPIC=FixedDetectorFiveThree	LOCAL_CHALLENGEDEPS_FILE=True	ZETA23_CHALLENGEDEPS_FILE=False
+DIAGNOSIS=bare module targets match identically rooted local and dependency libraries; Lake attempts the absent Zeta23 topic as well as the resident local topic
+EXIT_CODE=0

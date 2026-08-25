@@ -1,0 +1,55 @@
+✖ [3679/3679] Building RiemannFormal.Arithmetic.HalfDivisor (15s)
+error: build failed
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b-diagnostic\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b-diagnostic\formal\RiemannFormal\Arithmetic\HalfDivisor.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b-diagnostic\formal\.lake\build\lib\lean\RiemannFormal\Arithmetic\HalfDivisor.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b-diagnostic\formal\.lake\build\lib\lean\RiemannFormal\Arithmetic\HalfDivisor.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b-diagnostic\formal\.lake\build\ir\RiemannFormal\Arithmetic\HalfDivisor.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b-diagnostic\formal\.lake\build\ir\RiemannFormal\Arithmetic\HalfDivisor.setup.json --json
+error: RiemannFormal/Arithmetic/HalfDivisor.lean:43:31: unsolved goals
+k : ℕ
+hcast : ↑(k + 1) * ↑(k + 1).centralBinom = 2 * (2 * ↑k + 1) * ↑k.centralBinom
+⊢ ↑k * ↑(1 + k).centralBinom * 4⁻¹ ^ k * (1 / 4) + ↑(1 + k).centralBinom * 4⁻¹ ^ k * (1 / 4) =
+    ↑(1 + k).centralBinom * 4⁻¹ ^ k * ↑(1 + k) * (1 / 4)
+error: RiemannFormal/Arithmetic/HalfDivisor.lean:152:2: 'change' tactic failed, pattern
+  ((m * n).factorization.prod fun x k ↦ etaCoeff k) =
+    (m.factorization.prod fun x k ↦ etaCoeff k) * n.factorization.prod fun x k ↦ etaCoeff k
+is not definitionally equal to target
+  { toFun := fun n ↦ if n = 0 then 0 else n.factorization.prod fun x k ↦ etaCoeff k, map_zero' := eta._proof_1 }
+      (m * n) =
+    { toFun := fun n ↦ if n = 0 then 0 else n.factorization.prod fun x k ↦ etaCoeff k, map_zero' := eta._proof_1 } m *
+      { toFun := fun n ↦ if n = 0 then 0 else n.factorization.prod fun x k ↦ etaCoeff k, map_zero' := eta._proof_1 } n
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:151:18: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eta, hn, mul_ne_zero hm hn, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:151:22: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eta, hm, mul_ne_zero hm hn, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:151:26: This simp argument is unused:
+  mul_ne_zero hm hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eta, hm, hn, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:151:45: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eta, hm, hn, mul_ne_zero hm hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:167:15: This simp argument is unused:
+  hpk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [eta, hp.factorization_pow, Finsupp.prod_single_index, etaCoeff_zero, hp.ne_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- RiemannFormal.Arithmetic.HalfDivisor
+EXIT_CODE=1

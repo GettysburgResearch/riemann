@@ -1,0 +1,80 @@
+⚠ [3687/3716] Replayed RiemannFormal.Arithmetic.SourceIdentities
+warning: RiemannFormal/Arithmetic/SourceIdentities.lean:179:26: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RiemannFormal/Arithmetic/SourceIdentities.lean:179:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3694/3716] Replayed RiemannFormal.Arithmetic.HalfDivisor
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:44:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:168:15: This simp argument is unused:
+  hpk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [eta, hp.factorization_pow, Finsupp.prod_single_index, etaCoeff_zero, hp.ne_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3696/3716] Replayed RiemannFormal.Arithmetic.Wavelet
+warning: RiemannFormal/Arithmetic/Wavelet.lean:120:35: This simp argument is unused:
+  add_left_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fourTap, shift, add_assoc, add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3705/3716] Replayed Zeta23.Statement
+warning: Zeta23/Statement.lean:148:30: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+✔ [3711/3716] Built RiemannFormal.MellinLandau.FixedDetectorAssembly (12s)
+ℹ [3712/3716] Built RiemannFormal.Arithmetic.AxiomAudit (15s)
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:8:0: 'RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:9:0: 'RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:12:0: 'RiemannFormal.Arithmetic.SourceIdentities.scalarFirstOwnerExpansion_eq_finiteEulerProduct' depends on axioms: [propext,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:15:0: 'RiemannFormal.Arithmetic.SourceIdentities.duplicate67_same_prime_distinct_labels' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:16:0: 'RiemannFormal.Arithmetic.SourceIdentities.duplicate67_parity_fixture' depends on axioms: [propext, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:17:0: 'RiemannFormal.Arithmetic.SourceIdentities.native_one_prime_ne_contracted_two_child' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:18:0: 'RiemannFormal.Arithmetic.SourceIdentities.raw_cutoff_ne_rn_child_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:19:0: 'RiemannFormal.Arithmetic.SourceIdentities.rn_density_times_capacity_eq_response_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:20:0: 'RiemannFormal.Arithmetic.SourceIdentities.response_capacity_coefficients_differ_16_4_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:21:0: 'RiemannFormal.Arithmetic.SourceIdentities.normalized_p_inv_ne_p_inv_sqrt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:24:0: 'RiemannFormal.Arithmetic.native_ne_auxiliary' does not depend on any axioms
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:25:0: 'RiemannFormal.Arithmetic.response_ne_capacity' does not depend on any axioms
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:26:0: 'RiemannFormal.Arithmetic.signedObservation_ne_auxiliaryPositive' does not depend on any axioms
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:27:0: 'RiemannFormal.Arithmetic.rebuildAtRole_coefficient' depends on axioms: [propext]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:28:0: 'RiemannFormal.Arithmetic.FixedArithmeticDetector.asConstantMoving_queryIndependent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:31:0: 'RiemannFormal.Arithmetic.HalfDivisor.etaCoeff_antidiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:32:0: 'RiemannFormal.Arithmetic.HalfDivisor.eta_mul_eta' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:33:0: 'RiemannFormal.Arithmetic.HalfDivisor.genericOneFieldConvolution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:36:0: 'RiemannFormal.Arithmetic.Wavelet.fourTapValues_geometric' depends on axioms: [propext, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:37:0: 'RiemannFormal.Arithmetic.Wavelet.threeTap_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:38:0: 'RiemannFormal.Arithmetic.Wavelet.affine_nuisance_sign_flip' depends on axioms: [propext, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:39:0: 'RiemannFormal.Arithmetic.Wavelet.fourTap_shift' depends on axioms: [propext]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:40:0: 'RiemannFormal.Arithmetic.Wavelet.finite_sum_by_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:41:0: 'RiemannFormal.Arithmetic.Wavelet.K0_ne_K1' does not depend on any axioms
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:44:0: 'RiemannFormal.MellinLandau.fixedFiveThreeArithmeticInput_spec' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: RiemannFormal/Arithmetic/AxiomAudit.lean:45:0: 'RiemannFormal.MellinLandau.fixedRows23ArithmeticInput_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3713/3716] Built RiemannFormal.MellinLandau (16s)
+✔ [3714/3716] Built RiemannFormal.Arithmetic (11s)
+✔ [3715/3716] Built RiemannFormal (11s)
+Build completed successfully (3716 jobs).
+EXIT_CODE=0

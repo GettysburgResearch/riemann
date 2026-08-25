@@ -1,0 +1,8 @@
+fix_id	applies_to	patch	statement_types_changed	validation	status	remaining_blocker
+A-LOCAL-MECHANICS	9ed8988218fd9c3e1da33bde81361262fc0aa747	patches/A_MECHANICAL_FIXES.patch	NO	git apply --check exit 0	PARTIAL_ADVISORY	AnalyticAt adapters and duplicate Lake library names remain; patch intentionally not claimed as a build fix
+A-ANALYTIC-ADAPTERS	9ed8988218fd9c3e1da33bde81361262fc0aa747	NONE	NO_CHANGE_ATTEMPTED	Not run	STOPPED_NONMECHANICAL_PROOF_REPAIR	Pinned-API differentiability-to-analyticity proofs require independently checked proof repair
+B-TRUSTED-COMPILE	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	patches/B_compile_fixes.patch	NO	Three targeted modules exit 0; disposable full lake build exit 0	VALIDATED_ADVISORY	Exact head still fails; comparator library collision remains outside this patch
+B-AXIOM-RUNNER	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	patches/B_check_axioms.patch	NO	git apply --check exit 0	COVERAGE_PATCH_NOT_EXECUTED	Comparator Solution objects are unavailable because all qualified comparator targets still collide
+SHARED-LAKE-COMPARATOR	A;B;C	NONE	NO	Bare and root-qualified diagnostics all reproduce collision	REQUIRED_UNPATCHED	Root and pinned Zeta23 export the same ChallengeDeps/Challenge/Solution library names; integration configuration must disambiguate imported dependencies
+C-STATEMENT-EOL	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	patches/C_source_statement_eol.patch	NO	git apply --check exit 0	ADVISORY_APPLIES	Attribute must precede materialization or statement file must be checked out again
+C-COMPILE	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	NONE	NO_CHANGE_ATTEMPTED	Not run	STOPPED_NONMECHANICAL_PROOF_REPAIR	Repair spans configuration, computability, notation, generated Repr, and unsolved proofs

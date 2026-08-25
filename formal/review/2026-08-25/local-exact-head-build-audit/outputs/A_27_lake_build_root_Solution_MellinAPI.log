@@ -1,0 +1,23 @@
+✖ [1935/1937] Running ChallengeDeps.MellinAPI
+error: no such file or directory (error code: 4294963238)
+  file: C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\comparator\ChallengeDeps\MellinAPI.lean
+✖ [1936/1937] Building ChallengeDeps.MellinAPI (9.3s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\comparator\ChallengeDeps\MellinAPI.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean\ChallengeDeps\MellinAPI.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\lib\lean\ChallengeDeps\MellinAPI.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\ir\ChallengeDeps\MellinAPI.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-a\formal\.lake\build\ir\ChallengeDeps\MellinAPI.setup.json --json
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:36: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:40: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:8:49: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:9:15: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:10:15: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:13:17: Unknown identifier `ℂ`
+error: comparator/ChallengeDeps/MellinAPI.lean:14:16: Unknown identifier `ℂ`
+error: Lean exited with code 1
+Some required targets logged failures:
+- ChallengeDeps.MellinAPI
+- ChallengeDeps.MellinAPI
+error: build failed

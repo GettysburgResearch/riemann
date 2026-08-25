@@ -1,0 +1,47 @@
+info: Zeta23: cloning https://github.com/anthropics/zeta-23-lean
+info: Zeta23: checking out revision 'cec57f919ccf34e5fa5372b4ba332f7c848bbb6e'
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: mathlib: checking out revision '51e6992efd06126df61a496bebf8f49482a4e129'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision '123d15766ba49356c02ebad2a4462dfe12d79899'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision 'f5c090429dff3cf66cb65562526c9ea6e8edfbcb'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'bb3469a87774349fe01898d8bf2fc6a1ce6411ca'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '222c58dad7706a6e7cae46c0edd65ea881d3ee27'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '7db8190085343afde2f5d2cdcc9bac719b6ec02c'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision 'ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision '76e1c118b0700b4ceafe99532e887d6431625e1a'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '1319485273bf87833fa472afbcefdedecb16b45f'
+✔ [1/5] Built Cache.Cli (1.3s)
+✔ [2/5] Built Cache.Lean (1.4s)
+✔ [7/26] Built Cache.Infra (1.5s)
+✔ [8/26] Built Cache.Cli:c.o (1.6s)
+✔ [9/26] Built Cache.Lean:c.o (1.6s)
+✔ [10/26] Built Batteries.Tactic.OpenPrivate:c.o (1.6s)
+✔ [11/26] Built Cache.Infra:c.o (282ms)
+✔ [12/26] Built Cache.IO (3.2s)
+✔ [13/26] Built Cache.Hashing (2.4s)
+✔ [14/26] Built Cache.IO:c.o (2.3s)
+✔ [15/26] Built Cache.Hashing:c.o (3.6s)
+✔ [16/26] Built Cache.Requests (3.7s)
+✔ [17/26] Built Cache.Marker (2.2s)
+✔ [18/26] Built Cache.Requests:c.o (3.5s)
+✔ [19/26] Built Cache.Query (2.8s)
+✔ [20/26] Built Cache.Marker:c.o (2.7s)
+✔ [21/26] Built Cache.Query:c.o (2.2s)
+✔ [22/26] Built Cache.Warning (2.2s)
+✔ [23/26] Built Cache.Main (2.8s)
+✔ [24/26] Built Cache.Warning:c.o (2.7s)
+✔ [25/26] Built Cache.Main:c.o (1000ms)
+✔ [26/26] Built cache:exe (2.1s)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Attempting to download 8681 file(s) from leanprover-community/mathlib4 cache at https://lakecache.blob.core.windows.net/mathlib4-master
+
+Downloaded: 1 file(s) [attempted 1/8681 = 0%, 14 KB/s], Decompressed: 0[Kuncaught exception: failed to rename 'C:\Users\gideo\.cache\mathlib\3aa0adc884d1ac2d.ltar.part' to 'C:\Users\gideo\.cache\mathlib\3aa0adc884d1ac2d.ltar': 32

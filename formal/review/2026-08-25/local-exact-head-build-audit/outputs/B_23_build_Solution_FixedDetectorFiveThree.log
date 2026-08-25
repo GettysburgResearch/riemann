@@ -1,0 +1,21 @@
+✖ [1860/1868] Running ChallengeDeps.FixedDetectorFiveThree
+error: no such file or directory (error code: 4294963238)
+  file: C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\Zeta23\comparator\ChallengeDeps\FixedDetectorFiveThree.lean
+✖ [3676/3677] Building RiemannFormal.Arithmetic.FixedRows (17s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\RiemannFormal\Arithmetic\FixedRows.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\build\lib\lean\RiemannFormal\Arithmetic\FixedRows.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\build\lib\lean\RiemannFormal\Arithmetic\FixedRows.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\build\ir\RiemannFormal\Arithmetic\FixedRows.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-b\formal\.lake\build\ir\RiemannFormal\Arithmetic\FixedRows.setup.json --json
+info: RiemannFormal/Arithmetic/FixedRows.lean:24:48: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Arithmetic/FixedRows.lean:24:23: unsolved goals
+a b : ℂ
+h2 : row2Numerator a b = 0
+⊢ 1 + b * 2 - a * 2 = -1 + a * 2
+error: Lean exited with code 1
+Some required targets logged failures:
+- ChallengeDeps.FixedDetectorFiveThree
+- RiemannFormal.Arithmetic.FixedRows
+error: build failed
+EXIT_CODE=1

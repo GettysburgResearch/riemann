@@ -1,0 +1,18 @@
+COMMAND=verify every nonempty registry/deltas/B.tsv declaration in its declared module
+DECL=RiemannFormal.Arithmetic.FixedRows.rows23_no_common_zero	MODULE=RiemannFormal.Arithmetic.FixedRows	FILE=RiemannFormal\Arithmetic\FixedRows.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.FixedRows.fiveThree_nonzero	MODULE=RiemannFormal.Arithmetic.FixedRows	FILE=RiemannFormal\Arithmetic\FixedRows.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.SourceIdentities.sharpRNDensity_16_4_4	MODULE=RiemannFormal.Arithmetic.SourceIdentities	FILE=RiemannFormal\Arithmetic\SourceIdentities.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.SourceIdentities.native_one_prime_ne_contracted_two_child	MODULE=RiemannFormal.Arithmetic.SourceIdentities	FILE=RiemannFormal\Arithmetic\SourceIdentities.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.SourceIdentities.scalarFirstOwnerExpansion_eq_finiteEulerProduct	MODULE=RiemannFormal.Arithmetic.SourceIdentities	FILE=RiemannFormal\Arithmetic\SourceIdentities.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.SourceIdentities.response_capacity_coefficients_differ_16_4_4	MODULE=RiemannFormal.Arithmetic.SourceIdentities	FILE=RiemannFormal\Arithmetic\SourceIdentities.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.Wavelet.threeTap_minimal	MODULE=RiemannFormal.Arithmetic.Wavelet	FILE=RiemannFormal\Arithmetic\Wavelet.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.Wavelet.finite_sum_by_parts	MODULE=RiemannFormal.Arithmetic.Wavelet	FILE=RiemannFormal\Arithmetic\Wavelet.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.Wavelet.K0_ne_K1	MODULE=RiemannFormal.Arithmetic.Wavelet	FILE=RiemannFormal\Arithmetic\Wavelet.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.Wavelet.sameKernelIdentity_coefficient	MODULE=RiemannFormal.Arithmetic.Wavelet	FILE=RiemannFormal\Arithmetic\Wavelet.lean	FILE_EXISTS=True	DECLARED=True
+DECL=RiemannFormal.Arithmetic.HalfDivisor.eta_mul_eta	MODULE=RiemannFormal.Arithmetic.HalfDivisor	FILE=RiemannFormal\Arithmetic\HalfDivisor.lean	FILE_EXISTS=True	DECLARED=True
+NONEMPTY_DECLARATIONS=11
+COMMAND=scan comment-stripped code in every B-owned Lean file changed from bootstrap for RH conclusion tokens
+B_OWNED_CHANGED_LEAN_FILES_SCANNED=17	ALL_RH_TEXT_MENTIONS=2	RH_CODE_TOKEN_MATCHES=0
+COMMAND=compute local import closure from trusted aggregate RiemannFormal
+LOCAL_AND_EXTERNAL_MODULES_VISITED=38	SOLUTION_MODULES_IN_CLOSURE=0
+EXIT_CODE=0

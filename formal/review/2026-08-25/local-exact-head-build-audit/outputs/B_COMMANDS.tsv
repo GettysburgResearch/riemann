@@ -1,0 +1,68 @@
+sequence	scope	working_directory	command	exit_code	classification	log	first_result
+001	exact-head	riemann-formal-b	git status --porcelain=v1 --branch	0	PASS	raw/B/00_initial_git_status.log	Detached clean status
+002	exact-head	riemann-formal-b	git rev-parse HEAD	0	PASS	raw/B/01_freeze_metadata.log	072b4dbd0e4e407728a59110eb4f7214e23f8f8d
+003	exact-head	riemann-formal-b	git rev-parse HEAD^{tree}	0	PASS	raw/B/01_freeze_metadata.log	1c32466dd7928a24e0115268a6a330216f26ed3b
+004	exact-head	riemann-formal-b	git rev-parse HEAD^	0	PASS	raw/B/01_freeze_metadata.log	9bb802ebd97a00e01ef14789417f4c2a53031af3
+005	exact-head	riemann-formal-b	git rev-parse refs/remotes/origin/formal/020-arithmetic-mellin	0	PASS	raw/B/01_freeze_metadata.log	Matches HEAD
+006	exact-head	riemann-formal-b	git rev-parse HEAD:formal/lean-toolchain	0	PASS	raw/B/01_freeze_metadata.log	Blob c084c7fbe586b0276863b66f16d2955a43bc3fc6
+007	exact-head	riemann-formal-b	git rev-parse HEAD:formal/lake-manifest.json	0	PASS	raw/B/01_freeze_metadata.log	Blob f9c02d809750cf37e2ae9e19ac635f017e9efe82
+008	exact-head	riemann-formal-b	git diff --quiet -- formal/lean-toolchain formal/lake-manifest.json	0	PASS	raw/B/01_freeze_metadata.log	Committed locks unmodified
+009	exact-head	riemann-formal-b	Get-Content -Raw formal/lean-toolchain	0	PASS	raw/B/01_freeze_metadata.log	leanprover/lean4:v4.33.0-rc2
+010	exact-head	riemann-formal-b	Get-FileHash formal/lean-toolchain -Algorithm SHA256	0	PASS	raw/B/01_freeze_metadata.log	Working-tree bytes 4bad8e3fbd71a33fa5e8505ad7af799e42a24796d171b3fb5b58e41d12408128
+011	exact-head	riemann-formal-b	Get-FileHash formal/lake-manifest.json -Algorithm SHA256	0	PASS	raw/B/01_freeze_metadata.log	Working-tree bytes 7290452db11edeab155ffabe5a2b5d6b4cf07ea741449a5934af421dbd53f9b1
+012	exact-head	riemann-formal-b	bash -lc "git cat-file blob 'HEAD:formal/lean-toolchain' | sha256sum"	0	PASS	raw/B/05_committed_blob_sha256.log	Committed bytes 0d3c76ccd8772d8bcbe207241421a760312b71a6aa82f84194391fdf5cb026d6
+013	exact-head	riemann-formal-b	bash -lc "git cat-file blob 'HEAD:formal/lake-manifest.json' | sha256sum"	0	PASS	raw/B/05_committed_blob_sha256.log	Committed bytes 6be307e0de2294f99ce68e80903cd4cc88e77b6797c853c67be5cd9f6a1db453
+014	exact-head	riemann-formal-b	git merge-base --is-ancestor 573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f HEAD	0	PASS	raw/B/04_bootstrap_ancestry.log	Expected bootstrap is exact merge base
+020	exact-head	riemann-formal-b/formal	elan --version	0	PASS	raw/B/02_tool_versions.log	elan 4.2.1
+021	exact-head	riemann-formal-b/formal	lean --version	0	PASS	raw/B/02_tool_versions.log	Lean 4.33.0-rc2 commit d8b1897
+022	exact-head	riemann-formal-b/formal	lake --version	0	PASS	raw/B/02_tool_versions.log	Lake 5.0.0-src+d8b1897
+023	exact-head	riemann-formal-b/formal	python3 --version	0	PASS	raw/B/02_tool_versions.log	Python 3.12.10
+024	exact-head	riemann-formal-b/formal	bash --version	0	PASS	raw/B/02_tool_versions.log	GNU bash 5.2.15
+030	exact-head	riemann-formal-b/formal	git -C .lake/packages/plausible rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest 123d15766ba49356c02ebad2a4462dfe12d79899
+031	exact-head	riemann-formal-b/formal	git -C .lake/packages/LeanSearchClient rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest f5c090429dff3cf66cb65562526c9ea6e8edfbcb
+032	exact-head	riemann-formal-b/formal	git -C .lake/packages/importGraph rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest bb3469a87774349fe01898d8bf2fc6a1ce6411ca
+033	exact-head	riemann-formal-b/formal	git -C .lake/packages/proofwidgets rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest 222c58dad7706a6e7cae46c0edd65ea881d3ee27
+034	exact-head	riemann-formal-b/formal	git -C .lake/packages/aesop rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest 7db8190085343afde2f5d2cdcc9bac719b6ec02c
+035	exact-head	riemann-formal-b/formal	git -C .lake/packages/Qq rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33
+036	exact-head	riemann-formal-b/formal	git -C .lake/packages/batteries rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest 76e1c118b0700b4ceafe99532e887d6431625e1a
+037	exact-head	riemann-formal-b/formal	git -C .lake/packages/Cli rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest 1319485273bf87833fa472afbcefdedecb16b45f
+038	exact-head	riemann-formal-b/formal	git -C .lake/packages/mathlib rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest 51e6992efd06126df61a496bebf8f49482a4e129
+039	exact-head	riemann-formal-b/formal	git -C .lake/packages/Zeta23 rev-parse HEAD	0	PASS	raw/B/03_dependency_checkout_heads.log	Matches manifest cec57f919ccf34e5fa5372b4ba332f7c848bbb6e
+100	exact-head	riemann-formal-b/formal	lake exe cache get	0	PASS	raw/B/10_lake_exe_cache_get.log	Locked cache retrieval completed successfully
+101	exact-head	riemann-formal-b/formal	lake build	1	LEAN_COMPILE_FAILURE	raw/B/11_lake_build.log	First causal error FixedRows.lean:24:23 unsolved algebraic goal; SourceIdentities and HalfDivisor also have independent errors
+102	exact-head	riemann-formal-b/formal	python3 scripts/generate_registry.py	0	PASS	raw/B/12_generate_registry.log	claims=139 delta_rows=15
+103	exact-head	riemann-formal-b/formal	python3 scripts/validate_registry.py	0	PASS	raw/B/13_validate_registry.log	claims=139 stated=1 proved=3 conditional=0
+104	exact-head	riemann-formal-b/formal	python3 scripts/verify_source_locks.py	0	PASS	raw/B/14_verify_source_locks.log	mathlib=51e6992e zeta23=cec57f91
+105	exact-head	riemann-formal-b/formal	python3 scripts/validate_blueprint.py	0	PASS	raw/B/15_validate_blueprint.log	fragments=3
+106	exact-head	riemann-formal-b/formal	bash scripts/check_no_sorry.sh	0	PASS	raw/B/16_check_no_sorry.log	PASS_FORMAL_NO_SORRY_OR_CUSTOM_AXIOM
+107	exact-head	riemann-formal-b/formal	bash scripts/check_axioms.sh	1	AXIOM_AUDIT_FAILURE	raw/B/17_check_axioms.log	Cascades from missing RiemannFormal.olean after failed trusted build
+200	exact-head	riemann-formal-b/formal	lake build Challenge.ArithmeticRows23	1	COMPARATOR_FAILURE	raw/B/20_build_Challenge_ArithmeticRows23.log	Bare target collides with locked Zeta23 ChallengeDeps library and attempts absent dependency file
+201	exact-head	riemann-formal-b/formal	lake build Solution.ArithmeticRows23	1	COMPARATOR_FAILURE	raw/B/21_build_Solution_ArithmeticRows23.log	Bare target collision plus FixedRows compile failure
+202	exact-head	riemann-formal-b/formal	lake build Challenge.FixedDetectorFiveThree	1	COMPARATOR_FAILURE	raw/B/22_build_Challenge_FixedDetectorFiveThree.log	Bare target collides with locked Zeta23 ChallengeDeps library and attempts absent dependency file
+203	exact-head	riemann-formal-b/formal	lake build Solution.FixedDetectorFiveThree	1	COMPARATOR_FAILURE	raw/B/23_build_Solution_FixedDetectorFiveThree.log	Bare target collision plus FixedRows compile failure
+204	exact-head	riemann-formal-b/formal	lake env lean RiemannFormal/Arithmetic/AxiomAudit.lean	1	AXIOM_AUDIT_FAILURE	raw/B/24_lean_RiemannFormal_Arithmetic_AxiomAudit.log	Missing FixedRows.olean after trusted compile failure
+205	exact-head	riemann-formal-b/formal	lake env lean comparator/PrintAxioms/ArithmeticFixedRows.lean	1	AXIOM_AUDIT_FAILURE	raw/B/25_lean_comparator_PrintAxioms_ArithmeticFixedRows.log	Unknown Solution prefix because comparator solutions did not build
+300	static-exact-source	riemann-formal-b/formal	verify every nonempty B.tsv declaration and trusted import closure	0	PASS	raw/B/30_static_B_declarations_and_closure.log	11 declarations present; zero RH code tokens across all 17 B-owned Lean files; zero Solution modules in trusted closure
+301	static-exact-source	riemann-formal-b/formal	inspect duplicate comparator library roots and topic files	0	PASS	raw/B/31_comparator_library_collision.log	Confirms local/Zeta23 root collision causing bare-target failures
+302	advisory-patch	riemann-formal-b	git apply --check audit-local-20260825/patches/B_check_axioms.patch	0	PASS	raw/B/32_check_axioms_patch_apply_check.log	Coverage patch applies cleanly without changing B
+303	exact-head	riemann-formal-b	git status --porcelain=v1 --branch	0	PASS	raw/B/33_final_exact_head_git_status.log	Detached clean status after full exact-head suite
+304	exact-head	riemann-formal-b	verify final HEAD tree and lock hashes	0	PASS	raw/B/34_final_exact_head_integrity.log	All frozen identifiers unchanged
+305	static-exact-source	riemann-formal-b/formal	count actual comparator placeholders and verify B Solution import direction	0	PASS	raw/B/35_B_sorry_import_direction_static.log	Two B Challenge placeholders; none in trusted/Solution scopes; no Solution import of Challenge
+400	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build RiemannFormal.Arithmetic.FixedRows	1	TOOLCHAIN_FAILURE	raw/B/40_diagnostic_build_FixedRows.log	Diagnostic junction run hit Windows Invalid argument reading a cached private artifact under low-memory concurrent load; not an exact-head source verdict
+401	advisory-patch	riemann-formal-b	git apply --check audit-local-20260825/patches/B_compile_fixes.patch	0	PASS	raw/B/41_compile_patch_apply_check.log	Initial statement-preserving draft applied cleanly; later refined and rechecked
+402	disposable-diagnostic	riemann root	Copy exact-head local build artifacts into isolated diagnostic build directory	0	PASS	raw/B/42_diagnostic_seed_build_artifacts.log	147 artifacts copied; dependency package junction remained read-only/shared
+403	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build -j 1 RiemannFormal.Arithmetic.FixedRows	1	TOOLCHAIN_FAILURE	raw/B/43_diagnostic_build_FixedRows.log	Lake 5 rejects unknown short option -j
+404	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake -j 1 build RiemannFormal.Arithmetic.FixedRows	1	TOOLCHAIN_FAILURE	raw/B/44_diagnostic_build_FixedRows.log	Lake 5 rejects unknown short option -j
+405	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build RiemannFormal.Arithmetic.FixedRows	0	PASS	raw/B/45_diagnostic_build_FixedRows.log	Patched trusted module builds
+406	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build RiemannFormal.Arithmetic.SourceIdentities	0	PASS	raw/B/46_diagnostic_build_SourceIdentities.log	Patched trusted module builds with existing linter warnings
+407	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build RiemannFormal.Arithmetic.HalfDivisor	1	LEAN_COMPILE_FAILURE	raw/B/47_diagnostic_build_HalfDivisor.log	First draft left cast normalization and eta coercion elaboration errors
+408	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build RiemannFormal.Arithmetic.HalfDivisor	0	PASS	raw/B/48_diagnostic_build_HalfDivisor_refined.log	Focused statement-preserving refinement builds with linter warnings only
+409	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build	0	PASS	raw/B/49_diagnostic_full_lake_build.log	Refined trusted library builds completely; B AxiomAudit compiles
+410	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build @/+Challenge.ArithmeticRows23	1	COMPARATOR_FAILURE	raw/B/50_diagnostic_build_qualified_Challenge_ArithmeticRows23.log	Top-level qualification does not disambiguate imported ChallengeDeps topic from Zeta23
+411	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build @/+Solution.ArithmeticRows23	1	COMPARATOR_FAILURE	raw/B/51_diagnostic_build_qualified_Solution_ArithmeticRows23.log	Imported ChallengeDeps collision persists
+412	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build @/+Challenge.FixedDetectorFiveThree	1	COMPARATOR_FAILURE	raw/B/52_diagnostic_build_qualified_Challenge_FixedDetectorFiveThree.log	Imported ChallengeDeps collision persists
+413	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake build @/+Solution.FixedDetectorFiveThree	1	COMPARATOR_FAILURE	raw/B/53_diagnostic_build_qualified_Solution_FixedDetectorFiveThree.log	Imported ChallengeDeps collision persists
+414	disposable-diagnostic	riemann-formal-b-diagnostic/formal	lake env lean RiemannFormal/Arithmetic/AxiomAudit.lean	0	PASS	raw/B/54_diagnostic_lean_RiemannFormal_Arithmetic_AxiomAudit.log	All 26 B print declarations emitted output
+415	disposable-diagnostic	riemann-formal-b-diagnostic/formal	check Solution object prerequisites for comparator print module and patched authoritative runner	1	AXIOM_AUDIT_FAILURE	raw/B/55_diagnostic_axiom_prerequisites.log	Three required Solution oleans absent after comparator collision; commands not run
+416	advisory-patch	riemann-formal-b	git apply --check audit-local-20260825/patches/B_compile_fixes.patch	0	PASS	raw/B/56_final_compile_patch_apply_check.log	Final refined three-file trusted-source patch applies cleanly
+417	disposable-diagnostic	audit-local-20260825	validate multiline B axiom output against allowed axioms	0	PASS	raw/B/57_diagnostic_validate_B_axiom_output.log	26 declarations; only propext Classical.choice Quot.sound; no sorryAx

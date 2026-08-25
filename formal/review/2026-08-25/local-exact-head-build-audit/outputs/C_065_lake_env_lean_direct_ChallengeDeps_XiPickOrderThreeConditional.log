@@ -1,0 +1,77 @@
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:131:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:136:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:155:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:159:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:163:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:168:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:172:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:190:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'criticalOrbitJet', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:205:13: error: unexpected token 'in'; expected ','
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:281:10: error: unexpected token 'in'; expected ','
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:298:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:300:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'pickEntry', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:315:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:331:6: error: unexpected token 'in'; expected ','
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:339:18: error: Function expected at
+  ActualXiReserveAllocation
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  grouped
+
+Hint: The identifier `ActualXiReserveAllocation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:337:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'offLineOrbitJet', which is 'noncomputable'
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:349:18: error: Function expected at
+  ActualXiReserveAllocation
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  grouped
+
+Hint: The identifier `ActualXiReserveAllocation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:369:18: error: Function expected at
+  ActualXiReserveAllocation
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  grouped
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:421:12: error: Function expected at
+  ActualXiReserveAllocation
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  grouped
+
+Hint: The identifier `ActualXiReserveAllocation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:439:4: error: Function expected at
+  RegroupedActualXiC2Approximation
+but this term has type
+  ?m.108
+
+Note: Expected a function because this term is being applied to the argument
+  grouped
+
+Hint: The identifier `RegroupedActualXiC2Approximation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:446:18: error: Function expected at
+  ActualXiReserveAllocation
+but this term has type
+  ?m.111
+
+Note: Expected a function because this term is being applied to the argument
+  grouped'
+
+Hint: The identifier `ActualXiReserveAllocation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:447:4: error: Function expected at
+  RegroupedActualXiC2Approximation
+but this term has type
+  ?m.112
+
+Note: Expected a function because this term is being applied to the argument
+  grouped'
+
+Hint: The identifier `RegroupedActualXiC2Approximation` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:467:13: error(lean.unknownIdentifier): Unknown identifier `ActualXiOrderThreeInputs`

@@ -1,0 +1,14 @@
+COMMAND: python3 -c hashlib.sha256(Path(...).read_bytes())
+COMMAND: git show HEAD:path | sha256sum
+COMMAND: git check-attr text eol -- path
+COMMAND: git config --show-origin --get core.autocrlf
+python_sha256=17de622ff254ac81be5e4cf783cd9eafb8a52659b22ba89705ed79d5ee4305ee
+bytes=537
+crlf=11
+lf=11
+2eb547a373c49f56fa4da97284534bc06ee9a71548121a2b15d337cb79832c73 *-
+526
+registry/deltas/C_EXTERNAL_SOURCE_STATEMENTS/EXT.XI.PLATT_TRUDGIAN.2021.txt: text: unspecified
+registry/deltas/C_EXTERNAL_SOURCE_STATEMENTS/EXT.XI.PLATT_TRUDGIAN.2021.txt: eol: unspecified
+file:C:/Program Files/Git/etc/gitconfig	true
+core_autocrlf_exit=0

@@ -1,0 +1,28 @@
+sequence	command	working_directory	exit_code	classification	first_causal_result	log
+1	git rev-parse HEAD	repo root	0	PASS	9ed8988218fd9c3e1da33bde81361262fc0aa747	raw/A/00_freeze_initial.log
+2	git rev-parse 'HEAD^{tree}'	repo root	0	PASS	2c6e967344eb373843a018a5415f7dce6ba39b94	raw/A/00_freeze_initial.log
+3	git rev-parse 'HEAD^'	repo root	0	PASS	7f9959088610efb7ee7cd01cfce1ad6cda397d61	raw/A/00_freeze_initial.log
+4	git rev-parse refs/remotes/origin/formal/010-upstream-analysis	repo root	0	PASS	Remote branch resolves to requested head	raw/A/01_tool_versions.log
+5	git status --short --branch	repo root	0	PASS	Detached clean worktree	raw/A/00_freeze_initial.log
+6	lean --version	formal	0	PASS	Lean 4.33.0-rc2 commit d8b18978322de05a8f3dba51ef03cf5461676c17	raw/A/02_formal_tool_versions.log
+7	lake --version	formal	0	PASS	Lake 5.0.0-src+d8b1897	raw/A/02_formal_tool_versions.log
+8	lake exe cache get	formal	1	DEPENDENCY_FAILURE	Windows error 32 renaming shared Mathlib cache .ltar.part during concurrent fetch	raw/A/10_lake_exe_cache_get.log
+9	lake exe cache get	formal	0	PASS	Serialized recovery: no download; 8478 cached files decompressed	raw/A/11_lake_exe_cache_get_retry.log
+10	lake build	formal	1	LEAN_COMPILE_FAILURE	First logged failure is duplicate-library target resolution under Zeta23; deterministic local errors also occur in ChallengeDeps.MellinAPI and RiemannFormal.Upstream.MathlibBridge	raw/A/12_lake_build.log
+11	python3 scripts/generate_registry.py	formal	0	PASS	Generated map: 139 claims, 5 delta rows; tracked tree remains clean	raw/A/13_generate_registry.log
+12	python3 scripts/validate_registry.py	formal	0	PASS	Registry passes: claims=139 stated=2 proved=2 conditional=2	raw/A/14_validate_registry.log
+13	python3 scripts/verify_source_locks.py	formal	1	SOURCE_LOCK_FAILURE	Zeta23.RH_implies_on_line absent from A_UPSTREAM_REUSE.tsv	raw/A/15_verify_source_locks.log
+14	python3 scripts/validate_blueprint.py	formal	0	PASS	Blueprint scaffold passes with 3 fragments	raw/A/16_validate_blueprint.log
+15	bash scripts/check_no_sorry.sh	formal	0	PASS	Trusted targets contain no sorry/admit or custom axiom/opaque declaration	raw/A/17_check_no_sorry.log
+16	bash scripts/check_axioms.sh	formal	1	AXIOM_AUDIT_FAILURE	RiemannFormal.olean is absent because the default trusted build failed	raw/A/18_check_axioms.log
+17	lake build Challenge.MellinAPI	formal	1	COMPARATOR_FAILURE	Local ChallengeDeps.MellinAPI uses unknown identifier ℂ; duplicate library facet also resolves a missing path under Zeta23	raw/A/19_lake_build_Challenge_MellinAPI.log
+18	lake build Solution.MellinAPI	formal	1	COMPARATOR_FAILURE	Prerequisite local ChallengeDeps.MellinAPI uses unknown identifier ℂ	raw/A/20_lake_build_Solution_MellinAPI.log
+19	bash RiemannFormal/Analysis/replay/run_validation.sh	formal	1	LEAN_COMPILE_FAILURE	Embedded healthy-cache default build reproduces ChallengeDeps.MellinAPI and MathlibBridge source failures; script stops before later checks	raw/A/21_run_validation.log
+20	lake env lean RiemannFormal/Analysis/AxiomAudit.lean	formal	1	AXIOM_AUDIT_FAILURE	RiemannFormal.Analysis.MellinAPI.olean does not exist	raw/A/22_lean_Analysis_AxiomAudit.log
+21	lake env lean comparator/PrintAxioms/MellinAPI.lean	formal	1	AXIOM_AUDIT_FAILURE	Unknown module prefix Solution because comparator prerequisite did not build	raw/A/23_lean_PrintAxioms_MellinAPI.log
+22	lake env lean comparator/PrintAxioms/RH.lean	formal	1	AXIOM_AUDIT_FAILURE	Unknown module prefix Solution because comparator prerequisite did not build	raw/A/24_lean_PrintAxioms_RH.log
+23	lake build @/+Challenge.MellinAPI	formal	1	COMPARATOR_FAILURE	Root-qualified target still reaches failing ChallengeDeps.MellinAPI; local source uses unknown identifier ℂ	raw/A/25_lake_build_root_Challenge_MellinAPI.log
+24	lake build @/+ChallengeDeps.MellinAPI	formal	1	COMPARATOR_FAILURE	Root-qualified direct module isolates unknown identifier ℂ in local comparator contract	raw/A/26_lake_build_root_ChallengeDeps_MellinAPI.log
+25	lake build @/+Solution.MellinAPI	formal	1	COMPARATOR_FAILURE	Root-qualified solution is blocked by failing ChallengeDeps.MellinAPI	raw/A/27_lake_build_root_Solution_MellinAPI.log
+26	git apply --check audit-local-20260825/patches/A_MECHANICAL_FIXES.patch	repo root	0	PASS	Advisory mechanical patch applies cleanly; it was not applied to source	-
+27	git status --short --branch; git status --porcelain=v1 --untracked-files=all	repo root	0	PASS	Final detached source worktree is clean	raw/A/99_freeze_final.log

@@ -1,0 +1,10 @@
+COMMAND: rg -n --glob *.lean \\b(sorry|admit)\\b comparator/Challenge
+--- Challenge matches ---
+comparator/Challenge\OperatorPositiveSchurRescue.lean:8:  sorry
+comparator/Challenge\RH.lean:5:  sorry
+comparator/Challenge\XiPickOrderThreeConditional.lean:10:  sorry
+comparator/Challenge\XiPickThreeNode.lean:19:  sorry
+challenge_match_lines=4
+--- Forbidden tree matches ---
+challenge_rg_exit=0
+forbidden_rg_exit=1

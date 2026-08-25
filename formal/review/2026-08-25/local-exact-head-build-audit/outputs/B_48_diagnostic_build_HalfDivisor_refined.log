@@ -1,0 +1,13 @@
+⚠ [3679/3679] Built RiemannFormal.Arithmetic.HalfDivisor (12s)
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:44:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RiemannFormal/Arithmetic/HalfDivisor.lean:168:15: This simp argument is unused:
+  hpk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [eta, hp.factorization_pow, Finsupp.prod_single_index, etaCoeff_zero, hp.ne_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (3679 jobs).
+EXIT_CODE=0

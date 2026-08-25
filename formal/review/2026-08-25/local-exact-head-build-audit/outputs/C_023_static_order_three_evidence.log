@@ -1,0 +1,405 @@
+===== C challenge files selected by check_no_sorry glob =====
+OperatorPositiveSchurRescue.lean	placeholder_lines=1
+8:  sorry
+XiPickOrderThreeConditional.lean	placeholder_lines=1
+10:  sorry
+XiPickThreeNode.lean	placeholder_lines=1
+19:  sorry
+===== verify_c_repair_static.py =====
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import hashlib
+import json
+from fractions import Fraction as F
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+FORMAL = ROOT / "formal"
+
+
+def energy(j: tuple[F, F, F]) -> F:
+    v, d1, d2 = j
+    return v * d2 - 2 * d1 * d1
+
+
+def cross(f: tuple[F, F, F], g: tuple[F, F, F]) -> F:
+    fv, f1, f2 = f
+    gv, g1, g2 = g
+    return fv * g2 + gv * f2 - 4 * f1 * g1
+
+
+def offline(m: F, U: F, B: F) -> tuple[F, F, F]:
+    den = U * U + B * B
+    return (
+        4 * m * U / den,
+        4 * m * (B * B - U * U) / den**2,
+        8 * m * U * (U * U - 3 * B * B) / den**3,
+    )
+
+
+def critical(V: F) -> tuple[F, F, F]:
+    return 2 / V, -2 / V**2, 4 / V**3
+
+
+def qpoly(k: F, s: F) -> F:
+    return 1 - k + 3 * k * s * (2 - s) + k**2 * s**2 * (3 - 2 * s)
+
+
+def quad2(a: F, b: F, c: F, x: F, y: F) -> F:
+    return a*x*x + 2*b*x*y + c*y*y
+
+
+def quad3(a: F, b: F, c: F, d: F, e: F, f: F, x: F, y: F, z: F) -> F:
+    return a*x*x + 2*b*x*y + 2*c*x*z + d*y*y + 2*e*y*z + f*z*z
+
+
+def main() -> None:
+    fixtures = [
+        (F(2), F(12), F(1, 3), F(1, 4), F(2)),
+        (F(3), F(20), F(1, 2), F(1, 25), F(2)),
+        (F(5), F(18), F(2, 3), F(1, 16), F(3)),
+    ]
+    checked = 0
+    for m, U, s, k, B in fixtures:
+        assert B*B == k*s*s*U*U
+        V = U*(1-s)
+        q = offline(m, U, B)
+        r = critical(V)
+        rhs_cross = 16*m*s*s*qpoly(k, s)/(U**4*(1+k*s*s)**3*(1-s)**3)
+        assert cross(q, r) == rhs_cross
+        defect = 32*m*m*B*B/(U*U+B*B)**3
+        assert energy(q) == -defect
+        eps = 2*m*k/(1-k)
+        assert defect <= eps*rhs_cross
+        checked += 1
+
+    for a, g, d, x, y, z in [
+        (F(2), F(1, 3), F(5), F(1), F(2), F(3)),
+        (F(0), F(-2), F(7), F(-1), F(4), F(2)),
+    ]:
+        assert quad3(a, a, g, a, g, d, x, y, z) == quad2(a, g, d, x+y, z)
+        assert quad3(a, g, a, d, g, a, x, y, z) == quad2(a, g, d, x+z, y)
+        assert quad3(a, g, g, d, d, d, x, y, z) == quad2(a, g, d, x, y+z)
+        checked += 3
+
+    statement = (
+        FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_STATEMENTS" /
+        "EXT.XI.PLATT_TRUDGIAN.2021.txt"
+    )
+    actual_hash = hashlib.sha256(statement.read_bytes()).hexdigest()
+    lock_text = (FORMAL / "registry" / "deltas" / "C_EXTERNAL_SOURCE_LOCKS.tsv").read_text()
+    lean_text = (
+        FORMAL / "comparator" / "ChallengeDeps" /
+        "XiPickOrderThreeConditional.lean"
+    ).read_text()
+    assert actual_hash in lock_text
+    assert actual_hash in lean_text
+
+    result = {
+        "status": "PASS_REVIEWER_C_REPAIR_STATIC",
+        "exact_fraction_fixtures": checked,
+        "external_statement_sha256": actual_hash,
+        "heavy_computation_rerun": False,
+        "rh_proved": False,
+    }
+    out = FORMAL / "reports" / "C_REPAIR_STATIC_REPLAY.json"
+    out.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(result["status"], f"fixtures={checked}")
+
+
+if __name__ == "__main__":
+    main()
+===== order-three source keyword hits =====
+RiemannFormal/Operator/XiOrderThree.lean:10:private theorem sharedPSD2_to_local {a b c : ℝ}
+RiemannFormal/Operator/XiOrderThree.lean:11:    (h : ChallengeDeps.XiPickOrderThreeConditional.IsPSD2 a b c) :
+RiemannFormal/Operator/XiOrderThree.lean:12:    IsPSD2 a b c := by
+RiemannFormal/Operator/XiOrderThree.lean:14:  simpa [ChallengeDeps.XiPickOrderThreeConditional.IsPSD2,
+RiemannFormal/Operator/XiOrderThree.lean:15:    ChallengeDeps.XiPickOrderThreeConditional.quad2, IsPSD2, quad2] using h x y
+RiemannFormal/Operator/XiOrderThree.lean:17:private theorem localPSD2_to_shared {a b c : ℝ}
+RiemannFormal/Operator/XiOrderThree.lean:18:    (h : IsPSD2 a b c) :
+RiemannFormal/Operator/XiOrderThree.lean:19:    ChallengeDeps.XiPickOrderThreeConditional.IsPSD2 a b c := by
+RiemannFormal/Operator/XiOrderThree.lean:21:  simpa [ChallengeDeps.XiPickOrderThreeConditional.IsPSD2,
+RiemannFormal/Operator/XiOrderThree.lean:22:    ChallengeDeps.XiPickOrderThreeConditional.quad2, IsPSD2, quad2] using h x y
+RiemannFormal/Operator/XiOrderThree.lean:24:private theorem localPSD3_to_shared {a b c d e f : ℝ}
+RiemannFormal/Operator/XiOrderThree.lean:25:    (h : IsPSD3 a b c d e f) :
+RiemannFormal/Operator/XiOrderThree.lean:26:    ChallengeDeps.XiPickOrderThreeConditional.IsPSD3 a b c d e f := by
+RiemannFormal/Operator/XiOrderThree.lean:28:  simpa [ChallengeDeps.XiPickOrderThreeConditional.IsPSD3,
+RiemannFormal/Operator/XiOrderThree.lean:29:    ChallengeDeps.XiPickOrderThreeConditional.quad3, IsPSD3, quad3] using h x y z
+RiemannFormal/Operator/XiOrderThree.lean:36:    IsPSD2 (actualXiNodeP x)
+RiemannFormal/Operator/XiOrderThree.lean:39:  apply sharedPSD2_to_local
+RiemannFormal/Operator/XiOrderThree.lean:41:    inputs.orderTwoPSD inputs.verified.criticalLineBelowHeight inputs.grouped
+RiemannFormal/Operator/XiOrderThree.lean:153:/-- Honest low-order Loewner interface: one actual-Xi two-node PSD statement
+RiemannFormal/Operator/XiOrderThree.lean:162:    IsPSD2 (actualXiNodeP x1)
+RiemannFormal/Operator/XiOrderThree.lean:172:/-- Ordered-distinct actual-Xi order-three PSD.  Every analytic/source input is
+RiemannFormal/Operator/XiOrderThree.lean:180:    IsPSD3 (actualXiNodeP x1)
+RiemannFormal/Operator/XiOrderThree.lean:212:actual-Xi order-two PSD theorem. -/
+RiemannFormal/Operator/XiOrderThree.lean:217:    IsPSD3 (actualXiNodeP x1)
+RiemannFormal/Operator/XiOrderThree.lean:223:  by_cases h12 : x1 ^ 2 = x2 ^ 2
+RiemannFormal/Operator/XiOrderThree.lean:224:  · have hxy : x1 = x2 := positive_node_eq_of_sq_eq hx1 hx2 h12
+RiemannFormal/Operator/XiOrderThree.lean:226:    exact repeated12_pick_psd actualXiNodeP hx1
+RiemannFormal/Operator/XiOrderThree.lean:228:  by_cases h13 : x1 ^ 2 = x3 ^ 2
+RiemannFormal/Operator/XiOrderThree.lean:229:  · have hxz : x1 = x3 := positive_node_eq_of_sq_eq hx1 hx3 h13
+RiemannFormal/Operator/XiOrderThree.lean:231:    exact repeated13_pick_psd actualXiNodeP hx1
+RiemannFormal/Operator/XiOrderThree.lean:233:  by_cases h23 : x2 ^ 2 = x3 ^ 2
+RiemannFormal/Operator/XiOrderThree.lean:234:  · have hyz : x2 = x3 := positive_node_eq_of_sq_eq hx2 hx3 h23
+RiemannFormal/Operator/XiOrderThree.lean:236:    exact repeated23_pick_psd actualXiNodeP hx2
+RiemannFormal/Operator/XiOrderThree.lean:243:and the full three-node packet are PSD.  Repeated nodes are reduced rather than
+RiemannFormal/Operator/XiOrderThree.lean:260:      localPSD2_to_shared h12local
+RiemannFormal/Operator/XiOrderThree.lean:262:      localPSD2_to_shared h13local
+RiemannFormal/Operator/XiOrderThree.lean:264:      localPSD2_to_shared h23local
+RiemannFormal/Operator/XiOrderThree.lean:266:      localPSD3_to_shared htripleLocal
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:305:def IsPSD2 (a b c : ℝ) : Prop :=
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:312:def IsPSD3 (a b c d e f : ℝ) : Prop :=
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:388:packet.  It deliberately does not assert positive definiteness. -/
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:389:structure ActualXiPickPSDThroughThree (x1 x2 x3 : ℝ) : Prop where
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:394:    IsPSD2 (actualXiNodeP x1)
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:398:    IsPSD2 (actualXiNodeP x1)
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:402:    IsPSD2 (actualXiNodeP x2)
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:406:    IsPSD3 (actualXiNodeP x1)
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:424:  orderTwoPSD :
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:429:        IsPSD2 (actualXiNodeP x)
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:463:/-- Exact full comparator statement: every positive packet is PSD through
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:464:sizes one, two, and three, including repeated nodes.  No order-four or
+comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:469:      ActualXiPickPSDThroughThree x1 x2 x3
+===== XiOrderThree theorem tail =====
+    ChallengeDeps.XiPickOrderThreeConditional.quad3, IsPSD3, quad3] using h x y z
+
+/-- Exact order-two actual-Xi bridge from the concrete verified-height theorem
+and grouped expansion stored in the repaired input package. -/
+theorem actualXiPickOrderTwo_of_inputs
+    (inputs : ActualXiOrderThreeInputs)
+    {x y : ℝ} (hx : 0 < x) (hy : 0 < y) :
+    IsPSD2 (actualXiNodeP x)
+      (pickEntry x (actualXiNodeP x) y (actualXiNodeP y))
+      (actualXiNodeP y) := by
+  apply sharedPSD2_to_local
+  simpa [ChallengeDeps.XiPickOrderThreeConditional.pickEntry, pickEntry] using
+    inputs.orderTwoPSD inputs.verified.criticalLineBelowHeight inputs.grouped
+      x y hx hy
+
+
+/-- Local uniform convergence on the declared domain gives pointwise filter
+convergence.  This is the bridge used to derive energy convergence from the
+three concrete C² component limits rather than assuming it as an extra field. -/
+theorem locallyUniformSequence_tendsto_at
+    {sequence : ℕ → ℝ → ℝ} {limit : ℝ → ℝ} {domain : Set ℝ}
+    (h : LocallyUniformlyConvergesSequenceOn sequence limit domain)
+    {t : ℝ} (ht : t ∈ domain) :
+    Filter.Tendsto (fun n => sequence n t) Filter.atTop (𝓝 (limit t)) := by
+  refine Metric.tendsto_atTop.2 ?_
+  intro epsilon hepsilon
+  obtain ⟨N, hN⟩ := h ({t} : Set ℝ) isCompact_singleton
+    (by simpa only [Set.singleton_subset_iff] using ht) epsilon hepsilon
+  refine ⟨N, ?_⟩
+  intro n hn
+  have hpoint := hN n hn t (by simp)
+  simpa [Real.dist_eq] using hpoint
+
+/-- Reciprocal energy converges because it is a polynomial in the value and
+first two derivative coordinates.  No separate energy-limit hypothesis is
+accepted by the repaired interface. -/
+theorem regroupedActualXi_energy_tendsto
+    {grouped : GroupedActualXiC2Expansion}
+    {allocation : ActualXiReserveAllocation grouped}
+    (approximation : RegroupedActualXiC2Approximation grouped allocation)
+    {t : ℝ} (ht : 1 / 4 < t) :
+    Filter.Tendsto
+      (fun N => reciprocalEnergy
+        (regroupedActualXiPrefix grouped allocation N t))
+      Filter.atTop (𝓝 (reciprocalEnergy (actualXiTJet t))) := by
+  have htDomain : t ∈ Set.Ioi (1 / 4) := ht
+  have hvalue := locallyUniformSequence_tendsto_at
+    approximation.valueConverges htDomain
+  have hfirst := locallyUniformSequence_tendsto_at
+    approximation.firstConverges htDomain
+  have hsecond := locallyUniformSequence_tendsto_at
+    approximation.secondConverges htDomain
+  have htwo : Filter.Tendsto (fun _ : ℕ => (2 : ℝ)) Filter.atTop (𝓝 (2 : ℝ)) :=
+    tendsto_const_nhds
+  simpa [reciprocalEnergy] using
+    (hvalue.mul hsecond).sub (htwo.mul (hfirst.mul hfirst))
+
+/-- A nonnegative scalar sequence cannot converge in absolute difference to
+a negative limit. -/
+theorem nonnegative_of_absolute_convergence
+    {sequence : ℕ → ℝ} {limit : ℝ}
+    (hsequence : ∀ n : ℕ, 0 ≤ sequence n)
+    (hconverges : ∀ epsilon : ℝ, 0 < epsilon →
+      ∃ N : ℕ, ∀ n : ℕ, N ≤ n → |sequence n - limit| < epsilon) :
+    0 ≤ limit := by
+  by_contra hlimit
+  have hnegative : limit < 0 := lt_of_not_ge hlimit
+  let epsilon : ℝ := -limit / 2
+  have hepsilon : 0 < epsilon := by
+    dsimp [epsilon]
+    linarith
+  obtain ⟨N, hN⟩ := hconverges epsilon hepsilon
+  have hclose := abs_lt.mp (hN N le_rfl)
+  have hnonnegative := hsequence N
+  dsimp [epsilon] at hclose
+  linarith
+
+/-- The actual-Xi differential reciprocal-concavity statement is derived from
+nonnegative source-faithful paid prefixes and their explicit componentwise local C2
+convergence; energy convergence is proved by polynomial continuity.  Final curvature is not an input field. -/
+theorem actualXiReciprocalConcavity_of_inputs
+    (inputs : ActualXiOrderThreeInputs)
+    {t : ℝ} (ht : 1 / 4 < t) :
+    0 ≤ reciprocalEnergy (actualXiTJet t) := by
+  refine isClosed_Ici.mem_of_tendsto
+    (regroupedActualXi_energy_tendsto inputs.paidC2Approximation ht) ?_
+  exact Filter.Eventually.of_forall fun N =>
+    inputs.paidC2Approximation.prefixEnergyNonnegative N t ht
+
+/-- The source-specific companion curvature is likewise an exact conditional
+bridge, not generic divided-difference linearity mislabeled as the Xi theorem. -/
+theorem actualXiCompanionCurvature_of_inputs
+    (inputs : ActualXiOrderThreeInputs)
+    {x1 x2 x3 : ℝ}
+    (hx1 : 0 < x1) (hx2 : 0 < x2) (hx3 : 0 < x3)
+    (h12 : x1 ^ 2 ≠ x2 ^ 2) (h13 : x1 ^ 2 ≠ x3 ^ 2)
+    (h23 : x2 ^ 2 ≠ x3 ^ 2) :
+    secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
+      (x1 ^ 2 * actualXiNodeP x1)
+      (x2 ^ 2 * actualXiNodeP x2)
+      (x3 ^ 2 * actualXiNodeP x3) ≤ 0 := by
+  simpa [ChallengeDeps.XiPickOrderThreeConditional.secondDivDiff,
+    secondDivDiff] using
+    inputs.companionCurvature inputs.grouped x1 x2 x3
+      hx1 hx2 hx3 h12 h13 h23
+
+/-- Exact conditional reciprocal divided-difference bridge. -/
+theorem actualXiReciprocalCurvature_of_inputs
+    (inputs : ActualXiOrderThreeInputs)
+    {x1 x2 x3 : ℝ}
+    (hx1 : 0 < x1) (hx2 : 0 < x2) (hx3 : 0 < x3)
+    (h12 : x1 ^ 2 ≠ x2 ^ 2) (h13 : x1 ^ 2 ≠ x3 ^ 2)
+    (h23 : x2 ^ 2 ≠ x3 ^ 2) :
+    secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
+      (1 / actualXiNodeP x1) (1 / actualXiNodeP x2)
+      (1 / actualXiNodeP x3) ≤ 0 := by
+  simpa [ChallengeDeps.XiPickOrderThreeConditional.secondDivDiff,
+    secondDivDiff] using
+    inputs.reciprocalCurvature inputs.verified.sourceLockExact
+      inputs.verified.criticalLineBelowHeight inputs.grouped inputs.residual
+      inputs.reserve inputs.paidC2Approximation
+      (fun t ht => actualXiReciprocalConcavity_of_inputs inputs ht)
+      x1 x2 x3 hx1 hx2 hx3 h12 h13 h23
+
+/-- Honest low-order Loewner interface: one actual-Xi two-node PSD statement
+and the exact three-node companion curvature.  No all-order monotonicity is
+asserted. -/
+theorem actualXiLowOrderLoewner_of_inputs
+    (inputs : ActualXiOrderThreeInputs)
+    {x1 x2 x3 : ℝ}
+    (hx1 : 0 < x1) (hx2 : 0 < x2) (hx3 : 0 < x3)
+    (h12 : x1 ^ 2 ≠ x2 ^ 2) (h13 : x1 ^ 2 ≠ x3 ^ 2)
+    (h23 : x2 ^ 2 ≠ x3 ^ 2) :
+    IsPSD2 (actualXiNodeP x1)
+        (pickEntry x1 (actualXiNodeP x1) x2 (actualXiNodeP x2))
+        (actualXiNodeP x2) ∧
+      secondDivDiff (x1 ^ 2) (x2 ^ 2) (x3 ^ 2)
+        (x1 ^ 2 * actualXiNodeP x1)
+        (x2 ^ 2 * actualXiNodeP x2)
+        (x3 ^ 2 * actualXiNodeP x3) ≤ 0 :=
+  ⟨actualXiPickOrderTwo_of_inputs inputs hx1 hx2,
+    actualXiCompanionCurvature_of_inputs inputs hx1 hx2 hx3 h12 h13 h23⟩
+
+/-- Ordered-distinct actual-Xi order-three PSD.  Every analytic/source input is
+consumed through a concrete field of `ActualXiOrderThreeInputs`. -/
+theorem actualXiOrderedDistinctPickOrderThree_of_inputs
+    (inputs : ActualXiOrderThreeInputs)
+    {x1 x2 x3 : ℝ}
+    (hx1 : 0 < x1) (hx2 : 0 < x2) (hx3 : 0 < x3)
+    (h12 : x1 ^ 2 ≠ x2 ^ 2) (h13 : x1 ^ 2 ≠ x3 ^ 2)
+    (h23 : x2 ^ 2 ≠ x3 ^ 2) :
+    IsPSD3 (actualXiNodeP x1)
+      (pickEntry x1 (actualXiNodeP x1) x2 (actualXiNodeP x2))
+      (pickEntry x1 (actualXiNodeP x1) x3 (actualXiNodeP x3))
+      (actualXiNodeP x2)
+      (pickEntry x2 (actualXiNodeP x2) x3 (actualXiNodeP x3))
+      (actualXiNodeP x3) := by
+  have hp1 : 0 < actualXiNodeP x1 :=
+    inputs.diagonalPositive inputs.grouped x1 hx1
+  have hp2 : 0 < actualXiNodeP x2 :=
+    inputs.diagonalPositive inputs.grouped x2 hx2
+  have hp3 : 0 < actualXiNodeP x3 :=
+    inputs.diagonalPositive inputs.grouped x3 hx3
+  have hminor :
+      0 < pickDet2 x1 (actualXiNodeP x1) x2 (actualXiNodeP x2) := by
+    simpa [ChallengeDeps.XiPickOrderThreeConditional.pickDet2,
+      ChallengeDeps.XiPickOrderThreeConditional.pickEntry,
+      pickDet2, pickEntry] using
+      inputs.distinctPairDetPositive inputs.verified.criticalLineBelowHeight
+        inputs.grouped x1 x2 hx1 hx2 h12
+  have hrecip := actualXiReciprocalCurvature_of_inputs inputs
+    hx1 hx2 hx3 h12 h13 h23
+  have hcomp := actualXiCompanionCurvature_of_inputs inputs
+    hx1 hx2 hx3 h12 h13 h23
+  have hdet :
+      0 ≤ pickDet3 x1 x2 x3 (actualXiNodeP x1)
+        (actualXiNodeP x2) (actualXiNodeP x3) :=
+    three_node_pick_det_nonnegative hx1 hx2 hx3 hp1 hp2 hp3
+      h12 h13 h23 hrecip hcomp
+  exact three_node_pick_psd_of_principal_minors hp1 hminor hdet
+
+/-- Full positive-node packet theorem.  Repeated nodes are proved by equality
+of function evaluations and duplicate-row congruence, then reduced to the
+actual-Xi order-two PSD theorem. -/
+theorem actualXiPickOrderThreeConditional_local
+    (inputs : ActualXiOrderThreeInputs)
+    {x1 x2 x3 : ℝ}
+    (hx1 : 0 < x1) (hx2 : 0 < x2) (hx3 : 0 < x3) :
+    IsPSD3 (actualXiNodeP x1)
+      (pickEntry x1 (actualXiNodeP x1) x2 (actualXiNodeP x2))
+      (pickEntry x1 (actualXiNodeP x1) x3 (actualXiNodeP x3))
+      (actualXiNodeP x2)
+      (pickEntry x2 (actualXiNodeP x2) x3 (actualXiNodeP x3))
+      (actualXiNodeP x3) := by
+  by_cases h12 : x1 ^ 2 = x2 ^ 2
+  · have hxy : x1 = x2 := positive_node_eq_of_sq_eq hx1 hx2 h12
+    subst x2
+    exact repeated12_pick_psd actualXiNodeP hx1
+      (actualXiPickOrderTwo_of_inputs inputs hx1 hx3)
+  by_cases h13 : x1 ^ 2 = x3 ^ 2
+  · have hxz : x1 = x3 := positive_node_eq_of_sq_eq hx1 hx3 h13
+    subst x3
+    exact repeated13_pick_psd actualXiNodeP hx1
+      (actualXiPickOrderTwo_of_inputs inputs hx1 hx2)
+  by_cases h23 : x2 ^ 2 = x3 ^ 2
+  · have hyz : x2 = x3 := positive_node_eq_of_sq_eq hx2 hx3 h23
+    subst x3
+    exact repeated23_pick_psd actualXiNodeP hx2
+      (actualXiPickOrderTwo_of_inputs inputs hx1 hx2)
+  exact actualXiOrderedDistinctPickOrderThree_of_inputs inputs
+    hx1 hx2 hx3 h12 h13 h23
+
+/-- Comparator-facing repaired headline.  Its type is literally the shared
+Mathlib-only `ChallengeStatement`: one-node, every two-node principal packet,
+and the full three-node packet are PSD.  Repeated nodes are reduced rather than
+assumed. -/
+theorem actualXiPickOrderThreeConditional : ChallengeStatement := by
+  intro inputs x1 x2 x3 hx1 hx2 hx3
+  have h12local := actualXiPickOrderTwo_of_inputs inputs hx1 hx2
+  have h13local := actualXiPickOrderTwo_of_inputs inputs hx1 hx3
+  have h23local := actualXiPickOrderTwo_of_inputs inputs hx2 hx3
+  have htripleLocal := actualXiPickOrderThreeConditional_local inputs hx1 hx2 hx3
+  refine
+    { one1 := le_of_lt (inputs.diagonalPositive inputs.grouped x1 hx1)
+      one2 := le_of_lt (inputs.diagonalPositive inputs.grouped x2 hx2)
+      one3 := le_of_lt (inputs.diagonalPositive inputs.grouped x3 hx3)
+      pair12 := ?_
+      pair13 := ?_
+      pair23 := ?_
+      triple := ?_ }
+  · simpa [ChallengeDeps.XiPickOrderThreeConditional.pickEntry, pickEntry] using
+      localPSD2_to_shared h12local
+  · simpa [ChallengeDeps.XiPickOrderThreeConditional.pickEntry, pickEntry] using
+      localPSD2_to_shared h13local
+  · simpa [ChallengeDeps.XiPickOrderThreeConditional.pickEntry, pickEntry] using
+      localPSD2_to_shared h23local
+  · simpa [ChallengeDeps.XiPickOrderThreeConditional.pickEntry, pickEntry] using
+      localPSD3_to_shared htripleLocal
+
+end RiemannFormal.Operator

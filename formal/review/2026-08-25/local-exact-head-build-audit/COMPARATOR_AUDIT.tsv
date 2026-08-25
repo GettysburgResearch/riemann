@@ -1,0 +1,19 @@
+reviewer	source_head	target_or_check	exit_code	classification	verdict	first_result
+A	9ed8988218fd9c3e1da33bde81361262fc0aa747	Challenge.MellinAPI	1	COMPARATOR_FAILURE	FAIL	Duplicate pinned-Zeta23 ChallengeDeps target plus unknown local complex notation
+A	9ed8988218fd9c3e1da33bde81361262fc0aa747	Solution.MellinAPI	1	COMPARATOR_FAILURE	FAIL	Duplicate pinned-Zeta23 ChallengeDeps target plus local ChallengeDeps failure
+A	9ed8988218fd9c3e1da33bde81361262fc0aa747	fixedDetector_negativeMass_implies_RH compilation	NA	LEAN_COMPILE_FAILURE	NOT_COMPILED	Trusted import closure blocked at MathlibBridge
+A	9ed8988218fd9c3e1da33bde81361262fc0aa747	Challenge sorry import direction	0	PASS	PASS	No Challenge placeholder enters Solution or RiemannFormal
+B	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	Challenge.ArithmeticRows23	1	COMPARATOR_FAILURE	FAIL	Duplicate pinned-Zeta23 ChallengeDeps target is absent
+B	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	Solution.ArithmeticRows23	1	COMPARATOR_FAILURE	FAIL	Package collision plus trusted FixedRows error
+B	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	Challenge.FixedDetectorFiveThree	1	COMPARATOR_FAILURE	FAIL	Duplicate pinned-Zeta23 ChallengeDeps target is absent
+B	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	Solution.FixedDetectorFiveThree	1	COMPARATOR_FAILURE	FAIL	Package collision plus trusted FixedRows error
+B	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	B.tsv declaration presence	0	PASS	PASS	All 11 nonempty declarations have resident source locations
+B	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	RH conclusion scan	0	PASS	PASS	No B-owned theorem concludes RH
+B	072b4dbd0e4e407728a59110eb4f7214e23f8f8d	trusted Solution closure	0	PASS	PASS	Zero Solution modules in trusted aggregate import closure
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	Challenge.XiPickThreeNode	1	COMPARATOR_FAILURE	FAIL	Package collision plus local noncomputable definitions
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	Solution.XiPickThreeNode	1	COMPARATOR_FAILURE	FAIL	Same local failure and trusted FiniteMatrix errors
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	Challenge.OperatorPositiveSchurRescue	1	COMPARATOR_FAILURE	FAIL	Local ChallengeDeps builds; duplicate dependency target is absent
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	Solution.OperatorPositiveSchurRescue	1	COMPARATOR_FAILURE	FAIL	Package collision plus trusted FiniteMatrix errors
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	Challenge.XiPickOrderThreeConditional	1	COMPARATOR_FAILURE	FAIL	Package collision plus computability and parser errors
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	Solution.XiPickOrderThreeConditional	1	COMPARATOR_FAILURE	FAIL	Package collision plus trusted/local Lean errors
+C	b20ee9b3678e5d8fa32b04b156bc02cec782a97b	repeated-node and conclusion source audit	0	PASS	PASS	Explicit 12, 13, and 23 cases; PSD through order three only

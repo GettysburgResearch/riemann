@@ -1,0 +1,65 @@
+✖ [8697/8702] Running ChallengeDeps.XiPickThreeNode
+error: no such file or directory (error code: 4294963238)
+  file: C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\comparator\ChallengeDeps\XiPickThreeNode.lean
+✖ [8699/8702] Building ChallengeDeps.XiPickThreeNode (27s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\comparator\ChallengeDeps\XiPickThreeNode.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\ChallengeDeps\XiPickThreeNode.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\ChallengeDeps\XiPickThreeNode.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\ChallengeDeps\XiPickThreeNode.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\ChallengeDeps\XiPickThreeNode.setup.json --json
+error: comparator/ChallengeDeps/XiPickThreeNode.lean:8:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickThreeNode.lean:10:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'pickEntry', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickThreeNode.lean:17:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: Lean exited with code 1
+✖ [8700/8702] Building RiemannFormal.Operator.FiniteMatrix (28s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\RiemannFormal\Operator\FiniteMatrix.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\RiemannFormal\Operator\FiniteMatrix.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\RiemannFormal\Operator\FiniteMatrix.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\RiemannFormal\Operator\FiniteMatrix.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\RiemannFormal\Operator\FiniteMatrix.setup.json --json
+info: RiemannFormal/Operator/FiniteMatrix.lean:74:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:73:70: unsolved goals
+a b c x y : ℝ
+⊢ a * quad2 a b c x y = a * x * b * y * 2 + a ^ 2 * x ^ 2 + b ^ 2 * y ^ 2 + y ^ 2 * det2 a b c
+error: RiemannFormal/Operator/FiniteMatrix.lean:112:2: `ring_nf` made no progress on the goal
+error: RiemannFormal/Operator/FiniteMatrix.lean:128:2: `ring_nf` made no progress on the goal
+info: RiemannFormal/Operator/FiniteMatrix.lean:145:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:144:55: unsolved goals
+a g h x y z : ℝ
+⊢ quad3 a a g a g h x y z = quad2 a g h (x + y) z
+info: RiemannFormal/Operator/FiniteMatrix.lean:157:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:156:55: unsolved goals
+a g h x y z : ℝ
+⊢ quad3 a g g h h h x y z = quad2 a g h x (y + z)
+info: RiemannFormal/Operator/FiniteMatrix.lean:172:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:171:38: unsolved goals
+a b c d e f x y z : ℝ
+⊢ a * leadingMinor2 a b d * quad3 a b c d e f x y z =
+    a * leadingMinor2 a b d * x * b * y * 2 + a * leadingMinor2 a b d * x * c * z * 2 +
+                      a * leadingMinor2 a b d * y * z * e * 2 -
+                    a * b * c * z ^ 2 * e * 2 +
+                  a * z ^ 2 * det3 a b c d e f +
+                a ^ 2 * leadingMinor2 a b d * x ^ 2 +
+              a ^ 2 * z ^ 2 * e ^ 2 +
+            leadingMinor2 a b d * b ^ 2 * y ^ 2 +
+          leadingMinor2 a b d * c ^ 2 * z ^ 2 +
+        leadingMinor2 a b d ^ 2 * y ^ 2 +
+      b ^ 2 * c ^ 2 * z ^ 2
+error: Lean exited with code 1
+Some required targets logged failures:
+- ChallengeDeps.XiPickThreeNode
+- ChallengeDeps.XiPickThreeNode
+- RiemannFormal.Operator.FiniteMatrix
+error: build failed

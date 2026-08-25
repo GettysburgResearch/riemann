@@ -1,0 +1,42 @@
+✖ [8697/8700] Running ChallengeDeps.XiPickOrderThreeConditional
+error: no such file or directory (error code: 4294963238)
+  file: C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\comparator\ChallengeDeps\XiPickOrderThreeConditional.lean
+✖ [8699/8700] Building ChallengeDeps.XiPickOrderThreeConditional (23s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\comparator\ChallengeDeps\XiPickOrderThreeConditional.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\ChallengeDeps\XiPickOrderThreeConditional.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\ChallengeDeps\XiPickOrderThreeConditional.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\ChallengeDeps\XiPickOrderThreeConditional.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\ChallengeDeps\XiPickOrderThreeConditional.setup.json --json
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:131:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:136:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:155:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:159:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:163:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:168:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:172:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:190:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'criticalOrbitJet', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:205:13: unexpected token 'in'; expected ','
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:281:10: unexpected token 'in'; expected ','
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:298:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:300:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'pickEntry', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:315:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:331:6: unexpected token 'in'; expected ','
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:339:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:337:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'offLineOrbitJet', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:349:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:347:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'criticalUnitJet', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:369:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:421:12: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:446:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:467:13: Unknown identifier `ActualXiOrderThreeInputs`
+error: Lean exited with code 1
+Some required targets logged failures:
+- ChallengeDeps.XiPickOrderThreeConditional
+- ChallengeDeps.XiPickOrderThreeConditional
+error: build failed

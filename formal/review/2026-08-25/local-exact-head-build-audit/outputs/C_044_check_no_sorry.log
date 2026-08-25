@@ -1,0 +1,127 @@
+✖ [8698/8708] Running ChallengeDeps.XiPickOrderThreeConditional
+error: no such file or directory (error code: 4294963238)
+  file: C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\comparator\ChallengeDeps\XiPickOrderThreeConditional.lean
+✖ [8699/8708] Building RiemannFormal.Operator.FiniteMatrix (27s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\RiemannFormal\Operator\FiniteMatrix.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\RiemannFormal\Operator\FiniteMatrix.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\RiemannFormal\Operator\FiniteMatrix.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\RiemannFormal\Operator\FiniteMatrix.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\RiemannFormal\Operator\FiniteMatrix.setup.json --json
+info: RiemannFormal/Operator/FiniteMatrix.lean:74:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:73:70: unsolved goals
+a b c x y : ℝ
+⊢ a * quad2 a b c x y = a * x * b * y * 2 + a ^ 2 * x ^ 2 + b ^ 2 * y ^ 2 + y ^ 2 * det2 a b c
+error: RiemannFormal/Operator/FiniteMatrix.lean:112:2: `ring_nf` made no progress on the goal
+error: RiemannFormal/Operator/FiniteMatrix.lean:128:2: `ring_nf` made no progress on the goal
+info: RiemannFormal/Operator/FiniteMatrix.lean:145:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:144:55: unsolved goals
+a g h x y z : ℝ
+⊢ quad3 a a g a g h x y z = quad2 a g h (x + y) z
+info: RiemannFormal/Operator/FiniteMatrix.lean:157:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:156:55: unsolved goals
+a g h x y z : ℝ
+⊢ quad3 a g g h h h x y z = quad2 a g h x (y + z)
+info: RiemannFormal/Operator/FiniteMatrix.lean:172:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/FiniteMatrix.lean:171:38: unsolved goals
+a b c d e f x y z : ℝ
+⊢ a * leadingMinor2 a b d * quad3 a b c d e f x y z =
+    a * leadingMinor2 a b d * x * b * y * 2 + a * leadingMinor2 a b d * x * c * z * 2 +
+                      a * leadingMinor2 a b d * y * z * e * 2 -
+                    a * b * c * z ^ 2 * e * 2 +
+                  a * z ^ 2 * det3 a b c d e f +
+                a ^ 2 * leadingMinor2 a b d * x ^ 2 +
+              a ^ 2 * z ^ 2 * e ^ 2 +
+            leadingMinor2 a b d * b ^ 2 * y ^ 2 +
+          leadingMinor2 a b d * c ^ 2 * z ^ 2 +
+        leadingMinor2 a b d ^ 2 * y ^ 2 +
+      b ^ 2 * c ^ 2 * z ^ 2
+error: Lean exited with code 1
+✖ [8702/8708] Building RiemannFormal.Operator.ReciprocalConcavity (28s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\RiemannFormal\Operator\ReciprocalConcavity.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\RiemannFormal\Operator\ReciprocalConcavity.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\RiemannFormal\Operator\ReciprocalConcavity.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\RiemannFormal\Operator\ReciprocalConcavity.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\RiemannFormal\Operator\ReciprocalConcavity.setup.json --json
+error: RiemannFormal/Operator/ReciprocalConcavity.lean:11:11: (kernel) invalid declaration, it uses unsafe declaration 'Real.instRepr'
+error: RiemannFormal/Operator/ReciprocalConcavity.lean:11:11: failed to compile definition, compiler IR check failed at `RiemannFormal.Operator.instReprJet2._closed_0`. Error: unknown join point 'block_0'
+info: RiemannFormal/Operator/ReciprocalConcavity.lean:11:11: PANIC at _private.Lean.Compiler.LCNF.ExplicitBoxing.0.Lean.Compiler.LCNF.Code.explicitBoxing.tryCorrectLetDeclType Lean.Compiler.LCNF.ExplicitBoxing:301:45: unreachable code has been reached
+PANIC at _private.Lean.Compiler.LCNF.ExplicitBoxing.0.Lean.Compiler.LCNF.Code.explicitBoxing.visitLet Lean.Compiler.LCNF.ExplicitBoxing:336:45: unreachable code has been reached
+PANIC at Std.DTreeMap.Internal.Impl.Const.get! Std.Data.DTreeMap.Internal.Queries:227:13: Key is not present in map
+PANIC at Option.get! Init.Data.Option.BasicAux:22:14: value is none
+PANIC at Std.DHashMap.Internal.AssocList.get! Std.Data.DHashMap.Internal.AssocList.Basic:163:11: key is not present in hash table
+warning: RiemannFormal/Operator/ReciprocalConcavity.lean:68:24: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: RiemannFormal/Operator/ReciprocalConcavity.lean:74:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+info: RiemannFormal/Operator/ReciprocalConcavity.lean:85:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: RiemannFormal/Operator/ReciprocalConcavity.lean:83:51: unsolved goals
+m U B : ℝ
+hden : U ^ 2 + B ^ 2 ≠ 0
+⊢ (offLineJet m U B).energy * U ^ 2 * B ^ 4 * 3 + (offLineJet m U B).energy * U ^ 4 * B ^ 2 * 3 +
+        (offLineJet m U B).energy * U ^ 6 +
+      (offLineJet m U B).energy * B ^ 6 =
+    -(B ^ 2 * m ^ 2 * 32)
+error: RiemannFormal/Operator/ReciprocalConcavity.lean:88:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: RiemannFormal/Operator/ReciprocalConcavity.lean:94:2: `field_simp` made no progress on the goal
+error: Lean exited with code 1
+✖ [8703/8708] Building ChallengeDeps.XiPickOrderThreeConditional (29s)
+trace: .> LEAN_PATH=C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Cli\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\batteries\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Qq\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\aesop\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\proofwidgets\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\importGraph\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\LeanSearchClient\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\plausible\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\mathlib\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\packages\Zeta23\.lake\build\lib\lean;C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean c:\Users\gideo\.elan\toolchains\leanprover--lean4---v4.33.0-rc2\bin\lean.exe C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\comparator\ChallengeDeps\XiPickOrderThreeConditional.lean -o C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\ChallengeDeps\XiPickOrderThreeConditional.olean -i C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\lib\lean\ChallengeDeps\XiPickOrderThreeConditional.ilean -c C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\ChallengeDeps\XiPickOrderThreeConditional.c --setup C:\Users\gideo\OneDrive\Documents\riemann\riemann-formal-c\formal\.lake\build\ir\ChallengeDeps\XiPickOrderThreeConditional.setup.json --json
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:131:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:136:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:155:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:159:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:163:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:168:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:172:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:190:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'criticalOrbitJet', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:205:13: unexpected token 'in'; expected ','
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:281:10: unexpected token 'in'; expected ','
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:298:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:300:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'pickEntry', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:315:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:331:6: unexpected token 'in'; expected ','
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:339:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:337:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'offLineOrbitJet', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:349:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:347:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'criticalUnitJet', which is 'noncomputable'
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:369:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:421:12: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:446:18: Unknown identifier `ActualXiReserveAllocation`
+
+Note: It is not possible to treat `ActualXiReserveAllocation` as an implicitly bound variable here because it has multiple characters while the `relaxedAutoImplicit` option is set to `false`.
+error: comparator/ChallengeDeps/XiPickOrderThreeConditional.lean:467:13: Unknown identifier `ActualXiOrderThreeInputs`
+error: Lean exited with code 1
+Some required targets logged failures:
+- ChallengeDeps.XiPickOrderThreeConditional
+- RiemannFormal.Operator.FiniteMatrix
+- RiemannFormal.Operator.ReciprocalConcavity
+- ChallengeDeps.XiPickOrderThreeConditional
+error: build failed
