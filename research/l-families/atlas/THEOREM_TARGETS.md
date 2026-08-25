@@ -772,12 +772,37 @@ equality of the full reciprocal factor. The positive-rank general collision
 curve is therefore invisible only to the first scalar coefficient, not to
 the first two.
 
-The next target is the uniform `m` theorem. Determine the least initial
-coefficient prefix that recovers the base trace for every `m`, and classify
-the cyclotomic torus points at which the complete `Sym^m` spectrum is
-invariant under the central sign. This must account separately for the
-even-degree twist quotient and for odd-degree root-of-unity exceptions rather
-than extrapolating only from `m=5`.
+The complete-factor part of the uniform `m` theorem is now solved.  For every
+`m>=1` and fixed rational `q!=0`, equality of the full factors forces
+`x^2=y^2`.  Even `m` is always invariant under the central sign.  For odd
+`m`, the only rational nontrivial sign strata are
+
+\[
+ x^2=2q,\quad4\mid m+1,
+ \qquad\text{and}\qquad
+ x^2=3q,\quad6\mid m+1.
+\]
+
+On an odd-prime-power integral trace lattice, the second is the only nonzero
+case and is exactly `m=5 mod 6`, `q=3^(2k+1)`,
+`t=+/-3^(k+1)`.  The proof uses the quotient group intrinsic to the complete
+root multiset and a multiplicity-sensitive consecutive-residue lemma, rather
+than extrapolation from `m=5`.
+
+The algebraic boundary is also exact for odd root order.  If `zeta` is
+primitive of odd order `N`, the complete spectra attached to `zeta` and
+`zeta^a` agree precisely when `a=+/-1 mod N` or
+`m=-2,-1,0 mod N`.  At the exceptional powers every primitive class shares
+one of the three universal cyclotomic factors.  This is vacuous at `N=3` and
+gives genuine non-sign aliases for every odd `N>=5`.
+
+The next uniform recovery target is therefore finer: determine, as a
+function of `m`, the least initial coefficient prefix that already recovers
+the rational trace up to these unavoidable full-factor aliases.  In parallel,
+extend the cyclotomic stabilizer analysis to even root order and then to
+traces over a fixed number field `K`, where the available torsion orders are
+constrained by `[K:Q]`.  Any theorem must distinguish a local algebraic trace
+from an elliptic trace and a compatible global family.
 
 The `m=5` collision curve is now understood at the rational level:
 

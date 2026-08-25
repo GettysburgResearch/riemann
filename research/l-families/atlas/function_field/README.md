@@ -60,6 +60,14 @@ source/note/JSON/test packets:
   `Sym^5` coefficients resolve every non-sign scalar collision, the third
   removes the `t^2=q` sign fiber, and only `t^2=3q` remains invisible to the
   complete local factor; it also gives the exterior-power plethystic reason;
+- `ELLIPTIC_SYMMETRIC_POWER_FULL_FACTOR_SIGN_ALIASES.md` proves for every
+  `m>=1` that a fixed-`q` rational complete-factor collision is a sign pair,
+  classifies the exact even- and odd-degree sign stabilizers, and isolates the
+  sole nonzero odd-prime-power integral family;
+- `ELLIPTIC_SYMMETRIC_POWER_CYCLOTOMIC_SPECTRAL_ALIASES.md` classifies every
+  complete-spectrum collision among primitive odd-order torus classes, gives
+  the three universal exceptional factors, and certifies the algebraic trace
+  examples at orders `5,7,9,11` while preserving the rational boundary;
 - `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
   curve with the complete locked genus-two coefficient support, classifies
   the odd-prime arithmetic candidates, and separates 53 witnessed members
@@ -137,6 +145,8 @@ python research/l-families/atlas/function_field/elliptic_so4_sym3_spectral_inter
 python research/l-families/atlas/function_field/elliptic_symmetric_power_trace_aliasing.py --check
 python research/l-families/atlas/function_field/elliptic_sym5_collision_diophantine_pilot.py --check
 python research/l-families/atlas/function_field/elliptic_sym5_coefficient_recovery.py --check
+python research/l-families/atlas/function_field/elliptic_symmetric_power_full_factor_sign_aliases.py --check
+python research/l-families/atlas/function_field/elliptic_symmetric_power_cyclotomic_spectral_aliases.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
@@ -168,6 +178,8 @@ python -m pytest -q \
   tests/test_elliptic_symmetric_power_trace_aliasing.py \
   tests/test_elliptic_sym5_collision_diophantine_pilot.py \
   tests/test_elliptic_sym5_coefficient_recovery.py \
+  tests/test_elliptic_symmetric_power_full_factor_sign_aliases.py \
+  tests/test_elliptic_symmetric_power_cyclotomic_spectral_aliases.py \
   tests/test_genus2_sym3_coefficient_intersection.py \
   tests/test_sym3_exterior_sym4_plethysm_bridge.py \
   tests/test_usp_coefficient_minor_rank_scan.py \
@@ -187,6 +199,7 @@ Each packet declares its own resource contract. The Burnside, measure,
 cross-rank, tail, high-weight, power-echo, elliptic-symmetric-cube,
 elliptic-symmetric-fourth, elliptic-pair-tensor, SO4/Sym3-intersection,
 symmetric-power-aliasing, Sym5-collision, Sym5-coefficient-recovery,
+rational-full-factor-aliasing, odd-cyclotomic-spectral-aliasing,
 symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm, product-tensor,
 tensor-singular, tensor-endoscopic-bridge, integral-factor-locus,
 primitive-exterior-square, and virtual-null
@@ -216,7 +229,12 @@ The SO4/Sym3 packet transforms the same 645 locked atom pairs, checks only
 3,334 units below its exclusive 4,000-unit cap. The Sym5 recovery packet
 performs a 120-term literal Sylvester determinant, bounded exterior-power
 weight checks, and 61 source-row replays for 226 units below its exclusive
-25,000-unit cap. Neither follow-up enumerates a field, curve, or model.
+25,000-unit cap. The rational full-factor packet accounts for 4,624 exact
+residue, factor, and source-lock checks below an exclusive 5,000-unit cap.
+The odd-cyclotomic packet accounts for 58,326 stabilizer, autocorrelation,
+factor, and minimal-polynomial checks below an exclusive 100,000-unit cap.
+Neither alias packet enumerates a field, curve, or model, and neither uses
+floating point, randomness, or a symbolic package.
 The balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
 visits 4,023 cubic candidates at `q=3,5,7,11,13`. The producers retain their
@@ -371,6 +389,21 @@ and reciprocity makes `(E_5,c_2,c_3)` equivalent to full-factor equality.
 The exterior-power decompositions explain these coefficients locally but do
 not assert a new functorial lift, automorphy theorem, compatible family, or
 literature priority.
+
+The complete rational symmetric-power collision theorem is likewise local
+and fixed-`q`. It excludes `Sym^0`, and its conclusion `x=+/-y` does not
+assert that either Hasse-admissible trace is realized by a curve. Universal
+sign invariance at even `m` is the central twist quotient, not evidence that
+two global objects coincide. The exceptional odd integral family at
+`q=3^(odd)` supplies no compatible system or Euler product.
+
+The odd-cyclotomic theorem concerns algebraic semisimple torus classes. The
+three universal factors compare classes using one common determinant lift;
+changing the lift at odd `m` sends `F(T)` to `F(-T)`. At `N=3` there is only
+one primitive class modulo inversion, so the universal collapse is not a
+genuine non-sign alias; it becomes genuine for every odd `N>=5`. Even root
+orders, arithmetic realization, global families, and literature priority
+remain outside the packet.
 
 The symmetric-cube/genus-two intersection compares normalized coefficient
 shapes of different weights; it is not an identity of local factors. Its
