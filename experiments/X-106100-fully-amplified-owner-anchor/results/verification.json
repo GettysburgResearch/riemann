@@ -1,0 +1,23 @@
+{
+  "atomic_diagonal_checks": 8192,
+  "checks": 11616,
+  "even_character_kernel_checks": 296,
+  "not_proved": {
+    "BCI102990": true,
+    "FANEX106100": true,
+    "FAPCX106100": true,
+    "riemann_hypothesis": true
+  },
+  "proved_by_replay": {
+    "combined_owner_core_even_character_kernel": true,
+    "correct_g2ell_atomic_diagonal_algebra": true,
+    "finite_source_dual_cauchy": true,
+    "separate_Q_weight_leaves_dimension": true,
+    "varying_Q_squareclass_absorption": true
+  },
+  "q_weight_firewall_checks": 20,
+  "schema": "riemann.x106100.fully-amplified-owner-anchor.v1",
+  "source_dual_cauchy_checks": 100,
+  "squareclass_checks": 3008,
+  "verdict": "PASS_X_106100_FULLY_AMPLIFIED_OWNER_ANCHOR"
+}
