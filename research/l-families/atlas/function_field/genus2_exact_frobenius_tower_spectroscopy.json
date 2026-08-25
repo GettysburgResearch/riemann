@@ -1,0 +1,626 @@
+{
+  "exact_recovery_controls": [
+    {
+      "base_prime": 3,
+      "channel": "chi_(0,3)",
+      "characteristic_polynomial_coefficients_in_increasing_X_power": [
+        -243,
+        327,
+        -85,
+        1
+      ],
+      "held_out_indices": [
+        7,
+        10
+      ],
+      "held_out_predictions_exact": true,
+      "minimal_recurrence_order": 3,
+      "minimality_certificate": "det(H_r)=prod_j(m_j*lambda_j)*Vandermonde(lambda)^2 is nonzero, while det(H_(r+1))=0",
+      "rank_r_Hankel_determinant": [
+        75694694400,
+        1
+      ],
+      "rank_r_plus_1_Hankel_determinant": [
+        0,
+        1
+      ],
+      "recovered_recurrence_coefficients_c0_through_c_(r-1)": [
+        [
+          -243,
+          1
+        ],
+        [
+          327,
+          1
+        ],
+        [
+          -85,
+          1
+        ]
+      ],
+      "tower_values_n_1_through_12": [
+        74,
+        6542,
+        531386,
+        43046558,
+        3486783914,
+        282429535022,
+        22876792450586,
+        1853020188838718,
+        150094635296959754,
+        12157665459056810702,
+        984770902183610878586,
+        79766443076872508800478
+      ],
+      "trace_polynomial_coefficients_in_increasing_q_power": [
+        -1,
+        -2,
+        0,
+        0,
+        1
+      ],
+      "training_indices": [
+        1,
+        6
+      ],
+      "virtual_tate_spectrum": [
+        {
+          "Frobenius_eigenvalue": 1,
+          "Tate_exponent": 0,
+          "signed_multiplicity": -1
+        },
+        {
+          "Frobenius_eigenvalue": 3,
+          "Tate_exponent": 1,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 81,
+          "Tate_exponent": 4,
+          "signed_multiplicity": 1
+        }
+      ]
+    },
+    {
+      "base_prime": 5,
+      "channel": "chi_(0,3)",
+      "characteristic_polynomial_coefficients_in_increasing_X_power": [
+        -3125,
+        3755,
+        -631,
+        1
+      ],
+      "held_out_indices": [
+        7,
+        10
+      ],
+      "held_out_predictions_exact": true,
+      "minimal_recurrence_order": 3,
+      "minimality_certificate": "det(H_r)=prod_j(m_j*lambda_j)*Vandermonde(lambda)^2 is nonzero, while det(H_(r+1))=0",
+      "rank_r_Hankel_determinant": [
+        14967613440000000,
+        1
+      ],
+      "rank_r_plus_1_Hankel_determinant": [
+        0,
+        1
+      ],
+      "recovered_recurrence_coefficients_c0_through_c_(r-1)": [
+        [
+          -3125,
+          1
+        ],
+        [
+          3755,
+          1
+        ],
+        [
+          -631,
+          1
+        ]
+      ],
+      "tower_values_n_1_through_12": [
+        614,
+        390574,
+        244140374,
+        152587889374,
+        95367431634374,
+        59604644775359374,
+        37252902984618984374,
+        23283064365386962109374,
+        14551915228366851802734374,
+        9094947017729282379130859374,
+        5684341886080801486968896484374,
+        3552713678800500929355620849609374
+      ],
+      "trace_polynomial_coefficients_in_increasing_q_power": [
+        -1,
+        -2,
+        0,
+        0,
+        1
+      ],
+      "training_indices": [
+        1,
+        6
+      ],
+      "virtual_tate_spectrum": [
+        {
+          "Frobenius_eigenvalue": 1,
+          "Tate_exponent": 0,
+          "signed_multiplicity": -1
+        },
+        {
+          "Frobenius_eigenvalue": 5,
+          "Tate_exponent": 1,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 625,
+          "Tate_exponent": 4,
+          "signed_multiplicity": 1
+        }
+      ]
+    },
+    {
+      "base_prime": 7,
+      "channel": "chi_(0,3)",
+      "characteristic_polynomial_coefficients_in_increasing_X_power": [
+        -16807,
+        19215,
+        -2409,
+        1
+      ],
+      "held_out_indices": [
+        7,
+        10
+      ],
+      "held_out_predictions_exact": true,
+      "minimal_recurrence_order": 3,
+      "minimality_certificate": "det(H_r)=prod_j(m_j*lambda_j)*Vandermonde(lambda)^2 is nonzero, while det(H_(r+1))=0",
+      "rank_r_Hankel_determinant": [
+        39947855665213440000,
+        1
+      ],
+      "rank_r_plus_1_Hankel_determinant": [
+        0,
+        1
+      ],
+      "recovered_recurrence_coefficients_c0_through_c_(r-1)": [
+        [
+          -16807,
+          1
+        ],
+        [
+          19215,
+          1
+        ],
+        [
+          -2409,
+          1
+        ]
+      ],
+      "tower_values_n_1_through_12": [
+        2386,
+        5764702,
+        13841286514,
+        33232930564798,
+        79792266297578386,
+        191581231380566179102,
+        459986536544739959329714,
+        1104427674243920646293769598,
+        2651730845859653471778942674386,
+        6366805760909027985741434574273502,
+        15286700631942576193765185765322172914,
+        36703368217294125441230211032005977614398
+      ],
+      "trace_polynomial_coefficients_in_increasing_q_power": [
+        -1,
+        -2,
+        0,
+        0,
+        1
+      ],
+      "training_indices": [
+        1,
+        6
+      ],
+      "virtual_tate_spectrum": [
+        {
+          "Frobenius_eigenvalue": 1,
+          "Tate_exponent": 0,
+          "signed_multiplicity": -1
+        },
+        {
+          "Frobenius_eigenvalue": 7,
+          "Tate_exponent": 1,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 2401,
+          "Tate_exponent": 4,
+          "signed_multiplicity": 1
+        }
+      ]
+    },
+    {
+      "base_prime": 3,
+      "channel": "chi_(2,2)",
+      "characteristic_polynomial_coefficients_in_increasing_X_power": [
+        729,
+        -1080,
+        390,
+        -40,
+        1
+      ],
+      "held_out_indices": [
+        9,
+        12
+      ],
+      "held_out_predictions_exact": true,
+      "minimal_recurrence_order": 4,
+      "minimality_certificate": "det(H_r)=prod_j(m_j*lambda_j)*Vandermonde(lambda)^2 is nonzero, while det(H_(r+1))=0",
+      "rank_r_Hankel_determinant": [
+        -6780694390898688,
+        1
+      ],
+      "rank_r_plus_1_Hankel_determinant": [
+        0,
+        1
+      ],
+      "recovered_recurrence_coefficients_c0_through_c_(r-1)": [
+        [
+          729,
+          1
+        ],
+        [
+          -1080,
+          1
+        ],
+        [
+          390,
+          1
+        ],
+        [
+          -40,
+          1
+        ]
+      ],
+      "tower_values_n_1_through_12": [
+        37,
+        1357,
+        38581,
+        1056157,
+        28638277,
+        774308077,
+        20915919061,
+        564816013117,
+        15250807510117,
+        411778777286797,
+        11118089751697141,
+        300188988163398877
+      ],
+      "trace_polynomial_coefficients_in_increasing_q_power": [
+        -2,
+        -2,
+        -1,
+        2
+      ],
+      "training_indices": [
+        1,
+        8
+      ],
+      "virtual_tate_spectrum": [
+        {
+          "Frobenius_eigenvalue": 1,
+          "Tate_exponent": 0,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 3,
+          "Tate_exponent": 1,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 9,
+          "Tate_exponent": 2,
+          "signed_multiplicity": -1
+        },
+        {
+          "Frobenius_eigenvalue": 27,
+          "Tate_exponent": 3,
+          "signed_multiplicity": 2
+        }
+      ]
+    },
+    {
+      "base_prime": 5,
+      "channel": "chi_(2,2)",
+      "characteristic_polynomial_coefficients_in_increasing_X_power": [
+        15625,
+        -19500,
+        4030,
+        -156,
+        1
+      ],
+      "held_out_indices": [
+        9,
+        12
+      ],
+      "held_out_predictions_exact": true,
+      "minimal_recurrence_order": 4,
+      "minimality_certificate": "det(H_r)=prod_j(m_j*lambda_j)*Vandermonde(lambda)^2 is nonzero, while det(H_(r+1))=0",
+      "rank_r_Hankel_determinant": [
+        -1020277555200000000000000,
+        1
+      ],
+      "rank_r_plus_1_Hankel_determinant": [
+        0,
+        1
+      ],
+      "recovered_recurrence_coefficients_c0_through_c_(r-1)": [
+        [
+          15625,
+          1
+        ],
+        [
+          -19500,
+          1
+        ],
+        [
+          4030,
+          1
+        ],
+        [
+          -156,
+          1
+        ]
+      ],
+      "tower_values_n_1_through_12": [
+        213,
+        30573,
+        3890373,
+        487889373,
+        61025384373,
+        7629150359373,
+        953668212734373,
+        119209136962109373,
+        14901157379146484373,
+        1862645053863505859373,
+        232830641269683740234373,
+        29103830397129058349609373
+      ],
+      "trace_polynomial_coefficients_in_increasing_q_power": [
+        -2,
+        -2,
+        -1,
+        2
+      ],
+      "training_indices": [
+        1,
+        8
+      ],
+      "virtual_tate_spectrum": [
+        {
+          "Frobenius_eigenvalue": 1,
+          "Tate_exponent": 0,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 5,
+          "Tate_exponent": 1,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 25,
+          "Tate_exponent": 2,
+          "signed_multiplicity": -1
+        },
+        {
+          "Frobenius_eigenvalue": 125,
+          "Tate_exponent": 3,
+          "signed_multiplicity": 2
+        }
+      ]
+    },
+    {
+      "base_prime": 7,
+      "channel": "chi_(2,2)",
+      "characteristic_polynomial_coefficients_in_increasing_X_power": [
+        117649,
+        -137200,
+        19950,
+        -400,
+        1
+      ],
+      "held_out_indices": [
+        9,
+        12
+      ],
+      "held_out_predictions_exact": true,
+      "minimal_recurrence_order": 4,
+      "minimality_certificate": "det(H_r)=prod_j(m_j*lambda_j)*Vandermonde(lambda)^2 is nonzero, while det(H_(r+1))=0",
+      "rank_r_Hankel_determinant": [
+        -157176354299659024472890933248,
+        1
+      ],
+      "rank_r_plus_1_Hankel_determinant": [
+        0,
+        1
+      ],
+      "recovered_recurrence_coefficients_c0_through_c_(r-1)": [
+        [
+          117649,
+          1
+        ],
+        [
+          -137200,
+          1
+        ],
+        [
+          19950,
+          1
+        ],
+        [
+          -400,
+          1
+        ]
+      ],
+      "tower_values_n_1_through_12": [
+        621,
+        232797,
+        80588877,
+        27676804797,
+        9494840511021,
+        3256813354298397,
+        1117091049941848077,
+        383162429528190729597,
+        131424723098654881661421,
+        45078680501592249313163997,
+        15461987435505067995736547277,
+        5303461691527725712149797774397
+      ],
+      "trace_polynomial_coefficients_in_increasing_q_power": [
+        -2,
+        -2,
+        -1,
+        2
+      ],
+      "training_indices": [
+        1,
+        8
+      ],
+      "virtual_tate_spectrum": [
+        {
+          "Frobenius_eigenvalue": 1,
+          "Tate_exponent": 0,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 7,
+          "Tate_exponent": 1,
+          "signed_multiplicity": -2
+        },
+        {
+          "Frobenius_eigenvalue": 49,
+          "Tate_exponent": 2,
+          "signed_multiplicity": -1
+        },
+        {
+          "Frobenius_eigenvalue": 343,
+          "Tate_exponent": 3,
+          "signed_multiplicity": 2
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "not_proved": [
+      "that each individual compactly supported cohomology group is Tate",
+      "an isomorphism of motives or Galois representations rather than equality of virtual traces",
+      "a Siegel eigenform identification",
+      "a number-field transfer",
+      "RH or GRH"
+    ],
+    "proved": "for each odd prime p, the compactly supported marked-stack trace sequence over F_(p^n) is the displayed virtual signed Tate power sum and has the displayed minimal recurrence",
+    "signed_multiplicity_warning": "negative coefficients belong to the alternating compactly supported Euler trace; they are not negative dimensions of an individual cohomology group"
+  },
+  "payload_sha256": "3346f207642f897aef669fe4f091b6f19d4c4566c1fa915b249bf629f71c0dcb",
+  "provenance": {
+    "note_sha256_lf": "fd4c42c39e5d4415458738904eef4e92a6aafaf800c7e914cc989893dc41c938",
+    "producer_sha256_lf": "14c20864b3a1e1d96b1b941df26700087594d058c8edd6727f0d3eecfb28a59b",
+    "resource_contract": {
+      "exact_operations_used": 696,
+      "maximum_exact_operations": 4096,
+      "maximum_source_bytes_each": 100000
+    },
+    "test_sha256_lf": "d85c0c8a85e2b4e750914b29f15863b9afa4a1081600f515aa25251ee6fe917c"
+  },
+  "schema": "riemann.function_field.genus2_exact_frobenius_tower_spectroscopy.v1",
+  "scope": {
+    "all_odd_prime_towers": true,
+    "control_primes": [
+      3,
+      5,
+      7
+    ],
+    "curves_enumerated": 0,
+    "external_database_queries": 0,
+    "finite_fields_enumerated": 0,
+    "random_samples": 0,
+    "tower_terms_per_control": 12
+  },
+  "source_theorems": {
+    "chi_(0,3)": "T_(0,3)(q)=q^4-2*q-1 for every odd prime power",
+    "chi_(2,2)": "T_(2,2)(q)=2*q^3-q^2-2*q-2 for every odd prime power",
+    "source_locks": {
+      "genus2_b3_primitive_trace_average.json": {
+        "commit": "65eb68fe150998451799059aca80dce550a75b87",
+        "lf_sha256": "5ecc6006014a159a4030218977c89f58c63334461a568b7a67d36130bae1c50b",
+        "payload_sha256": "e8001e46712db6d991286f5ea02eca62d0a58a43b20eaad146d30ca539e952dd",
+        "schema": "riemann.function_field.genus2_b3_primitive_trace_average.v1"
+      },
+      "genus2_m22_triangular_trace_average.json": {
+        "commit": "65f4c7dc0c7340b561d0fb278cda75f1fb7944cd",
+        "lf_sha256": "a93f288ddce023005989cc0a7ed543d859697e68fa378a24ae7619af35fc9633",
+        "payload_sha256": "4d147295e3d2b7bc4b62eb8ba113c946f528606d82dd28d1a1ec002e2f93d60c",
+        "schema": "riemann.function_field.genus2_m22_triangular_trace_average.v1"
+      }
+    }
+  },
+  "status": "EXACT_SAME_CHARACTERISTIC_TRACE_RECURRENCES_PROVED_FROM_ALL_Q_THEOREMS",
+  "three_field_ambiguity_firewall": {
+    "conclusion": "a perturbation invisible at q=3,5,7 changes the first same-characteristic holdout q=3^2 by 48; the exact tower recurrence therefore supplies a strictly stronger evidence type than cross-characteristic interpolation",
+    "module": "(q-3)(q-5)(q-7)Q(q)",
+    "witnesses": [
+      {
+        "agrees_with_three_field_training_panel": true,
+        "cross_characteristic_vanishing_factor": 0,
+        "q": 3
+      },
+      {
+        "agrees_with_three_field_training_panel": true,
+        "cross_characteristic_vanishing_factor": 0,
+        "q": 5
+      },
+      {
+        "agrees_with_three_field_training_panel": true,
+        "cross_characteristic_vanishing_factor": 0,
+        "q": 7
+      },
+      {
+        "agrees_with_three_field_training_panel": false,
+        "cross_characteristic_vanishing_factor": 48,
+        "q": 9
+      },
+      {
+        "agrees_with_three_field_training_panel": false,
+        "cross_characteristic_vanishing_factor": 7920,
+        "q": 25
+      }
+    ]
+  },
+  "trace_level_spectra": {
+    "chi_(0,3)": {
+      "minimal_recurrence": "T_(n+3)=(1+p+p^4)T_(n+2)-(p+p^4+p^5)T_(n+1)+p^5*T_n",
+      "order": 3,
+      "signed_Tate_multiplicities": {
+        "0": -1,
+        "1": -2,
+        "4": 1
+      },
+      "tower": "T_n=p^(4n)-2*p^n-1"
+    },
+    "chi_(2,2)": {
+      "minimal_recurrence": "T_(n+4)=(1+p+p^2+p^3)T_(n+3)-(p+p^2+2*p^3+p^4+p^5)T_(n+2)+(p^3+p^4+p^5+p^6)T_(n+1)-p^6*T_n",
+      "order": 4,
+      "signed_Tate_multiplicities": {
+        "0": -2,
+        "1": -2,
+        "2": -1,
+        "3": 2
+      },
+      "tower": "T_n=2*p^(3n)-p^(2n)-2*p^n-2"
+    }
+  }
+}
