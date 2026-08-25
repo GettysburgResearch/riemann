@@ -1,102 +1,25 @@
-## T105640 addendum — uniform Xi curvature and the critical-depth collar
+## T105640 preliminary addendum — superseded by T105646
 
-**The Riemann Hypothesis remains unproved.**
+This file records the first strong-log-concavity/depth-collar checkpoint. Its
+mathematics is retained in `L-105640--L-105643`, but its preliminary replay
+count and frontier were strengthened later in the same pass.
 
-### Uniform source theorem
-
-The standard Xi Fourier kernel satisfies
-
-```text
--(log Phi)'' > 20476/2345 > 8
-```
-
-on the complete real line. The proof is a self-contained theta-mixture bound:
-the first orbit has weight `>200/201` and the complete score variance consumes
-less than `1881/7000` of its elementary curvature floor.
-
-This is strong log-concavity only; no `TP_infinity` or RH implication is
-asserted.
-
-### Exponential current/Turan envelope
-
-At total height `H`,
+The authoritative continuation is:
 
 ```text
-R_H(xi)
- = exp(-H xi) / E[sinh(2H X)/(2H X)]
- <= exp(-H xi).
+PR_BODY_105646_ADDENDUM.md
+claims/lemmas/L-105644--L-105646
+claims/theorems/T-105640-strong-logconcavity-and-critical-depth-collar-frontier.md
+integration/2026-08-25/t105640-source-lock.json
 ```
 
-For a base `b`, physical scale `h`, and `H=b+h`,
-
-```text
-r_(b,h)(xi) <= (h/H) exp(-H xi).
-```
-
-Combined with T105630, the actual source profile is monotone and exponentially
-enveloped.
-
-### Exact anti-inner depth price
-
-For every finite upper-half-plane inner function,
-
-```text
-tr_(K_B) M_(exp(-H xi))
- = 1/(2 pi H) integral_R (1-|B(x+iH/2)|^2) dx.
-```
-
-One shifted zero at depth `y` costs exactly
-
-```text
-2y/(H+2y).
-```
-
-Hence the Xi-prime anti-inner packet above total height `H` obeys
-
-```text
-tr_(K_B) M_(r_(H,h))
- <= (2h/H^2) integral_H^beta1 N_1(T;t) dt.
-```
-
-At `H=beta1-delta`, `delta<=beta1/2`, this is at most
-
-```text
-(4 delta/beta1) N_1(T;H).
-```
-
-Thus every fixed-depth packet is paid. Only a vanishing boundary collar can be
-source-cheap.
-
-### Binding firewall
-
-A one-zero Blaschke factor has degree one while its weighted charge
-`2y/(H+2y)` tends to zero. Therefore the source-charge estimate does not remove
-the zero. The live target is the signed/pointwise conversion of the microscopic
-collar:
-
-```text
-BCOLLAR105643.
-```
-
-### Replay
+Current replay:
 
 ```text
 PASS_X_105640_STRONG_LC_DEPTH_COLLAR
-checks=4219
-769c7f5f517949d0591e8cc33032a6f081abbf5ea43ad53556daeac2499b4a69
+checks=4223
+b8d2c8770f38dbcace6a481f540d2fad1af8c01ad04fabde2ecc8167890adcf0
 RH_UNPROVEN
 ```
 
-### Updated frontier
-
-```text
-strong Xi source curvature                    PROVED / REVIEW
-profile exponential envelope                  PROVED EXACT
-model-space exponential trace                 PROVED EXACT
-anti-inner soft-depth collar                  PROVED EXACT
-weighted charge -> degree                     REFUTED
-BCOLLAR105643                                  OPEN / RH-BEARING
-POINTID105630                                  OPEN / RH-BEARING
-ENDIDX105630                                   OPEN
-Riemann Hypothesis                            UNPROVEN
-```
+The Riemann Hypothesis remains unproved.
