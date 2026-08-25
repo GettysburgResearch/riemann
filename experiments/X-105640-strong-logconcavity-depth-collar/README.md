@@ -10,8 +10,8 @@ Expected output:
 
 ```text
 PASS_X_105640_STRONG_LC_DEPTH_COLLAR
-checks=4219
-769c7f5f517949d0591e8cc33032a6f081abbf5ea43ad53556daeac2499b4a69
+checks=4223
+b8d2c8770f38dbcace6a481f540d2fad1af8c01ad04fabde2ecc8167890adcf0
 RH_UNPROVEN
 ```
 
@@ -23,14 +23,17 @@ The replay checks, using exact rational arithmetic:
 - the product-defect inequality used for finite Blaschke packets;
 - the exact simple-factor charge `2y/(H+2y)` after cancelling the common
   Poisson-integral factor;
-- finite layer-cake identities and soft-depth majorants.
+- finite layer-cake identities and soft-depth majorants;
+- the critical-height Maxwell factor
+  `79559/81904 > 97/100` and its exact rational margin.
 
 It does **not** replay:
 
 - the infinite theta-series proof of strong log-concavity;
+- monotone-likelihood domination by the Maxwell law;
 - the Paley--Wiener/model-space functional-analysis argument;
 - the Xi-prime zero-count passage to cofinal windows;
-- the boundary-collar signed-index conversion;
+- the height-owner or boundary-collar physical transfer;
 - RH.
 
 The retained result file is `results/verification.json`.
