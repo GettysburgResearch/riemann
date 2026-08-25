@@ -1,0 +1,51 @@
+{
+  "boolean_identity_verified": true,
+  "boolean_type_i_operator_transfer_verified": true,
+  "checks": {
+    "boolean_restriction_checks": 56,
+    "collapse_fixture_sizes": [
+      [
+        2,
+        2,
+        4
+      ],
+      [
+        4,
+        4,
+        16
+      ],
+      [
+        8,
+        8,
+        64
+      ],
+      [
+        16,
+        16,
+        256
+      ],
+      [
+        32,
+        32,
+        1024
+      ],
+      [
+        64,
+        64,
+        4096
+      ]
+    ],
+    "hodge_degree2_checks": 5,
+    "l1_shift_partial_mass": 1.5196962433039516,
+    "squarefree_divisor_checks": 1000
+  },
+  "minimum_owner_geometry_verified": true,
+  "oicp102960_proved": false,
+  "owner_indexed_physical_transport_proved": false,
+  "proof_object_sha256": "101d6f1541a2db6dcf3baee43d46d601c9a45e3a3851e205f23ffeede91bb92f",
+  "rh_established": false,
+  "same_family_scalar_kernel_verified": true,
+  "schema": "riemann.t102960.hodge-boolean-disposition.v1",
+  "t106080_accepted": false,
+  "verdict": "PASS_T102960_HODGE_BOOLEAN_DISPOSITION"
+}
