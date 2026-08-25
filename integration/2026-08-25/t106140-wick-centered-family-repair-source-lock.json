@@ -1,0 +1,50 @@
+{
+  "binding_correction": "R-106131",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "corrected_existing_files": [
+    "L-106112 principal-only atomic diagonal",
+    "L-106121 principal-principal atomic diagonal",
+    "L-106123 fixed-fibre only",
+    "T-106110 principal gate sufficient",
+    "T-106120 superseded uncentered frontier",
+    "T-106121 corrected physical-squareclass frontier"
+  ],
+  "created": "2026-08-25",
+  "files": {
+    "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+    "claims/lemmas/L-106132-boolean-half-source-least-prime-calderon-row.md": "f393a1d8583c5680b98a4b3e26d9b5a61c8d2b7a",
+    "claims/refutations/R-106131-complete-gauss-family-atomic-ledger-carries-phase-cardinality.md": "8dde14dd382e0c4fc1bb54d5da21de85ea002f41",
+    "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md": "4b6470e3bf11f2cf5e04fb88970a56d7b58ef292",
+    "experiments/X-106140-wick-centered-family-repair/results/verification.json": "53e4b36ccfec8c234409536c4a78833f538959cc",
+    "experiments/X-106140-wick-centered-family-repair/verify.py": "fda4d3c60539dfbab1e77ec4412f66adaacb06f1"
+  },
+  "open": {
+    "BCI102990": "open_rh_bearing",
+    "WCADD106140": "open_rh_bearing",
+    "WCKUM106140": "open_rh_bearing",
+    "riemann_hypothesis": "unproved"
+  },
+  "packet_commit": "2d08452d379b51c64d4ee6996ff326962c9ca154",
+  "parent_pr": 719,
+  "parent_scientific_head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+  "preferred_frontier": "T-106140 / WCADD106140 AND WCKUM106140",
+  "programme_issues": [
+    743,
+    736,
+    737
+  ],
+  "proved_exact": {
+    "bilateral_atomic_weight_product": true,
+    "boolean_half_source_square": true,
+    "least_prime_cutoff_recurrence": true,
+    "one_prime_character_weight_sum_q_minus_1": true,
+    "principal_atomic_diagonal_subpower": true,
+    "wick_centered_four_channel_identity": true
+  },
+  "replay": {
+    "exact_checks": 23035,
+    "proof_object_sha256": "d4b5920eb5a4a68210ba2c22c9ed426de6ef9b46bc37749ef73947cd9a9e07ef",
+    "verdict": "PASS_X_106140_WICK_CENTERED_FAMILY_REPAIR"
+  },
+  "schema": "riemann.t106140.wick-centered-family-repair-source-lock.v1"
+}
