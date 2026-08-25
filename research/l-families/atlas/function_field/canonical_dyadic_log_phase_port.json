@@ -1,0 +1,503 @@
+{
+  "provenance": {
+    "note_sha256_lf": "714c1bfcbbfe75d836d2db391577b808fcab484f72e3cf16a053215382900c15",
+    "producer_sha256_lf": "39876bbeaa31a7859adcb74c3f71eda552d6017d5c6845fa15fb54285ad93712",
+    "source_locks_sha256_lf": {
+      "research/integrated/wavelet_xd/README.md": "6a04ae3f85bcf00929079dd845f12175bb4e81e88eb20997ca7b38f17c67702f",
+      "research/l-families/atlas/function_field/CANONICAL_DETECTOR_NORM_LATTICE_OBSTRUCTION.md": "f282f0be91ea4eb72a515fba8808a33101cf2bf1401bae5eec24bbbafd335857",
+      "research/l-families/atlas/function_field/canonical_detector_norm_lattice_obstruction.json": "3a2aa44f759686017495b4b2102f93d6891454856cf66d34cc9ce3750b798fa4",
+      "research/l-families/atlas/function_field/canonical_detector_norm_lattice_obstruction.py": "17b4956c621a600a8f9ed5ee6d6e84b526c7ba709080e89d70e25f7109ca9b60",
+      "tests/test_canonical_detector_norm_lattice_obstruction.py": "c4de4512b2538030d1b637c0a72ceb7ccc4a3bfd4d023dd6e4fec65a2d1f3d0c"
+    },
+    "test_sha256_lf": "6a4bd8b2eff0e8b396a100a96ca922cdde33de7251d484be61049ba53f12e156"
+  },
+  "q_2_native_control": {
+    "alpha": "1",
+    "degree_linear_test_L2_energy": {
+      "alpha_coefficient": {
+        "rational": 0,
+        "sqrt2": 0
+      },
+      "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+      "constant": {
+        "rational": 0,
+        "sqrt2": 0
+      }
+    },
+    "degree_linear_test_mean": {
+      "alpha_coefficient": {
+        "rational": 0,
+        "sqrt2": 0
+      },
+      "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+      "constant": {
+        "rational": 0,
+        "sqrt2": 0
+      }
+    },
+    "phase_independent": true,
+    "unaveraged_native_symbol_coefficients_by_z_power": [
+      {
+        "coefficient": {
+          "alpha_coefficient": {
+            "rational": 0,
+            "sqrt2": 0
+          },
+          "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+          "constant": {
+            "rational": 1,
+            "sqrt2": 0
+          }
+        },
+        "degree_shift": 0
+      },
+      {
+        "coefficient": {
+          "alpha_coefficient": {
+            "rational": 0,
+            "sqrt2": 0
+          },
+          "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+          "constant": {
+            "rational": -2,
+            "sqrt2": -1
+          }
+        },
+        "degree_shift": 1
+      },
+      {
+        "coefficient": {
+          "alpha_coefficient": {
+            "rational": 0,
+            "sqrt2": 0
+          },
+          "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+          "constant": {
+            "rational": 1,
+            "sqrt2": 2
+          }
+        },
+        "degree_shift": 2
+      },
+      {
+        "coefficient": {
+          "alpha_coefficient": {
+            "rational": 0,
+            "sqrt2": 0
+          },
+          "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+          "constant": {
+            "rational": 0,
+            "sqrt2": -1
+          }
+        },
+        "degree_shift": 3
+      }
+    ]
+  },
+  "regimes": {
+    "q_3_4": {
+      "a.e._phase_cells": [
+        {
+          "D_value": {
+            "rational": 0,
+            "sqrt2": 1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": 2,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": -1,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": -1,
+            "sqrt2": -1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": -1,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 1,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": 1,
+            "sqrt2": 0
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": 2,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": -1,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": 1,
+            "sqrt2": 1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": -3,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 2,
+              "sqrt2": 0
+            }
+          }
+        }
+      ],
+      "degree_linear_test_L2_energy": {
+        "alpha_coefficient": {
+          "rational": -6,
+          "sqrt2": -8
+        },
+        "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+        "constant": {
+          "rational": 6,
+          "sqrt2": 6
+        }
+      },
+      "degree_linear_test_mean": {
+        "alpha_coefficient": {
+          "rational": 0,
+          "sqrt2": 0
+        },
+        "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+        "constant": {
+          "rational": 0,
+          "sqrt2": 0
+        }
+      },
+      "integer_q": "3<=q<=4",
+      "phase_average_has_double_zero_at_z_1": true,
+      "phase_average_symbol_coefficients_by_z_power": [
+        {
+          "coefficient": {
+            "alpha_coefficient": {
+              "rational": 2,
+              "sqrt2": 1
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": -1,
+              "sqrt2": -1
+            }
+          },
+          "degree_shift": 0
+        },
+        {
+          "coefficient": {
+            "alpha_coefficient": {
+              "rational": -4,
+              "sqrt2": -2
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 2,
+              "sqrt2": 2
+            }
+          },
+          "degree_shift": 1
+        },
+        {
+          "coefficient": {
+            "alpha_coefficient": {
+              "rational": 2,
+              "sqrt2": 1
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": -1,
+              "sqrt2": -1
+            }
+          },
+          "degree_shift": 2
+        }
+      ]
+    },
+    "q_5_7": {
+      "a.e._phase_cells": [
+        {
+          "D_value": {
+            "rational": -1,
+            "sqrt2": -1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": 3,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": -1,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": -1,
+            "sqrt2": 0
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": -2,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 1,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": 1,
+            "sqrt2": 1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": 1,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 0,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": 0,
+            "sqrt2": -1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": -2,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 1,
+              "sqrt2": 0
+            }
+          }
+        }
+      ],
+      "degree_linear_test_L2_energy": {
+        "alpha_coefficient": {
+          "rational": 6,
+          "sqrt2": 8
+        },
+        "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+        "constant": {
+          "rational": 0,
+          "sqrt2": -2
+        }
+      },
+      "degree_linear_test_mean": {
+        "alpha_coefficient": {
+          "rational": 0,
+          "sqrt2": 0
+        },
+        "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+        "constant": {
+          "rational": 0,
+          "sqrt2": 0
+        }
+      },
+      "integer_q": "5<=q<=7",
+      "phase_average_has_double_zero_at_z_1": true,
+      "phase_average_symbol_coefficients_by_z_power": [
+        {
+          "coefficient": {
+            "alpha_coefficient": {
+              "rational": 0,
+              "sqrt2": -3
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 0,
+              "sqrt2": 1
+            }
+          },
+          "degree_shift": 0
+        },
+        {
+          "coefficient": {
+            "alpha_coefficient": {
+              "rational": 0,
+              "sqrt2": 6
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 0,
+              "sqrt2": -2
+            }
+          },
+          "degree_shift": 1
+        },
+        {
+          "coefficient": {
+            "alpha_coefficient": {
+              "rational": 0,
+              "sqrt2": -3
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 0,
+              "sqrt2": 1
+            }
+          },
+          "degree_shift": 2
+        }
+      ]
+    },
+    "q_ge_8": {
+      "a.e._phase_cells": [
+        {
+          "D_value": {
+            "rational": -1,
+            "sqrt2": 0
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": 1,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 0,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": 1,
+            "sqrt2": 1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": 1,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 0,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": 0,
+            "sqrt2": -1
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": 1,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 0,
+              "sqrt2": 0
+            }
+          }
+        },
+        {
+          "D_value": {
+            "rational": 0,
+            "sqrt2": 0
+          },
+          "phase_length": {
+            "alpha_coefficient": {
+              "rational": -3,
+              "sqrt2": 0
+            },
+            "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+            "constant": {
+              "rational": 1,
+              "sqrt2": 0
+            }
+          }
+        }
+      ],
+      "degree_linear_test_L2_energy": {
+        "alpha_coefficient": {
+          "rational": 6,
+          "sqrt2": 2
+        },
+        "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+        "constant": {
+          "rational": 0,
+          "sqrt2": 0
+        }
+      },
+      "degree_linear_test_mean": {
+        "alpha_coefficient": {
+          "rational": 0,
+          "sqrt2": 0
+        },
+        "basis": "constant + alpha * coefficient; alpha=log_q(2)",
+        "constant": {
+          "rational": 0,
+          "sqrt2": 0
+        }
+      },
+      "integer_q": "q>=8",
+      "phase_average_has_double_zero_at_z_1": true,
+      "phase_average_symbol_coefficients_by_z_power": []
+    }
+  },
+  "ring": {
+    "alpha": "log_q(2)",
+    "coefficient_ring": "Q(sqrt(2))[alpha]",
+    "numeric_log_or_sqrt_approximations_in_claim_payload": false
+  },
+  "schema": "canonical-dyadic-log-phase-port-v1",
+  "scope": {
+    "L_function_family_evaluated": false,
+    "XD_HCNC_or_BPOE_arithmetic_proved": false,
+    "operator_theorem_on_norm_step_extensions_only": true,
+    "rh_or_grh_proved": false,
+    "source_faithful_family_port_proved": false,
+    "symbolic_term_operation_cap": 4096,
+    "symbolic_term_operations_used": 54
+  },
+  "theorem": {
+    "double_zero": "the uniformly phase-averaged symbol has value and first derivative zero at z=1",
+    "mean_shift": "integral_0^1 d_j(t) dt = j*alpha",
+    "odd_q_collapse": {
+      "odd q>=9": "zero operator",
+      "q=3": "[((2+sqrt(2))*alpha-(1+sqrt(2)))]*(1-z)^2",
+      "q=5,7": "sqrt(2)*(1-3*alpha)*(1-z)^2"
+    },
+    "phase_shift": "d_j(t)=ceil(j*alpha-t) for 0<=t<1",
+    "q_ge_8_fluctuation": "the zero averaged operator retains degree-linear phase energy 2*(3+sqrt(2))*alpha"
+  }
+}
