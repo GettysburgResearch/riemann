@@ -1,0 +1,660 @@
+{
+  "definition": {
+    "coefficient_form": "W_D(N)=r_D(N)-(1+sqrt(q))*r_D(N-1)+sqrt(q)*r_D(N-2)",
+    "global_numerator": "P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4",
+    "inclusive_partial_sum": "M_D(N)=sum_(0<=n<=N) r_D(n)",
+    "native_shift": "(S_q M)(N)=M(N-1)",
+    "negative_endpoint_convention": "M_D(N)=r_D(N)=0 for N<0",
+    "reciprocal_series": "1/P_D(u)=sum_(n>=0) r_D(n)*u^n",
+    "wavelet": "W_D(N)=(I-sqrt(q)*S_q)*(I-S_q)^2*M_D(N)"
+  },
+  "exact_finite_panels": [
+    {
+      "joint_atoms": 32,
+      "marked_symmetric_power_trace_values": {
+        "T_(2,0)": 2,
+        "T_(4,0)": -3,
+        "T_(6,0)": -4,
+        "T_(8,0)": -21
+      },
+      "members": 162,
+      "q": 3,
+      "reciprocal_means_0_through_8": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          0,
+          1
+        ],
+        "2": [
+          2,
+          27
+        ],
+        "3": [
+          0,
+          1
+        ],
+        "4": [
+          -1,
+          9
+        ],
+        "5": [
+          0,
+          1
+        ],
+        "6": [
+          -4,
+          27
+        ],
+        "7": [
+          0,
+          1
+        ],
+        "8": [
+          -7,
+          9
+        ]
+      },
+      "wavelet_rows": [
+        {
+          "distinct_coordinate_atoms": 32,
+          "endpoint": 2,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              2,
+              27
+            ],
+            "sqrt_q": [
+              1,
+              1
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 66,
+            "positive": 93,
+            "zero": 3
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 32,
+          "endpoint": 3,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -2,
+              27
+            ],
+            "sqrt_q": [
+              -2,
+              27
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 57,
+            "positive": 93,
+            "zero": 12
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 29,
+          "endpoint": 4,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -1,
+              9
+            ],
+            "sqrt_q": [
+              2,
+              27
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 96,
+            "positive": 60,
+            "zero": 6
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 30,
+          "endpoint": 5,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              1,
+              9
+            ],
+            "sqrt_q": [
+              1,
+              9
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 75,
+            "positive": 81,
+            "zero": 6
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 30,
+          "endpoint": 6,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -4,
+              27
+            ],
+            "sqrt_q": [
+              -1,
+              9
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 87,
+            "positive": 75,
+            "zero": 0
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 32,
+          "endpoint": 7,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              4,
+              27
+            ],
+            "sqrt_q": [
+              4,
+              27
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 75,
+            "positive": 75,
+            "zero": 12
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 32,
+          "endpoint": 8,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -7,
+              9
+            ],
+            "sqrt_q": [
+              -4,
+              27
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 81,
+            "positive": 81,
+            "zero": 0
+          }
+        }
+      ]
+    },
+    {
+      "joint_atoms": 81,
+      "marked_symmetric_power_trace_values": {
+        "T_(2,0)": 4,
+        "T_(4,0)": -3,
+        "T_(6,0)": -4,
+        "T_(8,0)": 199
+      },
+      "members": 2500,
+      "q": 5,
+      "reciprocal_means_0_through_8": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          0,
+          1
+        ],
+        "2": [
+          4,
+          125
+        ],
+        "3": [
+          0,
+          1
+        ],
+        "4": [
+          -3,
+          125
+        ],
+        "5": [
+          0,
+          1
+        ],
+        "6": [
+          -4,
+          125
+        ],
+        "7": [
+          0,
+          1
+        ],
+        "8": [
+          199,
+          125
+        ]
+      },
+      "wavelet_rows": [
+        {
+          "distinct_coordinate_atoms": 81,
+          "endpoint": 2,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              4,
+              125
+            ],
+            "sqrt_q": [
+              1,
+              1
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 1112,
+            "positive": 1308,
+            "zero": 80
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 76,
+          "endpoint": 3,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -4,
+              125
+            ],
+            "sqrt_q": [
+              -4,
+              125
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 970,
+            "positive": 1480,
+            "zero": 50
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 74,
+          "endpoint": 4,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -3,
+              125
+            ],
+            "sqrt_q": [
+              4,
+              125
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 1429,
+            "positive": 1051,
+            "zero": 20
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 75,
+          "endpoint": 5,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              3,
+              125
+            ],
+            "sqrt_q": [
+              3,
+              125
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 1196,
+            "positive": 1304,
+            "zero": 0
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 81,
+          "endpoint": 6,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -4,
+              125
+            ],
+            "sqrt_q": [
+              -3,
+              125
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 1297,
+            "positive": 1203,
+            "zero": 0
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 81,
+          "endpoint": 7,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              4,
+              125
+            ],
+            "sqrt_q": [
+              4,
+              125
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 1171,
+            "positive": 1279,
+            "zero": 50
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 80,
+          "endpoint": 8,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              199,
+              125
+            ],
+            "sqrt_q": [
+              -4,
+              125
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 1369,
+            "positive": 1131,
+            "zero": 0
+          }
+        }
+      ]
+    },
+    {
+      "joint_atoms": 138,
+      "marked_symmetric_power_trace_values": {
+        "T_(2,0)": 6,
+        "T_(4,0)": -3,
+        "T_(6,0)": -4,
+        "T_(8,0)": -1029
+      },
+      "members": 14406,
+      "q": 7,
+      "reciprocal_means_0_through_8": {
+        "0": [
+          1,
+          1
+        ],
+        "1": [
+          0,
+          1
+        ],
+        "2": [
+          6,
+          343
+        ],
+        "3": [
+          0,
+          1
+        ],
+        "4": [
+          -3,
+          343
+        ],
+        "5": [
+          0,
+          1
+        ],
+        "6": [
+          -4,
+          343
+        ],
+        "7": [
+          0,
+          1
+        ],
+        "8": [
+          -3,
+          1
+        ]
+      },
+      "wavelet_rows": [
+        {
+          "distinct_coordinate_atoms": 138,
+          "endpoint": 2,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              6,
+              343
+            ],
+            "sqrt_q": [
+              1,
+              1
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 6531,
+            "positive": 7791,
+            "zero": 84
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 138,
+          "endpoint": 3,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -6,
+              343
+            ],
+            "sqrt_q": [
+              -6,
+              343
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 5586,
+            "positive": 8484,
+            "zero": 336
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 134,
+          "endpoint": 4,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -3,
+              343
+            ],
+            "sqrt_q": [
+              6,
+              343
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 8442,
+            "positive": 5838,
+            "zero": 126
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 134,
+          "endpoint": 5,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              3,
+              343
+            ],
+            "sqrt_q": [
+              3,
+              343
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 6258,
+            "positive": 8148,
+            "zero": 0
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 138,
+          "endpoint": 6,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -4,
+              343
+            ],
+            "sqrt_q": [
+              -3,
+              343
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 7329,
+            "positive": 7077,
+            "zero": 0
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 138,
+          "endpoint": 7,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              4,
+              343
+            ],
+            "sqrt_q": [
+              4,
+              343
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 6678,
+            "positive": 7392,
+            "zero": 336
+          }
+        },
+        {
+          "distinct_coordinate_atoms": 138,
+          "endpoint": 8,
+          "mean_Q_sqrt_q_coordinates": {
+            "rational": [
+              -3,
+              1
+            ],
+            "sqrt_q": [
+              -4,
+              343
+            ]
+          },
+          "memberwise_sign_is_mixed": true,
+          "sign_counts": {
+            "negative": 7098,
+            "positive": 7308,
+            "zero": 0
+          }
+        }
+      ]
+    }
+  ],
+  "firewalls": [
+    "This is a project-defined native q-adic analogue, not literal dyadic XD, HCNC, or BPOE.",
+    "It uses the complete global curve numerator and its reciprocal series; it does not supply the owner/cross-core arithmetic of canonical XD.",
+    "Every endpoint in every q=3,5,7 panel has both signs, so purity and the native normalization do not create a memberwise sign.",
+    "The finite T_(6,0) and T_(8,0) rows are not all-q theorems or named cohomology identifications.",
+    "No RH, GRH, equidistribution, or novelty claim is made."
+  ],
+  "normalization_theorem": {
+    "double_constant_zero": true,
+    "factorization": "(I-sqrt(q)*S_q)*(I-S_q)^2",
+    "marked_trace_bridge": "T_(n,0)(q)=q^3*E[r_D(n)] for even n",
+    "mean_even_endpoint": "E[W_D(2k)]=E[r_D(2k)]+sqrt(q)*E[r_D(2k-2)]",
+    "mean_odd_endpoint": "E[W_D(2k+1)]=-(1+sqrt(q))*E[r_D(2k)]",
+    "representation_identity": "r_D(n)/q^(n/2)=chi_(n,0)(U_D)",
+    "sqrt_q_carrier_zero": true,
+    "symmetric_power_irreducibility": "Sym^n(Standard) is the irreducible Sp4 representation of highest weight n*omega_1; both dimensions are binomial(n+3,3)",
+    "twist_pairing": "The full AGL(1,F_q) action D(T)->alpha^-5*D(alpha*T+beta) sends a_D to chi(alpha)*a_D and fixes b_D; a nonsquare multiplier pairs P_D(u) with P_D(-u)",
+    "twist_parity": "E[r_D(2k+1)]=0"
+  },
+  "payload_sha256": "4e366316c6d55488b41e0104f6bee6c947220d7989ea7aa1381b5d72a099b882",
+  "proved_all_q_trace_inputs": {
+    "T_(2,0)": "q-1",
+    "T_(4,0)": "-3",
+    "source": "the exact low-weight character profile in the locked q-scan theorem"
+  },
+  "resource_contract": {
+    "actual_atom_endpoint_evaluations": 1757,
+    "actual_recurrence_updates": 2008,
+    "actual_source_atoms": 251,
+    "maximum_atom_endpoint_evaluations": 2048,
+    "maximum_recurrence_updates": 20000,
+    "maximum_source_atoms": 512,
+    "maximum_wall_seconds": 4.0,
+    "new_curves_enumerated": 0,
+    "new_finite_fields_enumerated": 0
+  },
+  "schema": "riemann.function_field.native_qadic_reciprocal_wavelet_spectroscopy.v1",
+  "source_manifest": {
+    "affine": {
+      "lf_sha256": "171a6a289bc8822aebae8b5494eeb70ebc7f54b84153e9ca1cbefc187cf12a7a",
+      "path": "research/l-families/atlas/function_field/genus2_affine_orbits.json",
+      "payload_sha256": "9f55481e43e096d7495d1c2966634e24b69ea15b986d5777af79efe9627a98d1"
+    },
+    "balanced": {
+      "lf_sha256": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e",
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c"
+    },
+    "norm_obstruction": {
+      "lf_sha256": "3a2aa44f759686017495b4b2102f93d6891454856cf66d34cc9ce3750b798fa4",
+      "path": "research/l-families/atlas/function_field/canonical_detector_norm_lattice_obstruction.json",
+      "payload_sha256": null
+    },
+    "q_scan": {
+      "lf_sha256": "b49b7e2803401904b0bc1f82eb442bf1d8e81bdeb1ec388ff7fb14e7e5628dc6",
+      "path": "research/l-families/atlas/function_field/genus2_q_scan.json",
+      "payload_sha256": "80a28d820e45b2548e3e4b482982ef8313c8919f4a3fb9cc2c0b622b244870b5"
+    }
+  },
+  "spectroscopy_observation": {
+    "T_(6,0)_three_field_values": [
+      -4,
+      -4,
+      -4
+    ],
+    "T_(8,0)_three_field_values": [
+      -21,
+      199,
+      -1029
+    ],
+    "inference_firewall": "The constant three-field T_(6,0) row and the three T_(8,0) values are exact finite data only; (q-3)(q-5)(q-7)Q(q) ambiguity forbids an all-q trace or cohomology promotion.",
+    "interpretation": "The native filter packages adjacent symmetric-power traces. The weight-eight coordinate changes sign across the three locked characteristics, so it is a spectroscopy channel rather than a universal sign detector."
+  },
+  "status": "PROVED_OPERATOR_AND_EXACT_FINITE_ARITHMETIC"
+}
