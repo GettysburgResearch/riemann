@@ -205,7 +205,7 @@ Then
 \nu_Z([0,\infty))
 =\sum_{\rho\in Z}m_\rho.
 }
-\tag{L-105644.12]
+\tag{L-105644.12}
 
 The raw zero count is therefore the total mass of a positive current-height
 owner measure.
