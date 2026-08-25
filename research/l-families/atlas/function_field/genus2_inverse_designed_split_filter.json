@@ -1,0 +1,2351 @@
+{
+  "benchmark_direction_comparison": {
+    "D": {
+      "contrast_by_q": {
+        "3": [
+          -9032,
+          3645
+        ],
+        "5": [
+          -13691824,
+          10545625
+        ],
+        "7": [
+          -44130197,
+          26326965
+        ]
+      },
+      "q3_q5_direction_agrees": true,
+      "q7_direction_matches_q3": true
+    },
+    "P": {
+      "contrast_by_q": {
+        "3": [
+          2416,
+          729
+        ],
+        "5": [
+          15859984,
+          10545625
+        ],
+        "7": [
+          3845512,
+          1755131
+        ]
+      },
+      "q3_q5_direction_agrees": true,
+      "q7_direction_matches_q3": true
+    },
+    "S": {
+      "contrast_by_q": {
+        "3": [
+          -11968,
+          10935
+        ],
+        "5": [
+          -167964576,
+          52728125
+        ],
+        "7": [
+          23919580,
+          12285917
+        ]
+      },
+      "q3_q5_direction_agrees": true,
+      "q7_direction_matches_q3": false
+    }
+  },
+  "compact_group_design_space": {
+    "complete_pool_classification": "all and only raw I_(r,s) with 1<=r<=s, even r+s<=10, and zero ambient USp(4) Haar mean",
+    "engine_accounted_work": {
+      "laurent_pair_products": 763,
+      "linear_combination_terms": 822,
+      "one_parameter_substitutions": 594,
+      "weyl_density_lookups": 880
+    },
+    "engine_accounted_work_total": 3059,
+    "exact_signature_decomposition": {
+      "D_signature": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "P_signature": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "R_null_signature": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "S_signature": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "identity": "F_star=P+2*D+(1/2)*S+R_null",
+      "raw_identity_for_R_null": "2*I_(1,1)-I_(2,2)-4*I_(1,5)-I_(4,4)+2*I_(1,7)+4*I_(1,9)-I_(2,4)+2*I_(2,8)",
+      "scope": "equality modulo the seven exact Haar constant-term functionals, with the displayed raw identity defining the exact residual"
+    },
+    "group_order": [
+      "USp4",
+      "SU2xSU2_block",
+      "SU2_doubled_standard",
+      "SU2_Sym3",
+      "T2_uniform",
+      "T_doubled_uniform",
+      "T_Sym3_uniform"
+    ],
+    "raw_pool": [
+      {
+        "frequencies": [
+          1,
+          7
+        ],
+        "name": "I_(1,7)",
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "frequencies": [
+          1,
+          9
+        ],
+        "name": "I_(1,9)",
+        "signature": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "frequencies": [
+          2,
+          4
+        ],
+        "name": "I_(2,4)",
+        "signature": [
+          0,
+          -2,
+          -4,
+          -2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "frequencies": [
+          2,
+          8
+        ],
+        "name": "I_(2,8)",
+        "signature": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "winner_signature": [
+      0,
+      2,
+      4,
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "design_contract": {
+    "candidate_count": 1640,
+    "candidate_lattice": "primitive integer coefficient vectors modulo overall sign, first nonzero coefficient positive, L1<=8",
+    "held_out_q_value": 7,
+    "heldout_exclusion": "design_on_q3_q5_only accepts a mapping whose keys must be exactly (3,5); q=7 is first consulted by _post_design_audit after the winner is frozen",
+    "objective": "among candidates with the same nonzero conditional-mean-difference sign at q=3 and q=5, lexicographically maximize min(rho_3^2,rho_5^2), then rho_3^2+rho_5^2; break exact ties by lower L1, support, max coefficient, absolute vector, coefficient vector",
+    "raw_pool_order": [
+      "I_(1,7)",
+      "I_(1,9)",
+      "I_(2,4)",
+      "I_(2,8)"
+    ],
+    "rho_squared_definition": "pi_q*(1-pi_q)*(mean_split-mean_complement)^2/Var_all, the exact squared point-biserial correlation",
+    "training_q_values": [
+      3,
+      5
+    ]
+  },
+  "exact_family_diagnostics": {
+    "detector_order": [
+      "F_star",
+      "P",
+      "D",
+      "S"
+    ],
+    "families": [
+      {
+        "all_member_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                1358960,
+                19683
+              ],
+              [
+                17988560,
+                1594323
+              ],
+              [
+                -33187808,
+                1594323
+              ],
+              [
+                -103647088,
+                4782969
+              ]
+            ],
+            [
+              [
+                17988560,
+                1594323
+              ],
+              [
+                104092928,
+                4782969
+              ],
+              [
+                -97189760,
+                4782969
+              ],
+              [
+                1055744,
+                14348907
+              ]
+            ],
+            [
+              [
+                -33187808,
+                1594323
+              ],
+              [
+                -97189760,
+                4782969
+              ],
+              [
+                213311408,
+                4782969
+              ],
+              [
+                -5443328,
+                14348907
+              ]
+            ],
+            [
+              [
+                -103647088,
+                4782969
+              ],
+              [
+                1055744,
+                14348907
+              ],
+              [
+                -5443328,
+                14348907
+              ],
+              [
+                1368317600,
+                43046721
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              -424,
+              729
+            ],
+            [
+              -2584,
+              2187
+            ],
+            [
+              232,
+              2187
+            ],
+            [
+              8,
+              6561
+            ]
+          ],
+          "member_count": 162
+        },
+        "complement_conditional_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                8208620414,
+                119574225
+              ],
+              [
+                16954784,
+                1594323
+              ],
+              [
+                -940526372,
+                39858075
+              ],
+              [
+                -2897549488,
+                119574225
+              ]
+            ],
+            [
+              [
+                16954784,
+                1594323
+              ],
+              [
+                50727808,
+                2657205
+              ],
+              [
+                -10015616,
+                531441
+              ],
+              [
+                -2243584,
+                1594323
+              ]
+            ],
+            [
+              [
+                -940526372,
+                39858075
+              ],
+              [
+                -10015616,
+                531441
+              ],
+              [
+                637929176,
+                13286025
+              ],
+              [
+                -16520096,
+                39858075
+              ]
+            ],
+            [
+              [
+                -2897549488,
+                119574225
+              ],
+              [
+                -2243584,
+                1594323
+              ],
+              [
+                -16520096,
+                39858075
+              ],
+              [
+                4215064256,
+                119574225
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              -16154,
+              10935
+            ],
+            [
+              -1264,
+              729
+            ],
+            [
+              1892,
+              3645
+            ],
+            [
+              2008,
+              10935
+            ]
+          ],
+          "member_count": 135
+        },
+        "detectors": {
+          "D": {
+            "complement_conditional_mean": [
+              1892,
+              3645
+            ],
+            "complement_conditional_variance": [
+              637929176,
+              13286025
+            ],
+            "covariance_with_split_indicator": [
+              -2258,
+              6561
+            ],
+            "mean": [
+              232,
+              2187
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                1376,
+                81
+              ],
+              "baseline_split_fraction": [
+                1,
+                6
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 9,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 2
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 102,
+                "positive": 60,
+                "zero": 0
+              },
+              "complement": {
+                "negative": 84,
+                "positive": 51,
+                "zero": 0
+              },
+              "split": {
+                "negative": 18,
+                "positive": 9,
+                "zero": 0
+              }
+            },
+            "split_conditional_mean": [
+              -476,
+              243
+            ],
+            "split_conditional_variance": [
+              1322504,
+              59049
+            ],
+            "split_minus_complement": [
+              -9032,
+              3645
+            ],
+            "squared_point_biserial_correlation": [
+              1274641,
+              66659815
+            ],
+            "variance": [
+              213311408,
+              4782969
+            ]
+          },
+          "F_star": {
+            "complement_conditional_mean": [
+              -16154,
+              10935
+            ],
+            "complement_conditional_variance": [
+              8208620414,
+              119574225
+            ],
+            "covariance_with_split_indicator": [
+              4897,
+              6561
+            ],
+            "mean": [
+              -424,
+              729
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                1592,
+                81
+              ],
+              "baseline_split_fraction": [
+                1,
+                6
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 9,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 2
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 63,
+                "positive": 99,
+                "zero": 0
+              },
+              "complement": {
+                "negative": 57,
+                "positive": 78,
+                "zero": 0
+              },
+              "split": {
+                "negative": 6,
+                "positive": 21,
+                "zero": 0
+              }
+            },
+            "split_conditional_mean": [
+              8522,
+              2187
+            ],
+            "split_conditional_variance": [
+              224532674,
+              4782969
+            ],
+            "split_minus_complement": [
+              19588,
+              3645
+            ],
+            "squared_point_biserial_correlation": [
+              23980609,
+              412784100
+            ],
+            "variance": [
+              1358960,
+              19683
+            ]
+          },
+          "P": {
+            "complement_conditional_mean": [
+              -1264,
+              729
+            ],
+            "complement_conditional_variance": [
+              50727808,
+              2657205
+            ],
+            "covariance_with_split_indicator": [
+              3020,
+              6561
+            ],
+            "mean": [
+              -2584,
+              2187
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                728,
+                81
+              ],
+              "baseline_split_fraction": [
+                1,
+                6
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 6,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 2
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 96,
+                "positive": 60,
+                "zero": 6
+              },
+              "complement": {
+                "negative": 87,
+                "positive": 48,
+                "zero": 0
+              },
+              "split": {
+                "negative": 9,
+                "positive": 12,
+                "zero": 6
+              }
+            },
+            "split_conditional_mean": [
+              128,
+              81
+            ],
+            "split_conditional_variance": [
+              511232,
+              19683
+            ],
+            "split_minus_complement": [
+              2416,
+              729
+            ],
+            "squared_point_biserial_correlation": [
+              114005,
+              1626452
+            ],
+            "variance": [
+              104092928,
+              4782969
+            ]
+          },
+          "S": {
+            "complement_conditional_mean": [
+              2008,
+              10935
+            ],
+            "complement_conditional_variance": [
+              4215064256,
+              119574225
+            ],
+            "covariance_with_split_indicator": [
+              -2992,
+              19683
+            ],
+            "mean": [
+              8,
+              6561
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                4112,
+                243
+              ],
+              "baseline_split_fraction": [
+                1,
+                6
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 6,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 2
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 45,
+                "positive": 81,
+                "zero": 36
+              },
+              "complement": {
+                "negative": 30,
+                "positive": 75,
+                "zero": 30
+              },
+              "split": {
+                "negative": 15,
+                "positive": 6,
+                "zero": 6
+              }
+            },
+            "split_conditional_mean": [
+              -664,
+              729
+            ],
+            "split_conditional_variance": [
+              7158272,
+              531441
+            ],
+            "split_minus_complement": [
+              -11968,
+              10935
+            ],
+            "squared_point_biserial_correlation": [
+              1119008,
+              213799625
+            ],
+            "variance": [
+              1368317600,
+              43046721
+            ]
+          }
+        },
+        "integral_plus_q_split_member_count": 27,
+        "integral_plus_q_split_member_fraction": [
+          1,
+          6
+        ],
+        "member_count": 162,
+        "q": 3,
+        "role": "training",
+        "signed_source_atom_count": 32,
+        "split_conditional_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                224532674,
+                4782969
+              ],
+              [
+                -56096,
+                177147
+              ],
+              [
+                2223436,
+                531441
+              ],
+              [
+                -6309904,
+                1594323
+              ]
+            ],
+            [
+              [
+                -56096,
+                177147
+              ],
+              [
+                511232,
+                19683
+              ],
+              [
+                -136768,
+                6561
+              ],
+              [
+                620032,
+                59049
+              ]
+            ],
+            [
+              [
+                2223436,
+                531441
+              ],
+              [
+                -136768,
+                6561
+              ],
+              [
+                1322504,
+                59049
+              ],
+              [
+                -436448,
+                177147
+              ]
+            ],
+            [
+              [
+                -6309904,
+                1594323
+              ],
+              [
+                620032,
+                59049
+              ],
+              [
+                -436448,
+                177147
+              ],
+              [
+                7158272,
+                531441
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              8522,
+              2187
+            ],
+            [
+              128,
+              81
+            ],
+            [
+              -476,
+              243
+            ],
+            [
+              -664,
+              729
+            ]
+          ],
+          "member_count": 27
+        },
+        "vector_order": [
+          "F_star",
+          "P",
+          "D",
+          "S"
+        ]
+      },
+      {
+        "all_member_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                13180839884244,
+                152587890625
+              ],
+              [
+                46225627488,
+                30517578125
+              ],
+              [
+                -195111541368,
+                30517578125
+              ],
+              [
+                -4248831975432,
+                152587890625
+              ]
+            ],
+            [
+              [
+                46225627488,
+                30517578125
+              ],
+              [
+                141418400976,
+                6103515625
+              ],
+              [
+                -123745748736,
+                6103515625
+              ],
+              [
+                67763603136,
+                30517578125
+              ]
+            ],
+            [
+              [
+                -195111541368,
+                30517578125
+              ],
+              [
+                -123745748736,
+                6103515625
+              ],
+              [
+                282293829096,
+                6103515625
+              ],
+              [
+                -54408902496,
+                30517578125
+              ]
+            ],
+            [
+              [
+                -4248831975432,
+                152587890625
+              ],
+              [
+                67763603136,
+                30517578125
+              ],
+              [
+                -54408902496,
+                30517578125
+              ],
+              [
+                5720473498896,
+                152587890625
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              -108484,
+              390625
+            ],
+            [
+              -57468,
+              78125
+            ],
+            [
+              16148,
+              78125
+            ],
+            [
+              7152,
+              390625
+            ]
+          ],
+          "member_count": 2500
+        },
+        "complement_conditional_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                23844418074864,
+                251720703125
+              ],
+              [
+                -122315926272,
+                50344140625
+              ],
+              [
+                -116022962592,
+                50344140625
+              ],
+              [
+                -38894095510368,
+                1258603515625
+              ]
+            ],
+            [
+              [
+                -122315926272,
+                50344140625
+              ],
+              [
+                50032449408,
+                2013765625
+              ],
+              [
+                -51228891072,
+                2013765625
+              ],
+              [
+                284792875392,
+                50344140625
+              ]
+            ],
+            [
+              [
+                -116022962592,
+                50344140625
+              ],
+              [
+                -51228891072,
+                2013765625
+              ],
+              [
+                108920976288,
+                2013765625
+              ],
+              [
+                -102426221568,
+                10068828125
+              ]
+            ],
+            [
+              [
+                -38894095510368,
+                1258603515625
+              ],
+              [
+                284792875392,
+                50344140625
+              ],
+              [
+                -102426221568,
+                10068828125
+              ],
+              [
+                34164749248704,
+                1258603515625
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              -1867096,
+              1121875
+            ],
+            [
+              -260208,
+              224375
+            ],
+            [
+              128528,
+              224375
+            ],
+            [
+              1028328,
+              1121875
+            ]
+          ],
+          "member_count": 1795
+        },
+        "detectors": {
+          "D": {
+            "complement_conditional_mean": [
+              128528,
+              224375
+            ],
+            "complement_conditional_variance": [
+              108920976288,
+              2013765625
+            ],
+            "covariance_with_split_indicator": [
+              -2567217,
+              9765625
+            ],
+            "mean": [
+              16148,
+              78125
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                10532,
+                625
+              ],
+              "baseline_split_fraction": [
+                141,
+                500
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 40,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 25
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 1464,
+                "positive": 1036,
+                "zero": 0
+              },
+              "complement": {
+                "negative": 964,
+                "positive": 831,
+                "zero": 0
+              },
+              "split": {
+                "negative": 500,
+                "positive": 205,
+                "zero": 0
+              }
+            },
+            "split_conditional_mean": [
+              -21312,
+              29375
+            ],
+            "split_conditional_variance": [
+              21646850048,
+              862890625
+            ],
+            "split_minus_complement": [
+              -13691824,
+              10545625
+            ],
+            "squared_point_biserial_correlation": [
+              1464578472242,
+              198464324097367
+            ],
+            "variance": [
+              282293829096,
+              6103515625
+            ]
+          },
+          "F_star": {
+            "complement_conditional_mean": [
+              -1867096,
+              1121875
+            ],
+            "complement_conditional_variance": [
+              23844418074864,
+              251720703125
+            ],
+            "covariance_with_split_indicator": [
+              48610311,
+              48828125
+            ],
+            "mean": [
+              -108484,
+              390625
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                61112,
+                3125
+              ],
+              "baseline_split_fraction": [
+                141,
+                500
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 61,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 25
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 1215,
+                "positive": 1285,
+                "zero": 0
+              },
+              "complement": {
+                "negative": 1075,
+                "positive": 720,
+                "zero": 0
+              },
+              "split": {
+                "negative": 140,
+                "positive": 565,
+                "zero": 0
+              }
+            },
+            "split_conditional_mean": [
+              95544,
+              29375
+            ],
+            "split_conditional_variance": [
+              1030726843904,
+              21572265625
+            ],
+            "split_minus_complement": [
+              259254992,
+              52728125
+            ],
+            "squared_point_biserial_correlation": [
+              1050205482451876,
+              18533359280570751
+            ],
+            "variance": [
+              13180839884244,
+              152587890625
+            ]
+          },
+          "P": {
+            "complement_conditional_mean": [
+              -260208,
+              224375
+            ],
+            "complement_conditional_variance": [
+              50032449408,
+              2013765625
+            ],
+            "covariance_with_split_indicator": [
+              2973747,
+              9765625
+            ],
+            "mean": [
+              -57468,
+              78125
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                5872,
+                625
+              ],
+              "baseline_split_fraction": [
+                141,
+                500
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 40,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 25
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 1410,
+                "positive": 1060,
+                "zero": 30
+              },
+              "complement": {
+                "negative": 990,
+                "positive": 780,
+                "zero": 25
+              },
+              "split": {
+                "negative": 420,
+                "positive": 280,
+                "zero": 5
+              }
+            },
+            "split_conditional_mean": [
+              10112,
+              29375
+            ],
+            "split_conditional_variance": [
+              14911349248,
+              862890625
+            ],
+            "split_minus_complement": [
+              15859984,
+              10545625
+            ],
+            "squared_point_biserial_correlation": [
+              982574580001,
+              49711514159751
+            ],
+            "variance": [
+              141418400976,
+              6103515625
+            ]
+          },
+          "S": {
+            "complement_conditional_mean": [
+              1028328,
+              1121875
+            ],
+            "complement_conditional_variance": [
+              34164749248704,
+              1258603515625
+            ],
+            "covariance_with_split_indicator": [
+              -31493358,
+              48828125
+            ],
+            "mean": [
+              7152,
+              390625
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                48696,
+                3125
+              ],
+              "baseline_split_fraction": [
+                141,
+                500
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 106,
+              "split_enrichment_ratio": [
+                8750,
+                2491
+              ],
+              "split_fraction_in_tail": [
+                105,
+                106
+              ],
+              "split_member_count": 105,
+              "target_member_count_ceiling": 25
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 1211,
+                "positive": 1039,
+                "zero": 250
+              },
+              "complement": {
+                "negative": 761,
+                "positive": 964,
+                "zero": 70
+              },
+              "split": {
+                "negative": 450,
+                "positive": 75,
+                "zero": 180
+              }
+            },
+            "split_conditional_mean": [
+              -66648,
+              29375
+            ],
+            "split_conditional_variance": [
+              1219752805632,
+              21572265625
+            ],
+            "split_minus_complement": [
+              -167964576,
+              52728125
+            ],
+            "squared_point_biserial_correlation": [
+              941910349588,
+              17186885567463
+            ],
+            "variance": [
+              5720473498896,
+              152587890625
+            ]
+          }
+        },
+        "integral_plus_q_split_member_count": 705,
+        "integral_plus_q_split_member_fraction": [
+          141,
+          500
+        ],
+        "member_count": 2500,
+        "q": 5,
+        "role": "training",
+        "signed_source_atom_count": 81,
+        "split_conditional_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                1030726843904,
+                21572265625
+              ],
+              [
+                5391354304,
+                862890625
+              ],
+              [
+                -10544903744,
+                862890625
+              ],
+              [
+                -190158703488,
+                21572265625
+              ]
+            ],
+            [
+              [
+                5391354304,
+                862890625
+              ],
+              [
+                14911349248,
+                862890625
+              ],
+              [
+                -4937720448,
+                862890625
+              ],
+              [
+                -2665705472,
+                862890625
+              ]
+            ],
+            [
+              [
+                -10544903744,
+                862890625
+              ],
+              [
+                -4937720448,
+                862890625
+              ],
+              [
+                21646850048,
+                862890625
+              ],
+              [
+                14331483136,
+                862890625
+              ]
+            ],
+            [
+              [
+                -190158703488,
+                21572265625
+              ],
+              [
+                -2665705472,
+                862890625
+              ],
+              [
+                14331483136,
+                862890625
+              ],
+              [
+                1219752805632,
+                21572265625
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              95544,
+              29375
+            ],
+            [
+              10112,
+              29375
+            ],
+            [
+              -21312,
+              29375
+            ],
+            [
+              -66648,
+              29375
+            ]
+          ],
+          "member_count": 705
+        },
+        "vector_order": [
+          "F_star",
+          "P",
+          "D",
+          "S"
+        ]
+      },
+      {
+        "all_member_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                3032798119284608,
+                33232930569601
+              ],
+              [
+                44496173208288,
+                4747561509943
+              ],
+              [
+                -56411774966656,
+                4747561509943
+              ],
+              [
+                -788271293540832,
+                33232930569601
+              ]
+            ],
+            [
+              [
+                44496173208288,
+                4747561509943
+              ],
+              [
+                15868010065792,
+                678223072849
+              ],
+              [
+                -13970109466624,
+                678223072849
+              ],
+              [
+                23750858016000,
+                4747561509943
+              ]
+            ],
+            [
+              [
+                -56411774966656,
+                4747561509943
+              ],
+              [
+                -13970109466624,
+                678223072849
+              ],
+              [
+                32496274640224,
+                678223072849
+              ],
+              [
+                -6946144156416,
+                4747561509943
+              ]
+            ],
+            [
+              [
+                -788271293540832,
+                33232930569601
+              ],
+              [
+                23750858016000,
+                4747561509943
+              ],
+              [
+                -6946144156416,
+                4747561509943
+              ],
+              [
+                1318852895644224,
+                33232930569601
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              -589304,
+              5764801
+            ],
+            [
+              -441712,
+              823543
+            ],
+            [
+              156896,
+              823543
+            ],
+            [
+              -2952,
+              5764801
+            ]
+          ],
+          "member_count": 14406
+        },
+        "complement_conditional_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                612118780199539,
+                6267560824812
+              ],
+              [
+                562332351540,
+                74613819343
+              ],
+              [
+                -5023618859153,
+                447682916058
+              ],
+              [
+                -12584922823938,
+                522296735401
+              ]
+            ],
+            [
+              [
+                562332351540,
+                74613819343
+              ],
+              [
+                687092476736,
+                31977351147
+              ],
+              [
+                -604976793352,
+                31977351147
+              ],
+              [
+                280271663712,
+                74613819343
+              ]
+            ],
+            [
+              [
+                -5023618859153,
+                447682916058
+              ],
+              [
+                -604976793352,
+                31977351147
+              ],
+              [
+                4488506268305,
+                95932053441
+              ],
+              [
+                542361325540,
+                223841458029
+              ]
+            ],
+            [
+              [
+                -12584922823938,
+                522296735401
+              ],
+              [
+                280271663712,
+                74613819343
+              ],
+              [
+                542361325540,
+                223841458029
+              ],
+              [
+                15904386621104,
+                522296735401
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              598261,
+              1445402
+            ],
+            [
+              -111432,
+              103243
+            ],
+            [
+              187667,
+              309729
+            ],
+            [
+              -349052,
+              722701
+            ]
+          ],
+          "member_count": 10836
+        },
+        "detectors": {
+          "D": {
+            "complement_conditional_mean": [
+              187667,
+              309729
+            ],
+            "complement_conditional_variance": [
+              4488506268305,
+              95932053441
+            ],
+            "covariance_with_split_indicator": [
+              -88260394,
+              282475249
+            ],
+            "mean": [
+              156896,
+              823543
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                40468,
+                2401
+              ],
+              "baseline_split_fraction": [
+                85,
+                343
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 168,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 145
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 8820,
+                "positive": 5586,
+                "zero": 0
+              },
+              "complement": {
+                "negative": 6300,
+                "positive": 4536,
+                "zero": 0
+              },
+              "split": {
+                "negative": 2520,
+                "positive": 1050,
+                "zero": 0
+              }
+            },
+            "split_conditional_mean": [
+              -218438,
+              204085
+            ],
+            "split_conditional_variance": [
+              292842783048,
+              5950098175
+            ],
+            "split_minus_complement": [
+              -44130197,
+              26326965
+            ],
+            "squared_point_biserial_correlation": [
+              1947474287258809,
+              178160825715028080
+            ],
+            "variance": [
+              32496274640224,
+              678223072849
+            ]
+          },
+          "F_star": {
+            "complement_conditional_mean": [
+              598261,
+              1445402
+            ],
+            "complement_conditional_variance": [
+              612118780199539,
+              6267560824812
+            ],
+            "covariance_with_split_indicator": [
+              -767651001,
+              1977326743
+            ],
+            "mean": [
+              -589304,
+              5764801
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                343768,
+                16807
+              ],
+              "baseline_split_fraction": [
+                85,
+                343
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 210,
+              "split_enrichment_ratio": [
+                343,
+                425
+              ],
+              "split_fraction_in_tail": [
+                1,
+                5
+              ],
+              "split_member_count": 42,
+              "target_member_count_ceiling": 145
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 7434,
+                "positive": 6972,
+                "zero": 0
+              },
+              "complement": {
+                "negative": 5586,
+                "positive": 5250,
+                "zero": 0
+              },
+              "split": {
+                "negative": 1848,
+                "positive": 1722,
+                "zero": 0
+              }
+            },
+            "split_conditional_mean": [
+              -2384087,
+              1428595
+            ],
+            "split_conditional_variance": [
+              19986836212338,
+              291554810575
+            ],
+            "split_minus_complement": [
+              -255883667,
+              122859170
+            ],
+            "squared_point_biserial_correlation": [
+              196429353112100667,
+              22169754251970484480
+            ],
+            "variance": [
+              3032798119284608,
+              33232930569601
+            ]
+          },
+          "P": {
+            "complement_conditional_mean": [
+              -111432,
+              103243
+            ],
+            "complement_conditional_variance": [
+              687092476736,
+              31977351147
+            ],
+            "covariance_with_split_indicator": [
+              115365360,
+              282475249
+            ],
+            "mean": [
+              -441712,
+              823543
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                23368,
+                2401
+              ],
+              "baseline_split_fraction": [
+                85,
+                343
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 252,
+              "split_enrichment_ratio": [
+                0,
+                1
+              ],
+              "split_fraction_in_tail": [
+                0,
+                1
+              ],
+              "split_member_count": 0,
+              "target_member_count_ceiling": 145
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 8484,
+                "positive": 5880,
+                "zero": 42
+              },
+              "complement": {
+                "negative": 6846,
+                "positive": 3990,
+                "zero": 0
+              },
+              "split": {
+                "negative": 1638,
+                "positive": 1890,
+                "zero": 42
+              }
+            },
+            "split_conditional_mean": [
+              45376,
+              40817
+            ],
+            "split_conditional_variance": [
+              6088556160,
+              238003927
+            ],
+            "split_minus_complement": [
+              3845512,
+              1755131
+            ],
+            "squared_point_biserial_correlation": [
+              3465928720815,
+              90621213735109
+            ],
+            "variance": [
+              15868010065792,
+              678223072849
+            ]
+          },
+          "S": {
+            "complement_conditional_mean": [
+              -349052,
+              722701
+            ],
+            "complement_conditional_variance": [
+              15904386621104,
+              522296735401
+            ],
+            "covariance_with_split_indicator": [
+              717587400,
+              1977326743
+            ],
+            "mean": [
+              -2952,
+              5764801
+            ],
+            "outer_one_percent_absolute_tail": {
+              "absolute_threshold": [
+                284040,
+                16807
+              ],
+              "baseline_split_fraction": [
+                85,
+                343
+              ],
+              "definition": "all members with |detector| at least the largest tied threshold giving mass >=1%",
+              "member_count_including_ties": 462,
+              "split_enrichment_ratio": [
+                2744,
+                935
+              ],
+              "split_fraction_in_tail": [
+                8,
+                11
+              ],
+              "split_member_count": 336,
+              "target_member_count_ceiling": 145
+            },
+            "sign_member_counts": {
+              "all": {
+                "negative": 6552,
+                "positive": 6762,
+                "zero": 1092
+              },
+              "complement": {
+                "negative": 5544,
+                "positive": 4200,
+                "zero": 1092
+              },
+              "split": {
+                "negative": 1008,
+                "positive": 2562,
+                "zero": 0
+              }
+            },
+            "split_conditional_mean": [
+              418272,
+              285719
+            ],
+            "split_conditional_variance": [
+              756441031680,
+              11662192423
+            ],
+            "split_minus_complement": [
+              23919580,
+              12285917
+            ],
+            "squared_point_biserial_correlation": [
+              178795721055125,
+              10042515278290914
+            ],
+            "variance": [
+              1318852895644224,
+              33232930569601
+            ]
+          }
+        },
+        "integral_plus_q_split_member_count": 3570,
+        "integral_plus_q_split_member_fraction": [
+          85,
+          343
+        ],
+        "member_count": 14406,
+        "q": 7,
+        "role": "held_out",
+        "signed_source_atom_count": 138,
+        "split_conditional_vector_moments": {
+          "covariance_matrix": [
+            [
+              [
+                19986836212338,
+                291554810575
+              ],
+              [
+                214318992480,
+                11662192423
+              ],
+              [
+                -4814809566636,
+                291554810575
+              ],
+              [
+                -7971273722256,
+                408176734805
+              ]
+            ],
+            [
+              [
+                214318992480,
+                11662192423
+              ],
+              [
+                6088556160,
+                238003927
+              ],
+              [
+                -27290026944,
+                1190019635
+              ],
+              [
+                6637325568,
+                1190019635
+              ]
+            ],
+            [
+              [
+                -4814809566636,
+                291554810575
+              ],
+              [
+                -27290026944,
+                1190019635
+              ],
+              [
+                292842783048,
+                5950098175
+              ],
+              [
+                -89996392992,
+                8330137445
+              ]
+            ],
+            [
+              [
+                -7971273722256,
+                408176734805
+              ],
+              [
+                6637325568,
+                1190019635
+              ],
+              [
+                -89996392992,
+                8330137445
+              ],
+              [
+                756441031680,
+                11662192423
+              ]
+            ]
+          ],
+          "mean_vector": [
+            [
+              -2384087,
+              1428595
+            ],
+            [
+              45376,
+              40817
+            ],
+            [
+              -218438,
+              204085
+            ],
+            [
+              418272,
+              285719
+            ]
+          ],
+          "member_count": 3570
+        },
+        "vector_order": [
+          "F_star",
+          "P",
+          "D",
+          "S"
+        ]
+      }
+    ]
+  },
+  "held_out_evaluation": {
+    "direction_reversal_or_zero_count_on_q7": 769,
+    "direction_survivor_count_on_q7": 80,
+    "held_out_contrast_sign": "negative",
+    "retrospective_best_training_rank_among_q7_survivors": {
+      "expression": "2*I_(1,7)+3*I_(1,9)-2*I_(2,4)-I_(2,8)",
+      "field_scores": {
+        "3": {
+          "contrast": [
+            28204,
+            10935
+          ],
+          "correlation_squared": [
+            49716601,
+            1846375660
+          ],
+          "variance": [
+            1477100528,
+            43046721
+          ]
+        },
+        "5": {
+          "contrast": [
+            75607216,
+            31636875
+          ],
+          "correlation_squared": [
+            22329887153401,
+            928024277230971
+          ],
+          "variance": [
+            293336265744,
+            6103515625
+          ]
+        },
+        "7": {
+          "contrast": [
+            80424083,
+            368577510
+          ],
+          "correlation_squared": [
+            6468033126390889,
+            41692284297035565120
+          ],
+          "variance": [
+            1901152954721184,
+            33232930569601
+          ]
+        }
+      },
+      "held_out_squared_correlation_bound": "strictly_less_than_1/6000",
+      "oriented_coefficients_in_raw_pool_order": [
+        2,
+        3,
+        -2,
+        -1
+      ],
+      "warning": "uses held-out labels post hoc and is not a designed replacement"
+    },
+    "training_eligible_direction_count": 849,
+    "training_oriented_contrast_sign": "positive",
+    "winner_direction_verdict": "REVERSES_ON_HELD_OUT_Q7",
+    "winner_q7_score": {
+      "contrast": [
+        -255883667,
+        122859170
+      ],
+      "correlation_squared": [
+        196429353112100667,
+        22169754251970484480
+      ],
+      "variance": [
+        3032798119284608,
+        33232930569601
+      ]
+    }
+  },
+  "interpretation_firewall": {
+    "exact_claim": "a deterministic bounded classifier-design experiment and exact held-out q=7 evaluation on three frozen member-complete histograms",
+    "forbidden_inference": "finite discrimination, sign, covariance, or tail enrichment does not certify a subgroup, split Jacobian, endomorphism algebra, motive, monodromy group, all-q law, or RH/GRH consequence",
+    "negative_result": "the unique maximin q=3,5 winner reverses its split-versus-complement conditional-mean direction at q=7; 769 of 849 training-eligible directions reverse or vanish",
+    "predicate_scope": "integral factorization of the reciprocal quartic into two +q elliptic-form quadratics is a coefficient predicate, not a polarization or geometric decomposition theorem"
+  },
+  "payload_sha256": "d3fb13ea244790bfcdf65a65b94397117f8c931ca6ecdd0c13fd8eb4896a2dda",
+  "raw_fixture_id": "FUNCTION_FIELD.GENUS2.INVERSE_DESIGNED_SPLIT_FILTER.TRAIN_Q3_Q5.HOLDOUT_Q7.V1",
+  "resource_contract": {
+    "candidate_cap_inclusive": 4096,
+    "curve_or_member_enumeration": false,
+    "external_data": false,
+    "finite_field_enumeration": false,
+    "ledger": {
+      "candidates": 1640,
+      "contraction_adapter_crosscheck": 251,
+      "contraction_candidate_training_field": 3280,
+      "contraction_posthoc_candidate_holdout": 849,
+      "contraction_posthoc_training_score_replay": 3280,
+      "source_atoms": 251
+    },
+    "moment_contraction_cap_exclusive": 50000,
+    "moment_contraction_total": 7660,
+    "random_sampling": false,
+    "root_finding": false,
+    "source_atom_cap_inclusive": 4096
+  },
+  "root_free_reciprocal_quartic_adapter": {
+    "normalized_quartic": "Z^4-e1*Z^3+e2*Z^2-e1*Z+1",
+    "rational_coordinates": "A=e1^2=a_D^2/q and e=e2=b_D/q",
+    "recurrence": "p_n=e1*p_(n-1)-e2*p_(n-2)+e1*p_(n-3)-p_(n-4), represented exactly as p_n=e1^(n mod 2)*Q_n(A,e)",
+    "root_finding": false,
+    "source_quartic": "T^4+a_D*T^3+b_D*T^2+q*a_D*T+q^2",
+    "square_root_construction": false,
+    "winner_polynomial_terms": [
+      [
+        4,
+        1,
+        4
+      ],
+      [
+        4,
+        0,
+        -6
+      ],
+      [
+        3,
+        2,
+        -31
+      ],
+      [
+        3,
+        1,
+        74
+      ],
+      [
+        3,
+        0,
+        -37
+      ],
+      [
+        2,
+        3,
+        74
+      ],
+      [
+        2,
+        2,
+        -208
+      ],
+      [
+        2,
+        1,
+        116
+      ],
+      [
+        2,
+        0,
+        32
+      ],
+      [
+        1,
+        4,
+        -55
+      ],
+      [
+        1,
+        3,
+        134
+      ],
+      [
+        1,
+        2,
+        42
+      ],
+      [
+        1,
+        1,
+        -204
+      ],
+      [
+        1,
+        0,
+        34
+      ],
+      [
+        0,
+        5,
+        6
+      ],
+      [
+        0,
+        4,
+        -4
+      ],
+      [
+        0,
+        3,
+        -32
+      ],
+      [
+        0,
+        2,
+        16
+      ],
+      [
+        0,
+        1,
+        40
+      ],
+      [
+        0,
+        0,
+        -8
+      ]
+    ]
+  },
+  "schema": "riemann.function_field.genus2_inverse_designed_split_filter.v1",
+  "scope": "member-uniform monic squarefree quintics over F_q for exactly q=3,5,7, replayed only from complete locked coefficient histograms",
+  "source_locks": {
+    "input_payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+    "member_coefficient_ledger_sha256": {
+      "3": "e38543c4526e6b330f012274398a258f2d021ddae18442d2f0094d42ec229790",
+      "5": "69fe496e1cca2090ca62bf7622ff34c3ab3aef1b9268dfb41c4df94d380a9d0a",
+      "7": "c1d4ca30f45341de53af20ab4e4ca3f9bff79542146f1ac2230169eec9669655"
+    },
+    "required_lf_sha256": {
+      "histogram_fixture": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e",
+      "histogram_producer": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b",
+      "interferometer_engine": "48474ebcbb99efea23227126f66f566fdb525a3c9ae9e81a77bf83d4075f55e7",
+      "split_predicate": "4489c109f25f8e0ca3051dc9983a8738b7aaee941a351959c552aa19b001e4de"
+    }
+  },
+  "status": "EXACT_BOUNDED_TRAINING_WINNER_REVERSES_ON_HELD_OUT_Q7",
+  "training_search_result": {
+    "canonical_coefficients_in_raw_pool_order": [
+      2,
+      4,
+      -1,
+      1
+    ],
+    "complexity": {
+      "L1": 8,
+      "maximum_absolute_coefficient": 4,
+      "support": 4
+    },
+    "field_scores": {
+      "3": {
+        "contrast": [
+          19588,
+          3645
+        ],
+        "correlation_squared": [
+          23980609,
+          412784100
+        ],
+        "variance": [
+          1358960,
+          19683
+        ]
+      },
+      "5": {
+        "contrast": [
+          259254992,
+          52728125
+        ],
+        "correlation_squared": [
+          1050205482451876,
+          18533359280570751
+        ],
+        "variance": [
+          13180839884244,
+          152587890625
+        ]
+      }
+    },
+    "objective": {
+      "minimum_training_rho_squared": [
+        1050205482451876,
+        18533359280570751
+      ],
+      "sum_training_rho_squared": [
+        32516643231587107575517,
+        283343556689149812513300
+      ]
+    },
+    "rejected_opposite_or_zero_training_direction_count": 791,
+    "training_eligible_candidate_count": 849,
+    "training_oriented_coefficients_in_raw_pool_order": [
+      2,
+      4,
+      -1,
+      1
+    ],
+    "winner_expression": "F_star=2*I_(1,7)+4*I_(1,9)-I_(2,4)+I_(2,8)",
+    "winning_objective_tie_count": 1
+  }
+}
