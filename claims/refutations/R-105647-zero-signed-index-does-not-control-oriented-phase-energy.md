@@ -68,7 +68,7 @@ The exact oriented overlap formula of `L-106512` therefore gives
 =1-{4ab\over(a+b)^2}
 ={ (a-b)^2\over(a+b)^2}.
 }
-\tag{R-105647.3
+\tag{R-105647.3}
 
 This is strictly positive whenever `a!=b`.  For the explicit fixture
 
@@ -87,7 +87,7 @@ one has
 \qquad
 \|H_U\|_{\mathcal S_2}^2={1\over9}.
 }
-\tag{R-105647.4
+\tag{R-105647.4}
 
 Equivalently, the denominator phase-angle integral of `L-106514` is positive
 even though the signed index and its sufficiently fine logarithmic
@@ -122,7 +122,7 @@ Hence
 +
 \|H_{U^{-1}}\|_{\mathcal S_2}^2.
 }
-\tag{R-105647.5
+\tag{R-105647.5}
 
 The first term is the signed integer flow.  The second is the degree-zero
 reverse-oriented phase energy.  It is exactly the null energy discarded by a
