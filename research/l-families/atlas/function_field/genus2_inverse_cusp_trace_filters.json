@@ -1,0 +1,572 @@
+{
+  "classification_theorem": {
+    "bounded_checker_is_not_infinite_proof": "the displayed linear elimination proves the lattice; the bounded m,k replay is only a regression check",
+    "cusp_response": "T_c(q)=-m*Theta_(8,2)(q)",
+    "integral_lattice": "(c2,c4,c6,c8)=m*(1,-1,-1,1)+k*(0,-4,3,0), m,k in Z",
+    "integral_unit_response_baseline": {
+      "coefficients_c2_c4_c6_c8": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "formula": "r_D(8)-r_D(6)-r_D(4)+r_D(2)",
+      "marked_trace": "-Theta_(8,2)(q)"
+    },
+    "nuisance_equations": [
+      "c2=c8",
+      "3*c4+4*c6=-7*c8"
+    ],
+    "primitive_three_scale_cusp_filters_up_to_sign": [
+      {
+        "coefficients_c2_c4_c6_c8": [
+          3,
+          -7,
+          0,
+          3
+        ],
+        "formula": "3*r_D(8)-7*r_D(4)+3*r_D(2)",
+        "marked_trace": "-3*Theta_(8,2)(q)",
+        "name": "F4"
+      },
+      {
+        "coefficients_c2_c4_c6_c8": [
+          4,
+          0,
+          -7,
+          4
+        ],
+        "formula": "4*r_D(8)-7*r_D(6)+4*r_D(2)",
+        "marked_trace": "-4*Theta_(8,2)(q)",
+        "name": "F6"
+      }
+    ],
+    "trace_formula": "T_c(q)=-c8*Theta_(8,2)(q)+(c2-c8)*q-(c2+3*c4+4*c6+6*c8)",
+    "two_scale_classification": "the only primitive nuisance-free two-scale direction is (0,4,-3,0), with zero cusp response; no support-at-most-two solution has c8 nonzero"
+  },
+  "firewalls": [
+    "This packet is an exact inverse-design corollary of source-locked marked family trace theorems; it does not re-prove those source theorems.",
+    "Haar variance is a compact-group L2 calculation and is not the finite arithmetic-family variance.",
+    "The q=3,5,7 diagnostics are held-out source replays and do not prove an all-q sign or variance law.",
+    "The preferred sparse filter F4 has mixed sign in every held-out family; no memberwise sign claim is made.",
+    "No RH, GRH, novelty, motive, compatible-system, or global Euler-product claim is made."
+  ],
+  "haar_variance_theorem": {
+    "F4_unit_cusp_response_variance": "q^8+(49/9)*q^4+q^2",
+    "F4_variance": "9*q^8+49*q^4+9*q^2",
+    "F6_unit_cusp_response_variance": "q^8+(49/16)*q^6+q^2",
+    "F6_variance": "16*q^8+49*q^6+16*q^2",
+    "cleared_integer_filter": "Delta*(r8+r2)-21*q^2*r4-28*r6, with marked trace -Delta*Theta_(8,2)(q)",
+    "completion_of_square": "under c6=(-7-3*c4)/4, V-V_min=(q^4*Delta/16)*(c4+21*q^2/Delta)^2",
+    "exact_numeric_checks": [
+      {
+        "F4_unit_response_variance": [
+          7011,
+          1
+        ],
+        "F6_unit_response_variance": [
+          140841,
+          16
+        ],
+        "optimal_coefficients_c2_c4_c6_c8": [
+          [
+            1,
+            1
+          ],
+          [
+            -189,
+            97
+          ],
+          [
+            -28,
+            97
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "optimal_unit_response_variance": [
+          673011,
+          97
+        ],
+        "q": 3
+      },
+      {
+        "F4_unit_response_variance": [
+          3546475,
+          9
+        ],
+        "F6_unit_response_variance": [
+          7016025,
+          16
+        ],
+        "optimal_coefficients_c2_c4_c6_c8": [
+          [
+            1,
+            1
+          ],
+          [
+            -525,
+            241
+          ],
+          [
+            -28,
+            241
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "optimal_unit_response_variance": [
+          94912275,
+          241
+        ],
+        "q": 5
+      },
+      {
+        "F4_unit_response_variance": [
+          52001299,
+          9
+        ],
+        "F6_unit_response_variance": [
+          98002401,
+          16
+        ],
+        "optimal_coefficients_c2_c4_c6_c8": [
+          [
+            1,
+            1
+          ],
+          [
+            -1029,
+            457
+          ],
+          [
+            -28,
+            457
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "optimal_unit_response_variance": [
+          2640301251,
+          457
+        ],
+        "q": 7
+      },
+      {
+        "F4_unit_response_variance": [
+          43082523,
+          1
+        ],
+        "F6_unit_response_variance": [
+          714789441,
+          16
+        ],
+        "optimal_coefficients_c2_c4_c6_c8": [
+          [
+            1,
+            1
+          ],
+          [
+            -1701,
+            745
+          ],
+          [
+            -28,
+            745
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "optimal_unit_response_variance": [
+          32095908099,
+          745
+        ],
+        "q": 9
+      }
+    ],
+    "general_variance": "c2^2*q^2+c4^2*q^4+c6^2*q^6+c8^2*q^8",
+    "integral_unit_response_optimum": {
+      "all_integral_unit_response_filters": "H_k=r8+(-1-4*k)*r4+(-1+3*k)*r6+r2, k in Z",
+      "difference_from_H": "V(H_k)-V(H)=q^4*k*((8-6*q^2)+(16+9*q^2)*k), strictly positive for every nonzero integer k and odd q>=3",
+      "filter": "H=r8-r6-r4+r2",
+      "variance": "q^8+q^6+q^4+q^2"
+    },
+    "optimal_denominator": "Delta=9*q^2+16",
+    "optimal_unit_response_filter": "G_q=r8+r2-(21*q^2/Delta)*r4-(28/Delta)*r6",
+    "optimal_variance": "q^8+q^2+49*q^6/Delta",
+    "orthogonality_input": "r_D(2j)=q^j*chi_(2j,0)(U_D), and the four nontrivial irreducible USp(4) characters are Haar-orthonormal",
+    "sparse_comparison": "V(F6/4)-V(F4/3)=49*q^4*(9*q^2-16)/144>0 for odd q>=3"
+  },
+  "held_out_F4_diagnostics": [
+    {
+      "family_centered_variance_F4": [
+        85916,
+        3
+      ],
+      "family_mean_F4": [
+        -4,
+        3
+      ],
+      "family_members": 162,
+      "family_second_moment_F4": [
+        257764,
+        9
+      ],
+      "joint_law_atoms": 32,
+      "observed_total_F4": -216,
+      "q": 3,
+      "sign_counts": {
+        "negative": 75,
+        "positive": 87,
+        "zero": 0
+      },
+      "status": "SOURCE_LOCKED_HELD_OUT_DIAGNOSTIC_NOT_THEOREM_INPUT",
+      "theorem_total_F4": -216,
+      "theta_(8,2)": 12,
+      "zero_stratum": {
+        "coefficient_condition": "a_D=b_D=0",
+        "members": 12,
+        "per_member_F4": 306,
+        "ratio_to_full_signed_total": [
+          -17,
+          1
+        ],
+        "signed_total_F4": 3672
+      }
+    },
+    {
+      "family_centered_variance_F4": [
+        1672701534,
+        625
+      ],
+      "family_mean_F4": [
+        126,
+        25
+      ],
+      "family_members": 2500,
+      "family_second_moment_F4": [
+        334543482,
+        125
+      ],
+      "joint_law_atoms": 81,
+      "observed_total_F4": 12600,
+      "q": 5,
+      "sign_counts": {
+        "negative": 1300,
+        "positive": 1200,
+        "zero": 0
+      },
+      "status": "SOURCE_LOCKED_HELD_OUT_DIAGNOSTIC_NOT_THEOREM_INPUT",
+      "theorem_total_F4": 12600,
+      "theta_(8,2)": -210,
+      "zero_stratum": {
+        "coefficient_condition": "a_D=b_D=0",
+        "members": 50,
+        "per_member_F4": 2050,
+        "ratio_to_full_signed_total": [
+          1025,
+          126
+        ],
+        "signed_total_F4": 102500
+      }
+    },
+    {
+      "family_centered_variance_F4": [
+        4844515276200,
+        117649
+      ],
+      "family_mean_F4": [
+        -3048,
+        343
+      ],
+      "family_members": 14406,
+      "family_second_moment_F4": [
+        14123978328,
+        343
+      ],
+      "joint_law_atoms": 138,
+      "observed_total_F4": -128016,
+      "q": 7,
+      "sign_counts": {
+        "negative": 7434,
+        "positive": 6972,
+        "zero": 0
+      },
+      "status": "SOURCE_LOCKED_HELD_OUT_DIAGNOSTIC_NOT_THEOREM_INPUT",
+      "theorem_total_F4": -128016,
+      "theta_(8,2)": 1016,
+      "zero_stratum": {
+        "coefficient_condition": "a_D=b_D=0",
+        "members": 336,
+        "per_member_F4": 7546,
+        "ratio_to_full_signed_total": [
+          -7546,
+          381
+        ],
+        "signed_total_F4": 2535456
+      }
+    }
+  ],
+  "payload_sha256": "31869845cee65b639659484918fc5081764cfd216d1b8179cfefbf5d9df9ea21",
+  "prime_power_spectroscopy": {
+    "actual_tower_recurrence_updates": 21,
+    "formal_r0_convention": "Theta_(8,2)(1)=2; r>=1 are the prime-power field traces",
+    "good_prime_setup": "alpha_p+beta_p=a_p, alpha_p*beta_p=p^7, Theta_(8,2)(p^r)=alpha_p^r+beta_p^r",
+    "inverse_filter_effect": "the two nuisance equations kill the p and 1 amplitudes exactly, leaving -c8*(alpha_p^r+beta_p^r)",
+    "isolated_recurrence": "C_r=a_p*C_(r-1)-p^7*C_(r-2)",
+    "panels": [
+      {
+        "F4_marked_trace_r0_through_8": [
+          -6,
+          -36,
+          12690,
+          231012,
+          -24980886,
+          -804993876,
+          44973271170,
+          2300200860852,
+          -70754133718566
+        ],
+        "F4_quadratic_recurrence_residuals": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "a_p": 12,
+        "p": 3,
+        "raw_T_(8,0)_r0_through_8": [
+          -9,
+          -21,
+          4215,
+          76971,
+          -8327049,
+          -268331541,
+          14991089655,
+          766733618091,
+          -23584711246089
+        ],
+        "raw_recurrence_polynomial_low_to_high": [
+          6561,
+          -8784,
+          2238,
+          -16,
+          1
+        ],
+        "raw_recurrence_residuals": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "theta_powers_r0_through_8": [
+          2,
+          12,
+          -4230,
+          -77004,
+          8326962,
+          268331292,
+          -14991090390,
+          -766733620284,
+          23584711239522
+        ]
+      },
+      {
+        "F4_marked_trace_r0_through_8": [
+          -6,
+          630,
+          336450,
+          -119873250,
+          -1111773750,
+          9598570143750,
+          -1928842405968750,
+          -344831387227031250,
+          223105404283985156250
+        ],
+        "F4_quadratic_recurrence_residuals": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "a_p": -210,
+        "p": 5,
+        "raw_T_(8,0)_r0_through_8": [
+          -9,
+          199,
+          112119,
+          -39957881,
+          -370591881,
+          3199523378119,
+          -642947468671881,
+          -114943795742421881,
+          74368468094661328119
+        ],
+        "raw_recurrence_polynomial_low_to_high": [
+          390625,
+          -467700,
+          76870,
+          204,
+          1
+        ],
+        "raw_recurrence_residuals": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "theta_powers_r0_through_8": [
+          2,
+          -210,
+          -112150,
+          39957750,
+          370591250,
+          -3199523381250,
+          642947468656250,
+          114943795742343750,
+          -74368468094661718750
+        ]
+      },
+      {
+        "F4_marked_trace_r0_through_8": [
+          -6,
+          -3048,
+          1844490,
+          4384160904,
+          2935290650394,
+          -628289722562568,
+          -3055680426220995030,
+          -2587147710052186012056,
+          -112057848161704078257606
+        ],
+        "F4_quadratic_recurrence_residuals": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "a_p": 1016,
+        "p": 7,
+        "raw_T_(8,0)_r0_through_8": [
+          -9,
+          -1029,
+          614775,
+          1461386619,
+          978430214391,
+          -209429907537669,
+          -1018560142073782665,
+          -862382570017396160901,
+          -37352616053901365184009
+        ],
+        "raw_recurrence_polynomial_low_to_high": [
+          5764801,
+          -6595456,
+          831678,
+          -1024,
+          1
+        ],
+        "raw_recurrence_residuals": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "theta_powers_r0_through_8": [
+          2,
+          1016,
+          -614830,
+          -1461386968,
+          -978430216798,
+          209429907520856,
+          1018560142073665010,
+          862382570017395337352,
+          37352616053901359419202
+        ]
+      }
+    ],
+    "raw_annihilator": "(X^2-a_p*X+p^7)*(X-p)*(X-1)",
+    "raw_trace_formula": "T_(8,0)(p^r)=-alpha_p^r-beta_p^r-p^r-6*1^r",
+    "raw_trace_roots": [
+      "alpha_p",
+      "beta_p",
+      "p",
+      "1"
+    ]
+  },
+  "resource_contract": {
+    "actual_lattice_regression_points": 625,
+    "actual_recurrence_updates": 2029,
+    "actual_source_atoms": 251,
+    "held_out_joint_laws_iterated_only_after_trace_theorem_validation": true,
+    "held_out_source_parsed_only_after_theorem_certificates": true,
+    "maximum_lattice_regression_points": 1024,
+    "maximum_recurrence_updates": 4096,
+    "maximum_source_atoms": 512,
+    "maximum_tower_exponent": 8,
+    "maximum_wall_seconds": 4.0,
+    "new_curves_enumerated": 0,
+    "new_finite_fields_enumerated": 0
+  },
+  "schema": "riemann.function_field.genus2_inverse_cusp_trace_filters.v1",
+  "scope": {
+    "arithmetic": "exact integer and Fraction arithmetic",
+    "coefficient_support": [
+      "r_D(2)",
+      "r_D(4)",
+      "r_D(6)",
+      "r_D(8)"
+    ],
+    "family": "monic squarefree quintics D in F_q[T]",
+    "numeric_approximations": 0,
+    "q": "every odd prime power"
+  },
+  "source_manifest": {
+    "balanced": {
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+      "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+    },
+    "native_wavelet": {
+      "path": "research/l-families/atlas/function_field/native_qadic_reciprocal_wavelet_spectroscopy.json",
+      "payload_sha256": "4e366316c6d55488b41e0104f6bee6c947220d7989ea7aa1381b5d72a099b882",
+      "sha256_lf_normalized": "aef506afa6b9b29f10528b634f45c7eab96abc36c6cd2de886262e834fcb2d43"
+    },
+    "sym6": {
+      "path": "research/l-families/atlas/function_field/genus2_sym6_marked_trace_average.json",
+      "payload_sha256": "7bf31859372bb2a292f8321794f9b05859d2def82b1dd59ad83ab992088a5e86",
+      "sha256_lf_normalized": "4e6156e8ca4f8b652e02961d3aa5f3ea63c9b42243908d1ecab8b94c08d253a6"
+    },
+    "sym8": {
+      "path": "research/l-families/atlas/function_field/genus2_sym8_marked_trace_average.json",
+      "payload_sha256": "423b8c37b69fb56b459beb7ebd9e6b94d12cf658f5819f7ac481e83560f5d0ae",
+      "sha256_lf_normalized": "a92700980ac7fef22f7a36db7b3d4d8bb7aa8d763904677e64bfca3182be0233"
+    }
+  },
+  "source_trace_inputs": {
+    "T_(2,0)(q)": "q-1",
+    "T_(4,0)(q)": "-3",
+    "T_(6,0)(q)": "-4",
+    "T_(8,0)(q)": "-Theta_(8,2)(q)-q-6"
+  },
+  "status": "PROVED_EXACT_COROLLARY_OF_SOURCE_LOCKED_MARKED_TRACE_THEOREMS"
+}
