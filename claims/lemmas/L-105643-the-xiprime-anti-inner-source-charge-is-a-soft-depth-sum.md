@@ -140,7 +140,7 @@ with multiplicity. Layer cake gives
 {2h\over H^2}
 \int_H^{\beta_1}N_1(T;t)\,dt.
 }
-\tag{L-105643.6]
+\tag{L-105643.6}
 
 The upper limit may be replaced by infinity; the integrand vanishes above
 `beta_1`.
@@ -164,7 +164,7 @@ Since `h<=H` and `N_1(T;t)<=N_1(T;H)`, (L-105643.6) gives
 {4\delta\over\beta_1}
 N_1(T;H).
 }
-\tag{L-105643.7]
+\tag{L-105643.7}
 
 Thus a collar of relative thickness `delta/beta_1` consumes at most that same
 order of the canonical current source dimension.
