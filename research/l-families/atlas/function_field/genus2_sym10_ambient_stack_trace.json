@@ -1,0 +1,824 @@
+{
+  "BFG_compatibility": {
+    "source_ledger_status": "CONJECTURAL_AMBIENT_PREDICTION_PLUS_EXACT_BOUNDARY; NOT_A_SOURCE_PROOF_OF_THE_TARGET",
+    "statement": "The level-two cohomological framework is compatible with the trace pattern, but its nonregular/endoscopic formulas are not inputs to the exact open-plus-boundary proof.",
+    "status": "CONJECTURAL_COMPATIBILITY_ONLY_UNUSED_BY_EXACT_PROOF"
+  },
+  "exact_proof": {
+    "ambient_expression": [
+      {
+        "Delta_power": 0,
+        "L_power": 0,
+        "coefficient": 2,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 0
+      },
+      {
+        "Delta_power": 0,
+        "L_power": 1,
+        "coefficient": -4,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 0
+      },
+      {
+        "Delta_power": 1,
+        "L_power": 1,
+        "coefficient": -2,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 0
+      }
+    ],
+    "ambient_trace_formula": "2-4*q-2*q*Theta_Delta(q)",
+    "branching_certificate": {
+      "direct_composition_monomials": 286,
+      "distinct_laurent_weights": 121,
+      "identity": "Sym^10(W_1 direct_sum W_1)=direct_sum_(i=0)^10 W_i external_tensor W_(10-i)",
+      "summand_dimensions": [
+        11,
+        20,
+        27,
+        32,
+        35,
+        36,
+        35,
+        32,
+        27,
+        20,
+        11
+      ],
+      "total_dimension": 286,
+      "verification_ring": "Z[x^+-1,y^+-1]"
+    },
+    "channel_cancellation": {
+      "Tate": "(-q-7)+(-3q+9)=2-4q",
+      "Theta_(10,2)": "-1+1=0",
+      "Theta_(8,2)": "-1+1=0",
+      "Theta_Delta": "(q-1)+(1-3q)=-2q"
+    },
+    "controls": [
+      {
+        "Theta_(10,2)": -156,
+        "Theta_(8,2)": 12,
+        "Theta_Delta": 252,
+        "ambient_trace": -1522,
+        "boundary_trace": -2160,
+        "open_trace": 638,
+        "q": 3,
+        "status": "SOURCE_LOCKED_PRIME_CONTROL"
+      },
+      {
+        "Theta_(10,2)": 870,
+        "Theta_(8,2)": -210,
+        "Theta_Delta": 4830,
+        "ambient_trace": -48318,
+        "boundary_trace": -66966,
+        "open_trace": 18648,
+        "q": 5,
+        "status": "SOURCE_LOCKED_PRIME_CONTROL"
+      },
+      {
+        "Theta_(10,2)": -952,
+        "Theta_(8,2)": 1016,
+        "Theta_Delta": -16744,
+        "ambient_trace": 234390,
+        "boundary_trace": 334932,
+        "open_trace": -100542,
+        "q": 7,
+        "status": "SOURCE_LOCKED_PRIME_CONTROL"
+      },
+      {
+        "Theta_(10,2)": -15030,
+        "Theta_(8,2)": -4230,
+        "Theta_Delta": -290790,
+        "ambient_trace": 5234186,
+        "boundary_trace": 7541262,
+        "open_trace": -2307076,
+        "q": 9,
+        "status": "THEOREM_CONSEQUENCE; USES FROBENIUS-ROOT POWER SUM"
+      }
+    ],
+    "curve_open_expression": [
+      {
+        "Delta_power": 0,
+        "L_power": 0,
+        "coefficient": -7,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 0
+      },
+      {
+        "Delta_power": 0,
+        "L_power": 0,
+        "coefficient": -1,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 1
+      },
+      {
+        "Delta_power": 0,
+        "L_power": 0,
+        "coefficient": -1,
+        "f_(8,2)_power": 1,
+        "g_(10,2)_power": 0
+      },
+      {
+        "Delta_power": 1,
+        "L_power": 0,
+        "coefficient": -1,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 0
+      },
+      {
+        "Delta_power": 0,
+        "L_power": 1,
+        "coefficient": -1,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 0
+      },
+      {
+        "Delta_power": 1,
+        "L_power": 1,
+        "coefficient": 1,
+        "f_(8,2)_power": 0,
+        "g_(10,2)_power": 0
+      }
+    ],
+    "curve_open_formula": "(L-1)*Delta-f_(8,2)-g_(10,2)-L-7",
+    "decomposable_boundary": {
+      "boundary_expression": [
+        {
+          "Delta_power": 0,
+          "L_power": 0,
+          "coefficient": 9,
+          "f_(8,2)_power": 0,
+          "g_(10,2)_power": 0
+        },
+        {
+          "Delta_power": 0,
+          "L_power": 0,
+          "coefficient": 1,
+          "f_(8,2)_power": 0,
+          "g_(10,2)_power": 1
+        },
+        {
+          "Delta_power": 0,
+          "L_power": 0,
+          "coefficient": 1,
+          "f_(8,2)_power": 1,
+          "g_(10,2)_power": 0
+        },
+        {
+          "Delta_power": 1,
+          "L_power": 0,
+          "coefficient": 1,
+          "f_(8,2)_power": 0,
+          "g_(10,2)_power": 0
+        },
+        {
+          "Delta_power": 0,
+          "L_power": 1,
+          "coefficient": -3,
+          "f_(8,2)_power": 0,
+          "g_(10,2)_power": 0
+        },
+        {
+          "Delta_power": 1,
+          "L_power": 1,
+          "coefficient": -3,
+          "f_(8,2)_power": 0,
+          "g_(10,2)_power": 0
+        }
+      ],
+      "boundary_formula": "(1-3*L)*Delta+f_(8,2)+g_(10,2)-3*L+9",
+      "geometry": "A_(1,1)(w^1)=Y_0(2) times A_1; the marked odd theta characteristic distinguishes the factors, so there is no S_2 quotient",
+      "rows": [
+        {
+          "A_1_W_(10-i)": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 1,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "Y_0(2)_W_i": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 0,
+              "L_power": 1,
+              "coefficient": 1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "contribution": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": 1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 1,
+              "L_power": 0,
+              "coefficient": 1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 0,
+              "L_power": 1,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 1,
+              "L_power": 1,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "i": 0,
+          "vanishes_by_unmarked_central_involution": false
+        },
+        {
+          "A_1_W_(10-i)": [],
+          "Y_0(2)_W_i": [],
+          "contribution": [],
+          "i": 1,
+          "vanishes_by_unmarked_central_involution": true
+        },
+        {
+          "A_1_W_(10-i)": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "Y_0(2)_W_i": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "contribution": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": 2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "i": 2,
+          "vanishes_by_unmarked_central_involution": false
+        },
+        {
+          "A_1_W_(10-i)": [],
+          "Y_0(2)_W_i": [],
+          "contribution": [],
+          "i": 3,
+          "vanishes_by_unmarked_central_involution": true
+        },
+        {
+          "A_1_W_(10-i)": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "Y_0(2)_W_i": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "contribution": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": 2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "i": 4,
+          "vanishes_by_unmarked_central_involution": false
+        },
+        {
+          "A_1_W_(10-i)": [],
+          "Y_0(2)_W_i": [],
+          "contribution": [],
+          "i": 5,
+          "vanishes_by_unmarked_central_involution": true
+        },
+        {
+          "A_1_W_(10-i)": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "Y_0(2)_W_i": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 1,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "contribution": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": 2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": 1,
+              "f_(8,2)_power": 1,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "i": 6,
+          "vanishes_by_unmarked_central_involution": false
+        },
+        {
+          "A_1_W_(10-i)": [],
+          "Y_0(2)_W_i": [],
+          "contribution": [],
+          "i": 7,
+          "vanishes_by_unmarked_central_involution": true
+        },
+        {
+          "A_1_W_(10-i)": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "Y_0(2)_W_i": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 1
+            }
+          ],
+          "contribution": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": 2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": 1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 1
+            }
+          ],
+          "i": 8,
+          "vanishes_by_unmarked_central_involution": false
+        },
+        {
+          "A_1_W_(10-i)": [],
+          "Y_0(2)_W_i": [],
+          "contribution": [],
+          "i": 9,
+          "vanishes_by_unmarked_central_involution": true
+        },
+        {
+          "A_1_W_(10-i)": [
+            {
+              "Delta_power": 0,
+              "L_power": 1,
+              "coefficient": 1,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "Y_0(2)_W_i": [
+            {
+              "Delta_power": 0,
+              "L_power": 0,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 1,
+              "L_power": 0,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "contribution": [
+            {
+              "Delta_power": 0,
+              "L_power": 1,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            },
+            {
+              "Delta_power": 1,
+              "L_power": 1,
+              "coefficient": -2,
+              "f_(8,2)_power": 0,
+              "g_(10,2)_power": 0
+            }
+          ],
+          "i": 10,
+          "vanishes_by_unmarked_central_involution": false
+        }
+      ],
+      "standard_eichler_shimura_inputs": {
+        "A_1_W_0": "L",
+        "A_1_W_r_even_positive": "-S[r+2]-1",
+        "Y_0(2)_W_0": "L-1",
+        "Y_0(2)_W_r_even_positive": "-S[Gamma_0(2),r+2]-2",
+        "derivation": "X(1) and X_0(2) have genus zero and respectively one and two rational cusps; the cuspidal H^1 term is Eichler-Shimura",
+        "odd_degree": "zero because [-1] acts nontrivially on the unmarked A_1 fibre"
+      }
+    },
+    "modular_dimension_certificate": {
+      "identifications": {
+        "weight_10_new": "g_(10,2)=f_(8,2)*(2*E_2(2z)-E_2(z))",
+        "weight_12_new_dimension": 0,
+        "weight_12_old": "Delta(z) direct_sum Delta(2z)",
+        "weight_8_new": "f_(8,2)=eta(z)^8*eta(2z)^8"
+      },
+      "level_1_ring": "M_*(SL_2(Z))=C[E_4,E_6]",
+      "level_2_dimension_rule": "dim M_k(Gamma_0(2))=floor(k/4)+1 for even k",
+      "oldspace_rule_at_level_2": "two degeneracy images f(z),f(2z) for each level-one cusp form",
+      "rows": [
+        {
+          "dim_S_Gamma0_2": 0,
+          "dim_S_level_1": 0,
+          "dim_new_Gamma0_2": 0,
+          "dim_old_Gamma0_2": 0,
+          "weight": 4
+        },
+        {
+          "dim_S_Gamma0_2": 0,
+          "dim_S_level_1": 0,
+          "dim_new_Gamma0_2": 0,
+          "dim_old_Gamma0_2": 0,
+          "weight": 6
+        },
+        {
+          "dim_S_Gamma0_2": 1,
+          "dim_S_level_1": 0,
+          "dim_new_Gamma0_2": 1,
+          "dim_old_Gamma0_2": 0,
+          "weight": 8
+        },
+        {
+          "dim_S_Gamma0_2": 1,
+          "dim_S_level_1": 0,
+          "dim_new_Gamma0_2": 1,
+          "dim_old_Gamma0_2": 0,
+          "weight": 10
+        },
+        {
+          "dim_S_Gamma0_2": 2,
+          "dim_S_level_1": 1,
+          "dim_new_Gamma0_2": 0,
+          "dim_old_Gamma0_2": 2,
+          "weight": 12
+        }
+      ],
+      "two_rational_cusps": [
+        "0",
+        "infinity"
+      ]
+    },
+    "modular_q_series_certificate": {
+      "coefficients_0_through_9": {
+        "Delta": [
+          0,
+          1,
+          -24,
+          252,
+          -1472,
+          4830,
+          -6048,
+          -16744,
+          84480,
+          -113643
+        ],
+        "f_(8,2)": [
+          0,
+          1,
+          -8,
+          12,
+          64,
+          -210,
+          -96,
+          1016,
+          -512,
+          -2043
+        ],
+        "g_(10,2)": [
+          0,
+          1,
+          16,
+          -156,
+          256,
+          870,
+          -2496,
+          -952,
+          4096,
+          4653
+        ]
+      },
+      "construction": {
+        "Delta": "q*product_(n>=1)(1-q^n)^24",
+        "f_(8,2)": "q*product_(n>=1)(1-q^n)^8*(1-q^(2n))^8",
+        "g_(10,2)": "f_(8,2)*(2*E_2(2z)-E_2(z))"
+      },
+      "degree_cap": 9
+    }
+  },
+  "firewalls": [
+    "The formula is an equality of alternating compactly-supported Frobenius traces, not an isomorphism of motives or individual cohomology groups.",
+    "The formal expression 2-4L-2L*S[12] records the proved trace pattern; it does not exclude canceling cohomological pieces.",
+    "BFG compatibility is conjectural and unused by the proof.",
+    "The result gives no memberwise sign, RH/GRH criterion, zero-free region, principal-member amplifier, motive, or Euler product.",
+    "No external novelty claim is made."
+  ],
+  "payload_sha256": "867a49d1daa5dc41012119b6e7154e21d3b4281e9da24ce32014b7f6c371a1b7",
+  "primary_source_ledger": [
+    {
+      "audited_document_sha256": "7daefa84d961d59079c67b7efc3e1086b5e4294672d295694e6eff18aa733000",
+      "replay_boundary": "metadata is inherited from a source-locked manual audit; the local producer performs no network access",
+      "role_in_this_packet": "STANDARD_STACK_TRACE_INPUT",
+      "title": "The Lefschetz trace formula for algebraic stacks",
+      "url": "https://personal.math.ubc.ca/~behrend/ladic.pdf"
+    },
+    {
+      "audited_document_sha256": "b3a28690b3ba4aff316ac52ea7003cca8da757bfa309b75a9aba9557a134def6",
+      "replay_boundary": "metadata is inherited from a source-locked manual audit; the local producer performs no network access",
+      "role_in_this_packet": "STANDARD_GOOD_PRIME_FROBENIUS_INPUT",
+      "title": "Motives for modular forms",
+      "url": "https://www.dpmms.cam.ac.uk/~ajs1005/preprints/mf.pdf"
+    },
+    {
+      "audited_document_sha256": null,
+      "replay_boundary": "metadata is inherited from a source-locked manual audit; the local producer performs no network access",
+      "role_in_this_packet": "LEVEL_TWO_DIMENSION_AND_ETA_PRODUCT_INPUT",
+      "title": "Explicit families of congruences for the overpartition function",
+      "url": "https://doi.org/10.1007/s11139-024-00953-z"
+    },
+    {
+      "audited_document_sha256": "986f0f98303db367099ffa676fff0cbb19857e9ebd830082a4213c04cb053021",
+      "replay_boundary": "metadata is inherited from a source-locked manual audit; the local producer performs no network access",
+      "role_in_this_packet": "LEVEL_ONE_ELLIPTIC_EICHLER_SHIMURA_INPUT_ONLY",
+      "title": "Sur la cohomologie des systemes locaux sur les espaces des modules des courbes de genre 2 et des surfaces abeliennes",
+      "url": "https://arxiv.org/abs/math/0305094"
+    },
+    {
+      "audited_document_sha256": "f6294c69e2cafe16b4b0dc1ba1692a46813ba6e467e546aa548442d1a4f2a19e",
+      "replay_boundary": "metadata is inherited from a source-locked manual audit; the local producer performs no network access",
+      "role_in_this_packet": "MODULI_DEFINITIONS_ONLY; CONJECTURAL_FORMULAS_UNUSED",
+      "title": "Siegel modular forms of genus 2 and level 2: cohomological computations and conjectures",
+      "url": "https://arxiv.org/abs/0803.0917"
+    }
+  ],
+  "proof_dependency_graph": {
+    "explicit_non_input": "BFG nonregular, Eisenstein, endoscopic, and ambient formulas",
+    "proof_inputs": [
+      "source-locked direct Sym10 curve-open theorem at 42910253b",
+      "exact marked geometry A_(1,1)(w^1)=Y_0(2) times A_1",
+      "standard elliptic Eichler-Shimura compact-support identities"
+    ],
+    "rebuilt_exactly_here": [
+      "Sym^10 branching and dimension 286",
+      "level-one and level-two cusp-space dimensions and old/new split",
+      "six even decomposable-boundary rows",
+      "modular q-expansions and prime-power trace recurrence",
+      "open-plus-boundary channel cancellation"
+    ]
+  },
+  "provenance": {
+    "hash_convention": "SHA-256 after CRLF/CR normalization to LF",
+    "packet_lf_sha256": {
+      "note": "090cacf48400a1e5292151944d99c9bbf01f122e0dd246dc3d34b118223580eb",
+      "producer": "1c29f130aed6b105a8fd44bf52e192452840ebc492420232377e1fa83640c1b8",
+      "test": "238ea4f3969b1108d888b57fd6d6e5ac2bde8f0b1761bcf97edab9736d4755e3"
+    },
+    "resource_contract": {
+      "actual_exact_operations": 1116,
+      "actual_source_bytes": 203618,
+      "actual_source_files": 12,
+      "arithmetic": "integers only; no floats in mathematical algebra",
+      "maximum_exact_operations": 20000,
+      "maximum_packet_file_bytes": 65536,
+      "maximum_source_bytes_each": 65536,
+      "maximum_source_bytes_total": 262144,
+      "maximum_source_files": 12,
+      "maximum_wall_seconds": 5.0,
+      "operation_counts": {
+        "formal_ring_add": 58,
+        "formal_ring_multiply": 12,
+        "formal_ring_scale": 5,
+        "formal_trace_evaluation": 60,
+        "modular_dimension_rows": 20,
+        "q_series_multiply": 389,
+        "sym10_branch_monomials": 286,
+        "sym10_direct_monomials": 286
+      }
+    }
+  },
+  "schema": "riemann.function_field.genus2_sym10_ambient_stack_trace.v1",
+  "scope": {
+    "abelian_surfaces_enumerated": 0,
+    "base_fields": "every finite field F_q of odd characteristic",
+    "cohomology_groups_enumerated": 0,
+    "curves_enumerated": 0,
+    "finite_fields_enumerated": 0,
+    "meaning": "alternating compactly-supported geometric-Frobenius trace",
+    "random_samples": 0,
+    "target": "A_2(w^1) with local system V_(10,0)=Sym^10(V)"
+  },
+  "source_manifest": [
+    {
+      "bytes": 45250,
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "git_blob": "bcf8e4786609d196f88b2ce5fe8cd824b985f5fa",
+      "id": "sym10_producer",
+      "lf_sha256": "f80efb55d16ff654b528d09d6f5c935c1640e1606d1aaa45f165280a05185e10",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_marked_trace_average.py",
+      "role": "source-locked direct all-q proof producer"
+    },
+    {
+      "bytes": 24460,
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "git_blob": "561caa7dc504dfb158908aef9229e91af0707a1e",
+      "id": "sym10_json",
+      "lf_sha256": "4f91ac00193805207088e9fc6aea2b464645267b17dc54f71165a1ae3b9d45ce",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_marked_trace_average.json",
+      "payload_sha256": "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77",
+      "role": "source-locked direct all-q curve-open theorem",
+      "schema": "riemann.genus2_sym10_marked_trace_average.v1"
+    },
+    {
+      "bytes": 11045,
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "git_blob": "96dffb56bb72ad4bf67094f2ce1f4d52875baab4",
+      "id": "sym10_note",
+      "lf_sha256": "f88200422627696710493b91fe0d8f22d9793f8f19d4d56fb47169756a8c39e7",
+      "path": "research/l-families/atlas/function_field/GENUS2_SYM10_MARKED_TRACE_AVERAGE.md",
+      "role": "source theorem statement and proof narrative"
+    },
+    {
+      "bytes": 10887,
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "git_blob": "c11c83568b2eb47af76d4463eae9b1e26d9f4804",
+      "id": "sym10_test",
+      "lf_sha256": "31cea2f7a8a817b99c2a710b9355599ad5b3129e5803dd226deb283dfde52752",
+      "path": "tests/test_genus2_sym10_marked_trace_average.py",
+      "role": "source theorem focused replay tests"
+    },
+    {
+      "bytes": 31973,
+      "commit": "e0da0f790f96f6dc5c03b363a9a01b91621ee113",
+      "git_blob": "7f1f838bf0095eec15f771e377aa7739421096d1",
+      "id": "chi04_producer",
+      "lf_sha256": "fd365f153ba7f2d9fef8c6f2f45dd5cd7c83c552f2934804c1843e0f4cbaed12",
+      "path": "research/l-families/atlas/function_field/genus2_chi04_stack_trace_reconciliation.py",
+      "role": "exact decomposable-geometry reconciliation producer"
+    },
+    {
+      "bytes": 14484,
+      "commit": "e0da0f790f96f6dc5c03b363a9a01b91621ee113",
+      "git_blob": "9160b9a95efec4f0ed7a895b507d13d97158d714",
+      "id": "chi04_json",
+      "lf_sha256": "7338bb846308b685fc0124ba3f8da80e5fe368360aa79efff97754ad3c200c2b",
+      "path": "research/l-families/atlas/function_field/genus2_chi04_stack_trace_reconciliation.json",
+      "payload_sha256": "b87733cdf4f5532fcc0a74313d79f4d5ee3f056b55c9bab953ef40c3e01a5762",
+      "role": "source-locked exact geometry and source ledger",
+      "schema": "riemann.function_field.genus2_chi04_stack_trace_reconciliation.v1"
+    },
+    {
+      "bytes": 11605,
+      "commit": "e0da0f790f96f6dc5c03b363a9a01b91621ee113",
+      "git_blob": "fdb9349bab8ceed59362f4e983831c5f58f5ad6d",
+      "id": "chi04_note",
+      "lf_sha256": "89911841fda964987d44b9d3cc6189fa182b8f6946785a29b1217046b2b9012a",
+      "path": "research/l-families/atlas/GENUS2_CHI04_STACK_TRACE_RECONCILIATION.md",
+      "role": "marked-boundary geometry and literature audit"
+    },
+    {
+      "bytes": 4402,
+      "commit": "e0da0f790f96f6dc5c03b363a9a01b91621ee113",
+      "git_blob": "a554102d6b5ac6b89b3c573718deb89c2dddb2b0",
+      "id": "chi04_test",
+      "lf_sha256": "739a221be32f801d014d0c7183686d9db5e34d0cbf8cb8b0fbbcaf32210e6b4f",
+      "path": "tests/test_genus2_chi04_stack_trace_reconciliation.py",
+      "role": "marked-boundary reconciliation tests"
+    },
+    {
+      "bytes": 21747,
+      "commit": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
+      "git_blob": "db364b5300a09c81065ff96c874bf3d4adca3b46",
+      "id": "adapter_producer",
+      "lf_sha256": "29c8084dafb15acdc4d1eb55ed21ac9ad4a8abfb7f1e0d208d93df2671142cc9",
+      "path": "research/l-families/atlas/function_field/genus2_marked_weierstrass_stack_adapter.py",
+      "role": "exact marked-Weierstrass stack adapter producer"
+    },
+    {
+      "bytes": 8749,
+      "commit": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
+      "git_blob": "79ad36346734bb41f21b570f380ad9d1af86f9ee",
+      "id": "adapter_json",
+      "lf_sha256": "fe8f23f6379a70ea150a8e4f1b87054553536fde3bd23e6c1d21e252baf3b26c",
+      "path": "research/l-families/atlas/function_field/genus2_marked_weierstrass_stack_adapter.json",
+      "payload_sha256": "7b091cc158c7ff378774dcbaef5802c469c3d377384034bced1caf4fe92b3601",
+      "role": "exact marked stack measure and trace meaning",
+      "schema": "riemann.function_field.genus2_marked_weierstrass_stack_adapter.v1"
+    },
+    {
+      "bytes": 10374,
+      "commit": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
+      "git_blob": "147c4e57b060e33115761b9685bc0b2ef8b1f5bc",
+      "id": "adapter_note",
+      "lf_sha256": "f6f3c5ff0d112bd3204b1843a6f13b286d642a9c6ee19329a63eb39e06165e1c",
+      "path": "research/l-families/atlas/function_field/GENUS2_MARKED_WEIERSTRASS_STACK_ADAPTER.md",
+      "role": "marked stack proof narrative"
+    },
+    {
+      "bytes": 8642,
+      "commit": "c8eff406f49daf9f09c0bb3e63e21659275d224e",
+      "git_blob": "45ac7cad100840202c53a8e15d39a3cd45f10d7f",
+      "id": "adapter_test",
+      "lf_sha256": "fd5be2c3d7dfc3cc427e6caa6a6a0c8db09a8da237e45c6b17cacc04267292d6",
+      "path": "tests/test_genus2_marked_weierstrass_stack_adapter.py",
+      "role": "marked stack adapter tests"
+    }
+  ],
+  "status": "PROVED_EXACT_AMBIENT_TRACE_ALL_ODD_PRIME_POWERS",
+  "theorem": {
+    "curve_open_input": "T_(10,0)(q)=(q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7",
+    "formula": "Tr(F_q,e_c(A_2(w^1),V_(10,0)))=2-4*q-2*q*Theta_Delta(q)",
+    "quantifier": "every odd prime power q",
+    "stack_trace_meaning": "sum over F_q-isomorphism classes of marked curves of the fibre Frobenius trace divided by |Aut_q|; by the stack trace formula, this is the alternating compactly-supported cohomological trace"
+  }
+}
