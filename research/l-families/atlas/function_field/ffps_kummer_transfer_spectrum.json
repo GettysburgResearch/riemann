@@ -1,0 +1,3329 @@
+{
+  "hybrid_leverage_corollary": {
+    "coherent_tensor_primes_3_5": [
+      1,
+      3
+    ],
+    "consequence": "core variation alone neither improves the local principal contraction nor repairs positive conductor-fibre assembly",
+    "local_squared_leverage_after_any_nonempty_core_transfer": "(p-1)/(p+1)",
+    "positive_block_primes_3_5": [
+      7,
+      6
+    ],
+    "reason": "the constant mode survives with multiplier |C| and the principal observation kills every nonconstant mode"
+  },
+  "operator_theorem": {
+    "even_mode_bijection": "root characters modulo the quadratic character map bijectively under squaring to even characters; t maps to exponent 2t",
+    "folded_counts": "beta_j=1_C(g^j)+1_C(-g^j), 0<=j<(p-1)/2",
+    "fourier_multiplier": "lambda_t=sum_j beta_j*zeta_m^(-t*j)=sum_(c in C) psi_t(c)^(-2)",
+    "full_incidence_operator": "K_C F(x)=sum_(c in C) F(x*c^-2,c) from Omega*C to Omega",
+    "full_incidence_spectrum": "K_C*K_C^*=|C|I; rank m and kernel dimension m(|C|-1) for nonempty C",
+    "interpretation": "core variation can create nonconstant rank but cannot improve the top local norm; complete sign-pair occupancy collapses to rank one",
+    "kernel": "span of exactly those owner Fourier modes t with B_C(zeta_m^-t)=0",
+    "nonconstant_spectral_mass": "m*sum_j(beta_j^2)-|C|^2; it is zero exactly when beta is constant",
+    "operator_norm_for_subsets": "|C|, always attained on the constant mode; other modes may tie",
+    "rank": "m-degree(gcd(B_C(X),X^m-1))",
+    "shared_owner_operator": "T_C f(x)=sum_(c in C) f(x*c^-2)=K_C D_C f on Omega=a*(F_p^*)^2"
+  },
+  "owner_incompleteness_theorem": {
+    "density_subtracted_defect": "||T_C(M_A-|A|/m)||_HS^2=(sum_j beta_j^2)*|A|*(m-|A|)/m",
+    "fourier_matrix": "<e_t,T_C M_A e_s>=lambda_t*ahat_A(s-t)/m",
+    "meaning": "a complete owner coset is exactly Fourier diagonal; an incomplete owner set mixes modes through, and only through, its nontrivial multiplicative Fourier coefficients"
+  },
+  "prime_field_controls": [
+    {
+      "owner_incompleteness_control": {
+        "declared_cores": [
+          1,
+          2
+        ],
+        "defect_formula": "||T_C(M_A-|A|/m)||_HS^2=(sum_j beta_j^2)*|A|*(m-|A|)/m",
+        "density_subtracted_defect_hilbert_schmidt_squared": [
+          0,
+          1
+        ],
+        "mode_mixing_formula": "<e_t,T_C M_A e_s>=lambda_t*ahat_A(s-t)/m; the density-subtracted defect deletes s=t and retains exactly the nonzero owner Fourier frequencies",
+        "operator_norm_upper_bound": 2,
+        "owner_coset_representative": 1,
+        "owner_count": 0,
+        "owner_density": [
+          0,
+          1
+        ],
+        "owner_fourier_coefficients": [
+          {
+            "evaluate_at": {
+              "exponent": 0,
+              "root": "zeta_1"
+            },
+            "frequency": 0,
+            "integer_coefficients": [
+              0
+            ],
+            "is_zero": true
+          }
+        ],
+        "owner_fourier_parseval": {
+          "all_mode_squared_mass": 0,
+          "constant_mode_squared": 0,
+          "nonconstant_mode_squared_mass": 0
+        },
+        "owner_mask_in_coset_order": [
+          0
+        ],
+        "prime": 3
+      },
+      "prime": 3,
+      "spectra": {
+        "complete_units": {
+          "constant_mode_multiplier": 2,
+          "declared_cores": [
+            1,
+            2
+          ],
+          "dimension": 1,
+          "folded_polynomial_coefficients": [
+            2
+          ],
+          "folded_sign_pair_counts": [
+            2
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_coefficients": [
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                1
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  4
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 1,
+            "domain_dimension": 2,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 1,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 1,
+                "value": 2
+              }
+            ],
+            "rank": 1,
+            "row_gram": [
+              [
+                2
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 2,
+          "owner_coset": [
+            1
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 1,
+            "constant_mode_squared": 4,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 4,
+            "sum_squared_singular_values": 4
+          },
+          "prime": 3,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              2
+            ]
+          ]
+        },
+        "sign_transversal": {
+          "constant_mode_multiplier": 1,
+          "declared_cores": [
+            1
+          ],
+          "dimension": 1,
+          "folded_polynomial_coefficients": [
+            1
+          ],
+          "folded_sign_pair_counts": [
+            1
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_coefficients": [
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                1
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 1,
+            "domain_dimension": 1,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 0,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 1,
+                "value": 1
+              }
+            ],
+            "rank": 1,
+            "row_gram": [
+              [
+                1
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 1,
+          "owner_coset": [
+            1
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 1,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 1,
+            "sum_squared_singular_values": 1
+          },
+          "prime": 3,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              1
+            ]
+          ]
+        },
+        "singleton": {
+          "constant_mode_multiplier": 1,
+          "declared_cores": [
+            1
+          ],
+          "dimension": 1,
+          "folded_polynomial_coefficients": [
+            1
+          ],
+          "folded_sign_pair_counts": [
+            1
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_coefficients": [
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                1
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 1,
+            "domain_dimension": 1,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 0,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 1,
+                "value": 1
+              }
+            ],
+            "rank": 1,
+            "row_gram": [
+              [
+                1
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 1,
+          "owner_coset": [
+            1
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 1,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 1,
+            "sum_squared_singular_values": 1
+          },
+          "prime": 3,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              1
+            ]
+          ]
+        },
+        "two_core": {
+          "constant_mode_multiplier": 2,
+          "declared_cores": [
+            1,
+            2
+          ],
+          "dimension": 1,
+          "folded_polynomial_coefficients": [
+            2
+          ],
+          "folded_sign_pair_counts": [
+            2
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_coefficients": [
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                1
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_1"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  4
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 1,
+            "domain_dimension": 2,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 1,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 1,
+                "value": 2
+              }
+            ],
+            "rank": 1,
+            "row_gram": [
+              [
+                2
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 2,
+          "owner_coset": [
+            1
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 1,
+            "constant_mode_squared": 4,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 4,
+            "sum_squared_singular_values": 4
+          },
+          "prime": 3,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "owner_incompleteness_control": {
+        "declared_cores": [
+          1,
+          2
+        ],
+        "defect_formula": "||T_C(M_A-|A|/m)||_HS^2=(sum_j beta_j^2)*|A|*(m-|A|)/m",
+        "density_subtracted_defect_hilbert_schmidt_squared": [
+          1,
+          1
+        ],
+        "mode_mixing_formula": "<e_t,T_C M_A e_s>=lambda_t*ahat_A(s-t)/m; the density-subtracted defect deletes s=t and retains exactly the nonzero owner Fourier frequencies",
+        "operator_norm_upper_bound": 2,
+        "owner_coset_representative": 1,
+        "owner_count": 1,
+        "owner_density": [
+          1,
+          2
+        ],
+        "owner_fourier_coefficients": [
+          {
+            "evaluate_at": {
+              "exponent": 0,
+              "root": "zeta_2"
+            },
+            "frequency": 0,
+            "integer_coefficients": [
+              1,
+              0
+            ],
+            "is_zero": false
+          },
+          {
+            "evaluate_at": {
+              "exponent": 1,
+              "root": "zeta_2"
+            },
+            "frequency": 1,
+            "integer_coefficients": [
+              1,
+              0
+            ],
+            "is_zero": false
+          }
+        ],
+        "owner_fourier_parseval": {
+          "all_mode_squared_mass": 2,
+          "constant_mode_squared": 1,
+          "nonconstant_mode_squared_mass": 1
+        },
+        "owner_mask_in_coset_order": [
+          1,
+          0
+        ],
+        "prime": 5
+      },
+      "prime": 5,
+      "spectra": {
+        "complete_units": {
+          "constant_mode_multiplier": 4,
+          "declared_cores": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "dimension": 2,
+          "folded_polynomial_coefficients": [
+            2,
+            2
+          ],
+          "folded_sign_pair_counts": [
+            2,
+            2
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                2
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  8,
+                  8
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 2,
+              "is_kernel_mode": true,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  8,
+                  8
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 2,
+            "domain_dimension": 8,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 6,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 2,
+                "value": 4
+              }
+            ],
+            "rank": 2,
+            "row_gram": [
+              [
+                4,
+                0
+              ],
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1,
+            1
+          ],
+          "kernel_dimension": 1,
+          "kernel_modes": [
+            1
+          ],
+          "operator_norm": 4,
+          "owner_coset": [
+            1,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 2,
+            "constant_mode_squared": 16,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 8,
+            "sum_squared_singular_values": 16
+          },
+          "prime": 5,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        "sign_transversal": {
+          "constant_mode_multiplier": 2,
+          "declared_cores": [
+            1,
+            2
+          ],
+          "dimension": 2,
+          "folded_polynomial_coefficients": [
+            1,
+            1
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            1
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                2
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  2
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 2,
+              "is_kernel_mode": true,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  2
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 2,
+            "domain_dimension": 4,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 2,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 2,
+                "value": 2
+              }
+            ],
+            "rank": 2,
+            "row_gram": [
+              [
+                2,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1,
+            1
+          ],
+          "kernel_dimension": 1,
+          "kernel_modes": [
+            1
+          ],
+          "operator_norm": 2,
+          "owner_coset": [
+            1,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 4,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 2,
+            "sum_squared_singular_values": 4
+          },
+          "prime": 5,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "singleton": {
+          "constant_mode_multiplier": 1,
+          "declared_cores": [
+            1
+          ],
+          "dimension": 2,
+          "folded_polynomial_coefficients": [
+            1,
+            0
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            0
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  1,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                2
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 2,
+              "is_kernel_mode": false,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  1,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 2,
+            "domain_dimension": 2,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 0,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 2,
+                "value": 1
+              }
+            ],
+            "rank": 2,
+            "row_gram": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 1,
+          "owner_coset": [
+            1,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 1,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 1,
+            "sum_folded_counts_squared": 1,
+            "sum_squared_singular_values": 2
+          },
+          "prime": 5,
+          "primitive_root": 2,
+          "rank": 2,
+          "transfer_matrix": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "two_core": {
+          "constant_mode_multiplier": 2,
+          "declared_cores": [
+            1,
+            2
+          ],
+          "dimension": 2,
+          "folded_polynomial_coefficients": [
+            1,
+            1
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            1
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                2
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  2
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 2,
+              "is_kernel_mode": true,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_coefficients": [
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_2"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  2
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 2,
+            "domain_dimension": 4,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 2,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 2,
+                "value": 2
+              }
+            ],
+            "rank": 2,
+            "row_gram": [
+              [
+                2,
+                0
+              ],
+              [
+                0,
+                2
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1,
+            1
+          ],
+          "kernel_dimension": 1,
+          "kernel_modes": [
+            1
+          ],
+          "operator_norm": 2,
+          "owner_coset": [
+            1,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 4,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 2,
+            "sum_squared_singular_values": 4
+          },
+          "prime": 5,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "owner_incompleteness_control": {
+        "declared_cores": [
+          1,
+          3
+        ],
+        "defect_formula": "||T_C(M_A-|A|/m)||_HS^2=(sum_j beta_j^2)*|A|*(m-|A|)/m",
+        "density_subtracted_defect_hilbert_schmidt_squared": [
+          4,
+          3
+        ],
+        "mode_mixing_formula": "<e_t,T_C M_A e_s>=lambda_t*ahat_A(s-t)/m; the density-subtracted defect deletes s=t and retains exactly the nonzero owner Fourier frequencies",
+        "operator_norm_upper_bound": 2,
+        "owner_coset_representative": 1,
+        "owner_count": 2,
+        "owner_density": [
+          2,
+          3
+        ],
+        "owner_fourier_coefficients": [
+          {
+            "evaluate_at": {
+              "exponent": 0,
+              "root": "zeta_3"
+            },
+            "frequency": 0,
+            "integer_coefficients": [
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          },
+          {
+            "evaluate_at": {
+              "exponent": 1,
+              "root": "zeta_3"
+            },
+            "frequency": 1,
+            "integer_coefficients": [
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          },
+          {
+            "evaluate_at": {
+              "exponent": 2,
+              "root": "zeta_3"
+            },
+            "frequency": 2,
+            "integer_coefficients": [
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          }
+        ],
+        "owner_fourier_parseval": {
+          "all_mode_squared_mass": 6,
+          "constant_mode_squared": 4,
+          "nonconstant_mode_squared_mass": 2
+        },
+        "owner_mask_in_coset_order": [
+          1,
+          1,
+          0
+        ],
+        "prime": 7
+      },
+      "prime": 7,
+      "spectra": {
+        "complete_units": {
+          "constant_mode_multiplier": 6,
+          "declared_cores": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "dimension": 3,
+          "folded_polynomial_coefficients": [
+            2,
+            2,
+            2
+          ],
+          "folded_sign_pair_counts": [
+            2,
+            2,
+            2
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  12,
+                  12,
+                  12
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 3,
+              "is_kernel_mode": true,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                4
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  12,
+                  12,
+                  12
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 3,
+              "is_kernel_mode": true,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  12,
+                  12,
+                  12
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 3,
+            "domain_dimension": 18,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 15,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 3,
+                "value": 6
+              }
+            ],
+            "rank": 3,
+            "row_gram": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                6,
+                0
+              ],
+              [
+                0,
+                0,
+                6
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 2,
+          "kernel_modes": [
+            1,
+            2
+          ],
+          "operator_norm": 6,
+          "owner_coset": [
+            1,
+            2,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 3,
+            "constant_mode_squared": 36,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 12,
+            "sum_squared_singular_values": 36
+          },
+          "prime": 7,
+          "primitive_root": 3,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        "sign_transversal": {
+          "constant_mode_multiplier": 3,
+          "declared_cores": [
+            1,
+            2,
+            3
+          ],
+          "dimension": 3,
+          "folded_polynomial_coefficients": [
+            1,
+            1,
+            1
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            1,
+            1
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  3,
+                  3,
+                  3
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 3,
+              "is_kernel_mode": true,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                4
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  3,
+                  3,
+                  3
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 3,
+              "is_kernel_mode": true,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  3,
+                  3,
+                  3
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 3,
+            "domain_dimension": 9,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 6,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 3,
+                "value": 3
+              }
+            ],
+            "rank": 3,
+            "row_gram": [
+              [
+                3,
+                0,
+                0
+              ],
+              [
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                0,
+                3
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 2,
+          "kernel_modes": [
+            1,
+            2
+          ],
+          "operator_norm": 3,
+          "owner_coset": [
+            1,
+            2,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 9,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 3,
+            "sum_squared_singular_values": 9
+          },
+          "prime": 7,
+          "primitive_root": 3,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        "singleton": {
+          "constant_mode_multiplier": 1,
+          "declared_cores": [
+            1
+          ],
+          "dimension": 3,
+          "folded_polynomial_coefficients": [
+            1,
+            0,
+            0
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            0,
+            0
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 3,
+              "is_kernel_mode": false,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                4
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 3,
+              "is_kernel_mode": false,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 3,
+            "domain_dimension": 3,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 0,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 3,
+                "value": 1
+              }
+            ],
+            "rank": 3,
+            "row_gram": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 1,
+          "owner_coset": [
+            1,
+            2,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 1,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 2,
+            "sum_folded_counts_squared": 1,
+            "sum_squared_singular_values": 3
+          },
+          "prime": 7,
+          "primitive_root": 3,
+          "rank": 3,
+          "transfer_matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        "two_core": {
+          "constant_mode_multiplier": 2,
+          "declared_cores": [
+            1,
+            3
+          ],
+          "dimension": 3,
+          "folded_polynomial_coefficients": [
+            1,
+            1,
+            0
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            1,
+            0
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                3
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 3,
+              "is_kernel_mode": false,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                4
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  1
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 3,
+              "is_kernel_mode": false,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_3"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_3"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  1
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 3,
+            "domain_dimension": 6,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 3,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 3,
+                "value": 2
+              }
+            ],
+            "rank": 3,
+            "row_gram": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 2,
+          "owner_coset": [
+            1,
+            2,
+            4
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 4,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 2,
+            "sum_folded_counts_squared": 2,
+            "sum_squared_singular_values": 6
+          },
+          "prime": 7,
+          "primitive_root": 3,
+          "rank": 3,
+          "transfer_matrix": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "owner_incompleteness_control": {
+        "declared_cores": [
+          1,
+          2
+        ],
+        "defect_formula": "||T_C(M_A-|A|/m)||_HS^2=(sum_j beta_j^2)*|A|*(m-|A|)/m",
+        "density_subtracted_defect_hilbert_schmidt_squared": [
+          8,
+          5
+        ],
+        "mode_mixing_formula": "<e_t,T_C M_A e_s>=lambda_t*ahat_A(s-t)/m; the density-subtracted defect deletes s=t and retains exactly the nonzero owner Fourier frequencies",
+        "operator_norm_upper_bound": 2,
+        "owner_coset_representative": 1,
+        "owner_count": 4,
+        "owner_density": [
+          4,
+          5
+        ],
+        "owner_fourier_coefficients": [
+          {
+            "evaluate_at": {
+              "exponent": 0,
+              "root": "zeta_5"
+            },
+            "frequency": 0,
+            "integer_coefficients": [
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          },
+          {
+            "evaluate_at": {
+              "exponent": 1,
+              "root": "zeta_5"
+            },
+            "frequency": 1,
+            "integer_coefficients": [
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          },
+          {
+            "evaluate_at": {
+              "exponent": 2,
+              "root": "zeta_5"
+            },
+            "frequency": 2,
+            "integer_coefficients": [
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          },
+          {
+            "evaluate_at": {
+              "exponent": 3,
+              "root": "zeta_5"
+            },
+            "frequency": 3,
+            "integer_coefficients": [
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          },
+          {
+            "evaluate_at": {
+              "exponent": 4,
+              "root": "zeta_5"
+            },
+            "frequency": 4,
+            "integer_coefficients": [
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "is_zero": false
+          }
+        ],
+        "owner_fourier_parseval": {
+          "all_mode_squared_mass": 20,
+          "constant_mode_squared": 16,
+          "nonconstant_mode_squared_mass": 4
+        },
+        "owner_mask_in_coset_order": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "prime": 11
+      },
+      "prime": 11,
+      "spectra": {
+        "complete_units": {
+          "constant_mode_multiplier": 10,
+          "declared_cores": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "dimension": 5,
+          "folded_polynomial_coefficients": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "folded_sign_pair_counts": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                6
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                7
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 6,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 3,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                3,
+                8
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 8,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 4,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  2,
+                  2,
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                4,
+                9
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  20,
+                  20,
+                  20,
+                  20,
+                  20
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 5,
+            "domain_dimension": 50,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 45,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 5,
+                "value": 10
+              }
+            ],
+            "rank": 5,
+            "row_gram": [
+              [
+                10,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                10,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                10,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                10,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                10
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 4,
+          "kernel_modes": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "operator_norm": 10,
+          "owner_coset": [
+            1,
+            4,
+            5,
+            9,
+            3
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 5,
+            "constant_mode_squared": 100,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 20,
+            "sum_squared_singular_values": 100
+          },
+          "prime": 11,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        "sign_transversal": {
+          "constant_mode_multiplier": 5,
+          "declared_cores": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ],
+          "dimension": 5,
+          "folded_polynomial_coefficients": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                6
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                7
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 6,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 3,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                3,
+                8
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 8,
+              "even_character_order": 5,
+              "is_kernel_mode": true,
+              "mode": 4,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                4,
+                9
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  5,
+                  5,
+                  5,
+                  5,
+                  5
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 5,
+            "domain_dimension": 25,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 20,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 5,
+                "value": 5
+              }
+            ],
+            "rank": 5,
+            "row_gram": [
+              [
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                5,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                5
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "kernel_dimension": 4,
+          "kernel_modes": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "operator_norm": 5,
+          "owner_coset": [
+            1,
+            4,
+            5,
+            9,
+            3
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 25,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 0,
+            "sum_folded_counts_squared": 5,
+            "sum_squared_singular_values": 25
+          },
+          "prime": 11,
+          "primitive_root": 2,
+          "rank": 1,
+          "transfer_matrix": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        "singleton": {
+          "constant_mode_multiplier": 1,
+          "declared_cores": [
+            1
+          ],
+          "dimension": 5,
+          "folded_polynomial_coefficients": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                6
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                7
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 6,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 3,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                3,
+                8
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 8,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 4,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                4,
+                9
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 5,
+            "domain_dimension": 5,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 0,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 5,
+                "value": 1
+              }
+            ],
+            "rank": 5,
+            "row_gram": [
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 1,
+          "owner_coset": [
+            1,
+            4,
+            5,
+            9,
+            3
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 1,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 4,
+            "sum_folded_counts_squared": 1,
+            "sum_squared_singular_values": 5
+          },
+          "prime": 11,
+          "primitive_root": 2,
+          "rank": 5,
+          "transfer_matrix": [
+            [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        "two_core": {
+          "constant_mode_multiplier": 2,
+          "declared_cores": [
+            1,
+            2
+          ],
+          "dimension": 5,
+          "folded_polynomial_coefficients": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "folded_sign_pair_counts": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "fourier_modes": [
+            {
+              "even_character_exponent_mod_p_minus_1": 0,
+              "even_character_order": 1,
+              "is_kernel_mode": false,
+              "mode": 0,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                0,
+                5
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 0,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 2,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 1,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                1,
+                6
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 4,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 2,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                2,
+                7
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 6,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 3,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 2,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                3,
+                8
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 3,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            },
+            {
+              "even_character_exponent_mod_p_minus_1": 8,
+              "even_character_order": 5,
+              "is_kernel_mode": false,
+              "mode": 4,
+              "multiplier": {
+                "evaluate_at": {
+                  "exponent": 1,
+                  "root": "zeta_5"
+                },
+                "integer_coefficients": [
+                  1,
+                  1,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "root_character_class_exponents_mod_p_minus_1": [
+                4,
+                9
+              ],
+              "squared_singular_value": {
+                "evaluate_at": {
+                  "exponent": 4,
+                  "root": "zeta_5"
+                },
+                "integer_cyclic_autocorrelation_coefficients": [
+                  2,
+                  1,
+                  0,
+                  0,
+                  1
+                ]
+              }
+            }
+          ],
+          "full_incidence_pushforward": {
+            "codomain_dimension": 5,
+            "domain_dimension": 10,
+            "identity": "K_C*K_C^*=|C|*I; normalized K_C is a coisometry",
+            "kernel": "for each physical x, source amplitudes on the |C| preimages sum to zero independently",
+            "kernel_dimension": 5,
+            "nonzero_squared_singular_values": [
+              {
+                "multiplicity": 5,
+                "value": 2
+              }
+            ],
+            "rank": 5,
+            "row_gram": [
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "gcd_with_x_to_m_minus_1_coefficients": [
+            1
+          ],
+          "kernel_dimension": 0,
+          "kernel_modes": [],
+          "operator_norm": 2,
+          "owner_coset": [
+            1,
+            4,
+            5,
+            9,
+            3
+          ],
+          "owner_coset_representative": 1,
+          "parseval": {
+            "complete_antipodal_pairs": 0,
+            "constant_mode_squared": 4,
+            "identity": "sum(beta_j^2)=|C|+2*#{complete antipodal pairs}",
+            "nonconstant_mode_squared_mass": 6,
+            "sum_folded_counts_squared": 2,
+            "sum_squared_singular_values": 10
+          },
+          "prime": 11,
+          "primitive_root": 2,
+          "rank": 5,
+          "transfer_matrix": [
+            [
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "note_sha256_lf": "95fd4162df05b1d6f2aade76bb2d133952366a49a69c71bdd33b8e3fac8f9b6e",
+    "producer_sha256_lf": "e690beb9d155bd464c2250738e0530c36b96311a3f5573e64c81f9135c536ecb",
+    "test_sha256_lf": "85b09ae0bc7ee3a6744a8e025a6902995ec757661f5875975f3abddd1cf8e7db"
+  },
+  "schema": "riemann.function_field.ffps_kummer_transfer_spectrum.v1",
+  "scope": {
+    "enumerated_control_primes": [
+      3,
+      5,
+      7,
+      11
+    ],
+    "mixed_or_double_ffps_moment_proved": false,
+    "number_field_export_proved": false,
+    "odd_prime_theorem": true,
+    "rh_or_grh_proved": false,
+    "source_atom_cap": 4096,
+    "source_atoms_used": 314,
+    "varying_conductor_moment_proved": false
+  },
+  "source_frontier": {
+    "adapter_dependencies_sha256_lf": {
+      "research/l-families/atlas/function_field/FFPS_PHYSICAL_SQUARECLASS_ADAPTER.md": "6b3a0958422f01b44b7702b1088f4e13926d5d11a7725bde2582cd2d371b07e6",
+      "research/l-families/atlas/function_field/ffps_principal_leverage.json": "cdf514d8f8b76b7d2569ea6852c8f4dcc8590c0ad72822d3bee711711cfd3ee3",
+      "research/l-families/atlas/function_field/ffps_principal_leverage.py": "fb5804df87ca36b74299de004f83b1fcd79ae7ffb36fc1f45484bff5efaae7e3",
+      "tests/test_ffps_principal_leverage.py": "ce253f44333ef44f2b7ca08ad3190231f093f8c9bffbb0535f1640949dfa3ad8"
+    },
+    "commit": "37d9df4b9b4fb9a8277de6ec1f77278dbbe5b0f2",
+    "git_blob_ids": {
+      "L-106024": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061",
+      "L-106126": "b4dbebde403a11696c56a4689b2df8b53326a157",
+      "R-106122": "dc51ae3add697ab4cec868ef8439f864ce77d71a",
+      "R-106123": "f89cad68d67444280088d8bea7cbfb7c1eacc90d",
+      "T-106121": "55afc90eaf7d2cd3efa102bcc97b927943731d48"
+    },
+    "live_target": "T-106121 / FFPS106121",
+    "pr": 751
+  },
+  "status": "EXACT_LOCAL_KUMMER_TRANSFER_SPECTRUM_AND_OWNER_DEFECT"
+}
