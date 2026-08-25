@@ -1,0 +1,809 @@
+{
+  "definitions": {
+    "completed_degree": "for d=2m+2, deg Q_f=2m",
+    "completed_functional_equation": "Q_(2m-j)=q^(m-j)*Q_j for 0<=j<=m",
+    "degree_one_combined_row": "Q1_d=sum_(deg h=1)(lambda_d^[2]+lambda_d+kappa_d-q*lambda_d)(h)",
+    "degree_three_marked_row": "Lambda3_d=sum_(deg h=3)lambda_d(h)",
+    "linear_factor_mark": "lambda_d(h)=sum_(deg f=d, f squarefree)mu(f)*ell(f)*(h/f)",
+    "linear_pair_mark": "lambda_d^[2](h)=sum_(deg f=d, f squarefree)mu(f)*binom(ell(f),2)*(h/f)",
+    "quadratic_L_coefficients": "L_f(u)=sum_j C_j(f)u^j=(1-u)Q_f(u)",
+    "quadratic_factor_mark": "kappa_d(h)=sum_(deg f=d, f squarefree)mu(f)*k(f)*(h/f)",
+    "reciprocal_Euler_coefficient": "G_h(z)=prod_P(1-(P/h)z^deg(P))=sum_n g_n(h)z^n",
+    "reciprocal_coefficient": "r_D(d)=sum_(deg f=d, f squarefree)mu(f)*(D/f)",
+    "sum_convention": "every polynomial sum is over monic polynomials",
+    "target": "T_d=sum_(D in H_5(q)) r_D(d)"
+  },
+  "firewalls": [
+    "The witness polynomials prove non-determination by the functional equation; they are not asserted to be realized by quadratic characters or curves.",
+    "The phase boundary is not an impossibility theorem: self-reference means only that this one-step descent does not solve T_d.",
+    "Sym10 is the last non-self-referential even endpoint only for this exact sieve/functional-equation/reciprocity method.",
+    "No memberwise sign, RH, GRH, motive, compatible system, or global Euler-product claim is made.",
+    "No finite field, curve family, or polynomial family is enumerated by the replay.",
+    "The d=6 and d=8 packets are source-locked only after the independent formal panel closes; an unstable Sym10 draft is not imported."
+  ],
+  "functional_equation_panel": [
+    {
+      "C5_exact_sparse_polynomial": [],
+      "C5_formula": "C_5=0",
+      "C5_variable_support": [],
+      "L_polynomial_degree": 1,
+      "completed_degree": 0,
+      "endpoint_d": 2,
+      "functional_equation_eliminates_C5": true,
+      "m": 0,
+      "status": "ZERO_BEYOND_L_POLYNOMIAL_DEGREE"
+    },
+    {
+      "C5_exact_sparse_polynomial": [],
+      "C5_formula": "C_5=0",
+      "C5_variable_support": [],
+      "L_polynomial_degree": 3,
+      "completed_degree": 2,
+      "endpoint_d": 4,
+      "functional_equation_eliminates_C5": true,
+      "m": 1,
+      "status": "ZERO_BEYOND_L_POLYNOMIAL_DEGREE"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {
+            "q": 2
+          }
+        }
+      ],
+      "C5_formula": "C_5=-q^2",
+      "C5_variable_support": [
+        "q"
+      ],
+      "L_polynomial_degree": 5,
+      "completed_degree": 4,
+      "endpoint_d": 6,
+      "functional_equation_eliminates_C5": true,
+      "m": 2,
+      "status": "ELIMINATED_TO_CONSTANT"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {
+            "q": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c2": 1,
+            "q": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c1": 1,
+            "q": 1
+          }
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "q": 2
+          }
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "c1": 1,
+            "q": 2
+          }
+        }
+      ],
+      "C5_formula": "C_5=q*(q-1)*(1+C_1)-q*C_2",
+      "C5_variable_support": [
+        "q",
+        "c1",
+        "c2"
+      ],
+      "L_polynomial_degree": 7,
+      "completed_degree": 6,
+      "endpoint_d": 8,
+      "functional_equation_eliminates_C5": true,
+      "m": 3,
+      "status": "ELIMINATED_TO_C0_THROUGH_C4"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {}
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c4": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c3": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c2": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c1": 1
+          }
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "q": 1
+          }
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "c3": 1,
+            "q": 1
+          }
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "c2": 1,
+            "q": 1
+          }
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "c1": 1,
+            "q": 1
+          }
+        }
+      ],
+      "C5_formula": "C_5=(q-1)*(1+C_1+C_2+C_3)-C_4",
+      "C5_variable_support": [
+        "q",
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "L_polynomial_degree": 9,
+      "completed_degree": 8,
+      "endpoint_d": 10,
+      "functional_equation_eliminates_C5": true,
+      "m": 4,
+      "status": "ELIMINATED_TO_C0_THROUGH_C4"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {}
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "x5": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c4": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c3": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c2": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c1": 1
+          }
+        }
+      ],
+      "C5_formula": "C_5=X_5-(1+C_1+C_2+C_3+C_4), with X_5=Q_5 central",
+      "C5_variable_support": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "x5"
+      ],
+      "L_polynomial_degree": 11,
+      "completed_degree": 10,
+      "endpoint_d": 12,
+      "functional_equation_eliminates_C5": false,
+      "m": 5,
+      "non_determination_witness": {
+        "base_nonzero_terms": [
+          {
+            "Q_index": 0,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 10,
+            "coefficient": "q^5"
+          }
+        ],
+        "both_completed_functional_equations_verified": true,
+        "common_C_0_through_C_4": [
+          "1",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_C_5": "0",
+        "realizability_status": "FORMAL_FUNCTIONAL_EQUATION_WITNESS_ONLY",
+        "second_C_5": "1",
+        "second_completion_added_terms": [
+          {
+            "Q_index": 5,
+            "coefficient": "1"
+          }
+        ]
+      },
+      "status": "FREE_CENTRAL_COMPLETED_COEFFICIENT"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {}
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "x5": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c4": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c3": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c2": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c1": 1
+          }
+        }
+      ],
+      "C5_formula": "C_5=X_5-(1+C_1+C_2+C_3+C_4), with X_5=Q_5 precentral",
+      "C5_variable_support": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "x5"
+      ],
+      "L_polynomial_degree": 13,
+      "completed_degree": 12,
+      "endpoint_d": 14,
+      "functional_equation_eliminates_C5": false,
+      "m": 6,
+      "non_determination_witness": {
+        "base_nonzero_terms": [
+          {
+            "Q_index": 0,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 12,
+            "coefficient": "q^6"
+          }
+        ],
+        "both_completed_functional_equations_verified": true,
+        "common_C_0_through_C_4": [
+          "1",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_C_5": "0",
+        "realizability_status": "FORMAL_FUNCTIONAL_EQUATION_WITNESS_ONLY",
+        "second_C_5": "1",
+        "second_completion_added_terms": [
+          {
+            "Q_index": 5,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 7,
+            "coefficient": "q^1"
+          }
+        ]
+      },
+      "status": "FREE_PRECENTRAL_COMPLETED_COEFFICIENT"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {}
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "x5": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c4": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c3": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c2": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c1": 1
+          }
+        }
+      ],
+      "C5_formula": "C_5=X_5-(1+C_1+C_2+C_3+C_4), with X_5=Q_5 precentral",
+      "C5_variable_support": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "x5"
+      ],
+      "L_polynomial_degree": 15,
+      "completed_degree": 14,
+      "endpoint_d": 16,
+      "functional_equation_eliminates_C5": false,
+      "m": 7,
+      "non_determination_witness": {
+        "base_nonzero_terms": [
+          {
+            "Q_index": 0,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 14,
+            "coefficient": "q^7"
+          }
+        ],
+        "both_completed_functional_equations_verified": true,
+        "common_C_0_through_C_4": [
+          "1",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_C_5": "0",
+        "realizability_status": "FORMAL_FUNCTIONAL_EQUATION_WITNESS_ONLY",
+        "second_C_5": "1",
+        "second_completion_added_terms": [
+          {
+            "Q_index": 5,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 9,
+            "coefficient": "q^2"
+          }
+        ]
+      },
+      "status": "FREE_PRECENTRAL_COMPLETED_COEFFICIENT"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {}
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "x5": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c4": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c3": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c2": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c1": 1
+          }
+        }
+      ],
+      "C5_formula": "C_5=X_5-(1+C_1+C_2+C_3+C_4), with X_5=Q_5 precentral",
+      "C5_variable_support": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "x5"
+      ],
+      "L_polynomial_degree": 17,
+      "completed_degree": 16,
+      "endpoint_d": 18,
+      "functional_equation_eliminates_C5": false,
+      "m": 8,
+      "non_determination_witness": {
+        "base_nonzero_terms": [
+          {
+            "Q_index": 0,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 16,
+            "coefficient": "q^8"
+          }
+        ],
+        "both_completed_functional_equations_verified": true,
+        "common_C_0_through_C_4": [
+          "1",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_C_5": "0",
+        "realizability_status": "FORMAL_FUNCTIONAL_EQUATION_WITNESS_ONLY",
+        "second_C_5": "1",
+        "second_completion_added_terms": [
+          {
+            "Q_index": 5,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 11,
+            "coefficient": "q^3"
+          }
+        ]
+      },
+      "status": "FREE_PRECENTRAL_COMPLETED_COEFFICIENT"
+    },
+    {
+      "C5_exact_sparse_polynomial": [
+        {
+          "coefficient": -1,
+          "powers": {}
+        },
+        {
+          "coefficient": 1,
+          "powers": {
+            "x5": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c4": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c3": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c2": 1
+          }
+        },
+        {
+          "coefficient": -1,
+          "powers": {
+            "c1": 1
+          }
+        }
+      ],
+      "C5_formula": "C_5=X_5-(1+C_1+C_2+C_3+C_4), with X_5=Q_5 precentral",
+      "C5_variable_support": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "x5"
+      ],
+      "L_polynomial_degree": 19,
+      "completed_degree": 18,
+      "endpoint_d": 20,
+      "functional_equation_eliminates_C5": false,
+      "m": 9,
+      "non_determination_witness": {
+        "base_nonzero_terms": [
+          {
+            "Q_index": 0,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 18,
+            "coefficient": "q^9"
+          }
+        ],
+        "both_completed_functional_equations_verified": true,
+        "common_C_0_through_C_4": [
+          "1",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_C_5": "0",
+        "realizability_status": "FORMAL_FUNCTIONAL_EQUATION_WITNESS_ONLY",
+        "second_C_5": "1",
+        "second_completion_added_terms": [
+          {
+            "Q_index": 5,
+            "coefficient": "1"
+          },
+          {
+            "Q_index": 13,
+            "coefficient": "q^4"
+          }
+        ]
+      },
+      "status": "FREE_PRECENTRAL_COMPLETED_COEFFICIENT"
+    }
+  ],
+  "payload_sha256": "0b8cb0ac368d9923ce10644b5c5cd09f752d056ede8226e9e38d603b86aa1fbf",
+  "preboundary_aggregate_rows": [
+    {
+      "C5_aggregate": "0",
+      "endpoint_d": 2,
+      "one_step_descent": "T_2=-q*G3_2+Lambda3_2+Q1_2"
+    },
+    {
+      "C5_aggregate": "0",
+      "endpoint_d": 4,
+      "one_step_descent": "T_4=-q*G3_4+Lambda3_4+Q1_4"
+    },
+    {
+      "C5_aggregate": "-q^2*M_6=0",
+      "endpoint_d": 6,
+      "one_step_descent": "T_6=-q*G3_6+Lambda3_6+Q1_6"
+    },
+    {
+      "C5_aggregate": "q*(q-1)*(M_8+G1_8)-q*G2_8=0",
+      "endpoint_d": 8,
+      "one_step_descent": "T_8=-q*G3_8+Lambda3_8+Q1_8"
+    },
+    {
+      "C5_aggregate": "(q-1)*(M_10+G1_10+G2_10+G3_10)-G4_10",
+      "endpoint_d": 10,
+      "one_step_descent": "T_10=(q-1)*(G1_10+G2_10)-G3_10-G4_10+Lambda3_10+Q1_10"
+    }
+  ],
+  "replay": {
+    "check": "python research/l-families/atlas/function_field/genus2_reciprocal_descent_boundary.py --check",
+    "note": "research/l-families/atlas/function_field/GENUS2_RECIPROCAL_DESCENT_BOUNDARY.md",
+    "producer": "research/l-families/atlas/function_field/genus2_reciprocal_descent_boundary.py",
+    "test": "tests/test_genus2_reciprocal_descent_boundary.py",
+    "write": "python research/l-families/atlas/function_field/genus2_reciprocal_descent_boundary.py --write"
+  },
+  "resource_contract": {
+    "actual_source_atoms": 8,
+    "actual_source_bytes": 29611,
+    "actual_symbolic_operations": 1576,
+    "arithmetic": "exact Fraction sparse-polynomial and coefficient algebra",
+    "maximum_even_endpoint": 20,
+    "maximum_source_atoms": 32,
+    "maximum_source_bytes": 65536,
+    "maximum_symbolic_operations": 2048,
+    "maximum_wall_seconds": 3.0
+  },
+  "schema": "riemann.function_field.genus2_reciprocal_descent_boundary.v1",
+  "scope": {
+    "curves_enumerated": 0,
+    "even_endpoint_panel": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "family": "monic squarefree quintics D over F_q[T]",
+    "finite_fields_enumerated": 0,
+    "numeric_approximations": 0,
+    "polynomial_families_enumerated": 0,
+    "q": "formal odd prime power parameter"
+  },
+  "self_reference_certificate": {
+    "consistency_identity": "R5_d-q*G3_d+Lambda3_d+Q1_d=0",
+    "degree_five_split": "G5_d=T_d+R5_d",
+    "exact_residual_sparse_polynomial": [
+      {
+        "coefficient": -1,
+        "powers": {
+          "Q1_d": 1
+        }
+      },
+      {
+        "coefficient": -1,
+        "powers": {
+          "Lambda3_d": 1
+        }
+      },
+      {
+        "coefficient": -1,
+        "powers": {
+          "R5_d": 1
+        }
+      },
+      {
+        "coefficient": 1,
+        "powers": {
+          "G3_d": 1,
+          "q": 1
+        }
+      }
+    ],
+    "interpretation": "the one-step sieve/reciprocity equation is self-referential and does not solve T_d",
+    "nonsquarefree_remainder": "R5_d=sum_(deg h=5, h nonsquarefree) g_d(h)",
+    "squarefree_part_reason": "for squarefree degree-five D, g_d(D)=r_D(d) by even-degree reciprocity",
+    "target_coefficient_after_substitution": 0,
+    "unreduced_descent": "T_d=G5_d-q*G3_d+Lambda3_d+Q1_d"
+  },
+  "source_cross_checks": {
+    "sym10": {
+      "cross_checked_formula": "C_5=(q-1)*(1+C_1+C_2+C_3)-C_4",
+      "reason": "the Sym10 packet was not a stable tracked source when this lock was made",
+      "source_status": "DERIVED_INDEPENDENTLY_NOT_IMPORTED"
+    },
+    "sym6": {
+      "cross_checked_formula": "C_5=-q^2",
+      "source_status": "PROVED_EXACTLY_FOR_EVERY_ODD_PRIME_POWER"
+    },
+    "sym8": {
+      "cross_checked_formula": "C_5=q*(q-1)*(1+C_1)-q*C_2",
+      "source_status": "PROVED_EXACTLY_FOR_EVERY_ODD_PRIME_POWER"
+    }
+  },
+  "source_manifest": [
+    {
+      "audited_commit": "522bc6b454016a07a9c65aaa6177d0340d70f5dc",
+      "lf_sha256": "4e6156e8ca4f8b652e02961d3aa5f3ea63c9b42243908d1ecab8b94c08d253a6",
+      "name": "sym6",
+      "path": "research/l-families/atlas/function_field/genus2_sym6_marked_trace_average.json",
+      "payload_sha256": "7bf31859372bb2a292f8321794f9b05859d2def82b1dd59ad83ab992088a5e86",
+      "role": "post-proof formula and provenance cross-check only"
+    },
+    {
+      "audited_commit": "dc63f02d0897e10936ef0767a1c8e6f15ac49e06",
+      "lf_sha256": "a92700980ac7fef22f7a36db7b3d4d8bb7aa8d763904677e64bfca3182be0233",
+      "name": "sym8",
+      "path": "research/l-families/atlas/function_field/genus2_sym8_marked_trace_average.json",
+      "payload_sha256": "423b8c37b69fb56b459beb7ebd9e6b94d12cf658f5819f7ac481e83560f5d0ae",
+      "role": "post-proof formula and provenance cross-check only"
+    }
+  ],
+  "source_order_firewall": {
+    "formal_boundary_closed_before_sources_loaded": true,
+    "source_role": "post-proof exact cross-check only",
+    "symbolic_operations_before_sources": 1576,
+    "untracked_Sym10_used_as_input": false
+  },
+  "squarefree_quintic_sieve": {
+    "degree_A_0_weight": "1",
+    "degree_A_1_weight": "-(q-ell)",
+    "degree_A_2_closed_form": "binom(ell+1,2)+k-q*ell",
+    "degree_A_2_signed_count": [
+      {
+        "coefficient": 1,
+        "powers": {
+          "k": 1
+        }
+      },
+      {
+        "coefficient": "1/2",
+        "powers": {
+          "ell": 1
+        }
+      },
+      {
+        "coefficient": "1/2",
+        "powers": {
+          "ell": 2
+        }
+      },
+      {
+        "coefficient": -1,
+        "powers": {
+          "ell": 1,
+          "q": 1
+        }
+      }
+    ],
+    "degree_five_decomposition": "D=A^2*B with deg(A)=0,1,2",
+    "endpoint_dependence": "none: the same sieve holds for every modulus degree",
+    "identity": "S_5(f)=C_5(f)-(q-ell(f))*C_3(f)+(binom(ell(f)+1,2)+k(f)-q*ell(f))*C_1(f)",
+    "mobius_square_identity": "mu^2(D)=sum_(A^2|D) mu(A)"
+  },
+  "status": "PROVED_EXACT_FORMAL_PHASE_BOUNDARY",
+  "theorem": {
+    "boundary_statement": "C_5 is eliminated by the completed functional equation through d=10; at d=12 it contains the central completed coefficient, and for every even d>=12 it is not determined by C_0,...,C_4 from that equation",
+    "first_self_referential_endpoint": 12,
+    "functional_equation_eliminable_even_endpoints": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "last_non_self_referential_endpoint_for_this_method": 10,
+    "method_qualification": "this is a boundary for the one-step squarefree-sieve/functional-equation/reciprocity descent, not an impossibility theorem for higher moments",
+    "universal_sieve_contains_C5": true
+  },
+  "universal_low_degree_cancellations": {
+    "G1_d": "0 for d>=1 because the inverse L-series modulo a linear is 1",
+    "G2_d": "q*(q-1)*1+q*(1-q)=0 for d>=1, from squarefree quadratics and L^2",
+    "M_d": "sum_(deg f=d)mu(f)=0 for d>=2 from sum_f mu(f)u^deg(f)=1-q*u"
+  }
+}
