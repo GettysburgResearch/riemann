@@ -2,7 +2,7 @@
 
 Claim ID: `M-105640`  
 Created: 2026-08-25  
-Applies to: `L-105640--L-105643`, `R-105640`, `T-105640`  
+Applies to: `L-105640--L-105646`, `R-105640`, `T-105640`  
 RH status: **unproved**
 
 An independent reviewer should try to break the packet in the following order.
@@ -57,11 +57,44 @@ strict-log-concavity theorem may still survive independently.
    b = H-h = base height.
    ```
 
-3. Confirm that the exponential cap uses only `sinh(z)/z>=1` and does not
-   import log-concavity or zero locations.
-4. Confirm that log-concavity is used only for monotonicity of the profile.
+3. Confirm that the upper exponential cap uses only `sinh(z)/z>=1`.
+4. Confirm that log-concavity is used for monotonicity in frequency.
+5. Confirm that the profile decreases in total height because the numerator
+   decreases and the hyperbolic moment denominator increases.
 
-## C. Model-space trace normalization
+## C. Maxwell-sandwich audit
+
+1. From `psi''>=kappa_0`, verify
+
+   ```text
+   d/dx log(q_s/g_kappa0) <= 0,
+   g_kappa0 proportional to x^2 exp(-kappa_0 x^2).
+   ```
+
+2. Check the monotone-likelihood-ratio implication
+   `q_s <=_st g_kappa0`.
+3. Evaluate exactly
+
+   ```text
+   E_g[sinh(2H X)/(2H X)] = exp(H^2/kappa_0).
+   ```
+
+4. Re-derive the operator sandwich
+
+   ```text
+   exp(-H xi-H^2/kappa_0) <= R_H(xi) <= exp(-H xi).
+   ```
+
+5. Check the critical-height rational ledger
+
+   ```text
+   1-1/(4 kappa_0)=79559/81904>97/100.
+   ```
+
+The reviewer should pay special attention to the orientation of stochastic
+domination; reversing it reverses the lower profile bound.
+
+## D. Model-space trace normalization
 
 1. Re-derive the Paley--Wiener reproducing kernel with the stated
    `1/sqrt(2 pi)` convention.
@@ -80,8 +113,10 @@ strict-log-concavity theorem may still survive independently.
 
 5. Ensure every trace is taken only after finite/model-space compression. The
    continuum multiplication operator is not declared trace class.
+6. Check that the Maxwell sandwich passes to finite model-space traces by
+   positive operator order.
 
-## D. Xi-prime collar orientation
+## E. Xi-prime collar orientation
 
 1. Verify that a zero `rho=alpha+i gamma` of `Xi'` above height `H` becomes an
    upper zero `alpha+i(gamma-H)` of `Xi'(z+iH)`.
@@ -93,7 +128,41 @@ strict-log-concavity theorem may still survive independently.
 5. Treat the cofinal `O(N(T))` comparison as a separately normalized
    zero-count input, not part of the finite identity.
 
-## E. Topology firewall
+## F. Height-owner audit
+
+1. For one zero at height `gamma`, verify
+
+   ```text
+   Q_rho(H)=E_(Exp(2(gamma-H)))[R_H]
+   ```
+
+   and its endpoint values `Q_rho(0)=1`, `Q_rho(gamma-)=0`.
+2. Check both ingredients of monotonicity:
+
+   ```text
+   R_H decreases with H;
+   the exponential model vector shifts stochastically to higher frequencies.
+   ```
+
+3. Confirm that `-dQ_rho` is a probability measure.
+4. Check the explicit reference survival
+
+   ```text
+   S_gamma(H)=2(gamma-H)/(2gamma-H)
+   ```
+
+   and density `2gamma/(2gamma-H)^2`.
+5. Verify the uniform survival comparison
+
+   ```text
+   0 <= S_gamma-Q_rho < 3/100
+   ```
+
+   for `gamma<=1/2`.
+6. Do not identify the sum of one-zero owner measures with the trace of a
+   nonorthogonal multi-zero model space at each fixed height.
+
+## G. Topology firewall
 
 The reviewer must verify that the packet never uses
 
@@ -103,19 +172,21 @@ weighted model-space charge -> unweighted degree.
 
 The one-factor separator has degree one but charge `2y/(H+2y)->0`.
 Consequently the packet may localize the unresolved geometry to a vanishing
-collar, but it may not remove that collar without a signed index, pointwise
-phase theorem, or confluent endpoint argument.
+collar and resolve each zero into a positive height-owner law, but it may not
+remove the collar without a signed index, pointwise phase theorem, or
+confluent endpoint argument.
 
-## F. Status audit
+## H. Status audit
 
 The following must remain false in every result object and summary:
 
 ```text
+HOWNXFER105644 proved;
 BCOLLAR105643 proved;
 POINTID105630 proved;
 SAFEDESC105628 proved;
 Riemann Hypothesis established.
 ```
 
-The strong-log-concavity theorem and the shifted-inner theorem should receive
-independent analytic review before integration.
+The strong-log-concavity, Maxwell-domination and shifted-inner theorems should
+receive independent analytic review before integration.
