@@ -1,8 +1,10 @@
 {
-  "schema": "riemann.t106080.self-reconstruction-lock.v1",
+  "schema": "riemann.t106080.self-reconstruction-lock.v2",
   "created": "2026-08-25",
+  "corrected": "2026-08-25",
   "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
   "reconstructed_head": "8743ba4230097c296dee1dec40d09b59cdf56599",
+  "initial_self_audit_commit": "4f2ad2f74a6b0ce2a00f4c534448355f9ac0f7fe",
   "parent_pr": 719,
   "parent_head": "60285de21fafdd1b3c185ddd19b57191a41c08dd",
   "binding_correction": "R-106080",
@@ -13,7 +15,11 @@
     "L-106081 minimum-owner geometry",
     "lambda^2 <= a",
     "L^2 < 2B",
-    "L-106082.2 abstract same-family identity"
+    "no-exception sector: P=lambda*Lambda <= a",
+    "exceptional sector: lambda*a^2 < 4*sqrt(Y) and lambda^5 < 4*sqrt(Y)",
+    "L-106082.2 abstract same-family identity",
+    "T-106081.8 selector-tied clean Gram identity",
+    "T-106081.10 positive-moment reduction"
   ],
   "retracted": [
     "L-106082.3 complete-source transport from L-102883",
@@ -23,24 +29,33 @@
   "open": [
     "BSFTI106081 independent global parent-ledger verification",
     "MOBOSM106081 source-tied owner-squareclass moment",
+    "MOBOSM-NE106081 no-exception owner moment",
+    "MOBOSM-EX106081 exceptional-owner moment",
     "Riemann Hypothesis"
   ],
-  "files": {
-    "claims/refutations/R-106080-core-only-centered-phase-packing-does-not-transport-owner-squareclasses.md": {
-      "sha256": "49ac4733b62448bb071a11c7af5eb9fbb8dd8567b924e1044e707ea333b0481e",
-      "bytes": 9291
-    },
-    "claims/theorems/T-106081-minimum-owner-boolean-vaughan-corrected-owner-occupancy-frontier.md": {
-      "sha256": "1a4a64dceb7de10d314efba62beaa74a9d24fb9e70896b8b9565c43641cea069",
-      "bytes": 5259
-    },
-    "reports/gpt56-pro/2026-08-25-t106080-self-reconstruction.md": {
-      "sha256": "835f31031a9076f8add1bf22bcfd58a462e2ead5171c8c689b0798379a7c5ea2",
-      "bytes": 5338
-    },
-    "standalone/2026-08-25-t106080-self-reconstruction/REVIEW_SPECIFICATION.md": {
-      "sha256": "feb6afdc72ef4e375cfef50a7ea11e07252ec8cfd6940f6a8e9aa3dc8f009801",
-      "bytes": 1346
-    }
+  "formula_correction": {
+    "file": "claims/theorems/T-106081-minimum-owner-boolean-vaughan-corrected-owner-occupancy-frontier.md",
+    "first_draft_coefficient": "(ell-1)/(ell*rho)",
+    "correct_coefficient": "(rho-1)/(ell*rho)",
+    "reason": "A_(ell->rho;k) is summed over rho-1 nonzero rho-phases; ordered-pair symmetrization after Cauchy preserves that cardinality."
+  },
+  "binding_files": [
+    "claims/refutations/R-106080-core-only-centered-phase-packing-does-not-transport-owner-squareclasses.md",
+    "claims/theorems/T-106081-minimum-owner-boolean-vaughan-corrected-owner-occupancy-frontier.md",
+    "reports/gpt56-pro/2026-08-25-t106080-self-reconstruction.md",
+    "standalone/2026-08-25-t106080-self-reconstruction/REVIEW_SPECIFICATION.md"
+  ],
+  "review_order": [
+    "R-106080",
+    "T-106081",
+    "MOBOSM106081",
+    "BSFTI106081"
+  ],
+  "status": {
+    "internal_reconstruction_complete": true,
+    "former_closure_rejected": true,
+    "independent_review_required": true,
+    "canonical_acceptance": false,
+    "riemann_hypothesis_proved": false
   }
 }
