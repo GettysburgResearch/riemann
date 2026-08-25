@@ -1,0 +1,249 @@
+{
+  "claim_boundaries": {
+    "closed_gate": "the exact model/measure/local-system adapter for every even-central-weight Sp4 channel, including chi_(0,3), chi_(2,2), chi_(0,4)",
+    "not_proved": [
+      "the conjectural polynomial values of those three channel traces",
+      "any Tate, Eisenstein, endoscopic, elliptic, or Siegel decomposition",
+      "a one-dimensional eigenpacket identification",
+      "an RH or GRH statement"
+    ]
+  },
+  "exact_cardinalities": {
+    "AGL_full": "q*(q-1)",
+    "G_lifted": "q*(q-1)",
+    "G_square": "q*(q-1)/2",
+    "H5": "q^4*(q-1)=q^5-q^4",
+    "marked_stack_mass": "sum_[(C,W)] 1/|Aut_q(C,W)|=|H5(q)|/|G_tilde(F_q)|=q^3",
+    "symbolic_polynomials_in_increasing_q_power": {
+      "G_lifted": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "G_square": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "H5": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "stack_mass": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "frobenius_convention": {
+    "L_polynomial": "L_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4=det(1-sqrt(q)*u*U_D)",
+    "normalized_second_elementary_coefficient": "e_2(U_D)=b_D/q",
+    "normalized_standard_trace": "Tr(U_D)=-a_D/sqrt(q)",
+    "point_count": "#C_D(F_q)=q+1+a_D",
+    "sign_warning": "there is no extra (-1)^w in the local-system trace; the minus sign is already in Tr(U_D)=-a_D/sqrt(q)"
+  },
+  "groupoid_equivalence": {
+    "automorphism_order": "2*|Stab_G_sq(D)|",
+    "equivalence": "W_2^W(F_q) is equivalent to the action groupoid H5(q)//G_tilde(F_q)",
+    "full_affine_nonsquare_coset": "not an F_q marked-curve isomorphism; it exchanges a marked curve with its nontrivial quadratic twist",
+    "lifted_coordinate_group": {
+      "central_kernel": "(r,beta)=(-1,0) acts trivially on D and as (x,y)|->(x,-y) on C_D",
+      "curve_isomorphism": "C_(D|(r,beta)) -> C_D: (T,Y) |-> (r^2*T+beta,r^5*Y)",
+      "elements": "(r,beta), r in F_q^x, beta in F_q",
+      "notation": "G_tilde",
+      "order": "q*(q-1)",
+      "polynomial_right_action": "D(T)|(r,beta)=r^(-10)*D(r^2*T+beta)"
+    },
+    "model": "C_D: y^2=D(x), with the point at infinity marked",
+    "square_affine_group": {
+      "elements": "(alpha,beta), alpha in (F_q^x)^2, beta in F_q",
+      "notation": "G_sq",
+      "order": "q*(q-1)/2",
+      "polynomial_right_action": "D(T)|(alpha,beta)=alpha^(-5)*D(alpha*T+beta)"
+    },
+    "stabilizer_exact_sequence": "1 -> mu_2=<hyperelliptic involution> -> Aut_q(C_D,infinity) -> Stab_G_sq(D) -> 1"
+  },
+  "literature_context_not_dependency": [
+    {
+      "authors": "Jonas Bergstrom",
+      "relation": "develops finite-field point-count methods for pointed hyperelliptic moduli spaces",
+      "title": "Equivariant counts of points of the moduli spaces of pointed hyperelliptic curves",
+      "url": "https://arxiv.org/abs/math/0611813"
+    },
+    {
+      "authors": "Jonas Bergstrom, Carel Faber, Gerard van der Geer",
+      "relation": "uses pointed genus-two curve counts to access Frobenius traces of local-system cohomology",
+      "title": "Siegel modular forms of genus 2 and level 2: cohomological computations and conjectures",
+      "url": "https://arxiv.org/abs/0803.0917"
+    },
+    {
+      "authors": "Carel Faber, Gerard van der Geer",
+      "relation": "places finite-field genus-two counts in the local-system/Siegel modular-form framework",
+      "title": "Sur la cohomologie des systemes locaux sur les espaces des modules des courbes de genre 2 et des surfaces abeliennes",
+      "url": "https://arxiv.org/abs/math/0305094"
+    }
+  ],
+  "odd_central_weight": {
+    "central_character": "chi_lambda(-U)=(-1)^(a+2*b)*chi_lambda(U)",
+    "exact_result": "a fixed nonsquare affine change is a bijection of H5(q), sends U_D to -U_D up to conjugacy, and therefore forces the total model sum and marked-stack Frobenius trace to be zero when w is odd",
+    "scope_firewall": "this is cancellation of the total trace across quadratic twists; it does not assert that each curve trace vanishes"
+  },
+  "payload_sha256": "7b091cc158c7ff378774dcbaef5802c469c3d377384034bced1caf4fe92b3601",
+  "provenance": {
+    "resource_contract": {
+      "arithmetic": "integers and fractions only; no floats",
+      "curves_enumerated": 0,
+      "exact_operation_cap": 4096,
+      "exact_operations_used": 42,
+      "finite_fields_enumerated": 0,
+      "maximum_source_bytes_each": 100000,
+      "operation_counts": {
+        "coordinate_exponent_checks": 5,
+        "polynomial_multiply": 26,
+        "polynomial_scale": 6,
+        "small_symbolic_specializations": 5
+      },
+      "random_samples": 0
+    },
+    "source_hashes_lf_sha256": {
+      "note": "f6f3c5ff0d112bd3204b1843a6f13b286d642a9c6ee19329a63eb39e06165e1c",
+      "producer": "29c8084dafb15acdc4d1eb55ed21ac9ad4a8abfb7f1e0d208d93df2671142cc9",
+      "test": "fd5be2c3d7dfc3cc427e6caa6a6a0c8db09a8da237e45c6b17cacc04267292d6"
+    },
+    "source_locks": {
+      "genus2_family_measures.json": {
+        "canonical_payload_sha256": "23b905a8225d00080f00b238f51259b62f3a6c0d489c36168a32ec5580c7c79b",
+        "lf_sha256": "3bec6bc6ab122a3d12fdabbd34ac0afc97cd875905a984ed9c0cc95998ccae38",
+        "schema": "riemann.function_field.genus2_family_measures.v1"
+      },
+      "genus2_high_weight_channel_probe.json": {
+        "canonical_payload_sha256": "90820eded366af5c430df6712bb51f6ad7882faf7bd27c4665c411052c1dca0e",
+        "lf_sha256": "bfa4aaca81a755ee9d02d2ae3741b0c511f91899a75adf85ada00007612f9541",
+        "schema": "riemann.function_field.genus2_high_weight_channel_probe.v1"
+      },
+      "guarded_cohomology_conjecture_inference.py": {
+        "lf_sha256": "21368d703bc7d1a6befaf4fe05cf922753391b8bd4a714819bca7d424c9afc59"
+      }
+    }
+  },
+  "schema": "riemann.function_field.genus2_marked_weierstrass_stack_adapter.v1",
+  "scope": {
+    "base_fields": "every finite field F_q of odd characteristic",
+    "cohomology_decomposition": false,
+    "family": "H5(q), monic squarefree quintics",
+    "finite_field_or_curve_enumeration": false,
+    "moduli_groupoid": "smooth genus-two curves over F_q with one marked F_q-rational Weierstrass point",
+    "random_sampling": false,
+    "rh_or_grh_claim": false
+  },
+  "status": "EXACT_ALL_ODD_PRIME_POWER_MARKED_STACK_ADAPTER",
+  "trace_theorem": {
+    "even_central_weight_formula": "for lambda=(a,b), w=a+2*b even: Tr_stack,q(V_lambda)=q^(w/2)/(q*(q-1))*sum_D chi_lambda(U_D)",
+    "even_channels_closed_by_adapter": {
+      "chi_(0,3)": {
+        "adapter_status": "PROVED_BY_THIS_PACKET",
+        "candidate_value_status": "NOT_PROVED_BY_THIS_PACKET",
+        "central_character": 1,
+        "dimension": 30,
+        "exact_stack_trace_formula": "q^3/(q*(q-1))*sum_(D in H5(q)) chi_(0,3)(U_D)",
+        "fundamental_weight": [
+          0,
+          3
+        ],
+        "highest_weight_e_basis": [
+          3,
+          3
+        ],
+        "local_system_weight": 6
+      },
+      "chi_(0,4)": {
+        "adapter_status": "PROVED_BY_THIS_PACKET",
+        "candidate_value_status": "NOT_PROVED_BY_THIS_PACKET",
+        "central_character": 1,
+        "dimension": 55,
+        "exact_stack_trace_formula": "q^4/(q*(q-1))*sum_(D in H5(q)) chi_(0,4)(U_D)",
+        "fundamental_weight": [
+          0,
+          4
+        ],
+        "highest_weight_e_basis": [
+          4,
+          4
+        ],
+        "local_system_weight": 8
+      },
+      "chi_(2,2)": {
+        "adapter_status": "PROVED_BY_THIS_PACKET",
+        "candidate_value_status": "NOT_PROVED_BY_THIS_PACKET",
+        "central_character": 1,
+        "dimension": 81,
+        "exact_stack_trace_formula": "q^3/(q*(q-1))*sum_(D in H5(q)) chi_(2,2)(U_D)",
+        "fundamental_weight": [
+          2,
+          2
+        ],
+        "highest_weight_e_basis": [
+          4,
+          2
+        ],
+        "local_system_weight": 6
+      }
+    },
+    "generic_groupoid_formula": "Tr_stack,q(V_lambda)=1/(q*(q-1))*sum_D Tr(Frob_D|V_lambda)",
+    "meaning_of_stack_trace": "sum over F_q-isomorphism classes of marked curves of the fibre Frobenius trace divided by |Aut_q|; by the stack trace formula, this is the alternating compactly-supported cohomological trace"
+  }
+}
