@@ -76,7 +76,7 @@
     "reciprocal_euler_coefficient": "r_D(6)=sum_(deg f=6) mu(f)*(D/f)",
     "squarefree_sieve": "S_5(f)=C_5(f)-(q-l(f))*C_3(f)+(binom(l(f)+1,2)+k(f)-q*l(f))*C_1(f)"
   },
-  "payload_sha256": "614a4707eb2bdda36d5e4d2a1cba04b138d569ecba64e9f11bd1ec66bc18deae",
+  "payload_sha256": "7bf31859372bb2a292f8321794f9b05859d2def82b1dd59ad83ab992088a5e86",
   "polynomials_low_to_high": {
     "all_cubic_ell6": [
       [
@@ -455,6 +455,7 @@
     "actual_symbolic_operations": 477,
     "actual_symbolic_operations_before_controls": 477,
     "arithmetic": "exact Fraction and integer polynomial algebra",
+    "held_out_fixture_loaded_after_symbolic_theorem": true,
     "maximum_held_out_atoms_per_field": 512,
     "maximum_symbolic_operations_and_input_atoms": 4096,
     "maximum_wall_seconds": 10.0
@@ -503,11 +504,11 @@
     },
     {
       "path": "research/l-families/atlas/function_field/genus2_sym6_marked_trace_average.py",
-      "sha256_lf_normalized": "a8df9c0e328bcff3cefe08e7b0fca8de7f2978cc250a13ba9b7265d592c1d30f"
+      "sha256_lf_normalized": "3ea8508e382715b421b435ca57a89e7f38692f3fdf6e9e920a4e48435d2e7abe"
     },
     {
       "path": "tests/test_genus2_sym6_marked_trace_average.py",
-      "sha256_lf_normalized": "ea2f6941456f4e1f7b46773ae67d977f4f962a17598de71423e9b53b73ba5ffe"
+      "sha256_lf_normalized": "5ad39de0ad11161ae33bf57ef9b2a5d72e14724f0c789a7bd23096fbd5492b33"
     }
   ],
   "status": "PROVED_EXACTLY_FOR_EVERY_ODD_PRIME_POWER",

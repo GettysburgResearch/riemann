@@ -6,6 +6,7 @@ import sys
 import unittest
 from fractions import Fraction
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = (
@@ -82,13 +83,38 @@ class Genus2Sym6MarkedTraceAverageTests(unittest.TestCase):
         self.assertEqual([row["q"] for row in rows], [3, 5, 7])
         self.assertEqual([row["difference"] for row in rows], [0, 0, 0])
         self.assertTrue(
-            all(
-                row["status"] == "HELD_OUT_FALSIFICATION_CONTROL_ONLY"
-                for row in rows
-            )
+            all(row["status"] == "HELD_OUT_FALSIFICATION_CONTROL_ONLY" for row in rows)
         )
         self.assertEqual(
             self.fixture["scope"]["sampled_q_values_used_as_theorem_input"], []
+        )
+
+    def test_control_fixture_is_loaded_only_after_symbolic_theorem(self) -> None:
+        events: list[tuple[str, ...]] = []
+        original_load_sources = MODULE._load_sources
+        original_symbolic_theorem = MODULE._symbolic_theorem
+
+        def recording_load_sources(names: tuple[str, ...]):
+            events.append(("load", *names))
+            return original_load_sources(names)
+
+        def recording_symbolic_theorem(guard):
+            events.append(("symbolic_theorem",))
+            return original_symbolic_theorem(guard)
+
+        with (
+            patch.object(MODULE, "_load_sources", recording_load_sources),
+            patch.object(MODULE, "_symbolic_theorem", recording_symbolic_theorem),
+        ):
+            MODULE.build_fixture()
+
+        self.assertLess(
+            events.index(("symbolic_theorem",)), events.index(("load", "controls"))
+        )
+        self.assertTrue(
+            self.fixture["resource_contract"][
+                "held_out_fixture_loaded_after_symbolic_theorem"
+            ]
         )
 
     def test_resource_cap(self) -> None:

@@ -123,9 +123,10 @@ def _lf_sha256(path: Path) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def _load_sources() -> dict[str, dict[str, object]]:
+def _load_sources(names: tuple[str, ...]) -> dict[str, dict[str, object]]:
     sources: dict[str, dict[str, object]] = {}
-    for name, lock in SOURCE_LOCKS.items():
+    for name in names:
+        lock = SOURCE_LOCKS[name]
         path = lock["path"]
         if not isinstance(path, Path) or _lf_sha256(path) != lock["lf"]:
             raise RuntimeError(f"source lock failed: {name}")
@@ -256,15 +257,9 @@ def _symbolic_theorem(guard: ResourceGuard) -> dict[str, Poly]:
     # Total even trace moments over all monic squarefree cubics.  These are
     # q*(q-1)*W_(2j), source-locked to the genus-one packet.
     total_0 = p_mul(p_mul(q_poly, q_minus_one, guard), q_poly, guard)
-    total_2 = p_mul(
-        p_mul(q_poly, q_minus_one, guard), poly(-1, 0, 1), guard
-    )
-    total_4 = p_mul(
-        p_mul(q_poly, q_minus_one, guard), poly(-1, -3, 0, 2), guard
-    )
-    total_6 = p_mul(
-        p_mul(q_poly, q_minus_one, guard), poly(-1, -5, -9, 0, 5), guard
-    )
+    total_2 = p_mul(p_mul(q_poly, q_minus_one, guard), poly(-1, 0, 1), guard)
+    total_4 = p_mul(p_mul(q_poly, q_minus_one, guard), poly(-1, -3, 0, 2), guard)
+    total_6 = p_mul(p_mul(q_poly, q_minus_one, guard), poly(-1, -5, -9, 0, 5), guard)
 
     # J_(2j)=sum_h m_1(h)*a_h^(2j), where m_1 counts rational roots.
     # J_0 is the elementary type count; J_2 and J_4 are the B4 marked-root
@@ -332,9 +327,7 @@ def _symbolic_theorem(guard: ResourceGuard) -> dict[str, Poly]:
     # ell_6=9-3q independently of e.
     repeated_g6 = p_mul(q_poly, q_minus_one, guard)
     repeated_ell6_l3 = p_scale(p_mul(q_poly, q_minus_one, guard), -1, guard)
-    repeated_ell6_l2m = p_mul(
-        p_mul(q_poly, q_minus_one, guard), poly(9, -3), guard
-    )
+    repeated_ell6_l2m = p_mul(p_mul(q_poly, q_minus_one, guard), poly(9, -3), guard)
 
     all_cubic_g6 = p_add(squarefree_g6, repeated_g6, guard)
     all_cubic_ell6 = p_sum(
@@ -509,15 +502,13 @@ def _source_manifest() -> list[dict[str, str]]:
 
 def build_fixture() -> dict[str, object]:
     started = time.perf_counter()
-    sources = _load_sources()
+    sources = _load_sources(("b4", "genus1", "adapter"))
     _validate_source_semantics(sources)
     guard = ResourceGuard()
     theorem = _symbolic_theorem(guard)
     symbolic_operations_before_controls = guard.symbolic_operations
-    controls = _held_out_controls(sources["controls"], guard)
-
-    if time.perf_counter() - started > MAX_WALL_SECONDS:
-        raise RuntimeError("Sym6 marked-trace replay exceeded wall cap")
+    control_source = _load_sources(("controls",))["controls"]
+    controls = _held_out_controls(control_source, guard)
 
     polynomial_rows = {name: _pairs(value) for name, value in theorem.items()}
     payload: dict[str, object] = {
@@ -548,19 +539,12 @@ def build_fixture() -> dict[str, object]:
             ),
         },
         "mobius_euler_reduction": {
-            "reciprocal_euler_coefficient": (
-                "r_D(6)=sum_(deg f=6) mu(f)*(D/f)"
-            ),
+            "reciprocal_euler_coefficient": ("r_D(6)=sum_(deg f=6) mu(f)*(D/f)"),
             "squarefree_sieve": (
-                "S_5(f)=C_5(f)-(q-l(f))*C_3(f)+"
-                "(binom(l(f)+1,2)+k(f)-q*l(f))*C_1(f)"
+                "S_5(f)=C_5(f)-(q-l(f))*C_3(f)+(binom(l(f)+1,2)+k(f)-q*l(f))*C_1(f)"
             ),
-            "C5_cancellation": (
-                "C_5(f)=-q^2 and sum_(deg f=6)mu(f)=0"
-            ),
-            "final_aggregate": (
-                "sum_D r_D(6)=-q*G_3+L_3+Q_1"
-            ),
+            "C5_cancellation": ("C_5(f)=-q^2 and sum_(deg f=6)mu(f)=0"),
+            "final_aggregate": ("sum_D r_D(6)=-q*G_3+L_3+Q_1"),
             "G_3": "sum_(deg h=3) g_6(h)=0",
             "L_3": "sum_(deg h=3) ell_6(h)=-2*q^2*(q-1)",
             "Q_1": "sum_(deg h=1) weighted_6(h)=2*q*(q-1)*(q-2)",
@@ -609,6 +593,7 @@ def build_fixture() -> dict[str, object]:
             "actual_held_out_input_atoms": guard.input_atoms,
             "actual_operations_and_input_atoms": guard.symbolic_operations
             + guard.input_atoms,
+            "held_out_fixture_loaded_after_symbolic_theorem": True,
             "maximum_held_out_atoms_per_field": MAX_CONTROL_ATOMS,
             "maximum_wall_seconds": MAX_WALL_SECONDS,
             "arithmetic": "exact Fraction and integer polynomial algebra",
@@ -616,6 +601,8 @@ def build_fixture() -> dict[str, object]:
         "source_manifest": _source_manifest(),
     }
     payload["payload_sha256"] = _canonical_sha256(payload)
+    if time.perf_counter() - started > MAX_WALL_SECONDS:
+        raise RuntimeError("Sym6 marked-trace replay exceeded wall cap")
     return payload
 
 
