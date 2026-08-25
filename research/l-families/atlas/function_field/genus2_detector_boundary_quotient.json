@@ -1,0 +1,402 @@
+{
+  "coefficient_convention": {
+    "columns": [
+      "chi_(0,1)",
+      "chi_(2,0)",
+      "chi_(0,2)",
+      "chi_(2,1)",
+      "chi_(4,0)"
+    ],
+    "matrix": [
+      [
+        -1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      [
+        -1,
+        -1,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        -2,
+        -3
+      ]
+    ],
+    "meaning": "M*c is the exact coefficient vector of the proved family mean",
+    "rows": [
+      "q^-1",
+      "q^-2",
+      "q^-3",
+      "q^-4",
+      "q^-5"
+    ]
+  },
+  "distinguished_detectors": [
+    {
+      "basis_vector": [
+        0,
+        1,
+        -1,
+        0,
+        0
+      ],
+      "character_combination": "1*chi_(2,0) -1*chi_(0,2)",
+      "l1_support": 2,
+      "leading_power": 1,
+      "mean_coefficients_q^-1_through_q^-5": [
+        1,
+        0,
+        1,
+        -1,
+        1
+      ],
+      "name": "balanced_symmetry_detector_B"
+    },
+    {
+      "basis_vector": [
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "character_combination": "1*chi_(0,1) -1*chi_(0,2)",
+      "l1_support": 2,
+      "leading_power": 2,
+      "mean_coefficients_q^-1_through_q^-5": [
+        0,
+        1,
+        0,
+        -1,
+        1
+      ],
+      "name": "first_q^-2_cancellation"
+    },
+    {
+      "basis_vector": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "character_combination": "1*chi_(2,0)",
+      "l1_support": 1,
+      "leading_power": 3,
+      "mean_coefficients_q^-1_through_q^-5": [
+        0,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "name": "first_q^-3_cancellation"
+    },
+    {
+      "basis_vector": [
+        0,
+        -2,
+        0,
+        1,
+        0
+      ],
+      "character_combination": "-2*chi_(2,0) +1*chi_(2,1)",
+      "l1_support": 3,
+      "leading_power": 4,
+      "mean_coefficients_q^-1_through_q^-5": [
+        0,
+        0,
+        0,
+        1,
+        -2
+      ],
+      "name": "first_q^-4_cancellation"
+    },
+    {
+      "basis_vector": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "character_combination": "1*chi_(4,0)",
+      "l1_support": 1,
+      "leading_power": 5,
+      "mean_coefficients_q^-1_through_q^-5": [
+        0,
+        0,
+        0,
+        0,
+        -3
+      ],
+      "name": "first_q^-5_cancellation"
+    }
+  ],
+  "provenance": {
+    "frozen_atlas_commit": "10446e8ea9c55162c317810f63c1f7a379466459",
+    "source_hashes_lf_sha256": {
+      "all_q_moment_proof_note": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277",
+      "note": "d1720a5e6cde297355801b84914ce36284eda51f25b5969f809cffa208e4d40a",
+      "null_module_note": "831731d18f469100f95a80b857dc4aa0cb09caf3f6a6407cec9cdc81e453903c",
+      "producer": "7e0b10365ae3f4ddd177106887637ccfd6e6eed6b8408281bc63957778eb5a5c",
+      "test": "a7c494c22155e3981bbd4e2ead7570ebe1ce1578cb66af594a7e7f8c89a93d2f",
+      "upstream_character_means": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935"
+    },
+    "work_units": {
+      "filtration_levels": 6,
+      "finite_field_candidates": 0,
+      "matrix_entries": 25
+    }
+  },
+  "schema": "riemann.function_field.genus2_detector_boundary_quotient.v1",
+  "scope": {
+    "character_lattice": [
+      "chi_(0,1)",
+      "chi_(2,0)",
+      "chi_(0,2)",
+      "chi_(2,1)",
+      "chi_(4,0)"
+    ],
+    "cohomological_identification": false,
+    "family": "all monic squarefree quintics over F_q, q an odd prime power",
+    "finite_field_enumeration": false,
+    "random_sampling": false,
+    "rh_or_grh_implication": false
+  },
+  "separation_firewalls": {
+    "B": "B=chi_(2,0)-chi_(0,2) has an exactly symmetric USp(4) Haar law, but its arithmetic mean begins at q^-1; compact symmetry and finite-q boundary suppression are different design constraints.",
+    "R6": "R6 is outside the proved low-weight lattice.  The quotient does not evaluate mean(R6), identify a Siegel form, or turn the q=3,5,7 values into an all-q theorem."
+  },
+  "smallest_next_theorem": "Extend the exact boundary matrix by one independently proved high-weight mean (preferably chi_(0,3) or R6), then recompute the saturated filtration.",
+  "status": "EXACT_ALL_ODD_Q_LOW_WEIGHT_BOUNDARY_FILTRATION",
+  "theorems": {
+    "boundary_filtration": [
+      {
+        "basis_labels": [
+          "1*chi_(0,1)",
+          "1*chi_(2,0)",
+          "1*chi_(0,2)",
+          "1*chi_(2,1)",
+          "1*chi_(4,0)"
+        ],
+        "basis_vectors": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "definition": "F^1={D: mean_q(D)=O(q^-1)}",
+        "order": 1,
+        "rank": 5
+      },
+      {
+        "basis_labels": [
+          "1*chi_(2,0)",
+          "1*chi_(0,1) -1*chi_(0,2)",
+          "1*chi_(2,1)",
+          "1*chi_(4,0)"
+        ],
+        "basis_vectors": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "definition": "F^2={D: mean_q(D)=O(q^-2)}",
+        "order": 2,
+        "rank": 4
+      },
+      {
+        "basis_labels": [
+          "1*chi_(2,0)",
+          "1*chi_(2,1)",
+          "1*chi_(4,0)"
+        ],
+        "basis_vectors": [
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "definition": "F^3={D: mean_q(D)=O(q^-3)}",
+        "order": 3,
+        "rank": 3
+      },
+      {
+        "basis_labels": [
+          "2*chi_(2,0) -1*chi_(2,1)",
+          "1*chi_(4,0)"
+        ],
+        "basis_vectors": [
+          [
+            0,
+            2,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "definition": "F^4={D: mean_q(D)=O(q^-4)}",
+        "order": 4,
+        "rank": 2
+      },
+      {
+        "basis_labels": [
+          "1*chi_(4,0)"
+        ],
+        "basis_vectors": [
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "definition": "F^5={D: mean_q(D)=O(q^-5)}",
+        "order": 5,
+        "rank": 1
+      },
+      {
+        "basis_labels": [],
+        "basis_vectors": [],
+        "definition": "F^6={D: mean_q(D)=O(q^-6)}",
+        "order": 6,
+        "rank": 0
+      }
+    ],
+    "cokernel": {
+      "image_congruence": "m1-m2-2*m3-2*m4-m5 == 0 (mod 3)",
+      "inverse": {
+        "c_01": "m2",
+        "c_02": "-m1-m2",
+        "c_20": "-2*m2-m3-2*m4",
+        "c_21": "m2+m3+m4",
+        "c_40": "(m1-m2-2*m3-2*m4-m5)/3"
+      },
+      "order": 3,
+      "smith_invariants": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    "injectivity": {
+      "determinant": 3,
+      "statement": "No nonzero detector in the declared low-weight lattice has identically zero family mean for every odd prime power q."
+    },
+    "interpretation": "Each successive q^-j boundary channel removes exactly one rank. The unique line surviving cancellation through q^-4 is chi_(4,0), whose exact mean is -3*q^-5.",
+    "rank_sequence_F1_through_F6": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ]
+  }
+}
