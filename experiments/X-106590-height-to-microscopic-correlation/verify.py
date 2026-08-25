@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Finite exact replay for T-106590.
+"""Finite exact replay for T-106590/L-106591.
 
-Checks only finite algebra and exact constants.  It does not replay Selberg's
-analytic theorem or prove ENDLOC106590, SHALLOWCORR106590, 90%, density one or
-RH.
+Checks finite algebra and exact constants. It does not replay Selberg's
+analytic theorem or the regular-window Rouché argument, and does not prove
+SHALLOWCORR106591, 90%, density one or RH.
 """
 
 from __future__ import annotations
@@ -91,6 +91,7 @@ def determinant(matrix: list[list[Poly]]) -> Poly:
 
 
 def main() -> dict[str, object]:
+    # Finite-alpha determinant lemma.
     roots = [g(2, 1), g(-1, 2), g(3, -1), g(-2, -2)]
     n = len(roots)
     lam = Fraction(2, 7)
@@ -107,31 +108,55 @@ def main() -> dict[str, object]:
         matrix.append(current)
     assert determinant(matrix) == padd(p, pscale(dp, g(0, lam)))
 
+    # Functional-equation layer cake fixture.
     betas = [Fraction(1, 2), Fraction(3, 5), Fraction(2, 5),
              Fraction(7, 10), Fraction(3, 10)]
     mass = sum(abs(beta - Fraction(1, 2)) for beta in betas)
     layer = 2 * sum(beta - Fraction(1, 2) for beta in betas if beta > Fraction(1, 2))
     assert mass == layer == Fraction(3, 5)
 
+    # Deep count <= first height moment / eta.
     heights = [Fraction(1, 100), Fraction(2, 100),
                Fraction(9, 100), Fraction(20, 100)]
     eta = Fraction(5, 100)
     assert sum(height > eta for height in heights) <= sum(heights) / eta
 
-    assert Fraction(997, 1000) - Fraction(9, 10) == Fraction(97, 1000)
-    assert Fraction(997, 1000) - Fraction(19, 20) == Fraction(47, 1000)
+    # Exact fifth-endpoint budgets.
+    fifth_height = Fraction(3, 4000)
+    ninety_allowance = Fraction(997, 1000) - Fraction(9, 10)
+    eta_ninety = Fraction(1, 100)
+    deep_ninety = fifth_height / eta_ninety
+    shallow_ninety = ninety_allowance - deep_ninety
+    assert ninety_allowance == Fraction(97, 1000)
+    assert deep_ninety == Fraction(3, 40)
+    assert shallow_ninety == Fraction(11, 500)
+
+    ninety_five_allowance = Fraction(997, 1000) - Fraction(19, 20)
+    eta_ninety_five = Fraction(1, 50)
+    deep_ninety_five = fifth_height / eta_ninety_five
+    shallow_ninety_five = ninety_five_allowance - deep_ninety_five
+    assert ninety_five_allowance == Fraction(47, 1000)
+    assert deep_ninety_five == Fraction(3, 80)
+    assert shallow_ninety_five == Fraction(19, 2000)
 
     result: dict[str, object] = {
-        "schema": "riemann.x106590.height-microscopic-correlation.v1",
-        "classification": "PASS_T106590_HEIGHT_TO_MICROSCOPIC_CORRELATION",
+        "schema": "riemann.x106590.height-microscopic-correlation.v2",
+        "classification": "PASS_T106590_HEIGHT_TO_SHALLOW_CORRELATION_REDUCTION",
         "layer_cake_fixture_checked": True,
         "finite_alpha_determinant_checked": True,
         "deep_height_rank_bound_checked": True,
         "cosine_microscopic_firewall_checked": True,
-        "ninety_threshold": "97/1000",
-        "ninety_five_threshold": "47/1000",
-        "endloc106590_proved": False,
-        "shallowcorr106590_proved": False,
+        "fifth_derivative_height_budget": "3/4000",
+        "ninety_eta": "1/100",
+        "ninety_deep_budget": "3/40",
+        "ninety_shallow_budget": "11/500",
+        "ninety_five_eta": "1/50",
+        "ninety_five_deep_budget": "3/80",
+        "ninety_five_shallow_budget": "19/2000",
+        "selberg_analytic_replayed": False,
+        "rouche_cofinal_argument_replayed": False,
+        "endloc106590_analytic_claim_status": "PROVED_NOT_REPLAYED",
+        "shallowcorr106591_proved": False,
         "ninety_percent_established": False,
         "density_one_established": False,
         "rh_established": False,
