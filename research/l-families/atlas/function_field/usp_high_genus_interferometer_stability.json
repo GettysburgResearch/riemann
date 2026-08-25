@@ -1,0 +1,251 @@
+{
+  "schema": "riemann.function_field.usp_high_genus_interferometer_stability.v1",
+  "status": "EXACT_COMPACT_HAAR_CONSEQUENCES_OF_IMPORTED_STABLE_RANGE_THEOREM",
+  "scope": {
+    "group": "Haar USp(2g)",
+    "observable": "p_j=Tr(U^j), I_(r,s)=p_r*p_s-p_(r+s)",
+    "arithmetic_claims": false,
+    "novelty_claim": false,
+    "not_claimed": [
+      "arithmetic increasing-genus equidistribution",
+      "subgroup or endomorphism diagnosis for a family member",
+      "a zero-statistics theorem",
+      "an RH or GRH consequence"
+    ]
+  },
+  "literature_dependency": {
+    "authors": "Alexei Entin and Noam Pirani",
+    "title": "Moments of traces of random symplectic matrices and hyperelliptic L-functions",
+    "identifier": "arXiv:2409.04844v1",
+    "url": "https://arxiv.org/abs/2409.04844",
+    "location": "equation (1.4), equation (1.6), and the following paragraph",
+    "imported_theorem": "for weighted degree sum_j j*a_j <= 2g+1, Haar USp(2g) trace moments equal those of independent Z_j=sqrt(j)X_j-eta_j",
+    "eta": "eta_j=1 for even j and 0 for odd j",
+    "proof_status": "imported, not reproved by this packet"
+  },
+  "source_locked_genus_two_packet": {
+    "source_commit": "6b1154e2589ba1108fc69dcb69e15199599c01cb",
+    "files": {
+      "note": {
+        "path": "research/l-families/atlas/function_field/FROBENIUS_INTERFEROMETRY_SUBGROUP_SELECTORS.md",
+        "sha256_lf_normalized": "c7637d454f1fb102555e6723dd8d93a4b6a27363d80cbbb9a03061f614bd3221"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/frobenius_interferometry_subgroup_selectors.py",
+        "sha256_lf_normalized": "48474ebcbb99efea23227126f66f566fdb525a3c9ae9e81a77bf83d4075f55e7"
+      },
+      "test": {
+        "path": "tests/test_frobenius_interferometry_subgroup_selectors.py",
+        "sha256_lf_normalized": "9751e1f971cf484db88d7267ec28ed05a7b000a9ffd425ac4af3b392ca714897"
+      }
+    },
+    "replayed_USp4": {
+      "selector_means": [
+        0,
+        0,
+        0
+      ],
+      "selector_covariance": [
+        [
+          24,
+          -20,
+          4
+        ],
+        [
+          -20,
+          48,
+          0
+        ],
+        [
+          4,
+          0,
+          40
+        ]
+      ],
+      "inverse_pool_means": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_accounted_operations": 2919
+    }
+  },
+  "stable_interferometer_mean_theorem": {
+    "formula": "E[I_(r,s)]=r*1_(r=s)+eta_r*eta_s+eta_(r+s)",
+    "validity": "exact whenever r+s<=2g+1",
+    "derivation": "E[p_r p_s]=r*1_(r=s)+eta_r*eta_s and E[p_(r+s)]=-eta_(r+s) under the imported independent shifted-Gaussian law"
+  },
+  "selectors": {
+    "order": [
+      "P",
+      "D",
+      "S"
+    ],
+    "definitions": {
+      "P": "I_(2,2)-I_(4,4)",
+      "D": "-I_(1,1)+2*I_(1,5)+I_(4,4)",
+      "S": "-2*I_(2,8)"
+    },
+    "USp4_means": [
+      0,
+      0,
+      0
+    ],
+    "stable_means": [
+      -2,
+      6,
+      -4
+    ],
+    "mean_stable_from_genus": {
+      "P": 4,
+      "D": 4,
+      "S": 5
+    },
+    "interpretation": "the genus-two ambient-null calibration is exceptional: the same raw trace packets acquire nonzero universal ambient means in the exact high-genus stable range",
+    "stable_second_moment_matrix": [
+      [
+        64,
+        -64,
+        16
+      ],
+      [
+        -64,
+        140,
+        -36
+      ],
+      [
+        16,
+        -36,
+        160
+      ]
+    ],
+    "whole_second_moment_matrix_stable_from_genus": 10,
+    "stable_covariance_matrix": [
+      [
+        60,
+        -52,
+        8
+      ],
+      [
+        -52,
+        104,
+        -12
+      ],
+      [
+        8,
+        -12,
+        144
+      ]
+    ],
+    "covariance_entrywise_stable_from_genus": [
+      [
+        8,
+        8,
+        9
+      ],
+      [
+        8,
+        8,
+        9
+      ],
+      [
+        9,
+        9,
+        10
+      ]
+    ],
+    "whole_covariance_stable_from_genus": 10,
+    "covariance_positive_definite_leading_minors": [
+      60,
+      3536,
+      503872
+    ]
+  },
+  "inverse_raw_pool": {
+    "order": [
+      "I_1_7",
+      "I_1_9",
+      "I_2_4",
+      "I_2_8"
+    ],
+    "definitions": {
+      "I_1_7": "I_(1,7)",
+      "I_1_9": "I_(1,9)",
+      "I_2_4": "I_(2,4)",
+      "I_2_8": "I_(2,8)"
+    },
+    "USp4_means": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "stable_means": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "all_pool_means_stable_from_genus": 5,
+    "winner": {
+      "coefficients": [
+        2,
+        4,
+        -1,
+        1
+      ],
+      "definition": "2*I_(1,7)+4*I_(1,9)-I_(2,4)+I_(2,8)",
+      "USp4_mean": 0,
+      "stable_mean": 6,
+      "stable_from_genus": 5
+    },
+    "simultaneous_USp4_and_stable_null_lattice": {
+      "equation": "c1+c2+2*c3+2*c4=0",
+      "primitive_Z_basis_rows": [
+        [
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          -2,
+          0,
+          1,
+          0
+        ],
+        [
+          -2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "rank": 3,
+      "scope": "mean-null only; not pointwise or L2-null"
+    }
+  },
+  "resource_contract": {
+    "arithmetic": "exact integers only",
+    "randomness": false,
+    "floating_point": false,
+    "finite_field_or_curve_enumeration": false,
+    "Wick_contraction_branch_cap": 4096,
+    "Wick_contraction_branches_used": 65,
+    "Wick_ledger": {
+      "Wick_contraction_branches": 65
+    },
+    "maximum_trace_factors_in_one_monomial": 4
+  },
+  "producer": {
+    "script": "usp_high_genus_interferometer_stability.py",
+    "source_sha256_lf_normalized": "cec434ded553f425636d32fd152d9810e7f4dfbc0eb780f080f5708fd20dc569",
+    "note": "USP_HIGH_GENUS_INTERFEROMETER_STABILITY.md",
+    "note_sha256_lf_normalized": "8c56bfff50fd2395517c4081f416d118507b8a320ee656bd79d61f466b87e1de",
+    "test": "tests/test_usp_high_genus_interferometer_stability.py",
+    "test_sha256_lf_normalized": "2c9b6b5fdba500d84b8eec0dd8a42208d97a2a20fda53e8a0a9dd2537ba5e666"
+  },
+  "firewall": "Every new value is a compact Haar consequence of an imported stable-range theorem. No arithmetic family, increasing-genus limit, subgroup classification, zero law, RH, or GRH statement follows.",
+  "payload_sha256": "6f2893c8e62b836afbca99bb2fae4dfb57c4b24c8963d2cf0981b052dcb2f4ee"
+}
