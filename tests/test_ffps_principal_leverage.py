@@ -52,6 +52,10 @@ class FFPSPrincipalLeverageTests(unittest.TestCase):
 
     def test_tensor_and_positive_block_assembly_are_different(self) -> None:
         self.assertEqual(subject.tensor_leverage_squared((3, 5)), Fraction(1, 3))
+        for primes in ((3,), (3, 5), (3, 5, 7, 11)):
+            tensor, mertens, zeta_two = subject.finite_tensor_mertens_identity(primes)
+            self.assertEqual(tensor, subject.tensor_leverage_squared(primes))
+            self.assertEqual(tensor, mertens * mertens / zeta_two)
         self.assertEqual(
             subject.positive_block_leverage_squared((3, 5), (1, 1)),
             Fraction(7, 6),
@@ -64,6 +68,10 @@ class FFPSPrincipalLeverageTests(unittest.TestCase):
                 ),
                 count * Fraction(prime - 1, prime + 1),
             )
+        with self.assertRaises(ValueError):
+            subject.finite_tensor_mertens_identity(())
+        with self.assertRaises(ValueError):
+            subject.finite_tensor_mertens_identity((3, 3))
 
     def test_collision_lines_match_direct_equations(self) -> None:
         aggregate = 0

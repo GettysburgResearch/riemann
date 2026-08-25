@@ -160,6 +160,7 @@
     ]
   },
   "principal_leverage_theorem": {
+    "finite_mertens_factorization": "product_i (p_i-1)/(p_i+1) = product_i (1-1/p_i)^2 / product_i (1-1/p_i^2)",
     "local_formula": "||O_p||^2=(p-1)/(p+1)",
     "local_spectra": [
       {
@@ -461,6 +462,27 @@
       }
     ],
     "no_go": "A block-diagonal positive sum of locally sharp Kummer frames supplies no cross-conductor saving; with unit weights its leverage grows as the sum of the local leverages. Any improvement must use coherent cross-fibre structure before the fibres are positively squared.",
+    "odd_prime_prefix_asymptotic": "product_(3<=p<=x) (p-1)/(p+1) is asymptotic to 3*zeta(2)*exp(-2*EulerGamma)/(log x)^2 by the classical Mertens product theorem",
+    "odd_prime_prefix_example": {
+      "mertens_product": [
+        32,
+        77
+      ],
+      "primes": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "tensor_leverage_squared": [
+        5,
+        24
+      ],
+      "zeta_two_partial_product": [
+        24576,
+        29645
+      ]
+    },
     "positive_block_formula": "||sum_i alpha_i O_i||^2=sum_i |alpha_i|^2 (p_i-1)/(p_i+1)",
     "tensor_formula": "for distinct marked phases, squared leverage is product_i (p_i-1)/(p_i+1)",
     "two_fibre_example_primes_3_5": [
@@ -469,16 +491,16 @@
     ]
   },
   "provenance": {
-    "note_sha256_lf": "8b7497599c241da8886ce73d5b7d3bad5e9b478691434b0030d8eda9c8a10d6f",
-    "producer_sha256_lf": "e591f79adfe75f1d0f1e4224ef2c679040b903206616ce1ae65197e6c739b099",
+    "note_sha256_lf": "6b3a0958422f01b44b7702b1088f4e13926d5d11a7725bde2582cd2d371b07e6",
+    "producer_sha256_lf": "fb5804df87ca36b74299de004f83b1fcd79ae7ffb36fc1f45484bff5efaae7e3",
     "resource_caps": {
       "aggregate_atoms_used": 312,
       "maximum_collision_atoms": 4096,
       "maximum_prime_control": 127
     },
-    "test_sha256_lf": "0a921e749a9e9175a69d7e365defc697002d74a3d2d1e17dfb716be9b26680c8"
+    "test_sha256_lf": "ce253f44333ef44f2b7ca08ad3190231f093f8c9bffbb0535f1640949dfa3ad8"
   },
-  "schema": "riemann.function_field.ffps_principal_leverage.v1",
+  "schema": "riemann.function_field.ffps_principal_leverage.v2",
   "scope": {
     "finite_field_extension_claim": "the operator and line proofs are algebraic for every odd finite residue field; only the tiny replays are prime-field",
     "global_moment_proved": false,

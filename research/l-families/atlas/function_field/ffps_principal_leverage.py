@@ -107,6 +107,33 @@ def tensor_leverage_squared(primes: Sequence[int]) -> Fraction:
     return result
 
 
+def finite_tensor_mertens_identity(
+    primes: Sequence[int],
+) -> tuple[Fraction, Fraction, Fraction]:
+    """Return the two sides of the exact finite Mertens factorization.
+
+    For a set of distinct odd primes,
+
+        product (p-1)/(p+1)
+        = product (1-1/p)^2 / product (1-1/p^2).
+    """
+
+    prime_tuple = tuple(primes)
+    if not prime_tuple or len(set(prime_tuple)) != len(prime_tuple):
+        raise ValueError("a nonempty set of distinct odd primes is required")
+    tensor = tensor_leverage_squared(prime_tuple)
+    mertens_product = Fraction(1)
+    zeta_two_partial = Fraction(1)
+    for prime in prime_tuple:
+        sign_pair_dimension(prime)
+        mertens_product *= Fraction(prime - 1, prime)
+        zeta_two_partial *= Fraction(prime * prime - 1, prime * prime)
+    reconstructed = mertens_product * mertens_product / zeta_two_partial
+    if reconstructed != tensor:
+        raise ArithmeticError("finite tensor Mertens factorization failed")
+    return tensor, mertens_product, zeta_two_partial
+
+
 def positive_block_leverage_squared(
     primes: Sequence[int], weights: Sequence[Fraction | int]
 ) -> Fraction:
@@ -290,9 +317,13 @@ def build_fixture() -> dict[str, object]:
     direct_sum_example = positive_block_leverage_squared((3, 5), (1, 1))
     if direct_sum_example != Fraction(7, 6):
         raise ArithmeticError("two-fibre positive assembly control drifted")
+    tensor_prefix_primes = (3, 5, 7, 11)
+    tensor_prefix, mertens_prefix, zeta_two_prefix = finite_tensor_mertens_identity(
+        tensor_prefix_primes
+    )
 
     return {
-        "schema": "riemann.function_field.ffps_principal_leverage.v1",
+        "schema": "riemann.function_field.ffps_principal_leverage.v2",
         "status": "EXACT_LOCAL_OPERATOR_AND_FINITE_PHYSICAL_SQUARECLASS_CONTROLS",
         "source_frontier": {
             "pr": 751,
@@ -324,6 +355,30 @@ def build_fixture() -> dict[str, object]:
             "local_formula": "||O_p||^2=(p-1)/(p+1)",
             "local_spectra": local_rows,
             "tensor_formula": "for distinct marked phases, squared leverage is product_i (p_i-1)/(p_i+1)",
+            "finite_mertens_factorization": (
+                "product_i (p_i-1)/(p_i+1) = "
+                "product_i (1-1/p_i)^2 / product_i (1-1/p_i^2)"
+            ),
+            "odd_prime_prefix_example": {
+                "primes": list(tensor_prefix_primes),
+                "tensor_leverage_squared": [
+                    tensor_prefix.numerator,
+                    tensor_prefix.denominator,
+                ],
+                "mertens_product": [
+                    mertens_prefix.numerator,
+                    mertens_prefix.denominator,
+                ],
+                "zeta_two_partial_product": [
+                    zeta_two_prefix.numerator,
+                    zeta_two_prefix.denominator,
+                ],
+            },
+            "odd_prime_prefix_asymptotic": (
+                "product_(3<=p<=x) (p-1)/(p+1) is asymptotic to "
+                "3*zeta(2)*exp(-2*EulerGamma)/(log x)^2 by the classical "
+                "Mertens product theorem"
+            ),
             "positive_block_formula": "||sum_i alpha_i O_i||^2=sum_i |alpha_i|^2 (p_i-1)/(p_i+1)",
             "two_fibre_example_primes_3_5": [
                 direct_sum_example.numerator,

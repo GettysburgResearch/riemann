@@ -97,6 +97,30 @@ multiplies:
 This tensor statement must not be confused with a positive sum over varying
 conductor fibres.
 
+The tensor contraction has an exact classical scale.  For any finite set of
+distinct odd primes,
+
+\[
+ \prod_p{p-1\over p+1}
+ ={\prod_p(1-p^{-1})^2\over\prod_p(1-p^{-2})}.
+\tag{2a}
+\]
+
+Consequently Mertens' product theorem gives
+
+\[
+ \boxed{
+ \prod_{3\le p\le x}{p-1\over p+1}
+ \sim {3\zeta(2)e^{-2\gamma}\over(\log x)^2}.}
+\tag{2b}
+\]
+
+Thus full coherent tensorization does produce a contraction, but only a
+logarithmic one.  It is not free: the source must retain the joint tensor
+coordinates before squaring, and the exceptional ledger and varying-core
+arithmetic still have to survive that assembly.  Formula (2b) is therefore a
+quantitative amplifier target, not a global FFPS bound.
+
 ## 3. Positive fibre assembly is an exact no-go model
 
 Put the local phase spaces in an orthogonal direct sum and observe
