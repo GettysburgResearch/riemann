@@ -1,0 +1,1021 @@
+{
+  "firewalls": [
+    "Theta_(k,Gamma0(2)) is the full cusp-space trace with old/new multiplicity, not automatically one newform coefficient.",
+    "The q=3,5,7 enumerations occur only after the symbolic theorem and form expansions close; they are not proof inputs.",
+    "The q=9 rows use Frobenius-power traces and no F_9 enumeration.",
+    "No novelty claim is made for the modular trace or moment formulas.",
+    "This family theorem makes no RH, GRH, memberwise sign, motive, compatible-system, or global Euler-product claim."
+  ],
+  "held_out_finite_regressions": [
+    {
+      "J_10_difference": 0,
+      "J_8_difference": 0,
+      "candidate_cubics": 27,
+      "observed_J_10": 6144,
+      "observed_J_8": 1536,
+      "q": 3,
+      "squarefree_cubics": 18,
+      "status": "HELD_OUT_FINITE_REGRESSION_NOT_THEOREM_INPUT",
+      "theorem_J_10": 6144,
+      "theorem_J_8": 1536
+    },
+    {
+      "J_10_difference": 0,
+      "J_8_difference": 0,
+      "candidate_cubics": 125,
+      "observed_J_10": 10536960,
+      "observed_J_8": 668160,
+      "q": 5,
+      "squarefree_cubics": 100,
+      "status": "HELD_OUT_FINITE_REGRESSION_NOT_THEOREM_INPUT",
+      "theorem_J_10": 10536960,
+      "theorem_J_8": 668160
+    },
+    {
+      "J_10_difference": 0,
+      "J_8_difference": 0,
+      "candidate_cubics": 343,
+      "observed_J_10": 88166400,
+      "observed_J_8": 5526528,
+      "q": 7,
+      "squarefree_cubics": 294,
+      "status": "HELD_OUT_FINITE_REGRESSION_NOT_THEOREM_INPUT",
+      "theorem_J_10": 88166400,
+      "theorem_J_8": 5526528
+    }
+  ],
+  "modular_form_certificate": {
+    "delta_coefficients_tau_0_through_tau_9": [
+      0,
+      1,
+      -24,
+      252,
+      -1472,
+      4830,
+      -6048,
+      -16744,
+      84480,
+      -113643
+    ],
+    "dimension_argument": "multiplication by f identifies M_k(Gamma0(2)) with S_(k+8)(Gamma0(2)); dimensions through 12 are 1,1,2, and the two independent Delta degeneracy maps exhaust weight 12",
+    "f_coefficients_c_0_through_c_9": [
+      0,
+      1,
+      -8,
+      12,
+      64,
+      -210,
+      -96,
+      1016,
+      -512,
+      -2043
+    ],
+    "g_coefficients_d_0_through_d_9": [
+      0,
+      1,
+      16,
+      -156,
+      256,
+      870,
+      -2496,
+      -952,
+      4096,
+      4653
+    ],
+    "q_9_prime_power_traces": {
+      "Theta_(12,Gamma0(2))(9)": -581580,
+      "Theta_Delta(9)": -290790,
+      "Theta_f(9)": -4230,
+      "Theta_g(9)": -15030,
+      "Theta_g_identity": "4653-3^9=-15030"
+    },
+    "required_g_coefficients": {
+      "g_3": -156,
+      "g_5": 870,
+      "g_7": -952,
+      "g_9": 4653
+    },
+    "spaces_through_weight_12": [
+      {
+        "full_cusp_dimension": 0,
+        "new_dimension": 0,
+        "old_dimension": 0,
+        "trace": "0",
+        "weight": 4
+      },
+      {
+        "full_cusp_dimension": 0,
+        "new_dimension": 0,
+        "old_dimension": 0,
+        "trace": "0",
+        "weight": 6
+      },
+      {
+        "basis": "f=eta(z)^8*eta(2z)^8",
+        "full_cusp_dimension": 1,
+        "new_dimension": 1,
+        "old_dimension": 0,
+        "trace": "Theta_f(q)",
+        "weight": 8
+      },
+      {
+        "basis": "g=f*(2*E_2(2z)-E_2(z))",
+        "full_cusp_dimension": 1,
+        "new_dimension": 1,
+        "old_dimension": 0,
+        "trace": "Theta_g(q)",
+        "weight": 10
+      },
+      {
+        "basis": "Delta(z), Delta(2z)",
+        "full_cusp_dimension": 2,
+        "new_dimension": 0,
+        "old_dimension": 2,
+        "trace": "2*Theta_Delta(q)",
+        "weight": 12
+      }
+    ],
+    "weight2_coefficients_h_0_through_h_9": [
+      1,
+      24,
+      24,
+      96,
+      24,
+      144,
+      96,
+      192,
+      24,
+      312
+    ]
+  },
+  "packet_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/GENUS1_MARKED_2TORSION_MOMENT_TOWER.md",
+      "sha256_lf_normalized": "bca19ccd65ded25a87d2a13e3347d313498f78bd5f61b7953c37734e0bee921b"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus1_marked_2torsion_moment_tower.py",
+      "sha256_lf_normalized": "ce212a5122cd103adbe271bc0319e5d8e93f72bd9016c07ad98cb9b82f745413"
+    },
+    {
+      "path": "tests/test_genus1_marked_2torsion_moment_tower.py",
+      "sha256_lf_normalized": "247dbd2ee2695542755ea0dbb305b0ee8a3cafdb51f4af046bcf0e19fe0f792f"
+    }
+  ],
+  "payload_sha256": "d6861d94296bd37bba503f87cfa4b00b51a3a2d4f62ae01c707cc45a08588cde",
+  "primary_source_ledger": [
+    {
+      "audited_pdf_sha256": "7daefa84d961d59079c67b7efc3e1086b5e4294672d295694e6eff18aa733000",
+      "author": "Kai A. Behrend",
+      "journal": "Inventiones Mathematicae 112 (1993), 127-149",
+      "role": "stack-weighted Grothendieck--Lefschetz trace formula, Theorem 1.0.1",
+      "title": "The Lefschetz trace formula for algebraic stacks",
+      "url": "https://personal.math.ubc.ca/~behrend/ladic.pdf"
+    },
+    {
+      "audited_pdf_sha256": "b3a28690b3ba4aff316ac52ea7003cca8da757bfa309b75a9aba9557a134def6",
+      "author": "A. J. Scholl",
+      "journal": "Inventiones Mathematicae 100 (1990), 419-430",
+      "role": "ell-adic Galois representation and good-prime Frobenius polynomial, Theorem 1.2.4(i); Section 4.2 covers levels below three",
+      "title": "Motives for modular forms",
+      "url": "https://www.dpmms.cam.ac.uk/~ajs1005/preprints/mf.pdf"
+    },
+    {
+      "authors": "Nathan C. Ryan, Nicolas Sirolli, Jean Carlos Villegas-Morales, and Qi-Yang Zheng",
+      "journal": "The Ramanujan Journal 65 (2024), 1631-1649",
+      "role": "Proposition 2.6 proves that Delta_2=eta(z)^8*eta(2z)^8 has simple zeros at the two cusps and that multiplication by Delta_2 identifies M_k(Gamma_0(2)) with S_(k+8)(Gamma_0(2))",
+      "title": "Explicit families of congruences for the overpartition function",
+      "url": "https://doi.org/10.1007/s11139-024-00953-z"
+    },
+    {
+      "audited_pdf_sha256": "3dd6a2e984a7763f9d702c867ef9f90700f065e81f31fe995fa0cf2df97fb6ea",
+      "authors": "Nathan Kaplan and Ian Petrow",
+      "journal": "Proceedings of the London Mathematical Society 115 (2017), 1317-1372",
+      "role": "prime-power elliptic-curve/Chebyshev moments with prescribed torsion and congruence-subgroup Hecke traces",
+      "title": "Elliptic curves over a finite field and the trace formula",
+      "url": "https://arxiv.org/abs/1510.03980"
+    },
+    {
+      "audited_pdf_sha256": "6a936be3e156822ac01e1f1b68c34a29fbd911552448e5300d978cfee13fdfeb",
+      "authors": "Nathan Kaplan and Ian Petrow",
+      "journal": "Transactions of the American Mathematical Society 370 (2018), 2537-2561",
+      "role": "Theorems 8-9 give an independent all-prime-power prescribed-2-torsion moment check; the marked combination cancels the Gamma_0(4) channel",
+      "title": "Traces of Hecke operators and refined weight enumerators of Reed-Solomon codes",
+      "url": "https://arxiv.org/abs/1506.04440"
+    },
+    {
+      "audited_pdf_sha256": "bfb3b23f27420cc89f531feb7381ca5663226dad429e62e9ef75bf57c189f13c",
+      "authors": "B. Ramakrishnan and Brundaban Sahu",
+      "role": "defines eta(z)^8*eta(2z)^8 and states that it is the unique normalized weight-eight level-two newform; gives the M_8 basis",
+      "title": "On the number of representations of an integer by certain quadratic forms in sixteen variables",
+      "url": "https://www.niser.ac.in/~brundaban.sahu/convolution-16.pdf"
+    }
+  ],
+  "q_9_consequences": {
+    "J_10": 2328145920,
+    "J_10_over_q_q_minus_1": 32335360,
+    "J_8": 69995520,
+    "J_8_over_q_q_minus_1": 972160,
+    "q": 9,
+    "status": "THEOREM_CONSEQUENCE_NOT_FIELD_ENUMERATION"
+  },
+  "resource_contract": {
+    "actual_candidate_cubics": 495,
+    "actual_exact_operations": 5708,
+    "actual_operations_after_symbolic_theorem": 4021,
+    "actual_operations_before_controls": 5708,
+    "actual_point_evaluations": 2612,
+    "arithmetic": "exact integers and finite polynomial recurrences",
+    "enumerated_fields": [
+      3,
+      5,
+      7
+    ],
+    "maximum_candidate_cubics": 495,
+    "maximum_exact_operations": 16384,
+    "maximum_fourier_degree": 9,
+    "maximum_point_evaluations": 3000,
+    "maximum_wall_seconds": 5.0,
+    "q_9_field_enumerated": false
+  },
+  "schema": "riemann.genus1_marked_2torsion_moment_tower.v1",
+  "source_manifest": [
+    {
+      "commit": "955ea1e25160075fb4b498018319c80f7e4db9d5",
+      "id": "genus1_cubic_family_laws",
+      "json_git_blob": "49cde8d3a1881d0d626e4f288abc53f370a33244",
+      "json_path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+      "json_sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227",
+      "note_git_blob": "c6c9c24d941c25846a2252436e9cd3efd25295fd",
+      "note_path": "research/l-families/atlas/function_field/GENUS1_CUBIC_FAMILY_LAWS.md",
+      "note_sha256_lf_normalized": "aad40573c6378c919ee6659bcd1c4b89a8981621c61feb0dcde9911d127c6b9f",
+      "payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+      "role": "all-n SU(2) ballot decomposition and genus-one normalization"
+    },
+    {
+      "commit": "dc63f02d0897e10936ef0767a1c8e6f15ac49e06",
+      "id": "genus2_sym8_marked_trace_average",
+      "json_git_blob": "1dece87cbec2731f858e3dd38d2ceb0a96959d53",
+      "json_path": "research/l-families/atlas/function_field/genus2_sym8_marked_trace_average.json",
+      "json_sha256_lf_normalized": "a92700980ac7fef22f7a36db7b3d4d8bb7aa8d763904677e64bfca3182be0233",
+      "note_git_blob": "f882ff91ba28421cf20bfe806a28912c9df71f40",
+      "note_path": "research/l-families/atlas/function_field/GENUS2_SYM8_MARKED_TRACE_AVERAGE.md",
+      "note_sha256_lf_normalized": "96a31bef0bd1f38764c8fb09edcd4585bffb6eea88e8141bcaac0ca808d01939",
+      "payload_sha256": "423b8c37b69fb56b459beb7ebd9e6b94d12cf658f5819f7ac481e83560f5d0ae",
+      "role": "marked-model/Y_0(2) bridge and audited stack trace theorem"
+    }
+  ],
+  "status": "PROVED_ALL_ODD_PRIME_POWERS",
+  "theorem": {
+    "all_n_proof_mode": "Clebsch--Gordan induction plus the reflection-principle ballot multiplicity; finite symbolic rows are regression certificates",
+    "ballot_coefficient": "c(n,j)=binom(2n,n-j)-binom(2n,n-j-1)",
+    "definition": "J_(2n)(q)=sum_(h monic squarefree cubic) m1(h)*a_h^(2n)",
+    "explicit_rows_through_n_5": [
+      {
+        "character_channels": [],
+        "formula": "J_0=q*(q-1)*(q-1)",
+        "half_degree": 0,
+        "moment": 0,
+        "normalized_tate_polynomial_low_to_high": [
+          -1,
+          1
+        ]
+      },
+      {
+        "character_channels": [
+          {
+            "ballot_coefficient": 1,
+            "character_index": 1,
+            "full_cusp_space_dimension": 0,
+            "q_power": 0,
+            "trace": "Theta_(4,Gamma0(2))(q)",
+            "weight": 4
+          }
+        ],
+        "formula": "J_2=q*(q-1)*(q^2-q-2)",
+        "half_degree": 1,
+        "moment": 2,
+        "normalized_tate_polynomial_low_to_high": [
+          -2,
+          -1,
+          1
+        ]
+      },
+      {
+        "character_channels": [
+          {
+            "ballot_coefficient": 3,
+            "character_index": 1,
+            "full_cusp_space_dimension": 0,
+            "q_power": 1,
+            "trace": "Theta_(4,Gamma0(2))(q)",
+            "weight": 4
+          },
+          {
+            "ballot_coefficient": 1,
+            "character_index": 2,
+            "full_cusp_space_dimension": 0,
+            "q_power": 0,
+            "trace": "Theta_(6,Gamma0(2))(q)",
+            "weight": 6
+          }
+        ],
+        "formula": "J_4=q*(q-1)*(2*q^3-2*q^2-6*q-2)",
+        "half_degree": 2,
+        "moment": 4,
+        "normalized_tate_polynomial_low_to_high": [
+          -2,
+          -6,
+          -2,
+          2
+        ]
+      },
+      {
+        "character_channels": [
+          {
+            "ballot_coefficient": 9,
+            "character_index": 1,
+            "full_cusp_space_dimension": 0,
+            "q_power": 2,
+            "trace": "Theta_(4,Gamma0(2))(q)",
+            "weight": 4
+          },
+          {
+            "ballot_coefficient": 5,
+            "character_index": 2,
+            "full_cusp_space_dimension": 0,
+            "q_power": 1,
+            "trace": "Theta_(6,Gamma0(2))(q)",
+            "weight": 6
+          },
+          {
+            "ballot_coefficient": 1,
+            "character_index": 3,
+            "full_cusp_space_dimension": 1,
+            "q_power": 0,
+            "trace": "Theta_f(q)",
+            "weight": 8
+          }
+        ],
+        "formula": "J_6=q*(q-1)*(5*q^4-5*q^3-18*q^2-10*q-2-Theta_f(q))",
+        "half_degree": 3,
+        "moment": 6,
+        "normalized_tate_polynomial_low_to_high": [
+          -2,
+          -10,
+          -18,
+          -5,
+          5
+        ]
+      },
+      {
+        "character_channels": [
+          {
+            "ballot_coefficient": 28,
+            "character_index": 1,
+            "full_cusp_space_dimension": 0,
+            "q_power": 3,
+            "trace": "Theta_(4,Gamma0(2))(q)",
+            "weight": 4
+          },
+          {
+            "ballot_coefficient": 20,
+            "character_index": 2,
+            "full_cusp_space_dimension": 0,
+            "q_power": 2,
+            "trace": "Theta_(6,Gamma0(2))(q)",
+            "weight": 6
+          },
+          {
+            "ballot_coefficient": 7,
+            "character_index": 3,
+            "full_cusp_space_dimension": 1,
+            "q_power": 1,
+            "trace": "Theta_f(q)",
+            "weight": 8
+          },
+          {
+            "ballot_coefficient": 1,
+            "character_index": 4,
+            "full_cusp_space_dimension": 1,
+            "q_power": 0,
+            "trace": "Theta_g(q)",
+            "weight": 10
+          }
+        ],
+        "formula": "J_8=q*(q-1)*(14*q^5-14*q^4-56*q^3-40*q^2-14*q-2-7*q*Theta_f(q)-Theta_g(q))",
+        "half_degree": 4,
+        "moment": 8,
+        "normalized_tate_polynomial_low_to_high": [
+          -2,
+          -14,
+          -40,
+          -56,
+          -14,
+          14
+        ]
+      },
+      {
+        "character_channels": [
+          {
+            "ballot_coefficient": 90,
+            "character_index": 1,
+            "full_cusp_space_dimension": 0,
+            "q_power": 4,
+            "trace": "Theta_(4,Gamma0(2))(q)",
+            "weight": 4
+          },
+          {
+            "ballot_coefficient": 75,
+            "character_index": 2,
+            "full_cusp_space_dimension": 0,
+            "q_power": 3,
+            "trace": "Theta_(6,Gamma0(2))(q)",
+            "weight": 6
+          },
+          {
+            "ballot_coefficient": 35,
+            "character_index": 3,
+            "full_cusp_space_dimension": 1,
+            "q_power": 2,
+            "trace": "Theta_f(q)",
+            "weight": 8
+          },
+          {
+            "ballot_coefficient": 9,
+            "character_index": 4,
+            "full_cusp_space_dimension": 1,
+            "q_power": 1,
+            "trace": "Theta_g(q)",
+            "weight": 10
+          },
+          {
+            "ballot_coefficient": 1,
+            "character_index": 5,
+            "full_cusp_space_dimension": 2,
+            "q_power": 0,
+            "trace": "2*Theta_Delta(q)",
+            "weight": 12
+          }
+        ],
+        "formula": "J_10=q*(q-1)*(42*q^6-42*q^5-180*q^4-150*q^3-70*q^2-18*q-2-35*q^2*Theta_f(q)-9*q*Theta_g(q)-2*Theta_Delta(q))",
+        "half_degree": 5,
+        "moment": 10,
+        "normalized_tate_polynomial_low_to_high": [
+          -2,
+          -18,
+          -70,
+          -150,
+          -180,
+          -42,
+          42
+        ]
+      }
+    ],
+    "proof_chain": [
+      "orbit-stabilizer identifies root-marked cubics with Y_1(2)=Y_0(2) and contributes q*(q-1)",
+      "Clebsch--Gordan/reflection gives the all-n SU(2) ballot decomposition of a^(2n)",
+      "the P_0 stack trace is q-1",
+      "for every positive even m the Y_0(2) stack trace is -2-Theta_(m+2,Gamma0(2))(q)",
+      "substitution proves the displayed identity without interpolation"
+    ],
+    "scope": "every odd prime power q and every integer n>=0",
+    "su2_exact_regressions": [
+      {
+        "half_degree": 0,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^0"
+      },
+      {
+        "half_degree": 1,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 1,
+            "q_power": 1
+          },
+          {
+            "character_index": 1,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^2"
+      },
+      {
+        "half_degree": 2,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 2,
+            "q_power": 2
+          },
+          {
+            "character_index": 1,
+            "coefficient": 3,
+            "q_power": 1
+          },
+          {
+            "character_index": 2,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^4"
+      },
+      {
+        "half_degree": 3,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 5,
+            "q_power": 3
+          },
+          {
+            "character_index": 1,
+            "coefficient": 9,
+            "q_power": 2
+          },
+          {
+            "character_index": 2,
+            "coefficient": 5,
+            "q_power": 1
+          },
+          {
+            "character_index": 3,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^6"
+      },
+      {
+        "half_degree": 4,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 14,
+            "q_power": 4
+          },
+          {
+            "character_index": 1,
+            "coefficient": 28,
+            "q_power": 3
+          },
+          {
+            "character_index": 2,
+            "coefficient": 20,
+            "q_power": 2
+          },
+          {
+            "character_index": 3,
+            "coefficient": 7,
+            "q_power": 1
+          },
+          {
+            "character_index": 4,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^8"
+      },
+      {
+        "half_degree": 5,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 42,
+            "q_power": 5
+          },
+          {
+            "character_index": 1,
+            "coefficient": 90,
+            "q_power": 4
+          },
+          {
+            "character_index": 2,
+            "coefficient": 75,
+            "q_power": 3
+          },
+          {
+            "character_index": 3,
+            "coefficient": 35,
+            "q_power": 2
+          },
+          {
+            "character_index": 4,
+            "coefficient": 9,
+            "q_power": 1
+          },
+          {
+            "character_index": 5,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^10"
+      },
+      {
+        "half_degree": 6,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 132,
+            "q_power": 6
+          },
+          {
+            "character_index": 1,
+            "coefficient": 297,
+            "q_power": 5
+          },
+          {
+            "character_index": 2,
+            "coefficient": 275,
+            "q_power": 4
+          },
+          {
+            "character_index": 3,
+            "coefficient": 154,
+            "q_power": 3
+          },
+          {
+            "character_index": 4,
+            "coefficient": 54,
+            "q_power": 2
+          },
+          {
+            "character_index": 5,
+            "coefficient": 11,
+            "q_power": 1
+          },
+          {
+            "character_index": 6,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^12"
+      },
+      {
+        "half_degree": 7,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 429,
+            "q_power": 7
+          },
+          {
+            "character_index": 1,
+            "coefficient": 1001,
+            "q_power": 6
+          },
+          {
+            "character_index": 2,
+            "coefficient": 1001,
+            "q_power": 5
+          },
+          {
+            "character_index": 3,
+            "coefficient": 637,
+            "q_power": 4
+          },
+          {
+            "character_index": 4,
+            "coefficient": 273,
+            "q_power": 3
+          },
+          {
+            "character_index": 5,
+            "coefficient": 77,
+            "q_power": 2
+          },
+          {
+            "character_index": 6,
+            "coefficient": 13,
+            "q_power": 1
+          },
+          {
+            "character_index": 7,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^14"
+      },
+      {
+        "half_degree": 8,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 1430,
+            "q_power": 8
+          },
+          {
+            "character_index": 1,
+            "coefficient": 3432,
+            "q_power": 7
+          },
+          {
+            "character_index": 2,
+            "coefficient": 3640,
+            "q_power": 6
+          },
+          {
+            "character_index": 3,
+            "coefficient": 2548,
+            "q_power": 5
+          },
+          {
+            "character_index": 4,
+            "coefficient": 1260,
+            "q_power": 4
+          },
+          {
+            "character_index": 5,
+            "coefficient": 440,
+            "q_power": 3
+          },
+          {
+            "character_index": 6,
+            "coefficient": 104,
+            "q_power": 2
+          },
+          {
+            "character_index": 7,
+            "coefficient": 15,
+            "q_power": 1
+          },
+          {
+            "character_index": 8,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^16"
+      },
+      {
+        "half_degree": 9,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 4862,
+            "q_power": 9
+          },
+          {
+            "character_index": 1,
+            "coefficient": 11934,
+            "q_power": 8
+          },
+          {
+            "character_index": 2,
+            "coefficient": 13260,
+            "q_power": 7
+          },
+          {
+            "character_index": 3,
+            "coefficient": 9996,
+            "q_power": 6
+          },
+          {
+            "character_index": 4,
+            "coefficient": 5508,
+            "q_power": 5
+          },
+          {
+            "character_index": 5,
+            "coefficient": 2244,
+            "q_power": 4
+          },
+          {
+            "character_index": 6,
+            "coefficient": 663,
+            "q_power": 3
+          },
+          {
+            "character_index": 7,
+            "coefficient": 135,
+            "q_power": 2
+          },
+          {
+            "character_index": 8,
+            "coefficient": 17,
+            "q_power": 1
+          },
+          {
+            "character_index": 9,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^18"
+      },
+      {
+        "half_degree": 10,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 16796,
+            "q_power": 10
+          },
+          {
+            "character_index": 1,
+            "coefficient": 41990,
+            "q_power": 9
+          },
+          {
+            "character_index": 2,
+            "coefficient": 48450,
+            "q_power": 8
+          },
+          {
+            "character_index": 3,
+            "coefficient": 38760,
+            "q_power": 7
+          },
+          {
+            "character_index": 4,
+            "coefficient": 23256,
+            "q_power": 6
+          },
+          {
+            "character_index": 5,
+            "coefficient": 10659,
+            "q_power": 5
+          },
+          {
+            "character_index": 6,
+            "coefficient": 3705,
+            "q_power": 4
+          },
+          {
+            "character_index": 7,
+            "coefficient": 950,
+            "q_power": 3
+          },
+          {
+            "character_index": 8,
+            "coefficient": 170,
+            "q_power": 2
+          },
+          {
+            "character_index": 9,
+            "coefficient": 19,
+            "q_power": 1
+          },
+          {
+            "character_index": 10,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^20"
+      },
+      {
+        "half_degree": 11,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 58786,
+            "q_power": 11
+          },
+          {
+            "character_index": 1,
+            "coefficient": 149226,
+            "q_power": 10
+          },
+          {
+            "character_index": 2,
+            "coefficient": 177650,
+            "q_power": 9
+          },
+          {
+            "character_index": 3,
+            "coefficient": 149226,
+            "q_power": 8
+          },
+          {
+            "character_index": 4,
+            "coefficient": 95931,
+            "q_power": 7
+          },
+          {
+            "character_index": 5,
+            "coefficient": 48279,
+            "q_power": 6
+          },
+          {
+            "character_index": 6,
+            "coefficient": 19019,
+            "q_power": 5
+          },
+          {
+            "character_index": 7,
+            "coefficient": 5775,
+            "q_power": 4
+          },
+          {
+            "character_index": 8,
+            "coefficient": 1309,
+            "q_power": 3
+          },
+          {
+            "character_index": 9,
+            "coefficient": 209,
+            "q_power": 2
+          },
+          {
+            "character_index": 10,
+            "coefficient": 21,
+            "q_power": 1
+          },
+          {
+            "character_index": 11,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^22"
+      },
+      {
+        "half_degree": 12,
+        "terms": [
+          {
+            "character_index": 0,
+            "coefficient": 208012,
+            "q_power": 12
+          },
+          {
+            "character_index": 1,
+            "coefficient": 534888,
+            "q_power": 11
+          },
+          {
+            "character_index": 2,
+            "coefficient": 653752,
+            "q_power": 10
+          },
+          {
+            "character_index": 3,
+            "coefficient": 572033,
+            "q_power": 9
+          },
+          {
+            "character_index": 4,
+            "coefficient": 389367,
+            "q_power": 8
+          },
+          {
+            "character_index": 5,
+            "coefficient": 211508,
+            "q_power": 7
+          },
+          {
+            "character_index": 6,
+            "coefficient": 92092,
+            "q_power": 6
+          },
+          {
+            "character_index": 7,
+            "coefficient": 31878,
+            "q_power": 5
+          },
+          {
+            "character_index": 8,
+            "coefficient": 8602,
+            "q_power": 4
+          },
+          {
+            "character_index": 9,
+            "coefficient": 1748,
+            "q_power": 3
+          },
+          {
+            "character_index": 10,
+            "coefficient": 252,
+            "q_power": 2
+          },
+          {
+            "character_index": 11,
+            "coefficient": 23,
+            "q_power": 1
+          },
+          {
+            "character_index": 12,
+            "coefficient": 1,
+            "q_power": 0
+          }
+        ],
+        "verified_polynomial": "a^24"
+      }
+    ],
+    "theorem": "J_(2n)/(q*(q-1))=C_n*q^n*(q-1)-sum_(j=1)^n c(n,j)*q^(n-j)*(2+Theta_(2j+2,Gamma0(2))(q))",
+    "trace_convention": "Theta_(k,Gamma0(2))(p^r) is the full cuspidal Frobenius-power trace, summed over underlying normalized newforms with oldform multiplicity; it is not generally a single Fourier coefficient"
+  }
+}
