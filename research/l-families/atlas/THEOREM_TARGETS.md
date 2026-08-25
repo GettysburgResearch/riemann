@@ -1066,7 +1066,10 @@ Failure to observe the thin first graph at square bases is predicted sampling
 bias, not evidence of nonexistence.  These are lattice statements only, and
 the nonsquare corollary retains the odd-prime boundary.
 
-A deliberately capped `r=4` scout makes the next algebraic target sharper.
+An unbound, deliberately capped `r=4` scout suggests a sharper next algebraic
+target.  It did not retain a source-locked script, the four numerator
+polynomials, or exact grid bounds, so the observations in this paragraph are
+**not independently replayable** and are not promoted to certified results.
 For the typed comparison
 
 \[
@@ -1082,15 +1085,16 @@ the two expected raw graphs are
  A=C,\quad qB^2=(C^2-2q)^2.
 \]
 
-After eliminating the first coefficient, the exact gcd of the next four
-normalized coefficient numerators is the graph divisor
+the exploratory session reported that, after eliminating the first
+coefficient, the gcd of the next four normalized coefficient numerators was
+the graph divisor
 
 \[
  (v^2-z^2)\bigl(v^2-(z^2-2)^2\bigr).
 \]
 
-Thus the scout finds no additional positive-dimensional component.  Its
-torsion sweep through order 80 leaves residual orders
+It therefore suggested no additional positive-dimensional component.  The
+reported torsion sweep through order 80 left residual orders
 `5,9,10,11,18,20,22`, supported in `Z=z^2` on
 
 \[
@@ -1102,10 +1106,12 @@ torsion sweep through order 80 leaves residual orders
  \quad Z^2-5Z+5,
 \]
 
-all without rational roots.  Capped checks found no off-graph point among
-24,346 raw triples and 34,225 rational forced pairs.  This evidence does
-**not** exclude an isolated noncyclotomic rational point: it is a recorded
-conjectural boundary, not an `r=4` converse theorem.
+all without rational roots.  The session also reported no off-graph point
+among 24,346 raw triples and 34,225 rational forced pairs, but those aggregate
+totals do not preserve the search domain or coverage.  This unbound evidence
+does **not** exclude an isolated noncyclotomic rational point: it is a
+conjecture-generating lead, not an `r=4` converse theorem or a reproducible
+negative computation.
 
 The next target is therefore to exclude or construct those isolated
 noncyclotomic points uniformly, classify the zero-dimensional residual

@@ -131,25 +131,27 @@ tail constants.  Their variance stays one, while finite-rank even moments of
 order `2k>=4` grow as rank to `2k-3` because of a separate endpoint boundary
 layer.  Weak convergence does not justify passing those moments to the limit.
 
-## 4. Bounded evidence, not promoted theorem
+## 4. Unbound exploratory evidence, not promoted theorem
 
-The capped `r=4` scout studies
+An ephemeral capped `r=4` scout considered
 
 \[
  P_{\operatorname{Std}(A)\otimes\operatorname{Sym}^4(B)}(q^2T)
  =P_{\operatorname{Sym}^9(C)}(T).
 \]
 
-After eliminating the first coefficient, the exact gcd of the next four
-normalized coefficient numerators is precisely the two-graph divisor.  Thus
-there is no additional positive-dimensional component in that coefficient
-prefix.  A torsion sweep through order 80 leaves orders
-`5,9,10,11,18,20,22`, on four `Z=z^2` polynomials without rational roots.
-No off-graph point occurs among 24,346 raw triples or 34,225 rational forced
-pairs.
+The session reported that the gcd of four post-elimination coefficient
+numerators was the two-graph divisor, that a torsion sweep through order 80
+left orders `5,9,10,11,18,20,22` on four irrational `Z=z^2` factors, and
+that no off-graph point appeared in aggregate totals of 24,346 raw triples and
+34,225 rational forced pairs.
 
-This does **not** exclude an isolated noncyclotomic rational point.  The full
-polynomials and exact boundary are recorded in `THEOREM_TARGETS.md`.
+No source-locked script, numerator list, exact search domain, or grid bounds
+were retained.  Those observations are therefore **not reproducible from the
+repository** and must be treated only as conjecture-generating leads.  They do
+not exclude an isolated noncyclotomic rational point.  `THEOREM_TARGETS.md`
+preserves the reported divisor and residual factors together with this
+provenance warning.
 
 ## 5. Visibility warnings for future computation
 

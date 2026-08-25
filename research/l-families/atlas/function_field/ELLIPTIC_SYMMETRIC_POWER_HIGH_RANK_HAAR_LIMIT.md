@@ -5,8 +5,8 @@
 This note proves an exact compact-group limit theorem.  It requires no finite
 field, curve, model, random sample, numerical integration, or runtime symbolic
 algebra.  It explains why the exact tensor/symmetric-power moment ladder has
-variance one but moments of order four and above that grow polynomially with
-the symmetric-power index.
+variance one but even moments of order four and above that grow polynomially
+with the symmetric-power index.
 
 The result is representation-theoretic.  It is not an arithmetic-family
 equidistribution theorem, and it says nothing by itself about Euler products,

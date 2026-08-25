@@ -993,11 +993,13 @@ odd `p`; `p=2` has genuine exceptional zeros.  These formulas count the two
 proved graph loci only and do not assert that the full intersection has no
 additional isolated point at every `r`.
 
-A capped `r=4` scout now finds the same two graph factors as the complete
-positive-dimensional gcd and no off-graph point in 24,346 raw triples or
-34,225 rational forced pairs.  Its residual torsion orders and irrational
-support polynomials are recorded in `THEOREM_TARGETS.md`.  This is negative
-evidence only: isolated noncyclotomic rational points have not been excluded.
+An unbound capped `r=4` session reported the same two graph factors in a
+post-elimination gcd and no off-graph point in aggregate totals of 24,346 raw
+triples and 34,225 rational forced pairs.  Its script, numerator polynomials,
+and exact grid bounds were not retained, so this is not reproducible negative
+evidence.  The reported residual orders and irrational support polynomials are
+preserved in `THEOREM_TARGETS.md` only as conjecture-generating leads;
+isolated noncyclotomic rational points have not been excluded.
 
 ### The graph ladder has an arithmetic visibility phase diagram
 
