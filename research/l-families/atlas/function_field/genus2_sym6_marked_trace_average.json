@@ -1,0 +1,521 @@
+{
+  "cubic_channel_certificate": {
+    "L_cubed_ell6": "-q*(q-1)",
+    "L_squared_M_ell6": "q*(q-1)*(9-3*q)",
+    "all_cubic_ell6": "-2*q^2*(q-1)",
+    "all_cubic_g6": "0",
+    "higher_marked_moments_used": [],
+    "only_marked_moments_used": [
+      "J_0",
+      "J_2",
+      "J_4"
+    ],
+    "repeated_g6": "q*(q-1)",
+    "squarefree_ell6": "q*(q-1)*(q-8)",
+    "squarefree_g6": "-q*(q-1)"
+  },
+  "definitions": {
+    "character_identity": "r_D(6)=q^3*chi_(6,0)(U_D)",
+    "curve_numerator": "P_D(u)=1+a_D*u+b_D*u^2+q*a_D*u^3+q^2*u^4",
+    "family_size": "#H_5(q)=q^4*(q-1)",
+    "reciprocal_series": "1/P_D(u)=sum_(n>=0) r_D(n)*u^n"
+  },
+  "firewalls": [
+    "This is an exact family average and marked-stack trace, not a memberwise sign theorem.",
+    "The proof makes no RH, GRH, motive, compatible-system, or Euler-product transfer claim.",
+    "The q=3,5,7 joint laws are held-out controls and do not enter the symbolic theorem.",
+    "The theorem is not inferred from three-field interpolation."
+  ],
+  "held_out_falsification_controls": [
+    {
+      "difference": 0,
+      "family_members": 162,
+      "joint_law_atoms": 32,
+      "observed_sum_r_D_6": -24,
+      "q": 3,
+      "status": "HELD_OUT_FALSIFICATION_CONTROL_ONLY",
+      "theorem_value": -24
+    },
+    {
+      "difference": 0,
+      "family_members": 2500,
+      "joint_law_atoms": 81,
+      "observed_sum_r_D_6": -80,
+      "q": 5,
+      "status": "HELD_OUT_FALSIFICATION_CONTROL_ONLY",
+      "theorem_value": -80
+    },
+    {
+      "difference": 0,
+      "family_members": 14406,
+      "joint_law_atoms": 138,
+      "observed_sum_r_D_6": -168,
+      "q": 7,
+      "status": "HELD_OUT_FALSIFICATION_CONTROL_ONLY",
+      "theorem_value": -168
+    }
+  ],
+  "linear_modulus_certificate": {
+    "number_of_linear_moduli": "q",
+    "per_modulus_binom_ell_2_weighted": "(q-1)*(2*q-7)/2",
+    "per_modulus_combined": "2*(q-1)*(q-2)",
+    "per_modulus_ell6": "-(q-1)",
+    "per_modulus_k6": "(q-1)/2"
+  },
+  "literature_firewall": {
+    "geometry_warning": "the unmarked M_2 trace is not the marked-Weierstrass M_2(w^1) trace",
+    "novelty_status": "no external novelty claim; the packet proves the marked formula from source-locked branch identities",
+    "published_unmarked_result": "Bergstrom Theorem 11.6 gives e_c(M_2,V_(6,0))=-1"
+  },
+  "mobius_euler_reduction": {
+    "C5_cancellation": "C_5(f)=-q^2 and sum_(deg f=6)mu(f)=0",
+    "G_3": "sum_(deg h=3) g_6(h)=0",
+    "L_3": "sum_(deg h=3) ell_6(h)=-2*q^2*(q-1)",
+    "Q_1": "sum_(deg h=1) weighted_6(h)=2*q*(q-1)*(q-2)",
+    "final_aggregate": "sum_D r_D(6)=-q*G_3+L_3+Q_1",
+    "reciprocal_euler_coefficient": "r_D(6)=sum_(deg f=6) mu(f)*(D/f)",
+    "squarefree_sieve": "S_5(f)=C_5(f)-(q-l(f))*C_3(f)+(binom(l(f)+1,2)+k(f)-q*l(f))*C_1(f)"
+  },
+  "payload_sha256": "614a4707eb2bdda36d5e4d2a1cba04b138d569ecba64e9f11bd1ec66bc18deae",
+  "polynomials_low_to_high": {
+    "all_cubic_ell6": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        -2,
+        1
+      ]
+    ],
+    "all_cubic_g6": [
+      [
+        0,
+        1
+      ]
+    ],
+    "all_linear_weighted": [
+      [
+        0,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        -6,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "family_size": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "linear_choose2_ell6": [
+      [
+        7,
+        2
+      ],
+      [
+        -9,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "linear_ell6": [
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "linear_k6": [
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "linear_weighted": [
+      [
+        4,
+        1
+      ],
+      [
+        -6,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "marked_0": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "marked_2": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "marked_4": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        -4,
+        1
+      ],
+      [
+        -4,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "reciprocal_total": [
+      [
+        0,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        -4,
+        1
+      ]
+    ],
+    "repeated_cubic_ell6_l2m": [
+      [
+        0,
+        1
+      ],
+      [
+        -9,
+        1
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        -3,
+        1
+      ]
+    ],
+    "repeated_cubic_ell6_l3": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "repeated_cubic_g6": [
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "squarefree_cubic_ell6": [
+      [
+        0,
+        1
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        -9,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "squarefree_cubic_g6": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "total_0": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "total_2": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "total_4": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "total_6": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        -9,
+        1
+      ],
+      [
+        -5,
+        1
+      ],
+      [
+        5,
+        1
+      ]
+    ]
+  },
+  "resource_contract": {
+    "actual_held_out_input_atoms": 251,
+    "actual_operations_and_input_atoms": 728,
+    "actual_symbolic_operations": 477,
+    "actual_symbolic_operations_before_controls": 477,
+    "arithmetic": "exact Fraction and integer polynomial algebra",
+    "maximum_held_out_atoms_per_field": 512,
+    "maximum_symbolic_operations_and_input_atoms": 4096,
+    "maximum_wall_seconds": 10.0
+  },
+  "schema": "riemann.function_field.genus2_sym6_marked_trace_average.v1",
+  "scope": {
+    "family": "all monic squarefree quintics D in F_q[T]",
+    "numeric_approximations": 0,
+    "q": "every odd prime power",
+    "sampled_q_values_used_as_theorem_input": [],
+    "theorem_replay_family_members_enumerated": 0,
+    "theorem_replay_finite_fields_enumerated": 0
+  },
+  "source_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/genus2_b4_triangular_trace_average.json",
+      "sha256_lf_normalized": "31eec8f78bc81eb9d157f727c229efb16d112b94e7c27dbf0ea1f81f5005fde2"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_B4_TRIANGULAR_TRACE_AVERAGE.md",
+      "sha256_lf_normalized": "d24d668837b5291609074481282f44588f37a886bb81f4565fc4d1b1efdc4811"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+      "sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS1_CUBIC_FAMILY_LAWS.md",
+      "sha256_lf_normalized": "aad40573c6378c919ee6659bcd1c4b89a8981621c61feb0dcde9911d127c6b9f"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_marked_weierstrass_stack_adapter.json",
+      "sha256_lf_normalized": "fe8f23f6379a70ea150a8e4f1b87054553536fde3bd23e6c1d21e252baf3b26c"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_MARKED_WEIERSTRASS_STACK_ADAPTER.md",
+      "sha256_lf_normalized": "f6f3c5ff0d112bd3204b1843a6f13b286d642a9c6ee19329a63eb39e06165e1c"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_SYM6_MARKED_TRACE_AVERAGE.md",
+      "sha256_lf_normalized": "022e80497ed904f7fcbfdaddbe10c134acd467e5cb40db1730aebffa46aed495"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_sym6_marked_trace_average.py",
+      "sha256_lf_normalized": "a8df9c0e328bcff3cefe08e7b0fca8de7f2978cc250a13ba9b7265d592c1d30f"
+    },
+    {
+      "path": "tests/test_genus2_sym6_marked_trace_average.py",
+      "sha256_lf_normalized": "ea2f6941456f4e1f7b46773ae67d977f4f962a17598de71423e9b53b73ba5ffe"
+    }
+  ],
+  "status": "PROVED_EXACTLY_FOR_EVERY_ODD_PRIME_POWER",
+  "theorem": {
+    "character_mean": "E_D[chi_(6,0)(U_D)]=-4/q^6",
+    "marked_stack_trace": "T_(6,0)(q)=-4",
+    "raw_coefficient_identity": "r_D(6)=a_D^6-5*a_D^4*b_D+4*q*a_D^4+6*a_D^2*b_D^2-6*q*a_D^2*b_D-2*q^2*a_D^2-b_D^3+2*q^2*b_D",
+    "reciprocal_mean": "E_D[r_D(6)]=-4/q^3",
+    "reciprocal_total": "sum_D r_D(6)=-4*q*(q-1)"
+  }
+}
