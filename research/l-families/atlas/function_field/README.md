@@ -96,6 +96,9 @@ source/note/JSON/test packets:
   high-symmetric-power weak limit, its exact cubic tail, the endpoint
   boundary-layer growth of all higher even moments, and the distinct product
   versus principal limiting tail constants;
+- `TENSOR_SYMMETRIC_POWER_RESEARCH_MAP.md` is the compact handoff index for
+  the complete dependency chain, theorem/evidence boundary, canonical
+  payloads, visibility warnings, replay commands, and five next attacks;
 - `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
   curve with the complete locked genus-two coefficient support, classifies
   the odd-prime arithmetic candidates, and separates 53 witnessed members
