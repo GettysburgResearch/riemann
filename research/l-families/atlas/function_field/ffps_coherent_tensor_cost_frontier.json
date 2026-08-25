@@ -1,0 +1,405 @@
+{
+  "conductor_asymptotic": {
+    "conductor_form": "L(M_x)~3*zeta(2)*exp(-2*EulerGamma)/(log log M_x)^2",
+    "odd_primorial": "M_x=product_(3<=p<=x) p",
+    "polynomial_saving_no_go": "for every fixed delta>0, M_x^delta*L(M_x) tends to infinity; the local tensor factor alone is not an M^(-delta) individualization saving",
+    "prime_number_theorem_input": "log M_x=theta(x)-log(2)~x",
+    "source_leverage_asymptotic": "L(M_x)~3*zeta(2)*exp(-2*EulerGamma)/(log x)^2",
+    "target_cost_form": "to reach L approximately epsilon on the optimal primorial frontier requires log log M approximately sqrt(3*zeta(2)*exp(-2*EulerGamma)/epsilon)"
+  },
+  "exact_budget_theorem": {
+    "exhaustive_regression": {
+      "prime_count": 8,
+      "subsets_checked": 256
+    },
+    "finite_frontier": [
+      {
+        "largest_marked_prime": 3,
+        "marked_prime_count": 1,
+        "minimal_squarefree_conductor": 3,
+        "optimal_primes": [
+          3
+        ],
+        "optimal_squared_leverage": [
+          1,
+          2
+        ]
+      },
+      {
+        "largest_marked_prime": 5,
+        "marked_prime_count": 2,
+        "minimal_squarefree_conductor": 15,
+        "optimal_primes": [
+          3,
+          5
+        ],
+        "optimal_squared_leverage": [
+          1,
+          3
+        ]
+      },
+      {
+        "largest_marked_prime": 7,
+        "marked_prime_count": 3,
+        "minimal_squarefree_conductor": 105,
+        "optimal_primes": [
+          3,
+          5,
+          7
+        ],
+        "optimal_squared_leverage": [
+          1,
+          4
+        ]
+      },
+      {
+        "largest_marked_prime": 11,
+        "marked_prime_count": 4,
+        "minimal_squarefree_conductor": 1155,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11
+        ],
+        "optimal_squared_leverage": [
+          5,
+          24
+        ]
+      },
+      {
+        "largest_marked_prime": 13,
+        "marked_prime_count": 5,
+        "minimal_squarefree_conductor": 15015,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "optimal_squared_leverage": [
+          5,
+          28
+        ]
+      },
+      {
+        "largest_marked_prime": 17,
+        "marked_prime_count": 6,
+        "minimal_squarefree_conductor": 255255,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ],
+        "optimal_squared_leverage": [
+          10,
+          63
+        ]
+      },
+      {
+        "largest_marked_prime": 19,
+        "marked_prime_count": 7,
+        "minimal_squarefree_conductor": 4849845,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19
+        ],
+        "optimal_squared_leverage": [
+          1,
+          7
+        ]
+      },
+      {
+        "largest_marked_prime": 23,
+        "marked_prime_count": 8,
+        "minimal_squarefree_conductor": 111546435,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "optimal_squared_leverage": [
+          11,
+          84
+        ]
+      },
+      {
+        "largest_marked_prime": 29,
+        "marked_prime_count": 9,
+        "minimal_squarefree_conductor": 3234846615,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29
+        ],
+        "optimal_squared_leverage": [
+          11,
+          90
+        ]
+      },
+      {
+        "largest_marked_prime": 31,
+        "marked_prime_count": 10,
+        "minimal_squarefree_conductor": 100280245065,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31
+        ],
+        "optimal_squared_leverage": [
+          11,
+          96
+        ]
+      },
+      {
+        "largest_marked_prime": 37,
+        "marked_prime_count": 11,
+        "minimal_squarefree_conductor": 3710369067405,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37
+        ],
+        "optimal_squared_leverage": [
+          33,
+          304
+        ]
+      },
+      {
+        "largest_marked_prime": 41,
+        "marked_prime_count": 12,
+        "minimal_squarefree_conductor": 152125131763605,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41
+        ],
+        "optimal_squared_leverage": [
+          55,
+          532
+        ]
+      },
+      {
+        "largest_marked_prime": 43,
+        "marked_prime_count": 13,
+        "minimal_squarefree_conductor": 6541380665835015,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43
+        ],
+        "optimal_squared_leverage": [
+          15,
+          152
+        ]
+      }
+    ],
+    "fixed_budget": "if P_k<=X<P_(k+1) for odd primorial prefixes P_k, the unique leverage minimum under M<=X is the first-k-prime tensor",
+    "fixed_cardinality": "among all k-coordinate tensors, the first k odd primes uniquely minimize both the conductor product and the squared leverage",
+    "model": "M is the squarefree product of distinct marked odd-prime phase coordinates; L(M)=product_(p|M)(p-1)/(p+1) is squared principal leverage",
+    "proof": "(p-1)/(p+1) is strictly increasing in p; sorted distinct odd primes satisfy p_i>=the i-th odd prime; no k+1 prime product fits below P_(k+1), and every additional feasible factor is strictly below one",
+    "target_frontier": [
+      {
+        "attained_squared_leverage": [
+          1,
+          2
+        ],
+        "minimal_squarefree_conductor": 3,
+        "optimal_primes": [
+          3
+        ],
+        "previous_prefix_squared_leverage": [
+          1,
+          1
+        ],
+        "target_squared_leverage_at_most": [
+          1,
+          2
+        ]
+      },
+      {
+        "attained_squared_leverage": [
+          1,
+          3
+        ],
+        "minimal_squarefree_conductor": 15,
+        "optimal_primes": [
+          3,
+          5
+        ],
+        "previous_prefix_squared_leverage": [
+          1,
+          2
+        ],
+        "target_squared_leverage_at_most": [
+          1,
+          3
+        ]
+      },
+      {
+        "attained_squared_leverage": [
+          1,
+          4
+        ],
+        "minimal_squarefree_conductor": 105,
+        "optimal_primes": [
+          3,
+          5,
+          7
+        ],
+        "previous_prefix_squared_leverage": [
+          1,
+          3
+        ],
+        "target_squared_leverage_at_most": [
+          1,
+          4
+        ]
+      },
+      {
+        "attained_squared_leverage": [
+          5,
+          28
+        ],
+        "minimal_squarefree_conductor": 15015,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "previous_prefix_squared_leverage": [
+          5,
+          24
+        ],
+        "target_squared_leverage_at_most": [
+          1,
+          5
+        ]
+      },
+      {
+        "attained_squared_leverage": [
+          15,
+          152
+        ],
+        "minimal_squarefree_conductor": 6541380665835015,
+        "optimal_primes": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43
+        ],
+        "previous_prefix_squared_leverage": [
+          55,
+          532
+        ],
+        "target_squared_leverage_at_most": [
+          1,
+          10
+        ]
+      }
+    ]
+  },
+  "interpretation": {
+    "negative": "measured against squarefree conductor cost, even the optimal contraction is only inverse-square log-log; pure local tensor leverage cannot pay a polynomial family-size loss",
+    "positive": "coherent-before-square tensorization really contracts and the exact cheapest finite design always uses the smallest available marked primes",
+    "still_live": [
+      "arithmetic cancellation beyond the local Gram factor",
+      "cross-prime Fourier or incidence structure",
+      "an amplifier that isolates the principal member before positive squaring",
+      "rigidity converting one exceptional member into a family-wide anomaly"
+    ]
+  },
+  "provenance": {
+    "note_sha256_lf": "037ec4751504d2387a87e606dbd8eb74dbcc3abb554ccb77ee449fd838a4583e",
+    "producer_sha256_lf": "c914a0940095f80dae4e7cff2160ac162855e6809e3ee99691cbc2db351118ac",
+    "resource_caps": {
+      "exhaustive_subsets_used": 256,
+      "maximum_exhaustive_subsets": 4096,
+      "maximum_prime_control": 127
+    },
+    "test_sha256_lf": "8c70b8318fb2c65fb6a05fe4c58a2282583a680546196a43e5741afe781ecd04"
+  },
+  "schema": "riemann.function_field.ffps_coherent_tensor_cost_frontier.v1",
+  "scope": {
+    "exact_budget_theorem_all_distinct_odd_primes": true,
+    "finite_frontier_prime_cap": 127,
+    "global_ffps_moment_proved": false,
+    "principal_member_individualized": false,
+    "rh_or_grh_proved": false,
+    "source_realization_of_every_formal_tensor_proved": false
+  },
+  "source_frontier": {
+    "commit": "37d9df4b9b4fb9a8277de6ec1f77278dbbe5b0f2",
+    "dependency": "ffps_principal_leverage.json",
+    "dependency_schema": "riemann.function_field.ffps_principal_leverage.v2",
+    "dependency_sha256_lf": "cdf514d8f8b76b7d2569ea6852c8f4dcc8590c0ad72822d3bee711711cfd3ee3",
+    "live_target": "T-106121 / FFPS106121",
+    "pr": 751
+  },
+  "status": "EXACT_FINITE_BUDGET_OPTIMUM_AND_CLASSICAL_PRIMORIAL_ASYMPTOTIC"
+}
