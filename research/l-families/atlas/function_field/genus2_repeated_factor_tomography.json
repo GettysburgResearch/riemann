@@ -1,0 +1,759 @@
+{
+  "exact_repeated_factor_theorem": {
+    "certificate": "G=(a^2-4*b+8*q)/q",
+    "equivalence": "G=0 iff a is even and, for r=-a/2, b=r^2+2*q and P(T)=(1-r*T+q*T^2)^2",
+    "existing_split_predicate_bridge": "the locked +q factorization has Delta=(r-s)^2; G=Delta/q, so G=0 is exactly its diagonal r=s sublocus",
+    "normalization_bridge": "on a q-Weil repeated factor, x=r/(2*sqrt(q)), z=x^2=r^2/(4*q), e1^2=16*z, e2=2+4*z",
+    "parity_proof": "G=0 gives a^2=4*(b-2*q), hence 4 divides a^2 and therefore 2 divides a",
+    "source_polynomial": "P(T)=1+a*T+b*T^2+q*a*T^3+q^2*T^4"
+  },
+  "finite_histogram_tomography": {
+    "families": [
+      {
+        "compact_z_member_law": [],
+        "complete_repeated_signed_atoms": [],
+        "cross_checks": {
+          "split_locus_repeated_member_count": 0,
+          "split_locus_repeated_signed_atom_count": 0,
+          "zero_geometry_G_zero_member_count": 0
+        },
+        "input_member_count": 162,
+        "input_signed_source_atom_count": 32,
+        "q": 3,
+        "repeated_member_count": 0,
+        "repeated_member_fraction_of_full_family": [
+          0,
+          1
+        ],
+        "repeated_member_fraction_of_integral_split_locus": [
+          0,
+          1
+        ],
+        "repeated_signed_atom_count": 0,
+        "selector_sign_member_counts": {
+          "D": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 0
+          },
+          "P": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 0
+          },
+          "S": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 0
+          }
+        }
+      },
+      {
+        "compact_z_member_law": [
+          {
+            "member_count": 5,
+            "z": [
+              0,
+              1
+            ]
+          },
+          {
+            "member_count": 10,
+            "z": [
+              1,
+              5
+            ]
+          }
+        ],
+        "complete_repeated_signed_atoms": [
+          {
+            "Delta": 0,
+            "G": [
+              0,
+              1
+            ],
+            "a_D": -4,
+            "b_D": 14,
+            "compact_z": [
+              1,
+              5
+            ],
+            "hasse_admissible_trace": true,
+            "member_count": 5,
+            "parity_forced_even_a": true,
+            "quadratic_coefficients_low_to_high": [
+              1,
+              -2,
+              5
+            ],
+            "quartic_coefficients_low_to_high": [
+              1,
+              -4,
+              14,
+              -20,
+              25
+            ],
+            "repeated_trace_r": 2,
+            "selectors": {
+              "D": [
+                1272,
+                625
+              ],
+              "P": [
+                1408,
+                625
+              ],
+              "S": [
+                -48696,
+                3125
+              ]
+            }
+          },
+          {
+            "Delta": 0,
+            "G": [
+              0,
+              1
+            ],
+            "a_D": 0,
+            "b_D": 10,
+            "compact_z": [
+              0,
+              1
+            ],
+            "hasse_admissible_trace": true,
+            "member_count": 5,
+            "parity_forced_even_a": true,
+            "quadratic_coefficients_low_to_high": [
+              1,
+              0,
+              5
+            ],
+            "quartic_coefficients_low_to_high": [
+              1,
+              0,
+              10,
+              0,
+              25
+            ],
+            "repeated_trace_r": 0,
+            "selectors": {
+              "D": [
+                16,
+                1
+              ],
+              "P": [
+                0,
+                1
+              ],
+              "S": [
+                24,
+                1
+              ]
+            }
+          },
+          {
+            "Delta": 0,
+            "G": [
+              0,
+              1
+            ],
+            "a_D": 4,
+            "b_D": 14,
+            "compact_z": [
+              1,
+              5
+            ],
+            "hasse_admissible_trace": true,
+            "member_count": 5,
+            "parity_forced_even_a": true,
+            "quadratic_coefficients_low_to_high": [
+              1,
+              2,
+              5
+            ],
+            "quartic_coefficients_low_to_high": [
+              1,
+              4,
+              14,
+              20,
+              25
+            ],
+            "repeated_trace_r": -2,
+            "selectors": {
+              "D": [
+                1272,
+                625
+              ],
+              "P": [
+                1408,
+                625
+              ],
+              "S": [
+                -48696,
+                3125
+              ]
+            }
+          }
+        ],
+        "cross_checks": {
+          "split_locus_repeated_member_count": 15,
+          "split_locus_repeated_signed_atom_count": 3,
+          "zero_geometry_G_zero_member_count": 15
+        },
+        "input_member_count": 2500,
+        "input_signed_source_atom_count": 81,
+        "q": 5,
+        "repeated_member_count": 15,
+        "repeated_member_fraction_of_full_family": [
+          3,
+          500
+        ],
+        "repeated_member_fraction_of_integral_split_locus": [
+          1,
+          47
+        ],
+        "repeated_signed_atom_count": 3,
+        "selector_sign_member_counts": {
+          "D": {
+            "negative": 0,
+            "positive": 15,
+            "zero": 0
+          },
+          "P": {
+            "negative": 0,
+            "positive": 10,
+            "zero": 5
+          },
+          "S": {
+            "negative": 10,
+            "positive": 5,
+            "zero": 0
+          }
+        }
+      },
+      {
+        "compact_z_member_law": [
+          {
+            "member_count": 42,
+            "z": [
+              0,
+              1
+            ]
+          },
+          {
+            "member_count": 42,
+            "z": [
+              1,
+              7
+            ]
+          }
+        ],
+        "complete_repeated_signed_atoms": [
+          {
+            "Delta": 0,
+            "G": [
+              0,
+              1
+            ],
+            "a_D": -4,
+            "b_D": 18,
+            "compact_z": [
+              1,
+              7
+            ],
+            "hasse_admissible_trace": true,
+            "member_count": 21,
+            "parity_forced_even_a": true,
+            "quadratic_coefficients_low_to_high": [
+              1,
+              -2,
+              7
+            ],
+            "quartic_coefficients_low_to_high": [
+              1,
+              -4,
+              18,
+              -28,
+              49
+            ],
+            "repeated_trace_r": 2,
+            "selectors": {
+              "D": [
+                11208,
+                2401
+              ],
+              "P": [
+                9792,
+                2401
+              ],
+              "S": [
+                -284040,
+                16807
+              ]
+            }
+          },
+          {
+            "Delta": 0,
+            "G": [
+              0,
+              1
+            ],
+            "a_D": 0,
+            "b_D": 14,
+            "compact_z": [
+              0,
+              1
+            ],
+            "hasse_admissible_trace": true,
+            "member_count": 42,
+            "parity_forced_even_a": true,
+            "quadratic_coefficients_low_to_high": [
+              1,
+              0,
+              7
+            ],
+            "quartic_coefficients_low_to_high": [
+              1,
+              0,
+              14,
+              0,
+              49
+            ],
+            "repeated_trace_r": 0,
+            "selectors": {
+              "D": [
+                16,
+                1
+              ],
+              "P": [
+                0,
+                1
+              ],
+              "S": [
+                24,
+                1
+              ]
+            }
+          },
+          {
+            "Delta": 0,
+            "G": [
+              0,
+              1
+            ],
+            "a_D": 4,
+            "b_D": 18,
+            "compact_z": [
+              1,
+              7
+            ],
+            "hasse_admissible_trace": true,
+            "member_count": 21,
+            "parity_forced_even_a": true,
+            "quadratic_coefficients_low_to_high": [
+              1,
+              2,
+              7
+            ],
+            "quartic_coefficients_low_to_high": [
+              1,
+              4,
+              18,
+              28,
+              49
+            ],
+            "repeated_trace_r": -2,
+            "selectors": {
+              "D": [
+                11208,
+                2401
+              ],
+              "P": [
+                9792,
+                2401
+              ],
+              "S": [
+                -284040,
+                16807
+              ]
+            }
+          }
+        ],
+        "cross_checks": {
+          "split_locus_repeated_member_count": 84,
+          "split_locus_repeated_signed_atom_count": 3,
+          "zero_geometry_G_zero_member_count": 84
+        },
+        "input_member_count": 14406,
+        "input_signed_source_atom_count": 138,
+        "q": 7,
+        "repeated_member_count": 84,
+        "repeated_member_fraction_of_full_family": [
+          2,
+          343
+        ],
+        "repeated_member_fraction_of_integral_split_locus": [
+          2,
+          85
+        ],
+        "repeated_signed_atom_count": 3,
+        "selector_sign_member_counts": {
+          "D": {
+            "negative": 0,
+            "positive": 84,
+            "zero": 0
+          },
+          "P": {
+            "negative": 0,
+            "positive": 42,
+            "zero": 42
+          },
+          "S": {
+            "negative": 42,
+            "positive": 42,
+            "zero": 0
+          }
+        }
+      }
+    ],
+    "status": "EXACT_ONLY_FOR_Q_3_5_7",
+    "strongest_incidence_explanation": "the observed repeated-factor supports have z in {0,1/5,1/7}, all inside the exact D-positive chamber [0,1/4); this is a finite-support arithmetic fact",
+    "weighting": "uniform monic squarefree quintic members inherited from the locked histogram"
+  },
+  "interpretation_firewall": {
+    "exact": "local polynomial square criterion, parity, diagonal relation to the integral +q factor predicate, full compact-line selector sign chambers, and q=3,5,7 source-weighted census",
+    "factor_language": "elliptic-form means only the reciprocal quadratic shape 1-r*T+q*T^2 with integral Hasse-admissible trace when stated; it is not silently promoted to an elliptic curve",
+    "not_claimed": "no Jacobian splitting, product decomposition, isogeny, endomorphism algebra, extra automorphism, monodromy reduction, geometric stratum theorem, curve realization of the counterexample, global compatible system, asymptotic density, zero theorem, or RH implication"
+  },
+  "payload_sha256": "eea09aba720b717c5b43544292889977e32d6d4b55d4988e0633fd87a2a34ce0",
+  "producer_and_source_locks": {
+    "locks": {
+      "histogram_fixture": {
+        "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+        "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+        "sha256_lf_normalized": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e"
+      },
+      "integral_split_fixture": {
+        "path": "research/l-families/atlas/function_field/genus2_endoscopic_split_locus.json",
+        "payload_sha256": "01ccb19f591f48682fa79dbef306880e924282184352cb992e3f66153ceae5c3",
+        "sha256_lf_normalized": "10edc162a37403c3c2af1bfa1051dfb07b1b75dbdea181dc673585dde70fd2f4"
+      },
+      "integral_split_producer": {
+        "path": "research/l-families/atlas/function_field/genus2_endoscopic_split_locus.py",
+        "sha256_lf_normalized": "4489c109f25f8e0ca3051dc9983a8738b7aaee941a351959c552aa19b001e4de"
+      },
+      "note": {
+        "path": "research/l-families/atlas/function_field/GENUS2_REPEATED_FACTOR_TOMOGRAPHY.md",
+        "sha256_lf_normalized": "ec266f56baece1f5057a63535c78a0e2f6e0671a054ee71c0c4b466c67644482"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/genus2_repeated_factor_tomography.py",
+        "sha256_lf_normalized": "2bcd17a2ab4bed92b0eb712203208f335da24539121821a51a86f556f5dcaf6a"
+      },
+      "selector_producer": {
+        "path": "research/l-families/atlas/function_field/frobenius_interferometry_subgroup_selectors.py",
+        "sha256_lf_normalized": "48474ebcbb99efea23227126f66f566fdb525a3c9ae9e81a77bf83d4075f55e7"
+      },
+      "test": {
+        "path": "tests/test_genus2_repeated_factor_tomography.py",
+        "sha256_lf_normalized": "4422f51955041fc1316f12fe98265c2e57fa1b651d12c36464709d99cb655b3c"
+      },
+      "zero_geometry_fixture": {
+        "path": "research/l-families/atlas/function_field/genus2_detector_zero_geometry_conditioning.json",
+        "payload_sha256": "712a2aaa42500355b6eba4bc05043ec54de88ef43de0907c9b8812d10f134c92",
+        "sha256_lf_normalized": "a790c769e03927f8be8e21c8b0517b89aba0a7aa3301032230834a722f56c6ba"
+      }
+    },
+    "required_lf_sha256": {
+      "affine_action": "32e440750b2832ec4cc84473187b4b1aa6396eda87c64f5ac845b2a96dc88f08",
+      "coefficient_arithmetic": "f595dbf52d4265cfe2ea6888255f53df887fed77e204103f2b0dfd95e961f935",
+      "histogram_fixture": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e",
+      "histogram_producer": "7192fa26b0ea17cb68cff288620ea4dfb124e07807986d9c74fbd37e66087d3b",
+      "note": "ec266f56baece1f5057a63535c78a0e2f6e0671a054ee71c0c4b466c67644482",
+      "selector_note": "c7637d454f1fb102555e6723dd8d93a4b6a27363d80cbbb9a03061f614bd3221",
+      "selector_producer": "48474ebcbb99efea23227126f66f566fdb525a3c9ae9e81a77bf83d4075f55e7",
+      "split_fixture": "10edc162a37403c3c2af1bfa1051dfb07b1b75dbdea181dc673585dde70fd2f4",
+      "split_note": "b6be33305cacf1b541aad630587be04375eddc527c64fd1eb9d5ce1337772ff7",
+      "split_producer": "4489c109f25f8e0ca3051dc9983a8738b7aaee941a351959c552aa19b001e4de",
+      "test": "4422f51955041fc1316f12fe98265c2e57fa1b651d12c36464709d99cb655b3c",
+      "zero_fixture": "a790c769e03927f8be8e21c8b0517b89aba0a7aa3301032230834a722f56c6ba",
+      "zero_note": "646017184761427a214350eb356606c20a335fe0918172213caa7505362736be",
+      "zero_producer": "a19d1ea055a66d7d743e5ed4c8261c8b4fa95269e78f2ed5ff124df63e20b2d8"
+    },
+    "required_member_ledger_sha256": {
+      "3": "e38543c4526e6b330f012274398a258f2d021ddae18442d2f0094d42ec229790",
+      "5": "69fe496e1cca2090ca62bf7622ff34c3ab3aef1b9268dfb41c4df94d380a9d0a",
+      "7": "c1d4ca30f45341de53af20ab4e4ca3f9bff79542146f1ac2230169eec9669655"
+    },
+    "required_payload_sha256": {
+      "histogram": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c",
+      "integral_split": "01ccb19f591f48682fa79dbef306880e924282184352cb992e3f66153ceae5c3",
+      "zero_geometry": "712a2aaa42500355b6eba4bc05043ec54de88ef43de0907c9b8812d10f134c92"
+    },
+    "validation_order": "all LF-normalized primitive digests are checked before JSON parsing or dynamic module execution; canonical payload, schema, q-ladder, member-ledger, atom-count, and mass checks follow"
+  },
+  "raw_fixture_id": "genus2-repeated-factor-tomography-v1",
+  "resource_contract": {
+    "external_dependencies": "none; Python 3.11+ standard library",
+    "finite_field_enumeration": false,
+    "floating_point_arithmetic": false,
+    "guarded_source_atom_visits": {
+      "q=3_source_atoms": 32,
+      "q=5_source_atoms": 81,
+      "q=7_source_atoms": 138,
+      "total": 251
+    },
+    "polynomial_curve_or_member_enumeration": false,
+    "random_sampling": false,
+    "root_finding": false,
+    "source_atom_cap_inclusive": 4096,
+    "source_atom_preflight_count": 251
+  },
+  "schema": "riemann.function_field.genus2_repeated_factor_tomography.v1",
+  "scope": {
+    "finite_census": "complete monic squarefree quintic member histograms only at q=3,5,7",
+    "selector_line": "the full real doubled/repeated-factor compact line 0<=z<=1",
+    "theorem": "all positive integer q and integral reciprocal coefficient pairs (a,b)"
+  },
+  "selector_restriction_theorem": {
+    "D_algebraic_root_certificate": {
+      "consequence": "h has exactly one real root rho_D",
+      "endpoint_values": [
+        [
+          -7,
+          108
+        ],
+        [
+          10,
+          2197
+        ]
+      ],
+      "h_discriminant": -13360,
+      "isolating_interval": [
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "sign_chambers": [
+        {
+          "interval": "[0,1/4)",
+          "sign": "positive"
+        },
+        {
+          "interval": "{1/4}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(1/4,rho_D)",
+          "sign": "negative"
+        },
+        {
+          "interval": "{rho_D}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(rho_D,1]",
+          "sign": "positive"
+        }
+      ],
+      "zeros_in_0_1": [
+        "1/4",
+        "rho_D"
+      ]
+    },
+    "P_rational_root_certificate": {
+      "sign_chambers": [
+        {
+          "interval": "{0}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(0,1/4)",
+          "sign": "positive"
+        },
+        {
+          "interval": "{1/4}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(1/4,3/4)",
+          "sign": "negative"
+        },
+        {
+          "interval": "{3/4}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(3/4,1)",
+          "sign": "positive"
+        },
+        {
+          "interval": "{1}",
+          "sign": "zero"
+        }
+      ],
+      "zeros_in_0_1": [
+        "0",
+        "1/4",
+        "3/4",
+        "1"
+      ]
+    },
+    "S_algebraic_root_certificate": {
+      "alpha": "(1-sqrt((3+sqrt(13))/8))/2",
+      "alpha_isolating_interval": [
+        [
+          1,
+          25
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "beta": "(1+sqrt((3+sqrt(13))/8))/2=1-alpha",
+      "beta_isolating_interval": [
+        [
+          19,
+          20
+        ],
+        [
+          24,
+          25
+        ]
+      ],
+      "k_endpoint_values_alpha_interval": [
+        [
+          119331,
+          390625
+        ],
+        [
+          -139,
+          625
+        ]
+      ],
+      "sign_chambers": [
+        {
+          "interval": "[0,alpha)",
+          "sign": "positive"
+        },
+        {
+          "interval": "{alpha}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(alpha,1/2)",
+          "sign": "negative"
+        },
+        {
+          "interval": "{1/2}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(1/2,beta)",
+          "sign": "positive"
+        },
+        {
+          "interval": "{beta}",
+          "sign": "zero"
+        },
+        {
+          "interval": "(beta,1]",
+          "sign": "negative"
+        }
+      ],
+      "symmetric_transform": "k((1+y)/2)=16*y^4-12*y^2-1",
+      "zeros_in_0_1": [
+        "alpha",
+        "1/2",
+        "beta"
+      ]
+    },
+    "coordinate": {
+      "coefficient_substitution": "e1^2=16*z, e2=2+4*z",
+      "domain": "0<=z<=1",
+      "spectrum": "(exp(+/-i*theta)) each with multiplicity two",
+      "x": "cos(theta)",
+      "z": "x^2=r^2/(4*q)"
+    },
+    "expanded_coefficients_low_to_high": {
+      "D": [
+        16,
+        -120,
+        384,
+        -768,
+        512
+      ],
+      "P": [
+        0,
+        96,
+        -608,
+        1024,
+        -512
+      ],
+      "S": [
+        24,
+        -688,
+        3968,
+        -9472,
+        10240,
+        -4096
+      ]
+    },
+    "factorized_restrictions": {
+      "D": "8*(4*z-1)*h(z), h(z)=16*z^3-20*z^2+7*z-2",
+      "P": "-32*z*(z-1)*(4*z-1)*(4*z-3)",
+      "S": "-8*(2*z-1)*k(z), k(z)=256*z^4-512*z^3+336*z^2-80*z+3"
+    }
+  },
+  "status": "EXACT_FINITE_BOUNDED_SOURCE_LOCKED_LOCAL_POLYNOMIAL_THEOREM",
+  "universal_D_positivity_no_go": {
+    "G": [
+      0,
+      1
+    ],
+    "a": -8,
+    "b": 26,
+    "compact_z": [
+      4,
+      5
+    ],
+    "hasse_admissible_trace": true,
+    "not_claimed": "no curve realization, Jacobian interpretation, isogeny, endomorphism, monodromy, automorphism, or compatible system",
+    "purpose": "refutes universal D>0 on the integral Hasse-admissible repeated-factor locus",
+    "q": 5,
+    "quadratic_coefficients_low_to_high": [
+      1,
+      -4,
+      5
+    ],
+    "quartic_coefficients_low_to_high": [
+      1,
+      -8,
+      26,
+      -40,
+      25
+    ],
+    "selectors": {
+      "D": [
+        -11088,
+        625
+      ],
+      "P": [
+        1408,
+        625
+      ],
+      "S": [
+        48696,
+        3125
+      ]
+    },
+    "trace_r": 4
+  }
+}
