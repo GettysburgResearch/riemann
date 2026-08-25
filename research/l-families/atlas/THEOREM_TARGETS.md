@@ -908,15 +908,46 @@ The two graphs extend without computation to every `r>=1`:
  \sim\operatorname{Sym}^{2r+1}(w).
 \]
 
-The next algebraic target is a general converse: determine whether these are
-the only positive-dimensional rational components for each `r`, classify all
-zero-dimensional cyclotomic residuals, and find a uniform coefficient prefix
-whose ideal already cuts out the intersection.  The next arithmetic target is
-to impose elliptic-trace realization simultaneously on the inputs and then ask
-whether any geometrically linked family can stay on one graph at every prime.
-The raw dilation `T -> q^(r/2)T`, especially its square-root choice for odd
-`r`, must remain explicit.  A one-place torus identity is neither a
-representation homomorphism nor a compatible automorphic transfer.
+Their generic monomial converse is now complete.  If an integer cocharacter
+`w -> (w^a,w^b)` pulls the tensor weights back to the odd interval of
+`Sym^(2r+1)`, then
+
+\[
+ (|a|,|b|)=(r+1,1)\quad\text{or}\quad(1,2).
+\]
+
+For a target exponent `c!=0`, both pairs are multiplied by `|c|`.  The proof
+uses target gaps to divide out `c`, followed by the largest-weight identity
+`A+rB=2r+1`.  This closes all integer monomial one-parameter subtori, but not
+torsion specializations or nonmonomial components.
+
+The next odd rung is also arithmetically closed.  For
+`Std(E_A) tensor Sym^3(E_B)` versus `Sym^7(E_C)`, the four signed normalized
+graphs are
+
+\[
+ (u,v)=(\varepsilon C_4(z),\varepsilon z)
+ \quad\text{or}\quad
+ (u,v)=(\varepsilon z,\varepsilon C_2(z)).
+\]
+
+All nongraph algebraic support lies at torus orders
+`8,16,20,9/18,7/14`.  None descends to integral raw traces at an odd prime
+power.  Nonsquare bases are empty, and at `q=p^(2k)` the Hasse union has
+
+\[
+ 8p^{\lfloor k/4\rfloor}+8p^{\lfloor k/2\rfloor}-4
+\]
+
+triples.  Thus the next algebraic target is narrower: prove or refute a
+nonmonomial positive-dimensional component at some `r>=4`, classify the
+zero-dimensional cyclotomic residual support uniformly in `r`, and find a
+uniform coefficient prefix cutting out the graph union.  The next arithmetic
+target is to impose elliptic-trace realization simultaneously and ask whether
+any geometrically linked family can stay on one graph across primes.  The raw
+dilation `T -> q^(r/2)T`, especially its square-root choice for odd `r`, must
+remain explicit.  A one-place identity is neither a representation
+homomorphism nor a compatible automorphic transfer.
 
 ### Elliptic-pair target: detect geometry inside the `SO(4)` product law
 

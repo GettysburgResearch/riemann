@@ -1,0 +1,3283 @@
+{
+  "bounded_exact_regression": {
+    "box_is_proof_forced": "a solution has |a|+r|b|=2r+1 unless a or b is zero, already excluded by multiplicity",
+    "finite_search_is_not_the_proof": true,
+    "maximum_r": 16,
+    "rows": [
+      {
+        "proof_forced_coordinate_bound": 3,
+        "r": 1,
+        "signed_candidate_pairs_checked": 49,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -2,
+            -1
+          ],
+          [
+            -2,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            -1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 196
+      },
+      {
+        "proof_forced_coordinate_bound": 5,
+        "r": 2,
+        "signed_candidate_pairs_checked": 121,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -3,
+            -1
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            -1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 726
+      },
+      {
+        "proof_forced_coordinate_bound": 7,
+        "r": 3,
+        "signed_candidate_pairs_checked": 225,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -4,
+            -1
+          ],
+          [
+            -4,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            -1
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 1800
+      },
+      {
+        "proof_forced_coordinate_bound": 9,
+        "r": 4,
+        "signed_candidate_pairs_checked": 361,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -5,
+            -1
+          ],
+          [
+            -5,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            -1
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 3610
+      },
+      {
+        "proof_forced_coordinate_bound": 11,
+        "r": 5,
+        "signed_candidate_pairs_checked": 529,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -6,
+            -1
+          ],
+          [
+            -6,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            6,
+            -1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 6348
+      },
+      {
+        "proof_forced_coordinate_bound": 13,
+        "r": 6,
+        "signed_candidate_pairs_checked": 729,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -7,
+            -1
+          ],
+          [
+            -7,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            7,
+            -1
+          ],
+          [
+            7,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 10206
+      },
+      {
+        "proof_forced_coordinate_bound": 15,
+        "r": 7,
+        "signed_candidate_pairs_checked": 961,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -8,
+            -1
+          ],
+          [
+            -8,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            8,
+            -1
+          ],
+          [
+            8,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 15376
+      },
+      {
+        "proof_forced_coordinate_bound": 17,
+        "r": 8,
+        "signed_candidate_pairs_checked": 1225,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -9,
+            -1
+          ],
+          [
+            -9,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            9,
+            -1
+          ],
+          [
+            9,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 22050
+      },
+      {
+        "proof_forced_coordinate_bound": 19,
+        "r": 9,
+        "signed_candidate_pairs_checked": 1521,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -10,
+            -1
+          ],
+          [
+            -10,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            10,
+            -1
+          ],
+          [
+            10,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 30420
+      },
+      {
+        "proof_forced_coordinate_bound": 21,
+        "r": 10,
+        "signed_candidate_pairs_checked": 1849,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -11,
+            -1
+          ],
+          [
+            -11,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            11,
+            -1
+          ],
+          [
+            11,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 40678
+      },
+      {
+        "proof_forced_coordinate_bound": 23,
+        "r": 11,
+        "signed_candidate_pairs_checked": 2209,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -12,
+            -1
+          ],
+          [
+            -12,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            12,
+            -1
+          ],
+          [
+            12,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 53016
+      },
+      {
+        "proof_forced_coordinate_bound": 25,
+        "r": 12,
+        "signed_candidate_pairs_checked": 2601,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -13,
+            -1
+          ],
+          [
+            -13,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            13,
+            -1
+          ],
+          [
+            13,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 67626
+      },
+      {
+        "proof_forced_coordinate_bound": 27,
+        "r": 13,
+        "signed_candidate_pairs_checked": 3025,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -14,
+            -1
+          ],
+          [
+            -14,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            14,
+            -1
+          ],
+          [
+            14,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 84700
+      },
+      {
+        "proof_forced_coordinate_bound": 29,
+        "r": 14,
+        "signed_candidate_pairs_checked": 3481,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -15,
+            -1
+          ],
+          [
+            -15,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            15,
+            -1
+          ],
+          [
+            15,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 104430
+      },
+      {
+        "proof_forced_coordinate_bound": 31,
+        "r": 15,
+        "signed_candidate_pairs_checked": 3969,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -16,
+            -1
+          ],
+          [
+            -16,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            16,
+            -1
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 127008
+      },
+      {
+        "proof_forced_coordinate_bound": 33,
+        "r": 16,
+        "signed_candidate_pairs_checked": 4489,
+        "solution_count": 8,
+        "solutions_a_b": [
+          [
+            -17,
+            -1
+          ],
+          [
+            -17,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            17,
+            -1
+          ],
+          [
+            17,
+            1
+          ]
+        ],
+        "weight_atoms_emitted": 152626
+      }
+    ],
+    "search_box": "every signed pair |a|,|b|<=2r+1 for each 1<=r<=16"
+  },
+  "dickson_chebyshev_graph_equations": {
+    "Weyl_note": "negative a or b gives the same trace equation because D_(-n)=D_n",
+    "central_sign_note": "Weyl inversion is not multiplication by -I. With target w fixed, source central signs delta_u,delta_v are allowed exactly when delta_u+r*delta_v=0 mod 2; at r=2 this recovers the independent +/-y branches of the predecessor.",
+    "exact_bounded_coefficients_and_scaled_checks": [
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          -2,
+          0,
+          1
+        ],
+        "r": 1,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -6,
+                -3
+              ],
+              [
+                -6,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                6,
+                -3
+              ],
+              [
+                6,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -2,
+                -1
+              ],
+              [
+                -2,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                -1
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -2,
+                -1
+              ],
+              [
+                -2,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                -1
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -4,
+                -2
+              ],
+              [
+                -4,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                4,
+                -2
+              ],
+              [
+                4,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -8,
+                -4
+              ],
+              [
+                -8,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                8,
+                -4
+              ],
+              [
+                8,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          0,
+          -3,
+          0,
+          1
+        ],
+        "r": 2,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -9,
+                -3
+              ],
+              [
+                -9,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                9,
+                -3
+              ],
+              [
+                9,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -3,
+                -1
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                -1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -3,
+                -1
+              ],
+              [
+                -3,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                -1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -6,
+                -2
+              ],
+              [
+                -6,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                6,
+                -2
+              ],
+              [
+                6,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -12,
+                -4
+              ],
+              [
+                -12,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                12,
+                -4
+              ],
+              [
+                12,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          2,
+          0,
+          -4,
+          0,
+          1
+        ],
+        "r": 3,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -12,
+                -3
+              ],
+              [
+                -12,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                12,
+                -3
+              ],
+              [
+                12,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -4,
+                -1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                4,
+                -1
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -4,
+                -1
+              ],
+              [
+                -4,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                4,
+                -1
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -8,
+                -2
+              ],
+              [
+                -8,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                8,
+                -2
+              ],
+              [
+                8,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -16,
+                -4
+              ],
+              [
+                -16,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                16,
+                -4
+              ],
+              [
+                16,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          0,
+          5,
+          0,
+          -5,
+          0,
+          1
+        ],
+        "r": 4,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -15,
+                -3
+              ],
+              [
+                -15,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                15,
+                -3
+              ],
+              [
+                15,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -5,
+                -1
+              ],
+              [
+                -5,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                5,
+                -1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -5,
+                -1
+              ],
+              [
+                -5,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                5,
+                -1
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -10,
+                -2
+              ],
+              [
+                -10,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                10,
+                -2
+              ],
+              [
+                10,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -20,
+                -4
+              ],
+              [
+                -20,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                20,
+                -4
+              ],
+              [
+                20,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          -2,
+          0,
+          9,
+          0,
+          -6,
+          0,
+          1
+        ],
+        "r": 5,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -18,
+                -3
+              ],
+              [
+                -18,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                18,
+                -3
+              ],
+              [
+                18,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -6,
+                -1
+              ],
+              [
+                -6,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                6,
+                -1
+              ],
+              [
+                6,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -6,
+                -1
+              ],
+              [
+                -6,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                6,
+                -1
+              ],
+              [
+                6,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -12,
+                -2
+              ],
+              [
+                -12,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                12,
+                -2
+              ],
+              [
+                12,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -24,
+                -4
+              ],
+              [
+                -24,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                24,
+                -4
+              ],
+              [
+                24,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          0,
+          -7,
+          0,
+          14,
+          0,
+          -7,
+          0,
+          1
+        ],
+        "r": 6,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -21,
+                -3
+              ],
+              [
+                -21,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                21,
+                -3
+              ],
+              [
+                21,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -7,
+                -1
+              ],
+              [
+                -7,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                7,
+                -1
+              ],
+              [
+                7,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -7,
+                -1
+              ],
+              [
+                -7,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                7,
+                -1
+              ],
+              [
+                7,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -14,
+                -2
+              ],
+              [
+                -14,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                14,
+                -2
+              ],
+              [
+                14,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -28,
+                -4
+              ],
+              [
+                -28,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                28,
+                -4
+              ],
+              [
+                28,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          2,
+          0,
+          -16,
+          0,
+          20,
+          0,
+          -8,
+          0,
+          1
+        ],
+        "r": 7,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -24,
+                -3
+              ],
+              [
+                -24,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                24,
+                -3
+              ],
+              [
+                24,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -8,
+                -1
+              ],
+              [
+                -8,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                8,
+                -1
+              ],
+              [
+                8,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -8,
+                -1
+              ],
+              [
+                -8,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                8,
+                -1
+              ],
+              [
+                8,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -16,
+                -2
+              ],
+              [
+                -16,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                16,
+                -2
+              ],
+              [
+                16,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -32,
+                -4
+              ],
+              [
+                -32,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                32,
+                -4
+              ],
+              [
+                32,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          0,
+          9,
+          0,
+          -30,
+          0,
+          27,
+          0,
+          -9,
+          0,
+          1
+        ],
+        "r": 8,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -27,
+                -3
+              ],
+              [
+                -27,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                27,
+                -3
+              ],
+              [
+                27,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -9,
+                -1
+              ],
+              [
+                -9,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                9,
+                -1
+              ],
+              [
+                9,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -9,
+                -1
+              ],
+              [
+                -9,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                9,
+                -1
+              ],
+              [
+                9,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -18,
+                -2
+              ],
+              [
+                -18,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                18,
+                -2
+              ],
+              [
+                18,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -36,
+                -4
+              ],
+              [
+                -36,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                36,
+                -4
+              ],
+              [
+                36,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          -2,
+          0,
+          25,
+          0,
+          -50,
+          0,
+          35,
+          0,
+          -10,
+          0,
+          1
+        ],
+        "r": 9,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -30,
+                -3
+              ],
+              [
+                -30,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                30,
+                -3
+              ],
+              [
+                30,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -10,
+                -1
+              ],
+              [
+                -10,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                10,
+                -1
+              ],
+              [
+                10,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -10,
+                -1
+              ],
+              [
+                -10,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                10,
+                -1
+              ],
+              [
+                10,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -20,
+                -2
+              ],
+              [
+                -20,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                20,
+                -2
+              ],
+              [
+                20,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -40,
+                -4
+              ],
+              [
+                -40,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                40,
+                -4
+              ],
+              [
+                40,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          0,
+          -11,
+          0,
+          55,
+          0,
+          -77,
+          0,
+          44,
+          0,
+          -11,
+          0,
+          1
+        ],
+        "r": 10,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -33,
+                -3
+              ],
+              [
+                -33,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                33,
+                -3
+              ],
+              [
+                33,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -11,
+                -1
+              ],
+              [
+                -11,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                11,
+                -1
+              ],
+              [
+                11,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -11,
+                -1
+              ],
+              [
+                -11,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                11,
+                -1
+              ],
+              [
+                11,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -22,
+                -2
+              ],
+              [
+                -22,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                22,
+                -2
+              ],
+              [
+                22,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -44,
+                -4
+              ],
+              [
+                -44,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                44,
+                -4
+              ],
+              [
+                44,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          2,
+          0,
+          -36,
+          0,
+          105,
+          0,
+          -112,
+          0,
+          54,
+          0,
+          -12,
+          0,
+          1
+        ],
+        "r": 11,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -36,
+                -3
+              ],
+              [
+                -36,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                36,
+                -3
+              ],
+              [
+                36,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -12,
+                -1
+              ],
+              [
+                -12,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                12,
+                -1
+              ],
+              [
+                12,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -12,
+                -1
+              ],
+              [
+                -12,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                12,
+                -1
+              ],
+              [
+                12,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -24,
+                -2
+              ],
+              [
+                -24,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                24,
+                -2
+              ],
+              [
+                24,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -48,
+                -4
+              ],
+              [
+                -48,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                48,
+                -4
+              ],
+              [
+                48,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      },
+      {
+        "D_r_plus_1_coefficients_low_to_high": [
+          0,
+          13,
+          0,
+          -91,
+          0,
+          182,
+          0,
+          -156,
+          0,
+          65,
+          0,
+          -13,
+          0,
+          1
+        ],
+        "r": 12,
+        "scaled_solution_rows": [
+          {
+            "solutions_a_b": [
+              [
+                -39,
+                -3
+              ],
+              [
+                -39,
+                3
+              ],
+              [
+                -3,
+                -6
+              ],
+              [
+                -3,
+                6
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                39,
+                -3
+              ],
+              [
+                39,
+                3
+              ]
+            ],
+            "target_exponent_c": -3
+          },
+          {
+            "solutions_a_b": [
+              [
+                -13,
+                -1
+              ],
+              [
+                -13,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                13,
+                -1
+              ],
+              [
+                13,
+                1
+              ]
+            ],
+            "target_exponent_c": -1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -13,
+                -1
+              ],
+              [
+                -13,
+                1
+              ],
+              [
+                -1,
+                -2
+              ],
+              [
+                -1,
+                2
+              ],
+              [
+                1,
+                -2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                13,
+                -1
+              ],
+              [
+                13,
+                1
+              ]
+            ],
+            "target_exponent_c": 1
+          },
+          {
+            "solutions_a_b": [
+              [
+                -26,
+                -2
+              ],
+              [
+                -26,
+                2
+              ],
+              [
+                -2,
+                -4
+              ],
+              [
+                -2,
+                4
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                26,
+                -2
+              ],
+              [
+                26,
+                2
+              ]
+            ],
+            "target_exponent_c": 2
+          },
+          {
+            "solutions_a_b": [
+              [
+                -52,
+                -4
+              ],
+              [
+                -52,
+                4
+              ],
+              [
+                -4,
+                -8
+              ],
+              [
+                -4,
+                8
+              ],
+              [
+                4,
+                -8
+              ],
+              [
+                4,
+                8
+              ],
+              [
+                52,
+                -4
+              ],
+              [
+                52,
+                4
+              ]
+            ],
+            "target_exponent_c": 4
+          }
+        ]
+      }
+    ],
+    "first_graph": "x=D_(r+1)(z), y=z, corresponding to u=w^(r+1), v=w",
+    "recurrence": "D_0(z)=2, D_1(z)=z, D_(n+1)(z)=z*D_n(z)-D_(n-1)(z)",
+    "second_graph": "x=z, y=D_2(z)=z^2-2, corresponding to u=w, v=w^2",
+    "torus_identity": "if z=w+w^-1 then D_n(z)=w^n+w^-n"
+  },
+  "formal_weight_problem": {
+    "meaning": "equality of Laurent-character multisets for a formal or generic torus parameter w",
+    "primitive_target": "O_r={-(2r+1),-(2r-1),...,2r+1}, with multiplicity one",
+    "scaled_target": "c*O_r is the weight multiset of Sym^(2r+1)(w^c)",
+    "source": "W_r(a,b)={epsilon*a+b*(r-2j):epsilon=+/-1,0<=j<=r}, with multiplicity"
+  },
+  "large_r_direct_canonical_checks": {
+    "purpose": "retain long-r regression coverage without enumerating either surrounding candidate box",
+    "rows": [
+      {
+        "candidate_box_enumerated": false,
+        "canonical_signed_solutions_checked": 8,
+        "r": 32,
+        "solutions_a_b": [
+          [
+            -33,
+            -1
+          ],
+          [
+            -33,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            33,
+            -1
+          ],
+          [
+            33,
+            1
+          ]
+        ],
+        "weight_count_per_solution": 66
+      },
+      {
+        "candidate_box_enumerated": false,
+        "canonical_signed_solutions_checked": 8,
+        "r": 64,
+        "solutions_a_b": [
+          [
+            -65,
+            -1
+          ],
+          [
+            -65,
+            1
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            1,
+            -2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            65,
+            -1
+          ],
+          [
+            65,
+            1
+          ]
+        ],
+        "weight_count_per_solution": 130
+      }
+    ]
+  },
+  "multiplicity_and_symmetry_audit": {
+    "canonical_nonoverlap": "A/B=r+1 in the first family and A/B=1/2 in the second",
+    "cross_branch_overlap": "for A,B>0 the +A and -A progressions meet iff A/B is an integer in {1,...,r}",
+    "independent_Weyl_signs": "a->-a swaps epsilon and b->-b reverses j; the two signs are independent",
+    "overlap_consequence": "any meeting creates multiplicity at least two, forbidden by O_r",
+    "r_1_swap_orbit": "W_1(a,b)=W_1(b,a), so the two canonical classes form one orbit under factor swap",
+    "r_greater_than_1": "the factors have dimensions 2 and r+1; swapping is not a symmetry and swaps no classified solution to a solution",
+    "torus_inversion": "w->w^-1 gives simultaneous exponent inversion, already contained in the independent Weyl signs"
+  },
+  "next_targets": [
+    "classify cyclotomic residuals for each r after reducing exponents modulo the torsion order",
+    "seek nonmonomial positive-dimensional components of the full rational coefficient intersection",
+    "test whether either rigid graph can occur coherently across primes in a geometric compatible family"
+  ],
+  "packet_id": "FUNCTION_FIELD.ELLIPTIC.TENSOR_SYMMETRIC_POWER.SUBTORUS_RIGIDITY.V1",
+  "payload_sha256": "f05eea9c197c95af54e874bea437b7547acf42b5ccad50b29f7031b54d5c695d",
+  "predecessor_source_lock": {
+    "fixture_path": "research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.json",
+    "fixture_payload_sha256": "e2c9c7ac3d1329b7b911a5214d36935d2694436cbe6d9cce551b94f8486b01ba",
+    "fixture_schema": "riemann.function_field.elliptic_tensor_sym2_sym5_spectral_intersection.v1",
+    "fixture_sha256_lf_normalized": "e583220e7df56765ef198d71a4a94887e8246992ba8fd9d127e8c1ce4e09cc32",
+    "producer_path": "research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.py",
+    "producer_sha256_lf_normalized": "d414807d8c2bb41ee075c5526e22b243204f3e587e5988a55f91245a99f6d9e7",
+    "use": "lock the r=2 complete rational intersection packet whose two universal graph identities are sharpened here"
+  },
+  "primitive_subtorus_rigidity_theorem": {
+    "all_signed_solutions": "(a,b)=(sigma*(r+1),tau) or (sigma,2*tau), independently sigma,tau in {+/-1}",
+    "classification": "W_r(a,b)=O_r iff (|a|,|b|)=(r+1,1) or (1,2)",
+    "no_search_dependency": "the maximum-weight argument is the proof; the r<=16 enumeration is regression only",
+    "proof": [
+      "independent Weyl involutions a->-a and b->-b preserve W_r, so put A=|a| and B=|b|",
+      "A=0 repeats every b-branch weight and B=0 repeats +/-A exactly r+1 times, so multiplicity-freeness forces A,B>=1",
+      "the maximum source weight is A+rB and the maximum target weight is 2r+1, hence A+rB=2r+1",
+      "A>=1 gives B<=2; B=1 forces A=r+1 and B=2 forces A=1",
+      "the first pair splits O_r into its positive and negative halves, while the second pair interlaces its even- and odd-indexed weights"
+    ],
+    "scope": "every r>=1 and all integers a,b"
+  },
+  "raw_weight_bookkeeping": {
+    "even_r": "q^(r/2) is an integer power of q",
+    "odd_r": "the raw formula requires a chosen square root of q; the normalized torus theorem itself does not",
+    "source_weight": "Std(E_A) tensor Sym^r(E_B) has motivic weight r+1",
+    "target_weight": "Sym^(2r+1)(E_C) has motivic weight 2r+1",
+    "typed_comparison": "P_source(q^(r/2)*T)=P_target(T)"
+  },
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "bounded_signed_candidate_pairs": 27344,
+      "closed_form_classification_rows": 16,
+      "dickson_recurrence_steps": 78,
+      "large_r_direct_canonical_solution_checks": 16,
+      "locked_predecessor_files_verified": 2,
+      "named_degenerate_and_swap_certificates": 2,
+      "scaled_canonical_solution_checks": 480,
+      "total_accounted_work_units": 27938
+    },
+    "arithmetic": "standard-library exact Python integers and sorted tuples only",
+    "bounded_weight_atom_cap_inclusive": 800000,
+    "bounded_weight_atoms_emitted": 720816,
+    "exclusive_accounted_work_unit_cap": 40000,
+    "field_curve_polynomial_model_or_trace_range_enumerations": 0,
+    "floating_point_results": 0,
+    "logical_unit_definition": "one signed candidate pair, one canonical scaled-solution comparison, one recurrence step, one locked file, or one named theorem row; not CPU instructions",
+    "maximum_explicit_r": 4096,
+    "random_samples": 0,
+    "runtime_symbolic_packages": 0
+  },
+  "rigor_level": {
+    "arithmetic_realization_or_novelty": "NOT_INFERRED",
+    "bounded_replay": "EXACT_STDLIB_REGRESSION_NOT_USED_AS_THE_PROOF",
+    "fixed_target_theorem": "PROVED_FOR_EVERY_INTEGER_r_AT_LEAST_1",
+    "full_rational_intersection": "NOT_CLASSIFIED",
+    "scaled_target_theorem": "PROVED_FOR_EVERY_NONZERO_INTEGER_c"
+  },
+  "scaled_subtorus_rigidity_theorem": {
+    "c_zero_corner": "if c=0, equality holds only for a=b=0; this collapsed map is not a subtorus and the producer API refuses it",
+    "classification": "W_r(a,b)=c*O_r iff (|a|,|b|)=|c|*(r+1,1) or |c|*(1,2)",
+    "divisibility_proof": "successive weights in either source progression differ by 2b, whereas every target difference is divisible by 2c; hence c divides b. One source weight then forces c to divide a. Divide by |c| and apply the primitive theorem.",
+    "interpretation": "all integer one-parameter subtorus homomorphisms, modulo a common nonprimitive reparametrization",
+    "scope": "every r>=1 and every nonzero integer c"
+  },
+  "schema": "riemann.function_field.elliptic_tensor_symmetric_power_subtorus_rigidity.v1",
+  "scope_firewall": {
+    "full_rational_intersection": "the theorem does not classify all rational coefficient solutions for r other than the locked r=2 predecessor",
+    "generic_monomial_only": "the theorem classifies integer cocharacters of a formal one-dimensional torus, not arbitrary rational or algebraic curves in trace space",
+    "no_RH_GRH_or_zero_claim": "the local identity has no asserted consequence for analytic continuation, zeros, RH, or GRH",
+    "no_arithmetic_realization": "no Hasse-lattice point is asserted to arise from linked elliptic curves, a variety, or a compatible family",
+    "no_local_to_global_upgrade": "no motive, correspondence, Euler product, automorphy, modularity, or global family is constructed",
+    "no_novelty_priority_claim": "the elementary Laurent-weight rigidity is recorded without a literature-priority claim",
+    "no_representation_homomorphism": "spectral equality along a subtorus is not an isomorphism of the ambient source representations",
+    "roots_of_unity": "at torsion w, exponents are compared modulo its order and extra cyclotomic coincidences or multiplicities can occur"
+  },
+  "source_and_owned_file_locks": {
+    "authentication": "the predecessor fixture is schema-, canonical-payload-, payload-, and LF-file-locked; its producer and all three owned source files are LF-file-locked",
+    "owned_file_locks": {
+      "note": {
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_TENSOR_SYMMETRIC_POWER_SUBTORUS_RIGIDITY.md",
+        "sha256_lf_normalized": "57b4ea1ef948499d9637f1d9dfb169f25aed6339321424ac74f9fd3f111a5e80"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_subtorus_rigidity.py",
+        "sha256_lf_normalized": "a9410d146fb9152c0ea835b48564343a8867c30d12e46798990a0c991463643b"
+      },
+      "test": {
+        "path": "tests/test_elliptic_tensor_symmetric_power_subtorus_rigidity.py",
+        "sha256_lf_normalized": "e3f7b4dff3cf15009a352b6ce0851595de3ac57fe664b123a59fbeca2e931f1f"
+      }
+    }
+  },
+  "status": "EXACT_ALL_R_INTEGER_MONOMIAL_SUBTORUS_CLASSIFICATION_PLUS_BOUNDED_REPLAY"
+}

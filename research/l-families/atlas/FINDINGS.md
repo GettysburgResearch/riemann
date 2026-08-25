@@ -795,12 +795,96 @@ every `r>=1`:
  \sim\operatorname{Sym}^{2r+1}(w).
 \]
 
-Only the `r=2` rational converse is proved.  The independent product and
+In the degree-six packet only the `r=2` rational converse is proved.  The independent product and
 principal `Sym^5` trace moments agree through degree four and first split at
 degree six (`75` versus `111`); both already split from generic `USp(6)` at
 degree four (`6` versus `3`).  These are exact local spectral and
 coefficient-lattice statements, not elliptic realization, a representation
 homomorphism, a global transfer, or an RH/GRH consequence.
+
+### The two ladder graphs are the only integer monomial subtori for every `r`
+
+The sufficient all-`r` identities have a sharp generic converse.  For an
+integer cocharacter `w -> (w^a,w^b)`, the source weights are
+
+\[
+ W_r(a,b)=\{\epsilon a+b(r-2j):\epsilon=\pm1, 0\le j\le r\}.
+\]
+
+They equal the multiplicity-free odd interval of `Sym^(2r+1)` if and only if
+
+\[
+ (|a|,|b|)=(r+1,1)\qquad\text{or}\qquad(1,2).
+\]
+
+More generally, if the target parameter is `w^c` with nonzero integer `c`,
+both pairs are simply multiplied by `|c|`.  Indeed, gaps in the target force
+`c|b`, then one source weight forces `c|a`; after division, the largest weight
+gives `A+rB=2r+1`, so `B` is only `1` or `2`.  This proves exhaustiveness among
+all integer one-parameter subtorus homomorphisms, including nonprimitive
+reparameterizations.  At `r=1` the two solutions form one orbit under factor
+swap; at larger `r` the factor dimensions differ.
+
+The word *monomial* is essential.  Roots of unity compare exponents modulo
+their order, and a nonmonomial algebraic curve or an isolated rational point
+need not arise from a cocharacter.  Thus this theorem neither removes the
+cyclotomic residuals nor supplies the full rational intersection for every
+`r`.
+
+### The `r=3` rung has a complete integral odd-prime-power classification
+
+The next degree-eight comparison is
+
+\[
+ P_{\operatorname{Std}(A)\otimes\operatorname{Sym}^3(B)}(q^{3/2}T)
+ =P_{\operatorname{Sym}^7(C)}(T).
+\]
+
+With `u=A/s,v=B/s,z=C/s` and `s^2=q`, its positive-dimensional normalized
+intersection is exactly
+
+\[
+ (u,v)=(\epsilon C_4(z),\epsilon z)
+ \quad\text{or}\quad
+ (u,v)=(\epsilon z,\epsilon C_2(z)),\qquad\epsilon=\pm1.
+\]
+
+An exact Newton/elimination certificate confines every nongraph point to
+`Z=z^2` satisfying
+
+\[
+ (Z-2)(Z^2-4Z+2)(Z^2-5Z+5)
+ (Z^3-6Z^2+9Z-1)(Z^3-5Z^2+6Z-1)=0.
+\]
+
+These are genuine cyclotomic strata of orders `8,16,20,9/18,7/14`, but none
+survives integral raw descent: `Z=C^2/q` is rational, the nonlinear factors
+have no rational root, and `Z=2` would require `C^2=2q`.  Hence nonsquare odd
+prime powers have no intersection.  If `q=p^(2k)=s^2`, the two raw branches
+are
+
+\[
+ B=\epsilon C,\quad
+ s^3A=\epsilon(C^4-4qC^2+2q^2),
+\]
+
+or
+
+\[
+ A=\epsilon C,\quad sB=\epsilon(C^2-2q).
+\]
+
+They overlap in eight triples, and their Hasse-lattice union has exactly
+
+\[
+ \boxed{8p^{\lfloor k/4\rfloor}+8p^{\lfloor k/2\rfloor}-4}
+\]
+
+points.  The independent `Std x Sym3` and principal `Sym7` trace moments again
+alias through degree four and first split at degree six (`170` versus `260`),
+while generic `USp(8)` already has fourth moment `3` instead of `8`.  The
+count is a coefficient-lattice theorem, not simultaneous curve realization
+or a global functorial identity.
 
 ### The `Sym^3` curve inside `SO(4)` is a doubling locus
 

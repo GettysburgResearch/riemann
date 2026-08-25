@@ -77,6 +77,14 @@ source/note/JSON/test packets:
   factors meet on exactly two rational Chebyshev graph families, classifies
   their orders `7,12,14` algebraic residuals and every odd-prime-power Hasse
   lattice point, and embeds both graphs in an exact all-`r` torus ladder;
+- `ELLIPTIC_TENSOR_SYMMETRIC_POWER_SUBTORUS_RIGIDITY.md` proves that those
+  two graph families exhaust every integer monomial one-parameter subtorus at
+  every rung, including nonprimitive target reparameterizations, and records
+  the independent Weyl signs, central-sign parity, and `r=1` swap orbit;
+- `ELLIPTIC_TENSOR_SYM3_SYM7_SPECTRAL_INTERSECTION.md` closes the next
+  degree-eight rung over integral odd-prime-power raw traces: nonsquare bases
+  are empty, square bases have a closed Hasse count, and all off-graph
+  algebraic support is isolated on five explicit cyclotomic factors;
 - `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
   curve with the complete locked genus-two coefficient support, classifies
   the odd-prime arithmetic candidates, and separates 53 witnessed members
@@ -158,6 +166,8 @@ python research/l-families/atlas/function_field/elliptic_symmetric_power_full_fa
 python research/l-families/atlas/function_field/elliptic_symmetric_power_cyclotomic_spectral_aliases.py --check
 python research/l-families/atlas/function_field/elliptic_symmetric_power_even_cyclotomic_aliases.py --check
 python research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.py --check
+python research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_subtorus_rigidity.py --check
+python research/l-families/atlas/function_field/elliptic_tensor_sym3_sym7_spectral_intersection.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
@@ -193,6 +203,8 @@ python -m pytest -q \
   tests/test_elliptic_symmetric_power_cyclotomic_spectral_aliases.py \
   tests/test_elliptic_symmetric_power_even_cyclotomic_aliases.py \
   tests/test_elliptic_tensor_sym2_sym5_spectral_intersection.py \
+  tests/test_elliptic_tensor_symmetric_power_subtorus_rigidity.py \
+  tests/test_elliptic_tensor_sym3_sym7_spectral_intersection.py \
   tests/test_genus2_sym3_coefficient_intersection.py \
   tests/test_sym3_exterior_sym4_plethysm_bridge.py \
   tests/test_usp_coefficient_minor_rank_scan.py \
@@ -214,6 +226,7 @@ elliptic-symmetric-fourth, elliptic-pair-tensor, SO4/Sym3-intersection,
 symmetric-power-aliasing, Sym5-collision, Sym5-coefficient-recovery,
 rational-full-factor-aliasing, odd-cyclotomic-spectral-aliasing,
 even-cyclotomic-spectral-aliasing, tensor-Sym2/Sym5-intersection,
+tensor-subtorus-rigidity, tensor-Sym3/Sym7-intersection,
 symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm, product-tensor,
 tensor-singular, tensor-endoscopic-bridge, integral-factor-locus,
 primitive-exterior-square, and virtual-null
@@ -251,8 +264,13 @@ The even-cyclotomic packet accounts for 49,735 parity-cycle, affine-interval,
 stabilizer, and factor checks below an exclusive 150,000-unit cap. The
 tensor-Sym2/Sym5 packet accounts for 12,239 locked-triple, synthetic-lattice,
 sparse-reduction, S-pair, and small-certificate units below an exclusive
-20,000-unit cap. None of these packets enumerates a field, curve, or model,
-and none uses floating point, randomness, or a runtime symbolic package.
+20,000-unit cap. The generic subtorus packet accounts for 27,938 units below
+an exclusive 40,000-unit cap; its exhaustive box stops at `r=16` with 720,816
+small weight atoms, while `r=32,64` receive direct canonical checks only. The
+tensor-Sym3/Sym7 packet accounts for 19,548 units below an exclusive 25,000-
+unit cap, including 7,975 locked triples and 11,458 synthetic `q=9,25`
+triples. None of these packets enumerates a field, curve, or model, and none
+uses floating point, randomness, or a runtime symbolic package.
 The balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
 visits 4,023 cubic candidates at `q=3,5,7,11,13`. The producers retain their
@@ -434,10 +452,24 @@ the explicit weight-changing `qT` dilation. Its two rational graph families
 exhaust raw rational coefficient solutions, but its Hasse-lattice triples are
 not asserted to be simultaneously realized by three elliptic curves. The
 orders `7,12,14` residuals are algebraic torus strata, and the all-`r` ladder
-gives sufficient spectral loci only; a complete converse is proved just for
-`r=2`. None of this supplies a representation homomorphism, correspondence,
-compatible system, automorphic transfer, literature priority, or RH/GRH
-consequence.
+gives sufficient spectral loci only; within that packet a complete converse
+is proved just for `r=2`. None of this supplies a representation homomorphism,
+correspondence, compatible system, automorphic transfer, literature priority,
+or RH/GRH consequence.
+
+The tensor/symmetric-power rigidity theorem is exhaustive only for integer
+monomial cocharacters. Torsion parameters compare weights modulo their order,
+and neither nonmonomial curves nor isolated rational points are classified.
+Its elementary all-`r` statement is not a full coefficient-intersection or
+arithmetic-realization theorem.
+
+The tensor-Sym3/Sym7 theorem compares weight-four and weight-seven factors
+only after the chosen `q^(3/2)` dilation. Its algebraic residual strata at
+orders `8,16,20,9/18,7/14` remain genuine even though rational raw descent
+excludes them. The square-base Hasse count is a coefficient-lattice count, not
+simultaneous realization by three linked elliptic curves, a correspondence,
+compatible system, automorphic transfer, literature-priority claim, or
+RH/GRH consequence.
 
 The symmetric-cube/genus-two intersection compares normalized coefficient
 shapes of different weights; it is not an identity of local factors. Its
