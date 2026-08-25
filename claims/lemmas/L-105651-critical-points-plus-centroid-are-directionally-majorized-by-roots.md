@@ -231,7 +231,7 @@ For `H>=0`, zero total imaginary sum rewrites the excess as
 \ge0.
 \end{aligned}
 }
-\tag{L-105651.9
+\tag{L-105651.9}
 
 The left side is the finite-polynomial horizontal logarithmic-potential
 excess after removing the unavoidable one-degree carrier.  Thus the balanced
