@@ -3,8 +3,8 @@
 ## Purpose
 
 This is the compact handoff index for the tensor/symmetric-power exploration
-on PR #752.  It separates proved local/compact statements, bounded negative
-evidence, and open arithmetic or global questions.  Follow the linked packet
+on PR #752.  It separates proved local/compact statements, unbound exploratory
+leads, and open arithmetic or global questions.  Follow the linked packet
 notes for proofs and the JSON payloads for executable provenance.
 
 RH and GRH remain open.  A local spectral identity is not a curve

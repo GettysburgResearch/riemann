@@ -108,7 +108,7 @@ Therefore
 \]
 
 In particular, `W` is symmetric, has mean zero and variance one, but has
-infinite third absolute moment and infinite fourth and higher moments.
+infinite absolute moments of every order at least three.
 
 ## 3. The endpoint boundary layer explains the moment polynomial
 
@@ -224,5 +224,6 @@ here.  In particular, finite-field trace histograms, monodromy, automorphy,
 analytic continuation, zero statistics, RH, and GRH remain separate.
 
 The concrete experimental prediction is to compare truncated tails or bounded
-test functions rather than raw moments when rank grows.  Raw fourth and higher
-moments are increasingly controlled by rare near-central conjugacy classes.
+test functions rather than raw moments when rank grows.  Raw even moments of
+order four and higher are increasingly controlled by rare near-central
+conjugacy classes.
