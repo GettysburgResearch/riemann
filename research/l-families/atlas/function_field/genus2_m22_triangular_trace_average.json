@@ -1,0 +1,3348 @@
+{
+  "M22_total_low_to_high": [
+    [
+      0,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      21,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      -50,
+      1
+    ],
+    [
+      14,
+      1
+    ],
+    [
+      24,
+      1
+    ],
+    [
+      -19,
+      1
+    ],
+    [
+      5,
+      1
+    ]
+  ],
+  "firewalls": [
+    "The all-q theorem is not inferred from the q=3,5,7 aggregate controls.",
+    "No finite field, quintic, curve, or family member is enumerated.",
+    "Composite-denominator even-exponent primes remain deletion factors exactly as in the B3 theorem.",
+    "The chi_(2,2) result depends on the separately source-locked chi_(0,3) theorem.",
+    "No memberwise sign, novelty, RH, or GRH claim is made."
+  ],
+  "ordered_tuple_signature_audit": {
+    "radical_degree_census": {
+      "0": 4,
+      "2": 8,
+      "4": 5,
+      "6": 3
+    },
+    "signature_count": 20,
+    "slot_types": "two ordered monic-linear slots and two ordered monic-quadratic slots",
+    "status": "EXACT_EXHAUSTIVE_20_SIGNATURE_PARTITION",
+    "weighted_type_count": "q^6",
+    "weighted_type_count_low_to_high": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "payload_sha256": "4d147295e3d2b7bc4b62eb8ba113c946f528606d82dd28d1a1ec002e2f93d60c",
+  "radical_degree_blocks": {
+    "0": [
+      [
+        0,
+        1
+      ],
+      [
+        -184,
+        1
+      ],
+      [
+        504,
+        1
+      ],
+      [
+        -579,
+        1
+      ],
+      [
+        407,
+        1
+      ],
+      [
+        -219,
+        1
+      ],
+      [
+        97,
+        1
+      ],
+      [
+        -32,
+        1
+      ],
+      [
+        6,
+        1
+      ]
+    ],
+    "2": [
+      [
+        0,
+        1
+      ],
+      [
+        1400,
+        1
+      ],
+      [
+        -2801,
+        1
+      ],
+      [
+        1897,
+        1
+      ],
+      [
+        -559,
+        1
+      ],
+      [
+        63,
+        1
+      ]
+    ],
+    "4": [
+      [
+        0,
+        1
+      ],
+      [
+        -2577,
+        1
+      ],
+      [
+        4132,
+        1
+      ],
+      [
+        -1463,
+        1
+      ],
+      [
+        -367,
+        1
+      ],
+      [
+        354,
+        1
+      ],
+      [
+        -87,
+        1
+      ],
+      [
+        8,
+        1
+      ]
+    ],
+    "6": [
+      [
+        0,
+        1
+      ],
+      [
+        1364,
+        1
+      ],
+      [
+        -1814,
+        1
+      ],
+      [
+        147,
+        1
+      ],
+      [
+        469,
+        1
+      ],
+      [
+        -184,
+        1
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        -1,
+        1
+      ]
+    ]
+  },
+  "resource_contract": {
+    "actual_operations_and_input_atoms": 2356,
+    "actual_primitive_types": 7,
+    "actual_signatures": 20,
+    "actual_symbolic_operations": 2329,
+    "maximum_primitive_types": 7,
+    "maximum_signatures": 20,
+    "maximum_symbolic_operations_and_input_atoms": 4096,
+    "maximum_wall_seconds": 5.0,
+    "symbolic_operation_semantics": "one operation is one complete-polynomial add, scale, multiply, or power step; signature and primitive-type inputs are added as atoms"
+  },
+  "reused_primitive_aggregate_lemma": {
+    "meaning": "the same exact conductor-type sums of s1, s1^2, s2, p1, p2 and marked deletion factors are reweighted by the M22 slot multiplicities",
+    "new_fitted_or_sampled_primitive_average": false,
+    "source": "GENUS2_B3_PRIMITIVE_TRACE_AVERAGE.md equations (7)-(15)",
+    "source_payload_sha256": "e8001e46712db6d991286f5ea02eca62d0a58a43b20eaad146d30ca539e952dd"
+  },
+  "schema": "riemann.function_field.genus2_m22_triangular_trace_average.v1",
+  "scope": {
+    "family": "all monic squarefree quintics D in F_q[T]",
+    "family_members_consumed": 0,
+    "finite_fields_enumerated": 0,
+    "numeric_approximations": 0,
+    "q": "every odd prime power",
+    "sampled_q_values_used": 0
+  },
+  "signature_ledger": [
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 0,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 0,
+      "signature": "L[6].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "tuple_weight": 1,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 2,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 2,
+      "signature": "L[5,1].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -5,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "tuple_weight": 4,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          -20,
+          1
+        ],
+        [
+          8,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 2,
+      "linear_deletion_prime_count": 2,
+      "linear_odd_prime_count": 0,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 0,
+      "signature": "L[4,2].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          -15,
+          1
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          -12,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "tuple_weight": 8,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          48,
+          1
+        ],
+        [
+          -120,
+          1
+        ],
+        [
+          128,
+          1
+        ],
+        [
+          -96,
+          1
+        ],
+        [
+          64,
+          1
+        ],
+        [
+          -32,
+          1
+        ],
+        [
+          8,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 2,
+      "signature": "L[4,1,1].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -9,
+          1
+        ],
+        [
+          33,
+          2
+        ],
+        [
+          -9,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "tuple_weight": 14,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -126,
+          1
+        ],
+        [
+          231,
+          1
+        ],
+        [
+          -126,
+          1
+        ],
+        [
+          21,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 2,
+      "signature": "L[3,3].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -5,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "tuple_weight": 10,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          -25,
+          1
+        ],
+        [
+          10,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 2,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 2,
+      "signature": "L[3,2,1].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -18,
+          1
+        ],
+        [
+          33,
+          1
+        ],
+        [
+          -18,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "tuple_weight": 24,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -3,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -432,
+          1
+        ],
+        [
+          792,
+          1
+        ],
+        [
+          -432,
+          1
+        ],
+        [
+          72,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 4,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 4,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 4,
+      "signature": "L[3,1,1,1].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -11,
+          6
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          6
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          -22,
+          1
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          23,
+          6
+        ],
+        [
+          -5,
+          3
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "tuple_weight": 42,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          630,
+          1
+        ],
+        [
+          -924,
+          1
+        ],
+        [
+          196,
+          1
+        ],
+        [
+          161,
+          1
+        ],
+        [
+          -70,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 3,
+      "linear_odd_prime_count": 0,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 0,
+      "signature": "L[2,2,2].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -8,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -8,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -7,
+          1
+        ],
+        [
+          113,
+          6
+        ],
+        [
+          -64,
+          3
+        ],
+        [
+          91,
+          6
+        ],
+        [
+          -17,
+          2
+        ],
+        [
+          23,
+          6
+        ],
+        [
+          -7,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "tuple_weight": 33,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -231,
+          1
+        ],
+        [
+          1243,
+          2
+        ],
+        [
+          -704,
+          1
+        ],
+        [
+          1001,
+          2
+        ],
+        [
+          -561,
+          2
+        ],
+        [
+          253,
+          2
+        ],
+        [
+          -77,
+          2
+        ],
+        [
+          11,
+          2
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 2,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 2,
+      "signature": "L[2,2,1,1].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -19,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          33,
+          1
+        ],
+        [
+          -257,
+          4
+        ],
+        [
+          41,
+          1
+        ],
+        [
+          -43,
+          4
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "tuple_weight": 58,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1914,
+          1
+        ],
+        [
+          -7453,
+          2
+        ],
+        [
+          2378,
+          1
+        ],
+        [
+          -1247,
+          2
+        ],
+        [
+          58,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 4,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 4,
+      "signature": "L[2,1,1,1,1].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -15,
+          8
+        ],
+        [
+          23,
+          8
+        ],
+        [
+          -9,
+          8
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          -13,
+          12
+        ],
+        [
+          73,
+          24
+        ],
+        [
+          -15,
+          8
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          -1,
+          24
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -245,
+          8
+        ],
+        [
+          571,
+          12
+        ],
+        [
+          -359,
+          24
+        ],
+        [
+          -59,
+          12
+        ],
+        [
+          85,
+          24
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          1,
+          24
+        ]
+      ],
+      "tuple_weight": 102,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -25,
+          12
+        ],
+        [
+          35,
+          24
+        ],
+        [
+          -5,
+          12
+        ],
+        [
+          1,
+          24
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -12495,
+          4
+        ],
+        [
+          9707,
+          2
+        ],
+        [
+          -6103,
+          4
+        ],
+        [
+          -1003,
+          2
+        ],
+        [
+          1445,
+          4
+        ],
+        [
+          -68,
+          1
+        ],
+        [
+          17,
+          4
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 6,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 6,
+      "signature": "L[1,1,1,1,1,1].Q[-]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          -23,
+          48
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          -1,
+          48
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          48
+        ],
+        [
+          67,
+          144
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          19,
+          36
+        ],
+        [
+          -5,
+          48
+        ],
+        [
+          1,
+          144
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          -137,
+          360
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          -17,
+          144
+        ],
+        [
+          1,
+          48
+        ],
+        [
+          -1,
+          720
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          115,
+          16
+        ],
+        [
+          -37,
+          4
+        ],
+        [
+          37,
+          72
+        ],
+        [
+          1601,
+          720
+        ],
+        [
+          -103,
+          144
+        ],
+        [
+          1,
+          36
+        ],
+        [
+          1,
+          72
+        ],
+        [
+          -1,
+          720
+        ]
+      ],
+      "tuple_weight": 180,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          137,
+          360
+        ],
+        [
+          -5,
+          16
+        ],
+        [
+          17,
+          144
+        ],
+        [
+          -1,
+          48
+        ],
+        [
+          1,
+          720
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          5175,
+          4
+        ],
+        [
+          -1665,
+          1
+        ],
+        [
+          185,
+          2
+        ],
+        [
+          1601,
+          4
+        ],
+        [
+          -515,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          -1,
+          4
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 0,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 1,
+      "radical_degree": 2,
+      "signature": "L[4].Q[1]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tuple_weight": 2,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 2,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 1,
+      "radical_degree": 4,
+      "signature": "L[3,1].Q[1]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -5,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tuple_weight": 6,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          -30,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          -12,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 2,
+      "linear_odd_prime_count": 0,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 1,
+      "radical_degree": 2,
+      "signature": "L[2,2].Q[1]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -5,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          -29,
+          4
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          -13,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tuple_weight": 8,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          -58,
+          1
+        ],
+        [
+          60,
+          1
+        ],
+        [
+          -26,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 1,
+      "radical_degree": 4,
+      "signature": "L[2,1,1].Q[1]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          -5,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          -9,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -27,
+          4
+        ],
+        [
+          33,
+          2
+        ],
+        [
+          -43,
+          4
+        ],
+        [
+          -5,
+          2
+        ],
+        [
+          21,
+          4
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "tuple_weight": 14,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -189,
+          2
+        ],
+        [
+          231,
+          1
+        ],
+        [
+          -301,
+          2
+        ],
+        [
+          -35,
+          1
+        ],
+        [
+          147,
+          2
+        ],
+        [
+          -28,
+          1
+        ],
+        [
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 4,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 1,
+      "radical_degree": 6,
+      "signature": "L[1,1,1,1].Q[1]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          -7,
+          16
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          -1,
+          16
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          -1,
+          16
+        ],
+        [
+          -3,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -7,
+          16
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          17,
+          48
+        ],
+        [
+          -17,
+          48
+        ],
+        [
+          7,
+          48
+        ],
+        [
+          -1,
+          48
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          45,
+          16
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          43,
+          16
+        ],
+        [
+          -103,
+          48
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          -1,
+          48
+        ]
+      ],
+      "tuple_weight": 24,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          -17,
+          48
+        ],
+        [
+          17,
+          48
+        ],
+        [
+          -7,
+          48
+        ],
+        [
+          1,
+          48
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          135,
+          2
+        ],
+        [
+          -144,
+          1
+        ],
+        [
+          54,
+          1
+        ],
+        [
+          129,
+          2
+        ],
+        [
+          -103,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          -1,
+          2
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 0,
+      "quadratic_deletion_prime_count": 1,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 0,
+      "signature": "L[2].Q[2]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tuple_weight": 1,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 1,
+      "linear_odd_prime_count": 0,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 2,
+      "radical_degree": 4,
+      "signature": "L[2].Q[1,1]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          -1,
+          8
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -3,
+          8
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          -1,
+          8
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          -3,
+          8
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "tuple_weight": 2,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -3,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -3,
+          4
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 1,
+      "quadratic_odd_prime_count": 0,
+      "radical_degree": 2,
+      "signature": "L[1,1].Q[2]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          4
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          -7,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tuple_weight": 2,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          -7,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "assignment_multiplier": 1,
+      "linear_deletion_prime_count": 0,
+      "linear_odd_prime_count": 2,
+      "quadratic_deletion_prime_count": 0,
+      "quadratic_odd_prime_count": 2,
+      "radical_degree": 6,
+      "signature": "L[1,1].Q[1,1]",
+      "sum_C1_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          -1,
+          16
+        ],
+        [
+          -1,
+          16
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "sum_C3_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          -5,
+          16
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -3,
+          16
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "sum_C5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          -3,
+          16
+        ],
+        [
+          -1,
+          16
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          -1,
+          16
+        ]
+      ],
+      "sum_S5_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          -5,
+          4
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          -15,
+          16
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          -1,
+          16
+        ]
+      ],
+      "tuple_weight": 4,
+      "type_count_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          -3,
+          16
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "weighted_contribution_low_to_high": [
+        [
+          0,
+          1
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          -5,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          17,
+          4
+        ],
+        [
+          -15,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -1,
+          4
+        ]
+      ]
+    }
+  ],
+  "source_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/genus2_second_moment_reduction.json",
+      "sha256_lf_normalized": "0966565c0b29d7bf85f6ad20f8c6634365a8fff674e3c3b06589125fe0bdbaf0"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_b3_primitive_trace_average.json",
+      "sha256_lf_normalized": "5ecc6006014a159a4030218977c89f58c63334461a568b7a67d36130bae1c50b"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_b3_primitive_trace_average.py",
+      "sha256_lf_normalized": "fd180499468a3672120fc1794109f12b4fb027530f881104181809ee5d6caa4c"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_B3_PRIMITIVE_TRACE_AVERAGE.md",
+      "sha256_lf_normalized": "36e6aa856931e1171cea57243ea7e6a161c6ecd01833eb80b04e1ae57b296d83"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_MOMENT_IDENTITY.md",
+      "sha256_lf_normalized": "69272720e27f9630220be0fc083cd16bb22a94c73b57b466740aa4b77dcc6277"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_M22_TRIANGULAR_TRACE_AVERAGE.md",
+      "sha256_lf_normalized": "935d235c695d84bba0a4bc4e2c348d68453784adc25780edcbf732f33a83c556"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/genus2_m22_triangular_trace_average.py",
+      "sha256_lf_normalized": "7249fc4118c7ccad2aa32b40a6abcf7c11c63d17145f1f1ffbc5d04ba2b697e9"
+    },
+    {
+      "path": "tests/test_genus2_m22_triangular_trace_average.py",
+      "sha256_lf_normalized": "9e8159b3c94e80d3937b3e465c7f24d94af82a550905f113d8da6adcc7a6b6be"
+    }
+  ],
+  "status": "PROVED_EXACT_ALL_ODD_PRIME_POWERS",
+  "theorem": {
+    "M22_mean": "E[a_D^2*b_D^2]=(q+1)*(5*q^5-19*q^4+29*q^3-5*q^2-21*q-3)/q^3",
+    "M22_total": "sum_D a_D^2*b_D^2=q*(q-1)*(q+1)*(5*q^5-19*q^4+29*q^3-5*q^2-21*q-3)",
+    "R22_mean": "(q^4+2*q^3-q^2-4*q-3)/q^6",
+    "chi_(2,2)_mean": "(2*q^3-q^2-2*q-2)/q^6",
+    "marked_stack_trace_chi_(2,2)": "2*q^3-q^2-2*q-2"
+  },
+  "triangular_character_bridge": {
+    "R22_identity": "R22=chi_(0,3)+chi_(2,2)=a^2*b^2/q^3-3*a^2*b/q^2-a^4/q^2+5*a^2/q-1",
+    "cleared_R22_sum_low_to_high": [
+      [
+        0,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cleared_chi_(0,3)_sum_low_to_high": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cleared_chi_(2,2)_sum_low_to_high": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "clearing_convention": "each cleared sum is q^3 times the corresponding family sum"
+  }
+}
