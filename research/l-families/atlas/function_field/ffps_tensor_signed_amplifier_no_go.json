@@ -1,0 +1,1447 @@
+{
+  "correlated_joint_deletion_counterexample": {
+    "coordinate_order": "zero-based lexicographic (p=5 coordinate, p=7 coordinate)",
+    "full_complete_frame_optimum": [
+      1,
+      2
+    ],
+    "interpretation": "Correlated deletion of joint tensor coordinates followed by inversion of the retained Gram is not covered by the local/product-mask no-go and can improve this formal restricted metric.",
+    "native_amplitude": 6,
+    "primes": [
+      5,
+      7
+    ],
+    "restricted_denominator_1H1": [
+      74,
+      1
+    ],
+    "restricted_gram": [
+      [
+        [
+          24,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          -6,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          -4,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          -6,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          -4,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          -4,
+          1
+        ],
+        [
+          24,
+          1
+        ]
+      ]
+    ],
+    "restricted_optimal_dual_energy": [
+      18,
+      37
+    ],
+    "restricted_optimal_weights": [
+      [
+        45,
+        37
+      ],
+      [
+        66,
+        37
+      ],
+      [
+        45,
+        37
+      ],
+      [
+        66,
+        37
+      ]
+    ],
+    "restricted_row_sums": [
+      [
+        15,
+        1
+      ],
+      [
+        22,
+        1
+      ],
+      [
+        15,
+        1
+      ],
+      [
+        22,
+        1
+      ]
+    ],
+    "retained_flat_indices": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "retained_joint_coordinates": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "same_zero_extended_weights_complete_metric_energy": [
+      8181,
+      13690
+    ],
+    "strict_restricted_improvement": true
+  },
+  "exact_gaussian_rational_controls": [
+    {
+      "analysis": {
+        "coherent_baseline": [
+          1,
+          2
+        ],
+        "dimension": 6,
+        "direct_dual_energy": [
+          1,
+          2
+        ],
+        "mode_penalty_sum": [
+          0,
+          1
+        ],
+        "modes": [
+          {
+            "active_sum_zero_primes": [
+              5
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              20,
+              1
+            ],
+            "multiplicity": 1
+          },
+          {
+            "active_sum_zero_primes": [
+              7
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              21,
+              1
+            ],
+            "multiplicity": 2
+          },
+          {
+            "active_sum_zero_primes": [
+              5,
+              7
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              35,
+              1
+            ],
+            "multiplicity": 2
+          }
+        ],
+        "positive_excess": [
+          0,
+          1
+        ],
+        "primes": [
+          5,
+          7
+        ]
+      },
+      "label": "uniform_unique_extremizer",
+      "rank_one_under_2_by_3_flattening": true,
+      "weights": [
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "analysis": {
+        "coherent_baseline": [
+          1,
+          2
+        ],
+        "dimension": 6,
+        "direct_dual_energy": [
+          43,
+          70
+        ],
+        "mode_penalty_sum": [
+          4,
+          35
+        ],
+        "modes": [
+          {
+            "active_sum_zero_primes": [
+              5
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              20,
+              1
+            ],
+            "multiplicity": 1
+          },
+          {
+            "active_sum_zero_primes": [
+              7
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              21,
+              1
+            ],
+            "multiplicity": 2
+          },
+          {
+            "active_sum_zero_primes": [
+              5,
+              7
+            ],
+            "dual_penalty": [
+              4,
+              35
+            ],
+            "euclidean_norm_squared": [
+              4,
+              1
+            ],
+            "gram_eigenvalue": [
+              35,
+              1
+            ],
+            "multiplicity": 2
+          }
+        ],
+        "positive_excess": [
+          4,
+          35
+        ],
+        "primes": [
+          5,
+          7
+        ]
+      },
+      "label": "real_nonproduct",
+      "rank_one_under_2_by_3_flattening": false,
+      "weights": [
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            2,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            0,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            0,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            2,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "analysis": {
+        "coherent_baseline": [
+          1,
+          2
+        ],
+        "dimension": 6,
+        "direct_dual_energy": [
+          121,
+          210
+        ],
+        "mode_penalty_sum": [
+          8,
+          105
+        ],
+        "modes": [
+          {
+            "active_sum_zero_primes": [
+              5
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              20,
+              1
+            ],
+            "multiplicity": 1
+          },
+          {
+            "active_sum_zero_primes": [
+              7
+            ],
+            "dual_penalty": [
+              1,
+              21
+            ],
+            "euclidean_norm_squared": [
+              1,
+              1
+            ],
+            "gram_eigenvalue": [
+              21,
+              1
+            ],
+            "multiplicity": 2
+          },
+          {
+            "active_sum_zero_primes": [
+              5,
+              7
+            ],
+            "dual_penalty": [
+              1,
+              35
+            ],
+            "euclidean_norm_squared": [
+              1,
+              1
+            ],
+            "gram_eigenvalue": [
+              35,
+              1
+            ],
+            "multiplicity": 2
+          }
+        ],
+        "positive_excess": [
+          8,
+          105
+        ],
+        "primes": [
+          5,
+          7
+        ]
+      },
+      "label": "complex_nonproduct",
+      "rank_one_under_2_by_3_flattening": false,
+      "weights": [
+        {
+          "imaginary": [
+            1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            -1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "analysis": {
+        "coherent_baseline": [
+          1,
+          2
+        ],
+        "dimension": 6,
+        "direct_dual_energy": [
+          4,
+          5
+        ],
+        "mode_penalty_sum": [
+          3,
+          10
+        ],
+        "modes": [
+          {
+            "active_sum_zero_primes": [
+              5
+            ],
+            "dual_penalty": [
+              3,
+              10
+            ],
+            "euclidean_norm_squared": [
+              6,
+              1
+            ],
+            "gram_eigenvalue": [
+              20,
+              1
+            ],
+            "multiplicity": 1
+          },
+          {
+            "active_sum_zero_primes": [
+              7
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              21,
+              1
+            ],
+            "multiplicity": 2
+          },
+          {
+            "active_sum_zero_primes": [
+              5,
+              7
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              35,
+              1
+            ],
+            "multiplicity": 2
+          }
+        ],
+        "positive_excess": [
+          3,
+          10
+        ],
+        "primes": [
+          5,
+          7
+        ]
+      },
+      "label": "complex_product",
+      "rank_one_under_2_by_3_flattening": true,
+      "weights": [
+        {
+          "imaginary": [
+            1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            -1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            -1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            -1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "analysis": {
+        "coherent_baseline": [
+          1,
+          2
+        ],
+        "dimension": 6,
+        "direct_dual_energy": [
+          997,
+          1890
+        ],
+        "mode_penalty_sum": [
+          26,
+          945
+        ],
+        "modes": [
+          {
+            "active_sum_zero_primes": [
+              5
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              20,
+              1
+            ],
+            "multiplicity": 1
+          },
+          {
+            "active_sum_zero_primes": [
+              7
+            ],
+            "dual_penalty": [
+              13,
+              756
+            ],
+            "euclidean_norm_squared": [
+              13,
+              36
+            ],
+            "gram_eigenvalue": [
+              21,
+              1
+            ],
+            "multiplicity": 2
+          },
+          {
+            "active_sum_zero_primes": [
+              5,
+              7
+            ],
+            "dual_penalty": [
+              13,
+              1260
+            ],
+            "euclidean_norm_squared": [
+              13,
+              36
+            ],
+            "gram_eigenvalue": [
+              35,
+              1
+            ],
+            "multiplicity": 2
+          }
+        ],
+        "positive_excess": [
+          26,
+          945
+        ],
+        "primes": [
+          5,
+          7
+        ]
+      },
+      "label": "fractional_complex_nonproduct",
+      "rank_one_under_2_by_3_flattening": false,
+      "weights": [
+        {
+          "imaginary": [
+            1,
+            3
+          ],
+          "real": [
+            3,
+            2
+          ]
+        },
+        {
+          "imaginary": [
+            -1,
+            3
+          ],
+          "real": [
+            1,
+            2
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "analysis": {
+        "coherent_baseline": [
+          1,
+          4
+        ],
+        "dimension": 6,
+        "direct_dual_energy": [
+          121,
+          420
+        ],
+        "mode_penalty_sum": [
+          4,
+          105
+        ],
+        "modes": [
+          {
+            "active_sum_zero_primes": [
+              3
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              36,
+              1
+            ],
+            "multiplicity": 0
+          },
+          {
+            "active_sum_zero_primes": [
+              5
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              40,
+              1
+            ],
+            "multiplicity": 1
+          },
+          {
+            "active_sum_zero_primes": [
+              7
+            ],
+            "dual_penalty": [
+              1,
+              42
+            ],
+            "euclidean_norm_squared": [
+              1,
+              1
+            ],
+            "gram_eigenvalue": [
+              42,
+              1
+            ],
+            "multiplicity": 2
+          },
+          {
+            "active_sum_zero_primes": [
+              3,
+              5
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              60,
+              1
+            ],
+            "multiplicity": 0
+          },
+          {
+            "active_sum_zero_primes": [
+              3,
+              7
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              63,
+              1
+            ],
+            "multiplicity": 0
+          },
+          {
+            "active_sum_zero_primes": [
+              5,
+              7
+            ],
+            "dual_penalty": [
+              1,
+              70
+            ],
+            "euclidean_norm_squared": [
+              1,
+              1
+            ],
+            "gram_eigenvalue": [
+              70,
+              1
+            ],
+            "multiplicity": 2
+          },
+          {
+            "active_sum_zero_primes": [
+              3,
+              5,
+              7
+            ],
+            "dual_penalty": [
+              0,
+              1
+            ],
+            "euclidean_norm_squared": [
+              0,
+              1
+            ],
+            "gram_eigenvalue": [
+              105,
+              1
+            ],
+            "multiplicity": 0
+          }
+        ],
+        "positive_excess": [
+          4,
+          105
+        ],
+        "primes": [
+          3,
+          5,
+          7
+        ]
+      },
+      "label": "three_prime_complex_nonproduct",
+      "rank_one_under_2_by_3_flattening": false,
+      "weights": [
+        {
+          "imaginary": [
+            1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            -1,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        },
+        {
+          "imaginary": [
+            0,
+            1
+          ],
+          "real": [
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "firewalls": [
+    "The operator theorem closes before any frozen dependency is read; dependencies certify interpretation and provenance only.",
+    "Zero-coordinate weighting in the complete inverse metric is not identified with physical deletion and restricted-Gram inversion.",
+    "The conditioned-mask dependency rules out local and product-coordinate masks, not arbitrary correlated subsets of joint tensor coordinates.",
+    "No arithmetic varying-conductor family, character group, L-function, or zero set is enumerated.",
+    "The result does not prove the open BTPS106121, WCADD106140, or WCKUM106140 gates, RH, or GRH; BTMS106121 and BTDS106121 are withdrawn historical gates."
+  ],
+  "metric_distinction": {
+    "complete_frame": "This theorem permits zero coefficients but retains the complete G_S^(-1) metric.",
+    "correlated_joint_deletion": "Arbitrary correlated subsets of joint tensor coordinates are not covered by the local/product-mask theorem; the exact (5,7) counterexample in this packet strictly improves the restricted-Gram metric.",
+    "noncommutation": "A principal block of G_S^(-1) need not equal the inverse of the corresponding principal block of G_S.",
+    "physical_deletion": "Deleting phase coordinates and re-inverting the retained principal block of G_S is a different operation. Local masks and product-coordinate tensor masks are covered by the conditioned-mask packet."
+  },
+  "mode_spectra": [
+    {
+      "coherent_baseline": [
+        1,
+        2
+      ],
+      "dimension": 6,
+      "primes": [
+        5,
+        7
+      ],
+      "rows": [
+        {
+          "active_sum_zero_primes": [],
+          "gram_eigenvalue": [
+            12,
+            1
+          ],
+          "multiplicity": 1
+        },
+        {
+          "active_sum_zero_primes": [
+            5
+          ],
+          "gram_eigenvalue": [
+            20,
+            1
+          ],
+          "multiplicity": 1
+        },
+        {
+          "active_sum_zero_primes": [
+            7
+          ],
+          "gram_eigenvalue": [
+            21,
+            1
+          ],
+          "multiplicity": 2
+        },
+        {
+          "active_sum_zero_primes": [
+            5,
+            7
+          ],
+          "gram_eigenvalue": [
+            35,
+            1
+          ],
+          "multiplicity": 2
+        }
+      ]
+    },
+    {
+      "coherent_baseline": [
+        1,
+        4
+      ],
+      "dimension": 6,
+      "primes": [
+        3,
+        5,
+        7
+      ],
+      "rows": [
+        {
+          "active_sum_zero_primes": [],
+          "gram_eigenvalue": [
+            24,
+            1
+          ],
+          "multiplicity": 1
+        },
+        {
+          "active_sum_zero_primes": [
+            3
+          ],
+          "gram_eigenvalue": [
+            36,
+            1
+          ],
+          "multiplicity": 0
+        },
+        {
+          "active_sum_zero_primes": [
+            5
+          ],
+          "gram_eigenvalue": [
+            40,
+            1
+          ],
+          "multiplicity": 1
+        },
+        {
+          "active_sum_zero_primes": [
+            7
+          ],
+          "gram_eigenvalue": [
+            42,
+            1
+          ],
+          "multiplicity": 2
+        },
+        {
+          "active_sum_zero_primes": [
+            3,
+            5
+          ],
+          "gram_eigenvalue": [
+            60,
+            1
+          ],
+          "multiplicity": 0
+        },
+        {
+          "active_sum_zero_primes": [
+            3,
+            7
+          ],
+          "gram_eigenvalue": [
+            63,
+            1
+          ],
+          "multiplicity": 0
+        },
+        {
+          "active_sum_zero_primes": [
+            5,
+            7
+          ],
+          "gram_eigenvalue": [
+            70,
+            1
+          ],
+          "multiplicity": 2
+        },
+        {
+          "active_sum_zero_primes": [
+            3,
+            5,
+            7
+          ],
+          "gram_eigenvalue": [
+            105,
+            1
+          ],
+          "multiplicity": 0
+        }
+      ]
+    }
+  ],
+  "packet_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/FFPS_TENSOR_SIGNED_AMPLIFIER_NO_GO.md",
+      "sha256_lf_normalized": "85bbfdc3f3d137fa6d9a56d0f5445ad131c3628ecb29286155dce5864c8f7929"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/ffps_tensor_signed_amplifier_no_go.py",
+      "sha256_lf_normalized": "366f68c58b4c3e1c74334e3dce402874da2df65e9a313cbea60b278e68426460"
+    },
+    {
+      "path": "tests/test_ffps_tensor_signed_amplifier_no_go.py",
+      "sha256_lf_normalized": "192835f5a907da89e7eeadbca78a3c4205236a899f9e693c99d4367686b6fc71"
+    }
+  ],
+  "payload_sha256": "a61fe11c49e38630762931971c573a87be1763974f9a7ee599ccf10f915c1e95",
+  "resource_contract": {
+    "actual_exact_operations": 14498,
+    "actual_matrix_cells": 2815,
+    "actual_source_bytes": 55697,
+    "actual_source_files": 6,
+    "arithmetic": "exact integers, rationals, and Gaussian rationals only",
+    "characters_enumerated": 0,
+    "conductors_enumerated": 0,
+    "control_panels": [
+      [
+        5,
+        7
+      ],
+      [
+        3,
+        5,
+        7
+      ]
+    ],
+    "finite_fields_enumerated": 0,
+    "matrix_cells_after_symbolic_theorem": 2815,
+    "maximum_control_prime": 31,
+    "maximum_exact_operations": 250000,
+    "maximum_matrix_cells": 32768,
+    "maximum_source_bytes": 500000,
+    "maximum_source_files": 6,
+    "maximum_tensor_dimension": 16,
+    "maximum_wall_seconds": 5.0,
+    "operations_after_symbolic_theorem": 14498
+  },
+  "schema": "riemann.function_field.ffps_tensor_signed_amplifier_no_go.v1",
+  "scope": {
+    "arbitrary_arithmetic_conditioning_proved": false,
+    "arbitrary_complex_complete_frame_weights": true,
+    "arbitrary_correlated_restricted_gram_deletion_ruled_out": false,
+    "external_novelty_claimed": false,
+    "finite_controls_are_theorem_inputs": false,
+    "formal_operator_theorem": "every nonempty finite set of distinct odd marked primes",
+    "principal_member_individualized": false,
+    "rh_or_grh_proved": false,
+    "varying_conductor_moment_proved": false
+  },
+  "source_frontier": {
+    "dependency_snapshot": {
+      "commit": "37d9df4b9b4fb9a8277de6ec1f77278dbbe5b0f2",
+      "git_blob_ids": {
+        "L-106024": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061",
+        "L-106126": "b4dbebde403a11696c56a4689b2df8b53326a157",
+        "R-106122": "dc51ae3add697ab4cec868ef8439f864ce77d71a",
+        "R-106123": "f89cad68d67444280088d8bea7cbfb7c1eacc90d",
+        "T-106121": "55afc90eaf7d2cd3efa102bcc97b927943731d48"
+      },
+      "principal_dependency": "ffps_principal_leverage.json",
+      "principal_dependency_sha256_lf": "cdf514d8f8b76b7d2569ea6852c8f4dcc8590c0ad72822d3bee711711cfd3ee3",
+      "target_at_snapshot": "T-106121 / FFPS106121"
+    },
+    "live_audit": {
+      "gate_status": {
+        "BTDS106121": "WITHDRAWN / UNCENTERED NONPRINCIPAL DIAGONAL NOT PAID",
+        "BTMS106121": "WITHDRAWN / UNCENTERED NONPRINCIPAL DIAGONAL NOT PAID",
+        "BTPS106121": "OPEN / SUFFICIENT PRINCIPAL POSITIVE MOMENT",
+        "WCADD106140": "OPEN / RH-BEARING WITH WCKUM106140",
+        "WCKUM106140": "OPEN / RH-BEARING WITH WCADD106140",
+        "preferred_live_repair": "T-106140 WICK-CENTERED ADDITIVE/KUMMER CONJUNCTION"
+      },
+      "git_blob_ids": {
+        "L-106024": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061",
+        "L-106126": "b4dbebde403a11696c56a4689b2df8b53326a157",
+        "L-106131": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+        "R-106122": "dc51ae3add697ab4cec868ef8439f864ce77d71a",
+        "R-106123": "f89cad68d67444280088d8bea7cbfb7c1eacc90d",
+        "R-106131": "8dde14dd382e0c4fc1bb54d5da21de85ea002f41",
+        "T-106121": "9111983ae4bf199a8315310a9ce090561430c33b",
+        "T-106140": "d5be8e376c88b63de0be19e0d9e8791624e99ae2"
+      },
+      "head_commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+      "local_gram_contract": "L-106024 has the same d94787... blob at the dependency snapshot and live audited head, so G_p=pI-J is unchanged."
+    },
+    "pr": 751
+  },
+  "source_manifest": [
+    {
+      "bytes": 12387,
+      "git_blob": "d96cd12a5fbfe86b63d9c6b7076c8a99aa139f4c",
+      "id": "principal_json",
+      "kind": "json",
+      "path": "research/l-families/atlas/function_field/ffps_principal_leverage.json",
+      "role": "corrected complete local phase Gram and tensor leverage",
+      "sha256_lf_normalized": "cdf514d8f8b76b7d2569ea6852c8f4dcc8590c0ad72822d3bee711711cfd3ee3"
+    },
+    {
+      "bytes": 6703,
+      "git_blob": "e7cb9133bb6b57ddbb1c7f1e350f1d2d0af7bd1a",
+      "id": "principal_note",
+      "kind": "text",
+      "path": "research/l-families/atlas/function_field/FFPS_PHYSICAL_SQUARECLASS_ADAPTER.md",
+      "role": "corrected physical-squareclass interpretation and scope firewall",
+      "sha256_lf_normalized": "6b3a0958422f01b44b7702b1088f4e13926d5d11a7725bde2582cd2d371b07e6"
+    },
+    {
+      "bytes": 17390,
+      "git_blob": "1aa8ea28e164a8389b66b6b780d5e081e6a96848",
+      "id": "conditioned_mask_json",
+      "kind": "json",
+      "path": "research/l-families/atlas/function_field/ffps_conditioned_mask_no_go.json",
+      "role": "complementary local/product-mask restricted-Gram no-go",
+      "sha256_lf_normalized": "fe6024020775e977e3dfe31822137b579c9cef438f9e94666714179ed43d469b"
+    },
+    {
+      "bytes": 4922,
+      "git_blob": "c300500a1563c5299f3ddffd47571309511bb563",
+      "id": "conditioned_mask_note",
+      "kind": "text",
+      "path": "research/l-families/atlas/function_field/FFPS_CONDITIONED_MASK_NO_GO.md",
+      "role": "restricted metric versus complete metric distinction",
+      "sha256_lf_normalized": "0a3d7d30780b48de82bb2203e1b1ff0eed7912e348b91be329bc202f945b0524"
+    },
+    {
+      "bytes": 9926,
+      "git_blob": "eb21ae1cdd158395d3547b946f2ee25a84e23e05",
+      "id": "tensor_frontier_json",
+      "kind": "json",
+      "path": "research/l-families/atlas/function_field/ffps_coherent_tensor_cost_frontier.json",
+      "role": "formal coherent tensor cost frontier",
+      "sha256_lf_normalized": "f6b65bb4a8cdaaa7c91464d8fba86b7691350bf14cdcc8a68c90848be6f89d51"
+    },
+    {
+      "bytes": 4369,
+      "git_blob": "292487efca3df3971518edba0c0b23b830be2c16",
+      "id": "tensor_frontier_note",
+      "kind": "text",
+      "path": "research/l-families/atlas/function_field/FFPS_COHERENT_TENSOR_COST_FRONTIER.md",
+      "role": "conductor-cost scope and non-individualization firewall",
+      "sha256_lf_normalized": "037ec4751504d2387a87e606dbd8eb74dbcc3abb554ccb77ee449fd838a4583e"
+    }
+  ],
+  "status": "EXACT_ALL_FINITE_MARKED_PRIME_COMPLETE_FRAME_NO_GO",
+  "theorem": {
+    "coherent_baseline": "1^*G_S^(-1)1=N_S/lambda_S=product_(p in S)(p-1)/(p+1)",
+    "complex_amplitude_constraint": "alpha^*1=N_S (equivalently sum_x alpha_x=N_S because N_S is real)",
+    "constant_eigenvalue": "lambda_S=product_(p in S)(p+1)/2",
+    "domain": "every nonempty finite set S of distinct odd marked primes, with m_p=(p-1)/2 and G_S=tensor_(p in S)(pI_(m_p)-J_(m_p))",
+    "exact_pythagorean_identity": "alpha^*G_S^(-1)alpha=L(S)+beta^*G_S^(-1)beta, beta=alpha-1 and beta^*1=0",
+    "local_inverse": "(pI_m-J_m)^(-1)=p^(-1)I_m+2/[p(p+1)]J_m, m=(p-1)/2",
+    "local_inverse_symbolic_check": "the I coefficient is 1 and the residual J numerator is p-(p-m)-m=0",
+    "mode_eigenvalue": "lambda_A=product_(p in A)p * product_(p in S\\A)(p+1)/2",
+    "mode_multiplicity": "product_(p in A)(m_p-1)",
+    "mode_penalty": "beta^*G_S^(-1)beta=sum_(nonempty A) ||beta_A||_2^2/lambda_A",
+    "tensor_inverse": "G_S^(-1)=tensor_(p in S)G_p^(-1)",
+    "unique_complex_extremizer": "positive definiteness gives equality only at alpha=1; arbitrary complex phases and non-separable cross-prime weights cannot improve L(S)"
+  }
+}
