@@ -1,0 +1,445 @@
+{
+  "comparison_with_prior_F_star": {
+    "bounded_verdict": "rank-stability removes the prior nonzero stable mean but does not improve direction transport: the new winner also reverses, and the constrained eligible lattice has a smaller exact q7 survival fraction",
+    "new_minus_prior_survival_fraction": [
+      -271,
+      11886
+    ],
+    "new_to_prior_absolute_q7_contrast_ratio": [
+      160058832,
+      255883667
+    ],
+    "new_to_prior_training_minimum_rho_squared_ratio": [
+      1174856269609258840416435,
+      1391282644902486179551367
+    ],
+    "prior_coefficients": [
+      2,
+      4,
+      -1,
+      1
+    ],
+    "prior_field_scores": {
+      "3": {
+        "contrast": [
+          19588,
+          3645
+        ],
+        "correlation_squared": [
+          23980609,
+          412784100
+        ],
+        "variance": [
+          1358960,
+          19683
+        ]
+      },
+      "5": {
+        "contrast": [
+          259254992,
+          52728125
+        ],
+        "correlation_squared": [
+          1050205482451876,
+          18533359280570751
+        ],
+        "variance": [
+          13180839884244,
+          152587890625
+        ]
+      },
+      "7": {
+        "contrast": [
+          -255883667,
+          122859170
+        ],
+        "correlation_squared": [
+          196429353112100667,
+          22169754251970484480
+        ],
+        "variance": [
+          3032798119284608,
+          33232930569601
+        ]
+      }
+    },
+    "prior_lattice_direction_survival_fraction": [
+      80,
+      849
+    ],
+    "prior_minimum_training_rho_squared": [
+      1050205482451876,
+      18533359280570751
+    ],
+    "prior_stable_mean": 6
+  },
+  "effect_size_definition": "rho_q^2=pi_q*(1-pi_q)*(mean_split-mean_complement)^2/Var_all",
+  "held_out_transport_audit": {
+    "all_survivors": [
+      {
+        "field_scores": {
+          "3": {
+            "contrast": [
+              7616,
+              2187
+            ],
+            "correlation_squared": [
+              9063040,
+              198706003
+            ],
+            "variance": [
+              1589648024,
+              43046721
+            ]
+          },
+          "5": {
+            "contrast": [
+              19714592,
+              31636875
+            ],
+            "correlation_squared": [
+              759111597122,
+              414171327205107
+            ],
+            "variance": [
+              261828216096,
+              6103515625
+            ]
+          },
+          "7": {
+            "contrast": [
+              7622458,
+              36857751
+            ],
+            "correlation_squared": [
+              72627332452205,
+              480383655296958594
+            ],
+            "variance": [
+              1752425555118864,
+              33232930569601
+            ]
+          }
+        },
+        "oriented_coefficients": [
+          1,
+          3,
+          -1,
+          -1
+        ],
+        "training_objective": [
+          [
+            759111597122,
+            414171327205107
+          ],
+          [
+            3904491336608031868646,
+            82298328986131973157321
+          ]
+        ]
+      },
+      {
+        "field_scores": {
+          "3": {
+            "contrast": [
+              1204,
+              1215
+            ],
+            "correlation_squared": [
+              815409,
+              121174540
+            ],
+            "variance": [
+              96939632,
+              4782969
+            ]
+          },
+          "5": {
+            "contrast": [
+              226500112,
+              158184375
+            ],
+            "correlation_squared": [
+              801598449000196,
+              51172863354298071
+            ],
+            "variance": [
+              4043767230036,
+              152587890625
+            ]
+          },
+          "7": {
+            "contrast": [
+              141115481,
+              368577510
+            ],
+            "correlation_squared": [
+              19913578977861361,
+              22948278614757432960
+            ],
+            "variance": [
+              1046433133367872,
+              33232930569601
+            ]
+          }
+        },
+        "oriented_coefficients": [
+          2,
+          2,
+          -1,
+          -1
+        ],
+        "training_objective": [
+          [
+            815409,
+            121174540
+          ],
+          [
+            138860136657177045985879,
+            6200848177439925776312340
+          ]
+        ]
+      }
+    ],
+    "direction_reversal_or_zero_count": 26,
+    "direction_survival_fraction": [
+      1,
+      14
+    ],
+    "direction_survivor_count": 2,
+    "retrospective_best_training_rank_among_survivors": {
+      "field_scores": {
+        "3": {
+          "contrast": [
+            1204,
+            1215
+          ],
+          "correlation_squared": [
+            815409,
+            121174540
+          ],
+          "variance": [
+            96939632,
+            4782969
+          ]
+        },
+        "5": {
+          "contrast": [
+            226500112,
+            158184375
+          ],
+          "correlation_squared": [
+            801598449000196,
+            51172863354298071
+          ],
+          "variance": [
+            4043767230036,
+            152587890625
+          ]
+        },
+        "7": {
+          "contrast": [
+            141115481,
+            368577510
+          ],
+          "correlation_squared": [
+            19913578977861361,
+            22948278614757432960
+          ],
+          "variance": [
+            1046433133367872,
+            33232930569601
+          ]
+        }
+      },
+      "oriented_coefficients": [
+        2,
+        2,
+        -1,
+        -1
+      ],
+      "training_objective": [
+        [
+          815409,
+          121174540
+        ],
+        [
+          138860136657177045985879,
+          6200848177439925776312340
+        ]
+      ],
+      "warning": "selected after q=7 labels were inspected; not a replacement detector"
+    },
+    "training_eligible_count": 28,
+    "winner_q7_contrast": [
+      -80029416,
+      61429585
+    ],
+    "winner_verdict": "REVERSES_ON_HELD_OUT_Q7"
+  },
+  "interpretation_firewall": {
+    "exact_claim": "a complete bounded lattice search and exact three-field training/holdout comparison under an imported compact-Haar mean constraint",
+    "finite_data_warning": "q=3,5 training and one q=7 holdout do not establish an all-q law, asymptotic transport theorem, or optimal detector beyond the declared lattice",
+    "forbidden_inference": "mean nullity or finite split contrast does not identify a subgroup, split Jacobian, endomorphism algebra, motive, monodromy group, zero law, RH, or GRH consequence"
+  },
+  "payload_sha256": "99f2e9425a5b957f780ee85abf107d3b2ef3054398899f72a8eb19a59c67ae05",
+  "resource_contract": {
+    "candidate_cap_inclusive": 4096,
+    "finite_field_or_curve_enumeration": false,
+    "floating_point": false,
+    "ledger": {
+      "candidates": 67,
+      "score_evaluations": 165,
+      "source_atoms": 251
+    },
+    "member_enumeration": false,
+    "random_sampling": false,
+    "root_finding": false,
+    "score_evaluation_cap_inclusive": 4096,
+    "source_atom_cap_inclusive": 4096
+  },
+  "schema": "riemann.function_field.genus2_rank_stable_inverse_design.v1",
+  "scope": "member-uniform monic squarefree quintics at exactly q=3,5,7; compact Haar rank-stability is an imported mean constraint",
+  "simultaneous_null_design_space": {
+    "L1_cap_inclusive": 8,
+    "USp4_mean_vector": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "basis_parametrization": "(u,v,w) maps to (-u-2v-2w,u,v,w); conversely u=c2, v=c3, w=c4",
+    "candidate_contract": "primitive integer vectors modulo overall sign, first nonzero positive, ambient-coordinate L1<=8, satisfying the null equation",
+    "candidate_count": 67,
+    "high_genus_stable_mean_vector": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "null_equation": "c1+c2+2*c3+2*c4=0",
+    "nullity_scope": "mean-null at USp(4) and in the imported stable range; not pointwise or L2-null",
+    "primitive_Z_basis_rows": [
+      [
+        -1,
+        1,
+        0,
+        0
+      ],
+      [
+        -2,
+        0,
+        1,
+        0
+      ],
+      [
+        -2,
+        0,
+        0,
+        1
+      ]
+    ],
+    "raw_pool_order": [
+      "I_(1,7)",
+      "I_(1,9)",
+      "I_(2,4)",
+      "I_(2,8)"
+    ]
+  },
+  "source_locks": {
+    "canonical_payload_sha256": {
+      "inverse_fixture": "d3fb13ea244790bfcdf65a65b94397117f8c931ca6ecdd0c13fd8eb4896a2dda",
+      "stable_fixture": "6f2893c8e62b836afbca99bb2fae4dfb57c4b24c8963d2cf0981b052dcb2f4ee"
+    },
+    "lf_normalized_sha256": {
+      "inverse_fixture": "f0db62eded925d0907b1f7ae1a999f9a506b7d9160c3c1ba30994bf3329be7c5",
+      "inverse_producer": "82226c433b7556e325a6c9b1ee6b88dee105662872f03267df437c4ad108d336",
+      "stable_fixture": "6be5d2eb801e4ba1d65b308e7bc2f0b0929e6d4cc8aa41174f93cbd60688c219",
+      "stable_producer": "cec434ded553f425636d32fd152d9810e7f4dfbc0eb780f080f5708fd20dc569"
+    },
+    "stable_theorem_source": {
+      "authors": "Alexei Entin and Noam Pirani",
+      "eta": "eta_j=1 for even j and 0 for odd j",
+      "identifier": "arXiv:2409.04844v1",
+      "imported_theorem": "for weighted degree sum_j j*a_j <= 2g+1, Haar USp(2g) trace moments equal those of independent Z_j=sqrt(j)X_j-eta_j",
+      "location": "equation (1.4), equation (1.6), and the following paragraph",
+      "proof_status": "imported, not reproved by this packet",
+      "title": "Moments of traces of random symplectic matrices and hyperelliptic L-functions",
+      "url": "https://arxiv.org/abs/2409.04844"
+    }
+  },
+  "status": "EXACT_BOUNDED_RANK_STABLE_TRAINING_WINNER_STILL_REVERSES_AT_Q7",
+  "training_design": {
+    "held_out_q_value": 7,
+    "holdout_firewall": "_training_design accepts exactly keys (3,5); only its frozen output enters _holdout_audit with the q=7 summary",
+    "minimum_training_rho_squared": [
+      38505733544180,
+      804703506645951
+    ],
+    "objective": "require agreeing nonzero q3,q5 contrast signs; lexicographically maximize min(rho3^2,rho5^2), then their sum, with the inherited complexity tie-break",
+    "training_eligible_candidate_count": 28,
+    "training_q_values": [
+      3,
+      5
+    ],
+    "training_rejected_direction_count": 39,
+    "winner_coefficients": [
+      0,
+      2,
+      -2,
+      1
+    ],
+    "winner_complexity": {
+      "L1": 5,
+      "maximum_absolute_coefficient": 2,
+      "support": 3
+    },
+    "winner_expression": "2*I_(1,9)-2*I_(2,4)+I_(2,8)",
+    "winner_field_scores": {
+      "3": {
+        "contrast": [
+          8144,
+          2187
+        ],
+        "correlation_squared": [
+          10363240,
+          209169793
+        ],
+        "variance": [
+          1673358344,
+          43046721
+        ]
+      },
+      "5": {
+        "contrast": [
+          22200752,
+          6327375
+        ],
+        "correlation_squared": [
+          38505733544180,
+          804703506645951
+        ],
+        "variance": [
+          63589048116,
+          1220703125
+        ]
+      },
+      "7": {
+        "contrast": [
+          -80029416,
+          61429585
+        ],
+        "correlation_squared": [
+          266862809387544,
+          44725418124652915
+        ],
+        "variance": [
+          1762095816675792,
+          33232930569601
+        ]
+      }
+    },
+    "winner_stable_mean": 0,
+    "winning_objective_tie_count": 1
+  }
+}
