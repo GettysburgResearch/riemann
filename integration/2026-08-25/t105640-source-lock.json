@@ -1,0 +1,55 @@
+{
+  "schema": "riemann.source_lock.t105640.v1",
+  "claim_namespace": "105640-105643",
+  "created_at": "2026-08-25",
+  "repository": "gfreund123/riemann",
+  "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
+  "pr_number": 729,
+  "source_head_before_t105640": "4150f96e3d410de1724303c60d72a000c1ff05e0",
+  "base_branch": "research/gpt56-pro/105200-xi-natural-scale-residue-coherence",
+  "base_sha": "452978883b0009f002cfec426dfd5eb10041a15c",
+  "interfaces": {
+    "current_hierarchy": "L-105620--L-105622",
+    "logconcave_profile": "L-105624--L-105626",
+    "inner_causal_phase": "L-105627--L-105632",
+    "zero_height_variational_principle": "T-105442--T-105446",
+    "sibling_signed_model_space": "PR #731, L-106415--L-106431"
+  },
+  "new_claims": [
+    "L-105640",
+    "L-105641",
+    "L-105642",
+    "L-105643",
+    "R-105640",
+    "T-105640",
+    "M-105640"
+  ],
+  "replay": {
+    "verdict": "PASS_X_105640_STRONG_LC_DEPTH_COLLAR",
+    "checks": 4219,
+    "proof_object": "769c7f5f517949d0591e8cc33032a6f081abbf5ea43ad53556daeac2499b4a69"
+  },
+  "proved_scope": [
+    "uniform strong-log-concavity constant ledger",
+    "universal exponential envelope for the current-Turan profile",
+    "finite inner midline/exponential trace identity",
+    "finite Xi-prime anti-inner soft-depth bound",
+    "boundary-zero weighted-charge firewall"
+  ],
+  "review_required": [
+    "infinite theta-series strong-log-concavity proof",
+    "Paley-Wiener normalization and model-space trace",
+    "Xi-prime shifted-factor orientation",
+    "cofinal zero-count normalization"
+  ],
+  "open_gates": [
+    "BCOLLAR105643",
+    "POINTID105630",
+    "SAFEDESC105628",
+    "ENDIDX105630",
+    "fixed-width moving-saddle hostile review"
+  ],
+  "boundary_collar_index_conversion_proved": false,
+  "pointwise_physical_sign_proved": false,
+  "rh_established": false
+}
