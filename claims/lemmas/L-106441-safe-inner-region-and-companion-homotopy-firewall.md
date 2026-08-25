@@ -58,7 +58,7 @@ F(z)=z^2+\varepsilon^2,
 \qquad \varepsilon>0.
 \]
 
-For every `H>varepsilon`,
+For every `H>\varepsilon`,
 
 \[
 {F(z-iH)\over F(z+iH)}
