@@ -1,0 +1,20 @@
+{
+  "checks": 327,
+  "not_proved": {
+    "bci102990": true,
+    "dakum106110": true,
+    "dapro106110": true,
+    "riemann_hypothesis": true
+  },
+  "proved_by_replay": {
+    "all_q_amplification_before_square": true,
+    "atomic_diagonal_weight_inequality": true,
+    "complete_character_product_collision_identity": true,
+    "equal_pair_semiprime_wick_identity": true,
+    "even_character_plus_minus_collision_identity": true,
+    "q_fixed_fibre_dimension_firewall": true,
+    "sharp_squareclass_principal_embedding": true
+  },
+  "schema": "riemann.x106110.dual-amplified-owner-collision.v1",
+  "verdict": "PASS_X_106110_DUAL_AMPLIFIED_OWNER_COLLISION"
+}
