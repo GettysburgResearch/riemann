@@ -1,0 +1,55 @@
+{
+  "schema": "riemann.t106150.same-half-source-square-source-lock.v1",
+  "created": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "packet_commit": "076c5c509848628efc8e2a849d668d4fe16a7aae",
+  "concurrent_parent_commit": "a6f9aaec42edae356a197d228d60de545ad63019",
+  "parent_pr": 719,
+  "parent_scientific_head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+  "parent_frontier": "T-102990 / BCI102990",
+  "programme_issues": [743, 736, 737],
+  "related_repairs": [
+    "R-106131 / T-106140 Wick-centered additive-Kummer repair",
+    "T-106130 / CBKM106130 connected bilateral Kummer-Mobius frontier"
+  ],
+  "files": {
+    "claims/lemmas/L-106133-canonical-equal-pair-boolean-source-is-a-beta-half-source-square.md": "b988b14eb982504a799158eed4c76e7f033c96f0",
+    "claims/lemmas/L-106134-common-mother-is-a-differential-self-convolution.md": "6b7e4f7e003633dbe7741dd1780fd774b3298edf",
+    "claims/theorems/T-106150-same-half-source-analytic-square-frontier.md": "6012762215fb5726c6f7fd792ff824cd6d31fd1d",
+    "reports/gpt56-pro/2026-08-25-same-half-source-square-continuation.md": "fbd5f8ac8c2ed08e532a37c8c578faa3d4643c4f",
+    "standalone/2026-08-25-same-half-source-square/REVIEW_SPECIFICATION.md": "8879bfbbfe0e82f81f71e2a70c31504d0f29b331",
+    "experiments/X-106150-equal-pair-half-source-square/verify.py": "0fb60d479e7ee5dc4522abb4eb551e50b1d53237",
+    "experiments/X-106150-equal-pair-half-source-square/results/verification.json": "4941a7f952d44321ebb43040f7d7558933537f79"
+  },
+  "proved_exact": {
+    "boolean_half_source_square": true,
+    "canonical_equal_pair_beta_square": true,
+    "owner_exclusion_functoriality": true,
+    "one_owner_half_source_map_is_injective": true,
+    "half_source_source_diagonal_is_subpower": true,
+    "common_mother_differential_self_convolution": true,
+    "cv_xd_outer_derivative_multiplier_images": true,
+    "reflection_even_odd_signature": true,
+    "character_twists_form_analytic_squares": true
+  },
+  "replay": {
+    "verdict": "PASS_X_106150_EQUAL_PAIR_HALF_SOURCE_SQUARE",
+    "exact_checks": 24146,
+    "proof_object_sha256": "4890064413d40fb6a9a1fe2bb1523b8271e217fca166c6d4883f1acf4f42a3b6"
+  },
+  "open": {
+    "SFSC106150": "open_rh_bearing",
+    "REFEV106150": "open",
+    "REFOD106150": "open",
+    "WCADD106140": "open_rh_bearing",
+    "WCKUM106140": "open_rh_bearing",
+    "CBKM106130": "open_rh_bearing",
+    "BCI102990": "open_rh_bearing",
+    "riemann_hypothesis": "unproved"
+  },
+  "status": {
+    "canonical_acceptance": false,
+    "independent_review_required": true,
+    "riemann_hypothesis_proved": false
+  }
+}
