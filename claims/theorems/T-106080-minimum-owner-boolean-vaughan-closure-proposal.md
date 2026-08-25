@@ -1,174 +1,196 @@
-# T-106080 — Minimum-owner Boolean Vaughan closure proposal
+# T-106080 — Retracted minimum-owner Boolean Vaughan closure proposal
 
 Claim ID: `T-106080`  
 Programme aliases: `LFAM1.MINIMUM_OWNER_CLOSURE`, `STRESS.ALL_BLOCK_LONG_CORE`, `LFAM2.BOOLEAN_KUMMER_COMPLETION`  
-Status: **FULL SOURCE-COMPLETE PROOF PROPOSAL; HOSTILE REVIEW REQUIRED**  
+Status: **RETRACTED BY `R-106080`; RETAINED ONLY AS A HISTORICAL PROPOSAL RECORD**  
 Created: 2026-08-25  
-Depends on: `L-106080--L-106082`; parent PR #719 through `L-102880`, `L-102882--L-102883`, `L-102887--L-102888`; fixed Mellin consumer  
+Retracted: 2026-08-25  
+Depends on: `L-106080--L-106082`; binding correction `R-106080`; corrected frontier `T-106081`  
 Programme issues: #743, #736, #737  
-RH status: **CLAIMED BY THE COMPOSITION BELOW; NOT YET EXTERNALLY VALIDATED OR CANONICALLY ACCEPTED**
+RH status: **unproved**
 
-The corrected frontier `HQORO106071` arose in one particular scale-matched
-auxiliary-character coordinate.  `L-106080--L-106082` propose to bypass its
-high-owner-crowding cells by changing the source gauge before that quadratic
-residue collapse occurs.
+## Retraction notice
 
-## 1. Literal squarefree Vaughan coordinate
-
-The completed owner source is supported on
+The first version of this theorem proposed
 
 \[
-N=P a^2,
-\qquad \mu^2(a)=1.
+\text{Boolean squarefree Vaughan}
+\wedge
+\text{minimum-owner gauge}
+\wedge
+\text{parent coherent centered phase packing}
+\Longrightarrow
+\mathrm{RH}.
 \]
 
-Boolean disjoint-support convolution gives the exact Vaughan identity
+The internal source-level reconstruction rejects the third edge. The proposal
+silently replaced the physical centered kernel on
 
 \[
-\mu_{\rm sf}
-=2\mu_U
--\mu_U\star\mu_U\star\mathbf1_{\rm sf}
-+a_U\star a_U\star\mu_{\rm sf}.
+P_i a_i^2-P_j a_j^2,
+\qquad P_i=\lambda_i\Lambda_i,
 \]
 
-Its Type-I row remains power-saving under the zero-moment derivative kernel,
-while every balanced atom has at least two distinct core-prime labels.
+by the fixed-squareclass core kernel on
 
-This removes the nonsquarefree representation artifacts which prevented a
-source-level comparison between selected owner primes and the actual core.
+\[
+a_i^2-a_j^2.
+\]
 
-## 2. Minimum-owner gauge
+That replacement is false when the owner squareclass `P_i` varies. The exact
+firewall is `R-106080`, and the exact corrected open theorem is
+`T-106081 / MOBOSM106081`.
 
-On each dyadic horizon choose:
+Consequently this file must not be cited as a proof of RH or as a live complete
+composition.
+
+## 1. Mathematics retained from the proposal
+
+The reconstruction accepts:
 
 ```text
-unique label >4 sqrt(Y), if present, plus the smallest other label;
-otherwise the two smallest labels.
+Boolean squarefree Möbius inversion              PROVED EXACT
+Boolean Vaughan identity                         PROVED EXACT
+balanced Boolean support has two core primes      PROVED EXACT
+squarefree fixed-owner Type-I                     Y^(-1/12+o(1))
+minimum-owner horizon gauge                       PROVED EXACT
+lambda^2 <= a                                     PROVED EXACT
+L^2 < 2B                                          PROVED EXACT
+abstract same-family deleted-diagonal identity    PROVED EXACT
 ```
 
-This is a valid horizon-safe owner rule.  Let `lambda` be its smaller owner.
-Every balanced squarefree core `a` then satisfies
+It also sharpens the owner geometry:
+
+```text
+no exceptional label:
+  Lambda^2 <= a and lambda*Lambda <= a;
+
+unique exceptional label Lambda>4 sqrt(Y):
+  lambda*a^2 < 4 sqrt(Y), hence lambda^5 < 4 sqrt(Y).
+```
+
+These are unconditional source reductions and remain scientifically useful.
+
+## 2. First failed equation
+
+For complete source atoms
 
 \[
-\boxed{\lambda^2\le a.}
+n_i=P_i a_i^2,
+\qquad P_i=\lambda_i\Lambda_i,
 \]
 
-After the linear dyadic projection
+exact phase orthogonality gives
 
 \[
-B\le a<2B,
-\qquad L\le\lambda<2L,
+\frac1q\sum_{h=1}^{q-1}
+\left\|
+\sum_i c_i e_q(hP_i a_i^2)v_i
+\right\|^2
+=
+\sum_{i,j}
+\langle c_iv_i,c_jv_j\rangle
+\left(
+\mathbf1_{q\mid P_i a_i^2-P_j a_j^2}-\frac1q
+\right).
 \]
 
-one has
+The original closure adapter invoked `L-102883` as though the kernel were
 
 \[
-\boxed{L^2<2B.}
+\mathbf1_{q\mid a_i^2-a_j^2}-\frac1q.
 \]
 
-## 3. Complete coherent phase packing
+There is no such identity or uniform one-sided domination for varying `P_i`.
 
-For two clean source atoms, the two distinguished owner primes supply the
-same-occurrence nonzero Ramanujan phases already used in the parent
-owner-dispersion packet.  The same-family centered kernel identity of
-`L-106082` extends the coherent theorem `L-102883` after deleting the inherited
-shared-owner renewal.
+The attempted Hilbert packaging has the exact trilemma recorded in
+`R-106080`:
 
-The parent bound is
+```text
+orthogonal owner coordinates:
+  delete the open cross-owner physical Gram;
+
+physical owner aggregation:
+  assume the open owner-occupancy norm;
+
+fixed-P application followed by recombination:
+  reopen the source-blind coherence obstruction of R-102840.
+```
+
+Thus the original global balanced-field estimate and the RH conclusion do not
+follow.
+
+## 3. Correct replacement
+
+`T-106081` retains the complete source selector. Its clean Gram is expressed
+through fields
 
 \[
-\mathcal E_{B,L}
-\ll
-\frac{X^{o(1)}}Q
-\left[
-1+rac{L^2}{B\log^2(2L)}
-\right].
+\mathcal A_{\ell\to\rho;k}
+=
+\sum_{i\in I_\ell}
+\beta_i e_\rho(k n_i)v_i,
 \]
 
-Since `L^2<2B`, every block is subpower.  Cauchy over only the linear
-polylogarithmic block partition yields
+and is bounded by the exact positive moment
 
 \[
 \boxed{
-\int_X^{2X}|\mathcal B_{\rm sf}(t)|^2\frac{dt}{t}
-=X^{o(1)}.
+\mathfrak P_{B,L}
+=
+\sum_{\substack{\ell,\rho\in\mathcal P_L\\\ell\ne\rho}}
+\frac{\rho-1}{\ell\rho}
+\sum_{k=1}^{\rho-1}
+\|\mathcal A_{\ell\to\rho;k}\|^2.
 }
-\tag{T-106080.1}
 \]
 
-Thus the balanced derivative row has subpower logarithmic negative mass.
+The live theorem is
 
-## 4. Detector composition
+```text
+MOBOSM106081:
+  the dyadic sum of the selector-tied positive moments P_(B,L) is X^(o(1)),
+  with every literal source weight used exactly once.
+```
 
-The Boolean Type-I row is power-small by `L-106080`; the terminal, repeated
-label, shared-owner, owner/core-overlap and equal-product rows are inherited
-closed.  Therefore (T-106080.1) gives
+It has two sharpened sectors:
 
-\[
-\int_1^Y(H_K(X))_-\frac{dX}{X}=Y^{o(1)}.
-\tag{T-106080.2}
-\]
+```text
+MOBOSM-NE106081: P_i <= a_i;
+MOBOSM-EX106081: lambda_i^5 < 4 sqrt(Y).
+```
 
-Parent `L-102880` gives the positive Volterra transport
+Neither sector is presently closed.
 
-\[
-H_R(X)=\int_1^XH_K(t)\frac{dt}{t},
-\]
+## 4. Correct implication graph
 
-and the frozen Mellin--Landau consumer retains every hypothetical
-reciprocal-zeta pole in the open right half-plane.  Hence the proposed chain is
+Let `BSFTI106081` denote the independent global parent-ledger verification of
+the fixed-owner Boolean Type-I estimate. Then
 
 \[
 \boxed{
-\begin{aligned}
-&\text{Boolean squarefree Vaughan}
-\ \wedge\ 
-\text{minimum-owner gauge}
-\ \wedge\ 
-\text{coherent centered phase packing}\\
-&\qquad\Longrightarrow
+\mathrm{BSFTI}_{106081}
+\wedge
+\mathrm{MOBOSM}_{106081}
+\Longrightarrow
+\mathrm{HBCQDSP}_{102888}
+\Longrightarrow
 \int_1^Y(H_K)_-\frac{dX}{X}=Y^{o(1)}
 \Longrightarrow
 \mathrm{RH}.
-\end{aligned}}
-\tag{T-106080.3}
+}
 \]
 
-## 5. Relation to the corrected residue frontier
+The two premises remain review interfaces; `MOBOSM106081` is open and
+RH-bearing.
 
-This proposal does not claim to prove `HQORO106071` in its original arbitrary
-owner gauge.  It claims that the high-crowding cells are avoidable source
-artifacts:
-
-```text
-arbitrary horizon-safe pair:
-  short-core/high-owner residue cells may survive;
-
-minimum-owner Boolean gauge:
-  every balanced source atom is automatically long-core;
-  the already-proved coherent phase theorem applies before residue collapse.
-```
-
-If accepted, `T-106080` supersedes `HQORO106071` as the conclusion-facing
-coordinate.  If rejected, the reviewer must identify the first failed source
-or normalization interface in `L-106080--L-106082`.
-
-## Exact claim boundary
+## Binding status
 
 ```text
-Boolean squarefree Vaughan identity                 PROVED EXACT
-balanced support has two distinct core primes       PROVED EXACT
-squarefree zero-moment lattice estimate             PROVED POWER-SAVING
-minimum-owner horizon gauge                         PROVED EXACT
-distinguished owner square <= core                  PROVED EXACT
-same-family centered kernel identity                PROVED EXACT
-all blocks satisfy long-core inequality             PROVED EXACT
-transport of parent coherent phase allocation       PROPOSED COMPLETE / REVIEW REQUIRED
-Boolean Type-I global source transport              PROPOSED COMPLETE / REVIEW REQUIRED
-full detector composition                           CLAIMED PROOF PROPOSAL
-external hostile review                             REQUIRED
-canonical RH acceptance                             NOT GRANTED
+T-106080 full closure                    RETRACTED
+R-106080 source-kernel firewall          BINDING
+T-106081 corrected owner frontier        LIVE / OPEN
+MOBOSM106081                             OPEN / RH-BEARING
+BSFTI106081                              INDEPENDENT CHECK REQUESTED
+Riemann Hypothesis                       UNPROVEN
 ```
-
-The PR remains draft.  No canonical README, claim registry or `main` status is
-changed by this proposal.
