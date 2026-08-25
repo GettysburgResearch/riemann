@@ -1,14 +1,34 @@
-# L-106082 — Minimum-owner blocks all lie in the coherent long-core range
+# L-106082 — Minimum-owner long-core geometry and the failed core-only transport
 
 Claim ID: `L-106082`  
 Programme aliases: `LFAM1.ALL_BLOCK_PHASE_PACKING`, `STRESS.MINIMUM_OWNER_LONG_CORE`, `LFAM2.CORE_PAID_KUMMER_MOMENT`  
-Status: **PROPOSED COMPLETE COHERENT PHASE THEOREM; HOSTILE SOURCE REVIEW REQUIRED**  
+Status: **GEOMETRY AND ABSTRACT KERNEL IDENTITY RETAINED; COMPLETE-SOURCE TRANSPORT RETRACTED BY `R-106080`**  
 Created: 2026-08-25  
-Depends on: parent `L-102882--L-102883`, `L-102860--L-102865`, `T-102890`; `L-106080--L-106081`  
+Corrected: 2026-08-25  
+Depends on: parent `L-102882--L-102883`; `L-106080--L-106081`; binding correction `R-106080`  
 Programme issues: #743, #736, #737  
-RH status: **not assumed**
+RH status: **unproved**
 
-Work on one linearly projected balanced block
+## Binding correction
+
+The first version of this file claimed that every minimum-owner Boolean block
+could be inserted directly into the fixed-squareclass corollary of
+`L-102883`. The source-level reconstruction `R-106080` proves that this
+transport is not valid.
+
+The following statements remain exact:
+
+1. every balanced block satisfies the minimum-owner long-core inequality;
+2. the same-family deleted-diagonal identity is an exact algebraic identity
+   once the correct physical difference has been fixed.
+
+The former complete-source estimates `(L-106082.3)--(L-106082.5)` are
+retracted. The corrected conclusion-facing object is `T-106081 /
+MOBOSM106081`.
+
+## 1. Retained minimum-owner range
+
+On one linearly projected balanced block
 
 \[
 B\le a<2B,
@@ -16,32 +36,34 @@ B\le a<2B,
 L\le\lambda<2L,
 \]
 
-of `L-106081`, after complete carrier, Wick, gauge, marked-prime and overlap
-recombination.  Every source atom occurs in exactly one such block.
-
-By `L-106081`,
+`L-106081` gives
 
 \[
 \boxed{L^2<2B.}
 \tag{L-106082.1}
 \]
 
-## 1. Same-family version of the centered phase theorem
+This is coefficient-exact. It says that the distinguished owner conductor is
+paid by the literal Boolean core.
 
-Parent `L-102883` states the coherent estimate for two disjoint dyadic prime
-families.  The clean minimum-owner packet can have both distinguished owners in
-the same dyadic family, but the identical estimate holds after deleting the
-shared-prime diagonal.
+The corrected theorem `T-106081` further records:
 
-Indeed, for
+```text
+no exceptional label:  P=lambda*Lambda <= a;
+unique exceptional label: lambda*a^2 < 4 sqrt(Y), hence lambda^5 < 4 sqrt(Y).
+```
+
+## 2. Retained abstract same-family identity
+
+For a prime family `mathcal P` and an integer `d`, put
 
 \[
 A_\ell(d)=\mathbf1_{\ell\mid d}-\frac1\ell,
 \qquad
-K_{\mathcal P}(d)=\sum_{\ell\in\mathcal P}A_\ell(d),
+K_{\mathcal P}(d)=\sum_{\ell\in\mathcal P}A_\ell(d).
 \]
 
-one has exactly
+Then exactly
 
 \[
 \boxed{
@@ -55,102 +77,60 @@ K_{\mathcal P}(d)^2
 \tag{L-106082.2}
 \]
 
-For `d=0`, this has the same `O((L/log L)^2)` diagonal size as the two-family
-kernel.  For `0<|d|<4B^2`,
+This identity correctly deletes the shared-prime diagonal. It does not alter
+the argument `d` of the centered divisor kernels.
+
+## 3. Exact failed interface
+
+A complete minimum-owner source atom has
 
 \[
-|K_{\mathcal P}(d)|
-\ll
-1+\frac{\log(2B)}{\log(2L)},
+n_i=P_i a_i^2,
+\qquad
+P_i=\lambda_i\Lambda_i,
 \]
 
-and the deleted square sum is bounded by the same divisor-count argument.
-Therefore the proof of `L-102883` gives, for the clean off-diagonal same-family
-packet,
+with varying owner squareclass `P_i` and with the phase modulus selected by the
+source atom. For a source-faithful aggregated phase field, exact orthogonality
+produces the physical kernel
 
 \[
 \boxed{
-\mathcal E_{B,L}^{\rm clean}
-\ll
-\frac{X^{o(1)}}{Q}
-\left[
-1+rac{L^2}{B\log^2(2L)}
-\right].
+\mathbf1_{q\mid P_i a_i^2-P_j a_j^2}-\frac1q.
 }
-\tag{L-106082.3}
+\tag{L-106082.3-correct}
 \]
 
-Here `Q` denotes the remaining literal co-owner source weight in the parent
-allocation.  All Boolean Vaughan multiplicities, finite carrier charts and
-shell labels are retained in the Hilbert vector and cost only `X^(o(1))`.
-Equation (L-106082.3) is the same source allocation already used by the parent
-long-core theorem; no selected owner weight is reused in another Cauchy step.
-
-## 2. Every block is long-core
-
-Substituting (L-106082.1) into (L-106082.3) gives
+The square-core corollary of `L-102883` instead uses, for one fixed
+squareclass, the kernel
 
 \[
-\boxed{
-\mathcal E_{B,L}^{\rm clean}=X^{o(1)}.
-}
-\tag{L-106082.4}
+\mathbf1_{q\mid a_i^2-a_j^2}-\frac1q.
+\]
 
-Thus the coherent nonzero double-phase transform is subpower on every
-minimum-owner Boolean balanced block.  There is no residual short-core range.
+These kernels are not equal and neither dominates the other uniformly when
+`P_i` varies. Equation (L-106082.2) only rearranges the modulus sum after `d`
+has been fixed; it cannot replace the physical difference by the core
+difference.
 
-The interpretation in the exact L-family coordinates of `L-106020` is:
+Likewise, retaining the owner labels in an orthogonal Hilbert coordinate
+deletes the cross-owner physical Gram, while retaining them in the physical
+Hilbert space makes the required coefficient norm precisely the open
+owner-occupancy quantity. Applying `L-102883` separately for each fixed `P`
+reopens the coherent recombination obstruction of `R-102840`.
+
+## 4. Binding consequence
 
 ```text
-two distinguished owner phases
-  = two nontrivial Kummer/Artin-Schreier coordinates;
-
-lambda^2, rho^2 <= literal cores
-  = both phase conductors are paid by the same source occurrence;
-
-complete even-character fibres
-  = retained before the physical observation.
+L-106082.1 minimum-owner range                 RETAINED EXACT
+L-106082.2 abstract same-family identity       RETAINED EXACT
+former L-106082.3 phase estimate               RETRACTED
+former L-106082.4 all-block conclusion         RETRACTED
+former L-106082.5 global balanced energy       RETRACTED
+T-106080 RH composition                        RETRACTED
+T-106081 selector-tied owner moment             LIVE / OPEN
+Riemann Hypothesis                             UNPROVED
 ```
 
-## 3. Shared and overlapping labels
-
-The deleted case `lambda=rho` is a shared-owner sector and is already a
-polylogarithmic common-factor renewal.  Owner/core overlaps are likewise
-removed by the inherited finite-Euler renewals before (L-106081.3).  Equal
-physical products and representation multiplicity are subpower by the parent
-energy theorem.
-
-Consequently (L-106082.4) controls precisely the clean distinct-product row.
-No negative part is taken separately on the equal-core, one-sided or two-sided
-subpackets.
-
-## 4. Global recombination
-
-There are only `O(log^2 X)` pairs `(B,L)` on a dyadic physical horizon, and a
-fixed/polylogarithmic number of marked, carrier, shell and renewal labels.
-Cauchy across this **linear** partition therefore costs `X^(o(1))`.  It is
-applied only after the complete all-chaos carrier has been recombined inside
-each source coefficient.
-
-Hence the complete Boolean balanced field satisfies
-
-\[
-\boxed{
-\int_X^{2X}
-|\mathcal B_{\rm sf}(t)|^2\frac{dt}{t}
-=X^{o(1)}.
-}
-\tag{L-106082.5}
-
-In particular its logarithmic negative mass is subpower.
-
-## Scope and review flag
-
-The new arithmetic input is only the range implication `L^2<2B`.  The analytic
-centered-divisor estimate and literal owner-weight allocation are inherited
-from `L-102882--L-102883` and the parent long-core composition.
-
-Because (L-106082.5) would remove the last arithmetic row, a reviewer must
-reconstruct that source allocation rather than accept the range comparison
-alone.  The full conditional composition and its exact acceptance posture are
-recorded in `T-106080` and `M-106080`.
+The independent review target is the selector-tied positive moment in
+`T-106081.10`, not a core-only application of `L-102883`.
