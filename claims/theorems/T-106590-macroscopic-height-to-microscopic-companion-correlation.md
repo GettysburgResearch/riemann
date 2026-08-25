@@ -1,12 +1,13 @@
-# T-106590 — Macroscopic height collapses to microscopic companion correlation
+# T-106590 — Macroscopic endpoint height collapses to one shallow companion correlation
 
 Claim ID: `T-106590`  
-Status: **UNCONDITIONAL ZERO-DENSITY AND FINITE OPERATOR THEOREMS; ENDLOC106590 AND SHALLOWCORR106590 OPEN**  
+Status: **UNCONDITIONAL HEIGHT/LOCALIZATION THEOREMS + ONE FIXED SHALLOW-CORRELATION GATE**  
 Created: 2026-08-25  
-Depends on: Selberg's zero-density theorem; `L-106500--L-106514`; finite differentiator compression and model-space factorization; pinned `R_5/N>997/1000-o(1)` input  
+Updated: 2026-08-25  
+Depends on: Selberg's zero-density theorem; `L-106500--L-106514`; `L-106591`; finite model-space factorization; pinned `R_5/N>997/1000-o(1)` input  
 RH status: **unproved**
 
-This packet is deliberately numbered outside the concurrently occupied
+This packet is deliberately numbered outside the independently occupied
 `T-106550` spectral-pressure namespace.
 
 ## 1. Unconditional horizontal first moment
@@ -17,20 +18,18 @@ For zeta zeros `rho=beta+i gamma`, counted with multiplicity, define
 \mathfrak h_\zeta(T)
  =\sum_{T<\gamma\le2T}
   \left|\beta-\frac12\right|.
-\tag{T-106590.1}
 \]
 
-Functional-equation symmetry gives the exact layer cake
+Functional-equation symmetry gives
 
 \[
 \boxed{
 \mathfrak h_\zeta(T)
  =2\int_{1/2}^{1}N(\sigma;T,2T)\,d\sigma.
 }
-\tag{T-106590.2}
-\]
+\tag{T-106590.1}
 
-Selberg's uniform zero-density estimate
+Selberg's uniform density estimate
 
 \[
 N(\sigma,X)
@@ -41,221 +40,204 @@ therefore yields
 
 \[
 \boxed{
-\mathfrak h_\zeta(T)=O(T)
- =o(N(T,2T)).
+\mathfrak h_\zeta(T)=O(T)=o(N(T,2T)).
 }
-\tag{T-106590.3}
+\tag{T-106590.2}
 
-In the centered Xi variable this is exactly the total vertical-height mass of
-the Xi zero divisor in the dyadic real window.
+In the centered Xi variable this is the total vertical-height mass of the Xi
+zero divisor in the dyadic real window.
 
-It also gives, for fixed `A>0`,
+For fixed `A>0`, the same estimate gives
 
 \[
 N\!\left(\frac12+{A\over\log T};T,2T\right)
- \ll e^{-A/4}N(T,2T),
-\tag{T-106590.4}
-\]
+ \ll e^{-A/4}N(T,2T).
+\tag{T-106590.3}
 
-and all but `o(N)` zeros lie in every strip
+Thus every power-sized off-line population is forced into the natural
+`1/log T` strip.
+
+## 2. Exact finite height and model-space facts
+
+For a polynomial `p`, differentiator compression and Ky Fan's principle give
 
 \[
-\left|\beta-\frac12\right|
- <{A(T)\over\log T}
-\qquad(A(T)\to\infty).
+\mathfrak h_+(p^{(k)})\le\mathfrak h_+(p).
+\tag{T-106590.4}
+
+The matrix determinant lemma gives the finite-alpha companion bounds
+
+\[
+\begin{aligned}
+\mathfrak h_+(p+i\lambda p')&\le\mathfrak h_+(p),\\
+\mathfrak h_+(p-i\lambda p')&\le\mathfrak h_+(p)+\lambda\deg p.
+\end{aligned}
 \tag{T-106590.5}
 
-## 2. Exact finite derivative and companion height theorem
-
-For a polynomial `p` put
+For a reduced finite endpoint symbol
 
 \[
-\mathfrak h_+(p)
- =\sum_{p(z)=0}(\Im z)_+.
+U=\omega B_+\overline{B_-}
 \]
 
-If `A=diag(z_1,...,z_n)` and
-`e=n^(-1/2)(1,...,1)^T`, the zeros of `p'/n` are the eigenvalues of the
-compression of `A` to `e^perp`. Schur triangularization and Ky Fan's
-variational principle give
-
-\[
-\boxed{
-\mathfrak h_+(p^{(k)})\le\mathfrak h_+(p)
-\qquad(0\le k<n).
-}
-\tag{T-106590.6}
-
-The matrix determinant lemma gives
-
-\[
-\begin{aligned}
-p+i\lambda p'
- &=\det(zI-A+i\lambda n ee^*),\\
-p-i\lambda p'
- &=\det(zI-A-i\lambda n ee^*).
-\end{aligned}
-\]
-
-Hence
-
-\[
-\boxed{
-\begin{aligned}
-\mathfrak h_+(p+i\lambda p')
- &\le\mathfrak h_+(p),\\
-\mathfrak h_+(p-i\lambda p')
- &\le\mathfrak h_+(p)+\lambda n.
-\end{aligned}
-}
-\tag{T-106590.7}
-
-For odd fixed `K`, `q=p^(K)`, and
-
-\[
-D_{K,\lambda}=(p+i\lambda p')(q-i\lambda q'),
-\]
-
-one obtains
-
-\[
-\boxed{
-\mathfrak h_+(D_{K,\lambda}^{\rm red})
- \le2\mathfrak h_+(p)+\lambda(n-K).
-}
-\tag{T-106590.8}
-
-Common-factor reduction can only decrease the left side.
-
-## 3. Every deep model-space direction is paid by height
-
-Let a reduced finite endpoint symbol be
-
-\[
-U=\omega B_+\overline{B_-},
-\]
-
-with denominator zeros `b_j=a_j+i y_j`.  For `eta>0`, factor
+factor the denominator inner function by height,
 
 \[
 B_-=B_{\le\eta}B_{>\eta}.
 \]
 
-The model space decomposes orthogonally:
-
-\[
-K_{B_-}
- =K_{B_{\le\eta}}
-  \oplus B_{\le\eta}K_{B_{>\eta}}.
-\]
-
-Using the exact charge identity
-
-\[
-\|H_U\|_{S_2}^2
- =\operatorname{tr}
-  (T_{B_+}^*P_{K_{B_-}}T_{B_+}),
-\]
-
-one gets
+The model space splits orthogonally and the exact all-pass charge obeys
 
 \[
 \boxed{
 \|H_U\|_{S_2}^2
- =\mathcal C_{\le\eta}(U)
-  +\mathcal C_{>\eta}(U),
+ =\mathcal C_{\le\eta}(U)+\mathcal C_{>\eta}(U),
+\qquad
+\mathcal C_{>\eta}(U)
+ \le{\sum_{B_-(a+iy)=0}y\over\eta}.
+}
+\tag{T-106590.6}
+
+Here
+
+\[
+\mathcal C_{\le\eta}(U)
+ =\|P_{K_{B_{\le\eta}}}T_{B_+}\|_{S_2}^2
+\]
+
+is the literal confluent Cauchy canonical-correlation defect of the shallow
+denominator and numerator inner factors.
+
+## 3. The cofinal endpoint-height row is closed
+
+`L-106591` uses the freedom to choose the positive companion shift separately
+on each regular dyadic window.  Rouché continuity as `lambda_T->0`, Selberg's
+Xi height bound, the half-strip bound for Xi derivatives, and the pinned
+fifth-derivative proportion give
+
+\[
+\boxed{
+\sum_{B_{-,T}(a+iy)=0}y
+\le
+ \left({3\over4000}+o(1)\right)N(T,2T).
+}
+\tag{T-106590.7}
+
+The zero multiset, common factors, multiplicities, finite-window endpoints and
+confluent events are retained in the regular-window exhaustion.  Therefore the
+former statement `ENDLOC106590` is **proved**.
+
+For every fixed `eta>0`,
+
+\[
+\boxed{
+{\mathcal C_{>\eta}(U_T)\over N(T,2T)}
+\le {3\over4000\eta}+o(1).
+}
+\tag{T-106590.8}
+
+## 4. One fixed shallow-correlation gate for ninety percent
+
+Take
+
+\[
+\eta={1\over100}.
+\]
+
+Then every denominator direction above height `0.01` costs at most
+
+\[
+{3\over40}N+o(N).
+\]
+
+Define
+
+\[
+\boxed{
+\mathfrak C_{\rm sh}(T)
+ =\left\|
+ P_{K_{B_{-,T}^{\le1/100}}}T_{B_{+,T}}
+ \right\|_{S_2}^2.
 }
 \tag{T-106590.9}
-\]
 
-with no cross term.  Since each deep direction costs at most one,
-
-\[
-\boxed{
-\mathcal C_{>\eta}(U)
- \le\deg B_{>\eta}
- \le {\sum_jy_j\over\eta}.
-}
-\tag{T-106590.10}
-
-Thus, whenever the endpoint denominator has total height `o(N)`, one may
-choose `eta_T->0` with
-
-\[
-{\sum_jy_j\over\eta_T}=o(N)
-\]
-
-and obtain
-
-\[
-\boxed{
-\|H_{U_T}\|_{S_2}^2
- \le\mathcal C_{\le\eta_T}(U_T)+o(N).
-}
-\tag{T-106590.11}
-
-The only possible power-sized adverse charge is supported on a
-vanishing-height companion model space.
-
-## 4. The two literal remaining statements
-
-Define `ENDLOC106590`:
+and define
 
 ```text
-The regular finite canonical-product exhaustion consumed by the fifth-endpoint
-index has the same reduced companion divisor as the actual Xi endpoint, up to
-an o(N) endpoint/confluent ledger, and its denominator upper-height sum is
-o(N).
+SHALLOWCORR106591:
+
+limsup_(T->infinity)
+  C_sh(T)/N(T,2T)
+< 11/500.
 ```
 
-Equations (T-106590.2)--(T-106590.8) prove all finite and zero-density inputs;
-`ENDLOC106590` is only the cofinal window/product-tail identification.
-
-Assuming it, choose `eta_T` as above and define
+Since
 
 \[
-\mathfrak C_{\rm sh}(T)
- =\|P_{K_{B_{-,T}^{\le\eta_T}}}T_{B_{+,T}}\|_{S_2}^2.
-\tag{T-106590.12}
+{3\over40}+{11\over500}={97\over1000},
 \]
 
-Define `SHALLOWCORR106590`:
+one obtains
 
-```text
-limsup C_sh(T)/N(T,2T) < 97/1000.
-```
+\[
+\|H_{U_{5,\lambda_T}}\|_{S_2}^2
+ <\left({97\over1000}-o(1)\right)N(T,2T).
+\]
 
-Then the fifth-endpoint index and
-`R_5/N>997/1000-o(1)` give
+The fifth-endpoint winding identity and
+
+\[
+{R_5(T,2T)\over N(T,2T)}>{997\over1000}-o(1)
+\]
+
+therefore prove
 
 \[
 \boxed{
-\mathrm{ENDLOC}_{106590}
-\wedge
-\mathrm{SHALLOWCORR}_{106590}
+\mathrm{SHALLOWCORR}_{106591}
 \Longrightarrow
 \liminf_{T\to\infty}
  {N_0(T,2T)\over N(T,2T)}>0.9.
 }
-\tag{T-106590.13}
+\tag{T-106590.10}
 
-The corresponding threshold for `95%` is `47/1000`.
+More generally, any fixed `eta>3/388` is admissible with threshold
 
-The shallow term is the literal confluent Cauchy canonical-correlation defect
-of the denominator and numerator inner factors. It is the microscopic core of
-`RESGRAM106450`, `HBSIG/HBRT106451`, `CANONCORR106530`, and
-`ORIENTEDANGLE106540`.
+\[
+{97\over1000}-{3\over4000\eta}.
+\tag{T-106590.11}
 
-## 5. Binding microscopic firewall
+For a `95%` conclusion, taking `eta=1/50` leaves the exact shallow allowance
 
-For `c>1`, the functions
+\[
+{47\over1000}-{3\over80}={19\over2000}.
+\]
+
+## 5. Relation to the formerly open targets
+
+The shallow term in (T-106590.9) is the only portion of the following targets
+not paid by the new height theorem:
+
+```text
+RESGRAM106450;
+HBSIG/HBRT106451;
+CANONCORR106530;
+ORIENTEDANGLE106540.
+```
+
+Thus those formulations have not been proved in full, but their macroscopic,
+deep-pole, and endpoint-localization components are now closed.
+
+## 6. Binding microscopic firewall
+
+For `c>1`,
 
 \[
 F_n(z)=c+\cos(nz)
 \]
 
-have a positive even Fourier source, no real zeros, and a completely
-real-rooted fifth derivative. Their zeros are
+has a positive even Fourier source, no real zeros, and a completely
+real-rooted fifth derivative.  Its zeros are
 
 \[
 {(2k+1)\pi\over n}
@@ -263,19 +245,19 @@ real-rooted fifth derivative. Their zeros are
 \]
 
 On every fixed real interval, zero count is `Theta(n)` while total vertical
-height is `O(1)`. Therefore vanishing height mass, positivity of the Fourier
-source, and real-rootedness of the fifth derivative do not control the
-microscopic topological units.
+height is `O(1)`.  Hence height mass, source positivity, a thin zero strip,
+and fifth-derivative real-rootedness do not control the microscopic topological
+units.
 
-A proof of `SHALLOWCORR106590` must use genuinely Xi-specific microscopic
-information: endpoint-companion correlation, near-line repulsion, the literal
-arithmetic source, or an equivalent phase-angle theorem.
+A proof of `SHALLOWCORR106591` must use genuinely Xi-specific microscopic
+information: endpoint-companion canonical correlation, near-line repulsion,
+the literal arithmetic source, or the equivalent oriented phase-angle mean.
 
 ```text
 Selberg horizontal first moment O(T)             PROVED UNCONDITIONALLY
-finite derivative/companion height majorization  PROVED EXACT
-deep model-space charge paid by height            PROVED EXACT
-ENDLOC106590 cofinal endpoint localization        OPEN / ANALYTIC
-SHALLOWCORR106590 microscopic correlation         OPEN / RECORD-BEARING
+window-adapted endpoint height <=3/4000 N         PROVED
+all deep companion charge above fixed eta        PROVED PAID
+ENDLOC106590                                      PROVED
+SHALLOWCORR106591 <11/500                         OPEN / RECORD-BEARING
 ninety percent / density one / RH                 UNPROVED
 ```
