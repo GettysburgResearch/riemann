@@ -1,70 +1,45 @@
-# Review specification — corrected T-106150 Wick half-source square
+# Review specification — corrected T-106150 Wick square and reflection gate
 
 Review in this order:
 
-1. Verify `L-106133` in the Boolean algebra:
+1. Verify the Boolean half-source and canonical pair identity in `L-106133`.
+2. Read `R-106150` and test `x_p star x_p=0` versus `x_p^2!=0`.
+3. Derive the exact Wick--Mellin field `J_U^diamond` by imposing disjoint
+   source supports.
+4. Verify `J_U=J_U^diamond+C_U` and classify every contraction as
+   owner/owner, owner/core, or core/core, with prime exponent `2`, `3`, or `4`.
+5. Verify that parent `T-102990` closes the fixed differential observation of
+   those contraction fields.
+6. Check
    \[
-   b_U=f_U\star f_U,
-   \qquad
-   \mathfrak B_U^{\rm eq}
-   =\int_0^1(1-\theta)
-      \mathfrak G_{U,\theta}^{\star2}d\theta.
+   \mathcal O_{\Phi_*}[B_U^{eq}]=(2D-1)J_U^\diamond
    \]
-2. Reconstruct the canonical pair coefficient
+   and the complete `D_out` multiplier. Do not use a product rule for
+   convolution.
+7. Verify `L-106135`:
    \[
-   2\int_0^1(1-\theta)\theta^{k-2}d\theta
-   =\binom{k}{2}^{-1}.
+   E_U+O_U=N_U,
+   \quad
+   J_U=E_U-O_U,
+   \quad
+   D_{out}J_U=2D_{out}E_U=-2D_{out}O_U.
    \]
-3. Read `R-106150` before using any scalar self-convolution. Test the
-   one-label fixture
-   \[
-   x_p\star x_p=0,
-   \qquad x_p^2\ne0.
-   \]
-4. Derive the exact Wick--Mellin field `J_U^diamond` by imposing disjoint
-   prime-label supports.
-5. Verify
-   \[
-   J_U=J_U^\diamond+C_U
-   \]
-   and classify every contraction label as owner/owner, owner/core, or
-   core/core, with exponent `2`, `3`, or `4`.
-6. Check that the parent `T-102990` closed ledger genuinely applies to the
-   fixed differential observation of those contraction fields.
-7. Verify
-   \[
-   \Phi_*=2(D-1/2)A*_MA
-   \]
-   and
-   \[
-   \mathcal O_{\Phi_*}[B_U^{eq}]
-   =(2D-1)J_U^\diamond.
-   \]
-8. Confirm the factor `2D-1`. Do not use the false product-rule formula
-   `D(f*g)=Df*g+f*Dg` for convolution.
-9. Reconstruct the derivative/outer multiplier
-   \[
-   \frac12D(D-1)(5D+3/2)(2D-1).
-   \]
-10. Verify that the reflection signature belongs to the **ordinary**
-    convolution and enters the live source only modulo the closed contraction
-    field.
-11. For characters, verify the normal-ordered analytic square
-    \[
-    \int(1-\theta):\!\widehat F_\chi^2\!:_B d\theta.
-    \]
-12. Decide whether any existing theorem proves `WKSFSC106150`,
-    `SFSC106150`, `REFEV106150`, or `REFOD106150`.
+8. Check the pointwise negative-part equality and the mismatch-energy formula.
+9. Verify the normal-ordered analytic character square; do not insert a complex
+   conjugate or restore shared-label contractions.
+10. Decide whether any existing theorem proves `WKSFSC106150`,
+    `SFSC106150`, or the equivalent `REFSIG106150`.
 
 Mandatory firewalls:
 
 ```text
-Do not identify Boolean star with ordinary source multiplication.
+Do not identify Boolean star with ordinary multiplication.
 Do not omit shared-label contractions.
 Do not call the Wick square an autocorrelation or modulus square.
+Do not treat reflection-even and reflection-odd energies as independent gates.
 Do not infer physical near-collision control from the source diagonal.
 Do not take conductor-fibre absolute values before connected/Wick centering.
-Do not claim the exact replay proves a one-sided estimate or RH.
+Do not claim the replays prove an open gate or RH.
 ```
 
 Current status:
@@ -72,9 +47,9 @@ Current status:
 ```text
 Boolean/Beta equal-pair source square       exact;
 ordinary = Wick + contractions              exact;
-contractions                                inherited closed after observation;
+contractions after observation              inherited closed;
 common-mother Wick differential image       exact;
-reflection model modulo contractions        exact sufficient coordinate;
-WKSFSC / SFSC / REFEV / REFOD               open;
+reflection complementarity                  exact;
+WKSFSC / SFSC / REFSIG                      open;
 BCI102990 / RH                              open.
 ```
