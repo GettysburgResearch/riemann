@@ -74,7 +74,7 @@ H_H(U_\xi,V_\xi)
 =e^{H\xi}
  {\sinh(2HX_\xi)\over2HX_\xi}.
 }
-\tag{L-105641.3]
+\tag{L-105641.3}
 
 The current/exterior-square identity of `L-105624` is
 
@@ -92,7 +92,7 @@ Cancelling the common exponential gives
 \mathbb E
  {\sinh(2HX_\xi)\over2HX_\xi}.
 }
-\tag{L-105641.4]
+\tag{L-105641.4}
 
 Therefore
 
@@ -104,7 +104,7 @@ R_H(\xi)
  \displaystyle\mathbb E
  {\sinh(2HX_\xi)\over2HX_\xi}}.
 }
-\tag{L-105641.5]
+\tag{L-105641.5}
 
 This is an exact probabilistic normal form for the canonical source
 contraction.
@@ -124,7 +124,7 @@ with strict inequality for `z!=0`. Hence
 0<R_H(\xi)\le e^{-H\xi}
 \qquad(\xi\ge0).
 }
-\tag{L-105641.6]
+\tag{L-105641.6}
 
 For a nondegenerate positive exterior-square source the inequality is strict.
 In the base/scale variables,
@@ -134,7 +134,7 @@ In the base/scale variables,
 0<r_{b,h}(\xi)
 \le {h\over b+h}e^{-(b+h)\xi}.
 }
-\tag{L-105641.7]
+\tag{L-105641.7}
 
 Thus the current-normalized first chaos is not merely a contraction in
 `[0,1]`; it carries a universal exponential frequency envelope determined by
@@ -157,7 +157,7 @@ R_H(\xi)
 {e^{-H\xi}\over
  1+{2\over3}H^2\mathbb E[X_\xi^2]}.
 }
-\tag{L-105641.8]
+\tag{L-105641.8}
 
 This is the conditional-law version of the positive `Lambda_4` reserve in
 `L-105620`. No lower bound for `E[X_xi^2]` is asserted here.
