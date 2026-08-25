@@ -1,0 +1,23 @@
+{
+  "checks": 142924,
+  "even_character_kernel_checks": 1360,
+  "fixed_fibre_long_core_checks": 368,
+  "not_proved": {
+    "bci102990": true,
+    "distinct_anchor_hybrid_moment": true,
+    "riemann_hypothesis": true
+  },
+  "oriented_coprime_core_pairs": 13470,
+  "proved_by_replay": {
+    "even_character_kernel_identity": true,
+    "fixed_fibre_long_core_ratio": true,
+    "nonzero_ramanujan_phase": true,
+    "opposite_core_is_strictly_rough": true,
+    "source_dual_diagonal_algebra": true,
+    "unique_least_discrepancy_orientation": true
+  },
+  "ramanujan_fixtures": 2340,
+  "schema": "riemann.x106090.least-discrepancy-rough-tail.v1",
+  "source_dual_diagonal_checks": 31875,
+  "verdict": "PASS_X_106090_LEAST_DISCREPANCY_ROUGH_TAIL"
+}
