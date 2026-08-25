@@ -1,61 +1,127 @@
-# Minimum-owner Boolean Vaughan closure proposal
+# Minimum-owner Boolean Vaughan closure proposal — retracted historical report
 
 Date: 2026-08-25  
 Execution PR: #751  
 Programmes: #743, #736, #737  
 Parent: PR #719 at `60285de21fafdd1b3c185ddd19b57191a41c08dd`  
-Status: **full proof proposal; independent hostile review required**
+Status: **former full proof proposal retracted by `R-106080`; RH unproved**
 
-## New mechanism
+## Binding correction
+
+The source-level reconstruction in
+
+```text
+reports/gpt56-pro/2026-08-25-t106080-self-reconstruction.md
+```
+
+found that the proposal's direct use of `L-102883` was not source-faithful.
+The complete phase packet has varying owner squareclass
+
+\[
+n_i=P_i a_i^2,
+\qquad P_i=\lambda_i\Lambda_i,
+\]
+
+so its centered kernel is on
+
+\[
+P_i a_i^2-P_j a_j^2,
+\]
+
+not merely on
+
+\[
+a_i^2-a_j^2.
+\]
+
+Accordingly `L-106082.3`, `L-106082.5` and `T-106080` are retracted. The live
+frontier is `T-106081 / MOBOSM106081`.
+
+This report is retained only to document how the failed proposal arose.
+
+## Mechanism originally proposed
 
 The prior scale-matched character coordinate left power-sized coherent owner
-families in one residue cell.  The new proposal changes the owner/Vaughan gauge
-before that collapse.
+families in one residue cell. The proposal changed the owner/Vaughan gauge
+before that collapse:
 
-1. Work in the literal squarefree Euler algebra using disjoint-support Boolean
-   convolution.
-2. Apply an exact Boolean Vaughan identity.  Its balanced row contains two
-   distinct core-prime labels; its zero-moment Type-I row remains power-small.
-3. On each horizon, include the unique uncompletable label if present and use
-   the smallest available label as the other owner; otherwise choose the two
-   smallest labels.
-4. The smaller owner `lambda` then obeys `lambda^2<=a` on every balanced core.
-5. After dyadic projection `B<=a<2B`, `L<=lambda<2L`, every block satisfies
-   `L^2<2B`.
-6. The existing coherent centered double-phase theorem therefore closes every
-   balanced block; the former short-core range is empty in this gauge.
+1. work in the literal squarefree Euler algebra using disjoint-support Boolean
+   convolution;
+2. apply an exact Boolean Vaughan identity;
+3. use a horizon-safe minimum-owner pair;
+4. derive `lambda^2<=a` and hence `L^2<2B`;
+5. attempt to insert every block into the parent coherent phase theorem.
 
-The proposed chain is
+Steps 1--4 survive. Step 5 fails at the varying-owner squareclass transport.
+
+## Mathematics retained
 
 ```text
-Boolean squarefree Vaughan
-AND
-minimum-owner horizon gauge
-AND
-parent coherent centered phase packing
- -> derivative negative mass is subpower
- -> fixed Volterra/Mellin consumer
- -> RH.
+Boolean squarefree Vaughan identity                 PROVED EXACT
+balanced support has two distinct core primes       PROVED EXACT
+squarefree fixed-owner Type-I                       Y^(-1/12+o(1))
+minimum-owner horizon gauge                         PROVED EXACT
+lambda^2 <= a                                       PROVED EXACT
+L^2 < 2B                                            PROVED EXACT
 ```
 
-## Binding review points
-
-The finite algebra and range implication are exact.  The extraordinary claim
-stands or falls at two source transports:
+The self-reconstruction further proves:
 
 ```text
-Boolean squarefree Type-I
-  -> the parent globally closed Type-I Hilbert row;
+no exceptional label:
+  Lambda^2 <= a and P=lambda*Lambda <= a;
 
-minimum-owner Boolean balanced source
-  -> the literal owner-weight allocation in parent L-102883/T-102890.
+unique exceptional label Lambda>4 sqrt(Y):
+  lambda*a^2 < 4 sqrt(Y), hence lambda^5 < 4 sqrt(Y).
 ```
 
-`M-106080` requires a reviewer to identify the first failed equation or source
-normalization if rejecting the proposal.  No canonical RH status is changed
-before that review.
+## Exact failed transport
 
-## Replay
+The square-core corollary of `L-102883` controls one common coefficient
+sequence with kernel
+
+\[
+\mathbf1_{q\mid a_i^2-a_j^2}-\frac1q.
+\]
+
+The physical source instead yields
+
+\[
+\mathbf1_{q\mid P_i a_i^2-P_j a_j^2}-\frac1q.
+\]
+
+Hiding `P_i` in an orthogonal Hilbert coordinate deletes the cross-owner
+physical Gram. Aggregating it in the physical Hilbert space assumes the open
+owner-occupancy norm. Applying the theorem separately at fixed `P_i` reopens
+the coherent summation obstruction of `R-102840`.
+
+## Correct live handoff
+
+`T-106081` defines selector-tied fields
+
+\[
+\mathcal A_{\ell\to\rho;k}
+=
+\sum_{i\in I_\ell}
+\beta_i e_\rho(k n_i)v_i
+\]
+
+and the positive majorant
+
+\[
+\mathfrak P_{B,L}
+=
+\sum_{\ell\ne\rho}
+\frac{\rho-1}{\ell\rho}
+\sum_{k=1}^{\rho-1}
+\|\mathcal A_{\ell\to\rho;k}\|^2.
+\]
+
+The remaining theorem `MOBOSM106081` asks for a subpower dyadic sum of these
+moments with every literal source weight used once. It has sharpened
+no-exception and exceptional subtargets, but remains open and RH-bearing.
+
+## Replay boundary
 
 ```text
 PASS_X_106080_MINIMUM_OWNER_BOOLEAN_VAUGHAN
@@ -64,6 +130,15 @@ sha256=86bb5ac732d2548679b16000a61c1fa40d961c962bde5d44edf9d39c110f98df
 ```
 
 The replay certifies finite Boolean convolution, owner selection, dyadic range,
-centered same-family kernels, squarefree reindexing and clean phase fixtures.
-It does not certify the two analytic source transports, the Mellin consumer or
-RH.
+abstract same-family kernels, squarefree reindexing and clean phase fixtures.
+It does not certify the source-tied owner moment, the Mellin consumer or RH.
+
+## Current status
+
+```text
+T-106080 historical closure proposal        RETRACTED
+R-106080 source-kernel correction            BINDING
+T-106081 corrected frontier                  LIVE / OPEN
+MOBOSM106081                                 OPEN / RH-BEARING
+Riemann Hypothesis                           UNPROVEN
+```
