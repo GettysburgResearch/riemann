@@ -935,8 +935,25 @@ the standard low-rank corrections retained at degrees six and eight.  This is
 a compact representation-ring detector, not finite-family equidistribution or
 arithmetic monodromy.  The symplectic comparator is polarization-matched to
 `Std x Sym^r` only for even `r`; for odd `r` that product is orthogonal and a
-generic orthogonal comparison remains a separate target.  The principal
-`Sym^(2r+1)` representation is symplectic for every `r`.
+generic orthogonal comparison is required.  That comparison is also exact.
+For standard Haar trace,
+
+\[
+\begin{array}{c|rrrr}
+ &M_2&M_4&M_6&M_8\\ \hline
+ SO(4)&1&4&25&196\\
+ SO(8)&1&3&15&106\\
+ SO(N),\ N>8&1&3&15&105.
+\end{array}
+\]
+
+The `SO(8)` correction `106=105+1` is its degree-eight volume tensor; below
+the dimension, only metric pairings occur.  At `r=1`, the exceptional
+isogeny `Spin(4)=SU(2)xSU(2)` identifies the entire product trace law with
+standard Haar `SO(4)`, in every degree.  For every odd `r>=3`, however, the
+first split from the polarization-matched `SO(2r+2)` law is again degree four,
+with gap `2(r+1)-3=2r-1`.  The principal `Sym^(2r+1)` representation remains
+symplectic for every `r`.
 
 ### The two universal graphs have one all-`r` Hasse-count law
 

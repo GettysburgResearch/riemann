@@ -493,7 +493,11 @@ statistics. The generic `USp(2r+2)` comparison retains the displayed low-rank
 corrections; its stable moments must not be substituted at small rank. It is
 polarization-matched to `Std x Sym^r` only for even `r`; the product is
 orthogonal for odd `r`, whereas the principal `Sym^(2r+1)` remains
-symplectic.
+symplectic. The matched orthogonal comparison is exceptional only at `r=1`,
+where `Spin(4)=SU(2)xSU(2)` makes the product exactly standard Haar `SO(4)`.
+For every odd `r>=3`, its fourth moment exceeds generic `SO(2r+2)` by
+`2r-1`. At `r=3`, `SO(8)` has the boundary eighth moment `106`, not `105`,
+because its volume tensor first appears in degree eight.
 
 The all-`r` Hasse theorem counts only the two universal monomial graph loci.
 The locked `r=1,2,3` packets separately prove their respective rational or

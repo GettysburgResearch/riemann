@@ -961,8 +961,32 @@ Their eighth-moment gap is
 degree four.  These are compact Haar identities, not finite-family moment or
 monodromy theorems.  The `USp` comparison is polarization-matched to the
 product only for even `r`: `Std x Sym^r` is orthogonal for odd `r`, so its
-generic orthogonal comparator is still to be developed.  The principal
-`Sym^(2r+1)` representation is symplectic for every `r`.
+generic orthogonal comparator must be used.  Haar character integration and
+the first fundamental theorem for `SO(N)` give, through degree eight,
+
+\[
+\begin{array}{c|rrrr}
+ &M_2&M_4&M_6&M_8\\ \hline
+ SO(4)&1&4&25&196\\
+ SO(8)&1&3&15&106\\
+ SO(N),\ N>8&1&3&15&105.
+\end{array}
+\]
+
+For tensor degree below `N`, the invariants are the independent metric
+pairings.  At `N=8`, degree eight adds the one orientation tensor.  At
+`N=4`, the exact cover `Spin(4)=SU(2)xSU(2)` makes the standard trace a
+product of two fundamental `SU(2)` traces, so its even moments are the
+squares `1,4,25,196` of the Catalan invariants.  It follows that `r=1` is
+exactly the full Haar `SO(4)` trace law in every degree, whereas every odd
+`r>=3` first separates from its matched `SO(2r+2)` comparator at degree four
+by
+
+\[
+ M_4^{\rm prod}-M_4^{SO}=2(r+1)-3=2r-1.
+\]
+
+The principal `Sym^(2r+1)` representation is symplectic for every `r`.
 
 The two graph loci also have a uniform arithmetic count.  At `q=p^(2k)`,
 their integral Hasse-lattice union has
