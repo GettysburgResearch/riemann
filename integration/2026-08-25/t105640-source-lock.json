@@ -1,6 +1,6 @@
 {
-  "schema": "riemann.source_lock.t105640.v1",
-  "claim_namespace": "105640-105643",
+  "schema": "riemann.source_lock.t105640.v2",
+  "claim_namespace": "105640-105644",
   "created_at": "2026-08-25",
   "repository": "gfreund123/riemann",
   "branch": "research/gpt56-pro/105300-xi-moderate-saddle-residue-spectrum",
@@ -20,6 +20,7 @@
     "L-105641",
     "L-105642",
     "L-105643",
+    "L-105644",
     "R-105640",
     "T-105640",
     "M-105640"
@@ -34,21 +35,26 @@
     "universal exponential envelope for the current-Turan profile",
     "finite inner midline/exponential trace identity",
     "finite Xi-prime anti-inner soft-depth bound",
-    "boundary-zero weighted-charge firewall"
+    "boundary-zero weighted-charge firewall",
+    "one-zero positive current-height owner probability measure"
   ],
   "review_required": [
     "infinite theta-series strong-log-concavity proof",
     "Paley-Wiener normalization and model-space trace",
     "Xi-prime shifted-factor orientation",
-    "cofinal zero-count normalization"
+    "cofinal zero-count normalization",
+    "height-owner transfer to physical signed allpass flow"
   ],
   "open_gates": [
+    "HOWNXFER105644",
     "BCOLLAR105643",
     "POINTID105630",
     "SAFEDESC105628",
     "ENDIDX105630",
     "fixed-width moving-saddle hostile review"
   ],
+  "height_owner_probability_proved": true,
+  "height_owner_physical_transfer_proved": false,
   "boundary_collar_index_conversion_proved": false,
   "pointwise_physical_sign_proved": false,
   "rh_established": false
