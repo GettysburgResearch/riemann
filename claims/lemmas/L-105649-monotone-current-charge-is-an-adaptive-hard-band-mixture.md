@@ -59,7 +59,7 @@ q_r(\delta)
 \int_{[0,\infty)}
 \bigl(1-e^{-2\delta L}\bigr)d\nu_r(L).
 }
-\tag{L-105649.3
+\tag{L-105649.3}
 
 The complementary charge is
 
@@ -70,7 +70,7 @@ c_r(\delta)
 \int_{[0,\infty)}e^{-2\delta L}d\nu_r(L)
 =r(0)-q_r(\delta).
 }
-\tag{L-105649.4
+\tag{L-105649.4}
 
 For each fixed bandwidth `L`, `L-105640` identifies
 
@@ -94,7 +94,7 @@ as its exact endpoint/signed-complement fraction.  Equations
 =
 \text{positive mixture of exact adaptive source/index splits}.
 }
-\tag{L-105649.5
+\tag{L-105649.5}
 
 No single bandwidth is selected after the zero is observed.  The source profile
 itself supplies the complete predeclared bandwidth distribution.
@@ -113,7 +113,7 @@ Consequently there is a canonical positive bandwidth measure
 
 \[
 \boxed{d\nu_H(L)=-dR_H(L).}
-\tag{L-105649.6
+\tag{L-105649.6}
 
 For a zero of `Xi'` at height `gamma>H`, put `delta=gamma-H`.  The current
 survival function of `L-105644` is exactly
@@ -125,7 +125,7 @@ Q_\rho(H)
 \int_0^\infty
 \bigl(1-e^{-2(\gamma-H)L}\bigr)d\nu_H(L).
 }
-\tag{L-105649.7
+\tag{L-105649.7}
 
 Its complementary endpoint mass at that fixed height is
 
@@ -136,7 +136,7 @@ R_H(0)-Q_\rho(H)
 \int_0^\infty
 e^{-2(\gamma-H)L}d\nu_H(L).
 }
-\tag{L-105649.8
+\tag{L-105649.8}
 
 For the physical microscope profile
 
