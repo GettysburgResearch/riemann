@@ -939,15 +939,101 @@ power.  Nonsquare bases are empty, and at `q=p^(2k)` the Hasse union has
  8p^{\lfloor k/4\rfloor}+8p^{\lfloor k/2\rfloor}-4
 \]
 
-triples.  Thus the next algebraic target is narrower: prove or refute a
-nonmonomial positive-dimensional component at some `r>=4`, classify the
-zero-dimensional cyclotomic residual support uniformly in `r`, and find a
-uniform coefficient prefix cutting out the graph union.  The next arithmetic
-target is to impose elliptic-trace realization simultaneously and ask whether
-any geometrically linked family can stay on one graph across primes.  The raw
-dilation `T -> q^(r/2)T`, especially its square-root choice for odd `r`, must
-remain explicit.  A one-place identity is neither a representation
-homomorphism nor a compatible automorphic transfer.
+triples.
+
+The compact moment comparison is now uniform as well.  If
+`B_k(n)=dim((Sym^n)^(tensor 2k))^SU(2)`, then
+
+\[
+ B_k(n)=[t^{kn}](1-t)(1+t+\cdots+t^n)^{2k}.
+\]
+
+Consequently the independent `Std x Sym^r` law and the principal
+`Sym^(2r+1)` law agree through degree four and first split in degree six by
+
+\[
+ M_6^{\rm princ}-M_6^{\rm prod}
+ =\frac32r(r+1)(r+2).
+\]
+
+Their eighth-moment gap is
+`2r(r+1)(r+2)(3r^2+6r+5)`, while generic `USp(2r+2)` already separates at
+degree four.  These are compact Haar identities, not finite-family moment or
+monodromy theorems.  The `USp` comparison is polarization-matched to the
+product only for even `r`: `Std x Sym^r` is orthogonal for odd `r`, so its
+generic orthogonal comparator is still to be developed.  The principal
+`Sym^(2r+1)` representation is symplectic for every `r`.
+
+The two graph loci also have a uniform arithmetic count.  At `q=p^(2k)`,
+their integral Hasse-lattice union has
+
+\[
+ 8p^{\lfloor k/(r+1)\rfloor}+8p^{\lfloor k/2\rfloor}
+ -1+\mathbf1_{r\ {\rm odd}}-4\mathbf1_{3\nmid(r+1)}
+\]
+
+points.  At nonsquare odd `q=p^e`, odd `r` is empty, while even `r` has
+
+\[
+ 4\left\lfloor
+ {\lfloor2\sqrt q\rfloor\over
+ p^{\lceil er/(2(r+1))\rceil}}
+ \right\rfloor+1
+\]
+
+first-graph points.  This is a theorem about the two sufficient loci only;
+outside the locked low rungs it is not a converse for the full intersection.
+
+A deliberately capped `r=4` scout makes the next algebraic target sharper.
+For the typed comparison
+
+\[
+ P_{\operatorname{Std}(A)\otimes\operatorname{Sym}^4(B)}(q^2T)
+ =P_{\operatorname{Sym}^9(C)}(T),
+\]
+
+the two expected raw graphs are
+
+\[
+ B^2=C^2,\quad q^2A=C(C^4-5qC^2+5q^2),
+ \qquad
+ A=C,\quad qB^2=(C^2-2q)^2.
+\]
+
+After eliminating the first coefficient, the exact gcd of the next four
+normalized coefficient numerators is the graph divisor
+
+\[
+ (v^2-z^2)\bigl(v^2-(z^2-2)^2\bigr).
+\]
+
+Thus the scout finds no additional positive-dimensional component.  Its
+torsion sweep through order 80 leaves residual orders
+`5,9,10,11,18,20,22`, supported in `Z=z^2` on
+
+\[
+ Z^2-3Z+1,\quad Z^3-6Z^2+9Z-1,
+\]
+
+\[
+ Z^5-9Z^4+28Z^3-35Z^2+15Z-1,
+ \quad Z^2-5Z+5,
+\]
+
+all without rational roots.  Capped checks found no off-graph point among
+24,346 raw triples and 34,225 rational forced pairs.  This evidence does
+**not** exclude an isolated noncyclotomic rational point: it is a recorded
+conjectural boundary, not an `r=4` converse theorem.
+
+The next target is therefore to exclude or construct those isolated
+noncyclotomic points uniformly, classify the zero-dimensional residual
+support for general `r`, and identify a uniform coefficient prefix cutting
+out the graph union.  The next arithmetic target is to impose elliptic-trace
+realization simultaneously and ask whether any geometrically linked family
+can stay on one graph across primes.  The raw dilation `T -> q^(r/2)T`,
+especially its square-root choice for odd `r`, must remain explicit.  A
+one-place identity is neither a representation homomorphism nor a compatible
+automorphic transfer.
 
 ### Elliptic-pair target: detect geometry inside the `SO(4)` product law
 

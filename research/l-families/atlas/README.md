@@ -29,9 +29,10 @@ all-`m` rational full-factor collision classification, an exact odd-order
 cyclotomic spectral-alias theorem, its complete even-order parity-coset
 counterpart, a complete degree-six tensor/Sym5 rational spectral-intersection
 theorem, a generic all-symmetric-power subtorus rigidity theorem, a complete
-integral degree-eight tensor/Sym7 intersection, and an exact `USp(4)` virtual-
-character null-direction packet are also included. Every atlas record is
-`DRAFT`. RH and GRH remain open.
+integral degree-eight tensor/Sym7 intersection, universal tensor-ladder moment
+and Hasse-graph count theorems, and an exact `USp(4)` virtual-character null-
+direction packet are also included. Every atlas record is `DRAFT`. RH and GRH
+remain open.
 
 Exact sources or dependencies: classical completed GL(1) normalizations; the
 displayed finite-field definitions; the standard level-one modular-stack
@@ -140,6 +141,8 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 | degree-six tensor / `Sym^5` spectral intersection | exact Newton coefficients, a custom rational Groebner certificate, cyclotomic residual ideals, all-odd-prime-power Hasse-lattice counts, compact moments, and an all-`r` torus ladder | after the necessary `qT` dilation, `Std(E_A) tensor Sym^2(E_B)` equals `Sym^5(E_C)` over rational raw data exactly on `B^2=C^2, qA=C(C^2-3q)` or `A=C, qB^2=(C^2-2q)^2`; at `q=p^(2k)` the Hasse-lattice union has `8p^floor(k/3)+8p^floor(k/2)-1` triples | local formal factors and coefficient lattices only; orders `7,12,14` are algebraic residuals, only the `r=2` converse is complete, and no three-curve realization, representation homomorphism, global transfer, novelty, or RH/GRH claim follows |
 | tensor/symmetric-power subtorus rigidity | elementary multiplicity and largest-weight proof, arbitrary nonprimitive target exponent, Dickson graph equations, central-sign parity, and a light bounded replay | for every `r>=1`, `Std(w^a) tensor Sym^r(w^b)` has the `Sym^(2r+1)(w)` weight multiset exactly for `(|a|,|b|)=(r+1,1)` or `(1,2)`; an exponent `c` on the target scales both pairs by `|c|` | exhaustive only among integer monomial one-parameter subtori; torsion parameters, nonmonomial curves, isolated rational points, arithmetic realization, and general full rational intersections remain separate |
 | degree-eight tensor / `Sym^7` spectral intersection | four Newton coefficients, exact small elimination and residual-support certificates, cyclotomic witnesses, p-adic divisibility, locked nonsquare and synthetic square replays, and compact moments | after `q^(3/2)T` dilation, integral odd-prime-power solutions are exactly the same-sign `C4/z` and `z/C2` graphs; nonsquare `q` is empty, while `q=p^(2k)` has `8p^floor(k/4)+8p^floor(k/2)-4` Hasse triples; trace moments first split at degree six (`170` versus `260`) | nongraph algebraic strata remain at orders `8,16,20,9/18,7/14` but cannot descend to integral raw data; the count gives no three-curve realization, correspondence, global transfer, novelty, or RH/GRH claim |
+| all-`r` tensor/symmetric-power moment ladder | exact `SU(2)` weight extraction, Clebsch--Gordan recurrences, closed invariant counts through degree eight, and rank-aware generic symplectic comparison | independent `Std x Sym^r` and principal `Sym^(2r+1)` moments agree through degree four and split first at degree six by `3r(r+1)(r+2)/2`; the eighth gap is `2r(r+1)(r+2)(3r^2+6r+5)` | compact Haar representation algebra only; `USp` is polarization-matched to the product only for even `r` (odd `r` needs an orthogonal comparator), rank exceptions are retained, and no finite-family equidistribution, monodromy, novelty, or zero theorem follows |
+| all-`r` universal-graph Hasse counts | homogeneous Dickson valuation lemma, central-sign duplicate audit, exact Chebyshev overlap period, square and nonsquare odd-prime-power formulas, and recovery of the `r=1,2,3` packets | at `q=p^(2k)`, the graph union is `8p^floor(k/(r+1))+8p^floor(k/2)-1+1_(r odd)-4*1_(3 does not divide r+1)`; at nonsquare odd `q`, odd `r` is empty and even `r` has one explicit first-graph count | counts only the two universal graph loci; nonsquare `p=2` is excluded, and no claim is made that every full intersection lacks additional isolated points or that any triple is realized by linked curves |
 | elliptic-pair Rankin--Selberg / tensor `SO(4)` | exact degree-four tensor polynomial, semialgebraic compact coefficient image, all-odd-prime-power low moments, and frozen independent-product pushforwards | normalized coefficients satisfy `x=uv`, `y=u^2+v^2-2`; the reconstruction fold is `D=(p-r)^2`, whereas the full root discriminant is `D(p-4)^2(r-4)^2`; `SO(4)` and `Sym^3(SU(2))` trace moments alias through order 4 and split at order 6 (`25` versus `34`) | the finite law is the ordered product of independent marked-model / elliptic-stack marginals, not a linked-curve or coarse-pair measure; a fold is not the full repeated-root locus; local equal/opposite traces imply no twist, isogeny, correspondence, automorphy, or global L-function identity |
 | `SO(4)` / elliptic Sym3 spectral intersection | exact pullback factorization into four signed angle-doubling graphs, nonsquare valuation obstruction, square-`q` lattice parameterization, Waterhouse filter, and restricted discriminants | nonsquare odd prime powers have no integral intersection; for `q=p^(2k)` the Hasse lattice has `16p^floor(k/2)-4` points, but simultaneously realized elliptic pairs collapse to endpoint, unit, and zero-endpoint repeated-root strata | the tensor/Sym3 equality requires the stated weight dilation; angle doubling is not a representation homomorphism; Waterhouse gives separate local isogeny classes, not a curve correspondence or global family |
 | Sym3/genus-two coefficient intersection | exact scaled curve, rational inverse off the nodal divisor, odd-prime candidate lemma, and complete transform of 251 locked atoms | exactly 7 atoms/451 members hit the curve; only 4 shapes/53 members are independently elliptic-trace witnessed, while 3 atoms/398 members are central ghosts | the factors have different weights; equal normalized coefficient shapes do not identify motives, families, or local factors |
@@ -207,6 +210,8 @@ python -B research/l-families/atlas/function_field/elliptic_symmetric_power_even
 python -B research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.py --check
 python -B research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_subtorus_rigidity.py --check
 python -B research/l-families/atlas/function_field/elliptic_tensor_sym3_sym7_spectral_intersection.py --check
+python -B research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_moment_ladder.py --check
+python -B research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_hasse_graph_counts.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/balanced_control_family_scan.py --check research/l-families/atlas/function_field/balanced_control_family_scan.json
@@ -239,9 +244,9 @@ python -m unittest discover -s tests -p "test_*.py"
 The guarded producers refuse work at their declared caps and record complete
 high-level work ledgers in their JSON artifacts. For an optimized replay,
 insert `-O` after `python -B`. The two newest focused modules are
-`tests.test_elliptic_tensor_symmetric_power_subtorus_rigidity` and
-`tests.test_elliptic_tensor_sym3_sym7_spectral_intersection`; neither replay
-constructs curves, finite fields, or polynomial models.
+`tests.test_elliptic_tensor_symmetric_power_moment_ladder` and
+`tests.test_elliptic_tensor_symmetric_power_hasse_graph_counts`; neither
+replay constructs curves, finite fields, or polynomial models.
 
 The offline validator uses only the standard library. It rejects duplicate JSON
 keys, non-finite numbers, Unicode-normalization drift, unknown fields, stale
@@ -351,6 +356,13 @@ rigor/scope confusions.
   residual strata are genuine algebraic points even though none descends to
   the raw lattice. The closed Hasse count does not realize three linked curves
   or create a correspondence, compatible system, or automorphic transfer.
+- The all-`r` moment packet is compact representation-ring algebra. Its Haar
+  separations do not prove finite arithmetic equidistribution or monodromy;
+  generic symplectic comparison uses the displayed rank corrections.
+- The all-`r` Hasse packet counts only the two universal graph loci. It neither
+  excludes every possible isolated full-intersection point for `r>=4` nor
+  realizes a counted trace triple by linked curves. Its nonsquare theorem is
+  deliberately restricted to odd `p`, since `p=2` has exceptional zeros.
 - The Sym3/genus-two intersection is between normalized coefficient shapes of
   different weights. Source-witnessing an elliptic trace does not make a
   genus-two member a symmetric-cube motive, and the central hits remain

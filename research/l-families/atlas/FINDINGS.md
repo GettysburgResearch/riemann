@@ -886,6 +886,102 @@ while generic `USp(8)` already has fourth moment `3` instead of `8`.  The
 count is a coefficient-lattice theorem, not simultaneous curve realization
 or a global functorial identity.
 
+### The tensor ladder has a universal sixth-moment split
+
+The `r=1,2,3` moment coincidences are one theorem, not three accidents.  Let
+`V_n=Sym^n(C^2)` for `SU(2)` and put
+
+\[
+ B_k(n)=\dim(V_n^{\otimes2k})^{SU(2)}.
+\]
+
+Exact weight extraction gives
+
+\[
+ B_k(n)=[t^{kn}](1-t)(1+t+\cdots+t^n)^{2k}.
+\]
+
+In particular,
+
+\[
+ B_1=1,\quad B_2=n+1,\quad
+ B_3=\frac{(n+1)(n^2+2n+2)}2,
+\]
+
+and
+
+\[
+ B_4=\frac{(n+1)(n^2+n+1)(n^2+3n+3)}3.
+\]
+
+For the independent `Std x Sym^r` product, moments factor as
+`B_k(1)B_k(r)`; for the principal slice they are `B_k(2r+1)`.
+Both laws therefore have second moment `1` and fourth moment `2(r+1)`, while
+
+\[
+ M_6^{\rm princ}-M_6^{\rm prod}
+ =\frac32r(r+1)(r+2)>0.
+\]
+
+They agree through degree four and split first at degree six for every
+`r>=1`.  Their eighth-moment gap is
+
+\[
+ 2r(r+1)(r+2)(3r^2+6r+5)>0.
+\]
+
+Generic `USp(2r+2)` already separates at degree four: its value is `3`, with
+the standard low-rank corrections retained at degrees six and eight.  This is
+a compact representation-ring detector, not finite-family equidistribution or
+arithmetic monodromy.  The symplectic comparator is polarization-matched to
+`Std x Sym^r` only for even `r`; for odd `r` that product is orthogonal and a
+generic orthogonal comparison remains a separate target.  The principal
+`Sym^(2r+1)` representation is symplectic for every `r`.
+
+### The two universal graphs have one all-`r` Hasse-count law
+
+At `q=p^(2k)`, put `a=p^floor(k/(r+1))` and
+`b=p^floor(k/2)`.  Exact homogeneous Dickson valuations give `8a+1` first-
+graph triples for even `r`, `8a+2` for odd `r`, and `8b+2` second-graph
+triples for every `r`.  The graph overlap is
+
+\[
+ O_r=4+4\mathbf1_{3\nmid(r+1)}.
+\]
+
+The endpoint traces always contribute four triples; the unit traces contribute
+four more exactly when the Chebyshev period does not kill them.  Hence
+
+\[
+ \boxed{
+ N_r(p^{2k})=
+ 8p^{\lfloor k/(r+1)\rfloor}+8p^{\lfloor k/2\rfloor}
+ -1+\mathbf1_{r\ {\rm odd}}-4\mathbf1_{3\nmid(r+1)}.}
+\]
+
+This recovers the earlier `r=1,2,3` counts exactly.  At a nonsquare odd prime
+power `q=p^e`, odd `r` has no graph-lattice point.  For even `r`, only the
+first graph survives and its count is
+
+\[
+ 4\left\lfloor
+ {\lfloor2\sqrt q\rfloor\over
+  p^{\lceil er/(2(r+1))\rceil}}
+ \right\rfloor+1.
+\]
+
+The proof uses the unique lowest-valuation Dickson term, so primes dividing
+other coefficients create no exception.  The nonsquare statement is kept at
+odd `p`; `p=2` has genuine exceptional zeros.  These formulas count the two
+proved graph loci only and do not assert that the full intersection has no
+additional isolated point at every `r`.
+
+A capped `r=4` scout now finds the same two graph factors as the complete
+positive-dimensional gcd and no off-graph point in 24,346 raw triples or
+34,225 rational forced pairs.  Its residual torsion orders and irrational
+support polynomials are recorded in `THEOREM_TARGETS.md`.  This is negative
+evidence only: isolated noncyclotomic rational points have not been excluded.
+
 ### The `Sym^3` curve inside `SO(4)` is a doubling locus
 
 Pulling the symmetric-cube equation back through the elliptic-pair tensor

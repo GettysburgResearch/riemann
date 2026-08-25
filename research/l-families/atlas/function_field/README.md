@@ -85,6 +85,13 @@ source/note/JSON/test packets:
   degree-eight rung over integral odd-prime-power raw traces: nonsquare bases
   are empty, square bases have a closed Hasse count, and all off-graph
   algebraic support is isolated on five explicit cyclotomic factors;
+- `ELLIPTIC_TENSOR_SYMMETRIC_POWER_MOMENT_LADDER.md` proves closed `SU(2)`
+  invariant counts through degree eight and shows that the independent tensor
+  and principal symmetric-power laws first separate universally at degree six;
+- `ELLIPTIC_TENSOR_SYMMETRIC_POWER_HASSE_GRAPH_COUNTS.md` unifies the
+  arithmetic counts of both universal graph loci for every `r`, including
+  square bases, the nonsquare odd-prime parity split, central-sign duplicates,
+  and the exact Chebyshev-period overlap;
 - `GENUS2_SYM3_COEFFICIENT_INTERSECTION.md` intersects the symmetric-cube
   curve with the complete locked genus-two coefficient support, classifies
   the odd-prime arithmetic candidates, and separates 53 witnessed members
@@ -168,6 +175,8 @@ python research/l-families/atlas/function_field/elliptic_symmetric_power_even_cy
 python research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.py --check
 python research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_subtorus_rigidity.py --check
 python research/l-families/atlas/function_field/elliptic_tensor_sym3_sym7_spectral_intersection.py --check
+python research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_moment_ladder.py --check
+python research/l-families/atlas/function_field/elliptic_tensor_symmetric_power_hasse_graph_counts.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/usp_coefficient_minor_rank_scan.py --check
@@ -205,6 +214,8 @@ python -m pytest -q \
   tests/test_elliptic_tensor_sym2_sym5_spectral_intersection.py \
   tests/test_elliptic_tensor_symmetric_power_subtorus_rigidity.py \
   tests/test_elliptic_tensor_sym3_sym7_spectral_intersection.py \
+  tests/test_elliptic_tensor_symmetric_power_moment_ladder.py \
+  tests/test_elliptic_tensor_symmetric_power_hasse_graph_counts.py \
   tests/test_genus2_sym3_coefficient_intersection.py \
   tests/test_sym3_exterior_sym4_plethysm_bridge.py \
   tests/test_usp_coefficient_minor_rank_scan.py \
@@ -227,6 +238,7 @@ symmetric-power-aliasing, Sym5-collision, Sym5-coefficient-recovery,
 rational-full-factor-aliasing, odd-cyclotomic-spectral-aliasing,
 even-cyclotomic-spectral-aliasing, tensor-Sym2/Sym5-intersection,
 tensor-subtorus-rigidity, tensor-Sym3/Sym7-intersection,
+tensor-moment-ladder, tensor-Hasse-graph-counts,
 symmetric-cube-intersection, Sym3-exterior/Sym4-plethysm, product-tensor,
 tensor-singular, tensor-endoscopic-bridge, integral-factor-locus,
 primitive-exterior-square, and virtual-null
@@ -269,8 +281,11 @@ an exclusive 40,000-unit cap; its exhaustive box stops at `r=16` with 720,816
 small weight atoms, while `r=32,64` receive direct canonical checks only. The
 tensor-Sym3/Sym7 packet accounts for 19,548 units below an exclusive 25,000-
 unit cap, including 7,975 locked triples and 11,458 synthetic `q=9,25`
-triples. None of these packets enumerates a field, curve, or model, and none
-uses floating point, randomness, or a runtime symbolic package.
+triples. The moment ladder accounts for 25,317 units below an exclusive
+30,000-unit cap and 20,456 bounded Clebsch--Gordan transitions. The all-`r`
+Hasse graph packet accounts for 3,071 units below an exclusive 20,000-unit
+cap. None of these packets enumerates a field, curve, or model, and none uses
+floating point, randomness, or a runtime symbolic package.
 The balanced-control scan independently visits all
 20,175 genus-two candidates at `q=3,5,7`, while the genus-one regression
 visits 4,023 cubic candidates at `q=3,5,7,11,13`. The producers retain their
@@ -470,6 +485,24 @@ excludes them. The square-base Hasse count is a coefficient-lattice count, not
 simultaneous realization by three linked elliptic curves, a correspondence,
 compatible system, automorphic transfer, literature-priority claim, or
 RH/GRH consequence.
+
+The all-`r` moment ladder is exact compact Haar and representation-ring
+algebra. It proves neither finite-family equidistribution nor arithmetic
+monodromy, and it supplies no curves, motives, compatible systems, or zero
+statistics. The generic `USp(2r+2)` comparison retains the displayed low-rank
+corrections; its stable moments must not be substituted at small rank. It is
+polarization-matched to `Std x Sym^r` only for even `r`; the product is
+orthogonal for odd `r`, whereas the principal `Sym^(2r+1)` remains
+symplectic.
+
+The all-`r` Hasse theorem counts only the two universal monomial graph loci.
+The locked `r=1,2,3` packets separately prove their respective rational or
+integral completeness statements, but a full converse remains open in
+general: isolated nonmonomial points may still occur for `r>=4`. Counted
+triples are not thereby realized by three linked elliptic curves. The
+nonsquare theorem is restricted to odd `p`, whereas `p=2` has genuine
+Dickson-zero exceptions. Public enumerators fail closed above 4,096 candidate
+`C` values; the closed formulas do not enumerate the Hasse interval.
 
 The symmetric-cube/genus-two intersection compares normalized coefficient
 shapes of different weights; it is not an identity of local factors. Its
