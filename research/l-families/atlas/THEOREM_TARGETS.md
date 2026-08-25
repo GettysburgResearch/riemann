@@ -796,13 +796,21 @@ primitive of odd order `N`, the complete spectra attached to `zeta` and
 one of the three universal cyclotomic factors.  This is vacuous at `N=3` and
 gives genuine non-sign aliases for every odd `N>=5`.
 
+The even-root-order stabilizer is now solved as well.  For `N=2M`, the
+exponents occupy one parity coset, and with `s=(m+1) mod M` their stabilizer is
+all of `U(N)` at `s=0,1,M-1`; in the interior it is the lifts of
+`+/-1 mod M` for even `m` and only `+/-1 mod N` for odd `m`.  The additional
+even-power lifts are exactly the central sign.  The all-unit edge produces a
+genuine nonsign primitive alias precisely for
+`N` outside `{4,6,8,12}`.
+
 The next uniform recovery target is therefore finer: determine, as a
 function of `m`, the least initial coefficient prefix that already recovers
 the rational trace up to these unavoidable full-factor aliases.  In parallel,
-extend the cyclotomic stabilizer analysis to even root order and then to
-traces over a fixed number field `K`, where the available torsion orders are
-constrained by `[K:Q]`.  Any theorem must distinguish a local algebraic trace
-from an elliptic trace and a compatible global family.
+classify simultaneous aliases across two or more representations and then
+pass to traces over a fixed number field `K`, where the available torsion
+orders are constrained by `[K:Q]`.  Any theorem must distinguish a local
+algebraic trace from an elliptic trace and a compatible global family.
 
 The `m=5` collision curve is now understood at the rational level:
 
@@ -861,6 +869,54 @@ must separate representation-theoretic identities from arithmetic
 realization: matching a transformed local polynomial or coefficient point
 does not by itself identify motives, compatible systems, or global Euler
 products.
+
+### Tensor/symmetric-power ladder target: classify the higher intersections
+
+The first even rung now has a complete rational converse.  After the necessary
+weight correction,
+
+\[
+ P_{A\otimes\operatorname{Sym}^2B}(qT)
+ =P_{\operatorname{Sym}^5C}(T)
+\]
+
+holds for rational nonzero `q` exactly on the two raw Chebyshev graphs
+
+\[
+ B^2=C^2,\quad qA=C(C^2-3q),
+ \qquad\text{or}\qquad
+ A=C,\quad qB^2=(C^2-2q)^2.
+\]
+
+An exact Groebner certificate leaves only the cyclotomic algebraic residuals
+of orders `7,12,14`, none rational in raw traces.  The coefficient-lattice
+count is also closed: the second graph is empty over nonsquare odd prime
+powers, while at `q=p^(2k)` the union contains
+
+\[
+ 8p^{\lfloor k/3\rfloor}+8p^{\lfloor k/2\rfloor}-1
+\]
+
+ordered Hasse triples.  This is not a three-curve realization theorem.
+
+The two graphs extend without computation to every `r>=1`:
+
+\[
+ \operatorname{Std}(w^{r+1})\otimes\operatorname{Sym}^r(w)
+ \sim\operatorname{Sym}^{2r+1}(w),\qquad
+ \operatorname{Std}(w)\otimes\operatorname{Sym}^r(w^2)
+ \sim\operatorname{Sym}^{2r+1}(w).
+\]
+
+The next algebraic target is a general converse: determine whether these are
+the only positive-dimensional rational components for each `r`, classify all
+zero-dimensional cyclotomic residuals, and find a uniform coefficient prefix
+whose ideal already cuts out the intersection.  The next arithmetic target is
+to impose elliptic-trace realization simultaneously on the inputs and then ask
+whether any geometrically linked family can stay on one graph at every prime.
+The raw dilation `T -> q^(r/2)T`, especially its square-root choice for odd
+`r`, must remain explicit.  A one-place torus identity is neither a
+representation homomorphism nor a compatible automorphic transfer.
 
 ### Elliptic-pair target: detect geometry inside the `SO(4)` product law
 

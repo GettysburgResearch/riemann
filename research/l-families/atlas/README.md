@@ -26,9 +26,11 @@ Sym3-exterior/Sym4 plethysm bridge, an elliptic-pair Rankin--Selberg / tensor
 scalar-collision Diophantine pilot, an exact `SO(4)`/Sym3 spectral-intersection
 classification, a rational `Sym^5` coefficient-recovery theorem, a complete
 all-`m` rational full-factor collision classification, an exact odd-order
-cyclotomic spectral-alias theorem, and an exact `USp(4)` virtual-character
-null-direction packet are also included. Every atlas record is `DRAFT`. RH
-and GRH remain open.
+cyclotomic spectral-alias theorem, its complete even-order parity-coset
+counterpart, a complete degree-six tensor/Sym5 rational spectral-intersection
+theorem with an all-symmetric-power torus ladder, and an exact `USp(4)`
+virtual-character null-direction packet are also included. Every atlas record
+is `DRAFT`. RH and GRH remain open.
 
 Exact sources or dependencies: classical completed GL(1) normalizations; the
 displayed finite-field definitions; the standard level-one modular-stack
@@ -132,7 +134,9 @@ schema, ID, digest, and backlink rather than accepting a path by presence alone.
 | elliptic `Sym^5` collision geometry | exact collision factorization and full-factor coefficients; a discriminant-first census of all Hasse-admissible integer pairs over odd prime powers `q<=2000`; exact elliptic-curve maps and primality certificate | the non-diagonal collision quartic `z^2=x^4+5x^3y+9x^2y^2+5xy^3+y^4` is birational to `Y^2=X^3-6X+5` and has a certified nontorsion point; the census has 61 scalar collisions at 21 bases, only 4 general pairs, and prime-field examples at `31`, `1021`, and `363804984411209881` | only 3 of 61 scalar collisions have equal degree-six factors; positive rank gives rational points, not an integral/prime-power classification; Waterhouse realizes the three prime-base trace pairs but rules out their higher odd-degree scaled towers; no compatible global family, Euler product, or external priority claim |
 | elliptic `Sym^5` coefficient recovery | exact rational difference quotients, literal `5 x 5` Sylvester determinant, rational-projective factor exclusions, exterior-power weight decompositions, and replay of all 61 source collisions | `(E_5,c_2)` determines the base trace except for sign pairs with `t^2=q` or `3q`; adding `c_3`, equivalently the complete reciprocal degree-six factor, leaves exactly the `t^2=3q` sign fiber; all general positive-rank collisions split at `T^2` | a local theorem over `Q` at fixed nonzero `q`; coefficient recovery supplies no elliptic realization, automorphy, compatible system, zero theorem, or external priority claim |
 | complete rational symmetric-power factors | intrinsic root-quotient-group recovery, exact central-sign stabilizer theorem, cyclotomic-order exhaustion, closed exceptional factors, and integral odd-prime-power corollary | for every `m>=1` and fixed rational `q!=0`, complete-factor equality forces `x^2=y^2`; even `m` always forgets sign, while odd `m` has only the `x^2=2q, 4|(m+1)` and `x^2=3q, 6|(m+1)` sign loci; nonzero integral odd-prime-power aliases are exactly `m=5 mod 6`, `q=3^(odd)`, `t=+/-3^((a+1)/2)` | fixed-`q` local algebra over `Q`; `Sym^0` is excluded; Hasse admissibility is not curve realization, and no compatible family, Euler product, or external priority claim follows |
-| odd cyclotomic complete-spectrum aliases | exact cyclic-interval stabilizer theorem for every odd root order, three universal factor identities, scalar-lift parity audit, and minimal-polynomial certificates at orders `5,7,9,11` | primitive classes have equal `Sym^m` spectra exactly for the original inversion class or `m=-2,-1,0 mod N`; for odd `N>=5`, all `phi(N)/2` primitive trace classes collapse at those powers, proving the rational recovery hypothesis is sharp | algebraic local torus classes only; `N=3` has no genuine non-sign pair; even root orders, rational elliptic realization, global families, and novelty priority are not classified |
+| odd cyclotomic complete-spectrum aliases | exact cyclic-interval stabilizer theorem for every odd root order, three universal factor identities, scalar-lift parity audit, and minimal-polynomial certificates at orders `5,7,9,11` | primitive classes have equal `Sym^m` spectra exactly for the original inversion class or `m=-2,-1,0 mod N`; for odd `N>=5`, all `phi(N)/2` primitive trace classes collapse at those powers, proving the rational recovery hypothesis is sharp | algebraic local torus classes only; `N=3` has no genuine non-sign pair; even root orders are handled by the separate parity-coset packet, while rational elliptic realization, global families, and novelty priority remain open |
+| even cyclotomic complete-spectrum aliases | exact parity-cycle decomposition, affine-interval stabilizer theorem, central-lift audit, three closed edge factors, and global totient threshold | for `N=2M`, all units stabilize exactly when `(m+1) mod M` is `0,1,M-1`; in the interior only inversion survives at odd `m`, while even `m` additionally sees the central sign; an edge gives a genuine nonsign primitive collapse exactly for `N` outside `4,6,8,12` | local algebraic torus theorem; extra generic lifts are only the even-power central kernel; common determinant lifts, arithmetic realization, global families, even/odd trace-field descent, and novelty priority remain separate |
+| degree-six tensor / `Sym^5` spectral intersection | exact Newton coefficients, a custom rational Groebner certificate, cyclotomic residual ideals, all-odd-prime-power Hasse-lattice counts, compact moments, and an all-`r` torus ladder | after the necessary `qT` dilation, `Std(E_A) tensor Sym^2(E_B)` equals `Sym^5(E_C)` over rational raw data exactly on `B^2=C^2, qA=C(C^2-3q)` or `A=C, qB^2=(C^2-2q)^2`; at `q=p^(2k)` the Hasse-lattice union has `8p^floor(k/3)+8p^floor(k/2)-1` triples | local formal factors and coefficient lattices only; orders `7,12,14` are algebraic residuals, only the `r=2` converse is complete, and no three-curve realization, representation homomorphism, global transfer, novelty, or RH/GRH claim follows |
 | elliptic-pair Rankin--Selberg / tensor `SO(4)` | exact degree-four tensor polynomial, semialgebraic compact coefficient image, all-odd-prime-power low moments, and frozen independent-product pushforwards | normalized coefficients satisfy `x=uv`, `y=u^2+v^2-2`; the reconstruction fold is `D=(p-r)^2`, whereas the full root discriminant is `D(p-4)^2(r-4)^2`; `SO(4)` and `Sym^3(SU(2))` trace moments alias through order 4 and split at order 6 (`25` versus `34`) | the finite law is the ordered product of independent marked-model / elliptic-stack marginals, not a linked-curve or coarse-pair measure; a fold is not the full repeated-root locus; local equal/opposite traces imply no twist, isogeny, correspondence, automorphy, or global L-function identity |
 | `SO(4)` / elliptic Sym3 spectral intersection | exact pullback factorization into four signed angle-doubling graphs, nonsquare valuation obstruction, square-`q` lattice parameterization, Waterhouse filter, and restricted discriminants | nonsquare odd prime powers have no integral intersection; for `q=p^(2k)` the Hasse lattice has `16p^floor(k/2)-4` points, but simultaneously realized elliptic pairs collapse to endpoint, unit, and zero-endpoint repeated-root strata | the tensor/Sym3 equality requires the stated weight dilation; angle doubling is not a representation homomorphism; Waterhouse gives separate local isogeny classes, not a curve correspondence or global family |
 | Sym3/genus-two coefficient intersection | exact scaled curve, rational inverse off the nodal divisor, odd-prime candidate lemma, and complete transform of 251 locked atoms | exactly 7 atoms/451 members hit the curve; only 4 shapes/53 members are independently elliptic-trace witnessed, while 3 atoms/398 members are central ghosts | the factors have different weights; equal normalized coefficient shapes do not identify motives, families, or local factors |
@@ -196,6 +200,8 @@ python -B research/l-families/atlas/function_field/elliptic_so4_sym3_spectral_in
 python -B research/l-families/atlas/function_field/elliptic_sym5_coefficient_recovery.py --check
 python -B research/l-families/atlas/function_field/elliptic_symmetric_power_full_factor_sign_aliases.py --check
 python -B research/l-families/atlas/function_field/elliptic_symmetric_power_cyclotomic_spectral_aliases.py --check
+python -B research/l-families/atlas/function_field/elliptic_symmetric_power_even_cyclotomic_aliases.py --check
+python -B research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.py --check
 python research/l-families/atlas/function_field/genus2_sym3_coefficient_intersection.py --check
 python research/l-families/atlas/function_field/sym3_exterior_sym4_plethysm_bridge.py --check
 python research/l-families/atlas/function_field/balanced_control_family_scan.py --check research/l-families/atlas/function_field/balanced_control_family_scan.json
@@ -227,10 +233,10 @@ python -m unittest discover -s tests -p "test_*.py"
 
 The guarded producers refuse work at their declared caps and record complete
 high-level work ledgers in their JSON artifacts. For an optimized replay,
-insert `-O` after `python -B`. The two latest focused modules are
-`tests.test_elliptic_symmetric_power_full_factor_sign_aliases` and
-`tests.test_elliptic_symmetric_power_cyclotomic_spectral_aliases`; neither
-replay constructs curves, finite fields, or polynomial models.
+insert `-O` after `python -B`. The two newest focused modules are
+`tests.test_elliptic_symmetric_power_even_cyclotomic_aliases` and
+`tests.test_elliptic_tensor_sym2_sym5_spectral_intersection`; neither replay
+constructs curves, finite fields, or polynomial models.
 
 The offline validator uses only the standard library. It rejects duplicate JSON
 keys, non-finite numbers, Unicode-normalization drift, unknown fields, stale
@@ -318,6 +324,18 @@ rigor/scope confusions.
   odd symmetric power replaces `F(T)` by `F(-T)`. The order-three case is
   vacuous modulo inversion, and no even-order, finite-field realization,
   automorphy, zero-distribution, or literature-priority conclusion is made.
+- The even-cyclotomic packet works on one parity coset of a primitive
+  `N=2M` torus. Its two extra generic lifts when `4|N` are precisely the
+  central sign at even symmetric power, not a new source of nonsign aliases.
+  The all-unit edge collapse is local algebra: it neither realizes an
+  elliptic Frobenius class nor supplies cross-prime compatibility or a global
+  Euler product.
+- The degree-six tensor/Sym5 packet compares factors of different weights only
+  after the displayed `qT` dilation. Its two Chebyshev graph families exhaust
+  rational formal trace data, but the Hasse-lattice count is not an elliptic
+  realization theorem. The all-`r` ladder supplies sufficient spectral loci;
+  only `r=2` has a complete converse, and no representation homomorphism,
+  compatible system, automorphic transfer, or global Euler product follows.
 - The Sym3/genus-two intersection is between normalized coefficient shapes of
   different weights. Source-witnessing an elliptic trace does not make a
   genus-two member a symmetric-cube motive, and the central hits remain

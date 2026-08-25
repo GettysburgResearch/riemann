@@ -686,6 +686,122 @@ negative lift must be tracked separately at odd `m`.  These are local
 algebraic spectral aliases, not rational elliptic traces, finite-field
 realizations, or global Euler products.
 
+### Even cyclotomic orders split into parity-coset edges and the central kernel
+
+The odd-order interval theorem does not apply when multiplication by two is
+noninvertible.  Put `N=2M`, let `zeta` be primitive, and write
+
+\[
+ m+1=kM+s,\qquad0\le s<M.
+\]
+
+The symmetric-power exponents run through one parity coset with period `M`.
+After removing `k` uniform cycles, multiplication by a unit `a` induces the
+exact affine map
+
+\[
+ j\longmapsto aj-\frac{(a-1)m}{2}\pmod M
+\]
+
+on the residual interval.  Its complete stabilizer is
+
+\[
+\operatorname{Stab}(E_m)=
+\begin{cases}
+U(N),&s\in\{0,1,M-1\},\\
+\{a:a\equiv\pm1\pmod M\},&2\le s\le M-2,\ m\text{ even},\\
+\{\pm1\pmod N\},&2\le s\le M-2,\ m\text{ odd}.
+\end{cases}
+\]
+
+When `4|N`, the two extra interior lifts at even `m` are exactly inversion
+composed with the central sign.  They therefore create no new nonsign alias.
+All primitive classes collapse only on the three edge residues.  After
+quotienting inversion and any primitive-preserving central sign, this collapse
+is genuinely nonsign exactly for
+
+\[
+ N\notin\{4,6,8,12\};
+\]
+
+the first example is `N=10,m=3`.  If
+`C_m(T)=1-(-1)^mT^M`, the three complete edge factors are
+
+\[
+ C_m(T)^k,\qquad
+ C_m(T)^k(1-(-1)^kT),\qquad
+ \frac{C_m(T)^{k+1}}{1-(-1)^{k+1}T}.
+\]
+
+This completes the root-of-unity stabilizer classification across odd and
+even orders, while retaining the common-lift and arithmetic-realization
+firewalls.
+
+### A degree-six tensor construction meets `Sym^5` on exactly two rational graphs
+
+There is a second kind of complete-spectrum alias: two different functorial
+constructions can meet on a thin locus.  For geometric elliptic traces
+`A,B,C` at a common nonzero rational `q`, the correctly weighted comparison is
+
+\[
+ P_{A\otimes\operatorname{Sym}^2B}(qT)
+ =P_{\operatorname{Sym}^5C}(T).
+\]
+
+The tensor side has weight three and the target has weight five; the dilation
+is essential.  Exact Newton identities reduce equality of the reciprocal
+degree-six factors to three coefficient equations.  Their rational solution
+set is precisely
+
+\[
+ \boxed{B^2=C^2,\quad qA=C(C^2-3q)}
+ \qquad\text{or}\qquad
+ \boxed{A=C,\quad qB^2=(C^2-2q)^2}.
+\]
+
+After choosing `s^2=q` and writing `x=A/s,y=B/s,z=C/s`, these become the two
+signed Chebyshev graph families
+
+\[
+ x=z^3-3z,\quad y=\pm z,
+ \qquad\text{and}\qquad
+ x=z,\quad y=\pm(z^2-2).
+\]
+
+On either graph the tensor weights are exactly
+`{w^+/-1,w^+/-3,w^+/-5}`.  Necessity is certified by an exact five-row
+lexicographic Groebner basis.  Its only algebraic residual strata have
+primitive torus orders `7,12,14`; irreducible-cubic and square-ratio degree
+obstructions show that none supplies an additional rational raw-trace point.
+
+The integral Hasse lattice is also explicit.  If `q=p^e`, put
+`H=floor(2 sqrt(q))`, `d=ceil(e/3)`, and `h=floor(H/p^d)`.  The first graph has
+`4h+1` ordered triples.  The second is empty when `e` is odd; at
+`q=p^(2k)` it has `8p^floor(k/2)+2` triples and overlaps the first in four.
+Consequently
+
+\[
+ N(p^{2k})=8p^{\lfloor k/3\rfloor}
+            +8p^{\lfloor k/2\rfloor}-1.
+\]
+
+The graphs are the `r=2` rung of two universal torus identities valid for
+every `r>=1`:
+
+\[
+ \operatorname{Std}(w^{r+1})\otimes\operatorname{Sym}^r(w)
+ \sim\operatorname{Sym}^{2r+1}(w),\qquad
+ \operatorname{Std}(w)\otimes\operatorname{Sym}^r(w^2)
+ \sim\operatorname{Sym}^{2r+1}(w).
+\]
+
+Only the `r=2` rational converse is proved.  The independent product and
+principal `Sym^5` trace moments agree through degree four and first split at
+degree six (`75` versus `111`); both already split from generic `USp(6)` at
+degree four (`6` versus `3`).  These are exact local spectral and
+coefficient-lattice statements, not elliptic realization, a representation
+homomorphism, a global transfer, or an RH/GRH consequence.
+
 ### The `Sym^3` curve inside `SO(4)` is a doubling locus
 
 Pulling the symmetric-cube equation back through the elliptic-pair tensor

@@ -1,0 +1,2381 @@
+{
+  "compact_trace_moment_fingerprint": {
+    "Std_SU2_tensor_Sym2_SU2_independent_product": [
+      1,
+      0,
+      1,
+      0,
+      6,
+      0,
+      75,
+      0,
+      1274
+    ],
+    "Sym5_SU2": [
+      1,
+      0,
+      1,
+      0,
+      6,
+      0,
+      111,
+      0,
+      2666
+    ],
+    "degrees": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "first_product_vs_Sym5_separation": "degree 6: 75 versus 111",
+    "generic_USp6_standard_degrees_0_through_6": [
+      1,
+      0,
+      1,
+      0,
+      3,
+      0,
+      15
+    ],
+    "generic_separation": "both thin constructions have fourth moment 6, versus 3 for generic USp(6)",
+    "interpretation": "full coefficient support sees the explicit graph intersection; trace moments alone do not distinguish the two thin compact images before degree six"
+  },
+  "complete_rational_intersection_theorem": {
+    "graph_one_spectral_weights": "u=w^3, v=+/-w gives {u^+/-1*v^(2,0,-2)}={w^+/-1,w^+/-3,w^+/-5}",
+    "graph_two_spectral_weights": "u=w, v^2=w^4 gives {u^+/-1*v^(2,0,-2)}={w^+/-1,w^+/-3,w^+/-5}",
+    "no_search_dependency": "the 7975-triple and q=9 replays are regressions; the theorem is the exact ideal and rational exclusion argument",
+    "normalized_statement": "factor equality iff [x=T3(z)=z^3-3z and y=+/-z] or [x=z and y=+/-T2(z)=+/-(z^2-2)]",
+    "proof": [
+      "the three coefficient differences generate the certified ideal I",
+      "the reduced lex basis contains generic_y_factor*p7+(z)*p7-(z)",
+      "z=C/s lies in Q(s) of degree at most two, so the irreducible cubic trace equations p7+/-(z)=0 exclude the non-generic alternative for rational raw data",
+      "on y^2=z^2, the exact specializations leave x=T3(z), with z^2=1 overlap absorbed by graph two",
+      "on y^2=(z^2-2)^2, the exact specializations leave x=z; z^2=1 is graph-one overlap and z^2=3 is irrational",
+      "the order-12 restricted ideal supplies the only remaining x values, and its extra points cannot have rational raw traces"
+    ],
+    "raw_invariant_statement": "factor equality iff [B^2=C^2 and q*A=C*(C^2-3q)] or [A=C and q*B^2=(C^2-2q)^2]",
+    "scope": "A,B,C,q in Q with q nonzero; equivalently the formal factors defined by the displayed trace formulas"
+  },
+  "conventions": {
+    "normalized_traces": "x=A/s, y=B/s, z=C/s after choosing s with s^2=q",
+    "sign_rule": "B -> -B does not change Sym^2(E_B), producing the +/- y branches; A and C retain their geometric trace signs",
+    "target_construction": "Sym^5(E_C), degree 6 and weight 5",
+    "tensor_construction": "Std(E_A) tensor Sym^2(E_B), degree 6 and weight 3",
+    "three_base_factors": "P_t(T)=1-t*T+q*T^2 for geometric traces t=A,B,C",
+    "typed_raw_identity": "P_(A tensor Sym2(B))(q*T)=P_(Sym5(C))(T)",
+    "unscaled_firewall": "P_tensor(T) and P_Sym5(T) have different weights and are not compared without the displayed q dilation"
+  },
+  "exact_algebraic_certificate": {
+    "algebraic_residuals": {
+      "order_12": {
+        "complete_solution_over_algebraic_closure": "y^2=3,x=0 (graph 1), or y^2=1,x in {z,0,-z}; x=z is graph 2 and x=0,-z are the extra points",
+        "extra_points": "z^2=3, y^2=1, x=0 or x=-z",
+        "target": "z^2=3"
+      },
+      "order_14": {
+        "complete_restricted_ideal": "p7-(z)=0, p7+(y)*p7-(y)=0, x=-C4(y)",
+        "target": "p7-(z)=0"
+      },
+      "order_7": {
+        "complete_restricted_ideal": "p7+(z)=0, p7+(y)*p7-(y)=0, x=C4(y)",
+        "target": "p7+(z)=0"
+      }
+    },
+    "all_branch_specialization_residuals_zero": true,
+    "branch_specialization_zero_residual_count": 12,
+    "elimination_factors": {
+      "basis_product": "generic_y_factor*p7+(z)*p7-(z)",
+      "generic_y_factor": "(y^2-z^2)*(y^2-(z^2-2)^2)",
+      "order_14_trace_polynomial": "p7-(z)=z^3-z^2-2z+1",
+      "order_7_trace_polynomial": "p7+(z)=z^3+z^2-2z-1"
+    },
+    "input_generators": [
+      [
+        [
+          1,
+          2,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          5,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          -3,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          2,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          4,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          -4,
+          1
+        ],
+        [
+          0,
+          0,
+          8,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          6,
+          7,
+          1
+        ],
+        [
+          0,
+          0,
+          4,
+          -16,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          13,
+          1
+        ]
+      ],
+      [
+        [
+          3,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          4,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          -2,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -2,
+          1
+        ],
+        [
+          0,
+          0,
+          9,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          7,
+          8,
+          1
+        ],
+        [
+          0,
+          0,
+          5,
+          -22,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          23,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          -6,
+          1
+        ]
+      ]
+    ],
+    "main_leading_monomials": [
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        4
+      ],
+      [
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        4,
+        6
+      ]
+    ],
+    "main_reduced_basis": [
+      [
+        [
+          3,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -3,
+          1
+        ],
+        [
+          0,
+          2,
+          5,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          3,
+          -4,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          3,
+          1
+        ],
+        [
+          0,
+          0,
+          9,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          7,
+          8,
+          1
+        ],
+        [
+          0,
+          0,
+          5,
+          -23,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          27,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          -9,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          2,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          5,
+          -1,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          -3,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0,
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          -4,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          5,
+          1,
+          1
+        ],
+        [
+          0,
+          4,
+          3,
+          -5,
+          1
+        ],
+        [
+          0,
+          4,
+          1,
+          6,
+          1
+        ],
+        [
+          0,
+          2,
+          9,
+          -1,
+          1
+        ],
+        [
+          0,
+          2,
+          7,
+          8,
+          1
+        ],
+        [
+          0,
+          2,
+          5,
+          -25,
+          1
+        ],
+        [
+          0,
+          2,
+          3,
+          39,
+          1
+        ],
+        [
+          0,
+          2,
+          1,
+          -27,
+          1
+        ],
+        [
+          0,
+          0,
+          11,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          9,
+          -9,
+          1
+        ],
+        [
+          0,
+          0,
+          7,
+          29,
+          1
+        ],
+        [
+          0,
+          0,
+          5,
+          -38,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          12,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          9,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          6,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          4,
+          0,
+          -5,
+          1
+        ],
+        [
+          0,
+          2,
+          8,
+          -1,
+          1
+        ],
+        [
+          0,
+          2,
+          6,
+          7,
+          1
+        ],
+        [
+          0,
+          2,
+          4,
+          -16,
+          1
+        ],
+        [
+          0,
+          2,
+          2,
+          13,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          10,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          8,
+          -7,
+          1
+        ],
+        [
+          0,
+          0,
+          6,
+          15,
+          1
+        ],
+        [
+          0,
+          0,
+          4,
+          -8,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          -4,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          4,
+          6,
+          1,
+          1
+        ],
+        [
+          0,
+          4,
+          4,
+          -5,
+          1
+        ],
+        [
+          0,
+          4,
+          2,
+          6,
+          1
+        ],
+        [
+          0,
+          4,
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          2,
+          10,
+          -1,
+          1
+        ],
+        [
+          0,
+          2,
+          8,
+          8,
+          1
+        ],
+        [
+          0,
+          2,
+          6,
+          -25,
+          1
+        ],
+        [
+          0,
+          2,
+          4,
+          39,
+          1
+        ],
+        [
+          0,
+          2,
+          2,
+          -27,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          12,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          10,
+          -9,
+          1
+        ],
+        [
+          0,
+          0,
+          8,
+          30,
+          1
+        ],
+        [
+          0,
+          0,
+          6,
+          -45,
+          1
+        ],
+        [
+          0,
+          0,
+          4,
+          28,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          -4,
+          1
+        ]
+      ]
+    ],
+    "method": "custom sparse Fraction polynomial arithmetic, deterministic Buchberger replay, interreduction, exact S-polynomial checks, and zero reduction of every input generator",
+    "no_rational_raw_trace_certificate": {
+      "order_12": "z^2=3 and y^2=1 imply C^2=3q and B^2=q, hence (C/B)^2=3 with nonzero rational C/B; impossible",
+      "orders_7_14": "z=C/s lies in Q(s), of degree at most 2 over Q, but each p7+/- is an irreducible cubic by the rational-root test; impossible"
+    },
+    "order_14_trace_identity": "C7(z)+2=(z+2)*p7-(z)^2",
+    "order_7_trace_identity": "C7(z)-2=(z-2)*p7+(z)^2",
+    "restricted_reduced_bases": {
+      "order_12_target": [
+        [
+          [
+            3,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            -3,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            2,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            4,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            -4,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            -3,
+            1
+          ]
+        ]
+      ],
+      "order_14_target": [
+        [
+          [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            4,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            -4,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            6,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            4,
+            0,
+            -5,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            6,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            3,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            -1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        ]
+      ],
+      "order_7_target": [
+        [
+          [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            4,
+            0,
+            -1,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            4,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            -2,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            6,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            4,
+            0,
+            -5,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            6,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            3,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            -2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            -1,
+            1
+          ]
+        ]
+      ]
+    },
+    "runtime_symbolic_packages": 0,
+    "variable_order": "lexicographic x>y>z"
+  },
+  "exact_coefficient_identities": {
+    "Newton_zero_residual_count": 6,
+    "all_Newton_residuals_zero": true,
+    "normalized_sym5": {
+      "e1": "z*(z^2-1)*(z^2-3)",
+      "e2": "(z^2-1)*(z^2-3)*(z^2-z-1)*(z^2+z-1)",
+      "e3": "z*(z^2-3)*(z^2-2)*(z^2-z-1)*(z^2+z-1)"
+    },
+    "normalized_tensor": {
+      "e1": "x*(y^2-1)",
+      "e2": "(y^2-1)*(x^2+y^2-3)",
+      "e3": "x*(x^2+y^4-2*y^2-2)"
+    },
+    "raw_tensor_after_q_dilation": {
+      "d1": "q*A*(B^2-q)",
+      "d2": "q^3*(B^2-q)*(A^2+B^2-3q)",
+      "d3": "q^5*A*(q*A^2+B^4-2q*B^2-2q^2)",
+      "factor": "[1,-d1,d2,-d3,q^5*d2,-q^10*d1,q^15]"
+    },
+    "raw_tensor_before_dilation": {
+      "e1": "A*(B^2-q)",
+      "e2": "q*(B^2-q)*(A^2+B^2-3q)",
+      "e3": "q^2*A*(q*A^2+B^4-2q*B^2-2q^2)",
+      "factor": "[1,-e1,e2,-e3,q^3*e2,-q^6*e1,q^9]"
+    },
+    "sym5_plethystic_cross_check": {
+      "e1": "E5(C,q)",
+      "e2": "q*E8(C,q)+q^3*E4(C,q)+q^5",
+      "e3": "q^3*E9(C,q)+q^5*E5(C,q)+q^6*E3(C,q)"
+    }
+  },
+  "locked_trace_triple_replay": {
+    "aggregate": {
+      "factor_equal_trace_triple_count": 9,
+      "ordered_trace_triples_checked": 7975,
+      "q_values": [
+        3,
+        5,
+        7,
+        11,
+        13
+      ]
+    },
+    "families": [
+      {
+        "all_q_lattice_count_specialization": {
+          "H=floor(2*sqrt(q))": 3,
+          "branch_one_distinct_triples": 5,
+          "branch_overlap_distinct_triples": 0,
+          "branch_two_distinct_triples": 0,
+          "d=ceil(exponent/3)": 1,
+          "exponent": 1,
+          "h=floor(H/p^d)": 1,
+          "p": 3,
+          "q": 3,
+          "square_q_closed_form": null,
+          "union_distinct_triples": 5
+        },
+        "factor_equal_member_weight": 80,
+        "factor_equal_trace_triple_count": 5,
+        "hits": [
+          {
+            "A": 0,
+            "B": -3,
+            "C": -3,
+            "branches": [
+              {
+                "epsilon": 1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 4
+          },
+          {
+            "A": 0,
+            "B": -3,
+            "C": 3,
+            "branches": [
+              {
+                "epsilon": -1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 4
+          },
+          {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              {
+                "epsilon": -1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              },
+              {
+                "epsilon": 1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 64
+          },
+          {
+            "A": 0,
+            "B": 3,
+            "C": -3,
+            "branches": [
+              {
+                "epsilon": -1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 4
+          },
+          {
+            "A": 0,
+            "B": 3,
+            "C": 3,
+            "branches": [
+              {
+                "epsilon": 1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 4
+          }
+        ],
+        "ordered_trace_triples_checked": 343,
+        "q": 3,
+        "trace_atom_count": 7
+      },
+      {
+        "all_q_lattice_count_specialization": {
+          "H=floor(2*sqrt(q))": 4,
+          "branch_one_distinct_triples": 1,
+          "branch_overlap_distinct_triples": 0,
+          "branch_two_distinct_triples": 0,
+          "d=ceil(exponent/3)": 1,
+          "exponent": 1,
+          "h=floor(H/p^d)": 0,
+          "p": 5,
+          "q": 5,
+          "square_q_closed_form": null,
+          "union_distinct_triples": 1
+        },
+        "factor_equal_member_weight": 8000,
+        "factor_equal_trace_triple_count": 1,
+        "hits": [
+          {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              {
+                "epsilon": -1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              },
+              {
+                "epsilon": 1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 8000
+          }
+        ],
+        "ordered_trace_triples_checked": 729,
+        "q": 5,
+        "trace_atom_count": 9
+      },
+      {
+        "all_q_lattice_count_specialization": {
+          "H=floor(2*sqrt(q))": 5,
+          "branch_one_distinct_triples": 1,
+          "branch_overlap_distinct_triples": 0,
+          "branch_two_distinct_triples": 0,
+          "d=ceil(exponent/3)": 1,
+          "exponent": 1,
+          "h=floor(H/p^d)": 0,
+          "p": 7,
+          "q": 7,
+          "square_q_closed_form": null,
+          "union_distinct_triples": 1
+        },
+        "factor_equal_member_weight": 74088,
+        "factor_equal_trace_triple_count": 1,
+        "hits": [
+          {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              {
+                "epsilon": -1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              },
+              {
+                "epsilon": 1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 74088
+          }
+        ],
+        "ordered_trace_triples_checked": 1331,
+        "q": 7,
+        "trace_atom_count": 11
+      },
+      {
+        "all_q_lattice_count_specialization": {
+          "H=floor(2*sqrt(q))": 6,
+          "branch_one_distinct_triples": 1,
+          "branch_overlap_distinct_triples": 0,
+          "branch_two_distinct_triples": 0,
+          "d=ceil(exponent/3)": 1,
+          "exponent": 1,
+          "h=floor(H/p^d)": 0,
+          "p": 11,
+          "q": 11,
+          "square_q_closed_form": null,
+          "union_distinct_triples": 1
+        },
+        "factor_equal_member_weight": 10648000,
+        "factor_equal_trace_triple_count": 1,
+        "hits": [
+          {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              {
+                "epsilon": -1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              },
+              {
+                "epsilon": 1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 10648000
+          }
+        ],
+        "ordered_trace_triples_checked": 2197,
+        "q": 11,
+        "trace_atom_count": 13
+      },
+      {
+        "all_q_lattice_count_specialization": {
+          "H=floor(2*sqrt(q))": 7,
+          "branch_one_distinct_triples": 1,
+          "branch_overlap_distinct_triples": 0,
+          "branch_two_distinct_triples": 0,
+          "d=ceil(exponent/3)": 1,
+          "exponent": 1,
+          "h=floor(H/p^d)": 0,
+          "p": 13,
+          "q": 13,
+          "square_q_closed_form": null,
+          "union_distinct_triples": 1
+        },
+        "factor_equal_member_weight": 3796416,
+        "factor_equal_trace_triple_count": 1,
+        "hits": [
+          {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "branches": [
+              {
+                "epsilon": -1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              },
+              {
+                "epsilon": 1,
+                "graph": "T3_then_Sym2",
+                "normalized_relation": "x=T3(z), y=epsilon*z"
+              }
+            ],
+            "member_weight": 3796416
+          }
+        ],
+        "ordered_trace_triples_checked": 3375,
+        "q": 13,
+        "trace_atom_count": 15
+      }
+    ],
+    "source_measure": "three independent ordered draws from the same uniform marked-cubic model trace histogram"
+  },
+  "next_targets": [
+    "prove or refute generic completeness of the two torus graphs for every r and classify their cyclotomic residuals",
+    "determine whether a geometric family can enforce either r=2 graph coherently across primes",
+    "classify Waterhouse realization of the exact Hasse triples without confusing separate local isogeny classes with a correspondence"
+  ],
+  "odd_prime_power_integral_theorem": {
+    "branch_one_count": "with H=floor(2sqrt(q)), d=ceil(e/3), h=floor(H/p^d), the distinct (A,B,C) count is 4h+1",
+    "branch_one_hasse_reason": "A/s=T3(C/s), and T3 maps the compact SU(2) trace interval [-2,2] to itself",
+    "branch_one_integrality": "q*A=C*(C^2-3q) is integral iff q divides C^3, equivalently p^ceil(e/3) divides C",
+    "branch_two_nonsquare_obstruction": "if e is odd, v_p(q*B^2) is odd while v_p((C^2-2q)^2) is even; the zero fallback C^2=2q is impossible for odd q",
+    "branch_two_square_parameterization": "for e=2k, C=p^ceil(k/2)*m with |m|<=2p^floor(k/2), A=C, and p^k*B=+/-(C^2-2q); the branch count is 8p^floor(k/2)+2",
+    "count_examples": [
+      {
+        "H=floor(2*sqrt(q))": 3,
+        "branch_one_distinct_triples": 5,
+        "branch_overlap_distinct_triples": 0,
+        "branch_two_distinct_triples": 0,
+        "d=ceil(exponent/3)": 1,
+        "exponent": 1,
+        "h=floor(H/p^d)": 1,
+        "p": 3,
+        "q": 3,
+        "square_q_closed_form": null,
+        "union_distinct_triples": 5
+      },
+      {
+        "H=floor(2*sqrt(q))": 4,
+        "branch_one_distinct_triples": 1,
+        "branch_overlap_distinct_triples": 0,
+        "branch_two_distinct_triples": 0,
+        "d=ceil(exponent/3)": 1,
+        "exponent": 1,
+        "h=floor(H/p^d)": 0,
+        "p": 5,
+        "q": 5,
+        "square_q_closed_form": null,
+        "union_distinct_triples": 1
+      },
+      {
+        "H=floor(2*sqrt(q))": 6,
+        "branch_one_distinct_triples": 9,
+        "branch_overlap_distinct_triples": 4,
+        "branch_two_distinct_triples": 10,
+        "d=ceil(exponent/3)": 1,
+        "exponent": 2,
+        "h=floor(H/p^d)": 2,
+        "p": 3,
+        "q": 9,
+        "square_q_closed_form": 15,
+        "union_distinct_triples": 15
+      },
+      {
+        "H=floor(2*sqrt(q))": 18,
+        "branch_one_distinct_triples": 9,
+        "branch_overlap_distinct_triples": 4,
+        "branch_two_distinct_triples": 26,
+        "d=ceil(exponent/3)": 2,
+        "exponent": 4,
+        "h=floor(H/p^d)": 2,
+        "p": 3,
+        "q": 81,
+        "square_q_closed_form": 31,
+        "union_distinct_triples": 31
+      },
+      {
+        "H=floor(2*sqrt(q))": 250,
+        "branch_one_distinct_triples": 41,
+        "branch_overlap_distinct_triples": 4,
+        "branch_two_distinct_triples": 42,
+        "d=ceil(exponent/3)": 2,
+        "exponent": 6,
+        "h=floor(H/p^d)": 10,
+        "p": 5,
+        "q": 15625,
+        "square_q_closed_form": 79,
+        "union_distinct_triples": 79
+      }
+    ],
+    "realizability_firewall": "integral Hasse triples are coefficient-lattice points; no Waterhouse, curve existence, or relation among three curves is inferred",
+    "same_two_branches": "the rational theorem applies; the algebraic order 7,12,14 residuals have no rational raw traces",
+    "scope": "q=p^e for odd prime p, e>=1, and integral A,B,C in the Hasse interval",
+    "square_branch_overlap": "exactly C=A=+/-2p^k and B=+/-2p^k, giving four triples",
+    "square_q_union_count": "8p^floor(k/3)+8p^floor(k/2)-1 for q=p^(2k)"
+  },
+  "packet_id": "FUNCTION_FIELD.ELLIPTIC.TENSOR_SYM2.SYM5.SPECTRAL_INTERSECTION.V1",
+  "payload_sha256": "e2c9c7ac3d1329b7b911a5214d36935d2694436cbe6d9cce551b94f8486b01ba",
+  "resource_contract": {
+    "accounted_work_unit_ledger": {
+      "buchberger_s_pairs": 85,
+      "compact_representation_moments": 18,
+      "exact_polynomial_leading_term_reductions": 1941,
+      "locked_source_pairs_verified": 5,
+      "locked_trace_triples": 7975,
+      "normalized_Newton_coefficient_certificates": 6,
+      "synthetic_hasse_trace_triples": 2197,
+      "total_accounted_work_units": 12239,
+      "universal_ladder_bounded_weight_unions": 12
+    },
+    "actual_locked_trace_triples": 7975,
+    "exclusive_accounted_work_unit_cap": 20000,
+    "field_curve_or_model_enumerations": 0,
+    "floating_point_results": 0,
+    "locked_trace_triple_cap_inclusive": 7975,
+    "maximum_polynomial_total_degree": 12,
+    "random_samples": 0,
+    "runtime_symbolic_packages": 0,
+    "unit_definition": "one replayed trace triple, one exact leading-term reduction, one Buchberger S-pair, or one named small certificate; not CPU instructions"
+  },
+  "rigor_level": {
+    "algebraic_residuals": "PROVED_BY_RESTRICTED_REDUCED_GROEBNER_BASES_AND_CYCLOTOMIC_TRACE_IDENTITIES",
+    "all_m_ladder": "PROVED_FOR_EVERY_R_BY_TWO_EXPLICIT_WEIGHT_UNIONS; BOUNDED ROWS ARE REGRESSION_ONLY",
+    "compact_moments": "PROVED_BY_CLEBSCH_GORDAN_MULTIPLICITIES",
+    "global_correspondence_automorphy_and_novelty": "NOT_INFERRED",
+    "locked_replay": "EXACT_FOR_ALL_7975_ORDERED_TRACE_TRIPLES_IN_THE_FIVE_LOCKED_SUPPORTS",
+    "odd_prime_power_lattice_counts": "PROVED_BY_P_ADIC_DIVISIBILITY_PARAMETERIZATIONS_AND_EXACT_OVERLAP_COUNT",
+    "rational_complete_intersection": "PROVED_BY_AN_EXACT_REDUCED_GROEBNER_BASIS_AND_RATIONAL_CASE_SPLIT",
+    "raw_coefficient_formulas": "PROVED_BY_INDEPENDENT_EXACT_NEWTON_POWER_SUM_DERIVATIONS"
+  },
+  "schema": "riemann.function_field.elliptic_tensor_sym2_sym5_spectral_intersection.v1",
+  "scope_firewall": {
+    "no_RH_or_GRH_claim": "finite local spectral intersections imply no analytic continuation, zero-free region, RH, or GRH statement",
+    "no_local_to_global_upgrade": "one-place complete-factor equality supplies no motive, correspondence, compatible system, Euler product, or automorphic transfer",
+    "no_moment_origin_recovery": "matching finitely many trace moments does not recover arithmetic origin or monodromy",
+    "no_novelty_priority_claim": "Chebyshev identities may be classical; the exact rigidity and residual packaging are recorded without a literature-priority claim",
+    "no_realizability_claim": "Hasse-lattice points are not renamed elliptic curves or linked triples of curves",
+    "no_representation_homomorphism": "a maximal-torus weight coincidence on two graph loci does not define a homomorphism identifying the two source representations",
+    "no_unscaled_identity": "different weights require the displayed q dilation for r=2; the unscaled Euler factors are not equal"
+  },
+  "source_and_file_locks": {
+    "authentication": "each source JSON is schema-, payload-, canonical-payload-, and LF-file-locked; each source producer is LF-file-locked",
+    "owned_file_locks": {
+      "note": {
+        "path": "research/l-families/atlas/function_field/ELLIPTIC_TENSOR_SYM2_SYM5_SPECTRAL_INTERSECTION.md",
+        "sha256_lf_normalized": "45fbf1140c2914b93a824999f5798826d236b934d41a404579bed8e397daa74c"
+      },
+      "producer": {
+        "path": "research/l-families/atlas/function_field/elliptic_tensor_sym2_sym5_spectral_intersection.py",
+        "sha256_lf_normalized": "d414807d8c2bb41ee075c5526e22b243204f3e587e5988a55f91245a99f6d9e7"
+      },
+      "test": {
+        "path": "tests/test_elliptic_tensor_sym2_sym5_spectral_intersection.py",
+        "sha256_lf_normalized": "41b1755a453ee195e54725ed088d41f4f7659c1d4b156028eec51ec7dacfe82c"
+      }
+    },
+    "source_locks": {
+      "cyclotomic": {
+        "fixture_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_cyclotomic_spectral_aliases.json",
+        "fixture_payload_sha256": "b783dc120095c5256cacc2eaa79f3f152883f9b33b4074a18b123489f81bc6ff",
+        "fixture_schema": "riemann.function_field.elliptic_symmetric_power_cyclotomic_spectral_aliases.v1",
+        "fixture_sha256_lf_normalized": "4321113137615a88f43926c1e92df478160de5a00f0974c1472303de506aabdc",
+        "producer_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_cyclotomic_spectral_aliases.py",
+        "producer_sha256_lf_normalized": "7ffc5952d1e68ae2784f1ba292b54976a6d6953e3f5ea12216c1e92566a00d56"
+      },
+      "full_factor": {
+        "fixture_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_full_factor_sign_aliases.json",
+        "fixture_payload_sha256": "f1a7f183ee16c98c8f633e9b5ffa5f1bb76c0521cd596d5be71840a35711d983",
+        "fixture_schema": "riemann.function_field.elliptic_symmetric_power_full_factor_collisions.v1",
+        "fixture_sha256_lf_normalized": "5388e4e6819f2b48b08956ab810137054158424931e5e6ac1d516fc54d03c607",
+        "producer_path": "research/l-families/atlas/function_field/elliptic_symmetric_power_full_factor_sign_aliases.py",
+        "producer_sha256_lf_normalized": "b817406551fc9adc008fb6f24f9db6a1a84081cbcbd6aa3448344939bf74709a"
+      },
+      "genus1": {
+        "fixture_path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.json",
+        "fixture_payload_sha256": "183ffb31ae2f5776944e162e59390c40bd7081827b8731246e72e25a882e50df",
+        "fixture_schema": "riemann.function_field.genus1_cubic_family_laws.v1",
+        "fixture_sha256_lf_normalized": "b9016ae801cff40d15c53d96210b66a7d44fae7d916e827a0526b9dd42017227",
+        "producer_path": "research/l-families/atlas/function_field/genus1_cubic_family_laws.py",
+        "producer_sha256_lf_normalized": "3d5baace952240c162c83bd5c66eb81db1704aee35e770de3d8df43fff669b79"
+      },
+      "predecessor": {
+        "fixture_path": "research/l-families/atlas/function_field/elliptic_so4_sym3_spectral_intersection.json",
+        "fixture_payload_sha256": "c2657dceb8784e5581092cfd07500f7f39680ce4685516f0ce03e02c195b230c",
+        "fixture_schema": "riemann.function_field.elliptic_so4_sym3_spectral_intersection.v1",
+        "fixture_sha256_lf_normalized": "1bb219a196d2fdb8302f6cf785daeda92312c846bbe294f3ac4fed7c5d3691c6",
+        "producer_path": "research/l-families/atlas/function_field/elliptic_so4_sym3_spectral_intersection.py",
+        "producer_sha256_lf_normalized": "c33d8b1fed8ed1295abf635821f6b6c6dbf46181b438c2b65e5142e0fea1ddcd"
+      },
+      "sym5": {
+        "fixture_path": "research/l-families/atlas/function_field/elliptic_sym5_coefficient_recovery.json",
+        "fixture_payload_sha256": "f7b1a484d2a8b3cc0b997dbf0f15a69893f279a32bc550b71f28b21a5a9d7467",
+        "fixture_schema": "riemann.function_field.elliptic_sym5_coefficient_recovery.v1",
+        "fixture_sha256_lf_normalized": "649f682c0355a71eab618cd4fbd0507e96643b1fefacdd37e1eb9cd82dd36515",
+        "producer_path": "research/l-families/atlas/function_field/elliptic_sym5_coefficient_recovery.py",
+        "producer_sha256_lf_normalized": "53856b8c41ac5d10b0f3e4932e058e8fc806a611932af50a5d738f941998e0f6"
+      }
+    }
+  },
+  "status": "EXACT_RATIONAL_COMPLETE_FACTOR_INTERSECTION_ALL_M_TORUS_LADDER_AND_CYCLOTOMIC_RESIDUALS",
+  "synthetic_q9_hasse_replay": {
+    "all_q_lattice_count_specialization": {
+      "H=floor(2*sqrt(q))": 6,
+      "branch_one_distinct_triples": 9,
+      "branch_overlap_distinct_triples": 4,
+      "branch_two_distinct_triples": 10,
+      "d=ceil(exponent/3)": 1,
+      "exponent": 2,
+      "h=floor(H/p^d)": 2,
+      "p": 3,
+      "q": 9,
+      "square_q_closed_form": 15,
+      "union_distinct_triples": 15
+    },
+    "factor_equal_member_weight": null,
+    "factor_equal_trace_triple_count": 15,
+    "hits": [
+      {
+        "A": -6,
+        "B": -6,
+        "C": -6,
+        "branches": [
+          {
+            "epsilon": 1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          },
+          {
+            "epsilon": -1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": -6,
+        "B": -3,
+        "C": 3,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": -6,
+        "B": 3,
+        "C": 3,
+        "branches": [
+          {
+            "epsilon": 1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": -6,
+        "B": 6,
+        "C": -6,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          },
+          {
+            "epsilon": 1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": -3,
+        "B": -3,
+        "C": -3,
+        "branches": [
+          {
+            "epsilon": 1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": -3,
+        "B": 3,
+        "C": -3,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 0,
+        "B": -6,
+        "C": 0,
+        "branches": [
+          {
+            "epsilon": 1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          },
+          {
+            "epsilon": 1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 0,
+        "B": 6,
+        "C": 0,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 3,
+        "B": -3,
+        "C": 3,
+        "branches": [
+          {
+            "epsilon": 1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 3,
+        "B": 3,
+        "C": 3,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 6,
+        "B": -6,
+        "C": 6,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          },
+          {
+            "epsilon": -1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 6,
+        "B": -3,
+        "C": -3,
+        "branches": [
+          {
+            "epsilon": 1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 6,
+        "B": 3,
+        "C": -3,
+        "branches": [
+          {
+            "epsilon": -1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          }
+        ],
+        "member_weight": null
+      },
+      {
+        "A": 6,
+        "B": 6,
+        "C": 6,
+        "branches": [
+          {
+            "epsilon": 1,
+            "graph": "T3_then_Sym2",
+            "normalized_relation": "x=T3(z), y=epsilon*z"
+          },
+          {
+            "epsilon": 1,
+            "graph": "Std_then_T2",
+            "normalized_relation": "x=z, y=epsilon*T2(z)"
+          }
+        ],
+        "member_weight": null
+      }
+    ],
+    "ordered_trace_triples_checked": 2197,
+    "purpose": "nonvacuous exact replay of both rational branches and their four-point overlap",
+    "q": 9,
+    "realizability_status": "NOT_TESTED_OR_INFERRED",
+    "trace_atom_count": 13
+  },
+  "universal_tensor_symmetric_power_ladder": {
+    "bounded_regression": {
+      "maximum_r": 12,
+      "rows": [
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -3,
+            -1,
+            1,
+            3
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -3,
+            -1,
+            1,
+            3
+          ],
+          "r": 1,
+          "target_weights": [
+            -3,
+            -1,
+            1,
+            3
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5
+          ],
+          "r": 2,
+          "target_weights": [
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7
+          ],
+          "r": 3,
+          "target_weights": [
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "r": 4,
+          "target_weights": [
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ],
+          "r": 5,
+          "target_weights": [
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "r": 6,
+          "target_weights": [
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "r": 7,
+          "target_weights": [
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ],
+          "r": 8,
+          "target_weights": [
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ],
+          "r": 9,
+          "target_weights": [
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21
+          ],
+          "r": 10,
+          "target_weights": [
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -23,
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -23,
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23
+          ],
+          "r": 11,
+          "target_weights": [
+            -23,
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23
+          ]
+        },
+        {
+          "Std(w)_tensor_Symr(w^2)_weights": [
+            -25,
+            -23,
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25
+          ],
+          "Std(w^(r+1))_tensor_Symr(w)_weights": [
+            -25,
+            -23,
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25
+          ],
+          "r": 12,
+          "target_weights": [
+            -25,
+            -23,
+            -21,
+            -19,
+            -17,
+            -15,
+            -13,
+            -11,
+            -9,
+            -7,
+            -5,
+            -3,
+            -1,
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25
+          ]
+        }
+      ]
+    },
+    "classification_boundary": "these are universal sufficient spectral loci; only r=2 is completely classified in this packet",
+    "first_identity": "Std(w^(r+1)) tensor Sym^r(w) has the Sym^(2r+1)(w) weight multiset",
+    "first_weight_union": "+(r+1)+{r,r-2,...,-r}={2r+1,...,1}; -(r+1)+{r,r-2,...,-r}={-1,...,-(2r+1)}",
+    "raw_dilation": "the tensor side has weight r+1 and the target weight 2r+1, so T -> q^(r/2)*T; for odd r this requires a chosen sqrt(q), while r=2 gives the clean q*T identity",
+    "scope": "every integer r>=1 on a normalized characteristic-zero torus",
+    "second_identity": "Std(w) tensor Sym^r(w^2) has the Sym^(2r+1)(w) weight multiset",
+    "second_weight_union": "+1+2{r,r-2,...,-r} and -1+2{r,r-2,...,-r} interlace to every odd weight from -(2r+1) to 2r+1"
+  }
+}
