@@ -1,0 +1,78 @@
+{
+  "schema": "riemann.t106110.dual-amplified-owner-collision-source-lock.v1",
+  "created": "2026-08-25",
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
+  "programme_issues": [743, 736, 737],
+  "parent": {
+    "pr": 719,
+    "head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
+    "inherited_frontier": "T-102990 / BCI102990",
+    "inherited_claims": [
+      "L-102951",
+      "L-102952",
+      "L-102953",
+      "L-102955",
+      "L-102956",
+      "L-102957",
+      "L-102958",
+      "L-102959",
+      "L-102962",
+      "L-102963",
+      "T-102990"
+    ]
+  },
+  "binding_corrections": [
+    "R-106071",
+    "R-106080",
+    "R-106090",
+    "R-106110"
+  ],
+  "retained_from_t106090": [
+    "L-106090 least-discrepancy triangular incidence",
+    "L-106091 fixed-Q even-character rough-tail family",
+    "L-106092 fixed-Q automatic long-core estimate",
+    "L-106093 left-anchor Mellin amplification"
+  ],
+  "new_claims": [
+    "R-106110",
+    "L-106110",
+    "L-106111",
+    "L-106112",
+    "L-106113",
+    "T-106110"
+  ],
+  "proved": {
+    "q_fixed_external_weight_diagonal_firewall": true,
+    "complete_opposite_owner_amplification": true,
+    "dual_amplified_even_character_identity": true,
+    "principal_recombination": true,
+    "correct_source_dual_weight": "g^2*ell",
+    "dual_moment_conditionally_controls_bci102990": true,
+    "atomic_diagonal_subpower": true,
+    "equal_pair_semiprime_owner_wick_factorization": true,
+    "complete_character_product_collision_identity": true,
+    "even_character_plus_minus_collision_identity": true,
+    "equal_product_and_repeated_prime_diagonal_closed": true
+  },
+  "superseded": {
+    "t106090_q_fixed_moment": "non-normative overstrong route",
+    "l106094_complete_same_anchor_diagonal": "withdrawn",
+    "ldrpx_distinct_anchor_only_gates": "superseded"
+  },
+  "replay": {
+    "path": "experiments/X-106110-dual-amplified-owner-collision/results/verification.json",
+    "verdict": "PASS_X_106110_DUAL_AMPLIFIED_OWNER_COLLISION",
+    "checks": 327
+  },
+  "open": {
+    "DAPRO106110_principal_prime_wick_moment": true,
+    "DAKUM106110_nonprincipal_strict_product_collisions": true,
+    "BCI102990": true,
+    "riemann_hypothesis": true
+  },
+  "status": {
+    "canonical_acceptance": false,
+    "riemann_hypothesis_proved": false,
+    "independent_review_required": true
+  }
+}
