@@ -81,6 +81,29 @@ class FrobeniusInterferometrySubgroupSelectorTests(unittest.TestCase):
                     ),
                 )
 
+    def test_all_frequency_sym3_root_resonance_ladders(self) -> None:
+        packet = self.packet["sym3_root_resonance_ladders"]
+        target = [0, 0, 0, 2, 0, 0, 0]
+        for branch, first_base in (("outer", 2), ("inner", 4)):
+            rows = packet["bounded_replay"][branch]
+            self.assertEqual(
+                [row["base"] for row in rows],
+                list(range(first_base, subject.MAX_ROOT_LADDER_BASE + 1)),
+            )
+            for row in rows:
+                self.assertEqual(
+                    tuple(row["frequencies"]),
+                    subject.sym3_root_resonance_pair(row["base"], branch),
+                )
+                self.assertEqual(row["raw_signature"], [0, 0, 0, -1, 0, 0, 0])
+                self.assertEqual(row["selector_signature"], target)
+        with self.assertRaises(ValueError):
+            subject.sym3_root_resonance_pair(1, "outer")
+        with self.assertRaises(ValueError):
+            subject.sym3_root_resonance_pair(3, "inner")
+        with self.assertRaises(ValueError):
+            subject.sym3_root_resonance_pair(4, "unknown")
+
     def test_selector_matrix_is_exactly_two_times_identity(self) -> None:
         signatures = self.packet["selectors"]["signatures"]
         self.assertEqual(

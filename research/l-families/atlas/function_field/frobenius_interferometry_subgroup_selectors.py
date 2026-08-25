@@ -26,6 +26,7 @@ from typing import Iterable, Mapping, Sequence
 
 
 MAX_TOTAL_FREQUENCY = 10
+MAX_ROOT_LADDER_BASE = 12
 ACCOUNTED_WORK_CAP_EXCLUSIVE = 100_000
 
 GROUP_ORDER = (
@@ -302,6 +303,26 @@ def product_interferometer_mean(left: object, right: object) -> int:
         - 2 * int(abs(r - s) == 2)
         + 2 * int(r == s == 2)
     )
+
+
+def sym3_root_resonance_pair(base: object, branch: str) -> tuple[int, int]:
+    """Return an all-frequency pure Sym3 root-resonance pair.
+
+    The outer branch is (r,3r+2) for r>=2.  The inner branch is
+    (r,3r-2) for r>=4.  At these thresholds the other six Haar means
+    vanish, while the Sym3 mean of I_(r,s) is -1.
+    """
+
+    r = _require_plain_int("root-resonance base", base)
+    if branch == "outer":
+        if r < 2:
+            raise ValueError("outer Sym3 root ladder requires base at least two")
+        return r, 3 * r + 2
+    if branch == "inner":
+        if r < 4:
+            raise ValueError("inner Sym3 root ladder requires base at least four")
+        return r, 3 * r - 2
+    raise ValueError("root-resonance branch must be 'outer' or 'inner'")
 
 
 def trace_power_sequence_from_coefficients(
@@ -630,9 +651,44 @@ def build_packet() -> dict[str, object]:
     } != expected_minima:
         raise ArithmeticError("selector support minima drifted")
 
+    root_ladder_rows: dict[str, list[dict[str, object]]] = {}
+    root_target = SELECTOR_EXPECTATIONS["sym3_selector"]
+    for branch, first_base in (("outer", 2), ("inner", 4)):
+        rows = []
+        for base in range(first_base, MAX_ROOT_LADDER_BASE + 1):
+            pair = sym3_root_resonance_pair(base, branch)
+            raw_polynomial = interferometer(*pair, guard)
+            raw_signature = context.signature(raw_polynomial)
+            selector_signature = tuple(-2 * value for value in raw_signature)
+            if _integer_signature(selector_signature) != root_target:
+                raise ArithmeticError(
+                    f"{branch} Sym3 root ladder drifted at base {base}"
+                )
+            if raw_signature[1] != product_interferometer_mean(*pair):
+                raise ArithmeticError("root ladder product formula drifted")
+            if raw_signature[2] != su2_embedding_interferometer_mean(
+                1, 1, *pair
+            ):
+                raise ArithmeticError("root ladder doubled formula drifted")
+            if raw_signature[3] != su2_embedding_interferometer_mean(
+                3, 1, *pair
+            ):
+                raise ArithmeticError("root ladder Sym3 formula drifted")
+            rows.append(
+                {
+                    "base": base,
+                    "frequencies": list(pair),
+                    "raw_signature": list(_integer_signature(raw_signature)),
+                    "selector_signature": list(
+                        _integer_signature(selector_signature)
+                    ),
+                }
+            )
+        root_ladder_rows[branch] = rows
+
     return {
-        "schema": "riemann.function_field.frobenius_interferometry_subgroup_selectors.v1",
-        "status": "EXACT_COMPACT_GROUP_THEOREM_AND_BOUNDED_CLASSIFICATION",
+        "schema": "riemann.function_field.frobenius_interferometry_subgroup_selectors.v2",
+        "status": "EXACT_COMPACT_GROUP_THEOREMS_AND_BOUNDED_CLASSIFICATION",
         "normalization": {
             "p_r": "Tr(U^r) in the four-dimensional standard representation",
             "I_r_s": "p_r*p_s-p_(r+s)",
@@ -659,6 +715,19 @@ def build_packet() -> dict[str, object]:
             "ambient_zero_nontrivial_subgroup_contrasts": [
                 list(pair) for pair in raw_contrasts
             ],
+        },
+        "sym3_root_resonance_ladders": {
+            "theorem": (
+                "-2*I_(r,3r+2) for every r>=2 and -2*I_(r,3r-2) "
+                "for every r>=4 both have signature (0,0,0,2,0,0,0)"
+            ),
+            "mechanism": (
+                "the frequency gap |3r-s|=2 hits the A1 root; all ambient, "
+                "product, doubled, and uniform-torus constant terms vanish "
+                "at the stated thresholds"
+            ),
+            "bounded_replay_maximum_base": MAX_ROOT_LADDER_BASE,
+            "bounded_replay": root_ladder_rows,
         },
         "selectors": {
             "definitions": {

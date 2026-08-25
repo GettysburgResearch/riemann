@@ -256,6 +256,47 @@ This is a bounded classification, not an all-frequency theorem.  Formula
 (9) makes an all-frequency classification for any fixed `H_(a,b)` a finite
 Diophantine resonance problem, which is the natural next symbolic extension.
 
+### 5.1 An infinite pure symmetric-cube selector ladder
+
+One all-frequency part of that Diophantine problem is especially clean.  For
+every integer in the stated ranges, define
+
+\[
+ S_r^+=-2I_{r,3r+2}\quad(r\ge2),
+ \qquad
+ S_r^-=-2I_{r,3r-2}\quad(r\ge4).                       \tag{15a}
+\]
+
+Then both branches have the exact signature
+
+\[
+ \boxed{
+ \operatorname{sig}(S_r^\pm)=(0,0,0,2,0,0,0).}          \tag{15b}
+\]
+
+Thus `I_(2,8)` is the first member of an infinite root-resonance ladder, not
+an isolated low-frequency accident.
+
+Here is a complete proof.  In the symmetric-cube pullback, the cross term
+`c_(3r,s)` in (9) equals `-1` when `|3r-s|=2`.  At the thresholds in
+(15a), every other term in (9) vanishes, so the raw `H_3` mean is `-1`.
+Equations (8) and (11) show directly that the block-product and doubled
+means vanish: the frequencies are unequal and their difference is neither
+zero nor two.
+
+For the ambient group, every exponent in the `C2` Weyl density (12) has
+absolute coordinate at most four.  The nonzero exponent types in
+`I_(r,s)` are axis frequencies `r+s` and `|r-s|`, and cross frequencies
+with absolute coordinates `(r,s)` up to exchange.  On the plus branch these
+are already outside the density support for `r>=2`; on the minus branch
+they are outside it for `r>=4`.  Hence the ambient constant term is zero.
+Finally, the uniform tori see a constant term only at `r=s`, `s=3r`, or
+`r=3s`; none occurs in (15a).  This proves (15b).
+
+The executable replays both ladders exactly through base `r=12`; the proof
+above supplies the unbounded quantifier.  The earlier uniqueness statement
+for `I_(2,8)` remains only the declared `r+s<=10` classification.
+
 ## 6. Root-free coefficient adapter
 
 The selectors require no eigenvalue recovery.  Write the normalized local
