@@ -1,0 +1,21 @@
+{
+  "checks": 1480,
+  "not_proved": {
+    "bci102990": true,
+    "btnn106122": true,
+    "btpn106122": true,
+    "btpp106122": true,
+    "btrc106123": true,
+    "riemann_hypothesis": true
+  },
+  "proved_by_replay": {
+    "bilateral_atomic_weight_inequality": true,
+    "double_product_collision_identity": true,
+    "double_ramanujan_phase_identity": true,
+    "fixed_core_two_dimensional_additive_large_sieve": true,
+    "sharp_tensor_principal_embedding": true,
+    "tensor_squareclass_gram": true
+  },
+  "schema": "riemann.x106120.bilateral-kummer-tensor.v1",
+  "verdict": "PASS_X_106120_BILATERAL_KUMMER_TENSOR"
+}
