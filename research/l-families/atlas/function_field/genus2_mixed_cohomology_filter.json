@@ -1,0 +1,407 @@
+{
+  "external_mathematical_premises": [
+    {
+      "premise": "Deligne purity/temperedness for the level-one weight-12 and level-two weight-10 holomorphic eigenforms at odd unramified primes",
+      "role": "gives the three disjoint root radii and hence minimality and nonvanishing of the isolated channels; the order-six annihilator and factor-annihilation identities themselves do not require purity"
+    }
+  ],
+  "firewalls": [
+    "This packet imports four source theorems and does not re-prove them.",
+    "Haar variance is not the finite arithmetic-family variance.",
+    "The residual trace is not a memberwise sign theorem or zero theorem.",
+    "The recurrence is same-prime extension-tower spectroscopy, not a multi-prime compatible-system identity.",
+    "No RH, GRH, amplifier, global motive, Euler-product, or external novelty claim is made."
+  ],
+  "frobenius_interferometry_certificate": {
+    "coarse_notches": {
+      "remove_both_Delta_channels": "P_shift(E)*P_unshift(E)",
+      "remove_level_2_weight_10": "P_10_2(E)"
+    },
+    "exact_channel_isolators": {
+      "level_2_weight_10": "P_shift(E)*P_unshift(E)",
+      "shifted_Delta": "P_unshift(E)*P_10_2(E)",
+      "unshifted_Delta": "P_shift(E)*P_10_2(E)"
+    },
+    "formal_initialization": "The spectral formula is extended to r=0 with C_0=-2 only to seed the recurrence; q=1 is not an arithmetic family value.",
+    "minimal_annihilator": "P_shift(E)*P_unshift(E)*P_10_2(E)",
+    "minimality_proof": "Purity gives root radii p^(13/2), p^(11/2), and p^(9/2), so the three pairs are disjoint.  A repeated root inside a pair would force an integral Hecke coefficient squared to equal 4*p^e with e odd, impossible by p-adic valuation.  All six exponential coefficients are nonzero, hence the order-six annihilator is minimal.",
+    "prime_controls": [
+      {
+        "C_0_through_4": [
+          -2,
+          660,
+          -2311290,
+          -3071338452,
+          1744285330638
+        ],
+        "all_recurrence_residuals_zero": true,
+        "annihilator_low_to_high": [
+          5559060566555523,
+          33514971662412,
+          237479193819,
+          -249463800,
+          1824417,
+          -852,
+          1
+        ],
+        "g_p": -156,
+        "isolated_first_four": {
+          "level_2_weight_10": [
+            -612931027968,
+            24850590815232,
+            8187629256317952,
+            -1766404343001811968
+          ],
+          "shifted_Delta": [
+            1683055853568,
+            5683107405920256,
+            1613094541247619072,
+            -7841209375545800288256
+          ],
+          "unshifted_Delta": [
+            220805118720,
+            223201390475520,
+            17131786033939200,
+            -35222246638014263040
+          ]
+        },
+        "p": 3,
+        "tau(p)": 252
+      },
+      {
+        "C_0_through_4": [
+          -2,
+          18450,
+          -1780707050,
+          -73755837933750,
+          471856137607648750
+        ],
+        "all_recurrence_residuals_zero": true,
+        "annihilator_low_to_high": [
+          116415321826934814453125,
+          -65674781799316406250,
+          68467439208984375,
+          -8337769777500,
+          1413341475,
+          -29850,
+          1
+        ],
+        "g_p": 870,
+        "isolated_first_four": {
+          "level_2_weight_10": [
+            -108819252702720000,
+            -67929186851366400000,
+            153439210374311232000000,
+            266166306094725771840000000
+          ],
+          "shifted_Delta": [
+            793206625536000000,
+            95495740006694400000000,
+            1337952314599169760000000000,
+            -84260399852789425296000000000000
+          ],
+          "unshifted_Delta": [
+            77388316318080000,
+            632048274066326400000,
+            -725933218978393488000000,
+            -34367989579810484297040000000
+          ]
+        },
+        "p": 5,
+        "tau(p)": 4830
+      },
+      {
+        "C_0_through_4": [
+          -2,
+          -99512,
+          -176286212690,
+          32363586174192280,
+          13633867056647142357598
+        ],
+        "all_recurrence_residuals_zero": true,
+        "annihilator_low_to_high": [
+          7730993719707444524137094407,
+          257203667859983285815416,
+          197415112724335868019,
+          1955462631755920,
+          100996743813,
+          134904,
+          1
+        ],
+        "g_p": -952,
+        "isolated_first_four": {
+          "level_2_weight_10": [
+            -373369588252971061248,
+            318398937605998942113792,
+            14763693841511299795082391552,
+            -26903582134488759557394148405248
+          ],
+          "shifted_Delta": [
+            13847659651497095036928,
+            -4436616569876533970075344896,
+            -821679085164407240598594016739328,
+            526166751224585986387799125716641488896
+          ],
+          "unshifted_Delta": [
+            333498415495969704960,
+            -9150303901876828880071680,
+            -506222647175280883567307535360,
+            26569332616061204751051469993006080
+          ]
+        },
+        "p": 7,
+        "tau(p)": -16744
+      }
+    ],
+    "prime_controls_are_not_the_proof": true,
+    "quadratic_factors": {
+      "P_10_2(E)": "E^2-g_p*E+p^9",
+      "P_shift(E)": "E^2-p*tau(p)*E+p^13",
+      "P_unshift(E)": "E^2-tau(p)*E+p^11"
+    },
+    "renormalization_warning": "The p^(13*r/2) shifted-Delta channel dominates raw extension towers; the p^(9*r/2) level-two channel is recovered by an exact notch.",
+    "same_prime_response": "C_r=(p^r-1)*(gamma_p^r+delta_p^r)-(mu_p^r+nu_p^r), r>=1",
+    "six_roots": [
+      "p*gamma_p",
+      "p*delta_p",
+      "gamma_p",
+      "delta_p",
+      "mu_p",
+      "nu_p"
+    ]
+  },
+  "haar_optimization_certificate": {
+    "exact_control_q_values": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      101
+    ],
+    "integral_unit_response": {
+      "difference_from_k_0": "q^4*k*((8+6*q^2)+(16+9*q^2)*k), positive for every integer k!=0",
+      "unique_minimizer": [
+        1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    "orthogonality_identity": "Var_Haar(sum_j c_(2j) r_(2j))=c_4^2*q^4+c_6^2*q^6+c_8^2*q^8+c_10^2*q^10",
+    "rational_unit_response": {
+      "D": "9*q^2+16",
+      "completion_of_square": "V(c_4)-V_min=q^4*(9*q^2+16)/16*(c_4+3*q^2/(9*q^2+16))^2",
+      "filter": "r_10-r_8-(3*q^2/D)*r_4-(4/D)*r_6",
+      "minimum_variance": "q^10+q^8+q^6/(9*q^2+16)",
+      "unique_minimizer": [
+        "-3*q^2/D",
+        "-4/D",
+        "-1",
+        "1"
+      ]
+    },
+    "scope": "USp(4) Haar variance, not finite arithmetic-family variance",
+    "sparse_unit_variances": {
+      "M4_over_3": "q^10+q^8+q^4/9",
+      "M6_minus_M4": "q^4*(9*q^2-16)/144 > 0 for odd q>=3",
+      "M6_over_4": "q^10+q^8+q^6/16"
+    }
+  },
+  "imported_marked_traces": {
+    "T_(10,0)(q)": "(q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7",
+    "T_(4,0)(q)": "-3",
+    "T_(6,0)(q)": "-4",
+    "T_(8,0)(q)": "-Theta_(8,2)(q)-q-6"
+  },
+  "integral_lattice_certificate": {
+    "basis": [
+      [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        4,
+        -3,
+        0,
+        0
+      ]
+    ],
+    "bounded_regression_is_not_the_proof": true,
+    "channel_basis": [
+      "q*Theta_Delta",
+      "Theta_Delta",
+      "Theta_(8,2)",
+      "Theta_(10,2)",
+      "q",
+      "1"
+    ],
+    "complete_integral_lattice": "(c_4,c_6,c_8,c_10)=m*(1,-1,-1,1)+k*(4,-3,0,0)",
+    "completeness_proof": "Set m=c_10 and c_8=-m.  The Bezout equation 3*c_4+4*c_6=-m has the particular solution (m,-m); all homogeneous integral solutions are k*(4,-3), since gcd(3,4)=1.",
+    "integral_unit_response_filter": {
+      "coefficients": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "filter": "r_10-r_8+r_4-r_6",
+      "name": "H"
+    },
+    "nuisance_equations": [
+      "c_8+c_10=0 (simultaneously cancels Theta_(8,2) and q)",
+      "3*c_4+4*c_6=-c_10 (cancels the constant)"
+    ],
+    "only_primitive_support_at_most_two": {
+      "coefficients": [
+        4,
+        -3,
+        0,
+        0
+      ],
+      "filter": "4*r_4-3*r_6",
+      "response": 0
+    },
+    "primitive_three_scale_mixed_filters": {
+      "M4": {
+        "coefficients": [
+          -1,
+          0,
+          -3,
+          3
+        ],
+        "filter": "3*r_10-3*r_8-r_4",
+        "response_multiple": 3
+      },
+      "M6": {
+        "coefficients": [
+          0,
+          -1,
+          -4,
+          4
+        ],
+        "filter": "4*r_10-4*r_8-r_6",
+        "response_multiple": 4
+      }
+    },
+    "r2_extension": "T_(2,0)=q-1 forces c_2=0 after c_8+c_10=0",
+    "response": "m*((q-1)*Theta_Delta(q)-Theta_(10,2)(q))",
+    "trace_vectors_r4_r6_r8_r10": {
+      "10": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -7
+      ],
+      "4": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -3
+      ],
+      "6": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -4
+      ],
+      "8": [
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        -6
+      ]
+    }
+  },
+  "packet_manifest": [
+    {
+      "path": "research/l-families/atlas/function_field/genus2_mixed_cohomology_filter.py",
+      "role": "exact producer",
+      "sha256_lf_normalized": "d2f86cd67e52fe25ae5fad2e249258e821f1386ae83ea79d271d16446a453793"
+    },
+    {
+      "path": "research/l-families/atlas/function_field/GENUS2_MIXED_COHOMOLOGY_FILTER.md",
+      "role": "proof note",
+      "sha256_lf_normalized": "f31c9c7166e15e6c8f9b15b6ebe5370c0437a8b4ee54345626b99bf3721e5a2c"
+    },
+    {
+      "path": "tests/test_genus2_mixed_cohomology_filter.py",
+      "role": "focused regression tests",
+      "sha256_lf_normalized": "97f7ce4a3572eafcfbbf86c0a59ca6445e29d85ca850a05cf37795862ad01de1"
+    }
+  ],
+  "payload_sha256": "c8e07c945270fa6922203d2e9d0e84089ca6a2d126bffaeb7b3aa4f9469888ff",
+  "resource_contract": {
+    "actual_exact_operations": 333,
+    "actual_lattice_regression_points": 625,
+    "actual_packet_bytes": 54563,
+    "actual_recurrence_steps": 2076,
+    "actual_source_bytes": 70992,
+    "actual_source_files": 4,
+    "arithmetic": "exact integers and fractions only",
+    "external_network_calls": 0,
+    "maximum_exact_operations": 50000,
+    "maximum_lattice_regression_points": 1000,
+    "maximum_output_bytes": 250000,
+    "maximum_packet_bytes": 250000,
+    "maximum_recurrence_steps": 5000,
+    "maximum_source_bytes": 2000000,
+    "maximum_source_files": 4,
+    "maximum_tower_exponent": 18,
+    "maximum_wall_seconds": 4.0
+  },
+  "schema": "riemann.function_field.genus2_mixed_cohomology_filter.v1",
+  "scope": {
+    "arithmetic_same_prime_response": "every odd prime p and extension exponent r>=1",
+    "formal_recurrence_extension": "r=0 is included only as C_0=-2 initialization",
+    "new_curves_enumerated": 0,
+    "new_finite_fields_enumerated": [],
+    "proved_q": "every odd prime power for the imported trace and filter identities",
+    "sampled_values_used_as_theorem_input": []
+  },
+  "source_manifest": [
+    {
+      "commit": "aee73fda38a73bd792a4b69cd12ec7c4b7aaad1e",
+      "id": "native_t4",
+      "path": "research/l-families/atlas/function_field/native_qadic_reciprocal_wavelet_spectroscopy.json",
+      "payload_sha256": "4e366316c6d55488b41e0104f6bee6c947220d7989ea7aa1381b5d72a099b882",
+      "role": "all-q T_(4,0)=-3 trace input",
+      "sha256_lf_normalized": "aef506afa6b9b29f10528b634f45c7eab96abc36c6cd2de886262e834fcb2d43"
+    },
+    {
+      "commit": "522bc6b454016a07a9c65aaa6177d0340d70f5dc",
+      "id": "sym6",
+      "path": "research/l-families/atlas/function_field/genus2_sym6_marked_trace_average.json",
+      "payload_sha256": "7bf31859372bb2a292f8321794f9b05859d2def82b1dd59ad83ab992088a5e86",
+      "role": "all-q T_(6,0)=-4 trace theorem",
+      "sha256_lf_normalized": "4e6156e8ca4f8b652e02961d3aa5f3ea63c9b42243908d1ecab8b94c08d253a6"
+    },
+    {
+      "commit": "dc63f02d0897e10936ef0767a1c8e6f15ac49e06",
+      "id": "sym8",
+      "path": "research/l-families/atlas/function_field/genus2_sym8_marked_trace_average.json",
+      "payload_sha256": "423b8c37b69fb56b459beb7ebd9e6b94d12cf658f5819f7ac481e83560f5d0ae",
+      "role": "all-q T_(8,0) marked-trace theorem",
+      "sha256_lf_normalized": "a92700980ac7fef22f7a36db7b3d4d8bb7aa8d763904677e64bfca3182be0233"
+    },
+    {
+      "commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "id": "sym10",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_marked_trace_average.json",
+      "payload_sha256": "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77",
+      "role": "all-q T_(10,0) marked-trace theorem and Hecke coefficients",
+      "sha256_lf_normalized": "4f91ac00193805207088e9fc6aea2b464645267b17dc54f71165a1ae3b9d45ce"
+    }
+  ],
+  "status": "PROVED_FROM_SOURCE_LOCKED_TRACES_PLUS_STANDARD_PURITY"
+}
