@@ -27,12 +27,12 @@ The corrected source coordinates are
 not (P,Q) alone.  A function-field adapter must preserve the following
 order of operations.
 
-1. Mark irreducible divisors (ell,ho) and partition roughness/tie strata
+1. Mark irreducible divisors (ell,rho) and partition roughness/tie strata
    exactly.  A degree-plus-lexicographic selector is combinatorial; it must
    not be advertised as an algebraic “least-prime map.”
 2. Retain both complete Boolean source sums.
-3. Insert the source-selected Artin--Schreier phases at (ell,ho).
-4. Apply the Kummer variables (Pc^2) modulo (ho) and (Qd^2) modulo
+3. Insert the source-selected Artin--Schreier phases at (ell,rho).
+4. Apply the Kummer variables (Pc^2) modulo (rho) and (Qd^2) modulo
    (ell).
 5. Amplify both sides before squaring.
 6. Keep the principal--principal member equal to the native untwisted
