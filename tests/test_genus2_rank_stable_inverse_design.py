@@ -92,6 +92,7 @@ class Genus2RankStableInverseDesignTests(unittest.TestCase):
         means = tuple(packet["high_genus_stable_mean_vector"])
         basis = tuple(tuple(row) for row in packet["primitive_Z_basis_rows"])
         self.assertEqual(means, (1, 1, 2, 2))
+        self.assertEqual(packet["high_genus_mean_vector_valid_from_genus"], 5)
         self.assertEqual(basis, subject.NULL_LATTICE_BASIS)
         for row in basis:
             self.assertEqual(sum(a * b for a, b in zip(row, means)), 0)

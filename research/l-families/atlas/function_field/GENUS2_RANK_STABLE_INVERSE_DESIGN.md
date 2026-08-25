@@ -12,7 +12,8 @@ high-genus stable range.  In the source-locked coordinate order
 \]
 
 the four `USp(4)` means are already zero and the stable means are
-`(1,1,2,2)`.  The new coefficient lattice is therefore
+`(1,1,2,2)`.  The imported theorem makes this whole mean vector exact from
+genus 5 onward.  The new coefficient lattice is therefore
 
 \[
 c_1+c_2+2c_3+2c_4=0.
@@ -154,7 +155,7 @@ alone does not force a finite arithmetic split contrast to transport.
 
 The deterministic payload hash is
 
-`99f2e9425a5b957f780ee85abf107d3b2ef3054398899f72a8eb19a59c67ae05`.
+`77947bb62aa3052234a9c7957b67e1daf3736a5062396643bd6c9b54084eaa30`.
 
 From the repository root:
 

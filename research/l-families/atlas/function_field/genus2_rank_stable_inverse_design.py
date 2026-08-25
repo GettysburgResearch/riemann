@@ -426,6 +426,9 @@ def build_payload() -> dict[str, object]:
             "raw_pool_order": list(RAW_POOL_NAMES),
             "USp4_mean_vector": list(stable_pool["USp4_means"]),
             "high_genus_stable_mean_vector": list(STABLE_MEAN_VECTOR),
+            "high_genus_mean_vector_valid_from_genus": stable_pool[
+                "all_pool_means_stable_from_genus"
+            ],
             "null_equation": "c1+c2+2*c3+2*c4=0",
             "primitive_Z_basis_rows": [list(row) for row in NULL_LATTICE_BASIS],
             "basis_parametrization": (

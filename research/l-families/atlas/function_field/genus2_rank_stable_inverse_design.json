@@ -282,7 +282,7 @@
     "finite_data_warning": "q=3,5 training and one q=7 holdout do not establish an all-q law, asymptotic transport theorem, or optimal detector beyond the declared lattice",
     "forbidden_inference": "mean nullity or finite split contrast does not identify a subgroup, split Jacobian, endomorphism algebra, motive, monodromy group, zero law, RH, or GRH consequence"
   },
-  "payload_sha256": "99f2e9425a5b957f780ee85abf107d3b2ef3054398899f72a8eb19a59c67ae05",
+  "payload_sha256": "77947bb62aa3052234a9c7957b67e1daf3736a5062396643bd6c9b54084eaa30",
   "resource_contract": {
     "candidate_cap_inclusive": 4096,
     "finite_field_or_curve_enumeration": false,
@@ -311,6 +311,7 @@
     "basis_parametrization": "(u,v,w) maps to (-u-2v-2w,u,v,w); conversely u=c2, v=c3, w=c4",
     "candidate_contract": "primitive integer vectors modulo overall sign, first nonzero positive, ambient-coordinate L1<=8, satisfying the null equation",
     "candidate_count": 67,
+    "high_genus_mean_vector_valid_from_genus": 5,
     "high_genus_stable_mean_vector": [
       1,
       1,
