@@ -1,0 +1,836 @@
+{
+  "compact_resonance_certificate": {
+    "central_quadratic_square_ladder": [
+      {
+        "P=(1+qT^2)^2": 1,
+        "P=(1-qT^2)^2": 1,
+        "endpoint": 0,
+        "n": 0,
+        "normalization": "listed coefficient times q^n"
+      },
+      {
+        "P=(1+qT^2)^2": -2,
+        "P=(1-qT^2)^2": 2,
+        "endpoint": 2,
+        "n": 1,
+        "normalization": "listed coefficient times q^n"
+      },
+      {
+        "P=(1+qT^2)^2": 3,
+        "P=(1-qT^2)^2": 3,
+        "endpoint": 4,
+        "n": 2,
+        "normalization": "listed coefficient times q^n"
+      },
+      {
+        "P=(1+qT^2)^2": -4,
+        "P=(1-qT^2)^2": 4,
+        "endpoint": 6,
+        "n": 3,
+        "normalization": "listed coefficient times q^n"
+      },
+      {
+        "P=(1+qT^2)^2": 5,
+        "P=(1-qT^2)^2": 5,
+        "endpoint": 8,
+        "n": 4,
+        "normalization": "listed coefficient times q^n"
+      },
+      {
+        "P=(1+qT^2)^2": -6,
+        "P=(1-qT^2)^2": 6,
+        "endpoint": 10,
+        "n": 5,
+        "normalization": "listed coefficient times q^n"
+      }
+    ],
+    "compact_triangle_bound": "abs(chi_(10,0)(U))<=286",
+    "equality_rigidity": {
+      "monomial_comparison": "equality in the 286-term triangle bound makes z_i^10 and z_i^9*z_j have the same phase, hence every z_j=z_i",
+      "only_equality_classes": [
+        "I",
+        "-I"
+      ],
+      "symplectic_consequence": "the common eigenvalue equals its inverse, hence U=I or U=-I"
+    },
+    "integrality_boundary": "the scalar coefficient rows are integral only when q is a square; geometric realization is not asserted",
+    "scalar_coefficient_rows": [
+      {
+        "P": "(1-sqrt(q)*T)^4",
+        "U": "I",
+        "a": "-4*sqrt(q)",
+        "b": "6*q",
+        "r_10": "286*q^5"
+      },
+      {
+        "P": "(1+sqrt(q)*T)^4",
+        "U": "-I",
+        "a": "4*sqrt(q)",
+        "b": "6*q",
+        "r_10": "286*q^5"
+      }
+    ],
+    "sym10_dimension": 286
+  },
+  "definition": {
+    "channel": "r_D(10)=q^5*chi_(10,0)(U_D)",
+    "local_factor": "P_D(T)=1+a_D*T+b_D*T^2+q*a_D*T^3+q^2*T^4",
+    "reciprocal_series": "P_D(T)^(-1)=sum_n r_D(n)T^n",
+    "tied_tail": "include all atoms at the largest descending absolute threshold whose retained member mass is at least ceil(N/100)"
+  },
+  "finite_tomography": {
+    "families": [
+      {
+        "exceptional_loci": {
+          "central_minus": {
+            "mean_r_10": [
+              0,
+              1
+            ],
+            "member_count": 0,
+            "share_of_full_second_moment": [
+              0,
+              1
+            ],
+            "signed_sum_r_10": 0,
+            "tail_member_count": 0
+          },
+          "central_plus": {
+            "mean_r_10": [
+              0,
+              1
+            ],
+            "member_count": 0,
+            "share_of_full_second_moment": [
+              0,
+              1
+            ],
+            "signed_sum_r_10": 0,
+            "tail_member_count": 0
+          },
+          "integral_split": {
+            "mean_r_10": [
+              -358,
+              3
+            ],
+            "member_count": 27,
+            "share_of_full_second_moment": [
+              48907,
+              424488
+            ],
+            "signed_sum_r_10": -3222,
+            "tail_member_count": 0
+          },
+          "repeated_factor": {
+            "mean_r_10": [
+              0,
+              1
+            ],
+            "member_count": 0,
+            "share_of_full_second_moment": [
+              0,
+              1
+            ],
+            "signed_sum_r_10": 0,
+            "tail_member_count": 0
+          },
+          "sym3_coefficient_curve": {
+            "mean_r_10": [
+              0,
+              1
+            ],
+            "member_count": 18,
+            "share_of_full_second_moment": [
+              0,
+              1
+            ],
+            "signed_sum_r_10": 0,
+            "tail_member_count": 0
+          }
+        },
+        "mean_r_10": [
+          638,
+          27
+        ],
+        "member_count": 162,
+        "q": 3,
+        "sign_member_counts": {
+          "negative": 57,
+          "positive": 87,
+          "zero": 18
+        },
+        "source_atom_count": 32,
+        "sum_absolute_r_10": 23748,
+        "sum_r_10": 3828,
+        "sum_r_10_squared": 5093856,
+        "tied_outer_absolute_one_percent_tail": {
+          "atoms": [
+            {
+              "a_D": -3,
+              "absolute_r_10": 401,
+              "b_D": 7,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 3,
+              "r_10": 401,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": 3,
+              "absolute_r_10": 401,
+              "b_D": 7,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 3,
+              "r_10": 401,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            }
+          ],
+          "mean_r_10": [
+            401,
+            1
+          ],
+          "member_count": 6,
+          "member_fraction": [
+            1,
+            27
+          ],
+          "minimum_required_mass": 2,
+          "share_of_absolute_first_moment": [
+            401,
+            3958
+          ],
+          "share_of_second_moment": [
+            160801,
+            848976
+          ],
+          "share_of_signed_total": [
+            401,
+            638
+          ],
+          "signed_sum_r_10": 2406,
+          "threshold": 401
+        },
+        "trimmed_bulk": {
+          "mean_r_10": [
+            237,
+            26
+          ],
+          "member_count": 156,
+          "signed_sum_r_10": 1422
+        },
+        "zero_atoms": [
+          {
+            "a_D": -3,
+            "b_D": 6,
+            "member_count": 3,
+            "sym3_coefficient_curve": true
+          },
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "member_count": 12,
+            "sym3_coefficient_curve": true
+          },
+          {
+            "a_D": 3,
+            "b_D": 6,
+            "member_count": 3,
+            "sym3_coefficient_curve": true
+          }
+        ]
+      },
+      {
+        "exceptional_loci": {
+          "central_minus": {
+            "mean_r_10": [
+              18750,
+              1
+            ],
+            "member_count": 1,
+            "share_of_full_second_moment": [
+              1953125,
+              97887394
+            ],
+            "signed_sum_r_10": 18750,
+            "tail_member_count": 1
+          },
+          "central_plus": {
+            "mean_r_10": [
+              -18750,
+              1
+            ],
+            "member_count": 5,
+            "share_of_full_second_moment": [
+              9765625,
+              97887394
+            ],
+            "signed_sum_r_10": -93750,
+            "tail_member_count": 5
+          },
+          "integral_split": {
+            "mean_r_10": [
+              -39146,
+              47
+            ],
+            "member_count": 705,
+            "share_of_full_second_moment": [
+              37053077,
+              97887394
+            ],
+            "signed_sum_r_10": -587190,
+            "tail_member_count": 15
+          },
+          "repeated_factor": {
+            "mean_r_10": [
+              -17574,
+              1
+            ],
+            "member_count": 15,
+            "share_of_full_second_moment": [
+              2344977,
+              8898854
+            ],
+            "signed_sum_r_10": -263610,
+            "tail_member_count": 15
+          },
+          "sym3_coefficient_curve": {
+            "mean_r_10": [
+              -18750,
+              11
+            ],
+            "member_count": 55,
+            "share_of_full_second_moment": [
+              9765625,
+              97887394
+            ],
+            "signed_sum_r_10": -93750,
+            "tail_member_count": 5
+          }
+        },
+        "mean_r_10": [
+          18648,
+          125
+        ],
+        "member_count": 2500,
+        "q": 5,
+        "sign_member_counts": {
+          "negative": 1125,
+          "positive": 1325,
+          "zero": 50
+        },
+        "source_atom_count": 81,
+        "sum_absolute_r_10": 4114220,
+        "sum_r_10": 372960,
+        "sum_r_10_squared": 17619730920,
+        "tied_outer_absolute_one_percent_tail": {
+          "atoms": [
+            {
+              "a_D": 0,
+              "absolute_r_10": 18750,
+              "b_D": -10,
+              "central_minus": true,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 1,
+              "r_10": 18750,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": 0,
+              "absolute_r_10": 18750,
+              "b_D": 10,
+              "central_minus": false,
+              "central_plus": true,
+              "integral_split": true,
+              "member_count": 5,
+              "r_10": -18750,
+              "repeated_factor": true,
+              "sym3_coefficient_curve": true
+            },
+            {
+              "a_D": -4,
+              "absolute_r_10": 16986,
+              "b_D": 14,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": true,
+              "member_count": 5,
+              "r_10": -16986,
+              "repeated_factor": true,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": 4,
+              "absolute_r_10": 16986,
+              "b_D": 14,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": true,
+              "member_count": 5,
+              "r_10": -16986,
+              "repeated_factor": true,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": -4,
+              "absolute_r_10": 11928,
+              "b_D": 8,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 10,
+              "r_10": 11928,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": 4,
+              "absolute_r_10": 11928,
+              "b_D": 8,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 10,
+              "r_10": 11928,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            }
+          ],
+          "mean_r_10": [
+            -175,
+            1
+          ],
+          "member_count": 36,
+          "member_fraction": [
+            9,
+            625
+          ],
+          "minimum_required_mass": 25,
+          "share_of_absolute_first_moment": [
+            26046,
+            205711
+          ],
+          "share_of_second_moment": [
+            1281072,
+            2879041
+          ],
+          "share_of_signed_total": [
+            -5,
+            296
+          ],
+          "signed_sum_r_10": -6300,
+          "threshold": 11928
+        },
+        "trimmed_bulk": {
+          "mean_r_10": [
+            13545,
+            88
+          ],
+          "member_count": 2464,
+          "signed_sum_r_10": 379260
+        },
+        "zero_atoms": [
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "member_count": 50,
+            "sym3_coefficient_curve": true
+          }
+        ]
+      },
+      {
+        "exceptional_loci": {
+          "central_minus": {
+            "mean_r_10": [
+              0,
+              1
+            ],
+            "member_count": 0,
+            "share_of_full_second_moment": [
+              0,
+              1
+            ],
+            "signed_sum_r_10": 0,
+            "tail_member_count": 0
+          },
+          "central_plus": {
+            "mean_r_10": [
+              -100842,
+              1
+            ],
+            "member_count": 42,
+            "share_of_full_second_moment": [
+              282475249,
+              2027125561
+            ],
+            "signed_sum_r_10": -4235364,
+            "tail_member_count": 42
+          },
+          "integral_split": {
+            "mean_r_10": [
+              406536,
+              85
+            ],
+            "member_count": 3570,
+            "share_of_full_second_moment": [
+              2553482326,
+              6081376683
+            ],
+            "signed_sum_r_10": 17074512,
+            "tail_member_count": 84
+          },
+          "repeated_factor": {
+            "mean_r_10": [
+              -44824,
+              1
+            ],
+            "member_count": 84,
+            "share_of_full_second_moment": [
+              2573603650,
+              18244130049
+            ],
+            "signed_sum_r_10": -3765216,
+            "tail_member_count": 42
+          },
+          "sym3_coefficient_curve": {
+            "mean_r_10": [
+              -33614,
+              3
+            ],
+            "member_count": 378,
+            "share_of_full_second_moment": [
+              282475249,
+              2027125561
+            ],
+            "signed_sum_r_10": -4235364,
+            "tail_member_count": 42
+          }
+        },
+        "mean_r_10": [
+          -100542,
+          343
+        ],
+        "member_count": 14406,
+        "q": 7,
+        "sign_member_counts": {
+          "negative": 7980,
+          "positive": 6090,
+          "zero": 336
+        },
+        "source_atom_count": 138,
+        "sum_absolute_r_10": 144339384,
+        "sum_r_10": -4222764,
+        "sum_r_10_squared": 3065013848232,
+        "tied_outer_absolute_one_percent_tail": {
+          "atoms": [
+            {
+              "a_D": 0,
+              "absolute_r_10": 100842,
+              "b_D": 14,
+              "central_minus": false,
+              "central_plus": true,
+              "integral_split": true,
+              "member_count": 42,
+              "r_10": -100842,
+              "repeated_factor": true,
+              "sym3_coefficient_curve": true
+            },
+            {
+              "a_D": -6,
+              "absolute_r_10": 77814,
+              "b_D": 18,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 21,
+              "r_10": 77814,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": 6,
+              "absolute_r_10": 77814,
+              "b_D": 18,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 21,
+              "r_10": 77814,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": -3,
+              "absolute_r_10": 65880,
+              "b_D": 2,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 21,
+              "r_10": 65880,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": 3,
+              "absolute_r_10": 65880,
+              "b_D": 2,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": false,
+              "member_count": 21,
+              "r_10": 65880,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": -7,
+              "absolute_r_10": 50300,
+              "b_D": 24,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": true,
+              "member_count": 21,
+              "r_10": -50300,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            },
+            {
+              "a_D": 7,
+              "absolute_r_10": 50300,
+              "b_D": 24,
+              "central_minus": false,
+              "central_plus": false,
+              "integral_split": true,
+              "member_count": 21,
+              "r_10": -50300,
+              "repeated_factor": false,
+              "sym3_coefficient_curve": false
+            }
+          ],
+          "mean_r_10": [
+            -1862,
+            1
+          ],
+          "member_count": 168,
+          "member_fraction": [
+            4,
+            343
+          ],
+          "minimum_required_mass": 145,
+          "share_of_absolute_first_moment": [
+            73709,
+            859163
+          ],
+          "share_of_second_moment": [
+            5773597990,
+            18244130049
+          ],
+          "share_of_signed_total": [
+            3724,
+            50271
+          ],
+          "signed_sum_r_10": -312816,
+          "threshold": 50300
+        },
+        "trimmed_bulk": {
+          "mean_r_10": [
+            -93094,
+            339
+          ],
+          "member_count": 14238,
+          "signed_sum_r_10": -3909948
+        },
+        "zero_atoms": [
+          {
+            "a_D": 0,
+            "b_D": 0,
+            "member_count": 336,
+            "sym3_coefficient_curve": true
+          }
+        ]
+      }
+    ]
+  },
+  "firewalls": [
+    "The q=3,5,7 rows are complete finite censuses, not an all-q distribution or tail theorem.",
+    "A split, repeated, Sym3, or zero coefficient predicate is not a motive, monodromy, endomorphism, or compatible-system certificate.",
+    "The square-field scalar equality row is only a compact/integrality consequence; geometric realization is not asserted.",
+    "No zero-density, RH, GRH, memberwise sign, or average-to-individual conclusion is made."
+  ],
+  "formal_recurrence_certificate": {
+    "derived_before_sources_loaded": true,
+    "initial_condition": "r_0=1 and r_n=0 for n<0",
+    "r_10_sparse_polynomial": [
+      {
+        "a_power": 0,
+        "b_power": 1,
+        "coefficient": -3,
+        "q_power": 4
+      },
+      {
+        "a_power": 0,
+        "b_power": 3,
+        "coefficient": 4,
+        "q_power": 2
+      },
+      {
+        "a_power": 0,
+        "b_power": 5,
+        "coefficient": -1,
+        "q_power": 0
+      },
+      {
+        "a_power": 2,
+        "b_power": 0,
+        "coefficient": 3,
+        "q_power": 4
+      },
+      {
+        "a_power": 2,
+        "b_power": 1,
+        "coefficient": 24,
+        "q_power": 3
+      },
+      {
+        "a_power": 2,
+        "b_power": 2,
+        "coefficient": -24,
+        "q_power": 2
+      },
+      {
+        "a_power": 2,
+        "b_power": 3,
+        "coefficient": -20,
+        "q_power": 1
+      },
+      {
+        "a_power": 2,
+        "b_power": 4,
+        "coefficient": 15,
+        "q_power": 0
+      },
+      {
+        "a_power": 4,
+        "b_power": 0,
+        "coefficient": -16,
+        "q_power": 3
+      },
+      {
+        "a_power": 4,
+        "b_power": 2,
+        "coefficient": 60,
+        "q_power": 1
+      },
+      {
+        "a_power": 4,
+        "b_power": 3,
+        "coefficient": -35,
+        "q_power": 0
+      },
+      {
+        "a_power": 6,
+        "b_power": 0,
+        "coefficient": 8,
+        "q_power": 2
+      },
+      {
+        "a_power": 6,
+        "b_power": 1,
+        "coefficient": -42,
+        "q_power": 1
+      },
+      {
+        "a_power": 6,
+        "b_power": 2,
+        "coefficient": 28,
+        "q_power": 0
+      },
+      {
+        "a_power": 8,
+        "b_power": 0,
+        "coefficient": 8,
+        "q_power": 1
+      },
+      {
+        "a_power": 8,
+        "b_power": 1,
+        "coefficient": -9,
+        "q_power": 0
+      },
+      {
+        "a_power": 10,
+        "b_power": 0,
+        "coefficient": 1,
+        "q_power": 0
+      }
+    ],
+    "recurrence": "r_n=-a*r_(n-1)-b*r_(n-2)-q*a*r_(n-3)-q^2*r_(n-4)"
+  },
+  "payload_sha256": "6d28e9ac614d2c61744c7e224522f6e44e495aed239a112e658659fcec3186fb",
+  "replay": {
+    "check": "python research/l-families/atlas/function_field/genus2_sym10_rare_event_tomography.py --check",
+    "note": "research/l-families/atlas/function_field/GENUS2_SYM10_RARE_EVENT_TOMOGRAPHY.md",
+    "producer": "research/l-families/atlas/function_field/genus2_sym10_rare_event_tomography.py",
+    "test": "tests/test_genus2_sym10_rare_event_tomography.py",
+    "write": "python research/l-families/atlas/function_field/genus2_sym10_rare_event_tomography.py --write"
+  },
+  "resource_contract": {
+    "actual_recurrence_updates": 2510,
+    "actual_source_atoms": 251,
+    "actual_source_bytes": 180674,
+    "actual_symbolic_operations": 5169,
+    "arithmetic": "exact integers and Fraction ratios only",
+    "formal_symbolic_operations_before_sources": 651,
+    "maximum_recurrence_updates": 4096,
+    "maximum_source_atoms": 512,
+    "maximum_source_bytes": 200000,
+    "maximum_symbolic_operations": 16384,
+    "maximum_wall_seconds": 3.0,
+    "recurrence_steps_per_atom": 10,
+    "sparse_oracle_operation_units_per_atom": 18,
+    "sparse_oracle_terms_per_atom": 17
+  },
+  "schema": "riemann.function_field.genus2_sym10_rare_event_tomography.v1",
+  "scope": {
+    "coverage": "complete member-uniform source laws for exactly q=3,5,7",
+    "curves_enumerated_by_this_replay": 0,
+    "family": "monic squarefree quintics over F_q[T]",
+    "finite_fields_enumerated_by_this_replay": 0,
+    "polynomials_enumerated_by_this_replay": 0,
+    "q_values": [
+      3,
+      5,
+      7
+    ],
+    "source_atoms_visited": 251,
+    "source_members_represented": 17068
+  },
+  "source_manifest": [
+    {
+      "audited_commit": "955ea1e25160075fb4b498018319c80f7e4db9d5",
+      "lf_sha256": "c3494ae852fda4e754b3b0da7cb30a26e3e38ec1c87e2619cd6fee6cdc68b68e",
+      "name": "balanced_joint_law",
+      "path": "research/l-families/atlas/function_field/balanced_control_family_scan.json",
+      "payload_sha256": "50fd136eb0483387246766c5f2426c3e727c69cd9a89943f9268368db0f9d39c"
+    },
+    {
+      "audited_commit": "42910253be8173c6cd0de19a7a7403d0c31b5c22",
+      "lf_sha256": "4f91ac00193805207088e9fc6aea2b464645267b17dc54f71165a1ae3b9d45ce",
+      "name": "sym10_theorem",
+      "path": "research/l-families/atlas/function_field/genus2_sym10_marked_trace_average.json",
+      "payload_sha256": "0fbf48768fdea477b2bee4f53c8f1e547a167155c665b5e97bc201961971ec77"
+    }
+  ],
+  "source_order_firewall": {
+    "symbolic_operations_before_sources": 651,
+    "symbolic_recurrence_and_compact_certificate_closed_before_sources": true
+  },
+  "status": "EXACT_COMPLETE_TOMOGRAPHY_ONLY_FOR_Q_3_5_7"
+}
