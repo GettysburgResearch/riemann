@@ -1,50 +1,72 @@
 {
-  "binding_correction": "R-106131",
-  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
-  "corrected_existing_files": [
-    "L-106112 principal-only atomic diagonal",
-    "L-106121 principal-principal atomic diagonal",
-    "L-106123 fixed-fibre only",
-    "T-106110 principal gate sufficient",
-    "T-106120 superseded uncentered frontier",
-    "T-106121 corrected physical-squareclass frontier"
+  "binding_corrections": [
+    "R-106124",
+    "R-106131",
+    "R-106150"
   ],
+  "branch": "research/gpt56-pro/106000-cvxd-lfamily-hybrid-moments",
   "created": "2026-08-25",
   "files": {
     "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
     "claims/lemmas/L-106132-boolean-half-source-least-prime-calderon-row.md": "f393a1d8583c5680b98a4b3e26d9b5a61c8d2b7a",
+    "claims/lemmas/L-106190-connected-two-modulus-kummer-mobius-inversion.md": "994b6acc0fef2173fb49469701566c765b542c5f",
+    "claims/lemmas/L-106191-source-dual-centered-double-incidence-correlation.md": "85c4ef92ead7d8b235f9c195c3c0acd16d16030f",
+    "claims/refutations/R-106124-complete-tensor-frame-atomic-multiplicity-was-omitted.md": "64cc99cb2ca8e55e0d99e7900730d7b0e614d661",
     "claims/refutations/R-106131-complete-gauss-family-atomic-ledger-carries-phase-cardinality.md": "8dde14dd382e0c4fc1bb54d5da21de85ea002f41",
-    "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md": "4b6470e3bf11f2cf5e04fb88970a56d7b58ef292",
-    "experiments/X-106140-wick-centered-family-repair/results/verification.json": "53e4b36ccfec8c234409536c4a78833f538959cc",
-    "experiments/X-106140-wick-centered-family-repair/verify.py": "fda4d3c60539dfbab1e77ec4412f66adaacb06f1"
+    "claims/theorems/T-106130-connected-bilateral-physical-squareclass-frontier.md": "c85cf82d9b6258dd7607cb9bcbb6bb214f99cfb8",
+    "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+    "experiments/X-106191-centered-incidence-replay/README.md": "f029d80f5494f6d064554766dc7ed6f1da6ac473",
+    "experiments/X-106191-centered-incidence-replay/results/verification.json": "1f333a3714d99e0b370e694c0b53077726b45008",
+    "experiments/X-106191-centered-incidence-replay/verify.py": "f75e9a6cfaae66b6ead06fbf999d91cc2e9275b0",
+    "reports/gpt56-pro/2026-08-25-pr751-normalization-and-frontier-consolidation.md": "4256af6af0bfea9e56c7d1f0274106665e0476d8"
+  },
+  "normalization_firewall": {
+    "complete_frame_atomic_diagonal_paid": false,
+    "literal_atomic_cancellation_in_centered_trace": true,
+    "rescaled_source_blind_free_energy_paid": false,
+    "source_dual_centered_kernel_bounded_by_one": true
   },
   "open": {
     "BCI102990": "open_rh_bearing",
-    "WCADD106140": "open_rh_bearing",
-    "WCKUM106140": "open_rh_bearing",
+    "CBKM106130": "open_rh_bearing",
+    "WCCORR106191": "open_equivalent_to_WCADD106140",
+    "WCADD106140": "open_rh_bearing_with_WCKUM106140",
+    "WCEQ106191": "open_diagnostic",
+    "WCDIST106191": "open_diagnostic",
+    "WCKUM106140": "open_rh_bearing_with_WCADD106140",
+    "REFSIG106150": "open_equivalent_to_SFSC106150",
+    "SFSC106150": "open_rh_bearing",
+    "WKSFSC106150": "open_rh_bearing",
     "riemann_hypothesis": "unproved"
   },
-  "packet_commit": "2d08452d379b51c64d4ee6996ff326962c9ca154",
   "parent_pr": 719,
   "parent_scientific_head": "ec6635b4c7dcd08fe433b7ae7e1d9a8c9495dfcc",
-  "preferred_frontier": "T-106140 / WCADD106140 AND WCKUM106140",
+  "payload_commit": "17bbe001759855e5f854f21abdd91de5892ece2c",
+  "preferred_frontier": "T-106140 / WCCORR106191 (= WCADD106140) AND WCKUM106140",
   "programme_issues": [
     743,
     736,
     737
   ],
   "proved_exact": {
+    "atomic_coefficient_cancellation": true,
     "bilateral_atomic_weight_product": true,
     "boolean_half_source_square": true,
+    "connected_two_coordinate_mobius_inversion": true,
     "least_prime_cutoff_recurrence": true,
     "one_prime_character_weight_sum_q_minus_1": true,
     "principal_atomic_diagonal_subpower": true,
+    "source_dual_centered_incidence_rewrite": true,
     "wick_centered_four_channel_identity": true
   },
   "replay": {
-    "exact_checks": 23035,
-    "proof_object_sha256": "d4b5920eb5a4a68210ba2c22c9ed426de6ef9b46bc37749ef73947cd9a9e07ef",
-    "verdict": "PASS_X_106140_WICK_CENTERED_FAMILY_REPAIR"
+    "exact_atomic_cancellation_checks": 6,
+    "exact_character_weight_checks": 13,
+    "numerical_identity_checks": 1680,
+    "packet_cases": 240,
+    "result_sha256": "4262de6f07dd4c35f93fd4c1654a3173c3dac304d5465a009eb82ac4848a165e",
+    "tolerance": 1e-08,
+    "verdict": "PASS_X_106191_CENTERED_INCIDENCE_IDENTITY"
   },
-  "schema": "riemann.t106140.wick-centered-family-repair-source-lock.v1"
+  "schema": "riemann.t106140.wick-centered-family-repair-source-lock.v2"
 }

@@ -1,0 +1,42 @@
+{
+  "exact_atomic_cancellation_checks": 6,
+  "exact_character_weight_checks": 13,
+  "failed_residuals": {},
+  "max_absolute_residuals": {
+    "centered_connected": 1.585399086560782e-13,
+    "collision_imaginary_part": 2.7755575615628914e-16,
+    "mobius_expansion": 1.7053202743677782e-13,
+    "one_phase_form": 1.674216321134736e-13,
+    "principal_inversion": 1.740847049760574e-13,
+    "source_dual_kernel": 1.8917981704683096e-10,
+    "source_dual_phase": 1.3460521586239338e-10
+  },
+  "numerical_identity_checks": 1680,
+  "packet_cases": 240,
+  "prime_core_warning_checked": {
+    "global_gate_proved": false,
+    "statement": "For c=ell and d=rho, the rescaled atom z_tilde=gamma/(g*u*v*sqrt(PQ)) has u=v=1 and no least-prime decay."
+  },
+  "schema": "riemann.x106191.centered-incidence-replay.v1",
+  "scope": {
+    "not_proved": [
+      "WCCORR106191",
+      "WCADD106140",
+      "WCEQ106191",
+      "WCDIST106191",
+      "WCKUM106140",
+      "BCI102990",
+      "Riemann Hypothesis"
+    ],
+    "proved_by_replay": [
+      "finite connected Kummer-Mobius identities",
+      "finite source-dual rescaling",
+      "finite centered double-incidence expansion",
+      "one-prime total character weight q-1",
+      "atomic coefficient cancellation"
+    ]
+  },
+  "seed": 106191,
+  "tolerance": 1e-08,
+  "verdict": "PASS_X_106191_CENTERED_INCIDENCE_IDENTITY"
+}
