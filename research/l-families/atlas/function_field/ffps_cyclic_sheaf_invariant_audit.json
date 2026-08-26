@@ -1,0 +1,367 @@
+{
+  "payload": {
+    "fixed_fibre_complexity": {
+      "mode_rank": 1,
+      "orientation_cover_degree_on_two_physical_atoms": 16,
+      "physical_pair_coordinate_boundary_divisors": 8,
+      "physical_pair_torus_dimension": 4,
+      "ramification": "tame Kummer; Swan conductor zero on the fixed torus",
+      "ratio_torus_dimension": 2,
+      "selected_modes": 2,
+      "selected_rank": 2,
+      "warning": "these fixed-fibre constants do not bound the ranks or Betti numbers introduced by irreducibility, Boolean incidence, degree shells, or varying closed places"
+    },
+    "invariant_test": {
+      "conclusion": "the generic pair torus has no invariant, but the aligned compensating resonance and double physical collision each have invariant multiplicity two",
+      "connected_monomial_subtorus_rows": [
+        {
+          "alignment": "product",
+          "mode_exponent_mod_3": [
+            1,
+            1
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "generic_pair_torus"
+        },
+        {
+          "alignment": "product",
+          "mode_exponent_mod_3": [
+            1,
+            1
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              0
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "x_collision_only"
+        },
+        {
+          "alignment": "product",
+          "mode_exponent_mod_3": [
+            1,
+            1
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [
+            [
+              0,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "y_collision_only"
+        },
+        {
+          "alignment": "product",
+          "mode_exponent_mod_3": [
+            1,
+            1
+          ],
+          "mode_geometrically_trivial": {
+            "1": true,
+            "2": true
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 2,
+          "stratum": "aligned_compensating_resonance"
+        },
+        {
+          "alignment": "product",
+          "mode_exponent_mod_3": [
+            1,
+            1
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              2
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "opposite_compensating_resonance"
+        },
+        {
+          "alignment": "product",
+          "mode_exponent_mod_3": [
+            1,
+            1
+          ],
+          "mode_geometrically_trivial": {
+            "1": true,
+            "2": true
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 2,
+          "stratum": "double_physical_collision"
+        },
+        {
+          "alignment": "product",
+          "mode_exponent_mod_3": [
+            1,
+            1
+          ],
+          "mode_geometrically_trivial": {
+            "1": true,
+            "2": true
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 2,
+          "stratum": "atomic_diagonal_physical_image"
+        },
+        {
+          "alignment": "quotient",
+          "mode_exponent_mod_3": [
+            1,
+            2
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "generic_pair_torus"
+        },
+        {
+          "alignment": "quotient",
+          "mode_exponent_mod_3": [
+            1,
+            2
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              0
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "x_collision_only"
+        },
+        {
+          "alignment": "quotient",
+          "mode_exponent_mod_3": [
+            1,
+            2
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [
+            [
+              0,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "y_collision_only"
+        },
+        {
+          "alignment": "quotient",
+          "mode_exponent_mod_3": [
+            1,
+            2
+          ],
+          "mode_geometrically_trivial": {
+            "1": true,
+            "2": true
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              2
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 2,
+          "stratum": "aligned_compensating_resonance"
+        },
+        {
+          "alignment": "quotient",
+          "mode_exponent_mod_3": [
+            1,
+            2
+          ],
+          "mode_geometrically_trivial": {
+            "1": false,
+            "2": false
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 0,
+          "stratum": "opposite_compensating_resonance"
+        },
+        {
+          "alignment": "quotient",
+          "mode_exponent_mod_3": [
+            1,
+            2
+          ],
+          "mode_geometrically_trivial": {
+            "1": true,
+            "2": true
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 2,
+          "stratum": "double_physical_collision"
+        },
+        {
+          "alignment": "quotient",
+          "mode_exponent_mod_3": [
+            1,
+            2
+          ],
+          "mode_geometrically_trivial": {
+            "1": true,
+            "2": true
+          },
+          "relation_rows_mod_3": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "selected_rank_two_invariant_multiplicity": 2,
+          "stratum": "atomic_diagonal_physical_image"
+        }
+      ],
+      "general_criterion": "on a geometrically integral stratum Z, the selected mode is geometrically constant iff R_X*R_Y^epsilon is a cube in the function field of Z",
+      "ratio_coordinates": [
+        "R_X=X_1/X_2",
+        "R_Y=Y_1/Y_2"
+      ]
+    },
+    "resource_ledger": {
+      "exact_operations": 274,
+      "max_exact_operations": 2000,
+      "max_output_bytes": 32768,
+      "max_wall_seconds": 3.0
+    },
+    "same_characteristic_control": {
+      "base_field": "F_7",
+      "closed_places": "two distinct degree-one places",
+      "complete_leverage": "9/16",
+      "hard_leverage": "1/2",
+      "local_physical_dimensions": [
+        3,
+        3
+      ],
+      "ordering": "L_hard < L_full < L_soft",
+      "soft_complete_metric_leverage": "513/784",
+      "wick_atomic_residual": "63/4"
+    },
+    "schema": "riemann.function_field.ffps_cyclic_sheaf_invariant_audit.v1",
+    "scope": {
+      "enumeration": {
+        "closed_places": false,
+        "conductors": false,
+        "curves": false,
+        "finite_fields": false,
+        "l_functions": false,
+        "zeros": false
+      },
+      "not_constructed": "the universal varying-closed-place source complex, its Betti bounds, or CYSEL",
+      "proved": "exact ternary Fourier coefficients and F_3 exponent-lattice invariant tests for connected monomial subtori"
+    },
+    "ternary_mask_fourier": {
+      "conclusion": "every two-point ternary hard mask has |gamma_1|^2=|gamma_2|^2=1/4; rotation cannot tune the selected rank-two Kummer system",
+      "k": 3,
+      "retained_size": 2,
+      "rows": [
+        {
+          "mode_squared_norms": {
+            "1": "1/4",
+            "2": "1/4"
+          },
+          "retained_exponents": [
+            0,
+            1
+          ]
+        },
+        {
+          "mode_squared_norms": {
+            "1": "1/4",
+            "2": "1/4"
+          },
+          "retained_exponents": [
+            0,
+            2
+          ]
+        },
+        {
+          "mode_squared_norms": {
+            "1": "1/4",
+            "2": "1/4"
+          },
+          "retained_exponents": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  "payload_sha256": "12f5ffe380ef3318897495d32af5a8166fc97cdf5b7549d3b7d437b5d0837aa0"
+}
