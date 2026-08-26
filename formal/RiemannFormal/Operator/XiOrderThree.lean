@@ -6,6 +6,7 @@ import RiemannFormal.Operator.XiSourceSpecific
 namespace RiemannFormal.Operator
 
 open ChallengeDeps.XiPickOrderThreeConditional
+open scoped Topology
 
 private theorem sharedPSD2_to_local {a b c : ℝ}
     (h : ChallengeDeps.XiPickOrderThreeConditional.IsPSD2 a b c) :
@@ -80,7 +81,7 @@ theorem regroupedActualXi_energy_tendsto
     approximation.secondConverges htDomain
   have htwo : Filter.Tendsto (fun _ : ℕ => (2 : ℝ)) Filter.atTop (𝓝 (2 : ℝ)) :=
     tendsto_const_nhds
-  simpa [reciprocalEnergy] using
+  simpa [reciprocalEnergy, pow_two] using
     (hvalue.mul hsecond).sub (htwo.mul (hfirst.mul hfirst))
 
 /-- A nonnegative scalar sequence cannot converge in absolute difference to
