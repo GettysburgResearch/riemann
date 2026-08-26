@@ -121,7 +121,7 @@ noncomputable def sharpTarget (y : ℝ) : ℝ :=
   if 1 ≤ y then 4 * Real.sqrt y - 3 else 0
 
 /-- Raw support cutoff used by the historically false child substitution. -/
-def rawSupportCutoff (z t : ℝ) : ℝ :=
+noncomputable def rawSupportCutoff (z t : ℝ) : ℝ :=
   if t ≤ z then 1 else 0
 
 /-- Exact endpoint Radon--Nikodym child density. -/
@@ -199,7 +199,7 @@ theorem response_capacity_coefficients_differ_16_4_4 :
 /-! ## Quantified normalization firewall -/
 
 /-- Normalized activity after a `p^{-1/2}` amplitude has been squared. -/
-def normalizedPrimeActivity (p : ℝ) : ℝ := 1 / p
+noncomputable def normalizedPrimeActivity (p : ℝ) : ℝ := 1 / p
 
 /-- Unsquared prime amplitude. -/
 noncomputable def primeAmplitude (p : ℝ) : ℝ := 1 / Real.sqrt p

@@ -7,7 +7,9 @@ trap 'rm -f "$OUT"' EXIT
 cd "$ROOT/formal"
 {
   lake env lean RiemannFormal/AxiomAudit.lean
+  lake env lean RiemannFormal/Arithmetic/AxiomAudit.lean
   lake env lean comparator/PrintAxioms/RH.lean
+  lake env lean comparator/PrintAxioms/ArithmeticFixedRows.lean
 } 2>&1 | tee "$OUT"
 
 python3 "$ROOT/formal/scripts/audit_axiom_output.py" "$OUT"

@@ -16,7 +16,7 @@ def etaCoeff (k : ℕ) : ℚ :=
   (Nat.centralBinom k : ℚ) / (4 : ℚ) ^ k
 
 /-- The same coefficient in generalized-binomial form. -/
-def etaChoose (k : ℕ) : ℚ :=
+noncomputable def etaChoose (k : ℕ) : ℚ :=
   (-1 : ℚ) ^ k * Ring.choose (-(1 / 2 : ℚ)) k
 
 @[simp]
@@ -40,7 +40,8 @@ theorem etaCoeff_recurrence (k : ℕ) :
   calc
     (↑k + 1) * (↑(Nat.centralBinom (k + 1)) / ((4 : ℚ) ^ k * 4)) =
         (((k + 1 : ℕ) : ℚ) * (Nat.centralBinom (k + 1) : ℚ)) /
-          ((4 : ℚ) ^ k * 4) := by ring
+          ((4 : ℚ) ^ k * 4) := by
+            norm_num [Nat.cast_add, Nat.cast_one] <;> ring
     _ = (2 * (2 * (k : ℚ) + 1) * (Nat.centralBinom k : ℚ)) /
           ((4 : ℚ) ^ k * 4) := by rw [hcast]
     _ = ((k : ℚ) + 1 / 2) *
@@ -99,8 +100,18 @@ theorem etaCoeff_antidiagonal (n : ℕ) :
             apply Finset.sum_congr rfl
             intro ij hij
             have hijsum : ij.1 + ij.2 = n := Finset.mem_antidiagonal.mp hij
-            simp only [etaChoose, ← pow_add, hijsum]
-            ring
+            simp only [etaChoose]
+            calc
+              ((-1 : ℚ) ^ ij.1 * Ring.choose (-(1 / 2 : ℚ)) ij.1) *
+                    ((-1 : ℚ) ^ ij.2 * Ring.choose (-(1 / 2 : ℚ)) ij.2) =
+                  (-1 : ℚ) ^ (ij.1 + ij.2) *
+                    (Ring.choose (-(1 / 2 : ℚ)) ij.1 *
+                      Ring.choose (-(1 / 2 : ℚ)) ij.2) := by
+                    rw [pow_add]
+                    ring
+              _ = (-1 : ℚ) ^ n *
+                    (Ring.choose (-(1 / 2 : ℚ)) ij.1 *
+                      Ring.choose (-(1 / 2 : ℚ)) ij.2) := by rw [hijsum]
       _ = (-1 : ℚ) ^ n *
           (∑ ij ∈ Finset.antidiagonal n,
             Ring.choose (-(1 / 2 : ℚ)) ij.1 *
@@ -138,7 +149,10 @@ theorem eta_apply_one : eta 1 = 1 := by simp [eta]
 theorem eta_isMultiplicative : eta.IsMultiplicative := by
   refine ArithmeticFunction.IsMultiplicative.iff_ne_zero.2 ⟨eta_apply_one, ?_⟩
   intro m n hm hn hcop
-  simp only [eta, hm, hn, mul_ne_zero hm hn, if_false]
+  have heta (x : ℕ) :
+      eta x = if x = 0 then 0 else x.factorization.prod (fun _ k => etaCoeff k) := by
+    rfl
+  simp only [heta, hm, hn, mul_ne_zero hm hn, if_false]
   rw [Nat.factorization_mul_of_coprime hcop]
   exact Finsupp.prod_add_index_of_disjoint hcop.disjoint_primeFactors
     (fun _ k => etaCoeff k)
@@ -151,7 +165,8 @@ theorem eta_prime_pow {p k : ℕ} (hp : p.Prime) :
   · subst k
     simp [eta]
   · have hpk : p ^ k ≠ 0 := pow_ne_zero _ hp.ne_zero
-    simp [eta, hpk, hp.factorization_pow, Finsupp.prod_single_index, etaCoeff_zero]
+    simp [eta, hpk, hp.factorization_pow, Finsupp.prod_single_index, etaCoeff_zero,
+      hp.ne_zero]
 
 private theorem pow_div_pow_of_le {p i k : ℕ} (hp : 0 < p) (hi : i ≤ k) :
     p ^ k / p ^ i = p ^ (k - i) := by

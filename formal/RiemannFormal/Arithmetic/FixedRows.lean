@@ -19,9 +19,8 @@ theorem row3_factorization_of_row2_zero {a b : ℂ}
     (h2 : row2Numerator a b = 0) :
     row3ScaledNumerator a b = -3 * ((a - 1) * (a - 2)) := by
   have hb : b = 2 * a - 1 := by
-    calc
-      b = b - row2Numerator a b := by rw [h2]; ring
-      _ = 2 * a - 1 := by simp [row2Numerator]; ring
+    unfold row2Numerator at h2
+    linear_combination -h2
   rw [hb]
   simp [row3ScaledNumerator]
   ring
