@@ -1,0 +1,646 @@
+{
+  "exact_theorems": {
+    "cyclic_centered_projector_identity": {
+      "definitions": "O_j=(k/t)*sum_(Phi in zeta^j*S)z; c_r=t^(-1)*sum_(s in S)s^(-r); H_r=sum Phi^r*z; P=sum z, D=sum |z|^2, D_j=sum_(Phi in zeta^j*S)|z|^2",
+      "general_formula": "P_circ=(1/k)*sum_j O_j_circ-sum_(r=1)^(k-1)|c_r|^2*H_r_circ",
+      "literal_atoms_cancel": true,
+      "parseval": "sum_(r=1)^(k-1)|c_r|^2=k/t-1",
+      "ternary_control": {
+        "H_1_centered": [
+          1337,
+          9
+        ],
+        "H_2_centered": [
+          1337,
+          9
+        ],
+        "atomic_cancellation": true,
+        "control_coefficients": [
+          [
+            -8,
+            1
+          ],
+          [
+            -1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -4,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            -7,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            -3,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            -5,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            -8,
+            3
+          ]
+        ],
+        "fourier_weight_abs_squared": {
+          "r=1": [
+            1,
+            4
+          ],
+          "r=2": [
+            1,
+            4
+          ]
+        },
+        "identity": "P_circ=(O_0_circ+O_1_circ+O_2_circ)/3-(H_1_circ+H_2_circ)/4",
+        "literal_atomic_diagonal": [
+          8323,
+          36
+        ],
+        "principal": [
+          -11,
+          2
+        ],
+        "principal_centered": [
+          -3617,
+          18
+        ],
+        "reconstructed_centered": [
+          -3617,
+          18
+        ],
+        "rotated_observations_centered": [
+          [
+            715,
+            4
+          ],
+          [
+            -971,
+            8
+          ],
+          [
+            -3499,
+            8
+          ]
+        ]
+      }
+    },
+    "exact_2k_root_orientation": {
+      "existence": "theta has an exact-order-2k root xi; its two square roots differ by the quadratic character kappa",
+      "finite_gauge_audit": {
+        "character_order": 3,
+        "constant_exponent_shift": 2,
+        "gauge_root": 2,
+        "mask_effect": "rotate S in mu_k; support labels change but all metric values do not",
+        "multiplicative_formula": "epsilon_(u*r^2)=theta(r)^(-1)*epsilon_u",
+        "new_representative": 4,
+        "old_representative": 1,
+        "prime": 13,
+        "root_choice": "the two square roots xi and xi*kappa agree on x/u because x/u is a square"
+      },
+      "finite_invariance_audits": [
+        {
+          "character_order": 3,
+          "orientation_distribution": {
+            "0": 1,
+            "1": 1,
+            "2": 1
+          },
+          "oriented_fibres_are_singletons": true,
+          "physical_coordinates": 3,
+          "prime": 7,
+          "raw_core_character_mixes_on_some_physical_fibre": true,
+          "sector_representative": 1,
+          "source_representations": 18
+        },
+        {
+          "character_order": 3,
+          "orientation_distribution": {
+            "0": 1,
+            "1": 1,
+            "2": 1
+          },
+          "oriented_fibres_are_singletons": true,
+          "physical_coordinates": 3,
+          "prime": 7,
+          "raw_core_character_mixes_on_some_physical_fibre": true,
+          "sector_representative": 3,
+          "source_representations": 18
+        },
+        {
+          "character_order": 3,
+          "orientation_distribution": {
+            "0": 2,
+            "1": 2,
+            "2": 2
+          },
+          "oriented_fibres_are_singletons": true,
+          "physical_coordinates": 6,
+          "prime": 13,
+          "raw_core_character_mixes_on_some_physical_fibre": true,
+          "sector_representative": 1,
+          "source_representations": 72
+        },
+        {
+          "character_order": 3,
+          "orientation_distribution": {
+            "0": 2,
+            "1": 2,
+            "2": 2
+          },
+          "oriented_fibres_are_singletons": true,
+          "physical_coordinates": 6,
+          "prime": 13,
+          "raw_core_character_mixes_on_some_physical_fibre": true,
+          "sector_representative": 2,
+          "source_representations": 72
+        }
+      ],
+      "hypothesis": "p is prime, k>=2, and 2k divides p-1; theta is one chosen even exact-order-k character",
+      "order_certificate": "in the unique character subgroup <gamma> of order 2k, write theta=gamma^(2a), gcd(a,k)=1; one of gamma^a and gamma^(a+k) has exact order 2k",
+      "physical_formula": "epsilon_(p,u)(x)=xi(x/u) in mu_k for x/u a square",
+      "primitive_character_gauge": "theta->theta^a, gcd(a,k)=1, applies the automorphism z->z^a; the aligned k>2 mask is source-legitimate but noncanonical",
+      "raw_core_failure": {
+        "character_order": 3,
+        "conclusion": "raw theta(c) is not physical under varying owners; xi(P/u)*theta(c)=xi(P*c^2/u) is physical",
+        "first": {
+          "core": 1,
+          "oriented_physical_exponent_mod_3": 0,
+          "owner": 1,
+          "physical": 1,
+          "raw_core_exponent_mod_3": 0
+        },
+        "prime": 7,
+        "second": {
+          "core": 3,
+          "oriented_physical_exponent_mod_3": 0,
+          "owner": 4,
+          "physical": 1,
+          "raw_core_exponent_mod_3": 1
+        },
+        "sector_representative": 1
+      },
+      "root_independence": "xi and xi*kappa agree on x/u because x/u is a square",
+      "sector_gauge": "u->u*r^2 multiplies epsilon by theta(r)^(-1); this rotates quotient labels and leaves support cardinality and metrics invariant",
+      "source_factorization": "epsilon_(p,u)(P*c^2)=xi(P/u)*theta(c)"
+    },
+    "hard_versus_soft_metric": {
+      "character_order": 3,
+      "complete_tensor_leverage": [
+        9,
+        14
+      ],
+      "constant_tensor_eigenvalue_Q": 28,
+      "native_amplitude": 18,
+      "primes": [
+        7,
+        13
+      ],
+      "quotient_value_counts": {
+        "0": 6,
+        "1": 6,
+        "2": 6
+      },
+      "restricted_gram_denominator": 588,
+      "restricted_row_sum": [
+        49,
+        1
+      ],
+      "retained_exponents": [
+        0,
+        1
+      ],
+      "same_zero_extended_weight_in_complete_inverse_metric": [
+        135,
+        182
+      ],
+      "sharp_restricted_leverage": [
+        27,
+        49
+      ],
+      "sharp_uniform_retained_weight": [
+        3,
+        2
+      ],
+      "strict_ordering": "hard < complete < soft",
+      "support_density": [
+        2,
+        3
+      ],
+      "support_size": 12,
+      "top_tensor_eigenvalue_P": 91
+    },
+    "live_L_106120_mode_identification": {
+      "all_modes_double_nonprincipal": true,
+      "composite_order_firewall": "exact common order k keeps eta^r and theta^r nonprincipal for every 1<=r<k, although their exact orders may drop",
+      "ell_side": "epsilon_ell(Q*d^2)=chi(Q/u_ell)*eta(d), chi^2=eta",
+      "fourier_modes": "Phi^r is the L-106120 (eta^r,theta^r) channel with roots (chi^r,psi^r), for 1<=r<k",
+      "hard_support_not_supplied_by_WCKUM": true,
+      "product": "Phi=epsilon_ell(Q*d^2)*epsilon_rho(P*c^2) differs from the L-106120 coefficient chi(Q)*eta(d)*psi(P)*theta(c) only by a fixed owner-sector scalar",
+      "rho_side": "epsilon_rho(P*c^2)=psi(P/u_rho)*theta(c), psi^2=theta"
+    },
+    "universal_improvement_implies_positive_wick_residual": {
+      "all_panel_proof": "For d=1, 2*Q*N^2-(P-Q)^2=m^2*(2m+1)>0. For d>=2, put r(m)=(2m+1)^2/(2*m^2*(m+1)). It is strictly decreasing because d(log r)/dm=4/(2m+1)-2/m-1/(m+1)<0. Every eligible m is at least 2; distinct primes permit m=2 at most once. If no m=2 then all r(m)<=r(3)<1. If m=2 occurs, pair it with one other factor: r(2)*r(3)=1225/1728<1. Hence P^2<2^d*Q*N^2, which is stronger.",
+      "finite_controls": [
+        {
+          "A_equals_Q_over_N": [
+            7,
+            4
+          ],
+          "B_equals_P_over_N": [
+            65,
+            12
+          ],
+          "character_order": 2,
+          "density": [
+            1,
+            2
+          ],
+          "hard_leverage": [
+            24,
+            43
+          ],
+          "improvement_threshold_exceeds_atomic_threshold": true,
+          "leverage_improvement_threshold": [
+            21,
+            44
+          ],
+          "phase_atomic_D0": 48,
+          "positive_atomic_residual_threshold": [
+            13,
+            124
+          ],
+          "primes": [
+            5,
+            13
+          ],
+          "retained_count": 1,
+          "strictly_improves_complete": true,
+          "wick_residual": [
+            980,
+            43
+          ],
+          "wick_residual_positive": true
+        },
+        {
+          "A_equals_Q_over_N": [
+            14,
+            9
+          ],
+          "B_equals_P_over_N": [
+            91,
+            18
+          ],
+          "character_order": 3,
+          "density": [
+            2,
+            3
+          ],
+          "hard_leverage": [
+            27,
+            49
+          ],
+          "improvement_threshold_exceeds_atomic_threshold": true,
+          "leverage_improvement_threshold": [
+            4,
+            9
+          ],
+          "phase_atomic_D0": 72,
+          "positive_atomic_residual_threshold": [
+            91,
+            1359
+          ],
+          "primes": [
+            7,
+            13
+          ],
+          "retained_count": 2,
+          "strictly_improves_complete": true,
+          "wick_residual": [
+            7335,
+            196
+          ],
+          "wick_residual_positive": true
+        }
+      ],
+      "leverage_improvement_threshold": "rho_imp=A/(B-A)",
+      "normalized_variables": "A=Q/N, B=P/N, D0=product_i(p_i-1)=2^d*N, rho=t/k",
+      "positive_residual_threshold": "rho_atom=B/(D0-A+B)",
+      "r_2": [
+        25,
+        24
+      ],
+      "r_2_times_r_3": [
+        1225,
+        1728
+      ],
+      "r_3": [
+        49,
+        72
+      ],
+      "theorem": "Every proper cyclic hard mask that strictly improves the complete tensor leverage has a strictly positive Wick atomic residual.",
+      "threshold_comparison": "rho_imp>rho_atom iff A*D0>(B-A)^2 iff 2^d*Q*N^2>(P-Q)^2",
+      "wick_residual": "R=D0/(A*rho^2+B*rho*(1-rho))-rho^(-2)"
+    },
+    "wick_atomic_firewall": {
+      "coefficient_weighted_external_gauss_diagnostic": [
+        91,
+        36
+      ],
+      "conclusion": "hard restriction retains a positive conductor-dimensional Wick residual; the centered three-projector/two-Kummer-mode identity cancels literal atoms",
+      "diagnostic_firewall": "91/36 is sum_r |c_r|^2 times the external L-106120 Gauss weight; the unweighted centered identity has literal coefficient 1/2",
+      "each_selected_double_nonprincipal_gauss_weight": [
+        91,
+        18
+      ],
+      "hard_observation_atomic_coefficient": [
+        9,
+        4
+      ],
+      "literal_centered_identity_atomic_coefficient": [
+        1,
+        2
+      ],
+      "normal_ordering_residual": [
+        7335,
+        196
+      ],
+      "phase_atomic_coefficient": 72,
+      "residual_is_positive": true,
+      "selected_channel_count": 2,
+      "sum_of_fourier_weight_squares": [
+        1,
+        2
+      ]
+    }
+  },
+  "firewalls": [
+    "For k>2 the primitive characters, abstract mu_k alignments, sector representatives, and labelled retained set S are choices. Gauge changes rotate or automorphically relabel the quotient; no canonical global mask has been produced.",
+    "The exact ternary gain occurs only after a hard physical restriction. A soft estimate for its two L-106120 character modes is not that restriction.",
+    "Every cyclic hard mask that improves the complete tensor retains a strictly positive Wick atomic residual. The exact ternary residual is 7335/196.",
+    "The centered projector identity is signed. It requires coherent global recombination; taking absolute values separately by conductor fibre is forbidden.",
+    "Membership of selected modes among WCKUM summands does not imply a bound for their selected weighted subcombination.",
+    "No principal member is individualized; no RH or GRH claim is made.",
+    "No external novelty claim is made."
+  ],
+  "generated_by": "research/l-families/atlas/function_field/ffps_cyclic_source_realization_gate.py",
+  "packet_manifest": {
+    "note": {
+      "lf_sha256": "ab880fc0278cdf48daf3bb05782ef1594f3446765616d08aaf95a16bb912c8b4",
+      "path": "research/l-families/atlas/function_field/FFPS_CYCLIC_SOURCE_REALIZATION_GATE.md"
+    },
+    "producer": {
+      "lf_sha256": "df10dc9be0f90e03610f556ee498a4f769aa64bccc31affec94f59e860d8b727",
+      "path": "research/l-families/atlas/function_field/ffps_cyclic_source_realization_gate.py"
+    },
+    "test": {
+      "lf_sha256": "f3a3ab86ec5abb8c91b6040d4c627f11e20baa8b6a7c7acc8282e7e80b9ef5bd",
+      "path": "tests/test_ffps_cyclic_source_realization_gate.py"
+    }
+  },
+  "payload_sha256": "fa2aa7082d4e6e38f79690ec5295f3ffa238e7be17d9c6a7bfd146f3c9eb7a9f",
+  "resource_contract": {
+    "actual_exact_operations": 6390,
+    "actual_git_objects": 17,
+    "actual_matrix_cells": 369,
+    "actual_residue_atoms": 224,
+    "actual_source_bytes": 55649,
+    "actual_source_files": 4,
+    "arithmetic": "exact integers and Fraction only; no floating point",
+    "heavy_computation": false,
+    "matrix_cells_before_sources": 369,
+    "maximum_control_prime": 13,
+    "maximum_exact_operations": 30000,
+    "maximum_git_objects": 20,
+    "maximum_matrix_cells": 2048,
+    "maximum_packet_file_bytes": 65536,
+    "maximum_residue_atoms": 512,
+    "maximum_source_bytes_each": 32768,
+    "maximum_source_bytes_total": 80000,
+    "maximum_source_files": 4,
+    "maximum_wall_seconds": 5.0,
+    "operation_counts": {
+      "centered_control_coefficients": 18,
+      "cyclic_orientations": 236,
+      "discrete_log_steps": 4390,
+      "primitive_root_candidates": 941,
+      "rotated_mask_terms": 36,
+      "support_energy_cells": 144,
+      "trial_divisions": 625
+    },
+    "operations_before_sources": 6390,
+    "residue_atoms_before_sources": 224
+  },
+  "schema": "riemann.function_field.ffps_cyclic_source_realization_gate.v1",
+  "scope": {
+    "characters_enumerated": 0,
+    "conductors_enumerated": 0,
+    "finite_field_curve_families_enumerated": 0,
+    "forbidden_inference": "spectral inclusion of every Phi^r in L-106120/WCKUM does not turn the complete inverse metric G^(-1) into the restricted metric G_A^(-1)",
+    "l_functions_enumerated": 0,
+    "open_arithmetic": [
+      "a source-admissible hard deletion/re-inversion across the complete varying-conductor assembly",
+      "globally recombined Wick-centered cyclic conditioned-current estimates",
+      "the selected off-atomic double-nonprincipal Kummer traces",
+      "WCADD106140",
+      "WCKUM106140",
+      "BCI102990",
+      "RH",
+      "GRH"
+    ],
+    "proved_metric": "hard physical restriction before the phase square, and its exact distinction from soft complete-frame character weighting",
+    "proved_source_realization": "one fixed live bilateral fibre with two owner quadratic sectors and two marked primes satisfying 2k|(p-1)",
+    "random_samples": 0,
+    "residue_fields_inspected": [
+      7,
+      13
+    ]
+  },
+  "source_contract": {
+    "live_claim_blobs": [
+      {
+        "claim_id": "L-106020",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "dffea80b5cd7790779397fda1430d30260e79876",
+        "path": "claims/lemmas/L-106020-square-phase-gauss-mellin-identity.md",
+        "role": "even-character Gauss--Mellin identity"
+      },
+      {
+        "claim_id": "L-106024",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "d94787dc2cd1cedd74d33ddc6269daf8de1cc061",
+        "path": "claims/lemmas/L-106024-local-squareclass-physical-occupancy-is-a-strict-contraction.md",
+        "role": "local sign-pair Gram pI-J"
+      },
+      {
+        "claim_id": "L-106040",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "828d0fcde62c4029c448f33c0130fdb039700d31",
+        "path": "claims/lemmas/L-106040-squarefree-composite-kummer-tensor-frame.md",
+        "role": "formal composite Kummer tensor frame"
+      },
+      {
+        "claim_id": "T-106040",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "bd87d14b28d851d40db696a53cf00055070ea02c",
+        "path": "claims/theorems/T-106040-composite-owner-conductor-kummer-frontier.md",
+        "role": "bounded source-selected owner-conductor tensor and open assembly"
+      },
+      {
+        "claim_id": "L-106120",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "a8d829dc10611adb7bfb4853902bdff0ab02a065",
+        "path": "claims/lemmas/L-106120-bilateral-least-prime-phases-form-a-tensor-kummer-family.md",
+        "role": "bilateral source variables and root-character channels"
+      },
+      {
+        "claim_id": "L-106121",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "955c3ed0363ca330439eedbae1bf0041a4c96468",
+        "path": "claims/lemmas/L-106121-bilateral-tensor-moment-has-a-paid-atomic-diagonal.md",
+        "role": "principal atomic diagonal and source-dual moment"
+      },
+      {
+        "claim_id": "T-106121",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "9111983ae4bf199a8315310a9ce090561430c33b",
+        "path": "claims/theorems/T-106121-bilateral-physical-squareclass-family-frontier.md",
+        "role": "corrected physical coordinates P*c^2 and Q*d^2"
+      },
+      {
+        "claim_id": "R-106122",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "dc51ae3add697ab4cec868ef8439f864ce77d71a",
+        "path": "claims/refutations/R-106122-owner-only-product-collisions-do-not-survive-varying-core-characters.md",
+        "role": "owner/core Kummer-coupling firewall"
+      },
+      {
+        "claim_id": "R-106123",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "f89cad68d67444280088d8bea7cbfb7c1eacc90d",
+        "path": "claims/refutations/R-106123-local-core-large-sieve-does-not-pay-the-global-conductor-family.md",
+        "role": "varying-conductor positive-sum firewall"
+      },
+      {
+        "claim_id": "L-106126",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "b4dbebde403a11696c56a4689b2df8b53326a157",
+        "path": "claims/lemmas/L-106126-physical-squareclass-collisions-are-four-linear-core-lines.md",
+        "role": "two/four physical collision lines"
+      },
+      {
+        "claim_id": "R-106131",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "8dde14dd382e0c4fc1bb54d5da21de85ea002f41",
+        "path": "claims/refutations/R-106131-complete-gauss-family-atomic-ledger-carries-phase-cardinality.md",
+        "role": "complete-family atomic phase cardinality"
+      },
+      {
+        "claim_id": "L-106131",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "37722c3f36ec7d1681f34d4329a3795e5028f7ae",
+        "path": "claims/lemmas/L-106131-wick-normal-ordering-additive-kummer-decomposition.md",
+        "role": "exact Wick additive/Kummer decomposition"
+      },
+      {
+        "claim_id": "T-106140",
+        "commit": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+        "git_blob": "d5be8e376c88b63de0be19e0d9e8791624e99ae2",
+        "path": "claims/theorems/T-106140-wick-centered-additive-kummer-conjunction-frontier.md",
+        "role": "live WCKUM/WCADD conjunction and summation discipline"
+      }
+    ],
+    "live_pr_751_head": "98af0db6ec7f77d6333a77a3dac53c4698852f43",
+    "prerequisite_relationship": {
+      "checkerboard_bridge_payload": "f158c471f3d3d80652bc370cd278f761c4b289db052c2a64d095c4d4367fcc68",
+      "cyclic_payload": "fa8b52ef39b7aa56eac02d7ed3d962282546c3cda7a262e5331683213b7947e1",
+      "relationship": "the cyclic packet supplies the hard quotient mask; the checkerboard packet supplies the k=2 physical orientation and Wick firewall; this packet proves the exact 2k-th-root source realization for every fixed k"
+    },
+    "prerequisites": [
+      {
+        "bytes_read": 10967,
+        "commit": "5724d30a9ddd91a489312a9d09512587c4c028c1",
+        "git_blob": "80a56f847a1d272c43e092164503ecdfdd4c4b5d",
+        "id": "cyclic_note",
+        "lf_sha256": "b37d5149bd53974f724d132c9b9e81060afab78816a4bec34fc8e0efcd10056c",
+        "path": "research/l-families/atlas/function_field/FFPS_CYCLIC_CHARACTER_MASKS.md",
+        "role": "common-order cyclic quotient-fibre restricted-Gram theorem"
+      },
+      {
+        "bytes_read": 18985,
+        "commit": "5724d30a9ddd91a489312a9d09512587c4c028c1",
+        "git_blob": "475a44f8ebb724fb47dcc22a6434bec3a1a85425",
+        "id": "cyclic_json",
+        "lf_sha256": "b6f0034b8da4c82c2b921b0a191d12e77def31723a8a91da2f21ad9c33ad49fd",
+        "path": "research/l-families/atlas/function_field/ffps_cyclic_character_masks.json",
+        "role": "canonical cyclic quotient and sharp hard-metric fixture"
+      },
+      {
+        "bytes_read": 12156,
+        "commit": "09b74682ad6fce3ebfcc5012b246825c0fb5a740",
+        "git_blob": "15c32de6182407e65a6d41d593f7542945bf704e",
+        "id": "checkerboard_bridge_note",
+        "lf_sha256": "a22baad21815e6bcf7d41361861ccec8c09b0328fc55ec51c2f078b3fe77e4f2",
+        "path": "research/l-families/atlas/function_field/FFPS_CHECKERBOARD_SOURCE_BRIDGE.md",
+        "role": "quadratic physical orientation and Wick firewall"
+      },
+      {
+        "bytes_read": 13541,
+        "commit": "09b74682ad6fce3ebfcc5012b246825c0fb5a740",
+        "git_blob": "6b38bb23a540bd9d1825cb8941de79f84f58a8f1",
+        "id": "checkerboard_bridge_json",
+        "lf_sha256": "8d8e3c374ab2fd55c438dfe2968d0faf9622e46ab0034bb7b278c636c92a6052",
+        "path": "research/l-families/atlas/function_field/ffps_checkerboard_source_bridge.json",
+        "role": "canonical physical-collapse and hard-versus-soft seed"
+      }
+    ]
+  },
+  "status": "EXACT_FIXED_FIBRE_CYCLIC_SOURCE_GATE_WITH_WICK_FIREWALL"
+}
