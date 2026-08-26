@@ -1,0 +1,144 @@
+{
+  "fixed_ray_theorem": {
+    "asymptotic": "Q_(a,b)(X)=A_(a,b)*log(X)+O_(a,b,R)(1)",
+    "exceptional_radial_sums": {
+      "0,0": "4758/4489",
+      "0,1": "-136/67",
+      "0,2": "1",
+      "1,0": "-136/67",
+      "2,0": "1"
+    },
+    "formula": "sqrt(ab)*Q_(a,b)(X)/R(log(a/b))=mu(a0)mu(b0)*sum_r c_(r+alpha)c_(r+gamma)67^-r*W_(67a0b0)(X/(67^r max(a,b)))",
+    "harmonic_density": "C(q)=zeta(2)^-1*product_(p|q)(1+1/p)^-1",
+    "ray_replays": [
+      {
+        "alpha": 0,
+        "gamma": 0,
+        "left": 1,
+        "left_free": 1,
+        "prefix": 100,
+        "right": 1,
+        "right_free": 1,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 0,
+        "gamma": 0,
+        "left": 2,
+        "left_free": 2,
+        "prefix": 80,
+        "right": 1,
+        "right_free": 1,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 0,
+        "gamma": 0,
+        "left": 3,
+        "left_free": 3,
+        "prefix": 500,
+        "right": 5,
+        "right_free": 5,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 1,
+        "gamma": 0,
+        "left": 67,
+        "left_free": 1,
+        "prefix": 4690,
+        "right": 1,
+        "right_free": 1,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 0,
+        "gamma": 1,
+        "left": 1,
+        "left_free": 1,
+        "prefix": 4690,
+        "right": 67,
+        "right_free": 1,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 2,
+        "gamma": 0,
+        "left": 4489,
+        "left_free": 1,
+        "prefix": 22445,
+        "right": 1,
+        "right_free": 1,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 0,
+        "gamma": 2,
+        "left": 1,
+        "left_free": 1,
+        "prefix": 22445,
+        "right": 4489,
+        "right_free": 1,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 1,
+        "gamma": 0,
+        "left": 134,
+        "left_free": 2,
+        "prefix": 9380,
+        "right": 3,
+        "right_free": 3,
+        "scaled_weight_match": true
+      },
+      {
+        "alpha": 0,
+        "gamma": 1,
+        "left": 3,
+        "left_free": 3,
+        "prefix": 23450,
+        "right": 335,
+        "right_free": 5,
+        "scaled_weight_match": true
+      }
+    ]
+  },
+  "localization": {
+    "height": "h(m,n)=max(m/gcd(m,n),n/gcd(m,n))",
+    "low_height_bound": "|Q_<=H(X)| <= 16||R||_infty H(X)(1+log X)",
+    "quantifier": "every prescribed H(X)>=1 with H(X)=X^o(1)",
+    "residual_estimate_proved": false,
+    "residual_geometry": "both reduced coordinates > H(X)/16 and gcd(m,n) < X/H(X)",
+    "rh_equivalence": "RH iff |Q_>H(X)(X)|=X^o(1)",
+    "rh_proved": false
+  },
+  "radial_projector": {
+    "critical_line_convergence_claimed": false,
+    "domain": "separated Euler products converge absolutely only for Re(s)>1",
+    "exceptional_local_cells": 9,
+    "exceptional_residue_ratio": "2379/2278",
+    "ordinary_local_cells": 4,
+    "radial_factor": "zeta(2sigma)/zeta(4sigma)*(1+4*67^(-2sigma)+67^(-4sigma))/(1+67^(-2sigma))"
+  },
+  "resource_caps": {
+    "conductor_families": 0,
+    "curves": 0,
+    "finite_fields": 0,
+    "l_functions": 0,
+    "largest_direct_radial_loop": 100,
+    "local_beta_coefficients": 256,
+    "ray_samples": 9,
+    "zeta_zeros": 0
+  },
+  "source_contract": {
+    "commit": "756660350",
+    "git_blobs": {
+      "research/l-families/atlas/function_field/FFPS_BOUNDARY_FIELD_NEAR_CORRELATION_CRITERION.md": "105837343b6b8ef148488f492c66da8feae0334a",
+      "research/l-families/atlas/function_field/FFPS_MOLLIFIED_BETA_BOUNDARY_SHELL_IDENTITY.md": "bf4d1baa231086ba7e8eafaecd39730d83c9201a",
+      "research/l-families/atlas/function_field/ffps_boundary_field_near_correlation_criterion.json": "efc21abe6b87d16d49b272d0fd0dd65e1f059d57",
+      "research/l-families/atlas/function_field/ffps_boundary_field_near_correlation_criterion.py": "53b5a710cb2f6b918958ff7e96801d81e2a0a79c",
+      "tests/test_ffps_boundary_field_near_correlation_criterion.py": "006e1c41f34f4d1e9a8885fb160c7d9886a3a77d"
+    },
+    "imported_theorem": "RH iff the signed off-diagonal compact-ratio beta Gram form is X^o(1)"
+  }
+}
