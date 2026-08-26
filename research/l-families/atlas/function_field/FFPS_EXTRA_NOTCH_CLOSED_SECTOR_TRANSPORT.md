@@ -1,8 +1,8 @@
 # Mollification transports the extra notch through the parent closure classes
 
 Status: **generic fixed-mollifier transport theorem and summary-level
-parent-taxonomy candidate; exact source recombination and a finite
-claim-by-claim provenance audit remain required before `EXTSRC106150`**
+parent-taxonomy candidate; the historical raw-complete Jordan route is
+refuted, while exact fixed-mollified source recombination remains open**
 
 Bounded exponent replay:
 [`ffps_extra_notch_closed_sector_transport.py`](ffps_extra_notch_closed_sector_transport.py).
@@ -81,6 +81,14 @@ Positive convolution also contracts Jordan negative variation.  Therefore a
 raw `WKSFSC` Jordan negative-variation premise controls the mollified live
 current.  All constants here may depend on the fixed `epsilon`; this packet
 makes no uniform claim as `epsilon` tends to zero.
+
+That implication is still correct for the frozen live source, but its
+raw-complete application is now vacuous.  The later complete-beta atomic
+firewall proves `Omega(sqrt(Y))` raw Jordan negative variation.  Consequently
+`WKSFSC106150 + EXTSRC106150` cannot supply a subpower raw complete current.
+The viable formulation starts with the fixed-mollified density; its missing
+source bridge is `MEXTSRC106150/NATCOMP-MOLL106150`, and its subpower
+negative-mass estimate is RH-equivalent rather than proved.
 
 This nominates a finite route to `EXTSRC106150`; it does not close the adapter.
 One must verify that each inherited proof named “absolute”, “summable”,
@@ -277,14 +285,16 @@ It commutes with source shifts, Boolean projections, and fixed dyadic
 operators.  Hence
 
 ```text
-raw Jordan WKSFSC
+historical live-source raw Jordan WKSFSC
   -> mollified live negative-mass bound;
 
 proved EXTSRC106150, including the seven-row provenance and source binding
   -> mollified closed field has absolute subpower mass;
 
 both together
-  -> mollified complete extra-notched beta current has subpower negative mass.
+  -> formally a mollified complete-current bound, but this raw-completion
+     route is vacuous because the atomic firewall refutes its raw complete
+     consequence.
 ```
 
 The separate analytic consumer is recorded in
@@ -311,8 +321,14 @@ Still required:
   identification;
 - exact complete-source recombination and horizon compatibility after
   mollification;
-- the full-source statement `EXTSRC106150`;
-- raw Jordan `WKSFSC106150`.
+- the fixed-mollified source gates `MEXTSRC106150` and
+  `NATCOMP-MOLL106150`;
+- the fixed-mollified one-sided estimate, which is RH-equivalent and open.
+
+The raw complete-beta Jordan premise is not on this list: it is refuted by
+the later atomic-variation firewall.  The distinct frozen live-source
+`WKSFSC106150` remains only a historical conditional input to the generic
+contraction theorem above.
 
 The audit should start with `L-102953` and `T-102970`, then walk backward only
 where those files cite an inherited absolute ledger.  It need not recompute a

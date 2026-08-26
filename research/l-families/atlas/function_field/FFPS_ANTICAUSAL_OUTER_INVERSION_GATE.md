@@ -1,7 +1,9 @@
 # The extra-notched current has a bounded global anti-causal inverse
 
-Status: **exact global one-sided inversion theorem; moving-source terminal
-compatibility and the parent native-source binding remain open; RH unproved**
+Status: **exact global one-sided inversion theorem; the later complete-beta
+atomic firewall refutes its raw-complete Jordan application; moving-source
+terminal compatibility and the parent native-source binding remain open; RH
+unproved**
 
 Bounded exact replay:
 [`ffps_anticausal_outer_inversion_gate.py`](ffps_anticausal_outer_inversion_gate.py).
@@ -82,6 +84,14 @@ source and cutoff move with the horizon.  The anti-causal inverse reads a
 future terminal shell.  One must prove that the same frozen source is
 controlled on its entire constant-factor future support before replacing the
 extra-notched premise by the native parent premise.
+
+There is now also a decisive complete-source fence.  The later
+`FFPS_COMPLETE_BETA_ATOMIC_VARIATION_FIREWALL.md` proves that the raw complete
+duplicate-`67` beta current has Jordan negative variation
+`Omega(sqrt(Y))`.  Thus (0.5) remains an exact fixed/live-source operator
+theorem, but it is **not** a viable raw-complete beta route to RH.  A viable
+complete-source use would have to mollify before taking the Jordan part; the
+resulting negative-mass estimate is RH-equivalent and is not proved here.
 
 There is a separate source-binding issue.  The multiplier identities prove a
 same-source transfer to the explicit `K_nat` of the zero-moment `L-102880`.
@@ -246,6 +256,13 @@ The conclusion-facing arrow is conditional on the still-open parent binding:
 \tag{4.2}
 \]
 
+Equations (4.1)--(4.2) retain the historical frozen live-source implication.
+They must not be read as asserting a raw complete-beta premise: that distinct
+premise is refuted by the atomic firewall.  Nor does this packet prove that
+the live `WKSFSC106150` source can be completed by `EXTSRC106150`; the two raw
+premises cannot jointly yield a subpower complete current in view of the
+square-root lower bound.
+
 If the original `WKSFSC` quantifier already controls the complete support of
 each fixed source, `TERMFUT106150` is bookkeeping and should be discharged by
 an exact support lemma.  If its horizon quantifier changes the source before
@@ -255,12 +272,17 @@ the terminal shell is reached, the gate is real.
 
 `FFPS_EXTRA_NOTCHED_MELLIN_LANDAU_CONSUMER.md` gives a second repair route
 which never returns to `K_nat`.  It instead needs the complete-source adapter
-`EXTSRC106150`.  The two exact remaining tasks are therefore complementary:
+`EXTSRC106150`.  Historically, the two proposed tasks were complementary:
 
 ```text
 native route:  prove TERMFUT106150 and use bounded anti-causal inversion;
 direct route:  prove EXTSRC106150 and use the extra-notched Landau consumer.
 ```
+
+The direct **raw-Jordan** route is now retired.  `EXTSRC106150` remains a
+source-accounting question, but only its fixed-mollified replacement can feed
+a viable complete-current criterion, and `MEXTSRC106150/NATCOMP-MOLL106150`
+are not proved.
 
 The native route also needs the finite `NATBIND106150` source/kernel audit
 before invoking `BCI102990`.  Neither route needs the power-lossy causal
@@ -283,7 +305,16 @@ Still open:
 - whether the original horizon convention already implies `TERMFUT106150`;
 - `NATBIND106150`, the exact parent binding to the explicit native kernel and
   same live source;
-- `EXTSRC106150`, raw Jordan `WKSFSC106150`, BCI, RH, and GRH.
+- `EXTSRC106150` and live-source `WKSFSC106150` as separate source gates;
+- a fixed-mollified complete-source replacement (`MEXTSRC106150` and
+  `NATCOMP-MOLL106150`), BCI, RH, and GRH.
+
+Refuted by the later complete-source atomic firewall:
+
+- raw complete-beta Jordan negative variation `Y^o(1)`; it grows at least
+  like `sqrt(Y)`.  This does not by itself refute the differently scoped live
+  source in (4.1), but it blocks promoting (4.1) through a raw-complete
+  adapter.
 
 ## 7. Bounded replay
 

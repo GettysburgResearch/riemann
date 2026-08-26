@@ -272,6 +272,11 @@ def run() -> dict[str, object]:
                 "the explicit outer estimate, or cancellation after the complete "
                 "undeleted Boolean source and all source sectors are recombined"
             ),
+            "later_complete_source_disposition": (
+                "the separate complete-beta atomic variation firewall refutes "
+                "the raw complete Jordan premise with an Omega(sqrt(Y)) lower "
+                "bound; this deleted-shell packet retains its native-kernel fence"
+            ),
             "parent_blocker": (
                 "the three-way explicit/constructed/D_out adapter must be repaired "
                 "or retyped "

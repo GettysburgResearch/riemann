@@ -273,6 +273,10 @@ def run() -> dict[str, object]:
                 "uniform same-U Jordan negative-mass control for each exact "
                 "physical source shell on its complete [Y/8,32Y] support"
             ),
+            "raw_complete_beta_status": (
+                "refuted by the later atomic variation firewall; this does not "
+                "settle the differently scoped shell-projected FSHELL106150 gate"
+            ),
             "type_I_repair_boundary": (
                 "cutoff drift is algebraically a difference of Type-I rows; "
                 "extra-notched absolute closure of that difference is not in "

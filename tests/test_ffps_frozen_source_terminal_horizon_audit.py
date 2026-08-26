@@ -72,6 +72,8 @@ class FfpsFrozenSourceTerminalHorizonAuditTest(unittest.TestCase):
         result = terminal_horizon_audit.run()
         typed = result["typed_conclusion"]
         self.assertIn("same-U", typed["smallest_new_gate"])
+        self.assertIn("refuted", typed["raw_complete_beta_status"])
+        self.assertIn("FSHELL106150", typed["raw_complete_beta_status"])
         self.assertIn("not in the frozen claims", typed["type_I_repair_boundary"])
         caps = result["resource_caps"]
         self.assertEqual(caps["boolean_labels"], 4)

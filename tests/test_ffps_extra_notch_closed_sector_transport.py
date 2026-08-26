@@ -71,6 +71,10 @@ class FfpsExtraNotchClosedSectorTransportTest(unittest.TestCase):
             "proved EXTSRC106150",
             result["adapter_status"]["complete_current_implication"],
         )
+        self.assertIn("refuted", result["adapter_status"]["raw_complete_jordan_status"])
+        self.assertIn(
+            "NATCOMP-MOLL106150", result["adapter_status"]["viable_replacement"]
+        )
         kernel = result["kernel_class"]
         self.assertEqual(
             kernel["epsilon_scope"], "epsilon>0 is fixed independently of Y"

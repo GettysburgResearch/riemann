@@ -126,6 +126,10 @@ class FfpsCommonMotherOuterNotchMismatchTest(unittest.TestCase):
         )
         self.assertEqual(result["anti_causal_inverse"]["global_l1_norm"], "1+sqrt(2)")
         self.assertIn("EXTSRC", result["impact"]["required_repair"])
+        self.assertIn("refuted", result["impact"]["raw_complete_beta_status"])
+        self.assertIn(
+            "NATCOMP-MOLL106150", result["impact"]["viable_complete_reformulation"]
+        )
         caps = result["resource_caps"]
         self.assertEqual(caps["piecewise_cells_integrated"], 3)
         self.assertEqual(caps["source_atoms_enumerated"], 0)

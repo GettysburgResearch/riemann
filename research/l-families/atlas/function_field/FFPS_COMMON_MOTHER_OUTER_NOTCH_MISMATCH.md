@@ -421,16 +421,22 @@ D_out J
   -/-> inherited BCI closure under the uncorrected L-102740 adapter.
 ```
 
-Three legitimate repair routes remain.
+Three formal adapter routes are separated below.  The raw-Jordan version of
+Route A has since been retired by the complete-beta atomic firewall; only a
+fixed-mollified reformulation remains potentially viable.
 
 ### Route A: retain the complete extra-notched detector
 
 The extra-notched multiplier (0.10) is itself zero-safe in the open strip.
 One may therefore prove the separate exact source gate `EXTSRC106150`: the
 **complete** duplicate-`67` `beta` source must equal
-`D_out J_U^diamond` plus an absolute-subpower closed field.  Together with
-the appropriate complete-current negative-mass premise, that gives a direct
-Mellin--Landau route with no inverse.
+`D_out J_U^diamond` plus an absolute-subpower closed field.  Historically,
+combining this with a raw complete-current negative-mass premise would have
+given a direct Mellin--Landau route with no inverse.  The later atomic
+firewall proves that raw premise false: its Jordan negative variation is
+`Omega(sqrt(Y))`.  `EXTSRC106150` therefore remains only a source-accounting
+question.  A viable analytic route must mollify before taking the Jordan
+part, and the required `MEXTSRC106150/NATCOMP-MOLL106150` bridge is not proved.
 
 Neither `L-102740`, `L-102880`, nor the misidentified `L-102885` supplies
 `EXTSRC106150`.  They compare fixed kernels; they do not identify the complete
@@ -468,7 +474,9 @@ L-106134 polynomial RHS                                 EXACT FOR QV R_exp / QV 
 L-106134 identification with native R_L/K_L            FALSE AS WRITTEN
 T-106150 Wick/reflection algebra                        RETAINED FOR D_out J
 T-106150 implication D_out J -> native BCI current     NOT TYPED
-EXTSRC106150                                             OPEN / NOT AUTOMATIC
+EXTSRC106150                                             OPEN SOURCE ACCOUNTING
+raw complete-beta Jordan premise                        REFUTED: Omega(sqrt(Y))
+MEXTSRC106150 / NATCOMP-MOLL106150                       OPEN / NOT AUTOMATIC
 direct adapter to L-102504                              OPEN
 Q causal inverse                                       POSITIVE BUT POWER-LOSSY
 Q anti-causal inverse                                  BOUNDED GLOBALLY; PREFIX GATE OPEN
@@ -516,7 +524,16 @@ Not proved:
 - terminal-horizon/source-truncation compatibility for the anti-causal inverse;
 - a subpower causal one-sided inverse for `Q`;
 - the native outer-current identification in `L-106134--T-106150`;
-- `WKSFSC106150`, `SFSC106150`, `REFSIG106150`, BCI, RH, or GRH.
+- live-source `WKSFSC106150`, `SFSC106150`, `REFSIG106150`, BCI, RH, or
+  GRH;
+- the fixed-mollified source bridge `MEXTSRC106150/NATCOMP-MOLL106150`.
+
+Refuted later, for the complete duplicate-`67` beta current:
+
+- raw complete-current Jordan negative variation `Y^o(1)`; the atomic
+  firewall proves an `Omega(sqrt(Y))` lower bound.  The distinct frozen
+  live-source gates above are not identified with that complete current
+  without an adapter.
 
 ## 6. Bounded replay
 

@@ -72,6 +72,11 @@ class FfpsAnticausalOuterInversionGateTest(unittest.TestCase):
         self.assertEqual(result["terminal_gate"]["name"], "TERMFUT106150")
         self.assertEqual(result["conclusion_scope"]["parent_binding_status"], "open")
         self.assertIn("NATBIND106150", result["conclusion_scope"]["parent_binding"])
+        self.assertIn("refuted", result["conclusion_scope"]["raw_complete_beta_status"])
+        self.assertIn(
+            "RH-equivalent",
+            result["conclusion_scope"]["viable_complete_replacement"],
+        )
         multipliers = result["three_kernel_multipliers"]
         self.assertNotEqual(
             multipliers["explicit_native_K_L"],

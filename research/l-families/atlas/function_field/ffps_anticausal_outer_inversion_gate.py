@@ -193,6 +193,15 @@ def run() -> dict[str, object]:
                 "kernel and same live source before the BCI/RH arrow"
             ),
             "parent_binding_status": "open",
+            "raw_complete_beta_status": (
+                "refuted by the complete-beta atomic variation firewall: "
+                "Jordan negative variation is Omega(sqrt(Y)); the kernel-level "
+                "implication concerns the differently scoped frozen live source"
+            ),
+            "viable_complete_replacement": (
+                "mollify before Jordan decomposition; the fixed-mollified "
+                "negative-mass estimate is RH-equivalent and is not proved here"
+            ),
         },
         "resource_caps": {
             "maximum_dyadic_depth": 32,

@@ -85,6 +85,13 @@ class FfpsSignedDifferentialAtomicShellFirewallTest(unittest.TestCase):
         self.assertIn("three distinct", reduction["parent_adapter_status"])
         self.assertIn("three-way", result["conclusion"]["parent_blocker"])
         self.assertIn("does_not_rule_out", result["conclusion"])
+        self.assertIn(
+            "refutes", result["conclusion"]["later_complete_source_disposition"]
+        )
+        self.assertIn(
+            "native-kernel fence",
+            result["conclusion"]["later_complete_source_disposition"],
+        )
 
     def test_scale_gap_and_caps(self) -> None:
         ledger = signed_atomic_shell.scale_ledger()

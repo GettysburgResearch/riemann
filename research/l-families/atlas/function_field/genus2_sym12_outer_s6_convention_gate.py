@@ -307,10 +307,15 @@ def build_packet() -> dict[str, object]:
             "official_general_fixed_dimension": 0,
             "outer_counterfactual_fixed_dimension": 1,
             "corrected_natural_marked_valuation_nullity": 0,
+            "stable_adapter_status": (
+                "closed by the exact modular-zero general-channel adapter: "
+                "G=0 for the positive semisimplified marked stable channel"
+            ),
             "remaining_gate": (
-                "Transport the exact natural marked modular zero through an independently "
-                "justified cohomological/Galois adapter.  The former 15-dimensional "
-                "one-orientation kernel is retracted, and outer-S6 relabelling is irrelevant."
+                "Resolve the separately source-caveated nonregular compact-support "
+                "Eisenstein Galois class and the all-q Sym12 formula.  The "
+                "modular-zero-to-stable adapter is already closed, and outer-S6 "
+                "relabelling is irrelevant."
             ),
         },
         "novelty_firewall": (

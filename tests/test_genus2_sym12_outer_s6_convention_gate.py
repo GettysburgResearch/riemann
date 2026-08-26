@@ -83,6 +83,9 @@ def test_canonical_packet_and_convention_conclusion() -> None:
     assert stored["exact_conclusion"]["official_general_fixed_dimension"] == 0
     assert stored["exact_conclusion"]["outer_counterfactual_fixed_dimension"] == 1
     assert stored["exact_conclusion"]["corrected_natural_marked_valuation_nullity"] == 0
+    assert "G=0" in stored["exact_conclusion"]["stable_adapter_status"]
+    assert "already closed" in stored["exact_conclusion"]["remaining_gate"]
+    assert "Eisenstein" in stored["exact_conclusion"]["remaining_gate"]
     reconciliation = stored["convention_reconciliation"]
     assert reconciliation["split_root_M2_type"] == "[2,2,2]"
     assert reconciliation["Bergstrom_Clery_2025_M2_type"] == "[2,2,2]"

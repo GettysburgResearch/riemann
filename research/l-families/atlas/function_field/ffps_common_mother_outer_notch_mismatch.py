@@ -400,6 +400,14 @@ def run() -> dict[str, object]:
                 "prove EXTSRC for the complete source, or prove terminal-safe "
                 "anti-causal Q removal; V has a fixed positive stable inverse"
             ),
+            "raw_complete_beta_status": (
+                "refuted by the later atomic variation firewall: raw Jordan "
+                "negative variation is Omega(sqrt(Y))"
+            ),
+            "viable_complete_reformulation": (
+                "mollify before Jordan decomposition; MEXTSRC106150 and "
+                "NATCOMP-MOLL106150 remain unproved"
+            ),
         },
         "resource_caps": {
             "mellin_samples": len(samples),

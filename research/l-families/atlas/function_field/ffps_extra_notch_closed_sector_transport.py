@@ -177,8 +177,16 @@ def run() -> dict[str, object]:
             ),
             "EXTSRC106150": "open pending that provenance and source-binding audit",
             "complete_current_implication": (
-                "raw Jordan WKSFSC plus proved EXTSRC106150 controls the "
-                "mollified complete current"
+                "historical conditional only: raw Jordan WKSFSC plus proved "
+                "EXTSRC106150 controls the mollified complete current"
+            ),
+            "raw_complete_jordan_status": (
+                "refuted by the complete-beta atomic variation firewall: "
+                "negative variation is Omega(sqrt(Y))"
+            ),
+            "viable_replacement": (
+                "MEXTSRC106150 and NATCOMP-MOLL106150 remain unproved; the "
+                "fixed-mollified negative-mass estimate is RH-equivalent"
             ),
         },
         "contraction_panels": contraction_panels,

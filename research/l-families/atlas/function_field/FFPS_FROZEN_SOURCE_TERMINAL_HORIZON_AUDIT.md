@@ -95,6 +95,12 @@ native negative-mass premise.  The separate `NATBIND106150` parent binding
 identified in the outer-notch audit is still required before invoking
 `BCI102990`.
 
+This shell-projected live-source gate must not be confused with the raw
+complete-beta Jordan premise.  The later complete-source atomic firewall
+refutes the latter with an `Omega(sqrt(Y))` lower bound.  It does not settle
+`FSHELL106150`, whose source is one fixed physical shell, but it removes any
+claim that the raw complete premise remains an open route.
+
 ## 1. Exact fixed-source terminal theorem
 
 The explicit native kernel has support `[1,8]`.  Therefore, for
@@ -373,8 +379,14 @@ Not proved:
 
 - `FSHELL106150`;
 - corrected extra-notched Type-I absolute closure across comparable cutoffs;
-- projection stability of `WKSFSC106150`;
+- projection stability of the historical live-source `WKSFSC106150` into
+  `FSHELL106150`;
 - `NATBIND106150`, `EXTSRC106150`, BCI, RH, or GRH.
+
+Refuted by the later complete-source atomic firewall:
+
+- raw complete-beta Jordan negative variation `Y^o(1)`.  This is distinct
+  from the still-open shell-projected gate above.
 
 ## 6. Frozen provenance and bounded replay
 

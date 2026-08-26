@@ -392,6 +392,14 @@ In particular, the result does **not** establish any of the following:
 - a lower bound for the complete current after all source sectors combine;
 - RH or GRH, or their negations.
 
+Those bullets delimit this packet's theorem; they are not a current-frontier
+open ledger.  The later
+`FFPS_COMPLETE_BETA_ATOMIC_VARIATION_FIREWALL.md` performs the full
+complete-source recombination and proves that the raw complete-beta Jordan
+premise fails with an `Omega(sqrt(Y))` lower bound.  It does not retroactively
+turn this deleted-shell argument into a proof about the explicit native outer
+kernel, so the kernel-typing fences above remain in force.
+
 ## 5. Proof ledger
 
 Proved exactly:
@@ -415,11 +423,14 @@ Still open:
 
 - repair or retyping of the parent explicit-outer/`D_out` adapter;
 - the signed atomic response of the explicit outer kernel;
-- the cancellation or reinforcement of this shell in the complete undeleted
-  Boolean source;
+- within this packet, the cancellation or reinforcement of this shell in the
+  complete undeleted Boolean source (settled downstream for the raw complete
+  beta current by the separate atomic-variation firewall);
 - the endpoint-colour bookkeeping if a consumer excludes the extra-notched
   atoms from its negative-part convention;
-- every RH-bearing gate listed above.
+- every remaining live-source, native-kernel, or fixed-mollified RH-bearing
+  gate listed above, excluding the downstream-refuted raw complete-beta
+  premise.
 
 ## 6. Bounded replay
 
