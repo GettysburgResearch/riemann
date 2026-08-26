@@ -1,6 +1,6 @@
 # Exact two-place cumulant defects in the quadratic genus-two family
 
-Status: **PROVED** for every odd prime power (q). The packet computes a
+Status: **PROVED** for every odd prime power `q`. The packet computes a
 complete two-place joint law and its mixed cumulant defects; it proves no
 zero theorem, RH implication, or principal-member amplifier.
 
@@ -12,14 +12,14 @@ Let
  \mathcal H_5(q)={D\in\mathbf F_q[T]:D\text{ monic squarefree},\deg D=5}.
 \]
 
-Choose distinct rational places (a,b\in\mathbf F_q), and put
+Choose distinct rational places `a,b in F_q`, and put
 
 \[
  X_D=\chi(D(a)),\qquad Y_D=\chi(D(b)),
 \]
 
-where (chi(0)=0). These are the local quadratic Euler coefficients at
-(T-a) and (T-b). Write
+where `chi(0)=0`. These are the local quadratic Euler coefficients at
+`T-a` and `T-b`. Write
 
 \[
  \epsilon=\chi(-1),\qquad s=\chi(b-a).
@@ -73,28 +73,27 @@ characteristics.
 
 ## 1. The five tiny Euler products
 
-For a Dirichlet character (psi), squarefree Euler factorization gives
+For a Dirichlet character `psi`, squarefree Euler factorization gives
 
 \[
- \sum_{D\ {m monic\ squarefree}}\psi(D)u^{\deg D}
+ \sum_{D\ {\mathrm{monic\ squarefree}}}\psi(D)u^{\deg D}
  =\prod_P(1+\psi(P)u^{\deg P})
  ={L(u,\psi)\over L(u^2,\psi^2)}.
 \tag{4}
 \]
 
-The degree-one character (D\mapsto\chi(D(a))) has (L)-polynomial (1):
-for every positive degree, evaluation at (a) is uniform and the nontrivial
+The degree-one character `D -> chi(D(a))` has `L`-polynomial `1`:
+for every positive degree, evaluation at `a` is uniform and the nontrivial
 character sum vanishes. The product character
-(D\mapsto\chi(D(a)D(b))) has (L)-polynomial (1-u). Its degree-one row is
+`D -> chi(D(a)D(b))` has `L`-polynomial `1-u`. Its degree-one row is
 
 \[
  \sum_{z\in\mathbf F_q}\chi((a-z)(b-z))=-1,
 \tag{5}
 \]
 
-because (z\mapsto(a-z)/(b-z)) maps
-(mathbf F_q\setminus\{b}) bijectively to
-(mathbf F_q\setminus\{1}); all higher rows vanish by the uniform joint
+because `z -> (a-z)/(b-z)` maps `F_q` minus `{b}` bijectively to `F_q`
+minus `{1}`; all higher rows vanish by the uniform joint
 evaluation map.
 
 Consequently the five generating functions needed at degree five are
@@ -111,7 +110,7 @@ XY&(1-u)(1-qu^2)/(1-u^2)^2.
 \tag{6}
 \]
 
-The degree-five coefficients are respectively (A,V,W,0,C). To get the
+The degree-five coefficients are respectively `A,V,W,0,C`. To get the
 mixed rows, remove the unwanted rational Euler factor from the one-character
 product:
 
@@ -120,13 +119,13 @@ product:
 \tag{7}
 \]
 
-whose degree-five coefficient is (sigma(2q-3)). Here
-(sigma=s) for (X^2Y) and (sigma=epsilon s) for (XY^2). This proves
+whose degree-five coefficient is `sigma(2q-3)`. Here
+`sigma=s` for `X^2Y` and `sigma=epsilon s` for `XY^2`. This proves
 (2).
 
 ## 2. The full (3\times3) joint law
 
-For (x,y\in\{-1,1}), the exact cell counts are
+For `x,y in {-1,1}`, the exact cell counts are
 
 \[
 \boxed{
@@ -146,9 +145,9 @@ The axis and ramified cell counts are
 \tag{9}
 \]
 
-Equations (8)--(9) are integral, nonnegative, and sum to (A). They are also
+Equations (8)--(9) are integral, nonnegative, and sum to `A`. They are also
 an exact finite-field explanation for the orientation dependence: the fixed
-monic odd-degree model remembers both (chi(b-a)) and (chi(-1)).
+monic odd-degree model remembers both `chi(b-a)` and `chi(-1)`.
 
 ## 3. Exact renormalization residual
 
@@ -195,9 +194,9 @@ Thus every first residual channel has the same finite-family scale:
 \tag{12}
 \]
 
-When (q\equiv3\pmod4), the odd aggregate defects vanish exactly. When
-(q\equiv1\pmod4), their sign remembers the squareclass of the oriented
-separation (b-a). The even defects remain.
+When `q = 3 mod 4`, the odd aggregate defects vanish exactly. When
+`q = 1 mod 4`, their sign remembers the squareclass of the oriented
+separation `b-a`. The even defects remain.
 
 ## 4. Interpretation
 
@@ -205,12 +204,12 @@ The result makes three methodological points exact.
 
 1. Complete one-place laws do not determine the two-place detector flow.
    Here the one-place means are zero and the marginals agree, yet
-   (Delta_2>0).
-2. The first arithmetic residual is small but structured: all five displayed
-   cumulant defects begin at order (q^{-4}), not at unrelated scales.
+   `Delta_2>0`.
+2. The first arithmetic residual is small but structured: every allowed
+   nonzero displayed channel begins at order `q^-4`, not at unrelated scales.
 3. Conditioning and orientation expose odd channels. Center symmetry at one
    place does not force the aggregate odd cumulants to vanish when
-   (q\equiv1\pmod4).
+   `q = 1 mod 4`.
 
 This coupling comes from the fixed-degree squarefree ensemble. It is not
 evidence for a mysterious motive, a zero bias, or an RH detector. A next

@@ -25,7 +25,6 @@ SOURCE_BLOB = "e1740dd014cd0f43222b8ec73a09ee1374b7f3cc"
 SCHEMA = "riemann.function_field.quadratic_family_two_place_cumulant_defect.v1"
 MAX_SERIES_DEGREE = 5
 MAX_SAMPLE_Q = 7
-OPERATION_CAP = 20_000
 
 Poly = tuple[int, ...]  # coefficients low to high in q
 
@@ -345,7 +344,7 @@ def build_payload() -> dict[str, object]:
         "resource_contract": {
             "series_degree": MAX_SERIES_DEGREE,
             "largest_sample_q": MAX_SAMPLE_Q,
-            "operation_cap": OPERATION_CAP,
+            "largest_moment_order": 6,
             "finite_field_enumeration": False,
             "curve_enumeration": False,
             "sampling": False,

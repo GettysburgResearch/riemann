@@ -69,13 +69,13 @@
     "two_unramified": "(1-q*u^2)/((1-q*u)*(1+u)^2)"
   },
   "orientation": "epsilon=chi(-1), s=chi(b-a)",
-  "payload_sha256": "d15cfd666e6cb47ffb32cf4d98d35d0595046c614295c4bbd3116a0e2e017e1b",
+  "payload_sha256": "18119e393842cfbe1f3ee7f594466eedf554004f9479f94338675921a3b0f859",
   "places": "two distinct rational primes T-a and T-b",
   "resource_contract": {
     "curve_enumeration": false,
     "finite_field_enumeration": false,
+    "largest_moment_order": 6,
     "largest_sample_q": 7,
-    "operation_cap": 20000,
     "sampling": false,
     "series_degree": 5
   },
