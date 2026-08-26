@@ -59,7 +59,10 @@ def main() -> None:
             "total_charge": str(total),
             "alpha0_lower": str(base),
             "margin_over_90": "181/250000",
-            "conrey_certificate": cert,
+            "conrey_certificate_alpha_lower": cert["alpha_lower"],
+            "conrey_certificate_sha256": hashlib.sha256(
+                json.dumps(cert, sort_keys=True, separators=(",", ":")).encode()
+            ).hexdigest(),
         },
         "scope": {
             "alpha5_exact_certificate": True,
