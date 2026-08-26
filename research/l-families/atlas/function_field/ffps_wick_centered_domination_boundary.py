@@ -35,6 +35,8 @@ SOURCE_BLOBS = {
 MAX_K = 12
 MAX_MULTIPLICITY = 10
 MAX_MATRIX_ENTRIES = 160_000
+MAX_FOURIER_K = 7
+MAX_FOURIER_SCALAR_PRODUCTS = 200_000
 MAX_WALL_SECONDS = 3.0
 
 Matrix = tuple[tuple[Fraction, ...], ...]
@@ -72,11 +74,91 @@ def quadratic_form(matrix: Matrix, vector: tuple[Fraction, ...]) -> Fraction:
     )
 
 
+def average_outer(vectors: tuple[tuple[Fraction, ...], ...]) -> Matrix:
+    if not vectors or not vectors[0]:
+        raise ValueError("vectors must be nonempty")
+    size = len(vectors[0])
+    if any(len(vector) != size for vector in vectors):
+        raise ValueError("vector sizes must agree")
+    count = Fraction(len(vectors))
+    return tuple(
+        tuple(
+            sum((vector[row] * vector[column] for vector in vectors), Fraction())
+            / count
+            for column in range(size)
+        )
+        for row in range(size)
+    )
+
+
+def translated_mask_covariance(
+    order: int, retained_positions: tuple[int, ...]
+) -> tuple[dict[str, object], int]:
+    """Replay one translated hard mask without invoking its Fourier formula."""
+
+    if order < 2:
+        raise ValueError("order must be at least two")
+    positions = tuple(sorted(set(retained_positions)))
+    if (
+        not positions
+        or len(positions) == order
+        or len(positions) != len(retained_positions)
+        or any(position < 0 or position >= order for position in positions)
+    ):
+        raise ValueError("positions must define a nonempty proper subset")
+    retained_size = len(positions)
+    retained = frozenset(positions)
+    weight = Fraction(order, retained_size)
+    hard_vectors = tuple(
+        tuple(
+            weight if (phase - shift) % order in retained else Fraction()
+            for phase in range(order)
+        )
+        for shift in range(order)
+    )
+    centered_vectors = tuple(
+        tuple(entry - 1 for entry in vector) for vector in hard_vectors
+    )
+    hard = average_outer(hard_vectors)
+    selected = subtract(hard, all_ones(order))
+    selected_direct = average_outer(centered_vectors)
+    if selected != selected_direct:
+        raise ArithmeticError("centered translated-mask covariance failed")
+
+    for row in range(order):
+        for column in range(order):
+            delta = (column - row) % order
+            intersection = sum(
+                1 for value in retained if (value + delta) % order in retained
+            )
+            expected = Fraction(order * intersection, retained_size * retained_size)
+            if hard[row][column] != expected:
+                raise ArithmeticError("autocorrelation kernel failed")
+    selected_mass = Fraction(order, retained_size) - 1
+    if any(hard[index][index] != 1 + selected_mass for index in range(order)):
+        raise ArithmeticError("hard atomic coefficient failed")
+    if any(sum(row, Fraction()) != 0 for row in selected):
+        raise ArithmeticError("selected covariance does not kill principal line")
+
+    scalar_products = 2 * order**3 + order * order * retained_size
+    return (
+        {
+            "k": order,
+            "positions": positions,
+            "t": retained_size,
+            "u": str(selected_mass),
+            "hard_diagonal": str(1 + selected_mass),
+            "selected_row_sum": "0",
+        },
+        scalar_products,
+    )
+
+
 def collision_blocks(
     order: int, retained_size: int, multiplicity: int
 ) -> dict[str, object]:
-    if order < 2 or not 1 <= retained_size < order:
-        raise ValueError("require 1<=t<k and k>=2")
+    if order < 2 or not 1 <= retained_size <= order:
+        raise ValueError("require 1<=t<=k and k>=2")
     if multiplicity < 2:
         raise ValueError("collision multiplicity must be at least two")
     selected_mass = Fraction(order, retained_size) - 1
@@ -112,6 +194,7 @@ def collision_blocks(
         "positive_eigenvalue": str(selected_mass * (multiplicity - 1)),
         "negative_eigenvalue": str(-selected_mass),
         "negative_multiplicity": multiplicity - 1,
+        "indefinite": bool(selected_mass),
     }
 
 
@@ -132,14 +215,27 @@ def check_source_blobs() -> None:
 def build_report() -> dict[str, object]:
     started = time.monotonic()
     rows: list[dict[str, object]] = []
-    matrix_entries = 0
+    named_matrix_entries = 0
     for order in range(2, MAX_K + 1):
         for retained_size in range(1, order):
             for multiplicity in range(2, MAX_MULTIPLICITY + 1):
-                matrix_entries += 6 * multiplicity * multiplicity
-                if matrix_entries > MAX_MATRIX_ENTRIES:
+                named_matrix_entries += 6 * multiplicity * multiplicity
+                if named_matrix_entries > MAX_MATRIX_ENTRIES:
                     raise RuntimeError("matrix-entry cap exceeded")
                 rows.append(collision_blocks(order, retained_size, multiplicity))
+
+    mask_rows: list[dict[str, object]] = []
+    fourier_scalar_products = 0
+    for order in range(2, MAX_FOURIER_K + 1):
+        for bit_mask in range(1, (1 << order) - 1):
+            positions = tuple(
+                position for position in range(order) if bit_mask & (1 << position)
+            )
+            row, cost = translated_mask_covariance(order, positions)
+            mask_rows.append(row)
+            fourier_scalar_products += cost
+            if fourier_scalar_products > MAX_FOURIER_SCALAR_PRODUCTS:
+                raise RuntimeError("Fourier scalar-product cap exceeded")
     if time.monotonic() - started > MAX_WALL_SECONDS:
         raise RuntimeError("wall-time cap exceeded")
     return {
@@ -147,7 +243,10 @@ def build_report() -> dict[str, object]:
         "status": "EXACT_SHARP_WICK_DOMINATION_BOUNDARY",
         "exact_theorems": {
             "uncentered": "Q_C=Q_P+Q_S with Q_S positive semidefinite",
-            "centered": "Q_C^circ-Q_P^circ=Q_S^circ is indefinite",
+            "centered": (
+                "Q_C^circ-Q_P^circ is indefinite for every proper mask "
+                "on a repeated-phase fibre"
+            ),
             "collision_spectrum": "u*(m-1), then -u with multiplicity m-1",
             "sharp_repair": "Q_S^circ>=-u*D and coefficient u is minimal",
         },
@@ -156,10 +255,16 @@ def build_report() -> dict[str, object]:
             "sample": next(
                 row for row in rows if row["k"] == 3 and row["t"] == 2 and row["m"] == 4
             ),
+            "translated_masks": len(mask_rows),
+            "translated_mask_sample": next(
+                row for row in mask_rows if row["k"] == 5 and row["positions"] == (0, 2)
+            ),
         },
         "resource_ledger": {
-            "matrix_entries": matrix_entries,
+            "named_matrix_entries_accounted": named_matrix_entries,
             "max_matrix_entries": MAX_MATRIX_ENTRIES,
+            "fourier_scalar_products": fourier_scalar_products,
+            "max_fourier_scalar_products": MAX_FOURIER_SCALAR_PRODUCTS,
             "finite_fields_enumerated": 0,
             "conductors_enumerated": 0,
             "l_function_zeros_enumerated": 0,

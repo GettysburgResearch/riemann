@@ -1,7 +1,7 @@
 # FFPS Wick-centering boundary for positive principal domination
 
-Status: **exact all-cyclic-mask quadratic-form theorem and sharp collision
-spectrum; no varying-conductor estimate**
+Status: **exact all-cyclic-mask quadratic identity and sharp proper-mask
+collision spectrum; no varying-conductor estimate**
 
 Scope: finite source fibres and their exact cyclic Fourier operators
 
@@ -11,7 +11,8 @@ Exact replay:
 ## 0. Outcome
 
 The cyclic hard covariance has an exact positive domination before Wick
-centering and an exact failure of domination afterward.
+centering.  After centering, domination fails for every proper mask on any
+same-phase collision fibre containing at least two distinct atoms.
 
 Let `S subset mu_k` be nonempty, put `t=|S|`, and set
 
@@ -72,8 +73,8 @@ They satisfy
 \tag{0.6}
 \]
 
-but `Q_S^circ` is indefinite for every proper mask as soon as a retained
-phase fibre contains two distinct source atoms.  If a phase fibre has size
+but `Q_S^circ` is indefinite for every proper mask as soon as a phase fibre
+contains two distinct source atoms.  If a phase fibre has size
 `m>=2`, its selected centered block is
 
 \[
@@ -89,8 +90,8 @@ with exact spectrum
 \tag{0.8}
 \]
 
-Consequently neither centered form dominates the other.  The best universal
-diagonal repair is exact and sharp:
+Consequently neither centered form dominates the other on such a collision
+fibre.  The best universal diagonal repair is exact and sharp:
 
 \[
  \boxed{
@@ -108,9 +109,14 @@ the hard mask.
 This pinpoints the architectural boundary:
 
 - **uncentered:** principal domination is already exact;
-- **centered:** positivity is lost on distinct same-phase atoms;
+- **centered proper mask with a collision:** positivity is lost on distinct
+  same-phase atoms;
 - **relative signed route:** `Q_C^circ-Q_S^circ=Q_P^circ` remains exact, but
   estimating that difference is the principal RH-bearing problem.
+
+For the full mask, `u=0` and all selected forms vanish.  On an atom set with
+no repeated phase, the collision witness is absent.  Neither degenerate case
+is claimed to be indefinite.
 
 ## 1. Frozen dependencies
 
@@ -142,26 +148,38 @@ where
 \]
 
 Averaging `|O_j|^2` over all rotations kills every cross-character term and
-proves (0.3).  In operator language,
+proves (0.3).  There is one normalization point.  Aggregate the atoms by
+phase, writing \(z_g=\sum_{\Phi(\omega)=g}z_\omega\).  On that regular phase
+space with its standard inner product,
+
+\[
+ Q_P=k\langle\Pi_0z,z\rangle,\qquad
+ Q_S=k\left\langle
+       \sum_{r\ne0}|c_r|^2\Pi_r z,z\right\rangle .
+\tag{2.2}
+\]
+
+Thus, after the common harmless rescaling `Q_tilde=Q/k`, the corresponding
+endomorphisms are
 
 \[
  \mathsf C_S=\Pi_0+\mathsf S_S,
  \qquad
  \mathsf S_S=\sum_{r\ne0}|c_r|^2\Pi_r\succeq0
-\tag{2.2}
+\tag{2.3}
 \]
 
 under any complex embedding with the regular deck action unitary.  Hence
 
 \[
  \mathsf C_S\succeq\Pi_0.
-\tag{2.3}
+\tag{2.4}
 \]
 
-The constant is sharp: equality holds on the principal line because every
-selected projector vanishes there.  This is a genuine local positive
-principal amplifier, but it is uncentered and therefore still contains the
-full atomic diagonal.
+The common factor `k` cancels from the Loewner comparison.  The constant is
+sharp: equality holds on the principal line because every selected projector
+vanishes there.  This is a genuine local positive principal amplifier, but
+it is uncentered and therefore still contains the full atomic diagonal.
 
 ## 3. Exact effect of Wick centering
 
@@ -277,6 +295,7 @@ for option 3.  It does not bound its principal trace.
 | universal repaired inequality (0.9) | **PROVED EXACT ALL-`k`** |
 | collision block and spectrum (0.7)--(0.8) | **PROVED EXACT FOR EVERY `m>=2` SAME-PHASE FIBRE** |
 | sharpness of diagonal payment `u` | **PROVED EXACT ON A TWO-ATOM COLLISION** |
+| full mask `u=0` | **SELECTED FORM IDENTICALLY ZERO** |
 | occurrence in the fixed physical adapter | **INHERITED AT DECLARED COLLISION STRATA** |
 | removal of every collision in full FFPS cleanup | **OPEN** |
 | varying-conductor centered trace estimate | **OPEN / RH-BEARING** |
@@ -289,8 +308,12 @@ boundary and its alignment with the physical hard-mask route.
 ## 7. Reproduction
 
 The replay checks every density pair `1<=t<k<=12` and collision multiplicity
-`2<=m<=10` using rational matrices.  It records fewer than 160,000 matrix
-entries and performs no arithmetic-family enumeration.
+`2<=m<=10` using rational matrices.  It accounts for 152,064 entries across
+six named conceptual matrices; this is not an allocation counter for Python
+temporaries.  Independently, it constructs every nonempty proper translated
+mask for `2<=k<=7` and checks its exact rational covariance,
+autocorrelation kernel, centered covariance factorization, selected mass,
+and row sums.  It performs no arithmetic-family enumeration.
 
 ~~~powershell
 python research/l-families/atlas/function_field/ffps_wick_centered_domination_boundary.py --check

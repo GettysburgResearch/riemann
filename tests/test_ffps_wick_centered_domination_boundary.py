@@ -63,10 +63,27 @@ class WickCenteredDominationBoundaryTests(unittest.TestCase):
             -2 * u_value,
         )
 
+    def test_full_mask_is_degenerate_not_indefinite(self) -> None:
+        row = MODULE.collision_blocks(5, 5, 3)
+        self.assertEqual(row["u"], "0")
+        self.assertEqual(row["positive_eigenvalue"], "0")
+        self.assertEqual(row["negative_eigenvalue"], "0")
+        self.assertFalse(row["indefinite"])
+
+    def test_translated_mask_covariance_is_independent_replay(self) -> None:
+        row, scalar_products = MODULE.translated_mask_covariance(5, (0, 2))
+        self.assertEqual(row["u"], "3/2")
+        self.assertEqual(row["hard_diagonal"], "5/2")
+        self.assertEqual(row["selected_row_sum"], "0")
+        self.assertGreater(scalar_products, 0)
+
     def test_invalid_inputs_fail_closed(self) -> None:
-        for args in ((1, 1, 2), (3, 0, 2), (3, 3, 2), (3, 2, 1)):
+        for args in ((1, 1, 2), (3, 0, 2), (3, 4, 2), (3, 2, 1)):
             with self.assertRaises(ValueError):
                 MODULE.collision_blocks(*args)
+        for args in ((1, (0,)), (3, ()), (3, (0, 1, 2)), (3, (0, 0))):
+            with self.assertRaises(ValueError):
+                MODULE.translated_mask_covariance(*args)
 
     def test_optimized_producer_replays(self) -> None:
         completed = subprocess.run(
