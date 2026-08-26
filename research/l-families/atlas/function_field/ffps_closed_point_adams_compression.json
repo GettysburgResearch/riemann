@@ -1,0 +1,74 @@
+{
+  "schema": "riemann.function_field.ffps_closed_point_adams_compression.v1",
+  "status": "EXACT_CLOSED_POINT_ADAMS_COMPRESSION",
+  "identities": {
+    "one_place": "d P_d(V) = sum_{e|d} mu(e) A_{d/e}(psi^e V)",
+    "two_place": "ab P_{a,b}(K) = sum_{e|a,f|b} mu(e)mu(f) A_sep_{a/e,b/f}(psi_1^e psi_2^f K)",
+    "equal_degree_distinct": "P_ne_{a,a}(K)=P_{a,a}(K)-P_a(delta K)"
+  },
+  "category_gate": "finite external-product trace kernel or commuting partial Frobenii",
+  "physical_adams_ranks": {
+    "regular": 48,
+    "selected_underlying": 32,
+    "relative": 16,
+    "hard_underlying": 48,
+    "selected_weighted_line_mass": 8,
+    "hard_weighted_line_mass": 24
+  },
+  "complexity_panels": [
+    {
+      "left_degree": 3,
+      "right_degree": 5,
+      "divisor_pair_terms": 4,
+      "distinct_diagonal_terms": 0,
+      "regular_character_line_evaluations": 192,
+      "coefficient_space_selector_mass": "64/15",
+      "coefficient_space_regular_rank_mass": "1024/5"
+    },
+    {
+      "left_degree": 8,
+      "right_degree": 8,
+      "divisor_pair_terms": 16,
+      "distinct_diagonal_terms": 4,
+      "regular_character_line_evaluations": 960,
+      "coefficient_space_selector_mass": "256",
+      "coefficient_space_regular_rank_mass": "12288"
+    },
+    {
+      "left_degree": 11,
+      "right_degree": 12,
+      "divisor_pair_terms": 12,
+      "distinct_diagonal_terms": 0,
+      "regular_character_line_evaluations": 576,
+      "coefficient_space_selector_mass": "524288/33",
+      "coefficient_space_regular_rank_mass": "8388608/11"
+    },
+    {
+      "left_degree": 12,
+      "right_degree": 12,
+      "divisor_pair_terms": 36,
+      "distinct_diagonal_terms": 6,
+      "regular_character_line_evaluations": 2016,
+      "coefficient_space_selector_mass": "262144/9",
+      "coefficient_space_regular_rank_mass": "4194304/3"
+    }
+  ],
+  "exact_checks": {
+    "one_place_inversions": 144,
+    "two_place_inversions": 144,
+    "diagonal_inversions": 12,
+    "partial_adams_profiles": 288
+  },
+  "resource_ledger": {
+    "max_degree": 12,
+    "finite_fields_enumerated": 0,
+    "polynomials_enumerated": 0,
+    "closed_places_enumerated": 0,
+    "source_atoms_enumerated": 0
+  },
+  "not_proved": [
+    "native owner-Boolean-Artin-Schreier separable FFPS adapter",
+    "uniform pushed-forward Betti or signed trace estimate",
+    "CYSEL, WCADD106140, WCKUM106140, RH, or GRH"
+  ]
+}
