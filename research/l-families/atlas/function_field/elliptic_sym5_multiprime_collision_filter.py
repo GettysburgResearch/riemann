@@ -17,7 +17,6 @@ from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
-
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 SOURCE_PATH = HERE / "elliptic_sym5_collision_diophantine_pilot.json"
@@ -115,7 +114,9 @@ def load_locked_collision() -> dict[str, int]:
         None,
     )
     if not isinstance(pair, dict):
-        raise ArithmeticError("locked q=31 general collision (-7,3) vanished")
+        raise ArithmeticError(  # noqa: TRY004 - source-certificate failure
+            "locked q=31 general collision (-7,3) vanished"
+        )
     result = {
         "q": int(row["q"]),
         "left_trace": int(pair["x"]),
@@ -166,9 +167,7 @@ def elliptic_trace(model: Model, prime: int, guard: ResourceGuard) -> int:
         raise ValueError("trace requested at bad reduction")
     a, b = model
     guard.charge("finite_field_point_atoms", prime)
-    return -sum(
-        legendre_symbol(x**3 + a * x + b, prime) for x in range(prime)
-    )
+    return -sum(legendre_symbol(x**3 + a * x + b, prime) for x in range(prime))
 
 
 def symmetric_power_trace(base_trace: int, q: int, degree: int) -> int:
@@ -382,7 +381,10 @@ def main() -> None:
     arguments = parser.parse_args()
     rendered = _canonical(build_fixture())
     if arguments.check:
-        if not OUTPUT_PATH.exists() or OUTPUT_PATH.read_text(encoding="utf-8") != rendered:
+        if (
+            not OUTPUT_PATH.exists()
+            or OUTPUT_PATH.read_text(encoding="utf-8") != rendered
+        ):
             raise SystemExit("Sym5 multiprime collision-filter fixture drifted")
         print("PASS_SYM5_MULTIPRIME_COLLISION_FILTER")
         return

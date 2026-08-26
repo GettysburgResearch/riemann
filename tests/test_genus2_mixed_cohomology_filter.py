@@ -63,11 +63,11 @@ class MixedCohomologyFilterAlgebraTests(unittest.TestCase):
             baseline_variance = subject.haar_variance(baseline, q)
             self.assertEqual(baseline_variance, q**10 + q**8 + q**6 + q**4)
             for k in range(-20, 21):
-                trial = tuple(Fraction(value) for value in subject.lattice_solution(1, k))
-                difference = subject.haar_variance(trial, q) - baseline_variance
-                expected = q**4 * k * (
-                    (8 + 6 * q * q) + (16 + 9 * q * q) * k
+                trial = tuple(
+                    Fraction(value) for value in subject.lattice_solution(1, k)
                 )
+                difference = subject.haar_variance(trial, q) - baseline_variance
+                expected = q**4 * k * ((8 + 6 * q * q) + (16 + 9 * q * q) * k)
                 self.assertEqual(difference, expected)
                 self.assertEqual(difference == 0, k == 0)
 
@@ -119,7 +119,12 @@ class MixedCohomologyFilterAlgebraTests(unittest.TestCase):
             annihilator = subject.polynomial_multiply(
                 subject.polynomial_multiply(p_shift, p_unshift), p_level2
             )
-            self.assertTrue(all(value == 0 for value in subject.recurrence_residual(response, annihilator)))
+            self.assertTrue(
+                all(
+                    value == 0
+                    for value in subject.recurrence_residual(response, annihilator)
+                )
+            )
 
             cases = (
                 (shifted, subject.polynomial_multiply(p_unshift, p_level2), p_shift),
@@ -131,7 +136,10 @@ class MixedCohomologyFilterAlgebraTests(unittest.TestCase):
                 self.assertEqual(isolated, subject.apply_operator(component, isolator))
                 self.assertTrue(any(isolated))
                 self.assertTrue(
-                    all(value == 0 for value in subject.recurrence_residual(isolated, recurrence))
+                    all(
+                        value == 0
+                        for value in subject.recurrence_residual(isolated, recurrence)
+                    )
                 )
 
 
@@ -191,7 +199,9 @@ class MixedCohomologyFilterFixtureTests(unittest.TestCase):
             subject._classification_certificate(subject.ResourceGuard())
 
         with self.assertRaisesRegex(ValueError, "tower exponent"):
-            subject.power_sum_tower(1, 3, subject.MAX_TOWER_EXPONENT + 1, subject.ResourceGuard())
+            subject.power_sum_tower(
+                1, 3, subject.MAX_TOWER_EXPONENT + 1, subject.ResourceGuard()
+            )
 
     def test_incomplete_source_locks_fail_closed(self) -> None:
         with mock.patch.dict(subject.SOURCE_LOCKS["sym10"], {"lf": ""}):
@@ -243,7 +253,9 @@ class MixedCohomologyFilterFixtureTests(unittest.TestCase):
             "lattice_regression_points",
             "recurrence_steps",
         ):
-            self.assertLessEqual(resources[f"actual_{prefix}"], resources[f"maximum_{prefix}"])
+            self.assertLessEqual(
+                resources[f"actual_{prefix}"], resources[f"maximum_{prefix}"]
+            )
         self.assertEqual(resources["actual_source_files"], 4)
         self.assertEqual(resources["actual_lattice_regression_points"], 625)
         self.assertEqual(self.fixture["scope"]["new_finite_fields_enumerated"], [])
@@ -265,7 +277,10 @@ class MixedCohomologyFilterFixtureTests(unittest.TestCase):
             },
         )
         self.assertTrue(
-            all(row["all_recurrence_residuals_zero"] for row in spectroscopy["prime_controls"])
+            all(
+                row["all_recurrence_residuals_zero"]
+                for row in spectroscopy["prime_controls"]
+            )
         )
         premise = self.fixture["external_mathematical_premises"][0]
         self.assertIn("Deligne purity", premise["premise"])

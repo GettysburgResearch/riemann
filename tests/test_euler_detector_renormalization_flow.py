@@ -6,7 +6,6 @@ import unittest
 from fractions import Fraction
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_DIR = ROOT / "research" / "l-families" / "atlas" / "function_field"
 if str(MODULE_DIR) not in sys.path:
@@ -39,7 +38,9 @@ class EulerDetectorRenormalizationFlowTests(unittest.TestCase):
     def test_truncated_local_euler_log_character_and_exact_cumulants(self) -> None:
         raw = flow.truncated_euler_log_character(Fraction(1, 2), 2)
         centered = flow.center_character_polynomial(raw)
-        self.assertEqual(raw, {0: Fraction(-1, 8), 1: Fraction(1, 2), 2: Fraction(1, 8)})
+        self.assertEqual(
+            raw, {0: Fraction(-1, 8), 1: Fraction(1, 2), 2: Fraction(1, 8)}
+        )
         self.assertEqual(centered, {1: Fraction(1, 2), 2: Fraction(1, 8)})
 
         moments = flow.character_raw_moments(centered, 6)
@@ -119,27 +120,38 @@ class EulerDetectorRenormalizationFlowTests(unittest.TestCase):
                 8: Fraction(-7, 8),
             },
         )
-        self.assertTrue(all(abs(mapped[key]) < abs(value) for key, value in coordinates.items()))
+        self.assertTrue(
+            all(abs(mapped[key]) < abs(value) for key, value in coordinates.items())
+        )
 
     def test_weighted_su2_flow_and_maximum_leverage_bound(self) -> None:
         weights = tuple(Fraction(1, prime) for prime in (2, 3, 5, 7, 11, 13))
         total = sum(weights)
         coordinates = flow.weighted_su2_even_flow(weights)
         self.assertEqual(coordinates[4], -sum(value**2 for value in weights) / total**2)
-        self.assertEqual(coordinates[6], 5 * sum(value**3 for value in weights) / total**3)
-        self.assertEqual(coordinates[8], -56 * sum(value**4 for value in weights) / total**4)
+        self.assertEqual(
+            coordinates[6], 5 * sum(value**3 for value in weights) / total**3
+        )
+        self.assertEqual(
+            coordinates[8], -56 * sum(value**4 for value in weights) / total**4
+        )
         self.assertLessEqual(abs(coordinates[4]), flow.leverage_bound(weights, 2))
         self.assertLessEqual(abs(coordinates[6]) / 5, flow.leverage_bound(weights, 3))
         self.assertLessEqual(abs(coordinates[8]) / 56, flow.leverage_bound(weights, 4))
 
         equal_weights = (Fraction(1),) * 16
         equal_coordinates = flow.weighted_su2_even_flow(equal_weights)
-        self.assertEqual(equal_coordinates, {4: Fraction(-1, 16), 6: Fraction(5, 256), 8: Fraction(-7, 512)})
+        self.assertEqual(
+            equal_coordinates,
+            {4: Fraction(-1, 16), 6: Fraction(5, 256), 8: Fraction(-7, 512)},
+        )
 
     def test_critical_and_summable_prefixes_separate_in_the_probe(self) -> None:
         primes = (2, 3, 5, 7, 11, 13, 17, 19)
         critical = flow.weighted_su2_even_flow(Fraction(1, prime) for prime in primes)
-        summable = flow.weighted_su2_even_flow(Fraction(1, prime * prime) for prime in primes)
+        summable = flow.weighted_su2_even_flow(
+            Fraction(1, prime * prime) for prime in primes
+        )
         self.assertLess(abs(critical[4]), abs(summable[4]))
         self.assertLess(abs(critical[6]), abs(summable[6]))
         self.assertLess(abs(critical[8]), abs(summable[8]))
@@ -164,7 +176,10 @@ class EulerDetectorRenormalizationFlowTests(unittest.TestCase):
         self.assertEqual(independent["aggregate_cumulants"]["2"], [2, 1])
         self.assertEqual(independent["aggregate_cumulants"]["4"], [-2, 1])
         self.assertTrue(
-            all(value == [0, 1] for value in independent["mixed_cumulant_defect"].values())
+            all(
+                value == [0, 1]
+                for value in independent["mixed_cumulant_defect"].values()
+            )
         )
 
         self.assertEqual(diagonal["aggregate_cumulants"]["2"], [4, 1])
@@ -173,7 +188,10 @@ class EulerDetectorRenormalizationFlowTests(unittest.TestCase):
         self.assertEqual(diagonal["mixed_cumulant_defect"]["4"], [-14, 1])
 
         self.assertTrue(
-            all(value == [0, 1] for value in antidiagonal["aggregate_cumulants"].values())
+            all(
+                value == [0, 1]
+                for value in antidiagonal["aggregate_cumulants"].values()
+            )
         )
         self.assertEqual(antidiagonal["mixed_cumulant_defect"]["2"], [-2, 1])
         self.assertEqual(antidiagonal["mixed_cumulant_defect"]["4"], [2, 1])
@@ -189,7 +207,9 @@ class EulerDetectorRenormalizationFlowTests(unittest.TestCase):
         self.assertFalse(resource["random_sampling"])
         self.assertFalse(resource["finite_field_or_curve_enumeration"])
         self.assertFalse(resource["zero_computation"])
-        self.assertLessEqual(resource["actual_local_factors"], resource["maximum_local_factors"])
+        self.assertLessEqual(
+            resource["actual_local_factors"], resource["maximum_local_factors"]
+        )
 
     def test_fail_closed_resource_and_domain_guards(self) -> None:
         with self.assertRaises(ValueError):

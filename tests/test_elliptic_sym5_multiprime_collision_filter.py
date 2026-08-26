@@ -7,7 +7,6 @@ import sys
 import unittest
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_DIR = ROOT / "research" / "l-families" / "atlas" / "function_field"
 if str(MODULE_DIR) not in sys.path:
@@ -64,9 +63,7 @@ class EllipticSym5MultiprimeCollisionFilterTests(unittest.TestCase):
         for pair in panel["pairs"]:
             first = pair["first_auxiliary_separating_prime"]
             row = next(
-                item
-                for item in pair["auxiliary_rows"]
-                if item["prime"] == first
+                item for item in pair["auxiliary_rows"] if item["prime"] == first
             )
             self.assertEqual(row["status"], "GOOD_REDUCTION")
             self.assertFalse(row["sym5_scalar_equal"])

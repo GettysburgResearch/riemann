@@ -172,7 +172,9 @@ def source_locks_ready() -> bool:
             return False
         for field in ("commit", "lf", "payload"):
             value = lock.get(field)
-            if not isinstance(value, str) or len(value) != (40 if field == "commit" else 64):
+            if not isinstance(value, str) or len(value) != (
+                40 if field == "commit" else 64
+            ):
                 return False
             if any(character not in "0123456789abcdef" for character in value):
                 return False
@@ -213,8 +215,7 @@ def _validate_source_semantics(name: str, value: Mapping[str, object]) -> None:
         "sym6": "T_(6,0)(q)=-4",
         "sym8": "T_(8,0)(q)=-Theta_(8,2)(q)-q-6",
         "sym10": (
-            "T_(10,0)(q)=(q-1)*Theta_Delta(q)-Theta_(8,2)(q)-"
-            "Theta_(10,2)(q)-q-7"
+            "T_(10,0)(q)=(q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7"
         ),
     }[name]
     if theorem.get("marked_stack_trace") != expected:
@@ -305,7 +306,9 @@ def lattice_solution(m: int, k: int) -> tuple[int, int, int, int]:
 
 
 def lattice_parameters(coefficients: tuple[int, int, int, int]) -> tuple[int, int]:
-    if len(coefficients) != 4 or any(not isinstance(value, int) for value in coefficients):
+    if len(coefficients) != 4 or any(
+        not isinstance(value, int) for value in coefficients
+    ):
         raise TypeError("four integral coefficients are required")
     coordinates = trace_coordinates(coefficients)
     if any(coordinates[index] for index in (2, 4, 5)):
@@ -380,9 +383,7 @@ def _classification_certificate(guard: ResourceGuard) -> dict[str, object]:
             "3*c_4+4*c_6=-m has the particular solution (m,-m); "
             "all homogeneous integral solutions are k*(4,-3), since gcd(3,4)=1."
         ),
-        "complete_integral_lattice": (
-            "(c_4,c_6,c_8,c_10)=m*(1,-1,-1,1)+k*(4,-3,0,0)"
-        ),
+        "complete_integral_lattice": ("(c_4,c_6,c_8,c_10)=m*(1,-1,-1,1)+k*(4,-3,0,0)"),
         "basis": [list(vector) for vector in expected_basis],
         "response": "m*((q-1)*Theta_Delta(q)-Theta_(10,2)(q))",
         "r2_extension": "T_(2,0)=q-1 forces c_2=0 after c_8+c_10=0",
@@ -496,8 +497,7 @@ def _haar_certificate(guard: ResourceGuard) -> dict[str, object]:
 
     return {
         "orthogonality_identity": (
-            "Var_Haar(sum_j c_(2j) r_(2j))="
-            "c_4^2*q^4+c_6^2*q^6+c_8^2*q^8+c_10^2*q^10"
+            "Var_Haar(sum_j c_(2j) r_(2j))=c_4^2*q^4+c_6^2*q^6+c_8^2*q^8+c_10^2*q^10"
         ),
         "scope": "USp(4) Haar variance, not finite arithmetic-family variance",
         "sparse_unit_variances": {
@@ -522,8 +522,7 @@ def _haar_certificate(guard: ResourceGuard) -> dict[str, object]:
             "filter": "r_10-r_8-(3*q^2/D)*r_4-(4/D)*r_6",
             "minimum_variance": "q^10+q^8+q^6/(9*q^2+16)",
             "completion_of_square": (
-                "V(c_4)-V_min=q^4*(9*q^2+16)/16*"
-                "(c_4+3*q^2/(9*q^2+16))^2"
+                "V(c_4)-V_min=q^4*(9*q^2+16)/16*(c_4+3*q^2/(9*q^2+16))^2"
             ),
         },
         "exact_control_q_values": list(q_values),
@@ -566,7 +565,9 @@ def power_sum_tower(
 
 
 def apply_operator(
-    sequence: tuple[int, ...], polynomial: Polynomial, guard: ResourceGuard | None = None
+    sequence: tuple[int, ...],
+    polynomial: Polynomial,
+    guard: ResourceGuard | None = None,
 ) -> tuple[int, ...]:
     if len(sequence) < len(polynomial):
         raise ValueError("sequence is too short for operator")
@@ -583,12 +584,16 @@ def apply_operator(
 
 
 def recurrence_residual(
-    sequence: tuple[int, ...], polynomial: Polynomial, guard: ResourceGuard | None = None
+    sequence: tuple[int, ...],
+    polynomial: Polynomial,
+    guard: ResourceGuard | None = None,
 ) -> tuple[int, ...]:
     return apply_operator(sequence, polynomial, guard)
 
 
-def _coefficient_controls(sources: Mapping[str, Mapping[str, object]]) -> dict[int, tuple[int, int]]:
+def _coefficient_controls(
+    sources: Mapping[str, Mapping[str, object]],
+) -> dict[int, tuple[int, int]]:
     sym10 = sources["sym10"]
     modular = sym10.get("modular_form_certificate")
     if not isinstance(modular, dict):
@@ -616,7 +621,9 @@ def _spectroscopy_certificate(
     for prime, (tau, g_value) in _coefficient_controls(sources).items():
         delta = power_sum_tower(tau, prime**11, MAX_TOWER_EXPONENT, guard)
         g_tower = power_sum_tower(g_value, prime**9, MAX_TOWER_EXPONENT, guard)
-        shifted = tuple(prime**exponent * delta[exponent] for exponent in range(len(delta)))
+        shifted = tuple(
+            prime**exponent * delta[exponent] for exponent in range(len(delta))
+        )
         unshifted = tuple(-value for value in delta)
         level2 = tuple(-value for value in g_tower)
         response = tuple(
@@ -741,9 +748,7 @@ def build_fixture() -> dict[str, object]:
             "T_(4,0)(q)": "-3",
             "T_(6,0)(q)": "-4",
             "T_(8,0)(q)": "-Theta_(8,2)(q)-q-6",
-            "T_(10,0)(q)": (
-                "(q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7"
-            ),
+            "T_(10,0)(q)": ("(q-1)*Theta_Delta(q)-Theta_(8,2)(q)-Theta_(10,2)(q)-q-7"),
         },
         "integral_lattice_certificate": classification,
         "haar_optimization_certificate": haar,
@@ -821,8 +826,12 @@ def check_fixture() -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--write", action="store_true", help="write the canonical JSON fixture")
-    mode.add_argument("--check", action="store_true", help="check the canonical JSON fixture")
+    mode.add_argument(
+        "--write", action="store_true", help="write the canonical JSON fixture"
+    )
+    mode.add_argument(
+        "--check", action="store_true", help="check the canonical JSON fixture"
+    )
     arguments = parser.parse_args()
     if arguments.write:
         write_fixture()

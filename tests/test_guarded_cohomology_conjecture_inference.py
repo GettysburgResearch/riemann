@@ -8,12 +8,11 @@ import sys
 import unittest
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 FUNCTION_FIELD = ROOT / "research" / "l-families" / "atlas" / "function_field"
 sys.path.insert(0, str(FUNCTION_FIELD))
 
-import guarded_cohomology_conjecture_inference as subject  # noqa: E402
+import guarded_cohomology_conjecture_inference as subject
 
 
 class GuardedCohomologyConjectureInferenceTests(unittest.TestCase):
@@ -89,8 +88,13 @@ class GuardedCohomologyConjectureInferenceTests(unittest.TestCase):
             envelope = self.channels[name]["conditional_weight_envelope"]
             self.assertEqual(envelope["local_system_weight"], weight)
             bounds = envelope["compact_support_degree_upper_weight_bounds"]
-            self.assertEqual([row["cohomological_degree"] for row in bounds], list(range(7)))
-            self.assertEqual([row["weight_at_most"] for row in bounds], list(range(weight, weight + 7)))
+            self.assertEqual(
+                [row["cohomological_degree"] for row in bounds], list(range(7))
+            )
+            self.assertEqual(
+                [row["weight_at_most"] for row in bounds],
+                list(range(weight, weight + 7)),
+            )
 
     def test_complete_ambiguity_lattices(self) -> None:
         expected = {
@@ -173,8 +177,7 @@ class GuardedCohomologyConjectureInferenceTests(unittest.TestCase):
             for basis in ambiguity["lattice_basis_coefficients_low_to_high"]:
                 for scale in (-7, -1, 1, 9):
                     perturbed = [
-                        base[index] + scale * basis[index]
-                        for index in range(len(base))
+                        base[index] + scale * basis[index] for index in range(len(base))
                     ]
                     for observation in ambiguity["observations"]:
                         self.assertEqual(
@@ -194,9 +197,7 @@ class GuardedCohomologyConjectureInferenceTests(unittest.TestCase):
                 self.assertIsNone(audit["determinant_exponent"])
                 self.assertEqual(audit["determinant_status"], "NOT_INFERRED")
 
-        rejection = subject.rank_two_recurrence_audit(
-            3, 11, {1: 252, 2: 0, 3: 0}
-        )
+        rejection = subject.rank_two_recurrence_audit(3, 11, {1: 252, 2: 0, 3: 0})
         self.assertEqual(rejection["status"], "EXACT_RECURRENCE_REJECTION")
         self.assertFalse(rejection["matches"])
 
@@ -216,9 +217,13 @@ class GuardedCohomologyConjectureInferenceTests(unittest.TestCase):
                 decision["status"],
                 "REFUSED_UNSUPPORTED_COHOMOLOGY_IDENTIFICATION",
             )
-            self.assertIn("exact_family_trace_identity", decision["missing_requirements"])
+            self.assertIn(
+                "exact_family_trace_identity", decision["missing_requirements"]
+            )
             self.assertIn("exact_geometric_adapter", decision["missing_requirements"])
-            self.assertIn("target_space_dimension_is_one", decision["missing_requirements"])
+            self.assertIn(
+                "target_space_dimension_is_one", decision["missing_requirements"]
+            )
         self.assertEqual(
             self.genus2["joint_no_go"]["status"], "EXACT_IDENTIFIABILITY_NO_GO"
         )

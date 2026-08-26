@@ -17,11 +17,10 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from fractions import Fraction
 from math import comb
-from typing import Iterable, Mapping
-
 
 MAX_CHARACTER_WEIGHT = 96
 MAX_MOMENT_ORDER = 10
@@ -56,9 +55,7 @@ def _clean_character_polynomial(
     if any(weight < 0 for weight in result):
         raise ValueError("SU(2) highest weights must be nonnegative")
     if result and max(result) > MAX_CHARACTER_WEIGHT:
-        raise RuntimeError(
-            f"character weight exceeds the cap {MAX_CHARACTER_WEIGHT}"
-        )
+        raise RuntimeError(f"character weight exceeds the cap {MAX_CHARACTER_WEIGHT}")
     return result
 
 
@@ -90,9 +87,7 @@ def su2_irrep_product(left_weight: int, right_weight: int) -> tuple[int, ...]:
         raise ValueError("SU(2) highest weights must be nonnegative")
     maximum = left_weight + right_weight
     if maximum > MAX_CHARACTER_WEIGHT:
-        raise RuntimeError(
-            f"character product exceeds the cap {MAX_CHARACTER_WEIGHT}"
-        )
+        raise RuntimeError(f"character product exceeds the cap {MAX_CHARACTER_WEIGHT}")
     return tuple(range(abs(left_weight - right_weight), maximum + 1, 2))
 
 
@@ -107,7 +102,9 @@ def multiply_character_polynomials(
         for right_weight, right_coefficient in right_clean.items():
             coefficient = left_coefficient * right_coefficient
             for output_weight in su2_irrep_product(left_weight, right_weight):
-                result[output_weight] = result.get(output_weight, Fraction(0)) + coefficient
+                result[output_weight] = (
+                    result.get(output_weight, Fraction(0)) + coefficient
+                )
     return _clean_character_polynomial(result)
 
 
@@ -247,9 +244,7 @@ def cumulants_from_raw_moments(
 def character_cumulants(
     polynomial: Mapping[int, Fraction | int], maximum_order: int
 ) -> tuple[Fraction, ...]:
-    return cumulants_from_raw_moments(
-        character_raw_moments(polynomial, maximum_order)
-    )
+    return cumulants_from_raw_moments(character_raw_moments(polynomial, maximum_order))
 
 
 @dataclass(frozen=True)
@@ -261,7 +256,7 @@ class DiscreteLaw:
     @classmethod
     def from_mapping(
         cls, atoms: Mapping[Fraction | int, Fraction | int]
-    ) -> "DiscreteLaw":
+    ) -> DiscreteLaw:
         cleaned = tuple(
             sorted(
                 (
@@ -291,13 +286,13 @@ class DiscreteLaw:
     def cumulants(self, maximum_order: int) -> tuple[Fraction, ...]:
         return cumulants_from_raw_moments(self.raw_moments(maximum_order))
 
-    def translate(self, shift: Fraction | int) -> "DiscreteLaw":
+    def translate(self, shift: Fraction | int) -> DiscreteLaw:
         shift = Fraction(shift)
         return DiscreteLaw.from_mapping(
             {value + shift: probability for value, probability in self.atoms}
         )
 
-    def convolve(self, other: "DiscreteLaw") -> "DiscreteLaw":
+    def convolve(self, other: DiscreteLaw) -> DiscreteLaw:
         atoms: dict[Fraction, Fraction] = {}
         if len(self.atoms) * len(other.atoms) > MAX_LOCAL_FACTORS**2:
             raise RuntimeError("discrete convolution exceeds the declared cap")
@@ -311,9 +306,7 @@ class DiscreteLaw:
 
     def positive_probability_after_centering(self) -> Fraction:
         mean = self.raw_moments(1)[1]
-        return sum(
-            probability for value, probability in self.atoms if value > mean
-        )
+        return sum(probability for value, probability in self.atoms if value > mean)
 
 
 def finite_difference_twin(jet_order: int = 4) -> tuple[DiscreteLaw, DiscreteLaw]:
@@ -362,7 +355,7 @@ def four_block_eigenvalue(order: int) -> Fraction:
 
 
 def four_block_standardized_flow(
-    standardized_cumulants: Mapping[int, Fraction | int]
+    standardized_cumulants: Mapping[int, Fraction | int],
 ) -> dict[int, Fraction]:
     """Exact diagonal four-copy RG map on centered variance-one jets."""
 
@@ -506,9 +499,7 @@ def build_probe() -> dict[str, object]:
                     centered_trace_power_character(power)
                 ),
                 "haar_variance": _fraction_pair(trace_power_variance(power)),
-                "critical_sigma": _fraction_pair(
-                    trace_channel_critical_sigma(power)
-                ),
+                "critical_sigma": _fraction_pair(trace_channel_critical_sigma(power)),
             }
             for power in range(1, 7)
         },
@@ -523,9 +514,7 @@ def build_probe() -> dict[str, object]:
             ),
         },
         "chi1_reference": {
-            "moments_0_through_8": [
-                _fraction_pair(value) for value in chi_one_moments
-            ],
+            "moments_0_through_8": [_fraction_pair(value) for value in chi_one_moments],
             "cumulants_0_through_8": [
                 _fraction_pair(value) for value in chi_one_cumulants
             ],
@@ -538,15 +527,11 @@ def build_probe() -> dict[str, object]:
             "primes": list(primes),
             "critical_variance_weights_1_over_p": {
                 str(order): _fraction_pair(value)
-                for order, value in weighted_su2_even_flow(
-                    critical_weights
-                ).items()
+                for order, value in weighted_su2_even_flow(critical_weights).items()
             },
             "summable_variance_weights_1_over_p_squared": {
                 str(order): _fraction_pair(value)
-                for order, value in weighted_su2_even_flow(
-                    convergent_weights
-                ).items()
+                for order, value in weighted_su2_even_flow(convergent_weights).items()
             },
             "critical_maximum_variance_leverage": _fraction_pair(
                 max(critical_weights) / sum(critical_weights)

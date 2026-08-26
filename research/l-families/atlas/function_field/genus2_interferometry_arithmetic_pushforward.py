@@ -25,13 +25,12 @@ import importlib.util
 import json
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from fractions import Fraction
 from math import ceil, isqrt
 from pathlib import Path
 from types import ModuleType
-from typing import Mapping, Sequence
-
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
@@ -93,9 +92,7 @@ def _fraction_pair(value: Fraction | int) -> list[int]:
 
 
 def _canonical_sha256(value: object) -> str:
-    encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode(
-        "utf-8"
-    )
+    encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
 
 
@@ -203,9 +200,15 @@ def _validated_input() -> tuple[dict[str, object], list[Mapping[str, object]]]:
     input_data = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
     payload = dict(input_data)
     claimed = payload.pop("payload_sha256", None)
-    if claimed != _canonical_sha256(payload) or claimed != EXPECTED_INPUT_PAYLOAD_SHA256:
+    if (
+        claimed != _canonical_sha256(payload)
+        or claimed != EXPECTED_INPUT_PAYLOAD_SHA256
+    ):
         raise ValueError("balanced-control input payload/source pin mismatch")
-    if input_data.get("schema") != "riemann.function_field.balanced_control_family_scan.v1":
+    if (
+        input_data.get("schema")
+        != "riemann.function_field.balanced_control_family_scan.v1"
+    ):
         raise ValueError("unexpected balanced-control input schema")
     frozen = input_data.get("frozen_enumeration_facts")
     if not isinstance(frozen, dict):
@@ -239,7 +242,9 @@ def _validated_input() -> tuple[dict[str, object], list[Mapping[str, object]]]:
     for name, (expected_path, expected_digest) in required_upstream_locks.items():
         lock = locks.get(name)
         if not isinstance(lock, dict):
-            raise ValueError(f"balanced-control source lock {name} is missing")
+            raise ValueError(  # noqa: TRY004 - malformed source certificate
+                f"balanced-control source lock {name} is missing"
+            )
         if lock.get("path") != expected_path:
             raise ValueError(f"balanced-control source path drifted for {name}")
         if lock.get("sha256_lf_normalized") != expected_digest:
@@ -272,14 +277,20 @@ def _validated_input() -> tuple[dict[str, object], list[Mapping[str, object]]]:
             mass += weight
         if mass != member_count:
             raise ValueError(f"q={q} joint histogram is not member-complete")
-        if family.get("member_coefficient_ledger_sha256") != EXPECTED_MEMBER_LEDGER_SHA256[q]:
+        if (
+            family.get("member_coefficient_ledger_sha256")
+            != EXPECTED_MEMBER_LEDGER_SHA256[q]
+        ):
             raise ValueError(f"q={q} complete member-ledger sentinel drifted")
         if family.get("candidate_count") != q**5:
             raise ValueError(f"q={q} candidate coverage drifted")
         if family.get("expected_squarefree_count") != q**5 - q**4:
             raise ValueError(f"q={q} squarefree coverage drifted")
         orbit = family.get("affine_orbit_analysis")
-        if not isinstance(orbit, dict) or orbit.get("B_D_invariant_on_every_orbit") is not True:
+        if (
+            not isinstance(orbit, dict)
+            or orbit.get("B_D_invariant_on_every_orbit") is not True
+        ):
             raise ValueError(f"q={q} affine-orbit invariance source drifted")
     return input_data, families
 
@@ -387,7 +398,9 @@ def _tail_packet(
             "target_member_count_ceiling": target_count,
             "absolute_threshold": _fraction_pair(threshold),
             "member_count_including_ties": tail_count,
-            "member_fraction_including_ties": _fraction_pair(Fraction(tail_count, member_count)),
+            "member_fraction_including_ties": _fraction_pair(
+                Fraction(tail_count, member_count)
+            ),
             "sign_member_counts": dict(sign_counts),
         },
         values,
@@ -409,9 +422,7 @@ def _conditional_summary(
         if not mass:
             raise ZeroDivisionError("conditional mean needs positive mass")
         return {
-            name: sum(
-                int(record["weight"]) * record["values"][name] for record in rows
-            )
+            name: sum(int(record["weight"]) * record["values"][name] for record in rows)
             / mass
             for name in SELECTOR_ORDER
         }
@@ -480,8 +491,7 @@ def _orbit_identifiability(
     for b_numerator in sorted(by_b):
         rows = by_b[b_numerator]
         triples = {
-            tuple(record["values"][name] for name in SELECTOR_ORDER)
-            for record in rows
+            tuple(record["values"][name] for name in SELECTOR_ORDER) for record in rows
         }
         if len(triples) > 1:
             ambiguous.append(
@@ -547,9 +557,7 @@ def analyze_family(
         a = int(atom["a_D"])
         b = int(atom["b_D"])
         weight = int(atom["member_count"])
-        values = selector_values_from_arithmetic_coefficients(
-            q, a, b, selector_module
-        )
+        values = selector_values_from_arithmetic_coefficients(q, a, b, selector_module)
         triple = tuple(values[name] for name in SELECTOR_ORDER)
         joint_histogram[triple] += weight
         for name in SELECTOR_ORDER:
@@ -578,8 +586,7 @@ def analyze_family(
     ]
     covariance = [
         [
-            raw_second[left_index][right_index]
-            - means[left] * means[right]
+            raw_second[left_index][right_index] - means[left] * means[right]
             for right_index, right in enumerate(SELECTOR_ORDER)
         ]
         for left_index, left in enumerate(SELECTOR_ORDER)
@@ -688,9 +695,7 @@ def build_fixture() -> dict[str, object]:
         len(family["joint_a_D_b_D_law"]["atoms"]) for family in families
     )
     guard.preflight(source_atom_total)
-    analyses = [
-        analyze_family(family, selector_module, guard) for family in families
-    ]
+    analyses = [analyze_family(family, selector_module, guard) for family in families]
     if tuple(row["q"] for row in analyses) != FROZEN_Q_VALUES:
         raise ArithmeticError("output q ladder drifted")
     if guard.total != source_atom_total:
@@ -731,9 +736,7 @@ def build_fixture() -> dict[str, object]:
                 "formal factorization into two integral reciprocal quadratics with "
                 "constant q; this is a coefficient predicate, not a polarization theorem"
             ),
-            "repeated_plus_q_split": (
-                "the repeated-factor sublocus a_D^2-4*b_D+8*q=0"
-            ),
+            "repeated_plus_q_split": ("the repeated-factor sublocus a_D^2-4*b_D+8*q=0"),
             "sym3_coefficient_curve": (
                 "the cleared compact Sym^3 coefficient equation "
                 "-q*a^4+q*a^2*b+q^2*a^2+b^3-2*q*b^2=0"
@@ -815,7 +818,9 @@ def build_fixture() -> dict[str, object]:
                 },
                 "coefficient_arithmetic": {
                     "path": "research/l-families/atlas/function_field/genus2_q_scan.py",
-                    "sha256_lf_normalized": _lf_normalized_sha256(COEFFICIENT_ARITHMETIC_PATH),
+                    "sha256_lf_normalized": _lf_normalized_sha256(
+                        COEFFICIENT_ARITHMETIC_PATH
+                    ),
                 },
                 "affine_action": {
                     "path": "research/l-families/atlas/function_field/genus2_affine_orbits.py",
@@ -823,7 +828,9 @@ def build_fixture() -> dict[str, object]:
                 },
                 "selector_producer": {
                     "path": "research/l-families/atlas/function_field/frobenius_interferometry_subgroup_selectors.py",
-                    "sha256_lf_normalized": _lf_normalized_sha256(SELECTOR_PRODUCER_PATH),
+                    "sha256_lf_normalized": _lf_normalized_sha256(
+                        SELECTOR_PRODUCER_PATH
+                    ),
                 },
                 "selector_note": {
                     "path": "research/l-families/atlas/function_field/FROBENIUS_INTERFEROMETRY_SUBGROUP_SELECTORS.md",

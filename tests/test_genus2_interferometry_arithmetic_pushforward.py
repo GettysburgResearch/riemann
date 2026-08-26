@@ -11,19 +11,16 @@ from fractions import Fraction
 from pathlib import Path
 from unittest import mock
 
-
 ROOT = Path(__file__).resolve().parents[1]
 FUNCTION_FIELD = ROOT / "research" / "l-families" / "atlas" / "function_field"
 if str(FUNCTION_FIELD) not in sys.path:
     sys.path.insert(0, str(FUNCTION_FIELD))
 
-import genus2_interferometry_arithmetic_pushforward as subject  # noqa: E402
+import genus2_interferometry_arithmetic_pushforward as subject
 
 
 def canonical_sha256(value: object) -> str:
-    encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode(
-        "utf-8"
-    )
+    encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
 
 
@@ -72,9 +69,7 @@ def independent_selector_adapter(
         quadratic_add(
             quadratic_add(
                 e1_cubed,
-                quadratic_scale(
-                    -3, quadratic_multiply(e1, e2, first_square)
-                ),
+                quadratic_scale(-3, quadratic_multiply(e1, e2, first_square)),
             ),
             quadratic_scale(3, e1),
         )
@@ -137,14 +132,18 @@ class SourceLockAndAdapterTests(unittest.TestCase):
             )
 
     def test_source_and_selector_pins_fail_closed(self) -> None:
-        with mock.patch.object(subject, "EXPECTED_INPUT_PAYLOAD_SHA256", "0" * 64):
-            with self.assertRaisesRegex(ValueError, "payload/source pin mismatch"):
-                subject._validated_input()
+        with (
+            mock.patch.object(subject, "EXPECTED_INPUT_PAYLOAD_SHA256", "0" * 64),
+            self.assertRaisesRegex(ValueError, "payload/source pin mismatch"),
+        ):
+            subject._validated_input()
         changed = dict(subject.EXPECTED_LF_SHA256)
         changed["selector_producer"] = "0" * 64
-        with mock.patch.object(subject, "EXPECTED_LF_SHA256", changed):
-            with self.assertRaisesRegex(ValueError, "digest mismatch"):
-                subject._load_selector_module()
+        with (
+            mock.patch.object(subject, "EXPECTED_LF_SHA256", changed),
+            self.assertRaisesRegex(ValueError, "digest mismatch"),
+        ):
+            subject._load_selector_module()
 
     def test_guard_refuses_before_processing_more_than_4096_atoms(self) -> None:
         guard = subject.SourceAtomGuard()
@@ -251,12 +250,16 @@ class FrozenPushforwardTests(unittest.TestCase):
                 tail = packet["outer_one_percent_absolute_tail"]
                 threshold = Fraction(*tail["absolute_threshold"])
                 count = sum(
-                    weight for value, weight in histogram.items() if abs(value) >= threshold
+                    weight
+                    for value, weight in histogram.items()
+                    if abs(value) >= threshold
                 )
                 self.assertEqual(count, tail["member_count_including_ties"])
                 self.assertGreaterEqual(count, tail["target_member_count_ceiling"])
                 larger_count = sum(
-                    weight for value, weight in histogram.items() if abs(value) > threshold
+                    weight
+                    for value, weight in histogram.items()
+                    if abs(value) > threshold
                 )
                 self.assertLess(larger_count, tail["target_member_count_ceiling"])
 
@@ -281,8 +284,16 @@ class FrozenPushforwardTests(unittest.TestCase):
     def test_exact_frozen_means_signs_and_tails(self) -> None:
         expected_means = {
             3: (Fraction(-2584, 2187), Fraction(232, 2187), Fraction(8, 6561)),
-            5: (Fraction(-57468, 78125), Fraction(16148, 78125), Fraction(7152, 390625)),
-            7: (Fraction(-441712, 823543), Fraction(156896, 823543), Fraction(-2952, 5764801)),
+            5: (
+                Fraction(-57468, 78125),
+                Fraction(16148, 78125),
+                Fraction(7152, 390625),
+            ),
+            7: (
+                Fraction(-441712, 823543),
+                Fraction(156896, 823543),
+                Fraction(-2952, 5764801),
+            ),
         }
         expected_signs = {
             3: ((96, 6, 60), (102, 0, 60), (45, 36, 81)),
@@ -290,9 +301,21 @@ class FrozenPushforwardTests(unittest.TestCase):
             7: ((8484, 42, 5880), (8820, 0, 5586), (6552, 1092, 6762)),
         }
         expected_tails = {
-            3: ((Fraction(728, 81), 6), (Fraction(1376, 81), 9), (Fraction(4112, 243), 6)),
-            5: ((Fraction(5872, 625), 40), (Fraction(10532, 625), 40), (Fraction(48696, 3125), 106)),
-            7: ((Fraction(23368, 2401), 252), (Fraction(40468, 2401), 168), (Fraction(284040, 16807), 462)),
+            3: (
+                (Fraction(728, 81), 6),
+                (Fraction(1376, 81), 9),
+                (Fraction(4112, 243), 6),
+            ),
+            5: (
+                (Fraction(5872, 625), 40),
+                (Fraction(10532, 625), 40),
+                (Fraction(48696, 3125), 106),
+            ),
+            7: (
+                (Fraction(23368, 2401), 252),
+                (Fraction(40468, 2401), 168),
+                (Fraction(284040, 16807), 462),
+            ),
         }
         sign_order = ("negative", "zero", "positive")
         for q, row in self.by_q.items():
@@ -377,12 +400,18 @@ class FrozenPushforwardTests(unittest.TestCase):
                     d_repeated,
                 )
             self.assertEqual(
-                Fraction(*strata["sym3_generic_integer_trace_candidate"]["conditional_mean"]["S"]),
+                Fraction(
+                    *strata["sym3_generic_integer_trace_candidate"]["conditional_mean"][
+                        "S"
+                    ]
+                ),
                 s_generic,
             )
             self.assertEqual(
                 tuple(
-                    strata[name]["member_count_in_each_selector_outer_one_percent_tail"]["S"]
+                    strata[name][
+                        "member_count_in_each_selector_outer_one_percent_tail"
+                    ]["S"]
                     for name in stratum_order
                 ),
                 expected_s_tail_overlaps[q],

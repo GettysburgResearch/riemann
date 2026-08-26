@@ -10,12 +10,11 @@ import unittest
 from fractions import Fraction
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 FUNCTION_FIELD = ROOT / "research" / "l-families" / "atlas" / "function_field"
 sys.path.insert(0, str(FUNCTION_FIELD))
 
-import genus2_detector_boundary_quotient as subject  # noqa: E402
+import genus2_detector_boundary_quotient as subject
 
 
 class Genus2DetectorBoundaryQuotientTests(unittest.TestCase):
@@ -77,7 +76,9 @@ class Genus2DetectorBoundaryQuotientTests(unittest.TestCase):
                 subject.FILTRATION_BASES[order],
             )
             for vector in subject.FILTRATION_BASES[order]:
-                self.assertTrue(all(value == 0 for value in subject.matrix_vector(prefix, vector)))
+                self.assertTrue(
+                    all(value == 0 for value in subject.matrix_vector(prefix, vector))
+                )
 
     def test_distinguished_detectors_and_minimal_q4_support(self) -> None:
         vectors = {
@@ -106,7 +107,9 @@ class Genus2DetectorBoundaryQuotientTests(unittest.TestCase):
             for s in range(-2, 3):
                 vector = (0, -2 * t, 0, t, s)
                 self.assertGreaterEqual(sum(abs(value) for value in vector), 3)
-                self.assertEqual(subject.leading_power(subject.exact_mean_coefficients(vector)), 4)
+                self.assertEqual(
+                    subject.leading_power(subject.exact_mean_coefficients(vector)), 4
+                )
 
     def test_exact_fraction_evaluation(self) -> None:
         d4 = (0, -2, 0, 1, 0)

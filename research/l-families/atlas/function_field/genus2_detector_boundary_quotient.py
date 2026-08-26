@@ -13,12 +13,11 @@ import argparse
 import hashlib
 import json
 import math
+from collections.abc import Iterable, Sequence
 from fractions import Fraction
 from pathlib import Path
-from typing import Iterable, Sequence
 
 import genus2_q_scan as upstream
-
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
@@ -81,8 +80,7 @@ def coefficient_matrix() -> tuple[tuple[int, ...], ...]:
     """Return rows indexed by q^-power and columns indexed by BASIS."""
 
     return tuple(
-        tuple(MEAN_COLUMNS[label][row] for label in BASIS)
-        for row in range(len(POWERS))
+        tuple(MEAN_COLUMNS[label][row] for label in BASIS) for row in range(len(POWERS))
     )
 
 
@@ -106,7 +104,10 @@ def evaluate_laurent(coefficients: Sequence[int], q: int) -> Fraction:
     if len(coefficients) != len(POWERS):
         raise ValueError("coefficient vector has the wrong dimension")
     return sum(
-        (Fraction(coefficient, q**power) for power, coefficient in zip(POWERS, coefficients)),
+        (
+            Fraction(coefficient, q**power)
+            for power, coefficient in zip(POWERS, coefficients)
+        ),
         Fraction(0),
     )
 
@@ -127,11 +128,7 @@ def _bareiss_determinant(matrix: Sequence[Sequence[int]]) -> int:
     for pivot_index in range(size - 1):
         if work[pivot_index][pivot_index] == 0:
             swap = next(
-                (
-                    row
-                    for row in range(pivot_index + 1, size)
-                    if work[row][pivot_index]
-                ),
+                (row for row in range(pivot_index + 1, size) if work[row][pivot_index]),
                 None,
             )
             if swap is None:
@@ -141,7 +138,10 @@ def _bareiss_determinant(matrix: Sequence[Sequence[int]]) -> int:
         pivot = work[pivot_index][pivot_index]
         for row in range(pivot_index + 1, size):
             for column in range(pivot_index + 1, size):
-                numerator = work[row][column] * pivot - work[row][pivot_index] * work[pivot_index][column]
+                numerator = (
+                    work[row][column] * pivot
+                    - work[row][pivot_index] * work[pivot_index][column]
+                )
                 if numerator % previous:
                     raise ArithmeticError("Bareiss division ceased to be exact")
                 work[row][column] = numerator // previous
@@ -192,7 +192,9 @@ def _primitive_integer(vector: Iterable[Fraction]) -> tuple[int, ...]:
     denominator = 1
     for value in values:
         denominator = math.lcm(denominator, value.denominator)
-    integers = [value.numerator * (denominator // value.denominator) for value in values]
+    integers = [
+        value.numerator * (denominator // value.denominator) for value in values
+    ]
     divisor = 0
     for value in integers:
         divisor = math.gcd(divisor, abs(value))
@@ -245,9 +247,7 @@ def _combination_label(vector: Sequence[int]) -> str:
 def _verify_upstream_means() -> None:
     for q in (3, 5, 7, 9, 11, 13):
         expected = upstream.candidate_low_weight_character_means(q)
-        actual = {
-            label: evaluate_laurent(MEAN_COLUMNS[label], q) for label in BASIS
-        }
+        actual = {label: evaluate_laurent(MEAN_COLUMNS[label], q) for label in BASIS}
         if actual != expected:
             raise ArithmeticError(f"upstream character mean drift at q={q}")
 
@@ -410,7 +410,10 @@ def main() -> None:
     fixture = build_fixture()
     rendered = _canonical(fixture)
     if args.check:
-        if not OUTPUT_PATH.exists() or OUTPUT_PATH.read_text(encoding="utf-8") != rendered:
+        if (
+            not OUTPUT_PATH.exists()
+            or OUTPUT_PATH.read_text(encoding="utf-8") != rendered
+        ):
             raise SystemExit("genus-two detector boundary fixture drifted")
         print("PASS_GENUS2_DETECTOR_BOUNDARY_QUOTIENT")
         return
