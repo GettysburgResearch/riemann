@@ -47,9 +47,7 @@ class DerangementSelectorTanhCalibrationTest(unittest.TestCase):
             "(d-4)/d",
             payload["theorem"]["uniform_nonhook_capacity"],
         )
-        self.assertFalse(
-            payload["theorem"]["descent_set_only_repair_from_degree_six"]
-        )
+        self.assertFalse(payload["theorem"]["descent_set_only_repair_from_degree_six"])
         self.assertEqual(len(payload["finite_replay"]), 9)
 
     def test_tanh_coefficients(self) -> None:
