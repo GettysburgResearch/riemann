@@ -1,0 +1,25 @@
+{
+  "schema": "riemann.integration.source_lock.v1",
+  "claim": "T-103130",
+  "created": "2026-08-26",
+  "repository": "gfreund123/riemann",
+  "starting_pr": 719,
+  "starting_head": "25857c1704948bffa85234e2a386cfc98dd6a5e5",
+  "cross_checks": {
+    "main": "573eb6aa42c3d9469462c91c6b3ddfb8ab36d77f",
+    "pr_730": "b3114562acbeb8c5890ef7a5fc59eed8db71d29a",
+    "pr_756": "6e4609dfe1b073f1eb58445fdd1d7164dbc450d6"
+  },
+  "files": {
+    "claims/lemmas/L-103121-euler-beta-live-core-mass-and-detector-semiprime-moment.md": "62710d8088adcbca51d54fee718c49cf57a41cb04c61d41ca760119e6fd1bcc5",
+    "claims/refutations/R-103121-literal-qpti-euler-beta-field-has-a-negative-semiprime-main.md": "b0806c445365ca655956f5065f7160167930854c6074655011d18f33dfce6f77",
+    "claims/theorems/T-103130-qpti-semiprime-refutation-and-native-wavelet-reset.md": "d8327dc1858f6d127ae2a60bd0cf376ab96e38d55c5327de235181987fccefec",
+    "experiments/X-103130-qpti-semiprime-main/verify.py": "7282dcaa785abe67f8ee039b4c62162cadaebbb8b817998983dcbdff17381d34",
+    "experiments/X-103130-qpti-semiprime-main/results/verification.json": "bf7881213ea2aeb402fc34ea26679a454faec344cd0f5ff08a9bd570d3c93fb7",
+    "reports/gpt56-pro/2026-08-26-qpti-semiprime-main-refutation.md": "1566e4abaeb5aef1d3736e3cf750b1ec3a78afdeff7c341b753b9c9575d88ed3"
+  },
+  "proof_object_sha256": "80af91281d4d93ad96338d73606f2afc6a529493ac82b8bad656c1a6558a79a4",
+  "verdict": "PASS_T103130_QPTI_SEMIPRIME_MAIN_REFUTATION",
+  "qpti103112": "REFUTED_AS_LITERAL_COMPLETED_GATE",
+  "rh_established": false
+}
