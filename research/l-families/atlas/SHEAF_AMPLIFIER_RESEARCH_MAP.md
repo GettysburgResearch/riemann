@@ -444,7 +444,11 @@ rho-sieved energy with sharp Hilbert constant
 `J_67=prod_(p!=67)(1+1/((p+1)sqrt(p)))`, and
 `RAYPRIMCAR` implies it. It is formally incomparable with both
 `COLLPRIMCAR` and `GENPRIMCAR`. None of the four estimates is
-proved. The scalar zero mode itself has no native `d`-average, and nonzero
+proved. After the exact substitution `a=rm,b=(u/r)n`, its energy becomes
+the signed primitive-pair shared-support Gram with kernel
+`prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`. This gives a concrete spectral or
+large-sieve attack, but the local determinant tends to zero and no bound
+follows formally. The scalar zero mode itself has no native `d`-average, and nonzero
 incidence modes remain separate.
 
 The associated three-state colored cube is also exact. Its local shear has

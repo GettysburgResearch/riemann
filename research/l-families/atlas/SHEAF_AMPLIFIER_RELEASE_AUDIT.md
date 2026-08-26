@@ -7,7 +7,7 @@ Frozen parent: PR #756 at
 `6e4609dfe1b073f1eb58445fdd1d7164dbc450d6`.
 
 Audited mathematical-packet head:
-`fc9dbb34d`. The final PR head is recorded in
+`90ab2486f`. The final PR head is recorded in
 the PR body because a tracked file cannot contain the SHA of the commit which
 creates that SHA.
 
@@ -37,7 +37,7 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
 | primitive-ray localization | exact source disintegration and equivalence | each fixed ray is `A_(a,b) log X+O(1)`; every prescribed subpower-height sector is harmless | the balanced high-height residual remains RH-bearing |
 | primitive-pair large-sieve gate | exact shell identities, two exact normal forms, plus conditional implication | five oriented/three reciprocal panels reconstruct the residual; Möbius--Gram and biased-Boolean forms expose its modes; `PRIMLS` implies RH | the harmonic zero mode survives sieve averaging; `PRIMLS` is unproved, stronger than RH, with no converse |
 | primitive incidence/Carleson form | exact finite Gram, fixed-height limit, and conditional implication | the actual `d^-1` average limits to `67/(68 zeta(2))` times the Boolean energy; `PRIMCAR=>PRIMLS=>RH` | `PRIMCAR` is stronger and unproved; its `rho`-tilted zero mode still carries `1/zeta(s)` |
-| primitive `rho`-tilt convolution | exact Euler algebra, bounded inverse operators, Boolean compression, compatible-image bijection, and positive-norm gate hierarchy | the one-variable tilt preserves every positive Mertens exponent; fixed squarefree 67-free `q` has `3^omega(q)` compatible colorings and `d=1` has `2^omega(q)` saturated rays; compatible `r/s` colors have equal weight at every fixed `(d,u=rs)`, exposing `AUXCOLORPRIMCAR`; `RAYPRIMCAR` implies both collective and color gates, with sharp color Hilbert cost `J_67` | no gate is proved; all incomparability witnesses are positive-norm arrays rather than arithmetic panel values, and nonzero `PRIMCAR` modes remain uncontrolled |
+| primitive `rho`-tilt convolution | exact Euler algebra, bounded inverse operators, Boolean compression, compatible-image bijection, and positive-norm gate hierarchy | fixed `q` has `3^omega(q)` compatible colorings and `d=1` has `2^omega(q)` saturated rays; fixed-`(d,u)` colors expose `AUXCOLORPRIMCAR`; `RAYPRIMCAR` implies it with sharp cost `J_67`; its energy is exactly the primitive-pair shared-support Gram `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))` | no gate is proved; the Gram has signed cross terms and degenerating local determinants, incomparability witnesses are synthetic, and nonzero `PRIMCAR` modes remain uncontrolled |
 | native reflection/geodesic criterion | exact source identity and equivalence | same detector is a differentiated reflection-odd energy; relative squared endpoint costs `O(T)` | positive reflection estimate remains RH-bearing |
 | finite beta scout | bounded floating point | checkpoint values and two-mesh controls are reproducible | no interval certificate or asymptotic inference |
 | compact boundary-field scout | bounded floating point plus exact first-difference control | `G` rows reproduce; direct differencing agrees with `h_epsilon` to `2.13e-13` absolute | no asymptotic inference |
@@ -130,6 +130,11 @@ No lane proves RH, GRH, a varying-conductor `CYSEL` estimate, or an all-`q`
   sharp `J_67` Hilbert constant. Its cancellation and nonimplication
   witnesses are explicitly synthetic; no new estimate or nonzero-mode
   control is claimed.
+- `90ab2486f` identifies the coherent color energy with an exact
+  primitive-pair support-overlap Gram. The local Boolean kernel is
+  `[[1,1],[1,1+sqrt(p)/(p+1)]]`; its determinant is positive but tends to
+  zero. A 760-case pair-bijection replay and the complete three-prime feature
+  cube certify the formula without claiming a new bound.
 
 ### Selector and notch extensions
 

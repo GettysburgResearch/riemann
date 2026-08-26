@@ -33,7 +33,10 @@ the `2^omega(u)` compatible `r/s` colors coherently at each fixed
 `AUXCOLORPRIMCAR` gate (`COLORPRIMCAR` at `D=1`), proves
 `RAYPRIMCAR -> AUXCOLORPRIMCAR`, and gives the sharp Hilbert cost
 `J_67`; the color gate is formally incomparable with `COLLPRIMCAR`
-and `GENPRIMCAR` by positive-norm algebra. The successor also contains
+and `GENPRIMCAR` by positive-norm algebra. Its energy is also exactly the
+primitive-pair shared-support Gram
+`K(N,M)=prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`, giving a concrete
+spectral/large-sieve target rather than a black-box norm. The successor also contains
 a `Sym^12` cohomological audit.
 Begin with
 [`SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md`](SHEAF_AMPLIFIER_FIVE_MINUTE_HANDOFF.md),

@@ -51,7 +51,10 @@
 > `AUXCOLORPRIMCAR` gate (`COLORPRIMCAR` at `D=1`). The ray
 > gate implies it with an explicit Euler cost, and it controls the whole
 > auxiliary rho-sieved energy with sharp Hilbert constant `J_67`; it is
-> formally incomparable with the collective and full-`q` gates.
+> formally incomparable with the collective and full-`q` gates. Expanding
+> it gives an exact signed primitive-pair Gram with multiplicative kernel
+> `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`; this is a new attack surface,
+> not a cancellation estimate.
 > Separately, the minimal
 > ternary physical mask has a universal degree-shell norm/Kummer realization
 > of rank `48`, tame Swan zero, and linear toric boundary support; the exact

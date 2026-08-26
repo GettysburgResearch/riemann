@@ -101,7 +101,11 @@ quadratic gate `AUXCOLORPRIMCAR`, with `COLORPRIMCAR` as its
 `D=1` specialization. Weighted Hilbert Cauchy gives the sharp energy cost
 `J_67`, and `RAYPRIMCAR` implies the auxiliary color gate. The color
 gate is formally incomparable with `COLLPRIMCAR` and `GENPRIMCAR`:
-it is a genuine additional cancellation target, but still unproved. The
+it is a genuine additional cancellation target, but still unproved. Its
+quadratic form is exactly a signed primitive-pair shared-support Gram with
+kernel `prod_(p|gcd(N,M))(1+sqrt(p)/(p+1))`; the local Boolean block has
+determinant `sqrt(p)/(p+1)`. This creates a concrete spectral/large-sieve
+problem while warning that uniform inversion degenerates at large primes. The
 scalar zero mode has no native `d`-average, and every one of these routes
 leaves the nonzero incidence spectrum separate.
 
