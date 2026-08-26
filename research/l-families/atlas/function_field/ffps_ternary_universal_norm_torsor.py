@@ -199,6 +199,8 @@ def build_report() -> dict[str, object]:
         "universal_physical_ranks": {
             "orientation_cover_degree": ORIENTATION_DEGREE,
             "cubic_regular_rank": CUBIC_REGULAR_RANK,
+            "physical_deck_group": "C2^4 x C3",
+            "physical_deck_group_order": FULL_PHYSICAL_RANK,
             "regular_pushforward": FULL_PHYSICAL_RANK,
             "selected_pushforward": SELECTED_PHYSICAL_RANK,
             "relative_pushforward": RELATIVE_PHYSICAL_RANK,
@@ -208,6 +210,7 @@ def build_report() -> dict[str, object]:
             "physical_descent": "1_[F sixth]+1_[F cube]",
             "generic": 0,
         },
+        "monodromy_normal_form": "(S_a x S_b) x (C2^4 x C3)",
         "degree_panels": panels,
         "resource_ledger": {
             "max_degree": MAX_DEGREE,
@@ -235,6 +238,7 @@ def run_checks() -> dict[str, object]:
         "one varying-closed-place physical",
         "rank \\(48\\)",
         "linear toric",
+        "direct-product monodromy",
         "full owner/Boolean/phase FFPS source adapter | **NOT CONSTRUCTED**",
         "RH, or GRH | **NOT PROVED**",
     ):

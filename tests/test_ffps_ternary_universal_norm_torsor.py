@@ -37,6 +37,9 @@ class TernaryUniversalNormTorsorTests(unittest.TestCase):
     def test_exact_universal_ranks(self) -> None:
         report = MODULE.run_checks()
         self.assertEqual(report["universal_physical_ranks"]["regular_pushforward"], 48)
+        self.assertEqual(
+            report["universal_physical_ranks"]["physical_deck_group_order"], 48
+        )
         self.assertEqual(report["universal_physical_ranks"]["selected_pushforward"], 32)
         self.assertEqual(report["universal_physical_ranks"]["relative_pushforward"], 16)
 
@@ -107,6 +110,7 @@ class TernaryUniversalNormTorsorTests(unittest.TestCase):
             "one varying-closed-place physical",
             "rank \\(48\\)",
             "linear toric",
+            "direct-product monodromy",
             "full owner/Boolean/phase FFPS source adapter | **NOT CONSTRUCTED**",
             "RH, or GRH | **NOT PROVED**",
         ):
