@@ -249,17 +249,59 @@ one.  Conditional on `X=x`, it is normal with
  \operatorname{variance}={1\over3}+{x^2\over2}.
 \]
 
-This supplies an explicit integral for its density at zero.  It is tempting
-to conjecture the lattice local limit
+This supplies an explicit integral for its density at zero.  In this case the
+lattice local limit can also be proved:
 
 \[
- q^{3/2}\delta_q\longrightarrow2f_W(0),
+ \boxed{
+ q^{3/2}\delta_q\longrightarrow2f_W(0)
+ =\sqrt{6\over\pi}\,
+ \mathbb E\exp\!\left(-{3A^2\over2}\right),}
 \tag{4.3}
 \]
 
-where the factor two is the lattice span.  The replay's exact rows are
-consistent with this, but (4.3) is **not proved here**: weak convergence does
-not imply a local limit for a cubic lattice polynomial.
+where
+
+\[
+ A={XY\over\sqrt2}+{X^3-3X\over6},
+\]
+
+and the factor two is the lattice span.  Numerically the constant is about
+`0.9836785769`; the integral, not this decimal, is the theorem statement.
+
+To prove (4.3), condition on `(S_1,S_2)`.  The required value of `S_3` is
+
+\[
+ s_3^*=-S_1S_2-{S_1^3+(2-3q)S_1\over6}.
+\]
+
+It automatically has the parity of `N_3`.  The uniform de Moivre--Laplace
+local theorem for a sum of `N_3` signs says
+
+\[
+ \sup_{k\equiv N_3\ (2)}
+ \left|\sqrt{N_3}\Pr(S_3=k)
+ -\sqrt{2\over\pi}e^{-k^2/(2N_3)}\right|\longrightarrow0.
+\tag{4.4}
+\]
+
+Since `N_3/q^3 -> 1/3` and `s_3^*/q^(3/2) => -A`, substitution in (4.4),
+followed by bounded convergence, proves (4.3).  Thus weak convergence alone
+would indeed have been insufficient; the additional uniform lattice theorem
+is the load-bearing input.
+
+Integrating out `Y` gives a one-dimensional version of the constant:
+
+\[
+ \sqrt{6\over\pi}\,
+ \mathbb E_X\left[
+ {\exp\!\left(
+ -\frac32\frac{((X^3-3X)/6)^2}{1+3X^2/2}
+ \right)
+ \over\sqrt{1+3X^2/2}}
+ \right].
+\tag{4.5}
+\]
 
 ## 5. Proof ledger
 
@@ -268,11 +310,11 @@ Proved exactly, conditional only on the standard theorem (2.1):
 - the independent-sign formula (1.2)--(1.4);
 - equidistribution of every leading rough profile modulo `R_(<=3)`;
 - the count and density asymptotics (0.1)--(0.2);
-- the weak cubic-chaos limit (4.1) and moments (4.2).
+- the weak cubic-chaos limit (4.1), moments (4.2), and lattice local limit
+  (4.3).
 
 Still open:
 
-- the local limit (4.3) as `q` grows;
 - the next `M^-3` coefficient;
 - any connection between these detector zeros and zeros of an individual
   `L`-function;

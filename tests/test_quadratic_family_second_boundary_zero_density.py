@@ -50,6 +50,9 @@ class SecondBoundaryZeroDensityTest(unittest.TestCase):
         self.assertEqual(second_density.chaos_even_moment(2), 1)
         self.assertEqual(second_density.chaos_even_moment(4), 10)
         self.assertEqual(second_density.chaos_even_moment(6), 760)
+        status = second_density.run()["large_q_weak_limit"]
+        self.assertIn("uniform lattice local CLT", status["local_limit_status"])
+        self.assertIn("q^(3/2)*delta_q", status["local_limit"])
 
     def test_invalid_and_resource_caps(self) -> None:
         for q in (True, 2, 15):

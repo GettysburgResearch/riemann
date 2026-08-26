@@ -163,7 +163,13 @@ def run() -> dict[str, object]:
             "second_moment": str(chaos_even_moment(2)),
             "fourth_moment": str(chaos_even_moment(4)),
             "sixth_moment": str(chaos_even_moment(6)),
-            "local_limit_status": "conjectural; weak convergence does not prove delta_q asymptotics",
+            "local_limit": (
+                "q^(3/2)*delta_q -> sqrt(6/pi)*E[exp(-3*A^2/2)], "
+                "A=X*Y/sqrt(2)+(X^3-3X)/6"
+            ),
+            "local_limit_status": (
+                "proved by conditioning on S1,S2 and the uniform lattice local CLT for S3"
+            ),
         },
         "local_probability_panels": local_rows,
         "profile_limit_panels": profile_rows,
